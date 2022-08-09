@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateGroupQueryOutput {
     /// <p>The updated resource query associated with the resource group after the update.</p>
+    #[doc(hidden)]
     pub group_query: std::option::Option<crate::model::GroupQuery>,
 }
 impl UpdateGroupQueryOutput {
@@ -19,11 +20,10 @@ impl std::fmt::Debug for UpdateGroupQueryOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateGroupQueryOutput`](crate::output::UpdateGroupQueryOutput)
+/// See [`UpdateGroupQueryOutput`](crate::output::UpdateGroupQueryOutput).
 pub mod update_group_query_output {
 
-    /// A builder for [`UpdateGroupQueryOutput`](crate::output::UpdateGroupQueryOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateGroupQueryOutput`](crate::output::UpdateGroupQueryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_query: std::option::Option<crate::model::GroupQuery>,
@@ -42,7 +42,7 @@ pub mod update_group_query_output {
             self.group_query = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateGroupQueryOutput`](crate::output::UpdateGroupQueryOutput)
+        /// Consumes the builder and constructs a [`UpdateGroupQueryOutput`](crate::output::UpdateGroupQueryOutput).
         pub fn build(self) -> crate::output::UpdateGroupQueryOutput {
             crate::output::UpdateGroupQueryOutput {
                 group_query: self.group_query,
@@ -51,7 +51,7 @@ pub mod update_group_query_output {
     }
 }
 impl UpdateGroupQueryOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateGroupQueryOutput`](crate::output::UpdateGroupQueryOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateGroupQueryOutput`](crate::output::UpdateGroupQueryOutput).
     pub fn builder() -> crate::output::update_group_query_output::Builder {
         crate::output::update_group_query_output::Builder::default()
     }
@@ -62,6 +62,7 @@ impl UpdateGroupQueryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateGroupOutput {
     /// <p>The update description of the resource group.</p>
+    #[doc(hidden)]
     pub group: std::option::Option<crate::model::Group>,
 }
 impl UpdateGroupOutput {
@@ -77,11 +78,10 @@ impl std::fmt::Debug for UpdateGroupOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateGroupOutput`](crate::output::UpdateGroupOutput)
+/// See [`UpdateGroupOutput`](crate::output::UpdateGroupOutput).
 pub mod update_group_output {
 
-    /// A builder for [`UpdateGroupOutput`](crate::output::UpdateGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateGroupOutput`](crate::output::UpdateGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group: std::option::Option<crate::model::Group>,
@@ -97,14 +97,14 @@ pub mod update_group_output {
             self.group = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateGroupOutput`](crate::output::UpdateGroupOutput)
+        /// Consumes the builder and constructs a [`UpdateGroupOutput`](crate::output::UpdateGroupOutput).
         pub fn build(self) -> crate::output::UpdateGroupOutput {
             crate::output::UpdateGroupOutput { group: self.group }
         }
     }
 }
 impl UpdateGroupOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateGroupOutput`](crate::output::UpdateGroupOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateGroupOutput`](crate::output::UpdateGroupOutput).
     pub fn builder() -> crate::output::update_group_output::Builder {
         crate::output::update_group_output::Builder::default()
     }
@@ -115,8 +115,10 @@ impl UpdateGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UntagOutput {
     /// <p>The ARN of the resource group from which tags have been removed.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The keys of the tags that were removed.</p>
+    #[doc(hidden)]
     pub keys: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl UntagOutput {
@@ -137,11 +139,10 @@ impl std::fmt::Debug for UntagOutput {
         formatter.finish()
     }
 }
-/// See [`UntagOutput`](crate::output::UntagOutput)
+/// See [`UntagOutput`](crate::output::UntagOutput).
 pub mod untag_output {
 
-    /// A builder for [`UntagOutput`](crate::output::UntagOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagOutput`](crate::output::UntagOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -177,7 +178,7 @@ pub mod untag_output {
             self.keys = input;
             self
         }
-        /// Consumes the builder and constructs a [`UntagOutput`](crate::output::UntagOutput)
+        /// Consumes the builder and constructs a [`UntagOutput`](crate::output::UntagOutput).
         pub fn build(self) -> crate::output::UntagOutput {
             crate::output::UntagOutput {
                 arn: self.arn,
@@ -187,7 +188,7 @@ pub mod untag_output {
     }
 }
 impl UntagOutput {
-    /// Creates a new builder-style object to manufacture [`UntagOutput`](crate::output::UntagOutput)
+    /// Creates a new builder-style object to manufacture [`UntagOutput`](crate::output::UntagOutput).
     pub fn builder() -> crate::output::untag_output::Builder {
         crate::output::untag_output::Builder::default()
     }
@@ -198,10 +199,13 @@ impl UntagOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UngroupResourcesOutput {
     /// <p>A list of resources that were successfully removed from the group by this operation.</p>
+    #[doc(hidden)]
     pub succeeded: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of any resources that failed to be removed from the group by this operation.</p>
+    #[doc(hidden)]
     pub failed: std::option::Option<std::vec::Vec<crate::model::FailedResource>>,
     /// <p>A list of any resources that are still in the process of being removed from the group by this operation. These pending removals continue asynchronously. You can check the status of pending removals by using the <code> <code>ListGroupResources</code> </code> operation. After the resource is successfully removed, it no longer appears in the response.</p>
+    #[doc(hidden)]
     pub pending: std::option::Option<std::vec::Vec<crate::model::PendingResource>>,
 }
 impl UngroupResourcesOutput {
@@ -227,11 +231,10 @@ impl std::fmt::Debug for UngroupResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`UngroupResourcesOutput`](crate::output::UngroupResourcesOutput)
+/// See [`UngroupResourcesOutput`](crate::output::UngroupResourcesOutput).
 pub mod ungroup_resources_output {
 
-    /// A builder for [`UngroupResourcesOutput`](crate::output::UngroupResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`UngroupResourcesOutput`](crate::output::UngroupResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) succeeded: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -296,7 +299,7 @@ pub mod ungroup_resources_output {
             self.pending = input;
             self
         }
-        /// Consumes the builder and constructs a [`UngroupResourcesOutput`](crate::output::UngroupResourcesOutput)
+        /// Consumes the builder and constructs a [`UngroupResourcesOutput`](crate::output::UngroupResourcesOutput).
         pub fn build(self) -> crate::output::UngroupResourcesOutput {
             crate::output::UngroupResourcesOutput {
                 succeeded: self.succeeded,
@@ -307,7 +310,7 @@ pub mod ungroup_resources_output {
     }
 }
 impl UngroupResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`UngroupResourcesOutput`](crate::output::UngroupResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`UngroupResourcesOutput`](crate::output::UngroupResourcesOutput).
     pub fn builder() -> crate::output::ungroup_resources_output::Builder {
         crate::output::ungroup_resources_output::Builder::default()
     }
@@ -318,8 +321,10 @@ impl UngroupResourcesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TagOutput {
     /// <p>The ARN of the tagged resource.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The tags that have been added to the specified resource group.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -344,11 +349,10 @@ impl std::fmt::Debug for TagOutput {
         formatter.finish()
     }
 }
-/// See [`TagOutput`](crate::output::TagOutput)
+/// See [`TagOutput`](crate::output::TagOutput).
 pub mod tag_output {
 
-    /// A builder for [`TagOutput`](crate::output::TagOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagOutput`](crate::output::TagOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -392,7 +396,7 @@ pub mod tag_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagOutput`](crate::output::TagOutput)
+        /// Consumes the builder and constructs a [`TagOutput`](crate::output::TagOutput).
         pub fn build(self) -> crate::output::TagOutput {
             crate::output::TagOutput {
                 arn: self.arn,
@@ -402,7 +406,7 @@ pub mod tag_output {
     }
 }
 impl TagOutput {
-    /// Creates a new builder-style object to manufacture [`TagOutput`](crate::output::TagOutput)
+    /// Creates a new builder-style object to manufacture [`TagOutput`](crate::output::TagOutput).
     pub fn builder() -> crate::output::tag_output::Builder {
         crate::output::tag_output::Builder::default()
     }
@@ -413,10 +417,13 @@ impl TagOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchResourcesOutput {
     /// <p>The ARNs and resource types of resources that are members of the group that you specified.</p>
+    #[doc(hidden)]
     pub resource_identifiers: std::option::Option<std::vec::Vec<crate::model::ResourceIdentifier>>,
     /// <p>If present, indicates that more output is available than is included in the current response. Use this value in the <code>NextToken</code> request parameter in a subsequent call to the operation to get the next part of the output. You should repeat this until the <code>NextToken</code> response element comes back as <code>null</code>.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code> and <code>Message</code> structures. Possible values for <code>ErrorCode</code> are <code>CLOUDFORMATION_STACK_INACTIVE</code> and <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>.</p>
+    #[doc(hidden)]
     pub query_errors: std::option::Option<std::vec::Vec<crate::model::QueryError>>,
 }
 impl SearchResourcesOutput {
@@ -442,11 +449,10 @@ impl std::fmt::Debug for SearchResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`SearchResourcesOutput`](crate::output::SearchResourcesOutput)
+/// See [`SearchResourcesOutput`](crate::output::SearchResourcesOutput).
 pub mod search_resources_output {
 
-    /// A builder for [`SearchResourcesOutput`](crate::output::SearchResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`SearchResourcesOutput`](crate::output::SearchResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_identifiers:
@@ -503,7 +509,7 @@ pub mod search_resources_output {
             self.query_errors = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchResourcesOutput`](crate::output::SearchResourcesOutput)
+        /// Consumes the builder and constructs a [`SearchResourcesOutput`](crate::output::SearchResourcesOutput).
         pub fn build(self) -> crate::output::SearchResourcesOutput {
             crate::output::SearchResourcesOutput {
                 resource_identifiers: self.resource_identifiers,
@@ -514,7 +520,7 @@ pub mod search_resources_output {
     }
 }
 impl SearchResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`SearchResourcesOutput`](crate::output::SearchResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`SearchResourcesOutput`](crate::output::SearchResourcesOutput).
     pub fn builder() -> crate::output::search_resources_output::Builder {
         crate::output::search_resources_output::Builder::default()
     }
@@ -530,22 +536,21 @@ impl std::fmt::Debug for PutGroupConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutGroupConfigurationOutput`](crate::output::PutGroupConfigurationOutput)
+/// See [`PutGroupConfigurationOutput`](crate::output::PutGroupConfigurationOutput).
 pub mod put_group_configuration_output {
 
-    /// A builder for [`PutGroupConfigurationOutput`](crate::output::PutGroupConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutGroupConfigurationOutput`](crate::output::PutGroupConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutGroupConfigurationOutput`](crate::output::PutGroupConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutGroupConfigurationOutput`](crate::output::PutGroupConfigurationOutput).
         pub fn build(self) -> crate::output::PutGroupConfigurationOutput {
             crate::output::PutGroupConfigurationOutput {}
         }
     }
 }
 impl PutGroupConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutGroupConfigurationOutput`](crate::output::PutGroupConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutGroupConfigurationOutput`](crate::output::PutGroupConfigurationOutput).
     pub fn builder() -> crate::output::put_group_configuration_output::Builder {
         crate::output::put_group_configuration_output::Builder::default()
     }
@@ -556,12 +561,16 @@ impl PutGroupConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListGroupsOutput {
     /// <p>A list of <code>GroupIdentifier</code> objects. Each identifier is an object that contains both the <code>Name</code> and the <code>GroupArn</code>.</p>
+    #[doc(hidden)]
     pub group_identifiers: std::option::Option<std::vec::Vec<crate::model::GroupIdentifier>>,
     /// <important>
     /// <p> <i> <b>Deprecated - don't use this field. Use the <code>GroupIdentifiers</code> response field instead.</b> </i> </p>
     /// </important>
+    #[deprecated(note = "This field is deprecated, use GroupIdentifiers instead.")]
+    #[doc(hidden)]
     pub groups: std::option::Option<std::vec::Vec<crate::model::Group>>,
     /// <p>If present, indicates that more output is available than is included in the current response. Use this value in the <code>NextToken</code> request parameter in a subsequent call to the operation to get the next part of the output. You should repeat this until the <code>NextToken</code> response element comes back as <code>null</code>.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListGroupsOutput {
@@ -572,6 +581,7 @@ impl ListGroupsOutput {
     /// <important>
     /// <p> <i> <b>Deprecated - don't use this field. Use the <code>GroupIdentifiers</code> response field instead.</b> </i> </p>
     /// </important>
+    #[deprecated(note = "This field is deprecated, use GroupIdentifiers instead.")]
     pub fn groups(&self) -> std::option::Option<&[crate::model::Group]> {
         self.groups.as_deref()
     }
@@ -589,11 +599,10 @@ impl std::fmt::Debug for ListGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`ListGroupsOutput`](crate::output::ListGroupsOutput)
+/// See [`ListGroupsOutput`](crate::output::ListGroupsOutput).
 pub mod list_groups_output {
 
-    /// A builder for [`ListGroupsOutput`](crate::output::ListGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListGroupsOutput`](crate::output::ListGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_identifiers:
@@ -628,6 +637,7 @@ pub mod list_groups_output {
         /// <important>
         /// <p> <i> <b>Deprecated - don't use this field. Use the <code>GroupIdentifiers</code> response field instead.</b> </i> </p>
         /// </important>
+        #[deprecated(note = "This field is deprecated, use GroupIdentifiers instead.")]
         pub fn groups(mut self, input: crate::model::Group) -> Self {
             let mut v = self.groups.unwrap_or_default();
             v.push(input);
@@ -637,6 +647,7 @@ pub mod list_groups_output {
         /// <important>
         /// <p> <i> <b>Deprecated - don't use this field. Use the <code>GroupIdentifiers</code> response field instead.</b> </i> </p>
         /// </important>
+        #[deprecated(note = "This field is deprecated, use GroupIdentifiers instead.")]
         pub fn set_groups(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::Group>>,
@@ -654,7 +665,7 @@ pub mod list_groups_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGroupsOutput`](crate::output::ListGroupsOutput)
+        /// Consumes the builder and constructs a [`ListGroupsOutput`](crate::output::ListGroupsOutput).
         pub fn build(self) -> crate::output::ListGroupsOutput {
             crate::output::ListGroupsOutput {
                 group_identifiers: self.group_identifiers,
@@ -665,7 +676,7 @@ pub mod list_groups_output {
     }
 }
 impl ListGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`ListGroupsOutput`](crate::output::ListGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`ListGroupsOutput`](crate::output::ListGroupsOutput).
     pub fn builder() -> crate::output::list_groups_output::Builder {
         crate::output::list_groups_output::Builder::default()
     }
@@ -676,14 +687,19 @@ impl ListGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListGroupResourcesOutput {
     /// <p>An array of resources from which you can determine each resource's identity, type, and group membership status.</p>
+    #[doc(hidden)]
     pub resources: std::option::Option<std::vec::Vec<crate::model::ListGroupResourcesItem>>,
     /// <important>
     /// <p> <b> <i>Deprecated - don't use this parameter. Use the <code>Resources</code> response field instead.</i> </b> </p>
     /// </important>
+    #[deprecated(note = "This field is deprecated, use Resources instead.")]
+    #[doc(hidden)]
     pub resource_identifiers: std::option::Option<std::vec::Vec<crate::model::ResourceIdentifier>>,
     /// <p>If present, indicates that more output is available than is included in the current response. Use this value in the <code>NextToken</code> request parameter in a subsequent call to the operation to get the next part of the output. You should repeat this until the <code>NextToken</code> response element comes back as <code>null</code>.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code> and <code>Message</code> structures. Possible values for <code>ErrorCode</code> are <code>CLOUDFORMATION_STACK_INACTIVE</code> and <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>.</p>
+    #[doc(hidden)]
     pub query_errors: std::option::Option<std::vec::Vec<crate::model::QueryError>>,
 }
 impl ListGroupResourcesOutput {
@@ -694,6 +710,7 @@ impl ListGroupResourcesOutput {
     /// <important>
     /// <p> <b> <i>Deprecated - don't use this parameter. Use the <code>Resources</code> response field instead.</i> </b> </p>
     /// </important>
+    #[deprecated(note = "This field is deprecated, use Resources instead.")]
     pub fn resource_identifiers(&self) -> std::option::Option<&[crate::model::ResourceIdentifier]> {
         self.resource_identifiers.as_deref()
     }
@@ -716,11 +733,10 @@ impl std::fmt::Debug for ListGroupResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`ListGroupResourcesOutput`](crate::output::ListGroupResourcesOutput)
+/// See [`ListGroupResourcesOutput`](crate::output::ListGroupResourcesOutput).
 pub mod list_group_resources_output {
 
-    /// A builder for [`ListGroupResourcesOutput`](crate::output::ListGroupResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListGroupResourcesOutput`](crate::output::ListGroupResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resources:
@@ -757,6 +773,7 @@ pub mod list_group_resources_output {
         /// <important>
         /// <p> <b> <i>Deprecated - don't use this parameter. Use the <code>Resources</code> response field instead.</i> </b> </p>
         /// </important>
+        #[deprecated(note = "This field is deprecated, use Resources instead.")]
         pub fn resource_identifiers(mut self, input: crate::model::ResourceIdentifier) -> Self {
             let mut v = self.resource_identifiers.unwrap_or_default();
             v.push(input);
@@ -766,6 +783,7 @@ pub mod list_group_resources_output {
         /// <important>
         /// <p> <b> <i>Deprecated - don't use this parameter. Use the <code>Resources</code> response field instead.</i> </b> </p>
         /// </important>
+        #[deprecated(note = "This field is deprecated, use Resources instead.")]
         pub fn set_resource_identifiers(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::ResourceIdentifier>>,
@@ -802,7 +820,7 @@ pub mod list_group_resources_output {
             self.query_errors = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGroupResourcesOutput`](crate::output::ListGroupResourcesOutput)
+        /// Consumes the builder and constructs a [`ListGroupResourcesOutput`](crate::output::ListGroupResourcesOutput).
         pub fn build(self) -> crate::output::ListGroupResourcesOutput {
             crate::output::ListGroupResourcesOutput {
                 resources: self.resources,
@@ -814,7 +832,7 @@ pub mod list_group_resources_output {
     }
 }
 impl ListGroupResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`ListGroupResourcesOutput`](crate::output::ListGroupResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`ListGroupResourcesOutput`](crate::output::ListGroupResourcesOutput).
     pub fn builder() -> crate::output::list_group_resources_output::Builder {
         crate::output::list_group_resources_output::Builder::default()
     }
@@ -825,10 +843,13 @@ impl ListGroupResourcesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GroupResourcesOutput {
     /// <p>A list of ARNs of resources that were successfully added to the group by this operation.</p>
+    #[doc(hidden)]
     pub succeeded: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of ARNs of any resources that failed to be added to the group by this operation.</p>
+    #[doc(hidden)]
     pub failed: std::option::Option<std::vec::Vec<crate::model::FailedResource>>,
     /// <p>A list of ARNs of any resources that are still in the process of being added to the group by this operation. These pending additions continue asynchronously. You can check the status of pending additions by using the <code> <code>ListGroupResources</code> </code> operation, and checking the <code>Resources</code> array in the response and the <code>Status</code> field of each object in that array. </p>
+    #[doc(hidden)]
     pub pending: std::option::Option<std::vec::Vec<crate::model::PendingResource>>,
 }
 impl GroupResourcesOutput {
@@ -854,11 +875,10 @@ impl std::fmt::Debug for GroupResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`GroupResourcesOutput`](crate::output::GroupResourcesOutput)
+/// See [`GroupResourcesOutput`](crate::output::GroupResourcesOutput).
 pub mod group_resources_output {
 
-    /// A builder for [`GroupResourcesOutput`](crate::output::GroupResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GroupResourcesOutput`](crate::output::GroupResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) succeeded: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -923,7 +943,7 @@ pub mod group_resources_output {
             self.pending = input;
             self
         }
-        /// Consumes the builder and constructs a [`GroupResourcesOutput`](crate::output::GroupResourcesOutput)
+        /// Consumes the builder and constructs a [`GroupResourcesOutput`](crate::output::GroupResourcesOutput).
         pub fn build(self) -> crate::output::GroupResourcesOutput {
             crate::output::GroupResourcesOutput {
                 succeeded: self.succeeded,
@@ -934,7 +954,7 @@ pub mod group_resources_output {
     }
 }
 impl GroupResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`GroupResourcesOutput`](crate::output::GroupResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`GroupResourcesOutput`](crate::output::GroupResourcesOutput).
     pub fn builder() -> crate::output::group_resources_output::Builder {
         crate::output::group_resources_output::Builder::default()
     }
@@ -945,8 +965,10 @@ impl GroupResourcesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetTagsOutput {
     /// <p>The ARN of the tagged resource group.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The tags associated with the specified resource group.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -971,11 +993,10 @@ impl std::fmt::Debug for GetTagsOutput {
         formatter.finish()
     }
 }
-/// See [`GetTagsOutput`](crate::output::GetTagsOutput)
+/// See [`GetTagsOutput`](crate::output::GetTagsOutput).
 pub mod get_tags_output {
 
-    /// A builder for [`GetTagsOutput`](crate::output::GetTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetTagsOutput`](crate::output::GetTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1019,7 +1040,7 @@ pub mod get_tags_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetTagsOutput`](crate::output::GetTagsOutput)
+        /// Consumes the builder and constructs a [`GetTagsOutput`](crate::output::GetTagsOutput).
         pub fn build(self) -> crate::output::GetTagsOutput {
             crate::output::GetTagsOutput {
                 arn: self.arn,
@@ -1029,7 +1050,7 @@ pub mod get_tags_output {
     }
 }
 impl GetTagsOutput {
-    /// Creates a new builder-style object to manufacture [`GetTagsOutput`](crate::output::GetTagsOutput)
+    /// Creates a new builder-style object to manufacture [`GetTagsOutput`](crate::output::GetTagsOutput).
     pub fn builder() -> crate::output::get_tags_output::Builder {
         crate::output::get_tags_output::Builder::default()
     }
@@ -1040,6 +1061,7 @@ impl GetTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetGroupQueryOutput {
     /// <p>The resource query associated with the specified group. For more information about resource queries, see <a href="https://docs.aws.amazon.com/ARG/latest/userguide/gettingstarted-query.html#gettingstarted-query-cli-tag">Create a tag-based group in Resource Groups</a>.</p>
+    #[doc(hidden)]
     pub group_query: std::option::Option<crate::model::GroupQuery>,
 }
 impl GetGroupQueryOutput {
@@ -1055,11 +1077,10 @@ impl std::fmt::Debug for GetGroupQueryOutput {
         formatter.finish()
     }
 }
-/// See [`GetGroupQueryOutput`](crate::output::GetGroupQueryOutput)
+/// See [`GetGroupQueryOutput`](crate::output::GetGroupQueryOutput).
 pub mod get_group_query_output {
 
-    /// A builder for [`GetGroupQueryOutput`](crate::output::GetGroupQueryOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetGroupQueryOutput`](crate::output::GetGroupQueryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_query: std::option::Option<crate::model::GroupQuery>,
@@ -1078,7 +1099,7 @@ pub mod get_group_query_output {
             self.group_query = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetGroupQueryOutput`](crate::output::GetGroupQueryOutput)
+        /// Consumes the builder and constructs a [`GetGroupQueryOutput`](crate::output::GetGroupQueryOutput).
         pub fn build(self) -> crate::output::GetGroupQueryOutput {
             crate::output::GetGroupQueryOutput {
                 group_query: self.group_query,
@@ -1087,7 +1108,7 @@ pub mod get_group_query_output {
     }
 }
 impl GetGroupQueryOutput {
-    /// Creates a new builder-style object to manufacture [`GetGroupQueryOutput`](crate::output::GetGroupQueryOutput)
+    /// Creates a new builder-style object to manufacture [`GetGroupQueryOutput`](crate::output::GetGroupQueryOutput).
     pub fn builder() -> crate::output::get_group_query_output::Builder {
         crate::output::get_group_query_output::Builder::default()
     }
@@ -1098,6 +1119,7 @@ impl GetGroupQueryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetGroupConfigurationOutput {
     /// <p>The service configuration associated with the specified group. For details about the service configuration syntax, see <a href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for resource groups</a>.</p>
+    #[doc(hidden)]
     pub group_configuration: std::option::Option<crate::model::GroupConfiguration>,
 }
 impl GetGroupConfigurationOutput {
@@ -1113,11 +1135,10 @@ impl std::fmt::Debug for GetGroupConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetGroupConfigurationOutput`](crate::output::GetGroupConfigurationOutput)
+/// See [`GetGroupConfigurationOutput`](crate::output::GetGroupConfigurationOutput).
 pub mod get_group_configuration_output {
 
-    /// A builder for [`GetGroupConfigurationOutput`](crate::output::GetGroupConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetGroupConfigurationOutput`](crate::output::GetGroupConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_configuration: std::option::Option<crate::model::GroupConfiguration>,
@@ -1136,7 +1157,7 @@ pub mod get_group_configuration_output {
             self.group_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetGroupConfigurationOutput`](crate::output::GetGroupConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetGroupConfigurationOutput`](crate::output::GetGroupConfigurationOutput).
         pub fn build(self) -> crate::output::GetGroupConfigurationOutput {
             crate::output::GetGroupConfigurationOutput {
                 group_configuration: self.group_configuration,
@@ -1145,7 +1166,7 @@ pub mod get_group_configuration_output {
     }
 }
 impl GetGroupConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetGroupConfigurationOutput`](crate::output::GetGroupConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetGroupConfigurationOutput`](crate::output::GetGroupConfigurationOutput).
     pub fn builder() -> crate::output::get_group_configuration_output::Builder {
         crate::output::get_group_configuration_output::Builder::default()
     }
@@ -1156,6 +1177,7 @@ impl GetGroupConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetGroupOutput {
     /// <p>A full description of the resource group.</p>
+    #[doc(hidden)]
     pub group: std::option::Option<crate::model::Group>,
 }
 impl GetGroupOutput {
@@ -1171,11 +1193,10 @@ impl std::fmt::Debug for GetGroupOutput {
         formatter.finish()
     }
 }
-/// See [`GetGroupOutput`](crate::output::GetGroupOutput)
+/// See [`GetGroupOutput`](crate::output::GetGroupOutput).
 pub mod get_group_output {
 
-    /// A builder for [`GetGroupOutput`](crate::output::GetGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetGroupOutput`](crate::output::GetGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group: std::option::Option<crate::model::Group>,
@@ -1191,14 +1212,14 @@ pub mod get_group_output {
             self.group = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetGroupOutput`](crate::output::GetGroupOutput)
+        /// Consumes the builder and constructs a [`GetGroupOutput`](crate::output::GetGroupOutput).
         pub fn build(self) -> crate::output::GetGroupOutput {
             crate::output::GetGroupOutput { group: self.group }
         }
     }
 }
 impl GetGroupOutput {
-    /// Creates a new builder-style object to manufacture [`GetGroupOutput`](crate::output::GetGroupOutput)
+    /// Creates a new builder-style object to manufacture [`GetGroupOutput`](crate::output::GetGroupOutput).
     pub fn builder() -> crate::output::get_group_output::Builder {
         crate::output::get_group_output::Builder::default()
     }
@@ -1209,6 +1230,7 @@ impl GetGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteGroupOutput {
     /// <p>A full description of the deleted resource group.</p>
+    #[doc(hidden)]
     pub group: std::option::Option<crate::model::Group>,
 }
 impl DeleteGroupOutput {
@@ -1224,11 +1246,10 @@ impl std::fmt::Debug for DeleteGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteGroupOutput`](crate::output::DeleteGroupOutput)
+/// See [`DeleteGroupOutput`](crate::output::DeleteGroupOutput).
 pub mod delete_group_output {
 
-    /// A builder for [`DeleteGroupOutput`](crate::output::DeleteGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteGroupOutput`](crate::output::DeleteGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group: std::option::Option<crate::model::Group>,
@@ -1244,14 +1265,14 @@ pub mod delete_group_output {
             self.group = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteGroupOutput`](crate::output::DeleteGroupOutput)
+        /// Consumes the builder and constructs a [`DeleteGroupOutput`](crate::output::DeleteGroupOutput).
         pub fn build(self) -> crate::output::DeleteGroupOutput {
             crate::output::DeleteGroupOutput { group: self.group }
         }
     }
 }
 impl DeleteGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteGroupOutput`](crate::output::DeleteGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteGroupOutput`](crate::output::DeleteGroupOutput).
     pub fn builder() -> crate::output::delete_group_output::Builder {
         crate::output::delete_group_output::Builder::default()
     }
@@ -1262,13 +1283,17 @@ impl DeleteGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateGroupOutput {
     /// <p>The description of the resource group.</p>
+    #[doc(hidden)]
     pub group: std::option::Option<crate::model::Group>,
     /// <p>The resource query associated with the group. For more information about resource queries, see <a href="https://docs.aws.amazon.com/ARG/latest/userguide/gettingstarted-query.html#gettingstarted-query-cli-tag">Create a tag-based group in Resource Groups</a>. </p>
+    #[doc(hidden)]
     pub resource_query: std::option::Option<crate::model::ResourceQuery>,
     /// <p>The tags associated with the group.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The service configuration associated with the resource group. For details about the syntax of a service configuration, see <a href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for resource groups</a>.</p>
+    #[doc(hidden)]
     pub group_configuration: std::option::Option<crate::model::GroupConfiguration>,
 }
 impl CreateGroupOutput {
@@ -1302,11 +1327,10 @@ impl std::fmt::Debug for CreateGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateGroupOutput`](crate::output::CreateGroupOutput)
+/// See [`CreateGroupOutput`](crate::output::CreateGroupOutput).
 pub mod create_group_output {
 
-    /// A builder for [`CreateGroupOutput`](crate::output::CreateGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateGroupOutput`](crate::output::CreateGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group: std::option::Option<crate::model::Group>,
@@ -1378,7 +1402,7 @@ pub mod create_group_output {
             self.group_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateGroupOutput`](crate::output::CreateGroupOutput)
+        /// Consumes the builder and constructs a [`CreateGroupOutput`](crate::output::CreateGroupOutput).
         pub fn build(self) -> crate::output::CreateGroupOutput {
             crate::output::CreateGroupOutput {
                 group: self.group,
@@ -1390,7 +1414,7 @@ pub mod create_group_output {
     }
 }
 impl CreateGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateGroupOutput`](crate::output::CreateGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateGroupOutput`](crate::output::CreateGroupOutput).
     pub fn builder() -> crate::output::create_group_output::Builder {
         crate::output::create_group_output::Builder::default()
     }

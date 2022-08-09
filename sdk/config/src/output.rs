@@ -9,22 +9,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -40,22 +39,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -71,22 +69,21 @@ impl std::fmt::Debug for StopConfigurationRecorderOutput {
         formatter.finish()
     }
 }
-/// See [`StopConfigurationRecorderOutput`](crate::output::StopConfigurationRecorderOutput)
+/// See [`StopConfigurationRecorderOutput`](crate::output::StopConfigurationRecorderOutput).
 pub mod stop_configuration_recorder_output {
 
-    /// A builder for [`StopConfigurationRecorderOutput`](crate::output::StopConfigurationRecorderOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopConfigurationRecorderOutput`](crate::output::StopConfigurationRecorderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`StopConfigurationRecorderOutput`](crate::output::StopConfigurationRecorderOutput)
+        /// Consumes the builder and constructs a [`StopConfigurationRecorderOutput`](crate::output::StopConfigurationRecorderOutput).
         pub fn build(self) -> crate::output::StopConfigurationRecorderOutput {
             crate::output::StopConfigurationRecorderOutput {}
         }
     }
 }
 impl StopConfigurationRecorderOutput {
-    /// Creates a new builder-style object to manufacture [`StopConfigurationRecorderOutput`](crate::output::StopConfigurationRecorderOutput)
+    /// Creates a new builder-style object to manufacture [`StopConfigurationRecorderOutput`](crate::output::StopConfigurationRecorderOutput).
     pub fn builder() -> crate::output::stop_configuration_recorder_output::Builder {
         crate::output::stop_configuration_recorder_output::Builder::default()
     }
@@ -97,8 +94,10 @@ impl StopConfigurationRecorderOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartRemediationExecutionOutput {
     /// <p>Returns a failure message. For example, the resource is already compliant.</p>
+    #[doc(hidden)]
     pub failure_message: std::option::Option<std::string::String>,
     /// <p>For resources that have failed to start execution, the API returns a resource key object.</p>
+    #[doc(hidden)]
     pub failed_items: std::option::Option<std::vec::Vec<crate::model::ResourceKey>>,
 }
 impl StartRemediationExecutionOutput {
@@ -119,11 +118,10 @@ impl std::fmt::Debug for StartRemediationExecutionOutput {
         formatter.finish()
     }
 }
-/// See [`StartRemediationExecutionOutput`](crate::output::StartRemediationExecutionOutput)
+/// See [`StartRemediationExecutionOutput`](crate::output::StartRemediationExecutionOutput).
 pub mod start_remediation_execution_output {
 
-    /// A builder for [`StartRemediationExecutionOutput`](crate::output::StartRemediationExecutionOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartRemediationExecutionOutput`](crate::output::StartRemediationExecutionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failure_message: std::option::Option<std::string::String>,
@@ -162,7 +160,7 @@ pub mod start_remediation_execution_output {
             self.failed_items = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartRemediationExecutionOutput`](crate::output::StartRemediationExecutionOutput)
+        /// Consumes the builder and constructs a [`StartRemediationExecutionOutput`](crate::output::StartRemediationExecutionOutput).
         pub fn build(self) -> crate::output::StartRemediationExecutionOutput {
             crate::output::StartRemediationExecutionOutput {
                 failure_message: self.failure_message,
@@ -172,7 +170,7 @@ pub mod start_remediation_execution_output {
     }
 }
 impl StartRemediationExecutionOutput {
-    /// Creates a new builder-style object to manufacture [`StartRemediationExecutionOutput`](crate::output::StartRemediationExecutionOutput)
+    /// Creates a new builder-style object to manufacture [`StartRemediationExecutionOutput`](crate::output::StartRemediationExecutionOutput).
     pub fn builder() -> crate::output::start_remediation_execution_output::Builder {
         crate::output::start_remediation_execution_output::Builder::default()
     }
@@ -188,22 +186,21 @@ impl std::fmt::Debug for StartConfigurationRecorderOutput {
         formatter.finish()
     }
 }
-/// See [`StartConfigurationRecorderOutput`](crate::output::StartConfigurationRecorderOutput)
+/// See [`StartConfigurationRecorderOutput`](crate::output::StartConfigurationRecorderOutput).
 pub mod start_configuration_recorder_output {
 
-    /// A builder for [`StartConfigurationRecorderOutput`](crate::output::StartConfigurationRecorderOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartConfigurationRecorderOutput`](crate::output::StartConfigurationRecorderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`StartConfigurationRecorderOutput`](crate::output::StartConfigurationRecorderOutput)
+        /// Consumes the builder and constructs a [`StartConfigurationRecorderOutput`](crate::output::StartConfigurationRecorderOutput).
         pub fn build(self) -> crate::output::StartConfigurationRecorderOutput {
             crate::output::StartConfigurationRecorderOutput {}
         }
     }
 }
 impl StartConfigurationRecorderOutput {
-    /// Creates a new builder-style object to manufacture [`StartConfigurationRecorderOutput`](crate::output::StartConfigurationRecorderOutput)
+    /// Creates a new builder-style object to manufacture [`StartConfigurationRecorderOutput`](crate::output::StartConfigurationRecorderOutput).
     pub fn builder() -> crate::output::start_configuration_recorder_output::Builder {
         crate::output::start_configuration_recorder_output::Builder::default()
     }
@@ -219,22 +216,21 @@ impl std::fmt::Debug for StartConfigRulesEvaluationOutput {
         formatter.finish()
     }
 }
-/// See [`StartConfigRulesEvaluationOutput`](crate::output::StartConfigRulesEvaluationOutput)
+/// See [`StartConfigRulesEvaluationOutput`](crate::output::StartConfigRulesEvaluationOutput).
 pub mod start_config_rules_evaluation_output {
 
-    /// A builder for [`StartConfigRulesEvaluationOutput`](crate::output::StartConfigRulesEvaluationOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartConfigRulesEvaluationOutput`](crate::output::StartConfigRulesEvaluationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`StartConfigRulesEvaluationOutput`](crate::output::StartConfigRulesEvaluationOutput)
+        /// Consumes the builder and constructs a [`StartConfigRulesEvaluationOutput`](crate::output::StartConfigRulesEvaluationOutput).
         pub fn build(self) -> crate::output::StartConfigRulesEvaluationOutput {
             crate::output::StartConfigRulesEvaluationOutput {}
         }
     }
 }
 impl StartConfigRulesEvaluationOutput {
-    /// Creates a new builder-style object to manufacture [`StartConfigRulesEvaluationOutput`](crate::output::StartConfigRulesEvaluationOutput)
+    /// Creates a new builder-style object to manufacture [`StartConfigRulesEvaluationOutput`](crate::output::StartConfigRulesEvaluationOutput).
     pub fn builder() -> crate::output::start_config_rules_evaluation_output::Builder {
         crate::output::start_config_rules_evaluation_output::Builder::default()
     }
@@ -245,10 +241,13 @@ impl StartConfigRulesEvaluationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SelectResourceConfigOutput {
     /// <p>Returns the results for the SQL query.</p>
+    #[doc(hidden)]
     pub results: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Returns the <code>QueryInfo</code> object.</p>
+    #[doc(hidden)]
     pub query_info: std::option::Option<crate::model::QueryInfo>,
     /// <p>The <code>nextToken</code> string returned in a previous request that you use to request the next page of results in a paginated response. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl SelectResourceConfigOutput {
@@ -274,11 +273,10 @@ impl std::fmt::Debug for SelectResourceConfigOutput {
         formatter.finish()
     }
 }
-/// See [`SelectResourceConfigOutput`](crate::output::SelectResourceConfigOutput)
+/// See [`SelectResourceConfigOutput`](crate::output::SelectResourceConfigOutput).
 pub mod select_resource_config_output {
 
-    /// A builder for [`SelectResourceConfigOutput`](crate::output::SelectResourceConfigOutput)
-    #[non_exhaustive]
+    /// A builder for [`SelectResourceConfigOutput`](crate::output::SelectResourceConfigOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) results: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -328,7 +326,7 @@ pub mod select_resource_config_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`SelectResourceConfigOutput`](crate::output::SelectResourceConfigOutput)
+        /// Consumes the builder and constructs a [`SelectResourceConfigOutput`](crate::output::SelectResourceConfigOutput).
         pub fn build(self) -> crate::output::SelectResourceConfigOutput {
             crate::output::SelectResourceConfigOutput {
                 results: self.results,
@@ -339,7 +337,7 @@ pub mod select_resource_config_output {
     }
 }
 impl SelectResourceConfigOutput {
-    /// Creates a new builder-style object to manufacture [`SelectResourceConfigOutput`](crate::output::SelectResourceConfigOutput)
+    /// Creates a new builder-style object to manufacture [`SelectResourceConfigOutput`](crate::output::SelectResourceConfigOutput).
     pub fn builder() -> crate::output::select_resource_config_output::Builder {
         crate::output::select_resource_config_output::Builder::default()
     }
@@ -350,10 +348,13 @@ impl SelectResourceConfigOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SelectAggregateResourceConfigOutput {
     /// <p>Returns the results for the SQL query.</p>
+    #[doc(hidden)]
     pub results: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Details about the query.</p>
+    #[doc(hidden)]
     pub query_info: std::option::Option<crate::model::QueryInfo>,
     /// <p>The nextToken string returned in a previous request that you use to request the next page of results in a paginated response. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl SelectAggregateResourceConfigOutput {
@@ -379,11 +380,10 @@ impl std::fmt::Debug for SelectAggregateResourceConfigOutput {
         formatter.finish()
     }
 }
-/// See [`SelectAggregateResourceConfigOutput`](crate::output::SelectAggregateResourceConfigOutput)
+/// See [`SelectAggregateResourceConfigOutput`](crate::output::SelectAggregateResourceConfigOutput).
 pub mod select_aggregate_resource_config_output {
 
-    /// A builder for [`SelectAggregateResourceConfigOutput`](crate::output::SelectAggregateResourceConfigOutput)
-    #[non_exhaustive]
+    /// A builder for [`SelectAggregateResourceConfigOutput`](crate::output::SelectAggregateResourceConfigOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) results: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -433,7 +433,7 @@ pub mod select_aggregate_resource_config_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`SelectAggregateResourceConfigOutput`](crate::output::SelectAggregateResourceConfigOutput)
+        /// Consumes the builder and constructs a [`SelectAggregateResourceConfigOutput`](crate::output::SelectAggregateResourceConfigOutput).
         pub fn build(self) -> crate::output::SelectAggregateResourceConfigOutput {
             crate::output::SelectAggregateResourceConfigOutput {
                 results: self.results,
@@ -444,7 +444,7 @@ pub mod select_aggregate_resource_config_output {
     }
 }
 impl SelectAggregateResourceConfigOutput {
-    /// Creates a new builder-style object to manufacture [`SelectAggregateResourceConfigOutput`](crate::output::SelectAggregateResourceConfigOutput)
+    /// Creates a new builder-style object to manufacture [`SelectAggregateResourceConfigOutput`](crate::output::SelectAggregateResourceConfigOutput).
     pub fn builder() -> crate::output::select_aggregate_resource_config_output::Builder {
         crate::output::select_aggregate_resource_config_output::Builder::default()
     }
@@ -455,6 +455,7 @@ impl SelectAggregateResourceConfigOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutStoredQueryOutput {
     /// <p>Amazon Resource Name (ARN) of the query. For example, arn:partition:service:region:account-id:resource-type/resource-name/resource-id.</p>
+    #[doc(hidden)]
     pub query_arn: std::option::Option<std::string::String>,
 }
 impl PutStoredQueryOutput {
@@ -470,11 +471,10 @@ impl std::fmt::Debug for PutStoredQueryOutput {
         formatter.finish()
     }
 }
-/// See [`PutStoredQueryOutput`](crate::output::PutStoredQueryOutput)
+/// See [`PutStoredQueryOutput`](crate::output::PutStoredQueryOutput).
 pub mod put_stored_query_output {
 
-    /// A builder for [`PutStoredQueryOutput`](crate::output::PutStoredQueryOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutStoredQueryOutput`](crate::output::PutStoredQueryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) query_arn: std::option::Option<std::string::String>,
@@ -490,7 +490,7 @@ pub mod put_stored_query_output {
             self.query_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutStoredQueryOutput`](crate::output::PutStoredQueryOutput)
+        /// Consumes the builder and constructs a [`PutStoredQueryOutput`](crate::output::PutStoredQueryOutput).
         pub fn build(self) -> crate::output::PutStoredQueryOutput {
             crate::output::PutStoredQueryOutput {
                 query_arn: self.query_arn,
@@ -499,7 +499,7 @@ pub mod put_stored_query_output {
     }
 }
 impl PutStoredQueryOutput {
-    /// Creates a new builder-style object to manufacture [`PutStoredQueryOutput`](crate::output::PutStoredQueryOutput)
+    /// Creates a new builder-style object to manufacture [`PutStoredQueryOutput`](crate::output::PutStoredQueryOutput).
     pub fn builder() -> crate::output::put_stored_query_output::Builder {
         crate::output::put_stored_query_output::Builder::default()
     }
@@ -510,6 +510,7 @@ impl PutStoredQueryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutRetentionConfigurationOutput {
     /// <p>Returns a retention configuration object.</p>
+    #[doc(hidden)]
     pub retention_configuration: std::option::Option<crate::model::RetentionConfiguration>,
 }
 impl PutRetentionConfigurationOutput {
@@ -527,11 +528,10 @@ impl std::fmt::Debug for PutRetentionConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutRetentionConfigurationOutput`](crate::output::PutRetentionConfigurationOutput)
+/// See [`PutRetentionConfigurationOutput`](crate::output::PutRetentionConfigurationOutput).
 pub mod put_retention_configuration_output {
 
-    /// A builder for [`PutRetentionConfigurationOutput`](crate::output::PutRetentionConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutRetentionConfigurationOutput`](crate::output::PutRetentionConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) retention_configuration:
@@ -554,7 +554,7 @@ pub mod put_retention_configuration_output {
             self.retention_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutRetentionConfigurationOutput`](crate::output::PutRetentionConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutRetentionConfigurationOutput`](crate::output::PutRetentionConfigurationOutput).
         pub fn build(self) -> crate::output::PutRetentionConfigurationOutput {
             crate::output::PutRetentionConfigurationOutput {
                 retention_configuration: self.retention_configuration,
@@ -563,7 +563,7 @@ pub mod put_retention_configuration_output {
     }
 }
 impl PutRetentionConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutRetentionConfigurationOutput`](crate::output::PutRetentionConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutRetentionConfigurationOutput`](crate::output::PutRetentionConfigurationOutput).
     pub fn builder() -> crate::output::put_retention_configuration_output::Builder {
         crate::output::put_retention_configuration_output::Builder::default()
     }
@@ -579,22 +579,21 @@ impl std::fmt::Debug for PutResourceConfigOutput {
         formatter.finish()
     }
 }
-/// See [`PutResourceConfigOutput`](crate::output::PutResourceConfigOutput)
+/// See [`PutResourceConfigOutput`](crate::output::PutResourceConfigOutput).
 pub mod put_resource_config_output {
 
-    /// A builder for [`PutResourceConfigOutput`](crate::output::PutResourceConfigOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutResourceConfigOutput`](crate::output::PutResourceConfigOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutResourceConfigOutput`](crate::output::PutResourceConfigOutput)
+        /// Consumes the builder and constructs a [`PutResourceConfigOutput`](crate::output::PutResourceConfigOutput).
         pub fn build(self) -> crate::output::PutResourceConfigOutput {
             crate::output::PutResourceConfigOutput {}
         }
     }
 }
 impl PutResourceConfigOutput {
-    /// Creates a new builder-style object to manufacture [`PutResourceConfigOutput`](crate::output::PutResourceConfigOutput)
+    /// Creates a new builder-style object to manufacture [`PutResourceConfigOutput`](crate::output::PutResourceConfigOutput).
     pub fn builder() -> crate::output::put_resource_config_output::Builder {
         crate::output::put_resource_config_output::Builder::default()
     }
@@ -605,6 +604,7 @@ impl PutResourceConfigOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutRemediationExceptionsOutput {
     /// <p>Returns a list of failed remediation exceptions batch objects. Each object in the batch consists of a list of failed items and failure messages.</p>
+    #[doc(hidden)]
     pub failed_batches:
         std::option::Option<std::vec::Vec<crate::model::FailedRemediationExceptionBatch>>,
 }
@@ -623,11 +623,10 @@ impl std::fmt::Debug for PutRemediationExceptionsOutput {
         formatter.finish()
     }
 }
-/// See [`PutRemediationExceptionsOutput`](crate::output::PutRemediationExceptionsOutput)
+/// See [`PutRemediationExceptionsOutput`](crate::output::PutRemediationExceptionsOutput).
 pub mod put_remediation_exceptions_output {
 
-    /// A builder for [`PutRemediationExceptionsOutput`](crate::output::PutRemediationExceptionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutRemediationExceptionsOutput`](crate::output::PutRemediationExceptionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failed_batches:
@@ -658,7 +657,7 @@ pub mod put_remediation_exceptions_output {
             self.failed_batches = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutRemediationExceptionsOutput`](crate::output::PutRemediationExceptionsOutput)
+        /// Consumes the builder and constructs a [`PutRemediationExceptionsOutput`](crate::output::PutRemediationExceptionsOutput).
         pub fn build(self) -> crate::output::PutRemediationExceptionsOutput {
             crate::output::PutRemediationExceptionsOutput {
                 failed_batches: self.failed_batches,
@@ -667,7 +666,7 @@ pub mod put_remediation_exceptions_output {
     }
 }
 impl PutRemediationExceptionsOutput {
-    /// Creates a new builder-style object to manufacture [`PutRemediationExceptionsOutput`](crate::output::PutRemediationExceptionsOutput)
+    /// Creates a new builder-style object to manufacture [`PutRemediationExceptionsOutput`](crate::output::PutRemediationExceptionsOutput).
     pub fn builder() -> crate::output::put_remediation_exceptions_output::Builder {
         crate::output::put_remediation_exceptions_output::Builder::default()
     }
@@ -678,6 +677,7 @@ impl PutRemediationExceptionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutRemediationConfigurationsOutput {
     /// <p>Returns a list of failed remediation batch objects.</p>
+    #[doc(hidden)]
     pub failed_batches: std::option::Option<std::vec::Vec<crate::model::FailedRemediationBatch>>,
 }
 impl PutRemediationConfigurationsOutput {
@@ -693,11 +693,10 @@ impl std::fmt::Debug for PutRemediationConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`PutRemediationConfigurationsOutput`](crate::output::PutRemediationConfigurationsOutput)
+/// See [`PutRemediationConfigurationsOutput`](crate::output::PutRemediationConfigurationsOutput).
 pub mod put_remediation_configurations_output {
 
-    /// A builder for [`PutRemediationConfigurationsOutput`](crate::output::PutRemediationConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutRemediationConfigurationsOutput`](crate::output::PutRemediationConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failed_batches:
@@ -723,7 +722,7 @@ pub mod put_remediation_configurations_output {
             self.failed_batches = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutRemediationConfigurationsOutput`](crate::output::PutRemediationConfigurationsOutput)
+        /// Consumes the builder and constructs a [`PutRemediationConfigurationsOutput`](crate::output::PutRemediationConfigurationsOutput).
         pub fn build(self) -> crate::output::PutRemediationConfigurationsOutput {
             crate::output::PutRemediationConfigurationsOutput {
                 failed_batches: self.failed_batches,
@@ -732,7 +731,7 @@ pub mod put_remediation_configurations_output {
     }
 }
 impl PutRemediationConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`PutRemediationConfigurationsOutput`](crate::output::PutRemediationConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`PutRemediationConfigurationsOutput`](crate::output::PutRemediationConfigurationsOutput).
     pub fn builder() -> crate::output::put_remediation_configurations_output::Builder {
         crate::output::put_remediation_configurations_output::Builder::default()
     }
@@ -743,6 +742,7 @@ impl PutRemediationConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutOrganizationConformancePackOutput {
     /// <p>ARN of the organization conformance pack.</p>
+    #[doc(hidden)]
     pub organization_conformance_pack_arn: std::option::Option<std::string::String>,
 }
 impl PutOrganizationConformancePackOutput {
@@ -761,11 +761,10 @@ impl std::fmt::Debug for PutOrganizationConformancePackOutput {
         formatter.finish()
     }
 }
-/// See [`PutOrganizationConformancePackOutput`](crate::output::PutOrganizationConformancePackOutput)
+/// See [`PutOrganizationConformancePackOutput`](crate::output::PutOrganizationConformancePackOutput).
 pub mod put_organization_conformance_pack_output {
 
-    /// A builder for [`PutOrganizationConformancePackOutput`](crate::output::PutOrganizationConformancePackOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutOrganizationConformancePackOutput`](crate::output::PutOrganizationConformancePackOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) organization_conformance_pack_arn: std::option::Option<std::string::String>,
@@ -787,7 +786,7 @@ pub mod put_organization_conformance_pack_output {
             self.organization_conformance_pack_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutOrganizationConformancePackOutput`](crate::output::PutOrganizationConformancePackOutput)
+        /// Consumes the builder and constructs a [`PutOrganizationConformancePackOutput`](crate::output::PutOrganizationConformancePackOutput).
         pub fn build(self) -> crate::output::PutOrganizationConformancePackOutput {
             crate::output::PutOrganizationConformancePackOutput {
                 organization_conformance_pack_arn: self.organization_conformance_pack_arn,
@@ -796,7 +795,7 @@ pub mod put_organization_conformance_pack_output {
     }
 }
 impl PutOrganizationConformancePackOutput {
-    /// Creates a new builder-style object to manufacture [`PutOrganizationConformancePackOutput`](crate::output::PutOrganizationConformancePackOutput)
+    /// Creates a new builder-style object to manufacture [`PutOrganizationConformancePackOutput`](crate::output::PutOrganizationConformancePackOutput).
     pub fn builder() -> crate::output::put_organization_conformance_pack_output::Builder {
         crate::output::put_organization_conformance_pack_output::Builder::default()
     }
@@ -807,6 +806,7 @@ impl PutOrganizationConformancePackOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutOrganizationConfigRuleOutput {
     /// <p>The Amazon Resource Name (ARN) of an organization Config rule.</p>
+    #[doc(hidden)]
     pub organization_config_rule_arn: std::option::Option<std::string::String>,
 }
 impl PutOrganizationConfigRuleOutput {
@@ -825,11 +825,10 @@ impl std::fmt::Debug for PutOrganizationConfigRuleOutput {
         formatter.finish()
     }
 }
-/// See [`PutOrganizationConfigRuleOutput`](crate::output::PutOrganizationConfigRuleOutput)
+/// See [`PutOrganizationConfigRuleOutput`](crate::output::PutOrganizationConfigRuleOutput).
 pub mod put_organization_config_rule_output {
 
-    /// A builder for [`PutOrganizationConfigRuleOutput`](crate::output::PutOrganizationConfigRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutOrganizationConfigRuleOutput`](crate::output::PutOrganizationConfigRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) organization_config_rule_arn: std::option::Option<std::string::String>,
@@ -851,7 +850,7 @@ pub mod put_organization_config_rule_output {
             self.organization_config_rule_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutOrganizationConfigRuleOutput`](crate::output::PutOrganizationConfigRuleOutput)
+        /// Consumes the builder and constructs a [`PutOrganizationConfigRuleOutput`](crate::output::PutOrganizationConfigRuleOutput).
         pub fn build(self) -> crate::output::PutOrganizationConfigRuleOutput {
             crate::output::PutOrganizationConfigRuleOutput {
                 organization_config_rule_arn: self.organization_config_rule_arn,
@@ -860,7 +859,7 @@ pub mod put_organization_config_rule_output {
     }
 }
 impl PutOrganizationConfigRuleOutput {
-    /// Creates a new builder-style object to manufacture [`PutOrganizationConfigRuleOutput`](crate::output::PutOrganizationConfigRuleOutput)
+    /// Creates a new builder-style object to manufacture [`PutOrganizationConfigRuleOutput`](crate::output::PutOrganizationConfigRuleOutput).
     pub fn builder() -> crate::output::put_organization_config_rule_output::Builder {
         crate::output::put_organization_config_rule_output::Builder::default()
     }
@@ -876,22 +875,21 @@ impl std::fmt::Debug for PutExternalEvaluationOutput {
         formatter.finish()
     }
 }
-/// See [`PutExternalEvaluationOutput`](crate::output::PutExternalEvaluationOutput)
+/// See [`PutExternalEvaluationOutput`](crate::output::PutExternalEvaluationOutput).
 pub mod put_external_evaluation_output {
 
-    /// A builder for [`PutExternalEvaluationOutput`](crate::output::PutExternalEvaluationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutExternalEvaluationOutput`](crate::output::PutExternalEvaluationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutExternalEvaluationOutput`](crate::output::PutExternalEvaluationOutput)
+        /// Consumes the builder and constructs a [`PutExternalEvaluationOutput`](crate::output::PutExternalEvaluationOutput).
         pub fn build(self) -> crate::output::PutExternalEvaluationOutput {
             crate::output::PutExternalEvaluationOutput {}
         }
     }
 }
 impl PutExternalEvaluationOutput {
-    /// Creates a new builder-style object to manufacture [`PutExternalEvaluationOutput`](crate::output::PutExternalEvaluationOutput)
+    /// Creates a new builder-style object to manufacture [`PutExternalEvaluationOutput`](crate::output::PutExternalEvaluationOutput).
     pub fn builder() -> crate::output::put_external_evaluation_output::Builder {
         crate::output::put_external_evaluation_output::Builder::default()
     }
@@ -902,6 +900,7 @@ impl PutExternalEvaluationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutEvaluationsOutput {
     /// <p>Requests that failed because of a client or server error.</p>
+    #[doc(hidden)]
     pub failed_evaluations: std::option::Option<std::vec::Vec<crate::model::Evaluation>>,
 }
 impl PutEvaluationsOutput {
@@ -917,11 +916,10 @@ impl std::fmt::Debug for PutEvaluationsOutput {
         formatter.finish()
     }
 }
-/// See [`PutEvaluationsOutput`](crate::output::PutEvaluationsOutput)
+/// See [`PutEvaluationsOutput`](crate::output::PutEvaluationsOutput).
 pub mod put_evaluations_output {
 
-    /// A builder for [`PutEvaluationsOutput`](crate::output::PutEvaluationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutEvaluationsOutput`](crate::output::PutEvaluationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failed_evaluations: std::option::Option<std::vec::Vec<crate::model::Evaluation>>,
@@ -946,7 +944,7 @@ pub mod put_evaluations_output {
             self.failed_evaluations = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutEvaluationsOutput`](crate::output::PutEvaluationsOutput)
+        /// Consumes the builder and constructs a [`PutEvaluationsOutput`](crate::output::PutEvaluationsOutput).
         pub fn build(self) -> crate::output::PutEvaluationsOutput {
             crate::output::PutEvaluationsOutput {
                 failed_evaluations: self.failed_evaluations,
@@ -955,7 +953,7 @@ pub mod put_evaluations_output {
     }
 }
 impl PutEvaluationsOutput {
-    /// Creates a new builder-style object to manufacture [`PutEvaluationsOutput`](crate::output::PutEvaluationsOutput)
+    /// Creates a new builder-style object to manufacture [`PutEvaluationsOutput`](crate::output::PutEvaluationsOutput).
     pub fn builder() -> crate::output::put_evaluations_output::Builder {
         crate::output::put_evaluations_output::Builder::default()
     }
@@ -971,22 +969,21 @@ impl std::fmt::Debug for PutDeliveryChannelOutput {
         formatter.finish()
     }
 }
-/// See [`PutDeliveryChannelOutput`](crate::output::PutDeliveryChannelOutput)
+/// See [`PutDeliveryChannelOutput`](crate::output::PutDeliveryChannelOutput).
 pub mod put_delivery_channel_output {
 
-    /// A builder for [`PutDeliveryChannelOutput`](crate::output::PutDeliveryChannelOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutDeliveryChannelOutput`](crate::output::PutDeliveryChannelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutDeliveryChannelOutput`](crate::output::PutDeliveryChannelOutput)
+        /// Consumes the builder and constructs a [`PutDeliveryChannelOutput`](crate::output::PutDeliveryChannelOutput).
         pub fn build(self) -> crate::output::PutDeliveryChannelOutput {
             crate::output::PutDeliveryChannelOutput {}
         }
     }
 }
 impl PutDeliveryChannelOutput {
-    /// Creates a new builder-style object to manufacture [`PutDeliveryChannelOutput`](crate::output::PutDeliveryChannelOutput)
+    /// Creates a new builder-style object to manufacture [`PutDeliveryChannelOutput`](crate::output::PutDeliveryChannelOutput).
     pub fn builder() -> crate::output::put_delivery_channel_output::Builder {
         crate::output::put_delivery_channel_output::Builder::default()
     }
@@ -997,6 +994,7 @@ impl PutDeliveryChannelOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutConformancePackOutput {
     /// <p>ARN of the conformance pack.</p>
+    #[doc(hidden)]
     pub conformance_pack_arn: std::option::Option<std::string::String>,
 }
 impl PutConformancePackOutput {
@@ -1012,11 +1010,10 @@ impl std::fmt::Debug for PutConformancePackOutput {
         formatter.finish()
     }
 }
-/// See [`PutConformancePackOutput`](crate::output::PutConformancePackOutput)
+/// See [`PutConformancePackOutput`](crate::output::PutConformancePackOutput).
 pub mod put_conformance_pack_output {
 
-    /// A builder for [`PutConformancePackOutput`](crate::output::PutConformancePackOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutConformancePackOutput`](crate::output::PutConformancePackOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) conformance_pack_arn: std::option::Option<std::string::String>,
@@ -1035,7 +1032,7 @@ pub mod put_conformance_pack_output {
             self.conformance_pack_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutConformancePackOutput`](crate::output::PutConformancePackOutput)
+        /// Consumes the builder and constructs a [`PutConformancePackOutput`](crate::output::PutConformancePackOutput).
         pub fn build(self) -> crate::output::PutConformancePackOutput {
             crate::output::PutConformancePackOutput {
                 conformance_pack_arn: self.conformance_pack_arn,
@@ -1044,7 +1041,7 @@ pub mod put_conformance_pack_output {
     }
 }
 impl PutConformancePackOutput {
-    /// Creates a new builder-style object to manufacture [`PutConformancePackOutput`](crate::output::PutConformancePackOutput)
+    /// Creates a new builder-style object to manufacture [`PutConformancePackOutput`](crate::output::PutConformancePackOutput).
     pub fn builder() -> crate::output::put_conformance_pack_output::Builder {
         crate::output::put_conformance_pack_output::Builder::default()
     }
@@ -1060,22 +1057,21 @@ impl std::fmt::Debug for PutConfigurationRecorderOutput {
         formatter.finish()
     }
 }
-/// See [`PutConfigurationRecorderOutput`](crate::output::PutConfigurationRecorderOutput)
+/// See [`PutConfigurationRecorderOutput`](crate::output::PutConfigurationRecorderOutput).
 pub mod put_configuration_recorder_output {
 
-    /// A builder for [`PutConfigurationRecorderOutput`](crate::output::PutConfigurationRecorderOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutConfigurationRecorderOutput`](crate::output::PutConfigurationRecorderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutConfigurationRecorderOutput`](crate::output::PutConfigurationRecorderOutput)
+        /// Consumes the builder and constructs a [`PutConfigurationRecorderOutput`](crate::output::PutConfigurationRecorderOutput).
         pub fn build(self) -> crate::output::PutConfigurationRecorderOutput {
             crate::output::PutConfigurationRecorderOutput {}
         }
     }
 }
 impl PutConfigurationRecorderOutput {
-    /// Creates a new builder-style object to manufacture [`PutConfigurationRecorderOutput`](crate::output::PutConfigurationRecorderOutput)
+    /// Creates a new builder-style object to manufacture [`PutConfigurationRecorderOutput`](crate::output::PutConfigurationRecorderOutput).
     pub fn builder() -> crate::output::put_configuration_recorder_output::Builder {
         crate::output::put_configuration_recorder_output::Builder::default()
     }
@@ -1086,6 +1082,7 @@ impl PutConfigurationRecorderOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutConfigurationAggregatorOutput {
     /// <p>Returns a ConfigurationAggregator object.</p>
+    #[doc(hidden)]
     pub configuration_aggregator: std::option::Option<crate::model::ConfigurationAggregator>,
 }
 impl PutConfigurationAggregatorOutput {
@@ -1103,11 +1100,10 @@ impl std::fmt::Debug for PutConfigurationAggregatorOutput {
         formatter.finish()
     }
 }
-/// See [`PutConfigurationAggregatorOutput`](crate::output::PutConfigurationAggregatorOutput)
+/// See [`PutConfigurationAggregatorOutput`](crate::output::PutConfigurationAggregatorOutput).
 pub mod put_configuration_aggregator_output {
 
-    /// A builder for [`PutConfigurationAggregatorOutput`](crate::output::PutConfigurationAggregatorOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutConfigurationAggregatorOutput`](crate::output::PutConfigurationAggregatorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_aggregator:
@@ -1130,7 +1126,7 @@ pub mod put_configuration_aggregator_output {
             self.configuration_aggregator = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutConfigurationAggregatorOutput`](crate::output::PutConfigurationAggregatorOutput)
+        /// Consumes the builder and constructs a [`PutConfigurationAggregatorOutput`](crate::output::PutConfigurationAggregatorOutput).
         pub fn build(self) -> crate::output::PutConfigurationAggregatorOutput {
             crate::output::PutConfigurationAggregatorOutput {
                 configuration_aggregator: self.configuration_aggregator,
@@ -1139,7 +1135,7 @@ pub mod put_configuration_aggregator_output {
     }
 }
 impl PutConfigurationAggregatorOutput {
-    /// Creates a new builder-style object to manufacture [`PutConfigurationAggregatorOutput`](crate::output::PutConfigurationAggregatorOutput)
+    /// Creates a new builder-style object to manufacture [`PutConfigurationAggregatorOutput`](crate::output::PutConfigurationAggregatorOutput).
     pub fn builder() -> crate::output::put_configuration_aggregator_output::Builder {
         crate::output::put_configuration_aggregator_output::Builder::default()
     }
@@ -1155,22 +1151,21 @@ impl std::fmt::Debug for PutConfigRuleOutput {
         formatter.finish()
     }
 }
-/// See [`PutConfigRuleOutput`](crate::output::PutConfigRuleOutput)
+/// See [`PutConfigRuleOutput`](crate::output::PutConfigRuleOutput).
 pub mod put_config_rule_output {
 
-    /// A builder for [`PutConfigRuleOutput`](crate::output::PutConfigRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutConfigRuleOutput`](crate::output::PutConfigRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutConfigRuleOutput`](crate::output::PutConfigRuleOutput)
+        /// Consumes the builder and constructs a [`PutConfigRuleOutput`](crate::output::PutConfigRuleOutput).
         pub fn build(self) -> crate::output::PutConfigRuleOutput {
             crate::output::PutConfigRuleOutput {}
         }
     }
 }
 impl PutConfigRuleOutput {
-    /// Creates a new builder-style object to manufacture [`PutConfigRuleOutput`](crate::output::PutConfigRuleOutput)
+    /// Creates a new builder-style object to manufacture [`PutConfigRuleOutput`](crate::output::PutConfigRuleOutput).
     pub fn builder() -> crate::output::put_config_rule_output::Builder {
         crate::output::put_config_rule_output::Builder::default()
     }
@@ -1181,6 +1176,7 @@ impl PutConfigRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutAggregationAuthorizationOutput {
     /// <p>Returns an AggregationAuthorization object. </p>
+    #[doc(hidden)]
     pub aggregation_authorization: std::option::Option<crate::model::AggregationAuthorization>,
 }
 impl PutAggregationAuthorizationOutput {
@@ -1198,11 +1194,10 @@ impl std::fmt::Debug for PutAggregationAuthorizationOutput {
         formatter.finish()
     }
 }
-/// See [`PutAggregationAuthorizationOutput`](crate::output::PutAggregationAuthorizationOutput)
+/// See [`PutAggregationAuthorizationOutput`](crate::output::PutAggregationAuthorizationOutput).
 pub mod put_aggregation_authorization_output {
 
-    /// A builder for [`PutAggregationAuthorizationOutput`](crate::output::PutAggregationAuthorizationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutAggregationAuthorizationOutput`](crate::output::PutAggregationAuthorizationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aggregation_authorization:
@@ -1225,7 +1220,7 @@ pub mod put_aggregation_authorization_output {
             self.aggregation_authorization = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutAggregationAuthorizationOutput`](crate::output::PutAggregationAuthorizationOutput)
+        /// Consumes the builder and constructs a [`PutAggregationAuthorizationOutput`](crate::output::PutAggregationAuthorizationOutput).
         pub fn build(self) -> crate::output::PutAggregationAuthorizationOutput {
             crate::output::PutAggregationAuthorizationOutput {
                 aggregation_authorization: self.aggregation_authorization,
@@ -1234,7 +1229,7 @@ pub mod put_aggregation_authorization_output {
     }
 }
 impl PutAggregationAuthorizationOutput {
-    /// Creates a new builder-style object to manufacture [`PutAggregationAuthorizationOutput`](crate::output::PutAggregationAuthorizationOutput)
+    /// Creates a new builder-style object to manufacture [`PutAggregationAuthorizationOutput`](crate::output::PutAggregationAuthorizationOutput).
     pub fn builder() -> crate::output::put_aggregation_authorization_output::Builder {
         crate::output::put_aggregation_authorization_output::Builder::default()
     }
@@ -1245,8 +1240,10 @@ impl PutAggregationAuthorizationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tags for the resource.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListTagsForResourceOutput {
@@ -1267,11 +1264,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -1307,7 +1303,7 @@ pub mod list_tags_for_resource_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 tags: self.tags,
@@ -1317,7 +1313,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -1328,9 +1324,11 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListStoredQueriesOutput {
     /// <p>A list of <code>StoredQueryMetadata</code> objects.</p>
+    #[doc(hidden)]
     pub stored_query_metadata:
         std::option::Option<std::vec::Vec<crate::model::StoredQueryMetadata>>,
     /// <p>If the previous paginated request didn't return all of the remaining results, the response object's <code>NextToken</code> parameter value is set to a token. To retrieve the next set of results, call this action again and assign that token to the request object's <code>NextToken</code> parameter. If there are no remaining results, the previous response object's <code>NextToken</code> parameter is set to <code>null</code>. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListStoredQueriesOutput {
@@ -1353,11 +1351,10 @@ impl std::fmt::Debug for ListStoredQueriesOutput {
         formatter.finish()
     }
 }
-/// See [`ListStoredQueriesOutput`](crate::output::ListStoredQueriesOutput)
+/// See [`ListStoredQueriesOutput`](crate::output::ListStoredQueriesOutput).
 pub mod list_stored_queries_output {
 
-    /// A builder for [`ListStoredQueriesOutput`](crate::output::ListStoredQueriesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListStoredQueriesOutput`](crate::output::ListStoredQueriesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stored_query_metadata:
@@ -1394,7 +1391,7 @@ pub mod list_stored_queries_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListStoredQueriesOutput`](crate::output::ListStoredQueriesOutput)
+        /// Consumes the builder and constructs a [`ListStoredQueriesOutput`](crate::output::ListStoredQueriesOutput).
         pub fn build(self) -> crate::output::ListStoredQueriesOutput {
             crate::output::ListStoredQueriesOutput {
                 stored_query_metadata: self.stored_query_metadata,
@@ -1404,7 +1401,7 @@ pub mod list_stored_queries_output {
     }
 }
 impl ListStoredQueriesOutput {
-    /// Creates a new builder-style object to manufacture [`ListStoredQueriesOutput`](crate::output::ListStoredQueriesOutput)
+    /// Creates a new builder-style object to manufacture [`ListStoredQueriesOutput`](crate::output::ListStoredQueriesOutput).
     pub fn builder() -> crate::output::list_stored_queries_output::Builder {
         crate::output::list_stored_queries_output::Builder::default()
     }
@@ -1415,8 +1412,10 @@ impl ListStoredQueriesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDiscoveredResourcesOutput {
     /// <p>The details that identify a resource that is discovered by Config, including the resource type, ID, and (if available) the custom resource name.</p>
+    #[doc(hidden)]
     pub resource_identifiers: std::option::Option<std::vec::Vec<crate::model::ResourceIdentifier>>,
     /// <p>The string that you use in a subsequent request to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListDiscoveredResourcesOutput {
@@ -1437,11 +1436,10 @@ impl std::fmt::Debug for ListDiscoveredResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`ListDiscoveredResourcesOutput`](crate::output::ListDiscoveredResourcesOutput)
+/// See [`ListDiscoveredResourcesOutput`](crate::output::ListDiscoveredResourcesOutput).
 pub mod list_discovered_resources_output {
 
-    /// A builder for [`ListDiscoveredResourcesOutput`](crate::output::ListDiscoveredResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListDiscoveredResourcesOutput`](crate::output::ListDiscoveredResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_identifiers:
@@ -1478,7 +1476,7 @@ pub mod list_discovered_resources_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDiscoveredResourcesOutput`](crate::output::ListDiscoveredResourcesOutput)
+        /// Consumes the builder and constructs a [`ListDiscoveredResourcesOutput`](crate::output::ListDiscoveredResourcesOutput).
         pub fn build(self) -> crate::output::ListDiscoveredResourcesOutput {
             crate::output::ListDiscoveredResourcesOutput {
                 resource_identifiers: self.resource_identifiers,
@@ -1488,7 +1486,7 @@ pub mod list_discovered_resources_output {
     }
 }
 impl ListDiscoveredResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`ListDiscoveredResourcesOutput`](crate::output::ListDiscoveredResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`ListDiscoveredResourcesOutput`](crate::output::ListDiscoveredResourcesOutput).
     pub fn builder() -> crate::output::list_discovered_resources_output::Builder {
         crate::output::list_discovered_resources_output::Builder::default()
     }
@@ -1497,11 +1495,107 @@ impl ListDiscoveredResourcesOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListConformancePackComplianceScoresOutput {
+    /// <p>The <code>nextToken</code> string that you can use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
+    pub next_token: std::option::Option<std::string::String>,
+    /// <p>A list of <code>ConformancePackComplianceScore</code> objects.</p>
+    #[doc(hidden)]
+    pub conformance_pack_compliance_scores:
+        std::option::Option<std::vec::Vec<crate::model::ConformancePackComplianceScore>>,
+}
+impl ListConformancePackComplianceScoresOutput {
+    /// <p>The <code>nextToken</code> string that you can use to get the next page of results in a paginated response.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+    /// <p>A list of <code>ConformancePackComplianceScore</code> objects.</p>
+    pub fn conformance_pack_compliance_scores(
+        &self,
+    ) -> std::option::Option<&[crate::model::ConformancePackComplianceScore]> {
+        self.conformance_pack_compliance_scores.as_deref()
+    }
+}
+impl std::fmt::Debug for ListConformancePackComplianceScoresOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListConformancePackComplianceScoresOutput");
+        formatter.field("next_token", &self.next_token);
+        formatter.field(
+            "conformance_pack_compliance_scores",
+            &self.conformance_pack_compliance_scores,
+        );
+        formatter.finish()
+    }
+}
+/// See [`ListConformancePackComplianceScoresOutput`](crate::output::ListConformancePackComplianceScoresOutput).
+pub mod list_conformance_pack_compliance_scores_output {
+
+    /// A builder for [`ListConformancePackComplianceScoresOutput`](crate::output::ListConformancePackComplianceScoresOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) next_token: std::option::Option<std::string::String>,
+        pub(crate) conformance_pack_compliance_scores:
+            std::option::Option<std::vec::Vec<crate::model::ConformancePackComplianceScore>>,
+    }
+    impl Builder {
+        /// <p>The <code>nextToken</code> string that you can use to get the next page of results in a paginated response.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>The <code>nextToken</code> string that you can use to get the next page of results in a paginated response.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Appends an item to `conformance_pack_compliance_scores`.
+        ///
+        /// To override the contents of this collection use [`set_conformance_pack_compliance_scores`](Self::set_conformance_pack_compliance_scores).
+        ///
+        /// <p>A list of <code>ConformancePackComplianceScore</code> objects.</p>
+        pub fn conformance_pack_compliance_scores(
+            mut self,
+            input: crate::model::ConformancePackComplianceScore,
+        ) -> Self {
+            let mut v = self.conformance_pack_compliance_scores.unwrap_or_default();
+            v.push(input);
+            self.conformance_pack_compliance_scores = Some(v);
+            self
+        }
+        /// <p>A list of <code>ConformancePackComplianceScore</code> objects.</p>
+        pub fn set_conformance_pack_compliance_scores(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ConformancePackComplianceScore>>,
+        ) -> Self {
+            self.conformance_pack_compliance_scores = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListConformancePackComplianceScoresOutput`](crate::output::ListConformancePackComplianceScoresOutput).
+        pub fn build(self) -> crate::output::ListConformancePackComplianceScoresOutput {
+            crate::output::ListConformancePackComplianceScoresOutput {
+                next_token: self.next_token,
+                conformance_pack_compliance_scores: self.conformance_pack_compliance_scores,
+            }
+        }
+    }
+}
+impl ListConformancePackComplianceScoresOutput {
+    /// Creates a new builder-style object to manufacture [`ListConformancePackComplianceScoresOutput`](crate::output::ListConformancePackComplianceScoresOutput).
+    pub fn builder() -> crate::output::list_conformance_pack_compliance_scores_output::Builder {
+        crate::output::list_conformance_pack_compliance_scores_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAggregateDiscoveredResourcesOutput {
     /// <p>Returns a list of <code>ResourceIdentifiers</code> objects.</p>
+    #[doc(hidden)]
     pub resource_identifiers:
         std::option::Option<std::vec::Vec<crate::model::AggregateResourceIdentifier>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAggregateDiscoveredResourcesOutput {
@@ -1524,11 +1618,10 @@ impl std::fmt::Debug for ListAggregateDiscoveredResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`ListAggregateDiscoveredResourcesOutput`](crate::output::ListAggregateDiscoveredResourcesOutput)
+/// See [`ListAggregateDiscoveredResourcesOutput`](crate::output::ListAggregateDiscoveredResourcesOutput).
 pub mod list_aggregate_discovered_resources_output {
 
-    /// A builder for [`ListAggregateDiscoveredResourcesOutput`](crate::output::ListAggregateDiscoveredResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAggregateDiscoveredResourcesOutput`](crate::output::ListAggregateDiscoveredResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_identifiers:
@@ -1568,7 +1661,7 @@ pub mod list_aggregate_discovered_resources_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAggregateDiscoveredResourcesOutput`](crate::output::ListAggregateDiscoveredResourcesOutput)
+        /// Consumes the builder and constructs a [`ListAggregateDiscoveredResourcesOutput`](crate::output::ListAggregateDiscoveredResourcesOutput).
         pub fn build(self) -> crate::output::ListAggregateDiscoveredResourcesOutput {
             crate::output::ListAggregateDiscoveredResourcesOutput {
                 resource_identifiers: self.resource_identifiers,
@@ -1578,7 +1671,7 @@ pub mod list_aggregate_discovered_resources_output {
     }
 }
 impl ListAggregateDiscoveredResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`ListAggregateDiscoveredResourcesOutput`](crate::output::ListAggregateDiscoveredResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`ListAggregateDiscoveredResourcesOutput`](crate::output::ListAggregateDiscoveredResourcesOutput).
     pub fn builder() -> crate::output::list_aggregate_discovered_resources_output::Builder {
         crate::output::list_aggregate_discovered_resources_output::Builder::default()
     }
@@ -1589,6 +1682,7 @@ impl ListAggregateDiscoveredResourcesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetStoredQueryOutput {
     /// <p>Returns a <code>StoredQuery</code> object.</p>
+    #[doc(hidden)]
     pub stored_query: std::option::Option<crate::model::StoredQuery>,
 }
 impl GetStoredQueryOutput {
@@ -1604,11 +1698,10 @@ impl std::fmt::Debug for GetStoredQueryOutput {
         formatter.finish()
     }
 }
-/// See [`GetStoredQueryOutput`](crate::output::GetStoredQueryOutput)
+/// See [`GetStoredQueryOutput`](crate::output::GetStoredQueryOutput).
 pub mod get_stored_query_output {
 
-    /// A builder for [`GetStoredQueryOutput`](crate::output::GetStoredQueryOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetStoredQueryOutput`](crate::output::GetStoredQueryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stored_query: std::option::Option<crate::model::StoredQuery>,
@@ -1627,7 +1720,7 @@ pub mod get_stored_query_output {
             self.stored_query = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetStoredQueryOutput`](crate::output::GetStoredQueryOutput)
+        /// Consumes the builder and constructs a [`GetStoredQueryOutput`](crate::output::GetStoredQueryOutput).
         pub fn build(self) -> crate::output::GetStoredQueryOutput {
             crate::output::GetStoredQueryOutput {
                 stored_query: self.stored_query,
@@ -1636,7 +1729,7 @@ pub mod get_stored_query_output {
     }
 }
 impl GetStoredQueryOutput {
-    /// Creates a new builder-style object to manufacture [`GetStoredQueryOutput`](crate::output::GetStoredQueryOutput)
+    /// Creates a new builder-style object to manufacture [`GetStoredQueryOutput`](crate::output::GetStoredQueryOutput).
     pub fn builder() -> crate::output::get_stored_query_output::Builder {
         crate::output::get_stored_query_output::Builder::default()
     }
@@ -1647,8 +1740,10 @@ impl GetStoredQueryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetResourceConfigHistoryOutput {
     /// <p>A list that contains the configuration history of one or more resources.</p>
+    #[doc(hidden)]
     pub configuration_items: std::option::Option<std::vec::Vec<crate::model::ConfigurationItem>>,
     /// <p>The string that you use in a subsequent request to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetResourceConfigHistoryOutput {
@@ -1669,11 +1764,10 @@ impl std::fmt::Debug for GetResourceConfigHistoryOutput {
         formatter.finish()
     }
 }
-/// See [`GetResourceConfigHistoryOutput`](crate::output::GetResourceConfigHistoryOutput)
+/// See [`GetResourceConfigHistoryOutput`](crate::output::GetResourceConfigHistoryOutput).
 pub mod get_resource_config_history_output {
 
-    /// A builder for [`GetResourceConfigHistoryOutput`](crate::output::GetResourceConfigHistoryOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetResourceConfigHistoryOutput`](crate::output::GetResourceConfigHistoryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_items:
@@ -1710,7 +1804,7 @@ pub mod get_resource_config_history_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetResourceConfigHistoryOutput`](crate::output::GetResourceConfigHistoryOutput)
+        /// Consumes the builder and constructs a [`GetResourceConfigHistoryOutput`](crate::output::GetResourceConfigHistoryOutput).
         pub fn build(self) -> crate::output::GetResourceConfigHistoryOutput {
             crate::output::GetResourceConfigHistoryOutput {
                 configuration_items: self.configuration_items,
@@ -1720,7 +1814,7 @@ pub mod get_resource_config_history_output {
     }
 }
 impl GetResourceConfigHistoryOutput {
-    /// Creates a new builder-style object to manufacture [`GetResourceConfigHistoryOutput`](crate::output::GetResourceConfigHistoryOutput)
+    /// Creates a new builder-style object to manufacture [`GetResourceConfigHistoryOutput`](crate::output::GetResourceConfigHistoryOutput).
     pub fn builder() -> crate::output::get_resource_config_history_output::Builder {
         crate::output::get_resource_config_history_output::Builder::default()
     }
@@ -1731,6 +1825,7 @@ impl GetResourceConfigHistoryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetOrganizationCustomRulePolicyOutput {
     /// <p>The policy definition containing the logic for your organization Config Custom Policy rule.</p>
+    #[doc(hidden)]
     pub policy_text: std::option::Option<std::string::String>,
 }
 impl GetOrganizationCustomRulePolicyOutput {
@@ -1746,11 +1841,10 @@ impl std::fmt::Debug for GetOrganizationCustomRulePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetOrganizationCustomRulePolicyOutput`](crate::output::GetOrganizationCustomRulePolicyOutput)
+/// See [`GetOrganizationCustomRulePolicyOutput`](crate::output::GetOrganizationCustomRulePolicyOutput).
 pub mod get_organization_custom_rule_policy_output {
 
-    /// A builder for [`GetOrganizationCustomRulePolicyOutput`](crate::output::GetOrganizationCustomRulePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetOrganizationCustomRulePolicyOutput`](crate::output::GetOrganizationCustomRulePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_text: std::option::Option<std::string::String>,
@@ -1766,7 +1860,7 @@ pub mod get_organization_custom_rule_policy_output {
             self.policy_text = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetOrganizationCustomRulePolicyOutput`](crate::output::GetOrganizationCustomRulePolicyOutput)
+        /// Consumes the builder and constructs a [`GetOrganizationCustomRulePolicyOutput`](crate::output::GetOrganizationCustomRulePolicyOutput).
         pub fn build(self) -> crate::output::GetOrganizationCustomRulePolicyOutput {
             crate::output::GetOrganizationCustomRulePolicyOutput {
                 policy_text: self.policy_text,
@@ -1775,7 +1869,7 @@ pub mod get_organization_custom_rule_policy_output {
     }
 }
 impl GetOrganizationCustomRulePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetOrganizationCustomRulePolicyOutput`](crate::output::GetOrganizationCustomRulePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetOrganizationCustomRulePolicyOutput`](crate::output::GetOrganizationCustomRulePolicyOutput).
     pub fn builder() -> crate::output::get_organization_custom_rule_policy_output::Builder {
         crate::output::get_organization_custom_rule_policy_output::Builder::default()
     }
@@ -1786,9 +1880,11 @@ impl GetOrganizationCustomRulePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetOrganizationConformancePackDetailedStatusOutput {
     /// <p>A list of <code>OrganizationConformancePackDetailedStatus</code> objects. </p>
+    #[doc(hidden)]
     pub organization_conformance_pack_detailed_statuses:
         std::option::Option<std::vec::Vec<crate::model::OrganizationConformancePackDetailedStatus>>,
     /// <p>The nextToken string returned on a previous page that you use to get the next page of results in a paginated response. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetOrganizationConformancePackDetailedStatusOutput {
@@ -1815,11 +1911,10 @@ impl std::fmt::Debug for GetOrganizationConformancePackDetailedStatusOutput {
         formatter.finish()
     }
 }
-/// See [`GetOrganizationConformancePackDetailedStatusOutput`](crate::output::GetOrganizationConformancePackDetailedStatusOutput)
+/// See [`GetOrganizationConformancePackDetailedStatusOutput`](crate::output::GetOrganizationConformancePackDetailedStatusOutput).
 pub mod get_organization_conformance_pack_detailed_status_output {
 
-    /// A builder for [`GetOrganizationConformancePackDetailedStatusOutput`](crate::output::GetOrganizationConformancePackDetailedStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetOrganizationConformancePackDetailedStatusOutput`](crate::output::GetOrganizationConformancePackDetailedStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) organization_conformance_pack_detailed_statuses: std::option::Option<
@@ -1864,7 +1959,7 @@ pub mod get_organization_conformance_pack_detailed_status_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetOrganizationConformancePackDetailedStatusOutput`](crate::output::GetOrganizationConformancePackDetailedStatusOutput)
+        /// Consumes the builder and constructs a [`GetOrganizationConformancePackDetailedStatusOutput`](crate::output::GetOrganizationConformancePackDetailedStatusOutput).
         pub fn build(self) -> crate::output::GetOrganizationConformancePackDetailedStatusOutput {
             crate::output::GetOrganizationConformancePackDetailedStatusOutput {
                 organization_conformance_pack_detailed_statuses: self
@@ -1875,7 +1970,7 @@ pub mod get_organization_conformance_pack_detailed_status_output {
     }
 }
 impl GetOrganizationConformancePackDetailedStatusOutput {
-    /// Creates a new builder-style object to manufacture [`GetOrganizationConformancePackDetailedStatusOutput`](crate::output::GetOrganizationConformancePackDetailedStatusOutput)
+    /// Creates a new builder-style object to manufacture [`GetOrganizationConformancePackDetailedStatusOutput`](crate::output::GetOrganizationConformancePackDetailedStatusOutput).
     pub fn builder(
     ) -> crate::output::get_organization_conformance_pack_detailed_status_output::Builder {
         crate::output::get_organization_conformance_pack_detailed_status_output::Builder::default()
@@ -1887,9 +1982,11 @@ impl GetOrganizationConformancePackDetailedStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetOrganizationConfigRuleDetailedStatusOutput {
     /// <p>A list of <code>MemberAccountStatus</code> objects.</p>
+    #[doc(hidden)]
     pub organization_config_rule_detailed_status:
         std::option::Option<std::vec::Vec<crate::model::MemberAccountStatus>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetOrganizationConfigRuleDetailedStatusOutput {
@@ -1915,11 +2012,10 @@ impl std::fmt::Debug for GetOrganizationConfigRuleDetailedStatusOutput {
         formatter.finish()
     }
 }
-/// See [`GetOrganizationConfigRuleDetailedStatusOutput`](crate::output::GetOrganizationConfigRuleDetailedStatusOutput)
+/// See [`GetOrganizationConfigRuleDetailedStatusOutput`](crate::output::GetOrganizationConfigRuleDetailedStatusOutput).
 pub mod get_organization_config_rule_detailed_status_output {
 
-    /// A builder for [`GetOrganizationConfigRuleDetailedStatusOutput`](crate::output::GetOrganizationConfigRuleDetailedStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetOrganizationConfigRuleDetailedStatusOutput`](crate::output::GetOrganizationConfigRuleDetailedStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) organization_config_rule_detailed_status:
@@ -1961,7 +2057,7 @@ pub mod get_organization_config_rule_detailed_status_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetOrganizationConfigRuleDetailedStatusOutput`](crate::output::GetOrganizationConfigRuleDetailedStatusOutput)
+        /// Consumes the builder and constructs a [`GetOrganizationConfigRuleDetailedStatusOutput`](crate::output::GetOrganizationConfigRuleDetailedStatusOutput).
         pub fn build(self) -> crate::output::GetOrganizationConfigRuleDetailedStatusOutput {
             crate::output::GetOrganizationConfigRuleDetailedStatusOutput {
                 organization_config_rule_detailed_status: self
@@ -1972,7 +2068,7 @@ pub mod get_organization_config_rule_detailed_status_output {
     }
 }
 impl GetOrganizationConfigRuleDetailedStatusOutput {
-    /// Creates a new builder-style object to manufacture [`GetOrganizationConfigRuleDetailedStatusOutput`](crate::output::GetOrganizationConfigRuleDetailedStatusOutput)
+    /// Creates a new builder-style object to manufacture [`GetOrganizationConfigRuleDetailedStatusOutput`](crate::output::GetOrganizationConfigRuleDetailedStatusOutput).
     pub fn builder() -> crate::output::get_organization_config_rule_detailed_status_output::Builder
     {
         crate::output::get_organization_config_rule_detailed_status_output::Builder::default()
@@ -1990,10 +2086,13 @@ pub struct GetDiscoveredResourceCountsOutput {
     /// <li> <p>You make a call to the <code>GetDiscoveredResourceCounts</code> action and specify the resource type, <code>"AWS::EC2::Instances"</code>, in the request.</p> </li>
     /// <li> <p>Config returns 25 for <code>totalDiscoveredResources</code>.</p> </li>
     /// </ol>
+    #[doc(hidden)]
     pub total_discovered_resources: i64,
     /// <p>The list of <code>ResourceCount</code> objects. Each object is listed in descending order by the number of resources.</p>
+    #[doc(hidden)]
     pub resource_counts: std::option::Option<std::vec::Vec<crate::model::ResourceCount>>,
     /// <p>The string that you use in a subsequent request to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetDiscoveredResourceCountsOutput {
@@ -2028,11 +2127,10 @@ impl std::fmt::Debug for GetDiscoveredResourceCountsOutput {
         formatter.finish()
     }
 }
-/// See [`GetDiscoveredResourceCountsOutput`](crate::output::GetDiscoveredResourceCountsOutput)
+/// See [`GetDiscoveredResourceCountsOutput`](crate::output::GetDiscoveredResourceCountsOutput).
 pub mod get_discovered_resource_counts_output {
 
-    /// A builder for [`GetDiscoveredResourceCountsOutput`](crate::output::GetDiscoveredResourceCountsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDiscoveredResourceCountsOutput`](crate::output::GetDiscoveredResourceCountsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_discovered_resources: std::option::Option<i64>,
@@ -2091,7 +2189,7 @@ pub mod get_discovered_resource_counts_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDiscoveredResourceCountsOutput`](crate::output::GetDiscoveredResourceCountsOutput)
+        /// Consumes the builder and constructs a [`GetDiscoveredResourceCountsOutput`](crate::output::GetDiscoveredResourceCountsOutput).
         pub fn build(self) -> crate::output::GetDiscoveredResourceCountsOutput {
             crate::output::GetDiscoveredResourceCountsOutput {
                 total_discovered_resources: self.total_discovered_resources.unwrap_or_default(),
@@ -2102,7 +2200,7 @@ pub mod get_discovered_resource_counts_output {
     }
 }
 impl GetDiscoveredResourceCountsOutput {
-    /// Creates a new builder-style object to manufacture [`GetDiscoveredResourceCountsOutput`](crate::output::GetDiscoveredResourceCountsOutput)
+    /// Creates a new builder-style object to manufacture [`GetDiscoveredResourceCountsOutput`](crate::output::GetDiscoveredResourceCountsOutput).
     pub fn builder() -> crate::output::get_discovered_resource_counts_output::Builder {
         crate::output::get_discovered_resource_counts_output::Builder::default()
     }
@@ -2113,6 +2211,7 @@ impl GetDiscoveredResourceCountsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCustomRulePolicyOutput {
     /// <p>The policy definition containing the logic for your Config Custom Policy rule.</p>
+    #[doc(hidden)]
     pub policy_text: std::option::Option<std::string::String>,
 }
 impl GetCustomRulePolicyOutput {
@@ -2128,11 +2227,10 @@ impl std::fmt::Debug for GetCustomRulePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetCustomRulePolicyOutput`](crate::output::GetCustomRulePolicyOutput)
+/// See [`GetCustomRulePolicyOutput`](crate::output::GetCustomRulePolicyOutput).
 pub mod get_custom_rule_policy_output {
 
-    /// A builder for [`GetCustomRulePolicyOutput`](crate::output::GetCustomRulePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCustomRulePolicyOutput`](crate::output::GetCustomRulePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_text: std::option::Option<std::string::String>,
@@ -2148,7 +2246,7 @@ pub mod get_custom_rule_policy_output {
             self.policy_text = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCustomRulePolicyOutput`](crate::output::GetCustomRulePolicyOutput)
+        /// Consumes the builder and constructs a [`GetCustomRulePolicyOutput`](crate::output::GetCustomRulePolicyOutput).
         pub fn build(self) -> crate::output::GetCustomRulePolicyOutput {
             crate::output::GetCustomRulePolicyOutput {
                 policy_text: self.policy_text,
@@ -2157,7 +2255,7 @@ pub mod get_custom_rule_policy_output {
     }
 }
 impl GetCustomRulePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetCustomRulePolicyOutput`](crate::output::GetCustomRulePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetCustomRulePolicyOutput`](crate::output::GetCustomRulePolicyOutput).
     pub fn builder() -> crate::output::get_custom_rule_policy_output::Builder {
         crate::output::get_custom_rule_policy_output::Builder::default()
     }
@@ -2168,9 +2266,11 @@ impl GetCustomRulePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetConformancePackComplianceSummaryOutput {
     /// <p>A list of <code>ConformancePackComplianceSummary</code> objects. </p>
+    #[doc(hidden)]
     pub conformance_pack_compliance_summary_list:
         std::option::Option<std::vec::Vec<crate::model::ConformancePackComplianceSummary>>,
     /// <p>The nextToken string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetConformancePackComplianceSummaryOutput {
@@ -2196,11 +2296,10 @@ impl std::fmt::Debug for GetConformancePackComplianceSummaryOutput {
         formatter.finish()
     }
 }
-/// See [`GetConformancePackComplianceSummaryOutput`](crate::output::GetConformancePackComplianceSummaryOutput)
+/// See [`GetConformancePackComplianceSummaryOutput`](crate::output::GetConformancePackComplianceSummaryOutput).
 pub mod get_conformance_pack_compliance_summary_output {
 
-    /// A builder for [`GetConformancePackComplianceSummaryOutput`](crate::output::GetConformancePackComplianceSummaryOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetConformancePackComplianceSummaryOutput`](crate::output::GetConformancePackComplianceSummaryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) conformance_pack_compliance_summary_list:
@@ -2244,7 +2343,7 @@ pub mod get_conformance_pack_compliance_summary_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetConformancePackComplianceSummaryOutput`](crate::output::GetConformancePackComplianceSummaryOutput)
+        /// Consumes the builder and constructs a [`GetConformancePackComplianceSummaryOutput`](crate::output::GetConformancePackComplianceSummaryOutput).
         pub fn build(self) -> crate::output::GetConformancePackComplianceSummaryOutput {
             crate::output::GetConformancePackComplianceSummaryOutput {
                 conformance_pack_compliance_summary_list: self
@@ -2255,7 +2354,7 @@ pub mod get_conformance_pack_compliance_summary_output {
     }
 }
 impl GetConformancePackComplianceSummaryOutput {
-    /// Creates a new builder-style object to manufacture [`GetConformancePackComplianceSummaryOutput`](crate::output::GetConformancePackComplianceSummaryOutput)
+    /// Creates a new builder-style object to manufacture [`GetConformancePackComplianceSummaryOutput`](crate::output::GetConformancePackComplianceSummaryOutput).
     pub fn builder() -> crate::output::get_conformance_pack_compliance_summary_output::Builder {
         crate::output::get_conformance_pack_compliance_summary_output::Builder::default()
     }
@@ -2266,11 +2365,14 @@ impl GetConformancePackComplianceSummaryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetConformancePackComplianceDetailsOutput {
     /// <p>Name of the conformance pack.</p>
+    #[doc(hidden)]
     pub conformance_pack_name: std::option::Option<std::string::String>,
     /// <p>Returns a list of <code>ConformancePackEvaluationResult</code> objects.</p>
+    #[doc(hidden)]
     pub conformance_pack_rule_evaluation_results:
         std::option::Option<std::vec::Vec<crate::model::ConformancePackEvaluationResult>>,
     /// <p>The <code>nextToken</code> string returned in a previous request that you use to request the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetConformancePackComplianceDetailsOutput {
@@ -2301,11 +2403,10 @@ impl std::fmt::Debug for GetConformancePackComplianceDetailsOutput {
         formatter.finish()
     }
 }
-/// See [`GetConformancePackComplianceDetailsOutput`](crate::output::GetConformancePackComplianceDetailsOutput)
+/// See [`GetConformancePackComplianceDetailsOutput`](crate::output::GetConformancePackComplianceDetailsOutput).
 pub mod get_conformance_pack_compliance_details_output {
 
-    /// A builder for [`GetConformancePackComplianceDetailsOutput`](crate::output::GetConformancePackComplianceDetailsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetConformancePackComplianceDetailsOutput`](crate::output::GetConformancePackComplianceDetailsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) conformance_pack_name: std::option::Option<std::string::String>,
@@ -2363,7 +2464,7 @@ pub mod get_conformance_pack_compliance_details_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetConformancePackComplianceDetailsOutput`](crate::output::GetConformancePackComplianceDetailsOutput)
+        /// Consumes the builder and constructs a [`GetConformancePackComplianceDetailsOutput`](crate::output::GetConformancePackComplianceDetailsOutput).
         pub fn build(self) -> crate::output::GetConformancePackComplianceDetailsOutput {
             crate::output::GetConformancePackComplianceDetailsOutput {
                 conformance_pack_name: self.conformance_pack_name,
@@ -2375,7 +2476,7 @@ pub mod get_conformance_pack_compliance_details_output {
     }
 }
 impl GetConformancePackComplianceDetailsOutput {
-    /// Creates a new builder-style object to manufacture [`GetConformancePackComplianceDetailsOutput`](crate::output::GetConformancePackComplianceDetailsOutput)
+    /// Creates a new builder-style object to manufacture [`GetConformancePackComplianceDetailsOutput`](crate::output::GetConformancePackComplianceDetailsOutput).
     pub fn builder() -> crate::output::get_conformance_pack_compliance_details_output::Builder {
         crate::output::get_conformance_pack_compliance_details_output::Builder::default()
     }
@@ -2386,6 +2487,7 @@ impl GetConformancePackComplianceDetailsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetComplianceSummaryByResourceTypeOutput {
     /// <p>The number of resources that are compliant and the number that are noncompliant. If one or more resource types were provided with the request, the numbers are returned for each resource type. The maximum number returned is 100.</p>
+    #[doc(hidden)]
     pub compliance_summaries_by_resource_type:
         std::option::Option<std::vec::Vec<crate::model::ComplianceSummaryByResourceType>>,
 }
@@ -2407,11 +2509,10 @@ impl std::fmt::Debug for GetComplianceSummaryByResourceTypeOutput {
         formatter.finish()
     }
 }
-/// See [`GetComplianceSummaryByResourceTypeOutput`](crate::output::GetComplianceSummaryByResourceTypeOutput)
+/// See [`GetComplianceSummaryByResourceTypeOutput`](crate::output::GetComplianceSummaryByResourceTypeOutput).
 pub mod get_compliance_summary_by_resource_type_output {
 
-    /// A builder for [`GetComplianceSummaryByResourceTypeOutput`](crate::output::GetComplianceSummaryByResourceTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetComplianceSummaryByResourceTypeOutput`](crate::output::GetComplianceSummaryByResourceTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliance_summaries_by_resource_type:
@@ -2444,7 +2545,7 @@ pub mod get_compliance_summary_by_resource_type_output {
             self.compliance_summaries_by_resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetComplianceSummaryByResourceTypeOutput`](crate::output::GetComplianceSummaryByResourceTypeOutput)
+        /// Consumes the builder and constructs a [`GetComplianceSummaryByResourceTypeOutput`](crate::output::GetComplianceSummaryByResourceTypeOutput).
         pub fn build(self) -> crate::output::GetComplianceSummaryByResourceTypeOutput {
             crate::output::GetComplianceSummaryByResourceTypeOutput {
                 compliance_summaries_by_resource_type: self.compliance_summaries_by_resource_type,
@@ -2453,7 +2554,7 @@ pub mod get_compliance_summary_by_resource_type_output {
     }
 }
 impl GetComplianceSummaryByResourceTypeOutput {
-    /// Creates a new builder-style object to manufacture [`GetComplianceSummaryByResourceTypeOutput`](crate::output::GetComplianceSummaryByResourceTypeOutput)
+    /// Creates a new builder-style object to manufacture [`GetComplianceSummaryByResourceTypeOutput`](crate::output::GetComplianceSummaryByResourceTypeOutput).
     pub fn builder() -> crate::output::get_compliance_summary_by_resource_type_output::Builder {
         crate::output::get_compliance_summary_by_resource_type_output::Builder::default()
     }
@@ -2464,6 +2565,7 @@ impl GetComplianceSummaryByResourceTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetComplianceSummaryByConfigRuleOutput {
     /// <p>The number of Config rules that are compliant and the number that are noncompliant, up to a maximum of 25 for each.</p>
+    #[doc(hidden)]
     pub compliance_summary: std::option::Option<crate::model::ComplianceSummary>,
 }
 impl GetComplianceSummaryByConfigRuleOutput {
@@ -2479,11 +2581,10 @@ impl std::fmt::Debug for GetComplianceSummaryByConfigRuleOutput {
         formatter.finish()
     }
 }
-/// See [`GetComplianceSummaryByConfigRuleOutput`](crate::output::GetComplianceSummaryByConfigRuleOutput)
+/// See [`GetComplianceSummaryByConfigRuleOutput`](crate::output::GetComplianceSummaryByConfigRuleOutput).
 pub mod get_compliance_summary_by_config_rule_output {
 
-    /// A builder for [`GetComplianceSummaryByConfigRuleOutput`](crate::output::GetComplianceSummaryByConfigRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetComplianceSummaryByConfigRuleOutput`](crate::output::GetComplianceSummaryByConfigRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliance_summary: std::option::Option<crate::model::ComplianceSummary>,
@@ -2502,7 +2603,7 @@ pub mod get_compliance_summary_by_config_rule_output {
             self.compliance_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetComplianceSummaryByConfigRuleOutput`](crate::output::GetComplianceSummaryByConfigRuleOutput)
+        /// Consumes the builder and constructs a [`GetComplianceSummaryByConfigRuleOutput`](crate::output::GetComplianceSummaryByConfigRuleOutput).
         pub fn build(self) -> crate::output::GetComplianceSummaryByConfigRuleOutput {
             crate::output::GetComplianceSummaryByConfigRuleOutput {
                 compliance_summary: self.compliance_summary,
@@ -2511,7 +2612,7 @@ pub mod get_compliance_summary_by_config_rule_output {
     }
 }
 impl GetComplianceSummaryByConfigRuleOutput {
-    /// Creates a new builder-style object to manufacture [`GetComplianceSummaryByConfigRuleOutput`](crate::output::GetComplianceSummaryByConfigRuleOutput)
+    /// Creates a new builder-style object to manufacture [`GetComplianceSummaryByConfigRuleOutput`](crate::output::GetComplianceSummaryByConfigRuleOutput).
     pub fn builder() -> crate::output::get_compliance_summary_by_config_rule_output::Builder {
         crate::output::get_compliance_summary_by_config_rule_output::Builder::default()
     }
@@ -2522,8 +2623,10 @@ impl GetComplianceSummaryByConfigRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetComplianceDetailsByResourceOutput {
     /// <p>Indicates whether the specified Amazon Web Services resource complies each Config rule.</p>
+    #[doc(hidden)]
     pub evaluation_results: std::option::Option<std::vec::Vec<crate::model::EvaluationResult>>,
     /// <p>The string that you use in a subsequent request to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetComplianceDetailsByResourceOutput {
@@ -2544,11 +2647,10 @@ impl std::fmt::Debug for GetComplianceDetailsByResourceOutput {
         formatter.finish()
     }
 }
-/// See [`GetComplianceDetailsByResourceOutput`](crate::output::GetComplianceDetailsByResourceOutput)
+/// See [`GetComplianceDetailsByResourceOutput`](crate::output::GetComplianceDetailsByResourceOutput).
 pub mod get_compliance_details_by_resource_output {
 
-    /// A builder for [`GetComplianceDetailsByResourceOutput`](crate::output::GetComplianceDetailsByResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetComplianceDetailsByResourceOutput`](crate::output::GetComplianceDetailsByResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) evaluation_results:
@@ -2585,7 +2687,7 @@ pub mod get_compliance_details_by_resource_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetComplianceDetailsByResourceOutput`](crate::output::GetComplianceDetailsByResourceOutput)
+        /// Consumes the builder and constructs a [`GetComplianceDetailsByResourceOutput`](crate::output::GetComplianceDetailsByResourceOutput).
         pub fn build(self) -> crate::output::GetComplianceDetailsByResourceOutput {
             crate::output::GetComplianceDetailsByResourceOutput {
                 evaluation_results: self.evaluation_results,
@@ -2595,7 +2697,7 @@ pub mod get_compliance_details_by_resource_output {
     }
 }
 impl GetComplianceDetailsByResourceOutput {
-    /// Creates a new builder-style object to manufacture [`GetComplianceDetailsByResourceOutput`](crate::output::GetComplianceDetailsByResourceOutput)
+    /// Creates a new builder-style object to manufacture [`GetComplianceDetailsByResourceOutput`](crate::output::GetComplianceDetailsByResourceOutput).
     pub fn builder() -> crate::output::get_compliance_details_by_resource_output::Builder {
         crate::output::get_compliance_details_by_resource_output::Builder::default()
     }
@@ -2606,8 +2708,10 @@ impl GetComplianceDetailsByResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetComplianceDetailsByConfigRuleOutput {
     /// <p>Indicates whether the Amazon Web Services resource complies with the specified Config rule.</p>
+    #[doc(hidden)]
     pub evaluation_results: std::option::Option<std::vec::Vec<crate::model::EvaluationResult>>,
     /// <p>The string that you use in a subsequent request to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetComplianceDetailsByConfigRuleOutput {
@@ -2628,11 +2732,10 @@ impl std::fmt::Debug for GetComplianceDetailsByConfigRuleOutput {
         formatter.finish()
     }
 }
-/// See [`GetComplianceDetailsByConfigRuleOutput`](crate::output::GetComplianceDetailsByConfigRuleOutput)
+/// See [`GetComplianceDetailsByConfigRuleOutput`](crate::output::GetComplianceDetailsByConfigRuleOutput).
 pub mod get_compliance_details_by_config_rule_output {
 
-    /// A builder for [`GetComplianceDetailsByConfigRuleOutput`](crate::output::GetComplianceDetailsByConfigRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetComplianceDetailsByConfigRuleOutput`](crate::output::GetComplianceDetailsByConfigRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) evaluation_results:
@@ -2669,7 +2772,7 @@ pub mod get_compliance_details_by_config_rule_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetComplianceDetailsByConfigRuleOutput`](crate::output::GetComplianceDetailsByConfigRuleOutput)
+        /// Consumes the builder and constructs a [`GetComplianceDetailsByConfigRuleOutput`](crate::output::GetComplianceDetailsByConfigRuleOutput).
         pub fn build(self) -> crate::output::GetComplianceDetailsByConfigRuleOutput {
             crate::output::GetComplianceDetailsByConfigRuleOutput {
                 evaluation_results: self.evaluation_results,
@@ -2679,7 +2782,7 @@ pub mod get_compliance_details_by_config_rule_output {
     }
 }
 impl GetComplianceDetailsByConfigRuleOutput {
-    /// Creates a new builder-style object to manufacture [`GetComplianceDetailsByConfigRuleOutput`](crate::output::GetComplianceDetailsByConfigRuleOutput)
+    /// Creates a new builder-style object to manufacture [`GetComplianceDetailsByConfigRuleOutput`](crate::output::GetComplianceDetailsByConfigRuleOutput).
     pub fn builder() -> crate::output::get_compliance_details_by_config_rule_output::Builder {
         crate::output::get_compliance_details_by_config_rule_output::Builder::default()
     }
@@ -2690,6 +2793,7 @@ impl GetComplianceDetailsByConfigRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAggregateResourceConfigOutput {
     /// <p>Returns a <code>ConfigurationItem</code> object.</p>
+    #[doc(hidden)]
     pub configuration_item: std::option::Option<crate::model::ConfigurationItem>,
 }
 impl GetAggregateResourceConfigOutput {
@@ -2705,11 +2809,10 @@ impl std::fmt::Debug for GetAggregateResourceConfigOutput {
         formatter.finish()
     }
 }
-/// See [`GetAggregateResourceConfigOutput`](crate::output::GetAggregateResourceConfigOutput)
+/// See [`GetAggregateResourceConfigOutput`](crate::output::GetAggregateResourceConfigOutput).
 pub mod get_aggregate_resource_config_output {
 
-    /// A builder for [`GetAggregateResourceConfigOutput`](crate::output::GetAggregateResourceConfigOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAggregateResourceConfigOutput`](crate::output::GetAggregateResourceConfigOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_item: std::option::Option<crate::model::ConfigurationItem>,
@@ -2728,7 +2831,7 @@ pub mod get_aggregate_resource_config_output {
             self.configuration_item = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAggregateResourceConfigOutput`](crate::output::GetAggregateResourceConfigOutput)
+        /// Consumes the builder and constructs a [`GetAggregateResourceConfigOutput`](crate::output::GetAggregateResourceConfigOutput).
         pub fn build(self) -> crate::output::GetAggregateResourceConfigOutput {
             crate::output::GetAggregateResourceConfigOutput {
                 configuration_item: self.configuration_item,
@@ -2737,7 +2840,7 @@ pub mod get_aggregate_resource_config_output {
     }
 }
 impl GetAggregateResourceConfigOutput {
-    /// Creates a new builder-style object to manufacture [`GetAggregateResourceConfigOutput`](crate::output::GetAggregateResourceConfigOutput)
+    /// Creates a new builder-style object to manufacture [`GetAggregateResourceConfigOutput`](crate::output::GetAggregateResourceConfigOutput).
     pub fn builder() -> crate::output::get_aggregate_resource_config_output::Builder {
         crate::output::get_aggregate_resource_config_output::Builder::default()
     }
@@ -2748,13 +2851,17 @@ impl GetAggregateResourceConfigOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAggregateDiscoveredResourceCountsOutput {
     /// <p>The total number of resources that are present in an aggregator with the filters that you provide.</p>
+    #[doc(hidden)]
     pub total_discovered_resources: i64,
     /// <p>The key passed into the request object. If <code>GroupByKey</code> is not provided, the result will be empty.</p>
+    #[doc(hidden)]
     pub group_by_key: std::option::Option<std::string::String>,
     /// <p>Returns a list of GroupedResourceCount objects.</p>
+    #[doc(hidden)]
     pub grouped_resource_counts:
         std::option::Option<std::vec::Vec<crate::model::GroupedResourceCount>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetAggregateDiscoveredResourceCountsOutput {
@@ -2790,11 +2897,10 @@ impl std::fmt::Debug for GetAggregateDiscoveredResourceCountsOutput {
         formatter.finish()
     }
 }
-/// See [`GetAggregateDiscoveredResourceCountsOutput`](crate::output::GetAggregateDiscoveredResourceCountsOutput)
+/// See [`GetAggregateDiscoveredResourceCountsOutput`](crate::output::GetAggregateDiscoveredResourceCountsOutput).
 pub mod get_aggregate_discovered_resource_counts_output {
 
-    /// A builder for [`GetAggregateDiscoveredResourceCountsOutput`](crate::output::GetAggregateDiscoveredResourceCountsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAggregateDiscoveredResourceCountsOutput`](crate::output::GetAggregateDiscoveredResourceCountsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_discovered_resources: std::option::Option<i64>,
@@ -2856,7 +2962,7 @@ pub mod get_aggregate_discovered_resource_counts_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAggregateDiscoveredResourceCountsOutput`](crate::output::GetAggregateDiscoveredResourceCountsOutput)
+        /// Consumes the builder and constructs a [`GetAggregateDiscoveredResourceCountsOutput`](crate::output::GetAggregateDiscoveredResourceCountsOutput).
         pub fn build(self) -> crate::output::GetAggregateDiscoveredResourceCountsOutput {
             crate::output::GetAggregateDiscoveredResourceCountsOutput {
                 total_discovered_resources: self.total_discovered_resources.unwrap_or_default(),
@@ -2868,7 +2974,7 @@ pub mod get_aggregate_discovered_resource_counts_output {
     }
 }
 impl GetAggregateDiscoveredResourceCountsOutput {
-    /// Creates a new builder-style object to manufacture [`GetAggregateDiscoveredResourceCountsOutput`](crate::output::GetAggregateDiscoveredResourceCountsOutput)
+    /// Creates a new builder-style object to manufacture [`GetAggregateDiscoveredResourceCountsOutput`](crate::output::GetAggregateDiscoveredResourceCountsOutput).
     pub fn builder() -> crate::output::get_aggregate_discovered_resource_counts_output::Builder {
         crate::output::get_aggregate_discovered_resource_counts_output::Builder::default()
     }
@@ -2879,11 +2985,14 @@ impl GetAggregateDiscoveredResourceCountsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAggregateConformancePackComplianceSummaryOutput {
     /// <p>Returns a list of <code>AggregateConformancePackComplianceSummary</code> object.</p>
+    #[doc(hidden)]
     pub aggregate_conformance_pack_compliance_summaries:
         std::option::Option<std::vec::Vec<crate::model::AggregateConformancePackComplianceSummary>>,
     /// <p>Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub group_by_key: std::option::Option<std::string::String>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetAggregateConformancePackComplianceSummaryOutput {
@@ -2915,11 +3024,10 @@ impl std::fmt::Debug for GetAggregateConformancePackComplianceSummaryOutput {
         formatter.finish()
     }
 }
-/// See [`GetAggregateConformancePackComplianceSummaryOutput`](crate::output::GetAggregateConformancePackComplianceSummaryOutput)
+/// See [`GetAggregateConformancePackComplianceSummaryOutput`](crate::output::GetAggregateConformancePackComplianceSummaryOutput).
 pub mod get_aggregate_conformance_pack_compliance_summary_output {
 
-    /// A builder for [`GetAggregateConformancePackComplianceSummaryOutput`](crate::output::GetAggregateConformancePackComplianceSummaryOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAggregateConformancePackComplianceSummaryOutput`](crate::output::GetAggregateConformancePackComplianceSummaryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aggregate_conformance_pack_compliance_summaries: std::option::Option<
@@ -2975,7 +3083,7 @@ pub mod get_aggregate_conformance_pack_compliance_summary_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAggregateConformancePackComplianceSummaryOutput`](crate::output::GetAggregateConformancePackComplianceSummaryOutput)
+        /// Consumes the builder and constructs a [`GetAggregateConformancePackComplianceSummaryOutput`](crate::output::GetAggregateConformancePackComplianceSummaryOutput).
         pub fn build(self) -> crate::output::GetAggregateConformancePackComplianceSummaryOutput {
             crate::output::GetAggregateConformancePackComplianceSummaryOutput {
                 aggregate_conformance_pack_compliance_summaries: self
@@ -2987,7 +3095,7 @@ pub mod get_aggregate_conformance_pack_compliance_summary_output {
     }
 }
 impl GetAggregateConformancePackComplianceSummaryOutput {
-    /// Creates a new builder-style object to manufacture [`GetAggregateConformancePackComplianceSummaryOutput`](crate::output::GetAggregateConformancePackComplianceSummaryOutput)
+    /// Creates a new builder-style object to manufacture [`GetAggregateConformancePackComplianceSummaryOutput`](crate::output::GetAggregateConformancePackComplianceSummaryOutput).
     pub fn builder(
     ) -> crate::output::get_aggregate_conformance_pack_compliance_summary_output::Builder {
         crate::output::get_aggregate_conformance_pack_compliance_summary_output::Builder::default()
@@ -2999,11 +3107,14 @@ impl GetAggregateConformancePackComplianceSummaryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAggregateConfigRuleComplianceSummaryOutput {
     /// <p>Groups the result based on ACCOUNT_ID or AWS_REGION.</p>
+    #[doc(hidden)]
     pub group_by_key: std::option::Option<std::string::String>,
     /// <p>Returns a list of AggregateComplianceCounts object.</p>
+    #[doc(hidden)]
     pub aggregate_compliance_counts:
         std::option::Option<std::vec::Vec<crate::model::AggregateComplianceCount>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetAggregateConfigRuleComplianceSummaryOutput {
@@ -3034,11 +3145,10 @@ impl std::fmt::Debug for GetAggregateConfigRuleComplianceSummaryOutput {
         formatter.finish()
     }
 }
-/// See [`GetAggregateConfigRuleComplianceSummaryOutput`](crate::output::GetAggregateConfigRuleComplianceSummaryOutput)
+/// See [`GetAggregateConfigRuleComplianceSummaryOutput`](crate::output::GetAggregateConfigRuleComplianceSummaryOutput).
 pub mod get_aggregate_config_rule_compliance_summary_output {
 
-    /// A builder for [`GetAggregateConfigRuleComplianceSummaryOutput`](crate::output::GetAggregateConfigRuleComplianceSummaryOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAggregateConfigRuleComplianceSummaryOutput`](crate::output::GetAggregateConfigRuleComplianceSummaryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_by_key: std::option::Option<std::string::String>,
@@ -3089,7 +3199,7 @@ pub mod get_aggregate_config_rule_compliance_summary_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAggregateConfigRuleComplianceSummaryOutput`](crate::output::GetAggregateConfigRuleComplianceSummaryOutput)
+        /// Consumes the builder and constructs a [`GetAggregateConfigRuleComplianceSummaryOutput`](crate::output::GetAggregateConfigRuleComplianceSummaryOutput).
         pub fn build(self) -> crate::output::GetAggregateConfigRuleComplianceSummaryOutput {
             crate::output::GetAggregateConfigRuleComplianceSummaryOutput {
                 group_by_key: self.group_by_key,
@@ -3100,7 +3210,7 @@ pub mod get_aggregate_config_rule_compliance_summary_output {
     }
 }
 impl GetAggregateConfigRuleComplianceSummaryOutput {
-    /// Creates a new builder-style object to manufacture [`GetAggregateConfigRuleComplianceSummaryOutput`](crate::output::GetAggregateConfigRuleComplianceSummaryOutput)
+    /// Creates a new builder-style object to manufacture [`GetAggregateConfigRuleComplianceSummaryOutput`](crate::output::GetAggregateConfigRuleComplianceSummaryOutput).
     pub fn builder() -> crate::output::get_aggregate_config_rule_compliance_summary_output::Builder
     {
         crate::output::get_aggregate_config_rule_compliance_summary_output::Builder::default()
@@ -3112,9 +3222,11 @@ impl GetAggregateConfigRuleComplianceSummaryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAggregateComplianceDetailsByConfigRuleOutput {
     /// <p>Returns an AggregateEvaluationResults object.</p>
+    #[doc(hidden)]
     pub aggregate_evaluation_results:
         std::option::Option<std::vec::Vec<crate::model::AggregateEvaluationResult>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetAggregateComplianceDetailsByConfigRuleOutput {
@@ -3140,11 +3252,10 @@ impl std::fmt::Debug for GetAggregateComplianceDetailsByConfigRuleOutput {
         formatter.finish()
     }
 }
-/// See [`GetAggregateComplianceDetailsByConfigRuleOutput`](crate::output::GetAggregateComplianceDetailsByConfigRuleOutput)
+/// See [`GetAggregateComplianceDetailsByConfigRuleOutput`](crate::output::GetAggregateComplianceDetailsByConfigRuleOutput).
 pub mod get_aggregate_compliance_details_by_config_rule_output {
 
-    /// A builder for [`GetAggregateComplianceDetailsByConfigRuleOutput`](crate::output::GetAggregateComplianceDetailsByConfigRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAggregateComplianceDetailsByConfigRuleOutput`](crate::output::GetAggregateComplianceDetailsByConfigRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aggregate_evaluation_results:
@@ -3184,7 +3295,7 @@ pub mod get_aggregate_compliance_details_by_config_rule_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAggregateComplianceDetailsByConfigRuleOutput`](crate::output::GetAggregateComplianceDetailsByConfigRuleOutput)
+        /// Consumes the builder and constructs a [`GetAggregateComplianceDetailsByConfigRuleOutput`](crate::output::GetAggregateComplianceDetailsByConfigRuleOutput).
         pub fn build(self) -> crate::output::GetAggregateComplianceDetailsByConfigRuleOutput {
             crate::output::GetAggregateComplianceDetailsByConfigRuleOutput {
                 aggregate_evaluation_results: self.aggregate_evaluation_results,
@@ -3194,7 +3305,7 @@ pub mod get_aggregate_compliance_details_by_config_rule_output {
     }
 }
 impl GetAggregateComplianceDetailsByConfigRuleOutput {
-    /// Creates a new builder-style object to manufacture [`GetAggregateComplianceDetailsByConfigRuleOutput`](crate::output::GetAggregateComplianceDetailsByConfigRuleOutput)
+    /// Creates a new builder-style object to manufacture [`GetAggregateComplianceDetailsByConfigRuleOutput`](crate::output::GetAggregateComplianceDetailsByConfigRuleOutput).
     pub fn builder(
     ) -> crate::output::get_aggregate_compliance_details_by_config_rule_output::Builder {
         crate::output::get_aggregate_compliance_details_by_config_rule_output::Builder::default()
@@ -3206,9 +3317,11 @@ impl GetAggregateComplianceDetailsByConfigRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeRetentionConfigurationsOutput {
     /// <p>Returns a retention configuration object.</p>
+    #[doc(hidden)]
     pub retention_configurations:
         std::option::Option<std::vec::Vec<crate::model::RetentionConfiguration>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeRetentionConfigurationsOutput {
@@ -3231,11 +3344,10 @@ impl std::fmt::Debug for DescribeRetentionConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeRetentionConfigurationsOutput`](crate::output::DescribeRetentionConfigurationsOutput)
+/// See [`DescribeRetentionConfigurationsOutput`](crate::output::DescribeRetentionConfigurationsOutput).
 pub mod describe_retention_configurations_output {
 
-    /// A builder for [`DescribeRetentionConfigurationsOutput`](crate::output::DescribeRetentionConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeRetentionConfigurationsOutput`](crate::output::DescribeRetentionConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) retention_configurations:
@@ -3275,7 +3387,7 @@ pub mod describe_retention_configurations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeRetentionConfigurationsOutput`](crate::output::DescribeRetentionConfigurationsOutput)
+        /// Consumes the builder and constructs a [`DescribeRetentionConfigurationsOutput`](crate::output::DescribeRetentionConfigurationsOutput).
         pub fn build(self) -> crate::output::DescribeRetentionConfigurationsOutput {
             crate::output::DescribeRetentionConfigurationsOutput {
                 retention_configurations: self.retention_configurations,
@@ -3285,7 +3397,7 @@ pub mod describe_retention_configurations_output {
     }
 }
 impl DescribeRetentionConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeRetentionConfigurationsOutput`](crate::output::DescribeRetentionConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeRetentionConfigurationsOutput`](crate::output::DescribeRetentionConfigurationsOutput).
     pub fn builder() -> crate::output::describe_retention_configurations_output::Builder {
         crate::output::describe_retention_configurations_output::Builder::default()
     }
@@ -3296,9 +3408,11 @@ impl DescribeRetentionConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeRemediationExecutionStatusOutput {
     /// <p>Returns a list of remediation execution statuses objects.</p>
+    #[doc(hidden)]
     pub remediation_execution_statuses:
         std::option::Option<std::vec::Vec<crate::model::RemediationExecutionStatus>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeRemediationExecutionStatusOutput {
@@ -3324,11 +3438,10 @@ impl std::fmt::Debug for DescribeRemediationExecutionStatusOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeRemediationExecutionStatusOutput`](crate::output::DescribeRemediationExecutionStatusOutput)
+/// See [`DescribeRemediationExecutionStatusOutput`](crate::output::DescribeRemediationExecutionStatusOutput).
 pub mod describe_remediation_execution_status_output {
 
-    /// A builder for [`DescribeRemediationExecutionStatusOutput`](crate::output::DescribeRemediationExecutionStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeRemediationExecutionStatusOutput`](crate::output::DescribeRemediationExecutionStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) remediation_execution_statuses:
@@ -3368,7 +3481,7 @@ pub mod describe_remediation_execution_status_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeRemediationExecutionStatusOutput`](crate::output::DescribeRemediationExecutionStatusOutput)
+        /// Consumes the builder and constructs a [`DescribeRemediationExecutionStatusOutput`](crate::output::DescribeRemediationExecutionStatusOutput).
         pub fn build(self) -> crate::output::DescribeRemediationExecutionStatusOutput {
             crate::output::DescribeRemediationExecutionStatusOutput {
                 remediation_execution_statuses: self.remediation_execution_statuses,
@@ -3378,7 +3491,7 @@ pub mod describe_remediation_execution_status_output {
     }
 }
 impl DescribeRemediationExecutionStatusOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeRemediationExecutionStatusOutput`](crate::output::DescribeRemediationExecutionStatusOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeRemediationExecutionStatusOutput`](crate::output::DescribeRemediationExecutionStatusOutput).
     pub fn builder() -> crate::output::describe_remediation_execution_status_output::Builder {
         crate::output::describe_remediation_execution_status_output::Builder::default()
     }
@@ -3389,9 +3502,11 @@ impl DescribeRemediationExecutionStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeRemediationExceptionsOutput {
     /// <p>Returns a list of remediation exception objects.</p>
+    #[doc(hidden)]
     pub remediation_exceptions:
         std::option::Option<std::vec::Vec<crate::model::RemediationException>>,
     /// <p>The <code>nextToken</code> string returned in a previous request that you use to request the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeRemediationExceptionsOutput {
@@ -3414,11 +3529,10 @@ impl std::fmt::Debug for DescribeRemediationExceptionsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeRemediationExceptionsOutput`](crate::output::DescribeRemediationExceptionsOutput)
+/// See [`DescribeRemediationExceptionsOutput`](crate::output::DescribeRemediationExceptionsOutput).
 pub mod describe_remediation_exceptions_output {
 
-    /// A builder for [`DescribeRemediationExceptionsOutput`](crate::output::DescribeRemediationExceptionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeRemediationExceptionsOutput`](crate::output::DescribeRemediationExceptionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) remediation_exceptions:
@@ -3455,7 +3569,7 @@ pub mod describe_remediation_exceptions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeRemediationExceptionsOutput`](crate::output::DescribeRemediationExceptionsOutput)
+        /// Consumes the builder and constructs a [`DescribeRemediationExceptionsOutput`](crate::output::DescribeRemediationExceptionsOutput).
         pub fn build(self) -> crate::output::DescribeRemediationExceptionsOutput {
             crate::output::DescribeRemediationExceptionsOutput {
                 remediation_exceptions: self.remediation_exceptions,
@@ -3465,7 +3579,7 @@ pub mod describe_remediation_exceptions_output {
     }
 }
 impl DescribeRemediationExceptionsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeRemediationExceptionsOutput`](crate::output::DescribeRemediationExceptionsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeRemediationExceptionsOutput`](crate::output::DescribeRemediationExceptionsOutput).
     pub fn builder() -> crate::output::describe_remediation_exceptions_output::Builder {
         crate::output::describe_remediation_exceptions_output::Builder::default()
     }
@@ -3476,6 +3590,7 @@ impl DescribeRemediationExceptionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeRemediationConfigurationsOutput {
     /// <p>Returns a remediation configuration object.</p>
+    #[doc(hidden)]
     pub remediation_configurations:
         std::option::Option<std::vec::Vec<crate::model::RemediationConfiguration>>,
 }
@@ -3497,11 +3612,10 @@ impl std::fmt::Debug for DescribeRemediationConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeRemediationConfigurationsOutput`](crate::output::DescribeRemediationConfigurationsOutput)
+/// See [`DescribeRemediationConfigurationsOutput`](crate::output::DescribeRemediationConfigurationsOutput).
 pub mod describe_remediation_configurations_output {
 
-    /// A builder for [`DescribeRemediationConfigurationsOutput`](crate::output::DescribeRemediationConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeRemediationConfigurationsOutput`](crate::output::DescribeRemediationConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) remediation_configurations:
@@ -3530,7 +3644,7 @@ pub mod describe_remediation_configurations_output {
             self.remediation_configurations = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeRemediationConfigurationsOutput`](crate::output::DescribeRemediationConfigurationsOutput)
+        /// Consumes the builder and constructs a [`DescribeRemediationConfigurationsOutput`](crate::output::DescribeRemediationConfigurationsOutput).
         pub fn build(self) -> crate::output::DescribeRemediationConfigurationsOutput {
             crate::output::DescribeRemediationConfigurationsOutput {
                 remediation_configurations: self.remediation_configurations,
@@ -3539,7 +3653,7 @@ pub mod describe_remediation_configurations_output {
     }
 }
 impl DescribeRemediationConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeRemediationConfigurationsOutput`](crate::output::DescribeRemediationConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeRemediationConfigurationsOutput`](crate::output::DescribeRemediationConfigurationsOutput).
     pub fn builder() -> crate::output::describe_remediation_configurations_output::Builder {
         crate::output::describe_remediation_configurations_output::Builder::default()
     }
@@ -3550,9 +3664,11 @@ impl DescribeRemediationConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribePendingAggregationRequestsOutput {
     /// <p>Returns a PendingAggregationRequests object.</p>
+    #[doc(hidden)]
     pub pending_aggregation_requests:
         std::option::Option<std::vec::Vec<crate::model::PendingAggregationRequest>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribePendingAggregationRequestsOutput {
@@ -3578,11 +3694,10 @@ impl std::fmt::Debug for DescribePendingAggregationRequestsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribePendingAggregationRequestsOutput`](crate::output::DescribePendingAggregationRequestsOutput)
+/// See [`DescribePendingAggregationRequestsOutput`](crate::output::DescribePendingAggregationRequestsOutput).
 pub mod describe_pending_aggregation_requests_output {
 
-    /// A builder for [`DescribePendingAggregationRequestsOutput`](crate::output::DescribePendingAggregationRequestsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribePendingAggregationRequestsOutput`](crate::output::DescribePendingAggregationRequestsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pending_aggregation_requests:
@@ -3622,7 +3737,7 @@ pub mod describe_pending_aggregation_requests_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribePendingAggregationRequestsOutput`](crate::output::DescribePendingAggregationRequestsOutput)
+        /// Consumes the builder and constructs a [`DescribePendingAggregationRequestsOutput`](crate::output::DescribePendingAggregationRequestsOutput).
         pub fn build(self) -> crate::output::DescribePendingAggregationRequestsOutput {
             crate::output::DescribePendingAggregationRequestsOutput {
                 pending_aggregation_requests: self.pending_aggregation_requests,
@@ -3632,7 +3747,7 @@ pub mod describe_pending_aggregation_requests_output {
     }
 }
 impl DescribePendingAggregationRequestsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribePendingAggregationRequestsOutput`](crate::output::DescribePendingAggregationRequestsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribePendingAggregationRequestsOutput`](crate::output::DescribePendingAggregationRequestsOutput).
     pub fn builder() -> crate::output::describe_pending_aggregation_requests_output::Builder {
         crate::output::describe_pending_aggregation_requests_output::Builder::default()
     }
@@ -3643,9 +3758,11 @@ impl DescribePendingAggregationRequestsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeOrganizationConformancePackStatusesOutput {
     /// <p>A list of <code>OrganizationConformancePackStatus</code> objects. </p>
+    #[doc(hidden)]
     pub organization_conformance_pack_statuses:
         std::option::Option<std::vec::Vec<crate::model::OrganizationConformancePackStatus>>,
     /// <p>The nextToken string returned on a previous page that you use to get the next page of results in a paginated response. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeOrganizationConformancePackStatusesOutput {
@@ -3671,11 +3788,10 @@ impl std::fmt::Debug for DescribeOrganizationConformancePackStatusesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOrganizationConformancePackStatusesOutput`](crate::output::DescribeOrganizationConformancePackStatusesOutput)
+/// See [`DescribeOrganizationConformancePackStatusesOutput`](crate::output::DescribeOrganizationConformancePackStatusesOutput).
 pub mod describe_organization_conformance_pack_statuses_output {
 
-    /// A builder for [`DescribeOrganizationConformancePackStatusesOutput`](crate::output::DescribeOrganizationConformancePackStatusesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeOrganizationConformancePackStatusesOutput`](crate::output::DescribeOrganizationConformancePackStatusesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) organization_conformance_pack_statuses:
@@ -3719,7 +3835,7 @@ pub mod describe_organization_conformance_pack_statuses_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOrganizationConformancePackStatusesOutput`](crate::output::DescribeOrganizationConformancePackStatusesOutput)
+        /// Consumes the builder and constructs a [`DescribeOrganizationConformancePackStatusesOutput`](crate::output::DescribeOrganizationConformancePackStatusesOutput).
         pub fn build(self) -> crate::output::DescribeOrganizationConformancePackStatusesOutput {
             crate::output::DescribeOrganizationConformancePackStatusesOutput {
                 organization_conformance_pack_statuses: self.organization_conformance_pack_statuses,
@@ -3729,7 +3845,7 @@ pub mod describe_organization_conformance_pack_statuses_output {
     }
 }
 impl DescribeOrganizationConformancePackStatusesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConformancePackStatusesOutput`](crate::output::DescribeOrganizationConformancePackStatusesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConformancePackStatusesOutput`](crate::output::DescribeOrganizationConformancePackStatusesOutput).
     pub fn builder(
     ) -> crate::output::describe_organization_conformance_pack_statuses_output::Builder {
         crate::output::describe_organization_conformance_pack_statuses_output::Builder::default()
@@ -3741,9 +3857,11 @@ impl DescribeOrganizationConformancePackStatusesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeOrganizationConformancePacksOutput {
     /// <p>Returns a list of OrganizationConformancePacks objects.</p>
+    #[doc(hidden)]
     pub organization_conformance_packs:
         std::option::Option<std::vec::Vec<crate::model::OrganizationConformancePack>>,
     /// <p>The nextToken string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeOrganizationConformancePacksOutput {
@@ -3769,11 +3887,10 @@ impl std::fmt::Debug for DescribeOrganizationConformancePacksOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOrganizationConformancePacksOutput`](crate::output::DescribeOrganizationConformancePacksOutput)
+/// See [`DescribeOrganizationConformancePacksOutput`](crate::output::DescribeOrganizationConformancePacksOutput).
 pub mod describe_organization_conformance_packs_output {
 
-    /// A builder for [`DescribeOrganizationConformancePacksOutput`](crate::output::DescribeOrganizationConformancePacksOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeOrganizationConformancePacksOutput`](crate::output::DescribeOrganizationConformancePacksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) organization_conformance_packs:
@@ -3813,7 +3930,7 @@ pub mod describe_organization_conformance_packs_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOrganizationConformancePacksOutput`](crate::output::DescribeOrganizationConformancePacksOutput)
+        /// Consumes the builder and constructs a [`DescribeOrganizationConformancePacksOutput`](crate::output::DescribeOrganizationConformancePacksOutput).
         pub fn build(self) -> crate::output::DescribeOrganizationConformancePacksOutput {
             crate::output::DescribeOrganizationConformancePacksOutput {
                 organization_conformance_packs: self.organization_conformance_packs,
@@ -3823,7 +3940,7 @@ pub mod describe_organization_conformance_packs_output {
     }
 }
 impl DescribeOrganizationConformancePacksOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConformancePacksOutput`](crate::output::DescribeOrganizationConformancePacksOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConformancePacksOutput`](crate::output::DescribeOrganizationConformancePacksOutput).
     pub fn builder() -> crate::output::describe_organization_conformance_packs_output::Builder {
         crate::output::describe_organization_conformance_packs_output::Builder::default()
     }
@@ -3834,9 +3951,11 @@ impl DescribeOrganizationConformancePacksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeOrganizationConfigRuleStatusesOutput {
     /// <p>A list of <code>OrganizationConfigRuleStatus</code> objects.</p>
+    #[doc(hidden)]
     pub organization_config_rule_statuses:
         std::option::Option<std::vec::Vec<crate::model::OrganizationConfigRuleStatus>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeOrganizationConfigRuleStatusesOutput {
@@ -3862,11 +3981,10 @@ impl std::fmt::Debug for DescribeOrganizationConfigRuleStatusesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOrganizationConfigRuleStatusesOutput`](crate::output::DescribeOrganizationConfigRuleStatusesOutput)
+/// See [`DescribeOrganizationConfigRuleStatusesOutput`](crate::output::DescribeOrganizationConfigRuleStatusesOutput).
 pub mod describe_organization_config_rule_statuses_output {
 
-    /// A builder for [`DescribeOrganizationConfigRuleStatusesOutput`](crate::output::DescribeOrganizationConfigRuleStatusesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeOrganizationConfigRuleStatusesOutput`](crate::output::DescribeOrganizationConfigRuleStatusesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) organization_config_rule_statuses:
@@ -3906,7 +4024,7 @@ pub mod describe_organization_config_rule_statuses_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOrganizationConfigRuleStatusesOutput`](crate::output::DescribeOrganizationConfigRuleStatusesOutput)
+        /// Consumes the builder and constructs a [`DescribeOrganizationConfigRuleStatusesOutput`](crate::output::DescribeOrganizationConfigRuleStatusesOutput).
         pub fn build(self) -> crate::output::DescribeOrganizationConfigRuleStatusesOutput {
             crate::output::DescribeOrganizationConfigRuleStatusesOutput {
                 organization_config_rule_statuses: self.organization_config_rule_statuses,
@@ -3916,7 +4034,7 @@ pub mod describe_organization_config_rule_statuses_output {
     }
 }
 impl DescribeOrganizationConfigRuleStatusesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConfigRuleStatusesOutput`](crate::output::DescribeOrganizationConfigRuleStatusesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConfigRuleStatusesOutput`](crate::output::DescribeOrganizationConfigRuleStatusesOutput).
     pub fn builder() -> crate::output::describe_organization_config_rule_statuses_output::Builder {
         crate::output::describe_organization_config_rule_statuses_output::Builder::default()
     }
@@ -3927,9 +4045,11 @@ impl DescribeOrganizationConfigRuleStatusesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeOrganizationConfigRulesOutput {
     /// <p>Returns a list of <code>OrganizationConfigRule</code> objects.</p>
+    #[doc(hidden)]
     pub organization_config_rules:
         std::option::Option<std::vec::Vec<crate::model::OrganizationConfigRule>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeOrganizationConfigRulesOutput {
@@ -3952,11 +4072,10 @@ impl std::fmt::Debug for DescribeOrganizationConfigRulesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOrganizationConfigRulesOutput`](crate::output::DescribeOrganizationConfigRulesOutput)
+/// See [`DescribeOrganizationConfigRulesOutput`](crate::output::DescribeOrganizationConfigRulesOutput).
 pub mod describe_organization_config_rules_output {
 
-    /// A builder for [`DescribeOrganizationConfigRulesOutput`](crate::output::DescribeOrganizationConfigRulesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeOrganizationConfigRulesOutput`](crate::output::DescribeOrganizationConfigRulesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) organization_config_rules:
@@ -3996,7 +4115,7 @@ pub mod describe_organization_config_rules_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOrganizationConfigRulesOutput`](crate::output::DescribeOrganizationConfigRulesOutput)
+        /// Consumes the builder and constructs a [`DescribeOrganizationConfigRulesOutput`](crate::output::DescribeOrganizationConfigRulesOutput).
         pub fn build(self) -> crate::output::DescribeOrganizationConfigRulesOutput {
             crate::output::DescribeOrganizationConfigRulesOutput {
                 organization_config_rules: self.organization_config_rules,
@@ -4006,7 +4125,7 @@ pub mod describe_organization_config_rules_output {
     }
 }
 impl DescribeOrganizationConfigRulesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConfigRulesOutput`](crate::output::DescribeOrganizationConfigRulesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConfigRulesOutput`](crate::output::DescribeOrganizationConfigRulesOutput).
     pub fn builder() -> crate::output::describe_organization_config_rules_output::Builder {
         crate::output::describe_organization_config_rules_output::Builder::default()
     }
@@ -4017,6 +4136,7 @@ impl DescribeOrganizationConfigRulesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDeliveryChannelStatusOutput {
     /// <p>A list that contains the status of a specified delivery channel.</p>
+    #[doc(hidden)]
     pub delivery_channels_status:
         std::option::Option<std::vec::Vec<crate::model::DeliveryChannelStatus>>,
 }
@@ -4035,11 +4155,10 @@ impl std::fmt::Debug for DescribeDeliveryChannelStatusOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDeliveryChannelStatusOutput`](crate::output::DescribeDeliveryChannelStatusOutput)
+/// See [`DescribeDeliveryChannelStatusOutput`](crate::output::DescribeDeliveryChannelStatusOutput).
 pub mod describe_delivery_channel_status_output {
 
-    /// A builder for [`DescribeDeliveryChannelStatusOutput`](crate::output::DescribeDeliveryChannelStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDeliveryChannelStatusOutput`](crate::output::DescribeDeliveryChannelStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_channels_status:
@@ -4068,7 +4187,7 @@ pub mod describe_delivery_channel_status_output {
             self.delivery_channels_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDeliveryChannelStatusOutput`](crate::output::DescribeDeliveryChannelStatusOutput)
+        /// Consumes the builder and constructs a [`DescribeDeliveryChannelStatusOutput`](crate::output::DescribeDeliveryChannelStatusOutput).
         pub fn build(self) -> crate::output::DescribeDeliveryChannelStatusOutput {
             crate::output::DescribeDeliveryChannelStatusOutput {
                 delivery_channels_status: self.delivery_channels_status,
@@ -4077,7 +4196,7 @@ pub mod describe_delivery_channel_status_output {
     }
 }
 impl DescribeDeliveryChannelStatusOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDeliveryChannelStatusOutput`](crate::output::DescribeDeliveryChannelStatusOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDeliveryChannelStatusOutput`](crate::output::DescribeDeliveryChannelStatusOutput).
     pub fn builder() -> crate::output::describe_delivery_channel_status_output::Builder {
         crate::output::describe_delivery_channel_status_output::Builder::default()
     }
@@ -4088,6 +4207,7 @@ impl DescribeDeliveryChannelStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDeliveryChannelsOutput {
     /// <p>A list that contains the descriptions of the specified delivery channel.</p>
+    #[doc(hidden)]
     pub delivery_channels: std::option::Option<std::vec::Vec<crate::model::DeliveryChannel>>,
 }
 impl DescribeDeliveryChannelsOutput {
@@ -4103,11 +4223,10 @@ impl std::fmt::Debug for DescribeDeliveryChannelsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDeliveryChannelsOutput`](crate::output::DescribeDeliveryChannelsOutput)
+/// See [`DescribeDeliveryChannelsOutput`](crate::output::DescribeDeliveryChannelsOutput).
 pub mod describe_delivery_channels_output {
 
-    /// A builder for [`DescribeDeliveryChannelsOutput`](crate::output::DescribeDeliveryChannelsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDeliveryChannelsOutput`](crate::output::DescribeDeliveryChannelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_channels:
@@ -4133,7 +4252,7 @@ pub mod describe_delivery_channels_output {
             self.delivery_channels = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDeliveryChannelsOutput`](crate::output::DescribeDeliveryChannelsOutput)
+        /// Consumes the builder and constructs a [`DescribeDeliveryChannelsOutput`](crate::output::DescribeDeliveryChannelsOutput).
         pub fn build(self) -> crate::output::DescribeDeliveryChannelsOutput {
             crate::output::DescribeDeliveryChannelsOutput {
                 delivery_channels: self.delivery_channels,
@@ -4142,7 +4261,7 @@ pub mod describe_delivery_channels_output {
     }
 }
 impl DescribeDeliveryChannelsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDeliveryChannelsOutput`](crate::output::DescribeDeliveryChannelsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDeliveryChannelsOutput`](crate::output::DescribeDeliveryChannelsOutput).
     pub fn builder() -> crate::output::describe_delivery_channels_output::Builder {
         crate::output::describe_delivery_channels_output::Builder::default()
     }
@@ -4153,9 +4272,11 @@ impl DescribeDeliveryChannelsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeConformancePackStatusOutput {
     /// <p>A list of <code>ConformancePackStatusDetail</code> objects.</p>
+    #[doc(hidden)]
     pub conformance_pack_status_details:
         std::option::Option<std::vec::Vec<crate::model::ConformancePackStatusDetail>>,
     /// <p>The <code>nextToken</code> string returned in a previous request that you use to request the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeConformancePackStatusOutput {
@@ -4181,11 +4302,10 @@ impl std::fmt::Debug for DescribeConformancePackStatusOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeConformancePackStatusOutput`](crate::output::DescribeConformancePackStatusOutput)
+/// See [`DescribeConformancePackStatusOutput`](crate::output::DescribeConformancePackStatusOutput).
 pub mod describe_conformance_pack_status_output {
 
-    /// A builder for [`DescribeConformancePackStatusOutput`](crate::output::DescribeConformancePackStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeConformancePackStatusOutput`](crate::output::DescribeConformancePackStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) conformance_pack_status_details:
@@ -4225,7 +4345,7 @@ pub mod describe_conformance_pack_status_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeConformancePackStatusOutput`](crate::output::DescribeConformancePackStatusOutput)
+        /// Consumes the builder and constructs a [`DescribeConformancePackStatusOutput`](crate::output::DescribeConformancePackStatusOutput).
         pub fn build(self) -> crate::output::DescribeConformancePackStatusOutput {
             crate::output::DescribeConformancePackStatusOutput {
                 conformance_pack_status_details: self.conformance_pack_status_details,
@@ -4235,7 +4355,7 @@ pub mod describe_conformance_pack_status_output {
     }
 }
 impl DescribeConformancePackStatusOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeConformancePackStatusOutput`](crate::output::DescribeConformancePackStatusOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeConformancePackStatusOutput`](crate::output::DescribeConformancePackStatusOutput).
     pub fn builder() -> crate::output::describe_conformance_pack_status_output::Builder {
         crate::output::describe_conformance_pack_status_output::Builder::default()
     }
@@ -4246,9 +4366,11 @@ impl DescribeConformancePackStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeConformancePacksOutput {
     /// <p>Returns a list of <code>ConformancePackDetail</code> objects.</p>
+    #[doc(hidden)]
     pub conformance_pack_details:
         std::option::Option<std::vec::Vec<crate::model::ConformancePackDetail>>,
     /// <p>The <code>nextToken</code> string returned in a previous request that you use to request the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeConformancePacksOutput {
@@ -4271,11 +4393,10 @@ impl std::fmt::Debug for DescribeConformancePacksOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeConformancePacksOutput`](crate::output::DescribeConformancePacksOutput)
+/// See [`DescribeConformancePacksOutput`](crate::output::DescribeConformancePacksOutput).
 pub mod describe_conformance_packs_output {
 
-    /// A builder for [`DescribeConformancePacksOutput`](crate::output::DescribeConformancePacksOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeConformancePacksOutput`](crate::output::DescribeConformancePacksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) conformance_pack_details:
@@ -4315,7 +4436,7 @@ pub mod describe_conformance_packs_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeConformancePacksOutput`](crate::output::DescribeConformancePacksOutput)
+        /// Consumes the builder and constructs a [`DescribeConformancePacksOutput`](crate::output::DescribeConformancePacksOutput).
         pub fn build(self) -> crate::output::DescribeConformancePacksOutput {
             crate::output::DescribeConformancePacksOutput {
                 conformance_pack_details: self.conformance_pack_details,
@@ -4325,7 +4446,7 @@ pub mod describe_conformance_packs_output {
     }
 }
 impl DescribeConformancePacksOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeConformancePacksOutput`](crate::output::DescribeConformancePacksOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeConformancePacksOutput`](crate::output::DescribeConformancePacksOutput).
     pub fn builder() -> crate::output::describe_conformance_packs_output::Builder {
         crate::output::describe_conformance_packs_output::Builder::default()
     }
@@ -4336,11 +4457,14 @@ impl DescribeConformancePacksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeConformancePackComplianceOutput {
     /// <p>Name of the conformance pack.</p>
+    #[doc(hidden)]
     pub conformance_pack_name: std::option::Option<std::string::String>,
     /// <p>Returns a list of <code>ConformancePackRuleCompliance</code> objects.</p>
+    #[doc(hidden)]
     pub conformance_pack_rule_compliance_list:
         std::option::Option<std::vec::Vec<crate::model::ConformancePackRuleCompliance>>,
     /// <p>The <code>nextToken</code> string returned in a previous request that you use to request the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeConformancePackComplianceOutput {
@@ -4371,11 +4495,10 @@ impl std::fmt::Debug for DescribeConformancePackComplianceOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeConformancePackComplianceOutput`](crate::output::DescribeConformancePackComplianceOutput)
+/// See [`DescribeConformancePackComplianceOutput`](crate::output::DescribeConformancePackComplianceOutput).
 pub mod describe_conformance_pack_compliance_output {
 
-    /// A builder for [`DescribeConformancePackComplianceOutput`](crate::output::DescribeConformancePackComplianceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeConformancePackComplianceOutput`](crate::output::DescribeConformancePackComplianceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) conformance_pack_name: std::option::Option<std::string::String>,
@@ -4431,7 +4554,7 @@ pub mod describe_conformance_pack_compliance_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeConformancePackComplianceOutput`](crate::output::DescribeConformancePackComplianceOutput)
+        /// Consumes the builder and constructs a [`DescribeConformancePackComplianceOutput`](crate::output::DescribeConformancePackComplianceOutput).
         pub fn build(self) -> crate::output::DescribeConformancePackComplianceOutput {
             crate::output::DescribeConformancePackComplianceOutput {
                 conformance_pack_name: self.conformance_pack_name,
@@ -4442,7 +4565,7 @@ pub mod describe_conformance_pack_compliance_output {
     }
 }
 impl DescribeConformancePackComplianceOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeConformancePackComplianceOutput`](crate::output::DescribeConformancePackComplianceOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeConformancePackComplianceOutput`](crate::output::DescribeConformancePackComplianceOutput).
     pub fn builder() -> crate::output::describe_conformance_pack_compliance_output::Builder {
         crate::output::describe_conformance_pack_compliance_output::Builder::default()
     }
@@ -4453,6 +4576,7 @@ impl DescribeConformancePackComplianceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeConfigurationRecorderStatusOutput {
     /// <p>A list that contains status of the specified recorders.</p>
+    #[doc(hidden)]
     pub configuration_recorders_status:
         std::option::Option<std::vec::Vec<crate::model::ConfigurationRecorderStatus>>,
 }
@@ -4474,11 +4598,10 @@ impl std::fmt::Debug for DescribeConfigurationRecorderStatusOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeConfigurationRecorderStatusOutput`](crate::output::DescribeConfigurationRecorderStatusOutput)
+/// See [`DescribeConfigurationRecorderStatusOutput`](crate::output::DescribeConfigurationRecorderStatusOutput).
 pub mod describe_configuration_recorder_status_output {
 
-    /// A builder for [`DescribeConfigurationRecorderStatusOutput`](crate::output::DescribeConfigurationRecorderStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeConfigurationRecorderStatusOutput`](crate::output::DescribeConfigurationRecorderStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_recorders_status:
@@ -4507,7 +4630,7 @@ pub mod describe_configuration_recorder_status_output {
             self.configuration_recorders_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeConfigurationRecorderStatusOutput`](crate::output::DescribeConfigurationRecorderStatusOutput)
+        /// Consumes the builder and constructs a [`DescribeConfigurationRecorderStatusOutput`](crate::output::DescribeConfigurationRecorderStatusOutput).
         pub fn build(self) -> crate::output::DescribeConfigurationRecorderStatusOutput {
             crate::output::DescribeConfigurationRecorderStatusOutput {
                 configuration_recorders_status: self.configuration_recorders_status,
@@ -4516,7 +4639,7 @@ pub mod describe_configuration_recorder_status_output {
     }
 }
 impl DescribeConfigurationRecorderStatusOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeConfigurationRecorderStatusOutput`](crate::output::DescribeConfigurationRecorderStatusOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeConfigurationRecorderStatusOutput`](crate::output::DescribeConfigurationRecorderStatusOutput).
     pub fn builder() -> crate::output::describe_configuration_recorder_status_output::Builder {
         crate::output::describe_configuration_recorder_status_output::Builder::default()
     }
@@ -4527,6 +4650,7 @@ impl DescribeConfigurationRecorderStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeConfigurationRecordersOutput {
     /// <p>A list that contains the descriptions of the specified configuration recorders.</p>
+    #[doc(hidden)]
     pub configuration_recorders:
         std::option::Option<std::vec::Vec<crate::model::ConfigurationRecorder>>,
 }
@@ -4545,11 +4669,10 @@ impl std::fmt::Debug for DescribeConfigurationRecordersOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeConfigurationRecordersOutput`](crate::output::DescribeConfigurationRecordersOutput)
+/// See [`DescribeConfigurationRecordersOutput`](crate::output::DescribeConfigurationRecordersOutput).
 pub mod describe_configuration_recorders_output {
 
-    /// A builder for [`DescribeConfigurationRecordersOutput`](crate::output::DescribeConfigurationRecordersOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeConfigurationRecordersOutput`](crate::output::DescribeConfigurationRecordersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_recorders:
@@ -4578,7 +4701,7 @@ pub mod describe_configuration_recorders_output {
             self.configuration_recorders = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeConfigurationRecordersOutput`](crate::output::DescribeConfigurationRecordersOutput)
+        /// Consumes the builder and constructs a [`DescribeConfigurationRecordersOutput`](crate::output::DescribeConfigurationRecordersOutput).
         pub fn build(self) -> crate::output::DescribeConfigurationRecordersOutput {
             crate::output::DescribeConfigurationRecordersOutput {
                 configuration_recorders: self.configuration_recorders,
@@ -4587,7 +4710,7 @@ pub mod describe_configuration_recorders_output {
     }
 }
 impl DescribeConfigurationRecordersOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeConfigurationRecordersOutput`](crate::output::DescribeConfigurationRecordersOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeConfigurationRecordersOutput`](crate::output::DescribeConfigurationRecordersOutput).
     pub fn builder() -> crate::output::describe_configuration_recorders_output::Builder {
         crate::output::describe_configuration_recorders_output::Builder::default()
     }
@@ -4598,9 +4721,11 @@ impl DescribeConfigurationRecordersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeConfigurationAggregatorSourcesStatusOutput {
     /// <p>Returns an AggregatedSourceStatus object. </p>
+    #[doc(hidden)]
     pub aggregated_source_status_list:
         std::option::Option<std::vec::Vec<crate::model::AggregatedSourceStatus>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeConfigurationAggregatorSourcesStatusOutput {
@@ -4626,11 +4751,10 @@ impl std::fmt::Debug for DescribeConfigurationAggregatorSourcesStatusOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeConfigurationAggregatorSourcesStatusOutput`](crate::output::DescribeConfigurationAggregatorSourcesStatusOutput)
+/// See [`DescribeConfigurationAggregatorSourcesStatusOutput`](crate::output::DescribeConfigurationAggregatorSourcesStatusOutput).
 pub mod describe_configuration_aggregator_sources_status_output {
 
-    /// A builder for [`DescribeConfigurationAggregatorSourcesStatusOutput`](crate::output::DescribeConfigurationAggregatorSourcesStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeConfigurationAggregatorSourcesStatusOutput`](crate::output::DescribeConfigurationAggregatorSourcesStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aggregated_source_status_list:
@@ -4670,7 +4794,7 @@ pub mod describe_configuration_aggregator_sources_status_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeConfigurationAggregatorSourcesStatusOutput`](crate::output::DescribeConfigurationAggregatorSourcesStatusOutput)
+        /// Consumes the builder and constructs a [`DescribeConfigurationAggregatorSourcesStatusOutput`](crate::output::DescribeConfigurationAggregatorSourcesStatusOutput).
         pub fn build(self) -> crate::output::DescribeConfigurationAggregatorSourcesStatusOutput {
             crate::output::DescribeConfigurationAggregatorSourcesStatusOutput {
                 aggregated_source_status_list: self.aggregated_source_status_list,
@@ -4680,7 +4804,7 @@ pub mod describe_configuration_aggregator_sources_status_output {
     }
 }
 impl DescribeConfigurationAggregatorSourcesStatusOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeConfigurationAggregatorSourcesStatusOutput`](crate::output::DescribeConfigurationAggregatorSourcesStatusOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeConfigurationAggregatorSourcesStatusOutput`](crate::output::DescribeConfigurationAggregatorSourcesStatusOutput).
     pub fn builder(
     ) -> crate::output::describe_configuration_aggregator_sources_status_output::Builder {
         crate::output::describe_configuration_aggregator_sources_status_output::Builder::default()
@@ -4692,9 +4816,11 @@ impl DescribeConfigurationAggregatorSourcesStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeConfigurationAggregatorsOutput {
     /// <p>Returns a ConfigurationAggregators object.</p>
+    #[doc(hidden)]
     pub configuration_aggregators:
         std::option::Option<std::vec::Vec<crate::model::ConfigurationAggregator>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeConfigurationAggregatorsOutput {
@@ -4717,11 +4843,10 @@ impl std::fmt::Debug for DescribeConfigurationAggregatorsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeConfigurationAggregatorsOutput`](crate::output::DescribeConfigurationAggregatorsOutput)
+/// See [`DescribeConfigurationAggregatorsOutput`](crate::output::DescribeConfigurationAggregatorsOutput).
 pub mod describe_configuration_aggregators_output {
 
-    /// A builder for [`DescribeConfigurationAggregatorsOutput`](crate::output::DescribeConfigurationAggregatorsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeConfigurationAggregatorsOutput`](crate::output::DescribeConfigurationAggregatorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_aggregators:
@@ -4761,7 +4886,7 @@ pub mod describe_configuration_aggregators_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeConfigurationAggregatorsOutput`](crate::output::DescribeConfigurationAggregatorsOutput)
+        /// Consumes the builder and constructs a [`DescribeConfigurationAggregatorsOutput`](crate::output::DescribeConfigurationAggregatorsOutput).
         pub fn build(self) -> crate::output::DescribeConfigurationAggregatorsOutput {
             crate::output::DescribeConfigurationAggregatorsOutput {
                 configuration_aggregators: self.configuration_aggregators,
@@ -4771,7 +4896,7 @@ pub mod describe_configuration_aggregators_output {
     }
 }
 impl DescribeConfigurationAggregatorsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeConfigurationAggregatorsOutput`](crate::output::DescribeConfigurationAggregatorsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeConfigurationAggregatorsOutput`](crate::output::DescribeConfigurationAggregatorsOutput).
     pub fn builder() -> crate::output::describe_configuration_aggregators_output::Builder {
         crate::output::describe_configuration_aggregators_output::Builder::default()
     }
@@ -4782,8 +4907,10 @@ impl DescribeConfigurationAggregatorsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeConfigRulesOutput {
     /// <p>The details about your Config rules.</p>
+    #[doc(hidden)]
     pub config_rules: std::option::Option<std::vec::Vec<crate::model::ConfigRule>>,
     /// <p>The string that you use in a subsequent request to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeConfigRulesOutput {
@@ -4804,11 +4931,10 @@ impl std::fmt::Debug for DescribeConfigRulesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeConfigRulesOutput`](crate::output::DescribeConfigRulesOutput)
+/// See [`DescribeConfigRulesOutput`](crate::output::DescribeConfigRulesOutput).
 pub mod describe_config_rules_output {
 
-    /// A builder for [`DescribeConfigRulesOutput`](crate::output::DescribeConfigRulesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeConfigRulesOutput`](crate::output::DescribeConfigRulesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_rules: std::option::Option<std::vec::Vec<crate::model::ConfigRule>>,
@@ -4844,7 +4970,7 @@ pub mod describe_config_rules_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeConfigRulesOutput`](crate::output::DescribeConfigRulesOutput)
+        /// Consumes the builder and constructs a [`DescribeConfigRulesOutput`](crate::output::DescribeConfigRulesOutput).
         pub fn build(self) -> crate::output::DescribeConfigRulesOutput {
             crate::output::DescribeConfigRulesOutput {
                 config_rules: self.config_rules,
@@ -4854,7 +4980,7 @@ pub mod describe_config_rules_output {
     }
 }
 impl DescribeConfigRulesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeConfigRulesOutput`](crate::output::DescribeConfigRulesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeConfigRulesOutput`](crate::output::DescribeConfigRulesOutput).
     pub fn builder() -> crate::output::describe_config_rules_output::Builder {
         crate::output::describe_config_rules_output::Builder::default()
     }
@@ -4865,9 +4991,11 @@ impl DescribeConfigRulesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeConfigRuleEvaluationStatusOutput {
     /// <p>Status information about your Config managed rules.</p>
+    #[doc(hidden)]
     pub config_rules_evaluation_status:
         std::option::Option<std::vec::Vec<crate::model::ConfigRuleEvaluationStatus>>,
     /// <p>The string that you use in a subsequent request to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeConfigRuleEvaluationStatusOutput {
@@ -4893,11 +5021,10 @@ impl std::fmt::Debug for DescribeConfigRuleEvaluationStatusOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeConfigRuleEvaluationStatusOutput`](crate::output::DescribeConfigRuleEvaluationStatusOutput)
+/// See [`DescribeConfigRuleEvaluationStatusOutput`](crate::output::DescribeConfigRuleEvaluationStatusOutput).
 pub mod describe_config_rule_evaluation_status_output {
 
-    /// A builder for [`DescribeConfigRuleEvaluationStatusOutput`](crate::output::DescribeConfigRuleEvaluationStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeConfigRuleEvaluationStatusOutput`](crate::output::DescribeConfigRuleEvaluationStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_rules_evaluation_status:
@@ -4937,7 +5064,7 @@ pub mod describe_config_rule_evaluation_status_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeConfigRuleEvaluationStatusOutput`](crate::output::DescribeConfigRuleEvaluationStatusOutput)
+        /// Consumes the builder and constructs a [`DescribeConfigRuleEvaluationStatusOutput`](crate::output::DescribeConfigRuleEvaluationStatusOutput).
         pub fn build(self) -> crate::output::DescribeConfigRuleEvaluationStatusOutput {
             crate::output::DescribeConfigRuleEvaluationStatusOutput {
                 config_rules_evaluation_status: self.config_rules_evaluation_status,
@@ -4947,7 +5074,7 @@ pub mod describe_config_rule_evaluation_status_output {
     }
 }
 impl DescribeConfigRuleEvaluationStatusOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeConfigRuleEvaluationStatusOutput`](crate::output::DescribeConfigRuleEvaluationStatusOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeConfigRuleEvaluationStatusOutput`](crate::output::DescribeConfigRuleEvaluationStatusOutput).
     pub fn builder() -> crate::output::describe_config_rule_evaluation_status_output::Builder {
         crate::output::describe_config_rule_evaluation_status_output::Builder::default()
     }
@@ -4958,9 +5085,11 @@ impl DescribeConfigRuleEvaluationStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeComplianceByResourceOutput {
     /// <p>Indicates whether the specified Amazon Web Services resource complies with all of the Config rules that evaluate it.</p>
+    #[doc(hidden)]
     pub compliance_by_resources:
         std::option::Option<std::vec::Vec<crate::model::ComplianceByResource>>,
     /// <p>The string that you use in a subsequent request to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeComplianceByResourceOutput {
@@ -4983,11 +5112,10 @@ impl std::fmt::Debug for DescribeComplianceByResourceOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeComplianceByResourceOutput`](crate::output::DescribeComplianceByResourceOutput)
+/// See [`DescribeComplianceByResourceOutput`](crate::output::DescribeComplianceByResourceOutput).
 pub mod describe_compliance_by_resource_output {
 
-    /// A builder for [`DescribeComplianceByResourceOutput`](crate::output::DescribeComplianceByResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeComplianceByResourceOutput`](crate::output::DescribeComplianceByResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliance_by_resources:
@@ -5027,7 +5155,7 @@ pub mod describe_compliance_by_resource_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeComplianceByResourceOutput`](crate::output::DescribeComplianceByResourceOutput)
+        /// Consumes the builder and constructs a [`DescribeComplianceByResourceOutput`](crate::output::DescribeComplianceByResourceOutput).
         pub fn build(self) -> crate::output::DescribeComplianceByResourceOutput {
             crate::output::DescribeComplianceByResourceOutput {
                 compliance_by_resources: self.compliance_by_resources,
@@ -5037,7 +5165,7 @@ pub mod describe_compliance_by_resource_output {
     }
 }
 impl DescribeComplianceByResourceOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeComplianceByResourceOutput`](crate::output::DescribeComplianceByResourceOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeComplianceByResourceOutput`](crate::output::DescribeComplianceByResourceOutput).
     pub fn builder() -> crate::output::describe_compliance_by_resource_output::Builder {
         crate::output::describe_compliance_by_resource_output::Builder::default()
     }
@@ -5048,9 +5176,11 @@ impl DescribeComplianceByResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeComplianceByConfigRuleOutput {
     /// <p>Indicates whether each of the specified Config rules is compliant.</p>
+    #[doc(hidden)]
     pub compliance_by_config_rules:
         std::option::Option<std::vec::Vec<crate::model::ComplianceByConfigRule>>,
     /// <p>The string that you use in a subsequent request to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeComplianceByConfigRuleOutput {
@@ -5076,11 +5206,10 @@ impl std::fmt::Debug for DescribeComplianceByConfigRuleOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeComplianceByConfigRuleOutput`](crate::output::DescribeComplianceByConfigRuleOutput)
+/// See [`DescribeComplianceByConfigRuleOutput`](crate::output::DescribeComplianceByConfigRuleOutput).
 pub mod describe_compliance_by_config_rule_output {
 
-    /// A builder for [`DescribeComplianceByConfigRuleOutput`](crate::output::DescribeComplianceByConfigRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeComplianceByConfigRuleOutput`](crate::output::DescribeComplianceByConfigRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliance_by_config_rules:
@@ -5120,7 +5249,7 @@ pub mod describe_compliance_by_config_rule_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeComplianceByConfigRuleOutput`](crate::output::DescribeComplianceByConfigRuleOutput)
+        /// Consumes the builder and constructs a [`DescribeComplianceByConfigRuleOutput`](crate::output::DescribeComplianceByConfigRuleOutput).
         pub fn build(self) -> crate::output::DescribeComplianceByConfigRuleOutput {
             crate::output::DescribeComplianceByConfigRuleOutput {
                 compliance_by_config_rules: self.compliance_by_config_rules,
@@ -5130,7 +5259,7 @@ pub mod describe_compliance_by_config_rule_output {
     }
 }
 impl DescribeComplianceByConfigRuleOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeComplianceByConfigRuleOutput`](crate::output::DescribeComplianceByConfigRuleOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeComplianceByConfigRuleOutput`](crate::output::DescribeComplianceByConfigRuleOutput).
     pub fn builder() -> crate::output::describe_compliance_by_config_rule_output::Builder {
         crate::output::describe_compliance_by_config_rule_output::Builder::default()
     }
@@ -5141,9 +5270,11 @@ impl DescribeComplianceByConfigRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAggregationAuthorizationsOutput {
     /// <p>Returns a list of authorizations granted to various aggregator accounts and regions.</p>
+    #[doc(hidden)]
     pub aggregation_authorizations:
         std::option::Option<std::vec::Vec<crate::model::AggregationAuthorization>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeAggregationAuthorizationsOutput {
@@ -5169,11 +5300,10 @@ impl std::fmt::Debug for DescribeAggregationAuthorizationsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAggregationAuthorizationsOutput`](crate::output::DescribeAggregationAuthorizationsOutput)
+/// See [`DescribeAggregationAuthorizationsOutput`](crate::output::DescribeAggregationAuthorizationsOutput).
 pub mod describe_aggregation_authorizations_output {
 
-    /// A builder for [`DescribeAggregationAuthorizationsOutput`](crate::output::DescribeAggregationAuthorizationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAggregationAuthorizationsOutput`](crate::output::DescribeAggregationAuthorizationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aggregation_authorizations:
@@ -5213,7 +5343,7 @@ pub mod describe_aggregation_authorizations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAggregationAuthorizationsOutput`](crate::output::DescribeAggregationAuthorizationsOutput)
+        /// Consumes the builder and constructs a [`DescribeAggregationAuthorizationsOutput`](crate::output::DescribeAggregationAuthorizationsOutput).
         pub fn build(self) -> crate::output::DescribeAggregationAuthorizationsOutput {
             crate::output::DescribeAggregationAuthorizationsOutput {
                 aggregation_authorizations: self.aggregation_authorizations,
@@ -5223,7 +5353,7 @@ pub mod describe_aggregation_authorizations_output {
     }
 }
 impl DescribeAggregationAuthorizationsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAggregationAuthorizationsOutput`](crate::output::DescribeAggregationAuthorizationsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAggregationAuthorizationsOutput`](crate::output::DescribeAggregationAuthorizationsOutput).
     pub fn builder() -> crate::output::describe_aggregation_authorizations_output::Builder {
         crate::output::describe_aggregation_authorizations_output::Builder::default()
     }
@@ -5234,9 +5364,11 @@ impl DescribeAggregationAuthorizationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAggregateComplianceByConformancePacksOutput {
     /// <p>Returns the <code>AggregateComplianceByConformancePack</code> object.</p>
+    #[doc(hidden)]
     pub aggregate_compliance_by_conformance_packs:
         std::option::Option<std::vec::Vec<crate::model::AggregateComplianceByConformancePack>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeAggregateComplianceByConformancePacksOutput {
@@ -5262,11 +5394,10 @@ impl std::fmt::Debug for DescribeAggregateComplianceByConformancePacksOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAggregateComplianceByConformancePacksOutput`](crate::output::DescribeAggregateComplianceByConformancePacksOutput)
+/// See [`DescribeAggregateComplianceByConformancePacksOutput`](crate::output::DescribeAggregateComplianceByConformancePacksOutput).
 pub mod describe_aggregate_compliance_by_conformance_packs_output {
 
-    /// A builder for [`DescribeAggregateComplianceByConformancePacksOutput`](crate::output::DescribeAggregateComplianceByConformancePacksOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAggregateComplianceByConformancePacksOutput`](crate::output::DescribeAggregateComplianceByConformancePacksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aggregate_compliance_by_conformance_packs:
@@ -5310,7 +5441,7 @@ pub mod describe_aggregate_compliance_by_conformance_packs_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAggregateComplianceByConformancePacksOutput`](crate::output::DescribeAggregateComplianceByConformancePacksOutput)
+        /// Consumes the builder and constructs a [`DescribeAggregateComplianceByConformancePacksOutput`](crate::output::DescribeAggregateComplianceByConformancePacksOutput).
         pub fn build(self) -> crate::output::DescribeAggregateComplianceByConformancePacksOutput {
             crate::output::DescribeAggregateComplianceByConformancePacksOutput {
                 aggregate_compliance_by_conformance_packs: self
@@ -5321,7 +5452,7 @@ pub mod describe_aggregate_compliance_by_conformance_packs_output {
     }
 }
 impl DescribeAggregateComplianceByConformancePacksOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAggregateComplianceByConformancePacksOutput`](crate::output::DescribeAggregateComplianceByConformancePacksOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAggregateComplianceByConformancePacksOutput`](crate::output::DescribeAggregateComplianceByConformancePacksOutput).
     pub fn builder(
     ) -> crate::output::describe_aggregate_compliance_by_conformance_packs_output::Builder {
         crate::output::describe_aggregate_compliance_by_conformance_packs_output::Builder::default()
@@ -5333,9 +5464,11 @@ impl DescribeAggregateComplianceByConformancePacksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAggregateComplianceByConfigRulesOutput {
     /// <p>Returns a list of AggregateComplianceByConfigRule object.</p>
+    #[doc(hidden)]
     pub aggregate_compliance_by_config_rules:
         std::option::Option<std::vec::Vec<crate::model::AggregateComplianceByConfigRule>>,
     /// <p>The <code>nextToken</code> string returned on a previous page that you use to get the next page of results in a paginated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeAggregateComplianceByConfigRulesOutput {
@@ -5361,11 +5494,10 @@ impl std::fmt::Debug for DescribeAggregateComplianceByConfigRulesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAggregateComplianceByConfigRulesOutput`](crate::output::DescribeAggregateComplianceByConfigRulesOutput)
+/// See [`DescribeAggregateComplianceByConfigRulesOutput`](crate::output::DescribeAggregateComplianceByConfigRulesOutput).
 pub mod describe_aggregate_compliance_by_config_rules_output {
 
-    /// A builder for [`DescribeAggregateComplianceByConfigRulesOutput`](crate::output::DescribeAggregateComplianceByConfigRulesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAggregateComplianceByConfigRulesOutput`](crate::output::DescribeAggregateComplianceByConfigRulesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aggregate_compliance_by_config_rules:
@@ -5409,7 +5541,7 @@ pub mod describe_aggregate_compliance_by_config_rules_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAggregateComplianceByConfigRulesOutput`](crate::output::DescribeAggregateComplianceByConfigRulesOutput)
+        /// Consumes the builder and constructs a [`DescribeAggregateComplianceByConfigRulesOutput`](crate::output::DescribeAggregateComplianceByConfigRulesOutput).
         pub fn build(self) -> crate::output::DescribeAggregateComplianceByConfigRulesOutput {
             crate::output::DescribeAggregateComplianceByConfigRulesOutput {
                 aggregate_compliance_by_config_rules: self.aggregate_compliance_by_config_rules,
@@ -5419,7 +5551,7 @@ pub mod describe_aggregate_compliance_by_config_rules_output {
     }
 }
 impl DescribeAggregateComplianceByConfigRulesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAggregateComplianceByConfigRulesOutput`](crate::output::DescribeAggregateComplianceByConfigRulesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAggregateComplianceByConfigRulesOutput`](crate::output::DescribeAggregateComplianceByConfigRulesOutput).
     pub fn builder() -> crate::output::describe_aggregate_compliance_by_config_rules_output::Builder
     {
         crate::output::describe_aggregate_compliance_by_config_rules_output::Builder::default()
@@ -5431,6 +5563,7 @@ impl DescribeAggregateComplianceByConfigRulesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeliverConfigSnapshotOutput {
     /// <p>The ID of the snapshot that is being created.</p>
+    #[doc(hidden)]
     pub config_snapshot_id: std::option::Option<std::string::String>,
 }
 impl DeliverConfigSnapshotOutput {
@@ -5446,11 +5579,10 @@ impl std::fmt::Debug for DeliverConfigSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`DeliverConfigSnapshotOutput`](crate::output::DeliverConfigSnapshotOutput)
+/// See [`DeliverConfigSnapshotOutput`](crate::output::DeliverConfigSnapshotOutput).
 pub mod deliver_config_snapshot_output {
 
-    /// A builder for [`DeliverConfigSnapshotOutput`](crate::output::DeliverConfigSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeliverConfigSnapshotOutput`](crate::output::DeliverConfigSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_snapshot_id: std::option::Option<std::string::String>,
@@ -5469,7 +5601,7 @@ pub mod deliver_config_snapshot_output {
             self.config_snapshot_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeliverConfigSnapshotOutput`](crate::output::DeliverConfigSnapshotOutput)
+        /// Consumes the builder and constructs a [`DeliverConfigSnapshotOutput`](crate::output::DeliverConfigSnapshotOutput).
         pub fn build(self) -> crate::output::DeliverConfigSnapshotOutput {
             crate::output::DeliverConfigSnapshotOutput {
                 config_snapshot_id: self.config_snapshot_id,
@@ -5478,7 +5610,7 @@ pub mod deliver_config_snapshot_output {
     }
 }
 impl DeliverConfigSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`DeliverConfigSnapshotOutput`](crate::output::DeliverConfigSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`DeliverConfigSnapshotOutput`](crate::output::DeliverConfigSnapshotOutput).
     pub fn builder() -> crate::output::deliver_config_snapshot_output::Builder {
         crate::output::deliver_config_snapshot_output::Builder::default()
     }
@@ -5494,22 +5626,21 @@ impl std::fmt::Debug for DeleteStoredQueryOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteStoredQueryOutput`](crate::output::DeleteStoredQueryOutput)
+/// See [`DeleteStoredQueryOutput`](crate::output::DeleteStoredQueryOutput).
 pub mod delete_stored_query_output {
 
-    /// A builder for [`DeleteStoredQueryOutput`](crate::output::DeleteStoredQueryOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteStoredQueryOutput`](crate::output::DeleteStoredQueryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteStoredQueryOutput`](crate::output::DeleteStoredQueryOutput)
+        /// Consumes the builder and constructs a [`DeleteStoredQueryOutput`](crate::output::DeleteStoredQueryOutput).
         pub fn build(self) -> crate::output::DeleteStoredQueryOutput {
             crate::output::DeleteStoredQueryOutput {}
         }
     }
 }
 impl DeleteStoredQueryOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteStoredQueryOutput`](crate::output::DeleteStoredQueryOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteStoredQueryOutput`](crate::output::DeleteStoredQueryOutput).
     pub fn builder() -> crate::output::delete_stored_query_output::Builder {
         crate::output::delete_stored_query_output::Builder::default()
     }
@@ -5525,22 +5656,21 @@ impl std::fmt::Debug for DeleteRetentionConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRetentionConfigurationOutput`](crate::output::DeleteRetentionConfigurationOutput)
+/// See [`DeleteRetentionConfigurationOutput`](crate::output::DeleteRetentionConfigurationOutput).
 pub mod delete_retention_configuration_output {
 
-    /// A builder for [`DeleteRetentionConfigurationOutput`](crate::output::DeleteRetentionConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRetentionConfigurationOutput`](crate::output::DeleteRetentionConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteRetentionConfigurationOutput`](crate::output::DeleteRetentionConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteRetentionConfigurationOutput`](crate::output::DeleteRetentionConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteRetentionConfigurationOutput {
             crate::output::DeleteRetentionConfigurationOutput {}
         }
     }
 }
 impl DeleteRetentionConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRetentionConfigurationOutput`](crate::output::DeleteRetentionConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRetentionConfigurationOutput`](crate::output::DeleteRetentionConfigurationOutput).
     pub fn builder() -> crate::output::delete_retention_configuration_output::Builder {
         crate::output::delete_retention_configuration_output::Builder::default()
     }
@@ -5556,22 +5686,21 @@ impl std::fmt::Debug for DeleteResourceConfigOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteResourceConfigOutput`](crate::output::DeleteResourceConfigOutput)
+/// See [`DeleteResourceConfigOutput`](crate::output::DeleteResourceConfigOutput).
 pub mod delete_resource_config_output {
 
-    /// A builder for [`DeleteResourceConfigOutput`](crate::output::DeleteResourceConfigOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteResourceConfigOutput`](crate::output::DeleteResourceConfigOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteResourceConfigOutput`](crate::output::DeleteResourceConfigOutput)
+        /// Consumes the builder and constructs a [`DeleteResourceConfigOutput`](crate::output::DeleteResourceConfigOutput).
         pub fn build(self) -> crate::output::DeleteResourceConfigOutput {
             crate::output::DeleteResourceConfigOutput {}
         }
     }
 }
 impl DeleteResourceConfigOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteResourceConfigOutput`](crate::output::DeleteResourceConfigOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteResourceConfigOutput`](crate::output::DeleteResourceConfigOutput).
     pub fn builder() -> crate::output::delete_resource_config_output::Builder {
         crate::output::delete_resource_config_output::Builder::default()
     }
@@ -5582,6 +5711,7 @@ impl DeleteResourceConfigOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteRemediationExceptionsOutput {
     /// <p>Returns a list of failed delete remediation exceptions batch objects. Each object in the batch consists of a list of failed items and failure messages.</p>
+    #[doc(hidden)]
     pub failed_batches:
         std::option::Option<std::vec::Vec<crate::model::FailedDeleteRemediationExceptionsBatch>>,
 }
@@ -5600,11 +5730,10 @@ impl std::fmt::Debug for DeleteRemediationExceptionsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRemediationExceptionsOutput`](crate::output::DeleteRemediationExceptionsOutput)
+/// See [`DeleteRemediationExceptionsOutput`](crate::output::DeleteRemediationExceptionsOutput).
 pub mod delete_remediation_exceptions_output {
 
-    /// A builder for [`DeleteRemediationExceptionsOutput`](crate::output::DeleteRemediationExceptionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRemediationExceptionsOutput`](crate::output::DeleteRemediationExceptionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failed_batches: std::option::Option<
@@ -5636,7 +5765,7 @@ pub mod delete_remediation_exceptions_output {
             self.failed_batches = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteRemediationExceptionsOutput`](crate::output::DeleteRemediationExceptionsOutput)
+        /// Consumes the builder and constructs a [`DeleteRemediationExceptionsOutput`](crate::output::DeleteRemediationExceptionsOutput).
         pub fn build(self) -> crate::output::DeleteRemediationExceptionsOutput {
             crate::output::DeleteRemediationExceptionsOutput {
                 failed_batches: self.failed_batches,
@@ -5645,7 +5774,7 @@ pub mod delete_remediation_exceptions_output {
     }
 }
 impl DeleteRemediationExceptionsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRemediationExceptionsOutput`](crate::output::DeleteRemediationExceptionsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRemediationExceptionsOutput`](crate::output::DeleteRemediationExceptionsOutput).
     pub fn builder() -> crate::output::delete_remediation_exceptions_output::Builder {
         crate::output::delete_remediation_exceptions_output::Builder::default()
     }
@@ -5661,22 +5790,21 @@ impl std::fmt::Debug for DeleteRemediationConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRemediationConfigurationOutput`](crate::output::DeleteRemediationConfigurationOutput)
+/// See [`DeleteRemediationConfigurationOutput`](crate::output::DeleteRemediationConfigurationOutput).
 pub mod delete_remediation_configuration_output {
 
-    /// A builder for [`DeleteRemediationConfigurationOutput`](crate::output::DeleteRemediationConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRemediationConfigurationOutput`](crate::output::DeleteRemediationConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteRemediationConfigurationOutput`](crate::output::DeleteRemediationConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteRemediationConfigurationOutput`](crate::output::DeleteRemediationConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteRemediationConfigurationOutput {
             crate::output::DeleteRemediationConfigurationOutput {}
         }
     }
 }
 impl DeleteRemediationConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRemediationConfigurationOutput`](crate::output::DeleteRemediationConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRemediationConfigurationOutput`](crate::output::DeleteRemediationConfigurationOutput).
     pub fn builder() -> crate::output::delete_remediation_configuration_output::Builder {
         crate::output::delete_remediation_configuration_output::Builder::default()
     }
@@ -5692,22 +5820,21 @@ impl std::fmt::Debug for DeletePendingAggregationRequestOutput {
         formatter.finish()
     }
 }
-/// See [`DeletePendingAggregationRequestOutput`](crate::output::DeletePendingAggregationRequestOutput)
+/// See [`DeletePendingAggregationRequestOutput`](crate::output::DeletePendingAggregationRequestOutput).
 pub mod delete_pending_aggregation_request_output {
 
-    /// A builder for [`DeletePendingAggregationRequestOutput`](crate::output::DeletePendingAggregationRequestOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeletePendingAggregationRequestOutput`](crate::output::DeletePendingAggregationRequestOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeletePendingAggregationRequestOutput`](crate::output::DeletePendingAggregationRequestOutput)
+        /// Consumes the builder and constructs a [`DeletePendingAggregationRequestOutput`](crate::output::DeletePendingAggregationRequestOutput).
         pub fn build(self) -> crate::output::DeletePendingAggregationRequestOutput {
             crate::output::DeletePendingAggregationRequestOutput {}
         }
     }
 }
 impl DeletePendingAggregationRequestOutput {
-    /// Creates a new builder-style object to manufacture [`DeletePendingAggregationRequestOutput`](crate::output::DeletePendingAggregationRequestOutput)
+    /// Creates a new builder-style object to manufacture [`DeletePendingAggregationRequestOutput`](crate::output::DeletePendingAggregationRequestOutput).
     pub fn builder() -> crate::output::delete_pending_aggregation_request_output::Builder {
         crate::output::delete_pending_aggregation_request_output::Builder::default()
     }
@@ -5723,22 +5850,21 @@ impl std::fmt::Debug for DeleteOrganizationConformancePackOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteOrganizationConformancePackOutput`](crate::output::DeleteOrganizationConformancePackOutput)
+/// See [`DeleteOrganizationConformancePackOutput`](crate::output::DeleteOrganizationConformancePackOutput).
 pub mod delete_organization_conformance_pack_output {
 
-    /// A builder for [`DeleteOrganizationConformancePackOutput`](crate::output::DeleteOrganizationConformancePackOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteOrganizationConformancePackOutput`](crate::output::DeleteOrganizationConformancePackOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteOrganizationConformancePackOutput`](crate::output::DeleteOrganizationConformancePackOutput)
+        /// Consumes the builder and constructs a [`DeleteOrganizationConformancePackOutput`](crate::output::DeleteOrganizationConformancePackOutput).
         pub fn build(self) -> crate::output::DeleteOrganizationConformancePackOutput {
             crate::output::DeleteOrganizationConformancePackOutput {}
         }
     }
 }
 impl DeleteOrganizationConformancePackOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteOrganizationConformancePackOutput`](crate::output::DeleteOrganizationConformancePackOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteOrganizationConformancePackOutput`](crate::output::DeleteOrganizationConformancePackOutput).
     pub fn builder() -> crate::output::delete_organization_conformance_pack_output::Builder {
         crate::output::delete_organization_conformance_pack_output::Builder::default()
     }
@@ -5754,22 +5880,21 @@ impl std::fmt::Debug for DeleteOrganizationConfigRuleOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteOrganizationConfigRuleOutput`](crate::output::DeleteOrganizationConfigRuleOutput)
+/// See [`DeleteOrganizationConfigRuleOutput`](crate::output::DeleteOrganizationConfigRuleOutput).
 pub mod delete_organization_config_rule_output {
 
-    /// A builder for [`DeleteOrganizationConfigRuleOutput`](crate::output::DeleteOrganizationConfigRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteOrganizationConfigRuleOutput`](crate::output::DeleteOrganizationConfigRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteOrganizationConfigRuleOutput`](crate::output::DeleteOrganizationConfigRuleOutput)
+        /// Consumes the builder and constructs a [`DeleteOrganizationConfigRuleOutput`](crate::output::DeleteOrganizationConfigRuleOutput).
         pub fn build(self) -> crate::output::DeleteOrganizationConfigRuleOutput {
             crate::output::DeleteOrganizationConfigRuleOutput {}
         }
     }
 }
 impl DeleteOrganizationConfigRuleOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteOrganizationConfigRuleOutput`](crate::output::DeleteOrganizationConfigRuleOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteOrganizationConfigRuleOutput`](crate::output::DeleteOrganizationConfigRuleOutput).
     pub fn builder() -> crate::output::delete_organization_config_rule_output::Builder {
         crate::output::delete_organization_config_rule_output::Builder::default()
     }
@@ -5785,22 +5910,21 @@ impl std::fmt::Debug for DeleteEvaluationResultsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteEvaluationResultsOutput`](crate::output::DeleteEvaluationResultsOutput)
+/// See [`DeleteEvaluationResultsOutput`](crate::output::DeleteEvaluationResultsOutput).
 pub mod delete_evaluation_results_output {
 
-    /// A builder for [`DeleteEvaluationResultsOutput`](crate::output::DeleteEvaluationResultsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteEvaluationResultsOutput`](crate::output::DeleteEvaluationResultsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteEvaluationResultsOutput`](crate::output::DeleteEvaluationResultsOutput)
+        /// Consumes the builder and constructs a [`DeleteEvaluationResultsOutput`](crate::output::DeleteEvaluationResultsOutput).
         pub fn build(self) -> crate::output::DeleteEvaluationResultsOutput {
             crate::output::DeleteEvaluationResultsOutput {}
         }
     }
 }
 impl DeleteEvaluationResultsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteEvaluationResultsOutput`](crate::output::DeleteEvaluationResultsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteEvaluationResultsOutput`](crate::output::DeleteEvaluationResultsOutput).
     pub fn builder() -> crate::output::delete_evaluation_results_output::Builder {
         crate::output::delete_evaluation_results_output::Builder::default()
     }
@@ -5816,22 +5940,21 @@ impl std::fmt::Debug for DeleteDeliveryChannelOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDeliveryChannelOutput`](crate::output::DeleteDeliveryChannelOutput)
+/// See [`DeleteDeliveryChannelOutput`](crate::output::DeleteDeliveryChannelOutput).
 pub mod delete_delivery_channel_output {
 
-    /// A builder for [`DeleteDeliveryChannelOutput`](crate::output::DeleteDeliveryChannelOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDeliveryChannelOutput`](crate::output::DeleteDeliveryChannelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteDeliveryChannelOutput`](crate::output::DeleteDeliveryChannelOutput)
+        /// Consumes the builder and constructs a [`DeleteDeliveryChannelOutput`](crate::output::DeleteDeliveryChannelOutput).
         pub fn build(self) -> crate::output::DeleteDeliveryChannelOutput {
             crate::output::DeleteDeliveryChannelOutput {}
         }
     }
 }
 impl DeleteDeliveryChannelOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDeliveryChannelOutput`](crate::output::DeleteDeliveryChannelOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDeliveryChannelOutput`](crate::output::DeleteDeliveryChannelOutput).
     pub fn builder() -> crate::output::delete_delivery_channel_output::Builder {
         crate::output::delete_delivery_channel_output::Builder::default()
     }
@@ -5847,22 +5970,21 @@ impl std::fmt::Debug for DeleteConformancePackOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteConformancePackOutput`](crate::output::DeleteConformancePackOutput)
+/// See [`DeleteConformancePackOutput`](crate::output::DeleteConformancePackOutput).
 pub mod delete_conformance_pack_output {
 
-    /// A builder for [`DeleteConformancePackOutput`](crate::output::DeleteConformancePackOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteConformancePackOutput`](crate::output::DeleteConformancePackOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteConformancePackOutput`](crate::output::DeleteConformancePackOutput)
+        /// Consumes the builder and constructs a [`DeleteConformancePackOutput`](crate::output::DeleteConformancePackOutput).
         pub fn build(self) -> crate::output::DeleteConformancePackOutput {
             crate::output::DeleteConformancePackOutput {}
         }
     }
 }
 impl DeleteConformancePackOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteConformancePackOutput`](crate::output::DeleteConformancePackOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteConformancePackOutput`](crate::output::DeleteConformancePackOutput).
     pub fn builder() -> crate::output::delete_conformance_pack_output::Builder {
         crate::output::delete_conformance_pack_output::Builder::default()
     }
@@ -5878,22 +6000,21 @@ impl std::fmt::Debug for DeleteConfigurationRecorderOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteConfigurationRecorderOutput`](crate::output::DeleteConfigurationRecorderOutput)
+/// See [`DeleteConfigurationRecorderOutput`](crate::output::DeleteConfigurationRecorderOutput).
 pub mod delete_configuration_recorder_output {
 
-    /// A builder for [`DeleteConfigurationRecorderOutput`](crate::output::DeleteConfigurationRecorderOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteConfigurationRecorderOutput`](crate::output::DeleteConfigurationRecorderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteConfigurationRecorderOutput`](crate::output::DeleteConfigurationRecorderOutput)
+        /// Consumes the builder and constructs a [`DeleteConfigurationRecorderOutput`](crate::output::DeleteConfigurationRecorderOutput).
         pub fn build(self) -> crate::output::DeleteConfigurationRecorderOutput {
             crate::output::DeleteConfigurationRecorderOutput {}
         }
     }
 }
 impl DeleteConfigurationRecorderOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteConfigurationRecorderOutput`](crate::output::DeleteConfigurationRecorderOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteConfigurationRecorderOutput`](crate::output::DeleteConfigurationRecorderOutput).
     pub fn builder() -> crate::output::delete_configuration_recorder_output::Builder {
         crate::output::delete_configuration_recorder_output::Builder::default()
     }
@@ -5909,22 +6030,21 @@ impl std::fmt::Debug for DeleteConfigurationAggregatorOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteConfigurationAggregatorOutput`](crate::output::DeleteConfigurationAggregatorOutput)
+/// See [`DeleteConfigurationAggregatorOutput`](crate::output::DeleteConfigurationAggregatorOutput).
 pub mod delete_configuration_aggregator_output {
 
-    /// A builder for [`DeleteConfigurationAggregatorOutput`](crate::output::DeleteConfigurationAggregatorOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteConfigurationAggregatorOutput`](crate::output::DeleteConfigurationAggregatorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteConfigurationAggregatorOutput`](crate::output::DeleteConfigurationAggregatorOutput)
+        /// Consumes the builder and constructs a [`DeleteConfigurationAggregatorOutput`](crate::output::DeleteConfigurationAggregatorOutput).
         pub fn build(self) -> crate::output::DeleteConfigurationAggregatorOutput {
             crate::output::DeleteConfigurationAggregatorOutput {}
         }
     }
 }
 impl DeleteConfigurationAggregatorOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteConfigurationAggregatorOutput`](crate::output::DeleteConfigurationAggregatorOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteConfigurationAggregatorOutput`](crate::output::DeleteConfigurationAggregatorOutput).
     pub fn builder() -> crate::output::delete_configuration_aggregator_output::Builder {
         crate::output::delete_configuration_aggregator_output::Builder::default()
     }
@@ -5940,22 +6060,21 @@ impl std::fmt::Debug for DeleteConfigRuleOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteConfigRuleOutput`](crate::output::DeleteConfigRuleOutput)
+/// See [`DeleteConfigRuleOutput`](crate::output::DeleteConfigRuleOutput).
 pub mod delete_config_rule_output {
 
-    /// A builder for [`DeleteConfigRuleOutput`](crate::output::DeleteConfigRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteConfigRuleOutput`](crate::output::DeleteConfigRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteConfigRuleOutput`](crate::output::DeleteConfigRuleOutput)
+        /// Consumes the builder and constructs a [`DeleteConfigRuleOutput`](crate::output::DeleteConfigRuleOutput).
         pub fn build(self) -> crate::output::DeleteConfigRuleOutput {
             crate::output::DeleteConfigRuleOutput {}
         }
     }
 }
 impl DeleteConfigRuleOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteConfigRuleOutput`](crate::output::DeleteConfigRuleOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteConfigRuleOutput`](crate::output::DeleteConfigRuleOutput).
     pub fn builder() -> crate::output::delete_config_rule_output::Builder {
         crate::output::delete_config_rule_output::Builder::default()
     }
@@ -5971,22 +6090,21 @@ impl std::fmt::Debug for DeleteAggregationAuthorizationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAggregationAuthorizationOutput`](crate::output::DeleteAggregationAuthorizationOutput)
+/// See [`DeleteAggregationAuthorizationOutput`](crate::output::DeleteAggregationAuthorizationOutput).
 pub mod delete_aggregation_authorization_output {
 
-    /// A builder for [`DeleteAggregationAuthorizationOutput`](crate::output::DeleteAggregationAuthorizationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAggregationAuthorizationOutput`](crate::output::DeleteAggregationAuthorizationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteAggregationAuthorizationOutput`](crate::output::DeleteAggregationAuthorizationOutput)
+        /// Consumes the builder and constructs a [`DeleteAggregationAuthorizationOutput`](crate::output::DeleteAggregationAuthorizationOutput).
         pub fn build(self) -> crate::output::DeleteAggregationAuthorizationOutput {
             crate::output::DeleteAggregationAuthorizationOutput {}
         }
     }
 }
 impl DeleteAggregationAuthorizationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAggregationAuthorizationOutput`](crate::output::DeleteAggregationAuthorizationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAggregationAuthorizationOutput`](crate::output::DeleteAggregationAuthorizationOutput).
     pub fn builder() -> crate::output::delete_aggregation_authorization_output::Builder {
         crate::output::delete_aggregation_authorization_output::Builder::default()
     }
@@ -5997,9 +6115,11 @@ impl DeleteAggregationAuthorizationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchGetResourceConfigOutput {
     /// <p>A list that contains the current configuration of one or more resources.</p>
+    #[doc(hidden)]
     pub base_configuration_items:
         std::option::Option<std::vec::Vec<crate::model::BaseConfigurationItem>>,
     /// <p>A list of resource keys that were not processed with the current response. The unprocessesResourceKeys value is in the same form as ResourceKeys, so the value can be directly provided to a subsequent BatchGetResourceConfig operation. If there are no unprocessed resource keys, the response contains an empty unprocessedResourceKeys list. </p>
+    #[doc(hidden)]
     pub unprocessed_resource_keys: std::option::Option<std::vec::Vec<crate::model::ResourceKey>>,
 }
 impl BatchGetResourceConfigOutput {
@@ -6022,11 +6142,10 @@ impl std::fmt::Debug for BatchGetResourceConfigOutput {
         formatter.finish()
     }
 }
-/// See [`BatchGetResourceConfigOutput`](crate::output::BatchGetResourceConfigOutput)
+/// See [`BatchGetResourceConfigOutput`](crate::output::BatchGetResourceConfigOutput).
 pub mod batch_get_resource_config_output {
 
-    /// A builder for [`BatchGetResourceConfigOutput`](crate::output::BatchGetResourceConfigOutput)
-    #[non_exhaustive]
+    /// A builder for [`BatchGetResourceConfigOutput`](crate::output::BatchGetResourceConfigOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) base_configuration_items:
@@ -6076,7 +6195,7 @@ pub mod batch_get_resource_config_output {
             self.unprocessed_resource_keys = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchGetResourceConfigOutput`](crate::output::BatchGetResourceConfigOutput)
+        /// Consumes the builder and constructs a [`BatchGetResourceConfigOutput`](crate::output::BatchGetResourceConfigOutput).
         pub fn build(self) -> crate::output::BatchGetResourceConfigOutput {
             crate::output::BatchGetResourceConfigOutput {
                 base_configuration_items: self.base_configuration_items,
@@ -6086,7 +6205,7 @@ pub mod batch_get_resource_config_output {
     }
 }
 impl BatchGetResourceConfigOutput {
-    /// Creates a new builder-style object to manufacture [`BatchGetResourceConfigOutput`](crate::output::BatchGetResourceConfigOutput)
+    /// Creates a new builder-style object to manufacture [`BatchGetResourceConfigOutput`](crate::output::BatchGetResourceConfigOutput).
     pub fn builder() -> crate::output::batch_get_resource_config_output::Builder {
         crate::output::batch_get_resource_config_output::Builder::default()
     }
@@ -6097,9 +6216,11 @@ impl BatchGetResourceConfigOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchGetAggregateResourceConfigOutput {
     /// <p>A list that contains the current configuration of one or more resources.</p>
+    #[doc(hidden)]
     pub base_configuration_items:
         std::option::Option<std::vec::Vec<crate::model::BaseConfigurationItem>>,
     /// <p>A list of resource identifiers that were not processed with current scope. The list is empty if all the resources are processed.</p>
+    #[doc(hidden)]
     pub unprocessed_resource_identifiers:
         std::option::Option<std::vec::Vec<crate::model::AggregateResourceIdentifier>>,
 }
@@ -6128,11 +6249,10 @@ impl std::fmt::Debug for BatchGetAggregateResourceConfigOutput {
         formatter.finish()
     }
 }
-/// See [`BatchGetAggregateResourceConfigOutput`](crate::output::BatchGetAggregateResourceConfigOutput)
+/// See [`BatchGetAggregateResourceConfigOutput`](crate::output::BatchGetAggregateResourceConfigOutput).
 pub mod batch_get_aggregate_resource_config_output {
 
-    /// A builder for [`BatchGetAggregateResourceConfigOutput`](crate::output::BatchGetAggregateResourceConfigOutput)
-    #[non_exhaustive]
+    /// A builder for [`BatchGetAggregateResourceConfigOutput`](crate::output::BatchGetAggregateResourceConfigOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) base_configuration_items:
@@ -6185,7 +6305,7 @@ pub mod batch_get_aggregate_resource_config_output {
             self.unprocessed_resource_identifiers = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchGetAggregateResourceConfigOutput`](crate::output::BatchGetAggregateResourceConfigOutput)
+        /// Consumes the builder and constructs a [`BatchGetAggregateResourceConfigOutput`](crate::output::BatchGetAggregateResourceConfigOutput).
         pub fn build(self) -> crate::output::BatchGetAggregateResourceConfigOutput {
             crate::output::BatchGetAggregateResourceConfigOutput {
                 base_configuration_items: self.base_configuration_items,
@@ -6195,7 +6315,7 @@ pub mod batch_get_aggregate_resource_config_output {
     }
 }
 impl BatchGetAggregateResourceConfigOutput {
-    /// Creates a new builder-style object to manufacture [`BatchGetAggregateResourceConfigOutput`](crate::output::BatchGetAggregateResourceConfigOutput)
+    /// Creates a new builder-style object to manufacture [`BatchGetAggregateResourceConfigOutput`](crate::output::BatchGetAggregateResourceConfigOutput).
     pub fn builder() -> crate::output::batch_get_aggregate_resource_config_output::Builder {
         crate::output::batch_get_aggregate_resource_config_output::Builder::default()
     }

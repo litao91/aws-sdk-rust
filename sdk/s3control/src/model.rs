@@ -172,8 +172,10 @@ impl AsRef<str> for RequestedJobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StorageLensTag {
     /// <p></p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl StorageLensTag {
@@ -194,11 +196,10 @@ impl std::fmt::Debug for StorageLensTag {
         formatter.finish()
     }
 }
-/// See [`StorageLensTag`](crate::model::StorageLensTag)
+/// See [`StorageLensTag`](crate::model::StorageLensTag).
 pub mod storage_lens_tag {
 
-    /// A builder for [`StorageLensTag`](crate::model::StorageLensTag)
-    #[non_exhaustive]
+    /// A builder for [`StorageLensTag`](crate::model::StorageLensTag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -225,7 +226,7 @@ pub mod storage_lens_tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageLensTag`](crate::model::StorageLensTag)
+        /// Consumes the builder and constructs a [`StorageLensTag`](crate::model::StorageLensTag).
         pub fn build(self) -> crate::model::StorageLensTag {
             crate::model::StorageLensTag {
                 key: self.key,
@@ -235,7 +236,7 @@ pub mod storage_lens_tag {
     }
 }
 impl StorageLensTag {
-    /// Creates a new builder-style object to manufacture [`StorageLensTag`](crate::model::StorageLensTag)
+    /// Creates a new builder-style object to manufacture [`StorageLensTag`](crate::model::StorageLensTag).
     pub fn builder() -> crate::model::storage_lens_tag::Builder {
         crate::model::storage_lens_tag::Builder::default()
     }
@@ -246,20 +247,28 @@ impl StorageLensTag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StorageLensConfiguration {
     /// <p>A container for the Amazon S3 Storage Lens configuration ID.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A container for all the account-level configurations of your S3 Storage Lens configuration.</p>
+    #[doc(hidden)]
     pub account_level: std::option::Option<crate::model::AccountLevel>,
     /// <p>A container for what is included in this configuration. This container can only be valid if there is no <code>Exclude</code> container submitted, and it's not empty. </p>
+    #[doc(hidden)]
     pub include: std::option::Option<crate::model::Include>,
     /// <p>A container for what is excluded in this configuration. This container can only be valid if there is no <code>Include</code> container submitted, and it's not empty. </p>
+    #[doc(hidden)]
     pub exclude: std::option::Option<crate::model::Exclude>,
     /// <p>A container to specify the properties of your S3 Storage Lens metrics export including, the destination, schema and format.</p>
+    #[doc(hidden)]
     pub data_export: std::option::Option<crate::model::StorageLensDataExport>,
     /// <p>A container for whether the S3 Storage Lens configuration is enabled.</p>
+    #[doc(hidden)]
     pub is_enabled: bool,
     /// <p>A container for the Amazon Web Services organization for this S3 Storage Lens configuration.</p>
+    #[doc(hidden)]
     pub aws_org: std::option::Option<crate::model::StorageLensAwsOrg>,
     /// <p>The Amazon Resource Name (ARN) of the S3 Storage Lens configuration. This property is read-only and follows the following format: <code> arn:aws:s3:<i>us-east-1</i>:<i>example-account-id</i>:storage-lens/<i>your-dashboard-name</i> </code> </p>
+    #[doc(hidden)]
     pub storage_lens_arn: std::option::Option<std::string::String>,
 }
 impl StorageLensConfiguration {
@@ -310,11 +319,10 @@ impl std::fmt::Debug for StorageLensConfiguration {
         formatter.finish()
     }
 }
-/// See [`StorageLensConfiguration`](crate::model::StorageLensConfiguration)
+/// See [`StorageLensConfiguration`](crate::model::StorageLensConfiguration).
 pub mod storage_lens_configuration {
 
-    /// A builder for [`StorageLensConfiguration`](crate::model::StorageLensConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`StorageLensConfiguration`](crate::model::StorageLensConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -419,7 +427,7 @@ pub mod storage_lens_configuration {
             self.storage_lens_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageLensConfiguration`](crate::model::StorageLensConfiguration)
+        /// Consumes the builder and constructs a [`StorageLensConfiguration`](crate::model::StorageLensConfiguration).
         pub fn build(self) -> crate::model::StorageLensConfiguration {
             crate::model::StorageLensConfiguration {
                 id: self.id,
@@ -435,7 +443,7 @@ pub mod storage_lens_configuration {
     }
 }
 impl StorageLensConfiguration {
-    /// Creates a new builder-style object to manufacture [`StorageLensConfiguration`](crate::model::StorageLensConfiguration)
+    /// Creates a new builder-style object to manufacture [`StorageLensConfiguration`](crate::model::StorageLensConfiguration).
     pub fn builder() -> crate::model::storage_lens_configuration::Builder {
         crate::model::storage_lens_configuration::Builder::default()
     }
@@ -446,6 +454,7 @@ impl StorageLensConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StorageLensAwsOrg {
     /// <p>A container for the Amazon Resource Name (ARN) of the Amazon Web Services organization. This property is read-only and follows the following format: <code> arn:aws:organizations:<i>us-east-1</i>:<i>example-account-id</i>:organization/<i>o-ex2l495dck</i> </code> </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl StorageLensAwsOrg {
@@ -461,11 +470,10 @@ impl std::fmt::Debug for StorageLensAwsOrg {
         formatter.finish()
     }
 }
-/// See [`StorageLensAwsOrg`](crate::model::StorageLensAwsOrg)
+/// See [`StorageLensAwsOrg`](crate::model::StorageLensAwsOrg).
 pub mod storage_lens_aws_org {
 
-    /// A builder for [`StorageLensAwsOrg`](crate::model::StorageLensAwsOrg)
-    #[non_exhaustive]
+    /// A builder for [`StorageLensAwsOrg`](crate::model::StorageLensAwsOrg).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -481,14 +489,14 @@ pub mod storage_lens_aws_org {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageLensAwsOrg`](crate::model::StorageLensAwsOrg)
+        /// Consumes the builder and constructs a [`StorageLensAwsOrg`](crate::model::StorageLensAwsOrg).
         pub fn build(self) -> crate::model::StorageLensAwsOrg {
             crate::model::StorageLensAwsOrg { arn: self.arn }
         }
     }
 }
 impl StorageLensAwsOrg {
-    /// Creates a new builder-style object to manufacture [`StorageLensAwsOrg`](crate::model::StorageLensAwsOrg)
+    /// Creates a new builder-style object to manufacture [`StorageLensAwsOrg`](crate::model::StorageLensAwsOrg).
     pub fn builder() -> crate::model::storage_lens_aws_org::Builder {
         crate::model::storage_lens_aws_org::Builder::default()
     }
@@ -501,8 +509,10 @@ pub struct StorageLensDataExport {
     /// <p>A container for the bucket where the S3 Storage Lens metrics export will be located.</p> <note>
     /// <p>This bucket must be located in the same Region as the storage lens configuration. </p>
     /// </note>
+    #[doc(hidden)]
     pub s3_bucket_destination: std::option::Option<crate::model::S3BucketDestination>,
     /// <p>A container for enabling Amazon CloudWatch publishing for S3 Storage Lens metrics.</p>
+    #[doc(hidden)]
     pub cloud_watch_metrics: std::option::Option<crate::model::CloudWatchMetrics>,
 }
 impl StorageLensDataExport {
@@ -525,11 +535,10 @@ impl std::fmt::Debug for StorageLensDataExport {
         formatter.finish()
     }
 }
-/// See [`StorageLensDataExport`](crate::model::StorageLensDataExport)
+/// See [`StorageLensDataExport`](crate::model::StorageLensDataExport).
 pub mod storage_lens_data_export {
 
-    /// A builder for [`StorageLensDataExport`](crate::model::StorageLensDataExport)
-    #[non_exhaustive]
+    /// A builder for [`StorageLensDataExport`](crate::model::StorageLensDataExport).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_bucket_destination: std::option::Option<crate::model::S3BucketDestination>,
@@ -566,7 +575,7 @@ pub mod storage_lens_data_export {
             self.cloud_watch_metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageLensDataExport`](crate::model::StorageLensDataExport)
+        /// Consumes the builder and constructs a [`StorageLensDataExport`](crate::model::StorageLensDataExport).
         pub fn build(self) -> crate::model::StorageLensDataExport {
             crate::model::StorageLensDataExport {
                 s3_bucket_destination: self.s3_bucket_destination,
@@ -576,7 +585,7 @@ pub mod storage_lens_data_export {
     }
 }
 impl StorageLensDataExport {
-    /// Creates a new builder-style object to manufacture [`StorageLensDataExport`](crate::model::StorageLensDataExport)
+    /// Creates a new builder-style object to manufacture [`StorageLensDataExport`](crate::model::StorageLensDataExport).
     pub fn builder() -> crate::model::storage_lens_data_export::Builder {
         crate::model::storage_lens_data_export::Builder::default()
     }
@@ -588,6 +597,7 @@ impl StorageLensDataExport {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchMetrics {
     /// <p>A container that indicates whether CloudWatch publishing for S3 Storage Lens metrics is enabled. A value of <code>true</code> indicates that CloudWatch publishing for S3 Storage Lens metrics is enabled.</p>
+    #[doc(hidden)]
     pub is_enabled: bool,
 }
 impl CloudWatchMetrics {
@@ -603,11 +613,10 @@ impl std::fmt::Debug for CloudWatchMetrics {
         formatter.finish()
     }
 }
-/// See [`CloudWatchMetrics`](crate::model::CloudWatchMetrics)
+/// See [`CloudWatchMetrics`](crate::model::CloudWatchMetrics).
 pub mod cloud_watch_metrics {
 
-    /// A builder for [`CloudWatchMetrics`](crate::model::CloudWatchMetrics)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchMetrics`](crate::model::CloudWatchMetrics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_enabled: std::option::Option<bool>,
@@ -623,7 +632,7 @@ pub mod cloud_watch_metrics {
             self.is_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchMetrics`](crate::model::CloudWatchMetrics)
+        /// Consumes the builder and constructs a [`CloudWatchMetrics`](crate::model::CloudWatchMetrics).
         pub fn build(self) -> crate::model::CloudWatchMetrics {
             crate::model::CloudWatchMetrics {
                 is_enabled: self.is_enabled.unwrap_or_default(),
@@ -632,7 +641,7 @@ pub mod cloud_watch_metrics {
     }
 }
 impl CloudWatchMetrics {
-    /// Creates a new builder-style object to manufacture [`CloudWatchMetrics`](crate::model::CloudWatchMetrics)
+    /// Creates a new builder-style object to manufacture [`CloudWatchMetrics`](crate::model::CloudWatchMetrics).
     pub fn builder() -> crate::model::cloud_watch_metrics::Builder {
         crate::model::cloud_watch_metrics::Builder::default()
     }
@@ -643,16 +652,22 @@ impl CloudWatchMetrics {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3BucketDestination {
     /// <p></p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::Format>,
     /// <p>The schema version of the export file.</p>
+    #[doc(hidden)]
     pub output_schema_version: std::option::Option<crate::model::OutputSchemaVersion>,
     /// <p>The account ID of the owner of the S3 Storage Lens metrics export bucket.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the bucket. This property is read-only and follows the following format: <code> arn:aws:s3:<i>us-east-1</i>:<i>example-account-id</i>:bucket/<i>your-destination-bucket-name</i> </code> </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The prefix of the destination bucket where the metrics export will be delivered.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>The container for the type encryption of the metrics exports in this bucket.</p>
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::StorageLensDataExportEncryption>,
 }
 impl S3BucketDestination {
@@ -695,11 +710,10 @@ impl std::fmt::Debug for S3BucketDestination {
         formatter.finish()
     }
 }
-/// See [`S3BucketDestination`](crate::model::S3BucketDestination)
+/// See [`S3BucketDestination`](crate::model::S3BucketDestination).
 pub mod s3_bucket_destination {
 
-    /// A builder for [`S3BucketDestination`](crate::model::S3BucketDestination)
-    #[non_exhaustive]
+    /// A builder for [`S3BucketDestination`](crate::model::S3BucketDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) format: std::option::Option<crate::model::Format>,
@@ -776,7 +790,7 @@ pub mod s3_bucket_destination {
             self.encryption = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3BucketDestination`](crate::model::S3BucketDestination)
+        /// Consumes the builder and constructs a [`S3BucketDestination`](crate::model::S3BucketDestination).
         pub fn build(self) -> crate::model::S3BucketDestination {
             crate::model::S3BucketDestination {
                 format: self.format,
@@ -790,7 +804,7 @@ pub mod s3_bucket_destination {
     }
 }
 impl S3BucketDestination {
-    /// Creates a new builder-style object to manufacture [`S3BucketDestination`](crate::model::S3BucketDestination)
+    /// Creates a new builder-style object to manufacture [`S3BucketDestination`](crate::model::S3BucketDestination).
     pub fn builder() -> crate::model::s3_bucket_destination::Builder {
         crate::model::s3_bucket_destination::Builder::default()
     }
@@ -801,8 +815,10 @@ impl S3BucketDestination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StorageLensDataExportEncryption {
     /// <p></p>
+    #[doc(hidden)]
     pub sses3: std::option::Option<crate::model::Sses3>,
     /// <p></p>
+    #[doc(hidden)]
     pub ssekms: std::option::Option<crate::model::Ssekms>,
 }
 impl StorageLensDataExportEncryption {
@@ -823,11 +839,10 @@ impl std::fmt::Debug for StorageLensDataExportEncryption {
         formatter.finish()
     }
 }
-/// See [`StorageLensDataExportEncryption`](crate::model::StorageLensDataExportEncryption)
+/// See [`StorageLensDataExportEncryption`](crate::model::StorageLensDataExportEncryption).
 pub mod storage_lens_data_export_encryption {
 
-    /// A builder for [`StorageLensDataExportEncryption`](crate::model::StorageLensDataExportEncryption)
-    #[non_exhaustive]
+    /// A builder for [`StorageLensDataExportEncryption`](crate::model::StorageLensDataExportEncryption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sses3: std::option::Option<crate::model::Sses3>,
@@ -854,7 +869,7 @@ pub mod storage_lens_data_export_encryption {
             self.ssekms = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageLensDataExportEncryption`](crate::model::StorageLensDataExportEncryption)
+        /// Consumes the builder and constructs a [`StorageLensDataExportEncryption`](crate::model::StorageLensDataExportEncryption).
         pub fn build(self) -> crate::model::StorageLensDataExportEncryption {
             crate::model::StorageLensDataExportEncryption {
                 sses3: self.sses3,
@@ -864,7 +879,7 @@ pub mod storage_lens_data_export_encryption {
     }
 }
 impl StorageLensDataExportEncryption {
-    /// Creates a new builder-style object to manufacture [`StorageLensDataExportEncryption`](crate::model::StorageLensDataExportEncryption)
+    /// Creates a new builder-style object to manufacture [`StorageLensDataExportEncryption`](crate::model::StorageLensDataExportEncryption).
     pub fn builder() -> crate::model::storage_lens_data_export_encryption::Builder {
         crate::model::storage_lens_data_export_encryption::Builder::default()
     }
@@ -875,6 +890,7 @@ impl StorageLensDataExportEncryption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ssekms {
     /// <p>A container for the ARN of the SSE-KMS encryption. This property is read-only and follows the following format: <code> arn:aws:kms:<i>us-east-1</i>:<i>example-account-id</i>:key/<i>example-9a73-4afc-8d29-8f5900cef44e</i> </code> </p>
+    #[doc(hidden)]
     pub key_id: std::option::Option<std::string::String>,
 }
 impl Ssekms {
@@ -890,11 +906,10 @@ impl std::fmt::Debug for Ssekms {
         formatter.finish()
     }
 }
-/// See [`Ssekms`](crate::model::Ssekms)
+/// See [`Ssekms`](crate::model::Ssekms).
 pub mod ssekms {
 
-    /// A builder for [`Ssekms`](crate::model::Ssekms)
-    #[non_exhaustive]
+    /// A builder for [`Ssekms`](crate::model::Ssekms).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_id: std::option::Option<std::string::String>,
@@ -910,7 +925,7 @@ pub mod ssekms {
             self.key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ssekms`](crate::model::Ssekms)
+        /// Consumes the builder and constructs a [`Ssekms`](crate::model::Ssekms).
         pub fn build(self) -> crate::model::Ssekms {
             crate::model::Ssekms {
                 key_id: self.key_id,
@@ -919,7 +934,7 @@ pub mod ssekms {
     }
 }
 impl Ssekms {
-    /// Creates a new builder-style object to manufacture [`Ssekms`](crate::model::Ssekms)
+    /// Creates a new builder-style object to manufacture [`Ssekms`](crate::model::Ssekms).
     pub fn builder() -> crate::model::ssekms::Builder {
         crate::model::ssekms::Builder::default()
     }
@@ -935,22 +950,21 @@ impl std::fmt::Debug for Sses3 {
         formatter.finish()
     }
 }
-/// See [`Sses3`](crate::model::Sses3)
+/// See [`Sses3`](crate::model::Sses3).
 pub mod sses3 {
 
-    /// A builder for [`Sses3`](crate::model::Sses3)
-    #[non_exhaustive]
+    /// A builder for [`Sses3`](crate::model::Sses3).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`Sses3`](crate::model::Sses3)
+        /// Consumes the builder and constructs a [`Sses3`](crate::model::Sses3).
         pub fn build(self) -> crate::model::Sses3 {
             crate::model::Sses3 {}
         }
     }
 }
 impl Sses3 {
-    /// Creates a new builder-style object to manufacture [`Sses3`](crate::model::Sses3)
+    /// Creates a new builder-style object to manufacture [`Sses3`](crate::model::Sses3).
     pub fn builder() -> crate::model::sses3::Builder {
         crate::model::sses3::Builder::default()
     }
@@ -1067,8 +1081,10 @@ impl AsRef<str> for Format {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Exclude {
     /// <p>A container for the S3 Storage Lens bucket excludes.</p>
+    #[doc(hidden)]
     pub buckets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A container for the S3 Storage Lens Region excludes.</p>
+    #[doc(hidden)]
     pub regions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Exclude {
@@ -1089,11 +1105,10 @@ impl std::fmt::Debug for Exclude {
         formatter.finish()
     }
 }
-/// See [`Exclude`](crate::model::Exclude)
+/// See [`Exclude`](crate::model::Exclude).
 pub mod exclude {
 
-    /// A builder for [`Exclude`](crate::model::Exclude)
-    #[non_exhaustive]
+    /// A builder for [`Exclude`](crate::model::Exclude).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) buckets: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1138,7 +1153,7 @@ pub mod exclude {
             self.regions = input;
             self
         }
-        /// Consumes the builder and constructs a [`Exclude`](crate::model::Exclude)
+        /// Consumes the builder and constructs a [`Exclude`](crate::model::Exclude).
         pub fn build(self) -> crate::model::Exclude {
             crate::model::Exclude {
                 buckets: self.buckets,
@@ -1148,7 +1163,7 @@ pub mod exclude {
     }
 }
 impl Exclude {
-    /// Creates a new builder-style object to manufacture [`Exclude`](crate::model::Exclude)
+    /// Creates a new builder-style object to manufacture [`Exclude`](crate::model::Exclude).
     pub fn builder() -> crate::model::exclude::Builder {
         crate::model::exclude::Builder::default()
     }
@@ -1159,8 +1174,10 @@ impl Exclude {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Include {
     /// <p>A container for the S3 Storage Lens bucket includes.</p>
+    #[doc(hidden)]
     pub buckets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A container for the S3 Storage Lens Region includes.</p>
+    #[doc(hidden)]
     pub regions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Include {
@@ -1181,11 +1198,10 @@ impl std::fmt::Debug for Include {
         formatter.finish()
     }
 }
-/// See [`Include`](crate::model::Include)
+/// See [`Include`](crate::model::Include).
 pub mod include {
 
-    /// A builder for [`Include`](crate::model::Include)
-    #[non_exhaustive]
+    /// A builder for [`Include`](crate::model::Include).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) buckets: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1230,7 +1246,7 @@ pub mod include {
             self.regions = input;
             self
         }
-        /// Consumes the builder and constructs a [`Include`](crate::model::Include)
+        /// Consumes the builder and constructs a [`Include`](crate::model::Include).
         pub fn build(self) -> crate::model::Include {
             crate::model::Include {
                 buckets: self.buckets,
@@ -1240,7 +1256,7 @@ pub mod include {
     }
 }
 impl Include {
-    /// Creates a new builder-style object to manufacture [`Include`](crate::model::Include)
+    /// Creates a new builder-style object to manufacture [`Include`](crate::model::Include).
     pub fn builder() -> crate::model::include::Builder {
         crate::model::include::Builder::default()
     }
@@ -1251,8 +1267,10 @@ impl Include {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountLevel {
     /// <p>A container for the S3 Storage Lens activity metrics.</p>
+    #[doc(hidden)]
     pub activity_metrics: std::option::Option<crate::model::ActivityMetrics>,
     /// <p>A container for the S3 Storage Lens bucket-level configuration.</p>
+    #[doc(hidden)]
     pub bucket_level: std::option::Option<crate::model::BucketLevel>,
 }
 impl AccountLevel {
@@ -1273,11 +1291,10 @@ impl std::fmt::Debug for AccountLevel {
         formatter.finish()
     }
 }
-/// See [`AccountLevel`](crate::model::AccountLevel)
+/// See [`AccountLevel`](crate::model::AccountLevel).
 pub mod account_level {
 
-    /// A builder for [`AccountLevel`](crate::model::AccountLevel)
-    #[non_exhaustive]
+    /// A builder for [`AccountLevel`](crate::model::AccountLevel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activity_metrics: std::option::Option<crate::model::ActivityMetrics>,
@@ -1310,7 +1327,7 @@ pub mod account_level {
             self.bucket_level = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountLevel`](crate::model::AccountLevel)
+        /// Consumes the builder and constructs a [`AccountLevel`](crate::model::AccountLevel).
         pub fn build(self) -> crate::model::AccountLevel {
             crate::model::AccountLevel {
                 activity_metrics: self.activity_metrics,
@@ -1320,7 +1337,7 @@ pub mod account_level {
     }
 }
 impl AccountLevel {
-    /// Creates a new builder-style object to manufacture [`AccountLevel`](crate::model::AccountLevel)
+    /// Creates a new builder-style object to manufacture [`AccountLevel`](crate::model::AccountLevel).
     pub fn builder() -> crate::model::account_level::Builder {
         crate::model::account_level::Builder::default()
     }
@@ -1331,8 +1348,10 @@ impl AccountLevel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BucketLevel {
     /// <p>A container for the bucket-level activity metrics for Amazon S3 Storage Lens</p>
+    #[doc(hidden)]
     pub activity_metrics: std::option::Option<crate::model::ActivityMetrics>,
     /// <p>A container for the bucket-level prefix-level metrics for S3 Storage Lens</p>
+    #[doc(hidden)]
     pub prefix_level: std::option::Option<crate::model::PrefixLevel>,
 }
 impl BucketLevel {
@@ -1353,11 +1372,10 @@ impl std::fmt::Debug for BucketLevel {
         formatter.finish()
     }
 }
-/// See [`BucketLevel`](crate::model::BucketLevel)
+/// See [`BucketLevel`](crate::model::BucketLevel).
 pub mod bucket_level {
 
-    /// A builder for [`BucketLevel`](crate::model::BucketLevel)
-    #[non_exhaustive]
+    /// A builder for [`BucketLevel`](crate::model::BucketLevel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activity_metrics: std::option::Option<crate::model::ActivityMetrics>,
@@ -1390,7 +1408,7 @@ pub mod bucket_level {
             self.prefix_level = input;
             self
         }
-        /// Consumes the builder and constructs a [`BucketLevel`](crate::model::BucketLevel)
+        /// Consumes the builder and constructs a [`BucketLevel`](crate::model::BucketLevel).
         pub fn build(self) -> crate::model::BucketLevel {
             crate::model::BucketLevel {
                 activity_metrics: self.activity_metrics,
@@ -1400,7 +1418,7 @@ pub mod bucket_level {
     }
 }
 impl BucketLevel {
-    /// Creates a new builder-style object to manufacture [`BucketLevel`](crate::model::BucketLevel)
+    /// Creates a new builder-style object to manufacture [`BucketLevel`](crate::model::BucketLevel).
     pub fn builder() -> crate::model::bucket_level::Builder {
         crate::model::bucket_level::Builder::default()
     }
@@ -1411,6 +1429,7 @@ impl BucketLevel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrefixLevel {
     /// <p>A container for the prefix-level storage metrics for S3 Storage Lens.</p>
+    #[doc(hidden)]
     pub storage_metrics: std::option::Option<crate::model::PrefixLevelStorageMetrics>,
 }
 impl PrefixLevel {
@@ -1426,11 +1445,10 @@ impl std::fmt::Debug for PrefixLevel {
         formatter.finish()
     }
 }
-/// See [`PrefixLevel`](crate::model::PrefixLevel)
+/// See [`PrefixLevel`](crate::model::PrefixLevel).
 pub mod prefix_level {
 
-    /// A builder for [`PrefixLevel`](crate::model::PrefixLevel)
-    #[non_exhaustive]
+    /// A builder for [`PrefixLevel`](crate::model::PrefixLevel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_metrics: std::option::Option<crate::model::PrefixLevelStorageMetrics>,
@@ -1449,7 +1467,7 @@ pub mod prefix_level {
             self.storage_metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrefixLevel`](crate::model::PrefixLevel)
+        /// Consumes the builder and constructs a [`PrefixLevel`](crate::model::PrefixLevel).
         pub fn build(self) -> crate::model::PrefixLevel {
             crate::model::PrefixLevel {
                 storage_metrics: self.storage_metrics,
@@ -1458,7 +1476,7 @@ pub mod prefix_level {
     }
 }
 impl PrefixLevel {
-    /// Creates a new builder-style object to manufacture [`PrefixLevel`](crate::model::PrefixLevel)
+    /// Creates a new builder-style object to manufacture [`PrefixLevel`](crate::model::PrefixLevel).
     pub fn builder() -> crate::model::prefix_level::Builder {
         crate::model::prefix_level::Builder::default()
     }
@@ -1469,8 +1487,10 @@ impl PrefixLevel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrefixLevelStorageMetrics {
     /// <p>A container for whether prefix-level storage metrics are enabled.</p>
+    #[doc(hidden)]
     pub is_enabled: bool,
     /// <p></p>
+    #[doc(hidden)]
     pub selection_criteria: std::option::Option<crate::model::SelectionCriteria>,
 }
 impl PrefixLevelStorageMetrics {
@@ -1491,11 +1511,10 @@ impl std::fmt::Debug for PrefixLevelStorageMetrics {
         formatter.finish()
     }
 }
-/// See [`PrefixLevelStorageMetrics`](crate::model::PrefixLevelStorageMetrics)
+/// See [`PrefixLevelStorageMetrics`](crate::model::PrefixLevelStorageMetrics).
 pub mod prefix_level_storage_metrics {
 
-    /// A builder for [`PrefixLevelStorageMetrics`](crate::model::PrefixLevelStorageMetrics)
-    #[non_exhaustive]
+    /// A builder for [`PrefixLevelStorageMetrics`](crate::model::PrefixLevelStorageMetrics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_enabled: std::option::Option<bool>,
@@ -1525,7 +1544,7 @@ pub mod prefix_level_storage_metrics {
             self.selection_criteria = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrefixLevelStorageMetrics`](crate::model::PrefixLevelStorageMetrics)
+        /// Consumes the builder and constructs a [`PrefixLevelStorageMetrics`](crate::model::PrefixLevelStorageMetrics).
         pub fn build(self) -> crate::model::PrefixLevelStorageMetrics {
             crate::model::PrefixLevelStorageMetrics {
                 is_enabled: self.is_enabled.unwrap_or_default(),
@@ -1535,7 +1554,7 @@ pub mod prefix_level_storage_metrics {
     }
 }
 impl PrefixLevelStorageMetrics {
-    /// Creates a new builder-style object to manufacture [`PrefixLevelStorageMetrics`](crate::model::PrefixLevelStorageMetrics)
+    /// Creates a new builder-style object to manufacture [`PrefixLevelStorageMetrics`](crate::model::PrefixLevelStorageMetrics).
     pub fn builder() -> crate::model::prefix_level_storage_metrics::Builder {
         crate::model::prefix_level_storage_metrics::Builder::default()
     }
@@ -1546,12 +1565,15 @@ impl PrefixLevelStorageMetrics {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SelectionCriteria {
     /// <p>A container for the delimiter of the selection criteria being used.</p>
+    #[doc(hidden)]
     pub delimiter: std::option::Option<std::string::String>,
     /// <p>The max depth of the selection criteria</p>
+    #[doc(hidden)]
     pub max_depth: i32,
     /// <p>The minimum number of storage bytes percentage whose metrics will be selected.</p> <note>
     /// <p>You must choose a value greater than or equal to <code>1.0</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub min_storage_bytes_percentage: f64,
 }
 impl SelectionCriteria {
@@ -1582,11 +1604,10 @@ impl std::fmt::Debug for SelectionCriteria {
         formatter.finish()
     }
 }
-/// See [`SelectionCriteria`](crate::model::SelectionCriteria)
+/// See [`SelectionCriteria`](crate::model::SelectionCriteria).
 pub mod selection_criteria {
 
-    /// A builder for [`SelectionCriteria`](crate::model::SelectionCriteria)
-    #[non_exhaustive]
+    /// A builder for [`SelectionCriteria`](crate::model::SelectionCriteria).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delimiter: std::option::Option<std::string::String>,
@@ -1628,7 +1649,7 @@ pub mod selection_criteria {
             self.min_storage_bytes_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`SelectionCriteria`](crate::model::SelectionCriteria)
+        /// Consumes the builder and constructs a [`SelectionCriteria`](crate::model::SelectionCriteria).
         pub fn build(self) -> crate::model::SelectionCriteria {
             crate::model::SelectionCriteria {
                 delimiter: self.delimiter,
@@ -1639,7 +1660,7 @@ pub mod selection_criteria {
     }
 }
 impl SelectionCriteria {
-    /// Creates a new builder-style object to manufacture [`SelectionCriteria`](crate::model::SelectionCriteria)
+    /// Creates a new builder-style object to manufacture [`SelectionCriteria`](crate::model::SelectionCriteria).
     pub fn builder() -> crate::model::selection_criteria::Builder {
         crate::model::selection_criteria::Builder::default()
     }
@@ -1650,6 +1671,7 @@ impl SelectionCriteria {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityMetrics {
     /// <p>A container for whether the activity metrics are enabled.</p>
+    #[doc(hidden)]
     pub is_enabled: bool,
 }
 impl ActivityMetrics {
@@ -1665,11 +1687,10 @@ impl std::fmt::Debug for ActivityMetrics {
         formatter.finish()
     }
 }
-/// See [`ActivityMetrics`](crate::model::ActivityMetrics)
+/// See [`ActivityMetrics`](crate::model::ActivityMetrics).
 pub mod activity_metrics {
 
-    /// A builder for [`ActivityMetrics`](crate::model::ActivityMetrics)
-    #[non_exhaustive]
+    /// A builder for [`ActivityMetrics`](crate::model::ActivityMetrics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_enabled: std::option::Option<bool>,
@@ -1685,7 +1706,7 @@ pub mod activity_metrics {
             self.is_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityMetrics`](crate::model::ActivityMetrics)
+        /// Consumes the builder and constructs a [`ActivityMetrics`](crate::model::ActivityMetrics).
         pub fn build(self) -> crate::model::ActivityMetrics {
             crate::model::ActivityMetrics {
                 is_enabled: self.is_enabled.unwrap_or_default(),
@@ -1694,7 +1715,7 @@ pub mod activity_metrics {
     }
 }
 impl ActivityMetrics {
-    /// Creates a new builder-style object to manufacture [`ActivityMetrics`](crate::model::ActivityMetrics)
+    /// Creates a new builder-style object to manufacture [`ActivityMetrics`](crate::model::ActivityMetrics).
     pub fn builder() -> crate::model::activity_metrics::Builder {
         crate::model::activity_metrics::Builder::default()
     }
@@ -1713,18 +1734,22 @@ pub struct PublicAccessBlockConfiguration {
     /// </ul>
     /// <p>Enabling this setting doesn't affect existing policies or ACLs.</p>
     /// <p>This is not supported for Amazon S3 on Outposts.</p>
+    #[doc(hidden)]
     pub block_public_acls: bool,
     /// <p>Specifies whether Amazon S3 should ignore public ACLs for buckets in this account. Setting this element to <code>TRUE</code> causes Amazon S3 to ignore all public ACLs on buckets in this account and any objects that they contain. </p>
     /// <p>Enabling this setting doesn't affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set.</p>
     /// <p>This is not supported for Amazon S3 on Outposts.</p>
+    #[doc(hidden)]
     pub ignore_public_acls: bool,
     /// <p>Specifies whether Amazon S3 should block public bucket policies for buckets in this account. Setting this element to <code>TRUE</code> causes Amazon S3 to reject calls to PUT Bucket policy if the specified bucket policy allows public access. </p>
     /// <p>Enabling this setting doesn't affect existing bucket policies.</p>
     /// <p>This is not supported for Amazon S3 on Outposts.</p>
+    #[doc(hidden)]
     pub block_public_policy: bool,
     /// <p>Specifies whether Amazon S3 should restrict public bucket policies for buckets in this account. Setting this element to <code>TRUE</code> restricts access to buckets with public policies to only Amazon Web Service principals and authorized users within this account.</p>
     /// <p>Enabling this setting doesn't affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.</p>
     /// <p>This is not supported for Amazon S3 on Outposts.</p>
+    #[doc(hidden)]
     pub restrict_public_buckets: bool,
 }
 impl PublicAccessBlockConfiguration {
@@ -1768,11 +1793,10 @@ impl std::fmt::Debug for PublicAccessBlockConfiguration {
         formatter.finish()
     }
 }
-/// See [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration)
+/// See [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration).
 pub mod public_access_block_configuration {
 
-    /// A builder for [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) block_public_acls: std::option::Option<bool>,
@@ -1847,7 +1871,7 @@ pub mod public_access_block_configuration {
             self.restrict_public_buckets = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration)
+        /// Consumes the builder and constructs a [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration).
         pub fn build(self) -> crate::model::PublicAccessBlockConfiguration {
             crate::model::PublicAccessBlockConfiguration {
                 block_public_acls: self.block_public_acls.unwrap_or_default(),
@@ -1859,7 +1883,7 @@ pub mod public_access_block_configuration {
     }
 }
 impl PublicAccessBlockConfiguration {
-    /// Creates a new builder-style object to manufacture [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration)
+    /// Creates a new builder-style object to manufacture [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration).
     pub fn builder() -> crate::model::public_access_block_configuration::Builder {
         crate::model::public_access_block_configuration::Builder::default()
     }
@@ -1870,8 +1894,10 @@ impl PublicAccessBlockConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutMultiRegionAccessPointPolicyInput {
     /// <p>The name of the Multi-Region Access Point associated with the request.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The policy details for the <code>PutMultiRegionAccessPoint</code> request.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl PutMultiRegionAccessPointPolicyInput {
@@ -1892,11 +1918,10 @@ impl std::fmt::Debug for PutMultiRegionAccessPointPolicyInput {
         formatter.finish()
     }
 }
-/// See [`PutMultiRegionAccessPointPolicyInput`](crate::model::PutMultiRegionAccessPointPolicyInput)
+/// See [`PutMultiRegionAccessPointPolicyInput`](crate::model::PutMultiRegionAccessPointPolicyInput).
 pub mod put_multi_region_access_point_policy_input {
 
-    /// A builder for [`PutMultiRegionAccessPointPolicyInput`](crate::model::PutMultiRegionAccessPointPolicyInput)
-    #[non_exhaustive]
+    /// A builder for [`PutMultiRegionAccessPointPolicyInput`](crate::model::PutMultiRegionAccessPointPolicyInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1923,7 +1948,7 @@ pub mod put_multi_region_access_point_policy_input {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutMultiRegionAccessPointPolicyInput`](crate::model::PutMultiRegionAccessPointPolicyInput)
+        /// Consumes the builder and constructs a [`PutMultiRegionAccessPointPolicyInput`](crate::model::PutMultiRegionAccessPointPolicyInput).
         pub fn build(self) -> crate::model::PutMultiRegionAccessPointPolicyInput {
             crate::model::PutMultiRegionAccessPointPolicyInput {
                 name: self.name,
@@ -1933,7 +1958,7 @@ pub mod put_multi_region_access_point_policy_input {
     }
 }
 impl PutMultiRegionAccessPointPolicyInput {
-    /// Creates a new builder-style object to manufacture [`PutMultiRegionAccessPointPolicyInput`](crate::model::PutMultiRegionAccessPointPolicyInput)
+    /// Creates a new builder-style object to manufacture [`PutMultiRegionAccessPointPolicyInput`](crate::model::PutMultiRegionAccessPointPolicyInput).
     pub fn builder() -> crate::model::put_multi_region_access_point_policy_input::Builder {
         crate::model::put_multi_region_access_point_policy_input::Builder::default()
     }
@@ -1944,8 +1969,10 @@ impl PutMultiRegionAccessPointPolicyInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Tag {
     /// <p></p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl S3Tag {
@@ -1966,11 +1993,10 @@ impl std::fmt::Debug for S3Tag {
         formatter.finish()
     }
 }
-/// See [`S3Tag`](crate::model::S3Tag)
+/// See [`S3Tag`](crate::model::S3Tag).
 pub mod s3_tag {
 
-    /// A builder for [`S3Tag`](crate::model::S3Tag)
-    #[non_exhaustive]
+    /// A builder for [`S3Tag`](crate::model::S3Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1997,7 +2023,7 @@ pub mod s3_tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Tag`](crate::model::S3Tag)
+        /// Consumes the builder and constructs a [`S3Tag`](crate::model::S3Tag).
         pub fn build(self) -> crate::model::S3Tag {
             crate::model::S3Tag {
                 key: self.key,
@@ -2007,7 +2033,7 @@ pub mod s3_tag {
     }
 }
 impl S3Tag {
-    /// Creates a new builder-style object to manufacture [`S3Tag`](crate::model::S3Tag)
+    /// Creates a new builder-style object to manufacture [`S3Tag`](crate::model::S3Tag).
     pub fn builder() -> crate::model::s3_tag::Builder {
         crate::model::s3_tag::Builder::default()
     }
@@ -2018,6 +2044,7 @@ impl S3Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tagging {
     /// <p>A collection for a set of tags.</p>
+    #[doc(hidden)]
     pub tag_set: std::option::Option<std::vec::Vec<crate::model::S3Tag>>,
 }
 impl Tagging {
@@ -2033,11 +2060,10 @@ impl std::fmt::Debug for Tagging {
         formatter.finish()
     }
 }
-/// See [`Tagging`](crate::model::Tagging)
+/// See [`Tagging`](crate::model::Tagging).
 pub mod tagging {
 
-    /// A builder for [`Tagging`](crate::model::Tagging)
-    #[non_exhaustive]
+    /// A builder for [`Tagging`](crate::model::Tagging).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_set: std::option::Option<std::vec::Vec<crate::model::S3Tag>>,
@@ -2062,7 +2088,7 @@ pub mod tagging {
             self.tag_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tagging`](crate::model::Tagging)
+        /// Consumes the builder and constructs a [`Tagging`](crate::model::Tagging).
         pub fn build(self) -> crate::model::Tagging {
             crate::model::Tagging {
                 tag_set: self.tag_set,
@@ -2071,7 +2097,7 @@ pub mod tagging {
     }
 }
 impl Tagging {
-    /// Creates a new builder-style object to manufacture [`Tagging`](crate::model::Tagging)
+    /// Creates a new builder-style object to manufacture [`Tagging`](crate::model::Tagging).
     pub fn builder() -> crate::model::tagging::Builder {
         crate::model::tagging::Builder::default()
     }
@@ -2082,6 +2108,7 @@ impl Tagging {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecycleConfiguration {
     /// <p>A lifecycle rule for individual objects in an Outposts bucket. </p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::LifecycleRule>>,
 }
 impl LifecycleConfiguration {
@@ -2097,11 +2124,10 @@ impl std::fmt::Debug for LifecycleConfiguration {
         formatter.finish()
     }
 }
-/// See [`LifecycleConfiguration`](crate::model::LifecycleConfiguration)
+/// See [`LifecycleConfiguration`](crate::model::LifecycleConfiguration).
 pub mod lifecycle_configuration {
 
-    /// A builder for [`LifecycleConfiguration`](crate::model::LifecycleConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LifecycleConfiguration`](crate::model::LifecycleConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rules: std::option::Option<std::vec::Vec<crate::model::LifecycleRule>>,
@@ -2126,14 +2152,14 @@ pub mod lifecycle_configuration {
             self.rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecycleConfiguration`](crate::model::LifecycleConfiguration)
+        /// Consumes the builder and constructs a [`LifecycleConfiguration`](crate::model::LifecycleConfiguration).
         pub fn build(self) -> crate::model::LifecycleConfiguration {
             crate::model::LifecycleConfiguration { rules: self.rules }
         }
     }
 }
 impl LifecycleConfiguration {
-    /// Creates a new builder-style object to manufacture [`LifecycleConfiguration`](crate::model::LifecycleConfiguration)
+    /// Creates a new builder-style object to manufacture [`LifecycleConfiguration`](crate::model::LifecycleConfiguration).
     pub fn builder() -> crate::model::lifecycle_configuration::Builder {
         crate::model::lifecycle_configuration::Builder::default()
     }
@@ -2144,28 +2170,36 @@ impl LifecycleConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecycleRule {
     /// <p>Specifies the expiration for the lifecycle of the object in the form of date, days and, whether the object has a delete marker.</p>
+    #[doc(hidden)]
     pub expiration: std::option::Option<crate::model::LifecycleExpiration>,
     /// <p>Unique identifier for the rule. The value cannot be longer than 255 characters.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The container for the filter of lifecycle rule.</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<crate::model::LifecycleRuleFilter>,
     /// <p>If 'Enabled', the rule is currently being applied. If 'Disabled', the rule is not currently being applied.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ExpirationStatus>,
     /// <p>Specifies when an Amazon S3 object transitions to a specified storage class.</p> <note>
     /// <p>This is not supported by Amazon S3 on Outposts buckets.</p>
     /// </note>
+    #[doc(hidden)]
     pub transitions: std::option::Option<std::vec::Vec<crate::model::Transition>>,
     /// <p> Specifies the transition rule for the lifecycle rule that describes when noncurrent objects transition to a specific storage class. If your bucket is versioning-enabled (or versioning is suspended), you can set this action to request that Amazon S3 transition noncurrent object versions to a specific storage class at a set period in the object's lifetime. </p> <note>
     /// <p>This is not supported by Amazon S3 on Outposts buckets.</p>
     /// </note>
+    #[doc(hidden)]
     pub noncurrent_version_transitions:
         std::option::Option<std::vec::Vec<crate::model::NoncurrentVersionTransition>>,
     /// <p>The noncurrent version expiration of the lifecycle rule.</p> <note>
     /// <p>This is not supported by Amazon S3 on Outposts buckets.</p>
     /// </note>
+    #[doc(hidden)]
     pub noncurrent_version_expiration:
         std::option::Option<crate::model::NoncurrentVersionExpiration>,
     /// <p>Specifies the days since the initiation of an incomplete multipart upload that Amazon S3 waits before permanently removing all parts of the upload. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config"> Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub abort_incomplete_multipart_upload:
         std::option::Option<crate::model::AbortIncompleteMultipartUpload>,
 }
@@ -2238,11 +2272,10 @@ impl std::fmt::Debug for LifecycleRule {
         formatter.finish()
     }
 }
-/// See [`LifecycleRule`](crate::model::LifecycleRule)
+/// See [`LifecycleRule`](crate::model::LifecycleRule).
 pub mod lifecycle_rule {
 
-    /// A builder for [`LifecycleRule`](crate::model::LifecycleRule)
-    #[non_exhaustive]
+    /// A builder for [`LifecycleRule`](crate::model::LifecycleRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) expiration: std::option::Option<crate::model::LifecycleExpiration>,
@@ -2392,7 +2425,7 @@ pub mod lifecycle_rule {
             self.abort_incomplete_multipart_upload = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecycleRule`](crate::model::LifecycleRule)
+        /// Consumes the builder and constructs a [`LifecycleRule`](crate::model::LifecycleRule).
         pub fn build(self) -> crate::model::LifecycleRule {
             crate::model::LifecycleRule {
                 expiration: self.expiration,
@@ -2408,7 +2441,7 @@ pub mod lifecycle_rule {
     }
 }
 impl LifecycleRule {
-    /// Creates a new builder-style object to manufacture [`LifecycleRule`](crate::model::LifecycleRule)
+    /// Creates a new builder-style object to manufacture [`LifecycleRule`](crate::model::LifecycleRule).
     pub fn builder() -> crate::model::lifecycle_rule::Builder {
         crate::model::lifecycle_rule::Builder::default()
     }
@@ -2419,6 +2452,7 @@ impl LifecycleRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AbortIncompleteMultipartUpload {
     /// <p>Specifies the number of days after which Amazon S3 aborts an incomplete multipart upload to the Outposts bucket.</p>
+    #[doc(hidden)]
     pub days_after_initiation: i32,
 }
 impl AbortIncompleteMultipartUpload {
@@ -2434,11 +2468,10 @@ impl std::fmt::Debug for AbortIncompleteMultipartUpload {
         formatter.finish()
     }
 }
-/// See [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload)
+/// See [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload).
 pub mod abort_incomplete_multipart_upload {
 
-    /// A builder for [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload)
-    #[non_exhaustive]
+    /// A builder for [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) days_after_initiation: std::option::Option<i32>,
@@ -2454,7 +2487,7 @@ pub mod abort_incomplete_multipart_upload {
             self.days_after_initiation = input;
             self
         }
-        /// Consumes the builder and constructs a [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload)
+        /// Consumes the builder and constructs a [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload).
         pub fn build(self) -> crate::model::AbortIncompleteMultipartUpload {
             crate::model::AbortIncompleteMultipartUpload {
                 days_after_initiation: self.days_after_initiation.unwrap_or_default(),
@@ -2463,7 +2496,7 @@ pub mod abort_incomplete_multipart_upload {
     }
 }
 impl AbortIncompleteMultipartUpload {
-    /// Creates a new builder-style object to manufacture [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload)
+    /// Creates a new builder-style object to manufacture [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload).
     pub fn builder() -> crate::model::abort_incomplete_multipart_upload::Builder {
         crate::model::abort_incomplete_multipart_upload::Builder::default()
     }
@@ -2474,6 +2507,7 @@ impl AbortIncompleteMultipartUpload {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NoncurrentVersionExpiration {
     /// <p>Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action. For information about the noncurrent days calculations, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#non-current-days-calculations">How Amazon S3 Calculates When an Object Became Noncurrent</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub noncurrent_days: i32,
 }
 impl NoncurrentVersionExpiration {
@@ -2489,11 +2523,10 @@ impl std::fmt::Debug for NoncurrentVersionExpiration {
         formatter.finish()
     }
 }
-/// See [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration)
+/// See [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration).
 pub mod noncurrent_version_expiration {
 
-    /// A builder for [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration)
-    #[non_exhaustive]
+    /// A builder for [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) noncurrent_days: std::option::Option<i32>,
@@ -2509,7 +2542,7 @@ pub mod noncurrent_version_expiration {
             self.noncurrent_days = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration)
+        /// Consumes the builder and constructs a [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration).
         pub fn build(self) -> crate::model::NoncurrentVersionExpiration {
             crate::model::NoncurrentVersionExpiration {
                 noncurrent_days: self.noncurrent_days.unwrap_or_default(),
@@ -2518,7 +2551,7 @@ pub mod noncurrent_version_expiration {
     }
 }
 impl NoncurrentVersionExpiration {
-    /// Creates a new builder-style object to manufacture [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration)
+    /// Creates a new builder-style object to manufacture [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration).
     pub fn builder() -> crate::model::noncurrent_version_expiration::Builder {
         crate::model::noncurrent_version_expiration::Builder::default()
     }
@@ -2529,8 +2562,10 @@ impl NoncurrentVersionExpiration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NoncurrentVersionTransition {
     /// <p>Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action. For information about the noncurrent days calculations, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#non-current-days-calculations"> How Amazon S3 Calculates How Long an Object Has Been Noncurrent</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub noncurrent_days: i32,
     /// <p>The class of storage used to store the object.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::TransitionStorageClass>,
 }
 impl NoncurrentVersionTransition {
@@ -2551,11 +2586,10 @@ impl std::fmt::Debug for NoncurrentVersionTransition {
         formatter.finish()
     }
 }
-/// See [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition)
+/// See [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition).
 pub mod noncurrent_version_transition {
 
-    /// A builder for [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition)
-    #[non_exhaustive]
+    /// A builder for [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) noncurrent_days: std::option::Option<i32>,
@@ -2585,7 +2619,7 @@ pub mod noncurrent_version_transition {
             self.storage_class = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition)
+        /// Consumes the builder and constructs a [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition).
         pub fn build(self) -> crate::model::NoncurrentVersionTransition {
             crate::model::NoncurrentVersionTransition {
                 noncurrent_days: self.noncurrent_days.unwrap_or_default(),
@@ -2595,7 +2629,7 @@ pub mod noncurrent_version_transition {
     }
 }
 impl NoncurrentVersionTransition {
-    /// Creates a new builder-style object to manufacture [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition)
+    /// Creates a new builder-style object to manufacture [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition).
     pub fn builder() -> crate::model::noncurrent_version_transition::Builder {
         crate::model::noncurrent_version_transition::Builder::default()
     }
@@ -2679,10 +2713,13 @@ impl AsRef<str> for TransitionStorageClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Transition {
     /// <p>Indicates when objects are transitioned to the specified storage class. The date value must be in ISO 8601 format. The time is always midnight UTC.</p>
+    #[doc(hidden)]
     pub date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates the number of days after creation when objects are transitioned to the specified storage class. The value must be a positive integer.</p>
+    #[doc(hidden)]
     pub days: i32,
     /// <p>The storage class to which you want the object to transition.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::TransitionStorageClass>,
 }
 impl Transition {
@@ -2708,11 +2745,10 @@ impl std::fmt::Debug for Transition {
         formatter.finish()
     }
 }
-/// See [`Transition`](crate::model::Transition)
+/// See [`Transition`](crate::model::Transition).
 pub mod transition {
 
-    /// A builder for [`Transition`](crate::model::Transition)
-    #[non_exhaustive]
+    /// A builder for [`Transition`](crate::model::Transition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) date: std::option::Option<aws_smithy_types::DateTime>,
@@ -2753,7 +2789,7 @@ pub mod transition {
             self.storage_class = input;
             self
         }
-        /// Consumes the builder and constructs a [`Transition`](crate::model::Transition)
+        /// Consumes the builder and constructs a [`Transition`](crate::model::Transition).
         pub fn build(self) -> crate::model::Transition {
             crate::model::Transition {
                 date: self.date,
@@ -2764,7 +2800,7 @@ pub mod transition {
     }
 }
 impl Transition {
-    /// Creates a new builder-style object to manufacture [`Transition`](crate::model::Transition)
+    /// Creates a new builder-style object to manufacture [`Transition`](crate::model::Transition).
     pub fn builder() -> crate::model::transition::Builder {
         crate::model::transition::Builder::default()
     }
@@ -2832,10 +2868,13 @@ pub struct LifecycleRuleFilter {
     /// <p>Prefix identifying one or more objects to which the rule applies.</p> <important>
     /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
     /// </important>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub tag: std::option::Option<crate::model::S3Tag>,
     /// <p>The container for the <code>AND</code> condition for the lifecycle rule.</p>
+    #[doc(hidden)]
     pub and: std::option::Option<crate::model::LifecycleRuleAndOperator>,
 }
 impl LifecycleRuleFilter {
@@ -2863,11 +2902,10 @@ impl std::fmt::Debug for LifecycleRuleFilter {
         formatter.finish()
     }
 }
-/// See [`LifecycleRuleFilter`](crate::model::LifecycleRuleFilter)
+/// See [`LifecycleRuleFilter`](crate::model::LifecycleRuleFilter).
 pub mod lifecycle_rule_filter {
 
-    /// A builder for [`LifecycleRuleFilter`](crate::model::LifecycleRuleFilter)
-    #[non_exhaustive]
+    /// A builder for [`LifecycleRuleFilter`](crate::model::LifecycleRuleFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prefix: std::option::Option<std::string::String>,
@@ -2912,7 +2950,7 @@ pub mod lifecycle_rule_filter {
             self.and = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecycleRuleFilter`](crate::model::LifecycleRuleFilter)
+        /// Consumes the builder and constructs a [`LifecycleRuleFilter`](crate::model::LifecycleRuleFilter).
         pub fn build(self) -> crate::model::LifecycleRuleFilter {
             crate::model::LifecycleRuleFilter {
                 prefix: self.prefix,
@@ -2923,7 +2961,7 @@ pub mod lifecycle_rule_filter {
     }
 }
 impl LifecycleRuleFilter {
-    /// Creates a new builder-style object to manufacture [`LifecycleRuleFilter`](crate::model::LifecycleRuleFilter)
+    /// Creates a new builder-style object to manufacture [`LifecycleRuleFilter`](crate::model::LifecycleRuleFilter).
     pub fn builder() -> crate::model::lifecycle_rule_filter::Builder {
         crate::model::lifecycle_rule_filter::Builder::default()
     }
@@ -2934,8 +2972,10 @@ impl LifecycleRuleFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecycleRuleAndOperator {
     /// <p>Prefix identifying one or more objects to which the rule applies.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>All of these tags must exist in the object's tag set in order for the rule to apply.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::S3Tag>>,
 }
 impl LifecycleRuleAndOperator {
@@ -2956,11 +2996,10 @@ impl std::fmt::Debug for LifecycleRuleAndOperator {
         formatter.finish()
     }
 }
-/// See [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator)
+/// See [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator).
 pub mod lifecycle_rule_and_operator {
 
-    /// A builder for [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator)
-    #[non_exhaustive]
+    /// A builder for [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prefix: std::option::Option<std::string::String>,
@@ -2996,7 +3035,7 @@ pub mod lifecycle_rule_and_operator {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator)
+        /// Consumes the builder and constructs a [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator).
         pub fn build(self) -> crate::model::LifecycleRuleAndOperator {
             crate::model::LifecycleRuleAndOperator {
                 prefix: self.prefix,
@@ -3006,7 +3045,7 @@ pub mod lifecycle_rule_and_operator {
     }
 }
 impl LifecycleRuleAndOperator {
-    /// Creates a new builder-style object to manufacture [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator)
+    /// Creates a new builder-style object to manufacture [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator).
     pub fn builder() -> crate::model::lifecycle_rule_and_operator::Builder {
         crate::model::lifecycle_rule_and_operator::Builder::default()
     }
@@ -3017,10 +3056,13 @@ impl LifecycleRuleAndOperator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecycleExpiration {
     /// <p>Indicates at what date the object is to be deleted. Should be in GMT ISO 8601 format.</p>
+    #[doc(hidden)]
     pub date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates the lifetime, in days, of the objects that are subject to the rule. The value must be a non-zero positive integer.</p>
+    #[doc(hidden)]
     pub days: i32,
     /// <p>Indicates whether Amazon S3 will remove a delete marker with no noncurrent versions. If set to true, the delete marker will be expired. If set to false, the policy takes no action. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.</p>
+    #[doc(hidden)]
     pub expired_object_delete_marker: bool,
 }
 impl LifecycleExpiration {
@@ -3049,11 +3091,10 @@ impl std::fmt::Debug for LifecycleExpiration {
         formatter.finish()
     }
 }
-/// See [`LifecycleExpiration`](crate::model::LifecycleExpiration)
+/// See [`LifecycleExpiration`](crate::model::LifecycleExpiration).
 pub mod lifecycle_expiration {
 
-    /// A builder for [`LifecycleExpiration`](crate::model::LifecycleExpiration)
-    #[non_exhaustive]
+    /// A builder for [`LifecycleExpiration`](crate::model::LifecycleExpiration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) date: std::option::Option<aws_smithy_types::DateTime>,
@@ -3094,7 +3135,7 @@ pub mod lifecycle_expiration {
             self.expired_object_delete_marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecycleExpiration`](crate::model::LifecycleExpiration)
+        /// Consumes the builder and constructs a [`LifecycleExpiration`](crate::model::LifecycleExpiration).
         pub fn build(self) -> crate::model::LifecycleExpiration {
             crate::model::LifecycleExpiration {
                 date: self.date,
@@ -3105,7 +3146,7 @@ pub mod lifecycle_expiration {
     }
 }
 impl LifecycleExpiration {
-    /// Creates a new builder-style object to manufacture [`LifecycleExpiration`](crate::model::LifecycleExpiration)
+    /// Creates a new builder-style object to manufacture [`LifecycleExpiration`](crate::model::LifecycleExpiration).
     pub fn builder() -> crate::model::lifecycle_expiration::Builder {
         crate::model::lifecycle_expiration::Builder::default()
     }
@@ -3116,13 +3157,17 @@ impl LifecycleExpiration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ObjectLambdaConfiguration {
     /// <p>Standard access point associated with the Object Lambda Access Point.</p>
+    #[doc(hidden)]
     pub supporting_access_point: std::option::Option<std::string::String>,
     /// <p>A container for whether the CloudWatch metrics configuration is enabled.</p>
+    #[doc(hidden)]
     pub cloud_watch_metrics_enabled: bool,
     /// <p>A container for allowed features. Valid inputs are <code>GetObject-Range</code> and <code>GetObject-PartNumber</code>.</p>
+    #[doc(hidden)]
     pub allowed_features:
         std::option::Option<std::vec::Vec<crate::model::ObjectLambdaAllowedFeature>>,
     /// <p>A container for transformation configurations for an Object Lambda Access Point.</p>
+    #[doc(hidden)]
     pub transformation_configurations:
         std::option::Option<std::vec::Vec<crate::model::ObjectLambdaTransformationConfiguration>>,
 }
@@ -3164,11 +3209,10 @@ impl std::fmt::Debug for ObjectLambdaConfiguration {
         formatter.finish()
     }
 }
-/// See [`ObjectLambdaConfiguration`](crate::model::ObjectLambdaConfiguration)
+/// See [`ObjectLambdaConfiguration`](crate::model::ObjectLambdaConfiguration).
 pub mod object_lambda_configuration {
 
-    /// A builder for [`ObjectLambdaConfiguration`](crate::model::ObjectLambdaConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ObjectLambdaConfiguration`](crate::model::ObjectLambdaConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) supporting_access_point: std::option::Option<std::string::String>,
@@ -3246,7 +3290,7 @@ pub mod object_lambda_configuration {
             self.transformation_configurations = input;
             self
         }
-        /// Consumes the builder and constructs a [`ObjectLambdaConfiguration`](crate::model::ObjectLambdaConfiguration)
+        /// Consumes the builder and constructs a [`ObjectLambdaConfiguration`](crate::model::ObjectLambdaConfiguration).
         pub fn build(self) -> crate::model::ObjectLambdaConfiguration {
             crate::model::ObjectLambdaConfiguration {
                 supporting_access_point: self.supporting_access_point,
@@ -3258,7 +3302,7 @@ pub mod object_lambda_configuration {
     }
 }
 impl ObjectLambdaConfiguration {
-    /// Creates a new builder-style object to manufacture [`ObjectLambdaConfiguration`](crate::model::ObjectLambdaConfiguration)
+    /// Creates a new builder-style object to manufacture [`ObjectLambdaConfiguration`](crate::model::ObjectLambdaConfiguration).
     pub fn builder() -> crate::model::object_lambda_configuration::Builder {
         crate::model::object_lambda_configuration::Builder::default()
     }
@@ -3269,10 +3313,12 @@ impl ObjectLambdaConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ObjectLambdaTransformationConfiguration {
     /// <p>A container for the action of an Object Lambda Access Point configuration. Valid input is <code>GetObject</code>.</p>
+    #[doc(hidden)]
     pub actions: std::option::Option<
         std::vec::Vec<crate::model::ObjectLambdaTransformationConfigurationAction>,
     >,
     /// <p>A container for the content transformation of an Object Lambda Access Point configuration.</p>
+    #[doc(hidden)]
     pub content_transformation:
         std::option::Option<crate::model::ObjectLambdaContentTransformation>,
 }
@@ -3298,11 +3344,10 @@ impl std::fmt::Debug for ObjectLambdaTransformationConfiguration {
         formatter.finish()
     }
 }
-/// See [`ObjectLambdaTransformationConfiguration`](crate::model::ObjectLambdaTransformationConfiguration)
+/// See [`ObjectLambdaTransformationConfiguration`](crate::model::ObjectLambdaTransformationConfiguration).
 pub mod object_lambda_transformation_configuration {
 
-    /// A builder for [`ObjectLambdaTransformationConfiguration`](crate::model::ObjectLambdaTransformationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ObjectLambdaTransformationConfiguration`](crate::model::ObjectLambdaTransformationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) actions: std::option::Option<
@@ -3352,7 +3397,7 @@ pub mod object_lambda_transformation_configuration {
             self.content_transformation = input;
             self
         }
-        /// Consumes the builder and constructs a [`ObjectLambdaTransformationConfiguration`](crate::model::ObjectLambdaTransformationConfiguration)
+        /// Consumes the builder and constructs a [`ObjectLambdaTransformationConfiguration`](crate::model::ObjectLambdaTransformationConfiguration).
         pub fn build(self) -> crate::model::ObjectLambdaTransformationConfiguration {
             crate::model::ObjectLambdaTransformationConfiguration {
                 actions: self.actions,
@@ -3362,7 +3407,7 @@ pub mod object_lambda_transformation_configuration {
     }
 }
 impl ObjectLambdaTransformationConfiguration {
-    /// Creates a new builder-style object to manufacture [`ObjectLambdaTransformationConfiguration`](crate::model::ObjectLambdaTransformationConfiguration)
+    /// Creates a new builder-style object to manufacture [`ObjectLambdaTransformationConfiguration`](crate::model::ObjectLambdaTransformationConfiguration).
     pub fn builder() -> crate::model::object_lambda_transformation_configuration::Builder {
         crate::model::object_lambda_transformation_configuration::Builder::default()
     }
@@ -3412,8 +3457,10 @@ impl ObjectLambdaContentTransformation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AwsLambdaTransformation {
     /// <p>The Amazon Resource Name (ARN) of the Lambda function.</p>
+    #[doc(hidden)]
     pub function_arn: std::option::Option<std::string::String>,
     /// <p>Additional JSON that provides supplemental data to the Lambda function used to transform objects.</p>
+    #[doc(hidden)]
     pub function_payload: std::option::Option<std::string::String>,
 }
 impl AwsLambdaTransformation {
@@ -3434,11 +3481,10 @@ impl std::fmt::Debug for AwsLambdaTransformation {
         formatter.finish()
     }
 }
-/// See [`AwsLambdaTransformation`](crate::model::AwsLambdaTransformation)
+/// See [`AwsLambdaTransformation`](crate::model::AwsLambdaTransformation).
 pub mod aws_lambda_transformation {
 
-    /// A builder for [`AwsLambdaTransformation`](crate::model::AwsLambdaTransformation)
-    #[non_exhaustive]
+    /// A builder for [`AwsLambdaTransformation`](crate::model::AwsLambdaTransformation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) function_arn: std::option::Option<std::string::String>,
@@ -3468,7 +3514,7 @@ pub mod aws_lambda_transformation {
             self.function_payload = input;
             self
         }
-        /// Consumes the builder and constructs a [`AwsLambdaTransformation`](crate::model::AwsLambdaTransformation)
+        /// Consumes the builder and constructs a [`AwsLambdaTransformation`](crate::model::AwsLambdaTransformation).
         pub fn build(self) -> crate::model::AwsLambdaTransformation {
             crate::model::AwsLambdaTransformation {
                 function_arn: self.function_arn,
@@ -3478,7 +3524,7 @@ pub mod aws_lambda_transformation {
     }
 }
 impl AwsLambdaTransformation {
-    /// Creates a new builder-style object to manufacture [`AwsLambdaTransformation`](crate::model::AwsLambdaTransformation)
+    /// Creates a new builder-style object to manufacture [`AwsLambdaTransformation`](crate::model::AwsLambdaTransformation).
     pub fn builder() -> crate::model::aws_lambda_transformation::Builder {
         crate::model::aws_lambda_transformation::Builder::default()
     }
@@ -3595,12 +3641,16 @@ impl AsRef<str> for ObjectLambdaAllowedFeature {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListStorageLensConfigurationEntry {
     /// <p>A container for the S3 Storage Lens configuration ID.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The ARN of the S3 Storage Lens configuration. This property is read-only.</p>
+    #[doc(hidden)]
     pub storage_lens_arn: std::option::Option<std::string::String>,
     /// <p>A container for the S3 Storage Lens home Region. Your metrics data is stored and retained in your designated S3 Storage Lens home Region.</p>
+    #[doc(hidden)]
     pub home_region: std::option::Option<std::string::String>,
     /// <p>A container for whether the S3 Storage Lens configuration is enabled. This property is required.</p>
+    #[doc(hidden)]
     pub is_enabled: bool,
 }
 impl ListStorageLensConfigurationEntry {
@@ -3631,11 +3681,10 @@ impl std::fmt::Debug for ListStorageLensConfigurationEntry {
         formatter.finish()
     }
 }
-/// See [`ListStorageLensConfigurationEntry`](crate::model::ListStorageLensConfigurationEntry)
+/// See [`ListStorageLensConfigurationEntry`](crate::model::ListStorageLensConfigurationEntry).
 pub mod list_storage_lens_configuration_entry {
 
-    /// A builder for [`ListStorageLensConfigurationEntry`](crate::model::ListStorageLensConfigurationEntry)
-    #[non_exhaustive]
+    /// A builder for [`ListStorageLensConfigurationEntry`](crate::model::ListStorageLensConfigurationEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3687,7 +3736,7 @@ pub mod list_storage_lens_configuration_entry {
             self.is_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListStorageLensConfigurationEntry`](crate::model::ListStorageLensConfigurationEntry)
+        /// Consumes the builder and constructs a [`ListStorageLensConfigurationEntry`](crate::model::ListStorageLensConfigurationEntry).
         pub fn build(self) -> crate::model::ListStorageLensConfigurationEntry {
             crate::model::ListStorageLensConfigurationEntry {
                 id: self.id,
@@ -3699,7 +3748,7 @@ pub mod list_storage_lens_configuration_entry {
     }
 }
 impl ListStorageLensConfigurationEntry {
-    /// Creates a new builder-style object to manufacture [`ListStorageLensConfigurationEntry`](crate::model::ListStorageLensConfigurationEntry)
+    /// Creates a new builder-style object to manufacture [`ListStorageLensConfigurationEntry`](crate::model::ListStorageLensConfigurationEntry).
     pub fn builder() -> crate::model::list_storage_lens_configuration_entry::Builder {
         crate::model::list_storage_lens_configuration_entry::Builder::default()
     }
@@ -3710,14 +3759,19 @@ impl ListStorageLensConfigurationEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegionalBucket {
     /// <p></p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the regional bucket.</p>
+    #[doc(hidden)]
     pub bucket_arn: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub public_access_block_enabled: bool,
     /// <p>The creation date of the regional bucket</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Outposts ID of the regional bucket.</p>
+    #[doc(hidden)]
     pub outpost_id: std::option::Option<std::string::String>,
 }
 impl RegionalBucket {
@@ -3756,11 +3810,10 @@ impl std::fmt::Debug for RegionalBucket {
         formatter.finish()
     }
 }
-/// See [`RegionalBucket`](crate::model::RegionalBucket)
+/// See [`RegionalBucket`](crate::model::RegionalBucket).
 pub mod regional_bucket {
 
-    /// A builder for [`RegionalBucket`](crate::model::RegionalBucket)
-    #[non_exhaustive]
+    /// A builder for [`RegionalBucket`](crate::model::RegionalBucket).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -3823,7 +3876,7 @@ pub mod regional_bucket {
             self.outpost_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegionalBucket`](crate::model::RegionalBucket)
+        /// Consumes the builder and constructs a [`RegionalBucket`](crate::model::RegionalBucket).
         pub fn build(self) -> crate::model::RegionalBucket {
             crate::model::RegionalBucket {
                 bucket: self.bucket,
@@ -3836,7 +3889,7 @@ pub mod regional_bucket {
     }
 }
 impl RegionalBucket {
-    /// Creates a new builder-style object to manufacture [`RegionalBucket`](crate::model::RegionalBucket)
+    /// Creates a new builder-style object to manufacture [`RegionalBucket`](crate::model::RegionalBucket).
     pub fn builder() -> crate::model::regional_bucket::Builder {
         crate::model::regional_bucket::Builder::default()
     }
@@ -3847,18 +3900,24 @@ impl RegionalBucket {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MultiRegionAccessPointReport {
     /// <p>The name of the Multi-Region Access Point.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The alias for the Multi-Region Access Point. For more information about the distinction between the name and the alias of an Multi-Region Access Point, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CreatingMultiRegionAccessPoints.html#multi-region-access-point-naming">Managing Multi-Region Access Points</a>.</p>
+    #[doc(hidden)]
     pub alias: std::option::Option<std::string::String>,
     /// <p>When the Multi-Region Access Point create request was received.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The <code>PublicAccessBlock</code> configuration that you want to apply to this Amazon S3 account. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status">The Meaning of "Public"</a> in the <i>Amazon S3 User Guide</i>.</p>
     /// <p>This is not supported for Amazon S3 on Outposts.</p>
+    #[doc(hidden)]
     pub public_access_block: std::option::Option<crate::model::PublicAccessBlockConfiguration>,
     /// <p>The current status of the Multi-Region Access Point.</p>
     /// <p> <code>CREATING</code> and <code>DELETING</code> are temporary states that exist while the request is propogating and being completed. If a Multi-Region Access Point has a status of <code>PARTIALLY_CREATED</code>, you can retry creation or send a request to delete the Multi-Region Access Point. If a Multi-Region Access Point has a status of <code>PARTIALLY_DELETED</code>, you can retry a delete request to finish the deletion of the Multi-Region Access Point.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::MultiRegionAccessPointStatus>,
     /// <p>A collection of the Regions and buckets associated with the Multi-Region Access Point.</p>
+    #[doc(hidden)]
     pub regions: std::option::Option<std::vec::Vec<crate::model::RegionReport>>,
 }
 impl MultiRegionAccessPointReport {
@@ -3903,11 +3962,10 @@ impl std::fmt::Debug for MultiRegionAccessPointReport {
         formatter.finish()
     }
 }
-/// See [`MultiRegionAccessPointReport`](crate::model::MultiRegionAccessPointReport)
+/// See [`MultiRegionAccessPointReport`](crate::model::MultiRegionAccessPointReport).
 pub mod multi_region_access_point_report {
 
-    /// A builder for [`MultiRegionAccessPointReport`](crate::model::MultiRegionAccessPointReport)
-    #[non_exhaustive]
+    /// A builder for [`MultiRegionAccessPointReport`](crate::model::MultiRegionAccessPointReport).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4004,7 +4062,7 @@ pub mod multi_region_access_point_report {
             self.regions = input;
             self
         }
-        /// Consumes the builder and constructs a [`MultiRegionAccessPointReport`](crate::model::MultiRegionAccessPointReport)
+        /// Consumes the builder and constructs a [`MultiRegionAccessPointReport`](crate::model::MultiRegionAccessPointReport).
         pub fn build(self) -> crate::model::MultiRegionAccessPointReport {
             crate::model::MultiRegionAccessPointReport {
                 name: self.name,
@@ -4018,7 +4076,7 @@ pub mod multi_region_access_point_report {
     }
 }
 impl MultiRegionAccessPointReport {
-    /// Creates a new builder-style object to manufacture [`MultiRegionAccessPointReport`](crate::model::MultiRegionAccessPointReport)
+    /// Creates a new builder-style object to manufacture [`MultiRegionAccessPointReport`](crate::model::MultiRegionAccessPointReport).
     pub fn builder() -> crate::model::multi_region_access_point_report::Builder {
         crate::model::multi_region_access_point_report::Builder::default()
     }
@@ -4029,8 +4087,10 @@ impl MultiRegionAccessPointReport {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegionReport {
     /// <p>The name of the bucket.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The name of the Region.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
 }
 impl RegionReport {
@@ -4051,11 +4111,10 @@ impl std::fmt::Debug for RegionReport {
         formatter.finish()
     }
 }
-/// See [`RegionReport`](crate::model::RegionReport)
+/// See [`RegionReport`](crate::model::RegionReport).
 pub mod region_report {
 
-    /// A builder for [`RegionReport`](crate::model::RegionReport)
-    #[non_exhaustive]
+    /// A builder for [`RegionReport`](crate::model::RegionReport).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -4082,7 +4141,7 @@ pub mod region_report {
             self.region = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegionReport`](crate::model::RegionReport)
+        /// Consumes the builder and constructs a [`RegionReport`](crate::model::RegionReport).
         pub fn build(self) -> crate::model::RegionReport {
             crate::model::RegionReport {
                 bucket: self.bucket,
@@ -4092,7 +4151,7 @@ pub mod region_report {
     }
 }
 impl RegionReport {
-    /// Creates a new builder-style object to manufacture [`RegionReport`](crate::model::RegionReport)
+    /// Creates a new builder-style object to manufacture [`RegionReport`](crate::model::RegionReport).
     pub fn builder() -> crate::model::region_report::Builder {
         crate::model::region_report::Builder::default()
     }
@@ -4185,20 +4244,28 @@ impl AsRef<str> for MultiRegionAccessPointStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobListDescriptor {
     /// <p>The ID for the specified job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The user-specified description that was included in the specified job's <code>Create Job</code> request.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The operation that the specified job is configured to run on every object listed in the manifest.</p>
+    #[doc(hidden)]
     pub operation: std::option::Option<crate::model::OperationName>,
     /// <p>The current priority for the specified job.</p>
+    #[doc(hidden)]
     pub priority: i32,
     /// <p>The specified job's current status.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobStatus>,
     /// <p>A timestamp indicating when the specified job was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp indicating when the specified job terminated. A job's termination date is the date and time when it succeeded, failed, or was canceled.</p>
+    #[doc(hidden)]
     pub termination_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Describes the total number of tasks that the specified job has run, the number of tasks that succeeded, and the number of tasks that failed.</p>
+    #[doc(hidden)]
     pub progress_summary: std::option::Option<crate::model::JobProgressSummary>,
 }
 impl JobListDescriptor {
@@ -4249,11 +4316,10 @@ impl std::fmt::Debug for JobListDescriptor {
         formatter.finish()
     }
 }
-/// See [`JobListDescriptor`](crate::model::JobListDescriptor)
+/// See [`JobListDescriptor`](crate::model::JobListDescriptor).
 pub mod job_list_descriptor {
 
-    /// A builder for [`JobListDescriptor`](crate::model::JobListDescriptor)
-    #[non_exhaustive]
+    /// A builder for [`JobListDescriptor`](crate::model::JobListDescriptor).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -4358,7 +4424,7 @@ pub mod job_list_descriptor {
             self.progress_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobListDescriptor`](crate::model::JobListDescriptor)
+        /// Consumes the builder and constructs a [`JobListDescriptor`](crate::model::JobListDescriptor).
         pub fn build(self) -> crate::model::JobListDescriptor {
             crate::model::JobListDescriptor {
                 job_id: self.job_id,
@@ -4374,7 +4440,7 @@ pub mod job_list_descriptor {
     }
 }
 impl JobListDescriptor {
-    /// Creates a new builder-style object to manufacture [`JobListDescriptor`](crate::model::JobListDescriptor)
+    /// Creates a new builder-style object to manufacture [`JobListDescriptor`](crate::model::JobListDescriptor).
     pub fn builder() -> crate::model::job_list_descriptor::Builder {
         crate::model::job_list_descriptor::Builder::default()
     }
@@ -4385,12 +4451,16 @@ impl JobListDescriptor {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobProgressSummary {
     /// <p></p>
+    #[doc(hidden)]
     pub total_number_of_tasks: std::option::Option<i64>,
     /// <p></p>
+    #[doc(hidden)]
     pub number_of_tasks_succeeded: std::option::Option<i64>,
     /// <p></p>
+    #[doc(hidden)]
     pub number_of_tasks_failed: std::option::Option<i64>,
     /// <p>The JobTimers attribute of a job's progress summary.</p>
+    #[doc(hidden)]
     pub timers: std::option::Option<crate::model::JobTimers>,
 }
 impl JobProgressSummary {
@@ -4421,11 +4491,10 @@ impl std::fmt::Debug for JobProgressSummary {
         formatter.finish()
     }
 }
-/// See [`JobProgressSummary`](crate::model::JobProgressSummary)
+/// See [`JobProgressSummary`](crate::model::JobProgressSummary).
 pub mod job_progress_summary {
 
-    /// A builder for [`JobProgressSummary`](crate::model::JobProgressSummary)
-    #[non_exhaustive]
+    /// A builder for [`JobProgressSummary`](crate::model::JobProgressSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_number_of_tasks: std::option::Option<i64>,
@@ -4474,7 +4543,7 @@ pub mod job_progress_summary {
             self.timers = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobProgressSummary`](crate::model::JobProgressSummary)
+        /// Consumes the builder and constructs a [`JobProgressSummary`](crate::model::JobProgressSummary).
         pub fn build(self) -> crate::model::JobProgressSummary {
             crate::model::JobProgressSummary {
                 total_number_of_tasks: self.total_number_of_tasks,
@@ -4486,7 +4555,7 @@ pub mod job_progress_summary {
     }
 }
 impl JobProgressSummary {
-    /// Creates a new builder-style object to manufacture [`JobProgressSummary`](crate::model::JobProgressSummary)
+    /// Creates a new builder-style object to manufacture [`JobProgressSummary`](crate::model::JobProgressSummary).
     pub fn builder() -> crate::model::job_progress_summary::Builder {
         crate::model::job_progress_summary::Builder::default()
     }
@@ -4497,6 +4566,7 @@ impl JobProgressSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobTimers {
     /// <p>Indicates the elapsed time in seconds the job has been in the Active job state.</p>
+    #[doc(hidden)]
     pub elapsed_time_in_active_seconds: std::option::Option<i64>,
 }
 impl JobTimers {
@@ -4515,11 +4585,10 @@ impl std::fmt::Debug for JobTimers {
         formatter.finish()
     }
 }
-/// See [`JobTimers`](crate::model::JobTimers)
+/// See [`JobTimers`](crate::model::JobTimers).
 pub mod job_timers {
 
-    /// A builder for [`JobTimers`](crate::model::JobTimers)
-    #[non_exhaustive]
+    /// A builder for [`JobTimers`](crate::model::JobTimers).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) elapsed_time_in_active_seconds: std::option::Option<i64>,
@@ -4538,7 +4607,7 @@ pub mod job_timers {
             self.elapsed_time_in_active_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobTimers`](crate::model::JobTimers)
+        /// Consumes the builder and constructs a [`JobTimers`](crate::model::JobTimers).
         pub fn build(self) -> crate::model::JobTimers {
             crate::model::JobTimers {
                 elapsed_time_in_active_seconds: self.elapsed_time_in_active_seconds,
@@ -4547,7 +4616,7 @@ pub mod job_timers {
     }
 }
 impl JobTimers {
-    /// Creates a new builder-style object to manufacture [`JobTimers`](crate::model::JobTimers)
+    /// Creates a new builder-style object to manufacture [`JobTimers`](crate::model::JobTimers).
     pub fn builder() -> crate::model::job_timers::Builder {
         crate::model::job_timers::Builder::default()
     }
@@ -4651,8 +4720,10 @@ impl AsRef<str> for OperationName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ObjectLambdaAccessPoint {
     /// <p>The name of the Object Lambda Access Point.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Specifies the ARN for the Object Lambda Access Point.</p>
+    #[doc(hidden)]
     pub object_lambda_access_point_arn: std::option::Option<std::string::String>,
 }
 impl ObjectLambdaAccessPoint {
@@ -4676,11 +4747,10 @@ impl std::fmt::Debug for ObjectLambdaAccessPoint {
         formatter.finish()
     }
 }
-/// See [`ObjectLambdaAccessPoint`](crate::model::ObjectLambdaAccessPoint)
+/// See [`ObjectLambdaAccessPoint`](crate::model::ObjectLambdaAccessPoint).
 pub mod object_lambda_access_point {
 
-    /// A builder for [`ObjectLambdaAccessPoint`](crate::model::ObjectLambdaAccessPoint)
-    #[non_exhaustive]
+    /// A builder for [`ObjectLambdaAccessPoint`](crate::model::ObjectLambdaAccessPoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4713,7 +4783,7 @@ pub mod object_lambda_access_point {
             self.object_lambda_access_point_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ObjectLambdaAccessPoint`](crate::model::ObjectLambdaAccessPoint)
+        /// Consumes the builder and constructs a [`ObjectLambdaAccessPoint`](crate::model::ObjectLambdaAccessPoint).
         pub fn build(self) -> crate::model::ObjectLambdaAccessPoint {
             crate::model::ObjectLambdaAccessPoint {
                 name: self.name,
@@ -4723,7 +4793,7 @@ pub mod object_lambda_access_point {
     }
 }
 impl ObjectLambdaAccessPoint {
-    /// Creates a new builder-style object to manufacture [`ObjectLambdaAccessPoint`](crate::model::ObjectLambdaAccessPoint)
+    /// Creates a new builder-style object to manufacture [`ObjectLambdaAccessPoint`](crate::model::ObjectLambdaAccessPoint).
     pub fn builder() -> crate::model::object_lambda_access_point::Builder {
         crate::model::object_lambda_access_point::Builder::default()
     }
@@ -4734,18 +4804,24 @@ impl ObjectLambdaAccessPoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessPoint {
     /// <p>The name of this access point.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Indicates whether this access point allows access from the public internet. If <code>VpcConfiguration</code> is specified for this access point, then <code>NetworkOrigin</code> is <code>VPC</code>, and the access point doesn't allow access from the public internet. Otherwise, <code>NetworkOrigin</code> is <code>Internet</code>, and the access point allows access from the public internet, subject to the access point and bucket access policies.</p>
+    #[doc(hidden)]
     pub network_origin: std::option::Option<crate::model::NetworkOrigin>,
     /// <p>The virtual private cloud (VPC) configuration for this access point, if one exists.</p> <note>
     /// <p>This element is empty if this access point is an Amazon S3 on Outposts access point that is used by other Amazon Web Services.</p>
     /// </note>
+    #[doc(hidden)]
     pub vpc_configuration: std::option::Option<crate::model::VpcConfiguration>,
     /// <p>The name of the bucket associated with this access point.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The ARN for the access point.</p>
+    #[doc(hidden)]
     pub access_point_arn: std::option::Option<std::string::String>,
     /// <p>The name or alias of the access point.</p>
+    #[doc(hidden)]
     pub alias: std::option::Option<std::string::String>,
 }
 impl AccessPoint {
@@ -4788,11 +4864,10 @@ impl std::fmt::Debug for AccessPoint {
         formatter.finish()
     }
 }
-/// See [`AccessPoint`](crate::model::AccessPoint)
+/// See [`AccessPoint`](crate::model::AccessPoint).
 pub mod access_point {
 
-    /// A builder for [`AccessPoint`](crate::model::AccessPoint)
-    #[non_exhaustive]
+    /// A builder for [`AccessPoint`](crate::model::AccessPoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4876,7 +4951,7 @@ pub mod access_point {
             self.alias = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessPoint`](crate::model::AccessPoint)
+        /// Consumes the builder and constructs a [`AccessPoint`](crate::model::AccessPoint).
         pub fn build(self) -> crate::model::AccessPoint {
             crate::model::AccessPoint {
                 name: self.name,
@@ -4890,7 +4965,7 @@ pub mod access_point {
     }
 }
 impl AccessPoint {
-    /// Creates a new builder-style object to manufacture [`AccessPoint`](crate::model::AccessPoint)
+    /// Creates a new builder-style object to manufacture [`AccessPoint`](crate::model::AccessPoint).
     pub fn builder() -> crate::model::access_point::Builder {
         crate::model::access_point::Builder::default()
     }
@@ -4901,6 +4976,7 @@ impl AccessPoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcConfiguration {
     /// <p>If this field is specified, this access point will only allow connections from the specified VPC ID.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
 }
 impl VpcConfiguration {
@@ -4916,11 +4992,10 @@ impl std::fmt::Debug for VpcConfiguration {
         formatter.finish()
     }
 }
-/// See [`VpcConfiguration`](crate::model::VpcConfiguration)
+/// See [`VpcConfiguration`](crate::model::VpcConfiguration).
 pub mod vpc_configuration {
 
-    /// A builder for [`VpcConfiguration`](crate::model::VpcConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`VpcConfiguration`](crate::model::VpcConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_id: std::option::Option<std::string::String>,
@@ -4936,7 +5011,7 @@ pub mod vpc_configuration {
             self.vpc_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcConfiguration`](crate::model::VpcConfiguration)
+        /// Consumes the builder and constructs a [`VpcConfiguration`](crate::model::VpcConfiguration).
         pub fn build(self) -> crate::model::VpcConfiguration {
             crate::model::VpcConfiguration {
                 vpc_id: self.vpc_id,
@@ -4945,7 +5020,7 @@ pub mod vpc_configuration {
     }
 }
 impl VpcConfiguration {
-    /// Creates a new builder-style object to manufacture [`VpcConfiguration`](crate::model::VpcConfiguration)
+    /// Creates a new builder-style object to manufacture [`VpcConfiguration`](crate::model::VpcConfiguration).
     pub fn builder() -> crate::model::vpc_configuration::Builder {
         crate::model::vpc_configuration::Builder::default()
     }
@@ -5011,6 +5086,7 @@ impl AsRef<str> for NetworkOrigin {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyStatus {
     /// <p></p>
+    #[doc(hidden)]
     pub is_public: bool,
 }
 impl PolicyStatus {
@@ -5026,11 +5102,10 @@ impl std::fmt::Debug for PolicyStatus {
         formatter.finish()
     }
 }
-/// See [`PolicyStatus`](crate::model::PolicyStatus)
+/// See [`PolicyStatus`](crate::model::PolicyStatus).
 pub mod policy_status {
 
-    /// A builder for [`PolicyStatus`](crate::model::PolicyStatus)
-    #[non_exhaustive]
+    /// A builder for [`PolicyStatus`](crate::model::PolicyStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_public: std::option::Option<bool>,
@@ -5046,7 +5121,7 @@ pub mod policy_status {
             self.is_public = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyStatus`](crate::model::PolicyStatus)
+        /// Consumes the builder and constructs a [`PolicyStatus`](crate::model::PolicyStatus).
         pub fn build(self) -> crate::model::PolicyStatus {
             crate::model::PolicyStatus {
                 is_public: self.is_public.unwrap_or_default(),
@@ -5055,7 +5130,7 @@ pub mod policy_status {
     }
 }
 impl PolicyStatus {
-    /// Creates a new builder-style object to manufacture [`PolicyStatus`](crate::model::PolicyStatus)
+    /// Creates a new builder-style object to manufacture [`PolicyStatus`](crate::model::PolicyStatus).
     pub fn builder() -> crate::model::policy_status::Builder {
         crate::model::policy_status::Builder::default()
     }
@@ -5067,8 +5142,10 @@ impl PolicyStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MultiRegionAccessPointPolicyDocument {
     /// <p>The last established policy for the Multi-Region Access Point.</p>
+    #[doc(hidden)]
     pub established: std::option::Option<crate::model::EstablishedMultiRegionAccessPointPolicy>,
     /// <p>The proposed policy for the Multi-Region Access Point.</p>
+    #[doc(hidden)]
     pub proposed: std::option::Option<crate::model::ProposedMultiRegionAccessPointPolicy>,
 }
 impl MultiRegionAccessPointPolicyDocument {
@@ -5093,11 +5170,10 @@ impl std::fmt::Debug for MultiRegionAccessPointPolicyDocument {
         formatter.finish()
     }
 }
-/// See [`MultiRegionAccessPointPolicyDocument`](crate::model::MultiRegionAccessPointPolicyDocument)
+/// See [`MultiRegionAccessPointPolicyDocument`](crate::model::MultiRegionAccessPointPolicyDocument).
 pub mod multi_region_access_point_policy_document {
 
-    /// A builder for [`MultiRegionAccessPointPolicyDocument`](crate::model::MultiRegionAccessPointPolicyDocument)
-    #[non_exhaustive]
+    /// A builder for [`MultiRegionAccessPointPolicyDocument`](crate::model::MultiRegionAccessPointPolicyDocument).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) established:
@@ -5138,7 +5214,7 @@ pub mod multi_region_access_point_policy_document {
             self.proposed = input;
             self
         }
-        /// Consumes the builder and constructs a [`MultiRegionAccessPointPolicyDocument`](crate::model::MultiRegionAccessPointPolicyDocument)
+        /// Consumes the builder and constructs a [`MultiRegionAccessPointPolicyDocument`](crate::model::MultiRegionAccessPointPolicyDocument).
         pub fn build(self) -> crate::model::MultiRegionAccessPointPolicyDocument {
             crate::model::MultiRegionAccessPointPolicyDocument {
                 established: self.established,
@@ -5148,7 +5224,7 @@ pub mod multi_region_access_point_policy_document {
     }
 }
 impl MultiRegionAccessPointPolicyDocument {
-    /// Creates a new builder-style object to manufacture [`MultiRegionAccessPointPolicyDocument`](crate::model::MultiRegionAccessPointPolicyDocument)
+    /// Creates a new builder-style object to manufacture [`MultiRegionAccessPointPolicyDocument`](crate::model::MultiRegionAccessPointPolicyDocument).
     pub fn builder() -> crate::model::multi_region_access_point_policy_document::Builder {
         crate::model::multi_region_access_point_policy_document::Builder::default()
     }
@@ -5160,6 +5236,7 @@ impl MultiRegionAccessPointPolicyDocument {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProposedMultiRegionAccessPointPolicy {
     /// <p>The details of the proposed policy.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl ProposedMultiRegionAccessPointPolicy {
@@ -5175,11 +5252,10 @@ impl std::fmt::Debug for ProposedMultiRegionAccessPointPolicy {
         formatter.finish()
     }
 }
-/// See [`ProposedMultiRegionAccessPointPolicy`](crate::model::ProposedMultiRegionAccessPointPolicy)
+/// See [`ProposedMultiRegionAccessPointPolicy`](crate::model::ProposedMultiRegionAccessPointPolicy).
 pub mod proposed_multi_region_access_point_policy {
 
-    /// A builder for [`ProposedMultiRegionAccessPointPolicy`](crate::model::ProposedMultiRegionAccessPointPolicy)
-    #[non_exhaustive]
+    /// A builder for [`ProposedMultiRegionAccessPointPolicy`](crate::model::ProposedMultiRegionAccessPointPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<std::string::String>,
@@ -5195,7 +5271,7 @@ pub mod proposed_multi_region_access_point_policy {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProposedMultiRegionAccessPointPolicy`](crate::model::ProposedMultiRegionAccessPointPolicy)
+        /// Consumes the builder and constructs a [`ProposedMultiRegionAccessPointPolicy`](crate::model::ProposedMultiRegionAccessPointPolicy).
         pub fn build(self) -> crate::model::ProposedMultiRegionAccessPointPolicy {
             crate::model::ProposedMultiRegionAccessPointPolicy {
                 policy: self.policy,
@@ -5204,7 +5280,7 @@ pub mod proposed_multi_region_access_point_policy {
     }
 }
 impl ProposedMultiRegionAccessPointPolicy {
-    /// Creates a new builder-style object to manufacture [`ProposedMultiRegionAccessPointPolicy`](crate::model::ProposedMultiRegionAccessPointPolicy)
+    /// Creates a new builder-style object to manufacture [`ProposedMultiRegionAccessPointPolicy`](crate::model::ProposedMultiRegionAccessPointPolicy).
     pub fn builder() -> crate::model::proposed_multi_region_access_point_policy::Builder {
         crate::model::proposed_multi_region_access_point_policy::Builder::default()
     }
@@ -5216,6 +5292,7 @@ impl ProposedMultiRegionAccessPointPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EstablishedMultiRegionAccessPointPolicy {
     /// <p>The details of the last established policy.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl EstablishedMultiRegionAccessPointPolicy {
@@ -5231,11 +5308,10 @@ impl std::fmt::Debug for EstablishedMultiRegionAccessPointPolicy {
         formatter.finish()
     }
 }
-/// See [`EstablishedMultiRegionAccessPointPolicy`](crate::model::EstablishedMultiRegionAccessPointPolicy)
+/// See [`EstablishedMultiRegionAccessPointPolicy`](crate::model::EstablishedMultiRegionAccessPointPolicy).
 pub mod established_multi_region_access_point_policy {
 
-    /// A builder for [`EstablishedMultiRegionAccessPointPolicy`](crate::model::EstablishedMultiRegionAccessPointPolicy)
-    #[non_exhaustive]
+    /// A builder for [`EstablishedMultiRegionAccessPointPolicy`](crate::model::EstablishedMultiRegionAccessPointPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<std::string::String>,
@@ -5251,7 +5327,7 @@ pub mod established_multi_region_access_point_policy {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`EstablishedMultiRegionAccessPointPolicy`](crate::model::EstablishedMultiRegionAccessPointPolicy)
+        /// Consumes the builder and constructs a [`EstablishedMultiRegionAccessPointPolicy`](crate::model::EstablishedMultiRegionAccessPointPolicy).
         pub fn build(self) -> crate::model::EstablishedMultiRegionAccessPointPolicy {
             crate::model::EstablishedMultiRegionAccessPointPolicy {
                 policy: self.policy,
@@ -5260,7 +5336,7 @@ pub mod established_multi_region_access_point_policy {
     }
 }
 impl EstablishedMultiRegionAccessPointPolicy {
-    /// Creates a new builder-style object to manufacture [`EstablishedMultiRegionAccessPointPolicy`](crate::model::EstablishedMultiRegionAccessPointPolicy)
+    /// Creates a new builder-style object to manufacture [`EstablishedMultiRegionAccessPointPolicy`](crate::model::EstablishedMultiRegionAccessPointPolicy).
     pub fn builder() -> crate::model::established_multi_region_access_point_policy::Builder {
         crate::model::established_multi_region_access_point_policy::Builder::default()
     }
@@ -5271,16 +5347,22 @@ impl EstablishedMultiRegionAccessPointPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AsyncOperation {
     /// <p>The time that the request was sent to the service.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The specific operation for the asynchronous request.</p>
+    #[doc(hidden)]
     pub operation: std::option::Option<crate::model::AsyncOperationName>,
     /// <p>The request token associated with the request.</p>
+    #[doc(hidden)]
     pub request_token_arn: std::option::Option<std::string::String>,
     /// <p>The parameters associated with the request.</p>
+    #[doc(hidden)]
     pub request_parameters: std::option::Option<crate::model::AsyncRequestParameters>,
     /// <p>The current status of the request.</p>
+    #[doc(hidden)]
     pub request_status: std::option::Option<std::string::String>,
     /// <p>The details of the response.</p>
+    #[doc(hidden)]
     pub response_details: std::option::Option<crate::model::AsyncResponseDetails>,
 }
 impl AsyncOperation {
@@ -5321,11 +5403,10 @@ impl std::fmt::Debug for AsyncOperation {
         formatter.finish()
     }
 }
-/// See [`AsyncOperation`](crate::model::AsyncOperation)
+/// See [`AsyncOperation`](crate::model::AsyncOperation).
 pub mod async_operation {
 
-    /// A builder for [`AsyncOperation`](crate::model::AsyncOperation)
-    #[non_exhaustive]
+    /// A builder for [`AsyncOperation`](crate::model::AsyncOperation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -5414,7 +5495,7 @@ pub mod async_operation {
             self.response_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`AsyncOperation`](crate::model::AsyncOperation)
+        /// Consumes the builder and constructs a [`AsyncOperation`](crate::model::AsyncOperation).
         pub fn build(self) -> crate::model::AsyncOperation {
             crate::model::AsyncOperation {
                 creation_time: self.creation_time,
@@ -5428,7 +5509,7 @@ pub mod async_operation {
     }
 }
 impl AsyncOperation {
-    /// Creates a new builder-style object to manufacture [`AsyncOperation`](crate::model::AsyncOperation)
+    /// Creates a new builder-style object to manufacture [`AsyncOperation`](crate::model::AsyncOperation).
     pub fn builder() -> crate::model::async_operation::Builder {
         crate::model::async_operation::Builder::default()
     }
@@ -5439,9 +5520,11 @@ impl AsyncOperation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AsyncResponseDetails {
     /// <p>The details for the Multi-Region Access Point.</p>
+    #[doc(hidden)]
     pub multi_region_access_point_details:
         std::option::Option<crate::model::MultiRegionAccessPointsAsyncResponse>,
     /// <p>Error details for an asynchronous request.</p>
+    #[doc(hidden)]
     pub error_details: std::option::Option<crate::model::AsyncErrorDetails>,
 }
 impl AsyncResponseDetails {
@@ -5467,11 +5550,10 @@ impl std::fmt::Debug for AsyncResponseDetails {
         formatter.finish()
     }
 }
-/// See [`AsyncResponseDetails`](crate::model::AsyncResponseDetails)
+/// See [`AsyncResponseDetails`](crate::model::AsyncResponseDetails).
 pub mod async_response_details {
 
-    /// A builder for [`AsyncResponseDetails`](crate::model::AsyncResponseDetails)
-    #[non_exhaustive]
+    /// A builder for [`AsyncResponseDetails`](crate::model::AsyncResponseDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) multi_region_access_point_details:
@@ -5508,7 +5590,7 @@ pub mod async_response_details {
             self.error_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`AsyncResponseDetails`](crate::model::AsyncResponseDetails)
+        /// Consumes the builder and constructs a [`AsyncResponseDetails`](crate::model::AsyncResponseDetails).
         pub fn build(self) -> crate::model::AsyncResponseDetails {
             crate::model::AsyncResponseDetails {
                 multi_region_access_point_details: self.multi_region_access_point_details,
@@ -5518,7 +5600,7 @@ pub mod async_response_details {
     }
 }
 impl AsyncResponseDetails {
-    /// Creates a new builder-style object to manufacture [`AsyncResponseDetails`](crate::model::AsyncResponseDetails)
+    /// Creates a new builder-style object to manufacture [`AsyncResponseDetails`](crate::model::AsyncResponseDetails).
     pub fn builder() -> crate::model::async_response_details::Builder {
         crate::model::async_response_details::Builder::default()
     }
@@ -5529,12 +5611,16 @@ impl AsyncResponseDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AsyncErrorDetails {
     /// <p>A string that uniquely identifies the error condition.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>A generic descritpion of the error condition in English.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The identifier of the resource associated with the error.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>The ID of the request associated with the error.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
 }
 impl AsyncErrorDetails {
@@ -5565,11 +5651,10 @@ impl std::fmt::Debug for AsyncErrorDetails {
         formatter.finish()
     }
 }
-/// See [`AsyncErrorDetails`](crate::model::AsyncErrorDetails)
+/// See [`AsyncErrorDetails`](crate::model::AsyncErrorDetails).
 pub mod async_error_details {
 
-    /// A builder for [`AsyncErrorDetails`](crate::model::AsyncErrorDetails)
-    #[non_exhaustive]
+    /// A builder for [`AsyncErrorDetails`](crate::model::AsyncErrorDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<std::string::String>,
@@ -5618,7 +5703,7 @@ pub mod async_error_details {
             self.request_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`AsyncErrorDetails`](crate::model::AsyncErrorDetails)
+        /// Consumes the builder and constructs a [`AsyncErrorDetails`](crate::model::AsyncErrorDetails).
         pub fn build(self) -> crate::model::AsyncErrorDetails {
             crate::model::AsyncErrorDetails {
                 code: self.code,
@@ -5630,7 +5715,7 @@ pub mod async_error_details {
     }
 }
 impl AsyncErrorDetails {
-    /// Creates a new builder-style object to manufacture [`AsyncErrorDetails`](crate::model::AsyncErrorDetails)
+    /// Creates a new builder-style object to manufacture [`AsyncErrorDetails`](crate::model::AsyncErrorDetails).
     pub fn builder() -> crate::model::async_error_details::Builder {
         crate::model::async_error_details::Builder::default()
     }
@@ -5641,6 +5726,7 @@ impl AsyncErrorDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MultiRegionAccessPointsAsyncResponse {
     /// <p>A collection of status information for the different Regions that a Multi-Region Access Point supports.</p>
+    #[doc(hidden)]
     pub regions:
         std::option::Option<std::vec::Vec<crate::model::MultiRegionAccessPointRegionalResponse>>,
 }
@@ -5659,11 +5745,10 @@ impl std::fmt::Debug for MultiRegionAccessPointsAsyncResponse {
         formatter.finish()
     }
 }
-/// See [`MultiRegionAccessPointsAsyncResponse`](crate::model::MultiRegionAccessPointsAsyncResponse)
+/// See [`MultiRegionAccessPointsAsyncResponse`](crate::model::MultiRegionAccessPointsAsyncResponse).
 pub mod multi_region_access_points_async_response {
 
-    /// A builder for [`MultiRegionAccessPointsAsyncResponse`](crate::model::MultiRegionAccessPointsAsyncResponse)
-    #[non_exhaustive]
+    /// A builder for [`MultiRegionAccessPointsAsyncResponse`](crate::model::MultiRegionAccessPointsAsyncResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) regions: std::option::Option<
@@ -5695,7 +5780,7 @@ pub mod multi_region_access_points_async_response {
             self.regions = input;
             self
         }
-        /// Consumes the builder and constructs a [`MultiRegionAccessPointsAsyncResponse`](crate::model::MultiRegionAccessPointsAsyncResponse)
+        /// Consumes the builder and constructs a [`MultiRegionAccessPointsAsyncResponse`](crate::model::MultiRegionAccessPointsAsyncResponse).
         pub fn build(self) -> crate::model::MultiRegionAccessPointsAsyncResponse {
             crate::model::MultiRegionAccessPointsAsyncResponse {
                 regions: self.regions,
@@ -5704,7 +5789,7 @@ pub mod multi_region_access_points_async_response {
     }
 }
 impl MultiRegionAccessPointsAsyncResponse {
-    /// Creates a new builder-style object to manufacture [`MultiRegionAccessPointsAsyncResponse`](crate::model::MultiRegionAccessPointsAsyncResponse)
+    /// Creates a new builder-style object to manufacture [`MultiRegionAccessPointsAsyncResponse`](crate::model::MultiRegionAccessPointsAsyncResponse).
     pub fn builder() -> crate::model::multi_region_access_points_async_response::Builder {
         crate::model::multi_region_access_points_async_response::Builder::default()
     }
@@ -5715,8 +5800,10 @@ impl MultiRegionAccessPointsAsyncResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MultiRegionAccessPointRegionalResponse {
     /// <p>The name of the Region in the Multi-Region Access Point.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The current status of the Multi-Region Access Point in this Region.</p>
+    #[doc(hidden)]
     pub request_status: std::option::Option<std::string::String>,
 }
 impl MultiRegionAccessPointRegionalResponse {
@@ -5737,11 +5824,10 @@ impl std::fmt::Debug for MultiRegionAccessPointRegionalResponse {
         formatter.finish()
     }
 }
-/// See [`MultiRegionAccessPointRegionalResponse`](crate::model::MultiRegionAccessPointRegionalResponse)
+/// See [`MultiRegionAccessPointRegionalResponse`](crate::model::MultiRegionAccessPointRegionalResponse).
 pub mod multi_region_access_point_regional_response {
 
-    /// A builder for [`MultiRegionAccessPointRegionalResponse`](crate::model::MultiRegionAccessPointRegionalResponse)
-    #[non_exhaustive]
+    /// A builder for [`MultiRegionAccessPointRegionalResponse`](crate::model::MultiRegionAccessPointRegionalResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5771,7 +5857,7 @@ pub mod multi_region_access_point_regional_response {
             self.request_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`MultiRegionAccessPointRegionalResponse`](crate::model::MultiRegionAccessPointRegionalResponse)
+        /// Consumes the builder and constructs a [`MultiRegionAccessPointRegionalResponse`](crate::model::MultiRegionAccessPointRegionalResponse).
         pub fn build(self) -> crate::model::MultiRegionAccessPointRegionalResponse {
             crate::model::MultiRegionAccessPointRegionalResponse {
                 name: self.name,
@@ -5781,7 +5867,7 @@ pub mod multi_region_access_point_regional_response {
     }
 }
 impl MultiRegionAccessPointRegionalResponse {
-    /// Creates a new builder-style object to manufacture [`MultiRegionAccessPointRegionalResponse`](crate::model::MultiRegionAccessPointRegionalResponse)
+    /// Creates a new builder-style object to manufacture [`MultiRegionAccessPointRegionalResponse`](crate::model::MultiRegionAccessPointRegionalResponse).
     pub fn builder() -> crate::model::multi_region_access_point_regional_response::Builder {
         crate::model::multi_region_access_point_regional_response::Builder::default()
     }
@@ -5792,12 +5878,15 @@ impl MultiRegionAccessPointRegionalResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AsyncRequestParameters {
     /// <p>A container of the parameters for a <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a> request.</p>
+    #[doc(hidden)]
     pub create_multi_region_access_point_request:
         std::option::Option<crate::model::CreateMultiRegionAccessPointInput>,
     /// <p>A container of the parameters for a <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a> request.</p>
+    #[doc(hidden)]
     pub delete_multi_region_access_point_request:
         std::option::Option<crate::model::DeleteMultiRegionAccessPointInput>,
     /// <p>A container of the parameters for a <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutMultiRegionAccessPoint.html">PutMultiRegionAccessPoint</a> request.</p>
+    #[doc(hidden)]
     pub put_multi_region_access_point_policy_request:
         std::option::Option<crate::model::PutMultiRegionAccessPointPolicyInput>,
 }
@@ -5839,11 +5928,10 @@ impl std::fmt::Debug for AsyncRequestParameters {
         formatter.finish()
     }
 }
-/// See [`AsyncRequestParameters`](crate::model::AsyncRequestParameters)
+/// See [`AsyncRequestParameters`](crate::model::AsyncRequestParameters).
 pub mod async_request_parameters {
 
-    /// A builder for [`AsyncRequestParameters`](crate::model::AsyncRequestParameters)
-    #[non_exhaustive]
+    /// A builder for [`AsyncRequestParameters`](crate::model::AsyncRequestParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) create_multi_region_access_point_request:
@@ -5902,7 +5990,7 @@ pub mod async_request_parameters {
             self.put_multi_region_access_point_policy_request = input;
             self
         }
-        /// Consumes the builder and constructs a [`AsyncRequestParameters`](crate::model::AsyncRequestParameters)
+        /// Consumes the builder and constructs a [`AsyncRequestParameters`](crate::model::AsyncRequestParameters).
         pub fn build(self) -> crate::model::AsyncRequestParameters {
             crate::model::AsyncRequestParameters {
                 create_multi_region_access_point_request: self
@@ -5916,7 +6004,7 @@ pub mod async_request_parameters {
     }
 }
 impl AsyncRequestParameters {
-    /// Creates a new builder-style object to manufacture [`AsyncRequestParameters`](crate::model::AsyncRequestParameters)
+    /// Creates a new builder-style object to manufacture [`AsyncRequestParameters`](crate::model::AsyncRequestParameters).
     pub fn builder() -> crate::model::async_request_parameters::Builder {
         crate::model::async_request_parameters::Builder::default()
     }
@@ -5927,6 +6015,7 @@ impl AsyncRequestParameters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteMultiRegionAccessPointInput {
     /// <p>The name of the Multi-Region Access Point associated with this request.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl DeleteMultiRegionAccessPointInput {
@@ -5942,11 +6031,10 @@ impl std::fmt::Debug for DeleteMultiRegionAccessPointInput {
         formatter.finish()
     }
 }
-/// See [`DeleteMultiRegionAccessPointInput`](crate::model::DeleteMultiRegionAccessPointInput)
+/// See [`DeleteMultiRegionAccessPointInput`](crate::model::DeleteMultiRegionAccessPointInput).
 pub mod delete_multi_region_access_point_input {
 
-    /// A builder for [`DeleteMultiRegionAccessPointInput`](crate::model::DeleteMultiRegionAccessPointInput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteMultiRegionAccessPointInput`](crate::model::DeleteMultiRegionAccessPointInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5962,14 +6050,14 @@ pub mod delete_multi_region_access_point_input {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteMultiRegionAccessPointInput`](crate::model::DeleteMultiRegionAccessPointInput)
+        /// Consumes the builder and constructs a [`DeleteMultiRegionAccessPointInput`](crate::model::DeleteMultiRegionAccessPointInput).
         pub fn build(self) -> crate::model::DeleteMultiRegionAccessPointInput {
             crate::model::DeleteMultiRegionAccessPointInput { name: self.name }
         }
     }
 }
 impl DeleteMultiRegionAccessPointInput {
-    /// Creates a new builder-style object to manufacture [`DeleteMultiRegionAccessPointInput`](crate::model::DeleteMultiRegionAccessPointInput)
+    /// Creates a new builder-style object to manufacture [`DeleteMultiRegionAccessPointInput`](crate::model::DeleteMultiRegionAccessPointInput).
     pub fn builder() -> crate::model::delete_multi_region_access_point_input::Builder {
         crate::model::delete_multi_region_access_point_input::Builder::default()
     }
@@ -5980,11 +6068,14 @@ impl DeleteMultiRegionAccessPointInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateMultiRegionAccessPointInput {
     /// <p>The name of the Multi-Region Access Point associated with this request.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The <code>PublicAccessBlock</code> configuration that you want to apply to this Amazon S3 account. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status">The Meaning of "Public"</a> in the <i>Amazon S3 User Guide</i>.</p>
     /// <p>This is not supported for Amazon S3 on Outposts.</p>
+    #[doc(hidden)]
     pub public_access_block: std::option::Option<crate::model::PublicAccessBlockConfiguration>,
     /// <p>The buckets in different Regions that are associated with the Multi-Region Access Point.</p>
+    #[doc(hidden)]
     pub regions: std::option::Option<std::vec::Vec<crate::model::Region>>,
 }
 impl CreateMultiRegionAccessPointInput {
@@ -6013,11 +6104,10 @@ impl std::fmt::Debug for CreateMultiRegionAccessPointInput {
         formatter.finish()
     }
 }
-/// See [`CreateMultiRegionAccessPointInput`](crate::model::CreateMultiRegionAccessPointInput)
+/// See [`CreateMultiRegionAccessPointInput`](crate::model::CreateMultiRegionAccessPointInput).
 pub mod create_multi_region_access_point_input {
 
-    /// A builder for [`CreateMultiRegionAccessPointInput`](crate::model::CreateMultiRegionAccessPointInput)
-    #[non_exhaustive]
+    /// A builder for [`CreateMultiRegionAccessPointInput`](crate::model::CreateMultiRegionAccessPointInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -6073,7 +6163,7 @@ pub mod create_multi_region_access_point_input {
             self.regions = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateMultiRegionAccessPointInput`](crate::model::CreateMultiRegionAccessPointInput)
+        /// Consumes the builder and constructs a [`CreateMultiRegionAccessPointInput`](crate::model::CreateMultiRegionAccessPointInput).
         pub fn build(self) -> crate::model::CreateMultiRegionAccessPointInput {
             crate::model::CreateMultiRegionAccessPointInput {
                 name: self.name,
@@ -6084,7 +6174,7 @@ pub mod create_multi_region_access_point_input {
     }
 }
 impl CreateMultiRegionAccessPointInput {
-    /// Creates a new builder-style object to manufacture [`CreateMultiRegionAccessPointInput`](crate::model::CreateMultiRegionAccessPointInput)
+    /// Creates a new builder-style object to manufacture [`CreateMultiRegionAccessPointInput`](crate::model::CreateMultiRegionAccessPointInput).
     pub fn builder() -> crate::model::create_multi_region_access_point_input::Builder {
         crate::model::create_multi_region_access_point_input::Builder::default()
     }
@@ -6095,6 +6185,7 @@ impl CreateMultiRegionAccessPointInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Region {
     /// <p>The name of the associated bucket for the Region.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
 }
 impl Region {
@@ -6110,11 +6201,10 @@ impl std::fmt::Debug for Region {
         formatter.finish()
     }
 }
-/// See [`Region`](crate::model::Region)
+/// See [`Region`](crate::model::Region).
 pub mod region {
 
-    /// A builder for [`Region`](crate::model::Region)
-    #[non_exhaustive]
+    /// A builder for [`Region`](crate::model::Region).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -6130,7 +6220,7 @@ pub mod region {
             self.bucket = input;
             self
         }
-        /// Consumes the builder and constructs a [`Region`](crate::model::Region)
+        /// Consumes the builder and constructs a [`Region`](crate::model::Region).
         pub fn build(self) -> crate::model::Region {
             crate::model::Region {
                 bucket: self.bucket,
@@ -6139,7 +6229,7 @@ pub mod region {
     }
 }
 impl Region {
-    /// Creates a new builder-style object to manufacture [`Region`](crate::model::Region)
+    /// Creates a new builder-style object to manufacture [`Region`](crate::model::Region).
     pub fn builder() -> crate::model::region::Builder {
         crate::model::region::Builder::default()
     }
@@ -6217,42 +6307,61 @@ impl AsRef<str> for AsyncOperationName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobDescriptor {
     /// <p>The ID for the specified job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>Indicates whether confirmation is required before Amazon S3 begins running the specified job. Confirmation is required only for jobs created through the Amazon S3 console.</p>
+    #[doc(hidden)]
     pub confirmation_required: std::option::Option<bool>,
     /// <p>The description for this job, if one was provided in this job's <code>Create Job</code> request.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for this job.</p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The current status of the specified job.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobStatus>,
     /// <p>The configuration information for the specified job's manifest object.</p>
+    #[doc(hidden)]
     pub manifest: std::option::Option<crate::model::JobManifest>,
     /// <p>The operation that the specified job is configured to run on the objects listed in the manifest.</p>
+    #[doc(hidden)]
     pub operation: std::option::Option<crate::model::JobOperation>,
     /// <p>The priority of the specified job.</p>
+    #[doc(hidden)]
     pub priority: i32,
     /// <p>Describes the total number of tasks that the specified job has run, the number of tasks that succeeded, and the number of tasks that failed.</p>
+    #[doc(hidden)]
     pub progress_summary: std::option::Option<crate::model::JobProgressSummary>,
     /// <p>The reason for updating the job.</p>
+    #[doc(hidden)]
     pub status_update_reason: std::option::Option<std::string::String>,
     /// <p>If the specified job failed, this field contains information describing the failure.</p>
+    #[doc(hidden)]
     pub failure_reasons: std::option::Option<std::vec::Vec<crate::model::JobFailure>>,
     /// <p>Contains the configuration information for the job-completion report if you requested one in the <code>Create Job</code> request.</p>
+    #[doc(hidden)]
     pub report: std::option::Option<crate::model::JobReport>,
     /// <p>A timestamp indicating when this job was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp indicating when this job terminated. A job's termination date is the date and time when it succeeded, failed, or was canceled.</p>
+    #[doc(hidden)]
     pub termination_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) for the Identity and Access Management (IAM) role assigned to run the tasks for this job.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The timestamp when this job was suspended, if it has been suspended.</p>
+    #[doc(hidden)]
     pub suspended_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The reason why the specified job was suspended. A job is only suspended if you create it through the Amazon S3 console. When you create the job, it enters the <code>Suspended</code> state to await confirmation before running. After you confirm the job, it automatically exits the <code>Suspended</code> state.</p>
+    #[doc(hidden)]
     pub suspended_cause: std::option::Option<std::string::String>,
     /// <p>The manifest generator that was used to generate a job manifest for this job.</p>
+    #[doc(hidden)]
     pub manifest_generator: std::option::Option<crate::model::JobManifestGenerator>,
     /// <p>The attribute of the JobDescriptor containing details about the job's generated manifest.</p>
+    #[doc(hidden)]
     pub generated_manifest_descriptor:
         std::option::Option<crate::model::S3GeneratedManifestDescriptor>,
 }
@@ -6364,11 +6473,10 @@ impl std::fmt::Debug for JobDescriptor {
         formatter.finish()
     }
 }
-/// See [`JobDescriptor`](crate::model::JobDescriptor)
+/// See [`JobDescriptor`](crate::model::JobDescriptor).
 pub mod job_descriptor {
 
-    /// A builder for [`JobDescriptor`](crate::model::JobDescriptor)
-    #[non_exhaustive]
+    /// A builder for [`JobDescriptor`](crate::model::JobDescriptor).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -6625,7 +6733,7 @@ pub mod job_descriptor {
             self.generated_manifest_descriptor = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobDescriptor`](crate::model::JobDescriptor)
+        /// Consumes the builder and constructs a [`JobDescriptor`](crate::model::JobDescriptor).
         pub fn build(self) -> crate::model::JobDescriptor {
             crate::model::JobDescriptor {
                 job_id: self.job_id,
@@ -6652,7 +6760,7 @@ pub mod job_descriptor {
     }
 }
 impl JobDescriptor {
-    /// Creates a new builder-style object to manufacture [`JobDescriptor`](crate::model::JobDescriptor)
+    /// Creates a new builder-style object to manufacture [`JobDescriptor`](crate::model::JobDescriptor).
     pub fn builder() -> crate::model::job_descriptor::Builder {
         crate::model::job_descriptor::Builder::default()
     }
@@ -6663,8 +6771,10 @@ impl JobDescriptor {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3GeneratedManifestDescriptor {
     /// <p>The format of the generated manifest.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::GeneratedManifestFormat>,
     /// <p>Contains the information required to locate a manifest object.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::JobManifestLocation>,
 }
 impl S3GeneratedManifestDescriptor {
@@ -6685,11 +6795,10 @@ impl std::fmt::Debug for S3GeneratedManifestDescriptor {
         formatter.finish()
     }
 }
-/// See [`S3GeneratedManifestDescriptor`](crate::model::S3GeneratedManifestDescriptor)
+/// See [`S3GeneratedManifestDescriptor`](crate::model::S3GeneratedManifestDescriptor).
 pub mod s3_generated_manifest_descriptor {
 
-    /// A builder for [`S3GeneratedManifestDescriptor`](crate::model::S3GeneratedManifestDescriptor)
-    #[non_exhaustive]
+    /// A builder for [`S3GeneratedManifestDescriptor`](crate::model::S3GeneratedManifestDescriptor).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) format: std::option::Option<crate::model::GeneratedManifestFormat>,
@@ -6722,7 +6831,7 @@ pub mod s3_generated_manifest_descriptor {
             self.location = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3GeneratedManifestDescriptor`](crate::model::S3GeneratedManifestDescriptor)
+        /// Consumes the builder and constructs a [`S3GeneratedManifestDescriptor`](crate::model::S3GeneratedManifestDescriptor).
         pub fn build(self) -> crate::model::S3GeneratedManifestDescriptor {
             crate::model::S3GeneratedManifestDescriptor {
                 format: self.format,
@@ -6732,7 +6841,7 @@ pub mod s3_generated_manifest_descriptor {
     }
 }
 impl S3GeneratedManifestDescriptor {
-    /// Creates a new builder-style object to manufacture [`S3GeneratedManifestDescriptor`](crate::model::S3GeneratedManifestDescriptor)
+    /// Creates a new builder-style object to manufacture [`S3GeneratedManifestDescriptor`](crate::model::S3GeneratedManifestDescriptor).
     pub fn builder() -> crate::model::s3_generated_manifest_descriptor::Builder {
         crate::model::s3_generated_manifest_descriptor::Builder::default()
     }
@@ -6745,10 +6854,13 @@ pub struct JobManifestLocation {
     /// <p>The Amazon Resource Name (ARN) for a manifest object.</p> <important>
     /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
     /// </important>
+    #[doc(hidden)]
     pub object_arn: std::option::Option<std::string::String>,
     /// <p>The optional version ID to identify a specific version of the manifest object.</p>
+    #[doc(hidden)]
     pub object_version_id: std::option::Option<std::string::String>,
     /// <p>The ETag for the specified manifest object.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
 }
 impl JobManifestLocation {
@@ -6776,11 +6888,10 @@ impl std::fmt::Debug for JobManifestLocation {
         formatter.finish()
     }
 }
-/// See [`JobManifestLocation`](crate::model::JobManifestLocation)
+/// See [`JobManifestLocation`](crate::model::JobManifestLocation).
 pub mod job_manifest_location {
 
-    /// A builder for [`JobManifestLocation`](crate::model::JobManifestLocation)
-    #[non_exhaustive]
+    /// A builder for [`JobManifestLocation`](crate::model::JobManifestLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_arn: std::option::Option<std::string::String>,
@@ -6825,7 +6936,7 @@ pub mod job_manifest_location {
             self.e_tag = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobManifestLocation`](crate::model::JobManifestLocation)
+        /// Consumes the builder and constructs a [`JobManifestLocation`](crate::model::JobManifestLocation).
         pub fn build(self) -> crate::model::JobManifestLocation {
             crate::model::JobManifestLocation {
                 object_arn: self.object_arn,
@@ -6836,7 +6947,7 @@ pub mod job_manifest_location {
     }
 }
 impl JobManifestLocation {
-    /// Creates a new builder-style object to manufacture [`JobManifestLocation`](crate::model::JobManifestLocation)
+    /// Creates a new builder-style object to manufacture [`JobManifestLocation`](crate::model::JobManifestLocation).
     pub fn builder() -> crate::model::job_manifest_location::Builder {
         crate::model::job_manifest_location::Builder::default()
     }
@@ -6941,14 +7052,19 @@ impl JobManifestGenerator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3JobManifestGenerator {
     /// <p>The Amazon Web Services account ID that owns the bucket the generated manifest is written to. If provided the generated manifest bucket's owner Amazon Web Services account ID must match this value, else the job fails.</p>
+    #[doc(hidden)]
     pub expected_bucket_owner: std::option::Option<std::string::String>,
     /// <p>The source bucket used by the ManifestGenerator.</p>
+    #[doc(hidden)]
     pub source_bucket: std::option::Option<std::string::String>,
     /// <p>Specifies the location the generated manifest will be written to.</p>
+    #[doc(hidden)]
     pub manifest_output_location: std::option::Option<crate::model::S3ManifestOutputLocation>,
     /// <p>Specifies rules the S3JobManifestGenerator should use to use to decide whether an object in the source bucket should or should not be included in the generated job manifest.</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<crate::model::JobManifestGeneratorFilter>,
     /// <p>Determines whether or not to write the job's generated manifest to a bucket.</p>
+    #[doc(hidden)]
     pub enable_manifest_output: bool,
 }
 impl S3JobManifestGenerator {
@@ -6986,11 +7102,10 @@ impl std::fmt::Debug for S3JobManifestGenerator {
         formatter.finish()
     }
 }
-/// See [`S3JobManifestGenerator`](crate::model::S3JobManifestGenerator)
+/// See [`S3JobManifestGenerator`](crate::model::S3JobManifestGenerator).
 pub mod s3_job_manifest_generator {
 
-    /// A builder for [`S3JobManifestGenerator`](crate::model::S3JobManifestGenerator)
-    #[non_exhaustive]
+    /// A builder for [`S3JobManifestGenerator`](crate::model::S3JobManifestGenerator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) expected_bucket_owner: std::option::Option<std::string::String>,
@@ -7066,7 +7181,7 @@ pub mod s3_job_manifest_generator {
             self.enable_manifest_output = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3JobManifestGenerator`](crate::model::S3JobManifestGenerator)
+        /// Consumes the builder and constructs a [`S3JobManifestGenerator`](crate::model::S3JobManifestGenerator).
         pub fn build(self) -> crate::model::S3JobManifestGenerator {
             crate::model::S3JobManifestGenerator {
                 expected_bucket_owner: self.expected_bucket_owner,
@@ -7079,7 +7194,7 @@ pub mod s3_job_manifest_generator {
     }
 }
 impl S3JobManifestGenerator {
-    /// Creates a new builder-style object to manufacture [`S3JobManifestGenerator`](crate::model::S3JobManifestGenerator)
+    /// Creates a new builder-style object to manufacture [`S3JobManifestGenerator`](crate::model::S3JobManifestGenerator).
     pub fn builder() -> crate::model::s3_job_manifest_generator::Builder {
         crate::model::s3_job_manifest_generator::Builder::default()
     }
@@ -7090,12 +7205,16 @@ impl S3JobManifestGenerator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobManifestGeneratorFilter {
     /// <p>Include objects in the generated manifest only if they are eligible for replication according to the Replication configuration on the source bucket.</p>
+    #[doc(hidden)]
     pub eligible_for_replication: std::option::Option<bool>,
     /// <p>If provided, the generated manifest should include only source bucket objects that were created after this time.</p>
+    #[doc(hidden)]
     pub created_after: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If provided, the generated manifest should include only source bucket objects that were created before this time.</p>
+    #[doc(hidden)]
     pub created_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If provided, the generated manifest should include only source bucket objects that have one of the specified Replication statuses.</p>
+    #[doc(hidden)]
     pub object_replication_statuses:
         std::option::Option<std::vec::Vec<crate::model::ReplicationStatus>>,
 }
@@ -7132,11 +7251,10 @@ impl std::fmt::Debug for JobManifestGeneratorFilter {
         formatter.finish()
     }
 }
-/// See [`JobManifestGeneratorFilter`](crate::model::JobManifestGeneratorFilter)
+/// See [`JobManifestGeneratorFilter`](crate::model::JobManifestGeneratorFilter).
 pub mod job_manifest_generator_filter {
 
-    /// A builder for [`JobManifestGeneratorFilter`](crate::model::JobManifestGeneratorFilter)
-    #[non_exhaustive]
+    /// A builder for [`JobManifestGeneratorFilter`](crate::model::JobManifestGeneratorFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) eligible_for_replication: std::option::Option<bool>,
@@ -7204,7 +7322,7 @@ pub mod job_manifest_generator_filter {
             self.object_replication_statuses = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobManifestGeneratorFilter`](crate::model::JobManifestGeneratorFilter)
+        /// Consumes the builder and constructs a [`JobManifestGeneratorFilter`](crate::model::JobManifestGeneratorFilter).
         pub fn build(self) -> crate::model::JobManifestGeneratorFilter {
             crate::model::JobManifestGeneratorFilter {
                 eligible_for_replication: self.eligible_for_replication,
@@ -7216,7 +7334,7 @@ pub mod job_manifest_generator_filter {
     }
 }
 impl JobManifestGeneratorFilter {
-    /// Creates a new builder-style object to manufacture [`JobManifestGeneratorFilter`](crate::model::JobManifestGeneratorFilter)
+    /// Creates a new builder-style object to manufacture [`JobManifestGeneratorFilter`](crate::model::JobManifestGeneratorFilter).
     pub fn builder() -> crate::model::job_manifest_generator_filter::Builder {
         crate::model::job_manifest_generator_filter::Builder::default()
     }
@@ -7290,14 +7408,19 @@ impl AsRef<str> for ReplicationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ManifestOutputLocation {
     /// <p>The Account ID that owns the bucket the generated manifest is written to.</p>
+    #[doc(hidden)]
     pub expected_manifest_bucket_owner: std::option::Option<std::string::String>,
     /// <p>The bucket ARN the generated manifest should be written to.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>Prefix identifying one or more objects to which the manifest applies.</p>
+    #[doc(hidden)]
     pub manifest_prefix: std::option::Option<std::string::String>,
     /// <p>Specifies what encryption should be used when the generated manifest objects are written.</p>
+    #[doc(hidden)]
     pub manifest_encryption: std::option::Option<crate::model::GeneratedManifestEncryption>,
     /// <p>The format of the generated manifest.</p>
+    #[doc(hidden)]
     pub manifest_format: std::option::Option<crate::model::GeneratedManifestFormat>,
 }
 impl S3ManifestOutputLocation {
@@ -7338,11 +7461,10 @@ impl std::fmt::Debug for S3ManifestOutputLocation {
         formatter.finish()
     }
 }
-/// See [`S3ManifestOutputLocation`](crate::model::S3ManifestOutputLocation)
+/// See [`S3ManifestOutputLocation`](crate::model::S3ManifestOutputLocation).
 pub mod s3_manifest_output_location {
 
-    /// A builder for [`S3ManifestOutputLocation`](crate::model::S3ManifestOutputLocation)
-    #[non_exhaustive]
+    /// A builder for [`S3ManifestOutputLocation`](crate::model::S3ManifestOutputLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) expected_manifest_bucket_owner: std::option::Option<std::string::String>,
@@ -7421,7 +7543,7 @@ pub mod s3_manifest_output_location {
             self.manifest_format = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ManifestOutputLocation`](crate::model::S3ManifestOutputLocation)
+        /// Consumes the builder and constructs a [`S3ManifestOutputLocation`](crate::model::S3ManifestOutputLocation).
         pub fn build(self) -> crate::model::S3ManifestOutputLocation {
             crate::model::S3ManifestOutputLocation {
                 expected_manifest_bucket_owner: self.expected_manifest_bucket_owner,
@@ -7434,7 +7556,7 @@ pub mod s3_manifest_output_location {
     }
 }
 impl S3ManifestOutputLocation {
-    /// Creates a new builder-style object to manufacture [`S3ManifestOutputLocation`](crate::model::S3ManifestOutputLocation)
+    /// Creates a new builder-style object to manufacture [`S3ManifestOutputLocation`](crate::model::S3ManifestOutputLocation).
     pub fn builder() -> crate::model::s3_manifest_output_location::Builder {
         crate::model::s3_manifest_output_location::Builder::default()
     }
@@ -7445,8 +7567,10 @@ impl S3ManifestOutputLocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GeneratedManifestEncryption {
     /// <p>Specifies the use of SSE-S3 to encrypt generated manifest objects.</p>
+    #[doc(hidden)]
     pub sses3: std::option::Option<crate::model::Sses3Encryption>,
     /// <p>Configuration details on how SSE-KMS is used to encrypt generated manifest objects.</p>
+    #[doc(hidden)]
     pub ssekms: std::option::Option<crate::model::SsekmsEncryption>,
 }
 impl GeneratedManifestEncryption {
@@ -7467,11 +7591,10 @@ impl std::fmt::Debug for GeneratedManifestEncryption {
         formatter.finish()
     }
 }
-/// See [`GeneratedManifestEncryption`](crate::model::GeneratedManifestEncryption)
+/// See [`GeneratedManifestEncryption`](crate::model::GeneratedManifestEncryption).
 pub mod generated_manifest_encryption {
 
-    /// A builder for [`GeneratedManifestEncryption`](crate::model::GeneratedManifestEncryption)
-    #[non_exhaustive]
+    /// A builder for [`GeneratedManifestEncryption`](crate::model::GeneratedManifestEncryption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sses3: std::option::Option<crate::model::Sses3Encryption>,
@@ -7504,7 +7627,7 @@ pub mod generated_manifest_encryption {
             self.ssekms = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeneratedManifestEncryption`](crate::model::GeneratedManifestEncryption)
+        /// Consumes the builder and constructs a [`GeneratedManifestEncryption`](crate::model::GeneratedManifestEncryption).
         pub fn build(self) -> crate::model::GeneratedManifestEncryption {
             crate::model::GeneratedManifestEncryption {
                 sses3: self.sses3,
@@ -7514,7 +7637,7 @@ pub mod generated_manifest_encryption {
     }
 }
 impl GeneratedManifestEncryption {
-    /// Creates a new builder-style object to manufacture [`GeneratedManifestEncryption`](crate::model::GeneratedManifestEncryption)
+    /// Creates a new builder-style object to manufacture [`GeneratedManifestEncryption`](crate::model::GeneratedManifestEncryption).
     pub fn builder() -> crate::model::generated_manifest_encryption::Builder {
         crate::model::generated_manifest_encryption::Builder::default()
     }
@@ -7525,6 +7648,7 @@ impl GeneratedManifestEncryption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SsekmsEncryption {
     /// <p>Specifies the ID of the Amazon Web Services Key Management Service (Amazon Web Services KMS) symmetric customer managed key to use for encrypting generated manifest objects.</p>
+    #[doc(hidden)]
     pub key_id: std::option::Option<std::string::String>,
 }
 impl SsekmsEncryption {
@@ -7540,11 +7664,10 @@ impl std::fmt::Debug for SsekmsEncryption {
         formatter.finish()
     }
 }
-/// See [`SsekmsEncryption`](crate::model::SsekmsEncryption)
+/// See [`SsekmsEncryption`](crate::model::SsekmsEncryption).
 pub mod ssekms_encryption {
 
-    /// A builder for [`SsekmsEncryption`](crate::model::SsekmsEncryption)
-    #[non_exhaustive]
+    /// A builder for [`SsekmsEncryption`](crate::model::SsekmsEncryption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_id: std::option::Option<std::string::String>,
@@ -7560,7 +7683,7 @@ pub mod ssekms_encryption {
             self.key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SsekmsEncryption`](crate::model::SsekmsEncryption)
+        /// Consumes the builder and constructs a [`SsekmsEncryption`](crate::model::SsekmsEncryption).
         pub fn build(self) -> crate::model::SsekmsEncryption {
             crate::model::SsekmsEncryption {
                 key_id: self.key_id,
@@ -7569,7 +7692,7 @@ pub mod ssekms_encryption {
     }
 }
 impl SsekmsEncryption {
-    /// Creates a new builder-style object to manufacture [`SsekmsEncryption`](crate::model::SsekmsEncryption)
+    /// Creates a new builder-style object to manufacture [`SsekmsEncryption`](crate::model::SsekmsEncryption).
     pub fn builder() -> crate::model::ssekms_encryption::Builder {
         crate::model::ssekms_encryption::Builder::default()
     }
@@ -7585,22 +7708,21 @@ impl std::fmt::Debug for Sses3Encryption {
         formatter.finish()
     }
 }
-/// See [`Sses3Encryption`](crate::model::Sses3Encryption)
+/// See [`Sses3Encryption`](crate::model::Sses3Encryption).
 pub mod sses3_encryption {
 
-    /// A builder for [`Sses3Encryption`](crate::model::Sses3Encryption)
-    #[non_exhaustive]
+    /// A builder for [`Sses3Encryption`](crate::model::Sses3Encryption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`Sses3Encryption`](crate::model::Sses3Encryption)
+        /// Consumes the builder and constructs a [`Sses3Encryption`](crate::model::Sses3Encryption).
         pub fn build(self) -> crate::model::Sses3Encryption {
             crate::model::Sses3Encryption {}
         }
     }
 }
 impl Sses3Encryption {
-    /// Creates a new builder-style object to manufacture [`Sses3Encryption`](crate::model::Sses3Encryption)
+    /// Creates a new builder-style object to manufacture [`Sses3Encryption`](crate::model::Sses3Encryption).
     pub fn builder() -> crate::model::sses3_encryption::Builder {
         crate::model::sses3_encryption::Builder::default()
     }
@@ -7611,10 +7733,13 @@ impl Sses3Encryption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobReport {
     /// <p>The Amazon Resource Name (ARN) for the bucket where specified job-completion report will be stored.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The format of the specified job-completion report.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::JobReportFormat>,
     /// <p>Indicates whether the specified job will generate a job-completion report.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>An optional prefix to describe where in the specified bucket the job-completion report will be stored. Amazon S3 stores the job-completion report at <code>
     /// <prefix>
@@ -7623,8 +7748,10 @@ pub struct JobReport {
     /// /report.json
     /// </job-id>
     /// </prefix></code>.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>Indicates whether the job-completion report will include details of all tasks or only failed tasks.</p>
+    #[doc(hidden)]
     pub report_scope: std::option::Option<crate::model::JobReportScope>,
 }
 impl JobReport {
@@ -7666,11 +7793,10 @@ impl std::fmt::Debug for JobReport {
         formatter.finish()
     }
 }
-/// See [`JobReport`](crate::model::JobReport)
+/// See [`JobReport`](crate::model::JobReport).
 pub mod job_report {
 
-    /// A builder for [`JobReport`](crate::model::JobReport)
-    #[non_exhaustive]
+    /// A builder for [`JobReport`](crate::model::JobReport).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -7748,7 +7874,7 @@ pub mod job_report {
             self.report_scope = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobReport`](crate::model::JobReport)
+        /// Consumes the builder and constructs a [`JobReport`](crate::model::JobReport).
         pub fn build(self) -> crate::model::JobReport {
             crate::model::JobReport {
                 bucket: self.bucket,
@@ -7761,7 +7887,7 @@ pub mod job_report {
     }
 }
 impl JobReport {
-    /// Creates a new builder-style object to manufacture [`JobReport`](crate::model::JobReport)
+    /// Creates a new builder-style object to manufacture [`JobReport`](crate::model::JobReport).
     pub fn builder() -> crate::model::job_report::Builder {
         crate::model::job_report::Builder::default()
     }
@@ -7878,8 +8004,10 @@ impl AsRef<str> for JobReportFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobFailure {
     /// <p>The failure code, if any, for the specified job.</p>
+    #[doc(hidden)]
     pub failure_code: std::option::Option<std::string::String>,
     /// <p>The failure reason, if any, for the specified job.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
 }
 impl JobFailure {
@@ -7900,11 +8028,10 @@ impl std::fmt::Debug for JobFailure {
         formatter.finish()
     }
 }
-/// See [`JobFailure`](crate::model::JobFailure)
+/// See [`JobFailure`](crate::model::JobFailure).
 pub mod job_failure {
 
-    /// A builder for [`JobFailure`](crate::model::JobFailure)
-    #[non_exhaustive]
+    /// A builder for [`JobFailure`](crate::model::JobFailure).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failure_code: std::option::Option<std::string::String>,
@@ -7934,7 +8061,7 @@ pub mod job_failure {
             self.failure_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobFailure`](crate::model::JobFailure)
+        /// Consumes the builder and constructs a [`JobFailure`](crate::model::JobFailure).
         pub fn build(self) -> crate::model::JobFailure {
             crate::model::JobFailure {
                 failure_code: self.failure_code,
@@ -7944,7 +8071,7 @@ pub mod job_failure {
     }
 }
 impl JobFailure {
-    /// Creates a new builder-style object to manufacture [`JobFailure`](crate::model::JobFailure)
+    /// Creates a new builder-style object to manufacture [`JobFailure`](crate::model::JobFailure).
     pub fn builder() -> crate::model::job_failure::Builder {
         crate::model::job_failure::Builder::default()
     }
@@ -7955,23 +8082,32 @@ impl JobFailure {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobOperation {
     /// <p>Directs the specified job to invoke an Lambda function on every object in the manifest.</p>
+    #[doc(hidden)]
     pub lambda_invoke: std::option::Option<crate::model::LambdaInvokeOperation>,
     /// <p>Directs the specified job to run a PUT Copy object call on every object in the manifest.</p>
+    #[doc(hidden)]
     pub s3_put_object_copy: std::option::Option<crate::model::S3CopyObjectOperation>,
     /// <p>Directs the specified job to run a PUT Object acl call on every object in the manifest.</p>
+    #[doc(hidden)]
     pub s3_put_object_acl: std::option::Option<crate::model::S3SetObjectAclOperation>,
     /// <p>Directs the specified job to run a PUT Object tagging call on every object in the manifest.</p>
+    #[doc(hidden)]
     pub s3_put_object_tagging: std::option::Option<crate::model::S3SetObjectTaggingOperation>,
     /// <p>Directs the specified job to execute a DELETE Object tagging call on every object in the manifest.</p>
+    #[doc(hidden)]
     pub s3_delete_object_tagging: std::option::Option<crate::model::S3DeleteObjectTaggingOperation>,
     /// <p>Directs the specified job to initiate restore requests for every archived object in the manifest.</p>
+    #[doc(hidden)]
     pub s3_initiate_restore_object:
         std::option::Option<crate::model::S3InitiateRestoreObjectOperation>,
     /// <p>Contains the configuration for an S3 Object Lock legal hold operation that an S3 Batch Operations job passes every object to the underlying <code>PutObjectLegalHold</code> API. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-legal-hold.html">Using S3 Object Lock legal hold with S3 Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub s3_put_object_legal_hold: std::option::Option<crate::model::S3SetObjectLegalHoldOperation>,
     /// <p>Contains the configuration parameters for the Object Lock retention action for an S3 Batch Operations job. Batch Operations passes every object to the underlying <code>PutObjectRetention</code> API. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-retention-date.html">Using S3 Object Lock retention with S3 Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub s3_put_object_retention: std::option::Option<crate::model::S3SetObjectRetentionOperation>,
     /// <p>Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.</p>
+    #[doc(hidden)]
     pub s3_replicate_object: std::option::Option<crate::model::S3ReplicateObjectOperation>,
 }
 impl JobOperation {
@@ -8042,11 +8178,10 @@ impl std::fmt::Debug for JobOperation {
         formatter.finish()
     }
 }
-/// See [`JobOperation`](crate::model::JobOperation)
+/// See [`JobOperation`](crate::model::JobOperation).
 pub mod job_operation {
 
-    /// A builder for [`JobOperation`](crate::model::JobOperation)
-    #[non_exhaustive]
+    /// A builder for [`JobOperation`](crate::model::JobOperation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lambda_invoke: std::option::Option<crate::model::LambdaInvokeOperation>,
@@ -8201,7 +8336,7 @@ pub mod job_operation {
             self.s3_replicate_object = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobOperation`](crate::model::JobOperation)
+        /// Consumes the builder and constructs a [`JobOperation`](crate::model::JobOperation).
         pub fn build(self) -> crate::model::JobOperation {
             crate::model::JobOperation {
                 lambda_invoke: self.lambda_invoke,
@@ -8218,7 +8353,7 @@ pub mod job_operation {
     }
 }
 impl JobOperation {
-    /// Creates a new builder-style object to manufacture [`JobOperation`](crate::model::JobOperation)
+    /// Creates a new builder-style object to manufacture [`JobOperation`](crate::model::JobOperation).
     pub fn builder() -> crate::model::job_operation::Builder {
         crate::model::job_operation::Builder::default()
     }
@@ -8234,22 +8369,21 @@ impl std::fmt::Debug for S3ReplicateObjectOperation {
         formatter.finish()
     }
 }
-/// See [`S3ReplicateObjectOperation`](crate::model::S3ReplicateObjectOperation)
+/// See [`S3ReplicateObjectOperation`](crate::model::S3ReplicateObjectOperation).
 pub mod s3_replicate_object_operation {
 
-    /// A builder for [`S3ReplicateObjectOperation`](crate::model::S3ReplicateObjectOperation)
-    #[non_exhaustive]
+    /// A builder for [`S3ReplicateObjectOperation`](crate::model::S3ReplicateObjectOperation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`S3ReplicateObjectOperation`](crate::model::S3ReplicateObjectOperation)
+        /// Consumes the builder and constructs a [`S3ReplicateObjectOperation`](crate::model::S3ReplicateObjectOperation).
         pub fn build(self) -> crate::model::S3ReplicateObjectOperation {
             crate::model::S3ReplicateObjectOperation {}
         }
     }
 }
 impl S3ReplicateObjectOperation {
-    /// Creates a new builder-style object to manufacture [`S3ReplicateObjectOperation`](crate::model::S3ReplicateObjectOperation)
+    /// Creates a new builder-style object to manufacture [`S3ReplicateObjectOperation`](crate::model::S3ReplicateObjectOperation).
     pub fn builder() -> crate::model::s3_replicate_object_operation::Builder {
         crate::model::s3_replicate_object_operation::Builder::default()
     }
@@ -8260,8 +8394,10 @@ impl S3ReplicateObjectOperation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3SetObjectRetentionOperation {
     /// <p>Indicates if the action should be applied to objects in the Batch Operations job even if they have Object Lock <code> GOVERNANCE</code> type in place.</p>
+    #[doc(hidden)]
     pub bypass_governance_retention: std::option::Option<bool>,
     /// <p>Contains the Object Lock retention mode to be applied to all objects in the Batch Operations job. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-retention-date.html">Using S3 Object Lock retention with S3 Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub retention: std::option::Option<crate::model::S3Retention>,
 }
 impl S3SetObjectRetentionOperation {
@@ -8285,11 +8421,10 @@ impl std::fmt::Debug for S3SetObjectRetentionOperation {
         formatter.finish()
     }
 }
-/// See [`S3SetObjectRetentionOperation`](crate::model::S3SetObjectRetentionOperation)
+/// See [`S3SetObjectRetentionOperation`](crate::model::S3SetObjectRetentionOperation).
 pub mod s3_set_object_retention_operation {
 
-    /// A builder for [`S3SetObjectRetentionOperation`](crate::model::S3SetObjectRetentionOperation)
-    #[non_exhaustive]
+    /// A builder for [`S3SetObjectRetentionOperation`](crate::model::S3SetObjectRetentionOperation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bypass_governance_retention: std::option::Option<bool>,
@@ -8319,7 +8454,7 @@ pub mod s3_set_object_retention_operation {
             self.retention = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3SetObjectRetentionOperation`](crate::model::S3SetObjectRetentionOperation)
+        /// Consumes the builder and constructs a [`S3SetObjectRetentionOperation`](crate::model::S3SetObjectRetentionOperation).
         pub fn build(self) -> crate::model::S3SetObjectRetentionOperation {
             crate::model::S3SetObjectRetentionOperation {
                 bypass_governance_retention: self.bypass_governance_retention,
@@ -8329,7 +8464,7 @@ pub mod s3_set_object_retention_operation {
     }
 }
 impl S3SetObjectRetentionOperation {
-    /// Creates a new builder-style object to manufacture [`S3SetObjectRetentionOperation`](crate::model::S3SetObjectRetentionOperation)
+    /// Creates a new builder-style object to manufacture [`S3SetObjectRetentionOperation`](crate::model::S3SetObjectRetentionOperation).
     pub fn builder() -> crate::model::s3_set_object_retention_operation::Builder {
         crate::model::s3_set_object_retention_operation::Builder::default()
     }
@@ -8340,8 +8475,10 @@ impl S3SetObjectRetentionOperation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Retention {
     /// <p>The date when the applied Object Lock retention will expire on all objects set by the Batch Operations job.</p>
+    #[doc(hidden)]
     pub retain_until_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Object Lock retention mode to be applied to all objects in the Batch Operations job.</p>
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::S3ObjectLockRetentionMode>,
 }
 impl S3Retention {
@@ -8362,11 +8499,10 @@ impl std::fmt::Debug for S3Retention {
         formatter.finish()
     }
 }
-/// See [`S3Retention`](crate::model::S3Retention)
+/// See [`S3Retention`](crate::model::S3Retention).
 pub mod s3_retention {
 
-    /// A builder for [`S3Retention`](crate::model::S3Retention)
-    #[non_exhaustive]
+    /// A builder for [`S3Retention`](crate::model::S3Retention).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) retain_until_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -8399,7 +8535,7 @@ pub mod s3_retention {
             self.mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Retention`](crate::model::S3Retention)
+        /// Consumes the builder and constructs a [`S3Retention`](crate::model::S3Retention).
         pub fn build(self) -> crate::model::S3Retention {
             crate::model::S3Retention {
                 retain_until_date: self.retain_until_date,
@@ -8409,7 +8545,7 @@ pub mod s3_retention {
     }
 }
 impl S3Retention {
-    /// Creates a new builder-style object to manufacture [`S3Retention`](crate::model::S3Retention)
+    /// Creates a new builder-style object to manufacture [`S3Retention`](crate::model::S3Retention).
     pub fn builder() -> crate::model::s3_retention::Builder {
         crate::model::s3_retention::Builder::default()
     }
@@ -8475,6 +8611,7 @@ impl AsRef<str> for S3ObjectLockRetentionMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3SetObjectLegalHoldOperation {
     /// <p>Contains the Object Lock legal hold status to be applied to all objects in the Batch Operations job.</p>
+    #[doc(hidden)]
     pub legal_hold: std::option::Option<crate::model::S3ObjectLockLegalHold>,
 }
 impl S3SetObjectLegalHoldOperation {
@@ -8490,11 +8627,10 @@ impl std::fmt::Debug for S3SetObjectLegalHoldOperation {
         formatter.finish()
     }
 }
-/// See [`S3SetObjectLegalHoldOperation`](crate::model::S3SetObjectLegalHoldOperation)
+/// See [`S3SetObjectLegalHoldOperation`](crate::model::S3SetObjectLegalHoldOperation).
 pub mod s3_set_object_legal_hold_operation {
 
-    /// A builder for [`S3SetObjectLegalHoldOperation`](crate::model::S3SetObjectLegalHoldOperation)
-    #[non_exhaustive]
+    /// A builder for [`S3SetObjectLegalHoldOperation`](crate::model::S3SetObjectLegalHoldOperation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) legal_hold: std::option::Option<crate::model::S3ObjectLockLegalHold>,
@@ -8513,7 +8649,7 @@ pub mod s3_set_object_legal_hold_operation {
             self.legal_hold = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3SetObjectLegalHoldOperation`](crate::model::S3SetObjectLegalHoldOperation)
+        /// Consumes the builder and constructs a [`S3SetObjectLegalHoldOperation`](crate::model::S3SetObjectLegalHoldOperation).
         pub fn build(self) -> crate::model::S3SetObjectLegalHoldOperation {
             crate::model::S3SetObjectLegalHoldOperation {
                 legal_hold: self.legal_hold,
@@ -8522,7 +8658,7 @@ pub mod s3_set_object_legal_hold_operation {
     }
 }
 impl S3SetObjectLegalHoldOperation {
-    /// Creates a new builder-style object to manufacture [`S3SetObjectLegalHoldOperation`](crate::model::S3SetObjectLegalHoldOperation)
+    /// Creates a new builder-style object to manufacture [`S3SetObjectLegalHoldOperation`](crate::model::S3SetObjectLegalHoldOperation).
     pub fn builder() -> crate::model::s3_set_object_legal_hold_operation::Builder {
         crate::model::s3_set_object_legal_hold_operation::Builder::default()
     }
@@ -8533,6 +8669,7 @@ impl S3SetObjectLegalHoldOperation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ObjectLockLegalHold {
     /// <p>The Object Lock legal hold status to be applied to all objects in the Batch Operations job.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::S3ObjectLockLegalHoldStatus>,
 }
 impl S3ObjectLockLegalHold {
@@ -8548,11 +8685,10 @@ impl std::fmt::Debug for S3ObjectLockLegalHold {
         formatter.finish()
     }
 }
-/// See [`S3ObjectLockLegalHold`](crate::model::S3ObjectLockLegalHold)
+/// See [`S3ObjectLockLegalHold`](crate::model::S3ObjectLockLegalHold).
 pub mod s3_object_lock_legal_hold {
 
-    /// A builder for [`S3ObjectLockLegalHold`](crate::model::S3ObjectLockLegalHold)
-    #[non_exhaustive]
+    /// A builder for [`S3ObjectLockLegalHold`](crate::model::S3ObjectLockLegalHold).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::S3ObjectLockLegalHoldStatus>,
@@ -8571,7 +8707,7 @@ pub mod s3_object_lock_legal_hold {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ObjectLockLegalHold`](crate::model::S3ObjectLockLegalHold)
+        /// Consumes the builder and constructs a [`S3ObjectLockLegalHold`](crate::model::S3ObjectLockLegalHold).
         pub fn build(self) -> crate::model::S3ObjectLockLegalHold {
             crate::model::S3ObjectLockLegalHold {
                 status: self.status,
@@ -8580,7 +8716,7 @@ pub mod s3_object_lock_legal_hold {
     }
 }
 impl S3ObjectLockLegalHold {
-    /// Creates a new builder-style object to manufacture [`S3ObjectLockLegalHold`](crate::model::S3ObjectLockLegalHold)
+    /// Creates a new builder-style object to manufacture [`S3ObjectLockLegalHold`](crate::model::S3ObjectLockLegalHold).
     pub fn builder() -> crate::model::s3_object_lock_legal_hold::Builder {
         crate::model::s3_object_lock_legal_hold::Builder::default()
     }
@@ -8648,8 +8784,10 @@ pub struct S3InitiateRestoreObjectOperation {
     /// <p>This argument specifies how long the S3 Glacier or S3 Glacier Deep Archive object remains available in Amazon S3. S3 Initiate Restore Object jobs that target S3 Glacier and S3 Glacier Deep Archive objects require <code>ExpirationInDays</code> set to 1 or greater.</p>
     /// <p>Conversely, do <i>not</i> set <code>ExpirationInDays</code> when creating S3 Initiate Restore Object jobs that target S3 Intelligent-Tiering Archive Access and Deep Archive Access tier objects. Objects in S3 Intelligent-Tiering archive access tiers are not subject to restore expiry, so specifying <code>ExpirationInDays</code> results in restore request failure.</p>
     /// <p>S3 Batch Operations jobs can operate either on S3 Glacier and S3 Glacier Deep Archive storage class objects or on S3 Intelligent-Tiering Archive Access and Deep Archive Access storage tier objects, but not both types in the same job. If you need to restore objects of both types you <i>must</i> create separate Batch Operations jobs. </p>
+    #[doc(hidden)]
     pub expiration_in_days: std::option::Option<i32>,
     /// <p>S3 Batch Operations supports <code>STANDARD</code> and <code>BULK</code> retrieval tiers, but not the <code>EXPEDITED</code> retrieval tier.</p>
+    #[doc(hidden)]
     pub glacier_job_tier: std::option::Option<crate::model::S3GlacierJobTier>,
 }
 impl S3InitiateRestoreObjectOperation {
@@ -8672,11 +8810,10 @@ impl std::fmt::Debug for S3InitiateRestoreObjectOperation {
         formatter.finish()
     }
 }
-/// See [`S3InitiateRestoreObjectOperation`](crate::model::S3InitiateRestoreObjectOperation)
+/// See [`S3InitiateRestoreObjectOperation`](crate::model::S3InitiateRestoreObjectOperation).
 pub mod s3_initiate_restore_object_operation {
 
-    /// A builder for [`S3InitiateRestoreObjectOperation`](crate::model::S3InitiateRestoreObjectOperation)
-    #[non_exhaustive]
+    /// A builder for [`S3InitiateRestoreObjectOperation`](crate::model::S3InitiateRestoreObjectOperation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) expiration_in_days: std::option::Option<i32>,
@@ -8710,7 +8847,7 @@ pub mod s3_initiate_restore_object_operation {
             self.glacier_job_tier = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3InitiateRestoreObjectOperation`](crate::model::S3InitiateRestoreObjectOperation)
+        /// Consumes the builder and constructs a [`S3InitiateRestoreObjectOperation`](crate::model::S3InitiateRestoreObjectOperation).
         pub fn build(self) -> crate::model::S3InitiateRestoreObjectOperation {
             crate::model::S3InitiateRestoreObjectOperation {
                 expiration_in_days: self.expiration_in_days,
@@ -8720,7 +8857,7 @@ pub mod s3_initiate_restore_object_operation {
     }
 }
 impl S3InitiateRestoreObjectOperation {
-    /// Creates a new builder-style object to manufacture [`S3InitiateRestoreObjectOperation`](crate::model::S3InitiateRestoreObjectOperation)
+    /// Creates a new builder-style object to manufacture [`S3InitiateRestoreObjectOperation`](crate::model::S3InitiateRestoreObjectOperation).
     pub fn builder() -> crate::model::s3_initiate_restore_object_operation::Builder {
         crate::model::s3_initiate_restore_object_operation::Builder::default()
     }
@@ -8791,22 +8928,21 @@ impl std::fmt::Debug for S3DeleteObjectTaggingOperation {
         formatter.finish()
     }
 }
-/// See [`S3DeleteObjectTaggingOperation`](crate::model::S3DeleteObjectTaggingOperation)
+/// See [`S3DeleteObjectTaggingOperation`](crate::model::S3DeleteObjectTaggingOperation).
 pub mod s3_delete_object_tagging_operation {
 
-    /// A builder for [`S3DeleteObjectTaggingOperation`](crate::model::S3DeleteObjectTaggingOperation)
-    #[non_exhaustive]
+    /// A builder for [`S3DeleteObjectTaggingOperation`](crate::model::S3DeleteObjectTaggingOperation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`S3DeleteObjectTaggingOperation`](crate::model::S3DeleteObjectTaggingOperation)
+        /// Consumes the builder and constructs a [`S3DeleteObjectTaggingOperation`](crate::model::S3DeleteObjectTaggingOperation).
         pub fn build(self) -> crate::model::S3DeleteObjectTaggingOperation {
             crate::model::S3DeleteObjectTaggingOperation {}
         }
     }
 }
 impl S3DeleteObjectTaggingOperation {
-    /// Creates a new builder-style object to manufacture [`S3DeleteObjectTaggingOperation`](crate::model::S3DeleteObjectTaggingOperation)
+    /// Creates a new builder-style object to manufacture [`S3DeleteObjectTaggingOperation`](crate::model::S3DeleteObjectTaggingOperation).
     pub fn builder() -> crate::model::s3_delete_object_tagging_operation::Builder {
         crate::model::s3_delete_object_tagging_operation::Builder::default()
     }
@@ -8817,6 +8953,7 @@ impl S3DeleteObjectTaggingOperation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3SetObjectTaggingOperation {
     /// <p></p>
+    #[doc(hidden)]
     pub tag_set: std::option::Option<std::vec::Vec<crate::model::S3Tag>>,
 }
 impl S3SetObjectTaggingOperation {
@@ -8832,11 +8969,10 @@ impl std::fmt::Debug for S3SetObjectTaggingOperation {
         formatter.finish()
     }
 }
-/// See [`S3SetObjectTaggingOperation`](crate::model::S3SetObjectTaggingOperation)
+/// See [`S3SetObjectTaggingOperation`](crate::model::S3SetObjectTaggingOperation).
 pub mod s3_set_object_tagging_operation {
 
-    /// A builder for [`S3SetObjectTaggingOperation`](crate::model::S3SetObjectTaggingOperation)
-    #[non_exhaustive]
+    /// A builder for [`S3SetObjectTaggingOperation`](crate::model::S3SetObjectTaggingOperation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_set: std::option::Option<std::vec::Vec<crate::model::S3Tag>>,
@@ -8861,7 +8997,7 @@ pub mod s3_set_object_tagging_operation {
             self.tag_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3SetObjectTaggingOperation`](crate::model::S3SetObjectTaggingOperation)
+        /// Consumes the builder and constructs a [`S3SetObjectTaggingOperation`](crate::model::S3SetObjectTaggingOperation).
         pub fn build(self) -> crate::model::S3SetObjectTaggingOperation {
             crate::model::S3SetObjectTaggingOperation {
                 tag_set: self.tag_set,
@@ -8870,7 +9006,7 @@ pub mod s3_set_object_tagging_operation {
     }
 }
 impl S3SetObjectTaggingOperation {
-    /// Creates a new builder-style object to manufacture [`S3SetObjectTaggingOperation`](crate::model::S3SetObjectTaggingOperation)
+    /// Creates a new builder-style object to manufacture [`S3SetObjectTaggingOperation`](crate::model::S3SetObjectTaggingOperation).
     pub fn builder() -> crate::model::s3_set_object_tagging_operation::Builder {
         crate::model::s3_set_object_tagging_operation::Builder::default()
     }
@@ -8881,6 +9017,7 @@ impl S3SetObjectTaggingOperation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3SetObjectAclOperation {
     /// <p></p>
+    #[doc(hidden)]
     pub access_control_policy: std::option::Option<crate::model::S3AccessControlPolicy>,
 }
 impl S3SetObjectAclOperation {
@@ -8898,11 +9035,10 @@ impl std::fmt::Debug for S3SetObjectAclOperation {
         formatter.finish()
     }
 }
-/// See [`S3SetObjectAclOperation`](crate::model::S3SetObjectAclOperation)
+/// See [`S3SetObjectAclOperation`](crate::model::S3SetObjectAclOperation).
 pub mod s3_set_object_acl_operation {
 
-    /// A builder for [`S3SetObjectAclOperation`](crate::model::S3SetObjectAclOperation)
-    #[non_exhaustive]
+    /// A builder for [`S3SetObjectAclOperation`](crate::model::S3SetObjectAclOperation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_control_policy: std::option::Option<crate::model::S3AccessControlPolicy>,
@@ -8921,7 +9057,7 @@ pub mod s3_set_object_acl_operation {
             self.access_control_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3SetObjectAclOperation`](crate::model::S3SetObjectAclOperation)
+        /// Consumes the builder and constructs a [`S3SetObjectAclOperation`](crate::model::S3SetObjectAclOperation).
         pub fn build(self) -> crate::model::S3SetObjectAclOperation {
             crate::model::S3SetObjectAclOperation {
                 access_control_policy: self.access_control_policy,
@@ -8930,7 +9066,7 @@ pub mod s3_set_object_acl_operation {
     }
 }
 impl S3SetObjectAclOperation {
-    /// Creates a new builder-style object to manufacture [`S3SetObjectAclOperation`](crate::model::S3SetObjectAclOperation)
+    /// Creates a new builder-style object to manufacture [`S3SetObjectAclOperation`](crate::model::S3SetObjectAclOperation).
     pub fn builder() -> crate::model::s3_set_object_acl_operation::Builder {
         crate::model::s3_set_object_acl_operation::Builder::default()
     }
@@ -8941,8 +9077,10 @@ impl S3SetObjectAclOperation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3AccessControlPolicy {
     /// <p></p>
+    #[doc(hidden)]
     pub access_control_list: std::option::Option<crate::model::S3AccessControlList>,
     /// <p></p>
+    #[doc(hidden)]
     pub canned_access_control_list: std::option::Option<crate::model::S3CannedAccessControlList>,
 }
 impl S3AccessControlPolicy {
@@ -8968,11 +9106,10 @@ impl std::fmt::Debug for S3AccessControlPolicy {
         formatter.finish()
     }
 }
-/// See [`S3AccessControlPolicy`](crate::model::S3AccessControlPolicy)
+/// See [`S3AccessControlPolicy`](crate::model::S3AccessControlPolicy).
 pub mod s3_access_control_policy {
 
-    /// A builder for [`S3AccessControlPolicy`](crate::model::S3AccessControlPolicy)
-    #[non_exhaustive]
+    /// A builder for [`S3AccessControlPolicy`](crate::model::S3AccessControlPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_control_list: std::option::Option<crate::model::S3AccessControlList>,
@@ -9009,7 +9146,7 @@ pub mod s3_access_control_policy {
             self.canned_access_control_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3AccessControlPolicy`](crate::model::S3AccessControlPolicy)
+        /// Consumes the builder and constructs a [`S3AccessControlPolicy`](crate::model::S3AccessControlPolicy).
         pub fn build(self) -> crate::model::S3AccessControlPolicy {
             crate::model::S3AccessControlPolicy {
                 access_control_list: self.access_control_list,
@@ -9019,7 +9156,7 @@ pub mod s3_access_control_policy {
     }
 }
 impl S3AccessControlPolicy {
-    /// Creates a new builder-style object to manufacture [`S3AccessControlPolicy`](crate::model::S3AccessControlPolicy)
+    /// Creates a new builder-style object to manufacture [`S3AccessControlPolicy`](crate::model::S3AccessControlPolicy).
     pub fn builder() -> crate::model::s3_access_control_policy::Builder {
         crate::model::s3_access_control_policy::Builder::default()
     }
@@ -9113,8 +9250,10 @@ impl AsRef<str> for S3CannedAccessControlList {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3AccessControlList {
     /// <p></p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::S3ObjectOwner>,
     /// <p></p>
+    #[doc(hidden)]
     pub grants: std::option::Option<std::vec::Vec<crate::model::S3Grant>>,
 }
 impl S3AccessControlList {
@@ -9135,11 +9274,10 @@ impl std::fmt::Debug for S3AccessControlList {
         formatter.finish()
     }
 }
-/// See [`S3AccessControlList`](crate::model::S3AccessControlList)
+/// See [`S3AccessControlList`](crate::model::S3AccessControlList).
 pub mod s3_access_control_list {
 
-    /// A builder for [`S3AccessControlList`](crate::model::S3AccessControlList)
-    #[non_exhaustive]
+    /// A builder for [`S3AccessControlList`](crate::model::S3AccessControlList).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner: std::option::Option<crate::model::S3ObjectOwner>,
@@ -9178,7 +9316,7 @@ pub mod s3_access_control_list {
             self.grants = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3AccessControlList`](crate::model::S3AccessControlList)
+        /// Consumes the builder and constructs a [`S3AccessControlList`](crate::model::S3AccessControlList).
         pub fn build(self) -> crate::model::S3AccessControlList {
             crate::model::S3AccessControlList {
                 owner: self.owner,
@@ -9188,7 +9326,7 @@ pub mod s3_access_control_list {
     }
 }
 impl S3AccessControlList {
-    /// Creates a new builder-style object to manufacture [`S3AccessControlList`](crate::model::S3AccessControlList)
+    /// Creates a new builder-style object to manufacture [`S3AccessControlList`](crate::model::S3AccessControlList).
     pub fn builder() -> crate::model::s3_access_control_list::Builder {
         crate::model::s3_access_control_list::Builder::default()
     }
@@ -9199,8 +9337,10 @@ impl S3AccessControlList {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Grant {
     /// <p></p>
+    #[doc(hidden)]
     pub grantee: std::option::Option<crate::model::S3Grantee>,
     /// <p></p>
+    #[doc(hidden)]
     pub permission: std::option::Option<crate::model::S3Permission>,
 }
 impl S3Grant {
@@ -9221,11 +9361,10 @@ impl std::fmt::Debug for S3Grant {
         formatter.finish()
     }
 }
-/// See [`S3Grant`](crate::model::S3Grant)
+/// See [`S3Grant`](crate::model::S3Grant).
 pub mod s3_grant {
 
-    /// A builder for [`S3Grant`](crate::model::S3Grant)
-    #[non_exhaustive]
+    /// A builder for [`S3Grant`](crate::model::S3Grant).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) grantee: std::option::Option<crate::model::S3Grantee>,
@@ -9255,7 +9394,7 @@ pub mod s3_grant {
             self.permission = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Grant`](crate::model::S3Grant)
+        /// Consumes the builder and constructs a [`S3Grant`](crate::model::S3Grant).
         pub fn build(self) -> crate::model::S3Grant {
             crate::model::S3Grant {
                 grantee: self.grantee,
@@ -9265,7 +9404,7 @@ pub mod s3_grant {
     }
 }
 impl S3Grant {
-    /// Creates a new builder-style object to manufacture [`S3Grant`](crate::model::S3Grant)
+    /// Creates a new builder-style object to manufacture [`S3Grant`](crate::model::S3Grant).
     pub fn builder() -> crate::model::s3_grant::Builder {
         crate::model::s3_grant::Builder::default()
     }
@@ -9343,10 +9482,13 @@ impl AsRef<str> for S3Permission {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Grantee {
     /// <p></p>
+    #[doc(hidden)]
     pub type_identifier: std::option::Option<crate::model::S3GranteeTypeIdentifier>,
     /// <p></p>
+    #[doc(hidden)]
     pub identifier: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
 }
 impl S3Grantee {
@@ -9372,11 +9514,10 @@ impl std::fmt::Debug for S3Grantee {
         formatter.finish()
     }
 }
-/// See [`S3Grantee`](crate::model::S3Grantee)
+/// See [`S3Grantee`](crate::model::S3Grantee).
 pub mod s3_grantee {
 
-    /// A builder for [`S3Grantee`](crate::model::S3Grantee)
-    #[non_exhaustive]
+    /// A builder for [`S3Grantee`](crate::model::S3Grantee).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) type_identifier: std::option::Option<crate::model::S3GranteeTypeIdentifier>,
@@ -9417,7 +9558,7 @@ pub mod s3_grantee {
             self.display_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Grantee`](crate::model::S3Grantee)
+        /// Consumes the builder and constructs a [`S3Grantee`](crate::model::S3Grantee).
         pub fn build(self) -> crate::model::S3Grantee {
             crate::model::S3Grantee {
                 type_identifier: self.type_identifier,
@@ -9428,7 +9569,7 @@ pub mod s3_grantee {
     }
 }
 impl S3Grantee {
-    /// Creates a new builder-style object to manufacture [`S3Grantee`](crate::model::S3Grantee)
+    /// Creates a new builder-style object to manufacture [`S3Grantee`](crate::model::S3Grantee).
     pub fn builder() -> crate::model::s3_grantee::Builder {
         crate::model::s3_grantee::Builder::default()
     }
@@ -9498,8 +9639,10 @@ impl AsRef<str> for S3GranteeTypeIdentifier {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ObjectOwner {
     /// <p></p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
 }
 impl S3ObjectOwner {
@@ -9520,11 +9663,10 @@ impl std::fmt::Debug for S3ObjectOwner {
         formatter.finish()
     }
 }
-/// See [`S3ObjectOwner`](crate::model::S3ObjectOwner)
+/// See [`S3ObjectOwner`](crate::model::S3ObjectOwner).
 pub mod s3_object_owner {
 
-    /// A builder for [`S3ObjectOwner`](crate::model::S3ObjectOwner)
-    #[non_exhaustive]
+    /// A builder for [`S3ObjectOwner`](crate::model::S3ObjectOwner).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -9551,7 +9693,7 @@ pub mod s3_object_owner {
             self.display_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ObjectOwner`](crate::model::S3ObjectOwner)
+        /// Consumes the builder and constructs a [`S3ObjectOwner`](crate::model::S3ObjectOwner).
         pub fn build(self) -> crate::model::S3ObjectOwner {
             crate::model::S3ObjectOwner {
                 id: self.id,
@@ -9561,7 +9703,7 @@ pub mod s3_object_owner {
     }
 }
 impl S3ObjectOwner {
-    /// Creates a new builder-style object to manufacture [`S3ObjectOwner`](crate::model::S3ObjectOwner)
+    /// Creates a new builder-style object to manufacture [`S3ObjectOwner`](crate::model::S3ObjectOwner).
     pub fn builder() -> crate::model::s3_object_owner::Builder {
         crate::model::s3_object_owner::Builder::default()
     }
@@ -9572,42 +9714,60 @@ impl S3ObjectOwner {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3CopyObjectOperation {
     /// <p>Specifies the destination bucket ARN for the batch copy operation. For example, to copy objects to a bucket named "destinationBucket", set the TargetResource to "arn:aws:s3:::destinationBucket".</p>
+    #[doc(hidden)]
     pub target_resource: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub canned_access_control_list: std::option::Option<crate::model::S3CannedAccessControlList>,
     /// <p></p>
+    #[doc(hidden)]
     pub access_control_grants: std::option::Option<std::vec::Vec<crate::model::S3Grant>>,
     /// <p></p>
+    #[doc(hidden)]
     pub metadata_directive: std::option::Option<crate::model::S3MetadataDirective>,
     /// <p></p>
+    #[doc(hidden)]
     pub modified_since_constraint: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If you don't provide this parameter, Amazon S3 copies all the metadata from the original objects. If you specify an empty set, the new objects will have no tags. Otherwise, Amazon S3 assigns the supplied tags to the new objects.</p>
+    #[doc(hidden)]
     pub new_object_metadata: std::option::Option<crate::model::S3ObjectMetadata>,
     /// <p></p>
+    #[doc(hidden)]
     pub new_object_tagging: std::option::Option<std::vec::Vec<crate::model::S3Tag>>,
     /// <p>Specifies an optional metadata property for website redirects, <code>x-amz-website-redirect-location</code>. Allows webpage redirects if the object is accessed through a website endpoint.</p>
+    #[doc(hidden)]
     pub redirect_location: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub requester_pays: bool,
     /// <p></p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::S3StorageClass>,
     /// <p></p>
+    #[doc(hidden)]
     pub un_modified_since_constraint: std::option::Option<aws_smithy_types::DateTime>,
     /// <p></p>
+    #[doc(hidden)]
     pub sse_aws_kms_key_id: std::option::Option<std::string::String>,
     /// <p>Specifies the folder prefix into which you would like the objects to be copied. For example, to copy objects into a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to <code>Folder1</code>.</p>
+    #[doc(hidden)]
     pub target_key_prefix: std::option::Option<std::string::String>,
     /// <p>The legal hold status to be applied to all objects in the Batch Operations job.</p>
+    #[doc(hidden)]
     pub object_lock_legal_hold_status:
         std::option::Option<crate::model::S3ObjectLockLegalHoldStatus>,
     /// <p>The retention mode to be applied to all objects in the Batch Operations job.</p>
+    #[doc(hidden)]
     pub object_lock_mode: std::option::Option<crate::model::S3ObjectLockMode>,
     /// <p>The date when the applied object retention configuration expires on all objects in the Batch Operations job.</p>
+    #[doc(hidden)]
     pub object_lock_retain_until_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies whether Amazon S3 should use an S3 Bucket Key for object encryption with server-side encryption using Amazon Web Services KMS (SSE-KMS). Setting this header to <code>true</code> causes Amazon S3 to use an S3 Bucket Key for object encryption with SSE-KMS.</p>
     /// <p>Specifying this header with an <i>object</i> action doesn’t affect <i>bucket-level</i> settings for S3 Bucket Key.</p>
+    #[doc(hidden)]
     pub bucket_key_enabled: bool,
     /// <p>Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub checksum_algorithm: std::option::Option<crate::model::S3ChecksumAlgorithm>,
 }
 impl S3CopyObjectOperation {
@@ -9727,11 +9887,10 @@ impl std::fmt::Debug for S3CopyObjectOperation {
         formatter.finish()
     }
 }
-/// See [`S3CopyObjectOperation`](crate::model::S3CopyObjectOperation)
+/// See [`S3CopyObjectOperation`](crate::model::S3CopyObjectOperation).
 pub mod s3_copy_object_operation {
 
-    /// A builder for [`S3CopyObjectOperation`](crate::model::S3CopyObjectOperation)
-    #[non_exhaustive]
+    /// A builder for [`S3CopyObjectOperation`](crate::model::S3CopyObjectOperation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_resource: std::option::Option<std::string::String>,
@@ -10004,7 +10163,7 @@ pub mod s3_copy_object_operation {
             self.checksum_algorithm = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3CopyObjectOperation`](crate::model::S3CopyObjectOperation)
+        /// Consumes the builder and constructs a [`S3CopyObjectOperation`](crate::model::S3CopyObjectOperation).
         pub fn build(self) -> crate::model::S3CopyObjectOperation {
             crate::model::S3CopyObjectOperation {
                 target_resource: self.target_resource,
@@ -10030,7 +10189,7 @@ pub mod s3_copy_object_operation {
     }
 }
 impl S3CopyObjectOperation {
-    /// Creates a new builder-style object to manufacture [`S3CopyObjectOperation`](crate::model::S3CopyObjectOperation)
+    /// Creates a new builder-style object to manufacture [`S3CopyObjectOperation`](crate::model::S3CopyObjectOperation).
     pub fn builder() -> crate::model::s3_copy_object_operation::Builder {
         crate::model::s3_copy_object_operation::Builder::default()
     }
@@ -10242,27 +10401,38 @@ impl AsRef<str> for S3StorageClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ObjectMetadata {
     /// <p></p>
+    #[doc(hidden)]
     pub cache_control: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub content_disposition: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub content_encoding: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub content_language: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub user_metadata:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p></p>
+    #[doc(hidden)]
     pub content_length: std::option::Option<i64>,
     /// <p></p>
+    #[doc(hidden)]
     pub content_md5: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub http_expires_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p></p>
+    #[doc(hidden)]
     pub requester_charged: bool,
     /// <p></p>
+    #[doc(hidden)]
     pub sse_algorithm: std::option::Option<crate::model::S3SseAlgorithm>,
 }
 impl S3ObjectMetadata {
@@ -10331,11 +10501,10 @@ impl std::fmt::Debug for S3ObjectMetadata {
         formatter.finish()
     }
 }
-/// See [`S3ObjectMetadata`](crate::model::S3ObjectMetadata)
+/// See [`S3ObjectMetadata`](crate::model::S3ObjectMetadata).
 pub mod s3_object_metadata {
 
-    /// A builder for [`S3ObjectMetadata`](crate::model::S3ObjectMetadata)
-    #[non_exhaustive]
+    /// A builder for [`S3ObjectMetadata`](crate::model::S3ObjectMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cache_control: std::option::Option<std::string::String>,
@@ -10496,7 +10665,7 @@ pub mod s3_object_metadata {
             self.sse_algorithm = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ObjectMetadata`](crate::model::S3ObjectMetadata)
+        /// Consumes the builder and constructs a [`S3ObjectMetadata`](crate::model::S3ObjectMetadata).
         pub fn build(self) -> crate::model::S3ObjectMetadata {
             crate::model::S3ObjectMetadata {
                 cache_control: self.cache_control,
@@ -10515,7 +10684,7 @@ pub mod s3_object_metadata {
     }
 }
 impl S3ObjectMetadata {
-    /// Creates a new builder-style object to manufacture [`S3ObjectMetadata`](crate::model::S3ObjectMetadata)
+    /// Creates a new builder-style object to manufacture [`S3ObjectMetadata`](crate::model::S3ObjectMetadata).
     pub fn builder() -> crate::model::s3_object_metadata::Builder {
         crate::model::s3_object_metadata::Builder::default()
     }
@@ -10636,6 +10805,7 @@ impl AsRef<str> for S3MetadataDirective {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaInvokeOperation {
     /// <p>The Amazon Resource Name (ARN) for the Lambda function that the specified job will invoke on every object in the manifest.</p>
+    #[doc(hidden)]
     pub function_arn: std::option::Option<std::string::String>,
 }
 impl LambdaInvokeOperation {
@@ -10651,11 +10821,10 @@ impl std::fmt::Debug for LambdaInvokeOperation {
         formatter.finish()
     }
 }
-/// See [`LambdaInvokeOperation`](crate::model::LambdaInvokeOperation)
+/// See [`LambdaInvokeOperation`](crate::model::LambdaInvokeOperation).
 pub mod lambda_invoke_operation {
 
-    /// A builder for [`LambdaInvokeOperation`](crate::model::LambdaInvokeOperation)
-    #[non_exhaustive]
+    /// A builder for [`LambdaInvokeOperation`](crate::model::LambdaInvokeOperation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) function_arn: std::option::Option<std::string::String>,
@@ -10671,7 +10840,7 @@ pub mod lambda_invoke_operation {
             self.function_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaInvokeOperation`](crate::model::LambdaInvokeOperation)
+        /// Consumes the builder and constructs a [`LambdaInvokeOperation`](crate::model::LambdaInvokeOperation).
         pub fn build(self) -> crate::model::LambdaInvokeOperation {
             crate::model::LambdaInvokeOperation {
                 function_arn: self.function_arn,
@@ -10680,7 +10849,7 @@ pub mod lambda_invoke_operation {
     }
 }
 impl LambdaInvokeOperation {
-    /// Creates a new builder-style object to manufacture [`LambdaInvokeOperation`](crate::model::LambdaInvokeOperation)
+    /// Creates a new builder-style object to manufacture [`LambdaInvokeOperation`](crate::model::LambdaInvokeOperation).
     pub fn builder() -> crate::model::lambda_invoke_operation::Builder {
         crate::model::lambda_invoke_operation::Builder::default()
     }
@@ -10691,8 +10860,10 @@ impl LambdaInvokeOperation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobManifest {
     /// <p>Describes the format of the specified job's manifest. If the manifest is in CSV format, also describes the columns contained within the manifest.</p>
+    #[doc(hidden)]
     pub spec: std::option::Option<crate::model::JobManifestSpec>,
     /// <p>Contains the information required to locate the specified job's manifest.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::JobManifestLocation>,
 }
 impl JobManifest {
@@ -10713,11 +10884,10 @@ impl std::fmt::Debug for JobManifest {
         formatter.finish()
     }
 }
-/// See [`JobManifest`](crate::model::JobManifest)
+/// See [`JobManifest`](crate::model::JobManifest).
 pub mod job_manifest {
 
-    /// A builder for [`JobManifest`](crate::model::JobManifest)
-    #[non_exhaustive]
+    /// A builder for [`JobManifest`](crate::model::JobManifest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) spec: std::option::Option<crate::model::JobManifestSpec>,
@@ -10750,7 +10920,7 @@ pub mod job_manifest {
             self.location = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobManifest`](crate::model::JobManifest)
+        /// Consumes the builder and constructs a [`JobManifest`](crate::model::JobManifest).
         pub fn build(self) -> crate::model::JobManifest {
             crate::model::JobManifest {
                 spec: self.spec,
@@ -10760,7 +10930,7 @@ pub mod job_manifest {
     }
 }
 impl JobManifest {
-    /// Creates a new builder-style object to manufacture [`JobManifest`](crate::model::JobManifest)
+    /// Creates a new builder-style object to manufacture [`JobManifest`](crate::model::JobManifest).
     pub fn builder() -> crate::model::job_manifest::Builder {
         crate::model::job_manifest::Builder::default()
     }
@@ -10771,8 +10941,10 @@ impl JobManifest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobManifestSpec {
     /// <p>Indicates which of the available formats the specified manifest uses.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::JobManifestFormat>,
     /// <p>If the specified manifest object is in the <code>S3BatchOperations_CSV_20180820</code> format, this element describes which columns contain the required data.</p>
+    #[doc(hidden)]
     pub fields: std::option::Option<std::vec::Vec<crate::model::JobManifestFieldName>>,
 }
 impl JobManifestSpec {
@@ -10793,11 +10965,10 @@ impl std::fmt::Debug for JobManifestSpec {
         formatter.finish()
     }
 }
-/// See [`JobManifestSpec`](crate::model::JobManifestSpec)
+/// See [`JobManifestSpec`](crate::model::JobManifestSpec).
 pub mod job_manifest_spec {
 
-    /// A builder for [`JobManifestSpec`](crate::model::JobManifestSpec)
-    #[non_exhaustive]
+    /// A builder for [`JobManifestSpec`](crate::model::JobManifestSpec).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) format: std::option::Option<crate::model::JobManifestFormat>,
@@ -10836,7 +11007,7 @@ pub mod job_manifest_spec {
             self.fields = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobManifestSpec`](crate::model::JobManifestSpec)
+        /// Consumes the builder and constructs a [`JobManifestSpec`](crate::model::JobManifestSpec).
         pub fn build(self) -> crate::model::JobManifestSpec {
             crate::model::JobManifestSpec {
                 format: self.format,
@@ -10846,7 +11017,7 @@ pub mod job_manifest_spec {
     }
 }
 impl JobManifestSpec {
-    /// Creates a new builder-style object to manufacture [`JobManifestSpec`](crate::model::JobManifestSpec)
+    /// Creates a new builder-style object to manufacture [`JobManifestSpec`](crate::model::JobManifestSpec).
     pub fn builder() -> crate::model::job_manifest_spec::Builder {
         crate::model::job_manifest_spec::Builder::default()
     }
@@ -10982,6 +11153,7 @@ pub struct CreateBucketConfiguration {
     /// <p>Specifies the Region where the bucket will be created. If you are creating a bucket on the US East (N. Virginia) Region (us-east-1), you do not need to specify the location. </p> <note>
     /// <p>This is not supported by Amazon S3 on Outposts buckets.</p>
     /// </note>
+    #[doc(hidden)]
     pub location_constraint: std::option::Option<crate::model::BucketLocationConstraint>,
 }
 impl CreateBucketConfiguration {
@@ -11001,11 +11173,10 @@ impl std::fmt::Debug for CreateBucketConfiguration {
         formatter.finish()
     }
 }
-/// See [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration)
+/// See [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration).
 pub mod create_bucket_configuration {
 
-    /// A builder for [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_constraint: std::option::Option<crate::model::BucketLocationConstraint>,
@@ -11031,7 +11202,7 @@ pub mod create_bucket_configuration {
             self.location_constraint = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration)
+        /// Consumes the builder and constructs a [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration).
         pub fn build(self) -> crate::model::CreateBucketConfiguration {
             crate::model::CreateBucketConfiguration {
                 location_constraint: self.location_constraint,
@@ -11040,7 +11211,7 @@ pub mod create_bucket_configuration {
     }
 }
 impl CreateBucketConfiguration {
-    /// Creates a new builder-style object to manufacture [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration)
+    /// Creates a new builder-style object to manufacture [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration).
     pub fn builder() -> crate::model::create_bucket_configuration::Builder {
         crate::model::create_bucket_configuration::Builder::default()
     }

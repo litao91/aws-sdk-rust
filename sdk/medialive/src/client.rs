@@ -374,6 +374,7 @@ impl Client {
     ///   - [`offering_id(Option<String>)`](crate::output::DeleteReservationOutput::offering_id): Unique offering ID, e.g. '87654321'
     ///   - [`offering_type(Option<OfferingType>)`](crate::output::DeleteReservationOutput::offering_type): Offering type, e.g. 'NO_UPFRONT'
     ///   - [`region(Option<String>)`](crate::output::DeleteReservationOutput::region): AWS region, e.g. 'us-west-2'
+    ///   - [`renewal_settings(Option<RenewalSettings>)`](crate::output::DeleteReservationOutput::renewal_settings): Renewal settings for the reservation
     ///   - [`reservation_id(Option<String>)`](crate::output::DeleteReservationOutput::reservation_id): Unique reservation ID, e.g. '1234567'
     ///   - [`resource_specification(Option<ReservationResourceSpecification>)`](crate::output::DeleteReservationOutput::resource_specification): Resource configuration details
     ///   - [`start(Option<String>)`](crate::output::DeleteReservationOutput::start): Reservation UTC start date and time in ISO-8601 format, e.g. '2018-03-01T00:00:00'
@@ -484,7 +485,7 @@ impl Client {
     ///   - [`input_device_id(impl Into<String>)`](crate::client::fluent_builders::DescribeInputDeviceThumbnail::input_device_id) / [`set_input_device_id(Option<String>)`](crate::client::fluent_builders::DescribeInputDeviceThumbnail::set_input_device_id): The unique ID of this input device. For example, hd-123456789abcdef.
     ///   - [`accept(AcceptHeader)`](crate::client::fluent_builders::DescribeInputDeviceThumbnail::accept) / [`set_accept(Option<AcceptHeader>)`](crate::client::fluent_builders::DescribeInputDeviceThumbnail::set_accept): The HTTP Accept header. Indicates the requested type for the thumbnail.
     /// - On success, responds with [`DescribeInputDeviceThumbnailOutput`](crate::output::DescribeInputDeviceThumbnailOutput) with field(s):
-    ///   - [`body(byte_stream::ByteStream)`](crate::output::DescribeInputDeviceThumbnailOutput::body): The binary data for the thumbnail that the Link device has most recently sent to MediaLive.
+    ///   - [`body(ByteStream)`](crate::output::DescribeInputDeviceThumbnailOutput::body): The binary data for the thumbnail that the Link device has most recently sent to MediaLive.
     ///   - [`content_type(Option<ContentType>)`](crate::output::DescribeInputDeviceThumbnailOutput::content_type): Specifies the media type of the thumbnail.
     ///   - [`content_length(i64)`](crate::output::DescribeInputDeviceThumbnailOutput::content_length): The length of the content.
     ///   - [`e_tag(Option<String>)`](crate::output::DescribeInputDeviceThumbnailOutput::e_tag): The unique, cacheable version of this thumbnail.
@@ -579,6 +580,7 @@ impl Client {
     ///   - [`offering_id(Option<String>)`](crate::output::DescribeReservationOutput::offering_id): Unique offering ID, e.g. '87654321'
     ///   - [`offering_type(Option<OfferingType>)`](crate::output::DescribeReservationOutput::offering_type): Offering type, e.g. 'NO_UPFRONT'
     ///   - [`region(Option<String>)`](crate::output::DescribeReservationOutput::region): AWS region, e.g. 'us-west-2'
+    ///   - [`renewal_settings(Option<RenewalSettings>)`](crate::output::DescribeReservationOutput::renewal_settings): Renewal settings for the reservation
     ///   - [`reservation_id(Option<String>)`](crate::output::DescribeReservationOutput::reservation_id): Unique reservation ID, e.g. '1234567'
     ///   - [`resource_specification(Option<ReservationResourceSpecification>)`](crate::output::DescribeReservationOutput::resource_specification): Resource configuration details
     ///   - [`start(Option<String>)`](crate::output::DescribeReservationOutput::start): Reservation UTC start date and time in ISO-8601 format, e.g. '2018-03-01T00:00:00'
@@ -756,6 +758,7 @@ impl Client {
     ///   - [`count(i32)`](crate::client::fluent_builders::PurchaseOffering::count) / [`set_count(i32)`](crate::client::fluent_builders::PurchaseOffering::set_count): Number of resources
     ///   - [`name(impl Into<String>)`](crate::client::fluent_builders::PurchaseOffering::name) / [`set_name(Option<String>)`](crate::client::fluent_builders::PurchaseOffering::set_name): Name for the new reservation
     ///   - [`offering_id(impl Into<String>)`](crate::client::fluent_builders::PurchaseOffering::offering_id) / [`set_offering_id(Option<String>)`](crate::client::fluent_builders::PurchaseOffering::set_offering_id): Offering to purchase, e.g. '87654321'
+    ///   - [`renewal_settings(RenewalSettings)`](crate::client::fluent_builders::PurchaseOffering::renewal_settings) / [`set_renewal_settings(Option<RenewalSettings>)`](crate::client::fluent_builders::PurchaseOffering::set_renewal_settings): Renewal settings for the reservation
     ///   - [`request_id(impl Into<String>)`](crate::client::fluent_builders::PurchaseOffering::request_id) / [`set_request_id(Option<String>)`](crate::client::fluent_builders::PurchaseOffering::set_request_id): Unique request ID to be specified. This is needed to prevent retries from creating multiple resources.
     ///   - [`start(impl Into<String>)`](crate::client::fluent_builders::PurchaseOffering::start) / [`set_start(Option<String>)`](crate::client::fluent_builders::PurchaseOffering::set_start): Requested reservation start time (UTC) in ISO-8601 format. The specified time must be between the first day of the current month and one year from now. If no value is given, the default is now.
     ///   - [`tags(HashMap<String, String>)`](crate::client::fluent_builders::PurchaseOffering::tags) / [`set_tags(Option<HashMap<String, String>>)`](crate::client::fluent_builders::PurchaseOffering::set_tags): A collection of key-value pairs
@@ -764,6 +767,17 @@ impl Client {
     /// - On failure, responds with [`SdkError<PurchaseOfferingError>`](crate::error::PurchaseOfferingError)
     pub fn purchase_offering(&self) -> fluent_builders::PurchaseOffering {
         fluent_builders::PurchaseOffering::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`RebootInputDevice`](crate::client::fluent_builders::RebootInputDevice) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`force(RebootInputDeviceForce)`](crate::client::fluent_builders::RebootInputDevice::force) / [`set_force(Option<RebootInputDeviceForce>)`](crate::client::fluent_builders::RebootInputDevice::set_force): Force a reboot of an input device. If the device is streaming, it will stop streaming and begin rebooting within a few seconds of sending the command. If the device was streaming prior to the reboot, the device will resume streaming when the reboot completes.
+    ///   - [`input_device_id(impl Into<String>)`](crate::client::fluent_builders::RebootInputDevice::input_device_id) / [`set_input_device_id(Option<String>)`](crate::client::fluent_builders::RebootInputDevice::set_input_device_id): The unique ID of the input device to reboot. For example, hd-123456789abcdef.
+    /// - On success, responds with [`RebootInputDeviceOutput`](crate::output::RebootInputDeviceOutput)
+
+    /// - On failure, responds with [`SdkError<RebootInputDeviceError>`](crate::error::RebootInputDeviceError)
+    pub fn reboot_input_device(&self) -> fluent_builders::RebootInputDevice {
+        fluent_builders::RebootInputDevice::new(self.handle.clone())
     }
     /// Constructs a fluent builder for the [`RejectInputDeviceTransfer`](crate::client::fluent_builders::RejectInputDeviceTransfer) operation.
     ///
@@ -801,6 +815,18 @@ impl Client {
     /// - On failure, responds with [`SdkError<StartChannelError>`](crate::error::StartChannelError)
     pub fn start_channel(&self) -> fluent_builders::StartChannel {
         fluent_builders::StartChannel::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`StartInputDeviceMaintenanceWindow`](crate::client::fluent_builders::StartInputDeviceMaintenanceWindow) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`input_device_id(impl Into<String>)`](crate::client::fluent_builders::StartInputDeviceMaintenanceWindow::input_device_id) / [`set_input_device_id(Option<String>)`](crate::client::fluent_builders::StartInputDeviceMaintenanceWindow::set_input_device_id): The unique ID of the input device to start a maintenance window for. For example, hd-123456789abcdef.
+    /// - On success, responds with [`StartInputDeviceMaintenanceWindowOutput`](crate::output::StartInputDeviceMaintenanceWindowOutput)
+
+    /// - On failure, responds with [`SdkError<StartInputDeviceMaintenanceWindowError>`](crate::error::StartInputDeviceMaintenanceWindowError)
+    pub fn start_input_device_maintenance_window(
+        &self,
+    ) -> fluent_builders::StartInputDeviceMaintenanceWindow {
+        fluent_builders::StartInputDeviceMaintenanceWindow::new(self.handle.clone())
     }
     /// Constructs a fluent builder for the [`StartMultiplex`](crate::client::fluent_builders::StartMultiplex) operation.
     ///
@@ -992,6 +1018,7 @@ impl Client {
     ///
     /// - The fluent builder is configurable:
     ///   - [`name(impl Into<String>)`](crate::client::fluent_builders::UpdateReservation::name) / [`set_name(Option<String>)`](crate::client::fluent_builders::UpdateReservation::set_name): Name of the reservation
+    ///   - [`renewal_settings(RenewalSettings)`](crate::client::fluent_builders::UpdateReservation::renewal_settings) / [`set_renewal_settings(Option<RenewalSettings>)`](crate::client::fluent_builders::UpdateReservation::set_renewal_settings): Renewal settings for the reservation
     ///   - [`reservation_id(impl Into<String>)`](crate::client::fluent_builders::UpdateReservation::reservation_id) / [`set_reservation_id(Option<String>)`](crate::client::fluent_builders::UpdateReservation::set_reservation_id): Unique reservation ID, e.g. '1234567'
     /// - On success, responds with [`UpdateReservationOutput`](crate::output::UpdateReservationOutput) with field(s):
     ///   - [`reservation(Option<Reservation>)`](crate::output::UpdateReservationOutput::reservation): Reserved resources available to use
@@ -1691,11 +1718,13 @@ pub mod fluent_builders {
             self
         }
         /// Deprecated field that's only usable by whitelisted customers.
+        #[deprecated]
         pub fn reserved(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.reserved(input.into());
             self
         }
         /// Deprecated field that's only usable by whitelisted customers.
+        #[deprecated]
         pub fn set_reserved(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_reserved(input);
             self
@@ -4437,6 +4466,19 @@ pub mod fluent_builders {
             self.inner = self.inner.set_offering_id(input);
             self
         }
+        /// Renewal settings for the reservation
+        pub fn renewal_settings(mut self, input: crate::model::RenewalSettings) -> Self {
+            self.inner = self.inner.renewal_settings(input);
+            self
+        }
+        /// Renewal settings for the reservation
+        pub fn set_renewal_settings(
+            mut self,
+            input: std::option::Option<crate::model::RenewalSettings>,
+        ) -> Self {
+            self.inner = self.inner.set_renewal_settings(input);
+            self
+        }
         /// Unique request ID to be specified. This is needed to prevent retries from creating multiple resources.
         pub fn request_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.request_id(input.into());
@@ -4478,6 +4520,75 @@ pub mod fluent_builders {
             >,
         ) -> Self {
             self.inner = self.inner.set_tags(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `RebootInputDevice`.
+    ///
+    /// Send a reboot command to the specified input device. The device will begin rebooting within a few seconds of sending the command. When the reboot is complete, the device’s connection status will change to connected.
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct RebootInputDevice {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::reboot_input_device_input::Builder,
+    }
+    impl RebootInputDevice {
+        /// Creates a new `RebootInputDevice`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::RebootInputDeviceOutput,
+            aws_smithy_http::result::SdkError<crate::error::RebootInputDeviceError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// Force a reboot of an input device. If the device is streaming, it will stop streaming and begin rebooting within a few seconds of sending the command. If the device was streaming prior to the reboot, the device will resume streaming when the reboot completes.
+        pub fn force(mut self, input: crate::model::RebootInputDeviceForce) -> Self {
+            self.inner = self.inner.force(input);
+            self
+        }
+        /// Force a reboot of an input device. If the device is streaming, it will stop streaming and begin rebooting within a few seconds of sending the command. If the device was streaming prior to the reboot, the device will resume streaming when the reboot completes.
+        pub fn set_force(
+            mut self,
+            input: std::option::Option<crate::model::RebootInputDeviceForce>,
+        ) -> Self {
+            self.inner = self.inner.set_force(input);
+            self
+        }
+        /// The unique ID of the input device to reboot. For example, hd-123456789abcdef.
+        pub fn input_device_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.input_device_id(input.into());
+            self
+        }
+        /// The unique ID of the input device to reboot. For example, hd-123456789abcdef.
+        pub fn set_input_device_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_input_device_id(input);
             self
         }
     }
@@ -4587,6 +4698,62 @@ pub mod fluent_builders {
         /// A request to start a channel
         pub fn set_channel_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_channel_id(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `StartInputDeviceMaintenanceWindow`.
+    ///
+    /// Start a maintenance window for the specified input device. Starting a maintenance window will give the device up to two hours to install software. If the device was streaming prior to the maintenance, it will resume streaming when the software is fully installed. Devices automatically install updates while they are powered on and their MediaLive channels are stopped. A maintenance window allows you to update a device without having to stop MediaLive channels that use the device. The device must remain powered on and connected to the internet for the duration of the maintenance.
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct StartInputDeviceMaintenanceWindow {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::start_input_device_maintenance_window_input::Builder,
+    }
+    impl StartInputDeviceMaintenanceWindow {
+        /// Creates a new `StartInputDeviceMaintenanceWindow`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::StartInputDeviceMaintenanceWindowOutput,
+            aws_smithy_http::result::SdkError<crate::error::StartInputDeviceMaintenanceWindowError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// The unique ID of the input device to start a maintenance window for. For example, hd-123456789abcdef.
+        pub fn input_device_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.input_device_id(input.into());
+            self
+        }
+        /// The unique ID of the input device to start a maintenance window for. For example, hd-123456789abcdef.
+        pub fn set_input_device_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_input_device_id(input);
             self
         }
     }
@@ -5656,6 +5823,19 @@ pub mod fluent_builders {
         /// Name of the reservation
         pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_name(input);
+            self
+        }
+        /// Renewal settings for the reservation
+        pub fn renewal_settings(mut self, input: crate::model::RenewalSettings) -> Self {
+            self.inner = self.inner.renewal_settings(input);
+            self
+        }
+        /// Renewal settings for the reservation
+        pub fn set_renewal_settings(
+            mut self,
+            input: std::option::Option<crate::model::RenewalSettings>,
+        ) -> Self {
+            self.inner = self.inner.set_renewal_settings(input);
             self
         }
         /// Unique reservation ID, e.g. '1234567'

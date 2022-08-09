@@ -10,22 +10,21 @@ impl std::fmt::Debug for SubmitFeedbackOutput {
         formatter.finish()
     }
 }
-/// See [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput)
+/// See [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput).
 pub mod submit_feedback_output {
 
-    /// A builder for [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput)
-    #[non_exhaustive]
+    /// A builder for [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput)
+        /// Consumes the builder and constructs a [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput).
         pub fn build(self) -> crate::output::SubmitFeedbackOutput {
             crate::output::SubmitFeedbackOutput {}
         }
     }
 }
 impl SubmitFeedbackOutput {
-    /// Creates a new builder-style object to manufacture [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput)
+    /// Creates a new builder-style object to manufacture [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput).
     pub fn builder() -> crate::output::submit_feedback_output::Builder {
         crate::output::submit_feedback_output::Builder::default()
     }
@@ -36,8 +35,10 @@ impl SubmitFeedbackOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemovePermissionOutput {
     /// <p> The JSON-formatted resource-based policy on the profiling group after the specified permissions were removed. </p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
     /// <p> A universally unique identifier (UUID) for the revision of the resource-based policy after the specified permissions were removed. The updated JSON-formatted policy is in the <code>policy</code> element of the response. </p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl RemovePermissionOutput {
@@ -58,11 +59,10 @@ impl std::fmt::Debug for RemovePermissionOutput {
         formatter.finish()
     }
 }
-/// See [`RemovePermissionOutput`](crate::output::RemovePermissionOutput)
+/// See [`RemovePermissionOutput`](crate::output::RemovePermissionOutput).
 pub mod remove_permission_output {
 
-    /// A builder for [`RemovePermissionOutput`](crate::output::RemovePermissionOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemovePermissionOutput`](crate::output::RemovePermissionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<std::string::String>,
@@ -89,7 +89,7 @@ pub mod remove_permission_output {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemovePermissionOutput`](crate::output::RemovePermissionOutput)
+        /// Consumes the builder and constructs a [`RemovePermissionOutput`](crate::output::RemovePermissionOutput).
         pub fn build(self) -> crate::output::RemovePermissionOutput {
             crate::output::RemovePermissionOutput {
                 policy: self.policy,
@@ -99,7 +99,7 @@ pub mod remove_permission_output {
     }
 }
 impl RemovePermissionOutput {
-    /// Creates a new builder-style object to manufacture [`RemovePermissionOutput`](crate::output::RemovePermissionOutput)
+    /// Creates a new builder-style object to manufacture [`RemovePermissionOutput`](crate::output::RemovePermissionOutput).
     pub fn builder() -> crate::output::remove_permission_output::Builder {
         crate::output::remove_permission_output::Builder::default()
     }
@@ -110,6 +110,7 @@ impl RemovePermissionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoveNotificationChannelOutput {
     /// <p>The new notification configuration for this profiling group.</p>
+    #[doc(hidden)]
     pub notification_configuration: std::option::Option<crate::model::NotificationConfiguration>,
 }
 impl RemoveNotificationChannelOutput {
@@ -130,11 +131,10 @@ impl std::fmt::Debug for RemoveNotificationChannelOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveNotificationChannelOutput`](crate::output::RemoveNotificationChannelOutput)
+/// See [`RemoveNotificationChannelOutput`](crate::output::RemoveNotificationChannelOutput).
 pub mod remove_notification_channel_output {
 
-    /// A builder for [`RemoveNotificationChannelOutput`](crate::output::RemoveNotificationChannelOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveNotificationChannelOutput`](crate::output::RemoveNotificationChannelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) notification_configuration:
@@ -157,7 +157,7 @@ pub mod remove_notification_channel_output {
             self.notification_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoveNotificationChannelOutput`](crate::output::RemoveNotificationChannelOutput)
+        /// Consumes the builder and constructs a [`RemoveNotificationChannelOutput`](crate::output::RemoveNotificationChannelOutput).
         pub fn build(self) -> crate::output::RemoveNotificationChannelOutput {
             crate::output::RemoveNotificationChannelOutput {
                 notification_configuration: self.notification_configuration,
@@ -166,7 +166,7 @@ pub mod remove_notification_channel_output {
     }
 }
 impl RemoveNotificationChannelOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveNotificationChannelOutput`](crate::output::RemoveNotificationChannelOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveNotificationChannelOutput`](crate::output::RemoveNotificationChannelOutput).
     pub fn builder() -> crate::output::remove_notification_channel_output::Builder {
         crate::output::remove_notification_channel_output::Builder::default()
     }
@@ -177,8 +177,10 @@ impl RemoveNotificationChannelOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutPermissionOutput {
     /// <p> The JSON-formatted resource-based policy on the profiling group that includes the added permissions. </p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
     /// <p> A universally unique identifier (UUID) for the revision of the resource-based policy that includes the added permissions. The JSON-formatted policy is in the <code>policy</code> element of the response. </p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl PutPermissionOutput {
@@ -199,11 +201,10 @@ impl std::fmt::Debug for PutPermissionOutput {
         formatter.finish()
     }
 }
-/// See [`PutPermissionOutput`](crate::output::PutPermissionOutput)
+/// See [`PutPermissionOutput`](crate::output::PutPermissionOutput).
 pub mod put_permission_output {
 
-    /// A builder for [`PutPermissionOutput`](crate::output::PutPermissionOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutPermissionOutput`](crate::output::PutPermissionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<std::string::String>,
@@ -230,7 +231,7 @@ pub mod put_permission_output {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutPermissionOutput`](crate::output::PutPermissionOutput)
+        /// Consumes the builder and constructs a [`PutPermissionOutput`](crate::output::PutPermissionOutput).
         pub fn build(self) -> crate::output::PutPermissionOutput {
             crate::output::PutPermissionOutput {
                 policy: self.policy,
@@ -240,7 +241,7 @@ pub mod put_permission_output {
     }
 }
 impl PutPermissionOutput {
-    /// Creates a new builder-style object to manufacture [`PutPermissionOutput`](crate::output::PutPermissionOutput)
+    /// Creates a new builder-style object to manufacture [`PutPermissionOutput`](crate::output::PutPermissionOutput).
     pub fn builder() -> crate::output::put_permission_output::Builder {
         crate::output::put_permission_output::Builder::default()
     }
@@ -256,22 +257,21 @@ impl std::fmt::Debug for PostAgentProfileOutput {
         formatter.finish()
     }
 }
-/// See [`PostAgentProfileOutput`](crate::output::PostAgentProfileOutput)
+/// See [`PostAgentProfileOutput`](crate::output::PostAgentProfileOutput).
 pub mod post_agent_profile_output {
 
-    /// A builder for [`PostAgentProfileOutput`](crate::output::PostAgentProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`PostAgentProfileOutput`](crate::output::PostAgentProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PostAgentProfileOutput`](crate::output::PostAgentProfileOutput)
+        /// Consumes the builder and constructs a [`PostAgentProfileOutput`](crate::output::PostAgentProfileOutput).
         pub fn build(self) -> crate::output::PostAgentProfileOutput {
             crate::output::PostAgentProfileOutput {}
         }
     }
 }
 impl PostAgentProfileOutput {
-    /// Creates a new builder-style object to manufacture [`PostAgentProfileOutput`](crate::output::PostAgentProfileOutput)
+    /// Creates a new builder-style object to manufacture [`PostAgentProfileOutput`](crate::output::PostAgentProfileOutput).
     pub fn builder() -> crate::output::post_agent_profile_output::Builder {
         crate::output::post_agent_profile_output::Builder::default()
     }
@@ -282,8 +282,10 @@ impl PostAgentProfileOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListProfileTimesOutput {
     /// <p>The list of start times of the available profiles for the aggregation period in the specified time range. </p>
+    #[doc(hidden)]
     pub profile_times: std::option::Option<std::vec::Vec<crate::model::ProfileTime>>,
     /// <p>The <code>nextToken</code> value to include in a future <code>ListProfileTimes</code> request. When the results of a <code>ListProfileTimes</code> request exceed <code>maxResults</code>, this value can be used to retrieve the next page of results. This value is <code>null</code> when there are no more results to return. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListProfileTimesOutput {
@@ -304,11 +306,10 @@ impl std::fmt::Debug for ListProfileTimesOutput {
         formatter.finish()
     }
 }
-/// See [`ListProfileTimesOutput`](crate::output::ListProfileTimesOutput)
+/// See [`ListProfileTimesOutput`](crate::output::ListProfileTimesOutput).
 pub mod list_profile_times_output {
 
-    /// A builder for [`ListProfileTimesOutput`](crate::output::ListProfileTimesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListProfileTimesOutput`](crate::output::ListProfileTimesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) profile_times: std::option::Option<std::vec::Vec<crate::model::ProfileTime>>,
@@ -344,7 +345,7 @@ pub mod list_profile_times_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListProfileTimesOutput`](crate::output::ListProfileTimesOutput)
+        /// Consumes the builder and constructs a [`ListProfileTimesOutput`](crate::output::ListProfileTimesOutput).
         pub fn build(self) -> crate::output::ListProfileTimesOutput {
             crate::output::ListProfileTimesOutput {
                 profile_times: self.profile_times,
@@ -354,7 +355,7 @@ pub mod list_profile_times_output {
     }
 }
 impl ListProfileTimesOutput {
-    /// Creates a new builder-style object to manufacture [`ListProfileTimesOutput`](crate::output::ListProfileTimesOutput)
+    /// Creates a new builder-style object to manufacture [`ListProfileTimesOutput`](crate::output::ListProfileTimesOutput).
     pub fn builder() -> crate::output::list_profile_times_output::Builder {
         crate::output::list_profile_times_output::Builder::default()
     }
@@ -365,9 +366,11 @@ impl ListProfileTimesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListFindingsReportsOutput {
     /// <p>The list of analysis results summaries.</p>
+    #[doc(hidden)]
     pub findings_report_summaries:
         std::option::Option<std::vec::Vec<crate::model::FindingsReportSummary>>,
     /// <p>The <code>nextToken</code> value to include in a future <code>ListFindingsReports</code> request. When the results of a <code>ListFindingsReports</code> request exceed <code>maxResults</code>, this value can be used to retrieve the next page of results. This value is <code>null</code> when there are no more results to return.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListFindingsReportsOutput {
@@ -390,11 +393,10 @@ impl std::fmt::Debug for ListFindingsReportsOutput {
         formatter.finish()
     }
 }
-/// See [`ListFindingsReportsOutput`](crate::output::ListFindingsReportsOutput)
+/// See [`ListFindingsReportsOutput`](crate::output::ListFindingsReportsOutput).
 pub mod list_findings_reports_output {
 
-    /// A builder for [`ListFindingsReportsOutput`](crate::output::ListFindingsReportsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListFindingsReportsOutput`](crate::output::ListFindingsReportsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) findings_report_summaries:
@@ -434,7 +436,7 @@ pub mod list_findings_reports_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFindingsReportsOutput`](crate::output::ListFindingsReportsOutput)
+        /// Consumes the builder and constructs a [`ListFindingsReportsOutput`](crate::output::ListFindingsReportsOutput).
         pub fn build(self) -> crate::output::ListFindingsReportsOutput {
             crate::output::ListFindingsReportsOutput {
                 findings_report_summaries: self.findings_report_summaries,
@@ -444,7 +446,7 @@ pub mod list_findings_reports_output {
     }
 }
 impl ListFindingsReportsOutput {
-    /// Creates a new builder-style object to manufacture [`ListFindingsReportsOutput`](crate::output::ListFindingsReportsOutput)
+    /// Creates a new builder-style object to manufacture [`ListFindingsReportsOutput`](crate::output::ListFindingsReportsOutput).
     pub fn builder() -> crate::output::list_findings_reports_output::Builder {
         crate::output::list_findings_reports_output::Builder::default()
     }
@@ -455,14 +457,19 @@ impl ListFindingsReportsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRecommendationsOutput {
     /// <p>The name of the profiling group the analysis data is about.</p>
+    #[doc(hidden)]
     pub profiling_group_name: std::option::Option<std::string::String>,
     /// <p> The start time of the profile the analysis data is about. This is specified using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC. </p>
+    #[doc(hidden)]
     pub profile_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The end time of the profile the analysis data is about. This is specified using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC. </p>
+    #[doc(hidden)]
     pub profile_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The list of recommendations that the analysis found for this profile.</p>
+    #[doc(hidden)]
     pub recommendations: std::option::Option<std::vec::Vec<crate::model::Recommendation>>,
     /// <p> The list of anomalies that the analysis has found for this profile. </p>
+    #[doc(hidden)]
     pub anomalies: std::option::Option<std::vec::Vec<crate::model::Anomaly>>,
 }
 impl GetRecommendationsOutput {
@@ -498,11 +505,10 @@ impl std::fmt::Debug for GetRecommendationsOutput {
         formatter.finish()
     }
 }
-/// See [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput)
+/// See [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput).
 pub mod get_recommendations_output {
 
-    /// A builder for [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) profiling_group_name: std::option::Option<std::string::String>,
@@ -590,7 +596,7 @@ pub mod get_recommendations_output {
             self.anomalies = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput)
+        /// Consumes the builder and constructs a [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput).
         pub fn build(self) -> crate::output::GetRecommendationsOutput {
             crate::output::GetRecommendationsOutput {
                 profiling_group_name: self.profiling_group_name,
@@ -603,7 +609,7 @@ pub mod get_recommendations_output {
     }
 }
 impl GetRecommendationsOutput {
-    /// Creates a new builder-style object to manufacture [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput)
+    /// Creates a new builder-style object to manufacture [`GetRecommendationsOutput`](crate::output::GetRecommendationsOutput).
     pub fn builder() -> crate::output::get_recommendations_output::Builder {
         crate::output::get_recommendations_output::Builder::default()
     }
@@ -614,10 +620,13 @@ impl GetRecommendationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetProfileOutput {
     /// <p>Information about the profile.</p>
+    #[doc(hidden)]
     pub profile: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The content type of the profile in the payload. It is either <code>application/json</code> or the default <code>application/x-amzn-ion</code>.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The content encoding of the profile.</p>
+    #[doc(hidden)]
     pub content_encoding: std::option::Option<std::string::String>,
 }
 impl GetProfileOutput {
@@ -643,11 +652,10 @@ impl std::fmt::Debug for GetProfileOutput {
         formatter.finish()
     }
 }
-/// See [`GetProfileOutput`](crate::output::GetProfileOutput)
+/// See [`GetProfileOutput`](crate::output::GetProfileOutput).
 pub mod get_profile_output {
 
-    /// A builder for [`GetProfileOutput`](crate::output::GetProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetProfileOutput`](crate::output::GetProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) profile: std::option::Option<aws_smithy_types::Blob>,
@@ -688,7 +696,7 @@ pub mod get_profile_output {
             self.content_encoding = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetProfileOutput`](crate::output::GetProfileOutput)
+        /// Consumes the builder and constructs a [`GetProfileOutput`](crate::output::GetProfileOutput).
         pub fn build(self) -> crate::output::GetProfileOutput {
             crate::output::GetProfileOutput {
                 profile: self.profile,
@@ -699,7 +707,7 @@ pub mod get_profile_output {
     }
 }
 impl GetProfileOutput {
-    /// Creates a new builder-style object to manufacture [`GetProfileOutput`](crate::output::GetProfileOutput)
+    /// Creates a new builder-style object to manufacture [`GetProfileOutput`](crate::output::GetProfileOutput).
     pub fn builder() -> crate::output::get_profile_output::Builder {
         crate::output::get_profile_output::Builder::default()
     }
@@ -710,8 +718,10 @@ impl GetProfileOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetPolicyOutput {
     /// <p>The JSON-formatted resource-based policy attached to the <code>ProfilingGroup</code>.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the current revision of the returned policy.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl GetPolicyOutput {
@@ -732,11 +742,10 @@ impl std::fmt::Debug for GetPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetPolicyOutput`](crate::output::GetPolicyOutput)
+/// See [`GetPolicyOutput`](crate::output::GetPolicyOutput).
 pub mod get_policy_output {
 
-    /// A builder for [`GetPolicyOutput`](crate::output::GetPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetPolicyOutput`](crate::output::GetPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<std::string::String>,
@@ -763,7 +772,7 @@ pub mod get_policy_output {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetPolicyOutput`](crate::output::GetPolicyOutput)
+        /// Consumes the builder and constructs a [`GetPolicyOutput`](crate::output::GetPolicyOutput).
         pub fn build(self) -> crate::output::GetPolicyOutput {
             crate::output::GetPolicyOutput {
                 policy: self.policy,
@@ -773,7 +782,7 @@ pub mod get_policy_output {
     }
 }
 impl GetPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetPolicyOutput`](crate::output::GetPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetPolicyOutput`](crate::output::GetPolicyOutput).
     pub fn builder() -> crate::output::get_policy_output::Builder {
         crate::output::get_policy_output::Builder::default()
     }
@@ -784,6 +793,7 @@ impl GetPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetNotificationConfigurationOutput {
     /// <p>The current notification configuration for this profiling group.</p>
+    #[doc(hidden)]
     pub notification_configuration: std::option::Option<crate::model::NotificationConfiguration>,
 }
 impl GetNotificationConfigurationOutput {
@@ -804,11 +814,10 @@ impl std::fmt::Debug for GetNotificationConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetNotificationConfigurationOutput`](crate::output::GetNotificationConfigurationOutput)
+/// See [`GetNotificationConfigurationOutput`](crate::output::GetNotificationConfigurationOutput).
 pub mod get_notification_configuration_output {
 
-    /// A builder for [`GetNotificationConfigurationOutput`](crate::output::GetNotificationConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetNotificationConfigurationOutput`](crate::output::GetNotificationConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) notification_configuration:
@@ -831,7 +840,7 @@ pub mod get_notification_configuration_output {
             self.notification_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetNotificationConfigurationOutput`](crate::output::GetNotificationConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetNotificationConfigurationOutput`](crate::output::GetNotificationConfigurationOutput).
         pub fn build(self) -> crate::output::GetNotificationConfigurationOutput {
             crate::output::GetNotificationConfigurationOutput {
                 notification_configuration: self.notification_configuration,
@@ -840,7 +849,7 @@ pub mod get_notification_configuration_output {
     }
 }
 impl GetNotificationConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetNotificationConfigurationOutput`](crate::output::GetNotificationConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetNotificationConfigurationOutput`](crate::output::GetNotificationConfigurationOutput).
     pub fn builder() -> crate::output::get_notification_configuration_output::Builder {
         crate::output::get_notification_configuration_output::Builder::default()
     }
@@ -851,6 +860,7 @@ impl GetNotificationConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigureAgentOutput {
     /// <p> An <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_AgentConfiguration.html"> <code>AgentConfiguration</code> </a> object that specifies if an agent profiles or not and for how long to return profiling data. </p>
+    #[doc(hidden)]
     pub configuration: std::option::Option<crate::model::AgentConfiguration>,
 }
 impl ConfigureAgentOutput {
@@ -866,11 +876,10 @@ impl std::fmt::Debug for ConfigureAgentOutput {
         formatter.finish()
     }
 }
-/// See [`ConfigureAgentOutput`](crate::output::ConfigureAgentOutput)
+/// See [`ConfigureAgentOutput`](crate::output::ConfigureAgentOutput).
 pub mod configure_agent_output {
 
-    /// A builder for [`ConfigureAgentOutput`](crate::output::ConfigureAgentOutput)
-    #[non_exhaustive]
+    /// A builder for [`ConfigureAgentOutput`](crate::output::ConfigureAgentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration: std::option::Option<crate::model::AgentConfiguration>,
@@ -889,7 +898,7 @@ pub mod configure_agent_output {
             self.configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigureAgentOutput`](crate::output::ConfigureAgentOutput)
+        /// Consumes the builder and constructs a [`ConfigureAgentOutput`](crate::output::ConfigureAgentOutput).
         pub fn build(self) -> crate::output::ConfigureAgentOutput {
             crate::output::ConfigureAgentOutput {
                 configuration: self.configuration,
@@ -898,7 +907,7 @@ pub mod configure_agent_output {
     }
 }
 impl ConfigureAgentOutput {
-    /// Creates a new builder-style object to manufacture [`ConfigureAgentOutput`](crate::output::ConfigureAgentOutput)
+    /// Creates a new builder-style object to manufacture [`ConfigureAgentOutput`](crate::output::ConfigureAgentOutput).
     pub fn builder() -> crate::output::configure_agent_output::Builder {
         crate::output::configure_agent_output::Builder::default()
     }
@@ -909,8 +918,10 @@ impl ConfigureAgentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchGetFrameMetricDataOutput {
     /// <p> The start time of the time period for the returned time series values. This is specified using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC. </p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The end time of the time period for the returned time series values. This is specified using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC. </p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Resolution or granularity of the profile data used to generate the time series. This is the value used to jump through time steps in a time series. There are 3 valid values. </p>
     /// <ul>
@@ -918,10 +929,13 @@ pub struct BatchGetFrameMetricDataOutput {
     /// <li> <p> <code>PT1H</code> — 1 hour </p> </li>
     /// <li> <p> <code>PT5M</code> — 5 minutes </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub resolution: std::option::Option<crate::model::AggregationPeriod>,
     /// <p> List of instances, or time steps, in the time series. For example, if the <code>period</code> is one day (<code>PT24H)</code>), and the <code>resolution</code> is five minutes (<code>PT5M</code>), then there are 288 <code>endTimes</code> in the list that are each five minutes appart. </p>
+    #[doc(hidden)]
     pub end_times: std::option::Option<std::vec::Vec<crate::model::TimestampStructure>>,
     /// <p>List of instances which remained unprocessed. This will create a missing time step in the list of end times.</p>
+    #[doc(hidden)]
     pub unprocessed_end_times: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -929,6 +943,7 @@ pub struct BatchGetFrameMetricDataOutput {
         >,
     >,
     /// <p>Details of the metrics to request a time series of values. The metric includes the name of the frame, the aggregation type to calculate the metric value for the frame, and the thread states to use to get the count for the metric value of the frame.</p>
+    #[doc(hidden)]
     pub frame_metric_data: std::option::Option<std::vec::Vec<crate::model::FrameMetricDatum>>,
 }
 impl BatchGetFrameMetricDataOutput {
@@ -981,11 +996,10 @@ impl std::fmt::Debug for BatchGetFrameMetricDataOutput {
         formatter.finish()
     }
 }
-/// See [`BatchGetFrameMetricDataOutput`](crate::output::BatchGetFrameMetricDataOutput)
+/// See [`BatchGetFrameMetricDataOutput`](crate::output::BatchGetFrameMetricDataOutput).
 pub mod batch_get_frame_metric_data_output {
 
-    /// A builder for [`BatchGetFrameMetricDataOutput`](crate::output::BatchGetFrameMetricDataOutput)
-    #[non_exhaustive]
+    /// A builder for [`BatchGetFrameMetricDataOutput`](crate::output::BatchGetFrameMetricDataOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -1117,7 +1131,7 @@ pub mod batch_get_frame_metric_data_output {
             self.frame_metric_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchGetFrameMetricDataOutput`](crate::output::BatchGetFrameMetricDataOutput)
+        /// Consumes the builder and constructs a [`BatchGetFrameMetricDataOutput`](crate::output::BatchGetFrameMetricDataOutput).
         pub fn build(self) -> crate::output::BatchGetFrameMetricDataOutput {
             crate::output::BatchGetFrameMetricDataOutput {
                 start_time: self.start_time,
@@ -1131,7 +1145,7 @@ pub mod batch_get_frame_metric_data_output {
     }
 }
 impl BatchGetFrameMetricDataOutput {
-    /// Creates a new builder-style object to manufacture [`BatchGetFrameMetricDataOutput`](crate::output::BatchGetFrameMetricDataOutput)
+    /// Creates a new builder-style object to manufacture [`BatchGetFrameMetricDataOutput`](crate::output::BatchGetFrameMetricDataOutput).
     pub fn builder() -> crate::output::batch_get_frame_metric_data_output::Builder {
         crate::output::batch_get_frame_metric_data_output::Builder::default()
     }
@@ -1142,6 +1156,7 @@ impl BatchGetFrameMetricDataOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddNotificationChannelsOutput {
     /// <p>The new notification configuration for this profiling group.</p>
+    #[doc(hidden)]
     pub notification_configuration: std::option::Option<crate::model::NotificationConfiguration>,
 }
 impl AddNotificationChannelsOutput {
@@ -1162,11 +1177,10 @@ impl std::fmt::Debug for AddNotificationChannelsOutput {
         formatter.finish()
     }
 }
-/// See [`AddNotificationChannelsOutput`](crate::output::AddNotificationChannelsOutput)
+/// See [`AddNotificationChannelsOutput`](crate::output::AddNotificationChannelsOutput).
 pub mod add_notification_channels_output {
 
-    /// A builder for [`AddNotificationChannelsOutput`](crate::output::AddNotificationChannelsOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddNotificationChannelsOutput`](crate::output::AddNotificationChannelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) notification_configuration:
@@ -1189,7 +1203,7 @@ pub mod add_notification_channels_output {
             self.notification_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddNotificationChannelsOutput`](crate::output::AddNotificationChannelsOutput)
+        /// Consumes the builder and constructs a [`AddNotificationChannelsOutput`](crate::output::AddNotificationChannelsOutput).
         pub fn build(self) -> crate::output::AddNotificationChannelsOutput {
             crate::output::AddNotificationChannelsOutput {
                 notification_configuration: self.notification_configuration,
@@ -1198,7 +1212,7 @@ pub mod add_notification_channels_output {
     }
 }
 impl AddNotificationChannelsOutput {
-    /// Creates a new builder-style object to manufacture [`AddNotificationChannelsOutput`](crate::output::AddNotificationChannelsOutput)
+    /// Creates a new builder-style object to manufacture [`AddNotificationChannelsOutput`](crate::output::AddNotificationChannelsOutput).
     pub fn builder() -> crate::output::add_notification_channels_output::Builder {
         crate::output::add_notification_channels_output::Builder::default()
     }
@@ -1209,11 +1223,14 @@ impl AddNotificationChannelsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListProfilingGroupsOutput {
     /// <p> A returned list of profiling group names. A list of the names is returned only if <code>includeDescription</code> is <code>false</code>, otherwise a list of <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ProfilingGroupDescription.html"> <code>ProfilingGroupDescription</code> </a> objects is returned. </p>
+    #[doc(hidden)]
     pub profiling_group_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> A returned list <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ProfilingGroupDescription.html"> <code>ProfilingGroupDescription</code> </a> objects. A list of <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ProfilingGroupDescription.html"> <code>ProfilingGroupDescription</code> </a> objects is returned only if <code>includeDescription</code> is <code>true</code>, otherwise a list of profiling group names is returned. </p>
+    #[doc(hidden)]
     pub profiling_groups:
         std::option::Option<std::vec::Vec<crate::model::ProfilingGroupDescription>>,
     /// <p>The <code>nextToken</code> value to include in a future <code>ListProfilingGroups</code> request. When the results of a <code>ListProfilingGroups</code> request exceed <code>maxResults</code>, this value can be used to retrieve the next page of results. This value is <code>null</code> when there are no more results to return. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListProfilingGroupsOutput {
@@ -1241,11 +1258,10 @@ impl std::fmt::Debug for ListProfilingGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`ListProfilingGroupsOutput`](crate::output::ListProfilingGroupsOutput)
+/// See [`ListProfilingGroupsOutput`](crate::output::ListProfilingGroupsOutput).
 pub mod list_profiling_groups_output {
 
-    /// A builder for [`ListProfilingGroupsOutput`](crate::output::ListProfilingGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListProfilingGroupsOutput`](crate::output::ListProfilingGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) profiling_group_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1302,7 +1318,7 @@ pub mod list_profiling_groups_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListProfilingGroupsOutput`](crate::output::ListProfilingGroupsOutput)
+        /// Consumes the builder and constructs a [`ListProfilingGroupsOutput`](crate::output::ListProfilingGroupsOutput).
         pub fn build(self) -> crate::output::ListProfilingGroupsOutput {
             crate::output::ListProfilingGroupsOutput {
                 profiling_group_names: self.profiling_group_names,
@@ -1313,7 +1329,7 @@ pub mod list_profiling_groups_output {
     }
 }
 impl ListProfilingGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`ListProfilingGroupsOutput`](crate::output::ListProfilingGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`ListProfilingGroupsOutput`](crate::output::ListProfilingGroupsOutput).
     pub fn builder() -> crate::output::list_profiling_groups_output::Builder {
         crate::output::list_profiling_groups_output::Builder::default()
     }
@@ -1324,6 +1340,7 @@ impl ListProfilingGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateProfilingGroupOutput {
     /// <p> The returned <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ProfilingGroupDescription.html"> <code>ProfilingGroupDescription</code> </a> object that contains information about the created profiling group. </p>
+    #[doc(hidden)]
     pub profiling_group: std::option::Option<crate::model::ProfilingGroupDescription>,
 }
 impl CreateProfilingGroupOutput {
@@ -1339,11 +1356,10 @@ impl std::fmt::Debug for CreateProfilingGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateProfilingGroupOutput`](crate::output::CreateProfilingGroupOutput)
+/// See [`CreateProfilingGroupOutput`](crate::output::CreateProfilingGroupOutput).
 pub mod create_profiling_group_output {
 
-    /// A builder for [`CreateProfilingGroupOutput`](crate::output::CreateProfilingGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateProfilingGroupOutput`](crate::output::CreateProfilingGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) profiling_group: std::option::Option<crate::model::ProfilingGroupDescription>,
@@ -1362,7 +1378,7 @@ pub mod create_profiling_group_output {
             self.profiling_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateProfilingGroupOutput`](crate::output::CreateProfilingGroupOutput)
+        /// Consumes the builder and constructs a [`CreateProfilingGroupOutput`](crate::output::CreateProfilingGroupOutput).
         pub fn build(self) -> crate::output::CreateProfilingGroupOutput {
             crate::output::CreateProfilingGroupOutput {
                 profiling_group: self.profiling_group,
@@ -1371,7 +1387,7 @@ pub mod create_profiling_group_output {
     }
 }
 impl CreateProfilingGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateProfilingGroupOutput`](crate::output::CreateProfilingGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateProfilingGroupOutput`](crate::output::CreateProfilingGroupOutput).
     pub fn builder() -> crate::output::create_profiling_group_output::Builder {
         crate::output::create_profiling_group_output::Builder::default()
     }
@@ -1387,22 +1403,21 @@ impl std::fmt::Debug for DeleteProfilingGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteProfilingGroupOutput`](crate::output::DeleteProfilingGroupOutput)
+/// See [`DeleteProfilingGroupOutput`](crate::output::DeleteProfilingGroupOutput).
 pub mod delete_profiling_group_output {
 
-    /// A builder for [`DeleteProfilingGroupOutput`](crate::output::DeleteProfilingGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteProfilingGroupOutput`](crate::output::DeleteProfilingGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteProfilingGroupOutput`](crate::output::DeleteProfilingGroupOutput)
+        /// Consumes the builder and constructs a [`DeleteProfilingGroupOutput`](crate::output::DeleteProfilingGroupOutput).
         pub fn build(self) -> crate::output::DeleteProfilingGroupOutput {
             crate::output::DeleteProfilingGroupOutput {}
         }
     }
 }
 impl DeleteProfilingGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteProfilingGroupOutput`](crate::output::DeleteProfilingGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteProfilingGroupOutput`](crate::output::DeleteProfilingGroupOutput).
     pub fn builder() -> crate::output::delete_profiling_group_output::Builder {
         crate::output::delete_profiling_group_output::Builder::default()
     }
@@ -1413,6 +1428,7 @@ impl DeleteProfilingGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateProfilingGroupOutput {
     /// <p> A <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ProfilingGroupDescription.html"> <code>ProfilingGroupDescription</code> </a> that contains information about the returned updated profiling group. </p>
+    #[doc(hidden)]
     pub profiling_group: std::option::Option<crate::model::ProfilingGroupDescription>,
 }
 impl UpdateProfilingGroupOutput {
@@ -1428,11 +1444,10 @@ impl std::fmt::Debug for UpdateProfilingGroupOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateProfilingGroupOutput`](crate::output::UpdateProfilingGroupOutput)
+/// See [`UpdateProfilingGroupOutput`](crate::output::UpdateProfilingGroupOutput).
 pub mod update_profiling_group_output {
 
-    /// A builder for [`UpdateProfilingGroupOutput`](crate::output::UpdateProfilingGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateProfilingGroupOutput`](crate::output::UpdateProfilingGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) profiling_group: std::option::Option<crate::model::ProfilingGroupDescription>,
@@ -1451,7 +1466,7 @@ pub mod update_profiling_group_output {
             self.profiling_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateProfilingGroupOutput`](crate::output::UpdateProfilingGroupOutput)
+        /// Consumes the builder and constructs a [`UpdateProfilingGroupOutput`](crate::output::UpdateProfilingGroupOutput).
         pub fn build(self) -> crate::output::UpdateProfilingGroupOutput {
             crate::output::UpdateProfilingGroupOutput {
                 profiling_group: self.profiling_group,
@@ -1460,7 +1475,7 @@ pub mod update_profiling_group_output {
     }
 }
 impl UpdateProfilingGroupOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateProfilingGroupOutput`](crate::output::UpdateProfilingGroupOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateProfilingGroupOutput`](crate::output::UpdateProfilingGroupOutput).
     pub fn builder() -> crate::output::update_profiling_group_output::Builder {
         crate::output::update_profiling_group_output::Builder::default()
     }
@@ -1471,6 +1486,7 @@ impl UpdateProfilingGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeProfilingGroupOutput {
     /// <p> The returned <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ProfilingGroupDescription.html"> <code>ProfilingGroupDescription</code> </a> object that contains information about the requested profiling group. </p>
+    #[doc(hidden)]
     pub profiling_group: std::option::Option<crate::model::ProfilingGroupDescription>,
 }
 impl DescribeProfilingGroupOutput {
@@ -1486,11 +1502,10 @@ impl std::fmt::Debug for DescribeProfilingGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeProfilingGroupOutput`](crate::output::DescribeProfilingGroupOutput)
+/// See [`DescribeProfilingGroupOutput`](crate::output::DescribeProfilingGroupOutput).
 pub mod describe_profiling_group_output {
 
-    /// A builder for [`DescribeProfilingGroupOutput`](crate::output::DescribeProfilingGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeProfilingGroupOutput`](crate::output::DescribeProfilingGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) profiling_group: std::option::Option<crate::model::ProfilingGroupDescription>,
@@ -1509,7 +1524,7 @@ pub mod describe_profiling_group_output {
             self.profiling_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeProfilingGroupOutput`](crate::output::DescribeProfilingGroupOutput)
+        /// Consumes the builder and constructs a [`DescribeProfilingGroupOutput`](crate::output::DescribeProfilingGroupOutput).
         pub fn build(self) -> crate::output::DescribeProfilingGroupOutput {
             crate::output::DescribeProfilingGroupOutput {
                 profiling_group: self.profiling_group,
@@ -1518,7 +1533,7 @@ pub mod describe_profiling_group_output {
     }
 }
 impl DescribeProfilingGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeProfilingGroupOutput`](crate::output::DescribeProfilingGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeProfilingGroupOutput`](crate::output::DescribeProfilingGroupOutput).
     pub fn builder() -> crate::output::describe_profiling_group_output::Builder {
         crate::output::describe_profiling_group_output::Builder::default()
     }
@@ -1534,22 +1549,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -1565,22 +1579,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -1591,6 +1604,7 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p> The list of tags assigned to the specified resource. This is the list of tags returned in the response. </p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1610,11 +1624,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -1647,14 +1660,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -1665,8 +1678,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetFindingsReportAccountSummaryOutput {
     /// <p>The return list of <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_FindingsReportSummary.html"> <code>FindingsReportSummary</code> </a> objects taht contain summaries of analysis results for all profiling groups in your AWS account.</p>
+    #[doc(hidden)]
     pub report_summaries: std::option::Option<std::vec::Vec<crate::model::FindingsReportSummary>>,
     /// <p>The <code>nextToken</code> value to include in a future <code>GetFindingsReportAccountSummary</code> request. When the results of a <code>GetFindingsReportAccountSummary</code> request exceed <code>maxResults</code>, this value can be used to retrieve the next page of results. This value is <code>null</code> when there are no more results to return.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetFindingsReportAccountSummaryOutput {
@@ -1687,11 +1702,10 @@ impl std::fmt::Debug for GetFindingsReportAccountSummaryOutput {
         formatter.finish()
     }
 }
-/// See [`GetFindingsReportAccountSummaryOutput`](crate::output::GetFindingsReportAccountSummaryOutput)
+/// See [`GetFindingsReportAccountSummaryOutput`](crate::output::GetFindingsReportAccountSummaryOutput).
 pub mod get_findings_report_account_summary_output {
 
-    /// A builder for [`GetFindingsReportAccountSummaryOutput`](crate::output::GetFindingsReportAccountSummaryOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetFindingsReportAccountSummaryOutput`](crate::output::GetFindingsReportAccountSummaryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) report_summaries:
@@ -1728,7 +1742,7 @@ pub mod get_findings_report_account_summary_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetFindingsReportAccountSummaryOutput`](crate::output::GetFindingsReportAccountSummaryOutput)
+        /// Consumes the builder and constructs a [`GetFindingsReportAccountSummaryOutput`](crate::output::GetFindingsReportAccountSummaryOutput).
         pub fn build(self) -> crate::output::GetFindingsReportAccountSummaryOutput {
             crate::output::GetFindingsReportAccountSummaryOutput {
                 report_summaries: self.report_summaries,
@@ -1738,7 +1752,7 @@ pub mod get_findings_report_account_summary_output {
     }
 }
 impl GetFindingsReportAccountSummaryOutput {
-    /// Creates a new builder-style object to manufacture [`GetFindingsReportAccountSummaryOutput`](crate::output::GetFindingsReportAccountSummaryOutput)
+    /// Creates a new builder-style object to manufacture [`GetFindingsReportAccountSummaryOutput`](crate::output::GetFindingsReportAccountSummaryOutput).
     pub fn builder() -> crate::output::get_findings_report_account_summary_output::Builder {
         crate::output::get_findings_report_account_summary_output::Builder::default()
     }

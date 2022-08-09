@@ -5,16 +5,22 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbInstanceAutomatedBackup {
     /// <p>The Amazon Resource Name (ARN) for the automated backups.</p>
+    #[doc(hidden)]
     pub db_instance_arn: std::option::Option<std::string::String>,
     /// <p>The identifier for the source DB instance, which can't be changed and which is unique to an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub dbi_resource_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region associated with the automated backup.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The customer id of the instance that is/was associated with the automated backup.</p>
+    #[doc(hidden)]
     pub db_instance_identifier: std::option::Option<std::string::String>,
     /// <p>Earliest and latest time an instance can be restored to.</p>
+    #[doc(hidden)]
     pub restore_window: std::option::Option<crate::model::RestoreWindow>,
     /// <p>Specifies the allocated storage size in gibibytes (GiB).</p>
+    #[doc(hidden)]
     pub allocated_storage: i32,
     /// <p>Provides a list of status information for an automated backup:</p>
     /// <ul>
@@ -22,50 +28,71 @@ pub struct DbInstanceAutomatedBackup {
     /// <li> <p> <code>retained</code> - automated backups for deleted instances</p> </li>
     /// <li> <p> <code>creating</code> - automated backups that are waiting for the first automated snapshot to be available.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The port number that the automated backup used for connections.</p>
     /// <p>Default: Inherits from the source DB instance</p>
     /// <p>Valid Values: <code>1150-65535</code> </p>
+    #[doc(hidden)]
     pub port: i32,
     /// <p>The Availability Zone that the automated backup was created in. For information on Amazon Web Services Regions and Availability Zones, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">Regions and Availability Zones</a>.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>Provides the VPC ID associated with the DB instance</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>Provides the date and time that the DB instance was created.</p>
+    #[doc(hidden)]
     pub instance_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The license model of an automated backup.</p>
+    #[doc(hidden)]
     pub master_username: std::option::Option<std::string::String>,
     /// <p>The name of the database engine for this automated backup.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The version of the database engine for the automated backup.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>License model information for the automated backup.</p>
+    #[doc(hidden)]
     pub license_model: std::option::Option<std::string::String>,
     /// <p>The IOPS (I/O operations per second) value for the automated backup.</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
     /// <p>The option group the automated backup is associated with. If omitted, the default option group for the engine specified is used.</p>
+    #[doc(hidden)]
     pub option_group_name: std::option::Option<std::string::String>,
     /// <p>The ARN from the key store with which the automated backup is associated for TDE encryption.</p>
+    #[doc(hidden)]
     pub tde_credential_arn: std::option::Option<std::string::String>,
     /// <p>Specifies whether the automated backup is encrypted.</p>
+    #[doc(hidden)]
     pub encrypted: bool,
     /// <p>Specifies the storage type associated with the automated backup.</p>
+    #[doc(hidden)]
     pub storage_type: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services KMS key ID for an automated backup.</p>
     /// <p>The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The time zone of the automated backup. In most cases, the <code>Timezone</code> element is empty. <code>Timezone</code> content appears only for Microsoft SQL Server DB instances that were created with a time zone specified.</p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
     /// <p>True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is enabled, and otherwise false.</p>
+    #[doc(hidden)]
     pub iam_database_authentication_enabled: bool,
     /// <p>The retention period for the automated backups.</p>
+    #[doc(hidden)]
     pub backup_retention_period: std::option::Option<i32>,
     /// <p>The Amazon Resource Name (ARN) for the replicated automated backups.</p>
+    #[doc(hidden)]
     pub db_instance_automated_backups_arn: std::option::Option<std::string::String>,
     /// <p>The list of replications to different Amazon Web Services Regions associated with the automated backup.</p>
+    #[doc(hidden)]
     pub db_instance_automated_backups_replications:
         std::option::Option<std::vec::Vec<crate::model::DbInstanceAutomatedBackupsReplication>>,
     /// <p>Specifies where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub backup_target: std::option::Option<std::string::String>,
 }
 impl DbInstanceAutomatedBackup {
@@ -230,11 +257,10 @@ impl std::fmt::Debug for DbInstanceAutomatedBackup {
         formatter.finish()
     }
 }
-/// See [`DbInstanceAutomatedBackup`](crate::model::DbInstanceAutomatedBackup)
+/// See [`DbInstanceAutomatedBackup`](crate::model::DbInstanceAutomatedBackup).
 pub mod db_instance_automated_backup {
 
-    /// A builder for [`DbInstanceAutomatedBackup`](crate::model::DbInstanceAutomatedBackup)
-    #[non_exhaustive]
+    /// A builder for [`DbInstanceAutomatedBackup`](crate::model::DbInstanceAutomatedBackup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance_arn: std::option::Option<std::string::String>,
@@ -614,7 +640,7 @@ pub mod db_instance_automated_backup {
             self.backup_target = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbInstanceAutomatedBackup`](crate::model::DbInstanceAutomatedBackup)
+        /// Consumes the builder and constructs a [`DbInstanceAutomatedBackup`](crate::model::DbInstanceAutomatedBackup).
         pub fn build(self) -> crate::model::DbInstanceAutomatedBackup {
             crate::model::DbInstanceAutomatedBackup {
                 db_instance_arn: self.db_instance_arn,
@@ -652,7 +678,7 @@ pub mod db_instance_automated_backup {
     }
 }
 impl DbInstanceAutomatedBackup {
-    /// Creates a new builder-style object to manufacture [`DbInstanceAutomatedBackup`](crate::model::DbInstanceAutomatedBackup)
+    /// Creates a new builder-style object to manufacture [`DbInstanceAutomatedBackup`](crate::model::DbInstanceAutomatedBackup).
     pub fn builder() -> crate::model::db_instance_automated_backup::Builder {
         crate::model::db_instance_automated_backup::Builder::default()
     }
@@ -663,6 +689,7 @@ impl DbInstanceAutomatedBackup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbInstanceAutomatedBackupsReplication {
     /// <p>The Amazon Resource Name (ARN) of the replicated automated backups.</p>
+    #[doc(hidden)]
     pub db_instance_automated_backups_arn: std::option::Option<std::string::String>,
 }
 impl DbInstanceAutomatedBackupsReplication {
@@ -681,11 +708,10 @@ impl std::fmt::Debug for DbInstanceAutomatedBackupsReplication {
         formatter.finish()
     }
 }
-/// See [`DbInstanceAutomatedBackupsReplication`](crate::model::DbInstanceAutomatedBackupsReplication)
+/// See [`DbInstanceAutomatedBackupsReplication`](crate::model::DbInstanceAutomatedBackupsReplication).
 pub mod db_instance_automated_backups_replication {
 
-    /// A builder for [`DbInstanceAutomatedBackupsReplication`](crate::model::DbInstanceAutomatedBackupsReplication)
-    #[non_exhaustive]
+    /// A builder for [`DbInstanceAutomatedBackupsReplication`](crate::model::DbInstanceAutomatedBackupsReplication).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance_automated_backups_arn: std::option::Option<std::string::String>,
@@ -707,7 +733,7 @@ pub mod db_instance_automated_backups_replication {
             self.db_instance_automated_backups_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbInstanceAutomatedBackupsReplication`](crate::model::DbInstanceAutomatedBackupsReplication)
+        /// Consumes the builder and constructs a [`DbInstanceAutomatedBackupsReplication`](crate::model::DbInstanceAutomatedBackupsReplication).
         pub fn build(self) -> crate::model::DbInstanceAutomatedBackupsReplication {
             crate::model::DbInstanceAutomatedBackupsReplication {
                 db_instance_automated_backups_arn: self.db_instance_automated_backups_arn,
@@ -716,7 +742,7 @@ pub mod db_instance_automated_backups_replication {
     }
 }
 impl DbInstanceAutomatedBackupsReplication {
-    /// Creates a new builder-style object to manufacture [`DbInstanceAutomatedBackupsReplication`](crate::model::DbInstanceAutomatedBackupsReplication)
+    /// Creates a new builder-style object to manufacture [`DbInstanceAutomatedBackupsReplication`](crate::model::DbInstanceAutomatedBackupsReplication).
     pub fn builder() -> crate::model::db_instance_automated_backups_replication::Builder {
         crate::model::db_instance_automated_backups_replication::Builder::default()
     }
@@ -727,8 +753,10 @@ impl DbInstanceAutomatedBackupsReplication {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RestoreWindow {
     /// <p>The earliest time you can restore an instance to.</p>
+    #[doc(hidden)]
     pub earliest_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The latest time you can restore an instance to.</p>
+    #[doc(hidden)]
     pub latest_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RestoreWindow {
@@ -749,11 +777,10 @@ impl std::fmt::Debug for RestoreWindow {
         formatter.finish()
     }
 }
-/// See [`RestoreWindow`](crate::model::RestoreWindow)
+/// See [`RestoreWindow`](crate::model::RestoreWindow).
 pub mod restore_window {
 
-    /// A builder for [`RestoreWindow`](crate::model::RestoreWindow)
-    #[non_exhaustive]
+    /// A builder for [`RestoreWindow`](crate::model::RestoreWindow).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) earliest_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -786,7 +813,7 @@ pub mod restore_window {
             self.latest_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreWindow`](crate::model::RestoreWindow)
+        /// Consumes the builder and constructs a [`RestoreWindow`](crate::model::RestoreWindow).
         pub fn build(self) -> crate::model::RestoreWindow {
             crate::model::RestoreWindow {
                 earliest_time: self.earliest_time,
@@ -796,7 +823,7 @@ pub mod restore_window {
     }
 }
 impl RestoreWindow {
-    /// Creates a new builder-style object to manufacture [`RestoreWindow`](crate::model::RestoreWindow)
+    /// Creates a new builder-style object to manufacture [`RestoreWindow`](crate::model::RestoreWindow).
     pub fn builder() -> crate::model::restore_window::Builder {
         crate::model::restore_window::Builder::default()
     }
@@ -808,17 +835,23 @@ impl RestoreWindow {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbInstance {
     /// <p>Contains a user-supplied database identifier. This identifier is the unique key that identifies a DB instance.</p>
+    #[doc(hidden)]
     pub db_instance_identifier: std::option::Option<std::string::String>,
     /// <p>Contains the name of the compute and memory capacity class of the DB instance.</p>
+    #[doc(hidden)]
     pub db_instance_class: std::option::Option<std::string::String>,
     /// <p>The name of the database engine to be used for this DB instance.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>Specifies the current state of this database.</p>
     /// <p>For information about DB instance statuses, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/accessing-monitoring.html#Overview.DBInstance.Status">Viewing DB instance status</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub db_instance_status: std::option::Option<std::string::String>,
     /// <p>The time when a stopped DB instance is restarted automatically.</p>
+    #[doc(hidden)]
     pub automatic_restart_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Contains the master username for the DB instance.</p>
+    #[doc(hidden)]
     pub master_username: std::option::Option<std::string::String>,
     /// <p>The meaning of this parameter differs according to the database engine you use.</p>
     /// <p> <b>MySQL, MariaDB, SQL Server, PostgreSQL</b> </p>
@@ -826,112 +859,157 @@ pub struct DbInstance {
     /// <p>Type: String</p>
     /// <p> <b>Oracle</b> </p>
     /// <p>Contains the Oracle System ID (SID) of the created DB instance. Not shown when the returned parameters do not apply to an Oracle DB instance.</p>
+    #[doc(hidden)]
     pub db_name: std::option::Option<std::string::String>,
     /// <p>Specifies the connection endpoint.</p> <note>
     /// <p>The endpoint might not be shown for instances whose status is <code>creating</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<crate::model::Endpoint>,
     /// <p>Specifies the allocated storage size specified in gibibytes (GiB).</p>
+    #[doc(hidden)]
     pub allocated_storage: i32,
     /// <p>Provides the date and time the DB instance was created.</p>
+    #[doc(hidden)]
     pub instance_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the daily time range during which automated backups are created if automated backups are enabled, as determined by the <code>BackupRetentionPeriod</code>.</p>
+    #[doc(hidden)]
     pub preferred_backup_window: std::option::Option<std::string::String>,
     /// <p>Specifies the number of days for which automatic DB snapshots are retained.</p>
+    #[doc(hidden)]
     pub backup_retention_period: i32,
     /// <p>A list of DB security group elements containing <code>DBSecurityGroup.Name</code> and <code>DBSecurityGroup.Status</code> subelements.</p>
+    #[doc(hidden)]
     pub db_security_groups:
         std::option::Option<std::vec::Vec<crate::model::DbSecurityGroupMembership>>,
     /// <p>Provides a list of VPC security group elements that the DB instance belongs to.</p>
+    #[doc(hidden)]
     pub vpc_security_groups:
         std::option::Option<std::vec::Vec<crate::model::VpcSecurityGroupMembership>>,
     /// <p>Provides the list of DB parameter groups applied to this DB instance.</p>
+    #[doc(hidden)]
     pub db_parameter_groups:
         std::option::Option<std::vec::Vec<crate::model::DbParameterGroupStatus>>,
     /// <p>Specifies the name of the Availability Zone the DB instance is located in.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>Specifies information on the subnet group associated with the DB instance, including the name, description, and subnets in the subnet group.</p>
+    #[doc(hidden)]
     pub db_subnet_group: std::option::Option<crate::model::DbSubnetGroup>,
     /// <p>Specifies the weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).</p>
+    #[doc(hidden)]
     pub preferred_maintenance_window: std::option::Option<std::string::String>,
     /// <p>A value that specifies that changes to the DB instance are pending. This element is only included when changes are pending. Specific changes are identified by subelements.</p>
+    #[doc(hidden)]
     pub pending_modified_values: std::option::Option<crate::model::PendingModifiedValues>,
     /// <p>Specifies the latest time to which a database can be restored with point-in-time restore.</p>
+    #[doc(hidden)]
     pub latest_restorable_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies if the DB instance is a Multi-AZ deployment. This setting doesn't apply to RDS Custom.</p>
+    #[doc(hidden)]
     pub multi_az: bool,
     /// <p>Indicates the database engine version.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>A value that indicates that minor version patches are applied automatically.</p>
+    #[doc(hidden)]
     pub auto_minor_version_upgrade: bool,
     /// <p>Contains the identifier of the source DB instance if this DB instance is a read replica.</p>
+    #[doc(hidden)]
     pub read_replica_source_db_instance_identifier: std::option::Option<std::string::String>,
     /// <p>Contains one or more identifiers of the read replicas associated with this DB instance.</p>
+    #[doc(hidden)]
     pub read_replica_db_instance_identifiers:
         std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Contains one or more identifiers of Aurora DB clusters to which the RDS DB instance is replicated as a read replica. For example, when you create an Aurora read replica of an RDS for MySQL DB instance, the Aurora MySQL DB cluster for the Aurora read replica is shown. This output doesn't contain information about cross-Region Aurora read replicas.</p> <note>
     /// <p>Currently, each RDS DB instance can have only one Aurora read replica.</p>
     /// </note>
+    #[doc(hidden)]
     pub read_replica_db_cluster_identifiers:
         std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The open mode of an Oracle read replica. The default is <code>open-read-only</code>. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html">Working with Oracle Read Replicas for Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.</p> <note>
     /// <p>This attribute is only supported in RDS for Oracle.</p>
     /// </note>
+    #[doc(hidden)]
     pub replica_mode: std::option::Option<crate::model::ReplicaMode>,
     /// <p>License model information for this DB instance. This setting doesn't apply to RDS Custom.</p>
+    #[doc(hidden)]
     pub license_model: std::option::Option<std::string::String>,
     /// <p>Specifies the Provisioned IOPS (I/O operations per second) value.</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
     /// <p>Provides the list of option group memberships for this DB instance.</p>
+    #[doc(hidden)]
     pub option_group_memberships:
         std::option::Option<std::vec::Vec<crate::model::OptionGroupMembership>>,
     /// <p>If present, specifies the name of the character set that this instance is associated with.</p>
+    #[doc(hidden)]
     pub character_set_name: std::option::Option<std::string::String>,
     /// <p>The name of the NCHAR character set for the Oracle DB instance. This character set specifies the Unicode encoding for data stored in table columns of type NCHAR, NCLOB, or NVARCHAR2.</p>
+    #[doc(hidden)]
     pub nchar_character_set_name: std::option::Option<std::string::String>,
     /// <p>If present, specifies the name of the secondary Availability Zone for a DB instance with multi-AZ support.</p>
+    #[doc(hidden)]
     pub secondary_availability_zone: std::option::Option<std::string::String>,
     /// <p>Specifies the accessibility options for the DB instance.</p>
     /// <p>When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address from outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security group it uses. That public access isn't permitted if the security group assigned to the DB cluster doesn't permit it.</p>
     /// <p>When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a private IP address.</p>
     /// <p>For more information, see <code>CreateDBInstance</code>.</p>
+    #[doc(hidden)]
     pub publicly_accessible: bool,
     /// <p>The status of a read replica. If the instance isn't a read replica, this is blank.</p>
+    #[doc(hidden)]
     pub status_infos: std::option::Option<std::vec::Vec<crate::model::DbInstanceStatusInfo>>,
     /// <p>Specifies the storage type associated with DB instance.</p>
+    #[doc(hidden)]
     pub storage_type: std::option::Option<std::string::String>,
     /// <p>The ARN from the key store with which the instance is associated for TDE encryption.</p>
+    #[doc(hidden)]
     pub tde_credential_arn: std::option::Option<std::string::String>,
     /// <p>Specifies the port that the DB instance listens on. If the DB instance is part of a DB cluster, this can be a different port than the DB cluster port.</p>
+    #[doc(hidden)]
     pub db_instance_port: i32,
     /// <p>If the DB instance is a member of a DB cluster, contains the name of the DB cluster that the DB instance is a member of.</p>
+    #[doc(hidden)]
     pub db_cluster_identifier: std::option::Option<std::string::String>,
     /// <p>Specifies whether the DB instance is encrypted.</p>
+    #[doc(hidden)]
     pub storage_encrypted: bool,
     /// <p>If <code>StorageEncrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB instance.</p>
     /// <p>The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found in Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS key for the DB instance is accessed.</p>
+    #[doc(hidden)]
     pub dbi_resource_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the CA certificate for this DB instance.</p>
+    #[doc(hidden)]
     pub ca_certificate_identifier: std::option::Option<std::string::String>,
     /// <p>The Active Directory Domain membership records associated with the DB instance.</p>
+    #[doc(hidden)]
     pub domain_memberships: std::option::Option<std::vec::Vec<crate::model::DomainMembership>>,
     /// <p>Specifies whether tags are copied from the DB instance to snapshots of the DB instance.</p>
     /// <p> <b>Amazon Aurora</b> </p>
     /// <p>Not applicable. Copying tags to snapshots is managed by the DB cluster. Setting this value for an Aurora DB instance has no effect on the DB cluster setting. For more information, see <code>DBCluster</code>.</p>
+    #[doc(hidden)]
     pub copy_tags_to_snapshot: bool,
     /// <p>The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance.</p>
+    #[doc(hidden)]
     pub monitoring_interval: std::option::Option<i32>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon CloudWatch Logs log stream that receives the Enhanced Monitoring metrics data for the DB instance.</p>
+    #[doc(hidden)]
     pub enhanced_monitoring_resource_arn: std::option::Option<std::string::String>,
     /// <p>The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to Amazon CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub monitoring_role_arn: std::option::Option<std::string::String>,
     /// <p>A value that specifies the order in which an Aurora Replica is promoted to the primary instance after a failure of the existing primary instance. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.FaultTolerance"> Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>.</p>
+    #[doc(hidden)]
     pub promotion_tier: std::option::Option<i32>,
     /// <p>The Amazon Resource Name (ARN) for the DB instance.</p>
+    #[doc(hidden)]
     pub db_instance_arn: std::option::Option<std::string::String>,
     /// <p>The time zone of the DB instance. In most cases, the <code>Timezone</code> element is empty. <code>Timezone</code> content appears only for Microsoft SQL Server DB instances that were created with a time zone specified.</p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
     /// <p>True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is enabled, and otherwise false.</p>
     /// <p>IAM database authentication can be enabled for the following database engines</p>
@@ -940,52 +1018,85 @@ pub struct DbInstance {
     /// <li> <p>For MySQL 5.7, minor version 5.7.16 or higher</p> </li>
     /// <li> <p>Aurora 5.6 or higher. To enable IAM database authentication for Aurora, see DBCluster Type.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub iam_database_authentication_enabled: bool,
     /// <p>True if Performance Insights is enabled for the DB instance, and otherwise false.</p>
+    #[doc(hidden)]
     pub performance_insights_enabled: std::option::Option<bool>,
     /// <p>The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
     /// <p>The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.</p>
+    #[doc(hidden)]
     pub performance_insights_kms_key_id: std::option::Option<std::string::String>,
-    /// <p>The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+    /// <p>The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:</p>
+    /// <ul>
+    /// <li> <p>7</p> </li>
+    /// <li> <p> <i>month</i> * 31, where <i>month</i> is a number of months from 1-23</p> </li>
+    /// <li> <p>731</p> </li>
+    /// </ul>
+    /// <p>For example, the following values are valid:</p>
+    /// <ul>
+    /// <li> <p>93 (3 months * 31)</p> </li>
+    /// <li> <p>341 (11 months * 31)</p> </li>
+    /// <li> <p>589 (19 months * 31)</p> </li>
+    /// <li> <p>731</p> </li>
+    /// </ul>
+    #[doc(hidden)]
     pub performance_insights_retention_period: std::option::Option<i32>,
     /// <p>A list of log types that this DB instance is configured to export to CloudWatch Logs.</p>
     /// <p>Log types vary by DB engine. For information about the log types for each DB engine, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html">Amazon RDS Database Log Files</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub enabled_cloudwatch_logs_exports: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.</p>
+    #[doc(hidden)]
     pub processor_features: std::option::Option<std::vec::Vec<crate::model::ProcessorFeature>>,
     /// <p>Indicates if the DB instance has deletion protection enabled. The database can't be deleted when deletion protection is enabled. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB Instance</a>.</p>
+    #[doc(hidden)]
     pub deletion_protection: bool,
     /// <p>The Amazon Web Services Identity and Access Management (IAM) roles associated with the DB instance.</p>
+    #[doc(hidden)]
     pub associated_roles: std::option::Option<std::vec::Vec<crate::model::DbInstanceRole>>,
     /// <p>Specifies the listener connection endpoint for SQL Server Always On.</p>
+    #[doc(hidden)]
     pub listener_endpoint: std::option::Option<crate::model::Endpoint>,
     /// <p>The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.</p>
+    #[doc(hidden)]
     pub max_allocated_storage: std::option::Option<i32>,
     /// <p>A list of tags. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The list of replicated automated backups associated with the DB instance.</p>
+    #[doc(hidden)]
     pub db_instance_automated_backups_replications:
         std::option::Option<std::vec::Vec<crate::model::DbInstanceAutomatedBackupsReplication>>,
     /// <p>Specifies whether a customer-owned IP address (CoIP) is enabled for an RDS on Outposts DB instance.</p>
     /// <p>A <i>CoIP </i>provides local or external connectivity to resources in your Outpost subnets through your on-premises network. For some use cases, a CoIP can provide lower latency for connections to the DB instance from outside of its virtual private cloud (VPC) on your local network.</p>
     /// <p>For more information about RDS on Outposts, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Working with Amazon RDS on Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide</i>.</p>
     /// <p>For more information about CoIPs, see <a href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing">Customer-owned IP addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.</p>
+    #[doc(hidden)]
     pub customer_owned_ip_enabled: std::option::Option<bool>,
     /// <p>The Amazon Resource Name (ARN) of the recovery point in Amazon Web Services Backup.</p>
+    #[doc(hidden)]
     pub aws_backup_recovery_point_arn: std::option::Option<std::string::String>,
     /// <p>The status of the database activity stream.</p>
+    #[doc(hidden)]
     pub activity_stream_status: std::option::Option<crate::model::ActivityStreamStatus>,
     /// <p>The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream. The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.</p>
+    #[doc(hidden)]
     pub activity_stream_kms_key_id: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon Kinesis data stream used for the database activity stream.</p>
+    #[doc(hidden)]
     pub activity_stream_kinesis_stream_name: std::option::Option<std::string::String>,
     /// <p>The mode of the database activity stream. Database events such as a change or access generate an activity stream event. RDS for Oracle always handles these events asynchronously.</p>
+    #[doc(hidden)]
     pub activity_stream_mode: std::option::Option<crate::model::ActivityStreamMode>,
     /// <p>Indicates whether engine-native audit fields are included in the database activity stream.</p>
+    #[doc(hidden)]
     pub activity_stream_engine_native_audit_fields_included: std::option::Option<bool>,
     /// <p>The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all paused</code>. If <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all paused</code>, the instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.</p>
+    #[doc(hidden)]
     pub automation_mode: std::option::Option<crate::model::AutomationMode>,
     /// <p>The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full automation. The minimum value is 60 (default). The maximum value is 1,440.</p>
+    #[doc(hidden)]
     pub resume_full_automation_mode_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The instance profile must meet the following requirements:</p>
     /// <ul>
@@ -994,8 +1105,10 @@ pub struct DbInstance {
     /// <li> <p>The instance profile name and the associated IAM role name must start with the prefix <code>AWSRDSCustom</code>.</p> </li>
     /// </ul>
     /// <p>For the list of permissions required for the IAM role, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc"> Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.</p>
+    #[doc(hidden)]
     pub custom_iam_instance_profile: std::option::Option<std::string::String>,
     /// <p>Specifies where automated backups and manual snapshots are stored: Amazon Web Services Outposts or the Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub backup_target: std::option::Option<std::string::String>,
     /// <p>The network type of the DB instance.</p>
     /// <p>Valid values:</p>
@@ -1005,7 +1118,12 @@ pub struct DbInstance {
     /// </ul>
     /// <p>The network type is determined by the <code>DBSubnetGroup</code> specified for the DB instance. A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon RDS User Guide</i> and <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
+    #[doc(hidden)]
     pub network_type: std::option::Option<std::string::String>,
+    /// <p>The status of the policy state of the activity stream.</p>
+    #[doc(hidden)]
+    pub activity_stream_policy_status:
+        std::option::Option<crate::model::ActivityStreamPolicyStatus>,
 }
 impl DbInstance {
     /// <p>Contains a user-supplied database identifier. This identifier is the unique key that identifies a DB instance.</p>
@@ -1263,7 +1381,19 @@ impl DbInstance {
     pub fn performance_insights_kms_key_id(&self) -> std::option::Option<&str> {
         self.performance_insights_kms_key_id.as_deref()
     }
-    /// <p>The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+    /// <p>The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:</p>
+    /// <ul>
+    /// <li> <p>7</p> </li>
+    /// <li> <p> <i>month</i> * 31, where <i>month</i> is a number of months from 1-23</p> </li>
+    /// <li> <p>731</p> </li>
+    /// </ul>
+    /// <p>For example, the following values are valid:</p>
+    /// <ul>
+    /// <li> <p>93 (3 months * 31)</p> </li>
+    /// <li> <p>341 (11 months * 31)</p> </li>
+    /// <li> <p>589 (19 months * 31)</p> </li>
+    /// <li> <p>731</p> </li>
+    /// </ul>
     pub fn performance_insights_retention_period(&self) -> std::option::Option<i32> {
         self.performance_insights_retention_period
     }
@@ -1369,6 +1499,12 @@ impl DbInstance {
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon RDS User Guide</i> and <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon Aurora User Guide.</i> </p>
     pub fn network_type(&self) -> std::option::Option<&str> {
         self.network_type.as_deref()
+    }
+    /// <p>The status of the policy state of the activity stream.</p>
+    pub fn activity_stream_policy_status(
+        &self,
+    ) -> std::option::Option<&crate::model::ActivityStreamPolicyStatus> {
+        self.activity_stream_policy_status.as_ref()
     }
 }
 impl std::fmt::Debug for DbInstance {
@@ -1506,14 +1642,17 @@ impl std::fmt::Debug for DbInstance {
         );
         formatter.field("backup_target", &self.backup_target);
         formatter.field("network_type", &self.network_type);
+        formatter.field(
+            "activity_stream_policy_status",
+            &self.activity_stream_policy_status,
+        );
         formatter.finish()
     }
 }
-/// See [`DbInstance`](crate::model::DbInstance)
+/// See [`DbInstance`](crate::model::DbInstance).
 pub mod db_instance {
 
-    /// A builder for [`DbInstance`](crate::model::DbInstance)
-    #[non_exhaustive]
+    /// A builder for [`DbInstance`](crate::model::DbInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance_identifier: std::option::Option<std::string::String>,
@@ -1606,6 +1745,8 @@ pub mod db_instance {
         pub(crate) custom_iam_instance_profile: std::option::Option<std::string::String>,
         pub(crate) backup_target: std::option::Option<std::string::String>,
         pub(crate) network_type: std::option::Option<std::string::String>,
+        pub(crate) activity_stream_policy_status:
+            std::option::Option<crate::model::ActivityStreamPolicyStatus>,
     }
     impl Builder {
         /// <p>Contains a user-supplied database identifier. This identifier is the unique key that identifies a DB instance.</p>
@@ -2392,12 +2533,36 @@ pub mod db_instance {
             self.performance_insights_kms_key_id = input;
             self
         }
-        /// <p>The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+        /// <p>The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:</p>
+        /// <ul>
+        /// <li> <p>7</p> </li>
+        /// <li> <p> <i>month</i> * 31, where <i>month</i> is a number of months from 1-23</p> </li>
+        /// <li> <p>731</p> </li>
+        /// </ul>
+        /// <p>For example, the following values are valid:</p>
+        /// <ul>
+        /// <li> <p>93 (3 months * 31)</p> </li>
+        /// <li> <p>341 (11 months * 31)</p> </li>
+        /// <li> <p>589 (19 months * 31)</p> </li>
+        /// <li> <p>731</p> </li>
+        /// </ul>
         pub fn performance_insights_retention_period(mut self, input: i32) -> Self {
             self.performance_insights_retention_period = Some(input);
             self
         }
-        /// <p>The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+        /// <p>The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:</p>
+        /// <ul>
+        /// <li> <p>7</p> </li>
+        /// <li> <p> <i>month</i> * 31, where <i>month</i> is a number of months from 1-23</p> </li>
+        /// <li> <p>731</p> </li>
+        /// </ul>
+        /// <p>For example, the following values are valid:</p>
+        /// <ul>
+        /// <li> <p>93 (3 months * 31)</p> </li>
+        /// <li> <p>341 (11 months * 31)</p> </li>
+        /// <li> <p>589 (19 months * 31)</p> </li>
+        /// <li> <p>731</p> </li>
+        /// </ul>
         pub fn set_performance_insights_retention_period(
             mut self,
             input: std::option::Option<i32>,
@@ -2739,7 +2904,23 @@ pub mod db_instance {
             self.network_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbInstance`](crate::model::DbInstance)
+        /// <p>The status of the policy state of the activity stream.</p>
+        pub fn activity_stream_policy_status(
+            mut self,
+            input: crate::model::ActivityStreamPolicyStatus,
+        ) -> Self {
+            self.activity_stream_policy_status = Some(input);
+            self
+        }
+        /// <p>The status of the policy state of the activity stream.</p>
+        pub fn set_activity_stream_policy_status(
+            mut self,
+            input: std::option::Option<crate::model::ActivityStreamPolicyStatus>,
+        ) -> Self {
+            self.activity_stream_policy_status = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DbInstance`](crate::model::DbInstance).
         pub fn build(self) -> crate::model::DbInstance {
             crate::model::DbInstance {
                 db_instance_identifier: self.db_instance_identifier,
@@ -2822,14 +3003,78 @@ pub mod db_instance {
                 custom_iam_instance_profile: self.custom_iam_instance_profile,
                 backup_target: self.backup_target,
                 network_type: self.network_type,
+                activity_stream_policy_status: self.activity_stream_policy_status,
             }
         }
     }
 }
 impl DbInstance {
-    /// Creates a new builder-style object to manufacture [`DbInstance`](crate::model::DbInstance)
+    /// Creates a new builder-style object to manufacture [`DbInstance`](crate::model::DbInstance).
     pub fn builder() -> crate::model::db_instance::Builder {
         crate::model::db_instance::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum ActivityStreamPolicyStatus {
+    #[allow(missing_docs)] // documentation missing in model
+    Locked,
+    #[allow(missing_docs)] // documentation missing in model
+    LockingPolicy,
+    #[allow(missing_docs)] // documentation missing in model
+    Unlocked,
+    #[allow(missing_docs)] // documentation missing in model
+    UnlockingPolicy,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for ActivityStreamPolicyStatus {
+    fn from(s: &str) -> Self {
+        match s {
+            "locked" => ActivityStreamPolicyStatus::Locked,
+            "locking-policy" => ActivityStreamPolicyStatus::LockingPolicy,
+            "unlocked" => ActivityStreamPolicyStatus::Unlocked,
+            "unlocking-policy" => ActivityStreamPolicyStatus::UnlockingPolicy,
+            other => ActivityStreamPolicyStatus::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for ActivityStreamPolicyStatus {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(ActivityStreamPolicyStatus::from(s))
+    }
+}
+impl ActivityStreamPolicyStatus {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            ActivityStreamPolicyStatus::Locked => "locked",
+            ActivityStreamPolicyStatus::LockingPolicy => "locking-policy",
+            ActivityStreamPolicyStatus::Unlocked => "unlocked",
+            ActivityStreamPolicyStatus::UnlockingPolicy => "unlocking-policy",
+            ActivityStreamPolicyStatus::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["locked", "locking-policy", "unlocked", "unlocking-policy"]
+    }
+}
+impl AsRef<str> for ActivityStreamPolicyStatus {
+    fn as_ref(&self) -> &str {
+        self.as_str()
     }
 }
 
@@ -3011,8 +3256,10 @@ impl AsRef<str> for ActivityStreamStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>A key is the required name of the tag. The string value can be from 1 to 128 Unicode characters in length and can't be prefixed with <code>aws:</code> or <code>rds:</code>. The string can only contain only the set of Unicode letters, digits, white-space, '_', '.', ':', '/', '=', '+', '-', '@' (Java regex: "^([\\p{L}\\p{Z}\\p{N}_.:/=+\\-@]*)$").</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>A value is the optional value of the tag. The string value can be from 1 to 256 Unicode characters in length and can't be prefixed with <code>aws:</code> or <code>rds:</code>. The string can only contain only the set of Unicode letters, digits, white-space, '_', '.', ':', '/', '=', '+', '-', '@' (Java regex: "^([\\p{L}\\p{Z}\\p{N}_.:/=+\\-@]*)$").</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -3033,11 +3280,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -3064,7 +3310,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -3074,7 +3320,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -3091,10 +3337,13 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Endpoint {
     /// <p>Specifies the DNS address of the DB instance.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
     /// <p>Specifies the port that the database engine is listening on.</p>
+    #[doc(hidden)]
     pub port: i32,
     /// <p>Specifies the ID that Amazon Route 53 assigns when you create a hosted zone.</p>
+    #[doc(hidden)]
     pub hosted_zone_id: std::option::Option<std::string::String>,
 }
 impl Endpoint {
@@ -3120,11 +3369,10 @@ impl std::fmt::Debug for Endpoint {
         formatter.finish()
     }
 }
-/// See [`Endpoint`](crate::model::Endpoint)
+/// See [`Endpoint`](crate::model::Endpoint).
 pub mod endpoint {
 
-    /// A builder for [`Endpoint`](crate::model::Endpoint)
-    #[non_exhaustive]
+    /// A builder for [`Endpoint`](crate::model::Endpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) address: std::option::Option<std::string::String>,
@@ -3165,7 +3413,7 @@ pub mod endpoint {
             self.hosted_zone_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint)
+        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint).
         pub fn build(self) -> crate::model::Endpoint {
             crate::model::Endpoint {
                 address: self.address,
@@ -3176,7 +3424,7 @@ pub mod endpoint {
     }
 }
 impl Endpoint {
-    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint)
+    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint).
     pub fn builder() -> crate::model::endpoint::Builder {
         crate::model::endpoint::Builder::default()
     }
@@ -3187,8 +3435,10 @@ impl Endpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbInstanceRole {
     /// <p>The Amazon Resource Name (ARN) of the IAM role that is associated with the DB instance.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The name of the feature associated with the Amazon Web Services Identity and Access Management (IAM) role. For information about supported feature names, see <code>DBEngineVersion</code>.</p>
+    #[doc(hidden)]
     pub feature_name: std::option::Option<std::string::String>,
     /// <p>Describes the state of association between the IAM role and the DB instance. The Status property returns one of the following values:</p>
     /// <ul>
@@ -3196,6 +3446,7 @@ pub struct DbInstanceRole {
     /// <li> <p> <code>PENDING</code> - the IAM role ARN is being associated with the DB instance.</p> </li>
     /// <li> <p> <code>INVALID</code> - the IAM role ARN is associated with the DB instance, but the DB instance is unable to assume the IAM role in order to access other Amazon Web Services services on your behalf.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl DbInstanceRole {
@@ -3226,11 +3477,10 @@ impl std::fmt::Debug for DbInstanceRole {
         formatter.finish()
     }
 }
-/// See [`DbInstanceRole`](crate::model::DbInstanceRole)
+/// See [`DbInstanceRole`](crate::model::DbInstanceRole).
 pub mod db_instance_role {
 
-    /// A builder for [`DbInstanceRole`](crate::model::DbInstanceRole)
-    #[non_exhaustive]
+    /// A builder for [`DbInstanceRole`](crate::model::DbInstanceRole).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -3278,7 +3528,7 @@ pub mod db_instance_role {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbInstanceRole`](crate::model::DbInstanceRole)
+        /// Consumes the builder and constructs a [`DbInstanceRole`](crate::model::DbInstanceRole).
         pub fn build(self) -> crate::model::DbInstanceRole {
             crate::model::DbInstanceRole {
                 role_arn: self.role_arn,
@@ -3289,7 +3539,7 @@ pub mod db_instance_role {
     }
 }
 impl DbInstanceRole {
-    /// Creates a new builder-style object to manufacture [`DbInstanceRole`](crate::model::DbInstanceRole)
+    /// Creates a new builder-style object to manufacture [`DbInstanceRole`](crate::model::DbInstanceRole).
     pub fn builder() -> crate::model::db_instance_role::Builder {
         crate::model::db_instance_role::Builder::default()
     }
@@ -3323,8 +3573,10 @@ impl DbInstanceRole {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProcessorFeature {
     /// <p>The name of the processor feature. Valid names are <code>coreCount</code> and <code>threadsPerCore</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value of a processor feature name.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl ProcessorFeature {
@@ -3345,11 +3597,10 @@ impl std::fmt::Debug for ProcessorFeature {
         formatter.finish()
     }
 }
-/// See [`ProcessorFeature`](crate::model::ProcessorFeature)
+/// See [`ProcessorFeature`](crate::model::ProcessorFeature).
 pub mod processor_feature {
 
-    /// A builder for [`ProcessorFeature`](crate::model::ProcessorFeature)
-    #[non_exhaustive]
+    /// A builder for [`ProcessorFeature`](crate::model::ProcessorFeature).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3376,7 +3627,7 @@ pub mod processor_feature {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProcessorFeature`](crate::model::ProcessorFeature)
+        /// Consumes the builder and constructs a [`ProcessorFeature`](crate::model::ProcessorFeature).
         pub fn build(self) -> crate::model::ProcessorFeature {
             crate::model::ProcessorFeature {
                 name: self.name,
@@ -3386,7 +3637,7 @@ pub mod processor_feature {
     }
 }
 impl ProcessorFeature {
-    /// Creates a new builder-style object to manufacture [`ProcessorFeature`](crate::model::ProcessorFeature)
+    /// Creates a new builder-style object to manufacture [`ProcessorFeature`](crate::model::ProcessorFeature).
     pub fn builder() -> crate::model::processor_feature::Builder {
         crate::model::processor_feature::Builder::default()
     }
@@ -3397,12 +3648,16 @@ impl ProcessorFeature {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainMembership {
     /// <p>The identifier of the Active Directory Domain.</p>
+    #[doc(hidden)]
     pub domain: std::option::Option<std::string::String>,
     /// <p>The status of the Active Directory Domain membership for the DB instance or cluster. Values include joined, pending-join, failed, and so on.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The fully qualified domain name of the Active Directory Domain.</p>
+    #[doc(hidden)]
     pub fqdn: std::option::Option<std::string::String>,
     /// <p>The name of the IAM role to be used when making API calls to the Directory Service.</p>
+    #[doc(hidden)]
     pub iam_role_name: std::option::Option<std::string::String>,
 }
 impl DomainMembership {
@@ -3433,11 +3688,10 @@ impl std::fmt::Debug for DomainMembership {
         formatter.finish()
     }
 }
-/// See [`DomainMembership`](crate::model::DomainMembership)
+/// See [`DomainMembership`](crate::model::DomainMembership).
 pub mod domain_membership {
 
-    /// A builder for [`DomainMembership`](crate::model::DomainMembership)
-    #[non_exhaustive]
+    /// A builder for [`DomainMembership`](crate::model::DomainMembership).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain: std::option::Option<std::string::String>,
@@ -3489,7 +3743,7 @@ pub mod domain_membership {
             self.iam_role_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainMembership`](crate::model::DomainMembership)
+        /// Consumes the builder and constructs a [`DomainMembership`](crate::model::DomainMembership).
         pub fn build(self) -> crate::model::DomainMembership {
             crate::model::DomainMembership {
                 domain: self.domain,
@@ -3501,7 +3755,7 @@ pub mod domain_membership {
     }
 }
 impl DomainMembership {
-    /// Creates a new builder-style object to manufacture [`DomainMembership`](crate::model::DomainMembership)
+    /// Creates a new builder-style object to manufacture [`DomainMembership`](crate::model::DomainMembership).
     pub fn builder() -> crate::model::domain_membership::Builder {
         crate::model::domain_membership::Builder::default()
     }
@@ -3512,12 +3766,16 @@ impl DomainMembership {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbInstanceStatusInfo {
     /// <p>This value is currently "read replication."</p>
+    #[doc(hidden)]
     pub status_type: std::option::Option<std::string::String>,
     /// <p>Boolean value that is true if the instance is operating normally, or false if the instance is in an error state.</p>
+    #[doc(hidden)]
     pub normal: bool,
     /// <p>Status of the DB instance. For a StatusType of read replica, the values can be replicating, replication stop point set, replication stop point reached, error, stopped, or terminated.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>Details of the error if there is an error for the instance. If the instance isn't in an error state, this value is blank.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DbInstanceStatusInfo {
@@ -3548,11 +3806,10 @@ impl std::fmt::Debug for DbInstanceStatusInfo {
         formatter.finish()
     }
 }
-/// See [`DbInstanceStatusInfo`](crate::model::DbInstanceStatusInfo)
+/// See [`DbInstanceStatusInfo`](crate::model::DbInstanceStatusInfo).
 pub mod db_instance_status_info {
 
-    /// A builder for [`DbInstanceStatusInfo`](crate::model::DbInstanceStatusInfo)
-    #[non_exhaustive]
+    /// A builder for [`DbInstanceStatusInfo`](crate::model::DbInstanceStatusInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status_type: std::option::Option<std::string::String>,
@@ -3601,7 +3858,7 @@ pub mod db_instance_status_info {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbInstanceStatusInfo`](crate::model::DbInstanceStatusInfo)
+        /// Consumes the builder and constructs a [`DbInstanceStatusInfo`](crate::model::DbInstanceStatusInfo).
         pub fn build(self) -> crate::model::DbInstanceStatusInfo {
             crate::model::DbInstanceStatusInfo {
                 status_type: self.status_type,
@@ -3613,7 +3870,7 @@ pub mod db_instance_status_info {
     }
 }
 impl DbInstanceStatusInfo {
-    /// Creates a new builder-style object to manufacture [`DbInstanceStatusInfo`](crate::model::DbInstanceStatusInfo)
+    /// Creates a new builder-style object to manufacture [`DbInstanceStatusInfo`](crate::model::DbInstanceStatusInfo).
     pub fn builder() -> crate::model::db_instance_status_info::Builder {
         crate::model::db_instance_status_info::Builder::default()
     }
@@ -3624,8 +3881,10 @@ impl DbInstanceStatusInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OptionGroupMembership {
     /// <p>The name of the option group that the instance belongs to.</p>
+    #[doc(hidden)]
     pub option_group_name: std::option::Option<std::string::String>,
     /// <p>The status of the DB instance's option group membership. Valid values are: <code>in-sync</code>, <code>pending-apply</code>, <code>pending-removal</code>, <code>pending-maintenance-apply</code>, <code>pending-maintenance-removal</code>, <code>applying</code>, <code>removing</code>, and <code>failed</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl OptionGroupMembership {
@@ -3646,11 +3905,10 @@ impl std::fmt::Debug for OptionGroupMembership {
         formatter.finish()
     }
 }
-/// See [`OptionGroupMembership`](crate::model::OptionGroupMembership)
+/// See [`OptionGroupMembership`](crate::model::OptionGroupMembership).
 pub mod option_group_membership {
 
-    /// A builder for [`OptionGroupMembership`](crate::model::OptionGroupMembership)
-    #[non_exhaustive]
+    /// A builder for [`OptionGroupMembership`](crate::model::OptionGroupMembership).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) option_group_name: std::option::Option<std::string::String>,
@@ -3680,7 +3938,7 @@ pub mod option_group_membership {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`OptionGroupMembership`](crate::model::OptionGroupMembership)
+        /// Consumes the builder and constructs a [`OptionGroupMembership`](crate::model::OptionGroupMembership).
         pub fn build(self) -> crate::model::OptionGroupMembership {
             crate::model::OptionGroupMembership {
                 option_group_name: self.option_group_name,
@@ -3690,7 +3948,7 @@ pub mod option_group_membership {
     }
 }
 impl OptionGroupMembership {
-    /// Creates a new builder-style object to manufacture [`OptionGroupMembership`](crate::model::OptionGroupMembership)
+    /// Creates a new builder-style object to manufacture [`OptionGroupMembership`](crate::model::OptionGroupMembership).
     pub fn builder() -> crate::model::option_group_membership::Builder {
         crate::model::option_group_membership::Builder::default()
     }
@@ -3756,42 +4014,60 @@ impl AsRef<str> for ReplicaMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PendingModifiedValues {
     /// <p>The name of the compute and memory capacity class for the DB instance.</p>
+    #[doc(hidden)]
     pub db_instance_class: std::option::Option<std::string::String>,
     /// <p>The allocated storage size for the DB instance specified in gibibytes (GiB).</p>
+    #[doc(hidden)]
     pub allocated_storage: std::option::Option<i32>,
     /// <p>The master credentials for the DB instance.</p>
+    #[doc(hidden)]
     pub master_user_password: std::option::Option<std::string::String>,
     /// <p>The port for the DB instance.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>The number of days for which automated backups are retained.</p>
+    #[doc(hidden)]
     pub backup_retention_period: std::option::Option<i32>,
     /// <p>A value that indicates that the Single-AZ DB instance will change to a Multi-AZ deployment.</p>
+    #[doc(hidden)]
     pub multi_az: std::option::Option<bool>,
     /// <p>The database engine version.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The license model for the DB instance.</p>
     /// <p>Valid values: <code>license-included</code> | <code>bring-your-own-license</code> | <code>general-public-license</code> </p>
+    #[doc(hidden)]
     pub license_model: std::option::Option<std::string::String>,
     /// <p>The Provisioned IOPS value for the DB instance.</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
     /// <p>The database identifier for the DB instance.</p>
+    #[doc(hidden)]
     pub db_instance_identifier: std::option::Option<std::string::String>,
     /// <p>The storage type of the DB instance.</p>
+    #[doc(hidden)]
     pub storage_type: std::option::Option<std::string::String>,
     /// <p>The identifier of the CA certificate for the DB instance.</p>
+    #[doc(hidden)]
     pub ca_certificate_identifier: std::option::Option<std::string::String>,
     /// <p>The DB subnet group for the DB instance.</p>
+    #[doc(hidden)]
     pub db_subnet_group_name: std::option::Option<std::string::String>,
     /// <p>A list of the log types whose configuration is still pending. In other words, these log types are in the process of being activated or deactivated.</p>
+    #[doc(hidden)]
     pub pending_cloudwatch_logs_exports:
         std::option::Option<crate::model::PendingCloudwatchLogsExports>,
     /// <p>The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.</p>
+    #[doc(hidden)]
     pub processor_features: std::option::Option<std::vec::Vec<crate::model::ProcessorFeature>>,
     /// <p>Whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is enabled.</p>
+    #[doc(hidden)]
     pub iam_database_authentication_enabled: std::option::Option<bool>,
     /// <p>The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all-paused</code>. If <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all-paused</code>, the instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.</p>
+    #[doc(hidden)]
     pub automation_mode: std::option::Option<crate::model::AutomationMode>,
     /// <p>The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full automation. The minimum value is 60 (default). The maximum value is 1,440.</p>
+    #[doc(hidden)]
     pub resume_full_automation_mode_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PendingModifiedValues {
@@ -3906,11 +4182,10 @@ impl std::fmt::Debug for PendingModifiedValues {
         formatter.finish()
     }
 }
-/// See [`PendingModifiedValues`](crate::model::PendingModifiedValues)
+/// See [`PendingModifiedValues`](crate::model::PendingModifiedValues).
 pub mod pending_modified_values {
 
-    /// A builder for [`PendingModifiedValues`](crate::model::PendingModifiedValues)
-    #[non_exhaustive]
+    /// A builder for [`PendingModifiedValues`](crate::model::PendingModifiedValues).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance_class: std::option::Option<std::string::String>,
@@ -4166,7 +4441,7 @@ pub mod pending_modified_values {
             self.resume_full_automation_mode_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`PendingModifiedValues`](crate::model::PendingModifiedValues)
+        /// Consumes the builder and constructs a [`PendingModifiedValues`](crate::model::PendingModifiedValues).
         pub fn build(self) -> crate::model::PendingModifiedValues {
             crate::model::PendingModifiedValues {
                 db_instance_class: self.db_instance_class,
@@ -4192,7 +4467,7 @@ pub mod pending_modified_values {
     }
 }
 impl PendingModifiedValues {
-    /// Creates a new builder-style object to manufacture [`PendingModifiedValues`](crate::model::PendingModifiedValues)
+    /// Creates a new builder-style object to manufacture [`PendingModifiedValues`](crate::model::PendingModifiedValues).
     pub fn builder() -> crate::model::pending_modified_values::Builder {
         crate::model::pending_modified_values::Builder::default()
     }
@@ -4203,8 +4478,10 @@ impl PendingModifiedValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PendingCloudwatchLogsExports {
     /// <p>Log types that are in the process of being deactivated. After they are deactivated, these log types aren't exported to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub log_types_to_enable: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Log types that are in the process of being enabled. After they are enabled, these log types are exported to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub log_types_to_disable: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl PendingCloudwatchLogsExports {
@@ -4225,11 +4502,10 @@ impl std::fmt::Debug for PendingCloudwatchLogsExports {
         formatter.finish()
     }
 }
-/// See [`PendingCloudwatchLogsExports`](crate::model::PendingCloudwatchLogsExports)
+/// See [`PendingCloudwatchLogsExports`](crate::model::PendingCloudwatchLogsExports).
 pub mod pending_cloudwatch_logs_exports {
 
-    /// A builder for [`PendingCloudwatchLogsExports`](crate::model::PendingCloudwatchLogsExports)
-    #[non_exhaustive]
+    /// A builder for [`PendingCloudwatchLogsExports`](crate::model::PendingCloudwatchLogsExports).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_types_to_enable: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -4274,7 +4550,7 @@ pub mod pending_cloudwatch_logs_exports {
             self.log_types_to_disable = input;
             self
         }
-        /// Consumes the builder and constructs a [`PendingCloudwatchLogsExports`](crate::model::PendingCloudwatchLogsExports)
+        /// Consumes the builder and constructs a [`PendingCloudwatchLogsExports`](crate::model::PendingCloudwatchLogsExports).
         pub fn build(self) -> crate::model::PendingCloudwatchLogsExports {
             crate::model::PendingCloudwatchLogsExports {
                 log_types_to_enable: self.log_types_to_enable,
@@ -4284,7 +4560,7 @@ pub mod pending_cloudwatch_logs_exports {
     }
 }
 impl PendingCloudwatchLogsExports {
-    /// Creates a new builder-style object to manufacture [`PendingCloudwatchLogsExports`](crate::model::PendingCloudwatchLogsExports)
+    /// Creates a new builder-style object to manufacture [`PendingCloudwatchLogsExports`](crate::model::PendingCloudwatchLogsExports).
     pub fn builder() -> crate::model::pending_cloudwatch_logs_exports::Builder {
         crate::model::pending_cloudwatch_logs_exports::Builder::default()
     }
@@ -4296,16 +4572,22 @@ impl PendingCloudwatchLogsExports {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbSubnetGroup {
     /// <p>The name of the DB subnet group.</p>
+    #[doc(hidden)]
     pub db_subnet_group_name: std::option::Option<std::string::String>,
     /// <p>Provides the description of the DB subnet group.</p>
+    #[doc(hidden)]
     pub db_subnet_group_description: std::option::Option<std::string::String>,
     /// <p>Provides the VpcId of the DB subnet group.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>Provides the status of the DB subnet group.</p>
+    #[doc(hidden)]
     pub subnet_group_status: std::option::Option<std::string::String>,
     /// <p>Contains a list of <code>Subnet</code> elements.</p>
+    #[doc(hidden)]
     pub subnets: std::option::Option<std::vec::Vec<crate::model::Subnet>>,
     /// <p>The Amazon Resource Name (ARN) for the DB subnet group.</p>
+    #[doc(hidden)]
     pub db_subnet_group_arn: std::option::Option<std::string::String>,
     /// <p>The network type of the DB subnet group.</p>
     /// <p>Valid values:</p>
@@ -4315,6 +4597,7 @@ pub struct DbSubnetGroup {
     /// </ul>
     /// <p>A <code>DBSubnetGroup</code> can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub supported_network_types: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DbSubnetGroup {
@@ -4370,11 +4653,10 @@ impl std::fmt::Debug for DbSubnetGroup {
         formatter.finish()
     }
 }
-/// See [`DbSubnetGroup`](crate::model::DbSubnetGroup)
+/// See [`DbSubnetGroup`](crate::model::DbSubnetGroup).
 pub mod db_subnet_group {
 
-    /// A builder for [`DbSubnetGroup`](crate::model::DbSubnetGroup)
-    #[non_exhaustive]
+    /// A builder for [`DbSubnetGroup`](crate::model::DbSubnetGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_subnet_group_name: std::option::Option<std::string::String>,
@@ -4503,7 +4785,7 @@ pub mod db_subnet_group {
             self.supported_network_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbSubnetGroup`](crate::model::DbSubnetGroup)
+        /// Consumes the builder and constructs a [`DbSubnetGroup`](crate::model::DbSubnetGroup).
         pub fn build(self) -> crate::model::DbSubnetGroup {
             crate::model::DbSubnetGroup {
                 db_subnet_group_name: self.db_subnet_group_name,
@@ -4518,7 +4800,7 @@ pub mod db_subnet_group {
     }
 }
 impl DbSubnetGroup {
-    /// Creates a new builder-style object to manufacture [`DbSubnetGroup`](crate::model::DbSubnetGroup)
+    /// Creates a new builder-style object to manufacture [`DbSubnetGroup`](crate::model::DbSubnetGroup).
     pub fn builder() -> crate::model::db_subnet_group::Builder {
         crate::model::db_subnet_group::Builder::default()
     }
@@ -4529,14 +4811,18 @@ impl DbSubnetGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Subnet {
     /// <p>The identifier of the subnet.</p>
+    #[doc(hidden)]
     pub subnet_identifier: std::option::Option<std::string::String>,
     /// <p>Contains Availability Zone information.</p>
     /// <p>This data type is used as an element in the <code>OrderableDBInstanceOption</code> data type.</p>
+    #[doc(hidden)]
     pub subnet_availability_zone: std::option::Option<crate::model::AvailabilityZone>,
     /// <p>If the subnet is associated with an Outpost, this value specifies the Outpost.</p>
     /// <p>For more information about RDS on Outposts, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Amazon RDS on Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub subnet_outpost: std::option::Option<crate::model::Outpost>,
     /// <p>The status of the subnet.</p>
+    #[doc(hidden)]
     pub subnet_status: std::option::Option<std::string::String>,
 }
 impl Subnet {
@@ -4569,11 +4855,10 @@ impl std::fmt::Debug for Subnet {
         formatter.finish()
     }
 }
-/// See [`Subnet`](crate::model::Subnet)
+/// See [`Subnet`](crate::model::Subnet).
 pub mod subnet {
 
-    /// A builder for [`Subnet`](crate::model::Subnet)
-    #[non_exhaustive]
+    /// A builder for [`Subnet`](crate::model::Subnet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_identifier: std::option::Option<std::string::String>,
@@ -4638,7 +4923,7 @@ pub mod subnet {
             self.subnet_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`Subnet`](crate::model::Subnet)
+        /// Consumes the builder and constructs a [`Subnet`](crate::model::Subnet).
         pub fn build(self) -> crate::model::Subnet {
             crate::model::Subnet {
                 subnet_identifier: self.subnet_identifier,
@@ -4650,7 +4935,7 @@ pub mod subnet {
     }
 }
 impl Subnet {
-    /// Creates a new builder-style object to manufacture [`Subnet`](crate::model::Subnet)
+    /// Creates a new builder-style object to manufacture [`Subnet`](crate::model::Subnet).
     pub fn builder() -> crate::model::subnet::Builder {
         crate::model::subnet::Builder::default()
     }
@@ -4662,6 +4947,7 @@ impl Subnet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Outpost {
     /// <p>The Amazon Resource Name (ARN) of the Outpost.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl Outpost {
@@ -4677,11 +4963,10 @@ impl std::fmt::Debug for Outpost {
         formatter.finish()
     }
 }
-/// See [`Outpost`](crate::model::Outpost)
+/// See [`Outpost`](crate::model::Outpost).
 pub mod outpost {
 
-    /// A builder for [`Outpost`](crate::model::Outpost)
-    #[non_exhaustive]
+    /// A builder for [`Outpost`](crate::model::Outpost).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4697,14 +4982,14 @@ pub mod outpost {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Outpost`](crate::model::Outpost)
+        /// Consumes the builder and constructs a [`Outpost`](crate::model::Outpost).
         pub fn build(self) -> crate::model::Outpost {
             crate::model::Outpost { arn: self.arn }
         }
     }
 }
 impl Outpost {
-    /// Creates a new builder-style object to manufacture [`Outpost`](crate::model::Outpost)
+    /// Creates a new builder-style object to manufacture [`Outpost`](crate::model::Outpost).
     pub fn builder() -> crate::model::outpost::Builder {
         crate::model::outpost::Builder::default()
     }
@@ -4716,6 +5001,7 @@ impl Outpost {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AvailabilityZone {
     /// <p>The name of the Availability Zone.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl AvailabilityZone {
@@ -4731,11 +5017,10 @@ impl std::fmt::Debug for AvailabilityZone {
         formatter.finish()
     }
 }
-/// See [`AvailabilityZone`](crate::model::AvailabilityZone)
+/// See [`AvailabilityZone`](crate::model::AvailabilityZone).
 pub mod availability_zone {
 
-    /// A builder for [`AvailabilityZone`](crate::model::AvailabilityZone)
-    #[non_exhaustive]
+    /// A builder for [`AvailabilityZone`](crate::model::AvailabilityZone).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4751,14 +5036,14 @@ pub mod availability_zone {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AvailabilityZone`](crate::model::AvailabilityZone)
+        /// Consumes the builder and constructs a [`AvailabilityZone`](crate::model::AvailabilityZone).
         pub fn build(self) -> crate::model::AvailabilityZone {
             crate::model::AvailabilityZone { name: self.name }
         }
     }
 }
 impl AvailabilityZone {
-    /// Creates a new builder-style object to manufacture [`AvailabilityZone`](crate::model::AvailabilityZone)
+    /// Creates a new builder-style object to manufacture [`AvailabilityZone`](crate::model::AvailabilityZone).
     pub fn builder() -> crate::model::availability_zone::Builder {
         crate::model::availability_zone::Builder::default()
     }
@@ -4778,8 +5063,10 @@ impl AvailabilityZone {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbParameterGroupStatus {
     /// <p>The name of the DB parameter group.</p>
+    #[doc(hidden)]
     pub db_parameter_group_name: std::option::Option<std::string::String>,
     /// <p>The status of parameter updates.</p>
+    #[doc(hidden)]
     pub parameter_apply_status: std::option::Option<std::string::String>,
 }
 impl DbParameterGroupStatus {
@@ -4800,11 +5087,10 @@ impl std::fmt::Debug for DbParameterGroupStatus {
         formatter.finish()
     }
 }
-/// See [`DbParameterGroupStatus`](crate::model::DbParameterGroupStatus)
+/// See [`DbParameterGroupStatus`](crate::model::DbParameterGroupStatus).
 pub mod db_parameter_group_status {
 
-    /// A builder for [`DbParameterGroupStatus`](crate::model::DbParameterGroupStatus)
-    #[non_exhaustive]
+    /// A builder for [`DbParameterGroupStatus`](crate::model::DbParameterGroupStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_parameter_group_name: std::option::Option<std::string::String>,
@@ -4837,7 +5123,7 @@ pub mod db_parameter_group_status {
             self.parameter_apply_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbParameterGroupStatus`](crate::model::DbParameterGroupStatus)
+        /// Consumes the builder and constructs a [`DbParameterGroupStatus`](crate::model::DbParameterGroupStatus).
         pub fn build(self) -> crate::model::DbParameterGroupStatus {
             crate::model::DbParameterGroupStatus {
                 db_parameter_group_name: self.db_parameter_group_name,
@@ -4847,7 +5133,7 @@ pub mod db_parameter_group_status {
     }
 }
 impl DbParameterGroupStatus {
-    /// Creates a new builder-style object to manufacture [`DbParameterGroupStatus`](crate::model::DbParameterGroupStatus)
+    /// Creates a new builder-style object to manufacture [`DbParameterGroupStatus`](crate::model::DbParameterGroupStatus).
     pub fn builder() -> crate::model::db_parameter_group_status::Builder {
         crate::model::db_parameter_group_status::Builder::default()
     }
@@ -4858,8 +5144,11 @@ impl DbParameterGroupStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcSecurityGroupMembership {
     /// <p>The name of the VPC security group.</p>
+    #[doc(hidden)]
     pub vpc_security_group_id: std::option::Option<std::string::String>,
-    /// <p>The status of the VPC security group.</p>
+    /// <p>The membership status of the VPC security group.</p>
+    /// <p>Currently, the only valid status is <code>active</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl VpcSecurityGroupMembership {
@@ -4867,7 +5156,8 @@ impl VpcSecurityGroupMembership {
     pub fn vpc_security_group_id(&self) -> std::option::Option<&str> {
         self.vpc_security_group_id.as_deref()
     }
-    /// <p>The status of the VPC security group.</p>
+    /// <p>The membership status of the VPC security group.</p>
+    /// <p>Currently, the only valid status is <code>active</code>.</p>
     pub fn status(&self) -> std::option::Option<&str> {
         self.status.as_deref()
     }
@@ -4880,11 +5170,10 @@ impl std::fmt::Debug for VpcSecurityGroupMembership {
         formatter.finish()
     }
 }
-/// See [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership)
+/// See [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership).
 pub mod vpc_security_group_membership {
 
-    /// A builder for [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership)
-    #[non_exhaustive]
+    /// A builder for [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_security_group_id: std::option::Option<std::string::String>,
@@ -4904,17 +5193,19 @@ pub mod vpc_security_group_membership {
             self.vpc_security_group_id = input;
             self
         }
-        /// <p>The status of the VPC security group.</p>
+        /// <p>The membership status of the VPC security group.</p>
+        /// <p>Currently, the only valid status is <code>active</code>.</p>
         pub fn status(mut self, input: impl Into<std::string::String>) -> Self {
             self.status = Some(input.into());
             self
         }
-        /// <p>The status of the VPC security group.</p>
+        /// <p>The membership status of the VPC security group.</p>
+        /// <p>Currently, the only valid status is <code>active</code>.</p>
         pub fn set_status(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership)
+        /// Consumes the builder and constructs a [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership).
         pub fn build(self) -> crate::model::VpcSecurityGroupMembership {
             crate::model::VpcSecurityGroupMembership {
                 vpc_security_group_id: self.vpc_security_group_id,
@@ -4924,7 +5215,7 @@ pub mod vpc_security_group_membership {
     }
 }
 impl VpcSecurityGroupMembership {
-    /// Creates a new builder-style object to manufacture [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership)
+    /// Creates a new builder-style object to manufacture [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership).
     pub fn builder() -> crate::model::vpc_security_group_membership::Builder {
         crate::model::vpc_security_group_membership::Builder::default()
     }
@@ -4941,8 +5232,10 @@ impl VpcSecurityGroupMembership {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbSecurityGroupMembership {
     /// <p>The name of the DB security group.</p>
+    #[doc(hidden)]
     pub db_security_group_name: std::option::Option<std::string::String>,
     /// <p>The status of the DB security group.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl DbSecurityGroupMembership {
@@ -4963,11 +5256,10 @@ impl std::fmt::Debug for DbSecurityGroupMembership {
         formatter.finish()
     }
 }
-/// See [`DbSecurityGroupMembership`](crate::model::DbSecurityGroupMembership)
+/// See [`DbSecurityGroupMembership`](crate::model::DbSecurityGroupMembership).
 pub mod db_security_group_membership {
 
-    /// A builder for [`DbSecurityGroupMembership`](crate::model::DbSecurityGroupMembership)
-    #[non_exhaustive]
+    /// A builder for [`DbSecurityGroupMembership`](crate::model::DbSecurityGroupMembership).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_security_group_name: std::option::Option<std::string::String>,
@@ -4997,7 +5289,7 @@ pub mod db_security_group_membership {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbSecurityGroupMembership`](crate::model::DbSecurityGroupMembership)
+        /// Consumes the builder and constructs a [`DbSecurityGroupMembership`](crate::model::DbSecurityGroupMembership).
         pub fn build(self) -> crate::model::DbSecurityGroupMembership {
             crate::model::DbSecurityGroupMembership {
                 db_security_group_name: self.db_security_group_name,
@@ -5007,7 +5299,7 @@ pub mod db_security_group_membership {
     }
 }
 impl DbSecurityGroupMembership {
-    /// Creates a new builder-style object to manufacture [`DbSecurityGroupMembership`](crate::model::DbSecurityGroupMembership)
+    /// Creates a new builder-style object to manufacture [`DbSecurityGroupMembership`](crate::model::DbSecurityGroupMembership).
     pub fn builder() -> crate::model::db_security_group_membership::Builder {
         crate::model::db_security_group_membership::Builder::default()
     }
@@ -5022,166 +5314,246 @@ impl DbSecurityGroupMembership {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbCluster {
     /// <p>For all database engines except Amazon Aurora, <code>AllocatedStorage</code> specifies the allocated storage size in gibibytes (GiB). For Aurora, <code>AllocatedStorage</code> always returns 1, because Aurora DB cluster storage size isn't fixed, but instead automatically adjusts as needed.</p>
+    #[doc(hidden)]
     pub allocated_storage: std::option::Option<i32>,
     /// <p>Provides the list of Availability Zones (AZs) where instances in the DB cluster can be created.</p>
+    #[doc(hidden)]
     pub availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies the number of days for which automatic DB snapshots are retained.</p>
+    #[doc(hidden)]
     pub backup_retention_period: std::option::Option<i32>,
     /// <p>If present, specifies the name of the character set that this cluster is associated with.</p>
+    #[doc(hidden)]
     pub character_set_name: std::option::Option<std::string::String>,
     /// <p>Contains the name of the initial database of this DB cluster that was provided at create time, if one was specified when the DB cluster was created. This same name is returned for the life of the DB cluster.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>Contains a user-supplied DB cluster identifier. This identifier is the unique key that identifies a DB cluster.</p>
+    #[doc(hidden)]
     pub db_cluster_identifier: std::option::Option<std::string::String>,
     /// <p>Specifies the name of the DB cluster parameter group for the DB cluster.</p>
+    #[doc(hidden)]
     pub db_cluster_parameter_group: std::option::Option<std::string::String>,
     /// <p>Specifies information on the subnet group associated with the DB cluster, including the name, description, and subnets in the subnet group.</p>
+    #[doc(hidden)]
     pub db_subnet_group: std::option::Option<std::string::String>,
     /// <p>Specifies the current state of this DB cluster.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The time when a stopped DB cluster is restarted automatically.</p>
+    #[doc(hidden)]
     pub automatic_restart_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the progress of the operation as a percentage.</p>
+    #[doc(hidden)]
     pub percent_progress: std::option::Option<std::string::String>,
     /// <p>The earliest time to which a database can be restored with point-in-time restore.</p>
+    #[doc(hidden)]
     pub earliest_restorable_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the connection endpoint for the primary instance of the DB cluster.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The reader endpoint for the DB cluster. The reader endpoint for a DB cluster load-balances connections across the Aurora Replicas that are available in a DB cluster. As clients request new connections to the reader endpoint, Aurora distributes the connection requests among the Aurora Replicas in the DB cluster. This functionality can help balance your read workload across multiple Aurora Replicas in your DB cluster.</p>
     /// <p>If a failover occurs, and the Aurora Replica that you are connected to is promoted to be the primary instance, your connection is dropped. To continue sending your read workload to other Aurora Replicas in the cluster, you can then reconnect to the reader endpoint.</p>
+    #[doc(hidden)]
     pub reader_endpoint: std::option::Option<std::string::String>,
     /// <p>Identifies all custom endpoints associated with the cluster.</p>
+    #[doc(hidden)]
     pub custom_endpoints: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies whether the DB cluster has instances in multiple Availability Zones.</p>
+    #[doc(hidden)]
     pub multi_az: std::option::Option<bool>,
     /// <p>The name of the database engine to be used for this DB cluster.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>Indicates the database engine version.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>Specifies the latest time to which a database can be restored with point-in-time restore.</p>
+    #[doc(hidden)]
     pub latest_restorable_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the port that the database engine is listening on.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>Contains the master username for the DB cluster.</p>
+    #[doc(hidden)]
     pub master_username: std::option::Option<std::string::String>,
     /// <p>Provides the list of option group memberships for this DB cluster.</p>
+    #[doc(hidden)]
     pub db_cluster_option_group_memberships:
         std::option::Option<std::vec::Vec<crate::model::DbClusterOptionGroupStatus>>,
     /// <p>Specifies the daily time range during which automated backups are created if automated backups are enabled, as determined by the <code>BackupRetentionPeriod</code>.</p>
+    #[doc(hidden)]
     pub preferred_backup_window: std::option::Option<std::string::String>,
     /// <p>Specifies the weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).</p>
+    #[doc(hidden)]
     pub preferred_maintenance_window: std::option::Option<std::string::String>,
     /// <p>Contains the identifier of the source DB cluster if this DB cluster is a read replica.</p>
+    #[doc(hidden)]
     pub replication_source_identifier: std::option::Option<std::string::String>,
     /// <p>Contains one or more identifiers of the read replicas associated with this DB cluster.</p>
+    #[doc(hidden)]
     pub read_replica_identifiers: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Provides the list of instances that make up the DB cluster.</p>
+    #[doc(hidden)]
     pub db_cluster_members: std::option::Option<std::vec::Vec<crate::model::DbClusterMember>>,
     /// <p>Provides a list of VPC security groups that the DB cluster belongs to.</p>
+    #[doc(hidden)]
     pub vpc_security_groups:
         std::option::Option<std::vec::Vec<crate::model::VpcSecurityGroupMembership>>,
     /// <p>Specifies the ID that Amazon Route 53 assigns when you create a hosted zone.</p>
+    #[doc(hidden)]
     pub hosted_zone_id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the DB cluster is encrypted.</p>
+    #[doc(hidden)]
     pub storage_encrypted: bool,
     /// <p>If <code>StorageEncrypted</code> is enabled, the Amazon Web Services KMS key identifier for the encrypted DB cluster.</p>
     /// <p>The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region-unique, immutable identifier for the DB cluster. This identifier is found in Amazon Web Services CloudTrail log entries whenever the KMS key for the DB cluster is accessed.</p>
+    #[doc(hidden)]
     pub db_cluster_resource_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the DB cluster.</p>
+    #[doc(hidden)]
     pub db_cluster_arn: std::option::Option<std::string::String>,
     /// <p>Provides a list of the Amazon Web Services Identity and Access Management (IAM) roles that are associated with the DB cluster. IAM roles that are associated with a DB cluster grant permission for the DB cluster to access other Amazon Web Services on your behalf.</p>
+    #[doc(hidden)]
     pub associated_roles: std::option::Option<std::vec::Vec<crate::model::DbClusterRole>>,
     /// <p>A value that indicates whether the mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is enabled.</p>
+    #[doc(hidden)]
     pub iam_database_authentication_enabled: std::option::Option<bool>,
     /// <p>Identifies the clone group to which the DB cluster is associated.</p>
+    #[doc(hidden)]
     pub clone_group_id: std::option::Option<std::string::String>,
     /// <p>Specifies the time when the DB cluster was created, in Universal Coordinated Time (UTC).</p>
+    #[doc(hidden)]
     pub cluster_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The earliest time to which a DB cluster can be backtracked.</p>
+    #[doc(hidden)]
     pub earliest_backtrack_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The target backtrack window, in seconds. If this value is set to 0, backtracking is disabled for the DB cluster. Otherwise, backtracking is enabled.</p>
+    #[doc(hidden)]
     pub backtrack_window: std::option::Option<i64>,
     /// <p>The number of change records stored for Backtrack.</p>
+    #[doc(hidden)]
     pub backtrack_consumed_change_records: std::option::Option<i64>,
     /// <p>A list of log types that this DB cluster is configured to export to CloudWatch Logs.</p>
     /// <p>Log types vary by DB engine. For information about the log types for each DB engine, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html">Amazon RDS Database Log Files</a> in the <i>Amazon Aurora User Guide.</i> </p>
+    #[doc(hidden)]
     pub enabled_cloudwatch_logs_exports: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The current capacity of an Aurora Serverless v1 DB cluster. The capacity is 0 (zero) when the cluster is paused.</p>
     /// <p>For more information about Aurora Serverless v1, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.</p>
+    #[doc(hidden)]
     pub capacity: std::option::Option<i32>,
     /// <p>The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>, <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html"> CreateDBCluster</a>.</p>
+    #[doc(hidden)]
     pub engine_mode: std::option::Option<std::string::String>,
     /// <p>Shows the scaling configuration for an Aurora DB cluster in <code>serverless</code> DB engine mode.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.</p>
+    #[doc(hidden)]
     pub scaling_configuration_info: std::option::Option<crate::model::ScalingConfigurationInfo>,
     /// <p>Indicates if the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled.</p>
+    #[doc(hidden)]
     pub deletion_protection: std::option::Option<bool>,
     /// <p>A value that indicates whether the HTTP endpoint for an Aurora Serverless v1 DB cluster is enabled.</p>
     /// <p>When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.</p>
+    #[doc(hidden)]
     pub http_endpoint_enabled: std::option::Option<bool>,
     /// <p>The mode of the database activity stream. Database events such as a change or access generate an activity stream event. The database session can handle these events either synchronously or asynchronously.</p>
+    #[doc(hidden)]
     pub activity_stream_mode: std::option::Option<crate::model::ActivityStreamMode>,
     /// <p>The status of the database activity stream.</p>
+    #[doc(hidden)]
     pub activity_stream_status: std::option::Option<crate::model::ActivityStreamStatus>,
     /// <p>The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream.</p>
     /// <p>The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.</p>
+    #[doc(hidden)]
     pub activity_stream_kms_key_id: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon Kinesis data stream used for the database activity stream.</p>
+    #[doc(hidden)]
     pub activity_stream_kinesis_stream_name: std::option::Option<std::string::String>,
     /// <p>Specifies whether tags are copied from the DB cluster to snapshots of the DB cluster.</p>
+    #[doc(hidden)]
     pub copy_tags_to_snapshot: std::option::Option<bool>,
     /// <p>Specifies whether the DB cluster is a clone of a DB cluster owned by a different Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub cross_account_clone: std::option::Option<bool>,
     /// <p>The Active Directory Domain membership records associated with the DB cluster.</p>
+    #[doc(hidden)]
     pub domain_memberships: std::option::Option<std::vec::Vec<crate::model::DomainMembership>>,
     /// <p>A list of tags. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Specifies whether a secondary cluster in an Aurora global database has write forwarding enabled, not enabled, or is in the process of enabling it.</p>
+    #[doc(hidden)]
     pub global_write_forwarding_status: std::option::Option<crate::model::WriteForwardingStatus>,
     /// <p>Specifies whether you have requested to enable write forwarding for a secondary cluster in an Aurora global database. Because write forwarding takes time to enable, check the value of <code>GlobalWriteForwardingStatus</code> to confirm that the request has completed before using the write forwarding feature for this cluster.</p>
+    #[doc(hidden)]
     pub global_write_forwarding_requested: std::option::Option<bool>,
     /// <p>A value that specifies that changes to the DB cluster are pending. This element is only included when changes are pending. Specific changes are identified by subelements.</p>
+    #[doc(hidden)]
     pub pending_modified_values: std::option::Option<crate::model::ClusterPendingModifiedValues>,
     /// <p>The name of the compute and memory capacity class of the DB instance.</p>
     /// <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
+    #[doc(hidden)]
     pub db_cluster_instance_class: std::option::Option<std::string::String>,
     /// <p>The storage type associated with the DB cluster.</p>
     /// <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
+    #[doc(hidden)]
     pub storage_type: std::option::Option<std::string::String>,
     /// <p>The Provisioned IOPS (I/O operations per second) value.</p>
     /// <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
     /// <p>Specifies the accessibility options for the DB instance.</p>
     /// <p>When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP address from within the DB instance's virtual private cloud (VPC). It resolves to the public IP address from outside of the DB instance's VPC. Access to the DB instance is ultimately controlled by the security group it uses. That public access is not permitted if the security group assigned to the DB instance doesn't permit it.</p>
     /// <p>When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a private IP address.</p>
     /// <p>For more information, see <code>CreateDBInstance</code>.</p>
     /// <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
+    #[doc(hidden)]
     pub publicly_accessible: std::option::Option<bool>,
     /// <p>A value that indicates that minor version patches are applied automatically.</p>
     /// <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
+    #[doc(hidden)]
     pub auto_minor_version_upgrade: bool,
     /// <p>The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB cluster.</p>
     /// <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
+    #[doc(hidden)]
     pub monitoring_interval: std::option::Option<i32>,
     /// <p>The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to Amazon CloudWatch Logs.</p>
     /// <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
+    #[doc(hidden)]
     pub monitoring_role_arn: std::option::Option<std::string::String>,
     /// <p>True if Performance Insights is enabled for the DB cluster, and otherwise false.</p>
     /// <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
+    #[doc(hidden)]
     pub performance_insights_enabled: std::option::Option<bool>,
     /// <p>The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
     /// <p>The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.</p>
     /// <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
+    #[doc(hidden)]
     pub performance_insights_kms_key_id: std::option::Option<std::string::String>,
-    /// <p>The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+    /// <p>The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:</p>
+    /// <ul>
+    /// <li> <p>7</p> </li>
+    /// <li> <p> <i>month</i> * 31, where <i>month</i> is a number of months from 1-23</p> </li>
+    /// <li> <p>731</p> </li>
+    /// </ul>
+    /// <p>For example, the following values are valid:</p>
+    /// <ul>
+    /// <li> <p>93 (3 months * 31)</p> </li>
+    /// <li> <p>341 (11 months * 31)</p> </li>
+    /// <li> <p>589 (19 months * 31)</p> </li>
+    /// <li> <p>731</p> </li>
+    /// </ul>
     /// <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
+    #[doc(hidden)]
     pub performance_insights_retention_period: std::option::Option<i32>,
     /// <p>Shows the scaling configuration for an Aurora Serverless v2 DB cluster.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.html">Using Amazon Aurora Serverless v2</a> in the <i>Amazon Aurora User Guide</i>.</p>
+    #[doc(hidden)]
     pub serverless_v2_scaling_configuration:
         std::option::Option<crate::model::ServerlessV2ScalingConfigurationInfo>,
 }
@@ -5484,7 +5856,19 @@ impl DbCluster {
     pub fn performance_insights_kms_key_id(&self) -> std::option::Option<&str> {
         self.performance_insights_kms_key_id.as_deref()
     }
-    /// <p>The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+    /// <p>The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:</p>
+    /// <ul>
+    /// <li> <p>7</p> </li>
+    /// <li> <p> <i>month</i> * 31, where <i>month</i> is a number of months from 1-23</p> </li>
+    /// <li> <p>731</p> </li>
+    /// </ul>
+    /// <p>For example, the following values are valid:</p>
+    /// <ul>
+    /// <li> <p>93 (3 months * 31)</p> </li>
+    /// <li> <p>341 (11 months * 31)</p> </li>
+    /// <li> <p>589 (19 months * 31)</p> </li>
+    /// <li> <p>731</p> </li>
+    /// </ul>
     /// <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
     pub fn performance_insights_retention_period(&self) -> std::option::Option<i32> {
         self.performance_insights_retention_period
@@ -5622,11 +6006,10 @@ impl std::fmt::Debug for DbCluster {
         formatter.finish()
     }
 }
-/// See [`DbCluster`](crate::model::DbCluster)
+/// See [`DbCluster`](crate::model::DbCluster).
 pub mod db_cluster {
 
-    /// A builder for [`DbCluster`](crate::model::DbCluster)
-    #[non_exhaustive]
+    /// A builder for [`DbCluster`](crate::model::DbCluster).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allocated_storage: std::option::Option<i32>,
@@ -6639,13 +7022,37 @@ pub mod db_cluster {
             self.performance_insights_kms_key_id = input;
             self
         }
-        /// <p>The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+        /// <p>The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:</p>
+        /// <ul>
+        /// <li> <p>7</p> </li>
+        /// <li> <p> <i>month</i> * 31, where <i>month</i> is a number of months from 1-23</p> </li>
+        /// <li> <p>731</p> </li>
+        /// </ul>
+        /// <p>For example, the following values are valid:</p>
+        /// <ul>
+        /// <li> <p>93 (3 months * 31)</p> </li>
+        /// <li> <p>341 (11 months * 31)</p> </li>
+        /// <li> <p>589 (19 months * 31)</p> </li>
+        /// <li> <p>731</p> </li>
+        /// </ul>
         /// <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
         pub fn performance_insights_retention_period(mut self, input: i32) -> Self {
             self.performance_insights_retention_period = Some(input);
             self
         }
-        /// <p>The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+        /// <p>The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:</p>
+        /// <ul>
+        /// <li> <p>7</p> </li>
+        /// <li> <p> <i>month</i> * 31, where <i>month</i> is a number of months from 1-23</p> </li>
+        /// <li> <p>731</p> </li>
+        /// </ul>
+        /// <p>For example, the following values are valid:</p>
+        /// <ul>
+        /// <li> <p>93 (3 months * 31)</p> </li>
+        /// <li> <p>341 (11 months * 31)</p> </li>
+        /// <li> <p>589 (19 months * 31)</p> </li>
+        /// <li> <p>731</p> </li>
+        /// </ul>
         /// <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
         pub fn set_performance_insights_retention_period(
             mut self,
@@ -6672,7 +7079,7 @@ pub mod db_cluster {
             self.serverless_v2_scaling_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbCluster`](crate::model::DbCluster)
+        /// Consumes the builder and constructs a [`DbCluster`](crate::model::DbCluster).
         pub fn build(self) -> crate::model::DbCluster {
             crate::model::DbCluster {
                 allocated_storage: self.allocated_storage,
@@ -6748,7 +7155,7 @@ pub mod db_cluster {
     }
 }
 impl DbCluster {
-    /// Creates a new builder-style object to manufacture [`DbCluster`](crate::model::DbCluster)
+    /// Creates a new builder-style object to manufacture [`DbCluster`](crate::model::DbCluster).
     pub fn builder() -> crate::model::db_cluster::Builder {
         crate::model::db_cluster::Builder::default()
     }
@@ -6760,8 +7167,10 @@ impl DbCluster {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerlessV2ScalingConfigurationInfo {
     /// <p>The minimum number of Aurora capacity units (ACUs) for a DB instance in an Aurora Serverless v2 cluster. You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The smallest value that you can use is 0.5.</p>
+    #[doc(hidden)]
     pub min_capacity: std::option::Option<f64>,
     /// <p>The maximum number of Aurora capacity units (ACUs) for a DB instance in an Aurora Serverless v2 cluster. You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on. The largest value that you can use is 128.</p>
+    #[doc(hidden)]
     pub max_capacity: std::option::Option<f64>,
 }
 impl ServerlessV2ScalingConfigurationInfo {
@@ -6782,11 +7191,10 @@ impl std::fmt::Debug for ServerlessV2ScalingConfigurationInfo {
         formatter.finish()
     }
 }
-/// See [`ServerlessV2ScalingConfigurationInfo`](crate::model::ServerlessV2ScalingConfigurationInfo)
+/// See [`ServerlessV2ScalingConfigurationInfo`](crate::model::ServerlessV2ScalingConfigurationInfo).
 pub mod serverless_v2_scaling_configuration_info {
 
-    /// A builder for [`ServerlessV2ScalingConfigurationInfo`](crate::model::ServerlessV2ScalingConfigurationInfo)
-    #[non_exhaustive]
+    /// A builder for [`ServerlessV2ScalingConfigurationInfo`](crate::model::ServerlessV2ScalingConfigurationInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min_capacity: std::option::Option<f64>,
@@ -6813,7 +7221,7 @@ pub mod serverless_v2_scaling_configuration_info {
             self.max_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerlessV2ScalingConfigurationInfo`](crate::model::ServerlessV2ScalingConfigurationInfo)
+        /// Consumes the builder and constructs a [`ServerlessV2ScalingConfigurationInfo`](crate::model::ServerlessV2ScalingConfigurationInfo).
         pub fn build(self) -> crate::model::ServerlessV2ScalingConfigurationInfo {
             crate::model::ServerlessV2ScalingConfigurationInfo {
                 min_capacity: self.min_capacity,
@@ -6823,7 +7231,7 @@ pub mod serverless_v2_scaling_configuration_info {
     }
 }
 impl ServerlessV2ScalingConfigurationInfo {
-    /// Creates a new builder-style object to manufacture [`ServerlessV2ScalingConfigurationInfo`](crate::model::ServerlessV2ScalingConfigurationInfo)
+    /// Creates a new builder-style object to manufacture [`ServerlessV2ScalingConfigurationInfo`](crate::model::ServerlessV2ScalingConfigurationInfo).
     pub fn builder() -> crate::model::serverless_v2_scaling_configuration_info::Builder {
         crate::model::serverless_v2_scaling_configuration_info::Builder::default()
     }
@@ -6834,15 +7242,20 @@ impl ServerlessV2ScalingConfigurationInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClusterPendingModifiedValues {
     /// <p>A list of the log types whose configuration is still pending. In other words, these log types are in the process of being activated or deactivated.</p>
+    #[doc(hidden)]
     pub pending_cloudwatch_logs_exports:
         std::option::Option<crate::model::PendingCloudwatchLogsExports>,
     /// <p>The DBClusterIdentifier value for the DB cluster.</p>
+    #[doc(hidden)]
     pub db_cluster_identifier: std::option::Option<std::string::String>,
     /// <p>The master credentials for the DB cluster.</p>
+    #[doc(hidden)]
     pub master_user_password: std::option::Option<std::string::String>,
     /// <p>A value that indicates whether mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is enabled.</p>
+    #[doc(hidden)]
     pub iam_database_authentication_enabled: std::option::Option<bool>,
     /// <p>The database engine version.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
 }
 impl ClusterPendingModifiedValues {
@@ -6886,11 +7299,10 @@ impl std::fmt::Debug for ClusterPendingModifiedValues {
         formatter.finish()
     }
 }
-/// See [`ClusterPendingModifiedValues`](crate::model::ClusterPendingModifiedValues)
+/// See [`ClusterPendingModifiedValues`](crate::model::ClusterPendingModifiedValues).
 pub mod cluster_pending_modified_values {
 
-    /// A builder for [`ClusterPendingModifiedValues`](crate::model::ClusterPendingModifiedValues)
-    #[non_exhaustive]
+    /// A builder for [`ClusterPendingModifiedValues`](crate::model::ClusterPendingModifiedValues).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pending_cloudwatch_logs_exports:
@@ -6969,7 +7381,7 @@ pub mod cluster_pending_modified_values {
             self.engine_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClusterPendingModifiedValues`](crate::model::ClusterPendingModifiedValues)
+        /// Consumes the builder and constructs a [`ClusterPendingModifiedValues`](crate::model::ClusterPendingModifiedValues).
         pub fn build(self) -> crate::model::ClusterPendingModifiedValues {
             crate::model::ClusterPendingModifiedValues {
                 pending_cloudwatch_logs_exports: self.pending_cloudwatch_logs_exports,
@@ -6982,7 +7394,7 @@ pub mod cluster_pending_modified_values {
     }
 }
 impl ClusterPendingModifiedValues {
-    /// Creates a new builder-style object to manufacture [`ClusterPendingModifiedValues`](crate::model::ClusterPendingModifiedValues)
+    /// Creates a new builder-style object to manufacture [`ClusterPendingModifiedValues`](crate::model::ClusterPendingModifiedValues).
     pub fn builder() -> crate::model::cluster_pending_modified_values::Builder {
         crate::model::cluster_pending_modified_values::Builder::default()
     }
@@ -7060,24 +7472,30 @@ impl AsRef<str> for WriteForwardingStatus {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScalingConfigurationInfo {
-    /// <p>The maximum capacity for the Aurora DB cluster in <code>serverless</code> DB engine mode.</p>
+    /// <p>The minimum capacity for an Aurora DB cluster in <code>serverless</code> DB engine mode.</p>
+    #[doc(hidden)]
     pub min_capacity: std::option::Option<i32>,
     /// <p>The maximum capacity for an Aurora DB cluster in <code>serverless</code> DB engine mode.</p>
+    #[doc(hidden)]
     pub max_capacity: std::option::Option<i32>,
     /// <p>A value that indicates whether automatic pause is allowed for the Aurora DB cluster in <code>serverless</code> DB engine mode.</p>
     /// <p>When the value is set to false for an Aurora Serverless v1 DB cluster, the DB cluster automatically resumes.</p>
+    #[doc(hidden)]
     pub auto_pause: std::option::Option<bool>,
     /// <p>The remaining amount of time, in seconds, before the Aurora DB cluster in <code>serverless</code> mode is paused. A DB cluster can be paused only when it's idle (it has no connections).</p>
+    #[doc(hidden)]
     pub seconds_until_auto_pause: std::option::Option<i32>,
     /// <p>The action that occurs when Aurora times out while attempting to change the capacity of an Aurora Serverless v1 cluster. The value is either <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.</p>
     /// <p> <code>ForceApplyCapacityChange</code>, the default, sets the capacity to the specified value as soon as possible.</p>
     /// <p> <code>RollbackCapacityChange</code> ignores the capacity change if a scaling point isn't found in the timeout period.</p>
+    #[doc(hidden)]
     pub timeout_action: std::option::Option<std::string::String>,
     /// <p>The number of seconds before scaling times out. What happens when an attempted scaling action times out is determined by the <code>TimeoutAction</code> setting.</p>
+    #[doc(hidden)]
     pub seconds_before_timeout: std::option::Option<i32>,
 }
 impl ScalingConfigurationInfo {
-    /// <p>The maximum capacity for the Aurora DB cluster in <code>serverless</code> DB engine mode.</p>
+    /// <p>The minimum capacity for an Aurora DB cluster in <code>serverless</code> DB engine mode.</p>
     pub fn min_capacity(&self) -> std::option::Option<i32> {
         self.min_capacity
     }
@@ -7117,11 +7535,10 @@ impl std::fmt::Debug for ScalingConfigurationInfo {
         formatter.finish()
     }
 }
-/// See [`ScalingConfigurationInfo`](crate::model::ScalingConfigurationInfo)
+/// See [`ScalingConfigurationInfo`](crate::model::ScalingConfigurationInfo).
 pub mod scaling_configuration_info {
 
-    /// A builder for [`ScalingConfigurationInfo`](crate::model::ScalingConfigurationInfo)
-    #[non_exhaustive]
+    /// A builder for [`ScalingConfigurationInfo`](crate::model::ScalingConfigurationInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min_capacity: std::option::Option<i32>,
@@ -7132,12 +7549,12 @@ pub mod scaling_configuration_info {
         pub(crate) seconds_before_timeout: std::option::Option<i32>,
     }
     impl Builder {
-        /// <p>The maximum capacity for the Aurora DB cluster in <code>serverless</code> DB engine mode.</p>
+        /// <p>The minimum capacity for an Aurora DB cluster in <code>serverless</code> DB engine mode.</p>
         pub fn min_capacity(mut self, input: i32) -> Self {
             self.min_capacity = Some(input);
             self
         }
-        /// <p>The maximum capacity for the Aurora DB cluster in <code>serverless</code> DB engine mode.</p>
+        /// <p>The minimum capacity for an Aurora DB cluster in <code>serverless</code> DB engine mode.</p>
         pub fn set_min_capacity(mut self, input: std::option::Option<i32>) -> Self {
             self.min_capacity = input;
             self
@@ -7201,7 +7618,7 @@ pub mod scaling_configuration_info {
             self.seconds_before_timeout = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalingConfigurationInfo`](crate::model::ScalingConfigurationInfo)
+        /// Consumes the builder and constructs a [`ScalingConfigurationInfo`](crate::model::ScalingConfigurationInfo).
         pub fn build(self) -> crate::model::ScalingConfigurationInfo {
             crate::model::ScalingConfigurationInfo {
                 min_capacity: self.min_capacity,
@@ -7215,7 +7632,7 @@ pub mod scaling_configuration_info {
     }
 }
 impl ScalingConfigurationInfo {
-    /// Creates a new builder-style object to manufacture [`ScalingConfigurationInfo`](crate::model::ScalingConfigurationInfo)
+    /// Creates a new builder-style object to manufacture [`ScalingConfigurationInfo`](crate::model::ScalingConfigurationInfo).
     pub fn builder() -> crate::model::scaling_configuration_info::Builder {
         crate::model::scaling_configuration_info::Builder::default()
     }
@@ -7226,6 +7643,7 @@ impl ScalingConfigurationInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbClusterRole {
     /// <p>The Amazon Resource Name (ARN) of the IAM role that is associated with the DB cluster.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>Describes the state of association between the IAM role and the DB cluster. The Status property returns one of the following values:</p>
     /// <ul>
@@ -7233,8 +7651,10 @@ pub struct DbClusterRole {
     /// <li> <p> <code>PENDING</code> - the IAM role ARN is being associated with the DB cluster.</p> </li>
     /// <li> <p> <code>INVALID</code> - the IAM role ARN is associated with the DB cluster, but the DB cluster is unable to assume the IAM role in order to access other Amazon Web Services on your behalf.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The name of the feature associated with the Amazon Web Services Identity and Access Management (IAM) role. For information about supported feature names, see <code>DBEngineVersion</code>.</p>
+    #[doc(hidden)]
     pub feature_name: std::option::Option<std::string::String>,
 }
 impl DbClusterRole {
@@ -7265,11 +7685,10 @@ impl std::fmt::Debug for DbClusterRole {
         formatter.finish()
     }
 }
-/// See [`DbClusterRole`](crate::model::DbClusterRole)
+/// See [`DbClusterRole`](crate::model::DbClusterRole).
 pub mod db_cluster_role {
 
-    /// A builder for [`DbClusterRole`](crate::model::DbClusterRole)
-    #[non_exhaustive]
+    /// A builder for [`DbClusterRole`](crate::model::DbClusterRole).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -7317,7 +7736,7 @@ pub mod db_cluster_role {
             self.feature_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbClusterRole`](crate::model::DbClusterRole)
+        /// Consumes the builder and constructs a [`DbClusterRole`](crate::model::DbClusterRole).
         pub fn build(self) -> crate::model::DbClusterRole {
             crate::model::DbClusterRole {
                 role_arn: self.role_arn,
@@ -7328,7 +7747,7 @@ pub mod db_cluster_role {
     }
 }
 impl DbClusterRole {
-    /// Creates a new builder-style object to manufacture [`DbClusterRole`](crate::model::DbClusterRole)
+    /// Creates a new builder-style object to manufacture [`DbClusterRole`](crate::model::DbClusterRole).
     pub fn builder() -> crate::model::db_cluster_role::Builder {
         crate::model::db_cluster_role::Builder::default()
     }
@@ -7339,12 +7758,16 @@ impl DbClusterRole {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbClusterMember {
     /// <p>Specifies the instance identifier for this member of the DB cluster.</p>
+    #[doc(hidden)]
     pub db_instance_identifier: std::option::Option<std::string::String>,
     /// <p>Value that is <code>true</code> if the cluster member is the primary instance for the DB cluster and <code>false</code> otherwise.</p>
+    #[doc(hidden)]
     pub is_cluster_writer: bool,
     /// <p>Specifies the status of the DB cluster parameter group for this member of the DB cluster.</p>
+    #[doc(hidden)]
     pub db_cluster_parameter_group_status: std::option::Option<std::string::String>,
     /// <p>A value that specifies the order in which an Aurora Replica is promoted to the primary instance after a failure of the existing primary instance. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.FaultTolerance"> Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>.</p>
+    #[doc(hidden)]
     pub promotion_tier: std::option::Option<i32>,
 }
 impl DbClusterMember {
@@ -7378,11 +7801,10 @@ impl std::fmt::Debug for DbClusterMember {
         formatter.finish()
     }
 }
-/// See [`DbClusterMember`](crate::model::DbClusterMember)
+/// See [`DbClusterMember`](crate::model::DbClusterMember).
 pub mod db_cluster_member {
 
-    /// A builder for [`DbClusterMember`](crate::model::DbClusterMember)
-    #[non_exhaustive]
+    /// A builder for [`DbClusterMember`](crate::model::DbClusterMember).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance_identifier: std::option::Option<std::string::String>,
@@ -7440,7 +7862,7 @@ pub mod db_cluster_member {
             self.promotion_tier = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbClusterMember`](crate::model::DbClusterMember)
+        /// Consumes the builder and constructs a [`DbClusterMember`](crate::model::DbClusterMember).
         pub fn build(self) -> crate::model::DbClusterMember {
             crate::model::DbClusterMember {
                 db_instance_identifier: self.db_instance_identifier,
@@ -7452,7 +7874,7 @@ pub mod db_cluster_member {
     }
 }
 impl DbClusterMember {
-    /// Creates a new builder-style object to manufacture [`DbClusterMember`](crate::model::DbClusterMember)
+    /// Creates a new builder-style object to manufacture [`DbClusterMember`](crate::model::DbClusterMember).
     pub fn builder() -> crate::model::db_cluster_member::Builder {
         crate::model::db_cluster_member::Builder::default()
     }
@@ -7463,8 +7885,10 @@ impl DbClusterMember {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbClusterOptionGroupStatus {
     /// <p>Specifies the name of the DB cluster option group.</p>
+    #[doc(hidden)]
     pub db_cluster_option_group_name: std::option::Option<std::string::String>,
     /// <p>Specifies the status of the DB cluster option group.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl DbClusterOptionGroupStatus {
@@ -7488,11 +7912,10 @@ impl std::fmt::Debug for DbClusterOptionGroupStatus {
         formatter.finish()
     }
 }
-/// See [`DbClusterOptionGroupStatus`](crate::model::DbClusterOptionGroupStatus)
+/// See [`DbClusterOptionGroupStatus`](crate::model::DbClusterOptionGroupStatus).
 pub mod db_cluster_option_group_status {
 
-    /// A builder for [`DbClusterOptionGroupStatus`](crate::model::DbClusterOptionGroupStatus)
-    #[non_exhaustive]
+    /// A builder for [`DbClusterOptionGroupStatus`](crate::model::DbClusterOptionGroupStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_option_group_name: std::option::Option<std::string::String>,
@@ -7525,7 +7948,7 @@ pub mod db_cluster_option_group_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbClusterOptionGroupStatus`](crate::model::DbClusterOptionGroupStatus)
+        /// Consumes the builder and constructs a [`DbClusterOptionGroupStatus`](crate::model::DbClusterOptionGroupStatus).
         pub fn build(self) -> crate::model::DbClusterOptionGroupStatus {
             crate::model::DbClusterOptionGroupStatus {
                 db_cluster_option_group_name: self.db_cluster_option_group_name,
@@ -7535,7 +7958,7 @@ pub mod db_cluster_option_group_status {
     }
 }
 impl DbClusterOptionGroupStatus {
-    /// Creates a new builder-style object to manufacture [`DbClusterOptionGroupStatus`](crate::model::DbClusterOptionGroupStatus)
+    /// Creates a new builder-style object to manufacture [`DbClusterOptionGroupStatus`](crate::model::DbClusterOptionGroupStatus).
     pub fn builder() -> crate::model::db_cluster_option_group_status::Builder {
         crate::model::db_cluster_option_group_status::Builder::default()
     }
@@ -7547,18 +7970,25 @@ impl DbClusterOptionGroupStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbSecurityGroup {
     /// <p>Provides the Amazon Web Services ID of the owner of a specific DB security group.</p>
+    #[doc(hidden)]
     pub owner_id: std::option::Option<std::string::String>,
     /// <p>Specifies the name of the DB security group.</p>
+    #[doc(hidden)]
     pub db_security_group_name: std::option::Option<std::string::String>,
     /// <p>Provides the description of the DB security group.</p>
+    #[doc(hidden)]
     pub db_security_group_description: std::option::Option<std::string::String>,
     /// <p>Provides the VpcId of the DB security group.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>Contains a list of <code>EC2SecurityGroup</code> elements.</p>
+    #[doc(hidden)]
     pub ec2_security_groups: std::option::Option<std::vec::Vec<crate::model::Ec2SecurityGroup>>,
     /// <p>Contains a list of <code>IPRange</code> elements.</p>
+    #[doc(hidden)]
     pub ip_ranges: std::option::Option<std::vec::Vec<crate::model::IpRange>>,
     /// <p>The Amazon Resource Name (ARN) for the DB security group.</p>
+    #[doc(hidden)]
     pub db_security_group_arn: std::option::Option<std::string::String>,
 }
 impl DbSecurityGroup {
@@ -7607,11 +8037,10 @@ impl std::fmt::Debug for DbSecurityGroup {
         formatter.finish()
     }
 }
-/// See [`DbSecurityGroup`](crate::model::DbSecurityGroup)
+/// See [`DbSecurityGroup`](crate::model::DbSecurityGroup).
 pub mod db_security_group {
 
-    /// A builder for [`DbSecurityGroup`](crate::model::DbSecurityGroup)
-    #[non_exhaustive]
+    /// A builder for [`DbSecurityGroup`](crate::model::DbSecurityGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner_id: std::option::Option<std::string::String>,
@@ -7724,7 +8153,7 @@ pub mod db_security_group {
             self.db_security_group_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbSecurityGroup`](crate::model::DbSecurityGroup)
+        /// Consumes the builder and constructs a [`DbSecurityGroup`](crate::model::DbSecurityGroup).
         pub fn build(self) -> crate::model::DbSecurityGroup {
             crate::model::DbSecurityGroup {
                 owner_id: self.owner_id,
@@ -7739,7 +8168,7 @@ pub mod db_security_group {
     }
 }
 impl DbSecurityGroup {
-    /// Creates a new builder-style object to manufacture [`DbSecurityGroup`](crate::model::DbSecurityGroup)
+    /// Creates a new builder-style object to manufacture [`DbSecurityGroup`](crate::model::DbSecurityGroup).
     pub fn builder() -> crate::model::db_security_group::Builder {
         crate::model::db_security_group::Builder::default()
     }
@@ -7750,8 +8179,10 @@ impl DbSecurityGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IpRange {
     /// <p>Specifies the status of the IP range. Status can be "authorizing", "authorized", "revoking", and "revoked".</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>Specifies the IP range.</p>
+    #[doc(hidden)]
     pub cidrip: std::option::Option<std::string::String>,
 }
 impl IpRange {
@@ -7772,11 +8203,10 @@ impl std::fmt::Debug for IpRange {
         formatter.finish()
     }
 }
-/// See [`IpRange`](crate::model::IpRange)
+/// See [`IpRange`](crate::model::IpRange).
 pub mod ip_range {
 
-    /// A builder for [`IpRange`](crate::model::IpRange)
-    #[non_exhaustive]
+    /// A builder for [`IpRange`](crate::model::IpRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<std::string::String>,
@@ -7803,7 +8233,7 @@ pub mod ip_range {
             self.cidrip = input;
             self
         }
-        /// Consumes the builder and constructs a [`IpRange`](crate::model::IpRange)
+        /// Consumes the builder and constructs a [`IpRange`](crate::model::IpRange).
         pub fn build(self) -> crate::model::IpRange {
             crate::model::IpRange {
                 status: self.status,
@@ -7813,7 +8243,7 @@ pub mod ip_range {
     }
 }
 impl IpRange {
-    /// Creates a new builder-style object to manufacture [`IpRange`](crate::model::IpRange)
+    /// Creates a new builder-style object to manufacture [`IpRange`](crate::model::IpRange).
     pub fn builder() -> crate::model::ip_range::Builder {
         crate::model::ip_range::Builder::default()
     }
@@ -7829,12 +8259,16 @@ impl IpRange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ec2SecurityGroup {
     /// <p>Provides the status of the EC2 security group. Status can be "authorizing", "authorized", "revoking", and "revoked".</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>Specifies the name of the EC2 security group.</p>
+    #[doc(hidden)]
     pub ec2_security_group_name: std::option::Option<std::string::String>,
     /// <p>Specifies the id of the EC2 security group.</p>
+    #[doc(hidden)]
     pub ec2_security_group_id: std::option::Option<std::string::String>,
     /// <p>Specifies the Amazon Web Services ID of the owner of the EC2 security group specified in the <code>EC2SecurityGroupName</code> field.</p>
+    #[doc(hidden)]
     pub ec2_security_group_owner_id: std::option::Option<std::string::String>,
 }
 impl Ec2SecurityGroup {
@@ -7868,11 +8302,10 @@ impl std::fmt::Debug for Ec2SecurityGroup {
         formatter.finish()
     }
 }
-/// See [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup)
+/// See [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup).
 pub mod ec2_security_group {
 
-    /// A builder for [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup)
-    #[non_exhaustive]
+    /// A builder for [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<std::string::String>,
@@ -7933,7 +8366,7 @@ pub mod ec2_security_group {
             self.ec2_security_group_owner_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup)
+        /// Consumes the builder and constructs a [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup).
         pub fn build(self) -> crate::model::Ec2SecurityGroup {
             crate::model::Ec2SecurityGroup {
                 status: self.status,
@@ -7945,7 +8378,7 @@ pub mod ec2_security_group {
     }
 }
 impl Ec2SecurityGroup {
-    /// Creates a new builder-style object to manufacture [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup)
+    /// Creates a new builder-style object to manufacture [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup).
     pub fn builder() -> crate::model::ec2_security_group::Builder {
         crate::model::ec2_security_group::Builder::default()
     }
@@ -7957,8 +8390,10 @@ impl Ec2SecurityGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerlessV2ScalingConfiguration {
     /// <p>The minimum number of Aurora capacity units (ACUs) for a DB instance in an Aurora Serverless v2 cluster. You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The smallest value that you can use is 0.5.</p>
+    #[doc(hidden)]
     pub min_capacity: std::option::Option<f64>,
     /// <p>The maximum number of Aurora capacity units (ACUs) for a DB instance in an Aurora Serverless v2 cluster. You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on. The largest value that you can use is 128.</p>
+    #[doc(hidden)]
     pub max_capacity: std::option::Option<f64>,
 }
 impl ServerlessV2ScalingConfiguration {
@@ -7979,11 +8414,10 @@ impl std::fmt::Debug for ServerlessV2ScalingConfiguration {
         formatter.finish()
     }
 }
-/// See [`ServerlessV2ScalingConfiguration`](crate::model::ServerlessV2ScalingConfiguration)
+/// See [`ServerlessV2ScalingConfiguration`](crate::model::ServerlessV2ScalingConfiguration).
 pub mod serverless_v2_scaling_configuration {
 
-    /// A builder for [`ServerlessV2ScalingConfiguration`](crate::model::ServerlessV2ScalingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ServerlessV2ScalingConfiguration`](crate::model::ServerlessV2ScalingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min_capacity: std::option::Option<f64>,
@@ -8010,7 +8444,7 @@ pub mod serverless_v2_scaling_configuration {
             self.max_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerlessV2ScalingConfiguration`](crate::model::ServerlessV2ScalingConfiguration)
+        /// Consumes the builder and constructs a [`ServerlessV2ScalingConfiguration`](crate::model::ServerlessV2ScalingConfiguration).
         pub fn build(self) -> crate::model::ServerlessV2ScalingConfiguration {
             crate::model::ServerlessV2ScalingConfiguration {
                 min_capacity: self.min_capacity,
@@ -8020,7 +8454,7 @@ pub mod serverless_v2_scaling_configuration {
     }
 }
 impl ServerlessV2ScalingConfiguration {
-    /// Creates a new builder-style object to manufacture [`ServerlessV2ScalingConfiguration`](crate::model::ServerlessV2ScalingConfiguration)
+    /// Creates a new builder-style object to manufacture [`ServerlessV2ScalingConfiguration`](crate::model::ServerlessV2ScalingConfiguration).
     pub fn builder() -> crate::model::serverless_v2_scaling_configuration::Builder {
         crate::model::serverless_v2_scaling_configuration::Builder::default()
     }
@@ -8035,18 +8469,22 @@ pub struct ScalingConfiguration {
     /// <p>For Aurora MySQL, valid capacity values are <code>1</code>, <code>2</code>, <code>4</code>, <code>8</code>, <code>16</code>, <code>32</code>, <code>64</code>, <code>128</code>, and <code>256</code>.</p>
     /// <p>For Aurora PostgreSQL, valid capacity values are <code>2</code>, <code>4</code>, <code>8</code>, <code>16</code>, <code>32</code>, <code>64</code>, <code>192</code>, and <code>384</code>.</p>
     /// <p>The minimum capacity must be less than or equal to the maximum capacity.</p>
+    #[doc(hidden)]
     pub min_capacity: std::option::Option<i32>,
     /// <p>The maximum capacity for an Aurora DB cluster in <code>serverless</code> DB engine mode.</p>
     /// <p>For Aurora MySQL, valid capacity values are <code>1</code>, <code>2</code>, <code>4</code>, <code>8</code>, <code>16</code>, <code>32</code>, <code>64</code>, <code>128</code>, and <code>256</code>.</p>
     /// <p>For Aurora PostgreSQL, valid capacity values are <code>2</code>, <code>4</code>, <code>8</code>, <code>16</code>, <code>32</code>, <code>64</code>, <code>192</code>, and <code>384</code>.</p>
     /// <p>The maximum capacity must be greater than or equal to the minimum capacity.</p>
+    #[doc(hidden)]
     pub max_capacity: std::option::Option<i32>,
     /// <p>A value that indicates whether to allow or disallow automatic pause for an Aurora DB cluster in <code>serverless</code> DB engine mode. A DB cluster can be paused only when it's idle (it has no connections).</p> <note>
     /// <p>If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a snapshot. In this case, the DB cluster is restored when there is a request to connect to it.</p>
     /// </note>
+    #[doc(hidden)]
     pub auto_pause: std::option::Option<bool>,
     /// <p>The time, in seconds, before an Aurora DB cluster in <code>serverless</code> mode is paused.</p>
     /// <p>Specify a value between 300 and 86,400 seconds.</p>
+    #[doc(hidden)]
     pub seconds_until_auto_pause: std::option::Option<i32>,
     /// <p>The action to take when the timeout is reached, either <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.</p>
     /// <p> <code>ForceApplyCapacityChange</code> sets the capacity to the specified value as soon as possible.</p>
@@ -8054,9 +8492,11 @@ pub struct ScalingConfiguration {
     /// <p>If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless v1 from finding a scaling point might be dropped.</p>
     /// </important>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling"> Autoscaling for Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.</p>
+    #[doc(hidden)]
     pub timeout_action: std::option::Option<std::string::String>,
     /// <p>The amount of time, in seconds, that Aurora Serverless v1 tries to find a scaling point to perform seamless scaling before enforcing the timeout action. The default is 300.</p>
     /// <p>Specify a value between 60 and 600 seconds.</p>
+    #[doc(hidden)]
     pub seconds_before_timeout: std::option::Option<i32>,
 }
 impl ScalingConfiguration {
@@ -8112,11 +8552,10 @@ impl std::fmt::Debug for ScalingConfiguration {
         formatter.finish()
     }
 }
-/// See [`ScalingConfiguration`](crate::model::ScalingConfiguration)
+/// See [`ScalingConfiguration`](crate::model::ScalingConfiguration).
 pub mod scaling_configuration {
 
-    /// A builder for [`ScalingConfiguration`](crate::model::ScalingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ScalingConfiguration`](crate::model::ScalingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min_capacity: std::option::Option<i32>,
@@ -8220,7 +8659,7 @@ pub mod scaling_configuration {
             self.seconds_before_timeout = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalingConfiguration`](crate::model::ScalingConfiguration)
+        /// Consumes the builder and constructs a [`ScalingConfiguration`](crate::model::ScalingConfiguration).
         pub fn build(self) -> crate::model::ScalingConfiguration {
             crate::model::ScalingConfiguration {
                 min_capacity: self.min_capacity,
@@ -8234,7 +8673,7 @@ pub mod scaling_configuration {
     }
 }
 impl ScalingConfiguration {
-    /// Creates a new builder-style object to manufacture [`ScalingConfiguration`](crate::model::ScalingConfiguration)
+    /// Creates a new builder-style object to manufacture [`ScalingConfiguration`](crate::model::ScalingConfiguration).
     pub fn builder() -> crate::model::scaling_configuration::Builder {
         crate::model::scaling_configuration::Builder::default()
     }
@@ -8246,26 +8685,37 @@ impl ScalingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Parameter {
     /// <p>Specifies the name of the parameter.</p>
+    #[doc(hidden)]
     pub parameter_name: std::option::Option<std::string::String>,
     /// <p>Specifies the value of the parameter.</p>
+    #[doc(hidden)]
     pub parameter_value: std::option::Option<std::string::String>,
     /// <p>Provides a description of the parameter.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Indicates the source of the parameter value.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<std::string::String>,
     /// <p>Specifies the engine specific parameters type.</p>
+    #[doc(hidden)]
     pub apply_type: std::option::Option<std::string::String>,
     /// <p>Specifies the valid data type for the parameter.</p>
+    #[doc(hidden)]
     pub data_type: std::option::Option<std::string::String>,
     /// <p>Specifies the valid range of values for the parameter.</p>
+    #[doc(hidden)]
     pub allowed_values: std::option::Option<std::string::String>,
     /// <p>Indicates whether (<code>true</code>) or not (<code>false</code>) the parameter can be modified. Some parameters have security or operational implications that prevent them from being changed.</p>
+    #[doc(hidden)]
     pub is_modifiable: bool,
     /// <p>The earliest engine version to which the parameter can apply.</p>
+    #[doc(hidden)]
     pub minimum_engine_version: std::option::Option<std::string::String>,
     /// <p>Indicates when to apply parameter updates.</p>
+    #[doc(hidden)]
     pub apply_method: std::option::Option<crate::model::ApplyMethod>,
     /// <p>The valid DB engine modes.</p>
+    #[doc(hidden)]
     pub supported_engine_modes: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Parameter {
@@ -8331,11 +8781,10 @@ impl std::fmt::Debug for Parameter {
         formatter.finish()
     }
 }
-/// See [`Parameter`](crate::model::Parameter)
+/// See [`Parameter`](crate::model::Parameter).
 pub mod parameter {
 
-    /// A builder for [`Parameter`](crate::model::Parameter)
-    #[non_exhaustive]
+    /// A builder for [`Parameter`](crate::model::Parameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_name: std::option::Option<std::string::String>,
@@ -8485,7 +8934,7 @@ pub mod parameter {
             self.supported_engine_modes = input;
             self
         }
-        /// Consumes the builder and constructs a [`Parameter`](crate::model::Parameter)
+        /// Consumes the builder and constructs a [`Parameter`](crate::model::Parameter).
         pub fn build(self) -> crate::model::Parameter {
             crate::model::Parameter {
                 parameter_name: self.parameter_name,
@@ -8504,7 +8953,7 @@ pub mod parameter {
     }
 }
 impl Parameter {
-    /// Creates a new builder-style object to manufacture [`Parameter`](crate::model::Parameter)
+    /// Creates a new builder-style object to manufacture [`Parameter`](crate::model::Parameter).
     pub fn builder() -> crate::model::parameter::Builder {
         crate::model::parameter::Builder::default()
     }
@@ -8570,27 +9019,37 @@ impl AsRef<str> for ApplyMethod {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventSubscription {
     /// <p>The Amazon Web Services customer account associated with the RDS event notification subscription.</p>
+    #[doc(hidden)]
     pub customer_aws_id: std::option::Option<std::string::String>,
     /// <p>The RDS event notification subscription Id.</p>
+    #[doc(hidden)]
     pub cust_subscription_id: std::option::Option<std::string::String>,
     /// <p>The topic ARN of the RDS event notification subscription.</p>
+    #[doc(hidden)]
     pub sns_topic_arn: std::option::Option<std::string::String>,
     /// <p>The status of the RDS event notification subscription.</p>
     /// <p>Constraints:</p>
     /// <p>Can be one of the following: creating | modifying | deleting | active | no-permission | topic-not-exist</p>
     /// <p>The status "no-permission" indicates that RDS no longer has permission to post to the SNS topic. The status "topic-not-exist" indicates that the topic was deleted after the subscription was created.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The time the RDS event notification subscription was created.</p>
+    #[doc(hidden)]
     pub subscription_creation_time: std::option::Option<std::string::String>,
     /// <p>The source type for the RDS event notification subscription.</p>
+    #[doc(hidden)]
     pub source_type: std::option::Option<std::string::String>,
     /// <p>A list of source IDs for the RDS event notification subscription.</p>
+    #[doc(hidden)]
     pub source_ids_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of event categories for the RDS event notification subscription.</p>
+    #[doc(hidden)]
     pub event_categories_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A Boolean value indicating if the subscription is enabled. True indicates the subscription is enabled.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The Amazon Resource Name (ARN) for the event subscription.</p>
+    #[doc(hidden)]
     pub event_subscription_arn: std::option::Option<std::string::String>,
 }
 impl EventSubscription {
@@ -8657,11 +9116,10 @@ impl std::fmt::Debug for EventSubscription {
         formatter.finish()
     }
 }
-/// See [`EventSubscription`](crate::model::EventSubscription)
+/// See [`EventSubscription`](crate::model::EventSubscription).
 pub mod event_subscription {
 
-    /// A builder for [`EventSubscription`](crate::model::EventSubscription)
-    #[non_exhaustive]
+    /// A builder for [`EventSubscription`](crate::model::EventSubscription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) customer_aws_id: std::option::Option<std::string::String>,
@@ -8815,7 +9273,7 @@ pub mod event_subscription {
             self.event_subscription_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventSubscription`](crate::model::EventSubscription)
+        /// Consumes the builder and constructs a [`EventSubscription`](crate::model::EventSubscription).
         pub fn build(self) -> crate::model::EventSubscription {
             crate::model::EventSubscription {
                 customer_aws_id: self.customer_aws_id,
@@ -8833,7 +9291,7 @@ pub mod event_subscription {
     }
 }
 impl EventSubscription {
-    /// Creates a new builder-style object to manufacture [`EventSubscription`](crate::model::EventSubscription)
+    /// Creates a new builder-style object to manufacture [`EventSubscription`](crate::model::EventSubscription).
     pub fn builder() -> crate::model::event_subscription::Builder {
         crate::model::event_subscription::Builder::default()
     }
@@ -8844,27 +9302,38 @@ impl EventSubscription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GlobalCluster {
     /// <p>Contains a user-supplied global database cluster identifier. This identifier is the unique key that identifies a global database cluster.</p>
+    #[doc(hidden)]
     pub global_cluster_identifier: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region-unique, immutable identifier for the global database cluster. This identifier is found in Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS key for the DB cluster is accessed.</p>
+    #[doc(hidden)]
     pub global_cluster_resource_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the global database cluster.</p>
+    #[doc(hidden)]
     pub global_cluster_arn: std::option::Option<std::string::String>,
     /// <p>Specifies the current state of this global database cluster.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The Aurora database engine used by the global database cluster.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>Indicates the database engine version.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The default database name within the new global database cluster.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>The storage encryption setting for the global database cluster.</p>
+    #[doc(hidden)]
     pub storage_encrypted: std::option::Option<bool>,
     /// <p>The deletion protection setting for the new global database cluster.</p>
+    #[doc(hidden)]
     pub deletion_protection: std::option::Option<bool>,
     /// <p>The list of cluster IDs for secondary clusters within the global database cluster. Currently limited to 1 item.</p>
+    #[doc(hidden)]
     pub global_cluster_members:
         std::option::Option<std::vec::Vec<crate::model::GlobalClusterMember>>,
     /// <p>A data object containing all properties for the current state of an in-process or pending failover process for this Aurora global database. This object is empty unless the <code>FailoverGlobalCluster</code> API operation has been called on this Aurora global database (<code>GlobalCluster</code>).</p>
+    #[doc(hidden)]
     pub failover_state: std::option::Option<crate::model::FailoverState>,
 }
 impl GlobalCluster {
@@ -8935,11 +9404,10 @@ impl std::fmt::Debug for GlobalCluster {
         formatter.finish()
     }
 }
-/// See [`GlobalCluster`](crate::model::GlobalCluster)
+/// See [`GlobalCluster`](crate::model::GlobalCluster).
 pub mod global_cluster {
 
-    /// A builder for [`GlobalCluster`](crate::model::GlobalCluster)
-    #[non_exhaustive]
+    /// A builder for [`GlobalCluster`](crate::model::GlobalCluster).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_cluster_identifier: std::option::Option<std::string::String>,
@@ -9093,7 +9561,7 @@ pub mod global_cluster {
             self.failover_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`GlobalCluster`](crate::model::GlobalCluster)
+        /// Consumes the builder and constructs a [`GlobalCluster`](crate::model::GlobalCluster).
         pub fn build(self) -> crate::model::GlobalCluster {
             crate::model::GlobalCluster {
                 global_cluster_identifier: self.global_cluster_identifier,
@@ -9112,7 +9580,7 @@ pub mod global_cluster {
     }
 }
 impl GlobalCluster {
-    /// Creates a new builder-style object to manufacture [`GlobalCluster`](crate::model::GlobalCluster)
+    /// Creates a new builder-style object to manufacture [`GlobalCluster`](crate::model::GlobalCluster).
     pub fn builder() -> crate::model::global_cluster::Builder {
         crate::model::global_cluster::Builder::default()
     }
@@ -9128,10 +9596,13 @@ pub struct FailoverState {
     /// <li> <p>failing-over  This status covers the range of Aurora internal operations that take place during the failover process, such as demoting the primary Aurora DB cluster, promoting the secondary Aurora DB, and synchronizing replicas.</p> </li>
     /// <li> <p>cancelling  The request to fail over the Aurora global database (<code>GlobalCluster</code>) was cancelled and the primary Aurora DB cluster and the selected secondary Aurora DB cluster are returning to their previous states.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::FailoverStatus>,
     /// <p>The Amazon Resource Name (ARN) of the Aurora DB cluster that is currently being demoted, and which is associated with this state.</p>
+    #[doc(hidden)]
     pub from_db_cluster_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Aurora DB cluster that is currently being promoted, and which is associated with this state.</p>
+    #[doc(hidden)]
     pub to_db_cluster_arn: std::option::Option<std::string::String>,
 }
 impl FailoverState {
@@ -9162,11 +9633,10 @@ impl std::fmt::Debug for FailoverState {
         formatter.finish()
     }
 }
-/// See [`FailoverState`](crate::model::FailoverState)
+/// See [`FailoverState`](crate::model::FailoverState).
 pub mod failover_state {
 
-    /// A builder for [`FailoverState`](crate::model::FailoverState)
-    #[non_exhaustive]
+    /// A builder for [`FailoverState`](crate::model::FailoverState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::FailoverStatus>,
@@ -9223,7 +9693,7 @@ pub mod failover_state {
             self.to_db_cluster_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailoverState`](crate::model::FailoverState)
+        /// Consumes the builder and constructs a [`FailoverState`](crate::model::FailoverState).
         pub fn build(self) -> crate::model::FailoverState {
             crate::model::FailoverState {
                 status: self.status,
@@ -9234,7 +9704,7 @@ pub mod failover_state {
     }
 }
 impl FailoverState {
-    /// Creates a new builder-style object to manufacture [`FailoverState`](crate::model::FailoverState)
+    /// Creates a new builder-style object to manufacture [`FailoverState`](crate::model::FailoverState).
     pub fn builder() -> crate::model::failover_state::Builder {
         crate::model::failover_state::Builder::default()
     }
@@ -9304,12 +9774,16 @@ impl AsRef<str> for FailoverStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GlobalClusterMember {
     /// <p>The Amazon Resource Name (ARN) for each Aurora cluster.</p>
+    #[doc(hidden)]
     pub db_cluster_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for each read-only secondary cluster associated with the Aurora global database.</p>
+    #[doc(hidden)]
     pub readers: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies whether the Aurora cluster is the primary cluster (that is, has read-write capability) for the Aurora global database with which it is associated.</p>
+    #[doc(hidden)]
     pub is_writer: bool,
     /// <p>Specifies whether a secondary cluster in an Aurora global database has write forwarding enabled, not enabled, or is in the process of enabling it.</p>
+    #[doc(hidden)]
     pub global_write_forwarding_status: std::option::Option<crate::model::WriteForwardingStatus>,
 }
 impl GlobalClusterMember {
@@ -9345,11 +9819,10 @@ impl std::fmt::Debug for GlobalClusterMember {
         formatter.finish()
     }
 }
-/// See [`GlobalClusterMember`](crate::model::GlobalClusterMember)
+/// See [`GlobalClusterMember`](crate::model::GlobalClusterMember).
 pub mod global_cluster_member {
 
-    /// A builder for [`GlobalClusterMember`](crate::model::GlobalClusterMember)
-    #[non_exhaustive]
+    /// A builder for [`GlobalClusterMember`](crate::model::GlobalClusterMember).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_arn: std::option::Option<std::string::String>,
@@ -9417,7 +9890,7 @@ pub mod global_cluster_member {
             self.global_write_forwarding_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`GlobalClusterMember`](crate::model::GlobalClusterMember)
+        /// Consumes the builder and constructs a [`GlobalClusterMember`](crate::model::GlobalClusterMember).
         pub fn build(self) -> crate::model::GlobalClusterMember {
             crate::model::GlobalClusterMember {
                 db_cluster_arn: self.db_cluster_arn,
@@ -9429,7 +9902,7 @@ pub mod global_cluster_member {
     }
 }
 impl GlobalClusterMember {
-    /// Creates a new builder-style object to manufacture [`GlobalClusterMember`](crate::model::GlobalClusterMember)
+    /// Creates a new builder-style object to manufacture [`GlobalClusterMember`](crate::model::GlobalClusterMember).
     pub fn builder() -> crate::model::global_cluster_member::Builder {
         crate::model::global_cluster_member::Builder::default()
     }
@@ -9441,20 +9914,28 @@ impl GlobalClusterMember {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbProxyTarget {
     /// <p>The Amazon Resource Name (ARN) for the RDS DB instance or Aurora DB cluster.</p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
     /// <p>The writer endpoint for the RDS DB instance or Aurora DB cluster.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The DB cluster identifier when the target represents an Aurora DB cluster. This field is blank when the target represents an RDS DB instance.</p>
+    #[doc(hidden)]
     pub tracked_cluster_id: std::option::Option<std::string::String>,
     /// <p>The identifier representing the target. It can be the instance identifier for an RDS DB instance, or the cluster identifier for an Aurora DB cluster.</p>
+    #[doc(hidden)]
     pub rds_resource_id: std::option::Option<std::string::String>,
     /// <p>The port that the RDS Proxy uses to connect to the target RDS DB instance or Aurora DB cluster.</p>
+    #[doc(hidden)]
     pub port: i32,
     /// <p>Specifies the kind of database, such as an RDS DB instance or an Aurora DB cluster, that the target represents.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TargetType>,
     /// <p>A value that indicates whether the target of the proxy can be used for read/write or read-only operations.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<crate::model::TargetRole>,
     /// <p>Information about the connection health of the RDS Proxy target.</p>
+    #[doc(hidden)]
     pub target_health: std::option::Option<crate::model::TargetHealth>,
 }
 impl DbProxyTarget {
@@ -9505,11 +9986,10 @@ impl std::fmt::Debug for DbProxyTarget {
         formatter.finish()
     }
 }
-/// See [`DbProxyTarget`](crate::model::DbProxyTarget)
+/// See [`DbProxyTarget`](crate::model::DbProxyTarget).
 pub mod db_proxy_target {
 
-    /// A builder for [`DbProxyTarget`](crate::model::DbProxyTarget)
-    #[non_exhaustive]
+    /// A builder for [`DbProxyTarget`](crate::model::DbProxyTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_arn: std::option::Option<std::string::String>,
@@ -9611,7 +10091,7 @@ pub mod db_proxy_target {
             self.target_health = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbProxyTarget`](crate::model::DbProxyTarget)
+        /// Consumes the builder and constructs a [`DbProxyTarget`](crate::model::DbProxyTarget).
         pub fn build(self) -> crate::model::DbProxyTarget {
             crate::model::DbProxyTarget {
                 target_arn: self.target_arn,
@@ -9627,7 +10107,7 @@ pub mod db_proxy_target {
     }
 }
 impl DbProxyTarget {
-    /// Creates a new builder-style object to manufacture [`DbProxyTarget`](crate::model::DbProxyTarget)
+    /// Creates a new builder-style object to manufacture [`DbProxyTarget`](crate::model::DbProxyTarget).
     pub fn builder() -> crate::model::db_proxy_target::Builder {
         crate::model::db_proxy_target::Builder::default()
     }
@@ -9639,10 +10119,13 @@ impl DbProxyTarget {
 pub struct TargetHealth {
     /// <p>The current state of the connection health lifecycle for the RDS Proxy target. The following is a typical lifecycle example for the states of an RDS Proxy target:</p>
     /// <p> <code>registering</code> &gt; <code>unavailable</code> &gt; <code>available</code> &gt; <code>unavailable</code> &gt; <code>available</code> </p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::TargetState>,
     /// <p>The reason for the current health <code>State</code> of the RDS Proxy target.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<crate::model::TargetHealthReason>,
     /// <p>A description of the health of the RDS Proxy target. If the <code>State</code> is <code>AVAILABLE</code>, a description is not included.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl TargetHealth {
@@ -9669,11 +10152,10 @@ impl std::fmt::Debug for TargetHealth {
         formatter.finish()
     }
 }
-/// See [`TargetHealth`](crate::model::TargetHealth)
+/// See [`TargetHealth`](crate::model::TargetHealth).
 pub mod target_health {
 
-    /// A builder for [`TargetHealth`](crate::model::TargetHealth)
-    #[non_exhaustive]
+    /// A builder for [`TargetHealth`](crate::model::TargetHealth).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::TargetState>,
@@ -9716,7 +10198,7 @@ pub mod target_health {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetHealth`](crate::model::TargetHealth)
+        /// Consumes the builder and constructs a [`TargetHealth`](crate::model::TargetHealth).
         pub fn build(self) -> crate::model::TargetHealth {
             crate::model::TargetHealth {
                 state: self.state,
@@ -9727,7 +10209,7 @@ pub mod target_health {
     }
 }
 impl TargetHealth {
-    /// Creates a new builder-style object to manufacture [`TargetHealth`](crate::model::TargetHealth)
+    /// Creates a new builder-style object to manufacture [`TargetHealth`](crate::model::TargetHealth).
     pub fn builder() -> crate::model::target_health::Builder {
         crate::model::target_health::Builder::default()
     }
@@ -9988,38 +10470,54 @@ impl AsRef<str> for TargetType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservedDbInstance {
     /// <p>The unique identifier for the reservation.</p>
+    #[doc(hidden)]
     pub reserved_db_instance_id: std::option::Option<std::string::String>,
     /// <p>The offering identifier.</p>
+    #[doc(hidden)]
     pub reserved_db_instances_offering_id: std::option::Option<std::string::String>,
     /// <p>The DB instance class for the reserved DB instance.</p>
+    #[doc(hidden)]
     pub db_instance_class: std::option::Option<std::string::String>,
     /// <p>The time the reservation started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The duration of the reservation in seconds.</p>
+    #[doc(hidden)]
     pub duration: i32,
     /// <p>The fixed price charged for this reserved DB instance.</p>
+    #[doc(hidden)]
     pub fixed_price: f64,
     /// <p>The hourly price charged for this reserved DB instance.</p>
+    #[doc(hidden)]
     pub usage_price: f64,
     /// <p>The currency code for the reserved DB instance.</p>
+    #[doc(hidden)]
     pub currency_code: std::option::Option<std::string::String>,
     /// <p>The number of reserved DB instances.</p>
+    #[doc(hidden)]
     pub db_instance_count: i32,
     /// <p>The description of the reserved DB instance.</p>
+    #[doc(hidden)]
     pub product_description: std::option::Option<std::string::String>,
     /// <p>The offering type of this reserved DB instance.</p>
+    #[doc(hidden)]
     pub offering_type: std::option::Option<std::string::String>,
     /// <p>Indicates if the reservation applies to Multi-AZ deployments.</p>
+    #[doc(hidden)]
     pub multi_az: bool,
     /// <p>The state of the reserved DB instance.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>The recurring price charged to run this reserved DB instance.</p>
+    #[doc(hidden)]
     pub recurring_charges: std::option::Option<std::vec::Vec<crate::model::RecurringCharge>>,
     /// <p>The Amazon Resource Name (ARN) for the reserved DB instance.</p>
+    #[doc(hidden)]
     pub reserved_db_instance_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the lease associated with the reserved DB instance.</p> <note>
     /// <p>Amazon Web Services Support might request the lease ID for an issue related to a reserved DB instance.</p>
     /// </note>
+    #[doc(hidden)]
     pub lease_id: std::option::Option<std::string::String>,
 }
 impl ReservedDbInstance {
@@ -10115,11 +10613,10 @@ impl std::fmt::Debug for ReservedDbInstance {
         formatter.finish()
     }
 }
-/// See [`ReservedDbInstance`](crate::model::ReservedDbInstance)
+/// See [`ReservedDbInstance`](crate::model::ReservedDbInstance).
 pub mod reserved_db_instance {
 
-    /// A builder for [`ReservedDbInstance`](crate::model::ReservedDbInstance)
-    #[non_exhaustive]
+    /// A builder for [`ReservedDbInstance`](crate::model::ReservedDbInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reserved_db_instance_id: std::option::Option<std::string::String>,
@@ -10341,7 +10838,7 @@ pub mod reserved_db_instance {
             self.lease_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservedDbInstance`](crate::model::ReservedDbInstance)
+        /// Consumes the builder and constructs a [`ReservedDbInstance`](crate::model::ReservedDbInstance).
         pub fn build(self) -> crate::model::ReservedDbInstance {
             crate::model::ReservedDbInstance {
                 reserved_db_instance_id: self.reserved_db_instance_id,
@@ -10365,7 +10862,7 @@ pub mod reserved_db_instance {
     }
 }
 impl ReservedDbInstance {
-    /// Creates a new builder-style object to manufacture [`ReservedDbInstance`](crate::model::ReservedDbInstance)
+    /// Creates a new builder-style object to manufacture [`ReservedDbInstance`](crate::model::ReservedDbInstance).
     pub fn builder() -> crate::model::reserved_db_instance::Builder {
         crate::model::reserved_db_instance::Builder::default()
     }
@@ -10376,8 +10873,10 @@ impl ReservedDbInstance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecurringCharge {
     /// <p>The amount of the recurring charge.</p>
+    #[doc(hidden)]
     pub recurring_charge_amount: f64,
     /// <p>The frequency of the recurring charge.</p>
+    #[doc(hidden)]
     pub recurring_charge_frequency: std::option::Option<std::string::String>,
 }
 impl RecurringCharge {
@@ -10401,11 +10900,10 @@ impl std::fmt::Debug for RecurringCharge {
         formatter.finish()
     }
 }
-/// See [`RecurringCharge`](crate::model::RecurringCharge)
+/// See [`RecurringCharge`](crate::model::RecurringCharge).
 pub mod recurring_charge {
 
-    /// A builder for [`RecurringCharge`](crate::model::RecurringCharge)
-    #[non_exhaustive]
+    /// A builder for [`RecurringCharge`](crate::model::RecurringCharge).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recurring_charge_amount: std::option::Option<f64>,
@@ -10435,7 +10933,7 @@ pub mod recurring_charge {
             self.recurring_charge_frequency = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecurringCharge`](crate::model::RecurringCharge)
+        /// Consumes the builder and constructs a [`RecurringCharge`](crate::model::RecurringCharge).
         pub fn build(self) -> crate::model::RecurringCharge {
             crate::model::RecurringCharge {
                 recurring_charge_amount: self.recurring_charge_amount.unwrap_or_default(),
@@ -10445,7 +10943,7 @@ pub mod recurring_charge {
     }
 }
 impl RecurringCharge {
-    /// Creates a new builder-style object to manufacture [`RecurringCharge`](crate::model::RecurringCharge)
+    /// Creates a new builder-style object to manufacture [`RecurringCharge`](crate::model::RecurringCharge).
     pub fn builder() -> crate::model::recurring_charge::Builder {
         crate::model::recurring_charge::Builder::default()
     }
@@ -10456,20 +10954,28 @@ impl RecurringCharge {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OptionGroup {
     /// <p>Specifies the name of the option group.</p>
+    #[doc(hidden)]
     pub option_group_name: std::option::Option<std::string::String>,
     /// <p>Provides a description of the option group.</p>
+    #[doc(hidden)]
     pub option_group_description: std::option::Option<std::string::String>,
     /// <p>Indicates the name of the engine that this option group can be applied to.</p>
+    #[doc(hidden)]
     pub engine_name: std::option::Option<std::string::String>,
     /// <p>Indicates the major engine version associated with this option group.</p>
+    #[doc(hidden)]
     pub major_engine_version: std::option::Option<std::string::String>,
     /// <p>Indicates what options are available in the option group.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<std::vec::Vec<crate::model::Option>>,
     /// <p>Indicates whether this option group can be applied to both VPC and non-VPC instances. The value <code>true</code> indicates the option group can be applied to both VPC and non-VPC instances.</p>
+    #[doc(hidden)]
     pub allows_vpc_and_non_vpc_instance_memberships: bool,
     /// <p>If <b>AllowsVpcAndNonVpcInstanceMemberships</b> is <code>false</code>, this field is blank. If <b>AllowsVpcAndNonVpcInstanceMemberships</b> is <code>true</code> and this field is blank, then this option group can be applied to both VPC and non-VPC instances. If this field contains a value, then this option group can only be applied to instances that are in the VPC indicated by this field.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the option group.</p>
+    #[doc(hidden)]
     pub option_group_arn: std::option::Option<std::string::String>,
 }
 impl OptionGroup {
@@ -10523,11 +11029,10 @@ impl std::fmt::Debug for OptionGroup {
         formatter.finish()
     }
 }
-/// See [`OptionGroup`](crate::model::OptionGroup)
+/// See [`OptionGroup`](crate::model::OptionGroup).
 pub mod option_group {
 
-    /// A builder for [`OptionGroup`](crate::model::OptionGroup)
-    #[non_exhaustive]
+    /// A builder for [`OptionGroup`](crate::model::OptionGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) option_group_name: std::option::Option<std::string::String>,
@@ -10644,7 +11149,7 @@ pub mod option_group {
             self.option_group_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`OptionGroup`](crate::model::OptionGroup)
+        /// Consumes the builder and constructs a [`OptionGroup`](crate::model::OptionGroup).
         pub fn build(self) -> crate::model::OptionGroup {
             crate::model::OptionGroup {
                 option_group_name: self.option_group_name,
@@ -10662,7 +11167,7 @@ pub mod option_group {
     }
 }
 impl OptionGroup {
-    /// Creates a new builder-style object to manufacture [`OptionGroup`](crate::model::OptionGroup)
+    /// Creates a new builder-style object to manufacture [`OptionGroup`](crate::model::OptionGroup).
     pub fn builder() -> crate::model::option_group::Builder {
         crate::model::option_group::Builder::default()
     }
@@ -10673,23 +11178,32 @@ impl OptionGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Option {
     /// <p>The name of the option.</p>
+    #[doc(hidden)]
     pub option_name: std::option::Option<std::string::String>,
     /// <p>The description of the option.</p>
+    #[doc(hidden)]
     pub option_description: std::option::Option<std::string::String>,
     /// <p>Indicate if this option is persistent.</p>
+    #[doc(hidden)]
     pub persistent: bool,
     /// <p>Indicate if this option is permanent.</p>
+    #[doc(hidden)]
     pub permanent: bool,
     /// <p>If required, the port configured for this option to use.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>The version of the option.</p>
+    #[doc(hidden)]
     pub option_version: std::option::Option<std::string::String>,
     /// <p>The option settings for this option.</p>
+    #[doc(hidden)]
     pub option_settings: std::option::Option<std::vec::Vec<crate::model::OptionSetting>>,
     /// <p>If the option requires access to a port, then this DB security group allows access to the port.</p>
+    #[doc(hidden)]
     pub db_security_group_memberships:
         std::option::Option<std::vec::Vec<crate::model::DbSecurityGroupMembership>>,
     /// <p>If the option requires access to a port, then this VPC security group allows access to the port.</p>
+    #[doc(hidden)]
     pub vpc_security_group_memberships:
         std::option::Option<std::vec::Vec<crate::model::VpcSecurityGroupMembership>>,
 }
@@ -10756,11 +11270,10 @@ impl std::fmt::Debug for Option {
         formatter.finish()
     }
 }
-/// See [`Option`](crate::model::Option)
+/// See [`Option`](crate::model::Option).
 pub mod option {
 
-    /// A builder for [`Option`](crate::model::Option)
-    #[non_exhaustive]
+    /// A builder for [`Option`](crate::model::Option).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) option_name: std::option::Option<std::string::String>,
@@ -10905,7 +11418,7 @@ pub mod option {
             self.vpc_security_group_memberships = input;
             self
         }
-        /// Consumes the builder and constructs a [`Option`](crate::model::Option)
+        /// Consumes the builder and constructs a [`Option`](crate::model::Option).
         pub fn build(self) -> crate::model::Option {
             crate::model::Option {
                 option_name: self.option_name,
@@ -10922,7 +11435,7 @@ pub mod option {
     }
 }
 impl Option {
-    /// Creates a new builder-style object to manufacture [`Option`](crate::model::Option)
+    /// Creates a new builder-style object to manufacture [`Option`](crate::model::Option).
     pub fn builder() -> crate::model::option::Builder {
         crate::model::option::Builder::default()
     }
@@ -10933,22 +11446,31 @@ impl Option {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OptionSetting {
     /// <p>The name of the option that has settings that you can set.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The current value of the option setting.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The default value of the option setting.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
     /// <p>The description of the option setting.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The DB engine specific parameter type.</p>
+    #[doc(hidden)]
     pub apply_type: std::option::Option<std::string::String>,
     /// <p>The data type of the option setting.</p>
+    #[doc(hidden)]
     pub data_type: std::option::Option<std::string::String>,
     /// <p>The allowed values of the option setting.</p>
+    #[doc(hidden)]
     pub allowed_values: std::option::Option<std::string::String>,
     /// <p>A Boolean value that, when true, indicates the option setting can be modified from the default.</p>
+    #[doc(hidden)]
     pub is_modifiable: bool,
     /// <p>Indicates if the option setting is part of a collection.</p>
+    #[doc(hidden)]
     pub is_collection: bool,
 }
 impl OptionSetting {
@@ -11004,11 +11526,10 @@ impl std::fmt::Debug for OptionSetting {
         formatter.finish()
     }
 }
-/// See [`OptionSetting`](crate::model::OptionSetting)
+/// See [`OptionSetting`](crate::model::OptionSetting).
 pub mod option_setting {
 
-    /// A builder for [`OptionSetting`](crate::model::OptionSetting)
-    #[non_exhaustive]
+    /// A builder for [`OptionSetting`](crate::model::OptionSetting).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -11118,7 +11639,7 @@ pub mod option_setting {
             self.is_collection = input;
             self
         }
-        /// Consumes the builder and constructs a [`OptionSetting`](crate::model::OptionSetting)
+        /// Consumes the builder and constructs a [`OptionSetting`](crate::model::OptionSetting).
         pub fn build(self) -> crate::model::OptionSetting {
             crate::model::OptionSetting {
                 name: self.name,
@@ -11135,7 +11656,7 @@ pub mod option_setting {
     }
 }
 impl OptionSetting {
-    /// Creates a new builder-style object to manufacture [`OptionSetting`](crate::model::OptionSetting)
+    /// Creates a new builder-style object to manufacture [`OptionSetting`](crate::model::OptionSetting).
     pub fn builder() -> crate::model::option_setting::Builder {
         crate::model::option_setting::Builder::default()
     }
@@ -11146,16 +11667,22 @@ impl OptionSetting {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OptionConfiguration {
     /// <p>The configuration of options to include in a group.</p>
+    #[doc(hidden)]
     pub option_name: std::option::Option<std::string::String>,
     /// <p>The optional port for the option.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>The version for the option.</p>
+    #[doc(hidden)]
     pub option_version: std::option::Option<std::string::String>,
     /// <p>A list of DBSecurityGroupMembership name strings used for this option.</p>
+    #[doc(hidden)]
     pub db_security_group_memberships: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of VpcSecurityGroupMembership name strings used for this option.</p>
+    #[doc(hidden)]
     pub vpc_security_group_memberships: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The option settings to include in an option group.</p>
+    #[doc(hidden)]
     pub option_settings: std::option::Option<std::vec::Vec<crate::model::OptionSetting>>,
 }
 impl OptionConfiguration {
@@ -11202,11 +11729,10 @@ impl std::fmt::Debug for OptionConfiguration {
         formatter.finish()
     }
 }
-/// See [`OptionConfiguration`](crate::model::OptionConfiguration)
+/// See [`OptionConfiguration`](crate::model::OptionConfiguration).
 pub mod option_configuration {
 
-    /// A builder for [`OptionConfiguration`](crate::model::OptionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`OptionConfiguration`](crate::model::OptionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) option_name: std::option::Option<std::string::String>,
@@ -11315,7 +11841,7 @@ pub mod option_configuration {
             self.option_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`OptionConfiguration`](crate::model::OptionConfiguration)
+        /// Consumes the builder and constructs a [`OptionConfiguration`](crate::model::OptionConfiguration).
         pub fn build(self) -> crate::model::OptionConfiguration {
             crate::model::OptionConfiguration {
                 option_name: self.option_name,
@@ -11329,7 +11855,7 @@ pub mod option_configuration {
     }
 }
 impl OptionConfiguration {
-    /// Creates a new builder-style object to manufacture [`OptionConfiguration`](crate::model::OptionConfiguration)
+    /// Creates a new builder-style object to manufacture [`OptionConfiguration`](crate::model::OptionConfiguration).
     pub fn builder() -> crate::model::option_configuration::Builder {
         crate::model::option_configuration::Builder::default()
     }
@@ -11341,8 +11867,10 @@ impl OptionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbSnapshotAttributesResult {
     /// <p>The identifier of the manual DB snapshot that the attributes apply to.</p>
+    #[doc(hidden)]
     pub db_snapshot_identifier: std::option::Option<std::string::String>,
     /// <p>The list of attributes and values for the manual DB snapshot.</p>
+    #[doc(hidden)]
     pub db_snapshot_attributes:
         std::option::Option<std::vec::Vec<crate::model::DbSnapshotAttribute>>,
 }
@@ -11366,11 +11894,10 @@ impl std::fmt::Debug for DbSnapshotAttributesResult {
         formatter.finish()
     }
 }
-/// See [`DbSnapshotAttributesResult`](crate::model::DbSnapshotAttributesResult)
+/// See [`DbSnapshotAttributesResult`](crate::model::DbSnapshotAttributesResult).
 pub mod db_snapshot_attributes_result {
 
-    /// A builder for [`DbSnapshotAttributesResult`](crate::model::DbSnapshotAttributesResult)
-    #[non_exhaustive]
+    /// A builder for [`DbSnapshotAttributesResult`](crate::model::DbSnapshotAttributesResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_snapshot_identifier: std::option::Option<std::string::String>,
@@ -11410,7 +11937,7 @@ pub mod db_snapshot_attributes_result {
             self.db_snapshot_attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbSnapshotAttributesResult`](crate::model::DbSnapshotAttributesResult)
+        /// Consumes the builder and constructs a [`DbSnapshotAttributesResult`](crate::model::DbSnapshotAttributesResult).
         pub fn build(self) -> crate::model::DbSnapshotAttributesResult {
             crate::model::DbSnapshotAttributesResult {
                 db_snapshot_identifier: self.db_snapshot_identifier,
@@ -11420,7 +11947,7 @@ pub mod db_snapshot_attributes_result {
     }
 }
 impl DbSnapshotAttributesResult {
-    /// Creates a new builder-style object to manufacture [`DbSnapshotAttributesResult`](crate::model::DbSnapshotAttributesResult)
+    /// Creates a new builder-style object to manufacture [`DbSnapshotAttributesResult`](crate::model::DbSnapshotAttributesResult).
     pub fn builder() -> crate::model::db_snapshot_attributes_result::Builder {
         crate::model::db_snapshot_attributes_result::Builder::default()
     }
@@ -11433,9 +11960,11 @@ impl DbSnapshotAttributesResult {
 pub struct DbSnapshotAttribute {
     /// <p>The name of the manual DB snapshot attribute.</p>
     /// <p>The attribute named <code>restore</code> refers to the list of Amazon Web Services accounts that have permission to copy or restore the manual DB cluster snapshot. For more information, see the <code>ModifyDBSnapshotAttribute</code> API action.</p>
+    #[doc(hidden)]
     pub attribute_name: std::option::Option<std::string::String>,
     /// <p>The value or values for the manual DB snapshot attribute.</p>
     /// <p>If the <code>AttributeName</code> field is set to <code>restore</code>, then this element returns a list of IDs of the Amazon Web Services accounts that are authorized to copy or restore the manual DB snapshot. If a value of <code>all</code> is in the list, then the manual DB snapshot is public and available for any Amazon Web Services account to copy or restore.</p>
+    #[doc(hidden)]
     pub attribute_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DbSnapshotAttribute {
@@ -11458,11 +11987,10 @@ impl std::fmt::Debug for DbSnapshotAttribute {
         formatter.finish()
     }
 }
-/// See [`DbSnapshotAttribute`](crate::model::DbSnapshotAttribute)
+/// See [`DbSnapshotAttribute`](crate::model::DbSnapshotAttribute).
 pub mod db_snapshot_attribute {
 
-    /// A builder for [`DbSnapshotAttribute`](crate::model::DbSnapshotAttribute)
-    #[non_exhaustive]
+    /// A builder for [`DbSnapshotAttribute`](crate::model::DbSnapshotAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_name: std::option::Option<std::string::String>,
@@ -11505,7 +12033,7 @@ pub mod db_snapshot_attribute {
             self.attribute_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbSnapshotAttribute`](crate::model::DbSnapshotAttribute)
+        /// Consumes the builder and constructs a [`DbSnapshotAttribute`](crate::model::DbSnapshotAttribute).
         pub fn build(self) -> crate::model::DbSnapshotAttribute {
             crate::model::DbSnapshotAttribute {
                 attribute_name: self.attribute_name,
@@ -11515,7 +12043,7 @@ pub mod db_snapshot_attribute {
     }
 }
 impl DbSnapshotAttribute {
-    /// Creates a new builder-style object to manufacture [`DbSnapshotAttribute`](crate::model::DbSnapshotAttribute)
+    /// Creates a new builder-style object to manufacture [`DbSnapshotAttribute`](crate::model::DbSnapshotAttribute).
     pub fn builder() -> crate::model::db_snapshot_attribute::Builder {
         crate::model::db_snapshot_attribute::Builder::default()
     }
@@ -11527,67 +12055,98 @@ impl DbSnapshotAttribute {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbSnapshot {
     /// <p>Specifies the identifier for the DB snapshot.</p>
+    #[doc(hidden)]
     pub db_snapshot_identifier: std::option::Option<std::string::String>,
     /// <p>Specifies the DB instance identifier of the DB instance this DB snapshot was created from.</p>
+    #[doc(hidden)]
     pub db_instance_identifier: std::option::Option<std::string::String>,
     /// <p>Specifies when the snapshot was taken in Coordinated Universal Time (UTC). Changes for the copy when the snapshot is copied.</p>
+    #[doc(hidden)]
     pub snapshot_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the name of the database engine.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>Specifies the allocated storage size in gibibytes (GiB).</p>
+    #[doc(hidden)]
     pub allocated_storage: i32,
     /// <p>Specifies the status of this DB snapshot.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>Specifies the port that the database engine was listening on at the time of the snapshot.</p>
+    #[doc(hidden)]
     pub port: i32,
     /// <p>Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>Provides the VPC ID associated with the DB snapshot.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>Specifies the time in Coordinated Universal Time (UTC) when the DB instance, from which the snapshot was taken, was created.</p>
+    #[doc(hidden)]
     pub instance_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Provides the master username for the DB snapshot.</p>
+    #[doc(hidden)]
     pub master_username: std::option::Option<std::string::String>,
     /// <p>Specifies the version of the database engine.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>License model information for the restored DB instance.</p>
+    #[doc(hidden)]
     pub license_model: std::option::Option<std::string::String>,
     /// <p>Provides the type of the DB snapshot.</p>
+    #[doc(hidden)]
     pub snapshot_type: std::option::Option<std::string::String>,
     /// <p>Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
     /// <p>Provides the option group name for the DB snapshot.</p>
+    #[doc(hidden)]
     pub option_group_name: std::option::Option<std::string::String>,
     /// <p>The percentage of the estimated data that has been transferred.</p>
+    #[doc(hidden)]
     pub percent_progress: i32,
     /// <p>The Amazon Web Services Region that the DB snapshot was created in or copied from.</p>
+    #[doc(hidden)]
     pub source_region: std::option::Option<std::string::String>,
     /// <p>The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has a value in the case of a cross-account or cross-Region copy.</p>
+    #[doc(hidden)]
     pub source_db_snapshot_identifier: std::option::Option<std::string::String>,
     /// <p>Specifies the storage type associated with DB snapshot.</p>
+    #[doc(hidden)]
     pub storage_type: std::option::Option<std::string::String>,
     /// <p>The ARN from the key store with which to associate the instance for TDE encryption.</p>
+    #[doc(hidden)]
     pub tde_credential_arn: std::option::Option<std::string::String>,
     /// <p>Specifies whether the DB snapshot is encrypted.</p>
+    #[doc(hidden)]
     pub encrypted: bool,
     /// <p>If <code>Encrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB snapshot.</p>
     /// <p>The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the DB snapshot.</p>
+    #[doc(hidden)]
     pub db_snapshot_arn: std::option::Option<std::string::String>,
     /// <p>The time zone of the DB snapshot. In most cases, the <code>Timezone</code> element is empty. <code>Timezone</code> content appears only for snapshots taken from Microsoft SQL Server DB instances that were created with a time zone specified.</p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
     /// <p>True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is enabled, and otherwise false.</p>
+    #[doc(hidden)]
     pub iam_database_authentication_enabled: bool,
     /// <p>The number of CPU cores and the number of threads per core for the DB instance class of the DB instance when the DB snapshot was created.</p>
+    #[doc(hidden)]
     pub processor_features: std::option::Option<std::vec::Vec<crate::model::ProcessorFeature>>,
     /// <p>The identifier for the source DB instance, which can't be changed and which is unique to an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub dbi_resource_id: std::option::Option<std::string::String>,
     /// <p>A list of tags. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Specifies the time of the CreateDBSnapshot operation in Coordinated Universal Time (UTC). Doesn't change when the snapshot is copied.</p>
+    #[doc(hidden)]
     pub original_snapshot_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies where manual snapshots are stored: Amazon Web Services Outposts or the Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub snapshot_target: std::option::Option<std::string::String>,
 }
 impl DbSnapshot {
@@ -11765,11 +12324,10 @@ impl std::fmt::Debug for DbSnapshot {
         formatter.finish()
     }
 }
-/// See [`DbSnapshot`](crate::model::DbSnapshot)
+/// See [`DbSnapshot`](crate::model::DbSnapshot).
 pub mod db_snapshot {
 
-    /// A builder for [`DbSnapshot`](crate::model::DbSnapshot)
-    #[non_exhaustive]
+    /// A builder for [`DbSnapshot`](crate::model::DbSnapshot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_snapshot_identifier: std::option::Option<std::string::String>,
@@ -12193,7 +12751,7 @@ pub mod db_snapshot {
             self.snapshot_target = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbSnapshot`](crate::model::DbSnapshot)
+        /// Consumes the builder and constructs a [`DbSnapshot`](crate::model::DbSnapshot).
         pub fn build(self) -> crate::model::DbSnapshot {
             crate::model::DbSnapshot {
                 db_snapshot_identifier: self.db_snapshot_identifier,
@@ -12234,7 +12792,7 @@ pub mod db_snapshot {
     }
 }
 impl DbSnapshot {
-    /// Creates a new builder-style object to manufacture [`DbSnapshot`](crate::model::DbSnapshot)
+    /// Creates a new builder-style object to manufacture [`DbSnapshot`](crate::model::DbSnapshot).
     pub fn builder() -> crate::model::db_snapshot::Builder {
         crate::model::db_snapshot::Builder::default()
     }
@@ -12246,20 +12804,28 @@ impl DbSnapshot {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbProxyTargetGroup {
     /// <p>The identifier for the RDS proxy associated with this target group.</p>
+    #[doc(hidden)]
     pub db_proxy_name: std::option::Option<std::string::String>,
     /// <p>The identifier for the target group. This name must be unique for all target groups owned by your Amazon Web Services account in the specified Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub target_group_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) representing the target group.</p>
+    #[doc(hidden)]
     pub target_group_arn: std::option::Option<std::string::String>,
     /// <p>Whether this target group is the first one used for connection requests by the associated proxy. Because each proxy is currently associated with a single target group, currently this setting is always <code>true</code>.</p>
+    #[doc(hidden)]
     pub is_default: bool,
     /// <p>The current status of this target group. A status of <code>available</code> means the target group is correctly associated with a database. Other values indicate that you must wait for the target group to be ready, or take some action to resolve an issue.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The settings that determine the size and behavior of the connection pool for the target group.</p>
+    #[doc(hidden)]
     pub connection_pool_config: std::option::Option<crate::model::ConnectionPoolConfigurationInfo>,
     /// <p>The date and time when the target group was first created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the target group was last updated.</p>
+    #[doc(hidden)]
     pub updated_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DbProxyTargetGroup {
@@ -12312,11 +12878,10 @@ impl std::fmt::Debug for DbProxyTargetGroup {
         formatter.finish()
     }
 }
-/// See [`DbProxyTargetGroup`](crate::model::DbProxyTargetGroup)
+/// See [`DbProxyTargetGroup`](crate::model::DbProxyTargetGroup).
 pub mod db_proxy_target_group {
 
-    /// A builder for [`DbProxyTargetGroup`](crate::model::DbProxyTargetGroup)
-    #[non_exhaustive]
+    /// A builder for [`DbProxyTargetGroup`](crate::model::DbProxyTargetGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_proxy_name: std::option::Option<std::string::String>,
@@ -12431,7 +12996,7 @@ pub mod db_proxy_target_group {
             self.updated_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbProxyTargetGroup`](crate::model::DbProxyTargetGroup)
+        /// Consumes the builder and constructs a [`DbProxyTargetGroup`](crate::model::DbProxyTargetGroup).
         pub fn build(self) -> crate::model::DbProxyTargetGroup {
             crate::model::DbProxyTargetGroup {
                 db_proxy_name: self.db_proxy_name,
@@ -12447,7 +13012,7 @@ pub mod db_proxy_target_group {
     }
 }
 impl DbProxyTargetGroup {
-    /// Creates a new builder-style object to manufacture [`DbProxyTargetGroup`](crate::model::DbProxyTargetGroup)
+    /// Creates a new builder-style object to manufacture [`DbProxyTargetGroup`](crate::model::DbProxyTargetGroup).
     pub fn builder() -> crate::model::db_proxy_target_group::Builder {
         crate::model::db_proxy_target_group::Builder::default()
     }
@@ -12458,14 +13023,19 @@ impl DbProxyTargetGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectionPoolConfigurationInfo {
     /// <p>The maximum size of the connection pool for each target in a target group. The value is expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by the target group.</p>
+    #[doc(hidden)]
     pub max_connections_percent: i32,
     /// <p>Controls how actively the proxy closes idle database connections in the connection pool. The value is expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by the target group. With a high value, the proxy leaves a high percentage of idle database connections open. A low value causes the proxy to close more idle connections and return them to the database.</p>
+    #[doc(hidden)]
     pub max_idle_connections_percent: i32,
     /// <p>The number of seconds for a proxy to wait for a connection to become available in the connection pool. Only applies when the proxy has opened its maximum number of connections and all connections are busy with client sessions.</p>
+    #[doc(hidden)]
     pub connection_borrow_timeout: i32,
     /// <p>Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection. Including an item in the list exempts that class of SQL operations from the pinning behavior. Currently, the only allowed value is <code>EXCLUDE_VARIABLE_SETS</code>.</p>
+    #[doc(hidden)]
     pub session_pinning_filters: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>One or more SQL statements for the proxy to run when opening each new database connection. Typically used with <code>SET</code> statements to make sure that each connection has identical settings such as time zone and character set. This setting is empty by default. For multiple statements, use semicolons as the separator. You can also include multiple variables in a single <code>SET</code> statement, such as <code>SET x=1, y=2</code>.</p>
+    #[doc(hidden)]
     pub init_query: std::option::Option<std::string::String>,
 }
 impl ConnectionPoolConfigurationInfo {
@@ -12504,11 +13074,10 @@ impl std::fmt::Debug for ConnectionPoolConfigurationInfo {
         formatter.finish()
     }
 }
-/// See [`ConnectionPoolConfigurationInfo`](crate::model::ConnectionPoolConfigurationInfo)
+/// See [`ConnectionPoolConfigurationInfo`](crate::model::ConnectionPoolConfigurationInfo).
 pub mod connection_pool_configuration_info {
 
-    /// A builder for [`ConnectionPoolConfigurationInfo`](crate::model::ConnectionPoolConfigurationInfo)
-    #[non_exhaustive]
+    /// A builder for [`ConnectionPoolConfigurationInfo`](crate::model::ConnectionPoolConfigurationInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_connections_percent: std::option::Option<i32>,
@@ -12577,7 +13146,7 @@ pub mod connection_pool_configuration_info {
             self.init_query = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectionPoolConfigurationInfo`](crate::model::ConnectionPoolConfigurationInfo)
+        /// Consumes the builder and constructs a [`ConnectionPoolConfigurationInfo`](crate::model::ConnectionPoolConfigurationInfo).
         pub fn build(self) -> crate::model::ConnectionPoolConfigurationInfo {
             crate::model::ConnectionPoolConfigurationInfo {
                 max_connections_percent: self.max_connections_percent.unwrap_or_default(),
@@ -12590,7 +13159,7 @@ pub mod connection_pool_configuration_info {
     }
 }
 impl ConnectionPoolConfigurationInfo {
-    /// Creates a new builder-style object to manufacture [`ConnectionPoolConfigurationInfo`](crate::model::ConnectionPoolConfigurationInfo)
+    /// Creates a new builder-style object to manufacture [`ConnectionPoolConfigurationInfo`](crate::model::ConnectionPoolConfigurationInfo).
     pub fn builder() -> crate::model::connection_pool_configuration_info::Builder {
         crate::model::connection_pool_configuration_info::Builder::default()
     }
@@ -12603,20 +13172,25 @@ pub struct ConnectionPoolConfiguration {
     /// <p>The maximum size of the connection pool for each target in a target group. The value is expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by the target group.</p>
     /// <p>Default: 100</p>
     /// <p>Constraints: between 1 and 100</p>
+    #[doc(hidden)]
     pub max_connections_percent: std::option::Option<i32>,
     /// <p>Controls how actively the proxy closes idle database connections in the connection pool. The value is expressed as a percentage of the <code>max_connections</code> setting for the RDS DB instance or Aurora DB cluster used by the target group. With a high value, the proxy leaves a high percentage of idle database connections open. A low value causes the proxy to close more idle connections and return them to the database.</p>
     /// <p>Default: 50</p>
     /// <p>Constraints: between 0 and <code>MaxConnectionsPercent</code> </p>
+    #[doc(hidden)]
     pub max_idle_connections_percent: std::option::Option<i32>,
     /// <p>The number of seconds for a proxy to wait for a connection to become available in the connection pool. Only applies when the proxy has opened its maximum number of connections and all connections are busy with client sessions.</p>
     /// <p>Default: 120</p>
     /// <p>Constraints: between 1 and 3600, or 0 representing unlimited</p>
+    #[doc(hidden)]
     pub connection_borrow_timeout: std::option::Option<i32>,
     /// <p>Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection. Including an item in the list exempts that class of SQL operations from the pinning behavior.</p>
     /// <p>Default: no session pinning filters</p>
+    #[doc(hidden)]
     pub session_pinning_filters: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>One or more SQL statements for the proxy to run when opening each new database connection. Typically used with <code>SET</code> statements to make sure that each connection has identical settings such as time zone and character set. For multiple statements, use semicolons as the separator. You can also include multiple variables in a single <code>SET</code> statement, such as <code>SET x=1, y=2</code>.</p>
     /// <p>Default: no initialization query</p>
+    #[doc(hidden)]
     pub init_query: std::option::Option<std::string::String>,
 }
 impl ConnectionPoolConfiguration {
@@ -12663,11 +13237,10 @@ impl std::fmt::Debug for ConnectionPoolConfiguration {
         formatter.finish()
     }
 }
-/// See [`ConnectionPoolConfiguration`](crate::model::ConnectionPoolConfiguration)
+/// See [`ConnectionPoolConfiguration`](crate::model::ConnectionPoolConfiguration).
 pub mod connection_pool_configuration {
 
-    /// A builder for [`ConnectionPoolConfiguration`](crate::model::ConnectionPoolConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ConnectionPoolConfiguration`](crate::model::ConnectionPoolConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_connections_percent: std::option::Option<i32>,
@@ -12752,7 +13325,7 @@ pub mod connection_pool_configuration {
             self.init_query = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectionPoolConfiguration`](crate::model::ConnectionPoolConfiguration)
+        /// Consumes the builder and constructs a [`ConnectionPoolConfiguration`](crate::model::ConnectionPoolConfiguration).
         pub fn build(self) -> crate::model::ConnectionPoolConfiguration {
             crate::model::ConnectionPoolConfiguration {
                 max_connections_percent: self.max_connections_percent,
@@ -12765,7 +13338,7 @@ pub mod connection_pool_configuration {
     }
 }
 impl ConnectionPoolConfiguration {
-    /// Creates a new builder-style object to manufacture [`ConnectionPoolConfiguration`](crate::model::ConnectionPoolConfiguration)
+    /// Creates a new builder-style object to manufacture [`ConnectionPoolConfiguration`](crate::model::ConnectionPoolConfiguration).
     pub fn builder() -> crate::model::connection_pool_configuration::Builder {
         crate::model::connection_pool_configuration::Builder::default()
     }
@@ -12777,26 +13350,37 @@ impl ConnectionPoolConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbProxyEndpoint {
     /// <p>The name for the DB proxy endpoint. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it can't end with a hyphen or contain two consecutive hyphens.</p>
+    #[doc(hidden)]
     pub db_proxy_endpoint_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the DB proxy endpoint.</p>
+    #[doc(hidden)]
     pub db_proxy_endpoint_arn: std::option::Option<std::string::String>,
     /// <p>The identifier for the DB proxy that is associated with this DB proxy endpoint.</p>
+    #[doc(hidden)]
     pub db_proxy_name: std::option::Option<std::string::String>,
     /// <p>The current status of this DB proxy endpoint. A status of <code>available</code> means the endpoint is ready to handle requests. Other values indicate that you must wait for the endpoint to be ready, or take some action to resolve an issue.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DbProxyEndpointStatus>,
     /// <p>Provides the VPC ID of the DB proxy endpoint.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>Provides a list of VPC security groups that the DB proxy endpoint belongs to.</p>
+    #[doc(hidden)]
     pub vpc_security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The EC2 subnet IDs for the DB proxy endpoint.</p>
+    #[doc(hidden)]
     pub vpc_subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The endpoint that you can use to connect to the DB proxy. You include the endpoint value in the connection string for a database client application.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The date and time when the DB proxy endpoint was first created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A value that indicates whether the DB proxy endpoint can be used for read/write or read-only operations.</p>
+    #[doc(hidden)]
     pub target_role: std::option::Option<crate::model::DbProxyEndpointTargetRole>,
     /// <p>A value that indicates whether this endpoint is the default endpoint for the associated DB proxy. Default DB proxy endpoints always have read/write capability. Other endpoints that you associate with the DB proxy can be either read/write or read-only.</p>
+    #[doc(hidden)]
     pub is_default: bool,
 }
 impl DbProxyEndpoint {
@@ -12862,11 +13446,10 @@ impl std::fmt::Debug for DbProxyEndpoint {
         formatter.finish()
     }
 }
-/// See [`DbProxyEndpoint`](crate::model::DbProxyEndpoint)
+/// See [`DbProxyEndpoint`](crate::model::DbProxyEndpoint).
 pub mod db_proxy_endpoint {
 
-    /// A builder for [`DbProxyEndpoint`](crate::model::DbProxyEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`DbProxyEndpoint`](crate::model::DbProxyEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_proxy_endpoint_name: std::option::Option<std::string::String>,
@@ -13028,7 +13611,7 @@ pub mod db_proxy_endpoint {
             self.is_default = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbProxyEndpoint`](crate::model::DbProxyEndpoint)
+        /// Consumes the builder and constructs a [`DbProxyEndpoint`](crate::model::DbProxyEndpoint).
         pub fn build(self) -> crate::model::DbProxyEndpoint {
             crate::model::DbProxyEndpoint {
                 db_proxy_endpoint_name: self.db_proxy_endpoint_name,
@@ -13047,7 +13630,7 @@ pub mod db_proxy_endpoint {
     }
 }
 impl DbProxyEndpoint {
-    /// Creates a new builder-style object to manufacture [`DbProxyEndpoint`](crate::model::DbProxyEndpoint)
+    /// Creates a new builder-style object to manufacture [`DbProxyEndpoint`](crate::model::DbProxyEndpoint).
     pub fn builder() -> crate::model::db_proxy_endpoint::Builder {
         crate::model::db_proxy_endpoint::Builder::default()
     }
@@ -13192,36 +13775,51 @@ impl AsRef<str> for DbProxyEndpointStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbProxy {
     /// <p>The identifier for the proxy. This name must be unique for all proxies owned by your Amazon Web Services account in the specified Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub db_proxy_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the proxy.</p>
+    #[doc(hidden)]
     pub db_proxy_arn: std::option::Option<std::string::String>,
     /// <p>The current status of this proxy. A status of <code>available</code> means the proxy is ready to handle requests. Other values indicate that you must wait for the proxy to be ready, or take some action to resolve an issue.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DbProxyStatus>,
-    /// <p>The engine family applies to MySQL and PostgreSQL for both RDS and Aurora.</p>
+    /// <p>The kinds of databases that the proxy can connect to. This value determines which database network protocol the proxy recognizes when it interprets network traffic to and from the database. <code>MYSQL</code> supports Aurora MySQL, RDS for MariaDB, and RDS for MySQL databases. <code>POSTGRESQL</code> supports Aurora PostgreSQL and RDS for PostgreSQL databases.</p>
+    #[doc(hidden)]
     pub engine_family: std::option::Option<std::string::String>,
     /// <p>Provides the VPC ID of the DB proxy.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>Provides a list of VPC security groups that the proxy belongs to.</p>
+    #[doc(hidden)]
     pub vpc_security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The EC2 subnet IDs for the proxy.</p>
+    #[doc(hidden)]
     pub vpc_subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>One or more data structures specifying the authorization mechanism to connect to the associated RDS DB instance or Aurora DB cluster.</p>
+    #[doc(hidden)]
     pub auth: std::option::Option<std::vec::Vec<crate::model::UserAuthConfigInfo>>,
     /// <p>The Amazon Resource Name (ARN) for the IAM role that the proxy uses to access Amazon Secrets Manager.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The endpoint that you can use to connect to the DB proxy. You include the endpoint value in the connection string for a database client application.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>Indicates whether Transport Layer Security (TLS) encryption is required for connections to the proxy.</p>
+    #[doc(hidden)]
     pub require_tls: bool,
     /// <p>The number of seconds a connection to the proxy can have no activity before the proxy drops the client connection. The proxy keeps the underlying database connection open and puts it back into the connection pool for reuse by later connection requests.</p>
     /// <p>Default: 1800 (30 minutes)</p>
     /// <p>Constraints: 1 to 28,800</p>
+    #[doc(hidden)]
     pub idle_client_timeout: i32,
     /// <p>Whether the proxy includes detailed information about SQL statements in its logs. This information helps you to debug issues involving SQL behavior or the performance and scalability of the proxy connections. The debug information includes the text of SQL statements that you submit through the proxy. Thus, only enable this setting when needed for debugging, and only when you have security measures in place to safeguard any sensitive information that appears in the logs.</p>
+    #[doc(hidden)]
     pub debug_logging: bool,
     /// <p>The date and time when the proxy was first created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the proxy was last updated.</p>
+    #[doc(hidden)]
     pub updated_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DbProxy {
@@ -13237,7 +13835,7 @@ impl DbProxy {
     pub fn status(&self) -> std::option::Option<&crate::model::DbProxyStatus> {
         self.status.as_ref()
     }
-    /// <p>The engine family applies to MySQL and PostgreSQL for both RDS and Aurora.</p>
+    /// <p>The kinds of databases that the proxy can connect to. This value determines which database network protocol the proxy recognizes when it interprets network traffic to and from the database. <code>MYSQL</code> supports Aurora MySQL, RDS for MariaDB, and RDS for MySQL databases. <code>POSTGRESQL</code> supports Aurora PostgreSQL and RDS for PostgreSQL databases.</p>
     pub fn engine_family(&self) -> std::option::Option<&str> {
         self.engine_family.as_deref()
     }
@@ -13309,11 +13907,10 @@ impl std::fmt::Debug for DbProxy {
         formatter.finish()
     }
 }
-/// See [`DbProxy`](crate::model::DbProxy)
+/// See [`DbProxy`](crate::model::DbProxy).
 pub mod db_proxy {
 
-    /// A builder for [`DbProxy`](crate::model::DbProxy)
-    #[non_exhaustive]
+    /// A builder for [`DbProxy`](crate::model::DbProxy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_proxy_name: std::option::Option<std::string::String>,
@@ -13369,12 +13966,12 @@ pub mod db_proxy {
             self.status = input;
             self
         }
-        /// <p>The engine family applies to MySQL and PostgreSQL for both RDS and Aurora.</p>
+        /// <p>The kinds of databases that the proxy can connect to. This value determines which database network protocol the proxy recognizes when it interprets network traffic to and from the database. <code>MYSQL</code> supports Aurora MySQL, RDS for MariaDB, and RDS for MySQL databases. <code>POSTGRESQL</code> supports Aurora PostgreSQL and RDS for PostgreSQL databases.</p>
         pub fn engine_family(mut self, input: impl Into<std::string::String>) -> Self {
             self.engine_family = Some(input.into());
             self
         }
-        /// <p>The engine family applies to MySQL and PostgreSQL for both RDS and Aurora.</p>
+        /// <p>The kinds of databases that the proxy can connect to. This value determines which database network protocol the proxy recognizes when it interprets network traffic to and from the database. <code>MYSQL</code> supports Aurora MySQL, RDS for MariaDB, and RDS for MySQL databases. <code>POSTGRESQL</code> supports Aurora PostgreSQL and RDS for PostgreSQL databases.</p>
         pub fn set_engine_family(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -13529,7 +14126,7 @@ pub mod db_proxy {
             self.updated_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbProxy`](crate::model::DbProxy)
+        /// Consumes the builder and constructs a [`DbProxy`](crate::model::DbProxy).
         pub fn build(self) -> crate::model::DbProxy {
             crate::model::DbProxy {
                 db_proxy_name: self.db_proxy_name,
@@ -13552,7 +14149,7 @@ pub mod db_proxy {
     }
 }
 impl DbProxy {
-    /// Creates a new builder-style object to manufacture [`DbProxy`](crate::model::DbProxy)
+    /// Creates a new builder-style object to manufacture [`DbProxy`](crate::model::DbProxy).
     pub fn builder() -> crate::model::db_proxy::Builder {
         crate::model::db_proxy::Builder::default()
     }
@@ -13563,14 +14160,19 @@ impl DbProxy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserAuthConfigInfo {
     /// <p>A user-specified description about the authentication used by a proxy to log in as a specific database user.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The name of the database user to which the proxy connects.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The type of authentication that the proxy uses for connections from the proxy to the underlying database.</p>
+    #[doc(hidden)]
     pub auth_scheme: std::option::Option<crate::model::AuthScheme>,
     /// <p>The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.</p>
+    #[doc(hidden)]
     pub secret_arn: std::option::Option<std::string::String>,
     /// <p>Whether to require or disallow Amazon Web Services Identity and Access Management (IAM) authentication for connections to the proxy.</p>
+    #[doc(hidden)]
     pub iam_auth: std::option::Option<crate::model::IamAuthMode>,
 }
 impl UserAuthConfigInfo {
@@ -13606,11 +14208,10 @@ impl std::fmt::Debug for UserAuthConfigInfo {
         formatter.finish()
     }
 }
-/// See [`UserAuthConfigInfo`](crate::model::UserAuthConfigInfo)
+/// See [`UserAuthConfigInfo`](crate::model::UserAuthConfigInfo).
 pub mod user_auth_config_info {
 
-    /// A builder for [`UserAuthConfigInfo`](crate::model::UserAuthConfigInfo)
-    #[non_exhaustive]
+    /// A builder for [`UserAuthConfigInfo`](crate::model::UserAuthConfigInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -13676,7 +14277,7 @@ pub mod user_auth_config_info {
             self.iam_auth = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserAuthConfigInfo`](crate::model::UserAuthConfigInfo)
+        /// Consumes the builder and constructs a [`UserAuthConfigInfo`](crate::model::UserAuthConfigInfo).
         pub fn build(self) -> crate::model::UserAuthConfigInfo {
             crate::model::UserAuthConfigInfo {
                 description: self.description,
@@ -13689,7 +14290,7 @@ pub mod user_auth_config_info {
     }
 }
 impl UserAuthConfigInfo {
-    /// Creates a new builder-style object to manufacture [`UserAuthConfigInfo`](crate::model::UserAuthConfigInfo)
+    /// Creates a new builder-style object to manufacture [`UserAuthConfigInfo`](crate::model::UserAuthConfigInfo).
     pub fn builder() -> crate::model::user_auth_config_info::Builder {
         crate::model::user_auth_config_info::Builder::default()
     }
@@ -13899,14 +14500,19 @@ impl AsRef<str> for DbProxyStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserAuthConfig {
     /// <p>A user-specified description about the authentication used by a proxy to log in as a specific database user.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The name of the database user to which the proxy connects.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The type of authentication that the proxy uses for connections from the proxy to the underlying database.</p>
+    #[doc(hidden)]
     pub auth_scheme: std::option::Option<crate::model::AuthScheme>,
     /// <p>The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.</p>
+    #[doc(hidden)]
     pub secret_arn: std::option::Option<std::string::String>,
     /// <p>Whether to require or disallow Amazon Web Services Identity and Access Management (IAM) authentication for connections to the proxy.</p>
+    #[doc(hidden)]
     pub iam_auth: std::option::Option<crate::model::IamAuthMode>,
 }
 impl UserAuthConfig {
@@ -13942,11 +14548,10 @@ impl std::fmt::Debug for UserAuthConfig {
         formatter.finish()
     }
 }
-/// See [`UserAuthConfig`](crate::model::UserAuthConfig)
+/// See [`UserAuthConfig`](crate::model::UserAuthConfig).
 pub mod user_auth_config {
 
-    /// A builder for [`UserAuthConfig`](crate::model::UserAuthConfig)
-    #[non_exhaustive]
+    /// A builder for [`UserAuthConfig`](crate::model::UserAuthConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -14012,7 +14617,7 @@ pub mod user_auth_config {
             self.iam_auth = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserAuthConfig`](crate::model::UserAuthConfig)
+        /// Consumes the builder and constructs a [`UserAuthConfig`](crate::model::UserAuthConfig).
         pub fn build(self) -> crate::model::UserAuthConfig {
             crate::model::UserAuthConfig {
                 description: self.description,
@@ -14025,7 +14630,7 @@ pub mod user_auth_config {
     }
 }
 impl UserAuthConfig {
-    /// Creates a new builder-style object to manufacture [`UserAuthConfig`](crate::model::UserAuthConfig)
+    /// Creates a new builder-style object to manufacture [`UserAuthConfig`](crate::model::UserAuthConfig).
     pub fn builder() -> crate::model::user_auth_config::Builder {
         crate::model::user_auth_config::Builder::default()
     }
@@ -14039,8 +14644,10 @@ impl UserAuthConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudwatchLogsExportConfiguration {
     /// <p>The list of log types to enable.</p>
+    #[doc(hidden)]
     pub enable_log_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The list of log types to disable.</p>
+    #[doc(hidden)]
     pub disable_log_types: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CloudwatchLogsExportConfiguration {
@@ -14061,11 +14668,10 @@ impl std::fmt::Debug for CloudwatchLogsExportConfiguration {
         formatter.finish()
     }
 }
-/// See [`CloudwatchLogsExportConfiguration`](crate::model::CloudwatchLogsExportConfiguration)
+/// See [`CloudwatchLogsExportConfiguration`](crate::model::CloudwatchLogsExportConfiguration).
 pub mod cloudwatch_logs_export_configuration {
 
-    /// A builder for [`CloudwatchLogsExportConfiguration`](crate::model::CloudwatchLogsExportConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CloudwatchLogsExportConfiguration`](crate::model::CloudwatchLogsExportConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enable_log_types: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -14110,7 +14716,7 @@ pub mod cloudwatch_logs_export_configuration {
             self.disable_log_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudwatchLogsExportConfiguration`](crate::model::CloudwatchLogsExportConfiguration)
+        /// Consumes the builder and constructs a [`CloudwatchLogsExportConfiguration`](crate::model::CloudwatchLogsExportConfiguration).
         pub fn build(self) -> crate::model::CloudwatchLogsExportConfiguration {
             crate::model::CloudwatchLogsExportConfiguration {
                 enable_log_types: self.enable_log_types,
@@ -14120,7 +14726,7 @@ pub mod cloudwatch_logs_export_configuration {
     }
 }
 impl CloudwatchLogsExportConfiguration {
-    /// Creates a new builder-style object to manufacture [`CloudwatchLogsExportConfiguration`](crate::model::CloudwatchLogsExportConfiguration)
+    /// Creates a new builder-style object to manufacture [`CloudwatchLogsExportConfiguration`](crate::model::CloudwatchLogsExportConfiguration).
     pub fn builder() -> crate::model::cloudwatch_logs_export_configuration::Builder {
         crate::model::cloudwatch_logs_export_configuration::Builder::default()
     }
@@ -14132,8 +14738,10 @@ impl CloudwatchLogsExportConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbClusterSnapshotAttributesResult {
     /// <p>The identifier of the manual DB cluster snapshot that the attributes apply to.</p>
+    #[doc(hidden)]
     pub db_cluster_snapshot_identifier: std::option::Option<std::string::String>,
     /// <p>The list of attributes and values for the manual DB cluster snapshot.</p>
+    #[doc(hidden)]
     pub db_cluster_snapshot_attributes:
         std::option::Option<std::vec::Vec<crate::model::DbClusterSnapshotAttribute>>,
 }
@@ -14163,11 +14771,10 @@ impl std::fmt::Debug for DbClusterSnapshotAttributesResult {
         formatter.finish()
     }
 }
-/// See [`DbClusterSnapshotAttributesResult`](crate::model::DbClusterSnapshotAttributesResult)
+/// See [`DbClusterSnapshotAttributesResult`](crate::model::DbClusterSnapshotAttributesResult).
 pub mod db_cluster_snapshot_attributes_result {
 
-    /// A builder for [`DbClusterSnapshotAttributesResult`](crate::model::DbClusterSnapshotAttributesResult)
-    #[non_exhaustive]
+    /// A builder for [`DbClusterSnapshotAttributesResult`](crate::model::DbClusterSnapshotAttributesResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_snapshot_identifier: std::option::Option<std::string::String>,
@@ -14213,7 +14820,7 @@ pub mod db_cluster_snapshot_attributes_result {
             self.db_cluster_snapshot_attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbClusterSnapshotAttributesResult`](crate::model::DbClusterSnapshotAttributesResult)
+        /// Consumes the builder and constructs a [`DbClusterSnapshotAttributesResult`](crate::model::DbClusterSnapshotAttributesResult).
         pub fn build(self) -> crate::model::DbClusterSnapshotAttributesResult {
             crate::model::DbClusterSnapshotAttributesResult {
                 db_cluster_snapshot_identifier: self.db_cluster_snapshot_identifier,
@@ -14223,7 +14830,7 @@ pub mod db_cluster_snapshot_attributes_result {
     }
 }
 impl DbClusterSnapshotAttributesResult {
-    /// Creates a new builder-style object to manufacture [`DbClusterSnapshotAttributesResult`](crate::model::DbClusterSnapshotAttributesResult)
+    /// Creates a new builder-style object to manufacture [`DbClusterSnapshotAttributesResult`](crate::model::DbClusterSnapshotAttributesResult).
     pub fn builder() -> crate::model::db_cluster_snapshot_attributes_result::Builder {
         crate::model::db_cluster_snapshot_attributes_result::Builder::default()
     }
@@ -14236,9 +14843,11 @@ impl DbClusterSnapshotAttributesResult {
 pub struct DbClusterSnapshotAttribute {
     /// <p>The name of the manual DB cluster snapshot attribute.</p>
     /// <p>The attribute named <code>restore</code> refers to the list of Amazon Web Services accounts that have permission to copy or restore the manual DB cluster snapshot. For more information, see the <code>ModifyDBClusterSnapshotAttribute</code> API action.</p>
+    #[doc(hidden)]
     pub attribute_name: std::option::Option<std::string::String>,
     /// <p>The value(s) for the manual DB cluster snapshot attribute.</p>
     /// <p>If the <code>AttributeName</code> field is set to <code>restore</code>, then this element returns a list of IDs of the Amazon Web Services accounts that are authorized to copy or restore the manual DB cluster snapshot. If a value of <code>all</code> is in the list, then the manual DB cluster snapshot is public and available for any Amazon Web Services account to copy or restore.</p>
+    #[doc(hidden)]
     pub attribute_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DbClusterSnapshotAttribute {
@@ -14261,11 +14870,10 @@ impl std::fmt::Debug for DbClusterSnapshotAttribute {
         formatter.finish()
     }
 }
-/// See [`DbClusterSnapshotAttribute`](crate::model::DbClusterSnapshotAttribute)
+/// See [`DbClusterSnapshotAttribute`](crate::model::DbClusterSnapshotAttribute).
 pub mod db_cluster_snapshot_attribute {
 
-    /// A builder for [`DbClusterSnapshotAttribute`](crate::model::DbClusterSnapshotAttribute)
-    #[non_exhaustive]
+    /// A builder for [`DbClusterSnapshotAttribute`](crate::model::DbClusterSnapshotAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_name: std::option::Option<std::string::String>,
@@ -14308,7 +14916,7 @@ pub mod db_cluster_snapshot_attribute {
             self.attribute_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbClusterSnapshotAttribute`](crate::model::DbClusterSnapshotAttribute)
+        /// Consumes the builder and constructs a [`DbClusterSnapshotAttribute`](crate::model::DbClusterSnapshotAttribute).
         pub fn build(self) -> crate::model::DbClusterSnapshotAttribute {
             crate::model::DbClusterSnapshotAttribute {
                 attribute_name: self.attribute_name,
@@ -14318,7 +14926,7 @@ pub mod db_cluster_snapshot_attribute {
     }
 }
 impl DbClusterSnapshotAttribute {
-    /// Creates a new builder-style object to manufacture [`DbClusterSnapshotAttribute`](crate::model::DbClusterSnapshotAttribute)
+    /// Creates a new builder-style object to manufacture [`DbClusterSnapshotAttribute`](crate::model::DbClusterSnapshotAttribute).
     pub fn builder() -> crate::model::db_cluster_snapshot_attribute::Builder {
         crate::model::db_cluster_snapshot_attribute::Builder::default()
     }
@@ -14329,6 +14937,7 @@ impl DbClusterSnapshotAttribute {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Timezone {
     /// <p>The name of the time zone.</p>
+    #[doc(hidden)]
     pub timezone_name: std::option::Option<std::string::String>,
 }
 impl Timezone {
@@ -14344,11 +14953,10 @@ impl std::fmt::Debug for Timezone {
         formatter.finish()
     }
 }
-/// See [`Timezone`](crate::model::Timezone)
+/// See [`Timezone`](crate::model::Timezone).
 pub mod timezone {
 
-    /// A builder for [`Timezone`](crate::model::Timezone)
-    #[non_exhaustive]
+    /// A builder for [`Timezone`](crate::model::Timezone).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timezone_name: std::option::Option<std::string::String>,
@@ -14367,7 +14975,7 @@ pub mod timezone {
             self.timezone_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Timezone`](crate::model::Timezone)
+        /// Consumes the builder and constructs a [`Timezone`](crate::model::Timezone).
         pub fn build(self) -> crate::model::Timezone {
             crate::model::Timezone {
                 timezone_name: self.timezone_name,
@@ -14376,7 +14984,7 @@ pub mod timezone {
     }
 }
 impl Timezone {
-    /// Creates a new builder-style object to manufacture [`Timezone`](crate::model::Timezone)
+    /// Creates a new builder-style object to manufacture [`Timezone`](crate::model::Timezone).
     pub fn builder() -> crate::model::timezone::Builder {
         crate::model::timezone::Builder::default()
     }
@@ -14387,22 +14995,31 @@ impl Timezone {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpgradeTarget {
     /// <p>The name of the upgrade target database engine.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The version number of the upgrade target database engine.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The version of the database engine that a DB instance can be upgraded to.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A value that indicates whether the target version is applied to any source DB instances that have <code>AutoMinorVersionUpgrade</code> set to true.</p>
+    #[doc(hidden)]
     pub auto_upgrade: bool,
     /// <p>A value that indicates whether upgrading to the target version requires upgrading the major version of the database engine.</p>
+    #[doc(hidden)]
     pub is_major_version_upgrade: bool,
     /// <p>A list of the supported DB engine modes for the target engine version.</p>
+    #[doc(hidden)]
     pub supported_engine_modes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A value that indicates whether you can use Aurora parallel query with the target engine version.</p>
+    #[doc(hidden)]
     pub supports_parallel_query: std::option::Option<bool>,
     /// <p>A value that indicates whether you can use Aurora global databases with the target engine version.</p>
+    #[doc(hidden)]
     pub supports_global_databases: std::option::Option<bool>,
     /// <p>A value that indicates whether you can use Babelfish for Aurora PostgreSQL with the target engine version.</p>
+    #[doc(hidden)]
     pub supports_babelfish: std::option::Option<bool>,
 }
 impl UpgradeTarget {
@@ -14458,11 +15075,10 @@ impl std::fmt::Debug for UpgradeTarget {
         formatter.finish()
     }
 }
-/// See [`UpgradeTarget`](crate::model::UpgradeTarget)
+/// See [`UpgradeTarget`](crate::model::UpgradeTarget).
 pub mod upgrade_target {
 
-    /// A builder for [`UpgradeTarget`](crate::model::UpgradeTarget)
-    #[non_exhaustive]
+    /// A builder for [`UpgradeTarget`](crate::model::UpgradeTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine: std::option::Option<std::string::String>,
@@ -14578,7 +15194,7 @@ pub mod upgrade_target {
             self.supports_babelfish = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpgradeTarget`](crate::model::UpgradeTarget)
+        /// Consumes the builder and constructs a [`UpgradeTarget`](crate::model::UpgradeTarget).
         pub fn build(self) -> crate::model::UpgradeTarget {
             crate::model::UpgradeTarget {
                 engine: self.engine,
@@ -14595,7 +15211,7 @@ pub mod upgrade_target {
     }
 }
 impl UpgradeTarget {
-    /// Creates a new builder-style object to manufacture [`UpgradeTarget`](crate::model::UpgradeTarget)
+    /// Creates a new builder-style object to manufacture [`UpgradeTarget`](crate::model::UpgradeTarget).
     pub fn builder() -> crate::model::upgrade_target::Builder {
         crate::model::upgrade_target::Builder::default()
     }
@@ -14606,8 +15222,10 @@ impl UpgradeTarget {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CharacterSet {
     /// <p>The name of the character set.</p>
+    #[doc(hidden)]
     pub character_set_name: std::option::Option<std::string::String>,
     /// <p>The description of the character set.</p>
+    #[doc(hidden)]
     pub character_set_description: std::option::Option<std::string::String>,
 }
 impl CharacterSet {
@@ -14628,11 +15246,10 @@ impl std::fmt::Debug for CharacterSet {
         formatter.finish()
     }
 }
-/// See [`CharacterSet`](crate::model::CharacterSet)
+/// See [`CharacterSet`](crate::model::CharacterSet).
 pub mod character_set {
 
-    /// A builder for [`CharacterSet`](crate::model::CharacterSet)
-    #[non_exhaustive]
+    /// A builder for [`CharacterSet`](crate::model::CharacterSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) character_set_name: std::option::Option<std::string::String>,
@@ -14665,7 +15282,7 @@ pub mod character_set {
             self.character_set_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`CharacterSet`](crate::model::CharacterSet)
+        /// Consumes the builder and constructs a [`CharacterSet`](crate::model::CharacterSet).
         pub fn build(self) -> crate::model::CharacterSet {
             crate::model::CharacterSet {
                 character_set_name: self.character_set_name,
@@ -14675,7 +15292,7 @@ pub mod character_set {
     }
 }
 impl CharacterSet {
-    /// Creates a new builder-style object to manufacture [`CharacterSet`](crate::model::CharacterSet)
+    /// Creates a new builder-style object to manufacture [`CharacterSet`](crate::model::CharacterSet).
     pub fn builder() -> crate::model::character_set::Builder {
         crate::model::character_set::Builder::default()
     }
@@ -14745,20 +15362,28 @@ impl AsRef<str> for CustomEngineVersionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Certificate {
     /// <p>The unique key that identifies a certificate.</p>
+    #[doc(hidden)]
     pub certificate_identifier: std::option::Option<std::string::String>,
     /// <p>The type of the certificate.</p>
+    #[doc(hidden)]
     pub certificate_type: std::option::Option<std::string::String>,
     /// <p>The thumbprint of the certificate.</p>
+    #[doc(hidden)]
     pub thumbprint: std::option::Option<std::string::String>,
     /// <p>The starting date from which the certificate is valid.</p>
+    #[doc(hidden)]
     pub valid_from: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The final date that the certificate continues to be valid.</p>
+    #[doc(hidden)]
     pub valid_till: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) for the certificate.</p>
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// <p>Whether there is an override for the default certificate identifier.</p>
+    #[doc(hidden)]
     pub customer_override: std::option::Option<bool>,
     /// <p>If there is an override for the default certificate identifier, when the override expires.</p>
+    #[doc(hidden)]
     pub customer_override_valid_till: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Certificate {
@@ -14812,11 +15437,10 @@ impl std::fmt::Debug for Certificate {
         formatter.finish()
     }
 }
-/// See [`Certificate`](crate::model::Certificate)
+/// See [`Certificate`](crate::model::Certificate).
 pub mod certificate {
 
-    /// A builder for [`Certificate`](crate::model::Certificate)
-    #[non_exhaustive]
+    /// A builder for [`Certificate`](crate::model::Certificate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_identifier: std::option::Option<std::string::String>,
@@ -14927,7 +15551,7 @@ pub mod certificate {
             self.customer_override_valid_till = input;
             self
         }
-        /// Consumes the builder and constructs a [`Certificate`](crate::model::Certificate)
+        /// Consumes the builder and constructs a [`Certificate`](crate::model::Certificate).
         pub fn build(self) -> crate::model::Certificate {
             crate::model::Certificate {
                 certificate_identifier: self.certificate_identifier,
@@ -14943,9 +15567,64 @@ pub mod certificate {
     }
 }
 impl Certificate {
-    /// Creates a new builder-style object to manufacture [`Certificate`](crate::model::Certificate)
+    /// Creates a new builder-style object to manufacture [`Certificate`](crate::model::Certificate).
     pub fn builder() -> crate::model::certificate::Builder {
         crate::model::certificate::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum AuditPolicyState {
+    #[allow(missing_docs)] // documentation missing in model
+    LockedPolicy,
+    #[allow(missing_docs)] // documentation missing in model
+    UnlockedPolicy,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for AuditPolicyState {
+    fn from(s: &str) -> Self {
+        match s {
+            "locked" => AuditPolicyState::LockedPolicy,
+            "unlocked" => AuditPolicyState::UnlockedPolicy,
+            other => AuditPolicyState::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for AuditPolicyState {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(AuditPolicyState::from(s))
+    }
+}
+impl AuditPolicyState {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            AuditPolicyState::LockedPolicy => "locked",
+            AuditPolicyState::UnlockedPolicy => "unlocked",
+            AuditPolicyState::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["locked", "unlocked"]
+    }
+}
+impl AsRef<str> for AuditPolicyState {
+    fn as_ref(&self) -> &str {
+        self.as_str()
     }
 }
 
@@ -14964,8 +15643,10 @@ impl Certificate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
     /// <p>The name of the filter. Filter names are case-sensitive.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>One or more filter values. Filter values are case-sensitive.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Filter {
@@ -14986,11 +15667,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -15026,7 +15706,7 @@ pub mod filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 name: self.name,
@@ -15036,7 +15716,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -15047,8 +15727,10 @@ impl Filter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidDbInstanceModificationsMessage {
     /// <p>Valid storage options for your DB instance.</p>
+    #[doc(hidden)]
     pub storage: std::option::Option<std::vec::Vec<crate::model::ValidStorageOptions>>,
     /// <p>Valid processor features for your DB instance.</p>
+    #[doc(hidden)]
     pub valid_processor_features:
         std::option::Option<std::vec::Vec<crate::model::AvailableProcessorFeature>>,
 }
@@ -15072,11 +15754,10 @@ impl std::fmt::Debug for ValidDbInstanceModificationsMessage {
         formatter.finish()
     }
 }
-/// See [`ValidDbInstanceModificationsMessage`](crate::model::ValidDbInstanceModificationsMessage)
+/// See [`ValidDbInstanceModificationsMessage`](crate::model::ValidDbInstanceModificationsMessage).
 pub mod valid_db_instance_modifications_message {
 
-    /// A builder for [`ValidDbInstanceModificationsMessage`](crate::model::ValidDbInstanceModificationsMessage)
-    #[non_exhaustive]
+    /// A builder for [`ValidDbInstanceModificationsMessage`](crate::model::ValidDbInstanceModificationsMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage: std::option::Option<std::vec::Vec<crate::model::ValidStorageOptions>>,
@@ -15125,7 +15806,7 @@ pub mod valid_db_instance_modifications_message {
             self.valid_processor_features = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidDbInstanceModificationsMessage`](crate::model::ValidDbInstanceModificationsMessage)
+        /// Consumes the builder and constructs a [`ValidDbInstanceModificationsMessage`](crate::model::ValidDbInstanceModificationsMessage).
         pub fn build(self) -> crate::model::ValidDbInstanceModificationsMessage {
             crate::model::ValidDbInstanceModificationsMessage {
                 storage: self.storage,
@@ -15135,7 +15816,7 @@ pub mod valid_db_instance_modifications_message {
     }
 }
 impl ValidDbInstanceModificationsMessage {
-    /// Creates a new builder-style object to manufacture [`ValidDbInstanceModificationsMessage`](crate::model::ValidDbInstanceModificationsMessage)
+    /// Creates a new builder-style object to manufacture [`ValidDbInstanceModificationsMessage`](crate::model::ValidDbInstanceModificationsMessage).
     pub fn builder() -> crate::model::valid_db_instance_modifications_message::Builder {
         crate::model::valid_db_instance_modifications_message::Builder::default()
     }
@@ -15147,10 +15828,13 @@ impl ValidDbInstanceModificationsMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AvailableProcessorFeature {
     /// <p>The name of the processor feature. Valid names are <code>coreCount</code> and <code>threadsPerCore</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The default value for the processor feature of the DB instance class.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
     /// <p>The allowed values for the processor feature of the DB instance class.</p>
+    #[doc(hidden)]
     pub allowed_values: std::option::Option<std::string::String>,
 }
 impl AvailableProcessorFeature {
@@ -15176,11 +15860,10 @@ impl std::fmt::Debug for AvailableProcessorFeature {
         formatter.finish()
     }
 }
-/// See [`AvailableProcessorFeature`](crate::model::AvailableProcessorFeature)
+/// See [`AvailableProcessorFeature`](crate::model::AvailableProcessorFeature).
 pub mod available_processor_feature {
 
-    /// A builder for [`AvailableProcessorFeature`](crate::model::AvailableProcessorFeature)
-    #[non_exhaustive]
+    /// A builder for [`AvailableProcessorFeature`](crate::model::AvailableProcessorFeature).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -15224,7 +15907,7 @@ pub mod available_processor_feature {
             self.allowed_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`AvailableProcessorFeature`](crate::model::AvailableProcessorFeature)
+        /// Consumes the builder and constructs a [`AvailableProcessorFeature`](crate::model::AvailableProcessorFeature).
         pub fn build(self) -> crate::model::AvailableProcessorFeature {
             crate::model::AvailableProcessorFeature {
                 name: self.name,
@@ -15235,7 +15918,7 @@ pub mod available_processor_feature {
     }
 }
 impl AvailableProcessorFeature {
-    /// Creates a new builder-style object to manufacture [`AvailableProcessorFeature`](crate::model::AvailableProcessorFeature)
+    /// Creates a new builder-style object to manufacture [`AvailableProcessorFeature`](crate::model::AvailableProcessorFeature).
     pub fn builder() -> crate::model::available_processor_feature::Builder {
         crate::model::available_processor_feature::Builder::default()
     }
@@ -15246,14 +15929,19 @@ impl AvailableProcessorFeature {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidStorageOptions {
     /// <p>The valid storage types for your DB instance. For example, gp2, io1.</p>
+    #[doc(hidden)]
     pub storage_type: std::option::Option<std::string::String>,
     /// <p>The valid range of storage in gibibytes (GiB). For example, 100 to 16384.</p>
+    #[doc(hidden)]
     pub storage_size: std::option::Option<std::vec::Vec<crate::model::Range>>,
     /// <p>The valid range of provisioned IOPS. For example, 1000-20000.</p>
+    #[doc(hidden)]
     pub provisioned_iops: std::option::Option<std::vec::Vec<crate::model::Range>>,
     /// <p>The valid range of Provisioned IOPS to gibibytes of storage multiplier. For example, 3-10, which means that provisioned IOPS can be between 3 and 10 times storage.</p>
+    #[doc(hidden)]
     pub iops_to_storage_ratio: std::option::Option<std::vec::Vec<crate::model::DoubleRange>>,
     /// <p>Whether or not Amazon RDS can automatically scale storage for DB instances that use the new instance class.</p>
+    #[doc(hidden)]
     pub supports_storage_autoscaling: bool,
 }
 impl ValidStorageOptions {
@@ -15292,11 +15980,10 @@ impl std::fmt::Debug for ValidStorageOptions {
         formatter.finish()
     }
 }
-/// See [`ValidStorageOptions`](crate::model::ValidStorageOptions)
+/// See [`ValidStorageOptions`](crate::model::ValidStorageOptions).
 pub mod valid_storage_options {
 
-    /// A builder for [`ValidStorageOptions`](crate::model::ValidStorageOptions)
-    #[non_exhaustive]
+    /// A builder for [`ValidStorageOptions`](crate::model::ValidStorageOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_type: std::option::Option<std::string::String>,
@@ -15387,7 +16074,7 @@ pub mod valid_storage_options {
             self.supports_storage_autoscaling = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidStorageOptions`](crate::model::ValidStorageOptions)
+        /// Consumes the builder and constructs a [`ValidStorageOptions`](crate::model::ValidStorageOptions).
         pub fn build(self) -> crate::model::ValidStorageOptions {
             crate::model::ValidStorageOptions {
                 storage_type: self.storage_type,
@@ -15400,7 +16087,7 @@ pub mod valid_storage_options {
     }
 }
 impl ValidStorageOptions {
-    /// Creates a new builder-style object to manufacture [`ValidStorageOptions`](crate::model::ValidStorageOptions)
+    /// Creates a new builder-style object to manufacture [`ValidStorageOptions`](crate::model::ValidStorageOptions).
     pub fn builder() -> crate::model::valid_storage_options::Builder {
         crate::model::valid_storage_options::Builder::default()
     }
@@ -15411,8 +16098,10 @@ impl ValidStorageOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DoubleRange {
     /// <p>The minimum value in the range.</p>
+    #[doc(hidden)]
     pub from: f64,
     /// <p>The maximum value in the range.</p>
+    #[doc(hidden)]
     pub to: f64,
 }
 impl DoubleRange {
@@ -15433,11 +16122,10 @@ impl std::fmt::Debug for DoubleRange {
         formatter.finish()
     }
 }
-/// See [`DoubleRange`](crate::model::DoubleRange)
+/// See [`DoubleRange`](crate::model::DoubleRange).
 pub mod double_range {
 
-    /// A builder for [`DoubleRange`](crate::model::DoubleRange)
-    #[non_exhaustive]
+    /// A builder for [`DoubleRange`](crate::model::DoubleRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) from: std::option::Option<f64>,
@@ -15464,7 +16152,7 @@ pub mod double_range {
             self.to = input;
             self
         }
-        /// Consumes the builder and constructs a [`DoubleRange`](crate::model::DoubleRange)
+        /// Consumes the builder and constructs a [`DoubleRange`](crate::model::DoubleRange).
         pub fn build(self) -> crate::model::DoubleRange {
             crate::model::DoubleRange {
                 from: self.from.unwrap_or_default(),
@@ -15474,7 +16162,7 @@ pub mod double_range {
     }
 }
 impl DoubleRange {
-    /// Creates a new builder-style object to manufacture [`DoubleRange`](crate::model::DoubleRange)
+    /// Creates a new builder-style object to manufacture [`DoubleRange`](crate::model::DoubleRange).
     pub fn builder() -> crate::model::double_range::Builder {
         crate::model::double_range::Builder::default()
     }
@@ -15485,10 +16173,13 @@ impl DoubleRange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Range {
     /// <p>The minimum value in the range.</p>
+    #[doc(hidden)]
     pub from: i32,
     /// <p>The maximum value in the range.</p>
+    #[doc(hidden)]
     pub to: i32,
     /// <p>The step value for the range. For example, if you have a range of 5,000 to 10,000, with a step value of 1,000, the valid values start at 5,000 and step up by 1,000. Even though 7,500 is within the range, it isn't a valid value for the range. The valid values are 5,000, 6,000, 7,000, 8,000...</p>
+    #[doc(hidden)]
     pub step: std::option::Option<i32>,
 }
 impl Range {
@@ -15514,11 +16205,10 @@ impl std::fmt::Debug for Range {
         formatter.finish()
     }
 }
-/// See [`Range`](crate::model::Range)
+/// See [`Range`](crate::model::Range).
 pub mod range {
 
-    /// A builder for [`Range`](crate::model::Range)
-    #[non_exhaustive]
+    /// A builder for [`Range`](crate::model::Range).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) from: std::option::Option<i32>,
@@ -15556,7 +16246,7 @@ pub mod range {
             self.step = input;
             self
         }
-        /// Consumes the builder and constructs a [`Range`](crate::model::Range)
+        /// Consumes the builder and constructs a [`Range`](crate::model::Range).
         pub fn build(self) -> crate::model::Range {
             crate::model::Range {
                 from: self.from.unwrap_or_default(),
@@ -15567,7 +16257,7 @@ pub mod range {
     }
 }
 impl Range {
-    /// Creates a new builder-style object to manufacture [`Range`](crate::model::Range)
+    /// Creates a new builder-style object to manufacture [`Range`](crate::model::Range).
     pub fn builder() -> crate::model::range::Builder {
         crate::model::range::Builder::default()
     }
@@ -15578,12 +16268,16 @@ impl Range {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceRegion {
     /// <p>The name of the source Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub region_name: std::option::Option<std::string::String>,
     /// <p>The endpoint for the source Amazon Web Services Region endpoint.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The status of the source Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>Whether the source Amazon Web Services Region supports replicating automated backups to the current Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub supports_db_instance_automated_backups_replication: bool,
 }
 impl SourceRegion {
@@ -15617,11 +16311,10 @@ impl std::fmt::Debug for SourceRegion {
         formatter.finish()
     }
 }
-/// See [`SourceRegion`](crate::model::SourceRegion)
+/// See [`SourceRegion`](crate::model::SourceRegion).
 pub mod source_region {
 
-    /// A builder for [`SourceRegion`](crate::model::SourceRegion)
-    #[non_exhaustive]
+    /// A builder for [`SourceRegion`](crate::model::SourceRegion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) region_name: std::option::Option<std::string::String>,
@@ -15673,7 +16366,7 @@ pub mod source_region {
             self.supports_db_instance_automated_backups_replication = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceRegion`](crate::model::SourceRegion)
+        /// Consumes the builder and constructs a [`SourceRegion`](crate::model::SourceRegion).
         pub fn build(self) -> crate::model::SourceRegion {
             crate::model::SourceRegion {
                 region_name: self.region_name,
@@ -15687,7 +16380,7 @@ pub mod source_region {
     }
 }
 impl SourceRegion {
-    /// Creates a new builder-style object to manufacture [`SourceRegion`](crate::model::SourceRegion)
+    /// Creates a new builder-style object to manufacture [`SourceRegion`](crate::model::SourceRegion).
     pub fn builder() -> crate::model::source_region::Builder {
         crate::model::source_region::Builder::default()
     }
@@ -15698,24 +16391,34 @@ impl SourceRegion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservedDbInstancesOffering {
     /// <p>The offering identifier.</p>
+    #[doc(hidden)]
     pub reserved_db_instances_offering_id: std::option::Option<std::string::String>,
     /// <p>The DB instance class for the reserved DB instance.</p>
+    #[doc(hidden)]
     pub db_instance_class: std::option::Option<std::string::String>,
     /// <p>The duration of the offering in seconds.</p>
+    #[doc(hidden)]
     pub duration: i32,
     /// <p>The fixed price charged for this offering.</p>
+    #[doc(hidden)]
     pub fixed_price: f64,
     /// <p>The hourly price charged for this offering.</p>
+    #[doc(hidden)]
     pub usage_price: f64,
     /// <p>The currency code for the reserved DB instance offering.</p>
+    #[doc(hidden)]
     pub currency_code: std::option::Option<std::string::String>,
     /// <p>The database engine used by the offering.</p>
+    #[doc(hidden)]
     pub product_description: std::option::Option<std::string::String>,
     /// <p>The offering type.</p>
+    #[doc(hidden)]
     pub offering_type: std::option::Option<std::string::String>,
     /// <p>Indicates if the offering applies to Multi-AZ deployments.</p>
+    #[doc(hidden)]
     pub multi_az: bool,
     /// <p>The recurring price charged to run this reserved DB instance.</p>
+    #[doc(hidden)]
     pub recurring_charges: std::option::Option<std::vec::Vec<crate::model::RecurringCharge>>,
 }
 impl ReservedDbInstancesOffering {
@@ -15779,11 +16482,10 @@ impl std::fmt::Debug for ReservedDbInstancesOffering {
         formatter.finish()
     }
 }
-/// See [`ReservedDbInstancesOffering`](crate::model::ReservedDbInstancesOffering)
+/// See [`ReservedDbInstancesOffering`](crate::model::ReservedDbInstancesOffering).
 pub mod reserved_db_instances_offering {
 
-    /// A builder for [`ReservedDbInstancesOffering`](crate::model::ReservedDbInstancesOffering)
-    #[non_exhaustive]
+    /// A builder for [`ReservedDbInstancesOffering`](crate::model::ReservedDbInstancesOffering).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reserved_db_instances_offering_id: std::option::Option<std::string::String>,
@@ -15926,7 +16628,7 @@ pub mod reserved_db_instances_offering {
             self.recurring_charges = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservedDbInstancesOffering`](crate::model::ReservedDbInstancesOffering)
+        /// Consumes the builder and constructs a [`ReservedDbInstancesOffering`](crate::model::ReservedDbInstancesOffering).
         pub fn build(self) -> crate::model::ReservedDbInstancesOffering {
             crate::model::ReservedDbInstancesOffering {
                 reserved_db_instances_offering_id: self.reserved_db_instances_offering_id,
@@ -15944,7 +16646,7 @@ pub mod reserved_db_instances_offering {
     }
 }
 impl ReservedDbInstancesOffering {
-    /// Creates a new builder-style object to manufacture [`ReservedDbInstancesOffering`](crate::model::ReservedDbInstancesOffering)
+    /// Creates a new builder-style object to manufacture [`ReservedDbInstancesOffering`](crate::model::ReservedDbInstancesOffering).
     pub fn builder() -> crate::model::reserved_db_instances_offering::Builder {
         crate::model::reserved_db_instances_offering::Builder::default()
     }
@@ -15955,8 +16657,10 @@ impl ReservedDbInstancesOffering {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourcePendingMaintenanceActions {
     /// <p>The ARN of the resource that has pending maintenance actions.</p>
+    #[doc(hidden)]
     pub resource_identifier: std::option::Option<std::string::String>,
     /// <p>A list that provides details about the pending maintenance actions for the resource.</p>
+    #[doc(hidden)]
     pub pending_maintenance_action_details:
         std::option::Option<std::vec::Vec<crate::model::PendingMaintenanceAction>>,
 }
@@ -15983,11 +16687,10 @@ impl std::fmt::Debug for ResourcePendingMaintenanceActions {
         formatter.finish()
     }
 }
-/// See [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions)
+/// See [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions).
 pub mod resource_pending_maintenance_actions {
 
-    /// A builder for [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions)
-    #[non_exhaustive]
+    /// A builder for [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_identifier: std::option::Option<std::string::String>,
@@ -16030,7 +16733,7 @@ pub mod resource_pending_maintenance_actions {
             self.pending_maintenance_action_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions)
+        /// Consumes the builder and constructs a [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions).
         pub fn build(self) -> crate::model::ResourcePendingMaintenanceActions {
             crate::model::ResourcePendingMaintenanceActions {
                 resource_identifier: self.resource_identifier,
@@ -16040,7 +16743,7 @@ pub mod resource_pending_maintenance_actions {
     }
 }
 impl ResourcePendingMaintenanceActions {
-    /// Creates a new builder-style object to manufacture [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions)
+    /// Creates a new builder-style object to manufacture [`ResourcePendingMaintenanceActions`](crate::model::ResourcePendingMaintenanceActions).
     pub fn builder() -> crate::model::resource_pending_maintenance_actions::Builder {
         crate::model::resource_pending_maintenance_actions::Builder::default()
     }
@@ -16051,17 +16754,23 @@ impl ResourcePendingMaintenanceActions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PendingMaintenanceAction {
     /// <p>The type of pending maintenance action that is available for the resource. Valid actions are <code>system-update</code>, <code>db-upgrade</code>, <code>hardware-maintenance</code>, and <code>ca-certificate-rotation</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<std::string::String>,
     /// <p>The date of the maintenance window when the action is applied. The maintenance action is applied to the resource during its first maintenance window after this date.</p>
+    #[doc(hidden)]
     pub auto_applied_after_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date when the maintenance action is automatically applied.</p>
     /// <p>On this date, the maintenance action is applied to the resource as soon as possible, regardless of the maintenance window for the resource. There might be a delay of one or more days from this date before the maintenance action is applied.</p>
+    #[doc(hidden)]
     pub forced_apply_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates the type of opt-in request that has been received for the resource.</p>
+    #[doc(hidden)]
     pub opt_in_status: std::option::Option<std::string::String>,
     /// <p>The effective date when the pending maintenance action is applied to the resource. This date takes into account opt-in requests received from the <code>ApplyPendingMaintenanceAction</code> API, the <code>AutoAppliedAfterDate</code>, and the <code>ForcedApplyDate</code>. This value is blank if an opt-in request has not been received and nothing has been specified as <code>AutoAppliedAfterDate</code> or <code>ForcedApplyDate</code>.</p>
+    #[doc(hidden)]
     pub current_apply_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A description providing more detail about the maintenance action.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl PendingMaintenanceAction {
@@ -16103,11 +16812,10 @@ impl std::fmt::Debug for PendingMaintenanceAction {
         formatter.finish()
     }
 }
-/// See [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction)
+/// See [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction).
 pub mod pending_maintenance_action {
 
-    /// A builder for [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction)
-    #[non_exhaustive]
+    /// A builder for [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<std::string::String>,
@@ -16192,7 +16900,7 @@ pub mod pending_maintenance_action {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction)
+        /// Consumes the builder and constructs a [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction).
         pub fn build(self) -> crate::model::PendingMaintenanceAction {
             crate::model::PendingMaintenanceAction {
                 action: self.action,
@@ -16206,7 +16914,7 @@ pub mod pending_maintenance_action {
     }
 }
 impl PendingMaintenanceAction {
-    /// Creates a new builder-style object to manufacture [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction)
+    /// Creates a new builder-style object to manufacture [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction).
     pub fn builder() -> crate::model::pending_maintenance_action::Builder {
         crate::model::pending_maintenance_action::Builder::default()
     }
@@ -16218,69 +16926,99 @@ impl PendingMaintenanceAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrderableDbInstanceOption {
     /// <p>The engine type of a DB instance.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The engine version of a DB instance.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The DB instance class for a DB instance.</p>
+    #[doc(hidden)]
     pub db_instance_class: std::option::Option<std::string::String>,
     /// <p>The license model for a DB instance.</p>
+    #[doc(hidden)]
     pub license_model: std::option::Option<std::string::String>,
     /// <p>The Availability Zone group for a DB instance.</p>
+    #[doc(hidden)]
     pub availability_zone_group: std::option::Option<std::string::String>,
     /// <p>A list of Availability Zones for a DB instance.</p>
+    #[doc(hidden)]
     pub availability_zones: std::option::Option<std::vec::Vec<crate::model::AvailabilityZone>>,
     /// <p>Indicates whether a DB instance is Multi-AZ capable.</p>
+    #[doc(hidden)]
     pub multi_az_capable: bool,
     /// <p>Indicates whether a DB instance can have a read replica.</p>
+    #[doc(hidden)]
     pub read_replica_capable: bool,
     /// <p>Indicates whether a DB instance is in a VPC.</p>
+    #[doc(hidden)]
     pub vpc: bool,
     /// <p>Indicates whether a DB instance supports encrypted storage.</p>
+    #[doc(hidden)]
     pub supports_storage_encryption: bool,
     /// <p>Indicates the storage type for a DB instance.</p>
+    #[doc(hidden)]
     pub storage_type: std::option::Option<std::string::String>,
     /// <p>Indicates whether a DB instance supports provisioned IOPS.</p>
+    #[doc(hidden)]
     pub supports_iops: bool,
     /// <p>Indicates whether a DB instance supports Enhanced Monitoring at intervals from 1 to 60 seconds.</p>
+    #[doc(hidden)]
     pub supports_enhanced_monitoring: bool,
     /// <p>Indicates whether a DB instance supports IAM database authentication.</p>
+    #[doc(hidden)]
     pub supports_iam_database_authentication: bool,
     /// <p>True if a DB instance supports Performance Insights, otherwise false.</p>
+    #[doc(hidden)]
     pub supports_performance_insights: bool,
     /// <p>Minimum storage size for a DB instance.</p>
+    #[doc(hidden)]
     pub min_storage_size: std::option::Option<i32>,
     /// <p>Maximum storage size for a DB instance.</p>
+    #[doc(hidden)]
     pub max_storage_size: std::option::Option<i32>,
     /// <p>Minimum total provisioned IOPS for a DB instance.</p>
+    #[doc(hidden)]
     pub min_iops_per_db_instance: std::option::Option<i32>,
     /// <p>Maximum total provisioned IOPS for a DB instance.</p>
+    #[doc(hidden)]
     pub max_iops_per_db_instance: std::option::Option<i32>,
     /// <p>Minimum provisioned IOPS per GiB for a DB instance.</p>
+    #[doc(hidden)]
     pub min_iops_per_gib: std::option::Option<f64>,
     /// <p>Maximum provisioned IOPS per GiB for a DB instance.</p>
+    #[doc(hidden)]
     pub max_iops_per_gib: std::option::Option<f64>,
     /// <p>A list of the available processor features for the DB instance class of a DB instance.</p>
+    #[doc(hidden)]
     pub available_processor_features:
         std::option::Option<std::vec::Vec<crate::model::AvailableProcessorFeature>>,
     /// <p>A list of the supported DB engine modes.</p>
+    #[doc(hidden)]
     pub supported_engine_modes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Whether Amazon RDS can automatically scale storage for DB instances that use the specified DB instance class.</p>
+    #[doc(hidden)]
     pub supports_storage_autoscaling: std::option::Option<bool>,
     /// <p>Whether a DB instance supports Kerberos Authentication.</p>
+    #[doc(hidden)]
     pub supports_kerberos_authentication: std::option::Option<bool>,
     /// <p>Whether a DB instance supports RDS on Outposts.</p>
     /// <p>For more information about RDS on Outposts, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Amazon RDS on Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub outpost_capable: bool,
     /// <p>The list of supported modes for Database Activity Streams. Aurora PostgreSQL returns the value <code>[sync, async]</code>. Aurora MySQL and RDS for Oracle return <code>[async]</code> only. If Database Activity Streams isn't supported, the return value is an empty list.</p>
+    #[doc(hidden)]
     pub supported_activity_stream_modes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A value that indicates whether you can use Aurora global databases with a specific combination of other DB engine attributes.</p>
+    #[doc(hidden)]
     pub supports_global_databases: bool,
     /// <p>Whether DB instances can be configured as a Multi-AZ DB cluster.</p>
     /// <p>For more information on Multi-AZ DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub supports_clusters: bool,
     /// <p>The network types supported by the DB instance (<code>IPV4</code> or <code>DUAL</code>).</p>
     /// <p>A DB instance can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (<code>DUAL</code>).</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"> Working with a DB instance in a VPC</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub supported_network_types: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl OrderableDbInstanceOption {
@@ -16471,11 +17209,10 @@ impl std::fmt::Debug for OrderableDbInstanceOption {
         formatter.finish()
     }
 }
-/// See [`OrderableDbInstanceOption`](crate::model::OrderableDbInstanceOption)
+/// See [`OrderableDbInstanceOption`](crate::model::OrderableDbInstanceOption).
 pub mod orderable_db_instance_option {
 
-    /// A builder for [`OrderableDbInstanceOption`](crate::model::OrderableDbInstanceOption)
-    #[non_exhaustive]
+    /// A builder for [`OrderableDbInstanceOption`](crate::model::OrderableDbInstanceOption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine: std::option::Option<std::string::String>,
@@ -16899,7 +17636,7 @@ pub mod orderable_db_instance_option {
             self.supported_network_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrderableDbInstanceOption`](crate::model::OrderableDbInstanceOption)
+        /// Consumes the builder and constructs a [`OrderableDbInstanceOption`](crate::model::OrderableDbInstanceOption).
         pub fn build(self) -> crate::model::OrderableDbInstanceOption {
             crate::model::OrderableDbInstanceOption {
                 engine: self.engine,
@@ -16941,7 +17678,7 @@ pub mod orderable_db_instance_option {
     }
 }
 impl OrderableDbInstanceOption {
-    /// Creates a new builder-style object to manufacture [`OrderableDbInstanceOption`](crate::model::OrderableDbInstanceOption)
+    /// Creates a new builder-style object to manufacture [`OrderableDbInstanceOption`](crate::model::OrderableDbInstanceOption).
     pub fn builder() -> crate::model::orderable_db_instance_option::Builder {
         crate::model::orderable_db_instance_option::Builder::default()
     }
@@ -16952,37 +17689,53 @@ impl OrderableDbInstanceOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OptionGroupOption {
     /// <p>The name of the option.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the option.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The name of the engine that this option can be applied to.</p>
+    #[doc(hidden)]
     pub engine_name: std::option::Option<std::string::String>,
     /// <p>Indicates the major engine version that the option is available for.</p>
+    #[doc(hidden)]
     pub major_engine_version: std::option::Option<std::string::String>,
     /// <p>The minimum required engine version for the option to be applied.</p>
+    #[doc(hidden)]
     pub minimum_required_minor_engine_version: std::option::Option<std::string::String>,
     /// <p>Specifies whether the option requires a port.</p>
+    #[doc(hidden)]
     pub port_required: bool,
     /// <p>If the option requires a port, specifies the default port for the option.</p>
+    #[doc(hidden)]
     pub default_port: std::option::Option<i32>,
     /// <p>The options that are prerequisites for this option.</p>
+    #[doc(hidden)]
     pub options_depended_on: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The options that conflict with this option.</p>
+    #[doc(hidden)]
     pub options_conflicts_with: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Persistent options can't be removed from an option group while DB instances are associated with the option group. If you disassociate all DB instances from the option group, your can remove the persistent option from the option group.</p>
+    #[doc(hidden)]
     pub persistent: bool,
     /// <p>Permanent options can never be removed from an option group. An option group containing a permanent option can't be removed from a DB instance.</p>
+    #[doc(hidden)]
     pub permanent: bool,
     /// <p>If true, you must enable the Auto Minor Version Upgrade setting for your DB instance before you can use this option. You can enable Auto Minor Version Upgrade when you first create your DB instance, or by modifying your DB instance later.</p>
+    #[doc(hidden)]
     pub requires_auto_minor_engine_version_upgrade: bool,
     /// <p>If true, you can only use this option with a DB instance that is in a VPC.</p>
+    #[doc(hidden)]
     pub vpc_only: bool,
     /// <p>If true, you can change the option to an earlier version of the option. This only applies to options that have different versions available.</p>
+    #[doc(hidden)]
     pub supports_option_version_downgrade: std::option::Option<bool>,
     /// <p>The option settings that are available (and the default value) for each option in an option group.</p>
+    #[doc(hidden)]
     pub option_group_option_settings:
         std::option::Option<std::vec::Vec<crate::model::OptionGroupOptionSetting>>,
     /// <p>The versions that are available for the option.</p>
+    #[doc(hidden)]
     pub option_group_option_versions:
         std::option::Option<std::vec::Vec<crate::model::OptionVersion>>,
 }
@@ -17093,11 +17846,10 @@ impl std::fmt::Debug for OptionGroupOption {
         formatter.finish()
     }
 }
-/// See [`OptionGroupOption`](crate::model::OptionGroupOption)
+/// See [`OptionGroupOption`](crate::model::OptionGroupOption).
 pub mod option_group_option {
 
-    /// A builder for [`OptionGroupOption`](crate::model::OptionGroupOption)
-    #[non_exhaustive]
+    /// A builder for [`OptionGroupOption`](crate::model::OptionGroupOption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -17334,7 +18086,7 @@ pub mod option_group_option {
             self.option_group_option_versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`OptionGroupOption`](crate::model::OptionGroupOption)
+        /// Consumes the builder and constructs a [`OptionGroupOption`](crate::model::OptionGroupOption).
         pub fn build(self) -> crate::model::OptionGroupOption {
             crate::model::OptionGroupOption {
                 name: self.name,
@@ -17360,7 +18112,7 @@ pub mod option_group_option {
     }
 }
 impl OptionGroupOption {
-    /// Creates a new builder-style object to manufacture [`OptionGroupOption`](crate::model::OptionGroupOption)
+    /// Creates a new builder-style object to manufacture [`OptionGroupOption`](crate::model::OptionGroupOption).
     pub fn builder() -> crate::model::option_group_option::Builder {
         crate::model::option_group_option::Builder::default()
     }
@@ -17371,8 +18123,10 @@ impl OptionGroupOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OptionVersion {
     /// <p>The version of the option.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>True if the version is the default version of the option, and otherwise false.</p>
+    #[doc(hidden)]
     pub is_default: bool,
 }
 impl OptionVersion {
@@ -17393,11 +18147,10 @@ impl std::fmt::Debug for OptionVersion {
         formatter.finish()
     }
 }
-/// See [`OptionVersion`](crate::model::OptionVersion)
+/// See [`OptionVersion`](crate::model::OptionVersion).
 pub mod option_version {
 
-    /// A builder for [`OptionVersion`](crate::model::OptionVersion)
-    #[non_exhaustive]
+    /// A builder for [`OptionVersion`](crate::model::OptionVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version: std::option::Option<std::string::String>,
@@ -17424,7 +18177,7 @@ pub mod option_version {
             self.is_default = input;
             self
         }
-        /// Consumes the builder and constructs a [`OptionVersion`](crate::model::OptionVersion)
+        /// Consumes the builder and constructs a [`OptionVersion`](crate::model::OptionVersion).
         pub fn build(self) -> crate::model::OptionVersion {
             crate::model::OptionVersion {
                 version: self.version,
@@ -17434,7 +18187,7 @@ pub mod option_version {
     }
 }
 impl OptionVersion {
-    /// Creates a new builder-style object to manufacture [`OptionVersion`](crate::model::OptionVersion)
+    /// Creates a new builder-style object to manufacture [`OptionVersion`](crate::model::OptionVersion).
     pub fn builder() -> crate::model::option_version::Builder {
         crate::model::option_version::Builder::default()
     }
@@ -17445,20 +18198,28 @@ impl OptionVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OptionGroupOptionSetting {
     /// <p>The name of the option group option.</p>
+    #[doc(hidden)]
     pub setting_name: std::option::Option<std::string::String>,
     /// <p>The description of the option group option.</p>
+    #[doc(hidden)]
     pub setting_description: std::option::Option<std::string::String>,
     /// <p>The default value for the option group option.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
     /// <p>The DB engine specific parameter type for the option group option.</p>
+    #[doc(hidden)]
     pub apply_type: std::option::Option<std::string::String>,
     /// <p>Indicates the acceptable values for the option group option.</p>
+    #[doc(hidden)]
     pub allowed_values: std::option::Option<std::string::String>,
     /// <p>Boolean value where true indicates that this option group option can be changed from the default value.</p>
+    #[doc(hidden)]
     pub is_modifiable: bool,
     /// <p>Boolean value where true indicates that a value must be specified for this option setting of the option group option.</p>
+    #[doc(hidden)]
     pub is_required: bool,
     /// <p>The minimum DB engine version required for the corresponding allowed value for this option setting.</p>
+    #[doc(hidden)]
     pub minimum_engine_version_per_allowed_value:
         std::option::Option<std::vec::Vec<crate::model::MinimumEngineVersionPerAllowedValue>>,
 }
@@ -17515,11 +18276,10 @@ impl std::fmt::Debug for OptionGroupOptionSetting {
         formatter.finish()
     }
 }
-/// See [`OptionGroupOptionSetting`](crate::model::OptionGroupOptionSetting)
+/// See [`OptionGroupOptionSetting`](crate::model::OptionGroupOptionSetting).
 pub mod option_group_option_setting {
 
-    /// A builder for [`OptionGroupOptionSetting`](crate::model::OptionGroupOptionSetting)
-    #[non_exhaustive]
+    /// A builder for [`OptionGroupOptionSetting`](crate::model::OptionGroupOptionSetting).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) setting_name: std::option::Option<std::string::String>,
@@ -17638,7 +18398,7 @@ pub mod option_group_option_setting {
             self.minimum_engine_version_per_allowed_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`OptionGroupOptionSetting`](crate::model::OptionGroupOptionSetting)
+        /// Consumes the builder and constructs a [`OptionGroupOptionSetting`](crate::model::OptionGroupOptionSetting).
         pub fn build(self) -> crate::model::OptionGroupOptionSetting {
             crate::model::OptionGroupOptionSetting {
                 setting_name: self.setting_name,
@@ -17655,7 +18415,7 @@ pub mod option_group_option_setting {
     }
 }
 impl OptionGroupOptionSetting {
-    /// Creates a new builder-style object to manufacture [`OptionGroupOptionSetting`](crate::model::OptionGroupOptionSetting)
+    /// Creates a new builder-style object to manufacture [`OptionGroupOptionSetting`](crate::model::OptionGroupOptionSetting).
     pub fn builder() -> crate::model::option_group_option_setting::Builder {
         crate::model::option_group_option_setting::Builder::default()
     }
@@ -17666,8 +18426,10 @@ impl OptionGroupOptionSetting {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MinimumEngineVersionPerAllowedValue {
     /// <p>The allowed value for an option setting.</p>
+    #[doc(hidden)]
     pub allowed_value: std::option::Option<std::string::String>,
     /// <p>The minimum DB engine version required for the allowed value.</p>
+    #[doc(hidden)]
     pub minimum_engine_version: std::option::Option<std::string::String>,
 }
 impl MinimumEngineVersionPerAllowedValue {
@@ -17688,11 +18450,10 @@ impl std::fmt::Debug for MinimumEngineVersionPerAllowedValue {
         formatter.finish()
     }
 }
-/// See [`MinimumEngineVersionPerAllowedValue`](crate::model::MinimumEngineVersionPerAllowedValue)
+/// See [`MinimumEngineVersionPerAllowedValue`](crate::model::MinimumEngineVersionPerAllowedValue).
 pub mod minimum_engine_version_per_allowed_value {
 
-    /// A builder for [`MinimumEngineVersionPerAllowedValue`](crate::model::MinimumEngineVersionPerAllowedValue)
-    #[non_exhaustive]
+    /// A builder for [`MinimumEngineVersionPerAllowedValue`](crate::model::MinimumEngineVersionPerAllowedValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allowed_value: std::option::Option<std::string::String>,
@@ -17725,7 +18486,7 @@ pub mod minimum_engine_version_per_allowed_value {
             self.minimum_engine_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`MinimumEngineVersionPerAllowedValue`](crate::model::MinimumEngineVersionPerAllowedValue)
+        /// Consumes the builder and constructs a [`MinimumEngineVersionPerAllowedValue`](crate::model::MinimumEngineVersionPerAllowedValue).
         pub fn build(self) -> crate::model::MinimumEngineVersionPerAllowedValue {
             crate::model::MinimumEngineVersionPerAllowedValue {
                 allowed_value: self.allowed_value,
@@ -17735,7 +18496,7 @@ pub mod minimum_engine_version_per_allowed_value {
     }
 }
 impl MinimumEngineVersionPerAllowedValue {
-    /// Creates a new builder-style object to manufacture [`MinimumEngineVersionPerAllowedValue`](crate::model::MinimumEngineVersionPerAllowedValue)
+    /// Creates a new builder-style object to manufacture [`MinimumEngineVersionPerAllowedValue`](crate::model::MinimumEngineVersionPerAllowedValue).
     pub fn builder() -> crate::model::minimum_engine_version_per_allowed_value::Builder {
         crate::model::minimum_engine_version_per_allowed_value::Builder::default()
     }
@@ -17747,8 +18508,10 @@ impl MinimumEngineVersionPerAllowedValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportTask {
     /// <p>A unique identifier for the snapshot export task. This ID isn't an identifier for the Amazon S3 bucket where the snapshot is exported to.</p>
+    #[doc(hidden)]
     pub export_task_identifier: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the snapshot exported to Amazon S3.</p>
+    #[doc(hidden)]
     pub source_arn: std::option::Option<std::string::String>,
     /// <p>The data exported from the snapshot. Valid values are the following:</p>
     /// <ul>
@@ -17757,30 +18520,43 @@ pub struct ExportTask {
     /// <li> <p> <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot. This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.</p> </li>
     /// <li> <p> <code>database.schema.table</code> <i>table-name</i> - Export a table of the database schema. This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub export_only: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The time that the snapshot was created.</p>
+    #[doc(hidden)]
     pub snapshot_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the snapshot export task started.</p>
+    #[doc(hidden)]
     pub task_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the snapshot export task completed.</p>
+    #[doc(hidden)]
     pub task_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon S3 bucket that the snapshot is exported to.</p>
+    #[doc(hidden)]
     pub s3_bucket: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 bucket prefix that is the file name and path of the exported snapshot.</p>
+    #[doc(hidden)]
     pub s3_prefix: std::option::Option<std::string::String>,
     /// <p>The name of the IAM role that is used to write to Amazon S3 when exporting a snapshot.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
     /// <p>The key identifier of the Amazon Web Services KMS key that is used to encrypt the snapshot when it's exported to Amazon S3. The KMS key identifier is its key ARN, key ID, alias ARN, or alias name. The IAM role used for the snapshot export must have encryption and decryption permissions to use this KMS key.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The progress status of the export task.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The progress of the snapshot export task as a percentage.</p>
+    #[doc(hidden)]
     pub percent_progress: i32,
     /// <p>The total amount of data exported, in gigabytes.</p>
+    #[doc(hidden)]
     pub total_extracted_data_in_gb: i32,
     /// <p>The reason the export failed, if it failed.</p>
+    #[doc(hidden)]
     pub failure_cause: std::option::Option<std::string::String>,
     /// <p>A warning about the snapshot export task.</p>
+    #[doc(hidden)]
     pub warning_message: std::option::Option<std::string::String>,
 }
 impl ExportTask {
@@ -17875,11 +18651,10 @@ impl std::fmt::Debug for ExportTask {
         formatter.finish()
     }
 }
-/// See [`ExportTask`](crate::model::ExportTask)
+/// See [`ExportTask`](crate::model::ExportTask).
 pub mod export_task {
 
-    /// A builder for [`ExportTask`](crate::model::ExportTask)
-    #[non_exhaustive]
+    /// A builder for [`ExportTask`](crate::model::ExportTask).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_task_identifier: std::option::Option<std::string::String>,
@@ -18088,7 +18863,7 @@ pub mod export_task {
             self.warning_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportTask`](crate::model::ExportTask)
+        /// Consumes the builder and constructs a [`ExportTask`](crate::model::ExportTask).
         pub fn build(self) -> crate::model::ExportTask {
             crate::model::ExportTask {
                 export_task_identifier: self.export_task_identifier,
@@ -18111,27 +18886,33 @@ pub mod export_task {
     }
 }
 impl ExportTask {
-    /// Creates a new builder-style object to manufacture [`ExportTask`](crate::model::ExportTask)
+    /// Creates a new builder-style object to manufacture [`ExportTask`](crate::model::ExportTask).
     pub fn builder() -> crate::model::export_task::Builder {
         crate::model::export_task::Builder::default()
     }
 }
 
-/// <p>This data type is used as a response element in the <code>DescribeEvents</code> action.</p>
+/// <p>This data type is used as a response element in the <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeEvents.html">DescribeEvents</a> action.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Event {
     /// <p>Provides the identifier for the source of the event.</p>
+    #[doc(hidden)]
     pub source_identifier: std::option::Option<std::string::String>,
     /// <p>Specifies the source type for this event.</p>
+    #[doc(hidden)]
     pub source_type: std::option::Option<crate::model::SourceType>,
     /// <p>Provides the text of this event.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>Specifies the category for the event.</p>
+    #[doc(hidden)]
     pub event_categories: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies the date and time of the event.</p>
+    #[doc(hidden)]
     pub date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) for the event.</p>
+    #[doc(hidden)]
     pub source_arn: std::option::Option<std::string::String>,
 }
 impl Event {
@@ -18172,11 +18953,10 @@ impl std::fmt::Debug for Event {
         formatter.finish()
     }
 }
-/// See [`Event`](crate::model::Event)
+/// See [`Event`](crate::model::Event).
 pub mod event {
 
-    /// A builder for [`Event`](crate::model::Event)
-    #[non_exhaustive]
+    /// A builder for [`Event`](crate::model::Event).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_identifier: std::option::Option<std::string::String>,
@@ -18262,7 +19042,7 @@ pub mod event {
             self.source_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Event`](crate::model::Event)
+        /// Consumes the builder and constructs a [`Event`](crate::model::Event).
         pub fn build(self) -> crate::model::Event {
             crate::model::Event {
                 source_identifier: self.source_identifier,
@@ -18276,7 +19056,7 @@ pub mod event {
     }
 }
 impl Event {
-    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event)
+    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event).
     pub fn builder() -> crate::model::event::Builder {
         crate::model::event::Builder::default()
     }
@@ -18370,13 +19150,15 @@ impl AsRef<str> for SourceType {
     }
 }
 
-/// <p>Contains the results of a successful invocation of the <code>DescribeEventCategories</code> operation.</p>
+/// <p>Contains the results of a successful invocation of the <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeEventCategories.html">DescribeEventCategories</a> operation.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventCategoriesMap {
     /// <p>The source type that the returned categories belong to</p>
+    #[doc(hidden)]
     pub source_type: std::option::Option<std::string::String>,
     /// <p>The event categories for the specified source type</p>
+    #[doc(hidden)]
     pub event_categories: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl EventCategoriesMap {
@@ -18397,11 +19179,10 @@ impl std::fmt::Debug for EventCategoriesMap {
         formatter.finish()
     }
 }
-/// See [`EventCategoriesMap`](crate::model::EventCategoriesMap)
+/// See [`EventCategoriesMap`](crate::model::EventCategoriesMap).
 pub mod event_categories_map {
 
-    /// A builder for [`EventCategoriesMap`](crate::model::EventCategoriesMap)
-    #[non_exhaustive]
+    /// A builder for [`EventCategoriesMap`](crate::model::EventCategoriesMap).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_type: std::option::Option<std::string::String>,
@@ -18437,7 +19218,7 @@ pub mod event_categories_map {
             self.event_categories = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventCategoriesMap`](crate::model::EventCategoriesMap)
+        /// Consumes the builder and constructs a [`EventCategoriesMap`](crate::model::EventCategoriesMap).
         pub fn build(self) -> crate::model::EventCategoriesMap {
             crate::model::EventCategoriesMap {
                 source_type: self.source_type,
@@ -18447,7 +19228,7 @@ pub mod event_categories_map {
     }
 }
 impl EventCategoriesMap {
-    /// Creates a new builder-style object to manufacture [`EventCategoriesMap`](crate::model::EventCategoriesMap)
+    /// Creates a new builder-style object to manufacture [`EventCategoriesMap`](crate::model::EventCategoriesMap).
     pub fn builder() -> crate::model::event_categories_map::Builder {
         crate::model::event_categories_map::Builder::default()
     }
@@ -18458,10 +19239,13 @@ impl EventCategoriesMap {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EngineDefaults {
     /// <p>Specifies the name of the DB parameter group family that the engine default parameters apply to.</p>
+    #[doc(hidden)]
     pub db_parameter_group_family: std::option::Option<std::string::String>,
     /// <p>An optional pagination token provided by a previous EngineDefaults request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code> .</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>Contains a list of engine default parameters.</p>
+    #[doc(hidden)]
     pub parameters: std::option::Option<std::vec::Vec<crate::model::Parameter>>,
 }
 impl EngineDefaults {
@@ -18487,11 +19271,10 @@ impl std::fmt::Debug for EngineDefaults {
         formatter.finish()
     }
 }
-/// See [`EngineDefaults`](crate::model::EngineDefaults)
+/// See [`EngineDefaults`](crate::model::EngineDefaults).
 pub mod engine_defaults {
 
-    /// A builder for [`EngineDefaults`](crate::model::EngineDefaults)
-    #[non_exhaustive]
+    /// A builder for [`EngineDefaults`](crate::model::EngineDefaults).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_parameter_group_family: std::option::Option<std::string::String>,
@@ -18541,7 +19324,7 @@ pub mod engine_defaults {
             self.parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`EngineDefaults`](crate::model::EngineDefaults)
+        /// Consumes the builder and constructs a [`EngineDefaults`](crate::model::EngineDefaults).
         pub fn build(self) -> crate::model::EngineDefaults {
             crate::model::EngineDefaults {
                 db_parameter_group_family: self.db_parameter_group_family,
@@ -18552,7 +19335,7 @@ pub mod engine_defaults {
     }
 }
 impl EngineDefaults {
-    /// Creates a new builder-style object to manufacture [`EngineDefaults`](crate::model::EngineDefaults)
+    /// Creates a new builder-style object to manufacture [`EngineDefaults`](crate::model::EngineDefaults).
     pub fn builder() -> crate::model::engine_defaults::Builder {
         crate::model::engine_defaults::Builder::default()
     }
@@ -18564,12 +19347,16 @@ impl EngineDefaults {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbParameterGroup {
     /// <p>The name of the DB parameter group.</p>
+    #[doc(hidden)]
     pub db_parameter_group_name: std::option::Option<std::string::String>,
     /// <p>The name of the DB parameter group family that this DB parameter group is compatible with.</p>
+    #[doc(hidden)]
     pub db_parameter_group_family: std::option::Option<std::string::String>,
     /// <p>Provides the customer-specified description for this DB parameter group.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the DB parameter group.</p>
+    #[doc(hidden)]
     pub db_parameter_group_arn: std::option::Option<std::string::String>,
 }
 impl DbParameterGroup {
@@ -18600,11 +19387,10 @@ impl std::fmt::Debug for DbParameterGroup {
         formatter.finish()
     }
 }
-/// See [`DbParameterGroup`](crate::model::DbParameterGroup)
+/// See [`DbParameterGroup`](crate::model::DbParameterGroup).
 pub mod db_parameter_group {
 
-    /// A builder for [`DbParameterGroup`](crate::model::DbParameterGroup)
-    #[non_exhaustive]
+    /// A builder for [`DbParameterGroup`](crate::model::DbParameterGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_parameter_group_name: std::option::Option<std::string::String>,
@@ -18662,7 +19448,7 @@ pub mod db_parameter_group {
             self.db_parameter_group_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbParameterGroup`](crate::model::DbParameterGroup)
+        /// Consumes the builder and constructs a [`DbParameterGroup`](crate::model::DbParameterGroup).
         pub fn build(self) -> crate::model::DbParameterGroup {
             crate::model::DbParameterGroup {
                 db_parameter_group_name: self.db_parameter_group_name,
@@ -18674,7 +19460,7 @@ pub mod db_parameter_group {
     }
 }
 impl DbParameterGroup {
-    /// Creates a new builder-style object to manufacture [`DbParameterGroup`](crate::model::DbParameterGroup)
+    /// Creates a new builder-style object to manufacture [`DbParameterGroup`](crate::model::DbParameterGroup).
     pub fn builder() -> crate::model::db_parameter_group::Builder {
         crate::model::db_parameter_group::Builder::default()
     }
@@ -18685,10 +19471,13 @@ impl DbParameterGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbLogFilesDetails {
     /// <p>The name of the log file for the specified DB instance.</p>
+    #[doc(hidden)]
     pub log_file_name: std::option::Option<std::string::String>,
     /// <p>A POSIX timestamp when the last log entry was written.</p>
+    #[doc(hidden)]
     pub last_written: i64,
     /// <p>The size, in bytes, of the log file for the specified DB instance.</p>
+    #[doc(hidden)]
     pub size: i64,
 }
 impl DescribeDbLogFilesDetails {
@@ -18714,11 +19503,10 @@ impl std::fmt::Debug for DescribeDbLogFilesDetails {
         formatter.finish()
     }
 }
-/// See [`DescribeDbLogFilesDetails`](crate::model::DescribeDbLogFilesDetails)
+/// See [`DescribeDbLogFilesDetails`](crate::model::DescribeDbLogFilesDetails).
 pub mod describe_db_log_files_details {
 
-    /// A builder for [`DescribeDbLogFilesDetails`](crate::model::DescribeDbLogFilesDetails)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbLogFilesDetails`](crate::model::DescribeDbLogFilesDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_file_name: std::option::Option<std::string::String>,
@@ -18759,7 +19547,7 @@ pub mod describe_db_log_files_details {
             self.size = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbLogFilesDetails`](crate::model::DescribeDbLogFilesDetails)
+        /// Consumes the builder and constructs a [`DescribeDbLogFilesDetails`](crate::model::DescribeDbLogFilesDetails).
         pub fn build(self) -> crate::model::DescribeDbLogFilesDetails {
             crate::model::DescribeDbLogFilesDetails {
                 log_file_name: self.log_file_name,
@@ -18770,7 +19558,7 @@ pub mod describe_db_log_files_details {
     }
 }
 impl DescribeDbLogFilesDetails {
-    /// Creates a new builder-style object to manufacture [`DescribeDbLogFilesDetails`](crate::model::DescribeDbLogFilesDetails)
+    /// Creates a new builder-style object to manufacture [`DescribeDbLogFilesDetails`](crate::model::DescribeDbLogFilesDetails).
     pub fn builder() -> crate::model::describe_db_log_files_details::Builder {
         crate::model::describe_db_log_files_details::Builder::default()
     }
@@ -18781,33 +19569,47 @@ impl DescribeDbLogFilesDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbEngineVersion {
     /// <p>The name of the database engine.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The version number of the database engine.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The name of the DB parameter group family for the database engine.</p>
+    #[doc(hidden)]
     pub db_parameter_group_family: std::option::Option<std::string::String>,
     /// <p>The description of the database engine.</p>
+    #[doc(hidden)]
     pub db_engine_description: std::option::Option<std::string::String>,
     /// <p>The description of the database engine version.</p>
+    #[doc(hidden)]
     pub db_engine_version_description: std::option::Option<std::string::String>,
     /// <p>The default character set for new instances of this engine version, if the <code>CharacterSetName</code> parameter of the CreateDBInstance API isn't specified.</p>
+    #[doc(hidden)]
     pub default_character_set: std::option::Option<crate::model::CharacterSet>,
     /// <p>A list of the character sets supported by this engine for the <code>CharacterSetName</code> parameter of the <code>CreateDBInstance</code> operation.</p>
+    #[doc(hidden)]
     pub supported_character_sets: std::option::Option<std::vec::Vec<crate::model::CharacterSet>>,
     /// <p>A list of the character sets supported by the Oracle DB engine for the <code>NcharCharacterSetName</code> parameter of the <code>CreateDBInstance</code> operation.</p>
+    #[doc(hidden)]
     pub supported_nchar_character_sets:
         std::option::Option<std::vec::Vec<crate::model::CharacterSet>>,
     /// <p>A list of engine versions that this database engine version can be upgraded to.</p>
+    #[doc(hidden)]
     pub valid_upgrade_target: std::option::Option<std::vec::Vec<crate::model::UpgradeTarget>>,
     /// <p>A list of the time zones supported by this engine for the <code>Timezone</code> parameter of the <code>CreateDBInstance</code> action.</p>
+    #[doc(hidden)]
     pub supported_timezones: std::option::Option<std::vec::Vec<crate::model::Timezone>>,
     /// <p>The types of logs that the database engine has available for export to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub exportable_log_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A value that indicates whether the engine version supports exporting the log types specified by ExportableLogTypes to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub supports_log_exports_to_cloudwatch_logs: bool,
     /// <p>Indicates whether the database engine version supports read replicas.</p>
+    #[doc(hidden)]
     pub supports_read_replica: bool,
     /// <p>A list of the supported DB engine modes.</p>
+    #[doc(hidden)]
     pub supported_engine_modes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of features supported by the DB engine.</p>
     /// <p>The supported features vary by DB engine and DB engine version.</p>
@@ -18820,28 +19622,40 @@ pub struct DbEngineVersion {
     /// <p>For example, to determine the supported features for RDS for PostgreSQL version 13.3 using the CLI, use the following command:</p>
     /// <p> <code>aws rds describe-db-engine-versions --engine postgres --engine-version 13.3</code> </p>
     /// <p>The supported features are listed under <code>SupportedFeatureNames</code> in the output.</p>
+    #[doc(hidden)]
     pub supported_feature_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The status of the DB engine version, either <code>available</code> or <code>deprecated</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>A value that indicates whether you can use Aurora parallel query with a specific DB engine version.</p>
+    #[doc(hidden)]
     pub supports_parallel_query: bool,
     /// <p>A value that indicates whether you can use Aurora global databases with a specific DB engine version.</p>
+    #[doc(hidden)]
     pub supports_global_databases: bool,
     /// <p>The major engine version of the CEV.</p>
+    #[doc(hidden)]
     pub major_engine_version: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon S3 bucket that contains your database installation files.</p>
+    #[doc(hidden)]
     pub database_installation_files_s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 directory that contains the database installation files. If not specified, then no prefix is assumed.</p>
+    #[doc(hidden)]
     pub database_installation_files_s3_prefix: std::option::Option<std::string::String>,
     /// <p>The ARN of the custom engine version.</p>
+    #[doc(hidden)]
     pub db_engine_version_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services KMS key identifier for an encrypted CEV. This parameter is required for RDS Custom, but optional for Amazon RDS.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The creation time of the DB engine version.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of tags. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A value that indicates whether the engine version supports Babelfish for Aurora PostgreSQL.</p>
+    #[doc(hidden)]
     pub supports_babelfish: bool,
 }
 impl DbEngineVersion {
@@ -19009,11 +19823,10 @@ impl std::fmt::Debug for DbEngineVersion {
         formatter.finish()
     }
 }
-/// See [`DbEngineVersion`](crate::model::DbEngineVersion)
+/// See [`DbEngineVersion`](crate::model::DbEngineVersion).
 pub mod db_engine_version {
 
-    /// A builder for [`DbEngineVersion`](crate::model::DbEngineVersion)
-    #[non_exhaustive]
+    /// A builder for [`DbEngineVersion`](crate::model::DbEngineVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine: std::option::Option<std::string::String>,
@@ -19442,7 +20255,7 @@ pub mod db_engine_version {
             self.supports_babelfish = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbEngineVersion`](crate::model::DbEngineVersion)
+        /// Consumes the builder and constructs a [`DbEngineVersion`](crate::model::DbEngineVersion).
         pub fn build(self) -> crate::model::DbEngineVersion {
             crate::model::DbEngineVersion {
                 engine: self.engine,
@@ -19479,7 +20292,7 @@ pub mod db_engine_version {
     }
 }
 impl DbEngineVersion {
-    /// Creates a new builder-style object to manufacture [`DbEngineVersion`](crate::model::DbEngineVersion)
+    /// Creates a new builder-style object to manufacture [`DbEngineVersion`](crate::model::DbEngineVersion).
     pub fn builder() -> crate::model::db_engine_version::Builder {
         crate::model::db_engine_version::Builder::default()
     }
@@ -19491,18 +20304,25 @@ impl DbEngineVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbClusterSnapshot {
     /// <p>Provides the list of Availability Zones (AZs) where instances in the DB cluster snapshot can be restored.</p>
+    #[doc(hidden)]
     pub availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies the identifier for the DB cluster snapshot.</p>
+    #[doc(hidden)]
     pub db_cluster_snapshot_identifier: std::option::Option<std::string::String>,
     /// <p>Specifies the DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.</p>
+    #[doc(hidden)]
     pub db_cluster_identifier: std::option::Option<std::string::String>,
     /// <p>Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).</p>
+    #[doc(hidden)]
     pub snapshot_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the name of the database engine for this DB cluster snapshot.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>Provides the engine mode of the database engine for this DB cluster snapshot.</p>
+    #[doc(hidden)]
     pub engine_mode: std::option::Option<std::string::String>,
     /// <p>Specifies the allocated storage size in gibibytes (GiB).</p>
+    #[doc(hidden)]
     pub allocated_storage: i32,
     /// <p>Specifies the status of this DB cluster snapshot. Valid statuses are the following:</p>
     /// <ul>
@@ -19510,35 +20330,50 @@ pub struct DbClusterSnapshot {
     /// <li> <p> <code>copying</code> </p> </li>
     /// <li> <p> <code>creating</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>Specifies the port that the DB cluster was listening on at the time of the snapshot.</p>
+    #[doc(hidden)]
     pub port: i32,
     /// <p>Provides the VPC ID associated with the DB cluster snapshot.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>Specifies the time when the DB cluster was created, in Universal Coordinated Time (UTC).</p>
+    #[doc(hidden)]
     pub cluster_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Provides the master username for this DB cluster snapshot.</p>
+    #[doc(hidden)]
     pub master_username: std::option::Option<std::string::String>,
     /// <p>Provides the version of the database engine for this DB cluster snapshot.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>Provides the license model information for this DB cluster snapshot.</p>
+    #[doc(hidden)]
     pub license_model: std::option::Option<std::string::String>,
     /// <p>Provides the type of the DB cluster snapshot.</p>
+    #[doc(hidden)]
     pub snapshot_type: std::option::Option<std::string::String>,
     /// <p>Specifies the percentage of the estimated data that has been transferred.</p>
+    #[doc(hidden)]
     pub percent_progress: i32,
     /// <p>Specifies whether the DB cluster snapshot is encrypted.</p>
+    #[doc(hidden)]
     pub storage_encrypted: bool,
     /// <p>If <code>StorageEncrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB cluster snapshot.</p>
     /// <p>The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the DB cluster snapshot.</p>
+    #[doc(hidden)]
     pub db_cluster_snapshot_arn: std::option::Option<std::string::String>,
     /// <p>If the DB cluster snapshot was copied from a source DB cluster snapshot, the Amazon Resource Name (ARN) for the source DB cluster snapshot, otherwise, a null value.</p>
+    #[doc(hidden)]
     pub source_db_cluster_snapshot_arn: std::option::Option<std::string::String>,
     /// <p>True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts is enabled, and otherwise false.</p>
+    #[doc(hidden)]
     pub iam_database_authentication_enabled: bool,
     /// <p>A list of tags. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl DbClusterSnapshot {
@@ -19674,11 +20509,10 @@ impl std::fmt::Debug for DbClusterSnapshot {
         formatter.finish()
     }
 }
-/// See [`DbClusterSnapshot`](crate::model::DbClusterSnapshot)
+/// See [`DbClusterSnapshot`](crate::model::DbClusterSnapshot).
 pub mod db_cluster_snapshot {
 
-    /// A builder for [`DbClusterSnapshot`](crate::model::DbClusterSnapshot)
-    #[non_exhaustive]
+    /// A builder for [`DbClusterSnapshot`](crate::model::DbClusterSnapshot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -19994,7 +20828,7 @@ pub mod db_cluster_snapshot {
             self.tag_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbClusterSnapshot`](crate::model::DbClusterSnapshot)
+        /// Consumes the builder and constructs a [`DbClusterSnapshot`](crate::model::DbClusterSnapshot).
         pub fn build(self) -> crate::model::DbClusterSnapshot {
             crate::model::DbClusterSnapshot {
                 availability_zones: self.availability_zones,
@@ -20026,7 +20860,7 @@ pub mod db_cluster_snapshot {
     }
 }
 impl DbClusterSnapshot {
-    /// Creates a new builder-style object to manufacture [`DbClusterSnapshot`](crate::model::DbClusterSnapshot)
+    /// Creates a new builder-style object to manufacture [`DbClusterSnapshot`](crate::model::DbClusterSnapshot).
     pub fn builder() -> crate::model::db_cluster_snapshot::Builder {
         crate::model::db_cluster_snapshot::Builder::default()
     }
@@ -20038,12 +20872,16 @@ impl DbClusterSnapshot {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbClusterParameterGroup {
     /// <p>The name of the DB cluster parameter group.</p>
+    #[doc(hidden)]
     pub db_cluster_parameter_group_name: std::option::Option<std::string::String>,
     /// <p>The name of the DB parameter group family that this DB cluster parameter group is compatible with.</p>
+    #[doc(hidden)]
     pub db_parameter_group_family: std::option::Option<std::string::String>,
     /// <p>Provides the customer-specified description for this DB cluster parameter group.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the DB cluster parameter group.</p>
+    #[doc(hidden)]
     pub db_cluster_parameter_group_arn: std::option::Option<std::string::String>,
 }
 impl DbClusterParameterGroup {
@@ -20080,11 +20918,10 @@ impl std::fmt::Debug for DbClusterParameterGroup {
         formatter.finish()
     }
 }
-/// See [`DbClusterParameterGroup`](crate::model::DbClusterParameterGroup)
+/// See [`DbClusterParameterGroup`](crate::model::DbClusterParameterGroup).
 pub mod db_cluster_parameter_group {
 
-    /// A builder for [`DbClusterParameterGroup`](crate::model::DbClusterParameterGroup)
-    #[non_exhaustive]
+    /// A builder for [`DbClusterParameterGroup`](crate::model::DbClusterParameterGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_parameter_group_name: std::option::Option<std::string::String>,
@@ -20148,7 +20985,7 @@ pub mod db_cluster_parameter_group {
             self.db_cluster_parameter_group_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbClusterParameterGroup`](crate::model::DbClusterParameterGroup)
+        /// Consumes the builder and constructs a [`DbClusterParameterGroup`](crate::model::DbClusterParameterGroup).
         pub fn build(self) -> crate::model::DbClusterParameterGroup {
             crate::model::DbClusterParameterGroup {
                 db_cluster_parameter_group_name: self.db_cluster_parameter_group_name,
@@ -20160,7 +20997,7 @@ pub mod db_cluster_parameter_group {
     }
 }
 impl DbClusterParameterGroup {
-    /// Creates a new builder-style object to manufacture [`DbClusterParameterGroup`](crate::model::DbClusterParameterGroup)
+    /// Creates a new builder-style object to manufacture [`DbClusterParameterGroup`](crate::model::DbClusterParameterGroup).
     pub fn builder() -> crate::model::db_cluster_parameter_group::Builder {
         crate::model::db_cluster_parameter_group::Builder::default()
     }
@@ -20178,24 +21015,34 @@ impl DbClusterParameterGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbClusterEndpoint {
     /// <p>The identifier associated with the endpoint. This parameter is stored as a lowercase string.</p>
+    #[doc(hidden)]
     pub db_cluster_endpoint_identifier: std::option::Option<std::string::String>,
     /// <p>The DB cluster identifier of the DB cluster associated with the endpoint. This parameter is stored as a lowercase string.</p>
+    #[doc(hidden)]
     pub db_cluster_identifier: std::option::Option<std::string::String>,
     /// <p>A unique system-generated identifier for an endpoint. It remains the same for the whole life of the endpoint.</p>
+    #[doc(hidden)]
     pub db_cluster_endpoint_resource_identifier: std::option::Option<std::string::String>,
     /// <p>The DNS address of the endpoint.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The current status of the endpoint. One of: <code>creating</code>, <code>available</code>, <code>deleting</code>, <code>inactive</code>, <code>modifying</code>. The <code>inactive</code> state applies to an endpoint that can't be used for a certain kind of cluster, such as a <code>writer</code> endpoint for a read-only secondary cluster in a global database.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The type of the endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>CUSTOM</code>.</p>
+    #[doc(hidden)]
     pub endpoint_type: std::option::Option<std::string::String>,
     /// <p>The type associated with a custom endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.</p>
+    #[doc(hidden)]
     pub custom_endpoint_type: std::option::Option<std::string::String>,
     /// <p>List of DB instance identifiers that are part of the custom endpoint group.</p>
+    #[doc(hidden)]
     pub static_members: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.</p>
+    #[doc(hidden)]
     pub excluded_members: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) for the endpoint.</p>
+    #[doc(hidden)]
     pub db_cluster_endpoint_arn: std::option::Option<std::string::String>,
 }
 impl DbClusterEndpoint {
@@ -20262,11 +21109,10 @@ impl std::fmt::Debug for DbClusterEndpoint {
         formatter.finish()
     }
 }
-/// See [`DbClusterEndpoint`](crate::model::DbClusterEndpoint)
+/// See [`DbClusterEndpoint`](crate::model::DbClusterEndpoint).
 pub mod db_cluster_endpoint {
 
-    /// A builder for [`DbClusterEndpoint`](crate::model::DbClusterEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`DbClusterEndpoint`](crate::model::DbClusterEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_endpoint_identifier: std::option::Option<std::string::String>,
@@ -20424,7 +21270,7 @@ pub mod db_cluster_endpoint {
             self.db_cluster_endpoint_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbClusterEndpoint`](crate::model::DbClusterEndpoint)
+        /// Consumes the builder and constructs a [`DbClusterEndpoint`](crate::model::DbClusterEndpoint).
         pub fn build(self) -> crate::model::DbClusterEndpoint {
             crate::model::DbClusterEndpoint {
                 db_cluster_endpoint_identifier: self.db_cluster_endpoint_identifier,
@@ -20443,7 +21289,7 @@ pub mod db_cluster_endpoint {
     }
 }
 impl DbClusterEndpoint {
-    /// Creates a new builder-style object to manufacture [`DbClusterEndpoint`](crate::model::DbClusterEndpoint)
+    /// Creates a new builder-style object to manufacture [`DbClusterEndpoint`](crate::model::DbClusterEndpoint).
     pub fn builder() -> crate::model::db_cluster_endpoint::Builder {
         crate::model::db_cluster_endpoint::Builder::default()
     }
@@ -20454,14 +21300,19 @@ impl DbClusterEndpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DbClusterBacktrack {
     /// <p>Contains a user-supplied DB cluster identifier. This identifier is the unique key that identifies a DB cluster.</p>
+    #[doc(hidden)]
     pub db_cluster_identifier: std::option::Option<std::string::String>,
     /// <p>Contains the backtrack identifier.</p>
+    #[doc(hidden)]
     pub backtrack_identifier: std::option::Option<std::string::String>,
     /// <p>The timestamp of the time to which the DB cluster was backtracked.</p>
+    #[doc(hidden)]
     pub backtrack_to: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of the time from which the DB cluster was backtracked.</p>
+    #[doc(hidden)]
     pub backtracked_from: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of the time at which the backtrack was requested.</p>
+    #[doc(hidden)]
     pub backtrack_request_creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the backtrack. This property returns one of the following values:</p>
     /// <ul>
@@ -20470,6 +21321,7 @@ pub struct DbClusterBacktrack {
     /// <li> <p> <code>failed</code> - An error occurred while the backtrack was applied to or rolled back from the DB cluster.</p> </li>
     /// <li> <p> <code>pending</code> - The backtrack is currently pending application to or rollback from the DB cluster.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl DbClusterBacktrack {
@@ -20521,11 +21373,10 @@ impl std::fmt::Debug for DbClusterBacktrack {
         formatter.finish()
     }
 }
-/// See [`DbClusterBacktrack`](crate::model::DbClusterBacktrack)
+/// See [`DbClusterBacktrack`](crate::model::DbClusterBacktrack).
 pub mod db_cluster_backtrack {
 
-    /// A builder for [`DbClusterBacktrack`](crate::model::DbClusterBacktrack)
-    #[non_exhaustive]
+    /// A builder for [`DbClusterBacktrack`](crate::model::DbClusterBacktrack).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_identifier: std::option::Option<std::string::String>,
@@ -20626,7 +21477,7 @@ pub mod db_cluster_backtrack {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DbClusterBacktrack`](crate::model::DbClusterBacktrack)
+        /// Consumes the builder and constructs a [`DbClusterBacktrack`](crate::model::DbClusterBacktrack).
         pub fn build(self) -> crate::model::DbClusterBacktrack {
             crate::model::DbClusterBacktrack {
                 db_cluster_identifier: self.db_cluster_identifier,
@@ -20640,7 +21491,7 @@ pub mod db_cluster_backtrack {
     }
 }
 impl DbClusterBacktrack {
-    /// Creates a new builder-style object to manufacture [`DbClusterBacktrack`](crate::model::DbClusterBacktrack)
+    /// Creates a new builder-style object to manufacture [`DbClusterBacktrack`](crate::model::DbClusterBacktrack).
     pub fn builder() -> crate::model::db_cluster_backtrack::Builder {
         crate::model::db_cluster_backtrack::Builder::default()
     }
@@ -20673,10 +21524,13 @@ impl DbClusterBacktrack {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountQuota {
     /// <p>The name of the Amazon RDS quota for this Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub account_quota_name: std::option::Option<std::string::String>,
     /// <p>The amount currently used toward the quota maximum.</p>
+    #[doc(hidden)]
     pub used: i64,
     /// <p>The maximum allowed value for the quota.</p>
+    #[doc(hidden)]
     pub max: i64,
 }
 impl AccountQuota {
@@ -20702,11 +21556,10 @@ impl std::fmt::Debug for AccountQuota {
         formatter.finish()
     }
 }
-/// See [`AccountQuota`](crate::model::AccountQuota)
+/// See [`AccountQuota`](crate::model::AccountQuota).
 pub mod account_quota {
 
-    /// A builder for [`AccountQuota`](crate::model::AccountQuota)
-    #[non_exhaustive]
+    /// A builder for [`AccountQuota`](crate::model::AccountQuota).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_quota_name: std::option::Option<std::string::String>,
@@ -20747,7 +21600,7 @@ pub mod account_quota {
             self.max = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountQuota`](crate::model::AccountQuota)
+        /// Consumes the builder and constructs a [`AccountQuota`](crate::model::AccountQuota).
         pub fn build(self) -> crate::model::AccountQuota {
             crate::model::AccountQuota {
                 account_quota_name: self.account_quota_name,
@@ -20758,7 +21611,7 @@ pub mod account_quota {
     }
 }
 impl AccountQuota {
-    /// Creates a new builder-style object to manufacture [`AccountQuota`](crate::model::AccountQuota)
+    /// Creates a new builder-style object to manufacture [`AccountQuota`](crate::model::AccountQuota).
     pub fn builder() -> crate::model::account_quota::Builder {
         crate::model::account_quota::Builder::default()
     }

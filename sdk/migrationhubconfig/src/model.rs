@@ -5,12 +5,16 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HomeRegionControl {
     /// <p>A unique identifier that's generated for each home region control. It's always a string that begins with "hrc-" followed by 12 lowercase letters and numbers.</p>
+    #[doc(hidden)]
     pub control_id: std::option::Option<std::string::String>,
     /// <p>The AWS Region that's been set as home region. For example, "us-west-2" or "eu-central-1" are valid home regions.</p>
+    #[doc(hidden)]
     pub home_region: std::option::Option<std::string::String>,
     /// <p>The target parameter specifies the identifier to which the home region is applied, which is always an <code>ACCOUNT</code>. It applies the home region to the current <code>ACCOUNT</code>.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<crate::model::Target>,
     /// <p>A timestamp representing the time when the customer called <code>CreateHomeregionControl</code> and set the home region for the account.</p>
+    #[doc(hidden)]
     pub requested_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl HomeRegionControl {
@@ -41,11 +45,10 @@ impl std::fmt::Debug for HomeRegionControl {
         formatter.finish()
     }
 }
-/// See [`HomeRegionControl`](crate::model::HomeRegionControl)
+/// See [`HomeRegionControl`](crate::model::HomeRegionControl).
 pub mod home_region_control {
 
-    /// A builder for [`HomeRegionControl`](crate::model::HomeRegionControl)
-    #[non_exhaustive]
+    /// A builder for [`HomeRegionControl`](crate::model::HomeRegionControl).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) control_id: std::option::Option<std::string::String>,
@@ -97,7 +100,7 @@ pub mod home_region_control {
             self.requested_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`HomeRegionControl`](crate::model::HomeRegionControl)
+        /// Consumes the builder and constructs a [`HomeRegionControl`](crate::model::HomeRegionControl).
         pub fn build(self) -> crate::model::HomeRegionControl {
             crate::model::HomeRegionControl {
                 control_id: self.control_id,
@@ -109,7 +112,7 @@ pub mod home_region_control {
     }
 }
 impl HomeRegionControl {
-    /// Creates a new builder-style object to manufacture [`HomeRegionControl`](crate::model::HomeRegionControl)
+    /// Creates a new builder-style object to manufacture [`HomeRegionControl`](crate::model::HomeRegionControl).
     pub fn builder() -> crate::model::home_region_control::Builder {
         crate::model::home_region_control::Builder::default()
     }
@@ -120,8 +123,10 @@ impl HomeRegionControl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Target {
     /// <p>The target type is always an <code>ACCOUNT</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TargetType>,
     /// <p>The <code>TargetID</code> is a 12-character identifier of the <code>ACCOUNT</code> for which the control was created. (This must be the current account.) </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
 }
 impl Target {
@@ -142,11 +147,10 @@ impl std::fmt::Debug for Target {
         formatter.finish()
     }
 }
-/// See [`Target`](crate::model::Target)
+/// See [`Target`](crate::model::Target).
 pub mod target {
 
-    /// A builder for [`Target`](crate::model::Target)
-    #[non_exhaustive]
+    /// A builder for [`Target`](crate::model::Target).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::TargetType>,
@@ -173,7 +177,7 @@ pub mod target {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Target`](crate::model::Target)
+        /// Consumes the builder and constructs a [`Target`](crate::model::Target).
         pub fn build(self) -> crate::model::Target {
             crate::model::Target {
                 r#type: self.r#type,
@@ -183,7 +187,7 @@ pub mod target {
     }
 }
 impl Target {
-    /// Creates a new builder-style object to manufacture [`Target`](crate::model::Target)
+    /// Creates a new builder-style object to manufacture [`Target`](crate::model::Target).
     pub fn builder() -> crate::model::target::Builder {
         crate::model::target::Builder::default()
     }

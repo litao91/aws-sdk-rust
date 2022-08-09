@@ -361,6 +361,7 @@ impl TranscriptResultStream {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TranscriptEvent {
     /// <p>The transcription of the audio stream. The transcription is composed of all of the items in the results list.</p>
+    #[doc(hidden)]
     pub transcript: std::option::Option<crate::model::Transcript>,
 }
 impl TranscriptEvent {
@@ -376,11 +377,10 @@ impl std::fmt::Debug for TranscriptEvent {
         formatter.finish()
     }
 }
-/// See [`TranscriptEvent`](crate::model::TranscriptEvent)
+/// See [`TranscriptEvent`](crate::model::TranscriptEvent).
 pub mod transcript_event {
 
-    /// A builder for [`TranscriptEvent`](crate::model::TranscriptEvent)
-    #[non_exhaustive]
+    /// A builder for [`TranscriptEvent`](crate::model::TranscriptEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transcript: std::option::Option<crate::model::Transcript>,
@@ -399,7 +399,7 @@ pub mod transcript_event {
             self.transcript = input;
             self
         }
-        /// Consumes the builder and constructs a [`TranscriptEvent`](crate::model::TranscriptEvent)
+        /// Consumes the builder and constructs a [`TranscriptEvent`](crate::model::TranscriptEvent).
         pub fn build(self) -> crate::model::TranscriptEvent {
             crate::model::TranscriptEvent {
                 transcript: self.transcript,
@@ -408,7 +408,7 @@ pub mod transcript_event {
     }
 }
 impl TranscriptEvent {
-    /// Creates a new builder-style object to manufacture [`TranscriptEvent`](crate::model::TranscriptEvent)
+    /// Creates a new builder-style object to manufacture [`TranscriptEvent`](crate::model::TranscriptEvent).
     pub fn builder() -> crate::model::transcript_event::Builder {
         crate::model::transcript_event::Builder::default()
     }
@@ -419,6 +419,7 @@ impl TranscriptEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Transcript {
     /// <p> <code>Result</code> objects that contain the results of transcribing a portion of the input audio stream. The array can be empty.</p>
+    #[doc(hidden)]
     pub results: std::option::Option<std::vec::Vec<crate::model::Result>>,
 }
 impl Transcript {
@@ -434,11 +435,10 @@ impl std::fmt::Debug for Transcript {
         formatter.finish()
     }
 }
-/// See [`Transcript`](crate::model::Transcript)
+/// See [`Transcript`](crate::model::Transcript).
 pub mod transcript {
 
-    /// A builder for [`Transcript`](crate::model::Transcript)
-    #[non_exhaustive]
+    /// A builder for [`Transcript`](crate::model::Transcript).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) results: std::option::Option<std::vec::Vec<crate::model::Result>>,
@@ -463,7 +463,7 @@ pub mod transcript {
             self.results = input;
             self
         }
-        /// Consumes the builder and constructs a [`Transcript`](crate::model::Transcript)
+        /// Consumes the builder and constructs a [`Transcript`](crate::model::Transcript).
         pub fn build(self) -> crate::model::Transcript {
             crate::model::Transcript {
                 results: self.results,
@@ -472,7 +472,7 @@ pub mod transcript {
     }
 }
 impl Transcript {
-    /// Creates a new builder-style object to manufacture [`Transcript`](crate::model::Transcript)
+    /// Creates a new builder-style object to manufacture [`Transcript`](crate::model::Transcript).
     pub fn builder() -> crate::model::transcript::Builder {
         crate::model::transcript::Builder::default()
     }
@@ -483,22 +483,30 @@ impl Transcript {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Result {
     /// <p>A unique identifier for the result. </p>
+    #[doc(hidden)]
     pub result_id: std::option::Option<std::string::String>,
     /// <p>The offset in seconds from the beginning of the audio stream to the beginning of the result.</p>
+    #[doc(hidden)]
     pub start_time: f64,
     /// <p>The offset in seconds from the beginning of the audio stream to the end of the result.</p>
+    #[doc(hidden)]
     pub end_time: f64,
     /// <p>Amazon Transcribe divides the incoming audio stream into segments at natural points in the audio. Transcription results are returned based on these segments. </p>
     /// <p>The <code>IsPartial</code> field is <code>true</code> to indicate that Amazon Transcribe has additional transcription data to send, <code>false</code> to indicate that this is the last transcription result for the segment.</p>
+    #[doc(hidden)]
     pub is_partial: bool,
     /// <p>A list of possible transcriptions for the audio. Each alternative typically contains one <code>item</code> that contains the result of the transcription.</p>
+    #[doc(hidden)]
     pub alternatives: std::option::Option<std::vec::Vec<crate::model::Alternative>>,
     /// <p>When channel identification is enabled, Amazon Transcribe transcribes the speech from each audio channel separately.</p>
     /// <p>You can use <code>ChannelId</code> to retrieve the transcription results for a single channel in your audio stream.</p>
+    #[doc(hidden)]
     pub channel_id: std::option::Option<std::string::String>,
     /// <p>The language code of the identified language in your media stream.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The language code of the dominant language identified in your media.</p>
+    #[doc(hidden)]
     pub language_identification:
         std::option::Option<std::vec::Vec<crate::model::LanguageWithScore>>,
 }
@@ -554,11 +562,10 @@ impl std::fmt::Debug for Result {
         formatter.finish()
     }
 }
-/// See [`Result`](crate::model::Result)
+/// See [`Result`](crate::model::Result).
 pub mod result {
 
-    /// A builder for [`Result`](crate::model::Result)
-    #[non_exhaustive]
+    /// A builder for [`Result`](crate::model::Result).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) result_id: std::option::Option<std::string::String>,
@@ -677,7 +684,7 @@ pub mod result {
             self.language_identification = input;
             self
         }
-        /// Consumes the builder and constructs a [`Result`](crate::model::Result)
+        /// Consumes the builder and constructs a [`Result`](crate::model::Result).
         pub fn build(self) -> crate::model::Result {
             crate::model::Result {
                 result_id: self.result_id,
@@ -693,7 +700,7 @@ pub mod result {
     }
 }
 impl Result {
-    /// Creates a new builder-style object to manufacture [`Result`](crate::model::Result)
+    /// Creates a new builder-style object to manufacture [`Result`](crate::model::Result).
     pub fn builder() -> crate::model::result::Builder {
         crate::model::result::Builder::default()
     }
@@ -704,8 +711,10 @@ impl Result {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LanguageWithScore {
     /// <p>The language code of the language identified by Amazon Transcribe.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The confidence score for the associated language code. Confidence scores are values between zero and one; larger values indicate a higher confidence in the identified language. </p>
+    #[doc(hidden)]
     pub score: f64,
 }
 impl LanguageWithScore {
@@ -726,11 +735,10 @@ impl std::fmt::Debug for LanguageWithScore {
         formatter.finish()
     }
 }
-/// See [`LanguageWithScore`](crate::model::LanguageWithScore)
+/// See [`LanguageWithScore`](crate::model::LanguageWithScore).
 pub mod language_with_score {
 
-    /// A builder for [`LanguageWithScore`](crate::model::LanguageWithScore)
-    #[non_exhaustive]
+    /// A builder for [`LanguageWithScore`](crate::model::LanguageWithScore).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) language_code: std::option::Option<crate::model::LanguageCode>,
@@ -760,7 +768,7 @@ pub mod language_with_score {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`LanguageWithScore`](crate::model::LanguageWithScore)
+        /// Consumes the builder and constructs a [`LanguageWithScore`](crate::model::LanguageWithScore).
         pub fn build(self) -> crate::model::LanguageWithScore {
             crate::model::LanguageWithScore {
                 language_code: self.language_code,
@@ -770,7 +778,7 @@ pub mod language_with_score {
     }
 }
 impl LanguageWithScore {
-    /// Creates a new builder-style object to manufacture [`LanguageWithScore`](crate::model::LanguageWithScore)
+    /// Creates a new builder-style object to manufacture [`LanguageWithScore`](crate::model::LanguageWithScore).
     pub fn builder() -> crate::model::language_with_score::Builder {
         crate::model::language_with_score::Builder::default()
     }
@@ -781,10 +789,13 @@ impl LanguageWithScore {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Alternative {
     /// <p>The text that was transcribed from the audio.</p>
+    #[doc(hidden)]
     pub transcript: std::option::Option<std::string::String>,
     /// <p>One or more alternative interpretations of the input audio. </p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::Item>>,
     /// <p>Contains the entities identified as personally identifiable information (PII) in the transcription output.</p>
+    #[doc(hidden)]
     pub entities: std::option::Option<std::vec::Vec<crate::model::Entity>>,
 }
 impl Alternative {
@@ -810,11 +821,10 @@ impl std::fmt::Debug for Alternative {
         formatter.finish()
     }
 }
-/// See [`Alternative`](crate::model::Alternative)
+/// See [`Alternative`](crate::model::Alternative).
 pub mod alternative {
 
-    /// A builder for [`Alternative`](crate::model::Alternative)
-    #[non_exhaustive]
+    /// A builder for [`Alternative`](crate::model::Alternative).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transcript: std::option::Option<std::string::String>,
@@ -870,7 +880,7 @@ pub mod alternative {
             self.entities = input;
             self
         }
-        /// Consumes the builder and constructs a [`Alternative`](crate::model::Alternative)
+        /// Consumes the builder and constructs a [`Alternative`](crate::model::Alternative).
         pub fn build(self) -> crate::model::Alternative {
             crate::model::Alternative {
                 transcript: self.transcript,
@@ -881,7 +891,7 @@ pub mod alternative {
     }
 }
 impl Alternative {
-    /// Creates a new builder-style object to manufacture [`Alternative`](crate::model::Alternative)
+    /// Creates a new builder-style object to manufacture [`Alternative`](crate::model::Alternative).
     pub fn builder() -> crate::model::alternative::Builder {
         crate::model::alternative::Builder::default()
     }
@@ -892,16 +902,22 @@ impl Alternative {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Entity {
     /// <p>The start time of speech that was identified as PII.</p>
+    #[doc(hidden)]
     pub start_time: f64,
     /// <p>The end time of speech that was identified as PII.</p>
+    #[doc(hidden)]
     pub end_time: f64,
     /// <p>The category of information identified in this entity; for example, PII.</p>
+    #[doc(hidden)]
     pub category: std::option::Option<std::string::String>,
     /// <p>The type of PII identified in this entity; for example, name or credit card number.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The words in the transcription output that have been identified as a PII entity.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
     /// <p>A value between zero and one that Amazon Transcribe assigns to PII identified in the source audio. Larger values indicate a higher confidence in PII identification.</p>
+    #[doc(hidden)]
     pub confidence: std::option::Option<f64>,
 }
 impl Entity {
@@ -942,11 +958,10 @@ impl std::fmt::Debug for Entity {
         formatter.finish()
     }
 }
-/// See [`Entity`](crate::model::Entity)
+/// See [`Entity`](crate::model::Entity).
 pub mod entity {
 
-    /// A builder for [`Entity`](crate::model::Entity)
-    #[non_exhaustive]
+    /// A builder for [`Entity`](crate::model::Entity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<f64>,
@@ -1017,7 +1032,7 @@ pub mod entity {
             self.confidence = input;
             self
         }
-        /// Consumes the builder and constructs a [`Entity`](crate::model::Entity)
+        /// Consumes the builder and constructs a [`Entity`](crate::model::Entity).
         pub fn build(self) -> crate::model::Entity {
             crate::model::Entity {
                 start_time: self.start_time.unwrap_or_default(),
@@ -1031,7 +1046,7 @@ pub mod entity {
     }
 }
 impl Entity {
-    /// Creates a new builder-style object to manufacture [`Entity`](crate::model::Entity)
+    /// Creates a new builder-style object to manufacture [`Entity`](crate::model::Entity).
     pub fn builder() -> crate::model::entity::Builder {
         crate::model::entity::Builder::default()
     }
@@ -1042,20 +1057,28 @@ impl Entity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Item {
     /// <p>The offset from the beginning of the audio stream to the beginning of the audio that resulted in the item.</p>
+    #[doc(hidden)]
     pub start_time: f64,
     /// <p>The offset from the beginning of the audio stream to the end of the audio that resulted in the item.</p>
+    #[doc(hidden)]
     pub end_time: f64,
     /// <p>The type of the item. <code>PRONUNCIATION</code> indicates that the item is a word that was recognized in the input audio. <code>PUNCTUATION</code> indicates that the item was interpreted as a pause in the input audio.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ItemType>,
     /// <p>The word or punctuation that was recognized in the input audio.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
     /// <p>Indicates whether a word in the item matches a word in the vocabulary filter you've chosen for your media stream. If <code>true</code> then a word in the item matches your vocabulary filter.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_match: bool,
     /// <p>If speaker identification is enabled, shows the speakers identified in the media stream.</p>
+    #[doc(hidden)]
     pub speaker: std::option::Option<std::string::String>,
     /// <p>A value between zero and one for an item that is a confidence score that Amazon Transcribe assigns to each word or phrase that it transcribes.</p>
+    #[doc(hidden)]
     pub confidence: std::option::Option<f64>,
     /// <p>If partial result stabilization has been enabled, indicates whether the word or phrase in the item is stable. If <code>Stable</code> is <code>true</code>, the result is stable.</p>
+    #[doc(hidden)]
     pub stable: std::option::Option<bool>,
 }
 impl Item {
@@ -1106,11 +1129,10 @@ impl std::fmt::Debug for Item {
         formatter.finish()
     }
 }
-/// See [`Item`](crate::model::Item)
+/// See [`Item`](crate::model::Item).
 pub mod item {
 
-    /// A builder for [`Item`](crate::model::Item)
-    #[non_exhaustive]
+    /// A builder for [`Item`](crate::model::Item).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<f64>,
@@ -1203,7 +1225,7 @@ pub mod item {
             self.stable = input;
             self
         }
-        /// Consumes the builder and constructs a [`Item`](crate::model::Item)
+        /// Consumes the builder and constructs a [`Item`](crate::model::Item).
         pub fn build(self) -> crate::model::Item {
             crate::model::Item {
                 start_time: self.start_time.unwrap_or_default(),
@@ -1219,7 +1241,7 @@ pub mod item {
     }
 }
 impl Item {
-    /// Creates a new builder-style object to manufacture [`Item`](crate::model::Item)
+    /// Creates a new builder-style object to manufacture [`Item`](crate::model::Item).
     pub fn builder() -> crate::model::item::Builder {
         crate::model::item::Builder::default()
     }
@@ -1384,6 +1406,7 @@ impl AudioStream {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AudioEvent {
     /// <p>An audio blob that contains the next part of the audio that you want to transcribe. The maximum audio chunk size is 32 KB.</p>
+    #[doc(hidden)]
     pub audio_chunk: std::option::Option<aws_smithy_types::Blob>,
 }
 impl AudioEvent {
@@ -1399,11 +1422,10 @@ impl std::fmt::Debug for AudioEvent {
         formatter.finish()
     }
 }
-/// See [`AudioEvent`](crate::model::AudioEvent)
+/// See [`AudioEvent`](crate::model::AudioEvent).
 pub mod audio_event {
 
-    /// A builder for [`AudioEvent`](crate::model::AudioEvent)
-    #[non_exhaustive]
+    /// A builder for [`AudioEvent`](crate::model::AudioEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_chunk: std::option::Option<aws_smithy_types::Blob>,
@@ -1422,7 +1444,7 @@ pub mod audio_event {
             self.audio_chunk = input;
             self
         }
-        /// Consumes the builder and constructs a [`AudioEvent`](crate::model::AudioEvent)
+        /// Consumes the builder and constructs a [`AudioEvent`](crate::model::AudioEvent).
         pub fn build(self) -> crate::model::AudioEvent {
             crate::model::AudioEvent {
                 audio_chunk: self.audio_chunk,
@@ -1431,7 +1453,7 @@ pub mod audio_event {
     }
 }
 impl AudioEvent {
-    /// Creates a new builder-style object to manufacture [`AudioEvent`](crate::model::AudioEvent)
+    /// Creates a new builder-style object to manufacture [`AudioEvent`](crate::model::AudioEvent).
     pub fn builder() -> crate::model::audio_event::Builder {
         crate::model::audio_event::Builder::default()
     }
@@ -1532,6 +1554,7 @@ impl MedicalTranscriptResultStream {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MedicalTranscriptEvent {
     /// <p>The transcription of the audio stream. The transcription is composed of all of the items in the results list.</p>
+    #[doc(hidden)]
     pub transcript: std::option::Option<crate::model::MedicalTranscript>,
 }
 impl MedicalTranscriptEvent {
@@ -1547,11 +1570,10 @@ impl std::fmt::Debug for MedicalTranscriptEvent {
         formatter.finish()
     }
 }
-/// See [`MedicalTranscriptEvent`](crate::model::MedicalTranscriptEvent)
+/// See [`MedicalTranscriptEvent`](crate::model::MedicalTranscriptEvent).
 pub mod medical_transcript_event {
 
-    /// A builder for [`MedicalTranscriptEvent`](crate::model::MedicalTranscriptEvent)
-    #[non_exhaustive]
+    /// A builder for [`MedicalTranscriptEvent`](crate::model::MedicalTranscriptEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transcript: std::option::Option<crate::model::MedicalTranscript>,
@@ -1570,7 +1592,7 @@ pub mod medical_transcript_event {
             self.transcript = input;
             self
         }
-        /// Consumes the builder and constructs a [`MedicalTranscriptEvent`](crate::model::MedicalTranscriptEvent)
+        /// Consumes the builder and constructs a [`MedicalTranscriptEvent`](crate::model::MedicalTranscriptEvent).
         pub fn build(self) -> crate::model::MedicalTranscriptEvent {
             crate::model::MedicalTranscriptEvent {
                 transcript: self.transcript,
@@ -1579,7 +1601,7 @@ pub mod medical_transcript_event {
     }
 }
 impl MedicalTranscriptEvent {
-    /// Creates a new builder-style object to manufacture [`MedicalTranscriptEvent`](crate::model::MedicalTranscriptEvent)
+    /// Creates a new builder-style object to manufacture [`MedicalTranscriptEvent`](crate::model::MedicalTranscriptEvent).
     pub fn builder() -> crate::model::medical_transcript_event::Builder {
         crate::model::medical_transcript_event::Builder::default()
     }
@@ -1590,6 +1612,7 @@ impl MedicalTranscriptEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MedicalTranscript {
     /// <p> <code>MedicalResult</code> objects that contain the results of transcribing a portion of the input audio stream. The array can be empty.</p>
+    #[doc(hidden)]
     pub results: std::option::Option<std::vec::Vec<crate::model::MedicalResult>>,
 }
 impl MedicalTranscript {
@@ -1605,11 +1628,10 @@ impl std::fmt::Debug for MedicalTranscript {
         formatter.finish()
     }
 }
-/// See [`MedicalTranscript`](crate::model::MedicalTranscript)
+/// See [`MedicalTranscript`](crate::model::MedicalTranscript).
 pub mod medical_transcript {
 
-    /// A builder for [`MedicalTranscript`](crate::model::MedicalTranscript)
-    #[non_exhaustive]
+    /// A builder for [`MedicalTranscript`](crate::model::MedicalTranscript).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) results: std::option::Option<std::vec::Vec<crate::model::MedicalResult>>,
@@ -1634,7 +1656,7 @@ pub mod medical_transcript {
             self.results = input;
             self
         }
-        /// Consumes the builder and constructs a [`MedicalTranscript`](crate::model::MedicalTranscript)
+        /// Consumes the builder and constructs a [`MedicalTranscript`](crate::model::MedicalTranscript).
         pub fn build(self) -> crate::model::MedicalTranscript {
             crate::model::MedicalTranscript {
                 results: self.results,
@@ -1643,7 +1665,7 @@ pub mod medical_transcript {
     }
 }
 impl MedicalTranscript {
-    /// Creates a new builder-style object to manufacture [`MedicalTranscript`](crate::model::MedicalTranscript)
+    /// Creates a new builder-style object to manufacture [`MedicalTranscript`](crate::model::MedicalTranscript).
     pub fn builder() -> crate::model::medical_transcript::Builder {
         crate::model::medical_transcript::Builder::default()
     }
@@ -1654,18 +1676,24 @@ impl MedicalTranscript {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MedicalResult {
     /// <p>A unique identifier for the result.</p>
+    #[doc(hidden)]
     pub result_id: std::option::Option<std::string::String>,
     /// <p>The time, in seconds, from the beginning of the audio stream to the beginning of the result.</p>
+    #[doc(hidden)]
     pub start_time: f64,
     /// <p>The time, in seconds, from the beginning of the audio stream to the end of the result.</p>
+    #[doc(hidden)]
     pub end_time: f64,
     /// <p>Amazon Transcribe Medical divides the incoming audio stream into segments at natural points in the audio. Transcription results are returned based on these segments.</p>
     /// <p>The <code>IsPartial</code> field is <code>true</code> to indicate that Amazon Transcribe Medical has additional transcription data to send. The <code>IsPartial</code> field is <code>false</code> to indicate that this is the last transcription result for the segment.</p>
+    #[doc(hidden)]
     pub is_partial: bool,
     /// <p>A list of possible transcriptions of the audio. Each alternative typically contains one <code>Item</code> that contains the result of the transcription.</p>
+    #[doc(hidden)]
     pub alternatives: std::option::Option<std::vec::Vec<crate::model::MedicalAlternative>>,
     /// <p>When channel identification is enabled, Amazon Transcribe Medical transcribes the speech from each audio channel separately.</p>
     /// <p>You can use <code>ChannelId</code> to retrieve the transcription results for a single channel in your audio stream.</p>
+    #[doc(hidden)]
     pub channel_id: std::option::Option<std::string::String>,
 }
 impl MedicalResult {
@@ -1708,11 +1736,10 @@ impl std::fmt::Debug for MedicalResult {
         formatter.finish()
     }
 }
-/// See [`MedicalResult`](crate::model::MedicalResult)
+/// See [`MedicalResult`](crate::model::MedicalResult).
 pub mod medical_result {
 
-    /// A builder for [`MedicalResult`](crate::model::MedicalResult)
-    #[non_exhaustive]
+    /// A builder for [`MedicalResult`](crate::model::MedicalResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) result_id: std::option::Option<std::string::String>,
@@ -1797,7 +1824,7 @@ pub mod medical_result {
             self.channel_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`MedicalResult`](crate::model::MedicalResult)
+        /// Consumes the builder and constructs a [`MedicalResult`](crate::model::MedicalResult).
         pub fn build(self) -> crate::model::MedicalResult {
             crate::model::MedicalResult {
                 result_id: self.result_id,
@@ -1811,7 +1838,7 @@ pub mod medical_result {
     }
 }
 impl MedicalResult {
-    /// Creates a new builder-style object to manufacture [`MedicalResult`](crate::model::MedicalResult)
+    /// Creates a new builder-style object to manufacture [`MedicalResult`](crate::model::MedicalResult).
     pub fn builder() -> crate::model::medical_result::Builder {
         crate::model::medical_result::Builder::default()
     }
@@ -1822,10 +1849,13 @@ impl MedicalResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MedicalAlternative {
     /// <p>The text that was transcribed from the audio.</p>
+    #[doc(hidden)]
     pub transcript: std::option::Option<std::string::String>,
     /// <p>A list of objects that contains words and punctuation marks that represents one or more interpretations of the input audio.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::MedicalItem>>,
     /// <p>Contains the medical entities identified as personal health information in the transcription output.</p>
+    #[doc(hidden)]
     pub entities: std::option::Option<std::vec::Vec<crate::model::MedicalEntity>>,
 }
 impl MedicalAlternative {
@@ -1851,11 +1881,10 @@ impl std::fmt::Debug for MedicalAlternative {
         formatter.finish()
     }
 }
-/// See [`MedicalAlternative`](crate::model::MedicalAlternative)
+/// See [`MedicalAlternative`](crate::model::MedicalAlternative).
 pub mod medical_alternative {
 
-    /// A builder for [`MedicalAlternative`](crate::model::MedicalAlternative)
-    #[non_exhaustive]
+    /// A builder for [`MedicalAlternative`](crate::model::MedicalAlternative).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transcript: std::option::Option<std::string::String>,
@@ -1911,7 +1940,7 @@ pub mod medical_alternative {
             self.entities = input;
             self
         }
-        /// Consumes the builder and constructs a [`MedicalAlternative`](crate::model::MedicalAlternative)
+        /// Consumes the builder and constructs a [`MedicalAlternative`](crate::model::MedicalAlternative).
         pub fn build(self) -> crate::model::MedicalAlternative {
             crate::model::MedicalAlternative {
                 transcript: self.transcript,
@@ -1922,7 +1951,7 @@ pub mod medical_alternative {
     }
 }
 impl MedicalAlternative {
-    /// Creates a new builder-style object to manufacture [`MedicalAlternative`](crate::model::MedicalAlternative)
+    /// Creates a new builder-style object to manufacture [`MedicalAlternative`](crate::model::MedicalAlternative).
     pub fn builder() -> crate::model::medical_alternative::Builder {
         crate::model::medical_alternative::Builder::default()
     }
@@ -1933,14 +1962,19 @@ impl MedicalAlternative {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MedicalEntity {
     /// <p>The start time of the speech that was identified as a medical entity.</p>
+    #[doc(hidden)]
     pub start_time: f64,
     /// <p>The end time of the speech that was identified as a medical entity.</p>
+    #[doc(hidden)]
     pub end_time: f64,
     /// <p>The type of personal health information of the medical entity.</p>
+    #[doc(hidden)]
     pub category: std::option::Option<std::string::String>,
     /// <p>The word or words in the transcription output that have been identified as a medical entity.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
     /// <p>A value between zero and one that Amazon Transcribe Medical assigned to the personal health information that it identified in the source audio. Larger values indicate that Amazon Transcribe Medical has higher confidence in the personal health information that it identified.</p>
+    #[doc(hidden)]
     pub confidence: std::option::Option<f64>,
 }
 impl MedicalEntity {
@@ -1976,11 +2010,10 @@ impl std::fmt::Debug for MedicalEntity {
         formatter.finish()
     }
 }
-/// See [`MedicalEntity`](crate::model::MedicalEntity)
+/// See [`MedicalEntity`](crate::model::MedicalEntity).
 pub mod medical_entity {
 
-    /// A builder for [`MedicalEntity`](crate::model::MedicalEntity)
-    #[non_exhaustive]
+    /// A builder for [`MedicalEntity`](crate::model::MedicalEntity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<f64>,
@@ -2040,7 +2073,7 @@ pub mod medical_entity {
             self.confidence = input;
             self
         }
-        /// Consumes the builder and constructs a [`MedicalEntity`](crate::model::MedicalEntity)
+        /// Consumes the builder and constructs a [`MedicalEntity`](crate::model::MedicalEntity).
         pub fn build(self) -> crate::model::MedicalEntity {
             crate::model::MedicalEntity {
                 start_time: self.start_time.unwrap_or_default(),
@@ -2053,7 +2086,7 @@ pub mod medical_entity {
     }
 }
 impl MedicalEntity {
-    /// Creates a new builder-style object to manufacture [`MedicalEntity`](crate::model::MedicalEntity)
+    /// Creates a new builder-style object to manufacture [`MedicalEntity`](crate::model::MedicalEntity).
     pub fn builder() -> crate::model::medical_entity::Builder {
         crate::model::medical_entity::Builder::default()
     }
@@ -2064,16 +2097,22 @@ impl MedicalEntity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MedicalItem {
     /// <p>The number of seconds into an audio stream that indicates the creation time of an item.</p>
+    #[doc(hidden)]
     pub start_time: f64,
     /// <p>The number of seconds into an audio stream that indicates the creation time of an item.</p>
+    #[doc(hidden)]
     pub end_time: f64,
     /// <p>The type of the item. <code>PRONUNCIATION</code> indicates that the item is a word that was recognized in the input audio. <code>PUNCTUATION</code> indicates that the item was interpreted as a pause in the input audio, such as a period to indicate the end of a sentence.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ItemType>,
     /// <p>The word or punctuation mark that was recognized in the input audio.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
     /// <p>A value between 0 and 1 for an item that is a confidence score that Amazon Transcribe Medical assigns to each word that it transcribes.</p>
+    #[doc(hidden)]
     pub confidence: std::option::Option<f64>,
     /// <p>If speaker identification is enabled, shows the integer values that correspond to the different speakers identified in the stream. For example, if the value of <code>Speaker</code> in the stream is either a <code>0</code> or a <code>1</code>, that indicates that Amazon Transcribe Medical has identified two speakers in the stream. The value of <code>0</code> corresponds to one speaker and the value of <code>1</code> corresponds to the other speaker.</p>
+    #[doc(hidden)]
     pub speaker: std::option::Option<std::string::String>,
 }
 impl MedicalItem {
@@ -2114,11 +2153,10 @@ impl std::fmt::Debug for MedicalItem {
         formatter.finish()
     }
 }
-/// See [`MedicalItem`](crate::model::MedicalItem)
+/// See [`MedicalItem`](crate::model::MedicalItem).
 pub mod medical_item {
 
-    /// A builder for [`MedicalItem`](crate::model::MedicalItem)
-    #[non_exhaustive]
+    /// A builder for [`MedicalItem`](crate::model::MedicalItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<f64>,
@@ -2189,7 +2227,7 @@ pub mod medical_item {
             self.speaker = input;
             self
         }
-        /// Consumes the builder and constructs a [`MedicalItem`](crate::model::MedicalItem)
+        /// Consumes the builder and constructs a [`MedicalItem`](crate::model::MedicalItem).
         pub fn build(self) -> crate::model::MedicalItem {
             crate::model::MedicalItem {
                 start_time: self.start_time.unwrap_or_default(),
@@ -2203,7 +2241,7 @@ pub mod medical_item {
     }
 }
 impl MedicalItem {
-    /// Creates a new builder-style object to manufacture [`MedicalItem`](crate::model::MedicalItem)
+    /// Creates a new builder-style object to manufacture [`MedicalItem`](crate::model::MedicalItem).
     pub fn builder() -> crate::model::medical_item::Builder {
         crate::model::medical_item::Builder::default()
     }

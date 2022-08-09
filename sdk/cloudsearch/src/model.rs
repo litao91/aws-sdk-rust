@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessPoliciesStatus {
     /// <p>Access rules for a domain's document or search service endpoints. For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-access.html" target="_blank">Configuring Access for a Search Domain</a> in the <i>Amazon CloudSearch Developer Guide</i>. The maximum size of a policy document is 100 KB.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<std::string::String>,
     /// <p>The status of domain configuration option.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl AccessPoliciesStatus {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for AccessPoliciesStatus {
         formatter.finish()
     }
 }
-/// See [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus)
+/// See [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus).
 pub mod access_policies_status {
 
-    /// A builder for [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus)
-    #[non_exhaustive]
+    /// A builder for [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<std::string::String>,
@@ -61,7 +62,7 @@ pub mod access_policies_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus)
+        /// Consumes the builder and constructs a [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus).
         pub fn build(self) -> crate::model::AccessPoliciesStatus {
             crate::model::AccessPoliciesStatus {
                 options: self.options,
@@ -71,7 +72,7 @@ pub mod access_policies_status {
     }
 }
 impl AccessPoliciesStatus {
-    /// Creates a new builder-style object to manufacture [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus)
+    /// Creates a new builder-style object to manufacture [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus).
     pub fn builder() -> crate::model::access_policies_status::Builder {
         crate::model::access_policies_status::Builder::default()
     }
@@ -82,10 +83,13 @@ impl AccessPoliciesStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OptionStatus {
     /// <p>A timestamp for when this option was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp for when this option was last updated.</p>
+    #[doc(hidden)]
     pub update_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A unique integer that indicates when this option was last updated.</p>
+    #[doc(hidden)]
     pub update_version: i32,
     /// <p>The state of processing a change to an option. Possible values:</p>
     /// <ul>
@@ -94,8 +98,10 @@ pub struct OptionStatus {
     /// <li><code>Active</code>: the option's latest value is completely deployed.</li>
     /// <li><code>FailedToValidate</code>: the option value is not compatible with the domain's data and cannot be used to index the data. You must either modify the option value or update or remove the incompatible documents.</li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::OptionState>,
     /// <p>Indicates that the option will be deleted once processing is complete.</p>
+    #[doc(hidden)]
     pub pending_deletion: std::option::Option<bool>,
 }
 impl OptionStatus {
@@ -137,11 +143,10 @@ impl std::fmt::Debug for OptionStatus {
         formatter.finish()
     }
 }
-/// See [`OptionStatus`](crate::model::OptionStatus)
+/// See [`OptionStatus`](crate::model::OptionStatus).
 pub mod option_status {
 
-    /// A builder for [`OptionStatus`](crate::model::OptionStatus)
-    #[non_exhaustive]
+    /// A builder for [`OptionStatus`](crate::model::OptionStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -219,7 +224,7 @@ pub mod option_status {
             self.pending_deletion = input;
             self
         }
-        /// Consumes the builder and constructs a [`OptionStatus`](crate::model::OptionStatus)
+        /// Consumes the builder and constructs a [`OptionStatus`](crate::model::OptionStatus).
         pub fn build(self) -> crate::model::OptionStatus {
             crate::model::OptionStatus {
                 creation_date: self.creation_date,
@@ -232,7 +237,7 @@ pub mod option_status {
     }
 }
 impl OptionStatus {
-    /// Creates a new builder-style object to manufacture [`OptionStatus`](crate::model::OptionStatus)
+    /// Creates a new builder-style object to manufacture [`OptionStatus`](crate::model::OptionStatus).
     pub fn builder() -> crate::model::option_status::Builder {
         crate::model::option_status::Builder::default()
     }
@@ -317,8 +322,10 @@ impl AsRef<str> for OptionState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScalingParametersStatus {
     /// <p>The desired instance type and desired number of replicas of each index partition.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::ScalingParameters>,
     /// <p>The status of domain configuration option.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl ScalingParametersStatus {
@@ -339,11 +346,10 @@ impl std::fmt::Debug for ScalingParametersStatus {
         formatter.finish()
     }
 }
-/// See [`ScalingParametersStatus`](crate::model::ScalingParametersStatus)
+/// See [`ScalingParametersStatus`](crate::model::ScalingParametersStatus).
 pub mod scaling_parameters_status {
 
-    /// A builder for [`ScalingParametersStatus`](crate::model::ScalingParametersStatus)
-    #[non_exhaustive]
+    /// A builder for [`ScalingParametersStatus`](crate::model::ScalingParametersStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::ScalingParameters>,
@@ -376,7 +382,7 @@ pub mod scaling_parameters_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalingParametersStatus`](crate::model::ScalingParametersStatus)
+        /// Consumes the builder and constructs a [`ScalingParametersStatus`](crate::model::ScalingParametersStatus).
         pub fn build(self) -> crate::model::ScalingParametersStatus {
             crate::model::ScalingParametersStatus {
                 options: self.options,
@@ -386,7 +392,7 @@ pub mod scaling_parameters_status {
     }
 }
 impl ScalingParametersStatus {
-    /// Creates a new builder-style object to manufacture [`ScalingParametersStatus`](crate::model::ScalingParametersStatus)
+    /// Creates a new builder-style object to manufacture [`ScalingParametersStatus`](crate::model::ScalingParametersStatus).
     pub fn builder() -> crate::model::scaling_parameters_status::Builder {
         crate::model::scaling_parameters_status::Builder::default()
     }
@@ -397,10 +403,13 @@ impl ScalingParametersStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScalingParameters {
     /// <p>The instance type that you want to preconfigure for your domain. For example, <code>search.m1.small</code>.</p>
+    #[doc(hidden)]
     pub desired_instance_type: std::option::Option<crate::model::PartitionInstanceType>,
     /// <p>The number of replicas you want to preconfigure for each index partition.</p>
+    #[doc(hidden)]
     pub desired_replication_count: i32,
     /// <p>The number of partitions you want to preconfigure for your domain. Only valid when you select <code>m2.2xlarge</code> as the desired instance type.</p>
+    #[doc(hidden)]
     pub desired_partition_count: i32,
 }
 impl ScalingParameters {
@@ -428,11 +437,10 @@ impl std::fmt::Debug for ScalingParameters {
         formatter.finish()
     }
 }
-/// See [`ScalingParameters`](crate::model::ScalingParameters)
+/// See [`ScalingParameters`](crate::model::ScalingParameters).
 pub mod scaling_parameters {
 
-    /// A builder for [`ScalingParameters`](crate::model::ScalingParameters)
-    #[non_exhaustive]
+    /// A builder for [`ScalingParameters`](crate::model::ScalingParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) desired_instance_type: std::option::Option<crate::model::PartitionInstanceType>,
@@ -473,7 +481,7 @@ pub mod scaling_parameters {
             self.desired_partition_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalingParameters`](crate::model::ScalingParameters)
+        /// Consumes the builder and constructs a [`ScalingParameters`](crate::model::ScalingParameters).
         pub fn build(self) -> crate::model::ScalingParameters {
             crate::model::ScalingParameters {
                 desired_instance_type: self.desired_instance_type,
@@ -484,7 +492,7 @@ pub mod scaling_parameters {
     }
 }
 impl ScalingParameters {
-    /// Creates a new builder-style object to manufacture [`ScalingParameters`](crate::model::ScalingParameters)
+    /// Creates a new builder-style object to manufacture [`ScalingParameters`](crate::model::ScalingParameters).
     pub fn builder() -> crate::model::scaling_parameters::Builder {
         crate::model::scaling_parameters::Builder::default()
     }
@@ -644,8 +652,10 @@ impl AsRef<str> for PartitionInstanceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainEndpointOptionsStatus {
     /// <p>The domain endpoint options configured for the domain.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::DomainEndpointOptions>,
     /// <p>The status of the configured domain endpoint options.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl DomainEndpointOptionsStatus {
@@ -666,11 +676,10 @@ impl std::fmt::Debug for DomainEndpointOptionsStatus {
         formatter.finish()
     }
 }
-/// See [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus)
+/// See [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus).
 pub mod domain_endpoint_options_status {
 
-    /// A builder for [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus)
-    #[non_exhaustive]
+    /// A builder for [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::DomainEndpointOptions>,
@@ -703,7 +712,7 @@ pub mod domain_endpoint_options_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus)
+        /// Consumes the builder and constructs a [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus).
         pub fn build(self) -> crate::model::DomainEndpointOptionsStatus {
             crate::model::DomainEndpointOptionsStatus {
                 options: self.options,
@@ -713,7 +722,7 @@ pub mod domain_endpoint_options_status {
     }
 }
 impl DomainEndpointOptionsStatus {
-    /// Creates a new builder-style object to manufacture [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus)
+    /// Creates a new builder-style object to manufacture [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus).
     pub fn builder() -> crate::model::domain_endpoint_options_status::Builder {
         crate::model::domain_endpoint_options_status::Builder::default()
     }
@@ -724,8 +733,10 @@ impl DomainEndpointOptionsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainEndpointOptions {
     /// <p>Whether the domain is HTTPS only enabled.</p>
+    #[doc(hidden)]
     pub enforce_https: std::option::Option<bool>,
     /// <p>The minimum required TLS version</p>
+    #[doc(hidden)]
     pub tls_security_policy: std::option::Option<crate::model::TlsSecurityPolicy>,
 }
 impl DomainEndpointOptions {
@@ -746,11 +757,10 @@ impl std::fmt::Debug for DomainEndpointOptions {
         formatter.finish()
     }
 }
-/// See [`DomainEndpointOptions`](crate::model::DomainEndpointOptions)
+/// See [`DomainEndpointOptions`](crate::model::DomainEndpointOptions).
 pub mod domain_endpoint_options {
 
-    /// A builder for [`DomainEndpointOptions`](crate::model::DomainEndpointOptions)
-    #[non_exhaustive]
+    /// A builder for [`DomainEndpointOptions`](crate::model::DomainEndpointOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enforce_https: std::option::Option<bool>,
@@ -780,7 +790,7 @@ pub mod domain_endpoint_options {
             self.tls_security_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainEndpointOptions`](crate::model::DomainEndpointOptions)
+        /// Consumes the builder and constructs a [`DomainEndpointOptions`](crate::model::DomainEndpointOptions).
         pub fn build(self) -> crate::model::DomainEndpointOptions {
             crate::model::DomainEndpointOptions {
                 enforce_https: self.enforce_https,
@@ -790,7 +800,7 @@ pub mod domain_endpoint_options {
     }
 }
 impl DomainEndpointOptions {
-    /// Creates a new builder-style object to manufacture [`DomainEndpointOptions`](crate::model::DomainEndpointOptions)
+    /// Creates a new builder-style object to manufacture [`DomainEndpointOptions`](crate::model::DomainEndpointOptions).
     pub fn builder() -> crate::model::domain_endpoint_options::Builder {
         crate::model::domain_endpoint_options::Builder::default()
     }
@@ -856,8 +866,10 @@ impl AsRef<str> for TlsSecurityPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AvailabilityOptionsStatus {
     /// <p>The availability options configured for the domain.</p>
+    #[doc(hidden)]
     pub options: bool,
     /// <p>The status of domain configuration option.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl AvailabilityOptionsStatus {
@@ -878,11 +890,10 @@ impl std::fmt::Debug for AvailabilityOptionsStatus {
         formatter.finish()
     }
 }
-/// See [`AvailabilityOptionsStatus`](crate::model::AvailabilityOptionsStatus)
+/// See [`AvailabilityOptionsStatus`](crate::model::AvailabilityOptionsStatus).
 pub mod availability_options_status {
 
-    /// A builder for [`AvailabilityOptionsStatus`](crate::model::AvailabilityOptionsStatus)
-    #[non_exhaustive]
+    /// A builder for [`AvailabilityOptionsStatus`](crate::model::AvailabilityOptionsStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<bool>,
@@ -912,7 +923,7 @@ pub mod availability_options_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`AvailabilityOptionsStatus`](crate::model::AvailabilityOptionsStatus)
+        /// Consumes the builder and constructs a [`AvailabilityOptionsStatus`](crate::model::AvailabilityOptionsStatus).
         pub fn build(self) -> crate::model::AvailabilityOptionsStatus {
             crate::model::AvailabilityOptionsStatus {
                 options: self.options.unwrap_or_default(),
@@ -922,7 +933,7 @@ pub mod availability_options_status {
     }
 }
 impl AvailabilityOptionsStatus {
-    /// Creates a new builder-style object to manufacture [`AvailabilityOptionsStatus`](crate::model::AvailabilityOptionsStatus)
+    /// Creates a new builder-style object to manufacture [`AvailabilityOptionsStatus`](crate::model::AvailabilityOptionsStatus).
     pub fn builder() -> crate::model::availability_options_status::Builder {
         crate::model::availability_options_status::Builder::default()
     }
@@ -933,8 +944,10 @@ impl AvailabilityOptionsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SuggesterStatus {
     /// <p>Configuration information for a search suggester. Each suggester has a unique name and specifies the text field you want to use for suggestions. The following options can be configured for a suggester: <code>FuzzyMatching</code>, <code>SortExpression</code>. </p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::Suggester>,
     /// <p>The status of domain configuration option.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl SuggesterStatus {
@@ -955,11 +968,10 @@ impl std::fmt::Debug for SuggesterStatus {
         formatter.finish()
     }
 }
-/// See [`SuggesterStatus`](crate::model::SuggesterStatus)
+/// See [`SuggesterStatus`](crate::model::SuggesterStatus).
 pub mod suggester_status {
 
-    /// A builder for [`SuggesterStatus`](crate::model::SuggesterStatus)
-    #[non_exhaustive]
+    /// A builder for [`SuggesterStatus`](crate::model::SuggesterStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::Suggester>,
@@ -989,7 +1001,7 @@ pub mod suggester_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`SuggesterStatus`](crate::model::SuggesterStatus)
+        /// Consumes the builder and constructs a [`SuggesterStatus`](crate::model::SuggesterStatus).
         pub fn build(self) -> crate::model::SuggesterStatus {
             crate::model::SuggesterStatus {
                 options: self.options,
@@ -999,7 +1011,7 @@ pub mod suggester_status {
     }
 }
 impl SuggesterStatus {
-    /// Creates a new builder-style object to manufacture [`SuggesterStatus`](crate::model::SuggesterStatus)
+    /// Creates a new builder-style object to manufacture [`SuggesterStatus`](crate::model::SuggesterStatus).
     pub fn builder() -> crate::model::suggester_status::Builder {
         crate::model::suggester_status::Builder::default()
     }
@@ -1010,8 +1022,10 @@ impl SuggesterStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Suggester {
     /// <p>Names must begin with a letter and can contain the following characters: a-z (lowercase), 0-9, and _ (underscore).</p>
+    #[doc(hidden)]
     pub suggester_name: std::option::Option<std::string::String>,
     /// <p>Options for a search suggester.</p>
+    #[doc(hidden)]
     pub document_suggester_options: std::option::Option<crate::model::DocumentSuggesterOptions>,
 }
 impl Suggester {
@@ -1037,11 +1051,10 @@ impl std::fmt::Debug for Suggester {
         formatter.finish()
     }
 }
-/// See [`Suggester`](crate::model::Suggester)
+/// See [`Suggester`](crate::model::Suggester).
 pub mod suggester {
 
-    /// A builder for [`Suggester`](crate::model::Suggester)
-    #[non_exhaustive]
+    /// A builder for [`Suggester`](crate::model::Suggester).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suggester_name: std::option::Option<std::string::String>,
@@ -1078,7 +1091,7 @@ pub mod suggester {
             self.document_suggester_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`Suggester`](crate::model::Suggester)
+        /// Consumes the builder and constructs a [`Suggester`](crate::model::Suggester).
         pub fn build(self) -> crate::model::Suggester {
             crate::model::Suggester {
                 suggester_name: self.suggester_name,
@@ -1088,7 +1101,7 @@ pub mod suggester {
     }
 }
 impl Suggester {
-    /// Creates a new builder-style object to manufacture [`Suggester`](crate::model::Suggester)
+    /// Creates a new builder-style object to manufacture [`Suggester`](crate::model::Suggester).
     pub fn builder() -> crate::model::suggester::Builder {
         crate::model::suggester::Builder::default()
     }
@@ -1099,10 +1112,13 @@ impl Suggester {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentSuggesterOptions {
     /// <p>The name of the index field you want to use for suggestions. </p>
+    #[doc(hidden)]
     pub source_field: std::option::Option<std::string::String>,
     /// <p>The level of fuzziness allowed when suggesting matches for a string: <code>none</code>, <code>low</code>, or <code>high</code>. With none, the specified string is treated as an exact prefix. With low, suggestions must differ from the specified string by no more than one character. With high, suggestions can differ by up to two characters. The default is none. </p>
+    #[doc(hidden)]
     pub fuzzy_matching: std::option::Option<crate::model::SuggesterFuzzyMatching>,
     /// <p>An expression that computes a score for each suggestion to control how they are sorted. The scores are rounded to the nearest integer, with a floor of 0 and a ceiling of 2^31-1. A document's relevance score is not computed for suggestions, so sort expressions cannot reference the <code>_score</code> value. To sort suggestions using a numeric field or existing expression, simply specify the name of the field or expression. If no expression is configured for the suggester, the suggestions are sorted with the closest matches listed first.</p>
+    #[doc(hidden)]
     pub sort_expression: std::option::Option<std::string::String>,
 }
 impl DocumentSuggesterOptions {
@@ -1128,11 +1144,10 @@ impl std::fmt::Debug for DocumentSuggesterOptions {
         formatter.finish()
     }
 }
-/// See [`DocumentSuggesterOptions`](crate::model::DocumentSuggesterOptions)
+/// See [`DocumentSuggesterOptions`](crate::model::DocumentSuggesterOptions).
 pub mod document_suggester_options {
 
-    /// A builder for [`DocumentSuggesterOptions`](crate::model::DocumentSuggesterOptions)
-    #[non_exhaustive]
+    /// A builder for [`DocumentSuggesterOptions`](crate::model::DocumentSuggesterOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_field: std::option::Option<std::string::String>,
@@ -1176,7 +1191,7 @@ pub mod document_suggester_options {
             self.sort_expression = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentSuggesterOptions`](crate::model::DocumentSuggesterOptions)
+        /// Consumes the builder and constructs a [`DocumentSuggesterOptions`](crate::model::DocumentSuggesterOptions).
         pub fn build(self) -> crate::model::DocumentSuggesterOptions {
             crate::model::DocumentSuggesterOptions {
                 source_field: self.source_field,
@@ -1187,7 +1202,7 @@ pub mod document_suggester_options {
     }
 }
 impl DocumentSuggesterOptions {
-    /// Creates a new builder-style object to manufacture [`DocumentSuggesterOptions`](crate::model::DocumentSuggesterOptions)
+    /// Creates a new builder-style object to manufacture [`DocumentSuggesterOptions`](crate::model::DocumentSuggesterOptions).
     pub fn builder() -> crate::model::document_suggester_options::Builder {
         crate::model::document_suggester_options::Builder::default()
     }
@@ -1257,8 +1272,10 @@ impl AsRef<str> for SuggesterFuzzyMatching {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IndexFieldStatus {
     /// <p>Configuration information for a field in the index, including its name, type, and options. The supported options depend on the <code><code>IndexFieldType</code></code>.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::IndexField>,
     /// <p>The status of domain configuration option.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl IndexFieldStatus {
@@ -1279,11 +1296,10 @@ impl std::fmt::Debug for IndexFieldStatus {
         formatter.finish()
     }
 }
-/// See [`IndexFieldStatus`](crate::model::IndexFieldStatus)
+/// See [`IndexFieldStatus`](crate::model::IndexFieldStatus).
 pub mod index_field_status {
 
-    /// A builder for [`IndexFieldStatus`](crate::model::IndexFieldStatus)
-    #[non_exhaustive]
+    /// A builder for [`IndexFieldStatus`](crate::model::IndexFieldStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::IndexField>,
@@ -1313,7 +1329,7 @@ pub mod index_field_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`IndexFieldStatus`](crate::model::IndexFieldStatus)
+        /// Consumes the builder and constructs a [`IndexFieldStatus`](crate::model::IndexFieldStatus).
         pub fn build(self) -> crate::model::IndexFieldStatus {
             crate::model::IndexFieldStatus {
                 options: self.options,
@@ -1323,7 +1339,7 @@ pub mod index_field_status {
     }
 }
 impl IndexFieldStatus {
-    /// Creates a new builder-style object to manufacture [`IndexFieldStatus`](crate::model::IndexFieldStatus)
+    /// Creates a new builder-style object to manufacture [`IndexFieldStatus`](crate::model::IndexFieldStatus).
     pub fn builder() -> crate::model::index_field_status::Builder {
         crate::model::index_field_status::Builder::default()
     }
@@ -1336,30 +1352,43 @@ pub struct IndexField {
     /// <p>A string that represents the name of an index field. CloudSearch supports regular index fields as well as dynamic fields. A dynamic field's name defines a pattern that begins or ends with a wildcard. Any document fields that don't map to a regular index field but do match a dynamic field's pattern are configured with the dynamic field's indexing options. </p>
     /// <p>Regular field names begin with a letter and can contain the following characters: a-z (lowercase), 0-9, and _ (underscore). Dynamic field names must begin or end with a wildcard (*). The wildcard can also be the only character in a dynamic field name. Multiple wildcards, and wildcards embedded within a string are not supported. </p>
     /// <p>The name <code>score</code> is reserved and cannot be used as a field name. To reference a document's ID, you can use the name <code>_id</code>. </p>
+    #[doc(hidden)]
     pub index_field_name: std::option::Option<std::string::String>,
     /// <p>The type of field. The valid options for a field depend on the field type. For more information about the supported field types, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-index-fields.html" target="_blank">Configuring Index Fields</a> in the <i>Amazon CloudSearch Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub index_field_type: std::option::Option<crate::model::IndexFieldType>,
     /// <p>Options for a 64-bit signed integer field. Present if <code>IndexFieldType</code> specifies the field is of type <code>int</code>. All options are enabled by default.</p>
+    #[doc(hidden)]
     pub int_options: std::option::Option<crate::model::IntOptions>,
     /// <p>Options for a double-precision 64-bit floating point field. Present if <code>IndexFieldType</code> specifies the field is of type <code>double</code>. All options are enabled by default.</p>
+    #[doc(hidden)]
     pub double_options: std::option::Option<crate::model::DoubleOptions>,
     /// <p>Options for literal field. Present if <code>IndexFieldType</code> specifies the field is of type <code>literal</code>. All options are enabled by default.</p>
+    #[doc(hidden)]
     pub literal_options: std::option::Option<crate::model::LiteralOptions>,
     /// <p>Options for text field. Present if <code>IndexFieldType</code> specifies the field is of type <code>text</code>. A <code>text</code> field is always searchable. All options are enabled by default.</p>
+    #[doc(hidden)]
     pub text_options: std::option::Option<crate::model::TextOptions>,
     /// <p>Options for a date field. Dates and times are specified in UTC (Coordinated Universal Time) according to IETF RFC3339: yyyy-mm-ddT00:00:00Z. Present if <code>IndexFieldType</code> specifies the field is of type <code>date</code>. All options are enabled by default.</p>
+    #[doc(hidden)]
     pub date_options: std::option::Option<crate::model::DateOptions>,
     /// <p>Options for a latlon field. A latlon field contains a location stored as a latitude and longitude value pair. Present if <code>IndexFieldType</code> specifies the field is of type <code>latlon</code>. All options are enabled by default.</p>
+    #[doc(hidden)]
     pub lat_lon_options: std::option::Option<crate::model::LatLonOptions>,
     /// <p>Options for a field that contains an array of 64-bit signed integers. Present if <code>IndexFieldType</code> specifies the field is of type <code>int-array</code>. All options are enabled by default.</p>
+    #[doc(hidden)]
     pub int_array_options: std::option::Option<crate::model::IntArrayOptions>,
     /// <p>Options for a field that contains an array of double-precision 64-bit floating point values. Present if <code>IndexFieldType</code> specifies the field is of type <code>double-array</code>. All options are enabled by default.</p>
+    #[doc(hidden)]
     pub double_array_options: std::option::Option<crate::model::DoubleArrayOptions>,
     /// <p>Options for a field that contains an array of literal strings. Present if <code>IndexFieldType</code> specifies the field is of type <code>literal-array</code>. All options are enabled by default.</p>
+    #[doc(hidden)]
     pub literal_array_options: std::option::Option<crate::model::LiteralArrayOptions>,
     /// <p>Options for a field that contains an array of text strings. Present if <code>IndexFieldType</code> specifies the field is of type <code>text-array</code>. A <code>text-array</code> field is always searchable. All options are enabled by default.</p>
+    #[doc(hidden)]
     pub text_array_options: std::option::Option<crate::model::TextArrayOptions>,
     /// <p>Options for a field that contains an array of dates. Present if <code>IndexFieldType</code> specifies the field is of type <code>date-array</code>. All options are enabled by default.</p>
+    #[doc(hidden)]
     pub date_array_options: std::option::Option<crate::model::DateArrayOptions>,
 }
 impl IndexField {
@@ -1437,11 +1466,10 @@ impl std::fmt::Debug for IndexField {
         formatter.finish()
     }
 }
-/// See [`IndexField`](crate::model::IndexField)
+/// See [`IndexField`](crate::model::IndexField).
 pub mod index_field {
 
-    /// A builder for [`IndexField`](crate::model::IndexField)
-    #[non_exhaustive]
+    /// A builder for [`IndexField`](crate::model::IndexField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) index_field_name: std::option::Option<std::string::String>,
@@ -1632,7 +1660,7 @@ pub mod index_field {
             self.date_array_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`IndexField`](crate::model::IndexField)
+        /// Consumes the builder and constructs a [`IndexField`](crate::model::IndexField).
         pub fn build(self) -> crate::model::IndexField {
             crate::model::IndexField {
                 index_field_name: self.index_field_name,
@@ -1653,7 +1681,7 @@ pub mod index_field {
     }
 }
 impl IndexField {
-    /// Creates a new builder-style object to manufacture [`IndexField`](crate::model::IndexField)
+    /// Creates a new builder-style object to manufacture [`IndexField`](crate::model::IndexField).
     pub fn builder() -> crate::model::index_field::Builder {
         crate::model::index_field::Builder::default()
     }
@@ -1664,14 +1692,19 @@ impl IndexField {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DateArrayOptions {
     /// A value to use for the field if the field isn't specified for a document.
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
     /// <p>A list of source fields to map to the field. </p>
+    #[doc(hidden)]
     pub source_fields: std::option::Option<std::string::String>,
     /// <p>Whether facet information can be returned for the field.</p>
+    #[doc(hidden)]
     pub facet_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field are searchable.</p>
+    #[doc(hidden)]
     pub search_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field can be returned in the search results.</p>
+    #[doc(hidden)]
     pub return_enabled: std::option::Option<bool>,
 }
 impl DateArrayOptions {
@@ -1707,11 +1740,10 @@ impl std::fmt::Debug for DateArrayOptions {
         formatter.finish()
     }
 }
-/// See [`DateArrayOptions`](crate::model::DateArrayOptions)
+/// See [`DateArrayOptions`](crate::model::DateArrayOptions).
 pub mod date_array_options {
 
-    /// A builder for [`DateArrayOptions`](crate::model::DateArrayOptions)
-    #[non_exhaustive]
+    /// A builder for [`DateArrayOptions`](crate::model::DateArrayOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_value: std::option::Option<std::string::String>,
@@ -1777,7 +1809,7 @@ pub mod date_array_options {
             self.return_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`DateArrayOptions`](crate::model::DateArrayOptions)
+        /// Consumes the builder and constructs a [`DateArrayOptions`](crate::model::DateArrayOptions).
         pub fn build(self) -> crate::model::DateArrayOptions {
             crate::model::DateArrayOptions {
                 default_value: self.default_value,
@@ -1790,7 +1822,7 @@ pub mod date_array_options {
     }
 }
 impl DateArrayOptions {
-    /// Creates a new builder-style object to manufacture [`DateArrayOptions`](crate::model::DateArrayOptions)
+    /// Creates a new builder-style object to manufacture [`DateArrayOptions`](crate::model::DateArrayOptions).
     pub fn builder() -> crate::model::date_array_options::Builder {
         crate::model::date_array_options::Builder::default()
     }
@@ -1801,14 +1833,19 @@ impl DateArrayOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TextArrayOptions {
     /// A value to use for the field if the field isn't specified for a document.
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
     /// <p>A list of source fields to map to the field. </p>
+    #[doc(hidden)]
     pub source_fields: std::option::Option<std::string::String>,
     /// <p>Whether the contents of the field can be returned in the search results.</p>
+    #[doc(hidden)]
     pub return_enabled: std::option::Option<bool>,
     /// <p>Whether highlights can be returned for the field.</p>
+    #[doc(hidden)]
     pub highlight_enabled: std::option::Option<bool>,
     /// <p>The name of an analysis scheme for a <code>text-array</code> field.</p>
+    #[doc(hidden)]
     pub analysis_scheme: std::option::Option<std::string::String>,
 }
 impl TextArrayOptions {
@@ -1844,11 +1881,10 @@ impl std::fmt::Debug for TextArrayOptions {
         formatter.finish()
     }
 }
-/// See [`TextArrayOptions`](crate::model::TextArrayOptions)
+/// See [`TextArrayOptions`](crate::model::TextArrayOptions).
 pub mod text_array_options {
 
-    /// A builder for [`TextArrayOptions`](crate::model::TextArrayOptions)
-    #[non_exhaustive]
+    /// A builder for [`TextArrayOptions`](crate::model::TextArrayOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_value: std::option::Option<std::string::String>,
@@ -1917,7 +1953,7 @@ pub mod text_array_options {
             self.analysis_scheme = input;
             self
         }
-        /// Consumes the builder and constructs a [`TextArrayOptions`](crate::model::TextArrayOptions)
+        /// Consumes the builder and constructs a [`TextArrayOptions`](crate::model::TextArrayOptions).
         pub fn build(self) -> crate::model::TextArrayOptions {
             crate::model::TextArrayOptions {
                 default_value: self.default_value,
@@ -1930,7 +1966,7 @@ pub mod text_array_options {
     }
 }
 impl TextArrayOptions {
-    /// Creates a new builder-style object to manufacture [`TextArrayOptions`](crate::model::TextArrayOptions)
+    /// Creates a new builder-style object to manufacture [`TextArrayOptions`](crate::model::TextArrayOptions).
     pub fn builder() -> crate::model::text_array_options::Builder {
         crate::model::text_array_options::Builder::default()
     }
@@ -1941,14 +1977,19 @@ impl TextArrayOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LiteralArrayOptions {
     /// A value to use for the field if the field isn't specified for a document.
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
     /// <p>A list of source fields to map to the field. </p>
+    #[doc(hidden)]
     pub source_fields: std::option::Option<std::string::String>,
     /// <p>Whether facet information can be returned for the field.</p>
+    #[doc(hidden)]
     pub facet_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field are searchable.</p>
+    #[doc(hidden)]
     pub search_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field can be returned in the search results.</p>
+    #[doc(hidden)]
     pub return_enabled: std::option::Option<bool>,
 }
 impl LiteralArrayOptions {
@@ -1984,11 +2025,10 @@ impl std::fmt::Debug for LiteralArrayOptions {
         formatter.finish()
     }
 }
-/// See [`LiteralArrayOptions`](crate::model::LiteralArrayOptions)
+/// See [`LiteralArrayOptions`](crate::model::LiteralArrayOptions).
 pub mod literal_array_options {
 
-    /// A builder for [`LiteralArrayOptions`](crate::model::LiteralArrayOptions)
-    #[non_exhaustive]
+    /// A builder for [`LiteralArrayOptions`](crate::model::LiteralArrayOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_value: std::option::Option<std::string::String>,
@@ -2054,7 +2094,7 @@ pub mod literal_array_options {
             self.return_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`LiteralArrayOptions`](crate::model::LiteralArrayOptions)
+        /// Consumes the builder and constructs a [`LiteralArrayOptions`](crate::model::LiteralArrayOptions).
         pub fn build(self) -> crate::model::LiteralArrayOptions {
             crate::model::LiteralArrayOptions {
                 default_value: self.default_value,
@@ -2067,7 +2107,7 @@ pub mod literal_array_options {
     }
 }
 impl LiteralArrayOptions {
-    /// Creates a new builder-style object to manufacture [`LiteralArrayOptions`](crate::model::LiteralArrayOptions)
+    /// Creates a new builder-style object to manufacture [`LiteralArrayOptions`](crate::model::LiteralArrayOptions).
     pub fn builder() -> crate::model::literal_array_options::Builder {
         crate::model::literal_array_options::Builder::default()
     }
@@ -2078,14 +2118,19 @@ impl LiteralArrayOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DoubleArrayOptions {
     /// A value to use for the field if the field isn't specified for a document.
+    #[doc(hidden)]
     pub default_value: std::option::Option<f64>,
     /// <p>A list of source fields to map to the field. </p>
+    #[doc(hidden)]
     pub source_fields: std::option::Option<std::string::String>,
     /// <p>Whether facet information can be returned for the field.</p>
+    #[doc(hidden)]
     pub facet_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field are searchable.</p>
+    #[doc(hidden)]
     pub search_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field can be returned in the search results.</p>
+    #[doc(hidden)]
     pub return_enabled: std::option::Option<bool>,
 }
 impl DoubleArrayOptions {
@@ -2121,11 +2166,10 @@ impl std::fmt::Debug for DoubleArrayOptions {
         formatter.finish()
     }
 }
-/// See [`DoubleArrayOptions`](crate::model::DoubleArrayOptions)
+/// See [`DoubleArrayOptions`](crate::model::DoubleArrayOptions).
 pub mod double_array_options {
 
-    /// A builder for [`DoubleArrayOptions`](crate::model::DoubleArrayOptions)
-    #[non_exhaustive]
+    /// A builder for [`DoubleArrayOptions`](crate::model::DoubleArrayOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_value: std::option::Option<f64>,
@@ -2188,7 +2232,7 @@ pub mod double_array_options {
             self.return_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`DoubleArrayOptions`](crate::model::DoubleArrayOptions)
+        /// Consumes the builder and constructs a [`DoubleArrayOptions`](crate::model::DoubleArrayOptions).
         pub fn build(self) -> crate::model::DoubleArrayOptions {
             crate::model::DoubleArrayOptions {
                 default_value: self.default_value,
@@ -2201,7 +2245,7 @@ pub mod double_array_options {
     }
 }
 impl DoubleArrayOptions {
-    /// Creates a new builder-style object to manufacture [`DoubleArrayOptions`](crate::model::DoubleArrayOptions)
+    /// Creates a new builder-style object to manufacture [`DoubleArrayOptions`](crate::model::DoubleArrayOptions).
     pub fn builder() -> crate::model::double_array_options::Builder {
         crate::model::double_array_options::Builder::default()
     }
@@ -2212,14 +2256,19 @@ impl DoubleArrayOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IntArrayOptions {
     /// A value to use for the field if the field isn't specified for a document.
+    #[doc(hidden)]
     pub default_value: std::option::Option<i64>,
     /// <p>A list of source fields to map to the field. </p>
+    #[doc(hidden)]
     pub source_fields: std::option::Option<std::string::String>,
     /// <p>Whether facet information can be returned for the field.</p>
+    #[doc(hidden)]
     pub facet_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field are searchable.</p>
+    #[doc(hidden)]
     pub search_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field can be returned in the search results.</p>
+    #[doc(hidden)]
     pub return_enabled: std::option::Option<bool>,
 }
 impl IntArrayOptions {
@@ -2255,11 +2304,10 @@ impl std::fmt::Debug for IntArrayOptions {
         formatter.finish()
     }
 }
-/// See [`IntArrayOptions`](crate::model::IntArrayOptions)
+/// See [`IntArrayOptions`](crate::model::IntArrayOptions).
 pub mod int_array_options {
 
-    /// A builder for [`IntArrayOptions`](crate::model::IntArrayOptions)
-    #[non_exhaustive]
+    /// A builder for [`IntArrayOptions`](crate::model::IntArrayOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_value: std::option::Option<i64>,
@@ -2322,7 +2370,7 @@ pub mod int_array_options {
             self.return_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`IntArrayOptions`](crate::model::IntArrayOptions)
+        /// Consumes the builder and constructs a [`IntArrayOptions`](crate::model::IntArrayOptions).
         pub fn build(self) -> crate::model::IntArrayOptions {
             crate::model::IntArrayOptions {
                 default_value: self.default_value,
@@ -2335,7 +2383,7 @@ pub mod int_array_options {
     }
 }
 impl IntArrayOptions {
-    /// Creates a new builder-style object to manufacture [`IntArrayOptions`](crate::model::IntArrayOptions)
+    /// Creates a new builder-style object to manufacture [`IntArrayOptions`](crate::model::IntArrayOptions).
     pub fn builder() -> crate::model::int_array_options::Builder {
         crate::model::int_array_options::Builder::default()
     }
@@ -2346,18 +2394,24 @@ impl IntArrayOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LatLonOptions {
     /// A value to use for the field if the field isn't specified for a document.
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
     /// <p>A string that represents the name of an index field. CloudSearch supports regular index fields as well as dynamic fields. A dynamic field's name defines a pattern that begins or ends with a wildcard. Any document fields that don't map to a regular index field but do match a dynamic field's pattern are configured with the dynamic field's indexing options. </p>
     /// <p>Regular field names begin with a letter and can contain the following characters: a-z (lowercase), 0-9, and _ (underscore). Dynamic field names must begin or end with a wildcard (*). The wildcard can also be the only character in a dynamic field name. Multiple wildcards, and wildcards embedded within a string are not supported. </p>
     /// <p>The name <code>score</code> is reserved and cannot be used as a field name. To reference a document's ID, you can use the name <code>_id</code>. </p>
+    #[doc(hidden)]
     pub source_field: std::option::Option<std::string::String>,
     /// <p>Whether facet information can be returned for the field.</p>
+    #[doc(hidden)]
     pub facet_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field are searchable.</p>
+    #[doc(hidden)]
     pub search_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field can be returned in the search results.</p>
+    #[doc(hidden)]
     pub return_enabled: std::option::Option<bool>,
     /// <p>Whether the field can be used to sort the search results.</p>
+    #[doc(hidden)]
     pub sort_enabled: std::option::Option<bool>,
 }
 impl LatLonOptions {
@@ -2400,11 +2454,10 @@ impl std::fmt::Debug for LatLonOptions {
         formatter.finish()
     }
 }
-/// See [`LatLonOptions`](crate::model::LatLonOptions)
+/// See [`LatLonOptions`](crate::model::LatLonOptions).
 pub mod lat_lon_options {
 
-    /// A builder for [`LatLonOptions`](crate::model::LatLonOptions)
-    #[non_exhaustive]
+    /// A builder for [`LatLonOptions`](crate::model::LatLonOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_value: std::option::Option<std::string::String>,
@@ -2482,7 +2535,7 @@ pub mod lat_lon_options {
             self.sort_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`LatLonOptions`](crate::model::LatLonOptions)
+        /// Consumes the builder and constructs a [`LatLonOptions`](crate::model::LatLonOptions).
         pub fn build(self) -> crate::model::LatLonOptions {
             crate::model::LatLonOptions {
                 default_value: self.default_value,
@@ -2496,7 +2549,7 @@ pub mod lat_lon_options {
     }
 }
 impl LatLonOptions {
-    /// Creates a new builder-style object to manufacture [`LatLonOptions`](crate::model::LatLonOptions)
+    /// Creates a new builder-style object to manufacture [`LatLonOptions`](crate::model::LatLonOptions).
     pub fn builder() -> crate::model::lat_lon_options::Builder {
         crate::model::lat_lon_options::Builder::default()
     }
@@ -2507,18 +2560,24 @@ impl LatLonOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DateOptions {
     /// A value to use for the field if the field isn't specified for a document.
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
     /// <p>A string that represents the name of an index field. CloudSearch supports regular index fields as well as dynamic fields. A dynamic field's name defines a pattern that begins or ends with a wildcard. Any document fields that don't map to a regular index field but do match a dynamic field's pattern are configured with the dynamic field's indexing options. </p>
     /// <p>Regular field names begin with a letter and can contain the following characters: a-z (lowercase), 0-9, and _ (underscore). Dynamic field names must begin or end with a wildcard (*). The wildcard can also be the only character in a dynamic field name. Multiple wildcards, and wildcards embedded within a string are not supported. </p>
     /// <p>The name <code>score</code> is reserved and cannot be used as a field name. To reference a document's ID, you can use the name <code>_id</code>. </p>
+    #[doc(hidden)]
     pub source_field: std::option::Option<std::string::String>,
     /// <p>Whether facet information can be returned for the field.</p>
+    #[doc(hidden)]
     pub facet_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field are searchable.</p>
+    #[doc(hidden)]
     pub search_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field can be returned in the search results.</p>
+    #[doc(hidden)]
     pub return_enabled: std::option::Option<bool>,
     /// <p>Whether the field can be used to sort the search results.</p>
+    #[doc(hidden)]
     pub sort_enabled: std::option::Option<bool>,
 }
 impl DateOptions {
@@ -2561,11 +2620,10 @@ impl std::fmt::Debug for DateOptions {
         formatter.finish()
     }
 }
-/// See [`DateOptions`](crate::model::DateOptions)
+/// See [`DateOptions`](crate::model::DateOptions).
 pub mod date_options {
 
-    /// A builder for [`DateOptions`](crate::model::DateOptions)
-    #[non_exhaustive]
+    /// A builder for [`DateOptions`](crate::model::DateOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_value: std::option::Option<std::string::String>,
@@ -2643,7 +2701,7 @@ pub mod date_options {
             self.sort_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`DateOptions`](crate::model::DateOptions)
+        /// Consumes the builder and constructs a [`DateOptions`](crate::model::DateOptions).
         pub fn build(self) -> crate::model::DateOptions {
             crate::model::DateOptions {
                 default_value: self.default_value,
@@ -2657,7 +2715,7 @@ pub mod date_options {
     }
 }
 impl DateOptions {
-    /// Creates a new builder-style object to manufacture [`DateOptions`](crate::model::DateOptions)
+    /// Creates a new builder-style object to manufacture [`DateOptions`](crate::model::DateOptions).
     pub fn builder() -> crate::model::date_options::Builder {
         crate::model::date_options::Builder::default()
     }
@@ -2668,18 +2726,24 @@ impl DateOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TextOptions {
     /// A value to use for the field if the field isn't specified for a document.
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
     /// <p>A string that represents the name of an index field. CloudSearch supports regular index fields as well as dynamic fields. A dynamic field's name defines a pattern that begins or ends with a wildcard. Any document fields that don't map to a regular index field but do match a dynamic field's pattern are configured with the dynamic field's indexing options. </p>
     /// <p>Regular field names begin with a letter and can contain the following characters: a-z (lowercase), 0-9, and _ (underscore). Dynamic field names must begin or end with a wildcard (*). The wildcard can also be the only character in a dynamic field name. Multiple wildcards, and wildcards embedded within a string are not supported. </p>
     /// <p>The name <code>score</code> is reserved and cannot be used as a field name. To reference a document's ID, you can use the name <code>_id</code>. </p>
+    #[doc(hidden)]
     pub source_field: std::option::Option<std::string::String>,
     /// <p>Whether the contents of the field can be returned in the search results.</p>
+    #[doc(hidden)]
     pub return_enabled: std::option::Option<bool>,
     /// <p>Whether the field can be used to sort the search results.</p>
+    #[doc(hidden)]
     pub sort_enabled: std::option::Option<bool>,
     /// <p>Whether highlights can be returned for the field.</p>
+    #[doc(hidden)]
     pub highlight_enabled: std::option::Option<bool>,
     /// <p>The name of an analysis scheme for a <code>text</code> field.</p>
+    #[doc(hidden)]
     pub analysis_scheme: std::option::Option<std::string::String>,
 }
 impl TextOptions {
@@ -2722,11 +2786,10 @@ impl std::fmt::Debug for TextOptions {
         formatter.finish()
     }
 }
-/// See [`TextOptions`](crate::model::TextOptions)
+/// See [`TextOptions`](crate::model::TextOptions).
 pub mod text_options {
 
-    /// A builder for [`TextOptions`](crate::model::TextOptions)
-    #[non_exhaustive]
+    /// A builder for [`TextOptions`](crate::model::TextOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_value: std::option::Option<std::string::String>,
@@ -2807,7 +2870,7 @@ pub mod text_options {
             self.analysis_scheme = input;
             self
         }
-        /// Consumes the builder and constructs a [`TextOptions`](crate::model::TextOptions)
+        /// Consumes the builder and constructs a [`TextOptions`](crate::model::TextOptions).
         pub fn build(self) -> crate::model::TextOptions {
             crate::model::TextOptions {
                 default_value: self.default_value,
@@ -2821,7 +2884,7 @@ pub mod text_options {
     }
 }
 impl TextOptions {
-    /// Creates a new builder-style object to manufacture [`TextOptions`](crate::model::TextOptions)
+    /// Creates a new builder-style object to manufacture [`TextOptions`](crate::model::TextOptions).
     pub fn builder() -> crate::model::text_options::Builder {
         crate::model::text_options::Builder::default()
     }
@@ -2832,18 +2895,24 @@ impl TextOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LiteralOptions {
     /// A value to use for the field if the field isn't specified for a document.
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
     /// <p>A string that represents the name of an index field. CloudSearch supports regular index fields as well as dynamic fields. A dynamic field's name defines a pattern that begins or ends with a wildcard. Any document fields that don't map to a regular index field but do match a dynamic field's pattern are configured with the dynamic field's indexing options. </p>
     /// <p>Regular field names begin with a letter and can contain the following characters: a-z (lowercase), 0-9, and _ (underscore). Dynamic field names must begin or end with a wildcard (*). The wildcard can also be the only character in a dynamic field name. Multiple wildcards, and wildcards embedded within a string are not supported. </p>
     /// <p>The name <code>score</code> is reserved and cannot be used as a field name. To reference a document's ID, you can use the name <code>_id</code>. </p>
+    #[doc(hidden)]
     pub source_field: std::option::Option<std::string::String>,
     /// <p>Whether facet information can be returned for the field.</p>
+    #[doc(hidden)]
     pub facet_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field are searchable.</p>
+    #[doc(hidden)]
     pub search_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field can be returned in the search results.</p>
+    #[doc(hidden)]
     pub return_enabled: std::option::Option<bool>,
     /// <p>Whether the field can be used to sort the search results.</p>
+    #[doc(hidden)]
     pub sort_enabled: std::option::Option<bool>,
 }
 impl LiteralOptions {
@@ -2886,11 +2955,10 @@ impl std::fmt::Debug for LiteralOptions {
         formatter.finish()
     }
 }
-/// See [`LiteralOptions`](crate::model::LiteralOptions)
+/// See [`LiteralOptions`](crate::model::LiteralOptions).
 pub mod literal_options {
 
-    /// A builder for [`LiteralOptions`](crate::model::LiteralOptions)
-    #[non_exhaustive]
+    /// A builder for [`LiteralOptions`](crate::model::LiteralOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_value: std::option::Option<std::string::String>,
@@ -2968,7 +3036,7 @@ pub mod literal_options {
             self.sort_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`LiteralOptions`](crate::model::LiteralOptions)
+        /// Consumes the builder and constructs a [`LiteralOptions`](crate::model::LiteralOptions).
         pub fn build(self) -> crate::model::LiteralOptions {
             crate::model::LiteralOptions {
                 default_value: self.default_value,
@@ -2982,7 +3050,7 @@ pub mod literal_options {
     }
 }
 impl LiteralOptions {
-    /// Creates a new builder-style object to manufacture [`LiteralOptions`](crate::model::LiteralOptions)
+    /// Creates a new builder-style object to manufacture [`LiteralOptions`](crate::model::LiteralOptions).
     pub fn builder() -> crate::model::literal_options::Builder {
         crate::model::literal_options::Builder::default()
     }
@@ -2993,16 +3061,22 @@ impl LiteralOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DoubleOptions {
     /// <p>A value to use for the field if the field isn't specified for a document. This can be important if you are using the field in an expression and that field is not present in every document.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<f64>,
     /// <p>The name of the source field to map to the field. </p>
+    #[doc(hidden)]
     pub source_field: std::option::Option<std::string::String>,
     /// <p>Whether facet information can be returned for the field.</p>
+    #[doc(hidden)]
     pub facet_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field are searchable.</p>
+    #[doc(hidden)]
     pub search_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field can be returned in the search results.</p>
+    #[doc(hidden)]
     pub return_enabled: std::option::Option<bool>,
     /// <p>Whether the field can be used to sort the search results.</p>
+    #[doc(hidden)]
     pub sort_enabled: std::option::Option<bool>,
 }
 impl DoubleOptions {
@@ -3043,11 +3117,10 @@ impl std::fmt::Debug for DoubleOptions {
         formatter.finish()
     }
 }
-/// See [`DoubleOptions`](crate::model::DoubleOptions)
+/// See [`DoubleOptions`](crate::model::DoubleOptions).
 pub mod double_options {
 
-    /// A builder for [`DoubleOptions`](crate::model::DoubleOptions)
-    #[non_exhaustive]
+    /// A builder for [`DoubleOptions`](crate::model::DoubleOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_value: std::option::Option<f64>,
@@ -3118,7 +3191,7 @@ pub mod double_options {
             self.sort_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`DoubleOptions`](crate::model::DoubleOptions)
+        /// Consumes the builder and constructs a [`DoubleOptions`](crate::model::DoubleOptions).
         pub fn build(self) -> crate::model::DoubleOptions {
             crate::model::DoubleOptions {
                 default_value: self.default_value,
@@ -3132,7 +3205,7 @@ pub mod double_options {
     }
 }
 impl DoubleOptions {
-    /// Creates a new builder-style object to manufacture [`DoubleOptions`](crate::model::DoubleOptions)
+    /// Creates a new builder-style object to manufacture [`DoubleOptions`](crate::model::DoubleOptions).
     pub fn builder() -> crate::model::double_options::Builder {
         crate::model::double_options::Builder::default()
     }
@@ -3143,16 +3216,22 @@ impl DoubleOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IntOptions {
     /// A value to use for the field if the field isn't specified for a document. This can be important if you are using the field in an expression and that field is not present in every document.
+    #[doc(hidden)]
     pub default_value: std::option::Option<i64>,
     /// <p>The name of the source field to map to the field. </p>
+    #[doc(hidden)]
     pub source_field: std::option::Option<std::string::String>,
     /// <p>Whether facet information can be returned for the field.</p>
+    #[doc(hidden)]
     pub facet_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field are searchable.</p>
+    #[doc(hidden)]
     pub search_enabled: std::option::Option<bool>,
     /// <p>Whether the contents of the field can be returned in the search results.</p>
+    #[doc(hidden)]
     pub return_enabled: std::option::Option<bool>,
     /// <p>Whether the field can be used to sort the search results.</p>
+    #[doc(hidden)]
     pub sort_enabled: std::option::Option<bool>,
 }
 impl IntOptions {
@@ -3193,11 +3272,10 @@ impl std::fmt::Debug for IntOptions {
         formatter.finish()
     }
 }
-/// See [`IntOptions`](crate::model::IntOptions)
+/// See [`IntOptions`](crate::model::IntOptions).
 pub mod int_options {
 
-    /// A builder for [`IntOptions`](crate::model::IntOptions)
-    #[non_exhaustive]
+    /// A builder for [`IntOptions`](crate::model::IntOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_value: std::option::Option<i64>,
@@ -3268,7 +3346,7 @@ pub mod int_options {
             self.sort_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`IntOptions`](crate::model::IntOptions)
+        /// Consumes the builder and constructs a [`IntOptions`](crate::model::IntOptions).
         pub fn build(self) -> crate::model::IntOptions {
             crate::model::IntOptions {
                 default_value: self.default_value,
@@ -3282,7 +3360,7 @@ pub mod int_options {
     }
 }
 impl IntOptions {
-    /// Creates a new builder-style object to manufacture [`IntOptions`](crate::model::IntOptions)
+    /// Creates a new builder-style object to manufacture [`IntOptions`](crate::model::IntOptions).
     pub fn builder() -> crate::model::int_options::Builder {
         crate::model::int_options::Builder::default()
     }
@@ -3396,8 +3474,10 @@ impl AsRef<str> for IndexFieldType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExpressionStatus {
     /// <p>The expression that is evaluated for sorting while processing a search request.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::Expression>,
     /// <p>The status of domain configuration option.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl ExpressionStatus {
@@ -3418,11 +3498,10 @@ impl std::fmt::Debug for ExpressionStatus {
         formatter.finish()
     }
 }
-/// See [`ExpressionStatus`](crate::model::ExpressionStatus)
+/// See [`ExpressionStatus`](crate::model::ExpressionStatus).
 pub mod expression_status {
 
-    /// A builder for [`ExpressionStatus`](crate::model::ExpressionStatus)
-    #[non_exhaustive]
+    /// A builder for [`ExpressionStatus`](crate::model::ExpressionStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::Expression>,
@@ -3452,7 +3531,7 @@ pub mod expression_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExpressionStatus`](crate::model::ExpressionStatus)
+        /// Consumes the builder and constructs a [`ExpressionStatus`](crate::model::ExpressionStatus).
         pub fn build(self) -> crate::model::ExpressionStatus {
             crate::model::ExpressionStatus {
                 options: self.options,
@@ -3462,7 +3541,7 @@ pub mod expression_status {
     }
 }
 impl ExpressionStatus {
-    /// Creates a new builder-style object to manufacture [`ExpressionStatus`](crate::model::ExpressionStatus)
+    /// Creates a new builder-style object to manufacture [`ExpressionStatus`](crate::model::ExpressionStatus).
     pub fn builder() -> crate::model::expression_status::Builder {
         crate::model::expression_status::Builder::default()
     }
@@ -3473,8 +3552,10 @@ impl ExpressionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Expression {
     /// <p>Names must begin with a letter and can contain the following characters: a-z (lowercase), 0-9, and _ (underscore).</p>
+    #[doc(hidden)]
     pub expression_name: std::option::Option<std::string::String>,
     /// <p>The expression to evaluate for sorting while processing a search request. The <code>Expression</code> syntax is based on JavaScript expressions. For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-expressions.html" target="_blank">Configuring Expressions</a> in the <i>Amazon CloudSearch Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub expression_value: std::option::Option<std::string::String>,
 }
 impl Expression {
@@ -3495,11 +3576,10 @@ impl std::fmt::Debug for Expression {
         formatter.finish()
     }
 }
-/// See [`Expression`](crate::model::Expression)
+/// See [`Expression`](crate::model::Expression).
 pub mod expression {
 
-    /// A builder for [`Expression`](crate::model::Expression)
-    #[non_exhaustive]
+    /// A builder for [`Expression`](crate::model::Expression).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) expression_name: std::option::Option<std::string::String>,
@@ -3532,7 +3612,7 @@ pub mod expression {
             self.expression_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Expression`](crate::model::Expression)
+        /// Consumes the builder and constructs a [`Expression`](crate::model::Expression).
         pub fn build(self) -> crate::model::Expression {
             crate::model::Expression {
                 expression_name: self.expression_name,
@@ -3542,7 +3622,7 @@ pub mod expression {
     }
 }
 impl Expression {
-    /// Creates a new builder-style object to manufacture [`Expression`](crate::model::Expression)
+    /// Creates a new builder-style object to manufacture [`Expression`](crate::model::Expression).
     pub fn builder() -> crate::model::expression::Builder {
         crate::model::expression::Builder::default()
     }
@@ -3553,30 +3633,43 @@ impl Expression {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainStatus {
     /// <p>An internally generated unique identifier for a domain.</p>
+    #[doc(hidden)]
     pub domain_id: std::option::Option<std::string::String>,
     /// <p>A string that represents the name of a domain. Domain names are unique across the domains owned by an account within an AWS region. Domain names start with a letter or number and can contain the following characters: a-z (lowercase), 0-9, and - (hyphen).</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the search domain. See <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/index.html?Using_Identifiers.html" target="_blank">Identifiers for IAM Entities</a> in <i>Using AWS Identity and Access Management</i> for more information.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>True if the search domain is created. It can take several minutes to initialize a domain when <code>CreateDomain</code> is called. Newly created search domains are returned from <code>DescribeDomains</code> with a false value for Created until domain creation is complete.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<bool>,
     /// <p>True if the search domain has been deleted. The system must clean up resources dedicated to the search domain when <code>DeleteDomain</code> is called. Newly deleted search domains are returned from <code>DescribeDomains</code> with a true value for IsDeleted for several minutes until resource cleanup is complete.</p>
+    #[doc(hidden)]
     pub deleted: std::option::Option<bool>,
     /// <p>The service endpoint for updating documents in a search domain.</p>
+    #[doc(hidden)]
     pub doc_service: std::option::Option<crate::model::ServiceEndpoint>,
     /// <p>The service endpoint for requesting search results from a search domain.</p>
+    #[doc(hidden)]
     pub search_service: std::option::Option<crate::model::ServiceEndpoint>,
     /// <p>True if <code>IndexDocuments</code> needs to be called to activate the current domain configuration.</p>
+    #[doc(hidden)]
     pub requires_index_documents: std::option::Option<bool>,
     /// <p>True if processing is being done to activate the current domain configuration.</p>
+    #[doc(hidden)]
     pub processing: std::option::Option<bool>,
     /// <p>The instance type that is being used to process search requests.</p>
+    #[doc(hidden)]
     pub search_instance_type: std::option::Option<std::string::String>,
     /// <p>The number of partitions across which the search index is spread.</p>
+    #[doc(hidden)]
     pub search_partition_count: i32,
     /// <p>The number of search instances that are available to process search requests.</p>
+    #[doc(hidden)]
     pub search_instance_count: i32,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub limits: std::option::Option<crate::model::Limits>,
 }
 impl DomainStatus {
@@ -3652,11 +3745,10 @@ impl std::fmt::Debug for DomainStatus {
         formatter.finish()
     }
 }
-/// See [`DomainStatus`](crate::model::DomainStatus)
+/// See [`DomainStatus`](crate::model::DomainStatus).
 pub mod domain_status {
 
-    /// A builder for [`DomainStatus`](crate::model::DomainStatus)
-    #[non_exhaustive]
+    /// A builder for [`DomainStatus`](crate::model::DomainStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_id: std::option::Option<std::string::String>,
@@ -3813,7 +3905,7 @@ pub mod domain_status {
             self.limits = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainStatus`](crate::model::DomainStatus)
+        /// Consumes the builder and constructs a [`DomainStatus`](crate::model::DomainStatus).
         pub fn build(self) -> crate::model::DomainStatus {
             crate::model::DomainStatus {
                 domain_id: self.domain_id,
@@ -3834,7 +3926,7 @@ pub mod domain_status {
     }
 }
 impl DomainStatus {
-    /// Creates a new builder-style object to manufacture [`DomainStatus`](crate::model::DomainStatus)
+    /// Creates a new builder-style object to manufacture [`DomainStatus`](crate::model::DomainStatus).
     pub fn builder() -> crate::model::domain_status::Builder {
         crate::model::domain_status::Builder::default()
     }
@@ -3845,8 +3937,10 @@ impl DomainStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Limits {
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub maximum_replication_count: i32,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub maximum_partition_count: i32,
 }
 impl Limits {
@@ -3867,11 +3961,10 @@ impl std::fmt::Debug for Limits {
         formatter.finish()
     }
 }
-/// See [`Limits`](crate::model::Limits)
+/// See [`Limits`](crate::model::Limits).
 pub mod limits {
 
-    /// A builder for [`Limits`](crate::model::Limits)
-    #[non_exhaustive]
+    /// A builder for [`Limits`](crate::model::Limits).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) maximum_replication_count: std::option::Option<i32>,
@@ -3898,7 +3991,7 @@ pub mod limits {
             self.maximum_partition_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`Limits`](crate::model::Limits)
+        /// Consumes the builder and constructs a [`Limits`](crate::model::Limits).
         pub fn build(self) -> crate::model::Limits {
             crate::model::Limits {
                 maximum_replication_count: self.maximum_replication_count.unwrap_or_default(),
@@ -3908,7 +4001,7 @@ pub mod limits {
     }
 }
 impl Limits {
-    /// Creates a new builder-style object to manufacture [`Limits`](crate::model::Limits)
+    /// Creates a new builder-style object to manufacture [`Limits`](crate::model::Limits).
     pub fn builder() -> crate::model::limits::Builder {
         crate::model::limits::Builder::default()
     }
@@ -3919,6 +4012,7 @@ impl Limits {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceEndpoint {
     /// <p>The endpoint to which service requests can be submitted. For example, <code>search-imdb-movies-oopcnjfn6ugofer3zx5iadxxca.eu-west-1.cloudsearch.amazonaws.com</code> or <code>doc-imdb-movies-oopcnjfn6ugofer3zx5iadxxca.eu-west-1.cloudsearch.amazonaws.com</code>.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
 }
 impl ServiceEndpoint {
@@ -3934,11 +4028,10 @@ impl std::fmt::Debug for ServiceEndpoint {
         formatter.finish()
     }
 }
-/// See [`ServiceEndpoint`](crate::model::ServiceEndpoint)
+/// See [`ServiceEndpoint`](crate::model::ServiceEndpoint).
 pub mod service_endpoint {
 
-    /// A builder for [`ServiceEndpoint`](crate::model::ServiceEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`ServiceEndpoint`](crate::model::ServiceEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint: std::option::Option<std::string::String>,
@@ -3954,7 +4047,7 @@ pub mod service_endpoint {
             self.endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceEndpoint`](crate::model::ServiceEndpoint)
+        /// Consumes the builder and constructs a [`ServiceEndpoint`](crate::model::ServiceEndpoint).
         pub fn build(self) -> crate::model::ServiceEndpoint {
             crate::model::ServiceEndpoint {
                 endpoint: self.endpoint,
@@ -3963,7 +4056,7 @@ pub mod service_endpoint {
     }
 }
 impl ServiceEndpoint {
-    /// Creates a new builder-style object to manufacture [`ServiceEndpoint`](crate::model::ServiceEndpoint)
+    /// Creates a new builder-style object to manufacture [`ServiceEndpoint`](crate::model::ServiceEndpoint).
     pub fn builder() -> crate::model::service_endpoint::Builder {
         crate::model::service_endpoint::Builder::default()
     }
@@ -3974,8 +4067,10 @@ impl ServiceEndpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnalysisSchemeStatus {
     /// <p>Configuration information for an analysis scheme. Each analysis scheme has a unique name and specifies the language of the text to be processed. The following options can be configured for an analysis scheme: <code>Synonyms</code>, <code>Stopwords</code>, <code>StemmingDictionary</code>, <code>JapaneseTokenizationDictionary</code> and <code>AlgorithmicStemming</code>.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::AnalysisScheme>,
     /// <p>The status of domain configuration option.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl AnalysisSchemeStatus {
@@ -3996,11 +4091,10 @@ impl std::fmt::Debug for AnalysisSchemeStatus {
         formatter.finish()
     }
 }
-/// See [`AnalysisSchemeStatus`](crate::model::AnalysisSchemeStatus)
+/// See [`AnalysisSchemeStatus`](crate::model::AnalysisSchemeStatus).
 pub mod analysis_scheme_status {
 
-    /// A builder for [`AnalysisSchemeStatus`](crate::model::AnalysisSchemeStatus)
-    #[non_exhaustive]
+    /// A builder for [`AnalysisSchemeStatus`](crate::model::AnalysisSchemeStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::AnalysisScheme>,
@@ -4033,7 +4127,7 @@ pub mod analysis_scheme_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnalysisSchemeStatus`](crate::model::AnalysisSchemeStatus)
+        /// Consumes the builder and constructs a [`AnalysisSchemeStatus`](crate::model::AnalysisSchemeStatus).
         pub fn build(self) -> crate::model::AnalysisSchemeStatus {
             crate::model::AnalysisSchemeStatus {
                 options: self.options,
@@ -4043,7 +4137,7 @@ pub mod analysis_scheme_status {
     }
 }
 impl AnalysisSchemeStatus {
-    /// Creates a new builder-style object to manufacture [`AnalysisSchemeStatus`](crate::model::AnalysisSchemeStatus)
+    /// Creates a new builder-style object to manufacture [`AnalysisSchemeStatus`](crate::model::AnalysisSchemeStatus).
     pub fn builder() -> crate::model::analysis_scheme_status::Builder {
         crate::model::analysis_scheme_status::Builder::default()
     }
@@ -4054,10 +4148,13 @@ impl AnalysisSchemeStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnalysisScheme {
     /// <p>Names must begin with a letter and can contain the following characters: a-z (lowercase), 0-9, and _ (underscore).</p>
+    #[doc(hidden)]
     pub analysis_scheme_name: std::option::Option<std::string::String>,
     /// <p>An <a href="http://tools.ietf.org/html/rfc4646" target="_blank">IETF RFC 4646</a> language code or <code>mul</code> for multiple languages.</p>
+    #[doc(hidden)]
     pub analysis_scheme_language: std::option::Option<crate::model::AnalysisSchemeLanguage>,
     /// <p>Synonyms, stopwords, and stemming options for an analysis scheme. Includes tokenization dictionary for Japanese.</p>
+    #[doc(hidden)]
     pub analysis_options: std::option::Option<crate::model::AnalysisOptions>,
 }
 impl AnalysisScheme {
@@ -4085,11 +4182,10 @@ impl std::fmt::Debug for AnalysisScheme {
         formatter.finish()
     }
 }
-/// See [`AnalysisScheme`](crate::model::AnalysisScheme)
+/// See [`AnalysisScheme`](crate::model::AnalysisScheme).
 pub mod analysis_scheme {
 
-    /// A builder for [`AnalysisScheme`](crate::model::AnalysisScheme)
-    #[non_exhaustive]
+    /// A builder for [`AnalysisScheme`](crate::model::AnalysisScheme).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) analysis_scheme_name: std::option::Option<std::string::String>,
@@ -4140,7 +4236,7 @@ pub mod analysis_scheme {
             self.analysis_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnalysisScheme`](crate::model::AnalysisScheme)
+        /// Consumes the builder and constructs a [`AnalysisScheme`](crate::model::AnalysisScheme).
         pub fn build(self) -> crate::model::AnalysisScheme {
             crate::model::AnalysisScheme {
                 analysis_scheme_name: self.analysis_scheme_name,
@@ -4151,7 +4247,7 @@ pub mod analysis_scheme {
     }
 }
 impl AnalysisScheme {
-    /// Creates a new builder-style object to manufacture [`AnalysisScheme`](crate::model::AnalysisScheme)
+    /// Creates a new builder-style object to manufacture [`AnalysisScheme`](crate::model::AnalysisScheme).
     pub fn builder() -> crate::model::analysis_scheme::Builder {
         crate::model::analysis_scheme::Builder::default()
     }
@@ -4162,14 +4258,19 @@ impl AnalysisScheme {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnalysisOptions {
     /// <p>A JSON object that defines synonym groups and aliases. A synonym group is an array of arrays, where each sub-array is a group of terms where each term in the group is considered a synonym of every other term in the group. The aliases value is an object that contains a collection of string:value pairs where the string specifies a term and the array of values specifies each of the aliases for that term. An alias is considered a synonym of the specified term, but the term is not considered a synonym of the alias. For more information about specifying synonyms, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-analysis-schemes.html#synonyms">Synonyms</a> in the <i>Amazon CloudSearch Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub synonyms: std::option::Option<std::string::String>,
     /// <p>A JSON array of terms to ignore during indexing and searching. For example, <code>["a", "an", "the", "of"]</code>. The stopwords dictionary must explicitly list each word you want to ignore. Wildcards and regular expressions are not supported. </p>
+    #[doc(hidden)]
     pub stopwords: std::option::Option<std::string::String>,
     /// <p>A JSON object that contains a collection of string:value pairs that each map a term to its stem. For example, <code>{"term1": "stem1", "term2": "stem2", "term3": "stem3"}</code>. The stemming dictionary is applied in addition to any algorithmic stemming. This enables you to override the results of the algorithmic stemming to correct specific cases of overstemming or understemming. The maximum size of a stemming dictionary is 500 KB.</p>
+    #[doc(hidden)]
     pub stemming_dictionary: std::option::Option<std::string::String>,
     /// <p>A JSON array that contains a collection of terms, tokens, readings and part of speech for Japanese Tokenizaiton. The Japanese tokenization dictionary enables you to override the default tokenization for selected terms. This is only valid for Japanese language fields.</p>
+    #[doc(hidden)]
     pub japanese_tokenization_dictionary: std::option::Option<std::string::String>,
     /// <p>The level of algorithmic stemming to perform: <code>none</code>, <code>minimal</code>, <code>light</code>, or <code>full</code>. The available levels vary depending on the language. For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/text-processing.html#text-processing-settings" target="_blank">Language Specific Text Processing Settings</a> in the <i>Amazon CloudSearch Developer Guide</i> </p>
+    #[doc(hidden)]
     pub algorithmic_stemming: std::option::Option<crate::model::AlgorithmicStemming>,
 }
 impl AnalysisOptions {
@@ -4208,11 +4309,10 @@ impl std::fmt::Debug for AnalysisOptions {
         formatter.finish()
     }
 }
-/// See [`AnalysisOptions`](crate::model::AnalysisOptions)
+/// See [`AnalysisOptions`](crate::model::AnalysisOptions).
 pub mod analysis_options {
 
-    /// A builder for [`AnalysisOptions`](crate::model::AnalysisOptions)
-    #[non_exhaustive]
+    /// A builder for [`AnalysisOptions`](crate::model::AnalysisOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) synonyms: std::option::Option<std::string::String>,
@@ -4284,7 +4384,7 @@ pub mod analysis_options {
             self.algorithmic_stemming = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnalysisOptions`](crate::model::AnalysisOptions)
+        /// Consumes the builder and constructs a [`AnalysisOptions`](crate::model::AnalysisOptions).
         pub fn build(self) -> crate::model::AnalysisOptions {
             crate::model::AnalysisOptions {
                 synonyms: self.synonyms,
@@ -4297,7 +4397,7 @@ pub mod analysis_options {
     }
 }
 impl AnalysisOptions {
-    /// Creates a new builder-style object to manufacture [`AnalysisOptions`](crate::model::AnalysisOptions)
+    /// Creates a new builder-style object to manufacture [`AnalysisOptions`](crate::model::AnalysisOptions).
     pub fn builder() -> crate::model::analysis_options::Builder {
         crate::model::analysis_options::Builder::default()
     }

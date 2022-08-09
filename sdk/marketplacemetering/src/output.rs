@@ -5,10 +5,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResolveCustomerOutput {
     /// <p>The <code>CustomerIdentifier</code> is used to identify an individual customer in your application. Calls to <code>BatchMeterUsage</code> require <code>CustomerIdentifiers</code> for each <code>UsageRecord</code>.</p>
+    #[doc(hidden)]
     pub customer_identifier: std::option::Option<std::string::String>,
     /// <p>The product code is returned to confirm that the buyer is registering for your product. Subsequent <code>BatchMeterUsage</code> calls should be made using this product code.</p>
+    #[doc(hidden)]
     pub product_code: std::option::Option<std::string::String>,
     /// <p>The <code>CustomerAWSAccountId</code> provides the AWS account ID associated with the <code>CustomerIdentifier</code> for the individual customer.</p>
+    #[doc(hidden)]
     pub customer_aws_account_id: std::option::Option<std::string::String>,
 }
 impl ResolveCustomerOutput {
@@ -34,11 +37,10 @@ impl std::fmt::Debug for ResolveCustomerOutput {
         formatter.finish()
     }
 }
-/// See [`ResolveCustomerOutput`](crate::output::ResolveCustomerOutput)
+/// See [`ResolveCustomerOutput`](crate::output::ResolveCustomerOutput).
 pub mod resolve_customer_output {
 
-    /// A builder for [`ResolveCustomerOutput`](crate::output::ResolveCustomerOutput)
-    #[non_exhaustive]
+    /// A builder for [`ResolveCustomerOutput`](crate::output::ResolveCustomerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) customer_identifier: std::option::Option<std::string::String>,
@@ -82,7 +84,7 @@ pub mod resolve_customer_output {
             self.customer_aws_account_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResolveCustomerOutput`](crate::output::ResolveCustomerOutput)
+        /// Consumes the builder and constructs a [`ResolveCustomerOutput`](crate::output::ResolveCustomerOutput).
         pub fn build(self) -> crate::output::ResolveCustomerOutput {
             crate::output::ResolveCustomerOutput {
                 customer_identifier: self.customer_identifier,
@@ -93,7 +95,7 @@ pub mod resolve_customer_output {
     }
 }
 impl ResolveCustomerOutput {
-    /// Creates a new builder-style object to manufacture [`ResolveCustomerOutput`](crate::output::ResolveCustomerOutput)
+    /// Creates a new builder-style object to manufacture [`ResolveCustomerOutput`](crate::output::ResolveCustomerOutput).
     pub fn builder() -> crate::output::resolve_customer_output::Builder {
         crate::output::resolve_customer_output::Builder::default()
     }
@@ -104,8 +106,10 @@ impl ResolveCustomerOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegisterUsageOutput {
     /// <p>(Optional) Only included when public key version has expired</p>
+    #[doc(hidden)]
     pub public_key_rotation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>JWT Token</p>
+    #[doc(hidden)]
     pub signature: std::option::Option<std::string::String>,
 }
 impl RegisterUsageOutput {
@@ -131,11 +135,10 @@ impl std::fmt::Debug for RegisterUsageOutput {
         formatter.finish()
     }
 }
-/// See [`RegisterUsageOutput`](crate::output::RegisterUsageOutput)
+/// See [`RegisterUsageOutput`](crate::output::RegisterUsageOutput).
 pub mod register_usage_output {
 
-    /// A builder for [`RegisterUsageOutput`](crate::output::RegisterUsageOutput)
-    #[non_exhaustive]
+    /// A builder for [`RegisterUsageOutput`](crate::output::RegisterUsageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) public_key_rotation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
@@ -165,7 +168,7 @@ pub mod register_usage_output {
             self.signature = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegisterUsageOutput`](crate::output::RegisterUsageOutput)
+        /// Consumes the builder and constructs a [`RegisterUsageOutput`](crate::output::RegisterUsageOutput).
         pub fn build(self) -> crate::output::RegisterUsageOutput {
             crate::output::RegisterUsageOutput {
                 public_key_rotation_timestamp: self.public_key_rotation_timestamp,
@@ -175,7 +178,7 @@ pub mod register_usage_output {
     }
 }
 impl RegisterUsageOutput {
-    /// Creates a new builder-style object to manufacture [`RegisterUsageOutput`](crate::output::RegisterUsageOutput)
+    /// Creates a new builder-style object to manufacture [`RegisterUsageOutput`](crate::output::RegisterUsageOutput).
     pub fn builder() -> crate::output::register_usage_output::Builder {
         crate::output::register_usage_output::Builder::default()
     }
@@ -186,6 +189,7 @@ impl RegisterUsageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MeterUsageOutput {
     /// <p>Metering record id.</p>
+    #[doc(hidden)]
     pub metering_record_id: std::option::Option<std::string::String>,
 }
 impl MeterUsageOutput {
@@ -201,11 +205,10 @@ impl std::fmt::Debug for MeterUsageOutput {
         formatter.finish()
     }
 }
-/// See [`MeterUsageOutput`](crate::output::MeterUsageOutput)
+/// See [`MeterUsageOutput`](crate::output::MeterUsageOutput).
 pub mod meter_usage_output {
 
-    /// A builder for [`MeterUsageOutput`](crate::output::MeterUsageOutput)
-    #[non_exhaustive]
+    /// A builder for [`MeterUsageOutput`](crate::output::MeterUsageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metering_record_id: std::option::Option<std::string::String>,
@@ -224,7 +227,7 @@ pub mod meter_usage_output {
             self.metering_record_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`MeterUsageOutput`](crate::output::MeterUsageOutput)
+        /// Consumes the builder and constructs a [`MeterUsageOutput`](crate::output::MeterUsageOutput).
         pub fn build(self) -> crate::output::MeterUsageOutput {
             crate::output::MeterUsageOutput {
                 metering_record_id: self.metering_record_id,
@@ -233,7 +236,7 @@ pub mod meter_usage_output {
     }
 }
 impl MeterUsageOutput {
-    /// Creates a new builder-style object to manufacture [`MeterUsageOutput`](crate::output::MeterUsageOutput)
+    /// Creates a new builder-style object to manufacture [`MeterUsageOutput`](crate::output::MeterUsageOutput).
     pub fn builder() -> crate::output::meter_usage_output::Builder {
         crate::output::meter_usage_output::Builder::default()
     }
@@ -244,8 +247,10 @@ impl MeterUsageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchMeterUsageOutput {
     /// <p>Contains all <code>UsageRecords</code> processed by <code>BatchMeterUsage</code>. These records were either honored by AWS Marketplace Metering Service or were invalid. Invalid records should be fixed before being resubmitted.</p>
+    #[doc(hidden)]
     pub results: std::option::Option<std::vec::Vec<crate::model::UsageRecordResult>>,
     /// <p>Contains all <code>UsageRecords</code> that were not processed by <code>BatchMeterUsage</code>. This is a list of <code>UsageRecords</code>. You can retry the failed request by making another <code>BatchMeterUsage</code> call with this list as input in the <code>BatchMeterUsageRequest</code>.</p>
+    #[doc(hidden)]
     pub unprocessed_records: std::option::Option<std::vec::Vec<crate::model::UsageRecord>>,
 }
 impl BatchMeterUsageOutput {
@@ -266,11 +271,10 @@ impl std::fmt::Debug for BatchMeterUsageOutput {
         formatter.finish()
     }
 }
-/// See [`BatchMeterUsageOutput`](crate::output::BatchMeterUsageOutput)
+/// See [`BatchMeterUsageOutput`](crate::output::BatchMeterUsageOutput).
 pub mod batch_meter_usage_output {
 
-    /// A builder for [`BatchMeterUsageOutput`](crate::output::BatchMeterUsageOutput)
-    #[non_exhaustive]
+    /// A builder for [`BatchMeterUsageOutput`](crate::output::BatchMeterUsageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) results: std::option::Option<std::vec::Vec<crate::model::UsageRecordResult>>,
@@ -316,7 +320,7 @@ pub mod batch_meter_usage_output {
             self.unprocessed_records = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchMeterUsageOutput`](crate::output::BatchMeterUsageOutput)
+        /// Consumes the builder and constructs a [`BatchMeterUsageOutput`](crate::output::BatchMeterUsageOutput).
         pub fn build(self) -> crate::output::BatchMeterUsageOutput {
             crate::output::BatchMeterUsageOutput {
                 results: self.results,
@@ -326,7 +330,7 @@ pub mod batch_meter_usage_output {
     }
 }
 impl BatchMeterUsageOutput {
-    /// Creates a new builder-style object to manufacture [`BatchMeterUsageOutput`](crate::output::BatchMeterUsageOutput)
+    /// Creates a new builder-style object to manufacture [`BatchMeterUsageOutput`](crate::output::BatchMeterUsageOutput).
     pub fn builder() -> crate::output::batch_meter_usage_output::Builder {
         crate::output::batch_meter_usage_output::Builder::default()
     }

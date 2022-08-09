@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceAccessControlAttributeConfiguration {
     /// <p>Lists the attributes that are configured for ABAC in the specified Amazon Web Services SSO instance.</p>
+    #[doc(hidden)]
     pub access_control_attributes:
         std::option::Option<std::vec::Vec<crate::model::AccessControlAttribute>>,
 }
@@ -23,11 +24,10 @@ impl std::fmt::Debug for InstanceAccessControlAttributeConfiguration {
         formatter.finish()
     }
 }
-/// See [`InstanceAccessControlAttributeConfiguration`](crate::model::InstanceAccessControlAttributeConfiguration)
+/// See [`InstanceAccessControlAttributeConfiguration`](crate::model::InstanceAccessControlAttributeConfiguration).
 pub mod instance_access_control_attribute_configuration {
 
-    /// A builder for [`InstanceAccessControlAttributeConfiguration`](crate::model::InstanceAccessControlAttributeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`InstanceAccessControlAttributeConfiguration`](crate::model::InstanceAccessControlAttributeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_control_attributes:
@@ -56,7 +56,7 @@ pub mod instance_access_control_attribute_configuration {
             self.access_control_attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceAccessControlAttributeConfiguration`](crate::model::InstanceAccessControlAttributeConfiguration)
+        /// Consumes the builder and constructs a [`InstanceAccessControlAttributeConfiguration`](crate::model::InstanceAccessControlAttributeConfiguration).
         pub fn build(self) -> crate::model::InstanceAccessControlAttributeConfiguration {
             crate::model::InstanceAccessControlAttributeConfiguration {
                 access_control_attributes: self.access_control_attributes,
@@ -65,7 +65,7 @@ pub mod instance_access_control_attribute_configuration {
     }
 }
 impl InstanceAccessControlAttributeConfiguration {
-    /// Creates a new builder-style object to manufacture [`InstanceAccessControlAttributeConfiguration`](crate::model::InstanceAccessControlAttributeConfiguration)
+    /// Creates a new builder-style object to manufacture [`InstanceAccessControlAttributeConfiguration`](crate::model::InstanceAccessControlAttributeConfiguration).
     pub fn builder() -> crate::model::instance_access_control_attribute_configuration::Builder {
         crate::model::instance_access_control_attribute_configuration::Builder::default()
     }
@@ -76,8 +76,10 @@ impl InstanceAccessControlAttributeConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessControlAttribute {
     /// <p>The name of the attribute associated with your identities in your identity source. This is used to map a specified attribute in your identity source with an attribute in Amazon Web Services SSO.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value used for mapping a specified attribute to an identity source.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<crate::model::AccessControlAttributeValue>,
 }
 impl AccessControlAttribute {
@@ -98,11 +100,10 @@ impl std::fmt::Debug for AccessControlAttribute {
         formatter.finish()
     }
 }
-/// See [`AccessControlAttribute`](crate::model::AccessControlAttribute)
+/// See [`AccessControlAttribute`](crate::model::AccessControlAttribute).
 pub mod access_control_attribute {
 
-    /// A builder for [`AccessControlAttribute`](crate::model::AccessControlAttribute)
-    #[non_exhaustive]
+    /// A builder for [`AccessControlAttribute`](crate::model::AccessControlAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -132,7 +133,7 @@ pub mod access_control_attribute {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessControlAttribute`](crate::model::AccessControlAttribute)
+        /// Consumes the builder and constructs a [`AccessControlAttribute`](crate::model::AccessControlAttribute).
         pub fn build(self) -> crate::model::AccessControlAttribute {
             crate::model::AccessControlAttribute {
                 key: self.key,
@@ -142,17 +143,18 @@ pub mod access_control_attribute {
     }
 }
 impl AccessControlAttribute {
-    /// Creates a new builder-style object to manufacture [`AccessControlAttribute`](crate::model::AccessControlAttribute)
+    /// Creates a new builder-style object to manufacture [`AccessControlAttribute`](crate::model::AccessControlAttribute).
     pub fn builder() -> crate::model::access_control_attribute::Builder {
         crate::model::access_control_attribute::Builder::default()
     }
 }
 
-/// <p>The value used for mapping a specified attribute to an identity source.</p>
+/// <p>The value used for mapping a specified attribute to an identity source. For more information, see <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/attributemappingsconcept.html">Attribute mappings</a> in the <i>Amazon Web Services SSO User Guide</i>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessControlAttributeValue {
     /// <p>The identity source to use when mapping a specified attribute to Amazon Web Services SSO.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AccessControlAttributeValue {
@@ -168,11 +170,10 @@ impl std::fmt::Debug for AccessControlAttributeValue {
         formatter.finish()
     }
 }
-/// See [`AccessControlAttributeValue`](crate::model::AccessControlAttributeValue)
+/// See [`AccessControlAttributeValue`](crate::model::AccessControlAttributeValue).
 pub mod access_control_attribute_value {
 
-    /// A builder for [`AccessControlAttributeValue`](crate::model::AccessControlAttributeValue)
-    #[non_exhaustive]
+    /// A builder for [`AccessControlAttributeValue`](crate::model::AccessControlAttributeValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -197,7 +198,7 @@ pub mod access_control_attribute_value {
             self.source = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessControlAttributeValue`](crate::model::AccessControlAttributeValue)
+        /// Consumes the builder and constructs a [`AccessControlAttributeValue`](crate::model::AccessControlAttributeValue).
         pub fn build(self) -> crate::model::AccessControlAttributeValue {
             crate::model::AccessControlAttributeValue {
                 source: self.source,
@@ -206,7 +207,7 @@ pub mod access_control_attribute_value {
     }
 }
 impl AccessControlAttributeValue {
-    /// Creates a new builder-style object to manufacture [`AccessControlAttributeValue`](crate::model::AccessControlAttributeValue)
+    /// Creates a new builder-style object to manufacture [`AccessControlAttributeValue`](crate::model::AccessControlAttributeValue).
     pub fn builder() -> crate::model::access_control_attribute_value::Builder {
         crate::model::access_control_attribute_value::Builder::default()
     }
@@ -217,8 +218,10 @@ impl AccessControlAttributeValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key for the tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -239,11 +242,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -270,7 +272,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -280,9 +282,177 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
+    }
+}
+
+/// <p>Specifies the configuration of the Amazon Web Services managed or customer managed policy that you want to set as a permissions boundary. Specify either <code>CustomerManagedPolicyReference</code> to use the name and path of a customer managed policy, or <code>ManagedPolicyArn</code> to use the ARN of an Amazon Web Services managed policy. A permissions boundary represents the maximum permissions that any policy can grant your role. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions boundaries for IAM entities</a> in the <i>Identity and Access Management User Guide</i>.</p> <important>
+/// <p>Policies used as permissions boundaries don't provide permissions. You must also attach an IAM policy to the role. To learn how the effective permissions for a role are evaluated, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html">IAM JSON policy evaluation logic</a> in the <i>Identity and Access Management User Guide</i>.</p>
+/// </important>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct PermissionsBoundary {
+    /// <p>Specifies the name and path of a customer managed policy. You must have an IAM policy that matches the name and path in each Amazon Web Services account where you want to deploy your permission set.</p>
+    #[doc(hidden)]
+    pub customer_managed_policy_reference:
+        std::option::Option<crate::model::CustomerManagedPolicyReference>,
+    /// <p>The Amazon Web Services managed policy ARN that you want to attach to a permission set as a permissions boundary.</p>
+    #[doc(hidden)]
+    pub managed_policy_arn: std::option::Option<std::string::String>,
+}
+impl PermissionsBoundary {
+    /// <p>Specifies the name and path of a customer managed policy. You must have an IAM policy that matches the name and path in each Amazon Web Services account where you want to deploy your permission set.</p>
+    pub fn customer_managed_policy_reference(
+        &self,
+    ) -> std::option::Option<&crate::model::CustomerManagedPolicyReference> {
+        self.customer_managed_policy_reference.as_ref()
+    }
+    /// <p>The Amazon Web Services managed policy ARN that you want to attach to a permission set as a permissions boundary.</p>
+    pub fn managed_policy_arn(&self) -> std::option::Option<&str> {
+        self.managed_policy_arn.as_deref()
+    }
+}
+impl std::fmt::Debug for PermissionsBoundary {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("PermissionsBoundary");
+        formatter.field(
+            "customer_managed_policy_reference",
+            &self.customer_managed_policy_reference,
+        );
+        formatter.field("managed_policy_arn", &self.managed_policy_arn);
+        formatter.finish()
+    }
+}
+/// See [`PermissionsBoundary`](crate::model::PermissionsBoundary).
+pub mod permissions_boundary {
+
+    /// A builder for [`PermissionsBoundary`](crate::model::PermissionsBoundary).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) customer_managed_policy_reference:
+            std::option::Option<crate::model::CustomerManagedPolicyReference>,
+        pub(crate) managed_policy_arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>Specifies the name and path of a customer managed policy. You must have an IAM policy that matches the name and path in each Amazon Web Services account where you want to deploy your permission set.</p>
+        pub fn customer_managed_policy_reference(
+            mut self,
+            input: crate::model::CustomerManagedPolicyReference,
+        ) -> Self {
+            self.customer_managed_policy_reference = Some(input);
+            self
+        }
+        /// <p>Specifies the name and path of a customer managed policy. You must have an IAM policy that matches the name and path in each Amazon Web Services account where you want to deploy your permission set.</p>
+        pub fn set_customer_managed_policy_reference(
+            mut self,
+            input: std::option::Option<crate::model::CustomerManagedPolicyReference>,
+        ) -> Self {
+            self.customer_managed_policy_reference = input;
+            self
+        }
+        /// <p>The Amazon Web Services managed policy ARN that you want to attach to a permission set as a permissions boundary.</p>
+        pub fn managed_policy_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.managed_policy_arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Web Services managed policy ARN that you want to attach to a permission set as a permissions boundary.</p>
+        pub fn set_managed_policy_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.managed_policy_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`PermissionsBoundary`](crate::model::PermissionsBoundary).
+        pub fn build(self) -> crate::model::PermissionsBoundary {
+            crate::model::PermissionsBoundary {
+                customer_managed_policy_reference: self.customer_managed_policy_reference,
+                managed_policy_arn: self.managed_policy_arn,
+            }
+        }
+    }
+}
+impl PermissionsBoundary {
+    /// Creates a new builder-style object to manufacture [`PermissionsBoundary`](crate::model::PermissionsBoundary).
+    pub fn builder() -> crate::model::permissions_boundary::Builder {
+        crate::model::permissions_boundary::Builder::default()
+    }
+}
+
+/// <p>Specifies the name and path of a customer managed policy. You must have an IAM policy that matches the name and path in each Amazon Web Services account where you want to deploy your permission set.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CustomerManagedPolicyReference {
+    /// <p>The name of the IAM policy that you have configured in each account where you want to deploy your permission set.</p>
+    #[doc(hidden)]
+    pub name: std::option::Option<std::string::String>,
+    /// <p>The path to the IAM policy that you have configured in each account where you want to deploy your permission set. The default is <code>/</code>. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names">Friendly names and paths</a> in the <i>Identity and Access Management User Guide</i>.</p>
+    #[doc(hidden)]
+    pub path: std::option::Option<std::string::String>,
+}
+impl CustomerManagedPolicyReference {
+    /// <p>The name of the IAM policy that you have configured in each account where you want to deploy your permission set.</p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+    /// <p>The path to the IAM policy that you have configured in each account where you want to deploy your permission set. The default is <code>/</code>. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names">Friendly names and paths</a> in the <i>Identity and Access Management User Guide</i>.</p>
+    pub fn path(&self) -> std::option::Option<&str> {
+        self.path.as_deref()
+    }
+}
+impl std::fmt::Debug for CustomerManagedPolicyReference {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CustomerManagedPolicyReference");
+        formatter.field("name", &self.name);
+        formatter.field("path", &self.path);
+        formatter.finish()
+    }
+}
+/// See [`CustomerManagedPolicyReference`](crate::model::CustomerManagedPolicyReference).
+pub mod customer_managed_policy_reference {
+
+    /// A builder for [`CustomerManagedPolicyReference`](crate::model::CustomerManagedPolicyReference).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) name: std::option::Option<std::string::String>,
+        pub(crate) path: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The name of the IAM policy that you have configured in each account where you want to deploy your permission set.</p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>The name of the IAM policy that you have configured in each account where you want to deploy your permission set.</p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// <p>The path to the IAM policy that you have configured in each account where you want to deploy your permission set. The default is <code>/</code>. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names">Friendly names and paths</a> in the <i>Identity and Access Management User Guide</i>.</p>
+        pub fn path(mut self, input: impl Into<std::string::String>) -> Self {
+            self.path = Some(input.into());
+            self
+        }
+        /// <p>The path to the IAM policy that you have configured in each account where you want to deploy your permission set. The default is <code>/</code>. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names">Friendly names and paths</a> in the <i>Identity and Access Management User Guide</i>.</p>
+        pub fn set_path(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.path = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CustomerManagedPolicyReference`](crate::model::CustomerManagedPolicyReference).
+        pub fn build(self) -> crate::model::CustomerManagedPolicyReference {
+            crate::model::CustomerManagedPolicyReference {
+                name: self.name,
+                path: self.path,
+            }
+        }
+    }
+}
+impl CustomerManagedPolicyReference {
+    /// Creates a new builder-style object to manufacture [`CustomerManagedPolicyReference`](crate::model::CustomerManagedPolicyReference).
+    pub fn builder() -> crate::model::customer_managed_policy_reference::Builder {
+        crate::model::customer_managed_policy_reference::Builder::default()
     }
 }
 
@@ -291,16 +461,22 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PermissionSetProvisioningStatus {
     /// <p>The status of the permission set provisioning process.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusValues>,
     /// <p>The identifier for tracking the request operation that is generated by the universally unique identifier (UUID) workflow.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the Amazon Web Services account from which to list the assignments.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The ARN of the permission set that is being provisioned. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub permission_set_arn: std::option::Option<std::string::String>,
     /// <p>The message that contains an error or exception in case of an operation failure.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
     /// <p>The date that the permission set was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PermissionSetProvisioningStatus {
@@ -341,11 +517,10 @@ impl std::fmt::Debug for PermissionSetProvisioningStatus {
         formatter.finish()
     }
 }
-/// See [`PermissionSetProvisioningStatus`](crate::model::PermissionSetProvisioningStatus)
+/// See [`PermissionSetProvisioningStatus`](crate::model::PermissionSetProvisioningStatus).
 pub mod permission_set_provisioning_status {
 
-    /// A builder for [`PermissionSetProvisioningStatus`](crate::model::PermissionSetProvisioningStatus)
-    #[non_exhaustive]
+    /// A builder for [`PermissionSetProvisioningStatus`](crate::model::PermissionSetProvisioningStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::StatusValues>,
@@ -428,7 +603,7 @@ pub mod permission_set_provisioning_status {
             self.created_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`PermissionSetProvisioningStatus`](crate::model::PermissionSetProvisioningStatus)
+        /// Consumes the builder and constructs a [`PermissionSetProvisioningStatus`](crate::model::PermissionSetProvisioningStatus).
         pub fn build(self) -> crate::model::PermissionSetProvisioningStatus {
             crate::model::PermissionSetProvisioningStatus {
                 status: self.status,
@@ -442,7 +617,7 @@ pub mod permission_set_provisioning_status {
     }
 }
 impl PermissionSetProvisioningStatus {
-    /// Creates a new builder-style object to manufacture [`PermissionSetProvisioningStatus`](crate::model::PermissionSetProvisioningStatus)
+    /// Creates a new builder-style object to manufacture [`PermissionSetProvisioningStatus`](crate::model::PermissionSetProvisioningStatus).
     pub fn builder() -> crate::model::permission_set_provisioning_status::Builder {
         crate::model::permission_set_provisioning_status::Builder::default()
     }
@@ -633,10 +808,13 @@ impl AsRef<str> for ProvisioningStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PermissionSetProvisioningStatusMetadata {
     /// <p>The status of the permission set provisioning process.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusValues>,
     /// <p>The identifier for tracking the request operation that is generated by the universally unique identifier (UUID) workflow.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The date that the permission set was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PermissionSetProvisioningStatusMetadata {
@@ -662,11 +840,10 @@ impl std::fmt::Debug for PermissionSetProvisioningStatusMetadata {
         formatter.finish()
     }
 }
-/// See [`PermissionSetProvisioningStatusMetadata`](crate::model::PermissionSetProvisioningStatusMetadata)
+/// See [`PermissionSetProvisioningStatusMetadata`](crate::model::PermissionSetProvisioningStatusMetadata).
 pub mod permission_set_provisioning_status_metadata {
 
-    /// A builder for [`PermissionSetProvisioningStatusMetadata`](crate::model::PermissionSetProvisioningStatusMetadata)
-    #[non_exhaustive]
+    /// A builder for [`PermissionSetProvisioningStatusMetadata`](crate::model::PermissionSetProvisioningStatusMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::StatusValues>,
@@ -710,7 +887,7 @@ pub mod permission_set_provisioning_status_metadata {
             self.created_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`PermissionSetProvisioningStatusMetadata`](crate::model::PermissionSetProvisioningStatusMetadata)
+        /// Consumes the builder and constructs a [`PermissionSetProvisioningStatusMetadata`](crate::model::PermissionSetProvisioningStatusMetadata).
         pub fn build(self) -> crate::model::PermissionSetProvisioningStatusMetadata {
             crate::model::PermissionSetProvisioningStatusMetadata {
                 status: self.status,
@@ -721,7 +898,7 @@ pub mod permission_set_provisioning_status_metadata {
     }
 }
 impl PermissionSetProvisioningStatusMetadata {
-    /// Creates a new builder-style object to manufacture [`PermissionSetProvisioningStatusMetadata`](crate::model::PermissionSetProvisioningStatusMetadata)
+    /// Creates a new builder-style object to manufacture [`PermissionSetProvisioningStatusMetadata`](crate::model::PermissionSetProvisioningStatusMetadata).
     pub fn builder() -> crate::model::permission_set_provisioning_status_metadata::Builder {
         crate::model::permission_set_provisioning_status_metadata::Builder::default()
     }
@@ -732,6 +909,7 @@ impl PermissionSetProvisioningStatusMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OperationStatusFilter {
     /// <p>Filters the list operations result based on the status attribute.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusValues>,
 }
 impl OperationStatusFilter {
@@ -747,11 +925,10 @@ impl std::fmt::Debug for OperationStatusFilter {
         formatter.finish()
     }
 }
-/// See [`OperationStatusFilter`](crate::model::OperationStatusFilter)
+/// See [`OperationStatusFilter`](crate::model::OperationStatusFilter).
 pub mod operation_status_filter {
 
-    /// A builder for [`OperationStatusFilter`](crate::model::OperationStatusFilter)
-    #[non_exhaustive]
+    /// A builder for [`OperationStatusFilter`](crate::model::OperationStatusFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::StatusValues>,
@@ -770,7 +947,7 @@ pub mod operation_status_filter {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`OperationStatusFilter`](crate::model::OperationStatusFilter)
+        /// Consumes the builder and constructs a [`OperationStatusFilter`](crate::model::OperationStatusFilter).
         pub fn build(self) -> crate::model::OperationStatusFilter {
             crate::model::OperationStatusFilter {
                 status: self.status,
@@ -779,27 +956,29 @@ pub mod operation_status_filter {
     }
 }
 impl OperationStatusFilter {
-    /// Creates a new builder-style object to manufacture [`OperationStatusFilter`](crate::model::OperationStatusFilter)
+    /// Creates a new builder-style object to manufacture [`OperationStatusFilter`](crate::model::OperationStatusFilter).
     pub fn builder() -> crate::model::operation_status_filter::Builder {
         crate::model::operation_status_filter::Builder::default()
     }
 }
 
-/// <p>A structure that stores the details of the IAM managed policy.</p>
+/// <p>A structure that stores the details of the Amazon Web Services managed policy.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttachedManagedPolicy {
-    /// <p>The name of the IAM managed policy.</p>
+    /// <p>The name of the Amazon Web Services managed policy.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
-    /// <p>The ARN of the IAM managed policy. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    /// <p>The ARN of the Amazon Web Services managed policy. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl AttachedManagedPolicy {
-    /// <p>The name of the IAM managed policy.</p>
+    /// <p>The name of the Amazon Web Services managed policy.</p>
     pub fn name(&self) -> std::option::Option<&str> {
         self.name.as_deref()
     }
-    /// <p>The ARN of the IAM managed policy. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    /// <p>The ARN of the Amazon Web Services managed policy. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
     pub fn arn(&self) -> std::option::Option<&str> {
         self.arn.as_deref()
     }
@@ -812,38 +991,37 @@ impl std::fmt::Debug for AttachedManagedPolicy {
         formatter.finish()
     }
 }
-/// See [`AttachedManagedPolicy`](crate::model::AttachedManagedPolicy)
+/// See [`AttachedManagedPolicy`](crate::model::AttachedManagedPolicy).
 pub mod attached_managed_policy {
 
-    /// A builder for [`AttachedManagedPolicy`](crate::model::AttachedManagedPolicy)
-    #[non_exhaustive]
+    /// A builder for [`AttachedManagedPolicy`](crate::model::AttachedManagedPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
         pub(crate) arn: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The name of the IAM managed policy.</p>
+        /// <p>The name of the Amazon Web Services managed policy.</p>
         pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
             self.name = Some(input.into());
             self
         }
-        /// <p>The name of the IAM managed policy.</p>
+        /// <p>The name of the Amazon Web Services managed policy.</p>
         pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.name = input;
             self
         }
-        /// <p>The ARN of the IAM managed policy. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+        /// <p>The ARN of the Amazon Web Services managed policy. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
         pub fn arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.arn = Some(input.into());
             self
         }
-        /// <p>The ARN of the IAM managed policy. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+        /// <p>The ARN of the Amazon Web Services managed policy. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
         pub fn set_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttachedManagedPolicy`](crate::model::AttachedManagedPolicy)
+        /// Consumes the builder and constructs a [`AttachedManagedPolicy`](crate::model::AttachedManagedPolicy).
         pub fn build(self) -> crate::model::AttachedManagedPolicy {
             crate::model::AttachedManagedPolicy {
                 name: self.name,
@@ -853,27 +1031,29 @@ pub mod attached_managed_policy {
     }
 }
 impl AttachedManagedPolicy {
-    /// Creates a new builder-style object to manufacture [`AttachedManagedPolicy`](crate::model::AttachedManagedPolicy)
+    /// Creates a new builder-style object to manufacture [`AttachedManagedPolicy`](crate::model::AttachedManagedPolicy).
     pub fn builder() -> crate::model::attached_managed_policy::Builder {
         crate::model::attached_managed_policy::Builder::default()
     }
 }
 
-/// <p>Provides information about the SSO instance.</p>
+/// <p>Provides information about the Amazon Web Services SSO instance.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceMetadata {
-    /// <p>The ARN of the SSO instance under which the operation will be executed. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    /// <p>The ARN of the Amazon Web Services SSO instance under which the operation will be executed. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub instance_arn: std::option::Option<std::string::String>,
-    /// <p>The identifier of the identity store that is connected to the SSO instance.</p>
+    /// <p>The identifier of the identity store that is connected to the Amazon Web Services SSO instance.</p>
+    #[doc(hidden)]
     pub identity_store_id: std::option::Option<std::string::String>,
 }
 impl InstanceMetadata {
-    /// <p>The ARN of the SSO instance under which the operation will be executed. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    /// <p>The ARN of the Amazon Web Services SSO instance under which the operation will be executed. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
     pub fn instance_arn(&self) -> std::option::Option<&str> {
         self.instance_arn.as_deref()
     }
-    /// <p>The identifier of the identity store that is connected to the SSO instance.</p>
+    /// <p>The identifier of the identity store that is connected to the Amazon Web Services SSO instance.</p>
     pub fn identity_store_id(&self) -> std::option::Option<&str> {
         self.identity_store_id.as_deref()
     }
@@ -886,33 +1066,32 @@ impl std::fmt::Debug for InstanceMetadata {
         formatter.finish()
     }
 }
-/// See [`InstanceMetadata`](crate::model::InstanceMetadata)
+/// See [`InstanceMetadata`](crate::model::InstanceMetadata).
 pub mod instance_metadata {
 
-    /// A builder for [`InstanceMetadata`](crate::model::InstanceMetadata)
-    #[non_exhaustive]
+    /// A builder for [`InstanceMetadata`](crate::model::InstanceMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_arn: std::option::Option<std::string::String>,
         pub(crate) identity_store_id: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The ARN of the SSO instance under which the operation will be executed. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+        /// <p>The ARN of the Amazon Web Services SSO instance under which the operation will be executed. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
         pub fn instance_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.instance_arn = Some(input.into());
             self
         }
-        /// <p>The ARN of the SSO instance under which the operation will be executed. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+        /// <p>The ARN of the Amazon Web Services SSO instance under which the operation will be executed. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
         pub fn set_instance_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.instance_arn = input;
             self
         }
-        /// <p>The identifier of the identity store that is connected to the SSO instance.</p>
+        /// <p>The identifier of the identity store that is connected to the Amazon Web Services SSO instance.</p>
         pub fn identity_store_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.identity_store_id = Some(input.into());
             self
         }
-        /// <p>The identifier of the identity store that is connected to the SSO instance.</p>
+        /// <p>The identifier of the identity store that is connected to the Amazon Web Services SSO instance.</p>
         pub fn set_identity_store_id(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -920,7 +1099,7 @@ pub mod instance_metadata {
             self.identity_store_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceMetadata`](crate::model::InstanceMetadata)
+        /// Consumes the builder and constructs a [`InstanceMetadata`](crate::model::InstanceMetadata).
         pub fn build(self) -> crate::model::InstanceMetadata {
             crate::model::InstanceMetadata {
                 instance_arn: self.instance_arn,
@@ -930,7 +1109,7 @@ pub mod instance_metadata {
     }
 }
 impl InstanceMetadata {
-    /// Creates a new builder-style object to manufacture [`InstanceMetadata`](crate::model::InstanceMetadata)
+    /// Creates a new builder-style object to manufacture [`InstanceMetadata`](crate::model::InstanceMetadata).
     pub fn builder() -> crate::model::instance_metadata::Builder {
         crate::model::instance_metadata::Builder::default()
     }
@@ -943,12 +1122,16 @@ impl InstanceMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountAssignment {
     /// <p>The identifier of the Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The ARN of the permission set. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub permission_set_arn: std::option::Option<std::string::String>,
     /// <p>The entity type for which the assignment will be created.</p>
+    #[doc(hidden)]
     pub principal_type: std::option::Option<crate::model::PrincipalType>,
     /// <p>An identifier for an object in Amazon Web Services SSO, such as a user or group. PrincipalIds are GUIDs (For example, f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in Amazon Web Services SSO, see the <a href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Amazon Web Services SSO Identity Store API Reference</a>.</p>
+    #[doc(hidden)]
     pub principal_id: std::option::Option<std::string::String>,
 }
 impl AccountAssignment {
@@ -979,11 +1162,10 @@ impl std::fmt::Debug for AccountAssignment {
         formatter.finish()
     }
 }
-/// See [`AccountAssignment`](crate::model::AccountAssignment)
+/// See [`AccountAssignment`](crate::model::AccountAssignment).
 pub mod account_assignment {
 
-    /// A builder for [`AccountAssignment`](crate::model::AccountAssignment)
-    #[non_exhaustive]
+    /// A builder for [`AccountAssignment`](crate::model::AccountAssignment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -1038,7 +1220,7 @@ pub mod account_assignment {
             self.principal_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountAssignment`](crate::model::AccountAssignment)
+        /// Consumes the builder and constructs a [`AccountAssignment`](crate::model::AccountAssignment).
         pub fn build(self) -> crate::model::AccountAssignment {
             crate::model::AccountAssignment {
                 account_id: self.account_id,
@@ -1050,7 +1232,7 @@ pub mod account_assignment {
     }
 }
 impl AccountAssignment {
-    /// Creates a new builder-style object to manufacture [`AccountAssignment`](crate::model::AccountAssignment)
+    /// Creates a new builder-style object to manufacture [`AccountAssignment`](crate::model::AccountAssignment).
     pub fn builder() -> crate::model::account_assignment::Builder {
         crate::model::account_assignment::Builder::default()
     }
@@ -1116,10 +1298,13 @@ impl AsRef<str> for PrincipalType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountAssignmentOperationStatusMetadata {
     /// <p>The status of the permission set provisioning process.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusValues>,
     /// <p>The identifier for tracking the request operation that is generated by the universally unique identifier (UUID) workflow.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The date that the permission set was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AccountAssignmentOperationStatusMetadata {
@@ -1145,11 +1330,10 @@ impl std::fmt::Debug for AccountAssignmentOperationStatusMetadata {
         formatter.finish()
     }
 }
-/// See [`AccountAssignmentOperationStatusMetadata`](crate::model::AccountAssignmentOperationStatusMetadata)
+/// See [`AccountAssignmentOperationStatusMetadata`](crate::model::AccountAssignmentOperationStatusMetadata).
 pub mod account_assignment_operation_status_metadata {
 
-    /// A builder for [`AccountAssignmentOperationStatusMetadata`](crate::model::AccountAssignmentOperationStatusMetadata)
-    #[non_exhaustive]
+    /// A builder for [`AccountAssignmentOperationStatusMetadata`](crate::model::AccountAssignmentOperationStatusMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::StatusValues>,
@@ -1193,7 +1377,7 @@ pub mod account_assignment_operation_status_metadata {
             self.created_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountAssignmentOperationStatusMetadata`](crate::model::AccountAssignmentOperationStatusMetadata)
+        /// Consumes the builder and constructs a [`AccountAssignmentOperationStatusMetadata`](crate::model::AccountAssignmentOperationStatusMetadata).
         pub fn build(self) -> crate::model::AccountAssignmentOperationStatusMetadata {
             crate::model::AccountAssignmentOperationStatusMetadata {
                 status: self.status,
@@ -1204,7 +1388,7 @@ pub mod account_assignment_operation_status_metadata {
     }
 }
 impl AccountAssignmentOperationStatusMetadata {
-    /// Creates a new builder-style object to manufacture [`AccountAssignmentOperationStatusMetadata`](crate::model::AccountAssignmentOperationStatusMetadata)
+    /// Creates a new builder-style object to manufacture [`AccountAssignmentOperationStatusMetadata`](crate::model::AccountAssignmentOperationStatusMetadata).
     pub fn builder() -> crate::model::account_assignment_operation_status_metadata::Builder {
         crate::model::account_assignment_operation_status_metadata::Builder::default()
     }
@@ -1215,16 +1399,22 @@ impl AccountAssignmentOperationStatusMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PermissionSet {
     /// <p>The name of the permission set.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The ARN of the permission set. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub permission_set_arn: std::option::Option<std::string::String>,
     /// <p>The description of the <code>PermissionSet</code>.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date that the permission set was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The length of time that the application user sessions are valid for in the ISO-8601 standard.</p>
+    #[doc(hidden)]
     pub session_duration: std::option::Option<std::string::String>,
     /// <p>Used to redirect users within the application during the federation authentication process.</p>
+    #[doc(hidden)]
     pub relay_state: std::option::Option<std::string::String>,
 }
 impl PermissionSet {
@@ -1265,11 +1455,10 @@ impl std::fmt::Debug for PermissionSet {
         formatter.finish()
     }
 }
-/// See [`PermissionSet`](crate::model::PermissionSet)
+/// See [`PermissionSet`](crate::model::PermissionSet).
 pub mod permission_set {
 
-    /// A builder for [`PermissionSet`](crate::model::PermissionSet)
-    #[non_exhaustive]
+    /// A builder for [`PermissionSet`](crate::model::PermissionSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1349,7 +1538,7 @@ pub mod permission_set {
             self.relay_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`PermissionSet`](crate::model::PermissionSet)
+        /// Consumes the builder and constructs a [`PermissionSet`](crate::model::PermissionSet).
         pub fn build(self) -> crate::model::PermissionSet {
             crate::model::PermissionSet {
                 name: self.name,
@@ -1363,7 +1552,7 @@ pub mod permission_set {
     }
 }
 impl PermissionSet {
-    /// Creates a new builder-style object to manufacture [`PermissionSet`](crate::model::PermissionSet)
+    /// Creates a new builder-style object to manufacture [`PermissionSet`](crate::model::PermissionSet).
     pub fn builder() -> crate::model::permission_set::Builder {
         crate::model::permission_set::Builder::default()
     }
@@ -1437,22 +1626,31 @@ impl AsRef<str> for InstanceAccessControlAttributeConfigurationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountAssignmentOperationStatus {
     /// <p>The status of the permission set provisioning process.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusValues>,
     /// <p>The identifier for tracking the request operation that is generated by the universally unique identifier (UUID) workflow.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The message that contains an error or exception in case of an operation failure.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
     /// <p>TargetID is an Amazon Web Services account identifier, typically a 10-12 digit string (For example, 123456789012).</p>
+    #[doc(hidden)]
     pub target_id: std::option::Option<std::string::String>,
     /// <p>The entity type for which the assignment will be created.</p>
+    #[doc(hidden)]
     pub target_type: std::option::Option<crate::model::TargetType>,
     /// <p>The ARN of the permission set. For more information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub permission_set_arn: std::option::Option<std::string::String>,
     /// <p>The entity type for which the assignment will be created.</p>
+    #[doc(hidden)]
     pub principal_type: std::option::Option<crate::model::PrincipalType>,
     /// <p>An identifier for an object in Amazon Web Services SSO, such as a user or group. PrincipalIds are GUIDs (For example, f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in Amazon Web Services SSO, see the <a href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Amazon Web Services SSO Identity Store API Reference</a>.</p>
+    #[doc(hidden)]
     pub principal_id: std::option::Option<std::string::String>,
     /// <p>The date that the permission set was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AccountAssignmentOperationStatus {
@@ -1508,11 +1706,10 @@ impl std::fmt::Debug for AccountAssignmentOperationStatus {
         formatter.finish()
     }
 }
-/// See [`AccountAssignmentOperationStatus`](crate::model::AccountAssignmentOperationStatus)
+/// See [`AccountAssignmentOperationStatus`](crate::model::AccountAssignmentOperationStatus).
 pub mod account_assignment_operation_status {
 
-    /// A builder for [`AccountAssignmentOperationStatus`](crate::model::AccountAssignmentOperationStatus)
-    #[non_exhaustive]
+    /// A builder for [`AccountAssignmentOperationStatus`](crate::model::AccountAssignmentOperationStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::StatusValues>,
@@ -1634,7 +1831,7 @@ pub mod account_assignment_operation_status {
             self.created_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountAssignmentOperationStatus`](crate::model::AccountAssignmentOperationStatus)
+        /// Consumes the builder and constructs a [`AccountAssignmentOperationStatus`](crate::model::AccountAssignmentOperationStatus).
         pub fn build(self) -> crate::model::AccountAssignmentOperationStatus {
             crate::model::AccountAssignmentOperationStatus {
                 status: self.status,
@@ -1651,7 +1848,7 @@ pub mod account_assignment_operation_status {
     }
 }
 impl AccountAssignmentOperationStatus {
-    /// Creates a new builder-style object to manufacture [`AccountAssignmentOperationStatus`](crate::model::AccountAssignmentOperationStatus)
+    /// Creates a new builder-style object to manufacture [`AccountAssignmentOperationStatus`](crate::model::AccountAssignmentOperationStatus).
     pub fn builder() -> crate::model::account_assignment_operation_status::Builder {
         crate::model::account_assignment_operation_status::Builder::default()
     }

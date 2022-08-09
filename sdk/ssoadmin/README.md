@@ -3,9 +3,7 @@
 **Please Note: The SDK is currently in Developer Preview and is intended strictly for
 feedback purposes only. Do not use this SDK for production workloads.**
 
-Amazon Web Services Single Sign On (SSO) is a cloud SSO service that makes it easy to centrally manage SSO access to multiple Amazon Web Services accounts and business applications. This guide provides information on SSO operations which could be used for access management of Amazon Web Services accounts. For information about Amazon Web Services SSO features, see the [Amazon Web Services Single Sign-On User Guide](https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html).
 
-Many operations in the SSO APIs rely on identifiers for users and groups, known as principals. For more information about how to work with principals and principal IDs in Amazon Web Services SSO, see the [Amazon Web Services SSO Identity Store API Reference](https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/welcome.html).
 
 ## Getting Started
 
@@ -18,10 +16,29 @@ your project, add the following to your **Cargo.toml** file:
 
 ```toml
 [dependencies]
-aws-config = "0.14.0"
-aws-sdk-ssoadmin = "0.14.0"
+aws-config = "0.47.0"
+aws-sdk-ssoadmin = "0.17.0"
 tokio = { version = "1", features = ["full"] }
 ```
+
+Then in code, a client can be created with the following:
+
+```rust
+use aws_sdk_ssoadmin as ssoadmin;
+
+#[tokio::main]
+async fn main() -> Result<(), ssoadmin::Error> {
+    let config = aws_config::load_from_env().await;
+    let client = ssoadmin::Client::new(&config);
+
+    // ... make some calls with the client
+
+    Ok(())
+}
+```
+
+See the [client documentation](https://docs.rs/aws-sdk-ssoadmin/latest/aws_sdk_ssoadmin/client/struct.Client.html)
+for information on what calls can be made, and the inputs and outputs for each of those calls.
 
 ## Using the SDK
 

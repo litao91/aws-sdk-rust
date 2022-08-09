@@ -5,10 +5,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BookingOptions {
     /// <p>The resource's ability to automatically reply to requests. If disabled, delegates must be associated to the resource.</p>
+    #[doc(hidden)]
     pub auto_accept_requests: bool,
     /// <p>The resource's ability to automatically decline any recurring requests.</p>
+    #[doc(hidden)]
     pub auto_decline_recurring_requests: bool,
     /// <p>The resource's ability to automatically decline any conflicting requests.</p>
+    #[doc(hidden)]
     pub auto_decline_conflicting_requests: bool,
 }
 impl BookingOptions {
@@ -40,11 +43,10 @@ impl std::fmt::Debug for BookingOptions {
         formatter.finish()
     }
 }
-/// See [`BookingOptions`](crate::model::BookingOptions)
+/// See [`BookingOptions`](crate::model::BookingOptions).
 pub mod booking_options {
 
-    /// A builder for [`BookingOptions`](crate::model::BookingOptions)
-    #[non_exhaustive]
+    /// A builder for [`BookingOptions`](crate::model::BookingOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_accept_requests: std::option::Option<bool>,
@@ -88,7 +90,7 @@ pub mod booking_options {
             self.auto_decline_conflicting_requests = input;
             self
         }
-        /// Consumes the builder and constructs a [`BookingOptions`](crate::model::BookingOptions)
+        /// Consumes the builder and constructs a [`BookingOptions`](crate::model::BookingOptions).
         pub fn build(self) -> crate::model::BookingOptions {
             crate::model::BookingOptions {
                 auto_accept_requests: self.auto_accept_requests.unwrap_or_default(),
@@ -103,7 +105,7 @@ pub mod booking_options {
     }
 }
 impl BookingOptions {
-    /// Creates a new builder-style object to manufacture [`BookingOptions`](crate::model::BookingOptions)
+    /// Creates a new builder-style object to manufacture [`BookingOptions`](crate::model::BookingOptions).
     pub fn builder() -> crate::model::booking_options::Builder {
         crate::model::booking_options::Builder::default()
     }
@@ -164,13 +166,165 @@ impl AsRef<str> for MobileDeviceAccessRuleEffect {
     }
 }
 
+/// <p>Describes a Lambda based availability provider.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct LambdaAvailabilityProvider {
+    /// <p>The Amazon Resource Name (ARN) of the Lambda that acts as the availability provider.</p>
+    #[doc(hidden)]
+    pub lambda_arn: std::option::Option<std::string::String>,
+}
+impl LambdaAvailabilityProvider {
+    /// <p>The Amazon Resource Name (ARN) of the Lambda that acts as the availability provider.</p>
+    pub fn lambda_arn(&self) -> std::option::Option<&str> {
+        self.lambda_arn.as_deref()
+    }
+}
+impl std::fmt::Debug for LambdaAvailabilityProvider {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("LambdaAvailabilityProvider");
+        formatter.field("lambda_arn", &self.lambda_arn);
+        formatter.finish()
+    }
+}
+/// See [`LambdaAvailabilityProvider`](crate::model::LambdaAvailabilityProvider).
+pub mod lambda_availability_provider {
+
+    /// A builder for [`LambdaAvailabilityProvider`](crate::model::LambdaAvailabilityProvider).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) lambda_arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The Amazon Resource Name (ARN) of the Lambda that acts as the availability provider.</p>
+        pub fn lambda_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.lambda_arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the Lambda that acts as the availability provider.</p>
+        pub fn set_lambda_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.lambda_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`LambdaAvailabilityProvider`](crate::model::LambdaAvailabilityProvider).
+        pub fn build(self) -> crate::model::LambdaAvailabilityProvider {
+            crate::model::LambdaAvailabilityProvider {
+                lambda_arn: self.lambda_arn,
+            }
+        }
+    }
+}
+impl LambdaAvailabilityProvider {
+    /// Creates a new builder-style object to manufacture [`LambdaAvailabilityProvider`](crate::model::LambdaAvailabilityProvider).
+    pub fn builder() -> crate::model::lambda_availability_provider::Builder {
+        crate::model::lambda_availability_provider::Builder::default()
+    }
+}
+
+/// <p>Describes an EWS based availability provider. This is only used as input to the service.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct EwsAvailabilityProvider {
+    /// <p>The endpoint of the remote EWS server.</p>
+    #[doc(hidden)]
+    pub ews_endpoint: std::option::Option<std::string::String>,
+    /// <p>The username used to authenticate the remote EWS server.</p>
+    #[doc(hidden)]
+    pub ews_username: std::option::Option<std::string::String>,
+    /// <p>The password used to authenticate the remote EWS server.</p>
+    #[doc(hidden)]
+    pub ews_password: std::option::Option<std::string::String>,
+}
+impl EwsAvailabilityProvider {
+    /// <p>The endpoint of the remote EWS server.</p>
+    pub fn ews_endpoint(&self) -> std::option::Option<&str> {
+        self.ews_endpoint.as_deref()
+    }
+    /// <p>The username used to authenticate the remote EWS server.</p>
+    pub fn ews_username(&self) -> std::option::Option<&str> {
+        self.ews_username.as_deref()
+    }
+    /// <p>The password used to authenticate the remote EWS server.</p>
+    pub fn ews_password(&self) -> std::option::Option<&str> {
+        self.ews_password.as_deref()
+    }
+}
+impl std::fmt::Debug for EwsAvailabilityProvider {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("EwsAvailabilityProvider");
+        formatter.field("ews_endpoint", &self.ews_endpoint);
+        formatter.field("ews_username", &self.ews_username);
+        formatter.field("ews_password", &"*** Sensitive Data Redacted ***");
+        formatter.finish()
+    }
+}
+/// See [`EwsAvailabilityProvider`](crate::model::EwsAvailabilityProvider).
+pub mod ews_availability_provider {
+
+    /// A builder for [`EwsAvailabilityProvider`](crate::model::EwsAvailabilityProvider).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) ews_endpoint: std::option::Option<std::string::String>,
+        pub(crate) ews_username: std::option::Option<std::string::String>,
+        pub(crate) ews_password: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The endpoint of the remote EWS server.</p>
+        pub fn ews_endpoint(mut self, input: impl Into<std::string::String>) -> Self {
+            self.ews_endpoint = Some(input.into());
+            self
+        }
+        /// <p>The endpoint of the remote EWS server.</p>
+        pub fn set_ews_endpoint(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.ews_endpoint = input;
+            self
+        }
+        /// <p>The username used to authenticate the remote EWS server.</p>
+        pub fn ews_username(mut self, input: impl Into<std::string::String>) -> Self {
+            self.ews_username = Some(input.into());
+            self
+        }
+        /// <p>The username used to authenticate the remote EWS server.</p>
+        pub fn set_ews_username(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.ews_username = input;
+            self
+        }
+        /// <p>The password used to authenticate the remote EWS server.</p>
+        pub fn ews_password(mut self, input: impl Into<std::string::String>) -> Self {
+            self.ews_password = Some(input.into());
+            self
+        }
+        /// <p>The password used to authenticate the remote EWS server.</p>
+        pub fn set_ews_password(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.ews_password = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`EwsAvailabilityProvider`](crate::model::EwsAvailabilityProvider).
+        pub fn build(self) -> crate::model::EwsAvailabilityProvider {
+            crate::model::EwsAvailabilityProvider {
+                ews_endpoint: self.ews_endpoint,
+                ews_username: self.ews_username,
+                ews_password: self.ews_password,
+            }
+        }
+    }
+}
+impl EwsAvailabilityProvider {
+    /// Creates a new builder-style object to manufacture [`EwsAvailabilityProvider`](crate::model::EwsAvailabilityProvider).
+    pub fn builder() -> crate::model::ews_availability_provider::Builder {
+        crate::model::ews_availability_provider::Builder::default()
+    }
+}
+
 /// <p>Describes a tag applied to a resource.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key of the tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -191,11 +345,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -222,7 +375,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -232,7 +385,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -243,10 +396,13 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FolderConfiguration {
     /// <p>The folder name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::FolderName>,
     /// <p>The action to take on the folder contents at the end of the folder configuration period.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::RetentionAction>,
     /// <p>The number of days for which the folder-configuration action applies.</p>
+    #[doc(hidden)]
     pub period: std::option::Option<i32>,
 }
 impl FolderConfiguration {
@@ -272,11 +428,10 @@ impl std::fmt::Debug for FolderConfiguration {
         formatter.finish()
     }
 }
-/// See [`FolderConfiguration`](crate::model::FolderConfiguration)
+/// See [`FolderConfiguration`](crate::model::FolderConfiguration).
 pub mod folder_configuration {
 
-    /// A builder for [`FolderConfiguration`](crate::model::FolderConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`FolderConfiguration`](crate::model::FolderConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::FolderName>,
@@ -317,7 +472,7 @@ pub mod folder_configuration {
             self.period = input;
             self
         }
-        /// Consumes the builder and constructs a [`FolderConfiguration`](crate::model::FolderConfiguration)
+        /// Consumes the builder and constructs a [`FolderConfiguration`](crate::model::FolderConfiguration).
         pub fn build(self) -> crate::model::FolderConfiguration {
             crate::model::FolderConfiguration {
                 name: self.name,
@@ -328,7 +483,7 @@ pub mod folder_configuration {
     }
 }
 impl FolderConfiguration {
-    /// Creates a new builder-style object to manufacture [`FolderConfiguration`](crate::model::FolderConfiguration)
+    /// Creates a new builder-style object to manufacture [`FolderConfiguration`](crate::model::FolderConfiguration).
     pub fn builder() -> crate::model::folder_configuration::Builder {
         crate::model::folder_configuration::Builder::default()
     }
@@ -585,20 +740,28 @@ impl AsRef<str> for AccessControlRuleEffect {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct User {
     /// <p>The identifier of the user.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The email of the user.</p>
+    #[doc(hidden)]
     pub email: std::option::Option<std::string::String>,
     /// <p>The name of the user.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The display name of the user.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>The state of the user, which can be ENABLED, DISABLED, or DELETED.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::EntityState>,
     /// <p>The role of the user.</p>
+    #[doc(hidden)]
     pub user_role: std::option::Option<crate::model::UserRole>,
     /// <p>The date indicating when the user was enabled for Amazon WorkMail use.</p>
+    #[doc(hidden)]
     pub enabled_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date indicating when the user was disabled from Amazon WorkMail use.</p>
+    #[doc(hidden)]
     pub disabled_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl User {
@@ -649,11 +812,10 @@ impl std::fmt::Debug for User {
         formatter.finish()
     }
 }
-/// See [`User`](crate::model::User)
+/// See [`User`](crate::model::User).
 pub mod user {
 
-    /// A builder for [`User`](crate::model::User)
-    #[non_exhaustive]
+    /// A builder for [`User`](crate::model::User).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -752,7 +914,7 @@ pub mod user {
             self.disabled_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`User`](crate::model::User)
+        /// Consumes the builder and constructs a [`User`](crate::model::User).
         pub fn build(self) -> crate::model::User {
             crate::model::User {
                 id: self.id,
@@ -768,7 +930,7 @@ pub mod user {
     }
 }
 impl User {
-    /// Creates a new builder-style object to manufacture [`User`](crate::model::User)
+    /// Creates a new builder-style object to manufacture [`User`](crate::model::User).
     pub fn builder() -> crate::model::user::Builder {
         crate::model::user::Builder::default()
     }
@@ -897,18 +1059,25 @@ impl AsRef<str> for EntityState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Resource {
     /// <p>The identifier of the resource.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The email of the resource.</p>
+    #[doc(hidden)]
     pub email: std::option::Option<std::string::String>,
     /// <p>The name of the resource.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of the resource: equipment or room.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ResourceType>,
     /// <p>The state of the resource, which can be ENABLED, DISABLED, or DELETED.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::EntityState>,
     /// <p>The date indicating when the resource was enabled for Amazon WorkMail use.</p>
+    #[doc(hidden)]
     pub enabled_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date indicating when the resource was disabled from Amazon WorkMail use.</p>
+    #[doc(hidden)]
     pub disabled_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Resource {
@@ -954,11 +1123,10 @@ impl std::fmt::Debug for Resource {
         formatter.finish()
     }
 }
-/// See [`Resource`](crate::model::Resource)
+/// See [`Resource`](crate::model::Resource).
 pub mod resource {
 
-    /// A builder for [`Resource`](crate::model::Resource)
-    #[non_exhaustive]
+    /// A builder for [`Resource`](crate::model::Resource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1046,7 +1214,7 @@ pub mod resource {
             self.disabled_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource)
+        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource).
         pub fn build(self) -> crate::model::Resource {
             crate::model::Resource {
                 id: self.id,
@@ -1061,7 +1229,7 @@ pub mod resource {
     }
 }
 impl Resource {
-    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource)
+    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource).
     pub fn builder() -> crate::model::resource::Builder {
         crate::model::resource::Builder::default()
     }
@@ -1127,8 +1295,10 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Delegate {
     /// <p>The identifier for the user or group associated as the resource's delegate.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The type of the delegate: user or group.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::MemberType>,
 }
 impl Delegate {
@@ -1149,11 +1319,10 @@ impl std::fmt::Debug for Delegate {
         formatter.finish()
     }
 }
-/// See [`Delegate`](crate::model::Delegate)
+/// See [`Delegate`](crate::model::Delegate).
 pub mod delegate {
 
-    /// A builder for [`Delegate`](crate::model::Delegate)
-    #[non_exhaustive]
+    /// A builder for [`Delegate`](crate::model::Delegate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1180,7 +1349,7 @@ pub mod delegate {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Delegate`](crate::model::Delegate)
+        /// Consumes the builder and constructs a [`Delegate`](crate::model::Delegate).
         pub fn build(self) -> crate::model::Delegate {
             crate::model::Delegate {
                 id: self.id,
@@ -1190,7 +1359,7 @@ pub mod delegate {
     }
 }
 impl Delegate {
-    /// Creates a new builder-style object to manufacture [`Delegate`](crate::model::Delegate)
+    /// Creates a new builder-style object to manufacture [`Delegate`](crate::model::Delegate).
     pub fn builder() -> crate::model::delegate::Builder {
         crate::model::delegate::Builder::default()
     }
@@ -1256,14 +1425,19 @@ impl AsRef<str> for MemberType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrganizationSummary {
     /// <p>The identifier associated with the organization.</p>
+    #[doc(hidden)]
     pub organization_id: std::option::Option<std::string::String>,
     /// <p>The alias associated with the organization.</p>
+    #[doc(hidden)]
     pub alias: std::option::Option<std::string::String>,
     /// <p>The default email domain associated with the organization.</p>
+    #[doc(hidden)]
     pub default_mail_domain: std::option::Option<std::string::String>,
     /// <p>The error message associated with the organization. It is only present if unexpected behavior has occurred with regards to the organization. It provides insight or solutions regarding unexpected behavior.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>The state associated with the organization.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
 }
 impl OrganizationSummary {
@@ -1299,11 +1473,10 @@ impl std::fmt::Debug for OrganizationSummary {
         formatter.finish()
     }
 }
-/// See [`OrganizationSummary`](crate::model::OrganizationSummary)
+/// See [`OrganizationSummary`](crate::model::OrganizationSummary).
 pub mod organization_summary {
 
-    /// A builder for [`OrganizationSummary`](crate::model::OrganizationSummary)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationSummary`](crate::model::OrganizationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) organization_id: std::option::Option<std::string::String>,
@@ -1372,7 +1545,7 @@ pub mod organization_summary {
             self.state = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationSummary`](crate::model::OrganizationSummary)
+        /// Consumes the builder and constructs a [`OrganizationSummary`](crate::model::OrganizationSummary).
         pub fn build(self) -> crate::model::OrganizationSummary {
             crate::model::OrganizationSummary {
                 organization_id: self.organization_id,
@@ -1385,7 +1558,7 @@ pub mod organization_summary {
     }
 }
 impl OrganizationSummary {
-    /// Creates a new builder-style object to manufacture [`OrganizationSummary`](crate::model::OrganizationSummary)
+    /// Creates a new builder-style object to manufacture [`OrganizationSummary`](crate::model::OrganizationSummary).
     pub fn builder() -> crate::model::organization_summary::Builder {
         crate::model::organization_summary::Builder::default()
     }
@@ -1396,32 +1569,46 @@ impl OrganizationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MobileDeviceAccessRule {
     /// <p>The ID assigned to a mobile access rule. </p>
+    #[doc(hidden)]
     pub mobile_device_access_rule_id: std::option::Option<std::string::String>,
     /// <p>The name of a mobile access rule.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of a mobile access rule.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The effect of the rule when it matches. Allowed values are <code>ALLOW</code> or <code>DENY</code>.</p>
+    #[doc(hidden)]
     pub effect: std::option::Option<crate::model::MobileDeviceAccessRuleEffect>,
     /// <p>Device types that a rule will match. </p>
+    #[doc(hidden)]
     pub device_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Device types that a rule <b>will not</b> match. All other device types will match.</p>
+    #[doc(hidden)]
     pub not_device_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Device models that a rule will match.</p>
+    #[doc(hidden)]
     pub device_models: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Device models that a rule <b>will not</b> match. All other device models will match.</p>
+    #[doc(hidden)]
     pub not_device_models: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Device operating systems that a rule will match.</p>
+    #[doc(hidden)]
     pub device_operating_systems: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Device operating systems that a rule <b>will not</b> match. All other device types will match.</p>
+    #[doc(hidden)]
     pub not_device_operating_systems: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Device user agents that a rule will match.</p>
+    #[doc(hidden)]
     pub device_user_agents: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Device user agents that a rule <b>will not</b> match. All other device user agents will match.</p>
+    #[doc(hidden)]
     pub not_device_user_agents: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The date and time at which an access rule was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time at which an access rule was modified.</p>
+    #[doc(hidden)]
     pub date_modified: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl MobileDeviceAccessRule {
@@ -1508,11 +1695,10 @@ impl std::fmt::Debug for MobileDeviceAccessRule {
         formatter.finish()
     }
 }
-/// See [`MobileDeviceAccessRule`](crate::model::MobileDeviceAccessRule)
+/// See [`MobileDeviceAccessRule`](crate::model::MobileDeviceAccessRule).
 pub mod mobile_device_access_rule {
 
-    /// A builder for [`MobileDeviceAccessRule`](crate::model::MobileDeviceAccessRule)
-    #[non_exhaustive]
+    /// A builder for [`MobileDeviceAccessRule`](crate::model::MobileDeviceAccessRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mobile_device_access_rule_id: std::option::Option<std::string::String>,
@@ -1763,7 +1949,7 @@ pub mod mobile_device_access_rule {
             self.date_modified = input;
             self
         }
-        /// Consumes the builder and constructs a [`MobileDeviceAccessRule`](crate::model::MobileDeviceAccessRule)
+        /// Consumes the builder and constructs a [`MobileDeviceAccessRule`](crate::model::MobileDeviceAccessRule).
         pub fn build(self) -> crate::model::MobileDeviceAccessRule {
             crate::model::MobileDeviceAccessRule {
                 mobile_device_access_rule_id: self.mobile_device_access_rule_id,
@@ -1785,7 +1971,7 @@ pub mod mobile_device_access_rule {
     }
 }
 impl MobileDeviceAccessRule {
-    /// Creates a new builder-style object to manufacture [`MobileDeviceAccessRule`](crate::model::MobileDeviceAccessRule)
+    /// Creates a new builder-style object to manufacture [`MobileDeviceAccessRule`](crate::model::MobileDeviceAccessRule).
     pub fn builder() -> crate::model::mobile_device_access_rule::Builder {
         crate::model::mobile_device_access_rule::Builder::default()
     }
@@ -1796,16 +1982,22 @@ impl MobileDeviceAccessRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MobileDeviceAccessOverride {
     /// <p>The WorkMail user to which the access override applies.</p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
     /// <p>The device to which the override applies.</p>
+    #[doc(hidden)]
     pub device_id: std::option::Option<std::string::String>,
     /// <p>The effect of the override, <code>ALLOW</code> or <code>DENY</code>.</p>
+    #[doc(hidden)]
     pub effect: std::option::Option<crate::model::MobileDeviceAccessRuleEffect>,
     /// <p>A description of the override.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date the override was first created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the override was last modified.</p>
+    #[doc(hidden)]
     pub date_modified: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl MobileDeviceAccessOverride {
@@ -1846,11 +2038,10 @@ impl std::fmt::Debug for MobileDeviceAccessOverride {
         formatter.finish()
     }
 }
-/// See [`MobileDeviceAccessOverride`](crate::model::MobileDeviceAccessOverride)
+/// See [`MobileDeviceAccessOverride`](crate::model::MobileDeviceAccessOverride).
 pub mod mobile_device_access_override {
 
-    /// A builder for [`MobileDeviceAccessOverride`](crate::model::MobileDeviceAccessOverride)
-    #[non_exhaustive]
+    /// A builder for [`MobileDeviceAccessOverride`](crate::model::MobileDeviceAccessOverride).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_id: std::option::Option<std::string::String>,
@@ -1930,7 +2121,7 @@ pub mod mobile_device_access_override {
             self.date_modified = input;
             self
         }
-        /// Consumes the builder and constructs a [`MobileDeviceAccessOverride`](crate::model::MobileDeviceAccessOverride)
+        /// Consumes the builder and constructs a [`MobileDeviceAccessOverride`](crate::model::MobileDeviceAccessOverride).
         pub fn build(self) -> crate::model::MobileDeviceAccessOverride {
             crate::model::MobileDeviceAccessOverride {
                 user_id: self.user_id,
@@ -1944,7 +2135,7 @@ pub mod mobile_device_access_override {
     }
 }
 impl MobileDeviceAccessOverride {
-    /// Creates a new builder-style object to manufacture [`MobileDeviceAccessOverride`](crate::model::MobileDeviceAccessOverride)
+    /// Creates a new builder-style object to manufacture [`MobileDeviceAccessOverride`](crate::model::MobileDeviceAccessOverride).
     pub fn builder() -> crate::model::mobile_device_access_override::Builder {
         crate::model::mobile_device_access_override::Builder::default()
     }
@@ -1955,8 +2146,10 @@ impl MobileDeviceAccessOverride {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MailDomainSummary {
     /// <p>The domain name.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>Whether the domain is default or not.</p>
+    #[doc(hidden)]
     pub default_domain: bool,
 }
 impl MailDomainSummary {
@@ -1977,11 +2170,10 @@ impl std::fmt::Debug for MailDomainSummary {
         formatter.finish()
     }
 }
-/// See [`MailDomainSummary`](crate::model::MailDomainSummary)
+/// See [`MailDomainSummary`](crate::model::MailDomainSummary).
 pub mod mail_domain_summary {
 
-    /// A builder for [`MailDomainSummary`](crate::model::MailDomainSummary)
-    #[non_exhaustive]
+    /// A builder for [`MailDomainSummary`](crate::model::MailDomainSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -2008,7 +2200,7 @@ pub mod mail_domain_summary {
             self.default_domain = input;
             self
         }
-        /// Consumes the builder and constructs a [`MailDomainSummary`](crate::model::MailDomainSummary)
+        /// Consumes the builder and constructs a [`MailDomainSummary`](crate::model::MailDomainSummary).
         pub fn build(self) -> crate::model::MailDomainSummary {
             crate::model::MailDomainSummary {
                 domain_name: self.domain_name,
@@ -2018,7 +2210,7 @@ pub mod mail_domain_summary {
     }
 }
 impl MailDomainSummary {
-    /// Creates a new builder-style object to manufacture [`MailDomainSummary`](crate::model::MailDomainSummary)
+    /// Creates a new builder-style object to manufacture [`MailDomainSummary`](crate::model::MailDomainSummary).
     pub fn builder() -> crate::model::mail_domain_summary::Builder {
         crate::model::mail_domain_summary::Builder::default()
     }
@@ -2029,10 +2221,13 @@ impl MailDomainSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Permission {
     /// <p>The identifier of the user, group, or resource to which the permissions are granted.</p>
+    #[doc(hidden)]
     pub grantee_id: std::option::Option<std::string::String>,
     /// <p>The type of user, group, or resource referred to in GranteeId.</p>
+    #[doc(hidden)]
     pub grantee_type: std::option::Option<crate::model::MemberType>,
     /// <p>The permissions granted to the grantee. SEND_AS allows the grantee to send email as the owner of the mailbox (the grantee is not mentioned on these emails). SEND_ON_BEHALF allows the grantee to send email on behalf of the owner of the mailbox (the grantee is not mentioned as the physical sender of these emails). FULL_ACCESS allows the grantee full access to the mailbox, irrespective of other folder-level permissions set on the mailbox.</p>
+    #[doc(hidden)]
     pub permission_values: std::option::Option<std::vec::Vec<crate::model::PermissionType>>,
 }
 impl Permission {
@@ -2058,11 +2253,10 @@ impl std::fmt::Debug for Permission {
         formatter.finish()
     }
 }
-/// See [`Permission`](crate::model::Permission)
+/// See [`Permission`](crate::model::Permission).
 pub mod permission {
 
-    /// A builder for [`Permission`](crate::model::Permission)
-    #[non_exhaustive]
+    /// A builder for [`Permission`](crate::model::Permission).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) grantee_id: std::option::Option<std::string::String>,
@@ -2113,7 +2307,7 @@ pub mod permission {
             self.permission_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`Permission`](crate::model::Permission)
+        /// Consumes the builder and constructs a [`Permission`](crate::model::Permission).
         pub fn build(self) -> crate::model::Permission {
             crate::model::Permission {
                 grantee_id: self.grantee_id,
@@ -2124,7 +2318,7 @@ pub mod permission {
     }
 }
 impl Permission {
-    /// Creates a new builder-style object to manufacture [`Permission`](crate::model::Permission)
+    /// Creates a new builder-style object to manufacture [`Permission`](crate::model::Permission).
     pub fn builder() -> crate::model::permission::Builder {
         crate::model::permission::Builder::default()
     }
@@ -2135,22 +2329,31 @@ impl Permission {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MailboxExportJob {
     /// <p>The identifier of the mailbox export job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the user or resource associated with the mailbox.</p>
+    #[doc(hidden)]
     pub entity_id: std::option::Option<std::string::String>,
     /// <p>The mailbox export job description.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The name of the S3 bucket.</p>
+    #[doc(hidden)]
     pub s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>The path to the S3 bucket and file that the mailbox export job exports to.</p>
+    #[doc(hidden)]
     pub s3_path: std::option::Option<std::string::String>,
     /// <p>The estimated progress of the mailbox export job, in percentage points.</p>
+    #[doc(hidden)]
     pub estimated_progress: i32,
     /// <p>The state of the mailbox export job.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::MailboxExportJobState>,
     /// <p>The mailbox export job start timestamp.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The mailbox export job end timestamp.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl MailboxExportJob {
@@ -2206,11 +2409,10 @@ impl std::fmt::Debug for MailboxExportJob {
         formatter.finish()
     }
 }
-/// See [`MailboxExportJob`](crate::model::MailboxExportJob)
+/// See [`MailboxExportJob`](crate::model::MailboxExportJob).
 pub mod mailbox_export_job {
 
-    /// A builder for [`MailboxExportJob`](crate::model::MailboxExportJob)
-    #[non_exhaustive]
+    /// A builder for [`MailboxExportJob`](crate::model::MailboxExportJob).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -2326,7 +2528,7 @@ pub mod mailbox_export_job {
             self.end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`MailboxExportJob`](crate::model::MailboxExportJob)
+        /// Consumes the builder and constructs a [`MailboxExportJob`](crate::model::MailboxExportJob).
         pub fn build(self) -> crate::model::MailboxExportJob {
             crate::model::MailboxExportJob {
                 job_id: self.job_id,
@@ -2343,7 +2545,7 @@ pub mod mailbox_export_job {
     }
 }
 impl MailboxExportJob {
-    /// Creates a new builder-style object to manufacture [`MailboxExportJob`](crate::model::MailboxExportJob)
+    /// Creates a new builder-style object to manufacture [`MailboxExportJob`](crate::model::MailboxExportJob).
     pub fn builder() -> crate::model::mailbox_export_job::Builder {
         crate::model::mailbox_export_job::Builder::default()
     }
@@ -2417,16 +2619,22 @@ impl AsRef<str> for MailboxExportJobState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Group {
     /// <p>The identifier of the group.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The email of the group.</p>
+    #[doc(hidden)]
     pub email: std::option::Option<std::string::String>,
     /// <p>The name of the group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The state of the group, which can be ENABLED, DISABLED, or DELETED.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::EntityState>,
     /// <p>The date indicating when the group was enabled for Amazon WorkMail use.</p>
+    #[doc(hidden)]
     pub enabled_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date indicating when the group was disabled from Amazon WorkMail use.</p>
+    #[doc(hidden)]
     pub disabled_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Group {
@@ -2467,11 +2675,10 @@ impl std::fmt::Debug for Group {
         formatter.finish()
     }
 }
-/// See [`Group`](crate::model::Group)
+/// See [`Group`](crate::model::Group).
 pub mod group {
 
-    /// A builder for [`Group`](crate::model::Group)
-    #[non_exhaustive]
+    /// A builder for [`Group`](crate::model::Group).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2548,7 +2755,7 @@ pub mod group {
             self.disabled_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Group`](crate::model::Group)
+        /// Consumes the builder and constructs a [`Group`](crate::model::Group).
         pub fn build(self) -> crate::model::Group {
             crate::model::Group {
                 id: self.id,
@@ -2562,7 +2769,7 @@ pub mod group {
     }
 }
 impl Group {
-    /// Creates a new builder-style object to manufacture [`Group`](crate::model::Group)
+    /// Creates a new builder-style object to manufacture [`Group`](crate::model::Group).
     pub fn builder() -> crate::model::group::Builder {
         crate::model::group::Builder::default()
     }
@@ -2573,16 +2780,22 @@ impl Group {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Member {
     /// <p>The identifier of the member.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the member.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A member can be a user or group.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::MemberType>,
     /// <p>The state of the member, which can be ENABLED, DISABLED, or DELETED.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::EntityState>,
     /// <p>The date indicating when the member was enabled for Amazon WorkMail use.</p>
+    #[doc(hidden)]
     pub enabled_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date indicating when the member was disabled from Amazon WorkMail use.</p>
+    #[doc(hidden)]
     pub disabled_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Member {
@@ -2623,11 +2836,10 @@ impl std::fmt::Debug for Member {
         formatter.finish()
     }
 }
-/// See [`Member`](crate::model::Member)
+/// See [`Member`](crate::model::Member).
 pub mod member {
 
-    /// A builder for [`Member`](crate::model::Member)
-    #[non_exhaustive]
+    /// A builder for [`Member`](crate::model::Member).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2704,7 +2916,7 @@ pub mod member {
             self.disabled_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Member`](crate::model::Member)
+        /// Consumes the builder and constructs a [`Member`](crate::model::Member).
         pub fn build(self) -> crate::model::Member {
             crate::model::Member {
                 id: self.id,
@@ -2718,9 +2930,316 @@ pub mod member {
     }
 }
 impl Member {
-    /// Creates a new builder-style object to manufacture [`Member`](crate::model::Member)
+    /// Creates a new builder-style object to manufacture [`Member`](crate::model::Member).
     pub fn builder() -> crate::model::member::Builder {
         crate::model::member::Builder::default()
+    }
+}
+
+/// <p>List all the <code>AvailabilityConfiguration</code>'s for the given WorkMail organization.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct AvailabilityConfiguration {
+    /// <p>Displays the domain to which the provider applies.</p>
+    #[doc(hidden)]
+    pub domain_name: std::option::Option<std::string::String>,
+    /// <p>Displays the provider type that applies to this domain.</p>
+    #[doc(hidden)]
+    pub provider_type: std::option::Option<crate::model::AvailabilityProviderType>,
+    /// <p>If <code>ProviderType</code> is <code>EWS</code>, then this field contains <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not requried.</p>
+    #[doc(hidden)]
+    pub ews_provider: std::option::Option<crate::model::RedactedEwsAvailabilityProvider>,
+    /// <p>If ProviderType is <code>LAMBDA</code> then this field contains <code>LambdaAvailabilityProvider</code>. Otherwise, it is not required.</p>
+    #[doc(hidden)]
+    pub lambda_provider: std::option::Option<crate::model::LambdaAvailabilityProvider>,
+    /// <p>The date and time at which the availability configuration was created.</p>
+    #[doc(hidden)]
+    pub date_created: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The date and time at which the availability configuration was last modified.</p>
+    #[doc(hidden)]
+    pub date_modified: std::option::Option<aws_smithy_types::DateTime>,
+}
+impl AvailabilityConfiguration {
+    /// <p>Displays the domain to which the provider applies.</p>
+    pub fn domain_name(&self) -> std::option::Option<&str> {
+        self.domain_name.as_deref()
+    }
+    /// <p>Displays the provider type that applies to this domain.</p>
+    pub fn provider_type(&self) -> std::option::Option<&crate::model::AvailabilityProviderType> {
+        self.provider_type.as_ref()
+    }
+    /// <p>If <code>ProviderType</code> is <code>EWS</code>, then this field contains <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not requried.</p>
+    pub fn ews_provider(
+        &self,
+    ) -> std::option::Option<&crate::model::RedactedEwsAvailabilityProvider> {
+        self.ews_provider.as_ref()
+    }
+    /// <p>If ProviderType is <code>LAMBDA</code> then this field contains <code>LambdaAvailabilityProvider</code>. Otherwise, it is not required.</p>
+    pub fn lambda_provider(
+        &self,
+    ) -> std::option::Option<&crate::model::LambdaAvailabilityProvider> {
+        self.lambda_provider.as_ref()
+    }
+    /// <p>The date and time at which the availability configuration was created.</p>
+    pub fn date_created(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.date_created.as_ref()
+    }
+    /// <p>The date and time at which the availability configuration was last modified.</p>
+    pub fn date_modified(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.date_modified.as_ref()
+    }
+}
+impl std::fmt::Debug for AvailabilityConfiguration {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("AvailabilityConfiguration");
+        formatter.field("domain_name", &self.domain_name);
+        formatter.field("provider_type", &self.provider_type);
+        formatter.field("ews_provider", &self.ews_provider);
+        formatter.field("lambda_provider", &self.lambda_provider);
+        formatter.field("date_created", &self.date_created);
+        formatter.field("date_modified", &self.date_modified);
+        formatter.finish()
+    }
+}
+/// See [`AvailabilityConfiguration`](crate::model::AvailabilityConfiguration).
+pub mod availability_configuration {
+
+    /// A builder for [`AvailabilityConfiguration`](crate::model::AvailabilityConfiguration).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) domain_name: std::option::Option<std::string::String>,
+        pub(crate) provider_type: std::option::Option<crate::model::AvailabilityProviderType>,
+        pub(crate) ews_provider: std::option::Option<crate::model::RedactedEwsAvailabilityProvider>,
+        pub(crate) lambda_provider: std::option::Option<crate::model::LambdaAvailabilityProvider>,
+        pub(crate) date_created: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) date_modified: std::option::Option<aws_smithy_types::DateTime>,
+    }
+    impl Builder {
+        /// <p>Displays the domain to which the provider applies.</p>
+        pub fn domain_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.domain_name = Some(input.into());
+            self
+        }
+        /// <p>Displays the domain to which the provider applies.</p>
+        pub fn set_domain_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.domain_name = input;
+            self
+        }
+        /// <p>Displays the provider type that applies to this domain.</p>
+        pub fn provider_type(mut self, input: crate::model::AvailabilityProviderType) -> Self {
+            self.provider_type = Some(input);
+            self
+        }
+        /// <p>Displays the provider type that applies to this domain.</p>
+        pub fn set_provider_type(
+            mut self,
+            input: std::option::Option<crate::model::AvailabilityProviderType>,
+        ) -> Self {
+            self.provider_type = input;
+            self
+        }
+        /// <p>If <code>ProviderType</code> is <code>EWS</code>, then this field contains <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not requried.</p>
+        pub fn ews_provider(
+            mut self,
+            input: crate::model::RedactedEwsAvailabilityProvider,
+        ) -> Self {
+            self.ews_provider = Some(input);
+            self
+        }
+        /// <p>If <code>ProviderType</code> is <code>EWS</code>, then this field contains <code>RedactedEwsAvailabilityProvider</code>. Otherwise, it is not requried.</p>
+        pub fn set_ews_provider(
+            mut self,
+            input: std::option::Option<crate::model::RedactedEwsAvailabilityProvider>,
+        ) -> Self {
+            self.ews_provider = input;
+            self
+        }
+        /// <p>If ProviderType is <code>LAMBDA</code> then this field contains <code>LambdaAvailabilityProvider</code>. Otherwise, it is not required.</p>
+        pub fn lambda_provider(mut self, input: crate::model::LambdaAvailabilityProvider) -> Self {
+            self.lambda_provider = Some(input);
+            self
+        }
+        /// <p>If ProviderType is <code>LAMBDA</code> then this field contains <code>LambdaAvailabilityProvider</code>. Otherwise, it is not required.</p>
+        pub fn set_lambda_provider(
+            mut self,
+            input: std::option::Option<crate::model::LambdaAvailabilityProvider>,
+        ) -> Self {
+            self.lambda_provider = input;
+            self
+        }
+        /// <p>The date and time at which the availability configuration was created.</p>
+        pub fn date_created(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.date_created = Some(input);
+            self
+        }
+        /// <p>The date and time at which the availability configuration was created.</p>
+        pub fn set_date_created(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.date_created = input;
+            self
+        }
+        /// <p>The date and time at which the availability configuration was last modified.</p>
+        pub fn date_modified(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.date_modified = Some(input);
+            self
+        }
+        /// <p>The date and time at which the availability configuration was last modified.</p>
+        pub fn set_date_modified(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.date_modified = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`AvailabilityConfiguration`](crate::model::AvailabilityConfiguration).
+        pub fn build(self) -> crate::model::AvailabilityConfiguration {
+            crate::model::AvailabilityConfiguration {
+                domain_name: self.domain_name,
+                provider_type: self.provider_type,
+                ews_provider: self.ews_provider,
+                lambda_provider: self.lambda_provider,
+                date_created: self.date_created,
+                date_modified: self.date_modified,
+            }
+        }
+    }
+}
+impl AvailabilityConfiguration {
+    /// Creates a new builder-style object to manufacture [`AvailabilityConfiguration`](crate::model::AvailabilityConfiguration).
+    pub fn builder() -> crate::model::availability_configuration::Builder {
+        crate::model::availability_configuration::Builder::default()
+    }
+}
+
+/// <p>Describes an EWS based availability provider when returned from the service. It does not contain the password of the endpoint.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct RedactedEwsAvailabilityProvider {
+    /// <p>The endpoint of the remote EWS server.</p>
+    #[doc(hidden)]
+    pub ews_endpoint: std::option::Option<std::string::String>,
+    /// <p>The username used to authenticate the remote EWS server.</p>
+    #[doc(hidden)]
+    pub ews_username: std::option::Option<std::string::String>,
+}
+impl RedactedEwsAvailabilityProvider {
+    /// <p>The endpoint of the remote EWS server.</p>
+    pub fn ews_endpoint(&self) -> std::option::Option<&str> {
+        self.ews_endpoint.as_deref()
+    }
+    /// <p>The username used to authenticate the remote EWS server.</p>
+    pub fn ews_username(&self) -> std::option::Option<&str> {
+        self.ews_username.as_deref()
+    }
+}
+impl std::fmt::Debug for RedactedEwsAvailabilityProvider {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("RedactedEwsAvailabilityProvider");
+        formatter.field("ews_endpoint", &self.ews_endpoint);
+        formatter.field("ews_username", &self.ews_username);
+        formatter.finish()
+    }
+}
+/// See [`RedactedEwsAvailabilityProvider`](crate::model::RedactedEwsAvailabilityProvider).
+pub mod redacted_ews_availability_provider {
+
+    /// A builder for [`RedactedEwsAvailabilityProvider`](crate::model::RedactedEwsAvailabilityProvider).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) ews_endpoint: std::option::Option<std::string::String>,
+        pub(crate) ews_username: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The endpoint of the remote EWS server.</p>
+        pub fn ews_endpoint(mut self, input: impl Into<std::string::String>) -> Self {
+            self.ews_endpoint = Some(input.into());
+            self
+        }
+        /// <p>The endpoint of the remote EWS server.</p>
+        pub fn set_ews_endpoint(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.ews_endpoint = input;
+            self
+        }
+        /// <p>The username used to authenticate the remote EWS server.</p>
+        pub fn ews_username(mut self, input: impl Into<std::string::String>) -> Self {
+            self.ews_username = Some(input.into());
+            self
+        }
+        /// <p>The username used to authenticate the remote EWS server.</p>
+        pub fn set_ews_username(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.ews_username = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`RedactedEwsAvailabilityProvider`](crate::model::RedactedEwsAvailabilityProvider).
+        pub fn build(self) -> crate::model::RedactedEwsAvailabilityProvider {
+            crate::model::RedactedEwsAvailabilityProvider {
+                ews_endpoint: self.ews_endpoint,
+                ews_username: self.ews_username,
+            }
+        }
+    }
+}
+impl RedactedEwsAvailabilityProvider {
+    /// Creates a new builder-style object to manufacture [`RedactedEwsAvailabilityProvider`](crate::model::RedactedEwsAvailabilityProvider).
+    pub fn builder() -> crate::model::redacted_ews_availability_provider::Builder {
+        crate::model::redacted_ews_availability_provider::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum AvailabilityProviderType {
+    #[allow(missing_docs)] // documentation missing in model
+    Ews,
+    #[allow(missing_docs)] // documentation missing in model
+    Lambda,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for AvailabilityProviderType {
+    fn from(s: &str) -> Self {
+        match s {
+            "EWS" => AvailabilityProviderType::Ews,
+            "LAMBDA" => AvailabilityProviderType::Lambda,
+            other => AvailabilityProviderType::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for AvailabilityProviderType {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(AvailabilityProviderType::from(s))
+    }
+}
+impl AvailabilityProviderType {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            AvailabilityProviderType::Ews => "EWS",
+            AvailabilityProviderType::Lambda => "LAMBDA",
+            AvailabilityProviderType::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["EWS", "LAMBDA"]
+    }
+}
+impl AsRef<str> for AvailabilityProviderType {
+    fn as_ref(&self) -> &str {
+        self.as_str()
     }
 }
 
@@ -2729,26 +3248,37 @@ impl Member {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessControlRule {
     /// <p>The rule name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The rule effect.</p>
+    #[doc(hidden)]
     pub effect: std::option::Option<crate::model::AccessControlRuleEffect>,
     /// <p>The rule description.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>IPv4 CIDR ranges to include in the rule.</p>
+    #[doc(hidden)]
     pub ip_ranges: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>IPv4 CIDR ranges to exclude from the rule.</p>
+    #[doc(hidden)]
     pub not_ip_ranges: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Access protocol actions to include in the rule. Valid values include <code>ActiveSync</code>, <code>AutoDiscover</code>, <code>EWS</code>, <code>IMAP</code>, <code>SMTP</code>, <code>WindowsOutlook</code>, and <code>WebMail</code>.</p>
+    #[doc(hidden)]
     pub actions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Access protocol actions to exclude from the rule. Valid values include <code>ActiveSync</code>, <code>AutoDiscover</code>, <code>EWS</code>, <code>IMAP</code>, <code>SMTP</code>, <code>WindowsOutlook</code>, and <code>WebMail</code>.</p>
+    #[doc(hidden)]
     pub not_actions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>User IDs to include in the rule.</p>
+    #[doc(hidden)]
     pub user_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>User IDs to exclude from the rule.</p>
+    #[doc(hidden)]
     pub not_user_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The date that the rule was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date that the rule was modified.</p>
+    #[doc(hidden)]
     pub date_modified: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AccessControlRule {
@@ -2814,11 +3344,10 @@ impl std::fmt::Debug for AccessControlRule {
         formatter.finish()
     }
 }
-/// See [`AccessControlRule`](crate::model::AccessControlRule)
+/// See [`AccessControlRule`](crate::model::AccessControlRule).
 pub mod access_control_rule {
 
-    /// A builder for [`AccessControlRule`](crate::model::AccessControlRule)
-    #[non_exhaustive]
+    /// A builder for [`AccessControlRule`](crate::model::AccessControlRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3007,7 +3536,7 @@ pub mod access_control_rule {
             self.date_modified = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessControlRule`](crate::model::AccessControlRule)
+        /// Consumes the builder and constructs a [`AccessControlRule`](crate::model::AccessControlRule).
         pub fn build(self) -> crate::model::AccessControlRule {
             crate::model::AccessControlRule {
                 name: self.name,
@@ -3026,7 +3555,7 @@ pub mod access_control_rule {
     }
 }
 impl AccessControlRule {
-    /// Creates a new builder-style object to manufacture [`AccessControlRule`](crate::model::AccessControlRule)
+    /// Creates a new builder-style object to manufacture [`AccessControlRule`](crate::model::AccessControlRule).
     pub fn builder() -> crate::model::access_control_rule::Builder {
         crate::model::access_control_rule::Builder::default()
     }
@@ -3037,8 +3566,10 @@ impl AccessControlRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MobileDeviceAccessMatchedRule {
     /// <p>Identifier of the rule that a simulated user matches.</p>
+    #[doc(hidden)]
     pub mobile_device_access_rule_id: std::option::Option<std::string::String>,
     /// <p>Name of a rule that a simulated user matches.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl MobileDeviceAccessMatchedRule {
@@ -3062,11 +3593,10 @@ impl std::fmt::Debug for MobileDeviceAccessMatchedRule {
         formatter.finish()
     }
 }
-/// See [`MobileDeviceAccessMatchedRule`](crate::model::MobileDeviceAccessMatchedRule)
+/// See [`MobileDeviceAccessMatchedRule`](crate::model::MobileDeviceAccessMatchedRule).
 pub mod mobile_device_access_matched_rule {
 
-    /// A builder for [`MobileDeviceAccessMatchedRule`](crate::model::MobileDeviceAccessMatchedRule)
-    #[non_exhaustive]
+    /// A builder for [`MobileDeviceAccessMatchedRule`](crate::model::MobileDeviceAccessMatchedRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mobile_device_access_rule_id: std::option::Option<std::string::String>,
@@ -3099,7 +3629,7 @@ pub mod mobile_device_access_matched_rule {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`MobileDeviceAccessMatchedRule`](crate::model::MobileDeviceAccessMatchedRule)
+        /// Consumes the builder and constructs a [`MobileDeviceAccessMatchedRule`](crate::model::MobileDeviceAccessMatchedRule).
         pub fn build(self) -> crate::model::MobileDeviceAccessMatchedRule {
             crate::model::MobileDeviceAccessMatchedRule {
                 mobile_device_access_rule_id: self.mobile_device_access_rule_id,
@@ -3109,7 +3639,7 @@ pub mod mobile_device_access_matched_rule {
     }
 }
 impl MobileDeviceAccessMatchedRule {
-    /// Creates a new builder-style object to manufacture [`MobileDeviceAccessMatchedRule`](crate::model::MobileDeviceAccessMatchedRule)
+    /// Creates a new builder-style object to manufacture [`MobileDeviceAccessMatchedRule`](crate::model::MobileDeviceAccessMatchedRule).
     pub fn builder() -> crate::model::mobile_device_access_matched_rule::Builder {
         crate::model::mobile_device_access_matched_rule::Builder::default()
     }
@@ -3179,10 +3709,13 @@ impl AsRef<str> for DnsRecordVerificationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DnsRecord {
     /// <p>The RFC 1035 record type. Possible values: <code>CNAME</code>, <code>A</code>, <code>MX</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The DNS hostname.- For example, <code>domain.example.com</code>.</p>
+    #[doc(hidden)]
     pub hostname: std::option::Option<std::string::String>,
     /// <p>The value returned by the DNS for a query to that hostname and record type.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl DnsRecord {
@@ -3208,11 +3741,10 @@ impl std::fmt::Debug for DnsRecord {
         formatter.finish()
     }
 }
-/// See [`DnsRecord`](crate::model::DnsRecord)
+/// See [`DnsRecord`](crate::model::DnsRecord).
 pub mod dns_record {
 
-    /// A builder for [`DnsRecord`](crate::model::DnsRecord)
-    #[non_exhaustive]
+    /// A builder for [`DnsRecord`](crate::model::DnsRecord).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<std::string::String>,
@@ -3250,7 +3782,7 @@ pub mod dns_record {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`DnsRecord`](crate::model::DnsRecord)
+        /// Consumes the builder and constructs a [`DnsRecord`](crate::model::DnsRecord).
         pub fn build(self) -> crate::model::DnsRecord {
             crate::model::DnsRecord {
                 r#type: self.r#type,
@@ -3261,7 +3793,7 @@ pub mod dns_record {
     }
 }
 impl DnsRecord {
-    /// Creates a new builder-style object to manufacture [`DnsRecord`](crate::model::DnsRecord)
+    /// Creates a new builder-style object to manufacture [`DnsRecord`](crate::model::DnsRecord).
     pub fn builder() -> crate::model::dns_record::Builder {
         crate::model::dns_record::Builder::default()
     }
@@ -3273,8 +3805,10 @@ impl DnsRecord {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Domain {
     /// <p>The fully qualified domain name.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The hosted zone ID for a domain hosted in Route 53. Required when configuring a domain hosted in Route 53.</p>
+    #[doc(hidden)]
     pub hosted_zone_id: std::option::Option<std::string::String>,
 }
 impl Domain {
@@ -3295,11 +3829,10 @@ impl std::fmt::Debug for Domain {
         formatter.finish()
     }
 }
-/// See [`Domain`](crate::model::Domain)
+/// See [`Domain`](crate::model::Domain).
 pub mod domain {
 
-    /// A builder for [`Domain`](crate::model::Domain)
-    #[non_exhaustive]
+    /// A builder for [`Domain`](crate::model::Domain).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -3329,7 +3862,7 @@ pub mod domain {
             self.hosted_zone_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Domain`](crate::model::Domain)
+        /// Consumes the builder and constructs a [`Domain`](crate::model::Domain).
         pub fn build(self) -> crate::model::Domain {
             crate::model::Domain {
                 domain_name: self.domain_name,
@@ -3339,7 +3872,7 @@ pub mod domain {
     }
 }
 impl Domain {
-    /// Creates a new builder-style object to manufacture [`Domain`](crate::model::Domain)
+    /// Creates a new builder-style object to manufacture [`Domain`](crate::model::Domain).
     pub fn builder() -> crate::model::domain::Builder {
         crate::model::domain::Builder::default()
     }

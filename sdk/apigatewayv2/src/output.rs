@@ -4,23 +4,32 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateVpcLinkOutput {
     /// <p>The timestamp when the VPC link was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the VPC link.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A list of security group IDs for the VPC link.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of subnet IDs to include in the VPC link.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Tags for the VPC link.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The ID of the VPC link.</p>
+    #[doc(hidden)]
     pub vpc_link_id: std::option::Option<std::string::String>,
     /// <p>The status of the VPC link.</p>
+    #[doc(hidden)]
     pub vpc_link_status: std::option::Option<crate::model::VpcLinkStatus>,
     /// <p>A message summarizing the cause of the status of the VPC link.</p>
+    #[doc(hidden)]
     pub vpc_link_status_message: std::option::Option<std::string::String>,
     /// <p>The version of the VPC link.</p>
+    #[doc(hidden)]
     pub vpc_link_version: std::option::Option<crate::model::VpcLinkVersion>,
 }
 impl UpdateVpcLinkOutput {
@@ -79,11 +88,10 @@ impl std::fmt::Debug for UpdateVpcLinkOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateVpcLinkOutput`](crate::output::UpdateVpcLinkOutput)
+/// See [`UpdateVpcLinkOutput`](crate::output::UpdateVpcLinkOutput).
 pub mod update_vpc_link_output {
 
-    /// A builder for [`UpdateVpcLinkOutput`](crate::output::UpdateVpcLinkOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateVpcLinkOutput`](crate::output::UpdateVpcLinkOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) created_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -234,7 +242,7 @@ pub mod update_vpc_link_output {
             self.vpc_link_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateVpcLinkOutput`](crate::output::UpdateVpcLinkOutput)
+        /// Consumes the builder and constructs a [`UpdateVpcLinkOutput`](crate::output::UpdateVpcLinkOutput).
         pub fn build(self) -> crate::output::UpdateVpcLinkOutput {
             crate::output::UpdateVpcLinkOutput {
                 created_date: self.created_date,
@@ -251,7 +259,7 @@ pub mod update_vpc_link_output {
     }
 }
 impl UpdateVpcLinkOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateVpcLinkOutput`](crate::output::UpdateVpcLinkOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateVpcLinkOutput`](crate::output::UpdateVpcLinkOutput).
     pub fn builder() -> crate::output::update_vpc_link_output::Builder {
         crate::output::update_vpc_link_output::Builder::default()
     }
@@ -262,35 +270,49 @@ impl UpdateVpcLinkOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateStageOutput {
     /// <p>Settings for logging access in this stage.</p>
+    #[doc(hidden)]
     pub access_log_settings: std::option::Option<crate::model::AccessLogSettings>,
     /// <p>Specifies whether a stage is managed by API Gateway. If you created an API using quick create, the $default stage is managed by API Gateway. You can't modify the $default stage.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>Specifies whether updates to an API automatically trigger a new deployment. The default value is false.</p>
+    #[doc(hidden)]
     pub auto_deploy: bool,
     /// <p>The identifier of a client certificate for a Stage. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub client_certificate_id: std::option::Option<std::string::String>,
     /// <p>The timestamp when the stage was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Default route settings for the stage.</p>
+    #[doc(hidden)]
     pub default_route_settings: std::option::Option<crate::model::RouteSettings>,
     /// <p>The identifier of the Deployment that the Stage is associated with. Can't be updated if autoDeploy is enabled.</p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>The description of the stage.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Describes the status of the last deployment of a stage. Supported only for stages with autoDeploy enabled.</p>
+    #[doc(hidden)]
     pub last_deployment_status_message: std::option::Option<std::string::String>,
     /// <p>The timestamp when the stage was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Route settings for the stage, by routeKey.</p>
+    #[doc(hidden)]
     pub route_settings: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::RouteSettings>,
     >,
     /// <p>The name of the stage.</p>
+    #[doc(hidden)]
     pub stage_name: std::option::Option<std::string::String>,
     /// <p>A map that defines the stage variables for a stage resource. Variable names can have alphanumeric and underscore characters, and the values must match [A-Za-z0-9-._~:/?#&amp;=,]+.</p>
+    #[doc(hidden)]
     pub stage_variables:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The collection of tags. Each tag element is associated with a given resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -385,11 +407,10 @@ impl std::fmt::Debug for UpdateStageOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateStageOutput`](crate::output::UpdateStageOutput)
+/// See [`UpdateStageOutput`](crate::output::UpdateStageOutput).
 pub mod update_stage_output {
 
-    /// A builder for [`UpdateStageOutput`](crate::output::UpdateStageOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateStageOutput`](crate::output::UpdateStageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_log_settings: std::option::Option<crate::model::AccessLogSettings>,
@@ -623,7 +644,7 @@ pub mod update_stage_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateStageOutput`](crate::output::UpdateStageOutput)
+        /// Consumes the builder and constructs a [`UpdateStageOutput`](crate::output::UpdateStageOutput).
         pub fn build(self) -> crate::output::UpdateStageOutput {
             crate::output::UpdateStageOutput {
                 access_log_settings: self.access_log_settings,
@@ -645,7 +666,7 @@ pub mod update_stage_output {
     }
 }
 impl UpdateStageOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateStageOutput`](crate::output::UpdateStageOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateStageOutput`](crate::output::UpdateStageOutput).
     pub fn builder() -> crate::output::update_stage_output::Builder {
         crate::output::update_stage_output::Builder::default()
     }
@@ -656,17 +677,22 @@ impl UpdateStageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateRouteResponseOutput {
     /// <p>Represents the model selection expression of a route response. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub model_selection_expression: std::option::Option<std::string::String>,
     /// <p>Represents the response models of a route response.</p>
+    #[doc(hidden)]
     pub response_models:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Represents the response parameters of a route response.</p>
+    #[doc(hidden)]
     pub response_parameters: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ParameterConstraints>,
     >,
     /// <p>Represents the identifier of a route response.</p>
+    #[doc(hidden)]
     pub route_response_id: std::option::Option<std::string::String>,
     /// <p>Represents the route response key of a route response.</p>
+    #[doc(hidden)]
     pub route_response_key: std::option::Option<std::string::String>,
 }
 impl UpdateRouteResponseOutput {
@@ -712,11 +738,10 @@ impl std::fmt::Debug for UpdateRouteResponseOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRouteResponseOutput`](crate::output::UpdateRouteResponseOutput)
+/// See [`UpdateRouteResponseOutput`](crate::output::UpdateRouteResponseOutput).
 pub mod update_route_response_output {
 
-    /// A builder for [`UpdateRouteResponseOutput`](crate::output::UpdateRouteResponseOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRouteResponseOutput`](crate::output::UpdateRouteResponseOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_selection_expression: std::option::Option<std::string::String>,
@@ -819,7 +844,7 @@ pub mod update_route_response_output {
             self.route_response_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRouteResponseOutput`](crate::output::UpdateRouteResponseOutput)
+        /// Consumes the builder and constructs a [`UpdateRouteResponseOutput`](crate::output::UpdateRouteResponseOutput).
         pub fn build(self) -> crate::output::UpdateRouteResponseOutput {
             crate::output::UpdateRouteResponseOutput {
                 model_selection_expression: self.model_selection_expression,
@@ -832,7 +857,7 @@ pub mod update_route_response_output {
     }
 }
 impl UpdateRouteResponseOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRouteResponseOutput`](crate::output::UpdateRouteResponseOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRouteResponseOutput`](crate::output::UpdateRouteResponseOutput).
     pub fn builder() -> crate::output::update_route_response_output::Builder {
         crate::output::update_route_response_output::Builder::default()
     }
@@ -843,33 +868,46 @@ impl UpdateRouteResponseOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateRouteOutput {
     /// <p>Specifies whether a route is managed by API Gateway. If you created an API using quick create, the $default route is managed by API Gateway. You can't modify the $default route key.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>Specifies whether an API key is required for this route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub api_key_required: bool,
     /// <p>A list of authorization scopes configured on a route. The scopes are used with a JWT authorizer to authorize the method invocation. The authorization works by matching the route scopes against the scopes parsed from the access token in the incoming request. The method invocation is authorized if any route scope matches a claimed scope in the access token. Otherwise, the invocation is not authorized. When the route scope is configured, the client must provide an access token instead of an identity token for authorization purposes.</p>
+    #[doc(hidden)]
     pub authorization_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The authorization type for the route. For WebSocket APIs, valid values are NONE for open access, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer For HTTP APIs, valid values are NONE for open access, JWT for using JSON Web Tokens, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer.</p>
+    #[doc(hidden)]
     pub authorization_type: std::option::Option<crate::model::AuthorizationType>,
     /// <p>The identifier of the Authorizer resource to be associated with this route. The authorizer identifier is generated by API Gateway when you created the authorizer.</p>
+    #[doc(hidden)]
     pub authorizer_id: std::option::Option<std::string::String>,
     /// <p>The model selection expression for the route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub model_selection_expression: std::option::Option<std::string::String>,
     /// <p>The operation name for the route.</p>
+    #[doc(hidden)]
     pub operation_name: std::option::Option<std::string::String>,
     /// <p>The request models for the route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub request_models:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The request parameters for the route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub request_parameters: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ParameterConstraints>,
     >,
     /// <p>The route ID.</p>
+    #[doc(hidden)]
     pub route_id: std::option::Option<std::string::String>,
     /// <p>The route key for the route.</p>
+    #[doc(hidden)]
     pub route_key: std::option::Option<std::string::String>,
     /// <p>The route response selection expression for the route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub route_response_selection_expression: std::option::Option<std::string::String>,
     /// <p>The target for the route.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<std::string::String>,
 }
 impl UpdateRouteOutput {
@@ -958,11 +996,10 @@ impl std::fmt::Debug for UpdateRouteOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRouteOutput`](crate::output::UpdateRouteOutput)
+/// See [`UpdateRouteOutput`](crate::output::UpdateRouteOutput).
 pub mod update_route_output {
 
-    /// A builder for [`UpdateRouteOutput`](crate::output::UpdateRouteOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRouteOutput`](crate::output::UpdateRouteOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_gateway_managed: std::option::Option<bool>,
@@ -1171,7 +1208,7 @@ pub mod update_route_output {
             self.target = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRouteOutput`](crate::output::UpdateRouteOutput)
+        /// Consumes the builder and constructs a [`UpdateRouteOutput`](crate::output::UpdateRouteOutput).
         pub fn build(self) -> crate::output::UpdateRouteOutput {
             crate::output::UpdateRouteOutput {
                 api_gateway_managed: self.api_gateway_managed.unwrap_or_default(),
@@ -1192,7 +1229,7 @@ pub mod update_route_output {
     }
 }
 impl UpdateRouteOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRouteOutput`](crate::output::UpdateRouteOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRouteOutput`](crate::output::UpdateRouteOutput).
     pub fn builder() -> crate::output::update_route_output::Builder {
         crate::output::update_route_output::Builder::default()
     }
@@ -1203,14 +1240,19 @@ impl UpdateRouteOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateModelOutput {
     /// <p>The content-type for the model, for example, "application/json".</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The description of the model.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The model identifier.</p>
+    #[doc(hidden)]
     pub model_id: std::option::Option<std::string::String>,
     /// <p>The name of the model. Must be alphanumeric.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The schema for the model. For application/json models, this should be JSON schema draft 4 model.</p>
+    #[doc(hidden)]
     pub schema: std::option::Option<std::string::String>,
 }
 impl UpdateModelOutput {
@@ -1246,11 +1288,10 @@ impl std::fmt::Debug for UpdateModelOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateModelOutput`](crate::output::UpdateModelOutput)
+/// See [`UpdateModelOutput`](crate::output::UpdateModelOutput).
 pub mod update_model_output {
 
-    /// A builder for [`UpdateModelOutput`](crate::output::UpdateModelOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateModelOutput`](crate::output::UpdateModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_type: std::option::Option<std::string::String>,
@@ -1310,7 +1351,7 @@ pub mod update_model_output {
             self.schema = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateModelOutput`](crate::output::UpdateModelOutput)
+        /// Consumes the builder and constructs a [`UpdateModelOutput`](crate::output::UpdateModelOutput).
         pub fn build(self) -> crate::output::UpdateModelOutput {
             crate::output::UpdateModelOutput {
                 content_type: self.content_type,
@@ -1323,7 +1364,7 @@ pub mod update_model_output {
     }
 }
 impl UpdateModelOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateModelOutput`](crate::output::UpdateModelOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateModelOutput`](crate::output::UpdateModelOutput).
     pub fn builder() -> crate::output::update_model_output::Builder {
         crate::output::update_model_output::Builder::default()
     }
@@ -1337,18 +1378,24 @@ pub struct UpdateIntegrationResponseOutput {
     /// <p>CONVERT_TO_BINARY: Converts a response payload from a Base64-encoded string to the corresponding binary blob.</p>
     /// <p>CONVERT_TO_TEXT: Converts a response payload from a binary blob to a Base64-encoded string.</p>
     /// <p>If this property is not defined, the response payload will be passed through from the integration response to the route response or method response without modification.</p>
+    #[doc(hidden)]
     pub content_handling_strategy: std::option::Option<crate::model::ContentHandlingStrategy>,
     /// <p>The integration response ID.</p>
+    #[doc(hidden)]
     pub integration_response_id: std::option::Option<std::string::String>,
     /// <p>The integration response key.</p>
+    #[doc(hidden)]
     pub integration_response_key: std::option::Option<std::string::String>,
     /// <p>A key-value map specifying response parameters that are passed to the method response from the backend. The key is a method response header parameter name and the mapped value is an integration response header value, a static value enclosed within a pair of single quotes, or a JSON expression from the integration response body. The mapping key must match the pattern of method.response.header.{name}, where name is a valid and unique header name. The mapped non-static value must match the pattern of integration.response.header.{name} or integration.response.body.{JSON-expression}, where name is a valid and unique response header name and JSON-expression is a valid JSON expression without the $ prefix.</p>
+    #[doc(hidden)]
     pub response_parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The collection of response templates for the integration response as a string-to-string map of key-value pairs. Response templates are represented as a key/value map, with a content-type as the key and a template as the value.</p>
+    #[doc(hidden)]
     pub response_templates:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The template selection expressions for the integration response.</p>
+    #[doc(hidden)]
     pub template_selection_expression: std::option::Option<std::string::String>,
 }
 impl UpdateIntegrationResponseOutput {
@@ -1403,11 +1450,10 @@ impl std::fmt::Debug for UpdateIntegrationResponseOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateIntegrationResponseOutput`](crate::output::UpdateIntegrationResponseOutput)
+/// See [`UpdateIntegrationResponseOutput`](crate::output::UpdateIntegrationResponseOutput).
 pub mod update_integration_response_output {
 
-    /// A builder for [`UpdateIntegrationResponseOutput`](crate::output::UpdateIntegrationResponseOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateIntegrationResponseOutput`](crate::output::UpdateIntegrationResponseOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_handling_strategy:
@@ -1537,7 +1583,7 @@ pub mod update_integration_response_output {
             self.template_selection_expression = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateIntegrationResponseOutput`](crate::output::UpdateIntegrationResponseOutput)
+        /// Consumes the builder and constructs a [`UpdateIntegrationResponseOutput`](crate::output::UpdateIntegrationResponseOutput).
         pub fn build(self) -> crate::output::UpdateIntegrationResponseOutput {
             crate::output::UpdateIntegrationResponseOutput {
                 content_handling_strategy: self.content_handling_strategy,
@@ -1551,7 +1597,7 @@ pub mod update_integration_response_output {
     }
 }
 impl UpdateIntegrationResponseOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateIntegrationResponseOutput`](crate::output::UpdateIntegrationResponseOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateIntegrationResponseOutput`](crate::output::UpdateIntegrationResponseOutput).
     pub fn builder() -> crate::output::update_integration_response_output::Builder {
         crate::output::update_integration_response_output::Builder::default()
     }
@@ -1562,27 +1608,37 @@ impl UpdateIntegrationResponseOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateIntegrationOutput {
     /// <p>Specifies whether an integration is managed by API Gateway. If you created an API using using quick create, the resulting integration is managed by API Gateway. You can update a managed integration, but you can't delete it.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>The ID of the VPC link for a private integration. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub connection_id: std::option::Option<std::string::String>,
     /// <p>The type of the network connection to the integration endpoint. Specify INTERNET for connections through the public routable internet or VPC_LINK for private connections between API Gateway and resources in a VPC. The default value is INTERNET.</p>
+    #[doc(hidden)]
     pub connection_type: std::option::Option<crate::model::ConnectionType>,
     /// <p>Supported only for WebSocket APIs. Specifies how to handle response payload content type conversions. Supported values are CONVERT_TO_BINARY and CONVERT_TO_TEXT, with the following behaviors:</p>
     /// <p>CONVERT_TO_BINARY: Converts a response payload from a Base64-encoded string to the corresponding binary blob.</p>
     /// <p>CONVERT_TO_TEXT: Converts a response payload from a binary blob to a Base64-encoded string.</p>
     /// <p>If this property is not defined, the response payload will be passed through from the integration response to the route response or method response without modification.</p>
+    #[doc(hidden)]
     pub content_handling_strategy: std::option::Option<crate::model::ContentHandlingStrategy>,
     /// <p>Specifies the credentials required for the integration, if any. For AWS integrations, three options are available. To specify an IAM Role for API Gateway to assume, use the role's Amazon Resource Name (ARN). To require that the caller's identity be passed through from the request, specify the string arn:aws:iam::*:user/*. To use resource-based permissions on supported AWS services, specify null.</p>
+    #[doc(hidden)]
     pub credentials_arn: std::option::Option<std::string::String>,
     /// <p>Represents the description of an integration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Represents the identifier of an integration.</p>
+    #[doc(hidden)]
     pub integration_id: std::option::Option<std::string::String>,
     /// <p>Specifies the integration's HTTP method type.</p>
+    #[doc(hidden)]
     pub integration_method: std::option::Option<std::string::String>,
     /// <p>The integration response selection expression for the integration. Supported only for WebSocket APIs. See <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions">Integration Response Selection Expressions</a>.</p>
+    #[doc(hidden)]
     pub integration_response_selection_expression: std::option::Option<std::string::String>,
     /// <p>Supported only for HTTP API AWS_PROXY integrations. Specifies the AWS service action to invoke. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html">Integration subtype reference</a>.</p>
+    #[doc(hidden)]
     pub integration_subtype: std::option::Option<std::string::String>,
     /// <p>The integration type of an integration. One of the following:</p>
     /// <p>AWS: for integrating the route or method request with an AWS service action, including the Lambda function-invoking action. With the Lambda function-invoking action, this is referred to as the Lambda custom integration. With any other AWS service action, this is known as AWS integration. Supported only for WebSocket APIs.</p>
@@ -1590,17 +1646,21 @@ pub struct UpdateIntegrationOutput {
     /// <p>HTTP: for integrating the route or method request with an HTTP endpoint. This integration is also referred to as the HTTP custom integration. Supported only for WebSocket APIs.</p>
     /// <p>HTTP_PROXY: for integrating the route or method request with an HTTP endpoint, with the client request passed through as-is. This is also referred to as HTTP proxy integration.</p>
     /// <p>MOCK: for integrating the route or method request with API Gateway as a "loopback" endpoint without invoking any backend. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub integration_type: std::option::Option<crate::model::IntegrationType>,
     /// <p>For a Lambda integration, specify the URI of a Lambda function.</p>
     /// <p>For an HTTP integration, specify a fully-qualified URL.</p>
     /// <p>For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service. If you specify the ARN of an AWS Cloud Map service, API Gateway uses DiscoverInstances to identify resources. You can use query parameters to target specific resources. To learn more, see <a href="https://docs.aws.amazon.com/cloud-map/latest/api/API_DiscoverInstances.html">DiscoverInstances</a>. For private integrations, all resources must be owned by the same AWS account.</p>
+    #[doc(hidden)]
     pub integration_uri: std::option::Option<std::string::String>,
     /// <p>Specifies the pass-through behavior for incoming requests based on the Content-Type header in the request, and the available mapping templates specified as the requestTemplates property on the Integration resource. There are three valid values: WHEN_NO_MATCH, WHEN_NO_TEMPLATES, and NEVER. Supported only for WebSocket APIs.</p>
     /// <p>WHEN_NO_MATCH passes the request body for unmapped content types through to the integration backend without transformation.</p>
     /// <p>NEVER rejects unmapped content types with an HTTP 415 Unsupported Media Type response.</p>
     /// <p>WHEN_NO_TEMPLATES allows pass-through when the integration has no content types mapped to templates. However, if there is at least one content type defined, unmapped content types will be rejected with the same HTTP 415 Unsupported Media Type response.</p>
+    #[doc(hidden)]
     pub passthrough_behavior: std::option::Option<crate::model::PassthroughBehavior>,
     /// <p>Specifies the format of the payload sent to an integration. Required for HTTP APIs.</p>
+    #[doc(hidden)]
     pub payload_format_version: std::option::Option<std::string::String>,
     /// <p>For WebSocket APIs, a key-value map specifying request parameters that are passed from the method request to the backend. The key is an integration request parameter name and the associated value is a method request parameter value or static value that must be enclosed within single quotes and pre-encoded as required by the backend. The method request parameter value must match the pattern of method.request.<replaceable>
     /// {location}
@@ -1613,12 +1673,15 @@ pub struct UpdateIntegrationOutput {
     /// </replaceable> must be a valid and unique method request parameter name.</p>
     /// <p>For HTTP API integrations with a specified integrationSubtype, request parameters are a key-value map specifying parameters that are passed to AWS_PROXY integrations. You can provide static values, or map request data, stage variables, or context variables that are evaluated at runtime. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services.html">Working with AWS service integrations for HTTP APIs</a>.</p>
     /// <p>For HTTP API itegrations, without a specified integrationSubtype request parameters are a key-value map specifying how to transform HTTP requests before sending them to backend integrations. The key should follow the pattern &lt;action&gt;:&lt;header|querystring|path&gt;.&lt;location&gt;. The action can be append, overwrite or remove. For values, you can provide static values, or map request data, stage variables, or context variables that are evaluated at runtime. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html">Transforming API requests and responses</a>.</p>
+    #[doc(hidden)]
     pub request_parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Represents a map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client. The content type value is the key in this map, and the template (as a String) is the value. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub request_templates:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Supported only for HTTP APIs. You use response parameters to transform the HTTP response from a backend integration before returning the response to clients. Specify a key-value map from a selection key to response parameters. The selection key must be a valid HTTP status code within the range of 200-599. Response parameters are a key-value map. The key must match pattern &lt;action&gt;:&lt;header&gt;.&lt;location&gt; or overwrite.statuscode. The action can be append, overwrite or remove. The value can be a static value, or map to response data, stage variables, or context variables that are evaluated at runtime. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html">Transforming API requests and responses</a>.</p>
+    #[doc(hidden)]
     pub response_parameters: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -1626,10 +1689,13 @@ pub struct UpdateIntegrationOutput {
         >,
     >,
     /// <p>The template selection expression for the integration. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub template_selection_expression: std::option::Option<std::string::String>,
     /// <p>Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and 30,000 milliseconds for HTTP APIs. The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.</p>
+    #[doc(hidden)]
     pub timeout_in_millis: i32,
     /// <p>The TLS configuration for a private integration. If you specify a TLS configuration, private integration traffic uses the HTTPS protocol. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub tls_config: std::option::Option<crate::model::TlsConfig>,
 }
 impl UpdateIntegrationOutput {
@@ -1784,11 +1850,10 @@ impl std::fmt::Debug for UpdateIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateIntegrationOutput`](crate::output::UpdateIntegrationOutput)
+/// See [`UpdateIntegrationOutput`](crate::output::UpdateIntegrationOutput).
 pub mod update_integration_output {
 
-    /// A builder for [`UpdateIntegrationOutput`](crate::output::UpdateIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateIntegrationOutput`](crate::output::UpdateIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_gateway_managed: std::option::Option<bool>,
@@ -2169,7 +2234,7 @@ pub mod update_integration_output {
             self.tls_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateIntegrationOutput`](crate::output::UpdateIntegrationOutput)
+        /// Consumes the builder and constructs a [`UpdateIntegrationOutput`](crate::output::UpdateIntegrationOutput).
         pub fn build(self) -> crate::output::UpdateIntegrationOutput {
             crate::output::UpdateIntegrationOutput {
                 api_gateway_managed: self.api_gateway_managed.unwrap_or_default(),
@@ -2198,7 +2263,7 @@ pub mod update_integration_output {
     }
 }
 impl UpdateIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateIntegrationOutput`](crate::output::UpdateIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateIntegrationOutput`](crate::output::UpdateIntegrationOutput).
     pub fn builder() -> crate::output::update_integration_output::Builder {
         crate::output::update_integration_output::Builder::default()
     }
@@ -2209,15 +2274,20 @@ impl UpdateIntegrationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDomainNameOutput {
     /// <p>The API mapping selection expression.</p>
+    #[doc(hidden)]
     pub api_mapping_selection_expression: std::option::Option<std::string::String>,
     /// <p>The name of the DomainName resource.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The domain name configurations.</p>
+    #[doc(hidden)]
     pub domain_name_configurations:
         std::option::Option<std::vec::Vec<crate::model::DomainNameConfiguration>>,
     /// <p>The mutual TLS authentication configuration for a custom domain name.</p>
+    #[doc(hidden)]
     pub mutual_tls_authentication: std::option::Option<crate::model::MutualTlsAuthentication>,
     /// <p>The collection of tags associated with a domain name.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2267,11 +2337,10 @@ impl std::fmt::Debug for UpdateDomainNameOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDomainNameOutput`](crate::output::UpdateDomainNameOutput)
+/// See [`UpdateDomainNameOutput`](crate::output::UpdateDomainNameOutput).
 pub mod update_domain_name_output {
 
-    /// A builder for [`UpdateDomainNameOutput`](crate::output::UpdateDomainNameOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateDomainNameOutput`](crate::output::UpdateDomainNameOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_mapping_selection_expression: std::option::Option<std::string::String>,
@@ -2374,7 +2443,7 @@ pub mod update_domain_name_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateDomainNameOutput`](crate::output::UpdateDomainNameOutput)
+        /// Consumes the builder and constructs a [`UpdateDomainNameOutput`](crate::output::UpdateDomainNameOutput).
         pub fn build(self) -> crate::output::UpdateDomainNameOutput {
             crate::output::UpdateDomainNameOutput {
                 api_mapping_selection_expression: self.api_mapping_selection_expression,
@@ -2387,7 +2456,7 @@ pub mod update_domain_name_output {
     }
 }
 impl UpdateDomainNameOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDomainNameOutput`](crate::output::UpdateDomainNameOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDomainNameOutput`](crate::output::UpdateDomainNameOutput).
     pub fn builder() -> crate::output::update_domain_name_output::Builder {
         crate::output::update_domain_name_output::Builder::default()
     }
@@ -2398,16 +2467,22 @@ impl UpdateDomainNameOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDeploymentOutput {
     /// <p>Specifies whether a deployment was automatically released.</p>
+    #[doc(hidden)]
     pub auto_deployed: bool,
     /// <p>The date and time when the Deployment resource was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The identifier for the deployment.</p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>The status of the deployment: PENDING, FAILED, or SUCCEEDED.</p>
+    #[doc(hidden)]
     pub deployment_status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>May contain additional feedback on the status of an API deployment.</p>
+    #[doc(hidden)]
     pub deployment_status_message: std::option::Option<std::string::String>,
     /// <p>The description for the deployment.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl UpdateDeploymentOutput {
@@ -2448,11 +2523,10 @@ impl std::fmt::Debug for UpdateDeploymentOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDeploymentOutput`](crate::output::UpdateDeploymentOutput)
+/// See [`UpdateDeploymentOutput`](crate::output::UpdateDeploymentOutput).
 pub mod update_deployment_output {
 
-    /// A builder for [`UpdateDeploymentOutput`](crate::output::UpdateDeploymentOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateDeploymentOutput`](crate::output::UpdateDeploymentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_deployed: std::option::Option<bool>,
@@ -2535,7 +2609,7 @@ pub mod update_deployment_output {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateDeploymentOutput`](crate::output::UpdateDeploymentOutput)
+        /// Consumes the builder and constructs a [`UpdateDeploymentOutput`](crate::output::UpdateDeploymentOutput).
         pub fn build(self) -> crate::output::UpdateDeploymentOutput {
             crate::output::UpdateDeploymentOutput {
                 auto_deployed: self.auto_deployed.unwrap_or_default(),
@@ -2549,7 +2623,7 @@ pub mod update_deployment_output {
     }
 }
 impl UpdateDeploymentOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDeploymentOutput`](crate::output::UpdateDeploymentOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDeploymentOutput`](crate::output::UpdateDeploymentOutput).
     pub fn builder() -> crate::output::update_deployment_output::Builder {
         crate::output::update_deployment_output::Builder::default()
     }
@@ -2560,14 +2634,19 @@ impl UpdateDeploymentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAuthorizerOutput {
     /// <p>Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer. To specify an IAM role for API Gateway to assume, use the role's Amazon Resource Name (ARN). To use resource-based permissions on the Lambda function, don't specify this parameter. Supported only for REQUEST authorizers.</p>
+    #[doc(hidden)]
     pub authorizer_credentials_arn: std::option::Option<std::string::String>,
     /// <p>The authorizer identifier.</p>
+    #[doc(hidden)]
     pub authorizer_id: std::option::Option<std::string::String>,
     /// <p>Specifies the format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers. Supported values are 1.0 and 2.0. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-lambda-authorizer.html">Working with AWS Lambda authorizers for HTTP APIs</a>.</p>
+    #[doc(hidden)]
     pub authorizer_payload_format_version: std::option::Option<std::string::String>,
     /// <p>The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled. If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Supported only for HTTP API Lambda authorizers.</p>
+    #[doc(hidden)]
     pub authorizer_result_ttl_in_seconds: i32,
     /// <p>The authorizer type. Specify REQUEST for a Lambda function using incoming request parameters. Specify JWT to use JSON Web Tokens (supported only for HTTP APIs).</p>
+    #[doc(hidden)]
     pub authorizer_type: std::option::Option<crate::model::AuthorizerType>,
     /// <p>The authorizer's Uniform Resource Identifier (URI). For REQUEST authorizers, this must be a well-formed Lambda function URI, for example, arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:<replaceable>
     /// {account_id}
@@ -2578,18 +2657,24 @@ pub struct UpdateAuthorizerOutput {
     /// </replaceable>:lambda:path/<replaceable>
     /// {service_api}
     /// </replaceable> , where <replaceable></replaceable>{region} is the same as the region hosting the Lambda function, path indicates that the remaining substring in the URI should be treated as the path to the resource, including the initial /. For Lambda functions, this is usually of the form /2015-03-31/functions/[FunctionARN]/invocations. Supported only for REQUEST authorizers.</p>
+    #[doc(hidden)]
     pub authorizer_uri: std::option::Option<std::string::String>,
     /// <p>Specifies whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy. Supported only for HTTP APIs. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-lambda-authorizer.html">Working with AWS Lambda authorizers for HTTP APIs</a></p>
+    #[doc(hidden)]
     pub enable_simple_responses: bool,
     /// <p>The identity source for which authorization is requested.</p>
     /// <p>For a REQUEST authorizer, this is optional. The value is a set of one or more mapping expressions of the specified request parameters. The identity source can be headers, query string parameters, stage variables, and context parameters. For example, if an Auth header and a Name query string parameter are defined as identity sources, this value is route.request.header.Auth, route.request.querystring.Name for WebSocket APIs. For HTTP APIs, use selection expressions prefixed with $, for example, $request.header.Auth, $request.querystring.Name. These parameters are used to perform runtime validation for Lambda-based authorizers by verifying all of the identity-related request parameters are present in the request, not null, and non-empty. Only when this is true does the authorizer invoke the authorizer Lambda function. Otherwise, it returns a 401 Unauthorized response without calling the Lambda function. For HTTP APIs, identity sources are also used as the cache key when caching is enabled. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-lambda-authorizer.html">Working with AWS Lambda authorizers for HTTP APIs</a>.</p>
     /// <p>For JWT, a single entry that specifies where to extract the JSON Web Token (JWT) from inbound requests. Currently only header-based and query parameter-based selections are supported, for example $request.header.Authorization.</p>
+    #[doc(hidden)]
     pub identity_source: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The validation expression does not apply to the REQUEST authorizer.</p>
+    #[doc(hidden)]
     pub identity_validation_expression: std::option::Option<std::string::String>,
     /// <p>Represents the configuration of a JWT authorizer. Required for the JWT authorizer type. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub jwt_configuration: std::option::Option<crate::model::JwtConfiguration>,
     /// <p>The name of the authorizer.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl UpdateAuthorizerOutput {
@@ -2677,11 +2762,10 @@ impl std::fmt::Debug for UpdateAuthorizerOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAuthorizerOutput`](crate::output::UpdateAuthorizerOutput)
+/// See [`UpdateAuthorizerOutput`](crate::output::UpdateAuthorizerOutput).
 pub mod update_authorizer_output {
 
-    /// A builder for [`UpdateAuthorizerOutput`](crate::output::UpdateAuthorizerOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAuthorizerOutput`](crate::output::UpdateAuthorizerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) authorizer_credentials_arn: std::option::Option<std::string::String>,
@@ -2866,7 +2950,7 @@ pub mod update_authorizer_output {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAuthorizerOutput`](crate::output::UpdateAuthorizerOutput)
+        /// Consumes the builder and constructs a [`UpdateAuthorizerOutput`](crate::output::UpdateAuthorizerOutput).
         pub fn build(self) -> crate::output::UpdateAuthorizerOutput {
             crate::output::UpdateAuthorizerOutput {
                 authorizer_credentials_arn: self.authorizer_credentials_arn,
@@ -2887,7 +2971,7 @@ pub mod update_authorizer_output {
     }
 }
 impl UpdateAuthorizerOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAuthorizerOutput`](crate::output::UpdateAuthorizerOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAuthorizerOutput`](crate::output::UpdateAuthorizerOutput).
     pub fn builder() -> crate::output::update_authorizer_output::Builder {
         crate::output::update_authorizer_output::Builder::default()
     }
@@ -2898,12 +2982,16 @@ impl UpdateAuthorizerOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateApiMappingOutput {
     /// <p>The API identifier.</p>
+    #[doc(hidden)]
     pub api_id: std::option::Option<std::string::String>,
     /// <p>The API mapping identifier.</p>
+    #[doc(hidden)]
     pub api_mapping_id: std::option::Option<std::string::String>,
     /// <p>The API mapping key.</p>
+    #[doc(hidden)]
     pub api_mapping_key: std::option::Option<std::string::String>,
     /// <p>The API stage.</p>
+    #[doc(hidden)]
     pub stage: std::option::Option<std::string::String>,
 }
 impl UpdateApiMappingOutput {
@@ -2934,11 +3022,10 @@ impl std::fmt::Debug for UpdateApiMappingOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateApiMappingOutput`](crate::output::UpdateApiMappingOutput)
+/// See [`UpdateApiMappingOutput`](crate::output::UpdateApiMappingOutput).
 pub mod update_api_mapping_output {
 
-    /// A builder for [`UpdateApiMappingOutput`](crate::output::UpdateApiMappingOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateApiMappingOutput`](crate::output::UpdateApiMappingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_id: std::option::Option<std::string::String>,
@@ -2993,7 +3080,7 @@ pub mod update_api_mapping_output {
             self.stage = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateApiMappingOutput`](crate::output::UpdateApiMappingOutput)
+        /// Consumes the builder and constructs a [`UpdateApiMappingOutput`](crate::output::UpdateApiMappingOutput).
         pub fn build(self) -> crate::output::UpdateApiMappingOutput {
             crate::output::UpdateApiMappingOutput {
                 api_id: self.api_id,
@@ -3005,7 +3092,7 @@ pub mod update_api_mapping_output {
     }
 }
 impl UpdateApiMappingOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateApiMappingOutput`](crate::output::UpdateApiMappingOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateApiMappingOutput`](crate::output::UpdateApiMappingOutput).
     pub fn builder() -> crate::output::update_api_mapping_output::Builder {
         crate::output::update_api_mapping_output::Builder::default()
     }
@@ -3016,37 +3103,53 @@ impl UpdateApiMappingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateApiOutput {
     /// <p>The URI of the API, of the form {api-id}.execute-api.{region}.amazonaws.com. The stage name is typically appended to this URI to form a complete path to a deployed API stage.</p>
+    #[doc(hidden)]
     pub api_endpoint: std::option::Option<std::string::String>,
     /// <p>Specifies whether an API is managed by API Gateway. You can't update or delete a managed API by using API Gateway. A managed API can be deleted only through the tooling or service that created it.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>The API ID.</p>
+    #[doc(hidden)]
     pub api_id: std::option::Option<std::string::String>,
     /// <p>An API key selection expression. Supported only for WebSocket APIs. See <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions">API Key Selection Expressions</a>.</p>
+    #[doc(hidden)]
     pub api_key_selection_expression: std::option::Option<std::string::String>,
     /// <p>A CORS configuration. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub cors_configuration: std::option::Option<crate::model::Cors>,
     /// <p>The timestamp when the API was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the API.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Avoid validating models when creating a deployment. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub disable_schema_validation: bool,
     /// <p>Specifies whether clients can invoke your API by using the default execute-api endpoint. By default, clients can invoke your API with the default https://{api_id}.execute-api.{region}.amazonaws.com endpoint. To require that clients use a custom domain name to invoke your API, disable the default endpoint.</p>
+    #[doc(hidden)]
     pub disable_execute_api_endpoint: bool,
     /// <p>The validation information during API import. This may include particular properties of your OpenAPI definition which are ignored during import. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub import_info: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The name of the API.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The API protocol.</p>
+    #[doc(hidden)]
     pub protocol_type: std::option::Option<crate::model::ProtocolType>,
     /// <p>The route selection expression for the API. For HTTP APIs, the routeSelectionExpression must be ${request.method} ${request.path}. If not provided, this will be the default for HTTP APIs. This property is required for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub route_selection_expression: std::option::Option<std::string::String>,
     /// <p>A collection of tags associated with the API.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A version identifier for the API.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The warning messages reported when failonwarnings is turned on during API import.</p>
+    #[doc(hidden)]
     pub warnings: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl UpdateApiOutput {
@@ -3149,11 +3252,10 @@ impl std::fmt::Debug for UpdateApiOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateApiOutput`](crate::output::UpdateApiOutput)
+/// See [`UpdateApiOutput`](crate::output::UpdateApiOutput).
 pub mod update_api_output {
 
-    /// A builder for [`UpdateApiOutput`](crate::output::UpdateApiOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateApiOutput`](crate::output::UpdateApiOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_endpoint: std::option::Option<std::string::String>,
@@ -3390,7 +3492,7 @@ pub mod update_api_output {
             self.warnings = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateApiOutput`](crate::output::UpdateApiOutput)
+        /// Consumes the builder and constructs a [`UpdateApiOutput`](crate::output::UpdateApiOutput).
         pub fn build(self) -> crate::output::UpdateApiOutput {
             crate::output::UpdateApiOutput {
                 api_endpoint: self.api_endpoint,
@@ -3414,7 +3516,7 @@ pub mod update_api_output {
     }
 }
 impl UpdateApiOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateApiOutput`](crate::output::UpdateApiOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateApiOutput`](crate::output::UpdateApiOutput).
     pub fn builder() -> crate::output::update_api_output::Builder {
         crate::output::update_api_output::Builder::default()
     }
@@ -3430,22 +3532,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -3461,22 +3562,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -3492,22 +3592,21 @@ impl std::fmt::Debug for ResetAuthorizersCacheOutput {
         formatter.finish()
     }
 }
-/// See [`ResetAuthorizersCacheOutput`](crate::output::ResetAuthorizersCacheOutput)
+/// See [`ResetAuthorizersCacheOutput`](crate::output::ResetAuthorizersCacheOutput).
 pub mod reset_authorizers_cache_output {
 
-    /// A builder for [`ResetAuthorizersCacheOutput`](crate::output::ResetAuthorizersCacheOutput)
-    #[non_exhaustive]
+    /// A builder for [`ResetAuthorizersCacheOutput`](crate::output::ResetAuthorizersCacheOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`ResetAuthorizersCacheOutput`](crate::output::ResetAuthorizersCacheOutput)
+        /// Consumes the builder and constructs a [`ResetAuthorizersCacheOutput`](crate::output::ResetAuthorizersCacheOutput).
         pub fn build(self) -> crate::output::ResetAuthorizersCacheOutput {
             crate::output::ResetAuthorizersCacheOutput {}
         }
     }
 }
 impl ResetAuthorizersCacheOutput {
-    /// Creates a new builder-style object to manufacture [`ResetAuthorizersCacheOutput`](crate::output::ResetAuthorizersCacheOutput)
+    /// Creates a new builder-style object to manufacture [`ResetAuthorizersCacheOutput`](crate::output::ResetAuthorizersCacheOutput).
     pub fn builder() -> crate::output::reset_authorizers_cache_output::Builder {
         crate::output::reset_authorizers_cache_output::Builder::default()
     }
@@ -3518,37 +3617,53 @@ impl ResetAuthorizersCacheOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReimportApiOutput {
     /// <p>The URI of the API, of the form {api-id}.execute-api.{region}.amazonaws.com. The stage name is typically appended to this URI to form a complete path to a deployed API stage.</p>
+    #[doc(hidden)]
     pub api_endpoint: std::option::Option<std::string::String>,
     /// <p>Specifies whether an API is managed by API Gateway. You can't update or delete a managed API by using API Gateway. A managed API can be deleted only through the tooling or service that created it.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>The API ID.</p>
+    #[doc(hidden)]
     pub api_id: std::option::Option<std::string::String>,
     /// <p>An API key selection expression. Supported only for WebSocket APIs. See <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions">API Key Selection Expressions</a>.</p>
+    #[doc(hidden)]
     pub api_key_selection_expression: std::option::Option<std::string::String>,
     /// <p>A CORS configuration. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub cors_configuration: std::option::Option<crate::model::Cors>,
     /// <p>The timestamp when the API was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the API.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Avoid validating models when creating a deployment. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub disable_schema_validation: bool,
     /// <p>Specifies whether clients can invoke your API by using the default execute-api endpoint. By default, clients can invoke your API with the default https://{api_id}.execute-api.{region}.amazonaws.com endpoint. To require that clients use a custom domain name to invoke your API, disable the default endpoint.</p>
+    #[doc(hidden)]
     pub disable_execute_api_endpoint: bool,
     /// <p>The validation information during API import. This may include particular properties of your OpenAPI definition which are ignored during import. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub import_info: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The name of the API.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The API protocol.</p>
+    #[doc(hidden)]
     pub protocol_type: std::option::Option<crate::model::ProtocolType>,
     /// <p>The route selection expression for the API. For HTTP APIs, the routeSelectionExpression must be ${request.method} ${request.path}. If not provided, this will be the default for HTTP APIs. This property is required for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub route_selection_expression: std::option::Option<std::string::String>,
     /// <p>A collection of tags associated with the API.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A version identifier for the API.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The warning messages reported when failonwarnings is turned on during API import.</p>
+    #[doc(hidden)]
     pub warnings: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ReimportApiOutput {
@@ -3651,11 +3766,10 @@ impl std::fmt::Debug for ReimportApiOutput {
         formatter.finish()
     }
 }
-/// See [`ReimportApiOutput`](crate::output::ReimportApiOutput)
+/// See [`ReimportApiOutput`](crate::output::ReimportApiOutput).
 pub mod reimport_api_output {
 
-    /// A builder for [`ReimportApiOutput`](crate::output::ReimportApiOutput)
-    #[non_exhaustive]
+    /// A builder for [`ReimportApiOutput`](crate::output::ReimportApiOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_endpoint: std::option::Option<std::string::String>,
@@ -3892,7 +4006,7 @@ pub mod reimport_api_output {
             self.warnings = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReimportApiOutput`](crate::output::ReimportApiOutput)
+        /// Consumes the builder and constructs a [`ReimportApiOutput`](crate::output::ReimportApiOutput).
         pub fn build(self) -> crate::output::ReimportApiOutput {
             crate::output::ReimportApiOutput {
                 api_endpoint: self.api_endpoint,
@@ -3916,7 +4030,7 @@ pub mod reimport_api_output {
     }
 }
 impl ReimportApiOutput {
-    /// Creates a new builder-style object to manufacture [`ReimportApiOutput`](crate::output::ReimportApiOutput)
+    /// Creates a new builder-style object to manufacture [`ReimportApiOutput`](crate::output::ReimportApiOutput).
     pub fn builder() -> crate::output::reimport_api_output::Builder {
         crate::output::reimport_api_output::Builder::default()
     }
@@ -3927,37 +4041,53 @@ impl ReimportApiOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportApiOutput {
     /// <p>The URI of the API, of the form {api-id}.execute-api.{region}.amazonaws.com. The stage name is typically appended to this URI to form a complete path to a deployed API stage.</p>
+    #[doc(hidden)]
     pub api_endpoint: std::option::Option<std::string::String>,
     /// <p>Specifies whether an API is managed by API Gateway. You can't update or delete a managed API by using API Gateway. A managed API can be deleted only through the tooling or service that created it.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>The API ID.</p>
+    #[doc(hidden)]
     pub api_id: std::option::Option<std::string::String>,
     /// <p>An API key selection expression. Supported only for WebSocket APIs. See <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions">API Key Selection Expressions</a>.</p>
+    #[doc(hidden)]
     pub api_key_selection_expression: std::option::Option<std::string::String>,
     /// <p>A CORS configuration. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub cors_configuration: std::option::Option<crate::model::Cors>,
     /// <p>The timestamp when the API was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the API.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Avoid validating models when creating a deployment. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub disable_schema_validation: bool,
     /// <p>Specifies whether clients can invoke your API by using the default execute-api endpoint. By default, clients can invoke your API with the default https://{api_id}.execute-api.{region}.amazonaws.com endpoint. To require that clients use a custom domain name to invoke your API, disable the default endpoint.</p>
+    #[doc(hidden)]
     pub disable_execute_api_endpoint: bool,
     /// <p>The validation information during API import. This may include particular properties of your OpenAPI definition which are ignored during import. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub import_info: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The name of the API.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The API protocol.</p>
+    #[doc(hidden)]
     pub protocol_type: std::option::Option<crate::model::ProtocolType>,
     /// <p>The route selection expression for the API. For HTTP APIs, the routeSelectionExpression must be ${request.method} ${request.path}. If not provided, this will be the default for HTTP APIs. This property is required for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub route_selection_expression: std::option::Option<std::string::String>,
     /// <p>A collection of tags associated with the API.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A version identifier for the API.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The warning messages reported when failonwarnings is turned on during API import.</p>
+    #[doc(hidden)]
     pub warnings: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ImportApiOutput {
@@ -4060,11 +4190,10 @@ impl std::fmt::Debug for ImportApiOutput {
         formatter.finish()
     }
 }
-/// See [`ImportApiOutput`](crate::output::ImportApiOutput)
+/// See [`ImportApiOutput`](crate::output::ImportApiOutput).
 pub mod import_api_output {
 
-    /// A builder for [`ImportApiOutput`](crate::output::ImportApiOutput)
-    #[non_exhaustive]
+    /// A builder for [`ImportApiOutput`](crate::output::ImportApiOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_endpoint: std::option::Option<std::string::String>,
@@ -4301,7 +4430,7 @@ pub mod import_api_output {
             self.warnings = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportApiOutput`](crate::output::ImportApiOutput)
+        /// Consumes the builder and constructs a [`ImportApiOutput`](crate::output::ImportApiOutput).
         pub fn build(self) -> crate::output::ImportApiOutput {
             crate::output::ImportApiOutput {
                 api_endpoint: self.api_endpoint,
@@ -4325,7 +4454,7 @@ pub mod import_api_output {
     }
 }
 impl ImportApiOutput {
-    /// Creates a new builder-style object to manufacture [`ImportApiOutput`](crate::output::ImportApiOutput)
+    /// Creates a new builder-style object to manufacture [`ImportApiOutput`](crate::output::ImportApiOutput).
     pub fn builder() -> crate::output::import_api_output::Builder {
         crate::output::import_api_output::Builder::default()
     }
@@ -4336,8 +4465,10 @@ impl ImportApiOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetVpcLinksOutput {
     /// <p>A collection of VPC links.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::VpcLink>>,
     /// <p>The next page of elements from this collection. Not valid for the last element of the collection.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetVpcLinksOutput {
@@ -4358,11 +4489,10 @@ impl std::fmt::Debug for GetVpcLinksOutput {
         formatter.finish()
     }
 }
-/// See [`GetVpcLinksOutput`](crate::output::GetVpcLinksOutput)
+/// See [`GetVpcLinksOutput`](crate::output::GetVpcLinksOutput).
 pub mod get_vpc_links_output {
 
-    /// A builder for [`GetVpcLinksOutput`](crate::output::GetVpcLinksOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetVpcLinksOutput`](crate::output::GetVpcLinksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::VpcLink>>,
@@ -4398,7 +4528,7 @@ pub mod get_vpc_links_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetVpcLinksOutput`](crate::output::GetVpcLinksOutput)
+        /// Consumes the builder and constructs a [`GetVpcLinksOutput`](crate::output::GetVpcLinksOutput).
         pub fn build(self) -> crate::output::GetVpcLinksOutput {
             crate::output::GetVpcLinksOutput {
                 items: self.items,
@@ -4408,7 +4538,7 @@ pub mod get_vpc_links_output {
     }
 }
 impl GetVpcLinksOutput {
-    /// Creates a new builder-style object to manufacture [`GetVpcLinksOutput`](crate::output::GetVpcLinksOutput)
+    /// Creates a new builder-style object to manufacture [`GetVpcLinksOutput`](crate::output::GetVpcLinksOutput).
     pub fn builder() -> crate::output::get_vpc_links_output::Builder {
         crate::output::get_vpc_links_output::Builder::default()
     }
@@ -4419,23 +4549,32 @@ impl GetVpcLinksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetVpcLinkOutput {
     /// <p>The timestamp when the VPC link was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the VPC link.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A list of security group IDs for the VPC link.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of subnet IDs to include in the VPC link.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Tags for the VPC link.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The ID of the VPC link.</p>
+    #[doc(hidden)]
     pub vpc_link_id: std::option::Option<std::string::String>,
     /// <p>The status of the VPC link.</p>
+    #[doc(hidden)]
     pub vpc_link_status: std::option::Option<crate::model::VpcLinkStatus>,
     /// <p>A message summarizing the cause of the status of the VPC link.</p>
+    #[doc(hidden)]
     pub vpc_link_status_message: std::option::Option<std::string::String>,
     /// <p>The version of the VPC link.</p>
+    #[doc(hidden)]
     pub vpc_link_version: std::option::Option<crate::model::VpcLinkVersion>,
 }
 impl GetVpcLinkOutput {
@@ -4494,11 +4633,10 @@ impl std::fmt::Debug for GetVpcLinkOutput {
         formatter.finish()
     }
 }
-/// See [`GetVpcLinkOutput`](crate::output::GetVpcLinkOutput)
+/// See [`GetVpcLinkOutput`](crate::output::GetVpcLinkOutput).
 pub mod get_vpc_link_output {
 
-    /// A builder for [`GetVpcLinkOutput`](crate::output::GetVpcLinkOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetVpcLinkOutput`](crate::output::GetVpcLinkOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) created_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -4649,7 +4787,7 @@ pub mod get_vpc_link_output {
             self.vpc_link_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetVpcLinkOutput`](crate::output::GetVpcLinkOutput)
+        /// Consumes the builder and constructs a [`GetVpcLinkOutput`](crate::output::GetVpcLinkOutput).
         pub fn build(self) -> crate::output::GetVpcLinkOutput {
             crate::output::GetVpcLinkOutput {
                 created_date: self.created_date,
@@ -4666,7 +4804,7 @@ pub mod get_vpc_link_output {
     }
 }
 impl GetVpcLinkOutput {
-    /// Creates a new builder-style object to manufacture [`GetVpcLinkOutput`](crate::output::GetVpcLinkOutput)
+    /// Creates a new builder-style object to manufacture [`GetVpcLinkOutput`](crate::output::GetVpcLinkOutput).
     pub fn builder() -> crate::output::get_vpc_link_output::Builder {
         crate::output::get_vpc_link_output::Builder::default()
     }
@@ -4677,6 +4815,7 @@ impl GetVpcLinkOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetTagsOutput {
     /// <p>Represents a collection of tags associated with the resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -4696,11 +4835,10 @@ impl std::fmt::Debug for GetTagsOutput {
         formatter.finish()
     }
 }
-/// See [`GetTagsOutput`](crate::output::GetTagsOutput)
+/// See [`GetTagsOutput`](crate::output::GetTagsOutput).
 pub mod get_tags_output {
 
-    /// A builder for [`GetTagsOutput`](crate::output::GetTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetTagsOutput`](crate::output::GetTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -4733,14 +4871,14 @@ pub mod get_tags_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetTagsOutput`](crate::output::GetTagsOutput)
+        /// Consumes the builder and constructs a [`GetTagsOutput`](crate::output::GetTagsOutput).
         pub fn build(self) -> crate::output::GetTagsOutput {
             crate::output::GetTagsOutput { tags: self.tags }
         }
     }
 }
 impl GetTagsOutput {
-    /// Creates a new builder-style object to manufacture [`GetTagsOutput`](crate::output::GetTagsOutput)
+    /// Creates a new builder-style object to manufacture [`GetTagsOutput`](crate::output::GetTagsOutput).
     pub fn builder() -> crate::output::get_tags_output::Builder {
         crate::output::get_tags_output::Builder::default()
     }
@@ -4751,8 +4889,10 @@ impl GetTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetStagesOutput {
     /// <p>The elements from this collection.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::Stage>>,
     /// <p>The next page of elements from this collection. Not valid for the last element of the collection.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetStagesOutput {
@@ -4773,11 +4913,10 @@ impl std::fmt::Debug for GetStagesOutput {
         formatter.finish()
     }
 }
-/// See [`GetStagesOutput`](crate::output::GetStagesOutput)
+/// See [`GetStagesOutput`](crate::output::GetStagesOutput).
 pub mod get_stages_output {
 
-    /// A builder for [`GetStagesOutput`](crate::output::GetStagesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetStagesOutput`](crate::output::GetStagesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::Stage>>,
@@ -4813,7 +4952,7 @@ pub mod get_stages_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetStagesOutput`](crate::output::GetStagesOutput)
+        /// Consumes the builder and constructs a [`GetStagesOutput`](crate::output::GetStagesOutput).
         pub fn build(self) -> crate::output::GetStagesOutput {
             crate::output::GetStagesOutput {
                 items: self.items,
@@ -4823,7 +4962,7 @@ pub mod get_stages_output {
     }
 }
 impl GetStagesOutput {
-    /// Creates a new builder-style object to manufacture [`GetStagesOutput`](crate::output::GetStagesOutput)
+    /// Creates a new builder-style object to manufacture [`GetStagesOutput`](crate::output::GetStagesOutput).
     pub fn builder() -> crate::output::get_stages_output::Builder {
         crate::output::get_stages_output::Builder::default()
     }
@@ -4834,35 +4973,49 @@ impl GetStagesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetStageOutput {
     /// <p>Settings for logging access in this stage.</p>
+    #[doc(hidden)]
     pub access_log_settings: std::option::Option<crate::model::AccessLogSettings>,
     /// <p>Specifies whether a stage is managed by API Gateway. If you created an API using quick create, the $default stage is managed by API Gateway. You can't modify the $default stage.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>Specifies whether updates to an API automatically trigger a new deployment. The default value is false.</p>
+    #[doc(hidden)]
     pub auto_deploy: bool,
     /// <p>The identifier of a client certificate for a Stage. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub client_certificate_id: std::option::Option<std::string::String>,
     /// <p>The timestamp when the stage was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Default route settings for the stage.</p>
+    #[doc(hidden)]
     pub default_route_settings: std::option::Option<crate::model::RouteSettings>,
     /// <p>The identifier of the Deployment that the Stage is associated with. Can't be updated if autoDeploy is enabled.</p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>The description of the stage.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Describes the status of the last deployment of a stage. Supported only for stages with autoDeploy enabled.</p>
+    #[doc(hidden)]
     pub last_deployment_status_message: std::option::Option<std::string::String>,
     /// <p>The timestamp when the stage was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Route settings for the stage, by routeKey.</p>
+    #[doc(hidden)]
     pub route_settings: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::RouteSettings>,
     >,
     /// <p>The name of the stage.</p>
+    #[doc(hidden)]
     pub stage_name: std::option::Option<std::string::String>,
     /// <p>A map that defines the stage variables for a stage resource. Variable names can have alphanumeric and underscore characters, and the values must match [A-Za-z0-9-._~:/?#&amp;=,]+.</p>
+    #[doc(hidden)]
     pub stage_variables:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The collection of tags. Each tag element is associated with a given resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -4957,11 +5110,10 @@ impl std::fmt::Debug for GetStageOutput {
         formatter.finish()
     }
 }
-/// See [`GetStageOutput`](crate::output::GetStageOutput)
+/// See [`GetStageOutput`](crate::output::GetStageOutput).
 pub mod get_stage_output {
 
-    /// A builder for [`GetStageOutput`](crate::output::GetStageOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetStageOutput`](crate::output::GetStageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_log_settings: std::option::Option<crate::model::AccessLogSettings>,
@@ -5195,7 +5347,7 @@ pub mod get_stage_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetStageOutput`](crate::output::GetStageOutput)
+        /// Consumes the builder and constructs a [`GetStageOutput`](crate::output::GetStageOutput).
         pub fn build(self) -> crate::output::GetStageOutput {
             crate::output::GetStageOutput {
                 access_log_settings: self.access_log_settings,
@@ -5217,7 +5369,7 @@ pub mod get_stage_output {
     }
 }
 impl GetStageOutput {
-    /// Creates a new builder-style object to manufacture [`GetStageOutput`](crate::output::GetStageOutput)
+    /// Creates a new builder-style object to manufacture [`GetStageOutput`](crate::output::GetStageOutput).
     pub fn builder() -> crate::output::get_stage_output::Builder {
         crate::output::get_stage_output::Builder::default()
     }
@@ -5228,8 +5380,10 @@ impl GetStageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRoutesOutput {
     /// <p>The elements from this collection.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::Route>>,
     /// <p>The next page of elements from this collection. Not valid for the last element of the collection.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetRoutesOutput {
@@ -5250,11 +5404,10 @@ impl std::fmt::Debug for GetRoutesOutput {
         formatter.finish()
     }
 }
-/// See [`GetRoutesOutput`](crate::output::GetRoutesOutput)
+/// See [`GetRoutesOutput`](crate::output::GetRoutesOutput).
 pub mod get_routes_output {
 
-    /// A builder for [`GetRoutesOutput`](crate::output::GetRoutesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRoutesOutput`](crate::output::GetRoutesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::Route>>,
@@ -5290,7 +5443,7 @@ pub mod get_routes_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRoutesOutput`](crate::output::GetRoutesOutput)
+        /// Consumes the builder and constructs a [`GetRoutesOutput`](crate::output::GetRoutesOutput).
         pub fn build(self) -> crate::output::GetRoutesOutput {
             crate::output::GetRoutesOutput {
                 items: self.items,
@@ -5300,7 +5453,7 @@ pub mod get_routes_output {
     }
 }
 impl GetRoutesOutput {
-    /// Creates a new builder-style object to manufacture [`GetRoutesOutput`](crate::output::GetRoutesOutput)
+    /// Creates a new builder-style object to manufacture [`GetRoutesOutput`](crate::output::GetRoutesOutput).
     pub fn builder() -> crate::output::get_routes_output::Builder {
         crate::output::get_routes_output::Builder::default()
     }
@@ -5311,8 +5464,10 @@ impl GetRoutesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRouteResponsesOutput {
     /// <p>The elements from this collection.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::RouteResponse>>,
     /// <p>The next page of elements from this collection. Not valid for the last element of the collection.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetRouteResponsesOutput {
@@ -5333,11 +5488,10 @@ impl std::fmt::Debug for GetRouteResponsesOutput {
         formatter.finish()
     }
 }
-/// See [`GetRouteResponsesOutput`](crate::output::GetRouteResponsesOutput)
+/// See [`GetRouteResponsesOutput`](crate::output::GetRouteResponsesOutput).
 pub mod get_route_responses_output {
 
-    /// A builder for [`GetRouteResponsesOutput`](crate::output::GetRouteResponsesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRouteResponsesOutput`](crate::output::GetRouteResponsesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::RouteResponse>>,
@@ -5373,7 +5527,7 @@ pub mod get_route_responses_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRouteResponsesOutput`](crate::output::GetRouteResponsesOutput)
+        /// Consumes the builder and constructs a [`GetRouteResponsesOutput`](crate::output::GetRouteResponsesOutput).
         pub fn build(self) -> crate::output::GetRouteResponsesOutput {
             crate::output::GetRouteResponsesOutput {
                 items: self.items,
@@ -5383,7 +5537,7 @@ pub mod get_route_responses_output {
     }
 }
 impl GetRouteResponsesOutput {
-    /// Creates a new builder-style object to manufacture [`GetRouteResponsesOutput`](crate::output::GetRouteResponsesOutput)
+    /// Creates a new builder-style object to manufacture [`GetRouteResponsesOutput`](crate::output::GetRouteResponsesOutput).
     pub fn builder() -> crate::output::get_route_responses_output::Builder {
         crate::output::get_route_responses_output::Builder::default()
     }
@@ -5394,17 +5548,22 @@ impl GetRouteResponsesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRouteResponseOutput {
     /// <p>Represents the model selection expression of a route response. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub model_selection_expression: std::option::Option<std::string::String>,
     /// <p>Represents the response models of a route response.</p>
+    #[doc(hidden)]
     pub response_models:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Represents the response parameters of a route response.</p>
+    #[doc(hidden)]
     pub response_parameters: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ParameterConstraints>,
     >,
     /// <p>Represents the identifier of a route response.</p>
+    #[doc(hidden)]
     pub route_response_id: std::option::Option<std::string::String>,
     /// <p>Represents the route response key of a route response.</p>
+    #[doc(hidden)]
     pub route_response_key: std::option::Option<std::string::String>,
 }
 impl GetRouteResponseOutput {
@@ -5450,11 +5609,10 @@ impl std::fmt::Debug for GetRouteResponseOutput {
         formatter.finish()
     }
 }
-/// See [`GetRouteResponseOutput`](crate::output::GetRouteResponseOutput)
+/// See [`GetRouteResponseOutput`](crate::output::GetRouteResponseOutput).
 pub mod get_route_response_output {
 
-    /// A builder for [`GetRouteResponseOutput`](crate::output::GetRouteResponseOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRouteResponseOutput`](crate::output::GetRouteResponseOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_selection_expression: std::option::Option<std::string::String>,
@@ -5557,7 +5715,7 @@ pub mod get_route_response_output {
             self.route_response_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRouteResponseOutput`](crate::output::GetRouteResponseOutput)
+        /// Consumes the builder and constructs a [`GetRouteResponseOutput`](crate::output::GetRouteResponseOutput).
         pub fn build(self) -> crate::output::GetRouteResponseOutput {
             crate::output::GetRouteResponseOutput {
                 model_selection_expression: self.model_selection_expression,
@@ -5570,7 +5728,7 @@ pub mod get_route_response_output {
     }
 }
 impl GetRouteResponseOutput {
-    /// Creates a new builder-style object to manufacture [`GetRouteResponseOutput`](crate::output::GetRouteResponseOutput)
+    /// Creates a new builder-style object to manufacture [`GetRouteResponseOutput`](crate::output::GetRouteResponseOutput).
     pub fn builder() -> crate::output::get_route_response_output::Builder {
         crate::output::get_route_response_output::Builder::default()
     }
@@ -5581,33 +5739,46 @@ impl GetRouteResponseOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRouteOutput {
     /// <p>Specifies whether a route is managed by API Gateway. If you created an API using quick create, the $default route is managed by API Gateway. You can't modify the $default route key.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>Specifies whether an API key is required for this route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub api_key_required: bool,
     /// <p>A list of authorization scopes configured on a route. The scopes are used with a JWT authorizer to authorize the method invocation. The authorization works by matching the route scopes against the scopes parsed from the access token in the incoming request. The method invocation is authorized if any route scope matches a claimed scope in the access token. Otherwise, the invocation is not authorized. When the route scope is configured, the client must provide an access token instead of an identity token for authorization purposes.</p>
+    #[doc(hidden)]
     pub authorization_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The authorization type for the route. For WebSocket APIs, valid values are NONE for open access, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer For HTTP APIs, valid values are NONE for open access, JWT for using JSON Web Tokens, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer.</p>
+    #[doc(hidden)]
     pub authorization_type: std::option::Option<crate::model::AuthorizationType>,
     /// <p>The identifier of the Authorizer resource to be associated with this route. The authorizer identifier is generated by API Gateway when you created the authorizer.</p>
+    #[doc(hidden)]
     pub authorizer_id: std::option::Option<std::string::String>,
     /// <p>The model selection expression for the route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub model_selection_expression: std::option::Option<std::string::String>,
     /// <p>The operation name for the route.</p>
+    #[doc(hidden)]
     pub operation_name: std::option::Option<std::string::String>,
     /// <p>The request models for the route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub request_models:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The request parameters for the route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub request_parameters: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ParameterConstraints>,
     >,
     /// <p>The route ID.</p>
+    #[doc(hidden)]
     pub route_id: std::option::Option<std::string::String>,
     /// <p>The route key for the route.</p>
+    #[doc(hidden)]
     pub route_key: std::option::Option<std::string::String>,
     /// <p>The route response selection expression for the route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub route_response_selection_expression: std::option::Option<std::string::String>,
     /// <p>The target for the route.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<std::string::String>,
 }
 impl GetRouteOutput {
@@ -5696,11 +5867,10 @@ impl std::fmt::Debug for GetRouteOutput {
         formatter.finish()
     }
 }
-/// See [`GetRouteOutput`](crate::output::GetRouteOutput)
+/// See [`GetRouteOutput`](crate::output::GetRouteOutput).
 pub mod get_route_output {
 
-    /// A builder for [`GetRouteOutput`](crate::output::GetRouteOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRouteOutput`](crate::output::GetRouteOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_gateway_managed: std::option::Option<bool>,
@@ -5909,7 +6079,7 @@ pub mod get_route_output {
             self.target = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRouteOutput`](crate::output::GetRouteOutput)
+        /// Consumes the builder and constructs a [`GetRouteOutput`](crate::output::GetRouteOutput).
         pub fn build(self) -> crate::output::GetRouteOutput {
             crate::output::GetRouteOutput {
                 api_gateway_managed: self.api_gateway_managed.unwrap_or_default(),
@@ -5930,7 +6100,7 @@ pub mod get_route_output {
     }
 }
 impl GetRouteOutput {
-    /// Creates a new builder-style object to manufacture [`GetRouteOutput`](crate::output::GetRouteOutput)
+    /// Creates a new builder-style object to manufacture [`GetRouteOutput`](crate::output::GetRouteOutput).
     pub fn builder() -> crate::output::get_route_output::Builder {
         crate::output::get_route_output::Builder::default()
     }
@@ -5941,6 +6111,7 @@ impl GetRouteOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetModelTemplateOutput {
     /// <p>The template value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl GetModelTemplateOutput {
@@ -5956,11 +6127,10 @@ impl std::fmt::Debug for GetModelTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`GetModelTemplateOutput`](crate::output::GetModelTemplateOutput)
+/// See [`GetModelTemplateOutput`](crate::output::GetModelTemplateOutput).
 pub mod get_model_template_output {
 
-    /// A builder for [`GetModelTemplateOutput`](crate::output::GetModelTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetModelTemplateOutput`](crate::output::GetModelTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<std::string::String>,
@@ -5976,14 +6146,14 @@ pub mod get_model_template_output {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetModelTemplateOutput`](crate::output::GetModelTemplateOutput)
+        /// Consumes the builder and constructs a [`GetModelTemplateOutput`](crate::output::GetModelTemplateOutput).
         pub fn build(self) -> crate::output::GetModelTemplateOutput {
             crate::output::GetModelTemplateOutput { value: self.value }
         }
     }
 }
 impl GetModelTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`GetModelTemplateOutput`](crate::output::GetModelTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`GetModelTemplateOutput`](crate::output::GetModelTemplateOutput).
     pub fn builder() -> crate::output::get_model_template_output::Builder {
         crate::output::get_model_template_output::Builder::default()
     }
@@ -5994,8 +6164,10 @@ impl GetModelTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetModelsOutput {
     /// <p>The elements from this collection.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::Model>>,
     /// <p>The next page of elements from this collection. Not valid for the last element of the collection.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetModelsOutput {
@@ -6016,11 +6188,10 @@ impl std::fmt::Debug for GetModelsOutput {
         formatter.finish()
     }
 }
-/// See [`GetModelsOutput`](crate::output::GetModelsOutput)
+/// See [`GetModelsOutput`](crate::output::GetModelsOutput).
 pub mod get_models_output {
 
-    /// A builder for [`GetModelsOutput`](crate::output::GetModelsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetModelsOutput`](crate::output::GetModelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::Model>>,
@@ -6056,7 +6227,7 @@ pub mod get_models_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetModelsOutput`](crate::output::GetModelsOutput)
+        /// Consumes the builder and constructs a [`GetModelsOutput`](crate::output::GetModelsOutput).
         pub fn build(self) -> crate::output::GetModelsOutput {
             crate::output::GetModelsOutput {
                 items: self.items,
@@ -6066,7 +6237,7 @@ pub mod get_models_output {
     }
 }
 impl GetModelsOutput {
-    /// Creates a new builder-style object to manufacture [`GetModelsOutput`](crate::output::GetModelsOutput)
+    /// Creates a new builder-style object to manufacture [`GetModelsOutput`](crate::output::GetModelsOutput).
     pub fn builder() -> crate::output::get_models_output::Builder {
         crate::output::get_models_output::Builder::default()
     }
@@ -6077,14 +6248,19 @@ impl GetModelsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetModelOutput {
     /// <p>The content-type for the model, for example, "application/json".</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The description of the model.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The model identifier.</p>
+    #[doc(hidden)]
     pub model_id: std::option::Option<std::string::String>,
     /// <p>The name of the model. Must be alphanumeric.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The schema for the model. For application/json models, this should be JSON schema draft 4 model.</p>
+    #[doc(hidden)]
     pub schema: std::option::Option<std::string::String>,
 }
 impl GetModelOutput {
@@ -6120,11 +6296,10 @@ impl std::fmt::Debug for GetModelOutput {
         formatter.finish()
     }
 }
-/// See [`GetModelOutput`](crate::output::GetModelOutput)
+/// See [`GetModelOutput`](crate::output::GetModelOutput).
 pub mod get_model_output {
 
-    /// A builder for [`GetModelOutput`](crate::output::GetModelOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetModelOutput`](crate::output::GetModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_type: std::option::Option<std::string::String>,
@@ -6184,7 +6359,7 @@ pub mod get_model_output {
             self.schema = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetModelOutput`](crate::output::GetModelOutput)
+        /// Consumes the builder and constructs a [`GetModelOutput`](crate::output::GetModelOutput).
         pub fn build(self) -> crate::output::GetModelOutput {
             crate::output::GetModelOutput {
                 content_type: self.content_type,
@@ -6197,7 +6372,7 @@ pub mod get_model_output {
     }
 }
 impl GetModelOutput {
-    /// Creates a new builder-style object to manufacture [`GetModelOutput`](crate::output::GetModelOutput)
+    /// Creates a new builder-style object to manufacture [`GetModelOutput`](crate::output::GetModelOutput).
     pub fn builder() -> crate::output::get_model_output::Builder {
         crate::output::get_model_output::Builder::default()
     }
@@ -6208,8 +6383,10 @@ impl GetModelOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetIntegrationsOutput {
     /// <p>The elements from this collection.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::Integration>>,
     /// <p>The next page of elements from this collection. Not valid for the last element of the collection.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetIntegrationsOutput {
@@ -6230,11 +6407,10 @@ impl std::fmt::Debug for GetIntegrationsOutput {
         formatter.finish()
     }
 }
-/// See [`GetIntegrationsOutput`](crate::output::GetIntegrationsOutput)
+/// See [`GetIntegrationsOutput`](crate::output::GetIntegrationsOutput).
 pub mod get_integrations_output {
 
-    /// A builder for [`GetIntegrationsOutput`](crate::output::GetIntegrationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetIntegrationsOutput`](crate::output::GetIntegrationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::Integration>>,
@@ -6270,7 +6446,7 @@ pub mod get_integrations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetIntegrationsOutput`](crate::output::GetIntegrationsOutput)
+        /// Consumes the builder and constructs a [`GetIntegrationsOutput`](crate::output::GetIntegrationsOutput).
         pub fn build(self) -> crate::output::GetIntegrationsOutput {
             crate::output::GetIntegrationsOutput {
                 items: self.items,
@@ -6280,7 +6456,7 @@ pub mod get_integrations_output {
     }
 }
 impl GetIntegrationsOutput {
-    /// Creates a new builder-style object to manufacture [`GetIntegrationsOutput`](crate::output::GetIntegrationsOutput)
+    /// Creates a new builder-style object to manufacture [`GetIntegrationsOutput`](crate::output::GetIntegrationsOutput).
     pub fn builder() -> crate::output::get_integrations_output::Builder {
         crate::output::get_integrations_output::Builder::default()
     }
@@ -6291,8 +6467,10 @@ impl GetIntegrationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetIntegrationResponsesOutput {
     /// <p>The elements from this collection.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::IntegrationResponse>>,
     /// <p>The next page of elements from this collection. Not valid for the last element of the collection.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetIntegrationResponsesOutput {
@@ -6313,11 +6491,10 @@ impl std::fmt::Debug for GetIntegrationResponsesOutput {
         formatter.finish()
     }
 }
-/// See [`GetIntegrationResponsesOutput`](crate::output::GetIntegrationResponsesOutput)
+/// See [`GetIntegrationResponsesOutput`](crate::output::GetIntegrationResponsesOutput).
 pub mod get_integration_responses_output {
 
-    /// A builder for [`GetIntegrationResponsesOutput`](crate::output::GetIntegrationResponsesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetIntegrationResponsesOutput`](crate::output::GetIntegrationResponsesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::IntegrationResponse>>,
@@ -6353,7 +6530,7 @@ pub mod get_integration_responses_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetIntegrationResponsesOutput`](crate::output::GetIntegrationResponsesOutput)
+        /// Consumes the builder and constructs a [`GetIntegrationResponsesOutput`](crate::output::GetIntegrationResponsesOutput).
         pub fn build(self) -> crate::output::GetIntegrationResponsesOutput {
             crate::output::GetIntegrationResponsesOutput {
                 items: self.items,
@@ -6363,7 +6540,7 @@ pub mod get_integration_responses_output {
     }
 }
 impl GetIntegrationResponsesOutput {
-    /// Creates a new builder-style object to manufacture [`GetIntegrationResponsesOutput`](crate::output::GetIntegrationResponsesOutput)
+    /// Creates a new builder-style object to manufacture [`GetIntegrationResponsesOutput`](crate::output::GetIntegrationResponsesOutput).
     pub fn builder() -> crate::output::get_integration_responses_output::Builder {
         crate::output::get_integration_responses_output::Builder::default()
     }
@@ -6377,18 +6554,24 @@ pub struct GetIntegrationResponseOutput {
     /// <p>CONVERT_TO_BINARY: Converts a response payload from a Base64-encoded string to the corresponding binary blob.</p>
     /// <p>CONVERT_TO_TEXT: Converts a response payload from a binary blob to a Base64-encoded string.</p>
     /// <p>If this property is not defined, the response payload will be passed through from the integration response to the route response or method response without modification.</p>
+    #[doc(hidden)]
     pub content_handling_strategy: std::option::Option<crate::model::ContentHandlingStrategy>,
     /// <p>The integration response ID.</p>
+    #[doc(hidden)]
     pub integration_response_id: std::option::Option<std::string::String>,
     /// <p>The integration response key.</p>
+    #[doc(hidden)]
     pub integration_response_key: std::option::Option<std::string::String>,
     /// <p>A key-value map specifying response parameters that are passed to the method response from the backend. The key is a method response header parameter name and the mapped value is an integration response header value, a static value enclosed within a pair of single quotes, or a JSON expression from the integration response body. The mapping key must match the pattern of method.response.header.{name}, where name is a valid and unique header name. The mapped non-static value must match the pattern of integration.response.header.{name} or integration.response.body.{JSON-expression}, where name is a valid and unique response header name and JSON-expression is a valid JSON expression without the $ prefix.</p>
+    #[doc(hidden)]
     pub response_parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The collection of response templates for the integration response as a string-to-string map of key-value pairs. Response templates are represented as a key/value map, with a content-type as the key and a template as the value.</p>
+    #[doc(hidden)]
     pub response_templates:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The template selection expressions for the integration response.</p>
+    #[doc(hidden)]
     pub template_selection_expression: std::option::Option<std::string::String>,
 }
 impl GetIntegrationResponseOutput {
@@ -6443,11 +6626,10 @@ impl std::fmt::Debug for GetIntegrationResponseOutput {
         formatter.finish()
     }
 }
-/// See [`GetIntegrationResponseOutput`](crate::output::GetIntegrationResponseOutput)
+/// See [`GetIntegrationResponseOutput`](crate::output::GetIntegrationResponseOutput).
 pub mod get_integration_response_output {
 
-    /// A builder for [`GetIntegrationResponseOutput`](crate::output::GetIntegrationResponseOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetIntegrationResponseOutput`](crate::output::GetIntegrationResponseOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_handling_strategy:
@@ -6577,7 +6759,7 @@ pub mod get_integration_response_output {
             self.template_selection_expression = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetIntegrationResponseOutput`](crate::output::GetIntegrationResponseOutput)
+        /// Consumes the builder and constructs a [`GetIntegrationResponseOutput`](crate::output::GetIntegrationResponseOutput).
         pub fn build(self) -> crate::output::GetIntegrationResponseOutput {
             crate::output::GetIntegrationResponseOutput {
                 content_handling_strategy: self.content_handling_strategy,
@@ -6591,7 +6773,7 @@ pub mod get_integration_response_output {
     }
 }
 impl GetIntegrationResponseOutput {
-    /// Creates a new builder-style object to manufacture [`GetIntegrationResponseOutput`](crate::output::GetIntegrationResponseOutput)
+    /// Creates a new builder-style object to manufacture [`GetIntegrationResponseOutput`](crate::output::GetIntegrationResponseOutput).
     pub fn builder() -> crate::output::get_integration_response_output::Builder {
         crate::output::get_integration_response_output::Builder::default()
     }
@@ -6602,27 +6784,37 @@ impl GetIntegrationResponseOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetIntegrationOutput {
     /// <p>Specifies whether an integration is managed by API Gateway. If you created an API using using quick create, the resulting integration is managed by API Gateway. You can update a managed integration, but you can't delete it.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>The ID of the VPC link for a private integration. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub connection_id: std::option::Option<std::string::String>,
     /// <p>The type of the network connection to the integration endpoint. Specify INTERNET for connections through the public routable internet or VPC_LINK for private connections between API Gateway and resources in a VPC. The default value is INTERNET.</p>
+    #[doc(hidden)]
     pub connection_type: std::option::Option<crate::model::ConnectionType>,
     /// <p>Supported only for WebSocket APIs. Specifies how to handle response payload content type conversions. Supported values are CONVERT_TO_BINARY and CONVERT_TO_TEXT, with the following behaviors:</p>
     /// <p>CONVERT_TO_BINARY: Converts a response payload from a Base64-encoded string to the corresponding binary blob.</p>
     /// <p>CONVERT_TO_TEXT: Converts a response payload from a binary blob to a Base64-encoded string.</p>
     /// <p>If this property is not defined, the response payload will be passed through from the integration response to the route response or method response without modification.</p>
+    #[doc(hidden)]
     pub content_handling_strategy: std::option::Option<crate::model::ContentHandlingStrategy>,
     /// <p>Specifies the credentials required for the integration, if any. For AWS integrations, three options are available. To specify an IAM Role for API Gateway to assume, use the role's Amazon Resource Name (ARN). To require that the caller's identity be passed through from the request, specify the string arn:aws:iam::*:user/*. To use resource-based permissions on supported AWS services, specify null.</p>
+    #[doc(hidden)]
     pub credentials_arn: std::option::Option<std::string::String>,
     /// <p>Represents the description of an integration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Represents the identifier of an integration.</p>
+    #[doc(hidden)]
     pub integration_id: std::option::Option<std::string::String>,
     /// <p>Specifies the integration's HTTP method type.</p>
+    #[doc(hidden)]
     pub integration_method: std::option::Option<std::string::String>,
     /// <p>The integration response selection expression for the integration. Supported only for WebSocket APIs. See <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions">Integration Response Selection Expressions</a>.</p>
+    #[doc(hidden)]
     pub integration_response_selection_expression: std::option::Option<std::string::String>,
     /// <p>Supported only for HTTP API AWS_PROXY integrations. Specifies the AWS service action to invoke. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html">Integration subtype reference</a>.</p>
+    #[doc(hidden)]
     pub integration_subtype: std::option::Option<std::string::String>,
     /// <p>The integration type of an integration. One of the following:</p>
     /// <p>AWS: for integrating the route or method request with an AWS service action, including the Lambda function-invoking action. With the Lambda function-invoking action, this is referred to as the Lambda custom integration. With any other AWS service action, this is known as AWS integration. Supported only for WebSocket APIs.</p>
@@ -6630,17 +6822,21 @@ pub struct GetIntegrationOutput {
     /// <p>HTTP: for integrating the route or method request with an HTTP endpoint. This integration is also referred to as the HTTP custom integration. Supported only for WebSocket APIs.</p>
     /// <p>HTTP_PROXY: for integrating the route or method request with an HTTP endpoint, with the client request passed through as-is. This is also referred to as HTTP proxy integration.</p>
     /// <p>MOCK: for integrating the route or method request with API Gateway as a "loopback" endpoint without invoking any backend. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub integration_type: std::option::Option<crate::model::IntegrationType>,
     /// <p>For a Lambda integration, specify the URI of a Lambda function.</p>
     /// <p>For an HTTP integration, specify a fully-qualified URL.</p>
     /// <p>For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service. If you specify the ARN of an AWS Cloud Map service, API Gateway uses DiscoverInstances to identify resources. You can use query parameters to target specific resources. To learn more, see <a href="https://docs.aws.amazon.com/cloud-map/latest/api/API_DiscoverInstances.html">DiscoverInstances</a>. For private integrations, all resources must be owned by the same AWS account.</p>
+    #[doc(hidden)]
     pub integration_uri: std::option::Option<std::string::String>,
     /// <p>Specifies the pass-through behavior for incoming requests based on the Content-Type header in the request, and the available mapping templates specified as the requestTemplates property on the Integration resource. There are three valid values: WHEN_NO_MATCH, WHEN_NO_TEMPLATES, and NEVER. Supported only for WebSocket APIs.</p>
     /// <p>WHEN_NO_MATCH passes the request body for unmapped content types through to the integration backend without transformation.</p>
     /// <p>NEVER rejects unmapped content types with an HTTP 415 Unsupported Media Type response.</p>
     /// <p>WHEN_NO_TEMPLATES allows pass-through when the integration has no content types mapped to templates. However, if there is at least one content type defined, unmapped content types will be rejected with the same HTTP 415 Unsupported Media Type response.</p>
+    #[doc(hidden)]
     pub passthrough_behavior: std::option::Option<crate::model::PassthroughBehavior>,
     /// <p>Specifies the format of the payload sent to an integration. Required for HTTP APIs.</p>
+    #[doc(hidden)]
     pub payload_format_version: std::option::Option<std::string::String>,
     /// <p>For WebSocket APIs, a key-value map specifying request parameters that are passed from the method request to the backend. The key is an integration request parameter name and the associated value is a method request parameter value or static value that must be enclosed within single quotes and pre-encoded as required by the backend. The method request parameter value must match the pattern of method.request.<replaceable>
     /// {location}
@@ -6653,12 +6849,15 @@ pub struct GetIntegrationOutput {
     /// </replaceable> must be a valid and unique method request parameter name.</p>
     /// <p>For HTTP API integrations with a specified integrationSubtype, request parameters are a key-value map specifying parameters that are passed to AWS_PROXY integrations. You can provide static values, or map request data, stage variables, or context variables that are evaluated at runtime. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services.html">Working with AWS service integrations for HTTP APIs</a>.</p>
     /// <p>For HTTP API itegrations, without a specified integrationSubtype request parameters are a key-value map specifying how to transform HTTP requests before sending them to backend integrations. The key should follow the pattern &lt;action&gt;:&lt;header|querystring|path&gt;.&lt;location&gt;. The action can be append, overwrite or remove. For values, you can provide static values, or map request data, stage variables, or context variables that are evaluated at runtime. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html">Transforming API requests and responses</a>.</p>
+    #[doc(hidden)]
     pub request_parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Represents a map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client. The content type value is the key in this map, and the template (as a String) is the value. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub request_templates:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Supported only for HTTP APIs. You use response parameters to transform the HTTP response from a backend integration before returning the response to clients. Specify a key-value map from a selection key to response parameters. The selection key must be a valid HTTP status code within the range of 200-599. Response parameters are a key-value map. The key must match pattern &lt;action&gt;:&lt;header&gt;.&lt;location&gt; or overwrite.statuscode. The action can be append, overwrite or remove. The value can be a static value, or map to response data, stage variables, or context variables that are evaluated at runtime. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html">Transforming API requests and responses</a>.</p>
+    #[doc(hidden)]
     pub response_parameters: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -6666,10 +6865,13 @@ pub struct GetIntegrationOutput {
         >,
     >,
     /// <p>The template selection expression for the integration. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub template_selection_expression: std::option::Option<std::string::String>,
     /// <p>Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and 30,000 milliseconds for HTTP APIs. The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.</p>
+    #[doc(hidden)]
     pub timeout_in_millis: i32,
     /// <p>The TLS configuration for a private integration. If you specify a TLS configuration, private integration traffic uses the HTTPS protocol. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub tls_config: std::option::Option<crate::model::TlsConfig>,
 }
 impl GetIntegrationOutput {
@@ -6824,11 +7026,10 @@ impl std::fmt::Debug for GetIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`GetIntegrationOutput`](crate::output::GetIntegrationOutput)
+/// See [`GetIntegrationOutput`](crate::output::GetIntegrationOutput).
 pub mod get_integration_output {
 
-    /// A builder for [`GetIntegrationOutput`](crate::output::GetIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetIntegrationOutput`](crate::output::GetIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_gateway_managed: std::option::Option<bool>,
@@ -7209,7 +7410,7 @@ pub mod get_integration_output {
             self.tls_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetIntegrationOutput`](crate::output::GetIntegrationOutput)
+        /// Consumes the builder and constructs a [`GetIntegrationOutput`](crate::output::GetIntegrationOutput).
         pub fn build(self) -> crate::output::GetIntegrationOutput {
             crate::output::GetIntegrationOutput {
                 api_gateway_managed: self.api_gateway_managed.unwrap_or_default(),
@@ -7238,7 +7439,7 @@ pub mod get_integration_output {
     }
 }
 impl GetIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`GetIntegrationOutput`](crate::output::GetIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`GetIntegrationOutput`](crate::output::GetIntegrationOutput).
     pub fn builder() -> crate::output::get_integration_output::Builder {
         crate::output::get_integration_output::Builder::default()
     }
@@ -7249,8 +7450,10 @@ impl GetIntegrationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDomainNamesOutput {
     /// <p>The elements from this collection.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::DomainName>>,
     /// <p>The next page of elements from this collection. Not valid for the last element of the collection.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetDomainNamesOutput {
@@ -7271,11 +7474,10 @@ impl std::fmt::Debug for GetDomainNamesOutput {
         formatter.finish()
     }
 }
-/// See [`GetDomainNamesOutput`](crate::output::GetDomainNamesOutput)
+/// See [`GetDomainNamesOutput`](crate::output::GetDomainNamesOutput).
 pub mod get_domain_names_output {
 
-    /// A builder for [`GetDomainNamesOutput`](crate::output::GetDomainNamesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDomainNamesOutput`](crate::output::GetDomainNamesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::DomainName>>,
@@ -7311,7 +7513,7 @@ pub mod get_domain_names_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDomainNamesOutput`](crate::output::GetDomainNamesOutput)
+        /// Consumes the builder and constructs a [`GetDomainNamesOutput`](crate::output::GetDomainNamesOutput).
         pub fn build(self) -> crate::output::GetDomainNamesOutput {
             crate::output::GetDomainNamesOutput {
                 items: self.items,
@@ -7321,7 +7523,7 @@ pub mod get_domain_names_output {
     }
 }
 impl GetDomainNamesOutput {
-    /// Creates a new builder-style object to manufacture [`GetDomainNamesOutput`](crate::output::GetDomainNamesOutput)
+    /// Creates a new builder-style object to manufacture [`GetDomainNamesOutput`](crate::output::GetDomainNamesOutput).
     pub fn builder() -> crate::output::get_domain_names_output::Builder {
         crate::output::get_domain_names_output::Builder::default()
     }
@@ -7332,15 +7534,20 @@ impl GetDomainNamesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDomainNameOutput {
     /// <p>The API mapping selection expression.</p>
+    #[doc(hidden)]
     pub api_mapping_selection_expression: std::option::Option<std::string::String>,
     /// <p>The name of the DomainName resource.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The domain name configurations.</p>
+    #[doc(hidden)]
     pub domain_name_configurations:
         std::option::Option<std::vec::Vec<crate::model::DomainNameConfiguration>>,
     /// <p>The mutual TLS authentication configuration for a custom domain name.</p>
+    #[doc(hidden)]
     pub mutual_tls_authentication: std::option::Option<crate::model::MutualTlsAuthentication>,
     /// <p>The collection of tags associated with a domain name.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -7390,11 +7597,10 @@ impl std::fmt::Debug for GetDomainNameOutput {
         formatter.finish()
     }
 }
-/// See [`GetDomainNameOutput`](crate::output::GetDomainNameOutput)
+/// See [`GetDomainNameOutput`](crate::output::GetDomainNameOutput).
 pub mod get_domain_name_output {
 
-    /// A builder for [`GetDomainNameOutput`](crate::output::GetDomainNameOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDomainNameOutput`](crate::output::GetDomainNameOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_mapping_selection_expression: std::option::Option<std::string::String>,
@@ -7497,7 +7703,7 @@ pub mod get_domain_name_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDomainNameOutput`](crate::output::GetDomainNameOutput)
+        /// Consumes the builder and constructs a [`GetDomainNameOutput`](crate::output::GetDomainNameOutput).
         pub fn build(self) -> crate::output::GetDomainNameOutput {
             crate::output::GetDomainNameOutput {
                 api_mapping_selection_expression: self.api_mapping_selection_expression,
@@ -7510,7 +7716,7 @@ pub mod get_domain_name_output {
     }
 }
 impl GetDomainNameOutput {
-    /// Creates a new builder-style object to manufacture [`GetDomainNameOutput`](crate::output::GetDomainNameOutput)
+    /// Creates a new builder-style object to manufacture [`GetDomainNameOutput`](crate::output::GetDomainNameOutput).
     pub fn builder() -> crate::output::get_domain_name_output::Builder {
         crate::output::get_domain_name_output::Builder::default()
     }
@@ -7521,8 +7727,10 @@ impl GetDomainNameOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDeploymentsOutput {
     /// <p>The elements from this collection.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::Deployment>>,
     /// <p>The next page of elements from this collection. Not valid for the last element of the collection.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetDeploymentsOutput {
@@ -7543,11 +7751,10 @@ impl std::fmt::Debug for GetDeploymentsOutput {
         formatter.finish()
     }
 }
-/// See [`GetDeploymentsOutput`](crate::output::GetDeploymentsOutput)
+/// See [`GetDeploymentsOutput`](crate::output::GetDeploymentsOutput).
 pub mod get_deployments_output {
 
-    /// A builder for [`GetDeploymentsOutput`](crate::output::GetDeploymentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDeploymentsOutput`](crate::output::GetDeploymentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::Deployment>>,
@@ -7583,7 +7790,7 @@ pub mod get_deployments_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDeploymentsOutput`](crate::output::GetDeploymentsOutput)
+        /// Consumes the builder and constructs a [`GetDeploymentsOutput`](crate::output::GetDeploymentsOutput).
         pub fn build(self) -> crate::output::GetDeploymentsOutput {
             crate::output::GetDeploymentsOutput {
                 items: self.items,
@@ -7593,7 +7800,7 @@ pub mod get_deployments_output {
     }
 }
 impl GetDeploymentsOutput {
-    /// Creates a new builder-style object to manufacture [`GetDeploymentsOutput`](crate::output::GetDeploymentsOutput)
+    /// Creates a new builder-style object to manufacture [`GetDeploymentsOutput`](crate::output::GetDeploymentsOutput).
     pub fn builder() -> crate::output::get_deployments_output::Builder {
         crate::output::get_deployments_output::Builder::default()
     }
@@ -7604,16 +7811,22 @@ impl GetDeploymentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDeploymentOutput {
     /// <p>Specifies whether a deployment was automatically released.</p>
+    #[doc(hidden)]
     pub auto_deployed: bool,
     /// <p>The date and time when the Deployment resource was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The identifier for the deployment.</p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>The status of the deployment: PENDING, FAILED, or SUCCEEDED.</p>
+    #[doc(hidden)]
     pub deployment_status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>May contain additional feedback on the status of an API deployment.</p>
+    #[doc(hidden)]
     pub deployment_status_message: std::option::Option<std::string::String>,
     /// <p>The description for the deployment.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl GetDeploymentOutput {
@@ -7654,11 +7867,10 @@ impl std::fmt::Debug for GetDeploymentOutput {
         formatter.finish()
     }
 }
-/// See [`GetDeploymentOutput`](crate::output::GetDeploymentOutput)
+/// See [`GetDeploymentOutput`](crate::output::GetDeploymentOutput).
 pub mod get_deployment_output {
 
-    /// A builder for [`GetDeploymentOutput`](crate::output::GetDeploymentOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDeploymentOutput`](crate::output::GetDeploymentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_deployed: std::option::Option<bool>,
@@ -7741,7 +7953,7 @@ pub mod get_deployment_output {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDeploymentOutput`](crate::output::GetDeploymentOutput)
+        /// Consumes the builder and constructs a [`GetDeploymentOutput`](crate::output::GetDeploymentOutput).
         pub fn build(self) -> crate::output::GetDeploymentOutput {
             crate::output::GetDeploymentOutput {
                 auto_deployed: self.auto_deployed.unwrap_or_default(),
@@ -7755,7 +7967,7 @@ pub mod get_deployment_output {
     }
 }
 impl GetDeploymentOutput {
-    /// Creates a new builder-style object to manufacture [`GetDeploymentOutput`](crate::output::GetDeploymentOutput)
+    /// Creates a new builder-style object to manufacture [`GetDeploymentOutput`](crate::output::GetDeploymentOutput).
     pub fn builder() -> crate::output::get_deployment_output::Builder {
         crate::output::get_deployment_output::Builder::default()
     }
@@ -7766,8 +7978,10 @@ impl GetDeploymentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAuthorizersOutput {
     /// <p>The elements from this collection.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::Authorizer>>,
     /// <p>The next page of elements from this collection. Not valid for the last element of the collection.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetAuthorizersOutput {
@@ -7788,11 +8002,10 @@ impl std::fmt::Debug for GetAuthorizersOutput {
         formatter.finish()
     }
 }
-/// See [`GetAuthorizersOutput`](crate::output::GetAuthorizersOutput)
+/// See [`GetAuthorizersOutput`](crate::output::GetAuthorizersOutput).
 pub mod get_authorizers_output {
 
-    /// A builder for [`GetAuthorizersOutput`](crate::output::GetAuthorizersOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAuthorizersOutput`](crate::output::GetAuthorizersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::Authorizer>>,
@@ -7828,7 +8041,7 @@ pub mod get_authorizers_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAuthorizersOutput`](crate::output::GetAuthorizersOutput)
+        /// Consumes the builder and constructs a [`GetAuthorizersOutput`](crate::output::GetAuthorizersOutput).
         pub fn build(self) -> crate::output::GetAuthorizersOutput {
             crate::output::GetAuthorizersOutput {
                 items: self.items,
@@ -7838,7 +8051,7 @@ pub mod get_authorizers_output {
     }
 }
 impl GetAuthorizersOutput {
-    /// Creates a new builder-style object to manufacture [`GetAuthorizersOutput`](crate::output::GetAuthorizersOutput)
+    /// Creates a new builder-style object to manufacture [`GetAuthorizersOutput`](crate::output::GetAuthorizersOutput).
     pub fn builder() -> crate::output::get_authorizers_output::Builder {
         crate::output::get_authorizers_output::Builder::default()
     }
@@ -7849,14 +8062,19 @@ impl GetAuthorizersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAuthorizerOutput {
     /// <p>Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer. To specify an IAM role for API Gateway to assume, use the role's Amazon Resource Name (ARN). To use resource-based permissions on the Lambda function, don't specify this parameter. Supported only for REQUEST authorizers.</p>
+    #[doc(hidden)]
     pub authorizer_credentials_arn: std::option::Option<std::string::String>,
     /// <p>The authorizer identifier.</p>
+    #[doc(hidden)]
     pub authorizer_id: std::option::Option<std::string::String>,
     /// <p>Specifies the format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers. Supported values are 1.0 and 2.0. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-lambda-authorizer.html">Working with AWS Lambda authorizers for HTTP APIs</a>.</p>
+    #[doc(hidden)]
     pub authorizer_payload_format_version: std::option::Option<std::string::String>,
     /// <p>The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled. If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Supported only for HTTP API Lambda authorizers.</p>
+    #[doc(hidden)]
     pub authorizer_result_ttl_in_seconds: i32,
     /// <p>The authorizer type. Specify REQUEST for a Lambda function using incoming request parameters. Specify JWT to use JSON Web Tokens (supported only for HTTP APIs).</p>
+    #[doc(hidden)]
     pub authorizer_type: std::option::Option<crate::model::AuthorizerType>,
     /// <p>The authorizer's Uniform Resource Identifier (URI). For REQUEST authorizers, this must be a well-formed Lambda function URI, for example, arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:<replaceable>
     /// {account_id}
@@ -7867,18 +8085,24 @@ pub struct GetAuthorizerOutput {
     /// </replaceable>:lambda:path/<replaceable>
     /// {service_api}
     /// </replaceable> , where <replaceable></replaceable>{region} is the same as the region hosting the Lambda function, path indicates that the remaining substring in the URI should be treated as the path to the resource, including the initial /. For Lambda functions, this is usually of the form /2015-03-31/functions/[FunctionARN]/invocations. Supported only for REQUEST authorizers.</p>
+    #[doc(hidden)]
     pub authorizer_uri: std::option::Option<std::string::String>,
     /// <p>Specifies whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy. Supported only for HTTP APIs. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-lambda-authorizer.html">Working with AWS Lambda authorizers for HTTP APIs</a></p>
+    #[doc(hidden)]
     pub enable_simple_responses: bool,
     /// <p>The identity source for which authorization is requested.</p>
     /// <p>For a REQUEST authorizer, this is optional. The value is a set of one or more mapping expressions of the specified request parameters. The identity source can be headers, query string parameters, stage variables, and context parameters. For example, if an Auth header and a Name query string parameter are defined as identity sources, this value is route.request.header.Auth, route.request.querystring.Name for WebSocket APIs. For HTTP APIs, use selection expressions prefixed with $, for example, $request.header.Auth, $request.querystring.Name. These parameters are used to perform runtime validation for Lambda-based authorizers by verifying all of the identity-related request parameters are present in the request, not null, and non-empty. Only when this is true does the authorizer invoke the authorizer Lambda function. Otherwise, it returns a 401 Unauthorized response without calling the Lambda function. For HTTP APIs, identity sources are also used as the cache key when caching is enabled. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-lambda-authorizer.html">Working with AWS Lambda authorizers for HTTP APIs</a>.</p>
     /// <p>For JWT, a single entry that specifies where to extract the JSON Web Token (JWT) from inbound requests. Currently only header-based and query parameter-based selections are supported, for example $request.header.Authorization.</p>
+    #[doc(hidden)]
     pub identity_source: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The validation expression does not apply to the REQUEST authorizer.</p>
+    #[doc(hidden)]
     pub identity_validation_expression: std::option::Option<std::string::String>,
     /// <p>Represents the configuration of a JWT authorizer. Required for the JWT authorizer type. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub jwt_configuration: std::option::Option<crate::model::JwtConfiguration>,
     /// <p>The name of the authorizer.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl GetAuthorizerOutput {
@@ -7966,11 +8190,10 @@ impl std::fmt::Debug for GetAuthorizerOutput {
         formatter.finish()
     }
 }
-/// See [`GetAuthorizerOutput`](crate::output::GetAuthorizerOutput)
+/// See [`GetAuthorizerOutput`](crate::output::GetAuthorizerOutput).
 pub mod get_authorizer_output {
 
-    /// A builder for [`GetAuthorizerOutput`](crate::output::GetAuthorizerOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAuthorizerOutput`](crate::output::GetAuthorizerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) authorizer_credentials_arn: std::option::Option<std::string::String>,
@@ -8155,7 +8378,7 @@ pub mod get_authorizer_output {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAuthorizerOutput`](crate::output::GetAuthorizerOutput)
+        /// Consumes the builder and constructs a [`GetAuthorizerOutput`](crate::output::GetAuthorizerOutput).
         pub fn build(self) -> crate::output::GetAuthorizerOutput {
             crate::output::GetAuthorizerOutput {
                 authorizer_credentials_arn: self.authorizer_credentials_arn,
@@ -8176,7 +8399,7 @@ pub mod get_authorizer_output {
     }
 }
 impl GetAuthorizerOutput {
-    /// Creates a new builder-style object to manufacture [`GetAuthorizerOutput`](crate::output::GetAuthorizerOutput)
+    /// Creates a new builder-style object to manufacture [`GetAuthorizerOutput`](crate::output::GetAuthorizerOutput).
     pub fn builder() -> crate::output::get_authorizer_output::Builder {
         crate::output::get_authorizer_output::Builder::default()
     }
@@ -8187,8 +8410,10 @@ impl GetAuthorizerOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetApisOutput {
     /// <p>The elements from this collection.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::Api>>,
     /// <p>The next page of elements from this collection. Not valid for the last element of the collection.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetApisOutput {
@@ -8209,11 +8434,10 @@ impl std::fmt::Debug for GetApisOutput {
         formatter.finish()
     }
 }
-/// See [`GetApisOutput`](crate::output::GetApisOutput)
+/// See [`GetApisOutput`](crate::output::GetApisOutput).
 pub mod get_apis_output {
 
-    /// A builder for [`GetApisOutput`](crate::output::GetApisOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetApisOutput`](crate::output::GetApisOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::Api>>,
@@ -8249,7 +8473,7 @@ pub mod get_apis_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetApisOutput`](crate::output::GetApisOutput)
+        /// Consumes the builder and constructs a [`GetApisOutput`](crate::output::GetApisOutput).
         pub fn build(self) -> crate::output::GetApisOutput {
             crate::output::GetApisOutput {
                 items: self.items,
@@ -8259,7 +8483,7 @@ pub mod get_apis_output {
     }
 }
 impl GetApisOutput {
-    /// Creates a new builder-style object to manufacture [`GetApisOutput`](crate::output::GetApisOutput)
+    /// Creates a new builder-style object to manufacture [`GetApisOutput`](crate::output::GetApisOutput).
     pub fn builder() -> crate::output::get_apis_output::Builder {
         crate::output::get_apis_output::Builder::default()
     }
@@ -8270,8 +8494,10 @@ impl GetApisOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetApiMappingsOutput {
     /// <p>The elements from this collection.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::ApiMapping>>,
     /// <p>The next page of elements from this collection. Not valid for the last element of the collection.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetApiMappingsOutput {
@@ -8292,11 +8518,10 @@ impl std::fmt::Debug for GetApiMappingsOutput {
         formatter.finish()
     }
 }
-/// See [`GetApiMappingsOutput`](crate::output::GetApiMappingsOutput)
+/// See [`GetApiMappingsOutput`](crate::output::GetApiMappingsOutput).
 pub mod get_api_mappings_output {
 
-    /// A builder for [`GetApiMappingsOutput`](crate::output::GetApiMappingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetApiMappingsOutput`](crate::output::GetApiMappingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::ApiMapping>>,
@@ -8332,7 +8557,7 @@ pub mod get_api_mappings_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetApiMappingsOutput`](crate::output::GetApiMappingsOutput)
+        /// Consumes the builder and constructs a [`GetApiMappingsOutput`](crate::output::GetApiMappingsOutput).
         pub fn build(self) -> crate::output::GetApiMappingsOutput {
             crate::output::GetApiMappingsOutput {
                 items: self.items,
@@ -8342,7 +8567,7 @@ pub mod get_api_mappings_output {
     }
 }
 impl GetApiMappingsOutput {
-    /// Creates a new builder-style object to manufacture [`GetApiMappingsOutput`](crate::output::GetApiMappingsOutput)
+    /// Creates a new builder-style object to manufacture [`GetApiMappingsOutput`](crate::output::GetApiMappingsOutput).
     pub fn builder() -> crate::output::get_api_mappings_output::Builder {
         crate::output::get_api_mappings_output::Builder::default()
     }
@@ -8353,12 +8578,16 @@ impl GetApiMappingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetApiMappingOutput {
     /// <p>The API identifier.</p>
+    #[doc(hidden)]
     pub api_id: std::option::Option<std::string::String>,
     /// <p>The API mapping identifier.</p>
+    #[doc(hidden)]
     pub api_mapping_id: std::option::Option<std::string::String>,
     /// <p>The API mapping key.</p>
+    #[doc(hidden)]
     pub api_mapping_key: std::option::Option<std::string::String>,
     /// <p>The API stage.</p>
+    #[doc(hidden)]
     pub stage: std::option::Option<std::string::String>,
 }
 impl GetApiMappingOutput {
@@ -8389,11 +8618,10 @@ impl std::fmt::Debug for GetApiMappingOutput {
         formatter.finish()
     }
 }
-/// See [`GetApiMappingOutput`](crate::output::GetApiMappingOutput)
+/// See [`GetApiMappingOutput`](crate::output::GetApiMappingOutput).
 pub mod get_api_mapping_output {
 
-    /// A builder for [`GetApiMappingOutput`](crate::output::GetApiMappingOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetApiMappingOutput`](crate::output::GetApiMappingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_id: std::option::Option<std::string::String>,
@@ -8448,7 +8676,7 @@ pub mod get_api_mapping_output {
             self.stage = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetApiMappingOutput`](crate::output::GetApiMappingOutput)
+        /// Consumes the builder and constructs a [`GetApiMappingOutput`](crate::output::GetApiMappingOutput).
         pub fn build(self) -> crate::output::GetApiMappingOutput {
             crate::output::GetApiMappingOutput {
                 api_id: self.api_id,
@@ -8460,7 +8688,7 @@ pub mod get_api_mapping_output {
     }
 }
 impl GetApiMappingOutput {
-    /// Creates a new builder-style object to manufacture [`GetApiMappingOutput`](crate::output::GetApiMappingOutput)
+    /// Creates a new builder-style object to manufacture [`GetApiMappingOutput`](crate::output::GetApiMappingOutput).
     pub fn builder() -> crate::output::get_api_mapping_output::Builder {
         crate::output::get_api_mapping_output::Builder::default()
     }
@@ -8471,37 +8699,53 @@ impl GetApiMappingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetApiOutput {
     /// <p>The URI of the API, of the form {api-id}.execute-api.{region}.amazonaws.com. The stage name is typically appended to this URI to form a complete path to a deployed API stage.</p>
+    #[doc(hidden)]
     pub api_endpoint: std::option::Option<std::string::String>,
     /// <p>Specifies whether an API is managed by API Gateway. You can't update or delete a managed API by using API Gateway. A managed API can be deleted only through the tooling or service that created it.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>The API ID.</p>
+    #[doc(hidden)]
     pub api_id: std::option::Option<std::string::String>,
     /// <p>An API key selection expression. Supported only for WebSocket APIs. See <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions">API Key Selection Expressions</a>.</p>
+    #[doc(hidden)]
     pub api_key_selection_expression: std::option::Option<std::string::String>,
     /// <p>A CORS configuration. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub cors_configuration: std::option::Option<crate::model::Cors>,
     /// <p>The timestamp when the API was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the API.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Avoid validating models when creating a deployment. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub disable_schema_validation: bool,
     /// <p>Specifies whether clients can invoke your API by using the default execute-api endpoint. By default, clients can invoke your API with the default https://{api_id}.execute-api.{region}.amazonaws.com endpoint. To require that clients use a custom domain name to invoke your API, disable the default endpoint.</p>
+    #[doc(hidden)]
     pub disable_execute_api_endpoint: bool,
     /// <p>The validation information during API import. This may include particular properties of your OpenAPI definition which are ignored during import. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub import_info: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The name of the API.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The API protocol.</p>
+    #[doc(hidden)]
     pub protocol_type: std::option::Option<crate::model::ProtocolType>,
     /// <p>The route selection expression for the API. For HTTP APIs, the routeSelectionExpression must be ${request.method} ${request.path}. If not provided, this will be the default for HTTP APIs. This property is required for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub route_selection_expression: std::option::Option<std::string::String>,
     /// <p>A collection of tags associated with the API.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A version identifier for the API.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The warning messages reported when failonwarnings is turned on during API import.</p>
+    #[doc(hidden)]
     pub warnings: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl GetApiOutput {
@@ -8604,11 +8848,10 @@ impl std::fmt::Debug for GetApiOutput {
         formatter.finish()
     }
 }
-/// See [`GetApiOutput`](crate::output::GetApiOutput)
+/// See [`GetApiOutput`](crate::output::GetApiOutput).
 pub mod get_api_output {
 
-    /// A builder for [`GetApiOutput`](crate::output::GetApiOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetApiOutput`](crate::output::GetApiOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_endpoint: std::option::Option<std::string::String>,
@@ -8845,7 +9088,7 @@ pub mod get_api_output {
             self.warnings = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetApiOutput`](crate::output::GetApiOutput)
+        /// Consumes the builder and constructs a [`GetApiOutput`](crate::output::GetApiOutput).
         pub fn build(self) -> crate::output::GetApiOutput {
             crate::output::GetApiOutput {
                 api_endpoint: self.api_endpoint,
@@ -8869,7 +9112,7 @@ pub mod get_api_output {
     }
 }
 impl GetApiOutput {
-    /// Creates a new builder-style object to manufacture [`GetApiOutput`](crate::output::GetApiOutput)
+    /// Creates a new builder-style object to manufacture [`GetApiOutput`](crate::output::GetApiOutput).
     pub fn builder() -> crate::output::get_api_output::Builder {
         crate::output::get_api_output::Builder::default()
     }
@@ -8880,6 +9123,7 @@ impl GetApiOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportApiOutput {
     /// <p>Represents an exported definition of an API in a particular output format, for example, YAML. The API is serialized to the requested specification, for example, OpenAPI 3.0.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<aws_smithy_types::Blob>,
 }
 impl ExportApiOutput {
@@ -8895,11 +9139,10 @@ impl std::fmt::Debug for ExportApiOutput {
         formatter.finish()
     }
 }
-/// See [`ExportApiOutput`](crate::output::ExportApiOutput)
+/// See [`ExportApiOutput`](crate::output::ExportApiOutput).
 pub mod export_api_output {
 
-    /// A builder for [`ExportApiOutput`](crate::output::ExportApiOutput)
-    #[non_exhaustive]
+    /// A builder for [`ExportApiOutput`](crate::output::ExportApiOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body: std::option::Option<aws_smithy_types::Blob>,
@@ -8915,14 +9158,14 @@ pub mod export_api_output {
             self.body = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportApiOutput`](crate::output::ExportApiOutput)
+        /// Consumes the builder and constructs a [`ExportApiOutput`](crate::output::ExportApiOutput).
         pub fn build(self) -> crate::output::ExportApiOutput {
             crate::output::ExportApiOutput { body: self.body }
         }
     }
 }
 impl ExportApiOutput {
-    /// Creates a new builder-style object to manufacture [`ExportApiOutput`](crate::output::ExportApiOutput)
+    /// Creates a new builder-style object to manufacture [`ExportApiOutput`](crate::output::ExportApiOutput).
     pub fn builder() -> crate::output::export_api_output::Builder {
         crate::output::export_api_output::Builder::default()
     }
@@ -8938,22 +9181,21 @@ impl std::fmt::Debug for DeleteVpcLinkOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteVpcLinkOutput`](crate::output::DeleteVpcLinkOutput)
+/// See [`DeleteVpcLinkOutput`](crate::output::DeleteVpcLinkOutput).
 pub mod delete_vpc_link_output {
 
-    /// A builder for [`DeleteVpcLinkOutput`](crate::output::DeleteVpcLinkOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteVpcLinkOutput`](crate::output::DeleteVpcLinkOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteVpcLinkOutput`](crate::output::DeleteVpcLinkOutput)
+        /// Consumes the builder and constructs a [`DeleteVpcLinkOutput`](crate::output::DeleteVpcLinkOutput).
         pub fn build(self) -> crate::output::DeleteVpcLinkOutput {
             crate::output::DeleteVpcLinkOutput {}
         }
     }
 }
 impl DeleteVpcLinkOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteVpcLinkOutput`](crate::output::DeleteVpcLinkOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteVpcLinkOutput`](crate::output::DeleteVpcLinkOutput).
     pub fn builder() -> crate::output::delete_vpc_link_output::Builder {
         crate::output::delete_vpc_link_output::Builder::default()
     }
@@ -8969,22 +9211,21 @@ impl std::fmt::Debug for DeleteStageOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteStageOutput`](crate::output::DeleteStageOutput)
+/// See [`DeleteStageOutput`](crate::output::DeleteStageOutput).
 pub mod delete_stage_output {
 
-    /// A builder for [`DeleteStageOutput`](crate::output::DeleteStageOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteStageOutput`](crate::output::DeleteStageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteStageOutput`](crate::output::DeleteStageOutput)
+        /// Consumes the builder and constructs a [`DeleteStageOutput`](crate::output::DeleteStageOutput).
         pub fn build(self) -> crate::output::DeleteStageOutput {
             crate::output::DeleteStageOutput {}
         }
     }
 }
 impl DeleteStageOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteStageOutput`](crate::output::DeleteStageOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteStageOutput`](crate::output::DeleteStageOutput).
     pub fn builder() -> crate::output::delete_stage_output::Builder {
         crate::output::delete_stage_output::Builder::default()
     }
@@ -9000,22 +9241,21 @@ impl std::fmt::Debug for DeleteRouteSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRouteSettingsOutput`](crate::output::DeleteRouteSettingsOutput)
+/// See [`DeleteRouteSettingsOutput`](crate::output::DeleteRouteSettingsOutput).
 pub mod delete_route_settings_output {
 
-    /// A builder for [`DeleteRouteSettingsOutput`](crate::output::DeleteRouteSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRouteSettingsOutput`](crate::output::DeleteRouteSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteRouteSettingsOutput`](crate::output::DeleteRouteSettingsOutput)
+        /// Consumes the builder and constructs a [`DeleteRouteSettingsOutput`](crate::output::DeleteRouteSettingsOutput).
         pub fn build(self) -> crate::output::DeleteRouteSettingsOutput {
             crate::output::DeleteRouteSettingsOutput {}
         }
     }
 }
 impl DeleteRouteSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRouteSettingsOutput`](crate::output::DeleteRouteSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRouteSettingsOutput`](crate::output::DeleteRouteSettingsOutput).
     pub fn builder() -> crate::output::delete_route_settings_output::Builder {
         crate::output::delete_route_settings_output::Builder::default()
     }
@@ -9031,22 +9271,21 @@ impl std::fmt::Debug for DeleteRouteResponseOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRouteResponseOutput`](crate::output::DeleteRouteResponseOutput)
+/// See [`DeleteRouteResponseOutput`](crate::output::DeleteRouteResponseOutput).
 pub mod delete_route_response_output {
 
-    /// A builder for [`DeleteRouteResponseOutput`](crate::output::DeleteRouteResponseOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRouteResponseOutput`](crate::output::DeleteRouteResponseOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteRouteResponseOutput`](crate::output::DeleteRouteResponseOutput)
+        /// Consumes the builder and constructs a [`DeleteRouteResponseOutput`](crate::output::DeleteRouteResponseOutput).
         pub fn build(self) -> crate::output::DeleteRouteResponseOutput {
             crate::output::DeleteRouteResponseOutput {}
         }
     }
 }
 impl DeleteRouteResponseOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRouteResponseOutput`](crate::output::DeleteRouteResponseOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRouteResponseOutput`](crate::output::DeleteRouteResponseOutput).
     pub fn builder() -> crate::output::delete_route_response_output::Builder {
         crate::output::delete_route_response_output::Builder::default()
     }
@@ -9062,22 +9301,21 @@ impl std::fmt::Debug for DeleteRouteRequestParameterOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRouteRequestParameterOutput`](crate::output::DeleteRouteRequestParameterOutput)
+/// See [`DeleteRouteRequestParameterOutput`](crate::output::DeleteRouteRequestParameterOutput).
 pub mod delete_route_request_parameter_output {
 
-    /// A builder for [`DeleteRouteRequestParameterOutput`](crate::output::DeleteRouteRequestParameterOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRouteRequestParameterOutput`](crate::output::DeleteRouteRequestParameterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteRouteRequestParameterOutput`](crate::output::DeleteRouteRequestParameterOutput)
+        /// Consumes the builder and constructs a [`DeleteRouteRequestParameterOutput`](crate::output::DeleteRouteRequestParameterOutput).
         pub fn build(self) -> crate::output::DeleteRouteRequestParameterOutput {
             crate::output::DeleteRouteRequestParameterOutput {}
         }
     }
 }
 impl DeleteRouteRequestParameterOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRouteRequestParameterOutput`](crate::output::DeleteRouteRequestParameterOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRouteRequestParameterOutput`](crate::output::DeleteRouteRequestParameterOutput).
     pub fn builder() -> crate::output::delete_route_request_parameter_output::Builder {
         crate::output::delete_route_request_parameter_output::Builder::default()
     }
@@ -9093,22 +9331,21 @@ impl std::fmt::Debug for DeleteRouteOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRouteOutput`](crate::output::DeleteRouteOutput)
+/// See [`DeleteRouteOutput`](crate::output::DeleteRouteOutput).
 pub mod delete_route_output {
 
-    /// A builder for [`DeleteRouteOutput`](crate::output::DeleteRouteOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRouteOutput`](crate::output::DeleteRouteOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteRouteOutput`](crate::output::DeleteRouteOutput)
+        /// Consumes the builder and constructs a [`DeleteRouteOutput`](crate::output::DeleteRouteOutput).
         pub fn build(self) -> crate::output::DeleteRouteOutput {
             crate::output::DeleteRouteOutput {}
         }
     }
 }
 impl DeleteRouteOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRouteOutput`](crate::output::DeleteRouteOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRouteOutput`](crate::output::DeleteRouteOutput).
     pub fn builder() -> crate::output::delete_route_output::Builder {
         crate::output::delete_route_output::Builder::default()
     }
@@ -9124,22 +9361,21 @@ impl std::fmt::Debug for DeleteModelOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteModelOutput`](crate::output::DeleteModelOutput)
+/// See [`DeleteModelOutput`](crate::output::DeleteModelOutput).
 pub mod delete_model_output {
 
-    /// A builder for [`DeleteModelOutput`](crate::output::DeleteModelOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteModelOutput`](crate::output::DeleteModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteModelOutput`](crate::output::DeleteModelOutput)
+        /// Consumes the builder and constructs a [`DeleteModelOutput`](crate::output::DeleteModelOutput).
         pub fn build(self) -> crate::output::DeleteModelOutput {
             crate::output::DeleteModelOutput {}
         }
     }
 }
 impl DeleteModelOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteModelOutput`](crate::output::DeleteModelOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteModelOutput`](crate::output::DeleteModelOutput).
     pub fn builder() -> crate::output::delete_model_output::Builder {
         crate::output::delete_model_output::Builder::default()
     }
@@ -9155,22 +9391,21 @@ impl std::fmt::Debug for DeleteIntegrationResponseOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteIntegrationResponseOutput`](crate::output::DeleteIntegrationResponseOutput)
+/// See [`DeleteIntegrationResponseOutput`](crate::output::DeleteIntegrationResponseOutput).
 pub mod delete_integration_response_output {
 
-    /// A builder for [`DeleteIntegrationResponseOutput`](crate::output::DeleteIntegrationResponseOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteIntegrationResponseOutput`](crate::output::DeleteIntegrationResponseOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteIntegrationResponseOutput`](crate::output::DeleteIntegrationResponseOutput)
+        /// Consumes the builder and constructs a [`DeleteIntegrationResponseOutput`](crate::output::DeleteIntegrationResponseOutput).
         pub fn build(self) -> crate::output::DeleteIntegrationResponseOutput {
             crate::output::DeleteIntegrationResponseOutput {}
         }
     }
 }
 impl DeleteIntegrationResponseOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteIntegrationResponseOutput`](crate::output::DeleteIntegrationResponseOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteIntegrationResponseOutput`](crate::output::DeleteIntegrationResponseOutput).
     pub fn builder() -> crate::output::delete_integration_response_output::Builder {
         crate::output::delete_integration_response_output::Builder::default()
     }
@@ -9186,22 +9421,21 @@ impl std::fmt::Debug for DeleteIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput)
+/// See [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput).
 pub mod delete_integration_output {
 
-    /// A builder for [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput)
+        /// Consumes the builder and constructs a [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput).
         pub fn build(self) -> crate::output::DeleteIntegrationOutput {
             crate::output::DeleteIntegrationOutput {}
         }
     }
 }
 impl DeleteIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput).
     pub fn builder() -> crate::output::delete_integration_output::Builder {
         crate::output::delete_integration_output::Builder::default()
     }
@@ -9217,22 +9451,21 @@ impl std::fmt::Debug for DeleteDomainNameOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDomainNameOutput`](crate::output::DeleteDomainNameOutput)
+/// See [`DeleteDomainNameOutput`](crate::output::DeleteDomainNameOutput).
 pub mod delete_domain_name_output {
 
-    /// A builder for [`DeleteDomainNameOutput`](crate::output::DeleteDomainNameOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDomainNameOutput`](crate::output::DeleteDomainNameOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteDomainNameOutput`](crate::output::DeleteDomainNameOutput)
+        /// Consumes the builder and constructs a [`DeleteDomainNameOutput`](crate::output::DeleteDomainNameOutput).
         pub fn build(self) -> crate::output::DeleteDomainNameOutput {
             crate::output::DeleteDomainNameOutput {}
         }
     }
 }
 impl DeleteDomainNameOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDomainNameOutput`](crate::output::DeleteDomainNameOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDomainNameOutput`](crate::output::DeleteDomainNameOutput).
     pub fn builder() -> crate::output::delete_domain_name_output::Builder {
         crate::output::delete_domain_name_output::Builder::default()
     }
@@ -9248,22 +9481,21 @@ impl std::fmt::Debug for DeleteDeploymentOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDeploymentOutput`](crate::output::DeleteDeploymentOutput)
+/// See [`DeleteDeploymentOutput`](crate::output::DeleteDeploymentOutput).
 pub mod delete_deployment_output {
 
-    /// A builder for [`DeleteDeploymentOutput`](crate::output::DeleteDeploymentOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDeploymentOutput`](crate::output::DeleteDeploymentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteDeploymentOutput`](crate::output::DeleteDeploymentOutput)
+        /// Consumes the builder and constructs a [`DeleteDeploymentOutput`](crate::output::DeleteDeploymentOutput).
         pub fn build(self) -> crate::output::DeleteDeploymentOutput {
             crate::output::DeleteDeploymentOutput {}
         }
     }
 }
 impl DeleteDeploymentOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDeploymentOutput`](crate::output::DeleteDeploymentOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDeploymentOutput`](crate::output::DeleteDeploymentOutput).
     pub fn builder() -> crate::output::delete_deployment_output::Builder {
         crate::output::delete_deployment_output::Builder::default()
     }
@@ -9279,22 +9511,21 @@ impl std::fmt::Debug for DeleteCorsConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteCorsConfigurationOutput`](crate::output::DeleteCorsConfigurationOutput)
+/// See [`DeleteCorsConfigurationOutput`](crate::output::DeleteCorsConfigurationOutput).
 pub mod delete_cors_configuration_output {
 
-    /// A builder for [`DeleteCorsConfigurationOutput`](crate::output::DeleteCorsConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteCorsConfigurationOutput`](crate::output::DeleteCorsConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteCorsConfigurationOutput`](crate::output::DeleteCorsConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteCorsConfigurationOutput`](crate::output::DeleteCorsConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteCorsConfigurationOutput {
             crate::output::DeleteCorsConfigurationOutput {}
         }
     }
 }
 impl DeleteCorsConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteCorsConfigurationOutput`](crate::output::DeleteCorsConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteCorsConfigurationOutput`](crate::output::DeleteCorsConfigurationOutput).
     pub fn builder() -> crate::output::delete_cors_configuration_output::Builder {
         crate::output::delete_cors_configuration_output::Builder::default()
     }
@@ -9310,22 +9541,21 @@ impl std::fmt::Debug for DeleteAuthorizerOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAuthorizerOutput`](crate::output::DeleteAuthorizerOutput)
+/// See [`DeleteAuthorizerOutput`](crate::output::DeleteAuthorizerOutput).
 pub mod delete_authorizer_output {
 
-    /// A builder for [`DeleteAuthorizerOutput`](crate::output::DeleteAuthorizerOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAuthorizerOutput`](crate::output::DeleteAuthorizerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteAuthorizerOutput`](crate::output::DeleteAuthorizerOutput)
+        /// Consumes the builder and constructs a [`DeleteAuthorizerOutput`](crate::output::DeleteAuthorizerOutput).
         pub fn build(self) -> crate::output::DeleteAuthorizerOutput {
             crate::output::DeleteAuthorizerOutput {}
         }
     }
 }
 impl DeleteAuthorizerOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAuthorizerOutput`](crate::output::DeleteAuthorizerOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAuthorizerOutput`](crate::output::DeleteAuthorizerOutput).
     pub fn builder() -> crate::output::delete_authorizer_output::Builder {
         crate::output::delete_authorizer_output::Builder::default()
     }
@@ -9341,22 +9571,21 @@ impl std::fmt::Debug for DeleteApiMappingOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteApiMappingOutput`](crate::output::DeleteApiMappingOutput)
+/// See [`DeleteApiMappingOutput`](crate::output::DeleteApiMappingOutput).
 pub mod delete_api_mapping_output {
 
-    /// A builder for [`DeleteApiMappingOutput`](crate::output::DeleteApiMappingOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteApiMappingOutput`](crate::output::DeleteApiMappingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteApiMappingOutput`](crate::output::DeleteApiMappingOutput)
+        /// Consumes the builder and constructs a [`DeleteApiMappingOutput`](crate::output::DeleteApiMappingOutput).
         pub fn build(self) -> crate::output::DeleteApiMappingOutput {
             crate::output::DeleteApiMappingOutput {}
         }
     }
 }
 impl DeleteApiMappingOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteApiMappingOutput`](crate::output::DeleteApiMappingOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteApiMappingOutput`](crate::output::DeleteApiMappingOutput).
     pub fn builder() -> crate::output::delete_api_mapping_output::Builder {
         crate::output::delete_api_mapping_output::Builder::default()
     }
@@ -9372,22 +9601,21 @@ impl std::fmt::Debug for DeleteApiOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteApiOutput`](crate::output::DeleteApiOutput)
+/// See [`DeleteApiOutput`](crate::output::DeleteApiOutput).
 pub mod delete_api_output {
 
-    /// A builder for [`DeleteApiOutput`](crate::output::DeleteApiOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteApiOutput`](crate::output::DeleteApiOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteApiOutput`](crate::output::DeleteApiOutput)
+        /// Consumes the builder and constructs a [`DeleteApiOutput`](crate::output::DeleteApiOutput).
         pub fn build(self) -> crate::output::DeleteApiOutput {
             crate::output::DeleteApiOutput {}
         }
     }
 }
 impl DeleteApiOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteApiOutput`](crate::output::DeleteApiOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteApiOutput`](crate::output::DeleteApiOutput).
     pub fn builder() -> crate::output::delete_api_output::Builder {
         crate::output::delete_api_output::Builder::default()
     }
@@ -9403,22 +9631,21 @@ impl std::fmt::Debug for DeleteAccessLogSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAccessLogSettingsOutput`](crate::output::DeleteAccessLogSettingsOutput)
+/// See [`DeleteAccessLogSettingsOutput`](crate::output::DeleteAccessLogSettingsOutput).
 pub mod delete_access_log_settings_output {
 
-    /// A builder for [`DeleteAccessLogSettingsOutput`](crate::output::DeleteAccessLogSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAccessLogSettingsOutput`](crate::output::DeleteAccessLogSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteAccessLogSettingsOutput`](crate::output::DeleteAccessLogSettingsOutput)
+        /// Consumes the builder and constructs a [`DeleteAccessLogSettingsOutput`](crate::output::DeleteAccessLogSettingsOutput).
         pub fn build(self) -> crate::output::DeleteAccessLogSettingsOutput {
             crate::output::DeleteAccessLogSettingsOutput {}
         }
     }
 }
 impl DeleteAccessLogSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAccessLogSettingsOutput`](crate::output::DeleteAccessLogSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAccessLogSettingsOutput`](crate::output::DeleteAccessLogSettingsOutput).
     pub fn builder() -> crate::output::delete_access_log_settings_output::Builder {
         crate::output::delete_access_log_settings_output::Builder::default()
     }
@@ -9429,23 +9656,32 @@ impl DeleteAccessLogSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateVpcLinkOutput {
     /// <p>The timestamp when the VPC link was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the VPC link.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A list of security group IDs for the VPC link.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of subnet IDs to include in the VPC link.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Tags for the VPC link.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The ID of the VPC link.</p>
+    #[doc(hidden)]
     pub vpc_link_id: std::option::Option<std::string::String>,
     /// <p>The status of the VPC link.</p>
+    #[doc(hidden)]
     pub vpc_link_status: std::option::Option<crate::model::VpcLinkStatus>,
     /// <p>A message summarizing the cause of the status of the VPC link.</p>
+    #[doc(hidden)]
     pub vpc_link_status_message: std::option::Option<std::string::String>,
     /// <p>The version of the VPC link.</p>
+    #[doc(hidden)]
     pub vpc_link_version: std::option::Option<crate::model::VpcLinkVersion>,
 }
 impl CreateVpcLinkOutput {
@@ -9504,11 +9740,10 @@ impl std::fmt::Debug for CreateVpcLinkOutput {
         formatter.finish()
     }
 }
-/// See [`CreateVpcLinkOutput`](crate::output::CreateVpcLinkOutput)
+/// See [`CreateVpcLinkOutput`](crate::output::CreateVpcLinkOutput).
 pub mod create_vpc_link_output {
 
-    /// A builder for [`CreateVpcLinkOutput`](crate::output::CreateVpcLinkOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateVpcLinkOutput`](crate::output::CreateVpcLinkOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) created_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -9659,7 +9894,7 @@ pub mod create_vpc_link_output {
             self.vpc_link_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateVpcLinkOutput`](crate::output::CreateVpcLinkOutput)
+        /// Consumes the builder and constructs a [`CreateVpcLinkOutput`](crate::output::CreateVpcLinkOutput).
         pub fn build(self) -> crate::output::CreateVpcLinkOutput {
             crate::output::CreateVpcLinkOutput {
                 created_date: self.created_date,
@@ -9676,7 +9911,7 @@ pub mod create_vpc_link_output {
     }
 }
 impl CreateVpcLinkOutput {
-    /// Creates a new builder-style object to manufacture [`CreateVpcLinkOutput`](crate::output::CreateVpcLinkOutput)
+    /// Creates a new builder-style object to manufacture [`CreateVpcLinkOutput`](crate::output::CreateVpcLinkOutput).
     pub fn builder() -> crate::output::create_vpc_link_output::Builder {
         crate::output::create_vpc_link_output::Builder::default()
     }
@@ -9687,35 +9922,49 @@ impl CreateVpcLinkOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateStageOutput {
     /// <p>Settings for logging access in this stage.</p>
+    #[doc(hidden)]
     pub access_log_settings: std::option::Option<crate::model::AccessLogSettings>,
     /// <p>Specifies whether a stage is managed by API Gateway. If you created an API using quick create, the $default stage is managed by API Gateway. You can't modify the $default stage.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>Specifies whether updates to an API automatically trigger a new deployment. The default value is false.</p>
+    #[doc(hidden)]
     pub auto_deploy: bool,
     /// <p>The identifier of a client certificate for a Stage. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub client_certificate_id: std::option::Option<std::string::String>,
     /// <p>The timestamp when the stage was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Default route settings for the stage.</p>
+    #[doc(hidden)]
     pub default_route_settings: std::option::Option<crate::model::RouteSettings>,
     /// <p>The identifier of the Deployment that the Stage is associated with. Can't be updated if autoDeploy is enabled.</p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>The description of the stage.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Describes the status of the last deployment of a stage. Supported only for stages with autoDeploy enabled.</p>
+    #[doc(hidden)]
     pub last_deployment_status_message: std::option::Option<std::string::String>,
     /// <p>The timestamp when the stage was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Route settings for the stage, by routeKey.</p>
+    #[doc(hidden)]
     pub route_settings: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::RouteSettings>,
     >,
     /// <p>The name of the stage.</p>
+    #[doc(hidden)]
     pub stage_name: std::option::Option<std::string::String>,
     /// <p>A map that defines the stage variables for a stage resource. Variable names can have alphanumeric and underscore characters, and the values must match [A-Za-z0-9-._~:/?#&amp;=,]+.</p>
+    #[doc(hidden)]
     pub stage_variables:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The collection of tags. Each tag element is associated with a given resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -9810,11 +10059,10 @@ impl std::fmt::Debug for CreateStageOutput {
         formatter.finish()
     }
 }
-/// See [`CreateStageOutput`](crate::output::CreateStageOutput)
+/// See [`CreateStageOutput`](crate::output::CreateStageOutput).
 pub mod create_stage_output {
 
-    /// A builder for [`CreateStageOutput`](crate::output::CreateStageOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateStageOutput`](crate::output::CreateStageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_log_settings: std::option::Option<crate::model::AccessLogSettings>,
@@ -10048,7 +10296,7 @@ pub mod create_stage_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateStageOutput`](crate::output::CreateStageOutput)
+        /// Consumes the builder and constructs a [`CreateStageOutput`](crate::output::CreateStageOutput).
         pub fn build(self) -> crate::output::CreateStageOutput {
             crate::output::CreateStageOutput {
                 access_log_settings: self.access_log_settings,
@@ -10070,7 +10318,7 @@ pub mod create_stage_output {
     }
 }
 impl CreateStageOutput {
-    /// Creates a new builder-style object to manufacture [`CreateStageOutput`](crate::output::CreateStageOutput)
+    /// Creates a new builder-style object to manufacture [`CreateStageOutput`](crate::output::CreateStageOutput).
     pub fn builder() -> crate::output::create_stage_output::Builder {
         crate::output::create_stage_output::Builder::default()
     }
@@ -10081,17 +10329,22 @@ impl CreateStageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRouteResponseOutput {
     /// <p>Represents the model selection expression of a route response. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub model_selection_expression: std::option::Option<std::string::String>,
     /// <p>Represents the response models of a route response.</p>
+    #[doc(hidden)]
     pub response_models:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Represents the response parameters of a route response.</p>
+    #[doc(hidden)]
     pub response_parameters: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ParameterConstraints>,
     >,
     /// <p>Represents the identifier of a route response.</p>
+    #[doc(hidden)]
     pub route_response_id: std::option::Option<std::string::String>,
     /// <p>Represents the route response key of a route response.</p>
+    #[doc(hidden)]
     pub route_response_key: std::option::Option<std::string::String>,
 }
 impl CreateRouteResponseOutput {
@@ -10137,11 +10390,10 @@ impl std::fmt::Debug for CreateRouteResponseOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRouteResponseOutput`](crate::output::CreateRouteResponseOutput)
+/// See [`CreateRouteResponseOutput`](crate::output::CreateRouteResponseOutput).
 pub mod create_route_response_output {
 
-    /// A builder for [`CreateRouteResponseOutput`](crate::output::CreateRouteResponseOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRouteResponseOutput`](crate::output::CreateRouteResponseOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_selection_expression: std::option::Option<std::string::String>,
@@ -10244,7 +10496,7 @@ pub mod create_route_response_output {
             self.route_response_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRouteResponseOutput`](crate::output::CreateRouteResponseOutput)
+        /// Consumes the builder and constructs a [`CreateRouteResponseOutput`](crate::output::CreateRouteResponseOutput).
         pub fn build(self) -> crate::output::CreateRouteResponseOutput {
             crate::output::CreateRouteResponseOutput {
                 model_selection_expression: self.model_selection_expression,
@@ -10257,7 +10509,7 @@ pub mod create_route_response_output {
     }
 }
 impl CreateRouteResponseOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRouteResponseOutput`](crate::output::CreateRouteResponseOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRouteResponseOutput`](crate::output::CreateRouteResponseOutput).
     pub fn builder() -> crate::output::create_route_response_output::Builder {
         crate::output::create_route_response_output::Builder::default()
     }
@@ -10268,33 +10520,46 @@ impl CreateRouteResponseOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRouteOutput {
     /// <p>Specifies whether a route is managed by API Gateway. If you created an API using quick create, the $default route is managed by API Gateway. You can't modify the $default route key.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>Specifies whether an API key is required for this route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub api_key_required: bool,
     /// <p>A list of authorization scopes configured on a route. The scopes are used with a JWT authorizer to authorize the method invocation. The authorization works by matching the route scopes against the scopes parsed from the access token in the incoming request. The method invocation is authorized if any route scope matches a claimed scope in the access token. Otherwise, the invocation is not authorized. When the route scope is configured, the client must provide an access token instead of an identity token for authorization purposes.</p>
+    #[doc(hidden)]
     pub authorization_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The authorization type for the route. For WebSocket APIs, valid values are NONE for open access, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer For HTTP APIs, valid values are NONE for open access, JWT for using JSON Web Tokens, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer.</p>
+    #[doc(hidden)]
     pub authorization_type: std::option::Option<crate::model::AuthorizationType>,
     /// <p>The identifier of the Authorizer resource to be associated with this route. The authorizer identifier is generated by API Gateway when you created the authorizer.</p>
+    #[doc(hidden)]
     pub authorizer_id: std::option::Option<std::string::String>,
     /// <p>The model selection expression for the route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub model_selection_expression: std::option::Option<std::string::String>,
     /// <p>The operation name for the route.</p>
+    #[doc(hidden)]
     pub operation_name: std::option::Option<std::string::String>,
     /// <p>The request models for the route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub request_models:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The request parameters for the route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub request_parameters: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ParameterConstraints>,
     >,
     /// <p>The route ID.</p>
+    #[doc(hidden)]
     pub route_id: std::option::Option<std::string::String>,
     /// <p>The route key for the route.</p>
+    #[doc(hidden)]
     pub route_key: std::option::Option<std::string::String>,
     /// <p>The route response selection expression for the route. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub route_response_selection_expression: std::option::Option<std::string::String>,
     /// <p>The target for the route.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<std::string::String>,
 }
 impl CreateRouteOutput {
@@ -10383,11 +10648,10 @@ impl std::fmt::Debug for CreateRouteOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRouteOutput`](crate::output::CreateRouteOutput)
+/// See [`CreateRouteOutput`](crate::output::CreateRouteOutput).
 pub mod create_route_output {
 
-    /// A builder for [`CreateRouteOutput`](crate::output::CreateRouteOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRouteOutput`](crate::output::CreateRouteOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_gateway_managed: std::option::Option<bool>,
@@ -10596,7 +10860,7 @@ pub mod create_route_output {
             self.target = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRouteOutput`](crate::output::CreateRouteOutput)
+        /// Consumes the builder and constructs a [`CreateRouteOutput`](crate::output::CreateRouteOutput).
         pub fn build(self) -> crate::output::CreateRouteOutput {
             crate::output::CreateRouteOutput {
                 api_gateway_managed: self.api_gateway_managed.unwrap_or_default(),
@@ -10617,7 +10881,7 @@ pub mod create_route_output {
     }
 }
 impl CreateRouteOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRouteOutput`](crate::output::CreateRouteOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRouteOutput`](crate::output::CreateRouteOutput).
     pub fn builder() -> crate::output::create_route_output::Builder {
         crate::output::create_route_output::Builder::default()
     }
@@ -10628,14 +10892,19 @@ impl CreateRouteOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateModelOutput {
     /// <p>The content-type for the model, for example, "application/json".</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The description of the model.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The model identifier.</p>
+    #[doc(hidden)]
     pub model_id: std::option::Option<std::string::String>,
     /// <p>The name of the model. Must be alphanumeric.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The schema for the model. For application/json models, this should be JSON schema draft 4 model.</p>
+    #[doc(hidden)]
     pub schema: std::option::Option<std::string::String>,
 }
 impl CreateModelOutput {
@@ -10671,11 +10940,10 @@ impl std::fmt::Debug for CreateModelOutput {
         formatter.finish()
     }
 }
-/// See [`CreateModelOutput`](crate::output::CreateModelOutput)
+/// See [`CreateModelOutput`](crate::output::CreateModelOutput).
 pub mod create_model_output {
 
-    /// A builder for [`CreateModelOutput`](crate::output::CreateModelOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateModelOutput`](crate::output::CreateModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_type: std::option::Option<std::string::String>,
@@ -10735,7 +11003,7 @@ pub mod create_model_output {
             self.schema = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateModelOutput`](crate::output::CreateModelOutput)
+        /// Consumes the builder and constructs a [`CreateModelOutput`](crate::output::CreateModelOutput).
         pub fn build(self) -> crate::output::CreateModelOutput {
             crate::output::CreateModelOutput {
                 content_type: self.content_type,
@@ -10748,7 +11016,7 @@ pub mod create_model_output {
     }
 }
 impl CreateModelOutput {
-    /// Creates a new builder-style object to manufacture [`CreateModelOutput`](crate::output::CreateModelOutput)
+    /// Creates a new builder-style object to manufacture [`CreateModelOutput`](crate::output::CreateModelOutput).
     pub fn builder() -> crate::output::create_model_output::Builder {
         crate::output::create_model_output::Builder::default()
     }
@@ -10762,18 +11030,24 @@ pub struct CreateIntegrationResponseOutput {
     /// <p>CONVERT_TO_BINARY: Converts a response payload from a Base64-encoded string to the corresponding binary blob.</p>
     /// <p>CONVERT_TO_TEXT: Converts a response payload from a binary blob to a Base64-encoded string.</p>
     /// <p>If this property is not defined, the response payload will be passed through from the integration response to the route response or method response without modification.</p>
+    #[doc(hidden)]
     pub content_handling_strategy: std::option::Option<crate::model::ContentHandlingStrategy>,
     /// <p>The integration response ID.</p>
+    #[doc(hidden)]
     pub integration_response_id: std::option::Option<std::string::String>,
     /// <p>The integration response key.</p>
+    #[doc(hidden)]
     pub integration_response_key: std::option::Option<std::string::String>,
     /// <p>A key-value map specifying response parameters that are passed to the method response from the backend. The key is a method response header parameter name and the mapped value is an integration response header value, a static value enclosed within a pair of single quotes, or a JSON expression from the integration response body. The mapping key must match the pattern of method.response.header.{name}, where name is a valid and unique header name. The mapped non-static value must match the pattern of integration.response.header.{name} or integration.response.body.{JSON-expression}, where name is a valid and unique response header name and JSON-expression is a valid JSON expression without the $ prefix.</p>
+    #[doc(hidden)]
     pub response_parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The collection of response templates for the integration response as a string-to-string map of key-value pairs. Response templates are represented as a key/value map, with a content-type as the key and a template as the value.</p>
+    #[doc(hidden)]
     pub response_templates:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The template selection expressions for the integration response.</p>
+    #[doc(hidden)]
     pub template_selection_expression: std::option::Option<std::string::String>,
 }
 impl CreateIntegrationResponseOutput {
@@ -10828,11 +11102,10 @@ impl std::fmt::Debug for CreateIntegrationResponseOutput {
         formatter.finish()
     }
 }
-/// See [`CreateIntegrationResponseOutput`](crate::output::CreateIntegrationResponseOutput)
+/// See [`CreateIntegrationResponseOutput`](crate::output::CreateIntegrationResponseOutput).
 pub mod create_integration_response_output {
 
-    /// A builder for [`CreateIntegrationResponseOutput`](crate::output::CreateIntegrationResponseOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateIntegrationResponseOutput`](crate::output::CreateIntegrationResponseOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_handling_strategy:
@@ -10962,7 +11235,7 @@ pub mod create_integration_response_output {
             self.template_selection_expression = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateIntegrationResponseOutput`](crate::output::CreateIntegrationResponseOutput)
+        /// Consumes the builder and constructs a [`CreateIntegrationResponseOutput`](crate::output::CreateIntegrationResponseOutput).
         pub fn build(self) -> crate::output::CreateIntegrationResponseOutput {
             crate::output::CreateIntegrationResponseOutput {
                 content_handling_strategy: self.content_handling_strategy,
@@ -10976,7 +11249,7 @@ pub mod create_integration_response_output {
     }
 }
 impl CreateIntegrationResponseOutput {
-    /// Creates a new builder-style object to manufacture [`CreateIntegrationResponseOutput`](crate::output::CreateIntegrationResponseOutput)
+    /// Creates a new builder-style object to manufacture [`CreateIntegrationResponseOutput`](crate::output::CreateIntegrationResponseOutput).
     pub fn builder() -> crate::output::create_integration_response_output::Builder {
         crate::output::create_integration_response_output::Builder::default()
     }
@@ -10987,27 +11260,37 @@ impl CreateIntegrationResponseOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateIntegrationOutput {
     /// <p>Specifies whether an integration is managed by API Gateway. If you created an API using using quick create, the resulting integration is managed by API Gateway. You can update a managed integration, but you can't delete it.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>The ID of the VPC link for a private integration. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub connection_id: std::option::Option<std::string::String>,
     /// <p>The type of the network connection to the integration endpoint. Specify INTERNET for connections through the public routable internet or VPC_LINK for private connections between API Gateway and resources in a VPC. The default value is INTERNET.</p>
+    #[doc(hidden)]
     pub connection_type: std::option::Option<crate::model::ConnectionType>,
     /// <p>Supported only for WebSocket APIs. Specifies how to handle response payload content type conversions. Supported values are CONVERT_TO_BINARY and CONVERT_TO_TEXT, with the following behaviors:</p>
     /// <p>CONVERT_TO_BINARY: Converts a response payload from a Base64-encoded string to the corresponding binary blob.</p>
     /// <p>CONVERT_TO_TEXT: Converts a response payload from a binary blob to a Base64-encoded string.</p>
     /// <p>If this property is not defined, the response payload will be passed through from the integration response to the route response or method response without modification.</p>
+    #[doc(hidden)]
     pub content_handling_strategy: std::option::Option<crate::model::ContentHandlingStrategy>,
     /// <p>Specifies the credentials required for the integration, if any. For AWS integrations, three options are available. To specify an IAM Role for API Gateway to assume, use the role's Amazon Resource Name (ARN). To require that the caller's identity be passed through from the request, specify the string arn:aws:iam::*:user/*. To use resource-based permissions on supported AWS services, specify null.</p>
+    #[doc(hidden)]
     pub credentials_arn: std::option::Option<std::string::String>,
     /// <p>Represents the description of an integration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Represents the identifier of an integration.</p>
+    #[doc(hidden)]
     pub integration_id: std::option::Option<std::string::String>,
     /// <p>Specifies the integration's HTTP method type.</p>
+    #[doc(hidden)]
     pub integration_method: std::option::Option<std::string::String>,
     /// <p>The integration response selection expression for the integration. Supported only for WebSocket APIs. See <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions">Integration Response Selection Expressions</a>.</p>
+    #[doc(hidden)]
     pub integration_response_selection_expression: std::option::Option<std::string::String>,
     /// <p>Supported only for HTTP API AWS_PROXY integrations. Specifies the AWS service action to invoke. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html">Integration subtype reference</a>.</p>
+    #[doc(hidden)]
     pub integration_subtype: std::option::Option<std::string::String>,
     /// <p>The integration type of an integration. One of the following:</p>
     /// <p>AWS: for integrating the route or method request with an AWS service action, including the Lambda function-invoking action. With the Lambda function-invoking action, this is referred to as the Lambda custom integration. With any other AWS service action, this is known as AWS integration. Supported only for WebSocket APIs.</p>
@@ -11015,17 +11298,21 @@ pub struct CreateIntegrationOutput {
     /// <p>HTTP: for integrating the route or method request with an HTTP endpoint. This integration is also referred to as the HTTP custom integration. Supported only for WebSocket APIs.</p>
     /// <p>HTTP_PROXY: for integrating the route or method request with an HTTP endpoint, with the client request passed through as-is. This is also referred to as HTTP proxy integration.</p>
     /// <p>MOCK: for integrating the route or method request with API Gateway as a "loopback" endpoint without invoking any backend. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub integration_type: std::option::Option<crate::model::IntegrationType>,
     /// <p>For a Lambda integration, specify the URI of a Lambda function.</p>
     /// <p>For an HTTP integration, specify a fully-qualified URL.</p>
     /// <p>For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service. If you specify the ARN of an AWS Cloud Map service, API Gateway uses DiscoverInstances to identify resources. You can use query parameters to target specific resources. To learn more, see <a href="https://docs.aws.amazon.com/cloud-map/latest/api/API_DiscoverInstances.html">DiscoverInstances</a>. For private integrations, all resources must be owned by the same AWS account.</p>
+    #[doc(hidden)]
     pub integration_uri: std::option::Option<std::string::String>,
     /// <p>Specifies the pass-through behavior for incoming requests based on the Content-Type header in the request, and the available mapping templates specified as the requestTemplates property on the Integration resource. There are three valid values: WHEN_NO_MATCH, WHEN_NO_TEMPLATES, and NEVER. Supported only for WebSocket APIs.</p>
     /// <p>WHEN_NO_MATCH passes the request body for unmapped content types through to the integration backend without transformation.</p>
     /// <p>NEVER rejects unmapped content types with an HTTP 415 Unsupported Media Type response.</p>
     /// <p>WHEN_NO_TEMPLATES allows pass-through when the integration has no content types mapped to templates. However, if there is at least one content type defined, unmapped content types will be rejected with the same HTTP 415 Unsupported Media Type response.</p>
+    #[doc(hidden)]
     pub passthrough_behavior: std::option::Option<crate::model::PassthroughBehavior>,
     /// <p>Specifies the format of the payload sent to an integration. Required for HTTP APIs.</p>
+    #[doc(hidden)]
     pub payload_format_version: std::option::Option<std::string::String>,
     /// <p>For WebSocket APIs, a key-value map specifying request parameters that are passed from the method request to the backend. The key is an integration request parameter name and the associated value is a method request parameter value or static value that must be enclosed within single quotes and pre-encoded as required by the backend. The method request parameter value must match the pattern of method.request.<replaceable>
     /// {location}
@@ -11038,12 +11325,15 @@ pub struct CreateIntegrationOutput {
     /// </replaceable> must be a valid and unique method request parameter name.</p>
     /// <p>For HTTP API integrations with a specified integrationSubtype, request parameters are a key-value map specifying parameters that are passed to AWS_PROXY integrations. You can provide static values, or map request data, stage variables, or context variables that are evaluated at runtime. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services.html">Working with AWS service integrations for HTTP APIs</a>.</p>
     /// <p>For HTTP API itegrations, without a specified integrationSubtype request parameters are a key-value map specifying how to transform HTTP requests before sending them to backend integrations. The key should follow the pattern &lt;action&gt;:&lt;header|querystring|path&gt;.&lt;location&gt;. The action can be append, overwrite or remove. For values, you can provide static values, or map request data, stage variables, or context variables that are evaluated at runtime. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html">Transforming API requests and responses</a>.</p>
+    #[doc(hidden)]
     pub request_parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Represents a map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client. The content type value is the key in this map, and the template (as a String) is the value. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub request_templates:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Supported only for HTTP APIs. You use response parameters to transform the HTTP response from a backend integration before returning the response to clients. Specify a key-value map from a selection key to response parameters. The selection key must be a valid HTTP status code within the range of 200-599. Response parameters are a key-value map. The key must match pattern &lt;action&gt;:&lt;header&gt;.&lt;location&gt; or overwrite.statuscode. The action can be append, overwrite or remove. The value can be a static value, or map to response data, stage variables, or context variables that are evaluated at runtime. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html">Transforming API requests and responses</a>.</p>
+    #[doc(hidden)]
     pub response_parameters: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -11051,10 +11341,13 @@ pub struct CreateIntegrationOutput {
         >,
     >,
     /// <p>The template selection expression for the integration. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub template_selection_expression: std::option::Option<std::string::String>,
     /// <p>Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and 30,000 milliseconds for HTTP APIs. The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs.</p>
+    #[doc(hidden)]
     pub timeout_in_millis: i32,
     /// <p>The TLS configuration for a private integration. If you specify a TLS configuration, private integration traffic uses the HTTPS protocol. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub tls_config: std::option::Option<crate::model::TlsConfig>,
 }
 impl CreateIntegrationOutput {
@@ -11209,11 +11502,10 @@ impl std::fmt::Debug for CreateIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateIntegrationOutput`](crate::output::CreateIntegrationOutput)
+/// See [`CreateIntegrationOutput`](crate::output::CreateIntegrationOutput).
 pub mod create_integration_output {
 
-    /// A builder for [`CreateIntegrationOutput`](crate::output::CreateIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateIntegrationOutput`](crate::output::CreateIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_gateway_managed: std::option::Option<bool>,
@@ -11594,7 +11886,7 @@ pub mod create_integration_output {
             self.tls_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateIntegrationOutput`](crate::output::CreateIntegrationOutput)
+        /// Consumes the builder and constructs a [`CreateIntegrationOutput`](crate::output::CreateIntegrationOutput).
         pub fn build(self) -> crate::output::CreateIntegrationOutput {
             crate::output::CreateIntegrationOutput {
                 api_gateway_managed: self.api_gateway_managed.unwrap_or_default(),
@@ -11623,7 +11915,7 @@ pub mod create_integration_output {
     }
 }
 impl CreateIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateIntegrationOutput`](crate::output::CreateIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateIntegrationOutput`](crate::output::CreateIntegrationOutput).
     pub fn builder() -> crate::output::create_integration_output::Builder {
         crate::output::create_integration_output::Builder::default()
     }
@@ -11634,15 +11926,20 @@ impl CreateIntegrationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDomainNameOutput {
     /// <p>The API mapping selection expression.</p>
+    #[doc(hidden)]
     pub api_mapping_selection_expression: std::option::Option<std::string::String>,
     /// <p>The name of the DomainName resource.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The domain name configurations.</p>
+    #[doc(hidden)]
     pub domain_name_configurations:
         std::option::Option<std::vec::Vec<crate::model::DomainNameConfiguration>>,
     /// <p>The mutual TLS authentication configuration for a custom domain name.</p>
+    #[doc(hidden)]
     pub mutual_tls_authentication: std::option::Option<crate::model::MutualTlsAuthentication>,
     /// <p>The collection of tags associated with a domain name.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -11692,11 +11989,10 @@ impl std::fmt::Debug for CreateDomainNameOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDomainNameOutput`](crate::output::CreateDomainNameOutput)
+/// See [`CreateDomainNameOutput`](crate::output::CreateDomainNameOutput).
 pub mod create_domain_name_output {
 
-    /// A builder for [`CreateDomainNameOutput`](crate::output::CreateDomainNameOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDomainNameOutput`](crate::output::CreateDomainNameOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_mapping_selection_expression: std::option::Option<std::string::String>,
@@ -11799,7 +12095,7 @@ pub mod create_domain_name_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDomainNameOutput`](crate::output::CreateDomainNameOutput)
+        /// Consumes the builder and constructs a [`CreateDomainNameOutput`](crate::output::CreateDomainNameOutput).
         pub fn build(self) -> crate::output::CreateDomainNameOutput {
             crate::output::CreateDomainNameOutput {
                 api_mapping_selection_expression: self.api_mapping_selection_expression,
@@ -11812,7 +12108,7 @@ pub mod create_domain_name_output {
     }
 }
 impl CreateDomainNameOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDomainNameOutput`](crate::output::CreateDomainNameOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDomainNameOutput`](crate::output::CreateDomainNameOutput).
     pub fn builder() -> crate::output::create_domain_name_output::Builder {
         crate::output::create_domain_name_output::Builder::default()
     }
@@ -11823,16 +12119,22 @@ impl CreateDomainNameOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDeploymentOutput {
     /// <p>Specifies whether a deployment was automatically released.</p>
+    #[doc(hidden)]
     pub auto_deployed: bool,
     /// <p>The date and time when the Deployment resource was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The identifier for the deployment.</p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>The status of the deployment: PENDING, FAILED, or SUCCEEDED.</p>
+    #[doc(hidden)]
     pub deployment_status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>May contain additional feedback on the status of an API deployment.</p>
+    #[doc(hidden)]
     pub deployment_status_message: std::option::Option<std::string::String>,
     /// <p>The description for the deployment.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl CreateDeploymentOutput {
@@ -11873,11 +12175,10 @@ impl std::fmt::Debug for CreateDeploymentOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput)
+/// See [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput).
 pub mod create_deployment_output {
 
-    /// A builder for [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_deployed: std::option::Option<bool>,
@@ -11960,7 +12261,7 @@ pub mod create_deployment_output {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput)
+        /// Consumes the builder and constructs a [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput).
         pub fn build(self) -> crate::output::CreateDeploymentOutput {
             crate::output::CreateDeploymentOutput {
                 auto_deployed: self.auto_deployed.unwrap_or_default(),
@@ -11974,7 +12275,7 @@ pub mod create_deployment_output {
     }
 }
 impl CreateDeploymentOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput).
     pub fn builder() -> crate::output::create_deployment_output::Builder {
         crate::output::create_deployment_output::Builder::default()
     }
@@ -11985,14 +12286,19 @@ impl CreateDeploymentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAuthorizerOutput {
     /// <p>Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer. To specify an IAM role for API Gateway to assume, use the role's Amazon Resource Name (ARN). To use resource-based permissions on the Lambda function, don't specify this parameter. Supported only for REQUEST authorizers.</p>
+    #[doc(hidden)]
     pub authorizer_credentials_arn: std::option::Option<std::string::String>,
     /// <p>The authorizer identifier.</p>
+    #[doc(hidden)]
     pub authorizer_id: std::option::Option<std::string::String>,
     /// <p>Specifies the format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers. Supported values are 1.0 and 2.0. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-lambda-authorizer.html">Working with AWS Lambda authorizers for HTTP APIs</a>.</p>
+    #[doc(hidden)]
     pub authorizer_payload_format_version: std::option::Option<std::string::String>,
     /// <p>The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled. If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Supported only for HTTP API Lambda authorizers.</p>
+    #[doc(hidden)]
     pub authorizer_result_ttl_in_seconds: i32,
     /// <p>The authorizer type. Specify REQUEST for a Lambda function using incoming request parameters. Specify JWT to use JSON Web Tokens (supported only for HTTP APIs).</p>
+    #[doc(hidden)]
     pub authorizer_type: std::option::Option<crate::model::AuthorizerType>,
     /// <p>The authorizer's Uniform Resource Identifier (URI). For REQUEST authorizers, this must be a well-formed Lambda function URI, for example, arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:<replaceable>
     /// {account_id}
@@ -12003,18 +12309,24 @@ pub struct CreateAuthorizerOutput {
     /// </replaceable>:lambda:path/<replaceable>
     /// {service_api}
     /// </replaceable> , where <replaceable></replaceable>{region} is the same as the region hosting the Lambda function, path indicates that the remaining substring in the URI should be treated as the path to the resource, including the initial /. For Lambda functions, this is usually of the form /2015-03-31/functions/[FunctionARN]/invocations. Supported only for REQUEST authorizers.</p>
+    #[doc(hidden)]
     pub authorizer_uri: std::option::Option<std::string::String>,
     /// <p>Specifies whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy. Supported only for HTTP APIs. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-lambda-authorizer.html">Working with AWS Lambda authorizers for HTTP APIs</a></p>
+    #[doc(hidden)]
     pub enable_simple_responses: bool,
     /// <p>The identity source for which authorization is requested.</p>
     /// <p>For a REQUEST authorizer, this is optional. The value is a set of one or more mapping expressions of the specified request parameters. The identity source can be headers, query string parameters, stage variables, and context parameters. For example, if an Auth header and a Name query string parameter are defined as identity sources, this value is route.request.header.Auth, route.request.querystring.Name for WebSocket APIs. For HTTP APIs, use selection expressions prefixed with $, for example, $request.header.Auth, $request.querystring.Name. These parameters are used to perform runtime validation for Lambda-based authorizers by verifying all of the identity-related request parameters are present in the request, not null, and non-empty. Only when this is true does the authorizer invoke the authorizer Lambda function. Otherwise, it returns a 401 Unauthorized response without calling the Lambda function. For HTTP APIs, identity sources are also used as the cache key when caching is enabled. To learn more, see <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-lambda-authorizer.html">Working with AWS Lambda authorizers for HTTP APIs</a>.</p>
     /// <p>For JWT, a single entry that specifies where to extract the JSON Web Token (JWT) from inbound requests. Currently only header-based and query parameter-based selections are supported, for example $request.header.Authorization.</p>
+    #[doc(hidden)]
     pub identity_source: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The validation expression does not apply to the REQUEST authorizer.</p>
+    #[doc(hidden)]
     pub identity_validation_expression: std::option::Option<std::string::String>,
     /// <p>Represents the configuration of a JWT authorizer. Required for the JWT authorizer type. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub jwt_configuration: std::option::Option<crate::model::JwtConfiguration>,
     /// <p>The name of the authorizer.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl CreateAuthorizerOutput {
@@ -12102,11 +12414,10 @@ impl std::fmt::Debug for CreateAuthorizerOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAuthorizerOutput`](crate::output::CreateAuthorizerOutput)
+/// See [`CreateAuthorizerOutput`](crate::output::CreateAuthorizerOutput).
 pub mod create_authorizer_output {
 
-    /// A builder for [`CreateAuthorizerOutput`](crate::output::CreateAuthorizerOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateAuthorizerOutput`](crate::output::CreateAuthorizerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) authorizer_credentials_arn: std::option::Option<std::string::String>,
@@ -12291,7 +12602,7 @@ pub mod create_authorizer_output {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAuthorizerOutput`](crate::output::CreateAuthorizerOutput)
+        /// Consumes the builder and constructs a [`CreateAuthorizerOutput`](crate::output::CreateAuthorizerOutput).
         pub fn build(self) -> crate::output::CreateAuthorizerOutput {
             crate::output::CreateAuthorizerOutput {
                 authorizer_credentials_arn: self.authorizer_credentials_arn,
@@ -12312,7 +12623,7 @@ pub mod create_authorizer_output {
     }
 }
 impl CreateAuthorizerOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAuthorizerOutput`](crate::output::CreateAuthorizerOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAuthorizerOutput`](crate::output::CreateAuthorizerOutput).
     pub fn builder() -> crate::output::create_authorizer_output::Builder {
         crate::output::create_authorizer_output::Builder::default()
     }
@@ -12323,12 +12634,16 @@ impl CreateAuthorizerOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateApiMappingOutput {
     /// <p>The API identifier.</p>
+    #[doc(hidden)]
     pub api_id: std::option::Option<std::string::String>,
     /// <p>The API mapping identifier.</p>
+    #[doc(hidden)]
     pub api_mapping_id: std::option::Option<std::string::String>,
     /// <p>The API mapping key.</p>
+    #[doc(hidden)]
     pub api_mapping_key: std::option::Option<std::string::String>,
     /// <p>The API stage.</p>
+    #[doc(hidden)]
     pub stage: std::option::Option<std::string::String>,
 }
 impl CreateApiMappingOutput {
@@ -12359,11 +12674,10 @@ impl std::fmt::Debug for CreateApiMappingOutput {
         formatter.finish()
     }
 }
-/// See [`CreateApiMappingOutput`](crate::output::CreateApiMappingOutput)
+/// See [`CreateApiMappingOutput`](crate::output::CreateApiMappingOutput).
 pub mod create_api_mapping_output {
 
-    /// A builder for [`CreateApiMappingOutput`](crate::output::CreateApiMappingOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateApiMappingOutput`](crate::output::CreateApiMappingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_id: std::option::Option<std::string::String>,
@@ -12418,7 +12732,7 @@ pub mod create_api_mapping_output {
             self.stage = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateApiMappingOutput`](crate::output::CreateApiMappingOutput)
+        /// Consumes the builder and constructs a [`CreateApiMappingOutput`](crate::output::CreateApiMappingOutput).
         pub fn build(self) -> crate::output::CreateApiMappingOutput {
             crate::output::CreateApiMappingOutput {
                 api_id: self.api_id,
@@ -12430,7 +12744,7 @@ pub mod create_api_mapping_output {
     }
 }
 impl CreateApiMappingOutput {
-    /// Creates a new builder-style object to manufacture [`CreateApiMappingOutput`](crate::output::CreateApiMappingOutput)
+    /// Creates a new builder-style object to manufacture [`CreateApiMappingOutput`](crate::output::CreateApiMappingOutput).
     pub fn builder() -> crate::output::create_api_mapping_output::Builder {
         crate::output::create_api_mapping_output::Builder::default()
     }
@@ -12441,37 +12755,53 @@ impl CreateApiMappingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateApiOutput {
     /// <p>The URI of the API, of the form {api-id}.execute-api.{region}.amazonaws.com. The stage name is typically appended to this URI to form a complete path to a deployed API stage.</p>
+    #[doc(hidden)]
     pub api_endpoint: std::option::Option<std::string::String>,
     /// <p>Specifies whether an API is managed by API Gateway. You can't update or delete a managed API by using API Gateway. A managed API can be deleted only through the tooling or service that created it.</p>
+    #[doc(hidden)]
     pub api_gateway_managed: bool,
     /// <p>The API ID.</p>
+    #[doc(hidden)]
     pub api_id: std::option::Option<std::string::String>,
     /// <p>An API key selection expression. Supported only for WebSocket APIs. See <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions">API Key Selection Expressions</a>.</p>
+    #[doc(hidden)]
     pub api_key_selection_expression: std::option::Option<std::string::String>,
     /// <p>A CORS configuration. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub cors_configuration: std::option::Option<crate::model::Cors>,
     /// <p>The timestamp when the API was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the API.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Avoid validating models when creating a deployment. Supported only for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub disable_schema_validation: bool,
     /// <p>Specifies whether clients can invoke your API by using the default execute-api endpoint. By default, clients can invoke your API with the default https://{api_id}.execute-api.{region}.amazonaws.com endpoint. To require that clients use a custom domain name to invoke your API, disable the default endpoint.</p>
+    #[doc(hidden)]
     pub disable_execute_api_endpoint: bool,
     /// <p>The validation information during API import. This may include particular properties of your OpenAPI definition which are ignored during import. Supported only for HTTP APIs.</p>
+    #[doc(hidden)]
     pub import_info: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The name of the API.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The API protocol.</p>
+    #[doc(hidden)]
     pub protocol_type: std::option::Option<crate::model::ProtocolType>,
     /// <p>The route selection expression for the API. For HTTP APIs, the routeSelectionExpression must be ${request.method} ${request.path}. If not provided, this will be the default for HTTP APIs. This property is required for WebSocket APIs.</p>
+    #[doc(hidden)]
     pub route_selection_expression: std::option::Option<std::string::String>,
     /// <p>A collection of tags associated with the API.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A version identifier for the API.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The warning messages reported when failonwarnings is turned on during API import.</p>
+    #[doc(hidden)]
     pub warnings: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CreateApiOutput {
@@ -12574,11 +12904,10 @@ impl std::fmt::Debug for CreateApiOutput {
         formatter.finish()
     }
 }
-/// See [`CreateApiOutput`](crate::output::CreateApiOutput)
+/// See [`CreateApiOutput`](crate::output::CreateApiOutput).
 pub mod create_api_output {
 
-    /// A builder for [`CreateApiOutput`](crate::output::CreateApiOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateApiOutput`](crate::output::CreateApiOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_endpoint: std::option::Option<std::string::String>,
@@ -12815,7 +13144,7 @@ pub mod create_api_output {
             self.warnings = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateApiOutput`](crate::output::CreateApiOutput)
+        /// Consumes the builder and constructs a [`CreateApiOutput`](crate::output::CreateApiOutput).
         pub fn build(self) -> crate::output::CreateApiOutput {
             crate::output::CreateApiOutput {
                 api_endpoint: self.api_endpoint,
@@ -12839,7 +13168,7 @@ pub mod create_api_output {
     }
 }
 impl CreateApiOutput {
-    /// Creates a new builder-style object to manufacture [`CreateApiOutput`](crate::output::CreateApiOutput)
+    /// Creates a new builder-style object to manufacture [`CreateApiOutput`](crate::output::CreateApiOutput).
     pub fn builder() -> crate::output::create_api_output::Builder {
         crate::output::create_api_output::Builder::default()
     }

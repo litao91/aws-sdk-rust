@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamModeDetails {
     /// <p> Specifies the capacity mode to which you want to set your data stream. Currently, in Kinesis Data Streams, you can choose between an <b>on-demand</b> capacity mode and a <b>provisioned</b> capacity mode for your data streams. </p>
+    #[doc(hidden)]
     pub stream_mode: std::option::Option<crate::model::StreamMode>,
 }
 impl StreamModeDetails {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for StreamModeDetails {
         formatter.finish()
     }
 }
-/// See [`StreamModeDetails`](crate::model::StreamModeDetails)
+/// See [`StreamModeDetails`](crate::model::StreamModeDetails).
 pub mod stream_mode_details {
 
-    /// A builder for [`StreamModeDetails`](crate::model::StreamModeDetails)
-    #[non_exhaustive]
+    /// A builder for [`StreamModeDetails`](crate::model::StreamModeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stream_mode: std::option::Option<crate::model::StreamMode>,
@@ -43,7 +43,7 @@ pub mod stream_mode_details {
             self.stream_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamModeDetails`](crate::model::StreamModeDetails)
+        /// Consumes the builder and constructs a [`StreamModeDetails`](crate::model::StreamModeDetails).
         pub fn build(self) -> crate::model::StreamModeDetails {
             crate::model::StreamModeDetails {
                 stream_mode: self.stream_mode,
@@ -52,7 +52,7 @@ pub mod stream_mode_details {
     }
 }
 impl StreamModeDetails {
-    /// Creates a new builder-style object to manufacture [`StreamModeDetails`](crate::model::StreamModeDetails)
+    /// Creates a new builder-style object to manufacture [`StreamModeDetails`](crate::model::StreamModeDetails).
     pub fn builder() -> crate::model::stream_mode_details::Builder {
         crate::model::stream_mode_details::Builder::default()
     }
@@ -224,13 +224,17 @@ impl AsRef<str> for EncryptionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Consumer {
     /// <p>The name of the consumer is something you choose when you register the consumer.</p>
+    #[doc(hidden)]
     pub consumer_name: std::option::Option<std::string::String>,
     /// <p>When you register a consumer, Kinesis Data Streams generates an ARN for it. You need this ARN to be able to call <code>SubscribeToShard</code>.</p>
     /// <p>If you delete a consumer and then create a new one with the same name, it won't have the same ARN. That's because consumer ARNs contain the creation timestamp. This is important to keep in mind if you have IAM policies that reference consumer ARNs.</p>
+    #[doc(hidden)]
     pub consumer_arn: std::option::Option<std::string::String>,
     /// <p>A consumer can't read data while in the <code>CREATING</code> or <code>DELETING</code> states.</p>
+    #[doc(hidden)]
     pub consumer_status: std::option::Option<crate::model::ConsumerStatus>,
     /// <p></p>
+    #[doc(hidden)]
     pub consumer_creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Consumer {
@@ -265,11 +269,10 @@ impl std::fmt::Debug for Consumer {
         formatter.finish()
     }
 }
-/// See [`Consumer`](crate::model::Consumer)
+/// See [`Consumer`](crate::model::Consumer).
 pub mod consumer {
 
-    /// A builder for [`Consumer`](crate::model::Consumer)
-    #[non_exhaustive]
+    /// A builder for [`Consumer`](crate::model::Consumer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) consumer_name: std::option::Option<std::string::String>,
@@ -329,7 +332,7 @@ pub mod consumer {
             self.consumer_creation_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`Consumer`](crate::model::Consumer)
+        /// Consumes the builder and constructs a [`Consumer`](crate::model::Consumer).
         pub fn build(self) -> crate::model::Consumer {
             crate::model::Consumer {
                 consumer_name: self.consumer_name,
@@ -341,7 +344,7 @@ pub mod consumer {
     }
 }
 impl Consumer {
-    /// Creates a new builder-style object to manufacture [`Consumer`](crate::model::Consumer)
+    /// Creates a new builder-style object to manufacture [`Consumer`](crate::model::Consumer).
     pub fn builder() -> crate::model::consumer::Builder {
         crate::model::consumer::Builder::default()
     }
@@ -411,12 +414,16 @@ impl AsRef<str> for ConsumerStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutRecordsResultEntry {
     /// <p>The sequence number for an individual record result.</p>
+    #[doc(hidden)]
     pub sequence_number: std::option::Option<std::string::String>,
     /// <p>The shard ID for an individual record result.</p>
+    #[doc(hidden)]
     pub shard_id: std::option::Option<std::string::String>,
     /// <p>The error code for an individual record result. <code>ErrorCodes</code> can be either <code>ProvisionedThroughputExceededException</code> or <code>InternalFailure</code>.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The error message for an individual record result. An <code>ErrorCode</code> value of <code>ProvisionedThroughputExceededException</code> has an error message that includes the account ID, stream name, and shard ID. An <code>ErrorCode</code> value of <code>InternalFailure</code> has the error message <code>"Internal Service Failure"</code>.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl PutRecordsResultEntry {
@@ -447,11 +454,10 @@ impl std::fmt::Debug for PutRecordsResultEntry {
         formatter.finish()
     }
 }
-/// See [`PutRecordsResultEntry`](crate::model::PutRecordsResultEntry)
+/// See [`PutRecordsResultEntry`](crate::model::PutRecordsResultEntry).
 pub mod put_records_result_entry {
 
-    /// A builder for [`PutRecordsResultEntry`](crate::model::PutRecordsResultEntry)
-    #[non_exhaustive]
+    /// A builder for [`PutRecordsResultEntry`](crate::model::PutRecordsResultEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sequence_number: std::option::Option<std::string::String>,
@@ -506,7 +512,7 @@ pub mod put_records_result_entry {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutRecordsResultEntry`](crate::model::PutRecordsResultEntry)
+        /// Consumes the builder and constructs a [`PutRecordsResultEntry`](crate::model::PutRecordsResultEntry).
         pub fn build(self) -> crate::model::PutRecordsResultEntry {
             crate::model::PutRecordsResultEntry {
                 sequence_number: self.sequence_number,
@@ -518,7 +524,7 @@ pub mod put_records_result_entry {
     }
 }
 impl PutRecordsResultEntry {
-    /// Creates a new builder-style object to manufacture [`PutRecordsResultEntry`](crate::model::PutRecordsResultEntry)
+    /// Creates a new builder-style object to manufacture [`PutRecordsResultEntry`](crate::model::PutRecordsResultEntry).
     pub fn builder() -> crate::model::put_records_result_entry::Builder {
         crate::model::put_records_result_entry::Builder::default()
     }
@@ -529,10 +535,13 @@ impl PutRecordsResultEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutRecordsRequestEntry {
     /// <p>The data blob to put into the record, which is base64-encoded when the blob is serialized. When the data blob (the payload before base64-encoding) is added to the partition key size, the total size must not exceed the maximum record size (1 MiB).</p>
+    #[doc(hidden)]
     pub data: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The hash value used to determine explicitly the shard that the data record is assigned to by overriding the partition key hash.</p>
+    #[doc(hidden)]
     pub explicit_hash_key: std::option::Option<std::string::String>,
     /// <p>Determines which shard in the stream the data record is assigned to. Partition keys are Unicode strings with a maximum length limit of 256 characters for each key. Amazon Kinesis Data Streams uses the partition key as input to a hash function that maps the partition key and associated data to a specific shard. Specifically, an MD5 hash function is used to map partition keys to 128-bit integer values and to map associated data records to shards. As a result of this hashing mechanism, all data records with the same partition key map to the same shard within the stream.</p>
+    #[doc(hidden)]
     pub partition_key: std::option::Option<std::string::String>,
 }
 impl PutRecordsRequestEntry {
@@ -558,11 +567,10 @@ impl std::fmt::Debug for PutRecordsRequestEntry {
         formatter.finish()
     }
 }
-/// See [`PutRecordsRequestEntry`](crate::model::PutRecordsRequestEntry)
+/// See [`PutRecordsRequestEntry`](crate::model::PutRecordsRequestEntry).
 pub mod put_records_request_entry {
 
-    /// A builder for [`PutRecordsRequestEntry`](crate::model::PutRecordsRequestEntry)
-    #[non_exhaustive]
+    /// A builder for [`PutRecordsRequestEntry`](crate::model::PutRecordsRequestEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data: std::option::Option<aws_smithy_types::Blob>,
@@ -606,7 +614,7 @@ pub mod put_records_request_entry {
             self.partition_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutRecordsRequestEntry`](crate::model::PutRecordsRequestEntry)
+        /// Consumes the builder and constructs a [`PutRecordsRequestEntry`](crate::model::PutRecordsRequestEntry).
         pub fn build(self) -> crate::model::PutRecordsRequestEntry {
             crate::model::PutRecordsRequestEntry {
                 data: self.data,
@@ -617,7 +625,7 @@ pub mod put_records_request_entry {
     }
 }
 impl PutRecordsRequestEntry {
-    /// Creates a new builder-style object to manufacture [`PutRecordsRequestEntry`](crate::model::PutRecordsRequestEntry)
+    /// Creates a new builder-style object to manufacture [`PutRecordsRequestEntry`](crate::model::PutRecordsRequestEntry).
     pub fn builder() -> crate::model::put_records_request_entry::Builder {
         crate::model::put_records_request_entry::Builder::default()
     }
@@ -628,8 +636,10 @@ impl PutRecordsRequestEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>A unique identifier for the tag. Maximum length: 128 characters. Valid characters: Unicode letters, digits, white space, _ . / = + - % @</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>An optional string, typically used to describe or define the tag. Maximum length: 256 characters. Valid characters: Unicode letters, digits, white space, _ . / = + - % @</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -650,11 +660,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -681,7 +690,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -691,7 +700,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -702,14 +711,19 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Shard {
     /// <p>The unique identifier of the shard within the stream.</p>
+    #[doc(hidden)]
     pub shard_id: std::option::Option<std::string::String>,
     /// <p>The shard ID of the shard's parent.</p>
+    #[doc(hidden)]
     pub parent_shard_id: std::option::Option<std::string::String>,
     /// <p>The shard ID of the shard adjacent to the shard's parent.</p>
+    #[doc(hidden)]
     pub adjacent_parent_shard_id: std::option::Option<std::string::String>,
     /// <p>The range of possible hash key values for the shard, which is a set of ordered contiguous positive integers.</p>
+    #[doc(hidden)]
     pub hash_key_range: std::option::Option<crate::model::HashKeyRange>,
     /// <p>The range of possible sequence numbers for the shard.</p>
+    #[doc(hidden)]
     pub sequence_number_range: std::option::Option<crate::model::SequenceNumberRange>,
 }
 impl Shard {
@@ -745,11 +759,10 @@ impl std::fmt::Debug for Shard {
         formatter.finish()
     }
 }
-/// See [`Shard`](crate::model::Shard)
+/// See [`Shard`](crate::model::Shard).
 pub mod shard {
 
-    /// A builder for [`Shard`](crate::model::Shard)
-    #[non_exhaustive]
+    /// A builder for [`Shard`](crate::model::Shard).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) shard_id: std::option::Option<std::string::String>,
@@ -821,7 +834,7 @@ pub mod shard {
             self.sequence_number_range = input;
             self
         }
-        /// Consumes the builder and constructs a [`Shard`](crate::model::Shard)
+        /// Consumes the builder and constructs a [`Shard`](crate::model::Shard).
         pub fn build(self) -> crate::model::Shard {
             crate::model::Shard {
                 shard_id: self.shard_id,
@@ -834,7 +847,7 @@ pub mod shard {
     }
 }
 impl Shard {
-    /// Creates a new builder-style object to manufacture [`Shard`](crate::model::Shard)
+    /// Creates a new builder-style object to manufacture [`Shard`](crate::model::Shard).
     pub fn builder() -> crate::model::shard::Builder {
         crate::model::shard::Builder::default()
     }
@@ -845,8 +858,10 @@ impl Shard {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SequenceNumberRange {
     /// <p>The starting sequence number for the range.</p>
+    #[doc(hidden)]
     pub starting_sequence_number: std::option::Option<std::string::String>,
     /// <p>The ending sequence number for the range. Shards that are in the OPEN state have an ending sequence number of <code>null</code>.</p>
+    #[doc(hidden)]
     pub ending_sequence_number: std::option::Option<std::string::String>,
 }
 impl SequenceNumberRange {
@@ -867,11 +882,10 @@ impl std::fmt::Debug for SequenceNumberRange {
         formatter.finish()
     }
 }
-/// See [`SequenceNumberRange`](crate::model::SequenceNumberRange)
+/// See [`SequenceNumberRange`](crate::model::SequenceNumberRange).
 pub mod sequence_number_range {
 
-    /// A builder for [`SequenceNumberRange`](crate::model::SequenceNumberRange)
-    #[non_exhaustive]
+    /// A builder for [`SequenceNumberRange`](crate::model::SequenceNumberRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) starting_sequence_number: std::option::Option<std::string::String>,
@@ -904,7 +918,7 @@ pub mod sequence_number_range {
             self.ending_sequence_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`SequenceNumberRange`](crate::model::SequenceNumberRange)
+        /// Consumes the builder and constructs a [`SequenceNumberRange`](crate::model::SequenceNumberRange).
         pub fn build(self) -> crate::model::SequenceNumberRange {
             crate::model::SequenceNumberRange {
                 starting_sequence_number: self.starting_sequence_number,
@@ -914,7 +928,7 @@ pub mod sequence_number_range {
     }
 }
 impl SequenceNumberRange {
-    /// Creates a new builder-style object to manufacture [`SequenceNumberRange`](crate::model::SequenceNumberRange)
+    /// Creates a new builder-style object to manufacture [`SequenceNumberRange`](crate::model::SequenceNumberRange).
     pub fn builder() -> crate::model::sequence_number_range::Builder {
         crate::model::sequence_number_range::Builder::default()
     }
@@ -925,8 +939,10 @@ impl SequenceNumberRange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HashKeyRange {
     /// <p>The starting hash key of the hash key range.</p>
+    #[doc(hidden)]
     pub starting_hash_key: std::option::Option<std::string::String>,
     /// <p>The ending hash key of the hash key range.</p>
+    #[doc(hidden)]
     pub ending_hash_key: std::option::Option<std::string::String>,
 }
 impl HashKeyRange {
@@ -947,11 +963,10 @@ impl std::fmt::Debug for HashKeyRange {
         formatter.finish()
     }
 }
-/// See [`HashKeyRange`](crate::model::HashKeyRange)
+/// See [`HashKeyRange`](crate::model::HashKeyRange).
 pub mod hash_key_range {
 
-    /// A builder for [`HashKeyRange`](crate::model::HashKeyRange)
-    #[non_exhaustive]
+    /// A builder for [`HashKeyRange`](crate::model::HashKeyRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) starting_hash_key: std::option::Option<std::string::String>,
@@ -984,7 +999,7 @@ pub mod hash_key_range {
             self.ending_hash_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`HashKeyRange`](crate::model::HashKeyRange)
+        /// Consumes the builder and constructs a [`HashKeyRange`](crate::model::HashKeyRange).
         pub fn build(self) -> crate::model::HashKeyRange {
             crate::model::HashKeyRange {
                 starting_hash_key: self.starting_hash_key,
@@ -994,7 +1009,7 @@ pub mod hash_key_range {
     }
 }
 impl HashKeyRange {
-    /// Creates a new builder-style object to manufacture [`HashKeyRange`](crate::model::HashKeyRange)
+    /// Creates a new builder-style object to manufacture [`HashKeyRange`](crate::model::HashKeyRange).
     pub fn builder() -> crate::model::hash_key_range::Builder {
         crate::model::hash_key_range::Builder::default()
     }
@@ -1014,10 +1029,13 @@ pub struct ShardFilter {
     /// <li> <p> <code>AT_TIMESTAMP</code> - the response includes all shards whose start timestamp is less than or equal to the given timestamp and end timestamp is greater than or equal to the given timestamp or still open. </p> </li>
     /// <li> <p> <code>FROM_TIMESTAMP</code> - the response incldues all closed shards whose end timestamp is greater than or equal to the given timestamp and also all open shards. Corrected to <code>TRIM_HORIZON</code> of the data stream if <code>FROM_TIMESTAMP</code> is less than the <code>TRIM_HORIZON</code> value.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ShardFilterType>,
     /// <p>The exclusive start <code>shardID</code> speified in the <code>ShardFilter</code> parameter. This property can only be used if the <code>AFTER_SHARD_ID</code> shard type is specified.</p>
+    #[doc(hidden)]
     pub shard_id: std::option::Option<std::string::String>,
     /// <p>The timestamps specified in the <code>ShardFilter</code> parameter. A timestamp is a Unix epoch date with precision in milliseconds. For example, 2016-04-04T19:58:46.480-00:00 or 1459799926.480. This property can only be used if <code>FROM_TIMESTAMP</code> or <code>AT_TIMESTAMP</code> shard types are specified.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ShardFilter {
@@ -1052,11 +1070,10 @@ impl std::fmt::Debug for ShardFilter {
         formatter.finish()
     }
 }
-/// See [`ShardFilter`](crate::model::ShardFilter)
+/// See [`ShardFilter`](crate::model::ShardFilter).
 pub mod shard_filter {
 
-    /// A builder for [`ShardFilter`](crate::model::ShardFilter)
-    #[non_exhaustive]
+    /// A builder for [`ShardFilter`](crate::model::ShardFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::ShardFilterType>,
@@ -1118,7 +1135,7 @@ pub mod shard_filter {
             self.timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ShardFilter`](crate::model::ShardFilter)
+        /// Consumes the builder and constructs a [`ShardFilter`](crate::model::ShardFilter).
         pub fn build(self) -> crate::model::ShardFilter {
             crate::model::ShardFilter {
                 r#type: self.r#type,
@@ -1129,7 +1146,7 @@ pub mod shard_filter {
     }
 }
 impl ShardFilter {
-    /// Creates a new builder-style object to manufacture [`ShardFilter`](crate::model::ShardFilter)
+    /// Creates a new builder-style object to manufacture [`ShardFilter`](crate::model::ShardFilter).
     pub fn builder() -> crate::model::shard_filter::Builder {
         crate::model::shard_filter::Builder::default()
     }
@@ -1291,10 +1308,13 @@ impl AsRef<str> for ShardIteratorType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChildShard {
     /// <p>The shard ID of the existing child shard of the current shard.</p>
+    #[doc(hidden)]
     pub shard_id: std::option::Option<std::string::String>,
     /// <p>The current shard that is the parent of the existing child shard.</p>
+    #[doc(hidden)]
     pub parent_shards: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The range of possible hash key values for the shard, which is a set of ordered contiguous positive integers.</p>
+    #[doc(hidden)]
     pub hash_key_range: std::option::Option<crate::model::HashKeyRange>,
 }
 impl ChildShard {
@@ -1320,11 +1340,10 @@ impl std::fmt::Debug for ChildShard {
         formatter.finish()
     }
 }
-/// See [`ChildShard`](crate::model::ChildShard)
+/// See [`ChildShard`](crate::model::ChildShard).
 pub mod child_shard {
 
-    /// A builder for [`ChildShard`](crate::model::ChildShard)
-    #[non_exhaustive]
+    /// A builder for [`ChildShard`](crate::model::ChildShard).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) shard_id: std::option::Option<std::string::String>,
@@ -1374,7 +1393,7 @@ pub mod child_shard {
             self.hash_key_range = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChildShard`](crate::model::ChildShard)
+        /// Consumes the builder and constructs a [`ChildShard`](crate::model::ChildShard).
         pub fn build(self) -> crate::model::ChildShard {
             crate::model::ChildShard {
                 shard_id: self.shard_id,
@@ -1385,7 +1404,7 @@ pub mod child_shard {
     }
 }
 impl ChildShard {
-    /// Creates a new builder-style object to manufacture [`ChildShard`](crate::model::ChildShard)
+    /// Creates a new builder-style object to manufacture [`ChildShard`](crate::model::ChildShard).
     pub fn builder() -> crate::model::child_shard::Builder {
         crate::model::child_shard::Builder::default()
     }
@@ -1396,18 +1415,23 @@ impl ChildShard {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Record {
     /// <p>The unique identifier of the record within its shard.</p>
+    #[doc(hidden)]
     pub sequence_number: std::option::Option<std::string::String>,
     /// <p>The approximate time that the record was inserted into the stream.</p>
+    #[doc(hidden)]
     pub approximate_arrival_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The data blob. The data in the blob is both opaque and immutable to Kinesis Data Streams, which does not inspect, interpret, or change the data in the blob in any way. When the data blob (the payload before base64-encoding) is added to the partition key size, the total size must not exceed the maximum record size (1 MiB).</p>
+    #[doc(hidden)]
     pub data: std::option::Option<aws_smithy_types::Blob>,
     /// <p>Identifies which shard in the stream the data record is assigned to.</p>
+    #[doc(hidden)]
     pub partition_key: std::option::Option<std::string::String>,
     /// <p>The encryption type used on the record. This parameter can be one of the following values:</p>
     /// <ul>
     /// <li> <p> <code>NONE</code>: Do not encrypt the records in the stream.</p> </li>
     /// <li> <p> <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed Amazon Web Services KMS key.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub encryption_type: std::option::Option<crate::model::EncryptionType>,
 }
 impl Record {
@@ -1452,11 +1476,10 @@ impl std::fmt::Debug for Record {
         formatter.finish()
     }
 }
-/// See [`Record`](crate::model::Record)
+/// See [`Record`](crate::model::Record).
 pub mod record {
 
-    /// A builder for [`Record`](crate::model::Record)
-    #[non_exhaustive]
+    /// A builder for [`Record`](crate::model::Record).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sequence_number: std::option::Option<std::string::String>,
@@ -1536,7 +1559,7 @@ pub mod record {
             self.encryption_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Record`](crate::model::Record)
+        /// Consumes the builder and constructs a [`Record`](crate::model::Record).
         pub fn build(self) -> crate::model::Record {
             crate::model::Record {
                 sequence_number: self.sequence_number,
@@ -1549,7 +1572,7 @@ pub mod record {
     }
 }
 impl Record {
-    /// Creates a new builder-style object to manufacture [`Record`](crate::model::Record)
+    /// Creates a new builder-style object to manufacture [`Record`](crate::model::Record).
     pub fn builder() -> crate::model::record::Builder {
         crate::model::record::Builder::default()
     }
@@ -1648,8 +1671,10 @@ impl AsRef<str> for MetricsName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamDescriptionSummary {
     /// <p>The name of the stream being described.</p>
+    #[doc(hidden)]
     pub stream_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the stream being described.</p>
+    #[doc(hidden)]
     pub stream_arn: std::option::Option<std::string::String>,
     /// <p>The current status of the stream being described. The stream status is one of the following states:</p>
     /// <ul>
@@ -1658,20 +1683,26 @@ pub struct StreamDescriptionSummary {
     /// <li> <p> <code>ACTIVE</code> - The stream exists and is ready for read and write operations or deletion. You should perform read and write operations only on an <code>ACTIVE</code> stream.</p> </li>
     /// <li> <p> <code>UPDATING</code> - Shards in the stream are being merged or split. Read and write operations continue to work while the stream is in the <code>UPDATING</code> state.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub stream_status: std::option::Option<crate::model::StreamStatus>,
     /// <p> Specifies the capacity mode to which you want to set your data stream. Currently, in Kinesis Data Streams, you can choose between an <b>on-demand</b> ycapacity mode and a <b>provisioned</b> capacity mode for your data streams. </p>
+    #[doc(hidden)]
     pub stream_mode_details: std::option::Option<crate::model::StreamModeDetails>,
     /// <p>The current retention period, in hours.</p>
+    #[doc(hidden)]
     pub retention_period_hours: std::option::Option<i32>,
     /// <p>The approximate time that the stream was created.</p>
+    #[doc(hidden)]
     pub stream_creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Represents the current enhanced monitoring settings of the stream.</p>
+    #[doc(hidden)]
     pub enhanced_monitoring: std::option::Option<std::vec::Vec<crate::model::EnhancedMetrics>>,
     /// <p>The encryption type used. This value is one of the following:</p>
     /// <ul>
     /// <li> <p> <code>KMS</code> </p> </li>
     /// <li> <p> <code>NONE</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub encryption_type: std::option::Option<crate::model::EncryptionType>,
     /// <p>The GUID for the customer-managed Amazon Web Services KMS key to use for encryption. This value can be a globally unique identifier, a fully specified ARN to either an alias or a key, or an alias name prefixed by "alias/".You can also use a master key owned by Kinesis Data Streams by specifying the alias <code>aws/kinesis</code>.</p>
     /// <ul>
@@ -1681,10 +1712,13 @@ pub struct StreamDescriptionSummary {
     /// <li> <p>Alias name example: <code>alias/MyAliasName</code> </p> </li>
     /// <li> <p>Master key owned by Kinesis Data Streams: <code>alias/aws/kinesis</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub key_id: std::option::Option<std::string::String>,
     /// <p>The number of open shards in the stream.</p>
+    #[doc(hidden)]
     pub open_shard_count: std::option::Option<i32>,
     /// <p>The number of enhanced fan-out consumers registered with the stream.</p>
+    #[doc(hidden)]
     pub consumer_count: std::option::Option<i32>,
 }
 impl StreamDescriptionSummary {
@@ -1767,11 +1801,10 @@ impl std::fmt::Debug for StreamDescriptionSummary {
         formatter.finish()
     }
 }
-/// See [`StreamDescriptionSummary`](crate::model::StreamDescriptionSummary)
+/// See [`StreamDescriptionSummary`](crate::model::StreamDescriptionSummary).
 pub mod stream_description_summary {
 
-    /// A builder for [`StreamDescriptionSummary`](crate::model::StreamDescriptionSummary)
-    #[non_exhaustive]
+    /// A builder for [`StreamDescriptionSummary`](crate::model::StreamDescriptionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stream_name: std::option::Option<std::string::String>,
@@ -1953,7 +1986,7 @@ pub mod stream_description_summary {
             self.consumer_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamDescriptionSummary`](crate::model::StreamDescriptionSummary)
+        /// Consumes the builder and constructs a [`StreamDescriptionSummary`](crate::model::StreamDescriptionSummary).
         pub fn build(self) -> crate::model::StreamDescriptionSummary {
             crate::model::StreamDescriptionSummary {
                 stream_name: self.stream_name,
@@ -1972,7 +2005,7 @@ pub mod stream_description_summary {
     }
 }
 impl StreamDescriptionSummary {
-    /// Creates a new builder-style object to manufacture [`StreamDescriptionSummary`](crate::model::StreamDescriptionSummary)
+    /// Creates a new builder-style object to manufacture [`StreamDescriptionSummary`](crate::model::StreamDescriptionSummary).
     pub fn builder() -> crate::model::stream_description_summary::Builder {
         crate::model::stream_description_summary::Builder::default()
     }
@@ -1995,6 +2028,7 @@ pub struct EnhancedMetrics {
     /// <li> <p> <code>ALL</code> </p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/kinesis/latest/dev/monitoring-with-cloudwatch.html">Monitoring the Amazon Kinesis Data Streams Service with Amazon CloudWatch</a> in the <i>Amazon Kinesis Data Streams Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub shard_level_metrics: std::option::Option<std::vec::Vec<crate::model::MetricsName>>,
 }
 impl EnhancedMetrics {
@@ -2022,11 +2056,10 @@ impl std::fmt::Debug for EnhancedMetrics {
         formatter.finish()
     }
 }
-/// See [`EnhancedMetrics`](crate::model::EnhancedMetrics)
+/// See [`EnhancedMetrics`](crate::model::EnhancedMetrics).
 pub mod enhanced_metrics {
 
-    /// A builder for [`EnhancedMetrics`](crate::model::EnhancedMetrics)
-    #[non_exhaustive]
+    /// A builder for [`EnhancedMetrics`](crate::model::EnhancedMetrics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) shard_level_metrics:
@@ -2076,7 +2109,7 @@ pub mod enhanced_metrics {
             self.shard_level_metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnhancedMetrics`](crate::model::EnhancedMetrics)
+        /// Consumes the builder and constructs a [`EnhancedMetrics`](crate::model::EnhancedMetrics).
         pub fn build(self) -> crate::model::EnhancedMetrics {
             crate::model::EnhancedMetrics {
                 shard_level_metrics: self.shard_level_metrics,
@@ -2085,7 +2118,7 @@ pub mod enhanced_metrics {
     }
 }
 impl EnhancedMetrics {
-    /// Creates a new builder-style object to manufacture [`EnhancedMetrics`](crate::model::EnhancedMetrics)
+    /// Creates a new builder-style object to manufacture [`EnhancedMetrics`](crate::model::EnhancedMetrics).
     pub fn builder() -> crate::model::enhanced_metrics::Builder {
         crate::model::enhanced_metrics::Builder::default()
     }
@@ -2159,15 +2192,20 @@ impl AsRef<str> for StreamStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConsumerDescription {
     /// <p>The name of the consumer is something you choose when you register the consumer.</p>
+    #[doc(hidden)]
     pub consumer_name: std::option::Option<std::string::String>,
     /// <p>When you register a consumer, Kinesis Data Streams generates an ARN for it. You need this ARN to be able to call <code>SubscribeToShard</code>.</p>
     /// <p>If you delete a consumer and then create a new one with the same name, it won't have the same ARN. That's because consumer ARNs contain the creation timestamp. This is important to keep in mind if you have IAM policies that reference consumer ARNs.</p>
+    #[doc(hidden)]
     pub consumer_arn: std::option::Option<std::string::String>,
     /// <p>A consumer can't read data while in the <code>CREATING</code> or <code>DELETING</code> states.</p>
+    #[doc(hidden)]
     pub consumer_status: std::option::Option<crate::model::ConsumerStatus>,
     /// <p></p>
+    #[doc(hidden)]
     pub consumer_creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The ARN of the stream with which you registered the consumer.</p>
+    #[doc(hidden)]
     pub stream_arn: std::option::Option<std::string::String>,
 }
 impl ConsumerDescription {
@@ -2207,11 +2245,10 @@ impl std::fmt::Debug for ConsumerDescription {
         formatter.finish()
     }
 }
-/// See [`ConsumerDescription`](crate::model::ConsumerDescription)
+/// See [`ConsumerDescription`](crate::model::ConsumerDescription).
 pub mod consumer_description {
 
-    /// A builder for [`ConsumerDescription`](crate::model::ConsumerDescription)
-    #[non_exhaustive]
+    /// A builder for [`ConsumerDescription`](crate::model::ConsumerDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) consumer_name: std::option::Option<std::string::String>,
@@ -2282,7 +2319,7 @@ pub mod consumer_description {
             self.stream_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConsumerDescription`](crate::model::ConsumerDescription)
+        /// Consumes the builder and constructs a [`ConsumerDescription`](crate::model::ConsumerDescription).
         pub fn build(self) -> crate::model::ConsumerDescription {
             crate::model::ConsumerDescription {
                 consumer_name: self.consumer_name,
@@ -2295,7 +2332,7 @@ pub mod consumer_description {
     }
 }
 impl ConsumerDescription {
-    /// Creates a new builder-style object to manufacture [`ConsumerDescription`](crate::model::ConsumerDescription)
+    /// Creates a new builder-style object to manufacture [`ConsumerDescription`](crate::model::ConsumerDescription).
     pub fn builder() -> crate::model::consumer_description::Builder {
         crate::model::consumer_description::Builder::default()
     }
@@ -2306,8 +2343,10 @@ impl ConsumerDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamDescription {
     /// <p>The name of the stream being described.</p>
+    #[doc(hidden)]
     pub stream_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the stream being described.</p>
+    #[doc(hidden)]
     pub stream_arn: std::option::Option<std::string::String>,
     /// <p>The current status of the stream being described. The stream status is one of the following states:</p>
     /// <ul>
@@ -2316,24 +2355,32 @@ pub struct StreamDescription {
     /// <li> <p> <code>ACTIVE</code> - The stream exists and is ready for read and write operations or deletion. You should perform read and write operations only on an <code>ACTIVE</code> stream.</p> </li>
     /// <li> <p> <code>UPDATING</code> - Shards in the stream are being merged or split. Read and write operations continue to work while the stream is in the <code>UPDATING</code> state.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub stream_status: std::option::Option<crate::model::StreamStatus>,
     /// <p> Specifies the capacity mode to which you want to set your data stream. Currently, in Kinesis Data Streams, you can choose between an <b>on-demand</b> capacity mode and a <b>provisioned</b> capacity mode for your data streams. </p>
+    #[doc(hidden)]
     pub stream_mode_details: std::option::Option<crate::model::StreamModeDetails>,
     /// <p>The shards that comprise the stream.</p>
+    #[doc(hidden)]
     pub shards: std::option::Option<std::vec::Vec<crate::model::Shard>>,
     /// <p>If set to <code>true</code>, more shards in the stream are available to describe.</p>
+    #[doc(hidden)]
     pub has_more_shards: std::option::Option<bool>,
     /// <p>The current retention period, in hours. Minimum value of 24. Maximum value of 168.</p>
+    #[doc(hidden)]
     pub retention_period_hours: std::option::Option<i32>,
     /// <p>The approximate time that the stream was created.</p>
+    #[doc(hidden)]
     pub stream_creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Represents the current enhanced monitoring settings of the stream.</p>
+    #[doc(hidden)]
     pub enhanced_monitoring: std::option::Option<std::vec::Vec<crate::model::EnhancedMetrics>>,
     /// <p>The server-side encryption type used on the stream. This parameter can be one of the following values:</p>
     /// <ul>
     /// <li> <p> <code>NONE</code>: Do not encrypt the records in the stream.</p> </li>
     /// <li> <p> <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed Amazon Web Services KMS key.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub encryption_type: std::option::Option<crate::model::EncryptionType>,
     /// <p>The GUID for the customer-managed Amazon Web Services KMS key to use for encryption. This value can be a globally unique identifier, a fully specified ARN to either an alias or a key, or an alias name prefixed by "alias/".You can also use a master key owned by Kinesis Data Streams by specifying the alias <code>aws/kinesis</code>.</p>
     /// <ul>
@@ -2343,6 +2390,7 @@ pub struct StreamDescription {
     /// <li> <p>Alias name example: <code>alias/MyAliasName</code> </p> </li>
     /// <li> <p>Master key owned by Kinesis Data Streams: <code>alias/aws/kinesis</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub key_id: std::option::Option<std::string::String>,
 }
 impl StreamDescription {
@@ -2425,11 +2473,10 @@ impl std::fmt::Debug for StreamDescription {
         formatter.finish()
     }
 }
-/// See [`StreamDescription`](crate::model::StreamDescription)
+/// See [`StreamDescription`](crate::model::StreamDescription).
 pub mod stream_description {
 
-    /// A builder for [`StreamDescription`](crate::model::StreamDescription)
-    #[non_exhaustive]
+    /// A builder for [`StreamDescription`](crate::model::StreamDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stream_name: std::option::Option<std::string::String>,
@@ -2620,7 +2667,7 @@ pub mod stream_description {
             self.key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamDescription`](crate::model::StreamDescription)
+        /// Consumes the builder and constructs a [`StreamDescription`](crate::model::StreamDescription).
         pub fn build(self) -> crate::model::StreamDescription {
             crate::model::StreamDescription {
                 stream_name: self.stream_name,
@@ -2639,7 +2686,7 @@ pub mod stream_description {
     }
 }
 impl StreamDescription {
-    /// Creates a new builder-style object to manufacture [`StreamDescription`](crate::model::StreamDescription)
+    /// Creates a new builder-style object to manufacture [`StreamDescription`](crate::model::StreamDescription).
     pub fn builder() -> crate::model::stream_description::Builder {
         crate::model::stream_description::Builder::default()
     }

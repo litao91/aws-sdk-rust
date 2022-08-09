@@ -5,12 +5,16 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrafficPolicyInstance {
     /// <p>The ID that Amazon Route 53 assigned to the new traffic policy instance.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The ID of the hosted zone that Amazon Route 53 created resource record sets in.</p>
+    #[doc(hidden)]
     pub hosted_zone_id: std::option::Option<std::string::String>,
     /// <p>The DNS name, such as www.example.com, for which Amazon Route 53 responds to queries by using the resource record sets that are associated with this traffic policy instance. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The TTL that Amazon Route 53 assigned to all of the resource record sets that it created in the specified hosted zone.</p>
+    #[doc(hidden)]
     pub ttl: std::option::Option<i64>,
     /// <p>The value of <code>State</code> is one of the following values:</p>
     /// <dl>
@@ -33,14 +37,19 @@ pub struct TrafficPolicyInstance {
     /// <p>Route 53 wasn't able to create or update the resource record sets. When the value of <code>State</code> is <code>Failed</code>, see <code>Message</code> for an explanation of what caused the request to fail.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>If <code>State</code> is <code>Failed</code>, an explanation of the reason for the failure. If <code>State</code> is another value, <code>Message</code> is empty.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The ID of the traffic policy that Amazon Route 53 used to create resource record sets in the specified hosted zone.</p>
+    #[doc(hidden)]
     pub traffic_policy_id: std::option::Option<std::string::String>,
     /// <p>The version of the traffic policy that Amazon Route 53 used to create resource record sets in the specified hosted zone.</p>
+    #[doc(hidden)]
     pub traffic_policy_version: std::option::Option<i32>,
     /// <p>The DNS type that Amazon Route 53 assigned to all of the resource record sets that it created for this traffic policy instance. </p>
+    #[doc(hidden)]
     pub traffic_policy_type: std::option::Option<crate::model::RrType>,
 }
 impl TrafficPolicyInstance {
@@ -116,11 +125,10 @@ impl std::fmt::Debug for TrafficPolicyInstance {
         formatter.finish()
     }
 }
-/// See [`TrafficPolicyInstance`](crate::model::TrafficPolicyInstance)
+/// See [`TrafficPolicyInstance`](crate::model::TrafficPolicyInstance).
 pub mod traffic_policy_instance {
 
-    /// A builder for [`TrafficPolicyInstance`](crate::model::TrafficPolicyInstance)
-    #[non_exhaustive]
+    /// A builder for [`TrafficPolicyInstance`](crate::model::TrafficPolicyInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -273,7 +281,7 @@ pub mod traffic_policy_instance {
             self.traffic_policy_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrafficPolicyInstance`](crate::model::TrafficPolicyInstance)
+        /// Consumes the builder and constructs a [`TrafficPolicyInstance`](crate::model::TrafficPolicyInstance).
         pub fn build(self) -> crate::model::TrafficPolicyInstance {
             crate::model::TrafficPolicyInstance {
                 id: self.id,
@@ -290,7 +298,7 @@ pub mod traffic_policy_instance {
     }
 }
 impl TrafficPolicyInstance {
-    /// Creates a new builder-style object to manufacture [`TrafficPolicyInstance`](crate::model::TrafficPolicyInstance)
+    /// Creates a new builder-style object to manufacture [`TrafficPolicyInstance`](crate::model::TrafficPolicyInstance).
     pub fn builder() -> crate::model::traffic_policy_instance::Builder {
         crate::model::traffic_policy_instance::Builder::default()
     }
@@ -403,16 +411,22 @@ impl AsRef<str> for RrType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrafficPolicy {
     /// <p>The ID that Amazon Route 53 assigned to a traffic policy when you created it.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The version number that Amazon Route 53 assigns to a traffic policy. For a new traffic policy, the value of <code>Version</code> is always 1.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<i32>,
     /// <p>The name that you specified when you created the traffic policy.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The DNS type of the resource record sets that Amazon Route 53 creates when you use a traffic policy to create a traffic policy instance.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RrType>,
     /// <p>The definition of a traffic policy in JSON format. You specify the JSON document to use for a new traffic policy in the <code>CreateTrafficPolicy</code> request. For more information about the JSON format, see <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/api-policies-traffic-policy-document-format.html">Traffic Policy Document Format</a>.</p>
+    #[doc(hidden)]
     pub document: std::option::Option<std::string::String>,
     /// <p>The comment that you specify in the <code>CreateTrafficPolicy</code> request, if any.</p>
+    #[doc(hidden)]
     pub comment: std::option::Option<std::string::String>,
 }
 impl TrafficPolicy {
@@ -453,11 +467,10 @@ impl std::fmt::Debug for TrafficPolicy {
         formatter.finish()
     }
 }
-/// See [`TrafficPolicy`](crate::model::TrafficPolicy)
+/// See [`TrafficPolicy`](crate::model::TrafficPolicy).
 pub mod traffic_policy {
 
-    /// A builder for [`TrafficPolicy`](crate::model::TrafficPolicy)
-    #[non_exhaustive]
+    /// A builder for [`TrafficPolicy`](crate::model::TrafficPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -528,7 +541,7 @@ pub mod traffic_policy {
             self.comment = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrafficPolicy`](crate::model::TrafficPolicy)
+        /// Consumes the builder and constructs a [`TrafficPolicy`](crate::model::TrafficPolicy).
         pub fn build(self) -> crate::model::TrafficPolicy {
             crate::model::TrafficPolicy {
                 id: self.id,
@@ -542,7 +555,7 @@ pub mod traffic_policy {
     }
 }
 impl TrafficPolicy {
-    /// Creates a new builder-style object to manufacture [`TrafficPolicy`](crate::model::TrafficPolicy)
+    /// Creates a new builder-style object to manufacture [`TrafficPolicy`](crate::model::TrafficPolicy).
     pub fn builder() -> crate::model::traffic_policy::Builder {
         crate::model::traffic_policy::Builder::default()
     }
@@ -553,17 +566,23 @@ impl TrafficPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HostedZone {
     /// <p>The ID that Amazon Route 53 assigned to the hosted zone when you created it.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the domain. For public hosted zones, this is the name that you have registered with your DNS registrar.</p>
     /// <p>For information about how to specify characters other than <code>a-z</code>, <code>0-9</code>, and <code>-</code> (hyphen) and how to specify internationalized domain names, see <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html">CreateHostedZone</a>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value that you specified for <code>CallerReference</code> when you created the hosted zone.</p>
+    #[doc(hidden)]
     pub caller_reference: std::option::Option<std::string::String>,
     /// <p>A complex type that includes the <code>Comment</code> and <code>PrivateZone</code> elements. If you omitted the <code>HostedZoneConfig</code> and <code>Comment</code> elements from the request, the <code>Config</code> and <code>Comment</code> elements don't appear in the response.</p>
+    #[doc(hidden)]
     pub config: std::option::Option<crate::model::HostedZoneConfig>,
     /// <p>The number of resource record sets in the hosted zone.</p>
+    #[doc(hidden)]
     pub resource_record_set_count: std::option::Option<i64>,
     /// <p>If the hosted zone was created by another service, the service that created the hosted zone. When a hosted zone is created by another service, you can't edit or delete it using Route 53. </p>
+    #[doc(hidden)]
     pub linked_service: std::option::Option<crate::model::LinkedService>,
 }
 impl HostedZone {
@@ -605,11 +624,10 @@ impl std::fmt::Debug for HostedZone {
         formatter.finish()
     }
 }
-/// See [`HostedZone`](crate::model::HostedZone)
+/// See [`HostedZone`](crate::model::HostedZone).
 pub mod hosted_zone {
 
-    /// A builder for [`HostedZone`](crate::model::HostedZone)
-    #[non_exhaustive]
+    /// A builder for [`HostedZone`](crate::model::HostedZone).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -691,7 +709,7 @@ pub mod hosted_zone {
             self.linked_service = input;
             self
         }
-        /// Consumes the builder and constructs a [`HostedZone`](crate::model::HostedZone)
+        /// Consumes the builder and constructs a [`HostedZone`](crate::model::HostedZone).
         pub fn build(self) -> crate::model::HostedZone {
             crate::model::HostedZone {
                 id: self.id,
@@ -705,7 +723,7 @@ pub mod hosted_zone {
     }
 }
 impl HostedZone {
-    /// Creates a new builder-style object to manufacture [`HostedZone`](crate::model::HostedZone)
+    /// Creates a new builder-style object to manufacture [`HostedZone`](crate::model::HostedZone).
     pub fn builder() -> crate::model::hosted_zone::Builder {
         crate::model::hosted_zone::Builder::default()
     }
@@ -716,8 +734,10 @@ impl HostedZone {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LinkedService {
     /// <p>If the health check or hosted zone was created by another service, the service that created the resource. When a resource is created by another service, you can't edit or delete it using Amazon Route 53. </p>
+    #[doc(hidden)]
     pub service_principal: std::option::Option<std::string::String>,
     /// <p>If the health check or hosted zone was created by another service, an optional description that can be provided by the other service. When a resource is created by another service, you can't edit or delete it using Amazon Route 53. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl LinkedService {
@@ -738,11 +758,10 @@ impl std::fmt::Debug for LinkedService {
         formatter.finish()
     }
 }
-/// See [`LinkedService`](crate::model::LinkedService)
+/// See [`LinkedService`](crate::model::LinkedService).
 pub mod linked_service {
 
-    /// A builder for [`LinkedService`](crate::model::LinkedService)
-    #[non_exhaustive]
+    /// A builder for [`LinkedService`](crate::model::LinkedService).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_principal: std::option::Option<std::string::String>,
@@ -772,7 +791,7 @@ pub mod linked_service {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`LinkedService`](crate::model::LinkedService)
+        /// Consumes the builder and constructs a [`LinkedService`](crate::model::LinkedService).
         pub fn build(self) -> crate::model::LinkedService {
             crate::model::LinkedService {
                 service_principal: self.service_principal,
@@ -782,7 +801,7 @@ pub mod linked_service {
     }
 }
 impl LinkedService {
-    /// Creates a new builder-style object to manufacture [`LinkedService`](crate::model::LinkedService)
+    /// Creates a new builder-style object to manufacture [`LinkedService`](crate::model::LinkedService).
     pub fn builder() -> crate::model::linked_service::Builder {
         crate::model::linked_service::Builder::default()
     }
@@ -793,8 +812,10 @@ impl LinkedService {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HostedZoneConfig {
     /// <p>Any comments that you want to include about the hosted zone.</p>
+    #[doc(hidden)]
     pub comment: std::option::Option<std::string::String>,
     /// <p>A value that indicates whether this is a private hosted zone.</p>
+    #[doc(hidden)]
     pub private_zone: bool,
 }
 impl HostedZoneConfig {
@@ -815,11 +836,10 @@ impl std::fmt::Debug for HostedZoneConfig {
         formatter.finish()
     }
 }
-/// See [`HostedZoneConfig`](crate::model::HostedZoneConfig)
+/// See [`HostedZoneConfig`](crate::model::HostedZoneConfig).
 pub mod hosted_zone_config {
 
-    /// A builder for [`HostedZoneConfig`](crate::model::HostedZoneConfig)
-    #[non_exhaustive]
+    /// A builder for [`HostedZoneConfig`](crate::model::HostedZoneConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) comment: std::option::Option<std::string::String>,
@@ -846,7 +866,7 @@ pub mod hosted_zone_config {
             self.private_zone = input;
             self
         }
-        /// Consumes the builder and constructs a [`HostedZoneConfig`](crate::model::HostedZoneConfig)
+        /// Consumes the builder and constructs a [`HostedZoneConfig`](crate::model::HostedZoneConfig).
         pub fn build(self) -> crate::model::HostedZoneConfig {
             crate::model::HostedZoneConfig {
                 comment: self.comment,
@@ -856,7 +876,7 @@ pub mod hosted_zone_config {
     }
 }
 impl HostedZoneConfig {
-    /// Creates a new builder-style object to manufacture [`HostedZoneConfig`](crate::model::HostedZoneConfig)
+    /// Creates a new builder-style object to manufacture [`HostedZoneConfig`](crate::model::HostedZoneConfig).
     pub fn builder() -> crate::model::hosted_zone_config::Builder {
         crate::model::hosted_zone_config::Builder::default()
     }
@@ -867,16 +887,22 @@ impl HostedZoneConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HealthCheck {
     /// <p>The identifier that Amazon Route 53 assigned to the health check when you created it. When you add or update a resource record set, you use this value to specify which health check to use. The value can be up to 64 characters long. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A unique string that you specified when you created the health check.</p>
+    #[doc(hidden)]
     pub caller_reference: std::option::Option<std::string::String>,
     /// <p>If the health check was created by another service, the service that created the health check. When a health check is created by another service, you can't edit or delete it using Amazon Route 53. </p>
+    #[doc(hidden)]
     pub linked_service: std::option::Option<crate::model::LinkedService>,
     /// <p>A complex type that contains detailed information about one health check.</p>
+    #[doc(hidden)]
     pub health_check_config: std::option::Option<crate::model::HealthCheckConfig>,
     /// <p>The version of the health check. You can optionally pass this value in a call to <code>UpdateHealthCheck</code> to prevent overwriting another change to the health check.</p>
+    #[doc(hidden)]
     pub health_check_version: std::option::Option<i64>,
     /// <p>A complex type that contains information about the CloudWatch alarm that Amazon Route 53 is monitoring for this health check.</p>
+    #[doc(hidden)]
     pub cloud_watch_alarm_configuration:
         std::option::Option<crate::model::CloudWatchAlarmConfiguration>,
 }
@@ -923,11 +949,10 @@ impl std::fmt::Debug for HealthCheck {
         formatter.finish()
     }
 }
-/// See [`HealthCheck`](crate::model::HealthCheck)
+/// See [`HealthCheck`](crate::model::HealthCheck).
 pub mod health_check {
 
-    /// A builder for [`HealthCheck`](crate::model::HealthCheck)
-    #[non_exhaustive]
+    /// A builder for [`HealthCheck`](crate::model::HealthCheck).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1014,7 +1039,7 @@ pub mod health_check {
             self.cloud_watch_alarm_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`HealthCheck`](crate::model::HealthCheck)
+        /// Consumes the builder and constructs a [`HealthCheck`](crate::model::HealthCheck).
         pub fn build(self) -> crate::model::HealthCheck {
             crate::model::HealthCheck {
                 id: self.id,
@@ -1028,7 +1053,7 @@ pub mod health_check {
     }
 }
 impl HealthCheck {
-    /// Creates a new builder-style object to manufacture [`HealthCheck`](crate::model::HealthCheck)
+    /// Creates a new builder-style object to manufacture [`HealthCheck`](crate::model::HealthCheck).
     pub fn builder() -> crate::model::health_check::Builder {
         crate::model::health_check::Builder::default()
     }
@@ -1039,20 +1064,28 @@ impl HealthCheck {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchAlarmConfiguration {
     /// <p>For the metric that the CloudWatch alarm is associated with, the number of periods that the metric is compared to the threshold.</p>
+    #[doc(hidden)]
     pub evaluation_periods: std::option::Option<i32>,
     /// <p>For the metric that the CloudWatch alarm is associated with, the value the metric is compared with.</p>
+    #[doc(hidden)]
     pub threshold: std::option::Option<f64>,
     /// <p>For the metric that the CloudWatch alarm is associated with, the arithmetic operation that is used for the comparison.</p>
+    #[doc(hidden)]
     pub comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
     /// <p>For the metric that the CloudWatch alarm is associated with, the duration of one evaluation period in seconds.</p>
+    #[doc(hidden)]
     pub period: std::option::Option<i32>,
     /// <p>The name of the CloudWatch metric that the alarm is associated with.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The namespace of the metric that the alarm is associated with. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">Amazon CloudWatch Namespaces, Dimensions, and Metrics Reference</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
     /// <p>For the metric that the CloudWatch alarm is associated with, the statistic that is applied to the metric.</p>
+    #[doc(hidden)]
     pub statistic: std::option::Option<crate::model::Statistic>,
     /// <p>For the metric that the CloudWatch alarm is associated with, a complex type that contains information about the dimensions for the metric. For information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">Amazon CloudWatch Namespaces, Dimensions, and Metrics Reference</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::Dimension>>,
 }
 impl CloudWatchAlarmConfiguration {
@@ -1103,11 +1136,10 @@ impl std::fmt::Debug for CloudWatchAlarmConfiguration {
         formatter.finish()
     }
 }
-/// See [`CloudWatchAlarmConfiguration`](crate::model::CloudWatchAlarmConfiguration)
+/// See [`CloudWatchAlarmConfiguration`](crate::model::CloudWatchAlarmConfiguration).
 pub mod cloud_watch_alarm_configuration {
 
-    /// A builder for [`CloudWatchAlarmConfiguration`](crate::model::CloudWatchAlarmConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchAlarmConfiguration`](crate::model::CloudWatchAlarmConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) evaluation_periods: std::option::Option<i32>,
@@ -1215,7 +1247,7 @@ pub mod cloud_watch_alarm_configuration {
             self.dimensions = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchAlarmConfiguration`](crate::model::CloudWatchAlarmConfiguration)
+        /// Consumes the builder and constructs a [`CloudWatchAlarmConfiguration`](crate::model::CloudWatchAlarmConfiguration).
         pub fn build(self) -> crate::model::CloudWatchAlarmConfiguration {
             crate::model::CloudWatchAlarmConfiguration {
                 evaluation_periods: self.evaluation_periods,
@@ -1231,7 +1263,7 @@ pub mod cloud_watch_alarm_configuration {
     }
 }
 impl CloudWatchAlarmConfiguration {
-    /// Creates a new builder-style object to manufacture [`CloudWatchAlarmConfiguration`](crate::model::CloudWatchAlarmConfiguration)
+    /// Creates a new builder-style object to manufacture [`CloudWatchAlarmConfiguration`](crate::model::CloudWatchAlarmConfiguration).
     pub fn builder() -> crate::model::cloud_watch_alarm_configuration::Builder {
         crate::model::cloud_watch_alarm_configuration::Builder::default()
     }
@@ -1242,8 +1274,10 @@ impl CloudWatchAlarmConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Dimension {
     /// <p>For the metric that the CloudWatch alarm is associated with, the name of one dimension.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>For the metric that the CloudWatch alarm is associated with, the value of one dimension.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Dimension {
@@ -1264,11 +1298,10 @@ impl std::fmt::Debug for Dimension {
         formatter.finish()
     }
 }
-/// See [`Dimension`](crate::model::Dimension)
+/// See [`Dimension`](crate::model::Dimension).
 pub mod dimension {
 
-    /// A builder for [`Dimension`](crate::model::Dimension)
-    #[non_exhaustive]
+    /// A builder for [`Dimension`](crate::model::Dimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1295,7 +1328,7 @@ pub mod dimension {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Dimension`](crate::model::Dimension)
+        /// Consumes the builder and constructs a [`Dimension`](crate::model::Dimension).
         pub fn build(self) -> crate::model::Dimension {
             crate::model::Dimension {
                 name: self.name,
@@ -1305,7 +1338,7 @@ pub mod dimension {
     }
 }
 impl Dimension {
-    /// Creates a new builder-style object to manufacture [`Dimension`](crate::model::Dimension)
+    /// Creates a new builder-style object to manufacture [`Dimension`](crate::model::Dimension).
     pub fn builder() -> crate::model::dimension::Builder {
         crate::model::dimension::Builder::default()
     }
@@ -1465,10 +1498,12 @@ pub struct HealthCheckConfig {
     /// <li> <p> <a href="https://tools.ietf.org/html/rfc5156">RFC 5156, Special-Use IPv6 Addresses</a> </p> </li>
     /// </ul>
     /// <p>When the value of <code>Type</code> is <code>CALCULATED</code> or <code>CLOUDWATCH_METRIC</code>, omit <code>IPAddress</code>.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The port on the endpoint that you want Amazon Route 53 to perform health checks on.</p> <note>
     /// <p>Don't specify a value for <code>Port</code> when you specify a value for <code>Type</code> of <code>CLOUDWATCH_METRIC</code> or <code>CALCULATED</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>The type of health check that you want to create, which indicates how Amazon Route 53 determines whether an endpoint is healthy.</p> <important>
     /// <p>You can't change the value of <code>Type</code> after you create a health check.</p>
@@ -1487,8 +1522,10 @@ pub struct HealthCheckConfig {
     /// <li> <p> <b>RECOVERY_CONTROL</b>: The health check is assocated with a Route53 Application Recovery Controller routing control. If the routing control state is <code>ON</code>, the health check is considered healthy. If the state is <code>OFF</code>, the health check is considered unhealthy. </p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html">How Route 53 Determines Whether an Endpoint Is Healthy</a> in the <i>Amazon Route 53 Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::HealthCheckType>,
     /// <p>The path, if any, that you want Amazon Route 53 to request when performing health checks. The path can be any value for which your endpoint will return an HTTP status code of 2xx or 3xx when the endpoint is healthy, for example, the file /docs/route53-health-check.html. You can also include query string parameters, for example, <code>/welcome.html?language=jp&amp;login=y</code>. </p>
+    #[doc(hidden)]
     pub resource_path: std::option::Option<std::string::String>,
     /// <p>Amazon Route 53 behavior depends on whether you specify a value for <code>IPAddress</code>.</p>
     /// <p> <b>If you specify a value for</b> <code>IPAddress</code>:</p>
@@ -1508,23 +1545,29 @@ pub struct HealthCheckConfig {
     /// <p>In this configuration, if you create a health check for which the value of <code>FullyQualifiedDomainName</code> matches the name of the resource record sets and you then associate the health check with those resource record sets, health check results will be unpredictable.</p>
     /// </important>
     /// <p>In addition, if the value that you specify for <code>Type</code> is <code>HTTP</code>, <code>HTTPS</code>, <code>HTTP_STR_MATCH</code>, or <code>HTTPS_STR_MATCH</code>, Route 53 passes the value of <code>FullyQualifiedDomainName</code> in the <code>Host</code> header, as it does when you specify a value for <code>IPAddress</code>. If the value of <code>Type</code> is <code>TCP</code>, Route 53 doesn't pass a <code>Host</code> header.</p>
+    #[doc(hidden)]
     pub fully_qualified_domain_name: std::option::Option<std::string::String>,
     /// <p>If the value of Type is <code>HTTP_STR_MATCH</code> or <code>HTTPS_STR_MATCH</code>, the string that you want Amazon Route 53 to search for in the response body from the specified resource. If the string appears in the response body, Route 53 considers the resource healthy.</p>
     /// <p>Route 53 considers case when searching for <code>SearchString</code> in the response body. </p>
+    #[doc(hidden)]
     pub search_string: std::option::Option<std::string::String>,
     /// <p>The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health check request. Each Route 53 health checker makes requests at this interval.</p> <important>
     /// <p>You can't change the value of <code>RequestInterval</code> after you create a health check.</p>
     /// </important>
     /// <p>If you don't specify a value for <code>RequestInterval</code>, the default value is <code>30</code> seconds.</p>
+    #[doc(hidden)]
     pub request_interval: std::option::Option<i32>,
     /// <p>The number of consecutive health checks that an endpoint must pass or fail for Amazon Route 53 to change the current status of the endpoint from unhealthy to healthy or vice versa. For more information, see <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html">How Amazon Route 53 Determines Whether an Endpoint Is Healthy</a> in the <i>Amazon Route 53 Developer Guide</i>.</p>
     /// <p>If you don't specify a value for <code>FailureThreshold</code>, the default value is three health checks.</p>
+    #[doc(hidden)]
     pub failure_threshold: std::option::Option<i32>,
     /// <p>Specify whether you want Amazon Route 53 to measure the latency between health checkers in multiple Amazon Web Services regions and your endpoint, and to display CloudWatch latency graphs on the <b>Health Checks</b> page in the Route 53 console.</p> <important>
     /// <p>You can't change the value of <code>MeasureLatency</code> after you create a health check.</p>
     /// </important>
+    #[doc(hidden)]
     pub measure_latency: std::option::Option<bool>,
     /// <p>Specify whether you want Amazon Route 53 to invert the status of a health check, for example, to consider a health check unhealthy when it otherwise would be considered healthy.</p>
+    #[doc(hidden)]
     pub inverted: std::option::Option<bool>,
     /// <p>Stops Route 53 from performing health checks. When you disable a health check, here's what happens:</p>
     /// <ul>
@@ -1534,6 +1577,7 @@ pub struct HealthCheckConfig {
     /// </ul>
     /// <p>After you disable a health check, Route 53 considers the status of the health check to always be healthy. If you configured DNS failover, Route 53 continues to route traffic to the corresponding resources. If you want to stop routing traffic to a resource, change the value of <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_UpdateHealthCheck.html#Route53-UpdateHealthCheck-request-Inverted">Inverted</a>. </p>
     /// <p>Charges for a health check still apply when the health check is disabled. For more information, see <a href="http://aws.amazon.com/route53/pricing/">Amazon Route 53 Pricing</a>.</p>
+    #[doc(hidden)]
     pub disabled: std::option::Option<bool>,
     /// <p>The number of child health checks that are associated with a <code>CALCULATED</code> health check that Amazon Route 53 must consider healthy for the <code>CALCULATED</code> health check to be considered healthy. To specify the child health checks that you want to associate with a <code>CALCULATED</code> health check, use the <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_UpdateHealthCheck.html#Route53-UpdateHealthCheck-request-ChildHealthChecks">ChildHealthChecks</a> element.</p>
     /// <p>Note the following:</p>
@@ -1541,18 +1585,23 @@ pub struct HealthCheckConfig {
     /// <li> <p>If you specify a number greater than the number of child health checks, Route 53 always considers this health check to be unhealthy.</p> </li>
     /// <li> <p>If you specify <code>0</code>, Route 53 always considers this health check to be healthy.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub health_threshold: std::option::Option<i32>,
     /// <p>(CALCULATED Health Checks Only) A complex type that contains one <code>ChildHealthCheck</code> element for each health check that you want to associate with a <code>CALCULATED</code> health check.</p>
+    #[doc(hidden)]
     pub child_health_checks: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specify whether you want Amazon Route 53 to send the value of <code>FullyQualifiedDomainName</code> to the endpoint in the <code>client_hello</code> message during TLS negotiation. This allows the endpoint to respond to <code>HTTPS</code> health check requests with the applicable SSL/TLS certificate.</p>
     /// <p>Some endpoints require that <code>HTTPS</code> requests include the host name in the <code>client_hello</code> message. If you don't enable SNI, the status of the health check will be <code>SSL alert handshake_failure</code>. A health check can also have that status for other reasons. If SNI is enabled and you're still getting the error, check the SSL/TLS configuration on your endpoint and confirm that your certificate is valid.</p>
     /// <p>The SSL/TLS certificate on your endpoint includes a domain name in the <code>Common Name</code> field and possibly several more in the <code>Subject Alternative Names</code> field. One of the domain names in the certificate should match the value that you specify for <code>FullyQualifiedDomainName</code>. If the endpoint responds to the <code>client_hello</code> message with a certificate that does not include the domain name that you specified in <code>FullyQualifiedDomainName</code>, a health checker will retry the handshake. In the second attempt, the health checker will omit <code>FullyQualifiedDomainName</code> from the <code>client_hello</code> message.</p>
+    #[doc(hidden)]
     pub enable_sni: std::option::Option<bool>,
     /// <p>A complex type that contains one <code>Region</code> element for each region from which you want Amazon Route 53 health checkers to check the specified endpoint.</p>
     /// <p>If you don't specify any regions, Route 53 health checkers automatically performs checks from all of the regions that are listed under <b>Valid Values</b>.</p>
     /// <p>If you update a health check to remove a region that has been performing health checks, Route 53 will briefly continue to perform checks from that region to ensure that some health checkers are always checking the endpoint (for example, if you replace three regions with four different regions). </p>
+    #[doc(hidden)]
     pub regions: std::option::Option<std::vec::Vec<crate::model::HealthCheckRegion>>,
     /// <p>A complex type that identifies the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether the specified health check is healthy.</p>
+    #[doc(hidden)]
     pub alarm_identifier: std::option::Option<crate::model::AlarmIdentifier>,
     /// <p>When CloudWatch has insufficient data about the metric to determine the alarm state, the status that you want Amazon Route 53 to assign to the health check:</p>
     /// <ul>
@@ -1560,10 +1609,12 @@ pub struct HealthCheckConfig {
     /// <li> <p> <code>Unhealthy</code>: Route 53 considers the health check to be unhealthy.</p> </li>
     /// <li> <p> <code>LastKnownStatus</code>: Route 53 uses the status of the health check from the last time that CloudWatch had sufficient data to determine the alarm state. For new health checks that have no last known status, the default status for the health check is healthy.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub insufficient_data_health_status:
         std::option::Option<crate::model::InsufficientDataHealthStatus>,
     /// <p>The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control.</p>
     /// <p>For more information about Route 53 Application Recovery Controller, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route-53-recovery.html">Route 53 Application Recovery Controller Developer Guide.</a>.</p>
+    #[doc(hidden)]
     pub routing_control_arn: std::option::Option<std::string::String>,
 }
 impl HealthCheckConfig {
@@ -1750,11 +1801,10 @@ impl std::fmt::Debug for HealthCheckConfig {
         formatter.finish()
     }
 }
-/// See [`HealthCheckConfig`](crate::model::HealthCheckConfig)
+/// See [`HealthCheckConfig`](crate::model::HealthCheckConfig).
 pub mod health_check_config {
 
-    /// A builder for [`HealthCheckConfig`](crate::model::HealthCheckConfig)
-    #[non_exhaustive]
+    /// A builder for [`HealthCheckConfig`](crate::model::HealthCheckConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_address: std::option::Option<std::string::String>,
@@ -2159,7 +2209,7 @@ pub mod health_check_config {
             self.routing_control_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`HealthCheckConfig`](crate::model::HealthCheckConfig)
+        /// Consumes the builder and constructs a [`HealthCheckConfig`](crate::model::HealthCheckConfig).
         pub fn build(self) -> crate::model::HealthCheckConfig {
             crate::model::HealthCheckConfig {
                 ip_address: self.ip_address,
@@ -2185,7 +2235,7 @@ pub mod health_check_config {
     }
 }
 impl HealthCheckConfig {
-    /// Creates a new builder-style object to manufacture [`HealthCheckConfig`](crate::model::HealthCheckConfig)
+    /// Creates a new builder-style object to manufacture [`HealthCheckConfig`](crate::model::HealthCheckConfig).
     pub fn builder() -> crate::model::health_check_config::Builder {
         crate::model::health_check_config::Builder::default()
     }
@@ -2256,6 +2306,7 @@ impl AsRef<str> for InsufficientDataHealthStatus {
 pub struct AlarmIdentifier {
     /// <p>For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.</p>
     /// <p>For the current list of CloudWatch regions, see <a href="https://docs.aws.amazon.com/general/latest/gr/cw_region.html">Amazon CloudWatch endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<crate::model::CloudWatchRegion>,
     /// <p>The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.</p> <note>
     /// <p>Route 53 supports CloudWatch alarms with the following features:</p>
@@ -2264,6 +2315,7 @@ pub struct AlarmIdentifier {
     /// <li> <p>Statistics: Average, Minimum, Maximum, Sum, and SampleCount. Extended statistics aren't supported.</p> </li>
     /// </ul>
     /// </note>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl AlarmIdentifier {
@@ -2291,11 +2343,10 @@ impl std::fmt::Debug for AlarmIdentifier {
         formatter.finish()
     }
 }
-/// See [`AlarmIdentifier`](crate::model::AlarmIdentifier)
+/// See [`AlarmIdentifier`](crate::model::AlarmIdentifier).
 pub mod alarm_identifier {
 
-    /// A builder for [`AlarmIdentifier`](crate::model::AlarmIdentifier)
-    #[non_exhaustive]
+    /// A builder for [`AlarmIdentifier`](crate::model::AlarmIdentifier).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) region: std::option::Option<crate::model::CloudWatchRegion>,
@@ -2339,7 +2390,7 @@ pub mod alarm_identifier {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AlarmIdentifier`](crate::model::AlarmIdentifier)
+        /// Consumes the builder and constructs a [`AlarmIdentifier`](crate::model::AlarmIdentifier).
         pub fn build(self) -> crate::model::AlarmIdentifier {
             crate::model::AlarmIdentifier {
                 region: self.region,
@@ -2349,7 +2400,7 @@ pub mod alarm_identifier {
     }
 }
 impl AlarmIdentifier {
-    /// Creates a new builder-style object to manufacture [`AlarmIdentifier`](crate::model::AlarmIdentifier)
+    /// Creates a new builder-style object to manufacture [`AlarmIdentifier`](crate::model::AlarmIdentifier).
     pub fn builder() -> crate::model::alarm_identifier::Builder {
         crate::model::alarm_identifier::Builder::default()
     }
@@ -2798,8 +2849,10 @@ impl AsRef<str> for ResettableElementName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Vpc {
     /// <p>(Private hosted zones only) The region that an Amazon VPC was created in.</p>
+    #[doc(hidden)]
     pub vpc_region: std::option::Option<crate::model::VpcRegion>,
     /// <p>(Private hosted zones only) The ID of an Amazon VPC. </p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
 }
 impl Vpc {
@@ -2820,11 +2873,10 @@ impl std::fmt::Debug for Vpc {
         formatter.finish()
     }
 }
-/// See [`Vpc`](crate::model::Vpc)
+/// See [`Vpc`](crate::model::Vpc).
 pub mod vpc {
 
-    /// A builder for [`Vpc`](crate::model::Vpc)
-    #[non_exhaustive]
+    /// A builder for [`Vpc`](crate::model::Vpc).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_region: std::option::Option<crate::model::VpcRegion>,
@@ -2854,7 +2906,7 @@ pub mod vpc {
             self.vpc_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Vpc`](crate::model::Vpc)
+        /// Consumes the builder and constructs a [`Vpc`](crate::model::Vpc).
         pub fn build(self) -> crate::model::Vpc {
             crate::model::Vpc {
                 vpc_region: self.vpc_region,
@@ -2864,7 +2916,7 @@ pub mod vpc {
     }
 }
 impl Vpc {
-    /// Creates a new builder-style object to manufacture [`Vpc`](crate::model::Vpc)
+    /// Creates a new builder-style object to manufacture [`Vpc`](crate::model::Vpc).
     pub fn builder() -> crate::model::vpc::Builder {
         crate::model::vpc::Builder::default()
     }
@@ -3063,14 +3115,19 @@ impl AsRef<str> for VpcRegion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrafficPolicySummary {
     /// <p>The ID that Amazon Route 53 assigned to the traffic policy when you created it.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name that you specified for the traffic policy when you created it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The DNS type of the resource record sets that Amazon Route 53 creates when you use a traffic policy to create a traffic policy instance.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RrType>,
     /// <p>The version number of the latest version of the traffic policy.</p>
+    #[doc(hidden)]
     pub latest_version: std::option::Option<i32>,
     /// <p>The number of traffic policies that are associated with the current Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub traffic_policy_count: std::option::Option<i32>,
 }
 impl TrafficPolicySummary {
@@ -3106,11 +3163,10 @@ impl std::fmt::Debug for TrafficPolicySummary {
         formatter.finish()
     }
 }
-/// See [`TrafficPolicySummary`](crate::model::TrafficPolicySummary)
+/// See [`TrafficPolicySummary`](crate::model::TrafficPolicySummary).
 pub mod traffic_policy_summary {
 
-    /// A builder for [`TrafficPolicySummary`](crate::model::TrafficPolicySummary)
-    #[non_exhaustive]
+    /// A builder for [`TrafficPolicySummary`](crate::model::TrafficPolicySummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3170,7 +3226,7 @@ pub mod traffic_policy_summary {
             self.traffic_policy_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrafficPolicySummary`](crate::model::TrafficPolicySummary)
+        /// Consumes the builder and constructs a [`TrafficPolicySummary`](crate::model::TrafficPolicySummary).
         pub fn build(self) -> crate::model::TrafficPolicySummary {
             crate::model::TrafficPolicySummary {
                 id: self.id,
@@ -3183,7 +3239,7 @@ pub mod traffic_policy_summary {
     }
 }
 impl TrafficPolicySummary {
-    /// Creates a new builder-style object to manufacture [`TrafficPolicySummary`](crate::model::TrafficPolicySummary)
+    /// Creates a new builder-style object to manufacture [`TrafficPolicySummary`](crate::model::TrafficPolicySummary).
     pub fn builder() -> crate::model::traffic_policy_summary::Builder {
         crate::model::traffic_policy_summary::Builder::default()
     }
@@ -3198,10 +3254,13 @@ pub struct ResourceTagSet {
     /// <li> <p>The resource type for health checks is <code>healthcheck</code>.</p> </li>
     /// <li> <p>The resource type for hosted zones is <code>hostedzone</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::TagResourceType>,
     /// <p>The ID for the specified resource.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The tags associated with the specified resource.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ResourceTagSet {
@@ -3231,11 +3290,10 @@ impl std::fmt::Debug for ResourceTagSet {
         formatter.finish()
     }
 }
-/// See [`ResourceTagSet`](crate::model::ResourceTagSet)
+/// See [`ResourceTagSet`](crate::model::ResourceTagSet).
 pub mod resource_tag_set {
 
-    /// A builder for [`ResourceTagSet`](crate::model::ResourceTagSet)
-    #[non_exhaustive]
+    /// A builder for [`ResourceTagSet`](crate::model::ResourceTagSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<crate::model::TagResourceType>,
@@ -3293,7 +3351,7 @@ pub mod resource_tag_set {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceTagSet`](crate::model::ResourceTagSet)
+        /// Consumes the builder and constructs a [`ResourceTagSet`](crate::model::ResourceTagSet).
         pub fn build(self) -> crate::model::ResourceTagSet {
             crate::model::ResourceTagSet {
                 resource_type: self.resource_type,
@@ -3304,7 +3362,7 @@ pub mod resource_tag_set {
     }
 }
 impl ResourceTagSet {
-    /// Creates a new builder-style object to manufacture [`ResourceTagSet`](crate::model::ResourceTagSet)
+    /// Creates a new builder-style object to manufacture [`ResourceTagSet`](crate::model::ResourceTagSet).
     pub fn builder() -> crate::model::resource_tag_set::Builder {
         crate::model::resource_tag_set::Builder::default()
     }
@@ -3321,12 +3379,14 @@ pub struct Tag {
     /// <li> <p> <b> Delete a key</b>: <code>Key</code> is the name of the tag you want to remove.</p> </li>
     /// <li> <p> <b>Give a name to a health check</b>: Edit the default <code>Name</code> tag. In the Amazon Route 53 console, the list of your health checks includes a <b>Name</b> column that lets you see the name that you've given to each health check.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of <code>Value</code> depends on the operation that you want to perform:</p>
     /// <ul>
     /// <li> <p> <b>Add a tag to a health check or hosted zone</b>: <code>Value</code> is the value that you want to give the new tag.</p> </li>
     /// <li> <p> <b>Edit a tag</b>: <code>Value</code> is the new value that you want to assign the tag.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -3357,11 +3417,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -3408,7 +3467,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -3418,7 +3477,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -3484,10 +3543,13 @@ impl AsRef<str> for TagResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DelegationSet {
     /// <p>The ID that Amazon Route 53 assigns to a reusable delegation set.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The value that you specified for <code>CallerReference</code> when you created the reusable delegation set.</p>
+    #[doc(hidden)]
     pub caller_reference: std::option::Option<std::string::String>,
     /// <p>A complex type that contains a list of the authoritative name servers for a hosted zone or for a reusable delegation set.</p>
+    #[doc(hidden)]
     pub name_servers: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DelegationSet {
@@ -3513,11 +3575,10 @@ impl std::fmt::Debug for DelegationSet {
         formatter.finish()
     }
 }
-/// See [`DelegationSet`](crate::model::DelegationSet)
+/// See [`DelegationSet`](crate::model::DelegationSet).
 pub mod delegation_set {
 
-    /// A builder for [`DelegationSet`](crate::model::DelegationSet)
-    #[non_exhaustive]
+    /// A builder for [`DelegationSet`](crate::model::DelegationSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3567,7 +3628,7 @@ pub mod delegation_set {
             self.name_servers = input;
             self
         }
-        /// Consumes the builder and constructs a [`DelegationSet`](crate::model::DelegationSet)
+        /// Consumes the builder and constructs a [`DelegationSet`](crate::model::DelegationSet).
         pub fn build(self) -> crate::model::DelegationSet {
             crate::model::DelegationSet {
                 id: self.id,
@@ -3578,7 +3639,7 @@ pub mod delegation_set {
     }
 }
 impl DelegationSet {
-    /// Creates a new builder-style object to manufacture [`DelegationSet`](crate::model::DelegationSet)
+    /// Creates a new builder-style object to manufacture [`DelegationSet`](crate::model::DelegationSet).
     pub fn builder() -> crate::model::delegation_set::Builder {
         crate::model::delegation_set::Builder::default()
     }
@@ -3601,6 +3662,7 @@ pub struct ResourceRecordSet {
     /// </important> </li>
     /// </ul>
     /// <p>You can use the * wildcard as the leftmost label in a domain name, for example, <code>*.example.com</code>. You can't use an * for one of the middle labels, for example, <code>marketing.*.example.com</code>. In addition, the * must replace the entire label; for example, you can't specify <code>prod*.example.com</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The DNS record type. For information about different record types and how data is encoded for them, see <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html">Supported DNS Resource Record Types</a> in the <i>Amazon Route 53 Developer Guide</i>.</p>
     /// <p>Valid values for basic resource record sets: <code>A</code> | <code>AAAA</code> | <code>CAA</code> | <code>CNAME</code> | <code>DS</code> |<code>MX</code> | <code>NAPTR</code> | <code>NS</code> | <code>PTR</code> | <code>SOA</code> | <code>SPF</code> | <code>SRV</code> | <code>TXT</code> </p>
@@ -3620,9 +3682,11 @@ pub struct ResourceRecordSet {
     /// <p>If you're creating an alias record that has the same name as the hosted zone (known as the zone apex), you can't route traffic to a record for which the value of <code>Type</code> is <code>CNAME</code>. This is because the alias record must have the same type as the record you're routing traffic to, and creating a CNAME record for the zone apex isn't supported even for an alias record.</p>
     /// </note> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RrType>,
     /// <p> <i>Resource record sets that have a routing policy other than simple:</i> An identifier that differentiates among multiple resource record sets that have the same combination of name and type, such as multiple weighted resource record sets named acme.example.com that have a type of A. In a group of resource record sets that have the same name and type, the value of <code>SetIdentifier</code> must be unique for each resource record set. </p>
     /// <p>For information about routing policies, see <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html">Choosing a Routing Policy</a> in the <i>Amazon Route 53 Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub set_identifier: std::option::Option<std::string::String>,
     /// <p> <i>Weighted resource record sets only:</i> Among resource record sets that have the same combination of DNS name and type, a value that determines the proportion of DNS queries that Amazon Route 53 responds to using the current resource record set. Route 53 calculates the sum of the weights for the resource record sets that have the same combination of DNS name and type. Route 53 then responds to queries based on the ratio of a resource's weight to the total. Note the following:</p>
     /// <ul>
@@ -3632,6 +3696,7 @@ pub struct ResourceRecordSet {
     /// <li> <p>You can create a maximum of 100 weighted resource record sets that have the same values for the <code>Name</code> and <code>Type</code> elements.</p> </li>
     /// <li> <p>For weighted (but not weighted alias) resource record sets, if you set <code>Weight</code> to <code>0</code> for a resource record set, Route 53 never responds to queries with the applicable value for that resource record set. However, if you set <code>Weight</code> to <code>0</code> for all resource record sets that have the same combination of DNS name and type, traffic is routed to all resources with equal probability.</p> <p>The effect of setting <code>Weight</code> to <code>0</code> is different when you associate health checks with weighted resource record sets. For more information, see <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html">Options for Configuring Route 53 Active-Active and Active-Passive Failover</a> in the <i>Amazon Route 53 Developer Guide</i>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub weight: std::option::Option<i64>,
     /// <p> <i>Latency-based resource record sets only:</i> The Amazon EC2 Region where you created the resource that this resource record set refers to. The resource typically is an Amazon Web Services resource, such as an EC2 instance or an ELB load balancer, and is referred to by an IP address or a DNS domain name, depending on the record type.</p> <note>
     /// <p>Although creating latency and latency alias resource record sets in a private hosted zone is allowed, it's not supported.</p>
@@ -3644,6 +3709,7 @@ pub struct ResourceRecordSet {
     /// <li> <p>You aren't required to create latency resource record sets for all Amazon EC2 Regions. Route 53 will choose the region with the best latency from among the regions that you create latency resource record sets for.</p> </li>
     /// <li> <p>You can't create non-latency resource record sets that have the same values for the <code>Name</code> and <code>Type</code> elements as latency resource record sets.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub region: std::option::Option<crate::model::ResourceRecordSetRegion>,
     /// <p> <i>Geolocation resource record sets only:</i> A complex type that lets you control how Amazon Route 53 responds to DNS queries based on the geographic origin of the query. For example, if you want all queries from Africa to be routed to a web server with an IP address of <code>192.0.2.111</code>, create a resource record set with a <code>Type</code> of <code>A</code> and a <code>ContinentCode</code> of <code>AF</code>.</p> <note>
     /// <p>Although creating geolocation and geolocation alias resource record sets in a private hosted zone is allowed, it's not supported.</p>
@@ -3654,6 +3720,7 @@ pub struct ResourceRecordSet {
     /// <p>Geolocation works by mapping IP addresses to locations. However, some IP addresses aren't mapped to geographic locations, so even if you create geolocation resource record sets that cover all seven continents, Route 53 will receive some DNS queries from locations that it can't identify. We recommend that you create a resource record set for which the value of <code>CountryCode</code> is <code>*</code>. Two groups of queries are routed to the resource that you specify in this record: queries that come from locations for which you haven't created geolocation resource record sets and queries from IP addresses that aren't mapped to a location. If you don't create a <code>*</code> resource record set, Route 53 returns a "no answer" response for queries from those locations.</p>
     /// </important>
     /// <p>You can't create non-geolocation resource record sets that have the same values for the <code>Name</code> and <code>Type</code> elements as geolocation resource record sets.</p>
+    #[doc(hidden)]
     pub geo_location: std::option::Option<crate::model::GeoLocation>,
     /// <p> <i>Failover resource record sets only:</i> To configure failover, you add the <code>Failover</code> element to two resource record sets. For one resource record set, you specify <code>PRIMARY</code> as the value for <code>Failover</code>; for the other resource record set, you specify <code>SECONDARY</code>. In addition, you include the <code>HealthCheckId</code> element and specify the health check that you want Amazon Route 53 to perform for each resource record set.</p>
     /// <p>Except where noted, the following failover behaviors assume that you have included the <code>HealthCheckId</code> element in both resource record sets:</p>
@@ -3670,6 +3737,7 @@ pub struct ResourceRecordSet {
     /// <li> <p> <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover.html">Route 53 Health Checks and DNS Failover</a> </p> </li>
     /// <li> <p> <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-private-hosted-zones.html">Configuring Failover in a Private Hosted Zone</a> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub failover: std::option::Option<crate::model::ResourceRecordSetFailover>,
     /// <p> <i>Multivalue answer resource record sets only</i>: To route traffic approximately randomly to multiple resources, such as web servers, create one multivalue answer record for each resource and specify <code>true</code> for <code>MultiValueAnswer</code>. Note the following:</p>
     /// <ul>
@@ -3681,6 +3749,7 @@ pub struct ResourceRecordSet {
     /// <li> <p>If a resource becomes unavailable after a resolver caches a response, client software typically tries another of the IP addresses in the response.</p> </li>
     /// </ul>
     /// <p>You can't create multivalue answer alias records.</p>
+    #[doc(hidden)]
     pub multi_value_answer: std::option::Option<bool>,
     /// <p>The resource record cache time to live (TTL), in seconds. Note the following:</p>
     /// <ul>
@@ -3689,10 +3758,12 @@ pub struct ResourceRecordSet {
     /// <li> <p>All of the resource record sets in a group of weighted resource record sets must have the same value for <code>TTL</code>.</p> </li>
     /// <li> <p>If a group of weighted resource record sets includes one or more weighted alias resource record sets for which the alias target is an ELB load balancer, we recommend that you specify a <code>TTL</code> of 60 seconds for all of the non-alias weighted resource record sets that have the same name and type. Values other than 60 seconds (the TTL for load balancers) will change the effect of the values that you specify for <code>Weight</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub ttl: std::option::Option<i64>,
     /// <p>Information about the resource records to act upon.</p> <note>
     /// <p>If you're creating an alias resource record set, omit <code>ResourceRecords</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub resource_records: std::option::Option<std::vec::Vec<crate::model::ResourceRecord>>,
     /// <p> <i>Alias resource record sets only:</i> Information about the Amazon Web Services resource, such as a CloudFront distribution or an Amazon S3 bucket, that you want to route traffic to. </p>
     /// <p>If you're creating resource records sets for a private hosted zone, note the following:</p>
@@ -3701,6 +3772,7 @@ pub struct ResourceRecordSet {
     /// <li> <p>Creating geolocation alias resource record sets or latency alias resource record sets in a private hosted zone is unsupported.</p> </li>
     /// <li> <p>For information about creating failover resource record sets in a private hosted zone, see <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-private-hosted-zones.html">Configuring Failover in a Private Hosted Zone</a> in the <i>Amazon Route 53 Developer Guide</i>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub alias_target: std::option::Option<crate::model::AliasTarget>,
     /// <p>If you want Amazon Route 53 to return this resource record set in response to a DNS query only when the status of a health check is healthy, include the <code>HealthCheckId</code> element and specify the ID of the applicable health check.</p>
     /// <p>Route 53 determines whether a resource record set is healthy based on one of the following:</p>
@@ -3745,13 +3817,16 @@ pub struct ResourceRecordSet {
     /// <li> <p>Associate that health check with the resource record set.</p> </li>
     /// </ul>
     /// </important>
+    #[doc(hidden)]
     pub health_check_id: std::option::Option<std::string::String>,
     /// <p>When you create a traffic policy instance, Amazon Route 53 automatically creates a resource record set. <code>TrafficPolicyInstanceId</code> is the ID of the traffic policy instance that Route 53 created this resource record set for.</p> <important>
     /// <p>To delete the resource record set that is associated with a traffic policy instance, use <code>DeleteTrafficPolicyInstance</code>. Route 53 will delete the resource record set automatically. If you delete the resource record set by using <code>ChangeResourceRecordSets</code>, Route 53 doesn't automatically delete the traffic policy instance, and you'll continue to be charged for it even though it's no longer in use. </p>
     /// </important>
+    #[doc(hidden)]
     pub traffic_policy_instance_id: std::option::Option<std::string::String>,
     /// <p>The object that is specified in resource record set object when you are linking a resource record set to a CIDR location.</p>
     /// <p>A <code>LocationName</code> with an asterisk “*” can be used to create a default CIDR record. <code>CollectionId</code> is still required for default record.</p>
+    #[doc(hidden)]
     pub cidr_routing_config: std::option::Option<crate::model::CidrRoutingConfig>,
 }
 impl ResourceRecordSet {
@@ -3972,11 +4047,10 @@ impl std::fmt::Debug for ResourceRecordSet {
         formatter.finish()
     }
 }
-/// See [`ResourceRecordSet`](crate::model::ResourceRecordSet)
+/// See [`ResourceRecordSet`](crate::model::ResourceRecordSet).
 pub mod resource_record_set {
 
-    /// A builder for [`ResourceRecordSet`](crate::model::ResourceRecordSet)
-    #[non_exhaustive]
+    /// A builder for [`ResourceRecordSet`](crate::model::ResourceRecordSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4443,7 +4517,7 @@ pub mod resource_record_set {
             self.cidr_routing_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceRecordSet`](crate::model::ResourceRecordSet)
+        /// Consumes the builder and constructs a [`ResourceRecordSet`](crate::model::ResourceRecordSet).
         pub fn build(self) -> crate::model::ResourceRecordSet {
             crate::model::ResourceRecordSet {
                 name: self.name,
@@ -4465,7 +4539,7 @@ pub mod resource_record_set {
     }
 }
 impl ResourceRecordSet {
-    /// Creates a new builder-style object to manufacture [`ResourceRecordSet`](crate::model::ResourceRecordSet)
+    /// Creates a new builder-style object to manufacture [`ResourceRecordSet`](crate::model::ResourceRecordSet).
     pub fn builder() -> crate::model::resource_record_set::Builder {
         crate::model::resource_record_set::Builder::default()
     }
@@ -4477,8 +4551,10 @@ impl ResourceRecordSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CidrRoutingConfig {
     /// <p>The CIDR collection ID.</p>
+    #[doc(hidden)]
     pub collection_id: std::option::Option<std::string::String>,
     /// <p>The CIDR collection location name.</p>
+    #[doc(hidden)]
     pub location_name: std::option::Option<std::string::String>,
 }
 impl CidrRoutingConfig {
@@ -4499,11 +4575,10 @@ impl std::fmt::Debug for CidrRoutingConfig {
         formatter.finish()
     }
 }
-/// See [`CidrRoutingConfig`](crate::model::CidrRoutingConfig)
+/// See [`CidrRoutingConfig`](crate::model::CidrRoutingConfig).
 pub mod cidr_routing_config {
 
-    /// A builder for [`CidrRoutingConfig`](crate::model::CidrRoutingConfig)
-    #[non_exhaustive]
+    /// A builder for [`CidrRoutingConfig`](crate::model::CidrRoutingConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) collection_id: std::option::Option<std::string::String>,
@@ -4536,7 +4611,7 @@ pub mod cidr_routing_config {
             self.location_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CidrRoutingConfig`](crate::model::CidrRoutingConfig)
+        /// Consumes the builder and constructs a [`CidrRoutingConfig`](crate::model::CidrRoutingConfig).
         pub fn build(self) -> crate::model::CidrRoutingConfig {
             crate::model::CidrRoutingConfig {
                 collection_id: self.collection_id,
@@ -4546,7 +4621,7 @@ pub mod cidr_routing_config {
     }
 }
 impl CidrRoutingConfig {
-    /// Creates a new builder-style object to manufacture [`CidrRoutingConfig`](crate::model::CidrRoutingConfig)
+    /// Creates a new builder-style object to manufacture [`CidrRoutingConfig`](crate::model::CidrRoutingConfig).
     pub fn builder() -> crate::model::cidr_routing_config::Builder {
         crate::model::cidr_routing_config::Builder::default()
     }
@@ -4632,6 +4707,7 @@ pub struct AliasTarget {
     /// <p>Specify the hosted zone ID of your hosted zone. (An alias resource record set can't reference a resource record set in a different hosted zone.)</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub hosted_zone_id: std::option::Option<std::string::String>,
     /// <p> <i>Alias resource record sets only:</i> The value that you specify depends on where you want to route queries:</p>
     /// <dl>
@@ -4721,6 +4797,7 @@ pub struct AliasTarget {
     /// </note>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub dns_name: std::option::Option<std::string::String>,
     /// <p> <i>Applies only to alias, failover alias, geolocation alias, latency alias, and weighted alias resource record sets:</i> When <code>EvaluateTargetHealth</code> is <code>true</code>, an alias resource record set inherits the health of the referenced Amazon Web Services resource, such as an ELB load balancer or another resource record set in the hosted zone.</p>
     /// <p>Note the following:</p>
@@ -4768,6 +4845,7 @@ pub struct AliasTarget {
     /// </dd>
     /// </dl>
     /// <p>For more information and examples, see <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover.html">Amazon Route 53 Health Checks and DNS Failover</a> in the <i>Amazon Route 53 Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub evaluate_target_health: bool,
 }
 impl AliasTarget {
@@ -4995,11 +5073,10 @@ impl std::fmt::Debug for AliasTarget {
         formatter.finish()
     }
 }
-/// See [`AliasTarget`](crate::model::AliasTarget)
+/// See [`AliasTarget`](crate::model::AliasTarget).
 pub mod alias_target {
 
-    /// A builder for [`AliasTarget`](crate::model::AliasTarget)
-    #[non_exhaustive]
+    /// A builder for [`AliasTarget`](crate::model::AliasTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hosted_zone_id: std::option::Option<std::string::String>,
@@ -5444,7 +5521,7 @@ pub mod alias_target {
             self.evaluate_target_health = input;
             self
         }
-        /// Consumes the builder and constructs a [`AliasTarget`](crate::model::AliasTarget)
+        /// Consumes the builder and constructs a [`AliasTarget`](crate::model::AliasTarget).
         pub fn build(self) -> crate::model::AliasTarget {
             crate::model::AliasTarget {
                 hosted_zone_id: self.hosted_zone_id,
@@ -5455,7 +5532,7 @@ pub mod alias_target {
     }
 }
 impl AliasTarget {
-    /// Creates a new builder-style object to manufacture [`AliasTarget`](crate::model::AliasTarget)
+    /// Creates a new builder-style object to manufacture [`AliasTarget`](crate::model::AliasTarget).
     pub fn builder() -> crate::model::alias_target::Builder {
         crate::model::alias_target::Builder::default()
     }
@@ -5471,6 +5548,7 @@ pub struct ResourceRecord {
     /// <p>You can specify more than one value for all record types except <code>CNAME</code> and <code>SOA</code>. </p> <note>
     /// <p>If you're creating an alias resource record set, omit <code>Value</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl ResourceRecord {
@@ -5489,11 +5567,10 @@ impl std::fmt::Debug for ResourceRecord {
         formatter.finish()
     }
 }
-/// See [`ResourceRecord`](crate::model::ResourceRecord)
+/// See [`ResourceRecord`](crate::model::ResourceRecord).
 pub mod resource_record {
 
-    /// A builder for [`ResourceRecord`](crate::model::ResourceRecord)
-    #[non_exhaustive]
+    /// A builder for [`ResourceRecord`](crate::model::ResourceRecord).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<std::string::String>,
@@ -5515,14 +5592,14 @@ pub mod resource_record {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceRecord`](crate::model::ResourceRecord)
+        /// Consumes the builder and constructs a [`ResourceRecord`](crate::model::ResourceRecord).
         pub fn build(self) -> crate::model::ResourceRecord {
             crate::model::ResourceRecord { value: self.value }
         }
     }
 }
 impl ResourceRecord {
-    /// Creates a new builder-style object to manufacture [`ResourceRecord`](crate::model::ResourceRecord)
+    /// Creates a new builder-style object to manufacture [`ResourceRecord`](crate::model::ResourceRecord).
     pub fn builder() -> crate::model::resource_record::Builder {
         crate::model::resource_record::Builder::default()
     }
@@ -5599,12 +5676,15 @@ pub struct GeoLocation {
     /// <li> <p> <b>SA</b>: South America</p> </li>
     /// </ul>
     /// <p>Constraint: Specifying <code>ContinentCode</code> with either <code>CountryCode</code> or <code>SubdivisionCode</code> returns an <code>InvalidInput</code> error.</p>
+    #[doc(hidden)]
     pub continent_code: std::option::Option<std::string::String>,
     /// <p>For geolocation resource record sets, the two-letter code for a country.</p>
     /// <p>Amazon Route 53 uses the two-letter country codes that are specified in <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.</p>
+    #[doc(hidden)]
     pub country_code: std::option::Option<std::string::String>,
     /// <p>For geolocation resource record sets, the two-letter code for a state of the United States. Route 53 doesn't support any other values for <code>SubdivisionCode</code>. For a list of state abbreviations, see <a href="https://pe.usps.com/text/pub28/28apb.htm">Appendix B: Two–Letter State and Possession Abbreviations</a> on the United States Postal Service website. </p>
     /// <p>If you specify <code>subdivisioncode</code>, you must also specify <code>US</code> for <code>CountryCode</code>. </p>
+    #[doc(hidden)]
     pub subdivision_code: std::option::Option<std::string::String>,
 }
 impl GeoLocation {
@@ -5643,11 +5723,10 @@ impl std::fmt::Debug for GeoLocation {
         formatter.finish()
     }
 }
-/// See [`GeoLocation`](crate::model::GeoLocation)
+/// See [`GeoLocation`](crate::model::GeoLocation).
 pub mod geo_location {
 
-    /// A builder for [`GeoLocation`](crate::model::GeoLocation)
-    #[non_exhaustive]
+    /// A builder for [`GeoLocation`](crate::model::GeoLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) continent_code: std::option::Option<std::string::String>,
@@ -5717,7 +5796,7 @@ pub mod geo_location {
             self.subdivision_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeoLocation`](crate::model::GeoLocation)
+        /// Consumes the builder and constructs a [`GeoLocation`](crate::model::GeoLocation).
         pub fn build(self) -> crate::model::GeoLocation {
             crate::model::GeoLocation {
                 continent_code: self.continent_code,
@@ -5728,7 +5807,7 @@ pub mod geo_location {
     }
 }
 impl GeoLocation {
-    /// Creates a new builder-style object to manufacture [`GeoLocation`](crate::model::GeoLocation)
+    /// Creates a new builder-style object to manufacture [`GeoLocation`](crate::model::GeoLocation).
     pub fn builder() -> crate::model::geo_location::Builder {
         crate::model::geo_location::Builder::default()
     }
@@ -5907,10 +5986,13 @@ impl AsRef<str> for ResourceRecordSetRegion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryLoggingConfig {
     /// <p>The ID for a configuration for DNS query logging.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The ID of the hosted zone that CloudWatch Logs is logging queries for. </p>
+    #[doc(hidden)]
     pub hosted_zone_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.</p>
+    #[doc(hidden)]
     pub cloud_watch_logs_log_group_arn: std::option::Option<std::string::String>,
 }
 impl QueryLoggingConfig {
@@ -5939,11 +6021,10 @@ impl std::fmt::Debug for QueryLoggingConfig {
         formatter.finish()
     }
 }
-/// See [`QueryLoggingConfig`](crate::model::QueryLoggingConfig)
+/// See [`QueryLoggingConfig`](crate::model::QueryLoggingConfig).
 pub mod query_logging_config {
 
-    /// A builder for [`QueryLoggingConfig`](crate::model::QueryLoggingConfig)
-    #[non_exhaustive]
+    /// A builder for [`QueryLoggingConfig`](crate::model::QueryLoggingConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -5990,7 +6071,7 @@ pub mod query_logging_config {
             self.cloud_watch_logs_log_group_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryLoggingConfig`](crate::model::QueryLoggingConfig)
+        /// Consumes the builder and constructs a [`QueryLoggingConfig`](crate::model::QueryLoggingConfig).
         pub fn build(self) -> crate::model::QueryLoggingConfig {
             crate::model::QueryLoggingConfig {
                 id: self.id,
@@ -6001,7 +6082,7 @@ pub mod query_logging_config {
     }
 }
 impl QueryLoggingConfig {
-    /// Creates a new builder-style object to manufacture [`QueryLoggingConfig`](crate::model::QueryLoggingConfig)
+    /// Creates a new builder-style object to manufacture [`QueryLoggingConfig`](crate::model::QueryLoggingConfig).
     pub fn builder() -> crate::model::query_logging_config::Builder {
         crate::model::query_logging_config::Builder::default()
     }
@@ -6012,10 +6093,13 @@ impl QueryLoggingConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HostedZoneSummary {
     /// <p>The Route 53 hosted zone ID of a private hosted zone that the specified VPC is associated with.</p>
+    #[doc(hidden)]
     pub hosted_zone_id: std::option::Option<std::string::String>,
     /// <p>The name of the private hosted zone, such as <code>example.com</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The owner of a private hosted zone that the specified VPC is associated with. The owner can be either an Amazon Web Services account or an Amazon Web Services service.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::HostedZoneOwner>,
 }
 impl HostedZoneSummary {
@@ -6041,11 +6125,10 @@ impl std::fmt::Debug for HostedZoneSummary {
         formatter.finish()
     }
 }
-/// See [`HostedZoneSummary`](crate::model::HostedZoneSummary)
+/// See [`HostedZoneSummary`](crate::model::HostedZoneSummary).
 pub mod hosted_zone_summary {
 
-    /// A builder for [`HostedZoneSummary`](crate::model::HostedZoneSummary)
-    #[non_exhaustive]
+    /// A builder for [`HostedZoneSummary`](crate::model::HostedZoneSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hosted_zone_id: std::option::Option<std::string::String>,
@@ -6089,7 +6172,7 @@ pub mod hosted_zone_summary {
             self.owner = input;
             self
         }
-        /// Consumes the builder and constructs a [`HostedZoneSummary`](crate::model::HostedZoneSummary)
+        /// Consumes the builder and constructs a [`HostedZoneSummary`](crate::model::HostedZoneSummary).
         pub fn build(self) -> crate::model::HostedZoneSummary {
             crate::model::HostedZoneSummary {
                 hosted_zone_id: self.hosted_zone_id,
@@ -6100,7 +6183,7 @@ pub mod hosted_zone_summary {
     }
 }
 impl HostedZoneSummary {
-    /// Creates a new builder-style object to manufacture [`HostedZoneSummary`](crate::model::HostedZoneSummary)
+    /// Creates a new builder-style object to manufacture [`HostedZoneSummary`](crate::model::HostedZoneSummary).
     pub fn builder() -> crate::model::hosted_zone_summary::Builder {
         crate::model::hosted_zone_summary::Builder::default()
     }
@@ -6111,8 +6194,10 @@ impl HostedZoneSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HostedZoneOwner {
     /// <p>If the hosted zone was created by an Amazon Web Services account, or was created by an Amazon Web Services service that creates hosted zones using the current account, <code>OwningAccount</code> contains the account ID of that account. For example, when you use Cloud Map to create a hosted zone, Cloud Map creates the hosted zone using the current Amazon Web Services account. </p>
+    #[doc(hidden)]
     pub owning_account: std::option::Option<std::string::String>,
     /// <p>If an Amazon Web Services service uses its own account to create a hosted zone and associate the specified VPC with that hosted zone, <code>OwningService</code> contains an abbreviation that identifies the service. For example, if Amazon Elastic File System (Amazon EFS) created a hosted zone and associated a VPC with the hosted zone, the value of <code>OwningService</code> is <code>efs.amazonaws.com</code>.</p>
+    #[doc(hidden)]
     pub owning_service: std::option::Option<std::string::String>,
 }
 impl HostedZoneOwner {
@@ -6133,11 +6218,10 @@ impl std::fmt::Debug for HostedZoneOwner {
         formatter.finish()
     }
 }
-/// See [`HostedZoneOwner`](crate::model::HostedZoneOwner)
+/// See [`HostedZoneOwner`](crate::model::HostedZoneOwner).
 pub mod hosted_zone_owner {
 
-    /// A builder for [`HostedZoneOwner`](crate::model::HostedZoneOwner)
-    #[non_exhaustive]
+    /// A builder for [`HostedZoneOwner`](crate::model::HostedZoneOwner).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owning_account: std::option::Option<std::string::String>,
@@ -6170,7 +6254,7 @@ pub mod hosted_zone_owner {
             self.owning_service = input;
             self
         }
-        /// Consumes the builder and constructs a [`HostedZoneOwner`](crate::model::HostedZoneOwner)
+        /// Consumes the builder and constructs a [`HostedZoneOwner`](crate::model::HostedZoneOwner).
         pub fn build(self) -> crate::model::HostedZoneOwner {
             crate::model::HostedZoneOwner {
                 owning_account: self.owning_account,
@@ -6180,7 +6264,7 @@ pub mod hosted_zone_owner {
     }
 }
 impl HostedZoneOwner {
-    /// Creates a new builder-style object to manufacture [`HostedZoneOwner`](crate::model::HostedZoneOwner)
+    /// Creates a new builder-style object to manufacture [`HostedZoneOwner`](crate::model::HostedZoneOwner).
     pub fn builder() -> crate::model::hosted_zone_owner::Builder {
         crate::model::hosted_zone_owner::Builder::default()
     }
@@ -6191,16 +6275,22 @@ impl HostedZoneOwner {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GeoLocationDetails {
     /// <p>The two-letter code for the continent.</p>
+    #[doc(hidden)]
     pub continent_code: std::option::Option<std::string::String>,
     /// <p>The full name of the continent.</p>
+    #[doc(hidden)]
     pub continent_name: std::option::Option<std::string::String>,
     /// <p>The two-letter code for the country.</p>
+    #[doc(hidden)]
     pub country_code: std::option::Option<std::string::String>,
     /// <p>The name of the country.</p>
+    #[doc(hidden)]
     pub country_name: std::option::Option<std::string::String>,
     /// <p>The code for the subdivision, such as a particular state within the United States. For a list of US state abbreviations, see <a href="https://pe.usps.com/text/pub28/28apb.htm">Appendix B: Two–Letter State and Possession Abbreviations</a> on the United States Postal Service website. For a list of all supported subdivision codes, use the <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListGeoLocations.html">ListGeoLocations</a> API.</p>
+    #[doc(hidden)]
     pub subdivision_code: std::option::Option<std::string::String>,
     /// <p>The full name of the subdivision. Route 53 currently supports only states in the United States.</p>
+    #[doc(hidden)]
     pub subdivision_name: std::option::Option<std::string::String>,
 }
 impl GeoLocationDetails {
@@ -6241,11 +6331,10 @@ impl std::fmt::Debug for GeoLocationDetails {
         formatter.finish()
     }
 }
-/// See [`GeoLocationDetails`](crate::model::GeoLocationDetails)
+/// See [`GeoLocationDetails`](crate::model::GeoLocationDetails).
 pub mod geo_location_details {
 
-    /// A builder for [`GeoLocationDetails`](crate::model::GeoLocationDetails)
-    #[non_exhaustive]
+    /// A builder for [`GeoLocationDetails`](crate::model::GeoLocationDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) continent_code: std::option::Option<std::string::String>,
@@ -6328,7 +6417,7 @@ pub mod geo_location_details {
             self.subdivision_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeoLocationDetails`](crate::model::GeoLocationDetails)
+        /// Consumes the builder and constructs a [`GeoLocationDetails`](crate::model::GeoLocationDetails).
         pub fn build(self) -> crate::model::GeoLocationDetails {
             crate::model::GeoLocationDetails {
                 continent_code: self.continent_code,
@@ -6342,7 +6431,7 @@ pub mod geo_location_details {
     }
 }
 impl GeoLocationDetails {
-    /// Creates a new builder-style object to manufacture [`GeoLocationDetails`](crate::model::GeoLocationDetails)
+    /// Creates a new builder-style object to manufacture [`GeoLocationDetails`](crate::model::GeoLocationDetails).
     pub fn builder() -> crate::model::geo_location_details::Builder {
         crate::model::geo_location_details::Builder::default()
     }
@@ -6353,6 +6442,7 @@ impl GeoLocationDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LocationSummary {
     /// <p>A string that specifies a location name.</p>
+    #[doc(hidden)]
     pub location_name: std::option::Option<std::string::String>,
 }
 impl LocationSummary {
@@ -6368,11 +6458,10 @@ impl std::fmt::Debug for LocationSummary {
         formatter.finish()
     }
 }
-/// See [`LocationSummary`](crate::model::LocationSummary)
+/// See [`LocationSummary`](crate::model::LocationSummary).
 pub mod location_summary {
 
-    /// A builder for [`LocationSummary`](crate::model::LocationSummary)
-    #[non_exhaustive]
+    /// A builder for [`LocationSummary`](crate::model::LocationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_name: std::option::Option<std::string::String>,
@@ -6391,7 +6480,7 @@ pub mod location_summary {
             self.location_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`LocationSummary`](crate::model::LocationSummary)
+        /// Consumes the builder and constructs a [`LocationSummary`](crate::model::LocationSummary).
         pub fn build(self) -> crate::model::LocationSummary {
             crate::model::LocationSummary {
                 location_name: self.location_name,
@@ -6400,7 +6489,7 @@ pub mod location_summary {
     }
 }
 impl LocationSummary {
-    /// Creates a new builder-style object to manufacture [`LocationSummary`](crate::model::LocationSummary)
+    /// Creates a new builder-style object to manufacture [`LocationSummary`](crate::model::LocationSummary).
     pub fn builder() -> crate::model::location_summary::Builder {
         crate::model::location_summary::Builder::default()
     }
@@ -6411,12 +6500,16 @@ impl LocationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CollectionSummary {
     /// <p>The ARN of the collection summary. Can be used to reference the collection in IAM policy or cross-account.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Unique ID for the CIDR collection.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of a CIDR collection.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A sequential counter that Route&nbsp;53 sets to 1 when you create a CIDR collection and increments by 1 each time you update settings for the CIDR collection.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<i64>,
 }
 impl CollectionSummary {
@@ -6447,11 +6540,10 @@ impl std::fmt::Debug for CollectionSummary {
         formatter.finish()
     }
 }
-/// See [`CollectionSummary`](crate::model::CollectionSummary)
+/// See [`CollectionSummary`](crate::model::CollectionSummary).
 pub mod collection_summary {
 
-    /// A builder for [`CollectionSummary`](crate::model::CollectionSummary)
-    #[non_exhaustive]
+    /// A builder for [`CollectionSummary`](crate::model::CollectionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -6500,7 +6592,7 @@ pub mod collection_summary {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`CollectionSummary`](crate::model::CollectionSummary)
+        /// Consumes the builder and constructs a [`CollectionSummary`](crate::model::CollectionSummary).
         pub fn build(self) -> crate::model::CollectionSummary {
             crate::model::CollectionSummary {
                 arn: self.arn,
@@ -6512,7 +6604,7 @@ pub mod collection_summary {
     }
 }
 impl CollectionSummary {
-    /// Creates a new builder-style object to manufacture [`CollectionSummary`](crate::model::CollectionSummary)
+    /// Creates a new builder-style object to manufacture [`CollectionSummary`](crate::model::CollectionSummary).
     pub fn builder() -> crate::model::collection_summary::Builder {
         crate::model::collection_summary::Builder::default()
     }
@@ -6523,8 +6615,10 @@ impl CollectionSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CidrBlockSummary {
     /// <p>Value for the CIDR block.</p>
+    #[doc(hidden)]
     pub cidr_block: std::option::Option<std::string::String>,
     /// <p>The location name of the CIDR block.</p>
+    #[doc(hidden)]
     pub location_name: std::option::Option<std::string::String>,
 }
 impl CidrBlockSummary {
@@ -6545,11 +6639,10 @@ impl std::fmt::Debug for CidrBlockSummary {
         formatter.finish()
     }
 }
-/// See [`CidrBlockSummary`](crate::model::CidrBlockSummary)
+/// See [`CidrBlockSummary`](crate::model::CidrBlockSummary).
 pub mod cidr_block_summary {
 
-    /// A builder for [`CidrBlockSummary`](crate::model::CidrBlockSummary)
-    #[non_exhaustive]
+    /// A builder for [`CidrBlockSummary`](crate::model::CidrBlockSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cidr_block: std::option::Option<std::string::String>,
@@ -6579,7 +6672,7 @@ pub mod cidr_block_summary {
             self.location_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CidrBlockSummary`](crate::model::CidrBlockSummary)
+        /// Consumes the builder and constructs a [`CidrBlockSummary`](crate::model::CidrBlockSummary).
         pub fn build(self) -> crate::model::CidrBlockSummary {
             crate::model::CidrBlockSummary {
                 cidr_block: self.cidr_block,
@@ -6589,7 +6682,7 @@ pub mod cidr_block_summary {
     }
 }
 impl CidrBlockSummary {
-    /// Creates a new builder-style object to manufacture [`CidrBlockSummary`](crate::model::CidrBlockSummary)
+    /// Creates a new builder-style object to manufacture [`CidrBlockSummary`](crate::model::CidrBlockSummary).
     pub fn builder() -> crate::model::cidr_block_summary::Builder {
         crate::model::cidr_block_summary::Builder::default()
     }
@@ -6600,8 +6693,10 @@ impl CidrBlockSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReusableDelegationSetLimit {
     /// <p>The limit that you requested: <code>MAX_ZONES_BY_REUSABLE_DELEGATION_SET</code>, the maximum number of hosted zones that you can associate with the specified reusable delegation set.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ReusableDelegationSetLimitType>,
     /// <p>The current value for the <code>MAX_ZONES_BY_REUSABLE_DELEGATION_SET</code> limit.</p>
+    #[doc(hidden)]
     pub value: i64,
 }
 impl ReusableDelegationSetLimit {
@@ -6622,11 +6717,10 @@ impl std::fmt::Debug for ReusableDelegationSetLimit {
         formatter.finish()
     }
 }
-/// See [`ReusableDelegationSetLimit`](crate::model::ReusableDelegationSetLimit)
+/// See [`ReusableDelegationSetLimit`](crate::model::ReusableDelegationSetLimit).
 pub mod reusable_delegation_set_limit {
 
-    /// A builder for [`ReusableDelegationSetLimit`](crate::model::ReusableDelegationSetLimit)
-    #[non_exhaustive]
+    /// A builder for [`ReusableDelegationSetLimit`](crate::model::ReusableDelegationSetLimit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::ReusableDelegationSetLimitType>,
@@ -6656,7 +6750,7 @@ pub mod reusable_delegation_set_limit {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReusableDelegationSetLimit`](crate::model::ReusableDelegationSetLimit)
+        /// Consumes the builder and constructs a [`ReusableDelegationSetLimit`](crate::model::ReusableDelegationSetLimit).
         pub fn build(self) -> crate::model::ReusableDelegationSetLimit {
             crate::model::ReusableDelegationSetLimit {
                 r#type: self.r#type,
@@ -6666,7 +6760,7 @@ pub mod reusable_delegation_set_limit {
     }
 }
 impl ReusableDelegationSetLimit {
-    /// Creates a new builder-style object to manufacture [`ReusableDelegationSetLimit`](crate::model::ReusableDelegationSetLimit)
+    /// Creates a new builder-style object to manufacture [`ReusableDelegationSetLimit`](crate::model::ReusableDelegationSetLimit).
     pub fn builder() -> crate::model::reusable_delegation_set_limit::Builder {
         crate::model::reusable_delegation_set_limit::Builder::default()
     }
@@ -6736,8 +6830,10 @@ pub struct HostedZoneLimit {
     /// <li> <p> <b>MAX_RRSETS_BY_ZONE</b>: The maximum number of records that you can create in the specified hosted zone.</p> </li>
     /// <li> <p> <b>MAX_VPCS_ASSOCIATED_BY_ZONE</b>: The maximum number of Amazon VPCs that you can associate with the specified private hosted zone.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::HostedZoneLimitType>,
     /// <p>The current value for the limit that is specified by <code>Type</code>.</p>
+    #[doc(hidden)]
     pub value: i64,
 }
 impl HostedZoneLimit {
@@ -6762,11 +6858,10 @@ impl std::fmt::Debug for HostedZoneLimit {
         formatter.finish()
     }
 }
-/// See [`HostedZoneLimit`](crate::model::HostedZoneLimit)
+/// See [`HostedZoneLimit`](crate::model::HostedZoneLimit).
 pub mod hosted_zone_limit {
 
-    /// A builder for [`HostedZoneLimit`](crate::model::HostedZoneLimit)
-    #[non_exhaustive]
+    /// A builder for [`HostedZoneLimit`](crate::model::HostedZoneLimit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::HostedZoneLimitType>,
@@ -6804,7 +6899,7 @@ pub mod hosted_zone_limit {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`HostedZoneLimit`](crate::model::HostedZoneLimit)
+        /// Consumes the builder and constructs a [`HostedZoneLimit`](crate::model::HostedZoneLimit).
         pub fn build(self) -> crate::model::HostedZoneLimit {
             crate::model::HostedZoneLimit {
                 r#type: self.r#type,
@@ -6814,7 +6909,7 @@ pub mod hosted_zone_limit {
     }
 }
 impl HostedZoneLimit {
-    /// Creates a new builder-style object to manufacture [`HostedZoneLimit`](crate::model::HostedZoneLimit)
+    /// Creates a new builder-style object to manufacture [`HostedZoneLimit`](crate::model::HostedZoneLimit).
     pub fn builder() -> crate::model::hosted_zone_limit::Builder {
         crate::model::hosted_zone_limit::Builder::default()
     }
@@ -6880,10 +6975,13 @@ impl AsRef<str> for HostedZoneLimitType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HealthCheckObservation {
     /// <p>The region of the Amazon Route 53 health checker that provided the status in <code>StatusReport</code>.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<crate::model::HealthCheckRegion>,
     /// <p>The IP address of the Amazon Route 53 health checker that provided the failure reason in <code>StatusReport</code>.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>A complex type that contains the last failure reason as reported by one Amazon Route 53 health checker and the time of the failed health check.</p>
+    #[doc(hidden)]
     pub status_report: std::option::Option<crate::model::StatusReport>,
 }
 impl HealthCheckObservation {
@@ -6909,11 +7007,10 @@ impl std::fmt::Debug for HealthCheckObservation {
         formatter.finish()
     }
 }
-/// See [`HealthCheckObservation`](crate::model::HealthCheckObservation)
+/// See [`HealthCheckObservation`](crate::model::HealthCheckObservation).
 pub mod health_check_observation {
 
-    /// A builder for [`HealthCheckObservation`](crate::model::HealthCheckObservation)
-    #[non_exhaustive]
+    /// A builder for [`HealthCheckObservation`](crate::model::HealthCheckObservation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) region: std::option::Option<crate::model::HealthCheckRegion>,
@@ -6957,7 +7054,7 @@ pub mod health_check_observation {
             self.status_report = input;
             self
         }
-        /// Consumes the builder and constructs a [`HealthCheckObservation`](crate::model::HealthCheckObservation)
+        /// Consumes the builder and constructs a [`HealthCheckObservation`](crate::model::HealthCheckObservation).
         pub fn build(self) -> crate::model::HealthCheckObservation {
             crate::model::HealthCheckObservation {
                 region: self.region,
@@ -6968,7 +7065,7 @@ pub mod health_check_observation {
     }
 }
 impl HealthCheckObservation {
-    /// Creates a new builder-style object to manufacture [`HealthCheckObservation`](crate::model::HealthCheckObservation)
+    /// Creates a new builder-style object to manufacture [`HealthCheckObservation`](crate::model::HealthCheckObservation).
     pub fn builder() -> crate::model::health_check_observation::Builder {
         crate::model::health_check_observation::Builder::default()
     }
@@ -6979,8 +7076,10 @@ impl HealthCheckObservation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatusReport {
     /// <p>A description of the status of the health check endpoint as reported by one of the Amazon Route 53 health checkers.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The date and time that the health checker performed the health check in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601 format</a> and Coordinated Universal Time (UTC). For example, the value <code>2017-03-27T17:48:16.751Z</code> represents March 27, 2017 at 17:48:16.751 UTC.</p>
+    #[doc(hidden)]
     pub checked_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl StatusReport {
@@ -7001,11 +7100,10 @@ impl std::fmt::Debug for StatusReport {
         formatter.finish()
     }
 }
-/// See [`StatusReport`](crate::model::StatusReport)
+/// See [`StatusReport`](crate::model::StatusReport).
 pub mod status_report {
 
-    /// A builder for [`StatusReport`](crate::model::StatusReport)
-    #[non_exhaustive]
+    /// A builder for [`StatusReport`](crate::model::StatusReport).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<std::string::String>,
@@ -7035,7 +7133,7 @@ pub mod status_report {
             self.checked_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatusReport`](crate::model::StatusReport)
+        /// Consumes the builder and constructs a [`StatusReport`](crate::model::StatusReport).
         pub fn build(self) -> crate::model::StatusReport {
             crate::model::StatusReport {
                 status: self.status,
@@ -7045,7 +7143,7 @@ pub mod status_report {
     }
 }
 impl StatusReport {
-    /// Creates a new builder-style object to manufacture [`StatusReport`](crate::model::StatusReport)
+    /// Creates a new builder-style object to manufacture [`StatusReport`](crate::model::StatusReport).
     pub fn builder() -> crate::model::status_report::Builder {
         crate::model::status_report::Builder::default()
     }
@@ -7056,6 +7154,7 @@ impl StatusReport {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeySigningKey {
     /// <p>A string used to identify a key-signing key (KSK). <code>Name</code> can include numbers, letters, and underscores (_). <code>Name</code> must be unique for each key-signing key in the same hosted zone.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon resource name (ARN) used to identify the customer managed key in Key Management Service (KMS). The <code>KmsArn</code> must be unique for each key-signing key (KSK) in a single hosted zone.</p>
     /// <p>You must configure the customer managed key as follows:</p>
@@ -7095,26 +7194,37 @@ pub struct KeySigningKey {
     /// </dd>
     /// </dl>
     /// <p>For more information about working with the customer managed key in KMS, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html">Key Management Service concepts</a>.</p>
+    #[doc(hidden)]
     pub kms_arn: std::option::Option<std::string::String>,
     /// <p>An integer that specifies how the key is used. For key-signing key (KSK), this value is always 257.</p>
+    #[doc(hidden)]
     pub flag: i32,
     /// <p>A string used to represent the signing algorithm. This value must follow the guidelines provided by <a href="https://tools.ietf.org/html/rfc8624#section-3.1">RFC-8624 Section 3.1</a>. </p>
+    #[doc(hidden)]
     pub signing_algorithm_mnemonic: std::option::Option<std::string::String>,
     /// <p>An integer used to represent the signing algorithm. This value must follow the guidelines provided by <a href="https://tools.ietf.org/html/rfc8624#section-3.1">RFC-8624 Section 3.1</a>. </p>
+    #[doc(hidden)]
     pub signing_algorithm_type: i32,
     /// <p>A string used to represent the delegation signer digest algorithm. This value must follow the guidelines provided by <a href="https://tools.ietf.org/html/rfc8624#section-3.3">RFC-8624 Section 3.3</a>. </p>
+    #[doc(hidden)]
     pub digest_algorithm_mnemonic: std::option::Option<std::string::String>,
     /// <p>An integer used to represent the delegation signer digest algorithm. This value must follow the guidelines provided by <a href="https://tools.ietf.org/html/rfc8624#section-3.3">RFC-8624 Section 3.3</a>.</p>
+    #[doc(hidden)]
     pub digest_algorithm_type: i32,
     /// <p>An integer used to identify the DNSSEC record for the domain name. The process used to calculate the value is described in <a href="https://tools.ietf.org/rfc/rfc4034.txt">RFC-4034 Appendix B</a>.</p>
+    #[doc(hidden)]
     pub key_tag: i32,
     /// <p>A cryptographic digest of a DNSKEY resource record (RR). DNSKEY records are used to publish the public key that resolvers can use to verify DNSSEC signatures that are used to secure certain kinds of information provided by the DNS system.</p>
+    #[doc(hidden)]
     pub digest_value: std::option::Option<std::string::String>,
     /// <p>The public key, represented as a Base64 encoding, as required by <a href="https://tools.ietf.org/rfc/rfc4034.txt"> RFC-4034 Page 5</a>.</p>
+    #[doc(hidden)]
     pub public_key: std::option::Option<std::string::String>,
     /// <p>A string that represents a delegation signer (DS) record.</p>
+    #[doc(hidden)]
     pub ds_record: std::option::Option<std::string::String>,
     /// <p>A string that represents a DNSKEY record.</p>
+    #[doc(hidden)]
     pub dnskey_record: std::option::Option<std::string::String>,
     /// <p>A string that represents the current key-signing key (KSK) status.</p>
     /// <p>Status can have one of the following values:</p>
@@ -7150,12 +7260,16 @@ pub struct KeySigningKey {
     /// <p>There was an error during a request. Before you can continue to work with DNSSEC signing, including actions that involve this KSK, you must correct the problem. For example, you may need to activate or deactivate the KSK.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The status message provided for the following key-signing key (KSK) statuses: <code>ACTION_NEEDED</code> or <code>INTERNAL_FAILURE</code>. The status message includes information about what the problem might be and steps that you can take to correct the issue.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The date when the key-signing key (KSK) was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last time that the key-signing key (KSK) was changed.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl KeySigningKey {
@@ -7319,11 +7433,10 @@ impl std::fmt::Debug for KeySigningKey {
         formatter.finish()
     }
 }
-/// See [`KeySigningKey`](crate::model::KeySigningKey)
+/// See [`KeySigningKey`](crate::model::KeySigningKey).
 pub mod key_signing_key {
 
-    /// A builder for [`KeySigningKey`](crate::model::KeySigningKey)
-    #[non_exhaustive]
+    /// A builder for [`KeySigningKey`](crate::model::KeySigningKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -7662,7 +7775,7 @@ pub mod key_signing_key {
             self.last_modified_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeySigningKey`](crate::model::KeySigningKey)
+        /// Consumes the builder and constructs a [`KeySigningKey`](crate::model::KeySigningKey).
         pub fn build(self) -> crate::model::KeySigningKey {
             crate::model::KeySigningKey {
                 name: self.name,
@@ -7686,7 +7799,7 @@ pub mod key_signing_key {
     }
 }
 impl KeySigningKey {
-    /// Creates a new builder-style object to manufacture [`KeySigningKey`](crate::model::KeySigningKey)
+    /// Creates a new builder-style object to manufacture [`KeySigningKey`](crate::model::KeySigningKey).
     pub fn builder() -> crate::model::key_signing_key::Builder {
         crate::model::key_signing_key::Builder::default()
     }
@@ -7730,8 +7843,10 @@ pub struct DnssecStatus {
     /// <p>There was an error during a request. Before you can continue to work with DNSSEC signing, including with key-signing keys (KSKs), you must correct the problem by enabling or disabling DNSSEC signing for the hosted zone.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub serve_signature: std::option::Option<std::string::String>,
     /// <p>The status message provided for the following DNSSEC signing status: <code>INTERNAL_FAILURE</code>. The status message includes information about what the problem might be and steps that you can take to correct the issue.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
 }
 impl DnssecStatus {
@@ -7785,11 +7900,10 @@ impl std::fmt::Debug for DnssecStatus {
         formatter.finish()
     }
 }
-/// See [`DnssecStatus`](crate::model::DnssecStatus)
+/// See [`DnssecStatus`](crate::model::DnssecStatus).
 pub mod dnssec_status {
 
-    /// A builder for [`DnssecStatus`](crate::model::DnssecStatus)
-    #[non_exhaustive]
+    /// A builder for [`DnssecStatus`](crate::model::DnssecStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) serve_signature: std::option::Option<std::string::String>,
@@ -7888,7 +8002,7 @@ pub mod dnssec_status {
             self.status_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DnssecStatus`](crate::model::DnssecStatus)
+        /// Consumes the builder and constructs a [`DnssecStatus`](crate::model::DnssecStatus).
         pub fn build(self) -> crate::model::DnssecStatus {
             crate::model::DnssecStatus {
                 serve_signature: self.serve_signature,
@@ -7898,7 +8012,7 @@ pub mod dnssec_status {
     }
 }
 impl DnssecStatus {
-    /// Creates a new builder-style object to manufacture [`DnssecStatus`](crate::model::DnssecStatus)
+    /// Creates a new builder-style object to manufacture [`DnssecStatus`](crate::model::DnssecStatus).
     pub fn builder() -> crate::model::dnssec_status::Builder {
         crate::model::dnssec_status::Builder::default()
     }
@@ -7909,12 +8023,16 @@ impl DnssecStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChangeInfo {
     /// <p>This element contains an ID that you use when performing a <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetChange.html">GetChange</a> action to get detailed information about the change.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The current state of the request. <code>PENDING</code> indicates that this request has not yet been applied to all Amazon Route 53 DNS servers.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ChangeStatus>,
     /// <p>The date and time that the change request was submitted in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601 format</a> and Coordinated Universal Time (UTC). For example, the value <code>2017-03-27T17:48:16.751Z</code> represents March 27, 2017 at 17:48:16.751 UTC.</p>
+    #[doc(hidden)]
     pub submitted_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A comment you can provide.</p>
+    #[doc(hidden)]
     pub comment: std::option::Option<std::string::String>,
 }
 impl ChangeInfo {
@@ -7945,11 +8063,10 @@ impl std::fmt::Debug for ChangeInfo {
         formatter.finish()
     }
 }
-/// See [`ChangeInfo`](crate::model::ChangeInfo)
+/// See [`ChangeInfo`](crate::model::ChangeInfo).
 pub mod change_info {
 
-    /// A builder for [`ChangeInfo`](crate::model::ChangeInfo)
-    #[non_exhaustive]
+    /// A builder for [`ChangeInfo`](crate::model::ChangeInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -8004,7 +8121,7 @@ pub mod change_info {
             self.comment = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeInfo`](crate::model::ChangeInfo)
+        /// Consumes the builder and constructs a [`ChangeInfo`](crate::model::ChangeInfo).
         pub fn build(self) -> crate::model::ChangeInfo {
             crate::model::ChangeInfo {
                 id: self.id,
@@ -8016,7 +8133,7 @@ pub mod change_info {
     }
 }
 impl ChangeInfo {
-    /// Creates a new builder-style object to manufacture [`ChangeInfo`](crate::model::ChangeInfo)
+    /// Creates a new builder-style object to manufacture [`ChangeInfo`](crate::model::ChangeInfo).
     pub fn builder() -> crate::model::change_info::Builder {
         crate::model::change_info::Builder::default()
     }
@@ -8089,8 +8206,10 @@ pub struct AccountLimit {
     /// <li> <p> <b>MAX_TRAFFIC_POLICIES_BY_OWNER</b>: The maximum number of traffic policies that you can create using the current account.</p> </li>
     /// <li> <p> <b>MAX_TRAFFIC_POLICY_INSTANCES_BY_OWNER</b>: The maximum number of traffic policy instances that you can create using the current account. (Traffic policy instances are referred to as traffic flow policy records in the Amazon Route 53 console.)</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::AccountLimitType>,
     /// <p>The current value for the limit that is specified by <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_AccountLimit.html#Route53-Type-AccountLimit-Type">Type</a>.</p>
+    #[doc(hidden)]
     pub value: i64,
 }
 impl AccountLimit {
@@ -8118,11 +8237,10 @@ impl std::fmt::Debug for AccountLimit {
         formatter.finish()
     }
 }
-/// See [`AccountLimit`](crate::model::AccountLimit)
+/// See [`AccountLimit`](crate::model::AccountLimit).
 pub mod account_limit {
 
-    /// A builder for [`AccountLimit`](crate::model::AccountLimit)
-    #[non_exhaustive]
+    /// A builder for [`AccountLimit`](crate::model::AccountLimit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::AccountLimitType>,
@@ -8166,7 +8284,7 @@ pub mod account_limit {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountLimit`](crate::model::AccountLimit)
+        /// Consumes the builder and constructs a [`AccountLimit`](crate::model::AccountLimit).
         pub fn build(self) -> crate::model::AccountLimit {
             crate::model::AccountLimit {
                 r#type: self.r#type,
@@ -8176,7 +8294,7 @@ pub mod account_limit {
     }
 }
 impl AccountLimit {
-    /// Creates a new builder-style object to manufacture [`AccountLimit`](crate::model::AccountLimit)
+    /// Creates a new builder-style object to manufacture [`AccountLimit`](crate::model::AccountLimit).
     pub fn builder() -> crate::model::account_limit::Builder {
         crate::model::account_limit::Builder::default()
     }
@@ -8268,12 +8386,16 @@ impl AsRef<str> for AccountLimitType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CidrCollection {
     /// <p>The ARN of the collection. Can be used to reference the collection in IAM policy or in another Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The unique ID of the CIDR collection.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of a CIDR collection.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A sequential counter that Route&nbsp;53 sets to 1 when you create a CIDR collection and increments by 1 each time you update settings for the CIDR collection.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<i64>,
 }
 impl CidrCollection {
@@ -8304,11 +8426,10 @@ impl std::fmt::Debug for CidrCollection {
         formatter.finish()
     }
 }
-/// See [`CidrCollection`](crate::model::CidrCollection)
+/// See [`CidrCollection`](crate::model::CidrCollection).
 pub mod cidr_collection {
 
-    /// A builder for [`CidrCollection`](crate::model::CidrCollection)
-    #[non_exhaustive]
+    /// A builder for [`CidrCollection`](crate::model::CidrCollection).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -8357,7 +8478,7 @@ pub mod cidr_collection {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`CidrCollection`](crate::model::CidrCollection)
+        /// Consumes the builder and constructs a [`CidrCollection`](crate::model::CidrCollection).
         pub fn build(self) -> crate::model::CidrCollection {
             crate::model::CidrCollection {
                 arn: self.arn,
@@ -8369,7 +8490,7 @@ pub mod cidr_collection {
     }
 }
 impl CidrCollection {
-    /// Creates a new builder-style object to manufacture [`CidrCollection`](crate::model::CidrCollection)
+    /// Creates a new builder-style object to manufacture [`CidrCollection`](crate::model::CidrCollection).
     pub fn builder() -> crate::model::cidr_collection::Builder {
         crate::model::cidr_collection::Builder::default()
     }
@@ -8380,8 +8501,10 @@ impl CidrCollection {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChangeBatch {
     /// <p> <i>Optional:</i> Any comments you want to include about a change batch request.</p>
+    #[doc(hidden)]
     pub comment: std::option::Option<std::string::String>,
     /// <p>Information about the changes to make to the record sets.</p>
+    #[doc(hidden)]
     pub changes: std::option::Option<std::vec::Vec<crate::model::Change>>,
 }
 impl ChangeBatch {
@@ -8402,11 +8525,10 @@ impl std::fmt::Debug for ChangeBatch {
         formatter.finish()
     }
 }
-/// See [`ChangeBatch`](crate::model::ChangeBatch)
+/// See [`ChangeBatch`](crate::model::ChangeBatch).
 pub mod change_batch {
 
-    /// A builder for [`ChangeBatch`](crate::model::ChangeBatch)
-    #[non_exhaustive]
+    /// A builder for [`ChangeBatch`](crate::model::ChangeBatch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) comment: std::option::Option<std::string::String>,
@@ -8442,7 +8564,7 @@ pub mod change_batch {
             self.changes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeBatch`](crate::model::ChangeBatch)
+        /// Consumes the builder and constructs a [`ChangeBatch`](crate::model::ChangeBatch).
         pub fn build(self) -> crate::model::ChangeBatch {
             crate::model::ChangeBatch {
                 comment: self.comment,
@@ -8452,7 +8574,7 @@ pub mod change_batch {
     }
 }
 impl ChangeBatch {
-    /// Creates a new builder-style object to manufacture [`ChangeBatch`](crate::model::ChangeBatch)
+    /// Creates a new builder-style object to manufacture [`ChangeBatch`](crate::model::ChangeBatch).
     pub fn builder() -> crate::model::change_batch::Builder {
         crate::model::change_batch::Builder::default()
     }
@@ -8470,8 +8592,10 @@ pub struct Change {
     /// </important> </li>
     /// <li> <p> <code>UPSERT</code>: If a resource record set doesn't already exist, Route 53 creates it. If a resource record set does exist, Route 53 updates it with the values in the request.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ChangeAction>,
     /// <p>Information about the resource record set to create, delete, or update.</p>
+    #[doc(hidden)]
     pub resource_record_set: std::option::Option<crate::model::ResourceRecordSet>,
 }
 impl Change {
@@ -8499,11 +8623,10 @@ impl std::fmt::Debug for Change {
         formatter.finish()
     }
 }
-/// See [`Change`](crate::model::Change)
+/// See [`Change`](crate::model::Change).
 pub mod change {
 
-    /// A builder for [`Change`](crate::model::Change)
-    #[non_exhaustive]
+    /// A builder for [`Change`](crate::model::Change).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ChangeAction>,
@@ -8550,7 +8673,7 @@ pub mod change {
             self.resource_record_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`Change`](crate::model::Change)
+        /// Consumes the builder and constructs a [`Change`](crate::model::Change).
         pub fn build(self) -> crate::model::Change {
             crate::model::Change {
                 action: self.action,
@@ -8560,7 +8683,7 @@ pub mod change {
     }
 }
 impl Change {
-    /// Creates a new builder-style object to manufacture [`Change`](crate::model::Change)
+    /// Creates a new builder-style object to manufacture [`Change`](crate::model::Change).
     pub fn builder() -> crate::model::change::Builder {
         crate::model::change::Builder::default()
     }
@@ -8630,10 +8753,13 @@ impl AsRef<str> for ChangeAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CidrCollectionChange {
     /// <p>Name of the location that is associated with the CIDR collection.</p>
+    #[doc(hidden)]
     pub location_name: std::option::Option<std::string::String>,
     /// <p>CIDR collection change action. </p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::CidrCollectionChangeAction>,
     /// <p>List of CIDR blocks.</p>
+    #[doc(hidden)]
     pub cidr_list: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CidrCollectionChange {
@@ -8659,11 +8785,10 @@ impl std::fmt::Debug for CidrCollectionChange {
         formatter.finish()
     }
 }
-/// See [`CidrCollectionChange`](crate::model::CidrCollectionChange)
+/// See [`CidrCollectionChange`](crate::model::CidrCollectionChange).
 pub mod cidr_collection_change {
 
-    /// A builder for [`CidrCollectionChange`](crate::model::CidrCollectionChange)
-    #[non_exhaustive]
+    /// A builder for [`CidrCollectionChange`](crate::model::CidrCollectionChange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_name: std::option::Option<std::string::String>,
@@ -8716,7 +8841,7 @@ pub mod cidr_collection_change {
             self.cidr_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`CidrCollectionChange`](crate::model::CidrCollectionChange)
+        /// Consumes the builder and constructs a [`CidrCollectionChange`](crate::model::CidrCollectionChange).
         pub fn build(self) -> crate::model::CidrCollectionChange {
             crate::model::CidrCollectionChange {
                 location_name: self.location_name,
@@ -8727,7 +8852,7 @@ pub mod cidr_collection_change {
     }
 }
 impl CidrCollectionChange {
-    /// Creates a new builder-style object to manufacture [`CidrCollectionChange`](crate::model::CidrCollectionChange)
+    /// Creates a new builder-style object to manufacture [`CidrCollectionChange`](crate::model::CidrCollectionChange).
     pub fn builder() -> crate::model::cidr_collection_change::Builder {
         crate::model::cidr_collection_change::Builder::default()
     }

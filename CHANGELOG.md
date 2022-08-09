@@ -1,3 +1,182 @@
+<!-- Do not manually edit this file. Use the `changelogger` tool. -->
+August 8th, 2022
+================
+**Breaking Changes:**
+- ⚠ ([smithy-rs#1157](https://github.com/awslabs/smithy-rs/issues/1157)) Rename EventStreamInput to EventStreamSender
+- ⚠ ([smithy-rs#1157](https://github.com/awslabs/smithy-rs/issues/1157)) The type of streaming unions that contain errors is generated without those errors.
+    Errors in a streaming union `Union` are generated as members of the type `UnionError`.
+    Taking Transcribe as an example, the `AudioStream` streaming union generates, in the client, both the `AudioStream` type:
+    ```rust
+    pub enum AudioStream {
+        AudioEvent(crate::model::AudioEvent),
+        Unknown,
+    }
+    ```
+    and its error type,
+    ```rust
+    pub struct AudioStreamError {
+        /// Kind of error that occurred.
+        pub kind: AudioStreamErrorKind,
+        /// Additional metadata about the error, including error code, message, and request ID.
+        pub(crate) meta: aws_smithy_types::Error,
+    }
+    ```
+    `AudioStreamErrorKind` contains all error variants for the union.
+    Before, the generated code looked as:
+    ```rust
+    pub enum AudioStream {
+        AudioEvent(crate::model::AudioEvent),
+        ... all error variants,
+        Unknown,
+    }
+    ```
+- ⚠ ([smithy-rs#1157](https://github.com/awslabs/smithy-rs/issues/1157)) `aws_smithy_http::event_stream::EventStreamSender` and `aws_smithy_http::event_stream::Receiver` are now generic over `<T, E>`,
+    where `T` is a streaming union and `E` the union's errors.
+    This means that event stream errors are now sent as `Err` of the union's error type.
+    With this example model:
+    ```smithy
+    @streaming union Event {
+        throttlingError: ThrottlingError
+    }
+    @error("client") structure ThrottlingError {}
+    ```
+    Before:
+    ```rust
+    stream! { yield Ok(Event::ThrottlingError ...) }
+    ```
+    After:
+    ```rust
+    stream! { yield Err(EventError::ThrottlingError ...) }
+    ```
+    An example from the SDK is in [transcribe streaming](https://github.com/awslabs/smithy-rs/blob/4f51dd450ea3234a7faf481c6025597f22f03805/aws/sdk/integration-tests/transcribestreaming/tests/test.rs#L80).
+
+**New this release:**
+- 🎉 ([smithy-rs#1482](https://github.com/awslabs/smithy-rs/issues/1482)) The AWS SDK for Rust now supports [additional checksum algorithms for Amazon S3](https://aws.amazon.com/blogs/aws/new-additional-checksum-algorithms-for-amazon-s3/).
+    When getting and putting objects, you may now request that the request body be validated with a checksum. The supported
+    algorithms are SHA-1, SHA-256, CRC-32, and CRC-32C.
+
+    ```rust
+    #[tokio::main]
+    async fn main() -> Result<(), Box<dyn std::error::Error>> {
+        let sdk_config = aws_config::load_from_env().await;
+        let s3_client = aws_sdk_s3::Client::new(&sdk_config);
+        let body = aws_sdk_s3::types::ByteStream::read_from()
+            .path(std::path::Path::new("./path/to/your/file.txt"))
+            .build()
+            .await
+            .unwrap();
+
+        let _ = s3_client
+            .put_object()
+            .bucket("your-bucket")
+            .key("file.txt")
+            .body(body)
+            // When using this field, the checksum will be calculated for you
+            .checksum_algorithm(aws_sdk_s3::model::ChecksumAlgorithm::Crc32C)
+            .send()
+            .await?;
+
+        let body = aws_sdk_s3::types::ByteStream::read_from()
+            .path(std::path::Path::new("./path/to/your/other-file.txt"))
+            .build()
+            .await
+            .unwrap();
+
+        let _ = s3_client
+            .put_object()
+            .bucket("your-bucket")
+            .key("other-file.txt")
+            .body(body)
+            // Alternatively, you can pass a checksum that you've calculated yourself. It must be base64
+            // encoded. Also, make sure that you're base64 encoding the bytes of the checksum, not its
+            // string representation.
+            .checksum_crc32_c(aws_smithy_types::base64::encode(&A_PRECALCULATED_CRC_32_C_CHECKSUM[..]))
+            .send()
+            .await?;
+    }
+    ```
+- 🎉 ([smithy-rs#1571](https://github.com/awslabs/smithy-rs/issues/1571), [smithy-rs#1385](https://github.com/awslabs/smithy-rs/issues/1385)) SDK crate READMEs now include an example of creating a client
+- ([smithy-rs#1573](https://github.com/awslabs/smithy-rs/issues/1573), [smithy-rs#1569](https://github.com/awslabs/smithy-rs/issues/1569)) Non-streaming struct members are now marked `#[doc(hidden)]` since they will be removed in the future
+
+
+July 21st, 2022
+===============
+**New this release:**
+- 🎉 ([smithy-rs#1457](https://github.com/awslabs/smithy-rs/issues/1457), @calavera) Re-export aws_types::SdkConfig in aws_config
+- 🎉 ([aws-sdk-rust#581](https://github.com/awslabs/aws-sdk-rust/issues/581)) Add `From<aws_smithy_client::erase::DynConnector>` impl for `aws_smithy_client::http_connector::HttpConnector`
+- 🎉 ([aws-sdk-rust#567](https://github.com/awslabs/aws-sdk-rust/issues/567)) Updated SDK Client retry behavior to allow for a configurable initial backoff. Previously, the initial backoff
+    (named `r` in the code) was set to 2 seconds. This is not an ideal default for services like DynamoDB that expect
+    clients to quickly retry failed request attempts. Now, users can set quicker (or slower) backoffs according to their
+    needs.
+
+    ```rust
+    #[tokio::main]
+    async fn main() -> Result<(), aws_sdk_dynamodb::Error> {
+        let retry_config = aws_smithy_types::retry::RetryConfigBuilder::new()
+            .max_attempts(4)
+            .initial_backoff(Duration::from_millis(20));
+
+        let shared_config = aws_config::from_env()
+            .retry_config(retry_config)
+            .load()
+            .await;
+
+        let client = aws_sdk_dynamodb::Client::new(&shared_config);
+
+        // Given the 20ms backoff multiplier, and assuming this request fails 3 times before succeeding,
+        // the first retry would take place between 0-20ms after the initial request,
+        // the second retry would take place between 0-40ms after the first retry,
+        // and the third retry would take place between 0-80ms after the second retry.
+        let request = client
+            .put_item()
+            .table_name("users")
+            .item("username", "Velfi")
+            .item("account_type", "Developer")
+            .send().await?;
+
+        Ok(())
+    }
+    ```
+- 🎉 ([smithy-rs#1557](https://github.com/awslabs/smithy-rs/issues/1557), [aws-sdk-rust#580](https://github.com/awslabs/aws-sdk-rust/issues/580)) The `imds::Client` in `aws-config` now implements `Clone`
+- 🐛 ([smithy-rs#1541](https://github.com/awslabs/smithy-rs/issues/1541), @joshtriplett) Fix compilation of `aws-config` with `rustls` and `native-tls` disabled. The
+    `ProviderConfig::with_tcp_connector` method uses
+    `aws_smithy_client::hyper_ext`, which only exists with the `client-hyper`
+    feature enabled. Add a feature enabling that, and enable it by default.
+- ([smithy-rs#1263](https://github.com/awslabs/smithy-rs/issues/1263)) Add support for aws-chunked content encoding. Only single-chunk encoding is supported. Multiple chunks and
+    chunk signing are not supported at this time.
+- ([smithy-rs#1540](https://github.com/awslabs/smithy-rs/issues/1540)) Until now, SDK crates have all shared the exact same version numbers.
+    This changes with this release. From now on, SDK crates will only version
+    bump if they have changes. Coincidentally, they may share the same version
+    number for some releases since changes to the code generator will cause
+    a version bump in all of them, but this should not be relied upon.
+- 🐛 ([smithy-rs#1559](https://github.com/awslabs/smithy-rs/issues/1559), [aws-sdk-rust#582](https://github.com/awslabs/aws-sdk-rust/issues/582)) Remove warning for valid IMDS provider use-case
+- 🐛 ([smithy-rs#1558](https://github.com/awslabs/smithy-rs/issues/1558), [aws-sdk-rust#583](https://github.com/awslabs/aws-sdk-rust/issues/583)) Only emit a warning about failing to expand a `~` to the home
+    directory in a profile file's path if that path was explicitly
+    set (don't emit it for the default paths)
+- ([smithy-rs#1556](https://github.com/awslabs/smithy-rs/issues/1556)) The `sleep_impl` methods on the `SdkConfig` builder are now exposed and documented.
+
+**Contributors**
+Thank you for your contributions! ❤
+- @calavera ([smithy-rs#1457](https://github.com/awslabs/smithy-rs/issues/1457))
+- @joshtriplett ([smithy-rs#1541](https://github.com/awslabs/smithy-rs/issues/1541))
+
+v0.15.0 (June 29th, 2022)
+=========================
+**Breaking Changes:**
+- ⚠ ([smithy-rs#932](https://github.com/awslabs/smithy-rs/issues/932)) Replaced use of `pin-project` with equivalent `pin-project-lite`. For pinned enum tuple variants and tuple structs, this
+    change requires that we switch to using enum struct variants and regular structs. Most of the structs and enums that
+    were updated had only private fields/variants and so have the same public API. However, this change does affect the
+    public API of `aws_smithy_http_tower::map_request::MapRequestFuture<F, E>`. The `Inner` and `Ready` variants contained a
+    single value. Each have been converted to struct variants and the inner value is now accessible by the `inner` field
+    instead of the `0` field.
+
+**New this release:**
+- 🐛 ([aws-sdk-rust#560](https://github.com/awslabs/aws-sdk-rust/issues/560), [smithy-rs#1487](https://github.com/awslabs/smithy-rs/issues/1487)) Add a trailing slash to the URI `/latest/meta-data/iam/security-credentials/ when loading credentials from IMDS
+- ([aws-sdk-rust#540](https://github.com/awslabs/aws-sdk-rust/issues/540), @jmklix) Add comments for docker settings needed when using this sdk
+
+**Contributors**
+Thank you for your contributions! ❤
+- @jmklix ([aws-sdk-rust#540](https://github.com/awslabs/aws-sdk-rust/issues/540))
 <!-- Do not manually edit this file, use `update-changelogs` -->
 v0.14.0 (June 22nd, 2022)
 =========================
@@ -7,9 +186,6 @@ v0.14.0 (June 22nd, 2022)
 - 🐛 ([aws-sdk-rust#558](https://github.com/awslabs/aws-sdk-rust/issues/558), [smithy-rs#1478](https://github.com/awslabs/smithy-rs/issues/1478)) Fix bug in retry policy where user configured timeouts were not retried. With this fix, setting
     [`with_call_attempt_timeout`](https://docs.rs/aws-smithy-types/0.43.0/aws_smithy_types/timeout/struct.Api.html#method.with_call_attempt_timeout)
     will lead to a retry when retries are enabled.
-- 🐛 ([aws-sdk-rust#554](https://github.com/awslabs/aws-sdk-rust/issues/554)) Requests to Route53 that return `ResourceId`s often come with a prefix. When passing those IDs directly into another
-    request, the request would fail unless they manually stripped the prefix. Now, when making a request with a prefixed ID,
-    the prefix will be stripped automatically.
 
 
 v0.13.0 (June 9th, 2022)

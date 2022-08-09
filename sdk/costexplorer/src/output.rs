@@ -4,8 +4,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateCostCategoryDefinitionOutput {
     /// <p>The unique identifier for your Cost Category. </p>
+    #[doc(hidden)]
     pub cost_category_arn: std::option::Option<std::string::String>,
     /// <p>The Cost Category's effective start date. </p>
+    #[doc(hidden)]
     pub effective_start: std::option::Option<std::string::String>,
 }
 impl UpdateCostCategoryDefinitionOutput {
@@ -26,11 +28,10 @@ impl std::fmt::Debug for UpdateCostCategoryDefinitionOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateCostCategoryDefinitionOutput`](crate::output::UpdateCostCategoryDefinitionOutput)
+/// See [`UpdateCostCategoryDefinitionOutput`](crate::output::UpdateCostCategoryDefinitionOutput).
 pub mod update_cost_category_definition_output {
 
-    /// A builder for [`UpdateCostCategoryDefinitionOutput`](crate::output::UpdateCostCategoryDefinitionOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateCostCategoryDefinitionOutput`](crate::output::UpdateCostCategoryDefinitionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cost_category_arn: std::option::Option<std::string::String>,
@@ -63,7 +64,7 @@ pub mod update_cost_category_definition_output {
             self.effective_start = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateCostCategoryDefinitionOutput`](crate::output::UpdateCostCategoryDefinitionOutput)
+        /// Consumes the builder and constructs a [`UpdateCostCategoryDefinitionOutput`](crate::output::UpdateCostCategoryDefinitionOutput).
         pub fn build(self) -> crate::output::UpdateCostCategoryDefinitionOutput {
             crate::output::UpdateCostCategoryDefinitionOutput {
                 cost_category_arn: self.cost_category_arn,
@@ -73,7 +74,7 @@ pub mod update_cost_category_definition_output {
     }
 }
 impl UpdateCostCategoryDefinitionOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateCostCategoryDefinitionOutput`](crate::output::UpdateCostCategoryDefinitionOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateCostCategoryDefinitionOutput`](crate::output::UpdateCostCategoryDefinitionOutput).
     pub fn builder() -> crate::output::update_cost_category_definition_output::Builder {
         crate::output::update_cost_category_definition_output::Builder::default()
     }
@@ -84,6 +85,7 @@ impl UpdateCostCategoryDefinitionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateCostAllocationTagsStatusOutput {
     /// <p>A list of <code>UpdateCostAllocationTagsStatusError</code> objects with error details about each cost allocation tag that can't be updated. If there's no failure, an empty array returns. </p>
+    #[doc(hidden)]
     pub errors:
         std::option::Option<std::vec::Vec<crate::model::UpdateCostAllocationTagsStatusError>>,
 }
@@ -102,11 +104,10 @@ impl std::fmt::Debug for UpdateCostAllocationTagsStatusOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateCostAllocationTagsStatusOutput`](crate::output::UpdateCostAllocationTagsStatusOutput)
+/// See [`UpdateCostAllocationTagsStatusOutput`](crate::output::UpdateCostAllocationTagsStatusOutput).
 pub mod update_cost_allocation_tags_status_output {
 
-    /// A builder for [`UpdateCostAllocationTagsStatusOutput`](crate::output::UpdateCostAllocationTagsStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateCostAllocationTagsStatusOutput`](crate::output::UpdateCostAllocationTagsStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) errors:
@@ -134,7 +135,7 @@ pub mod update_cost_allocation_tags_status_output {
             self.errors = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateCostAllocationTagsStatusOutput`](crate::output::UpdateCostAllocationTagsStatusOutput)
+        /// Consumes the builder and constructs a [`UpdateCostAllocationTagsStatusOutput`](crate::output::UpdateCostAllocationTagsStatusOutput).
         pub fn build(self) -> crate::output::UpdateCostAllocationTagsStatusOutput {
             crate::output::UpdateCostAllocationTagsStatusOutput {
                 errors: self.errors,
@@ -143,7 +144,7 @@ pub mod update_cost_allocation_tags_status_output {
     }
 }
 impl UpdateCostAllocationTagsStatusOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateCostAllocationTagsStatusOutput`](crate::output::UpdateCostAllocationTagsStatusOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateCostAllocationTagsStatusOutput`](crate::output::UpdateCostAllocationTagsStatusOutput).
     pub fn builder() -> crate::output::update_cost_allocation_tags_status_output::Builder {
         crate::output::update_cost_allocation_tags_status_output::Builder::default()
     }
@@ -154,6 +155,7 @@ impl UpdateCostAllocationTagsStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAnomalySubscriptionOutput {
     /// <p>A cost anomaly subscription ARN. </p>
+    #[doc(hidden)]
     pub subscription_arn: std::option::Option<std::string::String>,
 }
 impl UpdateAnomalySubscriptionOutput {
@@ -169,11 +171,10 @@ impl std::fmt::Debug for UpdateAnomalySubscriptionOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAnomalySubscriptionOutput`](crate::output::UpdateAnomalySubscriptionOutput)
+/// See [`UpdateAnomalySubscriptionOutput`](crate::output::UpdateAnomalySubscriptionOutput).
 pub mod update_anomaly_subscription_output {
 
-    /// A builder for [`UpdateAnomalySubscriptionOutput`](crate::output::UpdateAnomalySubscriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAnomalySubscriptionOutput`](crate::output::UpdateAnomalySubscriptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subscription_arn: std::option::Option<std::string::String>,
@@ -192,7 +193,7 @@ pub mod update_anomaly_subscription_output {
             self.subscription_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAnomalySubscriptionOutput`](crate::output::UpdateAnomalySubscriptionOutput)
+        /// Consumes the builder and constructs a [`UpdateAnomalySubscriptionOutput`](crate::output::UpdateAnomalySubscriptionOutput).
         pub fn build(self) -> crate::output::UpdateAnomalySubscriptionOutput {
             crate::output::UpdateAnomalySubscriptionOutput {
                 subscription_arn: self.subscription_arn,
@@ -201,7 +202,7 @@ pub mod update_anomaly_subscription_output {
     }
 }
 impl UpdateAnomalySubscriptionOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAnomalySubscriptionOutput`](crate::output::UpdateAnomalySubscriptionOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAnomalySubscriptionOutput`](crate::output::UpdateAnomalySubscriptionOutput).
     pub fn builder() -> crate::output::update_anomaly_subscription_output::Builder {
         crate::output::update_anomaly_subscription_output::Builder::default()
     }
@@ -212,6 +213,7 @@ impl UpdateAnomalySubscriptionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAnomalyMonitorOutput {
     /// <p>A cost anomaly monitor ARN. </p>
+    #[doc(hidden)]
     pub monitor_arn: std::option::Option<std::string::String>,
 }
 impl UpdateAnomalyMonitorOutput {
@@ -227,11 +229,10 @@ impl std::fmt::Debug for UpdateAnomalyMonitorOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAnomalyMonitorOutput`](crate::output::UpdateAnomalyMonitorOutput)
+/// See [`UpdateAnomalyMonitorOutput`](crate::output::UpdateAnomalyMonitorOutput).
 pub mod update_anomaly_monitor_output {
 
-    /// A builder for [`UpdateAnomalyMonitorOutput`](crate::output::UpdateAnomalyMonitorOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAnomalyMonitorOutput`](crate::output::UpdateAnomalyMonitorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) monitor_arn: std::option::Option<std::string::String>,
@@ -247,7 +248,7 @@ pub mod update_anomaly_monitor_output {
             self.monitor_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAnomalyMonitorOutput`](crate::output::UpdateAnomalyMonitorOutput)
+        /// Consumes the builder and constructs a [`UpdateAnomalyMonitorOutput`](crate::output::UpdateAnomalyMonitorOutput).
         pub fn build(self) -> crate::output::UpdateAnomalyMonitorOutput {
             crate::output::UpdateAnomalyMonitorOutput {
                 monitor_arn: self.monitor_arn,
@@ -256,7 +257,7 @@ pub mod update_anomaly_monitor_output {
     }
 }
 impl UpdateAnomalyMonitorOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAnomalyMonitorOutput`](crate::output::UpdateAnomalyMonitorOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAnomalyMonitorOutput`](crate::output::UpdateAnomalyMonitorOutput).
     pub fn builder() -> crate::output::update_anomaly_monitor_output::Builder {
         crate::output::update_anomaly_monitor_output::Builder::default()
     }
@@ -272,22 +273,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -303,22 +303,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -329,6 +328,7 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProvideAnomalyFeedbackOutput {
     /// <p>The ID of the modified cost anomaly. </p>
+    #[doc(hidden)]
     pub anomaly_id: std::option::Option<std::string::String>,
 }
 impl ProvideAnomalyFeedbackOutput {
@@ -344,11 +344,10 @@ impl std::fmt::Debug for ProvideAnomalyFeedbackOutput {
         formatter.finish()
     }
 }
-/// See [`ProvideAnomalyFeedbackOutput`](crate::output::ProvideAnomalyFeedbackOutput)
+/// See [`ProvideAnomalyFeedbackOutput`](crate::output::ProvideAnomalyFeedbackOutput).
 pub mod provide_anomaly_feedback_output {
 
-    /// A builder for [`ProvideAnomalyFeedbackOutput`](crate::output::ProvideAnomalyFeedbackOutput)
-    #[non_exhaustive]
+    /// A builder for [`ProvideAnomalyFeedbackOutput`](crate::output::ProvideAnomalyFeedbackOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) anomaly_id: std::option::Option<std::string::String>,
@@ -364,7 +363,7 @@ pub mod provide_anomaly_feedback_output {
             self.anomaly_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvideAnomalyFeedbackOutput`](crate::output::ProvideAnomalyFeedbackOutput)
+        /// Consumes the builder and constructs a [`ProvideAnomalyFeedbackOutput`](crate::output::ProvideAnomalyFeedbackOutput).
         pub fn build(self) -> crate::output::ProvideAnomalyFeedbackOutput {
             crate::output::ProvideAnomalyFeedbackOutput {
                 anomaly_id: self.anomaly_id,
@@ -373,7 +372,7 @@ pub mod provide_anomaly_feedback_output {
     }
 }
 impl ProvideAnomalyFeedbackOutput {
-    /// Creates a new builder-style object to manufacture [`ProvideAnomalyFeedbackOutput`](crate::output::ProvideAnomalyFeedbackOutput)
+    /// Creates a new builder-style object to manufacture [`ProvideAnomalyFeedbackOutput`](crate::output::ProvideAnomalyFeedbackOutput).
     pub fn builder() -> crate::output::provide_anomaly_feedback_output::Builder {
         crate::output::provide_anomaly_feedback_output::Builder::default()
     }
@@ -384,6 +383,7 @@ impl ProvideAnomalyFeedbackOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>A list of tag key value pairs that are associated with the resource. </p>
+    #[doc(hidden)]
     pub resource_tags: std::option::Option<std::vec::Vec<crate::model::ResourceTag>>,
 }
 impl ListTagsForResourceOutput {
@@ -399,11 +399,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_tags: std::option::Option<std::vec::Vec<crate::model::ResourceTag>>,
@@ -428,7 +427,7 @@ pub mod list_tags_for_resource_output {
             self.resource_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 resource_tags: self.resource_tags,
@@ -437,7 +436,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -448,9 +447,11 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListCostCategoryDefinitionsOutput {
     /// <p>A reference to a Cost Category that contains enough information to identify the Cost Category. </p>
+    #[doc(hidden)]
     pub cost_category_references:
         std::option::Option<std::vec::Vec<crate::model::CostCategoryReference>>,
     /// <p>The token to retrieve the next set of results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListCostCategoryDefinitionsOutput {
@@ -473,11 +474,10 @@ impl std::fmt::Debug for ListCostCategoryDefinitionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListCostCategoryDefinitionsOutput`](crate::output::ListCostCategoryDefinitionsOutput)
+/// See [`ListCostCategoryDefinitionsOutput`](crate::output::ListCostCategoryDefinitionsOutput).
 pub mod list_cost_category_definitions_output {
 
-    /// A builder for [`ListCostCategoryDefinitionsOutput`](crate::output::ListCostCategoryDefinitionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListCostCategoryDefinitionsOutput`](crate::output::ListCostCategoryDefinitionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cost_category_references:
@@ -517,7 +517,7 @@ pub mod list_cost_category_definitions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListCostCategoryDefinitionsOutput`](crate::output::ListCostCategoryDefinitionsOutput)
+        /// Consumes the builder and constructs a [`ListCostCategoryDefinitionsOutput`](crate::output::ListCostCategoryDefinitionsOutput).
         pub fn build(self) -> crate::output::ListCostCategoryDefinitionsOutput {
             crate::output::ListCostCategoryDefinitionsOutput {
                 cost_category_references: self.cost_category_references,
@@ -527,7 +527,7 @@ pub mod list_cost_category_definitions_output {
     }
 }
 impl ListCostCategoryDefinitionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListCostCategoryDefinitionsOutput`](crate::output::ListCostCategoryDefinitionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListCostCategoryDefinitionsOutput`](crate::output::ListCostCategoryDefinitionsOutput).
     pub fn builder() -> crate::output::list_cost_category_definitions_output::Builder {
         crate::output::list_cost_category_definitions_output::Builder::default()
     }
@@ -538,8 +538,10 @@ impl ListCostCategoryDefinitionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListCostAllocationTagsOutput {
     /// <p>A list of cost allocation tags that includes the detailed metadata for each one. </p>
+    #[doc(hidden)]
     pub cost_allocation_tags: std::option::Option<std::vec::Vec<crate::model::CostAllocationTag>>,
     /// <p>The token to retrieve the next set of results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListCostAllocationTagsOutput {
@@ -560,11 +562,10 @@ impl std::fmt::Debug for ListCostAllocationTagsOutput {
         formatter.finish()
     }
 }
-/// See [`ListCostAllocationTagsOutput`](crate::output::ListCostAllocationTagsOutput)
+/// See [`ListCostAllocationTagsOutput`](crate::output::ListCostAllocationTagsOutput).
 pub mod list_cost_allocation_tags_output {
 
-    /// A builder for [`ListCostAllocationTagsOutput`](crate::output::ListCostAllocationTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListCostAllocationTagsOutput`](crate::output::ListCostAllocationTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cost_allocation_tags:
@@ -601,7 +602,7 @@ pub mod list_cost_allocation_tags_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListCostAllocationTagsOutput`](crate::output::ListCostAllocationTagsOutput)
+        /// Consumes the builder and constructs a [`ListCostAllocationTagsOutput`](crate::output::ListCostAllocationTagsOutput).
         pub fn build(self) -> crate::output::ListCostAllocationTagsOutput {
             crate::output::ListCostAllocationTagsOutput {
                 cost_allocation_tags: self.cost_allocation_tags,
@@ -611,7 +612,7 @@ pub mod list_cost_allocation_tags_output {
     }
 }
 impl ListCostAllocationTagsOutput {
-    /// Creates a new builder-style object to manufacture [`ListCostAllocationTagsOutput`](crate::output::ListCostAllocationTagsOutput)
+    /// Creates a new builder-style object to manufacture [`ListCostAllocationTagsOutput`](crate::output::ListCostAllocationTagsOutput).
     pub fn builder() -> crate::output::list_cost_allocation_tags_output::Builder {
         crate::output::list_cost_allocation_tags_output::Builder::default()
     }
@@ -622,8 +623,10 @@ impl ListCostAllocationTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetUsageForecastOutput {
     /// <p>How much you're forecasted to use over the forecast period.</p>
+    #[doc(hidden)]
     pub total: std::option::Option<crate::model::MetricValue>,
     /// <p>The forecasts for your query, in order. For <code>DAILY</code> forecasts, this is a list of days. For <code>MONTHLY</code> forecasts, this is a list of months.</p>
+    #[doc(hidden)]
     pub forecast_results_by_time: std::option::Option<std::vec::Vec<crate::model::ForecastResult>>,
 }
 impl GetUsageForecastOutput {
@@ -644,11 +647,10 @@ impl std::fmt::Debug for GetUsageForecastOutput {
         formatter.finish()
     }
 }
-/// See [`GetUsageForecastOutput`](crate::output::GetUsageForecastOutput)
+/// See [`GetUsageForecastOutput`](crate::output::GetUsageForecastOutput).
 pub mod get_usage_forecast_output {
 
-    /// A builder for [`GetUsageForecastOutput`](crate::output::GetUsageForecastOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetUsageForecastOutput`](crate::output::GetUsageForecastOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total: std::option::Option<crate::model::MetricValue>,
@@ -685,7 +687,7 @@ pub mod get_usage_forecast_output {
             self.forecast_results_by_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetUsageForecastOutput`](crate::output::GetUsageForecastOutput)
+        /// Consumes the builder and constructs a [`GetUsageForecastOutput`](crate::output::GetUsageForecastOutput).
         pub fn build(self) -> crate::output::GetUsageForecastOutput {
             crate::output::GetUsageForecastOutput {
                 total: self.total,
@@ -695,7 +697,7 @@ pub mod get_usage_forecast_output {
     }
 }
 impl GetUsageForecastOutput {
-    /// Creates a new builder-style object to manufacture [`GetUsageForecastOutput`](crate::output::GetUsageForecastOutput)
+    /// Creates a new builder-style object to manufacture [`GetUsageForecastOutput`](crate::output::GetUsageForecastOutput).
     pub fn builder() -> crate::output::get_usage_forecast_output::Builder {
         crate::output::get_usage_forecast_output::Builder::default()
     }
@@ -706,12 +708,16 @@ impl GetUsageForecastOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetTagsOutput {
     /// <p>The token for the next set of retrievable results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size.</p>
+    #[doc(hidden)]
     pub next_page_token: std::option::Option<std::string::String>,
     /// <p>The tags that match your request.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The number of query results that Amazon Web Services returns at a time.</p>
+    #[doc(hidden)]
     pub return_size: std::option::Option<i32>,
     /// <p>The total number of query results.</p>
+    #[doc(hidden)]
     pub total_size: std::option::Option<i32>,
 }
 impl GetTagsOutput {
@@ -742,11 +748,10 @@ impl std::fmt::Debug for GetTagsOutput {
         formatter.finish()
     }
 }
-/// See [`GetTagsOutput`](crate::output::GetTagsOutput)
+/// See [`GetTagsOutput`](crate::output::GetTagsOutput).
 pub mod get_tags_output {
 
-    /// A builder for [`GetTagsOutput`](crate::output::GetTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetTagsOutput`](crate::output::GetTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_page_token: std::option::Option<std::string::String>,
@@ -807,7 +812,7 @@ pub mod get_tags_output {
             self.total_size = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetTagsOutput`](crate::output::GetTagsOutput)
+        /// Consumes the builder and constructs a [`GetTagsOutput`](crate::output::GetTagsOutput).
         pub fn build(self) -> crate::output::GetTagsOutput {
             crate::output::GetTagsOutput {
                 next_page_token: self.next_page_token,
@@ -819,7 +824,7 @@ pub mod get_tags_output {
     }
 }
 impl GetTagsOutput {
-    /// Creates a new builder-style object to manufacture [`GetTagsOutput`](crate::output::GetTagsOutput)
+    /// Creates a new builder-style object to manufacture [`GetTagsOutput`](crate::output::GetTagsOutput).
     pub fn builder() -> crate::output::get_tags_output::Builder {
         crate::output::get_tags_output::Builder::default()
     }
@@ -830,13 +835,17 @@ impl GetTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSavingsPlansUtilizationDetailsOutput {
     /// <p>Retrieves a single daily or monthly Savings Plans utilization rate and details for your account.</p>
+    #[doc(hidden)]
     pub savings_plans_utilization_details:
         std::option::Option<std::vec::Vec<crate::model::SavingsPlansUtilizationDetail>>,
     /// <p>The total Savings Plans utilization, regardless of time period.</p>
+    #[doc(hidden)]
     pub total: std::option::Option<crate::model::SavingsPlansUtilizationAggregates>,
     /// <p>The time period of the request. </p>
+    #[doc(hidden)]
     pub time_period: std::option::Option<crate::model::DateInterval>,
     /// <p>The token to retrieve the next set of results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetSavingsPlansUtilizationDetailsOutput {
@@ -872,11 +881,10 @@ impl std::fmt::Debug for GetSavingsPlansUtilizationDetailsOutput {
         formatter.finish()
     }
 }
-/// See [`GetSavingsPlansUtilizationDetailsOutput`](crate::output::GetSavingsPlansUtilizationDetailsOutput)
+/// See [`GetSavingsPlansUtilizationDetailsOutput`](crate::output::GetSavingsPlansUtilizationDetailsOutput).
 pub mod get_savings_plans_utilization_details_output {
 
-    /// A builder for [`GetSavingsPlansUtilizationDetailsOutput`](crate::output::GetSavingsPlansUtilizationDetailsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSavingsPlansUtilizationDetailsOutput`](crate::output::GetSavingsPlansUtilizationDetailsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) savings_plans_utilization_details:
@@ -944,7 +952,7 @@ pub mod get_savings_plans_utilization_details_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSavingsPlansUtilizationDetailsOutput`](crate::output::GetSavingsPlansUtilizationDetailsOutput)
+        /// Consumes the builder and constructs a [`GetSavingsPlansUtilizationDetailsOutput`](crate::output::GetSavingsPlansUtilizationDetailsOutput).
         pub fn build(self) -> crate::output::GetSavingsPlansUtilizationDetailsOutput {
             crate::output::GetSavingsPlansUtilizationDetailsOutput {
                 savings_plans_utilization_details: self.savings_plans_utilization_details,
@@ -956,7 +964,7 @@ pub mod get_savings_plans_utilization_details_output {
     }
 }
 impl GetSavingsPlansUtilizationDetailsOutput {
-    /// Creates a new builder-style object to manufacture [`GetSavingsPlansUtilizationDetailsOutput`](crate::output::GetSavingsPlansUtilizationDetailsOutput)
+    /// Creates a new builder-style object to manufacture [`GetSavingsPlansUtilizationDetailsOutput`](crate::output::GetSavingsPlansUtilizationDetailsOutput).
     pub fn builder() -> crate::output::get_savings_plans_utilization_details_output::Builder {
         crate::output::get_savings_plans_utilization_details_output::Builder::default()
     }
@@ -967,9 +975,11 @@ impl GetSavingsPlansUtilizationDetailsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSavingsPlansUtilizationOutput {
     /// <p>The amount of cost/commitment that you used your Savings Plans. You can use it to specify date ranges.</p>
+    #[doc(hidden)]
     pub savings_plans_utilizations_by_time:
         std::option::Option<std::vec::Vec<crate::model::SavingsPlansUtilizationByTime>>,
     /// <p>The total amount of cost/commitment that you used your Savings Plans, regardless of date ranges.</p>
+    #[doc(hidden)]
     pub total: std::option::Option<crate::model::SavingsPlansUtilizationAggregates>,
 }
 impl GetSavingsPlansUtilizationOutput {
@@ -995,11 +1005,10 @@ impl std::fmt::Debug for GetSavingsPlansUtilizationOutput {
         formatter.finish()
     }
 }
-/// See [`GetSavingsPlansUtilizationOutput`](crate::output::GetSavingsPlansUtilizationOutput)
+/// See [`GetSavingsPlansUtilizationOutput`](crate::output::GetSavingsPlansUtilizationOutput).
 pub mod get_savings_plans_utilization_output {
 
-    /// A builder for [`GetSavingsPlansUtilizationOutput`](crate::output::GetSavingsPlansUtilizationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSavingsPlansUtilizationOutput`](crate::output::GetSavingsPlansUtilizationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) savings_plans_utilizations_by_time:
@@ -1042,7 +1051,7 @@ pub mod get_savings_plans_utilization_output {
             self.total = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSavingsPlansUtilizationOutput`](crate::output::GetSavingsPlansUtilizationOutput)
+        /// Consumes the builder and constructs a [`GetSavingsPlansUtilizationOutput`](crate::output::GetSavingsPlansUtilizationOutput).
         pub fn build(self) -> crate::output::GetSavingsPlansUtilizationOutput {
             crate::output::GetSavingsPlansUtilizationOutput {
                 savings_plans_utilizations_by_time: self.savings_plans_utilizations_by_time,
@@ -1052,7 +1061,7 @@ pub mod get_savings_plans_utilization_output {
     }
 }
 impl GetSavingsPlansUtilizationOutput {
-    /// Creates a new builder-style object to manufacture [`GetSavingsPlansUtilizationOutput`](crate::output::GetSavingsPlansUtilizationOutput)
+    /// Creates a new builder-style object to manufacture [`GetSavingsPlansUtilizationOutput`](crate::output::GetSavingsPlansUtilizationOutput).
     pub fn builder() -> crate::output::get_savings_plans_utilization_output::Builder {
         crate::output::get_savings_plans_utilization_output::Builder::default()
     }
@@ -1063,11 +1072,14 @@ impl GetSavingsPlansUtilizationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSavingsPlansPurchaseRecommendationOutput {
     /// <p>Information that regards this specific recommendation set.</p>
+    #[doc(hidden)]
     pub metadata: std::option::Option<crate::model::SavingsPlansPurchaseRecommendationMetadata>,
     /// <p>Contains your request parameters, Savings Plan Recommendations Summary, and Details.</p>
+    #[doc(hidden)]
     pub savings_plans_purchase_recommendation:
         std::option::Option<crate::model::SavingsPlansPurchaseRecommendation>,
     /// <p>The token for the next set of retrievable results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size.</p>
+    #[doc(hidden)]
     pub next_page_token: std::option::Option<std::string::String>,
 }
 impl GetSavingsPlansPurchaseRecommendationOutput {
@@ -1100,11 +1112,10 @@ impl std::fmt::Debug for GetSavingsPlansPurchaseRecommendationOutput {
         formatter.finish()
     }
 }
-/// See [`GetSavingsPlansPurchaseRecommendationOutput`](crate::output::GetSavingsPlansPurchaseRecommendationOutput)
+/// See [`GetSavingsPlansPurchaseRecommendationOutput`](crate::output::GetSavingsPlansPurchaseRecommendationOutput).
 pub mod get_savings_plans_purchase_recommendation_output {
 
-    /// A builder for [`GetSavingsPlansPurchaseRecommendationOutput`](crate::output::GetSavingsPlansPurchaseRecommendationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSavingsPlansPurchaseRecommendationOutput`](crate::output::GetSavingsPlansPurchaseRecommendationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metadata:
@@ -1159,7 +1170,7 @@ pub mod get_savings_plans_purchase_recommendation_output {
             self.next_page_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSavingsPlansPurchaseRecommendationOutput`](crate::output::GetSavingsPlansPurchaseRecommendationOutput)
+        /// Consumes the builder and constructs a [`GetSavingsPlansPurchaseRecommendationOutput`](crate::output::GetSavingsPlansPurchaseRecommendationOutput).
         pub fn build(self) -> crate::output::GetSavingsPlansPurchaseRecommendationOutput {
             crate::output::GetSavingsPlansPurchaseRecommendationOutput {
                 metadata: self.metadata,
@@ -1170,7 +1181,7 @@ pub mod get_savings_plans_purchase_recommendation_output {
     }
 }
 impl GetSavingsPlansPurchaseRecommendationOutput {
-    /// Creates a new builder-style object to manufacture [`GetSavingsPlansPurchaseRecommendationOutput`](crate::output::GetSavingsPlansPurchaseRecommendationOutput)
+    /// Creates a new builder-style object to manufacture [`GetSavingsPlansPurchaseRecommendationOutput`](crate::output::GetSavingsPlansPurchaseRecommendationOutput).
     pub fn builder() -> crate::output::get_savings_plans_purchase_recommendation_output::Builder {
         crate::output::get_savings_plans_purchase_recommendation_output::Builder::default()
     }
@@ -1181,9 +1192,11 @@ impl GetSavingsPlansPurchaseRecommendationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSavingsPlansCoverageOutput {
     /// <p>The amount of spend that your Savings Plans covered.</p>
+    #[doc(hidden)]
     pub savings_plans_coverages:
         std::option::Option<std::vec::Vec<crate::model::SavingsPlansCoverage>>,
     /// <p>The token to retrieve the next set of results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetSavingsPlansCoverageOutput {
@@ -1206,11 +1219,10 @@ impl std::fmt::Debug for GetSavingsPlansCoverageOutput {
         formatter.finish()
     }
 }
-/// See [`GetSavingsPlansCoverageOutput`](crate::output::GetSavingsPlansCoverageOutput)
+/// See [`GetSavingsPlansCoverageOutput`](crate::output::GetSavingsPlansCoverageOutput).
 pub mod get_savings_plans_coverage_output {
 
-    /// A builder for [`GetSavingsPlansCoverageOutput`](crate::output::GetSavingsPlansCoverageOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSavingsPlansCoverageOutput`](crate::output::GetSavingsPlansCoverageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) savings_plans_coverages:
@@ -1250,7 +1262,7 @@ pub mod get_savings_plans_coverage_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSavingsPlansCoverageOutput`](crate::output::GetSavingsPlansCoverageOutput)
+        /// Consumes the builder and constructs a [`GetSavingsPlansCoverageOutput`](crate::output::GetSavingsPlansCoverageOutput).
         pub fn build(self) -> crate::output::GetSavingsPlansCoverageOutput {
             crate::output::GetSavingsPlansCoverageOutput {
                 savings_plans_coverages: self.savings_plans_coverages,
@@ -1260,7 +1272,7 @@ pub mod get_savings_plans_coverage_output {
     }
 }
 impl GetSavingsPlansCoverageOutput {
-    /// Creates a new builder-style object to manufacture [`GetSavingsPlansCoverageOutput`](crate::output::GetSavingsPlansCoverageOutput)
+    /// Creates a new builder-style object to manufacture [`GetSavingsPlansCoverageOutput`](crate::output::GetSavingsPlansCoverageOutput).
     pub fn builder() -> crate::output::get_savings_plans_coverage_output::Builder {
         crate::output::get_savings_plans_coverage_output::Builder::default()
     }
@@ -1271,15 +1283,20 @@ impl GetSavingsPlansCoverageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRightsizingRecommendationOutput {
     /// <p>Information regarding this specific recommendation set.</p>
+    #[doc(hidden)]
     pub metadata: std::option::Option<crate::model::RightsizingRecommendationMetadata>,
     /// <p>Summary of this recommendation set.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::RightsizingRecommendationSummary>,
     /// <p>Recommendations to rightsize resources.</p>
+    #[doc(hidden)]
     pub rightsizing_recommendations:
         std::option::Option<std::vec::Vec<crate::model::RightsizingRecommendation>>,
     /// <p>The token to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_page_token: std::option::Option<std::string::String>,
     /// <p>You can use Configuration to customize recommendations across two attributes. You can choose to view recommendations for instances within the same instance families or across different instance families. You can also choose to view your estimated savings that are associated with recommendations with consideration of existing Savings Plans or RI benefits, or neither. </p>
+    #[doc(hidden)]
     pub configuration: std::option::Option<crate::model::RightsizingRecommendationConfiguration>,
 }
 impl GetRightsizingRecommendationOutput {
@@ -1324,11 +1341,10 @@ impl std::fmt::Debug for GetRightsizingRecommendationOutput {
         formatter.finish()
     }
 }
-/// See [`GetRightsizingRecommendationOutput`](crate::output::GetRightsizingRecommendationOutput)
+/// See [`GetRightsizingRecommendationOutput`](crate::output::GetRightsizingRecommendationOutput).
 pub mod get_rightsizing_recommendation_output {
 
-    /// A builder for [`GetRightsizingRecommendationOutput`](crate::output::GetRightsizingRecommendationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRightsizingRecommendationOutput`](crate::output::GetRightsizingRecommendationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metadata: std::option::Option<crate::model::RightsizingRecommendationMetadata>,
@@ -1417,7 +1433,7 @@ pub mod get_rightsizing_recommendation_output {
             self.configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRightsizingRecommendationOutput`](crate::output::GetRightsizingRecommendationOutput)
+        /// Consumes the builder and constructs a [`GetRightsizingRecommendationOutput`](crate::output::GetRightsizingRecommendationOutput).
         pub fn build(self) -> crate::output::GetRightsizingRecommendationOutput {
             crate::output::GetRightsizingRecommendationOutput {
                 metadata: self.metadata,
@@ -1430,7 +1446,7 @@ pub mod get_rightsizing_recommendation_output {
     }
 }
 impl GetRightsizingRecommendationOutput {
-    /// Creates a new builder-style object to manufacture [`GetRightsizingRecommendationOutput`](crate::output::GetRightsizingRecommendationOutput)
+    /// Creates a new builder-style object to manufacture [`GetRightsizingRecommendationOutput`](crate::output::GetRightsizingRecommendationOutput).
     pub fn builder() -> crate::output::get_rightsizing_recommendation_output::Builder {
         crate::output::get_rightsizing_recommendation_output::Builder::default()
     }
@@ -1441,10 +1457,13 @@ impl GetRightsizingRecommendationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetReservationUtilizationOutput {
     /// <p>The amount of time that you used your Reserved Instances (RIs).</p>
+    #[doc(hidden)]
     pub utilizations_by_time: std::option::Option<std::vec::Vec<crate::model::UtilizationByTime>>,
     /// <p>The total amount of time that you used your Reserved Instances (RIs).</p>
+    #[doc(hidden)]
     pub total: std::option::Option<crate::model::ReservationAggregates>,
     /// <p>The token for the next set of retrievable results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size.</p>
+    #[doc(hidden)]
     pub next_page_token: std::option::Option<std::string::String>,
 }
 impl GetReservationUtilizationOutput {
@@ -1470,11 +1489,10 @@ impl std::fmt::Debug for GetReservationUtilizationOutput {
         formatter.finish()
     }
 }
-/// See [`GetReservationUtilizationOutput`](crate::output::GetReservationUtilizationOutput)
+/// See [`GetReservationUtilizationOutput`](crate::output::GetReservationUtilizationOutput).
 pub mod get_reservation_utilization_output {
 
-    /// A builder for [`GetReservationUtilizationOutput`](crate::output::GetReservationUtilizationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetReservationUtilizationOutput`](crate::output::GetReservationUtilizationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) utilizations_by_time:
@@ -1528,7 +1546,7 @@ pub mod get_reservation_utilization_output {
             self.next_page_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetReservationUtilizationOutput`](crate::output::GetReservationUtilizationOutput)
+        /// Consumes the builder and constructs a [`GetReservationUtilizationOutput`](crate::output::GetReservationUtilizationOutput).
         pub fn build(self) -> crate::output::GetReservationUtilizationOutput {
             crate::output::GetReservationUtilizationOutput {
                 utilizations_by_time: self.utilizations_by_time,
@@ -1539,7 +1557,7 @@ pub mod get_reservation_utilization_output {
     }
 }
 impl GetReservationUtilizationOutput {
-    /// Creates a new builder-style object to manufacture [`GetReservationUtilizationOutput`](crate::output::GetReservationUtilizationOutput)
+    /// Creates a new builder-style object to manufacture [`GetReservationUtilizationOutput`](crate::output::GetReservationUtilizationOutput).
     pub fn builder() -> crate::output::get_reservation_utilization_output::Builder {
         crate::output::get_reservation_utilization_output::Builder::default()
     }
@@ -1550,11 +1568,14 @@ impl GetReservationUtilizationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetReservationPurchaseRecommendationOutput {
     /// <p>Information about this specific recommendation call, such as the time stamp for when Cost Explorer generated this recommendation.</p>
+    #[doc(hidden)]
     pub metadata: std::option::Option<crate::model::ReservationPurchaseRecommendationMetadata>,
     /// <p>Recommendations for reservations to purchase.</p>
+    #[doc(hidden)]
     pub recommendations:
         std::option::Option<std::vec::Vec<crate::model::ReservationPurchaseRecommendation>>,
     /// <p>The pagination token for the next set of retrievable results.</p>
+    #[doc(hidden)]
     pub next_page_token: std::option::Option<std::string::String>,
 }
 impl GetReservationPurchaseRecommendationOutput {
@@ -1584,11 +1605,10 @@ impl std::fmt::Debug for GetReservationPurchaseRecommendationOutput {
         formatter.finish()
     }
 }
-/// See [`GetReservationPurchaseRecommendationOutput`](crate::output::GetReservationPurchaseRecommendationOutput)
+/// See [`GetReservationPurchaseRecommendationOutput`](crate::output::GetReservationPurchaseRecommendationOutput).
 pub mod get_reservation_purchase_recommendation_output {
 
-    /// A builder for [`GetReservationPurchaseRecommendationOutput`](crate::output::GetReservationPurchaseRecommendationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetReservationPurchaseRecommendationOutput`](crate::output::GetReservationPurchaseRecommendationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metadata:
@@ -1651,7 +1671,7 @@ pub mod get_reservation_purchase_recommendation_output {
             self.next_page_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetReservationPurchaseRecommendationOutput`](crate::output::GetReservationPurchaseRecommendationOutput)
+        /// Consumes the builder and constructs a [`GetReservationPurchaseRecommendationOutput`](crate::output::GetReservationPurchaseRecommendationOutput).
         pub fn build(self) -> crate::output::GetReservationPurchaseRecommendationOutput {
             crate::output::GetReservationPurchaseRecommendationOutput {
                 metadata: self.metadata,
@@ -1662,7 +1682,7 @@ pub mod get_reservation_purchase_recommendation_output {
     }
 }
 impl GetReservationPurchaseRecommendationOutput {
-    /// Creates a new builder-style object to manufacture [`GetReservationPurchaseRecommendationOutput`](crate::output::GetReservationPurchaseRecommendationOutput)
+    /// Creates a new builder-style object to manufacture [`GetReservationPurchaseRecommendationOutput`](crate::output::GetReservationPurchaseRecommendationOutput).
     pub fn builder() -> crate::output::get_reservation_purchase_recommendation_output::Builder {
         crate::output::get_reservation_purchase_recommendation_output::Builder::default()
     }
@@ -1673,10 +1693,13 @@ impl GetReservationPurchaseRecommendationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetReservationCoverageOutput {
     /// <p>The amount of time that your reservations covered.</p>
+    #[doc(hidden)]
     pub coverages_by_time: std::option::Option<std::vec::Vec<crate::model::CoverageByTime>>,
     /// <p>The total amount of instance usage that a reservation covered.</p>
+    #[doc(hidden)]
     pub total: std::option::Option<crate::model::Coverage>,
     /// <p>The token for the next set of retrievable results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size.</p>
+    #[doc(hidden)]
     pub next_page_token: std::option::Option<std::string::String>,
 }
 impl GetReservationCoverageOutput {
@@ -1702,11 +1725,10 @@ impl std::fmt::Debug for GetReservationCoverageOutput {
         formatter.finish()
     }
 }
-/// See [`GetReservationCoverageOutput`](crate::output::GetReservationCoverageOutput)
+/// See [`GetReservationCoverageOutput`](crate::output::GetReservationCoverageOutput).
 pub mod get_reservation_coverage_output {
 
-    /// A builder for [`GetReservationCoverageOutput`](crate::output::GetReservationCoverageOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetReservationCoverageOutput`](crate::output::GetReservationCoverageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) coverages_by_time:
@@ -1757,7 +1779,7 @@ pub mod get_reservation_coverage_output {
             self.next_page_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetReservationCoverageOutput`](crate::output::GetReservationCoverageOutput)
+        /// Consumes the builder and constructs a [`GetReservationCoverageOutput`](crate::output::GetReservationCoverageOutput).
         pub fn build(self) -> crate::output::GetReservationCoverageOutput {
             crate::output::GetReservationCoverageOutput {
                 coverages_by_time: self.coverages_by_time,
@@ -1768,7 +1790,7 @@ pub mod get_reservation_coverage_output {
     }
 }
 impl GetReservationCoverageOutput {
-    /// Creates a new builder-style object to manufacture [`GetReservationCoverageOutput`](crate::output::GetReservationCoverageOutput)
+    /// Creates a new builder-style object to manufacture [`GetReservationCoverageOutput`](crate::output::GetReservationCoverageOutput).
     pub fn builder() -> crate::output::get_reservation_coverage_output::Builder {
         crate::output::get_reservation_coverage_output::Builder::default()
     }
@@ -1818,13 +1840,17 @@ pub struct GetDimensionValuesOutput {
     /// <li> <p>LINKED_ACCOUNT - The description in the attribute map that includes the full name of the member account. The value field contains the Amazon Web Services ID of the member account.</p> </li>
     /// <li> <p>SAVINGS_PLAN_ARN - The unique identifier for your Savings Plan</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub dimension_values:
         std::option::Option<std::vec::Vec<crate::model::DimensionValuesWithAttributes>>,
     /// <p>The number of results that Amazon Web Services returned at one time.</p>
+    #[doc(hidden)]
     pub return_size: std::option::Option<i32>,
     /// <p>The total number of search results.</p>
+    #[doc(hidden)]
     pub total_size: std::option::Option<i32>,
     /// <p>The token for the next set of retrievable results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size.</p>
+    #[doc(hidden)]
     pub next_page_token: std::option::Option<std::string::String>,
 }
 impl GetDimensionValuesOutput {
@@ -1896,11 +1922,10 @@ impl std::fmt::Debug for GetDimensionValuesOutput {
         formatter.finish()
     }
 }
-/// See [`GetDimensionValuesOutput`](crate::output::GetDimensionValuesOutput)
+/// See [`GetDimensionValuesOutput`](crate::output::GetDimensionValuesOutput).
 pub mod get_dimension_values_output {
 
-    /// A builder for [`GetDimensionValuesOutput`](crate::output::GetDimensionValuesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDimensionValuesOutput`](crate::output::GetDimensionValuesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimension_values:
@@ -2043,7 +2068,7 @@ pub mod get_dimension_values_output {
             self.next_page_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDimensionValuesOutput`](crate::output::GetDimensionValuesOutput)
+        /// Consumes the builder and constructs a [`GetDimensionValuesOutput`](crate::output::GetDimensionValuesOutput).
         pub fn build(self) -> crate::output::GetDimensionValuesOutput {
             crate::output::GetDimensionValuesOutput {
                 dimension_values: self.dimension_values,
@@ -2055,7 +2080,7 @@ pub mod get_dimension_values_output {
     }
 }
 impl GetDimensionValuesOutput {
-    /// Creates a new builder-style object to manufacture [`GetDimensionValuesOutput`](crate::output::GetDimensionValuesOutput)
+    /// Creates a new builder-style object to manufacture [`GetDimensionValuesOutput`](crate::output::GetDimensionValuesOutput).
     pub fn builder() -> crate::output::get_dimension_values_output::Builder {
         crate::output::get_dimension_values_output::Builder::default()
     }
@@ -2066,8 +2091,10 @@ impl GetDimensionValuesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCostForecastOutput {
     /// <p>How much you are forecasted to spend over the forecast period, in <code>USD</code>.</p>
+    #[doc(hidden)]
     pub total: std::option::Option<crate::model::MetricValue>,
     /// <p>The forecasts for your query, in order. For <code>DAILY</code> forecasts, this is a list of days. For <code>MONTHLY</code> forecasts, this is a list of months.</p>
+    #[doc(hidden)]
     pub forecast_results_by_time: std::option::Option<std::vec::Vec<crate::model::ForecastResult>>,
 }
 impl GetCostForecastOutput {
@@ -2088,11 +2115,10 @@ impl std::fmt::Debug for GetCostForecastOutput {
         formatter.finish()
     }
 }
-/// See [`GetCostForecastOutput`](crate::output::GetCostForecastOutput)
+/// See [`GetCostForecastOutput`](crate::output::GetCostForecastOutput).
 pub mod get_cost_forecast_output {
 
-    /// A builder for [`GetCostForecastOutput`](crate::output::GetCostForecastOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCostForecastOutput`](crate::output::GetCostForecastOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total: std::option::Option<crate::model::MetricValue>,
@@ -2129,7 +2155,7 @@ pub mod get_cost_forecast_output {
             self.forecast_results_by_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCostForecastOutput`](crate::output::GetCostForecastOutput)
+        /// Consumes the builder and constructs a [`GetCostForecastOutput`](crate::output::GetCostForecastOutput).
         pub fn build(self) -> crate::output::GetCostForecastOutput {
             crate::output::GetCostForecastOutput {
                 total: self.total,
@@ -2139,7 +2165,7 @@ pub mod get_cost_forecast_output {
     }
 }
 impl GetCostForecastOutput {
-    /// Creates a new builder-style object to manufacture [`GetCostForecastOutput`](crate::output::GetCostForecastOutput)
+    /// Creates a new builder-style object to manufacture [`GetCostForecastOutput`](crate::output::GetCostForecastOutput).
     pub fn builder() -> crate::output::get_cost_forecast_output::Builder {
         crate::output::get_cost_forecast_output::Builder::default()
     }
@@ -2150,15 +2176,20 @@ impl GetCostForecastOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCostCategoriesOutput {
     /// <p>If the number of objects that are still available for retrieval exceeds the quota, Amazon Web Services returns a NextPageToken value in the response. To retrieve the next batch of objects, provide the marker from the prior call in your next request.</p>
+    #[doc(hidden)]
     pub next_page_token: std::option::Option<std::string::String>,
     /// <p>The names of the Cost Categories.</p>
+    #[doc(hidden)]
     pub cost_category_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Cost Category values.</p>
     /// <p>If the <code>CostCategoryName</code> key isn't specified in the request, the <code>CostCategoryValues</code> fields aren't returned. </p>
+    #[doc(hidden)]
     pub cost_category_values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The number of objects that are returned.</p>
+    #[doc(hidden)]
     pub return_size: std::option::Option<i32>,
     /// <p>The total number of objects.</p>
+    #[doc(hidden)]
     pub total_size: std::option::Option<i32>,
 }
 impl GetCostCategoriesOutput {
@@ -2195,11 +2226,10 @@ impl std::fmt::Debug for GetCostCategoriesOutput {
         formatter.finish()
     }
 }
-/// See [`GetCostCategoriesOutput`](crate::output::GetCostCategoriesOutput)
+/// See [`GetCostCategoriesOutput`](crate::output::GetCostCategoriesOutput).
 pub mod get_cost_categories_output {
 
-    /// A builder for [`GetCostCategoriesOutput`](crate::output::GetCostCategoriesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCostCategoriesOutput`](crate::output::GetCostCategoriesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_page_token: std::option::Option<std::string::String>,
@@ -2282,7 +2312,7 @@ pub mod get_cost_categories_output {
             self.total_size = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCostCategoriesOutput`](crate::output::GetCostCategoriesOutput)
+        /// Consumes the builder and constructs a [`GetCostCategoriesOutput`](crate::output::GetCostCategoriesOutput).
         pub fn build(self) -> crate::output::GetCostCategoriesOutput {
             crate::output::GetCostCategoriesOutput {
                 next_page_token: self.next_page_token,
@@ -2295,7 +2325,7 @@ pub mod get_cost_categories_output {
     }
 }
 impl GetCostCategoriesOutput {
-    /// Creates a new builder-style object to manufacture [`GetCostCategoriesOutput`](crate::output::GetCostCategoriesOutput)
+    /// Creates a new builder-style object to manufacture [`GetCostCategoriesOutput`](crate::output::GetCostCategoriesOutput).
     pub fn builder() -> crate::output::get_cost_categories_output::Builder {
         crate::output::get_cost_categories_output::Builder::default()
     }
@@ -2306,12 +2336,16 @@ impl GetCostCategoriesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCostAndUsageWithResourcesOutput {
     /// <p>The token for the next set of retrievable results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size.</p>
+    #[doc(hidden)]
     pub next_page_token: std::option::Option<std::string::String>,
     /// <p>The groups that are specified by the <code>Filter</code> or <code>GroupBy</code> parameters in the request.</p>
+    #[doc(hidden)]
     pub group_definitions: std::option::Option<std::vec::Vec<crate::model::GroupDefinition>>,
     /// <p>The time period that's covered by the results in the response.</p>
+    #[doc(hidden)]
     pub results_by_time: std::option::Option<std::vec::Vec<crate::model::ResultByTime>>,
     /// <p>The attributes that apply to a specific dimension value. For example, if the value is a linked account, the attribute is that account name.</p>
+    #[doc(hidden)]
     pub dimension_value_attributes:
         std::option::Option<std::vec::Vec<crate::model::DimensionValuesWithAttributes>>,
 }
@@ -2348,11 +2382,10 @@ impl std::fmt::Debug for GetCostAndUsageWithResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`GetCostAndUsageWithResourcesOutput`](crate::output::GetCostAndUsageWithResourcesOutput)
+/// See [`GetCostAndUsageWithResourcesOutput`](crate::output::GetCostAndUsageWithResourcesOutput).
 pub mod get_cost_and_usage_with_resources_output {
 
-    /// A builder for [`GetCostAndUsageWithResourcesOutput`](crate::output::GetCostAndUsageWithResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCostAndUsageWithResourcesOutput`](crate::output::GetCostAndUsageWithResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_page_token: std::option::Option<std::string::String>,
@@ -2436,7 +2469,7 @@ pub mod get_cost_and_usage_with_resources_output {
             self.dimension_value_attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCostAndUsageWithResourcesOutput`](crate::output::GetCostAndUsageWithResourcesOutput)
+        /// Consumes the builder and constructs a [`GetCostAndUsageWithResourcesOutput`](crate::output::GetCostAndUsageWithResourcesOutput).
         pub fn build(self) -> crate::output::GetCostAndUsageWithResourcesOutput {
             crate::output::GetCostAndUsageWithResourcesOutput {
                 next_page_token: self.next_page_token,
@@ -2448,7 +2481,7 @@ pub mod get_cost_and_usage_with_resources_output {
     }
 }
 impl GetCostAndUsageWithResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`GetCostAndUsageWithResourcesOutput`](crate::output::GetCostAndUsageWithResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`GetCostAndUsageWithResourcesOutput`](crate::output::GetCostAndUsageWithResourcesOutput).
     pub fn builder() -> crate::output::get_cost_and_usage_with_resources_output::Builder {
         crate::output::get_cost_and_usage_with_resources_output::Builder::default()
     }
@@ -2459,12 +2492,16 @@ impl GetCostAndUsageWithResourcesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCostAndUsageOutput {
     /// <p>The token for the next set of retrievable results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size.</p>
+    #[doc(hidden)]
     pub next_page_token: std::option::Option<std::string::String>,
     /// <p>The groups that are specified by the <code>Filter</code> or <code>GroupBy</code> parameters in the request.</p>
+    #[doc(hidden)]
     pub group_definitions: std::option::Option<std::vec::Vec<crate::model::GroupDefinition>>,
     /// <p>The time period that's covered by the results in the response.</p>
+    #[doc(hidden)]
     pub results_by_time: std::option::Option<std::vec::Vec<crate::model::ResultByTime>>,
     /// <p>The attributes that apply to a specific dimension value. For example, if the value is a linked account, the attribute is that account name.</p>
+    #[doc(hidden)]
     pub dimension_value_attributes:
         std::option::Option<std::vec::Vec<crate::model::DimensionValuesWithAttributes>>,
 }
@@ -2501,11 +2538,10 @@ impl std::fmt::Debug for GetCostAndUsageOutput {
         formatter.finish()
     }
 }
-/// See [`GetCostAndUsageOutput`](crate::output::GetCostAndUsageOutput)
+/// See [`GetCostAndUsageOutput`](crate::output::GetCostAndUsageOutput).
 pub mod get_cost_and_usage_output {
 
-    /// A builder for [`GetCostAndUsageOutput`](crate::output::GetCostAndUsageOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCostAndUsageOutput`](crate::output::GetCostAndUsageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_page_token: std::option::Option<std::string::String>,
@@ -2589,7 +2625,7 @@ pub mod get_cost_and_usage_output {
             self.dimension_value_attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCostAndUsageOutput`](crate::output::GetCostAndUsageOutput)
+        /// Consumes the builder and constructs a [`GetCostAndUsageOutput`](crate::output::GetCostAndUsageOutput).
         pub fn build(self) -> crate::output::GetCostAndUsageOutput {
             crate::output::GetCostAndUsageOutput {
                 next_page_token: self.next_page_token,
@@ -2601,7 +2637,7 @@ pub mod get_cost_and_usage_output {
     }
 }
 impl GetCostAndUsageOutput {
-    /// Creates a new builder-style object to manufacture [`GetCostAndUsageOutput`](crate::output::GetCostAndUsageOutput)
+    /// Creates a new builder-style object to manufacture [`GetCostAndUsageOutput`](crate::output::GetCostAndUsageOutput).
     pub fn builder() -> crate::output::get_cost_and_usage_output::Builder {
         crate::output::get_cost_and_usage_output::Builder::default()
     }
@@ -2612,9 +2648,11 @@ impl GetCostAndUsageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAnomalySubscriptionsOutput {
     /// <p>A list of cost anomaly subscriptions that includes the detailed metadata for each one. </p>
+    #[doc(hidden)]
     pub anomaly_subscriptions:
         std::option::Option<std::vec::Vec<crate::model::AnomalySubscription>>,
     /// <p>The token to retrieve the next set of results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size. </p>
+    #[doc(hidden)]
     pub next_page_token: std::option::Option<std::string::String>,
 }
 impl GetAnomalySubscriptionsOutput {
@@ -2637,11 +2675,10 @@ impl std::fmt::Debug for GetAnomalySubscriptionsOutput {
         formatter.finish()
     }
 }
-/// See [`GetAnomalySubscriptionsOutput`](crate::output::GetAnomalySubscriptionsOutput)
+/// See [`GetAnomalySubscriptionsOutput`](crate::output::GetAnomalySubscriptionsOutput).
 pub mod get_anomaly_subscriptions_output {
 
-    /// A builder for [`GetAnomalySubscriptionsOutput`](crate::output::GetAnomalySubscriptionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAnomalySubscriptionsOutput`](crate::output::GetAnomalySubscriptionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) anomaly_subscriptions:
@@ -2681,7 +2718,7 @@ pub mod get_anomaly_subscriptions_output {
             self.next_page_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAnomalySubscriptionsOutput`](crate::output::GetAnomalySubscriptionsOutput)
+        /// Consumes the builder and constructs a [`GetAnomalySubscriptionsOutput`](crate::output::GetAnomalySubscriptionsOutput).
         pub fn build(self) -> crate::output::GetAnomalySubscriptionsOutput {
             crate::output::GetAnomalySubscriptionsOutput {
                 anomaly_subscriptions: self.anomaly_subscriptions,
@@ -2691,7 +2728,7 @@ pub mod get_anomaly_subscriptions_output {
     }
 }
 impl GetAnomalySubscriptionsOutput {
-    /// Creates a new builder-style object to manufacture [`GetAnomalySubscriptionsOutput`](crate::output::GetAnomalySubscriptionsOutput)
+    /// Creates a new builder-style object to manufacture [`GetAnomalySubscriptionsOutput`](crate::output::GetAnomalySubscriptionsOutput).
     pub fn builder() -> crate::output::get_anomaly_subscriptions_output::Builder {
         crate::output::get_anomaly_subscriptions_output::Builder::default()
     }
@@ -2702,8 +2739,10 @@ impl GetAnomalySubscriptionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAnomalyMonitorsOutput {
     /// <p>A list of cost anomaly monitors that includes the detailed metadata for each monitor. </p>
+    #[doc(hidden)]
     pub anomaly_monitors: std::option::Option<std::vec::Vec<crate::model::AnomalyMonitor>>,
     /// <p>The token to retrieve the next set of results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size. </p>
+    #[doc(hidden)]
     pub next_page_token: std::option::Option<std::string::String>,
 }
 impl GetAnomalyMonitorsOutput {
@@ -2724,11 +2763,10 @@ impl std::fmt::Debug for GetAnomalyMonitorsOutput {
         formatter.finish()
     }
 }
-/// See [`GetAnomalyMonitorsOutput`](crate::output::GetAnomalyMonitorsOutput)
+/// See [`GetAnomalyMonitorsOutput`](crate::output::GetAnomalyMonitorsOutput).
 pub mod get_anomaly_monitors_output {
 
-    /// A builder for [`GetAnomalyMonitorsOutput`](crate::output::GetAnomalyMonitorsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAnomalyMonitorsOutput`](crate::output::GetAnomalyMonitorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) anomaly_monitors:
@@ -2768,7 +2806,7 @@ pub mod get_anomaly_monitors_output {
             self.next_page_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAnomalyMonitorsOutput`](crate::output::GetAnomalyMonitorsOutput)
+        /// Consumes the builder and constructs a [`GetAnomalyMonitorsOutput`](crate::output::GetAnomalyMonitorsOutput).
         pub fn build(self) -> crate::output::GetAnomalyMonitorsOutput {
             crate::output::GetAnomalyMonitorsOutput {
                 anomaly_monitors: self.anomaly_monitors,
@@ -2778,7 +2816,7 @@ pub mod get_anomaly_monitors_output {
     }
 }
 impl GetAnomalyMonitorsOutput {
-    /// Creates a new builder-style object to manufacture [`GetAnomalyMonitorsOutput`](crate::output::GetAnomalyMonitorsOutput)
+    /// Creates a new builder-style object to manufacture [`GetAnomalyMonitorsOutput`](crate::output::GetAnomalyMonitorsOutput).
     pub fn builder() -> crate::output::get_anomaly_monitors_output::Builder {
         crate::output::get_anomaly_monitors_output::Builder::default()
     }
@@ -2789,8 +2827,10 @@ impl GetAnomalyMonitorsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAnomaliesOutput {
     /// <p>A list of cost anomalies. </p>
+    #[doc(hidden)]
     pub anomalies: std::option::Option<std::vec::Vec<crate::model::Anomaly>>,
     /// <p>The token to retrieve the next set of results. Amazon Web Services provides the token when the response from a previous call has more results than the maximum page size. </p>
+    #[doc(hidden)]
     pub next_page_token: std::option::Option<std::string::String>,
 }
 impl GetAnomaliesOutput {
@@ -2811,11 +2851,10 @@ impl std::fmt::Debug for GetAnomaliesOutput {
         formatter.finish()
     }
 }
-/// See [`GetAnomaliesOutput`](crate::output::GetAnomaliesOutput)
+/// See [`GetAnomaliesOutput`](crate::output::GetAnomaliesOutput).
 pub mod get_anomalies_output {
 
-    /// A builder for [`GetAnomaliesOutput`](crate::output::GetAnomaliesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAnomaliesOutput`](crate::output::GetAnomaliesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) anomalies: std::option::Option<std::vec::Vec<crate::model::Anomaly>>,
@@ -2854,7 +2893,7 @@ pub mod get_anomalies_output {
             self.next_page_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAnomaliesOutput`](crate::output::GetAnomaliesOutput)
+        /// Consumes the builder and constructs a [`GetAnomaliesOutput`](crate::output::GetAnomaliesOutput).
         pub fn build(self) -> crate::output::GetAnomaliesOutput {
             crate::output::GetAnomaliesOutput {
                 anomalies: self.anomalies,
@@ -2864,7 +2903,7 @@ pub mod get_anomalies_output {
     }
 }
 impl GetAnomaliesOutput {
-    /// Creates a new builder-style object to manufacture [`GetAnomaliesOutput`](crate::output::GetAnomaliesOutput)
+    /// Creates a new builder-style object to manufacture [`GetAnomaliesOutput`](crate::output::GetAnomaliesOutput).
     pub fn builder() -> crate::output::get_anomalies_output::Builder {
         crate::output::get_anomalies_output::Builder::default()
     }
@@ -2875,6 +2914,7 @@ impl GetAnomaliesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeCostCategoryDefinitionOutput {
     /// <p>The structure of Cost Categories. This includes detailed metadata and the set of rules for the <code>CostCategory</code> object.</p>
+    #[doc(hidden)]
     pub cost_category: std::option::Option<crate::model::CostCategory>,
 }
 impl DescribeCostCategoryDefinitionOutput {
@@ -2890,11 +2930,10 @@ impl std::fmt::Debug for DescribeCostCategoryDefinitionOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeCostCategoryDefinitionOutput`](crate::output::DescribeCostCategoryDefinitionOutput)
+/// See [`DescribeCostCategoryDefinitionOutput`](crate::output::DescribeCostCategoryDefinitionOutput).
 pub mod describe_cost_category_definition_output {
 
-    /// A builder for [`DescribeCostCategoryDefinitionOutput`](crate::output::DescribeCostCategoryDefinitionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeCostCategoryDefinitionOutput`](crate::output::DescribeCostCategoryDefinitionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cost_category: std::option::Option<crate::model::CostCategory>,
@@ -2913,7 +2952,7 @@ pub mod describe_cost_category_definition_output {
             self.cost_category = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeCostCategoryDefinitionOutput`](crate::output::DescribeCostCategoryDefinitionOutput)
+        /// Consumes the builder and constructs a [`DescribeCostCategoryDefinitionOutput`](crate::output::DescribeCostCategoryDefinitionOutput).
         pub fn build(self) -> crate::output::DescribeCostCategoryDefinitionOutput {
             crate::output::DescribeCostCategoryDefinitionOutput {
                 cost_category: self.cost_category,
@@ -2922,7 +2961,7 @@ pub mod describe_cost_category_definition_output {
     }
 }
 impl DescribeCostCategoryDefinitionOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeCostCategoryDefinitionOutput`](crate::output::DescribeCostCategoryDefinitionOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeCostCategoryDefinitionOutput`](crate::output::DescribeCostCategoryDefinitionOutput).
     pub fn builder() -> crate::output::describe_cost_category_definition_output::Builder {
         crate::output::describe_cost_category_definition_output::Builder::default()
     }
@@ -2933,8 +2972,10 @@ impl DescribeCostCategoryDefinitionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteCostCategoryDefinitionOutput {
     /// <p>The unique identifier for your Cost Category. </p>
+    #[doc(hidden)]
     pub cost_category_arn: std::option::Option<std::string::String>,
     /// <p>The effective end date of the Cost Category as a result of deleting it. No costs after this date is categorized by the deleted Cost Category. </p>
+    #[doc(hidden)]
     pub effective_end: std::option::Option<std::string::String>,
 }
 impl DeleteCostCategoryDefinitionOutput {
@@ -2955,11 +2996,10 @@ impl std::fmt::Debug for DeleteCostCategoryDefinitionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteCostCategoryDefinitionOutput`](crate::output::DeleteCostCategoryDefinitionOutput)
+/// See [`DeleteCostCategoryDefinitionOutput`](crate::output::DeleteCostCategoryDefinitionOutput).
 pub mod delete_cost_category_definition_output {
 
-    /// A builder for [`DeleteCostCategoryDefinitionOutput`](crate::output::DeleteCostCategoryDefinitionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteCostCategoryDefinitionOutput`](crate::output::DeleteCostCategoryDefinitionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cost_category_arn: std::option::Option<std::string::String>,
@@ -2992,7 +3032,7 @@ pub mod delete_cost_category_definition_output {
             self.effective_end = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteCostCategoryDefinitionOutput`](crate::output::DeleteCostCategoryDefinitionOutput)
+        /// Consumes the builder and constructs a [`DeleteCostCategoryDefinitionOutput`](crate::output::DeleteCostCategoryDefinitionOutput).
         pub fn build(self) -> crate::output::DeleteCostCategoryDefinitionOutput {
             crate::output::DeleteCostCategoryDefinitionOutput {
                 cost_category_arn: self.cost_category_arn,
@@ -3002,7 +3042,7 @@ pub mod delete_cost_category_definition_output {
     }
 }
 impl DeleteCostCategoryDefinitionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteCostCategoryDefinitionOutput`](crate::output::DeleteCostCategoryDefinitionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteCostCategoryDefinitionOutput`](crate::output::DeleteCostCategoryDefinitionOutput).
     pub fn builder() -> crate::output::delete_cost_category_definition_output::Builder {
         crate::output::delete_cost_category_definition_output::Builder::default()
     }
@@ -3018,22 +3058,21 @@ impl std::fmt::Debug for DeleteAnomalySubscriptionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAnomalySubscriptionOutput`](crate::output::DeleteAnomalySubscriptionOutput)
+/// See [`DeleteAnomalySubscriptionOutput`](crate::output::DeleteAnomalySubscriptionOutput).
 pub mod delete_anomaly_subscription_output {
 
-    /// A builder for [`DeleteAnomalySubscriptionOutput`](crate::output::DeleteAnomalySubscriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAnomalySubscriptionOutput`](crate::output::DeleteAnomalySubscriptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteAnomalySubscriptionOutput`](crate::output::DeleteAnomalySubscriptionOutput)
+        /// Consumes the builder and constructs a [`DeleteAnomalySubscriptionOutput`](crate::output::DeleteAnomalySubscriptionOutput).
         pub fn build(self) -> crate::output::DeleteAnomalySubscriptionOutput {
             crate::output::DeleteAnomalySubscriptionOutput {}
         }
     }
 }
 impl DeleteAnomalySubscriptionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAnomalySubscriptionOutput`](crate::output::DeleteAnomalySubscriptionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAnomalySubscriptionOutput`](crate::output::DeleteAnomalySubscriptionOutput).
     pub fn builder() -> crate::output::delete_anomaly_subscription_output::Builder {
         crate::output::delete_anomaly_subscription_output::Builder::default()
     }
@@ -3049,22 +3088,21 @@ impl std::fmt::Debug for DeleteAnomalyMonitorOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAnomalyMonitorOutput`](crate::output::DeleteAnomalyMonitorOutput)
+/// See [`DeleteAnomalyMonitorOutput`](crate::output::DeleteAnomalyMonitorOutput).
 pub mod delete_anomaly_monitor_output {
 
-    /// A builder for [`DeleteAnomalyMonitorOutput`](crate::output::DeleteAnomalyMonitorOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAnomalyMonitorOutput`](crate::output::DeleteAnomalyMonitorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteAnomalyMonitorOutput`](crate::output::DeleteAnomalyMonitorOutput)
+        /// Consumes the builder and constructs a [`DeleteAnomalyMonitorOutput`](crate::output::DeleteAnomalyMonitorOutput).
         pub fn build(self) -> crate::output::DeleteAnomalyMonitorOutput {
             crate::output::DeleteAnomalyMonitorOutput {}
         }
     }
 }
 impl DeleteAnomalyMonitorOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAnomalyMonitorOutput`](crate::output::DeleteAnomalyMonitorOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAnomalyMonitorOutput`](crate::output::DeleteAnomalyMonitorOutput).
     pub fn builder() -> crate::output::delete_anomaly_monitor_output::Builder {
         crate::output::delete_anomaly_monitor_output::Builder::default()
     }
@@ -3075,8 +3113,10 @@ impl DeleteAnomalyMonitorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateCostCategoryDefinitionOutput {
     /// <p>The unique identifier for your newly created Cost Category. </p>
+    #[doc(hidden)]
     pub cost_category_arn: std::option::Option<std::string::String>,
     /// <p>The Cost Category's effective start date. </p>
+    #[doc(hidden)]
     pub effective_start: std::option::Option<std::string::String>,
 }
 impl CreateCostCategoryDefinitionOutput {
@@ -3097,11 +3137,10 @@ impl std::fmt::Debug for CreateCostCategoryDefinitionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateCostCategoryDefinitionOutput`](crate::output::CreateCostCategoryDefinitionOutput)
+/// See [`CreateCostCategoryDefinitionOutput`](crate::output::CreateCostCategoryDefinitionOutput).
 pub mod create_cost_category_definition_output {
 
-    /// A builder for [`CreateCostCategoryDefinitionOutput`](crate::output::CreateCostCategoryDefinitionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateCostCategoryDefinitionOutput`](crate::output::CreateCostCategoryDefinitionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cost_category_arn: std::option::Option<std::string::String>,
@@ -3134,7 +3173,7 @@ pub mod create_cost_category_definition_output {
             self.effective_start = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateCostCategoryDefinitionOutput`](crate::output::CreateCostCategoryDefinitionOutput)
+        /// Consumes the builder and constructs a [`CreateCostCategoryDefinitionOutput`](crate::output::CreateCostCategoryDefinitionOutput).
         pub fn build(self) -> crate::output::CreateCostCategoryDefinitionOutput {
             crate::output::CreateCostCategoryDefinitionOutput {
                 cost_category_arn: self.cost_category_arn,
@@ -3144,7 +3183,7 @@ pub mod create_cost_category_definition_output {
     }
 }
 impl CreateCostCategoryDefinitionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateCostCategoryDefinitionOutput`](crate::output::CreateCostCategoryDefinitionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateCostCategoryDefinitionOutput`](crate::output::CreateCostCategoryDefinitionOutput).
     pub fn builder() -> crate::output::create_cost_category_definition_output::Builder {
         crate::output::create_cost_category_definition_output::Builder::default()
     }
@@ -3155,6 +3194,7 @@ impl CreateCostCategoryDefinitionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAnomalySubscriptionOutput {
     /// <p>The unique identifier of your newly created cost anomaly subscription. </p>
+    #[doc(hidden)]
     pub subscription_arn: std::option::Option<std::string::String>,
 }
 impl CreateAnomalySubscriptionOutput {
@@ -3170,11 +3210,10 @@ impl std::fmt::Debug for CreateAnomalySubscriptionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAnomalySubscriptionOutput`](crate::output::CreateAnomalySubscriptionOutput)
+/// See [`CreateAnomalySubscriptionOutput`](crate::output::CreateAnomalySubscriptionOutput).
 pub mod create_anomaly_subscription_output {
 
-    /// A builder for [`CreateAnomalySubscriptionOutput`](crate::output::CreateAnomalySubscriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateAnomalySubscriptionOutput`](crate::output::CreateAnomalySubscriptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subscription_arn: std::option::Option<std::string::String>,
@@ -3193,7 +3232,7 @@ pub mod create_anomaly_subscription_output {
             self.subscription_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAnomalySubscriptionOutput`](crate::output::CreateAnomalySubscriptionOutput)
+        /// Consumes the builder and constructs a [`CreateAnomalySubscriptionOutput`](crate::output::CreateAnomalySubscriptionOutput).
         pub fn build(self) -> crate::output::CreateAnomalySubscriptionOutput {
             crate::output::CreateAnomalySubscriptionOutput {
                 subscription_arn: self.subscription_arn,
@@ -3202,7 +3241,7 @@ pub mod create_anomaly_subscription_output {
     }
 }
 impl CreateAnomalySubscriptionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAnomalySubscriptionOutput`](crate::output::CreateAnomalySubscriptionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAnomalySubscriptionOutput`](crate::output::CreateAnomalySubscriptionOutput).
     pub fn builder() -> crate::output::create_anomaly_subscription_output::Builder {
         crate::output::create_anomaly_subscription_output::Builder::default()
     }
@@ -3213,6 +3252,7 @@ impl CreateAnomalySubscriptionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAnomalyMonitorOutput {
     /// <p>The unique identifier of your newly created cost anomaly detection monitor.</p>
+    #[doc(hidden)]
     pub monitor_arn: std::option::Option<std::string::String>,
 }
 impl CreateAnomalyMonitorOutput {
@@ -3228,11 +3268,10 @@ impl std::fmt::Debug for CreateAnomalyMonitorOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAnomalyMonitorOutput`](crate::output::CreateAnomalyMonitorOutput)
+/// See [`CreateAnomalyMonitorOutput`](crate::output::CreateAnomalyMonitorOutput).
 pub mod create_anomaly_monitor_output {
 
-    /// A builder for [`CreateAnomalyMonitorOutput`](crate::output::CreateAnomalyMonitorOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateAnomalyMonitorOutput`](crate::output::CreateAnomalyMonitorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) monitor_arn: std::option::Option<std::string::String>,
@@ -3248,7 +3287,7 @@ pub mod create_anomaly_monitor_output {
             self.monitor_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAnomalyMonitorOutput`](crate::output::CreateAnomalyMonitorOutput)
+        /// Consumes the builder and constructs a [`CreateAnomalyMonitorOutput`](crate::output::CreateAnomalyMonitorOutput).
         pub fn build(self) -> crate::output::CreateAnomalyMonitorOutput {
             crate::output::CreateAnomalyMonitorOutput {
                 monitor_arn: self.monitor_arn,
@@ -3257,7 +3296,7 @@ pub mod create_anomaly_monitor_output {
     }
 }
 impl CreateAnomalyMonitorOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAnomalyMonitorOutput`](crate::output::CreateAnomalyMonitorOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAnomalyMonitorOutput`](crate::output::CreateAnomalyMonitorOutput).
     pub fn builder() -> crate::output::create_anomaly_monitor_output::Builder {
         crate::output::create_anomaly_monitor_output::Builder::default()
     }

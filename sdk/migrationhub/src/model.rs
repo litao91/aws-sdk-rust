@@ -34,8 +34,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceAttribute {
     /// <p>Type of resource.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ResourceAttributeType>,
     /// <p>Value of the resource type.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl ResourceAttribute {
@@ -56,11 +58,10 @@ impl std::fmt::Debug for ResourceAttribute {
         formatter.finish()
     }
 }
-/// See [`ResourceAttribute`](crate::model::ResourceAttribute)
+/// See [`ResourceAttribute`](crate::model::ResourceAttribute).
 pub mod resource_attribute {
 
-    /// A builder for [`ResourceAttribute`](crate::model::ResourceAttribute)
-    #[non_exhaustive]
+    /// A builder for [`ResourceAttribute`](crate::model::ResourceAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::ResourceAttributeType>,
@@ -90,7 +91,7 @@ pub mod resource_attribute {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceAttribute`](crate::model::ResourceAttribute)
+        /// Consumes the builder and constructs a [`ResourceAttribute`](crate::model::ResourceAttribute).
         pub fn build(self) -> crate::model::ResourceAttribute {
             crate::model::ResourceAttribute {
                 r#type: self.r#type,
@@ -100,7 +101,7 @@ pub mod resource_attribute {
     }
 }
 impl ResourceAttribute {
-    /// Creates a new builder-style object to manufacture [`ResourceAttribute`](crate::model::ResourceAttribute)
+    /// Creates a new builder-style object to manufacture [`ResourceAttribute`](crate::model::ResourceAttribute).
     pub fn builder() -> crate::model::resource_attribute::Builder {
         crate::model::resource_attribute::Builder::default()
     }
@@ -209,10 +210,13 @@ impl AsRef<str> for ResourceAttributeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Task {
     /// <p>Status of the task - Not Started, In-Progress, Complete.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
     /// <p>Details of task status as notified by a migration tool. A tool might use this field to provide clarifying information about the status that is unique to that tool or that explains an error state.</p>
+    #[doc(hidden)]
     pub status_detail: std::option::Option<std::string::String>,
     /// <p>Indication of the percentage completion of the task.</p>
+    #[doc(hidden)]
     pub progress_percent: std::option::Option<i32>,
 }
 impl Task {
@@ -238,11 +242,10 @@ impl std::fmt::Debug for Task {
         formatter.finish()
     }
 }
-/// See [`Task`](crate::model::Task)
+/// See [`Task`](crate::model::Task).
 pub mod task {
 
-    /// A builder for [`Task`](crate::model::Task)
-    #[non_exhaustive]
+    /// A builder for [`Task`](crate::model::Task).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::Status>,
@@ -283,7 +286,7 @@ pub mod task {
             self.progress_percent = input;
             self
         }
-        /// Consumes the builder and constructs a [`Task`](crate::model::Task)
+        /// Consumes the builder and constructs a [`Task`](crate::model::Task).
         pub fn build(self) -> crate::model::Task {
             crate::model::Task {
                 status: self.status,
@@ -294,7 +297,7 @@ pub mod task {
     }
 }
 impl Task {
-    /// Creates a new builder-style object to manufacture [`Task`](crate::model::Task)
+    /// Creates a new builder-style object to manufacture [`Task`](crate::model::Task).
     pub fn builder() -> crate::model::task::Builder {
         crate::model::task::Builder::default()
     }
@@ -427,6 +430,7 @@ impl AsRef<str> for ApplicationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProgressUpdateStreamSummary {
     /// <p>The name of the ProgressUpdateStream. <i>Do not store personal data in this field.</i> </p>
+    #[doc(hidden)]
     pub progress_update_stream_name: std::option::Option<std::string::String>,
 }
 impl ProgressUpdateStreamSummary {
@@ -445,11 +449,10 @@ impl std::fmt::Debug for ProgressUpdateStreamSummary {
         formatter.finish()
     }
 }
-/// See [`ProgressUpdateStreamSummary`](crate::model::ProgressUpdateStreamSummary)
+/// See [`ProgressUpdateStreamSummary`](crate::model::ProgressUpdateStreamSummary).
 pub mod progress_update_stream_summary {
 
-    /// A builder for [`ProgressUpdateStreamSummary`](crate::model::ProgressUpdateStreamSummary)
-    #[non_exhaustive]
+    /// A builder for [`ProgressUpdateStreamSummary`](crate::model::ProgressUpdateStreamSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) progress_update_stream_name: std::option::Option<std::string::String>,
@@ -471,7 +474,7 @@ pub mod progress_update_stream_summary {
             self.progress_update_stream_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProgressUpdateStreamSummary`](crate::model::ProgressUpdateStreamSummary)
+        /// Consumes the builder and constructs a [`ProgressUpdateStreamSummary`](crate::model::ProgressUpdateStreamSummary).
         pub fn build(self) -> crate::model::ProgressUpdateStreamSummary {
             crate::model::ProgressUpdateStreamSummary {
                 progress_update_stream_name: self.progress_update_stream_name,
@@ -480,7 +483,7 @@ pub mod progress_update_stream_summary {
     }
 }
 impl ProgressUpdateStreamSummary {
-    /// Creates a new builder-style object to manufacture [`ProgressUpdateStreamSummary`](crate::model::ProgressUpdateStreamSummary)
+    /// Creates a new builder-style object to manufacture [`ProgressUpdateStreamSummary`](crate::model::ProgressUpdateStreamSummary).
     pub fn builder() -> crate::model::progress_update_stream_summary::Builder {
         crate::model::progress_update_stream_summary::Builder::default()
     }
@@ -491,16 +494,22 @@ impl ProgressUpdateStreamSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MigrationTaskSummary {
     /// <p>An AWS resource used for access control. It should uniquely identify the migration tool as it is used for all updates made by the tool.</p>
+    #[doc(hidden)]
     pub progress_update_stream: std::option::Option<std::string::String>,
     /// <p>Unique identifier that references the migration task. <i>Do not store personal data in this field.</i> </p>
+    #[doc(hidden)]
     pub migration_task_name: std::option::Option<std::string::String>,
     /// <p>Status of the task.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
     /// <p>Indication of the percentage completion of the task.</p>
+    #[doc(hidden)]
     pub progress_percent: std::option::Option<i32>,
     /// <p>Detail information of what is being done within the overall status state.</p>
+    #[doc(hidden)]
     pub status_detail: std::option::Option<std::string::String>,
     /// <p>The timestamp when the task was gathered.</p>
+    #[doc(hidden)]
     pub update_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl MigrationTaskSummary {
@@ -541,11 +550,10 @@ impl std::fmt::Debug for MigrationTaskSummary {
         formatter.finish()
     }
 }
-/// See [`MigrationTaskSummary`](crate::model::MigrationTaskSummary)
+/// See [`MigrationTaskSummary`](crate::model::MigrationTaskSummary).
 pub mod migration_task_summary {
 
-    /// A builder for [`MigrationTaskSummary`](crate::model::MigrationTaskSummary)
-    #[non_exhaustive]
+    /// A builder for [`MigrationTaskSummary`](crate::model::MigrationTaskSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) progress_update_stream: std::option::Option<std::string::String>,
@@ -628,7 +636,7 @@ pub mod migration_task_summary {
             self.update_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`MigrationTaskSummary`](crate::model::MigrationTaskSummary)
+        /// Consumes the builder and constructs a [`MigrationTaskSummary`](crate::model::MigrationTaskSummary).
         pub fn build(self) -> crate::model::MigrationTaskSummary {
             crate::model::MigrationTaskSummary {
                 progress_update_stream: self.progress_update_stream,
@@ -642,7 +650,7 @@ pub mod migration_task_summary {
     }
 }
 impl MigrationTaskSummary {
-    /// Creates a new builder-style object to manufacture [`MigrationTaskSummary`](crate::model::MigrationTaskSummary)
+    /// Creates a new builder-style object to manufacture [`MigrationTaskSummary`](crate::model::MigrationTaskSummary).
     pub fn builder() -> crate::model::migration_task_summary::Builder {
         crate::model::migration_task_summary::Builder::default()
     }
@@ -653,8 +661,10 @@ impl MigrationTaskSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DiscoveredResource {
     /// <p>The configurationId in Application Discovery Service that uniquely identifies the on-premise resource.</p>
+    #[doc(hidden)]
     pub configuration_id: std::option::Option<std::string::String>,
     /// <p>A description that can be free-form text to record additional detail about the discovered resource for clarity or later reference.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl DiscoveredResource {
@@ -675,11 +685,10 @@ impl std::fmt::Debug for DiscoveredResource {
         formatter.finish()
     }
 }
-/// See [`DiscoveredResource`](crate::model::DiscoveredResource)
+/// See [`DiscoveredResource`](crate::model::DiscoveredResource).
 pub mod discovered_resource {
 
-    /// A builder for [`DiscoveredResource`](crate::model::DiscoveredResource)
-    #[non_exhaustive]
+    /// A builder for [`DiscoveredResource`](crate::model::DiscoveredResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_id: std::option::Option<std::string::String>,
@@ -709,7 +718,7 @@ pub mod discovered_resource {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`DiscoveredResource`](crate::model::DiscoveredResource)
+        /// Consumes the builder and constructs a [`DiscoveredResource`](crate::model::DiscoveredResource).
         pub fn build(self) -> crate::model::DiscoveredResource {
             crate::model::DiscoveredResource {
                 configuration_id: self.configuration_id,
@@ -719,7 +728,7 @@ pub mod discovered_resource {
     }
 }
 impl DiscoveredResource {
-    /// Creates a new builder-style object to manufacture [`DiscoveredResource`](crate::model::DiscoveredResource)
+    /// Creates a new builder-style object to manufacture [`DiscoveredResource`](crate::model::DiscoveredResource).
     pub fn builder() -> crate::model::discovered_resource::Builder {
         crate::model::discovered_resource::Builder::default()
     }
@@ -730,8 +739,10 @@ impl DiscoveredResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreatedArtifact {
     /// <p>An ARN that uniquely identifies the result of a migration task.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description that can be free-form text to record additional detail about the artifact for clarity or for later reference.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl CreatedArtifact {
@@ -752,11 +763,10 @@ impl std::fmt::Debug for CreatedArtifact {
         formatter.finish()
     }
 }
-/// See [`CreatedArtifact`](crate::model::CreatedArtifact)
+/// See [`CreatedArtifact`](crate::model::CreatedArtifact).
 pub mod created_artifact {
 
-    /// A builder for [`CreatedArtifact`](crate::model::CreatedArtifact)
-    #[non_exhaustive]
+    /// A builder for [`CreatedArtifact`](crate::model::CreatedArtifact).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -783,7 +793,7 @@ pub mod created_artifact {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreatedArtifact`](crate::model::CreatedArtifact)
+        /// Consumes the builder and constructs a [`CreatedArtifact`](crate::model::CreatedArtifact).
         pub fn build(self) -> crate::model::CreatedArtifact {
             crate::model::CreatedArtifact {
                 name: self.name,
@@ -793,7 +803,7 @@ pub mod created_artifact {
     }
 }
 impl CreatedArtifact {
-    /// Creates a new builder-style object to manufacture [`CreatedArtifact`](crate::model::CreatedArtifact)
+    /// Creates a new builder-style object to manufacture [`CreatedArtifact`](crate::model::CreatedArtifact).
     pub fn builder() -> crate::model::created_artifact::Builder {
         crate::model::created_artifact::Builder::default()
     }
@@ -804,10 +814,13 @@ impl CreatedArtifact {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationState {
     /// <p>The configurationId from the Application Discovery Service that uniquely identifies an application.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The current status of an application.</p>
+    #[doc(hidden)]
     pub application_status: std::option::Option<crate::model::ApplicationStatus>,
     /// <p>The timestamp when the application status was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ApplicationState {
@@ -833,11 +846,10 @@ impl std::fmt::Debug for ApplicationState {
         formatter.finish()
     }
 }
-/// See [`ApplicationState`](crate::model::ApplicationState)
+/// See [`ApplicationState`](crate::model::ApplicationState).
 pub mod application_state {
 
-    /// A builder for [`ApplicationState`](crate::model::ApplicationState)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationState`](crate::model::ApplicationState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -884,7 +896,7 @@ pub mod application_state {
             self.last_updated_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationState`](crate::model::ApplicationState)
+        /// Consumes the builder and constructs a [`ApplicationState`](crate::model::ApplicationState).
         pub fn build(self) -> crate::model::ApplicationState {
             crate::model::ApplicationState {
                 application_id: self.application_id,
@@ -895,7 +907,7 @@ pub mod application_state {
     }
 }
 impl ApplicationState {
-    /// Creates a new builder-style object to manufacture [`ApplicationState`](crate::model::ApplicationState)
+    /// Creates a new builder-style object to manufacture [`ApplicationState`](crate::model::ApplicationState).
     pub fn builder() -> crate::model::application_state::Builder {
         crate::model::application_state::Builder::default()
     }
@@ -906,14 +918,19 @@ impl ApplicationState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MigrationTask {
     /// <p>A name that identifies the vendor of the migration tool being used.</p>
+    #[doc(hidden)]
     pub progress_update_stream: std::option::Option<std::string::String>,
     /// <p>Unique identifier that references the migration task. <i>Do not store personal data in this field.</i> </p>
+    #[doc(hidden)]
     pub migration_task_name: std::option::Option<std::string::String>,
     /// <p>Task object encapsulating task information.</p>
+    #[doc(hidden)]
     pub task: std::option::Option<crate::model::Task>,
     /// <p>The timestamp when the task was gathered.</p>
+    #[doc(hidden)]
     pub update_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Information about the resource that is being migrated. This data will be used to map the task to a resource in the Application Discovery Service repository.</p>
+    #[doc(hidden)]
     pub resource_attribute_list:
         std::option::Option<std::vec::Vec<crate::model::ResourceAttribute>>,
 }
@@ -952,11 +969,10 @@ impl std::fmt::Debug for MigrationTask {
         formatter.finish()
     }
 }
-/// See [`MigrationTask`](crate::model::MigrationTask)
+/// See [`MigrationTask`](crate::model::MigrationTask).
 pub mod migration_task {
 
-    /// A builder for [`MigrationTask`](crate::model::MigrationTask)
-    #[non_exhaustive]
+    /// A builder for [`MigrationTask`](crate::model::MigrationTask).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) progress_update_stream: std::option::Option<std::string::String>,
@@ -1035,7 +1051,7 @@ pub mod migration_task {
             self.resource_attribute_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`MigrationTask`](crate::model::MigrationTask)
+        /// Consumes the builder and constructs a [`MigrationTask`](crate::model::MigrationTask).
         pub fn build(self) -> crate::model::MigrationTask {
             crate::model::MigrationTask {
                 progress_update_stream: self.progress_update_stream,
@@ -1048,7 +1064,7 @@ pub mod migration_task {
     }
 }
 impl MigrationTask {
-    /// Creates a new builder-style object to manufacture [`MigrationTask`](crate::model::MigrationTask)
+    /// Creates a new builder-style object to manufacture [`MigrationTask`](crate::model::MigrationTask).
     pub fn builder() -> crate::model::migration_task::Builder {
         crate::model::migration_task::Builder::default()
     }

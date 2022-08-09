@@ -5,20 +5,28 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProjectDetails {
     /// <p> Name of the project. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> Unique project identifier. </p>
+    #[doc(hidden)]
     pub project_id: std::option::Option<std::string::String>,
     /// <p> Default region to use for AWS resource creation in the AWS Mobile Hub project. </p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p> Synchronization state for a project. </p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ProjectState>,
     /// <p> Date the project was created. </p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Date of the last modification of the project. </p>
+    #[doc(hidden)]
     pub last_updated_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Website URL for this project in the AWS Mobile Hub console. </p>
+    #[doc(hidden)]
     pub console_url: std::option::Option<std::string::String>,
     /// <p> List of AWS resources associated with a project. </p>
+    #[doc(hidden)]
     pub resources: std::option::Option<std::vec::Vec<crate::model::Resource>>,
 }
 impl ProjectDetails {
@@ -69,11 +77,10 @@ impl std::fmt::Debug for ProjectDetails {
         formatter.finish()
     }
 }
-/// See [`ProjectDetails`](crate::model::ProjectDetails)
+/// See [`ProjectDetails`](crate::model::ProjectDetails).
 pub mod project_details {
 
-    /// A builder for [`ProjectDetails`](crate::model::ProjectDetails)
-    #[non_exhaustive]
+    /// A builder for [`ProjectDetails`](crate::model::ProjectDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -181,7 +188,7 @@ pub mod project_details {
             self.resources = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectDetails`](crate::model::ProjectDetails)
+        /// Consumes the builder and constructs a [`ProjectDetails`](crate::model::ProjectDetails).
         pub fn build(self) -> crate::model::ProjectDetails {
             crate::model::ProjectDetails {
                 name: self.name,
@@ -197,7 +204,7 @@ pub mod project_details {
     }
 }
 impl ProjectDetails {
-    /// Creates a new builder-style object to manufacture [`ProjectDetails`](crate::model::ProjectDetails)
+    /// Creates a new builder-style object to manufacture [`ProjectDetails`](crate::model::ProjectDetails).
     pub fn builder() -> crate::model::project_details::Builder {
         crate::model::project_details::Builder::default()
     }
@@ -208,14 +215,19 @@ impl ProjectDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Resource {
     /// <p> Simplified name for type of AWS resource (e.g., bucket is an Amazon S3 bucket). </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p> Name of the AWS resource (e.g., for an Amazon S3 bucket this is the name of the bucket). </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> AWS resource name which uniquely identifies the resource in AWS systems. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> Identifies which feature in AWS Mobile Hub is associated with this AWS resource. </p>
+    #[doc(hidden)]
     pub feature: std::option::Option<std::string::String>,
     /// <p> Key-value attribute pairs. </p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -255,11 +267,10 @@ impl std::fmt::Debug for Resource {
         formatter.finish()
     }
 }
-/// See [`Resource`](crate::model::Resource)
+/// See [`Resource`](crate::model::Resource).
 pub mod resource {
 
-    /// A builder for [`Resource`](crate::model::Resource)
-    #[non_exhaustive]
+    /// A builder for [`Resource`](crate::model::Resource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<std::string::String>,
@@ -336,7 +347,7 @@ pub mod resource {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource)
+        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource).
         pub fn build(self) -> crate::model::Resource {
             crate::model::Resource {
                 r#type: self.r#type,
@@ -349,7 +360,7 @@ pub mod resource {
     }
 }
 impl Resource {
-    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource)
+    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource).
     pub fn builder() -> crate::model::resource::Builder {
         crate::model::resource::Builder::default()
     }
@@ -421,8 +432,10 @@ impl AsRef<str> for ProjectState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProjectSummary {
     /// <p> Name of the project. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> Unique project identifier. </p>
+    #[doc(hidden)]
     pub project_id: std::option::Option<std::string::String>,
 }
 impl ProjectSummary {
@@ -443,11 +456,10 @@ impl std::fmt::Debug for ProjectSummary {
         formatter.finish()
     }
 }
-/// See [`ProjectSummary`](crate::model::ProjectSummary)
+/// See [`ProjectSummary`](crate::model::ProjectSummary).
 pub mod project_summary {
 
-    /// A builder for [`ProjectSummary`](crate::model::ProjectSummary)
-    #[non_exhaustive]
+    /// A builder for [`ProjectSummary`](crate::model::ProjectSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -474,7 +486,7 @@ pub mod project_summary {
             self.project_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectSummary`](crate::model::ProjectSummary)
+        /// Consumes the builder and constructs a [`ProjectSummary`](crate::model::ProjectSummary).
         pub fn build(self) -> crate::model::ProjectSummary {
             crate::model::ProjectSummary {
                 name: self.name,
@@ -484,7 +496,7 @@ pub mod project_summary {
     }
 }
 impl ProjectSummary {
-    /// Creates a new builder-style object to manufacture [`ProjectSummary`](crate::model::ProjectSummary)
+    /// Creates a new builder-style object to manufacture [`ProjectSummary`](crate::model::ProjectSummary).
     pub fn builder() -> crate::model::project_summary::Builder {
         crate::model::project_summary::Builder::default()
     }
@@ -495,16 +507,22 @@ impl ProjectSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BundleDetails {
     /// <p> Unique bundle identifier. </p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p> Title of the download bundle. </p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p> Version of the download bundle. </p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p> Description of the download bundle. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> Icon for the download bundle. </p>
+    #[doc(hidden)]
     pub icon_url: std::option::Option<std::string::String>,
     /// <p> Developer desktop or mobile app or website platforms. </p>
+    #[doc(hidden)]
     pub available_platforms: std::option::Option<std::vec::Vec<crate::model::Platform>>,
 }
 impl BundleDetails {
@@ -545,11 +563,10 @@ impl std::fmt::Debug for BundleDetails {
         formatter.finish()
     }
 }
-/// See [`BundleDetails`](crate::model::BundleDetails)
+/// See [`BundleDetails`](crate::model::BundleDetails).
 pub mod bundle_details {
 
-    /// A builder for [`BundleDetails`](crate::model::BundleDetails)
-    #[non_exhaustive]
+    /// A builder for [`BundleDetails`](crate::model::BundleDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bundle_id: std::option::Option<std::string::String>,
@@ -629,7 +646,7 @@ pub mod bundle_details {
             self.available_platforms = input;
             self
         }
-        /// Consumes the builder and constructs a [`BundleDetails`](crate::model::BundleDetails)
+        /// Consumes the builder and constructs a [`BundleDetails`](crate::model::BundleDetails).
         pub fn build(self) -> crate::model::BundleDetails {
             crate::model::BundleDetails {
                 bundle_id: self.bundle_id,
@@ -643,7 +660,7 @@ pub mod bundle_details {
     }
 }
 impl BundleDetails {
-    /// Creates a new builder-style object to manufacture [`BundleDetails`](crate::model::BundleDetails)
+    /// Creates a new builder-style object to manufacture [`BundleDetails`](crate::model::BundleDetails).
     pub fn builder() -> crate::model::bundle_details::Builder {
         crate::model::bundle_details::Builder::default()
     }

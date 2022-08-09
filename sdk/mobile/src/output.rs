@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateProjectOutput {
     /// <p> Detailed information about the updated AWS Mobile Hub project. </p>
+    #[doc(hidden)]
     pub details: std::option::Option<crate::model::ProjectDetails>,
 }
 impl UpdateProjectOutput {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for UpdateProjectOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateProjectOutput`](crate::output::UpdateProjectOutput)
+/// See [`UpdateProjectOutput`](crate::output::UpdateProjectOutput).
 pub mod update_project_output {
 
-    /// A builder for [`UpdateProjectOutput`](crate::output::UpdateProjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateProjectOutput`](crate::output::UpdateProjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) details: std::option::Option<crate::model::ProjectDetails>,
@@ -43,7 +43,7 @@ pub mod update_project_output {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateProjectOutput`](crate::output::UpdateProjectOutput)
+        /// Consumes the builder and constructs a [`UpdateProjectOutput`](crate::output::UpdateProjectOutput).
         pub fn build(self) -> crate::output::UpdateProjectOutput {
             crate::output::UpdateProjectOutput {
                 details: self.details,
@@ -52,7 +52,7 @@ pub mod update_project_output {
     }
 }
 impl UpdateProjectOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateProjectOutput`](crate::output::UpdateProjectOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateProjectOutput`](crate::output::UpdateProjectOutput).
     pub fn builder() -> crate::output::update_project_output::Builder {
         crate::output::update_project_output::Builder::default()
     }
@@ -63,8 +63,10 @@ impl UpdateProjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListProjectsOutput {
     /// <p> List of projects. </p>
+    #[doc(hidden)]
     pub projects: std::option::Option<std::vec::Vec<crate::model::ProjectSummary>>,
     /// <p> Pagination token. Set to null to start listing records from start. If non-null pagination token is returned in a result, then pass its value in here in another request to list more entries. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListProjectsOutput {
@@ -85,11 +87,10 @@ impl std::fmt::Debug for ListProjectsOutput {
         formatter.finish()
     }
 }
-/// See [`ListProjectsOutput`](crate::output::ListProjectsOutput)
+/// See [`ListProjectsOutput`](crate::output::ListProjectsOutput).
 pub mod list_projects_output {
 
-    /// A builder for [`ListProjectsOutput`](crate::output::ListProjectsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListProjectsOutput`](crate::output::ListProjectsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) projects: std::option::Option<std::vec::Vec<crate::model::ProjectSummary>>,
@@ -125,7 +126,7 @@ pub mod list_projects_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListProjectsOutput`](crate::output::ListProjectsOutput)
+        /// Consumes the builder and constructs a [`ListProjectsOutput`](crate::output::ListProjectsOutput).
         pub fn build(self) -> crate::output::ListProjectsOutput {
             crate::output::ListProjectsOutput {
                 projects: self.projects,
@@ -135,7 +136,7 @@ pub mod list_projects_output {
     }
 }
 impl ListProjectsOutput {
-    /// Creates a new builder-style object to manufacture [`ListProjectsOutput`](crate::output::ListProjectsOutput)
+    /// Creates a new builder-style object to manufacture [`ListProjectsOutput`](crate::output::ListProjectsOutput).
     pub fn builder() -> crate::output::list_projects_output::Builder {
         crate::output::list_projects_output::Builder::default()
     }
@@ -146,8 +147,10 @@ impl ListProjectsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBundlesOutput {
     /// <p> A list of bundles. </p>
+    #[doc(hidden)]
     pub bundle_list: std::option::Option<std::vec::Vec<crate::model::BundleDetails>>,
     /// <p> Pagination token. If non-null pagination token is returned in a result, then pass its value in another request to fetch more entries. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListBundlesOutput {
@@ -168,11 +171,10 @@ impl std::fmt::Debug for ListBundlesOutput {
         formatter.finish()
     }
 }
-/// See [`ListBundlesOutput`](crate::output::ListBundlesOutput)
+/// See [`ListBundlesOutput`](crate::output::ListBundlesOutput).
 pub mod list_bundles_output {
 
-    /// A builder for [`ListBundlesOutput`](crate::output::ListBundlesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBundlesOutput`](crate::output::ListBundlesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bundle_list: std::option::Option<std::vec::Vec<crate::model::BundleDetails>>,
@@ -208,7 +210,7 @@ pub mod list_bundles_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBundlesOutput`](crate::output::ListBundlesOutput)
+        /// Consumes the builder and constructs a [`ListBundlesOutput`](crate::output::ListBundlesOutput).
         pub fn build(self) -> crate::output::ListBundlesOutput {
             crate::output::ListBundlesOutput {
                 bundle_list: self.bundle_list,
@@ -218,7 +220,7 @@ pub mod list_bundles_output {
     }
 }
 impl ListBundlesOutput {
-    /// Creates a new builder-style object to manufacture [`ListBundlesOutput`](crate::output::ListBundlesOutput)
+    /// Creates a new builder-style object to manufacture [`ListBundlesOutput`](crate::output::ListBundlesOutput).
     pub fn builder() -> crate::output::list_bundles_output::Builder {
         crate::output::list_bundles_output::Builder::default()
     }
@@ -229,10 +231,13 @@ impl ListBundlesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportProjectOutput {
     /// <p> URL which can be used to download the exported project configuation file(s). </p>
+    #[doc(hidden)]
     pub download_url: std::option::Option<std::string::String>,
     /// <p> URL which can be shared to allow other AWS users to create their own project in AWS Mobile Hub with the same configuration as the specified project. This URL pertains to a snapshot in time of the project configuration that is created when this API is called. If you want to share additional changes to your project configuration, then you will need to create and share a new snapshot by calling this method again. </p>
+    #[doc(hidden)]
     pub share_url: std::option::Option<std::string::String>,
     /// <p> Unique identifier for the exported snapshot of the project configuration. This snapshot identifier is included in the share URL. </p>
+    #[doc(hidden)]
     pub snapshot_id: std::option::Option<std::string::String>,
 }
 impl ExportProjectOutput {
@@ -258,11 +263,10 @@ impl std::fmt::Debug for ExportProjectOutput {
         formatter.finish()
     }
 }
-/// See [`ExportProjectOutput`](crate::output::ExportProjectOutput)
+/// See [`ExportProjectOutput`](crate::output::ExportProjectOutput).
 pub mod export_project_output {
 
-    /// A builder for [`ExportProjectOutput`](crate::output::ExportProjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`ExportProjectOutput`](crate::output::ExportProjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) download_url: std::option::Option<std::string::String>,
@@ -300,7 +304,7 @@ pub mod export_project_output {
             self.snapshot_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportProjectOutput`](crate::output::ExportProjectOutput)
+        /// Consumes the builder and constructs a [`ExportProjectOutput`](crate::output::ExportProjectOutput).
         pub fn build(self) -> crate::output::ExportProjectOutput {
             crate::output::ExportProjectOutput {
                 download_url: self.download_url,
@@ -311,7 +315,7 @@ pub mod export_project_output {
     }
 }
 impl ExportProjectOutput {
-    /// Creates a new builder-style object to manufacture [`ExportProjectOutput`](crate::output::ExportProjectOutput)
+    /// Creates a new builder-style object to manufacture [`ExportProjectOutput`](crate::output::ExportProjectOutput).
     pub fn builder() -> crate::output::export_project_output::Builder {
         crate::output::export_project_output::Builder::default()
     }
@@ -322,6 +326,7 @@ impl ExportProjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportBundleOutput {
     /// <p> URL which contains the custom-generated SDK and tool packages used to integrate the client mobile app or web app with the AWS resources created by the AWS Mobile Hub project. </p>
+    #[doc(hidden)]
     pub download_url: std::option::Option<std::string::String>,
 }
 impl ExportBundleOutput {
@@ -337,11 +342,10 @@ impl std::fmt::Debug for ExportBundleOutput {
         formatter.finish()
     }
 }
-/// See [`ExportBundleOutput`](crate::output::ExportBundleOutput)
+/// See [`ExportBundleOutput`](crate::output::ExportBundleOutput).
 pub mod export_bundle_output {
 
-    /// A builder for [`ExportBundleOutput`](crate::output::ExportBundleOutput)
-    #[non_exhaustive]
+    /// A builder for [`ExportBundleOutput`](crate::output::ExportBundleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) download_url: std::option::Option<std::string::String>,
@@ -357,7 +361,7 @@ pub mod export_bundle_output {
             self.download_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportBundleOutput`](crate::output::ExportBundleOutput)
+        /// Consumes the builder and constructs a [`ExportBundleOutput`](crate::output::ExportBundleOutput).
         pub fn build(self) -> crate::output::ExportBundleOutput {
             crate::output::ExportBundleOutput {
                 download_url: self.download_url,
@@ -366,7 +370,7 @@ pub mod export_bundle_output {
     }
 }
 impl ExportBundleOutput {
-    /// Creates a new builder-style object to manufacture [`ExportBundleOutput`](crate::output::ExportBundleOutput)
+    /// Creates a new builder-style object to manufacture [`ExportBundleOutput`](crate::output::ExportBundleOutput).
     pub fn builder() -> crate::output::export_bundle_output::Builder {
         crate::output::export_bundle_output::Builder::default()
     }
@@ -377,6 +381,7 @@ impl ExportBundleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeProjectOutput {
     /// <p> Detailed information about an AWS Mobile Hub project. </p>
+    #[doc(hidden)]
     pub details: std::option::Option<crate::model::ProjectDetails>,
 }
 impl DescribeProjectOutput {
@@ -392,11 +397,10 @@ impl std::fmt::Debug for DescribeProjectOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeProjectOutput`](crate::output::DescribeProjectOutput)
+/// See [`DescribeProjectOutput`](crate::output::DescribeProjectOutput).
 pub mod describe_project_output {
 
-    /// A builder for [`DescribeProjectOutput`](crate::output::DescribeProjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeProjectOutput`](crate::output::DescribeProjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) details: std::option::Option<crate::model::ProjectDetails>,
@@ -415,7 +419,7 @@ pub mod describe_project_output {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeProjectOutput`](crate::output::DescribeProjectOutput)
+        /// Consumes the builder and constructs a [`DescribeProjectOutput`](crate::output::DescribeProjectOutput).
         pub fn build(self) -> crate::output::DescribeProjectOutput {
             crate::output::DescribeProjectOutput {
                 details: self.details,
@@ -424,7 +428,7 @@ pub mod describe_project_output {
     }
 }
 impl DescribeProjectOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeProjectOutput`](crate::output::DescribeProjectOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeProjectOutput`](crate::output::DescribeProjectOutput).
     pub fn builder() -> crate::output::describe_project_output::Builder {
         crate::output::describe_project_output::Builder::default()
     }
@@ -435,6 +439,7 @@ impl DescribeProjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBundleOutput {
     /// <p> The details of the bundle. </p>
+    #[doc(hidden)]
     pub details: std::option::Option<crate::model::BundleDetails>,
 }
 impl DescribeBundleOutput {
@@ -450,11 +455,10 @@ impl std::fmt::Debug for DescribeBundleOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeBundleOutput`](crate::output::DescribeBundleOutput)
+/// See [`DescribeBundleOutput`](crate::output::DescribeBundleOutput).
 pub mod describe_bundle_output {
 
-    /// A builder for [`DescribeBundleOutput`](crate::output::DescribeBundleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeBundleOutput`](crate::output::DescribeBundleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) details: std::option::Option<crate::model::BundleDetails>,
@@ -473,7 +477,7 @@ pub mod describe_bundle_output {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeBundleOutput`](crate::output::DescribeBundleOutput)
+        /// Consumes the builder and constructs a [`DescribeBundleOutput`](crate::output::DescribeBundleOutput).
         pub fn build(self) -> crate::output::DescribeBundleOutput {
             crate::output::DescribeBundleOutput {
                 details: self.details,
@@ -482,7 +486,7 @@ pub mod describe_bundle_output {
     }
 }
 impl DescribeBundleOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeBundleOutput`](crate::output::DescribeBundleOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeBundleOutput`](crate::output::DescribeBundleOutput).
     pub fn builder() -> crate::output::describe_bundle_output::Builder {
         crate::output::describe_bundle_output::Builder::default()
     }
@@ -493,8 +497,10 @@ impl DescribeBundleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteProjectOutput {
     /// <p> Resources which were deleted. </p>
+    #[doc(hidden)]
     pub deleted_resources: std::option::Option<std::vec::Vec<crate::model::Resource>>,
     /// <p> Resources which were not deleted, due to a risk of losing potentially important data or files. </p>
+    #[doc(hidden)]
     pub orphaned_resources: std::option::Option<std::vec::Vec<crate::model::Resource>>,
 }
 impl DeleteProjectOutput {
@@ -515,11 +521,10 @@ impl std::fmt::Debug for DeleteProjectOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteProjectOutput`](crate::output::DeleteProjectOutput)
+/// See [`DeleteProjectOutput`](crate::output::DeleteProjectOutput).
 pub mod delete_project_output {
 
-    /// A builder for [`DeleteProjectOutput`](crate::output::DeleteProjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteProjectOutput`](crate::output::DeleteProjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deleted_resources: std::option::Option<std::vec::Vec<crate::model::Resource>>,
@@ -564,7 +569,7 @@ pub mod delete_project_output {
             self.orphaned_resources = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteProjectOutput`](crate::output::DeleteProjectOutput)
+        /// Consumes the builder and constructs a [`DeleteProjectOutput`](crate::output::DeleteProjectOutput).
         pub fn build(self) -> crate::output::DeleteProjectOutput {
             crate::output::DeleteProjectOutput {
                 deleted_resources: self.deleted_resources,
@@ -574,7 +579,7 @@ pub mod delete_project_output {
     }
 }
 impl DeleteProjectOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteProjectOutput`](crate::output::DeleteProjectOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteProjectOutput`](crate::output::DeleteProjectOutput).
     pub fn builder() -> crate::output::delete_project_output::Builder {
         crate::output::delete_project_output::Builder::default()
     }
@@ -585,6 +590,7 @@ impl DeleteProjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateProjectOutput {
     /// <p> Detailed information about the created AWS Mobile Hub project. </p>
+    #[doc(hidden)]
     pub details: std::option::Option<crate::model::ProjectDetails>,
 }
 impl CreateProjectOutput {
@@ -600,11 +606,10 @@ impl std::fmt::Debug for CreateProjectOutput {
         formatter.finish()
     }
 }
-/// See [`CreateProjectOutput`](crate::output::CreateProjectOutput)
+/// See [`CreateProjectOutput`](crate::output::CreateProjectOutput).
 pub mod create_project_output {
 
-    /// A builder for [`CreateProjectOutput`](crate::output::CreateProjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateProjectOutput`](crate::output::CreateProjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) details: std::option::Option<crate::model::ProjectDetails>,
@@ -623,7 +628,7 @@ pub mod create_project_output {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateProjectOutput`](crate::output::CreateProjectOutput)
+        /// Consumes the builder and constructs a [`CreateProjectOutput`](crate::output::CreateProjectOutput).
         pub fn build(self) -> crate::output::CreateProjectOutput {
             crate::output::CreateProjectOutput {
                 details: self.details,
@@ -632,7 +637,7 @@ pub mod create_project_output {
     }
 }
 impl CreateProjectOutput {
-    /// Creates a new builder-style object to manufacture [`CreateProjectOutput`](crate::output::CreateProjectOutput)
+    /// Creates a new builder-style object to manufacture [`CreateProjectOutput`](crate::output::CreateProjectOutput).
     pub fn builder() -> crate::output::create_project_output::Builder {
         crate::output::create_project_output::Builder::default()
     }

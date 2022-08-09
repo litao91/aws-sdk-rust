@@ -9,7 +9,9 @@ The Detective API primarily supports the creation and management of behavior gra
 
 To add a member account to the behavior graph, the administrator account sends an invitation to the account. When the account accepts the invitation, it becomes a member account in the behavior graph.
 
-Detective is also integrated with Organizations. The organization management account designates the Detective administrator account for the organization. That account becomes the administrator account for the organization behavior graph. The Detective administrator account can enable any organization account as a member account in the organization behavior graph. The organization accounts do not receive invitations. The Detective administrator account can also invite other accounts to the organization behavior graph.
+Detective is also integrated with Organizations. The organization management account designates the Detective administrator account for the organization. That account becomes the administrator account for the organization behavior graph. The Detective administrator account is also the delegated administrator account for Detective in Organizations.
+
+The Detective administrator account can enable any organization account as a member account in the organization behavior graph. The organization accounts do not receive invitations. The Detective administrator account can also invite other accounts to the organization behavior graph.
 
 Every behavior graph is specific to a Region. You can only use the API to manage behavior graphs that belong to the Region that is associated with the currently selected endpoint.
 
@@ -45,10 +47,29 @@ your project, add the following to your **Cargo.toml** file:
 
 ```toml
 [dependencies]
-aws-config = "0.14.0"
-aws-sdk-detective = "0.14.0"
+aws-config = "0.47.0"
+aws-sdk-detective = "0.17.0"
 tokio = { version = "1", features = ["full"] }
 ```
+
+Then in code, a client can be created with the following:
+
+```rust
+use aws_sdk_detective as detective;
+
+#[tokio::main]
+async fn main() -> Result<(), detective::Error> {
+    let config = aws_config::load_from_env().await;
+    let client = detective::Client::new(&config);
+
+    // ... make some calls with the client
+
+    Ok(())
+}
+```
+
+See the [client documentation](https://docs.rs/aws-sdk-detective/latest/aws_sdk_detective/client/struct.Client.html)
+for information on what calls can be made, and the inputs and outputs for each of those calls.
 
 ## Using the SDK
 

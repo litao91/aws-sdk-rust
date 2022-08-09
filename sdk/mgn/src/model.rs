@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationExceptionField {
     /// <p>Validate exception field name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Validate exception field message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ValidationExceptionField {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ValidationExceptionField {
         formatter.finish()
     }
 }
-/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField).
 pub mod validation_exception_field {
 
-    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField)
-    #[non_exhaustive]
+    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod validation_exception_field {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField).
         pub fn build(self) -> crate::model::ValidationExceptionField {
             crate::model::ValidationExceptionField {
                 name: self.name,
@@ -68,7 +69,7 @@ pub mod validation_exception_field {
     }
 }
 impl ValidationExceptionField {
-    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     pub fn builder() -> crate::model::validation_exception_field::Builder {
         crate::model::validation_exception_field::Builder::default()
     }
@@ -147,21 +148,29 @@ impl AsRef<str> for ValidationExceptionReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VcenterClient {
     /// <p>ID of vCenter client.</p>
+    #[doc(hidden)]
     pub vcenter_client_id: std::option::Option<std::string::String>,
     /// <p>Arn of vCenter client.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Hostname of vCenter client .</p>
+    #[doc(hidden)]
     pub hostname: std::option::Option<std::string::String>,
     /// <p>Vcenter UUID of vCenter client.</p>
+    #[doc(hidden)]
     pub vcenter_uuid: std::option::Option<std::string::String>,
     /// <p>Datacenter name of vCenter client.</p>
+    #[doc(hidden)]
     pub datacenter_name: std::option::Option<std::string::String>,
     /// <p>Last seen time of vCenter client.</p>
+    #[doc(hidden)]
     pub last_seen_datetime: std::option::Option<std::string::String>,
     /// <p>Tags for Source Server of vCenter client.</p>
+    #[doc(hidden)]
     pub source_server_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Tags for vCenter client.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -219,11 +228,10 @@ impl std::fmt::Debug for VcenterClient {
         formatter.finish()
     }
 }
-/// See [`VcenterClient`](crate::model::VcenterClient)
+/// See [`VcenterClient`](crate::model::VcenterClient).
 pub mod vcenter_client {
 
-    /// A builder for [`VcenterClient`](crate::model::VcenterClient)
-    #[non_exhaustive]
+    /// A builder for [`VcenterClient`](crate::model::VcenterClient).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vcenter_client_id: std::option::Option<std::string::String>,
@@ -359,7 +367,7 @@ pub mod vcenter_client {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`VcenterClient`](crate::model::VcenterClient)
+        /// Consumes the builder and constructs a [`VcenterClient`](crate::model::VcenterClient).
         pub fn build(self) -> crate::model::VcenterClient {
             crate::model::VcenterClient {
                 vcenter_client_id: self.vcenter_client_id,
@@ -375,9 +383,127 @@ pub mod vcenter_client {
     }
 }
 impl VcenterClient {
-    /// Creates a new builder-style object to manufacture [`VcenterClient`](crate::model::VcenterClient)
+    /// Creates a new builder-style object to manufacture [`VcenterClient`](crate::model::VcenterClient).
     pub fn builder() -> crate::model::vcenter_client::Builder {
         crate::model::vcenter_client::Builder::default()
+    }
+}
+
+/// <p>Error details.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ErrorDetails {
+    /// <p>Error details message.</p>
+    #[doc(hidden)]
+    pub message: std::option::Option<std::string::String>,
+    /// <p>Error details code.</p>
+    #[doc(hidden)]
+    pub code: std::option::Option<std::string::String>,
+    /// <p>Error details resourceId.</p>
+    #[doc(hidden)]
+    pub resource_id: std::option::Option<std::string::String>,
+    /// <p>Error details resourceType.</p>
+    #[doc(hidden)]
+    pub resource_type: std::option::Option<std::string::String>,
+}
+impl ErrorDetails {
+    /// <p>Error details message.</p>
+    pub fn message(&self) -> std::option::Option<&str> {
+        self.message.as_deref()
+    }
+    /// <p>Error details code.</p>
+    pub fn code(&self) -> std::option::Option<&str> {
+        self.code.as_deref()
+    }
+    /// <p>Error details resourceId.</p>
+    pub fn resource_id(&self) -> std::option::Option<&str> {
+        self.resource_id.as_deref()
+    }
+    /// <p>Error details resourceType.</p>
+    pub fn resource_type(&self) -> std::option::Option<&str> {
+        self.resource_type.as_deref()
+    }
+}
+impl std::fmt::Debug for ErrorDetails {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ErrorDetails");
+        formatter.field("message", &self.message);
+        formatter.field("code", &self.code);
+        formatter.field("resource_id", &self.resource_id);
+        formatter.field("resource_type", &self.resource_type);
+        formatter.finish()
+    }
+}
+/// See [`ErrorDetails`](crate::model::ErrorDetails).
+pub mod error_details {
+
+    /// A builder for [`ErrorDetails`](crate::model::ErrorDetails).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+        pub(crate) code: std::option::Option<std::string::String>,
+        pub(crate) resource_id: std::option::Option<std::string::String>,
+        pub(crate) resource_type: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>Error details message.</p>
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        /// <p>Error details message.</p>
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// <p>Error details code.</p>
+        pub fn code(mut self, input: impl Into<std::string::String>) -> Self {
+            self.code = Some(input.into());
+            self
+        }
+        /// <p>Error details code.</p>
+        pub fn set_code(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.code = input;
+            self
+        }
+        /// <p>Error details resourceId.</p>
+        pub fn resource_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.resource_id = Some(input.into());
+            self
+        }
+        /// <p>Error details resourceId.</p>
+        pub fn set_resource_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.resource_id = input;
+            self
+        }
+        /// <p>Error details resourceType.</p>
+        pub fn resource_type(mut self, input: impl Into<std::string::String>) -> Self {
+            self.resource_type = Some(input.into());
+            self
+        }
+        /// <p>Error details resourceType.</p>
+        pub fn set_resource_type(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.resource_type = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ErrorDetails`](crate::model::ErrorDetails).
+        pub fn build(self) -> crate::model::ErrorDetails {
+            crate::model::ErrorDetails {
+                message: self.message,
+                code: self.code,
+                resource_id: self.resource_id,
+                resource_type: self.resource_type,
+            }
+        }
+    }
+}
+impl ErrorDetails {
+    /// Creates a new builder-style object to manufacture [`ErrorDetails`](crate::model::ErrorDetails).
+    pub fn builder() -> crate::model::error_details::Builder {
+        crate::model::error_details::Builder::default()
     }
 }
 
@@ -441,20 +567,28 @@ impl AsRef<str> for ReplicationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceProperties {
     /// <p>Source server last update date and time.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<std::string::String>,
     /// <p>Source server recommended instance type.</p>
+    #[doc(hidden)]
     pub recommended_instance_type: std::option::Option<std::string::String>,
     /// <p>Source server identification hints.</p>
+    #[doc(hidden)]
     pub identification_hints: std::option::Option<crate::model::IdentificationHints>,
     /// <p>Source server network interfaces.</p>
+    #[doc(hidden)]
     pub network_interfaces: std::option::Option<std::vec::Vec<crate::model::NetworkInterface>>,
     /// <p>Source Server disks.</p>
+    #[doc(hidden)]
     pub disks: std::option::Option<std::vec::Vec<crate::model::Disk>>,
     /// <p>Source Server CPUs.</p>
+    #[doc(hidden)]
     pub cpus: std::option::Option<std::vec::Vec<crate::model::Cpu>>,
     /// <p>Source server RAM in bytes.</p>
+    #[doc(hidden)]
     pub ram_bytes: i64,
     /// <p>Source server OS.</p>
+    #[doc(hidden)]
     pub os: std::option::Option<crate::model::Os>,
 }
 impl SourceProperties {
@@ -505,11 +639,10 @@ impl std::fmt::Debug for SourceProperties {
         formatter.finish()
     }
 }
-/// See [`SourceProperties`](crate::model::SourceProperties)
+/// See [`SourceProperties`](crate::model::SourceProperties).
 pub mod source_properties {
 
-    /// A builder for [`SourceProperties`](crate::model::SourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`SourceProperties`](crate::model::SourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) last_updated_date_time: std::option::Option<std::string::String>,
@@ -639,7 +772,7 @@ pub mod source_properties {
             self.os = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceProperties`](crate::model::SourceProperties)
+        /// Consumes the builder and constructs a [`SourceProperties`](crate::model::SourceProperties).
         pub fn build(self) -> crate::model::SourceProperties {
             crate::model::SourceProperties {
                 last_updated_date_time: self.last_updated_date_time,
@@ -655,7 +788,7 @@ pub mod source_properties {
     }
 }
 impl SourceProperties {
-    /// Creates a new builder-style object to manufacture [`SourceProperties`](crate::model::SourceProperties)
+    /// Creates a new builder-style object to manufacture [`SourceProperties`](crate::model::SourceProperties).
     pub fn builder() -> crate::model::source_properties::Builder {
         crate::model::source_properties::Builder::default()
     }
@@ -666,6 +799,7 @@ impl SourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Os {
     /// <p>OS full string.</p>
+    #[doc(hidden)]
     pub full_string: std::option::Option<std::string::String>,
 }
 impl Os {
@@ -681,11 +815,10 @@ impl std::fmt::Debug for Os {
         formatter.finish()
     }
 }
-/// See [`Os`](crate::model::Os)
+/// See [`Os`](crate::model::Os).
 pub mod os {
 
-    /// A builder for [`Os`](crate::model::Os)
-    #[non_exhaustive]
+    /// A builder for [`Os`](crate::model::Os).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) full_string: std::option::Option<std::string::String>,
@@ -701,7 +834,7 @@ pub mod os {
             self.full_string = input;
             self
         }
-        /// Consumes the builder and constructs a [`Os`](crate::model::Os)
+        /// Consumes the builder and constructs a [`Os`](crate::model::Os).
         pub fn build(self) -> crate::model::Os {
             crate::model::Os {
                 full_string: self.full_string,
@@ -710,7 +843,7 @@ pub mod os {
     }
 }
 impl Os {
-    /// Creates a new builder-style object to manufacture [`Os`](crate::model::Os)
+    /// Creates a new builder-style object to manufacture [`Os`](crate::model::Os).
     pub fn builder() -> crate::model::os::Builder {
         crate::model::os::Builder::default()
     }
@@ -721,8 +854,10 @@ impl Os {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Cpu {
     /// <p>The number of CPU cores on the source server.</p>
+    #[doc(hidden)]
     pub cores: i64,
     /// <p>The source server's CPU model name.</p>
+    #[doc(hidden)]
     pub model_name: std::option::Option<std::string::String>,
 }
 impl Cpu {
@@ -743,11 +878,10 @@ impl std::fmt::Debug for Cpu {
         formatter.finish()
     }
 }
-/// See [`Cpu`](crate::model::Cpu)
+/// See [`Cpu`](crate::model::Cpu).
 pub mod cpu {
 
-    /// A builder for [`Cpu`](crate::model::Cpu)
-    #[non_exhaustive]
+    /// A builder for [`Cpu`](crate::model::Cpu).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cores: std::option::Option<i64>,
@@ -774,7 +908,7 @@ pub mod cpu {
             self.model_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Cpu`](crate::model::Cpu)
+        /// Consumes the builder and constructs a [`Cpu`](crate::model::Cpu).
         pub fn build(self) -> crate::model::Cpu {
             crate::model::Cpu {
                 cores: self.cores.unwrap_or_default(),
@@ -784,7 +918,7 @@ pub mod cpu {
     }
 }
 impl Cpu {
-    /// Creates a new builder-style object to manufacture [`Cpu`](crate::model::Cpu)
+    /// Creates a new builder-style object to manufacture [`Cpu`](crate::model::Cpu).
     pub fn builder() -> crate::model::cpu::Builder {
         crate::model::cpu::Builder::default()
     }
@@ -795,8 +929,10 @@ impl Cpu {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Disk {
     /// <p>The disk or device name.</p>
+    #[doc(hidden)]
     pub device_name: std::option::Option<std::string::String>,
     /// <p>The amount of storage on the disk in bytes.</p>
+    #[doc(hidden)]
     pub bytes: i64,
 }
 impl Disk {
@@ -817,11 +953,10 @@ impl std::fmt::Debug for Disk {
         formatter.finish()
     }
 }
-/// See [`Disk`](crate::model::Disk)
+/// See [`Disk`](crate::model::Disk).
 pub mod disk {
 
-    /// A builder for [`Disk`](crate::model::Disk)
-    #[non_exhaustive]
+    /// A builder for [`Disk`](crate::model::Disk).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_name: std::option::Option<std::string::String>,
@@ -848,7 +983,7 @@ pub mod disk {
             self.bytes = input;
             self
         }
-        /// Consumes the builder and constructs a [`Disk`](crate::model::Disk)
+        /// Consumes the builder and constructs a [`Disk`](crate::model::Disk).
         pub fn build(self) -> crate::model::Disk {
             crate::model::Disk {
                 device_name: self.device_name,
@@ -858,7 +993,7 @@ pub mod disk {
     }
 }
 impl Disk {
-    /// Creates a new builder-style object to manufacture [`Disk`](crate::model::Disk)
+    /// Creates a new builder-style object to manufacture [`Disk`](crate::model::Disk).
     pub fn builder() -> crate::model::disk::Builder {
         crate::model::disk::Builder::default()
     }
@@ -869,10 +1004,13 @@ impl Disk {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkInterface {
     /// <p>Network interface Mac address.</p>
+    #[doc(hidden)]
     pub mac_address: std::option::Option<std::string::String>,
     /// <p>Network interface IPs.</p>
+    #[doc(hidden)]
     pub ips: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Network interface primary IP.</p>
+    #[doc(hidden)]
     pub is_primary: std::option::Option<bool>,
 }
 impl NetworkInterface {
@@ -898,11 +1036,10 @@ impl std::fmt::Debug for NetworkInterface {
         formatter.finish()
     }
 }
-/// See [`NetworkInterface`](crate::model::NetworkInterface)
+/// See [`NetworkInterface`](crate::model::NetworkInterface).
 pub mod network_interface {
 
-    /// A builder for [`NetworkInterface`](crate::model::NetworkInterface)
-    #[non_exhaustive]
+    /// A builder for [`NetworkInterface`](crate::model::NetworkInterface).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mac_address: std::option::Option<std::string::String>,
@@ -949,7 +1086,7 @@ pub mod network_interface {
             self.is_primary = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkInterface`](crate::model::NetworkInterface)
+        /// Consumes the builder and constructs a [`NetworkInterface`](crate::model::NetworkInterface).
         pub fn build(self) -> crate::model::NetworkInterface {
             crate::model::NetworkInterface {
                 mac_address: self.mac_address,
@@ -960,7 +1097,7 @@ pub mod network_interface {
     }
 }
 impl NetworkInterface {
-    /// Creates a new builder-style object to manufacture [`NetworkInterface`](crate::model::NetworkInterface)
+    /// Creates a new builder-style object to manufacture [`NetworkInterface`](crate::model::NetworkInterface).
     pub fn builder() -> crate::model::network_interface::Builder {
         crate::model::network_interface::Builder::default()
     }
@@ -971,14 +1108,19 @@ impl NetworkInterface {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IdentificationHints {
     /// <p>FQDN address identification hint.</p>
+    #[doc(hidden)]
     pub fqdn: std::option::Option<std::string::String>,
     /// <p>Hostname identification hint.</p>
+    #[doc(hidden)]
     pub hostname: std::option::Option<std::string::String>,
     /// <p>vmWare UUID identification hint.</p>
+    #[doc(hidden)]
     pub vm_ware_uuid: std::option::Option<std::string::String>,
     /// <p>AWS Instance ID identification hint.</p>
+    #[doc(hidden)]
     pub aws_instance_id: std::option::Option<std::string::String>,
     /// <p>vCenter VM path identification hint.</p>
+    #[doc(hidden)]
     pub vm_path: std::option::Option<std::string::String>,
 }
 impl IdentificationHints {
@@ -1014,11 +1156,10 @@ impl std::fmt::Debug for IdentificationHints {
         formatter.finish()
     }
 }
-/// See [`IdentificationHints`](crate::model::IdentificationHints)
+/// See [`IdentificationHints`](crate::model::IdentificationHints).
 pub mod identification_hints {
 
-    /// A builder for [`IdentificationHints`](crate::model::IdentificationHints)
-    #[non_exhaustive]
+    /// A builder for [`IdentificationHints`](crate::model::IdentificationHints).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fqdn: std::option::Option<std::string::String>,
@@ -1081,7 +1222,7 @@ pub mod identification_hints {
             self.vm_path = input;
             self
         }
-        /// Consumes the builder and constructs a [`IdentificationHints`](crate::model::IdentificationHints)
+        /// Consumes the builder and constructs a [`IdentificationHints`](crate::model::IdentificationHints).
         pub fn build(self) -> crate::model::IdentificationHints {
             crate::model::IdentificationHints {
                 fqdn: self.fqdn,
@@ -1094,7 +1235,7 @@ pub mod identification_hints {
     }
 }
 impl IdentificationHints {
-    /// Creates a new builder-style object to manufacture [`IdentificationHints`](crate::model::IdentificationHints)
+    /// Creates a new builder-style object to manufacture [`IdentificationHints`](crate::model::IdentificationHints).
     pub fn builder() -> crate::model::identification_hints::Builder {
         crate::model::identification_hints::Builder::default()
     }
@@ -1105,18 +1246,25 @@ impl IdentificationHints {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifeCycle {
     /// <p>Lifecycle added to service data and time.</p>
+    #[doc(hidden)]
     pub added_to_service_date_time: std::option::Option<std::string::String>,
     /// <p>Lifecycle replication initiation date and time.</p>
+    #[doc(hidden)]
     pub first_byte_date_time: std::option::Option<std::string::String>,
     /// <p>Lifecycle elapsed time and duration.</p>
+    #[doc(hidden)]
     pub elapsed_replication_duration: std::option::Option<std::string::String>,
     /// <p>Lifecycle last seen date and time.</p>
+    #[doc(hidden)]
     pub last_seen_by_service_date_time: std::option::Option<std::string::String>,
     /// <p>Lifecycle last Test.</p>
+    #[doc(hidden)]
     pub last_test: std::option::Option<crate::model::LifeCycleLastTest>,
     /// <p>Lifecycle last Cutover.</p>
+    #[doc(hidden)]
     pub last_cutover: std::option::Option<crate::model::LifeCycleLastCutover>,
     /// <p>Lifecycle state.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::LifeCycleState>,
 }
 impl LifeCycle {
@@ -1171,11 +1319,10 @@ impl std::fmt::Debug for LifeCycle {
         formatter.finish()
     }
 }
-/// See [`LifeCycle`](crate::model::LifeCycle)
+/// See [`LifeCycle`](crate::model::LifeCycle).
 pub mod life_cycle {
 
-    /// A builder for [`LifeCycle`](crate::model::LifeCycle)
-    #[non_exhaustive]
+    /// A builder for [`LifeCycle`](crate::model::LifeCycle).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) added_to_service_date_time: std::option::Option<std::string::String>,
@@ -1284,7 +1431,7 @@ pub mod life_cycle {
             self.state = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifeCycle`](crate::model::LifeCycle)
+        /// Consumes the builder and constructs a [`LifeCycle`](crate::model::LifeCycle).
         pub fn build(self) -> crate::model::LifeCycle {
             crate::model::LifeCycle {
                 added_to_service_date_time: self.added_to_service_date_time,
@@ -1299,7 +1446,7 @@ pub mod life_cycle {
     }
 }
 impl LifeCycle {
-    /// Creates a new builder-style object to manufacture [`LifeCycle`](crate::model::LifeCycle)
+    /// Creates a new builder-style object to manufacture [`LifeCycle`](crate::model::LifeCycle).
     pub fn builder() -> crate::model::life_cycle::Builder {
         crate::model::life_cycle::Builder::default()
     }
@@ -1403,10 +1550,13 @@ impl AsRef<str> for LifeCycleState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifeCycleLastCutover {
     /// <p>Lifecycle last Cutover initiated.</p>
+    #[doc(hidden)]
     pub initiated: std::option::Option<crate::model::LifeCycleLastCutoverInitiated>,
     /// <p>Lifecycle last Cutover reverted.</p>
+    #[doc(hidden)]
     pub reverted: std::option::Option<crate::model::LifeCycleLastCutoverReverted>,
     /// <p>Lifecycle Cutover finalized date and time.</p>
+    #[doc(hidden)]
     pub finalized: std::option::Option<crate::model::LifeCycleLastCutoverFinalized>,
 }
 impl LifeCycleLastCutover {
@@ -1432,11 +1582,10 @@ impl std::fmt::Debug for LifeCycleLastCutover {
         formatter.finish()
     }
 }
-/// See [`LifeCycleLastCutover`](crate::model::LifeCycleLastCutover)
+/// See [`LifeCycleLastCutover`](crate::model::LifeCycleLastCutover).
 pub mod life_cycle_last_cutover {
 
-    /// A builder for [`LifeCycleLastCutover`](crate::model::LifeCycleLastCutover)
-    #[non_exhaustive]
+    /// A builder for [`LifeCycleLastCutover`](crate::model::LifeCycleLastCutover).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) initiated: std::option::Option<crate::model::LifeCycleLastCutoverInitiated>,
@@ -1483,7 +1632,7 @@ pub mod life_cycle_last_cutover {
             self.finalized = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifeCycleLastCutover`](crate::model::LifeCycleLastCutover)
+        /// Consumes the builder and constructs a [`LifeCycleLastCutover`](crate::model::LifeCycleLastCutover).
         pub fn build(self) -> crate::model::LifeCycleLastCutover {
             crate::model::LifeCycleLastCutover {
                 initiated: self.initiated,
@@ -1494,7 +1643,7 @@ pub mod life_cycle_last_cutover {
     }
 }
 impl LifeCycleLastCutover {
-    /// Creates a new builder-style object to manufacture [`LifeCycleLastCutover`](crate::model::LifeCycleLastCutover)
+    /// Creates a new builder-style object to manufacture [`LifeCycleLastCutover`](crate::model::LifeCycleLastCutover).
     pub fn builder() -> crate::model::life_cycle_last_cutover::Builder {
         crate::model::life_cycle_last_cutover::Builder::default()
     }
@@ -1505,6 +1654,7 @@ impl LifeCycleLastCutover {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifeCycleLastCutoverFinalized {
     /// <p>Lifecycle Cutover finalized date and time.</p>
+    #[doc(hidden)]
     pub api_call_date_time: std::option::Option<std::string::String>,
 }
 impl LifeCycleLastCutoverFinalized {
@@ -1520,11 +1670,10 @@ impl std::fmt::Debug for LifeCycleLastCutoverFinalized {
         formatter.finish()
     }
 }
-/// See [`LifeCycleLastCutoverFinalized`](crate::model::LifeCycleLastCutoverFinalized)
+/// See [`LifeCycleLastCutoverFinalized`](crate::model::LifeCycleLastCutoverFinalized).
 pub mod life_cycle_last_cutover_finalized {
 
-    /// A builder for [`LifeCycleLastCutoverFinalized`](crate::model::LifeCycleLastCutoverFinalized)
-    #[non_exhaustive]
+    /// A builder for [`LifeCycleLastCutoverFinalized`](crate::model::LifeCycleLastCutoverFinalized).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_call_date_time: std::option::Option<std::string::String>,
@@ -1543,7 +1692,7 @@ pub mod life_cycle_last_cutover_finalized {
             self.api_call_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifeCycleLastCutoverFinalized`](crate::model::LifeCycleLastCutoverFinalized)
+        /// Consumes the builder and constructs a [`LifeCycleLastCutoverFinalized`](crate::model::LifeCycleLastCutoverFinalized).
         pub fn build(self) -> crate::model::LifeCycleLastCutoverFinalized {
             crate::model::LifeCycleLastCutoverFinalized {
                 api_call_date_time: self.api_call_date_time,
@@ -1552,7 +1701,7 @@ pub mod life_cycle_last_cutover_finalized {
     }
 }
 impl LifeCycleLastCutoverFinalized {
-    /// Creates a new builder-style object to manufacture [`LifeCycleLastCutoverFinalized`](crate::model::LifeCycleLastCutoverFinalized)
+    /// Creates a new builder-style object to manufacture [`LifeCycleLastCutoverFinalized`](crate::model::LifeCycleLastCutoverFinalized).
     pub fn builder() -> crate::model::life_cycle_last_cutover_finalized::Builder {
         crate::model::life_cycle_last_cutover_finalized::Builder::default()
     }
@@ -1563,6 +1712,7 @@ impl LifeCycleLastCutoverFinalized {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifeCycleLastCutoverReverted {
     /// <p>Lifecycle last Cutover reverted API call date time.</p>
+    #[doc(hidden)]
     pub api_call_date_time: std::option::Option<std::string::String>,
 }
 impl LifeCycleLastCutoverReverted {
@@ -1578,11 +1728,10 @@ impl std::fmt::Debug for LifeCycleLastCutoverReverted {
         formatter.finish()
     }
 }
-/// See [`LifeCycleLastCutoverReverted`](crate::model::LifeCycleLastCutoverReverted)
+/// See [`LifeCycleLastCutoverReverted`](crate::model::LifeCycleLastCutoverReverted).
 pub mod life_cycle_last_cutover_reverted {
 
-    /// A builder for [`LifeCycleLastCutoverReverted`](crate::model::LifeCycleLastCutoverReverted)
-    #[non_exhaustive]
+    /// A builder for [`LifeCycleLastCutoverReverted`](crate::model::LifeCycleLastCutoverReverted).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_call_date_time: std::option::Option<std::string::String>,
@@ -1601,7 +1750,7 @@ pub mod life_cycle_last_cutover_reverted {
             self.api_call_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifeCycleLastCutoverReverted`](crate::model::LifeCycleLastCutoverReverted)
+        /// Consumes the builder and constructs a [`LifeCycleLastCutoverReverted`](crate::model::LifeCycleLastCutoverReverted).
         pub fn build(self) -> crate::model::LifeCycleLastCutoverReverted {
             crate::model::LifeCycleLastCutoverReverted {
                 api_call_date_time: self.api_call_date_time,
@@ -1610,7 +1759,7 @@ pub mod life_cycle_last_cutover_reverted {
     }
 }
 impl LifeCycleLastCutoverReverted {
-    /// Creates a new builder-style object to manufacture [`LifeCycleLastCutoverReverted`](crate::model::LifeCycleLastCutoverReverted)
+    /// Creates a new builder-style object to manufacture [`LifeCycleLastCutoverReverted`](crate::model::LifeCycleLastCutoverReverted).
     pub fn builder() -> crate::model::life_cycle_last_cutover_reverted::Builder {
         crate::model::life_cycle_last_cutover_reverted::Builder::default()
     }
@@ -1621,8 +1770,10 @@ impl LifeCycleLastCutoverReverted {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifeCycleLastCutoverInitiated {
     /// <p></p>
+    #[doc(hidden)]
     pub api_call_date_time: std::option::Option<std::string::String>,
     /// <p>Lifecycle last Cutover initiated by Job ID.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
 }
 impl LifeCycleLastCutoverInitiated {
@@ -1643,11 +1794,10 @@ impl std::fmt::Debug for LifeCycleLastCutoverInitiated {
         formatter.finish()
     }
 }
-/// See [`LifeCycleLastCutoverInitiated`](crate::model::LifeCycleLastCutoverInitiated)
+/// See [`LifeCycleLastCutoverInitiated`](crate::model::LifeCycleLastCutoverInitiated).
 pub mod life_cycle_last_cutover_initiated {
 
-    /// A builder for [`LifeCycleLastCutoverInitiated`](crate::model::LifeCycleLastCutoverInitiated)
-    #[non_exhaustive]
+    /// A builder for [`LifeCycleLastCutoverInitiated`](crate::model::LifeCycleLastCutoverInitiated).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_call_date_time: std::option::Option<std::string::String>,
@@ -1677,7 +1827,7 @@ pub mod life_cycle_last_cutover_initiated {
             self.job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifeCycleLastCutoverInitiated`](crate::model::LifeCycleLastCutoverInitiated)
+        /// Consumes the builder and constructs a [`LifeCycleLastCutoverInitiated`](crate::model::LifeCycleLastCutoverInitiated).
         pub fn build(self) -> crate::model::LifeCycleLastCutoverInitiated {
             crate::model::LifeCycleLastCutoverInitiated {
                 api_call_date_time: self.api_call_date_time,
@@ -1687,7 +1837,7 @@ pub mod life_cycle_last_cutover_initiated {
     }
 }
 impl LifeCycleLastCutoverInitiated {
-    /// Creates a new builder-style object to manufacture [`LifeCycleLastCutoverInitiated`](crate::model::LifeCycleLastCutoverInitiated)
+    /// Creates a new builder-style object to manufacture [`LifeCycleLastCutoverInitiated`](crate::model::LifeCycleLastCutoverInitiated).
     pub fn builder() -> crate::model::life_cycle_last_cutover_initiated::Builder {
         crate::model::life_cycle_last_cutover_initiated::Builder::default()
     }
@@ -1698,10 +1848,13 @@ impl LifeCycleLastCutoverInitiated {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifeCycleLastTest {
     /// <p>Lifecycle last Test initiated.</p>
+    #[doc(hidden)]
     pub initiated: std::option::Option<crate::model::LifeCycleLastTestInitiated>,
     /// <p>Lifecycle last Test reverted.</p>
+    #[doc(hidden)]
     pub reverted: std::option::Option<crate::model::LifeCycleLastTestReverted>,
     /// <p>Lifecycle last Test finalized.</p>
+    #[doc(hidden)]
     pub finalized: std::option::Option<crate::model::LifeCycleLastTestFinalized>,
 }
 impl LifeCycleLastTest {
@@ -1727,11 +1880,10 @@ impl std::fmt::Debug for LifeCycleLastTest {
         formatter.finish()
     }
 }
-/// See [`LifeCycleLastTest`](crate::model::LifeCycleLastTest)
+/// See [`LifeCycleLastTest`](crate::model::LifeCycleLastTest).
 pub mod life_cycle_last_test {
 
-    /// A builder for [`LifeCycleLastTest`](crate::model::LifeCycleLastTest)
-    #[non_exhaustive]
+    /// A builder for [`LifeCycleLastTest`](crate::model::LifeCycleLastTest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) initiated: std::option::Option<crate::model::LifeCycleLastTestInitiated>,
@@ -1778,7 +1930,7 @@ pub mod life_cycle_last_test {
             self.finalized = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifeCycleLastTest`](crate::model::LifeCycleLastTest)
+        /// Consumes the builder and constructs a [`LifeCycleLastTest`](crate::model::LifeCycleLastTest).
         pub fn build(self) -> crate::model::LifeCycleLastTest {
             crate::model::LifeCycleLastTest {
                 initiated: self.initiated,
@@ -1789,7 +1941,7 @@ pub mod life_cycle_last_test {
     }
 }
 impl LifeCycleLastTest {
-    /// Creates a new builder-style object to manufacture [`LifeCycleLastTest`](crate::model::LifeCycleLastTest)
+    /// Creates a new builder-style object to manufacture [`LifeCycleLastTest`](crate::model::LifeCycleLastTest).
     pub fn builder() -> crate::model::life_cycle_last_test::Builder {
         crate::model::life_cycle_last_test::Builder::default()
     }
@@ -1800,6 +1952,7 @@ impl LifeCycleLastTest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifeCycleLastTestFinalized {
     /// <p>Lifecycle Test failed API call date and time.</p>
+    #[doc(hidden)]
     pub api_call_date_time: std::option::Option<std::string::String>,
 }
 impl LifeCycleLastTestFinalized {
@@ -1815,11 +1968,10 @@ impl std::fmt::Debug for LifeCycleLastTestFinalized {
         formatter.finish()
     }
 }
-/// See [`LifeCycleLastTestFinalized`](crate::model::LifeCycleLastTestFinalized)
+/// See [`LifeCycleLastTestFinalized`](crate::model::LifeCycleLastTestFinalized).
 pub mod life_cycle_last_test_finalized {
 
-    /// A builder for [`LifeCycleLastTestFinalized`](crate::model::LifeCycleLastTestFinalized)
-    #[non_exhaustive]
+    /// A builder for [`LifeCycleLastTestFinalized`](crate::model::LifeCycleLastTestFinalized).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_call_date_time: std::option::Option<std::string::String>,
@@ -1838,7 +1990,7 @@ pub mod life_cycle_last_test_finalized {
             self.api_call_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifeCycleLastTestFinalized`](crate::model::LifeCycleLastTestFinalized)
+        /// Consumes the builder and constructs a [`LifeCycleLastTestFinalized`](crate::model::LifeCycleLastTestFinalized).
         pub fn build(self) -> crate::model::LifeCycleLastTestFinalized {
             crate::model::LifeCycleLastTestFinalized {
                 api_call_date_time: self.api_call_date_time,
@@ -1847,7 +1999,7 @@ pub mod life_cycle_last_test_finalized {
     }
 }
 impl LifeCycleLastTestFinalized {
-    /// Creates a new builder-style object to manufacture [`LifeCycleLastTestFinalized`](crate::model::LifeCycleLastTestFinalized)
+    /// Creates a new builder-style object to manufacture [`LifeCycleLastTestFinalized`](crate::model::LifeCycleLastTestFinalized).
     pub fn builder() -> crate::model::life_cycle_last_test_finalized::Builder {
         crate::model::life_cycle_last_test_finalized::Builder::default()
     }
@@ -1858,6 +2010,7 @@ impl LifeCycleLastTestFinalized {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifeCycleLastTestReverted {
     /// <p>Lifecycle last Test reverted API call date and time.</p>
+    #[doc(hidden)]
     pub api_call_date_time: std::option::Option<std::string::String>,
 }
 impl LifeCycleLastTestReverted {
@@ -1873,11 +2026,10 @@ impl std::fmt::Debug for LifeCycleLastTestReverted {
         formatter.finish()
     }
 }
-/// See [`LifeCycleLastTestReverted`](crate::model::LifeCycleLastTestReverted)
+/// See [`LifeCycleLastTestReverted`](crate::model::LifeCycleLastTestReverted).
 pub mod life_cycle_last_test_reverted {
 
-    /// A builder for [`LifeCycleLastTestReverted`](crate::model::LifeCycleLastTestReverted)
-    #[non_exhaustive]
+    /// A builder for [`LifeCycleLastTestReverted`](crate::model::LifeCycleLastTestReverted).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_call_date_time: std::option::Option<std::string::String>,
@@ -1896,7 +2048,7 @@ pub mod life_cycle_last_test_reverted {
             self.api_call_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifeCycleLastTestReverted`](crate::model::LifeCycleLastTestReverted)
+        /// Consumes the builder and constructs a [`LifeCycleLastTestReverted`](crate::model::LifeCycleLastTestReverted).
         pub fn build(self) -> crate::model::LifeCycleLastTestReverted {
             crate::model::LifeCycleLastTestReverted {
                 api_call_date_time: self.api_call_date_time,
@@ -1905,7 +2057,7 @@ pub mod life_cycle_last_test_reverted {
     }
 }
 impl LifeCycleLastTestReverted {
-    /// Creates a new builder-style object to manufacture [`LifeCycleLastTestReverted`](crate::model::LifeCycleLastTestReverted)
+    /// Creates a new builder-style object to manufacture [`LifeCycleLastTestReverted`](crate::model::LifeCycleLastTestReverted).
     pub fn builder() -> crate::model::life_cycle_last_test_reverted::Builder {
         crate::model::life_cycle_last_test_reverted::Builder::default()
     }
@@ -1916,8 +2068,10 @@ impl LifeCycleLastTestReverted {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifeCycleLastTestInitiated {
     /// <p>Lifecycle last Test initiated API call date and time.</p>
+    #[doc(hidden)]
     pub api_call_date_time: std::option::Option<std::string::String>,
     /// <p>Lifecycle last Test initiated Job ID.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
 }
 impl LifeCycleLastTestInitiated {
@@ -1938,11 +2092,10 @@ impl std::fmt::Debug for LifeCycleLastTestInitiated {
         formatter.finish()
     }
 }
-/// See [`LifeCycleLastTestInitiated`](crate::model::LifeCycleLastTestInitiated)
+/// See [`LifeCycleLastTestInitiated`](crate::model::LifeCycleLastTestInitiated).
 pub mod life_cycle_last_test_initiated {
 
-    /// A builder for [`LifeCycleLastTestInitiated`](crate::model::LifeCycleLastTestInitiated)
-    #[non_exhaustive]
+    /// A builder for [`LifeCycleLastTestInitiated`](crate::model::LifeCycleLastTestInitiated).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_call_date_time: std::option::Option<std::string::String>,
@@ -1972,7 +2125,7 @@ pub mod life_cycle_last_test_initiated {
             self.job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifeCycleLastTestInitiated`](crate::model::LifeCycleLastTestInitiated)
+        /// Consumes the builder and constructs a [`LifeCycleLastTestInitiated`](crate::model::LifeCycleLastTestInitiated).
         pub fn build(self) -> crate::model::LifeCycleLastTestInitiated {
             crate::model::LifeCycleLastTestInitiated {
                 api_call_date_time: self.api_call_date_time,
@@ -1982,7 +2135,7 @@ pub mod life_cycle_last_test_initiated {
     }
 }
 impl LifeCycleLastTestInitiated {
-    /// Creates a new builder-style object to manufacture [`LifeCycleLastTestInitiated`](crate::model::LifeCycleLastTestInitiated)
+    /// Creates a new builder-style object to manufacture [`LifeCycleLastTestInitiated`](crate::model::LifeCycleLastTestInitiated).
     pub fn builder() -> crate::model::life_cycle_last_test_initiated::Builder {
         crate::model::life_cycle_last_test_initiated::Builder::default()
     }
@@ -1993,19 +2146,26 @@ impl LifeCycleLastTestInitiated {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataReplicationInfo {
     /// <p>Request to query data replication lag duration.</p>
+    #[doc(hidden)]
     pub lag_duration: std::option::Option<std::string::String>,
     /// <p>Request to query the time when data replication will be complete.</p>
+    #[doc(hidden)]
     pub eta_date_time: std::option::Option<std::string::String>,
     /// <p>Request to query disks replicated.</p>
+    #[doc(hidden)]
     pub replicated_disks:
         std::option::Option<std::vec::Vec<crate::model::DataReplicationInfoReplicatedDisk>>,
     /// <p>Request to query the data replication state.</p>
+    #[doc(hidden)]
     pub data_replication_state: std::option::Option<crate::model::DataReplicationState>,
     /// <p>Request to query whether data replication has been initiated.</p>
+    #[doc(hidden)]
     pub data_replication_initiation: std::option::Option<crate::model::DataReplicationInitiation>,
     /// <p>Error in obtaining data replication info.</p>
+    #[doc(hidden)]
     pub data_replication_error: std::option::Option<crate::model::DataReplicationError>,
     /// <p>Request to query data replication last snapshot time.</p>
+    #[doc(hidden)]
     pub last_snapshot_date_time: std::option::Option<std::string::String>,
 }
 impl DataReplicationInfo {
@@ -2062,11 +2222,10 @@ impl std::fmt::Debug for DataReplicationInfo {
         formatter.finish()
     }
 }
-/// See [`DataReplicationInfo`](crate::model::DataReplicationInfo)
+/// See [`DataReplicationInfo`](crate::model::DataReplicationInfo).
 pub mod data_replication_info {
 
-    /// A builder for [`DataReplicationInfo`](crate::model::DataReplicationInfo)
-    #[non_exhaustive]
+    /// A builder for [`DataReplicationInfo`](crate::model::DataReplicationInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lag_duration: std::option::Option<std::string::String>,
@@ -2182,7 +2341,7 @@ pub mod data_replication_info {
             self.last_snapshot_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataReplicationInfo`](crate::model::DataReplicationInfo)
+        /// Consumes the builder and constructs a [`DataReplicationInfo`](crate::model::DataReplicationInfo).
         pub fn build(self) -> crate::model::DataReplicationInfo {
             crate::model::DataReplicationInfo {
                 lag_duration: self.lag_duration,
@@ -2197,7 +2356,7 @@ pub mod data_replication_info {
     }
 }
 impl DataReplicationInfo {
-    /// Creates a new builder-style object to manufacture [`DataReplicationInfo`](crate::model::DataReplicationInfo)
+    /// Creates a new builder-style object to manufacture [`DataReplicationInfo`](crate::model::DataReplicationInfo).
     pub fn builder() -> crate::model::data_replication_info::Builder {
         crate::model::data_replication_info::Builder::default()
     }
@@ -2208,8 +2367,10 @@ impl DataReplicationInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataReplicationError {
     /// <p>Error in data replication.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::DataReplicationErrorString>,
     /// <p>Error in data replication.</p>
+    #[doc(hidden)]
     pub raw_error: std::option::Option<std::string::String>,
 }
 impl DataReplicationError {
@@ -2230,11 +2391,10 @@ impl std::fmt::Debug for DataReplicationError {
         formatter.finish()
     }
 }
-/// See [`DataReplicationError`](crate::model::DataReplicationError)
+/// See [`DataReplicationError`](crate::model::DataReplicationError).
 pub mod data_replication_error {
 
-    /// A builder for [`DataReplicationError`](crate::model::DataReplicationError)
-    #[non_exhaustive]
+    /// A builder for [`DataReplicationError`](crate::model::DataReplicationError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error: std::option::Option<crate::model::DataReplicationErrorString>,
@@ -2264,7 +2424,7 @@ pub mod data_replication_error {
             self.raw_error = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataReplicationError`](crate::model::DataReplicationError)
+        /// Consumes the builder and constructs a [`DataReplicationError`](crate::model::DataReplicationError).
         pub fn build(self) -> crate::model::DataReplicationError {
             crate::model::DataReplicationError {
                 error: self.error,
@@ -2274,7 +2434,7 @@ pub mod data_replication_error {
     }
 }
 impl DataReplicationError {
-    /// Creates a new builder-style object to manufacture [`DataReplicationError`](crate::model::DataReplicationError)
+    /// Creates a new builder-style object to manufacture [`DataReplicationError`](crate::model::DataReplicationError).
     pub fn builder() -> crate::model::data_replication_error::Builder {
         crate::model::data_replication_error::Builder::default()
     }
@@ -2457,10 +2617,13 @@ impl AsRef<str> for DataReplicationErrorString {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataReplicationInitiation {
     /// <p>Request to query data initiation start date and time.</p>
+    #[doc(hidden)]
     pub start_date_time: std::option::Option<std::string::String>,
     /// <p>Request to query next data initiation date and time.</p>
+    #[doc(hidden)]
     pub next_attempt_date_time: std::option::Option<std::string::String>,
     /// <p>Request to query data initiation steps.</p>
+    #[doc(hidden)]
     pub steps: std::option::Option<std::vec::Vec<crate::model::DataReplicationInitiationStep>>,
 }
 impl DataReplicationInitiation {
@@ -2486,11 +2649,10 @@ impl std::fmt::Debug for DataReplicationInitiation {
         formatter.finish()
     }
 }
-/// See [`DataReplicationInitiation`](crate::model::DataReplicationInitiation)
+/// See [`DataReplicationInitiation`](crate::model::DataReplicationInitiation).
 pub mod data_replication_initiation {
 
-    /// A builder for [`DataReplicationInitiation`](crate::model::DataReplicationInitiation)
-    #[non_exhaustive]
+    /// A builder for [`DataReplicationInitiation`](crate::model::DataReplicationInitiation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_date_time: std::option::Option<std::string::String>,
@@ -2544,7 +2706,7 @@ pub mod data_replication_initiation {
             self.steps = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataReplicationInitiation`](crate::model::DataReplicationInitiation)
+        /// Consumes the builder and constructs a [`DataReplicationInitiation`](crate::model::DataReplicationInitiation).
         pub fn build(self) -> crate::model::DataReplicationInitiation {
             crate::model::DataReplicationInitiation {
                 start_date_time: self.start_date_time,
@@ -2555,7 +2717,7 @@ pub mod data_replication_initiation {
     }
 }
 impl DataReplicationInitiation {
-    /// Creates a new builder-style object to manufacture [`DataReplicationInitiation`](crate::model::DataReplicationInitiation)
+    /// Creates a new builder-style object to manufacture [`DataReplicationInitiation`](crate::model::DataReplicationInitiation).
     pub fn builder() -> crate::model::data_replication_initiation::Builder {
         crate::model::data_replication_initiation::Builder::default()
     }
@@ -2566,8 +2728,10 @@ impl DataReplicationInitiation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataReplicationInitiationStep {
     /// <p>Request to query data initiation step name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::DataReplicationInitiationStepName>,
     /// <p>Request to query data initiation status.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DataReplicationInitiationStepStatus>,
 }
 impl DataReplicationInitiationStep {
@@ -2590,11 +2754,10 @@ impl std::fmt::Debug for DataReplicationInitiationStep {
         formatter.finish()
     }
 }
-/// See [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep)
+/// See [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep).
 pub mod data_replication_initiation_step {
 
-    /// A builder for [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep)
-    #[non_exhaustive]
+    /// A builder for [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::DataReplicationInitiationStepName>,
@@ -2627,7 +2790,7 @@ pub mod data_replication_initiation_step {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep)
+        /// Consumes the builder and constructs a [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep).
         pub fn build(self) -> crate::model::DataReplicationInitiationStep {
             crate::model::DataReplicationInitiationStep {
                 name: self.name,
@@ -2637,7 +2800,7 @@ pub mod data_replication_initiation_step {
     }
 }
 impl DataReplicationInitiationStep {
-    /// Creates a new builder-style object to manufacture [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep)
+    /// Creates a new builder-style object to manufacture [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep).
     pub fn builder() -> crate::model::data_replication_initiation_step::Builder {
         crate::model::data_replication_initiation_step::Builder::default()
     }
@@ -2952,14 +3115,19 @@ impl AsRef<str> for DataReplicationState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataReplicationInfoReplicatedDisk {
     /// <p>Request to query device name.</p>
+    #[doc(hidden)]
     pub device_name: std::option::Option<std::string::String>,
     /// <p>Request to query total amount of data replicated in bytes.</p>
+    #[doc(hidden)]
     pub total_storage_bytes: i64,
     /// <p>Request to query amount of data replicated in bytes.</p>
+    #[doc(hidden)]
     pub replicated_storage_bytes: i64,
     /// <p>Request to query amount of data rescanned in bytes.</p>
+    #[doc(hidden)]
     pub rescanned_storage_bytes: i64,
     /// <p>Request to query data replication backlog size in bytes.</p>
+    #[doc(hidden)]
     pub backlogged_storage_bytes: i64,
 }
 impl DataReplicationInfoReplicatedDisk {
@@ -2995,11 +3163,10 @@ impl std::fmt::Debug for DataReplicationInfoReplicatedDisk {
         formatter.finish()
     }
 }
-/// See [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk)
+/// See [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk).
 pub mod data_replication_info_replicated_disk {
 
-    /// A builder for [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk)
-    #[non_exhaustive]
+    /// A builder for [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_name: std::option::Option<std::string::String>,
@@ -3059,7 +3226,7 @@ pub mod data_replication_info_replicated_disk {
             self.backlogged_storage_bytes = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk)
+        /// Consumes the builder and constructs a [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk).
         pub fn build(self) -> crate::model::DataReplicationInfoReplicatedDisk {
             crate::model::DataReplicationInfoReplicatedDisk {
                 device_name: self.device_name,
@@ -3072,7 +3239,7 @@ pub mod data_replication_info_replicated_disk {
     }
 }
 impl DataReplicationInfoReplicatedDisk {
-    /// Creates a new builder-style object to manufacture [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk)
+    /// Creates a new builder-style object to manufacture [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk).
     pub fn builder() -> crate::model::data_replication_info_replicated_disk::Builder {
         crate::model::data_replication_info_replicated_disk::Builder::default()
     }
@@ -3083,10 +3250,13 @@ impl DataReplicationInfoReplicatedDisk {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchedInstance {
     /// <p>Launched instance EC2 ID.</p>
+    #[doc(hidden)]
     pub ec2_instance_id: std::option::Option<std::string::String>,
     /// <p>Launched instance Job ID.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>Launched instance first boot.</p>
+    #[doc(hidden)]
     pub first_boot: std::option::Option<crate::model::FirstBoot>,
 }
 impl LaunchedInstance {
@@ -3112,11 +3282,10 @@ impl std::fmt::Debug for LaunchedInstance {
         formatter.finish()
     }
 }
-/// See [`LaunchedInstance`](crate::model::LaunchedInstance)
+/// See [`LaunchedInstance`](crate::model::LaunchedInstance).
 pub mod launched_instance {
 
-    /// A builder for [`LaunchedInstance`](crate::model::LaunchedInstance)
-    #[non_exhaustive]
+    /// A builder for [`LaunchedInstance`](crate::model::LaunchedInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ec2_instance_id: std::option::Option<std::string::String>,
@@ -3160,7 +3329,7 @@ pub mod launched_instance {
             self.first_boot = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchedInstance`](crate::model::LaunchedInstance)
+        /// Consumes the builder and constructs a [`LaunchedInstance`](crate::model::LaunchedInstance).
         pub fn build(self) -> crate::model::LaunchedInstance {
             crate::model::LaunchedInstance {
                 ec2_instance_id: self.ec2_instance_id,
@@ -3171,7 +3340,7 @@ pub mod launched_instance {
     }
 }
 impl LaunchedInstance {
-    /// Creates a new builder-style object to manufacture [`LaunchedInstance`](crate::model::LaunchedInstance)
+    /// Creates a new builder-style object to manufacture [`LaunchedInstance`](crate::model::LaunchedInstance).
     pub fn builder() -> crate::model::launched_instance::Builder {
         crate::model::launched_instance::Builder::default()
     }
@@ -3355,15 +3524,20 @@ impl AsRef<str> for ReplicationConfigurationEbsEncryption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationConfigurationReplicatedDisk {
     /// <p>Replication Configuration replicated disk device name.</p>
+    #[doc(hidden)]
     pub device_name: std::option::Option<std::string::String>,
     /// <p>Replication Configuration replicated disk boot disk.</p>
+    #[doc(hidden)]
     pub is_boot_disk: std::option::Option<bool>,
     /// <p>Replication Configuration replicated disk staging disk type.</p>
+    #[doc(hidden)]
     pub staging_disk_type:
         std::option::Option<crate::model::ReplicationConfigurationReplicatedDiskStagingDiskType>,
     /// <p>Replication Configuration replicated disk IOPs.</p>
+    #[doc(hidden)]
     pub iops: i64,
     /// <p>Replication Configuration replicated disk throughput.</p>
+    #[doc(hidden)]
     pub throughput: i64,
 }
 impl ReplicationConfigurationReplicatedDisk {
@@ -3402,11 +3576,10 @@ impl std::fmt::Debug for ReplicationConfigurationReplicatedDisk {
         formatter.finish()
     }
 }
-/// See [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk)
+/// See [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk).
 pub mod replication_configuration_replicated_disk {
 
-    /// A builder for [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_name: std::option::Option<std::string::String>,
@@ -3476,7 +3649,7 @@ pub mod replication_configuration_replicated_disk {
             self.throughput = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk)
+        /// Consumes the builder and constructs a [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk).
         pub fn build(self) -> crate::model::ReplicationConfigurationReplicatedDisk {
             crate::model::ReplicationConfigurationReplicatedDisk {
                 device_name: self.device_name,
@@ -3489,7 +3662,7 @@ pub mod replication_configuration_replicated_disk {
     }
 }
 impl ReplicationConfigurationReplicatedDisk {
-    /// Creates a new builder-style object to manufacture [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk)
+    /// Creates a new builder-style object to manufacture [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk).
     pub fn builder() -> crate::model::replication_configuration_replicated_disk::Builder {
         crate::model::replication_configuration_replicated_disk::Builder::default()
     }
@@ -3637,6 +3810,533 @@ impl AsRef<str> for ReplicationConfigurationDefaultLargeStagingDiskType {
     }
 }
 
+/// <p>Server participating in Job.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct PostLaunchActions {
+    /// <p>Server participating in Job.</p>
+    #[doc(hidden)]
+    pub deployment: std::option::Option<crate::model::PostLaunchActionsDeploymentType>,
+    /// <p>Server participating in Job.</p>
+    #[doc(hidden)]
+    pub s3_log_bucket: std::option::Option<std::string::String>,
+    /// <p>Server participating in Job.</p>
+    #[doc(hidden)]
+    pub s3_output_key_prefix: std::option::Option<std::string::String>,
+    /// <p>Server participating in Job.</p>
+    #[doc(hidden)]
+    pub cloud_watch_log_group_name: std::option::Option<std::string::String>,
+    /// <p>Server participating in Job.</p>
+    #[doc(hidden)]
+    pub ssm_documents: std::option::Option<std::vec::Vec<crate::model::SsmDocument>>,
+}
+impl PostLaunchActions {
+    /// <p>Server participating in Job.</p>
+    pub fn deployment(
+        &self,
+    ) -> std::option::Option<&crate::model::PostLaunchActionsDeploymentType> {
+        self.deployment.as_ref()
+    }
+    /// <p>Server participating in Job.</p>
+    pub fn s3_log_bucket(&self) -> std::option::Option<&str> {
+        self.s3_log_bucket.as_deref()
+    }
+    /// <p>Server participating in Job.</p>
+    pub fn s3_output_key_prefix(&self) -> std::option::Option<&str> {
+        self.s3_output_key_prefix.as_deref()
+    }
+    /// <p>Server participating in Job.</p>
+    pub fn cloud_watch_log_group_name(&self) -> std::option::Option<&str> {
+        self.cloud_watch_log_group_name.as_deref()
+    }
+    /// <p>Server participating in Job.</p>
+    pub fn ssm_documents(&self) -> std::option::Option<&[crate::model::SsmDocument]> {
+        self.ssm_documents.as_deref()
+    }
+}
+impl std::fmt::Debug for PostLaunchActions {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("PostLaunchActions");
+        formatter.field("deployment", &self.deployment);
+        formatter.field("s3_log_bucket", &self.s3_log_bucket);
+        formatter.field("s3_output_key_prefix", &self.s3_output_key_prefix);
+        formatter.field(
+            "cloud_watch_log_group_name",
+            &self.cloud_watch_log_group_name,
+        );
+        formatter.field("ssm_documents", &self.ssm_documents);
+        formatter.finish()
+    }
+}
+/// See [`PostLaunchActions`](crate::model::PostLaunchActions).
+pub mod post_launch_actions {
+
+    /// A builder for [`PostLaunchActions`](crate::model::PostLaunchActions).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) deployment: std::option::Option<crate::model::PostLaunchActionsDeploymentType>,
+        pub(crate) s3_log_bucket: std::option::Option<std::string::String>,
+        pub(crate) s3_output_key_prefix: std::option::Option<std::string::String>,
+        pub(crate) cloud_watch_log_group_name: std::option::Option<std::string::String>,
+        pub(crate) ssm_documents: std::option::Option<std::vec::Vec<crate::model::SsmDocument>>,
+    }
+    impl Builder {
+        /// <p>Server participating in Job.</p>
+        pub fn deployment(mut self, input: crate::model::PostLaunchActionsDeploymentType) -> Self {
+            self.deployment = Some(input);
+            self
+        }
+        /// <p>Server participating in Job.</p>
+        pub fn set_deployment(
+            mut self,
+            input: std::option::Option<crate::model::PostLaunchActionsDeploymentType>,
+        ) -> Self {
+            self.deployment = input;
+            self
+        }
+        /// <p>Server participating in Job.</p>
+        pub fn s3_log_bucket(mut self, input: impl Into<std::string::String>) -> Self {
+            self.s3_log_bucket = Some(input.into());
+            self
+        }
+        /// <p>Server participating in Job.</p>
+        pub fn set_s3_log_bucket(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.s3_log_bucket = input;
+            self
+        }
+        /// <p>Server participating in Job.</p>
+        pub fn s3_output_key_prefix(mut self, input: impl Into<std::string::String>) -> Self {
+            self.s3_output_key_prefix = Some(input.into());
+            self
+        }
+        /// <p>Server participating in Job.</p>
+        pub fn set_s3_output_key_prefix(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.s3_output_key_prefix = input;
+            self
+        }
+        /// <p>Server participating in Job.</p>
+        pub fn cloud_watch_log_group_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.cloud_watch_log_group_name = Some(input.into());
+            self
+        }
+        /// <p>Server participating in Job.</p>
+        pub fn set_cloud_watch_log_group_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.cloud_watch_log_group_name = input;
+            self
+        }
+        /// Appends an item to `ssm_documents`.
+        ///
+        /// To override the contents of this collection use [`set_ssm_documents`](Self::set_ssm_documents).
+        ///
+        /// <p>Server participating in Job.</p>
+        pub fn ssm_documents(mut self, input: crate::model::SsmDocument) -> Self {
+            let mut v = self.ssm_documents.unwrap_or_default();
+            v.push(input);
+            self.ssm_documents = Some(v);
+            self
+        }
+        /// <p>Server participating in Job.</p>
+        pub fn set_ssm_documents(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::SsmDocument>>,
+        ) -> Self {
+            self.ssm_documents = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`PostLaunchActions`](crate::model::PostLaunchActions).
+        pub fn build(self) -> crate::model::PostLaunchActions {
+            crate::model::PostLaunchActions {
+                deployment: self.deployment,
+                s3_log_bucket: self.s3_log_bucket,
+                s3_output_key_prefix: self.s3_output_key_prefix,
+                cloud_watch_log_group_name: self.cloud_watch_log_group_name,
+                ssm_documents: self.ssm_documents,
+            }
+        }
+    }
+}
+impl PostLaunchActions {
+    /// Creates a new builder-style object to manufacture [`PostLaunchActions`](crate::model::PostLaunchActions).
+    pub fn builder() -> crate::model::post_launch_actions::Builder {
+        crate::model::post_launch_actions::Builder::default()
+    }
+}
+
+/// <p>Source server replication type.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct SsmDocument {
+    /// <p>Source server replication type.</p>
+    #[doc(hidden)]
+    pub action_name: std::option::Option<std::string::String>,
+    /// <p>Source server replication type.</p>
+    #[doc(hidden)]
+    pub ssm_document_name: std::option::Option<std::string::String>,
+    /// <p>Source server replication type.</p>
+    #[doc(hidden)]
+    pub timeout_seconds: i32,
+    /// <p>Source server replication type.</p>
+    #[doc(hidden)]
+    pub must_succeed_for_cutover: std::option::Option<bool>,
+    /// <p>Source server replication type.</p>
+    #[doc(hidden)]
+    pub parameters: std::option::Option<
+        std::collections::HashMap<
+            std::string::String,
+            std::vec::Vec<crate::model::SsmParameterStoreParameter>,
+        >,
+    >,
+}
+impl SsmDocument {
+    /// <p>Source server replication type.</p>
+    pub fn action_name(&self) -> std::option::Option<&str> {
+        self.action_name.as_deref()
+    }
+    /// <p>Source server replication type.</p>
+    pub fn ssm_document_name(&self) -> std::option::Option<&str> {
+        self.ssm_document_name.as_deref()
+    }
+    /// <p>Source server replication type.</p>
+    pub fn timeout_seconds(&self) -> i32 {
+        self.timeout_seconds
+    }
+    /// <p>Source server replication type.</p>
+    pub fn must_succeed_for_cutover(&self) -> std::option::Option<bool> {
+        self.must_succeed_for_cutover
+    }
+    /// <p>Source server replication type.</p>
+    pub fn parameters(
+        &self,
+    ) -> std::option::Option<
+        &std::collections::HashMap<
+            std::string::String,
+            std::vec::Vec<crate::model::SsmParameterStoreParameter>,
+        >,
+    > {
+        self.parameters.as_ref()
+    }
+}
+impl std::fmt::Debug for SsmDocument {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("SsmDocument");
+        formatter.field("action_name", &self.action_name);
+        formatter.field("ssm_document_name", &self.ssm_document_name);
+        formatter.field("timeout_seconds", &self.timeout_seconds);
+        formatter.field("must_succeed_for_cutover", &self.must_succeed_for_cutover);
+        formatter.field("parameters", &self.parameters);
+        formatter.finish()
+    }
+}
+/// See [`SsmDocument`](crate::model::SsmDocument).
+pub mod ssm_document {
+
+    /// A builder for [`SsmDocument`](crate::model::SsmDocument).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) action_name: std::option::Option<std::string::String>,
+        pub(crate) ssm_document_name: std::option::Option<std::string::String>,
+        pub(crate) timeout_seconds: std::option::Option<i32>,
+        pub(crate) must_succeed_for_cutover: std::option::Option<bool>,
+        pub(crate) parameters: std::option::Option<
+            std::collections::HashMap<
+                std::string::String,
+                std::vec::Vec<crate::model::SsmParameterStoreParameter>,
+            >,
+        >,
+    }
+    impl Builder {
+        /// <p>Source server replication type.</p>
+        pub fn action_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.action_name = Some(input.into());
+            self
+        }
+        /// <p>Source server replication type.</p>
+        pub fn set_action_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.action_name = input;
+            self
+        }
+        /// <p>Source server replication type.</p>
+        pub fn ssm_document_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.ssm_document_name = Some(input.into());
+            self
+        }
+        /// <p>Source server replication type.</p>
+        pub fn set_ssm_document_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.ssm_document_name = input;
+            self
+        }
+        /// <p>Source server replication type.</p>
+        pub fn timeout_seconds(mut self, input: i32) -> Self {
+            self.timeout_seconds = Some(input);
+            self
+        }
+        /// <p>Source server replication type.</p>
+        pub fn set_timeout_seconds(mut self, input: std::option::Option<i32>) -> Self {
+            self.timeout_seconds = input;
+            self
+        }
+        /// <p>Source server replication type.</p>
+        pub fn must_succeed_for_cutover(mut self, input: bool) -> Self {
+            self.must_succeed_for_cutover = Some(input);
+            self
+        }
+        /// <p>Source server replication type.</p>
+        pub fn set_must_succeed_for_cutover(mut self, input: std::option::Option<bool>) -> Self {
+            self.must_succeed_for_cutover = input;
+            self
+        }
+        /// Adds a key-value pair to `parameters`.
+        ///
+        /// To override the contents of this collection use [`set_parameters`](Self::set_parameters).
+        ///
+        /// <p>Source server replication type.</p>
+        pub fn parameters(
+            mut self,
+            k: impl Into<std::string::String>,
+            v: std::vec::Vec<crate::model::SsmParameterStoreParameter>,
+        ) -> Self {
+            let mut hash_map = self.parameters.unwrap_or_default();
+            hash_map.insert(k.into(), v);
+            self.parameters = Some(hash_map);
+            self
+        }
+        /// <p>Source server replication type.</p>
+        pub fn set_parameters(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<
+                    std::string::String,
+                    std::vec::Vec<crate::model::SsmParameterStoreParameter>,
+                >,
+            >,
+        ) -> Self {
+            self.parameters = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`SsmDocument`](crate::model::SsmDocument).
+        pub fn build(self) -> crate::model::SsmDocument {
+            crate::model::SsmDocument {
+                action_name: self.action_name,
+                ssm_document_name: self.ssm_document_name,
+                timeout_seconds: self.timeout_seconds.unwrap_or_default(),
+                must_succeed_for_cutover: self.must_succeed_for_cutover,
+                parameters: self.parameters,
+            }
+        }
+    }
+}
+impl SsmDocument {
+    /// Creates a new builder-style object to manufacture [`SsmDocument`](crate::model::SsmDocument).
+    pub fn builder() -> crate::model::ssm_document::Builder {
+        crate::model::ssm_document::Builder::default()
+    }
+}
+
+/// <p>Source server replication type.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct SsmParameterStoreParameter {
+    /// <p>Source server replication type.</p>
+    #[doc(hidden)]
+    pub parameter_type: std::option::Option<crate::model::SsmParameterStoreParameterType>,
+    /// <p>Source server replication type.</p>
+    #[doc(hidden)]
+    pub parameter_name: std::option::Option<std::string::String>,
+}
+impl SsmParameterStoreParameter {
+    /// <p>Source server replication type.</p>
+    pub fn parameter_type(
+        &self,
+    ) -> std::option::Option<&crate::model::SsmParameterStoreParameterType> {
+        self.parameter_type.as_ref()
+    }
+    /// <p>Source server replication type.</p>
+    pub fn parameter_name(&self) -> std::option::Option<&str> {
+        self.parameter_name.as_deref()
+    }
+}
+impl std::fmt::Debug for SsmParameterStoreParameter {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("SsmParameterStoreParameter");
+        formatter.field("parameter_type", &self.parameter_type);
+        formatter.field("parameter_name", &self.parameter_name);
+        formatter.finish()
+    }
+}
+/// See [`SsmParameterStoreParameter`](crate::model::SsmParameterStoreParameter).
+pub mod ssm_parameter_store_parameter {
+
+    /// A builder for [`SsmParameterStoreParameter`](crate::model::SsmParameterStoreParameter).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) parameter_type:
+            std::option::Option<crate::model::SsmParameterStoreParameterType>,
+        pub(crate) parameter_name: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>Source server replication type.</p>
+        pub fn parameter_type(
+            mut self,
+            input: crate::model::SsmParameterStoreParameterType,
+        ) -> Self {
+            self.parameter_type = Some(input);
+            self
+        }
+        /// <p>Source server replication type.</p>
+        pub fn set_parameter_type(
+            mut self,
+            input: std::option::Option<crate::model::SsmParameterStoreParameterType>,
+        ) -> Self {
+            self.parameter_type = input;
+            self
+        }
+        /// <p>Source server replication type.</p>
+        pub fn parameter_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.parameter_name = Some(input.into());
+            self
+        }
+        /// <p>Source server replication type.</p>
+        pub fn set_parameter_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.parameter_name = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`SsmParameterStoreParameter`](crate::model::SsmParameterStoreParameter).
+        pub fn build(self) -> crate::model::SsmParameterStoreParameter {
+            crate::model::SsmParameterStoreParameter {
+                parameter_type: self.parameter_type,
+                parameter_name: self.parameter_name,
+            }
+        }
+    }
+}
+impl SsmParameterStoreParameter {
+    /// Creates a new builder-style object to manufacture [`SsmParameterStoreParameter`](crate::model::SsmParameterStoreParameter).
+    pub fn builder() -> crate::model::ssm_parameter_store_parameter::Builder {
+        crate::model::ssm_parameter_store_parameter::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum SsmParameterStoreParameterType {
+    #[allow(missing_docs)] // documentation missing in model
+    String,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for SsmParameterStoreParameterType {
+    fn from(s: &str) -> Self {
+        match s {
+            "STRING" => SsmParameterStoreParameterType::String,
+            other => SsmParameterStoreParameterType::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for SsmParameterStoreParameterType {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(SsmParameterStoreParameterType::from(s))
+    }
+}
+impl SsmParameterStoreParameterType {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            SsmParameterStoreParameterType::String => "STRING",
+            SsmParameterStoreParameterType::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["STRING"]
+    }
+}
+impl AsRef<str> for SsmParameterStoreParameterType {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum PostLaunchActionsDeploymentType {
+    #[allow(missing_docs)] // documentation missing in model
+    CutoverOnly,
+    #[allow(missing_docs)] // documentation missing in model
+    TestAndCutover,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for PostLaunchActionsDeploymentType {
+    fn from(s: &str) -> Self {
+        match s {
+            "CUTOVER_ONLY" => PostLaunchActionsDeploymentType::CutoverOnly,
+            "TEST_AND_CUTOVER" => PostLaunchActionsDeploymentType::TestAndCutover,
+            other => PostLaunchActionsDeploymentType::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for PostLaunchActionsDeploymentType {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(PostLaunchActionsDeploymentType::from(s))
+    }
+}
+impl PostLaunchActionsDeploymentType {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            PostLaunchActionsDeploymentType::CutoverOnly => "CUTOVER_ONLY",
+            PostLaunchActionsDeploymentType::TestAndCutover => "TEST_AND_CUTOVER",
+            PostLaunchActionsDeploymentType::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["CUTOVER_ONLY", "TEST_AND_CUTOVER"]
+    }
+}
+impl AsRef<str> for PostLaunchActionsDeploymentType {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(
@@ -3697,6 +4397,7 @@ impl AsRef<str> for BootMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Licensing {
     /// <p>Configure BYOL OS licensing.</p>
+    #[doc(hidden)]
     pub os_byol: std::option::Option<bool>,
 }
 impl Licensing {
@@ -3712,11 +4413,10 @@ impl std::fmt::Debug for Licensing {
         formatter.finish()
     }
 }
-/// See [`Licensing`](crate::model::Licensing)
+/// See [`Licensing`](crate::model::Licensing).
 pub mod licensing {
 
-    /// A builder for [`Licensing`](crate::model::Licensing)
-    #[non_exhaustive]
+    /// A builder for [`Licensing`](crate::model::Licensing).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) os_byol: std::option::Option<bool>,
@@ -3732,7 +4432,7 @@ pub mod licensing {
             self.os_byol = input;
             self
         }
-        /// Consumes the builder and constructs a [`Licensing`](crate::model::Licensing)
+        /// Consumes the builder and constructs a [`Licensing`](crate::model::Licensing).
         pub fn build(self) -> crate::model::Licensing {
             crate::model::Licensing {
                 os_byol: self.os_byol,
@@ -3741,7 +4441,7 @@ pub mod licensing {
     }
 }
 impl Licensing {
-    /// Creates a new builder-style object to manufacture [`Licensing`](crate::model::Licensing)
+    /// Creates a new builder-style object to manufacture [`Licensing`](crate::model::Licensing).
     pub fn builder() -> crate::model::licensing::Builder {
         crate::model::licensing::Builder::default()
     }
@@ -3862,6 +4562,7 @@ impl AsRef<str> for LaunchDisposition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChangeServerLifeCycleStateSourceServerLifecycle {
     /// <p>The request to change the source server migration lifecycle state.</p>
+    #[doc(hidden)]
     pub state:
         std::option::Option<crate::model::ChangeServerLifeCycleStateSourceServerLifecycleState>,
 }
@@ -3881,11 +4582,10 @@ impl std::fmt::Debug for ChangeServerLifeCycleStateSourceServerLifecycle {
         formatter.finish()
     }
 }
-/// See [`ChangeServerLifeCycleStateSourceServerLifecycle`](crate::model::ChangeServerLifeCycleStateSourceServerLifecycle)
+/// See [`ChangeServerLifeCycleStateSourceServerLifecycle`](crate::model::ChangeServerLifeCycleStateSourceServerLifecycle).
 pub mod change_server_life_cycle_state_source_server_lifecycle {
 
-    /// A builder for [`ChangeServerLifeCycleStateSourceServerLifecycle`](crate::model::ChangeServerLifeCycleStateSourceServerLifecycle)
-    #[non_exhaustive]
+    /// A builder for [`ChangeServerLifeCycleStateSourceServerLifecycle`](crate::model::ChangeServerLifeCycleStateSourceServerLifecycle).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state:
@@ -3910,14 +4610,14 @@ pub mod change_server_life_cycle_state_source_server_lifecycle {
             self.state = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeServerLifeCycleStateSourceServerLifecycle`](crate::model::ChangeServerLifeCycleStateSourceServerLifecycle)
+        /// Consumes the builder and constructs a [`ChangeServerLifeCycleStateSourceServerLifecycle`](crate::model::ChangeServerLifeCycleStateSourceServerLifecycle).
         pub fn build(self) -> crate::model::ChangeServerLifeCycleStateSourceServerLifecycle {
             crate::model::ChangeServerLifeCycleStateSourceServerLifecycle { state: self.state }
         }
     }
 }
 impl ChangeServerLifeCycleStateSourceServerLifecycle {
-    /// Creates a new builder-style object to manufacture [`ChangeServerLifeCycleStateSourceServerLifecycle`](crate::model::ChangeServerLifeCycleStateSourceServerLifecycle)
+    /// Creates a new builder-style object to manufacture [`ChangeServerLifeCycleStateSourceServerLifecycle`](crate::model::ChangeServerLifeCycleStateSourceServerLifecycle).
     pub fn builder() -> crate::model::change_server_life_cycle_state_source_server_lifecycle::Builder
     {
         crate::model::change_server_life_cycle_state_source_server_lifecycle::Builder::default()
@@ -3996,23 +4696,32 @@ impl AsRef<str> for ChangeServerLifeCycleStateSourceServerLifecycleState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Job {
     /// <p>Job ID.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>the ARN of the specific Job.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Job type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::JobType>,
     /// <p>Job initiated by field.</p>
+    #[doc(hidden)]
     pub initiated_by: std::option::Option<crate::model::InitiatedBy>,
     /// <p>Job creation time.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<std::string::String>,
     /// <p>Job end time.</p>
+    #[doc(hidden)]
     pub end_date_time: std::option::Option<std::string::String>,
     /// <p>Job status.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobStatus>,
     /// <p>Servers participating in a specific Job.</p>
+    #[doc(hidden)]
     pub participating_servers:
         std::option::Option<std::vec::Vec<crate::model::ParticipatingServer>>,
     /// <p>Tags associated with specific Job.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -4074,11 +4783,10 @@ impl std::fmt::Debug for Job {
         formatter.finish()
     }
 }
-/// See [`Job`](crate::model::Job)
+/// See [`Job`](crate::model::Job).
 pub mod job {
 
-    /// A builder for [`Job`](crate::model::Job)
-    #[non_exhaustive]
+    /// A builder for [`Job`](crate::model::Job).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -4218,7 +4926,7 @@ pub mod job {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Job`](crate::model::Job)
+        /// Consumes the builder and constructs a [`Job`](crate::model::Job).
         pub fn build(self) -> crate::model::Job {
             crate::model::Job {
                 job_id: self.job_id,
@@ -4235,7 +4943,7 @@ pub mod job {
     }
 }
 impl Job {
-    /// Creates a new builder-style object to manufacture [`Job`](crate::model::Job)
+    /// Creates a new builder-style object to manufacture [`Job`](crate::model::Job).
     pub fn builder() -> crate::model::job::Builder {
         crate::model::job::Builder::default()
     }
@@ -4246,9 +4954,17 @@ impl Job {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ParticipatingServer {
     /// <p>Participating server Source Server ID.</p>
+    #[doc(hidden)]
     pub source_server_id: std::option::Option<std::string::String>,
     /// <p>Participating server launch status.</p>
+    #[doc(hidden)]
     pub launch_status: std::option::Option<crate::model::LaunchStatus>,
+    /// <p>Participating server Source Server ID.</p>
+    #[doc(hidden)]
+    pub launched_ec2_instance_id: std::option::Option<std::string::String>,
+    /// <p>Participating server Source Server ID.</p>
+    #[doc(hidden)]
+    pub post_launch_actions_status: std::option::Option<crate::model::PostLaunchActionsStatus>,
 }
 impl ParticipatingServer {
     /// <p>Participating server Source Server ID.</p>
@@ -4259,24 +4975,41 @@ impl ParticipatingServer {
     pub fn launch_status(&self) -> std::option::Option<&crate::model::LaunchStatus> {
         self.launch_status.as_ref()
     }
+    /// <p>Participating server Source Server ID.</p>
+    pub fn launched_ec2_instance_id(&self) -> std::option::Option<&str> {
+        self.launched_ec2_instance_id.as_deref()
+    }
+    /// <p>Participating server Source Server ID.</p>
+    pub fn post_launch_actions_status(
+        &self,
+    ) -> std::option::Option<&crate::model::PostLaunchActionsStatus> {
+        self.post_launch_actions_status.as_ref()
+    }
 }
 impl std::fmt::Debug for ParticipatingServer {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("ParticipatingServer");
         formatter.field("source_server_id", &self.source_server_id);
         formatter.field("launch_status", &self.launch_status);
+        formatter.field("launched_ec2_instance_id", &self.launched_ec2_instance_id);
+        formatter.field(
+            "post_launch_actions_status",
+            &self.post_launch_actions_status,
+        );
         formatter.finish()
     }
 }
-/// See [`ParticipatingServer`](crate::model::ParticipatingServer)
+/// See [`ParticipatingServer`](crate::model::ParticipatingServer).
 pub mod participating_server {
 
-    /// A builder for [`ParticipatingServer`](crate::model::ParticipatingServer)
-    #[non_exhaustive]
+    /// A builder for [`ParticipatingServer`](crate::model::ParticipatingServer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_server_id: std::option::Option<std::string::String>,
         pub(crate) launch_status: std::option::Option<crate::model::LaunchStatus>,
+        pub(crate) launched_ec2_instance_id: std::option::Option<std::string::String>,
+        pub(crate) post_launch_actions_status:
+            std::option::Option<crate::model::PostLaunchActionsStatus>,
     }
     impl Builder {
         /// <p>Participating server Source Server ID.</p>
@@ -4305,19 +5038,424 @@ pub mod participating_server {
             self.launch_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParticipatingServer`](crate::model::ParticipatingServer)
+        /// <p>Participating server Source Server ID.</p>
+        pub fn launched_ec2_instance_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.launched_ec2_instance_id = Some(input.into());
+            self
+        }
+        /// <p>Participating server Source Server ID.</p>
+        pub fn set_launched_ec2_instance_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.launched_ec2_instance_id = input;
+            self
+        }
+        /// <p>Participating server Source Server ID.</p>
+        pub fn post_launch_actions_status(
+            mut self,
+            input: crate::model::PostLaunchActionsStatus,
+        ) -> Self {
+            self.post_launch_actions_status = Some(input);
+            self
+        }
+        /// <p>Participating server Source Server ID.</p>
+        pub fn set_post_launch_actions_status(
+            mut self,
+            input: std::option::Option<crate::model::PostLaunchActionsStatus>,
+        ) -> Self {
+            self.post_launch_actions_status = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ParticipatingServer`](crate::model::ParticipatingServer).
         pub fn build(self) -> crate::model::ParticipatingServer {
             crate::model::ParticipatingServer {
                 source_server_id: self.source_server_id,
                 launch_status: self.launch_status,
+                launched_ec2_instance_id: self.launched_ec2_instance_id,
+                post_launch_actions_status: self.post_launch_actions_status,
             }
         }
     }
 }
 impl ParticipatingServer {
-    /// Creates a new builder-style object to manufacture [`ParticipatingServer`](crate::model::ParticipatingServer)
+    /// Creates a new builder-style object to manufacture [`ParticipatingServer`](crate::model::ParticipatingServer).
     pub fn builder() -> crate::model::participating_server::Builder {
         crate::model::participating_server::Builder::default()
+    }
+}
+
+/// <p>Server participating in Job.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct PostLaunchActionsStatus {
+    /// <p>Server participating in Job.</p>
+    #[doc(hidden)]
+    pub ssm_agent_discovery_datetime: std::option::Option<std::string::String>,
+    /// <p>Server participating in Job.</p>
+    #[doc(hidden)]
+    pub post_launch_actions_launch_status_list:
+        std::option::Option<std::vec::Vec<crate::model::JobPostLaunchActionsLaunchStatus>>,
+}
+impl PostLaunchActionsStatus {
+    /// <p>Server participating in Job.</p>
+    pub fn ssm_agent_discovery_datetime(&self) -> std::option::Option<&str> {
+        self.ssm_agent_discovery_datetime.as_deref()
+    }
+    /// <p>Server participating in Job.</p>
+    pub fn post_launch_actions_launch_status_list(
+        &self,
+    ) -> std::option::Option<&[crate::model::JobPostLaunchActionsLaunchStatus]> {
+        self.post_launch_actions_launch_status_list.as_deref()
+    }
+}
+impl std::fmt::Debug for PostLaunchActionsStatus {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("PostLaunchActionsStatus");
+        formatter.field(
+            "ssm_agent_discovery_datetime",
+            &self.ssm_agent_discovery_datetime,
+        );
+        formatter.field(
+            "post_launch_actions_launch_status_list",
+            &self.post_launch_actions_launch_status_list,
+        );
+        formatter.finish()
+    }
+}
+/// See [`PostLaunchActionsStatus`](crate::model::PostLaunchActionsStatus).
+pub mod post_launch_actions_status {
+
+    /// A builder for [`PostLaunchActionsStatus`](crate::model::PostLaunchActionsStatus).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) ssm_agent_discovery_datetime: std::option::Option<std::string::String>,
+        pub(crate) post_launch_actions_launch_status_list:
+            std::option::Option<std::vec::Vec<crate::model::JobPostLaunchActionsLaunchStatus>>,
+    }
+    impl Builder {
+        /// <p>Server participating in Job.</p>
+        pub fn ssm_agent_discovery_datetime(
+            mut self,
+            input: impl Into<std::string::String>,
+        ) -> Self {
+            self.ssm_agent_discovery_datetime = Some(input.into());
+            self
+        }
+        /// <p>Server participating in Job.</p>
+        pub fn set_ssm_agent_discovery_datetime(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.ssm_agent_discovery_datetime = input;
+            self
+        }
+        /// Appends an item to `post_launch_actions_launch_status_list`.
+        ///
+        /// To override the contents of this collection use [`set_post_launch_actions_launch_status_list`](Self::set_post_launch_actions_launch_status_list).
+        ///
+        /// <p>Server participating in Job.</p>
+        pub fn post_launch_actions_launch_status_list(
+            mut self,
+            input: crate::model::JobPostLaunchActionsLaunchStatus,
+        ) -> Self {
+            let mut v = self
+                .post_launch_actions_launch_status_list
+                .unwrap_or_default();
+            v.push(input);
+            self.post_launch_actions_launch_status_list = Some(v);
+            self
+        }
+        /// <p>Server participating in Job.</p>
+        pub fn set_post_launch_actions_launch_status_list(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::JobPostLaunchActionsLaunchStatus>,
+            >,
+        ) -> Self {
+            self.post_launch_actions_launch_status_list = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`PostLaunchActionsStatus`](crate::model::PostLaunchActionsStatus).
+        pub fn build(self) -> crate::model::PostLaunchActionsStatus {
+            crate::model::PostLaunchActionsStatus {
+                ssm_agent_discovery_datetime: self.ssm_agent_discovery_datetime,
+                post_launch_actions_launch_status_list: self.post_launch_actions_launch_status_list,
+            }
+        }
+    }
+}
+impl PostLaunchActionsStatus {
+    /// Creates a new builder-style object to manufacture [`PostLaunchActionsStatus`](crate::model::PostLaunchActionsStatus).
+    pub fn builder() -> crate::model::post_launch_actions_status::Builder {
+        crate::model::post_launch_actions_status::Builder::default()
+    }
+}
+
+/// <p>Job type.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct JobPostLaunchActionsLaunchStatus {
+    /// <p>Job type.</p>
+    #[doc(hidden)]
+    pub ssm_document: std::option::Option<crate::model::SsmDocument>,
+    /// <p>Job type.</p>
+    #[doc(hidden)]
+    pub ssm_document_type: std::option::Option<crate::model::SsmDocumentType>,
+    /// <p>Job type.</p>
+    #[doc(hidden)]
+    pub execution_id: std::option::Option<std::string::String>,
+    /// <p>Job type.</p>
+    #[doc(hidden)]
+    pub execution_status: std::option::Option<crate::model::PostLaunchActionExecutionStatus>,
+    /// <p>Job type.</p>
+    #[doc(hidden)]
+    pub failure_reason: std::option::Option<std::string::String>,
+}
+impl JobPostLaunchActionsLaunchStatus {
+    /// <p>Job type.</p>
+    pub fn ssm_document(&self) -> std::option::Option<&crate::model::SsmDocument> {
+        self.ssm_document.as_ref()
+    }
+    /// <p>Job type.</p>
+    pub fn ssm_document_type(&self) -> std::option::Option<&crate::model::SsmDocumentType> {
+        self.ssm_document_type.as_ref()
+    }
+    /// <p>Job type.</p>
+    pub fn execution_id(&self) -> std::option::Option<&str> {
+        self.execution_id.as_deref()
+    }
+    /// <p>Job type.</p>
+    pub fn execution_status(
+        &self,
+    ) -> std::option::Option<&crate::model::PostLaunchActionExecutionStatus> {
+        self.execution_status.as_ref()
+    }
+    /// <p>Job type.</p>
+    pub fn failure_reason(&self) -> std::option::Option<&str> {
+        self.failure_reason.as_deref()
+    }
+}
+impl std::fmt::Debug for JobPostLaunchActionsLaunchStatus {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("JobPostLaunchActionsLaunchStatus");
+        formatter.field("ssm_document", &self.ssm_document);
+        formatter.field("ssm_document_type", &self.ssm_document_type);
+        formatter.field("execution_id", &self.execution_id);
+        formatter.field("execution_status", &self.execution_status);
+        formatter.field("failure_reason", &self.failure_reason);
+        formatter.finish()
+    }
+}
+/// See [`JobPostLaunchActionsLaunchStatus`](crate::model::JobPostLaunchActionsLaunchStatus).
+pub mod job_post_launch_actions_launch_status {
+
+    /// A builder for [`JobPostLaunchActionsLaunchStatus`](crate::model::JobPostLaunchActionsLaunchStatus).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) ssm_document: std::option::Option<crate::model::SsmDocument>,
+        pub(crate) ssm_document_type: std::option::Option<crate::model::SsmDocumentType>,
+        pub(crate) execution_id: std::option::Option<std::string::String>,
+        pub(crate) execution_status:
+            std::option::Option<crate::model::PostLaunchActionExecutionStatus>,
+        pub(crate) failure_reason: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>Job type.</p>
+        pub fn ssm_document(mut self, input: crate::model::SsmDocument) -> Self {
+            self.ssm_document = Some(input);
+            self
+        }
+        /// <p>Job type.</p>
+        pub fn set_ssm_document(
+            mut self,
+            input: std::option::Option<crate::model::SsmDocument>,
+        ) -> Self {
+            self.ssm_document = input;
+            self
+        }
+        /// <p>Job type.</p>
+        pub fn ssm_document_type(mut self, input: crate::model::SsmDocumentType) -> Self {
+            self.ssm_document_type = Some(input);
+            self
+        }
+        /// <p>Job type.</p>
+        pub fn set_ssm_document_type(
+            mut self,
+            input: std::option::Option<crate::model::SsmDocumentType>,
+        ) -> Self {
+            self.ssm_document_type = input;
+            self
+        }
+        /// <p>Job type.</p>
+        pub fn execution_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.execution_id = Some(input.into());
+            self
+        }
+        /// <p>Job type.</p>
+        pub fn set_execution_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.execution_id = input;
+            self
+        }
+        /// <p>Job type.</p>
+        pub fn execution_status(
+            mut self,
+            input: crate::model::PostLaunchActionExecutionStatus,
+        ) -> Self {
+            self.execution_status = Some(input);
+            self
+        }
+        /// <p>Job type.</p>
+        pub fn set_execution_status(
+            mut self,
+            input: std::option::Option<crate::model::PostLaunchActionExecutionStatus>,
+        ) -> Self {
+            self.execution_status = input;
+            self
+        }
+        /// <p>Job type.</p>
+        pub fn failure_reason(mut self, input: impl Into<std::string::String>) -> Self {
+            self.failure_reason = Some(input.into());
+            self
+        }
+        /// <p>Job type.</p>
+        pub fn set_failure_reason(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.failure_reason = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`JobPostLaunchActionsLaunchStatus`](crate::model::JobPostLaunchActionsLaunchStatus).
+        pub fn build(self) -> crate::model::JobPostLaunchActionsLaunchStatus {
+            crate::model::JobPostLaunchActionsLaunchStatus {
+                ssm_document: self.ssm_document,
+                ssm_document_type: self.ssm_document_type,
+                execution_id: self.execution_id,
+                execution_status: self.execution_status,
+                failure_reason: self.failure_reason,
+            }
+        }
+    }
+}
+impl JobPostLaunchActionsLaunchStatus {
+    /// Creates a new builder-style object to manufacture [`JobPostLaunchActionsLaunchStatus`](crate::model::JobPostLaunchActionsLaunchStatus).
+    pub fn builder() -> crate::model::job_post_launch_actions_launch_status::Builder {
+        crate::model::job_post_launch_actions_launch_status::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum PostLaunchActionExecutionStatus {
+    #[allow(missing_docs)] // documentation missing in model
+    Failed,
+    #[allow(missing_docs)] // documentation missing in model
+    InProgress,
+    #[allow(missing_docs)] // documentation missing in model
+    Success,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for PostLaunchActionExecutionStatus {
+    fn from(s: &str) -> Self {
+        match s {
+            "FAILED" => PostLaunchActionExecutionStatus::Failed,
+            "IN_PROGRESS" => PostLaunchActionExecutionStatus::InProgress,
+            "SUCCESS" => PostLaunchActionExecutionStatus::Success,
+            other => PostLaunchActionExecutionStatus::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for PostLaunchActionExecutionStatus {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(PostLaunchActionExecutionStatus::from(s))
+    }
+}
+impl PostLaunchActionExecutionStatus {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            PostLaunchActionExecutionStatus::Failed => "FAILED",
+            PostLaunchActionExecutionStatus::InProgress => "IN_PROGRESS",
+            PostLaunchActionExecutionStatus::Success => "SUCCESS",
+            PostLaunchActionExecutionStatus::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["FAILED", "IN_PROGRESS", "SUCCESS"]
+    }
+}
+impl AsRef<str> for PostLaunchActionExecutionStatus {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum SsmDocumentType {
+    #[allow(missing_docs)] // documentation missing in model
+    Automation,
+    #[allow(missing_docs)] // documentation missing in model
+    Command,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for SsmDocumentType {
+    fn from(s: &str) -> Self {
+        match s {
+            "AUTOMATION" => SsmDocumentType::Automation,
+            "COMMAND" => SsmDocumentType::Command,
+            other => SsmDocumentType::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for SsmDocumentType {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(SsmDocumentType::from(s))
+    }
+}
+impl SsmDocumentType {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            SsmDocumentType::Automation => "AUTOMATION",
+            SsmDocumentType::Command => "COMMAND",
+            SsmDocumentType::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["AUTOMATION", "COMMAND"]
+    }
+}
+impl AsRef<str> for SsmDocumentType {
+    fn as_ref(&self) -> &str {
+        self.as_str()
     }
 }
 
@@ -4570,25 +5708,35 @@ impl AsRef<str> for JobType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceServer {
     /// <p>Source server ID.</p>
+    #[doc(hidden)]
     pub source_server_id: std::option::Option<std::string::String>,
     /// <p>Source server ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Source server archived status.</p>
+    #[doc(hidden)]
     pub is_archived: std::option::Option<bool>,
     /// <p>Source server Tags.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Source server launched instance.</p>
+    #[doc(hidden)]
     pub launched_instance: std::option::Option<crate::model::LaunchedInstance>,
     /// <p>Source server data replication info.</p>
+    #[doc(hidden)]
     pub data_replication_info: std::option::Option<crate::model::DataReplicationInfo>,
     /// <p>Source server lifecycle state.</p>
+    #[doc(hidden)]
     pub life_cycle: std::option::Option<crate::model::LifeCycle>,
     /// <p>Source server properties.</p>
+    #[doc(hidden)]
     pub source_properties: std::option::Option<crate::model::SourceProperties>,
     /// <p>Source server replication type.</p>
+    #[doc(hidden)]
     pub replication_type: std::option::Option<crate::model::ReplicationType>,
     /// <p>Source server vCenter client id.</p>
+    #[doc(hidden)]
     pub vcenter_client_id: std::option::Option<std::string::String>,
 }
 impl SourceServer {
@@ -4652,11 +5800,10 @@ impl std::fmt::Debug for SourceServer {
         formatter.finish()
     }
 }
-/// See [`SourceServer`](crate::model::SourceServer)
+/// See [`SourceServer`](crate::model::SourceServer).
 pub mod source_server {
 
-    /// A builder for [`SourceServer`](crate::model::SourceServer)
-    #[non_exhaustive]
+    /// A builder for [`SourceServer`](crate::model::SourceServer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_server_id: std::option::Option<std::string::String>,
@@ -4809,7 +5956,7 @@ pub mod source_server {
             self.vcenter_client_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceServer`](crate::model::SourceServer)
+        /// Consumes the builder and constructs a [`SourceServer`](crate::model::SourceServer).
         pub fn build(self) -> crate::model::SourceServer {
             crate::model::SourceServer {
                 source_server_id: self.source_server_id,
@@ -4827,7 +5974,7 @@ pub mod source_server {
     }
 }
 impl SourceServer {
-    /// Creates a new builder-style object to manufacture [`SourceServer`](crate::model::SourceServer)
+    /// Creates a new builder-style object to manufacture [`SourceServer`](crate::model::SourceServer).
     pub fn builder() -> crate::model::source_server::Builder {
         crate::model::source_server::Builder::default()
     }
@@ -4838,12 +5985,16 @@ impl SourceServer {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSourceServersRequestFilters {
     /// <p>Request to filter Source Servers list by Source Server ID.</p>
+    #[doc(hidden)]
     pub source_server_i_ds: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Request to filter Source Servers list by archived.</p>
+    #[doc(hidden)]
     pub is_archived: std::option::Option<bool>,
     /// <p>Request to filter Source Servers list by replication type.</p>
+    #[doc(hidden)]
     pub replication_types: std::option::Option<std::vec::Vec<crate::model::ReplicationType>>,
     /// <p>Request to filter Source Servers list by life cycle states.</p>
+    #[doc(hidden)]
     pub life_cycle_states: std::option::Option<std::vec::Vec<crate::model::LifeCycleState>>,
 }
 impl DescribeSourceServersRequestFilters {
@@ -4874,11 +6025,10 @@ impl std::fmt::Debug for DescribeSourceServersRequestFilters {
         formatter.finish()
     }
 }
-/// See [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters)
+/// See [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters).
 pub mod describe_source_servers_request_filters {
 
-    /// A builder for [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_server_i_ds: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -4956,7 +6106,7 @@ pub mod describe_source_servers_request_filters {
             self.life_cycle_states = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters)
+        /// Consumes the builder and constructs a [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters).
         pub fn build(self) -> crate::model::DescribeSourceServersRequestFilters {
             crate::model::DescribeSourceServersRequestFilters {
                 source_server_i_ds: self.source_server_i_ds,
@@ -4968,7 +6118,7 @@ pub mod describe_source_servers_request_filters {
     }
 }
 impl DescribeSourceServersRequestFilters {
-    /// Creates a new builder-style object to manufacture [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters)
+    /// Creates a new builder-style object to manufacture [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters).
     pub fn builder() -> crate::model::describe_source_servers_request_filters::Builder {
         crate::model::describe_source_servers_request_filters::Builder::default()
     }
@@ -4979,38 +6129,53 @@ impl DescribeSourceServersRequestFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationConfigurationTemplate {
     /// <p>Replication Configuration template ID.</p>
+    #[doc(hidden)]
     pub replication_configuration_template_id: std::option::Option<std::string::String>,
     /// <p>Replication Configuration template ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Replication Configuration template Staging Area subnet ID.</p>
+    #[doc(hidden)]
     pub staging_area_subnet_id: std::option::Option<std::string::String>,
     /// <p>Replication Configuration template associate default Application Migration Service Security group.</p>
+    #[doc(hidden)]
     pub associate_default_security_group: std::option::Option<bool>,
     /// <p>Replication Configuration template server Security Groups IDs.</p>
+    #[doc(hidden)]
     pub replication_servers_security_groups_i_ds:
         std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Replication Configuration template server instance type.</p>
+    #[doc(hidden)]
     pub replication_server_instance_type: std::option::Option<std::string::String>,
     /// <p>Replication Configuration template use Dedicated Replication Server.</p>
+    #[doc(hidden)]
     pub use_dedicated_replication_server: std::option::Option<bool>,
     /// <p>Replication Configuration template use default large Staging Disk type.</p>
+    #[doc(hidden)]
     pub default_large_staging_disk_type:
         std::option::Option<crate::model::ReplicationConfigurationDefaultLargeStagingDiskType>,
     /// <p>Replication Configuration template EBS encryption.</p>
+    #[doc(hidden)]
     pub ebs_encryption: std::option::Option<crate::model::ReplicationConfigurationEbsEncryption>,
     /// <p>Replication Configuration template EBS encryption key ARN.</p>
+    #[doc(hidden)]
     pub ebs_encryption_key_arn: std::option::Option<std::string::String>,
     /// <p>Replication Configuration template bandwidth throttling.</p>
+    #[doc(hidden)]
     pub bandwidth_throttling: i64,
     /// <p>Replication Configuration template data plane routing.</p>
+    #[doc(hidden)]
     pub data_plane_routing:
         std::option::Option<crate::model::ReplicationConfigurationDataPlaneRouting>,
     /// <p>Replication Configuration template create Public IP.</p>
+    #[doc(hidden)]
     pub create_public_ip: std::option::Option<bool>,
     /// <p>Replication Configuration template Staging Area Tags.</p>
+    #[doc(hidden)]
     pub staging_area_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Replication Configuration template Tags.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -5130,11 +6295,10 @@ impl std::fmt::Debug for ReplicationConfigurationTemplate {
         formatter.finish()
     }
 }
-/// See [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate)
+/// See [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate).
 pub mod replication_configuration_template {
 
-    /// A builder for [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_configuration_template_id: std::option::Option<std::string::String>,
@@ -5400,7 +6564,7 @@ pub mod replication_configuration_template {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate)
+        /// Consumes the builder and constructs a [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate).
         pub fn build(self) -> crate::model::ReplicationConfigurationTemplate {
             crate::model::ReplicationConfigurationTemplate {
                 replication_configuration_template_id: self.replication_configuration_template_id,
@@ -5424,9 +6588,157 @@ pub mod replication_configuration_template {
     }
 }
 impl ReplicationConfigurationTemplate {
-    /// Creates a new builder-style object to manufacture [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate)
+    /// Creates a new builder-style object to manufacture [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate).
     pub fn builder() -> crate::model::replication_configuration_template::Builder {
         crate::model::replication_configuration_template::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct LaunchConfigurationTemplate {
+    /// <p>Copy Private IP during Launch Configuration.</p>
+    #[doc(hidden)]
+    pub launch_configuration_template_id: std::option::Option<std::string::String>,
+    /// <p>Copy Private IP during Launch Configuration.</p>
+    #[doc(hidden)]
+    pub arn: std::option::Option<std::string::String>,
+    /// <p>Copy Private IP during Launch Configuration.</p>
+    #[doc(hidden)]
+    pub post_launch_actions: std::option::Option<crate::model::PostLaunchActions>,
+    /// <p>Copy Private IP during Launch Configuration.</p>
+    #[doc(hidden)]
+    pub tags:
+        std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
+}
+impl LaunchConfigurationTemplate {
+    /// <p>Copy Private IP during Launch Configuration.</p>
+    pub fn launch_configuration_template_id(&self) -> std::option::Option<&str> {
+        self.launch_configuration_template_id.as_deref()
+    }
+    /// <p>Copy Private IP during Launch Configuration.</p>
+    pub fn arn(&self) -> std::option::Option<&str> {
+        self.arn.as_deref()
+    }
+    /// <p>Copy Private IP during Launch Configuration.</p>
+    pub fn post_launch_actions(&self) -> std::option::Option<&crate::model::PostLaunchActions> {
+        self.post_launch_actions.as_ref()
+    }
+    /// <p>Copy Private IP during Launch Configuration.</p>
+    pub fn tags(
+        &self,
+    ) -> std::option::Option<&std::collections::HashMap<std::string::String, std::string::String>>
+    {
+        self.tags.as_ref()
+    }
+}
+impl std::fmt::Debug for LaunchConfigurationTemplate {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("LaunchConfigurationTemplate");
+        formatter.field(
+            "launch_configuration_template_id",
+            &self.launch_configuration_template_id,
+        );
+        formatter.field("arn", &self.arn);
+        formatter.field("post_launch_actions", &self.post_launch_actions);
+        formatter.field("tags", &"*** Sensitive Data Redacted ***");
+        formatter.finish()
+    }
+}
+/// See [`LaunchConfigurationTemplate`](crate::model::LaunchConfigurationTemplate).
+pub mod launch_configuration_template {
+
+    /// A builder for [`LaunchConfigurationTemplate`](crate::model::LaunchConfigurationTemplate).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) launch_configuration_template_id: std::option::Option<std::string::String>,
+        pub(crate) arn: std::option::Option<std::string::String>,
+        pub(crate) post_launch_actions: std::option::Option<crate::model::PostLaunchActions>,
+        pub(crate) tags: std::option::Option<
+            std::collections::HashMap<std::string::String, std::string::String>,
+        >,
+    }
+    impl Builder {
+        /// <p>Copy Private IP during Launch Configuration.</p>
+        pub fn launch_configuration_template_id(
+            mut self,
+            input: impl Into<std::string::String>,
+        ) -> Self {
+            self.launch_configuration_template_id = Some(input.into());
+            self
+        }
+        /// <p>Copy Private IP during Launch Configuration.</p>
+        pub fn set_launch_configuration_template_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.launch_configuration_template_id = input;
+            self
+        }
+        /// <p>Copy Private IP during Launch Configuration.</p>
+        pub fn arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.arn = Some(input.into());
+            self
+        }
+        /// <p>Copy Private IP during Launch Configuration.</p>
+        pub fn set_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.arn = input;
+            self
+        }
+        /// <p>Copy Private IP during Launch Configuration.</p>
+        pub fn post_launch_actions(mut self, input: crate::model::PostLaunchActions) -> Self {
+            self.post_launch_actions = Some(input);
+            self
+        }
+        /// <p>Copy Private IP during Launch Configuration.</p>
+        pub fn set_post_launch_actions(
+            mut self,
+            input: std::option::Option<crate::model::PostLaunchActions>,
+        ) -> Self {
+            self.post_launch_actions = input;
+            self
+        }
+        /// Adds a key-value pair to `tags`.
+        ///
+        /// To override the contents of this collection use [`set_tags`](Self::set_tags).
+        ///
+        /// <p>Copy Private IP during Launch Configuration.</p>
+        pub fn tags(
+            mut self,
+            k: impl Into<std::string::String>,
+            v: impl Into<std::string::String>,
+        ) -> Self {
+            let mut hash_map = self.tags.unwrap_or_default();
+            hash_map.insert(k.into(), v.into());
+            self.tags = Some(hash_map);
+            self
+        }
+        /// <p>Copy Private IP during Launch Configuration.</p>
+        pub fn set_tags(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<std::string::String, std::string::String>,
+            >,
+        ) -> Self {
+            self.tags = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`LaunchConfigurationTemplate`](crate::model::LaunchConfigurationTemplate).
+        pub fn build(self) -> crate::model::LaunchConfigurationTemplate {
+            crate::model::LaunchConfigurationTemplate {
+                launch_configuration_template_id: self.launch_configuration_template_id,
+                arn: self.arn,
+                post_launch_actions: self.post_launch_actions,
+                tags: self.tags,
+            }
+        }
+    }
+}
+impl LaunchConfigurationTemplate {
+    /// Creates a new builder-style object to manufacture [`LaunchConfigurationTemplate`](crate::model::LaunchConfigurationTemplate).
+    pub fn builder() -> crate::model::launch_configuration_template::Builder {
+        crate::model::launch_configuration_template::Builder::default()
     }
 }
 
@@ -5435,10 +6747,13 @@ impl ReplicationConfigurationTemplate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobLog {
     /// <p>Job log event date and time.</p>
+    #[doc(hidden)]
     pub log_date_time: std::option::Option<std::string::String>,
     /// <p>Job log event.</p>
+    #[doc(hidden)]
     pub event: std::option::Option<crate::model::JobLogEvent>,
     /// <p>Job event data</p>
+    #[doc(hidden)]
     pub event_data: std::option::Option<crate::model::JobLogEventData>,
 }
 impl JobLog {
@@ -5464,11 +6779,10 @@ impl std::fmt::Debug for JobLog {
         formatter.finish()
     }
 }
-/// See [`JobLog`](crate::model::JobLog)
+/// See [`JobLog`](crate::model::JobLog).
 pub mod job_log {
 
-    /// A builder for [`JobLog`](crate::model::JobLog)
-    #[non_exhaustive]
+    /// A builder for [`JobLog`](crate::model::JobLog).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_date_time: std::option::Option<std::string::String>,
@@ -5512,7 +6826,7 @@ pub mod job_log {
             self.event_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobLog`](crate::model::JobLog)
+        /// Consumes the builder and constructs a [`JobLog`](crate::model::JobLog).
         pub fn build(self) -> crate::model::JobLog {
             crate::model::JobLog {
                 log_date_time: self.log_date_time,
@@ -5523,7 +6837,7 @@ pub mod job_log {
     }
 }
 impl JobLog {
-    /// Creates a new builder-style object to manufacture [`JobLog`](crate::model::JobLog)
+    /// Creates a new builder-style object to manufacture [`JobLog`](crate::model::JobLog).
     pub fn builder() -> crate::model::job_log::Builder {
         crate::model::job_log::Builder::default()
     }
@@ -5534,12 +6848,16 @@ impl JobLog {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobLogEventData {
     /// <p>Job Event Source Server ID.</p>
+    #[doc(hidden)]
     pub source_server_id: std::option::Option<std::string::String>,
     /// <p>Job Event conversion Server ID.</p>
+    #[doc(hidden)]
     pub conversion_server_id: std::option::Option<std::string::String>,
     /// <p>Job Event Target instance ID.</p>
+    #[doc(hidden)]
     pub target_instance_id: std::option::Option<std::string::String>,
     /// <p>Job error.</p>
+    #[doc(hidden)]
     pub raw_error: std::option::Option<std::string::String>,
 }
 impl JobLogEventData {
@@ -5570,11 +6888,10 @@ impl std::fmt::Debug for JobLogEventData {
         formatter.finish()
     }
 }
-/// See [`JobLogEventData`](crate::model::JobLogEventData)
+/// See [`JobLogEventData`](crate::model::JobLogEventData).
 pub mod job_log_event_data {
 
-    /// A builder for [`JobLogEventData`](crate::model::JobLogEventData)
-    #[non_exhaustive]
+    /// A builder for [`JobLogEventData`](crate::model::JobLogEventData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_server_id: std::option::Option<std::string::String>,
@@ -5632,7 +6949,7 @@ pub mod job_log_event_data {
             self.raw_error = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobLogEventData`](crate::model::JobLogEventData)
+        /// Consumes the builder and constructs a [`JobLogEventData`](crate::model::JobLogEventData).
         pub fn build(self) -> crate::model::JobLogEventData {
             crate::model::JobLogEventData {
                 source_server_id: self.source_server_id,
@@ -5644,7 +6961,7 @@ pub mod job_log_event_data {
     }
 }
 impl JobLogEventData {
-    /// Creates a new builder-style object to manufacture [`JobLogEventData`](crate::model::JobLogEventData)
+    /// Creates a new builder-style object to manufacture [`JobLogEventData`](crate::model::JobLogEventData).
     pub fn builder() -> crate::model::job_log_event_data::Builder {
         crate::model::job_log_event_data::Builder::default()
     }
@@ -5783,10 +7100,13 @@ impl AsRef<str> for JobLogEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeJobsRequestFilters {
     /// <p>Request to describe Job log filters by job ID.</p>
+    #[doc(hidden)]
     pub job_i_ds: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Request to describe Job log filters by date.</p>
+    #[doc(hidden)]
     pub from_date: std::option::Option<std::string::String>,
     /// <p>Request to describe job log items by last date.</p>
+    #[doc(hidden)]
     pub to_date: std::option::Option<std::string::String>,
 }
 impl DescribeJobsRequestFilters {
@@ -5812,11 +7132,10 @@ impl std::fmt::Debug for DescribeJobsRequestFilters {
         formatter.finish()
     }
 }
-/// See [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters)
+/// See [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters).
 pub mod describe_jobs_request_filters {
 
-    /// A builder for [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters)
-    #[non_exhaustive]
+    /// A builder for [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_i_ds: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -5863,7 +7182,7 @@ pub mod describe_jobs_request_filters {
             self.to_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters)
+        /// Consumes the builder and constructs a [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters).
         pub fn build(self) -> crate::model::DescribeJobsRequestFilters {
             crate::model::DescribeJobsRequestFilters {
                 job_i_ds: self.job_i_ds,
@@ -5874,7 +7193,7 @@ pub mod describe_jobs_request_filters {
     }
 }
 impl DescribeJobsRequestFilters {
-    /// Creates a new builder-style object to manufacture [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters)
+    /// Creates a new builder-style object to manufacture [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters).
     pub fn builder() -> crate::model::describe_jobs_request_filters::Builder {
         crate::model::describe_jobs_request_filters::Builder::default()
     }

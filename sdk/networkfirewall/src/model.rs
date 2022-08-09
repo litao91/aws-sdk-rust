@@ -7,33 +7,47 @@ pub struct RuleGroupResponse {
     /// <p>The Amazon Resource Name (ARN) of the rule group.</p> <note>
     /// <p>If this response is for a create request that had <code>DryRun</code> set to <code>TRUE</code>, then this ARN is a placeholder that isn't attached to a valid resource.</p>
     /// </note>
+    #[doc(hidden)]
     pub rule_group_arn: std::option::Option<std::string::String>,
     /// <p>The descriptive name of the rule group. You can't change the name of a rule group after you create it.</p>
+    #[doc(hidden)]
     pub rule_group_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the rule group. </p>
+    #[doc(hidden)]
     pub rule_group_id: std::option::Option<std::string::String>,
     /// <p>A description of the rule group. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Indicates whether the rule group is stateless or stateful. If the rule group is stateless, it contains stateless rules. If it is stateful, it contains stateful rules. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RuleGroupType>,
     /// <p>The maximum operating resources that this rule group can use. Rule group capacity is fixed at creation. When you update a rule group, you are limited to this capacity. When you reference a rule group from a firewall policy, Network Firewall reserves this capacity for the rule group. </p>
     /// <p>You can retrieve the capacity that would be required for a rule group before you create the rule group by calling <code>CreateRuleGroup</code> with <code>DryRun</code> set to <code>TRUE</code>. </p>
+    #[doc(hidden)]
     pub capacity: std::option::Option<i32>,
     /// <p>Detailed information about the current status of a rule group. </p>
+    #[doc(hidden)]
     pub rule_group_status: std::option::Option<crate::model::ResourceStatus>,
     /// <p>The key:value pairs to associate with the resource.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The number of capacity units currently consumed by the rule group rules. </p>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<i32>,
     /// <p>The number of firewall policies that use this rule group.</p>
+    #[doc(hidden)]
     pub number_of_associations: std::option::Option<i32>,
     /// <p>A complex type that contains the Amazon Web Services KMS encryption configuration settings for your rule group.</p>
+    #[doc(hidden)]
     pub encryption_configuration: std::option::Option<crate::model::EncryptionConfiguration>,
     /// <p>A complex type that contains metadata about the rule group that your own rule group is copied from. You can use the metadata to track the version updates made to the originating rule group.</p>
+    #[doc(hidden)]
     pub source_metadata: std::option::Option<crate::model::SourceMetadata>,
     /// <p>The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record changes to the managed rule group. You can subscribe to the SNS topic to receive notifications when the managed rule group is modified, such as for new versions and for version expiration. For more information, see the <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification Service Developer Guide.</a>.</p>
+    #[doc(hidden)]
     pub sns_topic: std::option::Option<std::string::String>,
     /// <p>The last time that the rule group was changed.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RuleGroupResponse {
@@ -119,11 +133,10 @@ impl std::fmt::Debug for RuleGroupResponse {
         formatter.finish()
     }
 }
-/// See [`RuleGroupResponse`](crate::model::RuleGroupResponse)
+/// See [`RuleGroupResponse`](crate::model::RuleGroupResponse).
 pub mod rule_group_response {
 
-    /// A builder for [`RuleGroupResponse`](crate::model::RuleGroupResponse)
-    #[non_exhaustive]
+    /// A builder for [`RuleGroupResponse`](crate::model::RuleGroupResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_group_arn: std::option::Option<std::string::String>,
@@ -322,7 +335,7 @@ pub mod rule_group_response {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleGroupResponse`](crate::model::RuleGroupResponse)
+        /// Consumes the builder and constructs a [`RuleGroupResponse`](crate::model::RuleGroupResponse).
         pub fn build(self) -> crate::model::RuleGroupResponse {
             crate::model::RuleGroupResponse {
                 rule_group_arn: self.rule_group_arn,
@@ -344,7 +357,7 @@ pub mod rule_group_response {
     }
 }
 impl RuleGroupResponse {
-    /// Creates a new builder-style object to manufacture [`RuleGroupResponse`](crate::model::RuleGroupResponse)
+    /// Creates a new builder-style object to manufacture [`RuleGroupResponse`](crate::model::RuleGroupResponse).
     pub fn builder() -> crate::model::rule_group_response::Builder {
         crate::model::rule_group_response::Builder::default()
     }
@@ -355,8 +368,10 @@ impl RuleGroupResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceMetadata {
     /// <p>The Amazon Resource Name (ARN) of the rule group that your own rule group is copied from.</p>
+    #[doc(hidden)]
     pub source_arn: std::option::Option<std::string::String>,
     /// <p>The update token of the Amazon Web Services managed rule group that your own rule group is copied from. To determine the update token for the managed rule group, call <a href="https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_DescribeRuleGroup.html#networkfirewall-DescribeRuleGroup-response-UpdateToken">DescribeRuleGroup</a>.</p>
+    #[doc(hidden)]
     pub source_update_token: std::option::Option<std::string::String>,
 }
 impl SourceMetadata {
@@ -377,11 +392,10 @@ impl std::fmt::Debug for SourceMetadata {
         formatter.finish()
     }
 }
-/// See [`SourceMetadata`](crate::model::SourceMetadata)
+/// See [`SourceMetadata`](crate::model::SourceMetadata).
 pub mod source_metadata {
 
-    /// A builder for [`SourceMetadata`](crate::model::SourceMetadata)
-    #[non_exhaustive]
+    /// A builder for [`SourceMetadata`](crate::model::SourceMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_arn: std::option::Option<std::string::String>,
@@ -411,7 +425,7 @@ pub mod source_metadata {
             self.source_update_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceMetadata`](crate::model::SourceMetadata)
+        /// Consumes the builder and constructs a [`SourceMetadata`](crate::model::SourceMetadata).
         pub fn build(self) -> crate::model::SourceMetadata {
             crate::model::SourceMetadata {
                 source_arn: self.source_arn,
@@ -421,7 +435,7 @@ pub mod source_metadata {
     }
 }
 impl SourceMetadata {
-    /// Creates a new builder-style object to manufacture [`SourceMetadata`](crate::model::SourceMetadata)
+    /// Creates a new builder-style object to manufacture [`SourceMetadata`](crate::model::SourceMetadata).
     pub fn builder() -> crate::model::source_metadata::Builder {
         crate::model::source_metadata::Builder::default()
     }
@@ -432,8 +446,10 @@ impl SourceMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EncryptionConfiguration {
     /// <p>The ID of the Amazon Web Services Key Management Service (KMS) customer managed key. You can use any of the key identifiers that KMS supports, unless you're using a key that's managed by another account. If you're using a key managed by another account, then specify the key ARN. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key ID</a> in the <i>Amazon Web Services KMS Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub key_id: std::option::Option<std::string::String>,
     /// <p>The type of Amazon Web Services KMS key to use for encryption of your Network Firewall resources.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EncryptionType>,
 }
 impl EncryptionConfiguration {
@@ -454,11 +470,10 @@ impl std::fmt::Debug for EncryptionConfiguration {
         formatter.finish()
     }
 }
-/// See [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
+/// See [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
 pub mod encryption_configuration {
 
-    /// A builder for [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_id: std::option::Option<std::string::String>,
@@ -488,7 +503,7 @@ pub mod encryption_configuration {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
+        /// Consumes the builder and constructs a [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
         pub fn build(self) -> crate::model::EncryptionConfiguration {
             crate::model::EncryptionConfiguration {
                 key_id: self.key_id,
@@ -498,7 +513,7 @@ pub mod encryption_configuration {
     }
 }
 impl EncryptionConfiguration {
-    /// Creates a new builder-style object to manufacture [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
+    /// Creates a new builder-style object to manufacture [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
     pub fn builder() -> crate::model::encryption_configuration::Builder {
         crate::model::encryption_configuration::Builder::default()
     }
@@ -564,8 +579,10 @@ impl AsRef<str> for EncryptionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The part of the key:value pair that defines a tag. You can use a tag key to describe a category of information, such as "customer." Tag keys are case-sensitive.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The part of the key:value pair that defines a tag. You can use a tag value to describe a specific value within a category, such as "companyA" or "companyB." Tag values are case-sensitive.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -586,11 +603,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -617,7 +633,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -627,7 +643,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -750,16 +766,26 @@ impl AsRef<str> for RuleGroupType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleGroup {
     /// <p>Settings that are available for use in the rules in the rule group. You can only use these for stateful rule groups. </p>
+    #[doc(hidden)]
     pub rule_variables: std::option::Option<crate::model::RuleVariables>,
+    /// <p>The list of a rule group's reference sets.</p>
+    #[doc(hidden)]
+    pub reference_sets: std::option::Option<crate::model::ReferenceSets>,
     /// <p>The stateful rules or stateless rules for the rule group. </p>
+    #[doc(hidden)]
     pub rules_source: std::option::Option<crate::model::RulesSource>,
     /// <p>Additional options governing how Network Firewall handles stateful rules. The policies where you use your stateful rule group must have stateful rule options settings that are compatible with these settings.</p>
+    #[doc(hidden)]
     pub stateful_rule_options: std::option::Option<crate::model::StatefulRuleOptions>,
 }
 impl RuleGroup {
     /// <p>Settings that are available for use in the rules in the rule group. You can only use these for stateful rule groups. </p>
     pub fn rule_variables(&self) -> std::option::Option<&crate::model::RuleVariables> {
         self.rule_variables.as_ref()
+    }
+    /// <p>The list of a rule group's reference sets.</p>
+    pub fn reference_sets(&self) -> std::option::Option<&crate::model::ReferenceSets> {
+        self.reference_sets.as_ref()
     }
     /// <p>The stateful rules or stateless rules for the rule group. </p>
     pub fn rules_source(&self) -> std::option::Option<&crate::model::RulesSource> {
@@ -774,19 +800,20 @@ impl std::fmt::Debug for RuleGroup {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("RuleGroup");
         formatter.field("rule_variables", &self.rule_variables);
+        formatter.field("reference_sets", &self.reference_sets);
         formatter.field("rules_source", &self.rules_source);
         formatter.field("stateful_rule_options", &self.stateful_rule_options);
         formatter.finish()
     }
 }
-/// See [`RuleGroup`](crate::model::RuleGroup)
+/// See [`RuleGroup`](crate::model::RuleGroup).
 pub mod rule_group {
 
-    /// A builder for [`RuleGroup`](crate::model::RuleGroup)
-    #[non_exhaustive]
+    /// A builder for [`RuleGroup`](crate::model::RuleGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_variables: std::option::Option<crate::model::RuleVariables>,
+        pub(crate) reference_sets: std::option::Option<crate::model::ReferenceSets>,
         pub(crate) rules_source: std::option::Option<crate::model::RulesSource>,
         pub(crate) stateful_rule_options: std::option::Option<crate::model::StatefulRuleOptions>,
     }
@@ -802,6 +829,19 @@ pub mod rule_group {
             input: std::option::Option<crate::model::RuleVariables>,
         ) -> Self {
             self.rule_variables = input;
+            self
+        }
+        /// <p>The list of a rule group's reference sets.</p>
+        pub fn reference_sets(mut self, input: crate::model::ReferenceSets) -> Self {
+            self.reference_sets = Some(input);
+            self
+        }
+        /// <p>The list of a rule group's reference sets.</p>
+        pub fn set_reference_sets(
+            mut self,
+            input: std::option::Option<crate::model::ReferenceSets>,
+        ) -> Self {
+            self.reference_sets = input;
             self
         }
         /// <p>The stateful rules or stateless rules for the rule group. </p>
@@ -830,10 +870,11 @@ pub mod rule_group {
             self.stateful_rule_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleGroup`](crate::model::RuleGroup)
+        /// Consumes the builder and constructs a [`RuleGroup`](crate::model::RuleGroup).
         pub fn build(self) -> crate::model::RuleGroup {
             crate::model::RuleGroup {
                 rule_variables: self.rule_variables,
+                reference_sets: self.reference_sets,
                 rules_source: self.rules_source,
                 stateful_rule_options: self.stateful_rule_options,
             }
@@ -841,7 +882,7 @@ pub mod rule_group {
     }
 }
 impl RuleGroup {
-    /// Creates a new builder-style object to manufacture [`RuleGroup`](crate::model::RuleGroup)
+    /// Creates a new builder-style object to manufacture [`RuleGroup`](crate::model::RuleGroup).
     pub fn builder() -> crate::model::rule_group::Builder {
         crate::model::rule_group::Builder::default()
     }
@@ -852,6 +893,7 @@ impl RuleGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatefulRuleOptions {
     /// <p>Indicates how to manage the order of the rule evaluation for the rule group. <code>DEFAULT_ACTION_ORDER</code> is the default behavior. Stateful rules are provided to the rule engine as Suricata compatible strings, and Suricata evaluates them based on certain settings. For more information, see <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html">Evaluation order for stateful rules</a> in the <i>Network Firewall Developer Guide</i>. </p>
+    #[doc(hidden)]
     pub rule_order: std::option::Option<crate::model::RuleOrder>,
 }
 impl StatefulRuleOptions {
@@ -867,11 +909,10 @@ impl std::fmt::Debug for StatefulRuleOptions {
         formatter.finish()
     }
 }
-/// See [`StatefulRuleOptions`](crate::model::StatefulRuleOptions)
+/// See [`StatefulRuleOptions`](crate::model::StatefulRuleOptions).
 pub mod stateful_rule_options {
 
-    /// A builder for [`StatefulRuleOptions`](crate::model::StatefulRuleOptions)
-    #[non_exhaustive]
+    /// A builder for [`StatefulRuleOptions`](crate::model::StatefulRuleOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_order: std::option::Option<crate::model::RuleOrder>,
@@ -890,7 +931,7 @@ pub mod stateful_rule_options {
             self.rule_order = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatefulRuleOptions`](crate::model::StatefulRuleOptions)
+        /// Consumes the builder and constructs a [`StatefulRuleOptions`](crate::model::StatefulRuleOptions).
         pub fn build(self) -> crate::model::StatefulRuleOptions {
             crate::model::StatefulRuleOptions {
                 rule_order: self.rule_order,
@@ -899,7 +940,7 @@ pub mod stateful_rule_options {
     }
 }
 impl StatefulRuleOptions {
-    /// Creates a new builder-style object to manufacture [`StatefulRuleOptions`](crate::model::StatefulRuleOptions)
+    /// Creates a new builder-style object to manufacture [`StatefulRuleOptions`](crate::model::StatefulRuleOptions).
     pub fn builder() -> crate::model::stateful_rule_options::Builder {
         crate::model::stateful_rule_options::Builder::default()
     }
@@ -966,12 +1007,16 @@ impl AsRef<str> for RuleOrder {
 pub struct RulesSource {
     /// <p>Stateful inspection criteria, provided in Suricata compatible intrusion prevention system (IPS) rules. Suricata is an open-source network IPS that includes a standard rule-based language for network traffic inspection.</p>
     /// <p>These rules contain the inspection criteria and the action to take for traffic that matches the criteria, so this type of rule group doesn't have a separate action setting.</p>
+    #[doc(hidden)]
     pub rules_string: std::option::Option<std::string::String>,
     /// <p>Stateful inspection criteria for a domain list rule group. </p>
+    #[doc(hidden)]
     pub rules_source_list: std::option::Option<crate::model::RulesSourceList>,
     /// <p>An array of individual stateful rules inspection criteria to be used together in a stateful rule group. Use this option to specify simple Suricata rules with protocol, source and destination, ports, direction, and rule options. For information about the Suricata <code>Rules</code> format, see <a href="https://suricata.readthedocs.io/en/suricata-5.0.0/rules/intro.html#">Rules Format</a>. </p>
+    #[doc(hidden)]
     pub stateful_rules: std::option::Option<std::vec::Vec<crate::model::StatefulRule>>,
     /// <p>Stateless inspection criteria to be used in a stateless rule group. </p>
+    #[doc(hidden)]
     pub stateless_rules_and_custom_actions:
         std::option::Option<crate::model::StatelessRulesAndCustomActions>,
 }
@@ -1009,11 +1054,10 @@ impl std::fmt::Debug for RulesSource {
         formatter.finish()
     }
 }
-/// See [`RulesSource`](crate::model::RulesSource)
+/// See [`RulesSource`](crate::model::RulesSource).
 pub mod rules_source {
 
-    /// A builder for [`RulesSource`](crate::model::RulesSource)
-    #[non_exhaustive]
+    /// A builder for [`RulesSource`](crate::model::RulesSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rules_string: std::option::Option<std::string::String>,
@@ -1083,7 +1127,7 @@ pub mod rules_source {
             self.stateless_rules_and_custom_actions = input;
             self
         }
-        /// Consumes the builder and constructs a [`RulesSource`](crate::model::RulesSource)
+        /// Consumes the builder and constructs a [`RulesSource`](crate::model::RulesSource).
         pub fn build(self) -> crate::model::RulesSource {
             crate::model::RulesSource {
                 rules_string: self.rules_string,
@@ -1095,7 +1139,7 @@ pub mod rules_source {
     }
 }
 impl RulesSource {
-    /// Creates a new builder-style object to manufacture [`RulesSource`](crate::model::RulesSource)
+    /// Creates a new builder-style object to manufacture [`RulesSource`](crate::model::RulesSource).
     pub fn builder() -> crate::model::rules_source::Builder {
         crate::model::rules_source::Builder::default()
     }
@@ -1106,8 +1150,10 @@ impl RulesSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatelessRulesAndCustomActions {
     /// <p>Defines the set of stateless rules for use in a stateless rule group. </p>
+    #[doc(hidden)]
     pub stateless_rules: std::option::Option<std::vec::Vec<crate::model::StatelessRule>>,
     /// <p>Defines an array of individual custom action definitions that are available for use by the stateless rules in this <code>StatelessRulesAndCustomActions</code> specification. You name each custom action that you define, and then you can use it by name in your <code>StatelessRule</code> <code>RuleDefinition</code> <code>Actions</code> specification.</p>
+    #[doc(hidden)]
     pub custom_actions: std::option::Option<std::vec::Vec<crate::model::CustomAction>>,
 }
 impl StatelessRulesAndCustomActions {
@@ -1128,11 +1174,10 @@ impl std::fmt::Debug for StatelessRulesAndCustomActions {
         formatter.finish()
     }
 }
-/// See [`StatelessRulesAndCustomActions`](crate::model::StatelessRulesAndCustomActions)
+/// See [`StatelessRulesAndCustomActions`](crate::model::StatelessRulesAndCustomActions).
 pub mod stateless_rules_and_custom_actions {
 
-    /// A builder for [`StatelessRulesAndCustomActions`](crate::model::StatelessRulesAndCustomActions)
-    #[non_exhaustive]
+    /// A builder for [`StatelessRulesAndCustomActions`](crate::model::StatelessRulesAndCustomActions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stateless_rules: std::option::Option<std::vec::Vec<crate::model::StatelessRule>>,
@@ -1177,7 +1222,7 @@ pub mod stateless_rules_and_custom_actions {
             self.custom_actions = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatelessRulesAndCustomActions`](crate::model::StatelessRulesAndCustomActions)
+        /// Consumes the builder and constructs a [`StatelessRulesAndCustomActions`](crate::model::StatelessRulesAndCustomActions).
         pub fn build(self) -> crate::model::StatelessRulesAndCustomActions {
             crate::model::StatelessRulesAndCustomActions {
                 stateless_rules: self.stateless_rules,
@@ -1187,7 +1232,7 @@ pub mod stateless_rules_and_custom_actions {
     }
 }
 impl StatelessRulesAndCustomActions {
-    /// Creates a new builder-style object to manufacture [`StatelessRulesAndCustomActions`](crate::model::StatelessRulesAndCustomActions)
+    /// Creates a new builder-style object to manufacture [`StatelessRulesAndCustomActions`](crate::model::StatelessRulesAndCustomActions).
     pub fn builder() -> crate::model::stateless_rules_and_custom_actions::Builder {
         crate::model::stateless_rules_and_custom_actions::Builder::default()
     }
@@ -1204,8 +1249,10 @@ impl StatelessRulesAndCustomActions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomAction {
     /// <p>The descriptive name of the custom action. You can't change the name of a custom action after you create it.</p>
+    #[doc(hidden)]
     pub action_name: std::option::Option<std::string::String>,
     /// <p>The custom action associated with the action name.</p>
+    #[doc(hidden)]
     pub action_definition: std::option::Option<crate::model::ActionDefinition>,
 }
 impl CustomAction {
@@ -1226,11 +1273,10 @@ impl std::fmt::Debug for CustomAction {
         formatter.finish()
     }
 }
-/// See [`CustomAction`](crate::model::CustomAction)
+/// See [`CustomAction`](crate::model::CustomAction).
 pub mod custom_action {
 
-    /// A builder for [`CustomAction`](crate::model::CustomAction)
-    #[non_exhaustive]
+    /// A builder for [`CustomAction`](crate::model::CustomAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action_name: std::option::Option<std::string::String>,
@@ -1260,7 +1306,7 @@ pub mod custom_action {
             self.action_definition = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomAction`](crate::model::CustomAction)
+        /// Consumes the builder and constructs a [`CustomAction`](crate::model::CustomAction).
         pub fn build(self) -> crate::model::CustomAction {
             crate::model::CustomAction {
                 action_name: self.action_name,
@@ -1270,7 +1316,7 @@ pub mod custom_action {
     }
 }
 impl CustomAction {
-    /// Creates a new builder-style object to manufacture [`CustomAction`](crate::model::CustomAction)
+    /// Creates a new builder-style object to manufacture [`CustomAction`](crate::model::CustomAction).
     pub fn builder() -> crate::model::custom_action::Builder {
         crate::model::custom_action::Builder::default()
     }
@@ -1282,6 +1328,7 @@ impl CustomAction {
 pub struct ActionDefinition {
     /// <p>Stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. This setting defines a CloudWatch dimension value to be published.</p>
     /// <p>You can pair this custom action with any of the standard stateless rule actions. For example, you could pair this in a rule action with the standard action that forwards the packet for stateful inspection. Then, when a packet matches the rule, Network Firewall publishes metrics for the packet and forwards it. </p>
+    #[doc(hidden)]
     pub publish_metric_action: std::option::Option<crate::model::PublishMetricAction>,
 }
 impl ActionDefinition {
@@ -1298,11 +1345,10 @@ impl std::fmt::Debug for ActionDefinition {
         formatter.finish()
     }
 }
-/// See [`ActionDefinition`](crate::model::ActionDefinition)
+/// See [`ActionDefinition`](crate::model::ActionDefinition).
 pub mod action_definition {
 
-    /// A builder for [`ActionDefinition`](crate::model::ActionDefinition)
-    #[non_exhaustive]
+    /// A builder for [`ActionDefinition`](crate::model::ActionDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) publish_metric_action: std::option::Option<crate::model::PublishMetricAction>,
@@ -1323,7 +1369,7 @@ pub mod action_definition {
             self.publish_metric_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActionDefinition`](crate::model::ActionDefinition)
+        /// Consumes the builder and constructs a [`ActionDefinition`](crate::model::ActionDefinition).
         pub fn build(self) -> crate::model::ActionDefinition {
             crate::model::ActionDefinition {
                 publish_metric_action: self.publish_metric_action,
@@ -1332,7 +1378,7 @@ pub mod action_definition {
     }
 }
 impl ActionDefinition {
-    /// Creates a new builder-style object to manufacture [`ActionDefinition`](crate::model::ActionDefinition)
+    /// Creates a new builder-style object to manufacture [`ActionDefinition`](crate::model::ActionDefinition).
     pub fn builder() -> crate::model::action_definition::Builder {
         crate::model::action_definition::Builder::default()
     }
@@ -1343,6 +1389,7 @@ impl ActionDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublishMetricAction {
     /// <p></p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::Dimension>>,
 }
 impl PublishMetricAction {
@@ -1358,11 +1405,10 @@ impl std::fmt::Debug for PublishMetricAction {
         formatter.finish()
     }
 }
-/// See [`PublishMetricAction`](crate::model::PublishMetricAction)
+/// See [`PublishMetricAction`](crate::model::PublishMetricAction).
 pub mod publish_metric_action {
 
-    /// A builder for [`PublishMetricAction`](crate::model::PublishMetricAction)
-    #[non_exhaustive]
+    /// A builder for [`PublishMetricAction`](crate::model::PublishMetricAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimensions: std::option::Option<std::vec::Vec<crate::model::Dimension>>,
@@ -1387,7 +1433,7 @@ pub mod publish_metric_action {
             self.dimensions = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublishMetricAction`](crate::model::PublishMetricAction)
+        /// Consumes the builder and constructs a [`PublishMetricAction`](crate::model::PublishMetricAction).
         pub fn build(self) -> crate::model::PublishMetricAction {
             crate::model::PublishMetricAction {
                 dimensions: self.dimensions,
@@ -1396,7 +1442,7 @@ pub mod publish_metric_action {
     }
 }
 impl PublishMetricAction {
-    /// Creates a new builder-style object to manufacture [`PublishMetricAction`](crate::model::PublishMetricAction)
+    /// Creates a new builder-style object to manufacture [`PublishMetricAction`](crate::model::PublishMetricAction).
     pub fn builder() -> crate::model::publish_metric_action::Builder {
         crate::model::publish_metric_action::Builder::default()
     }
@@ -1409,6 +1455,7 @@ impl PublishMetricAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Dimension {
     /// <p>The value to use in the custom metric dimension.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Dimension {
@@ -1424,11 +1471,10 @@ impl std::fmt::Debug for Dimension {
         formatter.finish()
     }
 }
-/// See [`Dimension`](crate::model::Dimension)
+/// See [`Dimension`](crate::model::Dimension).
 pub mod dimension {
 
-    /// A builder for [`Dimension`](crate::model::Dimension)
-    #[non_exhaustive]
+    /// A builder for [`Dimension`](crate::model::Dimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<std::string::String>,
@@ -1444,14 +1490,14 @@ pub mod dimension {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Dimension`](crate::model::Dimension)
+        /// Consumes the builder and constructs a [`Dimension`](crate::model::Dimension).
         pub fn build(self) -> crate::model::Dimension {
             crate::model::Dimension { value: self.value }
         }
     }
 }
 impl Dimension {
-    /// Creates a new builder-style object to manufacture [`Dimension`](crate::model::Dimension)
+    /// Creates a new builder-style object to manufacture [`Dimension`](crate::model::Dimension).
     pub fn builder() -> crate::model::dimension::Builder {
         crate::model::dimension::Builder::default()
     }
@@ -1462,10 +1508,12 @@ impl Dimension {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatelessRule {
     /// <p>Defines the stateless 5-tuple packet inspection criteria and the action to take on a packet that matches the criteria. </p>
+    #[doc(hidden)]
     pub rule_definition: std::option::Option<crate::model::RuleDefinition>,
     /// <p>Indicates the order in which to run this rule relative to all of the rules that are defined for a stateless rule group. Network Firewall evaluates the rules in a rule group starting with the lowest priority setting. You must ensure that the priority settings are unique for the rule group. </p>
     /// <p>Each stateless rule group uses exactly one <code>StatelessRulesAndCustomActions</code> object, and each <code>StatelessRulesAndCustomActions</code> contains exactly one <code>StatelessRules</code> object. To ensure unique priority settings for your rule groups, set unique priorities for the stateless rules that you define inside any single <code>StatelessRules</code> object.</p>
     /// <p>You can change the priority settings of your rules at any time. To make it easier to insert rules later, number them so there's a wide range in between, for example use 100, 200, and so on. </p>
+    #[doc(hidden)]
     pub priority: i32,
 }
 impl StatelessRule {
@@ -1488,11 +1536,10 @@ impl std::fmt::Debug for StatelessRule {
         formatter.finish()
     }
 }
-/// See [`StatelessRule`](crate::model::StatelessRule)
+/// See [`StatelessRule`](crate::model::StatelessRule).
 pub mod stateless_rule {
 
-    /// A builder for [`StatelessRule`](crate::model::StatelessRule)
-    #[non_exhaustive]
+    /// A builder for [`StatelessRule`](crate::model::StatelessRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_definition: std::option::Option<crate::model::RuleDefinition>,
@@ -1526,7 +1573,7 @@ pub mod stateless_rule {
             self.priority = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatelessRule`](crate::model::StatelessRule)
+        /// Consumes the builder and constructs a [`StatelessRule`](crate::model::StatelessRule).
         pub fn build(self) -> crate::model::StatelessRule {
             crate::model::StatelessRule {
                 rule_definition: self.rule_definition,
@@ -1536,7 +1583,7 @@ pub mod stateless_rule {
     }
 }
 impl StatelessRule {
-    /// Creates a new builder-style object to manufacture [`StatelessRule`](crate::model::StatelessRule)
+    /// Creates a new builder-style object to manufacture [`StatelessRule`](crate::model::StatelessRule).
     pub fn builder() -> crate::model::stateless_rule::Builder {
         crate::model::stateless_rule::Builder::default()
     }
@@ -1547,6 +1594,7 @@ impl StatelessRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleDefinition {
     /// <p>Criteria for Network Firewall to use to inspect an individual packet in stateless rule inspection. Each match attributes set can include one or more items such as IP address, CIDR range, port number, protocol, and TCP flags. </p>
+    #[doc(hidden)]
     pub match_attributes: std::option::Option<crate::model::MatchAttributes>,
     /// <p>The actions to take on a packet that matches one of the stateless rule definition's match attributes. You must specify a standard action and you can add custom actions. </p> <note>
     /// <p>Network Firewall only forwards a packet for stateful rule inspection if you specify <code>aws:forward_to_sfe</code> for a rule that the packet matches, or if the packet doesn't match any stateless rule and you specify <code>aws:forward_to_sfe</code> for the <code>StatelessDefaultActions</code> setting for the <code>FirewallPolicy</code>.</p>
@@ -1559,6 +1607,7 @@ pub struct RuleDefinition {
     /// </ul>
     /// <p>Additionally, you can specify a custom action. To do this, you define a custom action by name and type, then provide the name you've assigned to the action in this <code>Actions</code> setting. For information about the options, see <code>CustomAction</code>. </p>
     /// <p>To provide more than one action in this setting, separate the settings with a comma. For example, if you have a custom <code>PublishMetrics</code> action that you've named <code>MyMetricsAction</code>, then you could specify the standard action <code>aws:pass</code> and the custom action with <code>[“aws:pass”, “MyMetricsAction”]</code>. </p>
+    #[doc(hidden)]
     pub actions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl RuleDefinition {
@@ -1589,11 +1638,10 @@ impl std::fmt::Debug for RuleDefinition {
         formatter.finish()
     }
 }
-/// See [`RuleDefinition`](crate::model::RuleDefinition)
+/// See [`RuleDefinition`](crate::model::RuleDefinition).
 pub mod rule_definition {
 
-    /// A builder for [`RuleDefinition`](crate::model::RuleDefinition)
-    #[non_exhaustive]
+    /// A builder for [`RuleDefinition`](crate::model::RuleDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) match_attributes: std::option::Option<crate::model::MatchAttributes>,
@@ -1652,7 +1700,7 @@ pub mod rule_definition {
             self.actions = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleDefinition`](crate::model::RuleDefinition)
+        /// Consumes the builder and constructs a [`RuleDefinition`](crate::model::RuleDefinition).
         pub fn build(self) -> crate::model::RuleDefinition {
             crate::model::RuleDefinition {
                 match_attributes: self.match_attributes,
@@ -1662,7 +1710,7 @@ pub mod rule_definition {
     }
 }
 impl RuleDefinition {
-    /// Creates a new builder-style object to manufacture [`RuleDefinition`](crate::model::RuleDefinition)
+    /// Creates a new builder-style object to manufacture [`RuleDefinition`](crate::model::RuleDefinition).
     pub fn builder() -> crate::model::rule_definition::Builder {
         crate::model::rule_definition::Builder::default()
     }
@@ -1673,18 +1721,24 @@ impl RuleDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MatchAttributes {
     /// <p>The source IP addresses and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. </p>
+    #[doc(hidden)]
     pub sources: std::option::Option<std::vec::Vec<crate::model::Address>>,
     /// <p>The destination IP addresses and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. </p>
+    #[doc(hidden)]
     pub destinations: std::option::Option<std::vec::Vec<crate::model::Address>>,
     /// <p>The source ports to inspect for. If not specified, this matches with any source port. This setting is only used for protocols 6 (TCP) and 17 (UDP). </p>
     /// <p>You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for example <code>1990:1994</code>. </p>
+    #[doc(hidden)]
     pub source_ports: std::option::Option<std::vec::Vec<crate::model::PortRange>>,
     /// <p>The destination ports to inspect for. If not specified, this matches with any destination port. This setting is only used for protocols 6 (TCP) and 17 (UDP). </p>
     /// <p>You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for example <code>1990:1994</code>. </p>
+    #[doc(hidden)]
     pub destination_ports: std::option::Option<std::vec::Vec<crate::model::PortRange>>,
     /// <p>The protocols to inspect for, specified using each protocol's assigned internet protocol number (IANA). If not specified, this matches with any protocol. </p>
+    #[doc(hidden)]
     pub protocols: std::option::Option<std::vec::Vec<i32>>,
     /// <p>The TCP flags and masks to inspect for. If not specified, this matches with any settings. This setting is only used for protocol 6 (TCP).</p>
+    #[doc(hidden)]
     pub tcp_flags: std::option::Option<std::vec::Vec<crate::model::TcpFlagField>>,
 }
 impl MatchAttributes {
@@ -1727,11 +1781,10 @@ impl std::fmt::Debug for MatchAttributes {
         formatter.finish()
     }
 }
-/// See [`MatchAttributes`](crate::model::MatchAttributes)
+/// See [`MatchAttributes`](crate::model::MatchAttributes).
 pub mod match_attributes {
 
-    /// A builder for [`MatchAttributes`](crate::model::MatchAttributes)
-    #[non_exhaustive]
+    /// A builder for [`MatchAttributes`](crate::model::MatchAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sources: std::option::Option<std::vec::Vec<crate::model::Address>>,
@@ -1857,7 +1910,7 @@ pub mod match_attributes {
             self.tcp_flags = input;
             self
         }
-        /// Consumes the builder and constructs a [`MatchAttributes`](crate::model::MatchAttributes)
+        /// Consumes the builder and constructs a [`MatchAttributes`](crate::model::MatchAttributes).
         pub fn build(self) -> crate::model::MatchAttributes {
             crate::model::MatchAttributes {
                 sources: self.sources,
@@ -1871,7 +1924,7 @@ pub mod match_attributes {
     }
 }
 impl MatchAttributes {
-    /// Creates a new builder-style object to manufacture [`MatchAttributes`](crate::model::MatchAttributes)
+    /// Creates a new builder-style object to manufacture [`MatchAttributes`](crate::model::MatchAttributes).
     pub fn builder() -> crate::model::match_attributes::Builder {
         crate::model::match_attributes::Builder::default()
     }
@@ -1887,8 +1940,10 @@ pub struct TcpFlagField {
     /// <li> <p>The ones that are set in this flags setting must be set in the packet. </p> </li>
     /// <li> <p>The ones that are not set in this flags setting must also not be set in the packet. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub flags: std::option::Option<std::vec::Vec<crate::model::TcpFlag>>,
     /// <p>The set of flags to consider in the inspection. To inspect all flags in the valid values list, leave this with no setting.</p>
+    #[doc(hidden)]
     pub masks: std::option::Option<std::vec::Vec<crate::model::TcpFlag>>,
 }
 impl TcpFlagField {
@@ -1914,11 +1969,10 @@ impl std::fmt::Debug for TcpFlagField {
         formatter.finish()
     }
 }
-/// See [`TcpFlagField`](crate::model::TcpFlagField)
+/// See [`TcpFlagField`](crate::model::TcpFlagField).
 pub mod tcp_flag_field {
 
-    /// A builder for [`TcpFlagField`](crate::model::TcpFlagField)
-    #[non_exhaustive]
+    /// A builder for [`TcpFlagField`](crate::model::TcpFlagField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flags: std::option::Option<std::vec::Vec<crate::model::TcpFlag>>,
@@ -1973,7 +2027,7 @@ pub mod tcp_flag_field {
             self.masks = input;
             self
         }
-        /// Consumes the builder and constructs a [`TcpFlagField`](crate::model::TcpFlagField)
+        /// Consumes the builder and constructs a [`TcpFlagField`](crate::model::TcpFlagField).
         pub fn build(self) -> crate::model::TcpFlagField {
             crate::model::TcpFlagField {
                 flags: self.flags,
@@ -1983,7 +2037,7 @@ pub mod tcp_flag_field {
     }
 }
 impl TcpFlagField {
-    /// Creates a new builder-style object to manufacture [`TcpFlagField`](crate::model::TcpFlagField)
+    /// Creates a new builder-style object to manufacture [`TcpFlagField`](crate::model::TcpFlagField).
     pub fn builder() -> crate::model::tcp_flag_field::Builder {
         crate::model::tcp_flag_field::Builder::default()
     }
@@ -2073,8 +2127,10 @@ impl AsRef<str> for TcpFlag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PortRange {
     /// <p>The lower limit of the port range. This must be less than or equal to the <code>ToPort</code> specification. </p>
+    #[doc(hidden)]
     pub from_port: i32,
     /// <p>The upper limit of the port range. This must be greater than or equal to the <code>FromPort</code> specification. </p>
+    #[doc(hidden)]
     pub to_port: i32,
 }
 impl PortRange {
@@ -2095,11 +2151,10 @@ impl std::fmt::Debug for PortRange {
         formatter.finish()
     }
 }
-/// See [`PortRange`](crate::model::PortRange)
+/// See [`PortRange`](crate::model::PortRange).
 pub mod port_range {
 
-    /// A builder for [`PortRange`](crate::model::PortRange)
-    #[non_exhaustive]
+    /// A builder for [`PortRange`](crate::model::PortRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) from_port: std::option::Option<i32>,
@@ -2126,7 +2181,7 @@ pub mod port_range {
             self.to_port = input;
             self
         }
-        /// Consumes the builder and constructs a [`PortRange`](crate::model::PortRange)
+        /// Consumes the builder and constructs a [`PortRange`](crate::model::PortRange).
         pub fn build(self) -> crate::model::PortRange {
             crate::model::PortRange {
                 from_port: self.from_port.unwrap_or_default(),
@@ -2136,7 +2191,7 @@ pub mod port_range {
     }
 }
 impl PortRange {
-    /// Creates a new builder-style object to manufacture [`PortRange`](crate::model::PortRange)
+    /// Creates a new builder-style object to manufacture [`PortRange`](crate::model::PortRange).
     pub fn builder() -> crate::model::port_range::Builder {
         crate::model::port_range::Builder::default()
     }
@@ -2153,6 +2208,7 @@ pub struct Address {
     /// <li> <p>To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255, specify <code>192.0.2.0/24</code>.</p> </li>
     /// </ul>
     /// <p>For more information about CIDR notation, see the Wikipedia entry <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.</p>
+    #[doc(hidden)]
     pub address_definition: std::option::Option<std::string::String>,
 }
 impl Address {
@@ -2174,11 +2230,10 @@ impl std::fmt::Debug for Address {
         formatter.finish()
     }
 }
-/// See [`Address`](crate::model::Address)
+/// See [`Address`](crate::model::Address).
 pub mod address {
 
-    /// A builder for [`Address`](crate::model::Address)
-    #[non_exhaustive]
+    /// A builder for [`Address`](crate::model::Address).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) address_definition: std::option::Option<std::string::String>,
@@ -2209,7 +2264,7 @@ pub mod address {
             self.address_definition = input;
             self
         }
-        /// Consumes the builder and constructs a [`Address`](crate::model::Address)
+        /// Consumes the builder and constructs a [`Address`](crate::model::Address).
         pub fn build(self) -> crate::model::Address {
             crate::model::Address {
                 address_definition: self.address_definition,
@@ -2218,7 +2273,7 @@ pub mod address {
     }
 }
 impl Address {
-    /// Creates a new builder-style object to manufacture [`Address`](crate::model::Address)
+    /// Creates a new builder-style object to manufacture [`Address`](crate::model::Address).
     pub fn builder() -> crate::model::address::Builder {
         crate::model::address::Builder::default()
     }
@@ -2235,10 +2290,13 @@ pub struct StatefulRule {
     /// <li> <p> <b>DROP</b> - Blocks the packets from going to the intended destination and sends an alert log message, if alert logging is configured in the <code>Firewall</code> <code>LoggingConfiguration</code>. </p> </li>
     /// <li> <p> <b>ALERT</b> - Permits the packets to go to the intended destination and sends an alert log message, if alert logging is configured in the <code>Firewall</code> <code>LoggingConfiguration</code>. </p> <p>You can use this action to test a rule that you intend to use to drop traffic. You can enable the rule with <code>ALERT</code> action, verify in the logs that the rule is filtering as you want, then change the action to <code>DROP</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::StatefulAction>,
     /// <p>The stateful inspection criteria for this rule, used to inspect traffic flows. </p>
+    #[doc(hidden)]
     pub header: std::option::Option<crate::model::Header>,
     /// <p>Additional options for the rule. These are the Suricata <code>RuleOptions</code> settings.</p>
+    #[doc(hidden)]
     pub rule_options: std::option::Option<std::vec::Vec<crate::model::RuleOption>>,
 }
 impl StatefulRule {
@@ -2270,11 +2328,10 @@ impl std::fmt::Debug for StatefulRule {
         formatter.finish()
     }
 }
-/// See [`StatefulRule`](crate::model::StatefulRule)
+/// See [`StatefulRule`](crate::model::StatefulRule).
 pub mod stateful_rule {
 
-    /// A builder for [`StatefulRule`](crate::model::StatefulRule)
-    #[non_exhaustive]
+    /// A builder for [`StatefulRule`](crate::model::StatefulRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::StatefulAction>,
@@ -2336,7 +2393,7 @@ pub mod stateful_rule {
             self.rule_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatefulRule`](crate::model::StatefulRule)
+        /// Consumes the builder and constructs a [`StatefulRule`](crate::model::StatefulRule).
         pub fn build(self) -> crate::model::StatefulRule {
             crate::model::StatefulRule {
                 action: self.action,
@@ -2347,7 +2404,7 @@ pub mod stateful_rule {
     }
 }
 impl StatefulRule {
-    /// Creates a new builder-style object to manufacture [`StatefulRule`](crate::model::StatefulRule)
+    /// Creates a new builder-style object to manufacture [`StatefulRule`](crate::model::StatefulRule).
     pub fn builder() -> crate::model::stateful_rule::Builder {
         crate::model::stateful_rule::Builder::default()
     }
@@ -2358,8 +2415,10 @@ impl StatefulRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleOption {
     /// <p></p>
+    #[doc(hidden)]
     pub keyword: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub settings: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl RuleOption {
@@ -2380,11 +2439,10 @@ impl std::fmt::Debug for RuleOption {
         formatter.finish()
     }
 }
-/// See [`RuleOption`](crate::model::RuleOption)
+/// See [`RuleOption`](crate::model::RuleOption).
 pub mod rule_option {
 
-    /// A builder for [`RuleOption`](crate::model::RuleOption)
-    #[non_exhaustive]
+    /// A builder for [`RuleOption`](crate::model::RuleOption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) keyword: std::option::Option<std::string::String>,
@@ -2420,7 +2478,7 @@ pub mod rule_option {
             self.settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleOption`](crate::model::RuleOption)
+        /// Consumes the builder and constructs a [`RuleOption`](crate::model::RuleOption).
         pub fn build(self) -> crate::model::RuleOption {
             crate::model::RuleOption {
                 keyword: self.keyword,
@@ -2430,7 +2488,7 @@ pub mod rule_option {
     }
 }
 impl RuleOption {
-    /// Creates a new builder-style object to manufacture [`RuleOption`](crate::model::RuleOption)
+    /// Creates a new builder-style object to manufacture [`RuleOption`](crate::model::RuleOption).
     pub fn builder() -> crate::model::rule_option::Builder {
         crate::model::rule_option::Builder::default()
     }
@@ -2441,6 +2499,7 @@ impl RuleOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Header {
     /// <p>The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on Amazon Web Services and on the internet is IP.</p>
+    #[doc(hidden)]
     pub protocol: std::option::Option<crate::model::StatefulRuleProtocol>,
     /// <p>The source IP address or address range to inspect for, in CIDR notation. To match with any address, specify <code>ANY</code>. </p>
     /// <p>Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR) notation. Network Firewall supports all address ranges for IPv4. </p>
@@ -2450,10 +2509,13 @@ pub struct Header {
     /// <li> <p>To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255, specify <code>192.0.2.0/24</code>.</p> </li>
     /// </ul>
     /// <p>For more information about CIDR notation, see the Wikipedia entry <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<std::string::String>,
     /// <p>The source port to inspect for. You can specify an individual port, for example <code>1994</code> and you can specify a port range, for example <code>1990:1994</code>. To match with any port, specify <code>ANY</code>. </p>
+    #[doc(hidden)]
     pub source_port: std::option::Option<std::string::String>,
     /// <p>The direction of traffic flow to inspect. If set to <code>ANY</code>, the inspection matches bidirectional traffic, both from the source to the destination and from the destination to the source. If set to <code>FORWARD</code>, the inspection only matches traffic going from the source to the destination. </p>
+    #[doc(hidden)]
     pub direction: std::option::Option<crate::model::StatefulRuleDirection>,
     /// <p>The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify <code>ANY</code>. </p>
     /// <p>Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR) notation. Network Firewall supports all address ranges for IPv4. </p>
@@ -2463,8 +2525,10 @@ pub struct Header {
     /// <li> <p>To configure Network Firewall to inspect for IP addresses from 192.0.2.0 to 192.0.2.255, specify <code>192.0.2.0/24</code>.</p> </li>
     /// </ul>
     /// <p>For more information about CIDR notation, see the Wikipedia entry <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.</p>
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
     /// <p>The destination port to inspect for. You can specify an individual port, for example <code>1994</code> and you can specify a port range, for example <code>1990:1994</code>. To match with any port, specify <code>ANY</code>. </p>
+    #[doc(hidden)]
     pub destination_port: std::option::Option<std::string::String>,
 }
 impl Header {
@@ -2519,11 +2583,10 @@ impl std::fmt::Debug for Header {
         formatter.finish()
     }
 }
-/// See [`Header`](crate::model::Header)
+/// See [`Header`](crate::model::Header).
 pub mod header {
 
-    /// A builder for [`Header`](crate::model::Header)
-    #[non_exhaustive]
+    /// A builder for [`Header`](crate::model::Header).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) protocol: std::option::Option<crate::model::StatefulRuleProtocol>,
@@ -2631,7 +2694,7 @@ pub mod header {
             self.destination_port = input;
             self
         }
-        /// Consumes the builder and constructs a [`Header`](crate::model::Header)
+        /// Consumes the builder and constructs a [`Header`](crate::model::Header).
         pub fn build(self) -> crate::model::Header {
             crate::model::Header {
                 protocol: self.protocol,
@@ -2645,7 +2708,7 @@ pub mod header {
     }
 }
 impl Header {
-    /// Creates a new builder-style object to manufacture [`Header`](crate::model::Header)
+    /// Creates a new builder-style object to manufacture [`Header`](crate::model::Header).
     pub fn builder() -> crate::model::header::Builder {
         crate::model::header::Builder::default()
     }
@@ -2902,10 +2965,13 @@ pub struct RulesSourceList {
     /// <li> <p>Explicit names. For example, <code>abc.example.com</code> matches only the domain <code>abc.example.com</code>.</p> </li>
     /// <li> <p>Names that use a domain wildcard, which you indicate with an initial '<code>.</code>'. For example,<code>.example.com</code> matches <code>example.com</code> and matches all subdomains of <code>example.com</code>, such as <code>abc.example.com</code> and <code>www.example.com</code>. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub targets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specify <code>HTTP_HOST</code> for <code>HTTP</code>. You can specify either or both. </p>
+    #[doc(hidden)]
     pub target_types: std::option::Option<std::vec::Vec<crate::model::TargetType>>,
     /// <p>Whether you want to allow or deny access to the domains in your target list.</p>
+    #[doc(hidden)]
     pub generated_rules_type: std::option::Option<crate::model::GeneratedRulesType>,
 }
 impl RulesSourceList {
@@ -2935,11 +3001,10 @@ impl std::fmt::Debug for RulesSourceList {
         formatter.finish()
     }
 }
-/// See [`RulesSourceList`](crate::model::RulesSourceList)
+/// See [`RulesSourceList`](crate::model::RulesSourceList).
 pub mod rules_source_list {
 
-    /// A builder for [`RulesSourceList`](crate::model::RulesSourceList)
-    #[non_exhaustive]
+    /// A builder for [`RulesSourceList`](crate::model::RulesSourceList).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) targets: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3006,7 +3071,7 @@ pub mod rules_source_list {
             self.generated_rules_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`RulesSourceList`](crate::model::RulesSourceList)
+        /// Consumes the builder and constructs a [`RulesSourceList`](crate::model::RulesSourceList).
         pub fn build(self) -> crate::model::RulesSourceList {
             crate::model::RulesSourceList {
                 targets: self.targets,
@@ -3017,7 +3082,7 @@ pub mod rules_source_list {
     }
 }
 impl RulesSourceList {
-    /// Creates a new builder-style object to manufacture [`RulesSourceList`](crate::model::RulesSourceList)
+    /// Creates a new builder-style object to manufacture [`RulesSourceList`](crate::model::RulesSourceList).
     pub fn builder() -> crate::model::rules_source_list::Builder {
         crate::model::rules_source_list::Builder::default()
     }
@@ -3133,14 +3198,153 @@ impl AsRef<str> for TargetType {
     }
 }
 
+/// <p>Contains a set of IP set references.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ReferenceSets {
+    /// <p>The list of IP set references.</p>
+    #[doc(hidden)]
+    pub ip_set_references: std::option::Option<
+        std::collections::HashMap<std::string::String, crate::model::IpSetReference>,
+    >,
+}
+impl ReferenceSets {
+    /// <p>The list of IP set references.</p>
+    pub fn ip_set_references(
+        &self,
+    ) -> std::option::Option<
+        &std::collections::HashMap<std::string::String, crate::model::IpSetReference>,
+    > {
+        self.ip_set_references.as_ref()
+    }
+}
+impl std::fmt::Debug for ReferenceSets {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ReferenceSets");
+        formatter.field("ip_set_references", &self.ip_set_references);
+        formatter.finish()
+    }
+}
+/// See [`ReferenceSets`](crate::model::ReferenceSets).
+pub mod reference_sets {
+
+    /// A builder for [`ReferenceSets`](crate::model::ReferenceSets).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) ip_set_references: std::option::Option<
+            std::collections::HashMap<std::string::String, crate::model::IpSetReference>,
+        >,
+    }
+    impl Builder {
+        /// Adds a key-value pair to `ip_set_references`.
+        ///
+        /// To override the contents of this collection use [`set_ip_set_references`](Self::set_ip_set_references).
+        ///
+        /// <p>The list of IP set references.</p>
+        pub fn ip_set_references(
+            mut self,
+            k: impl Into<std::string::String>,
+            v: crate::model::IpSetReference,
+        ) -> Self {
+            let mut hash_map = self.ip_set_references.unwrap_or_default();
+            hash_map.insert(k.into(), v);
+            self.ip_set_references = Some(hash_map);
+            self
+        }
+        /// <p>The list of IP set references.</p>
+        pub fn set_ip_set_references(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<std::string::String, crate::model::IpSetReference>,
+            >,
+        ) -> Self {
+            self.ip_set_references = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ReferenceSets`](crate::model::ReferenceSets).
+        pub fn build(self) -> crate::model::ReferenceSets {
+            crate::model::ReferenceSets {
+                ip_set_references: self.ip_set_references,
+            }
+        }
+    }
+}
+impl ReferenceSets {
+    /// Creates a new builder-style object to manufacture [`ReferenceSets`](crate::model::ReferenceSets).
+    pub fn builder() -> crate::model::reference_sets::Builder {
+        crate::model::reference_sets::Builder::default()
+    }
+}
+
+/// <p>Configures one or more IP set references for a Suricata-compatible rule group. This is used in <code>CreateRuleGroup</code> or <code>UpdateRuleGroup</code>. An IP set reference is a rule variable that references a resource that you create and manage in another Amazon Web Services service, such as an Amazon VPC prefix list. Network Firewall IP set references enable you to dynamically update the contents of your rules. When you create, update, or delete the IP set you are referencing in your rule, Network Firewall automatically updates the rule's content with the changes. For more information about IP set references in Network Firewall, see <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/rule-groups-ip-set-references">Using IP set references</a> in the <i>Network Firewall Developer Guide</i>.</p>
+/// <p> Network Firewall currently supports only <a href="https://docs.aws.amazon.com/vpc/latest/userguide/managed-prefix-lists.html">Amazon VPC prefix lists</a> as IP set references. </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct IpSetReference {
+    /// <p>The Amazon Resource Name (ARN) of the resource that you are referencing in your rule group.</p>
+    #[doc(hidden)]
+    pub reference_arn: std::option::Option<std::string::String>,
+}
+impl IpSetReference {
+    /// <p>The Amazon Resource Name (ARN) of the resource that you are referencing in your rule group.</p>
+    pub fn reference_arn(&self) -> std::option::Option<&str> {
+        self.reference_arn.as_deref()
+    }
+}
+impl std::fmt::Debug for IpSetReference {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("IpSetReference");
+        formatter.field("reference_arn", &self.reference_arn);
+        formatter.finish()
+    }
+}
+/// See [`IpSetReference`](crate::model::IpSetReference).
+pub mod ip_set_reference {
+
+    /// A builder for [`IpSetReference`](crate::model::IpSetReference).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) reference_arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The Amazon Resource Name (ARN) of the resource that you are referencing in your rule group.</p>
+        pub fn reference_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.reference_arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the resource that you are referencing in your rule group.</p>
+        pub fn set_reference_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.reference_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`IpSetReference`](crate::model::IpSetReference).
+        pub fn build(self) -> crate::model::IpSetReference {
+            crate::model::IpSetReference {
+                reference_arn: self.reference_arn,
+            }
+        }
+    }
+}
+impl IpSetReference {
+    /// Creates a new builder-style object to manufacture [`IpSetReference`](crate::model::IpSetReference).
+    pub fn builder() -> crate::model::ip_set_reference::Builder {
+        crate::model::ip_set_reference::Builder::default()
+    }
+}
+
 /// <p>Settings that are available for use in the rules in the <code>RuleGroup</code> where this is defined. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleVariables {
     /// <p>A list of IP addresses and address ranges, in CIDR notation. </p>
+    #[doc(hidden)]
     pub ip_sets:
         std::option::Option<std::collections::HashMap<std::string::String, crate::model::IpSet>>,
     /// <p>A list of port ranges. </p>
+    #[doc(hidden)]
     pub port_sets:
         std::option::Option<std::collections::HashMap<std::string::String, crate::model::PortSet>>,
 }
@@ -3168,11 +3372,10 @@ impl std::fmt::Debug for RuleVariables {
         formatter.finish()
     }
 }
-/// See [`RuleVariables`](crate::model::RuleVariables)
+/// See [`RuleVariables`](crate::model::RuleVariables).
 pub mod rule_variables {
 
-    /// A builder for [`RuleVariables`](crate::model::RuleVariables)
-    #[non_exhaustive]
+    /// A builder for [`RuleVariables`](crate::model::RuleVariables).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_sets: std::option::Option<
@@ -3233,7 +3436,7 @@ pub mod rule_variables {
             self.port_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleVariables`](crate::model::RuleVariables)
+        /// Consumes the builder and constructs a [`RuleVariables`](crate::model::RuleVariables).
         pub fn build(self) -> crate::model::RuleVariables {
             crate::model::RuleVariables {
                 ip_sets: self.ip_sets,
@@ -3243,7 +3446,7 @@ pub mod rule_variables {
     }
 }
 impl RuleVariables {
-    /// Creates a new builder-style object to manufacture [`RuleVariables`](crate::model::RuleVariables)
+    /// Creates a new builder-style object to manufacture [`RuleVariables`](crate::model::RuleVariables).
     pub fn builder() -> crate::model::rule_variables::Builder {
         crate::model::rule_variables::Builder::default()
     }
@@ -3254,6 +3457,7 @@ impl RuleVariables {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PortSet {
     /// <p>The set of port ranges. </p>
+    #[doc(hidden)]
     pub definition: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl PortSet {
@@ -3269,11 +3473,10 @@ impl std::fmt::Debug for PortSet {
         formatter.finish()
     }
 }
-/// See [`PortSet`](crate::model::PortSet)
+/// See [`PortSet`](crate::model::PortSet).
 pub mod port_set {
 
-    /// A builder for [`PortSet`](crate::model::PortSet)
-    #[non_exhaustive]
+    /// A builder for [`PortSet`](crate::model::PortSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) definition: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3298,7 +3501,7 @@ pub mod port_set {
             self.definition = input;
             self
         }
-        /// Consumes the builder and constructs a [`PortSet`](crate::model::PortSet)
+        /// Consumes the builder and constructs a [`PortSet`](crate::model::PortSet).
         pub fn build(self) -> crate::model::PortSet {
             crate::model::PortSet {
                 definition: self.definition,
@@ -3307,7 +3510,7 @@ pub mod port_set {
     }
 }
 impl PortSet {
-    /// Creates a new builder-style object to manufacture [`PortSet`](crate::model::PortSet)
+    /// Creates a new builder-style object to manufacture [`PortSet`](crate::model::PortSet).
     pub fn builder() -> crate::model::port_set::Builder {
         crate::model::port_set::Builder::default()
     }
@@ -3318,6 +3521,7 @@ impl PortSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IpSet {
     /// <p>The list of IP addresses and address ranges, in CIDR notation. </p>
+    #[doc(hidden)]
     pub definition: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl IpSet {
@@ -3333,11 +3537,10 @@ impl std::fmt::Debug for IpSet {
         formatter.finish()
     }
 }
-/// See [`IpSet`](crate::model::IpSet)
+/// See [`IpSet`](crate::model::IpSet).
 pub mod ip_set {
 
-    /// A builder for [`IpSet`](crate::model::IpSet)
-    #[non_exhaustive]
+    /// A builder for [`IpSet`](crate::model::IpSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) definition: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3362,7 +3565,7 @@ pub mod ip_set {
             self.definition = input;
             self
         }
-        /// Consumes the builder and constructs a [`IpSet`](crate::model::IpSet)
+        /// Consumes the builder and constructs a [`IpSet`](crate::model::IpSet).
         pub fn build(self) -> crate::model::IpSet {
             crate::model::IpSet {
                 definition: self.definition,
@@ -3371,7 +3574,7 @@ pub mod ip_set {
     }
 }
 impl IpSet {
-    /// Creates a new builder-style object to manufacture [`IpSet`](crate::model::IpSet)
+    /// Creates a new builder-style object to manufacture [`IpSet`](crate::model::IpSet).
     pub fn builder() -> crate::model::ip_set::Builder {
         crate::model::ip_set::Builder::default()
     }
@@ -3382,6 +3585,7 @@ impl IpSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoggingConfiguration {
     /// <p>Defines the logging destinations for the logs for a firewall. Network Firewall generates logs for stateful rule groups. </p>
+    #[doc(hidden)]
     pub log_destination_configs:
         std::option::Option<std::vec::Vec<crate::model::LogDestinationConfig>>,
 }
@@ -3400,11 +3604,10 @@ impl std::fmt::Debug for LoggingConfiguration {
         formatter.finish()
     }
 }
-/// See [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+/// See [`LoggingConfiguration`](crate::model::LoggingConfiguration).
 pub mod logging_configuration {
 
-    /// A builder for [`LoggingConfiguration`](crate::model::LoggingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LoggingConfiguration`](crate::model::LoggingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_destination_configs:
@@ -3433,7 +3636,7 @@ pub mod logging_configuration {
             self.log_destination_configs = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+        /// Consumes the builder and constructs a [`LoggingConfiguration`](crate::model::LoggingConfiguration).
         pub fn build(self) -> crate::model::LoggingConfiguration {
             crate::model::LoggingConfiguration {
                 log_destination_configs: self.log_destination_configs,
@@ -3442,7 +3645,7 @@ pub mod logging_configuration {
     }
 }
 impl LoggingConfiguration {
-    /// Creates a new builder-style object to manufacture [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+    /// Creates a new builder-style object to manufacture [`LoggingConfiguration`](crate::model::LoggingConfiguration).
     pub fn builder() -> crate::model::logging_configuration::Builder {
         crate::model::logging_configuration::Builder::default()
     }
@@ -3454,8 +3657,10 @@ impl LoggingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogDestinationConfig {
     /// <p>The type of log to send. Alert logs report traffic that matches a <code>StatefulRule</code> with an action setting that sends an alert log message. Flow logs are standard network traffic flow logs. </p>
+    #[doc(hidden)]
     pub log_type: std::option::Option<crate::model::LogType>,
     /// <p>The type of storage destination to send these logs to. You can send logs to an Amazon S3 bucket, a CloudWatch log group, or a Kinesis Data Firehose delivery stream.</p>
+    #[doc(hidden)]
     pub log_destination_type: std::option::Option<crate::model::LogDestinationType>,
     /// <p>The named location for the logs, provided in a key:value mapping that is specific to the chosen destination type. </p>
     /// <ul>
@@ -3463,6 +3668,7 @@ pub struct LogDestinationConfig {
     /// <li> <p>For a CloudWatch log group, provide the name of the CloudWatch log group, with key <code>logGroup</code>. The following example specifies a log group named <code>alert-log-group</code>: </p> <p> <code>"LogDestination": { "logGroup": "alert-log-group" }</code> </p> </li>
     /// <li> <p>For a Kinesis Data Firehose delivery stream, provide the name of the delivery stream, with key <code>deliveryStream</code>. The following example specifies a delivery stream named <code>alert-delivery-stream</code>: </p> <p> <code>"LogDestination": { "deliveryStream": "alert-delivery-stream" }</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub log_destination:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -3497,11 +3703,10 @@ impl std::fmt::Debug for LogDestinationConfig {
         formatter.finish()
     }
 }
-/// See [`LogDestinationConfig`](crate::model::LogDestinationConfig)
+/// See [`LogDestinationConfig`](crate::model::LogDestinationConfig).
 pub mod log_destination_config {
 
-    /// A builder for [`LogDestinationConfig`](crate::model::LogDestinationConfig)
-    #[non_exhaustive]
+    /// A builder for [`LogDestinationConfig`](crate::model::LogDestinationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_type: std::option::Option<crate::model::LogType>,
@@ -3569,7 +3774,7 @@ pub mod log_destination_config {
             self.log_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogDestinationConfig`](crate::model::LogDestinationConfig)
+        /// Consumes the builder and constructs a [`LogDestinationConfig`](crate::model::LogDestinationConfig).
         pub fn build(self) -> crate::model::LogDestinationConfig {
             crate::model::LogDestinationConfig {
                 log_type: self.log_type,
@@ -3580,7 +3785,7 @@ pub mod log_destination_config {
     }
 }
 impl LogDestinationConfig {
-    /// Creates a new builder-style object to manufacture [`LogDestinationConfig`](crate::model::LogDestinationConfig)
+    /// Creates a new builder-style object to manufacture [`LogDestinationConfig`](crate::model::LogDestinationConfig).
     pub fn builder() -> crate::model::log_destination_config::Builder {
         crate::model::log_destination_config::Builder::default()
     }
@@ -3705,28 +3910,39 @@ impl AsRef<str> for LogType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FirewallPolicyResponse {
     /// <p>The descriptive name of the firewall policy. You can't change the name of a firewall policy after you create it.</p>
+    #[doc(hidden)]
     pub firewall_policy_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the firewall policy.</p> <note>
     /// <p>If this response is for a create request that had <code>DryRun</code> set to <code>TRUE</code>, then this ARN is a placeholder that isn't attached to a valid resource.</p>
     /// </note>
+    #[doc(hidden)]
     pub firewall_policy_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the firewall policy. </p>
+    #[doc(hidden)]
     pub firewall_policy_id: std::option::Option<std::string::String>,
     /// <p>A description of the firewall policy.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The current status of the firewall policy. You can retrieve this for a firewall policy by calling <code>DescribeFirewallPolicy</code> and providing the firewall policy's name or ARN.</p>
+    #[doc(hidden)]
     pub firewall_policy_status: std::option::Option<crate::model::ResourceStatus>,
     /// <p>The key:value pairs to associate with the resource.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The number of capacity units currently consumed by the policy's stateless rules.</p>
+    #[doc(hidden)]
     pub consumed_stateless_rule_capacity: std::option::Option<i32>,
     /// <p>The number of capacity units currently consumed by the policy's stateful rules.</p>
+    #[doc(hidden)]
     pub consumed_stateful_rule_capacity: std::option::Option<i32>,
     /// <p>The number of firewalls that are associated with this firewall policy.</p>
+    #[doc(hidden)]
     pub number_of_associations: std::option::Option<i32>,
     /// <p>A complex type that contains the Amazon Web Services KMS encryption configuration settings for your firewall policy.</p>
+    #[doc(hidden)]
     pub encryption_configuration: std::option::Option<crate::model::EncryptionConfiguration>,
     /// <p>The last time that the firewall policy was changed.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl FirewallPolicyResponse {
@@ -3802,11 +4018,10 @@ impl std::fmt::Debug for FirewallPolicyResponse {
         formatter.finish()
     }
 }
-/// See [`FirewallPolicyResponse`](crate::model::FirewallPolicyResponse)
+/// See [`FirewallPolicyResponse`](crate::model::FirewallPolicyResponse).
 pub mod firewall_policy_response {
 
-    /// A builder for [`FirewallPolicyResponse`](crate::model::FirewallPolicyResponse)
-    #[non_exhaustive]
+    /// A builder for [`FirewallPolicyResponse`](crate::model::FirewallPolicyResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall_policy_name: std::option::Option<std::string::String>,
@@ -3973,7 +4188,7 @@ pub mod firewall_policy_response {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`FirewallPolicyResponse`](crate::model::FirewallPolicyResponse)
+        /// Consumes the builder and constructs a [`FirewallPolicyResponse`](crate::model::FirewallPolicyResponse).
         pub fn build(self) -> crate::model::FirewallPolicyResponse {
             crate::model::FirewallPolicyResponse {
                 firewall_policy_name: self.firewall_policy_name,
@@ -3992,7 +4207,7 @@ pub mod firewall_policy_response {
     }
 }
 impl FirewallPolicyResponse {
-    /// Creates a new builder-style object to manufacture [`FirewallPolicyResponse`](crate::model::FirewallPolicyResponse)
+    /// Creates a new builder-style object to manufacture [`FirewallPolicyResponse`](crate::model::FirewallPolicyResponse).
     pub fn builder() -> crate::model::firewall_policy_response::Builder {
         crate::model::firewall_policy_response::Builder::default()
     }
@@ -4004,19 +4219,24 @@ impl FirewallPolicyResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FirewallPolicy {
     /// <p>References to the stateless rule groups that are used in the policy. These define the matching criteria in stateless rules. </p>
+    #[doc(hidden)]
     pub stateless_rule_group_references:
         std::option::Option<std::vec::Vec<crate::model::StatelessRuleGroupReference>>,
     /// <p>The actions to take on a packet if it doesn't match any of the stateless rules in the policy. If you want non-matching packets to be forwarded for stateful inspection, specify <code>aws:forward_to_sfe</code>. </p>
     /// <p>You must specify one of the standard actions: <code>aws:pass</code>, <code>aws:drop</code>, or <code>aws:forward_to_sfe</code>. In addition, you can specify custom actions that are compatible with your standard section choice.</p>
     /// <p>For example, you could specify <code>["aws:pass"]</code> or you could specify <code>["aws:pass", “customActionName”]</code>. For information about compatibility, see the custom action descriptions under <code>CustomAction</code>.</p>
+    #[doc(hidden)]
     pub stateless_default_actions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The actions to take on a fragmented UDP packet if it doesn't match any of the stateless rules in the policy. Network Firewall only manages UDP packet fragments and silently drops packet fragments for other protocols. If you want non-matching fragmented UDP packets to be forwarded for stateful inspection, specify <code>aws:forward_to_sfe</code>. </p>
     /// <p>You must specify one of the standard actions: <code>aws:pass</code>, <code>aws:drop</code>, or <code>aws:forward_to_sfe</code>. In addition, you can specify custom actions that are compatible with your standard section choice.</p>
     /// <p>For example, you could specify <code>["aws:pass"]</code> or you could specify <code>["aws:pass", “customActionName”]</code>. For information about compatibility, see the custom action descriptions under <code>CustomAction</code>.</p>
+    #[doc(hidden)]
     pub stateless_fragment_default_actions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The custom action definitions that are available for use in the firewall policy's <code>StatelessDefaultActions</code> setting. You name each custom action that you define, and then you can use it by name in your default actions specifications.</p>
+    #[doc(hidden)]
     pub stateless_custom_actions: std::option::Option<std::vec::Vec<crate::model::CustomAction>>,
     /// <p>References to the stateful rule groups that are used in the policy. These define the inspection criteria in stateful rules. </p>
+    #[doc(hidden)]
     pub stateful_rule_group_references:
         std::option::Option<std::vec::Vec<crate::model::StatefulRuleGroupReference>>,
     /// <p>The default actions to take on a packet that doesn't match any stateful rules. The stateful default action is optional, and is only valid when using the strict rule order.</p>
@@ -4028,8 +4248,10 @@ pub struct FirewallPolicy {
     /// <li> <p>aws:alert_established</p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html#suricata-strict-rule-evaluation-order.html">Strict evaluation order</a> in the <i>Network Firewall Developer Guide</i>. </p>
+    #[doc(hidden)]
     pub stateful_default_actions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Additional options governing how Network Firewall handles stateful rules. The stateful rule groups that you use in your policy must have stateful rule options settings that are compatible with these settings.</p>
+    #[doc(hidden)]
     pub stateful_engine_options: std::option::Option<crate::model::StatefulEngineOptions>,
 }
 impl FirewallPolicy {
@@ -4104,11 +4326,10 @@ impl std::fmt::Debug for FirewallPolicy {
         formatter.finish()
     }
 }
-/// See [`FirewallPolicy`](crate::model::FirewallPolicy)
+/// See [`FirewallPolicy`](crate::model::FirewallPolicy).
 pub mod firewall_policy {
 
-    /// A builder for [`FirewallPolicy`](crate::model::FirewallPolicy)
-    #[non_exhaustive]
+    /// A builder for [`FirewallPolicy`](crate::model::FirewallPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stateless_rule_group_references:
@@ -4290,7 +4511,7 @@ pub mod firewall_policy {
             self.stateful_engine_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`FirewallPolicy`](crate::model::FirewallPolicy)
+        /// Consumes the builder and constructs a [`FirewallPolicy`](crate::model::FirewallPolicy).
         pub fn build(self) -> crate::model::FirewallPolicy {
             crate::model::FirewallPolicy {
                 stateless_rule_group_references: self.stateless_rule_group_references,
@@ -4305,7 +4526,7 @@ pub mod firewall_policy {
     }
 }
 impl FirewallPolicy {
-    /// Creates a new builder-style object to manufacture [`FirewallPolicy`](crate::model::FirewallPolicy)
+    /// Creates a new builder-style object to manufacture [`FirewallPolicy`](crate::model::FirewallPolicy).
     pub fn builder() -> crate::model::firewall_policy::Builder {
         crate::model::firewall_policy::Builder::default()
     }
@@ -4316,6 +4537,7 @@ impl FirewallPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatefulEngineOptions {
     /// <p>Indicates how to manage the order of stateful rule evaluation for the policy. <code>DEFAULT_ACTION_ORDER</code> is the default behavior. Stateful rules are provided to the rule engine as Suricata compatible strings, and Suricata evaluates them based on certain settings. For more information, see <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html">Evaluation order for stateful rules</a> in the <i>Network Firewall Developer Guide</i>. </p>
+    #[doc(hidden)]
     pub rule_order: std::option::Option<crate::model::RuleOrder>,
 }
 impl StatefulEngineOptions {
@@ -4331,11 +4553,10 @@ impl std::fmt::Debug for StatefulEngineOptions {
         formatter.finish()
     }
 }
-/// See [`StatefulEngineOptions`](crate::model::StatefulEngineOptions)
+/// See [`StatefulEngineOptions`](crate::model::StatefulEngineOptions).
 pub mod stateful_engine_options {
 
-    /// A builder for [`StatefulEngineOptions`](crate::model::StatefulEngineOptions)
-    #[non_exhaustive]
+    /// A builder for [`StatefulEngineOptions`](crate::model::StatefulEngineOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_order: std::option::Option<crate::model::RuleOrder>,
@@ -4354,7 +4575,7 @@ pub mod stateful_engine_options {
             self.rule_order = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatefulEngineOptions`](crate::model::StatefulEngineOptions)
+        /// Consumes the builder and constructs a [`StatefulEngineOptions`](crate::model::StatefulEngineOptions).
         pub fn build(self) -> crate::model::StatefulEngineOptions {
             crate::model::StatefulEngineOptions {
                 rule_order: self.rule_order,
@@ -4363,7 +4584,7 @@ pub mod stateful_engine_options {
     }
 }
 impl StatefulEngineOptions {
-    /// Creates a new builder-style object to manufacture [`StatefulEngineOptions`](crate::model::StatefulEngineOptions)
+    /// Creates a new builder-style object to manufacture [`StatefulEngineOptions`](crate::model::StatefulEngineOptions).
     pub fn builder() -> crate::model::stateful_engine_options::Builder {
         crate::model::stateful_engine_options::Builder::default()
     }
@@ -4374,12 +4595,15 @@ impl StatefulEngineOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatefulRuleGroupReference {
     /// <p>The Amazon Resource Name (ARN) of the stateful rule group.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>An integer setting that indicates the order in which to run the stateful rule groups in a single <code>FirewallPolicy</code>. This setting only applies to firewall policies that specify the <code>STRICT_ORDER</code> rule order in the stateful engine options settings.</p>
     /// <p>Network Firewall evalutes each stateful rule group against a packet starting with the group that has the lowest priority setting. You must ensure that the priority settings are unique within each policy.</p>
     /// <p>You can change the priority settings of your rule groups at any time. To make it easier to insert rule groups later, number them so there's a wide range in between, for example use 100, 200, and so on. </p>
+    #[doc(hidden)]
     pub priority: std::option::Option<i32>,
     /// <p>The action that allows the policy owner to override the behavior of the rule group within a policy.</p>
+    #[doc(hidden)]
     pub r#override: std::option::Option<crate::model::StatefulRuleGroupOverride>,
 }
 impl StatefulRuleGroupReference {
@@ -4407,11 +4631,10 @@ impl std::fmt::Debug for StatefulRuleGroupReference {
         formatter.finish()
     }
 }
-/// See [`StatefulRuleGroupReference`](crate::model::StatefulRuleGroupReference)
+/// See [`StatefulRuleGroupReference`](crate::model::StatefulRuleGroupReference).
 pub mod stateful_rule_group_reference {
 
-    /// A builder for [`StatefulRuleGroupReference`](crate::model::StatefulRuleGroupReference)
-    #[non_exhaustive]
+    /// A builder for [`StatefulRuleGroupReference`](crate::model::StatefulRuleGroupReference).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -4456,7 +4679,7 @@ pub mod stateful_rule_group_reference {
             self.r#override = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatefulRuleGroupReference`](crate::model::StatefulRuleGroupReference)
+        /// Consumes the builder and constructs a [`StatefulRuleGroupReference`](crate::model::StatefulRuleGroupReference).
         pub fn build(self) -> crate::model::StatefulRuleGroupReference {
             crate::model::StatefulRuleGroupReference {
                 resource_arn: self.resource_arn,
@@ -4467,7 +4690,7 @@ pub mod stateful_rule_group_reference {
     }
 }
 impl StatefulRuleGroupReference {
-    /// Creates a new builder-style object to manufacture [`StatefulRuleGroupReference`](crate::model::StatefulRuleGroupReference)
+    /// Creates a new builder-style object to manufacture [`StatefulRuleGroupReference`](crate::model::StatefulRuleGroupReference).
     pub fn builder() -> crate::model::stateful_rule_group_reference::Builder {
         crate::model::stateful_rule_group_reference::Builder::default()
     }
@@ -4478,6 +4701,7 @@ impl StatefulRuleGroupReference {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatefulRuleGroupOverride {
     /// <p>The action that changes the rule group from <code>DROP</code> to <code>ALERT</code>. This only applies to managed rule groups.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::OverrideAction>,
 }
 impl StatefulRuleGroupOverride {
@@ -4493,11 +4717,10 @@ impl std::fmt::Debug for StatefulRuleGroupOverride {
         formatter.finish()
     }
 }
-/// See [`StatefulRuleGroupOverride`](crate::model::StatefulRuleGroupOverride)
+/// See [`StatefulRuleGroupOverride`](crate::model::StatefulRuleGroupOverride).
 pub mod stateful_rule_group_override {
 
-    /// A builder for [`StatefulRuleGroupOverride`](crate::model::StatefulRuleGroupOverride)
-    #[non_exhaustive]
+    /// A builder for [`StatefulRuleGroupOverride`](crate::model::StatefulRuleGroupOverride).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::OverrideAction>,
@@ -4516,7 +4739,7 @@ pub mod stateful_rule_group_override {
             self.action = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatefulRuleGroupOverride`](crate::model::StatefulRuleGroupOverride)
+        /// Consumes the builder and constructs a [`StatefulRuleGroupOverride`](crate::model::StatefulRuleGroupOverride).
         pub fn build(self) -> crate::model::StatefulRuleGroupOverride {
             crate::model::StatefulRuleGroupOverride {
                 action: self.action,
@@ -4525,7 +4748,7 @@ pub mod stateful_rule_group_override {
     }
 }
 impl StatefulRuleGroupOverride {
-    /// Creates a new builder-style object to manufacture [`StatefulRuleGroupOverride`](crate::model::StatefulRuleGroupOverride)
+    /// Creates a new builder-style object to manufacture [`StatefulRuleGroupOverride`](crate::model::StatefulRuleGroupOverride).
     pub fn builder() -> crate::model::stateful_rule_group_override::Builder {
         crate::model::stateful_rule_group_override::Builder::default()
     }
@@ -4587,8 +4810,10 @@ impl AsRef<str> for OverrideAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatelessRuleGroupReference {
     /// <p>The Amazon Resource Name (ARN) of the stateless rule group.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>An integer setting that indicates the order in which to run the stateless rule groups in a single <code>FirewallPolicy</code>. Network Firewall applies each stateless rule group to a packet starting with the group that has the lowest priority setting. You must ensure that the priority settings are unique within each policy.</p>
+    #[doc(hidden)]
     pub priority: i32,
 }
 impl StatelessRuleGroupReference {
@@ -4609,11 +4834,10 @@ impl std::fmt::Debug for StatelessRuleGroupReference {
         formatter.finish()
     }
 }
-/// See [`StatelessRuleGroupReference`](crate::model::StatelessRuleGroupReference)
+/// See [`StatelessRuleGroupReference`](crate::model::StatelessRuleGroupReference).
 pub mod stateless_rule_group_reference {
 
-    /// A builder for [`StatelessRuleGroupReference`](crate::model::StatelessRuleGroupReference)
-    #[non_exhaustive]
+    /// A builder for [`StatelessRuleGroupReference`](crate::model::StatelessRuleGroupReference).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -4640,7 +4864,7 @@ pub mod stateless_rule_group_reference {
             self.priority = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatelessRuleGroupReference`](crate::model::StatelessRuleGroupReference)
+        /// Consumes the builder and constructs a [`StatelessRuleGroupReference`](crate::model::StatelessRuleGroupReference).
         pub fn build(self) -> crate::model::StatelessRuleGroupReference {
             crate::model::StatelessRuleGroupReference {
                 resource_arn: self.resource_arn,
@@ -4650,7 +4874,7 @@ pub mod stateless_rule_group_reference {
     }
 }
 impl StatelessRuleGroupReference {
-    /// Creates a new builder-style object to manufacture [`StatelessRuleGroupReference`](crate::model::StatelessRuleGroupReference)
+    /// Creates a new builder-style object to manufacture [`StatelessRuleGroupReference`](crate::model::StatelessRuleGroupReference).
     pub fn builder() -> crate::model::stateless_rule_group_reference::Builder {
         crate::model::stateless_rule_group_reference::Builder::default()
     }
@@ -4661,8 +4885,10 @@ impl StatelessRuleGroupReference {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleGroupMetadata {
     /// <p>The descriptive name of the rule group. You can't change the name of a rule group after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the rule group.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl RuleGroupMetadata {
@@ -4683,11 +4909,10 @@ impl std::fmt::Debug for RuleGroupMetadata {
         formatter.finish()
     }
 }
-/// See [`RuleGroupMetadata`](crate::model::RuleGroupMetadata)
+/// See [`RuleGroupMetadata`](crate::model::RuleGroupMetadata).
 pub mod rule_group_metadata {
 
-    /// A builder for [`RuleGroupMetadata`](crate::model::RuleGroupMetadata)
-    #[non_exhaustive]
+    /// A builder for [`RuleGroupMetadata`](crate::model::RuleGroupMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4714,7 +4939,7 @@ pub mod rule_group_metadata {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleGroupMetadata`](crate::model::RuleGroupMetadata)
+        /// Consumes the builder and constructs a [`RuleGroupMetadata`](crate::model::RuleGroupMetadata).
         pub fn build(self) -> crate::model::RuleGroupMetadata {
             crate::model::RuleGroupMetadata {
                 name: self.name,
@@ -4724,7 +4949,7 @@ pub mod rule_group_metadata {
     }
 }
 impl RuleGroupMetadata {
-    /// Creates a new builder-style object to manufacture [`RuleGroupMetadata`](crate::model::RuleGroupMetadata)
+    /// Creates a new builder-style object to manufacture [`RuleGroupMetadata`](crate::model::RuleGroupMetadata).
     pub fn builder() -> crate::model::rule_group_metadata::Builder {
         crate::model::rule_group_metadata::Builder::default()
     }
@@ -4845,8 +5070,10 @@ impl AsRef<str> for ResourceManagedStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FirewallMetadata {
     /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+    #[doc(hidden)]
     pub firewall_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    #[doc(hidden)]
     pub firewall_arn: std::option::Option<std::string::String>,
 }
 impl FirewallMetadata {
@@ -4867,11 +5094,10 @@ impl std::fmt::Debug for FirewallMetadata {
         formatter.finish()
     }
 }
-/// See [`FirewallMetadata`](crate::model::FirewallMetadata)
+/// See [`FirewallMetadata`](crate::model::FirewallMetadata).
 pub mod firewall_metadata {
 
-    /// A builder for [`FirewallMetadata`](crate::model::FirewallMetadata)
-    #[non_exhaustive]
+    /// A builder for [`FirewallMetadata`](crate::model::FirewallMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall_name: std::option::Option<std::string::String>,
@@ -4901,7 +5127,7 @@ pub mod firewall_metadata {
             self.firewall_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`FirewallMetadata`](crate::model::FirewallMetadata)
+        /// Consumes the builder and constructs a [`FirewallMetadata`](crate::model::FirewallMetadata).
         pub fn build(self) -> crate::model::FirewallMetadata {
             crate::model::FirewallMetadata {
                 firewall_name: self.firewall_name,
@@ -4911,7 +5137,7 @@ pub mod firewall_metadata {
     }
 }
 impl FirewallMetadata {
-    /// Creates a new builder-style object to manufacture [`FirewallMetadata`](crate::model::FirewallMetadata)
+    /// Creates a new builder-style object to manufacture [`FirewallMetadata`](crate::model::FirewallMetadata).
     pub fn builder() -> crate::model::firewall_metadata::Builder {
         crate::model::firewall_metadata::Builder::default()
     }
@@ -4922,8 +5148,10 @@ impl FirewallMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FirewallPolicyMetadata {
     /// <p>The descriptive name of the firewall policy. You can't change the name of a firewall policy after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the firewall policy.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl FirewallPolicyMetadata {
@@ -4944,11 +5172,10 @@ impl std::fmt::Debug for FirewallPolicyMetadata {
         formatter.finish()
     }
 }
-/// See [`FirewallPolicyMetadata`](crate::model::FirewallPolicyMetadata)
+/// See [`FirewallPolicyMetadata`](crate::model::FirewallPolicyMetadata).
 pub mod firewall_policy_metadata {
 
-    /// A builder for [`FirewallPolicyMetadata`](crate::model::FirewallPolicyMetadata)
-    #[non_exhaustive]
+    /// A builder for [`FirewallPolicyMetadata`](crate::model::FirewallPolicyMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4975,7 +5202,7 @@ pub mod firewall_policy_metadata {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`FirewallPolicyMetadata`](crate::model::FirewallPolicyMetadata)
+        /// Consumes the builder and constructs a [`FirewallPolicyMetadata`](crate::model::FirewallPolicyMetadata).
         pub fn build(self) -> crate::model::FirewallPolicyMetadata {
             crate::model::FirewallPolicyMetadata {
                 name: self.name,
@@ -4985,7 +5212,7 @@ pub mod firewall_policy_metadata {
     }
 }
 impl FirewallPolicyMetadata {
-    /// Creates a new builder-style object to manufacture [`FirewallPolicyMetadata`](crate::model::FirewallPolicyMetadata)
+    /// Creates a new builder-style object to manufacture [`FirewallPolicyMetadata`](crate::model::FirewallPolicyMetadata).
     pub fn builder() -> crate::model::firewall_policy_metadata::Builder {
         crate::model::firewall_policy_metadata::Builder::default()
     }
@@ -4996,6 +5223,7 @@ impl FirewallPolicyMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SubnetMapping {
     /// <p>The unique identifier for the subnet. </p>
+    #[doc(hidden)]
     pub subnet_id: std::option::Option<std::string::String>,
 }
 impl SubnetMapping {
@@ -5011,11 +5239,10 @@ impl std::fmt::Debug for SubnetMapping {
         formatter.finish()
     }
 }
-/// See [`SubnetMapping`](crate::model::SubnetMapping)
+/// See [`SubnetMapping`](crate::model::SubnetMapping).
 pub mod subnet_mapping {
 
-    /// A builder for [`SubnetMapping`](crate::model::SubnetMapping)
-    #[non_exhaustive]
+    /// A builder for [`SubnetMapping`](crate::model::SubnetMapping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_id: std::option::Option<std::string::String>,
@@ -5031,7 +5258,7 @@ pub mod subnet_mapping {
             self.subnet_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SubnetMapping`](crate::model::SubnetMapping)
+        /// Consumes the builder and constructs a [`SubnetMapping`](crate::model::SubnetMapping).
         pub fn build(self) -> crate::model::SubnetMapping {
             crate::model::SubnetMapping {
                 subnet_id: self.subnet_id,
@@ -5040,7 +5267,7 @@ pub mod subnet_mapping {
     }
 }
 impl SubnetMapping {
-    /// Creates a new builder-style object to manufacture [`SubnetMapping`](crate::model::SubnetMapping)
+    /// Creates a new builder-style object to manufacture [`SubnetMapping`](crate::model::SubnetMapping).
     pub fn builder() -> crate::model::subnet_mapping::Builder {
         crate::model::subnet_mapping::Builder::default()
     }
@@ -5051,15 +5278,21 @@ impl SubnetMapping {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FirewallStatus {
     /// <p>The readiness of the configured firewall to handle network traffic across all of the Availability Zones where you've configured it. This setting is <code>READY</code> only when the <code>ConfigurationSyncStateSummary</code> value is <code>IN_SYNC</code> and the <code>Attachment</code> <code>Status</code> values for all of the configured subnets are <code>READY</code>. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::FirewallStatusValue>,
     /// <p>The configuration sync state for the firewall. This summarizes the sync states reported in the <code>Config</code> settings for all of the Availability Zones where you have configured the firewall. </p>
     /// <p>When you create a firewall or update its configuration, for example by adding a rule group to its firewall policy, Network Firewall distributes the configuration changes to all zones where the firewall is in use. This summary indicates whether the configuration changes have been applied everywhere. </p>
     /// <p>This status must be <code>IN_SYNC</code> for the firewall to be ready for use, but it doesn't indicate that the firewall is ready. The <code>Status</code> setting indicates firewall readiness.</p>
+    #[doc(hidden)]
     pub configuration_sync_state_summary: std::option::Option<crate::model::ConfigurationSyncState>,
     /// <p>The subnets that you've configured for use by the Network Firewall firewall. This contains one array element per Availability Zone where you've configured a subnet. These objects provide details of the information that is summarized in the <code>ConfigurationSyncStateSummary</code> and <code>Status</code>, broken down by zone and configuration object. </p>
+    #[doc(hidden)]
     pub sync_states: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::SyncState>,
     >,
+    /// <p>Describes the capacity usage of the resources contained in a firewall's reference sets. Network Firewall calclulates the capacity usage by taking an aggregated count of all of the resources used by all of the reference sets in a firewall.</p>
+    #[doc(hidden)]
+    pub capacity_usage_summary: std::option::Option<crate::model::CapacityUsageSummary>,
 }
 impl FirewallStatus {
     /// <p>The readiness of the configured firewall to handle network traffic across all of the Availability Zones where you've configured it. This setting is <code>READY</code> only when the <code>ConfigurationSyncStateSummary</code> value is <code>IN_SYNC</code> and the <code>Attachment</code> <code>Status</code> values for all of the configured subnets are <code>READY</code>. </p>
@@ -5081,6 +5314,12 @@ impl FirewallStatus {
     {
         self.sync_states.as_ref()
     }
+    /// <p>Describes the capacity usage of the resources contained in a firewall's reference sets. Network Firewall calclulates the capacity usage by taking an aggregated count of all of the resources used by all of the reference sets in a firewall.</p>
+    pub fn capacity_usage_summary(
+        &self,
+    ) -> std::option::Option<&crate::model::CapacityUsageSummary> {
+        self.capacity_usage_summary.as_ref()
+    }
 }
 impl std::fmt::Debug for FirewallStatus {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -5091,14 +5330,14 @@ impl std::fmt::Debug for FirewallStatus {
             &self.configuration_sync_state_summary,
         );
         formatter.field("sync_states", &self.sync_states);
+        formatter.field("capacity_usage_summary", &self.capacity_usage_summary);
         formatter.finish()
     }
 }
-/// See [`FirewallStatus`](crate::model::FirewallStatus)
+/// See [`FirewallStatus`](crate::model::FirewallStatus).
 pub mod firewall_status {
 
-    /// A builder for [`FirewallStatus`](crate::model::FirewallStatus)
-    #[non_exhaustive]
+    /// A builder for [`FirewallStatus`](crate::model::FirewallStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::FirewallStatusValue>,
@@ -5107,6 +5346,7 @@ pub mod firewall_status {
         pub(crate) sync_states: std::option::Option<
             std::collections::HashMap<std::string::String, crate::model::SyncState>,
         >,
+        pub(crate) capacity_usage_summary: std::option::Option<crate::model::CapacityUsageSummary>,
     }
     impl Builder {
         /// <p>The readiness of the configured firewall to handle network traffic across all of the Availability Zones where you've configured it. This setting is <code>READY</code> only when the <code>ConfigurationSyncStateSummary</code> value is <code>IN_SYNC</code> and the <code>Attachment</code> <code>Status</code> values for all of the configured subnets are <code>READY</code>. </p>
@@ -5167,20 +5407,262 @@ pub mod firewall_status {
             self.sync_states = input;
             self
         }
-        /// Consumes the builder and constructs a [`FirewallStatus`](crate::model::FirewallStatus)
+        /// <p>Describes the capacity usage of the resources contained in a firewall's reference sets. Network Firewall calclulates the capacity usage by taking an aggregated count of all of the resources used by all of the reference sets in a firewall.</p>
+        pub fn capacity_usage_summary(mut self, input: crate::model::CapacityUsageSummary) -> Self {
+            self.capacity_usage_summary = Some(input);
+            self
+        }
+        /// <p>Describes the capacity usage of the resources contained in a firewall's reference sets. Network Firewall calclulates the capacity usage by taking an aggregated count of all of the resources used by all of the reference sets in a firewall.</p>
+        pub fn set_capacity_usage_summary(
+            mut self,
+            input: std::option::Option<crate::model::CapacityUsageSummary>,
+        ) -> Self {
+            self.capacity_usage_summary = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`FirewallStatus`](crate::model::FirewallStatus).
         pub fn build(self) -> crate::model::FirewallStatus {
             crate::model::FirewallStatus {
                 status: self.status,
                 configuration_sync_state_summary: self.configuration_sync_state_summary,
                 sync_states: self.sync_states,
+                capacity_usage_summary: self.capacity_usage_summary,
             }
         }
     }
 }
 impl FirewallStatus {
-    /// Creates a new builder-style object to manufacture [`FirewallStatus`](crate::model::FirewallStatus)
+    /// Creates a new builder-style object to manufacture [`FirewallStatus`](crate::model::FirewallStatus).
     pub fn builder() -> crate::model::firewall_status::Builder {
         crate::model::firewall_status::Builder::default()
+    }
+}
+
+/// <p>The capacity usage summary of the resources used by the <code>ReferenceSets</code> in a firewall.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CapacityUsageSummary {
+    /// <p>Describes the capacity usage of the CIDR blocks used by the IP set references in a firewall.</p>
+    #[doc(hidden)]
+    pub cid_rs: std::option::Option<crate::model::CidrSummary>,
+}
+impl CapacityUsageSummary {
+    /// <p>Describes the capacity usage of the CIDR blocks used by the IP set references in a firewall.</p>
+    pub fn cid_rs(&self) -> std::option::Option<&crate::model::CidrSummary> {
+        self.cid_rs.as_ref()
+    }
+}
+impl std::fmt::Debug for CapacityUsageSummary {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CapacityUsageSummary");
+        formatter.field("cid_rs", &self.cid_rs);
+        formatter.finish()
+    }
+}
+/// See [`CapacityUsageSummary`](crate::model::CapacityUsageSummary).
+pub mod capacity_usage_summary {
+
+    /// A builder for [`CapacityUsageSummary`](crate::model::CapacityUsageSummary).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) cid_rs: std::option::Option<crate::model::CidrSummary>,
+    }
+    impl Builder {
+        /// <p>Describes the capacity usage of the CIDR blocks used by the IP set references in a firewall.</p>
+        pub fn cid_rs(mut self, input: crate::model::CidrSummary) -> Self {
+            self.cid_rs = Some(input);
+            self
+        }
+        /// <p>Describes the capacity usage of the CIDR blocks used by the IP set references in a firewall.</p>
+        pub fn set_cid_rs(mut self, input: std::option::Option<crate::model::CidrSummary>) -> Self {
+            self.cid_rs = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CapacityUsageSummary`](crate::model::CapacityUsageSummary).
+        pub fn build(self) -> crate::model::CapacityUsageSummary {
+            crate::model::CapacityUsageSummary {
+                cid_rs: self.cid_rs,
+            }
+        }
+    }
+}
+impl CapacityUsageSummary {
+    /// Creates a new builder-style object to manufacture [`CapacityUsageSummary`](crate::model::CapacityUsageSummary).
+    pub fn builder() -> crate::model::capacity_usage_summary::Builder {
+        crate::model::capacity_usage_summary::Builder::default()
+    }
+}
+
+/// <p>Summarizes the CIDR blocks used by the IP set references in a firewall. Network Firewall calculates the number of CIDRs by taking an aggregated count of all CIDRs used by the IP sets you are referencing.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CidrSummary {
+    /// <p>The number of CIDR blocks available for use by the IP set references in a firewall.</p>
+    #[doc(hidden)]
+    pub available_cidr_count: std::option::Option<i32>,
+    /// <p>The number of CIDR blocks used by the IP set references in a firewall.</p>
+    #[doc(hidden)]
+    pub utilized_cidr_count: std::option::Option<i32>,
+    /// <p>The list of the IP set references used by a firewall.</p>
+    #[doc(hidden)]
+    pub ip_set_references: std::option::Option<
+        std::collections::HashMap<std::string::String, crate::model::IpSetMetadata>,
+    >,
+}
+impl CidrSummary {
+    /// <p>The number of CIDR blocks available for use by the IP set references in a firewall.</p>
+    pub fn available_cidr_count(&self) -> std::option::Option<i32> {
+        self.available_cidr_count
+    }
+    /// <p>The number of CIDR blocks used by the IP set references in a firewall.</p>
+    pub fn utilized_cidr_count(&self) -> std::option::Option<i32> {
+        self.utilized_cidr_count
+    }
+    /// <p>The list of the IP set references used by a firewall.</p>
+    pub fn ip_set_references(
+        &self,
+    ) -> std::option::Option<
+        &std::collections::HashMap<std::string::String, crate::model::IpSetMetadata>,
+    > {
+        self.ip_set_references.as_ref()
+    }
+}
+impl std::fmt::Debug for CidrSummary {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CidrSummary");
+        formatter.field("available_cidr_count", &self.available_cidr_count);
+        formatter.field("utilized_cidr_count", &self.utilized_cidr_count);
+        formatter.field("ip_set_references", &self.ip_set_references);
+        formatter.finish()
+    }
+}
+/// See [`CidrSummary`](crate::model::CidrSummary).
+pub mod cidr_summary {
+
+    /// A builder for [`CidrSummary`](crate::model::CidrSummary).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) available_cidr_count: std::option::Option<i32>,
+        pub(crate) utilized_cidr_count: std::option::Option<i32>,
+        pub(crate) ip_set_references: std::option::Option<
+            std::collections::HashMap<std::string::String, crate::model::IpSetMetadata>,
+        >,
+    }
+    impl Builder {
+        /// <p>The number of CIDR blocks available for use by the IP set references in a firewall.</p>
+        pub fn available_cidr_count(mut self, input: i32) -> Self {
+            self.available_cidr_count = Some(input);
+            self
+        }
+        /// <p>The number of CIDR blocks available for use by the IP set references in a firewall.</p>
+        pub fn set_available_cidr_count(mut self, input: std::option::Option<i32>) -> Self {
+            self.available_cidr_count = input;
+            self
+        }
+        /// <p>The number of CIDR blocks used by the IP set references in a firewall.</p>
+        pub fn utilized_cidr_count(mut self, input: i32) -> Self {
+            self.utilized_cidr_count = Some(input);
+            self
+        }
+        /// <p>The number of CIDR blocks used by the IP set references in a firewall.</p>
+        pub fn set_utilized_cidr_count(mut self, input: std::option::Option<i32>) -> Self {
+            self.utilized_cidr_count = input;
+            self
+        }
+        /// Adds a key-value pair to `ip_set_references`.
+        ///
+        /// To override the contents of this collection use [`set_ip_set_references`](Self::set_ip_set_references).
+        ///
+        /// <p>The list of the IP set references used by a firewall.</p>
+        pub fn ip_set_references(
+            mut self,
+            k: impl Into<std::string::String>,
+            v: crate::model::IpSetMetadata,
+        ) -> Self {
+            let mut hash_map = self.ip_set_references.unwrap_or_default();
+            hash_map.insert(k.into(), v);
+            self.ip_set_references = Some(hash_map);
+            self
+        }
+        /// <p>The list of the IP set references used by a firewall.</p>
+        pub fn set_ip_set_references(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<std::string::String, crate::model::IpSetMetadata>,
+            >,
+        ) -> Self {
+            self.ip_set_references = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CidrSummary`](crate::model::CidrSummary).
+        pub fn build(self) -> crate::model::CidrSummary {
+            crate::model::CidrSummary {
+                available_cidr_count: self.available_cidr_count,
+                utilized_cidr_count: self.utilized_cidr_count,
+                ip_set_references: self.ip_set_references,
+            }
+        }
+    }
+}
+impl CidrSummary {
+    /// Creates a new builder-style object to manufacture [`CidrSummary`](crate::model::CidrSummary).
+    pub fn builder() -> crate::model::cidr_summary::Builder {
+        crate::model::cidr_summary::Builder::default()
+    }
+}
+
+/// <p>General information about the IP set.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct IpSetMetadata {
+    /// <p>Describes the total number of CIDR blocks currently in use by the IP set references in a firewall. To determine how many CIDR blocks are available for you to use in a firewall, you can call <code>AvailableCIDRCount</code>.</p>
+    #[doc(hidden)]
+    pub resolved_cidr_count: std::option::Option<i32>,
+}
+impl IpSetMetadata {
+    /// <p>Describes the total number of CIDR blocks currently in use by the IP set references in a firewall. To determine how many CIDR blocks are available for you to use in a firewall, you can call <code>AvailableCIDRCount</code>.</p>
+    pub fn resolved_cidr_count(&self) -> std::option::Option<i32> {
+        self.resolved_cidr_count
+    }
+}
+impl std::fmt::Debug for IpSetMetadata {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("IpSetMetadata");
+        formatter.field("resolved_cidr_count", &self.resolved_cidr_count);
+        formatter.finish()
+    }
+}
+/// See [`IpSetMetadata`](crate::model::IpSetMetadata).
+pub mod ip_set_metadata {
+
+    /// A builder for [`IpSetMetadata`](crate::model::IpSetMetadata).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) resolved_cidr_count: std::option::Option<i32>,
+    }
+    impl Builder {
+        /// <p>Describes the total number of CIDR blocks currently in use by the IP set references in a firewall. To determine how many CIDR blocks are available for you to use in a firewall, you can call <code>AvailableCIDRCount</code>.</p>
+        pub fn resolved_cidr_count(mut self, input: i32) -> Self {
+            self.resolved_cidr_count = Some(input);
+            self
+        }
+        /// <p>Describes the total number of CIDR blocks currently in use by the IP set references in a firewall. To determine how many CIDR blocks are available for you to use in a firewall, you can call <code>AvailableCIDRCount</code>.</p>
+        pub fn set_resolved_cidr_count(mut self, input: std::option::Option<i32>) -> Self {
+            self.resolved_cidr_count = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`IpSetMetadata`](crate::model::IpSetMetadata).
+        pub fn build(self) -> crate::model::IpSetMetadata {
+            crate::model::IpSetMetadata {
+                resolved_cidr_count: self.resolved_cidr_count,
+            }
+        }
+    }
+}
+impl IpSetMetadata {
+    /// Creates a new builder-style object to manufacture [`IpSetMetadata`](crate::model::IpSetMetadata).
+    pub fn builder() -> crate::model::ip_set_metadata::Builder {
+        crate::model::ip_set_metadata::Builder::default()
     }
 }
 
@@ -5195,8 +5677,10 @@ impl FirewallStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SyncState {
     /// <p>The attachment status of the firewall's association with a single VPC subnet. For each configured subnet, Network Firewall creates the attachment by instantiating the firewall endpoint in the subnet so that it's ready to take traffic. This is part of the <code>FirewallStatus</code>.</p>
+    #[doc(hidden)]
     pub attachment: std::option::Option<crate::model::Attachment>,
     /// <p>The configuration status of the firewall endpoint in a single VPC subnet. Network Firewall provides each endpoint with the rules that are configured in the firewall policy. Each time you add a subnet or modify the associated firewall policy, Network Firewall synchronizes the rules in the endpoint, so it can properly filter network traffic. This is part of the <code>FirewallStatus</code>.</p>
+    #[doc(hidden)]
     pub config: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::PerObjectStatus>,
     >,
@@ -5223,11 +5707,10 @@ impl std::fmt::Debug for SyncState {
         formatter.finish()
     }
 }
-/// See [`SyncState`](crate::model::SyncState)
+/// See [`SyncState`](crate::model::SyncState).
 pub mod sync_state {
 
-    /// A builder for [`SyncState`](crate::model::SyncState)
-    #[non_exhaustive]
+    /// A builder for [`SyncState`](crate::model::SyncState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attachment: std::option::Option<crate::model::Attachment>,
@@ -5274,7 +5757,7 @@ pub mod sync_state {
             self.config = input;
             self
         }
-        /// Consumes the builder and constructs a [`SyncState`](crate::model::SyncState)
+        /// Consumes the builder and constructs a [`SyncState`](crate::model::SyncState).
         pub fn build(self) -> crate::model::SyncState {
             crate::model::SyncState {
                 attachment: self.attachment,
@@ -5284,7 +5767,7 @@ pub mod sync_state {
     }
 }
 impl SyncState {
-    /// Creates a new builder-style object to manufacture [`SyncState`](crate::model::SyncState)
+    /// Creates a new builder-style object to manufacture [`SyncState`](crate::model::SyncState).
     pub fn builder() -> crate::model::sync_state::Builder {
         crate::model::sync_state::Builder::default()
     }
@@ -5295,8 +5778,10 @@ impl SyncState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PerObjectStatus {
     /// <p>Indicates whether this object is in sync with the version indicated in the update token.</p>
+    #[doc(hidden)]
     pub sync_status: std::option::Option<crate::model::PerObjectSyncStatus>,
     /// <p>The current version of the object that is either in sync or pending synchronization. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
 }
 impl PerObjectStatus {
@@ -5317,11 +5802,10 @@ impl std::fmt::Debug for PerObjectStatus {
         formatter.finish()
     }
 }
-/// See [`PerObjectStatus`](crate::model::PerObjectStatus)
+/// See [`PerObjectStatus`](crate::model::PerObjectStatus).
 pub mod per_object_status {
 
-    /// A builder for [`PerObjectStatus`](crate::model::PerObjectStatus)
-    #[non_exhaustive]
+    /// A builder for [`PerObjectStatus`](crate::model::PerObjectStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sync_status: std::option::Option<crate::model::PerObjectSyncStatus>,
@@ -5351,7 +5835,7 @@ pub mod per_object_status {
             self.update_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`PerObjectStatus`](crate::model::PerObjectStatus)
+        /// Consumes the builder and constructs a [`PerObjectStatus`](crate::model::PerObjectStatus).
         pub fn build(self) -> crate::model::PerObjectStatus {
             crate::model::PerObjectStatus {
                 sync_status: self.sync_status,
@@ -5361,7 +5845,7 @@ pub mod per_object_status {
     }
 }
 impl PerObjectStatus {
-    /// Creates a new builder-style object to manufacture [`PerObjectStatus`](crate::model::PerObjectStatus)
+    /// Creates a new builder-style object to manufacture [`PerObjectStatus`](crate::model::PerObjectStatus).
     pub fn builder() -> crate::model::per_object_status::Builder {
         crate::model::per_object_status::Builder::default()
     }
@@ -5380,6 +5864,8 @@ impl PerObjectStatus {
 )]
 pub enum PerObjectSyncStatus {
     #[allow(missing_docs)] // documentation missing in model
+    CapacityConstrained,
+    #[allow(missing_docs)] // documentation missing in model
     InSync,
     #[allow(missing_docs)] // documentation missing in model
     Pending,
@@ -5389,6 +5875,7 @@ pub enum PerObjectSyncStatus {
 impl std::convert::From<&str> for PerObjectSyncStatus {
     fn from(s: &str) -> Self {
         match s {
+            "CAPACITY_CONSTRAINED" => PerObjectSyncStatus::CapacityConstrained,
             "IN_SYNC" => PerObjectSyncStatus::InSync,
             "PENDING" => PerObjectSyncStatus::Pending,
             other => PerObjectSyncStatus::Unknown(other.to_owned()),
@@ -5406,6 +5893,7 @@ impl PerObjectSyncStatus {
     /// Returns the `&str` value of the enum member.
     pub fn as_str(&self) -> &str {
         match self {
+            PerObjectSyncStatus::CapacityConstrained => "CAPACITY_CONSTRAINED",
             PerObjectSyncStatus::InSync => "IN_SYNC",
             PerObjectSyncStatus::Pending => "PENDING",
             PerObjectSyncStatus::Unknown(s) => s.as_ref(),
@@ -5413,7 +5901,7 @@ impl PerObjectSyncStatus {
     }
     /// Returns all the `&str` values of the enum members.
     pub fn values() -> &'static [&'static str] {
-        &["IN_SYNC", "PENDING"]
+        &["CAPACITY_CONSTRAINED", "IN_SYNC", "PENDING"]
     }
 }
 impl AsRef<str> for PerObjectSyncStatus {
@@ -5427,10 +5915,13 @@ impl AsRef<str> for PerObjectSyncStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Attachment {
     /// <p>The unique identifier of the subnet that you've specified to be used for a firewall endpoint. </p>
+    #[doc(hidden)]
     pub subnet_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the firewall endpoint that Network Firewall has instantiated in the subnet. You use this to identify the firewall endpoint in the VPC route tables, when you redirect the VPC traffic through the endpoint. </p>
+    #[doc(hidden)]
     pub endpoint_id: std::option::Option<std::string::String>,
     /// <p>The current status of the firewall endpoint in the subnet. This value reflects both the instantiation of the endpoint in the VPC subnet and the sync states that are reported in the <code>Config</code> settings. When this value is <code>READY</code>, the endpoint is available and configured properly to handle network traffic. When the endpoint isn't available for traffic, this value will reflect its state, for example <code>CREATING</code>, <code>DELETING</code>, or <code>FAILED</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AttachmentStatus>,
 }
 impl Attachment {
@@ -5456,11 +5947,10 @@ impl std::fmt::Debug for Attachment {
         formatter.finish()
     }
 }
-/// See [`Attachment`](crate::model::Attachment)
+/// See [`Attachment`](crate::model::Attachment).
 pub mod attachment {
 
-    /// A builder for [`Attachment`](crate::model::Attachment)
-    #[non_exhaustive]
+    /// A builder for [`Attachment`](crate::model::Attachment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_id: std::option::Option<std::string::String>,
@@ -5501,7 +5991,7 @@ pub mod attachment {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`Attachment`](crate::model::Attachment)
+        /// Consumes the builder and constructs a [`Attachment`](crate::model::Attachment).
         pub fn build(self) -> crate::model::Attachment {
             crate::model::Attachment {
                 subnet_id: self.subnet_id,
@@ -5512,7 +6002,7 @@ pub mod attachment {
     }
 }
 impl Attachment {
-    /// Creates a new builder-style object to manufacture [`Attachment`](crate::model::Attachment)
+    /// Creates a new builder-style object to manufacture [`Attachment`](crate::model::Attachment).
     pub fn builder() -> crate::model::attachment::Builder {
         crate::model::attachment::Builder::default()
     }
@@ -5594,6 +6084,8 @@ impl AsRef<str> for AttachmentStatus {
 )]
 pub enum ConfigurationSyncState {
     #[allow(missing_docs)] // documentation missing in model
+    CapacityConstrained,
+    #[allow(missing_docs)] // documentation missing in model
     InSync,
     #[allow(missing_docs)] // documentation missing in model
     Pending,
@@ -5603,6 +6095,7 @@ pub enum ConfigurationSyncState {
 impl std::convert::From<&str> for ConfigurationSyncState {
     fn from(s: &str) -> Self {
         match s {
+            "CAPACITY_CONSTRAINED" => ConfigurationSyncState::CapacityConstrained,
             "IN_SYNC" => ConfigurationSyncState::InSync,
             "PENDING" => ConfigurationSyncState::Pending,
             other => ConfigurationSyncState::Unknown(other.to_owned()),
@@ -5620,6 +6113,7 @@ impl ConfigurationSyncState {
     /// Returns the `&str` value of the enum member.
     pub fn as_str(&self) -> &str {
         match self {
+            ConfigurationSyncState::CapacityConstrained => "CAPACITY_CONSTRAINED",
             ConfigurationSyncState::InSync => "IN_SYNC",
             ConfigurationSyncState::Pending => "PENDING",
             ConfigurationSyncState::Unknown(s) => s.as_ref(),
@@ -5627,7 +6121,7 @@ impl ConfigurationSyncState {
     }
     /// Returns all the `&str` values of the enum members.
     pub fn values() -> &'static [&'static str] {
-        &["IN_SYNC", "PENDING"]
+        &["CAPACITY_CONSTRAINED", "IN_SYNC", "PENDING"]
     }
 }
 impl AsRef<str> for ConfigurationSyncState {
@@ -5701,29 +6195,41 @@ impl AsRef<str> for FirewallStatusValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Firewall {
     /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+    #[doc(hidden)]
     pub firewall_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    #[doc(hidden)]
     pub firewall_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the firewall policy.</p>
     /// <p>The relationship of firewall to firewall policy is many to one. Each firewall requires one firewall policy association, and you can use the same firewall policy for multiple firewalls. </p>
+    #[doc(hidden)]
     pub firewall_policy_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the VPC where the firewall is in use. </p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>The public subnets that Network Firewall is using for the firewall. Each subnet must belong to a different Availability Zone. </p>
+    #[doc(hidden)]
     pub subnet_mappings: std::option::Option<std::vec::Vec<crate::model::SubnetMapping>>,
     /// <p>A flag indicating whether it is possible to delete the firewall. A setting of <code>TRUE</code> indicates that the firewall is protected against deletion. Use this setting to protect against accidentally deleting a firewall that is in use. When you create a firewall, the operation initializes this flag to <code>TRUE</code>.</p>
+    #[doc(hidden)]
     pub delete_protection: bool,
     /// <p>A setting indicating whether the firewall is protected against changes to the subnet associations. Use this setting to protect against accidentally modifying the subnet associations for a firewall that is in use. When you create a firewall, the operation initializes this setting to <code>TRUE</code>.</p>
+    #[doc(hidden)]
     pub subnet_change_protection: bool,
     /// <p>A setting indicating whether the firewall is protected against a change to the firewall policy association. Use this setting to protect against accidentally modifying the firewall policy for a firewall that is in use. When you create a firewall, the operation initializes this setting to <code>TRUE</code>.</p>
+    #[doc(hidden)]
     pub firewall_policy_change_protection: bool,
     /// <p>A description of the firewall.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the firewall. </p>
+    #[doc(hidden)]
     pub firewall_id: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A complex type that contains the Amazon Web Services KMS encryption configuration settings for your firewall.</p>
+    #[doc(hidden)]
     pub encryption_configuration: std::option::Option<crate::model::EncryptionConfiguration>,
 }
 impl Firewall {
@@ -5800,11 +6306,10 @@ impl std::fmt::Debug for Firewall {
         formatter.finish()
     }
 }
-/// See [`Firewall`](crate::model::Firewall)
+/// See [`Firewall`](crate::model::Firewall).
 pub mod firewall {
 
-    /// A builder for [`Firewall`](crate::model::Firewall)
-    #[non_exhaustive]
+    /// A builder for [`Firewall`](crate::model::Firewall).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall_name: std::option::Option<std::string::String>,
@@ -5977,7 +6482,7 @@ pub mod firewall {
             self.encryption_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`Firewall`](crate::model::Firewall)
+        /// Consumes the builder and constructs a [`Firewall`](crate::model::Firewall).
         pub fn build(self) -> crate::model::Firewall {
             crate::model::Firewall {
                 firewall_name: self.firewall_name,
@@ -5999,7 +6504,7 @@ pub mod firewall {
     }
 }
 impl Firewall {
-    /// Creates a new builder-style object to manufacture [`Firewall`](crate::model::Firewall)
+    /// Creates a new builder-style object to manufacture [`Firewall`](crate::model::Firewall).
     pub fn builder() -> crate::model::firewall::Builder {
         crate::model::firewall::Builder::default()
     }

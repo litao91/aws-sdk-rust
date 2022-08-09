@@ -44,13 +44,20 @@ impl BadRequestDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InvalidConfigurationDetail {
     /// <p>The invalid or out-of-range validation constraint in your JSON schema that failed validation.</p>
+    #[doc(hidden)]
     pub constraint: std::option::Option<std::string::String>,
     /// <p>Location of the validation constraint in the configuration JSON schema that failed validation.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>The reason for an invalid configuration error.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p>The type of error for an invalid configuration.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
+    /// <p>Details about an error with Lambda when a synchronous extension experiences an error during an invocation.</p>
+    #[doc(hidden)]
+    pub value: std::option::Option<std::string::String>,
 }
 impl InvalidConfigurationDetail {
     /// <p>The invalid or out-of-range validation constraint in your JSON schema that failed validation.</p>
@@ -69,6 +76,10 @@ impl InvalidConfigurationDetail {
     pub fn r#type(&self) -> std::option::Option<&str> {
         self.r#type.as_deref()
     }
+    /// <p>Details about an error with Lambda when a synchronous extension experiences an error during an invocation.</p>
+    pub fn value(&self) -> std::option::Option<&str> {
+        self.value.as_deref()
+    }
 }
 impl std::fmt::Debug for InvalidConfigurationDetail {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -77,20 +88,21 @@ impl std::fmt::Debug for InvalidConfigurationDetail {
         formatter.field("location", &self.location);
         formatter.field("reason", &self.reason);
         formatter.field("r#type", &self.r#type);
+        formatter.field("value", &self.value);
         formatter.finish()
     }
 }
-/// See [`InvalidConfigurationDetail`](crate::model::InvalidConfigurationDetail)
+/// See [`InvalidConfigurationDetail`](crate::model::InvalidConfigurationDetail).
 pub mod invalid_configuration_detail {
 
-    /// A builder for [`InvalidConfigurationDetail`](crate::model::InvalidConfigurationDetail)
-    #[non_exhaustive]
+    /// A builder for [`InvalidConfigurationDetail`](crate::model::InvalidConfigurationDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) constraint: std::option::Option<std::string::String>,
         pub(crate) location: std::option::Option<std::string::String>,
         pub(crate) reason: std::option::Option<std::string::String>,
         pub(crate) r#type: std::option::Option<std::string::String>,
+        pub(crate) value: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>The invalid or out-of-range validation constraint in your JSON schema that failed validation.</p>
@@ -133,19 +145,30 @@ pub mod invalid_configuration_detail {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidConfigurationDetail`](crate::model::InvalidConfigurationDetail)
+        /// <p>Details about an error with Lambda when a synchronous extension experiences an error during an invocation.</p>
+        pub fn value(mut self, input: impl Into<std::string::String>) -> Self {
+            self.value = Some(input.into());
+            self
+        }
+        /// <p>Details about an error with Lambda when a synchronous extension experiences an error during an invocation.</p>
+        pub fn set_value(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.value = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`InvalidConfigurationDetail`](crate::model::InvalidConfigurationDetail).
         pub fn build(self) -> crate::model::InvalidConfigurationDetail {
             crate::model::InvalidConfigurationDetail {
                 constraint: self.constraint,
                 location: self.location,
                 reason: self.reason,
                 r#type: self.r#type,
+                value: self.value,
             }
         }
     }
 }
 impl InvalidConfigurationDetail {
-    /// Creates a new builder-style object to manufacture [`InvalidConfigurationDetail`](crate::model::InvalidConfigurationDetail)
+    /// Creates a new builder-style object to manufacture [`InvalidConfigurationDetail`](crate::model::InvalidConfigurationDetail).
     pub fn builder() -> crate::model::invalid_configuration_detail::Builder {
         crate::model::invalid_configuration_detail::Builder::default()
     }
@@ -202,13 +225,301 @@ impl AsRef<str> for BadRequestReason {
     }
 }
 
+/// <p>A value such as an Amazon Resource Name (ARN) or an Amazon Simple Notification Service topic entered in an extension when invoked. Parameter values are specified in an extension association. For more information about extensions, see <a href="https://docs.aws.amazon.com/appconfig/latest/userguide/working-with-appconfig-extensions.html">Working with AppConfig extensions</a> in the <i>AppConfig User Guide</i>.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct Parameter {
+    /// <p>Information about the parameter.</p>
+    #[doc(hidden)]
+    pub description: std::option::Option<std::string::String>,
+    /// <p>A parameter value must be specified in the extension association.</p>
+    #[doc(hidden)]
+    pub required: bool,
+}
+impl Parameter {
+    /// <p>Information about the parameter.</p>
+    pub fn description(&self) -> std::option::Option<&str> {
+        self.description.as_deref()
+    }
+    /// <p>A parameter value must be specified in the extension association.</p>
+    pub fn required(&self) -> bool {
+        self.required
+    }
+}
+impl std::fmt::Debug for Parameter {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("Parameter");
+        formatter.field("description", &self.description);
+        formatter.field("required", &self.required);
+        formatter.finish()
+    }
+}
+/// See [`Parameter`](crate::model::Parameter).
+pub mod parameter {
+
+    /// A builder for [`Parameter`](crate::model::Parameter).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) description: std::option::Option<std::string::String>,
+        pub(crate) required: std::option::Option<bool>,
+    }
+    impl Builder {
+        /// <p>Information about the parameter.</p>
+        pub fn description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.description = Some(input.into());
+            self
+        }
+        /// <p>Information about the parameter.</p>
+        pub fn set_description(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.description = input;
+            self
+        }
+        /// <p>A parameter value must be specified in the extension association.</p>
+        pub fn required(mut self, input: bool) -> Self {
+            self.required = Some(input);
+            self
+        }
+        /// <p>A parameter value must be specified in the extension association.</p>
+        pub fn set_required(mut self, input: std::option::Option<bool>) -> Self {
+            self.required = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`Parameter`](crate::model::Parameter).
+        pub fn build(self) -> crate::model::Parameter {
+            crate::model::Parameter {
+                description: self.description,
+                required: self.required.unwrap_or_default(),
+            }
+        }
+    }
+}
+impl Parameter {
+    /// Creates a new builder-style object to manufacture [`Parameter`](crate::model::Parameter).
+    pub fn builder() -> crate::model::parameter::Builder {
+        crate::model::parameter::Builder::default()
+    }
+}
+
+/// <p>An action defines the tasks the extension performs during the AppConfig workflow. Each action includes an action point such as <code>ON_CREATE_HOSTED_CONFIGURATION</code>, <code>PRE_DEPLOYMENT</code>, or <code>ON_DEPLOYMENT</code>. Each action also includes a name, a URI to an Lambda function, and an Amazon Resource Name (ARN) for an Identity and Access Management assume role. You specify the name, URI, and ARN for each <i>action point</i> defined in the extension. You can specify the following actions for an extension:</p>
+/// <ul>
+/// <li> <p> <code>PRE_CREATE_HOSTED_CONFIGURATION_VERSION</code> </p> </li>
+/// <li> <p> <code>PRE_START_DEPLOYMENT</code> </p> </li>
+/// <li> <p> <code>ON_DEPLOYMENT_START</code> </p> </li>
+/// <li> <p> <code>ON_DEPLOYMENT_STEP</code> </p> </li>
+/// <li> <p> <code>ON_DEPLOYMENT_BAKING</code> </p> </li>
+/// <li> <p> <code>ON_DEPLOYMENT_COMPLETE</code> </p> </li>
+/// <li> <p> <code>ON_DEPLOYMENT_ROLLED_BACK</code> </p> </li>
+/// </ul>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct Action {
+    /// <p>The action name.</p>
+    #[doc(hidden)]
+    pub name: std::option::Option<std::string::String>,
+    /// <p>Information about the action.</p>
+    #[doc(hidden)]
+    pub description: std::option::Option<std::string::String>,
+    /// <p>The extension URI associated to the action point in the extension definition. The URI can be an Amazon Resource Name (ARN) for one of the following: an Lambda function, an Amazon Simple Queue Service queue, an Amazon Simple Notification Service topic, or the Amazon EventBridge default event bus.</p>
+    #[doc(hidden)]
+    pub uri: std::option::Option<std::string::String>,
+    /// <p>An Amazon Resource Name (ARN) for an Identity and Access Management assume role.</p>
+    #[doc(hidden)]
+    pub role_arn: std::option::Option<std::string::String>,
+}
+impl Action {
+    /// <p>The action name.</p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+    /// <p>Information about the action.</p>
+    pub fn description(&self) -> std::option::Option<&str> {
+        self.description.as_deref()
+    }
+    /// <p>The extension URI associated to the action point in the extension definition. The URI can be an Amazon Resource Name (ARN) for one of the following: an Lambda function, an Amazon Simple Queue Service queue, an Amazon Simple Notification Service topic, or the Amazon EventBridge default event bus.</p>
+    pub fn uri(&self) -> std::option::Option<&str> {
+        self.uri.as_deref()
+    }
+    /// <p>An Amazon Resource Name (ARN) for an Identity and Access Management assume role.</p>
+    pub fn role_arn(&self) -> std::option::Option<&str> {
+        self.role_arn.as_deref()
+    }
+}
+impl std::fmt::Debug for Action {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("Action");
+        formatter.field("name", &self.name);
+        formatter.field("description", &self.description);
+        formatter.field("uri", &self.uri);
+        formatter.field("role_arn", &self.role_arn);
+        formatter.finish()
+    }
+}
+/// See [`Action`](crate::model::Action).
+pub mod action {
+
+    /// A builder for [`Action`](crate::model::Action).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) name: std::option::Option<std::string::String>,
+        pub(crate) description: std::option::Option<std::string::String>,
+        pub(crate) uri: std::option::Option<std::string::String>,
+        pub(crate) role_arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The action name.</p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>The action name.</p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// <p>Information about the action.</p>
+        pub fn description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.description = Some(input.into());
+            self
+        }
+        /// <p>Information about the action.</p>
+        pub fn set_description(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.description = input;
+            self
+        }
+        /// <p>The extension URI associated to the action point in the extension definition. The URI can be an Amazon Resource Name (ARN) for one of the following: an Lambda function, an Amazon Simple Queue Service queue, an Amazon Simple Notification Service topic, or the Amazon EventBridge default event bus.</p>
+        pub fn uri(mut self, input: impl Into<std::string::String>) -> Self {
+            self.uri = Some(input.into());
+            self
+        }
+        /// <p>The extension URI associated to the action point in the extension definition. The URI can be an Amazon Resource Name (ARN) for one of the following: an Lambda function, an Amazon Simple Queue Service queue, an Amazon Simple Notification Service topic, or the Amazon EventBridge default event bus.</p>
+        pub fn set_uri(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.uri = input;
+            self
+        }
+        /// <p>An Amazon Resource Name (ARN) for an Identity and Access Management assume role.</p>
+        pub fn role_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.role_arn = Some(input.into());
+            self
+        }
+        /// <p>An Amazon Resource Name (ARN) for an Identity and Access Management assume role.</p>
+        pub fn set_role_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.role_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`Action`](crate::model::Action).
+        pub fn build(self) -> crate::model::Action {
+            crate::model::Action {
+                name: self.name,
+                description: self.description,
+                uri: self.uri,
+                role_arn: self.role_arn,
+            }
+        }
+    }
+}
+impl Action {
+    /// Creates a new builder-style object to manufacture [`Action`](crate::model::Action).
+    pub fn builder() -> crate::model::action::Builder {
+        crate::model::action::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum ActionPoint {
+    #[allow(missing_docs)] // documentation missing in model
+    OnDeploymentBaking,
+    #[allow(missing_docs)] // documentation missing in model
+    OnDeploymentComplete,
+    #[allow(missing_docs)] // documentation missing in model
+    OnDeploymentRolledBack,
+    #[allow(missing_docs)] // documentation missing in model
+    OnDeploymentStart,
+    #[allow(missing_docs)] // documentation missing in model
+    OnDeploymentStep,
+    #[allow(missing_docs)] // documentation missing in model
+    PreCreateHostedConfigurationVersion,
+    #[allow(missing_docs)] // documentation missing in model
+    PreStartDeployment,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for ActionPoint {
+    fn from(s: &str) -> Self {
+        match s {
+            "ON_DEPLOYMENT_BAKING" => ActionPoint::OnDeploymentBaking,
+            "ON_DEPLOYMENT_COMPLETE" => ActionPoint::OnDeploymentComplete,
+            "ON_DEPLOYMENT_ROLLED_BACK" => ActionPoint::OnDeploymentRolledBack,
+            "ON_DEPLOYMENT_START" => ActionPoint::OnDeploymentStart,
+            "ON_DEPLOYMENT_STEP" => ActionPoint::OnDeploymentStep,
+            "PRE_CREATE_HOSTED_CONFIGURATION_VERSION" => {
+                ActionPoint::PreCreateHostedConfigurationVersion
+            }
+            "PRE_START_DEPLOYMENT" => ActionPoint::PreStartDeployment,
+            other => ActionPoint::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for ActionPoint {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(ActionPoint::from(s))
+    }
+}
+impl ActionPoint {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            ActionPoint::OnDeploymentBaking => "ON_DEPLOYMENT_BAKING",
+            ActionPoint::OnDeploymentComplete => "ON_DEPLOYMENT_COMPLETE",
+            ActionPoint::OnDeploymentRolledBack => "ON_DEPLOYMENT_ROLLED_BACK",
+            ActionPoint::OnDeploymentStart => "ON_DEPLOYMENT_START",
+            ActionPoint::OnDeploymentStep => "ON_DEPLOYMENT_STEP",
+            ActionPoint::PreCreateHostedConfigurationVersion => {
+                "PRE_CREATE_HOSTED_CONFIGURATION_VERSION"
+            }
+            ActionPoint::PreStartDeployment => "PRE_START_DEPLOYMENT",
+            ActionPoint::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &[
+            "ON_DEPLOYMENT_BAKING",
+            "ON_DEPLOYMENT_COMPLETE",
+            "ON_DEPLOYMENT_ROLLED_BACK",
+            "ON_DEPLOYMENT_START",
+            "ON_DEPLOYMENT_STEP",
+            "PRE_CREATE_HOSTED_CONFIGURATION_VERSION",
+            "PRE_START_DEPLOYMENT",
+        ]
+    }
+}
+impl AsRef<str> for ActionPoint {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
 /// <p>Amazon CloudWatch alarms to monitor during the deployment process.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Monitor {
     /// <p>Amazon Resource Name (ARN) of the Amazon CloudWatch alarm.</p>
+    #[doc(hidden)]
     pub alarm_arn: std::option::Option<std::string::String>,
     /// <p>ARN of an Identity and Access Management (IAM) role for AppConfig to monitor <code>AlarmArn</code>.</p>
+    #[doc(hidden)]
     pub alarm_role_arn: std::option::Option<std::string::String>,
 }
 impl Monitor {
@@ -229,11 +540,10 @@ impl std::fmt::Debug for Monitor {
         formatter.finish()
     }
 }
-/// See [`Monitor`](crate::model::Monitor)
+/// See [`Monitor`](crate::model::Monitor).
 pub mod monitor {
 
-    /// A builder for [`Monitor`](crate::model::Monitor)
-    #[non_exhaustive]
+    /// A builder for [`Monitor`](crate::model::Monitor).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alarm_arn: std::option::Option<std::string::String>,
@@ -263,7 +573,7 @@ pub mod monitor {
             self.alarm_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Monitor`](crate::model::Monitor)
+        /// Consumes the builder and constructs a [`Monitor`](crate::model::Monitor).
         pub fn build(self) -> crate::model::Monitor {
             crate::model::Monitor {
                 alarm_arn: self.alarm_arn,
@@ -273,7 +583,7 @@ pub mod monitor {
     }
 }
 impl Monitor {
-    /// Creates a new builder-style object to manufacture [`Monitor`](crate::model::Monitor)
+    /// Creates a new builder-style object to manufacture [`Monitor`](crate::model::Monitor).
     pub fn builder() -> crate::model::monitor::Builder {
         crate::model::monitor::Builder::default()
     }
@@ -462,8 +772,10 @@ impl AsRef<str> for GrowthType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Validator {
     /// <p>AppConfig supports validators of type <code>JSON_SCHEMA</code> and <code>LAMBDA</code> </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ValidatorType>,
     /// <p>Either the JSON Schema content or the Amazon Resource Name (ARN) of an Lambda function.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
 }
 impl Validator {
@@ -484,11 +796,10 @@ impl std::fmt::Debug for Validator {
         formatter.finish()
     }
 }
-/// See [`Validator`](crate::model::Validator)
+/// See [`Validator`](crate::model::Validator).
 pub mod validator {
 
-    /// A builder for [`Validator`](crate::model::Validator)
-    #[non_exhaustive]
+    /// A builder for [`Validator`](crate::model::Validator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::ValidatorType>,
@@ -515,7 +826,7 @@ pub mod validator {
             self.content = input;
             self
         }
-        /// Consumes the builder and constructs a [`Validator`](crate::model::Validator)
+        /// Consumes the builder and constructs a [`Validator`](crate::model::Validator).
         pub fn build(self) -> crate::model::Validator {
             crate::model::Validator {
                 r#type: self.r#type,
@@ -525,7 +836,7 @@ pub mod validator {
     }
 }
 impl Validator {
-    /// Creates a new builder-style object to manufacture [`Validator`](crate::model::Validator)
+    /// Creates a new builder-style object to manufacture [`Validator`](crate::model::Validator).
     pub fn builder() -> crate::model::validator::Builder {
         crate::model::validator::Builder::default()
     }
@@ -586,17 +897,163 @@ impl AsRef<str> for ValidatorType {
     }
 }
 
+/// <p>An extension that was invoked during a deployment.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct AppliedExtension {
+    /// <p>The system-generated ID of the extension.</p>
+    #[doc(hidden)]
+    pub extension_id: std::option::Option<std::string::String>,
+    /// <p>The system-generated ID for the association.</p>
+    #[doc(hidden)]
+    pub extension_association_id: std::option::Option<std::string::String>,
+    /// <p>The extension version number.</p>
+    #[doc(hidden)]
+    pub version_number: i32,
+    /// <p>One or more parameters for the actions called by the extension.</p>
+    #[doc(hidden)]
+    pub parameters:
+        std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
+}
+impl AppliedExtension {
+    /// <p>The system-generated ID of the extension.</p>
+    pub fn extension_id(&self) -> std::option::Option<&str> {
+        self.extension_id.as_deref()
+    }
+    /// <p>The system-generated ID for the association.</p>
+    pub fn extension_association_id(&self) -> std::option::Option<&str> {
+        self.extension_association_id.as_deref()
+    }
+    /// <p>The extension version number.</p>
+    pub fn version_number(&self) -> i32 {
+        self.version_number
+    }
+    /// <p>One or more parameters for the actions called by the extension.</p>
+    pub fn parameters(
+        &self,
+    ) -> std::option::Option<&std::collections::HashMap<std::string::String, std::string::String>>
+    {
+        self.parameters.as_ref()
+    }
+}
+impl std::fmt::Debug for AppliedExtension {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("AppliedExtension");
+        formatter.field("extension_id", &self.extension_id);
+        formatter.field("extension_association_id", &self.extension_association_id);
+        formatter.field("version_number", &self.version_number);
+        formatter.field("parameters", &self.parameters);
+        formatter.finish()
+    }
+}
+/// See [`AppliedExtension`](crate::model::AppliedExtension).
+pub mod applied_extension {
+
+    /// A builder for [`AppliedExtension`](crate::model::AppliedExtension).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) extension_id: std::option::Option<std::string::String>,
+        pub(crate) extension_association_id: std::option::Option<std::string::String>,
+        pub(crate) version_number: std::option::Option<i32>,
+        pub(crate) parameters: std::option::Option<
+            std::collections::HashMap<std::string::String, std::string::String>,
+        >,
+    }
+    impl Builder {
+        /// <p>The system-generated ID of the extension.</p>
+        pub fn extension_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.extension_id = Some(input.into());
+            self
+        }
+        /// <p>The system-generated ID of the extension.</p>
+        pub fn set_extension_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.extension_id = input;
+            self
+        }
+        /// <p>The system-generated ID for the association.</p>
+        pub fn extension_association_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.extension_association_id = Some(input.into());
+            self
+        }
+        /// <p>The system-generated ID for the association.</p>
+        pub fn set_extension_association_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.extension_association_id = input;
+            self
+        }
+        /// <p>The extension version number.</p>
+        pub fn version_number(mut self, input: i32) -> Self {
+            self.version_number = Some(input);
+            self
+        }
+        /// <p>The extension version number.</p>
+        pub fn set_version_number(mut self, input: std::option::Option<i32>) -> Self {
+            self.version_number = input;
+            self
+        }
+        /// Adds a key-value pair to `parameters`.
+        ///
+        /// To override the contents of this collection use [`set_parameters`](Self::set_parameters).
+        ///
+        /// <p>One or more parameters for the actions called by the extension.</p>
+        pub fn parameters(
+            mut self,
+            k: impl Into<std::string::String>,
+            v: impl Into<std::string::String>,
+        ) -> Self {
+            let mut hash_map = self.parameters.unwrap_or_default();
+            hash_map.insert(k.into(), v.into());
+            self.parameters = Some(hash_map);
+            self
+        }
+        /// <p>One or more parameters for the actions called by the extension.</p>
+        pub fn set_parameters(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<std::string::String, std::string::String>,
+            >,
+        ) -> Self {
+            self.parameters = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`AppliedExtension`](crate::model::AppliedExtension).
+        pub fn build(self) -> crate::model::AppliedExtension {
+            crate::model::AppliedExtension {
+                extension_id: self.extension_id,
+                extension_association_id: self.extension_association_id,
+                version_number: self.version_number.unwrap_or_default(),
+                parameters: self.parameters,
+            }
+        }
+    }
+}
+impl AppliedExtension {
+    /// Creates a new builder-style object to manufacture [`AppliedExtension`](crate::model::AppliedExtension).
+    pub fn builder() -> crate::model::applied_extension::Builder {
+        crate::model::applied_extension::Builder::default()
+    }
+}
+
 /// <p>An object that describes a deployment event.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeploymentEvent {
     /// <p>The type of deployment event. Deployment event types include the start, stop, or completion of a deployment; a percentage update; the start or stop of a bake period; and the start or completion of a rollback.</p>
+    #[doc(hidden)]
     pub event_type: std::option::Option<crate::model::DeploymentEventType>,
     /// <p>The entity that triggered the deployment event. Events can be triggered by a user, AppConfig, an Amazon CloudWatch alarm, or an internal error.</p>
+    #[doc(hidden)]
     pub triggered_by: std::option::Option<crate::model::TriggeredBy>,
     /// <p>A description of the deployment event. Descriptions include, but are not limited to, the user account or the Amazon CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the deployment, or in the case of an internal error, a recommendation to attempt a new deployment.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
+    /// <p>The list of extensions that were invoked as part of the deployment.</p>
+    #[doc(hidden)]
+    pub action_invocations: std::option::Option<std::vec::Vec<crate::model::ActionInvocation>>,
     /// <p>The date and time the event occurred.</p>
+    #[doc(hidden)]
     pub occurred_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DeploymentEvent {
@@ -612,6 +1069,10 @@ impl DeploymentEvent {
     pub fn description(&self) -> std::option::Option<&str> {
         self.description.as_deref()
     }
+    /// <p>The list of extensions that were invoked as part of the deployment.</p>
+    pub fn action_invocations(&self) -> std::option::Option<&[crate::model::ActionInvocation]> {
+        self.action_invocations.as_deref()
+    }
     /// <p>The date and time the event occurred.</p>
     pub fn occurred_at(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.occurred_at.as_ref()
@@ -623,20 +1084,22 @@ impl std::fmt::Debug for DeploymentEvent {
         formatter.field("event_type", &self.event_type);
         formatter.field("triggered_by", &self.triggered_by);
         formatter.field("description", &self.description);
+        formatter.field("action_invocations", &self.action_invocations);
         formatter.field("occurred_at", &self.occurred_at);
         formatter.finish()
     }
 }
-/// See [`DeploymentEvent`](crate::model::DeploymentEvent)
+/// See [`DeploymentEvent`](crate::model::DeploymentEvent).
 pub mod deployment_event {
 
-    /// A builder for [`DeploymentEvent`](crate::model::DeploymentEvent)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentEvent`](crate::model::DeploymentEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_type: std::option::Option<crate::model::DeploymentEventType>,
         pub(crate) triggered_by: std::option::Option<crate::model::TriggeredBy>,
         pub(crate) description: std::option::Option<std::string::String>,
+        pub(crate) action_invocations:
+            std::option::Option<std::vec::Vec<crate::model::ActionInvocation>>,
         pub(crate) occurred_at: std::option::Option<aws_smithy_types::DateTime>,
     }
     impl Builder {
@@ -676,6 +1139,25 @@ pub mod deployment_event {
             self.description = input;
             self
         }
+        /// Appends an item to `action_invocations`.
+        ///
+        /// To override the contents of this collection use [`set_action_invocations`](Self::set_action_invocations).
+        ///
+        /// <p>The list of extensions that were invoked as part of the deployment.</p>
+        pub fn action_invocations(mut self, input: crate::model::ActionInvocation) -> Self {
+            let mut v = self.action_invocations.unwrap_or_default();
+            v.push(input);
+            self.action_invocations = Some(v);
+            self
+        }
+        /// <p>The list of extensions that were invoked as part of the deployment.</p>
+        pub fn set_action_invocations(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ActionInvocation>>,
+        ) -> Self {
+            self.action_invocations = input;
+            self
+        }
         /// <p>The date and time the event occurred.</p>
         pub fn occurred_at(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.occurred_at = Some(input);
@@ -689,21 +1171,206 @@ pub mod deployment_event {
             self.occurred_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentEvent`](crate::model::DeploymentEvent)
+        /// Consumes the builder and constructs a [`DeploymentEvent`](crate::model::DeploymentEvent).
         pub fn build(self) -> crate::model::DeploymentEvent {
             crate::model::DeploymentEvent {
                 event_type: self.event_type,
                 triggered_by: self.triggered_by,
                 description: self.description,
+                action_invocations: self.action_invocations,
                 occurred_at: self.occurred_at,
             }
         }
     }
 }
 impl DeploymentEvent {
-    /// Creates a new builder-style object to manufacture [`DeploymentEvent`](crate::model::DeploymentEvent)
+    /// Creates a new builder-style object to manufacture [`DeploymentEvent`](crate::model::DeploymentEvent).
     pub fn builder() -> crate::model::deployment_event::Builder {
         crate::model::deployment_event::Builder::default()
+    }
+}
+
+/// <p>An extension that was invoked as part of a deployment event.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ActionInvocation {
+    /// <p>The name, the ID, or the Amazon Resource Name (ARN) of the extension.</p>
+    #[doc(hidden)]
+    pub extension_identifier: std::option::Option<std::string::String>,
+    /// <p>The name of the action.</p>
+    #[doc(hidden)]
+    pub action_name: std::option::Option<std::string::String>,
+    /// <p>The extension URI associated to the action point in the extension definition. The URI can be an Amazon Resource Name (ARN) for one of the following: an Lambda function, an Amazon Simple Queue Service queue, an Amazon Simple Notification Service topic, or the Amazon EventBridge default event bus.</p>
+    #[doc(hidden)]
+    pub uri: std::option::Option<std::string::String>,
+    /// <p>An Amazon Resource Name (ARN) for an Identity and Access Management assume role.</p>
+    #[doc(hidden)]
+    pub role_arn: std::option::Option<std::string::String>,
+    /// <p>The error message when an extension invocation fails.</p>
+    #[doc(hidden)]
+    pub error_message: std::option::Option<std::string::String>,
+    /// <p>The error code when an extension invocation fails.</p>
+    #[doc(hidden)]
+    pub error_code: std::option::Option<std::string::String>,
+    /// <p>A system-generated ID for this invocation.</p>
+    #[doc(hidden)]
+    pub invocation_id: std::option::Option<std::string::String>,
+}
+impl ActionInvocation {
+    /// <p>The name, the ID, or the Amazon Resource Name (ARN) of the extension.</p>
+    pub fn extension_identifier(&self) -> std::option::Option<&str> {
+        self.extension_identifier.as_deref()
+    }
+    /// <p>The name of the action.</p>
+    pub fn action_name(&self) -> std::option::Option<&str> {
+        self.action_name.as_deref()
+    }
+    /// <p>The extension URI associated to the action point in the extension definition. The URI can be an Amazon Resource Name (ARN) for one of the following: an Lambda function, an Amazon Simple Queue Service queue, an Amazon Simple Notification Service topic, or the Amazon EventBridge default event bus.</p>
+    pub fn uri(&self) -> std::option::Option<&str> {
+        self.uri.as_deref()
+    }
+    /// <p>An Amazon Resource Name (ARN) for an Identity and Access Management assume role.</p>
+    pub fn role_arn(&self) -> std::option::Option<&str> {
+        self.role_arn.as_deref()
+    }
+    /// <p>The error message when an extension invocation fails.</p>
+    pub fn error_message(&self) -> std::option::Option<&str> {
+        self.error_message.as_deref()
+    }
+    /// <p>The error code when an extension invocation fails.</p>
+    pub fn error_code(&self) -> std::option::Option<&str> {
+        self.error_code.as_deref()
+    }
+    /// <p>A system-generated ID for this invocation.</p>
+    pub fn invocation_id(&self) -> std::option::Option<&str> {
+        self.invocation_id.as_deref()
+    }
+}
+impl std::fmt::Debug for ActionInvocation {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ActionInvocation");
+        formatter.field("extension_identifier", &self.extension_identifier);
+        formatter.field("action_name", &self.action_name);
+        formatter.field("uri", &self.uri);
+        formatter.field("role_arn", &self.role_arn);
+        formatter.field("error_message", &self.error_message);
+        formatter.field("error_code", &self.error_code);
+        formatter.field("invocation_id", &self.invocation_id);
+        formatter.finish()
+    }
+}
+/// See [`ActionInvocation`](crate::model::ActionInvocation).
+pub mod action_invocation {
+
+    /// A builder for [`ActionInvocation`](crate::model::ActionInvocation).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) extension_identifier: std::option::Option<std::string::String>,
+        pub(crate) action_name: std::option::Option<std::string::String>,
+        pub(crate) uri: std::option::Option<std::string::String>,
+        pub(crate) role_arn: std::option::Option<std::string::String>,
+        pub(crate) error_message: std::option::Option<std::string::String>,
+        pub(crate) error_code: std::option::Option<std::string::String>,
+        pub(crate) invocation_id: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The name, the ID, or the Amazon Resource Name (ARN) of the extension.</p>
+        pub fn extension_identifier(mut self, input: impl Into<std::string::String>) -> Self {
+            self.extension_identifier = Some(input.into());
+            self
+        }
+        /// <p>The name, the ID, or the Amazon Resource Name (ARN) of the extension.</p>
+        pub fn set_extension_identifier(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.extension_identifier = input;
+            self
+        }
+        /// <p>The name of the action.</p>
+        pub fn action_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.action_name = Some(input.into());
+            self
+        }
+        /// <p>The name of the action.</p>
+        pub fn set_action_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.action_name = input;
+            self
+        }
+        /// <p>The extension URI associated to the action point in the extension definition. The URI can be an Amazon Resource Name (ARN) for one of the following: an Lambda function, an Amazon Simple Queue Service queue, an Amazon Simple Notification Service topic, or the Amazon EventBridge default event bus.</p>
+        pub fn uri(mut self, input: impl Into<std::string::String>) -> Self {
+            self.uri = Some(input.into());
+            self
+        }
+        /// <p>The extension URI associated to the action point in the extension definition. The URI can be an Amazon Resource Name (ARN) for one of the following: an Lambda function, an Amazon Simple Queue Service queue, an Amazon Simple Notification Service topic, or the Amazon EventBridge default event bus.</p>
+        pub fn set_uri(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.uri = input;
+            self
+        }
+        /// <p>An Amazon Resource Name (ARN) for an Identity and Access Management assume role.</p>
+        pub fn role_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.role_arn = Some(input.into());
+            self
+        }
+        /// <p>An Amazon Resource Name (ARN) for an Identity and Access Management assume role.</p>
+        pub fn set_role_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.role_arn = input;
+            self
+        }
+        /// <p>The error message when an extension invocation fails.</p>
+        pub fn error_message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.error_message = Some(input.into());
+            self
+        }
+        /// <p>The error message when an extension invocation fails.</p>
+        pub fn set_error_message(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.error_message = input;
+            self
+        }
+        /// <p>The error code when an extension invocation fails.</p>
+        pub fn error_code(mut self, input: impl Into<std::string::String>) -> Self {
+            self.error_code = Some(input.into());
+            self
+        }
+        /// <p>The error code when an extension invocation fails.</p>
+        pub fn set_error_code(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.error_code = input;
+            self
+        }
+        /// <p>A system-generated ID for this invocation.</p>
+        pub fn invocation_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.invocation_id = Some(input.into());
+            self
+        }
+        /// <p>A system-generated ID for this invocation.</p>
+        pub fn set_invocation_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.invocation_id = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ActionInvocation`](crate::model::ActionInvocation).
+        pub fn build(self) -> crate::model::ActionInvocation {
+            crate::model::ActionInvocation {
+                extension_identifier: self.extension_identifier,
+                action_name: self.action_name,
+                uri: self.uri,
+                role_arn: self.role_arn,
+                error_message: self.error_message,
+                error_code: self.error_code,
+                invocation_id: self.invocation_id,
+            }
+        }
+    }
+}
+impl ActionInvocation {
+    /// Creates a new builder-style object to manufacture [`ActionInvocation`](crate::model::ActionInvocation).
+    pub fn builder() -> crate::model::action_invocation::Builder {
+        crate::model::action_invocation::Builder::default()
     }
 }
 
@@ -931,14 +1598,19 @@ impl AsRef<str> for DeploymentState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HostedConfigurationVersionSummary {
     /// <p>The application ID.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The configuration profile ID.</p>
+    #[doc(hidden)]
     pub configuration_profile_id: std::option::Option<std::string::String>,
     /// <p>The configuration version.</p>
+    #[doc(hidden)]
     pub version_number: i32,
     /// <p>A description of the configuration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A standard MIME type describing the format of the configuration content. For more information, see <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
 }
 impl HostedConfigurationVersionSummary {
@@ -974,11 +1646,10 @@ impl std::fmt::Debug for HostedConfigurationVersionSummary {
         formatter.finish()
     }
 }
-/// See [`HostedConfigurationVersionSummary`](crate::model::HostedConfigurationVersionSummary)
+/// See [`HostedConfigurationVersionSummary`](crate::model::HostedConfigurationVersionSummary).
 pub mod hosted_configuration_version_summary {
 
-    /// A builder for [`HostedConfigurationVersionSummary`](crate::model::HostedConfigurationVersionSummary)
-    #[non_exhaustive]
+    /// A builder for [`HostedConfigurationVersionSummary`](crate::model::HostedConfigurationVersionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -1044,7 +1715,7 @@ pub mod hosted_configuration_version_summary {
             self.content_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`HostedConfigurationVersionSummary`](crate::model::HostedConfigurationVersionSummary)
+        /// Consumes the builder and constructs a [`HostedConfigurationVersionSummary`](crate::model::HostedConfigurationVersionSummary).
         pub fn build(self) -> crate::model::HostedConfigurationVersionSummary {
             crate::model::HostedConfigurationVersionSummary {
                 application_id: self.application_id,
@@ -1057,9 +1728,242 @@ pub mod hosted_configuration_version_summary {
     }
 }
 impl HostedConfigurationVersionSummary {
-    /// Creates a new builder-style object to manufacture [`HostedConfigurationVersionSummary`](crate::model::HostedConfigurationVersionSummary)
+    /// Creates a new builder-style object to manufacture [`HostedConfigurationVersionSummary`](crate::model::HostedConfigurationVersionSummary).
     pub fn builder() -> crate::model::hosted_configuration_version_summary::Builder {
         crate::model::hosted_configuration_version_summary::Builder::default()
+    }
+}
+
+/// <p>Information about an extension. Call <code>GetExtension</code> to get more information about an extension.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ExtensionSummary {
+    /// <p>The system-generated ID of the extension.</p>
+    #[doc(hidden)]
+    pub id: std::option::Option<std::string::String>,
+    /// <p>The extension name.</p>
+    #[doc(hidden)]
+    pub name: std::option::Option<std::string::String>,
+    /// <p>The extension version number.</p>
+    #[doc(hidden)]
+    pub version_number: i32,
+    /// <p>The system-generated Amazon Resource Name (ARN) for the extension.</p>
+    #[doc(hidden)]
+    pub arn: std::option::Option<std::string::String>,
+    /// <p>Information about the extension.</p>
+    #[doc(hidden)]
+    pub description: std::option::Option<std::string::String>,
+}
+impl ExtensionSummary {
+    /// <p>The system-generated ID of the extension.</p>
+    pub fn id(&self) -> std::option::Option<&str> {
+        self.id.as_deref()
+    }
+    /// <p>The extension name.</p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+    /// <p>The extension version number.</p>
+    pub fn version_number(&self) -> i32 {
+        self.version_number
+    }
+    /// <p>The system-generated Amazon Resource Name (ARN) for the extension.</p>
+    pub fn arn(&self) -> std::option::Option<&str> {
+        self.arn.as_deref()
+    }
+    /// <p>Information about the extension.</p>
+    pub fn description(&self) -> std::option::Option<&str> {
+        self.description.as_deref()
+    }
+}
+impl std::fmt::Debug for ExtensionSummary {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ExtensionSummary");
+        formatter.field("id", &self.id);
+        formatter.field("name", &self.name);
+        formatter.field("version_number", &self.version_number);
+        formatter.field("arn", &self.arn);
+        formatter.field("description", &self.description);
+        formatter.finish()
+    }
+}
+/// See [`ExtensionSummary`](crate::model::ExtensionSummary).
+pub mod extension_summary {
+
+    /// A builder for [`ExtensionSummary`](crate::model::ExtensionSummary).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) id: std::option::Option<std::string::String>,
+        pub(crate) name: std::option::Option<std::string::String>,
+        pub(crate) version_number: std::option::Option<i32>,
+        pub(crate) arn: std::option::Option<std::string::String>,
+        pub(crate) description: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The system-generated ID of the extension.</p>
+        pub fn id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.id = Some(input.into());
+            self
+        }
+        /// <p>The system-generated ID of the extension.</p>
+        pub fn set_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.id = input;
+            self
+        }
+        /// <p>The extension name.</p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>The extension name.</p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// <p>The extension version number.</p>
+        pub fn version_number(mut self, input: i32) -> Self {
+            self.version_number = Some(input);
+            self
+        }
+        /// <p>The extension version number.</p>
+        pub fn set_version_number(mut self, input: std::option::Option<i32>) -> Self {
+            self.version_number = input;
+            self
+        }
+        /// <p>The system-generated Amazon Resource Name (ARN) for the extension.</p>
+        pub fn arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.arn = Some(input.into());
+            self
+        }
+        /// <p>The system-generated Amazon Resource Name (ARN) for the extension.</p>
+        pub fn set_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.arn = input;
+            self
+        }
+        /// <p>Information about the extension.</p>
+        pub fn description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.description = Some(input.into());
+            self
+        }
+        /// <p>Information about the extension.</p>
+        pub fn set_description(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.description = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ExtensionSummary`](crate::model::ExtensionSummary).
+        pub fn build(self) -> crate::model::ExtensionSummary {
+            crate::model::ExtensionSummary {
+                id: self.id,
+                name: self.name,
+                version_number: self.version_number.unwrap_or_default(),
+                arn: self.arn,
+                description: self.description,
+            }
+        }
+    }
+}
+impl ExtensionSummary {
+    /// Creates a new builder-style object to manufacture [`ExtensionSummary`](crate::model::ExtensionSummary).
+    pub fn builder() -> crate::model::extension_summary::Builder {
+        crate::model::extension_summary::Builder::default()
+    }
+}
+
+/// <p>Information about an association between an extension and an AppConfig resource such as an application, environment, or configuration profile. Call <code>GetExtensionAssociation</code> to get more information about an association.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ExtensionAssociationSummary {
+    /// <p>The extension association ID. This ID is used to call other <code>ExtensionAssociation</code> API actions such as <code>GetExtensionAssociation</code> or <code>DeleteExtensionAssociation</code>.</p>
+    #[doc(hidden)]
+    pub id: std::option::Option<std::string::String>,
+    /// <p>The system-generated Amazon Resource Name (ARN) for the extension.</p>
+    #[doc(hidden)]
+    pub extension_arn: std::option::Option<std::string::String>,
+    /// <p>The ARNs of applications, configuration profiles, or environments defined in the association.</p>
+    #[doc(hidden)]
+    pub resource_arn: std::option::Option<std::string::String>,
+}
+impl ExtensionAssociationSummary {
+    /// <p>The extension association ID. This ID is used to call other <code>ExtensionAssociation</code> API actions such as <code>GetExtensionAssociation</code> or <code>DeleteExtensionAssociation</code>.</p>
+    pub fn id(&self) -> std::option::Option<&str> {
+        self.id.as_deref()
+    }
+    /// <p>The system-generated Amazon Resource Name (ARN) for the extension.</p>
+    pub fn extension_arn(&self) -> std::option::Option<&str> {
+        self.extension_arn.as_deref()
+    }
+    /// <p>The ARNs of applications, configuration profiles, or environments defined in the association.</p>
+    pub fn resource_arn(&self) -> std::option::Option<&str> {
+        self.resource_arn.as_deref()
+    }
+}
+impl std::fmt::Debug for ExtensionAssociationSummary {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ExtensionAssociationSummary");
+        formatter.field("id", &self.id);
+        formatter.field("extension_arn", &self.extension_arn);
+        formatter.field("resource_arn", &self.resource_arn);
+        formatter.finish()
+    }
+}
+/// See [`ExtensionAssociationSummary`](crate::model::ExtensionAssociationSummary).
+pub mod extension_association_summary {
+
+    /// A builder for [`ExtensionAssociationSummary`](crate::model::ExtensionAssociationSummary).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) id: std::option::Option<std::string::String>,
+        pub(crate) extension_arn: std::option::Option<std::string::String>,
+        pub(crate) resource_arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The extension association ID. This ID is used to call other <code>ExtensionAssociation</code> API actions such as <code>GetExtensionAssociation</code> or <code>DeleteExtensionAssociation</code>.</p>
+        pub fn id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.id = Some(input.into());
+            self
+        }
+        /// <p>The extension association ID. This ID is used to call other <code>ExtensionAssociation</code> API actions such as <code>GetExtensionAssociation</code> or <code>DeleteExtensionAssociation</code>.</p>
+        pub fn set_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.id = input;
+            self
+        }
+        /// <p>The system-generated Amazon Resource Name (ARN) for the extension.</p>
+        pub fn extension_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.extension_arn = Some(input.into());
+            self
+        }
+        /// <p>The system-generated Amazon Resource Name (ARN) for the extension.</p>
+        pub fn set_extension_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.extension_arn = input;
+            self
+        }
+        /// <p>The ARNs of applications, configuration profiles, or environments defined in the association.</p>
+        pub fn resource_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.resource_arn = Some(input.into());
+            self
+        }
+        /// <p>The ARNs of applications, configuration profiles, or environments defined in the association.</p>
+        pub fn set_resource_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.resource_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ExtensionAssociationSummary`](crate::model::ExtensionAssociationSummary).
+        pub fn build(self) -> crate::model::ExtensionAssociationSummary {
+            crate::model::ExtensionAssociationSummary {
+                id: self.id,
+                extension_arn: self.extension_arn,
+                resource_arn: self.resource_arn,
+            }
+        }
+    }
+}
+impl ExtensionAssociationSummary {
+    /// Creates a new builder-style object to manufacture [`ExtensionAssociationSummary`](crate::model::ExtensionAssociationSummary).
+    pub fn builder() -> crate::model::extension_association_summary::Builder {
+        crate::model::extension_association_summary::Builder::default()
     }
 }
 
@@ -1068,16 +1972,22 @@ impl HostedConfigurationVersionSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Environment {
     /// <p>The application ID.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The environment ID.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the environment.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the environment.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The state of the environment. An environment can be in one of the following states: <code>READY_FOR_DEPLOYMENT</code>, <code>DEPLOYING</code>, <code>ROLLING_BACK</code>, or <code>ROLLED_BACK</code> </p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::EnvironmentState>,
     /// <p>Amazon CloudWatch alarms monitored during the deployment.</p>
+    #[doc(hidden)]
     pub monitors: std::option::Option<std::vec::Vec<crate::model::Monitor>>,
 }
 impl Environment {
@@ -1118,11 +2028,10 @@ impl std::fmt::Debug for Environment {
         formatter.finish()
     }
 }
-/// See [`Environment`](crate::model::Environment)
+/// See [`Environment`](crate::model::Environment).
 pub mod environment {
 
-    /// A builder for [`Environment`](crate::model::Environment)
-    #[non_exhaustive]
+    /// A builder for [`Environment`](crate::model::Environment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -1208,7 +2117,7 @@ pub mod environment {
             self.monitors = input;
             self
         }
-        /// Consumes the builder and constructs a [`Environment`](crate::model::Environment)
+        /// Consumes the builder and constructs a [`Environment`](crate::model::Environment).
         pub fn build(self) -> crate::model::Environment {
             crate::model::Environment {
                 application_id: self.application_id,
@@ -1222,7 +2131,7 @@ pub mod environment {
     }
 }
 impl Environment {
-    /// Creates a new builder-style object to manufacture [`Environment`](crate::model::Environment)
+    /// Creates a new builder-style object to manufacture [`Environment`](crate::model::Environment).
     pub fn builder() -> crate::model::environment::Builder {
         crate::model::environment::Builder::default()
     }
@@ -1233,20 +2142,28 @@ impl Environment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeploymentStrategy {
     /// <p>The deployment strategy ID.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the deployment strategy.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the deployment strategy.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Total amount of time the deployment lasted.</p>
+    #[doc(hidden)]
     pub deployment_duration_in_minutes: i32,
     /// <p>The algorithm used to define how percentage grew over time.</p>
+    #[doc(hidden)]
     pub growth_type: std::option::Option<crate::model::GrowthType>,
     /// <p>The percentage of targets that received a deployed configuration during each interval.</p>
+    #[doc(hidden)]
     pub growth_factor: f32,
     /// <p>The amount of time that AppConfig monitored for alarms before considering the deployment to be complete and no longer eligible for automatic rollback.</p>
+    #[doc(hidden)]
     pub final_bake_time_in_minutes: i32,
     /// <p>Save the deployment strategy to a Systems Manager (SSM) document.</p>
+    #[doc(hidden)]
     pub replicate_to: std::option::Option<crate::model::ReplicateTo>,
 }
 impl DeploymentStrategy {
@@ -1303,11 +2220,10 @@ impl std::fmt::Debug for DeploymentStrategy {
         formatter.finish()
     }
 }
-/// See [`DeploymentStrategy`](crate::model::DeploymentStrategy)
+/// See [`DeploymentStrategy`](crate::model::DeploymentStrategy).
 pub mod deployment_strategy {
 
-    /// A builder for [`DeploymentStrategy`](crate::model::DeploymentStrategy)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentStrategy`](crate::model::DeploymentStrategy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1409,7 +2325,7 @@ pub mod deployment_strategy {
             self.replicate_to = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentStrategy`](crate::model::DeploymentStrategy)
+        /// Consumes the builder and constructs a [`DeploymentStrategy`](crate::model::DeploymentStrategy).
         pub fn build(self) -> crate::model::DeploymentStrategy {
             crate::model::DeploymentStrategy {
                 id: self.id,
@@ -1427,7 +2343,7 @@ pub mod deployment_strategy {
     }
 }
 impl DeploymentStrategy {
-    /// Creates a new builder-style object to manufacture [`DeploymentStrategy`](crate::model::DeploymentStrategy)
+    /// Creates a new builder-style object to manufacture [`DeploymentStrategy`](crate::model::DeploymentStrategy).
     pub fn builder() -> crate::model::deployment_strategy::Builder {
         crate::model::deployment_strategy::Builder::default()
     }
@@ -1438,26 +2354,37 @@ impl DeploymentStrategy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeploymentSummary {
     /// <p>The sequence number of the deployment.</p>
+    #[doc(hidden)]
     pub deployment_number: i32,
     /// <p>The name of the configuration.</p>
+    #[doc(hidden)]
     pub configuration_name: std::option::Option<std::string::String>,
     /// <p>The version of the configuration.</p>
+    #[doc(hidden)]
     pub configuration_version: std::option::Option<std::string::String>,
     /// <p>Total amount of time the deployment lasted.</p>
+    #[doc(hidden)]
     pub deployment_duration_in_minutes: i32,
     /// <p>The algorithm used to define how percentage grows over time.</p>
+    #[doc(hidden)]
     pub growth_type: std::option::Option<crate::model::GrowthType>,
     /// <p>The percentage of targets to receive a deployed configuration during each interval.</p>
+    #[doc(hidden)]
     pub growth_factor: f32,
     /// <p>The amount of time that AppConfig monitors for alarms before considering the deployment to be complete and no longer eligible for automatic rollback.</p>
+    #[doc(hidden)]
     pub final_bake_time_in_minutes: i32,
     /// <p>The state of the deployment.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::DeploymentState>,
     /// <p>The percentage of targets for which the deployment is available.</p>
+    #[doc(hidden)]
     pub percentage_complete: f32,
     /// <p>Time the deployment started.</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Time the deployment completed.</p>
+    #[doc(hidden)]
     pub completed_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DeploymentSummary {
@@ -1529,11 +2456,10 @@ impl std::fmt::Debug for DeploymentSummary {
         formatter.finish()
     }
 }
-/// See [`DeploymentSummary`](crate::model::DeploymentSummary)
+/// See [`DeploymentSummary`](crate::model::DeploymentSummary).
 pub mod deployment_summary {
 
-    /// A builder for [`DeploymentSummary`](crate::model::DeploymentSummary)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentSummary`](crate::model::DeploymentSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_number: std::option::Option<i32>,
@@ -1680,7 +2606,7 @@ pub mod deployment_summary {
             self.completed_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentSummary`](crate::model::DeploymentSummary)
+        /// Consumes the builder and constructs a [`DeploymentSummary`](crate::model::DeploymentSummary).
         pub fn build(self) -> crate::model::DeploymentSummary {
             crate::model::DeploymentSummary {
                 deployment_number: self.deployment_number.unwrap_or_default(),
@@ -1701,7 +2627,7 @@ pub mod deployment_summary {
     }
 }
 impl DeploymentSummary {
-    /// Creates a new builder-style object to manufacture [`DeploymentSummary`](crate::model::DeploymentSummary)
+    /// Creates a new builder-style object to manufacture [`DeploymentSummary`](crate::model::DeploymentSummary).
     pub fn builder() -> crate::model::deployment_summary::Builder {
         crate::model::deployment_summary::Builder::default()
     }
@@ -1712,18 +2638,24 @@ impl DeploymentSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigurationProfileSummary {
     /// <p>The application ID.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The ID of the configuration profile.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the configuration profile.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The URI location of the configuration.</p>
+    #[doc(hidden)]
     pub location_uri: std::option::Option<std::string::String>,
     /// <p>The types of validators in the configuration profile.</p>
+    #[doc(hidden)]
     pub validator_types: std::option::Option<std::vec::Vec<crate::model::ValidatorType>>,
     /// <p>The type of configurations contained in the profile. AppConfig supports <code>feature flags</code> and <code>freeform</code> configurations. We recommend you create feature flag configurations to enable or disable new features and freeform configurations to distribute configurations to an application. When calling this API, enter one of the following values for <code>Type</code>:</p>
     /// <p> <code>AWS.AppConfig.FeatureFlags</code> </p>
     /// <p> <code>AWS.Freeform</code> </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
 }
 impl ConfigurationProfileSummary {
@@ -1766,11 +2698,10 @@ impl std::fmt::Debug for ConfigurationProfileSummary {
         formatter.finish()
     }
 }
-/// See [`ConfigurationProfileSummary`](crate::model::ConfigurationProfileSummary)
+/// See [`ConfigurationProfileSummary`](crate::model::ConfigurationProfileSummary).
 pub mod configuration_profile_summary {
 
-    /// A builder for [`ConfigurationProfileSummary`](crate::model::ConfigurationProfileSummary)
-    #[non_exhaustive]
+    /// A builder for [`ConfigurationProfileSummary`](crate::model::ConfigurationProfileSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -1857,7 +2788,7 @@ pub mod configuration_profile_summary {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigurationProfileSummary`](crate::model::ConfigurationProfileSummary)
+        /// Consumes the builder and constructs a [`ConfigurationProfileSummary`](crate::model::ConfigurationProfileSummary).
         pub fn build(self) -> crate::model::ConfigurationProfileSummary {
             crate::model::ConfigurationProfileSummary {
                 application_id: self.application_id,
@@ -1871,7 +2802,7 @@ pub mod configuration_profile_summary {
     }
 }
 impl ConfigurationProfileSummary {
-    /// Creates a new builder-style object to manufacture [`ConfigurationProfileSummary`](crate::model::ConfigurationProfileSummary)
+    /// Creates a new builder-style object to manufacture [`ConfigurationProfileSummary`](crate::model::ConfigurationProfileSummary).
     pub fn builder() -> crate::model::configuration_profile_summary::Builder {
         crate::model::configuration_profile_summary::Builder::default()
     }
@@ -1882,10 +2813,13 @@ impl ConfigurationProfileSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Application {
     /// <p>The application ID.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The application name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the application.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl Application {
@@ -1911,11 +2845,10 @@ impl std::fmt::Debug for Application {
         formatter.finish()
     }
 }
-/// See [`Application`](crate::model::Application)
+/// See [`Application`](crate::model::Application).
 pub mod application {
 
-    /// A builder for [`Application`](crate::model::Application)
-    #[non_exhaustive]
+    /// A builder for [`Application`](crate::model::Application).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1953,7 +2886,7 @@ pub mod application {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`Application`](crate::model::Application)
+        /// Consumes the builder and constructs a [`Application`](crate::model::Application).
         pub fn build(self) -> crate::model::Application {
             crate::model::Application {
                 id: self.id,
@@ -1964,7 +2897,7 @@ pub mod application {
     }
 }
 impl Application {
-    /// Creates a new builder-style object to manufacture [`Application`](crate::model::Application)
+    /// Creates a new builder-style object to manufacture [`Application`](crate::model::Application).
     pub fn builder() -> crate::model::application::Builder {
         crate::model::application::Builder::default()
     }

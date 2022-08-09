@@ -6,16 +6,22 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SshPublicKey {
     /// <p>The name of the IAM user associated with the SSH public key.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the SSH public key.</p>
+    #[doc(hidden)]
     pub ssh_public_key_id: std::option::Option<std::string::String>,
     /// <p>The MD5 message digest of the SSH public key.</p>
+    #[doc(hidden)]
     pub fingerprint: std::option::Option<std::string::String>,
     /// <p>The SSH public key.</p>
+    #[doc(hidden)]
     pub ssh_public_key_body: std::option::Option<std::string::String>,
     /// <p>The status of the SSH public key. <code>Active</code> means that the key can be used for authentication with an CodeCommit repository. <code>Inactive</code> means that the key cannot be used.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusType>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the SSH public key was uploaded.</p>
+    #[doc(hidden)]
     pub upload_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SshPublicKey {
@@ -56,11 +62,10 @@ impl std::fmt::Debug for SshPublicKey {
         formatter.finish()
     }
 }
-/// See [`SshPublicKey`](crate::model::SshPublicKey)
+/// See [`SshPublicKey`](crate::model::SshPublicKey).
 pub mod ssh_public_key {
 
-    /// A builder for [`SshPublicKey`](crate::model::SshPublicKey)
-    #[non_exhaustive]
+    /// A builder for [`SshPublicKey`](crate::model::SshPublicKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -140,7 +145,7 @@ pub mod ssh_public_key {
             self.upload_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`SshPublicKey`](crate::model::SshPublicKey)
+        /// Consumes the builder and constructs a [`SshPublicKey`](crate::model::SshPublicKey).
         pub fn build(self) -> crate::model::SshPublicKey {
             crate::model::SshPublicKey {
                 user_name: self.user_name,
@@ -154,7 +159,7 @@ pub mod ssh_public_key {
     }
 }
 impl SshPublicKey {
-    /// Creates a new builder-style object to manufacture [`SshPublicKey`](crate::model::SshPublicKey)
+    /// Creates a new builder-style object to manufacture [`SshPublicKey`](crate::model::SshPublicKey).
     pub fn builder() -> crate::model::ssh_public_key::Builder {
         crate::model::ssh_public_key::Builder::default()
     }
@@ -221,14 +226,19 @@ impl AsRef<str> for StatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SigningCertificate {
     /// <p>The name of the user the signing certificate is associated with.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The ID for the signing certificate.</p>
+    #[doc(hidden)]
     pub certificate_id: std::option::Option<std::string::String>,
     /// <p>The contents of the signing certificate.</p>
+    #[doc(hidden)]
     pub certificate_body: std::option::Option<std::string::String>,
     /// <p>The status of the signing certificate. <code>Active</code> means that the key is valid for API calls, while <code>Inactive</code> means it is not.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusType>,
     /// <p>The date when the signing certificate was uploaded.</p>
+    #[doc(hidden)]
     pub upload_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SigningCertificate {
@@ -264,11 +274,10 @@ impl std::fmt::Debug for SigningCertificate {
         formatter.finish()
     }
 }
-/// See [`SigningCertificate`](crate::model::SigningCertificate)
+/// See [`SigningCertificate`](crate::model::SigningCertificate).
 pub mod signing_certificate {
 
-    /// A builder for [`SigningCertificate`](crate::model::SigningCertificate)
-    #[non_exhaustive]
+    /// A builder for [`SigningCertificate`](crate::model::SigningCertificate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -337,7 +346,7 @@ pub mod signing_certificate {
             self.upload_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`SigningCertificate`](crate::model::SigningCertificate)
+        /// Consumes the builder and constructs a [`SigningCertificate`](crate::model::SigningCertificate).
         pub fn build(self) -> crate::model::SigningCertificate {
             crate::model::SigningCertificate {
                 user_name: self.user_name,
@@ -350,7 +359,7 @@ pub mod signing_certificate {
     }
 }
 impl SigningCertificate {
-    /// Creates a new builder-style object to manufacture [`SigningCertificate`](crate::model::SigningCertificate)
+    /// Creates a new builder-style object to manufacture [`SigningCertificate`](crate::model::SigningCertificate).
     pub fn builder() -> crate::model::signing_certificate::Builder {
         crate::model::signing_certificate::Builder::default()
     }
@@ -361,10 +370,12 @@ impl SigningCertificate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key name that can be used to look up or retrieve the associated value. For example, <code>Department</code> or <code>Cost Center</code> are common choices.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value associated with this tag. For example, tags with a key name of <code>Department</code> could have values such as <code>Human Resources</code>, <code>Accounting</code>, and <code>Support</code>. Tags with a key name of <code>Cost Center</code> might have values that consist of the number associated with the different cost centers in your company. Typically, many resources have tags with the same key name but with different values.</p> <note>
     /// <p>Amazon Web Services always interprets the tag <code>Value</code> as a single string. If you need to store an array, you can store comma-separated values in the string. However, you must interpret the value in your code.</p>
     /// </note>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -387,11 +398,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -422,7 +432,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -432,7 +442,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -444,16 +454,22 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerCertificateMetadata {
     /// <p> The path to the server certificate. For more information about paths, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The name that identifies the server certificate.</p>
+    #[doc(hidden)]
     pub server_certificate_name: std::option::Option<std::string::String>,
     /// <p> The stable and unique string identifying the server certificate. For more information about IDs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub server_certificate_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) specifying the server certificate. For more information about ARNs and how to use them in policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date when the server certificate was uploaded.</p>
+    #[doc(hidden)]
     pub upload_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date on which the certificate is set to expire.</p>
+    #[doc(hidden)]
     pub expiration: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ServerCertificateMetadata {
@@ -494,11 +510,10 @@ impl std::fmt::Debug for ServerCertificateMetadata {
         formatter.finish()
     }
 }
-/// See [`ServerCertificateMetadata`](crate::model::ServerCertificateMetadata)
+/// See [`ServerCertificateMetadata`](crate::model::ServerCertificateMetadata).
 pub mod server_certificate_metadata {
 
-    /// A builder for [`ServerCertificateMetadata`](crate::model::ServerCertificateMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ServerCertificateMetadata`](crate::model::ServerCertificateMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::string::String>,
@@ -581,7 +596,7 @@ pub mod server_certificate_metadata {
             self.expiration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerCertificateMetadata`](crate::model::ServerCertificateMetadata)
+        /// Consumes the builder and constructs a [`ServerCertificateMetadata`](crate::model::ServerCertificateMetadata).
         pub fn build(self) -> crate::model::ServerCertificateMetadata {
             crate::model::ServerCertificateMetadata {
                 path: self.path,
@@ -595,7 +610,7 @@ pub mod server_certificate_metadata {
     }
 }
 impl ServerCertificateMetadata {
-    /// Creates a new builder-style object to manufacture [`ServerCertificateMetadata`](crate::model::ServerCertificateMetadata)
+    /// Creates a new builder-style object to manufacture [`ServerCertificateMetadata`](crate::model::ServerCertificateMetadata).
     pub fn builder() -> crate::model::server_certificate_metadata::Builder {
         crate::model::server_certificate_metadata::Builder::default()
     }
@@ -606,27 +621,38 @@ impl ServerCertificateMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Role {
     /// <p> The path to the role. For more information about paths, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The friendly name that identifies the role.</p>
+    #[doc(hidden)]
     pub role_name: std::option::Option<std::string::String>,
     /// <p> The stable and unique string identifying the role. For more information about IDs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub role_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) specifying the role. For more information about ARNs and how to use them in policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i> guide. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the role was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The policy that grants an entity permission to assume the role.</p>
+    #[doc(hidden)]
     pub assume_role_policy_document: std::option::Option<std::string::String>,
     /// <p>A description of the role that you provide.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The maximum session duration (in seconds) for the specified role. Anyone who uses the CLI, or API to assume the role can specify the duration using the optional <code>DurationSeconds</code> API parameter or <code>duration-seconds</code> CLI parameter.</p>
+    #[doc(hidden)]
     pub max_session_duration: std::option::Option<i32>,
     /// <p>The ARN of the policy used to set the permissions boundary for the role.</p>
     /// <p>For more information about permissions boundaries, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions boundaries for IAM identities </a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub permissions_boundary: std::option::Option<crate::model::AttachedPermissionsBoundary>,
     /// <p>A list of tags that are attached to the role. For more information about tagging, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM resources</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Contains information about the last time that an IAM role was used. This includes the date and time and the Region in which the role was last used. Activity is only reported for the trailing 400 days. This period can be shorter if your Region began supporting these features within the last year. The role might have been used more than 400 days ago. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#access-advisor_tracking-period">Regions where data is tracked</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub role_last_used: std::option::Option<crate::model::RoleLastUsed>,
 }
 impl Role {
@@ -698,11 +724,10 @@ impl std::fmt::Debug for Role {
         formatter.finish()
     }
 }
-/// See [`Role`](crate::model::Role)
+/// See [`Role`](crate::model::Role).
 pub mod role {
 
-    /// A builder for [`Role`](crate::model::Role)
-    #[non_exhaustive]
+    /// A builder for [`Role`](crate::model::Role).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::string::String>,
@@ -858,7 +883,7 @@ pub mod role {
             self.role_last_used = input;
             self
         }
-        /// Consumes the builder and constructs a [`Role`](crate::model::Role)
+        /// Consumes the builder and constructs a [`Role`](crate::model::Role).
         pub fn build(self) -> crate::model::Role {
             crate::model::Role {
                 path: self.path,
@@ -877,7 +902,7 @@ pub mod role {
     }
 }
 impl Role {
-    /// Creates a new builder-style object to manufacture [`Role`](crate::model::Role)
+    /// Creates a new builder-style object to manufacture [`Role`](crate::model::Role).
     pub fn builder() -> crate::model::role::Builder {
         crate::model::role::Builder::default()
     }
@@ -890,8 +915,10 @@ impl Role {
 pub struct RoleLastUsed {
     /// <p>The date and time, in&nbsp;<a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a> that the role was last used.</p>
     /// <p>This field is null if the role has not been used within the IAM tracking period. For more information about the tracking period, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#access-advisor_tracking-period">Regions where data is tracked</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub last_used_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the Amazon Web Services Region in which the role was last used.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
 }
 impl RoleLastUsed {
@@ -913,11 +940,10 @@ impl std::fmt::Debug for RoleLastUsed {
         formatter.finish()
     }
 }
-/// See [`RoleLastUsed`](crate::model::RoleLastUsed)
+/// See [`RoleLastUsed`](crate::model::RoleLastUsed).
 pub mod role_last_used {
 
-    /// A builder for [`RoleLastUsed`](crate::model::RoleLastUsed)
-    #[non_exhaustive]
+    /// A builder for [`RoleLastUsed`](crate::model::RoleLastUsed).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) last_used_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -949,7 +975,7 @@ pub mod role_last_used {
             self.region = input;
             self
         }
-        /// Consumes the builder and constructs a [`RoleLastUsed`](crate::model::RoleLastUsed)
+        /// Consumes the builder and constructs a [`RoleLastUsed`](crate::model::RoleLastUsed).
         pub fn build(self) -> crate::model::RoleLastUsed {
             crate::model::RoleLastUsed {
                 last_used_date: self.last_used_date,
@@ -959,7 +985,7 @@ pub mod role_last_used {
     }
 }
 impl RoleLastUsed {
-    /// Creates a new builder-style object to manufacture [`RoleLastUsed`](crate::model::RoleLastUsed)
+    /// Creates a new builder-style object to manufacture [`RoleLastUsed`](crate::model::RoleLastUsed).
     pub fn builder() -> crate::model::role_last_used::Builder {
         crate::model::role_last_used::Builder::default()
     }
@@ -972,9 +998,11 @@ impl RoleLastUsed {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttachedPermissionsBoundary {
     /// <p> The permissions boundary usage type that indicates what type of IAM resource is used as the permissions boundary for an entity. This data type can only have a value of <code>Policy</code>.</p>
+    #[doc(hidden)]
     pub permissions_boundary_type:
         std::option::Option<crate::model::PermissionsBoundaryAttachmentType>,
     /// <p> The ARN of the policy used to set the permissions boundary for the user or role.</p>
+    #[doc(hidden)]
     pub permissions_boundary_arn: std::option::Option<std::string::String>,
 }
 impl AttachedPermissionsBoundary {
@@ -997,11 +1025,10 @@ impl std::fmt::Debug for AttachedPermissionsBoundary {
         formatter.finish()
     }
 }
-/// See [`AttachedPermissionsBoundary`](crate::model::AttachedPermissionsBoundary)
+/// See [`AttachedPermissionsBoundary`](crate::model::AttachedPermissionsBoundary).
 pub mod attached_permissions_boundary {
 
-    /// A builder for [`AttachedPermissionsBoundary`](crate::model::AttachedPermissionsBoundary)
-    #[non_exhaustive]
+    /// A builder for [`AttachedPermissionsBoundary`](crate::model::AttachedPermissionsBoundary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permissions_boundary_type:
@@ -1038,7 +1065,7 @@ pub mod attached_permissions_boundary {
             self.permissions_boundary_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttachedPermissionsBoundary`](crate::model::AttachedPermissionsBoundary)
+        /// Consumes the builder and constructs a [`AttachedPermissionsBoundary`](crate::model::AttachedPermissionsBoundary).
         pub fn build(self) -> crate::model::AttachedPermissionsBoundary {
             crate::model::AttachedPermissionsBoundary {
                 permissions_boundary_type: self.permissions_boundary_type,
@@ -1048,7 +1075,7 @@ pub mod attached_permissions_boundary {
     }
 }
 impl AttachedPermissionsBoundary {
-    /// Creates a new builder-style object to manufacture [`AttachedPermissionsBoundary`](crate::model::AttachedPermissionsBoundary)
+    /// Creates a new builder-style object to manufacture [`AttachedPermissionsBoundary`](crate::model::AttachedPermissionsBoundary).
     pub fn builder() -> crate::model::attached_permissions_boundary::Builder {
         crate::model::attached_permissions_boundary::Builder::default()
     }
@@ -1111,29 +1138,38 @@ impl AsRef<str> for PermissionsBoundaryAttachmentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EvaluationResult {
     /// <p>The name of the API operation tested on the indicated resource.</p>
+    #[doc(hidden)]
     pub eval_action_name: std::option::Option<std::string::String>,
     /// <p>The ARN of the resource that the indicated API operation was tested on.</p>
+    #[doc(hidden)]
     pub eval_resource_name: std::option::Option<std::string::String>,
     /// <p>The result of the simulation.</p>
+    #[doc(hidden)]
     pub eval_decision: std::option::Option<crate::model::PolicyEvaluationDecisionType>,
     /// <p>A list of the statements in the input policies that determine the result for this scenario. Remember that even if multiple statements allow the operation on the resource, if only one statement denies that operation, then the explicit deny overrides any allow. In addition, the deny statement is the only entry included in the result.</p>
+    #[doc(hidden)]
     pub matched_statements: std::option::Option<std::vec::Vec<crate::model::Statement>>,
     /// <p>A list of context keys that are required by the included input policies but that were not provided by one of the input parameters. This list is used when the resource in a simulation is "*", either explicitly, or when the <code>ResourceArns</code> parameter blank. If you include a list of resources, then any missing context values are instead included under the <code>ResourceSpecificResults</code> section. To discover the context keys used by a set of policies, you can call <code>GetContextKeysForCustomPolicy</code> or <code>GetContextKeysForPrincipalPolicy</code>.</p>
+    #[doc(hidden)]
     pub missing_context_values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A structure that details how Organizations and its service control policies affect the results of the simulation. Only applies if the simulated user's account is part of an organization.</p>
+    #[doc(hidden)]
     pub organizations_decision_detail:
         std::option::Option<crate::model::OrganizationsDecisionDetail>,
     /// <p>Contains information about the effect that a permissions boundary has on a policy simulation when the boundary is applied to an IAM entity.</p>
+    #[doc(hidden)]
     pub permissions_boundary_decision_detail:
         std::option::Option<crate::model::PermissionsBoundaryDecisionDetail>,
     /// <p>Additional details about the results of the cross-account evaluation decision. This parameter is populated for only cross-account simulations. It contains a brief summary of how each policy type contributes to the final evaluation decision.</p>
     /// <p>If the simulation evaluates policies within the same account and includes a resource ARN, then the parameter is present but the response is empty. If the simulation evaluates policies within the same account and specifies all resources (<code>*</code>), then the parameter is not returned.</p>
     /// <p>When you make a cross-account request, Amazon Web Services evaluates the request in the trusting account and the trusted account. The request is allowed only if both evaluations return <code>true</code>. For more information about how policies are evaluated, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html#policy-eval-basics">Evaluating policies within a single account</a>.</p>
     /// <p>If an Organizations SCP included in the evaluation denies access, the simulation ends. In this case, policy evaluation does not proceed any further and this parameter is not returned.</p>
+    #[doc(hidden)]
     pub eval_decision_details: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::PolicyEvaluationDecisionType>,
     >,
     /// <p>The individual results of the simulation of the API operation specified in EvalActionName on each resource.</p>
+    #[doc(hidden)]
     pub resource_specific_results:
         std::option::Option<std::vec::Vec<crate::model::ResourceSpecificResult>>,
 }
@@ -1211,11 +1247,10 @@ impl std::fmt::Debug for EvaluationResult {
         formatter.finish()
     }
 }
-/// See [`EvaluationResult`](crate::model::EvaluationResult)
+/// See [`EvaluationResult`](crate::model::EvaluationResult).
 pub mod evaluation_result {
 
-    /// A builder for [`EvaluationResult`](crate::model::EvaluationResult)
-    #[non_exhaustive]
+    /// A builder for [`EvaluationResult`](crate::model::EvaluationResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) eval_action_name: std::option::Option<std::string::String>,
@@ -1402,7 +1437,7 @@ pub mod evaluation_result {
             self.resource_specific_results = input;
             self
         }
-        /// Consumes the builder and constructs a [`EvaluationResult`](crate::model::EvaluationResult)
+        /// Consumes the builder and constructs a [`EvaluationResult`](crate::model::EvaluationResult).
         pub fn build(self) -> crate::model::EvaluationResult {
             crate::model::EvaluationResult {
                 eval_action_name: self.eval_action_name,
@@ -1419,7 +1454,7 @@ pub mod evaluation_result {
     }
 }
 impl EvaluationResult {
-    /// Creates a new builder-style object to manufacture [`EvaluationResult`](crate::model::EvaluationResult)
+    /// Creates a new builder-style object to manufacture [`EvaluationResult`](crate::model::EvaluationResult).
     pub fn builder() -> crate::model::evaluation_result::Builder {
         crate::model::evaluation_result::Builder::default()
     }
@@ -1431,18 +1466,24 @@ impl EvaluationResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceSpecificResult {
     /// <p>The name of the simulated resource, in Amazon Resource Name (ARN) format.</p>
+    #[doc(hidden)]
     pub eval_resource_name: std::option::Option<std::string::String>,
     /// <p>The result of the simulation of the simulated API operation on the resource specified in <code>EvalResourceName</code>.</p>
+    #[doc(hidden)]
     pub eval_resource_decision: std::option::Option<crate::model::PolicyEvaluationDecisionType>,
     /// <p>A list of the statements in the input policies that determine the result for this part of the simulation. Remember that even if multiple statements allow the operation on the resource, if <i>any</i> statement denies that operation, then the explicit deny overrides any allow. In addition, the deny statement is the only entry included in the result.</p>
+    #[doc(hidden)]
     pub matched_statements: std::option::Option<std::vec::Vec<crate::model::Statement>>,
     /// <p>A list of context keys that are required by the included input policies but that were not provided by one of the input parameters. This list is used when a list of ARNs is included in the <code>ResourceArns</code> parameter instead of "*". If you do not specify individual resources, by setting <code>ResourceArns</code> to "*" or by not including the <code>ResourceArns</code> parameter, then any missing context values are instead included under the <code>EvaluationResults</code> section. To discover the context keys used by a set of policies, you can call <code>GetContextKeysForCustomPolicy</code> or <code>GetContextKeysForPrincipalPolicy</code>.</p>
+    #[doc(hidden)]
     pub missing_context_values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Additional details about the results of the evaluation decision on a single resource. This parameter is returned only for cross-account simulations. This parameter explains how each policy type contributes to the resource-specific evaluation decision.</p>
+    #[doc(hidden)]
     pub eval_decision_details: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::PolicyEvaluationDecisionType>,
     >,
     /// <p>Contains information about the effect that a permissions boundary has on a policy simulation when that boundary is applied to an IAM entity.</p>
+    #[doc(hidden)]
     pub permissions_boundary_decision_detail:
         std::option::Option<crate::model::PermissionsBoundaryDecisionDetail>,
 }
@@ -1495,11 +1536,10 @@ impl std::fmt::Debug for ResourceSpecificResult {
         formatter.finish()
     }
 }
-/// See [`ResourceSpecificResult`](crate::model::ResourceSpecificResult)
+/// See [`ResourceSpecificResult`](crate::model::ResourceSpecificResult).
 pub mod resource_specific_result {
 
-    /// A builder for [`ResourceSpecificResult`](crate::model::ResourceSpecificResult)
-    #[non_exhaustive]
+    /// A builder for [`ResourceSpecificResult`](crate::model::ResourceSpecificResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) eval_resource_name: std::option::Option<std::string::String>,
@@ -1628,7 +1668,7 @@ pub mod resource_specific_result {
             self.permissions_boundary_decision_detail = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceSpecificResult`](crate::model::ResourceSpecificResult)
+        /// Consumes the builder and constructs a [`ResourceSpecificResult`](crate::model::ResourceSpecificResult).
         pub fn build(self) -> crate::model::ResourceSpecificResult {
             crate::model::ResourceSpecificResult {
                 eval_resource_name: self.eval_resource_name,
@@ -1642,7 +1682,7 @@ pub mod resource_specific_result {
     }
 }
 impl ResourceSpecificResult {
-    /// Creates a new builder-style object to manufacture [`ResourceSpecificResult`](crate::model::ResourceSpecificResult)
+    /// Creates a new builder-style object to manufacture [`ResourceSpecificResult`](crate::model::ResourceSpecificResult).
     pub fn builder() -> crate::model::resource_specific_result::Builder {
         crate::model::resource_specific_result::Builder::default()
     }
@@ -1653,6 +1693,7 @@ impl ResourceSpecificResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PermissionsBoundaryDecisionDetail {
     /// <p>Specifies whether an action is allowed by a permissions boundary that is applied to an IAM entity (user or role). A value of <code>true</code> means that the permissions boundary does not deny the action. This means that the policy includes an <code>Allow</code> statement that matches the request. In this case, if an identity-based policy also allows the action, the request is allowed. A value of <code>false</code> means that either the requested action is not allowed (implicitly denied) or that the action is explicitly denied by the permissions boundary. In both of these cases, the action is not allowed, regardless of the identity-based policy.</p>
+    #[doc(hidden)]
     pub allowed_by_permissions_boundary: bool,
 }
 impl PermissionsBoundaryDecisionDetail {
@@ -1671,11 +1712,10 @@ impl std::fmt::Debug for PermissionsBoundaryDecisionDetail {
         formatter.finish()
     }
 }
-/// See [`PermissionsBoundaryDecisionDetail`](crate::model::PermissionsBoundaryDecisionDetail)
+/// See [`PermissionsBoundaryDecisionDetail`](crate::model::PermissionsBoundaryDecisionDetail).
 pub mod permissions_boundary_decision_detail {
 
-    /// A builder for [`PermissionsBoundaryDecisionDetail`](crate::model::PermissionsBoundaryDecisionDetail)
-    #[non_exhaustive]
+    /// A builder for [`PermissionsBoundaryDecisionDetail`](crate::model::PermissionsBoundaryDecisionDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allowed_by_permissions_boundary: std::option::Option<bool>,
@@ -1694,7 +1734,7 @@ pub mod permissions_boundary_decision_detail {
             self.allowed_by_permissions_boundary = input;
             self
         }
-        /// Consumes the builder and constructs a [`PermissionsBoundaryDecisionDetail`](crate::model::PermissionsBoundaryDecisionDetail)
+        /// Consumes the builder and constructs a [`PermissionsBoundaryDecisionDetail`](crate::model::PermissionsBoundaryDecisionDetail).
         pub fn build(self) -> crate::model::PermissionsBoundaryDecisionDetail {
             crate::model::PermissionsBoundaryDecisionDetail {
                 allowed_by_permissions_boundary: self
@@ -1705,7 +1745,7 @@ pub mod permissions_boundary_decision_detail {
     }
 }
 impl PermissionsBoundaryDecisionDetail {
-    /// Creates a new builder-style object to manufacture [`PermissionsBoundaryDecisionDetail`](crate::model::PermissionsBoundaryDecisionDetail)
+    /// Creates a new builder-style object to manufacture [`PermissionsBoundaryDecisionDetail`](crate::model::PermissionsBoundaryDecisionDetail).
     pub fn builder() -> crate::model::permissions_boundary_decision_detail::Builder {
         crate::model::permissions_boundary_decision_detail::Builder::default()
     }
@@ -1776,12 +1816,16 @@ impl AsRef<str> for PolicyEvaluationDecisionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Statement {
     /// <p>The identifier of the policy that was provided as an input.</p>
+    #[doc(hidden)]
     pub source_policy_id: std::option::Option<std::string::String>,
     /// <p>The type of the policy.</p>
+    #[doc(hidden)]
     pub source_policy_type: std::option::Option<crate::model::PolicySourceType>,
     /// <p>The row and column of the beginning of the <code>Statement</code> in an IAM policy.</p>
+    #[doc(hidden)]
     pub start_position: std::option::Option<crate::model::Position>,
     /// <p>The row and column of the end of a <code>Statement</code> in an IAM policy.</p>
+    #[doc(hidden)]
     pub end_position: std::option::Option<crate::model::Position>,
 }
 impl Statement {
@@ -1812,11 +1856,10 @@ impl std::fmt::Debug for Statement {
         formatter.finish()
     }
 }
-/// See [`Statement`](crate::model::Statement)
+/// See [`Statement`](crate::model::Statement).
 pub mod statement {
 
-    /// A builder for [`Statement`](crate::model::Statement)
-    #[non_exhaustive]
+    /// A builder for [`Statement`](crate::model::Statement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_policy_id: std::option::Option<std::string::String>,
@@ -1877,7 +1920,7 @@ pub mod statement {
             self.end_position = input;
             self
         }
-        /// Consumes the builder and constructs a [`Statement`](crate::model::Statement)
+        /// Consumes the builder and constructs a [`Statement`](crate::model::Statement).
         pub fn build(self) -> crate::model::Statement {
             crate::model::Statement {
                 source_policy_id: self.source_policy_id,
@@ -1889,7 +1932,7 @@ pub mod statement {
     }
 }
 impl Statement {
-    /// Creates a new builder-style object to manufacture [`Statement`](crate::model::Statement)
+    /// Creates a new builder-style object to manufacture [`Statement`](crate::model::Statement).
     pub fn builder() -> crate::model::statement::Builder {
         crate::model::statement::Builder::default()
     }
@@ -1901,8 +1944,10 @@ impl Statement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Position {
     /// <p>The line containing the specified position in the document.</p>
+    #[doc(hidden)]
     pub line: i32,
     /// <p>The column in the line containing the specified position in the document.</p>
+    #[doc(hidden)]
     pub column: i32,
 }
 impl Position {
@@ -1923,11 +1968,10 @@ impl std::fmt::Debug for Position {
         formatter.finish()
     }
 }
-/// See [`Position`](crate::model::Position)
+/// See [`Position`](crate::model::Position).
 pub mod position {
 
-    /// A builder for [`Position`](crate::model::Position)
-    #[non_exhaustive]
+    /// A builder for [`Position`](crate::model::Position).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) line: std::option::Option<i32>,
@@ -1954,7 +1998,7 @@ pub mod position {
             self.column = input;
             self
         }
-        /// Consumes the builder and constructs a [`Position`](crate::model::Position)
+        /// Consumes the builder and constructs a [`Position`](crate::model::Position).
         pub fn build(self) -> crate::model::Position {
             crate::model::Position {
                 line: self.line.unwrap_or_default(),
@@ -1964,7 +2008,7 @@ pub mod position {
     }
 }
 impl Position {
-    /// Creates a new builder-style object to manufacture [`Position`](crate::model::Position)
+    /// Creates a new builder-style object to manufacture [`Position`](crate::model::Position).
     pub fn builder() -> crate::model::position::Builder {
         crate::model::position::Builder::default()
     }
@@ -2058,6 +2102,7 @@ impl AsRef<str> for PolicySourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrganizationsDecisionDetail {
     /// <p>Specifies whether the simulated operation is allowed by the Organizations service control policies that impact the simulated user's account.</p>
+    #[doc(hidden)]
     pub allowed_by_organizations: bool,
 }
 impl OrganizationsDecisionDetail {
@@ -2073,11 +2118,10 @@ impl std::fmt::Debug for OrganizationsDecisionDetail {
         formatter.finish()
     }
 }
-/// See [`OrganizationsDecisionDetail`](crate::model::OrganizationsDecisionDetail)
+/// See [`OrganizationsDecisionDetail`](crate::model::OrganizationsDecisionDetail).
 pub mod organizations_decision_detail {
 
-    /// A builder for [`OrganizationsDecisionDetail`](crate::model::OrganizationsDecisionDetail)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationsDecisionDetail`](crate::model::OrganizationsDecisionDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allowed_by_organizations: std::option::Option<bool>,
@@ -2093,7 +2137,7 @@ pub mod organizations_decision_detail {
             self.allowed_by_organizations = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationsDecisionDetail`](crate::model::OrganizationsDecisionDetail)
+        /// Consumes the builder and constructs a [`OrganizationsDecisionDetail`](crate::model::OrganizationsDecisionDetail).
         pub fn build(self) -> crate::model::OrganizationsDecisionDetail {
             crate::model::OrganizationsDecisionDetail {
                 allowed_by_organizations: self.allowed_by_organizations.unwrap_or_default(),
@@ -2102,7 +2146,7 @@ pub mod organizations_decision_detail {
     }
 }
 impl OrganizationsDecisionDetail {
-    /// Creates a new builder-style object to manufacture [`OrganizationsDecisionDetail`](crate::model::OrganizationsDecisionDetail)
+    /// Creates a new builder-style object to manufacture [`OrganizationsDecisionDetail`](crate::model::OrganizationsDecisionDetail).
     pub fn builder() -> crate::model::organizations_decision_detail::Builder {
         crate::model::organizations_decision_detail::Builder::default()
     }
@@ -2114,10 +2158,13 @@ impl OrganizationsDecisionDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContextEntry {
     /// <p>The full name of a condition context key, including the service prefix. For example, <code>aws:SourceIp</code> or <code>s3:VersionId</code>.</p>
+    #[doc(hidden)]
     pub context_key_name: std::option::Option<std::string::String>,
     /// <p>The value (or values, if the condition context key supports multiple values) to provide to the simulation when the key is referenced by a <code>Condition</code> element in an input policy.</p>
+    #[doc(hidden)]
     pub context_key_values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The data type of the value (or values) specified in the <code>ContextKeyValues</code> parameter.</p>
+    #[doc(hidden)]
     pub context_key_type: std::option::Option<crate::model::ContextKeyTypeEnum>,
 }
 impl ContextEntry {
@@ -2143,11 +2190,10 @@ impl std::fmt::Debug for ContextEntry {
         formatter.finish()
     }
 }
-/// See [`ContextEntry`](crate::model::ContextEntry)
+/// See [`ContextEntry`](crate::model::ContextEntry).
 pub mod context_entry {
 
-    /// A builder for [`ContextEntry`](crate::model::ContextEntry)
-    #[non_exhaustive]
+    /// A builder for [`ContextEntry`](crate::model::ContextEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) context_key_name: std::option::Option<std::string::String>,
@@ -2200,7 +2246,7 @@ pub mod context_entry {
             self.context_key_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContextEntry`](crate::model::ContextEntry)
+        /// Consumes the builder and constructs a [`ContextEntry`](crate::model::ContextEntry).
         pub fn build(self) -> crate::model::ContextEntry {
             crate::model::ContextEntry {
                 context_key_name: self.context_key_name,
@@ -2211,7 +2257,7 @@ pub mod context_entry {
     }
 }
 impl ContextEntry {
-    /// Creates a new builder-style object to manufacture [`ContextEntry`](crate::model::ContextEntry)
+    /// Creates a new builder-style object to manufacture [`ContextEntry`](crate::model::ContextEntry).
     pub fn builder() -> crate::model::context_entry::Builder {
         crate::model::context_entry::Builder::default()
     }
@@ -2385,18 +2431,25 @@ impl AsRef<str> for GlobalEndpointTokenVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceSpecificCredential {
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the service-specific credential were created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the service associated with the service-specific credential.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
     /// <p>The generated user name for the service-specific credential. This value is generated by combining the IAM user's name combined with the ID number of the Amazon Web Services account, as in <code>jane-at-123456789012</code>, for example. This value cannot be configured by the user.</p>
+    #[doc(hidden)]
     pub service_user_name: std::option::Option<std::string::String>,
     /// <p>The generated password for the service-specific credential.</p>
+    #[doc(hidden)]
     pub service_password: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the service-specific credential.</p>
+    #[doc(hidden)]
     pub service_specific_credential_id: std::option::Option<std::string::String>,
     /// <p>The name of the IAM user associated with the service-specific credential.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The status of the service-specific credential. <code>Active</code> means that the key is valid for API calls, while <code>Inactive</code> means it is not.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusType>,
 }
 impl ServiceSpecificCredential {
@@ -2445,11 +2498,10 @@ impl std::fmt::Debug for ServiceSpecificCredential {
         formatter.finish()
     }
 }
-/// See [`ServiceSpecificCredential`](crate::model::ServiceSpecificCredential)
+/// See [`ServiceSpecificCredential`](crate::model::ServiceSpecificCredential).
 pub mod service_specific_credential {
 
-    /// A builder for [`ServiceSpecificCredential`](crate::model::ServiceSpecificCredential)
-    #[non_exhaustive]
+    /// A builder for [`ServiceSpecificCredential`](crate::model::ServiceSpecificCredential).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) create_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -2546,7 +2598,7 @@ pub mod service_specific_credential {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceSpecificCredential`](crate::model::ServiceSpecificCredential)
+        /// Consumes the builder and constructs a [`ServiceSpecificCredential`](crate::model::ServiceSpecificCredential).
         pub fn build(self) -> crate::model::ServiceSpecificCredential {
             crate::model::ServiceSpecificCredential {
                 create_date: self.create_date,
@@ -2561,7 +2613,7 @@ pub mod service_specific_credential {
     }
 }
 impl ServiceSpecificCredential {
-    /// Creates a new builder-style object to manufacture [`ServiceSpecificCredential`](crate::model::ServiceSpecificCredential)
+    /// Creates a new builder-style object to manufacture [`ServiceSpecificCredential`](crate::model::ServiceSpecificCredential).
     pub fn builder() -> crate::model::service_specific_credential::Builder {
         crate::model::service_specific_credential::Builder::default()
     }
@@ -2572,16 +2624,22 @@ impl ServiceSpecificCredential {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VirtualMfaDevice {
     /// <p>The serial number associated with <code>VirtualMFADevice</code>.</p>
+    #[doc(hidden)]
     pub serial_number: std::option::Option<std::string::String>,
     /// <p> The base32 seed defined as specified in <a href="https://tools.ietf.org/html/rfc3548.txt">RFC3548</a>. The <code>Base32StringSeed</code> is base64-encoded. </p>
+    #[doc(hidden)]
     pub base32_string_seed: std::option::Option<aws_smithy_types::Blob>,
     /// <p> A QR code PNG image that encodes <code>otpauth://totp/$virtualMFADeviceName@$AccountName?secret=$Base32String</code> where <code>$virtualMFADeviceName</code> is one of the create call arguments. <code>AccountName</code> is the user name if set (otherwise, the account ID otherwise), and <code>Base32String</code> is the seed in base32 format. The <code>Base32String</code> value is base64-encoded. </p>
+    #[doc(hidden)]
     pub qr_code_png: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The IAM user associated with this virtual MFA device.</p>
+    #[doc(hidden)]
     pub user: std::option::Option<crate::model::User>,
     /// <p>The date and time on which the virtual MFA device was enabled.</p>
+    #[doc(hidden)]
     pub enable_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of tags that are attached to the virtual MFA device. For more information about tagging, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM resources</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl VirtualMfaDevice {
@@ -2622,11 +2680,10 @@ impl std::fmt::Debug for VirtualMfaDevice {
         formatter.finish()
     }
 }
-/// See [`VirtualMfaDevice`](crate::model::VirtualMfaDevice)
+/// See [`VirtualMfaDevice`](crate::model::VirtualMfaDevice).
 pub mod virtual_mfa_device {
 
-    /// A builder for [`VirtualMfaDevice`](crate::model::VirtualMfaDevice)
-    #[non_exhaustive]
+    /// A builder for [`VirtualMfaDevice`](crate::model::VirtualMfaDevice).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) serial_number: std::option::Option<std::string::String>,
@@ -2718,7 +2775,7 @@ pub mod virtual_mfa_device {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`VirtualMfaDevice`](crate::model::VirtualMfaDevice)
+        /// Consumes the builder and constructs a [`VirtualMfaDevice`](crate::model::VirtualMfaDevice).
         pub fn build(self) -> crate::model::VirtualMfaDevice {
             crate::model::VirtualMfaDevice {
                 serial_number: self.serial_number,
@@ -2732,7 +2789,7 @@ pub mod virtual_mfa_device {
     }
 }
 impl VirtualMfaDevice {
-    /// Creates a new builder-style object to manufacture [`VirtualMfaDevice`](crate::model::VirtualMfaDevice)
+    /// Creates a new builder-style object to manufacture [`VirtualMfaDevice`](crate::model::VirtualMfaDevice).
     pub fn builder() -> crate::model::virtual_mfa_device::Builder {
         crate::model::virtual_mfa_device::Builder::default()
     }
@@ -2750,14 +2807,19 @@ impl VirtualMfaDevice {
 pub struct User {
     /// <p>The path to the user. For more information about paths, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
     /// <p>The ARN of the policy used to set the permissions boundary for the user.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The friendly name identifying the user.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The stable and unique string identifying the user. For more information about IDs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) that identifies the user. For more information about ARNs and how to use ARNs in policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the user was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the user's password was last used to sign in to an Amazon Web Services website. For a list of Amazon Web Services websites that capture a user's last sign-in time, see the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/credential-reports.html">Credential reports</a> topic in the <i>IAM User Guide</i>. If a password is used more than once in a five-minute span, only the first use is returned in this field. If the field is null (no value), then it indicates that they never signed in with a password. This can be because:</p>
     /// <ul>
@@ -2766,10 +2828,13 @@ pub struct User {
     /// </ul>
     /// <p>A null value does not mean that the user <i>never</i> had a password. Also, if the user does not currently have a password but had one in the past, then this field contains the date and time the most recent password was used.</p>
     /// <p>This value is returned only in the <code>GetUser</code> and <code>ListUsers</code> operations. </p>
+    #[doc(hidden)]
     pub password_last_used: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>For more information about permissions boundaries, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions boundaries for IAM identities </a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub permissions_boundary: std::option::Option<crate::model::AttachedPermissionsBoundary>,
     /// <p>A list of tags that are associated with the user. For more information about tagging, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM resources</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl User {
@@ -2829,11 +2894,10 @@ impl std::fmt::Debug for User {
         formatter.finish()
     }
 }
-/// See [`User`](crate::model::User)
+/// See [`User`](crate::model::User).
 pub mod user {
 
-    /// A builder for [`User`](crate::model::User)
-    #[non_exhaustive]
+    /// A builder for [`User`](crate::model::User).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::string::String>,
@@ -2962,7 +3026,7 @@ pub mod user {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`User`](crate::model::User)
+        /// Consumes the builder and constructs a [`User`](crate::model::User).
         pub fn build(self) -> crate::model::User {
             crate::model::User {
                 path: self.path,
@@ -2978,7 +3042,7 @@ pub mod user {
     }
 }
 impl User {
-    /// Creates a new builder-style object to manufacture [`User`](crate::model::User)
+    /// Creates a new builder-style object to manufacture [`User`](crate::model::User).
     pub fn builder() -> crate::model::user::Builder {
         crate::model::user::Builder::default()
     }
@@ -3049,12 +3113,16 @@ impl AsRef<str> for AssignmentStatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SshPublicKeyMetadata {
     /// <p>The name of the IAM user associated with the SSH public key.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the SSH public key.</p>
+    #[doc(hidden)]
     pub ssh_public_key_id: std::option::Option<std::string::String>,
     /// <p>The status of the SSH public key. <code>Active</code> means that the key can be used for authentication with an CodeCommit repository. <code>Inactive</code> means that the key cannot be used.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusType>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the SSH public key was uploaded.</p>
+    #[doc(hidden)]
     pub upload_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SshPublicKeyMetadata {
@@ -3085,11 +3153,10 @@ impl std::fmt::Debug for SshPublicKeyMetadata {
         formatter.finish()
     }
 }
-/// See [`SshPublicKeyMetadata`](crate::model::SshPublicKeyMetadata)
+/// See [`SshPublicKeyMetadata`](crate::model::SshPublicKeyMetadata).
 pub mod ssh_public_key_metadata {
 
-    /// A builder for [`SshPublicKeyMetadata`](crate::model::SshPublicKeyMetadata)
-    #[non_exhaustive]
+    /// A builder for [`SshPublicKeyMetadata`](crate::model::SshPublicKeyMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -3144,7 +3211,7 @@ pub mod ssh_public_key_metadata {
             self.upload_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`SshPublicKeyMetadata`](crate::model::SshPublicKeyMetadata)
+        /// Consumes the builder and constructs a [`SshPublicKeyMetadata`](crate::model::SshPublicKeyMetadata).
         pub fn build(self) -> crate::model::SshPublicKeyMetadata {
             crate::model::SshPublicKeyMetadata {
                 user_name: self.user_name,
@@ -3156,7 +3223,7 @@ pub mod ssh_public_key_metadata {
     }
 }
 impl SshPublicKeyMetadata {
-    /// Creates a new builder-style object to manufacture [`SshPublicKeyMetadata`](crate::model::SshPublicKeyMetadata)
+    /// Creates a new builder-style object to manufacture [`SshPublicKeyMetadata`](crate::model::SshPublicKeyMetadata).
     pub fn builder() -> crate::model::ssh_public_key_metadata::Builder {
         crate::model::ssh_public_key_metadata::Builder::default()
     }
@@ -3167,16 +3234,22 @@ impl SshPublicKeyMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceSpecificCredentialMetadata {
     /// <p>The name of the IAM user associated with the service-specific credential.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The status of the service-specific credential. <code>Active</code> means that the key is valid for API calls, while <code>Inactive</code> means it is not.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusType>,
     /// <p>The generated user name for the service-specific credential.</p>
+    #[doc(hidden)]
     pub service_user_name: std::option::Option<std::string::String>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the service-specific credential were created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The unique identifier for the service-specific credential.</p>
+    #[doc(hidden)]
     pub service_specific_credential_id: std::option::Option<std::string::String>,
     /// <p>The name of the service associated with the service-specific credential.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
 }
 impl ServiceSpecificCredentialMetadata {
@@ -3220,11 +3293,10 @@ impl std::fmt::Debug for ServiceSpecificCredentialMetadata {
         formatter.finish()
     }
 }
-/// See [`ServiceSpecificCredentialMetadata`](crate::model::ServiceSpecificCredentialMetadata)
+/// See [`ServiceSpecificCredentialMetadata`](crate::model::ServiceSpecificCredentialMetadata).
 pub mod service_specific_credential_metadata {
 
-    /// A builder for [`ServiceSpecificCredentialMetadata`](crate::model::ServiceSpecificCredentialMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ServiceSpecificCredentialMetadata`](crate::model::ServiceSpecificCredentialMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -3307,7 +3379,7 @@ pub mod service_specific_credential_metadata {
             self.service_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceSpecificCredentialMetadata`](crate::model::ServiceSpecificCredentialMetadata)
+        /// Consumes the builder and constructs a [`ServiceSpecificCredentialMetadata`](crate::model::ServiceSpecificCredentialMetadata).
         pub fn build(self) -> crate::model::ServiceSpecificCredentialMetadata {
             crate::model::ServiceSpecificCredentialMetadata {
                 user_name: self.user_name,
@@ -3321,7 +3393,7 @@ pub mod service_specific_credential_metadata {
     }
 }
 impl ServiceSpecificCredentialMetadata {
-    /// Creates a new builder-style object to manufacture [`ServiceSpecificCredentialMetadata`](crate::model::ServiceSpecificCredentialMetadata)
+    /// Creates a new builder-style object to manufacture [`ServiceSpecificCredentialMetadata`](crate::model::ServiceSpecificCredentialMetadata).
     pub fn builder() -> crate::model::service_specific_credential_metadata::Builder {
         crate::model::service_specific_credential_metadata::Builder::default()
     }
@@ -3332,10 +3404,13 @@ impl ServiceSpecificCredentialMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SamlProviderListEntry {
     /// <p>The Amazon Resource Name (ARN) of the SAML provider.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The expiration date and time for the SAML provider.</p>
+    #[doc(hidden)]
     pub valid_until: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the SAML provider was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SamlProviderListEntry {
@@ -3361,11 +3436,10 @@ impl std::fmt::Debug for SamlProviderListEntry {
         formatter.finish()
     }
 }
-/// See [`SamlProviderListEntry`](crate::model::SamlProviderListEntry)
+/// See [`SamlProviderListEntry`](crate::model::SamlProviderListEntry).
 pub mod saml_provider_list_entry {
 
-    /// A builder for [`SamlProviderListEntry`](crate::model::SamlProviderListEntry)
-    #[non_exhaustive]
+    /// A builder for [`SamlProviderListEntry`](crate::model::SamlProviderListEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3409,7 +3483,7 @@ pub mod saml_provider_list_entry {
             self.create_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`SamlProviderListEntry`](crate::model::SamlProviderListEntry)
+        /// Consumes the builder and constructs a [`SamlProviderListEntry`](crate::model::SamlProviderListEntry).
         pub fn build(self) -> crate::model::SamlProviderListEntry {
             crate::model::SamlProviderListEntry {
                 arn: self.arn,
@@ -3420,7 +3494,7 @@ pub mod saml_provider_list_entry {
     }
 }
 impl SamlProviderListEntry {
-    /// Creates a new builder-style object to manufacture [`SamlProviderListEntry`](crate::model::SamlProviderListEntry)
+    /// Creates a new builder-style object to manufacture [`SamlProviderListEntry`](crate::model::SamlProviderListEntry).
     pub fn builder() -> crate::model::saml_provider_list_entry::Builder {
         crate::model::saml_provider_list_entry::Builder::default()
     }
@@ -3435,13 +3509,17 @@ pub struct PolicyVersion {
     /// <p>The policy document.</p>
     /// <p>The policy document is returned in the response to the <code>GetPolicyVersion</code> and <code>GetAccountAuthorizationDetails</code> operations. It is not returned in the response to the <code>CreatePolicyVersion</code> or <code>ListPolicyVersions</code> operations. </p>
     /// <p>The policy document returned in this structure is URL-encoded compliant with <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a>. You can use a URL decoding method to convert the policy back to plain JSON text. For example, if you use Java, you can use the <code>decode</code> method of the <code>java.net.URLDecoder</code> utility class in the Java SDK. Other languages and SDKs provide similar functionality.</p>
+    #[doc(hidden)]
     pub document: std::option::Option<std::string::String>,
     /// <p>The identifier for the policy version.</p>
     /// <p>Policy version identifiers always begin with <code>v</code> (always lowercase). When a policy is created, the first policy version is <code>v1</code>. </p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the policy version is set as the policy's default version.</p>
+    #[doc(hidden)]
     pub is_default_version: bool,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the policy version was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PolicyVersion {
@@ -3475,11 +3553,10 @@ impl std::fmt::Debug for PolicyVersion {
         formatter.finish()
     }
 }
-/// See [`PolicyVersion`](crate::model::PolicyVersion)
+/// See [`PolicyVersion`](crate::model::PolicyVersion).
 pub mod policy_version {
 
-    /// A builder for [`PolicyVersion`](crate::model::PolicyVersion)
-    #[non_exhaustive]
+    /// A builder for [`PolicyVersion`](crate::model::PolicyVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) document: std::option::Option<std::string::String>,
@@ -3537,7 +3614,7 @@ pub mod policy_version {
             self.create_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyVersion`](crate::model::PolicyVersion)
+        /// Consumes the builder and constructs a [`PolicyVersion`](crate::model::PolicyVersion).
         pub fn build(self) -> crate::model::PolicyVersion {
             crate::model::PolicyVersion {
                 document: self.document,
@@ -3549,7 +3626,7 @@ pub mod policy_version {
     }
 }
 impl PolicyVersion {
-    /// Creates a new builder-style object to manufacture [`PolicyVersion`](crate::model::PolicyVersion)
+    /// Creates a new builder-style object to manufacture [`PolicyVersion`](crate::model::PolicyVersion).
     pub fn builder() -> crate::model::policy_version::Builder {
         crate::model::policy_version::Builder::default()
     }
@@ -3562,8 +3639,10 @@ impl PolicyVersion {
 pub struct ListPoliciesGrantingServiceAccessEntry {
     /// <p>The namespace of the service that was accessed.</p>
     /// <p>To learn the service namespace of a service, see <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html">Actions, resources, and condition keys for Amazon Web Services services</a> in the <i>Service Authorization Reference</i>. Choose the name of the service to view details for that service. In the first paragraph, find the service prefix. For example, <code>(service prefix: a4b)</code>. For more information about service namespaces, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces">Amazon Web Services service namespaces</a> in the&nbsp;<i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub service_namespace: std::option::Option<std::string::String>,
     /// <p>The&nbsp;<code>PoliciesGrantingServiceAccess</code> object that contains details about the policy.</p>
+    #[doc(hidden)]
     pub policies: std::option::Option<std::vec::Vec<crate::model::PolicyGrantingServiceAccess>>,
 }
 impl ListPoliciesGrantingServiceAccessEntry {
@@ -3585,11 +3664,10 @@ impl std::fmt::Debug for ListPoliciesGrantingServiceAccessEntry {
         formatter.finish()
     }
 }
-/// See [`ListPoliciesGrantingServiceAccessEntry`](crate::model::ListPoliciesGrantingServiceAccessEntry)
+/// See [`ListPoliciesGrantingServiceAccessEntry`](crate::model::ListPoliciesGrantingServiceAccessEntry).
 pub mod list_policies_granting_service_access_entry {
 
-    /// A builder for [`ListPoliciesGrantingServiceAccessEntry`](crate::model::ListPoliciesGrantingServiceAccessEntry)
-    #[non_exhaustive]
+    /// A builder for [`ListPoliciesGrantingServiceAccessEntry`](crate::model::ListPoliciesGrantingServiceAccessEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_namespace: std::option::Option<std::string::String>,
@@ -3631,7 +3709,7 @@ pub mod list_policies_granting_service_access_entry {
             self.policies = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPoliciesGrantingServiceAccessEntry`](crate::model::ListPoliciesGrantingServiceAccessEntry)
+        /// Consumes the builder and constructs a [`ListPoliciesGrantingServiceAccessEntry`](crate::model::ListPoliciesGrantingServiceAccessEntry).
         pub fn build(self) -> crate::model::ListPoliciesGrantingServiceAccessEntry {
             crate::model::ListPoliciesGrantingServiceAccessEntry {
                 service_namespace: self.service_namespace,
@@ -3641,7 +3719,7 @@ pub mod list_policies_granting_service_access_entry {
     }
 }
 impl ListPoliciesGrantingServiceAccessEntry {
-    /// Creates a new builder-style object to manufacture [`ListPoliciesGrantingServiceAccessEntry`](crate::model::ListPoliciesGrantingServiceAccessEntry)
+    /// Creates a new builder-style object to manufacture [`ListPoliciesGrantingServiceAccessEntry`](crate::model::ListPoliciesGrantingServiceAccessEntry).
     pub fn builder() -> crate::model::list_policies_granting_service_access_entry::Builder {
         crate::model::list_policies_granting_service_access_entry::Builder::default()
     }
@@ -3653,17 +3731,22 @@ impl ListPoliciesGrantingServiceAccessEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyGrantingServiceAccess {
     /// <p>The policy name.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The policy type. For more information about these policy types, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html">Managed policies and inline policies</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub policy_type: std::option::Option<crate::model::PolicyType>,
     /// <p>The Amazon Resource Name (ARN). ARNs are unique identifiers for Amazon Web Services resources.</p>
     /// <p>For more information about ARNs, go to <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    #[doc(hidden)]
     pub policy_arn: std::option::Option<std::string::String>,
     /// <p>The type of entity (user or role) that used the policy to access the service to which the inline policy is attached.</p>
     /// <p>This field is null for managed policies. For more information about these policy types, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html">Managed policies and inline policies</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub entity_type: std::option::Option<crate::model::PolicyOwnerEntityType>,
     /// <p>The name of the entity (user or role) to which the inline policy is attached.</p>
     /// <p>This field is null for managed policies. For more information about these policy types, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html">Managed policies and inline policies</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub entity_name: std::option::Option<std::string::String>,
 }
 impl PolicyGrantingServiceAccess {
@@ -3702,11 +3785,10 @@ impl std::fmt::Debug for PolicyGrantingServiceAccess {
         formatter.finish()
     }
 }
-/// See [`PolicyGrantingServiceAccess`](crate::model::PolicyGrantingServiceAccess)
+/// See [`PolicyGrantingServiceAccess`](crate::model::PolicyGrantingServiceAccess).
 pub mod policy_granting_service_access {
 
-    /// A builder for [`PolicyGrantingServiceAccess`](crate::model::PolicyGrantingServiceAccess)
-    #[non_exhaustive]
+    /// A builder for [`PolicyGrantingServiceAccess`](crate::model::PolicyGrantingServiceAccess).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_name: std::option::Option<std::string::String>,
@@ -3778,7 +3860,7 @@ pub mod policy_granting_service_access {
             self.entity_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyGrantingServiceAccess`](crate::model::PolicyGrantingServiceAccess)
+        /// Consumes the builder and constructs a [`PolicyGrantingServiceAccess`](crate::model::PolicyGrantingServiceAccess).
         pub fn build(self) -> crate::model::PolicyGrantingServiceAccess {
             crate::model::PolicyGrantingServiceAccess {
                 policy_name: self.policy_name,
@@ -3791,7 +3873,7 @@ pub mod policy_granting_service_access {
     }
 }
 impl PolicyGrantingServiceAccess {
-    /// Creates a new builder-style object to manufacture [`PolicyGrantingServiceAccess`](crate::model::PolicyGrantingServiceAccess)
+    /// Creates a new builder-style object to manufacture [`PolicyGrantingServiceAccess`](crate::model::PolicyGrantingServiceAccess).
     pub fn builder() -> crate::model::policy_granting_service_access::Builder {
         crate::model::policy_granting_service_access::Builder::default()
     }
@@ -3918,34 +4000,46 @@ impl AsRef<str> for PolicyType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Policy {
     /// <p>The friendly name (not ARN) identifying the policy.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The stable and unique string identifying the policy.</p>
     /// <p>For more information about IDs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub policy_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN). ARNs are unique identifiers for Amazon Web Services resources.</p>
     /// <p>For more information about ARNs, go to <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The path to the policy.</p>
     /// <p>For more information about paths, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The identifier for the version of the policy that is set as the default version.</p>
+    #[doc(hidden)]
     pub default_version_id: std::option::Option<std::string::String>,
     /// <p>The number of entities (users, groups, and roles) that the policy is attached to.</p>
+    #[doc(hidden)]
     pub attachment_count: std::option::Option<i32>,
     /// <p>The number of entities (users and roles) for which the policy is used to set the permissions boundary. </p>
     /// <p>For more information about permissions boundaries, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions boundaries for IAM identities </a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub permissions_boundary_usage_count: std::option::Option<i32>,
     /// <p>Specifies whether the policy can be attached to an IAM user, group, or role.</p>
+    #[doc(hidden)]
     pub is_attachable: bool,
     /// <p>A friendly description of the policy.</p>
     /// <p>This element is included in the response to the <code>GetPolicy</code> operation. It is not included in the response to the <code>ListPolicies</code> operation. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the policy was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the policy was last updated.</p>
     /// <p>When a policy has only one version, this field contains the date and time when the policy was created. When a policy has more than one version, this field contains the date and time when the most recent policy version was created.</p>
+    #[doc(hidden)]
     pub update_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of tags that are attached to the instance profile. For more information about tagging, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM resources</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl Policy {
@@ -4025,11 +4119,10 @@ impl std::fmt::Debug for Policy {
         formatter.finish()
     }
 }
-/// See [`Policy`](crate::model::Policy)
+/// See [`Policy`](crate::model::Policy).
 pub mod policy {
 
-    /// A builder for [`Policy`](crate::model::Policy)
-    #[non_exhaustive]
+    /// A builder for [`Policy`](crate::model::Policy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_name: std::option::Option<std::string::String>,
@@ -4199,7 +4292,7 @@ pub mod policy {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Policy`](crate::model::Policy)
+        /// Consumes the builder and constructs a [`Policy`](crate::model::Policy).
         pub fn build(self) -> crate::model::Policy {
             crate::model::Policy {
                 policy_name: self.policy_name,
@@ -4219,7 +4312,7 @@ pub mod policy {
     }
 }
 impl Policy {
-    /// Creates a new builder-style object to manufacture [`Policy`](crate::model::Policy)
+    /// Creates a new builder-style object to manufacture [`Policy`](crate::model::Policy).
     pub fn builder() -> crate::model::policy::Builder {
         crate::model::policy::Builder::default()
     }
@@ -4348,6 +4441,7 @@ impl AsRef<str> for PolicyScopeType {
 pub struct OpenIdConnectProviderListEntry {
     /// <p>The Amazon Resource Name (ARN). ARNs are unique identifiers for Amazon Web Services resources.</p>
     /// <p>For more information about ARNs, go to <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl OpenIdConnectProviderListEntry {
@@ -4364,11 +4458,10 @@ impl std::fmt::Debug for OpenIdConnectProviderListEntry {
         formatter.finish()
     }
 }
-/// See [`OpenIdConnectProviderListEntry`](crate::model::OpenIdConnectProviderListEntry)
+/// See [`OpenIdConnectProviderListEntry`](crate::model::OpenIdConnectProviderListEntry).
 pub mod open_id_connect_provider_list_entry {
 
-    /// A builder for [`OpenIdConnectProviderListEntry`](crate::model::OpenIdConnectProviderListEntry)
-    #[non_exhaustive]
+    /// A builder for [`OpenIdConnectProviderListEntry`](crate::model::OpenIdConnectProviderListEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4386,14 +4479,14 @@ pub mod open_id_connect_provider_list_entry {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`OpenIdConnectProviderListEntry`](crate::model::OpenIdConnectProviderListEntry)
+        /// Consumes the builder and constructs a [`OpenIdConnectProviderListEntry`](crate::model::OpenIdConnectProviderListEntry).
         pub fn build(self) -> crate::model::OpenIdConnectProviderListEntry {
             crate::model::OpenIdConnectProviderListEntry { arn: self.arn }
         }
     }
 }
 impl OpenIdConnectProviderListEntry {
-    /// Creates a new builder-style object to manufacture [`OpenIdConnectProviderListEntry`](crate::model::OpenIdConnectProviderListEntry)
+    /// Creates a new builder-style object to manufacture [`OpenIdConnectProviderListEntry`](crate::model::OpenIdConnectProviderListEntry).
     pub fn builder() -> crate::model::open_id_connect_provider_list_entry::Builder {
         crate::model::open_id_connect_provider_list_entry::Builder::default()
     }
@@ -4405,10 +4498,13 @@ impl OpenIdConnectProviderListEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MfaDevice {
     /// <p>The user with whom the MFA device is associated.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The serial number that uniquely identifies the MFA device. For virtual MFA devices, the serial number is the device ARN.</p>
+    #[doc(hidden)]
     pub serial_number: std::option::Option<std::string::String>,
     /// <p>The date when the MFA device was enabled for the user.</p>
+    #[doc(hidden)]
     pub enable_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl MfaDevice {
@@ -4434,11 +4530,10 @@ impl std::fmt::Debug for MfaDevice {
         formatter.finish()
     }
 }
-/// See [`MfaDevice`](crate::model::MfaDevice)
+/// See [`MfaDevice`](crate::model::MfaDevice).
 pub mod mfa_device {
 
-    /// A builder for [`MfaDevice`](crate::model::MfaDevice)
-    #[non_exhaustive]
+    /// A builder for [`MfaDevice`](crate::model::MfaDevice).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -4482,7 +4577,7 @@ pub mod mfa_device {
             self.enable_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`MfaDevice`](crate::model::MfaDevice)
+        /// Consumes the builder and constructs a [`MfaDevice`](crate::model::MfaDevice).
         pub fn build(self) -> crate::model::MfaDevice {
             crate::model::MfaDevice {
                 user_name: self.user_name,
@@ -4493,7 +4588,7 @@ pub mod mfa_device {
     }
 }
 impl MfaDevice {
-    /// Creates a new builder-style object to manufacture [`MfaDevice`](crate::model::MfaDevice)
+    /// Creates a new builder-style object to manufacture [`MfaDevice`](crate::model::MfaDevice).
     pub fn builder() -> crate::model::mfa_device::Builder {
         crate::model::mfa_device::Builder::default()
     }
@@ -4511,18 +4606,25 @@ impl MfaDevice {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceProfile {
     /// <p> The path to the instance profile. For more information about paths, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The name identifying the instance profile.</p>
+    #[doc(hidden)]
     pub instance_profile_name: std::option::Option<std::string::String>,
     /// <p> The stable and unique string identifying the instance profile. For more information about IDs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub instance_profile_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) specifying the instance profile. For more information about ARNs and how to use them in policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date when the instance profile was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The role associated with the instance profile.</p>
+    #[doc(hidden)]
     pub roles: std::option::Option<std::vec::Vec<crate::model::Role>>,
     /// <p>A list of tags that are attached to the instance profile. For more information about tagging, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM resources</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl InstanceProfile {
@@ -4568,11 +4670,10 @@ impl std::fmt::Debug for InstanceProfile {
         formatter.finish()
     }
 }
-/// See [`InstanceProfile`](crate::model::InstanceProfile)
+/// See [`InstanceProfile`](crate::model::InstanceProfile).
 pub mod instance_profile {
 
-    /// A builder for [`InstanceProfile`](crate::model::InstanceProfile)
-    #[non_exhaustive]
+    /// A builder for [`InstanceProfile`](crate::model::InstanceProfile).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::string::String>,
@@ -4681,7 +4782,7 @@ pub mod instance_profile {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceProfile`](crate::model::InstanceProfile)
+        /// Consumes the builder and constructs a [`InstanceProfile`](crate::model::InstanceProfile).
         pub fn build(self) -> crate::model::InstanceProfile {
             crate::model::InstanceProfile {
                 path: self.path,
@@ -4696,7 +4797,7 @@ pub mod instance_profile {
     }
 }
 impl InstanceProfile {
-    /// Creates a new builder-style object to manufacture [`InstanceProfile`](crate::model::InstanceProfile)
+    /// Creates a new builder-style object to manufacture [`InstanceProfile`](crate::model::InstanceProfile).
     pub fn builder() -> crate::model::instance_profile::Builder {
         crate::model::instance_profile::Builder::default()
     }
@@ -4713,14 +4814,19 @@ impl InstanceProfile {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Group {
     /// <p>The path to the group. For more information about paths, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The friendly name that identifies the group.</p>
+    #[doc(hidden)]
     pub group_name: std::option::Option<std::string::String>,
     /// <p> The stable and unique string identifying the group. For more information about IDs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub group_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) specifying the group. For more information about ARNs and how to use them in policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the group was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Group {
@@ -4756,11 +4862,10 @@ impl std::fmt::Debug for Group {
         formatter.finish()
     }
 }
-/// See [`Group`](crate::model::Group)
+/// See [`Group`](crate::model::Group).
 pub mod group {
 
-    /// A builder for [`Group`](crate::model::Group)
-    #[non_exhaustive]
+    /// A builder for [`Group`](crate::model::Group).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::string::String>,
@@ -4823,7 +4928,7 @@ pub mod group {
             self.create_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Group`](crate::model::Group)
+        /// Consumes the builder and constructs a [`Group`](crate::model::Group).
         pub fn build(self) -> crate::model::Group {
             crate::model::Group {
                 path: self.path,
@@ -4836,7 +4941,7 @@ pub mod group {
     }
 }
 impl Group {
-    /// Creates a new builder-style object to manufacture [`Group`](crate::model::Group)
+    /// Creates a new builder-style object to manufacture [`Group`](crate::model::Group).
     pub fn builder() -> crate::model::group::Builder {
         crate::model::group::Builder::default()
     }
@@ -4849,8 +4954,10 @@ impl Group {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyRole {
     /// <p>The name (friendly name, not ARN) identifying the role.</p>
+    #[doc(hidden)]
     pub role_name: std::option::Option<std::string::String>,
     /// <p>The stable and unique string identifying the role. For more information about IDs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub role_id: std::option::Option<std::string::String>,
 }
 impl PolicyRole {
@@ -4871,11 +4978,10 @@ impl std::fmt::Debug for PolicyRole {
         formatter.finish()
     }
 }
-/// See [`PolicyRole`](crate::model::PolicyRole)
+/// See [`PolicyRole`](crate::model::PolicyRole).
 pub mod policy_role {
 
-    /// A builder for [`PolicyRole`](crate::model::PolicyRole)
-    #[non_exhaustive]
+    /// A builder for [`PolicyRole`](crate::model::PolicyRole).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_name: std::option::Option<std::string::String>,
@@ -4902,7 +5008,7 @@ pub mod policy_role {
             self.role_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyRole`](crate::model::PolicyRole)
+        /// Consumes the builder and constructs a [`PolicyRole`](crate::model::PolicyRole).
         pub fn build(self) -> crate::model::PolicyRole {
             crate::model::PolicyRole {
                 role_name: self.role_name,
@@ -4912,7 +5018,7 @@ pub mod policy_role {
     }
 }
 impl PolicyRole {
-    /// Creates a new builder-style object to manufacture [`PolicyRole`](crate::model::PolicyRole)
+    /// Creates a new builder-style object to manufacture [`PolicyRole`](crate::model::PolicyRole).
     pub fn builder() -> crate::model::policy_role::Builder {
         crate::model::policy_role::Builder::default()
     }
@@ -4925,8 +5031,10 @@ impl PolicyRole {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyUser {
     /// <p>The name (friendly name, not ARN) identifying the user.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The stable and unique string identifying the user. For more information about IDs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
 }
 impl PolicyUser {
@@ -4947,11 +5055,10 @@ impl std::fmt::Debug for PolicyUser {
         formatter.finish()
     }
 }
-/// See [`PolicyUser`](crate::model::PolicyUser)
+/// See [`PolicyUser`](crate::model::PolicyUser).
 pub mod policy_user {
 
-    /// A builder for [`PolicyUser`](crate::model::PolicyUser)
-    #[non_exhaustive]
+    /// A builder for [`PolicyUser`](crate::model::PolicyUser).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -4978,7 +5085,7 @@ pub mod policy_user {
             self.user_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyUser`](crate::model::PolicyUser)
+        /// Consumes the builder and constructs a [`PolicyUser`](crate::model::PolicyUser).
         pub fn build(self) -> crate::model::PolicyUser {
             crate::model::PolicyUser {
                 user_name: self.user_name,
@@ -4988,7 +5095,7 @@ pub mod policy_user {
     }
 }
 impl PolicyUser {
-    /// Creates a new builder-style object to manufacture [`PolicyUser`](crate::model::PolicyUser)
+    /// Creates a new builder-style object to manufacture [`PolicyUser`](crate::model::PolicyUser).
     pub fn builder() -> crate::model::policy_user::Builder {
         crate::model::policy_user::Builder::default()
     }
@@ -5001,8 +5108,10 @@ impl PolicyUser {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyGroup {
     /// <p>The name (friendly name, not ARN) identifying the group.</p>
+    #[doc(hidden)]
     pub group_name: std::option::Option<std::string::String>,
     /// <p>The stable and unique string identifying the group. For more information about IDs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub group_id: std::option::Option<std::string::String>,
 }
 impl PolicyGroup {
@@ -5023,11 +5132,10 @@ impl std::fmt::Debug for PolicyGroup {
         formatter.finish()
     }
 }
-/// See [`PolicyGroup`](crate::model::PolicyGroup)
+/// See [`PolicyGroup`](crate::model::PolicyGroup).
 pub mod policy_group {
 
-    /// A builder for [`PolicyGroup`](crate::model::PolicyGroup)
-    #[non_exhaustive]
+    /// A builder for [`PolicyGroup`](crate::model::PolicyGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_name: std::option::Option<std::string::String>,
@@ -5054,7 +5162,7 @@ pub mod policy_group {
             self.group_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyGroup`](crate::model::PolicyGroup)
+        /// Consumes the builder and constructs a [`PolicyGroup`](crate::model::PolicyGroup).
         pub fn build(self) -> crate::model::PolicyGroup {
             crate::model::PolicyGroup {
                 group_name: self.group_name,
@@ -5064,7 +5172,7 @@ pub mod policy_group {
     }
 }
 impl PolicyGroup {
-    /// Creates a new builder-style object to manufacture [`PolicyGroup`](crate::model::PolicyGroup)
+    /// Creates a new builder-style object to manufacture [`PolicyGroup`](crate::model::PolicyGroup).
     pub fn builder() -> crate::model::policy_group::Builder {
         crate::model::policy_group::Builder::default()
     }
@@ -5150,9 +5258,11 @@ impl AsRef<str> for EntityType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttachedPolicy {
     /// <p>The friendly name of the attached policy.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN). ARNs are unique identifiers for Amazon Web Services resources.</p>
     /// <p>For more information about ARNs, go to <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    #[doc(hidden)]
     pub policy_arn: std::option::Option<std::string::String>,
 }
 impl AttachedPolicy {
@@ -5174,11 +5284,10 @@ impl std::fmt::Debug for AttachedPolicy {
         formatter.finish()
     }
 }
-/// See [`AttachedPolicy`](crate::model::AttachedPolicy)
+/// See [`AttachedPolicy`](crate::model::AttachedPolicy).
 pub mod attached_policy {
 
-    /// A builder for [`AttachedPolicy`](crate::model::AttachedPolicy)
-    #[non_exhaustive]
+    /// A builder for [`AttachedPolicy`](crate::model::AttachedPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_name: std::option::Option<std::string::String>,
@@ -5207,7 +5316,7 @@ pub mod attached_policy {
             self.policy_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttachedPolicy`](crate::model::AttachedPolicy)
+        /// Consumes the builder and constructs a [`AttachedPolicy`](crate::model::AttachedPolicy).
         pub fn build(self) -> crate::model::AttachedPolicy {
             crate::model::AttachedPolicy {
                 policy_name: self.policy_name,
@@ -5217,7 +5326,7 @@ pub mod attached_policy {
     }
 }
 impl AttachedPolicy {
-    /// Creates a new builder-style object to manufacture [`AttachedPolicy`](crate::model::AttachedPolicy)
+    /// Creates a new builder-style object to manufacture [`AttachedPolicy`](crate::model::AttachedPolicy).
     pub fn builder() -> crate::model::attached_policy::Builder {
         crate::model::attached_policy::Builder::default()
     }
@@ -5229,12 +5338,16 @@ impl AttachedPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessKeyMetadata {
     /// <p>The name of the IAM user that the key is associated with.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The ID for this access key.</p>
+    #[doc(hidden)]
     pub access_key_id: std::option::Option<std::string::String>,
     /// <p>The status of the access key. <code>Active</code> means that the key is valid for API calls; <code>Inactive</code> means it is not.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusType>,
     /// <p>The date when the access key was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AccessKeyMetadata {
@@ -5265,11 +5378,10 @@ impl std::fmt::Debug for AccessKeyMetadata {
         formatter.finish()
     }
 }
-/// See [`AccessKeyMetadata`](crate::model::AccessKeyMetadata)
+/// See [`AccessKeyMetadata`](crate::model::AccessKeyMetadata).
 pub mod access_key_metadata {
 
-    /// A builder for [`AccessKeyMetadata`](crate::model::AccessKeyMetadata)
-    #[non_exhaustive]
+    /// A builder for [`AccessKeyMetadata`](crate::model::AccessKeyMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -5324,7 +5436,7 @@ pub mod access_key_metadata {
             self.create_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessKeyMetadata`](crate::model::AccessKeyMetadata)
+        /// Consumes the builder and constructs a [`AccessKeyMetadata`](crate::model::AccessKeyMetadata).
         pub fn build(self) -> crate::model::AccessKeyMetadata {
             crate::model::AccessKeyMetadata {
                 user_name: self.user_name,
@@ -5336,7 +5448,7 @@ pub mod access_key_metadata {
     }
 }
 impl AccessKeyMetadata {
-    /// Creates a new builder-style object to manufacture [`AccessKeyMetadata`](crate::model::AccessKeyMetadata)
+    /// Creates a new builder-style object to manufacture [`AccessKeyMetadata`](crate::model::AccessKeyMetadata).
     pub fn builder() -> crate::model::access_key_metadata::Builder {
         crate::model::access_key_metadata::Builder::default()
     }
@@ -5403,8 +5515,10 @@ impl AsRef<str> for EncodingType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeletionTaskFailureReasonType {
     /// <p>A short description of the reason that the service-linked role deletion failed.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p>A list of objects that contains details about the service-linked role deletion failure, if that information is returned by the service. If the service-linked role has active sessions or if any resources that were used by the role have not been deleted from the linked service, the role can't be deleted. This parameter includes a list of the resources that are associated with the role and the Region in which the resources are being used.</p>
+    #[doc(hidden)]
     pub role_usage_list: std::option::Option<std::vec::Vec<crate::model::RoleUsageType>>,
 }
 impl DeletionTaskFailureReasonType {
@@ -5425,11 +5539,10 @@ impl std::fmt::Debug for DeletionTaskFailureReasonType {
         formatter.finish()
     }
 }
-/// See [`DeletionTaskFailureReasonType`](crate::model::DeletionTaskFailureReasonType)
+/// See [`DeletionTaskFailureReasonType`](crate::model::DeletionTaskFailureReasonType).
 pub mod deletion_task_failure_reason_type {
 
-    /// A builder for [`DeletionTaskFailureReasonType`](crate::model::DeletionTaskFailureReasonType)
-    #[non_exhaustive]
+    /// A builder for [`DeletionTaskFailureReasonType`](crate::model::DeletionTaskFailureReasonType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reason: std::option::Option<std::string::String>,
@@ -5465,7 +5578,7 @@ pub mod deletion_task_failure_reason_type {
             self.role_usage_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeletionTaskFailureReasonType`](crate::model::DeletionTaskFailureReasonType)
+        /// Consumes the builder and constructs a [`DeletionTaskFailureReasonType`](crate::model::DeletionTaskFailureReasonType).
         pub fn build(self) -> crate::model::DeletionTaskFailureReasonType {
             crate::model::DeletionTaskFailureReasonType {
                 reason: self.reason,
@@ -5475,7 +5588,7 @@ pub mod deletion_task_failure_reason_type {
     }
 }
 impl DeletionTaskFailureReasonType {
-    /// Creates a new builder-style object to manufacture [`DeletionTaskFailureReasonType`](crate::model::DeletionTaskFailureReasonType)
+    /// Creates a new builder-style object to manufacture [`DeletionTaskFailureReasonType`](crate::model::DeletionTaskFailureReasonType).
     pub fn builder() -> crate::model::deletion_task_failure_reason_type::Builder {
         crate::model::deletion_task_failure_reason_type::Builder::default()
     }
@@ -5487,8 +5600,10 @@ impl DeletionTaskFailureReasonType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RoleUsageType {
     /// <p>The name of the Region where the service-linked role is being used.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The name of the resource that is using the service-linked role.</p>
+    #[doc(hidden)]
     pub resources: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl RoleUsageType {
@@ -5509,11 +5624,10 @@ impl std::fmt::Debug for RoleUsageType {
         formatter.finish()
     }
 }
-/// See [`RoleUsageType`](crate::model::RoleUsageType)
+/// See [`RoleUsageType`](crate::model::RoleUsageType).
 pub mod role_usage_type {
 
-    /// A builder for [`RoleUsageType`](crate::model::RoleUsageType)
-    #[non_exhaustive]
+    /// A builder for [`RoleUsageType`](crate::model::RoleUsageType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) region: std::option::Option<std::string::String>,
@@ -5549,7 +5663,7 @@ pub mod role_usage_type {
             self.resources = input;
             self
         }
-        /// Consumes the builder and constructs a [`RoleUsageType`](crate::model::RoleUsageType)
+        /// Consumes the builder and constructs a [`RoleUsageType`](crate::model::RoleUsageType).
         pub fn build(self) -> crate::model::RoleUsageType {
             crate::model::RoleUsageType {
                 region: self.region,
@@ -5559,7 +5673,7 @@ pub mod role_usage_type {
     }
 }
 impl RoleUsageType {
-    /// Creates a new builder-style object to manufacture [`RoleUsageType`](crate::model::RoleUsageType)
+    /// Creates a new builder-style object to manufacture [`RoleUsageType`](crate::model::RoleUsageType).
     pub fn builder() -> crate::model::role_usage_type::Builder {
         crate::model::role_usage_type::Builder::default()
     }
@@ -5634,8 +5748,10 @@ impl AsRef<str> for DeletionTaskStatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ErrorDetails {
     /// <p>Detailed information about the reason that the operation failed.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The error code associated with the operation failure.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
 }
 impl ErrorDetails {
@@ -5656,11 +5772,10 @@ impl std::fmt::Debug for ErrorDetails {
         formatter.finish()
     }
 }
-/// See [`ErrorDetails`](crate::model::ErrorDetails)
+/// See [`ErrorDetails`](crate::model::ErrorDetails).
 pub mod error_details {
 
-    /// A builder for [`ErrorDetails`](crate::model::ErrorDetails)
-    #[non_exhaustive]
+    /// A builder for [`ErrorDetails`](crate::model::ErrorDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -5687,7 +5802,7 @@ pub mod error_details {
             self.code = input;
             self
         }
-        /// Consumes the builder and constructs a [`ErrorDetails`](crate::model::ErrorDetails)
+        /// Consumes the builder and constructs a [`ErrorDetails`](crate::model::ErrorDetails).
         pub fn build(self) -> crate::model::ErrorDetails {
             crate::model::ErrorDetails {
                 message: self.message,
@@ -5697,7 +5812,7 @@ pub mod error_details {
     }
 }
 impl ErrorDetails {
-    /// Creates a new builder-style object to manufacture [`ErrorDetails`](crate::model::ErrorDetails)
+    /// Creates a new builder-style object to manufacture [`ErrorDetails`](crate::model::ErrorDetails).
     pub fn builder() -> crate::model::error_details::Builder {
         crate::model::error_details::Builder::default()
     }
@@ -5709,9 +5824,11 @@ impl ErrorDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityDetails {
     /// <p>The&nbsp;<code>EntityInfo</code> object that contains details about the entity (user or role).</p>
+    #[doc(hidden)]
     pub entity_info: std::option::Option<crate::model::EntityInfo>,
     /// <p>The date and time, in&nbsp;<a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the authenticated entity last attempted to access Amazon Web Services. Amazon Web Services does not report unauthenticated requests.</p>
     /// <p>This field is null if no IAM entities attempted to access the service within the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period">reporting period</a>.</p>
+    #[doc(hidden)]
     pub last_authenticated: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EntityDetails {
@@ -5733,11 +5850,10 @@ impl std::fmt::Debug for EntityDetails {
         formatter.finish()
     }
 }
-/// See [`EntityDetails`](crate::model::EntityDetails)
+/// See [`EntityDetails`](crate::model::EntityDetails).
 pub mod entity_details {
 
-    /// A builder for [`EntityDetails`](crate::model::EntityDetails)
-    #[non_exhaustive]
+    /// A builder for [`EntityDetails`](crate::model::EntityDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entity_info: std::option::Option<crate::model::EntityInfo>,
@@ -5772,7 +5888,7 @@ pub mod entity_details {
             self.last_authenticated = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityDetails`](crate::model::EntityDetails)
+        /// Consumes the builder and constructs a [`EntityDetails`](crate::model::EntityDetails).
         pub fn build(self) -> crate::model::EntityDetails {
             crate::model::EntityDetails {
                 entity_info: self.entity_info,
@@ -5782,7 +5898,7 @@ pub mod entity_details {
     }
 }
 impl EntityDetails {
-    /// Creates a new builder-style object to manufacture [`EntityDetails`](crate::model::EntityDetails)
+    /// Creates a new builder-style object to manufacture [`EntityDetails`](crate::model::EntityDetails).
     pub fn builder() -> crate::model::entity_details::Builder {
         crate::model::entity_details::Builder::default()
     }
@@ -5795,14 +5911,19 @@ impl EntityDetails {
 pub struct EntityInfo {
     /// <p>The Amazon Resource Name (ARN). ARNs are unique identifiers for Amazon Web Services resources.</p>
     /// <p>For more information about ARNs, go to <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the entity (user or role).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of entity (user or role).</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::PolicyOwnerEntityType>,
     /// <p>The identifier of the entity (user or role).</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The path to the entity (user or role). For more information about paths, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
 }
 impl EntityInfo {
@@ -5839,11 +5960,10 @@ impl std::fmt::Debug for EntityInfo {
         formatter.finish()
     }
 }
-/// See [`EntityInfo`](crate::model::EntityInfo)
+/// See [`EntityInfo`](crate::model::EntityInfo).
 pub mod entity_info {
 
-    /// A builder for [`EntityInfo`](crate::model::EntityInfo)
-    #[non_exhaustive]
+    /// A builder for [`EntityInfo`](crate::model::EntityInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -5908,7 +6028,7 @@ pub mod entity_info {
             self.path = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityInfo`](crate::model::EntityInfo)
+        /// Consumes the builder and constructs a [`EntityInfo`](crate::model::EntityInfo).
         pub fn build(self) -> crate::model::EntityInfo {
             crate::model::EntityInfo {
                 arn: self.arn,
@@ -5921,7 +6041,7 @@ pub mod entity_info {
     }
 }
 impl EntityInfo {
-    /// Creates a new builder-style object to manufacture [`EntityInfo`](crate::model::EntityInfo)
+    /// Creates a new builder-style object to manufacture [`EntityInfo`](crate::model::EntityInfo).
     pub fn builder() -> crate::model::entity_info::Builder {
         crate::model::entity_info::Builder::default()
     }
@@ -5992,24 +6112,31 @@ impl AsRef<str> for JobStatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceLastAccessed {
     /// <p>The name of the service in which access was attempted.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
     /// <p>The date and time, in&nbsp;<a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when an authenticated entity most recently attempted to access the service. Amazon Web Services does not report unauthenticated requests.</p>
     /// <p>This field is null if no IAM entities attempted to access the service within the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period">reporting period</a>.</p>
+    #[doc(hidden)]
     pub last_authenticated: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The namespace of the service in which access was attempted.</p>
     /// <p>To learn the service namespace of a service, see <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html">Actions, resources, and condition keys for Amazon Web Services services</a> in the <i>Service Authorization Reference</i>. Choose the name of the service to view details for that service. In the first paragraph, find the service prefix. For example, <code>(service prefix: a4b)</code>. For more information about service namespaces, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces">Amazon Web Services Service Namespaces</a> in the&nbsp;<i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub service_namespace: std::option::Option<std::string::String>,
     /// <p>The ARN of the authenticated entity (user or role) that last attempted to access the service. Amazon Web Services does not report unauthenticated requests.</p>
     /// <p>This field is null if no IAM entities attempted to access the service within the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period">reporting period</a>.</p>
+    #[doc(hidden)]
     pub last_authenticated_entity: std::option::Option<std::string::String>,
     /// <p>The Region from which the authenticated entity (user or role) last attempted to access the service. Amazon Web Services does not report unauthenticated requests.</p>
     /// <p>This field is null if no IAM entities attempted to access the service within the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period">reporting period</a>.</p>
+    #[doc(hidden)]
     pub last_authenticated_region: std::option::Option<std::string::String>,
     /// <p>The total number of authenticated principals (root user, IAM users, or IAM roles) that have attempted to access the service.</p>
     /// <p>This field is null if no principals attempted to access the service within the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period">reporting period</a>.</p>
+    #[doc(hidden)]
     pub total_authenticated_entities: std::option::Option<i32>,
     /// <p>An object that contains details about the most recent attempt to access a tracked action within the service.</p>
     /// <p>This field is null if there no tracked actions or if the principal did not use the tracked actions within the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period">reporting period</a>. This field is also null if the report was generated at the service level and not the action level. For more information, see the <code>Granularity</code> field in <code>GenerateServiceLastAccessedDetails</code>.</p>
+    #[doc(hidden)]
     pub tracked_actions_last_accessed:
         std::option::Option<std::vec::Vec<crate::model::TrackedActionLastAccessed>>,
 }
@@ -6070,11 +6197,10 @@ impl std::fmt::Debug for ServiceLastAccessed {
         formatter.finish()
     }
 }
-/// See [`ServiceLastAccessed`](crate::model::ServiceLastAccessed)
+/// See [`ServiceLastAccessed`](crate::model::ServiceLastAccessed).
 pub mod service_last_accessed {
 
-    /// A builder for [`ServiceLastAccessed`](crate::model::ServiceLastAccessed)
-    #[non_exhaustive]
+    /// A builder for [`ServiceLastAccessed`](crate::model::ServiceLastAccessed).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_name: std::option::Option<std::string::String>,
@@ -6193,7 +6319,7 @@ pub mod service_last_accessed {
             self.tracked_actions_last_accessed = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceLastAccessed`](crate::model::ServiceLastAccessed)
+        /// Consumes the builder and constructs a [`ServiceLastAccessed`](crate::model::ServiceLastAccessed).
         pub fn build(self) -> crate::model::ServiceLastAccessed {
             crate::model::ServiceLastAccessed {
                 service_name: self.service_name,
@@ -6208,7 +6334,7 @@ pub mod service_last_accessed {
     }
 }
 impl ServiceLastAccessed {
-    /// Creates a new builder-style object to manufacture [`ServiceLastAccessed`](crate::model::ServiceLastAccessed)
+    /// Creates a new builder-style object to manufacture [`ServiceLastAccessed`](crate::model::ServiceLastAccessed).
     pub fn builder() -> crate::model::service_last_accessed::Builder {
         crate::model::service_last_accessed::Builder::default()
     }
@@ -6220,15 +6346,19 @@ impl ServiceLastAccessed {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrackedActionLastAccessed {
     /// <p>The name of the tracked action to which access was attempted. Tracked actions are actions that report activity to IAM.</p>
+    #[doc(hidden)]
     pub action_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN). ARNs are unique identifiers for Amazon Web Services resources.</p>
     /// <p>For more information about ARNs, go to <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    #[doc(hidden)]
     pub last_accessed_entity: std::option::Option<std::string::String>,
     /// <p>The date and time, in&nbsp;<a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when an authenticated entity most recently attempted to access the tracked service. Amazon Web Services does not report unauthenticated requests.</p>
     /// <p>This field is null if no IAM entities attempted to access the service within the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period">reporting period</a>.</p>
+    #[doc(hidden)]
     pub last_accessed_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Region from which the authenticated entity (user or role) last attempted to access the tracked action. Amazon Web Services does not report unauthenticated requests.</p>
     /// <p>This field is null if no IAM entities attempted to access the service within the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period">reporting period</a>.</p>
+    #[doc(hidden)]
     pub last_accessed_region: std::option::Option<std::string::String>,
 }
 impl TrackedActionLastAccessed {
@@ -6262,11 +6392,10 @@ impl std::fmt::Debug for TrackedActionLastAccessed {
         formatter.finish()
     }
 }
-/// See [`TrackedActionLastAccessed`](crate::model::TrackedActionLastAccessed)
+/// See [`TrackedActionLastAccessed`](crate::model::TrackedActionLastAccessed).
 pub mod tracked_action_last_accessed {
 
-    /// A builder for [`TrackedActionLastAccessed`](crate::model::TrackedActionLastAccessed)
-    #[non_exhaustive]
+    /// A builder for [`TrackedActionLastAccessed`](crate::model::TrackedActionLastAccessed).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action_name: std::option::Option<std::string::String>,
@@ -6330,7 +6459,7 @@ pub mod tracked_action_last_accessed {
             self.last_accessed_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrackedActionLastAccessed`](crate::model::TrackedActionLastAccessed)
+        /// Consumes the builder and constructs a [`TrackedActionLastAccessed`](crate::model::TrackedActionLastAccessed).
         pub fn build(self) -> crate::model::TrackedActionLastAccessed {
             crate::model::TrackedActionLastAccessed {
                 action_name: self.action_name,
@@ -6342,7 +6471,7 @@ pub mod tracked_action_last_accessed {
     }
 }
 impl TrackedActionLastAccessed {
-    /// Creates a new builder-style object to manufacture [`TrackedActionLastAccessed`](crate::model::TrackedActionLastAccessed)
+    /// Creates a new builder-style object to manufacture [`TrackedActionLastAccessed`](crate::model::TrackedActionLastAccessed).
     pub fn builder() -> crate::model::tracked_action_last_accessed::Builder {
         crate::model::tracked_action_last_accessed::Builder::default()
     }
@@ -6409,12 +6538,16 @@ impl AsRef<str> for AccessAdvisorUsageGranularityType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerCertificate {
     /// <p>The meta information of the server certificate, such as its name, path, ID, and ARN.</p>
+    #[doc(hidden)]
     pub server_certificate_metadata: std::option::Option<crate::model::ServerCertificateMetadata>,
     /// <p>The contents of the public key certificate.</p>
+    #[doc(hidden)]
     pub certificate_body: std::option::Option<std::string::String>,
     /// <p>The contents of the public key certificate chain.</p>
+    #[doc(hidden)]
     pub certificate_chain: std::option::Option<std::string::String>,
     /// <p>A list of tags that are attached to the server certificate. For more information about tagging, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM resources</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ServerCertificate {
@@ -6450,11 +6583,10 @@ impl std::fmt::Debug for ServerCertificate {
         formatter.finish()
     }
 }
-/// See [`ServerCertificate`](crate::model::ServerCertificate)
+/// See [`ServerCertificate`](crate::model::ServerCertificate).
 pub mod server_certificate {
 
-    /// A builder for [`ServerCertificate`](crate::model::ServerCertificate)
-    #[non_exhaustive]
+    /// A builder for [`ServerCertificate`](crate::model::ServerCertificate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) server_certificate_metadata:
@@ -6525,7 +6657,7 @@ pub mod server_certificate {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerCertificate`](crate::model::ServerCertificate)
+        /// Consumes the builder and constructs a [`ServerCertificate`](crate::model::ServerCertificate).
         pub fn build(self) -> crate::model::ServerCertificate {
             crate::model::ServerCertificate {
                 server_certificate_metadata: self.server_certificate_metadata,
@@ -6537,7 +6669,7 @@ pub mod server_certificate {
     }
 }
 impl ServerCertificate {
-    /// Creates a new builder-style object to manufacture [`ServerCertificate`](crate::model::ServerCertificate)
+    /// Creates a new builder-style object to manufacture [`ServerCertificate`](crate::model::ServerCertificate).
     pub fn builder() -> crate::model::server_certificate::Builder {
         crate::model::server_certificate::Builder::default()
     }
@@ -6549,20 +6681,26 @@ impl ServerCertificate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessDetail {
     /// <p>The name of the service in which access was attempted.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
     /// <p>The namespace of the service in which access was attempted.</p>
     /// <p>To learn the service namespace of a service, see <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html">Actions, resources, and condition keys for Amazon Web Services services</a> in the <i>Service Authorization Reference</i>. Choose the name of the service to view details for that service. In the first paragraph, find the service prefix. For example, <code>(service prefix: a4b)</code>. For more information about service namespaces, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces">Amazon Web Services service namespaces</a> in the&nbsp;<i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub service_namespace: std::option::Option<std::string::String>,
     /// <p>The Region where the last service access attempt occurred.</p>
     /// <p>This field is null if no principals in the reported Organizations entity attempted to access the service within the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period">reporting period</a>.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The path of the Organizations entity (root, organizational unit, or account) from which an authenticated principal last attempted to access the service. Amazon Web Services does not report unauthenticated requests.</p>
     /// <p>This field is null if no principals (IAM users, IAM roles, or root users) in the reported Organizations entity attempted to access the service within the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period">reporting period</a>.</p>
+    #[doc(hidden)]
     pub entity_path: std::option::Option<std::string::String>,
     /// <p>The date and time, in&nbsp;<a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when an authenticated principal most recently attempted to access the service. Amazon Web Services does not report unauthenticated requests.</p>
     /// <p>This field is null if no principals in the reported Organizations entity attempted to access the service within the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period">reporting period</a>.</p>
+    #[doc(hidden)]
     pub last_authenticated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The number of accounts with authenticated principals (root users, IAM users, and IAM roles) that attempted to access the service in the reporting period.</p>
+    #[doc(hidden)]
     pub total_authenticated_entities: std::option::Option<i32>,
 }
 impl AccessDetail {
@@ -6610,11 +6748,10 @@ impl std::fmt::Debug for AccessDetail {
         formatter.finish()
     }
 }
-/// See [`AccessDetail`](crate::model::AccessDetail)
+/// See [`AccessDetail`](crate::model::AccessDetail).
 pub mod access_detail {
 
-    /// A builder for [`AccessDetail`](crate::model::AccessDetail)
-    #[non_exhaustive]
+    /// A builder for [`AccessDetail`](crate::model::AccessDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_name: std::option::Option<std::string::String>,
@@ -6699,7 +6836,7 @@ pub mod access_detail {
             self.total_authenticated_entities = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessDetail`](crate::model::AccessDetail)
+        /// Consumes the builder and constructs a [`AccessDetail`](crate::model::AccessDetail).
         pub fn build(self) -> crate::model::AccessDetail {
             crate::model::AccessDetail {
                 service_name: self.service_name,
@@ -6713,7 +6850,7 @@ pub mod access_detail {
     }
 }
 impl AccessDetail {
-    /// Creates a new builder-style object to manufacture [`AccessDetail`](crate::model::AccessDetail)
+    /// Creates a new builder-style object to manufacture [`AccessDetail`](crate::model::AccessDetail).
     pub fn builder() -> crate::model::access_detail::Builder {
         crate::model::access_detail::Builder::default()
     }
@@ -6793,10 +6930,13 @@ impl AsRef<str> for SortKeyType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoginProfile {
     /// <p>The name of the user, which can be used for signing in to the Amazon Web Services Management Console.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The date when the password for the user was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies whether the user is required to set a new password on next sign-in.</p>
+    #[doc(hidden)]
     pub password_reset_required: bool,
 }
 impl LoginProfile {
@@ -6822,11 +6962,10 @@ impl std::fmt::Debug for LoginProfile {
         formatter.finish()
     }
 }
-/// See [`LoginProfile`](crate::model::LoginProfile)
+/// See [`LoginProfile`](crate::model::LoginProfile).
 pub mod login_profile {
 
-    /// A builder for [`LoginProfile`](crate::model::LoginProfile)
-    #[non_exhaustive]
+    /// A builder for [`LoginProfile`](crate::model::LoginProfile).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -6867,7 +7006,7 @@ pub mod login_profile {
             self.password_reset_required = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoginProfile`](crate::model::LoginProfile)
+        /// Consumes the builder and constructs a [`LoginProfile`](crate::model::LoginProfile).
         pub fn build(self) -> crate::model::LoginProfile {
             crate::model::LoginProfile {
                 user_name: self.user_name,
@@ -6878,7 +7017,7 @@ pub mod login_profile {
     }
 }
 impl LoginProfile {
-    /// Creates a new builder-style object to manufacture [`LoginProfile`](crate::model::LoginProfile)
+    /// Creates a new builder-style object to manufacture [`LoginProfile`](crate::model::LoginProfile).
     pub fn builder() -> crate::model::login_profile::Builder {
         crate::model::login_profile::Builder::default()
     }
@@ -7123,25 +7262,35 @@ impl AsRef<str> for SummaryKeyType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PasswordPolicy {
     /// <p>Minimum length to require for IAM user passwords.</p>
+    #[doc(hidden)]
     pub minimum_password_length: std::option::Option<i32>,
     /// <p>Specifies whether IAM user passwords must contain at least one of the following symbols:</p>
     /// <p>! @ # $ % ^ &amp; * ( ) _ + - = [ ] { } | '</p>
+    #[doc(hidden)]
     pub require_symbols: bool,
     /// <p>Specifies whether IAM user passwords must contain at least one numeric character (0 to 9).</p>
+    #[doc(hidden)]
     pub require_numbers: bool,
     /// <p>Specifies whether IAM user passwords must contain at least one uppercase character (A to Z).</p>
+    #[doc(hidden)]
     pub require_uppercase_characters: bool,
     /// <p>Specifies whether IAM user passwords must contain at least one lowercase character (a to z).</p>
+    #[doc(hidden)]
     pub require_lowercase_characters: bool,
     /// <p>Specifies whether IAM users are allowed to change their own password. Gives IAM users permissions to <code>iam:ChangePassword</code> for only their user and to the <code>iam:GetAccountPasswordPolicy</code> action. This option does not attach a permissions policy to each user, rather the permissions are applied at the account-level for all users by IAM.</p>
+    #[doc(hidden)]
     pub allow_users_to_change_password: bool,
     /// <p>Indicates whether passwords in the account expire. Returns true if <code>MaxPasswordAge</code> contains a value greater than 0. Returns false if MaxPasswordAge is 0 or not present.</p>
+    #[doc(hidden)]
     pub expire_passwords: bool,
     /// <p>The number of days that an IAM user password is valid.</p>
+    #[doc(hidden)]
     pub max_password_age: std::option::Option<i32>,
     /// <p>Specifies the number of previous passwords that IAM users are prevented from reusing.</p>
+    #[doc(hidden)]
     pub password_reuse_prevention: std::option::Option<i32>,
     /// <p>Specifies whether IAM users are prevented from setting a new password via the Amazon Web Services Management Console after their password has expired. The IAM user cannot access the console until an administrator resets the password. IAM users with <code>iam:ChangePassword</code> permission and active access keys can reset their own expired console password using the CLI or API.</p>
+    #[doc(hidden)]
     pub hard_expiry: std::option::Option<bool>,
 }
 impl PasswordPolicy {
@@ -7212,11 +7361,10 @@ impl std::fmt::Debug for PasswordPolicy {
         formatter.finish()
     }
 }
-/// See [`PasswordPolicy`](crate::model::PasswordPolicy)
+/// See [`PasswordPolicy`](crate::model::PasswordPolicy).
 pub mod password_policy {
 
-    /// A builder for [`PasswordPolicy`](crate::model::PasswordPolicy)
-    #[non_exhaustive]
+    /// A builder for [`PasswordPolicy`](crate::model::PasswordPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) minimum_password_length: std::option::Option<i32>,
@@ -7342,7 +7490,7 @@ pub mod password_policy {
             self.hard_expiry = input;
             self
         }
-        /// Consumes the builder and constructs a [`PasswordPolicy`](crate::model::PasswordPolicy)
+        /// Consumes the builder and constructs a [`PasswordPolicy`](crate::model::PasswordPolicy).
         pub fn build(self) -> crate::model::PasswordPolicy {
             crate::model::PasswordPolicy {
                 minimum_password_length: self.minimum_password_length,
@@ -7362,7 +7510,7 @@ pub mod password_policy {
     }
 }
 impl PasswordPolicy {
-    /// Creates a new builder-style object to manufacture [`PasswordPolicy`](crate::model::PasswordPolicy)
+    /// Creates a new builder-style object to manufacture [`PasswordPolicy`](crate::model::PasswordPolicy).
     pub fn builder() -> crate::model::password_policy::Builder {
         crate::model::password_policy::Builder::default()
     }
@@ -7375,34 +7523,46 @@ impl PasswordPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ManagedPolicyDetail {
     /// <p>The friendly name (not ARN) identifying the policy.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The stable and unique string identifying the policy.</p>
     /// <p>For more information about IDs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub policy_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN). ARNs are unique identifiers for Amazon Web Services resources.</p>
     /// <p>For more information about ARNs, go to <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The path to the policy.</p>
     /// <p>For more information about paths, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The identifier for the version of the policy that is set as the default (operative) version.</p>
     /// <p>For more information about policy versions, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html">Versioning for managed policies</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub default_version_id: std::option::Option<std::string::String>,
     /// <p>The number of principal entities (users, groups, and roles) that the policy is attached to.</p>
+    #[doc(hidden)]
     pub attachment_count: std::option::Option<i32>,
     /// <p>The number of entities (users and roles) for which the policy is used as the permissions boundary. </p>
     /// <p>For more information about permissions boundaries, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions boundaries for IAM identities </a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub permissions_boundary_usage_count: std::option::Option<i32>,
     /// <p>Specifies whether the policy can be attached to an IAM user, group, or role.</p>
+    #[doc(hidden)]
     pub is_attachable: bool,
     /// <p>A friendly description of the policy.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the policy was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the policy was last updated.</p>
     /// <p>When a policy has only one version, this field contains the date and time when the policy was created. When a policy has more than one version, this field contains the date and time when the most recent policy version was created.</p>
+    #[doc(hidden)]
     pub update_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list containing information about the versions of the policy.</p>
+    #[doc(hidden)]
     pub policy_version_list: std::option::Option<std::vec::Vec<crate::model::PolicyVersion>>,
 }
 impl ManagedPolicyDetail {
@@ -7482,11 +7642,10 @@ impl std::fmt::Debug for ManagedPolicyDetail {
         formatter.finish()
     }
 }
-/// See [`ManagedPolicyDetail`](crate::model::ManagedPolicyDetail)
+/// See [`ManagedPolicyDetail`](crate::model::ManagedPolicyDetail).
 pub mod managed_policy_detail {
 
-    /// A builder for [`ManagedPolicyDetail`](crate::model::ManagedPolicyDetail)
-    #[non_exhaustive]
+    /// A builder for [`ManagedPolicyDetail`](crate::model::ManagedPolicyDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_name: std::option::Option<std::string::String>,
@@ -7657,7 +7816,7 @@ pub mod managed_policy_detail {
             self.policy_version_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManagedPolicyDetail`](crate::model::ManagedPolicyDetail)
+        /// Consumes the builder and constructs a [`ManagedPolicyDetail`](crate::model::ManagedPolicyDetail).
         pub fn build(self) -> crate::model::ManagedPolicyDetail {
             crate::model::ManagedPolicyDetail {
                 policy_name: self.policy_name,
@@ -7677,7 +7836,7 @@ pub mod managed_policy_detail {
     }
 }
 impl ManagedPolicyDetail {
-    /// Creates a new builder-style object to manufacture [`ManagedPolicyDetail`](crate::model::ManagedPolicyDetail)
+    /// Creates a new builder-style object to manufacture [`ManagedPolicyDetail`](crate::model::ManagedPolicyDetail).
     pub fn builder() -> crate::model::managed_policy_detail::Builder {
         crate::model::managed_policy_detail::Builder::default()
     }
@@ -7689,30 +7848,42 @@ impl ManagedPolicyDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RoleDetail {
     /// <p>The path to the role. For more information about paths, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The friendly name that identifies the role.</p>
+    #[doc(hidden)]
     pub role_name: std::option::Option<std::string::String>,
     /// <p>The stable and unique string identifying the role. For more information about IDs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub role_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN). ARNs are unique identifiers for Amazon Web Services resources.</p>
     /// <p>For more information about ARNs, go to <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the role was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The trust policy that grants permission to assume the role.</p>
+    #[doc(hidden)]
     pub assume_role_policy_document: std::option::Option<std::string::String>,
     /// <p>A list of instance profiles that contain this role.</p>
+    #[doc(hidden)]
     pub instance_profile_list: std::option::Option<std::vec::Vec<crate::model::InstanceProfile>>,
     /// <p>A list of inline policies embedded in the role. These policies are the role's access (permissions) policies.</p>
+    #[doc(hidden)]
     pub role_policy_list: std::option::Option<std::vec::Vec<crate::model::PolicyDetail>>,
     /// <p>A list of managed policies attached to the role. These policies are the role's access (permissions) policies.</p>
+    #[doc(hidden)]
     pub attached_managed_policies: std::option::Option<std::vec::Vec<crate::model::AttachedPolicy>>,
     /// <p>The ARN of the policy used to set the permissions boundary for the role.</p>
     /// <p>For more information about permissions boundaries, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions boundaries for IAM identities </a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub permissions_boundary: std::option::Option<crate::model::AttachedPermissionsBoundary>,
     /// <p>A list of tags that are attached to the role. For more information about tagging, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM resources</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Contains information about the last time that an IAM role was used. This includes the date and time and the Region in which the role was last used. Activity is only reported for the trailing 400 days. This period can be shorter if your Region began supporting these features within the last year. The role might have been used more than 400 days ago. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#access-advisor_tracking-period">Regions where data is tracked</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub role_last_used: std::option::Option<crate::model::RoleLastUsed>,
 }
 impl RoleDetail {
@@ -7792,11 +7963,10 @@ impl std::fmt::Debug for RoleDetail {
         formatter.finish()
     }
 }
-/// See [`RoleDetail`](crate::model::RoleDetail)
+/// See [`RoleDetail`](crate::model::RoleDetail).
 pub mod role_detail {
 
-    /// A builder for [`RoleDetail`](crate::model::RoleDetail)
-    #[non_exhaustive]
+    /// A builder for [`RoleDetail`](crate::model::RoleDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::string::String>,
@@ -7994,7 +8164,7 @@ pub mod role_detail {
             self.role_last_used = input;
             self
         }
-        /// Consumes the builder and constructs a [`RoleDetail`](crate::model::RoleDetail)
+        /// Consumes the builder and constructs a [`RoleDetail`](crate::model::RoleDetail).
         pub fn build(self) -> crate::model::RoleDetail {
             crate::model::RoleDetail {
                 path: self.path,
@@ -8014,7 +8184,7 @@ pub mod role_detail {
     }
 }
 impl RoleDetail {
-    /// Creates a new builder-style object to manufacture [`RoleDetail`](crate::model::RoleDetail)
+    /// Creates a new builder-style object to manufacture [`RoleDetail`](crate::model::RoleDetail).
     pub fn builder() -> crate::model::role_detail::Builder {
         crate::model::role_detail::Builder::default()
     }
@@ -8026,8 +8196,10 @@ impl RoleDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyDetail {
     /// <p>The name of the policy.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The policy document.</p>
+    #[doc(hidden)]
     pub policy_document: std::option::Option<std::string::String>,
 }
 impl PolicyDetail {
@@ -8048,11 +8220,10 @@ impl std::fmt::Debug for PolicyDetail {
         formatter.finish()
     }
 }
-/// See [`PolicyDetail`](crate::model::PolicyDetail)
+/// See [`PolicyDetail`](crate::model::PolicyDetail).
 pub mod policy_detail {
 
-    /// A builder for [`PolicyDetail`](crate::model::PolicyDetail)
-    #[non_exhaustive]
+    /// A builder for [`PolicyDetail`](crate::model::PolicyDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_name: std::option::Option<std::string::String>,
@@ -8082,7 +8253,7 @@ pub mod policy_detail {
             self.policy_document = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyDetail`](crate::model::PolicyDetail)
+        /// Consumes the builder and constructs a [`PolicyDetail`](crate::model::PolicyDetail).
         pub fn build(self) -> crate::model::PolicyDetail {
             crate::model::PolicyDetail {
                 policy_name: self.policy_name,
@@ -8092,7 +8263,7 @@ pub mod policy_detail {
     }
 }
 impl PolicyDetail {
-    /// Creates a new builder-style object to manufacture [`PolicyDetail`](crate::model::PolicyDetail)
+    /// Creates a new builder-style object to manufacture [`PolicyDetail`](crate::model::PolicyDetail).
     pub fn builder() -> crate::model::policy_detail::Builder {
         crate::model::policy_detail::Builder::default()
     }
@@ -8104,19 +8275,26 @@ impl PolicyDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GroupDetail {
     /// <p>The path to the group. For more information about paths, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The friendly name that identifies the group.</p>
+    #[doc(hidden)]
     pub group_name: std::option::Option<std::string::String>,
     /// <p>The stable and unique string identifying the group. For more information about IDs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub group_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN). ARNs are unique identifiers for Amazon Web Services resources.</p>
     /// <p>For more information about ARNs, go to <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the group was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of the inline policies embedded in the group.</p>
+    #[doc(hidden)]
     pub group_policy_list: std::option::Option<std::vec::Vec<crate::model::PolicyDetail>>,
     /// <p>A list of the managed policies attached to the group.</p>
+    #[doc(hidden)]
     pub attached_managed_policies: std::option::Option<std::vec::Vec<crate::model::AttachedPolicy>>,
 }
 impl GroupDetail {
@@ -8165,11 +8343,10 @@ impl std::fmt::Debug for GroupDetail {
         formatter.finish()
     }
 }
-/// See [`GroupDetail`](crate::model::GroupDetail)
+/// See [`GroupDetail`](crate::model::GroupDetail).
 pub mod group_detail {
 
-    /// A builder for [`GroupDetail`](crate::model::GroupDetail)
-    #[non_exhaustive]
+    /// A builder for [`GroupDetail`](crate::model::GroupDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::string::String>,
@@ -8276,7 +8453,7 @@ pub mod group_detail {
             self.attached_managed_policies = input;
             self
         }
-        /// Consumes the builder and constructs a [`GroupDetail`](crate::model::GroupDetail)
+        /// Consumes the builder and constructs a [`GroupDetail`](crate::model::GroupDetail).
         pub fn build(self) -> crate::model::GroupDetail {
             crate::model::GroupDetail {
                 path: self.path,
@@ -8291,7 +8468,7 @@ pub mod group_detail {
     }
 }
 impl GroupDetail {
-    /// Creates a new builder-style object to manufacture [`GroupDetail`](crate::model::GroupDetail)
+    /// Creates a new builder-style object to manufacture [`GroupDetail`](crate::model::GroupDetail).
     pub fn builder() -> crate::model::group_detail::Builder {
         crate::model::group_detail::Builder::default()
     }
@@ -8303,26 +8480,36 @@ impl GroupDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserDetail {
     /// <p>The path to the user. For more information about paths, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The friendly name identifying the user.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The stable and unique string identifying the user. For more information about IDs, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN). ARNs are unique identifiers for Amazon Web Services resources.</p>
     /// <p>For more information about ARNs, go to <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the user was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of the inline policies embedded in the user.</p>
+    #[doc(hidden)]
     pub user_policy_list: std::option::Option<std::vec::Vec<crate::model::PolicyDetail>>,
     /// <p>A list of IAM groups that the user is in.</p>
+    #[doc(hidden)]
     pub group_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of the managed policies attached to the user.</p>
+    #[doc(hidden)]
     pub attached_managed_policies: std::option::Option<std::vec::Vec<crate::model::AttachedPolicy>>,
     /// <p>The ARN of the policy used to set the permissions boundary for the user.</p>
     /// <p>For more information about permissions boundaries, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions boundaries for IAM identities </a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub permissions_boundary: std::option::Option<crate::model::AttachedPermissionsBoundary>,
     /// <p>A list of tags that are associated with the user. For more information about tagging, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM resources</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl UserDetail {
@@ -8389,11 +8576,10 @@ impl std::fmt::Debug for UserDetail {
         formatter.finish()
     }
 }
-/// See [`UserDetail`](crate::model::UserDetail)
+/// See [`UserDetail`](crate::model::UserDetail).
 pub mod user_detail {
 
-    /// A builder for [`UserDetail`](crate::model::UserDetail)
-    #[non_exhaustive]
+    /// A builder for [`UserDetail`](crate::model::UserDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::string::String>,
@@ -8559,7 +8745,7 @@ pub mod user_detail {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserDetail`](crate::model::UserDetail)
+        /// Consumes the builder and constructs a [`UserDetail`](crate::model::UserDetail).
         pub fn build(self) -> crate::model::UserDetail {
             crate::model::UserDetail {
                 path: self.path,
@@ -8577,7 +8763,7 @@ pub mod user_detail {
     }
 }
 impl UserDetail {
-    /// Creates a new builder-style object to manufacture [`UserDetail`](crate::model::UserDetail)
+    /// Creates a new builder-style object to manufacture [`UserDetail`](crate::model::UserDetail).
     pub fn builder() -> crate::model::user_detail::Builder {
         crate::model::user_detail::Builder::default()
     }
@@ -8594,6 +8780,7 @@ pub struct AccessKeyLastUsed {
     /// <li> <p>An access key exists but has not been used since IAM began tracking this information.</p> </li>
     /// <li> <p>There is no sign-in data associated with the user.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub last_used_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the Amazon Web Services service with which this access key was most recently used. The value of this field is "N/A" in the following situations:</p>
     /// <ul>
@@ -8601,6 +8788,7 @@ pub struct AccessKeyLastUsed {
     /// <li> <p>An access key exists but has not been used since IAM started tracking this information.</p> </li>
     /// <li> <p>There is no sign-in data associated with the user.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region where this access key was most recently used. The value for this field is "N/A" in the following situations:</p>
     /// <ul>
@@ -8609,6 +8797,7 @@ pub struct AccessKeyLastUsed {
     /// <li> <p>There is no sign-in data associated with the user.</p> </li>
     /// </ul>
     /// <p>For more information about Amazon Web Services Regions, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and endpoints</a> in the Amazon Web Services General Reference.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
 }
 impl AccessKeyLastUsed {
@@ -8650,11 +8839,10 @@ impl std::fmt::Debug for AccessKeyLastUsed {
         formatter.finish()
     }
 }
-/// See [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed)
+/// See [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed).
 pub mod access_key_last_used {
 
-    /// A builder for [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed)
-    #[non_exhaustive]
+    /// A builder for [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) last_used_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -8727,7 +8915,7 @@ pub mod access_key_last_used {
             self.region = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed)
+        /// Consumes the builder and constructs a [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed).
         pub fn build(self) -> crate::model::AccessKeyLastUsed {
             crate::model::AccessKeyLastUsed {
                 last_used_date: self.last_used_date,
@@ -8738,7 +8926,7 @@ pub mod access_key_last_used {
     }
 }
 impl AccessKeyLastUsed {
-    /// Creates a new builder-style object to manufacture [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed)
+    /// Creates a new builder-style object to manufacture [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed).
     pub fn builder() -> crate::model::access_key_last_used::Builder {
         crate::model::access_key_last_used::Builder::default()
     }
@@ -8811,14 +8999,19 @@ impl AsRef<str> for ReportStateType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessKey {
     /// <p>The name of the IAM user that the access key is associated with.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The ID for this access key.</p>
+    #[doc(hidden)]
     pub access_key_id: std::option::Option<std::string::String>,
     /// <p>The status of the access key. <code>Active</code> means that the key is valid for API calls, while <code>Inactive</code> means it is not. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusType>,
     /// <p>The secret key used to sign requests.</p>
+    #[doc(hidden)]
     pub secret_access_key: std::option::Option<std::string::String>,
     /// <p>The date when the access key was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AccessKey {
@@ -8854,11 +9047,10 @@ impl std::fmt::Debug for AccessKey {
         formatter.finish()
     }
 }
-/// See [`AccessKey`](crate::model::AccessKey)
+/// See [`AccessKey`](crate::model::AccessKey).
 pub mod access_key {
 
-    /// A builder for [`AccessKey`](crate::model::AccessKey)
-    #[non_exhaustive]
+    /// A builder for [`AccessKey`](crate::model::AccessKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -8927,7 +9119,7 @@ pub mod access_key {
             self.create_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessKey`](crate::model::AccessKey)
+        /// Consumes the builder and constructs a [`AccessKey`](crate::model::AccessKey).
         pub fn build(self) -> crate::model::AccessKey {
             crate::model::AccessKey {
                 user_name: self.user_name,
@@ -8940,7 +9132,7 @@ pub mod access_key {
     }
 }
 impl AccessKey {
-    /// Creates a new builder-style object to manufacture [`AccessKey`](crate::model::AccessKey)
+    /// Creates a new builder-style object to manufacture [`AccessKey`](crate::model::AccessKey).
     pub fn builder() -> crate::model::access_key::Builder {
         crate::model::access_key::Builder::default()
     }

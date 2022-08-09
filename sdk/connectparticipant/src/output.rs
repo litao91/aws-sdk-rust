@@ -4,8 +4,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartAttachmentUploadOutput {
     /// <p>A unique identifier for the attachment.</p>
+    #[doc(hidden)]
     pub attachment_id: std::option::Option<std::string::String>,
     /// <p>Fields to be used while uploading the attachment.</p>
+    #[doc(hidden)]
     pub upload_metadata: std::option::Option<crate::model::UploadMetadata>,
 }
 impl StartAttachmentUploadOutput {
@@ -26,11 +28,10 @@ impl std::fmt::Debug for StartAttachmentUploadOutput {
         formatter.finish()
     }
 }
-/// See [`StartAttachmentUploadOutput`](crate::output::StartAttachmentUploadOutput)
+/// See [`StartAttachmentUploadOutput`](crate::output::StartAttachmentUploadOutput).
 pub mod start_attachment_upload_output {
 
-    /// A builder for [`StartAttachmentUploadOutput`](crate::output::StartAttachmentUploadOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartAttachmentUploadOutput`](crate::output::StartAttachmentUploadOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attachment_id: std::option::Option<std::string::String>,
@@ -63,7 +64,7 @@ pub mod start_attachment_upload_output {
             self.upload_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartAttachmentUploadOutput`](crate::output::StartAttachmentUploadOutput)
+        /// Consumes the builder and constructs a [`StartAttachmentUploadOutput`](crate::output::StartAttachmentUploadOutput).
         pub fn build(self) -> crate::output::StartAttachmentUploadOutput {
             crate::output::StartAttachmentUploadOutput {
                 attachment_id: self.attachment_id,
@@ -73,7 +74,7 @@ pub mod start_attachment_upload_output {
     }
 }
 impl StartAttachmentUploadOutput {
-    /// Creates a new builder-style object to manufacture [`StartAttachmentUploadOutput`](crate::output::StartAttachmentUploadOutput)
+    /// Creates a new builder-style object to manufacture [`StartAttachmentUploadOutput`](crate::output::StartAttachmentUploadOutput).
     pub fn builder() -> crate::output::start_attachment_upload_output::Builder {
         crate::output::start_attachment_upload_output::Builder::default()
     }
@@ -84,9 +85,11 @@ impl StartAttachmentUploadOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SendMessageOutput {
     /// <p>The ID of the message.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The time when the message was sent.</p>
     /// <p>It's specified in ISO 8601 format: yyyy-MM-ddThh:mm:ss.SSSZ. For example, 2019-11-08T02:41:28.172Z.</p>
+    #[doc(hidden)]
     pub absolute_time: std::option::Option<std::string::String>,
 }
 impl SendMessageOutput {
@@ -108,11 +111,10 @@ impl std::fmt::Debug for SendMessageOutput {
         formatter.finish()
     }
 }
-/// See [`SendMessageOutput`](crate::output::SendMessageOutput)
+/// See [`SendMessageOutput`](crate::output::SendMessageOutput).
 pub mod send_message_output {
 
-    /// A builder for [`SendMessageOutput`](crate::output::SendMessageOutput)
-    #[non_exhaustive]
+    /// A builder for [`SendMessageOutput`](crate::output::SendMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -144,7 +146,7 @@ pub mod send_message_output {
             self.absolute_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`SendMessageOutput`](crate::output::SendMessageOutput)
+        /// Consumes the builder and constructs a [`SendMessageOutput`](crate::output::SendMessageOutput).
         pub fn build(self) -> crate::output::SendMessageOutput {
             crate::output::SendMessageOutput {
                 id: self.id,
@@ -154,7 +156,7 @@ pub mod send_message_output {
     }
 }
 impl SendMessageOutput {
-    /// Creates a new builder-style object to manufacture [`SendMessageOutput`](crate::output::SendMessageOutput)
+    /// Creates a new builder-style object to manufacture [`SendMessageOutput`](crate::output::SendMessageOutput).
     pub fn builder() -> crate::output::send_message_output::Builder {
         crate::output::send_message_output::Builder::default()
     }
@@ -165,9 +167,11 @@ impl SendMessageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SendEventOutput {
     /// <p>The ID of the response.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The time when the event was sent.</p>
     /// <p>It's specified in ISO 8601 format: yyyy-MM-ddThh:mm:ss.SSSZ. For example, 2019-11-08T02:41:28.172Z.</p>
+    #[doc(hidden)]
     pub absolute_time: std::option::Option<std::string::String>,
 }
 impl SendEventOutput {
@@ -189,11 +193,10 @@ impl std::fmt::Debug for SendEventOutput {
         formatter.finish()
     }
 }
-/// See [`SendEventOutput`](crate::output::SendEventOutput)
+/// See [`SendEventOutput`](crate::output::SendEventOutput).
 pub mod send_event_output {
 
-    /// A builder for [`SendEventOutput`](crate::output::SendEventOutput)
-    #[non_exhaustive]
+    /// A builder for [`SendEventOutput`](crate::output::SendEventOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -225,7 +228,7 @@ pub mod send_event_output {
             self.absolute_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`SendEventOutput`](crate::output::SendEventOutput)
+        /// Consumes the builder and constructs a [`SendEventOutput`](crate::output::SendEventOutput).
         pub fn build(self) -> crate::output::SendEventOutput {
             crate::output::SendEventOutput {
                 id: self.id,
@@ -235,7 +238,7 @@ pub mod send_event_output {
     }
 }
 impl SendEventOutput {
-    /// Creates a new builder-style object to manufacture [`SendEventOutput`](crate::output::SendEventOutput)
+    /// Creates a new builder-style object to manufacture [`SendEventOutput`](crate::output::SendEventOutput).
     pub fn builder() -> crate::output::send_event_output::Builder {
         crate::output::send_event_output::Builder::default()
     }
@@ -246,10 +249,13 @@ impl SendEventOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetTranscriptOutput {
     /// <p>The initial contact ID for the contact. </p>
+    #[doc(hidden)]
     pub initial_contact_id: std::option::Option<std::string::String>,
     /// <p>The list of messages in the session.</p>
+    #[doc(hidden)]
     pub transcript: std::option::Option<std::vec::Vec<crate::model::Item>>,
     /// <p>The pagination token. Use the value returned previously in the next subsequent request to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetTranscriptOutput {
@@ -275,11 +281,10 @@ impl std::fmt::Debug for GetTranscriptOutput {
         formatter.finish()
     }
 }
-/// See [`GetTranscriptOutput`](crate::output::GetTranscriptOutput)
+/// See [`GetTranscriptOutput`](crate::output::GetTranscriptOutput).
 pub mod get_transcript_output {
 
-    /// A builder for [`GetTranscriptOutput`](crate::output::GetTranscriptOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetTranscriptOutput`](crate::output::GetTranscriptOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) initial_contact_id: std::option::Option<std::string::String>,
@@ -329,7 +334,7 @@ pub mod get_transcript_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetTranscriptOutput`](crate::output::GetTranscriptOutput)
+        /// Consumes the builder and constructs a [`GetTranscriptOutput`](crate::output::GetTranscriptOutput).
         pub fn build(self) -> crate::output::GetTranscriptOutput {
             crate::output::GetTranscriptOutput {
                 initial_contact_id: self.initial_contact_id,
@@ -340,7 +345,7 @@ pub mod get_transcript_output {
     }
 }
 impl GetTranscriptOutput {
-    /// Creates a new builder-style object to manufacture [`GetTranscriptOutput`](crate::output::GetTranscriptOutput)
+    /// Creates a new builder-style object to manufacture [`GetTranscriptOutput`](crate::output::GetTranscriptOutput).
     pub fn builder() -> crate::output::get_transcript_output::Builder {
         crate::output::get_transcript_output::Builder::default()
     }
@@ -351,8 +356,10 @@ impl GetTranscriptOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAttachmentOutput {
     /// <p>This is the pre-signed URL that can be used for uploading the file to Amazon S3 when used in response to <a href="https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_StartAttachmentUpload.html">StartAttachmentUpload</a>.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// <p>The expiration time of the URL in ISO timestamp. It's specified in ISO 8601 format: yyyy-MM-ddThh:mm:ss.SSSZ. For example, 2019-11-08T02:41:28.172Z.</p>
+    #[doc(hidden)]
     pub url_expiry: std::option::Option<std::string::String>,
 }
 impl GetAttachmentOutput {
@@ -373,11 +380,10 @@ impl std::fmt::Debug for GetAttachmentOutput {
         formatter.finish()
     }
 }
-/// See [`GetAttachmentOutput`](crate::output::GetAttachmentOutput)
+/// See [`GetAttachmentOutput`](crate::output::GetAttachmentOutput).
 pub mod get_attachment_output {
 
-    /// A builder for [`GetAttachmentOutput`](crate::output::GetAttachmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAttachmentOutput`](crate::output::GetAttachmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) url: std::option::Option<std::string::String>,
@@ -404,7 +410,7 @@ pub mod get_attachment_output {
             self.url_expiry = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAttachmentOutput`](crate::output::GetAttachmentOutput)
+        /// Consumes the builder and constructs a [`GetAttachmentOutput`](crate::output::GetAttachmentOutput).
         pub fn build(self) -> crate::output::GetAttachmentOutput {
             crate::output::GetAttachmentOutput {
                 url: self.url,
@@ -414,7 +420,7 @@ pub mod get_attachment_output {
     }
 }
 impl GetAttachmentOutput {
-    /// Creates a new builder-style object to manufacture [`GetAttachmentOutput`](crate::output::GetAttachmentOutput)
+    /// Creates a new builder-style object to manufacture [`GetAttachmentOutput`](crate::output::GetAttachmentOutput).
     pub fn builder() -> crate::output::get_attachment_output::Builder {
         crate::output::get_attachment_output::Builder::default()
     }
@@ -430,22 +436,21 @@ impl std::fmt::Debug for DisconnectParticipantOutput {
         formatter.finish()
     }
 }
-/// See [`DisconnectParticipantOutput`](crate::output::DisconnectParticipantOutput)
+/// See [`DisconnectParticipantOutput`](crate::output::DisconnectParticipantOutput).
 pub mod disconnect_participant_output {
 
-    /// A builder for [`DisconnectParticipantOutput`](crate::output::DisconnectParticipantOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisconnectParticipantOutput`](crate::output::DisconnectParticipantOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisconnectParticipantOutput`](crate::output::DisconnectParticipantOutput)
+        /// Consumes the builder and constructs a [`DisconnectParticipantOutput`](crate::output::DisconnectParticipantOutput).
         pub fn build(self) -> crate::output::DisconnectParticipantOutput {
             crate::output::DisconnectParticipantOutput {}
         }
     }
 }
 impl DisconnectParticipantOutput {
-    /// Creates a new builder-style object to manufacture [`DisconnectParticipantOutput`](crate::output::DisconnectParticipantOutput)
+    /// Creates a new builder-style object to manufacture [`DisconnectParticipantOutput`](crate::output::DisconnectParticipantOutput).
     pub fn builder() -> crate::output::disconnect_participant_output::Builder {
         crate::output::disconnect_participant_output::Builder::default()
     }
@@ -456,8 +461,10 @@ impl DisconnectParticipantOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateParticipantConnectionOutput {
     /// <p>Creates the participant's websocket connection.</p>
+    #[doc(hidden)]
     pub websocket: std::option::Option<crate::model::Websocket>,
     /// <p>Creates the participant's connection credentials. The authentication token associated with the participant's connection.</p>
+    #[doc(hidden)]
     pub connection_credentials: std::option::Option<crate::model::ConnectionCredentials>,
 }
 impl CreateParticipantConnectionOutput {
@@ -480,11 +487,10 @@ impl std::fmt::Debug for CreateParticipantConnectionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateParticipantConnectionOutput`](crate::output::CreateParticipantConnectionOutput)
+/// See [`CreateParticipantConnectionOutput`](crate::output::CreateParticipantConnectionOutput).
 pub mod create_participant_connection_output {
 
-    /// A builder for [`CreateParticipantConnectionOutput`](crate::output::CreateParticipantConnectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateParticipantConnectionOutput`](crate::output::CreateParticipantConnectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) websocket: std::option::Option<crate::model::Websocket>,
@@ -520,7 +526,7 @@ pub mod create_participant_connection_output {
             self.connection_credentials = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateParticipantConnectionOutput`](crate::output::CreateParticipantConnectionOutput)
+        /// Consumes the builder and constructs a [`CreateParticipantConnectionOutput`](crate::output::CreateParticipantConnectionOutput).
         pub fn build(self) -> crate::output::CreateParticipantConnectionOutput {
             crate::output::CreateParticipantConnectionOutput {
                 websocket: self.websocket,
@@ -530,7 +536,7 @@ pub mod create_participant_connection_output {
     }
 }
 impl CreateParticipantConnectionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateParticipantConnectionOutput`](crate::output::CreateParticipantConnectionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateParticipantConnectionOutput`](crate::output::CreateParticipantConnectionOutput).
     pub fn builder() -> crate::output::create_participant_connection_output::Builder {
         crate::output::create_participant_connection_output::Builder::default()
     }
@@ -546,22 +552,21 @@ impl std::fmt::Debug for CompleteAttachmentUploadOutput {
         formatter.finish()
     }
 }
-/// See [`CompleteAttachmentUploadOutput`](crate::output::CompleteAttachmentUploadOutput)
+/// See [`CompleteAttachmentUploadOutput`](crate::output::CompleteAttachmentUploadOutput).
 pub mod complete_attachment_upload_output {
 
-    /// A builder for [`CompleteAttachmentUploadOutput`](crate::output::CompleteAttachmentUploadOutput)
-    #[non_exhaustive]
+    /// A builder for [`CompleteAttachmentUploadOutput`](crate::output::CompleteAttachmentUploadOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`CompleteAttachmentUploadOutput`](crate::output::CompleteAttachmentUploadOutput)
+        /// Consumes the builder and constructs a [`CompleteAttachmentUploadOutput`](crate::output::CompleteAttachmentUploadOutput).
         pub fn build(self) -> crate::output::CompleteAttachmentUploadOutput {
             crate::output::CompleteAttachmentUploadOutput {}
         }
     }
 }
 impl CompleteAttachmentUploadOutput {
-    /// Creates a new builder-style object to manufacture [`CompleteAttachmentUploadOutput`](crate::output::CompleteAttachmentUploadOutput)
+    /// Creates a new builder-style object to manufacture [`CompleteAttachmentUploadOutput`](crate::output::CompleteAttachmentUploadOutput).
     pub fn builder() -> crate::output::complete_attachment_upload_output::Builder {
         crate::output::complete_attachment_upload_output::Builder::default()
     }

@@ -82,14 +82,19 @@ impl AsRef<str> for FlowStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Task {
     /// <p> The source fields to which a particular task is applied. </p>
+    #[doc(hidden)]
     pub source_fields: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> The operation to be performed on the provided source fields. </p>
+    #[doc(hidden)]
     pub connector_operator: std::option::Option<crate::model::ConnectorOperator>,
     /// <p> A field in a destination connector, or a field value against which Amazon AppFlow validates a source field. </p>
+    #[doc(hidden)]
     pub destination_field: std::option::Option<std::string::String>,
     /// <p> Specifies the particular task implementation that Amazon AppFlow performs. </p>
+    #[doc(hidden)]
     pub task_type: std::option::Option<crate::model::TaskType>,
     /// <p> A map used to store task-related information. The execution service looks for particular information based on the <code>TaskType</code>. </p>
+    #[doc(hidden)]
     pub task_properties: std::option::Option<
         std::collections::HashMap<crate::model::OperatorPropertiesKeys, std::string::String>,
     >,
@@ -131,11 +136,10 @@ impl std::fmt::Debug for Task {
         formatter.finish()
     }
 }
-/// See [`Task`](crate::model::Task)
+/// See [`Task`](crate::model::Task).
 pub mod task {
 
-    /// A builder for [`Task`](crate::model::Task)
-    #[non_exhaustive]
+    /// A builder for [`Task`](crate::model::Task).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_fields: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -230,7 +234,7 @@ pub mod task {
             self.task_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`Task`](crate::model::Task)
+        /// Consumes the builder and constructs a [`Task`](crate::model::Task).
         pub fn build(self) -> crate::model::Task {
             crate::model::Task {
                 source_fields: self.source_fields,
@@ -243,7 +247,7 @@ pub mod task {
     }
 }
 impl Task {
-    /// Creates a new builder-style object to manufacture [`Task`](crate::model::Task)
+    /// Creates a new builder-style object to manufacture [`Task`](crate::model::Task).
     pub fn builder() -> crate::model::task::Builder {
         crate::model::task::Builder::default()
     }
@@ -470,36 +474,52 @@ impl AsRef<str> for TaskType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorOperator {
     /// <p> The operation to be performed on the provided Amplitude source fields. </p>
+    #[doc(hidden)]
     pub amplitude: std::option::Option<crate::model::AmplitudeConnectorOperator>,
     /// <p> The operation to be performed on the provided Datadog source fields. </p>
+    #[doc(hidden)]
     pub datadog: std::option::Option<crate::model::DatadogConnectorOperator>,
     /// <p> The operation to be performed on the provided Dynatrace source fields. </p>
+    #[doc(hidden)]
     pub dynatrace: std::option::Option<crate::model::DynatraceConnectorOperator>,
     /// <p> The operation to be performed on the provided Google Analytics source fields. </p>
+    #[doc(hidden)]
     pub google_analytics: std::option::Option<crate::model::GoogleAnalyticsConnectorOperator>,
     /// <p> The operation to be performed on the provided Infor Nexus source fields. </p>
+    #[doc(hidden)]
     pub infor_nexus: std::option::Option<crate::model::InforNexusConnectorOperator>,
     /// <p> The operation to be performed on the provided Marketo source fields. </p>
+    #[doc(hidden)]
     pub marketo: std::option::Option<crate::model::MarketoConnectorOperator>,
     /// <p> The operation to be performed on the provided Amazon S3 source fields. </p>
+    #[doc(hidden)]
     pub s3: std::option::Option<crate::model::S3ConnectorOperator>,
     /// <p> The operation to be performed on the provided Salesforce source fields. </p>
+    #[doc(hidden)]
     pub salesforce: std::option::Option<crate::model::SalesforceConnectorOperator>,
     /// <p> The operation to be performed on the provided ServiceNow source fields. </p>
+    #[doc(hidden)]
     pub service_now: std::option::Option<crate::model::ServiceNowConnectorOperator>,
     /// <p> The operation to be performed on the provided Singular source fields. </p>
+    #[doc(hidden)]
     pub singular: std::option::Option<crate::model::SingularConnectorOperator>,
     /// <p> The operation to be performed on the provided Slack source fields. </p>
+    #[doc(hidden)]
     pub slack: std::option::Option<crate::model::SlackConnectorOperator>,
     /// <p> The operation to be performed on the provided Trend Micro source fields. </p>
+    #[doc(hidden)]
     pub trendmicro: std::option::Option<crate::model::TrendmicroConnectorOperator>,
     /// <p> The operation to be performed on the provided Veeva source fields. </p>
+    #[doc(hidden)]
     pub veeva: std::option::Option<crate::model::VeevaConnectorOperator>,
     /// <p> The operation to be performed on the provided Zendesk source fields. </p>
+    #[doc(hidden)]
     pub zendesk: std::option::Option<crate::model::ZendeskConnectorOperator>,
     /// <p> The operation to be performed on the provided SAPOData source fields. </p>
+    #[doc(hidden)]
     pub sapo_data: std::option::Option<crate::model::SapoDataConnectorOperator>,
     /// <p>Operators supported by the custom connector.</p>
+    #[doc(hidden)]
     pub custom_connector: std::option::Option<crate::model::Operator>,
 }
 impl ConnectorOperator {
@@ -592,11 +612,10 @@ impl std::fmt::Debug for ConnectorOperator {
         formatter.finish()
     }
 }
-/// See [`ConnectorOperator`](crate::model::ConnectorOperator)
+/// See [`ConnectorOperator`](crate::model::ConnectorOperator).
 pub mod connector_operator {
 
-    /// A builder for [`ConnectorOperator`](crate::model::ConnectorOperator)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorOperator`](crate::model::ConnectorOperator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) amplitude: std::option::Option<crate::model::AmplitudeConnectorOperator>,
@@ -829,7 +848,7 @@ pub mod connector_operator {
             self.custom_connector = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorOperator`](crate::model::ConnectorOperator)
+        /// Consumes the builder and constructs a [`ConnectorOperator`](crate::model::ConnectorOperator).
         pub fn build(self) -> crate::model::ConnectorOperator {
             crate::model::ConnectorOperator {
                 amplitude: self.amplitude,
@@ -853,7 +872,7 @@ pub mod connector_operator {
     }
 }
 impl ConnectorOperator {
-    /// Creates a new builder-style object to manufacture [`ConnectorOperator`](crate::model::ConnectorOperator)
+    /// Creates a new builder-style object to manufacture [`ConnectorOperator`](crate::model::ConnectorOperator).
     pub fn builder() -> crate::model::connector_operator::Builder {
         crate::model::connector_operator::Builder::default()
     }
@@ -2877,12 +2896,16 @@ impl AsRef<str> for AmplitudeConnectorOperator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DestinationFlowConfig {
     /// <p> The type of connector, such as Salesforce, Amplitude, and so on. </p>
+    #[doc(hidden)]
     pub connector_type: std::option::Option<crate::model::ConnectorType>,
     /// <p>The API version that the destination connector uses.</p>
+    #[doc(hidden)]
     pub api_version: std::option::Option<std::string::String>,
     /// <p> The name of the connector profile. This name must be unique for each connector profile in the Amazon Web Services account. </p>
+    #[doc(hidden)]
     pub connector_profile_name: std::option::Option<std::string::String>,
     /// <p> This stores the information that is required to query a particular connector. </p>
+    #[doc(hidden)]
     pub destination_connector_properties:
         std::option::Option<crate::model::DestinationConnectorProperties>,
 }
@@ -2919,11 +2942,10 @@ impl std::fmt::Debug for DestinationFlowConfig {
         formatter.finish()
     }
 }
-/// See [`DestinationFlowConfig`](crate::model::DestinationFlowConfig)
+/// See [`DestinationFlowConfig`](crate::model::DestinationFlowConfig).
 pub mod destination_flow_config {
 
-    /// A builder for [`DestinationFlowConfig`](crate::model::DestinationFlowConfig)
-    #[non_exhaustive]
+    /// A builder for [`DestinationFlowConfig`](crate::model::DestinationFlowConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connector_type: std::option::Option<crate::model::ConnectorType>,
@@ -2985,7 +3007,7 @@ pub mod destination_flow_config {
             self.destination_connector_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`DestinationFlowConfig`](crate::model::DestinationFlowConfig)
+        /// Consumes the builder and constructs a [`DestinationFlowConfig`](crate::model::DestinationFlowConfig).
         pub fn build(self) -> crate::model::DestinationFlowConfig {
             crate::model::DestinationFlowConfig {
                 connector_type: self.connector_type,
@@ -2997,7 +3019,7 @@ pub mod destination_flow_config {
     }
 }
 impl DestinationFlowConfig {
-    /// Creates a new builder-style object to manufacture [`DestinationFlowConfig`](crate::model::DestinationFlowConfig)
+    /// Creates a new builder-style object to manufacture [`DestinationFlowConfig`](crate::model::DestinationFlowConfig).
     pub fn builder() -> crate::model::destination_flow_config::Builder {
         crate::model::destination_flow_config::Builder::default()
     }
@@ -3008,30 +3030,43 @@ impl DestinationFlowConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DestinationConnectorProperties {
     /// <p> The properties required to query Amazon Redshift. </p>
+    #[doc(hidden)]
     pub redshift: std::option::Option<crate::model::RedshiftDestinationProperties>,
     /// <p> The properties required to query Amazon S3. </p>
+    #[doc(hidden)]
     pub s3: std::option::Option<crate::model::S3DestinationProperties>,
     /// <p> The properties required to query Salesforce. </p>
+    #[doc(hidden)]
     pub salesforce: std::option::Option<crate::model::SalesforceDestinationProperties>,
     /// <p> The properties required to query Snowflake. </p>
+    #[doc(hidden)]
     pub snowflake: std::option::Option<crate::model::SnowflakeDestinationProperties>,
     /// <p> The properties required to query Amazon EventBridge. </p>
+    #[doc(hidden)]
     pub event_bridge: std::option::Option<crate::model::EventBridgeDestinationProperties>,
     /// <p> The properties required to query Amazon Lookout for Metrics. </p>
+    #[doc(hidden)]
     pub lookout_metrics: std::option::Option<crate::model::LookoutMetricsDestinationProperties>,
     /// <p> The properties required to query Upsolver. </p>
+    #[doc(hidden)]
     pub upsolver: std::option::Option<crate::model::UpsolverDestinationProperties>,
     /// <p> The properties required to query Amazon Honeycode. </p>
+    #[doc(hidden)]
     pub honeycode: std::option::Option<crate::model::HoneycodeDestinationProperties>,
     /// <p> The properties required to query Amazon Connect Customer Profiles. </p>
+    #[doc(hidden)]
     pub customer_profiles: std::option::Option<crate::model::CustomerProfilesDestinationProperties>,
     /// <p>The properties required to query Zendesk.</p>
+    #[doc(hidden)]
     pub zendesk: std::option::Option<crate::model::ZendeskDestinationProperties>,
     /// <p>The properties required to query Marketo.</p>
+    #[doc(hidden)]
     pub marketo: std::option::Option<crate::model::MarketoDestinationProperties>,
     /// <p>The properties that are required to query the custom Connector.</p>
+    #[doc(hidden)]
     pub custom_connector: std::option::Option<crate::model::CustomConnectorDestinationProperties>,
     /// <p>The properties required to query SAPOData.</p>
+    #[doc(hidden)]
     pub sapo_data: std::option::Option<crate::model::SapoDataDestinationProperties>,
 }
 impl DestinationConnectorProperties {
@@ -3117,11 +3152,10 @@ impl std::fmt::Debug for DestinationConnectorProperties {
         formatter.finish()
     }
 }
-/// See [`DestinationConnectorProperties`](crate::model::DestinationConnectorProperties)
+/// See [`DestinationConnectorProperties`](crate::model::DestinationConnectorProperties).
 pub mod destination_connector_properties {
 
-    /// A builder for [`DestinationConnectorProperties`](crate::model::DestinationConnectorProperties)
-    #[non_exhaustive]
+    /// A builder for [`DestinationConnectorProperties`](crate::model::DestinationConnectorProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) redshift: std::option::Option<crate::model::RedshiftDestinationProperties>,
@@ -3324,7 +3358,7 @@ pub mod destination_connector_properties {
             self.sapo_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`DestinationConnectorProperties`](crate::model::DestinationConnectorProperties)
+        /// Consumes the builder and constructs a [`DestinationConnectorProperties`](crate::model::DestinationConnectorProperties).
         pub fn build(self) -> crate::model::DestinationConnectorProperties {
             crate::model::DestinationConnectorProperties {
                 redshift: self.redshift,
@@ -3345,7 +3379,7 @@ pub mod destination_connector_properties {
     }
 }
 impl DestinationConnectorProperties {
-    /// Creates a new builder-style object to manufacture [`DestinationConnectorProperties`](crate::model::DestinationConnectorProperties)
+    /// Creates a new builder-style object to manufacture [`DestinationConnectorProperties`](crate::model::DestinationConnectorProperties).
     pub fn builder() -> crate::model::destination_connector_properties::Builder {
         crate::model::destination_connector_properties::Builder::default()
     }
@@ -3356,16 +3390,21 @@ impl DestinationConnectorProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SapoDataDestinationProperties {
     /// <p>The object path specified in the SAPOData flow destination.</p>
+    #[doc(hidden)]
     pub object_path: std::option::Option<std::string::String>,
     /// <p>Determines how Amazon AppFlow handles the success response that it gets from the connector after placing data.</p>
     /// <p>For example, this setting would determine where to write the response from a destination connector upon a successful insert operation.</p>
+    #[doc(hidden)]
     pub success_response_handling_config:
         std::option::Option<crate::model::SuccessResponseHandlingConfig>,
     /// <p> A list of field names that can be used as an ID field when performing a write operation. </p>
+    #[doc(hidden)]
     pub id_field_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> The settings that determine how Amazon AppFlow handles an error when placing data in the destination. For example, this setting would determine if the flow should fail after one insertion error, or continue and attempt to insert every record regardless of the initial failure. <code>ErrorHandlingConfig</code> is a part of the destination connector details. </p>
+    #[doc(hidden)]
     pub error_handling_config: std::option::Option<crate::model::ErrorHandlingConfig>,
     /// <p> The possible write operations in the destination connector. When this value is not provided, this defaults to the <code>INSERT</code> operation. </p>
+    #[doc(hidden)]
     pub write_operation_type: std::option::Option<crate::model::WriteOperationType>,
 }
 impl SapoDataDestinationProperties {
@@ -3407,11 +3446,10 @@ impl std::fmt::Debug for SapoDataDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`SapoDataDestinationProperties`](crate::model::SapoDataDestinationProperties)
+/// See [`SapoDataDestinationProperties`](crate::model::SapoDataDestinationProperties).
 pub mod sapo_data_destination_properties {
 
-    /// A builder for [`SapoDataDestinationProperties`](crate::model::SapoDataDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`SapoDataDestinationProperties`](crate::model::SapoDataDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_path: std::option::Option<std::string::String>,
@@ -3495,7 +3533,7 @@ pub mod sapo_data_destination_properties {
             self.write_operation_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`SapoDataDestinationProperties`](crate::model::SapoDataDestinationProperties)
+        /// Consumes the builder and constructs a [`SapoDataDestinationProperties`](crate::model::SapoDataDestinationProperties).
         pub fn build(self) -> crate::model::SapoDataDestinationProperties {
             crate::model::SapoDataDestinationProperties {
                 object_path: self.object_path,
@@ -3508,7 +3546,7 @@ pub mod sapo_data_destination_properties {
     }
 }
 impl SapoDataDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`SapoDataDestinationProperties`](crate::model::SapoDataDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`SapoDataDestinationProperties`](crate::model::SapoDataDestinationProperties).
     pub fn builder() -> crate::model::sapo_data_destination_properties::Builder {
         crate::model::sapo_data_destination_properties::Builder::default()
     }
@@ -3583,10 +3621,13 @@ impl AsRef<str> for WriteOperationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ErrorHandlingConfig {
     /// <p> Specifies if the flow should fail after the first instance of a failure when attempting to place data in the destination. </p>
+    #[doc(hidden)]
     pub fail_on_first_destination_error: bool,
     /// <p> Specifies the Amazon S3 bucket prefix. </p>
+    #[doc(hidden)]
     pub bucket_prefix: std::option::Option<std::string::String>,
     /// <p> Specifies the name of the Amazon S3 bucket. </p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
 }
 impl ErrorHandlingConfig {
@@ -3615,11 +3656,10 @@ impl std::fmt::Debug for ErrorHandlingConfig {
         formatter.finish()
     }
 }
-/// See [`ErrorHandlingConfig`](crate::model::ErrorHandlingConfig)
+/// See [`ErrorHandlingConfig`](crate::model::ErrorHandlingConfig).
 pub mod error_handling_config {
 
-    /// A builder for [`ErrorHandlingConfig`](crate::model::ErrorHandlingConfig)
-    #[non_exhaustive]
+    /// A builder for [`ErrorHandlingConfig`](crate::model::ErrorHandlingConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fail_on_first_destination_error: std::option::Option<bool>,
@@ -3663,7 +3703,7 @@ pub mod error_handling_config {
             self.bucket_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ErrorHandlingConfig`](crate::model::ErrorHandlingConfig)
+        /// Consumes the builder and constructs a [`ErrorHandlingConfig`](crate::model::ErrorHandlingConfig).
         pub fn build(self) -> crate::model::ErrorHandlingConfig {
             crate::model::ErrorHandlingConfig {
                 fail_on_first_destination_error: self
@@ -3676,7 +3716,7 @@ pub mod error_handling_config {
     }
 }
 impl ErrorHandlingConfig {
-    /// Creates a new builder-style object to manufacture [`ErrorHandlingConfig`](crate::model::ErrorHandlingConfig)
+    /// Creates a new builder-style object to manufacture [`ErrorHandlingConfig`](crate::model::ErrorHandlingConfig).
     pub fn builder() -> crate::model::error_handling_config::Builder {
         crate::model::error_handling_config::Builder::default()
     }
@@ -3688,8 +3728,10 @@ impl ErrorHandlingConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SuccessResponseHandlingConfig {
     /// <p>The Amazon S3 bucket prefix.</p>
+    #[doc(hidden)]
     pub bucket_prefix: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
 }
 impl SuccessResponseHandlingConfig {
@@ -3710,11 +3752,10 @@ impl std::fmt::Debug for SuccessResponseHandlingConfig {
         formatter.finish()
     }
 }
-/// See [`SuccessResponseHandlingConfig`](crate::model::SuccessResponseHandlingConfig)
+/// See [`SuccessResponseHandlingConfig`](crate::model::SuccessResponseHandlingConfig).
 pub mod success_response_handling_config {
 
-    /// A builder for [`SuccessResponseHandlingConfig`](crate::model::SuccessResponseHandlingConfig)
-    #[non_exhaustive]
+    /// A builder for [`SuccessResponseHandlingConfig`](crate::model::SuccessResponseHandlingConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_prefix: std::option::Option<std::string::String>,
@@ -3744,7 +3785,7 @@ pub mod success_response_handling_config {
             self.bucket_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`SuccessResponseHandlingConfig`](crate::model::SuccessResponseHandlingConfig)
+        /// Consumes the builder and constructs a [`SuccessResponseHandlingConfig`](crate::model::SuccessResponseHandlingConfig).
         pub fn build(self) -> crate::model::SuccessResponseHandlingConfig {
             crate::model::SuccessResponseHandlingConfig {
                 bucket_prefix: self.bucket_prefix,
@@ -3754,7 +3795,7 @@ pub mod success_response_handling_config {
     }
 }
 impl SuccessResponseHandlingConfig {
-    /// Creates a new builder-style object to manufacture [`SuccessResponseHandlingConfig`](crate::model::SuccessResponseHandlingConfig)
+    /// Creates a new builder-style object to manufacture [`SuccessResponseHandlingConfig`](crate::model::SuccessResponseHandlingConfig).
     pub fn builder() -> crate::model::success_response_handling_config::Builder {
         crate::model::success_response_handling_config::Builder::default()
     }
@@ -3765,14 +3806,19 @@ impl SuccessResponseHandlingConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomConnectorDestinationProperties {
     /// <p>The entity specified in the custom connector as a destination in the flow.</p>
+    #[doc(hidden)]
     pub entity_name: std::option::Option<std::string::String>,
     /// <p>The settings that determine how Amazon AppFlow handles an error when placing data in the custom connector as destination.</p>
+    #[doc(hidden)]
     pub error_handling_config: std::option::Option<crate::model::ErrorHandlingConfig>,
     /// <p>Specifies the type of write operation to be performed in the custom connector when it's used as destination.</p>
+    #[doc(hidden)]
     pub write_operation_type: std::option::Option<crate::model::WriteOperationType>,
     /// <p>The name of the field that Amazon AppFlow uses as an ID when performing a write operation such as update, delete, or upsert.</p>
+    #[doc(hidden)]
     pub id_field_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The custom properties that are specific to the connector when it's used as a destination in the flow.</p>
+    #[doc(hidden)]
     pub custom_properties:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -3812,11 +3858,10 @@ impl std::fmt::Debug for CustomConnectorDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`CustomConnectorDestinationProperties`](crate::model::CustomConnectorDestinationProperties)
+/// See [`CustomConnectorDestinationProperties`](crate::model::CustomConnectorDestinationProperties).
 pub mod custom_connector_destination_properties {
 
-    /// A builder for [`CustomConnectorDestinationProperties`](crate::model::CustomConnectorDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`CustomConnectorDestinationProperties`](crate::model::CustomConnectorDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entity_name: std::option::Option<std::string::String>,
@@ -3908,7 +3953,7 @@ pub mod custom_connector_destination_properties {
             self.custom_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomConnectorDestinationProperties`](crate::model::CustomConnectorDestinationProperties)
+        /// Consumes the builder and constructs a [`CustomConnectorDestinationProperties`](crate::model::CustomConnectorDestinationProperties).
         pub fn build(self) -> crate::model::CustomConnectorDestinationProperties {
             crate::model::CustomConnectorDestinationProperties {
                 entity_name: self.entity_name,
@@ -3921,7 +3966,7 @@ pub mod custom_connector_destination_properties {
     }
 }
 impl CustomConnectorDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`CustomConnectorDestinationProperties`](crate::model::CustomConnectorDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`CustomConnectorDestinationProperties`](crate::model::CustomConnectorDestinationProperties).
     pub fn builder() -> crate::model::custom_connector_destination_properties::Builder {
         crate::model::custom_connector_destination_properties::Builder::default()
     }
@@ -3932,8 +3977,10 @@ impl CustomConnectorDestinationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MarketoDestinationProperties {
     /// <p>The object specified in the Marketo flow destination.</p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
     /// <p> The settings that determine how Amazon AppFlow handles an error when placing data in the destination. For example, this setting would determine if the flow should fail after one insertion error, or continue and attempt to insert every record regardless of the initial failure. <code>ErrorHandlingConfig</code> is a part of the destination connector details. </p>
+    #[doc(hidden)]
     pub error_handling_config: std::option::Option<crate::model::ErrorHandlingConfig>,
 }
 impl MarketoDestinationProperties {
@@ -3954,11 +4001,10 @@ impl std::fmt::Debug for MarketoDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`MarketoDestinationProperties`](crate::model::MarketoDestinationProperties)
+/// See [`MarketoDestinationProperties`](crate::model::MarketoDestinationProperties).
 pub mod marketo_destination_properties {
 
-    /// A builder for [`MarketoDestinationProperties`](crate::model::MarketoDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`MarketoDestinationProperties`](crate::model::MarketoDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -3988,7 +4034,7 @@ pub mod marketo_destination_properties {
             self.error_handling_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`MarketoDestinationProperties`](crate::model::MarketoDestinationProperties)
+        /// Consumes the builder and constructs a [`MarketoDestinationProperties`](crate::model::MarketoDestinationProperties).
         pub fn build(self) -> crate::model::MarketoDestinationProperties {
             crate::model::MarketoDestinationProperties {
                 object: self.object,
@@ -3998,7 +4044,7 @@ pub mod marketo_destination_properties {
     }
 }
 impl MarketoDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`MarketoDestinationProperties`](crate::model::MarketoDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`MarketoDestinationProperties`](crate::model::MarketoDestinationProperties).
     pub fn builder() -> crate::model::marketo_destination_properties::Builder {
         crate::model::marketo_destination_properties::Builder::default()
     }
@@ -4009,12 +4055,16 @@ impl MarketoDestinationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ZendeskDestinationProperties {
     /// <p>The object specified in the Zendesk flow destination.</p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
     /// <p> A list of field names that can be used as an ID field when performing a write operation. </p>
+    #[doc(hidden)]
     pub id_field_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> The settings that determine how Amazon AppFlow handles an error when placing data in the destination. For example, this setting would determine if the flow should fail after one insertion error, or continue and attempt to insert every record regardless of the initial failure. <code>ErrorHandlingConfig</code> is a part of the destination connector details. </p>
+    #[doc(hidden)]
     pub error_handling_config: std::option::Option<crate::model::ErrorHandlingConfig>,
     /// <p> The possible write operations in the destination connector. When this value is not provided, this defaults to the <code>INSERT</code> operation. </p>
+    #[doc(hidden)]
     pub write_operation_type: std::option::Option<crate::model::WriteOperationType>,
 }
 impl ZendeskDestinationProperties {
@@ -4045,11 +4095,10 @@ impl std::fmt::Debug for ZendeskDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`ZendeskDestinationProperties`](crate::model::ZendeskDestinationProperties)
+/// See [`ZendeskDestinationProperties`](crate::model::ZendeskDestinationProperties).
 pub mod zendesk_destination_properties {
 
-    /// A builder for [`ZendeskDestinationProperties`](crate::model::ZendeskDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`ZendeskDestinationProperties`](crate::model::ZendeskDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -4113,7 +4162,7 @@ pub mod zendesk_destination_properties {
             self.write_operation_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ZendeskDestinationProperties`](crate::model::ZendeskDestinationProperties)
+        /// Consumes the builder and constructs a [`ZendeskDestinationProperties`](crate::model::ZendeskDestinationProperties).
         pub fn build(self) -> crate::model::ZendeskDestinationProperties {
             crate::model::ZendeskDestinationProperties {
                 object: self.object,
@@ -4125,7 +4174,7 @@ pub mod zendesk_destination_properties {
     }
 }
 impl ZendeskDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`ZendeskDestinationProperties`](crate::model::ZendeskDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`ZendeskDestinationProperties`](crate::model::ZendeskDestinationProperties).
     pub fn builder() -> crate::model::zendesk_destination_properties::Builder {
         crate::model::zendesk_destination_properties::Builder::default()
     }
@@ -4136,8 +4185,10 @@ impl ZendeskDestinationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomerProfilesDestinationProperties {
     /// <p> The unique name of the Amazon Connect Customer Profiles domain. </p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p> The object specified in the Amazon Connect Customer Profiles flow destination. </p>
+    #[doc(hidden)]
     pub object_type_name: std::option::Option<std::string::String>,
 }
 impl CustomerProfilesDestinationProperties {
@@ -4158,11 +4209,10 @@ impl std::fmt::Debug for CustomerProfilesDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`CustomerProfilesDestinationProperties`](crate::model::CustomerProfilesDestinationProperties)
+/// See [`CustomerProfilesDestinationProperties`](crate::model::CustomerProfilesDestinationProperties).
 pub mod customer_profiles_destination_properties {
 
-    /// A builder for [`CustomerProfilesDestinationProperties`](crate::model::CustomerProfilesDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`CustomerProfilesDestinationProperties`](crate::model::CustomerProfilesDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -4192,7 +4242,7 @@ pub mod customer_profiles_destination_properties {
             self.object_type_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomerProfilesDestinationProperties`](crate::model::CustomerProfilesDestinationProperties)
+        /// Consumes the builder and constructs a [`CustomerProfilesDestinationProperties`](crate::model::CustomerProfilesDestinationProperties).
         pub fn build(self) -> crate::model::CustomerProfilesDestinationProperties {
             crate::model::CustomerProfilesDestinationProperties {
                 domain_name: self.domain_name,
@@ -4202,7 +4252,7 @@ pub mod customer_profiles_destination_properties {
     }
 }
 impl CustomerProfilesDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`CustomerProfilesDestinationProperties`](crate::model::CustomerProfilesDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`CustomerProfilesDestinationProperties`](crate::model::CustomerProfilesDestinationProperties).
     pub fn builder() -> crate::model::customer_profiles_destination_properties::Builder {
         crate::model::customer_profiles_destination_properties::Builder::default()
     }
@@ -4213,8 +4263,10 @@ impl CustomerProfilesDestinationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HoneycodeDestinationProperties {
     /// <p> The object specified in the Amazon Honeycode flow destination. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
     /// <p> The settings that determine how Amazon AppFlow handles an error when placing data in the destination. For example, this setting would determine if the flow should fail after one insertion error, or continue and attempt to insert every record regardless of the initial failure. <code>ErrorHandlingConfig</code> is a part of the destination connector details. </p>
+    #[doc(hidden)]
     pub error_handling_config: std::option::Option<crate::model::ErrorHandlingConfig>,
 }
 impl HoneycodeDestinationProperties {
@@ -4235,11 +4287,10 @@ impl std::fmt::Debug for HoneycodeDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`HoneycodeDestinationProperties`](crate::model::HoneycodeDestinationProperties)
+/// See [`HoneycodeDestinationProperties`](crate::model::HoneycodeDestinationProperties).
 pub mod honeycode_destination_properties {
 
-    /// A builder for [`HoneycodeDestinationProperties`](crate::model::HoneycodeDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`HoneycodeDestinationProperties`](crate::model::HoneycodeDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -4269,7 +4320,7 @@ pub mod honeycode_destination_properties {
             self.error_handling_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`HoneycodeDestinationProperties`](crate::model::HoneycodeDestinationProperties)
+        /// Consumes the builder and constructs a [`HoneycodeDestinationProperties`](crate::model::HoneycodeDestinationProperties).
         pub fn build(self) -> crate::model::HoneycodeDestinationProperties {
             crate::model::HoneycodeDestinationProperties {
                 object: self.object,
@@ -4279,7 +4330,7 @@ pub mod honeycode_destination_properties {
     }
 }
 impl HoneycodeDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`HoneycodeDestinationProperties`](crate::model::HoneycodeDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`HoneycodeDestinationProperties`](crate::model::HoneycodeDestinationProperties).
     pub fn builder() -> crate::model::honeycode_destination_properties::Builder {
         crate::model::honeycode_destination_properties::Builder::default()
     }
@@ -4290,10 +4341,13 @@ impl HoneycodeDestinationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpsolverDestinationProperties {
     /// <p> The Upsolver Amazon S3 bucket name in which Amazon AppFlow places the transferred data. </p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p> The object key for the destination Upsolver Amazon S3 bucket in which Amazon AppFlow places the files. </p>
+    #[doc(hidden)]
     pub bucket_prefix: std::option::Option<std::string::String>,
     /// <p> The configuration that determines how data is formatted when Upsolver is used as the flow destination. </p>
+    #[doc(hidden)]
     pub s3_output_format_config: std::option::Option<crate::model::UpsolverS3OutputFormatConfig>,
 }
 impl UpsolverDestinationProperties {
@@ -4321,11 +4375,10 @@ impl std::fmt::Debug for UpsolverDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`UpsolverDestinationProperties`](crate::model::UpsolverDestinationProperties)
+/// See [`UpsolverDestinationProperties`](crate::model::UpsolverDestinationProperties).
 pub mod upsolver_destination_properties {
 
-    /// A builder for [`UpsolverDestinationProperties`](crate::model::UpsolverDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`UpsolverDestinationProperties`](crate::model::UpsolverDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_name: std::option::Option<std::string::String>,
@@ -4373,7 +4426,7 @@ pub mod upsolver_destination_properties {
             self.s3_output_format_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpsolverDestinationProperties`](crate::model::UpsolverDestinationProperties)
+        /// Consumes the builder and constructs a [`UpsolverDestinationProperties`](crate::model::UpsolverDestinationProperties).
         pub fn build(self) -> crate::model::UpsolverDestinationProperties {
             crate::model::UpsolverDestinationProperties {
                 bucket_name: self.bucket_name,
@@ -4384,7 +4437,7 @@ pub mod upsolver_destination_properties {
     }
 }
 impl UpsolverDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`UpsolverDestinationProperties`](crate::model::UpsolverDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`UpsolverDestinationProperties`](crate::model::UpsolverDestinationProperties).
     pub fn builder() -> crate::model::upsolver_destination_properties::Builder {
         crate::model::upsolver_destination_properties::Builder::default()
     }
@@ -4395,10 +4448,13 @@ impl UpsolverDestinationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpsolverS3OutputFormatConfig {
     /// <p> Indicates the file type that Amazon AppFlow places in the Upsolver Amazon S3 bucket. </p>
+    #[doc(hidden)]
     pub file_type: std::option::Option<crate::model::FileType>,
     /// <p> Determines the prefix that Amazon AppFlow applies to the destination folder name. You can name your destination folders according to the flow frequency and date. </p>
+    #[doc(hidden)]
     pub prefix_config: std::option::Option<crate::model::PrefixConfig>,
     /// <p> The aggregation settings that you can use to customize the output format of your flow data. </p>
+    #[doc(hidden)]
     pub aggregation_config: std::option::Option<crate::model::AggregationConfig>,
 }
 impl UpsolverS3OutputFormatConfig {
@@ -4424,11 +4480,10 @@ impl std::fmt::Debug for UpsolverS3OutputFormatConfig {
         formatter.finish()
     }
 }
-/// See [`UpsolverS3OutputFormatConfig`](crate::model::UpsolverS3OutputFormatConfig)
+/// See [`UpsolverS3OutputFormatConfig`](crate::model::UpsolverS3OutputFormatConfig).
 pub mod upsolver_s3_output_format_config {
 
-    /// A builder for [`UpsolverS3OutputFormatConfig`](crate::model::UpsolverS3OutputFormatConfig)
-    #[non_exhaustive]
+    /// A builder for [`UpsolverS3OutputFormatConfig`](crate::model::UpsolverS3OutputFormatConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_type: std::option::Option<crate::model::FileType>,
@@ -4472,7 +4527,7 @@ pub mod upsolver_s3_output_format_config {
             self.aggregation_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpsolverS3OutputFormatConfig`](crate::model::UpsolverS3OutputFormatConfig)
+        /// Consumes the builder and constructs a [`UpsolverS3OutputFormatConfig`](crate::model::UpsolverS3OutputFormatConfig).
         pub fn build(self) -> crate::model::UpsolverS3OutputFormatConfig {
             crate::model::UpsolverS3OutputFormatConfig {
                 file_type: self.file_type,
@@ -4483,7 +4538,7 @@ pub mod upsolver_s3_output_format_config {
     }
 }
 impl UpsolverS3OutputFormatConfig {
-    /// Creates a new builder-style object to manufacture [`UpsolverS3OutputFormatConfig`](crate::model::UpsolverS3OutputFormatConfig)
+    /// Creates a new builder-style object to manufacture [`UpsolverS3OutputFormatConfig`](crate::model::UpsolverS3OutputFormatConfig).
     pub fn builder() -> crate::model::upsolver_s3_output_format_config::Builder {
         crate::model::upsolver_s3_output_format_config::Builder::default()
     }
@@ -4494,6 +4549,7 @@ impl UpsolverS3OutputFormatConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregationConfig {
     /// <p> Specifies whether Amazon AppFlow aggregates the flow records into a single file, or leave them unaggregated. </p>
+    #[doc(hidden)]
     pub aggregation_type: std::option::Option<crate::model::AggregationType>,
 }
 impl AggregationConfig {
@@ -4509,11 +4565,10 @@ impl std::fmt::Debug for AggregationConfig {
         formatter.finish()
     }
 }
-/// See [`AggregationConfig`](crate::model::AggregationConfig)
+/// See [`AggregationConfig`](crate::model::AggregationConfig).
 pub mod aggregation_config {
 
-    /// A builder for [`AggregationConfig`](crate::model::AggregationConfig)
-    #[non_exhaustive]
+    /// A builder for [`AggregationConfig`](crate::model::AggregationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aggregation_type: std::option::Option<crate::model::AggregationType>,
@@ -4532,7 +4587,7 @@ pub mod aggregation_config {
             self.aggregation_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregationConfig`](crate::model::AggregationConfig)
+        /// Consumes the builder and constructs a [`AggregationConfig`](crate::model::AggregationConfig).
         pub fn build(self) -> crate::model::AggregationConfig {
             crate::model::AggregationConfig {
                 aggregation_type: self.aggregation_type,
@@ -4541,7 +4596,7 @@ pub mod aggregation_config {
     }
 }
 impl AggregationConfig {
-    /// Creates a new builder-style object to manufacture [`AggregationConfig`](crate::model::AggregationConfig)
+    /// Creates a new builder-style object to manufacture [`AggregationConfig`](crate::model::AggregationConfig).
     pub fn builder() -> crate::model::aggregation_config::Builder {
         crate::model::aggregation_config::Builder::default()
     }
@@ -4607,8 +4662,10 @@ impl AsRef<str> for AggregationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrefixConfig {
     /// <p> Determines the format of the prefix, and whether it applies to the file name, file path, or both. </p>
+    #[doc(hidden)]
     pub prefix_type: std::option::Option<crate::model::PrefixType>,
     /// <p> Determines the level of granularity that's included in the prefix. </p>
+    #[doc(hidden)]
     pub prefix_format: std::option::Option<crate::model::PrefixFormat>,
 }
 impl PrefixConfig {
@@ -4629,11 +4686,10 @@ impl std::fmt::Debug for PrefixConfig {
         formatter.finish()
     }
 }
-/// See [`PrefixConfig`](crate::model::PrefixConfig)
+/// See [`PrefixConfig`](crate::model::PrefixConfig).
 pub mod prefix_config {
 
-    /// A builder for [`PrefixConfig`](crate::model::PrefixConfig)
-    #[non_exhaustive]
+    /// A builder for [`PrefixConfig`](crate::model::PrefixConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prefix_type: std::option::Option<crate::model::PrefixType>,
@@ -4666,7 +4722,7 @@ pub mod prefix_config {
             self.prefix_format = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrefixConfig`](crate::model::PrefixConfig)
+        /// Consumes the builder and constructs a [`PrefixConfig`](crate::model::PrefixConfig).
         pub fn build(self) -> crate::model::PrefixConfig {
             crate::model::PrefixConfig {
                 prefix_type: self.prefix_type,
@@ -4676,7 +4732,7 @@ pub mod prefix_config {
     }
 }
 impl PrefixConfig {
-    /// Creates a new builder-style object to manufacture [`PrefixConfig`](crate::model::PrefixConfig)
+    /// Creates a new builder-style object to manufacture [`PrefixConfig`](crate::model::PrefixConfig).
     pub fn builder() -> crate::model::prefix_config::Builder {
         crate::model::prefix_config::Builder::default()
     }
@@ -4877,22 +4933,21 @@ impl std::fmt::Debug for LookoutMetricsDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`LookoutMetricsDestinationProperties`](crate::model::LookoutMetricsDestinationProperties)
+/// See [`LookoutMetricsDestinationProperties`](crate::model::LookoutMetricsDestinationProperties).
 pub mod lookout_metrics_destination_properties {
 
-    /// A builder for [`LookoutMetricsDestinationProperties`](crate::model::LookoutMetricsDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`LookoutMetricsDestinationProperties`](crate::model::LookoutMetricsDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`LookoutMetricsDestinationProperties`](crate::model::LookoutMetricsDestinationProperties)
+        /// Consumes the builder and constructs a [`LookoutMetricsDestinationProperties`](crate::model::LookoutMetricsDestinationProperties).
         pub fn build(self) -> crate::model::LookoutMetricsDestinationProperties {
             crate::model::LookoutMetricsDestinationProperties {}
         }
     }
 }
 impl LookoutMetricsDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`LookoutMetricsDestinationProperties`](crate::model::LookoutMetricsDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`LookoutMetricsDestinationProperties`](crate::model::LookoutMetricsDestinationProperties).
     pub fn builder() -> crate::model::lookout_metrics_destination_properties::Builder {
         crate::model::lookout_metrics_destination_properties::Builder::default()
     }
@@ -4903,8 +4958,10 @@ impl LookoutMetricsDestinationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventBridgeDestinationProperties {
     /// <p> The object specified in the Amazon EventBridge flow destination. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
     /// <p> The settings that determine how Amazon AppFlow handles an error when placing data in the destination. For example, this setting would determine if the flow should fail after one insertion error, or continue and attempt to insert every record regardless of the initial failure. <code>ErrorHandlingConfig</code> is a part of the destination connector details. </p>
+    #[doc(hidden)]
     pub error_handling_config: std::option::Option<crate::model::ErrorHandlingConfig>,
 }
 impl EventBridgeDestinationProperties {
@@ -4925,11 +4982,10 @@ impl std::fmt::Debug for EventBridgeDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`EventBridgeDestinationProperties`](crate::model::EventBridgeDestinationProperties)
+/// See [`EventBridgeDestinationProperties`](crate::model::EventBridgeDestinationProperties).
 pub mod event_bridge_destination_properties {
 
-    /// A builder for [`EventBridgeDestinationProperties`](crate::model::EventBridgeDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`EventBridgeDestinationProperties`](crate::model::EventBridgeDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -4959,7 +5015,7 @@ pub mod event_bridge_destination_properties {
             self.error_handling_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventBridgeDestinationProperties`](crate::model::EventBridgeDestinationProperties)
+        /// Consumes the builder and constructs a [`EventBridgeDestinationProperties`](crate::model::EventBridgeDestinationProperties).
         pub fn build(self) -> crate::model::EventBridgeDestinationProperties {
             crate::model::EventBridgeDestinationProperties {
                 object: self.object,
@@ -4969,7 +5025,7 @@ pub mod event_bridge_destination_properties {
     }
 }
 impl EventBridgeDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`EventBridgeDestinationProperties`](crate::model::EventBridgeDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`EventBridgeDestinationProperties`](crate::model::EventBridgeDestinationProperties).
     pub fn builder() -> crate::model::event_bridge_destination_properties::Builder {
         crate::model::event_bridge_destination_properties::Builder::default()
     }
@@ -4980,12 +5036,16 @@ impl EventBridgeDestinationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnowflakeDestinationProperties {
     /// <p> The object specified in the Snowflake flow destination. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
     /// <p> The intermediate bucket that Amazon AppFlow uses when moving data into Snowflake. </p>
+    #[doc(hidden)]
     pub intermediate_bucket_name: std::option::Option<std::string::String>,
     /// <p> The object key for the destination bucket in which Amazon AppFlow places the files. </p>
+    #[doc(hidden)]
     pub bucket_prefix: std::option::Option<std::string::String>,
     /// <p> The settings that determine how Amazon AppFlow handles an error when placing data in the Snowflake destination. For example, this setting would determine if the flow should fail after one insertion error, or continue and attempt to insert every record regardless of the initial failure. <code>ErrorHandlingConfig</code> is a part of the destination connector details. </p>
+    #[doc(hidden)]
     pub error_handling_config: std::option::Option<crate::model::ErrorHandlingConfig>,
 }
 impl SnowflakeDestinationProperties {
@@ -5016,11 +5076,10 @@ impl std::fmt::Debug for SnowflakeDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`SnowflakeDestinationProperties`](crate::model::SnowflakeDestinationProperties)
+/// See [`SnowflakeDestinationProperties`](crate::model::SnowflakeDestinationProperties).
 pub mod snowflake_destination_properties {
 
-    /// A builder for [`SnowflakeDestinationProperties`](crate::model::SnowflakeDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`SnowflakeDestinationProperties`](crate::model::SnowflakeDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -5078,7 +5137,7 @@ pub mod snowflake_destination_properties {
             self.error_handling_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnowflakeDestinationProperties`](crate::model::SnowflakeDestinationProperties)
+        /// Consumes the builder and constructs a [`SnowflakeDestinationProperties`](crate::model::SnowflakeDestinationProperties).
         pub fn build(self) -> crate::model::SnowflakeDestinationProperties {
             crate::model::SnowflakeDestinationProperties {
                 object: self.object,
@@ -5090,7 +5149,7 @@ pub mod snowflake_destination_properties {
     }
 }
 impl SnowflakeDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`SnowflakeDestinationProperties`](crate::model::SnowflakeDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`SnowflakeDestinationProperties`](crate::model::SnowflakeDestinationProperties).
     pub fn builder() -> crate::model::snowflake_destination_properties::Builder {
         crate::model::snowflake_destination_properties::Builder::default()
     }
@@ -5101,12 +5160,16 @@ impl SnowflakeDestinationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SalesforceDestinationProperties {
     /// <p> The object specified in the Salesforce flow destination. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
     /// <p> The name of the field that Amazon AppFlow uses as an ID when performing a write operation such as update or delete. </p>
+    #[doc(hidden)]
     pub id_field_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> The settings that determine how Amazon AppFlow handles an error when placing data in the Salesforce destination. For example, this setting would determine if the flow should fail after one insertion error, or continue and attempt to insert every record regardless of the initial failure. <code>ErrorHandlingConfig</code> is a part of the destination connector details. </p>
+    #[doc(hidden)]
     pub error_handling_config: std::option::Option<crate::model::ErrorHandlingConfig>,
     /// <p> This specifies the type of write operation to be performed in Salesforce. When the value is <code>UPSERT</code>, then <code>idFieldNames</code> is required. </p>
+    #[doc(hidden)]
     pub write_operation_type: std::option::Option<crate::model::WriteOperationType>,
 }
 impl SalesforceDestinationProperties {
@@ -5137,11 +5200,10 @@ impl std::fmt::Debug for SalesforceDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`SalesforceDestinationProperties`](crate::model::SalesforceDestinationProperties)
+/// See [`SalesforceDestinationProperties`](crate::model::SalesforceDestinationProperties).
 pub mod salesforce_destination_properties {
 
-    /// A builder for [`SalesforceDestinationProperties`](crate::model::SalesforceDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`SalesforceDestinationProperties`](crate::model::SalesforceDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -5205,7 +5267,7 @@ pub mod salesforce_destination_properties {
             self.write_operation_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`SalesforceDestinationProperties`](crate::model::SalesforceDestinationProperties)
+        /// Consumes the builder and constructs a [`SalesforceDestinationProperties`](crate::model::SalesforceDestinationProperties).
         pub fn build(self) -> crate::model::SalesforceDestinationProperties {
             crate::model::SalesforceDestinationProperties {
                 object: self.object,
@@ -5217,7 +5279,7 @@ pub mod salesforce_destination_properties {
     }
 }
 impl SalesforceDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`SalesforceDestinationProperties`](crate::model::SalesforceDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`SalesforceDestinationProperties`](crate::model::SalesforceDestinationProperties).
     pub fn builder() -> crate::model::salesforce_destination_properties::Builder {
         crate::model::salesforce_destination_properties::Builder::default()
     }
@@ -5228,10 +5290,13 @@ impl SalesforceDestinationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3DestinationProperties {
     /// <p> The Amazon S3 bucket name in which Amazon AppFlow places the transferred data. </p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p> The object key for the destination bucket in which Amazon AppFlow places the files. </p>
+    #[doc(hidden)]
     pub bucket_prefix: std::option::Option<std::string::String>,
     /// <p> The configuration that determines how Amazon AppFlow should format the flow output data when Amazon S3 is used as the destination. </p>
+    #[doc(hidden)]
     pub s3_output_format_config: std::option::Option<crate::model::S3OutputFormatConfig>,
 }
 impl S3DestinationProperties {
@@ -5259,11 +5324,10 @@ impl std::fmt::Debug for S3DestinationProperties {
         formatter.finish()
     }
 }
-/// See [`S3DestinationProperties`](crate::model::S3DestinationProperties)
+/// See [`S3DestinationProperties`](crate::model::S3DestinationProperties).
 pub mod s3_destination_properties {
 
-    /// A builder for [`S3DestinationProperties`](crate::model::S3DestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`S3DestinationProperties`](crate::model::S3DestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_name: std::option::Option<std::string::String>,
@@ -5310,7 +5374,7 @@ pub mod s3_destination_properties {
             self.s3_output_format_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3DestinationProperties`](crate::model::S3DestinationProperties)
+        /// Consumes the builder and constructs a [`S3DestinationProperties`](crate::model::S3DestinationProperties).
         pub fn build(self) -> crate::model::S3DestinationProperties {
             crate::model::S3DestinationProperties {
                 bucket_name: self.bucket_name,
@@ -5321,7 +5385,7 @@ pub mod s3_destination_properties {
     }
 }
 impl S3DestinationProperties {
-    /// Creates a new builder-style object to manufacture [`S3DestinationProperties`](crate::model::S3DestinationProperties)
+    /// Creates a new builder-style object to manufacture [`S3DestinationProperties`](crate::model::S3DestinationProperties).
     pub fn builder() -> crate::model::s3_destination_properties::Builder {
         crate::model::s3_destination_properties::Builder::default()
     }
@@ -5332,16 +5396,20 @@ impl S3DestinationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3OutputFormatConfig {
     /// <p> Indicates the file type that Amazon AppFlow places in the Amazon S3 bucket. </p>
+    #[doc(hidden)]
     pub file_type: std::option::Option<crate::model::FileType>,
     /// <p> Determines the prefix that Amazon AppFlow applies to the folder name in the Amazon S3 bucket. You can name folders according to the flow frequency and date. </p>
+    #[doc(hidden)]
     pub prefix_config: std::option::Option<crate::model::PrefixConfig>,
     /// <p> The aggregation settings that you can use to customize the output format of your flow data. </p>
+    #[doc(hidden)]
     pub aggregation_config: std::option::Option<crate::model::AggregationConfig>,
     /// <p>If your file output format is Parquet, use this parameter to set whether Amazon AppFlow preserves the data types in your source data when it writes the output to Amazon S3. </p>
     /// <ul>
     /// <li> <p> <code>true</code>: Amazon AppFlow preserves the data types when it writes to Amazon S3. For example, an integer or <code>1</code> in your source data is still an integer in your output.</p> </li>
     /// <li> <p> <code>false</code>: Amazon AppFlow converts all of the source data into strings when it writes to Amazon S3. For example, an integer of <code>1</code> in your source data becomes the string <code>"1"</code> in the output.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub preserve_source_data_typing: std::option::Option<bool>,
 }
 impl S3OutputFormatConfig {
@@ -5379,11 +5447,10 @@ impl std::fmt::Debug for S3OutputFormatConfig {
         formatter.finish()
     }
 }
-/// See [`S3OutputFormatConfig`](crate::model::S3OutputFormatConfig)
+/// See [`S3OutputFormatConfig`](crate::model::S3OutputFormatConfig).
 pub mod s3_output_format_config {
 
-    /// A builder for [`S3OutputFormatConfig`](crate::model::S3OutputFormatConfig)
-    #[non_exhaustive]
+    /// A builder for [`S3OutputFormatConfig`](crate::model::S3OutputFormatConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_type: std::option::Option<crate::model::FileType>,
@@ -5446,7 +5513,7 @@ pub mod s3_output_format_config {
             self.preserve_source_data_typing = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3OutputFormatConfig`](crate::model::S3OutputFormatConfig)
+        /// Consumes the builder and constructs a [`S3OutputFormatConfig`](crate::model::S3OutputFormatConfig).
         pub fn build(self) -> crate::model::S3OutputFormatConfig {
             crate::model::S3OutputFormatConfig {
                 file_type: self.file_type,
@@ -5458,7 +5525,7 @@ pub mod s3_output_format_config {
     }
 }
 impl S3OutputFormatConfig {
-    /// Creates a new builder-style object to manufacture [`S3OutputFormatConfig`](crate::model::S3OutputFormatConfig)
+    /// Creates a new builder-style object to manufacture [`S3OutputFormatConfig`](crate::model::S3OutputFormatConfig).
     pub fn builder() -> crate::model::s3_output_format_config::Builder {
         crate::model::s3_output_format_config::Builder::default()
     }
@@ -5469,12 +5536,16 @@ impl S3OutputFormatConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RedshiftDestinationProperties {
     /// <p> The object specified in the Amazon Redshift flow destination. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
     /// <p> The intermediate bucket that Amazon AppFlow uses when moving data into Amazon Redshift. </p>
+    #[doc(hidden)]
     pub intermediate_bucket_name: std::option::Option<std::string::String>,
     /// <p> The object key for the bucket in which Amazon AppFlow places the destination files. </p>
+    #[doc(hidden)]
     pub bucket_prefix: std::option::Option<std::string::String>,
     /// <p> The settings that determine how Amazon AppFlow handles an error when placing data in the Amazon Redshift destination. For example, this setting would determine if the flow should fail after one insertion error, or continue and attempt to insert every record regardless of the initial failure. <code>ErrorHandlingConfig</code> is a part of the destination connector details. </p>
+    #[doc(hidden)]
     pub error_handling_config: std::option::Option<crate::model::ErrorHandlingConfig>,
 }
 impl RedshiftDestinationProperties {
@@ -5505,11 +5576,10 @@ impl std::fmt::Debug for RedshiftDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`RedshiftDestinationProperties`](crate::model::RedshiftDestinationProperties)
+/// See [`RedshiftDestinationProperties`](crate::model::RedshiftDestinationProperties).
 pub mod redshift_destination_properties {
 
-    /// A builder for [`RedshiftDestinationProperties`](crate::model::RedshiftDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`RedshiftDestinationProperties`](crate::model::RedshiftDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -5567,7 +5637,7 @@ pub mod redshift_destination_properties {
             self.error_handling_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`RedshiftDestinationProperties`](crate::model::RedshiftDestinationProperties)
+        /// Consumes the builder and constructs a [`RedshiftDestinationProperties`](crate::model::RedshiftDestinationProperties).
         pub fn build(self) -> crate::model::RedshiftDestinationProperties {
             crate::model::RedshiftDestinationProperties {
                 object: self.object,
@@ -5579,7 +5649,7 @@ pub mod redshift_destination_properties {
     }
 }
 impl RedshiftDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`RedshiftDestinationProperties`](crate::model::RedshiftDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`RedshiftDestinationProperties`](crate::model::RedshiftDestinationProperties).
     pub fn builder() -> crate::model::redshift_destination_properties::Builder {
         crate::model::redshift_destination_properties::Builder::default()
     }
@@ -5753,14 +5823,19 @@ impl AsRef<str> for ConnectorType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceFlowConfig {
     /// <p> The type of connector, such as Salesforce, Amplitude, and so on. </p>
+    #[doc(hidden)]
     pub connector_type: std::option::Option<crate::model::ConnectorType>,
     /// <p>The API version of the connector when it's used as a source in the flow.</p>
+    #[doc(hidden)]
     pub api_version: std::option::Option<std::string::String>,
     /// <p> The name of the connector profile. This name must be unique for each connector profile in the Amazon Web Services account. </p>
+    #[doc(hidden)]
     pub connector_profile_name: std::option::Option<std::string::String>,
     /// <p> Specifies the information that is required to query a particular source connector. </p>
+    #[doc(hidden)]
     pub source_connector_properties: std::option::Option<crate::model::SourceConnectorProperties>,
     /// <p> Defines the configuration for a scheduled incremental data pull. If a valid configuration is provided, the fields specified in the configuration are used when querying for the incremental data pull. </p>
+    #[doc(hidden)]
     pub incremental_pull_config: std::option::Option<crate::model::IncrementalPullConfig>,
 }
 impl SourceFlowConfig {
@@ -5803,11 +5878,10 @@ impl std::fmt::Debug for SourceFlowConfig {
         formatter.finish()
     }
 }
-/// See [`SourceFlowConfig`](crate::model::SourceFlowConfig)
+/// See [`SourceFlowConfig`](crate::model::SourceFlowConfig).
 pub mod source_flow_config {
 
-    /// A builder for [`SourceFlowConfig`](crate::model::SourceFlowConfig)
-    #[non_exhaustive]
+    /// A builder for [`SourceFlowConfig`](crate::model::SourceFlowConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connector_type: std::option::Option<crate::model::ConnectorType>,
@@ -5887,7 +5961,7 @@ pub mod source_flow_config {
             self.incremental_pull_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceFlowConfig`](crate::model::SourceFlowConfig)
+        /// Consumes the builder and constructs a [`SourceFlowConfig`](crate::model::SourceFlowConfig).
         pub fn build(self) -> crate::model::SourceFlowConfig {
             crate::model::SourceFlowConfig {
                 connector_type: self.connector_type,
@@ -5900,7 +5974,7 @@ pub mod source_flow_config {
     }
 }
 impl SourceFlowConfig {
-    /// Creates a new builder-style object to manufacture [`SourceFlowConfig`](crate::model::SourceFlowConfig)
+    /// Creates a new builder-style object to manufacture [`SourceFlowConfig`](crate::model::SourceFlowConfig).
     pub fn builder() -> crate::model::source_flow_config::Builder {
         crate::model::source_flow_config::Builder::default()
     }
@@ -5911,6 +5985,7 @@ impl SourceFlowConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IncrementalPullConfig {
     /// <p> A field that specifies the date time or timestamp field as the criteria to use when importing incremental records from the source. </p>
+    #[doc(hidden)]
     pub datetime_type_field_name: std::option::Option<std::string::String>,
 }
 impl IncrementalPullConfig {
@@ -5926,11 +6001,10 @@ impl std::fmt::Debug for IncrementalPullConfig {
         formatter.finish()
     }
 }
-/// See [`IncrementalPullConfig`](crate::model::IncrementalPullConfig)
+/// See [`IncrementalPullConfig`](crate::model::IncrementalPullConfig).
 pub mod incremental_pull_config {
 
-    /// A builder for [`IncrementalPullConfig`](crate::model::IncrementalPullConfig)
-    #[non_exhaustive]
+    /// A builder for [`IncrementalPullConfig`](crate::model::IncrementalPullConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) datetime_type_field_name: std::option::Option<std::string::String>,
@@ -5949,7 +6023,7 @@ pub mod incremental_pull_config {
             self.datetime_type_field_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`IncrementalPullConfig`](crate::model::IncrementalPullConfig)
+        /// Consumes the builder and constructs a [`IncrementalPullConfig`](crate::model::IncrementalPullConfig).
         pub fn build(self) -> crate::model::IncrementalPullConfig {
             crate::model::IncrementalPullConfig {
                 datetime_type_field_name: self.datetime_type_field_name,
@@ -5958,7 +6032,7 @@ pub mod incremental_pull_config {
     }
 }
 impl IncrementalPullConfig {
-    /// Creates a new builder-style object to manufacture [`IncrementalPullConfig`](crate::model::IncrementalPullConfig)
+    /// Creates a new builder-style object to manufacture [`IncrementalPullConfig`](crate::model::IncrementalPullConfig).
     pub fn builder() -> crate::model::incremental_pull_config::Builder {
         crate::model::incremental_pull_config::Builder::default()
     }
@@ -5969,36 +6043,52 @@ impl IncrementalPullConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceConnectorProperties {
     /// <p> Specifies the information that is required for querying Amplitude. </p>
+    #[doc(hidden)]
     pub amplitude: std::option::Option<crate::model::AmplitudeSourceProperties>,
     /// <p> Specifies the information that is required for querying Datadog. </p>
+    #[doc(hidden)]
     pub datadog: std::option::Option<crate::model::DatadogSourceProperties>,
     /// <p> Specifies the information that is required for querying Dynatrace. </p>
+    #[doc(hidden)]
     pub dynatrace: std::option::Option<crate::model::DynatraceSourceProperties>,
     /// <p> Specifies the information that is required for querying Google Analytics. </p>
+    #[doc(hidden)]
     pub google_analytics: std::option::Option<crate::model::GoogleAnalyticsSourceProperties>,
     /// <p> Specifies the information that is required for querying Infor Nexus. </p>
+    #[doc(hidden)]
     pub infor_nexus: std::option::Option<crate::model::InforNexusSourceProperties>,
     /// <p> Specifies the information that is required for querying Marketo. </p>
+    #[doc(hidden)]
     pub marketo: std::option::Option<crate::model::MarketoSourceProperties>,
     /// <p> Specifies the information that is required for querying Amazon S3. </p>
+    #[doc(hidden)]
     pub s3: std::option::Option<crate::model::S3SourceProperties>,
     /// <p> Specifies the information that is required for querying Salesforce. </p>
+    #[doc(hidden)]
     pub salesforce: std::option::Option<crate::model::SalesforceSourceProperties>,
     /// <p> Specifies the information that is required for querying ServiceNow. </p>
+    #[doc(hidden)]
     pub service_now: std::option::Option<crate::model::ServiceNowSourceProperties>,
     /// <p> Specifies the information that is required for querying Singular. </p>
+    #[doc(hidden)]
     pub singular: std::option::Option<crate::model::SingularSourceProperties>,
     /// <p> Specifies the information that is required for querying Slack. </p>
+    #[doc(hidden)]
     pub slack: std::option::Option<crate::model::SlackSourceProperties>,
     /// <p> Specifies the information that is required for querying Trend Micro. </p>
+    #[doc(hidden)]
     pub trendmicro: std::option::Option<crate::model::TrendmicroSourceProperties>,
     /// <p> Specifies the information that is required for querying Veeva. </p>
+    #[doc(hidden)]
     pub veeva: std::option::Option<crate::model::VeevaSourceProperties>,
     /// <p> Specifies the information that is required for querying Zendesk. </p>
+    #[doc(hidden)]
     pub zendesk: std::option::Option<crate::model::ZendeskSourceProperties>,
     /// <p> The properties that are applied when using SAPOData as a flow source. </p>
+    #[doc(hidden)]
     pub sapo_data: std::option::Option<crate::model::SapoDataSourceProperties>,
     /// <p>The properties that are applied when the custom connector is being used as a source.</p>
+    #[doc(hidden)]
     pub custom_connector: std::option::Option<crate::model::CustomConnectorSourceProperties>,
 }
 impl SourceConnectorProperties {
@@ -6093,11 +6183,10 @@ impl std::fmt::Debug for SourceConnectorProperties {
         formatter.finish()
     }
 }
-/// See [`SourceConnectorProperties`](crate::model::SourceConnectorProperties)
+/// See [`SourceConnectorProperties`](crate::model::SourceConnectorProperties).
 pub mod source_connector_properties {
 
-    /// A builder for [`SourceConnectorProperties`](crate::model::SourceConnectorProperties)
-    #[non_exhaustive]
+    /// A builder for [`SourceConnectorProperties`](crate::model::SourceConnectorProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) amplitude: std::option::Option<crate::model::AmplitudeSourceProperties>,
@@ -6334,7 +6423,7 @@ pub mod source_connector_properties {
             self.custom_connector = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceConnectorProperties`](crate::model::SourceConnectorProperties)
+        /// Consumes the builder and constructs a [`SourceConnectorProperties`](crate::model::SourceConnectorProperties).
         pub fn build(self) -> crate::model::SourceConnectorProperties {
             crate::model::SourceConnectorProperties {
                 amplitude: self.amplitude,
@@ -6358,7 +6447,7 @@ pub mod source_connector_properties {
     }
 }
 impl SourceConnectorProperties {
-    /// Creates a new builder-style object to manufacture [`SourceConnectorProperties`](crate::model::SourceConnectorProperties)
+    /// Creates a new builder-style object to manufacture [`SourceConnectorProperties`](crate::model::SourceConnectorProperties).
     pub fn builder() -> crate::model::source_connector_properties::Builder {
         crate::model::source_connector_properties::Builder::default()
     }
@@ -6369,8 +6458,10 @@ impl SourceConnectorProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomConnectorSourceProperties {
     /// <p>The entity specified in the custom connector as a source in the flow.</p>
+    #[doc(hidden)]
     pub entity_name: std::option::Option<std::string::String>,
     /// <p>Custom properties that are required to use the custom connector as a source.</p>
+    #[doc(hidden)]
     pub custom_properties:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -6395,11 +6486,10 @@ impl std::fmt::Debug for CustomConnectorSourceProperties {
         formatter.finish()
     }
 }
-/// See [`CustomConnectorSourceProperties`](crate::model::CustomConnectorSourceProperties)
+/// See [`CustomConnectorSourceProperties`](crate::model::CustomConnectorSourceProperties).
 pub mod custom_connector_source_properties {
 
-    /// A builder for [`CustomConnectorSourceProperties`](crate::model::CustomConnectorSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`CustomConnectorSourceProperties`](crate::model::CustomConnectorSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entity_name: std::option::Option<std::string::String>,
@@ -6443,7 +6533,7 @@ pub mod custom_connector_source_properties {
             self.custom_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomConnectorSourceProperties`](crate::model::CustomConnectorSourceProperties)
+        /// Consumes the builder and constructs a [`CustomConnectorSourceProperties`](crate::model::CustomConnectorSourceProperties).
         pub fn build(self) -> crate::model::CustomConnectorSourceProperties {
             crate::model::CustomConnectorSourceProperties {
                 entity_name: self.entity_name,
@@ -6453,7 +6543,7 @@ pub mod custom_connector_source_properties {
     }
 }
 impl CustomConnectorSourceProperties {
-    /// Creates a new builder-style object to manufacture [`CustomConnectorSourceProperties`](crate::model::CustomConnectorSourceProperties)
+    /// Creates a new builder-style object to manufacture [`CustomConnectorSourceProperties`](crate::model::CustomConnectorSourceProperties).
     pub fn builder() -> crate::model::custom_connector_source_properties::Builder {
         crate::model::custom_connector_source_properties::Builder::default()
     }
@@ -6464,6 +6554,7 @@ impl CustomConnectorSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SapoDataSourceProperties {
     /// <p> The object path specified in the SAPOData flow source. </p>
+    #[doc(hidden)]
     pub object_path: std::option::Option<std::string::String>,
 }
 impl SapoDataSourceProperties {
@@ -6479,11 +6570,10 @@ impl std::fmt::Debug for SapoDataSourceProperties {
         formatter.finish()
     }
 }
-/// See [`SapoDataSourceProperties`](crate::model::SapoDataSourceProperties)
+/// See [`SapoDataSourceProperties`](crate::model::SapoDataSourceProperties).
 pub mod sapo_data_source_properties {
 
-    /// A builder for [`SapoDataSourceProperties`](crate::model::SapoDataSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`SapoDataSourceProperties`](crate::model::SapoDataSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_path: std::option::Option<std::string::String>,
@@ -6499,7 +6589,7 @@ pub mod sapo_data_source_properties {
             self.object_path = input;
             self
         }
-        /// Consumes the builder and constructs a [`SapoDataSourceProperties`](crate::model::SapoDataSourceProperties)
+        /// Consumes the builder and constructs a [`SapoDataSourceProperties`](crate::model::SapoDataSourceProperties).
         pub fn build(self) -> crate::model::SapoDataSourceProperties {
             crate::model::SapoDataSourceProperties {
                 object_path: self.object_path,
@@ -6508,7 +6598,7 @@ pub mod sapo_data_source_properties {
     }
 }
 impl SapoDataSourceProperties {
-    /// Creates a new builder-style object to manufacture [`SapoDataSourceProperties`](crate::model::SapoDataSourceProperties)
+    /// Creates a new builder-style object to manufacture [`SapoDataSourceProperties`](crate::model::SapoDataSourceProperties).
     pub fn builder() -> crate::model::sapo_data_source_properties::Builder {
         crate::model::sapo_data_source_properties::Builder::default()
     }
@@ -6519,6 +6609,7 @@ impl SapoDataSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ZendeskSourceProperties {
     /// <p> The object specified in the Zendesk flow source. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
 }
 impl ZendeskSourceProperties {
@@ -6534,11 +6625,10 @@ impl std::fmt::Debug for ZendeskSourceProperties {
         formatter.finish()
     }
 }
-/// See [`ZendeskSourceProperties`](crate::model::ZendeskSourceProperties)
+/// See [`ZendeskSourceProperties`](crate::model::ZendeskSourceProperties).
 pub mod zendesk_source_properties {
 
-    /// A builder for [`ZendeskSourceProperties`](crate::model::ZendeskSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`ZendeskSourceProperties`](crate::model::ZendeskSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -6554,7 +6644,7 @@ pub mod zendesk_source_properties {
             self.object = input;
             self
         }
-        /// Consumes the builder and constructs a [`ZendeskSourceProperties`](crate::model::ZendeskSourceProperties)
+        /// Consumes the builder and constructs a [`ZendeskSourceProperties`](crate::model::ZendeskSourceProperties).
         pub fn build(self) -> crate::model::ZendeskSourceProperties {
             crate::model::ZendeskSourceProperties {
                 object: self.object,
@@ -6563,7 +6653,7 @@ pub mod zendesk_source_properties {
     }
 }
 impl ZendeskSourceProperties {
-    /// Creates a new builder-style object to manufacture [`ZendeskSourceProperties`](crate::model::ZendeskSourceProperties)
+    /// Creates a new builder-style object to manufacture [`ZendeskSourceProperties`](crate::model::ZendeskSourceProperties).
     pub fn builder() -> crate::model::zendesk_source_properties::Builder {
         crate::model::zendesk_source_properties::Builder::default()
     }
@@ -6574,14 +6664,19 @@ impl ZendeskSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VeevaSourceProperties {
     /// <p> The object specified in the Veeva flow source. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
     /// <p>The document type specified in the Veeva document extract flow.</p>
+    #[doc(hidden)]
     pub document_type: std::option::Option<std::string::String>,
     /// <p>Boolean value to include source files in Veeva document extract flow.</p>
+    #[doc(hidden)]
     pub include_source_files: bool,
     /// <p>Boolean value to include file renditions in Veeva document extract flow.</p>
+    #[doc(hidden)]
     pub include_renditions: bool,
     /// <p>Boolean value to include All Versions of files in Veeva document extract flow.</p>
+    #[doc(hidden)]
     pub include_all_versions: bool,
 }
 impl VeevaSourceProperties {
@@ -6617,11 +6712,10 @@ impl std::fmt::Debug for VeevaSourceProperties {
         formatter.finish()
     }
 }
-/// See [`VeevaSourceProperties`](crate::model::VeevaSourceProperties)
+/// See [`VeevaSourceProperties`](crate::model::VeevaSourceProperties).
 pub mod veeva_source_properties {
 
-    /// A builder for [`VeevaSourceProperties`](crate::model::VeevaSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`VeevaSourceProperties`](crate::model::VeevaSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -6684,7 +6778,7 @@ pub mod veeva_source_properties {
             self.include_all_versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`VeevaSourceProperties`](crate::model::VeevaSourceProperties)
+        /// Consumes the builder and constructs a [`VeevaSourceProperties`](crate::model::VeevaSourceProperties).
         pub fn build(self) -> crate::model::VeevaSourceProperties {
             crate::model::VeevaSourceProperties {
                 object: self.object,
@@ -6697,7 +6791,7 @@ pub mod veeva_source_properties {
     }
 }
 impl VeevaSourceProperties {
-    /// Creates a new builder-style object to manufacture [`VeevaSourceProperties`](crate::model::VeevaSourceProperties)
+    /// Creates a new builder-style object to manufacture [`VeevaSourceProperties`](crate::model::VeevaSourceProperties).
     pub fn builder() -> crate::model::veeva_source_properties::Builder {
         crate::model::veeva_source_properties::Builder::default()
     }
@@ -6708,6 +6802,7 @@ impl VeevaSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrendmicroSourceProperties {
     /// <p> The object specified in the Trend Micro flow source. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
 }
 impl TrendmicroSourceProperties {
@@ -6723,11 +6818,10 @@ impl std::fmt::Debug for TrendmicroSourceProperties {
         formatter.finish()
     }
 }
-/// See [`TrendmicroSourceProperties`](crate::model::TrendmicroSourceProperties)
+/// See [`TrendmicroSourceProperties`](crate::model::TrendmicroSourceProperties).
 pub mod trendmicro_source_properties {
 
-    /// A builder for [`TrendmicroSourceProperties`](crate::model::TrendmicroSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`TrendmicroSourceProperties`](crate::model::TrendmicroSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -6743,7 +6837,7 @@ pub mod trendmicro_source_properties {
             self.object = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrendmicroSourceProperties`](crate::model::TrendmicroSourceProperties)
+        /// Consumes the builder and constructs a [`TrendmicroSourceProperties`](crate::model::TrendmicroSourceProperties).
         pub fn build(self) -> crate::model::TrendmicroSourceProperties {
             crate::model::TrendmicroSourceProperties {
                 object: self.object,
@@ -6752,7 +6846,7 @@ pub mod trendmicro_source_properties {
     }
 }
 impl TrendmicroSourceProperties {
-    /// Creates a new builder-style object to manufacture [`TrendmicroSourceProperties`](crate::model::TrendmicroSourceProperties)
+    /// Creates a new builder-style object to manufacture [`TrendmicroSourceProperties`](crate::model::TrendmicroSourceProperties).
     pub fn builder() -> crate::model::trendmicro_source_properties::Builder {
         crate::model::trendmicro_source_properties::Builder::default()
     }
@@ -6763,6 +6857,7 @@ impl TrendmicroSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SlackSourceProperties {
     /// <p> The object specified in the Slack flow source. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
 }
 impl SlackSourceProperties {
@@ -6778,11 +6873,10 @@ impl std::fmt::Debug for SlackSourceProperties {
         formatter.finish()
     }
 }
-/// See [`SlackSourceProperties`](crate::model::SlackSourceProperties)
+/// See [`SlackSourceProperties`](crate::model::SlackSourceProperties).
 pub mod slack_source_properties {
 
-    /// A builder for [`SlackSourceProperties`](crate::model::SlackSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`SlackSourceProperties`](crate::model::SlackSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -6798,7 +6892,7 @@ pub mod slack_source_properties {
             self.object = input;
             self
         }
-        /// Consumes the builder and constructs a [`SlackSourceProperties`](crate::model::SlackSourceProperties)
+        /// Consumes the builder and constructs a [`SlackSourceProperties`](crate::model::SlackSourceProperties).
         pub fn build(self) -> crate::model::SlackSourceProperties {
             crate::model::SlackSourceProperties {
                 object: self.object,
@@ -6807,7 +6901,7 @@ pub mod slack_source_properties {
     }
 }
 impl SlackSourceProperties {
-    /// Creates a new builder-style object to manufacture [`SlackSourceProperties`](crate::model::SlackSourceProperties)
+    /// Creates a new builder-style object to manufacture [`SlackSourceProperties`](crate::model::SlackSourceProperties).
     pub fn builder() -> crate::model::slack_source_properties::Builder {
         crate::model::slack_source_properties::Builder::default()
     }
@@ -6818,6 +6912,7 @@ impl SlackSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SingularSourceProperties {
     /// <p> The object specified in the Singular flow source. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
 }
 impl SingularSourceProperties {
@@ -6833,11 +6928,10 @@ impl std::fmt::Debug for SingularSourceProperties {
         formatter.finish()
     }
 }
-/// See [`SingularSourceProperties`](crate::model::SingularSourceProperties)
+/// See [`SingularSourceProperties`](crate::model::SingularSourceProperties).
 pub mod singular_source_properties {
 
-    /// A builder for [`SingularSourceProperties`](crate::model::SingularSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`SingularSourceProperties`](crate::model::SingularSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -6853,7 +6947,7 @@ pub mod singular_source_properties {
             self.object = input;
             self
         }
-        /// Consumes the builder and constructs a [`SingularSourceProperties`](crate::model::SingularSourceProperties)
+        /// Consumes the builder and constructs a [`SingularSourceProperties`](crate::model::SingularSourceProperties).
         pub fn build(self) -> crate::model::SingularSourceProperties {
             crate::model::SingularSourceProperties {
                 object: self.object,
@@ -6862,7 +6956,7 @@ pub mod singular_source_properties {
     }
 }
 impl SingularSourceProperties {
-    /// Creates a new builder-style object to manufacture [`SingularSourceProperties`](crate::model::SingularSourceProperties)
+    /// Creates a new builder-style object to manufacture [`SingularSourceProperties`](crate::model::SingularSourceProperties).
     pub fn builder() -> crate::model::singular_source_properties::Builder {
         crate::model::singular_source_properties::Builder::default()
     }
@@ -6873,6 +6967,7 @@ impl SingularSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceNowSourceProperties {
     /// <p> The object specified in the ServiceNow flow source. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
 }
 impl ServiceNowSourceProperties {
@@ -6888,11 +6983,10 @@ impl std::fmt::Debug for ServiceNowSourceProperties {
         formatter.finish()
     }
 }
-/// See [`ServiceNowSourceProperties`](crate::model::ServiceNowSourceProperties)
+/// See [`ServiceNowSourceProperties`](crate::model::ServiceNowSourceProperties).
 pub mod service_now_source_properties {
 
-    /// A builder for [`ServiceNowSourceProperties`](crate::model::ServiceNowSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`ServiceNowSourceProperties`](crate::model::ServiceNowSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -6908,7 +7002,7 @@ pub mod service_now_source_properties {
             self.object = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceNowSourceProperties`](crate::model::ServiceNowSourceProperties)
+        /// Consumes the builder and constructs a [`ServiceNowSourceProperties`](crate::model::ServiceNowSourceProperties).
         pub fn build(self) -> crate::model::ServiceNowSourceProperties {
             crate::model::ServiceNowSourceProperties {
                 object: self.object,
@@ -6917,7 +7011,7 @@ pub mod service_now_source_properties {
     }
 }
 impl ServiceNowSourceProperties {
-    /// Creates a new builder-style object to manufacture [`ServiceNowSourceProperties`](crate::model::ServiceNowSourceProperties)
+    /// Creates a new builder-style object to manufacture [`ServiceNowSourceProperties`](crate::model::ServiceNowSourceProperties).
     pub fn builder() -> crate::model::service_now_source_properties::Builder {
         crate::model::service_now_source_properties::Builder::default()
     }
@@ -6928,10 +7022,13 @@ impl ServiceNowSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SalesforceSourceProperties {
     /// <p> The object specified in the Salesforce flow source. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
     /// <p> The flag that enables dynamic fetching of new (recently added) fields in the Salesforce objects while running a flow. </p>
+    #[doc(hidden)]
     pub enable_dynamic_field_update: bool,
     /// <p> Indicates whether Amazon AppFlow includes deleted files in the flow run. </p>
+    #[doc(hidden)]
     pub include_deleted_records: bool,
 }
 impl SalesforceSourceProperties {
@@ -6960,11 +7057,10 @@ impl std::fmt::Debug for SalesforceSourceProperties {
         formatter.finish()
     }
 }
-/// See [`SalesforceSourceProperties`](crate::model::SalesforceSourceProperties)
+/// See [`SalesforceSourceProperties`](crate::model::SalesforceSourceProperties).
 pub mod salesforce_source_properties {
 
-    /// A builder for [`SalesforceSourceProperties`](crate::model::SalesforceSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`SalesforceSourceProperties`](crate::model::SalesforceSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -7002,7 +7098,7 @@ pub mod salesforce_source_properties {
             self.include_deleted_records = input;
             self
         }
-        /// Consumes the builder and constructs a [`SalesforceSourceProperties`](crate::model::SalesforceSourceProperties)
+        /// Consumes the builder and constructs a [`SalesforceSourceProperties`](crate::model::SalesforceSourceProperties).
         pub fn build(self) -> crate::model::SalesforceSourceProperties {
             crate::model::SalesforceSourceProperties {
                 object: self.object,
@@ -7013,7 +7109,7 @@ pub mod salesforce_source_properties {
     }
 }
 impl SalesforceSourceProperties {
-    /// Creates a new builder-style object to manufacture [`SalesforceSourceProperties`](crate::model::SalesforceSourceProperties)
+    /// Creates a new builder-style object to manufacture [`SalesforceSourceProperties`](crate::model::SalesforceSourceProperties).
     pub fn builder() -> crate::model::salesforce_source_properties::Builder {
         crate::model::salesforce_source_properties::Builder::default()
     }
@@ -7024,10 +7120,13 @@ impl SalesforceSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3SourceProperties {
     /// <p> The Amazon S3 bucket name where the source files are stored. </p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p> The object key for the Amazon S3 bucket in which the source files are stored. </p>
+    #[doc(hidden)]
     pub bucket_prefix: std::option::Option<std::string::String>,
     /// <p> When you use Amazon S3 as the source, the configuration format that you provide the flow input data. </p>
+    #[doc(hidden)]
     pub s3_input_format_config: std::option::Option<crate::model::S3InputFormatConfig>,
 }
 impl S3SourceProperties {
@@ -7055,11 +7154,10 @@ impl std::fmt::Debug for S3SourceProperties {
         formatter.finish()
     }
 }
-/// See [`S3SourceProperties`](crate::model::S3SourceProperties)
+/// See [`S3SourceProperties`](crate::model::S3SourceProperties).
 pub mod s3_source_properties {
 
-    /// A builder for [`S3SourceProperties`](crate::model::S3SourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`S3SourceProperties`](crate::model::S3SourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_name: std::option::Option<std::string::String>,
@@ -7103,7 +7201,7 @@ pub mod s3_source_properties {
             self.s3_input_format_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3SourceProperties`](crate::model::S3SourceProperties)
+        /// Consumes the builder and constructs a [`S3SourceProperties`](crate::model::S3SourceProperties).
         pub fn build(self) -> crate::model::S3SourceProperties {
             crate::model::S3SourceProperties {
                 bucket_name: self.bucket_name,
@@ -7114,7 +7212,7 @@ pub mod s3_source_properties {
     }
 }
 impl S3SourceProperties {
-    /// Creates a new builder-style object to manufacture [`S3SourceProperties`](crate::model::S3SourceProperties)
+    /// Creates a new builder-style object to manufacture [`S3SourceProperties`](crate::model::S3SourceProperties).
     pub fn builder() -> crate::model::s3_source_properties::Builder {
         crate::model::s3_source_properties::Builder::default()
     }
@@ -7125,6 +7223,7 @@ impl S3SourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3InputFormatConfig {
     /// <p> The file type that Amazon AppFlow gets from your Amazon S3 bucket. </p>
+    #[doc(hidden)]
     pub s3_input_file_type: std::option::Option<crate::model::S3InputFileType>,
 }
 impl S3InputFormatConfig {
@@ -7140,11 +7239,10 @@ impl std::fmt::Debug for S3InputFormatConfig {
         formatter.finish()
     }
 }
-/// See [`S3InputFormatConfig`](crate::model::S3InputFormatConfig)
+/// See [`S3InputFormatConfig`](crate::model::S3InputFormatConfig).
 pub mod s3_input_format_config {
 
-    /// A builder for [`S3InputFormatConfig`](crate::model::S3InputFormatConfig)
-    #[non_exhaustive]
+    /// A builder for [`S3InputFormatConfig`](crate::model::S3InputFormatConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_input_file_type: std::option::Option<crate::model::S3InputFileType>,
@@ -7163,7 +7261,7 @@ pub mod s3_input_format_config {
             self.s3_input_file_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3InputFormatConfig`](crate::model::S3InputFormatConfig)
+        /// Consumes the builder and constructs a [`S3InputFormatConfig`](crate::model::S3InputFormatConfig).
         pub fn build(self) -> crate::model::S3InputFormatConfig {
             crate::model::S3InputFormatConfig {
                 s3_input_file_type: self.s3_input_file_type,
@@ -7172,7 +7270,7 @@ pub mod s3_input_format_config {
     }
 }
 impl S3InputFormatConfig {
-    /// Creates a new builder-style object to manufacture [`S3InputFormatConfig`](crate::model::S3InputFormatConfig)
+    /// Creates a new builder-style object to manufacture [`S3InputFormatConfig`](crate::model::S3InputFormatConfig).
     pub fn builder() -> crate::model::s3_input_format_config::Builder {
         crate::model::s3_input_format_config::Builder::default()
     }
@@ -7238,6 +7336,7 @@ impl AsRef<str> for S3InputFileType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MarketoSourceProperties {
     /// <p> The object specified in the Marketo flow source. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
 }
 impl MarketoSourceProperties {
@@ -7253,11 +7352,10 @@ impl std::fmt::Debug for MarketoSourceProperties {
         formatter.finish()
     }
 }
-/// See [`MarketoSourceProperties`](crate::model::MarketoSourceProperties)
+/// See [`MarketoSourceProperties`](crate::model::MarketoSourceProperties).
 pub mod marketo_source_properties {
 
-    /// A builder for [`MarketoSourceProperties`](crate::model::MarketoSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`MarketoSourceProperties`](crate::model::MarketoSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -7273,7 +7371,7 @@ pub mod marketo_source_properties {
             self.object = input;
             self
         }
-        /// Consumes the builder and constructs a [`MarketoSourceProperties`](crate::model::MarketoSourceProperties)
+        /// Consumes the builder and constructs a [`MarketoSourceProperties`](crate::model::MarketoSourceProperties).
         pub fn build(self) -> crate::model::MarketoSourceProperties {
             crate::model::MarketoSourceProperties {
                 object: self.object,
@@ -7282,7 +7380,7 @@ pub mod marketo_source_properties {
     }
 }
 impl MarketoSourceProperties {
-    /// Creates a new builder-style object to manufacture [`MarketoSourceProperties`](crate::model::MarketoSourceProperties)
+    /// Creates a new builder-style object to manufacture [`MarketoSourceProperties`](crate::model::MarketoSourceProperties).
     pub fn builder() -> crate::model::marketo_source_properties::Builder {
         crate::model::marketo_source_properties::Builder::default()
     }
@@ -7293,6 +7391,7 @@ impl MarketoSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InforNexusSourceProperties {
     /// <p> The object specified in the Infor Nexus flow source. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
 }
 impl InforNexusSourceProperties {
@@ -7308,11 +7407,10 @@ impl std::fmt::Debug for InforNexusSourceProperties {
         formatter.finish()
     }
 }
-/// See [`InforNexusSourceProperties`](crate::model::InforNexusSourceProperties)
+/// See [`InforNexusSourceProperties`](crate::model::InforNexusSourceProperties).
 pub mod infor_nexus_source_properties {
 
-    /// A builder for [`InforNexusSourceProperties`](crate::model::InforNexusSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`InforNexusSourceProperties`](crate::model::InforNexusSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -7328,7 +7426,7 @@ pub mod infor_nexus_source_properties {
             self.object = input;
             self
         }
-        /// Consumes the builder and constructs a [`InforNexusSourceProperties`](crate::model::InforNexusSourceProperties)
+        /// Consumes the builder and constructs a [`InforNexusSourceProperties`](crate::model::InforNexusSourceProperties).
         pub fn build(self) -> crate::model::InforNexusSourceProperties {
             crate::model::InforNexusSourceProperties {
                 object: self.object,
@@ -7337,7 +7435,7 @@ pub mod infor_nexus_source_properties {
     }
 }
 impl InforNexusSourceProperties {
-    /// Creates a new builder-style object to manufacture [`InforNexusSourceProperties`](crate::model::InforNexusSourceProperties)
+    /// Creates a new builder-style object to manufacture [`InforNexusSourceProperties`](crate::model::InforNexusSourceProperties).
     pub fn builder() -> crate::model::infor_nexus_source_properties::Builder {
         crate::model::infor_nexus_source_properties::Builder::default()
     }
@@ -7348,6 +7446,7 @@ impl InforNexusSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GoogleAnalyticsSourceProperties {
     /// <p> The object specified in the Google Analytics flow source. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
 }
 impl GoogleAnalyticsSourceProperties {
@@ -7363,11 +7462,10 @@ impl std::fmt::Debug for GoogleAnalyticsSourceProperties {
         formatter.finish()
     }
 }
-/// See [`GoogleAnalyticsSourceProperties`](crate::model::GoogleAnalyticsSourceProperties)
+/// See [`GoogleAnalyticsSourceProperties`](crate::model::GoogleAnalyticsSourceProperties).
 pub mod google_analytics_source_properties {
 
-    /// A builder for [`GoogleAnalyticsSourceProperties`](crate::model::GoogleAnalyticsSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`GoogleAnalyticsSourceProperties`](crate::model::GoogleAnalyticsSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -7383,7 +7481,7 @@ pub mod google_analytics_source_properties {
             self.object = input;
             self
         }
-        /// Consumes the builder and constructs a [`GoogleAnalyticsSourceProperties`](crate::model::GoogleAnalyticsSourceProperties)
+        /// Consumes the builder and constructs a [`GoogleAnalyticsSourceProperties`](crate::model::GoogleAnalyticsSourceProperties).
         pub fn build(self) -> crate::model::GoogleAnalyticsSourceProperties {
             crate::model::GoogleAnalyticsSourceProperties {
                 object: self.object,
@@ -7392,7 +7490,7 @@ pub mod google_analytics_source_properties {
     }
 }
 impl GoogleAnalyticsSourceProperties {
-    /// Creates a new builder-style object to manufacture [`GoogleAnalyticsSourceProperties`](crate::model::GoogleAnalyticsSourceProperties)
+    /// Creates a new builder-style object to manufacture [`GoogleAnalyticsSourceProperties`](crate::model::GoogleAnalyticsSourceProperties).
     pub fn builder() -> crate::model::google_analytics_source_properties::Builder {
         crate::model::google_analytics_source_properties::Builder::default()
     }
@@ -7403,6 +7501,7 @@ impl GoogleAnalyticsSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DynatraceSourceProperties {
     /// <p> The object specified in the Dynatrace flow source. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
 }
 impl DynatraceSourceProperties {
@@ -7418,11 +7517,10 @@ impl std::fmt::Debug for DynatraceSourceProperties {
         formatter.finish()
     }
 }
-/// See [`DynatraceSourceProperties`](crate::model::DynatraceSourceProperties)
+/// See [`DynatraceSourceProperties`](crate::model::DynatraceSourceProperties).
 pub mod dynatrace_source_properties {
 
-    /// A builder for [`DynatraceSourceProperties`](crate::model::DynatraceSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`DynatraceSourceProperties`](crate::model::DynatraceSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -7438,7 +7536,7 @@ pub mod dynatrace_source_properties {
             self.object = input;
             self
         }
-        /// Consumes the builder and constructs a [`DynatraceSourceProperties`](crate::model::DynatraceSourceProperties)
+        /// Consumes the builder and constructs a [`DynatraceSourceProperties`](crate::model::DynatraceSourceProperties).
         pub fn build(self) -> crate::model::DynatraceSourceProperties {
             crate::model::DynatraceSourceProperties {
                 object: self.object,
@@ -7447,7 +7545,7 @@ pub mod dynatrace_source_properties {
     }
 }
 impl DynatraceSourceProperties {
-    /// Creates a new builder-style object to manufacture [`DynatraceSourceProperties`](crate::model::DynatraceSourceProperties)
+    /// Creates a new builder-style object to manufacture [`DynatraceSourceProperties`](crate::model::DynatraceSourceProperties).
     pub fn builder() -> crate::model::dynatrace_source_properties::Builder {
         crate::model::dynatrace_source_properties::Builder::default()
     }
@@ -7458,6 +7556,7 @@ impl DynatraceSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatadogSourceProperties {
     /// <p> The object specified in the Datadog flow source. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
 }
 impl DatadogSourceProperties {
@@ -7473,11 +7572,10 @@ impl std::fmt::Debug for DatadogSourceProperties {
         formatter.finish()
     }
 }
-/// See [`DatadogSourceProperties`](crate::model::DatadogSourceProperties)
+/// See [`DatadogSourceProperties`](crate::model::DatadogSourceProperties).
 pub mod datadog_source_properties {
 
-    /// A builder for [`DatadogSourceProperties`](crate::model::DatadogSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`DatadogSourceProperties`](crate::model::DatadogSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -7493,7 +7591,7 @@ pub mod datadog_source_properties {
             self.object = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatadogSourceProperties`](crate::model::DatadogSourceProperties)
+        /// Consumes the builder and constructs a [`DatadogSourceProperties`](crate::model::DatadogSourceProperties).
         pub fn build(self) -> crate::model::DatadogSourceProperties {
             crate::model::DatadogSourceProperties {
                 object: self.object,
@@ -7502,7 +7600,7 @@ pub mod datadog_source_properties {
     }
 }
 impl DatadogSourceProperties {
-    /// Creates a new builder-style object to manufacture [`DatadogSourceProperties`](crate::model::DatadogSourceProperties)
+    /// Creates a new builder-style object to manufacture [`DatadogSourceProperties`](crate::model::DatadogSourceProperties).
     pub fn builder() -> crate::model::datadog_source_properties::Builder {
         crate::model::datadog_source_properties::Builder::default()
     }
@@ -7513,6 +7611,7 @@ impl DatadogSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AmplitudeSourceProperties {
     /// <p> The object specified in the Amplitude flow source. </p>
+    #[doc(hidden)]
     pub object: std::option::Option<std::string::String>,
 }
 impl AmplitudeSourceProperties {
@@ -7528,11 +7627,10 @@ impl std::fmt::Debug for AmplitudeSourceProperties {
         formatter.finish()
     }
 }
-/// See [`AmplitudeSourceProperties`](crate::model::AmplitudeSourceProperties)
+/// See [`AmplitudeSourceProperties`](crate::model::AmplitudeSourceProperties).
 pub mod amplitude_source_properties {
 
-    /// A builder for [`AmplitudeSourceProperties`](crate::model::AmplitudeSourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`AmplitudeSourceProperties`](crate::model::AmplitudeSourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object: std::option::Option<std::string::String>,
@@ -7548,7 +7646,7 @@ pub mod amplitude_source_properties {
             self.object = input;
             self
         }
-        /// Consumes the builder and constructs a [`AmplitudeSourceProperties`](crate::model::AmplitudeSourceProperties)
+        /// Consumes the builder and constructs a [`AmplitudeSourceProperties`](crate::model::AmplitudeSourceProperties).
         pub fn build(self) -> crate::model::AmplitudeSourceProperties {
             crate::model::AmplitudeSourceProperties {
                 object: self.object,
@@ -7557,7 +7655,7 @@ pub mod amplitude_source_properties {
     }
 }
 impl AmplitudeSourceProperties {
-    /// Creates a new builder-style object to manufacture [`AmplitudeSourceProperties`](crate::model::AmplitudeSourceProperties)
+    /// Creates a new builder-style object to manufacture [`AmplitudeSourceProperties`](crate::model::AmplitudeSourceProperties).
     pub fn builder() -> crate::model::amplitude_source_properties::Builder {
         crate::model::amplitude_source_properties::Builder::default()
     }
@@ -7568,8 +7666,10 @@ impl AmplitudeSourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TriggerConfig {
     /// <p> Specifies the type of flow trigger. This can be <code>OnDemand</code>, <code>Scheduled</code>, or <code>Event</code>. </p>
+    #[doc(hidden)]
     pub trigger_type: std::option::Option<crate::model::TriggerType>,
     /// <p> Specifies the configuration details of a schedule-triggered flow as defined by the user. Currently, these settings only apply to the <code>Scheduled</code> trigger type. </p>
+    #[doc(hidden)]
     pub trigger_properties: std::option::Option<crate::model::TriggerProperties>,
 }
 impl TriggerConfig {
@@ -7590,11 +7690,10 @@ impl std::fmt::Debug for TriggerConfig {
         formatter.finish()
     }
 }
-/// See [`TriggerConfig`](crate::model::TriggerConfig)
+/// See [`TriggerConfig`](crate::model::TriggerConfig).
 pub mod trigger_config {
 
-    /// A builder for [`TriggerConfig`](crate::model::TriggerConfig)
-    #[non_exhaustive]
+    /// A builder for [`TriggerConfig`](crate::model::TriggerConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) trigger_type: std::option::Option<crate::model::TriggerType>,
@@ -7627,7 +7726,7 @@ pub mod trigger_config {
             self.trigger_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`TriggerConfig`](crate::model::TriggerConfig)
+        /// Consumes the builder and constructs a [`TriggerConfig`](crate::model::TriggerConfig).
         pub fn build(self) -> crate::model::TriggerConfig {
             crate::model::TriggerConfig {
                 trigger_type: self.trigger_type,
@@ -7637,7 +7736,7 @@ pub mod trigger_config {
     }
 }
 impl TriggerConfig {
-    /// Creates a new builder-style object to manufacture [`TriggerConfig`](crate::model::TriggerConfig)
+    /// Creates a new builder-style object to manufacture [`TriggerConfig`](crate::model::TriggerConfig).
     pub fn builder() -> crate::model::trigger_config::Builder {
         crate::model::trigger_config::Builder::default()
     }
@@ -7648,6 +7747,7 @@ impl TriggerConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TriggerProperties {
     /// <p> Specifies the configuration details of a schedule-triggered flow as defined by the user. </p>
+    #[doc(hidden)]
     pub scheduled: std::option::Option<crate::model::ScheduledTriggerProperties>,
 }
 impl TriggerProperties {
@@ -7663,11 +7763,10 @@ impl std::fmt::Debug for TriggerProperties {
         formatter.finish()
     }
 }
-/// See [`TriggerProperties`](crate::model::TriggerProperties)
+/// See [`TriggerProperties`](crate::model::TriggerProperties).
 pub mod trigger_properties {
 
-    /// A builder for [`TriggerProperties`](crate::model::TriggerProperties)
-    #[non_exhaustive]
+    /// A builder for [`TriggerProperties`](crate::model::TriggerProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scheduled: std::option::Option<crate::model::ScheduledTriggerProperties>,
@@ -7686,7 +7785,7 @@ pub mod trigger_properties {
             self.scheduled = input;
             self
         }
-        /// Consumes the builder and constructs a [`TriggerProperties`](crate::model::TriggerProperties)
+        /// Consumes the builder and constructs a [`TriggerProperties`](crate::model::TriggerProperties).
         pub fn build(self) -> crate::model::TriggerProperties {
             crate::model::TriggerProperties {
                 scheduled: self.scheduled,
@@ -7695,7 +7794,7 @@ pub mod trigger_properties {
     }
 }
 impl TriggerProperties {
-    /// Creates a new builder-style object to manufacture [`TriggerProperties`](crate::model::TriggerProperties)
+    /// Creates a new builder-style object to manufacture [`TriggerProperties`](crate::model::TriggerProperties).
     pub fn builder() -> crate::model::trigger_properties::Builder {
         crate::model::trigger_properties::Builder::default()
     }
@@ -7706,21 +7805,29 @@ impl TriggerProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduledTriggerProperties {
     /// <p> The scheduling expression that determines the rate at which the schedule will run, for example <code>rate(5minutes)</code>. </p>
+    #[doc(hidden)]
     pub schedule_expression: std::option::Option<std::string::String>,
     /// <p> Specifies whether a scheduled flow has an incremental data transfer or a complete data transfer for each flow run. </p>
+    #[doc(hidden)]
     pub data_pull_mode: std::option::Option<crate::model::DataPullMode>,
     /// <p>The time at which the scheduled flow starts. The time is formatted as a timestamp that follows the ISO 8601 standard, such as <code>2022-04-26T13:00:00-07:00</code>.</p>
+    #[doc(hidden)]
     pub schedule_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the scheduled flow ends. The time is formatted as a timestamp that follows the ISO 8601 standard, such as <code>2022-04-27T13:00:00-07:00</code>.</p>
+    #[doc(hidden)]
     pub schedule_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the time zone used when referring to the dates and times of a scheduled flow, such as <code>America/New_York</code>. This time zone is only a descriptive label. It doesn't affect how Amazon AppFlow interprets the timestamps that you specify to schedule the flow.</p>
     /// <p>If you want to schedule a flow by using times in a particular time zone, indicate the time zone as a UTC offset in your timestamps. For example, the UTC offsets for the <code>America/New_York</code> timezone are <code>-04:00</code> EDT and <code>-05:00 EST</code>.</p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
     /// <p> Specifies the optional offset that is added to the time interval for a schedule-triggered flow. </p>
+    #[doc(hidden)]
     pub schedule_offset: std::option::Option<i64>,
     /// <p> Specifies the date range for the records to import from the connector in the first flow run. </p>
+    #[doc(hidden)]
     pub first_execution_from: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Defines how many times a scheduled flow fails consecutively before Amazon AppFlow deactivates it.</p>
+    #[doc(hidden)]
     pub flow_error_deactivation_threshold: std::option::Option<i32>,
 }
 impl ScheduledTriggerProperties {
@@ -7775,11 +7882,10 @@ impl std::fmt::Debug for ScheduledTriggerProperties {
         formatter.finish()
     }
 }
-/// See [`ScheduledTriggerProperties`](crate::model::ScheduledTriggerProperties)
+/// See [`ScheduledTriggerProperties`](crate::model::ScheduledTriggerProperties).
 pub mod scheduled_trigger_properties {
 
-    /// A builder for [`ScheduledTriggerProperties`](crate::model::ScheduledTriggerProperties)
-    #[non_exhaustive]
+    /// A builder for [`ScheduledTriggerProperties`](crate::model::ScheduledTriggerProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schedule_expression: std::option::Option<std::string::String>,
@@ -7892,7 +7998,7 @@ pub mod scheduled_trigger_properties {
             self.flow_error_deactivation_threshold = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduledTriggerProperties`](crate::model::ScheduledTriggerProperties)
+        /// Consumes the builder and constructs a [`ScheduledTriggerProperties`](crate::model::ScheduledTriggerProperties).
         pub fn build(self) -> crate::model::ScheduledTriggerProperties {
             crate::model::ScheduledTriggerProperties {
                 schedule_expression: self.schedule_expression,
@@ -7908,7 +8014,7 @@ pub mod scheduled_trigger_properties {
     }
 }
 impl ScheduledTriggerProperties {
-    /// Creates a new builder-style object to manufacture [`ScheduledTriggerProperties`](crate::model::ScheduledTriggerProperties)
+    /// Creates a new builder-style object to manufacture [`ScheduledTriggerProperties`](crate::model::ScheduledTriggerProperties).
     pub fn builder() -> crate::model::scheduled_trigger_properties::Builder {
         crate::model::scheduled_trigger_properties::Builder::default()
     }
@@ -8033,8 +8139,10 @@ impl AsRef<str> for TriggerType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorProfileConfig {
     /// <p> The connector-specific properties of the profile configuration. </p>
+    #[doc(hidden)]
     pub connector_profile_properties: std::option::Option<crate::model::ConnectorProfileProperties>,
     /// <p> The connector-specific credentials required by each connector. </p>
+    #[doc(hidden)]
     pub connector_profile_credentials:
         std::option::Option<crate::model::ConnectorProfileCredentials>,
 }
@@ -8066,11 +8174,10 @@ impl std::fmt::Debug for ConnectorProfileConfig {
         formatter.finish()
     }
 }
-/// See [`ConnectorProfileConfig`](crate::model::ConnectorProfileConfig)
+/// See [`ConnectorProfileConfig`](crate::model::ConnectorProfileConfig).
 pub mod connector_profile_config {
 
-    /// A builder for [`ConnectorProfileConfig`](crate::model::ConnectorProfileConfig)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorProfileConfig`](crate::model::ConnectorProfileConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connector_profile_properties:
@@ -8111,7 +8218,7 @@ pub mod connector_profile_config {
             self.connector_profile_credentials = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorProfileConfig`](crate::model::ConnectorProfileConfig)
+        /// Consumes the builder and constructs a [`ConnectorProfileConfig`](crate::model::ConnectorProfileConfig).
         pub fn build(self) -> crate::model::ConnectorProfileConfig {
             crate::model::ConnectorProfileConfig {
                 connector_profile_properties: self.connector_profile_properties,
@@ -8121,7 +8228,7 @@ pub mod connector_profile_config {
     }
 }
 impl ConnectorProfileConfig {
-    /// Creates a new builder-style object to manufacture [`ConnectorProfileConfig`](crate::model::ConnectorProfileConfig)
+    /// Creates a new builder-style object to manufacture [`ConnectorProfileConfig`](crate::model::ConnectorProfileConfig).
     pub fn builder() -> crate::model::connector_profile_config::Builder {
         crate::model::connector_profile_config::Builder::default()
     }
@@ -8132,41 +8239,59 @@ impl ConnectorProfileConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorProfileCredentials {
     /// <p> The connector-specific credentials required when using Amplitude. </p>
+    #[doc(hidden)]
     pub amplitude: std::option::Option<crate::model::AmplitudeConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Datadog. </p>
+    #[doc(hidden)]
     pub datadog: std::option::Option<crate::model::DatadogConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Dynatrace. </p>
+    #[doc(hidden)]
     pub dynatrace: std::option::Option<crate::model::DynatraceConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Google Analytics. </p>
+    #[doc(hidden)]
     pub google_analytics:
         std::option::Option<crate::model::GoogleAnalyticsConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Amazon Honeycode. </p>
+    #[doc(hidden)]
     pub honeycode: std::option::Option<crate::model::HoneycodeConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Infor Nexus. </p>
+    #[doc(hidden)]
     pub infor_nexus: std::option::Option<crate::model::InforNexusConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Marketo. </p>
+    #[doc(hidden)]
     pub marketo: std::option::Option<crate::model::MarketoConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Amazon Redshift. </p>
+    #[doc(hidden)]
     pub redshift: std::option::Option<crate::model::RedshiftConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Salesforce. </p>
+    #[doc(hidden)]
     pub salesforce: std::option::Option<crate::model::SalesforceConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using ServiceNow. </p>
+    #[doc(hidden)]
     pub service_now: std::option::Option<crate::model::ServiceNowConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Singular. </p>
+    #[doc(hidden)]
     pub singular: std::option::Option<crate::model::SingularConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Slack. </p>
+    #[doc(hidden)]
     pub slack: std::option::Option<crate::model::SlackConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Snowflake. </p>
+    #[doc(hidden)]
     pub snowflake: std::option::Option<crate::model::SnowflakeConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Trend Micro. </p>
+    #[doc(hidden)]
     pub trendmicro: std::option::Option<crate::model::TrendmicroConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Veeva. </p>
+    #[doc(hidden)]
     pub veeva: std::option::Option<crate::model::VeevaConnectorProfileCredentials>,
     /// <p> The connector-specific credentials required when using Zendesk. </p>
+    #[doc(hidden)]
     pub zendesk: std::option::Option<crate::model::ZendeskConnectorProfileCredentials>,
     /// <p> The connector-specific profile credentials required when using SAPOData. </p>
+    #[doc(hidden)]
     pub sapo_data: std::option::Option<crate::model::SapoDataConnectorProfileCredentials>,
     /// <p>The connector-specific profile credentials that are required when using the custom connector.</p>
+    #[doc(hidden)]
     pub custom_connector: std::option::Option<crate::model::CustomConnectorProfileCredentials>,
 }
 impl ConnectorProfileCredentials {
@@ -8299,11 +8424,10 @@ impl std::fmt::Debug for ConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`ConnectorProfileCredentials`](crate::model::ConnectorProfileCredentials)
+/// See [`ConnectorProfileCredentials`](crate::model::ConnectorProfileCredentials).
 pub mod connector_profile_credentials {
 
-    /// A builder for [`ConnectorProfileCredentials`](crate::model::ConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorProfileCredentials`](crate::model::ConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) amplitude:
@@ -8610,7 +8734,7 @@ pub mod connector_profile_credentials {
             self.custom_connector = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorProfileCredentials`](crate::model::ConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`ConnectorProfileCredentials`](crate::model::ConnectorProfileCredentials).
         pub fn build(self) -> crate::model::ConnectorProfileCredentials {
             crate::model::ConnectorProfileCredentials {
                 amplitude: self.amplitude,
@@ -8636,7 +8760,7 @@ pub mod connector_profile_credentials {
     }
 }
 impl ConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`ConnectorProfileCredentials`](crate::model::ConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`ConnectorProfileCredentials`](crate::model::ConnectorProfileCredentials).
     pub fn builder() -> crate::model::connector_profile_credentials::Builder {
         crate::model::connector_profile_credentials::Builder::default()
     }
@@ -8647,14 +8771,19 @@ impl ConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomConnectorProfileCredentials {
     /// <p>The authentication type that the custom connector uses for authenticating while creating a connector profile.</p>
+    #[doc(hidden)]
     pub authentication_type: std::option::Option<crate::model::AuthenticationType>,
     /// <p>The basic credentials that are required for the authentication of the user.</p>
+    #[doc(hidden)]
     pub basic: std::option::Option<crate::model::BasicAuthCredentials>,
     /// <p>The OAuth 2.0 credentials required for the authentication of the user.</p>
+    #[doc(hidden)]
     pub oauth2: std::option::Option<crate::model::OAuth2Credentials>,
     /// <p>The API keys required for the authentication of the user.</p>
+    #[doc(hidden)]
     pub api_key: std::option::Option<crate::model::ApiKeyCredentials>,
     /// <p>If the connector uses the custom authentication mechanism, this holds the required credentials.</p>
+    #[doc(hidden)]
     pub custom: std::option::Option<crate::model::CustomAuthCredentials>,
 }
 impl CustomConnectorProfileCredentials {
@@ -8690,11 +8819,10 @@ impl std::fmt::Debug for CustomConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`CustomConnectorProfileCredentials`](crate::model::CustomConnectorProfileCredentials)
+/// See [`CustomConnectorProfileCredentials`](crate::model::CustomConnectorProfileCredentials).
 pub mod custom_connector_profile_credentials {
 
-    /// A builder for [`CustomConnectorProfileCredentials`](crate::model::CustomConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`CustomConnectorProfileCredentials`](crate::model::CustomConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) authentication_type: std::option::Option<crate::model::AuthenticationType>,
@@ -8769,7 +8897,7 @@ pub mod custom_connector_profile_credentials {
             self.custom = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomConnectorProfileCredentials`](crate::model::CustomConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`CustomConnectorProfileCredentials`](crate::model::CustomConnectorProfileCredentials).
         pub fn build(self) -> crate::model::CustomConnectorProfileCredentials {
             crate::model::CustomConnectorProfileCredentials {
                 authentication_type: self.authentication_type,
@@ -8782,7 +8910,7 @@ pub mod custom_connector_profile_credentials {
     }
 }
 impl CustomConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`CustomConnectorProfileCredentials`](crate::model::CustomConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`CustomConnectorProfileCredentials`](crate::model::CustomConnectorProfileCredentials).
     pub fn builder() -> crate::model::custom_connector_profile_credentials::Builder {
         crate::model::custom_connector_profile_credentials::Builder::default()
     }
@@ -8793,8 +8921,10 @@ impl CustomConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomAuthCredentials {
     /// <p>The custom authentication type that the connector uses.</p>
+    #[doc(hidden)]
     pub custom_authentication_type: std::option::Option<std::string::String>,
     /// <p>A map that holds custom authentication credentials.</p>
+    #[doc(hidden)]
     pub credentials_map:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -8822,11 +8952,10 @@ impl std::fmt::Debug for CustomAuthCredentials {
         formatter.finish()
     }
 }
-/// See [`CustomAuthCredentials`](crate::model::CustomAuthCredentials)
+/// See [`CustomAuthCredentials`](crate::model::CustomAuthCredentials).
 pub mod custom_auth_credentials {
 
-    /// A builder for [`CustomAuthCredentials`](crate::model::CustomAuthCredentials)
-    #[non_exhaustive]
+    /// A builder for [`CustomAuthCredentials`](crate::model::CustomAuthCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_authentication_type: std::option::Option<std::string::String>,
@@ -8873,7 +9002,7 @@ pub mod custom_auth_credentials {
             self.credentials_map = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomAuthCredentials`](crate::model::CustomAuthCredentials)
+        /// Consumes the builder and constructs a [`CustomAuthCredentials`](crate::model::CustomAuthCredentials).
         pub fn build(self) -> crate::model::CustomAuthCredentials {
             crate::model::CustomAuthCredentials {
                 custom_authentication_type: self.custom_authentication_type,
@@ -8883,7 +9012,7 @@ pub mod custom_auth_credentials {
     }
 }
 impl CustomAuthCredentials {
-    /// Creates a new builder-style object to manufacture [`CustomAuthCredentials`](crate::model::CustomAuthCredentials)
+    /// Creates a new builder-style object to manufacture [`CustomAuthCredentials`](crate::model::CustomAuthCredentials).
     pub fn builder() -> crate::model::custom_auth_credentials::Builder {
         crate::model::custom_auth_credentials::Builder::default()
     }
@@ -8894,8 +9023,10 @@ impl CustomAuthCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApiKeyCredentials {
     /// <p>The API key required for API key authentication.</p>
+    #[doc(hidden)]
     pub api_key: std::option::Option<std::string::String>,
     /// <p>The API secret key required for API key authentication.</p>
+    #[doc(hidden)]
     pub api_secret_key: std::option::Option<std::string::String>,
 }
 impl ApiKeyCredentials {
@@ -8916,11 +9047,10 @@ impl std::fmt::Debug for ApiKeyCredentials {
         formatter.finish()
     }
 }
-/// See [`ApiKeyCredentials`](crate::model::ApiKeyCredentials)
+/// See [`ApiKeyCredentials`](crate::model::ApiKeyCredentials).
 pub mod api_key_credentials {
 
-    /// A builder for [`ApiKeyCredentials`](crate::model::ApiKeyCredentials)
-    #[non_exhaustive]
+    /// A builder for [`ApiKeyCredentials`](crate::model::ApiKeyCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_key: std::option::Option<std::string::String>,
@@ -8950,7 +9080,7 @@ pub mod api_key_credentials {
             self.api_secret_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApiKeyCredentials`](crate::model::ApiKeyCredentials)
+        /// Consumes the builder and constructs a [`ApiKeyCredentials`](crate::model::ApiKeyCredentials).
         pub fn build(self) -> crate::model::ApiKeyCredentials {
             crate::model::ApiKeyCredentials {
                 api_key: self.api_key,
@@ -8960,7 +9090,7 @@ pub mod api_key_credentials {
     }
 }
 impl ApiKeyCredentials {
-    /// Creates a new builder-style object to manufacture [`ApiKeyCredentials`](crate::model::ApiKeyCredentials)
+    /// Creates a new builder-style object to manufacture [`ApiKeyCredentials`](crate::model::ApiKeyCredentials).
     pub fn builder() -> crate::model::api_key_credentials::Builder {
         crate::model::api_key_credentials::Builder::default()
     }
@@ -8971,14 +9101,19 @@ impl ApiKeyCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OAuth2Credentials {
     /// <p>The identifier for the desired client.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>The client secret used by the OAuth client to authenticate to the authorization server.</p>
+    #[doc(hidden)]
     pub client_secret: std::option::Option<std::string::String>,
     /// <p>The access token used to access the connector on your behalf.</p>
+    #[doc(hidden)]
     pub access_token: std::option::Option<std::string::String>,
     /// <p>The refresh token used to refresh an expired access token.</p>
+    #[doc(hidden)]
     pub refresh_token: std::option::Option<std::string::String>,
     /// <p> Used by select connectors for which the OAuth workflow is supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack. </p>
+    #[doc(hidden)]
     pub o_auth_request: std::option::Option<crate::model::ConnectorOAuthRequest>,
 }
 impl OAuth2Credentials {
@@ -9014,11 +9149,10 @@ impl std::fmt::Debug for OAuth2Credentials {
         formatter.finish()
     }
 }
-/// See [`OAuth2Credentials`](crate::model::OAuth2Credentials)
+/// See [`OAuth2Credentials`](crate::model::OAuth2Credentials).
 pub mod o_auth2_credentials {
 
-    /// A builder for [`OAuth2Credentials`](crate::model::OAuth2Credentials)
-    #[non_exhaustive]
+    /// A builder for [`OAuth2Credentials`](crate::model::OAuth2Credentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_id: std::option::Option<std::string::String>,
@@ -9087,7 +9221,7 @@ pub mod o_auth2_credentials {
             self.o_auth_request = input;
             self
         }
-        /// Consumes the builder and constructs a [`OAuth2Credentials`](crate::model::OAuth2Credentials)
+        /// Consumes the builder and constructs a [`OAuth2Credentials`](crate::model::OAuth2Credentials).
         pub fn build(self) -> crate::model::OAuth2Credentials {
             crate::model::OAuth2Credentials {
                 client_id: self.client_id,
@@ -9100,7 +9234,7 @@ pub mod o_auth2_credentials {
     }
 }
 impl OAuth2Credentials {
-    /// Creates a new builder-style object to manufacture [`OAuth2Credentials`](crate::model::OAuth2Credentials)
+    /// Creates a new builder-style object to manufacture [`OAuth2Credentials`](crate::model::OAuth2Credentials).
     pub fn builder() -> crate::model::o_auth2_credentials::Builder {
         crate::model::o_auth2_credentials::Builder::default()
     }
@@ -9111,8 +9245,10 @@ impl OAuth2Credentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorOAuthRequest {
     /// <p> The code provided by the connector when it has been authenticated via the connected app. </p>
+    #[doc(hidden)]
     pub auth_code: std::option::Option<std::string::String>,
     /// <p> The URL to which the authentication server redirects the browser after authorization has been granted. </p>
+    #[doc(hidden)]
     pub redirect_uri: std::option::Option<std::string::String>,
 }
 impl ConnectorOAuthRequest {
@@ -9133,11 +9269,10 @@ impl std::fmt::Debug for ConnectorOAuthRequest {
         formatter.finish()
     }
 }
-/// See [`ConnectorOAuthRequest`](crate::model::ConnectorOAuthRequest)
+/// See [`ConnectorOAuthRequest`](crate::model::ConnectorOAuthRequest).
 pub mod connector_o_auth_request {
 
-    /// A builder for [`ConnectorOAuthRequest`](crate::model::ConnectorOAuthRequest)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorOAuthRequest`](crate::model::ConnectorOAuthRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auth_code: std::option::Option<std::string::String>,
@@ -9164,7 +9299,7 @@ pub mod connector_o_auth_request {
             self.redirect_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorOAuthRequest`](crate::model::ConnectorOAuthRequest)
+        /// Consumes the builder and constructs a [`ConnectorOAuthRequest`](crate::model::ConnectorOAuthRequest).
         pub fn build(self) -> crate::model::ConnectorOAuthRequest {
             crate::model::ConnectorOAuthRequest {
                 auth_code: self.auth_code,
@@ -9174,7 +9309,7 @@ pub mod connector_o_auth_request {
     }
 }
 impl ConnectorOAuthRequest {
-    /// Creates a new builder-style object to manufacture [`ConnectorOAuthRequest`](crate::model::ConnectorOAuthRequest)
+    /// Creates a new builder-style object to manufacture [`ConnectorOAuthRequest`](crate::model::ConnectorOAuthRequest).
     pub fn builder() -> crate::model::connector_o_auth_request::Builder {
         crate::model::connector_o_auth_request::Builder::default()
     }
@@ -9185,8 +9320,10 @@ impl ConnectorOAuthRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BasicAuthCredentials {
     /// <p> The username to use to connect to a resource. </p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p> The password to use to connect to a resource.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
 }
 impl BasicAuthCredentials {
@@ -9207,11 +9344,10 @@ impl std::fmt::Debug for BasicAuthCredentials {
         formatter.finish()
     }
 }
-/// See [`BasicAuthCredentials`](crate::model::BasicAuthCredentials)
+/// See [`BasicAuthCredentials`](crate::model::BasicAuthCredentials).
 pub mod basic_auth_credentials {
 
-    /// A builder for [`BasicAuthCredentials`](crate::model::BasicAuthCredentials)
-    #[non_exhaustive]
+    /// A builder for [`BasicAuthCredentials`](crate::model::BasicAuthCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) username: std::option::Option<std::string::String>,
@@ -9238,7 +9374,7 @@ pub mod basic_auth_credentials {
             self.password = input;
             self
         }
-        /// Consumes the builder and constructs a [`BasicAuthCredentials`](crate::model::BasicAuthCredentials)
+        /// Consumes the builder and constructs a [`BasicAuthCredentials`](crate::model::BasicAuthCredentials).
         pub fn build(self) -> crate::model::BasicAuthCredentials {
             crate::model::BasicAuthCredentials {
                 username: self.username,
@@ -9248,7 +9384,7 @@ pub mod basic_auth_credentials {
     }
 }
 impl BasicAuthCredentials {
-    /// Creates a new builder-style object to manufacture [`BasicAuthCredentials`](crate::model::BasicAuthCredentials)
+    /// Creates a new builder-style object to manufacture [`BasicAuthCredentials`](crate::model::BasicAuthCredentials).
     pub fn builder() -> crate::model::basic_auth_credentials::Builder {
         crate::model::basic_auth_credentials::Builder::default()
     }
@@ -9322,8 +9458,10 @@ impl AsRef<str> for AuthenticationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SapoDataConnectorProfileCredentials {
     /// <p> The SAPOData basic authentication credentials. </p>
+    #[doc(hidden)]
     pub basic_auth_credentials: std::option::Option<crate::model::BasicAuthCredentials>,
     /// <p> The SAPOData OAuth type authentication credentials. </p>
+    #[doc(hidden)]
     pub o_auth_credentials: std::option::Option<crate::model::OAuthCredentials>,
 }
 impl SapoDataConnectorProfileCredentials {
@@ -9346,11 +9484,10 @@ impl std::fmt::Debug for SapoDataConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`SapoDataConnectorProfileCredentials`](crate::model::SapoDataConnectorProfileCredentials)
+/// See [`SapoDataConnectorProfileCredentials`](crate::model::SapoDataConnectorProfileCredentials).
 pub mod sapo_data_connector_profile_credentials {
 
-    /// A builder for [`SapoDataConnectorProfileCredentials`](crate::model::SapoDataConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`SapoDataConnectorProfileCredentials`](crate::model::SapoDataConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) basic_auth_credentials: std::option::Option<crate::model::BasicAuthCredentials>,
@@ -9383,7 +9520,7 @@ pub mod sapo_data_connector_profile_credentials {
             self.o_auth_credentials = input;
             self
         }
-        /// Consumes the builder and constructs a [`SapoDataConnectorProfileCredentials`](crate::model::SapoDataConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`SapoDataConnectorProfileCredentials`](crate::model::SapoDataConnectorProfileCredentials).
         pub fn build(self) -> crate::model::SapoDataConnectorProfileCredentials {
             crate::model::SapoDataConnectorProfileCredentials {
                 basic_auth_credentials: self.basic_auth_credentials,
@@ -9393,7 +9530,7 @@ pub mod sapo_data_connector_profile_credentials {
     }
 }
 impl SapoDataConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`SapoDataConnectorProfileCredentials`](crate::model::SapoDataConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`SapoDataConnectorProfileCredentials`](crate::model::SapoDataConnectorProfileCredentials).
     pub fn builder() -> crate::model::sapo_data_connector_profile_credentials::Builder {
         crate::model::sapo_data_connector_profile_credentials::Builder::default()
     }
@@ -9404,14 +9541,19 @@ impl SapoDataConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OAuthCredentials {
     /// <p> The identifier for the desired client. </p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p> The client secret used by the OAuth client to authenticate to the authorization server. </p>
+    #[doc(hidden)]
     pub client_secret: std::option::Option<std::string::String>,
     /// <p> The access token used to access protected SAPOData resources. </p>
+    #[doc(hidden)]
     pub access_token: std::option::Option<std::string::String>,
     /// <p> The refresh token used to refresh expired access token. </p>
+    #[doc(hidden)]
     pub refresh_token: std::option::Option<std::string::String>,
     /// <p> The OAuth requirement needed to request security tokens from the connector endpoint. </p>
+    #[doc(hidden)]
     pub o_auth_request: std::option::Option<crate::model::ConnectorOAuthRequest>,
 }
 impl OAuthCredentials {
@@ -9447,11 +9589,10 @@ impl std::fmt::Debug for OAuthCredentials {
         formatter.finish()
     }
 }
-/// See [`OAuthCredentials`](crate::model::OAuthCredentials)
+/// See [`OAuthCredentials`](crate::model::OAuthCredentials).
 pub mod o_auth_credentials {
 
-    /// A builder for [`OAuthCredentials`](crate::model::OAuthCredentials)
-    #[non_exhaustive]
+    /// A builder for [`OAuthCredentials`](crate::model::OAuthCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_id: std::option::Option<std::string::String>,
@@ -9520,7 +9661,7 @@ pub mod o_auth_credentials {
             self.o_auth_request = input;
             self
         }
-        /// Consumes the builder and constructs a [`OAuthCredentials`](crate::model::OAuthCredentials)
+        /// Consumes the builder and constructs a [`OAuthCredentials`](crate::model::OAuthCredentials).
         pub fn build(self) -> crate::model::OAuthCredentials {
             crate::model::OAuthCredentials {
                 client_id: self.client_id,
@@ -9533,7 +9674,7 @@ pub mod o_auth_credentials {
     }
 }
 impl OAuthCredentials {
-    /// Creates a new builder-style object to manufacture [`OAuthCredentials`](crate::model::OAuthCredentials)
+    /// Creates a new builder-style object to manufacture [`OAuthCredentials`](crate::model::OAuthCredentials).
     pub fn builder() -> crate::model::o_auth_credentials::Builder {
         crate::model::o_auth_credentials::Builder::default()
     }
@@ -9544,12 +9685,16 @@ impl OAuthCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ZendeskConnectorProfileCredentials {
     /// <p> The identifier for the desired client. </p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p> The client secret used by the OAuth client to authenticate to the authorization server. </p>
+    #[doc(hidden)]
     pub client_secret: std::option::Option<std::string::String>,
     /// <p> The credentials used to access protected Zendesk resources. </p>
+    #[doc(hidden)]
     pub access_token: std::option::Option<std::string::String>,
     /// <p> The OAuth requirement needed to request security tokens from the connector endpoint. </p>
+    #[doc(hidden)]
     pub o_auth_request: std::option::Option<crate::model::ConnectorOAuthRequest>,
 }
 impl ZendeskConnectorProfileCredentials {
@@ -9580,11 +9725,10 @@ impl std::fmt::Debug for ZendeskConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`ZendeskConnectorProfileCredentials`](crate::model::ZendeskConnectorProfileCredentials)
+/// See [`ZendeskConnectorProfileCredentials`](crate::model::ZendeskConnectorProfileCredentials).
 pub mod zendesk_connector_profile_credentials {
 
-    /// A builder for [`ZendeskConnectorProfileCredentials`](crate::model::ZendeskConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`ZendeskConnectorProfileCredentials`](crate::model::ZendeskConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_id: std::option::Option<std::string::String>,
@@ -9639,7 +9783,7 @@ pub mod zendesk_connector_profile_credentials {
             self.o_auth_request = input;
             self
         }
-        /// Consumes the builder and constructs a [`ZendeskConnectorProfileCredentials`](crate::model::ZendeskConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`ZendeskConnectorProfileCredentials`](crate::model::ZendeskConnectorProfileCredentials).
         pub fn build(self) -> crate::model::ZendeskConnectorProfileCredentials {
             crate::model::ZendeskConnectorProfileCredentials {
                 client_id: self.client_id,
@@ -9651,7 +9795,7 @@ pub mod zendesk_connector_profile_credentials {
     }
 }
 impl ZendeskConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`ZendeskConnectorProfileCredentials`](crate::model::ZendeskConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`ZendeskConnectorProfileCredentials`](crate::model::ZendeskConnectorProfileCredentials).
     pub fn builder() -> crate::model::zendesk_connector_profile_credentials::Builder {
         crate::model::zendesk_connector_profile_credentials::Builder::default()
     }
@@ -9662,8 +9806,10 @@ impl ZendeskConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VeevaConnectorProfileCredentials {
     /// <p> The name of the user. </p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p> The password that corresponds to the user name. </p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
 }
 impl VeevaConnectorProfileCredentials {
@@ -9684,11 +9830,10 @@ impl std::fmt::Debug for VeevaConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`VeevaConnectorProfileCredentials`](crate::model::VeevaConnectorProfileCredentials)
+/// See [`VeevaConnectorProfileCredentials`](crate::model::VeevaConnectorProfileCredentials).
 pub mod veeva_connector_profile_credentials {
 
-    /// A builder for [`VeevaConnectorProfileCredentials`](crate::model::VeevaConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`VeevaConnectorProfileCredentials`](crate::model::VeevaConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) username: std::option::Option<std::string::String>,
@@ -9715,7 +9860,7 @@ pub mod veeva_connector_profile_credentials {
             self.password = input;
             self
         }
-        /// Consumes the builder and constructs a [`VeevaConnectorProfileCredentials`](crate::model::VeevaConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`VeevaConnectorProfileCredentials`](crate::model::VeevaConnectorProfileCredentials).
         pub fn build(self) -> crate::model::VeevaConnectorProfileCredentials {
             crate::model::VeevaConnectorProfileCredentials {
                 username: self.username,
@@ -9725,7 +9870,7 @@ pub mod veeva_connector_profile_credentials {
     }
 }
 impl VeevaConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`VeevaConnectorProfileCredentials`](crate::model::VeevaConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`VeevaConnectorProfileCredentials`](crate::model::VeevaConnectorProfileCredentials).
     pub fn builder() -> crate::model::veeva_connector_profile_credentials::Builder {
         crate::model::veeva_connector_profile_credentials::Builder::default()
     }
@@ -9736,6 +9881,7 @@ impl VeevaConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrendmicroConnectorProfileCredentials {
     /// <p> The Secret Access Key portion of the credentials. </p>
+    #[doc(hidden)]
     pub api_secret_key: std::option::Option<std::string::String>,
 }
 impl TrendmicroConnectorProfileCredentials {
@@ -9751,11 +9897,10 @@ impl std::fmt::Debug for TrendmicroConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`TrendmicroConnectorProfileCredentials`](crate::model::TrendmicroConnectorProfileCredentials)
+/// See [`TrendmicroConnectorProfileCredentials`](crate::model::TrendmicroConnectorProfileCredentials).
 pub mod trendmicro_connector_profile_credentials {
 
-    /// A builder for [`TrendmicroConnectorProfileCredentials`](crate::model::TrendmicroConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`TrendmicroConnectorProfileCredentials`](crate::model::TrendmicroConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_secret_key: std::option::Option<std::string::String>,
@@ -9774,7 +9919,7 @@ pub mod trendmicro_connector_profile_credentials {
             self.api_secret_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrendmicroConnectorProfileCredentials`](crate::model::TrendmicroConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`TrendmicroConnectorProfileCredentials`](crate::model::TrendmicroConnectorProfileCredentials).
         pub fn build(self) -> crate::model::TrendmicroConnectorProfileCredentials {
             crate::model::TrendmicroConnectorProfileCredentials {
                 api_secret_key: self.api_secret_key,
@@ -9783,7 +9928,7 @@ pub mod trendmicro_connector_profile_credentials {
     }
 }
 impl TrendmicroConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`TrendmicroConnectorProfileCredentials`](crate::model::TrendmicroConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`TrendmicroConnectorProfileCredentials`](crate::model::TrendmicroConnectorProfileCredentials).
     pub fn builder() -> crate::model::trendmicro_connector_profile_credentials::Builder {
         crate::model::trendmicro_connector_profile_credentials::Builder::default()
     }
@@ -9794,8 +9939,10 @@ impl TrendmicroConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnowflakeConnectorProfileCredentials {
     /// <p> The name of the user. </p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p> The password that corresponds to the user name. </p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
 }
 impl SnowflakeConnectorProfileCredentials {
@@ -9816,11 +9963,10 @@ impl std::fmt::Debug for SnowflakeConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`SnowflakeConnectorProfileCredentials`](crate::model::SnowflakeConnectorProfileCredentials)
+/// See [`SnowflakeConnectorProfileCredentials`](crate::model::SnowflakeConnectorProfileCredentials).
 pub mod snowflake_connector_profile_credentials {
 
-    /// A builder for [`SnowflakeConnectorProfileCredentials`](crate::model::SnowflakeConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`SnowflakeConnectorProfileCredentials`](crate::model::SnowflakeConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) username: std::option::Option<std::string::String>,
@@ -9847,7 +9993,7 @@ pub mod snowflake_connector_profile_credentials {
             self.password = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnowflakeConnectorProfileCredentials`](crate::model::SnowflakeConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`SnowflakeConnectorProfileCredentials`](crate::model::SnowflakeConnectorProfileCredentials).
         pub fn build(self) -> crate::model::SnowflakeConnectorProfileCredentials {
             crate::model::SnowflakeConnectorProfileCredentials {
                 username: self.username,
@@ -9857,7 +10003,7 @@ pub mod snowflake_connector_profile_credentials {
     }
 }
 impl SnowflakeConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`SnowflakeConnectorProfileCredentials`](crate::model::SnowflakeConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`SnowflakeConnectorProfileCredentials`](crate::model::SnowflakeConnectorProfileCredentials).
     pub fn builder() -> crate::model::snowflake_connector_profile_credentials::Builder {
         crate::model::snowflake_connector_profile_credentials::Builder::default()
     }
@@ -9868,12 +10014,16 @@ impl SnowflakeConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SlackConnectorProfileCredentials {
     /// <p> The identifier for the client. </p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p> The client secret used by the OAuth client to authenticate to the authorization server. </p>
+    #[doc(hidden)]
     pub client_secret: std::option::Option<std::string::String>,
     /// <p> The credentials used to access protected Slack resources. </p>
+    #[doc(hidden)]
     pub access_token: std::option::Option<std::string::String>,
     /// <p> The OAuth requirement needed to request security tokens from the connector endpoint. </p>
+    #[doc(hidden)]
     pub o_auth_request: std::option::Option<crate::model::ConnectorOAuthRequest>,
 }
 impl SlackConnectorProfileCredentials {
@@ -9904,11 +10054,10 @@ impl std::fmt::Debug for SlackConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`SlackConnectorProfileCredentials`](crate::model::SlackConnectorProfileCredentials)
+/// See [`SlackConnectorProfileCredentials`](crate::model::SlackConnectorProfileCredentials).
 pub mod slack_connector_profile_credentials {
 
-    /// A builder for [`SlackConnectorProfileCredentials`](crate::model::SlackConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`SlackConnectorProfileCredentials`](crate::model::SlackConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_id: std::option::Option<std::string::String>,
@@ -9963,7 +10112,7 @@ pub mod slack_connector_profile_credentials {
             self.o_auth_request = input;
             self
         }
-        /// Consumes the builder and constructs a [`SlackConnectorProfileCredentials`](crate::model::SlackConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`SlackConnectorProfileCredentials`](crate::model::SlackConnectorProfileCredentials).
         pub fn build(self) -> crate::model::SlackConnectorProfileCredentials {
             crate::model::SlackConnectorProfileCredentials {
                 client_id: self.client_id,
@@ -9975,7 +10124,7 @@ pub mod slack_connector_profile_credentials {
     }
 }
 impl SlackConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`SlackConnectorProfileCredentials`](crate::model::SlackConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`SlackConnectorProfileCredentials`](crate::model::SlackConnectorProfileCredentials).
     pub fn builder() -> crate::model::slack_connector_profile_credentials::Builder {
         crate::model::slack_connector_profile_credentials::Builder::default()
     }
@@ -9986,6 +10135,7 @@ impl SlackConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SingularConnectorProfileCredentials {
     /// <p> A unique alphanumeric identifier used to authenticate a user, developer, or calling program to your API. </p>
+    #[doc(hidden)]
     pub api_key: std::option::Option<std::string::String>,
 }
 impl SingularConnectorProfileCredentials {
@@ -10001,11 +10151,10 @@ impl std::fmt::Debug for SingularConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`SingularConnectorProfileCredentials`](crate::model::SingularConnectorProfileCredentials)
+/// See [`SingularConnectorProfileCredentials`](crate::model::SingularConnectorProfileCredentials).
 pub mod singular_connector_profile_credentials {
 
-    /// A builder for [`SingularConnectorProfileCredentials`](crate::model::SingularConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`SingularConnectorProfileCredentials`](crate::model::SingularConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_key: std::option::Option<std::string::String>,
@@ -10021,7 +10170,7 @@ pub mod singular_connector_profile_credentials {
             self.api_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`SingularConnectorProfileCredentials`](crate::model::SingularConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`SingularConnectorProfileCredentials`](crate::model::SingularConnectorProfileCredentials).
         pub fn build(self) -> crate::model::SingularConnectorProfileCredentials {
             crate::model::SingularConnectorProfileCredentials {
                 api_key: self.api_key,
@@ -10030,7 +10179,7 @@ pub mod singular_connector_profile_credentials {
     }
 }
 impl SingularConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`SingularConnectorProfileCredentials`](crate::model::SingularConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`SingularConnectorProfileCredentials`](crate::model::SingularConnectorProfileCredentials).
     pub fn builder() -> crate::model::singular_connector_profile_credentials::Builder {
         crate::model::singular_connector_profile_credentials::Builder::default()
     }
@@ -10041,8 +10190,10 @@ impl SingularConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceNowConnectorProfileCredentials {
     /// <p> The name of the user. </p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p> The password that corresponds to the user name. </p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
 }
 impl ServiceNowConnectorProfileCredentials {
@@ -10063,11 +10214,10 @@ impl std::fmt::Debug for ServiceNowConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`ServiceNowConnectorProfileCredentials`](crate::model::ServiceNowConnectorProfileCredentials)
+/// See [`ServiceNowConnectorProfileCredentials`](crate::model::ServiceNowConnectorProfileCredentials).
 pub mod service_now_connector_profile_credentials {
 
-    /// A builder for [`ServiceNowConnectorProfileCredentials`](crate::model::ServiceNowConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`ServiceNowConnectorProfileCredentials`](crate::model::ServiceNowConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) username: std::option::Option<std::string::String>,
@@ -10094,7 +10244,7 @@ pub mod service_now_connector_profile_credentials {
             self.password = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceNowConnectorProfileCredentials`](crate::model::ServiceNowConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`ServiceNowConnectorProfileCredentials`](crate::model::ServiceNowConnectorProfileCredentials).
         pub fn build(self) -> crate::model::ServiceNowConnectorProfileCredentials {
             crate::model::ServiceNowConnectorProfileCredentials {
                 username: self.username,
@@ -10104,7 +10254,7 @@ pub mod service_now_connector_profile_credentials {
     }
 }
 impl ServiceNowConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`ServiceNowConnectorProfileCredentials`](crate::model::ServiceNowConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`ServiceNowConnectorProfileCredentials`](crate::model::ServiceNowConnectorProfileCredentials).
     pub fn builder() -> crate::model::service_now_connector_profile_credentials::Builder {
         crate::model::service_now_connector_profile_credentials::Builder::default()
     }
@@ -10115,12 +10265,16 @@ impl ServiceNowConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SalesforceConnectorProfileCredentials {
     /// <p> The credentials used to access protected Salesforce resources. </p>
+    #[doc(hidden)]
     pub access_token: std::option::Option<std::string::String>,
     /// <p> The credentials used to acquire new access tokens. </p>
+    #[doc(hidden)]
     pub refresh_token: std::option::Option<std::string::String>,
     /// <p> The OAuth requirement needed to request security tokens from the connector endpoint. </p>
+    #[doc(hidden)]
     pub o_auth_request: std::option::Option<crate::model::ConnectorOAuthRequest>,
     /// <p> The secret manager ARN, which contains the client ID and client secret of the connected app. </p>
+    #[doc(hidden)]
     pub client_credentials_arn: std::option::Option<std::string::String>,
 }
 impl SalesforceConnectorProfileCredentials {
@@ -10151,11 +10305,10 @@ impl std::fmt::Debug for SalesforceConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`SalesforceConnectorProfileCredentials`](crate::model::SalesforceConnectorProfileCredentials)
+/// See [`SalesforceConnectorProfileCredentials`](crate::model::SalesforceConnectorProfileCredentials).
 pub mod salesforce_connector_profile_credentials {
 
-    /// A builder for [`SalesforceConnectorProfileCredentials`](crate::model::SalesforceConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`SalesforceConnectorProfileCredentials`](crate::model::SalesforceConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_token: std::option::Option<std::string::String>,
@@ -10213,7 +10366,7 @@ pub mod salesforce_connector_profile_credentials {
             self.client_credentials_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`SalesforceConnectorProfileCredentials`](crate::model::SalesforceConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`SalesforceConnectorProfileCredentials`](crate::model::SalesforceConnectorProfileCredentials).
         pub fn build(self) -> crate::model::SalesforceConnectorProfileCredentials {
             crate::model::SalesforceConnectorProfileCredentials {
                 access_token: self.access_token,
@@ -10225,7 +10378,7 @@ pub mod salesforce_connector_profile_credentials {
     }
 }
 impl SalesforceConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`SalesforceConnectorProfileCredentials`](crate::model::SalesforceConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`SalesforceConnectorProfileCredentials`](crate::model::SalesforceConnectorProfileCredentials).
     pub fn builder() -> crate::model::salesforce_connector_profile_credentials::Builder {
         crate::model::salesforce_connector_profile_credentials::Builder::default()
     }
@@ -10236,8 +10389,10 @@ impl SalesforceConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RedshiftConnectorProfileCredentials {
     /// <p> The name of the user. </p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p> The password that corresponds to the user name. </p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
 }
 impl RedshiftConnectorProfileCredentials {
@@ -10258,11 +10413,10 @@ impl std::fmt::Debug for RedshiftConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`RedshiftConnectorProfileCredentials`](crate::model::RedshiftConnectorProfileCredentials)
+/// See [`RedshiftConnectorProfileCredentials`](crate::model::RedshiftConnectorProfileCredentials).
 pub mod redshift_connector_profile_credentials {
 
-    /// A builder for [`RedshiftConnectorProfileCredentials`](crate::model::RedshiftConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`RedshiftConnectorProfileCredentials`](crate::model::RedshiftConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) username: std::option::Option<std::string::String>,
@@ -10289,7 +10443,7 @@ pub mod redshift_connector_profile_credentials {
             self.password = input;
             self
         }
-        /// Consumes the builder and constructs a [`RedshiftConnectorProfileCredentials`](crate::model::RedshiftConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`RedshiftConnectorProfileCredentials`](crate::model::RedshiftConnectorProfileCredentials).
         pub fn build(self) -> crate::model::RedshiftConnectorProfileCredentials {
             crate::model::RedshiftConnectorProfileCredentials {
                 username: self.username,
@@ -10299,7 +10453,7 @@ pub mod redshift_connector_profile_credentials {
     }
 }
 impl RedshiftConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`RedshiftConnectorProfileCredentials`](crate::model::RedshiftConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`RedshiftConnectorProfileCredentials`](crate::model::RedshiftConnectorProfileCredentials).
     pub fn builder() -> crate::model::redshift_connector_profile_credentials::Builder {
         crate::model::redshift_connector_profile_credentials::Builder::default()
     }
@@ -10310,12 +10464,16 @@ impl RedshiftConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MarketoConnectorProfileCredentials {
     /// <p> The identifier for the desired client. </p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p> The client secret used by the OAuth client to authenticate to the authorization server. </p>
+    #[doc(hidden)]
     pub client_secret: std::option::Option<std::string::String>,
     /// <p> The credentials used to access protected Marketo resources. </p>
+    #[doc(hidden)]
     pub access_token: std::option::Option<std::string::String>,
     /// <p> The OAuth requirement needed to request security tokens from the connector endpoint. </p>
+    #[doc(hidden)]
     pub o_auth_request: std::option::Option<crate::model::ConnectorOAuthRequest>,
 }
 impl MarketoConnectorProfileCredentials {
@@ -10346,11 +10504,10 @@ impl std::fmt::Debug for MarketoConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`MarketoConnectorProfileCredentials`](crate::model::MarketoConnectorProfileCredentials)
+/// See [`MarketoConnectorProfileCredentials`](crate::model::MarketoConnectorProfileCredentials).
 pub mod marketo_connector_profile_credentials {
 
-    /// A builder for [`MarketoConnectorProfileCredentials`](crate::model::MarketoConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`MarketoConnectorProfileCredentials`](crate::model::MarketoConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_id: std::option::Option<std::string::String>,
@@ -10405,7 +10562,7 @@ pub mod marketo_connector_profile_credentials {
             self.o_auth_request = input;
             self
         }
-        /// Consumes the builder and constructs a [`MarketoConnectorProfileCredentials`](crate::model::MarketoConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`MarketoConnectorProfileCredentials`](crate::model::MarketoConnectorProfileCredentials).
         pub fn build(self) -> crate::model::MarketoConnectorProfileCredentials {
             crate::model::MarketoConnectorProfileCredentials {
                 client_id: self.client_id,
@@ -10417,7 +10574,7 @@ pub mod marketo_connector_profile_credentials {
     }
 }
 impl MarketoConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`MarketoConnectorProfileCredentials`](crate::model::MarketoConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`MarketoConnectorProfileCredentials`](crate::model::MarketoConnectorProfileCredentials).
     pub fn builder() -> crate::model::marketo_connector_profile_credentials::Builder {
         crate::model::marketo_connector_profile_credentials::Builder::default()
     }
@@ -10428,12 +10585,16 @@ impl MarketoConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InforNexusConnectorProfileCredentials {
     /// <p> The Access Key portion of the credentials. </p>
+    #[doc(hidden)]
     pub access_key_id: std::option::Option<std::string::String>,
     /// <p> The identifier for the user. </p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
     /// <p> The secret key used to sign requests. </p>
+    #[doc(hidden)]
     pub secret_access_key: std::option::Option<std::string::String>,
     /// <p> The encryption keys used to encrypt data. </p>
+    #[doc(hidden)]
     pub datakey: std::option::Option<std::string::String>,
 }
 impl InforNexusConnectorProfileCredentials {
@@ -10464,11 +10625,10 @@ impl std::fmt::Debug for InforNexusConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`InforNexusConnectorProfileCredentials`](crate::model::InforNexusConnectorProfileCredentials)
+/// See [`InforNexusConnectorProfileCredentials`](crate::model::InforNexusConnectorProfileCredentials).
 pub mod infor_nexus_connector_profile_credentials {
 
-    /// A builder for [`InforNexusConnectorProfileCredentials`](crate::model::InforNexusConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`InforNexusConnectorProfileCredentials`](crate::model::InforNexusConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_key_id: std::option::Option<std::string::String>,
@@ -10523,7 +10683,7 @@ pub mod infor_nexus_connector_profile_credentials {
             self.datakey = input;
             self
         }
-        /// Consumes the builder and constructs a [`InforNexusConnectorProfileCredentials`](crate::model::InforNexusConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`InforNexusConnectorProfileCredentials`](crate::model::InforNexusConnectorProfileCredentials).
         pub fn build(self) -> crate::model::InforNexusConnectorProfileCredentials {
             crate::model::InforNexusConnectorProfileCredentials {
                 access_key_id: self.access_key_id,
@@ -10535,7 +10695,7 @@ pub mod infor_nexus_connector_profile_credentials {
     }
 }
 impl InforNexusConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`InforNexusConnectorProfileCredentials`](crate::model::InforNexusConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`InforNexusConnectorProfileCredentials`](crate::model::InforNexusConnectorProfileCredentials).
     pub fn builder() -> crate::model::infor_nexus_connector_profile_credentials::Builder {
         crate::model::infor_nexus_connector_profile_credentials::Builder::default()
     }
@@ -10546,10 +10706,13 @@ impl InforNexusConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HoneycodeConnectorProfileCredentials {
     /// <p> The credentials used to access protected Amazon Honeycode resources. </p>
+    #[doc(hidden)]
     pub access_token: std::option::Option<std::string::String>,
     /// <p> The credentials used to acquire new access tokens. </p>
+    #[doc(hidden)]
     pub refresh_token: std::option::Option<std::string::String>,
     /// <p> Used by select connectors for which the OAuth workflow is supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack. </p>
+    #[doc(hidden)]
     pub o_auth_request: std::option::Option<crate::model::ConnectorOAuthRequest>,
 }
 impl HoneycodeConnectorProfileCredentials {
@@ -10575,11 +10738,10 @@ impl std::fmt::Debug for HoneycodeConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`HoneycodeConnectorProfileCredentials`](crate::model::HoneycodeConnectorProfileCredentials)
+/// See [`HoneycodeConnectorProfileCredentials`](crate::model::HoneycodeConnectorProfileCredentials).
 pub mod honeycode_connector_profile_credentials {
 
-    /// A builder for [`HoneycodeConnectorProfileCredentials`](crate::model::HoneycodeConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`HoneycodeConnectorProfileCredentials`](crate::model::HoneycodeConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_token: std::option::Option<std::string::String>,
@@ -10623,7 +10785,7 @@ pub mod honeycode_connector_profile_credentials {
             self.o_auth_request = input;
             self
         }
-        /// Consumes the builder and constructs a [`HoneycodeConnectorProfileCredentials`](crate::model::HoneycodeConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`HoneycodeConnectorProfileCredentials`](crate::model::HoneycodeConnectorProfileCredentials).
         pub fn build(self) -> crate::model::HoneycodeConnectorProfileCredentials {
             crate::model::HoneycodeConnectorProfileCredentials {
                 access_token: self.access_token,
@@ -10634,7 +10796,7 @@ pub mod honeycode_connector_profile_credentials {
     }
 }
 impl HoneycodeConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`HoneycodeConnectorProfileCredentials`](crate::model::HoneycodeConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`HoneycodeConnectorProfileCredentials`](crate::model::HoneycodeConnectorProfileCredentials).
     pub fn builder() -> crate::model::honeycode_connector_profile_credentials::Builder {
         crate::model::honeycode_connector_profile_credentials::Builder::default()
     }
@@ -10645,14 +10807,19 @@ impl HoneycodeConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GoogleAnalyticsConnectorProfileCredentials {
     /// <p> The identifier for the desired client. </p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p> The client secret used by the OAuth client to authenticate to the authorization server. </p>
+    #[doc(hidden)]
     pub client_secret: std::option::Option<std::string::String>,
     /// <p> The credentials used to access protected Google Analytics resources. </p>
+    #[doc(hidden)]
     pub access_token: std::option::Option<std::string::String>,
     /// <p> The credentials used to acquire new access tokens. This is required only for OAuth2 access tokens, and is not required for OAuth1 access tokens. </p>
+    #[doc(hidden)]
     pub refresh_token: std::option::Option<std::string::String>,
     /// <p> The OAuth requirement needed to request security tokens from the connector endpoint. </p>
+    #[doc(hidden)]
     pub o_auth_request: std::option::Option<crate::model::ConnectorOAuthRequest>,
 }
 impl GoogleAnalyticsConnectorProfileCredentials {
@@ -10688,11 +10855,10 @@ impl std::fmt::Debug for GoogleAnalyticsConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`GoogleAnalyticsConnectorProfileCredentials`](crate::model::GoogleAnalyticsConnectorProfileCredentials)
+/// See [`GoogleAnalyticsConnectorProfileCredentials`](crate::model::GoogleAnalyticsConnectorProfileCredentials).
 pub mod google_analytics_connector_profile_credentials {
 
-    /// A builder for [`GoogleAnalyticsConnectorProfileCredentials`](crate::model::GoogleAnalyticsConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`GoogleAnalyticsConnectorProfileCredentials`](crate::model::GoogleAnalyticsConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_id: std::option::Option<std::string::String>,
@@ -10761,7 +10927,7 @@ pub mod google_analytics_connector_profile_credentials {
             self.o_auth_request = input;
             self
         }
-        /// Consumes the builder and constructs a [`GoogleAnalyticsConnectorProfileCredentials`](crate::model::GoogleAnalyticsConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`GoogleAnalyticsConnectorProfileCredentials`](crate::model::GoogleAnalyticsConnectorProfileCredentials).
         pub fn build(self) -> crate::model::GoogleAnalyticsConnectorProfileCredentials {
             crate::model::GoogleAnalyticsConnectorProfileCredentials {
                 client_id: self.client_id,
@@ -10774,7 +10940,7 @@ pub mod google_analytics_connector_profile_credentials {
     }
 }
 impl GoogleAnalyticsConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`GoogleAnalyticsConnectorProfileCredentials`](crate::model::GoogleAnalyticsConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`GoogleAnalyticsConnectorProfileCredentials`](crate::model::GoogleAnalyticsConnectorProfileCredentials).
     pub fn builder() -> crate::model::google_analytics_connector_profile_credentials::Builder {
         crate::model::google_analytics_connector_profile_credentials::Builder::default()
     }
@@ -10785,6 +10951,7 @@ impl GoogleAnalyticsConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DynatraceConnectorProfileCredentials {
     /// <p> The API tokens used by Dynatrace API to authenticate various API calls. </p>
+    #[doc(hidden)]
     pub api_token: std::option::Option<std::string::String>,
 }
 impl DynatraceConnectorProfileCredentials {
@@ -10800,11 +10967,10 @@ impl std::fmt::Debug for DynatraceConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`DynatraceConnectorProfileCredentials`](crate::model::DynatraceConnectorProfileCredentials)
+/// See [`DynatraceConnectorProfileCredentials`](crate::model::DynatraceConnectorProfileCredentials).
 pub mod dynatrace_connector_profile_credentials {
 
-    /// A builder for [`DynatraceConnectorProfileCredentials`](crate::model::DynatraceConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`DynatraceConnectorProfileCredentials`](crate::model::DynatraceConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_token: std::option::Option<std::string::String>,
@@ -10820,7 +10986,7 @@ pub mod dynatrace_connector_profile_credentials {
             self.api_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DynatraceConnectorProfileCredentials`](crate::model::DynatraceConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`DynatraceConnectorProfileCredentials`](crate::model::DynatraceConnectorProfileCredentials).
         pub fn build(self) -> crate::model::DynatraceConnectorProfileCredentials {
             crate::model::DynatraceConnectorProfileCredentials {
                 api_token: self.api_token,
@@ -10829,7 +10995,7 @@ pub mod dynatrace_connector_profile_credentials {
     }
 }
 impl DynatraceConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`DynatraceConnectorProfileCredentials`](crate::model::DynatraceConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`DynatraceConnectorProfileCredentials`](crate::model::DynatraceConnectorProfileCredentials).
     pub fn builder() -> crate::model::dynatrace_connector_profile_credentials::Builder {
         crate::model::dynatrace_connector_profile_credentials::Builder::default()
     }
@@ -10840,8 +11006,10 @@ impl DynatraceConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatadogConnectorProfileCredentials {
     /// <p> A unique alphanumeric identifier used to authenticate a user, developer, or calling program to your API. </p>
+    #[doc(hidden)]
     pub api_key: std::option::Option<std::string::String>,
     /// <p> Application keys, in conjunction with your API key, give you full access to Datadog’s programmatic API. Application keys are associated with the user account that created them. The application key is used to log all requests made to the API. </p>
+    #[doc(hidden)]
     pub application_key: std::option::Option<std::string::String>,
 }
 impl DatadogConnectorProfileCredentials {
@@ -10862,11 +11030,10 @@ impl std::fmt::Debug for DatadogConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`DatadogConnectorProfileCredentials`](crate::model::DatadogConnectorProfileCredentials)
+/// See [`DatadogConnectorProfileCredentials`](crate::model::DatadogConnectorProfileCredentials).
 pub mod datadog_connector_profile_credentials {
 
-    /// A builder for [`DatadogConnectorProfileCredentials`](crate::model::DatadogConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`DatadogConnectorProfileCredentials`](crate::model::DatadogConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_key: std::option::Option<std::string::String>,
@@ -10896,7 +11063,7 @@ pub mod datadog_connector_profile_credentials {
             self.application_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatadogConnectorProfileCredentials`](crate::model::DatadogConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`DatadogConnectorProfileCredentials`](crate::model::DatadogConnectorProfileCredentials).
         pub fn build(self) -> crate::model::DatadogConnectorProfileCredentials {
             crate::model::DatadogConnectorProfileCredentials {
                 api_key: self.api_key,
@@ -10906,7 +11073,7 @@ pub mod datadog_connector_profile_credentials {
     }
 }
 impl DatadogConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`DatadogConnectorProfileCredentials`](crate::model::DatadogConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`DatadogConnectorProfileCredentials`](crate::model::DatadogConnectorProfileCredentials).
     pub fn builder() -> crate::model::datadog_connector_profile_credentials::Builder {
         crate::model::datadog_connector_profile_credentials::Builder::default()
     }
@@ -10917,8 +11084,10 @@ impl DatadogConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AmplitudeConnectorProfileCredentials {
     /// <p> A unique alphanumeric identifier used to authenticate a user, developer, or calling program to your API. </p>
+    #[doc(hidden)]
     pub api_key: std::option::Option<std::string::String>,
     /// <p> The Secret Access Key portion of the credentials. </p>
+    #[doc(hidden)]
     pub secret_key: std::option::Option<std::string::String>,
 }
 impl AmplitudeConnectorProfileCredentials {
@@ -10939,11 +11108,10 @@ impl std::fmt::Debug for AmplitudeConnectorProfileCredentials {
         formatter.finish()
     }
 }
-/// See [`AmplitudeConnectorProfileCredentials`](crate::model::AmplitudeConnectorProfileCredentials)
+/// See [`AmplitudeConnectorProfileCredentials`](crate::model::AmplitudeConnectorProfileCredentials).
 pub mod amplitude_connector_profile_credentials {
 
-    /// A builder for [`AmplitudeConnectorProfileCredentials`](crate::model::AmplitudeConnectorProfileCredentials)
-    #[non_exhaustive]
+    /// A builder for [`AmplitudeConnectorProfileCredentials`](crate::model::AmplitudeConnectorProfileCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_key: std::option::Option<std::string::String>,
@@ -10970,7 +11138,7 @@ pub mod amplitude_connector_profile_credentials {
             self.secret_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`AmplitudeConnectorProfileCredentials`](crate::model::AmplitudeConnectorProfileCredentials)
+        /// Consumes the builder and constructs a [`AmplitudeConnectorProfileCredentials`](crate::model::AmplitudeConnectorProfileCredentials).
         pub fn build(self) -> crate::model::AmplitudeConnectorProfileCredentials {
             crate::model::AmplitudeConnectorProfileCredentials {
                 api_key: self.api_key,
@@ -10980,7 +11148,7 @@ pub mod amplitude_connector_profile_credentials {
     }
 }
 impl AmplitudeConnectorProfileCredentials {
-    /// Creates a new builder-style object to manufacture [`AmplitudeConnectorProfileCredentials`](crate::model::AmplitudeConnectorProfileCredentials)
+    /// Creates a new builder-style object to manufacture [`AmplitudeConnectorProfileCredentials`](crate::model::AmplitudeConnectorProfileCredentials).
     pub fn builder() -> crate::model::amplitude_connector_profile_credentials::Builder {
         crate::model::amplitude_connector_profile_credentials::Builder::default()
     }
@@ -10991,41 +11159,59 @@ impl AmplitudeConnectorProfileCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorProfileProperties {
     /// <p> The connector-specific properties required by Amplitude. </p>
+    #[doc(hidden)]
     pub amplitude: std::option::Option<crate::model::AmplitudeConnectorProfileProperties>,
     /// <p> The connector-specific properties required by Datadog. </p>
+    #[doc(hidden)]
     pub datadog: std::option::Option<crate::model::DatadogConnectorProfileProperties>,
     /// <p> The connector-specific properties required by Dynatrace. </p>
+    #[doc(hidden)]
     pub dynatrace: std::option::Option<crate::model::DynatraceConnectorProfileProperties>,
     /// <p> The connector-specific properties required Google Analytics. </p>
+    #[doc(hidden)]
     pub google_analytics:
         std::option::Option<crate::model::GoogleAnalyticsConnectorProfileProperties>,
     /// <p> The connector-specific properties required by Amazon Honeycode. </p>
+    #[doc(hidden)]
     pub honeycode: std::option::Option<crate::model::HoneycodeConnectorProfileProperties>,
     /// <p> The connector-specific properties required by Infor Nexus. </p>
+    #[doc(hidden)]
     pub infor_nexus: std::option::Option<crate::model::InforNexusConnectorProfileProperties>,
     /// <p> The connector-specific properties required by Marketo. </p>
+    #[doc(hidden)]
     pub marketo: std::option::Option<crate::model::MarketoConnectorProfileProperties>,
     /// <p> The connector-specific properties required by Amazon Redshift. </p>
+    #[doc(hidden)]
     pub redshift: std::option::Option<crate::model::RedshiftConnectorProfileProperties>,
     /// <p> The connector-specific properties required by Salesforce. </p>
+    #[doc(hidden)]
     pub salesforce: std::option::Option<crate::model::SalesforceConnectorProfileProperties>,
     /// <p> The connector-specific properties required by serviceNow. </p>
+    #[doc(hidden)]
     pub service_now: std::option::Option<crate::model::ServiceNowConnectorProfileProperties>,
     /// <p> The connector-specific properties required by Singular. </p>
+    #[doc(hidden)]
     pub singular: std::option::Option<crate::model::SingularConnectorProfileProperties>,
     /// <p> The connector-specific properties required by Slack. </p>
+    #[doc(hidden)]
     pub slack: std::option::Option<crate::model::SlackConnectorProfileProperties>,
     /// <p> The connector-specific properties required by Snowflake. </p>
+    #[doc(hidden)]
     pub snowflake: std::option::Option<crate::model::SnowflakeConnectorProfileProperties>,
     /// <p> The connector-specific properties required by Trend Micro. </p>
+    #[doc(hidden)]
     pub trendmicro: std::option::Option<crate::model::TrendmicroConnectorProfileProperties>,
     /// <p> The connector-specific properties required by Veeva. </p>
+    #[doc(hidden)]
     pub veeva: std::option::Option<crate::model::VeevaConnectorProfileProperties>,
     /// <p> The connector-specific properties required by Zendesk. </p>
+    #[doc(hidden)]
     pub zendesk: std::option::Option<crate::model::ZendeskConnectorProfileProperties>,
     /// <p> The connector-specific profile properties required when using SAPOData. </p>
+    #[doc(hidden)]
     pub sapo_data: std::option::Option<crate::model::SapoDataConnectorProfileProperties>,
     /// <p>The properties required by the custom connector.</p>
+    #[doc(hidden)]
     pub custom_connector: std::option::Option<crate::model::CustomConnectorProfileProperties>,
 }
 impl ConnectorProfileProperties {
@@ -11152,11 +11338,10 @@ impl std::fmt::Debug for ConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`ConnectorProfileProperties`](crate::model::ConnectorProfileProperties)
+/// See [`ConnectorProfileProperties`](crate::model::ConnectorProfileProperties).
 pub mod connector_profile_properties {
 
-    /// A builder for [`ConnectorProfileProperties`](crate::model::ConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorProfileProperties`](crate::model::ConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) amplitude:
@@ -11456,7 +11641,7 @@ pub mod connector_profile_properties {
             self.custom_connector = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorProfileProperties`](crate::model::ConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`ConnectorProfileProperties`](crate::model::ConnectorProfileProperties).
         pub fn build(self) -> crate::model::ConnectorProfileProperties {
             crate::model::ConnectorProfileProperties {
                 amplitude: self.amplitude,
@@ -11482,7 +11667,7 @@ pub mod connector_profile_properties {
     }
 }
 impl ConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`ConnectorProfileProperties`](crate::model::ConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`ConnectorProfileProperties`](crate::model::ConnectorProfileProperties).
     pub fn builder() -> crate::model::connector_profile_properties::Builder {
         crate::model::connector_profile_properties::Builder::default()
     }
@@ -11493,9 +11678,11 @@ impl ConnectorProfileProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomConnectorProfileProperties {
     /// <p>A map of properties that are required to create a profile for the custom connector.</p>
+    #[doc(hidden)]
     pub profile_properties:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The OAuth 2.0 properties required for OAuth 2.0 authentication.</p>
+    #[doc(hidden)]
     pub o_auth2_properties: std::option::Option<crate::model::OAuth2Properties>,
 }
 impl CustomConnectorProfileProperties {
@@ -11519,11 +11706,10 @@ impl std::fmt::Debug for CustomConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`CustomConnectorProfileProperties`](crate::model::CustomConnectorProfileProperties)
+/// See [`CustomConnectorProfileProperties`](crate::model::CustomConnectorProfileProperties).
 pub mod custom_connector_profile_properties {
 
-    /// A builder for [`CustomConnectorProfileProperties`](crate::model::CustomConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`CustomConnectorProfileProperties`](crate::model::CustomConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) profile_properties: std::option::Option<
@@ -11570,7 +11756,7 @@ pub mod custom_connector_profile_properties {
             self.o_auth2_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomConnectorProfileProperties`](crate::model::CustomConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`CustomConnectorProfileProperties`](crate::model::CustomConnectorProfileProperties).
         pub fn build(self) -> crate::model::CustomConnectorProfileProperties {
             crate::model::CustomConnectorProfileProperties {
                 profile_properties: self.profile_properties,
@@ -11580,7 +11766,7 @@ pub mod custom_connector_profile_properties {
     }
 }
 impl CustomConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`CustomConnectorProfileProperties`](crate::model::CustomConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`CustomConnectorProfileProperties`](crate::model::CustomConnectorProfileProperties).
     pub fn builder() -> crate::model::custom_connector_profile_properties::Builder {
         crate::model::custom_connector_profile_properties::Builder::default()
     }
@@ -11591,10 +11777,13 @@ impl CustomConnectorProfileProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OAuth2Properties {
     /// <p>The token URL required for OAuth 2.0 authentication.</p>
+    #[doc(hidden)]
     pub token_url: std::option::Option<std::string::String>,
     /// <p>The OAuth 2.0 grant type used by connector for OAuth 2.0 authentication.</p>
+    #[doc(hidden)]
     pub o_auth2_grant_type: std::option::Option<crate::model::OAuth2GrantType>,
     /// <p>Associates your token URL with a map of properties that you define. Use this parameter to provide any additional details that the connector requires to authenticate your request.</p>
+    #[doc(hidden)]
     pub token_url_custom_properties:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -11627,11 +11816,10 @@ impl std::fmt::Debug for OAuth2Properties {
         formatter.finish()
     }
 }
-/// See [`OAuth2Properties`](crate::model::OAuth2Properties)
+/// See [`OAuth2Properties`](crate::model::OAuth2Properties).
 pub mod o_auth2_properties {
 
-    /// A builder for [`OAuth2Properties`](crate::model::OAuth2Properties)
-    #[non_exhaustive]
+    /// A builder for [`OAuth2Properties`](crate::model::OAuth2Properties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) token_url: std::option::Option<std::string::String>,
@@ -11689,7 +11877,7 @@ pub mod o_auth2_properties {
             self.token_url_custom_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`OAuth2Properties`](crate::model::OAuth2Properties)
+        /// Consumes the builder and constructs a [`OAuth2Properties`](crate::model::OAuth2Properties).
         pub fn build(self) -> crate::model::OAuth2Properties {
             crate::model::OAuth2Properties {
                 token_url: self.token_url,
@@ -11700,7 +11888,7 @@ pub mod o_auth2_properties {
     }
 }
 impl OAuth2Properties {
-    /// Creates a new builder-style object to manufacture [`OAuth2Properties`](crate::model::OAuth2Properties)
+    /// Creates a new builder-style object to manufacture [`OAuth2Properties`](crate::model::OAuth2Properties).
     pub fn builder() -> crate::model::o_auth2_properties::Builder {
         crate::model::o_auth2_properties::Builder::default()
     }
@@ -11766,18 +11954,25 @@ impl AsRef<str> for OAuth2GrantType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SapoDataConnectorProfileProperties {
     /// <p> The location of the SAPOData resource. </p>
+    #[doc(hidden)]
     pub application_host_url: std::option::Option<std::string::String>,
     /// <p> The application path to catalog service. </p>
+    #[doc(hidden)]
     pub application_service_path: std::option::Option<std::string::String>,
     /// <p> The port number of the SAPOData instance. </p>
+    #[doc(hidden)]
     pub port_number: std::option::Option<i32>,
     /// <p> The client number for the client creating the connection. </p>
+    #[doc(hidden)]
     pub client_number: std::option::Option<std::string::String>,
     /// <p> The logon language of SAPOData instance. </p>
+    #[doc(hidden)]
     pub logon_language: std::option::Option<std::string::String>,
     /// <p> The SAPOData Private Link service name to be used for private data transfers. </p>
+    #[doc(hidden)]
     pub private_link_service_name: std::option::Option<std::string::String>,
     /// <p> The SAPOData OAuth properties required for OAuth type authentication. </p>
+    #[doc(hidden)]
     pub o_auth_properties: std::option::Option<crate::model::OAuthProperties>,
 }
 impl SapoDataConnectorProfileProperties {
@@ -11823,11 +12018,10 @@ impl std::fmt::Debug for SapoDataConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`SapoDataConnectorProfileProperties`](crate::model::SapoDataConnectorProfileProperties)
+/// See [`SapoDataConnectorProfileProperties`](crate::model::SapoDataConnectorProfileProperties).
 pub mod sapo_data_connector_profile_properties {
 
-    /// A builder for [`SapoDataConnectorProfileProperties`](crate::model::SapoDataConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`SapoDataConnectorProfileProperties`](crate::model::SapoDataConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_host_url: std::option::Option<std::string::String>,
@@ -11927,7 +12121,7 @@ pub mod sapo_data_connector_profile_properties {
             self.o_auth_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`SapoDataConnectorProfileProperties`](crate::model::SapoDataConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`SapoDataConnectorProfileProperties`](crate::model::SapoDataConnectorProfileProperties).
         pub fn build(self) -> crate::model::SapoDataConnectorProfileProperties {
             crate::model::SapoDataConnectorProfileProperties {
                 application_host_url: self.application_host_url,
@@ -11942,7 +12136,7 @@ pub mod sapo_data_connector_profile_properties {
     }
 }
 impl SapoDataConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`SapoDataConnectorProfileProperties`](crate::model::SapoDataConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`SapoDataConnectorProfileProperties`](crate::model::SapoDataConnectorProfileProperties).
     pub fn builder() -> crate::model::sapo_data_connector_profile_properties::Builder {
         crate::model::sapo_data_connector_profile_properties::Builder::default()
     }
@@ -11953,10 +12147,13 @@ impl SapoDataConnectorProfileProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OAuthProperties {
     /// <p> The token url required to fetch access/refresh tokens using authorization code and also to refresh expired access token using refresh token.</p>
+    #[doc(hidden)]
     pub token_url: std::option::Option<std::string::String>,
     /// <p> The authorization code url required to redirect to SAP Login Page to fetch authorization code for OAuth type authentication. </p>
+    #[doc(hidden)]
     pub auth_code_url: std::option::Option<std::string::String>,
     /// <p> The OAuth scopes required for OAuth type authentication. </p>
+    #[doc(hidden)]
     pub o_auth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl OAuthProperties {
@@ -11982,11 +12179,10 @@ impl std::fmt::Debug for OAuthProperties {
         formatter.finish()
     }
 }
-/// See [`OAuthProperties`](crate::model::OAuthProperties)
+/// See [`OAuthProperties`](crate::model::OAuthProperties).
 pub mod o_auth_properties {
 
-    /// A builder for [`OAuthProperties`](crate::model::OAuthProperties)
-    #[non_exhaustive]
+    /// A builder for [`OAuthProperties`](crate::model::OAuthProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) token_url: std::option::Option<std::string::String>,
@@ -12036,7 +12232,7 @@ pub mod o_auth_properties {
             self.o_auth_scopes = input;
             self
         }
-        /// Consumes the builder and constructs a [`OAuthProperties`](crate::model::OAuthProperties)
+        /// Consumes the builder and constructs a [`OAuthProperties`](crate::model::OAuthProperties).
         pub fn build(self) -> crate::model::OAuthProperties {
             crate::model::OAuthProperties {
                 token_url: self.token_url,
@@ -12047,7 +12243,7 @@ pub mod o_auth_properties {
     }
 }
 impl OAuthProperties {
-    /// Creates a new builder-style object to manufacture [`OAuthProperties`](crate::model::OAuthProperties)
+    /// Creates a new builder-style object to manufacture [`OAuthProperties`](crate::model::OAuthProperties).
     pub fn builder() -> crate::model::o_auth_properties::Builder {
         crate::model::o_auth_properties::Builder::default()
     }
@@ -12058,6 +12254,7 @@ impl OAuthProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ZendeskConnectorProfileProperties {
     /// <p> The location of the Zendesk resource. </p>
+    #[doc(hidden)]
     pub instance_url: std::option::Option<std::string::String>,
 }
 impl ZendeskConnectorProfileProperties {
@@ -12073,11 +12270,10 @@ impl std::fmt::Debug for ZendeskConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`ZendeskConnectorProfileProperties`](crate::model::ZendeskConnectorProfileProperties)
+/// See [`ZendeskConnectorProfileProperties`](crate::model::ZendeskConnectorProfileProperties).
 pub mod zendesk_connector_profile_properties {
 
-    /// A builder for [`ZendeskConnectorProfileProperties`](crate::model::ZendeskConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`ZendeskConnectorProfileProperties`](crate::model::ZendeskConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_url: std::option::Option<std::string::String>,
@@ -12093,7 +12289,7 @@ pub mod zendesk_connector_profile_properties {
             self.instance_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`ZendeskConnectorProfileProperties`](crate::model::ZendeskConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`ZendeskConnectorProfileProperties`](crate::model::ZendeskConnectorProfileProperties).
         pub fn build(self) -> crate::model::ZendeskConnectorProfileProperties {
             crate::model::ZendeskConnectorProfileProperties {
                 instance_url: self.instance_url,
@@ -12102,7 +12298,7 @@ pub mod zendesk_connector_profile_properties {
     }
 }
 impl ZendeskConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`ZendeskConnectorProfileProperties`](crate::model::ZendeskConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`ZendeskConnectorProfileProperties`](crate::model::ZendeskConnectorProfileProperties).
     pub fn builder() -> crate::model::zendesk_connector_profile_properties::Builder {
         crate::model::zendesk_connector_profile_properties::Builder::default()
     }
@@ -12113,6 +12309,7 @@ impl ZendeskConnectorProfileProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VeevaConnectorProfileProperties {
     /// <p> The location of the Veeva resource. </p>
+    #[doc(hidden)]
     pub instance_url: std::option::Option<std::string::String>,
 }
 impl VeevaConnectorProfileProperties {
@@ -12128,11 +12325,10 @@ impl std::fmt::Debug for VeevaConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`VeevaConnectorProfileProperties`](crate::model::VeevaConnectorProfileProperties)
+/// See [`VeevaConnectorProfileProperties`](crate::model::VeevaConnectorProfileProperties).
 pub mod veeva_connector_profile_properties {
 
-    /// A builder for [`VeevaConnectorProfileProperties`](crate::model::VeevaConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`VeevaConnectorProfileProperties`](crate::model::VeevaConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_url: std::option::Option<std::string::String>,
@@ -12148,7 +12344,7 @@ pub mod veeva_connector_profile_properties {
             self.instance_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`VeevaConnectorProfileProperties`](crate::model::VeevaConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`VeevaConnectorProfileProperties`](crate::model::VeevaConnectorProfileProperties).
         pub fn build(self) -> crate::model::VeevaConnectorProfileProperties {
             crate::model::VeevaConnectorProfileProperties {
                 instance_url: self.instance_url,
@@ -12157,7 +12353,7 @@ pub mod veeva_connector_profile_properties {
     }
 }
 impl VeevaConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`VeevaConnectorProfileProperties`](crate::model::VeevaConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`VeevaConnectorProfileProperties`](crate::model::VeevaConnectorProfileProperties).
     pub fn builder() -> crate::model::veeva_connector_profile_properties::Builder {
         crate::model::veeva_connector_profile_properties::Builder::default()
     }
@@ -12173,22 +12369,21 @@ impl std::fmt::Debug for TrendmicroConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`TrendmicroConnectorProfileProperties`](crate::model::TrendmicroConnectorProfileProperties)
+/// See [`TrendmicroConnectorProfileProperties`](crate::model::TrendmicroConnectorProfileProperties).
 pub mod trendmicro_connector_profile_properties {
 
-    /// A builder for [`TrendmicroConnectorProfileProperties`](crate::model::TrendmicroConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`TrendmicroConnectorProfileProperties`](crate::model::TrendmicroConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TrendmicroConnectorProfileProperties`](crate::model::TrendmicroConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`TrendmicroConnectorProfileProperties`](crate::model::TrendmicroConnectorProfileProperties).
         pub fn build(self) -> crate::model::TrendmicroConnectorProfileProperties {
             crate::model::TrendmicroConnectorProfileProperties {}
         }
     }
 }
 impl TrendmicroConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`TrendmicroConnectorProfileProperties`](crate::model::TrendmicroConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`TrendmicroConnectorProfileProperties`](crate::model::TrendmicroConnectorProfileProperties).
     pub fn builder() -> crate::model::trendmicro_connector_profile_properties::Builder {
         crate::model::trendmicro_connector_profile_properties::Builder::default()
     }
@@ -12199,20 +12394,27 @@ impl TrendmicroConnectorProfileProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnowflakeConnectorProfileProperties {
     /// <p> The name of the Snowflake warehouse. </p>
+    #[doc(hidden)]
     pub warehouse: std::option::Option<std::string::String>,
     /// <p> The name of the Amazon S3 stage that was created while setting up an Amazon S3 stage in the Snowflake account. This is written in the following format: &lt; Database&gt;&lt; Schema&gt;<stage name>
     /// .
     /// </stage></p>
+    #[doc(hidden)]
     pub stage: std::option::Option<std::string::String>,
     /// <p> The name of the Amazon S3 bucket associated with Snowflake. </p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p> The bucket path that refers to the Amazon S3 bucket associated with Snowflake. </p>
+    #[doc(hidden)]
     pub bucket_prefix: std::option::Option<std::string::String>,
     /// <p> The Snowflake Private Link service name to be used for private data transfers. </p>
+    #[doc(hidden)]
     pub private_link_service_name: std::option::Option<std::string::String>,
     /// <p> The name of the account. </p>
+    #[doc(hidden)]
     pub account_name: std::option::Option<std::string::String>,
     /// <p> The Amazon Web Services Region of the Snowflake account. </p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
 }
 impl SnowflakeConnectorProfileProperties {
@@ -12260,11 +12462,10 @@ impl std::fmt::Debug for SnowflakeConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`SnowflakeConnectorProfileProperties`](crate::model::SnowflakeConnectorProfileProperties)
+/// See [`SnowflakeConnectorProfileProperties`](crate::model::SnowflakeConnectorProfileProperties).
 pub mod snowflake_connector_profile_properties {
 
-    /// A builder for [`SnowflakeConnectorProfileProperties`](crate::model::SnowflakeConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`SnowflakeConnectorProfileProperties`](crate::model::SnowflakeConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) warehouse: std::option::Option<std::string::String>,
@@ -12356,7 +12557,7 @@ pub mod snowflake_connector_profile_properties {
             self.region = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnowflakeConnectorProfileProperties`](crate::model::SnowflakeConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`SnowflakeConnectorProfileProperties`](crate::model::SnowflakeConnectorProfileProperties).
         pub fn build(self) -> crate::model::SnowflakeConnectorProfileProperties {
             crate::model::SnowflakeConnectorProfileProperties {
                 warehouse: self.warehouse,
@@ -12371,7 +12572,7 @@ pub mod snowflake_connector_profile_properties {
     }
 }
 impl SnowflakeConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`SnowflakeConnectorProfileProperties`](crate::model::SnowflakeConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`SnowflakeConnectorProfileProperties`](crate::model::SnowflakeConnectorProfileProperties).
     pub fn builder() -> crate::model::snowflake_connector_profile_properties::Builder {
         crate::model::snowflake_connector_profile_properties::Builder::default()
     }
@@ -12382,6 +12583,7 @@ impl SnowflakeConnectorProfileProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SlackConnectorProfileProperties {
     /// <p> The location of the Slack resource. </p>
+    #[doc(hidden)]
     pub instance_url: std::option::Option<std::string::String>,
 }
 impl SlackConnectorProfileProperties {
@@ -12397,11 +12599,10 @@ impl std::fmt::Debug for SlackConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`SlackConnectorProfileProperties`](crate::model::SlackConnectorProfileProperties)
+/// See [`SlackConnectorProfileProperties`](crate::model::SlackConnectorProfileProperties).
 pub mod slack_connector_profile_properties {
 
-    /// A builder for [`SlackConnectorProfileProperties`](crate::model::SlackConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`SlackConnectorProfileProperties`](crate::model::SlackConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_url: std::option::Option<std::string::String>,
@@ -12417,7 +12618,7 @@ pub mod slack_connector_profile_properties {
             self.instance_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`SlackConnectorProfileProperties`](crate::model::SlackConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`SlackConnectorProfileProperties`](crate::model::SlackConnectorProfileProperties).
         pub fn build(self) -> crate::model::SlackConnectorProfileProperties {
             crate::model::SlackConnectorProfileProperties {
                 instance_url: self.instance_url,
@@ -12426,7 +12627,7 @@ pub mod slack_connector_profile_properties {
     }
 }
 impl SlackConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`SlackConnectorProfileProperties`](crate::model::SlackConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`SlackConnectorProfileProperties`](crate::model::SlackConnectorProfileProperties).
     pub fn builder() -> crate::model::slack_connector_profile_properties::Builder {
         crate::model::slack_connector_profile_properties::Builder::default()
     }
@@ -12442,22 +12643,21 @@ impl std::fmt::Debug for SingularConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`SingularConnectorProfileProperties`](crate::model::SingularConnectorProfileProperties)
+/// See [`SingularConnectorProfileProperties`](crate::model::SingularConnectorProfileProperties).
 pub mod singular_connector_profile_properties {
 
-    /// A builder for [`SingularConnectorProfileProperties`](crate::model::SingularConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`SingularConnectorProfileProperties`](crate::model::SingularConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`SingularConnectorProfileProperties`](crate::model::SingularConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`SingularConnectorProfileProperties`](crate::model::SingularConnectorProfileProperties).
         pub fn build(self) -> crate::model::SingularConnectorProfileProperties {
             crate::model::SingularConnectorProfileProperties {}
         }
     }
 }
 impl SingularConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`SingularConnectorProfileProperties`](crate::model::SingularConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`SingularConnectorProfileProperties`](crate::model::SingularConnectorProfileProperties).
     pub fn builder() -> crate::model::singular_connector_profile_properties::Builder {
         crate::model::singular_connector_profile_properties::Builder::default()
     }
@@ -12468,6 +12668,7 @@ impl SingularConnectorProfileProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceNowConnectorProfileProperties {
     /// <p> The location of the ServiceNow resource. </p>
+    #[doc(hidden)]
     pub instance_url: std::option::Option<std::string::String>,
 }
 impl ServiceNowConnectorProfileProperties {
@@ -12483,11 +12684,10 @@ impl std::fmt::Debug for ServiceNowConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`ServiceNowConnectorProfileProperties`](crate::model::ServiceNowConnectorProfileProperties)
+/// See [`ServiceNowConnectorProfileProperties`](crate::model::ServiceNowConnectorProfileProperties).
 pub mod service_now_connector_profile_properties {
 
-    /// A builder for [`ServiceNowConnectorProfileProperties`](crate::model::ServiceNowConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`ServiceNowConnectorProfileProperties`](crate::model::ServiceNowConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_url: std::option::Option<std::string::String>,
@@ -12503,7 +12703,7 @@ pub mod service_now_connector_profile_properties {
             self.instance_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceNowConnectorProfileProperties`](crate::model::ServiceNowConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`ServiceNowConnectorProfileProperties`](crate::model::ServiceNowConnectorProfileProperties).
         pub fn build(self) -> crate::model::ServiceNowConnectorProfileProperties {
             crate::model::ServiceNowConnectorProfileProperties {
                 instance_url: self.instance_url,
@@ -12512,7 +12712,7 @@ pub mod service_now_connector_profile_properties {
     }
 }
 impl ServiceNowConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`ServiceNowConnectorProfileProperties`](crate::model::ServiceNowConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`ServiceNowConnectorProfileProperties`](crate::model::ServiceNowConnectorProfileProperties).
     pub fn builder() -> crate::model::service_now_connector_profile_properties::Builder {
         crate::model::service_now_connector_profile_properties::Builder::default()
     }
@@ -12523,8 +12723,10 @@ impl ServiceNowConnectorProfileProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SalesforceConnectorProfileProperties {
     /// <p> The location of the Salesforce resource. </p>
+    #[doc(hidden)]
     pub instance_url: std::option::Option<std::string::String>,
     /// <p> Indicates whether the connector profile applies to a sandbox or production environment. </p>
+    #[doc(hidden)]
     pub is_sandbox_environment: bool,
 }
 impl SalesforceConnectorProfileProperties {
@@ -12545,11 +12747,10 @@ impl std::fmt::Debug for SalesforceConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`SalesforceConnectorProfileProperties`](crate::model::SalesforceConnectorProfileProperties)
+/// See [`SalesforceConnectorProfileProperties`](crate::model::SalesforceConnectorProfileProperties).
 pub mod salesforce_connector_profile_properties {
 
-    /// A builder for [`SalesforceConnectorProfileProperties`](crate::model::SalesforceConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`SalesforceConnectorProfileProperties`](crate::model::SalesforceConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_url: std::option::Option<std::string::String>,
@@ -12576,7 +12777,7 @@ pub mod salesforce_connector_profile_properties {
             self.is_sandbox_environment = input;
             self
         }
-        /// Consumes the builder and constructs a [`SalesforceConnectorProfileProperties`](crate::model::SalesforceConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`SalesforceConnectorProfileProperties`](crate::model::SalesforceConnectorProfileProperties).
         pub fn build(self) -> crate::model::SalesforceConnectorProfileProperties {
             crate::model::SalesforceConnectorProfileProperties {
                 instance_url: self.instance_url,
@@ -12586,7 +12787,7 @@ pub mod salesforce_connector_profile_properties {
     }
 }
 impl SalesforceConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`SalesforceConnectorProfileProperties`](crate::model::SalesforceConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`SalesforceConnectorProfileProperties`](crate::model::SalesforceConnectorProfileProperties).
     pub fn builder() -> crate::model::salesforce_connector_profile_properties::Builder {
         crate::model::salesforce_connector_profile_properties::Builder::default()
     }
@@ -12597,12 +12798,16 @@ impl SalesforceConnectorProfileProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RedshiftConnectorProfileProperties {
     /// <p> The JDBC URL of the Amazon Redshift cluster. </p>
+    #[doc(hidden)]
     pub database_url: std::option::Option<std::string::String>,
     /// <p> A name for the associated Amazon S3 bucket. </p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p> The object key for the destination bucket in which Amazon AppFlow places the files. </p>
+    #[doc(hidden)]
     pub bucket_prefix: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the IAM role. </p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl RedshiftConnectorProfileProperties {
@@ -12633,11 +12838,10 @@ impl std::fmt::Debug for RedshiftConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`RedshiftConnectorProfileProperties`](crate::model::RedshiftConnectorProfileProperties)
+/// See [`RedshiftConnectorProfileProperties`](crate::model::RedshiftConnectorProfileProperties).
 pub mod redshift_connector_profile_properties {
 
-    /// A builder for [`RedshiftConnectorProfileProperties`](crate::model::RedshiftConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`RedshiftConnectorProfileProperties`](crate::model::RedshiftConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) database_url: std::option::Option<std::string::String>,
@@ -12689,7 +12893,7 @@ pub mod redshift_connector_profile_properties {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RedshiftConnectorProfileProperties`](crate::model::RedshiftConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`RedshiftConnectorProfileProperties`](crate::model::RedshiftConnectorProfileProperties).
         pub fn build(self) -> crate::model::RedshiftConnectorProfileProperties {
             crate::model::RedshiftConnectorProfileProperties {
                 database_url: self.database_url,
@@ -12701,7 +12905,7 @@ pub mod redshift_connector_profile_properties {
     }
 }
 impl RedshiftConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`RedshiftConnectorProfileProperties`](crate::model::RedshiftConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`RedshiftConnectorProfileProperties`](crate::model::RedshiftConnectorProfileProperties).
     pub fn builder() -> crate::model::redshift_connector_profile_properties::Builder {
         crate::model::redshift_connector_profile_properties::Builder::default()
     }
@@ -12712,6 +12916,7 @@ impl RedshiftConnectorProfileProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MarketoConnectorProfileProperties {
     /// <p> The location of the Marketo resource. </p>
+    #[doc(hidden)]
     pub instance_url: std::option::Option<std::string::String>,
 }
 impl MarketoConnectorProfileProperties {
@@ -12727,11 +12932,10 @@ impl std::fmt::Debug for MarketoConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`MarketoConnectorProfileProperties`](crate::model::MarketoConnectorProfileProperties)
+/// See [`MarketoConnectorProfileProperties`](crate::model::MarketoConnectorProfileProperties).
 pub mod marketo_connector_profile_properties {
 
-    /// A builder for [`MarketoConnectorProfileProperties`](crate::model::MarketoConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`MarketoConnectorProfileProperties`](crate::model::MarketoConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_url: std::option::Option<std::string::String>,
@@ -12747,7 +12951,7 @@ pub mod marketo_connector_profile_properties {
             self.instance_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`MarketoConnectorProfileProperties`](crate::model::MarketoConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`MarketoConnectorProfileProperties`](crate::model::MarketoConnectorProfileProperties).
         pub fn build(self) -> crate::model::MarketoConnectorProfileProperties {
             crate::model::MarketoConnectorProfileProperties {
                 instance_url: self.instance_url,
@@ -12756,7 +12960,7 @@ pub mod marketo_connector_profile_properties {
     }
 }
 impl MarketoConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`MarketoConnectorProfileProperties`](crate::model::MarketoConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`MarketoConnectorProfileProperties`](crate::model::MarketoConnectorProfileProperties).
     pub fn builder() -> crate::model::marketo_connector_profile_properties::Builder {
         crate::model::marketo_connector_profile_properties::Builder::default()
     }
@@ -12767,6 +12971,7 @@ impl MarketoConnectorProfileProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InforNexusConnectorProfileProperties {
     /// <p> The location of the Infor Nexus resource. </p>
+    #[doc(hidden)]
     pub instance_url: std::option::Option<std::string::String>,
 }
 impl InforNexusConnectorProfileProperties {
@@ -12782,11 +12987,10 @@ impl std::fmt::Debug for InforNexusConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`InforNexusConnectorProfileProperties`](crate::model::InforNexusConnectorProfileProperties)
+/// See [`InforNexusConnectorProfileProperties`](crate::model::InforNexusConnectorProfileProperties).
 pub mod infor_nexus_connector_profile_properties {
 
-    /// A builder for [`InforNexusConnectorProfileProperties`](crate::model::InforNexusConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`InforNexusConnectorProfileProperties`](crate::model::InforNexusConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_url: std::option::Option<std::string::String>,
@@ -12802,7 +13006,7 @@ pub mod infor_nexus_connector_profile_properties {
             self.instance_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`InforNexusConnectorProfileProperties`](crate::model::InforNexusConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`InforNexusConnectorProfileProperties`](crate::model::InforNexusConnectorProfileProperties).
         pub fn build(self) -> crate::model::InforNexusConnectorProfileProperties {
             crate::model::InforNexusConnectorProfileProperties {
                 instance_url: self.instance_url,
@@ -12811,7 +13015,7 @@ pub mod infor_nexus_connector_profile_properties {
     }
 }
 impl InforNexusConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`InforNexusConnectorProfileProperties`](crate::model::InforNexusConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`InforNexusConnectorProfileProperties`](crate::model::InforNexusConnectorProfileProperties).
     pub fn builder() -> crate::model::infor_nexus_connector_profile_properties::Builder {
         crate::model::infor_nexus_connector_profile_properties::Builder::default()
     }
@@ -12827,22 +13031,21 @@ impl std::fmt::Debug for HoneycodeConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`HoneycodeConnectorProfileProperties`](crate::model::HoneycodeConnectorProfileProperties)
+/// See [`HoneycodeConnectorProfileProperties`](crate::model::HoneycodeConnectorProfileProperties).
 pub mod honeycode_connector_profile_properties {
 
-    /// A builder for [`HoneycodeConnectorProfileProperties`](crate::model::HoneycodeConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`HoneycodeConnectorProfileProperties`](crate::model::HoneycodeConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`HoneycodeConnectorProfileProperties`](crate::model::HoneycodeConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`HoneycodeConnectorProfileProperties`](crate::model::HoneycodeConnectorProfileProperties).
         pub fn build(self) -> crate::model::HoneycodeConnectorProfileProperties {
             crate::model::HoneycodeConnectorProfileProperties {}
         }
     }
 }
 impl HoneycodeConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`HoneycodeConnectorProfileProperties`](crate::model::HoneycodeConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`HoneycodeConnectorProfileProperties`](crate::model::HoneycodeConnectorProfileProperties).
     pub fn builder() -> crate::model::honeycode_connector_profile_properties::Builder {
         crate::model::honeycode_connector_profile_properties::Builder::default()
     }
@@ -12858,22 +13061,21 @@ impl std::fmt::Debug for GoogleAnalyticsConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`GoogleAnalyticsConnectorProfileProperties`](crate::model::GoogleAnalyticsConnectorProfileProperties)
+/// See [`GoogleAnalyticsConnectorProfileProperties`](crate::model::GoogleAnalyticsConnectorProfileProperties).
 pub mod google_analytics_connector_profile_properties {
 
-    /// A builder for [`GoogleAnalyticsConnectorProfileProperties`](crate::model::GoogleAnalyticsConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`GoogleAnalyticsConnectorProfileProperties`](crate::model::GoogleAnalyticsConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`GoogleAnalyticsConnectorProfileProperties`](crate::model::GoogleAnalyticsConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`GoogleAnalyticsConnectorProfileProperties`](crate::model::GoogleAnalyticsConnectorProfileProperties).
         pub fn build(self) -> crate::model::GoogleAnalyticsConnectorProfileProperties {
             crate::model::GoogleAnalyticsConnectorProfileProperties {}
         }
     }
 }
 impl GoogleAnalyticsConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`GoogleAnalyticsConnectorProfileProperties`](crate::model::GoogleAnalyticsConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`GoogleAnalyticsConnectorProfileProperties`](crate::model::GoogleAnalyticsConnectorProfileProperties).
     pub fn builder() -> crate::model::google_analytics_connector_profile_properties::Builder {
         crate::model::google_analytics_connector_profile_properties::Builder::default()
     }
@@ -12884,6 +13086,7 @@ impl GoogleAnalyticsConnectorProfileProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DynatraceConnectorProfileProperties {
     /// <p> The location of the Dynatrace resource. </p>
+    #[doc(hidden)]
     pub instance_url: std::option::Option<std::string::String>,
 }
 impl DynatraceConnectorProfileProperties {
@@ -12899,11 +13102,10 @@ impl std::fmt::Debug for DynatraceConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`DynatraceConnectorProfileProperties`](crate::model::DynatraceConnectorProfileProperties)
+/// See [`DynatraceConnectorProfileProperties`](crate::model::DynatraceConnectorProfileProperties).
 pub mod dynatrace_connector_profile_properties {
 
-    /// A builder for [`DynatraceConnectorProfileProperties`](crate::model::DynatraceConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`DynatraceConnectorProfileProperties`](crate::model::DynatraceConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_url: std::option::Option<std::string::String>,
@@ -12919,7 +13121,7 @@ pub mod dynatrace_connector_profile_properties {
             self.instance_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`DynatraceConnectorProfileProperties`](crate::model::DynatraceConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`DynatraceConnectorProfileProperties`](crate::model::DynatraceConnectorProfileProperties).
         pub fn build(self) -> crate::model::DynatraceConnectorProfileProperties {
             crate::model::DynatraceConnectorProfileProperties {
                 instance_url: self.instance_url,
@@ -12928,7 +13130,7 @@ pub mod dynatrace_connector_profile_properties {
     }
 }
 impl DynatraceConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`DynatraceConnectorProfileProperties`](crate::model::DynatraceConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`DynatraceConnectorProfileProperties`](crate::model::DynatraceConnectorProfileProperties).
     pub fn builder() -> crate::model::dynatrace_connector_profile_properties::Builder {
         crate::model::dynatrace_connector_profile_properties::Builder::default()
     }
@@ -12939,6 +13141,7 @@ impl DynatraceConnectorProfileProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatadogConnectorProfileProperties {
     /// <p> The location of the Datadog resource. </p>
+    #[doc(hidden)]
     pub instance_url: std::option::Option<std::string::String>,
 }
 impl DatadogConnectorProfileProperties {
@@ -12954,11 +13157,10 @@ impl std::fmt::Debug for DatadogConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`DatadogConnectorProfileProperties`](crate::model::DatadogConnectorProfileProperties)
+/// See [`DatadogConnectorProfileProperties`](crate::model::DatadogConnectorProfileProperties).
 pub mod datadog_connector_profile_properties {
 
-    /// A builder for [`DatadogConnectorProfileProperties`](crate::model::DatadogConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`DatadogConnectorProfileProperties`](crate::model::DatadogConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_url: std::option::Option<std::string::String>,
@@ -12974,7 +13176,7 @@ pub mod datadog_connector_profile_properties {
             self.instance_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatadogConnectorProfileProperties`](crate::model::DatadogConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`DatadogConnectorProfileProperties`](crate::model::DatadogConnectorProfileProperties).
         pub fn build(self) -> crate::model::DatadogConnectorProfileProperties {
             crate::model::DatadogConnectorProfileProperties {
                 instance_url: self.instance_url,
@@ -12983,7 +13185,7 @@ pub mod datadog_connector_profile_properties {
     }
 }
 impl DatadogConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`DatadogConnectorProfileProperties`](crate::model::DatadogConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`DatadogConnectorProfileProperties`](crate::model::DatadogConnectorProfileProperties).
     pub fn builder() -> crate::model::datadog_connector_profile_properties::Builder {
         crate::model::datadog_connector_profile_properties::Builder::default()
     }
@@ -12999,22 +13201,21 @@ impl std::fmt::Debug for AmplitudeConnectorProfileProperties {
         formatter.finish()
     }
 }
-/// See [`AmplitudeConnectorProfileProperties`](crate::model::AmplitudeConnectorProfileProperties)
+/// See [`AmplitudeConnectorProfileProperties`](crate::model::AmplitudeConnectorProfileProperties).
 pub mod amplitude_connector_profile_properties {
 
-    /// A builder for [`AmplitudeConnectorProfileProperties`](crate::model::AmplitudeConnectorProfileProperties)
-    #[non_exhaustive]
+    /// A builder for [`AmplitudeConnectorProfileProperties`](crate::model::AmplitudeConnectorProfileProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AmplitudeConnectorProfileProperties`](crate::model::AmplitudeConnectorProfileProperties)
+        /// Consumes the builder and constructs a [`AmplitudeConnectorProfileProperties`](crate::model::AmplitudeConnectorProfileProperties).
         pub fn build(self) -> crate::model::AmplitudeConnectorProfileProperties {
             crate::model::AmplitudeConnectorProfileProperties {}
         }
     }
 }
 impl AmplitudeConnectorProfileProperties {
-    /// Creates a new builder-style object to manufacture [`AmplitudeConnectorProfileProperties`](crate::model::AmplitudeConnectorProfileProperties)
+    /// Creates a new builder-style object to manufacture [`AmplitudeConnectorProfileProperties`](crate::model::AmplitudeConnectorProfileProperties).
     pub fn builder() -> crate::model::amplitude_connector_profile_properties::Builder {
         crate::model::amplitude_connector_profile_properties::Builder::default()
     }
@@ -13080,6 +13281,7 @@ impl AsRef<str> for ConnectionMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorProvisioningConfig {
     /// <p>Contains information about the configuration of the lambda which is being registered as the connector.</p>
+    #[doc(hidden)]
     pub lambda: std::option::Option<crate::model::LambdaConnectorProvisioningConfig>,
 }
 impl ConnectorProvisioningConfig {
@@ -13095,11 +13297,10 @@ impl std::fmt::Debug for ConnectorProvisioningConfig {
         formatter.finish()
     }
 }
-/// See [`ConnectorProvisioningConfig`](crate::model::ConnectorProvisioningConfig)
+/// See [`ConnectorProvisioningConfig`](crate::model::ConnectorProvisioningConfig).
 pub mod connector_provisioning_config {
 
-    /// A builder for [`ConnectorProvisioningConfig`](crate::model::ConnectorProvisioningConfig)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorProvisioningConfig`](crate::model::ConnectorProvisioningConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lambda: std::option::Option<crate::model::LambdaConnectorProvisioningConfig>,
@@ -13118,7 +13319,7 @@ pub mod connector_provisioning_config {
             self.lambda = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorProvisioningConfig`](crate::model::ConnectorProvisioningConfig)
+        /// Consumes the builder and constructs a [`ConnectorProvisioningConfig`](crate::model::ConnectorProvisioningConfig).
         pub fn build(self) -> crate::model::ConnectorProvisioningConfig {
             crate::model::ConnectorProvisioningConfig {
                 lambda: self.lambda,
@@ -13127,7 +13328,7 @@ pub mod connector_provisioning_config {
     }
 }
 impl ConnectorProvisioningConfig {
-    /// Creates a new builder-style object to manufacture [`ConnectorProvisioningConfig`](crate::model::ConnectorProvisioningConfig)
+    /// Creates a new builder-style object to manufacture [`ConnectorProvisioningConfig`](crate::model::ConnectorProvisioningConfig).
     pub fn builder() -> crate::model::connector_provisioning_config::Builder {
         crate::model::connector_provisioning_config::Builder::default()
     }
@@ -13138,6 +13339,7 @@ impl ConnectorProvisioningConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaConnectorProvisioningConfig {
     /// <p>Lambda ARN of the connector being registered.</p>
+    #[doc(hidden)]
     pub lambda_arn: std::option::Option<std::string::String>,
 }
 impl LambdaConnectorProvisioningConfig {
@@ -13153,11 +13355,10 @@ impl std::fmt::Debug for LambdaConnectorProvisioningConfig {
         formatter.finish()
     }
 }
-/// See [`LambdaConnectorProvisioningConfig`](crate::model::LambdaConnectorProvisioningConfig)
+/// See [`LambdaConnectorProvisioningConfig`](crate::model::LambdaConnectorProvisioningConfig).
 pub mod lambda_connector_provisioning_config {
 
-    /// A builder for [`LambdaConnectorProvisioningConfig`](crate::model::LambdaConnectorProvisioningConfig)
-    #[non_exhaustive]
+    /// A builder for [`LambdaConnectorProvisioningConfig`](crate::model::LambdaConnectorProvisioningConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lambda_arn: std::option::Option<std::string::String>,
@@ -13173,7 +13374,7 @@ pub mod lambda_connector_provisioning_config {
             self.lambda_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaConnectorProvisioningConfig`](crate::model::LambdaConnectorProvisioningConfig)
+        /// Consumes the builder and constructs a [`LambdaConnectorProvisioningConfig`](crate::model::LambdaConnectorProvisioningConfig).
         pub fn build(self) -> crate::model::LambdaConnectorProvisioningConfig {
             crate::model::LambdaConnectorProvisioningConfig {
                 lambda_arn: self.lambda_arn,
@@ -13182,7 +13383,7 @@ pub mod lambda_connector_provisioning_config {
     }
 }
 impl LambdaConnectorProvisioningConfig {
-    /// Creates a new builder-style object to manufacture [`LambdaConnectorProvisioningConfig`](crate::model::LambdaConnectorProvisioningConfig)
+    /// Creates a new builder-style object to manufacture [`LambdaConnectorProvisioningConfig`](crate::model::LambdaConnectorProvisioningConfig).
     pub fn builder() -> crate::model::lambda_connector_provisioning_config::Builder {
         crate::model::lambda_connector_provisioning_config::Builder::default()
     }
@@ -13244,35 +13445,50 @@ impl AsRef<str> for ConnectorProvisioningType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FlowDefinition {
     /// <p> The flow's Amazon Resource Name (ARN). </p>
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// <p> A user-entered description of the flow. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The specified name of the flow. Spaces are not allowed. Use underscores (_) or hyphens (-) only. </p>
+    #[doc(hidden)]
     pub flow_name: std::option::Option<std::string::String>,
     /// <p> Indicates the current status of the flow. </p>
+    #[doc(hidden)]
     pub flow_status: std::option::Option<crate::model::FlowStatus>,
     /// <p> Specifies the source connector type, such as Salesforce, Amazon S3, Amplitude, and so on. </p>
+    #[doc(hidden)]
     pub source_connector_type: std::option::Option<crate::model::ConnectorType>,
     /// <p>The label of the source connector in the flow.</p>
+    #[doc(hidden)]
     pub source_connector_label: std::option::Option<std::string::String>,
     /// <p> Specifies the destination connector type, such as Salesforce, Amazon S3, Amplitude, and so on. </p>
+    #[doc(hidden)]
     pub destination_connector_type: std::option::Option<crate::model::ConnectorType>,
     /// <p>The label of the destination connector in the flow.</p>
+    #[doc(hidden)]
     pub destination_connector_label: std::option::Option<std::string::String>,
     /// <p> Specifies the type of flow trigger. This can be <code>OnDemand</code>, <code>Scheduled</code>, or <code>Event</code>. </p>
+    #[doc(hidden)]
     pub trigger_type: std::option::Option<crate::model::TriggerType>,
     /// <p> Specifies when the flow was created. </p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies when the flow was last updated. </p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The ARN of the user who created the flow. </p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
     /// <p> Specifies the account user name that most recently updated the flow. </p>
+    #[doc(hidden)]
     pub last_updated_by: std::option::Option<std::string::String>,
     /// <p> The tags used to organize, track, or control access for your flow. </p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p> Describes the details of the most recent flow run. </p>
+    #[doc(hidden)]
     pub last_run_execution_details: std::option::Option<crate::model::ExecutionDetails>,
 }
 impl FlowDefinition {
@@ -13372,11 +13588,10 @@ impl std::fmt::Debug for FlowDefinition {
         formatter.finish()
     }
 }
-/// See [`FlowDefinition`](crate::model::FlowDefinition)
+/// See [`FlowDefinition`](crate::model::FlowDefinition).
 pub mod flow_definition {
 
-    /// A builder for [`FlowDefinition`](crate::model::FlowDefinition)
-    #[non_exhaustive]
+    /// A builder for [`FlowDefinition`](crate::model::FlowDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -13596,7 +13811,7 @@ pub mod flow_definition {
             self.last_run_execution_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`FlowDefinition`](crate::model::FlowDefinition)
+        /// Consumes the builder and constructs a [`FlowDefinition`](crate::model::FlowDefinition).
         pub fn build(self) -> crate::model::FlowDefinition {
             crate::model::FlowDefinition {
                 flow_arn: self.flow_arn,
@@ -13619,7 +13834,7 @@ pub mod flow_definition {
     }
 }
 impl FlowDefinition {
-    /// Creates a new builder-style object to manufacture [`FlowDefinition`](crate::model::FlowDefinition)
+    /// Creates a new builder-style object to manufacture [`FlowDefinition`](crate::model::FlowDefinition).
     pub fn builder() -> crate::model::flow_definition::Builder {
         crate::model::flow_definition::Builder::default()
     }
@@ -13630,10 +13845,13 @@ impl FlowDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionDetails {
     /// <p> Describes the details of the most recent flow run. </p>
+    #[doc(hidden)]
     pub most_recent_execution_message: std::option::Option<std::string::String>,
     /// <p> Specifies the time of the most recent flow run. </p>
+    #[doc(hidden)]
     pub most_recent_execution_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies the status of the most recent flow run. </p>
+    #[doc(hidden)]
     pub most_recent_execution_status: std::option::Option<crate::model::ExecutionStatus>,
 }
 impl ExecutionDetails {
@@ -13670,11 +13888,10 @@ impl std::fmt::Debug for ExecutionDetails {
         formatter.finish()
     }
 }
-/// See [`ExecutionDetails`](crate::model::ExecutionDetails)
+/// See [`ExecutionDetails`](crate::model::ExecutionDetails).
 pub mod execution_details {
 
-    /// A builder for [`ExecutionDetails`](crate::model::ExecutionDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionDetails`](crate::model::ExecutionDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) most_recent_execution_message: std::option::Option<std::string::String>,
@@ -13727,7 +13944,7 @@ pub mod execution_details {
             self.most_recent_execution_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionDetails`](crate::model::ExecutionDetails)
+        /// Consumes the builder and constructs a [`ExecutionDetails`](crate::model::ExecutionDetails).
         pub fn build(self) -> crate::model::ExecutionDetails {
             crate::model::ExecutionDetails {
                 most_recent_execution_message: self.most_recent_execution_message,
@@ -13738,7 +13955,7 @@ pub mod execution_details {
     }
 }
 impl ExecutionDetails {
-    /// Creates a new builder-style object to manufacture [`ExecutionDetails`](crate::model::ExecutionDetails)
+    /// Creates a new builder-style object to manufacture [`ExecutionDetails`](crate::model::ExecutionDetails).
     pub fn builder() -> crate::model::execution_details::Builder {
         crate::model::execution_details::Builder::default()
     }
@@ -13808,26 +14025,37 @@ impl AsRef<str> for ExecutionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorDetail {
     /// <p>A description about the registered connector.</p>
+    #[doc(hidden)]
     pub connector_description: std::option::Option<std::string::String>,
     /// <p>The name of the connector.</p>
+    #[doc(hidden)]
     pub connector_name: std::option::Option<std::string::String>,
     /// <p>The owner of the connector.</p>
+    #[doc(hidden)]
     pub connector_owner: std::option::Option<std::string::String>,
     /// <p>The connector version.</p>
+    #[doc(hidden)]
     pub connector_version: std::option::Option<std::string::String>,
     /// <p>The application type of the connector.</p>
+    #[doc(hidden)]
     pub application_type: std::option::Option<std::string::String>,
     /// <p>The connector type.</p>
+    #[doc(hidden)]
     pub connector_type: std::option::Option<crate::model::ConnectorType>,
     /// <p>A label used for the connector.</p>
+    #[doc(hidden)]
     pub connector_label: std::option::Option<std::string::String>,
     /// <p>The time at which the connector was registered.</p>
+    #[doc(hidden)]
     pub registered_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The user who registered the connector.</p>
+    #[doc(hidden)]
     pub registered_by: std::option::Option<std::string::String>,
     /// <p>The provisioning type that the connector uses.</p>
+    #[doc(hidden)]
     pub connector_provisioning_type: std::option::Option<crate::model::ConnectorProvisioningType>,
     /// <p>The connection mode that the connector supports.</p>
+    #[doc(hidden)]
     pub connector_modes: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ConnectorDetail {
@@ -13898,11 +14126,10 @@ impl std::fmt::Debug for ConnectorDetail {
         formatter.finish()
     }
 }
-/// See [`ConnectorDetail`](crate::model::ConnectorDetail)
+/// See [`ConnectorDetail`](crate::model::ConnectorDetail).
 pub mod connector_detail {
 
-    /// A builder for [`ConnectorDetail`](crate::model::ConnectorDetail)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorDetail`](crate::model::ConnectorDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connector_description: std::option::Option<std::string::String>,
@@ -14071,7 +14298,7 @@ pub mod connector_detail {
             self.connector_modes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorDetail`](crate::model::ConnectorDetail)
+        /// Consumes the builder and constructs a [`ConnectorDetail`](crate::model::ConnectorDetail).
         pub fn build(self) -> crate::model::ConnectorDetail {
             crate::model::ConnectorDetail {
                 connector_description: self.connector_description,
@@ -14090,7 +14317,7 @@ pub mod connector_detail {
     }
 }
 impl ConnectorDetail {
-    /// Creates a new builder-style object to manufacture [`ConnectorDetail`](crate::model::ConnectorDetail)
+    /// Creates a new builder-style object to manufacture [`ConnectorDetail`](crate::model::ConnectorDetail).
     pub fn builder() -> crate::model::connector_detail::Builder {
         crate::model::connector_detail::Builder::default()
     }
@@ -14101,10 +14328,13 @@ impl ConnectorDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorEntity {
     /// <p> The name of the connector entity. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The label applied to the connector entity. </p>
+    #[doc(hidden)]
     pub label: std::option::Option<std::string::String>,
     /// <p> Specifies whether the connector entity is a parent or a category and has more entities nested underneath it. If another call is made with <code>entitiesPath = "the_current_entity_name_with_hasNestedEntities_true"</code>, then it returns the nested entities underneath it. This provides a way to retrieve all supported entities in a recursive fashion. </p>
+    #[doc(hidden)]
     pub has_nested_entities: bool,
 }
 impl ConnectorEntity {
@@ -14130,11 +14360,10 @@ impl std::fmt::Debug for ConnectorEntity {
         formatter.finish()
     }
 }
-/// See [`ConnectorEntity`](crate::model::ConnectorEntity)
+/// See [`ConnectorEntity`](crate::model::ConnectorEntity).
 pub mod connector_entity {
 
-    /// A builder for [`ConnectorEntity`](crate::model::ConnectorEntity)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorEntity`](crate::model::ConnectorEntity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -14172,7 +14401,7 @@ pub mod connector_entity {
             self.has_nested_entities = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorEntity`](crate::model::ConnectorEntity)
+        /// Consumes the builder and constructs a [`ConnectorEntity`](crate::model::ConnectorEntity).
         pub fn build(self) -> crate::model::ConnectorEntity {
             crate::model::ConnectorEntity {
                 name: self.name,
@@ -14183,7 +14412,7 @@ pub mod connector_entity {
     }
 }
 impl ConnectorEntity {
-    /// Creates a new builder-style object to manufacture [`ConnectorEntity`](crate::model::ConnectorEntity)
+    /// Creates a new builder-style object to manufacture [`ConnectorEntity`](crate::model::ConnectorEntity).
     pub fn builder() -> crate::model::connector_entity::Builder {
         crate::model::connector_entity::Builder::default()
     }
@@ -14194,18 +14423,25 @@ impl ConnectorEntity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionRecord {
     /// <p> Specifies the identifier of the given flow run. </p>
+    #[doc(hidden)]
     pub execution_id: std::option::Option<std::string::String>,
     /// <p> Specifies the flow run status and whether it is in progress, has completed successfully, or has failed. </p>
+    #[doc(hidden)]
     pub execution_status: std::option::Option<crate::model::ExecutionStatus>,
     /// <p> Describes the result of the given flow run. </p>
+    #[doc(hidden)]
     pub execution_result: std::option::Option<crate::model::ExecutionResult>,
     /// <p> Specifies the start time of the flow run. </p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies the time of the most recent update. </p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The timestamp that determines the first new or updated record to be transferred in the flow run. </p>
+    #[doc(hidden)]
     pub data_pull_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The timestamp that indicates the last new or updated record to be transferred in the flow run. </p>
+    #[doc(hidden)]
     pub data_pull_end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ExecutionRecord {
@@ -14251,11 +14487,10 @@ impl std::fmt::Debug for ExecutionRecord {
         formatter.finish()
     }
 }
-/// See [`ExecutionRecord`](crate::model::ExecutionRecord)
+/// See [`ExecutionRecord`](crate::model::ExecutionRecord).
 pub mod execution_record {
 
-    /// A builder for [`ExecutionRecord`](crate::model::ExecutionRecord)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionRecord`](crate::model::ExecutionRecord).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) execution_id: std::option::Option<std::string::String>,
@@ -14355,7 +14590,7 @@ pub mod execution_record {
             self.data_pull_end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionRecord`](crate::model::ExecutionRecord)
+        /// Consumes the builder and constructs a [`ExecutionRecord`](crate::model::ExecutionRecord).
         pub fn build(self) -> crate::model::ExecutionRecord {
             crate::model::ExecutionRecord {
                 execution_id: self.execution_id,
@@ -14370,7 +14605,7 @@ pub mod execution_record {
     }
 }
 impl ExecutionRecord {
-    /// Creates a new builder-style object to manufacture [`ExecutionRecord`](crate::model::ExecutionRecord)
+    /// Creates a new builder-style object to manufacture [`ExecutionRecord`](crate::model::ExecutionRecord).
     pub fn builder() -> crate::model::execution_record::Builder {
         crate::model::execution_record::Builder::default()
     }
@@ -14381,12 +14616,16 @@ impl ExecutionRecord {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionResult {
     /// <p> Provides any error message information related to the flow run. </p>
+    #[doc(hidden)]
     pub error_info: std::option::Option<crate::model::ErrorInfo>,
     /// <p> The total number of bytes processed by the flow run. </p>
+    #[doc(hidden)]
     pub bytes_processed: std::option::Option<i64>,
     /// <p> The total number of bytes written as a result of the flow run. </p>
+    #[doc(hidden)]
     pub bytes_written: std::option::Option<i64>,
     /// <p> The number of records processed in the flow run. </p>
+    #[doc(hidden)]
     pub records_processed: std::option::Option<i64>,
 }
 impl ExecutionResult {
@@ -14417,11 +14656,10 @@ impl std::fmt::Debug for ExecutionResult {
         formatter.finish()
     }
 }
-/// See [`ExecutionResult`](crate::model::ExecutionResult)
+/// See [`ExecutionResult`](crate::model::ExecutionResult).
 pub mod execution_result {
 
-    /// A builder for [`ExecutionResult`](crate::model::ExecutionResult)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionResult`](crate::model::ExecutionResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_info: std::option::Option<crate::model::ErrorInfo>,
@@ -14473,7 +14711,7 @@ pub mod execution_result {
             self.records_processed = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionResult`](crate::model::ExecutionResult)
+        /// Consumes the builder and constructs a [`ExecutionResult`](crate::model::ExecutionResult).
         pub fn build(self) -> crate::model::ExecutionResult {
             crate::model::ExecutionResult {
                 error_info: self.error_info,
@@ -14485,7 +14723,7 @@ pub mod execution_result {
     }
 }
 impl ExecutionResult {
-    /// Creates a new builder-style object to manufacture [`ExecutionResult`](crate::model::ExecutionResult)
+    /// Creates a new builder-style object to manufacture [`ExecutionResult`](crate::model::ExecutionResult).
     pub fn builder() -> crate::model::execution_result::Builder {
         crate::model::execution_result::Builder::default()
     }
@@ -14496,8 +14734,10 @@ impl ExecutionResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ErrorInfo {
     /// <p> Specifies the failure count for the attempted flow. </p>
+    #[doc(hidden)]
     pub put_failures_count: std::option::Option<i64>,
     /// <p> Specifies the error message that appears if a flow fails. </p>
+    #[doc(hidden)]
     pub execution_message: std::option::Option<std::string::String>,
 }
 impl ErrorInfo {
@@ -14518,11 +14758,10 @@ impl std::fmt::Debug for ErrorInfo {
         formatter.finish()
     }
 }
-/// See [`ErrorInfo`](crate::model::ErrorInfo)
+/// See [`ErrorInfo`](crate::model::ErrorInfo).
 pub mod error_info {
 
-    /// A builder for [`ErrorInfo`](crate::model::ErrorInfo)
-    #[non_exhaustive]
+    /// A builder for [`ErrorInfo`](crate::model::ErrorInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) put_failures_count: std::option::Option<i64>,
@@ -14552,7 +14791,7 @@ pub mod error_info {
             self.execution_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ErrorInfo`](crate::model::ErrorInfo)
+        /// Consumes the builder and constructs a [`ErrorInfo`](crate::model::ErrorInfo).
         pub fn build(self) -> crate::model::ErrorInfo {
             crate::model::ErrorInfo {
                 put_failures_count: self.put_failures_count,
@@ -14562,7 +14801,7 @@ pub mod error_info {
     }
 }
 impl ErrorInfo {
-    /// Creates a new builder-style object to manufacture [`ErrorInfo`](crate::model::ErrorInfo)
+    /// Creates a new builder-style object to manufacture [`ErrorInfo`](crate::model::ErrorInfo).
     pub fn builder() -> crate::model::error_info::Builder {
         crate::model::error_info::Builder::default()
     }
@@ -14573,61 +14812,87 @@ impl ErrorInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorConfiguration {
     /// <p> Specifies whether the connector can be used as a source. </p>
+    #[doc(hidden)]
     pub can_use_as_source: bool,
     /// <p> Specifies whether the connector can be used as a destination. </p>
+    #[doc(hidden)]
     pub can_use_as_destination: bool,
     /// <p> Lists the connectors that are available for use as destinations. </p>
+    #[doc(hidden)]
     pub supported_destination_connectors:
         std::option::Option<std::vec::Vec<crate::model::ConnectorType>>,
     /// <p> Specifies the supported flow frequency for that connector. </p>
+    #[doc(hidden)]
     pub supported_scheduling_frequencies:
         std::option::Option<std::vec::Vec<crate::model::ScheduleFrequencyType>>,
     /// <p> Specifies if PrivateLink is enabled for that connector. </p>
+    #[doc(hidden)]
     pub is_private_link_enabled: bool,
     /// <p> Specifies if a PrivateLink endpoint URL is required. </p>
+    #[doc(hidden)]
     pub is_private_link_endpoint_url_required: bool,
     /// <p> Specifies the supported trigger types for the flow. </p>
+    #[doc(hidden)]
     pub supported_trigger_types: std::option::Option<std::vec::Vec<crate::model::TriggerType>>,
     /// <p> Specifies connector-specific metadata such as <code>oAuthScopes</code>, <code>supportedRegions</code>, <code>privateLinkServiceUrl</code>, and so on. </p>
+    #[doc(hidden)]
     pub connector_metadata: std::option::Option<crate::model::ConnectorMetadata>,
     /// <p>The connector type.</p>
+    #[doc(hidden)]
     pub connector_type: std::option::Option<crate::model::ConnectorType>,
     /// <p>The label used for registering the connector.</p>
+    #[doc(hidden)]
     pub connector_label: std::option::Option<std::string::String>,
     /// <p>A description about the connector.</p>
+    #[doc(hidden)]
     pub connector_description: std::option::Option<std::string::String>,
     /// <p>The owner who developed the connector.</p>
+    #[doc(hidden)]
     pub connector_owner: std::option::Option<std::string::String>,
     /// <p>The connector name.</p>
+    #[doc(hidden)]
     pub connector_name: std::option::Option<std::string::String>,
     /// <p>The connector version.</p>
+    #[doc(hidden)]
     pub connector_version: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the registered connector.</p>
+    #[doc(hidden)]
     pub connector_arn: std::option::Option<std::string::String>,
     /// <p>The connection modes that the connector supports.</p>
+    #[doc(hidden)]
     pub connector_modes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The authentication config required for the connector.</p>
+    #[doc(hidden)]
     pub authentication_config: std::option::Option<crate::model::AuthenticationConfig>,
     /// <p>The required connector runtime settings.</p>
+    #[doc(hidden)]
     pub connector_runtime_settings:
         std::option::Option<std::vec::Vec<crate::model::ConnectorRuntimeSetting>>,
     /// <p>A list of API versions that are supported by the connector.</p>
+    #[doc(hidden)]
     pub supported_api_versions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of operators supported by the connector.</p>
+    #[doc(hidden)]
     pub supported_operators: std::option::Option<std::vec::Vec<crate::model::Operators>>,
     /// <p>A list of write operations supported by the connector.</p>
+    #[doc(hidden)]
     pub supported_write_operations:
         std::option::Option<std::vec::Vec<crate::model::WriteOperationType>>,
     /// <p>The provisioning type used to register the connector.</p>
+    #[doc(hidden)]
     pub connector_provisioning_type: std::option::Option<crate::model::ConnectorProvisioningType>,
     /// <p>The configuration required for registering the connector.</p>
+    #[doc(hidden)]
     pub connector_provisioning_config:
         std::option::Option<crate::model::ConnectorProvisioningConfig>,
     /// <p>Logo URL of the connector.</p>
+    #[doc(hidden)]
     pub logo_url: std::option::Option<std::string::String>,
     /// <p>The date on which the connector was registered.</p>
+    #[doc(hidden)]
     pub registered_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Information about who registered the connector.</p>
+    #[doc(hidden)]
     pub registered_by: std::option::Option<std::string::String>,
 }
 impl ConnectorConfiguration {
@@ -14803,11 +15068,10 @@ impl std::fmt::Debug for ConnectorConfiguration {
         formatter.finish()
     }
 }
-/// See [`ConnectorConfiguration`](crate::model::ConnectorConfiguration)
+/// See [`ConnectorConfiguration`](crate::model::ConnectorConfiguration).
 pub mod connector_configuration {
 
-    /// A builder for [`ConnectorConfiguration`](crate::model::ConnectorConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorConfiguration`](crate::model::ConnectorConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) can_use_as_source: std::option::Option<bool>,
@@ -15237,7 +15501,7 @@ pub mod connector_configuration {
             self.registered_by = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorConfiguration`](crate::model::ConnectorConfiguration)
+        /// Consumes the builder and constructs a [`ConnectorConfiguration`](crate::model::ConnectorConfiguration).
         pub fn build(self) -> crate::model::ConnectorConfiguration {
             crate::model::ConnectorConfiguration {
                 can_use_as_source: self.can_use_as_source.unwrap_or_default(),
@@ -15273,7 +15537,7 @@ pub mod connector_configuration {
     }
 }
 impl ConnectorConfiguration {
-    /// Creates a new builder-style object to manufacture [`ConnectorConfiguration`](crate::model::ConnectorConfiguration)
+    /// Creates a new builder-style object to manufacture [`ConnectorConfiguration`](crate::model::ConnectorConfiguration).
     pub fn builder() -> crate::model::connector_configuration::Builder {
         crate::model::connector_configuration::Builder::default()
     }
@@ -15437,18 +15701,25 @@ impl AsRef<str> for Operators {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorRuntimeSetting {
     /// <p>Contains value information about the connector runtime setting.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Data type of the connector runtime setting.</p>
+    #[doc(hidden)]
     pub data_type: std::option::Option<std::string::String>,
     /// <p>Indicates whether this connector runtime setting is required.</p>
+    #[doc(hidden)]
     pub is_required: bool,
     /// <p>A label used for connector runtime setting.</p>
+    #[doc(hidden)]
     pub label: std::option::Option<std::string::String>,
     /// <p>A description about the connector runtime setting.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Indicates the scope of the connector runtime setting.</p>
+    #[doc(hidden)]
     pub scope: std::option::Option<std::string::String>,
     /// <p>Contains default values for the connector runtime setting that are supplied by the connector.</p>
+    #[doc(hidden)]
     pub connector_supplied_value_options: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ConnectorRuntimeSetting {
@@ -15497,11 +15768,10 @@ impl std::fmt::Debug for ConnectorRuntimeSetting {
         formatter.finish()
     }
 }
-/// See [`ConnectorRuntimeSetting`](crate::model::ConnectorRuntimeSetting)
+/// See [`ConnectorRuntimeSetting`](crate::model::ConnectorRuntimeSetting).
 pub mod connector_runtime_setting {
 
-    /// A builder for [`ConnectorRuntimeSetting`](crate::model::ConnectorRuntimeSetting)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorRuntimeSetting`](crate::model::ConnectorRuntimeSetting).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -15596,7 +15866,7 @@ pub mod connector_runtime_setting {
             self.connector_supplied_value_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorRuntimeSetting`](crate::model::ConnectorRuntimeSetting)
+        /// Consumes the builder and constructs a [`ConnectorRuntimeSetting`](crate::model::ConnectorRuntimeSetting).
         pub fn build(self) -> crate::model::ConnectorRuntimeSetting {
             crate::model::ConnectorRuntimeSetting {
                 key: self.key,
@@ -15611,7 +15881,7 @@ pub mod connector_runtime_setting {
     }
 }
 impl ConnectorRuntimeSetting {
-    /// Creates a new builder-style object to manufacture [`ConnectorRuntimeSetting`](crate::model::ConnectorRuntimeSetting)
+    /// Creates a new builder-style object to manufacture [`ConnectorRuntimeSetting`](crate::model::ConnectorRuntimeSetting).
     pub fn builder() -> crate::model::connector_runtime_setting::Builder {
         crate::model::connector_runtime_setting::Builder::default()
     }
@@ -15622,16 +15892,22 @@ impl ConnectorRuntimeSetting {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuthenticationConfig {
     /// <p>Indicates whether basic authentication is supported by the connector.</p>
+    #[doc(hidden)]
     pub is_basic_auth_supported: bool,
     /// <p>Indicates whether API key authentication is supported by the connector</p>
+    #[doc(hidden)]
     pub is_api_key_auth_supported: bool,
     /// <p>Indicates whether OAuth 2.0 authentication is supported by the connector.</p>
+    #[doc(hidden)]
     pub is_o_auth2_supported: bool,
     /// <p>Indicates whether custom authentication is supported by the connector</p>
+    #[doc(hidden)]
     pub is_custom_auth_supported: bool,
     /// <p>Contains the default values required for OAuth 2.0 authentication.</p>
+    #[doc(hidden)]
     pub o_auth2_defaults: std::option::Option<crate::model::OAuth2Defaults>,
     /// <p>Contains information required for custom authentication.</p>
+    #[doc(hidden)]
     pub custom_auth_configs: std::option::Option<std::vec::Vec<crate::model::CustomAuthConfig>>,
 }
 impl AuthenticationConfig {
@@ -15672,11 +15948,10 @@ impl std::fmt::Debug for AuthenticationConfig {
         formatter.finish()
     }
 }
-/// See [`AuthenticationConfig`](crate::model::AuthenticationConfig)
+/// See [`AuthenticationConfig`](crate::model::AuthenticationConfig).
 pub mod authentication_config {
 
-    /// A builder for [`AuthenticationConfig`](crate::model::AuthenticationConfig)
-    #[non_exhaustive]
+    /// A builder for [`AuthenticationConfig`](crate::model::AuthenticationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_basic_auth_supported: std::option::Option<bool>,
@@ -15760,7 +16035,7 @@ pub mod authentication_config {
             self.custom_auth_configs = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthenticationConfig`](crate::model::AuthenticationConfig)
+        /// Consumes the builder and constructs a [`AuthenticationConfig`](crate::model::AuthenticationConfig).
         pub fn build(self) -> crate::model::AuthenticationConfig {
             crate::model::AuthenticationConfig {
                 is_basic_auth_supported: self.is_basic_auth_supported.unwrap_or_default(),
@@ -15774,7 +16049,7 @@ pub mod authentication_config {
     }
 }
 impl AuthenticationConfig {
-    /// Creates a new builder-style object to manufacture [`AuthenticationConfig`](crate::model::AuthenticationConfig)
+    /// Creates a new builder-style object to manufacture [`AuthenticationConfig`](crate::model::AuthenticationConfig).
     pub fn builder() -> crate::model::authentication_config::Builder {
         crate::model::authentication_config::Builder::default()
     }
@@ -15785,8 +16060,10 @@ impl AuthenticationConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomAuthConfig {
     /// <p>The authentication type that the custom connector uses.</p>
+    #[doc(hidden)]
     pub custom_authentication_type: std::option::Option<std::string::String>,
     /// <p>Information about authentication parameters required for authentication.</p>
+    #[doc(hidden)]
     pub auth_parameters: std::option::Option<std::vec::Vec<crate::model::AuthParameter>>,
 }
 impl CustomAuthConfig {
@@ -15810,11 +16087,10 @@ impl std::fmt::Debug for CustomAuthConfig {
         formatter.finish()
     }
 }
-/// See [`CustomAuthConfig`](crate::model::CustomAuthConfig)
+/// See [`CustomAuthConfig`](crate::model::CustomAuthConfig).
 pub mod custom_auth_config {
 
-    /// A builder for [`CustomAuthConfig`](crate::model::CustomAuthConfig)
-    #[non_exhaustive]
+    /// A builder for [`CustomAuthConfig`](crate::model::CustomAuthConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_authentication_type: std::option::Option<std::string::String>,
@@ -15853,7 +16129,7 @@ pub mod custom_auth_config {
             self.auth_parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomAuthConfig`](crate::model::CustomAuthConfig)
+        /// Consumes the builder and constructs a [`CustomAuthConfig`](crate::model::CustomAuthConfig).
         pub fn build(self) -> crate::model::CustomAuthConfig {
             crate::model::CustomAuthConfig {
                 custom_authentication_type: self.custom_authentication_type,
@@ -15863,7 +16139,7 @@ pub mod custom_auth_config {
     }
 }
 impl CustomAuthConfig {
-    /// Creates a new builder-style object to manufacture [`CustomAuthConfig`](crate::model::CustomAuthConfig)
+    /// Creates a new builder-style object to manufacture [`CustomAuthConfig`](crate::model::CustomAuthConfig).
     pub fn builder() -> crate::model::custom_auth_config::Builder {
         crate::model::custom_auth_config::Builder::default()
     }
@@ -15874,16 +16150,22 @@ impl CustomAuthConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuthParameter {
     /// <p>The authentication key required to authenticate with the connector.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Indicates whether this authentication parameter is required.</p>
+    #[doc(hidden)]
     pub is_required: bool,
     /// <p>Label used for authentication parameter.</p>
+    #[doc(hidden)]
     pub label: std::option::Option<std::string::String>,
     /// <p>A description about the authentication parameter.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Indicates whether this authentication parameter is a sensitive field.</p>
+    #[doc(hidden)]
     pub is_sensitive_field: bool,
     /// <p>Contains default values for this authentication parameter that are supplied by the connector.</p>
+    #[doc(hidden)]
     pub connector_supplied_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AuthParameter {
@@ -15924,11 +16206,10 @@ impl std::fmt::Debug for AuthParameter {
         formatter.finish()
     }
 }
-/// See [`AuthParameter`](crate::model::AuthParameter)
+/// See [`AuthParameter`](crate::model::AuthParameter).
 pub mod auth_parameter {
 
-    /// A builder for [`AuthParameter`](crate::model::AuthParameter)
-    #[non_exhaustive]
+    /// A builder for [`AuthParameter`](crate::model::AuthParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -16009,7 +16290,7 @@ pub mod auth_parameter {
             self.connector_supplied_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthParameter`](crate::model::AuthParameter)
+        /// Consumes the builder and constructs a [`AuthParameter`](crate::model::AuthParameter).
         pub fn build(self) -> crate::model::AuthParameter {
             crate::model::AuthParameter {
                 key: self.key,
@@ -16023,7 +16304,7 @@ pub mod auth_parameter {
     }
 }
 impl AuthParameter {
-    /// Creates a new builder-style object to manufacture [`AuthParameter`](crate::model::AuthParameter)
+    /// Creates a new builder-style object to manufacture [`AuthParameter`](crate::model::AuthParameter).
     pub fn builder() -> crate::model::auth_parameter::Builder {
         crate::model::auth_parameter::Builder::default()
     }
@@ -16034,15 +16315,20 @@ impl AuthParameter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OAuth2Defaults {
     /// <p>OAuth 2.0 scopes that the connector supports.</p>
+    #[doc(hidden)]
     pub oauth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Token URLs that can be used for OAuth 2.0 authentication.</p>
+    #[doc(hidden)]
     pub token_urls: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Auth code URLs that can be used for OAuth 2.0 authentication.</p>
+    #[doc(hidden)]
     pub auth_code_urls: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>OAuth 2.0 grant types supported by the connector.</p>
+    #[doc(hidden)]
     pub oauth2_grant_types_supported:
         std::option::Option<std::vec::Vec<crate::model::OAuth2GrantType>>,
     /// <p>List of custom parameters required for OAuth 2.0 authentication.</p>
+    #[doc(hidden)]
     pub oauth2_custom_properties:
         std::option::Option<std::vec::Vec<crate::model::OAuth2CustomParameter>>,
 }
@@ -16086,11 +16372,10 @@ impl std::fmt::Debug for OAuth2Defaults {
         formatter.finish()
     }
 }
-/// See [`OAuth2Defaults`](crate::model::OAuth2Defaults)
+/// See [`OAuth2Defaults`](crate::model::OAuth2Defaults).
 pub mod o_auth2_defaults {
 
-    /// A builder for [`OAuth2Defaults`](crate::model::OAuth2Defaults)
-    #[non_exhaustive]
+    /// A builder for [`OAuth2Defaults`](crate::model::OAuth2Defaults).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) oauth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -16203,7 +16488,7 @@ pub mod o_auth2_defaults {
             self.oauth2_custom_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`OAuth2Defaults`](crate::model::OAuth2Defaults)
+        /// Consumes the builder and constructs a [`OAuth2Defaults`](crate::model::OAuth2Defaults).
         pub fn build(self) -> crate::model::OAuth2Defaults {
             crate::model::OAuth2Defaults {
                 oauth_scopes: self.oauth_scopes,
@@ -16216,7 +16501,7 @@ pub mod o_auth2_defaults {
     }
 }
 impl OAuth2Defaults {
-    /// Creates a new builder-style object to manufacture [`OAuth2Defaults`](crate::model::OAuth2Defaults)
+    /// Creates a new builder-style object to manufacture [`OAuth2Defaults`](crate::model::OAuth2Defaults).
     pub fn builder() -> crate::model::o_auth2_defaults::Builder {
         crate::model::o_auth2_defaults::Builder::default()
     }
@@ -16227,18 +16512,25 @@ impl OAuth2Defaults {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OAuth2CustomParameter {
     /// <p>The key of the custom parameter required for OAuth 2.0 authentication.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Indicates whether the custom parameter for OAuth 2.0 authentication is required.</p>
+    #[doc(hidden)]
     pub is_required: bool,
     /// <p>The label of the custom parameter used for OAuth 2.0 authentication.</p>
+    #[doc(hidden)]
     pub label: std::option::Option<std::string::String>,
     /// <p>A description about the custom parameter used for OAuth 2.0 authentication.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Indicates whether this authentication custom parameter is a sensitive field.</p>
+    #[doc(hidden)]
     pub is_sensitive_field: bool,
     /// <p>Contains default values for this authentication parameter that are supplied by the connector.</p>
+    #[doc(hidden)]
     pub connector_supplied_values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Indicates whether custom parameter is used with TokenUrl or AuthUrl.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::OAuth2CustomPropType>,
 }
 impl OAuth2CustomParameter {
@@ -16284,11 +16576,10 @@ impl std::fmt::Debug for OAuth2CustomParameter {
         formatter.finish()
     }
 }
-/// See [`OAuth2CustomParameter`](crate::model::OAuth2CustomParameter)
+/// See [`OAuth2CustomParameter`](crate::model::OAuth2CustomParameter).
 pub mod o_auth2_custom_parameter {
 
-    /// A builder for [`OAuth2CustomParameter`](crate::model::OAuth2CustomParameter)
-    #[non_exhaustive]
+    /// A builder for [`OAuth2CustomParameter`](crate::model::OAuth2CustomParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -16383,7 +16674,7 @@ pub mod o_auth2_custom_parameter {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`OAuth2CustomParameter`](crate::model::OAuth2CustomParameter)
+        /// Consumes the builder and constructs a [`OAuth2CustomParameter`](crate::model::OAuth2CustomParameter).
         pub fn build(self) -> crate::model::OAuth2CustomParameter {
             crate::model::OAuth2CustomParameter {
                 key: self.key,
@@ -16398,7 +16689,7 @@ pub mod o_auth2_custom_parameter {
     }
 }
 impl OAuth2CustomParameter {
-    /// Creates a new builder-style object to manufacture [`OAuth2CustomParameter`](crate::model::OAuth2CustomParameter)
+    /// Creates a new builder-style object to manufacture [`OAuth2CustomParameter`](crate::model::OAuth2CustomParameter).
     pub fn builder() -> crate::model::o_auth2_custom_parameter::Builder {
         crate::model::o_auth2_custom_parameter::Builder::default()
     }
@@ -16464,46 +16755,67 @@ impl AsRef<str> for OAuth2CustomPropType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorMetadata {
     /// <p> The connector metadata specific to Amplitude. </p>
+    #[doc(hidden)]
     pub amplitude: std::option::Option<crate::model::AmplitudeMetadata>,
     /// <p> The connector metadata specific to Datadog. </p>
+    #[doc(hidden)]
     pub datadog: std::option::Option<crate::model::DatadogMetadata>,
     /// <p> The connector metadata specific to Dynatrace. </p>
+    #[doc(hidden)]
     pub dynatrace: std::option::Option<crate::model::DynatraceMetadata>,
     /// <p> The connector metadata specific to Google Analytics. </p>
+    #[doc(hidden)]
     pub google_analytics: std::option::Option<crate::model::GoogleAnalyticsMetadata>,
     /// <p> The connector metadata specific to Infor Nexus. </p>
+    #[doc(hidden)]
     pub infor_nexus: std::option::Option<crate::model::InforNexusMetadata>,
     /// <p> The connector metadata specific to Marketo. </p>
+    #[doc(hidden)]
     pub marketo: std::option::Option<crate::model::MarketoMetadata>,
     /// <p> The connector metadata specific to Amazon Redshift. </p>
+    #[doc(hidden)]
     pub redshift: std::option::Option<crate::model::RedshiftMetadata>,
     /// <p> The connector metadata specific to Amazon S3. </p>
+    #[doc(hidden)]
     pub s3: std::option::Option<crate::model::S3Metadata>,
     /// <p> The connector metadata specific to Salesforce. </p>
+    #[doc(hidden)]
     pub salesforce: std::option::Option<crate::model::SalesforceMetadata>,
     /// <p> The connector metadata specific to ServiceNow. </p>
+    #[doc(hidden)]
     pub service_now: std::option::Option<crate::model::ServiceNowMetadata>,
     /// <p> The connector metadata specific to Singular. </p>
+    #[doc(hidden)]
     pub singular: std::option::Option<crate::model::SingularMetadata>,
     /// <p> The connector metadata specific to Slack. </p>
+    #[doc(hidden)]
     pub slack: std::option::Option<crate::model::SlackMetadata>,
     /// <p> The connector metadata specific to Snowflake. </p>
+    #[doc(hidden)]
     pub snowflake: std::option::Option<crate::model::SnowflakeMetadata>,
     /// <p> The connector metadata specific to Trend Micro. </p>
+    #[doc(hidden)]
     pub trendmicro: std::option::Option<crate::model::TrendmicroMetadata>,
     /// <p> The connector metadata specific to Veeva. </p>
+    #[doc(hidden)]
     pub veeva: std::option::Option<crate::model::VeevaMetadata>,
     /// <p> The connector metadata specific to Zendesk. </p>
+    #[doc(hidden)]
     pub zendesk: std::option::Option<crate::model::ZendeskMetadata>,
     /// <p> The connector metadata specific to Amazon EventBridge. </p>
+    #[doc(hidden)]
     pub event_bridge: std::option::Option<crate::model::EventBridgeMetadata>,
     /// <p> The connector metadata specific to Upsolver. </p>
+    #[doc(hidden)]
     pub upsolver: std::option::Option<crate::model::UpsolverMetadata>,
     /// <p> The connector metadata specific to Amazon Connect Customer Profiles. </p>
+    #[doc(hidden)]
     pub customer_profiles: std::option::Option<crate::model::CustomerProfilesMetadata>,
     /// <p> The connector metadata specific to Amazon Honeycode. </p>
+    #[doc(hidden)]
     pub honeycode: std::option::Option<crate::model::HoneycodeMetadata>,
     /// <p> The connector metadata specific to SAPOData. </p>
+    #[doc(hidden)]
     pub sapo_data: std::option::Option<crate::model::SapoDataMetadata>,
 }
 impl ConnectorMetadata {
@@ -16621,11 +16933,10 @@ impl std::fmt::Debug for ConnectorMetadata {
         formatter.finish()
     }
 }
-/// See [`ConnectorMetadata`](crate::model::ConnectorMetadata)
+/// See [`ConnectorMetadata`](crate::model::ConnectorMetadata).
 pub mod connector_metadata {
 
-    /// A builder for [`ConnectorMetadata`](crate::model::ConnectorMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorMetadata`](crate::model::ConnectorMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) amplitude: std::option::Option<crate::model::AmplitudeMetadata>,
@@ -16921,7 +17232,7 @@ pub mod connector_metadata {
             self.sapo_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorMetadata`](crate::model::ConnectorMetadata)
+        /// Consumes the builder and constructs a [`ConnectorMetadata`](crate::model::ConnectorMetadata).
         pub fn build(self) -> crate::model::ConnectorMetadata {
             crate::model::ConnectorMetadata {
                 amplitude: self.amplitude,
@@ -16950,7 +17261,7 @@ pub mod connector_metadata {
     }
 }
 impl ConnectorMetadata {
-    /// Creates a new builder-style object to manufacture [`ConnectorMetadata`](crate::model::ConnectorMetadata)
+    /// Creates a new builder-style object to manufacture [`ConnectorMetadata`](crate::model::ConnectorMetadata).
     pub fn builder() -> crate::model::connector_metadata::Builder {
         crate::model::connector_metadata::Builder::default()
     }
@@ -16966,22 +17277,21 @@ impl std::fmt::Debug for SapoDataMetadata {
         formatter.finish()
     }
 }
-/// See [`SapoDataMetadata`](crate::model::SapoDataMetadata)
+/// See [`SapoDataMetadata`](crate::model::SapoDataMetadata).
 pub mod sapo_data_metadata {
 
-    /// A builder for [`SapoDataMetadata`](crate::model::SapoDataMetadata)
-    #[non_exhaustive]
+    /// A builder for [`SapoDataMetadata`](crate::model::SapoDataMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`SapoDataMetadata`](crate::model::SapoDataMetadata)
+        /// Consumes the builder and constructs a [`SapoDataMetadata`](crate::model::SapoDataMetadata).
         pub fn build(self) -> crate::model::SapoDataMetadata {
             crate::model::SapoDataMetadata {}
         }
     }
 }
 impl SapoDataMetadata {
-    /// Creates a new builder-style object to manufacture [`SapoDataMetadata`](crate::model::SapoDataMetadata)
+    /// Creates a new builder-style object to manufacture [`SapoDataMetadata`](crate::model::SapoDataMetadata).
     pub fn builder() -> crate::model::sapo_data_metadata::Builder {
         crate::model::sapo_data_metadata::Builder::default()
     }
@@ -16992,6 +17302,7 @@ impl SapoDataMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HoneycodeMetadata {
     /// <p> The desired authorization scope for the Amazon Honeycode account. </p>
+    #[doc(hidden)]
     pub o_auth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl HoneycodeMetadata {
@@ -17007,11 +17318,10 @@ impl std::fmt::Debug for HoneycodeMetadata {
         formatter.finish()
     }
 }
-/// See [`HoneycodeMetadata`](crate::model::HoneycodeMetadata)
+/// See [`HoneycodeMetadata`](crate::model::HoneycodeMetadata).
 pub mod honeycode_metadata {
 
-    /// A builder for [`HoneycodeMetadata`](crate::model::HoneycodeMetadata)
-    #[non_exhaustive]
+    /// A builder for [`HoneycodeMetadata`](crate::model::HoneycodeMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) o_auth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -17036,7 +17346,7 @@ pub mod honeycode_metadata {
             self.o_auth_scopes = input;
             self
         }
-        /// Consumes the builder and constructs a [`HoneycodeMetadata`](crate::model::HoneycodeMetadata)
+        /// Consumes the builder and constructs a [`HoneycodeMetadata`](crate::model::HoneycodeMetadata).
         pub fn build(self) -> crate::model::HoneycodeMetadata {
             crate::model::HoneycodeMetadata {
                 o_auth_scopes: self.o_auth_scopes,
@@ -17045,7 +17355,7 @@ pub mod honeycode_metadata {
     }
 }
 impl HoneycodeMetadata {
-    /// Creates a new builder-style object to manufacture [`HoneycodeMetadata`](crate::model::HoneycodeMetadata)
+    /// Creates a new builder-style object to manufacture [`HoneycodeMetadata`](crate::model::HoneycodeMetadata).
     pub fn builder() -> crate::model::honeycode_metadata::Builder {
         crate::model::honeycode_metadata::Builder::default()
     }
@@ -17061,22 +17371,21 @@ impl std::fmt::Debug for CustomerProfilesMetadata {
         formatter.finish()
     }
 }
-/// See [`CustomerProfilesMetadata`](crate::model::CustomerProfilesMetadata)
+/// See [`CustomerProfilesMetadata`](crate::model::CustomerProfilesMetadata).
 pub mod customer_profiles_metadata {
 
-    /// A builder for [`CustomerProfilesMetadata`](crate::model::CustomerProfilesMetadata)
-    #[non_exhaustive]
+    /// A builder for [`CustomerProfilesMetadata`](crate::model::CustomerProfilesMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`CustomerProfilesMetadata`](crate::model::CustomerProfilesMetadata)
+        /// Consumes the builder and constructs a [`CustomerProfilesMetadata`](crate::model::CustomerProfilesMetadata).
         pub fn build(self) -> crate::model::CustomerProfilesMetadata {
             crate::model::CustomerProfilesMetadata {}
         }
     }
 }
 impl CustomerProfilesMetadata {
-    /// Creates a new builder-style object to manufacture [`CustomerProfilesMetadata`](crate::model::CustomerProfilesMetadata)
+    /// Creates a new builder-style object to manufacture [`CustomerProfilesMetadata`](crate::model::CustomerProfilesMetadata).
     pub fn builder() -> crate::model::customer_profiles_metadata::Builder {
         crate::model::customer_profiles_metadata::Builder::default()
     }
@@ -17092,22 +17401,21 @@ impl std::fmt::Debug for UpsolverMetadata {
         formatter.finish()
     }
 }
-/// See [`UpsolverMetadata`](crate::model::UpsolverMetadata)
+/// See [`UpsolverMetadata`](crate::model::UpsolverMetadata).
 pub mod upsolver_metadata {
 
-    /// A builder for [`UpsolverMetadata`](crate::model::UpsolverMetadata)
-    #[non_exhaustive]
+    /// A builder for [`UpsolverMetadata`](crate::model::UpsolverMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpsolverMetadata`](crate::model::UpsolverMetadata)
+        /// Consumes the builder and constructs a [`UpsolverMetadata`](crate::model::UpsolverMetadata).
         pub fn build(self) -> crate::model::UpsolverMetadata {
             crate::model::UpsolverMetadata {}
         }
     }
 }
 impl UpsolverMetadata {
-    /// Creates a new builder-style object to manufacture [`UpsolverMetadata`](crate::model::UpsolverMetadata)
+    /// Creates a new builder-style object to manufacture [`UpsolverMetadata`](crate::model::UpsolverMetadata).
     pub fn builder() -> crate::model::upsolver_metadata::Builder {
         crate::model::upsolver_metadata::Builder::default()
     }
@@ -17123,22 +17431,21 @@ impl std::fmt::Debug for EventBridgeMetadata {
         formatter.finish()
     }
 }
-/// See [`EventBridgeMetadata`](crate::model::EventBridgeMetadata)
+/// See [`EventBridgeMetadata`](crate::model::EventBridgeMetadata).
 pub mod event_bridge_metadata {
 
-    /// A builder for [`EventBridgeMetadata`](crate::model::EventBridgeMetadata)
-    #[non_exhaustive]
+    /// A builder for [`EventBridgeMetadata`](crate::model::EventBridgeMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`EventBridgeMetadata`](crate::model::EventBridgeMetadata)
+        /// Consumes the builder and constructs a [`EventBridgeMetadata`](crate::model::EventBridgeMetadata).
         pub fn build(self) -> crate::model::EventBridgeMetadata {
             crate::model::EventBridgeMetadata {}
         }
     }
 }
 impl EventBridgeMetadata {
-    /// Creates a new builder-style object to manufacture [`EventBridgeMetadata`](crate::model::EventBridgeMetadata)
+    /// Creates a new builder-style object to manufacture [`EventBridgeMetadata`](crate::model::EventBridgeMetadata).
     pub fn builder() -> crate::model::event_bridge_metadata::Builder {
         crate::model::event_bridge_metadata::Builder::default()
     }
@@ -17149,6 +17456,7 @@ impl EventBridgeMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ZendeskMetadata {
     /// <p> The desired authorization scope for the Zendesk account. </p>
+    #[doc(hidden)]
     pub o_auth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ZendeskMetadata {
@@ -17164,11 +17472,10 @@ impl std::fmt::Debug for ZendeskMetadata {
         formatter.finish()
     }
 }
-/// See [`ZendeskMetadata`](crate::model::ZendeskMetadata)
+/// See [`ZendeskMetadata`](crate::model::ZendeskMetadata).
 pub mod zendesk_metadata {
 
-    /// A builder for [`ZendeskMetadata`](crate::model::ZendeskMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ZendeskMetadata`](crate::model::ZendeskMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) o_auth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -17193,7 +17500,7 @@ pub mod zendesk_metadata {
             self.o_auth_scopes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ZendeskMetadata`](crate::model::ZendeskMetadata)
+        /// Consumes the builder and constructs a [`ZendeskMetadata`](crate::model::ZendeskMetadata).
         pub fn build(self) -> crate::model::ZendeskMetadata {
             crate::model::ZendeskMetadata {
                 o_auth_scopes: self.o_auth_scopes,
@@ -17202,7 +17509,7 @@ pub mod zendesk_metadata {
     }
 }
 impl ZendeskMetadata {
-    /// Creates a new builder-style object to manufacture [`ZendeskMetadata`](crate::model::ZendeskMetadata)
+    /// Creates a new builder-style object to manufacture [`ZendeskMetadata`](crate::model::ZendeskMetadata).
     pub fn builder() -> crate::model::zendesk_metadata::Builder {
         crate::model::zendesk_metadata::Builder::default()
     }
@@ -17218,22 +17525,21 @@ impl std::fmt::Debug for VeevaMetadata {
         formatter.finish()
     }
 }
-/// See [`VeevaMetadata`](crate::model::VeevaMetadata)
+/// See [`VeevaMetadata`](crate::model::VeevaMetadata).
 pub mod veeva_metadata {
 
-    /// A builder for [`VeevaMetadata`](crate::model::VeevaMetadata)
-    #[non_exhaustive]
+    /// A builder for [`VeevaMetadata`](crate::model::VeevaMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`VeevaMetadata`](crate::model::VeevaMetadata)
+        /// Consumes the builder and constructs a [`VeevaMetadata`](crate::model::VeevaMetadata).
         pub fn build(self) -> crate::model::VeevaMetadata {
             crate::model::VeevaMetadata {}
         }
     }
 }
 impl VeevaMetadata {
-    /// Creates a new builder-style object to manufacture [`VeevaMetadata`](crate::model::VeevaMetadata)
+    /// Creates a new builder-style object to manufacture [`VeevaMetadata`](crate::model::VeevaMetadata).
     pub fn builder() -> crate::model::veeva_metadata::Builder {
         crate::model::veeva_metadata::Builder::default()
     }
@@ -17249,22 +17555,21 @@ impl std::fmt::Debug for TrendmicroMetadata {
         formatter.finish()
     }
 }
-/// See [`TrendmicroMetadata`](crate::model::TrendmicroMetadata)
+/// See [`TrendmicroMetadata`](crate::model::TrendmicroMetadata).
 pub mod trendmicro_metadata {
 
-    /// A builder for [`TrendmicroMetadata`](crate::model::TrendmicroMetadata)
-    #[non_exhaustive]
+    /// A builder for [`TrendmicroMetadata`](crate::model::TrendmicroMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TrendmicroMetadata`](crate::model::TrendmicroMetadata)
+        /// Consumes the builder and constructs a [`TrendmicroMetadata`](crate::model::TrendmicroMetadata).
         pub fn build(self) -> crate::model::TrendmicroMetadata {
             crate::model::TrendmicroMetadata {}
         }
     }
 }
 impl TrendmicroMetadata {
-    /// Creates a new builder-style object to manufacture [`TrendmicroMetadata`](crate::model::TrendmicroMetadata)
+    /// Creates a new builder-style object to manufacture [`TrendmicroMetadata`](crate::model::TrendmicroMetadata).
     pub fn builder() -> crate::model::trendmicro_metadata::Builder {
         crate::model::trendmicro_metadata::Builder::default()
     }
@@ -17275,6 +17580,7 @@ impl TrendmicroMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnowflakeMetadata {
     /// <p> Specifies the supported Amazon Web Services Regions when using Snowflake. </p>
+    #[doc(hidden)]
     pub supported_regions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SnowflakeMetadata {
@@ -17290,11 +17596,10 @@ impl std::fmt::Debug for SnowflakeMetadata {
         formatter.finish()
     }
 }
-/// See [`SnowflakeMetadata`](crate::model::SnowflakeMetadata)
+/// See [`SnowflakeMetadata`](crate::model::SnowflakeMetadata).
 pub mod snowflake_metadata {
 
-    /// A builder for [`SnowflakeMetadata`](crate::model::SnowflakeMetadata)
-    #[non_exhaustive]
+    /// A builder for [`SnowflakeMetadata`](crate::model::SnowflakeMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) supported_regions: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -17319,7 +17624,7 @@ pub mod snowflake_metadata {
             self.supported_regions = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnowflakeMetadata`](crate::model::SnowflakeMetadata)
+        /// Consumes the builder and constructs a [`SnowflakeMetadata`](crate::model::SnowflakeMetadata).
         pub fn build(self) -> crate::model::SnowflakeMetadata {
             crate::model::SnowflakeMetadata {
                 supported_regions: self.supported_regions,
@@ -17328,7 +17633,7 @@ pub mod snowflake_metadata {
     }
 }
 impl SnowflakeMetadata {
-    /// Creates a new builder-style object to manufacture [`SnowflakeMetadata`](crate::model::SnowflakeMetadata)
+    /// Creates a new builder-style object to manufacture [`SnowflakeMetadata`](crate::model::SnowflakeMetadata).
     pub fn builder() -> crate::model::snowflake_metadata::Builder {
         crate::model::snowflake_metadata::Builder::default()
     }
@@ -17339,6 +17644,7 @@ impl SnowflakeMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SlackMetadata {
     /// <p> The desired authorization scope for the Slack account. </p>
+    #[doc(hidden)]
     pub o_auth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SlackMetadata {
@@ -17354,11 +17660,10 @@ impl std::fmt::Debug for SlackMetadata {
         formatter.finish()
     }
 }
-/// See [`SlackMetadata`](crate::model::SlackMetadata)
+/// See [`SlackMetadata`](crate::model::SlackMetadata).
 pub mod slack_metadata {
 
-    /// A builder for [`SlackMetadata`](crate::model::SlackMetadata)
-    #[non_exhaustive]
+    /// A builder for [`SlackMetadata`](crate::model::SlackMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) o_auth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -17383,7 +17688,7 @@ pub mod slack_metadata {
             self.o_auth_scopes = input;
             self
         }
-        /// Consumes the builder and constructs a [`SlackMetadata`](crate::model::SlackMetadata)
+        /// Consumes the builder and constructs a [`SlackMetadata`](crate::model::SlackMetadata).
         pub fn build(self) -> crate::model::SlackMetadata {
             crate::model::SlackMetadata {
                 o_auth_scopes: self.o_auth_scopes,
@@ -17392,7 +17697,7 @@ pub mod slack_metadata {
     }
 }
 impl SlackMetadata {
-    /// Creates a new builder-style object to manufacture [`SlackMetadata`](crate::model::SlackMetadata)
+    /// Creates a new builder-style object to manufacture [`SlackMetadata`](crate::model::SlackMetadata).
     pub fn builder() -> crate::model::slack_metadata::Builder {
         crate::model::slack_metadata::Builder::default()
     }
@@ -17408,22 +17713,21 @@ impl std::fmt::Debug for SingularMetadata {
         formatter.finish()
     }
 }
-/// See [`SingularMetadata`](crate::model::SingularMetadata)
+/// See [`SingularMetadata`](crate::model::SingularMetadata).
 pub mod singular_metadata {
 
-    /// A builder for [`SingularMetadata`](crate::model::SingularMetadata)
-    #[non_exhaustive]
+    /// A builder for [`SingularMetadata`](crate::model::SingularMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`SingularMetadata`](crate::model::SingularMetadata)
+        /// Consumes the builder and constructs a [`SingularMetadata`](crate::model::SingularMetadata).
         pub fn build(self) -> crate::model::SingularMetadata {
             crate::model::SingularMetadata {}
         }
     }
 }
 impl SingularMetadata {
-    /// Creates a new builder-style object to manufacture [`SingularMetadata`](crate::model::SingularMetadata)
+    /// Creates a new builder-style object to manufacture [`SingularMetadata`](crate::model::SingularMetadata).
     pub fn builder() -> crate::model::singular_metadata::Builder {
         crate::model::singular_metadata::Builder::default()
     }
@@ -17439,22 +17743,21 @@ impl std::fmt::Debug for ServiceNowMetadata {
         formatter.finish()
     }
 }
-/// See [`ServiceNowMetadata`](crate::model::ServiceNowMetadata)
+/// See [`ServiceNowMetadata`](crate::model::ServiceNowMetadata).
 pub mod service_now_metadata {
 
-    /// A builder for [`ServiceNowMetadata`](crate::model::ServiceNowMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ServiceNowMetadata`](crate::model::ServiceNowMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`ServiceNowMetadata`](crate::model::ServiceNowMetadata)
+        /// Consumes the builder and constructs a [`ServiceNowMetadata`](crate::model::ServiceNowMetadata).
         pub fn build(self) -> crate::model::ServiceNowMetadata {
             crate::model::ServiceNowMetadata {}
         }
     }
 }
 impl ServiceNowMetadata {
-    /// Creates a new builder-style object to manufacture [`ServiceNowMetadata`](crate::model::ServiceNowMetadata)
+    /// Creates a new builder-style object to manufacture [`ServiceNowMetadata`](crate::model::ServiceNowMetadata).
     pub fn builder() -> crate::model::service_now_metadata::Builder {
         crate::model::service_now_metadata::Builder::default()
     }
@@ -17465,6 +17768,7 @@ impl ServiceNowMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SalesforceMetadata {
     /// <p> The desired authorization scope for the Salesforce account. </p>
+    #[doc(hidden)]
     pub o_auth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SalesforceMetadata {
@@ -17480,11 +17784,10 @@ impl std::fmt::Debug for SalesforceMetadata {
         formatter.finish()
     }
 }
-/// See [`SalesforceMetadata`](crate::model::SalesforceMetadata)
+/// See [`SalesforceMetadata`](crate::model::SalesforceMetadata).
 pub mod salesforce_metadata {
 
-    /// A builder for [`SalesforceMetadata`](crate::model::SalesforceMetadata)
-    #[non_exhaustive]
+    /// A builder for [`SalesforceMetadata`](crate::model::SalesforceMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) o_auth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -17509,7 +17812,7 @@ pub mod salesforce_metadata {
             self.o_auth_scopes = input;
             self
         }
-        /// Consumes the builder and constructs a [`SalesforceMetadata`](crate::model::SalesforceMetadata)
+        /// Consumes the builder and constructs a [`SalesforceMetadata`](crate::model::SalesforceMetadata).
         pub fn build(self) -> crate::model::SalesforceMetadata {
             crate::model::SalesforceMetadata {
                 o_auth_scopes: self.o_auth_scopes,
@@ -17518,7 +17821,7 @@ pub mod salesforce_metadata {
     }
 }
 impl SalesforceMetadata {
-    /// Creates a new builder-style object to manufacture [`SalesforceMetadata`](crate::model::SalesforceMetadata)
+    /// Creates a new builder-style object to manufacture [`SalesforceMetadata`](crate::model::SalesforceMetadata).
     pub fn builder() -> crate::model::salesforce_metadata::Builder {
         crate::model::salesforce_metadata::Builder::default()
     }
@@ -17534,22 +17837,21 @@ impl std::fmt::Debug for S3Metadata {
         formatter.finish()
     }
 }
-/// See [`S3Metadata`](crate::model::S3Metadata)
+/// See [`S3Metadata`](crate::model::S3Metadata).
 pub mod s3_metadata {
 
-    /// A builder for [`S3Metadata`](crate::model::S3Metadata)
-    #[non_exhaustive]
+    /// A builder for [`S3Metadata`](crate::model::S3Metadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`S3Metadata`](crate::model::S3Metadata)
+        /// Consumes the builder and constructs a [`S3Metadata`](crate::model::S3Metadata).
         pub fn build(self) -> crate::model::S3Metadata {
             crate::model::S3Metadata {}
         }
     }
 }
 impl S3Metadata {
-    /// Creates a new builder-style object to manufacture [`S3Metadata`](crate::model::S3Metadata)
+    /// Creates a new builder-style object to manufacture [`S3Metadata`](crate::model::S3Metadata).
     pub fn builder() -> crate::model::s3_metadata::Builder {
         crate::model::s3_metadata::Builder::default()
     }
@@ -17565,22 +17867,21 @@ impl std::fmt::Debug for RedshiftMetadata {
         formatter.finish()
     }
 }
-/// See [`RedshiftMetadata`](crate::model::RedshiftMetadata)
+/// See [`RedshiftMetadata`](crate::model::RedshiftMetadata).
 pub mod redshift_metadata {
 
-    /// A builder for [`RedshiftMetadata`](crate::model::RedshiftMetadata)
-    #[non_exhaustive]
+    /// A builder for [`RedshiftMetadata`](crate::model::RedshiftMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RedshiftMetadata`](crate::model::RedshiftMetadata)
+        /// Consumes the builder and constructs a [`RedshiftMetadata`](crate::model::RedshiftMetadata).
         pub fn build(self) -> crate::model::RedshiftMetadata {
             crate::model::RedshiftMetadata {}
         }
     }
 }
 impl RedshiftMetadata {
-    /// Creates a new builder-style object to manufacture [`RedshiftMetadata`](crate::model::RedshiftMetadata)
+    /// Creates a new builder-style object to manufacture [`RedshiftMetadata`](crate::model::RedshiftMetadata).
     pub fn builder() -> crate::model::redshift_metadata::Builder {
         crate::model::redshift_metadata::Builder::default()
     }
@@ -17596,22 +17897,21 @@ impl std::fmt::Debug for MarketoMetadata {
         formatter.finish()
     }
 }
-/// See [`MarketoMetadata`](crate::model::MarketoMetadata)
+/// See [`MarketoMetadata`](crate::model::MarketoMetadata).
 pub mod marketo_metadata {
 
-    /// A builder for [`MarketoMetadata`](crate::model::MarketoMetadata)
-    #[non_exhaustive]
+    /// A builder for [`MarketoMetadata`](crate::model::MarketoMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`MarketoMetadata`](crate::model::MarketoMetadata)
+        /// Consumes the builder and constructs a [`MarketoMetadata`](crate::model::MarketoMetadata).
         pub fn build(self) -> crate::model::MarketoMetadata {
             crate::model::MarketoMetadata {}
         }
     }
 }
 impl MarketoMetadata {
-    /// Creates a new builder-style object to manufacture [`MarketoMetadata`](crate::model::MarketoMetadata)
+    /// Creates a new builder-style object to manufacture [`MarketoMetadata`](crate::model::MarketoMetadata).
     pub fn builder() -> crate::model::marketo_metadata::Builder {
         crate::model::marketo_metadata::Builder::default()
     }
@@ -17627,22 +17927,21 @@ impl std::fmt::Debug for InforNexusMetadata {
         formatter.finish()
     }
 }
-/// See [`InforNexusMetadata`](crate::model::InforNexusMetadata)
+/// See [`InforNexusMetadata`](crate::model::InforNexusMetadata).
 pub mod infor_nexus_metadata {
 
-    /// A builder for [`InforNexusMetadata`](crate::model::InforNexusMetadata)
-    #[non_exhaustive]
+    /// A builder for [`InforNexusMetadata`](crate::model::InforNexusMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`InforNexusMetadata`](crate::model::InforNexusMetadata)
+        /// Consumes the builder and constructs a [`InforNexusMetadata`](crate::model::InforNexusMetadata).
         pub fn build(self) -> crate::model::InforNexusMetadata {
             crate::model::InforNexusMetadata {}
         }
     }
 }
 impl InforNexusMetadata {
-    /// Creates a new builder-style object to manufacture [`InforNexusMetadata`](crate::model::InforNexusMetadata)
+    /// Creates a new builder-style object to manufacture [`InforNexusMetadata`](crate::model::InforNexusMetadata).
     pub fn builder() -> crate::model::infor_nexus_metadata::Builder {
         crate::model::infor_nexus_metadata::Builder::default()
     }
@@ -17653,6 +17952,7 @@ impl InforNexusMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GoogleAnalyticsMetadata {
     /// <p> The desired authorization scope for the Google Analytics account. </p>
+    #[doc(hidden)]
     pub o_auth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl GoogleAnalyticsMetadata {
@@ -17668,11 +17968,10 @@ impl std::fmt::Debug for GoogleAnalyticsMetadata {
         formatter.finish()
     }
 }
-/// See [`GoogleAnalyticsMetadata`](crate::model::GoogleAnalyticsMetadata)
+/// See [`GoogleAnalyticsMetadata`](crate::model::GoogleAnalyticsMetadata).
 pub mod google_analytics_metadata {
 
-    /// A builder for [`GoogleAnalyticsMetadata`](crate::model::GoogleAnalyticsMetadata)
-    #[non_exhaustive]
+    /// A builder for [`GoogleAnalyticsMetadata`](crate::model::GoogleAnalyticsMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) o_auth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -17697,7 +17996,7 @@ pub mod google_analytics_metadata {
             self.o_auth_scopes = input;
             self
         }
-        /// Consumes the builder and constructs a [`GoogleAnalyticsMetadata`](crate::model::GoogleAnalyticsMetadata)
+        /// Consumes the builder and constructs a [`GoogleAnalyticsMetadata`](crate::model::GoogleAnalyticsMetadata).
         pub fn build(self) -> crate::model::GoogleAnalyticsMetadata {
             crate::model::GoogleAnalyticsMetadata {
                 o_auth_scopes: self.o_auth_scopes,
@@ -17706,7 +18005,7 @@ pub mod google_analytics_metadata {
     }
 }
 impl GoogleAnalyticsMetadata {
-    /// Creates a new builder-style object to manufacture [`GoogleAnalyticsMetadata`](crate::model::GoogleAnalyticsMetadata)
+    /// Creates a new builder-style object to manufacture [`GoogleAnalyticsMetadata`](crate::model::GoogleAnalyticsMetadata).
     pub fn builder() -> crate::model::google_analytics_metadata::Builder {
         crate::model::google_analytics_metadata::Builder::default()
     }
@@ -17722,22 +18021,21 @@ impl std::fmt::Debug for DynatraceMetadata {
         formatter.finish()
     }
 }
-/// See [`DynatraceMetadata`](crate::model::DynatraceMetadata)
+/// See [`DynatraceMetadata`](crate::model::DynatraceMetadata).
 pub mod dynatrace_metadata {
 
-    /// A builder for [`DynatraceMetadata`](crate::model::DynatraceMetadata)
-    #[non_exhaustive]
+    /// A builder for [`DynatraceMetadata`](crate::model::DynatraceMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DynatraceMetadata`](crate::model::DynatraceMetadata)
+        /// Consumes the builder and constructs a [`DynatraceMetadata`](crate::model::DynatraceMetadata).
         pub fn build(self) -> crate::model::DynatraceMetadata {
             crate::model::DynatraceMetadata {}
         }
     }
 }
 impl DynatraceMetadata {
-    /// Creates a new builder-style object to manufacture [`DynatraceMetadata`](crate::model::DynatraceMetadata)
+    /// Creates a new builder-style object to manufacture [`DynatraceMetadata`](crate::model::DynatraceMetadata).
     pub fn builder() -> crate::model::dynatrace_metadata::Builder {
         crate::model::dynatrace_metadata::Builder::default()
     }
@@ -17753,22 +18051,21 @@ impl std::fmt::Debug for DatadogMetadata {
         formatter.finish()
     }
 }
-/// See [`DatadogMetadata`](crate::model::DatadogMetadata)
+/// See [`DatadogMetadata`](crate::model::DatadogMetadata).
 pub mod datadog_metadata {
 
-    /// A builder for [`DatadogMetadata`](crate::model::DatadogMetadata)
-    #[non_exhaustive]
+    /// A builder for [`DatadogMetadata`](crate::model::DatadogMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DatadogMetadata`](crate::model::DatadogMetadata)
+        /// Consumes the builder and constructs a [`DatadogMetadata`](crate::model::DatadogMetadata).
         pub fn build(self) -> crate::model::DatadogMetadata {
             crate::model::DatadogMetadata {}
         }
     }
 }
 impl DatadogMetadata {
-    /// Creates a new builder-style object to manufacture [`DatadogMetadata`](crate::model::DatadogMetadata)
+    /// Creates a new builder-style object to manufacture [`DatadogMetadata`](crate::model::DatadogMetadata).
     pub fn builder() -> crate::model::datadog_metadata::Builder {
         crate::model::datadog_metadata::Builder::default()
     }
@@ -17784,22 +18081,21 @@ impl std::fmt::Debug for AmplitudeMetadata {
         formatter.finish()
     }
 }
-/// See [`AmplitudeMetadata`](crate::model::AmplitudeMetadata)
+/// See [`AmplitudeMetadata`](crate::model::AmplitudeMetadata).
 pub mod amplitude_metadata {
 
-    /// A builder for [`AmplitudeMetadata`](crate::model::AmplitudeMetadata)
-    #[non_exhaustive]
+    /// A builder for [`AmplitudeMetadata`](crate::model::AmplitudeMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AmplitudeMetadata`](crate::model::AmplitudeMetadata)
+        /// Consumes the builder and constructs a [`AmplitudeMetadata`](crate::model::AmplitudeMetadata).
         pub fn build(self) -> crate::model::AmplitudeMetadata {
             crate::model::AmplitudeMetadata {}
         }
     }
 }
 impl AmplitudeMetadata {
-    /// Creates a new builder-style object to manufacture [`AmplitudeMetadata`](crate::model::AmplitudeMetadata)
+    /// Creates a new builder-style object to manufacture [`AmplitudeMetadata`](crate::model::AmplitudeMetadata).
     pub fn builder() -> crate::model::amplitude_metadata::Builder {
         crate::model::amplitude_metadata::Builder::default()
     }
@@ -17881,24 +18177,34 @@ impl AsRef<str> for ScheduleFrequencyType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorProfile {
     /// <p> The Amazon Resource Name (ARN) of the connector profile. </p>
+    #[doc(hidden)]
     pub connector_profile_arn: std::option::Option<std::string::String>,
     /// <p> The name of the connector profile. The name is unique for each <code>ConnectorProfile</code> in the Amazon Web Services account. </p>
+    #[doc(hidden)]
     pub connector_profile_name: std::option::Option<std::string::String>,
     /// <p> The type of connector, such as Salesforce, Amplitude, and so on. </p>
+    #[doc(hidden)]
     pub connector_type: std::option::Option<crate::model::ConnectorType>,
     /// <p>The label for the connector profile being created.</p>
+    #[doc(hidden)]
     pub connector_label: std::option::Option<std::string::String>,
     /// <p> Indicates the connection mode and if it is public or private. </p>
+    #[doc(hidden)]
     pub connection_mode: std::option::Option<crate::model::ConnectionMode>,
     /// <p> The Amazon Resource Name (ARN) of the connector profile credentials. </p>
+    #[doc(hidden)]
     pub credentials_arn: std::option::Option<std::string::String>,
     /// <p> The connector-specific properties of the profile configuration. </p>
+    #[doc(hidden)]
     pub connector_profile_properties: std::option::Option<crate::model::ConnectorProfileProperties>,
     /// <p> Specifies when the connector profile was created. </p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies when the connector profile was last updated. </p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies the private connection provisioning state. </p>
+    #[doc(hidden)]
     pub private_connection_provisioning_state:
         std::option::Option<crate::model::PrivateConnectionProvisioningState>,
 }
@@ -17970,11 +18276,10 @@ impl std::fmt::Debug for ConnectorProfile {
         formatter.finish()
     }
 }
-/// See [`ConnectorProfile`](crate::model::ConnectorProfile)
+/// See [`ConnectorProfile`](crate::model::ConnectorProfile).
 pub mod connector_profile {
 
-    /// A builder for [`ConnectorProfile`](crate::model::ConnectorProfile)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorProfile`](crate::model::ConnectorProfile).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connector_profile_arn: std::option::Option<std::string::String>,
@@ -18127,7 +18432,7 @@ pub mod connector_profile {
             self.private_connection_provisioning_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorProfile`](crate::model::ConnectorProfile)
+        /// Consumes the builder and constructs a [`ConnectorProfile`](crate::model::ConnectorProfile).
         pub fn build(self) -> crate::model::ConnectorProfile {
             crate::model::ConnectorProfile {
                 connector_profile_arn: self.connector_profile_arn,
@@ -18145,7 +18450,7 @@ pub mod connector_profile {
     }
 }
 impl ConnectorProfile {
-    /// Creates a new builder-style object to manufacture [`ConnectorProfile`](crate::model::ConnectorProfile)
+    /// Creates a new builder-style object to manufacture [`ConnectorProfile`](crate::model::ConnectorProfile).
     pub fn builder() -> crate::model::connector_profile::Builder {
         crate::model::connector_profile::Builder::default()
     }
@@ -18156,10 +18461,13 @@ impl ConnectorProfile {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrivateConnectionProvisioningState {
     /// <p> Specifies the private connection provisioning status. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::PrivateConnectionProvisioningStatus>,
     /// <p> Specifies the private connection provisioning failure reason. </p>
+    #[doc(hidden)]
     pub failure_message: std::option::Option<std::string::String>,
     /// <p> Specifies the private connection provisioning failure cause. </p>
+    #[doc(hidden)]
     pub failure_cause: std::option::Option<crate::model::PrivateConnectionProvisioningFailureCause>,
 }
 impl PrivateConnectionProvisioningState {
@@ -18189,11 +18497,10 @@ impl std::fmt::Debug for PrivateConnectionProvisioningState {
         formatter.finish()
     }
 }
-/// See [`PrivateConnectionProvisioningState`](crate::model::PrivateConnectionProvisioningState)
+/// See [`PrivateConnectionProvisioningState`](crate::model::PrivateConnectionProvisioningState).
 pub mod private_connection_provisioning_state {
 
-    /// A builder for [`PrivateConnectionProvisioningState`](crate::model::PrivateConnectionProvisioningState)
-    #[non_exhaustive]
+    /// A builder for [`PrivateConnectionProvisioningState`](crate::model::PrivateConnectionProvisioningState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::PrivateConnectionProvisioningStatus>,
@@ -18244,7 +18551,7 @@ pub mod private_connection_provisioning_state {
             self.failure_cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrivateConnectionProvisioningState`](crate::model::PrivateConnectionProvisioningState)
+        /// Consumes the builder and constructs a [`PrivateConnectionProvisioningState`](crate::model::PrivateConnectionProvisioningState).
         pub fn build(self) -> crate::model::PrivateConnectionProvisioningState {
             crate::model::PrivateConnectionProvisioningState {
                 status: self.status,
@@ -18255,7 +18562,7 @@ pub mod private_connection_provisioning_state {
     }
 }
 impl PrivateConnectionProvisioningState {
-    /// Creates a new builder-style object to manufacture [`PrivateConnectionProvisioningState`](crate::model::PrivateConnectionProvisioningState)
+    /// Creates a new builder-style object to manufacture [`PrivateConnectionProvisioningState`](crate::model::PrivateConnectionProvisioningState).
     pub fn builder() -> crate::model::private_connection_provisioning_state::Builder {
         crate::model::private_connection_provisioning_state::Builder::default()
     }
@@ -18402,26 +18709,37 @@ impl AsRef<str> for PrivateConnectionProvisioningStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorEntityField {
     /// <p> The unique identifier of the connector field. </p>
+    #[doc(hidden)]
     pub identifier: std::option::Option<std::string::String>,
     /// <p>The parent identifier of the connector field.</p>
+    #[doc(hidden)]
     pub parent_identifier: std::option::Option<std::string::String>,
     /// <p> The label applied to a connector entity field. </p>
+    #[doc(hidden)]
     pub label: std::option::Option<std::string::String>,
     /// <p>Booelan value that indicates whether this field can be used as a primary key.</p>
+    #[doc(hidden)]
     pub is_primary_key: bool,
     /// <p>Default value that can be assigned to this field.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
     /// <p>Booelan value that indicates whether this field is deprecated or not.</p>
+    #[doc(hidden)]
     pub is_deprecated: bool,
     /// <p> Contains details regarding the supported <code>FieldType</code>, including the corresponding <code>filterOperators</code> and <code>supportedValues</code>. </p>
+    #[doc(hidden)]
     pub supported_field_type_details: std::option::Option<crate::model::SupportedFieldTypeDetails>,
     /// <p> A description of the connector entity field. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The properties that can be applied to a field when the connector is being used as a source. </p>
+    #[doc(hidden)]
     pub source_properties: std::option::Option<crate::model::SourceFieldProperties>,
     /// <p> The properties applied to a field when the connector is being used as a destination. </p>
+    #[doc(hidden)]
     pub destination_properties: std::option::Option<crate::model::DestinationFieldProperties>,
     /// <p>A map that has specific properties related to the ConnectorEntityField.</p>
+    #[doc(hidden)]
     pub custom_properties:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -18498,11 +18816,10 @@ impl std::fmt::Debug for ConnectorEntityField {
         formatter.finish()
     }
 }
-/// See [`ConnectorEntityField`](crate::model::ConnectorEntityField)
+/// See [`ConnectorEntityField`](crate::model::ConnectorEntityField).
 pub mod connector_entity_field {
 
-    /// A builder for [`ConnectorEntityField`](crate::model::ConnectorEntityField)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorEntityField`](crate::model::ConnectorEntityField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identifier: std::option::Option<std::string::String>,
@@ -18668,7 +18985,7 @@ pub mod connector_entity_field {
             self.custom_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorEntityField`](crate::model::ConnectorEntityField)
+        /// Consumes the builder and constructs a [`ConnectorEntityField`](crate::model::ConnectorEntityField).
         pub fn build(self) -> crate::model::ConnectorEntityField {
             crate::model::ConnectorEntityField {
                 identifier: self.identifier,
@@ -18687,7 +19004,7 @@ pub mod connector_entity_field {
     }
 }
 impl ConnectorEntityField {
-    /// Creates a new builder-style object to manufacture [`ConnectorEntityField`](crate::model::ConnectorEntityField)
+    /// Creates a new builder-style object to manufacture [`ConnectorEntityField`](crate::model::ConnectorEntityField).
     pub fn builder() -> crate::model::connector_entity_field::Builder {
         crate::model::connector_entity_field::Builder::default()
     }
@@ -18698,16 +19015,22 @@ impl ConnectorEntityField {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DestinationFieldProperties {
     /// <p> Specifies if the destination field can be created by the current user. </p>
+    #[doc(hidden)]
     pub is_creatable: bool,
     /// <p> Specifies if the destination field can have a null value. </p>
+    #[doc(hidden)]
     pub is_nullable: bool,
     /// <p> Specifies if the flow run can either insert new rows in the destination field if they do not already exist, or update them if they do. </p>
+    #[doc(hidden)]
     pub is_upsertable: bool,
     /// <p> Specifies whether the field can be updated during an <code>UPDATE</code> or <code>UPSERT</code> write operation. </p>
+    #[doc(hidden)]
     pub is_updatable: bool,
     /// <p>Specifies whether the field can use the default value during a Create operation.</p>
+    #[doc(hidden)]
     pub is_defaulted_on_create: bool,
     /// <p> A list of supported write operations. For each write operation listed, this field can be used in <code>idFieldNames</code> when that write operation is present as a destination option. </p>
+    #[doc(hidden)]
     pub supported_write_operations:
         std::option::Option<std::vec::Vec<crate::model::WriteOperationType>>,
 }
@@ -18754,11 +19077,10 @@ impl std::fmt::Debug for DestinationFieldProperties {
         formatter.finish()
     }
 }
-/// See [`DestinationFieldProperties`](crate::model::DestinationFieldProperties)
+/// See [`DestinationFieldProperties`](crate::model::DestinationFieldProperties).
 pub mod destination_field_properties {
 
-    /// A builder for [`DestinationFieldProperties`](crate::model::DestinationFieldProperties)
-    #[non_exhaustive]
+    /// A builder for [`DestinationFieldProperties`](crate::model::DestinationFieldProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_creatable: std::option::Option<bool>,
@@ -18842,7 +19164,7 @@ pub mod destination_field_properties {
             self.supported_write_operations = input;
             self
         }
-        /// Consumes the builder and constructs a [`DestinationFieldProperties`](crate::model::DestinationFieldProperties)
+        /// Consumes the builder and constructs a [`DestinationFieldProperties`](crate::model::DestinationFieldProperties).
         pub fn build(self) -> crate::model::DestinationFieldProperties {
             crate::model::DestinationFieldProperties {
                 is_creatable: self.is_creatable.unwrap_or_default(),
@@ -18856,7 +19178,7 @@ pub mod destination_field_properties {
     }
 }
 impl DestinationFieldProperties {
-    /// Creates a new builder-style object to manufacture [`DestinationFieldProperties`](crate::model::DestinationFieldProperties)
+    /// Creates a new builder-style object to manufacture [`DestinationFieldProperties`](crate::model::DestinationFieldProperties).
     pub fn builder() -> crate::model::destination_field_properties::Builder {
         crate::model::destination_field_properties::Builder::default()
     }
@@ -18867,10 +19189,13 @@ impl DestinationFieldProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceFieldProperties {
     /// <p> Indicates whether the field can be returned in a search result. </p>
+    #[doc(hidden)]
     pub is_retrievable: bool,
     /// <p> Indicates if the field can be queried. </p>
+    #[doc(hidden)]
     pub is_queryable: bool,
     /// <p>Indicates if this timestamp field can be used for incremental queries.</p>
+    #[doc(hidden)]
     pub is_timestamp_field_for_incremental_queries: bool,
 }
 impl SourceFieldProperties {
@@ -18899,11 +19224,10 @@ impl std::fmt::Debug for SourceFieldProperties {
         formatter.finish()
     }
 }
-/// See [`SourceFieldProperties`](crate::model::SourceFieldProperties)
+/// See [`SourceFieldProperties`](crate::model::SourceFieldProperties).
 pub mod source_field_properties {
 
-    /// A builder for [`SourceFieldProperties`](crate::model::SourceFieldProperties)
-    #[non_exhaustive]
+    /// A builder for [`SourceFieldProperties`](crate::model::SourceFieldProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_retrievable: std::option::Option<bool>,
@@ -18944,7 +19268,7 @@ pub mod source_field_properties {
             self.is_timestamp_field_for_incremental_queries = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceFieldProperties`](crate::model::SourceFieldProperties)
+        /// Consumes the builder and constructs a [`SourceFieldProperties`](crate::model::SourceFieldProperties).
         pub fn build(self) -> crate::model::SourceFieldProperties {
             crate::model::SourceFieldProperties {
                 is_retrievable: self.is_retrievable.unwrap_or_default(),
@@ -18957,7 +19281,7 @@ pub mod source_field_properties {
     }
 }
 impl SourceFieldProperties {
-    /// Creates a new builder-style object to manufacture [`SourceFieldProperties`](crate::model::SourceFieldProperties)
+    /// Creates a new builder-style object to manufacture [`SourceFieldProperties`](crate::model::SourceFieldProperties).
     pub fn builder() -> crate::model::source_field_properties::Builder {
         crate::model::source_field_properties::Builder::default()
     }
@@ -18968,6 +19292,7 @@ impl SourceFieldProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SupportedFieldTypeDetails {
     /// <p> The initial supported version for <code>fieldType</code>. If this is later changed to a different version, v2 will be introduced. </p>
+    #[doc(hidden)]
     pub v1: std::option::Option<crate::model::FieldTypeDetails>,
 }
 impl SupportedFieldTypeDetails {
@@ -18983,11 +19308,10 @@ impl std::fmt::Debug for SupportedFieldTypeDetails {
         formatter.finish()
     }
 }
-/// See [`SupportedFieldTypeDetails`](crate::model::SupportedFieldTypeDetails)
+/// See [`SupportedFieldTypeDetails`](crate::model::SupportedFieldTypeDetails).
 pub mod supported_field_type_details {
 
-    /// A builder for [`SupportedFieldTypeDetails`](crate::model::SupportedFieldTypeDetails)
-    #[non_exhaustive]
+    /// A builder for [`SupportedFieldTypeDetails`](crate::model::SupportedFieldTypeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) v1: std::option::Option<crate::model::FieldTypeDetails>,
@@ -19006,14 +19330,14 @@ pub mod supported_field_type_details {
             self.v1 = input;
             self
         }
-        /// Consumes the builder and constructs a [`SupportedFieldTypeDetails`](crate::model::SupportedFieldTypeDetails)
+        /// Consumes the builder and constructs a [`SupportedFieldTypeDetails`](crate::model::SupportedFieldTypeDetails).
         pub fn build(self) -> crate::model::SupportedFieldTypeDetails {
             crate::model::SupportedFieldTypeDetails { v1: self.v1 }
         }
     }
 }
 impl SupportedFieldTypeDetails {
-    /// Creates a new builder-style object to manufacture [`SupportedFieldTypeDetails`](crate::model::SupportedFieldTypeDetails)
+    /// Creates a new builder-style object to manufacture [`SupportedFieldTypeDetails`](crate::model::SupportedFieldTypeDetails).
     pub fn builder() -> crate::model::supported_field_type_details::Builder {
         crate::model::supported_field_type_details::Builder::default()
     }
@@ -19024,18 +19348,25 @@ impl SupportedFieldTypeDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FieldTypeDetails {
     /// <p> The type of field, such as string, integer, date, and so on. </p>
+    #[doc(hidden)]
     pub field_type: std::option::Option<std::string::String>,
     /// <p> The list of operators supported by a field. </p>
+    #[doc(hidden)]
     pub filter_operators: std::option::Option<std::vec::Vec<crate::model::Operator>>,
     /// <p> The list of values that a field can contain. For example, a Boolean <code>fieldType</code> can have two values: "true" and "false". </p>
+    #[doc(hidden)]
     pub supported_values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The regular expression pattern for the field name.</p>
+    #[doc(hidden)]
     pub value_regex_pattern: std::option::Option<std::string::String>,
     /// <p>The date format that the field supports.</p>
+    #[doc(hidden)]
     pub supported_date_format: std::option::Option<std::string::String>,
     /// <p>The range of values this field can hold.</p>
+    #[doc(hidden)]
     pub field_value_range: std::option::Option<crate::model::Range>,
     /// <p>This is the allowable length range for this field's value.</p>
+    #[doc(hidden)]
     pub field_length_range: std::option::Option<crate::model::Range>,
 }
 impl FieldTypeDetails {
@@ -19081,11 +19412,10 @@ impl std::fmt::Debug for FieldTypeDetails {
         formatter.finish()
     }
 }
-/// See [`FieldTypeDetails`](crate::model::FieldTypeDetails)
+/// See [`FieldTypeDetails`](crate::model::FieldTypeDetails).
 pub mod field_type_details {
 
-    /// A builder for [`FieldTypeDetails`](crate::model::FieldTypeDetails)
-    #[non_exhaustive]
+    /// A builder for [`FieldTypeDetails`](crate::model::FieldTypeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field_type: std::option::Option<std::string::String>,
@@ -19197,7 +19527,7 @@ pub mod field_type_details {
             self.field_length_range = input;
             self
         }
-        /// Consumes the builder and constructs a [`FieldTypeDetails`](crate::model::FieldTypeDetails)
+        /// Consumes the builder and constructs a [`FieldTypeDetails`](crate::model::FieldTypeDetails).
         pub fn build(self) -> crate::model::FieldTypeDetails {
             crate::model::FieldTypeDetails {
                 field_type: self.field_type,
@@ -19212,7 +19542,7 @@ pub mod field_type_details {
     }
 }
 impl FieldTypeDetails {
-    /// Creates a new builder-style object to manufacture [`FieldTypeDetails`](crate::model::FieldTypeDetails)
+    /// Creates a new builder-style object to manufacture [`FieldTypeDetails`](crate::model::FieldTypeDetails).
     pub fn builder() -> crate::model::field_type_details::Builder {
         crate::model::field_type_details::Builder::default()
     }
@@ -19223,8 +19553,10 @@ impl FieldTypeDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Range {
     /// <p>Maximum value supported by the field.</p>
+    #[doc(hidden)]
     pub maximum: f64,
     /// <p>Minimum value supported by the field.</p>
+    #[doc(hidden)]
     pub minimum: f64,
 }
 impl Range {
@@ -19245,11 +19577,10 @@ impl std::fmt::Debug for Range {
         formatter.finish()
     }
 }
-/// See [`Range`](crate::model::Range)
+/// See [`Range`](crate::model::Range).
 pub mod range {
 
-    /// A builder for [`Range`](crate::model::Range)
-    #[non_exhaustive]
+    /// A builder for [`Range`](crate::model::Range).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) maximum: std::option::Option<f64>,
@@ -19276,7 +19607,7 @@ pub mod range {
             self.minimum = input;
             self
         }
-        /// Consumes the builder and constructs a [`Range`](crate::model::Range)
+        /// Consumes the builder and constructs a [`Range`](crate::model::Range).
         pub fn build(self) -> crate::model::Range {
             crate::model::Range {
                 maximum: self.maximum.unwrap_or_default(),
@@ -19286,7 +19617,7 @@ pub mod range {
     }
 }
 impl Range {
-    /// Creates a new builder-style object to manufacture [`Range`](crate::model::Range)
+    /// Creates a new builder-style object to manufacture [`Range`](crate::model::Range).
     pub fn builder() -> crate::model::range::Builder {
         crate::model::range::Builder::default()
     }

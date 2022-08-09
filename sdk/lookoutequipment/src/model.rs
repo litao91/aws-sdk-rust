@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InferenceOutputConfiguration {
     /// <p> Specifies configuration information for the output results from for the inference, output S3 location. </p>
+    #[doc(hidden)]
     pub s3_output_configuration: std::option::Option<crate::model::InferenceS3OutputConfiguration>,
     /// <p>The ID number for the AWS KMS key used to encrypt the inference output. </p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
 }
 impl InferenceOutputConfiguration {
@@ -29,11 +31,10 @@ impl std::fmt::Debug for InferenceOutputConfiguration {
         formatter.finish()
     }
 }
-/// See [`InferenceOutputConfiguration`](crate::model::InferenceOutputConfiguration)
+/// See [`InferenceOutputConfiguration`](crate::model::InferenceOutputConfiguration).
 pub mod inference_output_configuration {
 
-    /// A builder for [`InferenceOutputConfiguration`](crate::model::InferenceOutputConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`InferenceOutputConfiguration`](crate::model::InferenceOutputConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_output_configuration:
@@ -67,7 +68,7 @@ pub mod inference_output_configuration {
             self.kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`InferenceOutputConfiguration`](crate::model::InferenceOutputConfiguration)
+        /// Consumes the builder and constructs a [`InferenceOutputConfiguration`](crate::model::InferenceOutputConfiguration).
         pub fn build(self) -> crate::model::InferenceOutputConfiguration {
             crate::model::InferenceOutputConfiguration {
                 s3_output_configuration: self.s3_output_configuration,
@@ -77,7 +78,7 @@ pub mod inference_output_configuration {
     }
 }
 impl InferenceOutputConfiguration {
-    /// Creates a new builder-style object to manufacture [`InferenceOutputConfiguration`](crate::model::InferenceOutputConfiguration)
+    /// Creates a new builder-style object to manufacture [`InferenceOutputConfiguration`](crate::model::InferenceOutputConfiguration).
     pub fn builder() -> crate::model::inference_output_configuration::Builder {
         crate::model::inference_output_configuration::Builder::default()
     }
@@ -88,8 +89,10 @@ impl InferenceOutputConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InferenceS3OutputConfiguration {
     /// <p> The bucket containing the output results from the inference </p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p> The prefix for the S3 bucket used for the output results from the inference. </p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl InferenceS3OutputConfiguration {
@@ -110,11 +113,10 @@ impl std::fmt::Debug for InferenceS3OutputConfiguration {
         formatter.finish()
     }
 }
-/// See [`InferenceS3OutputConfiguration`](crate::model::InferenceS3OutputConfiguration)
+/// See [`InferenceS3OutputConfiguration`](crate::model::InferenceS3OutputConfiguration).
 pub mod inference_s3_output_configuration {
 
-    /// A builder for [`InferenceS3OutputConfiguration`](crate::model::InferenceS3OutputConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`InferenceS3OutputConfiguration`](crate::model::InferenceS3OutputConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -141,7 +143,7 @@ pub mod inference_s3_output_configuration {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`InferenceS3OutputConfiguration`](crate::model::InferenceS3OutputConfiguration)
+        /// Consumes the builder and constructs a [`InferenceS3OutputConfiguration`](crate::model::InferenceS3OutputConfiguration).
         pub fn build(self) -> crate::model::InferenceS3OutputConfiguration {
             crate::model::InferenceS3OutputConfiguration {
                 bucket: self.bucket,
@@ -151,7 +153,7 @@ pub mod inference_s3_output_configuration {
     }
 }
 impl InferenceS3OutputConfiguration {
-    /// Creates a new builder-style object to manufacture [`InferenceS3OutputConfiguration`](crate::model::InferenceS3OutputConfiguration)
+    /// Creates a new builder-style object to manufacture [`InferenceS3OutputConfiguration`](crate::model::InferenceS3OutputConfiguration).
     pub fn builder() -> crate::model::inference_s3_output_configuration::Builder {
         crate::model::inference_s3_output_configuration::Builder::default()
     }
@@ -162,10 +164,13 @@ impl InferenceS3OutputConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InferenceInputConfiguration {
     /// <p> Specifies configuration information for the input data for the inference, including Amazon S3 location of input data.</p>
+    #[doc(hidden)]
     pub s3_input_configuration: std::option::Option<crate::model::InferenceS3InputConfiguration>,
     /// <p>Indicates the difference between your time zone and Coordinated Universal Time (UTC).</p>
+    #[doc(hidden)]
     pub input_time_zone_offset: std::option::Option<std::string::String>,
     /// <p>Specifies configuration information for the input data for the inference, including timestamp format and delimiter. </p>
+    #[doc(hidden)]
     pub inference_input_name_configuration:
         std::option::Option<crate::model::InferenceInputNameConfiguration>,
 }
@@ -199,11 +204,10 @@ impl std::fmt::Debug for InferenceInputConfiguration {
         formatter.finish()
     }
 }
-/// See [`InferenceInputConfiguration`](crate::model::InferenceInputConfiguration)
+/// See [`InferenceInputConfiguration`](crate::model::InferenceInputConfiguration).
 pub mod inference_input_configuration {
 
-    /// A builder for [`InferenceInputConfiguration`](crate::model::InferenceInputConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`InferenceInputConfiguration`](crate::model::InferenceInputConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_input_configuration:
@@ -258,7 +262,7 @@ pub mod inference_input_configuration {
             self.inference_input_name_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`InferenceInputConfiguration`](crate::model::InferenceInputConfiguration)
+        /// Consumes the builder and constructs a [`InferenceInputConfiguration`](crate::model::InferenceInputConfiguration).
         pub fn build(self) -> crate::model::InferenceInputConfiguration {
             crate::model::InferenceInputConfiguration {
                 s3_input_configuration: self.s3_input_configuration,
@@ -269,7 +273,7 @@ pub mod inference_input_configuration {
     }
 }
 impl InferenceInputConfiguration {
-    /// Creates a new builder-style object to manufacture [`InferenceInputConfiguration`](crate::model::InferenceInputConfiguration)
+    /// Creates a new builder-style object to manufacture [`InferenceInputConfiguration`](crate::model::InferenceInputConfiguration).
     pub fn builder() -> crate::model::inference_input_configuration::Builder {
         crate::model::inference_input_configuration::Builder::default()
     }
@@ -280,8 +284,10 @@ impl InferenceInputConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InferenceInputNameConfiguration {
     /// <p>The format of the timestamp, whether Epoch time, or standard, with or without hyphens (-). </p>
+    #[doc(hidden)]
     pub timestamp_format: std::option::Option<std::string::String>,
     /// <p>Indicates the delimiter character used between items in the data. </p>
+    #[doc(hidden)]
     pub component_timestamp_delimiter: std::option::Option<std::string::String>,
 }
 impl InferenceInputNameConfiguration {
@@ -305,11 +311,10 @@ impl std::fmt::Debug for InferenceInputNameConfiguration {
         formatter.finish()
     }
 }
-/// See [`InferenceInputNameConfiguration`](crate::model::InferenceInputNameConfiguration)
+/// See [`InferenceInputNameConfiguration`](crate::model::InferenceInputNameConfiguration).
 pub mod inference_input_name_configuration {
 
-    /// A builder for [`InferenceInputNameConfiguration`](crate::model::InferenceInputNameConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`InferenceInputNameConfiguration`](crate::model::InferenceInputNameConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timestamp_format: std::option::Option<std::string::String>,
@@ -345,7 +350,7 @@ pub mod inference_input_name_configuration {
             self.component_timestamp_delimiter = input;
             self
         }
-        /// Consumes the builder and constructs a [`InferenceInputNameConfiguration`](crate::model::InferenceInputNameConfiguration)
+        /// Consumes the builder and constructs a [`InferenceInputNameConfiguration`](crate::model::InferenceInputNameConfiguration).
         pub fn build(self) -> crate::model::InferenceInputNameConfiguration {
             crate::model::InferenceInputNameConfiguration {
                 timestamp_format: self.timestamp_format,
@@ -355,7 +360,7 @@ pub mod inference_input_name_configuration {
     }
 }
 impl InferenceInputNameConfiguration {
-    /// Creates a new builder-style object to manufacture [`InferenceInputNameConfiguration`](crate::model::InferenceInputNameConfiguration)
+    /// Creates a new builder-style object to manufacture [`InferenceInputNameConfiguration`](crate::model::InferenceInputNameConfiguration).
     pub fn builder() -> crate::model::inference_input_name_configuration::Builder {
         crate::model::inference_input_name_configuration::Builder::default()
     }
@@ -366,8 +371,10 @@ impl InferenceInputNameConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InferenceS3InputConfiguration {
     /// <p>The bucket containing the input dataset for the inference. </p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The prefix for the S3 bucket used for the input data for the inference. </p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl InferenceS3InputConfiguration {
@@ -388,11 +395,10 @@ impl std::fmt::Debug for InferenceS3InputConfiguration {
         formatter.finish()
     }
 }
-/// See [`InferenceS3InputConfiguration`](crate::model::InferenceS3InputConfiguration)
+/// See [`InferenceS3InputConfiguration`](crate::model::InferenceS3InputConfiguration).
 pub mod inference_s3_input_configuration {
 
-    /// A builder for [`InferenceS3InputConfiguration`](crate::model::InferenceS3InputConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`InferenceS3InputConfiguration`](crate::model::InferenceS3InputConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -419,7 +425,7 @@ pub mod inference_s3_input_configuration {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`InferenceS3InputConfiguration`](crate::model::InferenceS3InputConfiguration)
+        /// Consumes the builder and constructs a [`InferenceS3InputConfiguration`](crate::model::InferenceS3InputConfiguration).
         pub fn build(self) -> crate::model::InferenceS3InputConfiguration {
             crate::model::InferenceS3InputConfiguration {
                 bucket: self.bucket,
@@ -429,7 +435,7 @@ pub mod inference_s3_input_configuration {
     }
 }
 impl InferenceS3InputConfiguration {
-    /// Creates a new builder-style object to manufacture [`InferenceS3InputConfiguration`](crate::model::InferenceS3InputConfiguration)
+    /// Creates a new builder-style object to manufacture [`InferenceS3InputConfiguration`](crate::model::InferenceS3InputConfiguration).
     pub fn builder() -> crate::model::inference_s3_input_configuration::Builder {
         crate::model::inference_s3_input_configuration::Builder::default()
     }
@@ -507,8 +513,10 @@ impl AsRef<str> for DataUploadFrequency {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key for the specified tag. </p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value for the specified tag. </p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -529,11 +537,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -560,7 +567,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -570,7 +577,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -703,6 +710,7 @@ impl AsRef<str> for IngestionJobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IngestionInputConfiguration {
     /// <p>The location information for the S3 bucket used for input data for the data ingestion. </p>
+    #[doc(hidden)]
     pub s3_input_configuration: std::option::Option<crate::model::IngestionS3InputConfiguration>,
 }
 impl IngestionInputConfiguration {
@@ -720,11 +728,10 @@ impl std::fmt::Debug for IngestionInputConfiguration {
         formatter.finish()
     }
 }
-/// See [`IngestionInputConfiguration`](crate::model::IngestionInputConfiguration)
+/// See [`IngestionInputConfiguration`](crate::model::IngestionInputConfiguration).
 pub mod ingestion_input_configuration {
 
-    /// A builder for [`IngestionInputConfiguration`](crate::model::IngestionInputConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`IngestionInputConfiguration`](crate::model::IngestionInputConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_input_configuration:
@@ -747,7 +754,7 @@ pub mod ingestion_input_configuration {
             self.s3_input_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`IngestionInputConfiguration`](crate::model::IngestionInputConfiguration)
+        /// Consumes the builder and constructs a [`IngestionInputConfiguration`](crate::model::IngestionInputConfiguration).
         pub fn build(self) -> crate::model::IngestionInputConfiguration {
             crate::model::IngestionInputConfiguration {
                 s3_input_configuration: self.s3_input_configuration,
@@ -756,7 +763,7 @@ pub mod ingestion_input_configuration {
     }
 }
 impl IngestionInputConfiguration {
-    /// Creates a new builder-style object to manufacture [`IngestionInputConfiguration`](crate::model::IngestionInputConfiguration)
+    /// Creates a new builder-style object to manufacture [`IngestionInputConfiguration`](crate::model::IngestionInputConfiguration).
     pub fn builder() -> crate::model::ingestion_input_configuration::Builder {
         crate::model::ingestion_input_configuration::Builder::default()
     }
@@ -767,10 +774,13 @@ impl IngestionInputConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IngestionS3InputConfiguration {
     /// <p>The name of the S3 bucket used for the input data for the data ingestion. </p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The prefix for the S3 location being used for the input data for the data ingestion. </p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p> Pattern for matching the Amazon S3 files which will be used for ingestion. If no KeyPattern is provided, we will use the default hierarchy file structure, which is same as KeyPattern {prefix}/{component_name}/* </p>
+    #[doc(hidden)]
     pub key_pattern: std::option::Option<std::string::String>,
 }
 impl IngestionS3InputConfiguration {
@@ -796,11 +806,10 @@ impl std::fmt::Debug for IngestionS3InputConfiguration {
         formatter.finish()
     }
 }
-/// See [`IngestionS3InputConfiguration`](crate::model::IngestionS3InputConfiguration)
+/// See [`IngestionS3InputConfiguration`](crate::model::IngestionS3InputConfiguration).
 pub mod ingestion_s3_input_configuration {
 
-    /// A builder for [`IngestionS3InputConfiguration`](crate::model::IngestionS3InputConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`IngestionS3InputConfiguration`](crate::model::IngestionS3InputConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -838,7 +847,7 @@ pub mod ingestion_s3_input_configuration {
             self.key_pattern = input;
             self
         }
-        /// Consumes the builder and constructs a [`IngestionS3InputConfiguration`](crate::model::IngestionS3InputConfiguration)
+        /// Consumes the builder and constructs a [`IngestionS3InputConfiguration`](crate::model::IngestionS3InputConfiguration).
         pub fn build(self) -> crate::model::IngestionS3InputConfiguration {
             crate::model::IngestionS3InputConfiguration {
                 bucket: self.bucket,
@@ -849,7 +858,7 @@ pub mod ingestion_s3_input_configuration {
     }
 }
 impl IngestionS3InputConfiguration {
-    /// Creates a new builder-style object to manufacture [`IngestionS3InputConfiguration`](crate::model::IngestionS3InputConfiguration)
+    /// Creates a new builder-style object to manufacture [`IngestionS3InputConfiguration`](crate::model::IngestionS3InputConfiguration).
     pub fn builder() -> crate::model::ingestion_s3_input_configuration::Builder {
         crate::model::ingestion_s3_input_configuration::Builder::default()
     }
@@ -860,30 +869,43 @@ impl IngestionS3InputConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SensorStatisticsSummary {
     /// <p> Name of the component to which the particular sensor belongs for which the statistics belong to. </p>
+    #[doc(hidden)]
     pub component_name: std::option::Option<std::string::String>,
     /// <p> Name of the sensor that the statistics belong to. </p>
+    #[doc(hidden)]
     pub sensor_name: std::option::Option<std::string::String>,
     /// <p> Parameter that indicates whether data exists for the sensor that the statistics belong to. </p>
+    #[doc(hidden)]
     pub data_exists: bool,
     /// <p> Parameter that describes the total number of, and percentage of, values that are missing for the sensor that the statistics belong to. </p>
+    #[doc(hidden)]
     pub missing_values: std::option::Option<crate::model::CountPercent>,
     /// <p> Parameter that describes the total number of, and percentage of, values that are invalid for the sensor that the statistics belong to. </p>
+    #[doc(hidden)]
     pub invalid_values: std::option::Option<crate::model::CountPercent>,
     /// <p> Parameter that describes the total number of invalid date entries associated with the sensor that the statistics belong to. </p>
+    #[doc(hidden)]
     pub invalid_date_entries: std::option::Option<crate::model::CountPercent>,
     /// <p> Parameter that describes the total number of duplicate timestamp records associated with the sensor that the statistics belong to. </p>
+    #[doc(hidden)]
     pub duplicate_timestamps: std::option::Option<crate::model::CountPercent>,
     /// <p> Parameter that describes potential risk about whether data associated with the sensor is categorical. </p>
+    #[doc(hidden)]
     pub categorical_values: std::option::Option<crate::model::CategoricalValues>,
     /// <p> Parameter that describes potential risk about whether data associated with the sensor has more than one operating mode. </p>
+    #[doc(hidden)]
     pub multiple_operating_modes: std::option::Option<crate::model::MultipleOperatingModes>,
     /// <p> Parameter that describes potential risk about whether data associated with the sensor contains one or more large gaps between consecutive timestamps. </p>
+    #[doc(hidden)]
     pub large_timestamp_gaps: std::option::Option<crate::model::LargeTimestampGaps>,
     /// <p> Parameter that describes potential risk about whether data associated with the sensor is mostly monotonic. </p>
+    #[doc(hidden)]
     pub monotonic_values: std::option::Option<crate::model::MonotonicValues>,
     /// <p> Indicates the time reference to indicate the beginning of valid data associated with the sensor that the statistics belong to. </p>
+    #[doc(hidden)]
     pub data_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Indicates the time reference to indicate the end of valid data associated with the sensor that the statistics belong to. </p>
+    #[doc(hidden)]
     pub data_end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SensorStatisticsSummary {
@@ -961,11 +983,10 @@ impl std::fmt::Debug for SensorStatisticsSummary {
         formatter.finish()
     }
 }
-/// See [`SensorStatisticsSummary`](crate::model::SensorStatisticsSummary)
+/// See [`SensorStatisticsSummary`](crate::model::SensorStatisticsSummary).
 pub mod sensor_statistics_summary {
 
-    /// A builder for [`SensorStatisticsSummary`](crate::model::SensorStatisticsSummary)
-    #[non_exhaustive]
+    /// A builder for [`SensorStatisticsSummary`](crate::model::SensorStatisticsSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) component_name: std::option::Option<std::string::String>,
@@ -1150,7 +1171,7 @@ pub mod sensor_statistics_summary {
             self.data_end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`SensorStatisticsSummary`](crate::model::SensorStatisticsSummary)
+        /// Consumes the builder and constructs a [`SensorStatisticsSummary`](crate::model::SensorStatisticsSummary).
         pub fn build(self) -> crate::model::SensorStatisticsSummary {
             crate::model::SensorStatisticsSummary {
                 component_name: self.component_name,
@@ -1171,7 +1192,7 @@ pub mod sensor_statistics_summary {
     }
 }
 impl SensorStatisticsSummary {
-    /// Creates a new builder-style object to manufacture [`SensorStatisticsSummary`](crate::model::SensorStatisticsSummary)
+    /// Creates a new builder-style object to manufacture [`SensorStatisticsSummary`](crate::model::SensorStatisticsSummary).
     pub fn builder() -> crate::model::sensor_statistics_summary::Builder {
         crate::model::sensor_statistics_summary::Builder::default()
     }
@@ -1182,8 +1203,10 @@ impl SensorStatisticsSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MonotonicValues {
     /// <p> Indicates whether there is a potential data issue related to having monotonic values. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatisticalIssueStatus>,
     /// <p> Indicates the monotonicity of values. Can be INCREASING, DECREASING, or STATIC. </p>
+    #[doc(hidden)]
     pub monotonicity: std::option::Option<crate::model::Monotonicity>,
 }
 impl MonotonicValues {
@@ -1204,11 +1227,10 @@ impl std::fmt::Debug for MonotonicValues {
         formatter.finish()
     }
 }
-/// See [`MonotonicValues`](crate::model::MonotonicValues)
+/// See [`MonotonicValues`](crate::model::MonotonicValues).
 pub mod monotonic_values {
 
-    /// A builder for [`MonotonicValues`](crate::model::MonotonicValues)
-    #[non_exhaustive]
+    /// A builder for [`MonotonicValues`](crate::model::MonotonicValues).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::StatisticalIssueStatus>,
@@ -1241,7 +1263,7 @@ pub mod monotonic_values {
             self.monotonicity = input;
             self
         }
-        /// Consumes the builder and constructs a [`MonotonicValues`](crate::model::MonotonicValues)
+        /// Consumes the builder and constructs a [`MonotonicValues`](crate::model::MonotonicValues).
         pub fn build(self) -> crate::model::MonotonicValues {
             crate::model::MonotonicValues {
                 status: self.status,
@@ -1251,7 +1273,7 @@ pub mod monotonic_values {
     }
 }
 impl MonotonicValues {
-    /// Creates a new builder-style object to manufacture [`MonotonicValues`](crate::model::MonotonicValues)
+    /// Creates a new builder-style object to manufacture [`MonotonicValues`](crate::model::MonotonicValues).
     pub fn builder() -> crate::model::monotonic_values::Builder {
         crate::model::monotonic_values::Builder::default()
     }
@@ -1376,10 +1398,13 @@ impl AsRef<str> for StatisticalIssueStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LargeTimestampGaps {
     /// <p> Indicates whether there is a potential data issue related to large gaps in timestamps. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatisticalIssueStatus>,
     /// <p> Indicates the number of large timestamp gaps, if there are any. </p>
+    #[doc(hidden)]
     pub number_of_large_timestamp_gaps: std::option::Option<i32>,
     /// <p> Indicates the size of the largest timestamp gap, in days. </p>
+    #[doc(hidden)]
     pub max_timestamp_gap_in_days: std::option::Option<i32>,
 }
 impl LargeTimestampGaps {
@@ -1408,11 +1433,10 @@ impl std::fmt::Debug for LargeTimestampGaps {
         formatter.finish()
     }
 }
-/// See [`LargeTimestampGaps`](crate::model::LargeTimestampGaps)
+/// See [`LargeTimestampGaps`](crate::model::LargeTimestampGaps).
 pub mod large_timestamp_gaps {
 
-    /// A builder for [`LargeTimestampGaps`](crate::model::LargeTimestampGaps)
-    #[non_exhaustive]
+    /// A builder for [`LargeTimestampGaps`](crate::model::LargeTimestampGaps).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::StatisticalIssueStatus>,
@@ -1456,7 +1480,7 @@ pub mod large_timestamp_gaps {
             self.max_timestamp_gap_in_days = input;
             self
         }
-        /// Consumes the builder and constructs a [`LargeTimestampGaps`](crate::model::LargeTimestampGaps)
+        /// Consumes the builder and constructs a [`LargeTimestampGaps`](crate::model::LargeTimestampGaps).
         pub fn build(self) -> crate::model::LargeTimestampGaps {
             crate::model::LargeTimestampGaps {
                 status: self.status,
@@ -1467,7 +1491,7 @@ pub mod large_timestamp_gaps {
     }
 }
 impl LargeTimestampGaps {
-    /// Creates a new builder-style object to manufacture [`LargeTimestampGaps`](crate::model::LargeTimestampGaps)
+    /// Creates a new builder-style object to manufacture [`LargeTimestampGaps`](crate::model::LargeTimestampGaps).
     pub fn builder() -> crate::model::large_timestamp_gaps::Builder {
         crate::model::large_timestamp_gaps::Builder::default()
     }
@@ -1478,6 +1502,7 @@ impl LargeTimestampGaps {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MultipleOperatingModes {
     /// <p> Indicates whether there is a potential data issue related to having multiple operating modes. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatisticalIssueStatus>,
 }
 impl MultipleOperatingModes {
@@ -1493,11 +1518,10 @@ impl std::fmt::Debug for MultipleOperatingModes {
         formatter.finish()
     }
 }
-/// See [`MultipleOperatingModes`](crate::model::MultipleOperatingModes)
+/// See [`MultipleOperatingModes`](crate::model::MultipleOperatingModes).
 pub mod multiple_operating_modes {
 
-    /// A builder for [`MultipleOperatingModes`](crate::model::MultipleOperatingModes)
-    #[non_exhaustive]
+    /// A builder for [`MultipleOperatingModes`](crate::model::MultipleOperatingModes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::StatisticalIssueStatus>,
@@ -1516,7 +1540,7 @@ pub mod multiple_operating_modes {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`MultipleOperatingModes`](crate::model::MultipleOperatingModes)
+        /// Consumes the builder and constructs a [`MultipleOperatingModes`](crate::model::MultipleOperatingModes).
         pub fn build(self) -> crate::model::MultipleOperatingModes {
             crate::model::MultipleOperatingModes {
                 status: self.status,
@@ -1525,7 +1549,7 @@ pub mod multiple_operating_modes {
     }
 }
 impl MultipleOperatingModes {
-    /// Creates a new builder-style object to manufacture [`MultipleOperatingModes`](crate::model::MultipleOperatingModes)
+    /// Creates a new builder-style object to manufacture [`MultipleOperatingModes`](crate::model::MultipleOperatingModes).
     pub fn builder() -> crate::model::multiple_operating_modes::Builder {
         crate::model::multiple_operating_modes::Builder::default()
     }
@@ -1536,8 +1560,10 @@ impl MultipleOperatingModes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CategoricalValues {
     /// <p> Indicates whether there is a potential data issue related to categorical values. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatisticalIssueStatus>,
     /// <p> Indicates the number of categories in the data. </p>
+    #[doc(hidden)]
     pub number_of_category: std::option::Option<i32>,
 }
 impl CategoricalValues {
@@ -1558,11 +1584,10 @@ impl std::fmt::Debug for CategoricalValues {
         formatter.finish()
     }
 }
-/// See [`CategoricalValues`](crate::model::CategoricalValues)
+/// See [`CategoricalValues`](crate::model::CategoricalValues).
 pub mod categorical_values {
 
-    /// A builder for [`CategoricalValues`](crate::model::CategoricalValues)
-    #[non_exhaustive]
+    /// A builder for [`CategoricalValues`](crate::model::CategoricalValues).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::StatisticalIssueStatus>,
@@ -1592,7 +1617,7 @@ pub mod categorical_values {
             self.number_of_category = input;
             self
         }
-        /// Consumes the builder and constructs a [`CategoricalValues`](crate::model::CategoricalValues)
+        /// Consumes the builder and constructs a [`CategoricalValues`](crate::model::CategoricalValues).
         pub fn build(self) -> crate::model::CategoricalValues {
             crate::model::CategoricalValues {
                 status: self.status,
@@ -1602,7 +1627,7 @@ pub mod categorical_values {
     }
 }
 impl CategoricalValues {
-    /// Creates a new builder-style object to manufacture [`CategoricalValues`](crate::model::CategoricalValues)
+    /// Creates a new builder-style object to manufacture [`CategoricalValues`](crate::model::CategoricalValues).
     pub fn builder() -> crate::model::categorical_values::Builder {
         crate::model::categorical_values::Builder::default()
     }
@@ -1613,8 +1638,10 @@ impl CategoricalValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CountPercent {
     /// <p> Indicates the count of occurences of the given statistic. </p>
+    #[doc(hidden)]
     pub count: std::option::Option<i32>,
     /// <p> Indicates the percentage of occurances of the given statistic. </p>
+    #[doc(hidden)]
     pub percentage: f32,
 }
 impl CountPercent {
@@ -1635,11 +1662,10 @@ impl std::fmt::Debug for CountPercent {
         formatter.finish()
     }
 }
-/// See [`CountPercent`](crate::model::CountPercent)
+/// See [`CountPercent`](crate::model::CountPercent).
 pub mod count_percent {
 
-    /// A builder for [`CountPercent`](crate::model::CountPercent)
-    #[non_exhaustive]
+    /// A builder for [`CountPercent`](crate::model::CountPercent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) count: std::option::Option<i32>,
@@ -1666,7 +1692,7 @@ pub mod count_percent {
             self.percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`CountPercent`](crate::model::CountPercent)
+        /// Consumes the builder and constructs a [`CountPercent`](crate::model::CountPercent).
         pub fn build(self) -> crate::model::CountPercent {
             crate::model::CountPercent {
                 count: self.count,
@@ -1676,7 +1702,7 @@ pub mod count_percent {
     }
 }
 impl CountPercent {
-    /// Creates a new builder-style object to manufacture [`CountPercent`](crate::model::CountPercent)
+    /// Creates a new builder-style object to manufacture [`CountPercent`](crate::model::CountPercent).
     pub fn builder() -> crate::model::count_percent::Builder {
         crate::model::count_percent::Builder::default()
     }
@@ -1687,16 +1713,22 @@ impl CountPercent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModelSummary {
     /// <p>The name of the ML model. </p>
+    #[doc(hidden)]
     pub model_name: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the ML model. </p>
+    #[doc(hidden)]
     pub model_arn: std::option::Option<std::string::String>,
     /// <p>The name of the dataset being used for the ML model. </p>
+    #[doc(hidden)]
     pub dataset_name: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the dataset used to create the model. </p>
+    #[doc(hidden)]
     pub dataset_arn: std::option::Option<std::string::String>,
     /// <p>Indicates the status of the ML model. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ModelStatus>,
     /// <p>The time at which the specific model was created. </p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ModelSummary {
@@ -1737,11 +1769,10 @@ impl std::fmt::Debug for ModelSummary {
         formatter.finish()
     }
 }
-/// See [`ModelSummary`](crate::model::ModelSummary)
+/// See [`ModelSummary`](crate::model::ModelSummary).
 pub mod model_summary {
 
-    /// A builder for [`ModelSummary`](crate::model::ModelSummary)
-    #[non_exhaustive]
+    /// A builder for [`ModelSummary`](crate::model::ModelSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_name: std::option::Option<std::string::String>,
@@ -1815,7 +1846,7 @@ pub mod model_summary {
             self.created_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModelSummary`](crate::model::ModelSummary)
+        /// Consumes the builder and constructs a [`ModelSummary`](crate::model::ModelSummary).
         pub fn build(self) -> crate::model::ModelSummary {
             crate::model::ModelSummary {
                 model_name: self.model_name,
@@ -1829,7 +1860,7 @@ pub mod model_summary {
     }
 }
 impl ModelSummary {
-    /// Creates a new builder-style object to manufacture [`ModelSummary`](crate::model::ModelSummary)
+    /// Creates a new builder-style object to manufacture [`ModelSummary`](crate::model::ModelSummary).
     pub fn builder() -> crate::model::model_summary::Builder {
         crate::model::model_summary::Builder::default()
     }
@@ -1899,18 +1930,25 @@ impl AsRef<str> for ModelStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InferenceSchedulerSummary {
     /// <p>The name of the ML model used for the inference scheduler. </p>
+    #[doc(hidden)]
     pub model_name: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the ML model used by the inference scheduler. </p>
+    #[doc(hidden)]
     pub model_arn: std::option::Option<std::string::String>,
     /// <p>The name of the inference scheduler. </p>
+    #[doc(hidden)]
     pub inference_scheduler_name: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the inference scheduler. </p>
+    #[doc(hidden)]
     pub inference_scheduler_arn: std::option::Option<std::string::String>,
     /// <p>Indicates the status of the inference scheduler. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::InferenceSchedulerStatus>,
     /// <p>A period of time (in minutes) by which inference on the data is delayed after the data starts. For instance, if an offset delay time of five minutes was selected, inference will not begin on the data until the first data measurement after the five minute mark. For example, if five minutes is selected, the inference scheduler will wake up at the configured frequency with the additional five minute delay time to check the customer S3 bucket. The customer can upload data at the same frequency and they don't need to stop and restart the scheduler when uploading new data. </p>
+    #[doc(hidden)]
     pub data_delay_offset_in_minutes: std::option::Option<i64>,
     /// <p>How often data is uploaded to the source S3 bucket for the input data. This value is the length of time between data uploads. For instance, if you select 5 minutes, Amazon Lookout for Equipment will upload the real-time data to the source bucket once every 5 minutes. This frequency also determines how often Amazon Lookout for Equipment starts a scheduled inference on your data. In this example, it starts once every 5 minutes. </p>
+    #[doc(hidden)]
     pub data_upload_frequency: std::option::Option<crate::model::DataUploadFrequency>,
 }
 impl InferenceSchedulerSummary {
@@ -1959,11 +1997,10 @@ impl std::fmt::Debug for InferenceSchedulerSummary {
         formatter.finish()
     }
 }
-/// See [`InferenceSchedulerSummary`](crate::model::InferenceSchedulerSummary)
+/// See [`InferenceSchedulerSummary`](crate::model::InferenceSchedulerSummary).
 pub mod inference_scheduler_summary {
 
-    /// A builder for [`InferenceSchedulerSummary`](crate::model::InferenceSchedulerSummary)
-    #[non_exhaustive]
+    /// A builder for [`InferenceSchedulerSummary`](crate::model::InferenceSchedulerSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_name: std::option::Option<std::string::String>,
@@ -2057,7 +2094,7 @@ pub mod inference_scheduler_summary {
             self.data_upload_frequency = input;
             self
         }
-        /// Consumes the builder and constructs a [`InferenceSchedulerSummary`](crate::model::InferenceSchedulerSummary)
+        /// Consumes the builder and constructs a [`InferenceSchedulerSummary`](crate::model::InferenceSchedulerSummary).
         pub fn build(self) -> crate::model::InferenceSchedulerSummary {
             crate::model::InferenceSchedulerSummary {
                 model_name: self.model_name,
@@ -2072,7 +2109,7 @@ pub mod inference_scheduler_summary {
     }
 }
 impl InferenceSchedulerSummary {
-    /// Creates a new builder-style object to manufacture [`InferenceSchedulerSummary`](crate::model::InferenceSchedulerSummary)
+    /// Creates a new builder-style object to manufacture [`InferenceSchedulerSummary`](crate::model::InferenceSchedulerSummary).
     pub fn builder() -> crate::model::inference_scheduler_summary::Builder {
         crate::model::inference_scheduler_summary::Builder::default()
     }
@@ -2083,28 +2120,40 @@ impl InferenceSchedulerSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InferenceExecutionSummary {
     /// <p>The name of the ML model being used for the inference execution. </p>
+    #[doc(hidden)]
     pub model_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the ML model used for the inference execution. </p>
+    #[doc(hidden)]
     pub model_arn: std::option::Option<std::string::String>,
     /// <p>The name of the inference scheduler being used for the inference execution. </p>
+    #[doc(hidden)]
     pub inference_scheduler_name: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the inference scheduler being used for the inference execution. </p>
+    #[doc(hidden)]
     pub inference_scheduler_arn: std::option::Option<std::string::String>,
     /// <p>Indicates the start time at which the inference scheduler began the specific inference execution. </p>
+    #[doc(hidden)]
     pub scheduled_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates the time reference in the dataset at which the inference execution began. </p>
+    #[doc(hidden)]
     pub data_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates the time reference in the dataset at which the inference execution stopped. </p>
+    #[doc(hidden)]
     pub data_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies configuration information for the input data for the inference scheduler, including delimiter, format, and dataset location. </p>
+    #[doc(hidden)]
     pub data_input_configuration: std::option::Option<crate::model::InferenceInputConfiguration>,
     /// <p> Specifies configuration information for the output results from for the inference execution, including the output Amazon S3 location. </p>
+    #[doc(hidden)]
     pub data_output_configuration: std::option::Option<crate::model::InferenceOutputConfiguration>,
     /// <p> </p>
+    #[doc(hidden)]
     pub customer_result_object: std::option::Option<crate::model::S3Object>,
     /// <p>Indicates the status of the inference execution. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::InferenceExecutionStatus>,
     /// <p> Specifies the reason for failure when an inference execution has failed. </p>
+    #[doc(hidden)]
     pub failed_reason: std::option::Option<std::string::String>,
 }
 impl InferenceExecutionSummary {
@@ -2179,11 +2228,10 @@ impl std::fmt::Debug for InferenceExecutionSummary {
         formatter.finish()
     }
 }
-/// See [`InferenceExecutionSummary`](crate::model::InferenceExecutionSummary)
+/// See [`InferenceExecutionSummary`](crate::model::InferenceExecutionSummary).
 pub mod inference_execution_summary {
 
-    /// A builder for [`InferenceExecutionSummary`](crate::model::InferenceExecutionSummary)
-    #[non_exhaustive]
+    /// A builder for [`InferenceExecutionSummary`](crate::model::InferenceExecutionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_name: std::option::Option<std::string::String>,
@@ -2358,7 +2406,7 @@ pub mod inference_execution_summary {
             self.failed_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`InferenceExecutionSummary`](crate::model::InferenceExecutionSummary)
+        /// Consumes the builder and constructs a [`InferenceExecutionSummary`](crate::model::InferenceExecutionSummary).
         pub fn build(self) -> crate::model::InferenceExecutionSummary {
             crate::model::InferenceExecutionSummary {
                 model_name: self.model_name,
@@ -2378,7 +2426,7 @@ pub mod inference_execution_summary {
     }
 }
 impl InferenceExecutionSummary {
-    /// Creates a new builder-style object to manufacture [`InferenceExecutionSummary`](crate::model::InferenceExecutionSummary)
+    /// Creates a new builder-style object to manufacture [`InferenceExecutionSummary`](crate::model::InferenceExecutionSummary).
     pub fn builder() -> crate::model::inference_execution_summary::Builder {
         crate::model::inference_execution_summary::Builder::default()
     }
@@ -2448,8 +2496,10 @@ impl AsRef<str> for InferenceExecutionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Object {
     /// <p>The name of the specific S3 bucket. </p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The AWS Key Management Service (AWS KMS) key being used to encrypt the S3 object. Without this key, data in the bucket is not accessible. </p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
 }
 impl S3Object {
@@ -2470,11 +2520,10 @@ impl std::fmt::Debug for S3Object {
         formatter.finish()
     }
 }
-/// See [`S3Object`](crate::model::S3Object)
+/// See [`S3Object`](crate::model::S3Object).
 pub mod s3_object {
 
-    /// A builder for [`S3Object`](crate::model::S3Object)
-    #[non_exhaustive]
+    /// A builder for [`S3Object`](crate::model::S3Object).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -2501,7 +2550,7 @@ pub mod s3_object {
             self.key = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Object`](crate::model::S3Object)
+        /// Consumes the builder and constructs a [`S3Object`](crate::model::S3Object).
         pub fn build(self) -> crate::model::S3Object {
             crate::model::S3Object {
                 bucket: self.bucket,
@@ -2511,9 +2560,176 @@ pub mod s3_object {
     }
 }
 impl S3Object {
-    /// Creates a new builder-style object to manufacture [`S3Object`](crate::model::S3Object)
+    /// Creates a new builder-style object to manufacture [`S3Object`](crate::model::S3Object).
     pub fn builder() -> crate::model::s3_object::Builder {
         crate::model::s3_object::Builder::default()
+    }
+}
+
+/// <p>Contains information about the specific inference event, including start and end time, diagnostics information, event duration and so on.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct InferenceEventSummary {
+    /// <p> The Amazon Resource Name (ARN) of the inference scheduler being used for the inference event. </p>
+    #[doc(hidden)]
+    pub inference_scheduler_arn: std::option::Option<std::string::String>,
+    /// <p>The name of the inference scheduler being used for the inference events. </p>
+    #[doc(hidden)]
+    pub inference_scheduler_name: std::option::Option<std::string::String>,
+    /// <p>Indicates the starting time of an inference event. </p>
+    #[doc(hidden)]
+    pub event_start_time: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>Indicates the ending time of an inference event. </p>
+    #[doc(hidden)]
+    pub event_end_time: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p> An array which specifies the names and values of all sensors contributing to an inference event.</p>
+    #[doc(hidden)]
+    pub diagnostics: std::option::Option<std::string::String>,
+    /// <p> Indicates the size of an inference event in seconds. </p>
+    #[doc(hidden)]
+    pub event_duration_in_seconds: std::option::Option<i64>,
+}
+impl InferenceEventSummary {
+    /// <p> The Amazon Resource Name (ARN) of the inference scheduler being used for the inference event. </p>
+    pub fn inference_scheduler_arn(&self) -> std::option::Option<&str> {
+        self.inference_scheduler_arn.as_deref()
+    }
+    /// <p>The name of the inference scheduler being used for the inference events. </p>
+    pub fn inference_scheduler_name(&self) -> std::option::Option<&str> {
+        self.inference_scheduler_name.as_deref()
+    }
+    /// <p>Indicates the starting time of an inference event. </p>
+    pub fn event_start_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.event_start_time.as_ref()
+    }
+    /// <p>Indicates the ending time of an inference event. </p>
+    pub fn event_end_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.event_end_time.as_ref()
+    }
+    /// <p> An array which specifies the names and values of all sensors contributing to an inference event.</p>
+    pub fn diagnostics(&self) -> std::option::Option<&str> {
+        self.diagnostics.as_deref()
+    }
+    /// <p> Indicates the size of an inference event in seconds. </p>
+    pub fn event_duration_in_seconds(&self) -> std::option::Option<i64> {
+        self.event_duration_in_seconds
+    }
+}
+impl std::fmt::Debug for InferenceEventSummary {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("InferenceEventSummary");
+        formatter.field("inference_scheduler_arn", &self.inference_scheduler_arn);
+        formatter.field("inference_scheduler_name", &self.inference_scheduler_name);
+        formatter.field("event_start_time", &self.event_start_time);
+        formatter.field("event_end_time", &self.event_end_time);
+        formatter.field("diagnostics", &self.diagnostics);
+        formatter.field("event_duration_in_seconds", &self.event_duration_in_seconds);
+        formatter.finish()
+    }
+}
+/// See [`InferenceEventSummary`](crate::model::InferenceEventSummary).
+pub mod inference_event_summary {
+
+    /// A builder for [`InferenceEventSummary`](crate::model::InferenceEventSummary).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) inference_scheduler_arn: std::option::Option<std::string::String>,
+        pub(crate) inference_scheduler_name: std::option::Option<std::string::String>,
+        pub(crate) event_start_time: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) event_end_time: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) diagnostics: std::option::Option<std::string::String>,
+        pub(crate) event_duration_in_seconds: std::option::Option<i64>,
+    }
+    impl Builder {
+        /// <p> The Amazon Resource Name (ARN) of the inference scheduler being used for the inference event. </p>
+        pub fn inference_scheduler_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inference_scheduler_arn = Some(input.into());
+            self
+        }
+        /// <p> The Amazon Resource Name (ARN) of the inference scheduler being used for the inference event. </p>
+        pub fn set_inference_scheduler_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inference_scheduler_arn = input;
+            self
+        }
+        /// <p>The name of the inference scheduler being used for the inference events. </p>
+        pub fn inference_scheduler_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inference_scheduler_name = Some(input.into());
+            self
+        }
+        /// <p>The name of the inference scheduler being used for the inference events. </p>
+        pub fn set_inference_scheduler_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inference_scheduler_name = input;
+            self
+        }
+        /// <p>Indicates the starting time of an inference event. </p>
+        pub fn event_start_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.event_start_time = Some(input);
+            self
+        }
+        /// <p>Indicates the starting time of an inference event. </p>
+        pub fn set_event_start_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.event_start_time = input;
+            self
+        }
+        /// <p>Indicates the ending time of an inference event. </p>
+        pub fn event_end_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.event_end_time = Some(input);
+            self
+        }
+        /// <p>Indicates the ending time of an inference event. </p>
+        pub fn set_event_end_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.event_end_time = input;
+            self
+        }
+        /// <p> An array which specifies the names and values of all sensors contributing to an inference event.</p>
+        pub fn diagnostics(mut self, input: impl Into<std::string::String>) -> Self {
+            self.diagnostics = Some(input.into());
+            self
+        }
+        /// <p> An array which specifies the names and values of all sensors contributing to an inference event.</p>
+        pub fn set_diagnostics(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.diagnostics = input;
+            self
+        }
+        /// <p> Indicates the size of an inference event in seconds. </p>
+        pub fn event_duration_in_seconds(mut self, input: i64) -> Self {
+            self.event_duration_in_seconds = Some(input);
+            self
+        }
+        /// <p> Indicates the size of an inference event in seconds. </p>
+        pub fn set_event_duration_in_seconds(mut self, input: std::option::Option<i64>) -> Self {
+            self.event_duration_in_seconds = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`InferenceEventSummary`](crate::model::InferenceEventSummary).
+        pub fn build(self) -> crate::model::InferenceEventSummary {
+            crate::model::InferenceEventSummary {
+                inference_scheduler_arn: self.inference_scheduler_arn,
+                inference_scheduler_name: self.inference_scheduler_name,
+                event_start_time: self.event_start_time,
+                event_end_time: self.event_end_time,
+                diagnostics: self.diagnostics,
+                event_duration_in_seconds: self.event_duration_in_seconds,
+            }
+        }
+    }
+}
+impl InferenceEventSummary {
+    /// Creates a new builder-style object to manufacture [`InferenceEventSummary`](crate::model::InferenceEventSummary).
+    pub fn builder() -> crate::model::inference_event_summary::Builder {
+        crate::model::inference_event_summary::Builder::default()
     }
 }
 
@@ -2522,12 +2738,16 @@ impl S3Object {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatasetSummary {
     /// <p>The name of the dataset. </p>
+    #[doc(hidden)]
     pub dataset_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the specified dataset. </p>
+    #[doc(hidden)]
     pub dataset_arn: std::option::Option<std::string::String>,
     /// <p>Indicates the status of the dataset. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DatasetStatus>,
     /// <p>The time at which the dataset was created in Amazon Lookout for Equipment. </p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DatasetSummary {
@@ -2558,11 +2778,10 @@ impl std::fmt::Debug for DatasetSummary {
         formatter.finish()
     }
 }
-/// See [`DatasetSummary`](crate::model::DatasetSummary)
+/// See [`DatasetSummary`](crate::model::DatasetSummary).
 pub mod dataset_summary {
 
-    /// A builder for [`DatasetSummary`](crate::model::DatasetSummary)
-    #[non_exhaustive]
+    /// A builder for [`DatasetSummary`](crate::model::DatasetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_name: std::option::Option<std::string::String>,
@@ -2617,7 +2836,7 @@ pub mod dataset_summary {
             self.created_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatasetSummary`](crate::model::DatasetSummary)
+        /// Consumes the builder and constructs a [`DatasetSummary`](crate::model::DatasetSummary).
         pub fn build(self) -> crate::model::DatasetSummary {
             crate::model::DatasetSummary {
                 dataset_name: self.dataset_name,
@@ -2629,7 +2848,7 @@ pub mod dataset_summary {
     }
 }
 impl DatasetSummary {
-    /// Creates a new builder-style object to manufacture [`DatasetSummary`](crate::model::DatasetSummary)
+    /// Creates a new builder-style object to manufacture [`DatasetSummary`](crate::model::DatasetSummary).
     pub fn builder() -> crate::model::dataset_summary::Builder {
         crate::model::dataset_summary::Builder::default()
     }
@@ -2699,15 +2918,20 @@ impl AsRef<str> for DatasetStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataIngestionJobSummary {
     /// <p>Indicates the job ID of the data ingestion job. </p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The name of the dataset used for the data ingestion job. </p>
+    #[doc(hidden)]
     pub dataset_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the dataset used in the data ingestion job. </p>
+    #[doc(hidden)]
     pub dataset_arn: std::option::Option<std::string::String>,
     /// <p> Specifies information for the input data for the data inference job, including data Amazon S3 location parameters. </p>
+    #[doc(hidden)]
     pub ingestion_input_configuration:
         std::option::Option<crate::model::IngestionInputConfiguration>,
     /// <p>Indicates the status of the data ingestion job. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::IngestionJobStatus>,
 }
 impl DataIngestionJobSummary {
@@ -2748,11 +2972,10 @@ impl std::fmt::Debug for DataIngestionJobSummary {
         formatter.finish()
     }
 }
-/// See [`DataIngestionJobSummary`](crate::model::DataIngestionJobSummary)
+/// See [`DataIngestionJobSummary`](crate::model::DataIngestionJobSummary).
 pub mod data_ingestion_job_summary {
 
-    /// A builder for [`DataIngestionJobSummary`](crate::model::DataIngestionJobSummary)
-    #[non_exhaustive]
+    /// A builder for [`DataIngestionJobSummary`](crate::model::DataIngestionJobSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -2822,7 +3045,7 @@ pub mod data_ingestion_job_summary {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataIngestionJobSummary`](crate::model::DataIngestionJobSummary)
+        /// Consumes the builder and constructs a [`DataIngestionJobSummary`](crate::model::DataIngestionJobSummary).
         pub fn build(self) -> crate::model::DataIngestionJobSummary {
             crate::model::DataIngestionJobSummary {
                 job_id: self.job_id,
@@ -2835,7 +3058,7 @@ pub mod data_ingestion_job_summary {
     }
 }
 impl DataIngestionJobSummary {
-    /// Creates a new builder-style object to manufacture [`DataIngestionJobSummary`](crate::model::DataIngestionJobSummary)
+    /// Creates a new builder-style object to manufacture [`DataIngestionJobSummary`](crate::model::DataIngestionJobSummary).
     pub fn builder() -> crate::model::data_ingestion_job_summary::Builder {
         crate::model::data_ingestion_job_summary::Builder::default()
     }
@@ -2848,6 +3071,7 @@ impl DataIngestionJobSummary {
 pub struct DataPreProcessingConfiguration {
     /// <p>The sampling rate of the data after post processing by Amazon Lookout for Equipment. For example, if you provide data that has been collected at a 1 second level and you want the system to resample the data at a 1 minute rate before training, the <code>TargetSamplingRate</code> is 1 minute.</p>
     /// <p>When providing a value for the <code>TargetSamplingRate</code>, you must attach the prefix "PT" to the rate you want. The value for a 1 second rate is therefore <i>PT1S</i>, the value for a 15 minute rate is <i>PT15M</i>, and the value for a 1 hour rate is <i>PT1H</i> </p>
+    #[doc(hidden)]
     pub target_sampling_rate: std::option::Option<crate::model::TargetSamplingRate>,
 }
 impl DataPreProcessingConfiguration {
@@ -2864,11 +3088,10 @@ impl std::fmt::Debug for DataPreProcessingConfiguration {
         formatter.finish()
     }
 }
-/// See [`DataPreProcessingConfiguration`](crate::model::DataPreProcessingConfiguration)
+/// See [`DataPreProcessingConfiguration`](crate::model::DataPreProcessingConfiguration).
 pub mod data_pre_processing_configuration {
 
-    /// A builder for [`DataPreProcessingConfiguration`](crate::model::DataPreProcessingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DataPreProcessingConfiguration`](crate::model::DataPreProcessingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_sampling_rate: std::option::Option<crate::model::TargetSamplingRate>,
@@ -2889,7 +3112,7 @@ pub mod data_pre_processing_configuration {
             self.target_sampling_rate = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataPreProcessingConfiguration`](crate::model::DataPreProcessingConfiguration)
+        /// Consumes the builder and constructs a [`DataPreProcessingConfiguration`](crate::model::DataPreProcessingConfiguration).
         pub fn build(self) -> crate::model::DataPreProcessingConfiguration {
             crate::model::DataPreProcessingConfiguration {
                 target_sampling_rate: self.target_sampling_rate,
@@ -2898,7 +3121,7 @@ pub mod data_pre_processing_configuration {
     }
 }
 impl DataPreProcessingConfiguration {
-    /// Creates a new builder-style object to manufacture [`DataPreProcessingConfiguration`](crate::model::DataPreProcessingConfiguration)
+    /// Creates a new builder-style object to manufacture [`DataPreProcessingConfiguration`](crate::model::DataPreProcessingConfiguration).
     pub fn builder() -> crate::model::data_pre_processing_configuration::Builder {
         crate::model::data_pre_processing_configuration::Builder::default()
     }
@@ -3003,6 +3226,7 @@ impl AsRef<str> for TargetSamplingRate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LabelsInputConfiguration {
     /// <p>Contains location information for the S3 location being used for label data. </p>
+    #[doc(hidden)]
     pub s3_input_configuration: std::option::Option<crate::model::LabelsS3InputConfiguration>,
 }
 impl LabelsInputConfiguration {
@@ -3020,11 +3244,10 @@ impl std::fmt::Debug for LabelsInputConfiguration {
         formatter.finish()
     }
 }
-/// See [`LabelsInputConfiguration`](crate::model::LabelsInputConfiguration)
+/// See [`LabelsInputConfiguration`](crate::model::LabelsInputConfiguration).
 pub mod labels_input_configuration {
 
-    /// A builder for [`LabelsInputConfiguration`](crate::model::LabelsInputConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LabelsInputConfiguration`](crate::model::LabelsInputConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_input_configuration:
@@ -3047,7 +3270,7 @@ pub mod labels_input_configuration {
             self.s3_input_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`LabelsInputConfiguration`](crate::model::LabelsInputConfiguration)
+        /// Consumes the builder and constructs a [`LabelsInputConfiguration`](crate::model::LabelsInputConfiguration).
         pub fn build(self) -> crate::model::LabelsInputConfiguration {
             crate::model::LabelsInputConfiguration {
                 s3_input_configuration: self.s3_input_configuration,
@@ -3056,7 +3279,7 @@ pub mod labels_input_configuration {
     }
 }
 impl LabelsInputConfiguration {
-    /// Creates a new builder-style object to manufacture [`LabelsInputConfiguration`](crate::model::LabelsInputConfiguration)
+    /// Creates a new builder-style object to manufacture [`LabelsInputConfiguration`](crate::model::LabelsInputConfiguration).
     pub fn builder() -> crate::model::labels_input_configuration::Builder {
         crate::model::labels_input_configuration::Builder::default()
     }
@@ -3067,8 +3290,10 @@ impl LabelsInputConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LabelsS3InputConfiguration {
     /// <p>The name of the S3 bucket holding the label data. </p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p> The prefix for the S3 bucket used for the label data. </p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl LabelsS3InputConfiguration {
@@ -3089,11 +3314,10 @@ impl std::fmt::Debug for LabelsS3InputConfiguration {
         formatter.finish()
     }
 }
-/// See [`LabelsS3InputConfiguration`](crate::model::LabelsS3InputConfiguration)
+/// See [`LabelsS3InputConfiguration`](crate::model::LabelsS3InputConfiguration).
 pub mod labels_s3_input_configuration {
 
-    /// A builder for [`LabelsS3InputConfiguration`](crate::model::LabelsS3InputConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LabelsS3InputConfiguration`](crate::model::LabelsS3InputConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -3120,7 +3344,7 @@ pub mod labels_s3_input_configuration {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`LabelsS3InputConfiguration`](crate::model::LabelsS3InputConfiguration)
+        /// Consumes the builder and constructs a [`LabelsS3InputConfiguration`](crate::model::LabelsS3InputConfiguration).
         pub fn build(self) -> crate::model::LabelsS3InputConfiguration {
             crate::model::LabelsS3InputConfiguration {
                 bucket: self.bucket,
@@ -3130,7 +3354,7 @@ pub mod labels_s3_input_configuration {
     }
 }
 impl LabelsS3InputConfiguration {
-    /// Creates a new builder-style object to manufacture [`LabelsS3InputConfiguration`](crate::model::LabelsS3InputConfiguration)
+    /// Creates a new builder-style object to manufacture [`LabelsS3InputConfiguration`](crate::model::LabelsS3InputConfiguration).
     pub fn builder() -> crate::model::labels_s3_input_configuration::Builder {
         crate::model::labels_s3_input_configuration::Builder::default()
     }
@@ -3141,10 +3365,13 @@ impl LabelsS3InputConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IngestedFilesSummary {
     /// <p>Indicates the total number of files that were submitted for ingestion.</p>
+    #[doc(hidden)]
     pub total_number_of_files: std::option::Option<i32>,
     /// <p>Indicates the number of files that were successfully ingested.</p>
+    #[doc(hidden)]
     pub ingested_number_of_files: std::option::Option<i32>,
     /// <p>Indicates the number of files that were discarded. A file could be discarded because its format is invalid (for example, a jpg or pdf) or not readable.</p>
+    #[doc(hidden)]
     pub discarded_files: std::option::Option<std::vec::Vec<crate::model::S3Object>>,
 }
 impl IngestedFilesSummary {
@@ -3170,11 +3397,10 @@ impl std::fmt::Debug for IngestedFilesSummary {
         formatter.finish()
     }
 }
-/// See [`IngestedFilesSummary`](crate::model::IngestedFilesSummary)
+/// See [`IngestedFilesSummary`](crate::model::IngestedFilesSummary).
 pub mod ingested_files_summary {
 
-    /// A builder for [`IngestedFilesSummary`](crate::model::IngestedFilesSummary)
-    #[non_exhaustive]
+    /// A builder for [`IngestedFilesSummary`](crate::model::IngestedFilesSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_number_of_files: std::option::Option<i32>,
@@ -3221,7 +3447,7 @@ pub mod ingested_files_summary {
             self.discarded_files = input;
             self
         }
-        /// Consumes the builder and constructs a [`IngestedFilesSummary`](crate::model::IngestedFilesSummary)
+        /// Consumes the builder and constructs a [`IngestedFilesSummary`](crate::model::IngestedFilesSummary).
         pub fn build(self) -> crate::model::IngestedFilesSummary {
             crate::model::IngestedFilesSummary {
                 total_number_of_files: self.total_number_of_files,
@@ -3232,7 +3458,7 @@ pub mod ingested_files_summary {
     }
 }
 impl IngestedFilesSummary {
-    /// Creates a new builder-style object to manufacture [`IngestedFilesSummary`](crate::model::IngestedFilesSummary)
+    /// Creates a new builder-style object to manufacture [`IngestedFilesSummary`](crate::model::IngestedFilesSummary).
     pub fn builder() -> crate::model::ingested_files_summary::Builder {
         crate::model::ingested_files_summary::Builder::default()
     }
@@ -3243,14 +3469,19 @@ impl IngestedFilesSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataQualitySummary {
     /// <p> Parameter that gives information about insufficient data for sensors in the dataset. This includes information about those sensors that have complete data missing and those with a short date range. </p>
+    #[doc(hidden)]
     pub insufficient_sensor_data: std::option::Option<crate::model::InsufficientSensorData>,
     /// <p> Parameter that gives information about data that is missing over all the sensors in the input data. </p>
+    #[doc(hidden)]
     pub missing_sensor_data: std::option::Option<crate::model::MissingSensorData>,
     /// <p> Parameter that gives information about data that is invalid over all the sensors in the input data. </p>
+    #[doc(hidden)]
     pub invalid_sensor_data: std::option::Option<crate::model::InvalidSensorData>,
     /// <p> Parameter that gives information about unsupported timestamps in the input data. </p>
+    #[doc(hidden)]
     pub unsupported_timestamps: std::option::Option<crate::model::UnsupportedTimestamps>,
     /// <p> Parameter that gives information about duplicate timestamps in the input data. </p>
+    #[doc(hidden)]
     pub duplicate_timestamps: std::option::Option<crate::model::DuplicateTimestamps>,
 }
 impl DataQualitySummary {
@@ -3290,11 +3521,10 @@ impl std::fmt::Debug for DataQualitySummary {
         formatter.finish()
     }
 }
-/// See [`DataQualitySummary`](crate::model::DataQualitySummary)
+/// See [`DataQualitySummary`](crate::model::DataQualitySummary).
 pub mod data_quality_summary {
 
-    /// A builder for [`DataQualitySummary`](crate::model::DataQualitySummary)
-    #[non_exhaustive]
+    /// A builder for [`DataQualitySummary`](crate::model::DataQualitySummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) insufficient_sensor_data:
@@ -3376,7 +3606,7 @@ pub mod data_quality_summary {
             self.duplicate_timestamps = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataQualitySummary`](crate::model::DataQualitySummary)
+        /// Consumes the builder and constructs a [`DataQualitySummary`](crate::model::DataQualitySummary).
         pub fn build(self) -> crate::model::DataQualitySummary {
             crate::model::DataQualitySummary {
                 insufficient_sensor_data: self.insufficient_sensor_data,
@@ -3389,7 +3619,7 @@ pub mod data_quality_summary {
     }
 }
 impl DataQualitySummary {
-    /// Creates a new builder-style object to manufacture [`DataQualitySummary`](crate::model::DataQualitySummary)
+    /// Creates a new builder-style object to manufacture [`DataQualitySummary`](crate::model::DataQualitySummary).
     pub fn builder() -> crate::model::data_quality_summary::Builder {
         crate::model::data_quality_summary::Builder::default()
     }
@@ -3400,6 +3630,7 @@ impl DataQualitySummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DuplicateTimestamps {
     /// <p> Indicates the total number of duplicate timestamps. </p>
+    #[doc(hidden)]
     pub total_number_of_duplicate_timestamps: std::option::Option<i32>,
 }
 impl DuplicateTimestamps {
@@ -3418,11 +3649,10 @@ impl std::fmt::Debug for DuplicateTimestamps {
         formatter.finish()
     }
 }
-/// See [`DuplicateTimestamps`](crate::model::DuplicateTimestamps)
+/// See [`DuplicateTimestamps`](crate::model::DuplicateTimestamps).
 pub mod duplicate_timestamps {
 
-    /// A builder for [`DuplicateTimestamps`](crate::model::DuplicateTimestamps)
-    #[non_exhaustive]
+    /// A builder for [`DuplicateTimestamps`](crate::model::DuplicateTimestamps).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_number_of_duplicate_timestamps: std::option::Option<i32>,
@@ -3441,7 +3671,7 @@ pub mod duplicate_timestamps {
             self.total_number_of_duplicate_timestamps = input;
             self
         }
-        /// Consumes the builder and constructs a [`DuplicateTimestamps`](crate::model::DuplicateTimestamps)
+        /// Consumes the builder and constructs a [`DuplicateTimestamps`](crate::model::DuplicateTimestamps).
         pub fn build(self) -> crate::model::DuplicateTimestamps {
             crate::model::DuplicateTimestamps {
                 total_number_of_duplicate_timestamps: self.total_number_of_duplicate_timestamps,
@@ -3450,7 +3680,7 @@ pub mod duplicate_timestamps {
     }
 }
 impl DuplicateTimestamps {
-    /// Creates a new builder-style object to manufacture [`DuplicateTimestamps`](crate::model::DuplicateTimestamps)
+    /// Creates a new builder-style object to manufacture [`DuplicateTimestamps`](crate::model::DuplicateTimestamps).
     pub fn builder() -> crate::model::duplicate_timestamps::Builder {
         crate::model::duplicate_timestamps::Builder::default()
     }
@@ -3461,6 +3691,7 @@ impl DuplicateTimestamps {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UnsupportedTimestamps {
     /// <p> Indicates the total number of unsupported timestamps across the ingested data. </p>
+    #[doc(hidden)]
     pub total_number_of_unsupported_timestamps: std::option::Option<i32>,
 }
 impl UnsupportedTimestamps {
@@ -3479,11 +3710,10 @@ impl std::fmt::Debug for UnsupportedTimestamps {
         formatter.finish()
     }
 }
-/// See [`UnsupportedTimestamps`](crate::model::UnsupportedTimestamps)
+/// See [`UnsupportedTimestamps`](crate::model::UnsupportedTimestamps).
 pub mod unsupported_timestamps {
 
-    /// A builder for [`UnsupportedTimestamps`](crate::model::UnsupportedTimestamps)
-    #[non_exhaustive]
+    /// A builder for [`UnsupportedTimestamps`](crate::model::UnsupportedTimestamps).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_number_of_unsupported_timestamps: std::option::Option<i32>,
@@ -3502,7 +3732,7 @@ pub mod unsupported_timestamps {
             self.total_number_of_unsupported_timestamps = input;
             self
         }
-        /// Consumes the builder and constructs a [`UnsupportedTimestamps`](crate::model::UnsupportedTimestamps)
+        /// Consumes the builder and constructs a [`UnsupportedTimestamps`](crate::model::UnsupportedTimestamps).
         pub fn build(self) -> crate::model::UnsupportedTimestamps {
             crate::model::UnsupportedTimestamps {
                 total_number_of_unsupported_timestamps: self.total_number_of_unsupported_timestamps,
@@ -3511,7 +3741,7 @@ pub mod unsupported_timestamps {
     }
 }
 impl UnsupportedTimestamps {
-    /// Creates a new builder-style object to manufacture [`UnsupportedTimestamps`](crate::model::UnsupportedTimestamps)
+    /// Creates a new builder-style object to manufacture [`UnsupportedTimestamps`](crate::model::UnsupportedTimestamps).
     pub fn builder() -> crate::model::unsupported_timestamps::Builder {
         crate::model::unsupported_timestamps::Builder::default()
     }
@@ -3522,8 +3752,10 @@ impl UnsupportedTimestamps {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InvalidSensorData {
     /// <p> Indicates the number of sensors that have at least some invalid values. </p>
+    #[doc(hidden)]
     pub affected_sensor_count: std::option::Option<i32>,
     /// <p> Indicates the total number of invalid values across all the sensors. </p>
+    #[doc(hidden)]
     pub total_number_of_invalid_values: std::option::Option<i32>,
 }
 impl InvalidSensorData {
@@ -3547,11 +3779,10 @@ impl std::fmt::Debug for InvalidSensorData {
         formatter.finish()
     }
 }
-/// See [`InvalidSensorData`](crate::model::InvalidSensorData)
+/// See [`InvalidSensorData`](crate::model::InvalidSensorData).
 pub mod invalid_sensor_data {
 
-    /// A builder for [`InvalidSensorData`](crate::model::InvalidSensorData)
-    #[non_exhaustive]
+    /// A builder for [`InvalidSensorData`](crate::model::InvalidSensorData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) affected_sensor_count: std::option::Option<i32>,
@@ -3581,7 +3812,7 @@ pub mod invalid_sensor_data {
             self.total_number_of_invalid_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidSensorData`](crate::model::InvalidSensorData)
+        /// Consumes the builder and constructs a [`InvalidSensorData`](crate::model::InvalidSensorData).
         pub fn build(self) -> crate::model::InvalidSensorData {
             crate::model::InvalidSensorData {
                 affected_sensor_count: self.affected_sensor_count,
@@ -3591,7 +3822,7 @@ pub mod invalid_sensor_data {
     }
 }
 impl InvalidSensorData {
-    /// Creates a new builder-style object to manufacture [`InvalidSensorData`](crate::model::InvalidSensorData)
+    /// Creates a new builder-style object to manufacture [`InvalidSensorData`](crate::model::InvalidSensorData).
     pub fn builder() -> crate::model::invalid_sensor_data::Builder {
         crate::model::invalid_sensor_data::Builder::default()
     }
@@ -3602,8 +3833,10 @@ impl InvalidSensorData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MissingSensorData {
     /// <p> Indicates the number of sensors that have atleast some data missing. </p>
+    #[doc(hidden)]
     pub affected_sensor_count: std::option::Option<i32>,
     /// <p> Indicates the total number of missing values across all the sensors. </p>
+    #[doc(hidden)]
     pub total_number_of_missing_values: std::option::Option<i32>,
 }
 impl MissingSensorData {
@@ -3627,11 +3860,10 @@ impl std::fmt::Debug for MissingSensorData {
         formatter.finish()
     }
 }
-/// See [`MissingSensorData`](crate::model::MissingSensorData)
+/// See [`MissingSensorData`](crate::model::MissingSensorData).
 pub mod missing_sensor_data {
 
-    /// A builder for [`MissingSensorData`](crate::model::MissingSensorData)
-    #[non_exhaustive]
+    /// A builder for [`MissingSensorData`](crate::model::MissingSensorData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) affected_sensor_count: std::option::Option<i32>,
@@ -3661,7 +3893,7 @@ pub mod missing_sensor_data {
             self.total_number_of_missing_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`MissingSensorData`](crate::model::MissingSensorData)
+        /// Consumes the builder and constructs a [`MissingSensorData`](crate::model::MissingSensorData).
         pub fn build(self) -> crate::model::MissingSensorData {
             crate::model::MissingSensorData {
                 affected_sensor_count: self.affected_sensor_count,
@@ -3671,7 +3903,7 @@ pub mod missing_sensor_data {
     }
 }
 impl MissingSensorData {
-    /// Creates a new builder-style object to manufacture [`MissingSensorData`](crate::model::MissingSensorData)
+    /// Creates a new builder-style object to manufacture [`MissingSensorData`](crate::model::MissingSensorData).
     pub fn builder() -> crate::model::missing_sensor_data::Builder {
         crate::model::missing_sensor_data::Builder::default()
     }
@@ -3682,8 +3914,10 @@ impl MissingSensorData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InsufficientSensorData {
     /// <p> Parameter that describes the total number of sensors that have data completely missing for it. </p>
+    #[doc(hidden)]
     pub missing_complete_sensor_data: std::option::Option<crate::model::MissingCompleteSensorData>,
     /// <p> Parameter that describes the total number of sensors that have a short date range of less than 90 days of data overall. </p>
+    #[doc(hidden)]
     pub sensors_with_short_date_range: std::option::Option<crate::model::SensorsWithShortDateRange>,
 }
 impl InsufficientSensorData {
@@ -3714,11 +3948,10 @@ impl std::fmt::Debug for InsufficientSensorData {
         formatter.finish()
     }
 }
-/// See [`InsufficientSensorData`](crate::model::InsufficientSensorData)
+/// See [`InsufficientSensorData`](crate::model::InsufficientSensorData).
 pub mod insufficient_sensor_data {
 
-    /// A builder for [`InsufficientSensorData`](crate::model::InsufficientSensorData)
-    #[non_exhaustive]
+    /// A builder for [`InsufficientSensorData`](crate::model::InsufficientSensorData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) missing_complete_sensor_data:
@@ -3759,7 +3992,7 @@ pub mod insufficient_sensor_data {
             self.sensors_with_short_date_range = input;
             self
         }
-        /// Consumes the builder and constructs a [`InsufficientSensorData`](crate::model::InsufficientSensorData)
+        /// Consumes the builder and constructs a [`InsufficientSensorData`](crate::model::InsufficientSensorData).
         pub fn build(self) -> crate::model::InsufficientSensorData {
             crate::model::InsufficientSensorData {
                 missing_complete_sensor_data: self.missing_complete_sensor_data,
@@ -3769,7 +4002,7 @@ pub mod insufficient_sensor_data {
     }
 }
 impl InsufficientSensorData {
-    /// Creates a new builder-style object to manufacture [`InsufficientSensorData`](crate::model::InsufficientSensorData)
+    /// Creates a new builder-style object to manufacture [`InsufficientSensorData`](crate::model::InsufficientSensorData).
     pub fn builder() -> crate::model::insufficient_sensor_data::Builder {
         crate::model::insufficient_sensor_data::Builder::default()
     }
@@ -3780,6 +4013,7 @@ impl InsufficientSensorData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SensorsWithShortDateRange {
     /// <p> Indicates the number of sensors that have less than 90 days of data. </p>
+    #[doc(hidden)]
     pub affected_sensor_count: std::option::Option<i32>,
 }
 impl SensorsWithShortDateRange {
@@ -3795,11 +4029,10 @@ impl std::fmt::Debug for SensorsWithShortDateRange {
         formatter.finish()
     }
 }
-/// See [`SensorsWithShortDateRange`](crate::model::SensorsWithShortDateRange)
+/// See [`SensorsWithShortDateRange`](crate::model::SensorsWithShortDateRange).
 pub mod sensors_with_short_date_range {
 
-    /// A builder for [`SensorsWithShortDateRange`](crate::model::SensorsWithShortDateRange)
-    #[non_exhaustive]
+    /// A builder for [`SensorsWithShortDateRange`](crate::model::SensorsWithShortDateRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) affected_sensor_count: std::option::Option<i32>,
@@ -3815,7 +4048,7 @@ pub mod sensors_with_short_date_range {
             self.affected_sensor_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`SensorsWithShortDateRange`](crate::model::SensorsWithShortDateRange)
+        /// Consumes the builder and constructs a [`SensorsWithShortDateRange`](crate::model::SensorsWithShortDateRange).
         pub fn build(self) -> crate::model::SensorsWithShortDateRange {
             crate::model::SensorsWithShortDateRange {
                 affected_sensor_count: self.affected_sensor_count,
@@ -3824,7 +4057,7 @@ pub mod sensors_with_short_date_range {
     }
 }
 impl SensorsWithShortDateRange {
-    /// Creates a new builder-style object to manufacture [`SensorsWithShortDateRange`](crate::model::SensorsWithShortDateRange)
+    /// Creates a new builder-style object to manufacture [`SensorsWithShortDateRange`](crate::model::SensorsWithShortDateRange).
     pub fn builder() -> crate::model::sensors_with_short_date_range::Builder {
         crate::model::sensors_with_short_date_range::Builder::default()
     }
@@ -3835,6 +4068,7 @@ impl SensorsWithShortDateRange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MissingCompleteSensorData {
     /// <p> Indicates the number of sensors that have data missing completely. </p>
+    #[doc(hidden)]
     pub affected_sensor_count: std::option::Option<i32>,
 }
 impl MissingCompleteSensorData {
@@ -3850,11 +4084,10 @@ impl std::fmt::Debug for MissingCompleteSensorData {
         formatter.finish()
     }
 }
-/// See [`MissingCompleteSensorData`](crate::model::MissingCompleteSensorData)
+/// See [`MissingCompleteSensorData`](crate::model::MissingCompleteSensorData).
 pub mod missing_complete_sensor_data {
 
-    /// A builder for [`MissingCompleteSensorData`](crate::model::MissingCompleteSensorData)
-    #[non_exhaustive]
+    /// A builder for [`MissingCompleteSensorData`](crate::model::MissingCompleteSensorData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) affected_sensor_count: std::option::Option<i32>,
@@ -3870,7 +4103,7 @@ pub mod missing_complete_sensor_data {
             self.affected_sensor_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`MissingCompleteSensorData`](crate::model::MissingCompleteSensorData)
+        /// Consumes the builder and constructs a [`MissingCompleteSensorData`](crate::model::MissingCompleteSensorData).
         pub fn build(self) -> crate::model::MissingCompleteSensorData {
             crate::model::MissingCompleteSensorData {
                 affected_sensor_count: self.affected_sensor_count,
@@ -3879,7 +4112,7 @@ pub mod missing_complete_sensor_data {
     }
 }
 impl MissingCompleteSensorData {
-    /// Creates a new builder-style object to manufacture [`MissingCompleteSensorData`](crate::model::MissingCompleteSensorData)
+    /// Creates a new builder-style object to manufacture [`MissingCompleteSensorData`](crate::model::MissingCompleteSensorData).
     pub fn builder() -> crate::model::missing_complete_sensor_data::Builder {
         crate::model::missing_complete_sensor_data::Builder::default()
     }
@@ -3890,6 +4123,7 @@ impl MissingCompleteSensorData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatasetSchema {
     /// <p> </p>
+    #[doc(hidden)]
     pub inline_data_schema: std::option::Option<std::string::String>,
 }
 impl DatasetSchema {
@@ -3905,11 +4139,10 @@ impl std::fmt::Debug for DatasetSchema {
         formatter.finish()
     }
 }
-/// See [`DatasetSchema`](crate::model::DatasetSchema)
+/// See [`DatasetSchema`](crate::model::DatasetSchema).
 pub mod dataset_schema {
 
-    /// A builder for [`DatasetSchema`](crate::model::DatasetSchema)
-    #[non_exhaustive]
+    /// A builder for [`DatasetSchema`](crate::model::DatasetSchema).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) inline_data_schema: std::option::Option<std::string::String>,
@@ -3928,7 +4161,7 @@ pub mod dataset_schema {
             self.inline_data_schema = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatasetSchema`](crate::model::DatasetSchema)
+        /// Consumes the builder and constructs a [`DatasetSchema`](crate::model::DatasetSchema).
         pub fn build(self) -> crate::model::DatasetSchema {
             crate::model::DatasetSchema {
                 inline_data_schema: self.inline_data_schema,
@@ -3937,7 +4170,7 @@ pub mod dataset_schema {
     }
 }
 impl DatasetSchema {
-    /// Creates a new builder-style object to manufacture [`DatasetSchema`](crate::model::DatasetSchema)
+    /// Creates a new builder-style object to manufacture [`DatasetSchema`](crate::model::DatasetSchema).
     pub fn builder() -> crate::model::dataset_schema::Builder {
         crate::model::dataset_schema::Builder::default()
     }

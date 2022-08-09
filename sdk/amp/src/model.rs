@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationExceptionField {
     /// The field name.
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// Message describing why the field failed validation.
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ValidationExceptionField {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ValidationExceptionField {
         formatter.finish()
     }
 }
-/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField).
 pub mod validation_exception_field {
 
-    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField)
-    #[non_exhaustive]
+    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod validation_exception_field {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField).
         pub fn build(self) -> crate::model::ValidationExceptionField {
             crate::model::ValidationExceptionField {
                 name: self.name,
@@ -68,7 +69,7 @@ pub mod validation_exception_field {
     }
 }
 impl ValidationExceptionField {
-    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     pub fn builder() -> crate::model::validation_exception_field::Builder {
         crate::model::validation_exception_field::Builder::default()
     }
@@ -147,16 +148,22 @@ impl AsRef<str> for ValidationExceptionReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkspaceSummary {
     /// Unique string identifying this workspace.
+    #[doc(hidden)]
     pub workspace_id: std::option::Option<std::string::String>,
     /// Alias of this workspace.
+    #[doc(hidden)]
     pub alias: std::option::Option<std::string::String>,
     /// The AmazonResourceName of this workspace.
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// The status of this workspace.
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::WorkspaceStatus>,
     /// The time when the workspace was created.
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// The tags of this workspace.
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -201,11 +208,10 @@ impl std::fmt::Debug for WorkspaceSummary {
         formatter.finish()
     }
 }
-/// See [`WorkspaceSummary`](crate::model::WorkspaceSummary)
+/// See [`WorkspaceSummary`](crate::model::WorkspaceSummary).
 pub mod workspace_summary {
 
-    /// A builder for [`WorkspaceSummary`](crate::model::WorkspaceSummary)
-    #[non_exhaustive]
+    /// A builder for [`WorkspaceSummary`](crate::model::WorkspaceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workspace_id: std::option::Option<std::string::String>,
@@ -299,7 +305,7 @@ pub mod workspace_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspaceSummary`](crate::model::WorkspaceSummary)
+        /// Consumes the builder and constructs a [`WorkspaceSummary`](crate::model::WorkspaceSummary).
         pub fn build(self) -> crate::model::WorkspaceSummary {
             crate::model::WorkspaceSummary {
                 workspace_id: self.workspace_id,
@@ -313,7 +319,7 @@ pub mod workspace_summary {
     }
 }
 impl WorkspaceSummary {
-    /// Creates a new builder-style object to manufacture [`WorkspaceSummary`](crate::model::WorkspaceSummary)
+    /// Creates a new builder-style object to manufacture [`WorkspaceSummary`](crate::model::WorkspaceSummary).
     pub fn builder() -> crate::model::workspace_summary::Builder {
         crate::model::workspace_summary::Builder::default()
     }
@@ -324,6 +330,7 @@ impl WorkspaceSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkspaceStatus {
     /// Status code of this workspace.
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::WorkspaceStatusCode>,
 }
 impl WorkspaceStatus {
@@ -339,11 +346,10 @@ impl std::fmt::Debug for WorkspaceStatus {
         formatter.finish()
     }
 }
-/// See [`WorkspaceStatus`](crate::model::WorkspaceStatus)
+/// See [`WorkspaceStatus`](crate::model::WorkspaceStatus).
 pub mod workspace_status {
 
-    /// A builder for [`WorkspaceStatus`](crate::model::WorkspaceStatus)
-    #[non_exhaustive]
+    /// A builder for [`WorkspaceStatus`](crate::model::WorkspaceStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status_code: std::option::Option<crate::model::WorkspaceStatusCode>,
@@ -362,7 +368,7 @@ pub mod workspace_status {
             self.status_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspaceStatus`](crate::model::WorkspaceStatus)
+        /// Consumes the builder and constructs a [`WorkspaceStatus`](crate::model::WorkspaceStatus).
         pub fn build(self) -> crate::model::WorkspaceStatus {
             crate::model::WorkspaceStatus {
                 status_code: self.status_code,
@@ -371,7 +377,7 @@ pub mod workspace_status {
     }
 }
 impl WorkspaceStatus {
-    /// Creates a new builder-style object to manufacture [`WorkspaceStatus`](crate::model::WorkspaceStatus)
+    /// Creates a new builder-style object to manufacture [`WorkspaceStatus`](crate::model::WorkspaceStatus).
     pub fn builder() -> crate::model::workspace_status::Builder {
         crate::model::workspace_status::Builder::default()
     }
@@ -455,18 +461,25 @@ impl AsRef<str> for WorkspaceStatusCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkspaceDescription {
     /// Unique string identifying this workspace.
+    #[doc(hidden)]
     pub workspace_id: std::option::Option<std::string::String>,
     /// Alias of this workspace.
+    #[doc(hidden)]
     pub alias: std::option::Option<std::string::String>,
     /// The Amazon Resource Name (ARN) of this workspace.
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// The status of this workspace.
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::WorkspaceStatus>,
     /// Prometheus endpoint URI.
+    #[doc(hidden)]
     pub prometheus_endpoint: std::option::Option<std::string::String>,
     /// The time when the workspace was created.
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// The tags of this workspace.
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -516,11 +529,10 @@ impl std::fmt::Debug for WorkspaceDescription {
         formatter.finish()
     }
 }
-/// See [`WorkspaceDescription`](crate::model::WorkspaceDescription)
+/// See [`WorkspaceDescription`](crate::model::WorkspaceDescription).
 pub mod workspace_description {
 
-    /// A builder for [`WorkspaceDescription`](crate::model::WorkspaceDescription)
-    #[non_exhaustive]
+    /// A builder for [`WorkspaceDescription`](crate::model::WorkspaceDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workspace_id: std::option::Option<std::string::String>,
@@ -628,7 +640,7 @@ pub mod workspace_description {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspaceDescription`](crate::model::WorkspaceDescription)
+        /// Consumes the builder and constructs a [`WorkspaceDescription`](crate::model::WorkspaceDescription).
         pub fn build(self) -> crate::model::WorkspaceDescription {
             crate::model::WorkspaceDescription {
                 workspace_id: self.workspace_id,
@@ -643,7 +655,7 @@ pub mod workspace_description {
     }
 }
 impl WorkspaceDescription {
-    /// Creates a new builder-style object to manufacture [`WorkspaceDescription`](crate::model::WorkspaceDescription)
+    /// Creates a new builder-style object to manufacture [`WorkspaceDescription`](crate::model::WorkspaceDescription).
     pub fn builder() -> crate::model::workspace_description::Builder {
         crate::model::workspace_description::Builder::default()
     }
@@ -654,16 +666,22 @@ impl WorkspaceDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleGroupsNamespaceSummary {
     /// The Amazon Resource Name (ARN) of this rule groups namespace.
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// The rule groups namespace name.
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// The status of rule groups namespace.
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::RuleGroupsNamespaceStatus>,
     /// The time when the rule groups namespace was created.
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// The time when the rule groups namespace was modified.
+    #[doc(hidden)]
     pub modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// The tags of this rule groups namespace.
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -708,11 +726,10 @@ impl std::fmt::Debug for RuleGroupsNamespaceSummary {
         formatter.finish()
     }
 }
-/// See [`RuleGroupsNamespaceSummary`](crate::model::RuleGroupsNamespaceSummary)
+/// See [`RuleGroupsNamespaceSummary`](crate::model::RuleGroupsNamespaceSummary).
 pub mod rule_groups_namespace_summary {
 
-    /// A builder for [`RuleGroupsNamespaceSummary`](crate::model::RuleGroupsNamespaceSummary)
-    #[non_exhaustive]
+    /// A builder for [`RuleGroupsNamespaceSummary`](crate::model::RuleGroupsNamespaceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -809,7 +826,7 @@ pub mod rule_groups_namespace_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleGroupsNamespaceSummary`](crate::model::RuleGroupsNamespaceSummary)
+        /// Consumes the builder and constructs a [`RuleGroupsNamespaceSummary`](crate::model::RuleGroupsNamespaceSummary).
         pub fn build(self) -> crate::model::RuleGroupsNamespaceSummary {
             crate::model::RuleGroupsNamespaceSummary {
                 arn: self.arn,
@@ -823,7 +840,7 @@ pub mod rule_groups_namespace_summary {
     }
 }
 impl RuleGroupsNamespaceSummary {
-    /// Creates a new builder-style object to manufacture [`RuleGroupsNamespaceSummary`](crate::model::RuleGroupsNamespaceSummary)
+    /// Creates a new builder-style object to manufacture [`RuleGroupsNamespaceSummary`](crate::model::RuleGroupsNamespaceSummary).
     pub fn builder() -> crate::model::rule_groups_namespace_summary::Builder {
         crate::model::rule_groups_namespace_summary::Builder::default()
     }
@@ -834,8 +851,10 @@ impl RuleGroupsNamespaceSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleGroupsNamespaceStatus {
     /// Status code of this namespace.
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::RuleGroupsNamespaceStatusCode>,
     /// The reason for failure if any.
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
 }
 impl RuleGroupsNamespaceStatus {
@@ -856,11 +875,10 @@ impl std::fmt::Debug for RuleGroupsNamespaceStatus {
         formatter.finish()
     }
 }
-/// See [`RuleGroupsNamespaceStatus`](crate::model::RuleGroupsNamespaceStatus)
+/// See [`RuleGroupsNamespaceStatus`](crate::model::RuleGroupsNamespaceStatus).
 pub mod rule_groups_namespace_status {
 
-    /// A builder for [`RuleGroupsNamespaceStatus`](crate::model::RuleGroupsNamespaceStatus)
-    #[non_exhaustive]
+    /// A builder for [`RuleGroupsNamespaceStatus`](crate::model::RuleGroupsNamespaceStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status_code: std::option::Option<crate::model::RuleGroupsNamespaceStatusCode>,
@@ -893,7 +911,7 @@ pub mod rule_groups_namespace_status {
             self.status_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleGroupsNamespaceStatus`](crate::model::RuleGroupsNamespaceStatus)
+        /// Consumes the builder and constructs a [`RuleGroupsNamespaceStatus`](crate::model::RuleGroupsNamespaceStatus).
         pub fn build(self) -> crate::model::RuleGroupsNamespaceStatus {
             crate::model::RuleGroupsNamespaceStatus {
                 status_code: self.status_code,
@@ -903,7 +921,7 @@ pub mod rule_groups_namespace_status {
     }
 }
 impl RuleGroupsNamespaceStatus {
-    /// Creates a new builder-style object to manufacture [`RuleGroupsNamespaceStatus`](crate::model::RuleGroupsNamespaceStatus)
+    /// Creates a new builder-style object to manufacture [`RuleGroupsNamespaceStatus`](crate::model::RuleGroupsNamespaceStatus).
     pub fn builder() -> crate::model::rule_groups_namespace_status::Builder {
         crate::model::rule_groups_namespace_status::Builder::default()
     }
@@ -992,18 +1010,25 @@ impl AsRef<str> for RuleGroupsNamespaceStatusCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleGroupsNamespaceDescription {
     /// The Amazon Resource Name (ARN) of this rule groups namespace.
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// The rule groups namespace name.
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// The status of rule groups namespace.
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::RuleGroupsNamespaceStatus>,
     /// The rule groups namespace data.
+    #[doc(hidden)]
     pub data: std::option::Option<aws_smithy_types::Blob>,
     /// The time when the rule groups namespace was created.
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// The time when the rule groups namespace was modified.
+    #[doc(hidden)]
     pub modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// The tags of this rule groups namespace.
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1053,11 +1078,10 @@ impl std::fmt::Debug for RuleGroupsNamespaceDescription {
         formatter.finish()
     }
 }
-/// See [`RuleGroupsNamespaceDescription`](crate::model::RuleGroupsNamespaceDescription)
+/// See [`RuleGroupsNamespaceDescription`](crate::model::RuleGroupsNamespaceDescription).
 pub mod rule_groups_namespace_description {
 
-    /// A builder for [`RuleGroupsNamespaceDescription`](crate::model::RuleGroupsNamespaceDescription)
-    #[non_exhaustive]
+    /// A builder for [`RuleGroupsNamespaceDescription`](crate::model::RuleGroupsNamespaceDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1165,7 +1189,7 @@ pub mod rule_groups_namespace_description {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleGroupsNamespaceDescription`](crate::model::RuleGroupsNamespaceDescription)
+        /// Consumes the builder and constructs a [`RuleGroupsNamespaceDescription`](crate::model::RuleGroupsNamespaceDescription).
         pub fn build(self) -> crate::model::RuleGroupsNamespaceDescription {
             crate::model::RuleGroupsNamespaceDescription {
                 arn: self.arn,
@@ -1180,7 +1204,7 @@ pub mod rule_groups_namespace_description {
     }
 }
 impl RuleGroupsNamespaceDescription {
-    /// Creates a new builder-style object to manufacture [`RuleGroupsNamespaceDescription`](crate::model::RuleGroupsNamespaceDescription)
+    /// Creates a new builder-style object to manufacture [`RuleGroupsNamespaceDescription`](crate::model::RuleGroupsNamespaceDescription).
     pub fn builder() -> crate::model::rule_groups_namespace_description::Builder {
         crate::model::rule_groups_namespace_description::Builder::default()
     }
@@ -1191,8 +1215,10 @@ impl RuleGroupsNamespaceDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AlertManagerDefinitionStatus {
     /// Status code of this definition.
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::AlertManagerDefinitionStatusCode>,
     /// The reason for failure if any.
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
 }
 impl AlertManagerDefinitionStatus {
@@ -1215,11 +1241,10 @@ impl std::fmt::Debug for AlertManagerDefinitionStatus {
         formatter.finish()
     }
 }
-/// See [`AlertManagerDefinitionStatus`](crate::model::AlertManagerDefinitionStatus)
+/// See [`AlertManagerDefinitionStatus`](crate::model::AlertManagerDefinitionStatus).
 pub mod alert_manager_definition_status {
 
-    /// A builder for [`AlertManagerDefinitionStatus`](crate::model::AlertManagerDefinitionStatus)
-    #[non_exhaustive]
+    /// A builder for [`AlertManagerDefinitionStatus`](crate::model::AlertManagerDefinitionStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status_code: std::option::Option<crate::model::AlertManagerDefinitionStatusCode>,
@@ -1255,7 +1280,7 @@ pub mod alert_manager_definition_status {
             self.status_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`AlertManagerDefinitionStatus`](crate::model::AlertManagerDefinitionStatus)
+        /// Consumes the builder and constructs a [`AlertManagerDefinitionStatus`](crate::model::AlertManagerDefinitionStatus).
         pub fn build(self) -> crate::model::AlertManagerDefinitionStatus {
             crate::model::AlertManagerDefinitionStatus {
                 status_code: self.status_code,
@@ -1265,7 +1290,7 @@ pub mod alert_manager_definition_status {
     }
 }
 impl AlertManagerDefinitionStatus {
-    /// Creates a new builder-style object to manufacture [`AlertManagerDefinitionStatus`](crate::model::AlertManagerDefinitionStatus)
+    /// Creates a new builder-style object to manufacture [`AlertManagerDefinitionStatus`](crate::model::AlertManagerDefinitionStatus).
     pub fn builder() -> crate::model::alert_manager_definition_status::Builder {
         crate::model::alert_manager_definition_status::Builder::default()
     }
@@ -1354,12 +1379,16 @@ impl AsRef<str> for AlertManagerDefinitionStatusCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AlertManagerDefinitionDescription {
     /// The status of alert manager definition.
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AlertManagerDefinitionStatus>,
     /// The alert manager definition.
+    #[doc(hidden)]
     pub data: std::option::Option<aws_smithy_types::Blob>,
     /// The time when the alert manager definition was created.
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// The time when the alert manager definition was modified.
+    #[doc(hidden)]
     pub modified_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AlertManagerDefinitionDescription {
@@ -1390,11 +1419,10 @@ impl std::fmt::Debug for AlertManagerDefinitionDescription {
         formatter.finish()
     }
 }
-/// See [`AlertManagerDefinitionDescription`](crate::model::AlertManagerDefinitionDescription)
+/// See [`AlertManagerDefinitionDescription`](crate::model::AlertManagerDefinitionDescription).
 pub mod alert_manager_definition_description {
 
-    /// A builder for [`AlertManagerDefinitionDescription`](crate::model::AlertManagerDefinitionDescription)
-    #[non_exhaustive]
+    /// A builder for [`AlertManagerDefinitionDescription`](crate::model::AlertManagerDefinitionDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::AlertManagerDefinitionStatus>,
@@ -1452,7 +1480,7 @@ pub mod alert_manager_definition_description {
             self.modified_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`AlertManagerDefinitionDescription`](crate::model::AlertManagerDefinitionDescription)
+        /// Consumes the builder and constructs a [`AlertManagerDefinitionDescription`](crate::model::AlertManagerDefinitionDescription).
         pub fn build(self) -> crate::model::AlertManagerDefinitionDescription {
             crate::model::AlertManagerDefinitionDescription {
                 status: self.status,
@@ -1464,7 +1492,7 @@ pub mod alert_manager_definition_description {
     }
 }
 impl AlertManagerDefinitionDescription {
-    /// Creates a new builder-style object to manufacture [`AlertManagerDefinitionDescription`](crate::model::AlertManagerDefinitionDescription)
+    /// Creates a new builder-style object to manufacture [`AlertManagerDefinitionDescription`](crate::model::AlertManagerDefinitionDescription).
     pub fn builder() -> crate::model::alert_manager_definition_description::Builder {
         crate::model::alert_manager_definition_description::Builder::default()
     }

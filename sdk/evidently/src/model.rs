@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationExceptionField {
     /// <p>The error name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The error message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ValidationExceptionField {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ValidationExceptionField {
         formatter.finish()
     }
 }
-/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField).
 pub mod validation_exception_field {
 
-    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField)
-    #[non_exhaustive]
+    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod validation_exception_field {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField).
         pub fn build(self) -> crate::model::ValidationExceptionField {
             crate::model::ValidationExceptionField {
                 name: self.name,
@@ -68,7 +69,7 @@ pub mod validation_exception_field {
     }
 }
 impl ValidationExceptionField {
-    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     pub fn builder() -> crate::model::validation_exception_field::Builder {
         crate::model::validation_exception_field::Builder::default()
     }
@@ -142,35 +143,523 @@ impl AsRef<str> for ValidationExceptionReason {
     }
 }
 
+/// <p>A structure that contains information about one experiment or launch that uses the specified segment. </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct RefResource {
+    /// <p>The name of the experiment or launch.</p>
+    #[doc(hidden)]
+    pub name: std::option::Option<std::string::String>,
+    /// <p>Specifies whether the resource that this structure contains information about is an experiment or a launch.</p>
+    #[doc(hidden)]
+    pub r#type: std::option::Option<std::string::String>,
+    /// <p>The ARN of the experiment or launch.</p>
+    #[doc(hidden)]
+    pub arn: std::option::Option<std::string::String>,
+    /// <p>The status of the experiment or launch.</p>
+    #[doc(hidden)]
+    pub status: std::option::Option<std::string::String>,
+    /// <p>The day and time that this experiment or launch started.</p>
+    #[doc(hidden)]
+    pub start_time: std::option::Option<std::string::String>,
+    /// <p>The day and time that this experiment or launch ended.</p>
+    #[doc(hidden)]
+    pub end_time: std::option::Option<std::string::String>,
+    /// <p>The day and time that this experiment or launch was most recently updated.</p>
+    #[doc(hidden)]
+    pub last_updated_on: std::option::Option<std::string::String>,
+}
+impl RefResource {
+    /// <p>The name of the experiment or launch.</p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+    /// <p>Specifies whether the resource that this structure contains information about is an experiment or a launch.</p>
+    pub fn r#type(&self) -> std::option::Option<&str> {
+        self.r#type.as_deref()
+    }
+    /// <p>The ARN of the experiment or launch.</p>
+    pub fn arn(&self) -> std::option::Option<&str> {
+        self.arn.as_deref()
+    }
+    /// <p>The status of the experiment or launch.</p>
+    pub fn status(&self) -> std::option::Option<&str> {
+        self.status.as_deref()
+    }
+    /// <p>The day and time that this experiment or launch started.</p>
+    pub fn start_time(&self) -> std::option::Option<&str> {
+        self.start_time.as_deref()
+    }
+    /// <p>The day and time that this experiment or launch ended.</p>
+    pub fn end_time(&self) -> std::option::Option<&str> {
+        self.end_time.as_deref()
+    }
+    /// <p>The day and time that this experiment or launch was most recently updated.</p>
+    pub fn last_updated_on(&self) -> std::option::Option<&str> {
+        self.last_updated_on.as_deref()
+    }
+}
+impl std::fmt::Debug for RefResource {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("RefResource");
+        formatter.field("name", &self.name);
+        formatter.field("r#type", &self.r#type);
+        formatter.field("arn", &self.arn);
+        formatter.field("status", &self.status);
+        formatter.field("start_time", &self.start_time);
+        formatter.field("end_time", &self.end_time);
+        formatter.field("last_updated_on", &self.last_updated_on);
+        formatter.finish()
+    }
+}
+/// See [`RefResource`](crate::model::RefResource).
+pub mod ref_resource {
+
+    /// A builder for [`RefResource`](crate::model::RefResource).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) name: std::option::Option<std::string::String>,
+        pub(crate) r#type: std::option::Option<std::string::String>,
+        pub(crate) arn: std::option::Option<std::string::String>,
+        pub(crate) status: std::option::Option<std::string::String>,
+        pub(crate) start_time: std::option::Option<std::string::String>,
+        pub(crate) end_time: std::option::Option<std::string::String>,
+        pub(crate) last_updated_on: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The name of the experiment or launch.</p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>The name of the experiment or launch.</p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// <p>Specifies whether the resource that this structure contains information about is an experiment or a launch.</p>
+        pub fn r#type(mut self, input: impl Into<std::string::String>) -> Self {
+            self.r#type = Some(input.into());
+            self
+        }
+        /// <p>Specifies whether the resource that this structure contains information about is an experiment or a launch.</p>
+        pub fn set_type(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.r#type = input;
+            self
+        }
+        /// <p>The ARN of the experiment or launch.</p>
+        pub fn arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.arn = Some(input.into());
+            self
+        }
+        /// <p>The ARN of the experiment or launch.</p>
+        pub fn set_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.arn = input;
+            self
+        }
+        /// <p>The status of the experiment or launch.</p>
+        pub fn status(mut self, input: impl Into<std::string::String>) -> Self {
+            self.status = Some(input.into());
+            self
+        }
+        /// <p>The status of the experiment or launch.</p>
+        pub fn set_status(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.status = input;
+            self
+        }
+        /// <p>The day and time that this experiment or launch started.</p>
+        pub fn start_time(mut self, input: impl Into<std::string::String>) -> Self {
+            self.start_time = Some(input.into());
+            self
+        }
+        /// <p>The day and time that this experiment or launch started.</p>
+        pub fn set_start_time(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.start_time = input;
+            self
+        }
+        /// <p>The day and time that this experiment or launch ended.</p>
+        pub fn end_time(mut self, input: impl Into<std::string::String>) -> Self {
+            self.end_time = Some(input.into());
+            self
+        }
+        /// <p>The day and time that this experiment or launch ended.</p>
+        pub fn set_end_time(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.end_time = input;
+            self
+        }
+        /// <p>The day and time that this experiment or launch was most recently updated.</p>
+        pub fn last_updated_on(mut self, input: impl Into<std::string::String>) -> Self {
+            self.last_updated_on = Some(input.into());
+            self
+        }
+        /// <p>The day and time that this experiment or launch was most recently updated.</p>
+        pub fn set_last_updated_on(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.last_updated_on = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`RefResource`](crate::model::RefResource).
+        pub fn build(self) -> crate::model::RefResource {
+            crate::model::RefResource {
+                name: self.name,
+                r#type: self.r#type,
+                arn: self.arn,
+                status: self.status,
+                start_time: self.start_time,
+                end_time: self.end_time,
+                last_updated_on: self.last_updated_on,
+            }
+        }
+    }
+}
+impl RefResource {
+    /// Creates a new builder-style object to manufacture [`RefResource`](crate::model::RefResource).
+    pub fn builder() -> crate::model::ref_resource::Builder {
+        crate::model::ref_resource::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum SegmentReferenceResourceType {
+    #[allow(missing_docs)] // documentation missing in model
+    Experiment,
+    #[allow(missing_docs)] // documentation missing in model
+    Launch,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for SegmentReferenceResourceType {
+    fn from(s: &str) -> Self {
+        match s {
+            "EXPERIMENT" => SegmentReferenceResourceType::Experiment,
+            "LAUNCH" => SegmentReferenceResourceType::Launch,
+            other => SegmentReferenceResourceType::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for SegmentReferenceResourceType {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(SegmentReferenceResourceType::from(s))
+    }
+}
+impl SegmentReferenceResourceType {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            SegmentReferenceResourceType::Experiment => "EXPERIMENT",
+            SegmentReferenceResourceType::Launch => "LAUNCH",
+            SegmentReferenceResourceType::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["EXPERIMENT", "LAUNCH"]
+    }
+}
+impl AsRef<str> for SegmentReferenceResourceType {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+/// <p>This structure contains information about one audience <i>segment</i>. You can use segments in your experiments and launches to narrow the user sessions used for experiment or launch to only the user sessions that match one or more criteria.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct Segment {
+    /// <p>The ARN of the segment.</p>
+    #[doc(hidden)]
+    pub arn: std::option::Option<std::string::String>,
+    /// <p>The name of the segment.</p>
+    #[doc(hidden)]
+    pub name: std::option::Option<std::string::String>,
+    /// <p></p>
+    #[doc(hidden)]
+    pub pattern: std::option::Option<std::string::String>,
+    /// <p>The date and time that this segment was created.</p>
+    #[doc(hidden)]
+    pub created_time: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The date and time that this segment was most recently updated.</p>
+    #[doc(hidden)]
+    pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The customer-created description for this segment.</p>
+    #[doc(hidden)]
+    pub description: std::option::Option<std::string::String>,
+    /// <p>The number of experiments that this segment is used in. This count includes all current experiments, not just those that are currently running.</p>
+    #[doc(hidden)]
+    pub experiment_count: std::option::Option<i64>,
+    /// <p>The number of launches that this segment is used in. This count includes all current launches, not just those that are currently running.</p>
+    #[doc(hidden)]
+    pub launch_count: std::option::Option<i64>,
+    /// <p>The list of tag keys and values associated with this launch.</p>
+    #[doc(hidden)]
+    pub tags:
+        std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
+}
+impl Segment {
+    /// <p>The ARN of the segment.</p>
+    pub fn arn(&self) -> std::option::Option<&str> {
+        self.arn.as_deref()
+    }
+    /// <p>The name of the segment.</p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+    /// <p></p>
+    pub fn pattern(&self) -> std::option::Option<&str> {
+        self.pattern.as_deref()
+    }
+    /// <p>The date and time that this segment was created.</p>
+    pub fn created_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.created_time.as_ref()
+    }
+    /// <p>The date and time that this segment was most recently updated.</p>
+    pub fn last_updated_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.last_updated_time.as_ref()
+    }
+    /// <p>The customer-created description for this segment.</p>
+    pub fn description(&self) -> std::option::Option<&str> {
+        self.description.as_deref()
+    }
+    /// <p>The number of experiments that this segment is used in. This count includes all current experiments, not just those that are currently running.</p>
+    pub fn experiment_count(&self) -> std::option::Option<i64> {
+        self.experiment_count
+    }
+    /// <p>The number of launches that this segment is used in. This count includes all current launches, not just those that are currently running.</p>
+    pub fn launch_count(&self) -> std::option::Option<i64> {
+        self.launch_count
+    }
+    /// <p>The list of tag keys and values associated with this launch.</p>
+    pub fn tags(
+        &self,
+    ) -> std::option::Option<&std::collections::HashMap<std::string::String, std::string::String>>
+    {
+        self.tags.as_ref()
+    }
+}
+impl std::fmt::Debug for Segment {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("Segment");
+        formatter.field("arn", &self.arn);
+        formatter.field("name", &self.name);
+        formatter.field("pattern", &self.pattern);
+        formatter.field("created_time", &self.created_time);
+        formatter.field("last_updated_time", &self.last_updated_time);
+        formatter.field("description", &self.description);
+        formatter.field("experiment_count", &self.experiment_count);
+        formatter.field("launch_count", &self.launch_count);
+        formatter.field("tags", &self.tags);
+        formatter.finish()
+    }
+}
+/// See [`Segment`](crate::model::Segment).
+pub mod segment {
+
+    /// A builder for [`Segment`](crate::model::Segment).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) arn: std::option::Option<std::string::String>,
+        pub(crate) name: std::option::Option<std::string::String>,
+        pub(crate) pattern: std::option::Option<std::string::String>,
+        pub(crate) created_time: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) description: std::option::Option<std::string::String>,
+        pub(crate) experiment_count: std::option::Option<i64>,
+        pub(crate) launch_count: std::option::Option<i64>,
+        pub(crate) tags: std::option::Option<
+            std::collections::HashMap<std::string::String, std::string::String>,
+        >,
+    }
+    impl Builder {
+        /// <p>The ARN of the segment.</p>
+        pub fn arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.arn = Some(input.into());
+            self
+        }
+        /// <p>The ARN of the segment.</p>
+        pub fn set_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.arn = input;
+            self
+        }
+        /// <p>The name of the segment.</p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>The name of the segment.</p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// <p></p>
+        pub fn pattern(mut self, input: impl Into<std::string::String>) -> Self {
+            self.pattern = Some(input.into());
+            self
+        }
+        /// <p></p>
+        pub fn set_pattern(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.pattern = input;
+            self
+        }
+        /// <p>The date and time that this segment was created.</p>
+        pub fn created_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.created_time = Some(input);
+            self
+        }
+        /// <p>The date and time that this segment was created.</p>
+        pub fn set_created_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.created_time = input;
+            self
+        }
+        /// <p>The date and time that this segment was most recently updated.</p>
+        pub fn last_updated_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.last_updated_time = Some(input);
+            self
+        }
+        /// <p>The date and time that this segment was most recently updated.</p>
+        pub fn set_last_updated_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.last_updated_time = input;
+            self
+        }
+        /// <p>The customer-created description for this segment.</p>
+        pub fn description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.description = Some(input.into());
+            self
+        }
+        /// <p>The customer-created description for this segment.</p>
+        pub fn set_description(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.description = input;
+            self
+        }
+        /// <p>The number of experiments that this segment is used in. This count includes all current experiments, not just those that are currently running.</p>
+        pub fn experiment_count(mut self, input: i64) -> Self {
+            self.experiment_count = Some(input);
+            self
+        }
+        /// <p>The number of experiments that this segment is used in. This count includes all current experiments, not just those that are currently running.</p>
+        pub fn set_experiment_count(mut self, input: std::option::Option<i64>) -> Self {
+            self.experiment_count = input;
+            self
+        }
+        /// <p>The number of launches that this segment is used in. This count includes all current launches, not just those that are currently running.</p>
+        pub fn launch_count(mut self, input: i64) -> Self {
+            self.launch_count = Some(input);
+            self
+        }
+        /// <p>The number of launches that this segment is used in. This count includes all current launches, not just those that are currently running.</p>
+        pub fn set_launch_count(mut self, input: std::option::Option<i64>) -> Self {
+            self.launch_count = input;
+            self
+        }
+        /// Adds a key-value pair to `tags`.
+        ///
+        /// To override the contents of this collection use [`set_tags`](Self::set_tags).
+        ///
+        /// <p>The list of tag keys and values associated with this launch.</p>
+        pub fn tags(
+            mut self,
+            k: impl Into<std::string::String>,
+            v: impl Into<std::string::String>,
+        ) -> Self {
+            let mut hash_map = self.tags.unwrap_or_default();
+            hash_map.insert(k.into(), v.into());
+            self.tags = Some(hash_map);
+            self
+        }
+        /// <p>The list of tag keys and values associated with this launch.</p>
+        pub fn set_tags(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<std::string::String, std::string::String>,
+            >,
+        ) -> Self {
+            self.tags = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`Segment`](crate::model::Segment).
+        pub fn build(self) -> crate::model::Segment {
+            crate::model::Segment {
+                arn: self.arn,
+                name: self.name,
+                pattern: self.pattern,
+                created_time: self.created_time,
+                last_updated_time: self.last_updated_time,
+                description: self.description,
+                experiment_count: self.experiment_count,
+                launch_count: self.launch_count,
+                tags: self.tags,
+            }
+        }
+    }
+}
+impl Segment {
+    /// Creates a new builder-style object to manufacture [`Segment`](crate::model::Segment).
+    pub fn builder() -> crate::model::segment::Builder {
+        crate::model::segment::Builder::default()
+    }
+}
+
 /// <p>This structure defines a project, which is the logical object in Evidently that can contain features, launches, and experiments. Use projects to group similar features together.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Project {
     /// <p>The name or ARN of the project.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the project.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The current state of the project.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ProjectStatus>,
     /// <p>The user-entered description of the project.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date and time that the project is created.</p>
+    #[doc(hidden)]
     pub created_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the project was most recently updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The number of features currently in the project.</p>
+    #[doc(hidden)]
     pub feature_count: std::option::Option<i64>,
     /// <p>The number of launches currently in the project. This includes all launches that have been created and not deleted, whether they are ongoing or not.</p>
+    #[doc(hidden)]
     pub launch_count: std::option::Option<i64>,
     /// <p>The number of ongoing launches currently in the project.</p>
+    #[doc(hidden)]
     pub active_launch_count: std::option::Option<i64>,
     /// <p>The number of experiments currently in the project. This includes all experiments that have been created and not deleted, whether they are ongoing or not.</p>
+    #[doc(hidden)]
     pub experiment_count: std::option::Option<i64>,
     /// <p>The number of ongoing experiments currently in the project.</p>
+    #[doc(hidden)]
     pub active_experiment_count: std::option::Option<i64>,
     /// <p>A structure that contains information about where Evidently is to store evaluation events for longer term storage.</p>
+    #[doc(hidden)]
     pub data_delivery: std::option::Option<crate::model::ProjectDataDelivery>,
     /// <p>The list of tag keys and values associated with this project.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -250,11 +739,10 @@ impl std::fmt::Debug for Project {
         formatter.finish()
     }
 }
-/// See [`Project`](crate::model::Project)
+/// See [`Project`](crate::model::Project).
 pub mod project {
 
-    /// A builder for [`Project`](crate::model::Project)
-    #[non_exhaustive]
+    /// A builder for [`Project`](crate::model::Project).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -431,7 +919,7 @@ pub mod project {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Project`](crate::model::Project)
+        /// Consumes the builder and constructs a [`Project`](crate::model::Project).
         pub fn build(self) -> crate::model::Project {
             crate::model::Project {
                 arn: self.arn,
@@ -452,7 +940,7 @@ pub mod project {
     }
 }
 impl Project {
-    /// Creates a new builder-style object to manufacture [`Project`](crate::model::Project)
+    /// Creates a new builder-style object to manufacture [`Project`](crate::model::Project).
     pub fn builder() -> crate::model::project::Builder {
         crate::model::project::Builder::default()
     }
@@ -463,8 +951,10 @@ impl Project {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProjectDataDelivery {
     /// <p>If the project stores evaluation events in an Amazon S3 bucket, this structure stores the bucket name and bucket prefix.</p>
+    #[doc(hidden)]
     pub s3_destination: std::option::Option<crate::model::S3Destination>,
     /// <p>If the project stores evaluation events in CloudWatch Logs, this structure stores the log group name.</p>
+    #[doc(hidden)]
     pub cloud_watch_logs: std::option::Option<crate::model::CloudWatchLogsDestination>,
 }
 impl ProjectDataDelivery {
@@ -487,11 +977,10 @@ impl std::fmt::Debug for ProjectDataDelivery {
         formatter.finish()
     }
 }
-/// See [`ProjectDataDelivery`](crate::model::ProjectDataDelivery)
+/// See [`ProjectDataDelivery`](crate::model::ProjectDataDelivery).
 pub mod project_data_delivery {
 
-    /// A builder for [`ProjectDataDelivery`](crate::model::ProjectDataDelivery)
-    #[non_exhaustive]
+    /// A builder for [`ProjectDataDelivery`](crate::model::ProjectDataDelivery).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_destination: std::option::Option<crate::model::S3Destination>,
@@ -524,7 +1013,7 @@ pub mod project_data_delivery {
             self.cloud_watch_logs = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectDataDelivery`](crate::model::ProjectDataDelivery)
+        /// Consumes the builder and constructs a [`ProjectDataDelivery`](crate::model::ProjectDataDelivery).
         pub fn build(self) -> crate::model::ProjectDataDelivery {
             crate::model::ProjectDataDelivery {
                 s3_destination: self.s3_destination,
@@ -534,7 +1023,7 @@ pub mod project_data_delivery {
     }
 }
 impl ProjectDataDelivery {
-    /// Creates a new builder-style object to manufacture [`ProjectDataDelivery`](crate::model::ProjectDataDelivery)
+    /// Creates a new builder-style object to manufacture [`ProjectDataDelivery`](crate::model::ProjectDataDelivery).
     pub fn builder() -> crate::model::project_data_delivery::Builder {
         crate::model::project_data_delivery::Builder::default()
     }
@@ -545,6 +1034,7 @@ impl ProjectDataDelivery {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchLogsDestination {
     /// <p>The name of the log group where the project stores evaluation events.</p>
+    #[doc(hidden)]
     pub log_group: std::option::Option<std::string::String>,
 }
 impl CloudWatchLogsDestination {
@@ -560,11 +1050,10 @@ impl std::fmt::Debug for CloudWatchLogsDestination {
         formatter.finish()
     }
 }
-/// See [`CloudWatchLogsDestination`](crate::model::CloudWatchLogsDestination)
+/// See [`CloudWatchLogsDestination`](crate::model::CloudWatchLogsDestination).
 pub mod cloud_watch_logs_destination {
 
-    /// A builder for [`CloudWatchLogsDestination`](crate::model::CloudWatchLogsDestination)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchLogsDestination`](crate::model::CloudWatchLogsDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_group: std::option::Option<std::string::String>,
@@ -580,7 +1069,7 @@ pub mod cloud_watch_logs_destination {
             self.log_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchLogsDestination`](crate::model::CloudWatchLogsDestination)
+        /// Consumes the builder and constructs a [`CloudWatchLogsDestination`](crate::model::CloudWatchLogsDestination).
         pub fn build(self) -> crate::model::CloudWatchLogsDestination {
             crate::model::CloudWatchLogsDestination {
                 log_group: self.log_group,
@@ -589,7 +1078,7 @@ pub mod cloud_watch_logs_destination {
     }
 }
 impl CloudWatchLogsDestination {
-    /// Creates a new builder-style object to manufacture [`CloudWatchLogsDestination`](crate::model::CloudWatchLogsDestination)
+    /// Creates a new builder-style object to manufacture [`CloudWatchLogsDestination`](crate::model::CloudWatchLogsDestination).
     pub fn builder() -> crate::model::cloud_watch_logs_destination::Builder {
         crate::model::cloud_watch_logs_destination::Builder::default()
     }
@@ -600,8 +1089,10 @@ impl CloudWatchLogsDestination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Destination {
     /// <p>The name of the bucket in which Evidently stores evaluation events.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The bucket prefix in which Evidently stores evaluation events.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl S3Destination {
@@ -622,11 +1113,10 @@ impl std::fmt::Debug for S3Destination {
         formatter.finish()
     }
 }
-/// See [`S3Destination`](crate::model::S3Destination)
+/// See [`S3Destination`](crate::model::S3Destination).
 pub mod s3_destination {
 
-    /// A builder for [`S3Destination`](crate::model::S3Destination)
-    #[non_exhaustive]
+    /// A builder for [`S3Destination`](crate::model::S3Destination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -653,7 +1143,7 @@ pub mod s3_destination {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Destination`](crate::model::S3Destination)
+        /// Consumes the builder and constructs a [`S3Destination`](crate::model::S3Destination).
         pub fn build(self) -> crate::model::S3Destination {
             crate::model::S3Destination {
                 bucket: self.bucket,
@@ -663,7 +1153,7 @@ pub mod s3_destination {
     }
 }
 impl S3Destination {
-    /// Creates a new builder-style object to manufacture [`S3Destination`](crate::model::S3Destination)
+    /// Creates a new builder-style object to manufacture [`S3Destination`](crate::model::S3Destination).
     pub fn builder() -> crate::model::s3_destination::Builder {
         crate::model::s3_destination::Builder::default()
     }
@@ -729,6 +1219,7 @@ impl AsRef<str> for ProjectStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchLogsDestinationConfig {
     /// <p>The name of the log group where the project stores evaluation events.</p>
+    #[doc(hidden)]
     pub log_group: std::option::Option<std::string::String>,
 }
 impl CloudWatchLogsDestinationConfig {
@@ -744,11 +1235,10 @@ impl std::fmt::Debug for CloudWatchLogsDestinationConfig {
         formatter.finish()
     }
 }
-/// See [`CloudWatchLogsDestinationConfig`](crate::model::CloudWatchLogsDestinationConfig)
+/// See [`CloudWatchLogsDestinationConfig`](crate::model::CloudWatchLogsDestinationConfig).
 pub mod cloud_watch_logs_destination_config {
 
-    /// A builder for [`CloudWatchLogsDestinationConfig`](crate::model::CloudWatchLogsDestinationConfig)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchLogsDestinationConfig`](crate::model::CloudWatchLogsDestinationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_group: std::option::Option<std::string::String>,
@@ -764,7 +1254,7 @@ pub mod cloud_watch_logs_destination_config {
             self.log_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchLogsDestinationConfig`](crate::model::CloudWatchLogsDestinationConfig)
+        /// Consumes the builder and constructs a [`CloudWatchLogsDestinationConfig`](crate::model::CloudWatchLogsDestinationConfig).
         pub fn build(self) -> crate::model::CloudWatchLogsDestinationConfig {
             crate::model::CloudWatchLogsDestinationConfig {
                 log_group: self.log_group,
@@ -773,7 +1263,7 @@ pub mod cloud_watch_logs_destination_config {
     }
 }
 impl CloudWatchLogsDestinationConfig {
-    /// Creates a new builder-style object to manufacture [`CloudWatchLogsDestinationConfig`](crate::model::CloudWatchLogsDestinationConfig)
+    /// Creates a new builder-style object to manufacture [`CloudWatchLogsDestinationConfig`](crate::model::CloudWatchLogsDestinationConfig).
     pub fn builder() -> crate::model::cloud_watch_logs_destination_config::Builder {
         crate::model::cloud_watch_logs_destination_config::Builder::default()
     }
@@ -784,8 +1274,10 @@ impl CloudWatchLogsDestinationConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3DestinationConfig {
     /// <p>The name of the bucket in which Evidently stores evaluation events.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The bucket prefix in which Evidently stores evaluation events.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl S3DestinationConfig {
@@ -806,11 +1298,10 @@ impl std::fmt::Debug for S3DestinationConfig {
         formatter.finish()
     }
 }
-/// See [`S3DestinationConfig`](crate::model::S3DestinationConfig)
+/// See [`S3DestinationConfig`](crate::model::S3DestinationConfig).
 pub mod s3_destination_config {
 
-    /// A builder for [`S3DestinationConfig`](crate::model::S3DestinationConfig)
-    #[non_exhaustive]
+    /// A builder for [`S3DestinationConfig`](crate::model::S3DestinationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -837,7 +1328,7 @@ pub mod s3_destination_config {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3DestinationConfig`](crate::model::S3DestinationConfig)
+        /// Consumes the builder and constructs a [`S3DestinationConfig`](crate::model::S3DestinationConfig).
         pub fn build(self) -> crate::model::S3DestinationConfig {
             crate::model::S3DestinationConfig {
                 bucket: self.bucket,
@@ -847,7 +1338,7 @@ pub mod s3_destination_config {
     }
 }
 impl S3DestinationConfig {
-    /// Creates a new builder-style object to manufacture [`S3DestinationConfig`](crate::model::S3DestinationConfig)
+    /// Creates a new builder-style object to manufacture [`S3DestinationConfig`](crate::model::S3DestinationConfig).
     pub fn builder() -> crate::model::s3_destination_config::Builder {
         crate::model::s3_destination_config::Builder::default()
     }
@@ -858,10 +1349,13 @@ impl S3DestinationConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutProjectEventsResultEntry {
     /// <p>A unique ID assigned to this <code>PutProjectEvents</code> operation. </p>
+    #[doc(hidden)]
     pub event_id: std::option::Option<std::string::String>,
     /// <p>If the <code>PutProjectEvents</code> operation has an error, the error code is returned here.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>If the <code>PutProjectEvents</code> operation has an error, the error message is returned here.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl PutProjectEventsResultEntry {
@@ -887,11 +1381,10 @@ impl std::fmt::Debug for PutProjectEventsResultEntry {
         formatter.finish()
     }
 }
-/// See [`PutProjectEventsResultEntry`](crate::model::PutProjectEventsResultEntry)
+/// See [`PutProjectEventsResultEntry`](crate::model::PutProjectEventsResultEntry).
 pub mod put_project_events_result_entry {
 
-    /// A builder for [`PutProjectEventsResultEntry`](crate::model::PutProjectEventsResultEntry)
-    #[non_exhaustive]
+    /// A builder for [`PutProjectEventsResultEntry`](crate::model::PutProjectEventsResultEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_id: std::option::Option<std::string::String>,
@@ -932,7 +1425,7 @@ pub mod put_project_events_result_entry {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutProjectEventsResultEntry`](crate::model::PutProjectEventsResultEntry)
+        /// Consumes the builder and constructs a [`PutProjectEventsResultEntry`](crate::model::PutProjectEventsResultEntry).
         pub fn build(self) -> crate::model::PutProjectEventsResultEntry {
             crate::model::PutProjectEventsResultEntry {
                 event_id: self.event_id,
@@ -943,7 +1436,7 @@ pub mod put_project_events_result_entry {
     }
 }
 impl PutProjectEventsResultEntry {
-    /// Creates a new builder-style object to manufacture [`PutProjectEventsResultEntry`](crate::model::PutProjectEventsResultEntry)
+    /// Creates a new builder-style object to manufacture [`PutProjectEventsResultEntry`](crate::model::PutProjectEventsResultEntry).
     pub fn builder() -> crate::model::put_project_events_result_entry::Builder {
         crate::model::put_project_events_result_entry::Builder::default()
     }
@@ -954,10 +1447,13 @@ impl PutProjectEventsResultEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Event {
     /// <p>The timestamp of the event.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> <code>aws.evidently.evaluation</code> specifies an evaluation event, which determines which feature variation that a user sees. <code>aws.evidently.custom</code> specifies a custom event, which generates metrics from user actions such as clicks and checkouts.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EventType>,
     /// <p>The event data.</p>
+    #[doc(hidden)]
     pub data: std::option::Option<std::string::String>,
 }
 impl Event {
@@ -983,11 +1479,10 @@ impl std::fmt::Debug for Event {
         formatter.finish()
     }
 }
-/// See [`Event`](crate::model::Event)
+/// See [`Event`](crate::model::Event).
 pub mod event {
 
-    /// A builder for [`Event`](crate::model::Event)
-    #[non_exhaustive]
+    /// A builder for [`Event`](crate::model::Event).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timestamp: std::option::Option<aws_smithy_types::DateTime>,
@@ -1028,7 +1523,7 @@ pub mod event {
             self.data = input;
             self
         }
-        /// Consumes the builder and constructs a [`Event`](crate::model::Event)
+        /// Consumes the builder and constructs a [`Event`](crate::model::Event).
         pub fn build(self) -> crate::model::Event {
             crate::model::Event {
                 timestamp: self.timestamp,
@@ -1039,7 +1534,7 @@ pub mod event {
     }
 }
 impl Event {
-    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event)
+    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event).
     pub fn builder() -> crate::model::event::Builder {
         crate::model::event::Builder::default()
     }
@@ -1186,18 +1681,25 @@ impl VariableValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EvaluationResult {
     /// <p>The name or ARN of the project that contains the feature being evaluated.</p>
+    #[doc(hidden)]
     pub project: std::option::Option<std::string::String>,
     /// <p>The name of the feature being evaluated.</p>
+    #[doc(hidden)]
     pub feature: std::option::Option<std::string::String>,
     /// <p>The name of the variation that was served to the user session.</p>
+    #[doc(hidden)]
     pub variation: std::option::Option<std::string::String>,
     /// <p>The value assigned to this variation to differentiate it from the other variations of this feature.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<crate::model::VariableValue>,
     /// <p>An internal ID that represents a unique user session of the application.</p>
+    #[doc(hidden)]
     pub entity_id: std::option::Option<std::string::String>,
     /// <p>Specifies the reason that the user session was assigned this variation. Possible values include <code>DEFAULT</code>, meaning the user was served the default variation; <code>LAUNCH_RULE_MATCH</code>, if the user session was enrolled in a launch; or <code>EXPERIMENT_RULE_MATCH</code>, if the user session was enrolled in an experiment.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p>If this user was assigned to a launch or experiment, this field lists the launch or experiment name.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
 }
 impl EvaluationResult {
@@ -1243,11 +1745,10 @@ impl std::fmt::Debug for EvaluationResult {
         formatter.finish()
     }
 }
-/// See [`EvaluationResult`](crate::model::EvaluationResult)
+/// See [`EvaluationResult`](crate::model::EvaluationResult).
 pub mod evaluation_result {
 
-    /// A builder for [`EvaluationResult`](crate::model::EvaluationResult)
-    #[non_exhaustive]
+    /// A builder for [`EvaluationResult`](crate::model::EvaluationResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) project: std::option::Option<std::string::String>,
@@ -1332,7 +1833,7 @@ pub mod evaluation_result {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`EvaluationResult`](crate::model::EvaluationResult)
+        /// Consumes the builder and constructs a [`EvaluationResult`](crate::model::EvaluationResult).
         pub fn build(self) -> crate::model::EvaluationResult {
             crate::model::EvaluationResult {
                 project: self.project,
@@ -1347,7 +1848,7 @@ pub mod evaluation_result {
     }
 }
 impl EvaluationResult {
-    /// Creates a new builder-style object to manufacture [`EvaluationResult`](crate::model::EvaluationResult)
+    /// Creates a new builder-style object to manufacture [`EvaluationResult`](crate::model::EvaluationResult).
     pub fn builder() -> crate::model::evaluation_result::Builder {
         crate::model::evaluation_result::Builder::default()
     }
@@ -1358,10 +1859,13 @@ impl EvaluationResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EvaluationRequest {
     /// <p>The name of the feature being evaluated.</p>
+    #[doc(hidden)]
     pub feature: std::option::Option<std::string::String>,
     /// <p>An internal ID that represents a unique user session of the application. This <code>entityID</code> is checked against any override rules assigned for this feature.</p>
+    #[doc(hidden)]
     pub entity_id: std::option::Option<std::string::String>,
     /// <p>A JSON block of attributes that you can optionally pass in. This JSON block is included in the evaluation events sent to Evidently from the user session. </p>
+    #[doc(hidden)]
     pub evaluation_context: std::option::Option<std::string::String>,
 }
 impl EvaluationRequest {
@@ -1387,11 +1891,10 @@ impl std::fmt::Debug for EvaluationRequest {
         formatter.finish()
     }
 }
-/// See [`EvaluationRequest`](crate::model::EvaluationRequest)
+/// See [`EvaluationRequest`](crate::model::EvaluationRequest).
 pub mod evaluation_request {
 
-    /// A builder for [`EvaluationRequest`](crate::model::EvaluationRequest)
-    #[non_exhaustive]
+    /// A builder for [`EvaluationRequest`](crate::model::EvaluationRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) feature: std::option::Option<std::string::String>,
@@ -1432,7 +1935,7 @@ pub mod evaluation_request {
             self.evaluation_context = input;
             self
         }
-        /// Consumes the builder and constructs a [`EvaluationRequest`](crate::model::EvaluationRequest)
+        /// Consumes the builder and constructs a [`EvaluationRequest`](crate::model::EvaluationRequest).
         pub fn build(self) -> crate::model::EvaluationRequest {
             crate::model::EvaluationRequest {
                 feature: self.feature,
@@ -1443,7 +1946,7 @@ pub mod evaluation_request {
     }
 }
 impl EvaluationRequest {
-    /// Creates a new builder-style object to manufacture [`EvaluationRequest`](crate::model::EvaluationRequest)
+    /// Creates a new builder-style object to manufacture [`EvaluationRequest`](crate::model::EvaluationRequest).
     pub fn builder() -> crate::model::evaluation_request::Builder {
         crate::model::evaluation_request::Builder::default()
     }
@@ -1454,28 +1957,40 @@ impl EvaluationRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProjectSummary {
     /// <p>The name or ARN of the project.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the project.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The current state of the project.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ProjectStatus>,
     /// <p>The description of the project.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date and time that the project is created.</p>
+    #[doc(hidden)]
     pub created_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the project was most recently updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The number of features currently in the project.</p>
+    #[doc(hidden)]
     pub feature_count: std::option::Option<i64>,
     /// <p>The number of launches currently in the project, including launches that are ongoing, completed, and not started yet.</p>
+    #[doc(hidden)]
     pub launch_count: std::option::Option<i64>,
     /// <p>The number of ongoing launches currently in the project.</p>
+    #[doc(hidden)]
     pub active_launch_count: std::option::Option<i64>,
     /// <p>The number of experiments currently in the project.</p>
+    #[doc(hidden)]
     pub experiment_count: std::option::Option<i64>,
     /// <p>The number of experiments currently in the project.</p>
+    #[doc(hidden)]
     pub active_experiment_count: std::option::Option<i64>,
     /// <p>The list of tag keys and values associated with this project.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1550,11 +2065,10 @@ impl std::fmt::Debug for ProjectSummary {
         formatter.finish()
     }
 }
-/// See [`ProjectSummary`](crate::model::ProjectSummary)
+/// See [`ProjectSummary`](crate::model::ProjectSummary).
 pub mod project_summary {
 
-    /// A builder for [`ProjectSummary`](crate::model::ProjectSummary)
-    #[non_exhaustive]
+    /// A builder for [`ProjectSummary`](crate::model::ProjectSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1717,7 +2231,7 @@ pub mod project_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectSummary`](crate::model::ProjectSummary)
+        /// Consumes the builder and constructs a [`ProjectSummary`](crate::model::ProjectSummary).
         pub fn build(self) -> crate::model::ProjectSummary {
             crate::model::ProjectSummary {
                 arn: self.arn,
@@ -1737,7 +2251,7 @@ pub mod project_summary {
     }
 }
 impl ProjectSummary {
-    /// Creates a new builder-style object to manufacture [`ProjectSummary`](crate::model::ProjectSummary)
+    /// Creates a new builder-style object to manufacture [`ProjectSummary`](crate::model::ProjectSummary).
     pub fn builder() -> crate::model::project_summary::Builder {
         crate::model::project_summary::Builder::default()
     }
@@ -1748,8 +2262,10 @@ impl ProjectSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProjectDataDeliveryConfig {
     /// <p>If the project stores evaluation events in an Amazon S3 bucket, this structure stores the bucket name and bucket prefix.</p>
+    #[doc(hidden)]
     pub s3_destination: std::option::Option<crate::model::S3DestinationConfig>,
     /// <p>If the project stores evaluation events in CloudWatch Logs, this structure stores the log group name.</p>
+    #[doc(hidden)]
     pub cloud_watch_logs: std::option::Option<crate::model::CloudWatchLogsDestinationConfig>,
 }
 impl ProjectDataDeliveryConfig {
@@ -1772,11 +2288,10 @@ impl std::fmt::Debug for ProjectDataDeliveryConfig {
         formatter.finish()
     }
 }
-/// See [`ProjectDataDeliveryConfig`](crate::model::ProjectDataDeliveryConfig)
+/// See [`ProjectDataDeliveryConfig`](crate::model::ProjectDataDeliveryConfig).
 pub mod project_data_delivery_config {
 
-    /// A builder for [`ProjectDataDeliveryConfig`](crate::model::ProjectDataDeliveryConfig)
-    #[non_exhaustive]
+    /// A builder for [`ProjectDataDeliveryConfig`](crate::model::ProjectDataDeliveryConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_destination: std::option::Option<crate::model::S3DestinationConfig>,
@@ -1813,7 +2328,7 @@ pub mod project_data_delivery_config {
             self.cloud_watch_logs = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectDataDeliveryConfig`](crate::model::ProjectDataDeliveryConfig)
+        /// Consumes the builder and constructs a [`ProjectDataDeliveryConfig`](crate::model::ProjectDataDeliveryConfig).
         pub fn build(self) -> crate::model::ProjectDataDeliveryConfig {
             crate::model::ProjectDataDeliveryConfig {
                 s3_destination: self.s3_destination,
@@ -1823,7 +2338,7 @@ pub mod project_data_delivery_config {
     }
 }
 impl ProjectDataDeliveryConfig {
-    /// Creates a new builder-style object to manufacture [`ProjectDataDeliveryConfig`](crate::model::ProjectDataDeliveryConfig)
+    /// Creates a new builder-style object to manufacture [`ProjectDataDeliveryConfig`](crate::model::ProjectDataDeliveryConfig).
     pub fn builder() -> crate::model::project_data_delivery_config::Builder {
         crate::model::project_data_delivery_config::Builder::default()
     }
@@ -1889,35 +2404,50 @@ impl AsRef<str> for LaunchStopDesiredState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Launch {
     /// <p>The ARN of the launch.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the launch.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The name or ARN of the project that contains the launch.</p>
+    #[doc(hidden)]
     pub project: std::option::Option<std::string::String>,
     /// <p>The current state of the launch.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::LaunchStatus>,
     /// <p>If the launch was stopped, this is the string that was entered by the person who stopped the launch, to explain why it was stopped.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>The description of the launch.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date and time that the launch is created.</p>
+    #[doc(hidden)]
     pub created_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the launch was most recently updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A structure that contains information about the start and end times of the launch.</p>
+    #[doc(hidden)]
     pub execution: std::option::Option<crate::model::LaunchExecution>,
     /// <p>An array of structures that define the feature variations that are being used in the launch.</p>
+    #[doc(hidden)]
     pub groups: std::option::Option<std::vec::Vec<crate::model::LaunchGroup>>,
     /// <p>An array of structures that define the metrics that are being used to monitor the launch performance.</p>
+    #[doc(hidden)]
     pub metric_monitors: std::option::Option<std::vec::Vec<crate::model::MetricMonitor>>,
     /// <p>This value is used when Evidently assigns a particular user session to the launch, to help create a randomization ID to determine which variation the user session is served. This randomization ID is a combination of the entity ID and <code>randomizationSalt</code>.</p>
+    #[doc(hidden)]
     pub randomization_salt: std::option::Option<std::string::String>,
     /// <p>The type of launch.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::LaunchType>,
     /// <p>An array of structures that define the traffic allocation percentages among the feature variations during each step of the launch.</p>
+    #[doc(hidden)]
     pub scheduled_splits_definition:
         std::option::Option<crate::model::ScheduledSplitsLaunchDefinition>,
     /// <p>The list of tag keys and values associated with this launch.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2012,11 +2542,10 @@ impl std::fmt::Debug for Launch {
         formatter.finish()
     }
 }
-/// See [`Launch`](crate::model::Launch)
+/// See [`Launch`](crate::model::Launch).
 pub mod launch {
 
-    /// A builder for [`Launch`](crate::model::Launch)
-    #[non_exhaustive]
+    /// A builder for [`Launch`](crate::model::Launch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2246,7 +2775,7 @@ pub mod launch {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Launch`](crate::model::Launch)
+        /// Consumes the builder and constructs a [`Launch`](crate::model::Launch).
         pub fn build(self) -> crate::model::Launch {
             crate::model::Launch {
                 arn: self.arn,
@@ -2269,7 +2798,7 @@ pub mod launch {
     }
 }
 impl Launch {
-    /// Creates a new builder-style object to manufacture [`Launch`](crate::model::Launch)
+    /// Creates a new builder-style object to manufacture [`Launch`](crate::model::Launch).
     pub fn builder() -> crate::model::launch::Builder {
         crate::model::launch::Builder::default()
     }
@@ -2280,6 +2809,7 @@ impl Launch {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduledSplitsLaunchDefinition {
     /// <p>An array of structures that define the traffic allocation percentages among the feature variations during each step of the launch. This also defines the start time of each step.</p>
+    #[doc(hidden)]
     pub steps: std::option::Option<std::vec::Vec<crate::model::ScheduledSplit>>,
 }
 impl ScheduledSplitsLaunchDefinition {
@@ -2295,11 +2825,10 @@ impl std::fmt::Debug for ScheduledSplitsLaunchDefinition {
         formatter.finish()
     }
 }
-/// See [`ScheduledSplitsLaunchDefinition`](crate::model::ScheduledSplitsLaunchDefinition)
+/// See [`ScheduledSplitsLaunchDefinition`](crate::model::ScheduledSplitsLaunchDefinition).
 pub mod scheduled_splits_launch_definition {
 
-    /// A builder for [`ScheduledSplitsLaunchDefinition`](crate::model::ScheduledSplitsLaunchDefinition)
-    #[non_exhaustive]
+    /// A builder for [`ScheduledSplitsLaunchDefinition`](crate::model::ScheduledSplitsLaunchDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) steps: std::option::Option<std::vec::Vec<crate::model::ScheduledSplit>>,
@@ -2324,14 +2853,14 @@ pub mod scheduled_splits_launch_definition {
             self.steps = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduledSplitsLaunchDefinition`](crate::model::ScheduledSplitsLaunchDefinition)
+        /// Consumes the builder and constructs a [`ScheduledSplitsLaunchDefinition`](crate::model::ScheduledSplitsLaunchDefinition).
         pub fn build(self) -> crate::model::ScheduledSplitsLaunchDefinition {
             crate::model::ScheduledSplitsLaunchDefinition { steps: self.steps }
         }
     }
 }
 impl ScheduledSplitsLaunchDefinition {
-    /// Creates a new builder-style object to manufacture [`ScheduledSplitsLaunchDefinition`](crate::model::ScheduledSplitsLaunchDefinition)
+    /// Creates a new builder-style object to manufacture [`ScheduledSplitsLaunchDefinition`](crate::model::ScheduledSplitsLaunchDefinition).
     pub fn builder() -> crate::model::scheduled_splits_launch_definition::Builder {
         crate::model::scheduled_splits_launch_definition::Builder::default()
     }
@@ -2342,9 +2871,17 @@ impl ScheduledSplitsLaunchDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduledSplit {
     /// <p>The date and time that this step of the launch starts.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The traffic allocation percentages among the feature variations during one step of a launch. This is a set of key-value pairs. The keys are variation names. The values represent the percentage of traffic to allocate to that variation during this step.</p>
+    /// <p>The values is expressed in thousandths of a percent, so assigning a weight of 50000 assigns 50% of traffic to that variation.</p>
+    /// <p>If the sum of the weights for all the variations in a segment override does not add up to 100,000, then the remaining traffic that matches this segment is not assigned by this segment override, and instead moves on to the next segment override or the default traffic split.</p>
+    #[doc(hidden)]
     pub group_weights: std::option::Option<std::collections::HashMap<std::string::String, i64>>,
+    /// <p>Use this parameter to specify different traffic splits for one or more audience <i>segments</i>. A segment is a portion of your audience that share one or more characteristics. Examples could be Chrome browser users, users in Europe, or Firefox browser users in Europe who also fit other criteria that your application collects, such as age.</p>
+    /// <p>This parameter is an array of up to six segment override objects. Each of these objects specifies a segment that you have already created, and defines the traffic split for that segment.</p>
+    #[doc(hidden)]
+    pub segment_overrides: std::option::Option<std::vec::Vec<crate::model::SegmentOverride>>,
 }
 impl ScheduledSplit {
     /// <p>The date and time that this step of the launch starts.</p>
@@ -2352,10 +2889,17 @@ impl ScheduledSplit {
         self.start_time.as_ref()
     }
     /// <p>The traffic allocation percentages among the feature variations during one step of a launch. This is a set of key-value pairs. The keys are variation names. The values represent the percentage of traffic to allocate to that variation during this step.</p>
+    /// <p>The values is expressed in thousandths of a percent, so assigning a weight of 50000 assigns 50% of traffic to that variation.</p>
+    /// <p>If the sum of the weights for all the variations in a segment override does not add up to 100,000, then the remaining traffic that matches this segment is not assigned by this segment override, and instead moves on to the next segment override or the default traffic split.</p>
     pub fn group_weights(
         &self,
     ) -> std::option::Option<&std::collections::HashMap<std::string::String, i64>> {
         self.group_weights.as_ref()
+    }
+    /// <p>Use this parameter to specify different traffic splits for one or more audience <i>segments</i>. A segment is a portion of your audience that share one or more characteristics. Examples could be Chrome browser users, users in Europe, or Firefox browser users in Europe who also fit other criteria that your application collects, such as age.</p>
+    /// <p>This parameter is an array of up to six segment override objects. Each of these objects specifies a segment that you have already created, and defines the traffic split for that segment.</p>
+    pub fn segment_overrides(&self) -> std::option::Option<&[crate::model::SegmentOverride]> {
+        self.segment_overrides.as_deref()
     }
 }
 impl std::fmt::Debug for ScheduledSplit {
@@ -2363,19 +2907,21 @@ impl std::fmt::Debug for ScheduledSplit {
         let mut formatter = f.debug_struct("ScheduledSplit");
         formatter.field("start_time", &self.start_time);
         formatter.field("group_weights", &self.group_weights);
+        formatter.field("segment_overrides", &self.segment_overrides);
         formatter.finish()
     }
 }
-/// See [`ScheduledSplit`](crate::model::ScheduledSplit)
+/// See [`ScheduledSplit`](crate::model::ScheduledSplit).
 pub mod scheduled_split {
 
-    /// A builder for [`ScheduledSplit`](crate::model::ScheduledSplit)
-    #[non_exhaustive]
+    /// A builder for [`ScheduledSplit`](crate::model::ScheduledSplit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) group_weights:
             std::option::Option<std::collections::HashMap<std::string::String, i64>>,
+        pub(crate) segment_overrides:
+            std::option::Option<std::vec::Vec<crate::model::SegmentOverride>>,
     }
     impl Builder {
         /// <p>The date and time that this step of the launch starts.</p>
@@ -2396,6 +2942,8 @@ pub mod scheduled_split {
         /// To override the contents of this collection use [`set_group_weights`](Self::set_group_weights).
         ///
         /// <p>The traffic allocation percentages among the feature variations during one step of a launch. This is a set of key-value pairs. The keys are variation names. The values represent the percentage of traffic to allocate to that variation during this step.</p>
+        /// <p>The values is expressed in thousandths of a percent, so assigning a weight of 50000 assigns 50% of traffic to that variation.</p>
+        /// <p>If the sum of the weights for all the variations in a segment override does not add up to 100,000, then the remaining traffic that matches this segment is not assigned by this segment override, and instead moves on to the next segment override or the default traffic split.</p>
         pub fn group_weights(mut self, k: impl Into<std::string::String>, v: i64) -> Self {
             let mut hash_map = self.group_weights.unwrap_or_default();
             hash_map.insert(k.into(), v);
@@ -2403,6 +2951,8 @@ pub mod scheduled_split {
             self
         }
         /// <p>The traffic allocation percentages among the feature variations during one step of a launch. This is a set of key-value pairs. The keys are variation names. The values represent the percentage of traffic to allocate to that variation during this step.</p>
+        /// <p>The values is expressed in thousandths of a percent, so assigning a weight of 50000 assigns 50% of traffic to that variation.</p>
+        /// <p>If the sum of the weights for all the variations in a segment override does not add up to 100,000, then the remaining traffic that matches this segment is not assigned by this segment override, and instead moves on to the next segment override or the default traffic split.</p>
         pub fn set_group_weights(
             mut self,
             input: std::option::Option<std::collections::HashMap<std::string::String, i64>>,
@@ -2410,19 +2960,148 @@ pub mod scheduled_split {
             self.group_weights = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduledSplit`](crate::model::ScheduledSplit)
+        /// Appends an item to `segment_overrides`.
+        ///
+        /// To override the contents of this collection use [`set_segment_overrides`](Self::set_segment_overrides).
+        ///
+        /// <p>Use this parameter to specify different traffic splits for one or more audience <i>segments</i>. A segment is a portion of your audience that share one or more characteristics. Examples could be Chrome browser users, users in Europe, or Firefox browser users in Europe who also fit other criteria that your application collects, such as age.</p>
+        /// <p>This parameter is an array of up to six segment override objects. Each of these objects specifies a segment that you have already created, and defines the traffic split for that segment.</p>
+        pub fn segment_overrides(mut self, input: crate::model::SegmentOverride) -> Self {
+            let mut v = self.segment_overrides.unwrap_or_default();
+            v.push(input);
+            self.segment_overrides = Some(v);
+            self
+        }
+        /// <p>Use this parameter to specify different traffic splits for one or more audience <i>segments</i>. A segment is a portion of your audience that share one or more characteristics. Examples could be Chrome browser users, users in Europe, or Firefox browser users in Europe who also fit other criteria that your application collects, such as age.</p>
+        /// <p>This parameter is an array of up to six segment override objects. Each of these objects specifies a segment that you have already created, and defines the traffic split for that segment.</p>
+        pub fn set_segment_overrides(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::SegmentOverride>>,
+        ) -> Self {
+            self.segment_overrides = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ScheduledSplit`](crate::model::ScheduledSplit).
         pub fn build(self) -> crate::model::ScheduledSplit {
             crate::model::ScheduledSplit {
                 start_time: self.start_time,
                 group_weights: self.group_weights,
+                segment_overrides: self.segment_overrides,
             }
         }
     }
 }
 impl ScheduledSplit {
-    /// Creates a new builder-style object to manufacture [`ScheduledSplit`](crate::model::ScheduledSplit)
+    /// Creates a new builder-style object to manufacture [`ScheduledSplit`](crate::model::ScheduledSplit).
     pub fn builder() -> crate::model::scheduled_split::Builder {
         crate::model::scheduled_split::Builder::default()
+    }
+}
+
+/// <p>This structure specifies a segment that you have already created, and defines the traffic split for that segment to be used in a launch.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct SegmentOverride {
+    /// <p>The ARN of the segment to use.</p>
+    #[doc(hidden)]
+    pub segment: std::option::Option<std::string::String>,
+    /// <p>A number indicating the order to use to evaluate segment overrides, if there are more than one. Segment overrides with lower numbers are evaluated first.</p>
+    #[doc(hidden)]
+    pub evaluation_order: std::option::Option<i64>,
+    /// <p>The traffic allocation percentages among the feature variations to assign to this segment. This is a set of key-value pairs. The keys are variation names. The values represent the amount of traffic to allocate to that variation for this segment. This is expressed in thousandths of a percent, so a weight of 50000 represents 50% of traffic.</p>
+    #[doc(hidden)]
+    pub weights: std::option::Option<std::collections::HashMap<std::string::String, i64>>,
+}
+impl SegmentOverride {
+    /// <p>The ARN of the segment to use.</p>
+    pub fn segment(&self) -> std::option::Option<&str> {
+        self.segment.as_deref()
+    }
+    /// <p>A number indicating the order to use to evaluate segment overrides, if there are more than one. Segment overrides with lower numbers are evaluated first.</p>
+    pub fn evaluation_order(&self) -> std::option::Option<i64> {
+        self.evaluation_order
+    }
+    /// <p>The traffic allocation percentages among the feature variations to assign to this segment. This is a set of key-value pairs. The keys are variation names. The values represent the amount of traffic to allocate to that variation for this segment. This is expressed in thousandths of a percent, so a weight of 50000 represents 50% of traffic.</p>
+    pub fn weights(
+        &self,
+    ) -> std::option::Option<&std::collections::HashMap<std::string::String, i64>> {
+        self.weights.as_ref()
+    }
+}
+impl std::fmt::Debug for SegmentOverride {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("SegmentOverride");
+        formatter.field("segment", &self.segment);
+        formatter.field("evaluation_order", &self.evaluation_order);
+        formatter.field("weights", &self.weights);
+        formatter.finish()
+    }
+}
+/// See [`SegmentOverride`](crate::model::SegmentOverride).
+pub mod segment_override {
+
+    /// A builder for [`SegmentOverride`](crate::model::SegmentOverride).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) segment: std::option::Option<std::string::String>,
+        pub(crate) evaluation_order: std::option::Option<i64>,
+        pub(crate) weights:
+            std::option::Option<std::collections::HashMap<std::string::String, i64>>,
+    }
+    impl Builder {
+        /// <p>The ARN of the segment to use.</p>
+        pub fn segment(mut self, input: impl Into<std::string::String>) -> Self {
+            self.segment = Some(input.into());
+            self
+        }
+        /// <p>The ARN of the segment to use.</p>
+        pub fn set_segment(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.segment = input;
+            self
+        }
+        /// <p>A number indicating the order to use to evaluate segment overrides, if there are more than one. Segment overrides with lower numbers are evaluated first.</p>
+        pub fn evaluation_order(mut self, input: i64) -> Self {
+            self.evaluation_order = Some(input);
+            self
+        }
+        /// <p>A number indicating the order to use to evaluate segment overrides, if there are more than one. Segment overrides with lower numbers are evaluated first.</p>
+        pub fn set_evaluation_order(mut self, input: std::option::Option<i64>) -> Self {
+            self.evaluation_order = input;
+            self
+        }
+        /// Adds a key-value pair to `weights`.
+        ///
+        /// To override the contents of this collection use [`set_weights`](Self::set_weights).
+        ///
+        /// <p>The traffic allocation percentages among the feature variations to assign to this segment. This is a set of key-value pairs. The keys are variation names. The values represent the amount of traffic to allocate to that variation for this segment. This is expressed in thousandths of a percent, so a weight of 50000 represents 50% of traffic.</p>
+        pub fn weights(mut self, k: impl Into<std::string::String>, v: i64) -> Self {
+            let mut hash_map = self.weights.unwrap_or_default();
+            hash_map.insert(k.into(), v);
+            self.weights = Some(hash_map);
+            self
+        }
+        /// <p>The traffic allocation percentages among the feature variations to assign to this segment. This is a set of key-value pairs. The keys are variation names. The values represent the amount of traffic to allocate to that variation for this segment. This is expressed in thousandths of a percent, so a weight of 50000 represents 50% of traffic.</p>
+        pub fn set_weights(
+            mut self,
+            input: std::option::Option<std::collections::HashMap<std::string::String, i64>>,
+        ) -> Self {
+            self.weights = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`SegmentOverride`](crate::model::SegmentOverride).
+        pub fn build(self) -> crate::model::SegmentOverride {
+            crate::model::SegmentOverride {
+                segment: self.segment,
+                evaluation_order: self.evaluation_order,
+                weights: self.weights,
+            }
+        }
+    }
+}
+impl SegmentOverride {
+    /// Creates a new builder-style object to manufacture [`SegmentOverride`](crate::model::SegmentOverride).
+    pub fn builder() -> crate::model::segment_override::Builder {
+        crate::model::segment_override::Builder::default()
     }
 }
 
@@ -2482,6 +3161,7 @@ impl AsRef<str> for LaunchType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricMonitor {
     /// <p>A structure that defines the metric.</p>
+    #[doc(hidden)]
     pub metric_definition: std::option::Option<crate::model::MetricDefinition>,
 }
 impl MetricMonitor {
@@ -2497,11 +3177,10 @@ impl std::fmt::Debug for MetricMonitor {
         formatter.finish()
     }
 }
-/// See [`MetricMonitor`](crate::model::MetricMonitor)
+/// See [`MetricMonitor`](crate::model::MetricMonitor).
 pub mod metric_monitor {
 
-    /// A builder for [`MetricMonitor`](crate::model::MetricMonitor)
-    #[non_exhaustive]
+    /// A builder for [`MetricMonitor`](crate::model::MetricMonitor).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_definition: std::option::Option<crate::model::MetricDefinition>,
@@ -2520,7 +3199,7 @@ pub mod metric_monitor {
             self.metric_definition = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricMonitor`](crate::model::MetricMonitor)
+        /// Consumes the builder and constructs a [`MetricMonitor`](crate::model::MetricMonitor).
         pub fn build(self) -> crate::model::MetricMonitor {
             crate::model::MetricMonitor {
                 metric_definition: self.metric_definition,
@@ -2529,7 +3208,7 @@ pub mod metric_monitor {
     }
 }
 impl MetricMonitor {
-    /// Creates a new builder-style object to manufacture [`MetricMonitor`](crate::model::MetricMonitor)
+    /// Creates a new builder-style object to manufacture [`MetricMonitor`](crate::model::MetricMonitor).
     pub fn builder() -> crate::model::metric_monitor::Builder {
         crate::model::metric_monitor::Builder::default()
     }
@@ -2540,15 +3219,20 @@ impl MetricMonitor {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDefinition {
     /// <p>The name of the metric.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The entity, such as a user or session, that does an action that causes a metric value to be recorded.</p>
+    #[doc(hidden)]
     pub entity_id_key: std::option::Option<std::string::String>,
     /// <p>The value that is tracked to produce the metric.</p>
+    #[doc(hidden)]
     pub value_key: std::option::Option<std::string::String>,
     /// <p>The EventBridge event pattern that defines how the metric is recorded.</p>
     /// <p>For more information about EventBridge event patterns, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html">Amazon EventBridge event patterns</a>.</p>
+    #[doc(hidden)]
     pub event_pattern: std::option::Option<std::string::String>,
     /// <p>The label for the units that the metric is measuring.</p>
+    #[doc(hidden)]
     pub unit_label: std::option::Option<std::string::String>,
 }
 impl MetricDefinition {
@@ -2585,11 +3269,10 @@ impl std::fmt::Debug for MetricDefinition {
         formatter.finish()
     }
 }
-/// See [`MetricDefinition`](crate::model::MetricDefinition)
+/// See [`MetricDefinition`](crate::model::MetricDefinition).
 pub mod metric_definition {
 
-    /// A builder for [`MetricDefinition`](crate::model::MetricDefinition)
-    #[non_exhaustive]
+    /// A builder for [`MetricDefinition`](crate::model::MetricDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2657,7 +3340,7 @@ pub mod metric_definition {
             self.unit_label = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDefinition`](crate::model::MetricDefinition)
+        /// Consumes the builder and constructs a [`MetricDefinition`](crate::model::MetricDefinition).
         pub fn build(self) -> crate::model::MetricDefinition {
             crate::model::MetricDefinition {
                 name: self.name,
@@ -2670,7 +3353,7 @@ pub mod metric_definition {
     }
 }
 impl MetricDefinition {
-    /// Creates a new builder-style object to manufacture [`MetricDefinition`](crate::model::MetricDefinition)
+    /// Creates a new builder-style object to manufacture [`MetricDefinition`](crate::model::MetricDefinition).
     pub fn builder() -> crate::model::metric_definition::Builder {
         crate::model::metric_definition::Builder::default()
     }
@@ -2681,10 +3364,13 @@ impl MetricDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchGroup {
     /// <p>The name of the launch group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description of the launch group.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The feature variation for this launch group. This is a key-value pair.</p>
+    #[doc(hidden)]
     pub feature_variations:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2714,11 +3400,10 @@ impl std::fmt::Debug for LaunchGroup {
         formatter.finish()
     }
 }
-/// See [`LaunchGroup`](crate::model::LaunchGroup)
+/// See [`LaunchGroup`](crate::model::LaunchGroup).
 pub mod launch_group {
 
-    /// A builder for [`LaunchGroup`](crate::model::LaunchGroup)
-    #[non_exhaustive]
+    /// A builder for [`LaunchGroup`](crate::model::LaunchGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2773,7 +3458,7 @@ pub mod launch_group {
             self.feature_variations = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchGroup`](crate::model::LaunchGroup)
+        /// Consumes the builder and constructs a [`LaunchGroup`](crate::model::LaunchGroup).
         pub fn build(self) -> crate::model::LaunchGroup {
             crate::model::LaunchGroup {
                 name: self.name,
@@ -2784,7 +3469,7 @@ pub mod launch_group {
     }
 }
 impl LaunchGroup {
-    /// Creates a new builder-style object to manufacture [`LaunchGroup`](crate::model::LaunchGroup)
+    /// Creates a new builder-style object to manufacture [`LaunchGroup`](crate::model::LaunchGroup).
     pub fn builder() -> crate::model::launch_group::Builder {
         crate::model::launch_group::Builder::default()
     }
@@ -2795,8 +3480,10 @@ impl LaunchGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchExecution {
     /// <p>The date and time that the launch started.</p>
+    #[doc(hidden)]
     pub started_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the launch ended.</p>
+    #[doc(hidden)]
     pub ended_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl LaunchExecution {
@@ -2817,11 +3504,10 @@ impl std::fmt::Debug for LaunchExecution {
         formatter.finish()
     }
 }
-/// See [`LaunchExecution`](crate::model::LaunchExecution)
+/// See [`LaunchExecution`](crate::model::LaunchExecution).
 pub mod launch_execution {
 
-    /// A builder for [`LaunchExecution`](crate::model::LaunchExecution)
-    #[non_exhaustive]
+    /// A builder for [`LaunchExecution`](crate::model::LaunchExecution).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) started_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -2854,7 +3540,7 @@ pub mod launch_execution {
             self.ended_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchExecution`](crate::model::LaunchExecution)
+        /// Consumes the builder and constructs a [`LaunchExecution`](crate::model::LaunchExecution).
         pub fn build(self) -> crate::model::LaunchExecution {
             crate::model::LaunchExecution {
                 started_time: self.started_time,
@@ -2864,7 +3550,7 @@ pub mod launch_execution {
     }
 }
 impl LaunchExecution {
-    /// Creates a new builder-style object to manufacture [`LaunchExecution`](crate::model::LaunchExecution)
+    /// Creates a new builder-style object to manufacture [`LaunchExecution`](crate::model::LaunchExecution).
     pub fn builder() -> crate::model::launch_execution::Builder {
         crate::model::launch_execution::Builder::default()
     }
@@ -2942,12 +3628,16 @@ impl AsRef<str> for LaunchStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchGroupConfig {
     /// <p>A name for this launch group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description of the launch group.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The feature that this launch is using.</p>
+    #[doc(hidden)]
     pub feature: std::option::Option<std::string::String>,
     /// <p>The feature variation to use for this launch group.</p>
+    #[doc(hidden)]
     pub variation: std::option::Option<std::string::String>,
 }
 impl LaunchGroupConfig {
@@ -2978,11 +3668,10 @@ impl std::fmt::Debug for LaunchGroupConfig {
         formatter.finish()
     }
 }
-/// See [`LaunchGroupConfig`](crate::model::LaunchGroupConfig)
+/// See [`LaunchGroupConfig`](crate::model::LaunchGroupConfig).
 pub mod launch_group_config {
 
-    /// A builder for [`LaunchGroupConfig`](crate::model::LaunchGroupConfig)
-    #[non_exhaustive]
+    /// A builder for [`LaunchGroupConfig`](crate::model::LaunchGroupConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3031,7 +3720,7 @@ pub mod launch_group_config {
             self.variation = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchGroupConfig`](crate::model::LaunchGroupConfig)
+        /// Consumes the builder and constructs a [`LaunchGroupConfig`](crate::model::LaunchGroupConfig).
         pub fn build(self) -> crate::model::LaunchGroupConfig {
             crate::model::LaunchGroupConfig {
                 name: self.name,
@@ -3043,7 +3732,7 @@ pub mod launch_group_config {
     }
 }
 impl LaunchGroupConfig {
-    /// Creates a new builder-style object to manufacture [`LaunchGroupConfig`](crate::model::LaunchGroupConfig)
+    /// Creates a new builder-style object to manufacture [`LaunchGroupConfig`](crate::model::LaunchGroupConfig).
     pub fn builder() -> crate::model::launch_group_config::Builder {
         crate::model::launch_group_config::Builder::default()
     }
@@ -3054,6 +3743,7 @@ impl LaunchGroupConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricMonitorConfig {
     /// <p>A structure that defines the metric.</p>
+    #[doc(hidden)]
     pub metric_definition: std::option::Option<crate::model::MetricDefinitionConfig>,
 }
 impl MetricMonitorConfig {
@@ -3069,11 +3759,10 @@ impl std::fmt::Debug for MetricMonitorConfig {
         formatter.finish()
     }
 }
-/// See [`MetricMonitorConfig`](crate::model::MetricMonitorConfig)
+/// See [`MetricMonitorConfig`](crate::model::MetricMonitorConfig).
 pub mod metric_monitor_config {
 
-    /// A builder for [`MetricMonitorConfig`](crate::model::MetricMonitorConfig)
-    #[non_exhaustive]
+    /// A builder for [`MetricMonitorConfig`](crate::model::MetricMonitorConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_definition: std::option::Option<crate::model::MetricDefinitionConfig>,
@@ -3092,7 +3781,7 @@ pub mod metric_monitor_config {
             self.metric_definition = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricMonitorConfig`](crate::model::MetricMonitorConfig)
+        /// Consumes the builder and constructs a [`MetricMonitorConfig`](crate::model::MetricMonitorConfig).
         pub fn build(self) -> crate::model::MetricMonitorConfig {
             crate::model::MetricMonitorConfig {
                 metric_definition: self.metric_definition,
@@ -3101,7 +3790,7 @@ pub mod metric_monitor_config {
     }
 }
 impl MetricMonitorConfig {
-    /// Creates a new builder-style object to manufacture [`MetricMonitorConfig`](crate::model::MetricMonitorConfig)
+    /// Creates a new builder-style object to manufacture [`MetricMonitorConfig`](crate::model::MetricMonitorConfig).
     pub fn builder() -> crate::model::metric_monitor_config::Builder {
         crate::model::metric_monitor_config::Builder::default()
     }
@@ -3112,15 +3801,20 @@ impl MetricMonitorConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDefinitionConfig {
     /// <p>A name for the metric.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The entity, such as a user or session, that does an action that causes a metric value to be recorded. An example is <code>userDetails.userID</code>.</p>
+    #[doc(hidden)]
     pub entity_id_key: std::option::Option<std::string::String>,
     /// <p>The value that is tracked to produce the metric.</p>
+    #[doc(hidden)]
     pub value_key: std::option::Option<std::string::String>,
     /// <p>The EventBridge event pattern that defines how the metric is recorded.</p>
     /// <p>For more information about EventBridge event patterns, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html">Amazon EventBridge event patterns</a>.</p>
+    #[doc(hidden)]
     pub event_pattern: std::option::Option<std::string::String>,
     /// <p>A label for the units that the metric is measuring.</p>
+    #[doc(hidden)]
     pub unit_label: std::option::Option<std::string::String>,
 }
 impl MetricDefinitionConfig {
@@ -3157,11 +3851,10 @@ impl std::fmt::Debug for MetricDefinitionConfig {
         formatter.finish()
     }
 }
-/// See [`MetricDefinitionConfig`](crate::model::MetricDefinitionConfig)
+/// See [`MetricDefinitionConfig`](crate::model::MetricDefinitionConfig).
 pub mod metric_definition_config {
 
-    /// A builder for [`MetricDefinitionConfig`](crate::model::MetricDefinitionConfig)
-    #[non_exhaustive]
+    /// A builder for [`MetricDefinitionConfig`](crate::model::MetricDefinitionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3229,7 +3922,7 @@ pub mod metric_definition_config {
             self.unit_label = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDefinitionConfig`](crate::model::MetricDefinitionConfig)
+        /// Consumes the builder and constructs a [`MetricDefinitionConfig`](crate::model::MetricDefinitionConfig).
         pub fn build(self) -> crate::model::MetricDefinitionConfig {
             crate::model::MetricDefinitionConfig {
                 name: self.name,
@@ -3242,7 +3935,7 @@ pub mod metric_definition_config {
     }
 }
 impl MetricDefinitionConfig {
-    /// Creates a new builder-style object to manufacture [`MetricDefinitionConfig`](crate::model::MetricDefinitionConfig)
+    /// Creates a new builder-style object to manufacture [`MetricDefinitionConfig`](crate::model::MetricDefinitionConfig).
     pub fn builder() -> crate::model::metric_definition_config::Builder {
         crate::model::metric_definition_config::Builder::default()
     }
@@ -3253,6 +3946,7 @@ impl MetricDefinitionConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduledSplitsLaunchConfig {
     /// <p>An array of structures that define the traffic allocation percentages among the feature variations during each step of the launch. This also defines the start time of each step.</p>
+    #[doc(hidden)]
     pub steps: std::option::Option<std::vec::Vec<crate::model::ScheduledSplitConfig>>,
 }
 impl ScheduledSplitsLaunchConfig {
@@ -3268,11 +3962,10 @@ impl std::fmt::Debug for ScheduledSplitsLaunchConfig {
         formatter.finish()
     }
 }
-/// See [`ScheduledSplitsLaunchConfig`](crate::model::ScheduledSplitsLaunchConfig)
+/// See [`ScheduledSplitsLaunchConfig`](crate::model::ScheduledSplitsLaunchConfig).
 pub mod scheduled_splits_launch_config {
 
-    /// A builder for [`ScheduledSplitsLaunchConfig`](crate::model::ScheduledSplitsLaunchConfig)
-    #[non_exhaustive]
+    /// A builder for [`ScheduledSplitsLaunchConfig`](crate::model::ScheduledSplitsLaunchConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) steps: std::option::Option<std::vec::Vec<crate::model::ScheduledSplitConfig>>,
@@ -3297,14 +3990,14 @@ pub mod scheduled_splits_launch_config {
             self.steps = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduledSplitsLaunchConfig`](crate::model::ScheduledSplitsLaunchConfig)
+        /// Consumes the builder and constructs a [`ScheduledSplitsLaunchConfig`](crate::model::ScheduledSplitsLaunchConfig).
         pub fn build(self) -> crate::model::ScheduledSplitsLaunchConfig {
             crate::model::ScheduledSplitsLaunchConfig { steps: self.steps }
         }
     }
 }
 impl ScheduledSplitsLaunchConfig {
-    /// Creates a new builder-style object to manufacture [`ScheduledSplitsLaunchConfig`](crate::model::ScheduledSplitsLaunchConfig)
+    /// Creates a new builder-style object to manufacture [`ScheduledSplitsLaunchConfig`](crate::model::ScheduledSplitsLaunchConfig).
     pub fn builder() -> crate::model::scheduled_splits_launch_config::Builder {
         crate::model::scheduled_splits_launch_config::Builder::default()
     }
@@ -3315,9 +4008,17 @@ impl ScheduledSplitsLaunchConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduledSplitConfig {
     /// <p>The date and time that this step of the launch starts.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The traffic allocation percentages among the feature variations during one step of a launch. This is a set of key-value pairs. The keys are variation names. The values represent the percentage of traffic to allocate to that variation during this step.</p>
+    /// <p>The values is expressed in thousandths of a percent, so assigning a weight of 50000 assigns 50% of traffic to that variation.</p>
+    /// <p>If the sum of the weights for all the variations in a segment override does not add up to 100,000, then the remaining traffic that matches this segment is not assigned by this segment override, and instead moves on to the next segment override or the default traffic split.</p>
+    #[doc(hidden)]
     pub group_weights: std::option::Option<std::collections::HashMap<std::string::String, i64>>,
+    /// <p>Use this parameter to specify different traffic splits for one or more audience <i>segments</i>. A segment is a portion of your audience that share one or more characteristics. Examples could be Chrome browser users, users in Europe, or Firefox browser users in Europe who also fit other criteria that your application collects, such as age.</p>
+    /// <p>This parameter is an array of up to six segment override objects. Each of these objects specifies a segment that you have already created, and defines the traffic split for that segment.</p>
+    #[doc(hidden)]
+    pub segment_overrides: std::option::Option<std::vec::Vec<crate::model::SegmentOverride>>,
 }
 impl ScheduledSplitConfig {
     /// <p>The date and time that this step of the launch starts.</p>
@@ -3325,10 +4026,17 @@ impl ScheduledSplitConfig {
         self.start_time.as_ref()
     }
     /// <p>The traffic allocation percentages among the feature variations during one step of a launch. This is a set of key-value pairs. The keys are variation names. The values represent the percentage of traffic to allocate to that variation during this step.</p>
+    /// <p>The values is expressed in thousandths of a percent, so assigning a weight of 50000 assigns 50% of traffic to that variation.</p>
+    /// <p>If the sum of the weights for all the variations in a segment override does not add up to 100,000, then the remaining traffic that matches this segment is not assigned by this segment override, and instead moves on to the next segment override or the default traffic split.</p>
     pub fn group_weights(
         &self,
     ) -> std::option::Option<&std::collections::HashMap<std::string::String, i64>> {
         self.group_weights.as_ref()
+    }
+    /// <p>Use this parameter to specify different traffic splits for one or more audience <i>segments</i>. A segment is a portion of your audience that share one or more characteristics. Examples could be Chrome browser users, users in Europe, or Firefox browser users in Europe who also fit other criteria that your application collects, such as age.</p>
+    /// <p>This parameter is an array of up to six segment override objects. Each of these objects specifies a segment that you have already created, and defines the traffic split for that segment.</p>
+    pub fn segment_overrides(&self) -> std::option::Option<&[crate::model::SegmentOverride]> {
+        self.segment_overrides.as_deref()
     }
 }
 impl std::fmt::Debug for ScheduledSplitConfig {
@@ -3336,19 +4044,21 @@ impl std::fmt::Debug for ScheduledSplitConfig {
         let mut formatter = f.debug_struct("ScheduledSplitConfig");
         formatter.field("start_time", &self.start_time);
         formatter.field("group_weights", &self.group_weights);
+        formatter.field("segment_overrides", &self.segment_overrides);
         formatter.finish()
     }
 }
-/// See [`ScheduledSplitConfig`](crate::model::ScheduledSplitConfig)
+/// See [`ScheduledSplitConfig`](crate::model::ScheduledSplitConfig).
 pub mod scheduled_split_config {
 
-    /// A builder for [`ScheduledSplitConfig`](crate::model::ScheduledSplitConfig)
-    #[non_exhaustive]
+    /// A builder for [`ScheduledSplitConfig`](crate::model::ScheduledSplitConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) group_weights:
             std::option::Option<std::collections::HashMap<std::string::String, i64>>,
+        pub(crate) segment_overrides:
+            std::option::Option<std::vec::Vec<crate::model::SegmentOverride>>,
     }
     impl Builder {
         /// <p>The date and time that this step of the launch starts.</p>
@@ -3369,6 +4079,8 @@ pub mod scheduled_split_config {
         /// To override the contents of this collection use [`set_group_weights`](Self::set_group_weights).
         ///
         /// <p>The traffic allocation percentages among the feature variations during one step of a launch. This is a set of key-value pairs. The keys are variation names. The values represent the percentage of traffic to allocate to that variation during this step.</p>
+        /// <p>The values is expressed in thousandths of a percent, so assigning a weight of 50000 assigns 50% of traffic to that variation.</p>
+        /// <p>If the sum of the weights for all the variations in a segment override does not add up to 100,000, then the remaining traffic that matches this segment is not assigned by this segment override, and instead moves on to the next segment override or the default traffic split.</p>
         pub fn group_weights(mut self, k: impl Into<std::string::String>, v: i64) -> Self {
             let mut hash_map = self.group_weights.unwrap_or_default();
             hash_map.insert(k.into(), v);
@@ -3376,6 +4088,8 @@ pub mod scheduled_split_config {
             self
         }
         /// <p>The traffic allocation percentages among the feature variations during one step of a launch. This is a set of key-value pairs. The keys are variation names. The values represent the percentage of traffic to allocate to that variation during this step.</p>
+        /// <p>The values is expressed in thousandths of a percent, so assigning a weight of 50000 assigns 50% of traffic to that variation.</p>
+        /// <p>If the sum of the weights for all the variations in a segment override does not add up to 100,000, then the remaining traffic that matches this segment is not assigned by this segment override, and instead moves on to the next segment override or the default traffic split.</p>
         pub fn set_group_weights(
             mut self,
             input: std::option::Option<std::collections::HashMap<std::string::String, i64>>,
@@ -3383,17 +4097,39 @@ pub mod scheduled_split_config {
             self.group_weights = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduledSplitConfig`](crate::model::ScheduledSplitConfig)
+        /// Appends an item to `segment_overrides`.
+        ///
+        /// To override the contents of this collection use [`set_segment_overrides`](Self::set_segment_overrides).
+        ///
+        /// <p>Use this parameter to specify different traffic splits for one or more audience <i>segments</i>. A segment is a portion of your audience that share one or more characteristics. Examples could be Chrome browser users, users in Europe, or Firefox browser users in Europe who also fit other criteria that your application collects, such as age.</p>
+        /// <p>This parameter is an array of up to six segment override objects. Each of these objects specifies a segment that you have already created, and defines the traffic split for that segment.</p>
+        pub fn segment_overrides(mut self, input: crate::model::SegmentOverride) -> Self {
+            let mut v = self.segment_overrides.unwrap_or_default();
+            v.push(input);
+            self.segment_overrides = Some(v);
+            self
+        }
+        /// <p>Use this parameter to specify different traffic splits for one or more audience <i>segments</i>. A segment is a portion of your audience that share one or more characteristics. Examples could be Chrome browser users, users in Europe, or Firefox browser users in Europe who also fit other criteria that your application collects, such as age.</p>
+        /// <p>This parameter is an array of up to six segment override objects. Each of these objects specifies a segment that you have already created, and defines the traffic split for that segment.</p>
+        pub fn set_segment_overrides(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::SegmentOverride>>,
+        ) -> Self {
+            self.segment_overrides = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ScheduledSplitConfig`](crate::model::ScheduledSplitConfig).
         pub fn build(self) -> crate::model::ScheduledSplitConfig {
             crate::model::ScheduledSplitConfig {
                 start_time: self.start_time,
                 group_weights: self.group_weights,
+                segment_overrides: self.segment_overrides,
             }
         }
     }
 }
 impl ScheduledSplitConfig {
-    /// Creates a new builder-style object to manufacture [`ScheduledSplitConfig`](crate::model::ScheduledSplitConfig)
+    /// Creates a new builder-style object to manufacture [`ScheduledSplitConfig`](crate::model::ScheduledSplitConfig).
     pub fn builder() -> crate::model::scheduled_split_config::Builder {
         crate::model::scheduled_split_config::Builder::default()
     }
@@ -3404,24 +4140,34 @@ impl ScheduledSplitConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FeatureSummary {
     /// <p>The ARN of the feature.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the feature.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The name or ARN of the project that contains the feature.</p>
+    #[doc(hidden)]
     pub project: std::option::Option<std::string::String>,
     /// <p>The current state of the feature.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::FeatureStatus>,
     /// <p>The date and time that the feature is created.</p>
+    #[doc(hidden)]
     pub created_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the feature was most recently updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If this value is <code>ALL_RULES</code>, the traffic allocation specified by any ongoing launches or experiments is being used. If this is <code>DEFAULT_VARIATION</code>, the default variation is being served to all users.</p>
+    #[doc(hidden)]
     pub evaluation_strategy: std::option::Option<crate::model::FeatureEvaluationStrategy>,
     /// <p>An array of structures that define</p>
+    #[doc(hidden)]
     pub evaluation_rules: std::option::Option<std::vec::Vec<crate::model::EvaluationRule>>,
     /// <p>The name of the variation that is used as the default variation. The default variation is served to users who are not allocated to any ongoing launches or experiments of this feature.</p>
+    #[doc(hidden)]
     pub default_variation: std::option::Option<std::string::String>,
     /// <p>The list of tag keys and values associated with this feature.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -3488,11 +4234,10 @@ impl std::fmt::Debug for FeatureSummary {
         formatter.finish()
     }
 }
-/// See [`FeatureSummary`](crate::model::FeatureSummary)
+/// See [`FeatureSummary`](crate::model::FeatureSummary).
 pub mod feature_summary {
 
-    /// A builder for [`FeatureSummary`](crate::model::FeatureSummary)
-    #[non_exhaustive]
+    /// A builder for [`FeatureSummary`](crate::model::FeatureSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3653,7 +4398,7 @@ pub mod feature_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`FeatureSummary`](crate::model::FeatureSummary)
+        /// Consumes the builder and constructs a [`FeatureSummary`](crate::model::FeatureSummary).
         pub fn build(self) -> crate::model::FeatureSummary {
             crate::model::FeatureSummary {
                 arn: self.arn,
@@ -3671,7 +4416,7 @@ pub mod feature_summary {
     }
 }
 impl FeatureSummary {
-    /// Creates a new builder-style object to manufacture [`FeatureSummary`](crate::model::FeatureSummary)
+    /// Creates a new builder-style object to manufacture [`FeatureSummary`](crate::model::FeatureSummary).
     pub fn builder() -> crate::model::feature_summary::Builder {
         crate::model::feature_summary::Builder::default()
     }
@@ -3682,8 +4427,10 @@ impl FeatureSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EvaluationRule {
     /// <p>The name of the experiment or launch.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>This value is <code>aws.evidently.splits</code> if this is an evaluation rule for a launch, and it is <code>aws.evidently.onlineab</code> if this is an evaluation rule for an experiment.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
 }
 impl EvaluationRule {
@@ -3704,11 +4451,10 @@ impl std::fmt::Debug for EvaluationRule {
         formatter.finish()
     }
 }
-/// See [`EvaluationRule`](crate::model::EvaluationRule)
+/// See [`EvaluationRule`](crate::model::EvaluationRule).
 pub mod evaluation_rule {
 
-    /// A builder for [`EvaluationRule`](crate::model::EvaluationRule)
-    #[non_exhaustive]
+    /// A builder for [`EvaluationRule`](crate::model::EvaluationRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3735,7 +4481,7 @@ pub mod evaluation_rule {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`EvaluationRule`](crate::model::EvaluationRule)
+        /// Consumes the builder and constructs a [`EvaluationRule`](crate::model::EvaluationRule).
         pub fn build(self) -> crate::model::EvaluationRule {
             crate::model::EvaluationRule {
                 name: self.name,
@@ -3745,7 +4491,7 @@ pub mod evaluation_rule {
     }
 }
 impl EvaluationRule {
-    /// Creates a new builder-style object to manufacture [`EvaluationRule`](crate::model::EvaluationRule)
+    /// Creates a new builder-style object to manufacture [`EvaluationRule`](crate::model::EvaluationRule).
     pub fn builder() -> crate::model::evaluation_rule::Builder {
         crate::model::evaluation_rule::Builder::default()
     }
@@ -3866,36 +4612,50 @@ impl AsRef<str> for FeatureStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Feature {
     /// <p>The ARN of the feature.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the feature.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The name or ARN of the project that contains the feature.</p>
+    #[doc(hidden)]
     pub project: std::option::Option<std::string::String>,
     /// <p>The current state of the feature.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::FeatureStatus>,
     /// <p>The date and time that the feature is created.</p>
+    #[doc(hidden)]
     pub created_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the feature was most recently updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the feature.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>If this value is <code>ALL_RULES</code>, the traffic allocation specified by any ongoing launches or experiments is being used. If this is <code>DEFAULT_VARIATION</code>, the default variation is being served to all users.</p>
+    #[doc(hidden)]
     pub evaluation_strategy: std::option::Option<crate::model::FeatureEvaluationStrategy>,
     /// <p>Defines the type of value used to define the different feature variations. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-variationtypes.html">Variation types</a> </p>
+    #[doc(hidden)]
     pub value_type: std::option::Option<crate::model::VariationValueType>,
     /// <p>An array of structures that contain the configuration of the feature's different variations.</p>
+    #[doc(hidden)]
     pub variations: std::option::Option<std::vec::Vec<crate::model::Variation>>,
     /// <p>The name of the variation that is used as the default variation. The default variation is served to users who are not allocated to any ongoing launches or experiments of this feature.</p>
     /// <p>This variation must also be listed in the <code>variations</code> structure.</p>
     /// <p>If you omit <code>defaultVariation</code>, the first variation listed in the <code>variations</code> structure is used as the default variation.</p>
+    #[doc(hidden)]
     pub default_variation: std::option::Option<std::string::String>,
     /// <p>An array of structures that define the evaluation rules for the feature.</p>
+    #[doc(hidden)]
     pub evaluation_rules: std::option::Option<std::vec::Vec<crate::model::EvaluationRule>>,
     /// <p>The list of tag keys and values associated with this feature.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A set of key-value pairs that specify users who should always be served a specific variation of a feature. Each key specifies a user using their user ID, account ID, or some other identifier. The value specifies the name of the variation that the user is to be served.</p>
     /// <p>For the override to be successful, the value of the key must match the <code>entityId</code> used in the <a href="https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_EvaluateFeature.html">EvaluateFeature</a> operation.</p>
+    #[doc(hidden)]
     pub entity_overrides:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -3988,11 +4748,10 @@ impl std::fmt::Debug for Feature {
         formatter.finish()
     }
 }
-/// See [`Feature`](crate::model::Feature)
+/// See [`Feature`](crate::model::Feature).
 pub mod feature {
 
-    /// A builder for [`Feature`](crate::model::Feature)
-    #[non_exhaustive]
+    /// A builder for [`Feature`](crate::model::Feature).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4232,7 +4991,7 @@ pub mod feature {
             self.entity_overrides = input;
             self
         }
-        /// Consumes the builder and constructs a [`Feature`](crate::model::Feature)
+        /// Consumes the builder and constructs a [`Feature`](crate::model::Feature).
         pub fn build(self) -> crate::model::Feature {
             crate::model::Feature {
                 arn: self.arn,
@@ -4254,7 +5013,7 @@ pub mod feature {
     }
 }
 impl Feature {
-    /// Creates a new builder-style object to manufacture [`Feature`](crate::model::Feature)
+    /// Creates a new builder-style object to manufacture [`Feature`](crate::model::Feature).
     pub fn builder() -> crate::model::feature::Builder {
         crate::model::feature::Builder::default()
     }
@@ -4265,8 +5024,10 @@ impl Feature {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Variation {
     /// <p>The name of the variation.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value assigned to this variation.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<crate::model::VariableValue>,
 }
 impl Variation {
@@ -4287,11 +5048,10 @@ impl std::fmt::Debug for Variation {
         formatter.finish()
     }
 }
-/// See [`Variation`](crate::model::Variation)
+/// See [`Variation`](crate::model::Variation).
 pub mod variation {
 
-    /// A builder for [`Variation`](crate::model::Variation)
-    #[non_exhaustive]
+    /// A builder for [`Variation`](crate::model::Variation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4321,7 +5081,7 @@ pub mod variation {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Variation`](crate::model::Variation)
+        /// Consumes the builder and constructs a [`Variation`](crate::model::Variation).
         pub fn build(self) -> crate::model::Variation {
             crate::model::Variation {
                 name: self.name,
@@ -4331,7 +5091,7 @@ pub mod variation {
     }
 }
 impl Variation {
-    /// Creates a new builder-style object to manufacture [`Variation`](crate::model::Variation)
+    /// Creates a new builder-style object to manufacture [`Variation`](crate::model::Variation).
     pub fn builder() -> crate::model::variation::Builder {
         crate::model::variation::Builder::default()
     }
@@ -4405,8 +5165,10 @@ impl AsRef<str> for VariationValueType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VariationConfig {
     /// <p>The name of the variation.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value assigned to this variation.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<crate::model::VariableValue>,
 }
 impl VariationConfig {
@@ -4427,11 +5189,10 @@ impl std::fmt::Debug for VariationConfig {
         formatter.finish()
     }
 }
-/// See [`VariationConfig`](crate::model::VariationConfig)
+/// See [`VariationConfig`](crate::model::VariationConfig).
 pub mod variation_config {
 
-    /// A builder for [`VariationConfig`](crate::model::VariationConfig)
-    #[non_exhaustive]
+    /// A builder for [`VariationConfig`](crate::model::VariationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4461,7 +5222,7 @@ pub mod variation_config {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`VariationConfig`](crate::model::VariationConfig)
+        /// Consumes the builder and constructs a [`VariationConfig`](crate::model::VariationConfig).
         pub fn build(self) -> crate::model::VariationConfig {
             crate::model::VariationConfig {
                 name: self.name,
@@ -4471,7 +5232,7 @@ pub mod variation_config {
     }
 }
 impl VariationConfig {
-    /// Creates a new builder-style object to manufacture [`VariationConfig`](crate::model::VariationConfig)
+    /// Creates a new builder-style object to manufacture [`VariationConfig`](crate::model::VariationConfig).
     pub fn builder() -> crate::model::variation_config::Builder {
         crate::model::variation_config::Builder::default()
     }
@@ -4537,12 +5298,16 @@ impl AsRef<str> for ExperimentStopDesiredState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExperimentReport {
     /// <p>The name of the metric that is analyzed in this experiment report.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The name of the variation that this report pertains to.</p>
+    #[doc(hidden)]
     pub treatment_name: std::option::Option<std::string::String>,
     /// <p>The type of analysis used for this report.</p>
+    #[doc(hidden)]
     pub report_name: std::option::Option<crate::model::ExperimentReportName>,
     /// <p>The content of the report.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
 }
 impl ExperimentReport {
@@ -4573,11 +5338,10 @@ impl std::fmt::Debug for ExperimentReport {
         formatter.finish()
     }
 }
-/// See [`ExperimentReport`](crate::model::ExperimentReport)
+/// See [`ExperimentReport`](crate::model::ExperimentReport).
 pub mod experiment_report {
 
-    /// A builder for [`ExperimentReport`](crate::model::ExperimentReport)
-    #[non_exhaustive]
+    /// A builder for [`ExperimentReport`](crate::model::ExperimentReport).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_name: std::option::Option<std::string::String>,
@@ -4632,7 +5396,7 @@ pub mod experiment_report {
             self.content = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExperimentReport`](crate::model::ExperimentReport)
+        /// Consumes the builder and constructs a [`ExperimentReport`](crate::model::ExperimentReport).
         pub fn build(self) -> crate::model::ExperimentReport {
             crate::model::ExperimentReport {
                 metric_name: self.metric_name,
@@ -4644,7 +5408,7 @@ pub mod experiment_report {
     }
 }
 impl ExperimentReport {
-    /// Creates a new builder-style object to manufacture [`ExperimentReport`](crate::model::ExperimentReport)
+    /// Creates a new builder-style object to manufacture [`ExperimentReport`](crate::model::ExperimentReport).
     pub fn builder() -> crate::model::experiment_report::Builder {
         crate::model::experiment_report::Builder::default()
     }
@@ -4706,12 +5470,16 @@ impl AsRef<str> for ExperimentReportName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExperimentResultsData {
     /// <p>The name of the metric.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The treatment, or variation, that returned the <code>values</code> in this structure.</p>
+    #[doc(hidden)]
     pub treatment_name: std::option::Option<std::string::String>,
     /// <p>The experiment statistic that these results pertain to.</p>
+    #[doc(hidden)]
     pub result_stat: std::option::Option<crate::model::ExperimentResultResponseType>,
     /// <p>The values for the <code>metricName</code> that were recorded in the experiment.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<f64>>,
 }
 impl ExperimentResultsData {
@@ -4742,11 +5510,10 @@ impl std::fmt::Debug for ExperimentResultsData {
         formatter.finish()
     }
 }
-/// See [`ExperimentResultsData`](crate::model::ExperimentResultsData)
+/// See [`ExperimentResultsData`](crate::model::ExperimentResultsData).
 pub mod experiment_results_data {
 
-    /// A builder for [`ExperimentResultsData`](crate::model::ExperimentResultsData)
-    #[non_exhaustive]
+    /// A builder for [`ExperimentResultsData`](crate::model::ExperimentResultsData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_name: std::option::Option<std::string::String>,
@@ -4807,7 +5574,7 @@ pub mod experiment_results_data {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExperimentResultsData`](crate::model::ExperimentResultsData)
+        /// Consumes the builder and constructs a [`ExperimentResultsData`](crate::model::ExperimentResultsData).
         pub fn build(self) -> crate::model::ExperimentResultsData {
             crate::model::ExperimentResultsData {
                 metric_name: self.metric_name,
@@ -4819,7 +5586,7 @@ pub mod experiment_results_data {
     }
 }
 impl ExperimentResultsData {
-    /// Creates a new builder-style object to manufacture [`ExperimentResultsData`](crate::model::ExperimentResultsData)
+    /// Creates a new builder-style object to manufacture [`ExperimentResultsData`](crate::model::ExperimentResultsData).
     pub fn builder() -> crate::model::experiment_results_data::Builder {
         crate::model::experiment_results_data::Builder::default()
     }
@@ -5030,39 +5797,59 @@ impl AsRef<str> for ExperimentBaseStat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Experiment {
     /// <p>The ARN of the experiment.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the experiment.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The name or ARN of the project that contains this experiment.</p>
+    #[doc(hidden)]
     pub project: std::option::Option<std::string::String>,
     /// <p>The current state of the experiment.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ExperimentStatus>,
     /// <p>If the experiment was stopped, this is the string that was entered by the person who stopped the experiment, to explain why it was stopped.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>A description of the experiment.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date and time that the experiment is first created.</p>
+    #[doc(hidden)]
     pub created_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the experiment was most recently updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A structure that contains the time and date that Evidently completed the analysis of the experiment.</p>
+    #[doc(hidden)]
     pub schedule: std::option::Option<crate::model::ExperimentSchedule>,
     /// <p>A structure that contains the date and time that the experiment started and ended.</p>
+    #[doc(hidden)]
     pub execution: std::option::Option<crate::model::ExperimentExecution>,
     /// <p>An array of structures that describe the configuration of each feature variation used in the experiment.</p>
+    #[doc(hidden)]
     pub treatments: std::option::Option<std::vec::Vec<crate::model::Treatment>>,
     /// <p>An array of structures that defines the metrics used for the experiment, and whether a higher or lower value for each metric is the goal.</p>
+    #[doc(hidden)]
     pub metric_goals: std::option::Option<std::vec::Vec<crate::model::MetricGoal>>,
     /// <p>This value is used when Evidently assigns a particular user session to the experiment. It helps create a randomization ID to determine which variation the user session is served. This randomization ID is a combination of the entity ID and <code>randomizationSalt</code>.</p>
+    #[doc(hidden)]
     pub randomization_salt: std::option::Option<std::string::String>,
     /// <p>In thousandths of a percent, the amount of the available audience that is allocated to this experiment. The available audience is the total audience minus the audience that you have allocated to overrides or current launches of this feature.</p>
     /// <p>This is represented in thousandths of a percent, so a value of 10,000 is 10% of the available audience.</p>
+    #[doc(hidden)]
     pub sampling_rate: i64,
+    /// <p>The audience segment being used for the experiment, if a segment is being used.</p>
+    #[doc(hidden)]
+    pub segment: std::option::Option<std::string::String>,
     /// <p>The type of this experiment. Currently, this value must be <code>aws.experiment.onlineab</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ExperimentType>,
     /// <p>A structure that contains the configuration of which variation to use as the "control" version. The "control" version is used for comparison with other variations. This structure also specifies how much experiment traffic is allocated to each variation.</p>
+    #[doc(hidden)]
     pub online_ab_definition: std::option::Option<crate::model::OnlineAbDefinition>,
     /// <p>The list of tag keys and values associated with this experiment.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -5124,6 +5911,10 @@ impl Experiment {
     pub fn sampling_rate(&self) -> i64 {
         self.sampling_rate
     }
+    /// <p>The audience segment being used for the experiment, if a segment is being used.</p>
+    pub fn segment(&self) -> std::option::Option<&str> {
+        self.segment.as_deref()
+    }
     /// <p>The type of this experiment. Currently, this value must be <code>aws.experiment.onlineab</code>.</p>
     pub fn r#type(&self) -> std::option::Option<&crate::model::ExperimentType> {
         self.r#type.as_ref()
@@ -5157,17 +5948,17 @@ impl std::fmt::Debug for Experiment {
         formatter.field("metric_goals", &self.metric_goals);
         formatter.field("randomization_salt", &self.randomization_salt);
         formatter.field("sampling_rate", &self.sampling_rate);
+        formatter.field("segment", &self.segment);
         formatter.field("r#type", &self.r#type);
         formatter.field("online_ab_definition", &self.online_ab_definition);
         formatter.field("tags", &self.tags);
         formatter.finish()
     }
 }
-/// See [`Experiment`](crate::model::Experiment)
+/// See [`Experiment`](crate::model::Experiment).
 pub mod experiment {
 
-    /// A builder for [`Experiment`](crate::model::Experiment)
-    #[non_exhaustive]
+    /// A builder for [`Experiment`](crate::model::Experiment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -5184,6 +5975,7 @@ pub mod experiment {
         pub(crate) metric_goals: std::option::Option<std::vec::Vec<crate::model::MetricGoal>>,
         pub(crate) randomization_salt: std::option::Option<std::string::String>,
         pub(crate) sampling_rate: std::option::Option<i64>,
+        pub(crate) segment: std::option::Option<std::string::String>,
         pub(crate) r#type: std::option::Option<crate::model::ExperimentType>,
         pub(crate) online_ab_definition: std::option::Option<crate::model::OnlineAbDefinition>,
         pub(crate) tags: std::option::Option<
@@ -5372,6 +6164,16 @@ pub mod experiment {
             self.sampling_rate = input;
             self
         }
+        /// <p>The audience segment being used for the experiment, if a segment is being used.</p>
+        pub fn segment(mut self, input: impl Into<std::string::String>) -> Self {
+            self.segment = Some(input.into());
+            self
+        }
+        /// <p>The audience segment being used for the experiment, if a segment is being used.</p>
+        pub fn set_segment(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.segment = input;
+            self
+        }
         /// <p>The type of this experiment. Currently, this value must be <code>aws.experiment.onlineab</code>.</p>
         pub fn r#type(mut self, input: crate::model::ExperimentType) -> Self {
             self.r#type = Some(input);
@@ -5423,7 +6225,7 @@ pub mod experiment {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Experiment`](crate::model::Experiment)
+        /// Consumes the builder and constructs a [`Experiment`](crate::model::Experiment).
         pub fn build(self) -> crate::model::Experiment {
             crate::model::Experiment {
                 arn: self.arn,
@@ -5440,6 +6242,7 @@ pub mod experiment {
                 metric_goals: self.metric_goals,
                 randomization_salt: self.randomization_salt,
                 sampling_rate: self.sampling_rate.unwrap_or_default(),
+                segment: self.segment,
                 r#type: self.r#type,
                 online_ab_definition: self.online_ab_definition,
                 tags: self.tags,
@@ -5448,7 +6251,7 @@ pub mod experiment {
     }
 }
 impl Experiment {
-    /// Creates a new builder-style object to manufacture [`Experiment`](crate::model::Experiment)
+    /// Creates a new builder-style object to manufacture [`Experiment`](crate::model::Experiment).
     pub fn builder() -> crate::model::experiment::Builder {
         crate::model::experiment::Builder::default()
     }
@@ -5459,8 +6262,10 @@ impl Experiment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OnlineAbDefinition {
     /// <p>The name of the variation that is the default variation that the other variations are compared to.</p>
+    #[doc(hidden)]
     pub control_treatment_name: std::option::Option<std::string::String>,
     /// <p>A set of key-value pairs. The keys are variation names, and the values are the portion of experiment traffic to be assigned to that variation. The traffic portion is specified in thousandths of a percent, so 20,000 for a variation would allocate 20% of the experiment traffic to that variation.</p>
+    #[doc(hidden)]
     pub treatment_weights: std::option::Option<std::collections::HashMap<std::string::String, i64>>,
 }
 impl OnlineAbDefinition {
@@ -5483,11 +6288,10 @@ impl std::fmt::Debug for OnlineAbDefinition {
         formatter.finish()
     }
 }
-/// See [`OnlineAbDefinition`](crate::model::OnlineAbDefinition)
+/// See [`OnlineAbDefinition`](crate::model::OnlineAbDefinition).
 pub mod online_ab_definition {
 
-    /// A builder for [`OnlineAbDefinition`](crate::model::OnlineAbDefinition)
-    #[non_exhaustive]
+    /// A builder for [`OnlineAbDefinition`](crate::model::OnlineAbDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) control_treatment_name: std::option::Option<std::string::String>,
@@ -5527,7 +6331,7 @@ pub mod online_ab_definition {
             self.treatment_weights = input;
             self
         }
-        /// Consumes the builder and constructs a [`OnlineAbDefinition`](crate::model::OnlineAbDefinition)
+        /// Consumes the builder and constructs a [`OnlineAbDefinition`](crate::model::OnlineAbDefinition).
         pub fn build(self) -> crate::model::OnlineAbDefinition {
             crate::model::OnlineAbDefinition {
                 control_treatment_name: self.control_treatment_name,
@@ -5537,7 +6341,7 @@ pub mod online_ab_definition {
     }
 }
 impl OnlineAbDefinition {
-    /// Creates a new builder-style object to manufacture [`OnlineAbDefinition`](crate::model::OnlineAbDefinition)
+    /// Creates a new builder-style object to manufacture [`OnlineAbDefinition`](crate::model::OnlineAbDefinition).
     pub fn builder() -> crate::model::online_ab_definition::Builder {
         crate::model::online_ab_definition::Builder::default()
     }
@@ -5599,9 +6403,11 @@ impl AsRef<str> for ExperimentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricGoal {
     /// <p>A structure that contains details about the metric.</p>
+    #[doc(hidden)]
     pub metric_definition: std::option::Option<crate::model::MetricDefinition>,
     /// <p> <code>INCREASE</code> means that a variation with a higher number for this metric is performing better.</p>
     /// <p> <code>DECREASE</code> means that a variation with a lower number for this metric is performing better.</p>
+    #[doc(hidden)]
     pub desired_change: std::option::Option<crate::model::ChangeDirectionEnum>,
 }
 impl MetricGoal {
@@ -5623,11 +6429,10 @@ impl std::fmt::Debug for MetricGoal {
         formatter.finish()
     }
 }
-/// See [`MetricGoal`](crate::model::MetricGoal)
+/// See [`MetricGoal`](crate::model::MetricGoal).
 pub mod metric_goal {
 
-    /// A builder for [`MetricGoal`](crate::model::MetricGoal)
-    #[non_exhaustive]
+    /// A builder for [`MetricGoal`](crate::model::MetricGoal).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_definition: std::option::Option<crate::model::MetricDefinition>,
@@ -5662,7 +6467,7 @@ pub mod metric_goal {
             self.desired_change = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricGoal`](crate::model::MetricGoal)
+        /// Consumes the builder and constructs a [`MetricGoal`](crate::model::MetricGoal).
         pub fn build(self) -> crate::model::MetricGoal {
             crate::model::MetricGoal {
                 metric_definition: self.metric_definition,
@@ -5672,7 +6477,7 @@ pub mod metric_goal {
     }
 }
 impl MetricGoal {
-    /// Creates a new builder-style object to manufacture [`MetricGoal`](crate::model::MetricGoal)
+    /// Creates a new builder-style object to manufacture [`MetricGoal`](crate::model::MetricGoal).
     pub fn builder() -> crate::model::metric_goal::Builder {
         crate::model::metric_goal::Builder::default()
     }
@@ -5738,10 +6543,13 @@ impl AsRef<str> for ChangeDirectionEnum {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Treatment {
     /// <p>The name of this treatment.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the treatment.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The feature variation used for this treatment. This is a key-value pair. The key is the feature name, and the value is the variation name.</p>
+    #[doc(hidden)]
     pub feature_variations:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -5771,11 +6579,10 @@ impl std::fmt::Debug for Treatment {
         formatter.finish()
     }
 }
-/// See [`Treatment`](crate::model::Treatment)
+/// See [`Treatment`](crate::model::Treatment).
 pub mod treatment {
 
-    /// A builder for [`Treatment`](crate::model::Treatment)
-    #[non_exhaustive]
+    /// A builder for [`Treatment`](crate::model::Treatment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5830,7 +6637,7 @@ pub mod treatment {
             self.feature_variations = input;
             self
         }
-        /// Consumes the builder and constructs a [`Treatment`](crate::model::Treatment)
+        /// Consumes the builder and constructs a [`Treatment`](crate::model::Treatment).
         pub fn build(self) -> crate::model::Treatment {
             crate::model::Treatment {
                 name: self.name,
@@ -5841,7 +6648,7 @@ pub mod treatment {
     }
 }
 impl Treatment {
-    /// Creates a new builder-style object to manufacture [`Treatment`](crate::model::Treatment)
+    /// Creates a new builder-style object to manufacture [`Treatment`](crate::model::Treatment).
     pub fn builder() -> crate::model::treatment::Builder {
         crate::model::treatment::Builder::default()
     }
@@ -5852,8 +6659,10 @@ impl Treatment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExperimentExecution {
     /// <p>The date and time that the experiment started.</p>
+    #[doc(hidden)]
     pub started_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the experiment ended.</p>
+    #[doc(hidden)]
     pub ended_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ExperimentExecution {
@@ -5874,11 +6683,10 @@ impl std::fmt::Debug for ExperimentExecution {
         formatter.finish()
     }
 }
-/// See [`ExperimentExecution`](crate::model::ExperimentExecution)
+/// See [`ExperimentExecution`](crate::model::ExperimentExecution).
 pub mod experiment_execution {
 
-    /// A builder for [`ExperimentExecution`](crate::model::ExperimentExecution)
-    #[non_exhaustive]
+    /// A builder for [`ExperimentExecution`](crate::model::ExperimentExecution).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) started_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -5911,7 +6719,7 @@ pub mod experiment_execution {
             self.ended_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExperimentExecution`](crate::model::ExperimentExecution)
+        /// Consumes the builder and constructs a [`ExperimentExecution`](crate::model::ExperimentExecution).
         pub fn build(self) -> crate::model::ExperimentExecution {
             crate::model::ExperimentExecution {
                 started_time: self.started_time,
@@ -5921,7 +6729,7 @@ pub mod experiment_execution {
     }
 }
 impl ExperimentExecution {
-    /// Creates a new builder-style object to manufacture [`ExperimentExecution`](crate::model::ExperimentExecution)
+    /// Creates a new builder-style object to manufacture [`ExperimentExecution`](crate::model::ExperimentExecution).
     pub fn builder() -> crate::model::experiment_execution::Builder {
         crate::model::experiment_execution::Builder::default()
     }
@@ -5932,6 +6740,7 @@ impl ExperimentExecution {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExperimentSchedule {
     /// <p>The time and date that Evidently completed the analysis of the experiment.</p>
+    #[doc(hidden)]
     pub analysis_complete_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ExperimentSchedule {
@@ -5947,11 +6756,10 @@ impl std::fmt::Debug for ExperimentSchedule {
         formatter.finish()
     }
 }
-/// See [`ExperimentSchedule`](crate::model::ExperimentSchedule)
+/// See [`ExperimentSchedule`](crate::model::ExperimentSchedule).
 pub mod experiment_schedule {
 
-    /// A builder for [`ExperimentSchedule`](crate::model::ExperimentSchedule)
-    #[non_exhaustive]
+    /// A builder for [`ExperimentSchedule`](crate::model::ExperimentSchedule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) analysis_complete_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -5970,7 +6778,7 @@ pub mod experiment_schedule {
             self.analysis_complete_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExperimentSchedule`](crate::model::ExperimentSchedule)
+        /// Consumes the builder and constructs a [`ExperimentSchedule`](crate::model::ExperimentSchedule).
         pub fn build(self) -> crate::model::ExperimentSchedule {
             crate::model::ExperimentSchedule {
                 analysis_complete_time: self.analysis_complete_time,
@@ -5979,7 +6787,7 @@ pub mod experiment_schedule {
     }
 }
 impl ExperimentSchedule {
-    /// Creates a new builder-style object to manufacture [`ExperimentSchedule`](crate::model::ExperimentSchedule)
+    /// Creates a new builder-style object to manufacture [`ExperimentSchedule`](crate::model::ExperimentSchedule).
     pub fn builder() -> crate::model::experiment_schedule::Builder {
         crate::model::experiment_schedule::Builder::default()
     }
@@ -6057,8 +6865,10 @@ impl AsRef<str> for ExperimentStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OnlineAbConfig {
     /// <p>The name of the variation that is to be the default variation that the other variations are compared to.</p>
+    #[doc(hidden)]
     pub control_treatment_name: std::option::Option<std::string::String>,
     /// <p>A set of key-value pairs. The keys are variation names, and the values are the portion of experiment traffic to be assigned to that variation. Specify the traffic portion in thousandths of a percent, so 20,000 for a variation would allocate 20% of the experiment traffic to that variation.</p>
+    #[doc(hidden)]
     pub treatment_weights: std::option::Option<std::collections::HashMap<std::string::String, i64>>,
 }
 impl OnlineAbConfig {
@@ -6081,11 +6891,10 @@ impl std::fmt::Debug for OnlineAbConfig {
         formatter.finish()
     }
 }
-/// See [`OnlineAbConfig`](crate::model::OnlineAbConfig)
+/// See [`OnlineAbConfig`](crate::model::OnlineAbConfig).
 pub mod online_ab_config {
 
-    /// A builder for [`OnlineAbConfig`](crate::model::OnlineAbConfig)
-    #[non_exhaustive]
+    /// A builder for [`OnlineAbConfig`](crate::model::OnlineAbConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) control_treatment_name: std::option::Option<std::string::String>,
@@ -6125,7 +6934,7 @@ pub mod online_ab_config {
             self.treatment_weights = input;
             self
         }
-        /// Consumes the builder and constructs a [`OnlineAbConfig`](crate::model::OnlineAbConfig)
+        /// Consumes the builder and constructs a [`OnlineAbConfig`](crate::model::OnlineAbConfig).
         pub fn build(self) -> crate::model::OnlineAbConfig {
             crate::model::OnlineAbConfig {
                 control_treatment_name: self.control_treatment_name,
@@ -6135,7 +6944,7 @@ pub mod online_ab_config {
     }
 }
 impl OnlineAbConfig {
-    /// Creates a new builder-style object to manufacture [`OnlineAbConfig`](crate::model::OnlineAbConfig)
+    /// Creates a new builder-style object to manufacture [`OnlineAbConfig`](crate::model::OnlineAbConfig).
     pub fn builder() -> crate::model::online_ab_config::Builder {
         crate::model::online_ab_config::Builder::default()
     }
@@ -6146,9 +6955,11 @@ impl OnlineAbConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricGoalConfig {
     /// <p>A structure that contains details about the metric.</p>
+    #[doc(hidden)]
     pub metric_definition: std::option::Option<crate::model::MetricDefinitionConfig>,
     /// <p> <code>INCREASE</code> means that a variation with a higher number for this metric is performing better.</p>
     /// <p> <code>DECREASE</code> means that a variation with a lower number for this metric is performing better.</p>
+    #[doc(hidden)]
     pub desired_change: std::option::Option<crate::model::ChangeDirectionEnum>,
 }
 impl MetricGoalConfig {
@@ -6170,11 +6981,10 @@ impl std::fmt::Debug for MetricGoalConfig {
         formatter.finish()
     }
 }
-/// See [`MetricGoalConfig`](crate::model::MetricGoalConfig)
+/// See [`MetricGoalConfig`](crate::model::MetricGoalConfig).
 pub mod metric_goal_config {
 
-    /// A builder for [`MetricGoalConfig`](crate::model::MetricGoalConfig)
-    #[non_exhaustive]
+    /// A builder for [`MetricGoalConfig`](crate::model::MetricGoalConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_definition: std::option::Option<crate::model::MetricDefinitionConfig>,
@@ -6209,7 +7019,7 @@ pub mod metric_goal_config {
             self.desired_change = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricGoalConfig`](crate::model::MetricGoalConfig)
+        /// Consumes the builder and constructs a [`MetricGoalConfig`](crate::model::MetricGoalConfig).
         pub fn build(self) -> crate::model::MetricGoalConfig {
             crate::model::MetricGoalConfig {
                 metric_definition: self.metric_definition,
@@ -6219,7 +7029,7 @@ pub mod metric_goal_config {
     }
 }
 impl MetricGoalConfig {
-    /// Creates a new builder-style object to manufacture [`MetricGoalConfig`](crate::model::MetricGoalConfig)
+    /// Creates a new builder-style object to manufacture [`MetricGoalConfig`](crate::model::MetricGoalConfig).
     pub fn builder() -> crate::model::metric_goal_config::Builder {
         crate::model::metric_goal_config::Builder::default()
     }
@@ -6230,12 +7040,16 @@ impl MetricGoalConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TreatmentConfig {
     /// <p>A name for this treatment.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description for this treatment.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The feature that this experiment is testing.</p>
+    #[doc(hidden)]
     pub feature: std::option::Option<std::string::String>,
     /// <p>The name of the variation to use as this treatment in the experiment.</p>
+    #[doc(hidden)]
     pub variation: std::option::Option<std::string::String>,
 }
 impl TreatmentConfig {
@@ -6266,11 +7080,10 @@ impl std::fmt::Debug for TreatmentConfig {
         formatter.finish()
     }
 }
-/// See [`TreatmentConfig`](crate::model::TreatmentConfig)
+/// See [`TreatmentConfig`](crate::model::TreatmentConfig).
 pub mod treatment_config {
 
-    /// A builder for [`TreatmentConfig`](crate::model::TreatmentConfig)
-    #[non_exhaustive]
+    /// A builder for [`TreatmentConfig`](crate::model::TreatmentConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -6319,7 +7132,7 @@ pub mod treatment_config {
             self.variation = input;
             self
         }
-        /// Consumes the builder and constructs a [`TreatmentConfig`](crate::model::TreatmentConfig)
+        /// Consumes the builder and constructs a [`TreatmentConfig`](crate::model::TreatmentConfig).
         pub fn build(self) -> crate::model::TreatmentConfig {
             crate::model::TreatmentConfig {
                 name: self.name,
@@ -6331,7 +7144,7 @@ pub mod treatment_config {
     }
 }
 impl TreatmentConfig {
-    /// Creates a new builder-style object to manufacture [`TreatmentConfig`](crate::model::TreatmentConfig)
+    /// Creates a new builder-style object to manufacture [`TreatmentConfig`](crate::model::TreatmentConfig).
     pub fn builder() -> crate::model::treatment_config::Builder {
         crate::model::treatment_config::Builder::default()
     }

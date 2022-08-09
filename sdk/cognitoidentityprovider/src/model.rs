@@ -59,6 +59,7 @@ impl AsRef<str> for VerifySoftwareTokenResponseType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomDomainConfigType {
     /// <p>The Amazon Resource Name (ARN) of an Certificate Manager SSL certificate. You use this certificate for the subdomain of your custom domain.</p>
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
 }
 impl CustomDomainConfigType {
@@ -74,11 +75,10 @@ impl std::fmt::Debug for CustomDomainConfigType {
         formatter.finish()
     }
 }
-/// See [`CustomDomainConfigType`](crate::model::CustomDomainConfigType)
+/// See [`CustomDomainConfigType`](crate::model::CustomDomainConfigType).
 pub mod custom_domain_config_type {
 
-    /// A builder for [`CustomDomainConfigType`](crate::model::CustomDomainConfigType)
-    #[non_exhaustive]
+    /// A builder for [`CustomDomainConfigType`](crate::model::CustomDomainConfigType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -97,7 +97,7 @@ pub mod custom_domain_config_type {
             self.certificate_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomDomainConfigType`](crate::model::CustomDomainConfigType)
+        /// Consumes the builder and constructs a [`CustomDomainConfigType`](crate::model::CustomDomainConfigType).
         pub fn build(self) -> crate::model::CustomDomainConfigType {
             crate::model::CustomDomainConfigType {
                 certificate_arn: self.certificate_arn,
@@ -106,7 +106,7 @@ pub mod custom_domain_config_type {
     }
 }
 impl CustomDomainConfigType {
-    /// Creates a new builder-style object to manufacture [`CustomDomainConfigType`](crate::model::CustomDomainConfigType)
+    /// Creates a new builder-style object to manufacture [`CustomDomainConfigType`](crate::model::CustomDomainConfigType).
     pub fn builder() -> crate::model::custom_domain_config_type::Builder {
         crate::model::custom_domain_config_type::Builder::default()
     }
@@ -117,34 +117,46 @@ impl CustomDomainConfigType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserPoolClientType {
     /// <p>The user pool ID for the user pool client.</p>
+    #[doc(hidden)]
     pub user_pool_id: std::option::Option<std::string::String>,
     /// <p>The client name from the user pool request of the client type.</p>
+    #[doc(hidden)]
     pub client_name: std::option::Option<std::string::String>,
     /// <p>The ID of the client associated with the user pool.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>The client secret from the user pool request of the client type.</p>
+    #[doc(hidden)]
     pub client_secret: std::option::Option<std::string::String>,
     /// <p>The date the user pool client was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the user pool client was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The refresh token time limit. After this limit expires, your user can't use their refresh token. To specify the time unit for <code>RefreshTokenValidity</code> as <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code>, set a <code>TokenValidityUnits</code> value in your API request.</p>
     /// <p>For example, when you set <code>RefreshTokenValidity</code> as <code>10</code> and <code>TokenValidityUnits</code> as <code>days</code>, your user can refresh their session and retrieve new access and ID tokens for 10 days.</p>
     /// <p>The default time unit for <code>RefreshTokenValidity</code> in an API request is days. You can't set <code>RefreshTokenValidity</code> to 0. If you do, Amazon Cognito overrides the value with the default value of 30 days. <i>Valid range</i> is displayed below in seconds.</p>
+    #[doc(hidden)]
     pub refresh_token_validity: i32,
     /// <p>The access token time limit. After this limit expires, your user can't use their access token. To specify the time unit for <code>AccessTokenValidity</code> as <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code>, set a <code>TokenValidityUnits</code> value in your API request.</p>
     /// <p>For example, when you set <code>AccessTokenValidity</code> to <code>10</code> and <code>TokenValidityUnits</code> to <code>hours</code>, your user can authorize access with their access token for 10 hours.</p>
     /// <p>The default time unit for <code>AccessTokenValidity</code> in an API request is hours. <i>Valid range</i> is displayed below in seconds.</p>
+    #[doc(hidden)]
     pub access_token_validity: std::option::Option<i32>,
     /// <p>The ID token time limit. After this limit expires, your user can't use their ID token. To specify the time unit for <code>IdTokenValidity</code> as <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code>, set a <code>TokenValidityUnits</code> value in your API request.</p>
     /// <p>For example, when you set <code>IdTokenValidity</code> as <code>10</code> and <code>TokenValidityUnits</code> as <code>hours</code>, your user can authenticate their session with their ID token for 10 hours.</p>
     /// <p>The default time unit for <code>AccessTokenValidity</code> in an API request is hours. <i>Valid range</i> is displayed below in seconds.</p>
+    #[doc(hidden)]
     pub id_token_validity: std::option::Option<i32>,
     /// <p>The time units used to specify the token validity times of each token type: ID, access, and refresh.</p>
+    #[doc(hidden)]
     pub token_validity_units: std::option::Option<crate::model::TokenValidityUnitsType>,
     /// <p>The Read-only attributes.</p>
+    #[doc(hidden)]
     pub read_attributes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The writeable attributes.</p>
+    #[doc(hidden)]
     pub write_attributes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The authentication flows that are supported by the user pool clients. Flow names without the <code>ALLOW_</code> prefix are no longer supported in favor of new names with the <code>ALLOW_</code> prefix. Note that values with <code>ALLOW_</code> prefix must be used only along with values including the <code>ALLOW_</code> prefix.</p>
     /// <p>Valid values include:</p>
@@ -155,9 +167,11 @@ pub struct UserPoolClientType {
     /// <li> <p> <code>ALLOW_USER_SRP_AUTH</code>: Enable SRP-based authentication.</p> </li>
     /// <li> <p> <code>ALLOW_REFRESH_TOKEN_AUTH</code>: Enable authflow to refresh tokens.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub explicit_auth_flows:
         std::option::Option<std::vec::Vec<crate::model::ExplicitAuthFlowsType>>,
-    /// <p>A list of provider names for the IdPs that this client supports. The following are supported: <code>COGNITO</code>, <code>Facebook</code>, <code>Google</code> <code>LoginWithAmazon</code>, and the names of your own SAML and OIDC providers.</p>
+    /// <p>A list of provider names for the IdPs that this client supports. The following are supported: <code>COGNITO</code>, <code>Facebook</code>, <code>Google</code>, <code>SignInWithApple</code>, <code>LoginWithAmazon</code>, and the names of your own SAML and OIDC providers.</p>
+    #[doc(hidden)]
     pub supported_identity_providers: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of allowed redirect (callback) URLs for the IdPs.</p>
     /// <p>A redirect URI must:</p>
@@ -169,8 +183,10 @@ pub struct UserPoolClientType {
     /// <p>See <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2">OAuth 2.0 - Redirection Endpoint</a>.</p>
     /// <p>Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only.</p>
     /// <p>App callback URLs such as myapp://example are also supported.</p>
+    #[doc(hidden)]
     pub callback_ur_ls: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of allowed logout URLs for the IdPs.</p>
+    #[doc(hidden)]
     pub logout_ur_ls: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The default redirect URI. Must be in the <code>CallbackURLs</code> list.</p>
     /// <p>A redirect URI must:</p>
@@ -182,6 +198,7 @@ pub struct UserPoolClientType {
     /// <p>See <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2">OAuth 2.0 - Redirection Endpoint</a>.</p>
     /// <p>Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only.</p>
     /// <p>App callback URLs such as myapp://example are also supported.</p>
+    #[doc(hidden)]
     pub default_redirect_uri: std::option::Option<std::string::String>,
     /// <p>The allowed OAuth flows.</p>
     /// <dl>
@@ -204,14 +221,18 @@ pub struct UserPoolClientType {
     /// <p>Issue the access token from the <code>/oauth2/token</code> endpoint directly to a non-person user using a combination of the client ID and client secret.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub allowed_o_auth_flows: std::option::Option<std::vec::Vec<crate::model::OAuthFlowType>>,
     /// <p>The OAuth scopes that your app client supports. Possible values that OAuth provides are <code>phone</code>, <code>email</code>, <code>openid</code>, and <code>profile</code>. Possible values that Amazon Web Services provides are <code>aws.cognito.signin.user.admin</code>. Amazon Cognito also supports custom scopes that you create in Resource Servers.</p>
+    #[doc(hidden)]
     pub allowed_o_auth_scopes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Set to true if the client is allowed to follow the OAuth protocol when interacting with Amazon Cognito user pools.</p>
+    #[doc(hidden)]
     pub allowed_o_auth_flows_user_pool_client: std::option::Option<bool>,
     /// <p>The Amazon Pinpoint analytics configuration for the user pool client.</p> <note>
     /// <p>Amazon Cognito user pools only support sending events to Amazon Pinpoint projects in the US East (N. Virginia) us-east-1 Region, regardless of the Region where the user pool resides.</p>
     /// </note>
+    #[doc(hidden)]
     pub analytics_configuration: std::option::Option<crate::model::AnalyticsConfigurationType>,
     /// <p>Errors and responses that you want Amazon Cognito APIs to return during authentication, account confirmation, and password recovery when the user doesn't exist in the user pool. When set to <code>ENABLED</code> and the user doesn't exist, authentication returns an error indicating either the username or password was incorrect. Account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to <code>LEGACY</code>, those APIs return a <code>UserNotFoundException</code> exception if the user doesn't exist in the user pool.</p>
     /// <p>Valid values include:</p>
@@ -219,13 +240,16 @@ pub struct UserPoolClientType {
     /// <li> <p> <code>ENABLED</code> - This prevents user existence-related errors.</p> </li>
     /// <li> <p> <code>LEGACY</code> - This represents the old behavior of Amazon Cognito where user existence related errors aren't prevented.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub prevent_user_existence_errors:
         std::option::Option<crate::model::PreventUserExistenceErrorTypes>,
     /// <p>Indicates whether token revocation is activated for the user pool client. When you create a new user pool client, token revocation is activated by default. For more information about revoking tokens, see <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html">RevokeToken</a>.</p>
+    #[doc(hidden)]
     pub enable_token_revocation: std::option::Option<bool>,
     /// <p>When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk analysis. You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.</p>
     /// <p>When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP address to Amazon Cognito advanced security with unauthenticated API operations. <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP address in a <code>ContextData</code> parameter with the authenticated API operations <code>AdminInitiateAuth</code> and <code>AdminRespondToAuthChallenge</code>.</p>
     /// <p>You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret. For more information about propagation of user context data, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
+    #[doc(hidden)]
     pub enable_propagate_additional_user_context_data: std::option::Option<bool>,
 }
 impl UserPoolClientType {
@@ -299,7 +323,7 @@ impl UserPoolClientType {
     ) -> std::option::Option<&[crate::model::ExplicitAuthFlowsType]> {
         self.explicit_auth_flows.as_deref()
     }
-    /// <p>A list of provider names for the IdPs that this client supports. The following are supported: <code>COGNITO</code>, <code>Facebook</code>, <code>Google</code> <code>LoginWithAmazon</code>, and the names of your own SAML and OIDC providers.</p>
+    /// <p>A list of provider names for the IdPs that this client supports. The following are supported: <code>COGNITO</code>, <code>Facebook</code>, <code>Google</code>, <code>SignInWithApple</code>, <code>LoginWithAmazon</code>, and the names of your own SAML and OIDC providers.</p>
     pub fn supported_identity_providers(&self) -> std::option::Option<&[std::string::String]> {
         self.supported_identity_providers.as_deref()
     }
@@ -437,11 +461,10 @@ impl std::fmt::Debug for UserPoolClientType {
         formatter.finish()
     }
 }
-/// See [`UserPoolClientType`](crate::model::UserPoolClientType)
+/// See [`UserPoolClientType`](crate::model::UserPoolClientType).
 pub mod user_pool_client_type {
 
-    /// A builder for [`UserPoolClientType`](crate::model::UserPoolClientType)
-    #[non_exhaustive]
+    /// A builder for [`UserPoolClientType`](crate::model::UserPoolClientType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_pool_id: std::option::Option<std::string::String>,
@@ -676,7 +699,7 @@ pub mod user_pool_client_type {
         ///
         /// To override the contents of this collection use [`set_supported_identity_providers`](Self::set_supported_identity_providers).
         ///
-        /// <p>A list of provider names for the IdPs that this client supports. The following are supported: <code>COGNITO</code>, <code>Facebook</code>, <code>Google</code> <code>LoginWithAmazon</code>, and the names of your own SAML and OIDC providers.</p>
+        /// <p>A list of provider names for the IdPs that this client supports. The following are supported: <code>COGNITO</code>, <code>Facebook</code>, <code>Google</code>, <code>SignInWithApple</code>, <code>LoginWithAmazon</code>, and the names of your own SAML and OIDC providers.</p>
         pub fn supported_identity_providers(
             mut self,
             input: impl Into<std::string::String>,
@@ -686,7 +709,7 @@ pub mod user_pool_client_type {
             self.supported_identity_providers = Some(v);
             self
         }
-        /// <p>A list of provider names for the IdPs that this client supports. The following are supported: <code>COGNITO</code>, <code>Facebook</code>, <code>Google</code> <code>LoginWithAmazon</code>, and the names of your own SAML and OIDC providers.</p>
+        /// <p>A list of provider names for the IdPs that this client supports. The following are supported: <code>COGNITO</code>, <code>Facebook</code>, <code>Google</code>, <code>SignInWithApple</code>, <code>LoginWithAmazon</code>, and the names of your own SAML and OIDC providers.</p>
         pub fn set_supported_identity_providers(
             mut self,
             input: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -945,7 +968,7 @@ pub mod user_pool_client_type {
             self.enable_propagate_additional_user_context_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserPoolClientType`](crate::model::UserPoolClientType)
+        /// Consumes the builder and constructs a [`UserPoolClientType`](crate::model::UserPoolClientType).
         pub fn build(self) -> crate::model::UserPoolClientType {
             crate::model::UserPoolClientType {
                 user_pool_id: self.user_pool_id,
@@ -978,7 +1001,7 @@ pub mod user_pool_client_type {
     }
 }
 impl UserPoolClientType {
-    /// Creates a new builder-style object to manufacture [`UserPoolClientType`](crate::model::UserPoolClientType)
+    /// Creates a new builder-style object to manufacture [`UserPoolClientType`](crate::model::UserPoolClientType).
     pub fn builder() -> crate::model::user_pool_client_type::Builder {
         crate::model::user_pool_client_type::Builder::default()
     }
@@ -1046,14 +1069,19 @@ impl AsRef<str> for PreventUserExistenceErrorTypes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnalyticsConfigurationType {
     /// <p>The application ID for an Amazon Pinpoint application.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of an Amazon Pinpoint project. You can use the Amazon Pinpoint project to integrate with the chosen user pool Client. Amazon Cognito publishes events to the Amazon Pinpoint project that the app ARN declares.</p>
+    #[doc(hidden)]
     pub application_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of an Identity and Access Management role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The external ID.</p>
+    #[doc(hidden)]
     pub external_id: std::option::Option<std::string::String>,
     /// <p>If <code>UserDataShared</code> is <code>true</code>, Amazon Cognito includes user data in the events that it publishes to Amazon Pinpoint analytics.</p>
+    #[doc(hidden)]
     pub user_data_shared: bool,
 }
 impl AnalyticsConfigurationType {
@@ -1089,11 +1117,10 @@ impl std::fmt::Debug for AnalyticsConfigurationType {
         formatter.finish()
     }
 }
-/// See [`AnalyticsConfigurationType`](crate::model::AnalyticsConfigurationType)
+/// See [`AnalyticsConfigurationType`](crate::model::AnalyticsConfigurationType).
 pub mod analytics_configuration_type {
 
-    /// A builder for [`AnalyticsConfigurationType`](crate::model::AnalyticsConfigurationType)
-    #[non_exhaustive]
+    /// A builder for [`AnalyticsConfigurationType`](crate::model::AnalyticsConfigurationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -1159,7 +1186,7 @@ pub mod analytics_configuration_type {
             self.user_data_shared = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnalyticsConfigurationType`](crate::model::AnalyticsConfigurationType)
+        /// Consumes the builder and constructs a [`AnalyticsConfigurationType`](crate::model::AnalyticsConfigurationType).
         pub fn build(self) -> crate::model::AnalyticsConfigurationType {
             crate::model::AnalyticsConfigurationType {
                 application_id: self.application_id,
@@ -1172,7 +1199,7 @@ pub mod analytics_configuration_type {
     }
 }
 impl AnalyticsConfigurationType {
-    /// Creates a new builder-style object to manufacture [`AnalyticsConfigurationType`](crate::model::AnalyticsConfigurationType)
+    /// Creates a new builder-style object to manufacture [`AnalyticsConfigurationType`](crate::model::AnalyticsConfigurationType).
     pub fn builder() -> crate::model::analytics_configuration_type::Builder {
         crate::model::analytics_configuration_type::Builder::default()
     }
@@ -1330,10 +1357,13 @@ impl AsRef<str> for ExplicitAuthFlowsType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TokenValidityUnitsType {
     /// <p> A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>AccessTokenValidity</code> parameter. The default <code>AccessTokenValidity</code> time unit is hours.</p>
+    #[doc(hidden)]
     pub access_token: std::option::Option<crate::model::TimeUnitsType>,
     /// <p>A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>IdTokenValidity</code> parameter. The default <code>IdTokenValidity</code> time unit is hours.</p>
+    #[doc(hidden)]
     pub id_token: std::option::Option<crate::model::TimeUnitsType>,
     /// <p>A time unit of <code>seconds</code>, <code>minutes</code>, <code>hours</code>, or <code>days</code> for the value that you set in the <code>RefreshTokenValidity</code> parameter. The default <code>RefreshTokenValidity</code> time unit is days.</p>
+    #[doc(hidden)]
     pub refresh_token: std::option::Option<crate::model::TimeUnitsType>,
 }
 impl TokenValidityUnitsType {
@@ -1359,11 +1389,10 @@ impl std::fmt::Debug for TokenValidityUnitsType {
         formatter.finish()
     }
 }
-/// See [`TokenValidityUnitsType`](crate::model::TokenValidityUnitsType)
+/// See [`TokenValidityUnitsType`](crate::model::TokenValidityUnitsType).
 pub mod token_validity_units_type {
 
-    /// A builder for [`TokenValidityUnitsType`](crate::model::TokenValidityUnitsType)
-    #[non_exhaustive]
+    /// A builder for [`TokenValidityUnitsType`](crate::model::TokenValidityUnitsType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_token: std::option::Option<crate::model::TimeUnitsType>,
@@ -1410,7 +1439,7 @@ pub mod token_validity_units_type {
             self.refresh_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`TokenValidityUnitsType`](crate::model::TokenValidityUnitsType)
+        /// Consumes the builder and constructs a [`TokenValidityUnitsType`](crate::model::TokenValidityUnitsType).
         pub fn build(self) -> crate::model::TokenValidityUnitsType {
             crate::model::TokenValidityUnitsType {
                 access_token: self.access_token,
@@ -1421,7 +1450,7 @@ pub mod token_validity_units_type {
     }
 }
 impl TokenValidityUnitsType {
-    /// Creates a new builder-style object to manufacture [`TokenValidityUnitsType`](crate::model::TokenValidityUnitsType)
+    /// Creates a new builder-style object to manufacture [`TokenValidityUnitsType`](crate::model::TokenValidityUnitsType).
     pub fn builder() -> crate::model::token_validity_units_type::Builder {
         crate::model::token_validity_units_type::Builder::default()
     }
@@ -1495,6 +1524,7 @@ impl AsRef<str> for TimeUnitsType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountRecoverySettingType {
     /// <p>The list of <code>RecoveryOptionTypes</code>.</p>
+    #[doc(hidden)]
     pub recovery_mechanisms: std::option::Option<std::vec::Vec<crate::model::RecoveryOptionType>>,
 }
 impl AccountRecoverySettingType {
@@ -1510,11 +1540,10 @@ impl std::fmt::Debug for AccountRecoverySettingType {
         formatter.finish()
     }
 }
-/// See [`AccountRecoverySettingType`](crate::model::AccountRecoverySettingType)
+/// See [`AccountRecoverySettingType`](crate::model::AccountRecoverySettingType).
 pub mod account_recovery_setting_type {
 
-    /// A builder for [`AccountRecoverySettingType`](crate::model::AccountRecoverySettingType)
-    #[non_exhaustive]
+    /// A builder for [`AccountRecoverySettingType`](crate::model::AccountRecoverySettingType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recovery_mechanisms:
@@ -1540,7 +1569,7 @@ pub mod account_recovery_setting_type {
             self.recovery_mechanisms = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountRecoverySettingType`](crate::model::AccountRecoverySettingType)
+        /// Consumes the builder and constructs a [`AccountRecoverySettingType`](crate::model::AccountRecoverySettingType).
         pub fn build(self) -> crate::model::AccountRecoverySettingType {
             crate::model::AccountRecoverySettingType {
                 recovery_mechanisms: self.recovery_mechanisms,
@@ -1549,7 +1578,7 @@ pub mod account_recovery_setting_type {
     }
 }
 impl AccountRecoverySettingType {
-    /// Creates a new builder-style object to manufacture [`AccountRecoverySettingType`](crate::model::AccountRecoverySettingType)
+    /// Creates a new builder-style object to manufacture [`AccountRecoverySettingType`](crate::model::AccountRecoverySettingType).
     pub fn builder() -> crate::model::account_recovery_setting_type::Builder {
         crate::model::account_recovery_setting_type::Builder::default()
     }
@@ -1560,8 +1589,10 @@ impl AccountRecoverySettingType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryOptionType {
     /// <p>A positive integer specifying priority of a method with 1 being the highest priority.</p>
+    #[doc(hidden)]
     pub priority: i32,
     /// <p>The recovery method for a user.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::RecoveryOptionNameType>,
 }
 impl RecoveryOptionType {
@@ -1582,11 +1613,10 @@ impl std::fmt::Debug for RecoveryOptionType {
         formatter.finish()
     }
 }
-/// See [`RecoveryOptionType`](crate::model::RecoveryOptionType)
+/// See [`RecoveryOptionType`](crate::model::RecoveryOptionType).
 pub mod recovery_option_type {
 
-    /// A builder for [`RecoveryOptionType`](crate::model::RecoveryOptionType)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryOptionType`](crate::model::RecoveryOptionType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) priority: std::option::Option<i32>,
@@ -1616,7 +1646,7 @@ pub mod recovery_option_type {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryOptionType`](crate::model::RecoveryOptionType)
+        /// Consumes the builder and constructs a [`RecoveryOptionType`](crate::model::RecoveryOptionType).
         pub fn build(self) -> crate::model::RecoveryOptionType {
             crate::model::RecoveryOptionType {
                 priority: self.priority.unwrap_or_default(),
@@ -1626,7 +1656,7 @@ pub mod recovery_option_type {
     }
 }
 impl RecoveryOptionType {
-    /// Creates a new builder-style object to manufacture [`RecoveryOptionType`](crate::model::RecoveryOptionType)
+    /// Creates a new builder-style object to manufacture [`RecoveryOptionType`](crate::model::RecoveryOptionType).
     pub fn builder() -> crate::model::recovery_option_type::Builder {
         crate::model::recovery_option_type::Builder::default()
     }
@@ -1696,6 +1726,7 @@ impl AsRef<str> for RecoveryOptionNameType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserPoolAddOnsType {
     /// <p>The advanced security mode.</p>
+    #[doc(hidden)]
     pub advanced_security_mode: std::option::Option<crate::model::AdvancedSecurityModeType>,
 }
 impl UserPoolAddOnsType {
@@ -1713,11 +1744,10 @@ impl std::fmt::Debug for UserPoolAddOnsType {
         formatter.finish()
     }
 }
-/// See [`UserPoolAddOnsType`](crate::model::UserPoolAddOnsType)
+/// See [`UserPoolAddOnsType`](crate::model::UserPoolAddOnsType).
 pub mod user_pool_add_ons_type {
 
-    /// A builder for [`UserPoolAddOnsType`](crate::model::UserPoolAddOnsType)
-    #[non_exhaustive]
+    /// A builder for [`UserPoolAddOnsType`](crate::model::UserPoolAddOnsType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) advanced_security_mode:
@@ -1740,7 +1770,7 @@ pub mod user_pool_add_ons_type {
             self.advanced_security_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserPoolAddOnsType`](crate::model::UserPoolAddOnsType)
+        /// Consumes the builder and constructs a [`UserPoolAddOnsType`](crate::model::UserPoolAddOnsType).
         pub fn build(self) -> crate::model::UserPoolAddOnsType {
             crate::model::UserPoolAddOnsType {
                 advanced_security_mode: self.advanced_security_mode,
@@ -1749,7 +1779,7 @@ pub mod user_pool_add_ons_type {
     }
 }
 impl UserPoolAddOnsType {
-    /// Creates a new builder-style object to manufacture [`UserPoolAddOnsType`](crate::model::UserPoolAddOnsType)
+    /// Creates a new builder-style object to manufacture [`UserPoolAddOnsType`](crate::model::UserPoolAddOnsType).
     pub fn builder() -> crate::model::user_pool_add_ons_type::Builder {
         crate::model::user_pool_add_ons_type::Builder::default()
     }
@@ -1819,13 +1849,16 @@ impl AsRef<str> for AdvancedSecurityModeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AdminCreateUserConfigType {
     /// <p>Set to <code>True</code> if only the administrator is allowed to create user profiles. Set to <code>False</code> if users can sign themselves up via an app.</p>
+    #[doc(hidden)]
     pub allow_admin_create_user_only: bool,
     /// <p>The user account expiration limit, in days, after which a new account that hasn't signed in is no longer usable. To reset the account after that time limit, you must call <code>AdminCreateUser</code> again, specifying <code>"RESEND"</code> for the <code>MessageAction</code> parameter. The default value for this parameter is 7. </p> <note>
     /// <p>If you set a value for <code>TemporaryPasswordValidityDays</code> in <code>PasswordPolicy</code>, that value will be used, and <code>UnusedAccountValidityDays</code> will be no longer be an available parameter for that user pool.</p>
     /// </note>
+    #[doc(hidden)]
     pub unused_account_validity_days: i32,
     /// <p>The message template to be used for the welcome message to new users.</p>
     /// <p>See also <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-message-customizations.html#cognito-user-pool-settings-user-invitation-message-customization">Customizing User Invitation Messages</a>.</p>
+    #[doc(hidden)]
     pub invite_message_template: std::option::Option<crate::model::MessageTemplateType>,
 }
 impl AdminCreateUserConfigType {
@@ -1862,11 +1895,10 @@ impl std::fmt::Debug for AdminCreateUserConfigType {
         formatter.finish()
     }
 }
-/// See [`AdminCreateUserConfigType`](crate::model::AdminCreateUserConfigType)
+/// See [`AdminCreateUserConfigType`](crate::model::AdminCreateUserConfigType).
 pub mod admin_create_user_config_type {
 
-    /// A builder for [`AdminCreateUserConfigType`](crate::model::AdminCreateUserConfigType)
-    #[non_exhaustive]
+    /// A builder for [`AdminCreateUserConfigType`](crate::model::AdminCreateUserConfigType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allow_admin_create_user_only: std::option::Option<bool>,
@@ -1916,7 +1948,7 @@ pub mod admin_create_user_config_type {
             self.invite_message_template = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdminCreateUserConfigType`](crate::model::AdminCreateUserConfigType)
+        /// Consumes the builder and constructs a [`AdminCreateUserConfigType`](crate::model::AdminCreateUserConfigType).
         pub fn build(self) -> crate::model::AdminCreateUserConfigType {
             crate::model::AdminCreateUserConfigType {
                 allow_admin_create_user_only: self.allow_admin_create_user_only.unwrap_or_default(),
@@ -1927,7 +1959,7 @@ pub mod admin_create_user_config_type {
     }
 }
 impl AdminCreateUserConfigType {
-    /// Creates a new builder-style object to manufacture [`AdminCreateUserConfigType`](crate::model::AdminCreateUserConfigType)
+    /// Creates a new builder-style object to manufacture [`AdminCreateUserConfigType`](crate::model::AdminCreateUserConfigType).
     pub fn builder() -> crate::model::admin_create_user_config_type::Builder {
         crate::model::admin_create_user_config_type::Builder::default()
     }
@@ -1938,10 +1970,13 @@ impl AdminCreateUserConfigType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MessageTemplateType {
     /// <p>The message template for SMS messages.</p>
+    #[doc(hidden)]
     pub sms_message: std::option::Option<std::string::String>,
     /// <p>The message template for email messages. EmailMessage is allowed only if <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount">EmailSendingAccount</a> is DEVELOPER. </p>
+    #[doc(hidden)]
     pub email_message: std::option::Option<std::string::String>,
     /// <p>The subject line for email messages. EmailSubject is allowed only if <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount">EmailSendingAccount</a> is DEVELOPER. </p>
+    #[doc(hidden)]
     pub email_subject: std::option::Option<std::string::String>,
 }
 impl MessageTemplateType {
@@ -1967,11 +2002,10 @@ impl std::fmt::Debug for MessageTemplateType {
         formatter.finish()
     }
 }
-/// See [`MessageTemplateType`](crate::model::MessageTemplateType)
+/// See [`MessageTemplateType`](crate::model::MessageTemplateType).
 pub mod message_template_type {
 
-    /// A builder for [`MessageTemplateType`](crate::model::MessageTemplateType)
-    #[non_exhaustive]
+    /// A builder for [`MessageTemplateType`](crate::model::MessageTemplateType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sms_message: std::option::Option<std::string::String>,
@@ -2015,7 +2049,7 @@ pub mod message_template_type {
             self.email_subject = input;
             self
         }
-        /// Consumes the builder and constructs a [`MessageTemplateType`](crate::model::MessageTemplateType)
+        /// Consumes the builder and constructs a [`MessageTemplateType`](crate::model::MessageTemplateType).
         pub fn build(self) -> crate::model::MessageTemplateType {
             crate::model::MessageTemplateType {
                 sms_message: self.sms_message,
@@ -2026,7 +2060,7 @@ pub mod message_template_type {
     }
 }
 impl MessageTemplateType {
-    /// Creates a new builder-style object to manufacture [`MessageTemplateType`](crate::model::MessageTemplateType)
+    /// Creates a new builder-style object to manufacture [`MessageTemplateType`](crate::model::MessageTemplateType).
     pub fn builder() -> crate::model::message_template_type::Builder {
         crate::model::message_template_type::Builder::default()
     }
@@ -2037,12 +2071,15 @@ impl MessageTemplateType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SmsConfigurationType {
     /// <p>The Amazon Resource Name (ARN) of the Amazon SNS caller. This is the ARN of the IAM role in your Amazon Web Services account that Amazon Cognito will use to send SMS messages. SMS messages are subject to a <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html">spending limit</a>. </p>
+    #[doc(hidden)]
     pub sns_caller_arn: std::option::Option<std::string::String>,
     /// <p>The external ID provides additional security for your IAM role. You can use an <code>ExternalId</code> with the IAM role that you use with Amazon SNS to send SMS messages for your user pool. If you provide an <code>ExternalId</code>, your Amazon Cognito user pool includes it in the request to assume your IAM role. You can configure the role trust policy to require that Amazon Cognito, and any principal, provide the <code>ExternalID</code>. If you use the Amazon Cognito Management Console to create a role for SMS multi-factor authentication (MFA), Amazon Cognito creates a role with the required permissions and a trust policy that demonstrates use of the <code>ExternalId</code>.</p>
     /// <p>For more information about the <code>ExternalId</code> of a role, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">How to use an external ID when granting access to your Amazon Web Services resources to a third party</a> </p>
+    #[doc(hidden)]
     pub external_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region to use with Amazon SNS integration. You can choose the same Region as your user pool, or a supported <b>Legacy Amazon SNS alternate Region</b>. </p>
     /// <p> Amazon Cognito resources in the Asia Pacific (Seoul) Amazon Web Services Region must use your Amazon SNS configuration in the Asia Pacific (Tokyo) Region. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html">SMS message settings for Amazon Cognito user pools</a>.</p>
+    #[doc(hidden)]
     pub sns_region: std::option::Option<std::string::String>,
 }
 impl SmsConfigurationType {
@@ -2070,11 +2107,10 @@ impl std::fmt::Debug for SmsConfigurationType {
         formatter.finish()
     }
 }
-/// See [`SmsConfigurationType`](crate::model::SmsConfigurationType)
+/// See [`SmsConfigurationType`](crate::model::SmsConfigurationType).
 pub mod sms_configuration_type {
 
-    /// A builder for [`SmsConfigurationType`](crate::model::SmsConfigurationType)
-    #[non_exhaustive]
+    /// A builder for [`SmsConfigurationType`](crate::model::SmsConfigurationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sns_caller_arn: std::option::Option<std::string::String>,
@@ -2119,7 +2155,7 @@ pub mod sms_configuration_type {
             self.sns_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`SmsConfigurationType`](crate::model::SmsConfigurationType)
+        /// Consumes the builder and constructs a [`SmsConfigurationType`](crate::model::SmsConfigurationType).
         pub fn build(self) -> crate::model::SmsConfigurationType {
             crate::model::SmsConfigurationType {
                 sns_caller_arn: self.sns_caller_arn,
@@ -2130,7 +2166,7 @@ pub mod sms_configuration_type {
     }
 }
 impl SmsConfigurationType {
-    /// Creates a new builder-style object to manufacture [`SmsConfigurationType`](crate::model::SmsConfigurationType)
+    /// Creates a new builder-style object to manufacture [`SmsConfigurationType`](crate::model::SmsConfigurationType).
     pub fn builder() -> crate::model::sms_configuration_type::Builder {
         crate::model::sms_configuration_type::Builder::default()
     }
@@ -2148,8 +2184,10 @@ pub struct EmailConfigurationType {
     /// <li> <p>If you specify <code>DEVELOPER</code>, Amazon Cognito emails your users with this address by calling Amazon SES on your behalf.</p> </li>
     /// </ul>
     /// <p>The Region value of the <code>SourceArn</code> parameter must indicate a supported Amazon Web Services Region of your user pool. Typically, the Region in the <code>SourceArn</code> and the user pool Region are the same. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-email.html#user-pool-email-developer-region-mapping">Amazon SES email configuration regions</a> in the <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html">Amazon Cognito Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub source_arn: std::option::Option<std::string::String>,
     /// <p>The destination to which the receiver of the email should reply.</p>
+    #[doc(hidden)]
     pub reply_to_email_address: std::option::Option<std::string::String>,
     /// <p>Specifies whether Amazon Cognito uses its built-in functionality to send your users email messages, or uses your Amazon Simple Email Service email configuration. Specify one of the following values:</p>
     /// <dl>
@@ -2170,9 +2208,11 @@ pub struct EmailConfigurationType {
     /// <p>Before Amazon Cognito can email your users, it requires additional permissions to call Amazon SES on your behalf. When you update your user pool with this option, Amazon Cognito creates a <i>service-linked role</i>, which is a type of role, in your Amazon Web Services account. This role contains the permissions that allow to access Amazon SES and send email messages with your address. For more information about the service-linked role that Amazon Cognito creates, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/using-service-linked-roles.html">Using Service-Linked Roles for Amazon Cognito</a> in the <i>Amazon Cognito Developer Guide</i>.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub email_sending_account: std::option::Option<crate::model::EmailSendingAccountType>,
     /// <p>Either the sender’s email address or the sender’s name with their email address. For example, <code>testuser@example.com</code> or <code>Test User
     /// <testuser@example.com></testuser@example.com></code>. This address appears before the body of the email.</p>
+    #[doc(hidden)]
     pub from: std::option::Option<std::string::String>,
     /// <p>The set of configuration rules that can be applied to emails sent using Amazon Simple Email Service. A configuration set is applied to an email by including a reference to the configuration set in the headers of the email. Once applied, all of the rules in that configuration set are applied to the email. Configuration sets can be used to apply the following types of rules to emails: </p>
     /// <dl>
@@ -2189,6 +2229,7 @@ pub struct EmailConfigurationType {
     /// <p>When leasing dedicated IP addresses with Amazon Simple Email Service, you can create groups of IP addresses, called dedicated IP pools. You can then associate the dedicated IP pools with configuration sets.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub configuration_set: std::option::Option<std::string::String>,
 }
 impl EmailConfigurationType {
@@ -2264,11 +2305,10 @@ impl std::fmt::Debug for EmailConfigurationType {
         formatter.finish()
     }
 }
-/// See [`EmailConfigurationType`](crate::model::EmailConfigurationType)
+/// See [`EmailConfigurationType`](crate::model::EmailConfigurationType).
 pub mod email_configuration_type {
 
-    /// A builder for [`EmailConfigurationType`](crate::model::EmailConfigurationType)
-    #[non_exhaustive]
+    /// A builder for [`EmailConfigurationType`](crate::model::EmailConfigurationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_arn: std::option::Option<std::string::String>,
@@ -2417,7 +2457,7 @@ pub mod email_configuration_type {
             self.configuration_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`EmailConfigurationType`](crate::model::EmailConfigurationType)
+        /// Consumes the builder and constructs a [`EmailConfigurationType`](crate::model::EmailConfigurationType).
         pub fn build(self) -> crate::model::EmailConfigurationType {
             crate::model::EmailConfigurationType {
                 source_arn: self.source_arn,
@@ -2430,7 +2470,7 @@ pub mod email_configuration_type {
     }
 }
 impl EmailConfigurationType {
-    /// Creates a new builder-style object to manufacture [`EmailConfigurationType`](crate::model::EmailConfigurationType)
+    /// Creates a new builder-style object to manufacture [`EmailConfigurationType`](crate::model::EmailConfigurationType).
     pub fn builder() -> crate::model::email_configuration_type::Builder {
         crate::model::email_configuration_type::Builder::default()
     }
@@ -2491,27 +2531,29 @@ impl AsRef<str> for EmailSendingAccountType {
     }
 }
 
-/// <p>The device tracking configuration for a user pool. A user pool with device tracking deactivated returns a null value.</p> <note>
-/// <p>When you provide values for any DeviceConfiguration field, you activate device tracking.</p>
+/// <p>The device-remembering configuration for a user pool. A null value indicates that you have deactivated device remembering in your user pool.</p> <note>
+/// <p>When you provide a value for any <code>DeviceConfiguration</code> field, you activate the Amazon Cognito device-remembering feature.</p>
 /// </note>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeviceConfigurationType {
     /// <p>When true, device authentication can replace SMS and time-based one-time password (TOTP) factors for multi-factor authentication (MFA).</p> <note>
-    /// <p>Users that sign in with devices that have not been confirmed or remembered will still have to provide a second factor, whether or not ChallengeRequiredOnNewDevice is true, when your user pool requires MFA.</p>
+    /// <p>Regardless of the value of this field, users that sign in with new devices that have not been confirmed or remembered must provide a second factor if your user pool requires MFA.</p>
     /// </note>
+    #[doc(hidden)]
     pub challenge_required_on_new_device: bool,
-    /// <p>When true, users can opt in to remembering their device. Your app code must use callback functions to return the user's choice.</p>
+    /// <p>When true, Amazon Cognito doesn't remember newly-confirmed devices. Users who want to authenticate with their device can instead opt in to remembering their device. To collect a choice from your user, create an input prompt in your app and return the value that the user chooses in an <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateDeviceStatus.html">UpdateDeviceStatus</a> API request.</p>
+    #[doc(hidden)]
     pub device_only_remembered_on_user_prompt: bool,
 }
 impl DeviceConfigurationType {
     /// <p>When true, device authentication can replace SMS and time-based one-time password (TOTP) factors for multi-factor authentication (MFA).</p> <note>
-    /// <p>Users that sign in with devices that have not been confirmed or remembered will still have to provide a second factor, whether or not ChallengeRequiredOnNewDevice is true, when your user pool requires MFA.</p>
+    /// <p>Regardless of the value of this field, users that sign in with new devices that have not been confirmed or remembered must provide a second factor if your user pool requires MFA.</p>
     /// </note>
     pub fn challenge_required_on_new_device(&self) -> bool {
         self.challenge_required_on_new_device
     }
-    /// <p>When true, users can opt in to remembering their device. Your app code must use callback functions to return the user's choice.</p>
+    /// <p>When true, Amazon Cognito doesn't remember newly-confirmed devices. Users who want to authenticate with their device can instead opt in to remembering their device. To collect a choice from your user, create an input prompt in your app and return the value that the user chooses in an <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateDeviceStatus.html">UpdateDeviceStatus</a> API request.</p>
     pub fn device_only_remembered_on_user_prompt(&self) -> bool {
         self.device_only_remembered_on_user_prompt
     }
@@ -2530,11 +2572,10 @@ impl std::fmt::Debug for DeviceConfigurationType {
         formatter.finish()
     }
 }
-/// See [`DeviceConfigurationType`](crate::model::DeviceConfigurationType)
+/// See [`DeviceConfigurationType`](crate::model::DeviceConfigurationType).
 pub mod device_configuration_type {
 
-    /// A builder for [`DeviceConfigurationType`](crate::model::DeviceConfigurationType)
-    #[non_exhaustive]
+    /// A builder for [`DeviceConfigurationType`](crate::model::DeviceConfigurationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) challenge_required_on_new_device: std::option::Option<bool>,
@@ -2542,14 +2583,14 @@ pub mod device_configuration_type {
     }
     impl Builder {
         /// <p>When true, device authentication can replace SMS and time-based one-time password (TOTP) factors for multi-factor authentication (MFA).</p> <note>
-        /// <p>Users that sign in with devices that have not been confirmed or remembered will still have to provide a second factor, whether or not ChallengeRequiredOnNewDevice is true, when your user pool requires MFA.</p>
+        /// <p>Regardless of the value of this field, users that sign in with new devices that have not been confirmed or remembered must provide a second factor if your user pool requires MFA.</p>
         /// </note>
         pub fn challenge_required_on_new_device(mut self, input: bool) -> Self {
             self.challenge_required_on_new_device = Some(input);
             self
         }
         /// <p>When true, device authentication can replace SMS and time-based one-time password (TOTP) factors for multi-factor authentication (MFA).</p> <note>
-        /// <p>Users that sign in with devices that have not been confirmed or remembered will still have to provide a second factor, whether or not ChallengeRequiredOnNewDevice is true, when your user pool requires MFA.</p>
+        /// <p>Regardless of the value of this field, users that sign in with new devices that have not been confirmed or remembered must provide a second factor if your user pool requires MFA.</p>
         /// </note>
         pub fn set_challenge_required_on_new_device(
             mut self,
@@ -2558,12 +2599,12 @@ pub mod device_configuration_type {
             self.challenge_required_on_new_device = input;
             self
         }
-        /// <p>When true, users can opt in to remembering their device. Your app code must use callback functions to return the user's choice.</p>
+        /// <p>When true, Amazon Cognito doesn't remember newly-confirmed devices. Users who want to authenticate with their device can instead opt in to remembering their device. To collect a choice from your user, create an input prompt in your app and return the value that the user chooses in an <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateDeviceStatus.html">UpdateDeviceStatus</a> API request.</p>
         pub fn device_only_remembered_on_user_prompt(mut self, input: bool) -> Self {
             self.device_only_remembered_on_user_prompt = Some(input);
             self
         }
-        /// <p>When true, users can opt in to remembering their device. Your app code must use callback functions to return the user's choice.</p>
+        /// <p>When true, Amazon Cognito doesn't remember newly-confirmed devices. Users who want to authenticate with their device can instead opt in to remembering their device. To collect a choice from your user, create an input prompt in your app and return the value that the user chooses in an <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateDeviceStatus.html">UpdateDeviceStatus</a> API request.</p>
         pub fn set_device_only_remembered_on_user_prompt(
             mut self,
             input: std::option::Option<bool>,
@@ -2571,7 +2612,7 @@ pub mod device_configuration_type {
             self.device_only_remembered_on_user_prompt = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeviceConfigurationType`](crate::model::DeviceConfigurationType)
+        /// Consumes the builder and constructs a [`DeviceConfigurationType`](crate::model::DeviceConfigurationType).
         pub fn build(self) -> crate::model::DeviceConfigurationType {
             crate::model::DeviceConfigurationType {
                 challenge_required_on_new_device: self
@@ -2585,7 +2626,7 @@ pub mod device_configuration_type {
     }
 }
 impl DeviceConfigurationType {
-    /// Creates a new builder-style object to manufacture [`DeviceConfigurationType`](crate::model::DeviceConfigurationType)
+    /// Creates a new builder-style object to manufacture [`DeviceConfigurationType`](crate::model::DeviceConfigurationType).
     pub fn builder() -> crate::model::device_configuration_type::Builder {
         crate::model::device_configuration_type::Builder::default()
     }
@@ -2650,13 +2691,14 @@ impl AsRef<str> for UserPoolMfaType {
     }
 }
 
-/// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to to email addresses and phone numbers</a>.</p>
+/// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to email addresses and phone numbers</a>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserAttributeUpdateSettingsType {
     /// <p>Requires that your user verifies their email address, phone number, or both before Amazon Cognito updates the value of that attribute. When you update a user attribute that has this option activated, Amazon Cognito sends a verification message to the new phone number or email address. Amazon Cognito doesn’t change the value of the attribute until your user responds to the verification message and confirms the new value.</p>
     /// <p>You can verify an updated email address or phone number with a <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerifyUserAttribute.html">VerifyUserAttribute</a> API request. You can also call the <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserAttributes.html">UpdateUserAttributes</a> or <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html">AdminUpdateUserAttributes</a> API and set <code>email_verified</code> or <code>phone_number_verified</code> to true.</p>
     /// <p>When <code>AttributesRequireVerificationBeforeUpdate</code> is false, your user pool doesn't require that your users verify attribute changes before Amazon Cognito updates them. In a user pool where <code>AttributesRequireVerificationBeforeUpdate</code> is false, API operations that change attribute values can immediately update a user’s <code>email</code> or <code>phone_number</code> attribute.</p>
+    #[doc(hidden)]
     pub attributes_require_verification_before_update:
         std::option::Option<std::vec::Vec<crate::model::VerifiedAttributeType>>,
 }
@@ -2681,11 +2723,10 @@ impl std::fmt::Debug for UserAttributeUpdateSettingsType {
         formatter.finish()
     }
 }
-/// See [`UserAttributeUpdateSettingsType`](crate::model::UserAttributeUpdateSettingsType)
+/// See [`UserAttributeUpdateSettingsType`](crate::model::UserAttributeUpdateSettingsType).
 pub mod user_attribute_update_settings_type {
 
-    /// A builder for [`UserAttributeUpdateSettingsType`](crate::model::UserAttributeUpdateSettingsType)
-    #[non_exhaustive]
+    /// A builder for [`UserAttributeUpdateSettingsType`](crate::model::UserAttributeUpdateSettingsType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes_require_verification_before_update:
@@ -2720,7 +2761,7 @@ pub mod user_attribute_update_settings_type {
             self.attributes_require_verification_before_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserAttributeUpdateSettingsType`](crate::model::UserAttributeUpdateSettingsType)
+        /// Consumes the builder and constructs a [`UserAttributeUpdateSettingsType`](crate::model::UserAttributeUpdateSettingsType).
         pub fn build(self) -> crate::model::UserAttributeUpdateSettingsType {
             crate::model::UserAttributeUpdateSettingsType {
                 attributes_require_verification_before_update: self
@@ -2730,7 +2771,7 @@ pub mod user_attribute_update_settings_type {
     }
 }
 impl UserAttributeUpdateSettingsType {
-    /// Creates a new builder-style object to manufacture [`UserAttributeUpdateSettingsType`](crate::model::UserAttributeUpdateSettingsType)
+    /// Creates a new builder-style object to manufacture [`UserAttributeUpdateSettingsType`](crate::model::UserAttributeUpdateSettingsType).
     pub fn builder() -> crate::model::user_attribute_update_settings_type::Builder {
         crate::model::user_attribute_update_settings_type::Builder::default()
     }
@@ -2796,16 +2837,22 @@ impl AsRef<str> for VerifiedAttributeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VerificationMessageTemplateType {
     /// <p>The template for SMS messages that Amazon Cognito sends to your users.</p>
+    #[doc(hidden)]
     pub sms_message: std::option::Option<std::string::String>,
     /// <p>The template for email messages that Amazon Cognito sends to your users. You can set an <code>EmailMessage</code> template only if the value of <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount"> EmailSendingAccount</a> is <code>DEVELOPER</code>. When your <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount">EmailSendingAccount</a> is <code>DEVELOPER</code>, your user pool sends email messages with your own Amazon SES configuration.</p>
+    #[doc(hidden)]
     pub email_message: std::option::Option<std::string::String>,
     /// <p>The subject line for the email message template. You can set an <code>EmailSubject</code> template only if the value of <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount"> EmailSendingAccount</a> is <code>DEVELOPER</code>. When your <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount">EmailSendingAccount</a> is <code>DEVELOPER</code>, your user pool sends email messages with your own Amazon SES configuration.</p>
+    #[doc(hidden)]
     pub email_subject: std::option::Option<std::string::String>,
     /// <p>The email message template for sending a confirmation link to the user. You can set an <code>EmailMessageByLink</code> template only if the value of <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount"> EmailSendingAccount</a> is <code>DEVELOPER</code>. When your <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount">EmailSendingAccount</a> is <code>DEVELOPER</code>, your user pool sends email messages with your own Amazon SES configuration.</p>
+    #[doc(hidden)]
     pub email_message_by_link: std::option::Option<std::string::String>,
     /// <p>The subject line for the email message template for sending a confirmation link to the user. You can set an <code>EmailSubjectByLink</code> template only if the value of <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount"> EmailSendingAccount</a> is <code>DEVELOPER</code>. When your <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount">EmailSendingAccount</a> is <code>DEVELOPER</code>, your user pool sends email messages with your own Amazon SES configuration.</p>
+    #[doc(hidden)]
     pub email_subject_by_link: std::option::Option<std::string::String>,
     /// <p>The default email option.</p>
+    #[doc(hidden)]
     pub default_email_option: std::option::Option<crate::model::DefaultEmailOptionType>,
 }
 impl VerificationMessageTemplateType {
@@ -2848,11 +2895,10 @@ impl std::fmt::Debug for VerificationMessageTemplateType {
         formatter.finish()
     }
 }
-/// See [`VerificationMessageTemplateType`](crate::model::VerificationMessageTemplateType)
+/// See [`VerificationMessageTemplateType`](crate::model::VerificationMessageTemplateType).
 pub mod verification_message_template_type {
 
-    /// A builder for [`VerificationMessageTemplateType`](crate::model::VerificationMessageTemplateType)
-    #[non_exhaustive]
+    /// A builder for [`VerificationMessageTemplateType`](crate::model::VerificationMessageTemplateType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sms_message: std::option::Option<std::string::String>,
@@ -2938,7 +2984,7 @@ pub mod verification_message_template_type {
             self.default_email_option = input;
             self
         }
-        /// Consumes the builder and constructs a [`VerificationMessageTemplateType`](crate::model::VerificationMessageTemplateType)
+        /// Consumes the builder and constructs a [`VerificationMessageTemplateType`](crate::model::VerificationMessageTemplateType).
         pub fn build(self) -> crate::model::VerificationMessageTemplateType {
             crate::model::VerificationMessageTemplateType {
                 sms_message: self.sms_message,
@@ -2952,7 +2998,7 @@ pub mod verification_message_template_type {
     }
 }
 impl VerificationMessageTemplateType {
-    /// Creates a new builder-style object to manufacture [`VerificationMessageTemplateType`](crate::model::VerificationMessageTemplateType)
+    /// Creates a new builder-style object to manufacture [`VerificationMessageTemplateType`](crate::model::VerificationMessageTemplateType).
     pub fn builder() -> crate::model::verification_message_template_type::Builder {
         crate::model::verification_message_template_type::Builder::default()
     }
@@ -3018,30 +3064,43 @@ impl AsRef<str> for DefaultEmailOptionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaConfigType {
     /// <p>A pre-registration Lambda trigger.</p>
+    #[doc(hidden)]
     pub pre_sign_up: std::option::Option<std::string::String>,
     /// <p>A custom Message Lambda trigger.</p>
+    #[doc(hidden)]
     pub custom_message: std::option::Option<std::string::String>,
     /// <p>A post-confirmation Lambda trigger.</p>
+    #[doc(hidden)]
     pub post_confirmation: std::option::Option<std::string::String>,
     /// <p>A pre-authentication Lambda trigger.</p>
+    #[doc(hidden)]
     pub pre_authentication: std::option::Option<std::string::String>,
     /// <p>A post-authentication Lambda trigger.</p>
+    #[doc(hidden)]
     pub post_authentication: std::option::Option<std::string::String>,
     /// <p>Defines the authentication challenge.</p>
+    #[doc(hidden)]
     pub define_auth_challenge: std::option::Option<std::string::String>,
     /// <p>Creates an authentication challenge.</p>
+    #[doc(hidden)]
     pub create_auth_challenge: std::option::Option<std::string::String>,
     /// <p>Verifies the authentication challenge response.</p>
+    #[doc(hidden)]
     pub verify_auth_challenge_response: std::option::Option<std::string::String>,
     /// <p>A Lambda trigger that is invoked before token generation.</p>
+    #[doc(hidden)]
     pub pre_token_generation: std::option::Option<std::string::String>,
     /// <p>The user migration Lambda config type.</p>
+    #[doc(hidden)]
     pub user_migration: std::option::Option<std::string::String>,
     /// <p>A custom SMS sender Lambda trigger.</p>
+    #[doc(hidden)]
     pub custom_sms_sender: std::option::Option<crate::model::CustomSmsLambdaVersionConfigType>,
     /// <p>A custom email sender Lambda trigger.</p>
+    #[doc(hidden)]
     pub custom_email_sender: std::option::Option<crate::model::CustomEmailLambdaVersionConfigType>,
     /// <p>The Amazon Resource Name (ARN) of an <a href="/kms/latest/developerguide/concepts.html#master_keys">KMS key</a>. Amazon Cognito uses the key to encrypt codes and temporary passwords sent to <code>CustomEmailSender</code> and <code>CustomSMSSender</code>.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
 }
 impl LambdaConfigType {
@@ -3124,11 +3183,10 @@ impl std::fmt::Debug for LambdaConfigType {
         formatter.finish()
     }
 }
-/// See [`LambdaConfigType`](crate::model::LambdaConfigType)
+/// See [`LambdaConfigType`](crate::model::LambdaConfigType).
 pub mod lambda_config_type {
 
-    /// A builder for [`LambdaConfigType`](crate::model::LambdaConfigType)
-    #[non_exhaustive]
+    /// A builder for [`LambdaConfigType`](crate::model::LambdaConfigType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pre_sign_up: std::option::Option<std::string::String>,
@@ -3320,7 +3378,7 @@ pub mod lambda_config_type {
             self.kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaConfigType`](crate::model::LambdaConfigType)
+        /// Consumes the builder and constructs a [`LambdaConfigType`](crate::model::LambdaConfigType).
         pub fn build(self) -> crate::model::LambdaConfigType {
             crate::model::LambdaConfigType {
                 pre_sign_up: self.pre_sign_up,
@@ -3341,7 +3399,7 @@ pub mod lambda_config_type {
     }
 }
 impl LambdaConfigType {
-    /// Creates a new builder-style object to manufacture [`LambdaConfigType`](crate::model::LambdaConfigType)
+    /// Creates a new builder-style object to manufacture [`LambdaConfigType`](crate::model::LambdaConfigType).
     pub fn builder() -> crate::model::lambda_config_type::Builder {
         crate::model::lambda_config_type::Builder::default()
     }
@@ -3352,8 +3410,10 @@ impl LambdaConfigType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomEmailLambdaVersionConfigType {
     /// <p>Signature of the "request" attribute in the "event" information Amazon Cognito passes to your custom email Lambda function. The only supported value is <code>V1_0</code>.</p>
+    #[doc(hidden)]
     pub lambda_version: std::option::Option<crate::model::CustomEmailSenderLambdaVersionType>,
     /// <p>The Amazon Resource Name (ARN) of the Lambda function that Amazon Cognito activates to send email notifications to users.</p>
+    #[doc(hidden)]
     pub lambda_arn: std::option::Option<std::string::String>,
 }
 impl CustomEmailLambdaVersionConfigType {
@@ -3376,11 +3436,10 @@ impl std::fmt::Debug for CustomEmailLambdaVersionConfigType {
         formatter.finish()
     }
 }
-/// See [`CustomEmailLambdaVersionConfigType`](crate::model::CustomEmailLambdaVersionConfigType)
+/// See [`CustomEmailLambdaVersionConfigType`](crate::model::CustomEmailLambdaVersionConfigType).
 pub mod custom_email_lambda_version_config_type {
 
-    /// A builder for [`CustomEmailLambdaVersionConfigType`](crate::model::CustomEmailLambdaVersionConfigType)
-    #[non_exhaustive]
+    /// A builder for [`CustomEmailLambdaVersionConfigType`](crate::model::CustomEmailLambdaVersionConfigType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lambda_version:
@@ -3414,7 +3473,7 @@ pub mod custom_email_lambda_version_config_type {
             self.lambda_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomEmailLambdaVersionConfigType`](crate::model::CustomEmailLambdaVersionConfigType)
+        /// Consumes the builder and constructs a [`CustomEmailLambdaVersionConfigType`](crate::model::CustomEmailLambdaVersionConfigType).
         pub fn build(self) -> crate::model::CustomEmailLambdaVersionConfigType {
             crate::model::CustomEmailLambdaVersionConfigType {
                 lambda_version: self.lambda_version,
@@ -3424,7 +3483,7 @@ pub mod custom_email_lambda_version_config_type {
     }
 }
 impl CustomEmailLambdaVersionConfigType {
-    /// Creates a new builder-style object to manufacture [`CustomEmailLambdaVersionConfigType`](crate::model::CustomEmailLambdaVersionConfigType)
+    /// Creates a new builder-style object to manufacture [`CustomEmailLambdaVersionConfigType`](crate::model::CustomEmailLambdaVersionConfigType).
     pub fn builder() -> crate::model::custom_email_lambda_version_config_type::Builder {
         crate::model::custom_email_lambda_version_config_type::Builder::default()
     }
@@ -3486,8 +3545,10 @@ impl AsRef<str> for CustomEmailSenderLambdaVersionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomSmsLambdaVersionConfigType {
     /// <p>Signature of the "request" attribute in the "event" information that Amazon Cognito passes to your custom SMS Lambda function. The only supported value is <code>V1_0</code>.</p>
+    #[doc(hidden)]
     pub lambda_version: std::option::Option<crate::model::CustomSmsSenderLambdaVersionType>,
     /// <p>The Amazon Resource Name (ARN) of the Lambda function that Amazon Cognito activates to send SMS notifications to users.</p>
+    #[doc(hidden)]
     pub lambda_arn: std::option::Option<std::string::String>,
 }
 impl CustomSmsLambdaVersionConfigType {
@@ -3510,11 +3571,10 @@ impl std::fmt::Debug for CustomSmsLambdaVersionConfigType {
         formatter.finish()
     }
 }
-/// See [`CustomSmsLambdaVersionConfigType`](crate::model::CustomSmsLambdaVersionConfigType)
+/// See [`CustomSmsLambdaVersionConfigType`](crate::model::CustomSmsLambdaVersionConfigType).
 pub mod custom_sms_lambda_version_config_type {
 
-    /// A builder for [`CustomSmsLambdaVersionConfigType`](crate::model::CustomSmsLambdaVersionConfigType)
-    #[non_exhaustive]
+    /// A builder for [`CustomSmsLambdaVersionConfigType`](crate::model::CustomSmsLambdaVersionConfigType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lambda_version:
@@ -3548,7 +3608,7 @@ pub mod custom_sms_lambda_version_config_type {
             self.lambda_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomSmsLambdaVersionConfigType`](crate::model::CustomSmsLambdaVersionConfigType)
+        /// Consumes the builder and constructs a [`CustomSmsLambdaVersionConfigType`](crate::model::CustomSmsLambdaVersionConfigType).
         pub fn build(self) -> crate::model::CustomSmsLambdaVersionConfigType {
             crate::model::CustomSmsLambdaVersionConfigType {
                 lambda_version: self.lambda_version,
@@ -3558,7 +3618,7 @@ pub mod custom_sms_lambda_version_config_type {
     }
 }
 impl CustomSmsLambdaVersionConfigType {
-    /// Creates a new builder-style object to manufacture [`CustomSmsLambdaVersionConfigType`](crate::model::CustomSmsLambdaVersionConfigType)
+    /// Creates a new builder-style object to manufacture [`CustomSmsLambdaVersionConfigType`](crate::model::CustomSmsLambdaVersionConfigType).
     pub fn builder() -> crate::model::custom_sms_lambda_version_config_type::Builder {
         crate::model::custom_sms_lambda_version_config_type::Builder::default()
     }
@@ -3620,6 +3680,7 @@ impl AsRef<str> for CustomSmsSenderLambdaVersionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserPoolPolicyType {
     /// <p>The password policy.</p>
+    #[doc(hidden)]
     pub password_policy: std::option::Option<crate::model::PasswordPolicyType>,
 }
 impl UserPoolPolicyType {
@@ -3635,11 +3696,10 @@ impl std::fmt::Debug for UserPoolPolicyType {
         formatter.finish()
     }
 }
-/// See [`UserPoolPolicyType`](crate::model::UserPoolPolicyType)
+/// See [`UserPoolPolicyType`](crate::model::UserPoolPolicyType).
 pub mod user_pool_policy_type {
 
-    /// A builder for [`UserPoolPolicyType`](crate::model::UserPoolPolicyType)
-    #[non_exhaustive]
+    /// A builder for [`UserPoolPolicyType`](crate::model::UserPoolPolicyType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) password_policy: std::option::Option<crate::model::PasswordPolicyType>,
@@ -3658,7 +3718,7 @@ pub mod user_pool_policy_type {
             self.password_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserPoolPolicyType`](crate::model::UserPoolPolicyType)
+        /// Consumes the builder and constructs a [`UserPoolPolicyType`](crate::model::UserPoolPolicyType).
         pub fn build(self) -> crate::model::UserPoolPolicyType {
             crate::model::UserPoolPolicyType {
                 password_policy: self.password_policy,
@@ -3667,7 +3727,7 @@ pub mod user_pool_policy_type {
     }
 }
 impl UserPoolPolicyType {
-    /// Creates a new builder-style object to manufacture [`UserPoolPolicyType`](crate::model::UserPoolPolicyType)
+    /// Creates a new builder-style object to manufacture [`UserPoolPolicyType`](crate::model::UserPoolPolicyType).
     pub fn builder() -> crate::model::user_pool_policy_type::Builder {
         crate::model::user_pool_policy_type::Builder::default()
     }
@@ -3678,18 +3738,24 @@ impl UserPoolPolicyType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PasswordPolicyType {
     /// <p>The minimum length of the password in the policy that you have set. This value can't be less than 6.</p>
+    #[doc(hidden)]
     pub minimum_length: i32,
     /// <p>In the password policy that you have set, refers to whether you have required users to use at least one uppercase letter in their password.</p>
+    #[doc(hidden)]
     pub require_uppercase: bool,
     /// <p>In the password policy that you have set, refers to whether you have required users to use at least one lowercase letter in their password.</p>
+    #[doc(hidden)]
     pub require_lowercase: bool,
     /// <p>In the password policy that you have set, refers to whether you have required users to use at least one number in their password.</p>
+    #[doc(hidden)]
     pub require_numbers: bool,
     /// <p>In the password policy that you have set, refers to whether you have required users to use at least one symbol in their password.</p>
+    #[doc(hidden)]
     pub require_symbols: bool,
     /// <p>The number of days a temporary password is valid in the password policy. If the user doesn't sign in during this time, an administrator must reset their password.</p> <note>
     /// <p>When you set <code>TemporaryPasswordValidityDays</code> for a user pool, you can no longer set a value for the legacy <code>UnusedAccountValidityDays</code> parameter in that user pool.</p>
     /// </note>
+    #[doc(hidden)]
     pub temporary_password_validity_days: i32,
 }
 impl PasswordPolicyType {
@@ -3735,11 +3801,10 @@ impl std::fmt::Debug for PasswordPolicyType {
         formatter.finish()
     }
 }
-/// See [`PasswordPolicyType`](crate::model::PasswordPolicyType)
+/// See [`PasswordPolicyType`](crate::model::PasswordPolicyType).
 pub mod password_policy_type {
 
-    /// A builder for [`PasswordPolicyType`](crate::model::PasswordPolicyType)
-    #[non_exhaustive]
+    /// A builder for [`PasswordPolicyType`](crate::model::PasswordPolicyType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) minimum_length: std::option::Option<i32>,
@@ -3817,7 +3882,7 @@ pub mod password_policy_type {
             self.temporary_password_validity_days = input;
             self
         }
-        /// Consumes the builder and constructs a [`PasswordPolicyType`](crate::model::PasswordPolicyType)
+        /// Consumes the builder and constructs a [`PasswordPolicyType`](crate::model::PasswordPolicyType).
         pub fn build(self) -> crate::model::PasswordPolicyType {
             crate::model::PasswordPolicyType {
                 minimum_length: self.minimum_length.unwrap_or_default(),
@@ -3833,7 +3898,7 @@ pub mod password_policy_type {
     }
 }
 impl PasswordPolicyType {
-    /// Creates a new builder-style object to manufacture [`PasswordPolicyType`](crate::model::PasswordPolicyType)
+    /// Creates a new builder-style object to manufacture [`PasswordPolicyType`](crate::model::PasswordPolicyType).
     pub fn builder() -> crate::model::password_policy_type::Builder {
         crate::model::password_policy_type::Builder::default()
     }
@@ -3844,10 +3909,13 @@ impl PasswordPolicyType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeDeliveryDetailsType {
     /// <p>The email address or phone number destination where Amazon Cognito sent the code.</p>
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
     /// <p>The method that Amazon Cognito used to send the code.</p>
+    #[doc(hidden)]
     pub delivery_medium: std::option::Option<crate::model::DeliveryMediumType>,
     /// <p>The name of the attribute that Amazon Cognito verifies with the code.</p>
+    #[doc(hidden)]
     pub attribute_name: std::option::Option<std::string::String>,
 }
 impl CodeDeliveryDetailsType {
@@ -3873,11 +3941,10 @@ impl std::fmt::Debug for CodeDeliveryDetailsType {
         formatter.finish()
     }
 }
-/// See [`CodeDeliveryDetailsType`](crate::model::CodeDeliveryDetailsType)
+/// See [`CodeDeliveryDetailsType`](crate::model::CodeDeliveryDetailsType).
 pub mod code_delivery_details_type {
 
-    /// A builder for [`CodeDeliveryDetailsType`](crate::model::CodeDeliveryDetailsType)
-    #[non_exhaustive]
+    /// A builder for [`CodeDeliveryDetailsType`](crate::model::CodeDeliveryDetailsType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination: std::option::Option<std::string::String>,
@@ -3921,7 +3988,7 @@ pub mod code_delivery_details_type {
             self.attribute_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeDeliveryDetailsType`](crate::model::CodeDeliveryDetailsType)
+        /// Consumes the builder and constructs a [`CodeDeliveryDetailsType`](crate::model::CodeDeliveryDetailsType).
         pub fn build(self) -> crate::model::CodeDeliveryDetailsType {
             crate::model::CodeDeliveryDetailsType {
                 destination: self.destination,
@@ -3932,7 +3999,7 @@ pub mod code_delivery_details_type {
     }
 }
 impl CodeDeliveryDetailsType {
-    /// Creates a new builder-style object to manufacture [`CodeDeliveryDetailsType`](crate::model::CodeDeliveryDetailsType)
+    /// Creates a new builder-style object to manufacture [`CodeDeliveryDetailsType`](crate::model::CodeDeliveryDetailsType).
     pub fn builder() -> crate::model::code_delivery_details_type::Builder {
         crate::model::code_delivery_details_type::Builder::default()
     }
@@ -3998,8 +4065,10 @@ impl AsRef<str> for DeliveryMediumType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttributeType {
     /// <p>The name of the attribute.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value of the attribute.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl AttributeType {
@@ -4020,11 +4089,10 @@ impl std::fmt::Debug for AttributeType {
         formatter.finish()
     }
 }
-/// See [`AttributeType`](crate::model::AttributeType)
+/// See [`AttributeType`](crate::model::AttributeType).
 pub mod attribute_type {
 
-    /// A builder for [`AttributeType`](crate::model::AttributeType)
-    #[non_exhaustive]
+    /// A builder for [`AttributeType`](crate::model::AttributeType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4051,7 +4119,7 @@ pub mod attribute_type {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttributeType`](crate::model::AttributeType)
+        /// Consumes the builder and constructs a [`AttributeType`](crate::model::AttributeType).
         pub fn build(self) -> crate::model::AttributeType {
             crate::model::AttributeType {
                 name: self.name,
@@ -4061,7 +4129,7 @@ pub mod attribute_type {
     }
 }
 impl AttributeType {
-    /// Creates a new builder-style object to manufacture [`AttributeType`](crate::model::AttributeType)
+    /// Creates a new builder-style object to manufacture [`AttributeType`](crate::model::AttributeType).
     pub fn builder() -> crate::model::attribute_type::Builder {
         crate::model::attribute_type::Builder::default()
     }
@@ -4072,12 +4140,16 @@ impl AttributeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceServerType {
     /// <p>The user pool ID for the user pool that hosts the resource server.</p>
+    #[doc(hidden)]
     pub user_pool_id: std::option::Option<std::string::String>,
     /// <p>The identifier for the resource server.</p>
+    #[doc(hidden)]
     pub identifier: std::option::Option<std::string::String>,
     /// <p>The name of the resource server.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A list of scopes that are defined for the resource server.</p>
+    #[doc(hidden)]
     pub scopes: std::option::Option<std::vec::Vec<crate::model::ResourceServerScopeType>>,
 }
 impl ResourceServerType {
@@ -4108,11 +4180,10 @@ impl std::fmt::Debug for ResourceServerType {
         formatter.finish()
     }
 }
-/// See [`ResourceServerType`](crate::model::ResourceServerType)
+/// See [`ResourceServerType`](crate::model::ResourceServerType).
 pub mod resource_server_type {
 
-    /// A builder for [`ResourceServerType`](crate::model::ResourceServerType)
-    #[non_exhaustive]
+    /// A builder for [`ResourceServerType`](crate::model::ResourceServerType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_pool_id: std::option::Option<std::string::String>,
@@ -4171,7 +4242,7 @@ pub mod resource_server_type {
             self.scopes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceServerType`](crate::model::ResourceServerType)
+        /// Consumes the builder and constructs a [`ResourceServerType`](crate::model::ResourceServerType).
         pub fn build(self) -> crate::model::ResourceServerType {
             crate::model::ResourceServerType {
                 user_pool_id: self.user_pool_id,
@@ -4183,7 +4254,7 @@ pub mod resource_server_type {
     }
 }
 impl ResourceServerType {
-    /// Creates a new builder-style object to manufacture [`ResourceServerType`](crate::model::ResourceServerType)
+    /// Creates a new builder-style object to manufacture [`ResourceServerType`](crate::model::ResourceServerType).
     pub fn builder() -> crate::model::resource_server_type::Builder {
         crate::model::resource_server_type::Builder::default()
     }
@@ -4194,8 +4265,10 @@ impl ResourceServerType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceServerScopeType {
     /// <p>The name of the scope.</p>
+    #[doc(hidden)]
     pub scope_name: std::option::Option<std::string::String>,
     /// <p>A description of the scope.</p>
+    #[doc(hidden)]
     pub scope_description: std::option::Option<std::string::String>,
 }
 impl ResourceServerScopeType {
@@ -4216,11 +4289,10 @@ impl std::fmt::Debug for ResourceServerScopeType {
         formatter.finish()
     }
 }
-/// See [`ResourceServerScopeType`](crate::model::ResourceServerScopeType)
+/// See [`ResourceServerScopeType`](crate::model::ResourceServerScopeType).
 pub mod resource_server_scope_type {
 
-    /// A builder for [`ResourceServerScopeType`](crate::model::ResourceServerScopeType)
-    #[non_exhaustive]
+    /// A builder for [`ResourceServerScopeType`](crate::model::ResourceServerScopeType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scope_name: std::option::Option<std::string::String>,
@@ -4250,7 +4322,7 @@ pub mod resource_server_scope_type {
             self.scope_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceServerScopeType`](crate::model::ResourceServerScopeType)
+        /// Consumes the builder and constructs a [`ResourceServerScopeType`](crate::model::ResourceServerScopeType).
         pub fn build(self) -> crate::model::ResourceServerScopeType {
             crate::model::ResourceServerScopeType {
                 scope_name: self.scope_name,
@@ -4260,7 +4332,7 @@ pub mod resource_server_scope_type {
     }
 }
 impl ResourceServerScopeType {
-    /// Creates a new builder-style object to manufacture [`ResourceServerScopeType`](crate::model::ResourceServerScopeType)
+    /// Creates a new builder-style object to manufacture [`ResourceServerScopeType`](crate::model::ResourceServerScopeType).
     pub fn builder() -> crate::model::resource_server_scope_type::Builder {
         crate::model::resource_server_scope_type::Builder::default()
     }
@@ -4271,10 +4343,13 @@ impl ResourceServerScopeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IdentityProviderType {
     /// <p>The user pool ID.</p>
+    #[doc(hidden)]
     pub user_pool_id: std::option::Option<std::string::String>,
     /// <p>The IdP name.</p>
+    #[doc(hidden)]
     pub provider_name: std::option::Option<std::string::String>,
     /// <p>The IdP type.</p>
+    #[doc(hidden)]
     pub provider_type: std::option::Option<crate::model::IdentityProviderTypeType>,
     /// <p>The IdP details. The following list describes the provider detail keys for each IdP type.</p>
     /// <ul>
@@ -4324,16 +4399,21 @@ pub struct IdentityProviderType {
     /// <li> <p>IDPSignout <i>optional</i> </p> </li>
     /// </ul> </li>
     /// </ul>
+    #[doc(hidden)]
     pub provider_details:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A mapping of IdP attributes to standard and custom user pool attributes.</p>
+    #[doc(hidden)]
     pub attribute_mapping:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A list of IdP identifiers.</p>
+    #[doc(hidden)]
     pub idp_identifiers: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The date the IdP was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the IdP was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl IdentityProviderType {
@@ -4437,11 +4517,10 @@ impl std::fmt::Debug for IdentityProviderType {
         formatter.finish()
     }
 }
-/// See [`IdentityProviderType`](crate::model::IdentityProviderType)
+/// See [`IdentityProviderType`](crate::model::IdentityProviderType).
 pub mod identity_provider_type {
 
-    /// A builder for [`IdentityProviderType`](crate::model::IdentityProviderType)
-    #[non_exhaustive]
+    /// A builder for [`IdentityProviderType`](crate::model::IdentityProviderType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_pool_id: std::option::Option<std::string::String>,
@@ -4683,7 +4762,7 @@ pub mod identity_provider_type {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`IdentityProviderType`](crate::model::IdentityProviderType)
+        /// Consumes the builder and constructs a [`IdentityProviderType`](crate::model::IdentityProviderType).
         pub fn build(self) -> crate::model::IdentityProviderType {
             crate::model::IdentityProviderType {
                 user_pool_id: self.user_pool_id,
@@ -4699,7 +4778,7 @@ pub mod identity_provider_type {
     }
 }
 impl IdentityProviderType {
-    /// Creates a new builder-style object to manufacture [`IdentityProviderType`](crate::model::IdentityProviderType)
+    /// Creates a new builder-style object to manufacture [`IdentityProviderType`](crate::model::IdentityProviderType).
     pub fn builder() -> crate::model::identity_provider_type::Builder {
         crate::model::identity_provider_type::Builder::default()
     }
@@ -4788,20 +4867,27 @@ impl AsRef<str> for IdentityProviderTypeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GroupType {
     /// <p>The name of the group.</p>
+    #[doc(hidden)]
     pub group_name: std::option::Option<std::string::String>,
     /// <p>The user pool ID for the user pool.</p>
+    #[doc(hidden)]
     pub user_pool_id: std::option::Option<std::string::String>,
     /// <p>A string containing the description of the group.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The role Amazon Resource Name (ARN) for the group.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>A non-negative integer value that specifies the precedence of this group relative to the other groups that a user can belong to in the user pool. Zero is the highest precedence value. Groups with lower <code>Precedence</code> values take precedence over groups with higher ornull <code>Precedence</code> values. If a user belongs to two or more groups, it is the group with the lowest precedence value whose role ARN is given in the user's tokens for the <code>cognito:roles</code> and <code>cognito:preferred_role</code> claims.</p>
     /// <p>Two groups can have the same <code>Precedence</code> value. If this happens, neither group takes precedence over the other. If two groups with the same <code>Precedence</code> have the same role ARN, that role is used in the <code>cognito:preferred_role</code> claim in tokens for users in each group. If the two groups have different role ARNs, the <code>cognito:preferred_role</code> claim isn't set in users' tokens.</p>
     /// <p>The default <code>Precedence</code> value is null.</p>
+    #[doc(hidden)]
     pub precedence: std::option::Option<i32>,
     /// <p>The date the group was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the group was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GroupType {
@@ -4849,11 +4935,10 @@ impl std::fmt::Debug for GroupType {
         formatter.finish()
     }
 }
-/// See [`GroupType`](crate::model::GroupType)
+/// See [`GroupType`](crate::model::GroupType).
 pub mod group_type {
 
-    /// A builder for [`GroupType`](crate::model::GroupType)
-    #[non_exhaustive]
+    /// A builder for [`GroupType`](crate::model::GroupType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_name: std::option::Option<std::string::String>,
@@ -4945,7 +5030,7 @@ pub mod group_type {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`GroupType`](crate::model::GroupType)
+        /// Consumes the builder and constructs a [`GroupType`](crate::model::GroupType).
         pub fn build(self) -> crate::model::GroupType {
             crate::model::GroupType {
                 group_name: self.group_name,
@@ -4960,7 +5045,7 @@ pub mod group_type {
     }
 }
 impl GroupType {
-    /// Creates a new builder-style object to manufacture [`GroupType`](crate::model::GroupType)
+    /// Creates a new builder-style object to manufacture [`GroupType`](crate::model::GroupType).
     pub fn builder() -> crate::model::group_type::Builder {
         crate::model::group_type::Builder::default()
     }
@@ -5081,18 +5166,25 @@ impl AsRef<str> for FeedbackValueType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserImportJobType {
     /// <p>The job name for the user import job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The job ID for the user import job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The user pool ID for the user pool that the users are being imported into.</p>
+    #[doc(hidden)]
     pub user_pool_id: std::option::Option<std::string::String>,
     /// <p>The pre-signed URL to be used to upload the <code>.csv</code> file.</p>
+    #[doc(hidden)]
     pub pre_signed_url: std::option::Option<std::string::String>,
     /// <p>The date the user import job was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date when the user import job was started.</p>
+    #[doc(hidden)]
     pub start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date when the user import job was completed.</p>
+    #[doc(hidden)]
     pub completion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the user import job. One of the following:</p>
     /// <ul>
@@ -5105,16 +5197,22 @@ pub struct UserImportJobType {
     /// <li> <p> <code>Failed</code> - The job has stopped due to an error.</p> </li>
     /// <li> <p> <code>Expired</code> - You created a job, but did not start the job within 24-48 hours. All data associated with the job was deleted, and the job can't be started.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::UserImportJobStatusType>,
     /// <p>The role Amazon Resource Name (ARN) for the Amazon CloudWatch Logging role for the user import job. For more information, see "Creating the CloudWatch Logs IAM Role" in the Amazon Cognito Developer Guide.</p>
+    #[doc(hidden)]
     pub cloud_watch_logs_role_arn: std::option::Option<std::string::String>,
     /// <p>The number of users that were successfully imported.</p>
+    #[doc(hidden)]
     pub imported_users: i64,
     /// <p>The number of users that were skipped.</p>
+    #[doc(hidden)]
     pub skipped_users: i64,
     /// <p>The number of users that couldn't be imported.</p>
+    #[doc(hidden)]
     pub failed_users: i64,
     /// <p>The message returned when the user import job is completed.</p>
+    #[doc(hidden)]
     pub completion_message: std::option::Option<std::string::String>,
 }
 impl UserImportJobType {
@@ -5200,11 +5298,10 @@ impl std::fmt::Debug for UserImportJobType {
         formatter.finish()
     }
 }
-/// See [`UserImportJobType`](crate::model::UserImportJobType)
+/// See [`UserImportJobType`](crate::model::UserImportJobType).
 pub mod user_import_job_type {
 
-    /// A builder for [`UserImportJobType`](crate::model::UserImportJobType)
-    #[non_exhaustive]
+    /// A builder for [`UserImportJobType`](crate::model::UserImportJobType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -5393,7 +5490,7 @@ pub mod user_import_job_type {
             self.completion_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserImportJobType`](crate::model::UserImportJobType)
+        /// Consumes the builder and constructs a [`UserImportJobType`](crate::model::UserImportJobType).
         pub fn build(self) -> crate::model::UserImportJobType {
             crate::model::UserImportJobType {
                 job_name: self.job_name,
@@ -5414,7 +5511,7 @@ pub mod user_import_job_type {
     }
 }
 impl UserImportJobType {
-    /// Creates a new builder-style object to manufacture [`UserImportJobType`](crate::model::UserImportJobType)
+    /// Creates a new builder-style object to manufacture [`UserImportJobType`](crate::model::UserImportJobType).
     pub fn builder() -> crate::model::user_import_job_type::Builder {
         crate::model::user_import_job_type::Builder::default()
     }
@@ -5513,8 +5610,10 @@ impl AsRef<str> for UserImportJobStatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserContextDataType {
     /// <p>The source IP address of your user's device.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>Encoded device-fingerprint details that your app collected with the Amazon Cognito context data collection library. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
+    #[doc(hidden)]
     pub encoded_data: std::option::Option<std::string::String>,
 }
 impl UserContextDataType {
@@ -5535,11 +5634,10 @@ impl std::fmt::Debug for UserContextDataType {
         formatter.finish()
     }
 }
-/// See [`UserContextDataType`](crate::model::UserContextDataType)
+/// See [`UserContextDataType`](crate::model::UserContextDataType).
 pub mod user_context_data_type {
 
-    /// A builder for [`UserContextDataType`](crate::model::UserContextDataType)
-    #[non_exhaustive]
+    /// A builder for [`UserContextDataType`](crate::model::UserContextDataType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_address: std::option::Option<std::string::String>,
@@ -5566,7 +5664,7 @@ pub mod user_context_data_type {
             self.encoded_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserContextDataType`](crate::model::UserContextDataType)
+        /// Consumes the builder and constructs a [`UserContextDataType`](crate::model::UserContextDataType).
         pub fn build(self) -> crate::model::UserContextDataType {
             crate::model::UserContextDataType {
                 ip_address: self.ip_address,
@@ -5576,7 +5674,7 @@ pub mod user_context_data_type {
     }
 }
 impl UserContextDataType {
-    /// Creates a new builder-style object to manufacture [`UserContextDataType`](crate::model::UserContextDataType)
+    /// Creates a new builder-style object to manufacture [`UserContextDataType`](crate::model::UserContextDataType).
     pub fn builder() -> crate::model::user_context_data_type::Builder {
         crate::model::user_context_data_type::Builder::default()
     }
@@ -5588,6 +5686,7 @@ impl UserContextDataType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnalyticsMetadataType {
     /// <p>The endpoint ID.</p>
+    #[doc(hidden)]
     pub analytics_endpoint_id: std::option::Option<std::string::String>,
 }
 impl AnalyticsMetadataType {
@@ -5603,11 +5702,10 @@ impl std::fmt::Debug for AnalyticsMetadataType {
         formatter.finish()
     }
 }
-/// See [`AnalyticsMetadataType`](crate::model::AnalyticsMetadataType)
+/// See [`AnalyticsMetadataType`](crate::model::AnalyticsMetadataType).
 pub mod analytics_metadata_type {
 
-    /// A builder for [`AnalyticsMetadataType`](crate::model::AnalyticsMetadataType)
-    #[non_exhaustive]
+    /// A builder for [`AnalyticsMetadataType`](crate::model::AnalyticsMetadataType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) analytics_endpoint_id: std::option::Option<std::string::String>,
@@ -5626,7 +5724,7 @@ pub mod analytics_metadata_type {
             self.analytics_endpoint_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnalyticsMetadataType`](crate::model::AnalyticsMetadataType)
+        /// Consumes the builder and constructs a [`AnalyticsMetadataType`](crate::model::AnalyticsMetadataType).
         pub fn build(self) -> crate::model::AnalyticsMetadataType {
             crate::model::AnalyticsMetadataType {
                 analytics_endpoint_id: self.analytics_endpoint_id,
@@ -5635,7 +5733,7 @@ pub mod analytics_metadata_type {
     }
 }
 impl AnalyticsMetadataType {
-    /// Creates a new builder-style object to manufacture [`AnalyticsMetadataType`](crate::model::AnalyticsMetadataType)
+    /// Creates a new builder-style object to manufacture [`AnalyticsMetadataType`](crate::model::AnalyticsMetadataType).
     pub fn builder() -> crate::model::analytics_metadata_type::Builder {
         crate::model::analytics_metadata_type::Builder::default()
     }
@@ -5646,8 +5744,10 @@ impl AnalyticsMetadataType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MfaOptionType {
     /// <p>The delivery medium to send the MFA code. You can use this parameter to set only the <code>SMS</code> delivery medium value.</p>
+    #[doc(hidden)]
     pub delivery_medium: std::option::Option<crate::model::DeliveryMediumType>,
     /// <p>The attribute name of the MFA option type. The only valid value is <code>phone_number</code>.</p>
+    #[doc(hidden)]
     pub attribute_name: std::option::Option<std::string::String>,
 }
 impl MfaOptionType {
@@ -5668,11 +5768,10 @@ impl std::fmt::Debug for MfaOptionType {
         formatter.finish()
     }
 }
-/// See [`MfaOptionType`](crate::model::MfaOptionType)
+/// See [`MfaOptionType`](crate::model::MfaOptionType).
 pub mod mfa_option_type {
 
-    /// A builder for [`MfaOptionType`](crate::model::MfaOptionType)
-    #[non_exhaustive]
+    /// A builder for [`MfaOptionType`](crate::model::MfaOptionType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_medium: std::option::Option<crate::model::DeliveryMediumType>,
@@ -5705,7 +5804,7 @@ pub mod mfa_option_type {
             self.attribute_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`MfaOptionType`](crate::model::MfaOptionType)
+        /// Consumes the builder and constructs a [`MfaOptionType`](crate::model::MfaOptionType).
         pub fn build(self) -> crate::model::MfaOptionType {
             crate::model::MfaOptionType {
                 delivery_medium: self.delivery_medium,
@@ -5715,7 +5814,7 @@ pub mod mfa_option_type {
     }
 }
 impl MfaOptionType {
-    /// Creates a new builder-style object to manufacture [`MfaOptionType`](crate::model::MfaOptionType)
+    /// Creates a new builder-style object to manufacture [`MfaOptionType`](crate::model::MfaOptionType).
     pub fn builder() -> crate::model::mfa_option_type::Builder {
         crate::model::mfa_option_type::Builder::default()
     }
@@ -5726,6 +5825,7 @@ impl MfaOptionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SoftwareTokenMfaConfigType {
     /// <p>Specifies whether software token MFA is activated.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl SoftwareTokenMfaConfigType {
@@ -5741,11 +5841,10 @@ impl std::fmt::Debug for SoftwareTokenMfaConfigType {
         formatter.finish()
     }
 }
-/// See [`SoftwareTokenMfaConfigType`](crate::model::SoftwareTokenMfaConfigType)
+/// See [`SoftwareTokenMfaConfigType`](crate::model::SoftwareTokenMfaConfigType).
 pub mod software_token_mfa_config_type {
 
-    /// A builder for [`SoftwareTokenMfaConfigType`](crate::model::SoftwareTokenMfaConfigType)
-    #[non_exhaustive]
+    /// A builder for [`SoftwareTokenMfaConfigType`](crate::model::SoftwareTokenMfaConfigType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -5761,7 +5860,7 @@ pub mod software_token_mfa_config_type {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`SoftwareTokenMfaConfigType`](crate::model::SoftwareTokenMfaConfigType)
+        /// Consumes the builder and constructs a [`SoftwareTokenMfaConfigType`](crate::model::SoftwareTokenMfaConfigType).
         pub fn build(self) -> crate::model::SoftwareTokenMfaConfigType {
             crate::model::SoftwareTokenMfaConfigType {
                 enabled: self.enabled.unwrap_or_default(),
@@ -5770,7 +5869,7 @@ pub mod software_token_mfa_config_type {
     }
 }
 impl SoftwareTokenMfaConfigType {
-    /// Creates a new builder-style object to manufacture [`SoftwareTokenMfaConfigType`](crate::model::SoftwareTokenMfaConfigType)
+    /// Creates a new builder-style object to manufacture [`SoftwareTokenMfaConfigType`](crate::model::SoftwareTokenMfaConfigType).
     pub fn builder() -> crate::model::software_token_mfa_config_type::Builder {
         crate::model::software_token_mfa_config_type::Builder::default()
     }
@@ -5781,8 +5880,10 @@ impl SoftwareTokenMfaConfigType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SmsMfaConfigType {
     /// <p>The SMS authentication message that will be sent to users with the code they must sign in. The message must contain the ‘{####}’ placeholder, which is replaced with the code. If the message isn't included, and default message will be used.</p>
+    #[doc(hidden)]
     pub sms_authentication_message: std::option::Option<std::string::String>,
     /// <p>The SMS configuration with the settings that your Amazon Cognito user pool must use to send an SMS message from your Amazon Web Services account through Amazon Simple Notification Service. To request Amazon SNS in the Amazon Web Services Region that you want, the Amazon Cognito user pool uses an Identity and Access Management (IAM) role that you provide for your Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub sms_configuration: std::option::Option<crate::model::SmsConfigurationType>,
 }
 impl SmsMfaConfigType {
@@ -5806,11 +5907,10 @@ impl std::fmt::Debug for SmsMfaConfigType {
         formatter.finish()
     }
 }
-/// See [`SmsMfaConfigType`](crate::model::SmsMfaConfigType)
+/// See [`SmsMfaConfigType`](crate::model::SmsMfaConfigType).
 pub mod sms_mfa_config_type {
 
-    /// A builder for [`SmsMfaConfigType`](crate::model::SmsMfaConfigType)
-    #[non_exhaustive]
+    /// A builder for [`SmsMfaConfigType`](crate::model::SmsMfaConfigType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sms_authentication_message: std::option::Option<std::string::String>,
@@ -5843,7 +5943,7 @@ pub mod sms_mfa_config_type {
             self.sms_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`SmsMfaConfigType`](crate::model::SmsMfaConfigType)
+        /// Consumes the builder and constructs a [`SmsMfaConfigType`](crate::model::SmsMfaConfigType).
         pub fn build(self) -> crate::model::SmsMfaConfigType {
             crate::model::SmsMfaConfigType {
                 sms_authentication_message: self.sms_authentication_message,
@@ -5853,7 +5953,7 @@ pub mod sms_mfa_config_type {
     }
 }
 impl SmsMfaConfigType {
-    /// Creates a new builder-style object to manufacture [`SmsMfaConfigType`](crate::model::SmsMfaConfigType)
+    /// Creates a new builder-style object to manufacture [`SmsMfaConfigType`](crate::model::SmsMfaConfigType).
     pub fn builder() -> crate::model::sms_mfa_config_type::Builder {
         crate::model::sms_mfa_config_type::Builder::default()
     }
@@ -5864,8 +5964,10 @@ impl SmsMfaConfigType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SoftwareTokenMfaSettingsType {
     /// <p>Specifies whether software token MFA is activated. If an MFA type is activated for a user, the user will be prompted for MFA during all sign-in attempts, unless device tracking is turned on and the device has been trusted.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>Specifies whether software token MFA is the preferred MFA method.</p>
+    #[doc(hidden)]
     pub preferred_mfa: bool,
 }
 impl SoftwareTokenMfaSettingsType {
@@ -5886,11 +5988,10 @@ impl std::fmt::Debug for SoftwareTokenMfaSettingsType {
         formatter.finish()
     }
 }
-/// See [`SoftwareTokenMfaSettingsType`](crate::model::SoftwareTokenMfaSettingsType)
+/// See [`SoftwareTokenMfaSettingsType`](crate::model::SoftwareTokenMfaSettingsType).
 pub mod software_token_mfa_settings_type {
 
-    /// A builder for [`SoftwareTokenMfaSettingsType`](crate::model::SoftwareTokenMfaSettingsType)
-    #[non_exhaustive]
+    /// A builder for [`SoftwareTokenMfaSettingsType`](crate::model::SoftwareTokenMfaSettingsType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -5917,7 +6018,7 @@ pub mod software_token_mfa_settings_type {
             self.preferred_mfa = input;
             self
         }
-        /// Consumes the builder and constructs a [`SoftwareTokenMfaSettingsType`](crate::model::SoftwareTokenMfaSettingsType)
+        /// Consumes the builder and constructs a [`SoftwareTokenMfaSettingsType`](crate::model::SoftwareTokenMfaSettingsType).
         pub fn build(self) -> crate::model::SoftwareTokenMfaSettingsType {
             crate::model::SoftwareTokenMfaSettingsType {
                 enabled: self.enabled.unwrap_or_default(),
@@ -5927,7 +6028,7 @@ pub mod software_token_mfa_settings_type {
     }
 }
 impl SoftwareTokenMfaSettingsType {
-    /// Creates a new builder-style object to manufacture [`SoftwareTokenMfaSettingsType`](crate::model::SoftwareTokenMfaSettingsType)
+    /// Creates a new builder-style object to manufacture [`SoftwareTokenMfaSettingsType`](crate::model::SoftwareTokenMfaSettingsType).
     pub fn builder() -> crate::model::software_token_mfa_settings_type::Builder {
         crate::model::software_token_mfa_settings_type::Builder::default()
     }
@@ -5938,8 +6039,10 @@ impl SoftwareTokenMfaSettingsType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SmsMfaSettingsType {
     /// <p>Specifies whether SMS text message MFA is activated. If an MFA type is activated for a user, the user will be prompted for MFA during all sign-in attempts, unless device tracking is turned on and the device has been trusted.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>Specifies whether SMS is the preferred MFA method.</p>
+    #[doc(hidden)]
     pub preferred_mfa: bool,
 }
 impl SmsMfaSettingsType {
@@ -5960,11 +6063,10 @@ impl std::fmt::Debug for SmsMfaSettingsType {
         formatter.finish()
     }
 }
-/// See [`SmsMfaSettingsType`](crate::model::SmsMfaSettingsType)
+/// See [`SmsMfaSettingsType`](crate::model::SmsMfaSettingsType).
 pub mod sms_mfa_settings_type {
 
-    /// A builder for [`SmsMfaSettingsType`](crate::model::SmsMfaSettingsType)
-    #[non_exhaustive]
+    /// A builder for [`SmsMfaSettingsType`](crate::model::SmsMfaSettingsType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -5991,7 +6093,7 @@ pub mod sms_mfa_settings_type {
             self.preferred_mfa = input;
             self
         }
-        /// Consumes the builder and constructs a [`SmsMfaSettingsType`](crate::model::SmsMfaSettingsType)
+        /// Consumes the builder and constructs a [`SmsMfaSettingsType`](crate::model::SmsMfaSettingsType).
         pub fn build(self) -> crate::model::SmsMfaSettingsType {
             crate::model::SmsMfaSettingsType {
                 enabled: self.enabled.unwrap_or_default(),
@@ -6001,7 +6103,7 @@ pub mod sms_mfa_settings_type {
     }
 }
 impl SmsMfaSettingsType {
-    /// Creates a new builder-style object to manufacture [`SmsMfaSettingsType`](crate::model::SmsMfaSettingsType)
+    /// Creates a new builder-style object to manufacture [`SmsMfaSettingsType`](crate::model::SmsMfaSettingsType).
     pub fn builder() -> crate::model::sms_mfa_settings_type::Builder {
         crate::model::sms_mfa_settings_type::Builder::default()
     }
@@ -6012,18 +6114,25 @@ impl SmsMfaSettingsType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UiCustomizationType {
     /// <p>The user pool ID for the user pool.</p>
+    #[doc(hidden)]
     pub user_pool_id: std::option::Option<std::string::String>,
     /// <p>The client ID for the client app.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>The logo image for the UI customization.</p>
+    #[doc(hidden)]
     pub image_url: std::option::Option<std::string::String>,
     /// <p>The CSS values in the UI customization.</p>
+    #[doc(hidden)]
     pub css: std::option::Option<std::string::String>,
     /// <p>The CSS version number.</p>
+    #[doc(hidden)]
     pub css_version: std::option::Option<std::string::String>,
     /// <p>The last-modified date for the UI customization.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The creation date for the UI customization.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl UiCustomizationType {
@@ -6069,11 +6178,10 @@ impl std::fmt::Debug for UiCustomizationType {
         formatter.finish()
     }
 }
-/// See [`UiCustomizationType`](crate::model::UiCustomizationType)
+/// See [`UiCustomizationType`](crate::model::UiCustomizationType).
 pub mod ui_customization_type {
 
-    /// A builder for [`UiCustomizationType`](crate::model::UiCustomizationType)
-    #[non_exhaustive]
+    /// A builder for [`UiCustomizationType`](crate::model::UiCustomizationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_pool_id: std::option::Option<std::string::String>,
@@ -6161,7 +6269,7 @@ pub mod ui_customization_type {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`UiCustomizationType`](crate::model::UiCustomizationType)
+        /// Consumes the builder and constructs a [`UiCustomizationType`](crate::model::UiCustomizationType).
         pub fn build(self) -> crate::model::UiCustomizationType {
             crate::model::UiCustomizationType {
                 user_pool_id: self.user_pool_id,
@@ -6176,7 +6284,7 @@ pub mod ui_customization_type {
     }
 }
 impl UiCustomizationType {
-    /// Creates a new builder-style object to manufacture [`UiCustomizationType`](crate::model::UiCustomizationType)
+    /// Creates a new builder-style object to manufacture [`UiCustomizationType`](crate::model::UiCustomizationType).
     pub fn builder() -> crate::model::ui_customization_type::Builder {
         crate::model::ui_customization_type::Builder::default()
     }
@@ -6187,19 +6295,25 @@ impl UiCustomizationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RiskConfigurationType {
     /// <p>The user pool ID.</p>
+    #[doc(hidden)]
     pub user_pool_id: std::option::Option<std::string::String>,
     /// <p>The app client ID.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>The compromised credentials risk configuration object, including the <code>EventFilter</code> and the <code>EventAction</code>.</p>
+    #[doc(hidden)]
     pub compromised_credentials_risk_configuration:
         std::option::Option<crate::model::CompromisedCredentialsRiskConfigurationType>,
     /// <p>The account takeover risk configuration object, including the <code>NotifyConfiguration</code> object and <code>Actions</code> to take if there is an account takeover.</p>
+    #[doc(hidden)]
     pub account_takeover_risk_configuration:
         std::option::Option<crate::model::AccountTakeoverRiskConfigurationType>,
     /// <p>The configuration to override the risk decision.</p>
+    #[doc(hidden)]
     pub risk_exception_configuration:
         std::option::Option<crate::model::RiskExceptionConfigurationType>,
     /// <p>The last modified date.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RiskConfigurationType {
@@ -6255,11 +6369,10 @@ impl std::fmt::Debug for RiskConfigurationType {
         formatter.finish()
     }
 }
-/// See [`RiskConfigurationType`](crate::model::RiskConfigurationType)
+/// See [`RiskConfigurationType`](crate::model::RiskConfigurationType).
 pub mod risk_configuration_type {
 
-    /// A builder for [`RiskConfigurationType`](crate::model::RiskConfigurationType)
-    #[non_exhaustive]
+    /// A builder for [`RiskConfigurationType`](crate::model::RiskConfigurationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_pool_id: std::option::Option<std::string::String>,
@@ -6354,7 +6467,7 @@ pub mod risk_configuration_type {
             self.last_modified_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`RiskConfigurationType`](crate::model::RiskConfigurationType)
+        /// Consumes the builder and constructs a [`RiskConfigurationType`](crate::model::RiskConfigurationType).
         pub fn build(self) -> crate::model::RiskConfigurationType {
             crate::model::RiskConfigurationType {
                 user_pool_id: self.user_pool_id,
@@ -6369,7 +6482,7 @@ pub mod risk_configuration_type {
     }
 }
 impl RiskConfigurationType {
-    /// Creates a new builder-style object to manufacture [`RiskConfigurationType`](crate::model::RiskConfigurationType)
+    /// Creates a new builder-style object to manufacture [`RiskConfigurationType`](crate::model::RiskConfigurationType).
     pub fn builder() -> crate::model::risk_configuration_type::Builder {
         crate::model::risk_configuration_type::Builder::default()
     }
@@ -6380,8 +6493,10 @@ impl RiskConfigurationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RiskExceptionConfigurationType {
     /// <p>Overrides the risk decision to always block the pre-authentication requests. The IP range is in CIDR notation, a compact representation of an IP address and its routing prefix.</p>
+    #[doc(hidden)]
     pub blocked_ip_range_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Risk detection isn't performed on the IP addresses in this range list. The IP range is in CIDR notation.</p>
+    #[doc(hidden)]
     pub skipped_ip_range_list: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl RiskExceptionConfigurationType {
@@ -6402,11 +6517,10 @@ impl std::fmt::Debug for RiskExceptionConfigurationType {
         formatter.finish()
     }
 }
-/// See [`RiskExceptionConfigurationType`](crate::model::RiskExceptionConfigurationType)
+/// See [`RiskExceptionConfigurationType`](crate::model::RiskExceptionConfigurationType).
 pub mod risk_exception_configuration_type {
 
-    /// A builder for [`RiskExceptionConfigurationType`](crate::model::RiskExceptionConfigurationType)
-    #[non_exhaustive]
+    /// A builder for [`RiskExceptionConfigurationType`](crate::model::RiskExceptionConfigurationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) blocked_ip_range_list: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -6451,7 +6565,7 @@ pub mod risk_exception_configuration_type {
             self.skipped_ip_range_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`RiskExceptionConfigurationType`](crate::model::RiskExceptionConfigurationType)
+        /// Consumes the builder and constructs a [`RiskExceptionConfigurationType`](crate::model::RiskExceptionConfigurationType).
         pub fn build(self) -> crate::model::RiskExceptionConfigurationType {
             crate::model::RiskExceptionConfigurationType {
                 blocked_ip_range_list: self.blocked_ip_range_list,
@@ -6461,7 +6575,7 @@ pub mod risk_exception_configuration_type {
     }
 }
 impl RiskExceptionConfigurationType {
-    /// Creates a new builder-style object to manufacture [`RiskExceptionConfigurationType`](crate::model::RiskExceptionConfigurationType)
+    /// Creates a new builder-style object to manufacture [`RiskExceptionConfigurationType`](crate::model::RiskExceptionConfigurationType).
     pub fn builder() -> crate::model::risk_exception_configuration_type::Builder {
         crate::model::risk_exception_configuration_type::Builder::default()
     }
@@ -6472,8 +6586,10 @@ impl RiskExceptionConfigurationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountTakeoverRiskConfigurationType {
     /// <p>The notify configuration used to construct email notifications.</p>
+    #[doc(hidden)]
     pub notify_configuration: std::option::Option<crate::model::NotifyConfigurationType>,
     /// <p>Account takeover risk configuration actions.</p>
+    #[doc(hidden)]
     pub actions: std::option::Option<crate::model::AccountTakeoverActionsType>,
 }
 impl AccountTakeoverRiskConfigurationType {
@@ -6496,11 +6612,10 @@ impl std::fmt::Debug for AccountTakeoverRiskConfigurationType {
         formatter.finish()
     }
 }
-/// See [`AccountTakeoverRiskConfigurationType`](crate::model::AccountTakeoverRiskConfigurationType)
+/// See [`AccountTakeoverRiskConfigurationType`](crate::model::AccountTakeoverRiskConfigurationType).
 pub mod account_takeover_risk_configuration_type {
 
-    /// A builder for [`AccountTakeoverRiskConfigurationType`](crate::model::AccountTakeoverRiskConfigurationType)
-    #[non_exhaustive]
+    /// A builder for [`AccountTakeoverRiskConfigurationType`](crate::model::AccountTakeoverRiskConfigurationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) notify_configuration: std::option::Option<crate::model::NotifyConfigurationType>,
@@ -6536,7 +6651,7 @@ pub mod account_takeover_risk_configuration_type {
             self.actions = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountTakeoverRiskConfigurationType`](crate::model::AccountTakeoverRiskConfigurationType)
+        /// Consumes the builder and constructs a [`AccountTakeoverRiskConfigurationType`](crate::model::AccountTakeoverRiskConfigurationType).
         pub fn build(self) -> crate::model::AccountTakeoverRiskConfigurationType {
             crate::model::AccountTakeoverRiskConfigurationType {
                 notify_configuration: self.notify_configuration,
@@ -6546,7 +6661,7 @@ pub mod account_takeover_risk_configuration_type {
     }
 }
 impl AccountTakeoverRiskConfigurationType {
-    /// Creates a new builder-style object to manufacture [`AccountTakeoverRiskConfigurationType`](crate::model::AccountTakeoverRiskConfigurationType)
+    /// Creates a new builder-style object to manufacture [`AccountTakeoverRiskConfigurationType`](crate::model::AccountTakeoverRiskConfigurationType).
     pub fn builder() -> crate::model::account_takeover_risk_configuration_type::Builder {
         crate::model::account_takeover_risk_configuration_type::Builder::default()
     }
@@ -6557,10 +6672,13 @@ impl AccountTakeoverRiskConfigurationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountTakeoverActionsType {
     /// <p>Action to take for a low risk.</p>
+    #[doc(hidden)]
     pub low_action: std::option::Option<crate::model::AccountTakeoverActionType>,
     /// <p>Action to take for a medium risk.</p>
+    #[doc(hidden)]
     pub medium_action: std::option::Option<crate::model::AccountTakeoverActionType>,
     /// <p>Action to take for a high risk.</p>
+    #[doc(hidden)]
     pub high_action: std::option::Option<crate::model::AccountTakeoverActionType>,
 }
 impl AccountTakeoverActionsType {
@@ -6586,11 +6704,10 @@ impl std::fmt::Debug for AccountTakeoverActionsType {
         formatter.finish()
     }
 }
-/// See [`AccountTakeoverActionsType`](crate::model::AccountTakeoverActionsType)
+/// See [`AccountTakeoverActionsType`](crate::model::AccountTakeoverActionsType).
 pub mod account_takeover_actions_type {
 
-    /// A builder for [`AccountTakeoverActionsType`](crate::model::AccountTakeoverActionsType)
-    #[non_exhaustive]
+    /// A builder for [`AccountTakeoverActionsType`](crate::model::AccountTakeoverActionsType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) low_action: std::option::Option<crate::model::AccountTakeoverActionType>,
@@ -6637,7 +6754,7 @@ pub mod account_takeover_actions_type {
             self.high_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountTakeoverActionsType`](crate::model::AccountTakeoverActionsType)
+        /// Consumes the builder and constructs a [`AccountTakeoverActionsType`](crate::model::AccountTakeoverActionsType).
         pub fn build(self) -> crate::model::AccountTakeoverActionsType {
             crate::model::AccountTakeoverActionsType {
                 low_action: self.low_action,
@@ -6648,7 +6765,7 @@ pub mod account_takeover_actions_type {
     }
 }
 impl AccountTakeoverActionsType {
-    /// Creates a new builder-style object to manufacture [`AccountTakeoverActionsType`](crate::model::AccountTakeoverActionsType)
+    /// Creates a new builder-style object to manufacture [`AccountTakeoverActionsType`](crate::model::AccountTakeoverActionsType).
     pub fn builder() -> crate::model::account_takeover_actions_type::Builder {
         crate::model::account_takeover_actions_type::Builder::default()
     }
@@ -6659,6 +6776,7 @@ impl AccountTakeoverActionsType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountTakeoverActionType {
     /// <p>Flag specifying whether to send a notification.</p>
+    #[doc(hidden)]
     pub notify: bool,
     /// <p>The action to take in response to the account takeover action. Valid values are as follows:</p>
     /// <ul>
@@ -6667,6 +6785,7 @@ pub struct AccountTakeoverActionType {
     /// <li> <p> <code>MFA_REQUIRED</code> Present an MFA challenge if user has configured it, else block the request.</p> </li>
     /// <li> <p> <code>NO_ACTION</code> Allow the user to sign in.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub event_action: std::option::Option<crate::model::AccountTakeoverEventActionType>,
 }
 impl AccountTakeoverActionType {
@@ -6695,11 +6814,10 @@ impl std::fmt::Debug for AccountTakeoverActionType {
         formatter.finish()
     }
 }
-/// See [`AccountTakeoverActionType`](crate::model::AccountTakeoverActionType)
+/// See [`AccountTakeoverActionType`](crate::model::AccountTakeoverActionType).
 pub mod account_takeover_action_type {
 
-    /// A builder for [`AccountTakeoverActionType`](crate::model::AccountTakeoverActionType)
-    #[non_exhaustive]
+    /// A builder for [`AccountTakeoverActionType`](crate::model::AccountTakeoverActionType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) notify: std::option::Option<bool>,
@@ -6741,7 +6859,7 @@ pub mod account_takeover_action_type {
             self.event_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountTakeoverActionType`](crate::model::AccountTakeoverActionType)
+        /// Consumes the builder and constructs a [`AccountTakeoverActionType`](crate::model::AccountTakeoverActionType).
         pub fn build(self) -> crate::model::AccountTakeoverActionType {
             crate::model::AccountTakeoverActionType {
                 notify: self.notify.unwrap_or_default(),
@@ -6751,7 +6869,7 @@ pub mod account_takeover_action_type {
     }
 }
 impl AccountTakeoverActionType {
-    /// Creates a new builder-style object to manufacture [`AccountTakeoverActionType`](crate::model::AccountTakeoverActionType)
+    /// Creates a new builder-style object to manufacture [`AccountTakeoverActionType`](crate::model::AccountTakeoverActionType).
     pub fn builder() -> crate::model::account_takeover_action_type::Builder {
         crate::model::account_takeover_action_type::Builder::default()
     }
@@ -6825,16 +6943,22 @@ impl AsRef<str> for AccountTakeoverEventActionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotifyConfigurationType {
     /// <p>The email address that is sending the email. The address must be either individually verified with Amazon Simple Email Service, or from a domain that has been verified with Amazon SES.</p>
+    #[doc(hidden)]
     pub from: std::option::Option<std::string::String>,
     /// <p>The destination to which the receiver of an email should reply to.</p>
+    #[doc(hidden)]
     pub reply_to: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the identity that is associated with the sending authorization policy. This identity permits Amazon Cognito to send for the email address specified in the <code>From</code> parameter.</p>
+    #[doc(hidden)]
     pub source_arn: std::option::Option<std::string::String>,
     /// <p>Email template used when a detected risk event is blocked.</p>
+    #[doc(hidden)]
     pub block_email: std::option::Option<crate::model::NotifyEmailType>,
     /// <p>The email template used when a detected risk event is allowed.</p>
+    #[doc(hidden)]
     pub no_action_email: std::option::Option<crate::model::NotifyEmailType>,
     /// <p>The multi-factor authentication (MFA) email template used when MFA is challenged as part of a detected risk.</p>
+    #[doc(hidden)]
     pub mfa_email: std::option::Option<crate::model::NotifyEmailType>,
 }
 impl NotifyConfigurationType {
@@ -6875,11 +6999,10 @@ impl std::fmt::Debug for NotifyConfigurationType {
         formatter.finish()
     }
 }
-/// See [`NotifyConfigurationType`](crate::model::NotifyConfigurationType)
+/// See [`NotifyConfigurationType`](crate::model::NotifyConfigurationType).
 pub mod notify_configuration_type {
 
-    /// A builder for [`NotifyConfigurationType`](crate::model::NotifyConfigurationType)
-    #[non_exhaustive]
+    /// A builder for [`NotifyConfigurationType`](crate::model::NotifyConfigurationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) from: std::option::Option<std::string::String>,
@@ -6959,7 +7082,7 @@ pub mod notify_configuration_type {
             self.mfa_email = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotifyConfigurationType`](crate::model::NotifyConfigurationType)
+        /// Consumes the builder and constructs a [`NotifyConfigurationType`](crate::model::NotifyConfigurationType).
         pub fn build(self) -> crate::model::NotifyConfigurationType {
             crate::model::NotifyConfigurationType {
                 from: self.from,
@@ -6973,7 +7096,7 @@ pub mod notify_configuration_type {
     }
 }
 impl NotifyConfigurationType {
-    /// Creates a new builder-style object to manufacture [`NotifyConfigurationType`](crate::model::NotifyConfigurationType)
+    /// Creates a new builder-style object to manufacture [`NotifyConfigurationType`](crate::model::NotifyConfigurationType).
     pub fn builder() -> crate::model::notify_configuration_type::Builder {
         crate::model::notify_configuration_type::Builder::default()
     }
@@ -6984,10 +7107,13 @@ impl NotifyConfigurationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotifyEmailType {
     /// <p>The email subject.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<std::string::String>,
     /// <p>The email HTML body.</p>
+    #[doc(hidden)]
     pub html_body: std::option::Option<std::string::String>,
     /// <p>The email text body.</p>
+    #[doc(hidden)]
     pub text_body: std::option::Option<std::string::String>,
 }
 impl NotifyEmailType {
@@ -7013,11 +7139,10 @@ impl std::fmt::Debug for NotifyEmailType {
         formatter.finish()
     }
 }
-/// See [`NotifyEmailType`](crate::model::NotifyEmailType)
+/// See [`NotifyEmailType`](crate::model::NotifyEmailType).
 pub mod notify_email_type {
 
-    /// A builder for [`NotifyEmailType`](crate::model::NotifyEmailType)
-    #[non_exhaustive]
+    /// A builder for [`NotifyEmailType`](crate::model::NotifyEmailType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subject: std::option::Option<std::string::String>,
@@ -7055,7 +7180,7 @@ pub mod notify_email_type {
             self.text_body = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotifyEmailType`](crate::model::NotifyEmailType)
+        /// Consumes the builder and constructs a [`NotifyEmailType`](crate::model::NotifyEmailType).
         pub fn build(self) -> crate::model::NotifyEmailType {
             crate::model::NotifyEmailType {
                 subject: self.subject,
@@ -7066,7 +7191,7 @@ pub mod notify_email_type {
     }
 }
 impl NotifyEmailType {
-    /// Creates a new builder-style object to manufacture [`NotifyEmailType`](crate::model::NotifyEmailType)
+    /// Creates a new builder-style object to manufacture [`NotifyEmailType`](crate::model::NotifyEmailType).
     pub fn builder() -> crate::model::notify_email_type::Builder {
         crate::model::notify_email_type::Builder::default()
     }
@@ -7077,8 +7202,10 @@ impl NotifyEmailType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CompromisedCredentialsRiskConfigurationType {
     /// <p>Perform the action for these events. The default is to perform all events if no event filter is specified.</p>
+    #[doc(hidden)]
     pub event_filter: std::option::Option<std::vec::Vec<crate::model::EventFilterType>>,
     /// <p>The compromised credentials risk configuration actions.</p>
+    #[doc(hidden)]
     pub actions: std::option::Option<crate::model::CompromisedCredentialsActionsType>,
 }
 impl CompromisedCredentialsRiskConfigurationType {
@@ -7099,11 +7226,10 @@ impl std::fmt::Debug for CompromisedCredentialsRiskConfigurationType {
         formatter.finish()
     }
 }
-/// See [`CompromisedCredentialsRiskConfigurationType`](crate::model::CompromisedCredentialsRiskConfigurationType)
+/// See [`CompromisedCredentialsRiskConfigurationType`](crate::model::CompromisedCredentialsRiskConfigurationType).
 pub mod compromised_credentials_risk_configuration_type {
 
-    /// A builder for [`CompromisedCredentialsRiskConfigurationType`](crate::model::CompromisedCredentialsRiskConfigurationType)
-    #[non_exhaustive]
+    /// A builder for [`CompromisedCredentialsRiskConfigurationType`](crate::model::CompromisedCredentialsRiskConfigurationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_filter: std::option::Option<std::vec::Vec<crate::model::EventFilterType>>,
@@ -7142,7 +7268,7 @@ pub mod compromised_credentials_risk_configuration_type {
             self.actions = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompromisedCredentialsRiskConfigurationType`](crate::model::CompromisedCredentialsRiskConfigurationType)
+        /// Consumes the builder and constructs a [`CompromisedCredentialsRiskConfigurationType`](crate::model::CompromisedCredentialsRiskConfigurationType).
         pub fn build(self) -> crate::model::CompromisedCredentialsRiskConfigurationType {
             crate::model::CompromisedCredentialsRiskConfigurationType {
                 event_filter: self.event_filter,
@@ -7152,7 +7278,7 @@ pub mod compromised_credentials_risk_configuration_type {
     }
 }
 impl CompromisedCredentialsRiskConfigurationType {
-    /// Creates a new builder-style object to manufacture [`CompromisedCredentialsRiskConfigurationType`](crate::model::CompromisedCredentialsRiskConfigurationType)
+    /// Creates a new builder-style object to manufacture [`CompromisedCredentialsRiskConfigurationType`](crate::model::CompromisedCredentialsRiskConfigurationType).
     pub fn builder() -> crate::model::compromised_credentials_risk_configuration_type::Builder {
         crate::model::compromised_credentials_risk_configuration_type::Builder::default()
     }
@@ -7163,6 +7289,7 @@ impl CompromisedCredentialsRiskConfigurationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CompromisedCredentialsActionsType {
     /// <p>The event action.</p>
+    #[doc(hidden)]
     pub event_action: std::option::Option<crate::model::CompromisedCredentialsEventActionType>,
 }
 impl CompromisedCredentialsActionsType {
@@ -7180,11 +7307,10 @@ impl std::fmt::Debug for CompromisedCredentialsActionsType {
         formatter.finish()
     }
 }
-/// See [`CompromisedCredentialsActionsType`](crate::model::CompromisedCredentialsActionsType)
+/// See [`CompromisedCredentialsActionsType`](crate::model::CompromisedCredentialsActionsType).
 pub mod compromised_credentials_actions_type {
 
-    /// A builder for [`CompromisedCredentialsActionsType`](crate::model::CompromisedCredentialsActionsType)
-    #[non_exhaustive]
+    /// A builder for [`CompromisedCredentialsActionsType`](crate::model::CompromisedCredentialsActionsType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_action:
@@ -7207,7 +7333,7 @@ pub mod compromised_credentials_actions_type {
             self.event_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompromisedCredentialsActionsType`](crate::model::CompromisedCredentialsActionsType)
+        /// Consumes the builder and constructs a [`CompromisedCredentialsActionsType`](crate::model::CompromisedCredentialsActionsType).
         pub fn build(self) -> crate::model::CompromisedCredentialsActionsType {
             crate::model::CompromisedCredentialsActionsType {
                 event_action: self.event_action,
@@ -7216,7 +7342,7 @@ pub mod compromised_credentials_actions_type {
     }
 }
 impl CompromisedCredentialsActionsType {
-    /// Creates a new builder-style object to manufacture [`CompromisedCredentialsActionsType`](crate::model::CompromisedCredentialsActionsType)
+    /// Creates a new builder-style object to manufacture [`CompromisedCredentialsActionsType`](crate::model::CompromisedCredentialsActionsType).
     pub fn builder() -> crate::model::compromised_credentials_actions_type::Builder {
         crate::model::compromised_credentials_actions_type::Builder::default()
     }
@@ -7341,16 +7467,22 @@ impl AsRef<str> for EventFilterType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuthenticationResultType {
     /// <p>A valid access token that Amazon Cognito issued to the user who you want to authenticate.</p>
+    #[doc(hidden)]
     pub access_token: std::option::Option<std::string::String>,
     /// <p>The expiration period of the authentication result in seconds.</p>
+    #[doc(hidden)]
     pub expires_in: i32,
     /// <p>The token type.</p>
+    #[doc(hidden)]
     pub token_type: std::option::Option<std::string::String>,
     /// <p>The refresh token.</p>
+    #[doc(hidden)]
     pub refresh_token: std::option::Option<std::string::String>,
     /// <p>The ID token.</p>
+    #[doc(hidden)]
     pub id_token: std::option::Option<std::string::String>,
     /// <p>The new device metadata from an authentication result.</p>
+    #[doc(hidden)]
     pub new_device_metadata: std::option::Option<crate::model::NewDeviceMetadataType>,
 }
 impl AuthenticationResultType {
@@ -7391,11 +7523,10 @@ impl std::fmt::Debug for AuthenticationResultType {
         formatter.finish()
     }
 }
-/// See [`AuthenticationResultType`](crate::model::AuthenticationResultType)
+/// See [`AuthenticationResultType`](crate::model::AuthenticationResultType).
 pub mod authentication_result_type {
 
-    /// A builder for [`AuthenticationResultType`](crate::model::AuthenticationResultType)
-    #[non_exhaustive]
+    /// A builder for [`AuthenticationResultType`](crate::model::AuthenticationResultType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_token: std::option::Option<std::string::String>,
@@ -7472,7 +7603,7 @@ pub mod authentication_result_type {
             self.new_device_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthenticationResultType`](crate::model::AuthenticationResultType)
+        /// Consumes the builder and constructs a [`AuthenticationResultType`](crate::model::AuthenticationResultType).
         pub fn build(self) -> crate::model::AuthenticationResultType {
             crate::model::AuthenticationResultType {
                 access_token: self.access_token,
@@ -7486,7 +7617,7 @@ pub mod authentication_result_type {
     }
 }
 impl AuthenticationResultType {
-    /// Creates a new builder-style object to manufacture [`AuthenticationResultType`](crate::model::AuthenticationResultType)
+    /// Creates a new builder-style object to manufacture [`AuthenticationResultType`](crate::model::AuthenticationResultType).
     pub fn builder() -> crate::model::authentication_result_type::Builder {
         crate::model::authentication_result_type::Builder::default()
     }
@@ -7497,8 +7628,10 @@ impl AuthenticationResultType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NewDeviceMetadataType {
     /// <p>The device key.</p>
+    #[doc(hidden)]
     pub device_key: std::option::Option<std::string::String>,
     /// <p>The device group key.</p>
+    #[doc(hidden)]
     pub device_group_key: std::option::Option<std::string::String>,
 }
 impl NewDeviceMetadataType {
@@ -7519,11 +7652,10 @@ impl std::fmt::Debug for NewDeviceMetadataType {
         formatter.finish()
     }
 }
-/// See [`NewDeviceMetadataType`](crate::model::NewDeviceMetadataType)
+/// See [`NewDeviceMetadataType`](crate::model::NewDeviceMetadataType).
 pub mod new_device_metadata_type {
 
-    /// A builder for [`NewDeviceMetadataType`](crate::model::NewDeviceMetadataType)
-    #[non_exhaustive]
+    /// A builder for [`NewDeviceMetadataType`](crate::model::NewDeviceMetadataType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_key: std::option::Option<std::string::String>,
@@ -7553,7 +7685,7 @@ pub mod new_device_metadata_type {
             self.device_group_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`NewDeviceMetadataType`](crate::model::NewDeviceMetadataType)
+        /// Consumes the builder and constructs a [`NewDeviceMetadataType`](crate::model::NewDeviceMetadataType).
         pub fn build(self) -> crate::model::NewDeviceMetadataType {
             crate::model::NewDeviceMetadataType {
                 device_key: self.device_key,
@@ -7563,7 +7695,7 @@ pub mod new_device_metadata_type {
     }
 }
 impl NewDeviceMetadataType {
-    /// Creates a new builder-style object to manufacture [`NewDeviceMetadataType`](crate::model::NewDeviceMetadataType)
+    /// Creates a new builder-style object to manufacture [`NewDeviceMetadataType`](crate::model::NewDeviceMetadataType).
     pub fn builder() -> crate::model::new_device_metadata_type::Builder {
         crate::model::new_device_metadata_type::Builder::default()
     }
@@ -7672,14 +7804,19 @@ impl AsRef<str> for ChallengeNameType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserType {
     /// <p>The user name of the user you want to describe.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>A container with information about the user type attributes.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<std::vec::Vec<crate::model::AttributeType>>,
     /// <p>The creation date of the user.</p>
+    #[doc(hidden)]
     pub user_create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last modified date of the user.</p>
+    #[doc(hidden)]
     pub user_last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies whether the user is enabled.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The user status. This can be one of the following:</p>
     /// <ul>
@@ -7691,8 +7828,10 @@ pub struct UserType {
     /// <li> <p>RESET_REQUIRED - User is confirmed, but the user must request a code and reset their password before they can sign in.</p> </li>
     /// <li> <p>FORCE_CHANGE_PASSWORD - The user is confirmed and the user can sign in using a temporary password, but on first sign-in, the user must change their password to a new value before doing anything else. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub user_status: std::option::Option<crate::model::UserStatusType>,
     /// <p>The MFA options for the user.</p>
+    #[doc(hidden)]
     pub mfa_options: std::option::Option<std::vec::Vec<crate::model::MfaOptionType>>,
 }
 impl UserType {
@@ -7747,11 +7886,10 @@ impl std::fmt::Debug for UserType {
         formatter.finish()
     }
 }
-/// See [`UserType`](crate::model::UserType)
+/// See [`UserType`](crate::model::UserType).
 pub mod user_type {
 
-    /// A builder for [`UserType`](crate::model::UserType)
-    #[non_exhaustive]
+    /// A builder for [`UserType`](crate::model::UserType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) username: std::option::Option<std::string::String>,
@@ -7878,7 +8016,7 @@ pub mod user_type {
             self.mfa_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserType`](crate::model::UserType)
+        /// Consumes the builder and constructs a [`UserType`](crate::model::UserType).
         pub fn build(self) -> crate::model::UserType {
             crate::model::UserType {
                 username: self.username,
@@ -7893,7 +8031,7 @@ pub mod user_type {
     }
 }
 impl UserType {
-    /// Creates a new builder-style object to manufacture [`UserType`](crate::model::UserType)
+    /// Creates a new builder-style object to manufacture [`UserType`](crate::model::UserType).
     pub fn builder() -> crate::model::user_type::Builder {
         crate::model::user_type::Builder::default()
     }
@@ -7987,16 +8125,22 @@ impl AsRef<str> for UserStatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserPoolDescriptionType {
     /// <p>The ID in a user pool description.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name in a user pool description.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Lambda configuration information in a user pool description.</p>
+    #[doc(hidden)]
     pub lambda_config: std::option::Option<crate::model::LambdaConfigType>,
     /// <p>The user pool status in a user pool description.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusType>,
     /// <p>The date the user pool description was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the user pool description was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl UserPoolDescriptionType {
@@ -8037,11 +8181,10 @@ impl std::fmt::Debug for UserPoolDescriptionType {
         formatter.finish()
     }
 }
-/// See [`UserPoolDescriptionType`](crate::model::UserPoolDescriptionType)
+/// See [`UserPoolDescriptionType`](crate::model::UserPoolDescriptionType).
 pub mod user_pool_description_type {
 
-    /// A builder for [`UserPoolDescriptionType`](crate::model::UserPoolDescriptionType)
-    #[non_exhaustive]
+    /// A builder for [`UserPoolDescriptionType`](crate::model::UserPoolDescriptionType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -8121,7 +8264,7 @@ pub mod user_pool_description_type {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserPoolDescriptionType`](crate::model::UserPoolDescriptionType)
+        /// Consumes the builder and constructs a [`UserPoolDescriptionType`](crate::model::UserPoolDescriptionType).
         pub fn build(self) -> crate::model::UserPoolDescriptionType {
             crate::model::UserPoolDescriptionType {
                 id: self.id,
@@ -8135,7 +8278,7 @@ pub mod user_pool_description_type {
     }
 }
 impl UserPoolDescriptionType {
-    /// Creates a new builder-style object to manufacture [`UserPoolDescriptionType`](crate::model::UserPoolDescriptionType)
+    /// Creates a new builder-style object to manufacture [`UserPoolDescriptionType`](crate::model::UserPoolDescriptionType).
     pub fn builder() -> crate::model::user_pool_description_type::Builder {
         crate::model::user_pool_description_type::Builder::default()
     }
@@ -8201,10 +8344,13 @@ impl AsRef<str> for StatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserPoolClientDescription {
     /// <p>The ID of the client associated with the user pool.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>The user pool ID for the user pool where you want to describe the user pool client.</p>
+    #[doc(hidden)]
     pub user_pool_id: std::option::Option<std::string::String>,
     /// <p>The client name from the user pool client description.</p>
+    #[doc(hidden)]
     pub client_name: std::option::Option<std::string::String>,
 }
 impl UserPoolClientDescription {
@@ -8230,11 +8376,10 @@ impl std::fmt::Debug for UserPoolClientDescription {
         formatter.finish()
     }
 }
-/// See [`UserPoolClientDescription`](crate::model::UserPoolClientDescription)
+/// See [`UserPoolClientDescription`](crate::model::UserPoolClientDescription).
 pub mod user_pool_client_description {
 
-    /// A builder for [`UserPoolClientDescription`](crate::model::UserPoolClientDescription)
-    #[non_exhaustive]
+    /// A builder for [`UserPoolClientDescription`](crate::model::UserPoolClientDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_id: std::option::Option<std::string::String>,
@@ -8272,7 +8417,7 @@ pub mod user_pool_client_description {
             self.client_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserPoolClientDescription`](crate::model::UserPoolClientDescription)
+        /// Consumes the builder and constructs a [`UserPoolClientDescription`](crate::model::UserPoolClientDescription).
         pub fn build(self) -> crate::model::UserPoolClientDescription {
             crate::model::UserPoolClientDescription {
                 client_id: self.client_id,
@@ -8283,7 +8428,7 @@ pub mod user_pool_client_description {
     }
 }
 impl UserPoolClientDescription {
-    /// Creates a new builder-style object to manufacture [`UserPoolClientDescription`](crate::model::UserPoolClientDescription)
+    /// Creates a new builder-style object to manufacture [`UserPoolClientDescription`](crate::model::UserPoolClientDescription).
     pub fn builder() -> crate::model::user_pool_client_description::Builder {
         crate::model::user_pool_client_description::Builder::default()
     }
@@ -8294,12 +8439,16 @@ impl UserPoolClientDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProviderDescription {
     /// <p>The IdP name.</p>
+    #[doc(hidden)]
     pub provider_name: std::option::Option<std::string::String>,
     /// <p>The IdP type.</p>
+    #[doc(hidden)]
     pub provider_type: std::option::Option<crate::model::IdentityProviderTypeType>,
     /// <p>The date the provider was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the provider was added to the user pool.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ProviderDescription {
@@ -8330,11 +8479,10 @@ impl std::fmt::Debug for ProviderDescription {
         formatter.finish()
     }
 }
-/// See [`ProviderDescription`](crate::model::ProviderDescription)
+/// See [`ProviderDescription`](crate::model::ProviderDescription).
 pub mod provider_description {
 
-    /// A builder for [`ProviderDescription`](crate::model::ProviderDescription)
-    #[non_exhaustive]
+    /// A builder for [`ProviderDescription`](crate::model::ProviderDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) provider_name: std::option::Option<std::string::String>,
@@ -8395,7 +8543,7 @@ pub mod provider_description {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProviderDescription`](crate::model::ProviderDescription)
+        /// Consumes the builder and constructs a [`ProviderDescription`](crate::model::ProviderDescription).
         pub fn build(self) -> crate::model::ProviderDescription {
             crate::model::ProviderDescription {
                 provider_name: self.provider_name,
@@ -8407,7 +8555,7 @@ pub mod provider_description {
     }
 }
 impl ProviderDescription {
-    /// Creates a new builder-style object to manufacture [`ProviderDescription`](crate::model::ProviderDescription)
+    /// Creates a new builder-style object to manufacture [`ProviderDescription`](crate::model::ProviderDescription).
     pub fn builder() -> crate::model::provider_description::Builder {
         crate::model::provider_description::Builder::default()
     }
@@ -8418,14 +8566,19 @@ impl ProviderDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeviceType {
     /// <p>The device key.</p>
+    #[doc(hidden)]
     pub device_key: std::option::Option<std::string::String>,
     /// <p>The device attributes.</p>
+    #[doc(hidden)]
     pub device_attributes: std::option::Option<std::vec::Vec<crate::model::AttributeType>>,
     /// <p>The creation date of the device.</p>
+    #[doc(hidden)]
     pub device_create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last modified date of the device.</p>
+    #[doc(hidden)]
     pub device_last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date when the device was last authenticated.</p>
+    #[doc(hidden)]
     pub device_last_authenticated_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DeviceType {
@@ -8466,11 +8619,10 @@ impl std::fmt::Debug for DeviceType {
         formatter.finish()
     }
 }
-/// See [`DeviceType`](crate::model::DeviceType)
+/// See [`DeviceType`](crate::model::DeviceType).
 pub mod device_type {
 
-    /// A builder for [`DeviceType`](crate::model::DeviceType)
-    #[non_exhaustive]
+    /// A builder for [`DeviceType`](crate::model::DeviceType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_key: std::option::Option<std::string::String>,
@@ -8549,7 +8701,7 @@ pub mod device_type {
             self.device_last_authenticated_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeviceType`](crate::model::DeviceType)
+        /// Consumes the builder and constructs a [`DeviceType`](crate::model::DeviceType).
         pub fn build(self) -> crate::model::DeviceType {
             crate::model::DeviceType {
                 device_key: self.device_key,
@@ -8562,7 +8714,7 @@ pub mod device_type {
     }
 }
 impl DeviceType {
-    /// Creates a new builder-style object to manufacture [`DeviceType`](crate::model::DeviceType)
+    /// Creates a new builder-style object to manufacture [`DeviceType`](crate::model::DeviceType).
     pub fn builder() -> crate::model::device_type::Builder {
         crate::model::device_type::Builder::default()
     }
@@ -8656,20 +8808,28 @@ impl AsRef<str> for AuthFlowType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainDescriptionType {
     /// <p>The user pool ID.</p>
+    #[doc(hidden)]
     pub user_pool_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services ID for the user pool owner.</p>
+    #[doc(hidden)]
     pub aws_account_id: std::option::Option<std::string::String>,
     /// <p>The domain string. For custom domains, this is the fully-qualified domain name, such as <code>auth.example.com</code>. For Amazon Cognito prefix domains, this is the prefix alone, such as <code>auth</code>.</p>
+    #[doc(hidden)]
     pub domain: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 bucket where the static files for this domain are stored.</p>
+    #[doc(hidden)]
     pub s3_bucket: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon CloudFront distribution.</p>
+    #[doc(hidden)]
     pub cloud_front_distribution: std::option::Option<std::string::String>,
     /// <p>The app version.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The domain status.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DomainStatusType>,
     /// <p>The configuration for a custom domain that hosts the sign-up and sign-in webpages for your application.</p>
+    #[doc(hidden)]
     pub custom_domain_config: std::option::Option<crate::model::CustomDomainConfigType>,
 }
 impl DomainDescriptionType {
@@ -8722,11 +8882,10 @@ impl std::fmt::Debug for DomainDescriptionType {
         formatter.finish()
     }
 }
-/// See [`DomainDescriptionType`](crate::model::DomainDescriptionType)
+/// See [`DomainDescriptionType`](crate::model::DomainDescriptionType).
 pub mod domain_description_type {
 
-    /// A builder for [`DomainDescriptionType`](crate::model::DomainDescriptionType)
-    #[non_exhaustive]
+    /// A builder for [`DomainDescriptionType`](crate::model::DomainDescriptionType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_pool_id: std::option::Option<std::string::String>,
@@ -8831,7 +8990,7 @@ pub mod domain_description_type {
             self.custom_domain_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainDescriptionType`](crate::model::DomainDescriptionType)
+        /// Consumes the builder and constructs a [`DomainDescriptionType`](crate::model::DomainDescriptionType).
         pub fn build(self) -> crate::model::DomainDescriptionType {
             crate::model::DomainDescriptionType {
                 user_pool_id: self.user_pool_id,
@@ -8847,7 +9006,7 @@ pub mod domain_description_type {
     }
 }
 impl DomainDescriptionType {
-    /// Creates a new builder-style object to manufacture [`DomainDescriptionType`](crate::model::DomainDescriptionType)
+    /// Creates a new builder-style object to manufacture [`DomainDescriptionType`](crate::model::DomainDescriptionType).
     pub fn builder() -> crate::model::domain_description_type::Builder {
         crate::model::domain_description_type::Builder::default()
     }
@@ -8925,41 +9084,58 @@ impl AsRef<str> for DomainStatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserPoolType {
     /// <p>The ID of the user pool.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the user pool.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The policies associated with the user pool.</p>
+    #[doc(hidden)]
     pub policies: std::option::Option<crate::model::UserPoolPolicyType>,
     /// <p>The Lambda triggers associated with the user pool.</p>
+    #[doc(hidden)]
     pub lambda_config: std::option::Option<crate::model::LambdaConfigType>,
     /// <p>The status of a user pool.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusType>,
     /// <p>The date the user pool was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the user pool was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A container with the schema attributes of a user pool.</p>
+    #[doc(hidden)]
     pub schema_attributes: std::option::Option<std::vec::Vec<crate::model::SchemaAttributeType>>,
     /// <p>The attributes that are auto-verified in a user pool.</p>
+    #[doc(hidden)]
     pub auto_verified_attributes:
         std::option::Option<std::vec::Vec<crate::model::VerifiedAttributeType>>,
     /// <p>The attributes that are aliased in a user pool.</p>
+    #[doc(hidden)]
     pub alias_attributes: std::option::Option<std::vec::Vec<crate::model::AliasAttributeType>>,
     /// <p>Specifies whether a user can use an email address or phone number as a username when they sign up.</p>
+    #[doc(hidden)]
     pub username_attributes:
         std::option::Option<std::vec::Vec<crate::model::UsernameAttributeType>>,
     /// <p>The contents of the SMS verification message.</p>
+    #[doc(hidden)]
     pub sms_verification_message: std::option::Option<std::string::String>,
     /// <p>The contents of the email verification message.</p>
+    #[doc(hidden)]
     pub email_verification_message: std::option::Option<std::string::String>,
     /// <p>The subject of the email verification message.</p>
+    #[doc(hidden)]
     pub email_verification_subject: std::option::Option<std::string::String>,
     /// <p>The template for verification messages.</p>
+    #[doc(hidden)]
     pub verification_message_template:
         std::option::Option<crate::model::VerificationMessageTemplateType>,
     /// <p>The contents of the SMS authentication message.</p>
+    #[doc(hidden)]
     pub sms_authentication_message: std::option::Option<std::string::String>,
-    /// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to to email addresses and phone numbers</a>.</p>
+    /// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to email addresses and phone numbers</a>.</p>
+    #[doc(hidden)]
     pub user_attribute_update_settings:
         std::option::Option<crate::model::UserAttributeUpdateSettingsType>,
     /// <p>Can be one of the following values:</p>
@@ -8968,16 +9144,24 @@ pub struct UserPoolType {
     /// <li> <p> <code>ON</code> - MFA tokens are required for all user registrations. You can only specify required when you're initially creating a user pool.</p> </li>
     /// <li> <p> <code>OPTIONAL</code> - Users have the option when registering to create an MFA token.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub mfa_configuration: std::option::Option<crate::model::UserPoolMfaType>,
-    /// <p>The device configuration.</p>
+    /// <p>The device-remembering configuration for a user pool. A null value indicates that you have deactivated device remembering in your user pool.</p> <note>
+    /// <p>When you provide a value for any <code>DeviceConfiguration</code> field, you activate the Amazon Cognito device-remembering feature.</p>
+    /// </note>
+    #[doc(hidden)]
     pub device_configuration: std::option::Option<crate::model::DeviceConfigurationType>,
     /// <p>A number estimating the size of the user pool.</p>
+    #[doc(hidden)]
     pub estimated_number_of_users: i32,
     /// <p>The email configuration of your user pool. The email configuration type sets your preferred sending method, Amazon Web Services Region, and sender for messages tfrom your user pool.</p>
+    #[doc(hidden)]
     pub email_configuration: std::option::Option<crate::model::EmailConfigurationType>,
     /// <p>The SMS configuration with the settings that your Amazon Cognito user pool must use to send an SMS message from your Amazon Web Services account through Amazon Simple Notification Service. To send SMS messages with Amazon SNS in the Amazon Web Services Region that you want, the Amazon Cognito user pool uses an Identity and Access Management (IAM) role in your Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub sms_configuration: std::option::Option<crate::model::SmsConfigurationType>,
     /// <p>The tags that are assigned to the user pool. A tag is a label that you can apply to user pools to categorize and manage them in different ways, such as by purpose, owner, environment, or other criteria.</p>
+    #[doc(hidden)]
     pub user_pool_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The reason why the SMS configuration can't send the messages to your users.</p>
@@ -8996,23 +9180,32 @@ pub struct UserPoolType {
     /// <p>The Amazon Web Services account is in the SNS SMS Sandbox and messages will only reach verified end users. This parameter won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS permissions. To learn how to move your Amazon Web Services account out of the sandbox, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of the SMS sandbox</a>.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub sms_configuration_failure: std::option::Option<std::string::String>,
     /// <p>Deprecated. Review error codes from API requests with <code>EventSource:cognito-idp.amazonaws.com</code> in CloudTrail for information about problems with user pool email configuration.</p>
+    #[doc(hidden)]
     pub email_configuration_failure: std::option::Option<std::string::String>,
     /// <p>The domain prefix, if the user pool has a domain associated with it.</p>
+    #[doc(hidden)]
     pub domain: std::option::Option<std::string::String>,
     /// <p>A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. An example of a custom domain name might be <code>auth.example.com</code>.</p>
     /// <p>For more information about adding a custom domain to your user pool, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-add-custom-domain.html">Using Your Own Domain for the Hosted UI</a>.</p>
+    #[doc(hidden)]
     pub custom_domain: std::option::Option<std::string::String>,
     /// <p>The configuration for <code>AdminCreateUser</code> requests.</p>
+    #[doc(hidden)]
     pub admin_create_user_config: std::option::Option<crate::model::AdminCreateUserConfigType>,
     /// <p>The user pool add-ons.</p>
+    #[doc(hidden)]
     pub user_pool_add_ons: std::option::Option<crate::model::UserPoolAddOnsType>,
     /// <p>Case sensitivity of the username input for the selected sign-in option. For example, when case sensitivity is set to <code>False</code>, users can sign in using either "username" or "Username". This configuration is immutable once it has been set. For more information, see <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UsernameConfigurationType.html">UsernameConfigurationType</a>.</p>
+    #[doc(hidden)]
     pub username_configuration: std::option::Option<crate::model::UsernameConfigurationType>,
     /// <p>The Amazon Resource Name (ARN) for the user pool.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The available verified method a user can use to recover their password when they call <code>ForgotPassword</code>. You can use this setting to define a preferred method when a user has more than one method available. With this setting, SMS doesn't qualify for a valid password recovery mechanism if the user also has SMS multi-factor authentication (MFA) activated. In the absence of this setting, Amazon Cognito uses the legacy behavior to determine the recovery method where SMS is preferred through email.</p>
+    #[doc(hidden)]
     pub account_recovery_setting: std::option::Option<crate::model::AccountRecoverySettingType>,
 }
 impl UserPoolType {
@@ -9086,7 +9279,7 @@ impl UserPoolType {
     pub fn sms_authentication_message(&self) -> std::option::Option<&str> {
         self.sms_authentication_message.as_deref()
     }
-    /// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to to email addresses and phone numbers</a>.</p>
+    /// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to email addresses and phone numbers</a>.</p>
     pub fn user_attribute_update_settings(
         &self,
     ) -> std::option::Option<&crate::model::UserAttributeUpdateSettingsType> {
@@ -9101,7 +9294,9 @@ impl UserPoolType {
     pub fn mfa_configuration(&self) -> std::option::Option<&crate::model::UserPoolMfaType> {
         self.mfa_configuration.as_ref()
     }
-    /// <p>The device configuration.</p>
+    /// <p>The device-remembering configuration for a user pool. A null value indicates that you have deactivated device remembering in your user pool.</p> <note>
+    /// <p>When you provide a value for any <code>DeviceConfiguration</code> field, you activate the Amazon Cognito device-remembering feature.</p>
+    /// </note>
     pub fn device_configuration(
         &self,
     ) -> std::option::Option<&crate::model::DeviceConfigurationType> {
@@ -9243,11 +9438,10 @@ impl std::fmt::Debug for UserPoolType {
         formatter.finish()
     }
 }
-/// See [`UserPoolType`](crate::model::UserPoolType)
+/// See [`UserPoolType`](crate::model::UserPoolType).
 pub mod user_pool_type {
 
-    /// A builder for [`UserPoolType`](crate::model::UserPoolType)
-    #[non_exhaustive]
+    /// A builder for [`UserPoolType`](crate::model::UserPoolType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -9524,7 +9718,7 @@ pub mod user_pool_type {
             self.sms_authentication_message = input;
             self
         }
-        /// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to to email addresses and phone numbers</a>.</p>
+        /// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to email addresses and phone numbers</a>.</p>
         pub fn user_attribute_update_settings(
             mut self,
             input: crate::model::UserAttributeUpdateSettingsType,
@@ -9532,7 +9726,7 @@ pub mod user_pool_type {
             self.user_attribute_update_settings = Some(input);
             self
         }
-        /// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to to email addresses and phone numbers</a>.</p>
+        /// <p>The settings for updates to user attributes. These settings include the property <code>AttributesRequireVerificationBeforeUpdate</code>, a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users' email address and phone number attributes. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates"> Verifying updates to email addresses and phone numbers</a>.</p>
         pub fn set_user_attribute_update_settings(
             mut self,
             input: std::option::Option<crate::model::UserAttributeUpdateSettingsType>,
@@ -9563,7 +9757,9 @@ pub mod user_pool_type {
             self.mfa_configuration = input;
             self
         }
-        /// <p>The device configuration.</p>
+        /// <p>The device-remembering configuration for a user pool. A null value indicates that you have deactivated device remembering in your user pool.</p> <note>
+        /// <p>When you provide a value for any <code>DeviceConfiguration</code> field, you activate the Amazon Cognito device-remembering feature.</p>
+        /// </note>
         pub fn device_configuration(
             mut self,
             input: crate::model::DeviceConfigurationType,
@@ -9571,7 +9767,9 @@ pub mod user_pool_type {
             self.device_configuration = Some(input);
             self
         }
-        /// <p>The device configuration.</p>
+        /// <p>The device-remembering configuration for a user pool. A null value indicates that you have deactivated device remembering in your user pool.</p> <note>
+        /// <p>When you provide a value for any <code>DeviceConfiguration</code> field, you activate the Amazon Cognito device-remembering feature.</p>
+        /// </note>
         pub fn set_device_configuration(
             mut self,
             input: std::option::Option<crate::model::DeviceConfigurationType>,
@@ -9795,7 +9993,7 @@ pub mod user_pool_type {
             self.account_recovery_setting = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserPoolType`](crate::model::UserPoolType)
+        /// Consumes the builder and constructs a [`UserPoolType`](crate::model::UserPoolType).
         pub fn build(self) -> crate::model::UserPoolType {
             crate::model::UserPoolType {
                 id: self.id,
@@ -9835,7 +10033,7 @@ pub mod user_pool_type {
     }
 }
 impl UserPoolType {
-    /// Creates a new builder-style object to manufacture [`UserPoolType`](crate::model::UserPoolType)
+    /// Creates a new builder-style object to manufacture [`UserPoolType`](crate::model::UserPoolType).
     pub fn builder() -> crate::model::user_pool_type::Builder {
         crate::model::user_pool_type::Builder::default()
     }
@@ -9861,6 +10059,7 @@ pub struct UsernameConfigurationType {
     /// <p>Enables case insensitivity for all username input. For example, when this option is set to <code>False</code>, users can sign in using either "username" or "Username". This option also enables both <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in addition to the <code>username</code> attribute.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub case_sensitive: std::option::Option<bool>,
 }
 impl UsernameConfigurationType {
@@ -9891,11 +10090,10 @@ impl std::fmt::Debug for UsernameConfigurationType {
         formatter.finish()
     }
 }
-/// See [`UsernameConfigurationType`](crate::model::UsernameConfigurationType)
+/// See [`UsernameConfigurationType`](crate::model::UsernameConfigurationType).
 pub mod username_configuration_type {
 
-    /// A builder for [`UsernameConfigurationType`](crate::model::UsernameConfigurationType)
-    #[non_exhaustive]
+    /// A builder for [`UsernameConfigurationType`](crate::model::UsernameConfigurationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) case_sensitive: std::option::Option<bool>,
@@ -9941,7 +10139,7 @@ pub mod username_configuration_type {
             self.case_sensitive = input;
             self
         }
-        /// Consumes the builder and constructs a [`UsernameConfigurationType`](crate::model::UsernameConfigurationType)
+        /// Consumes the builder and constructs a [`UsernameConfigurationType`](crate::model::UsernameConfigurationType).
         pub fn build(self) -> crate::model::UsernameConfigurationType {
             crate::model::UsernameConfigurationType {
                 case_sensitive: self.case_sensitive,
@@ -9950,7 +10148,7 @@ pub mod username_configuration_type {
     }
 }
 impl UsernameConfigurationType {
-    /// Creates a new builder-style object to manufacture [`UsernameConfigurationType`](crate::model::UsernameConfigurationType)
+    /// Creates a new builder-style object to manufacture [`UsernameConfigurationType`](crate::model::UsernameConfigurationType).
     pub fn builder() -> crate::model::username_configuration_type::Builder {
         crate::model::username_configuration_type::Builder::default()
     }
@@ -10075,23 +10273,30 @@ impl AsRef<str> for AliasAttributeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SchemaAttributeType {
     /// <p>A schema attribute of the name type.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The attribute data type.</p>
+    #[doc(hidden)]
     pub attribute_data_type: std::option::Option<crate::model::AttributeDataType>,
     /// <note>
     /// <p>You should use <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes">WriteAttributes</a> in the user pool client to control how attributes can be mutated for new use cases instead of using <code>DeveloperOnlyAttribute</code>.</p>
     /// </note>
     /// <p>Specifies whether the attribute type is developer only. This attribute can only be modified by an administrator. Users won't be able to modify this attribute using their access token. For example, <code>DeveloperOnlyAttribute</code> can be modified using AdminUpdateUserAttributes but can't be updated using UpdateUserAttributes.</p>
+    #[doc(hidden)]
     pub developer_only_attribute: std::option::Option<bool>,
     /// <p>Specifies whether the value of the attribute can be changed.</p>
     /// <p>For any user pool attribute that is mapped to an IdP attribute, you must set this parameter to <code>true</code>. Amazon Cognito updates mapped attributes when users sign in to your application through an IdP. If an attribute is immutable, Amazon Cognito throws an error when it attempts to update the attribute. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html">Specifying Identity Provider Attribute Mappings for Your User Pool</a>.</p>
+    #[doc(hidden)]
     pub mutable: std::option::Option<bool>,
     /// <p>Specifies whether a user pool attribute is required. If the attribute is required and the user doesn't provide a value, registration or sign-in will fail.</p>
+    #[doc(hidden)]
     pub required: std::option::Option<bool>,
     /// <p>Specifies the constraints for an attribute of the number type.</p>
+    #[doc(hidden)]
     pub number_attribute_constraints:
         std::option::Option<crate::model::NumberAttributeConstraintsType>,
     /// <p>Specifies the constraints for an attribute of the string type.</p>
+    #[doc(hidden)]
     pub string_attribute_constraints:
         std::option::Option<crate::model::StringAttributeConstraintsType>,
 }
@@ -10152,11 +10357,10 @@ impl std::fmt::Debug for SchemaAttributeType {
         formatter.finish()
     }
 }
-/// See [`SchemaAttributeType`](crate::model::SchemaAttributeType)
+/// See [`SchemaAttributeType`](crate::model::SchemaAttributeType).
 pub mod schema_attribute_type {
 
-    /// A builder for [`SchemaAttributeType`](crate::model::SchemaAttributeType)
-    #[non_exhaustive]
+    /// A builder for [`SchemaAttributeType`](crate::model::SchemaAttributeType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -10263,7 +10467,7 @@ pub mod schema_attribute_type {
             self.string_attribute_constraints = input;
             self
         }
-        /// Consumes the builder and constructs a [`SchemaAttributeType`](crate::model::SchemaAttributeType)
+        /// Consumes the builder and constructs a [`SchemaAttributeType`](crate::model::SchemaAttributeType).
         pub fn build(self) -> crate::model::SchemaAttributeType {
             crate::model::SchemaAttributeType {
                 name: self.name,
@@ -10278,7 +10482,7 @@ pub mod schema_attribute_type {
     }
 }
 impl SchemaAttributeType {
-    /// Creates a new builder-style object to manufacture [`SchemaAttributeType`](crate::model::SchemaAttributeType)
+    /// Creates a new builder-style object to manufacture [`SchemaAttributeType`](crate::model::SchemaAttributeType).
     pub fn builder() -> crate::model::schema_attribute_type::Builder {
         crate::model::schema_attribute_type::Builder::default()
     }
@@ -10289,8 +10493,10 @@ impl SchemaAttributeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StringAttributeConstraintsType {
     /// <p>The minimum length.</p>
+    #[doc(hidden)]
     pub min_length: std::option::Option<std::string::String>,
     /// <p>The maximum length.</p>
+    #[doc(hidden)]
     pub max_length: std::option::Option<std::string::String>,
 }
 impl StringAttributeConstraintsType {
@@ -10311,11 +10517,10 @@ impl std::fmt::Debug for StringAttributeConstraintsType {
         formatter.finish()
     }
 }
-/// See [`StringAttributeConstraintsType`](crate::model::StringAttributeConstraintsType)
+/// See [`StringAttributeConstraintsType`](crate::model::StringAttributeConstraintsType).
 pub mod string_attribute_constraints_type {
 
-    /// A builder for [`StringAttributeConstraintsType`](crate::model::StringAttributeConstraintsType)
-    #[non_exhaustive]
+    /// A builder for [`StringAttributeConstraintsType`](crate::model::StringAttributeConstraintsType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min_length: std::option::Option<std::string::String>,
@@ -10342,7 +10547,7 @@ pub mod string_attribute_constraints_type {
             self.max_length = input;
             self
         }
-        /// Consumes the builder and constructs a [`StringAttributeConstraintsType`](crate::model::StringAttributeConstraintsType)
+        /// Consumes the builder and constructs a [`StringAttributeConstraintsType`](crate::model::StringAttributeConstraintsType).
         pub fn build(self) -> crate::model::StringAttributeConstraintsType {
             crate::model::StringAttributeConstraintsType {
                 min_length: self.min_length,
@@ -10352,7 +10557,7 @@ pub mod string_attribute_constraints_type {
     }
 }
 impl StringAttributeConstraintsType {
-    /// Creates a new builder-style object to manufacture [`StringAttributeConstraintsType`](crate::model::StringAttributeConstraintsType)
+    /// Creates a new builder-style object to manufacture [`StringAttributeConstraintsType`](crate::model::StringAttributeConstraintsType).
     pub fn builder() -> crate::model::string_attribute_constraints_type::Builder {
         crate::model::string_attribute_constraints_type::Builder::default()
     }
@@ -10363,8 +10568,10 @@ impl StringAttributeConstraintsType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NumberAttributeConstraintsType {
     /// <p>The minimum value of an attribute that is of the number data type.</p>
+    #[doc(hidden)]
     pub min_value: std::option::Option<std::string::String>,
     /// <p>The maximum value of an attribute that is of the number data type.</p>
+    #[doc(hidden)]
     pub max_value: std::option::Option<std::string::String>,
 }
 impl NumberAttributeConstraintsType {
@@ -10385,11 +10592,10 @@ impl std::fmt::Debug for NumberAttributeConstraintsType {
         formatter.finish()
     }
 }
-/// See [`NumberAttributeConstraintsType`](crate::model::NumberAttributeConstraintsType)
+/// See [`NumberAttributeConstraintsType`](crate::model::NumberAttributeConstraintsType).
 pub mod number_attribute_constraints_type {
 
-    /// A builder for [`NumberAttributeConstraintsType`](crate::model::NumberAttributeConstraintsType)
-    #[non_exhaustive]
+    /// A builder for [`NumberAttributeConstraintsType`](crate::model::NumberAttributeConstraintsType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min_value: std::option::Option<std::string::String>,
@@ -10416,7 +10622,7 @@ pub mod number_attribute_constraints_type {
             self.max_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`NumberAttributeConstraintsType`](crate::model::NumberAttributeConstraintsType)
+        /// Consumes the builder and constructs a [`NumberAttributeConstraintsType`](crate::model::NumberAttributeConstraintsType).
         pub fn build(self) -> crate::model::NumberAttributeConstraintsType {
             crate::model::NumberAttributeConstraintsType {
                 min_value: self.min_value,
@@ -10426,7 +10632,7 @@ pub mod number_attribute_constraints_type {
     }
 }
 impl NumberAttributeConstraintsType {
-    /// Creates a new builder-style object to manufacture [`NumberAttributeConstraintsType`](crate::model::NumberAttributeConstraintsType)
+    /// Creates a new builder-style object to manufacture [`NumberAttributeConstraintsType`](crate::model::NumberAttributeConstraintsType).
     pub fn builder() -> crate::model::number_attribute_constraints_type::Builder {
         crate::model::number_attribute_constraints_type::Builder::default()
     }
@@ -10500,8 +10706,10 @@ impl AsRef<str> for AttributeDataType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeviceSecretVerifierConfigType {
     /// <p>The password verifier.</p>
+    #[doc(hidden)]
     pub password_verifier: std::option::Option<std::string::String>,
     /// <p>The <a href="https://en.wikipedia.org/wiki/Salt_(cryptography)">salt</a> </p>
+    #[doc(hidden)]
     pub salt: std::option::Option<std::string::String>,
 }
 impl DeviceSecretVerifierConfigType {
@@ -10522,11 +10730,10 @@ impl std::fmt::Debug for DeviceSecretVerifierConfigType {
         formatter.finish()
     }
 }
-/// See [`DeviceSecretVerifierConfigType`](crate::model::DeviceSecretVerifierConfigType)
+/// See [`DeviceSecretVerifierConfigType`](crate::model::DeviceSecretVerifierConfigType).
 pub mod device_secret_verifier_config_type {
 
-    /// A builder for [`DeviceSecretVerifierConfigType`](crate::model::DeviceSecretVerifierConfigType)
-    #[non_exhaustive]
+    /// A builder for [`DeviceSecretVerifierConfigType`](crate::model::DeviceSecretVerifierConfigType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) password_verifier: std::option::Option<std::string::String>,
@@ -10556,7 +10763,7 @@ pub mod device_secret_verifier_config_type {
             self.salt = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeviceSecretVerifierConfigType`](crate::model::DeviceSecretVerifierConfigType)
+        /// Consumes the builder and constructs a [`DeviceSecretVerifierConfigType`](crate::model::DeviceSecretVerifierConfigType).
         pub fn build(self) -> crate::model::DeviceSecretVerifierConfigType {
             crate::model::DeviceSecretVerifierConfigType {
                 password_verifier: self.password_verifier,
@@ -10566,7 +10773,7 @@ pub mod device_secret_verifier_config_type {
     }
 }
 impl DeviceSecretVerifierConfigType {
-    /// Creates a new builder-style object to manufacture [`DeviceSecretVerifierConfigType`](crate::model::DeviceSecretVerifierConfigType)
+    /// Creates a new builder-style object to manufacture [`DeviceSecretVerifierConfigType`](crate::model::DeviceSecretVerifierConfigType).
     pub fn builder() -> crate::model::device_secret_verifier_config_type::Builder {
         crate::model::device_secret_verifier_config_type::Builder::default()
     }
@@ -10577,14 +10784,19 @@ impl DeviceSecretVerifierConfigType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContextDataType {
     /// <p>The source IP address of your user's device.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>Your server endpoint where this API is invoked.</p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
     /// <p>Your server path where this API is invoked.</p>
+    #[doc(hidden)]
     pub server_path: std::option::Option<std::string::String>,
     /// <p>HttpHeaders received on your server in same order.</p>
+    #[doc(hidden)]
     pub http_headers: std::option::Option<std::vec::Vec<crate::model::HttpHeader>>,
     /// <p>Encoded device-fingerprint details that your app collected with the Amazon Cognito context data collection library. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint">Adding user device and session data to API requests</a>.</p>
+    #[doc(hidden)]
     pub encoded_data: std::option::Option<std::string::String>,
 }
 impl ContextDataType {
@@ -10620,11 +10832,10 @@ impl std::fmt::Debug for ContextDataType {
         formatter.finish()
     }
 }
-/// See [`ContextDataType`](crate::model::ContextDataType)
+/// See [`ContextDataType`](crate::model::ContextDataType).
 pub mod context_data_type {
 
-    /// A builder for [`ContextDataType`](crate::model::ContextDataType)
-    #[non_exhaustive]
+    /// A builder for [`ContextDataType`](crate::model::ContextDataType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_address: std::option::Option<std::string::String>,
@@ -10693,7 +10904,7 @@ pub mod context_data_type {
             self.encoded_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContextDataType`](crate::model::ContextDataType)
+        /// Consumes the builder and constructs a [`ContextDataType`](crate::model::ContextDataType).
         pub fn build(self) -> crate::model::ContextDataType {
             crate::model::ContextDataType {
                 ip_address: self.ip_address,
@@ -10706,7 +10917,7 @@ pub mod context_data_type {
     }
 }
 impl ContextDataType {
-    /// Creates a new builder-style object to manufacture [`ContextDataType`](crate::model::ContextDataType)
+    /// Creates a new builder-style object to manufacture [`ContextDataType`](crate::model::ContextDataType).
     pub fn builder() -> crate::model::context_data_type::Builder {
         crate::model::context_data_type::Builder::default()
     }
@@ -10717,8 +10928,10 @@ impl ContextDataType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpHeader {
     /// <p>The header name.</p>
+    #[doc(hidden)]
     pub header_name: std::option::Option<std::string::String>,
     /// <p>The header value.</p>
+    #[doc(hidden)]
     pub header_value: std::option::Option<std::string::String>,
 }
 impl HttpHeader {
@@ -10739,11 +10952,10 @@ impl std::fmt::Debug for HttpHeader {
         formatter.finish()
     }
 }
-/// See [`HttpHeader`](crate::model::HttpHeader)
+/// See [`HttpHeader`](crate::model::HttpHeader).
 pub mod http_header {
 
-    /// A builder for [`HttpHeader`](crate::model::HttpHeader)
-    #[non_exhaustive]
+    /// A builder for [`HttpHeader`](crate::model::HttpHeader).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) header_name: std::option::Option<std::string::String>,
@@ -10770,7 +10982,7 @@ pub mod http_header {
             self.header_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpHeader`](crate::model::HttpHeader)
+        /// Consumes the builder and constructs a [`HttpHeader`](crate::model::HttpHeader).
         pub fn build(self) -> crate::model::HttpHeader {
             crate::model::HttpHeader {
                 header_name: self.header_name,
@@ -10780,7 +10992,7 @@ pub mod http_header {
     }
 }
 impl HttpHeader {
-    /// Creates a new builder-style object to manufacture [`HttpHeader`](crate::model::HttpHeader)
+    /// Creates a new builder-style object to manufacture [`HttpHeader`](crate::model::HttpHeader).
     pub fn builder() -> crate::model::http_header::Builder {
         crate::model::http_header::Builder::default()
     }
@@ -10791,21 +11003,29 @@ impl HttpHeader {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuthEventType {
     /// <p>The event ID.</p>
+    #[doc(hidden)]
     pub event_id: std::option::Option<std::string::String>,
     /// <p>The event type.</p>
+    #[doc(hidden)]
     pub event_type: std::option::Option<crate::model::EventType>,
     /// <p>The creation date</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The event response.</p>
+    #[doc(hidden)]
     pub event_response: std::option::Option<crate::model::EventResponseType>,
     /// <p>The event risk.</p>
+    #[doc(hidden)]
     pub event_risk: std::option::Option<crate::model::EventRiskType>,
     /// <p>The challenge responses.</p>
+    #[doc(hidden)]
     pub challenge_responses:
         std::option::Option<std::vec::Vec<crate::model::ChallengeResponseType>>,
     /// <p>The user context data captured at the time of an event request. This value provides additional information about the client from which event the request is received.</p>
+    #[doc(hidden)]
     pub event_context_data: std::option::Option<crate::model::EventContextDataType>,
     /// <p>A flag specifying the user feedback captured at the time of an event request is good or bad. </p>
+    #[doc(hidden)]
     pub event_feedback: std::option::Option<crate::model::EventFeedbackType>,
 }
 impl AuthEventType {
@@ -10858,11 +11078,10 @@ impl std::fmt::Debug for AuthEventType {
         formatter.finish()
     }
 }
-/// See [`AuthEventType`](crate::model::AuthEventType)
+/// See [`AuthEventType`](crate::model::AuthEventType).
 pub mod auth_event_type {
 
-    /// A builder for [`AuthEventType`](crate::model::AuthEventType)
-    #[non_exhaustive]
+    /// A builder for [`AuthEventType`](crate::model::AuthEventType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_id: std::option::Option<std::string::String>,
@@ -10983,7 +11202,7 @@ pub mod auth_event_type {
             self.event_feedback = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthEventType`](crate::model::AuthEventType)
+        /// Consumes the builder and constructs a [`AuthEventType`](crate::model::AuthEventType).
         pub fn build(self) -> crate::model::AuthEventType {
             crate::model::AuthEventType {
                 event_id: self.event_id,
@@ -10999,7 +11218,7 @@ pub mod auth_event_type {
     }
 }
 impl AuthEventType {
-    /// Creates a new builder-style object to manufacture [`AuthEventType`](crate::model::AuthEventType)
+    /// Creates a new builder-style object to manufacture [`AuthEventType`](crate::model::AuthEventType).
     pub fn builder() -> crate::model::auth_event_type::Builder {
         crate::model::auth_event_type::Builder::default()
     }
@@ -11010,10 +11229,13 @@ impl AuthEventType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventFeedbackType {
     /// <p>The event feedback value.</p>
+    #[doc(hidden)]
     pub feedback_value: std::option::Option<crate::model::FeedbackValueType>,
     /// <p>The provider.</p>
+    #[doc(hidden)]
     pub provider: std::option::Option<std::string::String>,
     /// <p>The event feedback date.</p>
+    #[doc(hidden)]
     pub feedback_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EventFeedbackType {
@@ -11039,11 +11261,10 @@ impl std::fmt::Debug for EventFeedbackType {
         formatter.finish()
     }
 }
-/// See [`EventFeedbackType`](crate::model::EventFeedbackType)
+/// See [`EventFeedbackType`](crate::model::EventFeedbackType).
 pub mod event_feedback_type {
 
-    /// A builder for [`EventFeedbackType`](crate::model::EventFeedbackType)
-    #[non_exhaustive]
+    /// A builder for [`EventFeedbackType`](crate::model::EventFeedbackType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) feedback_value: std::option::Option<crate::model::FeedbackValueType>,
@@ -11087,7 +11308,7 @@ pub mod event_feedback_type {
             self.feedback_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventFeedbackType`](crate::model::EventFeedbackType)
+        /// Consumes the builder and constructs a [`EventFeedbackType`](crate::model::EventFeedbackType).
         pub fn build(self) -> crate::model::EventFeedbackType {
             crate::model::EventFeedbackType {
                 feedback_value: self.feedback_value,
@@ -11098,7 +11319,7 @@ pub mod event_feedback_type {
     }
 }
 impl EventFeedbackType {
-    /// Creates a new builder-style object to manufacture [`EventFeedbackType`](crate::model::EventFeedbackType)
+    /// Creates a new builder-style object to manufacture [`EventFeedbackType`](crate::model::EventFeedbackType).
     pub fn builder() -> crate::model::event_feedback_type::Builder {
         crate::model::event_feedback_type::Builder::default()
     }
@@ -11109,14 +11330,19 @@ impl EventFeedbackType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventContextDataType {
     /// <p>The source IP address of your user's device.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The user's device name.</p>
+    #[doc(hidden)]
     pub device_name: std::option::Option<std::string::String>,
     /// <p>The user's time zone.</p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
     /// <p>The user's city.</p>
+    #[doc(hidden)]
     pub city: std::option::Option<std::string::String>,
     /// <p>The user's country.</p>
+    #[doc(hidden)]
     pub country: std::option::Option<std::string::String>,
 }
 impl EventContextDataType {
@@ -11152,11 +11378,10 @@ impl std::fmt::Debug for EventContextDataType {
         formatter.finish()
     }
 }
-/// See [`EventContextDataType`](crate::model::EventContextDataType)
+/// See [`EventContextDataType`](crate::model::EventContextDataType).
 pub mod event_context_data_type {
 
-    /// A builder for [`EventContextDataType`](crate::model::EventContextDataType)
-    #[non_exhaustive]
+    /// A builder for [`EventContextDataType`](crate::model::EventContextDataType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_address: std::option::Option<std::string::String>,
@@ -11216,7 +11441,7 @@ pub mod event_context_data_type {
             self.country = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventContextDataType`](crate::model::EventContextDataType)
+        /// Consumes the builder and constructs a [`EventContextDataType`](crate::model::EventContextDataType).
         pub fn build(self) -> crate::model::EventContextDataType {
             crate::model::EventContextDataType {
                 ip_address: self.ip_address,
@@ -11229,7 +11454,7 @@ pub mod event_context_data_type {
     }
 }
 impl EventContextDataType {
-    /// Creates a new builder-style object to manufacture [`EventContextDataType`](crate::model::EventContextDataType)
+    /// Creates a new builder-style object to manufacture [`EventContextDataType`](crate::model::EventContextDataType).
     pub fn builder() -> crate::model::event_context_data_type::Builder {
         crate::model::event_context_data_type::Builder::default()
     }
@@ -11240,8 +11465,10 @@ impl EventContextDataType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChallengeResponseType {
     /// <p>The challenge name.</p>
+    #[doc(hidden)]
     pub challenge_name: std::option::Option<crate::model::ChallengeName>,
     /// <p>The challenge response.</p>
+    #[doc(hidden)]
     pub challenge_response: std::option::Option<crate::model::ChallengeResponse>,
 }
 impl ChallengeResponseType {
@@ -11262,11 +11489,10 @@ impl std::fmt::Debug for ChallengeResponseType {
         formatter.finish()
     }
 }
-/// See [`ChallengeResponseType`](crate::model::ChallengeResponseType)
+/// See [`ChallengeResponseType`](crate::model::ChallengeResponseType).
 pub mod challenge_response_type {
 
-    /// A builder for [`ChallengeResponseType`](crate::model::ChallengeResponseType)
-    #[non_exhaustive]
+    /// A builder for [`ChallengeResponseType`](crate::model::ChallengeResponseType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) challenge_name: std::option::Option<crate::model::ChallengeName>,
@@ -11299,7 +11525,7 @@ pub mod challenge_response_type {
             self.challenge_response = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChallengeResponseType`](crate::model::ChallengeResponseType)
+        /// Consumes the builder and constructs a [`ChallengeResponseType`](crate::model::ChallengeResponseType).
         pub fn build(self) -> crate::model::ChallengeResponseType {
             crate::model::ChallengeResponseType {
                 challenge_name: self.challenge_name,
@@ -11309,7 +11535,7 @@ pub mod challenge_response_type {
     }
 }
 impl ChallengeResponseType {
-    /// Creates a new builder-style object to manufacture [`ChallengeResponseType`](crate::model::ChallengeResponseType)
+    /// Creates a new builder-style object to manufacture [`ChallengeResponseType`](crate::model::ChallengeResponseType).
     pub fn builder() -> crate::model::challenge_response_type::Builder {
         crate::model::challenge_response_type::Builder::default()
     }
@@ -11430,10 +11656,13 @@ impl AsRef<str> for ChallengeName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventRiskType {
     /// <p>The risk decision.</p>
+    #[doc(hidden)]
     pub risk_decision: std::option::Option<crate::model::RiskDecisionType>,
     /// <p>The risk level.</p>
+    #[doc(hidden)]
     pub risk_level: std::option::Option<crate::model::RiskLevelType>,
     /// <p>Indicates whether compromised credentials were detected during an authentication event.</p>
+    #[doc(hidden)]
     pub compromised_credentials_detected: std::option::Option<bool>,
 }
 impl EventRiskType {
@@ -11462,11 +11691,10 @@ impl std::fmt::Debug for EventRiskType {
         formatter.finish()
     }
 }
-/// See [`EventRiskType`](crate::model::EventRiskType)
+/// See [`EventRiskType`](crate::model::EventRiskType).
 pub mod event_risk_type {
 
-    /// A builder for [`EventRiskType`](crate::model::EventRiskType)
-    #[non_exhaustive]
+    /// A builder for [`EventRiskType`](crate::model::EventRiskType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) risk_decision: std::option::Option<crate::model::RiskDecisionType>,
@@ -11513,7 +11741,7 @@ pub mod event_risk_type {
             self.compromised_credentials_detected = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventRiskType`](crate::model::EventRiskType)
+        /// Consumes the builder and constructs a [`EventRiskType`](crate::model::EventRiskType).
         pub fn build(self) -> crate::model::EventRiskType {
             crate::model::EventRiskType {
                 risk_decision: self.risk_decision,
@@ -11524,7 +11752,7 @@ pub mod event_risk_type {
     }
 }
 impl EventRiskType {
-    /// Creates a new builder-style object to manufacture [`EventRiskType`](crate::model::EventRiskType)
+    /// Creates a new builder-style object to manufacture [`EventRiskType`](crate::model::EventRiskType).
     pub fn builder() -> crate::model::event_risk_type::Builder {
         crate::model::event_risk_type::Builder::default()
     }
@@ -11767,10 +11995,13 @@ impl AsRef<str> for EventType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProviderUserIdentifierType {
     /// <p>The name of the provider, such as Facebook, Google, or Login with Amazon.</p>
+    #[doc(hidden)]
     pub provider_name: std::option::Option<std::string::String>,
     /// <p>The name of the provider attribute to link to, such as <code>NameID</code>.</p>
+    #[doc(hidden)]
     pub provider_attribute_name: std::option::Option<std::string::String>,
     /// <p>The value of the provider attribute to link to, such as <code>xxxxx_account</code>.</p>
+    #[doc(hidden)]
     pub provider_attribute_value: std::option::Option<std::string::String>,
 }
 impl ProviderUserIdentifierType {
@@ -11796,11 +12027,10 @@ impl std::fmt::Debug for ProviderUserIdentifierType {
         formatter.finish()
     }
 }
-/// See [`ProviderUserIdentifierType`](crate::model::ProviderUserIdentifierType)
+/// See [`ProviderUserIdentifierType`](crate::model::ProviderUserIdentifierType).
 pub mod provider_user_identifier_type {
 
-    /// A builder for [`ProviderUserIdentifierType`](crate::model::ProviderUserIdentifierType)
-    #[non_exhaustive]
+    /// A builder for [`ProviderUserIdentifierType`](crate::model::ProviderUserIdentifierType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) provider_name: std::option::Option<std::string::String>,
@@ -11847,7 +12077,7 @@ pub mod provider_user_identifier_type {
             self.provider_attribute_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProviderUserIdentifierType`](crate::model::ProviderUserIdentifierType)
+        /// Consumes the builder and constructs a [`ProviderUserIdentifierType`](crate::model::ProviderUserIdentifierType).
         pub fn build(self) -> crate::model::ProviderUserIdentifierType {
             crate::model::ProviderUserIdentifierType {
                 provider_name: self.provider_name,
@@ -11858,7 +12088,7 @@ pub mod provider_user_identifier_type {
     }
 }
 impl ProviderUserIdentifierType {
-    /// Creates a new builder-style object to manufacture [`ProviderUserIdentifierType`](crate::model::ProviderUserIdentifierType)
+    /// Creates a new builder-style object to manufacture [`ProviderUserIdentifierType`](crate::model::ProviderUserIdentifierType).
     pub fn builder() -> crate::model::provider_user_identifier_type::Builder {
         crate::model::provider_user_identifier_type::Builder::default()
     }

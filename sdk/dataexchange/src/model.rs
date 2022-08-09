@@ -126,6 +126,7 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Event {
     /// <p>What occurs to start the revision publish action.</p>
+    #[doc(hidden)]
     pub revision_published: std::option::Option<crate::model::RevisionPublished>,
 }
 impl Event {
@@ -141,11 +142,10 @@ impl std::fmt::Debug for Event {
         formatter.finish()
     }
 }
-/// See [`Event`](crate::model::Event)
+/// See [`Event`](crate::model::Event).
 pub mod event {
 
-    /// A builder for [`Event`](crate::model::Event)
-    #[non_exhaustive]
+    /// A builder for [`Event`](crate::model::Event).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) revision_published: std::option::Option<crate::model::RevisionPublished>,
@@ -164,7 +164,7 @@ pub mod event {
             self.revision_published = input;
             self
         }
-        /// Consumes the builder and constructs a [`Event`](crate::model::Event)
+        /// Consumes the builder and constructs a [`Event`](crate::model::Event).
         pub fn build(self) -> crate::model::Event {
             crate::model::Event {
                 revision_published: self.revision_published,
@@ -173,7 +173,7 @@ pub mod event {
     }
 }
 impl Event {
-    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event)
+    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event).
     pub fn builder() -> crate::model::event::Builder {
         crate::model::event::Builder::default()
     }
@@ -184,6 +184,7 @@ impl Event {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RevisionPublished {
     /// <p>The data set ID of the published revision.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
 }
 impl RevisionPublished {
@@ -199,11 +200,10 @@ impl std::fmt::Debug for RevisionPublished {
         formatter.finish()
     }
 }
-/// See [`RevisionPublished`](crate::model::RevisionPublished)
+/// See [`RevisionPublished`](crate::model::RevisionPublished).
 pub mod revision_published {
 
-    /// A builder for [`RevisionPublished`](crate::model::RevisionPublished)
-    #[non_exhaustive]
+    /// A builder for [`RevisionPublished`](crate::model::RevisionPublished).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_set_id: std::option::Option<std::string::String>,
@@ -219,7 +219,7 @@ pub mod revision_published {
             self.data_set_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RevisionPublished`](crate::model::RevisionPublished)
+        /// Consumes the builder and constructs a [`RevisionPublished`](crate::model::RevisionPublished).
         pub fn build(self) -> crate::model::RevisionPublished {
             crate::model::RevisionPublished {
                 data_set_id: self.data_set_id,
@@ -228,7 +228,7 @@ pub mod revision_published {
     }
 }
 impl RevisionPublished {
-    /// Creates a new builder-style object to manufacture [`RevisionPublished`](crate::model::RevisionPublished)
+    /// Creates a new builder-style object to manufacture [`RevisionPublished`](crate::model::RevisionPublished).
     pub fn builder() -> crate::model::revision_published::Builder {
         crate::model::revision_published::Builder::default()
     }
@@ -239,6 +239,7 @@ impl RevisionPublished {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Action {
     /// <p>Details for the export revision to Amazon S3 action.</p>
+    #[doc(hidden)]
     pub export_revision_to_s3:
         std::option::Option<crate::model::AutoExportRevisionToS3RequestDetails>,
 }
@@ -257,11 +258,10 @@ impl std::fmt::Debug for Action {
         formatter.finish()
     }
 }
-/// See [`Action`](crate::model::Action)
+/// See [`Action`](crate::model::Action).
 pub mod action {
 
-    /// A builder for [`Action`](crate::model::Action)
-    #[non_exhaustive]
+    /// A builder for [`Action`](crate::model::Action).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_revision_to_s3:
@@ -284,7 +284,7 @@ pub mod action {
             self.export_revision_to_s3 = input;
             self
         }
-        /// Consumes the builder and constructs a [`Action`](crate::model::Action)
+        /// Consumes the builder and constructs a [`Action`](crate::model::Action).
         pub fn build(self) -> crate::model::Action {
             crate::model::Action {
                 export_revision_to_s3: self.export_revision_to_s3,
@@ -293,7 +293,7 @@ pub mod action {
     }
 }
 impl Action {
-    /// Creates a new builder-style object to manufacture [`Action`](crate::model::Action)
+    /// Creates a new builder-style object to manufacture [`Action`](crate::model::Action).
     pub fn builder() -> crate::model::action::Builder {
         crate::model::action::Builder::default()
     }
@@ -304,8 +304,10 @@ impl Action {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoExportRevisionToS3RequestDetails {
     /// <p>Encryption configuration for the auto export job.</p>
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::ExportServerSideEncryption>,
     /// <p>A revision destination is the Amazon S3 bucket folder destination to where the export will be sent.</p>
+    #[doc(hidden)]
     pub revision_destination: std::option::Option<crate::model::AutoExportRevisionDestinationEntry>,
 }
 impl AutoExportRevisionToS3RequestDetails {
@@ -328,11 +330,10 @@ impl std::fmt::Debug for AutoExportRevisionToS3RequestDetails {
         formatter.finish()
     }
 }
-/// See [`AutoExportRevisionToS3RequestDetails`](crate::model::AutoExportRevisionToS3RequestDetails)
+/// See [`AutoExportRevisionToS3RequestDetails`](crate::model::AutoExportRevisionToS3RequestDetails).
 pub mod auto_export_revision_to_s3_request_details {
 
-    /// A builder for [`AutoExportRevisionToS3RequestDetails`](crate::model::AutoExportRevisionToS3RequestDetails)
-    #[non_exhaustive]
+    /// A builder for [`AutoExportRevisionToS3RequestDetails`](crate::model::AutoExportRevisionToS3RequestDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encryption: std::option::Option<crate::model::ExportServerSideEncryption>,
@@ -369,7 +370,7 @@ pub mod auto_export_revision_to_s3_request_details {
             self.revision_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoExportRevisionToS3RequestDetails`](crate::model::AutoExportRevisionToS3RequestDetails)
+        /// Consumes the builder and constructs a [`AutoExportRevisionToS3RequestDetails`](crate::model::AutoExportRevisionToS3RequestDetails).
         pub fn build(self) -> crate::model::AutoExportRevisionToS3RequestDetails {
             crate::model::AutoExportRevisionToS3RequestDetails {
                 encryption: self.encryption,
@@ -379,7 +380,7 @@ pub mod auto_export_revision_to_s3_request_details {
     }
 }
 impl AutoExportRevisionToS3RequestDetails {
-    /// Creates a new builder-style object to manufacture [`AutoExportRevisionToS3RequestDetails`](crate::model::AutoExportRevisionToS3RequestDetails)
+    /// Creates a new builder-style object to manufacture [`AutoExportRevisionToS3RequestDetails`](crate::model::AutoExportRevisionToS3RequestDetails).
     pub fn builder() -> crate::model::auto_export_revision_to_s3_request_details::Builder {
         crate::model::auto_export_revision_to_s3_request_details::Builder::default()
     }
@@ -390,8 +391,10 @@ impl AutoExportRevisionToS3RequestDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoExportRevisionDestinationEntry {
     /// <p>The S3 bucket that is the destination for the event action.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>A string representing the pattern for generated names of the individual assets in the revision. For more information about key patterns, see <a href="https://docs.aws.amazon.com/data-exchange/latest/userguide/jobs.html#revision-export-keypatterns">Key patterns when exporting revisions</a>.</p>
+    #[doc(hidden)]
     pub key_pattern: std::option::Option<std::string::String>,
 }
 impl AutoExportRevisionDestinationEntry {
@@ -412,11 +415,10 @@ impl std::fmt::Debug for AutoExportRevisionDestinationEntry {
         formatter.finish()
     }
 }
-/// See [`AutoExportRevisionDestinationEntry`](crate::model::AutoExportRevisionDestinationEntry)
+/// See [`AutoExportRevisionDestinationEntry`](crate::model::AutoExportRevisionDestinationEntry).
 pub mod auto_export_revision_destination_entry {
 
-    /// A builder for [`AutoExportRevisionDestinationEntry`](crate::model::AutoExportRevisionDestinationEntry)
-    #[non_exhaustive]
+    /// A builder for [`AutoExportRevisionDestinationEntry`](crate::model::AutoExportRevisionDestinationEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -443,7 +445,7 @@ pub mod auto_export_revision_destination_entry {
             self.key_pattern = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoExportRevisionDestinationEntry`](crate::model::AutoExportRevisionDestinationEntry)
+        /// Consumes the builder and constructs a [`AutoExportRevisionDestinationEntry`](crate::model::AutoExportRevisionDestinationEntry).
         pub fn build(self) -> crate::model::AutoExportRevisionDestinationEntry {
             crate::model::AutoExportRevisionDestinationEntry {
                 bucket: self.bucket,
@@ -453,7 +455,7 @@ pub mod auto_export_revision_destination_entry {
     }
 }
 impl AutoExportRevisionDestinationEntry {
-    /// Creates a new builder-style object to manufacture [`AutoExportRevisionDestinationEntry`](crate::model::AutoExportRevisionDestinationEntry)
+    /// Creates a new builder-style object to manufacture [`AutoExportRevisionDestinationEntry`](crate::model::AutoExportRevisionDestinationEntry).
     pub fn builder() -> crate::model::auto_export_revision_destination_entry::Builder {
         crate::model::auto_export_revision_destination_entry::Builder::default()
     }
@@ -464,8 +466,10 @@ impl AutoExportRevisionDestinationEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportServerSideEncryption {
     /// <p>The Amazon Resource Name (ARN) of the AWS KMS key you want to use to encrypt the Amazon S3 objects. This parameter is required if you choose aws:kms as an encryption type.</p>
+    #[doc(hidden)]
     pub kms_key_arn: std::option::Option<std::string::String>,
     /// <p>The type of server side encryption used for encrypting the objects in Amazon S3.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ServerSideEncryptionTypes>,
 }
 impl ExportServerSideEncryption {
@@ -486,11 +490,10 @@ impl std::fmt::Debug for ExportServerSideEncryption {
         formatter.finish()
     }
 }
-/// See [`ExportServerSideEncryption`](crate::model::ExportServerSideEncryption)
+/// See [`ExportServerSideEncryption`](crate::model::ExportServerSideEncryption).
 pub mod export_server_side_encryption {
 
-    /// A builder for [`ExportServerSideEncryption`](crate::model::ExportServerSideEncryption)
-    #[non_exhaustive]
+    /// A builder for [`ExportServerSideEncryption`](crate::model::ExportServerSideEncryption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) kms_key_arn: std::option::Option<std::string::String>,
@@ -520,7 +523,7 @@ pub mod export_server_side_encryption {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportServerSideEncryption`](crate::model::ExportServerSideEncryption)
+        /// Consumes the builder and constructs a [`ExportServerSideEncryption`](crate::model::ExportServerSideEncryption).
         pub fn build(self) -> crate::model::ExportServerSideEncryption {
             crate::model::ExportServerSideEncryption {
                 kms_key_arn: self.kms_key_arn,
@@ -530,7 +533,7 @@ pub mod export_server_side_encryption {
     }
 }
 impl ExportServerSideEncryption {
-    /// Creates a new builder-style object to manufacture [`ExportServerSideEncryption`](crate::model::ExportServerSideEncryption)
+    /// Creates a new builder-style object to manufacture [`ExportServerSideEncryption`](crate::model::ExportServerSideEncryption).
     pub fn builder() -> crate::model::export_server_side_encryption::Builder {
         crate::model::export_server_side_encryption::Builder::default()
     }
@@ -596,6 +599,7 @@ impl AsRef<str> for ServerSideEncryptionTypes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OriginDetails {
     /// <p>The product ID of the origin of the data set.</p>
+    #[doc(hidden)]
     pub product_id: std::option::Option<std::string::String>,
 }
 impl OriginDetails {
@@ -611,11 +615,10 @@ impl std::fmt::Debug for OriginDetails {
         formatter.finish()
     }
 }
-/// See [`OriginDetails`](crate::model::OriginDetails)
+/// See [`OriginDetails`](crate::model::OriginDetails).
 pub mod origin_details {
 
-    /// A builder for [`OriginDetails`](crate::model::OriginDetails)
-    #[non_exhaustive]
+    /// A builder for [`OriginDetails`](crate::model::OriginDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) product_id: std::option::Option<std::string::String>,
@@ -631,7 +634,7 @@ pub mod origin_details {
             self.product_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`OriginDetails`](crate::model::OriginDetails)
+        /// Consumes the builder and constructs a [`OriginDetails`](crate::model::OriginDetails).
         pub fn build(self) -> crate::model::OriginDetails {
             crate::model::OriginDetails {
                 product_id: self.product_id,
@@ -640,7 +643,7 @@ pub mod origin_details {
     }
 }
 impl OriginDetails {
-    /// Creates a new builder-style object to manufacture [`OriginDetails`](crate::model::OriginDetails)
+    /// Creates a new builder-style object to manufacture [`OriginDetails`](crate::model::OriginDetails).
     pub fn builder() -> crate::model::origin_details::Builder {
         crate::model::origin_details::Builder::default()
     }
@@ -765,10 +768,13 @@ impl AsRef<str> for AssetType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssetDetails {
     /// <p>The S3 object that is the asset.</p>
+    #[doc(hidden)]
     pub s3_snapshot_asset: std::option::Option<crate::model::S3SnapshotAsset>,
     /// <p>The Amazon Redshift datashare that is the asset.</p>
+    #[doc(hidden)]
     pub redshift_data_share_asset: std::option::Option<crate::model::RedshiftDataShareAsset>,
     /// <p>Information about the API Gateway API asset.</p>
+    #[doc(hidden)]
     pub api_gateway_api_asset: std::option::Option<crate::model::ApiGatewayApiAsset>,
 }
 impl AssetDetails {
@@ -796,11 +802,10 @@ impl std::fmt::Debug for AssetDetails {
         formatter.finish()
     }
 }
-/// See [`AssetDetails`](crate::model::AssetDetails)
+/// See [`AssetDetails`](crate::model::AssetDetails).
 pub mod asset_details {
 
-    /// A builder for [`AssetDetails`](crate::model::AssetDetails)
-    #[non_exhaustive]
+    /// A builder for [`AssetDetails`](crate::model::AssetDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_snapshot_asset: std::option::Option<crate::model::S3SnapshotAsset>,
@@ -851,7 +856,7 @@ pub mod asset_details {
             self.api_gateway_api_asset = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssetDetails`](crate::model::AssetDetails)
+        /// Consumes the builder and constructs a [`AssetDetails`](crate::model::AssetDetails).
         pub fn build(self) -> crate::model::AssetDetails {
             crate::model::AssetDetails {
                 s3_snapshot_asset: self.s3_snapshot_asset,
@@ -862,7 +867,7 @@ pub mod asset_details {
     }
 }
 impl AssetDetails {
-    /// Creates a new builder-style object to manufacture [`AssetDetails`](crate::model::AssetDetails)
+    /// Creates a new builder-style object to manufacture [`AssetDetails`](crate::model::AssetDetails).
     pub fn builder() -> crate::model::asset_details::Builder {
         crate::model::asset_details::Builder::default()
     }
@@ -873,22 +878,31 @@ impl AssetDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApiGatewayApiAsset {
     /// <p>The API description of the API asset.</p>
+    #[doc(hidden)]
     pub api_description: std::option::Option<std::string::String>,
     /// <p>The API endpoint of the API asset.</p>
+    #[doc(hidden)]
     pub api_endpoint: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the API asset.</p>
+    #[doc(hidden)]
     pub api_id: std::option::Option<std::string::String>,
     /// <p>The API key of the API asset.</p>
+    #[doc(hidden)]
     pub api_key: std::option::Option<std::string::String>,
     /// <p>The API name of the API asset.</p>
+    #[doc(hidden)]
     pub api_name: std::option::Option<std::string::String>,
     /// <p>The download URL of the API specification of the API asset.</p>
+    #[doc(hidden)]
     pub api_specification_download_url: std::option::Option<std::string::String>,
     /// <p>The date and time that the upload URL expires, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub api_specification_download_url_expires_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The protocol type of the API asset.</p>
+    #[doc(hidden)]
     pub protocol_type: std::option::Option<crate::model::ProtocolType>,
     /// <p>The stage of the API asset.</p>
+    #[doc(hidden)]
     pub stage: std::option::Option<std::string::String>,
 }
 impl ApiGatewayApiAsset {
@@ -952,11 +966,10 @@ impl std::fmt::Debug for ApiGatewayApiAsset {
         formatter.finish()
     }
 }
-/// See [`ApiGatewayApiAsset`](crate::model::ApiGatewayApiAsset)
+/// See [`ApiGatewayApiAsset`](crate::model::ApiGatewayApiAsset).
 pub mod api_gateway_api_asset {
 
-    /// A builder for [`ApiGatewayApiAsset`](crate::model::ApiGatewayApiAsset)
-    #[non_exhaustive]
+    /// A builder for [`ApiGatewayApiAsset`](crate::model::ApiGatewayApiAsset).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_description: std::option::Option<std::string::String>,
@@ -1079,7 +1092,7 @@ pub mod api_gateway_api_asset {
             self.stage = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApiGatewayApiAsset`](crate::model::ApiGatewayApiAsset)
+        /// Consumes the builder and constructs a [`ApiGatewayApiAsset`](crate::model::ApiGatewayApiAsset).
         pub fn build(self) -> crate::model::ApiGatewayApiAsset {
             crate::model::ApiGatewayApiAsset {
                 api_description: self.api_description,
@@ -1097,7 +1110,7 @@ pub mod api_gateway_api_asset {
     }
 }
 impl ApiGatewayApiAsset {
-    /// Creates a new builder-style object to manufacture [`ApiGatewayApiAsset`](crate::model::ApiGatewayApiAsset)
+    /// Creates a new builder-style object to manufacture [`ApiGatewayApiAsset`](crate::model::ApiGatewayApiAsset).
     pub fn builder() -> crate::model::api_gateway_api_asset::Builder {
         crate::model::api_gateway_api_asset::Builder::default()
     }
@@ -1159,6 +1172,7 @@ impl AsRef<str> for ProtocolType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RedshiftDataShareAsset {
     /// The Amazon Resource Name (ARN) of the datashare asset.
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl RedshiftDataShareAsset {
@@ -1174,11 +1188,10 @@ impl std::fmt::Debug for RedshiftDataShareAsset {
         formatter.finish()
     }
 }
-/// See [`RedshiftDataShareAsset`](crate::model::RedshiftDataShareAsset)
+/// See [`RedshiftDataShareAsset`](crate::model::RedshiftDataShareAsset).
 pub mod redshift_data_share_asset {
 
-    /// A builder for [`RedshiftDataShareAsset`](crate::model::RedshiftDataShareAsset)
-    #[non_exhaustive]
+    /// A builder for [`RedshiftDataShareAsset`](crate::model::RedshiftDataShareAsset).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1194,14 +1207,14 @@ pub mod redshift_data_share_asset {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RedshiftDataShareAsset`](crate::model::RedshiftDataShareAsset)
+        /// Consumes the builder and constructs a [`RedshiftDataShareAsset`](crate::model::RedshiftDataShareAsset).
         pub fn build(self) -> crate::model::RedshiftDataShareAsset {
             crate::model::RedshiftDataShareAsset { arn: self.arn }
         }
     }
 }
 impl RedshiftDataShareAsset {
-    /// Creates a new builder-style object to manufacture [`RedshiftDataShareAsset`](crate::model::RedshiftDataShareAsset)
+    /// Creates a new builder-style object to manufacture [`RedshiftDataShareAsset`](crate::model::RedshiftDataShareAsset).
     pub fn builder() -> crate::model::redshift_data_share_asset::Builder {
         crate::model::redshift_data_share_asset::Builder::default()
     }
@@ -1212,6 +1225,7 @@ impl RedshiftDataShareAsset {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3SnapshotAsset {
     /// <p>The size of the S3 object that is the object.</p>
+    #[doc(hidden)]
     pub size: f64,
 }
 impl S3SnapshotAsset {
@@ -1227,11 +1241,10 @@ impl std::fmt::Debug for S3SnapshotAsset {
         formatter.finish()
     }
 }
-/// See [`S3SnapshotAsset`](crate::model::S3SnapshotAsset)
+/// See [`S3SnapshotAsset`](crate::model::S3SnapshotAsset).
 pub mod s3_snapshot_asset {
 
-    /// A builder for [`S3SnapshotAsset`](crate::model::S3SnapshotAsset)
-    #[non_exhaustive]
+    /// A builder for [`S3SnapshotAsset`](crate::model::S3SnapshotAsset).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) size: std::option::Option<f64>,
@@ -1247,7 +1260,7 @@ pub mod s3_snapshot_asset {
             self.size = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3SnapshotAsset`](crate::model::S3SnapshotAsset)
+        /// Consumes the builder and constructs a [`S3SnapshotAsset`](crate::model::S3SnapshotAsset).
         pub fn build(self) -> crate::model::S3SnapshotAsset {
             crate::model::S3SnapshotAsset {
                 size: self.size.unwrap_or_default(),
@@ -1256,7 +1269,7 @@ pub mod s3_snapshot_asset {
     }
 }
 impl S3SnapshotAsset {
-    /// Creates a new builder-style object to manufacture [`S3SnapshotAsset`](crate::model::S3SnapshotAsset)
+    /// Creates a new builder-style object to manufacture [`S3SnapshotAsset`](crate::model::S3SnapshotAsset).
     pub fn builder() -> crate::model::s3_snapshot_asset::Builder {
         crate::model::s3_snapshot_asset::Builder::default()
     }
@@ -1267,24 +1280,34 @@ impl S3SnapshotAsset {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssetEntry {
     /// <p>The ARN for the asset.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Information about the asset.</p>
+    #[doc(hidden)]
     pub asset_details: std::option::Option<crate::model::AssetDetails>,
     /// <p>The type of asset that is added to a data set.</p>
+    #[doc(hidden)]
     pub asset_type: std::option::Option<crate::model::AssetType>,
     /// <p>The date and time that the asset was created, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The unique identifier for the data set associated with this asset.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the asset.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name. When exporting to Amazon S3, the asset name is used as default target S3 object key. When importing from Amazon API Gateway API, the API name is used as the asset name. When importing from Amazon Redshift, the datashare name is used as the asset name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the revision associated with this asset.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
     /// <p>The asset ID of the owned asset corresponding to the entitled asset being viewed. This parameter is returned when an asset owner is viewing the entitled copy of its owned asset.</p>
+    #[doc(hidden)]
     pub source_id: std::option::Option<std::string::String>,
     /// <p>The date and time that the asset was last updated, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AssetEntry {
@@ -1345,11 +1368,10 @@ impl std::fmt::Debug for AssetEntry {
         formatter.finish()
     }
 }
-/// See [`AssetEntry`](crate::model::AssetEntry)
+/// See [`AssetEntry`](crate::model::AssetEntry).
 pub mod asset_entry {
 
-    /// A builder for [`AssetEntry`](crate::model::AssetEntry)
-    #[non_exhaustive]
+    /// A builder for [`AssetEntry`](crate::model::AssetEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1476,7 +1498,7 @@ pub mod asset_entry {
             self.updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssetEntry`](crate::model::AssetEntry)
+        /// Consumes the builder and constructs a [`AssetEntry`](crate::model::AssetEntry).
         pub fn build(self) -> crate::model::AssetEntry {
             crate::model::AssetEntry {
                 arn: self.arn,
@@ -1494,7 +1516,7 @@ pub mod asset_entry {
     }
 }
 impl AssetEntry {
-    /// Creates a new builder-style object to manufacture [`AssetEntry`](crate::model::AssetEntry)
+    /// Creates a new builder-style object to manufacture [`AssetEntry`](crate::model::AssetEntry).
     pub fn builder() -> crate::model::asset_entry::Builder {
         crate::model::asset_entry::Builder::default()
     }
@@ -1505,20 +1527,28 @@ impl AssetEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobEntry {
     /// <p>The ARN for the job.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date and time that the job was created, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Details of the operation to be performed by the job, such as export destination details or import source details.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<crate::model::ResponseDetails>,
     /// <p>Errors for jobs.</p>
+    #[doc(hidden)]
     pub errors: std::option::Option<std::vec::Vec<crate::model::JobError>>,
     /// <p>The unique identifier for the job.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The state of the job.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::State>,
     /// <p>The job type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
     /// <p>The date and time that the job was last updated, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl JobEntry {
@@ -1569,11 +1599,10 @@ impl std::fmt::Debug for JobEntry {
         formatter.finish()
     }
 }
-/// See [`JobEntry`](crate::model::JobEntry)
+/// See [`JobEntry`](crate::model::JobEntry).
 pub mod job_entry {
 
-    /// A builder for [`JobEntry`](crate::model::JobEntry)
-    #[non_exhaustive]
+    /// A builder for [`JobEntry`](crate::model::JobEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1684,7 +1713,7 @@ pub mod job_entry {
             self.updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobEntry`](crate::model::JobEntry)
+        /// Consumes the builder and constructs a [`JobEntry`](crate::model::JobEntry).
         pub fn build(self) -> crate::model::JobEntry {
             crate::model::JobEntry {
                 arn: self.arn,
@@ -1700,7 +1729,7 @@ pub mod job_entry {
     }
 }
 impl JobEntry {
-    /// Creates a new builder-style object to manufacture [`JobEntry`](crate::model::JobEntry)
+    /// Creates a new builder-style object to manufacture [`JobEntry`](crate::model::JobEntry).
     pub fn builder() -> crate::model::job_entry::Builder {
         crate::model::job_entry::Builder::default()
     }
@@ -1872,18 +1901,25 @@ impl AsRef<str> for State {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobError {
     /// The code for the job error.
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::Code>,
     /// <p>The details about the job error.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<crate::model::Details>,
     /// <p>The name of the limit that was reached.</p>
+    #[doc(hidden)]
     pub limit_name: std::option::Option<crate::model::JobErrorLimitName>,
     /// The value of the exceeded limit.
+    #[doc(hidden)]
     pub limit_value: f64,
     /// The message related to the job error.
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// The unique identifier for the resource related to the error.
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// The type of resource related to the error.
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::JobErrorResourceTypes>,
 }
 impl JobError {
@@ -1929,11 +1965,10 @@ impl std::fmt::Debug for JobError {
         formatter.finish()
     }
 }
-/// See [`JobError`](crate::model::JobError)
+/// See [`JobError`](crate::model::JobError).
 pub mod job_error {
 
-    /// A builder for [`JobError`](crate::model::JobError)
-    #[non_exhaustive]
+    /// A builder for [`JobError`](crate::model::JobError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::Code>,
@@ -2021,7 +2056,7 @@ pub mod job_error {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobError`](crate::model::JobError)
+        /// Consumes the builder and constructs a [`JobError`](crate::model::JobError).
         pub fn build(self) -> crate::model::JobError {
             crate::model::JobError {
                 code: self.code,
@@ -2036,7 +2071,7 @@ pub mod job_error {
     }
 }
 impl JobError {
-    /// Creates a new builder-style object to manufacture [`JobError`](crate::model::JobError)
+    /// Creates a new builder-style object to manufacture [`JobError`](crate::model::JobError).
     pub fn builder() -> crate::model::job_error::Builder {
         crate::model::job_error::Builder::default()
     }
@@ -2173,9 +2208,11 @@ impl AsRef<str> for JobErrorLimitName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Details {
     /// <p>Information about the job error.</p>
+    #[doc(hidden)]
     pub import_asset_from_signed_url_job_error_details:
         std::option::Option<crate::model::ImportAssetFromSignedUrlJobErrorDetails>,
     /// <p>Information about the job error.</p>
+    #[doc(hidden)]
     pub import_assets_from_s3_job_error_details:
         std::option::Option<std::vec::Vec<crate::model::AssetSourceEntry>>,
 }
@@ -2207,11 +2244,10 @@ impl std::fmt::Debug for Details {
         formatter.finish()
     }
 }
-/// See [`Details`](crate::model::Details)
+/// See [`Details`](crate::model::Details).
 pub mod details {
 
-    /// A builder for [`Details`](crate::model::Details)
-    #[non_exhaustive]
+    /// A builder for [`Details`](crate::model::Details).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) import_asset_from_signed_url_job_error_details:
@@ -2260,7 +2296,7 @@ pub mod details {
             self.import_assets_from_s3_job_error_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`Details`](crate::model::Details)
+        /// Consumes the builder and constructs a [`Details`](crate::model::Details).
         pub fn build(self) -> crate::model::Details {
             crate::model::Details {
                 import_asset_from_signed_url_job_error_details: self
@@ -2272,7 +2308,7 @@ pub mod details {
     }
 }
 impl Details {
-    /// Creates a new builder-style object to manufacture [`Details`](crate::model::Details)
+    /// Creates a new builder-style object to manufacture [`Details`](crate::model::Details).
     pub fn builder() -> crate::model::details::Builder {
         crate::model::details::Builder::default()
     }
@@ -2283,8 +2319,10 @@ impl Details {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssetSourceEntry {
     /// <p>The S3 bucket that's part of the source of the asset.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The name of the object in Amazon S3 for the asset.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
 }
 impl AssetSourceEntry {
@@ -2305,11 +2343,10 @@ impl std::fmt::Debug for AssetSourceEntry {
         formatter.finish()
     }
 }
-/// See [`AssetSourceEntry`](crate::model::AssetSourceEntry)
+/// See [`AssetSourceEntry`](crate::model::AssetSourceEntry).
 pub mod asset_source_entry {
 
-    /// A builder for [`AssetSourceEntry`](crate::model::AssetSourceEntry)
-    #[non_exhaustive]
+    /// A builder for [`AssetSourceEntry`](crate::model::AssetSourceEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -2336,7 +2373,7 @@ pub mod asset_source_entry {
             self.key = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssetSourceEntry`](crate::model::AssetSourceEntry)
+        /// Consumes the builder and constructs a [`AssetSourceEntry`](crate::model::AssetSourceEntry).
         pub fn build(self) -> crate::model::AssetSourceEntry {
             crate::model::AssetSourceEntry {
                 bucket: self.bucket,
@@ -2346,7 +2383,7 @@ pub mod asset_source_entry {
     }
 }
 impl AssetSourceEntry {
-    /// Creates a new builder-style object to manufacture [`AssetSourceEntry`](crate::model::AssetSourceEntry)
+    /// Creates a new builder-style object to manufacture [`AssetSourceEntry`](crate::model::AssetSourceEntry).
     pub fn builder() -> crate::model::asset_source_entry::Builder {
         crate::model::asset_source_entry::Builder::default()
     }
@@ -2357,6 +2394,7 @@ impl AssetSourceEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportAssetFromSignedUrlJobErrorDetails {
     /// <p>Information about the job error.</p>
+    #[doc(hidden)]
     pub asset_name: std::option::Option<std::string::String>,
 }
 impl ImportAssetFromSignedUrlJobErrorDetails {
@@ -2372,11 +2410,10 @@ impl std::fmt::Debug for ImportAssetFromSignedUrlJobErrorDetails {
         formatter.finish()
     }
 }
-/// See [`ImportAssetFromSignedUrlJobErrorDetails`](crate::model::ImportAssetFromSignedUrlJobErrorDetails)
+/// See [`ImportAssetFromSignedUrlJobErrorDetails`](crate::model::ImportAssetFromSignedUrlJobErrorDetails).
 pub mod import_asset_from_signed_url_job_error_details {
 
-    /// A builder for [`ImportAssetFromSignedUrlJobErrorDetails`](crate::model::ImportAssetFromSignedUrlJobErrorDetails)
-    #[non_exhaustive]
+    /// A builder for [`ImportAssetFromSignedUrlJobErrorDetails`](crate::model::ImportAssetFromSignedUrlJobErrorDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asset_name: std::option::Option<std::string::String>,
@@ -2392,7 +2429,7 @@ pub mod import_asset_from_signed_url_job_error_details {
             self.asset_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportAssetFromSignedUrlJobErrorDetails`](crate::model::ImportAssetFromSignedUrlJobErrorDetails)
+        /// Consumes the builder and constructs a [`ImportAssetFromSignedUrlJobErrorDetails`](crate::model::ImportAssetFromSignedUrlJobErrorDetails).
         pub fn build(self) -> crate::model::ImportAssetFromSignedUrlJobErrorDetails {
             crate::model::ImportAssetFromSignedUrlJobErrorDetails {
                 asset_name: self.asset_name,
@@ -2401,7 +2438,7 @@ pub mod import_asset_from_signed_url_job_error_details {
     }
 }
 impl ImportAssetFromSignedUrlJobErrorDetails {
-    /// Creates a new builder-style object to manufacture [`ImportAssetFromSignedUrlJobErrorDetails`](crate::model::ImportAssetFromSignedUrlJobErrorDetails)
+    /// Creates a new builder-style object to manufacture [`ImportAssetFromSignedUrlJobErrorDetails`](crate::model::ImportAssetFromSignedUrlJobErrorDetails).
     pub fn builder() -> crate::model::import_asset_from_signed_url_job_error_details::Builder {
         crate::model::import_asset_from_signed_url_job_error_details::Builder::default()
     }
@@ -2495,22 +2532,29 @@ impl AsRef<str> for Code {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResponseDetails {
     /// <p>Details for the export to signed URL response.</p>
+    #[doc(hidden)]
     pub export_asset_to_signed_url:
         std::option::Option<crate::model::ExportAssetToSignedUrlResponseDetails>,
     /// <p>Details for the export to Amazon S3 response.</p>
+    #[doc(hidden)]
     pub export_assets_to_s3: std::option::Option<crate::model::ExportAssetsToS3ResponseDetails>,
     /// <p>Details for the export revisions to Amazon S3 response.</p>
+    #[doc(hidden)]
     pub export_revisions_to_s3:
         std::option::Option<crate::model::ExportRevisionsToS3ResponseDetails>,
     /// <p>Details for the import from signed URL response.</p>
+    #[doc(hidden)]
     pub import_asset_from_signed_url:
         std::option::Option<crate::model::ImportAssetFromSignedUrlResponseDetails>,
     /// <p>Details for the import from Amazon S3 response.</p>
+    #[doc(hidden)]
     pub import_assets_from_s3: std::option::Option<crate::model::ImportAssetsFromS3ResponseDetails>,
     /// <p>Details from an import from Amazon Redshift datashare response.</p>
+    #[doc(hidden)]
     pub import_assets_from_redshift_data_shares:
         std::option::Option<crate::model::ImportAssetsFromRedshiftDataSharesResponseDetails>,
     /// <p>The response details.</p>
+    #[doc(hidden)]
     pub import_asset_from_api_gateway_api:
         std::option::Option<crate::model::ImportAssetFromApiGatewayApiResponseDetails>,
 }
@@ -2583,11 +2627,10 @@ impl std::fmt::Debug for ResponseDetails {
         formatter.finish()
     }
 }
-/// See [`ResponseDetails`](crate::model::ResponseDetails)
+/// See [`ResponseDetails`](crate::model::ResponseDetails).
 pub mod response_details {
 
-    /// A builder for [`ResponseDetails`](crate::model::ResponseDetails)
-    #[non_exhaustive]
+    /// A builder for [`ResponseDetails`](crate::model::ResponseDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_asset_to_signed_url:
@@ -2720,7 +2763,7 @@ pub mod response_details {
             self.import_asset_from_api_gateway_api = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResponseDetails`](crate::model::ResponseDetails)
+        /// Consumes the builder and constructs a [`ResponseDetails`](crate::model::ResponseDetails).
         pub fn build(self) -> crate::model::ResponseDetails {
             crate::model::ResponseDetails {
                 export_asset_to_signed_url: self.export_asset_to_signed_url,
@@ -2736,7 +2779,7 @@ pub mod response_details {
     }
 }
 impl ResponseDetails {
-    /// Creates a new builder-style object to manufacture [`ResponseDetails`](crate::model::ResponseDetails)
+    /// Creates a new builder-style object to manufacture [`ResponseDetails`](crate::model::ResponseDetails).
     pub fn builder() -> crate::model::response_details::Builder {
         crate::model::response_details::Builder::default()
     }
@@ -2747,26 +2790,37 @@ impl ResponseDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportAssetFromApiGatewayApiResponseDetails {
     /// <p>The API description.</p>
+    #[doc(hidden)]
     pub api_description: std::option::Option<std::string::String>,
     /// <p>The API ID.</p>
+    #[doc(hidden)]
     pub api_id: std::option::Option<std::string::String>,
     /// <p>The API key.</p>
+    #[doc(hidden)]
     pub api_key: std::option::Option<std::string::String>,
     /// <p>The API name.</p>
+    #[doc(hidden)]
     pub api_name: std::option::Option<std::string::String>,
     /// <p>The Base64-encoded Md5 hash for the API asset, used to ensure the integrity of the API at that location.</p>
+    #[doc(hidden)]
     pub api_specification_md5_hash: std::option::Option<std::string::String>,
     /// <p>The upload URL of the API specification.</p>
+    #[doc(hidden)]
     pub api_specification_upload_url: std::option::Option<std::string::String>,
     /// <p>The date and time that the upload URL expires, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub api_specification_upload_url_expires_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The data set ID.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>The protocol type.</p>
+    #[doc(hidden)]
     pub protocol_type: std::option::Option<crate::model::ProtocolType>,
     /// <p>The revision ID.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
     /// <p>The API stage.</p>
+    #[doc(hidden)]
     pub stage: std::option::Option<std::string::String>,
 }
 impl ImportAssetFromApiGatewayApiResponseDetails {
@@ -2843,11 +2897,10 @@ impl std::fmt::Debug for ImportAssetFromApiGatewayApiResponseDetails {
         formatter.finish()
     }
 }
-/// See [`ImportAssetFromApiGatewayApiResponseDetails`](crate::model::ImportAssetFromApiGatewayApiResponseDetails)
+/// See [`ImportAssetFromApiGatewayApiResponseDetails`](crate::model::ImportAssetFromApiGatewayApiResponseDetails).
 pub mod import_asset_from_api_gateway_api_response_details {
 
-    /// A builder for [`ImportAssetFromApiGatewayApiResponseDetails`](crate::model::ImportAssetFromApiGatewayApiResponseDetails)
-    #[non_exhaustive]
+    /// A builder for [`ImportAssetFromApiGatewayApiResponseDetails`](crate::model::ImportAssetFromApiGatewayApiResponseDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_description: std::option::Option<std::string::String>,
@@ -2995,7 +3048,7 @@ pub mod import_asset_from_api_gateway_api_response_details {
             self.stage = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportAssetFromApiGatewayApiResponseDetails`](crate::model::ImportAssetFromApiGatewayApiResponseDetails)
+        /// Consumes the builder and constructs a [`ImportAssetFromApiGatewayApiResponseDetails`](crate::model::ImportAssetFromApiGatewayApiResponseDetails).
         pub fn build(self) -> crate::model::ImportAssetFromApiGatewayApiResponseDetails {
             crate::model::ImportAssetFromApiGatewayApiResponseDetails {
                 api_description: self.api_description,
@@ -3015,7 +3068,7 @@ pub mod import_asset_from_api_gateway_api_response_details {
     }
 }
 impl ImportAssetFromApiGatewayApiResponseDetails {
-    /// Creates a new builder-style object to manufacture [`ImportAssetFromApiGatewayApiResponseDetails`](crate::model::ImportAssetFromApiGatewayApiResponseDetails)
+    /// Creates a new builder-style object to manufacture [`ImportAssetFromApiGatewayApiResponseDetails`](crate::model::ImportAssetFromApiGatewayApiResponseDetails).
     pub fn builder() -> crate::model::import_asset_from_api_gateway_api_response_details::Builder {
         crate::model::import_asset_from_api_gateway_api_response_details::Builder::default()
     }
@@ -3026,11 +3079,14 @@ impl ImportAssetFromApiGatewayApiResponseDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportAssetsFromRedshiftDataSharesResponseDetails {
     /// A list of Amazon Redshift datashare asset sources.
+    #[doc(hidden)]
     pub asset_sources:
         std::option::Option<std::vec::Vec<crate::model::RedshiftDataShareAssetSourceEntry>>,
     /// The unique identifier for the data set associated with this import job.
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// The unique identifier for the revision associated with this import job.
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl ImportAssetsFromRedshiftDataSharesResponseDetails {
@@ -3058,11 +3114,10 @@ impl std::fmt::Debug for ImportAssetsFromRedshiftDataSharesResponseDetails {
         formatter.finish()
     }
 }
-/// See [`ImportAssetsFromRedshiftDataSharesResponseDetails`](crate::model::ImportAssetsFromRedshiftDataSharesResponseDetails)
+/// See [`ImportAssetsFromRedshiftDataSharesResponseDetails`](crate::model::ImportAssetsFromRedshiftDataSharesResponseDetails).
 pub mod import_assets_from_redshift_data_shares_response_details {
 
-    /// A builder for [`ImportAssetsFromRedshiftDataSharesResponseDetails`](crate::model::ImportAssetsFromRedshiftDataSharesResponseDetails)
-    #[non_exhaustive]
+    /// A builder for [`ImportAssetsFromRedshiftDataSharesResponseDetails`](crate::model::ImportAssetsFromRedshiftDataSharesResponseDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asset_sources:
@@ -3115,7 +3170,7 @@ pub mod import_assets_from_redshift_data_shares_response_details {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportAssetsFromRedshiftDataSharesResponseDetails`](crate::model::ImportAssetsFromRedshiftDataSharesResponseDetails)
+        /// Consumes the builder and constructs a [`ImportAssetsFromRedshiftDataSharesResponseDetails`](crate::model::ImportAssetsFromRedshiftDataSharesResponseDetails).
         pub fn build(self) -> crate::model::ImportAssetsFromRedshiftDataSharesResponseDetails {
             crate::model::ImportAssetsFromRedshiftDataSharesResponseDetails {
                 asset_sources: self.asset_sources,
@@ -3126,7 +3181,7 @@ pub mod import_assets_from_redshift_data_shares_response_details {
     }
 }
 impl ImportAssetsFromRedshiftDataSharesResponseDetails {
-    /// Creates a new builder-style object to manufacture [`ImportAssetsFromRedshiftDataSharesResponseDetails`](crate::model::ImportAssetsFromRedshiftDataSharesResponseDetails)
+    /// Creates a new builder-style object to manufacture [`ImportAssetsFromRedshiftDataSharesResponseDetails`](crate::model::ImportAssetsFromRedshiftDataSharesResponseDetails).
     pub fn builder(
     ) -> crate::model::import_assets_from_redshift_data_shares_response_details::Builder {
         crate::model::import_assets_from_redshift_data_shares_response_details::Builder::default()
@@ -3138,6 +3193,7 @@ impl ImportAssetsFromRedshiftDataSharesResponseDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RedshiftDataShareAssetSourceEntry {
     /// The Amazon Resource Name (ARN) of the datashare asset.
+    #[doc(hidden)]
     pub data_share_arn: std::option::Option<std::string::String>,
 }
 impl RedshiftDataShareAssetSourceEntry {
@@ -3153,11 +3209,10 @@ impl std::fmt::Debug for RedshiftDataShareAssetSourceEntry {
         formatter.finish()
     }
 }
-/// See [`RedshiftDataShareAssetSourceEntry`](crate::model::RedshiftDataShareAssetSourceEntry)
+/// See [`RedshiftDataShareAssetSourceEntry`](crate::model::RedshiftDataShareAssetSourceEntry).
 pub mod redshift_data_share_asset_source_entry {
 
-    /// A builder for [`RedshiftDataShareAssetSourceEntry`](crate::model::RedshiftDataShareAssetSourceEntry)
-    #[non_exhaustive]
+    /// A builder for [`RedshiftDataShareAssetSourceEntry`](crate::model::RedshiftDataShareAssetSourceEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_share_arn: std::option::Option<std::string::String>,
@@ -3176,7 +3231,7 @@ pub mod redshift_data_share_asset_source_entry {
             self.data_share_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RedshiftDataShareAssetSourceEntry`](crate::model::RedshiftDataShareAssetSourceEntry)
+        /// Consumes the builder and constructs a [`RedshiftDataShareAssetSourceEntry`](crate::model::RedshiftDataShareAssetSourceEntry).
         pub fn build(self) -> crate::model::RedshiftDataShareAssetSourceEntry {
             crate::model::RedshiftDataShareAssetSourceEntry {
                 data_share_arn: self.data_share_arn,
@@ -3185,7 +3240,7 @@ pub mod redshift_data_share_asset_source_entry {
     }
 }
 impl RedshiftDataShareAssetSourceEntry {
-    /// Creates a new builder-style object to manufacture [`RedshiftDataShareAssetSourceEntry`](crate::model::RedshiftDataShareAssetSourceEntry)
+    /// Creates a new builder-style object to manufacture [`RedshiftDataShareAssetSourceEntry`](crate::model::RedshiftDataShareAssetSourceEntry).
     pub fn builder() -> crate::model::redshift_data_share_asset_source_entry::Builder {
         crate::model::redshift_data_share_asset_source_entry::Builder::default()
     }
@@ -3196,10 +3251,13 @@ impl RedshiftDataShareAssetSourceEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportAssetsFromS3ResponseDetails {
     /// <p>Is a list of Amazon S3 bucket and object key pairs.</p>
+    #[doc(hidden)]
     pub asset_sources: std::option::Option<std::vec::Vec<crate::model::AssetSourceEntry>>,
     /// <p>The unique identifier for the data set associated with this import job.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the revision associated with this import response.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl ImportAssetsFromS3ResponseDetails {
@@ -3225,11 +3283,10 @@ impl std::fmt::Debug for ImportAssetsFromS3ResponseDetails {
         formatter.finish()
     }
 }
-/// See [`ImportAssetsFromS3ResponseDetails`](crate::model::ImportAssetsFromS3ResponseDetails)
+/// See [`ImportAssetsFromS3ResponseDetails`](crate::model::ImportAssetsFromS3ResponseDetails).
 pub mod import_assets_from_s3_response_details {
 
-    /// A builder for [`ImportAssetsFromS3ResponseDetails`](crate::model::ImportAssetsFromS3ResponseDetails)
-    #[non_exhaustive]
+    /// A builder for [`ImportAssetsFromS3ResponseDetails`](crate::model::ImportAssetsFromS3ResponseDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asset_sources:
@@ -3277,7 +3334,7 @@ pub mod import_assets_from_s3_response_details {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportAssetsFromS3ResponseDetails`](crate::model::ImportAssetsFromS3ResponseDetails)
+        /// Consumes the builder and constructs a [`ImportAssetsFromS3ResponseDetails`](crate::model::ImportAssetsFromS3ResponseDetails).
         pub fn build(self) -> crate::model::ImportAssetsFromS3ResponseDetails {
             crate::model::ImportAssetsFromS3ResponseDetails {
                 asset_sources: self.asset_sources,
@@ -3288,7 +3345,7 @@ pub mod import_assets_from_s3_response_details {
     }
 }
 impl ImportAssetsFromS3ResponseDetails {
-    /// Creates a new builder-style object to manufacture [`ImportAssetsFromS3ResponseDetails`](crate::model::ImportAssetsFromS3ResponseDetails)
+    /// Creates a new builder-style object to manufacture [`ImportAssetsFromS3ResponseDetails`](crate::model::ImportAssetsFromS3ResponseDetails).
     pub fn builder() -> crate::model::import_assets_from_s3_response_details::Builder {
         crate::model::import_assets_from_s3_response_details::Builder::default()
     }
@@ -3299,16 +3356,22 @@ impl ImportAssetsFromS3ResponseDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportAssetFromSignedUrlResponseDetails {
     /// <p>The name for the asset associated with this import job.</p>
+    #[doc(hidden)]
     pub asset_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the data set associated with this import job.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>The Base64-encoded Md5 hash for the asset, used to ensure the integrity of the file at that location.</p>
+    #[doc(hidden)]
     pub md5_hash: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the revision associated with this import response.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
     /// <p>The signed URL.</p>
+    #[doc(hidden)]
     pub signed_url: std::option::Option<std::string::String>,
     /// <p>The time and date at which the signed URL expires, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub signed_url_expires_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ImportAssetFromSignedUrlResponseDetails {
@@ -3349,11 +3412,10 @@ impl std::fmt::Debug for ImportAssetFromSignedUrlResponseDetails {
         formatter.finish()
     }
 }
-/// See [`ImportAssetFromSignedUrlResponseDetails`](crate::model::ImportAssetFromSignedUrlResponseDetails)
+/// See [`ImportAssetFromSignedUrlResponseDetails`](crate::model::ImportAssetFromSignedUrlResponseDetails).
 pub mod import_asset_from_signed_url_response_details {
 
-    /// A builder for [`ImportAssetFromSignedUrlResponseDetails`](crate::model::ImportAssetFromSignedUrlResponseDetails)
-    #[non_exhaustive]
+    /// A builder for [`ImportAssetFromSignedUrlResponseDetails`](crate::model::ImportAssetFromSignedUrlResponseDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asset_name: std::option::Option<std::string::String>,
@@ -3427,7 +3489,7 @@ pub mod import_asset_from_signed_url_response_details {
             self.signed_url_expires_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportAssetFromSignedUrlResponseDetails`](crate::model::ImportAssetFromSignedUrlResponseDetails)
+        /// Consumes the builder and constructs a [`ImportAssetFromSignedUrlResponseDetails`](crate::model::ImportAssetFromSignedUrlResponseDetails).
         pub fn build(self) -> crate::model::ImportAssetFromSignedUrlResponseDetails {
             crate::model::ImportAssetFromSignedUrlResponseDetails {
                 asset_name: self.asset_name,
@@ -3441,7 +3503,7 @@ pub mod import_asset_from_signed_url_response_details {
     }
 }
 impl ImportAssetFromSignedUrlResponseDetails {
-    /// Creates a new builder-style object to manufacture [`ImportAssetFromSignedUrlResponseDetails`](crate::model::ImportAssetFromSignedUrlResponseDetails)
+    /// Creates a new builder-style object to manufacture [`ImportAssetFromSignedUrlResponseDetails`](crate::model::ImportAssetFromSignedUrlResponseDetails).
     pub fn builder() -> crate::model::import_asset_from_signed_url_response_details::Builder {
         crate::model::import_asset_from_signed_url_response_details::Builder::default()
     }
@@ -3452,13 +3514,17 @@ impl ImportAssetFromSignedUrlResponseDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportRevisionsToS3ResponseDetails {
     /// <p>The unique identifier for the data set associated with this export job.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>Encryption configuration of the export job.</p>
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::ExportServerSideEncryption>,
     /// <p>The destination in Amazon S3 where the revision is exported.</p>
+    #[doc(hidden)]
     pub revision_destinations:
         std::option::Option<std::vec::Vec<crate::model::RevisionDestinationEntry>>,
     /// <p>The Amazon Resource Name (ARN) of the event action.</p>
+    #[doc(hidden)]
     pub event_action_arn: std::option::Option<std::string::String>,
 }
 impl ExportRevisionsToS3ResponseDetails {
@@ -3491,11 +3557,10 @@ impl std::fmt::Debug for ExportRevisionsToS3ResponseDetails {
         formatter.finish()
     }
 }
-/// See [`ExportRevisionsToS3ResponseDetails`](crate::model::ExportRevisionsToS3ResponseDetails)
+/// See [`ExportRevisionsToS3ResponseDetails`](crate::model::ExportRevisionsToS3ResponseDetails).
 pub mod export_revisions_to_s3_response_details {
 
-    /// A builder for [`ExportRevisionsToS3ResponseDetails`](crate::model::ExportRevisionsToS3ResponseDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExportRevisionsToS3ResponseDetails`](crate::model::ExportRevisionsToS3ResponseDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_set_id: std::option::Option<std::string::String>,
@@ -3563,7 +3628,7 @@ pub mod export_revisions_to_s3_response_details {
             self.event_action_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportRevisionsToS3ResponseDetails`](crate::model::ExportRevisionsToS3ResponseDetails)
+        /// Consumes the builder and constructs a [`ExportRevisionsToS3ResponseDetails`](crate::model::ExportRevisionsToS3ResponseDetails).
         pub fn build(self) -> crate::model::ExportRevisionsToS3ResponseDetails {
             crate::model::ExportRevisionsToS3ResponseDetails {
                 data_set_id: self.data_set_id,
@@ -3575,7 +3640,7 @@ pub mod export_revisions_to_s3_response_details {
     }
 }
 impl ExportRevisionsToS3ResponseDetails {
-    /// Creates a new builder-style object to manufacture [`ExportRevisionsToS3ResponseDetails`](crate::model::ExportRevisionsToS3ResponseDetails)
+    /// Creates a new builder-style object to manufacture [`ExportRevisionsToS3ResponseDetails`](crate::model::ExportRevisionsToS3ResponseDetails).
     pub fn builder() -> crate::model::export_revisions_to_s3_response_details::Builder {
         crate::model::export_revisions_to_s3_response_details::Builder::default()
     }
@@ -3586,10 +3651,13 @@ impl ExportRevisionsToS3ResponseDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RevisionDestinationEntry {
     /// <p>The S3 bucket that is the destination for the assets in the revision.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>A string representing the pattern for generated names of the individual assets in the revision. For more information about key patterns, see <a href="https://docs.aws.amazon.com/data-exchange/latest/userguide/jobs.html#revision-export-keypatterns">Key patterns when exporting revisions</a>.</p>
+    #[doc(hidden)]
     pub key_pattern: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the revision.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl RevisionDestinationEntry {
@@ -3615,11 +3683,10 @@ impl std::fmt::Debug for RevisionDestinationEntry {
         formatter.finish()
     }
 }
-/// See [`RevisionDestinationEntry`](crate::model::RevisionDestinationEntry)
+/// See [`RevisionDestinationEntry`](crate::model::RevisionDestinationEntry).
 pub mod revision_destination_entry {
 
-    /// A builder for [`RevisionDestinationEntry`](crate::model::RevisionDestinationEntry)
-    #[non_exhaustive]
+    /// A builder for [`RevisionDestinationEntry`](crate::model::RevisionDestinationEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -3657,7 +3724,7 @@ pub mod revision_destination_entry {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RevisionDestinationEntry`](crate::model::RevisionDestinationEntry)
+        /// Consumes the builder and constructs a [`RevisionDestinationEntry`](crate::model::RevisionDestinationEntry).
         pub fn build(self) -> crate::model::RevisionDestinationEntry {
             crate::model::RevisionDestinationEntry {
                 bucket: self.bucket,
@@ -3668,7 +3735,7 @@ pub mod revision_destination_entry {
     }
 }
 impl RevisionDestinationEntry {
-    /// Creates a new builder-style object to manufacture [`RevisionDestinationEntry`](crate::model::RevisionDestinationEntry)
+    /// Creates a new builder-style object to manufacture [`RevisionDestinationEntry`](crate::model::RevisionDestinationEntry).
     pub fn builder() -> crate::model::revision_destination_entry::Builder {
         crate::model::revision_destination_entry::Builder::default()
     }
@@ -3679,12 +3746,16 @@ impl RevisionDestinationEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportAssetsToS3ResponseDetails {
     /// <p>The destination in Amazon S3 where the asset is exported.</p>
+    #[doc(hidden)]
     pub asset_destinations: std::option::Option<std::vec::Vec<crate::model::AssetDestinationEntry>>,
     /// <p>The unique identifier for the data set associated with this export job.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>Encryption configuration of the export job.</p>
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::ExportServerSideEncryption>,
     /// <p>The unique identifier for the revision associated with this export response.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl ExportAssetsToS3ResponseDetails {
@@ -3717,11 +3788,10 @@ impl std::fmt::Debug for ExportAssetsToS3ResponseDetails {
         formatter.finish()
     }
 }
-/// See [`ExportAssetsToS3ResponseDetails`](crate::model::ExportAssetsToS3ResponseDetails)
+/// See [`ExportAssetsToS3ResponseDetails`](crate::model::ExportAssetsToS3ResponseDetails).
 pub mod export_assets_to_s3_response_details {
 
-    /// A builder for [`ExportAssetsToS3ResponseDetails`](crate::model::ExportAssetsToS3ResponseDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExportAssetsToS3ResponseDetails`](crate::model::ExportAssetsToS3ResponseDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asset_destinations:
@@ -3783,7 +3853,7 @@ pub mod export_assets_to_s3_response_details {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportAssetsToS3ResponseDetails`](crate::model::ExportAssetsToS3ResponseDetails)
+        /// Consumes the builder and constructs a [`ExportAssetsToS3ResponseDetails`](crate::model::ExportAssetsToS3ResponseDetails).
         pub fn build(self) -> crate::model::ExportAssetsToS3ResponseDetails {
             crate::model::ExportAssetsToS3ResponseDetails {
                 asset_destinations: self.asset_destinations,
@@ -3795,7 +3865,7 @@ pub mod export_assets_to_s3_response_details {
     }
 }
 impl ExportAssetsToS3ResponseDetails {
-    /// Creates a new builder-style object to manufacture [`ExportAssetsToS3ResponseDetails`](crate::model::ExportAssetsToS3ResponseDetails)
+    /// Creates a new builder-style object to manufacture [`ExportAssetsToS3ResponseDetails`](crate::model::ExportAssetsToS3ResponseDetails).
     pub fn builder() -> crate::model::export_assets_to_s3_response_details::Builder {
         crate::model::export_assets_to_s3_response_details::Builder::default()
     }
@@ -3806,10 +3876,13 @@ impl ExportAssetsToS3ResponseDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssetDestinationEntry {
     /// <p>The unique identifier for the asset.</p>
+    #[doc(hidden)]
     pub asset_id: std::option::Option<std::string::String>,
     /// <p>The S3 bucket that is the destination for the asset.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The name of the object in Amazon S3 for the asset.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
 }
 impl AssetDestinationEntry {
@@ -3835,11 +3908,10 @@ impl std::fmt::Debug for AssetDestinationEntry {
         formatter.finish()
     }
 }
-/// See [`AssetDestinationEntry`](crate::model::AssetDestinationEntry)
+/// See [`AssetDestinationEntry`](crate::model::AssetDestinationEntry).
 pub mod asset_destination_entry {
 
-    /// A builder for [`AssetDestinationEntry`](crate::model::AssetDestinationEntry)
-    #[non_exhaustive]
+    /// A builder for [`AssetDestinationEntry`](crate::model::AssetDestinationEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asset_id: std::option::Option<std::string::String>,
@@ -3877,7 +3949,7 @@ pub mod asset_destination_entry {
             self.key = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssetDestinationEntry`](crate::model::AssetDestinationEntry)
+        /// Consumes the builder and constructs a [`AssetDestinationEntry`](crate::model::AssetDestinationEntry).
         pub fn build(self) -> crate::model::AssetDestinationEntry {
             crate::model::AssetDestinationEntry {
                 asset_id: self.asset_id,
@@ -3888,7 +3960,7 @@ pub mod asset_destination_entry {
     }
 }
 impl AssetDestinationEntry {
-    /// Creates a new builder-style object to manufacture [`AssetDestinationEntry`](crate::model::AssetDestinationEntry)
+    /// Creates a new builder-style object to manufacture [`AssetDestinationEntry`](crate::model::AssetDestinationEntry).
     pub fn builder() -> crate::model::asset_destination_entry::Builder {
         crate::model::asset_destination_entry::Builder::default()
     }
@@ -3899,14 +3971,19 @@ impl AssetDestinationEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportAssetToSignedUrlResponseDetails {
     /// <p>The unique identifier for the asset associated with this export job.</p>
+    #[doc(hidden)]
     pub asset_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the data set associated with this export job.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the revision associated with this export response.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
     /// <p>The signed URL for the export request.</p>
+    #[doc(hidden)]
     pub signed_url: std::option::Option<std::string::String>,
     /// <p>The date and time that the signed URL expires, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub signed_url_expires_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ExportAssetToSignedUrlResponseDetails {
@@ -3942,11 +4019,10 @@ impl std::fmt::Debug for ExportAssetToSignedUrlResponseDetails {
         formatter.finish()
     }
 }
-/// See [`ExportAssetToSignedUrlResponseDetails`](crate::model::ExportAssetToSignedUrlResponseDetails)
+/// See [`ExportAssetToSignedUrlResponseDetails`](crate::model::ExportAssetToSignedUrlResponseDetails).
 pub mod export_asset_to_signed_url_response_details {
 
-    /// A builder for [`ExportAssetToSignedUrlResponseDetails`](crate::model::ExportAssetToSignedUrlResponseDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExportAssetToSignedUrlResponseDetails`](crate::model::ExportAssetToSignedUrlResponseDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asset_id: std::option::Option<std::string::String>,
@@ -4009,7 +4085,7 @@ pub mod export_asset_to_signed_url_response_details {
             self.signed_url_expires_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportAssetToSignedUrlResponseDetails`](crate::model::ExportAssetToSignedUrlResponseDetails)
+        /// Consumes the builder and constructs a [`ExportAssetToSignedUrlResponseDetails`](crate::model::ExportAssetToSignedUrlResponseDetails).
         pub fn build(self) -> crate::model::ExportAssetToSignedUrlResponseDetails {
             crate::model::ExportAssetToSignedUrlResponseDetails {
                 asset_id: self.asset_id,
@@ -4022,7 +4098,7 @@ pub mod export_asset_to_signed_url_response_details {
     }
 }
 impl ExportAssetToSignedUrlResponseDetails {
-    /// Creates a new builder-style object to manufacture [`ExportAssetToSignedUrlResponseDetails`](crate::model::ExportAssetToSignedUrlResponseDetails)
+    /// Creates a new builder-style object to manufacture [`ExportAssetToSignedUrlResponseDetails`](crate::model::ExportAssetToSignedUrlResponseDetails).
     pub fn builder() -> crate::model::export_asset_to_signed_url_response_details::Builder {
         crate::model::export_asset_to_signed_url_response_details::Builder::default()
     }
@@ -4033,16 +4109,22 @@ impl ExportAssetToSignedUrlResponseDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventActionEntry {
     /// <p>What occurs after a certain event.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::Action>,
     /// <p>The Amazon Resource Name (ARN) for the event action.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date and time that the event action was created, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>What occurs to start an action.</p>
+    #[doc(hidden)]
     pub event: std::option::Option<crate::model::Event>,
     /// <p>The unique identifier for the event action.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The date and time that the event action was last updated, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EventActionEntry {
@@ -4083,11 +4165,10 @@ impl std::fmt::Debug for EventActionEntry {
         formatter.finish()
     }
 }
-/// See [`EventActionEntry`](crate::model::EventActionEntry)
+/// See [`EventActionEntry`](crate::model::EventActionEntry).
 pub mod event_action_entry {
 
-    /// A builder for [`EventActionEntry`](crate::model::EventActionEntry)
-    #[non_exhaustive]
+    /// A builder for [`EventActionEntry`](crate::model::EventActionEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::Action>,
@@ -4164,7 +4245,7 @@ pub mod event_action_entry {
             self.updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventActionEntry`](crate::model::EventActionEntry)
+        /// Consumes the builder and constructs a [`EventActionEntry`](crate::model::EventActionEntry).
         pub fn build(self) -> crate::model::EventActionEntry {
             crate::model::EventActionEntry {
                 action: self.action,
@@ -4178,7 +4259,7 @@ pub mod event_action_entry {
     }
 }
 impl EventActionEntry {
-    /// Creates a new builder-style object to manufacture [`EventActionEntry`](crate::model::EventActionEntry)
+    /// Creates a new builder-style object to manufacture [`EventActionEntry`](crate::model::EventActionEntry).
     pub fn builder() -> crate::model::event_action_entry::Builder {
         crate::model::event_action_entry::Builder::default()
     }
@@ -4189,24 +4270,34 @@ impl EventActionEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataSetEntry {
     /// <p>The ARN for the data set.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The type of asset that is added to a data set.</p>
+    #[doc(hidden)]
     pub asset_type: std::option::Option<crate::model::AssetType>,
     /// <p>The date and time that the data set was created, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description for the data set.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the data set.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the data set.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A property that defines the data set as OWNED by the account (for providers) or ENTITLED to the account (for subscribers).</p>
+    #[doc(hidden)]
     pub origin: std::option::Option<crate::model::Origin>,
     /// <p>If the origin of this data set is ENTITLED, includes the details for the product on AWS Marketplace.</p>
+    #[doc(hidden)]
     pub origin_details: std::option::Option<crate::model::OriginDetails>,
     /// <p>The data set ID of the owned data set corresponding to the entitled data set being viewed. This parameter is returned when a data set owner is viewing the entitled copy of its owned data set.</p>
+    #[doc(hidden)]
     pub source_id: std::option::Option<std::string::String>,
     /// <p>The date and time that the data set was last updated, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DataSetEntry {
@@ -4267,11 +4358,10 @@ impl std::fmt::Debug for DataSetEntry {
         formatter.finish()
     }
 }
-/// See [`DataSetEntry`](crate::model::DataSetEntry)
+/// See [`DataSetEntry`](crate::model::DataSetEntry).
 pub mod data_set_entry {
 
-    /// A builder for [`DataSetEntry`](crate::model::DataSetEntry)
-    #[non_exhaustive]
+    /// A builder for [`DataSetEntry`](crate::model::DataSetEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4398,7 +4488,7 @@ pub mod data_set_entry {
             self.updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataSetEntry`](crate::model::DataSetEntry)
+        /// Consumes the builder and constructs a [`DataSetEntry`](crate::model::DataSetEntry).
         pub fn build(self) -> crate::model::DataSetEntry {
             crate::model::DataSetEntry {
                 arn: self.arn,
@@ -4416,7 +4506,7 @@ pub mod data_set_entry {
     }
 }
 impl DataSetEntry {
-    /// Creates a new builder-style object to manufacture [`DataSetEntry`](crate::model::DataSetEntry)
+    /// Creates a new builder-style object to manufacture [`DataSetEntry`](crate::model::DataSetEntry).
     pub fn builder() -> crate::model::data_set_entry::Builder {
         crate::model::data_set_entry::Builder::default()
     }
@@ -4427,27 +4517,38 @@ impl DataSetEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RevisionEntry {
     /// <p>The ARN for the revision.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>An optional comment about the revision.</p>
+    #[doc(hidden)]
     pub comment: std::option::Option<std::string::String>,
     /// <p>The date and time that the revision was created, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The unique identifier for the data set associated with this revision.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>To publish a revision to a data set in a product, the revision must first be finalized. Finalizing a revision tells AWS Data Exchange that your changes to the assets in the revision are complete. After it's in this read-only state, you can publish the revision to your products.</p>
     /// <p>Finalized revisions can be published through the AWS Data Exchange console or the AWS Marketplace Catalog API, using the StartChangeSet AWS Marketplace Catalog API action. When using the API, revisions are uniquely identified by their ARN.</p>
+    #[doc(hidden)]
     pub finalized: bool,
     /// <p>The unique identifier for the revision.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The revision ID of the owned revision corresponding to the entitled revision being viewed. This parameter is returned when a revision owner is viewing the entitled copy of its owned revision.</p>
+    #[doc(hidden)]
     pub source_id: std::option::Option<std::string::String>,
     /// <p>The date and time that the revision was last updated, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A required comment to inform subscribers of the reason their access to the revision was revoked.</p>
+    #[doc(hidden)]
     pub revocation_comment: std::option::Option<std::string::String>,
     /// <p>A status indicating that subscribers' access to the revision was revoked.</p>
+    #[doc(hidden)]
     pub revoked: bool,
     /// <p>The date and time that the revision was revoked, in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub revoked_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RevisionEntry {
@@ -4514,11 +4615,10 @@ impl std::fmt::Debug for RevisionEntry {
         formatter.finish()
     }
 }
-/// See [`RevisionEntry`](crate::model::RevisionEntry)
+/// See [`RevisionEntry`](crate::model::RevisionEntry).
 pub mod revision_entry {
 
-    /// A builder for [`RevisionEntry`](crate::model::RevisionEntry)
-    #[non_exhaustive]
+    /// A builder for [`RevisionEntry`](crate::model::RevisionEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4658,7 +4758,7 @@ pub mod revision_entry {
             self.revoked_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`RevisionEntry`](crate::model::RevisionEntry)
+        /// Consumes the builder and constructs a [`RevisionEntry`](crate::model::RevisionEntry).
         pub fn build(self) -> crate::model::RevisionEntry {
             crate::model::RevisionEntry {
                 arn: self.arn,
@@ -4677,7 +4777,7 @@ pub mod revision_entry {
     }
 }
 impl RevisionEntry {
-    /// Creates a new builder-style object to manufacture [`RevisionEntry`](crate::model::RevisionEntry)
+    /// Creates a new builder-style object to manufacture [`RevisionEntry`](crate::model::RevisionEntry).
     pub fn builder() -> crate::model::revision_entry::Builder {
         crate::model::revision_entry::Builder::default()
     }
@@ -4688,22 +4788,29 @@ impl RevisionEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RequestDetails {
     /// <p>Details about the export to signed URL request.</p>
+    #[doc(hidden)]
     pub export_asset_to_signed_url:
         std::option::Option<crate::model::ExportAssetToSignedUrlRequestDetails>,
     /// <p>Details about the export to Amazon S3 request.</p>
+    #[doc(hidden)]
     pub export_assets_to_s3: std::option::Option<crate::model::ExportAssetsToS3RequestDetails>,
     /// <p>Details about the export to Amazon S3 request.</p>
+    #[doc(hidden)]
     pub export_revisions_to_s3:
         std::option::Option<crate::model::ExportRevisionsToS3RequestDetails>,
     /// <p>Details about the import from signed URL request.</p>
+    #[doc(hidden)]
     pub import_asset_from_signed_url:
         std::option::Option<crate::model::ImportAssetFromSignedUrlRequestDetails>,
     /// <p>Details about the import from Amazon S3 request.</p>
+    #[doc(hidden)]
     pub import_assets_from_s3: std::option::Option<crate::model::ImportAssetsFromS3RequestDetails>,
     /// <p>Details from an import from Amazon Redshift datashare request.</p>
+    #[doc(hidden)]
     pub import_assets_from_redshift_data_shares:
         std::option::Option<crate::model::ImportAssetsFromRedshiftDataSharesRequestDetails>,
     /// <p>Information about the import asset from API Gateway API request.</p>
+    #[doc(hidden)]
     pub import_asset_from_api_gateway_api:
         std::option::Option<crate::model::ImportAssetFromApiGatewayApiRequestDetails>,
 }
@@ -4776,11 +4883,10 @@ impl std::fmt::Debug for RequestDetails {
         formatter.finish()
     }
 }
-/// See [`RequestDetails`](crate::model::RequestDetails)
+/// See [`RequestDetails`](crate::model::RequestDetails).
 pub mod request_details {
 
-    /// A builder for [`RequestDetails`](crate::model::RequestDetails)
-    #[non_exhaustive]
+    /// A builder for [`RequestDetails`](crate::model::RequestDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_asset_to_signed_url:
@@ -4913,7 +5019,7 @@ pub mod request_details {
             self.import_asset_from_api_gateway_api = input;
             self
         }
-        /// Consumes the builder and constructs a [`RequestDetails`](crate::model::RequestDetails)
+        /// Consumes the builder and constructs a [`RequestDetails`](crate::model::RequestDetails).
         pub fn build(self) -> crate::model::RequestDetails {
             crate::model::RequestDetails {
                 export_asset_to_signed_url: self.export_asset_to_signed_url,
@@ -4929,7 +5035,7 @@ pub mod request_details {
     }
 }
 impl RequestDetails {
-    /// Creates a new builder-style object to manufacture [`RequestDetails`](crate::model::RequestDetails)
+    /// Creates a new builder-style object to manufacture [`RequestDetails`](crate::model::RequestDetails).
     pub fn builder() -> crate::model::request_details::Builder {
         crate::model::request_details::Builder::default()
     }
@@ -4940,22 +5046,31 @@ impl RequestDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportAssetFromApiGatewayApiRequestDetails {
     /// <p>The API description. Markdown supported.</p>
+    #[doc(hidden)]
     pub api_description: std::option::Option<std::string::String>,
     /// <p>The API Gateway API ID.</p>
+    #[doc(hidden)]
     pub api_id: std::option::Option<std::string::String>,
     /// <p>The API Gateway API key.</p>
+    #[doc(hidden)]
     pub api_key: std::option::Option<std::string::String>,
     /// <p>The API name.</p>
+    #[doc(hidden)]
     pub api_name: std::option::Option<std::string::String>,
     /// <p>The Base64-encoded MD5 hash of the OpenAPI 3.0 JSON API specification file. It is used to ensure the integrity of the file.</p>
+    #[doc(hidden)]
     pub api_specification_md5_hash: std::option::Option<std::string::String>,
     /// <p>The data set ID.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>The protocol type.</p>
+    #[doc(hidden)]
     pub protocol_type: std::option::Option<crate::model::ProtocolType>,
     /// <p>The revision ID.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
     /// <p>The API stage.</p>
+    #[doc(hidden)]
     pub stage: std::option::Option<std::string::String>,
 }
 impl ImportAssetFromApiGatewayApiRequestDetails {
@@ -5014,11 +5129,10 @@ impl std::fmt::Debug for ImportAssetFromApiGatewayApiRequestDetails {
         formatter.finish()
     }
 }
-/// See [`ImportAssetFromApiGatewayApiRequestDetails`](crate::model::ImportAssetFromApiGatewayApiRequestDetails)
+/// See [`ImportAssetFromApiGatewayApiRequestDetails`](crate::model::ImportAssetFromApiGatewayApiRequestDetails).
 pub mod import_asset_from_api_gateway_api_request_details {
 
-    /// A builder for [`ImportAssetFromApiGatewayApiRequestDetails`](crate::model::ImportAssetFromApiGatewayApiRequestDetails)
-    #[non_exhaustive]
+    /// A builder for [`ImportAssetFromApiGatewayApiRequestDetails`](crate::model::ImportAssetFromApiGatewayApiRequestDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_description: std::option::Option<std::string::String>,
@@ -5131,7 +5245,7 @@ pub mod import_asset_from_api_gateway_api_request_details {
             self.stage = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportAssetFromApiGatewayApiRequestDetails`](crate::model::ImportAssetFromApiGatewayApiRequestDetails)
+        /// Consumes the builder and constructs a [`ImportAssetFromApiGatewayApiRequestDetails`](crate::model::ImportAssetFromApiGatewayApiRequestDetails).
         pub fn build(self) -> crate::model::ImportAssetFromApiGatewayApiRequestDetails {
             crate::model::ImportAssetFromApiGatewayApiRequestDetails {
                 api_description: self.api_description,
@@ -5148,7 +5262,7 @@ pub mod import_asset_from_api_gateway_api_request_details {
     }
 }
 impl ImportAssetFromApiGatewayApiRequestDetails {
-    /// Creates a new builder-style object to manufacture [`ImportAssetFromApiGatewayApiRequestDetails`](crate::model::ImportAssetFromApiGatewayApiRequestDetails)
+    /// Creates a new builder-style object to manufacture [`ImportAssetFromApiGatewayApiRequestDetails`](crate::model::ImportAssetFromApiGatewayApiRequestDetails).
     pub fn builder() -> crate::model::import_asset_from_api_gateway_api_request_details::Builder {
         crate::model::import_asset_from_api_gateway_api_request_details::Builder::default()
     }
@@ -5159,11 +5273,14 @@ impl ImportAssetFromApiGatewayApiRequestDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportAssetsFromRedshiftDataSharesRequestDetails {
     /// A list of Amazon Redshift datashare assets.
+    #[doc(hidden)]
     pub asset_sources:
         std::option::Option<std::vec::Vec<crate::model::RedshiftDataShareAssetSourceEntry>>,
     /// The unique identifier for the data set associated with this import job.
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// The unique identifier for the revision associated with this import job.
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl ImportAssetsFromRedshiftDataSharesRequestDetails {
@@ -5191,11 +5308,10 @@ impl std::fmt::Debug for ImportAssetsFromRedshiftDataSharesRequestDetails {
         formatter.finish()
     }
 }
-/// See [`ImportAssetsFromRedshiftDataSharesRequestDetails`](crate::model::ImportAssetsFromRedshiftDataSharesRequestDetails)
+/// See [`ImportAssetsFromRedshiftDataSharesRequestDetails`](crate::model::ImportAssetsFromRedshiftDataSharesRequestDetails).
 pub mod import_assets_from_redshift_data_shares_request_details {
 
-    /// A builder for [`ImportAssetsFromRedshiftDataSharesRequestDetails`](crate::model::ImportAssetsFromRedshiftDataSharesRequestDetails)
-    #[non_exhaustive]
+    /// A builder for [`ImportAssetsFromRedshiftDataSharesRequestDetails`](crate::model::ImportAssetsFromRedshiftDataSharesRequestDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asset_sources:
@@ -5248,7 +5364,7 @@ pub mod import_assets_from_redshift_data_shares_request_details {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportAssetsFromRedshiftDataSharesRequestDetails`](crate::model::ImportAssetsFromRedshiftDataSharesRequestDetails)
+        /// Consumes the builder and constructs a [`ImportAssetsFromRedshiftDataSharesRequestDetails`](crate::model::ImportAssetsFromRedshiftDataSharesRequestDetails).
         pub fn build(self) -> crate::model::ImportAssetsFromRedshiftDataSharesRequestDetails {
             crate::model::ImportAssetsFromRedshiftDataSharesRequestDetails {
                 asset_sources: self.asset_sources,
@@ -5259,7 +5375,7 @@ pub mod import_assets_from_redshift_data_shares_request_details {
     }
 }
 impl ImportAssetsFromRedshiftDataSharesRequestDetails {
-    /// Creates a new builder-style object to manufacture [`ImportAssetsFromRedshiftDataSharesRequestDetails`](crate::model::ImportAssetsFromRedshiftDataSharesRequestDetails)
+    /// Creates a new builder-style object to manufacture [`ImportAssetsFromRedshiftDataSharesRequestDetails`](crate::model::ImportAssetsFromRedshiftDataSharesRequestDetails).
     pub fn builder(
     ) -> crate::model::import_assets_from_redshift_data_shares_request_details::Builder {
         crate::model::import_assets_from_redshift_data_shares_request_details::Builder::default()
@@ -5271,10 +5387,13 @@ impl ImportAssetsFromRedshiftDataSharesRequestDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportAssetsFromS3RequestDetails {
     /// <p>Is a list of S3 bucket and object key pairs.</p>
+    #[doc(hidden)]
     pub asset_sources: std::option::Option<std::vec::Vec<crate::model::AssetSourceEntry>>,
     /// <p>The unique identifier for the data set associated with this import job.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the revision associated with this import request.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl ImportAssetsFromS3RequestDetails {
@@ -5300,11 +5419,10 @@ impl std::fmt::Debug for ImportAssetsFromS3RequestDetails {
         formatter.finish()
     }
 }
-/// See [`ImportAssetsFromS3RequestDetails`](crate::model::ImportAssetsFromS3RequestDetails)
+/// See [`ImportAssetsFromS3RequestDetails`](crate::model::ImportAssetsFromS3RequestDetails).
 pub mod import_assets_from_s3_request_details {
 
-    /// A builder for [`ImportAssetsFromS3RequestDetails`](crate::model::ImportAssetsFromS3RequestDetails)
-    #[non_exhaustive]
+    /// A builder for [`ImportAssetsFromS3RequestDetails`](crate::model::ImportAssetsFromS3RequestDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asset_sources:
@@ -5352,7 +5470,7 @@ pub mod import_assets_from_s3_request_details {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportAssetsFromS3RequestDetails`](crate::model::ImportAssetsFromS3RequestDetails)
+        /// Consumes the builder and constructs a [`ImportAssetsFromS3RequestDetails`](crate::model::ImportAssetsFromS3RequestDetails).
         pub fn build(self) -> crate::model::ImportAssetsFromS3RequestDetails {
             crate::model::ImportAssetsFromS3RequestDetails {
                 asset_sources: self.asset_sources,
@@ -5363,7 +5481,7 @@ pub mod import_assets_from_s3_request_details {
     }
 }
 impl ImportAssetsFromS3RequestDetails {
-    /// Creates a new builder-style object to manufacture [`ImportAssetsFromS3RequestDetails`](crate::model::ImportAssetsFromS3RequestDetails)
+    /// Creates a new builder-style object to manufacture [`ImportAssetsFromS3RequestDetails`](crate::model::ImportAssetsFromS3RequestDetails).
     pub fn builder() -> crate::model::import_assets_from_s3_request_details::Builder {
         crate::model::import_assets_from_s3_request_details::Builder::default()
     }
@@ -5374,12 +5492,16 @@ impl ImportAssetsFromS3RequestDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportAssetFromSignedUrlRequestDetails {
     /// <p>The name of the asset. When importing from Amazon S3, the S3 object key is used as the asset name.</p>
+    #[doc(hidden)]
     pub asset_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the data set associated with this import job.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>The Base64-encoded Md5 hash for the asset, used to ensure the integrity of the file at that location.</p>
+    #[doc(hidden)]
     pub md5_hash: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the revision associated with this import request.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl ImportAssetFromSignedUrlRequestDetails {
@@ -5410,11 +5532,10 @@ impl std::fmt::Debug for ImportAssetFromSignedUrlRequestDetails {
         formatter.finish()
     }
 }
-/// See [`ImportAssetFromSignedUrlRequestDetails`](crate::model::ImportAssetFromSignedUrlRequestDetails)
+/// See [`ImportAssetFromSignedUrlRequestDetails`](crate::model::ImportAssetFromSignedUrlRequestDetails).
 pub mod import_asset_from_signed_url_request_details {
 
-    /// A builder for [`ImportAssetFromSignedUrlRequestDetails`](crate::model::ImportAssetFromSignedUrlRequestDetails)
-    #[non_exhaustive]
+    /// A builder for [`ImportAssetFromSignedUrlRequestDetails`](crate::model::ImportAssetFromSignedUrlRequestDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asset_name: std::option::Option<std::string::String>,
@@ -5463,7 +5584,7 @@ pub mod import_asset_from_signed_url_request_details {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportAssetFromSignedUrlRequestDetails`](crate::model::ImportAssetFromSignedUrlRequestDetails)
+        /// Consumes the builder and constructs a [`ImportAssetFromSignedUrlRequestDetails`](crate::model::ImportAssetFromSignedUrlRequestDetails).
         pub fn build(self) -> crate::model::ImportAssetFromSignedUrlRequestDetails {
             crate::model::ImportAssetFromSignedUrlRequestDetails {
                 asset_name: self.asset_name,
@@ -5475,7 +5596,7 @@ pub mod import_asset_from_signed_url_request_details {
     }
 }
 impl ImportAssetFromSignedUrlRequestDetails {
-    /// Creates a new builder-style object to manufacture [`ImportAssetFromSignedUrlRequestDetails`](crate::model::ImportAssetFromSignedUrlRequestDetails)
+    /// Creates a new builder-style object to manufacture [`ImportAssetFromSignedUrlRequestDetails`](crate::model::ImportAssetFromSignedUrlRequestDetails).
     pub fn builder() -> crate::model::import_asset_from_signed_url_request_details::Builder {
         crate::model::import_asset_from_signed_url_request_details::Builder::default()
     }
@@ -5486,10 +5607,13 @@ impl ImportAssetFromSignedUrlRequestDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportRevisionsToS3RequestDetails {
     /// <p>The unique identifier for the data set associated with this export job.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>Encryption configuration for the export job.</p>
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::ExportServerSideEncryption>,
     /// <p>The destination for the revision.</p>
+    #[doc(hidden)]
     pub revision_destinations:
         std::option::Option<std::vec::Vec<crate::model::RevisionDestinationEntry>>,
 }
@@ -5518,11 +5642,10 @@ impl std::fmt::Debug for ExportRevisionsToS3RequestDetails {
         formatter.finish()
     }
 }
-/// See [`ExportRevisionsToS3RequestDetails`](crate::model::ExportRevisionsToS3RequestDetails)
+/// See [`ExportRevisionsToS3RequestDetails`](crate::model::ExportRevisionsToS3RequestDetails).
 pub mod export_revisions_to_s3_request_details {
 
-    /// A builder for [`ExportRevisionsToS3RequestDetails`](crate::model::ExportRevisionsToS3RequestDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExportRevisionsToS3RequestDetails`](crate::model::ExportRevisionsToS3RequestDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_set_id: std::option::Option<std::string::String>,
@@ -5576,7 +5699,7 @@ pub mod export_revisions_to_s3_request_details {
             self.revision_destinations = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportRevisionsToS3RequestDetails`](crate::model::ExportRevisionsToS3RequestDetails)
+        /// Consumes the builder and constructs a [`ExportRevisionsToS3RequestDetails`](crate::model::ExportRevisionsToS3RequestDetails).
         pub fn build(self) -> crate::model::ExportRevisionsToS3RequestDetails {
             crate::model::ExportRevisionsToS3RequestDetails {
                 data_set_id: self.data_set_id,
@@ -5587,7 +5710,7 @@ pub mod export_revisions_to_s3_request_details {
     }
 }
 impl ExportRevisionsToS3RequestDetails {
-    /// Creates a new builder-style object to manufacture [`ExportRevisionsToS3RequestDetails`](crate::model::ExportRevisionsToS3RequestDetails)
+    /// Creates a new builder-style object to manufacture [`ExportRevisionsToS3RequestDetails`](crate::model::ExportRevisionsToS3RequestDetails).
     pub fn builder() -> crate::model::export_revisions_to_s3_request_details::Builder {
         crate::model::export_revisions_to_s3_request_details::Builder::default()
     }
@@ -5598,12 +5721,16 @@ impl ExportRevisionsToS3RequestDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportAssetsToS3RequestDetails {
     /// <p>The destination for the asset.</p>
+    #[doc(hidden)]
     pub asset_destinations: std::option::Option<std::vec::Vec<crate::model::AssetDestinationEntry>>,
     /// <p>The unique identifier for the data set associated with this export job.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>Encryption configuration for the export job.</p>
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::ExportServerSideEncryption>,
     /// <p>The unique identifier for the revision associated with this export request.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl ExportAssetsToS3RequestDetails {
@@ -5636,11 +5763,10 @@ impl std::fmt::Debug for ExportAssetsToS3RequestDetails {
         formatter.finish()
     }
 }
-/// See [`ExportAssetsToS3RequestDetails`](crate::model::ExportAssetsToS3RequestDetails)
+/// See [`ExportAssetsToS3RequestDetails`](crate::model::ExportAssetsToS3RequestDetails).
 pub mod export_assets_to_s3_request_details {
 
-    /// A builder for [`ExportAssetsToS3RequestDetails`](crate::model::ExportAssetsToS3RequestDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExportAssetsToS3RequestDetails`](crate::model::ExportAssetsToS3RequestDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asset_destinations:
@@ -5702,7 +5828,7 @@ pub mod export_assets_to_s3_request_details {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportAssetsToS3RequestDetails`](crate::model::ExportAssetsToS3RequestDetails)
+        /// Consumes the builder and constructs a [`ExportAssetsToS3RequestDetails`](crate::model::ExportAssetsToS3RequestDetails).
         pub fn build(self) -> crate::model::ExportAssetsToS3RequestDetails {
             crate::model::ExportAssetsToS3RequestDetails {
                 asset_destinations: self.asset_destinations,
@@ -5714,7 +5840,7 @@ pub mod export_assets_to_s3_request_details {
     }
 }
 impl ExportAssetsToS3RequestDetails {
-    /// Creates a new builder-style object to manufacture [`ExportAssetsToS3RequestDetails`](crate::model::ExportAssetsToS3RequestDetails)
+    /// Creates a new builder-style object to manufacture [`ExportAssetsToS3RequestDetails`](crate::model::ExportAssetsToS3RequestDetails).
     pub fn builder() -> crate::model::export_assets_to_s3_request_details::Builder {
         crate::model::export_assets_to_s3_request_details::Builder::default()
     }
@@ -5725,10 +5851,13 @@ impl ExportAssetsToS3RequestDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportAssetToSignedUrlRequestDetails {
     /// <p>The unique identifier for the asset that is exported to a signed URL.</p>
+    #[doc(hidden)]
     pub asset_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the data set associated with this export job.</p>
+    #[doc(hidden)]
     pub data_set_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the revision associated with this export request.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl ExportAssetToSignedUrlRequestDetails {
@@ -5754,11 +5883,10 @@ impl std::fmt::Debug for ExportAssetToSignedUrlRequestDetails {
         formatter.finish()
     }
 }
-/// See [`ExportAssetToSignedUrlRequestDetails`](crate::model::ExportAssetToSignedUrlRequestDetails)
+/// See [`ExportAssetToSignedUrlRequestDetails`](crate::model::ExportAssetToSignedUrlRequestDetails).
 pub mod export_asset_to_signed_url_request_details {
 
-    /// A builder for [`ExportAssetToSignedUrlRequestDetails`](crate::model::ExportAssetToSignedUrlRequestDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExportAssetToSignedUrlRequestDetails`](crate::model::ExportAssetToSignedUrlRequestDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asset_id: std::option::Option<std::string::String>,
@@ -5796,7 +5924,7 @@ pub mod export_asset_to_signed_url_request_details {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportAssetToSignedUrlRequestDetails`](crate::model::ExportAssetToSignedUrlRequestDetails)
+        /// Consumes the builder and constructs a [`ExportAssetToSignedUrlRequestDetails`](crate::model::ExportAssetToSignedUrlRequestDetails).
         pub fn build(self) -> crate::model::ExportAssetToSignedUrlRequestDetails {
             crate::model::ExportAssetToSignedUrlRequestDetails {
                 asset_id: self.asset_id,
@@ -5807,7 +5935,7 @@ pub mod export_asset_to_signed_url_request_details {
     }
 }
 impl ExportAssetToSignedUrlRequestDetails {
-    /// Creates a new builder-style object to manufacture [`ExportAssetToSignedUrlRequestDetails`](crate::model::ExportAssetToSignedUrlRequestDetails)
+    /// Creates a new builder-style object to manufacture [`ExportAssetToSignedUrlRequestDetails`](crate::model::ExportAssetToSignedUrlRequestDetails).
     pub fn builder() -> crate::model::export_asset_to_signed_url_request_details::Builder {
         crate::model::export_asset_to_signed_url_request_details::Builder::default()
     }

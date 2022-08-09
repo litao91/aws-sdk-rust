@@ -5,12 +5,16 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SatelliteListItem {
     /// <p>UUID of a satellite.</p>
+    #[doc(hidden)]
     pub satellite_id: std::option::Option<std::string::String>,
     /// <p>ARN of a satellite.</p>
+    #[doc(hidden)]
     pub satellite_arn: std::option::Option<std::string::String>,
     /// <p>NORAD satellite ID number.</p>
+    #[doc(hidden)]
     pub norad_satellite_id: i32,
     /// <p>A list of ground stations to which the satellite is on-boarded.</p>
+    #[doc(hidden)]
     pub ground_stations: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SatelliteListItem {
@@ -41,11 +45,10 @@ impl std::fmt::Debug for SatelliteListItem {
         formatter.finish()
     }
 }
-/// See [`SatelliteListItem`](crate::model::SatelliteListItem)
+/// See [`SatelliteListItem`](crate::model::SatelliteListItem).
 pub mod satellite_list_item {
 
-    /// A builder for [`SatelliteListItem`](crate::model::SatelliteListItem)
-    #[non_exhaustive]
+    /// A builder for [`SatelliteListItem`](crate::model::SatelliteListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) satellite_id: std::option::Option<std::string::String>,
@@ -106,7 +109,7 @@ pub mod satellite_list_item {
             self.ground_stations = input;
             self
         }
-        /// Consumes the builder and constructs a [`SatelliteListItem`](crate::model::SatelliteListItem)
+        /// Consumes the builder and constructs a [`SatelliteListItem`](crate::model::SatelliteListItem).
         pub fn build(self) -> crate::model::SatelliteListItem {
             crate::model::SatelliteListItem {
                 satellite_id: self.satellite_id,
@@ -118,7 +121,7 @@ pub mod satellite_list_item {
     }
 }
 impl SatelliteListItem {
-    /// Creates a new builder-style object to manufacture [`SatelliteListItem`](crate::model::SatelliteListItem)
+    /// Creates a new builder-style object to manufacture [`SatelliteListItem`](crate::model::SatelliteListItem).
     pub fn builder() -> crate::model::satellite_list_item::Builder {
         crate::model::satellite_list_item::Builder::default()
     }
@@ -129,12 +132,16 @@ impl SatelliteListItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MissionProfileListItem {
     /// <p>UUID of a mission profile.</p>
+    #[doc(hidden)]
     pub mission_profile_id: std::option::Option<std::string::String>,
     /// <p>ARN of a mission profile.</p>
+    #[doc(hidden)]
     pub mission_profile_arn: std::option::Option<std::string::String>,
     /// <p>Region of a mission profile.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>Name of a mission profile.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl MissionProfileListItem {
@@ -165,11 +172,10 @@ impl std::fmt::Debug for MissionProfileListItem {
         formatter.finish()
     }
 }
-/// See [`MissionProfileListItem`](crate::model::MissionProfileListItem)
+/// See [`MissionProfileListItem`](crate::model::MissionProfileListItem).
 pub mod mission_profile_list_item {
 
-    /// A builder for [`MissionProfileListItem`](crate::model::MissionProfileListItem)
-    #[non_exhaustive]
+    /// A builder for [`MissionProfileListItem`](crate::model::MissionProfileListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mission_profile_id: std::option::Option<std::string::String>,
@@ -224,7 +230,7 @@ pub mod mission_profile_list_item {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`MissionProfileListItem`](crate::model::MissionProfileListItem)
+        /// Consumes the builder and constructs a [`MissionProfileListItem`](crate::model::MissionProfileListItem).
         pub fn build(self) -> crate::model::MissionProfileListItem {
             crate::model::MissionProfileListItem {
                 mission_profile_id: self.mission_profile_id,
@@ -236,7 +242,7 @@ pub mod mission_profile_list_item {
     }
 }
 impl MissionProfileListItem {
-    /// Creates a new builder-style object to manufacture [`MissionProfileListItem`](crate::model::MissionProfileListItem)
+    /// Creates a new builder-style object to manufacture [`MissionProfileListItem`](crate::model::MissionProfileListItem).
     pub fn builder() -> crate::model::mission_profile_list_item::Builder {
         crate::model::mission_profile_list_item::Builder::default()
     }
@@ -247,10 +253,13 @@ impl MissionProfileListItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GroundStationData {
     /// <p>UUID of a ground station.</p>
+    #[doc(hidden)]
     pub ground_station_id: std::option::Option<std::string::String>,
     /// <p>Name of a ground station.</p>
+    #[doc(hidden)]
     pub ground_station_name: std::option::Option<std::string::String>,
     /// <p>Ground station Region.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
 }
 impl GroundStationData {
@@ -276,11 +285,10 @@ impl std::fmt::Debug for GroundStationData {
         formatter.finish()
     }
 }
-/// See [`GroundStationData`](crate::model::GroundStationData)
+/// See [`GroundStationData`](crate::model::GroundStationData).
 pub mod ground_station_data {
 
-    /// A builder for [`GroundStationData`](crate::model::GroundStationData)
-    #[non_exhaustive]
+    /// A builder for [`GroundStationData`](crate::model::GroundStationData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ground_station_id: std::option::Option<std::string::String>,
@@ -324,7 +332,7 @@ pub mod ground_station_data {
             self.region = input;
             self
         }
-        /// Consumes the builder and constructs a [`GroundStationData`](crate::model::GroundStationData)
+        /// Consumes the builder and constructs a [`GroundStationData`](crate::model::GroundStationData).
         pub fn build(self) -> crate::model::GroundStationData {
             crate::model::GroundStationData {
                 ground_station_id: self.ground_station_id,
@@ -335,7 +343,7 @@ pub mod ground_station_data {
     }
 }
 impl GroundStationData {
-    /// Creates a new builder-style object to manufacture [`GroundStationData`](crate::model::GroundStationData)
+    /// Creates a new builder-style object to manufacture [`GroundStationData`](crate::model::GroundStationData).
     pub fn builder() -> crate::model::ground_station_data::Builder {
         crate::model::ground_station_data::Builder::default()
     }
@@ -346,8 +354,10 @@ impl GroundStationData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataflowEndpointListItem {
     /// <p>UUID of a dataflow endpoint group.</p>
+    #[doc(hidden)]
     pub dataflow_endpoint_group_id: std::option::Option<std::string::String>,
     /// <p>ARN of a dataflow endpoint group.</p>
+    #[doc(hidden)]
     pub dataflow_endpoint_group_arn: std::option::Option<std::string::String>,
 }
 impl DataflowEndpointListItem {
@@ -374,11 +384,10 @@ impl std::fmt::Debug for DataflowEndpointListItem {
         formatter.finish()
     }
 }
-/// See [`DataflowEndpointListItem`](crate::model::DataflowEndpointListItem)
+/// See [`DataflowEndpointListItem`](crate::model::DataflowEndpointListItem).
 pub mod dataflow_endpoint_list_item {
 
-    /// A builder for [`DataflowEndpointListItem`](crate::model::DataflowEndpointListItem)
-    #[non_exhaustive]
+    /// A builder for [`DataflowEndpointListItem`](crate::model::DataflowEndpointListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataflow_endpoint_group_id: std::option::Option<std::string::String>,
@@ -414,7 +423,7 @@ pub mod dataflow_endpoint_list_item {
             self.dataflow_endpoint_group_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataflowEndpointListItem`](crate::model::DataflowEndpointListItem)
+        /// Consumes the builder and constructs a [`DataflowEndpointListItem`](crate::model::DataflowEndpointListItem).
         pub fn build(self) -> crate::model::DataflowEndpointListItem {
             crate::model::DataflowEndpointListItem {
                 dataflow_endpoint_group_id: self.dataflow_endpoint_group_id,
@@ -424,7 +433,7 @@ pub mod dataflow_endpoint_list_item {
     }
 }
 impl DataflowEndpointListItem {
-    /// Creates a new builder-style object to manufacture [`DataflowEndpointListItem`](crate::model::DataflowEndpointListItem)
+    /// Creates a new builder-style object to manufacture [`DataflowEndpointListItem`](crate::model::DataflowEndpointListItem).
     pub fn builder() -> crate::model::dataflow_endpoint_list_item::Builder {
         crate::model::dataflow_endpoint_list_item::Builder::default()
     }
@@ -435,8 +444,10 @@ impl DataflowEndpointListItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointDetails {
     /// <p>Endpoint security details.</p>
+    #[doc(hidden)]
     pub security_details: std::option::Option<crate::model::SecurityDetails>,
     /// <p>A dataflow endpoint.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<crate::model::DataflowEndpoint>,
 }
 impl EndpointDetails {
@@ -457,11 +468,10 @@ impl std::fmt::Debug for EndpointDetails {
         formatter.finish()
     }
 }
-/// See [`EndpointDetails`](crate::model::EndpointDetails)
+/// See [`EndpointDetails`](crate::model::EndpointDetails).
 pub mod endpoint_details {
 
-    /// A builder for [`EndpointDetails`](crate::model::EndpointDetails)
-    #[non_exhaustive]
+    /// A builder for [`EndpointDetails`](crate::model::EndpointDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) security_details: std::option::Option<crate::model::SecurityDetails>,
@@ -494,7 +504,7 @@ pub mod endpoint_details {
             self.endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointDetails`](crate::model::EndpointDetails)
+        /// Consumes the builder and constructs a [`EndpointDetails`](crate::model::EndpointDetails).
         pub fn build(self) -> crate::model::EndpointDetails {
             crate::model::EndpointDetails {
                 security_details: self.security_details,
@@ -504,7 +514,7 @@ pub mod endpoint_details {
     }
 }
 impl EndpointDetails {
-    /// Creates a new builder-style object to manufacture [`EndpointDetails`](crate::model::EndpointDetails)
+    /// Creates a new builder-style object to manufacture [`EndpointDetails`](crate::model::EndpointDetails).
     pub fn builder() -> crate::model::endpoint_details::Builder {
         crate::model::endpoint_details::Builder::default()
     }
@@ -515,12 +525,16 @@ impl EndpointDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataflowEndpoint {
     /// <p>Name of a dataflow endpoint.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Socket address of a dataflow endpoint.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<crate::model::SocketAddress>,
     /// <p>Status of a dataflow endpoint.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EndpointStatus>,
     /// <p>Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.</p>
+    #[doc(hidden)]
     pub mtu: std::option::Option<i32>,
 }
 impl DataflowEndpoint {
@@ -551,11 +565,10 @@ impl std::fmt::Debug for DataflowEndpoint {
         formatter.finish()
     }
 }
-/// See [`DataflowEndpoint`](crate::model::DataflowEndpoint)
+/// See [`DataflowEndpoint`](crate::model::DataflowEndpoint).
 pub mod dataflow_endpoint {
 
-    /// A builder for [`DataflowEndpoint`](crate::model::DataflowEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`DataflowEndpoint`](crate::model::DataflowEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -610,7 +623,7 @@ pub mod dataflow_endpoint {
             self.mtu = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataflowEndpoint`](crate::model::DataflowEndpoint)
+        /// Consumes the builder and constructs a [`DataflowEndpoint`](crate::model::DataflowEndpoint).
         pub fn build(self) -> crate::model::DataflowEndpoint {
             crate::model::DataflowEndpoint {
                 name: self.name,
@@ -622,7 +635,7 @@ pub mod dataflow_endpoint {
     }
 }
 impl DataflowEndpoint {
-    /// Creates a new builder-style object to manufacture [`DataflowEndpoint`](crate::model::DataflowEndpoint)
+    /// Creates a new builder-style object to manufacture [`DataflowEndpoint`](crate::model::DataflowEndpoint).
     pub fn builder() -> crate::model::dataflow_endpoint::Builder {
         crate::model::dataflow_endpoint::Builder::default()
     }
@@ -700,8 +713,10 @@ impl AsRef<str> for EndpointStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SocketAddress {
     /// <p>Name of a socket address.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Port of a socket address.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
 }
 impl SocketAddress {
@@ -722,11 +737,10 @@ impl std::fmt::Debug for SocketAddress {
         formatter.finish()
     }
 }
-/// See [`SocketAddress`](crate::model::SocketAddress)
+/// See [`SocketAddress`](crate::model::SocketAddress).
 pub mod socket_address {
 
-    /// A builder for [`SocketAddress`](crate::model::SocketAddress)
-    #[non_exhaustive]
+    /// A builder for [`SocketAddress`](crate::model::SocketAddress).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -753,7 +767,7 @@ pub mod socket_address {
             self.port = input;
             self
         }
-        /// Consumes the builder and constructs a [`SocketAddress`](crate::model::SocketAddress)
+        /// Consumes the builder and constructs a [`SocketAddress`](crate::model::SocketAddress).
         pub fn build(self) -> crate::model::SocketAddress {
             crate::model::SocketAddress {
                 name: self.name,
@@ -763,7 +777,7 @@ pub mod socket_address {
     }
 }
 impl SocketAddress {
-    /// Creates a new builder-style object to manufacture [`SocketAddress`](crate::model::SocketAddress)
+    /// Creates a new builder-style object to manufacture [`SocketAddress`](crate::model::SocketAddress).
     pub fn builder() -> crate::model::socket_address::Builder {
         crate::model::socket_address::Builder::default()
     }
@@ -774,10 +788,13 @@ impl SocketAddress {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SecurityDetails {
     /// <p>A list of subnets where AWS Ground Station places elastic network interfaces to send streams to your instances.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The security groups to attach to the elastic network interfaces.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>ARN to a role needed for connecting streams to your instances. </p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl SecurityDetails {
@@ -803,11 +820,10 @@ impl std::fmt::Debug for SecurityDetails {
         formatter.finish()
     }
 }
-/// See [`SecurityDetails`](crate::model::SecurityDetails)
+/// See [`SecurityDetails`](crate::model::SecurityDetails).
 pub mod security_details {
 
-    /// A builder for [`SecurityDetails`](crate::model::SecurityDetails)
-    #[non_exhaustive]
+    /// A builder for [`SecurityDetails`](crate::model::SecurityDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -863,7 +879,7 @@ pub mod security_details {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`SecurityDetails`](crate::model::SecurityDetails)
+        /// Consumes the builder and constructs a [`SecurityDetails`](crate::model::SecurityDetails).
         pub fn build(self) -> crate::model::SecurityDetails {
             crate::model::SecurityDetails {
                 subnet_ids: self.subnet_ids,
@@ -874,7 +890,7 @@ pub mod security_details {
     }
 }
 impl SecurityDetails {
-    /// Creates a new builder-style object to manufacture [`SecurityDetails`](crate::model::SecurityDetails)
+    /// Creates a new builder-style object to manufacture [`SecurityDetails`](crate::model::SecurityDetails).
     pub fn builder() -> crate::model::security_details::Builder {
         crate::model::security_details::Builder::default()
     }
@@ -885,30 +901,43 @@ impl SecurityDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContactData {
     /// <p>UUID of a contact.</p>
+    #[doc(hidden)]
     pub contact_id: std::option::Option<std::string::String>,
     /// <p>ARN of a mission profile.</p>
+    #[doc(hidden)]
     pub mission_profile_arn: std::option::Option<std::string::String>,
     /// <p>ARN of a satellite.</p>
+    #[doc(hidden)]
     pub satellite_arn: std::option::Option<std::string::String>,
     /// <p>Start time of a contact.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>End time of a contact.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Amount of time prior to contact start you’d like to receive a CloudWatch event indicating an upcoming pass.</p>
+    #[doc(hidden)]
     pub pre_pass_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Amount of time after a contact ends that you’d like to receive a CloudWatch event indicating the pass has finished.</p>
+    #[doc(hidden)]
     pub post_pass_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Name of a ground station.</p>
+    #[doc(hidden)]
     pub ground_station: std::option::Option<std::string::String>,
     /// <p>Status of a contact.</p>
+    #[doc(hidden)]
     pub contact_status: std::option::Option<crate::model::ContactStatus>,
     /// <p>Error message of a contact.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>Maximum elevation angle of a contact.</p>
+    #[doc(hidden)]
     pub maximum_elevation: std::option::Option<crate::model::Elevation>,
     /// <p>Region of a contact.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>Tags assigned to a contact.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -988,11 +1017,10 @@ impl std::fmt::Debug for ContactData {
         formatter.finish()
     }
 }
-/// See [`ContactData`](crate::model::ContactData)
+/// See [`ContactData`](crate::model::ContactData).
 pub mod contact_data {
 
-    /// A builder for [`ContactData`](crate::model::ContactData)
-    #[non_exhaustive]
+    /// A builder for [`ContactData`](crate::model::ContactData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) contact_id: std::option::Option<std::string::String>,
@@ -1187,7 +1215,7 @@ pub mod contact_data {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContactData`](crate::model::ContactData)
+        /// Consumes the builder and constructs a [`ContactData`](crate::model::ContactData).
         pub fn build(self) -> crate::model::ContactData {
             crate::model::ContactData {
                 contact_id: self.contact_id,
@@ -1208,7 +1236,7 @@ pub mod contact_data {
     }
 }
 impl ContactData {
-    /// Creates a new builder-style object to manufacture [`ContactData`](crate::model::ContactData)
+    /// Creates a new builder-style object to manufacture [`ContactData`](crate::model::ContactData).
     pub fn builder() -> crate::model::contact_data::Builder {
         crate::model::contact_data::Builder::default()
     }
@@ -1219,8 +1247,10 @@ impl ContactData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Elevation {
     /// <p>Elevation angle value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<f64>,
     /// <p>Elevation angle units.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<crate::model::AngleUnits>,
 }
 impl Elevation {
@@ -1241,11 +1271,10 @@ impl std::fmt::Debug for Elevation {
         formatter.finish()
     }
 }
-/// See [`Elevation`](crate::model::Elevation)
+/// See [`Elevation`](crate::model::Elevation).
 pub mod elevation {
 
-    /// A builder for [`Elevation`](crate::model::Elevation)
-    #[non_exhaustive]
+    /// A builder for [`Elevation`](crate::model::Elevation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<f64>,
@@ -1272,7 +1301,7 @@ pub mod elevation {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`Elevation`](crate::model::Elevation)
+        /// Consumes the builder and constructs a [`Elevation`](crate::model::Elevation).
         pub fn build(self) -> crate::model::Elevation {
             crate::model::Elevation {
                 value: self.value,
@@ -1282,7 +1311,7 @@ pub mod elevation {
     }
 }
 impl Elevation {
-    /// Creates a new builder-style object to manufacture [`Elevation`](crate::model::Elevation)
+    /// Creates a new builder-style object to manufacture [`Elevation`](crate::model::Elevation).
     pub fn builder() -> crate::model::elevation::Builder {
         crate::model::elevation::Builder::default()
     }
@@ -1461,10 +1490,13 @@ impl AsRef<str> for ContactStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataflowDetail {
     /// <p>Dataflow details for the source side.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<crate::model::Source>,
     /// <p>Dataflow details for the destination side.</p>
+    #[doc(hidden)]
     pub destination: std::option::Option<crate::model::Destination>,
     /// <p>Error message for a dataflow.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl DataflowDetail {
@@ -1490,11 +1522,10 @@ impl std::fmt::Debug for DataflowDetail {
         formatter.finish()
     }
 }
-/// See [`DataflowDetail`](crate::model::DataflowDetail)
+/// See [`DataflowDetail`](crate::model::DataflowDetail).
 pub mod dataflow_detail {
 
-    /// A builder for [`DataflowDetail`](crate::model::DataflowDetail)
-    #[non_exhaustive]
+    /// A builder for [`DataflowDetail`](crate::model::DataflowDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source: std::option::Option<crate::model::Source>,
@@ -1538,7 +1569,7 @@ pub mod dataflow_detail {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataflowDetail`](crate::model::DataflowDetail)
+        /// Consumes the builder and constructs a [`DataflowDetail`](crate::model::DataflowDetail).
         pub fn build(self) -> crate::model::DataflowDetail {
             crate::model::DataflowDetail {
                 source: self.source,
@@ -1549,7 +1580,7 @@ pub mod dataflow_detail {
     }
 }
 impl DataflowDetail {
-    /// Creates a new builder-style object to manufacture [`DataflowDetail`](crate::model::DataflowDetail)
+    /// Creates a new builder-style object to manufacture [`DataflowDetail`](crate::model::DataflowDetail).
     pub fn builder() -> crate::model::dataflow_detail::Builder {
         crate::model::dataflow_detail::Builder::default()
     }
@@ -1560,12 +1591,16 @@ impl DataflowDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Destination {
     /// <p>Type of a <code>Config</code>.</p>
+    #[doc(hidden)]
     pub config_type: std::option::Option<crate::model::ConfigCapabilityType>,
     /// <p>UUID of a <code>Config</code>.</p>
+    #[doc(hidden)]
     pub config_id: std::option::Option<std::string::String>,
     /// <p>Additional details for a <code>Config</code>, if type is dataflow endpoint or antenna demod decode.</p>
+    #[doc(hidden)]
     pub config_details: std::option::Option<crate::model::ConfigDetails>,
     /// <p>Region of a dataflow destination.</p>
+    #[doc(hidden)]
     pub dataflow_destination_region: std::option::Option<std::string::String>,
 }
 impl Destination {
@@ -1599,11 +1634,10 @@ impl std::fmt::Debug for Destination {
         formatter.finish()
     }
 }
-/// See [`Destination`](crate::model::Destination)
+/// See [`Destination`](crate::model::Destination).
 pub mod destination {
 
-    /// A builder for [`Destination`](crate::model::Destination)
-    #[non_exhaustive]
+    /// A builder for [`Destination`](crate::model::Destination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_type: std::option::Option<crate::model::ConfigCapabilityType>,
@@ -1664,7 +1698,7 @@ pub mod destination {
             self.dataflow_destination_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`Destination`](crate::model::Destination)
+        /// Consumes the builder and constructs a [`Destination`](crate::model::Destination).
         pub fn build(self) -> crate::model::Destination {
             crate::model::Destination {
                 config_type: self.config_type,
@@ -1676,7 +1710,7 @@ pub mod destination {
     }
 }
 impl Destination {
-    /// Creates a new builder-style object to manufacture [`Destination`](crate::model::Destination)
+    /// Creates a new builder-style object to manufacture [`Destination`](crate::model::Destination).
     pub fn builder() -> crate::model::destination::Builder {
         crate::model::destination::Builder::default()
     }
@@ -1759,8 +1793,10 @@ impl ConfigDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3RecordingDetails {
     /// <p>ARN of the bucket used.</p>
+    #[doc(hidden)]
     pub bucket_arn: std::option::Option<std::string::String>,
     /// <p>Template of the S3 key used.</p>
+    #[doc(hidden)]
     pub key_template: std::option::Option<std::string::String>,
 }
 impl S3RecordingDetails {
@@ -1781,11 +1817,10 @@ impl std::fmt::Debug for S3RecordingDetails {
         formatter.finish()
     }
 }
-/// See [`S3RecordingDetails`](crate::model::S3RecordingDetails)
+/// See [`S3RecordingDetails`](crate::model::S3RecordingDetails).
 pub mod s3_recording_details {
 
-    /// A builder for [`S3RecordingDetails`](crate::model::S3RecordingDetails)
-    #[non_exhaustive]
+    /// A builder for [`S3RecordingDetails`](crate::model::S3RecordingDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn: std::option::Option<std::string::String>,
@@ -1812,7 +1847,7 @@ pub mod s3_recording_details {
             self.key_template = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3RecordingDetails`](crate::model::S3RecordingDetails)
+        /// Consumes the builder and constructs a [`S3RecordingDetails`](crate::model::S3RecordingDetails).
         pub fn build(self) -> crate::model::S3RecordingDetails {
             crate::model::S3RecordingDetails {
                 bucket_arn: self.bucket_arn,
@@ -1822,7 +1857,7 @@ pub mod s3_recording_details {
     }
 }
 impl S3RecordingDetails {
-    /// Creates a new builder-style object to manufacture [`S3RecordingDetails`](crate::model::S3RecordingDetails)
+    /// Creates a new builder-style object to manufacture [`S3RecordingDetails`](crate::model::S3RecordingDetails).
     pub fn builder() -> crate::model::s3_recording_details::Builder {
         crate::model::s3_recording_details::Builder::default()
     }
@@ -1833,6 +1868,7 @@ impl S3RecordingDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AntennaDemodDecodeDetails {
     /// <p>Name of an antenna demod decode output node used in a contact.</p>
+    #[doc(hidden)]
     pub output_node: std::option::Option<std::string::String>,
 }
 impl AntennaDemodDecodeDetails {
@@ -1848,11 +1884,10 @@ impl std::fmt::Debug for AntennaDemodDecodeDetails {
         formatter.finish()
     }
 }
-/// See [`AntennaDemodDecodeDetails`](crate::model::AntennaDemodDecodeDetails)
+/// See [`AntennaDemodDecodeDetails`](crate::model::AntennaDemodDecodeDetails).
 pub mod antenna_demod_decode_details {
 
-    /// A builder for [`AntennaDemodDecodeDetails`](crate::model::AntennaDemodDecodeDetails)
-    #[non_exhaustive]
+    /// A builder for [`AntennaDemodDecodeDetails`](crate::model::AntennaDemodDecodeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) output_node: std::option::Option<std::string::String>,
@@ -1868,7 +1903,7 @@ pub mod antenna_demod_decode_details {
             self.output_node = input;
             self
         }
-        /// Consumes the builder and constructs a [`AntennaDemodDecodeDetails`](crate::model::AntennaDemodDecodeDetails)
+        /// Consumes the builder and constructs a [`AntennaDemodDecodeDetails`](crate::model::AntennaDemodDecodeDetails).
         pub fn build(self) -> crate::model::AntennaDemodDecodeDetails {
             crate::model::AntennaDemodDecodeDetails {
                 output_node: self.output_node,
@@ -1877,7 +1912,7 @@ pub mod antenna_demod_decode_details {
     }
 }
 impl AntennaDemodDecodeDetails {
-    /// Creates a new builder-style object to manufacture [`AntennaDemodDecodeDetails`](crate::model::AntennaDemodDecodeDetails)
+    /// Creates a new builder-style object to manufacture [`AntennaDemodDecodeDetails`](crate::model::AntennaDemodDecodeDetails).
     pub fn builder() -> crate::model::antenna_demod_decode_details::Builder {
         crate::model::antenna_demod_decode_details::Builder::default()
     }
@@ -1971,12 +2006,16 @@ impl AsRef<str> for ConfigCapabilityType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Source {
     /// <p>Type of a <code>Config</code>.</p>
+    #[doc(hidden)]
     pub config_type: std::option::Option<crate::model::ConfigCapabilityType>,
     /// <p>UUID of a <code>Config</code>.</p>
+    #[doc(hidden)]
     pub config_id: std::option::Option<std::string::String>,
     /// <p>Additional details for a <code>Config</code>, if type is dataflow endpoint or antenna demod decode.</p>
+    #[doc(hidden)]
     pub config_details: std::option::Option<crate::model::ConfigDetails>,
     /// <p>Region of a dataflow source.</p>
+    #[doc(hidden)]
     pub dataflow_source_region: std::option::Option<std::string::String>,
 }
 impl Source {
@@ -2007,11 +2046,10 @@ impl std::fmt::Debug for Source {
         formatter.finish()
     }
 }
-/// See [`Source`](crate::model::Source)
+/// See [`Source`](crate::model::Source).
 pub mod source {
 
-    /// A builder for [`Source`](crate::model::Source)
-    #[non_exhaustive]
+    /// A builder for [`Source`](crate::model::Source).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_type: std::option::Option<crate::model::ConfigCapabilityType>,
@@ -2069,7 +2107,7 @@ pub mod source {
             self.dataflow_source_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`Source`](crate::model::Source)
+        /// Consumes the builder and constructs a [`Source`](crate::model::Source).
         pub fn build(self) -> crate::model::Source {
             crate::model::Source {
                 config_type: self.config_type,
@@ -2081,7 +2119,7 @@ pub mod source {
     }
 }
 impl Source {
-    /// Creates a new builder-style object to manufacture [`Source`](crate::model::Source)
+    /// Creates a new builder-style object to manufacture [`Source`](crate::model::Source).
     pub fn builder() -> crate::model::source::Builder {
         crate::model::source::Builder::default()
     }
@@ -2092,12 +2130,16 @@ impl Source {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigListItem {
     /// <p>UUID of a <code>Config</code>.</p>
+    #[doc(hidden)]
     pub config_id: std::option::Option<std::string::String>,
     /// <p>Type of a <code>Config</code>.</p>
+    #[doc(hidden)]
     pub config_type: std::option::Option<crate::model::ConfigCapabilityType>,
     /// <p>ARN of a <code>Config</code>.</p>
+    #[doc(hidden)]
     pub config_arn: std::option::Option<std::string::String>,
     /// <p>Name of a <code>Config</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl ConfigListItem {
@@ -2128,11 +2170,10 @@ impl std::fmt::Debug for ConfigListItem {
         formatter.finish()
     }
 }
-/// See [`ConfigListItem`](crate::model::ConfigListItem)
+/// See [`ConfigListItem`](crate::model::ConfigListItem).
 pub mod config_list_item {
 
-    /// A builder for [`ConfigListItem`](crate::model::ConfigListItem)
-    #[non_exhaustive]
+    /// A builder for [`ConfigListItem`](crate::model::ConfigListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_id: std::option::Option<std::string::String>,
@@ -2184,7 +2225,7 @@ pub mod config_list_item {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigListItem`](crate::model::ConfigListItem)
+        /// Consumes the builder and constructs a [`ConfigListItem`](crate::model::ConfigListItem).
         pub fn build(self) -> crate::model::ConfigListItem {
             crate::model::ConfigListItem {
                 config_id: self.config_id,
@@ -2196,7 +2237,7 @@ pub mod config_list_item {
     }
 }
 impl ConfigListItem {
-    /// Creates a new builder-style object to manufacture [`ConfigListItem`](crate::model::ConfigListItem)
+    /// Creates a new builder-style object to manufacture [`ConfigListItem`](crate::model::ConfigListItem).
     pub fn builder() -> crate::model::config_list_item::Builder {
         crate::model::config_list_item::Builder::default()
     }
@@ -2347,10 +2388,13 @@ impl ConfigTypeData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3RecordingConfig {
     /// <p>ARN of the bucket to record to.</p>
+    #[doc(hidden)]
     pub bucket_arn: std::option::Option<std::string::String>,
     /// <p>ARN of the role Ground Station assumes to write data to the bucket.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>S3 Key prefix to prefice data files.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl S3RecordingConfig {
@@ -2376,11 +2420,10 @@ impl std::fmt::Debug for S3RecordingConfig {
         formatter.finish()
     }
 }
-/// See [`S3RecordingConfig`](crate::model::S3RecordingConfig)
+/// See [`S3RecordingConfig`](crate::model::S3RecordingConfig).
 pub mod s3_recording_config {
 
-    /// A builder for [`S3RecordingConfig`](crate::model::S3RecordingConfig)
-    #[non_exhaustive]
+    /// A builder for [`S3RecordingConfig`](crate::model::S3RecordingConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn: std::option::Option<std::string::String>,
@@ -2418,7 +2461,7 @@ pub mod s3_recording_config {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3RecordingConfig`](crate::model::S3RecordingConfig)
+        /// Consumes the builder and constructs a [`S3RecordingConfig`](crate::model::S3RecordingConfig).
         pub fn build(self) -> crate::model::S3RecordingConfig {
             crate::model::S3RecordingConfig {
                 bucket_arn: self.bucket_arn,
@@ -2429,7 +2472,7 @@ pub mod s3_recording_config {
     }
 }
 impl S3RecordingConfig {
-    /// Creates a new builder-style object to manufacture [`S3RecordingConfig`](crate::model::S3RecordingConfig)
+    /// Creates a new builder-style object to manufacture [`S3RecordingConfig`](crate::model::S3RecordingConfig).
     pub fn builder() -> crate::model::s3_recording_config::Builder {
         crate::model::s3_recording_config::Builder::default()
     }
@@ -2441,8 +2484,10 @@ impl S3RecordingConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UplinkEchoConfig {
     /// <p>Whether or not an uplink <code>Config</code> is enabled.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>ARN of an uplink <code>Config</code>.</p>
+    #[doc(hidden)]
     pub antenna_uplink_config_arn: std::option::Option<std::string::String>,
 }
 impl UplinkEchoConfig {
@@ -2463,11 +2508,10 @@ impl std::fmt::Debug for UplinkEchoConfig {
         formatter.finish()
     }
 }
-/// See [`UplinkEchoConfig`](crate::model::UplinkEchoConfig)
+/// See [`UplinkEchoConfig`](crate::model::UplinkEchoConfig).
 pub mod uplink_echo_config {
 
-    /// A builder for [`UplinkEchoConfig`](crate::model::UplinkEchoConfig)
-    #[non_exhaustive]
+    /// A builder for [`UplinkEchoConfig`](crate::model::UplinkEchoConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -2497,7 +2541,7 @@ pub mod uplink_echo_config {
             self.antenna_uplink_config_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UplinkEchoConfig`](crate::model::UplinkEchoConfig)
+        /// Consumes the builder and constructs a [`UplinkEchoConfig`](crate::model::UplinkEchoConfig).
         pub fn build(self) -> crate::model::UplinkEchoConfig {
             crate::model::UplinkEchoConfig {
                 enabled: self.enabled,
@@ -2507,7 +2551,7 @@ pub mod uplink_echo_config {
     }
 }
 impl UplinkEchoConfig {
-    /// Creates a new builder-style object to manufacture [`UplinkEchoConfig`](crate::model::UplinkEchoConfig)
+    /// Creates a new builder-style object to manufacture [`UplinkEchoConfig`](crate::model::UplinkEchoConfig).
     pub fn builder() -> crate::model::uplink_echo_config::Builder {
         crate::model::uplink_echo_config::Builder::default()
     }
@@ -2518,10 +2562,13 @@ impl UplinkEchoConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AntennaUplinkConfig {
     /// <p>Whether or not uplink transmit is disabled.</p>
+    #[doc(hidden)]
     pub transmit_disabled: std::option::Option<bool>,
     /// <p>Information about the uplink spectral <code>Config</code>.</p>
+    #[doc(hidden)]
     pub spectrum_config: std::option::Option<crate::model::UplinkSpectrumConfig>,
     /// <p>EIRP of the target.</p>
+    #[doc(hidden)]
     pub target_eirp: std::option::Option<crate::model::Eirp>,
 }
 impl AntennaUplinkConfig {
@@ -2547,11 +2594,10 @@ impl std::fmt::Debug for AntennaUplinkConfig {
         formatter.finish()
     }
 }
-/// See [`AntennaUplinkConfig`](crate::model::AntennaUplinkConfig)
+/// See [`AntennaUplinkConfig`](crate::model::AntennaUplinkConfig).
 pub mod antenna_uplink_config {
 
-    /// A builder for [`AntennaUplinkConfig`](crate::model::AntennaUplinkConfig)
-    #[non_exhaustive]
+    /// A builder for [`AntennaUplinkConfig`](crate::model::AntennaUplinkConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transmit_disabled: std::option::Option<bool>,
@@ -2592,7 +2638,7 @@ pub mod antenna_uplink_config {
             self.target_eirp = input;
             self
         }
-        /// Consumes the builder and constructs a [`AntennaUplinkConfig`](crate::model::AntennaUplinkConfig)
+        /// Consumes the builder and constructs a [`AntennaUplinkConfig`](crate::model::AntennaUplinkConfig).
         pub fn build(self) -> crate::model::AntennaUplinkConfig {
             crate::model::AntennaUplinkConfig {
                 transmit_disabled: self.transmit_disabled,
@@ -2603,7 +2649,7 @@ pub mod antenna_uplink_config {
     }
 }
 impl AntennaUplinkConfig {
-    /// Creates a new builder-style object to manufacture [`AntennaUplinkConfig`](crate::model::AntennaUplinkConfig)
+    /// Creates a new builder-style object to manufacture [`AntennaUplinkConfig`](crate::model::AntennaUplinkConfig).
     pub fn builder() -> crate::model::antenna_uplink_config::Builder {
         crate::model::antenna_uplink_config::Builder::default()
     }
@@ -2614,8 +2660,10 @@ impl AntennaUplinkConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Eirp {
     /// <p>Value of an EIRP. Valid values are between 20.0 to 50.0 dBW.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<f64>,
     /// <p>Units of an EIRP.</p>
+    #[doc(hidden)]
     pub units: std::option::Option<crate::model::EirpUnits>,
 }
 impl Eirp {
@@ -2636,11 +2684,10 @@ impl std::fmt::Debug for Eirp {
         formatter.finish()
     }
 }
-/// See [`Eirp`](crate::model::Eirp)
+/// See [`Eirp`](crate::model::Eirp).
 pub mod eirp {
 
-    /// A builder for [`Eirp`](crate::model::Eirp)
-    #[non_exhaustive]
+    /// A builder for [`Eirp`](crate::model::Eirp).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<f64>,
@@ -2667,7 +2714,7 @@ pub mod eirp {
             self.units = input;
             self
         }
-        /// Consumes the builder and constructs a [`Eirp`](crate::model::Eirp)
+        /// Consumes the builder and constructs a [`Eirp`](crate::model::Eirp).
         pub fn build(self) -> crate::model::Eirp {
             crate::model::Eirp {
                 value: self.value,
@@ -2677,7 +2724,7 @@ pub mod eirp {
     }
 }
 impl Eirp {
-    /// Creates a new builder-style object to manufacture [`Eirp`](crate::model::Eirp)
+    /// Creates a new builder-style object to manufacture [`Eirp`](crate::model::Eirp).
     pub fn builder() -> crate::model::eirp::Builder {
         crate::model::eirp::Builder::default()
     }
@@ -2739,8 +2786,10 @@ impl AsRef<str> for EirpUnits {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UplinkSpectrumConfig {
     /// <p>Center frequency of an uplink spectral <code>Config</code>. Valid values are between 2025 to 2120 MHz.</p>
+    #[doc(hidden)]
     pub center_frequency: std::option::Option<crate::model::Frequency>,
     /// <p>Polarization of an uplink spectral <code>Config</code>. Capturing both <code>"RIGHT_HAND"</code> and <code>"LEFT_HAND"</code> polarization requires two separate configs.</p>
+    #[doc(hidden)]
     pub polarization: std::option::Option<crate::model::Polarization>,
 }
 impl UplinkSpectrumConfig {
@@ -2761,11 +2810,10 @@ impl std::fmt::Debug for UplinkSpectrumConfig {
         formatter.finish()
     }
 }
-/// See [`UplinkSpectrumConfig`](crate::model::UplinkSpectrumConfig)
+/// See [`UplinkSpectrumConfig`](crate::model::UplinkSpectrumConfig).
 pub mod uplink_spectrum_config {
 
-    /// A builder for [`UplinkSpectrumConfig`](crate::model::UplinkSpectrumConfig)
-    #[non_exhaustive]
+    /// A builder for [`UplinkSpectrumConfig`](crate::model::UplinkSpectrumConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) center_frequency: std::option::Option<crate::model::Frequency>,
@@ -2798,7 +2846,7 @@ pub mod uplink_spectrum_config {
             self.polarization = input;
             self
         }
-        /// Consumes the builder and constructs a [`UplinkSpectrumConfig`](crate::model::UplinkSpectrumConfig)
+        /// Consumes the builder and constructs a [`UplinkSpectrumConfig`](crate::model::UplinkSpectrumConfig).
         pub fn build(self) -> crate::model::UplinkSpectrumConfig {
             crate::model::UplinkSpectrumConfig {
                 center_frequency: self.center_frequency,
@@ -2808,7 +2856,7 @@ pub mod uplink_spectrum_config {
     }
 }
 impl UplinkSpectrumConfig {
-    /// Creates a new builder-style object to manufacture [`UplinkSpectrumConfig`](crate::model::UplinkSpectrumConfig)
+    /// Creates a new builder-style object to manufacture [`UplinkSpectrumConfig`](crate::model::UplinkSpectrumConfig).
     pub fn builder() -> crate::model::uplink_spectrum_config::Builder {
         crate::model::uplink_spectrum_config::Builder::default()
     }
@@ -2878,8 +2926,10 @@ impl AsRef<str> for Polarization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Frequency {
     /// <p>Frequency value. Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to 2120 MHz for uplink.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<f64>,
     /// <p>Frequency units.</p>
+    #[doc(hidden)]
     pub units: std::option::Option<crate::model::FrequencyUnits>,
 }
 impl Frequency {
@@ -2900,11 +2950,10 @@ impl std::fmt::Debug for Frequency {
         formatter.finish()
     }
 }
-/// See [`Frequency`](crate::model::Frequency)
+/// See [`Frequency`](crate::model::Frequency).
 pub mod frequency {
 
-    /// A builder for [`Frequency`](crate::model::Frequency)
-    #[non_exhaustive]
+    /// A builder for [`Frequency`](crate::model::Frequency).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<f64>,
@@ -2934,7 +2983,7 @@ pub mod frequency {
             self.units = input;
             self
         }
-        /// Consumes the builder and constructs a [`Frequency`](crate::model::Frequency)
+        /// Consumes the builder and constructs a [`Frequency`](crate::model::Frequency).
         pub fn build(self) -> crate::model::Frequency {
             crate::model::Frequency {
                 value: self.value,
@@ -2944,7 +2993,7 @@ pub mod frequency {
     }
 }
 impl Frequency {
-    /// Creates a new builder-style object to manufacture [`Frequency`](crate::model::Frequency)
+    /// Creates a new builder-style object to manufacture [`Frequency`](crate::model::Frequency).
     pub fn builder() -> crate::model::frequency::Builder {
         crate::model::frequency::Builder::default()
     }
@@ -3014,10 +3063,13 @@ impl AsRef<str> for FrequencyUnits {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AntennaDownlinkDemodDecodeConfig {
     /// <p>Information about the spectral <code>Config</code>.</p>
+    #[doc(hidden)]
     pub spectrum_config: std::option::Option<crate::model::SpectrumConfig>,
     /// <p>Information about the demodulation <code>Config</code>.</p>
+    #[doc(hidden)]
     pub demodulation_config: std::option::Option<crate::model::DemodulationConfig>,
     /// <p>Information about the decode <code>Config</code>.</p>
+    #[doc(hidden)]
     pub decode_config: std::option::Option<crate::model::DecodeConfig>,
 }
 impl AntennaDownlinkDemodDecodeConfig {
@@ -3043,11 +3095,10 @@ impl std::fmt::Debug for AntennaDownlinkDemodDecodeConfig {
         formatter.finish()
     }
 }
-/// See [`AntennaDownlinkDemodDecodeConfig`](crate::model::AntennaDownlinkDemodDecodeConfig)
+/// See [`AntennaDownlinkDemodDecodeConfig`](crate::model::AntennaDownlinkDemodDecodeConfig).
 pub mod antenna_downlink_demod_decode_config {
 
-    /// A builder for [`AntennaDownlinkDemodDecodeConfig`](crate::model::AntennaDownlinkDemodDecodeConfig)
-    #[non_exhaustive]
+    /// A builder for [`AntennaDownlinkDemodDecodeConfig`](crate::model::AntennaDownlinkDemodDecodeConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) spectrum_config: std::option::Option<crate::model::SpectrumConfig>,
@@ -3094,7 +3145,7 @@ pub mod antenna_downlink_demod_decode_config {
             self.decode_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`AntennaDownlinkDemodDecodeConfig`](crate::model::AntennaDownlinkDemodDecodeConfig)
+        /// Consumes the builder and constructs a [`AntennaDownlinkDemodDecodeConfig`](crate::model::AntennaDownlinkDemodDecodeConfig).
         pub fn build(self) -> crate::model::AntennaDownlinkDemodDecodeConfig {
             crate::model::AntennaDownlinkDemodDecodeConfig {
                 spectrum_config: self.spectrum_config,
@@ -3105,7 +3156,7 @@ pub mod antenna_downlink_demod_decode_config {
     }
 }
 impl AntennaDownlinkDemodDecodeConfig {
-    /// Creates a new builder-style object to manufacture [`AntennaDownlinkDemodDecodeConfig`](crate::model::AntennaDownlinkDemodDecodeConfig)
+    /// Creates a new builder-style object to manufacture [`AntennaDownlinkDemodDecodeConfig`](crate::model::AntennaDownlinkDemodDecodeConfig).
     pub fn builder() -> crate::model::antenna_downlink_demod_decode_config::Builder {
         crate::model::antenna_downlink_demod_decode_config::Builder::default()
     }
@@ -3116,6 +3167,7 @@ impl AntennaDownlinkDemodDecodeConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DecodeConfig {
     /// <p>Unvalidated JSON of a decode <code>Config</code>.</p>
+    #[doc(hidden)]
     pub unvalidated_json: std::option::Option<std::string::String>,
 }
 impl DecodeConfig {
@@ -3131,11 +3183,10 @@ impl std::fmt::Debug for DecodeConfig {
         formatter.finish()
     }
 }
-/// See [`DecodeConfig`](crate::model::DecodeConfig)
+/// See [`DecodeConfig`](crate::model::DecodeConfig).
 pub mod decode_config {
 
-    /// A builder for [`DecodeConfig`](crate::model::DecodeConfig)
-    #[non_exhaustive]
+    /// A builder for [`DecodeConfig`](crate::model::DecodeConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) unvalidated_json: std::option::Option<std::string::String>,
@@ -3154,7 +3205,7 @@ pub mod decode_config {
             self.unvalidated_json = input;
             self
         }
-        /// Consumes the builder and constructs a [`DecodeConfig`](crate::model::DecodeConfig)
+        /// Consumes the builder and constructs a [`DecodeConfig`](crate::model::DecodeConfig).
         pub fn build(self) -> crate::model::DecodeConfig {
             crate::model::DecodeConfig {
                 unvalidated_json: self.unvalidated_json,
@@ -3163,7 +3214,7 @@ pub mod decode_config {
     }
 }
 impl DecodeConfig {
-    /// Creates a new builder-style object to manufacture [`DecodeConfig`](crate::model::DecodeConfig)
+    /// Creates a new builder-style object to manufacture [`DecodeConfig`](crate::model::DecodeConfig).
     pub fn builder() -> crate::model::decode_config::Builder {
         crate::model::decode_config::Builder::default()
     }
@@ -3174,6 +3225,7 @@ impl DecodeConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DemodulationConfig {
     /// <p>Unvalidated JSON of a demodulation <code>Config</code>.</p>
+    #[doc(hidden)]
     pub unvalidated_json: std::option::Option<std::string::String>,
 }
 impl DemodulationConfig {
@@ -3189,11 +3241,10 @@ impl std::fmt::Debug for DemodulationConfig {
         formatter.finish()
     }
 }
-/// See [`DemodulationConfig`](crate::model::DemodulationConfig)
+/// See [`DemodulationConfig`](crate::model::DemodulationConfig).
 pub mod demodulation_config {
 
-    /// A builder for [`DemodulationConfig`](crate::model::DemodulationConfig)
-    #[non_exhaustive]
+    /// A builder for [`DemodulationConfig`](crate::model::DemodulationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) unvalidated_json: std::option::Option<std::string::String>,
@@ -3212,7 +3263,7 @@ pub mod demodulation_config {
             self.unvalidated_json = input;
             self
         }
-        /// Consumes the builder and constructs a [`DemodulationConfig`](crate::model::DemodulationConfig)
+        /// Consumes the builder and constructs a [`DemodulationConfig`](crate::model::DemodulationConfig).
         pub fn build(self) -> crate::model::DemodulationConfig {
             crate::model::DemodulationConfig {
                 unvalidated_json: self.unvalidated_json,
@@ -3221,7 +3272,7 @@ pub mod demodulation_config {
     }
 }
 impl DemodulationConfig {
-    /// Creates a new builder-style object to manufacture [`DemodulationConfig`](crate::model::DemodulationConfig)
+    /// Creates a new builder-style object to manufacture [`DemodulationConfig`](crate::model::DemodulationConfig).
     pub fn builder() -> crate::model::demodulation_config::Builder {
         crate::model::demodulation_config::Builder::default()
     }
@@ -3232,6 +3283,7 @@ impl DemodulationConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SpectrumConfig {
     /// <p>Center frequency of a spectral <code>Config</code>. Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to 2120 MHz for uplink.</p>
+    #[doc(hidden)]
     pub center_frequency: std::option::Option<crate::model::Frequency>,
     /// <p>Bandwidth of a spectral <code>Config</code>. AWS Ground Station currently has the following bandwidth limitations:</p>
     /// <ul>
@@ -3239,8 +3291,10 @@ pub struct SpectrumConfig {
     /// <li> <p>For <code>AntennaDownlinkconfig</code> valid values are between 10 kHz to 54 MHz.</p> </li>
     /// <li> <p>For <code>AntennaUplinkConfig</code>, valid values are between 10 kHz to 54 MHz.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub bandwidth: std::option::Option<crate::model::FrequencyBandwidth>,
     /// <p>Polarization of a spectral <code>Config</code>. Capturing both <code>"RIGHT_HAND"</code> and <code>"LEFT_HAND"</code> polarization requires two separate configs.</p>
+    #[doc(hidden)]
     pub polarization: std::option::Option<crate::model::Polarization>,
 }
 impl SpectrumConfig {
@@ -3271,11 +3325,10 @@ impl std::fmt::Debug for SpectrumConfig {
         formatter.finish()
     }
 }
-/// See [`SpectrumConfig`](crate::model::SpectrumConfig)
+/// See [`SpectrumConfig`](crate::model::SpectrumConfig).
 pub mod spectrum_config {
 
-    /// A builder for [`SpectrumConfig`](crate::model::SpectrumConfig)
-    #[non_exhaustive]
+    /// A builder for [`SpectrumConfig`](crate::model::SpectrumConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) center_frequency: std::option::Option<crate::model::Frequency>,
@@ -3332,7 +3385,7 @@ pub mod spectrum_config {
             self.polarization = input;
             self
         }
-        /// Consumes the builder and constructs a [`SpectrumConfig`](crate::model::SpectrumConfig)
+        /// Consumes the builder and constructs a [`SpectrumConfig`](crate::model::SpectrumConfig).
         pub fn build(self) -> crate::model::SpectrumConfig {
             crate::model::SpectrumConfig {
                 center_frequency: self.center_frequency,
@@ -3343,7 +3396,7 @@ pub mod spectrum_config {
     }
 }
 impl SpectrumConfig {
-    /// Creates a new builder-style object to manufacture [`SpectrumConfig`](crate::model::SpectrumConfig)
+    /// Creates a new builder-style object to manufacture [`SpectrumConfig`](crate::model::SpectrumConfig).
     pub fn builder() -> crate::model::spectrum_config::Builder {
         crate::model::spectrum_config::Builder::default()
     }
@@ -3359,8 +3412,10 @@ pub struct FrequencyBandwidth {
     /// <li> <p>For <code>AntennaDownlinkconfig</code>, valid values are between 10 kHz to 54 MHz.</p> </li>
     /// <li> <p>For <code>AntennaUplinkConfig</code>, valid values are between 10 kHz to 54 MHz.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub value: std::option::Option<f64>,
     /// <p>Frequency bandwidth units.</p>
+    #[doc(hidden)]
     pub units: std::option::Option<crate::model::BandwidthUnits>,
 }
 impl FrequencyBandwidth {
@@ -3386,11 +3441,10 @@ impl std::fmt::Debug for FrequencyBandwidth {
         formatter.finish()
     }
 }
-/// See [`FrequencyBandwidth`](crate::model::FrequencyBandwidth)
+/// See [`FrequencyBandwidth`](crate::model::FrequencyBandwidth).
 pub mod frequency_bandwidth {
 
-    /// A builder for [`FrequencyBandwidth`](crate::model::FrequencyBandwidth)
-    #[non_exhaustive]
+    /// A builder for [`FrequencyBandwidth`](crate::model::FrequencyBandwidth).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<f64>,
@@ -3430,7 +3484,7 @@ pub mod frequency_bandwidth {
             self.units = input;
             self
         }
-        /// Consumes the builder and constructs a [`FrequencyBandwidth`](crate::model::FrequencyBandwidth)
+        /// Consumes the builder and constructs a [`FrequencyBandwidth`](crate::model::FrequencyBandwidth).
         pub fn build(self) -> crate::model::FrequencyBandwidth {
             crate::model::FrequencyBandwidth {
                 value: self.value,
@@ -3440,7 +3494,7 @@ pub mod frequency_bandwidth {
     }
 }
 impl FrequencyBandwidth {
-    /// Creates a new builder-style object to manufacture [`FrequencyBandwidth`](crate::model::FrequencyBandwidth)
+    /// Creates a new builder-style object to manufacture [`FrequencyBandwidth`](crate::model::FrequencyBandwidth).
     pub fn builder() -> crate::model::frequency_bandwidth::Builder {
         crate::model::frequency_bandwidth::Builder::default()
     }
@@ -3510,8 +3564,10 @@ impl AsRef<str> for BandwidthUnits {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataflowEndpointConfig {
     /// <p>Name of a dataflow endpoint.</p>
+    #[doc(hidden)]
     pub dataflow_endpoint_name: std::option::Option<std::string::String>,
     /// <p>Region of a dataflow endpoint.</p>
+    #[doc(hidden)]
     pub dataflow_endpoint_region: std::option::Option<std::string::String>,
 }
 impl DataflowEndpointConfig {
@@ -3532,11 +3588,10 @@ impl std::fmt::Debug for DataflowEndpointConfig {
         formatter.finish()
     }
 }
-/// See [`DataflowEndpointConfig`](crate::model::DataflowEndpointConfig)
+/// See [`DataflowEndpointConfig`](crate::model::DataflowEndpointConfig).
 pub mod dataflow_endpoint_config {
 
-    /// A builder for [`DataflowEndpointConfig`](crate::model::DataflowEndpointConfig)
-    #[non_exhaustive]
+    /// A builder for [`DataflowEndpointConfig`](crate::model::DataflowEndpointConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataflow_endpoint_name: std::option::Option<std::string::String>,
@@ -3569,7 +3624,7 @@ pub mod dataflow_endpoint_config {
             self.dataflow_endpoint_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataflowEndpointConfig`](crate::model::DataflowEndpointConfig)
+        /// Consumes the builder and constructs a [`DataflowEndpointConfig`](crate::model::DataflowEndpointConfig).
         pub fn build(self) -> crate::model::DataflowEndpointConfig {
             crate::model::DataflowEndpointConfig {
                 dataflow_endpoint_name: self.dataflow_endpoint_name,
@@ -3579,7 +3634,7 @@ pub mod dataflow_endpoint_config {
     }
 }
 impl DataflowEndpointConfig {
-    /// Creates a new builder-style object to manufacture [`DataflowEndpointConfig`](crate::model::DataflowEndpointConfig)
+    /// Creates a new builder-style object to manufacture [`DataflowEndpointConfig`](crate::model::DataflowEndpointConfig).
     pub fn builder() -> crate::model::dataflow_endpoint_config::Builder {
         crate::model::dataflow_endpoint_config::Builder::default()
     }
@@ -3590,6 +3645,7 @@ impl DataflowEndpointConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrackingConfig {
     /// <p>Current setting for autotrack.</p>
+    #[doc(hidden)]
     pub autotrack: std::option::Option<crate::model::Criticality>,
 }
 impl TrackingConfig {
@@ -3605,11 +3661,10 @@ impl std::fmt::Debug for TrackingConfig {
         formatter.finish()
     }
 }
-/// See [`TrackingConfig`](crate::model::TrackingConfig)
+/// See [`TrackingConfig`](crate::model::TrackingConfig).
 pub mod tracking_config {
 
-    /// A builder for [`TrackingConfig`](crate::model::TrackingConfig)
-    #[non_exhaustive]
+    /// A builder for [`TrackingConfig`](crate::model::TrackingConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) autotrack: std::option::Option<crate::model::Criticality>,
@@ -3628,7 +3683,7 @@ pub mod tracking_config {
             self.autotrack = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrackingConfig`](crate::model::TrackingConfig)
+        /// Consumes the builder and constructs a [`TrackingConfig`](crate::model::TrackingConfig).
         pub fn build(self) -> crate::model::TrackingConfig {
             crate::model::TrackingConfig {
                 autotrack: self.autotrack,
@@ -3637,7 +3692,7 @@ pub mod tracking_config {
     }
 }
 impl TrackingConfig {
-    /// Creates a new builder-style object to manufacture [`TrackingConfig`](crate::model::TrackingConfig)
+    /// Creates a new builder-style object to manufacture [`TrackingConfig`](crate::model::TrackingConfig).
     pub fn builder() -> crate::model::tracking_config::Builder {
         crate::model::tracking_config::Builder::default()
     }
@@ -3707,6 +3762,7 @@ impl AsRef<str> for Criticality {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AntennaDownlinkConfig {
     /// <p>Object that describes a spectral <code>Config</code>.</p>
+    #[doc(hidden)]
     pub spectrum_config: std::option::Option<crate::model::SpectrumConfig>,
 }
 impl AntennaDownlinkConfig {
@@ -3722,11 +3778,10 @@ impl std::fmt::Debug for AntennaDownlinkConfig {
         formatter.finish()
     }
 }
-/// See [`AntennaDownlinkConfig`](crate::model::AntennaDownlinkConfig)
+/// See [`AntennaDownlinkConfig`](crate::model::AntennaDownlinkConfig).
 pub mod antenna_downlink_config {
 
-    /// A builder for [`AntennaDownlinkConfig`](crate::model::AntennaDownlinkConfig)
-    #[non_exhaustive]
+    /// A builder for [`AntennaDownlinkConfig`](crate::model::AntennaDownlinkConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) spectrum_config: std::option::Option<crate::model::SpectrumConfig>,
@@ -3745,7 +3800,7 @@ pub mod antenna_downlink_config {
             self.spectrum_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`AntennaDownlinkConfig`](crate::model::AntennaDownlinkConfig)
+        /// Consumes the builder and constructs a [`AntennaDownlinkConfig`](crate::model::AntennaDownlinkConfig).
         pub fn build(self) -> crate::model::AntennaDownlinkConfig {
             crate::model::AntennaDownlinkConfig {
                 spectrum_config: self.spectrum_config,
@@ -3754,7 +3809,7 @@ pub mod antenna_downlink_config {
     }
 }
 impl AntennaDownlinkConfig {
-    /// Creates a new builder-style object to manufacture [`AntennaDownlinkConfig`](crate::model::AntennaDownlinkConfig)
+    /// Creates a new builder-style object to manufacture [`AntennaDownlinkConfig`](crate::model::AntennaDownlinkConfig).
     pub fn builder() -> crate::model::antenna_downlink_config::Builder {
         crate::model::antenna_downlink_config::Builder::default()
     }

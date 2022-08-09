@@ -5,12 +5,15 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CognitoIdentityProvider {
     /// <p>The provider name for an Amazon Cognito user pool. For example, <code>cognito-idp.us-east-1.amazonaws.com/us-east-1_123456789</code>.</p>
+    #[doc(hidden)]
     pub provider_name: std::option::Option<std::string::String>,
     /// <p>The client ID for the Amazon Cognito user pool.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>TRUE if server-side token validation is enabled for the identity provider’s token.</p>
     /// <p>Once you set <code>ServerSideTokenCheck</code> to TRUE for an identity pool, that identity pool will check with the integrated user pools to make sure that the user has not been globally signed out or deleted before the identity pool provides an OIDC token or AWS credentials for the user.</p>
     /// <p>If the user is signed out or deleted, the identity pool will return a 400 Not Authorized error.</p>
+    #[doc(hidden)]
     pub server_side_token_check: std::option::Option<bool>,
 }
 impl CognitoIdentityProvider {
@@ -38,11 +41,10 @@ impl std::fmt::Debug for CognitoIdentityProvider {
         formatter.finish()
     }
 }
-/// See [`CognitoIdentityProvider`](crate::model::CognitoIdentityProvider)
+/// See [`CognitoIdentityProvider`](crate::model::CognitoIdentityProvider).
 pub mod cognito_identity_provider {
 
-    /// A builder for [`CognitoIdentityProvider`](crate::model::CognitoIdentityProvider)
-    #[non_exhaustive]
+    /// A builder for [`CognitoIdentityProvider`](crate::model::CognitoIdentityProvider).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) provider_name: std::option::Option<std::string::String>,
@@ -87,7 +89,7 @@ pub mod cognito_identity_provider {
             self.server_side_token_check = input;
             self
         }
-        /// Consumes the builder and constructs a [`CognitoIdentityProvider`](crate::model::CognitoIdentityProvider)
+        /// Consumes the builder and constructs a [`CognitoIdentityProvider`](crate::model::CognitoIdentityProvider).
         pub fn build(self) -> crate::model::CognitoIdentityProvider {
             crate::model::CognitoIdentityProvider {
                 provider_name: self.provider_name,
@@ -98,7 +100,7 @@ pub mod cognito_identity_provider {
     }
 }
 impl CognitoIdentityProvider {
-    /// Creates a new builder-style object to manufacture [`CognitoIdentityProvider`](crate::model::CognitoIdentityProvider)
+    /// Creates a new builder-style object to manufacture [`CognitoIdentityProvider`](crate::model::CognitoIdentityProvider).
     pub fn builder() -> crate::model::cognito_identity_provider::Builder {
         crate::model::cognito_identity_provider::Builder::default()
     }
@@ -109,12 +111,15 @@ impl CognitoIdentityProvider {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RoleMapping {
     /// <p>The role mapping type. Token will use <code>cognito:roles</code> and <code>cognito:preferred_role</code> claims from the Cognito identity provider token to map groups to roles. Rules will attempt to match claims from the token to map to a role.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RoleMappingType>,
     /// <p>If you specify Token or Rules as the <code>Type</code>, <code>AmbiguousRoleResolution</code> is required.</p>
     /// <p>Specifies the action to be taken if either no rules match the claim value for the <code>Rules</code> type, or there is no <code>cognito:preferred_role</code> claim and there are multiple <code>cognito:roles</code> matches for the <code>Token</code> type.</p>
+    #[doc(hidden)]
     pub ambiguous_role_resolution: std::option::Option<crate::model::AmbiguousRoleResolutionType>,
     /// <p>The rules to be used for mapping users to roles.</p>
     /// <p>If you specify Rules as the role mapping type, <code>RulesConfiguration</code> is required.</p>
+    #[doc(hidden)]
     pub rules_configuration: std::option::Option<crate::model::RulesConfigurationType>,
 }
 impl RoleMapping {
@@ -146,11 +151,10 @@ impl std::fmt::Debug for RoleMapping {
         formatter.finish()
     }
 }
-/// See [`RoleMapping`](crate::model::RoleMapping)
+/// See [`RoleMapping`](crate::model::RoleMapping).
 pub mod role_mapping {
 
-    /// A builder for [`RoleMapping`](crate::model::RoleMapping)
-    #[non_exhaustive]
+    /// A builder for [`RoleMapping`](crate::model::RoleMapping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::RoleMappingType>,
@@ -205,7 +209,7 @@ pub mod role_mapping {
             self.rules_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`RoleMapping`](crate::model::RoleMapping)
+        /// Consumes the builder and constructs a [`RoleMapping`](crate::model::RoleMapping).
         pub fn build(self) -> crate::model::RoleMapping {
             crate::model::RoleMapping {
                 r#type: self.r#type,
@@ -216,7 +220,7 @@ pub mod role_mapping {
     }
 }
 impl RoleMapping {
-    /// Creates a new builder-style object to manufacture [`RoleMapping`](crate::model::RoleMapping)
+    /// Creates a new builder-style object to manufacture [`RoleMapping`](crate::model::RoleMapping).
     pub fn builder() -> crate::model::role_mapping::Builder {
         crate::model::role_mapping::Builder::default()
     }
@@ -228,6 +232,7 @@ impl RoleMapping {
 pub struct RulesConfigurationType {
     /// <p>An array of rules. You can specify up to 25 rules per identity provider.</p>
     /// <p>Rules are evaluated in order. The first one to match specifies the role.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::MappingRule>>,
 }
 impl RulesConfigurationType {
@@ -244,11 +249,10 @@ impl std::fmt::Debug for RulesConfigurationType {
         formatter.finish()
     }
 }
-/// See [`RulesConfigurationType`](crate::model::RulesConfigurationType)
+/// See [`RulesConfigurationType`](crate::model::RulesConfigurationType).
 pub mod rules_configuration_type {
 
-    /// A builder for [`RulesConfigurationType`](crate::model::RulesConfigurationType)
-    #[non_exhaustive]
+    /// A builder for [`RulesConfigurationType`](crate::model::RulesConfigurationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rules: std::option::Option<std::vec::Vec<crate::model::MappingRule>>,
@@ -275,14 +279,14 @@ pub mod rules_configuration_type {
             self.rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`RulesConfigurationType`](crate::model::RulesConfigurationType)
+        /// Consumes the builder and constructs a [`RulesConfigurationType`](crate::model::RulesConfigurationType).
         pub fn build(self) -> crate::model::RulesConfigurationType {
             crate::model::RulesConfigurationType { rules: self.rules }
         }
     }
 }
 impl RulesConfigurationType {
-    /// Creates a new builder-style object to manufacture [`RulesConfigurationType`](crate::model::RulesConfigurationType)
+    /// Creates a new builder-style object to manufacture [`RulesConfigurationType`](crate::model::RulesConfigurationType).
     pub fn builder() -> crate::model::rules_configuration_type::Builder {
         crate::model::rules_configuration_type::Builder::default()
     }
@@ -293,12 +297,16 @@ impl RulesConfigurationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MappingRule {
     /// <p>The claim name that must be present in the token, for example, "isAdmin" or "paid".</p>
+    #[doc(hidden)]
     pub claim: std::option::Option<std::string::String>,
     /// <p>The match condition that specifies how closely the claim value in the IdP token must match <code>Value</code>.</p>
+    #[doc(hidden)]
     pub match_type: std::option::Option<crate::model::MappingRuleMatchType>,
     /// <p>A brief string that the claim must match, for example, "paid" or "yes".</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The role ARN.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl MappingRule {
@@ -329,11 +337,10 @@ impl std::fmt::Debug for MappingRule {
         formatter.finish()
     }
 }
-/// See [`MappingRule`](crate::model::MappingRule)
+/// See [`MappingRule`](crate::model::MappingRule).
 pub mod mapping_rule {
 
-    /// A builder for [`MappingRule`](crate::model::MappingRule)
-    #[non_exhaustive]
+    /// A builder for [`MappingRule`](crate::model::MappingRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) claim: std::option::Option<std::string::String>,
@@ -385,7 +392,7 @@ pub mod mapping_rule {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`MappingRule`](crate::model::MappingRule)
+        /// Consumes the builder and constructs a [`MappingRule`](crate::model::MappingRule).
         pub fn build(self) -> crate::model::MappingRule {
             crate::model::MappingRule {
                 claim: self.claim,
@@ -397,7 +404,7 @@ pub mod mapping_rule {
     }
 }
 impl MappingRule {
-    /// Creates a new builder-style object to manufacture [`MappingRule`](crate::model::MappingRule)
+    /// Creates a new builder-style object to manufacture [`MappingRule`](crate::model::MappingRule).
     pub fn builder() -> crate::model::mapping_rule::Builder {
         crate::model::mapping_rule::Builder::default()
     }
@@ -581,8 +588,10 @@ impl AsRef<str> for RoleMappingType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IdentityPoolShortDescription {
     /// <p>An identity pool ID in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_pool_id: std::option::Option<std::string::String>,
     /// <p>A string that you provide.</p>
+    #[doc(hidden)]
     pub identity_pool_name: std::option::Option<std::string::String>,
 }
 impl IdentityPoolShortDescription {
@@ -603,11 +612,10 @@ impl std::fmt::Debug for IdentityPoolShortDescription {
         formatter.finish()
     }
 }
-/// See [`IdentityPoolShortDescription`](crate::model::IdentityPoolShortDescription)
+/// See [`IdentityPoolShortDescription`](crate::model::IdentityPoolShortDescription).
 pub mod identity_pool_short_description {
 
-    /// A builder for [`IdentityPoolShortDescription`](crate::model::IdentityPoolShortDescription)
-    #[non_exhaustive]
+    /// A builder for [`IdentityPoolShortDescription`](crate::model::IdentityPoolShortDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_pool_id: std::option::Option<std::string::String>,
@@ -640,7 +648,7 @@ pub mod identity_pool_short_description {
             self.identity_pool_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`IdentityPoolShortDescription`](crate::model::IdentityPoolShortDescription)
+        /// Consumes the builder and constructs a [`IdentityPoolShortDescription`](crate::model::IdentityPoolShortDescription).
         pub fn build(self) -> crate::model::IdentityPoolShortDescription {
             crate::model::IdentityPoolShortDescription {
                 identity_pool_id: self.identity_pool_id,
@@ -650,7 +658,7 @@ pub mod identity_pool_short_description {
     }
 }
 impl IdentityPoolShortDescription {
-    /// Creates a new builder-style object to manufacture [`IdentityPoolShortDescription`](crate::model::IdentityPoolShortDescription)
+    /// Creates a new builder-style object to manufacture [`IdentityPoolShortDescription`](crate::model::IdentityPoolShortDescription).
     pub fn builder() -> crate::model::identity_pool_short_description::Builder {
         crate::model::identity_pool_short_description::Builder::default()
     }
@@ -661,12 +669,16 @@ impl IdentityPoolShortDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IdentityDescription {
     /// <p>A unique identifier in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_id: std::option::Option<std::string::String>,
     /// <p>The provider names.</p>
+    #[doc(hidden)]
     pub logins: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Date on which the identity was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Date on which the identity was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl IdentityDescription {
@@ -697,11 +709,10 @@ impl std::fmt::Debug for IdentityDescription {
         formatter.finish()
     }
 }
-/// See [`IdentityDescription`](crate::model::IdentityDescription)
+/// See [`IdentityDescription`](crate::model::IdentityDescription).
 pub mod identity_description {
 
-    /// A builder for [`IdentityDescription`](crate::model::IdentityDescription)
-    #[non_exhaustive]
+    /// A builder for [`IdentityDescription`](crate::model::IdentityDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_id: std::option::Option<std::string::String>,
@@ -765,7 +776,7 @@ pub mod identity_description {
             self.last_modified_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`IdentityDescription`](crate::model::IdentityDescription)
+        /// Consumes the builder and constructs a [`IdentityDescription`](crate::model::IdentityDescription).
         pub fn build(self) -> crate::model::IdentityDescription {
             crate::model::IdentityDescription {
                 identity_id: self.identity_id,
@@ -777,7 +788,7 @@ pub mod identity_description {
     }
 }
 impl IdentityDescription {
-    /// Creates a new builder-style object to manufacture [`IdentityDescription`](crate::model::IdentityDescription)
+    /// Creates a new builder-style object to manufacture [`IdentityDescription`](crate::model::IdentityDescription).
     pub fn builder() -> crate::model::identity_description::Builder {
         crate::model::identity_description::Builder::default()
     }
@@ -788,12 +799,16 @@ impl IdentityDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Credentials {
     /// <p>The Access Key portion of the credentials.</p>
+    #[doc(hidden)]
     pub access_key_id: std::option::Option<std::string::String>,
     /// <p>The Secret Access Key portion of the credentials</p>
+    #[doc(hidden)]
     pub secret_key: std::option::Option<std::string::String>,
     /// <p>The Session Token portion of the credentials</p>
+    #[doc(hidden)]
     pub session_token: std::option::Option<std::string::String>,
     /// <p>The date at which these credentials will expire.</p>
+    #[doc(hidden)]
     pub expiration: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Credentials {
@@ -824,11 +839,10 @@ impl std::fmt::Debug for Credentials {
         formatter.finish()
     }
 }
-/// See [`Credentials`](crate::model::Credentials)
+/// See [`Credentials`](crate::model::Credentials).
 pub mod credentials {
 
-    /// A builder for [`Credentials`](crate::model::Credentials)
-    #[non_exhaustive]
+    /// A builder for [`Credentials`](crate::model::Credentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_key_id: std::option::Option<std::string::String>,
@@ -886,7 +900,7 @@ pub mod credentials {
             self.expiration = input;
             self
         }
-        /// Consumes the builder and constructs a [`Credentials`](crate::model::Credentials)
+        /// Consumes the builder and constructs a [`Credentials`](crate::model::Credentials).
         pub fn build(self) -> crate::model::Credentials {
             crate::model::Credentials {
                 access_key_id: self.access_key_id,
@@ -898,7 +912,7 @@ pub mod credentials {
     }
 }
 impl Credentials {
-    /// Creates a new builder-style object to manufacture [`Credentials`](crate::model::Credentials)
+    /// Creates a new builder-style object to manufacture [`Credentials`](crate::model::Credentials).
     pub fn builder() -> crate::model::credentials::Builder {
         crate::model::credentials::Builder::default()
     }
@@ -909,8 +923,10 @@ impl Credentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UnprocessedIdentityId {
     /// <p>A unique identifier in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_id: std::option::Option<std::string::String>,
     /// <p>The error code indicating the type of error that occurred.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<crate::model::ErrorCode>,
 }
 impl UnprocessedIdentityId {
@@ -931,11 +947,10 @@ impl std::fmt::Debug for UnprocessedIdentityId {
         formatter.finish()
     }
 }
-/// See [`UnprocessedIdentityId`](crate::model::UnprocessedIdentityId)
+/// See [`UnprocessedIdentityId`](crate::model::UnprocessedIdentityId).
 pub mod unprocessed_identity_id {
 
-    /// A builder for [`UnprocessedIdentityId`](crate::model::UnprocessedIdentityId)
-    #[non_exhaustive]
+    /// A builder for [`UnprocessedIdentityId`](crate::model::UnprocessedIdentityId).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_id: std::option::Option<std::string::String>,
@@ -965,7 +980,7 @@ pub mod unprocessed_identity_id {
             self.error_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`UnprocessedIdentityId`](crate::model::UnprocessedIdentityId)
+        /// Consumes the builder and constructs a [`UnprocessedIdentityId`](crate::model::UnprocessedIdentityId).
         pub fn build(self) -> crate::model::UnprocessedIdentityId {
             crate::model::UnprocessedIdentityId {
                 identity_id: self.identity_id,
@@ -975,7 +990,7 @@ pub mod unprocessed_identity_id {
     }
 }
 impl UnprocessedIdentityId {
-    /// Creates a new builder-style object to manufacture [`UnprocessedIdentityId`](crate::model::UnprocessedIdentityId)
+    /// Creates a new builder-style object to manufacture [`UnprocessedIdentityId`](crate::model::UnprocessedIdentityId).
     pub fn builder() -> crate::model::unprocessed_identity_id::Builder {
         crate::model::unprocessed_identity_id::Builder::default()
     }

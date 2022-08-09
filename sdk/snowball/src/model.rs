@@ -210,8 +210,10 @@ impl AsRef<str> for ShippingOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OnDeviceServiceConfiguration {
     /// <p>Represents the NFS (Network File System) service on a Snow Family device.</p>
+    #[doc(hidden)]
     pub nfs_on_device_service: std::option::Option<crate::model::NfsOnDeviceServiceConfiguration>,
     /// <p>Represents the Storage Gateway service Tape Gateway type on a Snow Family device.</p>
+    #[doc(hidden)]
     pub tgw_on_device_service: std::option::Option<crate::model::TgwOnDeviceServiceConfiguration>,
 }
 impl OnDeviceServiceConfiguration {
@@ -236,11 +238,10 @@ impl std::fmt::Debug for OnDeviceServiceConfiguration {
         formatter.finish()
     }
 }
-/// See [`OnDeviceServiceConfiguration`](crate::model::OnDeviceServiceConfiguration)
+/// See [`OnDeviceServiceConfiguration`](crate::model::OnDeviceServiceConfiguration).
 pub mod on_device_service_configuration {
 
-    /// A builder for [`OnDeviceServiceConfiguration`](crate::model::OnDeviceServiceConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`OnDeviceServiceConfiguration`](crate::model::OnDeviceServiceConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) nfs_on_device_service:
@@ -281,7 +282,7 @@ pub mod on_device_service_configuration {
             self.tgw_on_device_service = input;
             self
         }
-        /// Consumes the builder and constructs a [`OnDeviceServiceConfiguration`](crate::model::OnDeviceServiceConfiguration)
+        /// Consumes the builder and constructs a [`OnDeviceServiceConfiguration`](crate::model::OnDeviceServiceConfiguration).
         pub fn build(self) -> crate::model::OnDeviceServiceConfiguration {
             crate::model::OnDeviceServiceConfiguration {
                 nfs_on_device_service: self.nfs_on_device_service,
@@ -291,7 +292,7 @@ pub mod on_device_service_configuration {
     }
 }
 impl OnDeviceServiceConfiguration {
-    /// Creates a new builder-style object to manufacture [`OnDeviceServiceConfiguration`](crate::model::OnDeviceServiceConfiguration)
+    /// Creates a new builder-style object to manufacture [`OnDeviceServiceConfiguration`](crate::model::OnDeviceServiceConfiguration).
     pub fn builder() -> crate::model::on_device_service_configuration::Builder {
         crate::model::on_device_service_configuration::Builder::default()
     }
@@ -302,8 +303,10 @@ impl OnDeviceServiceConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TgwOnDeviceServiceConfiguration {
     /// <p>The maximum number of virtual tapes to store on one Snow Family device. Due to physical resource limitations, this value must be set to 80 for Snowball Edge.</p>
+    #[doc(hidden)]
     pub storage_limit: i32,
     /// <p>The scale unit of the virtual tapes on the device.</p>
+    #[doc(hidden)]
     pub storage_unit: std::option::Option<crate::model::StorageUnit>,
 }
 impl TgwOnDeviceServiceConfiguration {
@@ -324,11 +327,10 @@ impl std::fmt::Debug for TgwOnDeviceServiceConfiguration {
         formatter.finish()
     }
 }
-/// See [`TgwOnDeviceServiceConfiguration`](crate::model::TgwOnDeviceServiceConfiguration)
+/// See [`TgwOnDeviceServiceConfiguration`](crate::model::TgwOnDeviceServiceConfiguration).
 pub mod tgw_on_device_service_configuration {
 
-    /// A builder for [`TgwOnDeviceServiceConfiguration`](crate::model::TgwOnDeviceServiceConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`TgwOnDeviceServiceConfiguration`](crate::model::TgwOnDeviceServiceConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_limit: std::option::Option<i32>,
@@ -358,7 +360,7 @@ pub mod tgw_on_device_service_configuration {
             self.storage_unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`TgwOnDeviceServiceConfiguration`](crate::model::TgwOnDeviceServiceConfiguration)
+        /// Consumes the builder and constructs a [`TgwOnDeviceServiceConfiguration`](crate::model::TgwOnDeviceServiceConfiguration).
         pub fn build(self) -> crate::model::TgwOnDeviceServiceConfiguration {
             crate::model::TgwOnDeviceServiceConfiguration {
                 storage_limit: self.storage_limit.unwrap_or_default(),
@@ -368,7 +370,7 @@ pub mod tgw_on_device_service_configuration {
     }
 }
 impl TgwOnDeviceServiceConfiguration {
-    /// Creates a new builder-style object to manufacture [`TgwOnDeviceServiceConfiguration`](crate::model::TgwOnDeviceServiceConfiguration)
+    /// Creates a new builder-style object to manufacture [`TgwOnDeviceServiceConfiguration`](crate::model::TgwOnDeviceServiceConfiguration).
     pub fn builder() -> crate::model::tgw_on_device_service_configuration::Builder {
         crate::model::tgw_on_device_service_configuration::Builder::default()
     }
@@ -430,9 +432,11 @@ impl AsRef<str> for StorageUnit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NfsOnDeviceServiceConfiguration {
     /// <p>The maximum NFS storage for one Snow Family device.</p>
+    #[doc(hidden)]
     pub storage_limit: i32,
     /// <p>The scale unit of the NFS storage on the device.</p>
     /// <p>Valid values: TB.</p>
+    #[doc(hidden)]
     pub storage_unit: std::option::Option<crate::model::StorageUnit>,
 }
 impl NfsOnDeviceServiceConfiguration {
@@ -454,11 +458,10 @@ impl std::fmt::Debug for NfsOnDeviceServiceConfiguration {
         formatter.finish()
     }
 }
-/// See [`NfsOnDeviceServiceConfiguration`](crate::model::NfsOnDeviceServiceConfiguration)
+/// See [`NfsOnDeviceServiceConfiguration`](crate::model::NfsOnDeviceServiceConfiguration).
 pub mod nfs_on_device_service_configuration {
 
-    /// A builder for [`NfsOnDeviceServiceConfiguration`](crate::model::NfsOnDeviceServiceConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NfsOnDeviceServiceConfiguration`](crate::model::NfsOnDeviceServiceConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_limit: std::option::Option<i32>,
@@ -490,7 +493,7 @@ pub mod nfs_on_device_service_configuration {
             self.storage_unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`NfsOnDeviceServiceConfiguration`](crate::model::NfsOnDeviceServiceConfiguration)
+        /// Consumes the builder and constructs a [`NfsOnDeviceServiceConfiguration`](crate::model::NfsOnDeviceServiceConfiguration).
         pub fn build(self) -> crate::model::NfsOnDeviceServiceConfiguration {
             crate::model::NfsOnDeviceServiceConfiguration {
                 storage_limit: self.storage_limit.unwrap_or_default(),
@@ -500,7 +503,7 @@ pub mod nfs_on_device_service_configuration {
     }
 }
 impl NfsOnDeviceServiceConfiguration {
-    /// Creates a new builder-style object to manufacture [`NfsOnDeviceServiceConfiguration`](crate::model::NfsOnDeviceServiceConfiguration)
+    /// Creates a new builder-style object to manufacture [`NfsOnDeviceServiceConfiguration`](crate::model::NfsOnDeviceServiceConfiguration).
     pub fn builder() -> crate::model::nfs_on_device_service_configuration::Builder {
         crate::model::nfs_on_device_service_configuration::Builder::default()
     }
@@ -511,10 +514,13 @@ impl NfsOnDeviceServiceConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobResource {
     /// <p>An array of <code>S3Resource</code> objects.</p>
+    #[doc(hidden)]
     pub s3_resources: std::option::Option<std::vec::Vec<crate::model::S3Resource>>,
     /// <p>The Python-language Lambda functions for this job.</p>
+    #[doc(hidden)]
     pub lambda_resources: std::option::Option<std::vec::Vec<crate::model::LambdaResource>>,
     /// <p>The Amazon Machine Images (AMIs) associated with this job.</p>
+    #[doc(hidden)]
     pub ec2_ami_resources: std::option::Option<std::vec::Vec<crate::model::Ec2AmiResource>>,
 }
 impl JobResource {
@@ -540,11 +546,10 @@ impl std::fmt::Debug for JobResource {
         formatter.finish()
     }
 }
-/// See [`JobResource`](crate::model::JobResource)
+/// See [`JobResource`](crate::model::JobResource).
 pub mod job_resource {
 
-    /// A builder for [`JobResource`](crate::model::JobResource)
-    #[non_exhaustive]
+    /// A builder for [`JobResource`](crate::model::JobResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_resources: std::option::Option<std::vec::Vec<crate::model::S3Resource>>,
@@ -611,7 +616,7 @@ pub mod job_resource {
             self.ec2_ami_resources = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobResource`](crate::model::JobResource)
+        /// Consumes the builder and constructs a [`JobResource`](crate::model::JobResource).
         pub fn build(self) -> crate::model::JobResource {
             crate::model::JobResource {
                 s3_resources: self.s3_resources,
@@ -622,7 +627,7 @@ pub mod job_resource {
     }
 }
 impl JobResource {
-    /// Creates a new builder-style object to manufacture [`JobResource`](crate::model::JobResource)
+    /// Creates a new builder-style object to manufacture [`JobResource`](crate::model::JobResource).
     pub fn builder() -> crate::model::job_resource::Builder {
         crate::model::job_resource::Builder::default()
     }
@@ -633,8 +638,10 @@ impl JobResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ec2AmiResource {
     /// <p>The ID of the AMI in Amazon EC2.</p>
+    #[doc(hidden)]
     pub ami_id: std::option::Option<std::string::String>,
     /// <p>The ID of the AMI on the Snow device.</p>
+    #[doc(hidden)]
     pub snowball_ami_id: std::option::Option<std::string::String>,
 }
 impl Ec2AmiResource {
@@ -655,11 +662,10 @@ impl std::fmt::Debug for Ec2AmiResource {
         formatter.finish()
     }
 }
-/// See [`Ec2AmiResource`](crate::model::Ec2AmiResource)
+/// See [`Ec2AmiResource`](crate::model::Ec2AmiResource).
 pub mod ec2_ami_resource {
 
-    /// A builder for [`Ec2AmiResource`](crate::model::Ec2AmiResource)
-    #[non_exhaustive]
+    /// A builder for [`Ec2AmiResource`](crate::model::Ec2AmiResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ami_id: std::option::Option<std::string::String>,
@@ -689,7 +695,7 @@ pub mod ec2_ami_resource {
             self.snowball_ami_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2AmiResource`](crate::model::Ec2AmiResource)
+        /// Consumes the builder and constructs a [`Ec2AmiResource`](crate::model::Ec2AmiResource).
         pub fn build(self) -> crate::model::Ec2AmiResource {
             crate::model::Ec2AmiResource {
                 ami_id: self.ami_id,
@@ -699,7 +705,7 @@ pub mod ec2_ami_resource {
     }
 }
 impl Ec2AmiResource {
-    /// Creates a new builder-style object to manufacture [`Ec2AmiResource`](crate::model::Ec2AmiResource)
+    /// Creates a new builder-style object to manufacture [`Ec2AmiResource`](crate::model::Ec2AmiResource).
     pub fn builder() -> crate::model::ec2_ami_resource::Builder {
         crate::model::ec2_ami_resource::Builder::default()
     }
@@ -710,8 +716,10 @@ impl Ec2AmiResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaResource {
     /// <p>An Amazon Resource Name (ARN) that represents an Lambda function to be triggered by PUT object actions on the associated local Amazon S3 resource.</p>
+    #[doc(hidden)]
     pub lambda_arn: std::option::Option<std::string::String>,
     /// <p>The array of ARNs for <code>S3Resource</code> objects to trigger the <code>LambdaResource</code> objects associated with this job.</p>
+    #[doc(hidden)]
     pub event_triggers: std::option::Option<std::vec::Vec<crate::model::EventTriggerDefinition>>,
 }
 impl LambdaResource {
@@ -732,11 +740,10 @@ impl std::fmt::Debug for LambdaResource {
         formatter.finish()
     }
 }
-/// See [`LambdaResource`](crate::model::LambdaResource)
+/// See [`LambdaResource`](crate::model::LambdaResource).
 pub mod lambda_resource {
 
-    /// A builder for [`LambdaResource`](crate::model::LambdaResource)
-    #[non_exhaustive]
+    /// A builder for [`LambdaResource`](crate::model::LambdaResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lambda_arn: std::option::Option<std::string::String>,
@@ -773,7 +780,7 @@ pub mod lambda_resource {
             self.event_triggers = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaResource`](crate::model::LambdaResource)
+        /// Consumes the builder and constructs a [`LambdaResource`](crate::model::LambdaResource).
         pub fn build(self) -> crate::model::LambdaResource {
             crate::model::LambdaResource {
                 lambda_arn: self.lambda_arn,
@@ -783,7 +790,7 @@ pub mod lambda_resource {
     }
 }
 impl LambdaResource {
-    /// Creates a new builder-style object to manufacture [`LambdaResource`](crate::model::LambdaResource)
+    /// Creates a new builder-style object to manufacture [`LambdaResource`](crate::model::LambdaResource).
     pub fn builder() -> crate::model::lambda_resource::Builder {
         crate::model::lambda_resource::Builder::default()
     }
@@ -794,6 +801,7 @@ impl LambdaResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventTriggerDefinition {
     /// <p>The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an Lambda function's event trigger associated with this job.</p>
+    #[doc(hidden)]
     pub event_resource_arn: std::option::Option<std::string::String>,
 }
 impl EventTriggerDefinition {
@@ -809,11 +817,10 @@ impl std::fmt::Debug for EventTriggerDefinition {
         formatter.finish()
     }
 }
-/// See [`EventTriggerDefinition`](crate::model::EventTriggerDefinition)
+/// See [`EventTriggerDefinition`](crate::model::EventTriggerDefinition).
 pub mod event_trigger_definition {
 
-    /// A builder for [`EventTriggerDefinition`](crate::model::EventTriggerDefinition)
-    #[non_exhaustive]
+    /// A builder for [`EventTriggerDefinition`](crate::model::EventTriggerDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_resource_arn: std::option::Option<std::string::String>,
@@ -832,7 +839,7 @@ pub mod event_trigger_definition {
             self.event_resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventTriggerDefinition`](crate::model::EventTriggerDefinition)
+        /// Consumes the builder and constructs a [`EventTriggerDefinition`](crate::model::EventTriggerDefinition).
         pub fn build(self) -> crate::model::EventTriggerDefinition {
             crate::model::EventTriggerDefinition {
                 event_resource_arn: self.event_resource_arn,
@@ -841,7 +848,7 @@ pub mod event_trigger_definition {
     }
 }
 impl EventTriggerDefinition {
-    /// Creates a new builder-style object to manufacture [`EventTriggerDefinition`](crate::model::EventTriggerDefinition)
+    /// Creates a new builder-style object to manufacture [`EventTriggerDefinition`](crate::model::EventTriggerDefinition).
     pub fn builder() -> crate::model::event_trigger_definition::Builder {
         crate::model::event_trigger_definition::Builder::default()
     }
@@ -852,10 +859,13 @@ impl EventTriggerDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Resource {
     /// <p>The Amazon Resource Name (ARN) of an Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_arn: std::option::Option<std::string::String>,
     /// <p>For export jobs, you can provide an optional <code>KeyRange</code> within a specific Amazon S3 bucket. The length of the range is defined at job creation, and has either an inclusive <code>BeginMarker</code>, an inclusive <code>EndMarker</code>, or both. Ranges are UTF-8 binary sorted.</p>
+    #[doc(hidden)]
     pub key_range: std::option::Option<crate::model::KeyRange>,
     /// <p>Specifies the service or services on the Snow Family device that your transferred data will be exported from or imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System).</p>
+    #[doc(hidden)]
     pub target_on_device_services:
         std::option::Option<std::vec::Vec<crate::model::TargetOnDeviceService>>,
 }
@@ -884,11 +894,10 @@ impl std::fmt::Debug for S3Resource {
         formatter.finish()
     }
 }
-/// See [`S3Resource`](crate::model::S3Resource)
+/// See [`S3Resource`](crate::model::S3Resource).
 pub mod s3_resource {
 
-    /// A builder for [`S3Resource`](crate::model::S3Resource)
-    #[non_exhaustive]
+    /// A builder for [`S3Resource`](crate::model::S3Resource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn: std::option::Option<std::string::String>,
@@ -939,7 +948,7 @@ pub mod s3_resource {
             self.target_on_device_services = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Resource`](crate::model::S3Resource)
+        /// Consumes the builder and constructs a [`S3Resource`](crate::model::S3Resource).
         pub fn build(self) -> crate::model::S3Resource {
             crate::model::S3Resource {
                 bucket_arn: self.bucket_arn,
@@ -950,7 +959,7 @@ pub mod s3_resource {
     }
 }
 impl S3Resource {
-    /// Creates a new builder-style object to manufacture [`S3Resource`](crate::model::S3Resource)
+    /// Creates a new builder-style object to manufacture [`S3Resource`](crate::model::S3Resource).
     pub fn builder() -> crate::model::s3_resource::Builder {
         crate::model::s3_resource::Builder::default()
     }
@@ -961,8 +970,10 @@ impl S3Resource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetOnDeviceService {
     /// <p>Specifies the name of the service on the Snow Family device that your transferred data will be exported from or imported into.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<crate::model::DeviceServiceName>,
     /// <p>Specifies whether the data is being imported or exported. You can import or export the data, or use it locally on the device.</p>
+    #[doc(hidden)]
     pub transfer_option: std::option::Option<crate::model::TransferOption>,
 }
 impl TargetOnDeviceService {
@@ -983,11 +994,10 @@ impl std::fmt::Debug for TargetOnDeviceService {
         formatter.finish()
     }
 }
-/// See [`TargetOnDeviceService`](crate::model::TargetOnDeviceService)
+/// See [`TargetOnDeviceService`](crate::model::TargetOnDeviceService).
 pub mod target_on_device_service {
 
-    /// A builder for [`TargetOnDeviceService`](crate::model::TargetOnDeviceService)
-    #[non_exhaustive]
+    /// A builder for [`TargetOnDeviceService`](crate::model::TargetOnDeviceService).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_name: std::option::Option<crate::model::DeviceServiceName>,
@@ -1020,7 +1030,7 @@ pub mod target_on_device_service {
             self.transfer_option = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetOnDeviceService`](crate::model::TargetOnDeviceService)
+        /// Consumes the builder and constructs a [`TargetOnDeviceService`](crate::model::TargetOnDeviceService).
         pub fn build(self) -> crate::model::TargetOnDeviceService {
             crate::model::TargetOnDeviceService {
                 service_name: self.service_name,
@@ -1030,7 +1040,7 @@ pub mod target_on_device_service {
     }
 }
 impl TargetOnDeviceService {
-    /// Creates a new builder-style object to manufacture [`TargetOnDeviceService`](crate::model::TargetOnDeviceService)
+    /// Creates a new builder-style object to manufacture [`TargetOnDeviceService`](crate::model::TargetOnDeviceService).
     pub fn builder() -> crate::model::target_on_device_service::Builder {
         crate::model::target_on_device_service::Builder::default()
     }
@@ -1155,8 +1165,10 @@ impl AsRef<str> for DeviceServiceName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyRange {
     /// <p>The key that starts an optional key range for an export job. Ranges are inclusive and UTF-8 binary sorted.</p>
+    #[doc(hidden)]
     pub begin_marker: std::option::Option<std::string::String>,
     /// <p>The key that ends an optional key range for an export job. Ranges are inclusive and UTF-8 binary sorted.</p>
+    #[doc(hidden)]
     pub end_marker: std::option::Option<std::string::String>,
 }
 impl KeyRange {
@@ -1177,11 +1189,10 @@ impl std::fmt::Debug for KeyRange {
         formatter.finish()
     }
 }
-/// See [`KeyRange`](crate::model::KeyRange)
+/// See [`KeyRange`](crate::model::KeyRange).
 pub mod key_range {
 
-    /// A builder for [`KeyRange`](crate::model::KeyRange)
-    #[non_exhaustive]
+    /// A builder for [`KeyRange`](crate::model::KeyRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) begin_marker: std::option::Option<std::string::String>,
@@ -1208,7 +1219,7 @@ pub mod key_range {
             self.end_marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyRange`](crate::model::KeyRange)
+        /// Consumes the builder and constructs a [`KeyRange`](crate::model::KeyRange).
         pub fn build(self) -> crate::model::KeyRange {
             crate::model::KeyRange {
                 begin_marker: self.begin_marker,
@@ -1218,7 +1229,7 @@ pub mod key_range {
     }
 }
 impl KeyRange {
-    /// Creates a new builder-style object to manufacture [`KeyRange`](crate::model::KeyRange)
+    /// Creates a new builder-style object to manufacture [`KeyRange`](crate::model::KeyRange).
     pub fn builder() -> crate::model::key_range::Builder {
         crate::model::key_range::Builder::default()
     }
@@ -1231,10 +1242,13 @@ impl KeyRange {
 pub struct Notification {
     /// <p>The new SNS <code>TopicArn</code> that you want to associate with this job. You can create Amazon Resource Names (ARNs) for topics by using the <a href="https://docs.aws.amazon.com/sns/latest/api/API_CreateTopic.html">CreateTopic</a> Amazon SNS API action.</p>
     /// <p>You can subscribe email addresses to an Amazon SNS topic through the Amazon Web Services Management Console, or by using the <a href="https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html">Subscribe</a> Amazon Simple Notification Service (Amazon SNS) API action.</p>
+    #[doc(hidden)]
     pub sns_topic_arn: std::option::Option<std::string::String>,
     /// <p>The list of job states that will trigger a notification for this job.</p>
+    #[doc(hidden)]
     pub job_states_to_notify: std::option::Option<std::vec::Vec<crate::model::JobState>>,
     /// <p>Any change in job state will trigger a notification for this job.</p>
+    #[doc(hidden)]
     pub notify_all: bool,
 }
 impl Notification {
@@ -1261,11 +1275,10 @@ impl std::fmt::Debug for Notification {
         formatter.finish()
     }
 }
-/// See [`Notification`](crate::model::Notification)
+/// See [`Notification`](crate::model::Notification).
 pub mod notification {
 
-    /// A builder for [`Notification`](crate::model::Notification)
-    #[non_exhaustive]
+    /// A builder for [`Notification`](crate::model::Notification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sns_topic_arn: std::option::Option<std::string::String>,
@@ -1317,7 +1330,7 @@ pub mod notification {
             self.notify_all = input;
             self
         }
-        /// Consumes the builder and constructs a [`Notification`](crate::model::Notification)
+        /// Consumes the builder and constructs a [`Notification`](crate::model::Notification).
         pub fn build(self) -> crate::model::Notification {
             crate::model::Notification {
                 sns_topic_arn: self.sns_topic_arn,
@@ -1328,7 +1341,7 @@ pub mod notification {
     }
 }
 impl Notification {
-    /// Creates a new builder-style object to manufacture [`Notification`](crate::model::Notification)
+    /// Creates a new builder-style object to manufacture [`Notification`](crate::model::Notification).
     pub fn builder() -> crate::model::notification::Builder {
         crate::model::notification::Builder::default()
     }
@@ -1452,24 +1465,34 @@ impl AsRef<str> for JobState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LongTermPricingListEntry {
     /// <p>The ID of the long-term pricing type for the device.</p>
+    #[doc(hidden)]
     pub long_term_pricing_id: std::option::Option<std::string::String>,
     /// <p>The end date the long-term pricing contract.</p>
+    #[doc(hidden)]
     pub long_term_pricing_end_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The start date of the long-term pricing contract.</p>
+    #[doc(hidden)]
     pub long_term_pricing_start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The type of long-term pricing that was selected for the device.</p>
+    #[doc(hidden)]
     pub long_term_pricing_type: std::option::Option<crate::model::LongTermPricingType>,
     /// <p>The current active jobs on the device the long-term pricing type.</p>
+    #[doc(hidden)]
     pub current_active_job: std::option::Option<std::string::String>,
     /// <p>A new device that replaces a device that is ordered with long-term pricing.</p>
+    #[doc(hidden)]
     pub replacement_job: std::option::Option<std::string::String>,
     /// <p>If set to <code>true</code>, specifies that the current long-term pricing type for the device should be automatically renewed before the long-term pricing contract expires.</p>
+    #[doc(hidden)]
     pub is_long_term_pricing_auto_renew: std::option::Option<bool>,
     /// <p>The status of the long-term pricing type.</p>
+    #[doc(hidden)]
     pub long_term_pricing_status: std::option::Option<std::string::String>,
     /// <p>The type of Snow Family Devices associated with this long-term pricing job.</p>
+    #[doc(hidden)]
     pub snowball_type: std::option::Option<crate::model::SnowballType>,
     /// <p>The IDs of the jobs that are associated with a long-term pricing type.</p>
+    #[doc(hidden)]
     pub job_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl LongTermPricingListEntry {
@@ -1541,11 +1564,10 @@ impl std::fmt::Debug for LongTermPricingListEntry {
         formatter.finish()
     }
 }
-/// See [`LongTermPricingListEntry`](crate::model::LongTermPricingListEntry)
+/// See [`LongTermPricingListEntry`](crate::model::LongTermPricingListEntry).
 pub mod long_term_pricing_list_entry {
 
-    /// A builder for [`LongTermPricingListEntry`](crate::model::LongTermPricingListEntry)
-    #[non_exhaustive]
+    /// A builder for [`LongTermPricingListEntry`](crate::model::LongTermPricingListEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) long_term_pricing_id: std::option::Option<std::string::String>,
@@ -1696,7 +1718,7 @@ pub mod long_term_pricing_list_entry {
             self.job_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`LongTermPricingListEntry`](crate::model::LongTermPricingListEntry)
+        /// Consumes the builder and constructs a [`LongTermPricingListEntry`](crate::model::LongTermPricingListEntry).
         pub fn build(self) -> crate::model::LongTermPricingListEntry {
             crate::model::LongTermPricingListEntry {
                 long_term_pricing_id: self.long_term_pricing_id,
@@ -1714,7 +1736,7 @@ pub mod long_term_pricing_list_entry {
     }
 }
 impl LongTermPricingListEntry {
-    /// Creates a new builder-style object to manufacture [`LongTermPricingListEntry`](crate::model::LongTermPricingListEntry)
+    /// Creates a new builder-style object to manufacture [`LongTermPricingListEntry`](crate::model::LongTermPricingListEntry).
     pub fn builder() -> crate::model::long_term_pricing_list_entry::Builder {
         crate::model::long_term_pricing_list_entry::Builder::default()
     }
@@ -1857,18 +1879,25 @@ impl AsRef<str> for LongTermPricingType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobListEntry {
     /// <p>The automatically generated ID for a job, for example <code>JID123e4567-e89b-12d3-a456-426655440000</code>.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The current state of this job.</p>
+    #[doc(hidden)]
     pub job_state: std::option::Option<crate::model::JobState>,
     /// <p>A value that indicates that this job is a main job. A main job represents a successful request to create an export job. Main jobs aren't associated with any Snowballs. Instead, each main job will have at least one job part, and each job part is associated with a Snowball. It might take some time before the job parts associated with a particular main job are listed, because they are created after the main job is created.</p>
+    #[doc(hidden)]
     pub is_master: bool,
     /// <p>The type of job.</p>
+    #[doc(hidden)]
     pub job_type: std::option::Option<crate::model::JobType>,
     /// <p>The type of device used with this job.</p>
+    #[doc(hidden)]
     pub snowball_type: std::option::Option<crate::model::SnowballType>,
     /// <p>The creation date for this job.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The optional description of this specific job, for example <code>Important Photos 2016-08-11</code>.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl JobListEntry {
@@ -1914,11 +1943,10 @@ impl std::fmt::Debug for JobListEntry {
         formatter.finish()
     }
 }
-/// See [`JobListEntry`](crate::model::JobListEntry)
+/// See [`JobListEntry`](crate::model::JobListEntry).
 pub mod job_list_entry {
 
-    /// A builder for [`JobListEntry`](crate::model::JobListEntry)
-    #[non_exhaustive]
+    /// A builder for [`JobListEntry`](crate::model::JobListEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -2006,7 +2034,7 @@ pub mod job_list_entry {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobListEntry`](crate::model::JobListEntry)
+        /// Consumes the builder and constructs a [`JobListEntry`](crate::model::JobListEntry).
         pub fn build(self) -> crate::model::JobListEntry {
             crate::model::JobListEntry {
                 job_id: self.job_id,
@@ -2021,7 +2049,7 @@ pub mod job_list_entry {
     }
 }
 impl JobListEntry {
-    /// Creates a new builder-style object to manufacture [`JobListEntry`](crate::model::JobListEntry)
+    /// Creates a new builder-style object to manufacture [`JobListEntry`](crate::model::JobListEntry).
     pub fn builder() -> crate::model::job_list_entry::Builder {
         crate::model::job_list_entry::Builder::default()
     }
@@ -2091,8 +2119,10 @@ impl AsRef<str> for JobType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CompatibleImage {
     /// <p>The unique identifier for an individual Snow device AMI.</p>
+    #[doc(hidden)]
     pub ami_id: std::option::Option<std::string::String>,
     /// <p>The optional name of a compatible image.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl CompatibleImage {
@@ -2113,11 +2143,10 @@ impl std::fmt::Debug for CompatibleImage {
         formatter.finish()
     }
 }
-/// See [`CompatibleImage`](crate::model::CompatibleImage)
+/// See [`CompatibleImage`](crate::model::CompatibleImage).
 pub mod compatible_image {
 
-    /// A builder for [`CompatibleImage`](crate::model::CompatibleImage)
-    #[non_exhaustive]
+    /// A builder for [`CompatibleImage`](crate::model::CompatibleImage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ami_id: std::option::Option<std::string::String>,
@@ -2144,7 +2173,7 @@ pub mod compatible_image {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompatibleImage`](crate::model::CompatibleImage)
+        /// Consumes the builder and constructs a [`CompatibleImage`](crate::model::CompatibleImage).
         pub fn build(self) -> crate::model::CompatibleImage {
             crate::model::CompatibleImage {
                 ami_id: self.ami_id,
@@ -2154,7 +2183,7 @@ pub mod compatible_image {
     }
 }
 impl CompatibleImage {
-    /// Creates a new builder-style object to manufacture [`CompatibleImage`](crate::model::CompatibleImage)
+    /// Creates a new builder-style object to manufacture [`CompatibleImage`](crate::model::CompatibleImage).
     pub fn builder() -> crate::model::compatible_image::Builder {
         crate::model::compatible_image::Builder::default()
     }
@@ -2165,12 +2194,16 @@ impl CompatibleImage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClusterListEntry {
     /// <p>The 39-character ID for the cluster that you want to list, for example <code>CID123e4567-e89b-12d3-a456-426655440000</code>.</p>
+    #[doc(hidden)]
     pub cluster_id: std::option::Option<std::string::String>,
     /// <p>The current state of this cluster. For information about the state of a specific node, see <code>JobListEntry$JobState</code>.</p>
+    #[doc(hidden)]
     pub cluster_state: std::option::Option<crate::model::ClusterState>,
     /// <p>The creation date for this cluster.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Defines an optional description of the cluster, for example <code>Environmental Data Cluster-01</code>.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl ClusterListEntry {
@@ -2201,11 +2234,10 @@ impl std::fmt::Debug for ClusterListEntry {
         formatter.finish()
     }
 }
-/// See [`ClusterListEntry`](crate::model::ClusterListEntry)
+/// See [`ClusterListEntry`](crate::model::ClusterListEntry).
 pub mod cluster_list_entry {
 
-    /// A builder for [`ClusterListEntry`](crate::model::ClusterListEntry)
-    #[non_exhaustive]
+    /// A builder for [`ClusterListEntry`](crate::model::ClusterListEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cluster_id: std::option::Option<std::string::String>,
@@ -2260,7 +2292,7 @@ pub mod cluster_list_entry {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClusterListEntry`](crate::model::ClusterListEntry)
+        /// Consumes the builder and constructs a [`ClusterListEntry`](crate::model::ClusterListEntry).
         pub fn build(self) -> crate::model::ClusterListEntry {
             crate::model::ClusterListEntry {
                 cluster_id: self.cluster_id,
@@ -2272,7 +2304,7 @@ pub mod cluster_list_entry {
     }
 }
 impl ClusterListEntry {
-    /// Creates a new builder-style object to manufacture [`ClusterListEntry`](crate::model::ClusterListEntry)
+    /// Creates a new builder-style object to manufacture [`ClusterListEntry`](crate::model::ClusterListEntry).
     pub fn builder() -> crate::model::cluster_list_entry::Builder {
         crate::model::cluster_list_entry::Builder::default()
     }
@@ -2419,49 +2451,71 @@ impl AsRef<str> for ShippingLabelStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobMetadata {
     /// <p>The automatically generated ID for a job, for example <code>JID123e4567-e89b-12d3-a456-426655440000</code>.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The current status of the jobs.</p>
+    #[doc(hidden)]
     pub job_state: std::option::Option<crate::model::JobState>,
     /// <p>The type of job.</p>
+    #[doc(hidden)]
     pub job_type: std::option::Option<crate::model::JobType>,
     /// <p>The type of device used with this job.</p>
+    #[doc(hidden)]
     pub snowball_type: std::option::Option<crate::model::SnowballType>,
     /// <p>The creation date for this job.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An array of <code>S3Resource</code> objects. Each <code>S3Resource</code> object represents an Amazon S3 bucket that your transferred data will be exported from or imported into.</p>
+    #[doc(hidden)]
     pub resources: std::option::Option<crate::model::JobResource>,
     /// <p>The description of the job, provided at job creation.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the Key Management Service (KMS) key associated with this job. This ARN was created using the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in KMS.</p>
+    #[doc(hidden)]
     pub kms_key_arn: std::option::Option<std::string::String>,
     /// <p>The role ARN associated with this job. This ARN was created using the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in Identity and Access Management.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The ID for the address that you want the Snow device shipped to.</p>
+    #[doc(hidden)]
     pub address_id: std::option::Option<std::string::String>,
     /// <p>A job's shipping information, including inbound and outbound tracking numbers and shipping speed options.</p>
+    #[doc(hidden)]
     pub shipping_details: std::option::Option<crate::model::ShippingDetails>,
     /// <p>The Snow device capacity preference for this job, specified at job creation. In US regions, you can choose between 50 TB and 80 TB Snowballs. All other regions use 80 TB capacity Snowballs.</p>
     /// <p>For more information, see "https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snow-device-types.html" (Snow Family Devices and Capacity) in the <i>Snowcone User Guide</i> or "https://docs.aws.amazon.com/snowball/latest/developer-guide/snow-device-types.html" (Snow Family Devices and Capacity) in the <i>Snowcone User Guide</i>.</p>
+    #[doc(hidden)]
     pub snowball_capacity_preference: std::option::Option<crate::model::SnowballCapacity>,
     /// <p>The Amazon Simple Notification Service (Amazon SNS) notification settings associated with a specific job. The <code>Notification</code> object is returned as a part of the response syntax of the <code>DescribeJob</code> action in the <code>JobMetadata</code> data type.</p>
+    #[doc(hidden)]
     pub notification: std::option::Option<crate::model::Notification>,
     /// <p>A value that defines the real-time status of a Snow device's data transfer while the device is at Amazon Web Services. This data is only available while a job has a <code>JobState</code> value of <code>InProgress</code>, for both import and export jobs.</p>
+    #[doc(hidden)]
     pub data_transfer_progress: std::option::Option<crate::model::DataTransfer>,
     /// <p>Links to Amazon S3 presigned URLs for the job report and logs. For import jobs, the PDF job report becomes available at the end of the import process. For export jobs, your job report typically becomes available while the Snow device for your job part is being delivered to you.</p>
+    #[doc(hidden)]
     pub job_log_info: std::option::Option<crate::model::JobLogs>,
     /// <p>The 39-character ID for the cluster, for example <code>CID123e4567-e89b-12d3-a456-426655440000</code>.</p>
+    #[doc(hidden)]
     pub cluster_id: std::option::Option<std::string::String>,
     /// <p>The ID of the address that you want a job shipped to, after it will be shipped to its primary address. This field is not supported in most regions.</p>
+    #[doc(hidden)]
     pub forwarding_address_id: std::option::Option<std::string::String>,
     /// <p>The metadata associated with the tax documents required in your Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub tax_documents: std::option::Option<crate::model::TaxDocuments>,
     /// <p>The container for <code>SnowconeDeviceConfiguration</code>. </p>
+    #[doc(hidden)]
     pub device_configuration: std::option::Option<crate::model::DeviceConfiguration>,
     /// <p>Allows you to securely operate and manage Snowcone devices remotely from outside of your internal network. When set to <code>INSTALLED_AUTOSTART</code>, remote management will automatically be available when the device arrives at your location. Otherwise, you need to use the Snowball Client to manage the device.</p>
+    #[doc(hidden)]
     pub remote_management: std::option::Option<crate::model::RemoteManagement>,
     /// <p>The ID of the long-term pricing type for the device.</p>
+    #[doc(hidden)]
     pub long_term_pricing_id: std::option::Option<std::string::String>,
     /// <p>Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.</p>
+    #[doc(hidden)]
     pub on_device_service_configuration:
         std::option::Option<crate::model::OnDeviceServiceConfiguration>,
 }
@@ -2594,11 +2648,10 @@ impl std::fmt::Debug for JobMetadata {
         formatter.finish()
     }
 }
-/// See [`JobMetadata`](crate::model::JobMetadata)
+/// See [`JobMetadata`](crate::model::JobMetadata).
 pub mod job_metadata {
 
-    /// A builder for [`JobMetadata`](crate::model::JobMetadata)
-    #[non_exhaustive]
+    /// A builder for [`JobMetadata`](crate::model::JobMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -2897,7 +2950,7 @@ pub mod job_metadata {
             self.on_device_service_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobMetadata`](crate::model::JobMetadata)
+        /// Consumes the builder and constructs a [`JobMetadata`](crate::model::JobMetadata).
         pub fn build(self) -> crate::model::JobMetadata {
             crate::model::JobMetadata {
                 job_id: self.job_id,
@@ -2927,7 +2980,7 @@ pub mod job_metadata {
     }
 }
 impl JobMetadata {
-    /// Creates a new builder-style object to manufacture [`JobMetadata`](crate::model::JobMetadata)
+    /// Creates a new builder-style object to manufacture [`JobMetadata`](crate::model::JobMetadata).
     pub fn builder() -> crate::model::job_metadata::Builder {
         crate::model::job_metadata::Builder::default()
     }
@@ -2993,6 +3046,7 @@ impl AsRef<str> for RemoteManagement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeviceConfiguration {
     /// <p>Returns information about the device configuration for an Snowcone job.</p>
+    #[doc(hidden)]
     pub snowcone_device_configuration:
         std::option::Option<crate::model::SnowconeDeviceConfiguration>,
 }
@@ -3014,11 +3068,10 @@ impl std::fmt::Debug for DeviceConfiguration {
         formatter.finish()
     }
 }
-/// See [`DeviceConfiguration`](crate::model::DeviceConfiguration)
+/// See [`DeviceConfiguration`](crate::model::DeviceConfiguration).
 pub mod device_configuration {
 
-    /// A builder for [`DeviceConfiguration`](crate::model::DeviceConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DeviceConfiguration`](crate::model::DeviceConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snowcone_device_configuration:
@@ -3041,7 +3094,7 @@ pub mod device_configuration {
             self.snowcone_device_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeviceConfiguration`](crate::model::DeviceConfiguration)
+        /// Consumes the builder and constructs a [`DeviceConfiguration`](crate::model::DeviceConfiguration).
         pub fn build(self) -> crate::model::DeviceConfiguration {
             crate::model::DeviceConfiguration {
                 snowcone_device_configuration: self.snowcone_device_configuration,
@@ -3050,7 +3103,7 @@ pub mod device_configuration {
     }
 }
 impl DeviceConfiguration {
-    /// Creates a new builder-style object to manufacture [`DeviceConfiguration`](crate::model::DeviceConfiguration)
+    /// Creates a new builder-style object to manufacture [`DeviceConfiguration`](crate::model::DeviceConfiguration).
     pub fn builder() -> crate::model::device_configuration::Builder {
         crate::model::device_configuration::Builder::default()
     }
@@ -3061,6 +3114,7 @@ impl DeviceConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnowconeDeviceConfiguration {
     /// <p>Configures the wireless connection for the Snowcone device.</p>
+    #[doc(hidden)]
     pub wireless_connection: std::option::Option<crate::model::WirelessConnection>,
 }
 impl SnowconeDeviceConfiguration {
@@ -3076,11 +3130,10 @@ impl std::fmt::Debug for SnowconeDeviceConfiguration {
         formatter.finish()
     }
 }
-/// See [`SnowconeDeviceConfiguration`](crate::model::SnowconeDeviceConfiguration)
+/// See [`SnowconeDeviceConfiguration`](crate::model::SnowconeDeviceConfiguration).
 pub mod snowcone_device_configuration {
 
-    /// A builder for [`SnowconeDeviceConfiguration`](crate::model::SnowconeDeviceConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SnowconeDeviceConfiguration`](crate::model::SnowconeDeviceConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) wireless_connection: std::option::Option<crate::model::WirelessConnection>,
@@ -3099,7 +3152,7 @@ pub mod snowcone_device_configuration {
             self.wireless_connection = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnowconeDeviceConfiguration`](crate::model::SnowconeDeviceConfiguration)
+        /// Consumes the builder and constructs a [`SnowconeDeviceConfiguration`](crate::model::SnowconeDeviceConfiguration).
         pub fn build(self) -> crate::model::SnowconeDeviceConfiguration {
             crate::model::SnowconeDeviceConfiguration {
                 wireless_connection: self.wireless_connection,
@@ -3108,7 +3161,7 @@ pub mod snowcone_device_configuration {
     }
 }
 impl SnowconeDeviceConfiguration {
-    /// Creates a new builder-style object to manufacture [`SnowconeDeviceConfiguration`](crate::model::SnowconeDeviceConfiguration)
+    /// Creates a new builder-style object to manufacture [`SnowconeDeviceConfiguration`](crate::model::SnowconeDeviceConfiguration).
     pub fn builder() -> crate::model::snowcone_device_configuration::Builder {
         crate::model::snowcone_device_configuration::Builder::default()
     }
@@ -3119,6 +3172,7 @@ impl SnowconeDeviceConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WirelessConnection {
     /// <p>Enables the Wi-Fi adapter on an Snowcone device.</p>
+    #[doc(hidden)]
     pub is_wifi_enabled: bool,
 }
 impl WirelessConnection {
@@ -3134,11 +3188,10 @@ impl std::fmt::Debug for WirelessConnection {
         formatter.finish()
     }
 }
-/// See [`WirelessConnection`](crate::model::WirelessConnection)
+/// See [`WirelessConnection`](crate::model::WirelessConnection).
 pub mod wireless_connection {
 
-    /// A builder for [`WirelessConnection`](crate::model::WirelessConnection)
-    #[non_exhaustive]
+    /// A builder for [`WirelessConnection`](crate::model::WirelessConnection).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_wifi_enabled: std::option::Option<bool>,
@@ -3154,7 +3207,7 @@ pub mod wireless_connection {
             self.is_wifi_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`WirelessConnection`](crate::model::WirelessConnection)
+        /// Consumes the builder and constructs a [`WirelessConnection`](crate::model::WirelessConnection).
         pub fn build(self) -> crate::model::WirelessConnection {
             crate::model::WirelessConnection {
                 is_wifi_enabled: self.is_wifi_enabled.unwrap_or_default(),
@@ -3163,7 +3216,7 @@ pub mod wireless_connection {
     }
 }
 impl WirelessConnection {
-    /// Creates a new builder-style object to manufacture [`WirelessConnection`](crate::model::WirelessConnection)
+    /// Creates a new builder-style object to manufacture [`WirelessConnection`](crate::model::WirelessConnection).
     pub fn builder() -> crate::model::wireless_connection::Builder {
         crate::model::wireless_connection::Builder::default()
     }
@@ -3174,6 +3227,7 @@ impl WirelessConnection {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaxDocuments {
     /// <p>The tax documents required in Amazon Web Services Region in India.</p>
+    #[doc(hidden)]
     pub ind: std::option::Option<crate::model::IndTaxDocuments>,
 }
 impl TaxDocuments {
@@ -3189,11 +3243,10 @@ impl std::fmt::Debug for TaxDocuments {
         formatter.finish()
     }
 }
-/// See [`TaxDocuments`](crate::model::TaxDocuments)
+/// See [`TaxDocuments`](crate::model::TaxDocuments).
 pub mod tax_documents {
 
-    /// A builder for [`TaxDocuments`](crate::model::TaxDocuments)
-    #[non_exhaustive]
+    /// A builder for [`TaxDocuments`](crate::model::TaxDocuments).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ind: std::option::Option<crate::model::IndTaxDocuments>,
@@ -3212,14 +3265,14 @@ pub mod tax_documents {
             self.ind = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaxDocuments`](crate::model::TaxDocuments)
+        /// Consumes the builder and constructs a [`TaxDocuments`](crate::model::TaxDocuments).
         pub fn build(self) -> crate::model::TaxDocuments {
             crate::model::TaxDocuments { ind: self.ind }
         }
     }
 }
 impl TaxDocuments {
-    /// Creates a new builder-style object to manufacture [`TaxDocuments`](crate::model::TaxDocuments)
+    /// Creates a new builder-style object to manufacture [`TaxDocuments`](crate::model::TaxDocuments).
     pub fn builder() -> crate::model::tax_documents::Builder {
         crate::model::tax_documents::Builder::default()
     }
@@ -3230,6 +3283,7 @@ impl TaxDocuments {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IndTaxDocuments {
     /// <p>The Goods and Services Tax (GST) documents required in Amazon Web Services Region in India.</p>
+    #[doc(hidden)]
     pub gstin: std::option::Option<std::string::String>,
 }
 impl IndTaxDocuments {
@@ -3245,11 +3299,10 @@ impl std::fmt::Debug for IndTaxDocuments {
         formatter.finish()
     }
 }
-/// See [`IndTaxDocuments`](crate::model::IndTaxDocuments)
+/// See [`IndTaxDocuments`](crate::model::IndTaxDocuments).
 pub mod ind_tax_documents {
 
-    /// A builder for [`IndTaxDocuments`](crate::model::IndTaxDocuments)
-    #[non_exhaustive]
+    /// A builder for [`IndTaxDocuments`](crate::model::IndTaxDocuments).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gstin: std::option::Option<std::string::String>,
@@ -3265,14 +3318,14 @@ pub mod ind_tax_documents {
             self.gstin = input;
             self
         }
-        /// Consumes the builder and constructs a [`IndTaxDocuments`](crate::model::IndTaxDocuments)
+        /// Consumes the builder and constructs a [`IndTaxDocuments`](crate::model::IndTaxDocuments).
         pub fn build(self) -> crate::model::IndTaxDocuments {
             crate::model::IndTaxDocuments { gstin: self.gstin }
         }
     }
 }
 impl IndTaxDocuments {
-    /// Creates a new builder-style object to manufacture [`IndTaxDocuments`](crate::model::IndTaxDocuments)
+    /// Creates a new builder-style object to manufacture [`IndTaxDocuments`](crate::model::IndTaxDocuments).
     pub fn builder() -> crate::model::ind_tax_documents::Builder {
         crate::model::ind_tax_documents::Builder::default()
     }
@@ -3286,10 +3339,13 @@ impl IndTaxDocuments {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobLogs {
     /// <p>A link to an Amazon S3 presigned URL where the job completion report is located.</p>
+    #[doc(hidden)]
     pub job_completion_report_uri: std::option::Option<std::string::String>,
     /// <p>A link to an Amazon S3 presigned URL where the job success log is located.</p>
+    #[doc(hidden)]
     pub job_success_log_uri: std::option::Option<std::string::String>,
     /// <p>A link to an Amazon S3 presigned URL where the job failure log is located.</p>
+    #[doc(hidden)]
     pub job_failure_log_uri: std::option::Option<std::string::String>,
 }
 impl JobLogs {
@@ -3315,11 +3371,10 @@ impl std::fmt::Debug for JobLogs {
         formatter.finish()
     }
 }
-/// See [`JobLogs`](crate::model::JobLogs)
+/// See [`JobLogs`](crate::model::JobLogs).
 pub mod job_logs {
 
-    /// A builder for [`JobLogs`](crate::model::JobLogs)
-    #[non_exhaustive]
+    /// A builder for [`JobLogs`](crate::model::JobLogs).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_completion_report_uri: std::option::Option<std::string::String>,
@@ -3366,7 +3421,7 @@ pub mod job_logs {
             self.job_failure_log_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobLogs`](crate::model::JobLogs)
+        /// Consumes the builder and constructs a [`JobLogs`](crate::model::JobLogs).
         pub fn build(self) -> crate::model::JobLogs {
             crate::model::JobLogs {
                 job_completion_report_uri: self.job_completion_report_uri,
@@ -3377,7 +3432,7 @@ pub mod job_logs {
     }
 }
 impl JobLogs {
-    /// Creates a new builder-style object to manufacture [`JobLogs`](crate::model::JobLogs)
+    /// Creates a new builder-style object to manufacture [`JobLogs`](crate::model::JobLogs).
     pub fn builder() -> crate::model::job_logs::Builder {
         crate::model::job_logs::Builder::default()
     }
@@ -3388,12 +3443,16 @@ impl JobLogs {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataTransfer {
     /// <p>The number of bytes transferred between a Snow device and Amazon S3.</p>
+    #[doc(hidden)]
     pub bytes_transferred: i64,
     /// <p>The number of objects transferred between a Snow device and Amazon S3.</p>
+    #[doc(hidden)]
     pub objects_transferred: i64,
     /// <p>The total bytes of data for a transfer between a Snow device and Amazon S3. This value is set to 0 (zero) until all the keys that will be transferred have been listed.</p>
+    #[doc(hidden)]
     pub total_bytes: i64,
     /// <p>The total number of objects for a transfer between a Snow device and Amazon S3. This value is set to 0 (zero) until all the keys that will be transferred have been listed.</p>
+    #[doc(hidden)]
     pub total_objects: i64,
 }
 impl DataTransfer {
@@ -3424,11 +3483,10 @@ impl std::fmt::Debug for DataTransfer {
         formatter.finish()
     }
 }
-/// See [`DataTransfer`](crate::model::DataTransfer)
+/// See [`DataTransfer`](crate::model::DataTransfer).
 pub mod data_transfer {
 
-    /// A builder for [`DataTransfer`](crate::model::DataTransfer)
-    #[non_exhaustive]
+    /// A builder for [`DataTransfer`](crate::model::DataTransfer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bytes_transferred: std::option::Option<i64>,
@@ -3477,7 +3535,7 @@ pub mod data_transfer {
             self.total_objects = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataTransfer`](crate::model::DataTransfer)
+        /// Consumes the builder and constructs a [`DataTransfer`](crate::model::DataTransfer).
         pub fn build(self) -> crate::model::DataTransfer {
             crate::model::DataTransfer {
                 bytes_transferred: self.bytes_transferred.unwrap_or_default(),
@@ -3489,7 +3547,7 @@ pub mod data_transfer {
     }
 }
 impl DataTransfer {
-    /// Creates a new builder-style object to manufacture [`DataTransfer`](crate::model::DataTransfer)
+    /// Creates a new builder-style object to manufacture [`DataTransfer`](crate::model::DataTransfer).
     pub fn builder() -> crate::model::data_transfer::Builder {
         crate::model::data_transfer::Builder::default()
     }
@@ -3506,10 +3564,13 @@ pub struct ShippingDetails {
     /// <li> <p>In India, Snow devices are delivered in one to seven days.</p> </li>
     /// <li> <p>In the United States of America (US), you have access to one-day shipping and two-day shipping.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub shipping_option: std::option::Option<crate::model::ShippingOption>,
     /// <p>The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to Amazon Web Services for a particular job.</p>
+    #[doc(hidden)]
     pub inbound_shipment: std::option::Option<crate::model::Shipment>,
     /// <p>The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being delivered to the address that you specified for a particular job.</p>
+    #[doc(hidden)]
     pub outbound_shipment: std::option::Option<crate::model::Shipment>,
 }
 impl ShippingDetails {
@@ -3541,11 +3602,10 @@ impl std::fmt::Debug for ShippingDetails {
         formatter.finish()
     }
 }
-/// See [`ShippingDetails`](crate::model::ShippingDetails)
+/// See [`ShippingDetails`](crate::model::ShippingDetails).
 pub mod shipping_details {
 
-    /// A builder for [`ShippingDetails`](crate::model::ShippingDetails)
-    #[non_exhaustive]
+    /// A builder for [`ShippingDetails`](crate::model::ShippingDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) shipping_option: std::option::Option<crate::model::ShippingOption>,
@@ -3604,7 +3664,7 @@ pub mod shipping_details {
             self.outbound_shipment = input;
             self
         }
-        /// Consumes the builder and constructs a [`ShippingDetails`](crate::model::ShippingDetails)
+        /// Consumes the builder and constructs a [`ShippingDetails`](crate::model::ShippingDetails).
         pub fn build(self) -> crate::model::ShippingDetails {
             crate::model::ShippingDetails {
                 shipping_option: self.shipping_option,
@@ -3615,7 +3675,7 @@ pub mod shipping_details {
     }
 }
 impl ShippingDetails {
-    /// Creates a new builder-style object to manufacture [`ShippingDetails`](crate::model::ShippingDetails)
+    /// Creates a new builder-style object to manufacture [`ShippingDetails`](crate::model::ShippingDetails).
     pub fn builder() -> crate::model::shipping_details::Builder {
         crate::model::shipping_details::Builder::default()
     }
@@ -3626,9 +3686,11 @@ impl ShippingDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Shipment {
     /// <p>Status information for a shipment.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The tracking number for this job. Using this tracking number with your region's carrier's website, you can track a Snow device as the carrier transports it.</p>
     /// <p>For India, the carrier is Amazon Logistics. For all other regions, UPS is the carrier.</p>
+    #[doc(hidden)]
     pub tracking_number: std::option::Option<std::string::String>,
 }
 impl Shipment {
@@ -3650,11 +3712,10 @@ impl std::fmt::Debug for Shipment {
         formatter.finish()
     }
 }
-/// See [`Shipment`](crate::model::Shipment)
+/// See [`Shipment`](crate::model::Shipment).
 pub mod shipment {
 
-    /// A builder for [`Shipment`](crate::model::Shipment)
-    #[non_exhaustive]
+    /// A builder for [`Shipment`](crate::model::Shipment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<std::string::String>,
@@ -3686,7 +3747,7 @@ pub mod shipment {
             self.tracking_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`Shipment`](crate::model::Shipment)
+        /// Consumes the builder and constructs a [`Shipment`](crate::model::Shipment).
         pub fn build(self) -> crate::model::Shipment {
             crate::model::Shipment {
                 status: self.status,
@@ -3696,7 +3757,7 @@ pub mod shipment {
     }
 }
 impl Shipment {
-    /// Creates a new builder-style object to manufacture [`Shipment`](crate::model::Shipment)
+    /// Creates a new builder-style object to manufacture [`Shipment`](crate::model::Shipment).
     pub fn builder() -> crate::model::shipment::Builder {
         crate::model::shipment::Builder::default()
     }
@@ -3707,26 +3768,36 @@ impl Shipment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClusterMetadata {
     /// <p>The automatically generated ID for a cluster.</p>
+    #[doc(hidden)]
     pub cluster_id: std::option::Option<std::string::String>,
     /// <p>The optional description of the cluster.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The <code>KmsKeyARN</code> Amazon Resource Name (ARN) associated with this cluster. This ARN was created using the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in Key Management Service (KMS.</p>
+    #[doc(hidden)]
     pub kms_key_arn: std::option::Option<std::string::String>,
     /// <p>The role ARN associated with this cluster. This ARN was created using the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in Identity and Access Management (IAM).</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The current status of the cluster.</p>
+    #[doc(hidden)]
     pub cluster_state: std::option::Option<crate::model::ClusterState>,
     /// <p>The type of job for this cluster. Currently, the only job type supported for clusters is <code>LOCAL_USE</code>.</p>
+    #[doc(hidden)]
     pub job_type: std::option::Option<crate::model::JobType>,
     /// <p>The type of Snowcone device to use for this cluster. </p> <note>
     /// <p>For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.</p>
     /// </note>
+    #[doc(hidden)]
     pub snowball_type: std::option::Option<crate::model::SnowballType>,
     /// <p>The creation date for this cluster.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The arrays of <code>JobResource</code> objects that can include updated <code>S3Resource</code> objects or <code>LambdaResource</code> objects.</p>
+    #[doc(hidden)]
     pub resources: std::option::Option<crate::model::JobResource>,
     /// <p>The automatically generated ID for a specific address.</p>
+    #[doc(hidden)]
     pub address_id: std::option::Option<std::string::String>,
     /// <p>The shipping speed for each node in this cluster. This speed doesn't dictate how soon you'll get each device, rather it represents how quickly each device moves to its destination while in transit. Regional shipping speeds are as follows:</p>
     /// <ul>
@@ -3735,14 +3806,19 @@ pub struct ClusterMetadata {
     /// <li> <p>In India, Snow devices are delivered in one to seven days.</p> </li>
     /// <li> <p>In the US, you have access to one-day shipping and two-day shipping.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub shipping_option: std::option::Option<crate::model::ShippingOption>,
     /// <p>The Amazon Simple Notification Service (Amazon SNS) notification settings for this cluster.</p>
+    #[doc(hidden)]
     pub notification: std::option::Option<crate::model::Notification>,
     /// <p>The ID of the address that you want a cluster shipped to, after it will be shipped to its primary address. This field is not supported in most regions.</p>
+    #[doc(hidden)]
     pub forwarding_address_id: std::option::Option<std::string::String>,
     /// <p>The tax documents required in your Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub tax_documents: std::option::Option<crate::model::TaxDocuments>,
     /// <p>Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.</p>
+    #[doc(hidden)]
     pub on_device_service_configuration:
         std::option::Option<crate::model::OnDeviceServiceConfiguration>,
 }
@@ -3842,11 +3918,10 @@ impl std::fmt::Debug for ClusterMetadata {
         formatter.finish()
     }
 }
-/// See [`ClusterMetadata`](crate::model::ClusterMetadata)
+/// See [`ClusterMetadata`](crate::model::ClusterMetadata).
 pub mod cluster_metadata {
 
-    /// A builder for [`ClusterMetadata`](crate::model::ClusterMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ClusterMetadata`](crate::model::ClusterMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cluster_id: std::option::Option<std::string::String>,
@@ -4063,7 +4138,7 @@ pub mod cluster_metadata {
             self.on_device_service_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClusterMetadata`](crate::model::ClusterMetadata)
+        /// Consumes the builder and constructs a [`ClusterMetadata`](crate::model::ClusterMetadata).
         pub fn build(self) -> crate::model::ClusterMetadata {
             crate::model::ClusterMetadata {
                 cluster_id: self.cluster_id,
@@ -4086,7 +4161,7 @@ pub mod cluster_metadata {
     }
 }
 impl ClusterMetadata {
-    /// Creates a new builder-style object to manufacture [`ClusterMetadata`](crate::model::ClusterMetadata)
+    /// Creates a new builder-style object to manufacture [`ClusterMetadata`](crate::model::ClusterMetadata).
     pub fn builder() -> crate::model::cluster_metadata::Builder {
         crate::model::cluster_metadata::Builder::default()
     }
@@ -4097,32 +4172,46 @@ impl ClusterMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Address {
     /// <p>The unique ID for an address.</p>
+    #[doc(hidden)]
     pub address_id: std::option::Option<std::string::String>,
     /// <p>The name of a person to receive a Snow device at an address.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The name of the company to receive a Snow device at an address.</p>
+    #[doc(hidden)]
     pub company: std::option::Option<std::string::String>,
     /// <p>The first line in a street address that a Snow device is to be delivered to.</p>
+    #[doc(hidden)]
     pub street1: std::option::Option<std::string::String>,
     /// <p>The second line in a street address that a Snow device is to be delivered to.</p>
+    #[doc(hidden)]
     pub street2: std::option::Option<std::string::String>,
     /// <p>The third line in a street address that a Snow device is to be delivered to.</p>
+    #[doc(hidden)]
     pub street3: std::option::Option<std::string::String>,
     /// <p>The city in an address that a Snow device is to be delivered to.</p>
+    #[doc(hidden)]
     pub city: std::option::Option<std::string::String>,
     /// <p>The state or province in an address that a Snow device is to be delivered to.</p>
+    #[doc(hidden)]
     pub state_or_province: std::option::Option<std::string::String>,
     /// <p>This field is no longer used and the value is ignored.</p>
+    #[doc(hidden)]
     pub prefecture_or_district: std::option::Option<std::string::String>,
     /// <p>This field is no longer used and the value is ignored.</p>
+    #[doc(hidden)]
     pub landmark: std::option::Option<std::string::String>,
     /// <p>The country in an address that a Snow device is to be delivered to.</p>
+    #[doc(hidden)]
     pub country: std::option::Option<std::string::String>,
     /// <p>The postal code in an address that a Snow device is to be delivered to.</p>
+    #[doc(hidden)]
     pub postal_code: std::option::Option<std::string::String>,
     /// <p>The phone number associated with an address that a Snow device is to be delivered to.</p>
+    #[doc(hidden)]
     pub phone_number: std::option::Option<std::string::String>,
     /// <p>If the address you are creating is a primary address, then set this option to true. This field is not supported in most regions.</p>
+    #[doc(hidden)]
     pub is_restricted: bool,
 }
 impl Address {
@@ -4203,11 +4292,10 @@ impl std::fmt::Debug for Address {
         formatter.finish()
     }
 }
-/// See [`Address`](crate::model::Address)
+/// See [`Address`](crate::model::Address).
 pub mod address {
 
-    /// A builder for [`Address`](crate::model::Address)
-    #[non_exhaustive]
+    /// A builder for [`Address`](crate::model::Address).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) address_id: std::option::Option<std::string::String>,
@@ -4372,7 +4460,7 @@ pub mod address {
             self.is_restricted = input;
             self
         }
-        /// Consumes the builder and constructs a [`Address`](crate::model::Address)
+        /// Consumes the builder and constructs a [`Address`](crate::model::Address).
         pub fn build(self) -> crate::model::Address {
             crate::model::Address {
                 address_id: self.address_id,
@@ -4394,7 +4482,7 @@ pub mod address {
     }
 }
 impl Address {
-    /// Creates a new builder-style object to manufacture [`Address`](crate::model::Address)
+    /// Creates a new builder-style object to manufacture [`Address`](crate::model::Address).
     pub fn builder() -> crate::model::address::Builder {
         crate::model::address::Builder::default()
     }

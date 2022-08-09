@@ -10,9 +10,11 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Subscriber {
     /// <p>The type of notification that Amazon Web Services sends to a subscriber.</p>
+    #[doc(hidden)]
     pub subscription_type: std::option::Option<crate::model::SubscriptionType>,
     /// <p>The address that Amazon Web Services sends budget notifications to, either an SNS topic or an email.</p>
     /// <p>When you create a subscriber, the value of <code>Address</code> can't contain line breaks.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
 }
 impl Subscriber {
@@ -34,11 +36,10 @@ impl std::fmt::Debug for Subscriber {
         formatter.finish()
     }
 }
-/// See [`Subscriber`](crate::model::Subscriber)
+/// See [`Subscriber`](crate::model::Subscriber).
 pub mod subscriber {
 
-    /// A builder for [`Subscriber`](crate::model::Subscriber)
-    #[non_exhaustive]
+    /// A builder for [`Subscriber`](crate::model::Subscriber).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subscription_type: std::option::Option<crate::model::SubscriptionType>,
@@ -70,7 +71,7 @@ pub mod subscriber {
             self.address = input;
             self
         }
-        /// Consumes the builder and constructs a [`Subscriber`](crate::model::Subscriber)
+        /// Consumes the builder and constructs a [`Subscriber`](crate::model::Subscriber).
         pub fn build(self) -> crate::model::Subscriber {
             crate::model::Subscriber {
                 subscription_type: self.subscription_type,
@@ -80,7 +81,7 @@ pub mod subscriber {
     }
 }
 impl Subscriber {
-    /// Creates a new builder-style object to manufacture [`Subscriber`](crate::model::Subscriber)
+    /// Creates a new builder-style object to manufacture [`Subscriber`](crate::model::Subscriber).
     pub fn builder() -> crate::model::subscriber::Builder {
         crate::model::subscriber::Builder::default()
     }
@@ -154,14 +155,19 @@ impl AsRef<str> for SubscriptionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Notification {
     /// <p>Specifies whether the notification is for how much you have spent (<code>ACTUAL</code>) or for how much that you're forecasted to spend (<code>FORECASTED</code>).</p>
+    #[doc(hidden)]
     pub notification_type: std::option::Option<crate::model::NotificationType>,
     /// <p>The comparison that's used for this notification.</p>
+    #[doc(hidden)]
     pub comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
     /// <p>The threshold that's associated with a notification. Thresholds are always a percentage, and many customers find value being alerted between 50% - 200% of the budgeted amount. The maximum limit for your threshold is 1,000,000% above the budgeted amount.</p>
+    #[doc(hidden)]
     pub threshold: f64,
     /// <p>The type of threshold for a notification. For <code>ABSOLUTE_VALUE</code> thresholds, Amazon Web Services notifies you when you go over or are forecasted to go over your total cost threshold. For <code>PERCENTAGE</code> thresholds, Amazon Web Services notifies you when you go over or are forecasted to go over a certain percentage of your forecasted spend. For example, if you have a budget for 200 dollars and you have a <code>PERCENTAGE</code> threshold of 80%, Amazon Web Services notifies you when you go over 160 dollars.</p>
+    #[doc(hidden)]
     pub threshold_type: std::option::Option<crate::model::ThresholdType>,
     /// <p>Specifies whether this notification is in alarm. If a budget notification is in the <code>ALARM</code> state, you passed the set threshold for the budget.</p>
+    #[doc(hidden)]
     pub notification_state: std::option::Option<crate::model::NotificationState>,
 }
 impl Notification {
@@ -197,11 +203,10 @@ impl std::fmt::Debug for Notification {
         formatter.finish()
     }
 }
-/// See [`Notification`](crate::model::Notification)
+/// See [`Notification`](crate::model::Notification).
 pub mod notification {
 
-    /// A builder for [`Notification`](crate::model::Notification)
-    #[non_exhaustive]
+    /// A builder for [`Notification`](crate::model::Notification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) notification_type: std::option::Option<crate::model::NotificationType>,
@@ -273,7 +278,7 @@ pub mod notification {
             self.notification_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`Notification`](crate::model::Notification)
+        /// Consumes the builder and constructs a [`Notification`](crate::model::Notification).
         pub fn build(self) -> crate::model::Notification {
             crate::model::Notification {
                 notification_type: self.notification_type,
@@ -286,7 +291,7 @@ pub mod notification {
     }
 }
 impl Notification {
-    /// Creates a new builder-style object to manufacture [`Notification`](crate::model::Notification)
+    /// Creates a new builder-style object to manufacture [`Notification`](crate::model::Notification).
     pub fn builder() -> crate::model::notification::Builder {
         crate::model::notification::Builder::default()
     }
@@ -525,24 +530,34 @@ impl AsRef<str> for NotificationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Action {
     /// <p>A system-generated universally unique identifier (UUID) for the action. </p>
+    #[doc(hidden)]
     pub action_id: std::option::Option<std::string::String>,
     /// <p> A string that represents the budget name. The ":" and "\" characters aren't allowed.</p>
+    #[doc(hidden)]
     pub budget_name: std::option::Option<std::string::String>,
     /// <p> The type of a notification. It must be ACTUAL or FORECASTED.</p>
+    #[doc(hidden)]
     pub notification_type: std::option::Option<crate::model::NotificationType>,
     /// <p>The type of action. This defines the type of tasks that can be carried out by this action. This field also determines the format for definition. </p>
+    #[doc(hidden)]
     pub action_type: std::option::Option<crate::model::ActionType>,
     /// <p>The trigger threshold of the action. </p>
+    #[doc(hidden)]
     pub action_threshold: std::option::Option<crate::model::ActionThreshold>,
     /// <p>Where you specify all of the type-specific parameters. </p>
+    #[doc(hidden)]
     pub definition: std::option::Option<crate::model::Definition>,
     /// <p>The role passed for action execution and reversion. Roles and actions must be in the same account. </p>
+    #[doc(hidden)]
     pub execution_role_arn: std::option::Option<std::string::String>,
     /// <p>This specifies if the action needs manual or automatic approval. </p>
+    #[doc(hidden)]
     pub approval_model: std::option::Option<crate::model::ApprovalModel>,
     /// <p>The status of the action. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ActionStatus>,
     /// <p> A list of subscribers.</p>
+    #[doc(hidden)]
     pub subscribers: std::option::Option<std::vec::Vec<crate::model::Subscriber>>,
 }
 impl Action {
@@ -603,11 +618,10 @@ impl std::fmt::Debug for Action {
         formatter.finish()
     }
 }
-/// See [`Action`](crate::model::Action)
+/// See [`Action`](crate::model::Action).
 pub mod action {
 
-    /// A builder for [`Action`](crate::model::Action)
-    #[non_exhaustive]
+    /// A builder for [`Action`](crate::model::Action).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action_id: std::option::Option<std::string::String>,
@@ -752,7 +766,7 @@ pub mod action {
             self.subscribers = input;
             self
         }
-        /// Consumes the builder and constructs a [`Action`](crate::model::Action)
+        /// Consumes the builder and constructs a [`Action`](crate::model::Action).
         pub fn build(self) -> crate::model::Action {
             crate::model::Action {
                 action_id: self.action_id,
@@ -770,7 +784,7 @@ pub mod action {
     }
 }
 impl Action {
-    /// Creates a new builder-style object to manufacture [`Action`](crate::model::Action)
+    /// Creates a new builder-style object to manufacture [`Action`](crate::model::Action).
     pub fn builder() -> crate::model::action::Builder {
         crate::model::action::Builder::default()
     }
@@ -934,10 +948,13 @@ impl AsRef<str> for ApprovalModel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Definition {
     /// <p>The Identity and Access Management (IAM) action definition details. </p>
+    #[doc(hidden)]
     pub iam_action_definition: std::option::Option<crate::model::IamActionDefinition>,
     /// <p>The service control policies (SCPs) action definition details. </p>
+    #[doc(hidden)]
     pub scp_action_definition: std::option::Option<crate::model::ScpActionDefinition>,
     /// <p>The Amazon Web Services Systems Manager (SSM) action definition details. </p>
+    #[doc(hidden)]
     pub ssm_action_definition: std::option::Option<crate::model::SsmActionDefinition>,
 }
 impl Definition {
@@ -963,11 +980,10 @@ impl std::fmt::Debug for Definition {
         formatter.finish()
     }
 }
-/// See [`Definition`](crate::model::Definition)
+/// See [`Definition`](crate::model::Definition).
 pub mod definition {
 
-    /// A builder for [`Definition`](crate::model::Definition)
-    #[non_exhaustive]
+    /// A builder for [`Definition`](crate::model::Definition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) iam_action_definition: std::option::Option<crate::model::IamActionDefinition>,
@@ -1014,7 +1030,7 @@ pub mod definition {
             self.ssm_action_definition = input;
             self
         }
-        /// Consumes the builder and constructs a [`Definition`](crate::model::Definition)
+        /// Consumes the builder and constructs a [`Definition`](crate::model::Definition).
         pub fn build(self) -> crate::model::Definition {
             crate::model::Definition {
                 iam_action_definition: self.iam_action_definition,
@@ -1025,7 +1041,7 @@ pub mod definition {
     }
 }
 impl Definition {
-    /// Creates a new builder-style object to manufacture [`Definition`](crate::model::Definition)
+    /// Creates a new builder-style object to manufacture [`Definition`](crate::model::Definition).
     pub fn builder() -> crate::model::definition::Builder {
         crate::model::definition::Builder::default()
     }
@@ -1036,10 +1052,13 @@ impl Definition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SsmActionDefinition {
     /// <p>The action subType. </p>
+    #[doc(hidden)]
     pub action_sub_type: std::option::Option<crate::model::ActionSubType>,
     /// <p>The Region to run the SSM document. </p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The EC2 and RDS instance IDs. </p>
+    #[doc(hidden)]
     pub instance_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SsmActionDefinition {
@@ -1065,11 +1084,10 @@ impl std::fmt::Debug for SsmActionDefinition {
         formatter.finish()
     }
 }
-/// See [`SsmActionDefinition`](crate::model::SsmActionDefinition)
+/// See [`SsmActionDefinition`](crate::model::SsmActionDefinition).
 pub mod ssm_action_definition {
 
-    /// A builder for [`SsmActionDefinition`](crate::model::SsmActionDefinition)
-    #[non_exhaustive]
+    /// A builder for [`SsmActionDefinition`](crate::model::SsmActionDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action_sub_type: std::option::Option<crate::model::ActionSubType>,
@@ -1119,7 +1137,7 @@ pub mod ssm_action_definition {
             self.instance_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`SsmActionDefinition`](crate::model::SsmActionDefinition)
+        /// Consumes the builder and constructs a [`SsmActionDefinition`](crate::model::SsmActionDefinition).
         pub fn build(self) -> crate::model::SsmActionDefinition {
             crate::model::SsmActionDefinition {
                 action_sub_type: self.action_sub_type,
@@ -1130,7 +1148,7 @@ pub mod ssm_action_definition {
     }
 }
 impl SsmActionDefinition {
-    /// Creates a new builder-style object to manufacture [`SsmActionDefinition`](crate::model::SsmActionDefinition)
+    /// Creates a new builder-style object to manufacture [`SsmActionDefinition`](crate::model::SsmActionDefinition).
     pub fn builder() -> crate::model::ssm_action_definition::Builder {
         crate::model::ssm_action_definition::Builder::default()
     }
@@ -1196,8 +1214,10 @@ impl AsRef<str> for ActionSubType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScpActionDefinition {
     /// <p>The policy ID attached. </p>
+    #[doc(hidden)]
     pub policy_id: std::option::Option<std::string::String>,
     /// <p>A list of target IDs. </p>
+    #[doc(hidden)]
     pub target_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ScpActionDefinition {
@@ -1218,11 +1238,10 @@ impl std::fmt::Debug for ScpActionDefinition {
         formatter.finish()
     }
 }
-/// See [`ScpActionDefinition`](crate::model::ScpActionDefinition)
+/// See [`ScpActionDefinition`](crate::model::ScpActionDefinition).
 pub mod scp_action_definition {
 
-    /// A builder for [`ScpActionDefinition`](crate::model::ScpActionDefinition)
-    #[non_exhaustive]
+    /// A builder for [`ScpActionDefinition`](crate::model::ScpActionDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_id: std::option::Option<std::string::String>,
@@ -1258,7 +1277,7 @@ pub mod scp_action_definition {
             self.target_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScpActionDefinition`](crate::model::ScpActionDefinition)
+        /// Consumes the builder and constructs a [`ScpActionDefinition`](crate::model::ScpActionDefinition).
         pub fn build(self) -> crate::model::ScpActionDefinition {
             crate::model::ScpActionDefinition {
                 policy_id: self.policy_id,
@@ -1268,7 +1287,7 @@ pub mod scp_action_definition {
     }
 }
 impl ScpActionDefinition {
-    /// Creates a new builder-style object to manufacture [`ScpActionDefinition`](crate::model::ScpActionDefinition)
+    /// Creates a new builder-style object to manufacture [`ScpActionDefinition`](crate::model::ScpActionDefinition).
     pub fn builder() -> crate::model::scp_action_definition::Builder {
         crate::model::scp_action_definition::Builder::default()
     }
@@ -1279,12 +1298,16 @@ impl ScpActionDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IamActionDefinition {
     /// <p>The Amazon Resource Name (ARN) of the policy to be attached. </p>
+    #[doc(hidden)]
     pub policy_arn: std::option::Option<std::string::String>,
     /// <p>A list of roles to be attached. There must be at least one role. </p>
+    #[doc(hidden)]
     pub roles: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of groups to be attached. There must be at least one group. </p>
+    #[doc(hidden)]
     pub groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of users to be attached. There must be at least one user. </p>
+    #[doc(hidden)]
     pub users: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl IamActionDefinition {
@@ -1315,11 +1338,10 @@ impl std::fmt::Debug for IamActionDefinition {
         formatter.finish()
     }
 }
-/// See [`IamActionDefinition`](crate::model::IamActionDefinition)
+/// See [`IamActionDefinition`](crate::model::IamActionDefinition).
 pub mod iam_action_definition {
 
-    /// A builder for [`IamActionDefinition`](crate::model::IamActionDefinition)
-    #[non_exhaustive]
+    /// A builder for [`IamActionDefinition`](crate::model::IamActionDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_arn: std::option::Option<std::string::String>,
@@ -1395,7 +1417,7 @@ pub mod iam_action_definition {
             self.users = input;
             self
         }
-        /// Consumes the builder and constructs a [`IamActionDefinition`](crate::model::IamActionDefinition)
+        /// Consumes the builder and constructs a [`IamActionDefinition`](crate::model::IamActionDefinition).
         pub fn build(self) -> crate::model::IamActionDefinition {
             crate::model::IamActionDefinition {
                 policy_arn: self.policy_arn,
@@ -1407,7 +1429,7 @@ pub mod iam_action_definition {
     }
 }
 impl IamActionDefinition {
-    /// Creates a new builder-style object to manufacture [`IamActionDefinition`](crate::model::IamActionDefinition)
+    /// Creates a new builder-style object to manufacture [`IamActionDefinition`](crate::model::IamActionDefinition).
     pub fn builder() -> crate::model::iam_action_definition::Builder {
         crate::model::iam_action_definition::Builder::default()
     }
@@ -1418,8 +1440,10 @@ impl IamActionDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActionThreshold {
     /// <p> The threshold of a notification.</p>
+    #[doc(hidden)]
     pub action_threshold_value: f64,
     /// <p> The type of threshold for a notification.</p>
+    #[doc(hidden)]
     pub action_threshold_type: std::option::Option<crate::model::ThresholdType>,
 }
 impl ActionThreshold {
@@ -1440,11 +1464,10 @@ impl std::fmt::Debug for ActionThreshold {
         formatter.finish()
     }
 }
-/// See [`ActionThreshold`](crate::model::ActionThreshold)
+/// See [`ActionThreshold`](crate::model::ActionThreshold).
 pub mod action_threshold {
 
-    /// A builder for [`ActionThreshold`](crate::model::ActionThreshold)
-    #[non_exhaustive]
+    /// A builder for [`ActionThreshold`](crate::model::ActionThreshold).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action_threshold_value: std::option::Option<f64>,
@@ -1474,7 +1497,7 @@ pub mod action_threshold {
             self.action_threshold_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActionThreshold`](crate::model::ActionThreshold)
+        /// Consumes the builder and constructs a [`ActionThreshold`](crate::model::ActionThreshold).
         pub fn build(self) -> crate::model::ActionThreshold {
             crate::model::ActionThreshold {
                 action_threshold_value: self.action_threshold_value.unwrap_or_default(),
@@ -1484,7 +1507,7 @@ pub mod action_threshold {
     }
 }
 impl ActionThreshold {
-    /// Creates a new builder-style object to manufacture [`ActionThreshold`](crate::model::ActionThreshold)
+    /// Creates a new builder-style object to manufacture [`ActionThreshold`](crate::model::ActionThreshold).
     pub fn builder() -> crate::model::action_threshold::Builder {
         crate::model::action_threshold::Builder::default()
     }
@@ -1556,9 +1579,11 @@ impl AsRef<str> for ActionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Budget {
     /// <p>The name of a budget. The name must be unique within an account. The <code>:</code> and <code>\</code> characters aren't allowed in <code>BudgetName</code>.</p>
+    #[doc(hidden)]
     pub budget_name: std::option::Option<std::string::String>,
     /// <p>The total amount of cost, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans coverage that you want to track with your budget.</p>
     /// <p> <code>BudgetLimit</code> is required for cost or usage budgets, but optional for RI or Savings Plans utilization or coverage budgets. RI and Savings Plans utilization or coverage budgets default to <code>100</code>. This is the only valid value for RI or Savings Plans utilization or coverage budgets. You can't use <code>BudgetLimit</code> with <code>PlannedBudgetLimits</code> for <code>CreateBudget</code> and <code>UpdateBudget</code> actions. </p>
+    #[doc(hidden)]
     pub budget_limit: std::option::Option<crate::model::Spend>,
     /// <p>A map containing multiple <code>BudgetLimit</code>, including current or future limits.</p>
     /// <p> <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports both monthly and quarterly <code>TimeUnit</code>. </p>
@@ -1568,6 +1593,7 @@ pub struct Budget {
     /// <p>If the budget begins at a date in the future, provide <code>PlannedBudgetLimits</code> values from the start date of the budget. </p>
     /// <p>After all of the <code>BudgetLimit</code> values in <code>PlannedBudgetLimits</code> are used, the budget continues to use the last limit as the <code>BudgetLimit</code>. At that point, the planned budget provides the same experience as a fixed budget. </p>
     /// <p> <code>DescribeBudget</code> and <code>DescribeBudgets</code> response along with <code>PlannedBudgetLimits</code> also contain <code>BudgetLimit</code> representing the current month or quarter limit present in <code>PlannedBudgetLimits</code>. This only applies to budgets that are created with <code>PlannedBudgetLimits</code>. Budgets that are created without <code>PlannedBudgetLimits</code> only contain <code>BudgetLimit</code>. They don't contain <code>PlannedBudgetLimits</code>.</p>
+    #[doc(hidden)]
     pub planned_budget_limits:
         std::option::Option<std::collections::HashMap<std::string::String, crate::model::Spend>>,
     /// <p>The cost filters, such as <code>Region</code>, <code>Service</code>, <code>member account</code>, <code>Tag</code>, or <code>Cost Category</code>, that are applied to a budget.</p>
@@ -1579,26 +1605,34 @@ pub struct Budget {
     /// <li> <p>Amazon ElastiCache</p> </li>
     /// <li> <p>Amazon OpenSearch Service</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub cost_filters: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The types of costs that are included in this <code>COST</code> budget.</p>
     /// <p> <code>USAGE</code>, <code>RI_UTILIZATION</code>, <code>RI_COVERAGE</code>, <code>SAVINGS_PLANS_UTILIZATION</code>, and <code>SAVINGS_PLANS_COVERAGE</code> budgets do not have <code>CostTypes</code>.</p>
+    #[doc(hidden)]
     pub cost_types: std::option::Option<crate::model::CostTypes>,
     /// <p>The length of time until a budget resets the actual and forecasted spend.</p>
+    #[doc(hidden)]
     pub time_unit: std::option::Option<crate::model::TimeUnit>,
     /// <p>The period of time that's covered by a budget. You setthe start date and end date. The start date must come before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>. </p>
     /// <p>If you create your budget and don't specify a start date, Amazon Web Services defaults to the start of your chosen time period (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January 24, 2018, chose <code>DAILY</code>, and didn't set a start date, Amazon Web Services set your start date to <code>01/24/18 00:00 UTC</code>. If you chose <code>MONTHLY</code>, Amazon Web Services set your start date to <code>01/01/18 00:00 UTC</code>. If you didn't specify an end date, Amazon Web Services set your end date to <code>06/15/87 00:00 UTC</code>. The defaults are the same for the Billing and Cost Management console and the API. </p>
     /// <p>You can change either date with the <code>UpdateBudget</code> operation.</p>
     /// <p>After the end date, Amazon Web Services deletes the budget and all the associated notifications and subscribers.</p>
+    #[doc(hidden)]
     pub time_period: std::option::Option<crate::model::TimePeriod>,
     /// <p>The actual and forecasted cost or usage that the budget tracks.</p>
+    #[doc(hidden)]
     pub calculated_spend: std::option::Option<crate::model::CalculatedSpend>,
     /// <p>Specifies whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans coverage.</p>
+    #[doc(hidden)]
     pub budget_type: std::option::Option<crate::model::BudgetType>,
     /// <p>The last time that you updated this budget.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The parameters that determine the budget amount for an auto-adjusting budget.</p>
+    #[doc(hidden)]
     pub auto_adjust_data: std::option::Option<crate::model::AutoAdjustData>,
 }
 impl Budget {
@@ -1691,11 +1725,10 @@ impl std::fmt::Debug for Budget {
         formatter.finish()
     }
 }
-/// See [`Budget`](crate::model::Budget)
+/// See [`Budget`](crate::model::Budget).
 pub mod budget {
 
-    /// A builder for [`Budget`](crate::model::Budget)
-    #[non_exhaustive]
+    /// A builder for [`Budget`](crate::model::Budget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) budget_name: std::option::Option<std::string::String>,
@@ -1913,7 +1946,7 @@ pub mod budget {
             self.auto_adjust_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`Budget`](crate::model::Budget)
+        /// Consumes the builder and constructs a [`Budget`](crate::model::Budget).
         pub fn build(self) -> crate::model::Budget {
             crate::model::Budget {
                 budget_name: self.budget_name,
@@ -1932,7 +1965,7 @@ pub mod budget {
     }
 }
 impl Budget {
-    /// Creates a new builder-style object to manufacture [`Budget`](crate::model::Budget)
+    /// Creates a new builder-style object to manufacture [`Budget`](crate::model::Budget).
     pub fn builder() -> crate::model::budget::Builder {
         crate::model::budget::Builder::default()
     }
@@ -1943,10 +1976,13 @@ impl Budget {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoAdjustData {
     /// <p>The string that defines whether your budget auto-adjusts based on historical or forecasted data.</p>
+    #[doc(hidden)]
     pub auto_adjust_type: std::option::Option<crate::model::AutoAdjustType>,
     /// <p>The parameters that define or describe the historical data that your auto-adjusting budget is based on.</p>
+    #[doc(hidden)]
     pub historical_options: std::option::Option<crate::model::HistoricalOptions>,
     /// <p>The last time that your budget was auto-adjusted.</p>
+    #[doc(hidden)]
     pub last_auto_adjust_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AutoAdjustData {
@@ -1972,11 +2008,10 @@ impl std::fmt::Debug for AutoAdjustData {
         formatter.finish()
     }
 }
-/// See [`AutoAdjustData`](crate::model::AutoAdjustData)
+/// See [`AutoAdjustData`](crate::model::AutoAdjustData).
 pub mod auto_adjust_data {
 
-    /// A builder for [`AutoAdjustData`](crate::model::AutoAdjustData)
-    #[non_exhaustive]
+    /// A builder for [`AutoAdjustData`](crate::model::AutoAdjustData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_adjust_type: std::option::Option<crate::model::AutoAdjustType>,
@@ -2023,7 +2058,7 @@ pub mod auto_adjust_data {
             self.last_auto_adjust_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoAdjustData`](crate::model::AutoAdjustData)
+        /// Consumes the builder and constructs a [`AutoAdjustData`](crate::model::AutoAdjustData).
         pub fn build(self) -> crate::model::AutoAdjustData {
             crate::model::AutoAdjustData {
                 auto_adjust_type: self.auto_adjust_type,
@@ -2034,7 +2069,7 @@ pub mod auto_adjust_data {
     }
 }
 impl AutoAdjustData {
-    /// Creates a new builder-style object to manufacture [`AutoAdjustData`](crate::model::AutoAdjustData)
+    /// Creates a new builder-style object to manufacture [`AutoAdjustData`](crate::model::AutoAdjustData).
     pub fn builder() -> crate::model::auto_adjust_data::Builder {
         crate::model::auto_adjust_data::Builder::default()
     }
@@ -2051,10 +2086,12 @@ pub struct HistoricalOptions {
     /// <li> <p>For the <code>QUARTERLY</code> granularity, the maximum value is <code>4</code>.</p> </li>
     /// <li> <p>For the <code>ANNUALLY</code> granularity, the maximum value is <code>1</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub budget_adjustment_period: std::option::Option<i32>,
     /// <p>The integer that describes how many budget periods in your <code>BudgetAdjustmentPeriod</code> are included in the calculation of your current <code>BudgetLimit</code>. If the first budget period in your <code>BudgetAdjustmentPeriod</code> has no cost data, then that budget period isn’t included in the average that determines your budget limit. </p>
     /// <p>For example, if you set <code>BudgetAdjustmentPeriod</code> as <code>4</code> quarters, but your account had no cost data in the first quarter, then only the last three quarters are included in the calculation. In this scenario, <code>LookBackAvailablePeriods</code> returns <code>3</code>. </p>
     /// <p>You can’t set your own <code>LookBackAvailablePeriods</code>. The value is automatically calculated from the <code>BudgetAdjustmentPeriod</code> and your historical cost data.</p>
+    #[doc(hidden)]
     pub look_back_available_periods: std::option::Option<i32>,
 }
 impl HistoricalOptions {
@@ -2086,11 +2123,10 @@ impl std::fmt::Debug for HistoricalOptions {
         formatter.finish()
     }
 }
-/// See [`HistoricalOptions`](crate::model::HistoricalOptions)
+/// See [`HistoricalOptions`](crate::model::HistoricalOptions).
 pub mod historical_options {
 
-    /// A builder for [`HistoricalOptions`](crate::model::HistoricalOptions)
-    #[non_exhaustive]
+    /// A builder for [`HistoricalOptions`](crate::model::HistoricalOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) budget_adjustment_period: std::option::Option<i32>,
@@ -2133,7 +2169,7 @@ pub mod historical_options {
             self.look_back_available_periods = input;
             self
         }
-        /// Consumes the builder and constructs a [`HistoricalOptions`](crate::model::HistoricalOptions)
+        /// Consumes the builder and constructs a [`HistoricalOptions`](crate::model::HistoricalOptions).
         pub fn build(self) -> crate::model::HistoricalOptions {
             crate::model::HistoricalOptions {
                 budget_adjustment_period: self.budget_adjustment_period,
@@ -2143,7 +2179,7 @@ pub mod historical_options {
     }
 }
 impl HistoricalOptions {
-    /// Creates a new builder-style object to manufacture [`HistoricalOptions`](crate::model::HistoricalOptions)
+    /// Creates a new builder-style object to manufacture [`HistoricalOptions`](crate::model::HistoricalOptions).
     pub fn builder() -> crate::model::historical_options::Builder {
         crate::model::historical_options::Builder::default()
     }
@@ -2290,8 +2326,10 @@ impl AsRef<str> for BudgetType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CalculatedSpend {
     /// <p>The amount of cost, usage, RI units, or Savings Plans units that you used.</p>
+    #[doc(hidden)]
     pub actual_spend: std::option::Option<crate::model::Spend>,
     /// <p>The amount of cost, usage, RI units, or Savings Plans units that you're forecasted to use.</p>
+    #[doc(hidden)]
     pub forecasted_spend: std::option::Option<crate::model::Spend>,
 }
 impl CalculatedSpend {
@@ -2312,11 +2350,10 @@ impl std::fmt::Debug for CalculatedSpend {
         formatter.finish()
     }
 }
-/// See [`CalculatedSpend`](crate::model::CalculatedSpend)
+/// See [`CalculatedSpend`](crate::model::CalculatedSpend).
 pub mod calculated_spend {
 
-    /// A builder for [`CalculatedSpend`](crate::model::CalculatedSpend)
-    #[non_exhaustive]
+    /// A builder for [`CalculatedSpend`](crate::model::CalculatedSpend).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) actual_spend: std::option::Option<crate::model::Spend>,
@@ -2346,7 +2383,7 @@ pub mod calculated_spend {
             self.forecasted_spend = input;
             self
         }
-        /// Consumes the builder and constructs a [`CalculatedSpend`](crate::model::CalculatedSpend)
+        /// Consumes the builder and constructs a [`CalculatedSpend`](crate::model::CalculatedSpend).
         pub fn build(self) -> crate::model::CalculatedSpend {
             crate::model::CalculatedSpend {
                 actual_spend: self.actual_spend,
@@ -2356,7 +2393,7 @@ pub mod calculated_spend {
     }
 }
 impl CalculatedSpend {
-    /// Creates a new builder-style object to manufacture [`CalculatedSpend`](crate::model::CalculatedSpend)
+    /// Creates a new builder-style object to manufacture [`CalculatedSpend`](crate::model::CalculatedSpend).
     pub fn builder() -> crate::model::calculated_spend::Builder {
         crate::model::calculated_spend::Builder::default()
     }
@@ -2372,8 +2409,10 @@ impl CalculatedSpend {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Spend {
     /// <p>The cost or usage amount that's associated with a budget forecast, actual spend, or budget threshold.</p>
+    #[doc(hidden)]
     pub amount: std::option::Option<std::string::String>,
     /// <p>The unit of measurement that's used for the budget forecast, actual spend, or budget threshold, such as USD or GBP.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<std::string::String>,
 }
 impl Spend {
@@ -2394,11 +2433,10 @@ impl std::fmt::Debug for Spend {
         formatter.finish()
     }
 }
-/// See [`Spend`](crate::model::Spend)
+/// See [`Spend`](crate::model::Spend).
 pub mod spend {
 
-    /// A builder for [`Spend`](crate::model::Spend)
-    #[non_exhaustive]
+    /// A builder for [`Spend`](crate::model::Spend).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) amount: std::option::Option<std::string::String>,
@@ -2425,7 +2463,7 @@ pub mod spend {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`Spend`](crate::model::Spend)
+        /// Consumes the builder and constructs a [`Spend`](crate::model::Spend).
         pub fn build(self) -> crate::model::Spend {
             crate::model::Spend {
                 amount: self.amount,
@@ -2435,7 +2473,7 @@ pub mod spend {
     }
 }
 impl Spend {
-    /// Creates a new builder-style object to manufacture [`Spend`](crate::model::Spend)
+    /// Creates a new builder-style object to manufacture [`Spend`](crate::model::Spend).
     pub fn builder() -> crate::model::spend::Builder {
         crate::model::spend::Builder::default()
     }
@@ -2447,9 +2485,11 @@ impl Spend {
 pub struct TimePeriod {
     /// <p>The start date for a budget. If you created your budget and didn't specify a start date, Amazon Web Services defaults to the start of your chosen time period (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January 24, 2018, chose <code>DAILY</code>, and didn't set a start date, Amazon Web Services set your start date to <code>01/24/18 00:00 UTC</code>. If you chose <code>MONTHLY</code>, Amazon Web Services set your start date to <code>01/01/18 00:00 UTC</code>. The defaults are the same for the Billing and Cost Management console and the API.</p>
     /// <p>You can change your start date with the <code>UpdateBudget</code> operation.</p>
+    #[doc(hidden)]
     pub start: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end date for a budget. If you didn't specify an end date, Amazon Web Services set your end date to <code>06/15/87 00:00 UTC</code>. The defaults are the same for the Billing and Cost Management console and the API.</p>
     /// <p>After the end date, Amazon Web Services deletes the budget and all the associated notifications and subscribers. You can change your end date with the <code>UpdateBudget</code> operation.</p>
+    #[doc(hidden)]
     pub end: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TimePeriod {
@@ -2472,11 +2512,10 @@ impl std::fmt::Debug for TimePeriod {
         formatter.finish()
     }
 }
-/// See [`TimePeriod`](crate::model::TimePeriod)
+/// See [`TimePeriod`](crate::model::TimePeriod).
 pub mod time_period {
 
-    /// A builder for [`TimePeriod`](crate::model::TimePeriod)
-    #[non_exhaustive]
+    /// A builder for [`TimePeriod`](crate::model::TimePeriod).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start: std::option::Option<aws_smithy_types::DateTime>,
@@ -2507,7 +2546,7 @@ pub mod time_period {
             self.end = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimePeriod`](crate::model::TimePeriod)
+        /// Consumes the builder and constructs a [`TimePeriod`](crate::model::TimePeriod).
         pub fn build(self) -> crate::model::TimePeriod {
             crate::model::TimePeriod {
                 start: self.start,
@@ -2517,7 +2556,7 @@ pub mod time_period {
     }
 }
 impl TimePeriod {
-    /// Creates a new builder-style object to manufacture [`TimePeriod`](crate::model::TimePeriod)
+    /// Creates a new builder-style object to manufacture [`TimePeriod`](crate::model::TimePeriod).
     pub fn builder() -> crate::model::time_period::Builder {
         crate::model::time_period::Builder::default()
     }
@@ -2593,36 +2632,47 @@ impl AsRef<str> for TimeUnit {
 pub struct CostTypes {
     /// <p>Specifies whether a budget includes taxes.</p>
     /// <p>The default value is <code>true</code>.</p>
+    #[doc(hidden)]
     pub include_tax: std::option::Option<bool>,
     /// <p>Specifies whether a budget includes subscriptions.</p>
     /// <p>The default value is <code>true</code>.</p>
+    #[doc(hidden)]
     pub include_subscription: std::option::Option<bool>,
     /// <p>Specifies whether a budget uses a blended rate.</p>
     /// <p>The default value is <code>false</code>.</p>
+    #[doc(hidden)]
     pub use_blended: std::option::Option<bool>,
     /// <p>Specifies whether a budget includes refunds.</p>
     /// <p>The default value is <code>true</code>.</p>
+    #[doc(hidden)]
     pub include_refund: std::option::Option<bool>,
     /// <p>Specifies whether a budget includes credits.</p>
     /// <p>The default value is <code>true</code>.</p>
+    #[doc(hidden)]
     pub include_credit: std::option::Option<bool>,
     /// <p>Specifies whether a budget includes upfront RI costs.</p>
     /// <p>The default value is <code>true</code>.</p>
+    #[doc(hidden)]
     pub include_upfront: std::option::Option<bool>,
     /// <p>Specifies whether a budget includes recurring fees such as monthly RI fees.</p>
     /// <p>The default value is <code>true</code>.</p>
+    #[doc(hidden)]
     pub include_recurring: std::option::Option<bool>,
     /// <p>Specifies whether a budget includes non-RI subscription costs.</p>
     /// <p>The default value is <code>true</code>.</p>
+    #[doc(hidden)]
     pub include_other_subscription: std::option::Option<bool>,
     /// <p>Specifies whether a budget includes support subscription fees.</p>
     /// <p>The default value is <code>true</code>.</p>
+    #[doc(hidden)]
     pub include_support: std::option::Option<bool>,
     /// <p>Specifies whether a budget includes discounts.</p>
     /// <p>The default value is <code>true</code>.</p>
+    #[doc(hidden)]
     pub include_discount: std::option::Option<bool>,
     /// <p>Specifies whether a budget uses the amortized rate.</p>
     /// <p>The default value is <code>false</code>.</p>
+    #[doc(hidden)]
     pub use_amortized: std::option::Option<bool>,
 }
 impl CostTypes {
@@ -2702,11 +2752,10 @@ impl std::fmt::Debug for CostTypes {
         formatter.finish()
     }
 }
-/// See [`CostTypes`](crate::model::CostTypes)
+/// See [`CostTypes`](crate::model::CostTypes).
 pub mod cost_types {
 
-    /// A builder for [`CostTypes`](crate::model::CostTypes)
-    #[non_exhaustive]
+    /// A builder for [`CostTypes`](crate::model::CostTypes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) include_tax: std::option::Option<bool>,
@@ -2854,7 +2903,7 @@ pub mod cost_types {
             self.use_amortized = input;
             self
         }
-        /// Consumes the builder and constructs a [`CostTypes`](crate::model::CostTypes)
+        /// Consumes the builder and constructs a [`CostTypes`](crate::model::CostTypes).
         pub fn build(self) -> crate::model::CostTypes {
             crate::model::CostTypes {
                 include_tax: self.include_tax,
@@ -2873,7 +2922,7 @@ pub mod cost_types {
     }
 }
 impl CostTypes {
-    /// Creates a new builder-style object to manufacture [`CostTypes`](crate::model::CostTypes)
+    /// Creates a new builder-style object to manufacture [`CostTypes`](crate::model::CostTypes).
     pub fn builder() -> crate::model::cost_types::Builder {
         crate::model::cost_types::Builder::default()
     }
@@ -2952,19 +3001,25 @@ impl AsRef<str> for ExecutionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BudgetPerformanceHistory {
     /// <p> A string that represents the budget name. The ":" and "\" characters aren't allowed.</p>
+    #[doc(hidden)]
     pub budget_name: std::option::Option<std::string::String>,
     /// <p> The type of a budget. It must be one of the following types: </p>
     /// <p> <code>COST</code>, <code>USAGE</code>, <code>RI_UTILIZATION</code>, <code>RI_COVERAGE</code>, <code>SAVINGS_PLANS_UTILIZATION</code>, or <code>SAVINGS_PLANS_COVERAGE</code>.</p>
+    #[doc(hidden)]
     pub budget_type: std::option::Option<crate::model::BudgetType>,
     /// <p>The history of the cost filters for a budget during the specified time period.</p>
+    #[doc(hidden)]
     pub cost_filters: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The history of the cost types for a budget during the specified time period.</p>
+    #[doc(hidden)]
     pub cost_types: std::option::Option<crate::model::CostTypes>,
     /// <p> The time unit of the budget, such as MONTHLY or QUARTERLY.</p>
+    #[doc(hidden)]
     pub time_unit: std::option::Option<crate::model::TimeUnit>,
     /// <p>A list of amounts of cost or usage that you created budgets for, which are compared to your actual costs or usage.</p>
+    #[doc(hidden)]
     pub budgeted_and_actual_amounts_list:
         std::option::Option<std::vec::Vec<crate::model::BudgetedAndActualAmounts>>,
 }
@@ -3016,11 +3071,10 @@ impl std::fmt::Debug for BudgetPerformanceHistory {
         formatter.finish()
     }
 }
-/// See [`BudgetPerformanceHistory`](crate::model::BudgetPerformanceHistory)
+/// See [`BudgetPerformanceHistory`](crate::model::BudgetPerformanceHistory).
 pub mod budget_performance_history {
 
-    /// A builder for [`BudgetPerformanceHistory`](crate::model::BudgetPerformanceHistory)
-    #[non_exhaustive]
+    /// A builder for [`BudgetPerformanceHistory`](crate::model::BudgetPerformanceHistory).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) budget_name: std::option::Option<std::string::String>,
@@ -3129,7 +3183,7 @@ pub mod budget_performance_history {
             self.budgeted_and_actual_amounts_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`BudgetPerformanceHistory`](crate::model::BudgetPerformanceHistory)
+        /// Consumes the builder and constructs a [`BudgetPerformanceHistory`](crate::model::BudgetPerformanceHistory).
         pub fn build(self) -> crate::model::BudgetPerformanceHistory {
             crate::model::BudgetPerformanceHistory {
                 budget_name: self.budget_name,
@@ -3143,7 +3197,7 @@ pub mod budget_performance_history {
     }
 }
 impl BudgetPerformanceHistory {
-    /// Creates a new builder-style object to manufacture [`BudgetPerformanceHistory`](crate::model::BudgetPerformanceHistory)
+    /// Creates a new builder-style object to manufacture [`BudgetPerformanceHistory`](crate::model::BudgetPerformanceHistory).
     pub fn builder() -> crate::model::budget_performance_history::Builder {
         crate::model::budget_performance_history::Builder::default()
     }
@@ -3154,10 +3208,13 @@ impl BudgetPerformanceHistory {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BudgetedAndActualAmounts {
     /// <p>The amount of cost or usage that you created the budget for.</p>
+    #[doc(hidden)]
     pub budgeted_amount: std::option::Option<crate::model::Spend>,
     /// <p>Your actual costs or usage for a budget period.</p>
+    #[doc(hidden)]
     pub actual_amount: std::option::Option<crate::model::Spend>,
     /// <p>The time period that's covered by this budget comparison.</p>
+    #[doc(hidden)]
     pub time_period: std::option::Option<crate::model::TimePeriod>,
 }
 impl BudgetedAndActualAmounts {
@@ -3183,11 +3240,10 @@ impl std::fmt::Debug for BudgetedAndActualAmounts {
         formatter.finish()
     }
 }
-/// See [`BudgetedAndActualAmounts`](crate::model::BudgetedAndActualAmounts)
+/// See [`BudgetedAndActualAmounts`](crate::model::BudgetedAndActualAmounts).
 pub mod budgeted_and_actual_amounts {
 
-    /// A builder for [`BudgetedAndActualAmounts`](crate::model::BudgetedAndActualAmounts)
-    #[non_exhaustive]
+    /// A builder for [`BudgetedAndActualAmounts`](crate::model::BudgetedAndActualAmounts).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) budgeted_amount: std::option::Option<crate::model::Spend>,
@@ -3234,7 +3290,7 @@ pub mod budgeted_and_actual_amounts {
             self.time_period = input;
             self
         }
-        /// Consumes the builder and constructs a [`BudgetedAndActualAmounts`](crate::model::BudgetedAndActualAmounts)
+        /// Consumes the builder and constructs a [`BudgetedAndActualAmounts`](crate::model::BudgetedAndActualAmounts).
         pub fn build(self) -> crate::model::BudgetedAndActualAmounts {
             crate::model::BudgetedAndActualAmounts {
                 budgeted_amount: self.budgeted_amount,
@@ -3245,7 +3301,7 @@ pub mod budgeted_and_actual_amounts {
     }
 }
 impl BudgetedAndActualAmounts {
-    /// Creates a new builder-style object to manufacture [`BudgetedAndActualAmounts`](crate::model::BudgetedAndActualAmounts)
+    /// Creates a new builder-style object to manufacture [`BudgetedAndActualAmounts`](crate::model::BudgetedAndActualAmounts).
     pub fn builder() -> crate::model::budgeted_and_actual_amounts::Builder {
         crate::model::budgeted_and_actual_amounts::Builder::default()
     }
@@ -3256,8 +3312,10 @@ impl BudgetedAndActualAmounts {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BudgetNotificationsForAccount {
     /// <p> A list of notifications.</p>
+    #[doc(hidden)]
     pub notifications: std::option::Option<std::vec::Vec<crate::model::Notification>>,
     /// <p> A string that represents the budget name. The ":" and "\" characters aren't allowed.</p>
+    #[doc(hidden)]
     pub budget_name: std::option::Option<std::string::String>,
 }
 impl BudgetNotificationsForAccount {
@@ -3278,11 +3336,10 @@ impl std::fmt::Debug for BudgetNotificationsForAccount {
         formatter.finish()
     }
 }
-/// See [`BudgetNotificationsForAccount`](crate::model::BudgetNotificationsForAccount)
+/// See [`BudgetNotificationsForAccount`](crate::model::BudgetNotificationsForAccount).
 pub mod budget_notifications_for_account {
 
-    /// A builder for [`BudgetNotificationsForAccount`](crate::model::BudgetNotificationsForAccount)
-    #[non_exhaustive]
+    /// A builder for [`BudgetNotificationsForAccount`](crate::model::BudgetNotificationsForAccount).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) notifications: std::option::Option<std::vec::Vec<crate::model::Notification>>,
@@ -3318,7 +3375,7 @@ pub mod budget_notifications_for_account {
             self.budget_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`BudgetNotificationsForAccount`](crate::model::BudgetNotificationsForAccount)
+        /// Consumes the builder and constructs a [`BudgetNotificationsForAccount`](crate::model::BudgetNotificationsForAccount).
         pub fn build(self) -> crate::model::BudgetNotificationsForAccount {
             crate::model::BudgetNotificationsForAccount {
                 notifications: self.notifications,
@@ -3328,7 +3385,7 @@ pub mod budget_notifications_for_account {
     }
 }
 impl BudgetNotificationsForAccount {
-    /// Creates a new builder-style object to manufacture [`BudgetNotificationsForAccount`](crate::model::BudgetNotificationsForAccount)
+    /// Creates a new builder-style object to manufacture [`BudgetNotificationsForAccount`](crate::model::BudgetNotificationsForAccount).
     pub fn builder() -> crate::model::budget_notifications_for_account::Builder {
         crate::model::budget_notifications_for_account::Builder::default()
     }
@@ -3339,12 +3396,16 @@ impl BudgetNotificationsForAccount {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActionHistory {
     /// <p> A generic time stamp. In Java, it's transformed to a <code>Date</code> object.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of action at the time of the event. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ActionStatus>,
     /// <p>This distinguishes between whether the events are triggered by the user or are generated by the system. </p>
+    #[doc(hidden)]
     pub event_type: std::option::Option<crate::model::EventType>,
     /// <p>The description of the details for the event. </p>
+    #[doc(hidden)]
     pub action_history_details: std::option::Option<crate::model::ActionHistoryDetails>,
 }
 impl ActionHistory {
@@ -3377,11 +3438,10 @@ impl std::fmt::Debug for ActionHistory {
         formatter.finish()
     }
 }
-/// See [`ActionHistory`](crate::model::ActionHistory)
+/// See [`ActionHistory`](crate::model::ActionHistory).
 pub mod action_history {
 
-    /// A builder for [`ActionHistory`](crate::model::ActionHistory)
-    #[non_exhaustive]
+    /// A builder for [`ActionHistory`](crate::model::ActionHistory).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timestamp: std::option::Option<aws_smithy_types::DateTime>,
@@ -3442,7 +3502,7 @@ pub mod action_history {
             self.action_history_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActionHistory`](crate::model::ActionHistory)
+        /// Consumes the builder and constructs a [`ActionHistory`](crate::model::ActionHistory).
         pub fn build(self) -> crate::model::ActionHistory {
             crate::model::ActionHistory {
                 timestamp: self.timestamp,
@@ -3454,7 +3514,7 @@ pub mod action_history {
     }
 }
 impl ActionHistory {
-    /// Creates a new builder-style object to manufacture [`ActionHistory`](crate::model::ActionHistory)
+    /// Creates a new builder-style object to manufacture [`ActionHistory`](crate::model::ActionHistory).
     pub fn builder() -> crate::model::action_history::Builder {
         crate::model::action_history::Builder::default()
     }
@@ -3465,8 +3525,10 @@ impl ActionHistory {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActionHistoryDetails {
     /// <p> A generic string.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The budget action resource. </p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::Action>,
 }
 impl ActionHistoryDetails {
@@ -3487,11 +3549,10 @@ impl std::fmt::Debug for ActionHistoryDetails {
         formatter.finish()
     }
 }
-/// See [`ActionHistoryDetails`](crate::model::ActionHistoryDetails)
+/// See [`ActionHistoryDetails`](crate::model::ActionHistoryDetails).
 pub mod action_history_details {
 
-    /// A builder for [`ActionHistoryDetails`](crate::model::ActionHistoryDetails)
-    #[non_exhaustive]
+    /// A builder for [`ActionHistoryDetails`](crate::model::ActionHistoryDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3518,7 +3579,7 @@ pub mod action_history_details {
             self.action = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActionHistoryDetails`](crate::model::ActionHistoryDetails)
+        /// Consumes the builder and constructs a [`ActionHistoryDetails`](crate::model::ActionHistoryDetails).
         pub fn build(self) -> crate::model::ActionHistoryDetails {
             crate::model::ActionHistoryDetails {
                 message: self.message,
@@ -3528,7 +3589,7 @@ pub mod action_history_details {
     }
 }
 impl ActionHistoryDetails {
-    /// Creates a new builder-style object to manufacture [`ActionHistoryDetails`](crate::model::ActionHistoryDetails)
+    /// Creates a new builder-style object to manufacture [`ActionHistoryDetails`](crate::model::ActionHistoryDetails).
     pub fn builder() -> crate::model::action_history_details::Builder {
         crate::model::action_history_details::Builder::default()
     }
@@ -3612,8 +3673,10 @@ impl AsRef<str> for EventType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotificationWithSubscribers {
     /// <p>The notification that's associated with a budget.</p>
+    #[doc(hidden)]
     pub notification: std::option::Option<crate::model::Notification>,
     /// <p>A list of subscribers who are subscribed to this notification.</p>
+    #[doc(hidden)]
     pub subscribers: std::option::Option<std::vec::Vec<crate::model::Subscriber>>,
 }
 impl NotificationWithSubscribers {
@@ -3634,11 +3697,10 @@ impl std::fmt::Debug for NotificationWithSubscribers {
         formatter.finish()
     }
 }
-/// See [`NotificationWithSubscribers`](crate::model::NotificationWithSubscribers)
+/// See [`NotificationWithSubscribers`](crate::model::NotificationWithSubscribers).
 pub mod notification_with_subscribers {
 
-    /// A builder for [`NotificationWithSubscribers`](crate::model::NotificationWithSubscribers)
-    #[non_exhaustive]
+    /// A builder for [`NotificationWithSubscribers`](crate::model::NotificationWithSubscribers).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) notification: std::option::Option<crate::model::Notification>,
@@ -3677,7 +3739,7 @@ pub mod notification_with_subscribers {
             self.subscribers = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotificationWithSubscribers`](crate::model::NotificationWithSubscribers)
+        /// Consumes the builder and constructs a [`NotificationWithSubscribers`](crate::model::NotificationWithSubscribers).
         pub fn build(self) -> crate::model::NotificationWithSubscribers {
             crate::model::NotificationWithSubscribers {
                 notification: self.notification,
@@ -3687,7 +3749,7 @@ pub mod notification_with_subscribers {
     }
 }
 impl NotificationWithSubscribers {
-    /// Creates a new builder-style object to manufacture [`NotificationWithSubscribers`](crate::model::NotificationWithSubscribers)
+    /// Creates a new builder-style object to manufacture [`NotificationWithSubscribers`](crate::model::NotificationWithSubscribers).
     pub fn builder() -> crate::model::notification_with_subscribers::Builder {
         crate::model::notification_with_subscribers::Builder::default()
     }

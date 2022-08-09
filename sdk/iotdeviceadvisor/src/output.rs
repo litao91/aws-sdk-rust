@@ -4,16 +4,22 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSuiteDefinitionOutput {
     /// <p>Suite definition ID of the updated test suite.</p>
+    #[doc(hidden)]
     pub suite_definition_id: std::option::Option<std::string::String>,
     /// <p>Amazon Resource Name (ARN) of the updated test suite.</p>
+    #[doc(hidden)]
     pub suite_definition_arn: std::option::Option<std::string::String>,
     /// <p>Suite definition name of the updated test suite.</p>
+    #[doc(hidden)]
     pub suite_definition_name: std::option::Option<std::string::String>,
     /// <p>Suite definition version of the updated test suite.</p>
+    #[doc(hidden)]
     pub suite_definition_version: std::option::Option<std::string::String>,
     /// <p>Timestamp of when the test suite was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Timestamp of when the test suite was updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl UpdateSuiteDefinitionOutput {
@@ -54,11 +60,10 @@ impl std::fmt::Debug for UpdateSuiteDefinitionOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSuiteDefinitionOutput`](crate::output::UpdateSuiteDefinitionOutput)
+/// See [`UpdateSuiteDefinitionOutput`](crate::output::UpdateSuiteDefinitionOutput).
 pub mod update_suite_definition_output {
 
-    /// A builder for [`UpdateSuiteDefinitionOutput`](crate::output::UpdateSuiteDefinitionOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSuiteDefinitionOutput`](crate::output::UpdateSuiteDefinitionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suite_definition_id: std::option::Option<std::string::String>,
@@ -147,7 +152,7 @@ pub mod update_suite_definition_output {
             self.last_updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSuiteDefinitionOutput`](crate::output::UpdateSuiteDefinitionOutput)
+        /// Consumes the builder and constructs a [`UpdateSuiteDefinitionOutput`](crate::output::UpdateSuiteDefinitionOutput).
         pub fn build(self) -> crate::output::UpdateSuiteDefinitionOutput {
             crate::output::UpdateSuiteDefinitionOutput {
                 suite_definition_id: self.suite_definition_id,
@@ -161,7 +166,7 @@ pub mod update_suite_definition_output {
     }
 }
 impl UpdateSuiteDefinitionOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSuiteDefinitionOutput`](crate::output::UpdateSuiteDefinitionOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSuiteDefinitionOutput`](crate::output::UpdateSuiteDefinitionOutput).
     pub fn builder() -> crate::output::update_suite_definition_output::Builder {
         crate::output::update_suite_definition_output::Builder::default()
     }
@@ -177,22 +182,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -208,22 +212,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -239,22 +242,21 @@ impl std::fmt::Debug for StopSuiteRunOutput {
         formatter.finish()
     }
 }
-/// See [`StopSuiteRunOutput`](crate::output::StopSuiteRunOutput)
+/// See [`StopSuiteRunOutput`](crate::output::StopSuiteRunOutput).
 pub mod stop_suite_run_output {
 
-    /// A builder for [`StopSuiteRunOutput`](crate::output::StopSuiteRunOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopSuiteRunOutput`](crate::output::StopSuiteRunOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`StopSuiteRunOutput`](crate::output::StopSuiteRunOutput)
+        /// Consumes the builder and constructs a [`StopSuiteRunOutput`](crate::output::StopSuiteRunOutput).
         pub fn build(self) -> crate::output::StopSuiteRunOutput {
             crate::output::StopSuiteRunOutput {}
         }
     }
 }
 impl StopSuiteRunOutput {
-    /// Creates a new builder-style object to manufacture [`StopSuiteRunOutput`](crate::output::StopSuiteRunOutput)
+    /// Creates a new builder-style object to manufacture [`StopSuiteRunOutput`](crate::output::StopSuiteRunOutput).
     pub fn builder() -> crate::output::stop_suite_run_output::Builder {
         crate::output::stop_suite_run_output::Builder::default()
     }
@@ -265,10 +267,13 @@ impl StopSuiteRunOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartSuiteRunOutput {
     /// <p>Suite Run ID of the started suite run.</p>
+    #[doc(hidden)]
     pub suite_run_id: std::option::Option<std::string::String>,
     /// <p>Amazon Resource Name (ARN) of the started suite run.</p>
+    #[doc(hidden)]
     pub suite_run_arn: std::option::Option<std::string::String>,
     /// <p>Starts a Device Advisor test suite run based on suite create time.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl StartSuiteRunOutput {
@@ -294,11 +299,10 @@ impl std::fmt::Debug for StartSuiteRunOutput {
         formatter.finish()
     }
 }
-/// See [`StartSuiteRunOutput`](crate::output::StartSuiteRunOutput)
+/// See [`StartSuiteRunOutput`](crate::output::StartSuiteRunOutput).
 pub mod start_suite_run_output {
 
-    /// A builder for [`StartSuiteRunOutput`](crate::output::StartSuiteRunOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartSuiteRunOutput`](crate::output::StartSuiteRunOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suite_run_id: std::option::Option<std::string::String>,
@@ -342,7 +346,7 @@ pub mod start_suite_run_output {
             self.created_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartSuiteRunOutput`](crate::output::StartSuiteRunOutput)
+        /// Consumes the builder and constructs a [`StartSuiteRunOutput`](crate::output::StartSuiteRunOutput).
         pub fn build(self) -> crate::output::StartSuiteRunOutput {
             crate::output::StartSuiteRunOutput {
                 suite_run_id: self.suite_run_id,
@@ -353,7 +357,7 @@ pub mod start_suite_run_output {
     }
 }
 impl StartSuiteRunOutput {
-    /// Creates a new builder-style object to manufacture [`StartSuiteRunOutput`](crate::output::StartSuiteRunOutput)
+    /// Creates a new builder-style object to manufacture [`StartSuiteRunOutput`](crate::output::StartSuiteRunOutput).
     pub fn builder() -> crate::output::start_suite_run_output::Builder {
         crate::output::start_suite_run_output::Builder::default()
     }
@@ -364,6 +368,7 @@ impl StartSuiteRunOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tags attached to the IoT Device Advisor resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -383,11 +388,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -420,14 +424,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -438,8 +442,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSuiteRunsOutput {
     /// <p>An array of objects that provide summaries of information about the suite runs in the list.</p>
+    #[doc(hidden)]
     pub suite_runs_list: std::option::Option<std::vec::Vec<crate::model::SuiteRunInformation>>,
     /// <p>A token to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListSuiteRunsOutput {
@@ -460,11 +466,10 @@ impl std::fmt::Debug for ListSuiteRunsOutput {
         formatter.finish()
     }
 }
-/// See [`ListSuiteRunsOutput`](crate::output::ListSuiteRunsOutput)
+/// See [`ListSuiteRunsOutput`](crate::output::ListSuiteRunsOutput).
 pub mod list_suite_runs_output {
 
-    /// A builder for [`ListSuiteRunsOutput`](crate::output::ListSuiteRunsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSuiteRunsOutput`](crate::output::ListSuiteRunsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suite_runs_list:
@@ -501,7 +506,7 @@ pub mod list_suite_runs_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSuiteRunsOutput`](crate::output::ListSuiteRunsOutput)
+        /// Consumes the builder and constructs a [`ListSuiteRunsOutput`](crate::output::ListSuiteRunsOutput).
         pub fn build(self) -> crate::output::ListSuiteRunsOutput {
             crate::output::ListSuiteRunsOutput {
                 suite_runs_list: self.suite_runs_list,
@@ -511,7 +516,7 @@ pub mod list_suite_runs_output {
     }
 }
 impl ListSuiteRunsOutput {
-    /// Creates a new builder-style object to manufacture [`ListSuiteRunsOutput`](crate::output::ListSuiteRunsOutput)
+    /// Creates a new builder-style object to manufacture [`ListSuiteRunsOutput`](crate::output::ListSuiteRunsOutput).
     pub fn builder() -> crate::output::list_suite_runs_output::Builder {
         crate::output::list_suite_runs_output::Builder::default()
     }
@@ -522,9 +527,11 @@ impl ListSuiteRunsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSuiteDefinitionsOutput {
     /// <p>An array of objects that provide summaries of information about the suite definitions in the list.</p>
+    #[doc(hidden)]
     pub suite_definition_information_list:
         std::option::Option<std::vec::Vec<crate::model::SuiteDefinitionInformation>>,
     /// <p>A token used to get the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListSuiteDefinitionsOutput {
@@ -550,11 +557,10 @@ impl std::fmt::Debug for ListSuiteDefinitionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListSuiteDefinitionsOutput`](crate::output::ListSuiteDefinitionsOutput)
+/// See [`ListSuiteDefinitionsOutput`](crate::output::ListSuiteDefinitionsOutput).
 pub mod list_suite_definitions_output {
 
-    /// A builder for [`ListSuiteDefinitionsOutput`](crate::output::ListSuiteDefinitionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSuiteDefinitionsOutput`](crate::output::ListSuiteDefinitionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suite_definition_information_list:
@@ -594,7 +600,7 @@ pub mod list_suite_definitions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSuiteDefinitionsOutput`](crate::output::ListSuiteDefinitionsOutput)
+        /// Consumes the builder and constructs a [`ListSuiteDefinitionsOutput`](crate::output::ListSuiteDefinitionsOutput).
         pub fn build(self) -> crate::output::ListSuiteDefinitionsOutput {
             crate::output::ListSuiteDefinitionsOutput {
                 suite_definition_information_list: self.suite_definition_information_list,
@@ -604,7 +610,7 @@ pub mod list_suite_definitions_output {
     }
 }
 impl ListSuiteDefinitionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListSuiteDefinitionsOutput`](crate::output::ListSuiteDefinitionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListSuiteDefinitionsOutput`](crate::output::ListSuiteDefinitionsOutput).
     pub fn builder() -> crate::output::list_suite_definitions_output::Builder {
         crate::output::list_suite_definitions_output::Builder::default()
     }
@@ -615,6 +621,7 @@ impl ListSuiteDefinitionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSuiteRunReportOutput {
     /// <p>Download URL of the qualification report.</p>
+    #[doc(hidden)]
     pub qualification_report_download_url: std::option::Option<std::string::String>,
 }
 impl GetSuiteRunReportOutput {
@@ -633,11 +640,10 @@ impl std::fmt::Debug for GetSuiteRunReportOutput {
         formatter.finish()
     }
 }
-/// See [`GetSuiteRunReportOutput`](crate::output::GetSuiteRunReportOutput)
+/// See [`GetSuiteRunReportOutput`](crate::output::GetSuiteRunReportOutput).
 pub mod get_suite_run_report_output {
 
-    /// A builder for [`GetSuiteRunReportOutput`](crate::output::GetSuiteRunReportOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSuiteRunReportOutput`](crate::output::GetSuiteRunReportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) qualification_report_download_url: std::option::Option<std::string::String>,
@@ -659,7 +665,7 @@ pub mod get_suite_run_report_output {
             self.qualification_report_download_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSuiteRunReportOutput`](crate::output::GetSuiteRunReportOutput)
+        /// Consumes the builder and constructs a [`GetSuiteRunReportOutput`](crate::output::GetSuiteRunReportOutput).
         pub fn build(self) -> crate::output::GetSuiteRunReportOutput {
             crate::output::GetSuiteRunReportOutput {
                 qualification_report_download_url: self.qualification_report_download_url,
@@ -668,7 +674,7 @@ pub mod get_suite_run_report_output {
     }
 }
 impl GetSuiteRunReportOutput {
-    /// Creates a new builder-style object to manufacture [`GetSuiteRunReportOutput`](crate::output::GetSuiteRunReportOutput)
+    /// Creates a new builder-style object to manufacture [`GetSuiteRunReportOutput`](crate::output::GetSuiteRunReportOutput).
     pub fn builder() -> crate::output::get_suite_run_report_output::Builder {
         crate::output::get_suite_run_report_output::Builder::default()
     }
@@ -679,26 +685,37 @@ impl GetSuiteRunReportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSuiteRunOutput {
     /// <p>Suite definition ID for the test suite run.</p>
+    #[doc(hidden)]
     pub suite_definition_id: std::option::Option<std::string::String>,
     /// <p>Suite definition version for the test suite run.</p>
+    #[doc(hidden)]
     pub suite_definition_version: std::option::Option<std::string::String>,
     /// <p>Suite run ID for the test suite run.</p>
+    #[doc(hidden)]
     pub suite_run_id: std::option::Option<std::string::String>,
     /// <p>The ARN of the suite run.</p>
+    #[doc(hidden)]
     pub suite_run_arn: std::option::Option<std::string::String>,
     /// <p>Suite run configuration for the test suite run.</p>
+    #[doc(hidden)]
     pub suite_run_configuration: std::option::Option<crate::model::SuiteRunConfiguration>,
     /// <p>Test results for the test suite run.</p>
+    #[doc(hidden)]
     pub test_result: std::option::Option<crate::model::TestResult>,
     /// <p>Date (in Unix epoch time) when the test suite run started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Date (in Unix epoch time) when the test suite run ended.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Status for the test suite run.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::SuiteRunStatus>,
     /// <p>Error reason for any test suite run failure.</p>
+    #[doc(hidden)]
     pub error_reason: std::option::Option<std::string::String>,
     /// <p>The tags attached to the suite run.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -770,11 +787,10 @@ impl std::fmt::Debug for GetSuiteRunOutput {
         formatter.finish()
     }
 }
-/// See [`GetSuiteRunOutput`](crate::output::GetSuiteRunOutput)
+/// See [`GetSuiteRunOutput`](crate::output::GetSuiteRunOutput).
 pub mod get_suite_run_output {
 
-    /// A builder for [`GetSuiteRunOutput`](crate::output::GetSuiteRunOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSuiteRunOutput`](crate::output::GetSuiteRunOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suite_definition_id: std::option::Option<std::string::String>,
@@ -945,7 +961,7 @@ pub mod get_suite_run_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSuiteRunOutput`](crate::output::GetSuiteRunOutput)
+        /// Consumes the builder and constructs a [`GetSuiteRunOutput`](crate::output::GetSuiteRunOutput).
         pub fn build(self) -> crate::output::GetSuiteRunOutput {
             crate::output::GetSuiteRunOutput {
                 suite_definition_id: self.suite_definition_id,
@@ -964,7 +980,7 @@ pub mod get_suite_run_output {
     }
 }
 impl GetSuiteRunOutput {
-    /// Creates a new builder-style object to manufacture [`GetSuiteRunOutput`](crate::output::GetSuiteRunOutput)
+    /// Creates a new builder-style object to manufacture [`GetSuiteRunOutput`](crate::output::GetSuiteRunOutput).
     pub fn builder() -> crate::output::get_suite_run_output::Builder {
         crate::output::get_suite_run_output::Builder::default()
     }
@@ -975,21 +991,29 @@ impl GetSuiteRunOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSuiteDefinitionOutput {
     /// <p>Suite definition ID of the suite definition.</p>
+    #[doc(hidden)]
     pub suite_definition_id: std::option::Option<std::string::String>,
     /// <p>The ARN of the suite definition.</p>
+    #[doc(hidden)]
     pub suite_definition_arn: std::option::Option<std::string::String>,
     /// <p>Suite definition version of the suite definition.</p>
+    #[doc(hidden)]
     pub suite_definition_version: std::option::Option<std::string::String>,
     /// <p>Latest suite definition version of the suite definition.</p>
+    #[doc(hidden)]
     pub latest_version: std::option::Option<std::string::String>,
     /// <p>Suite configuration of the suite definition.</p>
+    #[doc(hidden)]
     pub suite_definition_configuration:
         std::option::Option<crate::model::SuiteDefinitionConfiguration>,
     /// <p>Date (in Unix epoch time) when the suite definition was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Date (in Unix epoch time) when the suite definition was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Tags attached to the suite definition.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1049,11 +1073,10 @@ impl std::fmt::Debug for GetSuiteDefinitionOutput {
         formatter.finish()
     }
 }
-/// See [`GetSuiteDefinitionOutput`](crate::output::GetSuiteDefinitionOutput)
+/// See [`GetSuiteDefinitionOutput`](crate::output::GetSuiteDefinitionOutput).
 pub mod get_suite_definition_output {
 
-    /// A builder for [`GetSuiteDefinitionOutput`](crate::output::GetSuiteDefinitionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSuiteDefinitionOutput`](crate::output::GetSuiteDefinitionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suite_definition_id: std::option::Option<std::string::String>,
@@ -1188,7 +1211,7 @@ pub mod get_suite_definition_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSuiteDefinitionOutput`](crate::output::GetSuiteDefinitionOutput)
+        /// Consumes the builder and constructs a [`GetSuiteDefinitionOutput`](crate::output::GetSuiteDefinitionOutput).
         pub fn build(self) -> crate::output::GetSuiteDefinitionOutput {
             crate::output::GetSuiteDefinitionOutput {
                 suite_definition_id: self.suite_definition_id,
@@ -1204,7 +1227,7 @@ pub mod get_suite_definition_output {
     }
 }
 impl GetSuiteDefinitionOutput {
-    /// Creates a new builder-style object to manufacture [`GetSuiteDefinitionOutput`](crate::output::GetSuiteDefinitionOutput)
+    /// Creates a new builder-style object to manufacture [`GetSuiteDefinitionOutput`](crate::output::GetSuiteDefinitionOutput).
     pub fn builder() -> crate::output::get_suite_definition_output::Builder {
         crate::output::get_suite_definition_output::Builder::default()
     }
@@ -1215,6 +1238,7 @@ impl GetSuiteDefinitionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetEndpointOutput {
     /// <p>The response of an Device Advisor endpoint.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
 }
 impl GetEndpointOutput {
@@ -1230,11 +1254,10 @@ impl std::fmt::Debug for GetEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`GetEndpointOutput`](crate::output::GetEndpointOutput)
+/// See [`GetEndpointOutput`](crate::output::GetEndpointOutput).
 pub mod get_endpoint_output {
 
-    /// A builder for [`GetEndpointOutput`](crate::output::GetEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetEndpointOutput`](crate::output::GetEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint: std::option::Option<std::string::String>,
@@ -1250,7 +1273,7 @@ pub mod get_endpoint_output {
             self.endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetEndpointOutput`](crate::output::GetEndpointOutput)
+        /// Consumes the builder and constructs a [`GetEndpointOutput`](crate::output::GetEndpointOutput).
         pub fn build(self) -> crate::output::GetEndpointOutput {
             crate::output::GetEndpointOutput {
                 endpoint: self.endpoint,
@@ -1259,7 +1282,7 @@ pub mod get_endpoint_output {
     }
 }
 impl GetEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`GetEndpointOutput`](crate::output::GetEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`GetEndpointOutput`](crate::output::GetEndpointOutput).
     pub fn builder() -> crate::output::get_endpoint_output::Builder {
         crate::output::get_endpoint_output::Builder::default()
     }
@@ -1275,22 +1298,21 @@ impl std::fmt::Debug for DeleteSuiteDefinitionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSuiteDefinitionOutput`](crate::output::DeleteSuiteDefinitionOutput)
+/// See [`DeleteSuiteDefinitionOutput`](crate::output::DeleteSuiteDefinitionOutput).
 pub mod delete_suite_definition_output {
 
-    /// A builder for [`DeleteSuiteDefinitionOutput`](crate::output::DeleteSuiteDefinitionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSuiteDefinitionOutput`](crate::output::DeleteSuiteDefinitionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteSuiteDefinitionOutput`](crate::output::DeleteSuiteDefinitionOutput)
+        /// Consumes the builder and constructs a [`DeleteSuiteDefinitionOutput`](crate::output::DeleteSuiteDefinitionOutput).
         pub fn build(self) -> crate::output::DeleteSuiteDefinitionOutput {
             crate::output::DeleteSuiteDefinitionOutput {}
         }
     }
 }
 impl DeleteSuiteDefinitionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSuiteDefinitionOutput`](crate::output::DeleteSuiteDefinitionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSuiteDefinitionOutput`](crate::output::DeleteSuiteDefinitionOutput).
     pub fn builder() -> crate::output::delete_suite_definition_output::Builder {
         crate::output::delete_suite_definition_output::Builder::default()
     }
@@ -1301,12 +1323,16 @@ impl DeleteSuiteDefinitionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSuiteDefinitionOutput {
     /// <p>Creates a Device Advisor test suite with suite UUID.</p>
+    #[doc(hidden)]
     pub suite_definition_id: std::option::Option<std::string::String>,
     /// <p>Creates a Device Advisor test suite with Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub suite_definition_arn: std::option::Option<std::string::String>,
     /// <p>Creates a Device Advisor test suite with suite definition name.</p>
+    #[doc(hidden)]
     pub suite_definition_name: std::option::Option<std::string::String>,
     /// <p>Creates a Device Advisor test suite with TimeStamp of when it was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CreateSuiteDefinitionOutput {
@@ -1337,11 +1363,10 @@ impl std::fmt::Debug for CreateSuiteDefinitionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSuiteDefinitionOutput`](crate::output::CreateSuiteDefinitionOutput)
+/// See [`CreateSuiteDefinitionOutput`](crate::output::CreateSuiteDefinitionOutput).
 pub mod create_suite_definition_output {
 
-    /// A builder for [`CreateSuiteDefinitionOutput`](crate::output::CreateSuiteDefinitionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSuiteDefinitionOutput`](crate::output::CreateSuiteDefinitionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suite_definition_id: std::option::Option<std::string::String>,
@@ -1402,7 +1427,7 @@ pub mod create_suite_definition_output {
             self.created_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSuiteDefinitionOutput`](crate::output::CreateSuiteDefinitionOutput)
+        /// Consumes the builder and constructs a [`CreateSuiteDefinitionOutput`](crate::output::CreateSuiteDefinitionOutput).
         pub fn build(self) -> crate::output::CreateSuiteDefinitionOutput {
             crate::output::CreateSuiteDefinitionOutput {
                 suite_definition_id: self.suite_definition_id,
@@ -1414,7 +1439,7 @@ pub mod create_suite_definition_output {
     }
 }
 impl CreateSuiteDefinitionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSuiteDefinitionOutput`](crate::output::CreateSuiteDefinitionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSuiteDefinitionOutput`](crate::output::CreateSuiteDefinitionOutput).
     pub fn builder() -> crate::output::create_suite_definition_output::Builder {
         crate::output::create_suite_definition_output::Builder::default()
     }

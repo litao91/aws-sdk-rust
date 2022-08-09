@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CertificateOptions {
     /// <p>You can opt out of certificate transparency logging by specifying the <code>DISABLED</code> option. Opt in by specifying <code>ENABLED</code>. </p>
+    #[doc(hidden)]
     pub certificate_transparency_logging_preference:
         std::option::Option<crate::model::CertificateTransparencyLoggingPreference>,
 }
@@ -26,11 +27,10 @@ impl std::fmt::Debug for CertificateOptions {
         formatter.finish()
     }
 }
-/// See [`CertificateOptions`](crate::model::CertificateOptions)
+/// See [`CertificateOptions`](crate::model::CertificateOptions).
 pub mod certificate_options {
 
-    /// A builder for [`CertificateOptions`](crate::model::CertificateOptions)
-    #[non_exhaustive]
+    /// A builder for [`CertificateOptions`](crate::model::CertificateOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_transparency_logging_preference:
@@ -53,7 +53,7 @@ pub mod certificate_options {
             self.certificate_transparency_logging_preference = input;
             self
         }
-        /// Consumes the builder and constructs a [`CertificateOptions`](crate::model::CertificateOptions)
+        /// Consumes the builder and constructs a [`CertificateOptions`](crate::model::CertificateOptions).
         pub fn build(self) -> crate::model::CertificateOptions {
             crate::model::CertificateOptions {
                 certificate_transparency_logging_preference: self
@@ -63,7 +63,7 @@ pub mod certificate_options {
     }
 }
 impl CertificateOptions {
-    /// Creates a new builder-style object to manufacture [`CertificateOptions`](crate::model::CertificateOptions)
+    /// Creates a new builder-style object to manufacture [`CertificateOptions`](crate::model::CertificateOptions).
     pub fn builder() -> crate::model::certificate_options::Builder {
         crate::model::certificate_options::Builder::default()
     }
@@ -129,8 +129,10 @@ impl AsRef<str> for CertificateTransparencyLoggingPreference {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key of the tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -151,11 +153,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -182,7 +183,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -192,7 +193,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -203,6 +204,7 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainValidationOption {
     /// <p>A fully qualified domain name (FQDN) in the certificate request.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The domain name that you want ACM to use to send you validation emails. This domain name is the suffix of the email addresses that you want ACM to use. This must be the same as the <code>DomainName</code> value or a superdomain of the <code>DomainName</code> value. For example, if you request a certificate for <code>testing.example.com</code>, you can specify <code>example.com</code> for this value. In that case, ACM sends domain validation emails to the following five addresses:</p>
     /// <ul>
@@ -212,6 +214,7 @@ pub struct DomainValidationOption {
     /// <li> <p>postmaster@example.com</p> </li>
     /// <li> <p>webmaster@example.com</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub validation_domain: std::option::Option<std::string::String>,
 }
 impl DomainValidationOption {
@@ -239,11 +242,10 @@ impl std::fmt::Debug for DomainValidationOption {
         formatter.finish()
     }
 }
-/// See [`DomainValidationOption`](crate::model::DomainValidationOption)
+/// See [`DomainValidationOption`](crate::model::DomainValidationOption).
 pub mod domain_validation_option {
 
-    /// A builder for [`DomainValidationOption`](crate::model::DomainValidationOption)
-    #[non_exhaustive]
+    /// A builder for [`DomainValidationOption`](crate::model::DomainValidationOption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -287,7 +289,7 @@ pub mod domain_validation_option {
             self.validation_domain = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainValidationOption`](crate::model::DomainValidationOption)
+        /// Consumes the builder and constructs a [`DomainValidationOption`](crate::model::DomainValidationOption).
         pub fn build(self) -> crate::model::DomainValidationOption {
             crate::model::DomainValidationOption {
                 domain_name: self.domain_name,
@@ -297,7 +299,7 @@ pub mod domain_validation_option {
     }
 }
 impl DomainValidationOption {
-    /// Creates a new builder-style object to manufacture [`DomainValidationOption`](crate::model::DomainValidationOption)
+    /// Creates a new builder-style object to manufacture [`DomainValidationOption`](crate::model::DomainValidationOption).
     pub fn builder() -> crate::model::domain_validation_option::Builder {
         crate::model::domain_validation_option::Builder::default()
     }
@@ -363,6 +365,7 @@ impl AsRef<str> for ValidationMethod {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExpiryEventsConfiguration {
     /// <p>Specifies the number of days prior to certificate expiration when ACM starts generating <code>EventBridge</code> events. ACM sends one event per day per certificate until the certificate expires. By default, accounts receive events starting 45 days before certificate expiration.</p>
+    #[doc(hidden)]
     pub days_before_expiry: std::option::Option<i32>,
 }
 impl ExpiryEventsConfiguration {
@@ -378,11 +381,10 @@ impl std::fmt::Debug for ExpiryEventsConfiguration {
         formatter.finish()
     }
 }
-/// See [`ExpiryEventsConfiguration`](crate::model::ExpiryEventsConfiguration)
+/// See [`ExpiryEventsConfiguration`](crate::model::ExpiryEventsConfiguration).
 pub mod expiry_events_configuration {
 
-    /// A builder for [`ExpiryEventsConfiguration`](crate::model::ExpiryEventsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ExpiryEventsConfiguration`](crate::model::ExpiryEventsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) days_before_expiry: std::option::Option<i32>,
@@ -398,7 +400,7 @@ pub mod expiry_events_configuration {
             self.days_before_expiry = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExpiryEventsConfiguration`](crate::model::ExpiryEventsConfiguration)
+        /// Consumes the builder and constructs a [`ExpiryEventsConfiguration`](crate::model::ExpiryEventsConfiguration).
         pub fn build(self) -> crate::model::ExpiryEventsConfiguration {
             crate::model::ExpiryEventsConfiguration {
                 days_before_expiry: self.days_before_expiry,
@@ -407,7 +409,7 @@ pub mod expiry_events_configuration {
     }
 }
 impl ExpiryEventsConfiguration {
-    /// Creates a new builder-style object to manufacture [`ExpiryEventsConfiguration`](crate::model::ExpiryEventsConfiguration)
+    /// Creates a new builder-style object to manufacture [`ExpiryEventsConfiguration`](crate::model::ExpiryEventsConfiguration).
     pub fn builder() -> crate::model::expiry_events_configuration::Builder {
         crate::model::expiry_events_configuration::Builder::default()
     }
@@ -420,8 +422,10 @@ pub struct CertificateSummary {
     /// <p>Amazon Resource Name (ARN) of the certificate. This is of the form:</p>
     /// <p> <code>arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012</code> </p>
     /// <p>For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a>.</p>
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// <p>Fully qualified domain name (FQDN), such as www.example.com or example.com, for the certificate.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
 }
 impl CertificateSummary {
@@ -444,11 +448,10 @@ impl std::fmt::Debug for CertificateSummary {
         formatter.finish()
     }
 }
-/// See [`CertificateSummary`](crate::model::CertificateSummary)
+/// See [`CertificateSummary`](crate::model::CertificateSummary).
 pub mod certificate_summary {
 
-    /// A builder for [`CertificateSummary`](crate::model::CertificateSummary)
-    #[non_exhaustive]
+    /// A builder for [`CertificateSummary`](crate::model::CertificateSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -482,7 +485,7 @@ pub mod certificate_summary {
             self.domain_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CertificateSummary`](crate::model::CertificateSummary)
+        /// Consumes the builder and constructs a [`CertificateSummary`](crate::model::CertificateSummary).
         pub fn build(self) -> crate::model::CertificateSummary {
             crate::model::CertificateSummary {
                 certificate_arn: self.certificate_arn,
@@ -492,7 +495,7 @@ pub mod certificate_summary {
     }
 }
 impl CertificateSummary {
-    /// Creates a new builder-style object to manufacture [`CertificateSummary`](crate::model::CertificateSummary)
+    /// Creates a new builder-style object to manufacture [`CertificateSummary`](crate::model::CertificateSummary).
     pub fn builder() -> crate::model::certificate_summary::Builder {
         crate::model::certificate_summary::Builder::default()
     }
@@ -503,11 +506,14 @@ impl CertificateSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filters {
     /// <p>Specify one or more <code>ExtendedKeyUsage</code> extension values.</p>
+    #[doc(hidden)]
     pub extended_key_usage: std::option::Option<std::vec::Vec<crate::model::ExtendedKeyUsageName>>,
     /// <p>Specify one or more <code>KeyUsage</code> extension values.</p>
+    #[doc(hidden)]
     pub key_usage: std::option::Option<std::vec::Vec<crate::model::KeyUsageName>>,
     /// <p>Specify one or more algorithms that can be used to generate key pairs.</p>
     /// <p>Default filtering returns only <code>RSA_1024</code> and <code>RSA_2048</code> certificates that have at least one domain. To return other certificate types, provide the desired type signatures in a comma-separated list. For example, <code>"keyTypes": ["RSA_2048,RSA_4096"]</code> returns both <code>RSA_2048</code> and <code>RSA_4096</code> certificates.</p>
+    #[doc(hidden)]
     pub key_types: std::option::Option<std::vec::Vec<crate::model::KeyAlgorithm>>,
 }
 impl Filters {
@@ -534,11 +540,10 @@ impl std::fmt::Debug for Filters {
         formatter.finish()
     }
 }
-/// See [`Filters`](crate::model::Filters)
+/// See [`Filters`](crate::model::Filters).
 pub mod filters {
 
-    /// A builder for [`Filters`](crate::model::Filters)
-    #[non_exhaustive]
+    /// A builder for [`Filters`](crate::model::Filters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) extended_key_usage:
@@ -606,7 +611,7 @@ pub mod filters {
             self.key_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filters`](crate::model::Filters)
+        /// Consumes the builder and constructs a [`Filters`](crate::model::Filters).
         pub fn build(self) -> crate::model::Filters {
             crate::model::Filters {
                 extended_key_usage: self.extended_key_usage,
@@ -617,7 +622,7 @@ pub mod filters {
     }
 }
 impl Filters {
-    /// Creates a new builder-style object to manufacture [`Filters`](crate::model::Filters)
+    /// Creates a new builder-style object to manufacture [`Filters`](crate::model::Filters).
     pub fn builder() -> crate::model::filters::Builder {
         crate::model::filters::Builder::default()
     }
@@ -1005,58 +1010,84 @@ impl AsRef<str> for CertificateStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CertificateDetail {
     /// <p>The Amazon Resource Name (ARN) of the certificate. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// <p>The fully qualified domain name for the certificate, such as www.example.com or example.com.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>One or more domain names (subject alternative names) included in the certificate. This list contains the domain names that are bound to the public key that is contained in the certificate. The subject alternative names include the canonical domain name (CN) of the certificate and additional domain names that can be used to connect to the website. </p>
+    #[doc(hidden)]
     pub subject_alternative_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Contains information about the initial validation of each domain name that occurs as a result of the <code>RequestCertificate</code> request. This field exists only when the certificate type is <code>AMAZON_ISSUED</code>. </p>
+    #[doc(hidden)]
     pub domain_validation_options:
         std::option::Option<std::vec::Vec<crate::model::DomainValidation>>,
     /// <p>The serial number of the certificate.</p>
+    #[doc(hidden)]
     pub serial: std::option::Option<std::string::String>,
     /// <p>The name of the entity that is associated with the public key contained in the certificate.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<std::string::String>,
     /// <p>The name of the certificate authority that issued and signed the certificate.</p>
+    #[doc(hidden)]
     pub issuer: std::option::Option<std::string::String>,
     /// <p>The time at which the certificate was requested.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the certificate was issued. This value exists only when the certificate type is <code>AMAZON_ISSUED</code>. </p>
+    #[doc(hidden)]
     pub issued_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time at which the certificate was imported. This value exists only when the certificate type is <code>IMPORTED</code>. </p>
+    #[doc(hidden)]
     pub imported_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the certificate.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CertificateStatus>,
     /// <p>The time at which the certificate was revoked. This value exists only when the certificate status is <code>REVOKED</code>. </p>
+    #[doc(hidden)]
     pub revoked_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The reason the certificate was revoked. This value exists only when the certificate status is <code>REVOKED</code>. </p>
+    #[doc(hidden)]
     pub revocation_reason: std::option::Option<crate::model::RevocationReason>,
     /// <p>The time before which the certificate is not valid.</p>
+    #[doc(hidden)]
     pub not_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time after which the certificate is not valid.</p>
+    #[doc(hidden)]
     pub not_after: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The algorithm that was used to generate the public-private key pair.</p>
+    #[doc(hidden)]
     pub key_algorithm: std::option::Option<crate::model::KeyAlgorithm>,
     /// <p>The algorithm that was used to sign the certificate.</p>
+    #[doc(hidden)]
     pub signature_algorithm: std::option::Option<std::string::String>,
     /// <p>A list of ARNs for the Amazon Web Services resources that are using the certificate. A certificate can be used by multiple Amazon Web Services resources. </p>
+    #[doc(hidden)]
     pub in_use_by: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The reason the certificate request failed. This value exists only when the certificate status is <code>FAILED</code>. For more information, see <a href="https://docs.aws.amazon.com/acm/latest/userguide/troubleshooting.html#troubleshooting-failed">Certificate Request Failed</a> in the <i>Amazon Web Services Certificate Manager User Guide</i>. </p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<crate::model::FailureReason>,
     /// <p>The source of the certificate. For certificates provided by ACM, this value is <code>AMAZON_ISSUED</code>. For certificates that you imported with <code>ImportCertificate</code>, this value is <code>IMPORTED</code>. ACM does not provide <a href="https://docs.aws.amazon.com/acm/latest/userguide/acm-renewal.html">managed renewal</a> for imported certificates. For more information about the differences between certificates that you import and those that ACM provides, see <a href="https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html">Importing Certificates</a> in the <i>Amazon Web Services Certificate Manager User Guide</i>. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::CertificateType>,
     /// <p>Contains information about the status of ACM's <a href="https://docs.aws.amazon.com/acm/latest/userguide/acm-renewal.html">managed renewal</a> for the certificate. This field exists only when the certificate type is <code>AMAZON_ISSUED</code>.</p>
+    #[doc(hidden)]
     pub renewal_summary: std::option::Option<crate::model::RenewalSummary>,
     /// <p>A list of Key Usage X.509 v3 extension objects. Each object is a string value that identifies the purpose of the public key contained in the certificate. Possible extension values include DIGITAL_SIGNATURE, KEY_ENCHIPHERMENT, NON_REPUDIATION, and more.</p>
+    #[doc(hidden)]
     pub key_usages: std::option::Option<std::vec::Vec<crate::model::KeyUsage>>,
     /// <p>Contains a list of Extended Key Usage X.509 v3 extension objects. Each object specifies a purpose for which the certificate public key can be used and consists of a name and an object identifier (OID). </p>
+    #[doc(hidden)]
     pub extended_key_usages: std::option::Option<std::vec::Vec<crate::model::ExtendedKeyUsage>>,
     /// <p>The Amazon Resource Name (ARN) of the ACM PCA private certificate authority (CA) that issued the certificate. This has the following format: </p>
     /// <p> <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> </p>
+    #[doc(hidden)]
     pub certificate_authority_arn: std::option::Option<std::string::String>,
     /// <p>Specifies whether the certificate is eligible for renewal. At this time, only exported private certificates can be renewed with the <code>RenewCertificate</code> command.</p>
+    #[doc(hidden)]
     pub renewal_eligibility: std::option::Option<crate::model::RenewalEligibility>,
     /// <p>Value that specifies whether to add the certificate to a transparency log. Certificate transparency makes it possible to detect SSL certificates that have been mistakenly or maliciously issued. A browser might respond to certificate that has not been logged by showing an error message. The logs are cryptographically secure. </p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::CertificateOptions>,
 }
 impl CertificateDetail {
@@ -1200,11 +1231,10 @@ impl std::fmt::Debug for CertificateDetail {
         formatter.finish()
     }
 }
-/// See [`CertificateDetail`](crate::model::CertificateDetail)
+/// See [`CertificateDetail`](crate::model::CertificateDetail).
 pub mod certificate_detail {
 
-    /// A builder for [`CertificateDetail`](crate::model::CertificateDetail)
-    #[non_exhaustive]
+    /// A builder for [`CertificateDetail`](crate::model::CertificateDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -1596,7 +1626,7 @@ pub mod certificate_detail {
             self.options = input;
             self
         }
-        /// Consumes the builder and constructs a [`CertificateDetail`](crate::model::CertificateDetail)
+        /// Consumes the builder and constructs a [`CertificateDetail`](crate::model::CertificateDetail).
         pub fn build(self) -> crate::model::CertificateDetail {
             crate::model::CertificateDetail {
                 certificate_arn: self.certificate_arn,
@@ -1630,7 +1660,7 @@ pub mod certificate_detail {
     }
 }
 impl CertificateDetail {
-    /// Creates a new builder-style object to manufacture [`CertificateDetail`](crate::model::CertificateDetail)
+    /// Creates a new builder-style object to manufacture [`CertificateDetail`](crate::model::CertificateDetail).
     pub fn builder() -> crate::model::certificate_detail::Builder {
         crate::model::certificate_detail::Builder::default()
     }
@@ -1696,6 +1726,7 @@ impl AsRef<str> for RenewalEligibility {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExtendedKeyUsage {
     /// <p>The name of an Extended Key Usage value.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::ExtendedKeyUsageName>,
     /// <p>An object identifier (OID) for the extension value. OIDs are strings of numbers separated by periods. The following OIDs are defined in RFC 3280 and RFC 5280. </p>
     /// <ul>
@@ -1709,6 +1740,7 @@ pub struct ExtendedKeyUsage {
     /// <li> <p> <code>1.3.6.1.5.5.7.3.6 (IPSEC_TUNNEL)</code> </p> </li>
     /// <li> <p> <code>1.3.6.1.5.5.7.3.7 (IPSEC_USER)</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub oid: std::option::Option<std::string::String>,
 }
 impl ExtendedKeyUsage {
@@ -1740,11 +1772,10 @@ impl std::fmt::Debug for ExtendedKeyUsage {
         formatter.finish()
     }
 }
-/// See [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage)
+/// See [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage).
 pub mod extended_key_usage {
 
-    /// A builder for [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage)
-    #[non_exhaustive]
+    /// A builder for [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::ExtendedKeyUsageName>,
@@ -1796,7 +1827,7 @@ pub mod extended_key_usage {
             self.oid = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage)
+        /// Consumes the builder and constructs a [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage).
         pub fn build(self) -> crate::model::ExtendedKeyUsage {
             crate::model::ExtendedKeyUsage {
                 name: self.name,
@@ -1806,7 +1837,7 @@ pub mod extended_key_usage {
     }
 }
 impl ExtendedKeyUsage {
-    /// Creates a new builder-style object to manufacture [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage)
+    /// Creates a new builder-style object to manufacture [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage).
     pub fn builder() -> crate::model::extended_key_usage::Builder {
         crate::model::extended_key_usage::Builder::default()
     }
@@ -1817,6 +1848,7 @@ impl ExtendedKeyUsage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyUsage {
     /// <p>A string value that contains a Key Usage extension name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::KeyUsageName>,
 }
 impl KeyUsage {
@@ -1832,11 +1864,10 @@ impl std::fmt::Debug for KeyUsage {
         formatter.finish()
     }
 }
-/// See [`KeyUsage`](crate::model::KeyUsage)
+/// See [`KeyUsage`](crate::model::KeyUsage).
 pub mod key_usage {
 
-    /// A builder for [`KeyUsage`](crate::model::KeyUsage)
-    #[non_exhaustive]
+    /// A builder for [`KeyUsage`](crate::model::KeyUsage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::KeyUsageName>,
@@ -1852,14 +1883,14 @@ pub mod key_usage {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyUsage`](crate::model::KeyUsage)
+        /// Consumes the builder and constructs a [`KeyUsage`](crate::model::KeyUsage).
         pub fn build(self) -> crate::model::KeyUsage {
             crate::model::KeyUsage { name: self.name }
         }
     }
 }
 impl KeyUsage {
-    /// Creates a new builder-style object to manufacture [`KeyUsage`](crate::model::KeyUsage)
+    /// Creates a new builder-style object to manufacture [`KeyUsage`](crate::model::KeyUsage).
     pub fn builder() -> crate::model::key_usage::Builder {
         crate::model::key_usage::Builder::default()
     }
@@ -1870,13 +1901,17 @@ impl KeyUsage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RenewalSummary {
     /// <p>The status of ACM's <a href="https://docs.aws.amazon.com/acm/latest/userguide/acm-renewal.html">managed renewal</a> of the certificate.</p>
+    #[doc(hidden)]
     pub renewal_status: std::option::Option<crate::model::RenewalStatus>,
     /// <p>Contains information about the validation of each domain name in the certificate, as it pertains to ACM's <a href="https://docs.aws.amazon.com/acm/latest/userguide/acm-renewal.html">managed renewal</a>. This is different from the initial validation that occurs as a result of the <code>RequestCertificate</code> request. This field exists only when the certificate type is <code>AMAZON_ISSUED</code>.</p>
+    #[doc(hidden)]
     pub domain_validation_options:
         std::option::Option<std::vec::Vec<crate::model::DomainValidation>>,
     /// <p>The reason that a renewal request was unsuccessful.</p>
+    #[doc(hidden)]
     pub renewal_status_reason: std::option::Option<crate::model::FailureReason>,
     /// <p>The time at which the renewal summary was last updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RenewalSummary {
@@ -1909,11 +1944,10 @@ impl std::fmt::Debug for RenewalSummary {
         formatter.finish()
     }
 }
-/// See [`RenewalSummary`](crate::model::RenewalSummary)
+/// See [`RenewalSummary`](crate::model::RenewalSummary).
 pub mod renewal_summary {
 
-    /// A builder for [`RenewalSummary`](crate::model::RenewalSummary)
-    #[non_exhaustive]
+    /// A builder for [`RenewalSummary`](crate::model::RenewalSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) renewal_status: std::option::Option<crate::model::RenewalStatus>,
@@ -1981,7 +2015,7 @@ pub mod renewal_summary {
             self.updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`RenewalSummary`](crate::model::RenewalSummary)
+        /// Consumes the builder and constructs a [`RenewalSummary`](crate::model::RenewalSummary).
         pub fn build(self) -> crate::model::RenewalSummary {
             crate::model::RenewalSummary {
                 renewal_status: self.renewal_status,
@@ -1993,7 +2027,7 @@ pub mod renewal_summary {
     }
 }
 impl RenewalSummary {
-    /// Creates a new builder-style object to manufacture [`RenewalSummary`](crate::model::RenewalSummary)
+    /// Creates a new builder-style object to manufacture [`RenewalSummary`](crate::model::RenewalSummary).
     pub fn builder() -> crate::model::renewal_summary::Builder {
         crate::model::renewal_summary::Builder::default()
     }
@@ -2137,10 +2171,13 @@ impl AsRef<str> for FailureReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainValidation {
     /// <p>A fully qualified domain name (FQDN) in the certificate. For example, <code>www.example.com</code> or <code>example.com</code>. </p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>A list of email addresses that ACM used to send domain validation emails.</p>
+    #[doc(hidden)]
     pub validation_emails: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The domain name that ACM used to send domain validation emails.</p>
+    #[doc(hidden)]
     pub validation_domain: std::option::Option<std::string::String>,
     /// <p>The validation status of the domain name. This can be one of the following values:</p>
     /// <ul>
@@ -2148,11 +2185,14 @@ pub struct DomainValidation {
     /// <li> <p> <code></code>SUCCESS</p> </li>
     /// <li> <p> <code></code>FAILED</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub validation_status: std::option::Option<crate::model::DomainStatus>,
     /// <p>Contains the CNAME record that you add to your DNS database for domain validation. For more information, see <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html">Use DNS to Validate Domain Ownership</a>.</p>
     /// <p>Note: The CNAME information that you need does not include the name of your domain. If you include  your domain name in the DNS database CNAME record, validation fails.  For example, if the name is "_a79865eb4cd1a6ab990a45779b4e0b96.yourdomain.com", only "_a79865eb4cd1a6ab990a45779b4e0b96" must be used.</p>
+    #[doc(hidden)]
     pub resource_record: std::option::Option<crate::model::ResourceRecord>,
     /// <p>Specifies the domain validation method.</p>
+    #[doc(hidden)]
     pub validation_method: std::option::Option<crate::model::ValidationMethod>,
 }
 impl DomainValidation {
@@ -2199,11 +2239,10 @@ impl std::fmt::Debug for DomainValidation {
         formatter.finish()
     }
 }
-/// See [`DomainValidation`](crate::model::DomainValidation)
+/// See [`DomainValidation`](crate::model::DomainValidation).
 pub mod domain_validation {
 
-    /// A builder for [`DomainValidation`](crate::model::DomainValidation)
-    #[non_exhaustive]
+    /// A builder for [`DomainValidation`](crate::model::DomainValidation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -2307,7 +2346,7 @@ pub mod domain_validation {
             self.validation_method = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainValidation`](crate::model::DomainValidation)
+        /// Consumes the builder and constructs a [`DomainValidation`](crate::model::DomainValidation).
         pub fn build(self) -> crate::model::DomainValidation {
             crate::model::DomainValidation {
                 domain_name: self.domain_name,
@@ -2321,7 +2360,7 @@ pub mod domain_validation {
     }
 }
 impl DomainValidation {
-    /// Creates a new builder-style object to manufacture [`DomainValidation`](crate::model::DomainValidation)
+    /// Creates a new builder-style object to manufacture [`DomainValidation`](crate::model::DomainValidation).
     pub fn builder() -> crate::model::domain_validation::Builder {
         crate::model::domain_validation::Builder::default()
     }
@@ -2332,10 +2371,13 @@ impl DomainValidation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceRecord {
     /// <p>The name of the DNS record to create in your domain. This is supplied by ACM.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of DNS record. Currently this can be <code>CNAME</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RecordType>,
     /// <p>The value of the CNAME record to add to your DNS database. This is supplied by ACM.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl ResourceRecord {
@@ -2361,11 +2403,10 @@ impl std::fmt::Debug for ResourceRecord {
         formatter.finish()
     }
 }
-/// See [`ResourceRecord`](crate::model::ResourceRecord)
+/// See [`ResourceRecord`](crate::model::ResourceRecord).
 pub mod resource_record {
 
-    /// A builder for [`ResourceRecord`](crate::model::ResourceRecord)
-    #[non_exhaustive]
+    /// A builder for [`ResourceRecord`](crate::model::ResourceRecord).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2403,7 +2444,7 @@ pub mod resource_record {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceRecord`](crate::model::ResourceRecord)
+        /// Consumes the builder and constructs a [`ResourceRecord`](crate::model::ResourceRecord).
         pub fn build(self) -> crate::model::ResourceRecord {
             crate::model::ResourceRecord {
                 name: self.name,
@@ -2414,7 +2455,7 @@ pub mod resource_record {
     }
 }
 impl ResourceRecord {
-    /// Creates a new builder-style object to manufacture [`ResourceRecord`](crate::model::ResourceRecord)
+    /// Creates a new builder-style object to manufacture [`ResourceRecord`](crate::model::ResourceRecord).
     pub fn builder() -> crate::model::resource_record::Builder {
         crate::model::resource_record::Builder::default()
     }

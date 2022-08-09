@@ -93,17 +93,23 @@ impl AsRef<str> for ThrottleReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Cors {
     /// <p>Whether to allow cookies or other credentials in requests to your function URL. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub allow_credentials: std::option::Option<bool>,
     /// <p>The HTTP headers that origins can include in requests to your function URL. For example: <code>Date</code>, <code>Keep-Alive</code>, <code>X-Custom-Header</code>.</p>
+    #[doc(hidden)]
     pub allow_headers: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The HTTP methods that are allowed when calling your function URL. For example: <code>GET</code>, <code>POST</code>, <code>DELETE</code>, or the wildcard character (<code>*</code>).</p>
+    #[doc(hidden)]
     pub allow_methods: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The origins that can access your function URL. You can list any number of specific origins, separated by a comma. For example: <code>https://www.example.com</code>, <code>http://localhost:60905</code>.</p>
     /// <p>Alternatively, you can grant access to all origins using the wildcard character (<code>*</code>).</p>
+    #[doc(hidden)]
     pub allow_origins: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The HTTP headers in your function response that you want to expose to origins that call your function URL. For example: <code>Date</code>, <code>Keep-Alive</code>, <code>X-Custom-Header</code>.</p>
+    #[doc(hidden)]
     pub expose_headers: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The maximum amount of time, in seconds, that web browsers can cache results of a preflight request. By default, this is set to <code>0</code>, which means that the browser doesn't cache results.</p>
+    #[doc(hidden)]
     pub max_age: std::option::Option<i32>,
 }
 impl Cors {
@@ -145,11 +151,10 @@ impl std::fmt::Debug for Cors {
         formatter.finish()
     }
 }
-/// See [`Cors`](crate::model::Cors)
+/// See [`Cors`](crate::model::Cors).
 pub mod cors {
 
-    /// A builder for [`Cors`](crate::model::Cors)
-    #[non_exhaustive]
+    /// A builder for [`Cors`](crate::model::Cors).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allow_credentials: std::option::Option<bool>,
@@ -258,7 +263,7 @@ pub mod cors {
             self.max_age = input;
             self
         }
-        /// Consumes the builder and constructs a [`Cors`](crate::model::Cors)
+        /// Consumes the builder and constructs a [`Cors`](crate::model::Cors).
         pub fn build(self) -> crate::model::Cors {
             crate::model::Cors {
                 allow_credentials: self.allow_credentials,
@@ -272,7 +277,7 @@ pub mod cors {
     }
 }
 impl Cors {
-    /// Creates a new builder-style object to manufacture [`Cors`](crate::model::Cors)
+    /// Creates a new builder-style object to manufacture [`Cors`](crate::model::Cors).
     pub fn builder() -> crate::model::cors::Builder {
         crate::model::cors::Builder::default()
     }
@@ -338,8 +343,10 @@ impl AsRef<str> for FunctionUrlAuthType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DestinationConfig {
     /// <p>The destination configuration for successful invocations.</p>
+    #[doc(hidden)]
     pub on_success: std::option::Option<crate::model::OnSuccess>,
     /// <p>The destination configuration for failed invocations.</p>
+    #[doc(hidden)]
     pub on_failure: std::option::Option<crate::model::OnFailure>,
 }
 impl DestinationConfig {
@@ -360,11 +367,10 @@ impl std::fmt::Debug for DestinationConfig {
         formatter.finish()
     }
 }
-/// See [`DestinationConfig`](crate::model::DestinationConfig)
+/// See [`DestinationConfig`](crate::model::DestinationConfig).
 pub mod destination_config {
 
-    /// A builder for [`DestinationConfig`](crate::model::DestinationConfig)
-    #[non_exhaustive]
+    /// A builder for [`DestinationConfig`](crate::model::DestinationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) on_success: std::option::Option<crate::model::OnSuccess>,
@@ -397,7 +403,7 @@ pub mod destination_config {
             self.on_failure = input;
             self
         }
-        /// Consumes the builder and constructs a [`DestinationConfig`](crate::model::DestinationConfig)
+        /// Consumes the builder and constructs a [`DestinationConfig`](crate::model::DestinationConfig).
         pub fn build(self) -> crate::model::DestinationConfig {
             crate::model::DestinationConfig {
                 on_success: self.on_success,
@@ -407,7 +413,7 @@ pub mod destination_config {
     }
 }
 impl DestinationConfig {
-    /// Creates a new builder-style object to manufacture [`DestinationConfig`](crate::model::DestinationConfig)
+    /// Creates a new builder-style object to manufacture [`DestinationConfig`](crate::model::DestinationConfig).
     pub fn builder() -> crate::model::destination_config::Builder {
         crate::model::destination_config::Builder::default()
     }
@@ -418,6 +424,7 @@ impl DestinationConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OnFailure {
     /// <p>The Amazon Resource Name (ARN) of the destination resource.</p>
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
 }
 impl OnFailure {
@@ -433,11 +440,10 @@ impl std::fmt::Debug for OnFailure {
         formatter.finish()
     }
 }
-/// See [`OnFailure`](crate::model::OnFailure)
+/// See [`OnFailure`](crate::model::OnFailure).
 pub mod on_failure {
 
-    /// A builder for [`OnFailure`](crate::model::OnFailure)
-    #[non_exhaustive]
+    /// A builder for [`OnFailure`](crate::model::OnFailure).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination: std::option::Option<std::string::String>,
@@ -453,7 +459,7 @@ pub mod on_failure {
             self.destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`OnFailure`](crate::model::OnFailure)
+        /// Consumes the builder and constructs a [`OnFailure`](crate::model::OnFailure).
         pub fn build(self) -> crate::model::OnFailure {
             crate::model::OnFailure {
                 destination: self.destination,
@@ -462,7 +468,7 @@ pub mod on_failure {
     }
 }
 impl OnFailure {
-    /// Creates a new builder-style object to manufacture [`OnFailure`](crate::model::OnFailure)
+    /// Creates a new builder-style object to manufacture [`OnFailure`](crate::model::OnFailure).
     pub fn builder() -> crate::model::on_failure::Builder {
         crate::model::on_failure::Builder::default()
     }
@@ -473,6 +479,7 @@ impl OnFailure {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OnSuccess {
     /// <p>The Amazon Resource Name (ARN) of the destination resource.</p>
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
 }
 impl OnSuccess {
@@ -488,11 +495,10 @@ impl std::fmt::Debug for OnSuccess {
         formatter.finish()
     }
 }
-/// See [`OnSuccess`](crate::model::OnSuccess)
+/// See [`OnSuccess`](crate::model::OnSuccess).
 pub mod on_success {
 
-    /// A builder for [`OnSuccess`](crate::model::OnSuccess)
-    #[non_exhaustive]
+    /// A builder for [`OnSuccess`](crate::model::OnSuccess).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination: std::option::Option<std::string::String>,
@@ -508,7 +514,7 @@ pub mod on_success {
             self.destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`OnSuccess`](crate::model::OnSuccess)
+        /// Consumes the builder and constructs a [`OnSuccess`](crate::model::OnSuccess).
         pub fn build(self) -> crate::model::OnSuccess {
             crate::model::OnSuccess {
                 destination: self.destination,
@@ -517,7 +523,7 @@ pub mod on_success {
     }
 }
 impl OnSuccess {
-    /// Creates a new builder-style object to manufacture [`OnSuccess`](crate::model::OnSuccess)
+    /// Creates a new builder-style object to manufacture [`OnSuccess`](crate::model::OnSuccess).
     pub fn builder() -> crate::model::on_success::Builder {
         crate::model::on_success::Builder::default()
     }
@@ -528,6 +534,7 @@ impl OnSuccess {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EphemeralStorage {
     /// <p>The size of the function’s /tmp directory.</p>
+    #[doc(hidden)]
     pub size: std::option::Option<i32>,
 }
 impl EphemeralStorage {
@@ -543,11 +550,10 @@ impl std::fmt::Debug for EphemeralStorage {
         formatter.finish()
     }
 }
-/// See [`EphemeralStorage`](crate::model::EphemeralStorage)
+/// See [`EphemeralStorage`](crate::model::EphemeralStorage).
 pub mod ephemeral_storage {
 
-    /// A builder for [`EphemeralStorage`](crate::model::EphemeralStorage)
-    #[non_exhaustive]
+    /// A builder for [`EphemeralStorage`](crate::model::EphemeralStorage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) size: std::option::Option<i32>,
@@ -563,14 +569,14 @@ pub mod ephemeral_storage {
             self.size = input;
             self
         }
-        /// Consumes the builder and constructs a [`EphemeralStorage`](crate::model::EphemeralStorage)
+        /// Consumes the builder and constructs a [`EphemeralStorage`](crate::model::EphemeralStorage).
         pub fn build(self) -> crate::model::EphemeralStorage {
             crate::model::EphemeralStorage { size: self.size }
         }
     }
 }
 impl EphemeralStorage {
-    /// Creates a new builder-style object to manufacture [`EphemeralStorage`](crate::model::EphemeralStorage)
+    /// Creates a new builder-style object to manufacture [`EphemeralStorage`](crate::model::EphemeralStorage).
     pub fn builder() -> crate::model::ephemeral_storage::Builder {
         crate::model::ephemeral_storage::Builder::default()
     }
@@ -636,8 +642,10 @@ impl AsRef<str> for Architecture {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageConfigResponse {
     /// <p>Configuration values that override the container image Dockerfile.</p>
+    #[doc(hidden)]
     pub image_config: std::option::Option<crate::model::ImageConfig>,
     /// <p>Error response to GetFunctionConfiguration.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::ImageConfigError>,
 }
 impl ImageConfigResponse {
@@ -658,11 +666,10 @@ impl std::fmt::Debug for ImageConfigResponse {
         formatter.finish()
     }
 }
-/// See [`ImageConfigResponse`](crate::model::ImageConfigResponse)
+/// See [`ImageConfigResponse`](crate::model::ImageConfigResponse).
 pub mod image_config_response {
 
-    /// A builder for [`ImageConfigResponse`](crate::model::ImageConfigResponse)
-    #[non_exhaustive]
+    /// A builder for [`ImageConfigResponse`](crate::model::ImageConfigResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) image_config: std::option::Option<crate::model::ImageConfig>,
@@ -695,7 +702,7 @@ pub mod image_config_response {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageConfigResponse`](crate::model::ImageConfigResponse)
+        /// Consumes the builder and constructs a [`ImageConfigResponse`](crate::model::ImageConfigResponse).
         pub fn build(self) -> crate::model::ImageConfigResponse {
             crate::model::ImageConfigResponse {
                 image_config: self.image_config,
@@ -705,7 +712,7 @@ pub mod image_config_response {
     }
 }
 impl ImageConfigResponse {
-    /// Creates a new builder-style object to manufacture [`ImageConfigResponse`](crate::model::ImageConfigResponse)
+    /// Creates a new builder-style object to manufacture [`ImageConfigResponse`](crate::model::ImageConfigResponse).
     pub fn builder() -> crate::model::image_config_response::Builder {
         crate::model::image_config_response::Builder::default()
     }
@@ -716,8 +723,10 @@ impl ImageConfigResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageConfigError {
     /// <p>Error code.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>Error message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ImageConfigError {
@@ -738,11 +747,10 @@ impl std::fmt::Debug for ImageConfigError {
         formatter.finish()
     }
 }
-/// See [`ImageConfigError`](crate::model::ImageConfigError)
+/// See [`ImageConfigError`](crate::model::ImageConfigError).
 pub mod image_config_error {
 
-    /// A builder for [`ImageConfigError`](crate::model::ImageConfigError)
-    #[non_exhaustive]
+    /// A builder for [`ImageConfigError`](crate::model::ImageConfigError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_code: std::option::Option<std::string::String>,
@@ -769,7 +777,7 @@ pub mod image_config_error {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageConfigError`](crate::model::ImageConfigError)
+        /// Consumes the builder and constructs a [`ImageConfigError`](crate::model::ImageConfigError).
         pub fn build(self) -> crate::model::ImageConfigError {
             crate::model::ImageConfigError {
                 error_code: self.error_code,
@@ -779,7 +787,7 @@ pub mod image_config_error {
     }
 }
 impl ImageConfigError {
-    /// Creates a new builder-style object to manufacture [`ImageConfigError`](crate::model::ImageConfigError)
+    /// Creates a new builder-style object to manufacture [`ImageConfigError`](crate::model::ImageConfigError).
     pub fn builder() -> crate::model::image_config_error::Builder {
         crate::model::image_config_error::Builder::default()
     }
@@ -790,10 +798,13 @@ impl ImageConfigError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageConfig {
     /// <p>Specifies the entry point to their application, which is typically the location of the runtime executable.</p>
+    #[doc(hidden)]
     pub entry_point: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies parameters that you want to pass in with ENTRYPOINT. </p>
+    #[doc(hidden)]
     pub command: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies the working directory.</p>
+    #[doc(hidden)]
     pub working_directory: std::option::Option<std::string::String>,
 }
 impl ImageConfig {
@@ -819,11 +830,10 @@ impl std::fmt::Debug for ImageConfig {
         formatter.finish()
     }
 }
-/// See [`ImageConfig`](crate::model::ImageConfig)
+/// See [`ImageConfig`](crate::model::ImageConfig).
 pub mod image_config {
 
-    /// A builder for [`ImageConfig`](crate::model::ImageConfig)
-    #[non_exhaustive]
+    /// A builder for [`ImageConfig`](crate::model::ImageConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entry_point: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -882,7 +892,7 @@ pub mod image_config {
             self.working_directory = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageConfig`](crate::model::ImageConfig)
+        /// Consumes the builder and constructs a [`ImageConfig`](crate::model::ImageConfig).
         pub fn build(self) -> crate::model::ImageConfig {
             crate::model::ImageConfig {
                 entry_point: self.entry_point,
@@ -893,7 +903,7 @@ pub mod image_config {
     }
 }
 impl ImageConfig {
-    /// Creates a new builder-style object to manufacture [`ImageConfig`](crate::model::ImageConfig)
+    /// Creates a new builder-style object to manufacture [`ImageConfig`](crate::model::ImageConfig).
     pub fn builder() -> crate::model::image_config::Builder {
         crate::model::image_config::Builder::default()
     }
@@ -959,8 +969,10 @@ impl AsRef<str> for PackageType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FileSystemConfig {
     /// <p>The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the file system.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The path where the function can access the file system, starting with <code>/mnt/</code>.</p>
+    #[doc(hidden)]
     pub local_mount_path: std::option::Option<std::string::String>,
 }
 impl FileSystemConfig {
@@ -981,11 +993,10 @@ impl std::fmt::Debug for FileSystemConfig {
         formatter.finish()
     }
 }
-/// See [`FileSystemConfig`](crate::model::FileSystemConfig)
+/// See [`FileSystemConfig`](crate::model::FileSystemConfig).
 pub mod file_system_config {
 
-    /// A builder for [`FileSystemConfig`](crate::model::FileSystemConfig)
-    #[non_exhaustive]
+    /// A builder for [`FileSystemConfig`](crate::model::FileSystemConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1015,7 +1026,7 @@ pub mod file_system_config {
             self.local_mount_path = input;
             self
         }
-        /// Consumes the builder and constructs a [`FileSystemConfig`](crate::model::FileSystemConfig)
+        /// Consumes the builder and constructs a [`FileSystemConfig`](crate::model::FileSystemConfig).
         pub fn build(self) -> crate::model::FileSystemConfig {
             crate::model::FileSystemConfig {
                 arn: self.arn,
@@ -1025,7 +1036,7 @@ pub mod file_system_config {
     }
 }
 impl FileSystemConfig {
-    /// Creates a new builder-style object to manufacture [`FileSystemConfig`](crate::model::FileSystemConfig)
+    /// Creates a new builder-style object to manufacture [`FileSystemConfig`](crate::model::FileSystemConfig).
     pub fn builder() -> crate::model::file_system_config::Builder {
         crate::model::file_system_config::Builder::default()
     }
@@ -1373,12 +1384,16 @@ impl AsRef<str> for State {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Layer {
     /// <p>The Amazon Resource Name (ARN) of the function layer.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The size of the layer archive in bytes.</p>
+    #[doc(hidden)]
     pub code_size: i64,
     /// <p>The Amazon Resource Name (ARN) for a signing profile version.</p>
+    #[doc(hidden)]
     pub signing_profile_version_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of a signing job.</p>
+    #[doc(hidden)]
     pub signing_job_arn: std::option::Option<std::string::String>,
 }
 impl Layer {
@@ -1412,11 +1427,10 @@ impl std::fmt::Debug for Layer {
         formatter.finish()
     }
 }
-/// See [`Layer`](crate::model::Layer)
+/// See [`Layer`](crate::model::Layer).
 pub mod layer {
 
-    /// A builder for [`Layer`](crate::model::Layer)
-    #[non_exhaustive]
+    /// A builder for [`Layer`](crate::model::Layer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1474,7 +1488,7 @@ pub mod layer {
             self.signing_job_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Layer`](crate::model::Layer)
+        /// Consumes the builder and constructs a [`Layer`](crate::model::Layer).
         pub fn build(self) -> crate::model::Layer {
             crate::model::Layer {
                 arn: self.arn,
@@ -1486,7 +1500,7 @@ pub mod layer {
     }
 }
 impl Layer {
-    /// Creates a new builder-style object to manufacture [`Layer`](crate::model::Layer)
+    /// Creates a new builder-style object to manufacture [`Layer`](crate::model::Layer).
     pub fn builder() -> crate::model::layer::Builder {
         crate::model::layer::Builder::default()
     }
@@ -1497,6 +1511,7 @@ impl Layer {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TracingConfigResponse {
     /// <p>The tracing mode.</p>
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::TracingMode>,
 }
 impl TracingConfigResponse {
@@ -1512,11 +1527,10 @@ impl std::fmt::Debug for TracingConfigResponse {
         formatter.finish()
     }
 }
-/// See [`TracingConfigResponse`](crate::model::TracingConfigResponse)
+/// See [`TracingConfigResponse`](crate::model::TracingConfigResponse).
 pub mod tracing_config_response {
 
-    /// A builder for [`TracingConfigResponse`](crate::model::TracingConfigResponse)
-    #[non_exhaustive]
+    /// A builder for [`TracingConfigResponse`](crate::model::TracingConfigResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mode: std::option::Option<crate::model::TracingMode>,
@@ -1532,14 +1546,14 @@ pub mod tracing_config_response {
             self.mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`TracingConfigResponse`](crate::model::TracingConfigResponse)
+        /// Consumes the builder and constructs a [`TracingConfigResponse`](crate::model::TracingConfigResponse).
         pub fn build(self) -> crate::model::TracingConfigResponse {
             crate::model::TracingConfigResponse { mode: self.mode }
         }
     }
 }
 impl TracingConfigResponse {
-    /// Creates a new builder-style object to manufacture [`TracingConfigResponse`](crate::model::TracingConfigResponse)
+    /// Creates a new builder-style object to manufacture [`TracingConfigResponse`](crate::model::TracingConfigResponse).
     pub fn builder() -> crate::model::tracing_config_response::Builder {
         crate::model::tracing_config_response::Builder::default()
     }
@@ -1605,9 +1619,11 @@ impl AsRef<str> for TracingMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentResponse {
     /// <p>Environment variable key-value pairs.</p>
+    #[doc(hidden)]
     pub variables:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Error messages for environment variables that couldn't be applied.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::EnvironmentError>,
 }
 impl EnvironmentResponse {
@@ -1631,11 +1647,10 @@ impl std::fmt::Debug for EnvironmentResponse {
         formatter.finish()
     }
 }
-/// See [`EnvironmentResponse`](crate::model::EnvironmentResponse)
+/// See [`EnvironmentResponse`](crate::model::EnvironmentResponse).
 pub mod environment_response {
 
-    /// A builder for [`EnvironmentResponse`](crate::model::EnvironmentResponse)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentResponse`](crate::model::EnvironmentResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) variables: std::option::Option<
@@ -1682,7 +1697,7 @@ pub mod environment_response {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentResponse`](crate::model::EnvironmentResponse)
+        /// Consumes the builder and constructs a [`EnvironmentResponse`](crate::model::EnvironmentResponse).
         pub fn build(self) -> crate::model::EnvironmentResponse {
             crate::model::EnvironmentResponse {
                 variables: self.variables,
@@ -1692,7 +1707,7 @@ pub mod environment_response {
     }
 }
 impl EnvironmentResponse {
-    /// Creates a new builder-style object to manufacture [`EnvironmentResponse`](crate::model::EnvironmentResponse)
+    /// Creates a new builder-style object to manufacture [`EnvironmentResponse`](crate::model::EnvironmentResponse).
     pub fn builder() -> crate::model::environment_response::Builder {
         crate::model::environment_response::Builder::default()
     }
@@ -1703,8 +1718,10 @@ impl EnvironmentResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentError {
     /// <p>The error code.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The error message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl EnvironmentError {
@@ -1725,11 +1742,10 @@ impl std::fmt::Debug for EnvironmentError {
         formatter.finish()
     }
 }
-/// See [`EnvironmentError`](crate::model::EnvironmentError)
+/// See [`EnvironmentError`](crate::model::EnvironmentError).
 pub mod environment_error {
 
-    /// A builder for [`EnvironmentError`](crate::model::EnvironmentError)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentError`](crate::model::EnvironmentError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_code: std::option::Option<std::string::String>,
@@ -1756,7 +1772,7 @@ pub mod environment_error {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentError`](crate::model::EnvironmentError)
+        /// Consumes the builder and constructs a [`EnvironmentError`](crate::model::EnvironmentError).
         pub fn build(self) -> crate::model::EnvironmentError {
             crate::model::EnvironmentError {
                 error_code: self.error_code,
@@ -1766,7 +1782,7 @@ pub mod environment_error {
     }
 }
 impl EnvironmentError {
-    /// Creates a new builder-style object to manufacture [`EnvironmentError`](crate::model::EnvironmentError)
+    /// Creates a new builder-style object to manufacture [`EnvironmentError`](crate::model::EnvironmentError).
     pub fn builder() -> crate::model::environment_error::Builder {
         crate::model::environment_error::Builder::default()
     }
@@ -1777,6 +1793,7 @@ impl EnvironmentError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeadLetterConfig {
     /// <p>The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.</p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
 }
 impl DeadLetterConfig {
@@ -1792,11 +1809,10 @@ impl std::fmt::Debug for DeadLetterConfig {
         formatter.finish()
     }
 }
-/// See [`DeadLetterConfig`](crate::model::DeadLetterConfig)
+/// See [`DeadLetterConfig`](crate::model::DeadLetterConfig).
 pub mod dead_letter_config {
 
-    /// A builder for [`DeadLetterConfig`](crate::model::DeadLetterConfig)
-    #[non_exhaustive]
+    /// A builder for [`DeadLetterConfig`](crate::model::DeadLetterConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_arn: std::option::Option<std::string::String>,
@@ -1812,7 +1828,7 @@ pub mod dead_letter_config {
             self.target_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeadLetterConfig`](crate::model::DeadLetterConfig)
+        /// Consumes the builder and constructs a [`DeadLetterConfig`](crate::model::DeadLetterConfig).
         pub fn build(self) -> crate::model::DeadLetterConfig {
             crate::model::DeadLetterConfig {
                 target_arn: self.target_arn,
@@ -1821,7 +1837,7 @@ pub mod dead_letter_config {
     }
 }
 impl DeadLetterConfig {
-    /// Creates a new builder-style object to manufacture [`DeadLetterConfig`](crate::model::DeadLetterConfig)
+    /// Creates a new builder-style object to manufacture [`DeadLetterConfig`](crate::model::DeadLetterConfig).
     pub fn builder() -> crate::model::dead_letter_config::Builder {
         crate::model::dead_letter_config::Builder::default()
     }
@@ -1832,10 +1848,13 @@ impl DeadLetterConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcConfigResponse {
     /// <p>A list of VPC subnet IDs.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of VPC security groups IDs.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ID of the VPC.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
 }
 impl VpcConfigResponse {
@@ -1861,11 +1880,10 @@ impl std::fmt::Debug for VpcConfigResponse {
         formatter.finish()
     }
 }
-/// See [`VpcConfigResponse`](crate::model::VpcConfigResponse)
+/// See [`VpcConfigResponse`](crate::model::VpcConfigResponse).
 pub mod vpc_config_response {
 
-    /// A builder for [`VpcConfigResponse`](crate::model::VpcConfigResponse)
-    #[non_exhaustive]
+    /// A builder for [`VpcConfigResponse`](crate::model::VpcConfigResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1921,7 +1939,7 @@ pub mod vpc_config_response {
             self.vpc_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcConfigResponse`](crate::model::VpcConfigResponse)
+        /// Consumes the builder and constructs a [`VpcConfigResponse`](crate::model::VpcConfigResponse).
         pub fn build(self) -> crate::model::VpcConfigResponse {
             crate::model::VpcConfigResponse {
                 subnet_ids: self.subnet_ids,
@@ -1932,7 +1950,7 @@ pub mod vpc_config_response {
     }
 }
 impl VpcConfigResponse {
-    /// Creates a new builder-style object to manufacture [`VpcConfigResponse`](crate::model::VpcConfigResponse)
+    /// Creates a new builder-style object to manufacture [`VpcConfigResponse`](crate::model::VpcConfigResponse).
     pub fn builder() -> crate::model::vpc_config_response::Builder {
         crate::model::vpc_config_response::Builder::default()
     }
@@ -2126,6 +2144,7 @@ impl AsRef<str> for Runtime {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TracingConfig {
     /// <p>The tracing mode.</p>
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::TracingMode>,
 }
 impl TracingConfig {
@@ -2141,11 +2160,10 @@ impl std::fmt::Debug for TracingConfig {
         formatter.finish()
     }
 }
-/// See [`TracingConfig`](crate::model::TracingConfig)
+/// See [`TracingConfig`](crate::model::TracingConfig).
 pub mod tracing_config {
 
-    /// A builder for [`TracingConfig`](crate::model::TracingConfig)
-    #[non_exhaustive]
+    /// A builder for [`TracingConfig`](crate::model::TracingConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mode: std::option::Option<crate::model::TracingMode>,
@@ -2161,14 +2179,14 @@ pub mod tracing_config {
             self.mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`TracingConfig`](crate::model::TracingConfig)
+        /// Consumes the builder and constructs a [`TracingConfig`](crate::model::TracingConfig).
         pub fn build(self) -> crate::model::TracingConfig {
             crate::model::TracingConfig { mode: self.mode }
         }
     }
 }
 impl TracingConfig {
-    /// Creates a new builder-style object to manufacture [`TracingConfig`](crate::model::TracingConfig)
+    /// Creates a new builder-style object to manufacture [`TracingConfig`](crate::model::TracingConfig).
     pub fn builder() -> crate::model::tracing_config::Builder {
         crate::model::tracing_config::Builder::default()
     }
@@ -2179,6 +2197,7 @@ impl TracingConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Environment {
     /// <p>Environment variable key-value pairs. For more information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html">Using Lambda environment variables</a>.</p>
+    #[doc(hidden)]
     pub variables:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2198,11 +2217,10 @@ impl std::fmt::Debug for Environment {
         formatter.finish()
     }
 }
-/// See [`Environment`](crate::model::Environment)
+/// See [`Environment`](crate::model::Environment).
 pub mod environment {
 
-    /// A builder for [`Environment`](crate::model::Environment)
-    #[non_exhaustive]
+    /// A builder for [`Environment`](crate::model::Environment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) variables: std::option::Option<
@@ -2235,7 +2253,7 @@ pub mod environment {
             self.variables = input;
             self
         }
-        /// Consumes the builder and constructs a [`Environment`](crate::model::Environment)
+        /// Consumes the builder and constructs a [`Environment`](crate::model::Environment).
         pub fn build(self) -> crate::model::Environment {
             crate::model::Environment {
                 variables: self.variables,
@@ -2244,7 +2262,7 @@ pub mod environment {
     }
 }
 impl Environment {
-    /// Creates a new builder-style object to manufacture [`Environment`](crate::model::Environment)
+    /// Creates a new builder-style object to manufacture [`Environment`](crate::model::Environment).
     pub fn builder() -> crate::model::environment::Builder {
         crate::model::environment::Builder::default()
     }
@@ -2255,8 +2273,10 @@ impl Environment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcConfig {
     /// <p>A list of VPC subnet IDs.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of VPC security groups IDs.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VpcConfig {
@@ -2277,11 +2297,10 @@ impl std::fmt::Debug for VpcConfig {
         formatter.finish()
     }
 }
-/// See [`VpcConfig`](crate::model::VpcConfig)
+/// See [`VpcConfig`](crate::model::VpcConfig).
 pub mod vpc_config {
 
-    /// A builder for [`VpcConfig`](crate::model::VpcConfig)
-    #[non_exhaustive]
+    /// A builder for [`VpcConfig`](crate::model::VpcConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2326,7 +2345,7 @@ pub mod vpc_config {
             self.security_group_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcConfig`](crate::model::VpcConfig)
+        /// Consumes the builder and constructs a [`VpcConfig`](crate::model::VpcConfig).
         pub fn build(self) -> crate::model::VpcConfig {
             crate::model::VpcConfig {
                 subnet_ids: self.subnet_ids,
@@ -2336,7 +2355,7 @@ pub mod vpc_config {
     }
 }
 impl VpcConfig {
-    /// Creates a new builder-style object to manufacture [`VpcConfig`](crate::model::VpcConfig)
+    /// Creates a new builder-style object to manufacture [`VpcConfig`](crate::model::VpcConfig).
     pub fn builder() -> crate::model::vpc_config::Builder {
         crate::model::vpc_config::Builder::default()
     }
@@ -2398,6 +2417,7 @@ impl AsRef<str> for FunctionResponseType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SelfManagedEventSource {
     /// <p>The list of bootstrap servers for your Kafka brokers in the following format: <code>"KAFKA_BOOTSTRAP_SERVERS": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]</code>.</p>
+    #[doc(hidden)]
     pub endpoints: std::option::Option<
         std::collections::HashMap<crate::model::EndPointType, std::vec::Vec<std::string::String>>,
     >,
@@ -2419,11 +2439,10 @@ impl std::fmt::Debug for SelfManagedEventSource {
         formatter.finish()
     }
 }
-/// See [`SelfManagedEventSource`](crate::model::SelfManagedEventSource)
+/// See [`SelfManagedEventSource`](crate::model::SelfManagedEventSource).
 pub mod self_managed_event_source {
 
-    /// A builder for [`SelfManagedEventSource`](crate::model::SelfManagedEventSource)
-    #[non_exhaustive]
+    /// A builder for [`SelfManagedEventSource`](crate::model::SelfManagedEventSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoints: std::option::Option<
@@ -2462,7 +2481,7 @@ pub mod self_managed_event_source {
             self.endpoints = input;
             self
         }
-        /// Consumes the builder and constructs a [`SelfManagedEventSource`](crate::model::SelfManagedEventSource)
+        /// Consumes the builder and constructs a [`SelfManagedEventSource`](crate::model::SelfManagedEventSource).
         pub fn build(self) -> crate::model::SelfManagedEventSource {
             crate::model::SelfManagedEventSource {
                 endpoints: self.endpoints,
@@ -2471,7 +2490,7 @@ pub mod self_managed_event_source {
     }
 }
 impl SelfManagedEventSource {
-    /// Creates a new builder-style object to manufacture [`SelfManagedEventSource`](crate::model::SelfManagedEventSource)
+    /// Creates a new builder-style object to manufacture [`SelfManagedEventSource`](crate::model::SelfManagedEventSource).
     pub fn builder() -> crate::model::self_managed_event_source::Builder {
         crate::model::self_managed_event_source::Builder::default()
     }
@@ -2544,8 +2563,10 @@ pub struct SourceAccessConfiguration {
     /// <li> <p> <code>CLIENT_CERTIFICATE_TLS_AUTH</code> - (Amazon MSK, Self-managed Apache Kafka) The Secrets Manager ARN of your secret key containing the certificate chain (X.509 PEM), private key (PKCS#8 PEM), and private key password (optional) used for mutual TLS authentication of your MSK/Apache Kafka brokers.</p> </li>
     /// <li> <p> <code>SERVER_ROOT_CA_CERTIFICATE</code> - (Self-managed Apache Kafka) The Secrets Manager ARN of your secret key containing the root CA certificate (X.509 PEM) used for TLS encryption of your Apache Kafka brokers. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::SourceAccessType>,
     /// <p>The value for your chosen configuration in <code>Type</code>. For example: <code>"URI": "arn:aws:secretsmanager:us-east-1:01234567890:secret:MyBrokerSecretName"</code>.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
 }
 impl SourceAccessConfiguration {
@@ -2577,11 +2598,10 @@ impl std::fmt::Debug for SourceAccessConfiguration {
         formatter.finish()
     }
 }
-/// See [`SourceAccessConfiguration`](crate::model::SourceAccessConfiguration)
+/// See [`SourceAccessConfiguration`](crate::model::SourceAccessConfiguration).
 pub mod source_access_configuration {
 
-    /// A builder for [`SourceAccessConfiguration`](crate::model::SourceAccessConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SourceAccessConfiguration`](crate::model::SourceAccessConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::SourceAccessType>,
@@ -2633,7 +2653,7 @@ pub mod source_access_configuration {
             self.uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceAccessConfiguration`](crate::model::SourceAccessConfiguration)
+        /// Consumes the builder and constructs a [`SourceAccessConfiguration`](crate::model::SourceAccessConfiguration).
         pub fn build(self) -> crate::model::SourceAccessConfiguration {
             crate::model::SourceAccessConfiguration {
                 r#type: self.r#type,
@@ -2643,7 +2663,7 @@ pub mod source_access_configuration {
     }
 }
 impl SourceAccessConfiguration {
-    /// Creates a new builder-style object to manufacture [`SourceAccessConfiguration`](crate::model::SourceAccessConfiguration)
+    /// Creates a new builder-style object to manufacture [`SourceAccessConfiguration`](crate::model::SourceAccessConfiguration).
     pub fn builder() -> crate::model::source_access_configuration::Builder {
         crate::model::source_access_configuration::Builder::default()
     }
@@ -2742,6 +2762,7 @@ impl AsRef<str> for SourceAccessType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FilterCriteria {
     /// <p> A list of filters. </p>
+    #[doc(hidden)]
     pub filters: std::option::Option<std::vec::Vec<crate::model::Filter>>,
 }
 impl FilterCriteria {
@@ -2757,11 +2778,10 @@ impl std::fmt::Debug for FilterCriteria {
         formatter.finish()
     }
 }
-/// See [`FilterCriteria`](crate::model::FilterCriteria)
+/// See [`FilterCriteria`](crate::model::FilterCriteria).
 pub mod filter_criteria {
 
-    /// A builder for [`FilterCriteria`](crate::model::FilterCriteria)
-    #[non_exhaustive]
+    /// A builder for [`FilterCriteria`](crate::model::FilterCriteria).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) filters: std::option::Option<std::vec::Vec<crate::model::Filter>>,
@@ -2786,7 +2806,7 @@ pub mod filter_criteria {
             self.filters = input;
             self
         }
-        /// Consumes the builder and constructs a [`FilterCriteria`](crate::model::FilterCriteria)
+        /// Consumes the builder and constructs a [`FilterCriteria`](crate::model::FilterCriteria).
         pub fn build(self) -> crate::model::FilterCriteria {
             crate::model::FilterCriteria {
                 filters: self.filters,
@@ -2795,7 +2815,7 @@ pub mod filter_criteria {
     }
 }
 impl FilterCriteria {
-    /// Creates a new builder-style object to manufacture [`FilterCriteria`](crate::model::FilterCriteria)
+    /// Creates a new builder-style object to manufacture [`FilterCriteria`](crate::model::FilterCriteria).
     pub fn builder() -> crate::model::filter_criteria::Builder {
         crate::model::filter_criteria::Builder::default()
     }
@@ -2806,6 +2826,7 @@ impl FilterCriteria {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
     /// <p> A filter pattern. For more information on the syntax of a filter pattern, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax"> Filter rule syntax</a>. </p>
+    #[doc(hidden)]
     pub pattern: std::option::Option<std::string::String>,
 }
 impl Filter {
@@ -2821,11 +2842,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pattern: std::option::Option<std::string::String>,
@@ -2841,7 +2861,7 @@ pub mod filter {
             self.pattern = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 pattern: self.pattern,
@@ -2850,7 +2870,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -2920,16 +2940,22 @@ impl AsRef<str> for EventSourcePosition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeSigningConfig {
     /// <p>Unique identifer for the Code signing configuration.</p>
+    #[doc(hidden)]
     pub code_signing_config_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Code signing configuration.</p>
+    #[doc(hidden)]
     pub code_signing_config_arn: std::option::Option<std::string::String>,
     /// <p>Code signing configuration description.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>List of allowed publishers.</p>
+    #[doc(hidden)]
     pub allowed_publishers: std::option::Option<crate::model::AllowedPublishers>,
     /// <p>The code signing policy controls the validation failure action for signature mismatch or expiry.</p>
+    #[doc(hidden)]
     pub code_signing_policies: std::option::Option<crate::model::CodeSigningPolicies>,
     /// <p>The date and time that the Code signing configuration was last modified, in ISO-8601 format (YYYY-MM-DDThh:mm:ss.sTZD). </p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<std::string::String>,
 }
 impl CodeSigningConfig {
@@ -2970,11 +2996,10 @@ impl std::fmt::Debug for CodeSigningConfig {
         formatter.finish()
     }
 }
-/// See [`CodeSigningConfig`](crate::model::CodeSigningConfig)
+/// See [`CodeSigningConfig`](crate::model::CodeSigningConfig).
 pub mod code_signing_config {
 
-    /// A builder for [`CodeSigningConfig`](crate::model::CodeSigningConfig)
-    #[non_exhaustive]
+    /// A builder for [`CodeSigningConfig`](crate::model::CodeSigningConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code_signing_config_id: std::option::Option<std::string::String>,
@@ -3060,7 +3085,7 @@ pub mod code_signing_config {
             self.last_modified = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeSigningConfig`](crate::model::CodeSigningConfig)
+        /// Consumes the builder and constructs a [`CodeSigningConfig`](crate::model::CodeSigningConfig).
         pub fn build(self) -> crate::model::CodeSigningConfig {
             crate::model::CodeSigningConfig {
                 code_signing_config_id: self.code_signing_config_id,
@@ -3074,7 +3099,7 @@ pub mod code_signing_config {
     }
 }
 impl CodeSigningConfig {
-    /// Creates a new builder-style object to manufacture [`CodeSigningConfig`](crate::model::CodeSigningConfig)
+    /// Creates a new builder-style object to manufacture [`CodeSigningConfig`](crate::model::CodeSigningConfig).
     pub fn builder() -> crate::model::code_signing_config::Builder {
         crate::model::code_signing_config::Builder::default()
     }
@@ -3086,6 +3111,7 @@ impl CodeSigningConfig {
 pub struct CodeSigningPolicies {
     /// <p>Code signing configuration policy for deployment validation failure. If you set the policy to <code>Enforce</code>, Lambda blocks the deployment request if signature validation checks fail. If you set the policy to <code>Warn</code>, Lambda allows the deployment and creates a CloudWatch log. </p>
     /// <p>Default value: <code>Warn</code> </p>
+    #[doc(hidden)]
     pub untrusted_artifact_on_deployment: std::option::Option<crate::model::CodeSigningPolicy>,
 }
 impl CodeSigningPolicies {
@@ -3107,11 +3133,10 @@ impl std::fmt::Debug for CodeSigningPolicies {
         formatter.finish()
     }
 }
-/// See [`CodeSigningPolicies`](crate::model::CodeSigningPolicies)
+/// See [`CodeSigningPolicies`](crate::model::CodeSigningPolicies).
 pub mod code_signing_policies {
 
-    /// A builder for [`CodeSigningPolicies`](crate::model::CodeSigningPolicies)
-    #[non_exhaustive]
+    /// A builder for [`CodeSigningPolicies`](crate::model::CodeSigningPolicies).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) untrusted_artifact_on_deployment:
@@ -3136,7 +3161,7 @@ pub mod code_signing_policies {
             self.untrusted_artifact_on_deployment = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeSigningPolicies`](crate::model::CodeSigningPolicies)
+        /// Consumes the builder and constructs a [`CodeSigningPolicies`](crate::model::CodeSigningPolicies).
         pub fn build(self) -> crate::model::CodeSigningPolicies {
             crate::model::CodeSigningPolicies {
                 untrusted_artifact_on_deployment: self.untrusted_artifact_on_deployment,
@@ -3145,7 +3170,7 @@ pub mod code_signing_policies {
     }
 }
 impl CodeSigningPolicies {
-    /// Creates a new builder-style object to manufacture [`CodeSigningPolicies`](crate::model::CodeSigningPolicies)
+    /// Creates a new builder-style object to manufacture [`CodeSigningPolicies`](crate::model::CodeSigningPolicies).
     pub fn builder() -> crate::model::code_signing_policies::Builder {
         crate::model::code_signing_policies::Builder::default()
     }
@@ -3211,6 +3236,7 @@ impl AsRef<str> for CodeSigningPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AllowedPublishers {
     /// <p>The Amazon Resource Name (ARN) for each of the signing profiles. A signing profile defines a trusted user who can sign a code package. </p>
+    #[doc(hidden)]
     pub signing_profile_version_arns: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AllowedPublishers {
@@ -3229,11 +3255,10 @@ impl std::fmt::Debug for AllowedPublishers {
         formatter.finish()
     }
 }
-/// See [`AllowedPublishers`](crate::model::AllowedPublishers)
+/// See [`AllowedPublishers`](crate::model::AllowedPublishers).
 pub mod allowed_publishers {
 
-    /// A builder for [`AllowedPublishers`](crate::model::AllowedPublishers)
-    #[non_exhaustive]
+    /// A builder for [`AllowedPublishers`](crate::model::AllowedPublishers).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) signing_profile_version_arns:
@@ -3262,7 +3287,7 @@ pub mod allowed_publishers {
             self.signing_profile_version_arns = input;
             self
         }
-        /// Consumes the builder and constructs a [`AllowedPublishers`](crate::model::AllowedPublishers)
+        /// Consumes the builder and constructs a [`AllowedPublishers`](crate::model::AllowedPublishers).
         pub fn build(self) -> crate::model::AllowedPublishers {
             crate::model::AllowedPublishers {
                 signing_profile_version_arns: self.signing_profile_version_arns,
@@ -3271,7 +3296,7 @@ pub mod allowed_publishers {
     }
 }
 impl AllowedPublishers {
-    /// Creates a new builder-style object to manufacture [`AllowedPublishers`](crate::model::AllowedPublishers)
+    /// Creates a new builder-style object to manufacture [`AllowedPublishers`](crate::model::AllowedPublishers).
     pub fn builder() -> crate::model::allowed_publishers::Builder {
         crate::model::allowed_publishers::Builder::default()
     }
@@ -3282,6 +3307,7 @@ impl AllowedPublishers {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AliasRoutingConfiguration {
     /// <p>The second version, and the percentage of traffic that's routed to it.</p>
+    #[doc(hidden)]
     pub additional_version_weights:
         std::option::Option<std::collections::HashMap<std::string::String, f64>>,
 }
@@ -3303,11 +3329,10 @@ impl std::fmt::Debug for AliasRoutingConfiguration {
         formatter.finish()
     }
 }
-/// See [`AliasRoutingConfiguration`](crate::model::AliasRoutingConfiguration)
+/// See [`AliasRoutingConfiguration`](crate::model::AliasRoutingConfiguration).
 pub mod alias_routing_configuration {
 
-    /// A builder for [`AliasRoutingConfiguration`](crate::model::AliasRoutingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AliasRoutingConfiguration`](crate::model::AliasRoutingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) additional_version_weights:
@@ -3337,7 +3362,7 @@ pub mod alias_routing_configuration {
             self.additional_version_weights = input;
             self
         }
-        /// Consumes the builder and constructs a [`AliasRoutingConfiguration`](crate::model::AliasRoutingConfiguration)
+        /// Consumes the builder and constructs a [`AliasRoutingConfiguration`](crate::model::AliasRoutingConfiguration).
         pub fn build(self) -> crate::model::AliasRoutingConfiguration {
             crate::model::AliasRoutingConfiguration {
                 additional_version_weights: self.additional_version_weights,
@@ -3346,7 +3371,7 @@ pub mod alias_routing_configuration {
     }
 }
 impl AliasRoutingConfiguration {
-    /// Creates a new builder-style object to manufacture [`AliasRoutingConfiguration`](crate::model::AliasRoutingConfiguration)
+    /// Creates a new builder-style object to manufacture [`AliasRoutingConfiguration`](crate::model::AliasRoutingConfiguration).
     pub fn builder() -> crate::model::alias_routing_configuration::Builder {
         crate::model::alias_routing_configuration::Builder::default()
     }
@@ -3416,14 +3441,19 @@ impl AsRef<str> for ProvisionedConcurrencyStatusEnum {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LayerVersionContentOutput {
     /// <p>A link to the layer archive in Amazon S3 that is valid for 10 minutes.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>The SHA-256 hash of the layer archive.</p>
+    #[doc(hidden)]
     pub code_sha256: std::option::Option<std::string::String>,
     /// <p>The size of the layer archive in bytes.</p>
+    #[doc(hidden)]
     pub code_size: i64,
     /// <p>The Amazon Resource Name (ARN) for a signing profile version.</p>
+    #[doc(hidden)]
     pub signing_profile_version_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of a signing job.</p>
+    #[doc(hidden)]
     pub signing_job_arn: std::option::Option<std::string::String>,
 }
 impl LayerVersionContentOutput {
@@ -3462,11 +3492,10 @@ impl std::fmt::Debug for LayerVersionContentOutput {
         formatter.finish()
     }
 }
-/// See [`LayerVersionContentOutput`](crate::model::LayerVersionContentOutput)
+/// See [`LayerVersionContentOutput`](crate::model::LayerVersionContentOutput).
 pub mod layer_version_content_output {
 
-    /// A builder for [`LayerVersionContentOutput`](crate::model::LayerVersionContentOutput)
-    #[non_exhaustive]
+    /// A builder for [`LayerVersionContentOutput`](crate::model::LayerVersionContentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location: std::option::Option<std::string::String>,
@@ -3535,7 +3564,7 @@ pub mod layer_version_content_output {
             self.signing_job_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`LayerVersionContentOutput`](crate::model::LayerVersionContentOutput)
+        /// Consumes the builder and constructs a [`LayerVersionContentOutput`](crate::model::LayerVersionContentOutput).
         pub fn build(self) -> crate::model::LayerVersionContentOutput {
             crate::model::LayerVersionContentOutput {
                 location: self.location,
@@ -3548,7 +3577,7 @@ pub mod layer_version_content_output {
     }
 }
 impl LayerVersionContentOutput {
-    /// Creates a new builder-style object to manufacture [`LayerVersionContentOutput`](crate::model::LayerVersionContentOutput)
+    /// Creates a new builder-style object to manufacture [`LayerVersionContentOutput`](crate::model::LayerVersionContentOutput).
     pub fn builder() -> crate::model::layer_version_content_output::Builder {
         crate::model::layer_version_content_output::Builder::default()
     }
@@ -3559,12 +3588,16 @@ impl LayerVersionContentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LayerVersionContentInput {
     /// <p>The Amazon S3 bucket of the layer archive.</p>
+    #[doc(hidden)]
     pub s3_bucket: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 key of the layer archive.</p>
+    #[doc(hidden)]
     pub s3_key: std::option::Option<std::string::String>,
     /// <p>For versioned objects, the version of the layer archive object to use.</p>
+    #[doc(hidden)]
     pub s3_object_version: std::option::Option<std::string::String>,
     /// <p>The base64-encoded contents of the layer archive. Amazon Web Services SDK and Amazon Web Services CLI clients handle the encoding for you.</p>
+    #[doc(hidden)]
     pub zip_file: std::option::Option<aws_smithy_types::Blob>,
 }
 impl LayerVersionContentInput {
@@ -3595,11 +3628,10 @@ impl std::fmt::Debug for LayerVersionContentInput {
         formatter.finish()
     }
 }
-/// See [`LayerVersionContentInput`](crate::model::LayerVersionContentInput)
+/// See [`LayerVersionContentInput`](crate::model::LayerVersionContentInput).
 pub mod layer_version_content_input {
 
-    /// A builder for [`LayerVersionContentInput`](crate::model::LayerVersionContentInput)
-    #[non_exhaustive]
+    /// A builder for [`LayerVersionContentInput`](crate::model::LayerVersionContentInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_bucket: std::option::Option<std::string::String>,
@@ -3651,7 +3683,7 @@ pub mod layer_version_content_input {
             self.zip_file = input;
             self
         }
-        /// Consumes the builder and constructs a [`LayerVersionContentInput`](crate::model::LayerVersionContentInput)
+        /// Consumes the builder and constructs a [`LayerVersionContentInput`](crate::model::LayerVersionContentInput).
         pub fn build(self) -> crate::model::LayerVersionContentInput {
             crate::model::LayerVersionContentInput {
                 s3_bucket: self.s3_bucket,
@@ -3663,7 +3695,7 @@ pub mod layer_version_content_input {
     }
 }
 impl LayerVersionContentInput {
-    /// Creates a new builder-style object to manufacture [`LayerVersionContentInput`](crate::model::LayerVersionContentInput)
+    /// Creates a new builder-style object to manufacture [`LayerVersionContentInput`](crate::model::LayerVersionContentInput).
     pub fn builder() -> crate::model::layer_version_content_input::Builder {
         crate::model::layer_version_content_input::Builder::default()
     }
@@ -3674,71 +3706,104 @@ impl LayerVersionContentInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FunctionConfiguration {
     /// <p>The name of the function.</p>
+    #[doc(hidden)]
     pub function_name: std::option::Option<std::string::String>,
     /// <p>The function's Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub function_arn: std::option::Option<std::string::String>,
     /// <p>The runtime environment for the Lambda function.</p>
+    #[doc(hidden)]
     pub runtime: std::option::Option<crate::model::Runtime>,
     /// <p>The function's execution role.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<std::string::String>,
     /// <p>The function that Lambda calls to begin executing your function.</p>
+    #[doc(hidden)]
     pub handler: std::option::Option<std::string::String>,
     /// <p>The size of the function's deployment package, in bytes.</p>
+    #[doc(hidden)]
     pub code_size: i64,
     /// <p>The function's description.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The amount of time in seconds that Lambda allows a function to run before stopping it.</p>
+    #[doc(hidden)]
     pub timeout: std::option::Option<i32>,
     /// <p>The amount of memory available to the function at runtime. </p>
+    #[doc(hidden)]
     pub memory_size: std::option::Option<i32>,
     /// <p>The date and time that the function was last updated, in <a href="https://www.w3.org/TR/NOTE-datetime">ISO-8601 format</a> (YYYY-MM-DDThh:mm:ss.sTZD).</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<std::string::String>,
     /// <p>The SHA256 hash of the function's deployment package.</p>
+    #[doc(hidden)]
     pub code_sha256: std::option::Option<std::string::String>,
     /// <p>The version of the Lambda function.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The function's networking configuration.</p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::VpcConfigResponse>,
     /// <p>The function's dead letter queue.</p>
+    #[doc(hidden)]
     pub dead_letter_config: std::option::Option<crate::model::DeadLetterConfig>,
     /// <p>The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html">environment variables</a>.</p>
+    #[doc(hidden)]
     pub environment: std::option::Option<crate::model::EnvironmentResponse>,
     /// <p>The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've configured a customer managed key.</p>
+    #[doc(hidden)]
     pub kms_key_arn: std::option::Option<std::string::String>,
     /// <p>The function's X-Ray tracing configuration.</p>
+    #[doc(hidden)]
     pub tracing_config: std::option::Option<crate::model::TracingConfigResponse>,
     /// <p>For Lambda@Edge functions, the ARN of the main function.</p>
+    #[doc(hidden)]
     pub master_arn: std::option::Option<std::string::String>,
     /// <p>The latest updated revision of the function or alias.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
     /// <p>The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>.</p>
+    #[doc(hidden)]
     pub layers: std::option::Option<std::vec::Vec<crate::model::Layer>>,
     /// <p>The current state of the function. When the state is <code>Inactive</code>, you can reactivate the function by invoking it.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::State>,
     /// <p>The reason for the function's current state.</p>
+    #[doc(hidden)]
     pub state_reason: std::option::Option<std::string::String>,
     /// <p>The reason code for the function's current state. When the code is <code>Creating</code>, you can't invoke or modify the function.</p>
+    #[doc(hidden)]
     pub state_reason_code: std::option::Option<crate::model::StateReasonCode>,
     /// <p>The status of the last update that was performed on the function. This is first set to <code>Successful</code> after function creation completes.</p>
+    #[doc(hidden)]
     pub last_update_status: std::option::Option<crate::model::LastUpdateStatus>,
     /// <p>The reason for the last update that was performed on the function.</p>
+    #[doc(hidden)]
     pub last_update_status_reason: std::option::Option<std::string::String>,
     /// <p>The reason code for the last update that was performed on the function.</p>
+    #[doc(hidden)]
     pub last_update_status_reason_code:
         std::option::Option<crate::model::LastUpdateStatusReasonCode>,
     /// <p>Connection settings for an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-filesystem.html">Amazon EFS file system</a>.</p>
+    #[doc(hidden)]
     pub file_system_configs: std::option::Option<std::vec::Vec<crate::model::FileSystemConfig>>,
     /// <p>The type of deployment package. Set to <code>Image</code> for container image and set <code>Zip</code> for .zip file archive.</p>
+    #[doc(hidden)]
     pub package_type: std::option::Option<crate::model::PackageType>,
     /// <p>The function's image configuration values.</p>
+    #[doc(hidden)]
     pub image_config_response: std::option::Option<crate::model::ImageConfigResponse>,
     /// <p>The ARN of the signing profile version.</p>
+    #[doc(hidden)]
     pub signing_profile_version_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the signing job.</p>
+    #[doc(hidden)]
     pub signing_job_arn: std::option::Option<std::string::String>,
     /// <p>The instruction set architecture that the function supports. Architecture is a string array with one of the valid values. The default architecture value is <code>x86_64</code>.</p>
+    #[doc(hidden)]
     pub architectures: std::option::Option<std::vec::Vec<crate::model::Architecture>>,
     /// <p>The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between 512 and 10240 MB.</p>
+    #[doc(hidden)]
     pub ephemeral_storage: std::option::Option<crate::model::EphemeralStorage>,
 }
 impl FunctionConfiguration {
@@ -3922,11 +3987,10 @@ impl std::fmt::Debug for FunctionConfiguration {
         formatter.finish()
     }
 }
-/// See [`FunctionConfiguration`](crate::model::FunctionConfiguration)
+/// See [`FunctionConfiguration`](crate::model::FunctionConfiguration).
 pub mod function_configuration {
 
-    /// A builder for [`FunctionConfiguration`](crate::model::FunctionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`FunctionConfiguration`](crate::model::FunctionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) function_name: std::option::Option<std::string::String>,
@@ -4374,7 +4438,7 @@ pub mod function_configuration {
             self.ephemeral_storage = input;
             self
         }
-        /// Consumes the builder and constructs a [`FunctionConfiguration`](crate::model::FunctionConfiguration)
+        /// Consumes the builder and constructs a [`FunctionConfiguration`](crate::model::FunctionConfiguration).
         pub fn build(self) -> crate::model::FunctionConfiguration {
             crate::model::FunctionConfiguration {
                 function_name: self.function_name,
@@ -4415,7 +4479,7 @@ pub mod function_configuration {
     }
 }
 impl FunctionConfiguration {
-    /// Creates a new builder-style object to manufacture [`FunctionConfiguration`](crate::model::FunctionConfiguration)
+    /// Creates a new builder-style object to manufacture [`FunctionConfiguration`](crate::model::FunctionConfiguration).
     pub fn builder() -> crate::model::function_configuration::Builder {
         crate::model::function_configuration::Builder::default()
     }
@@ -4426,18 +4490,25 @@ impl FunctionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProvisionedConcurrencyConfigListItem {
     /// <p>The Amazon Resource Name (ARN) of the alias or version.</p>
+    #[doc(hidden)]
     pub function_arn: std::option::Option<std::string::String>,
     /// <p>The amount of provisioned concurrency requested.</p>
+    #[doc(hidden)]
     pub requested_provisioned_concurrent_executions: std::option::Option<i32>,
     /// <p>The amount of provisioned concurrency available.</p>
+    #[doc(hidden)]
     pub available_provisioned_concurrent_executions: std::option::Option<i32>,
     /// <p>The amount of provisioned concurrency allocated.</p>
+    #[doc(hidden)]
     pub allocated_provisioned_concurrent_executions: std::option::Option<i32>,
     /// <p>The status of the allocation process.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ProvisionedConcurrencyStatusEnum>,
     /// <p>For failed allocations, the reason that provisioned concurrency could not be allocated.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>The date and time that a user last updated the configuration, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 format</a>.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<std::string::String>,
 }
 impl ProvisionedConcurrencyConfigListItem {
@@ -4492,11 +4563,10 @@ impl std::fmt::Debug for ProvisionedConcurrencyConfigListItem {
         formatter.finish()
     }
 }
-/// See [`ProvisionedConcurrencyConfigListItem`](crate::model::ProvisionedConcurrencyConfigListItem)
+/// See [`ProvisionedConcurrencyConfigListItem`](crate::model::ProvisionedConcurrencyConfigListItem).
 pub mod provisioned_concurrency_config_list_item {
 
-    /// A builder for [`ProvisionedConcurrencyConfigListItem`](crate::model::ProvisionedConcurrencyConfigListItem)
-    #[non_exhaustive]
+    /// A builder for [`ProvisionedConcurrencyConfigListItem`](crate::model::ProvisionedConcurrencyConfigListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) function_arn: std::option::Option<std::string::String>,
@@ -4596,7 +4666,7 @@ pub mod provisioned_concurrency_config_list_item {
             self.last_modified = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvisionedConcurrencyConfigListItem`](crate::model::ProvisionedConcurrencyConfigListItem)
+        /// Consumes the builder and constructs a [`ProvisionedConcurrencyConfigListItem`](crate::model::ProvisionedConcurrencyConfigListItem).
         pub fn build(self) -> crate::model::ProvisionedConcurrencyConfigListItem {
             crate::model::ProvisionedConcurrencyConfigListItem {
                 function_arn: self.function_arn,
@@ -4614,7 +4684,7 @@ pub mod provisioned_concurrency_config_list_item {
     }
 }
 impl ProvisionedConcurrencyConfigListItem {
-    /// Creates a new builder-style object to manufacture [`ProvisionedConcurrencyConfigListItem`](crate::model::ProvisionedConcurrencyConfigListItem)
+    /// Creates a new builder-style object to manufacture [`ProvisionedConcurrencyConfigListItem`](crate::model::ProvisionedConcurrencyConfigListItem).
     pub fn builder() -> crate::model::provisioned_concurrency_config_list_item::Builder {
         crate::model::provisioned_concurrency_config_list_item::Builder::default()
     }
@@ -4625,18 +4695,25 @@ impl ProvisionedConcurrencyConfigListItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LayerVersionsListItem {
     /// <p>The ARN of the layer version.</p>
+    #[doc(hidden)]
     pub layer_version_arn: std::option::Option<std::string::String>,
     /// <p>The version number.</p>
+    #[doc(hidden)]
     pub version: i64,
     /// <p>The description of the version.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date that the version was created, in ISO 8601 format. For example, <code>2018-11-27T15:10:45.123+0000</code>.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<std::string::String>,
     /// <p>The layer's compatible runtimes.</p>
+    #[doc(hidden)]
     pub compatible_runtimes: std::option::Option<std::vec::Vec<crate::model::Runtime>>,
     /// <p>The layer's open-source license.</p>
+    #[doc(hidden)]
     pub license_info: std::option::Option<std::string::String>,
     /// <p>A list of compatible <a href="https://docs.aws.amazon.com/lambda/latest/dg/foundation-arch.html">instruction set architectures</a>.</p>
+    #[doc(hidden)]
     pub compatible_architectures: std::option::Option<std::vec::Vec<crate::model::Architecture>>,
 }
 impl LayerVersionsListItem {
@@ -4682,11 +4759,10 @@ impl std::fmt::Debug for LayerVersionsListItem {
         formatter.finish()
     }
 }
-/// See [`LayerVersionsListItem`](crate::model::LayerVersionsListItem)
+/// See [`LayerVersionsListItem`](crate::model::LayerVersionsListItem).
 pub mod layer_versions_list_item {
 
-    /// A builder for [`LayerVersionsListItem`](crate::model::LayerVersionsListItem)
-    #[non_exhaustive]
+    /// A builder for [`LayerVersionsListItem`](crate::model::LayerVersionsListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) layer_version_arn: std::option::Option<std::string::String>,
@@ -4790,7 +4866,7 @@ pub mod layer_versions_list_item {
             self.compatible_architectures = input;
             self
         }
-        /// Consumes the builder and constructs a [`LayerVersionsListItem`](crate::model::LayerVersionsListItem)
+        /// Consumes the builder and constructs a [`LayerVersionsListItem`](crate::model::LayerVersionsListItem).
         pub fn build(self) -> crate::model::LayerVersionsListItem {
             crate::model::LayerVersionsListItem {
                 layer_version_arn: self.layer_version_arn,
@@ -4805,7 +4881,7 @@ pub mod layer_versions_list_item {
     }
 }
 impl LayerVersionsListItem {
-    /// Creates a new builder-style object to manufacture [`LayerVersionsListItem`](crate::model::LayerVersionsListItem)
+    /// Creates a new builder-style object to manufacture [`LayerVersionsListItem`](crate::model::LayerVersionsListItem).
     pub fn builder() -> crate::model::layer_versions_list_item::Builder {
         crate::model::layer_versions_list_item::Builder::default()
     }
@@ -4816,10 +4892,13 @@ impl LayerVersionsListItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LayersListItem {
     /// <p>The name of the layer.</p>
+    #[doc(hidden)]
     pub layer_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the function layer.</p>
+    #[doc(hidden)]
     pub layer_arn: std::option::Option<std::string::String>,
     /// <p>The newest version of the layer.</p>
+    #[doc(hidden)]
     pub latest_matching_version: std::option::Option<crate::model::LayerVersionsListItem>,
 }
 impl LayersListItem {
@@ -4847,11 +4926,10 @@ impl std::fmt::Debug for LayersListItem {
         formatter.finish()
     }
 }
-/// See [`LayersListItem`](crate::model::LayersListItem)
+/// See [`LayersListItem`](crate::model::LayersListItem).
 pub mod layers_list_item {
 
-    /// A builder for [`LayersListItem`](crate::model::LayersListItem)
-    #[non_exhaustive]
+    /// A builder for [`LayersListItem`](crate::model::LayersListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) layer_name: std::option::Option<std::string::String>,
@@ -4896,7 +4974,7 @@ pub mod layers_list_item {
             self.latest_matching_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`LayersListItem`](crate::model::LayersListItem)
+        /// Consumes the builder and constructs a [`LayersListItem`](crate::model::LayersListItem).
         pub fn build(self) -> crate::model::LayersListItem {
             crate::model::LayersListItem {
                 layer_name: self.layer_name,
@@ -4907,7 +4985,7 @@ pub mod layers_list_item {
     }
 }
 impl LayersListItem {
-    /// Creates a new builder-style object to manufacture [`LayersListItem`](crate::model::LayersListItem)
+    /// Creates a new builder-style object to manufacture [`LayersListItem`](crate::model::LayersListItem).
     pub fn builder() -> crate::model::layers_list_item::Builder {
         crate::model::layers_list_item::Builder::default()
     }
@@ -4918,16 +4996,22 @@ impl LayersListItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FunctionUrlConfig {
     /// <p>The HTTP URL endpoint for your function.</p>
+    #[doc(hidden)]
     pub function_url: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of your function.</p>
+    #[doc(hidden)]
     pub function_arn: std::option::Option<std::string::String>,
     /// <p>When the function URL was created, in <a href="https://www.w3.org/TR/NOTE-datetime">ISO-8601 format</a> (YYYY-MM-DDThh:mm:ss.sTZD).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<std::string::String>,
     /// <p>When the function URL configuration was last updated, in <a href="https://www.w3.org/TR/NOTE-datetime">ISO-8601 format</a> (YYYY-MM-DDThh:mm:ss.sTZD).</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<std::string::String>,
     /// <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">cross-origin resource sharing (CORS)</a> settings for your function URL.</p>
+    #[doc(hidden)]
     pub cors: std::option::Option<crate::model::Cors>,
     /// <p>The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to restrict access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to bypass IAM authentication to create a public endpoint. For more information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda function URLs</a>.</p>
+    #[doc(hidden)]
     pub auth_type: std::option::Option<crate::model::FunctionUrlAuthType>,
 }
 impl FunctionUrlConfig {
@@ -4968,11 +5052,10 @@ impl std::fmt::Debug for FunctionUrlConfig {
         formatter.finish()
     }
 }
-/// See [`FunctionUrlConfig`](crate::model::FunctionUrlConfig)
+/// See [`FunctionUrlConfig`](crate::model::FunctionUrlConfig).
 pub mod function_url_config {
 
-    /// A builder for [`FunctionUrlConfig`](crate::model::FunctionUrlConfig)
-    #[non_exhaustive]
+    /// A builder for [`FunctionUrlConfig`](crate::model::FunctionUrlConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) function_url: std::option::Option<std::string::String>,
@@ -5052,7 +5135,7 @@ pub mod function_url_config {
             self.auth_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`FunctionUrlConfig`](crate::model::FunctionUrlConfig)
+        /// Consumes the builder and constructs a [`FunctionUrlConfig`](crate::model::FunctionUrlConfig).
         pub fn build(self) -> crate::model::FunctionUrlConfig {
             crate::model::FunctionUrlConfig {
                 function_url: self.function_url,
@@ -5066,7 +5149,7 @@ pub mod function_url_config {
     }
 }
 impl FunctionUrlConfig {
-    /// Creates a new builder-style object to manufacture [`FunctionUrlConfig`](crate::model::FunctionUrlConfig)
+    /// Creates a new builder-style object to manufacture [`FunctionUrlConfig`](crate::model::FunctionUrlConfig).
     pub fn builder() -> crate::model::function_url_config::Builder {
         crate::model::function_url_config::Builder::default()
     }
@@ -5128,12 +5211,16 @@ impl AsRef<str> for FunctionVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FunctionEventInvokeConfig {
     /// <p>The date and time that the configuration was last updated.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) of the function.</p>
+    #[doc(hidden)]
     pub function_arn: std::option::Option<std::string::String>,
     /// <p>The maximum number of times to retry when the function returns an error.</p>
+    #[doc(hidden)]
     pub maximum_retry_attempts: std::option::Option<i32>,
     /// <p>The maximum age of a request that Lambda sends to a function for processing.</p>
+    #[doc(hidden)]
     pub maximum_event_age_in_seconds: std::option::Option<i32>,
     /// <p>A destination for events after they have been sent to a function for processing.</p>
     /// <p class="title"> <b>Destinations</b> </p>
@@ -5143,6 +5230,7 @@ pub struct FunctionEventInvokeConfig {
     /// <li> <p> <b>Topic</b> - The ARN of an SNS topic.</p> </li>
     /// <li> <p> <b>Event Bus</b> - The ARN of an Amazon EventBridge event bus.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub destination_config: std::option::Option<crate::model::DestinationConfig>,
 }
 impl FunctionEventInvokeConfig {
@@ -5188,11 +5276,10 @@ impl std::fmt::Debug for FunctionEventInvokeConfig {
         formatter.finish()
     }
 }
-/// See [`FunctionEventInvokeConfig`](crate::model::FunctionEventInvokeConfig)
+/// See [`FunctionEventInvokeConfig`](crate::model::FunctionEventInvokeConfig).
 pub mod function_event_invoke_config {
 
-    /// A builder for [`FunctionEventInvokeConfig`](crate::model::FunctionEventInvokeConfig)
-    #[non_exhaustive]
+    /// A builder for [`FunctionEventInvokeConfig`](crate::model::FunctionEventInvokeConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) last_modified: std::option::Option<aws_smithy_types::DateTime>,
@@ -5272,7 +5359,7 @@ pub mod function_event_invoke_config {
             self.destination_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`FunctionEventInvokeConfig`](crate::model::FunctionEventInvokeConfig)
+        /// Consumes the builder and constructs a [`FunctionEventInvokeConfig`](crate::model::FunctionEventInvokeConfig).
         pub fn build(self) -> crate::model::FunctionEventInvokeConfig {
             crate::model::FunctionEventInvokeConfig {
                 last_modified: self.last_modified,
@@ -5285,7 +5372,7 @@ pub mod function_event_invoke_config {
     }
 }
 impl FunctionEventInvokeConfig {
-    /// Creates a new builder-style object to manufacture [`FunctionEventInvokeConfig`](crate::model::FunctionEventInvokeConfig)
+    /// Creates a new builder-style object to manufacture [`FunctionEventInvokeConfig`](crate::model::FunctionEventInvokeConfig).
     pub fn builder() -> crate::model::function_event_invoke_config::Builder {
         crate::model::function_event_invoke_config::Builder::default()
     }
@@ -5296,55 +5383,78 @@ impl FunctionEventInvokeConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventSourceMappingConfiguration {
     /// <p>The identifier of the event source mapping.</p>
+    #[doc(hidden)]
     pub uuid: std::option::Option<std::string::String>,
     /// <p>The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams.</p>
+    #[doc(hidden)]
     pub starting_position: std::option::Option<crate::model::EventSourcePosition>,
     /// <p>With <code>StartingPosition</code> set to <code>AT_TIMESTAMP</code>, the time from which to start reading.</p>
+    #[doc(hidden)]
     pub starting_position_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The maximum number of records in each batch that Lambda pulls from your stream or queue and sends to your function. Lambda passes all of the records in the batch to the function in a single call, up to the payload limit for synchronous invocation (6 MB).</p>
     /// <p>Default value: Varies by service. For Amazon SQS, the default is 10. For all other services, the default is 100.</p>
     /// <p>Related setting: When you set <code>BatchSize</code> to a value greater than 10, you must set <code>MaximumBatchingWindowInSeconds</code> to at least 1.</p>
+    #[doc(hidden)]
     pub batch_size: std::option::Option<i32>,
     /// <p>(Streams and Amazon SQS standard queues) The maximum amount of time, in seconds, that Lambda spends gathering records before invoking the function.</p>
     /// <p>Default: 0</p>
     /// <p>Related setting: When you set <code>BatchSize</code> to a value greater than 10, you must set <code>MaximumBatchingWindowInSeconds</code> to at least 1.</p>
+    #[doc(hidden)]
     pub maximum_batching_window_in_seconds: std::option::Option<i32>,
     /// <p>(Streams only) The number of batches to process concurrently from each shard. The default value is 1.</p>
+    #[doc(hidden)]
     pub parallelization_factor: std::option::Option<i32>,
     /// <p>The Amazon Resource Name (ARN) of the event source.</p>
+    #[doc(hidden)]
     pub event_source_arn: std::option::Option<std::string::String>,
     /// <p>(Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should process an event. For more information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.</p>
+    #[doc(hidden)]
     pub filter_criteria: std::option::Option<crate::model::FilterCriteria>,
     /// <p>The ARN of the Lambda function.</p>
+    #[doc(hidden)]
     pub function_arn: std::option::Option<std::string::String>,
     /// <p>The date that the event source mapping was last updated or that its state changed.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The result of the last Lambda invocation of your function.</p>
+    #[doc(hidden)]
     pub last_processing_result: std::option::Option<std::string::String>,
     /// <p>The state of the event source mapping. It can be one of the following: <code>Creating</code>, <code>Enabling</code>, <code>Enabled</code>, <code>Disabling</code>, <code>Disabled</code>, <code>Updating</code>, or <code>Deleting</code>.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>Indicates whether a user or Lambda made the last change to the event source mapping.</p>
+    #[doc(hidden)]
     pub state_transition_reason: std::option::Option<std::string::String>,
     /// <p>(Streams only) An Amazon SQS queue or Amazon SNS topic destination for discarded records.</p>
+    #[doc(hidden)]
     pub destination_config: std::option::Option<crate::model::DestinationConfig>,
     /// <p>The name of the Kafka topic.</p>
+    #[doc(hidden)]
     pub topics: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.</p>
+    #[doc(hidden)]
     pub queues: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array of the authentication protocol, VPC components, or virtual host to secure and define your event source.</p>
+    #[doc(hidden)]
     pub source_access_configurations:
         std::option::Option<std::vec::Vec<crate::model::SourceAccessConfiguration>>,
     /// <p>The self-managed Apache Kafka cluster for your event source.</p>
+    #[doc(hidden)]
     pub self_managed_event_source: std::option::Option<crate::model::SelfManagedEventSource>,
     /// <p>(Streams only) Discard records older than the specified age. The default value is -1, which sets the maximum age to infinite. When the value is set to infinite, Lambda never discards old records. </p>
+    #[doc(hidden)]
     pub maximum_record_age_in_seconds: std::option::Option<i32>,
     /// <p>(Streams only) If the function returns an error, split the batch in two and retry. The default value is false.</p>
+    #[doc(hidden)]
     pub bisect_batch_on_function_error: std::option::Option<bool>,
     /// <p>(Streams only) Discard records after the specified number of retries. The default value is -1, which sets the maximum number of retries to infinite. When MaximumRetryAttempts is infinite, Lambda retries failed records until the record expires in the event source.</p>
+    #[doc(hidden)]
     pub maximum_retry_attempts: std::option::Option<i32>,
     /// <p>(Streams only) The duration in seconds of a processing window. The range is 1–900 seconds.</p>
+    #[doc(hidden)]
     pub tumbling_window_in_seconds: std::option::Option<i32>,
     /// <p>(Streams and Amazon SQS) A list of current response type enums applied to the event source mapping.</p>
+    #[doc(hidden)]
     pub function_response_types:
         std::option::Option<std::vec::Vec<crate::model::FunctionResponseType>>,
 }
@@ -5499,11 +5609,10 @@ impl std::fmt::Debug for EventSourceMappingConfiguration {
         formatter.finish()
     }
 }
-/// See [`EventSourceMappingConfiguration`](crate::model::EventSourceMappingConfiguration)
+/// See [`EventSourceMappingConfiguration`](crate::model::EventSourceMappingConfiguration).
 pub mod event_source_mapping_configuration {
 
-    /// A builder for [`EventSourceMappingConfiguration`](crate::model::EventSourceMappingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`EventSourceMappingConfiguration`](crate::model::EventSourceMappingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) uuid: std::option::Option<std::string::String>,
@@ -5853,7 +5962,7 @@ pub mod event_source_mapping_configuration {
             self.function_response_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventSourceMappingConfiguration`](crate::model::EventSourceMappingConfiguration)
+        /// Consumes the builder and constructs a [`EventSourceMappingConfiguration`](crate::model::EventSourceMappingConfiguration).
         pub fn build(self) -> crate::model::EventSourceMappingConfiguration {
             crate::model::EventSourceMappingConfiguration {
                 uuid: self.uuid,
@@ -5884,7 +5993,7 @@ pub mod event_source_mapping_configuration {
     }
 }
 impl EventSourceMappingConfiguration {
-    /// Creates a new builder-style object to manufacture [`EventSourceMappingConfiguration`](crate::model::EventSourceMappingConfiguration)
+    /// Creates a new builder-style object to manufacture [`EventSourceMappingConfiguration`](crate::model::EventSourceMappingConfiguration).
     pub fn builder() -> crate::model::event_source_mapping_configuration::Builder {
         crate::model::event_source_mapping_configuration::Builder::default()
     }
@@ -5895,16 +6004,22 @@ impl EventSourceMappingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AliasConfiguration {
     /// <p>The Amazon Resource Name (ARN) of the alias.</p>
+    #[doc(hidden)]
     pub alias_arn: std::option::Option<std::string::String>,
     /// <p>The name of the alias.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The function version that the alias invokes.</p>
+    #[doc(hidden)]
     pub function_version: std::option::Option<std::string::String>,
     /// <p>A description of the alias.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-traffic-shifting-using-aliases.html">routing configuration</a> of the alias.</p>
+    #[doc(hidden)]
     pub routing_config: std::option::Option<crate::model::AliasRoutingConfiguration>,
     /// <p>A unique identifier that changes when you update the alias.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl AliasConfiguration {
@@ -5945,11 +6060,10 @@ impl std::fmt::Debug for AliasConfiguration {
         formatter.finish()
     }
 }
-/// See [`AliasConfiguration`](crate::model::AliasConfiguration)
+/// See [`AliasConfiguration`](crate::model::AliasConfiguration).
 pub mod alias_configuration {
 
-    /// A builder for [`AliasConfiguration`](crate::model::AliasConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AliasConfiguration`](crate::model::AliasConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alias_arn: std::option::Option<std::string::String>,
@@ -6026,7 +6140,7 @@ pub mod alias_configuration {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`AliasConfiguration`](crate::model::AliasConfiguration)
+        /// Consumes the builder and constructs a [`AliasConfiguration`](crate::model::AliasConfiguration).
         pub fn build(self) -> crate::model::AliasConfiguration {
             crate::model::AliasConfiguration {
                 alias_arn: self.alias_arn,
@@ -6040,7 +6154,7 @@ pub mod alias_configuration {
     }
 }
 impl AliasConfiguration {
-    /// Creates a new builder-style object to manufacture [`AliasConfiguration`](crate::model::AliasConfiguration)
+    /// Creates a new builder-style object to manufacture [`AliasConfiguration`](crate::model::AliasConfiguration).
     pub fn builder() -> crate::model::alias_configuration::Builder {
         crate::model::alias_configuration::Builder::default()
     }
@@ -6165,6 +6279,7 @@ impl AsRef<str> for InvocationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Concurrency {
     /// <p>The number of concurrent executions that are reserved for this function. For more information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html">Managing Concurrency</a>.</p>
+    #[doc(hidden)]
     pub reserved_concurrent_executions: std::option::Option<i32>,
 }
 impl Concurrency {
@@ -6183,11 +6298,10 @@ impl std::fmt::Debug for Concurrency {
         formatter.finish()
     }
 }
-/// See [`Concurrency`](crate::model::Concurrency)
+/// See [`Concurrency`](crate::model::Concurrency).
 pub mod concurrency {
 
-    /// A builder for [`Concurrency`](crate::model::Concurrency)
-    #[non_exhaustive]
+    /// A builder for [`Concurrency`](crate::model::Concurrency).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reserved_concurrent_executions: std::option::Option<i32>,
@@ -6206,7 +6320,7 @@ pub mod concurrency {
             self.reserved_concurrent_executions = input;
             self
         }
-        /// Consumes the builder and constructs a [`Concurrency`](crate::model::Concurrency)
+        /// Consumes the builder and constructs a [`Concurrency`](crate::model::Concurrency).
         pub fn build(self) -> crate::model::Concurrency {
             crate::model::Concurrency {
                 reserved_concurrent_executions: self.reserved_concurrent_executions,
@@ -6215,7 +6329,7 @@ pub mod concurrency {
     }
 }
 impl Concurrency {
-    /// Creates a new builder-style object to manufacture [`Concurrency`](crate::model::Concurrency)
+    /// Creates a new builder-style object to manufacture [`Concurrency`](crate::model::Concurrency).
     pub fn builder() -> crate::model::concurrency::Builder {
         crate::model::concurrency::Builder::default()
     }
@@ -6226,12 +6340,16 @@ impl Concurrency {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FunctionCodeLocation {
     /// <p>The service that's hosting the file.</p>
+    #[doc(hidden)]
     pub repository_type: std::option::Option<std::string::String>,
     /// <p>A presigned URL that you can use to download the deployment package.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>URI of a container image in the Amazon ECR registry.</p>
+    #[doc(hidden)]
     pub image_uri: std::option::Option<std::string::String>,
     /// <p>The resolved URI for the image.</p>
+    #[doc(hidden)]
     pub resolved_image_uri: std::option::Option<std::string::String>,
 }
 impl FunctionCodeLocation {
@@ -6262,11 +6380,10 @@ impl std::fmt::Debug for FunctionCodeLocation {
         formatter.finish()
     }
 }
-/// See [`FunctionCodeLocation`](crate::model::FunctionCodeLocation)
+/// See [`FunctionCodeLocation`](crate::model::FunctionCodeLocation).
 pub mod function_code_location {
 
-    /// A builder for [`FunctionCodeLocation`](crate::model::FunctionCodeLocation)
-    #[non_exhaustive]
+    /// A builder for [`FunctionCodeLocation`](crate::model::FunctionCodeLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) repository_type: std::option::Option<std::string::String>,
@@ -6321,7 +6438,7 @@ pub mod function_code_location {
             self.resolved_image_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`FunctionCodeLocation`](crate::model::FunctionCodeLocation)
+        /// Consumes the builder and constructs a [`FunctionCodeLocation`](crate::model::FunctionCodeLocation).
         pub fn build(self) -> crate::model::FunctionCodeLocation {
             crate::model::FunctionCodeLocation {
                 repository_type: self.repository_type,
@@ -6333,7 +6450,7 @@ pub mod function_code_location {
     }
 }
 impl FunctionCodeLocation {
-    /// Creates a new builder-style object to manufacture [`FunctionCodeLocation`](crate::model::FunctionCodeLocation)
+    /// Creates a new builder-style object to manufacture [`FunctionCodeLocation`](crate::model::FunctionCodeLocation).
     pub fn builder() -> crate::model::function_code_location::Builder {
         crate::model::function_code_location::Builder::default()
     }
@@ -6344,8 +6461,10 @@ impl FunctionCodeLocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountUsage {
     /// <p>The amount of storage space, in bytes, that's being used by deployment packages and layer archives.</p>
+    #[doc(hidden)]
     pub total_code_size: i64,
     /// <p>The number of Lambda functions.</p>
+    #[doc(hidden)]
     pub function_count: i64,
 }
 impl AccountUsage {
@@ -6366,11 +6485,10 @@ impl std::fmt::Debug for AccountUsage {
         formatter.finish()
     }
 }
-/// See [`AccountUsage`](crate::model::AccountUsage)
+/// See [`AccountUsage`](crate::model::AccountUsage).
 pub mod account_usage {
 
-    /// A builder for [`AccountUsage`](crate::model::AccountUsage)
-    #[non_exhaustive]
+    /// A builder for [`AccountUsage`](crate::model::AccountUsage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_code_size: std::option::Option<i64>,
@@ -6397,7 +6515,7 @@ pub mod account_usage {
             self.function_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountUsage`](crate::model::AccountUsage)
+        /// Consumes the builder and constructs a [`AccountUsage`](crate::model::AccountUsage).
         pub fn build(self) -> crate::model::AccountUsage {
             crate::model::AccountUsage {
                 total_code_size: self.total_code_size.unwrap_or_default(),
@@ -6407,7 +6525,7 @@ pub mod account_usage {
     }
 }
 impl AccountUsage {
-    /// Creates a new builder-style object to manufacture [`AccountUsage`](crate::model::AccountUsage)
+    /// Creates a new builder-style object to manufacture [`AccountUsage`](crate::model::AccountUsage).
     pub fn builder() -> crate::model::account_usage::Builder {
         crate::model::account_usage::Builder::default()
     }
@@ -6418,14 +6536,19 @@ impl AccountUsage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountLimit {
     /// <p>The amount of storage space that you can use for all deployment packages and layer archives.</p>
+    #[doc(hidden)]
     pub total_code_size: i64,
     /// <p>The maximum size of a function's deployment package and layers when they're extracted.</p>
+    #[doc(hidden)]
     pub code_size_unzipped: i64,
     /// <p>The maximum size of a deployment package when it's uploaded directly to Lambda. Use Amazon S3 for larger files.</p>
+    #[doc(hidden)]
     pub code_size_zipped: i64,
     /// <p>The maximum number of simultaneous function executions.</p>
+    #[doc(hidden)]
     pub concurrent_executions: i32,
     /// <p>The maximum number of simultaneous function executions, minus the capacity that's reserved for individual functions with <code>PutFunctionConcurrency</code>.</p>
+    #[doc(hidden)]
     pub unreserved_concurrent_executions: std::option::Option<i32>,
 }
 impl AccountLimit {
@@ -6464,11 +6587,10 @@ impl std::fmt::Debug for AccountLimit {
         formatter.finish()
     }
 }
-/// See [`AccountLimit`](crate::model::AccountLimit)
+/// See [`AccountLimit`](crate::model::AccountLimit).
 pub mod account_limit {
 
-    /// A builder for [`AccountLimit`](crate::model::AccountLimit)
-    #[non_exhaustive]
+    /// A builder for [`AccountLimit`](crate::model::AccountLimit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_code_size: std::option::Option<i64>,
@@ -6531,7 +6653,7 @@ pub mod account_limit {
             self.unreserved_concurrent_executions = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountLimit`](crate::model::AccountLimit)
+        /// Consumes the builder and constructs a [`AccountLimit`](crate::model::AccountLimit).
         pub fn build(self) -> crate::model::AccountLimit {
             crate::model::AccountLimit {
                 total_code_size: self.total_code_size.unwrap_or_default(),
@@ -6544,7 +6666,7 @@ pub mod account_limit {
     }
 }
 impl AccountLimit {
-    /// Creates a new builder-style object to manufacture [`AccountLimit`](crate::model::AccountLimit)
+    /// Creates a new builder-style object to manufacture [`AccountLimit`](crate::model::AccountLimit).
     pub fn builder() -> crate::model::account_limit::Builder {
         crate::model::account_limit::Builder::default()
     }
@@ -6555,14 +6677,19 @@ impl AccountLimit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FunctionCode {
     /// <p>The base64-encoded contents of the deployment package. Amazon Web Services SDK and Amazon Web Services CLI clients handle the encoding for you.</p>
+    #[doc(hidden)]
     pub zip_file: std::option::Option<aws_smithy_types::Blob>,
     /// <p>An Amazon S3 bucket in the same Amazon Web Services Region as your function. The bucket can be in a different Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub s3_bucket: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 key of the deployment package.</p>
+    #[doc(hidden)]
     pub s3_key: std::option::Option<std::string::String>,
     /// <p>For versioned objects, the version of the deployment package object to use.</p>
+    #[doc(hidden)]
     pub s3_object_version: std::option::Option<std::string::String>,
     /// <p>URI of a <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html">container image</a> in the Amazon ECR registry.</p>
+    #[doc(hidden)]
     pub image_uri: std::option::Option<std::string::String>,
 }
 impl FunctionCode {
@@ -6598,11 +6725,10 @@ impl std::fmt::Debug for FunctionCode {
         formatter.finish()
     }
 }
-/// See [`FunctionCode`](crate::model::FunctionCode)
+/// See [`FunctionCode`](crate::model::FunctionCode).
 pub mod function_code {
 
-    /// A builder for [`FunctionCode`](crate::model::FunctionCode)
-    #[non_exhaustive]
+    /// A builder for [`FunctionCode`](crate::model::FunctionCode).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) zip_file: std::option::Option<aws_smithy_types::Blob>,
@@ -6665,7 +6791,7 @@ pub mod function_code {
             self.image_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`FunctionCode`](crate::model::FunctionCode)
+        /// Consumes the builder and constructs a [`FunctionCode`](crate::model::FunctionCode).
         pub fn build(self) -> crate::model::FunctionCode {
             crate::model::FunctionCode {
                 zip_file: self.zip_file,
@@ -6678,7 +6804,7 @@ pub mod function_code {
     }
 }
 impl FunctionCode {
-    /// Creates a new builder-style object to manufacture [`FunctionCode`](crate::model::FunctionCode)
+    /// Creates a new builder-style object to manufacture [`FunctionCode`](crate::model::FunctionCode).
     pub fn builder() -> crate::model::function_code::Builder {
         crate::model::function_code::Builder::default()
     }

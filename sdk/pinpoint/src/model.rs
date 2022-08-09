@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VerificationResponse {
     /// <p>Specifies whether the OTP is valid or not.</p>
+    #[doc(hidden)]
     pub valid: bool,
 }
 impl VerificationResponse {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for VerificationResponse {
         formatter.finish()
     }
 }
-/// See [`VerificationResponse`](crate::model::VerificationResponse)
+/// See [`VerificationResponse`](crate::model::VerificationResponse).
 pub mod verification_response {
 
-    /// A builder for [`VerificationResponse`](crate::model::VerificationResponse)
-    #[non_exhaustive]
+    /// A builder for [`VerificationResponse`](crate::model::VerificationResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) valid: std::option::Option<bool>,
@@ -40,7 +40,7 @@ pub mod verification_response {
             self.valid = input;
             self
         }
-        /// Consumes the builder and constructs a [`VerificationResponse`](crate::model::VerificationResponse)
+        /// Consumes the builder and constructs a [`VerificationResponse`](crate::model::VerificationResponse).
         pub fn build(self) -> crate::model::VerificationResponse {
             crate::model::VerificationResponse {
                 valid: self.valid.unwrap_or_default(),
@@ -49,7 +49,7 @@ pub mod verification_response {
     }
 }
 impl VerificationResponse {
-    /// Creates a new builder-style object to manufacture [`VerificationResponse`](crate::model::VerificationResponse)
+    /// Creates a new builder-style object to manufacture [`VerificationResponse`](crate::model::VerificationResponse).
     pub fn builder() -> crate::model::verification_response::Builder {
         crate::model::verification_response::Builder::default()
     }
@@ -60,10 +60,13 @@ impl VerificationResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VerifyOtpMessageRequestParameters {
     /// <p>The destination identity to send OTP to.</p>
+    #[doc(hidden)]
     pub destination_identity: std::option::Option<std::string::String>,
     /// <p>The OTP the end user provided for verification.</p>
+    #[doc(hidden)]
     pub otp: std::option::Option<std::string::String>,
     /// <p>The reference identifier provided when the OTP was previously sent.</p>
+    #[doc(hidden)]
     pub reference_id: std::option::Option<std::string::String>,
 }
 impl VerifyOtpMessageRequestParameters {
@@ -89,11 +92,10 @@ impl std::fmt::Debug for VerifyOtpMessageRequestParameters {
         formatter.finish()
     }
 }
-/// See [`VerifyOtpMessageRequestParameters`](crate::model::VerifyOtpMessageRequestParameters)
+/// See [`VerifyOtpMessageRequestParameters`](crate::model::VerifyOtpMessageRequestParameters).
 pub mod verify_otp_message_request_parameters {
 
-    /// A builder for [`VerifyOtpMessageRequestParameters`](crate::model::VerifyOtpMessageRequestParameters)
-    #[non_exhaustive]
+    /// A builder for [`VerifyOtpMessageRequestParameters`](crate::model::VerifyOtpMessageRequestParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination_identity: std::option::Option<std::string::String>,
@@ -134,7 +136,7 @@ pub mod verify_otp_message_request_parameters {
             self.reference_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`VerifyOtpMessageRequestParameters`](crate::model::VerifyOtpMessageRequestParameters)
+        /// Consumes the builder and constructs a [`VerifyOtpMessageRequestParameters`](crate::model::VerifyOtpMessageRequestParameters).
         pub fn build(self) -> crate::model::VerifyOtpMessageRequestParameters {
             crate::model::VerifyOtpMessageRequestParameters {
                 destination_identity: self.destination_identity,
@@ -145,7 +147,7 @@ pub mod verify_otp_message_request_parameters {
     }
 }
 impl VerifyOtpMessageRequestParameters {
-    /// Creates a new builder-style object to manufacture [`VerifyOtpMessageRequestParameters`](crate::model::VerifyOtpMessageRequestParameters)
+    /// Creates a new builder-style object to manufacture [`VerifyOtpMessageRequestParameters`](crate::model::VerifyOtpMessageRequestParameters).
     pub fn builder() -> crate::model::verify_otp_message_request_parameters::Builder {
         crate::model::verify_otp_message_request_parameters::Builder::default()
     }
@@ -156,8 +158,10 @@ impl VerifyOtpMessageRequestParameters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MessageBody {
     /// <p>The message that's returned from the API.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the request or response.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
 }
 impl MessageBody {
@@ -178,11 +182,10 @@ impl std::fmt::Debug for MessageBody {
         formatter.finish()
     }
 }
-/// See [`MessageBody`](crate::model::MessageBody)
+/// See [`MessageBody`](crate::model::MessageBody).
 pub mod message_body {
 
-    /// A builder for [`MessageBody`](crate::model::MessageBody)
-    #[non_exhaustive]
+    /// A builder for [`MessageBody`](crate::model::MessageBody).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -209,7 +212,7 @@ pub mod message_body {
             self.request_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`MessageBody`](crate::model::MessageBody)
+        /// Consumes the builder and constructs a [`MessageBody`](crate::model::MessageBody).
         pub fn build(self) -> crate::model::MessageBody {
             crate::model::MessageBody {
                 message: self.message,
@@ -219,7 +222,7 @@ pub mod message_body {
     }
 }
 impl MessageBody {
-    /// Creates a new builder-style object to manufacture [`MessageBody`](crate::model::MessageBody)
+    /// Creates a new builder-style object to manufacture [`MessageBody`](crate::model::MessageBody).
     pub fn builder() -> crate::model::message_body::Builder {
         crate::model::message_body::Builder::default()
     }
@@ -230,17 +233,23 @@ impl MessageBody {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VoiceTemplateRequest {
     /// <p>The text of the script to use in messages that are based on the message template, in plain text format.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>A JSON object that specifies the default values to use for message variables in the message template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the default value for that variable. When you create a message that's based on the template, you can override these defaults with message-specific and address-specific variables and values.</p>
+    #[doc(hidden)]
     pub default_substitutions: std::option::Option<std::string::String>,
     /// <p>The code for the language to use when synthesizing the text of the script in messages that are based on the message template. For a list of supported languages and the code for each one, see the <a href="https://docs.aws.amazon.com/polly/latest/dg/what-is.html">Amazon Polly Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<std::string::String>,
     /// <p>A string-to-string map of key-value pairs that defines the tags to associate with the message template. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A custom description of the message template.</p>
+    #[doc(hidden)]
     pub template_description: std::option::Option<std::string::String>,
     /// <p>The name of the voice to use when delivering messages that are based on the message template. For a list of supported voices, see the <a href="https://docs.aws.amazon.com/polly/latest/dg/what-is.html">Amazon Polly Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub voice_id: std::option::Option<std::string::String>,
 }
 impl VoiceTemplateRequest {
@@ -284,11 +293,10 @@ impl std::fmt::Debug for VoiceTemplateRequest {
         formatter.finish()
     }
 }
-/// See [`VoiceTemplateRequest`](crate::model::VoiceTemplateRequest)
+/// See [`VoiceTemplateRequest`](crate::model::VoiceTemplateRequest).
 pub mod voice_template_request {
 
-    /// A builder for [`VoiceTemplateRequest`](crate::model::VoiceTemplateRequest)
-    #[non_exhaustive]
+    /// A builder for [`VoiceTemplateRequest`](crate::model::VoiceTemplateRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body: std::option::Option<std::string::String>,
@@ -385,7 +393,7 @@ pub mod voice_template_request {
             self.voice_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`VoiceTemplateRequest`](crate::model::VoiceTemplateRequest)
+        /// Consumes the builder and constructs a [`VoiceTemplateRequest`](crate::model::VoiceTemplateRequest).
         pub fn build(self) -> crate::model::VoiceTemplateRequest {
             crate::model::VoiceTemplateRequest {
                 body: self.body,
@@ -399,7 +407,7 @@ pub mod voice_template_request {
     }
 }
 impl VoiceTemplateRequest {
-    /// Creates a new builder-style object to manufacture [`VoiceTemplateRequest`](crate::model::VoiceTemplateRequest)
+    /// Creates a new builder-style object to manufacture [`VoiceTemplateRequest`](crate::model::VoiceTemplateRequest).
     pub fn builder() -> crate::model::voice_template_request::Builder {
         crate::model::voice_template_request::Builder::default()
     }
@@ -410,24 +418,34 @@ impl VoiceTemplateRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VoiceChannelResponse {
     /// <p>The unique identifier for the application that the voice channel applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format, when the voice channel was enabled.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>Specifies whether the voice channel is enabled for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>(Not used) This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub has_credential: bool,
     /// <p>(Deprecated) An identifier for the voice channel. This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the voice channel is archived.</p>
+    #[doc(hidden)]
     pub is_archived: bool,
     /// <p>The user who last modified the voice channel.</p>
+    #[doc(hidden)]
     pub last_modified_by: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format, when the voice channel was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The type of messaging or notification platform for the channel. For the voice channel, this value is VOICE.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The current version of the voice channel.</p>
+    #[doc(hidden)]
     pub version: i32,
 }
 impl VoiceChannelResponse {
@@ -488,11 +506,10 @@ impl std::fmt::Debug for VoiceChannelResponse {
         formatter.finish()
     }
 }
-/// See [`VoiceChannelResponse`](crate::model::VoiceChannelResponse)
+/// See [`VoiceChannelResponse`](crate::model::VoiceChannelResponse).
 pub mod voice_channel_response {
 
-    /// A builder for [`VoiceChannelResponse`](crate::model::VoiceChannelResponse)
-    #[non_exhaustive]
+    /// A builder for [`VoiceChannelResponse`](crate::model::VoiceChannelResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -619,7 +636,7 @@ pub mod voice_channel_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`VoiceChannelResponse`](crate::model::VoiceChannelResponse)
+        /// Consumes the builder and constructs a [`VoiceChannelResponse`](crate::model::VoiceChannelResponse).
         pub fn build(self) -> crate::model::VoiceChannelResponse {
             crate::model::VoiceChannelResponse {
                 application_id: self.application_id,
@@ -637,7 +654,7 @@ pub mod voice_channel_response {
     }
 }
 impl VoiceChannelResponse {
-    /// Creates a new builder-style object to manufacture [`VoiceChannelResponse`](crate::model::VoiceChannelResponse)
+    /// Creates a new builder-style object to manufacture [`VoiceChannelResponse`](crate::model::VoiceChannelResponse).
     pub fn builder() -> crate::model::voice_channel_response::Builder {
         crate::model::voice_channel_response::Builder::default()
     }
@@ -648,6 +665,7 @@ impl VoiceChannelResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VoiceChannelRequest {
     /// <p>Specifies whether to enable the voice channel for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl VoiceChannelRequest {
@@ -663,11 +681,10 @@ impl std::fmt::Debug for VoiceChannelRequest {
         formatter.finish()
     }
 }
-/// See [`VoiceChannelRequest`](crate::model::VoiceChannelRequest)
+/// See [`VoiceChannelRequest`](crate::model::VoiceChannelRequest).
 pub mod voice_channel_request {
 
-    /// A builder for [`VoiceChannelRequest`](crate::model::VoiceChannelRequest)
-    #[non_exhaustive]
+    /// A builder for [`VoiceChannelRequest`](crate::model::VoiceChannelRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -683,7 +700,7 @@ pub mod voice_channel_request {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`VoiceChannelRequest`](crate::model::VoiceChannelRequest)
+        /// Consumes the builder and constructs a [`VoiceChannelRequest`](crate::model::VoiceChannelRequest).
         pub fn build(self) -> crate::model::VoiceChannelRequest {
             crate::model::VoiceChannelRequest {
                 enabled: self.enabled.unwrap_or_default(),
@@ -692,7 +709,7 @@ pub mod voice_channel_request {
     }
 }
 impl VoiceChannelRequest {
-    /// Creates a new builder-style object to manufacture [`VoiceChannelRequest`](crate::model::VoiceChannelRequest)
+    /// Creates a new builder-style object to manufacture [`VoiceChannelRequest`](crate::model::VoiceChannelRequest).
     pub fn builder() -> crate::model::voice_channel_request::Builder {
         crate::model::voice_channel_request::Builder::default()
     }
@@ -704,6 +721,7 @@ impl VoiceChannelRequest {
 pub struct TemplateActiveVersionRequest {
     /// <p>The version of the message template to use as the active version of the template. Valid values are: latest, for the most recent version of the template; or, the unique identifier for any existing version of the template. If you specify an identifier, the value must match the identifier for an existing template version. To retrieve a list of versions and version identifiers for a template, use the
     /// <link linkend="templates-template-name-template-type-versions">Template Versions resource.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl TemplateActiveVersionRequest {
@@ -720,11 +738,10 @@ impl std::fmt::Debug for TemplateActiveVersionRequest {
         formatter.finish()
     }
 }
-/// See [`TemplateActiveVersionRequest`](crate::model::TemplateActiveVersionRequest)
+/// See [`TemplateActiveVersionRequest`](crate::model::TemplateActiveVersionRequest).
 pub mod template_active_version_request {
 
-    /// A builder for [`TemplateActiveVersionRequest`](crate::model::TemplateActiveVersionRequest)
-    #[non_exhaustive]
+    /// A builder for [`TemplateActiveVersionRequest`](crate::model::TemplateActiveVersionRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version: std::option::Option<std::string::String>,
@@ -742,7 +759,7 @@ pub mod template_active_version_request {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`TemplateActiveVersionRequest`](crate::model::TemplateActiveVersionRequest)
+        /// Consumes the builder and constructs a [`TemplateActiveVersionRequest`](crate::model::TemplateActiveVersionRequest).
         pub fn build(self) -> crate::model::TemplateActiveVersionRequest {
             crate::model::TemplateActiveVersionRequest {
                 version: self.version,
@@ -751,7 +768,7 @@ pub mod template_active_version_request {
     }
 }
 impl TemplateActiveVersionRequest {
-    /// Creates a new builder-style object to manufacture [`TemplateActiveVersionRequest`](crate::model::TemplateActiveVersionRequest)
+    /// Creates a new builder-style object to manufacture [`TemplateActiveVersionRequest`](crate::model::TemplateActiveVersionRequest).
     pub fn builder() -> crate::model::template_active_version_request::Builder {
         crate::model::template_active_version_request::Builder::default()
     }
@@ -762,15 +779,20 @@ impl TemplateActiveVersionRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SmsTemplateRequest {
     /// <p>The message body to use in text messages that are based on the message template.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>A JSON object that specifies the default values to use for message variables in the message template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the default value for that variable. When you create a message that's based on the template, you can override these defaults with message-specific and address-specific variables and values.</p>
+    #[doc(hidden)]
     pub default_substitutions: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the recommender model to use for the message template. Amazon Pinpoint uses this value to determine how to retrieve and process data from a recommender model when it sends messages that use the template, if the template contains message variables for recommendation data.</p>
+    #[doc(hidden)]
     pub recommender_id: std::option::Option<std::string::String>,
     /// <p>A string-to-string map of key-value pairs that defines the tags to associate with the message template. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A custom description of the message template.</p>
+    #[doc(hidden)]
     pub template_description: std::option::Option<std::string::String>,
 }
 impl SmsTemplateRequest {
@@ -809,11 +831,10 @@ impl std::fmt::Debug for SmsTemplateRequest {
         formatter.finish()
     }
 }
-/// See [`SmsTemplateRequest`](crate::model::SmsTemplateRequest)
+/// See [`SmsTemplateRequest`](crate::model::SmsTemplateRequest).
 pub mod sms_template_request {
 
-    /// A builder for [`SmsTemplateRequest`](crate::model::SmsTemplateRequest)
-    #[non_exhaustive]
+    /// A builder for [`SmsTemplateRequest`](crate::model::SmsTemplateRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body: std::option::Option<std::string::String>,
@@ -899,7 +920,7 @@ pub mod sms_template_request {
             self.template_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`SmsTemplateRequest`](crate::model::SmsTemplateRequest)
+        /// Consumes the builder and constructs a [`SmsTemplateRequest`](crate::model::SmsTemplateRequest).
         pub fn build(self) -> crate::model::SmsTemplateRequest {
             crate::model::SmsTemplateRequest {
                 body: self.body,
@@ -912,7 +933,7 @@ pub mod sms_template_request {
     }
 }
 impl SmsTemplateRequest {
-    /// Creates a new builder-style object to manufacture [`SmsTemplateRequest`](crate::model::SmsTemplateRequest)
+    /// Creates a new builder-style object to manufacture [`SmsTemplateRequest`](crate::model::SmsTemplateRequest).
     pub fn builder() -> crate::model::sms_template_request::Builder {
         crate::model::sms_template_request::Builder::default()
     }
@@ -923,32 +944,46 @@ impl SmsTemplateRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SmsChannelResponse {
     /// <p>The unique identifier for the application that the SMS channel applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format, when the SMS channel was enabled.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>Specifies whether the SMS channel is enabled for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>(Not used) This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub has_credential: bool,
     /// <p>(Deprecated) An identifier for the SMS channel. This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the SMS channel is archived.</p>
+    #[doc(hidden)]
     pub is_archived: bool,
     /// <p>The user who last modified the SMS channel.</p>
+    #[doc(hidden)]
     pub last_modified_by: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format, when the SMS channel was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The type of messaging or notification platform for the channel. For the SMS channel, this value is SMS.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The maximum number of promotional messages that you can send through the SMS channel each second.</p>
+    #[doc(hidden)]
     pub promotional_messages_per_second: i32,
     /// <p>The identity that displays on recipients' devices when they receive messages from the SMS channel.</p>
+    #[doc(hidden)]
     pub sender_id: std::option::Option<std::string::String>,
     /// <p>The registered short code to use when you send messages through the SMS channel.</p>
+    #[doc(hidden)]
     pub short_code: std::option::Option<std::string::String>,
     /// <p>The maximum number of transactional messages that you can send through the SMS channel each second.</p>
+    #[doc(hidden)]
     pub transactional_messages_per_second: i32,
     /// <p>The current version of the SMS channel.</p>
+    #[doc(hidden)]
     pub version: i32,
 }
 impl SmsChannelResponse {
@@ -1035,11 +1070,10 @@ impl std::fmt::Debug for SmsChannelResponse {
         formatter.finish()
     }
 }
-/// See [`SmsChannelResponse`](crate::model::SmsChannelResponse)
+/// See [`SmsChannelResponse`](crate::model::SmsChannelResponse).
 pub mod sms_channel_response {
 
-    /// A builder for [`SmsChannelResponse`](crate::model::SmsChannelResponse)
-    #[non_exhaustive]
+    /// A builder for [`SmsChannelResponse`](crate::model::SmsChannelResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -1216,7 +1250,7 @@ pub mod sms_channel_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`SmsChannelResponse`](crate::model::SmsChannelResponse)
+        /// Consumes the builder and constructs a [`SmsChannelResponse`](crate::model::SmsChannelResponse).
         pub fn build(self) -> crate::model::SmsChannelResponse {
             crate::model::SmsChannelResponse {
                 application_id: self.application_id,
@@ -1242,7 +1276,7 @@ pub mod sms_channel_response {
     }
 }
 impl SmsChannelResponse {
-    /// Creates a new builder-style object to manufacture [`SmsChannelResponse`](crate::model::SmsChannelResponse)
+    /// Creates a new builder-style object to manufacture [`SmsChannelResponse`](crate::model::SmsChannelResponse).
     pub fn builder() -> crate::model::sms_channel_response::Builder {
         crate::model::sms_channel_response::Builder::default()
     }
@@ -1253,10 +1287,13 @@ impl SmsChannelResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SmsChannelRequest {
     /// <p>Specifies whether to enable the SMS channel for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The identity that you want to display on recipients' devices when they receive messages from the SMS channel.</p>
+    #[doc(hidden)]
     pub sender_id: std::option::Option<std::string::String>,
     /// <p>The registered short code that you want to use when you send messages through the SMS channel.</p>
+    #[doc(hidden)]
     pub short_code: std::option::Option<std::string::String>,
 }
 impl SmsChannelRequest {
@@ -1282,11 +1319,10 @@ impl std::fmt::Debug for SmsChannelRequest {
         formatter.finish()
     }
 }
-/// See [`SmsChannelRequest`](crate::model::SmsChannelRequest)
+/// See [`SmsChannelRequest`](crate::model::SmsChannelRequest).
 pub mod sms_channel_request {
 
-    /// A builder for [`SmsChannelRequest`](crate::model::SmsChannelRequest)
-    #[non_exhaustive]
+    /// A builder for [`SmsChannelRequest`](crate::model::SmsChannelRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -1324,7 +1360,7 @@ pub mod sms_channel_request {
             self.short_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`SmsChannelRequest`](crate::model::SmsChannelRequest)
+        /// Consumes the builder and constructs a [`SmsChannelRequest`](crate::model::SmsChannelRequest).
         pub fn build(self) -> crate::model::SmsChannelRequest {
             crate::model::SmsChannelRequest {
                 enabled: self.enabled.unwrap_or_default(),
@@ -1335,7 +1371,7 @@ pub mod sms_channel_request {
     }
 }
 impl SmsChannelRequest {
-    /// Creates a new builder-style object to manufacture [`SmsChannelRequest`](crate::model::SmsChannelRequest)
+    /// Creates a new builder-style object to manufacture [`SmsChannelRequest`](crate::model::SmsChannelRequest).
     pub fn builder() -> crate::model::sms_channel_request::Builder {
         crate::model::sms_channel_request::Builder::default()
     }
@@ -1346,33 +1382,45 @@ impl SmsChannelRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SegmentResponse {
     /// <p>The unique identifier for the application that the segment is associated with.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the segment.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date and time when the segment was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The dimension settings for the segment.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<crate::model::SegmentDimensions>,
     /// <p>The unique identifier for the segment.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The settings for the import job that's associated with the segment.</p>
+    #[doc(hidden)]
     pub import_definition: std::option::Option<crate::model::SegmentImportResource>,
     /// <p>The date and time when the segment was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The name of the segment.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A list of one or more segment groups that apply to the segment. Each segment group consists of zero or more base segments and the dimensions that are applied to those base segments.</p>
+    #[doc(hidden)]
     pub segment_groups: std::option::Option<crate::model::SegmentGroupList>,
     /// <p>The segment type. Valid values are:</p>
     /// <ul>
     /// <li><p>DIMENSIONAL - A dynamic segment, which is a segment that uses selection criteria that you specify and is based on endpoint data that's reported by your app. Dynamic segments can change over time.</p></li>
     /// <li><p>IMPORT - A static segment, which is a segment that uses selection criteria that you specify and is based on endpoint definitions that you import from a file. Imported segments are static; they don't change over time.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub segment_type: std::option::Option<crate::model::SegmentType>,
     /// <p>A string-to-string map of key-value pairs that identifies the tags that are associated with the segment. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The version number of the segment.</p>
+    #[doc(hidden)]
     pub version: i32,
 }
 impl SegmentResponse {
@@ -1450,11 +1498,10 @@ impl std::fmt::Debug for SegmentResponse {
         formatter.finish()
     }
 }
-/// See [`SegmentResponse`](crate::model::SegmentResponse)
+/// See [`SegmentResponse`](crate::model::SegmentResponse).
 pub mod segment_response {
 
-    /// A builder for [`SegmentResponse`](crate::model::SegmentResponse)
-    #[non_exhaustive]
+    /// A builder for [`SegmentResponse`](crate::model::SegmentResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -1637,7 +1684,7 @@ pub mod segment_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`SegmentResponse`](crate::model::SegmentResponse)
+        /// Consumes the builder and constructs a [`SegmentResponse`](crate::model::SegmentResponse).
         pub fn build(self) -> crate::model::SegmentResponse {
             crate::model::SegmentResponse {
                 application_id: self.application_id,
@@ -1657,7 +1704,7 @@ pub mod segment_response {
     }
 }
 impl SegmentResponse {
-    /// Creates a new builder-style object to manufacture [`SegmentResponse`](crate::model::SegmentResponse)
+    /// Creates a new builder-style object to manufacture [`SegmentResponse`](crate::model::SegmentResponse).
     pub fn builder() -> crate::model::segment_response::Builder {
         crate::model::segment_response::Builder::default()
     }
@@ -1723,8 +1770,10 @@ impl AsRef<str> for SegmentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SegmentGroupList {
     /// <p>An array that defines the set of segment criteria to evaluate when handling segment groups for the segment.</p>
+    #[doc(hidden)]
     pub groups: std::option::Option<std::vec::Vec<crate::model::SegmentGroup>>,
     /// <p>Specifies how to handle multiple segment groups for the segment. For example, if the segment includes three segment groups, whether the resulting segment includes endpoints that match all, any, or none of the segment groups.</p>
+    #[doc(hidden)]
     pub include: std::option::Option<crate::model::Include>,
 }
 impl SegmentGroupList {
@@ -1745,11 +1794,10 @@ impl std::fmt::Debug for SegmentGroupList {
         formatter.finish()
     }
 }
-/// See [`SegmentGroupList`](crate::model::SegmentGroupList)
+/// See [`SegmentGroupList`](crate::model::SegmentGroupList).
 pub mod segment_group_list {
 
-    /// A builder for [`SegmentGroupList`](crate::model::SegmentGroupList)
-    #[non_exhaustive]
+    /// A builder for [`SegmentGroupList`](crate::model::SegmentGroupList).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) groups: std::option::Option<std::vec::Vec<crate::model::SegmentGroup>>,
@@ -1785,7 +1833,7 @@ pub mod segment_group_list {
             self.include = input;
             self
         }
-        /// Consumes the builder and constructs a [`SegmentGroupList`](crate::model::SegmentGroupList)
+        /// Consumes the builder and constructs a [`SegmentGroupList`](crate::model::SegmentGroupList).
         pub fn build(self) -> crate::model::SegmentGroupList {
             crate::model::SegmentGroupList {
                 groups: self.groups,
@@ -1795,7 +1843,7 @@ pub mod segment_group_list {
     }
 }
 impl SegmentGroupList {
-    /// Creates a new builder-style object to manufacture [`SegmentGroupList`](crate::model::SegmentGroupList)
+    /// Creates a new builder-style object to manufacture [`SegmentGroupList`](crate::model::SegmentGroupList).
     pub fn builder() -> crate::model::segment_group_list::Builder {
         crate::model::segment_group_list::Builder::default()
     }
@@ -1865,13 +1913,17 @@ impl AsRef<str> for Include {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SegmentGroup {
     /// <p>An array that defines the dimensions for the segment.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::SegmentDimensions>>,
     /// <p>The base segment to build the segment on. A base segment, also referred to as a <i>source segment</i>, defines the initial population of endpoints for a segment. When you add dimensions to a segment, Amazon Pinpoint filters the base segment by using the dimensions that you specify.</p>
     /// <p>You can specify more than one dimensional segment or only one imported segment. If you specify an imported segment, the Amazon Pinpoint console displays a segment size estimate that indicates the size of the imported segment without any filters applied to it.</p>
+    #[doc(hidden)]
     pub source_segments: std::option::Option<std::vec::Vec<crate::model::SegmentReference>>,
     /// <p>Specifies how to handle multiple base segments for the segment. For example, if you specify three base segments for the segment, whether the resulting segment is based on all, any, or none of the base segments.</p>
+    #[doc(hidden)]
     pub source_type: std::option::Option<crate::model::SourceType>,
     /// <p>Specifies how to handle multiple dimensions for the segment. For example, if you specify three dimensions for the segment, whether the resulting segment includes endpoints that match all, any, or none of the dimensions.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
 }
 impl SegmentGroup {
@@ -1903,11 +1955,10 @@ impl std::fmt::Debug for SegmentGroup {
         formatter.finish()
     }
 }
-/// See [`SegmentGroup`](crate::model::SegmentGroup)
+/// See [`SegmentGroup`](crate::model::SegmentGroup).
 pub mod segment_group {
 
-    /// A builder for [`SegmentGroup`](crate::model::SegmentGroup)
-    #[non_exhaustive]
+    /// A builder for [`SegmentGroup`](crate::model::SegmentGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimensions: std::option::Option<std::vec::Vec<crate::model::SegmentDimensions>>,
@@ -1980,7 +2031,7 @@ pub mod segment_group {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`SegmentGroup`](crate::model::SegmentGroup)
+        /// Consumes the builder and constructs a [`SegmentGroup`](crate::model::SegmentGroup).
         pub fn build(self) -> crate::model::SegmentGroup {
             crate::model::SegmentGroup {
                 dimensions: self.dimensions,
@@ -1992,7 +2043,7 @@ pub mod segment_group {
     }
 }
 impl SegmentGroup {
-    /// Creates a new builder-style object to manufacture [`SegmentGroup`](crate::model::SegmentGroup)
+    /// Creates a new builder-style object to manufacture [`SegmentGroup`](crate::model::SegmentGroup).
     pub fn builder() -> crate::model::segment_group::Builder {
         crate::model::segment_group::Builder::default()
     }
@@ -2121,8 +2172,10 @@ impl AsRef<str> for SourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SegmentReference {
     /// <p>The unique identifier for the segment.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The version number of the segment.</p>
+    #[doc(hidden)]
     pub version: i32,
 }
 impl SegmentReference {
@@ -2143,11 +2196,10 @@ impl std::fmt::Debug for SegmentReference {
         formatter.finish()
     }
 }
-/// See [`SegmentReference`](crate::model::SegmentReference)
+/// See [`SegmentReference`](crate::model::SegmentReference).
 pub mod segment_reference {
 
-    /// A builder for [`SegmentReference`](crate::model::SegmentReference)
-    #[non_exhaustive]
+    /// A builder for [`SegmentReference`](crate::model::SegmentReference).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2174,7 +2226,7 @@ pub mod segment_reference {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`SegmentReference`](crate::model::SegmentReference)
+        /// Consumes the builder and constructs a [`SegmentReference`](crate::model::SegmentReference).
         pub fn build(self) -> crate::model::SegmentReference {
             crate::model::SegmentReference {
                 id: self.id,
@@ -2184,7 +2236,7 @@ pub mod segment_reference {
     }
 }
 impl SegmentReference {
-    /// Creates a new builder-style object to manufacture [`SegmentReference`](crate::model::SegmentReference)
+    /// Creates a new builder-style object to manufacture [`SegmentReference`](crate::model::SegmentReference).
     pub fn builder() -> crate::model::segment_reference::Builder {
         crate::model::segment_reference::Builder::default()
     }
@@ -2195,20 +2247,26 @@ impl SegmentReference {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SegmentDimensions {
     /// <p>One or more custom attributes to use as criteria for the segment.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AttributeDimension>,
     >,
     /// <p>The behavior-based criteria, such as how recently users have used your app, for the segment.</p>
+    #[doc(hidden)]
     pub behavior: std::option::Option<crate::model::SegmentBehaviors>,
     /// <p>The demographic-based criteria, such as device platform, for the segment.</p>
+    #[doc(hidden)]
     pub demographic: std::option::Option<crate::model::SegmentDemographics>,
     /// <p>The location-based criteria, such as region or GPS coordinates, for the segment.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::SegmentLocation>,
     /// <p>One or more custom metrics to use as criteria for the segment.</p>
+    #[doc(hidden)]
     pub metrics: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::MetricDimension>,
     >,
     /// <p>One or more custom user attributes to use as criteria for the segment.</p>
+    #[doc(hidden)]
     pub user_attributes: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AttributeDimension>,
     >,
@@ -2263,11 +2321,10 @@ impl std::fmt::Debug for SegmentDimensions {
         formatter.finish()
     }
 }
-/// See [`SegmentDimensions`](crate::model::SegmentDimensions)
+/// See [`SegmentDimensions`](crate::model::SegmentDimensions).
 pub mod segment_dimensions {
 
-    /// A builder for [`SegmentDimensions`](crate::model::SegmentDimensions)
-    #[non_exhaustive]
+    /// A builder for [`SegmentDimensions`](crate::model::SegmentDimensions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<
@@ -2398,7 +2455,7 @@ pub mod segment_dimensions {
             self.user_attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`SegmentDimensions`](crate::model::SegmentDimensions)
+        /// Consumes the builder and constructs a [`SegmentDimensions`](crate::model::SegmentDimensions).
         pub fn build(self) -> crate::model::SegmentDimensions {
             crate::model::SegmentDimensions {
                 attributes: self.attributes,
@@ -2412,7 +2469,7 @@ pub mod segment_dimensions {
     }
 }
 impl SegmentDimensions {
-    /// Creates a new builder-style object to manufacture [`SegmentDimensions`](crate::model::SegmentDimensions)
+    /// Creates a new builder-style object to manufacture [`SegmentDimensions`](crate::model::SegmentDimensions).
     pub fn builder() -> crate::model::segment_dimensions::Builder {
         crate::model::segment_dimensions::Builder::default()
     }
@@ -2433,8 +2490,10 @@ pub struct AttributeDimension {
     /// <li>BETWEEN - endpoints with attributes read as ISO_INSTANT datetimes between the values are included in the segment.</li>
     /// <p></p>
     /// </ul>
+    #[doc(hidden)]
     pub attribute_type: std::option::Option<crate::model::AttributeType>,
     /// <p>The criteria values to use for the segment dimension. Depending on the value of the AttributeType property, endpoints are included or excluded from the segment if their attribute values match the criteria values.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AttributeDimension {
@@ -2465,11 +2524,10 @@ impl std::fmt::Debug for AttributeDimension {
         formatter.finish()
     }
 }
-/// See [`AttributeDimension`](crate::model::AttributeDimension)
+/// See [`AttributeDimension`](crate::model::AttributeDimension).
 pub mod attribute_dimension {
 
-    /// A builder for [`AttributeDimension`](crate::model::AttributeDimension)
-    #[non_exhaustive]
+    /// A builder for [`AttributeDimension`](crate::model::AttributeDimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_type: std::option::Option<crate::model::AttributeType>,
@@ -2528,7 +2586,7 @@ pub mod attribute_dimension {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttributeDimension`](crate::model::AttributeDimension)
+        /// Consumes the builder and constructs a [`AttributeDimension`](crate::model::AttributeDimension).
         pub fn build(self) -> crate::model::AttributeDimension {
             crate::model::AttributeDimension {
                 attribute_type: self.attribute_type,
@@ -2538,7 +2596,7 @@ pub mod attribute_dimension {
     }
 }
 impl AttributeDimension {
-    /// Creates a new builder-style object to manufacture [`AttributeDimension`](crate::model::AttributeDimension)
+    /// Creates a new builder-style object to manufacture [`AttributeDimension`](crate::model::AttributeDimension).
     pub fn builder() -> crate::model::attribute_dimension::Builder {
         crate::model::attribute_dimension::Builder::default()
     }
@@ -2632,8 +2690,10 @@ impl AsRef<str> for AttributeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDimension {
     /// <p>The operator to use when comparing metric values. Valid values are: GREATER_THAN, LESS_THAN, GREATER_THAN_OR_EQUAL, LESS_THAN_OR_EQUAL, and EQUAL.</p>
+    #[doc(hidden)]
     pub comparison_operator: std::option::Option<std::string::String>,
     /// <p>The value to compare.</p>
+    #[doc(hidden)]
     pub value: f64,
 }
 impl MetricDimension {
@@ -2654,11 +2714,10 @@ impl std::fmt::Debug for MetricDimension {
         formatter.finish()
     }
 }
-/// See [`MetricDimension`](crate::model::MetricDimension)
+/// See [`MetricDimension`](crate::model::MetricDimension).
 pub mod metric_dimension {
 
-    /// A builder for [`MetricDimension`](crate::model::MetricDimension)
-    #[non_exhaustive]
+    /// A builder for [`MetricDimension`](crate::model::MetricDimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) comparison_operator: std::option::Option<std::string::String>,
@@ -2688,7 +2747,7 @@ pub mod metric_dimension {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDimension`](crate::model::MetricDimension)
+        /// Consumes the builder and constructs a [`MetricDimension`](crate::model::MetricDimension).
         pub fn build(self) -> crate::model::MetricDimension {
             crate::model::MetricDimension {
                 comparison_operator: self.comparison_operator,
@@ -2698,7 +2757,7 @@ pub mod metric_dimension {
     }
 }
 impl MetricDimension {
-    /// Creates a new builder-style object to manufacture [`MetricDimension`](crate::model::MetricDimension)
+    /// Creates a new builder-style object to manufacture [`MetricDimension`](crate::model::MetricDimension).
     pub fn builder() -> crate::model::metric_dimension::Builder {
         crate::model::metric_dimension::Builder::default()
     }
@@ -2709,8 +2768,10 @@ impl MetricDimension {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SegmentLocation {
     /// <p>The country or region code, in ISO 3166-1 alpha-2 format, for the segment.</p>
+    #[doc(hidden)]
     pub country: std::option::Option<crate::model::SetDimension>,
     /// <p>The GPS location and range for the segment.</p>
+    #[doc(hidden)]
     pub gps_point: std::option::Option<crate::model::GpsPointDimension>,
 }
 impl SegmentLocation {
@@ -2731,11 +2792,10 @@ impl std::fmt::Debug for SegmentLocation {
         formatter.finish()
     }
 }
-/// See [`SegmentLocation`](crate::model::SegmentLocation)
+/// See [`SegmentLocation`](crate::model::SegmentLocation).
 pub mod segment_location {
 
-    /// A builder for [`SegmentLocation`](crate::model::SegmentLocation)
-    #[non_exhaustive]
+    /// A builder for [`SegmentLocation`](crate::model::SegmentLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) country: std::option::Option<crate::model::SetDimension>,
@@ -2768,7 +2828,7 @@ pub mod segment_location {
             self.gps_point = input;
             self
         }
-        /// Consumes the builder and constructs a [`SegmentLocation`](crate::model::SegmentLocation)
+        /// Consumes the builder and constructs a [`SegmentLocation`](crate::model::SegmentLocation).
         pub fn build(self) -> crate::model::SegmentLocation {
             crate::model::SegmentLocation {
                 country: self.country,
@@ -2778,7 +2838,7 @@ pub mod segment_location {
     }
 }
 impl SegmentLocation {
-    /// Creates a new builder-style object to manufacture [`SegmentLocation`](crate::model::SegmentLocation)
+    /// Creates a new builder-style object to manufacture [`SegmentLocation`](crate::model::SegmentLocation).
     pub fn builder() -> crate::model::segment_location::Builder {
         crate::model::segment_location::Builder::default()
     }
@@ -2789,8 +2849,10 @@ impl SegmentLocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GpsPointDimension {
     /// <p>The GPS coordinates to measure distance from.</p>
+    #[doc(hidden)]
     pub coordinates: std::option::Option<crate::model::GpsCoordinates>,
     /// <p>The range, in kilometers, from the GPS coordinates.</p>
+    #[doc(hidden)]
     pub range_in_kilometers: f64,
 }
 impl GpsPointDimension {
@@ -2811,11 +2873,10 @@ impl std::fmt::Debug for GpsPointDimension {
         formatter.finish()
     }
 }
-/// See [`GpsPointDimension`](crate::model::GpsPointDimension)
+/// See [`GpsPointDimension`](crate::model::GpsPointDimension).
 pub mod gps_point_dimension {
 
-    /// A builder for [`GpsPointDimension`](crate::model::GpsPointDimension)
-    #[non_exhaustive]
+    /// A builder for [`GpsPointDimension`](crate::model::GpsPointDimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) coordinates: std::option::Option<crate::model::GpsCoordinates>,
@@ -2845,7 +2906,7 @@ pub mod gps_point_dimension {
             self.range_in_kilometers = input;
             self
         }
-        /// Consumes the builder and constructs a [`GpsPointDimension`](crate::model::GpsPointDimension)
+        /// Consumes the builder and constructs a [`GpsPointDimension`](crate::model::GpsPointDimension).
         pub fn build(self) -> crate::model::GpsPointDimension {
             crate::model::GpsPointDimension {
                 coordinates: self.coordinates,
@@ -2855,7 +2916,7 @@ pub mod gps_point_dimension {
     }
 }
 impl GpsPointDimension {
-    /// Creates a new builder-style object to manufacture [`GpsPointDimension`](crate::model::GpsPointDimension)
+    /// Creates a new builder-style object to manufacture [`GpsPointDimension`](crate::model::GpsPointDimension).
     pub fn builder() -> crate::model::gps_point_dimension::Builder {
         crate::model::gps_point_dimension::Builder::default()
     }
@@ -2866,8 +2927,10 @@ impl GpsPointDimension {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GpsCoordinates {
     /// <p>The latitude coordinate of the location.</p>
+    #[doc(hidden)]
     pub latitude: f64,
     /// <p>The longitude coordinate of the location.</p>
+    #[doc(hidden)]
     pub longitude: f64,
 }
 impl GpsCoordinates {
@@ -2888,11 +2951,10 @@ impl std::fmt::Debug for GpsCoordinates {
         formatter.finish()
     }
 }
-/// See [`GpsCoordinates`](crate::model::GpsCoordinates)
+/// See [`GpsCoordinates`](crate::model::GpsCoordinates).
 pub mod gps_coordinates {
 
-    /// A builder for [`GpsCoordinates`](crate::model::GpsCoordinates)
-    #[non_exhaustive]
+    /// A builder for [`GpsCoordinates`](crate::model::GpsCoordinates).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) latitude: std::option::Option<f64>,
@@ -2919,7 +2981,7 @@ pub mod gps_coordinates {
             self.longitude = input;
             self
         }
-        /// Consumes the builder and constructs a [`GpsCoordinates`](crate::model::GpsCoordinates)
+        /// Consumes the builder and constructs a [`GpsCoordinates`](crate::model::GpsCoordinates).
         pub fn build(self) -> crate::model::GpsCoordinates {
             crate::model::GpsCoordinates {
                 latitude: self.latitude.unwrap_or_default(),
@@ -2929,7 +2991,7 @@ pub mod gps_coordinates {
     }
 }
 impl GpsCoordinates {
-    /// Creates a new builder-style object to manufacture [`GpsCoordinates`](crate::model::GpsCoordinates)
+    /// Creates a new builder-style object to manufacture [`GpsCoordinates`](crate::model::GpsCoordinates).
     pub fn builder() -> crate::model::gps_coordinates::Builder {
         crate::model::gps_coordinates::Builder::default()
     }
@@ -2940,8 +3002,10 @@ impl GpsCoordinates {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SetDimension {
     /// <p>The type of segment dimension to use. Valid values are: INCLUSIVE, endpoints that match the criteria are included in the segment; and, EXCLUSIVE, endpoints that match the criteria are excluded from the segment.</p>
+    #[doc(hidden)]
     pub dimension_type: std::option::Option<crate::model::DimensionType>,
     /// <p>The criteria values to use for the segment dimension. Depending on the value of the DimensionType property, endpoints are included or excluded from the segment if their values match the criteria values.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SetDimension {
@@ -2962,11 +3026,10 @@ impl std::fmt::Debug for SetDimension {
         formatter.finish()
     }
 }
-/// See [`SetDimension`](crate::model::SetDimension)
+/// See [`SetDimension`](crate::model::SetDimension).
 pub mod set_dimension {
 
-    /// A builder for [`SetDimension`](crate::model::SetDimension)
-    #[non_exhaustive]
+    /// A builder for [`SetDimension`](crate::model::SetDimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimension_type: std::option::Option<crate::model::DimensionType>,
@@ -3005,7 +3068,7 @@ pub mod set_dimension {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`SetDimension`](crate::model::SetDimension)
+        /// Consumes the builder and constructs a [`SetDimension`](crate::model::SetDimension).
         pub fn build(self) -> crate::model::SetDimension {
             crate::model::SetDimension {
                 dimension_type: self.dimension_type,
@@ -3015,7 +3078,7 @@ pub mod set_dimension {
     }
 }
 impl SetDimension {
-    /// Creates a new builder-style object to manufacture [`SetDimension`](crate::model::SetDimension)
+    /// Creates a new builder-style object to manufacture [`SetDimension`](crate::model::SetDimension).
     pub fn builder() -> crate::model::set_dimension::Builder {
         crate::model::set_dimension::Builder::default()
     }
@@ -3081,16 +3144,22 @@ impl AsRef<str> for DimensionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SegmentDemographics {
     /// <p>The app version criteria for the segment.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<crate::model::SetDimension>,
     /// <p>The channel criteria for the segment.</p>
+    #[doc(hidden)]
     pub channel: std::option::Option<crate::model::SetDimension>,
     /// <p>The device type criteria for the segment.</p>
+    #[doc(hidden)]
     pub device_type: std::option::Option<crate::model::SetDimension>,
     /// <p>The device make criteria for the segment.</p>
+    #[doc(hidden)]
     pub make: std::option::Option<crate::model::SetDimension>,
     /// <p>The device model criteria for the segment.</p>
+    #[doc(hidden)]
     pub model: std::option::Option<crate::model::SetDimension>,
     /// <p>The device platform criteria for the segment.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::SetDimension>,
 }
 impl SegmentDemographics {
@@ -3131,11 +3200,10 @@ impl std::fmt::Debug for SegmentDemographics {
         formatter.finish()
     }
 }
-/// See [`SegmentDemographics`](crate::model::SegmentDemographics)
+/// See [`SegmentDemographics`](crate::model::SegmentDemographics).
 pub mod segment_demographics {
 
-    /// A builder for [`SegmentDemographics`](crate::model::SegmentDemographics)
-    #[non_exhaustive]
+    /// A builder for [`SegmentDemographics`](crate::model::SegmentDemographics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_version: std::option::Option<crate::model::SetDimension>,
@@ -3218,7 +3286,7 @@ pub mod segment_demographics {
             self.platform = input;
             self
         }
-        /// Consumes the builder and constructs a [`SegmentDemographics`](crate::model::SegmentDemographics)
+        /// Consumes the builder and constructs a [`SegmentDemographics`](crate::model::SegmentDemographics).
         pub fn build(self) -> crate::model::SegmentDemographics {
             crate::model::SegmentDemographics {
                 app_version: self.app_version,
@@ -3232,7 +3300,7 @@ pub mod segment_demographics {
     }
 }
 impl SegmentDemographics {
-    /// Creates a new builder-style object to manufacture [`SegmentDemographics`](crate::model::SegmentDemographics)
+    /// Creates a new builder-style object to manufacture [`SegmentDemographics`](crate::model::SegmentDemographics).
     pub fn builder() -> crate::model::segment_demographics::Builder {
         crate::model::segment_demographics::Builder::default()
     }
@@ -3243,6 +3311,7 @@ impl SegmentDemographics {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SegmentBehaviors {
     /// <p>The dimension settings that are based on how recently an endpoint was active.</p>
+    #[doc(hidden)]
     pub recency: std::option::Option<crate::model::RecencyDimension>,
 }
 impl SegmentBehaviors {
@@ -3258,11 +3327,10 @@ impl std::fmt::Debug for SegmentBehaviors {
         formatter.finish()
     }
 }
-/// See [`SegmentBehaviors`](crate::model::SegmentBehaviors)
+/// See [`SegmentBehaviors`](crate::model::SegmentBehaviors).
 pub mod segment_behaviors {
 
-    /// A builder for [`SegmentBehaviors`](crate::model::SegmentBehaviors)
-    #[non_exhaustive]
+    /// A builder for [`SegmentBehaviors`](crate::model::SegmentBehaviors).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recency: std::option::Option<crate::model::RecencyDimension>,
@@ -3281,7 +3349,7 @@ pub mod segment_behaviors {
             self.recency = input;
             self
         }
-        /// Consumes the builder and constructs a [`SegmentBehaviors`](crate::model::SegmentBehaviors)
+        /// Consumes the builder and constructs a [`SegmentBehaviors`](crate::model::SegmentBehaviors).
         pub fn build(self) -> crate::model::SegmentBehaviors {
             crate::model::SegmentBehaviors {
                 recency: self.recency,
@@ -3290,7 +3358,7 @@ pub mod segment_behaviors {
     }
 }
 impl SegmentBehaviors {
-    /// Creates a new builder-style object to manufacture [`SegmentBehaviors`](crate::model::SegmentBehaviors)
+    /// Creates a new builder-style object to manufacture [`SegmentBehaviors`](crate::model::SegmentBehaviors).
     pub fn builder() -> crate::model::segment_behaviors::Builder {
         crate::model::segment_behaviors::Builder::default()
     }
@@ -3301,8 +3369,10 @@ impl SegmentBehaviors {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecencyDimension {
     /// <p>The duration to use when determining whether an endpoint is active or inactive.</p>
+    #[doc(hidden)]
     pub duration: std::option::Option<crate::model::Duration>,
     /// <p>The type of recency dimension to use for the segment. Valid values are: ACTIVE, endpoints that were active within the specified duration are included in the segment; and, INACTIVE, endpoints that weren't active within the specified duration are included in the segment.</p>
+    #[doc(hidden)]
     pub recency_type: std::option::Option<crate::model::RecencyType>,
 }
 impl RecencyDimension {
@@ -3323,11 +3393,10 @@ impl std::fmt::Debug for RecencyDimension {
         formatter.finish()
     }
 }
-/// See [`RecencyDimension`](crate::model::RecencyDimension)
+/// See [`RecencyDimension`](crate::model::RecencyDimension).
 pub mod recency_dimension {
 
-    /// A builder for [`RecencyDimension`](crate::model::RecencyDimension)
-    #[non_exhaustive]
+    /// A builder for [`RecencyDimension`](crate::model::RecencyDimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) duration: std::option::Option<crate::model::Duration>,
@@ -3357,7 +3426,7 @@ pub mod recency_dimension {
             self.recency_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecencyDimension`](crate::model::RecencyDimension)
+        /// Consumes the builder and constructs a [`RecencyDimension`](crate::model::RecencyDimension).
         pub fn build(self) -> crate::model::RecencyDimension {
             crate::model::RecencyDimension {
                 duration: self.duration,
@@ -3367,7 +3436,7 @@ pub mod recency_dimension {
     }
 }
 impl RecencyDimension {
-    /// Creates a new builder-style object to manufacture [`RecencyDimension`](crate::model::RecencyDimension)
+    /// Creates a new builder-style object to manufacture [`RecencyDimension`](crate::model::RecencyDimension).
     pub fn builder() -> crate::model::recency_dimension::Builder {
         crate::model::recency_dimension::Builder::default()
     }
@@ -3496,16 +3565,22 @@ impl AsRef<str> for Duration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SegmentImportResource {
     /// <p>The number of channel types in the endpoint definitions that were imported to create the segment.</p>
+    #[doc(hidden)]
     pub channel_counts: std::option::Option<std::collections::HashMap<std::string::String, i32>>,
     /// <p>(Deprecated) Your AWS account ID, which you assigned to an external ID key in an IAM trust policy. Amazon Pinpoint previously used this value to assume an IAM role when importing endpoint definitions, but we removed this requirement. We don't recommend use of external IDs for IAM roles that are assumed by Amazon Pinpoint.</p>
+    #[doc(hidden)]
     pub external_id: std::option::Option<std::string::String>,
     /// <p>The format of the files that were imported to create the segment. Valid values are: CSV, for comma-separated values format; and, JSON, for newline-delimited JSON format.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::Format>,
     /// <p>The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorized Amazon Pinpoint to access the Amazon S3 location to import endpoint definitions from.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The URL of the Amazon Simple Storage Service (Amazon S3) bucket that the endpoint definitions were imported from to create the segment.</p>
+    #[doc(hidden)]
     pub s3_url: std::option::Option<std::string::String>,
     /// <p>The number of endpoint definitions that were imported successfully to create the segment.</p>
+    #[doc(hidden)]
     pub size: i32,
 }
 impl SegmentImportResource {
@@ -3548,11 +3623,10 @@ impl std::fmt::Debug for SegmentImportResource {
         formatter.finish()
     }
 }
-/// See [`SegmentImportResource`](crate::model::SegmentImportResource)
+/// See [`SegmentImportResource`](crate::model::SegmentImportResource).
 pub mod segment_import_resource {
 
-    /// A builder for [`SegmentImportResource`](crate::model::SegmentImportResource)
-    #[non_exhaustive]
+    /// A builder for [`SegmentImportResource`](crate::model::SegmentImportResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_counts:
@@ -3633,7 +3707,7 @@ pub mod segment_import_resource {
             self.size = input;
             self
         }
-        /// Consumes the builder and constructs a [`SegmentImportResource`](crate::model::SegmentImportResource)
+        /// Consumes the builder and constructs a [`SegmentImportResource`](crate::model::SegmentImportResource).
         pub fn build(self) -> crate::model::SegmentImportResource {
             crate::model::SegmentImportResource {
                 channel_counts: self.channel_counts,
@@ -3647,7 +3721,7 @@ pub mod segment_import_resource {
     }
 }
 impl SegmentImportResource {
-    /// Creates a new builder-style object to manufacture [`SegmentImportResource`](crate::model::SegmentImportResource)
+    /// Creates a new builder-style object to manufacture [`SegmentImportResource`](crate::model::SegmentImportResource).
     pub fn builder() -> crate::model::segment_import_resource::Builder {
         crate::model::segment_import_resource::Builder::default()
     }
@@ -3713,12 +3787,16 @@ impl AsRef<str> for Format {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WriteSegmentRequest {
     /// <p>The criteria that define the dimensions for the segment.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<crate::model::SegmentDimensions>,
     /// <p>The name of the segment.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The segment group to use and the dimensions to apply to the group's base segments in order to build the segment. A segment group can consist of zero or more base segments. Your request can include only one segment group.</p>
+    #[doc(hidden)]
     pub segment_groups: std::option::Option<crate::model::SegmentGroupList>,
     /// <p>A string-to-string map of key-value pairs that defines the tags to associate with the segment. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -3753,11 +3831,10 @@ impl std::fmt::Debug for WriteSegmentRequest {
         formatter.finish()
     }
 }
-/// See [`WriteSegmentRequest`](crate::model::WriteSegmentRequest)
+/// See [`WriteSegmentRequest`](crate::model::WriteSegmentRequest).
 pub mod write_segment_request {
 
-    /// A builder for [`WriteSegmentRequest`](crate::model::WriteSegmentRequest)
-    #[non_exhaustive]
+    /// A builder for [`WriteSegmentRequest`](crate::model::WriteSegmentRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimensions: std::option::Option<crate::model::SegmentDimensions>,
@@ -3829,7 +3906,7 @@ pub mod write_segment_request {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`WriteSegmentRequest`](crate::model::WriteSegmentRequest)
+        /// Consumes the builder and constructs a [`WriteSegmentRequest`](crate::model::WriteSegmentRequest).
         pub fn build(self) -> crate::model::WriteSegmentRequest {
             crate::model::WriteSegmentRequest {
                 dimensions: self.dimensions,
@@ -3841,7 +3918,7 @@ pub mod write_segment_request {
     }
 }
 impl WriteSegmentRequest {
-    /// Creates a new builder-style object to manufacture [`WriteSegmentRequest`](crate::model::WriteSegmentRequest)
+    /// Creates a new builder-style object to manufacture [`WriteSegmentRequest`](crate::model::WriteSegmentRequest).
     pub fn builder() -> crate::model::write_segment_request::Builder {
         crate::model::write_segment_request::Builder::default()
     }
@@ -3853,34 +3930,46 @@ impl WriteSegmentRequest {
 pub struct RecommenderConfigurationResponse {
     /// <p>A map that defines 1-10 custom endpoint or user attributes, depending on the value for the RecommendationProviderIdType property. Each of these attributes temporarily stores a recommended item that's retrieved from the recommender model and sent to an AWS Lambda function for additional processing. Each attribute can be used as a message variable in a message template.</p>
     /// <p>This value is null if the configuration doesn't invoke an AWS Lambda function (RecommendationTransformerUri) to perform additional processing of recommendation data.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The date, in extended ISO 8601 format, when the configuration was created for the recommender model.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The custom description of the configuration for the recommender model.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the recommender model configuration.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The date, in extended ISO 8601 format, when the configuration for the recommender model was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The custom name of the configuration for the recommender model.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of Amazon Pinpoint ID that's associated with unique user IDs in the recommender model. This value enables the model to use attribute and event data that’s specific to a particular endpoint or user in an Amazon Pinpoint application. Possible values are:</p>
     /// <ul>
     /// <li><p>PINPOINT_ENDPOINT_ID - Each user in the model is associated with a particular endpoint in Amazon Pinpoint. The data is correlated based on endpoint IDs in Amazon Pinpoint. This is the default value.</p></li>
     /// <li><p>PINPOINT_USER_ID - Each user in the model is associated with a particular user and endpoint in Amazon Pinpoint. The data is correlated based on user IDs in Amazon Pinpoint. If this value is specified, an endpoint definition in Amazon Pinpoint has to specify both a user ID (UserId) and an endpoint ID. Otherwise, messages won’t be sent to the user's endpoint.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub recommendation_provider_id_type: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorizes Amazon Pinpoint to retrieve recommendation data from the recommender model.</p>
+    #[doc(hidden)]
     pub recommendation_provider_role_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the recommender model that Amazon Pinpoint retrieves the recommendation data from. This value is the ARN of an Amazon Personalize campaign.</p>
+    #[doc(hidden)]
     pub recommendation_provider_uri: std::option::Option<std::string::String>,
     /// <p>The name or Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Pinpoint invokes to perform additional processing of recommendation data that it retrieves from the recommender model.</p>
+    #[doc(hidden)]
     pub recommendation_transformer_uri: std::option::Option<std::string::String>,
     /// <p>The custom display name for the standard endpoint or user attribute (RecommendationItems) that temporarily stores recommended items for each endpoint or user, depending on the value for the RecommendationProviderIdType property. This name appears in the <b>Attribute finder</b> of the template editor on the Amazon Pinpoint console.</p>
     /// <p>This value is null if the configuration doesn't invoke an AWS Lambda function (RecommendationTransformerUri) to perform additional processing of recommendation data.</p>
+    #[doc(hidden)]
     pub recommendations_display_name: std::option::Option<std::string::String>,
     /// <p>The number of recommended items that are retrieved from the model for each endpoint or user, depending on the value for the RecommendationProviderIdType property. This number determines how many recommended items are available for use in message variables.</p>
+    #[doc(hidden)]
     pub recommendations_per_message: i32,
 }
 impl RecommenderConfigurationResponse {
@@ -3978,11 +4067,10 @@ impl std::fmt::Debug for RecommenderConfigurationResponse {
         formatter.finish()
     }
 }
-/// See [`RecommenderConfigurationResponse`](crate::model::RecommenderConfigurationResponse)
+/// See [`RecommenderConfigurationResponse`](crate::model::RecommenderConfigurationResponse).
 pub mod recommender_configuration_response {
 
-    /// A builder for [`RecommenderConfigurationResponse`](crate::model::RecommenderConfigurationResponse)
-    #[non_exhaustive]
+    /// A builder for [`RecommenderConfigurationResponse`](crate::model::RecommenderConfigurationResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<
@@ -4184,7 +4272,7 @@ pub mod recommender_configuration_response {
             self.recommendations_per_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecommenderConfigurationResponse`](crate::model::RecommenderConfigurationResponse)
+        /// Consumes the builder and constructs a [`RecommenderConfigurationResponse`](crate::model::RecommenderConfigurationResponse).
         pub fn build(self) -> crate::model::RecommenderConfigurationResponse {
             crate::model::RecommenderConfigurationResponse {
                 attributes: self.attributes,
@@ -4204,7 +4292,7 @@ pub mod recommender_configuration_response {
     }
 }
 impl RecommenderConfigurationResponse {
-    /// Creates a new builder-style object to manufacture [`RecommenderConfigurationResponse`](crate::model::RecommenderConfigurationResponse)
+    /// Creates a new builder-style object to manufacture [`RecommenderConfigurationResponse`](crate::model::RecommenderConfigurationResponse).
     pub fn builder() -> crate::model::recommender_configuration_response::Builder {
         crate::model::recommender_configuration_response::Builder::default()
     }
@@ -4221,29 +4309,38 @@ pub struct UpdateRecommenderConfigurationShape {
     /// <li><p>An attribute display name must start with a letter or number and it can contain up to 25 characters. The characters can be letters, numbers, spaces, underscores (_), or hyphens (-).</p></li>
     /// </ul>
     /// <p>This object is required if the configuration invokes an AWS Lambda function (RecommendationTransformerUri) to process recommendation data. Otherwise, don't include this object in your request.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A custom description of the configuration for the recommender model. The description can contain up to 128 characters. The characters can be letters, numbers, spaces, or the following symbols: _ ; () , ‐.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A custom name of the configuration for the recommender model. The name must start with a letter or number and it can contain up to 128 characters. The characters can be letters, numbers, spaces, underscores (_), or hyphens (-).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of Amazon Pinpoint ID to associate with unique user IDs in the recommender model. This value enables the model to use attribute and event data that’s specific to a particular endpoint or user in an Amazon Pinpoint application. Valid values are:</p>
     /// <ul>
     /// <li><p>PINPOINT_ENDPOINT_ID - Associate each user in the model with a particular endpoint in Amazon Pinpoint. The data is correlated based on endpoint IDs in Amazon Pinpoint. This is the default value.</p></li>
     /// <li><p>PINPOINT_USER_ID - Associate each user in the model with a particular user and endpoint in Amazon Pinpoint. The data is correlated based on user IDs in Amazon Pinpoint. If you specify this value, an endpoint definition in Amazon Pinpoint has to specify both a user ID (UserId) and an endpoint ID. Otherwise, messages won’t be sent to the user's endpoint.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub recommendation_provider_id_type: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorizes Amazon Pinpoint to retrieve recommendation data from the recommender model.</p>
+    #[doc(hidden)]
     pub recommendation_provider_role_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the recommender model to retrieve recommendation data from. This value must match the ARN of an Amazon Personalize campaign.</p>
+    #[doc(hidden)]
     pub recommendation_provider_uri: std::option::Option<std::string::String>,
     /// <p>The name or Amazon Resource Name (ARN) of the AWS Lambda function to invoke for additional processing of recommendation data that's retrieved from the recommender model.</p>
+    #[doc(hidden)]
     pub recommendation_transformer_uri: std::option::Option<std::string::String>,
     /// <p>A custom display name for the standard endpoint or user attribute (RecommendationItems) that temporarily stores recommended items for each endpoint or user, depending on the value for the RecommendationProviderIdType property. This value is required if the configuration doesn't invoke an AWS Lambda function (RecommendationTransformerUri) to perform additional processing of recommendation data.</p>
     /// <p>This name appears in the <b>Attribute finder</b> of the template editor on the Amazon Pinpoint console. The name can contain up to 25 characters. The characters can be letters, numbers, spaces, underscores (_), or hyphens (-). These restrictions don't apply to attribute values.</p>
+    #[doc(hidden)]
     pub recommendations_display_name: std::option::Option<std::string::String>,
     /// <p>The number of recommended items to retrieve from the model for each endpoint or user, depending on the value for the RecommendationProviderIdType property. This number determines how many recommended items are available for use in message variables. The minimum value is 1. The maximum value is 5. The default value is 5.</p>
     /// <p>To use multiple recommended items and custom attributes with message variables, you have to use an AWS Lambda function (RecommendationTransformerUri) to perform additional processing of recommendation data.</p>
+    #[doc(hidden)]
     pub recommendations_per_message: i32,
 }
 impl UpdateRecommenderConfigurationShape {
@@ -4332,11 +4429,10 @@ impl std::fmt::Debug for UpdateRecommenderConfigurationShape {
         formatter.finish()
     }
 }
-/// See [`UpdateRecommenderConfigurationShape`](crate::model::UpdateRecommenderConfigurationShape)
+/// See [`UpdateRecommenderConfigurationShape`](crate::model::UpdateRecommenderConfigurationShape).
 pub mod update_recommender_configuration_shape {
 
-    /// A builder for [`UpdateRecommenderConfigurationShape`](crate::model::UpdateRecommenderConfigurationShape)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRecommenderConfigurationShape`](crate::model::UpdateRecommenderConfigurationShape).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<
@@ -4511,7 +4607,7 @@ pub mod update_recommender_configuration_shape {
             self.recommendations_per_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRecommenderConfigurationShape`](crate::model::UpdateRecommenderConfigurationShape)
+        /// Consumes the builder and constructs a [`UpdateRecommenderConfigurationShape`](crate::model::UpdateRecommenderConfigurationShape).
         pub fn build(self) -> crate::model::UpdateRecommenderConfigurationShape {
             crate::model::UpdateRecommenderConfigurationShape {
                 attributes: self.attributes,
@@ -4528,7 +4624,7 @@ pub mod update_recommender_configuration_shape {
     }
 }
 impl UpdateRecommenderConfigurationShape {
-    /// Creates a new builder-style object to manufacture [`UpdateRecommenderConfigurationShape`](crate::model::UpdateRecommenderConfigurationShape)
+    /// Creates a new builder-style object to manufacture [`UpdateRecommenderConfigurationShape`](crate::model::UpdateRecommenderConfigurationShape).
     pub fn builder() -> crate::model::update_recommender_configuration_shape::Builder {
         crate::model::update_recommender_configuration_shape::Builder::default()
     }
@@ -4539,25 +4635,34 @@ impl UpdateRecommenderConfigurationShape {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PushNotificationTemplateRequest {
     /// <p>The message template to use for the ADM (Amazon Device Messaging) channel. This message template overrides the default template for push notification channels (DefaultPushNotificationTemplate).</p>
+    #[doc(hidden)]
     pub adm: std::option::Option<crate::model::AndroidPushNotificationTemplate>,
     /// <p>The message template to use for the APNs (Apple Push Notification service) channel. This message template overrides the default template for push notification channels (DefaultPushNotificationTemplate).</p>
+    #[doc(hidden)]
     pub apns: std::option::Option<crate::model::ApnsPushNotificationTemplate>,
     /// <p>The message template to use for the Baidu (Baidu Cloud Push) channel. This message template overrides the default template for push notification channels (DefaultPushNotificationTemplate).</p>
+    #[doc(hidden)]
     pub baidu: std::option::Option<crate::model::AndroidPushNotificationTemplate>,
     /// <p>The default message template to use for push notification channels.</p>
     ///
     /// _Note: This member has been renamed from `default`._
+    #[doc(hidden)]
     pub default_value: std::option::Option<crate::model::DefaultPushNotificationTemplate>,
     /// <p>A JSON object that specifies the default values to use for message variables in the message template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the default value for that variable. When you create a message that's based on the template, you can override these defaults with message-specific and address-specific variables and values.</p>
+    #[doc(hidden)]
     pub default_substitutions: std::option::Option<std::string::String>,
     /// <p>The message template to use for the GCM channel, which is used to send notifications through the Firebase Cloud Messaging (FCM), formerly Google Cloud Messaging (GCM), service. This message template overrides the default template for push notification channels (DefaultPushNotificationTemplate).</p>
+    #[doc(hidden)]
     pub gcm: std::option::Option<crate::model::AndroidPushNotificationTemplate>,
     /// <p>The unique identifier for the recommender model to use for the message template. Amazon Pinpoint uses this value to determine how to retrieve and process data from a recommender model when it sends messages that use the template, if the template contains message variables for recommendation data.</p>
+    #[doc(hidden)]
     pub recommender_id: std::option::Option<std::string::String>,
     /// <p>A string-to-string map of key-value pairs that defines the tags to associate with the message template. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A custom description of the message template.</p>
+    #[doc(hidden)]
     pub template_description: std::option::Option<std::string::String>,
 }
 impl PushNotificationTemplateRequest {
@@ -4620,11 +4725,10 @@ impl std::fmt::Debug for PushNotificationTemplateRequest {
         formatter.finish()
     }
 }
-/// See [`PushNotificationTemplateRequest`](crate::model::PushNotificationTemplateRequest)
+/// See [`PushNotificationTemplateRequest`](crate::model::PushNotificationTemplateRequest).
 pub mod push_notification_template_request {
 
-    /// A builder for [`PushNotificationTemplateRequest`](crate::model::PushNotificationTemplateRequest)
-    #[non_exhaustive]
+    /// A builder for [`PushNotificationTemplateRequest`](crate::model::PushNotificationTemplateRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) adm: std::option::Option<crate::model::AndroidPushNotificationTemplate>,
@@ -4773,7 +4877,7 @@ pub mod push_notification_template_request {
             self.template_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`PushNotificationTemplateRequest`](crate::model::PushNotificationTemplateRequest)
+        /// Consumes the builder and constructs a [`PushNotificationTemplateRequest`](crate::model::PushNotificationTemplateRequest).
         pub fn build(self) -> crate::model::PushNotificationTemplateRequest {
             crate::model::PushNotificationTemplateRequest {
                 adm: self.adm,
@@ -4790,7 +4894,7 @@ pub mod push_notification_template_request {
     }
 }
 impl PushNotificationTemplateRequest {
-    /// Creates a new builder-style object to manufacture [`PushNotificationTemplateRequest`](crate::model::PushNotificationTemplateRequest)
+    /// Creates a new builder-style object to manufacture [`PushNotificationTemplateRequest`](crate::model::PushNotificationTemplateRequest).
     pub fn builder() -> crate::model::push_notification_template_request::Builder {
         crate::model::push_notification_template_request::Builder::default()
     }
@@ -4806,22 +4910,31 @@ pub struct AndroidPushNotificationTemplate {
     /// <li><p>DEEP_LINK - Your app opens and displays a designated user interface in the app. This action uses the deep-linking features of the Android platform.</p></li>
     /// <li><p>URL - The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::Action>,
     /// <p>The message body to use in a push notification that's based on the message template.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The URL of the large icon image to display in the content view of a push notification that's based on the message template.</p>
+    #[doc(hidden)]
     pub image_icon_url: std::option::Option<std::string::String>,
     /// <p>The URL of an image to display in a push notification that's based on the message template.</p>
+    #[doc(hidden)]
     pub image_url: std::option::Option<std::string::String>,
     /// <p>The raw, JSON-formatted string to use as the payload for a push notification that's based on the message template. If specified, this value overrides all other content for the message template.</p>
+    #[doc(hidden)]
     pub raw_content: std::option::Option<std::string::String>,
     /// <p>The URL of the small icon image to display in the status bar and the content view of a push notification that's based on the message template.</p>
+    #[doc(hidden)]
     pub small_image_icon_url: std::option::Option<std::string::String>,
     /// <p>The sound to play when a recipient receives a push notification that's based on the message template. You can use the default stream or specify the file name of a sound resource that's bundled in your app. On an Android platform, the sound file must reside in /res/raw/.</p>
+    #[doc(hidden)]
     pub sound: std::option::Option<std::string::String>,
     /// <p>The title to use in a push notification that's based on the message template. This title appears above the notification message on a recipient's device.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p>The URL to open in a recipient's default mobile browser, if a recipient taps a push notification that's based on the message template and the value of the Action property is URL.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl AndroidPushNotificationTemplate {
@@ -4882,11 +4995,10 @@ impl std::fmt::Debug for AndroidPushNotificationTemplate {
         formatter.finish()
     }
 }
-/// See [`AndroidPushNotificationTemplate`](crate::model::AndroidPushNotificationTemplate)
+/// See [`AndroidPushNotificationTemplate`](crate::model::AndroidPushNotificationTemplate).
 pub mod android_push_notification_template {
 
-    /// A builder for [`AndroidPushNotificationTemplate`](crate::model::AndroidPushNotificationTemplate)
-    #[non_exhaustive]
+    /// A builder for [`AndroidPushNotificationTemplate`](crate::model::AndroidPushNotificationTemplate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::Action>,
@@ -5006,7 +5118,7 @@ pub mod android_push_notification_template {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`AndroidPushNotificationTemplate`](crate::model::AndroidPushNotificationTemplate)
+        /// Consumes the builder and constructs a [`AndroidPushNotificationTemplate`](crate::model::AndroidPushNotificationTemplate).
         pub fn build(self) -> crate::model::AndroidPushNotificationTemplate {
             crate::model::AndroidPushNotificationTemplate {
                 action: self.action,
@@ -5023,7 +5135,7 @@ pub mod android_push_notification_template {
     }
 }
 impl AndroidPushNotificationTemplate {
-    /// Creates a new builder-style object to manufacture [`AndroidPushNotificationTemplate`](crate::model::AndroidPushNotificationTemplate)
+    /// Creates a new builder-style object to manufacture [`AndroidPushNotificationTemplate`](crate::model::AndroidPushNotificationTemplate).
     pub fn builder() -> crate::model::android_push_notification_template::Builder {
         crate::model::android_push_notification_template::Builder::default()
     }
@@ -5098,15 +5210,20 @@ pub struct DefaultPushNotificationTemplate {
     /// <li><p>DEEP_LINK - Your app opens and displays a designated user interface in the app. This setting uses the deep-linking features of the iOS and Android platforms.</p></li>
     /// <li><p>URL - The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::Action>,
     /// <p>The message body to use in push notifications that are based on the message template.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The sound to play when a recipient receives a push notification that's based on the message template. You can use the default stream or specify the file name of a sound resource that's bundled in your app. On an Android platform, the sound file must reside in /res/raw/.</p>
     /// <p>For an iOS platform, this value is the key for the name of a sound file in your app's main bundle or the Library/Sounds folder in your app's data container. If the sound file can't be found or you specify default for the value, the system plays the default alert sound.</p>
+    #[doc(hidden)]
     pub sound: std::option::Option<std::string::String>,
     /// <p>The title to use in push notifications that are based on the message template. This title appears above the notification message on a recipient's device.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p>The URL to open in a recipient's default mobile browser, if a recipient taps a push notification that's based on the message template and the value of the Action property is URL.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl DefaultPushNotificationTemplate {
@@ -5148,11 +5265,10 @@ impl std::fmt::Debug for DefaultPushNotificationTemplate {
         formatter.finish()
     }
 }
-/// See [`DefaultPushNotificationTemplate`](crate::model::DefaultPushNotificationTemplate)
+/// See [`DefaultPushNotificationTemplate`](crate::model::DefaultPushNotificationTemplate).
 pub mod default_push_notification_template {
 
-    /// A builder for [`DefaultPushNotificationTemplate`](crate::model::DefaultPushNotificationTemplate)
-    #[non_exhaustive]
+    /// A builder for [`DefaultPushNotificationTemplate`](crate::model::DefaultPushNotificationTemplate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::Action>,
@@ -5224,7 +5340,7 @@ pub mod default_push_notification_template {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`DefaultPushNotificationTemplate`](crate::model::DefaultPushNotificationTemplate)
+        /// Consumes the builder and constructs a [`DefaultPushNotificationTemplate`](crate::model::DefaultPushNotificationTemplate).
         pub fn build(self) -> crate::model::DefaultPushNotificationTemplate {
             crate::model::DefaultPushNotificationTemplate {
                 action: self.action,
@@ -5237,7 +5353,7 @@ pub mod default_push_notification_template {
     }
 }
 impl DefaultPushNotificationTemplate {
-    /// Creates a new builder-style object to manufacture [`DefaultPushNotificationTemplate`](crate::model::DefaultPushNotificationTemplate)
+    /// Creates a new builder-style object to manufacture [`DefaultPushNotificationTemplate`](crate::model::DefaultPushNotificationTemplate).
     pub fn builder() -> crate::model::default_push_notification_template::Builder {
         crate::model::default_push_notification_template::Builder::default()
     }
@@ -5253,18 +5369,25 @@ pub struct ApnsPushNotificationTemplate {
     /// <li><p>DEEP_LINK - Your app opens and displays a designated user interface in the app. This setting uses the deep-linking features of the iOS platform.</p></li>
     /// <li><p>URL - The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::Action>,
     /// <p>The message body to use in push notifications that are based on the message template.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The URL of an image or video to display in push notifications that are based on the message template.</p>
+    #[doc(hidden)]
     pub media_url: std::option::Option<std::string::String>,
     /// <p>The raw, JSON-formatted string to use as the payload for push notifications that are based on the message template. If specified, this value overrides all other content for the message template.</p>
+    #[doc(hidden)]
     pub raw_content: std::option::Option<std::string::String>,
     /// <p>The key for the sound to play when the recipient receives a push notification that's based on the message template. The value for this key is the name of a sound file in your app's main bundle or the Library/Sounds folder in your app's data container. If the sound file can't be found or you specify default for the value, the system plays the default alert sound.</p>
+    #[doc(hidden)]
     pub sound: std::option::Option<std::string::String>,
     /// <p>The title to use in push notifications that are based on the message template. This title appears above the notification message on a recipient's device.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p>The URL to open in the recipient's default mobile browser, if a recipient taps a push notification that's based on the message template and the value of the Action property is URL.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl ApnsPushNotificationTemplate {
@@ -5315,11 +5438,10 @@ impl std::fmt::Debug for ApnsPushNotificationTemplate {
         formatter.finish()
     }
 }
-/// See [`ApnsPushNotificationTemplate`](crate::model::ApnsPushNotificationTemplate)
+/// See [`ApnsPushNotificationTemplate`](crate::model::ApnsPushNotificationTemplate).
 pub mod apns_push_notification_template {
 
-    /// A builder for [`ApnsPushNotificationTemplate`](crate::model::ApnsPushNotificationTemplate)
-    #[non_exhaustive]
+    /// A builder for [`ApnsPushNotificationTemplate`](crate::model::ApnsPushNotificationTemplate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::Action>,
@@ -5411,7 +5533,7 @@ pub mod apns_push_notification_template {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApnsPushNotificationTemplate`](crate::model::ApnsPushNotificationTemplate)
+        /// Consumes the builder and constructs a [`ApnsPushNotificationTemplate`](crate::model::ApnsPushNotificationTemplate).
         pub fn build(self) -> crate::model::ApnsPushNotificationTemplate {
             crate::model::ApnsPushNotificationTemplate {
                 action: self.action,
@@ -5426,7 +5548,7 @@ pub mod apns_push_notification_template {
     }
 }
 impl ApnsPushNotificationTemplate {
-    /// Creates a new builder-style object to manufacture [`ApnsPushNotificationTemplate`](crate::model::ApnsPushNotificationTemplate)
+    /// Creates a new builder-style object to manufacture [`ApnsPushNotificationTemplate`](crate::model::ApnsPushNotificationTemplate).
     pub fn builder() -> crate::model::apns_push_notification_template::Builder {
         crate::model::apns_push_notification_template::Builder::default()
     }
@@ -5437,21 +5559,29 @@ impl ApnsPushNotificationTemplate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JourneyResponse {
     /// <p>A map that contains a set of Activity objects, one object for each activity in the journey. For each Activity object, the key is the unique identifier (string) for an activity and the value is the settings for the activity.</p>
+    #[doc(hidden)]
     pub activities:
         std::option::Option<std::collections::HashMap<std::string::String, crate::model::Activity>>,
     /// <p>The unique identifier for the application that the journey applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the journey was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the journey.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the journey was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The messaging and entry limits for the journey.</p>
+    #[doc(hidden)]
     pub limits: std::option::Option<crate::model::JourneyLimits>,
     /// <p>Specifies whether the journey's scheduled start and end times use each participant's local time. If this value is true, the schedule uses each participant's local time.</p>
+    #[doc(hidden)]
     pub local_time: bool,
     /// <p>The name of the journey.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The quiet time settings for the journey. Quiet time is a specific time range when a journey doesn't send messages to participants, if all the following conditions are met:</p>
     /// <ul>
@@ -5460,14 +5590,19 @@ pub struct JourneyResponse {
     /// <li><p>The current time in the participant's time zone is earlier than or equal to the time specified by the QuietTime.End property for the journey.</p></li>
     /// </ul>
     /// <p>If any of the preceding conditions isn't met, the participant will receive messages from the journey, even if quiet time is enabled.</p>
+    #[doc(hidden)]
     pub quiet_time: std::option::Option<crate::model::QuietTime>,
     /// <p>The frequency with which Amazon Pinpoint evaluates segment and event data for the journey, as a duration in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub refresh_frequency: std::option::Option<std::string::String>,
     /// <p>The schedule settings for the journey.</p>
+    #[doc(hidden)]
     pub schedule: std::option::Option<crate::model::JourneySchedule>,
     /// <p>The unique identifier for the first activity in the journey.</p>
+    #[doc(hidden)]
     pub start_activity: std::option::Option<std::string::String>,
     /// <p>The segment that defines which users are participants in the journey.</p>
+    #[doc(hidden)]
     pub start_condition: std::option::Option<crate::model::StartCondition>,
     /// <p>The current status of the journey. Possible values are:</p>
     /// <ul>
@@ -5477,16 +5612,30 @@ pub struct JourneyResponse {
     /// <li><p>CANCELLED - The journey has been stopped. If a journey's status is CANCELLED, you can't add, change, or remove activities or segment settings from the journey.</p></li>
     /// <li><p>CLOSED - The journey has been published and has started running. It may have also passed its scheduled end time, or passed its scheduled start time and a refresh frequency hasn't been specified for it. If a journey's status is CLOSED, you can't add participants to it, and no existing participants can enter the journey for the first time. However, any existing participants who are currently waiting to start an activity may continue the journey.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::State>,
     /// <p>This object is not used or supported.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Specifies whether endpoints in quiet hours should enter a wait till the end of their quiet hours.</p>
+    #[doc(hidden)]
     pub wait_for_quiet_time: bool,
     /// <p>Specifies whether a journey should be refreshed on segment update.</p>
+    #[doc(hidden)]
     pub refresh_on_segment_update: bool,
     /// <p>The channel-specific configurations for the journey.</p>
+    #[doc(hidden)]
     pub journey_channel_settings: std::option::Option<crate::model::JourneyChannelSettings>,
+    /// <p>Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order to allow (OpenHours and ClosedDays)</p>
+    #[doc(hidden)]
+    pub sending_schedule: bool,
+    /// <p>The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+    #[doc(hidden)]
+    pub open_hours: std::option::Option<crate::model::OpenHours>,
+    /// <p>The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+    #[doc(hidden)]
+    pub closed_days: std::option::Option<crate::model::ClosedDays>,
 }
 impl JourneyResponse {
     /// <p>A map that contains a set of Activity objects, one object for each activity in the journey. For each Activity object, the key is the unique identifier (string) for an activity and the value is the settings for the activity.</p>
@@ -5582,6 +5731,18 @@ impl JourneyResponse {
     ) -> std::option::Option<&crate::model::JourneyChannelSettings> {
         self.journey_channel_settings.as_ref()
     }
+    /// <p>Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order to allow (OpenHours and ClosedDays)</p>
+    pub fn sending_schedule(&self) -> bool {
+        self.sending_schedule
+    }
+    /// <p>The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+    pub fn open_hours(&self) -> std::option::Option<&crate::model::OpenHours> {
+        self.open_hours.as_ref()
+    }
+    /// <p>The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+    pub fn closed_days(&self) -> std::option::Option<&crate::model::ClosedDays> {
+        self.closed_days.as_ref()
+    }
 }
 impl std::fmt::Debug for JourneyResponse {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -5604,14 +5765,16 @@ impl std::fmt::Debug for JourneyResponse {
         formatter.field("wait_for_quiet_time", &self.wait_for_quiet_time);
         formatter.field("refresh_on_segment_update", &self.refresh_on_segment_update);
         formatter.field("journey_channel_settings", &self.journey_channel_settings);
+        formatter.field("sending_schedule", &self.sending_schedule);
+        formatter.field("open_hours", &self.open_hours);
+        formatter.field("closed_days", &self.closed_days);
         formatter.finish()
     }
 }
-/// See [`JourneyResponse`](crate::model::JourneyResponse)
+/// See [`JourneyResponse`](crate::model::JourneyResponse).
 pub mod journey_response {
 
-    /// A builder for [`JourneyResponse`](crate::model::JourneyResponse)
-    #[non_exhaustive]
+    /// A builder for [`JourneyResponse`](crate::model::JourneyResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activities: std::option::Option<
@@ -5637,6 +5800,9 @@ pub mod journey_response {
         pub(crate) refresh_on_segment_update: std::option::Option<bool>,
         pub(crate) journey_channel_settings:
             std::option::Option<crate::model::JourneyChannelSettings>,
+        pub(crate) sending_schedule: std::option::Option<bool>,
+        pub(crate) open_hours: std::option::Option<crate::model::OpenHours>,
+        pub(crate) closed_days: std::option::Option<crate::model::ClosedDays>,
     }
     impl Builder {
         /// Adds a key-value pair to `activities`.
@@ -5908,7 +6074,43 @@ pub mod journey_response {
             self.journey_channel_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`JourneyResponse`](crate::model::JourneyResponse)
+        /// <p>Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order to allow (OpenHours and ClosedDays)</p>
+        pub fn sending_schedule(mut self, input: bool) -> Self {
+            self.sending_schedule = Some(input);
+            self
+        }
+        /// <p>Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order to allow (OpenHours and ClosedDays)</p>
+        pub fn set_sending_schedule(mut self, input: std::option::Option<bool>) -> Self {
+            self.sending_schedule = input;
+            self
+        }
+        /// <p>The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+        pub fn open_hours(mut self, input: crate::model::OpenHours) -> Self {
+            self.open_hours = Some(input);
+            self
+        }
+        /// <p>The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+        pub fn set_open_hours(
+            mut self,
+            input: std::option::Option<crate::model::OpenHours>,
+        ) -> Self {
+            self.open_hours = input;
+            self
+        }
+        /// <p>The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+        pub fn closed_days(mut self, input: crate::model::ClosedDays) -> Self {
+            self.closed_days = Some(input);
+            self
+        }
+        /// <p>The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+        pub fn set_closed_days(
+            mut self,
+            input: std::option::Option<crate::model::ClosedDays>,
+        ) -> Self {
+            self.closed_days = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`JourneyResponse`](crate::model::JourneyResponse).
         pub fn build(self) -> crate::model::JourneyResponse {
             crate::model::JourneyResponse {
                 activities: self.activities,
@@ -5929,14 +6131,766 @@ pub mod journey_response {
                 wait_for_quiet_time: self.wait_for_quiet_time.unwrap_or_default(),
                 refresh_on_segment_update: self.refresh_on_segment_update.unwrap_or_default(),
                 journey_channel_settings: self.journey_channel_settings,
+                sending_schedule: self.sending_schedule.unwrap_or_default(),
+                open_hours: self.open_hours,
+                closed_days: self.closed_days,
             }
         }
     }
 }
 impl JourneyResponse {
-    /// Creates a new builder-style object to manufacture [`JourneyResponse`](crate::model::JourneyResponse)
+    /// Creates a new builder-style object to manufacture [`JourneyResponse`](crate::model::JourneyResponse).
     pub fn builder() -> crate::model::journey_response::Builder {
         crate::model::journey_response::Builder::default()
+    }
+}
+
+/// <p>The time when journey will stop sending messages.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ClosedDays {
+    /// <p>Rules for Email Channel.</p>
+    #[doc(hidden)]
+    pub email: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+    /// <p>Rules for SMS Channel.</p>
+    #[doc(hidden)]
+    pub sms: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+    /// <p>Rules for Push Channel.</p>
+    #[doc(hidden)]
+    pub push: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+    /// <p>Rules for Voice Channel.</p>
+    #[doc(hidden)]
+    pub voice: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+    /// <p>Rules for Custom Channel.</p>
+    #[doc(hidden)]
+    pub custom: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+}
+impl ClosedDays {
+    /// <p>Rules for Email Channel.</p>
+    pub fn email(&self) -> std::option::Option<&[crate::model::ClosedDaysRule]> {
+        self.email.as_deref()
+    }
+    /// <p>Rules for SMS Channel.</p>
+    pub fn sms(&self) -> std::option::Option<&[crate::model::ClosedDaysRule]> {
+        self.sms.as_deref()
+    }
+    /// <p>Rules for Push Channel.</p>
+    pub fn push(&self) -> std::option::Option<&[crate::model::ClosedDaysRule]> {
+        self.push.as_deref()
+    }
+    /// <p>Rules for Voice Channel.</p>
+    pub fn voice(&self) -> std::option::Option<&[crate::model::ClosedDaysRule]> {
+        self.voice.as_deref()
+    }
+    /// <p>Rules for Custom Channel.</p>
+    pub fn custom(&self) -> std::option::Option<&[crate::model::ClosedDaysRule]> {
+        self.custom.as_deref()
+    }
+}
+impl std::fmt::Debug for ClosedDays {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ClosedDays");
+        formatter.field("email", &self.email);
+        formatter.field("sms", &self.sms);
+        formatter.field("push", &self.push);
+        formatter.field("voice", &self.voice);
+        formatter.field("custom", &self.custom);
+        formatter.finish()
+    }
+}
+/// See [`ClosedDays`](crate::model::ClosedDays).
+pub mod closed_days {
+
+    /// A builder for [`ClosedDays`](crate::model::ClosedDays).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) email: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+        pub(crate) sms: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+        pub(crate) push: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+        pub(crate) voice: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+        pub(crate) custom: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+    }
+    impl Builder {
+        /// Appends an item to `email`.
+        ///
+        /// To override the contents of this collection use [`set_email`](Self::set_email).
+        ///
+        /// <p>Rules for Email Channel.</p>
+        pub fn email(mut self, input: crate::model::ClosedDaysRule) -> Self {
+            let mut v = self.email.unwrap_or_default();
+            v.push(input);
+            self.email = Some(v);
+            self
+        }
+        /// <p>Rules for Email Channel.</p>
+        pub fn set_email(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+        ) -> Self {
+            self.email = input;
+            self
+        }
+        /// Appends an item to `sms`.
+        ///
+        /// To override the contents of this collection use [`set_sms`](Self::set_sms).
+        ///
+        /// <p>Rules for SMS Channel.</p>
+        pub fn sms(mut self, input: crate::model::ClosedDaysRule) -> Self {
+            let mut v = self.sms.unwrap_or_default();
+            v.push(input);
+            self.sms = Some(v);
+            self
+        }
+        /// <p>Rules for SMS Channel.</p>
+        pub fn set_sms(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+        ) -> Self {
+            self.sms = input;
+            self
+        }
+        /// Appends an item to `push`.
+        ///
+        /// To override the contents of this collection use [`set_push`](Self::set_push).
+        ///
+        /// <p>Rules for Push Channel.</p>
+        pub fn push(mut self, input: crate::model::ClosedDaysRule) -> Self {
+            let mut v = self.push.unwrap_or_default();
+            v.push(input);
+            self.push = Some(v);
+            self
+        }
+        /// <p>Rules for Push Channel.</p>
+        pub fn set_push(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+        ) -> Self {
+            self.push = input;
+            self
+        }
+        /// Appends an item to `voice`.
+        ///
+        /// To override the contents of this collection use [`set_voice`](Self::set_voice).
+        ///
+        /// <p>Rules for Voice Channel.</p>
+        pub fn voice(mut self, input: crate::model::ClosedDaysRule) -> Self {
+            let mut v = self.voice.unwrap_or_default();
+            v.push(input);
+            self.voice = Some(v);
+            self
+        }
+        /// <p>Rules for Voice Channel.</p>
+        pub fn set_voice(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+        ) -> Self {
+            self.voice = input;
+            self
+        }
+        /// Appends an item to `custom`.
+        ///
+        /// To override the contents of this collection use [`set_custom`](Self::set_custom).
+        ///
+        /// <p>Rules for Custom Channel.</p>
+        pub fn custom(mut self, input: crate::model::ClosedDaysRule) -> Self {
+            let mut v = self.custom.unwrap_or_default();
+            v.push(input);
+            self.custom = Some(v);
+            self
+        }
+        /// <p>Rules for Custom Channel.</p>
+        pub fn set_custom(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ClosedDaysRule>>,
+        ) -> Self {
+            self.custom = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ClosedDays`](crate::model::ClosedDays).
+        pub fn build(self) -> crate::model::ClosedDays {
+            crate::model::ClosedDays {
+                email: self.email,
+                sms: self.sms,
+                push: self.push,
+                voice: self.voice,
+                custom: self.custom,
+            }
+        }
+    }
+}
+impl ClosedDays {
+    /// Creates a new builder-style object to manufacture [`ClosedDays`](crate::model::ClosedDays).
+    pub fn builder() -> crate::model::closed_days::Builder {
+        crate::model::closed_days::Builder::default()
+    }
+}
+
+/// <p>Closed Days Rule. Part of Journey sending schedule.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ClosedDaysRule {
+    /// <p>Name of the rule.</p>
+    #[doc(hidden)]
+    pub name: std::option::Option<std::string::String>,
+    /// <p>Start Datetime in ISO 8601 format.</p>
+    #[doc(hidden)]
+    pub start_date_time: std::option::Option<std::string::String>,
+    /// <p>End Datetime in ISO 8601 format.</p>
+    #[doc(hidden)]
+    pub end_date_time: std::option::Option<std::string::String>,
+}
+impl ClosedDaysRule {
+    /// <p>Name of the rule.</p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+    /// <p>Start Datetime in ISO 8601 format.</p>
+    pub fn start_date_time(&self) -> std::option::Option<&str> {
+        self.start_date_time.as_deref()
+    }
+    /// <p>End Datetime in ISO 8601 format.</p>
+    pub fn end_date_time(&self) -> std::option::Option<&str> {
+        self.end_date_time.as_deref()
+    }
+}
+impl std::fmt::Debug for ClosedDaysRule {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ClosedDaysRule");
+        formatter.field("name", &self.name);
+        formatter.field("start_date_time", &self.start_date_time);
+        formatter.field("end_date_time", &self.end_date_time);
+        formatter.finish()
+    }
+}
+/// See [`ClosedDaysRule`](crate::model::ClosedDaysRule).
+pub mod closed_days_rule {
+
+    /// A builder for [`ClosedDaysRule`](crate::model::ClosedDaysRule).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) name: std::option::Option<std::string::String>,
+        pub(crate) start_date_time: std::option::Option<std::string::String>,
+        pub(crate) end_date_time: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>Name of the rule.</p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>Name of the rule.</p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// <p>Start Datetime in ISO 8601 format.</p>
+        pub fn start_date_time(mut self, input: impl Into<std::string::String>) -> Self {
+            self.start_date_time = Some(input.into());
+            self
+        }
+        /// <p>Start Datetime in ISO 8601 format.</p>
+        pub fn set_start_date_time(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.start_date_time = input;
+            self
+        }
+        /// <p>End Datetime in ISO 8601 format.</p>
+        pub fn end_date_time(mut self, input: impl Into<std::string::String>) -> Self {
+            self.end_date_time = Some(input.into());
+            self
+        }
+        /// <p>End Datetime in ISO 8601 format.</p>
+        pub fn set_end_date_time(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.end_date_time = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ClosedDaysRule`](crate::model::ClosedDaysRule).
+        pub fn build(self) -> crate::model::ClosedDaysRule {
+            crate::model::ClosedDaysRule {
+                name: self.name,
+                start_date_time: self.start_date_time,
+                end_date_time: self.end_date_time,
+            }
+        }
+    }
+}
+impl ClosedDaysRule {
+    /// Creates a new builder-style object to manufacture [`ClosedDaysRule`](crate::model::ClosedDaysRule).
+    pub fn builder() -> crate::model::closed_days_rule::Builder {
+        crate::model::closed_days_rule::Builder::default()
+    }
+}
+
+/// <p>The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct OpenHours {
+    /// <p>Rules for Email Channel.</p>
+    #[doc(hidden)]
+    pub email: std::option::Option<
+        std::collections::HashMap<
+            crate::model::DayOfWeek,
+            std::vec::Vec<crate::model::OpenHoursRule>,
+        >,
+    >,
+    /// <p>Rules for SMS Channel.</p>
+    #[doc(hidden)]
+    pub sms: std::option::Option<
+        std::collections::HashMap<
+            crate::model::DayOfWeek,
+            std::vec::Vec<crate::model::OpenHoursRule>,
+        >,
+    >,
+    /// <p>Rules for Push Channel.</p>
+    #[doc(hidden)]
+    pub push: std::option::Option<
+        std::collections::HashMap<
+            crate::model::DayOfWeek,
+            std::vec::Vec<crate::model::OpenHoursRule>,
+        >,
+    >,
+    /// <p>Rules for Voice Channel.</p>
+    #[doc(hidden)]
+    pub voice: std::option::Option<
+        std::collections::HashMap<
+            crate::model::DayOfWeek,
+            std::vec::Vec<crate::model::OpenHoursRule>,
+        >,
+    >,
+    /// <p>Rules for Custom Channel.</p>
+    #[doc(hidden)]
+    pub custom: std::option::Option<
+        std::collections::HashMap<
+            crate::model::DayOfWeek,
+            std::vec::Vec<crate::model::OpenHoursRule>,
+        >,
+    >,
+}
+impl OpenHours {
+    /// <p>Rules for Email Channel.</p>
+    pub fn email(
+        &self,
+    ) -> std::option::Option<
+        &std::collections::HashMap<
+            crate::model::DayOfWeek,
+            std::vec::Vec<crate::model::OpenHoursRule>,
+        >,
+    > {
+        self.email.as_ref()
+    }
+    /// <p>Rules for SMS Channel.</p>
+    pub fn sms(
+        &self,
+    ) -> std::option::Option<
+        &std::collections::HashMap<
+            crate::model::DayOfWeek,
+            std::vec::Vec<crate::model::OpenHoursRule>,
+        >,
+    > {
+        self.sms.as_ref()
+    }
+    /// <p>Rules for Push Channel.</p>
+    pub fn push(
+        &self,
+    ) -> std::option::Option<
+        &std::collections::HashMap<
+            crate::model::DayOfWeek,
+            std::vec::Vec<crate::model::OpenHoursRule>,
+        >,
+    > {
+        self.push.as_ref()
+    }
+    /// <p>Rules for Voice Channel.</p>
+    pub fn voice(
+        &self,
+    ) -> std::option::Option<
+        &std::collections::HashMap<
+            crate::model::DayOfWeek,
+            std::vec::Vec<crate::model::OpenHoursRule>,
+        >,
+    > {
+        self.voice.as_ref()
+    }
+    /// <p>Rules for Custom Channel.</p>
+    pub fn custom(
+        &self,
+    ) -> std::option::Option<
+        &std::collections::HashMap<
+            crate::model::DayOfWeek,
+            std::vec::Vec<crate::model::OpenHoursRule>,
+        >,
+    > {
+        self.custom.as_ref()
+    }
+}
+impl std::fmt::Debug for OpenHours {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("OpenHours");
+        formatter.field("email", &self.email);
+        formatter.field("sms", &self.sms);
+        formatter.field("push", &self.push);
+        formatter.field("voice", &self.voice);
+        formatter.field("custom", &self.custom);
+        formatter.finish()
+    }
+}
+/// See [`OpenHours`](crate::model::OpenHours).
+pub mod open_hours {
+
+    /// A builder for [`OpenHours`](crate::model::OpenHours).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) email: std::option::Option<
+            std::collections::HashMap<
+                crate::model::DayOfWeek,
+                std::vec::Vec<crate::model::OpenHoursRule>,
+            >,
+        >,
+        pub(crate) sms: std::option::Option<
+            std::collections::HashMap<
+                crate::model::DayOfWeek,
+                std::vec::Vec<crate::model::OpenHoursRule>,
+            >,
+        >,
+        pub(crate) push: std::option::Option<
+            std::collections::HashMap<
+                crate::model::DayOfWeek,
+                std::vec::Vec<crate::model::OpenHoursRule>,
+            >,
+        >,
+        pub(crate) voice: std::option::Option<
+            std::collections::HashMap<
+                crate::model::DayOfWeek,
+                std::vec::Vec<crate::model::OpenHoursRule>,
+            >,
+        >,
+        pub(crate) custom: std::option::Option<
+            std::collections::HashMap<
+                crate::model::DayOfWeek,
+                std::vec::Vec<crate::model::OpenHoursRule>,
+            >,
+        >,
+    }
+    impl Builder {
+        /// Adds a key-value pair to `email`.
+        ///
+        /// To override the contents of this collection use [`set_email`](Self::set_email).
+        ///
+        /// <p>Rules for Email Channel.</p>
+        pub fn email(
+            mut self,
+            k: crate::model::DayOfWeek,
+            v: std::vec::Vec<crate::model::OpenHoursRule>,
+        ) -> Self {
+            let mut hash_map = self.email.unwrap_or_default();
+            hash_map.insert(k, v);
+            self.email = Some(hash_map);
+            self
+        }
+        /// <p>Rules for Email Channel.</p>
+        pub fn set_email(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<
+                    crate::model::DayOfWeek,
+                    std::vec::Vec<crate::model::OpenHoursRule>,
+                >,
+            >,
+        ) -> Self {
+            self.email = input;
+            self
+        }
+        /// Adds a key-value pair to `sms`.
+        ///
+        /// To override the contents of this collection use [`set_sms`](Self::set_sms).
+        ///
+        /// <p>Rules for SMS Channel.</p>
+        pub fn sms(
+            mut self,
+            k: crate::model::DayOfWeek,
+            v: std::vec::Vec<crate::model::OpenHoursRule>,
+        ) -> Self {
+            let mut hash_map = self.sms.unwrap_or_default();
+            hash_map.insert(k, v);
+            self.sms = Some(hash_map);
+            self
+        }
+        /// <p>Rules for SMS Channel.</p>
+        pub fn set_sms(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<
+                    crate::model::DayOfWeek,
+                    std::vec::Vec<crate::model::OpenHoursRule>,
+                >,
+            >,
+        ) -> Self {
+            self.sms = input;
+            self
+        }
+        /// Adds a key-value pair to `push`.
+        ///
+        /// To override the contents of this collection use [`set_push`](Self::set_push).
+        ///
+        /// <p>Rules for Push Channel.</p>
+        pub fn push(
+            mut self,
+            k: crate::model::DayOfWeek,
+            v: std::vec::Vec<crate::model::OpenHoursRule>,
+        ) -> Self {
+            let mut hash_map = self.push.unwrap_or_default();
+            hash_map.insert(k, v);
+            self.push = Some(hash_map);
+            self
+        }
+        /// <p>Rules for Push Channel.</p>
+        pub fn set_push(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<
+                    crate::model::DayOfWeek,
+                    std::vec::Vec<crate::model::OpenHoursRule>,
+                >,
+            >,
+        ) -> Self {
+            self.push = input;
+            self
+        }
+        /// Adds a key-value pair to `voice`.
+        ///
+        /// To override the contents of this collection use [`set_voice`](Self::set_voice).
+        ///
+        /// <p>Rules for Voice Channel.</p>
+        pub fn voice(
+            mut self,
+            k: crate::model::DayOfWeek,
+            v: std::vec::Vec<crate::model::OpenHoursRule>,
+        ) -> Self {
+            let mut hash_map = self.voice.unwrap_or_default();
+            hash_map.insert(k, v);
+            self.voice = Some(hash_map);
+            self
+        }
+        /// <p>Rules for Voice Channel.</p>
+        pub fn set_voice(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<
+                    crate::model::DayOfWeek,
+                    std::vec::Vec<crate::model::OpenHoursRule>,
+                >,
+            >,
+        ) -> Self {
+            self.voice = input;
+            self
+        }
+        /// Adds a key-value pair to `custom`.
+        ///
+        /// To override the contents of this collection use [`set_custom`](Self::set_custom).
+        ///
+        /// <p>Rules for Custom Channel.</p>
+        pub fn custom(
+            mut self,
+            k: crate::model::DayOfWeek,
+            v: std::vec::Vec<crate::model::OpenHoursRule>,
+        ) -> Self {
+            let mut hash_map = self.custom.unwrap_or_default();
+            hash_map.insert(k, v);
+            self.custom = Some(hash_map);
+            self
+        }
+        /// <p>Rules for Custom Channel.</p>
+        pub fn set_custom(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<
+                    crate::model::DayOfWeek,
+                    std::vec::Vec<crate::model::OpenHoursRule>,
+                >,
+            >,
+        ) -> Self {
+            self.custom = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`OpenHours`](crate::model::OpenHours).
+        pub fn build(self) -> crate::model::OpenHours {
+            crate::model::OpenHours {
+                email: self.email,
+                sms: self.sms,
+                push: self.push,
+                voice: self.voice,
+                custom: self.custom,
+            }
+        }
+    }
+}
+impl OpenHours {
+    /// Creates a new builder-style object to manufacture [`OpenHours`](crate::model::OpenHours).
+    pub fn builder() -> crate::model::open_hours::Builder {
+        crate::model::open_hours::Builder::default()
+    }
+}
+
+/// <p>List of OpenHours Rules.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct OpenHoursRule {
+    /// <p>Local start time in ISO 8601 format.</p>
+    #[doc(hidden)]
+    pub start_time: std::option::Option<std::string::String>,
+    /// <p>Local start time in ISO 8601 format.</p>
+    #[doc(hidden)]
+    pub end_time: std::option::Option<std::string::String>,
+}
+impl OpenHoursRule {
+    /// <p>Local start time in ISO 8601 format.</p>
+    pub fn start_time(&self) -> std::option::Option<&str> {
+        self.start_time.as_deref()
+    }
+    /// <p>Local start time in ISO 8601 format.</p>
+    pub fn end_time(&self) -> std::option::Option<&str> {
+        self.end_time.as_deref()
+    }
+}
+impl std::fmt::Debug for OpenHoursRule {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("OpenHoursRule");
+        formatter.field("start_time", &self.start_time);
+        formatter.field("end_time", &self.end_time);
+        formatter.finish()
+    }
+}
+/// See [`OpenHoursRule`](crate::model::OpenHoursRule).
+pub mod open_hours_rule {
+
+    /// A builder for [`OpenHoursRule`](crate::model::OpenHoursRule).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) start_time: std::option::Option<std::string::String>,
+        pub(crate) end_time: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>Local start time in ISO 8601 format.</p>
+        pub fn start_time(mut self, input: impl Into<std::string::String>) -> Self {
+            self.start_time = Some(input.into());
+            self
+        }
+        /// <p>Local start time in ISO 8601 format.</p>
+        pub fn set_start_time(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.start_time = input;
+            self
+        }
+        /// <p>Local start time in ISO 8601 format.</p>
+        pub fn end_time(mut self, input: impl Into<std::string::String>) -> Self {
+            self.end_time = Some(input.into());
+            self
+        }
+        /// <p>Local start time in ISO 8601 format.</p>
+        pub fn set_end_time(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.end_time = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`OpenHoursRule`](crate::model::OpenHoursRule).
+        pub fn build(self) -> crate::model::OpenHoursRule {
+            crate::model::OpenHoursRule {
+                start_time: self.start_time,
+                end_time: self.end_time,
+            }
+        }
+    }
+}
+impl OpenHoursRule {
+    /// Creates a new builder-style object to manufacture [`OpenHoursRule`](crate::model::OpenHoursRule).
+    pub fn builder() -> crate::model::open_hours_rule::Builder {
+        crate::model::open_hours_rule::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum DayOfWeek {
+    #[allow(missing_docs)] // documentation missing in model
+    Friday,
+    #[allow(missing_docs)] // documentation missing in model
+    Monday,
+    #[allow(missing_docs)] // documentation missing in model
+    Saturday,
+    #[allow(missing_docs)] // documentation missing in model
+    Sunday,
+    #[allow(missing_docs)] // documentation missing in model
+    Thursday,
+    #[allow(missing_docs)] // documentation missing in model
+    Tuesday,
+    #[allow(missing_docs)] // documentation missing in model
+    Wednesday,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for DayOfWeek {
+    fn from(s: &str) -> Self {
+        match s {
+            "FRIDAY" => DayOfWeek::Friday,
+            "MONDAY" => DayOfWeek::Monday,
+            "SATURDAY" => DayOfWeek::Saturday,
+            "SUNDAY" => DayOfWeek::Sunday,
+            "THURSDAY" => DayOfWeek::Thursday,
+            "TUESDAY" => DayOfWeek::Tuesday,
+            "WEDNESDAY" => DayOfWeek::Wednesday,
+            other => DayOfWeek::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for DayOfWeek {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(DayOfWeek::from(s))
+    }
+}
+impl DayOfWeek {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            DayOfWeek::Friday => "FRIDAY",
+            DayOfWeek::Monday => "MONDAY",
+            DayOfWeek::Saturday => "SATURDAY",
+            DayOfWeek::Sunday => "SUNDAY",
+            DayOfWeek::Thursday => "THURSDAY",
+            DayOfWeek::Tuesday => "TUESDAY",
+            DayOfWeek::Wednesday => "WEDNESDAY",
+            DayOfWeek::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &[
+            "FRIDAY",
+            "MONDAY",
+            "SATURDAY",
+            "SUNDAY",
+            "THURSDAY",
+            "TUESDAY",
+            "WEDNESDAY",
+        ]
+    }
+}
+impl AsRef<str> for DayOfWeek {
+    fn as_ref(&self) -> &str {
+        self.as_str()
     }
 }
 
@@ -5945,8 +6899,10 @@ impl JourneyResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JourneyChannelSettings {
     /// <p>Amazon Resource Name (ARN) of the Connect Campaign.</p>
+    #[doc(hidden)]
     pub connect_campaign_arn: std::option::Option<std::string::String>,
     /// <p>IAM role ARN to be assumed when invoking Connect campaign execution APIs for dialing.</p>
+    #[doc(hidden)]
     pub connect_campaign_execution_role_arn: std::option::Option<std::string::String>,
 }
 impl JourneyChannelSettings {
@@ -5970,11 +6926,10 @@ impl std::fmt::Debug for JourneyChannelSettings {
         formatter.finish()
     }
 }
-/// See [`JourneyChannelSettings`](crate::model::JourneyChannelSettings)
+/// See [`JourneyChannelSettings`](crate::model::JourneyChannelSettings).
 pub mod journey_channel_settings {
 
-    /// A builder for [`JourneyChannelSettings`](crate::model::JourneyChannelSettings)
-    #[non_exhaustive]
+    /// A builder for [`JourneyChannelSettings`](crate::model::JourneyChannelSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connect_campaign_arn: std::option::Option<std::string::String>,
@@ -6010,7 +6965,7 @@ pub mod journey_channel_settings {
             self.connect_campaign_execution_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`JourneyChannelSettings`](crate::model::JourneyChannelSettings)
+        /// Consumes the builder and constructs a [`JourneyChannelSettings`](crate::model::JourneyChannelSettings).
         pub fn build(self) -> crate::model::JourneyChannelSettings {
             crate::model::JourneyChannelSettings {
                 connect_campaign_arn: self.connect_campaign_arn,
@@ -6020,7 +6975,7 @@ pub mod journey_channel_settings {
     }
 }
 impl JourneyChannelSettings {
-    /// Creates a new builder-style object to manufacture [`JourneyChannelSettings`](crate::model::JourneyChannelSettings)
+    /// Creates a new builder-style object to manufacture [`JourneyChannelSettings`](crate::model::JourneyChannelSettings).
     pub fn builder() -> crate::model::journey_channel_settings::Builder {
         crate::model::journey_channel_settings::Builder::default()
     }
@@ -6109,10 +7064,13 @@ impl AsRef<str> for State {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartCondition {
     /// <p>The custom description of the condition.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Specifies the settings for an event that causes a journey activity to start.</p>
+    #[doc(hidden)]
     pub event_start_condition: std::option::Option<crate::model::EventStartCondition>,
     /// <p>The segment that's associated with the first activity in the journey. This segment determines which users are participants in the journey.</p>
+    #[doc(hidden)]
     pub segment_start_condition: std::option::Option<crate::model::SegmentCondition>,
 }
 impl StartCondition {
@@ -6138,11 +7096,10 @@ impl std::fmt::Debug for StartCondition {
         formatter.finish()
     }
 }
-/// See [`StartCondition`](crate::model::StartCondition)
+/// See [`StartCondition`](crate::model::StartCondition).
 pub mod start_condition {
 
-    /// A builder for [`StartCondition`](crate::model::StartCondition)
-    #[non_exhaustive]
+    /// A builder for [`StartCondition`](crate::model::StartCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -6186,7 +7143,7 @@ pub mod start_condition {
             self.segment_start_condition = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartCondition`](crate::model::StartCondition)
+        /// Consumes the builder and constructs a [`StartCondition`](crate::model::StartCondition).
         pub fn build(self) -> crate::model::StartCondition {
             crate::model::StartCondition {
                 description: self.description,
@@ -6197,7 +7154,7 @@ pub mod start_condition {
     }
 }
 impl StartCondition {
-    /// Creates a new builder-style object to manufacture [`StartCondition`](crate::model::StartCondition)
+    /// Creates a new builder-style object to manufacture [`StartCondition`](crate::model::StartCondition).
     pub fn builder() -> crate::model::start_condition::Builder {
         crate::model::start_condition::Builder::default()
     }
@@ -6208,6 +7165,7 @@ impl StartCondition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SegmentCondition {
     /// <p>The unique identifier for the segment to associate with the activity.</p>
+    #[doc(hidden)]
     pub segment_id: std::option::Option<std::string::String>,
 }
 impl SegmentCondition {
@@ -6223,11 +7181,10 @@ impl std::fmt::Debug for SegmentCondition {
         formatter.finish()
     }
 }
-/// See [`SegmentCondition`](crate::model::SegmentCondition)
+/// See [`SegmentCondition`](crate::model::SegmentCondition).
 pub mod segment_condition {
 
-    /// A builder for [`SegmentCondition`](crate::model::SegmentCondition)
-    #[non_exhaustive]
+    /// A builder for [`SegmentCondition`](crate::model::SegmentCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) segment_id: std::option::Option<std::string::String>,
@@ -6243,7 +7200,7 @@ pub mod segment_condition {
             self.segment_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SegmentCondition`](crate::model::SegmentCondition)
+        /// Consumes the builder and constructs a [`SegmentCondition`](crate::model::SegmentCondition).
         pub fn build(self) -> crate::model::SegmentCondition {
             crate::model::SegmentCondition {
                 segment_id: self.segment_id,
@@ -6252,7 +7209,7 @@ pub mod segment_condition {
     }
 }
 impl SegmentCondition {
-    /// Creates a new builder-style object to manufacture [`SegmentCondition`](crate::model::SegmentCondition)
+    /// Creates a new builder-style object to manufacture [`SegmentCondition`](crate::model::SegmentCondition).
     pub fn builder() -> crate::model::segment_condition::Builder {
         crate::model::segment_condition::Builder::default()
     }
@@ -6263,8 +7220,10 @@ impl SegmentCondition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventStartCondition {
     /// <p>Specifies the settings for an event that causes a campaign to be sent or a journey activity to be performed.</p>
+    #[doc(hidden)]
     pub event_filter: std::option::Option<crate::model::EventFilter>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub segment_id: std::option::Option<std::string::String>,
 }
 impl EventStartCondition {
@@ -6285,11 +7244,10 @@ impl std::fmt::Debug for EventStartCondition {
         formatter.finish()
     }
 }
-/// See [`EventStartCondition`](crate::model::EventStartCondition)
+/// See [`EventStartCondition`](crate::model::EventStartCondition).
 pub mod event_start_condition {
 
-    /// A builder for [`EventStartCondition`](crate::model::EventStartCondition)
-    #[non_exhaustive]
+    /// A builder for [`EventStartCondition`](crate::model::EventStartCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_filter: std::option::Option<crate::model::EventFilter>,
@@ -6319,7 +7277,7 @@ pub mod event_start_condition {
             self.segment_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventStartCondition`](crate::model::EventStartCondition)
+        /// Consumes the builder and constructs a [`EventStartCondition`](crate::model::EventStartCondition).
         pub fn build(self) -> crate::model::EventStartCondition {
             crate::model::EventStartCondition {
                 event_filter: self.event_filter,
@@ -6329,7 +7287,7 @@ pub mod event_start_condition {
     }
 }
 impl EventStartCondition {
-    /// Creates a new builder-style object to manufacture [`EventStartCondition`](crate::model::EventStartCondition)
+    /// Creates a new builder-style object to manufacture [`EventStartCondition`](crate::model::EventStartCondition).
     pub fn builder() -> crate::model::event_start_condition::Builder {
         crate::model::event_start_condition::Builder::default()
     }
@@ -6340,9 +7298,11 @@ impl EventStartCondition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventFilter {
     /// <p>The dimensions for the event filter to use for the campaign or the journey activity.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<crate::model::EventDimensions>,
     /// <p>The type of event that causes the campaign to be sent or the journey activity to be performed. Valid values are: SYSTEM, sends the campaign or performs the activity when a system event occurs; and, ENDPOINT, sends the campaign or performs the activity when an endpoint event (
     /// <link linkend="apps-application-id-events">Events resource) occurs.</p>
+    #[doc(hidden)]
     pub filter_type: std::option::Option<crate::model::FilterType>,
 }
 impl EventFilter {
@@ -6364,11 +7324,10 @@ impl std::fmt::Debug for EventFilter {
         formatter.finish()
     }
 }
-/// See [`EventFilter`](crate::model::EventFilter)
+/// See [`EventFilter`](crate::model::EventFilter).
 pub mod event_filter {
 
-    /// A builder for [`EventFilter`](crate::model::EventFilter)
-    #[non_exhaustive]
+    /// A builder for [`EventFilter`](crate::model::EventFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimensions: std::option::Option<crate::model::EventDimensions>,
@@ -6403,7 +7362,7 @@ pub mod event_filter {
             self.filter_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventFilter`](crate::model::EventFilter)
+        /// Consumes the builder and constructs a [`EventFilter`](crate::model::EventFilter).
         pub fn build(self) -> crate::model::EventFilter {
             crate::model::EventFilter {
                 dimensions: self.dimensions,
@@ -6413,7 +7372,7 @@ pub mod event_filter {
     }
 }
 impl EventFilter {
-    /// Creates a new builder-style object to manufacture [`EventFilter`](crate::model::EventFilter)
+    /// Creates a new builder-style object to manufacture [`EventFilter`](crate::model::EventFilter).
     pub fn builder() -> crate::model::event_filter::Builder {
         crate::model::event_filter::Builder::default()
     }
@@ -6479,12 +7438,15 @@ impl AsRef<str> for FilterType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventDimensions {
     /// <p>One or more custom attributes that your application reports to Amazon Pinpoint. You can use these attributes as selection criteria when you create an event filter.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AttributeDimension>,
     >,
     /// <p>The name of the event that causes the campaign to be sent or the journey activity to be performed. This can be a standard event that Amazon Pinpoint generates, such as _email.delivered. For campaigns, this can also be a custom event that's specific to your application. For information about standard events, see <a href="https://docs.aws.amazon.com/pinpoint/latest/developerguide/event-streams.html">Streaming Amazon Pinpoint Events</a> in the <i>Amazon Pinpoint Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub event_type: std::option::Option<crate::model::SetDimension>,
     /// <p>One or more custom metrics that your application reports to Amazon Pinpoint. You can use these metrics as selection criteria when you create an event filter.</p>
+    #[doc(hidden)]
     pub metrics: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::MetricDimension>,
     >,
@@ -6520,11 +7482,10 @@ impl std::fmt::Debug for EventDimensions {
         formatter.finish()
     }
 }
-/// See [`EventDimensions`](crate::model::EventDimensions)
+/// See [`EventDimensions`](crate::model::EventDimensions).
 pub mod event_dimensions {
 
-    /// A builder for [`EventDimensions`](crate::model::EventDimensions)
-    #[non_exhaustive]
+    /// A builder for [`EventDimensions`](crate::model::EventDimensions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<
@@ -6599,7 +7560,7 @@ pub mod event_dimensions {
             self.metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventDimensions`](crate::model::EventDimensions)
+        /// Consumes the builder and constructs a [`EventDimensions`](crate::model::EventDimensions).
         pub fn build(self) -> crate::model::EventDimensions {
             crate::model::EventDimensions {
                 attributes: self.attributes,
@@ -6610,7 +7571,7 @@ pub mod event_dimensions {
     }
 }
 impl EventDimensions {
-    /// Creates a new builder-style object to manufacture [`EventDimensions`](crate::model::EventDimensions)
+    /// Creates a new builder-style object to manufacture [`EventDimensions`](crate::model::EventDimensions).
     pub fn builder() -> crate::model::event_dimensions::Builder {
         crate::model::event_dimensions::Builder::default()
     }
@@ -6621,10 +7582,13 @@ impl EventDimensions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JourneySchedule {
     /// <p>The scheduled time, in ISO 8601 format, when the journey ended or will end.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The scheduled time, in ISO 8601 format, when the journey began or will begin.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The starting UTC offset for the journey schedule, if the value of the journey's LocalTime property is true. Valid values are: UTC, UTC+01, UTC+02, UTC+03, UTC+03:30, UTC+04, UTC+04:30, UTC+05, UTC+05:30, UTC+05:45, UTC+06, UTC+06:30, UTC+07, UTC+08, UTC+08:45, UTC+09, UTC+09:30, UTC+10, UTC+10:30, UTC+11, UTC+12, UTC+12:45, UTC+13, UTC+13:45, UTC-02, UTC-02:30, UTC-03, UTC-03:30, UTC-04, UTC-05, UTC-06, UTC-07, UTC-08, UTC-09, UTC-09:30, UTC-10, and UTC-11.</p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
 }
 impl JourneySchedule {
@@ -6650,11 +7614,10 @@ impl std::fmt::Debug for JourneySchedule {
         formatter.finish()
     }
 }
-/// See [`JourneySchedule`](crate::model::JourneySchedule)
+/// See [`JourneySchedule`](crate::model::JourneySchedule).
 pub mod journey_schedule {
 
-    /// A builder for [`JourneySchedule`](crate::model::JourneySchedule)
-    #[non_exhaustive]
+    /// A builder for [`JourneySchedule`](crate::model::JourneySchedule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) end_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -6698,7 +7661,7 @@ pub mod journey_schedule {
             self.timezone = input;
             self
         }
-        /// Consumes the builder and constructs a [`JourneySchedule`](crate::model::JourneySchedule)
+        /// Consumes the builder and constructs a [`JourneySchedule`](crate::model::JourneySchedule).
         pub fn build(self) -> crate::model::JourneySchedule {
             crate::model::JourneySchedule {
                 end_time: self.end_time,
@@ -6709,7 +7672,7 @@ pub mod journey_schedule {
     }
 }
 impl JourneySchedule {
-    /// Creates a new builder-style object to manufacture [`JourneySchedule`](crate::model::JourneySchedule)
+    /// Creates a new builder-style object to manufacture [`JourneySchedule`](crate::model::JourneySchedule).
     pub fn builder() -> crate::model::journey_schedule::Builder {
         crate::model::journey_schedule::Builder::default()
     }
@@ -6720,8 +7683,10 @@ impl JourneySchedule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QuietTime {
     /// <p>The specific time when quiet time ends. This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a leading zero, if applicable) and MM is the minutes. For example, use 02:30 to represent 2:30 AM, or 14:30 to represent 2:30 PM.</p>
+    #[doc(hidden)]
     pub end: std::option::Option<std::string::String>,
     /// <p>The specific time when quiet time begins. This value has to use 24-hour notation and be in HH:MM format, where HH is the hour (with a leading zero, if applicable) and MM is the minutes. For example, use 02:30 to represent 2:30 AM, or 14:30 to represent 2:30 PM.</p>
+    #[doc(hidden)]
     pub start: std::option::Option<std::string::String>,
 }
 impl QuietTime {
@@ -6742,11 +7707,10 @@ impl std::fmt::Debug for QuietTime {
         formatter.finish()
     }
 }
-/// See [`QuietTime`](crate::model::QuietTime)
+/// See [`QuietTime`](crate::model::QuietTime).
 pub mod quiet_time {
 
-    /// A builder for [`QuietTime`](crate::model::QuietTime)
-    #[non_exhaustive]
+    /// A builder for [`QuietTime`](crate::model::QuietTime).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) end: std::option::Option<std::string::String>,
@@ -6773,7 +7737,7 @@ pub mod quiet_time {
             self.start = input;
             self
         }
-        /// Consumes the builder and constructs a [`QuietTime`](crate::model::QuietTime)
+        /// Consumes the builder and constructs a [`QuietTime`](crate::model::QuietTime).
         pub fn build(self) -> crate::model::QuietTime {
             crate::model::QuietTime {
                 end: self.end,
@@ -6783,7 +7747,7 @@ pub mod quiet_time {
     }
 }
 impl QuietTime {
-    /// Creates a new builder-style object to manufacture [`QuietTime`](crate::model::QuietTime)
+    /// Creates a new builder-style object to manufacture [`QuietTime`](crate::model::QuietTime).
     pub fn builder() -> crate::model::quiet_time::Builder {
         crate::model::quiet_time::Builder::default()
     }
@@ -6794,12 +7758,16 @@ impl QuietTime {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JourneyLimits {
     /// <p>The maximum number of messages that the journey can send to a single participant during a 24-hour period. The maximum value is 100.</p>
+    #[doc(hidden)]
     pub daily_cap: i32,
     /// <p>The maximum number of times that a participant can enter the journey. The maximum value is 100. To allow participants to enter the journey an unlimited number of times, set this value to 0.</p>
+    #[doc(hidden)]
     pub endpoint_reentry_cap: i32,
     /// <p>The maximum number of messages that the journey can send each second.</p>
+    #[doc(hidden)]
     pub messages_per_second: i32,
     /// <p>Minimum time that must pass before an endpoint can re-enter a given journey. The duration should use an ISO 8601 format, such as PT1H. </p>
+    #[doc(hidden)]
     pub endpoint_reentry_interval: std::option::Option<std::string::String>,
 }
 impl JourneyLimits {
@@ -6830,11 +7798,10 @@ impl std::fmt::Debug for JourneyLimits {
         formatter.finish()
     }
 }
-/// See [`JourneyLimits`](crate::model::JourneyLimits)
+/// See [`JourneyLimits`](crate::model::JourneyLimits).
 pub mod journey_limits {
 
-    /// A builder for [`JourneyLimits`](crate::model::JourneyLimits)
-    #[non_exhaustive]
+    /// A builder for [`JourneyLimits`](crate::model::JourneyLimits).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) daily_cap: std::option::Option<i32>,
@@ -6886,7 +7853,7 @@ pub mod journey_limits {
             self.endpoint_reentry_interval = input;
             self
         }
-        /// Consumes the builder and constructs a [`JourneyLimits`](crate::model::JourneyLimits)
+        /// Consumes the builder and constructs a [`JourneyLimits`](crate::model::JourneyLimits).
         pub fn build(self) -> crate::model::JourneyLimits {
             crate::model::JourneyLimits {
                 daily_cap: self.daily_cap.unwrap_or_default(),
@@ -6898,7 +7865,7 @@ pub mod journey_limits {
     }
 }
 impl JourneyLimits {
-    /// Creates a new builder-style object to manufacture [`JourneyLimits`](crate::model::JourneyLimits)
+    /// Creates a new builder-style object to manufacture [`JourneyLimits`](crate::model::JourneyLimits).
     pub fn builder() -> crate::model::journey_limits::Builder {
         crate::model::journey_limits::Builder::default()
     }
@@ -6909,26 +7876,37 @@ impl JourneyLimits {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Activity {
     /// <p>The settings for a custom message activity. This type of activity calls an AWS Lambda function or web hook that sends messages to participants.</p>
+    #[doc(hidden)]
     pub custom: std::option::Option<crate::model::CustomMessageActivity>,
     /// <p>The settings for a yes/no split activity. This type of activity sends participants down one of two paths in a journey, based on conditions that you specify.</p>
+    #[doc(hidden)]
     pub conditional_split: std::option::Option<crate::model::ConditionalSplitActivity>,
     /// <p>The custom description of the activity.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The settings for an email activity. This type of activity sends an email message to participants.</p>
+    #[doc(hidden)]
     pub email: std::option::Option<crate::model::EmailMessageActivity>,
     /// <p>The settings for a holdout activity. This type of activity stops a journey for a specified percentage of participants.</p>
+    #[doc(hidden)]
     pub holdout: std::option::Option<crate::model::HoldoutActivity>,
     /// <p>The settings for a multivariate split activity. This type of activity sends participants down one of as many as five paths (including a default <i>Else</i> path) in a journey, based on conditions that you specify.</p>
+    #[doc(hidden)]
     pub multi_condition: std::option::Option<crate::model::MultiConditionalSplitActivity>,
     /// <p>The settings for a push notification activity. This type of activity sends a push notification to participants.</p>
+    #[doc(hidden)]
     pub push: std::option::Option<crate::model::PushMessageActivity>,
     /// <p>The settings for a random split activity. This type of activity randomly sends specified percentages of participants down one of as many as five paths in a journey, based on conditions that you specify.</p>
+    #[doc(hidden)]
     pub random_split: std::option::Option<crate::model::RandomSplitActivity>,
     /// <p>The settings for an SMS activity. This type of activity sends a text message to participants.</p>
+    #[doc(hidden)]
     pub sms: std::option::Option<crate::model::SmsMessageActivity>,
     /// <p>The settings for a wait activity. This type of activity waits for a certain amount of time or until a specific date and time before moving participants to the next activity in a journey.</p>
+    #[doc(hidden)]
     pub wait: std::option::Option<crate::model::WaitActivity>,
     /// <p>The settings for a connect activity. This type of activity initiates a contact center call to participants.</p>
+    #[doc(hidden)]
     pub contact_center: std::option::Option<crate::model::ContactCenterActivity>,
 }
 impl Activity {
@@ -6998,11 +7976,10 @@ impl std::fmt::Debug for Activity {
         formatter.finish()
     }
 }
-/// See [`Activity`](crate::model::Activity)
+/// See [`Activity`](crate::model::Activity).
 pub mod activity {
 
-    /// A builder for [`Activity`](crate::model::Activity)
-    #[non_exhaustive]
+    /// A builder for [`Activity`](crate::model::Activity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom: std::option::Option<crate::model::CustomMessageActivity>,
@@ -7159,7 +8136,7 @@ pub mod activity {
             self.contact_center = input;
             self
         }
-        /// Consumes the builder and constructs a [`Activity`](crate::model::Activity)
+        /// Consumes the builder and constructs a [`Activity`](crate::model::Activity).
         pub fn build(self) -> crate::model::Activity {
             crate::model::Activity {
                 custom: self.custom,
@@ -7178,7 +8155,7 @@ pub mod activity {
     }
 }
 impl Activity {
-    /// Creates a new builder-style object to manufacture [`Activity`](crate::model::Activity)
+    /// Creates a new builder-style object to manufacture [`Activity`](crate::model::Activity).
     pub fn builder() -> crate::model::activity::Builder {
         crate::model::activity::Builder::default()
     }
@@ -7189,6 +8166,7 @@ impl Activity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContactCenterActivity {
     /// <p>The unique identifier for the next activity to perform after the this activity.</p>
+    #[doc(hidden)]
     pub next_activity: std::option::Option<std::string::String>,
 }
 impl ContactCenterActivity {
@@ -7204,11 +8182,10 @@ impl std::fmt::Debug for ContactCenterActivity {
         formatter.finish()
     }
 }
-/// See [`ContactCenterActivity`](crate::model::ContactCenterActivity)
+/// See [`ContactCenterActivity`](crate::model::ContactCenterActivity).
 pub mod contact_center_activity {
 
-    /// A builder for [`ContactCenterActivity`](crate::model::ContactCenterActivity)
-    #[non_exhaustive]
+    /// A builder for [`ContactCenterActivity`](crate::model::ContactCenterActivity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_activity: std::option::Option<std::string::String>,
@@ -7227,7 +8204,7 @@ pub mod contact_center_activity {
             self.next_activity = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContactCenterActivity`](crate::model::ContactCenterActivity)
+        /// Consumes the builder and constructs a [`ContactCenterActivity`](crate::model::ContactCenterActivity).
         pub fn build(self) -> crate::model::ContactCenterActivity {
             crate::model::ContactCenterActivity {
                 next_activity: self.next_activity,
@@ -7236,7 +8213,7 @@ pub mod contact_center_activity {
     }
 }
 impl ContactCenterActivity {
-    /// Creates a new builder-style object to manufacture [`ContactCenterActivity`](crate::model::ContactCenterActivity)
+    /// Creates a new builder-style object to manufacture [`ContactCenterActivity`](crate::model::ContactCenterActivity).
     pub fn builder() -> crate::model::contact_center_activity::Builder {
         crate::model::contact_center_activity::Builder::default()
     }
@@ -7247,8 +8224,10 @@ impl ContactCenterActivity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WaitActivity {
     /// <p>The unique identifier for the next activity to perform, after performing the wait activity.</p>
+    #[doc(hidden)]
     pub next_activity: std::option::Option<std::string::String>,
     /// <p>The amount of time to wait or the date and time when the activity moves participants to the next activity in the journey.</p>
+    #[doc(hidden)]
     pub wait_time: std::option::Option<crate::model::WaitTime>,
 }
 impl WaitActivity {
@@ -7269,11 +8248,10 @@ impl std::fmt::Debug for WaitActivity {
         formatter.finish()
     }
 }
-/// See [`WaitActivity`](crate::model::WaitActivity)
+/// See [`WaitActivity`](crate::model::WaitActivity).
 pub mod wait_activity {
 
-    /// A builder for [`WaitActivity`](crate::model::WaitActivity)
-    #[non_exhaustive]
+    /// A builder for [`WaitActivity`](crate::model::WaitActivity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_activity: std::option::Option<std::string::String>,
@@ -7303,7 +8281,7 @@ pub mod wait_activity {
             self.wait_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`WaitActivity`](crate::model::WaitActivity)
+        /// Consumes the builder and constructs a [`WaitActivity`](crate::model::WaitActivity).
         pub fn build(self) -> crate::model::WaitActivity {
             crate::model::WaitActivity {
                 next_activity: self.next_activity,
@@ -7313,7 +8291,7 @@ pub mod wait_activity {
     }
 }
 impl WaitActivity {
-    /// Creates a new builder-style object to manufacture [`WaitActivity`](crate::model::WaitActivity)
+    /// Creates a new builder-style object to manufacture [`WaitActivity`](crate::model::WaitActivity).
     pub fn builder() -> crate::model::wait_activity::Builder {
         crate::model::wait_activity::Builder::default()
     }
@@ -7324,8 +8302,10 @@ impl WaitActivity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WaitTime {
     /// <p>The amount of time to wait, as a duration in ISO 8601 format, before determining whether the activity's conditions have been met or moving participants to the next activity in the journey.</p>
+    #[doc(hidden)]
     pub wait_for: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format, when Amazon Pinpoint determines whether the activity's conditions have been met or the activity moves participants to the next activity in the journey.</p>
+    #[doc(hidden)]
     pub wait_until: std::option::Option<std::string::String>,
 }
 impl WaitTime {
@@ -7346,11 +8326,10 @@ impl std::fmt::Debug for WaitTime {
         formatter.finish()
     }
 }
-/// See [`WaitTime`](crate::model::WaitTime)
+/// See [`WaitTime`](crate::model::WaitTime).
 pub mod wait_time {
 
-    /// A builder for [`WaitTime`](crate::model::WaitTime)
-    #[non_exhaustive]
+    /// A builder for [`WaitTime`](crate::model::WaitTime).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) wait_for: std::option::Option<std::string::String>,
@@ -7377,7 +8356,7 @@ pub mod wait_time {
             self.wait_until = input;
             self
         }
-        /// Consumes the builder and constructs a [`WaitTime`](crate::model::WaitTime)
+        /// Consumes the builder and constructs a [`WaitTime`](crate::model::WaitTime).
         pub fn build(self) -> crate::model::WaitTime {
             crate::model::WaitTime {
                 wait_for: self.wait_for,
@@ -7387,7 +8366,7 @@ pub mod wait_time {
     }
 }
 impl WaitTime {
-    /// Creates a new builder-style object to manufacture [`WaitTime`](crate::model::WaitTime)
+    /// Creates a new builder-style object to manufacture [`WaitTime`](crate::model::WaitTime).
     pub fn builder() -> crate::model::wait_time::Builder {
         crate::model::wait_time::Builder::default()
     }
@@ -7398,14 +8377,18 @@ impl WaitTime {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SmsMessageActivity {
     /// <p>Specifies the sender ID and message type for an SMS message that's sent to participants in a journey.</p>
+    #[doc(hidden)]
     pub message_config: std::option::Option<crate::model::JourneySmsMessage>,
     /// <p>The unique identifier for the next activity to perform, after the message is sent.</p>
+    #[doc(hidden)]
     pub next_activity: std::option::Option<std::string::String>,
     /// <p>The name of the SMS message template to use for the message. If specified, this value must match the name of an existing message template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the version of the SMS template to use for the message. If specified, this value must match the identifier for an existing template version. To retrieve a list of versions and version identifiers for a template, use the
     /// <link linkend="templates-template-name-template-type-versions">Template Versions resource.</p>
     /// <p>If you don't specify a value for this property, Amazon Pinpoint uses the <i>active version</i> of the template. The <i>active version</i> is typically the version of a template that's been most recently reviewed and approved for use, depending on your workflow. It isn't necessarily the latest version of a template.</p>
+    #[doc(hidden)]
     pub template_version: std::option::Option<std::string::String>,
 }
 impl SmsMessageActivity {
@@ -7438,11 +8421,10 @@ impl std::fmt::Debug for SmsMessageActivity {
         formatter.finish()
     }
 }
-/// See [`SmsMessageActivity`](crate::model::SmsMessageActivity)
+/// See [`SmsMessageActivity`](crate::model::SmsMessageActivity).
 pub mod sms_message_activity {
 
-    /// A builder for [`SmsMessageActivity`](crate::model::SmsMessageActivity)
-    #[non_exhaustive]
+    /// A builder for [`SmsMessageActivity`](crate::model::SmsMessageActivity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message_config: std::option::Option<crate::model::JourneySmsMessage>,
@@ -7507,7 +8489,7 @@ pub mod sms_message_activity {
             self.template_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`SmsMessageActivity`](crate::model::SmsMessageActivity)
+        /// Consumes the builder and constructs a [`SmsMessageActivity`](crate::model::SmsMessageActivity).
         pub fn build(self) -> crate::model::SmsMessageActivity {
             crate::model::SmsMessageActivity {
                 message_config: self.message_config,
@@ -7519,7 +8501,7 @@ pub mod sms_message_activity {
     }
 }
 impl SmsMessageActivity {
-    /// Creates a new builder-style object to manufacture [`SmsMessageActivity`](crate::model::SmsMessageActivity)
+    /// Creates a new builder-style object to manufacture [`SmsMessageActivity`](crate::model::SmsMessageActivity).
     pub fn builder() -> crate::model::sms_message_activity::Builder {
         crate::model::sms_message_activity::Builder::default()
     }
@@ -7530,14 +8512,19 @@ impl SmsMessageActivity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JourneySmsMessage {
     /// <p>The SMS message type. Valid values are TRANSACTIONAL (for messages that are critical or time-sensitive, such as a one-time passwords) and PROMOTIONAL (for messsages that aren't critical or time-sensitive, such as marketing messages).</p>
+    #[doc(hidden)]
     pub message_type: std::option::Option<crate::model::MessageType>,
     /// <p>The long code to send the SMS message from. This value should be one of the dedicated long codes that's assigned to your AWS account. Although it isn't required, we recommend that you specify the long code using an E.164 format to ensure prompt and accurate delivery of the message. For example, +12065550100.</p>
+    #[doc(hidden)]
     pub origination_number: std::option::Option<std::string::String>,
     /// <p>The sender ID to display as the sender of the message on a recipient's device. Support for sender IDs varies by country or region. For more information, see <a href="https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-sms-countries.html">Supported Countries and Regions</a> in the Amazon Pinpoint User Guide.</p>
+    #[doc(hidden)]
     pub sender_id: std::option::Option<std::string::String>,
     /// <p>The entity ID or Principal Entity (PE) id received from the regulatory body for sending SMS in your country.</p>
+    #[doc(hidden)]
     pub entity_id: std::option::Option<std::string::String>,
     /// <p>The template ID received from the regulatory body for sending SMS in your country.</p>
+    #[doc(hidden)]
     pub template_id: std::option::Option<std::string::String>,
 }
 impl JourneySmsMessage {
@@ -7573,11 +8560,10 @@ impl std::fmt::Debug for JourneySmsMessage {
         formatter.finish()
     }
 }
-/// See [`JourneySmsMessage`](crate::model::JourneySmsMessage)
+/// See [`JourneySmsMessage`](crate::model::JourneySmsMessage).
 pub mod journey_sms_message {
 
-    /// A builder for [`JourneySmsMessage`](crate::model::JourneySmsMessage)
-    #[non_exhaustive]
+    /// A builder for [`JourneySmsMessage`](crate::model::JourneySmsMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message_type: std::option::Option<crate::model::MessageType>,
@@ -7643,7 +8629,7 @@ pub mod journey_sms_message {
             self.template_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`JourneySmsMessage`](crate::model::JourneySmsMessage)
+        /// Consumes the builder and constructs a [`JourneySmsMessage`](crate::model::JourneySmsMessage).
         pub fn build(self) -> crate::model::JourneySmsMessage {
             crate::model::JourneySmsMessage {
                 message_type: self.message_type,
@@ -7656,7 +8642,7 @@ pub mod journey_sms_message {
     }
 }
 impl JourneySmsMessage {
-    /// Creates a new builder-style object to manufacture [`JourneySmsMessage`](crate::model::JourneySmsMessage)
+    /// Creates a new builder-style object to manufacture [`JourneySmsMessage`](crate::model::JourneySmsMessage).
     pub fn builder() -> crate::model::journey_sms_message::Builder {
         crate::model::journey_sms_message::Builder::default()
     }
@@ -7722,6 +8708,7 @@ impl AsRef<str> for MessageType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RandomSplitActivity {
     /// <p>The paths for the activity, including the percentage of participants to enter each path and the activity to perform for each path.</p>
+    #[doc(hidden)]
     pub branches: std::option::Option<std::vec::Vec<crate::model::RandomSplitEntry>>,
 }
 impl RandomSplitActivity {
@@ -7737,11 +8724,10 @@ impl std::fmt::Debug for RandomSplitActivity {
         formatter.finish()
     }
 }
-/// See [`RandomSplitActivity`](crate::model::RandomSplitActivity)
+/// See [`RandomSplitActivity`](crate::model::RandomSplitActivity).
 pub mod random_split_activity {
 
-    /// A builder for [`RandomSplitActivity`](crate::model::RandomSplitActivity)
-    #[non_exhaustive]
+    /// A builder for [`RandomSplitActivity`](crate::model::RandomSplitActivity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) branches: std::option::Option<std::vec::Vec<crate::model::RandomSplitEntry>>,
@@ -7766,7 +8752,7 @@ pub mod random_split_activity {
             self.branches = input;
             self
         }
-        /// Consumes the builder and constructs a [`RandomSplitActivity`](crate::model::RandomSplitActivity)
+        /// Consumes the builder and constructs a [`RandomSplitActivity`](crate::model::RandomSplitActivity).
         pub fn build(self) -> crate::model::RandomSplitActivity {
             crate::model::RandomSplitActivity {
                 branches: self.branches,
@@ -7775,7 +8761,7 @@ pub mod random_split_activity {
     }
 }
 impl RandomSplitActivity {
-    /// Creates a new builder-style object to manufacture [`RandomSplitActivity`](crate::model::RandomSplitActivity)
+    /// Creates a new builder-style object to manufacture [`RandomSplitActivity`](crate::model::RandomSplitActivity).
     pub fn builder() -> crate::model::random_split_activity::Builder {
         crate::model::random_split_activity::Builder::default()
     }
@@ -7786,9 +8772,11 @@ impl RandomSplitActivity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RandomSplitEntry {
     /// <p>The unique identifier for the next activity to perform, after completing the activity for the path.</p>
+    #[doc(hidden)]
     pub next_activity: std::option::Option<std::string::String>,
     /// <p>The percentage of participants to send down the activity path.</p>
     /// <p>To determine which participants are sent down each path, Amazon Pinpoint applies a probability-based algorithm to the percentages that you specify for the paths. Therefore, the actual percentage of participants who are sent down a path may not be equal to the percentage that you specify.</p>
+    #[doc(hidden)]
     pub percentage: i32,
 }
 impl RandomSplitEntry {
@@ -7810,11 +8798,10 @@ impl std::fmt::Debug for RandomSplitEntry {
         formatter.finish()
     }
 }
-/// See [`RandomSplitEntry`](crate::model::RandomSplitEntry)
+/// See [`RandomSplitEntry`](crate::model::RandomSplitEntry).
 pub mod random_split_entry {
 
-    /// A builder for [`RandomSplitEntry`](crate::model::RandomSplitEntry)
-    #[non_exhaustive]
+    /// A builder for [`RandomSplitEntry`](crate::model::RandomSplitEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_activity: std::option::Option<std::string::String>,
@@ -7846,7 +8833,7 @@ pub mod random_split_entry {
             self.percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`RandomSplitEntry`](crate::model::RandomSplitEntry)
+        /// Consumes the builder and constructs a [`RandomSplitEntry`](crate::model::RandomSplitEntry).
         pub fn build(self) -> crate::model::RandomSplitEntry {
             crate::model::RandomSplitEntry {
                 next_activity: self.next_activity,
@@ -7856,7 +8843,7 @@ pub mod random_split_entry {
     }
 }
 impl RandomSplitEntry {
-    /// Creates a new builder-style object to manufacture [`RandomSplitEntry`](crate::model::RandomSplitEntry)
+    /// Creates a new builder-style object to manufacture [`RandomSplitEntry`](crate::model::RandomSplitEntry).
     pub fn builder() -> crate::model::random_split_entry::Builder {
         crate::model::random_split_entry::Builder::default()
     }
@@ -7867,14 +8854,18 @@ impl RandomSplitEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PushMessageActivity {
     /// <p>Specifies the time to live (TTL) value for push notifications that are sent to participants in a journey.</p>
+    #[doc(hidden)]
     pub message_config: std::option::Option<crate::model::JourneyPushMessage>,
     /// <p>The unique identifier for the next activity to perform, after the message is sent.</p>
+    #[doc(hidden)]
     pub next_activity: std::option::Option<std::string::String>,
     /// <p>The name of the push notification template to use for the message. If specified, this value must match the name of an existing message template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the version of the push notification template to use for the message. If specified, this value must match the identifier for an existing template version. To retrieve a list of versions and version identifiers for a template, use the
     /// <link linkend="templates-template-name-template-type-versions">Template Versions resource.</p>
     /// <p>If you don't specify a value for this property, Amazon Pinpoint uses the <i>active version</i> of the template. The <i>active version</i> is typically the version of a template that's been most recently reviewed and approved for use, depending on your workflow. It isn't necessarily the latest version of a template.</p>
+    #[doc(hidden)]
     pub template_version: std::option::Option<std::string::String>,
 }
 impl PushMessageActivity {
@@ -7907,11 +8898,10 @@ impl std::fmt::Debug for PushMessageActivity {
         formatter.finish()
     }
 }
-/// See [`PushMessageActivity`](crate::model::PushMessageActivity)
+/// See [`PushMessageActivity`](crate::model::PushMessageActivity).
 pub mod push_message_activity {
 
-    /// A builder for [`PushMessageActivity`](crate::model::PushMessageActivity)
-    #[non_exhaustive]
+    /// A builder for [`PushMessageActivity`](crate::model::PushMessageActivity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message_config: std::option::Option<crate::model::JourneyPushMessage>,
@@ -7976,7 +8966,7 @@ pub mod push_message_activity {
             self.template_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`PushMessageActivity`](crate::model::PushMessageActivity)
+        /// Consumes the builder and constructs a [`PushMessageActivity`](crate::model::PushMessageActivity).
         pub fn build(self) -> crate::model::PushMessageActivity {
             crate::model::PushMessageActivity {
                 message_config: self.message_config,
@@ -7988,7 +8978,7 @@ pub mod push_message_activity {
     }
 }
 impl PushMessageActivity {
-    /// Creates a new builder-style object to manufacture [`PushMessageActivity`](crate::model::PushMessageActivity)
+    /// Creates a new builder-style object to manufacture [`PushMessageActivity`](crate::model::PushMessageActivity).
     pub fn builder() -> crate::model::push_message_activity::Builder {
         crate::model::push_message_activity::Builder::default()
     }
@@ -8000,6 +8990,7 @@ impl PushMessageActivity {
 pub struct JourneyPushMessage {
     /// <p>The number of seconds that the push notification service should keep the message, if the service is unable to deliver the notification the first time. This value is converted to an expiration value when it's sent to a push-notification service. If this value is 0, the service treats the notification as if it expires immediately and the service doesn't store or try to deliver the notification again.</p>
     /// <p>This value doesn't apply to messages that are sent through the Amazon Device Messaging (ADM) service.</p>
+    #[doc(hidden)]
     pub time_to_live: std::option::Option<std::string::String>,
 }
 impl JourneyPushMessage {
@@ -8016,11 +9007,10 @@ impl std::fmt::Debug for JourneyPushMessage {
         formatter.finish()
     }
 }
-/// See [`JourneyPushMessage`](crate::model::JourneyPushMessage)
+/// See [`JourneyPushMessage`](crate::model::JourneyPushMessage).
 pub mod journey_push_message {
 
-    /// A builder for [`JourneyPushMessage`](crate::model::JourneyPushMessage)
-    #[non_exhaustive]
+    /// A builder for [`JourneyPushMessage`](crate::model::JourneyPushMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) time_to_live: std::option::Option<std::string::String>,
@@ -8038,7 +9028,7 @@ pub mod journey_push_message {
             self.time_to_live = input;
             self
         }
-        /// Consumes the builder and constructs a [`JourneyPushMessage`](crate::model::JourneyPushMessage)
+        /// Consumes the builder and constructs a [`JourneyPushMessage`](crate::model::JourneyPushMessage).
         pub fn build(self) -> crate::model::JourneyPushMessage {
             crate::model::JourneyPushMessage {
                 time_to_live: self.time_to_live,
@@ -8047,7 +9037,7 @@ pub mod journey_push_message {
     }
 }
 impl JourneyPushMessage {
-    /// Creates a new builder-style object to manufacture [`JourneyPushMessage`](crate::model::JourneyPushMessage)
+    /// Creates a new builder-style object to manufacture [`JourneyPushMessage`](crate::model::JourneyPushMessage).
     pub fn builder() -> crate::model::journey_push_message::Builder {
         crate::model::journey_push_message::Builder::default()
     }
@@ -8060,10 +9050,13 @@ impl JourneyPushMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MultiConditionalSplitActivity {
     /// <p>The paths for the activity, including the conditions for entering each path and the activity to perform for each path.</p>
+    #[doc(hidden)]
     pub branches: std::option::Option<std::vec::Vec<crate::model::MultiConditionalBranch>>,
     /// <p>The unique identifier for the activity to perform for participants who don't meet any of the conditions specified for other paths in the activity.</p>
+    #[doc(hidden)]
     pub default_activity: std::option::Option<std::string::String>,
     /// <p>The amount of time to wait or the date and time when Amazon Pinpoint determines whether the conditions are met.</p>
+    #[doc(hidden)]
     pub evaluation_wait_time: std::option::Option<crate::model::WaitTime>,
 }
 impl MultiConditionalSplitActivity {
@@ -8089,11 +9082,10 @@ impl std::fmt::Debug for MultiConditionalSplitActivity {
         formatter.finish()
     }
 }
-/// See [`MultiConditionalSplitActivity`](crate::model::MultiConditionalSplitActivity)
+/// See [`MultiConditionalSplitActivity`](crate::model::MultiConditionalSplitActivity).
 pub mod multi_conditional_split_activity {
 
-    /// A builder for [`MultiConditionalSplitActivity`](crate::model::MultiConditionalSplitActivity)
-    #[non_exhaustive]
+    /// A builder for [`MultiConditionalSplitActivity`](crate::model::MultiConditionalSplitActivity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) branches:
@@ -8147,7 +9139,7 @@ pub mod multi_conditional_split_activity {
             self.evaluation_wait_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`MultiConditionalSplitActivity`](crate::model::MultiConditionalSplitActivity)
+        /// Consumes the builder and constructs a [`MultiConditionalSplitActivity`](crate::model::MultiConditionalSplitActivity).
         pub fn build(self) -> crate::model::MultiConditionalSplitActivity {
             crate::model::MultiConditionalSplitActivity {
                 branches: self.branches,
@@ -8158,7 +9150,7 @@ pub mod multi_conditional_split_activity {
     }
 }
 impl MultiConditionalSplitActivity {
-    /// Creates a new builder-style object to manufacture [`MultiConditionalSplitActivity`](crate::model::MultiConditionalSplitActivity)
+    /// Creates a new builder-style object to manufacture [`MultiConditionalSplitActivity`](crate::model::MultiConditionalSplitActivity).
     pub fn builder() -> crate::model::multi_conditional_split_activity::Builder {
         crate::model::multi_conditional_split_activity::Builder::default()
     }
@@ -8169,8 +9161,10 @@ impl MultiConditionalSplitActivity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MultiConditionalBranch {
     /// <p>The condition to evaluate for the activity path.</p>
+    #[doc(hidden)]
     pub condition: std::option::Option<crate::model::SimpleCondition>,
     /// <p>The unique identifier for the next activity to perform, after completing the activity for the path.</p>
+    #[doc(hidden)]
     pub next_activity: std::option::Option<std::string::String>,
 }
 impl MultiConditionalBranch {
@@ -8191,11 +9185,10 @@ impl std::fmt::Debug for MultiConditionalBranch {
         formatter.finish()
     }
 }
-/// See [`MultiConditionalBranch`](crate::model::MultiConditionalBranch)
+/// See [`MultiConditionalBranch`](crate::model::MultiConditionalBranch).
 pub mod multi_conditional_branch {
 
-    /// A builder for [`MultiConditionalBranch`](crate::model::MultiConditionalBranch)
-    #[non_exhaustive]
+    /// A builder for [`MultiConditionalBranch`](crate::model::MultiConditionalBranch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) condition: std::option::Option<crate::model::SimpleCondition>,
@@ -8228,7 +9221,7 @@ pub mod multi_conditional_branch {
             self.next_activity = input;
             self
         }
-        /// Consumes the builder and constructs a [`MultiConditionalBranch`](crate::model::MultiConditionalBranch)
+        /// Consumes the builder and constructs a [`MultiConditionalBranch`](crate::model::MultiConditionalBranch).
         pub fn build(self) -> crate::model::MultiConditionalBranch {
             crate::model::MultiConditionalBranch {
                 condition: self.condition,
@@ -8238,7 +9231,7 @@ pub mod multi_conditional_branch {
     }
 }
 impl MultiConditionalBranch {
-    /// Creates a new builder-style object to manufacture [`MultiConditionalBranch`](crate::model::MultiConditionalBranch)
+    /// Creates a new builder-style object to manufacture [`MultiConditionalBranch`](crate::model::MultiConditionalBranch).
     pub fn builder() -> crate::model::multi_conditional_branch::Builder {
         crate::model::multi_conditional_branch::Builder::default()
     }
@@ -8249,10 +9242,13 @@ impl MultiConditionalBranch {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SimpleCondition {
     /// <p>The dimension settings for the event that's associated with the activity.</p>
+    #[doc(hidden)]
     pub event_condition: std::option::Option<crate::model::EventCondition>,
     /// <p>The segment that's associated with the activity.</p>
+    #[doc(hidden)]
     pub segment_condition: std::option::Option<crate::model::SegmentCondition>,
     /// <p>The dimension settings for the segment that's associated with the activity.</p>
+    #[doc(hidden)]
     pub segment_dimensions: std::option::Option<crate::model::SegmentDimensions>,
 }
 impl SimpleCondition {
@@ -8278,11 +9274,10 @@ impl std::fmt::Debug for SimpleCondition {
         formatter.finish()
     }
 }
-/// See [`SimpleCondition`](crate::model::SimpleCondition)
+/// See [`SimpleCondition`](crate::model::SimpleCondition).
 pub mod simple_condition {
 
-    /// A builder for [`SimpleCondition`](crate::model::SimpleCondition)
-    #[non_exhaustive]
+    /// A builder for [`SimpleCondition`](crate::model::SimpleCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_condition: std::option::Option<crate::model::EventCondition>,
@@ -8329,7 +9324,7 @@ pub mod simple_condition {
             self.segment_dimensions = input;
             self
         }
-        /// Consumes the builder and constructs a [`SimpleCondition`](crate::model::SimpleCondition)
+        /// Consumes the builder and constructs a [`SimpleCondition`](crate::model::SimpleCondition).
         pub fn build(self) -> crate::model::SimpleCondition {
             crate::model::SimpleCondition {
                 event_condition: self.event_condition,
@@ -8340,7 +9335,7 @@ pub mod simple_condition {
     }
 }
 impl SimpleCondition {
-    /// Creates a new builder-style object to manufacture [`SimpleCondition`](crate::model::SimpleCondition)
+    /// Creates a new builder-style object to manufacture [`SimpleCondition`](crate::model::SimpleCondition).
     pub fn builder() -> crate::model::simple_condition::Builder {
         crate::model::simple_condition::Builder::default()
     }
@@ -8351,8 +9346,10 @@ impl SimpleCondition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventCondition {
     /// <p>The dimensions for the event filter to use for the activity.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<crate::model::EventDimensions>,
     /// <p>The message identifier (message_id) for the message to use when determining whether message events meet the condition.</p>
+    #[doc(hidden)]
     pub message_activity: std::option::Option<std::string::String>,
 }
 impl EventCondition {
@@ -8373,11 +9370,10 @@ impl std::fmt::Debug for EventCondition {
         formatter.finish()
     }
 }
-/// See [`EventCondition`](crate::model::EventCondition)
+/// See [`EventCondition`](crate::model::EventCondition).
 pub mod event_condition {
 
-    /// A builder for [`EventCondition`](crate::model::EventCondition)
-    #[non_exhaustive]
+    /// A builder for [`EventCondition`](crate::model::EventCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimensions: std::option::Option<crate::model::EventDimensions>,
@@ -8410,7 +9406,7 @@ pub mod event_condition {
             self.message_activity = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventCondition`](crate::model::EventCondition)
+        /// Consumes the builder and constructs a [`EventCondition`](crate::model::EventCondition).
         pub fn build(self) -> crate::model::EventCondition {
             crate::model::EventCondition {
                 dimensions: self.dimensions,
@@ -8420,7 +9416,7 @@ pub mod event_condition {
     }
 }
 impl EventCondition {
-    /// Creates a new builder-style object to manufacture [`EventCondition`](crate::model::EventCondition)
+    /// Creates a new builder-style object to manufacture [`EventCondition`](crate::model::EventCondition).
     pub fn builder() -> crate::model::event_condition::Builder {
         crate::model::event_condition::Builder::default()
     }
@@ -8431,9 +9427,11 @@ impl EventCondition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HoldoutActivity {
     /// <p>The unique identifier for the next activity to perform, after performing the holdout activity.</p>
+    #[doc(hidden)]
     pub next_activity: std::option::Option<std::string::String>,
     /// <p>The percentage of participants who shouldn't continue the journey.</p>
     /// <p>To determine which participants are held out, Amazon Pinpoint applies a probability-based algorithm to the percentage that you specify. Therefore, the actual percentage of participants who are held out may not be equal to the percentage that you specify.</p>
+    #[doc(hidden)]
     pub percentage: i32,
 }
 impl HoldoutActivity {
@@ -8455,11 +9453,10 @@ impl std::fmt::Debug for HoldoutActivity {
         formatter.finish()
     }
 }
-/// See [`HoldoutActivity`](crate::model::HoldoutActivity)
+/// See [`HoldoutActivity`](crate::model::HoldoutActivity).
 pub mod holdout_activity {
 
-    /// A builder for [`HoldoutActivity`](crate::model::HoldoutActivity)
-    #[non_exhaustive]
+    /// A builder for [`HoldoutActivity`](crate::model::HoldoutActivity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_activity: std::option::Option<std::string::String>,
@@ -8491,7 +9488,7 @@ pub mod holdout_activity {
             self.percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`HoldoutActivity`](crate::model::HoldoutActivity)
+        /// Consumes the builder and constructs a [`HoldoutActivity`](crate::model::HoldoutActivity).
         pub fn build(self) -> crate::model::HoldoutActivity {
             crate::model::HoldoutActivity {
                 next_activity: self.next_activity,
@@ -8501,7 +9498,7 @@ pub mod holdout_activity {
     }
 }
 impl HoldoutActivity {
-    /// Creates a new builder-style object to manufacture [`HoldoutActivity`](crate::model::HoldoutActivity)
+    /// Creates a new builder-style object to manufacture [`HoldoutActivity`](crate::model::HoldoutActivity).
     pub fn builder() -> crate::model::holdout_activity::Builder {
         crate::model::holdout_activity::Builder::default()
     }
@@ -8512,14 +9509,18 @@ impl HoldoutActivity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EmailMessageActivity {
     /// <p>Specifies the sender address for an email message that's sent to participants in the journey.</p>
+    #[doc(hidden)]
     pub message_config: std::option::Option<crate::model::JourneyEmailMessage>,
     /// <p>The unique identifier for the next activity to perform, after the message is sent.</p>
+    #[doc(hidden)]
     pub next_activity: std::option::Option<std::string::String>,
     /// <p>The name of the email message template to use for the message. If specified, this value must match the name of an existing message template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the version of the email template to use for the message. If specified, this value must match the identifier for an existing template version. To retrieve a list of versions and version identifiers for a template, use the
     /// <link linkend="templates-template-name-template-type-versions">Template Versions resource.</p>
     /// <p>If you don't specify a value for this property, Amazon Pinpoint uses the <i>active version</i> of the template. The <i>active version</i> is typically the version of a template that's been most recently reviewed and approved for use, depending on your workflow. It isn't necessarily the latest version of a template.</p>
+    #[doc(hidden)]
     pub template_version: std::option::Option<std::string::String>,
 }
 impl EmailMessageActivity {
@@ -8552,11 +9553,10 @@ impl std::fmt::Debug for EmailMessageActivity {
         formatter.finish()
     }
 }
-/// See [`EmailMessageActivity`](crate::model::EmailMessageActivity)
+/// See [`EmailMessageActivity`](crate::model::EmailMessageActivity).
 pub mod email_message_activity {
 
-    /// A builder for [`EmailMessageActivity`](crate::model::EmailMessageActivity)
-    #[non_exhaustive]
+    /// A builder for [`EmailMessageActivity`](crate::model::EmailMessageActivity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message_config: std::option::Option<crate::model::JourneyEmailMessage>,
@@ -8621,7 +9621,7 @@ pub mod email_message_activity {
             self.template_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`EmailMessageActivity`](crate::model::EmailMessageActivity)
+        /// Consumes the builder and constructs a [`EmailMessageActivity`](crate::model::EmailMessageActivity).
         pub fn build(self) -> crate::model::EmailMessageActivity {
             crate::model::EmailMessageActivity {
                 message_config: self.message_config,
@@ -8633,7 +9633,7 @@ pub mod email_message_activity {
     }
 }
 impl EmailMessageActivity {
-    /// Creates a new builder-style object to manufacture [`EmailMessageActivity`](crate::model::EmailMessageActivity)
+    /// Creates a new builder-style object to manufacture [`EmailMessageActivity`](crate::model::EmailMessageActivity).
     pub fn builder() -> crate::model::email_message_activity::Builder {
         crate::model::email_message_activity::Builder::default()
     }
@@ -8644,6 +9644,7 @@ impl EmailMessageActivity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JourneyEmailMessage {
     /// <p>The verified email address to send the email message from. The default address is the FromAddress specified for the email channel for the application.</p>
+    #[doc(hidden)]
     pub from_address: std::option::Option<std::string::String>,
 }
 impl JourneyEmailMessage {
@@ -8659,11 +9660,10 @@ impl std::fmt::Debug for JourneyEmailMessage {
         formatter.finish()
     }
 }
-/// See [`JourneyEmailMessage`](crate::model::JourneyEmailMessage)
+/// See [`JourneyEmailMessage`](crate::model::JourneyEmailMessage).
 pub mod journey_email_message {
 
-    /// A builder for [`JourneyEmailMessage`](crate::model::JourneyEmailMessage)
-    #[non_exhaustive]
+    /// A builder for [`JourneyEmailMessage`](crate::model::JourneyEmailMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) from_address: std::option::Option<std::string::String>,
@@ -8679,7 +9679,7 @@ pub mod journey_email_message {
             self.from_address = input;
             self
         }
-        /// Consumes the builder and constructs a [`JourneyEmailMessage`](crate::model::JourneyEmailMessage)
+        /// Consumes the builder and constructs a [`JourneyEmailMessage`](crate::model::JourneyEmailMessage).
         pub fn build(self) -> crate::model::JourneyEmailMessage {
             crate::model::JourneyEmailMessage {
                 from_address: self.from_address,
@@ -8688,7 +9688,7 @@ pub mod journey_email_message {
     }
 }
 impl JourneyEmailMessage {
-    /// Creates a new builder-style object to manufacture [`JourneyEmailMessage`](crate::model::JourneyEmailMessage)
+    /// Creates a new builder-style object to manufacture [`JourneyEmailMessage`](crate::model::JourneyEmailMessage).
     pub fn builder() -> crate::model::journey_email_message::Builder {
         crate::model::journey_email_message::Builder::default()
     }
@@ -8701,12 +9701,16 @@ impl JourneyEmailMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConditionalSplitActivity {
     /// <p>The conditions that define the paths for the activity, and the relationship between the conditions.</p>
+    #[doc(hidden)]
     pub condition: std::option::Option<crate::model::Condition>,
     /// <p>The amount of time to wait before determining whether the conditions are met, or the date and time when Amazon Pinpoint determines whether the conditions are met.</p>
+    #[doc(hidden)]
     pub evaluation_wait_time: std::option::Option<crate::model::WaitTime>,
     /// <p>The unique identifier for the activity to perform if the conditions aren't met.</p>
+    #[doc(hidden)]
     pub false_activity: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the activity to perform if the conditions are met.</p>
+    #[doc(hidden)]
     pub true_activity: std::option::Option<std::string::String>,
 }
 impl ConditionalSplitActivity {
@@ -8737,11 +9741,10 @@ impl std::fmt::Debug for ConditionalSplitActivity {
         formatter.finish()
     }
 }
-/// See [`ConditionalSplitActivity`](crate::model::ConditionalSplitActivity)
+/// See [`ConditionalSplitActivity`](crate::model::ConditionalSplitActivity).
 pub mod conditional_split_activity {
 
-    /// A builder for [`ConditionalSplitActivity`](crate::model::ConditionalSplitActivity)
-    #[non_exhaustive]
+    /// A builder for [`ConditionalSplitActivity`](crate::model::ConditionalSplitActivity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) condition: std::option::Option<crate::model::Condition>,
@@ -8802,7 +9805,7 @@ pub mod conditional_split_activity {
             self.true_activity = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConditionalSplitActivity`](crate::model::ConditionalSplitActivity)
+        /// Consumes the builder and constructs a [`ConditionalSplitActivity`](crate::model::ConditionalSplitActivity).
         pub fn build(self) -> crate::model::ConditionalSplitActivity {
             crate::model::ConditionalSplitActivity {
                 condition: self.condition,
@@ -8814,7 +9817,7 @@ pub mod conditional_split_activity {
     }
 }
 impl ConditionalSplitActivity {
-    /// Creates a new builder-style object to manufacture [`ConditionalSplitActivity`](crate::model::ConditionalSplitActivity)
+    /// Creates a new builder-style object to manufacture [`ConditionalSplitActivity`](crate::model::ConditionalSplitActivity).
     pub fn builder() -> crate::model::conditional_split_activity::Builder {
         crate::model::conditional_split_activity::Builder::default()
     }
@@ -8825,8 +9828,10 @@ impl ConditionalSplitActivity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Condition {
     /// <p>The conditions to evaluate for the activity.</p>
+    #[doc(hidden)]
     pub conditions: std::option::Option<std::vec::Vec<crate::model::SimpleCondition>>,
     /// <p>Specifies how to handle multiple conditions for the activity. For example, if you specify two conditions for an activity, whether both or only one of the conditions must be met for the activity to be performed.</p>
+    #[doc(hidden)]
     pub operator: std::option::Option<crate::model::Operator>,
 }
 impl Condition {
@@ -8847,11 +9852,10 @@ impl std::fmt::Debug for Condition {
         formatter.finish()
     }
 }
-/// See [`Condition`](crate::model::Condition)
+/// See [`Condition`](crate::model::Condition).
 pub mod condition {
 
-    /// A builder for [`Condition`](crate::model::Condition)
-    #[non_exhaustive]
+    /// A builder for [`Condition`](crate::model::Condition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) conditions: std::option::Option<std::vec::Vec<crate::model::SimpleCondition>>,
@@ -8887,7 +9891,7 @@ pub mod condition {
             self.operator = input;
             self
         }
-        /// Consumes the builder and constructs a [`Condition`](crate::model::Condition)
+        /// Consumes the builder and constructs a [`Condition`](crate::model::Condition).
         pub fn build(self) -> crate::model::Condition {
             crate::model::Condition {
                 conditions: self.conditions,
@@ -8897,7 +9901,7 @@ pub mod condition {
     }
 }
 impl Condition {
-    /// Creates a new builder-style object to manufacture [`Condition`](crate::model::Condition)
+    /// Creates a new builder-style object to manufacture [`Condition`](crate::model::Condition).
     pub fn builder() -> crate::model::condition::Builder {
         crate::model::condition::Builder::default()
     }
@@ -8967,18 +9971,24 @@ pub struct CustomMessageActivity {
     /// <li><p>The name or Amazon Resource Name (ARN) of an AWS Lambda function to invoke to handle delivery of the campaign or treatment.</p></li>
     /// <li><p>The URL for a web application or service that supports HTTPS and can receive the message. The URL has to be a full URL, including the HTTPS protocol.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub delivery_uri: std::option::Option<std::string::String>,
     /// <p>The types of endpoints to send the custom message to. Each valid value maps to a type of channel that you can associate with an endpoint by using the ChannelType property of an endpoint.</p>
+    #[doc(hidden)]
     pub endpoint_types: std::option::Option<std::vec::Vec<crate::model::EndpointTypesElement>>,
     /// <p>Specifies the message data included in a custom channel message that's sent to participants in a journey.</p>
+    #[doc(hidden)]
     pub message_config: std::option::Option<crate::model::JourneyCustomMessage>,
     /// <p>The unique identifier for the next activity to perform, after Amazon Pinpoint calls the AWS Lambda function or web hook.</p>
+    #[doc(hidden)]
     pub next_activity: std::option::Option<std::string::String>,
     /// <p>The name of the custom message template to use for the message. If specified, this value must match the name of an existing message template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the version of the message template to use for the message. If specified, this value must match the identifier for an existing template version. To retrieve a list of versions and version identifiers for a template, use the
     /// <link linkend="templates-template-name-template-type-versions">Template Versions resource.</p>
     /// <p>If you don't specify a value for this property, Amazon Pinpoint uses the <i>active version</i> of the template. The <i>active version</i> is typically the version of a template that's been most recently reviewed and approved for use, depending on your workflow. It isn't necessarily the latest version of a template.</p>
+    #[doc(hidden)]
     pub template_version: std::option::Option<std::string::String>,
 }
 impl CustomMessageActivity {
@@ -9025,11 +10035,10 @@ impl std::fmt::Debug for CustomMessageActivity {
         formatter.finish()
     }
 }
-/// See [`CustomMessageActivity`](crate::model::CustomMessageActivity)
+/// See [`CustomMessageActivity`](crate::model::CustomMessageActivity).
 pub mod custom_message_activity {
 
-    /// A builder for [`CustomMessageActivity`](crate::model::CustomMessageActivity)
-    #[non_exhaustive]
+    /// A builder for [`CustomMessageActivity`](crate::model::CustomMessageActivity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_uri: std::option::Option<std::string::String>,
@@ -9134,7 +10143,7 @@ pub mod custom_message_activity {
             self.template_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomMessageActivity`](crate::model::CustomMessageActivity)
+        /// Consumes the builder and constructs a [`CustomMessageActivity`](crate::model::CustomMessageActivity).
         pub fn build(self) -> crate::model::CustomMessageActivity {
             crate::model::CustomMessageActivity {
                 delivery_uri: self.delivery_uri,
@@ -9148,7 +10157,7 @@ pub mod custom_message_activity {
     }
 }
 impl CustomMessageActivity {
-    /// Creates a new builder-style object to manufacture [`CustomMessageActivity`](crate::model::CustomMessageActivity)
+    /// Creates a new builder-style object to manufacture [`CustomMessageActivity`](crate::model::CustomMessageActivity).
     pub fn builder() -> crate::model::custom_message_activity::Builder {
         crate::model::custom_message_activity::Builder::default()
     }
@@ -9159,6 +10168,7 @@ impl CustomMessageActivity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JourneyCustomMessage {
     /// <p>The message content that's passed to an AWS Lambda function or to a web hook.</p>
+    #[doc(hidden)]
     pub data: std::option::Option<std::string::String>,
 }
 impl JourneyCustomMessage {
@@ -9174,11 +10184,10 @@ impl std::fmt::Debug for JourneyCustomMessage {
         formatter.finish()
     }
 }
-/// See [`JourneyCustomMessage`](crate::model::JourneyCustomMessage)
+/// See [`JourneyCustomMessage`](crate::model::JourneyCustomMessage).
 pub mod journey_custom_message {
 
-    /// A builder for [`JourneyCustomMessage`](crate::model::JourneyCustomMessage)
-    #[non_exhaustive]
+    /// A builder for [`JourneyCustomMessage`](crate::model::JourneyCustomMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data: std::option::Option<std::string::String>,
@@ -9194,14 +10203,14 @@ pub mod journey_custom_message {
             self.data = input;
             self
         }
-        /// Consumes the builder and constructs a [`JourneyCustomMessage`](crate::model::JourneyCustomMessage)
+        /// Consumes the builder and constructs a [`JourneyCustomMessage`](crate::model::JourneyCustomMessage).
         pub fn build(self) -> crate::model::JourneyCustomMessage {
             crate::model::JourneyCustomMessage { data: self.data }
         }
     }
 }
 impl JourneyCustomMessage {
-    /// Creates a new builder-style object to manufacture [`JourneyCustomMessage`](crate::model::JourneyCustomMessage)
+    /// Creates a new builder-style object to manufacture [`JourneyCustomMessage`](crate::model::JourneyCustomMessage).
     pub fn builder() -> crate::model::journey_custom_message::Builder {
         crate::model::journey_custom_message::Builder::default()
     }
@@ -9328,6 +10337,7 @@ pub struct JourneyStateRequest {
     /// <p>If you cancel a journey, Amazon Pinpoint continues to perform activities that are currently in progress, until those activities are complete. Amazon Pinpoint also continues to collect and aggregate analytics data for those activities, until they are complete, and any activities that were complete when you cancelled the journey.</p>
     /// <p>After you cancel a journey, you can't add, change, or remove any activities from the journey. In addition, Amazon Pinpoint stops evaluating the journey and doesn't perform any activities that haven't started.</p>
     /// <p>When the journey is paused, Amazon Pinpoint continues to perform activities that are currently in progress, until those activities are complete. Endpoints will stop entering journeys when the journey is paused and will resume entering the journey after the journey is resumed. For wait activities, wait time is paused when the journey is paused. Currently, PAUSED only supports journeys with a segment refresh interval.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::State>,
 }
 impl JourneyStateRequest {
@@ -9346,11 +10356,10 @@ impl std::fmt::Debug for JourneyStateRequest {
         formatter.finish()
     }
 }
-/// See [`JourneyStateRequest`](crate::model::JourneyStateRequest)
+/// See [`JourneyStateRequest`](crate::model::JourneyStateRequest).
 pub mod journey_state_request {
 
-    /// A builder for [`JourneyStateRequest`](crate::model::JourneyStateRequest)
-    #[non_exhaustive]
+    /// A builder for [`JourneyStateRequest`](crate::model::JourneyStateRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::State>,
@@ -9372,14 +10381,14 @@ pub mod journey_state_request {
             self.state = input;
             self
         }
-        /// Consumes the builder and constructs a [`JourneyStateRequest`](crate::model::JourneyStateRequest)
+        /// Consumes the builder and constructs a [`JourneyStateRequest`](crate::model::JourneyStateRequest).
         pub fn build(self) -> crate::model::JourneyStateRequest {
             crate::model::JourneyStateRequest { state: self.state }
         }
     }
 }
 impl JourneyStateRequest {
-    /// Creates a new builder-style object to manufacture [`JourneyStateRequest`](crate::model::JourneyStateRequest)
+    /// Creates a new builder-style object to manufacture [`JourneyStateRequest`](crate::model::JourneyStateRequest).
     pub fn builder() -> crate::model::journey_state_request::Builder {
         crate::model::journey_state_request::Builder::default()
     }
@@ -9390,17 +10399,23 @@ impl JourneyStateRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WriteJourneyRequest {
     /// <p>A map that contains a set of Activity objects, one object for each activity in the journey. For each Activity object, the key is the unique identifier (string) for an activity and the value is the settings for the activity. An activity identifier can contain a maximum of 100 characters. The characters must be alphanumeric characters.</p>
+    #[doc(hidden)]
     pub activities:
         std::option::Option<std::collections::HashMap<std::string::String, crate::model::Activity>>,
     /// <p>The date, in ISO 8601 format, when the journey was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the journey was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The messaging and entry limits for the journey.</p>
+    #[doc(hidden)]
     pub limits: std::option::Option<crate::model::JourneyLimits>,
     /// <p>Specifies whether the journey's scheduled start and end times use each participant's local time. To base the schedule on each participant's local time, set this value to true.</p>
+    #[doc(hidden)]
     pub local_time: bool,
     /// <p>The name of the journey. A journey name can contain a maximum of 150 characters. The characters can be alphanumeric characters or symbols, such as underscores (_) or hyphens (-). A journey name can't contain any spaces.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The quiet time settings for the journey. Quiet time is a specific time range when a journey doesn't send messages to participants, if all the following conditions are met:</p>
     /// <ul>
@@ -9409,14 +10424,19 @@ pub struct WriteJourneyRequest {
     /// <li><p>The current time in the participant's time zone is earlier than or equal to the time specified by the QuietTime.End property for the journey.</p></li>
     /// </ul>
     /// <p>If any of the preceding conditions isn't met, the participant will receive messages from the journey, even if quiet time is enabled.</p>
+    #[doc(hidden)]
     pub quiet_time: std::option::Option<crate::model::QuietTime>,
     /// <p>The frequency with which Amazon Pinpoint evaluates segment and event data for the journey, as a duration in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub refresh_frequency: std::option::Option<std::string::String>,
     /// <p>The schedule settings for the journey.</p>
+    #[doc(hidden)]
     pub schedule: std::option::Option<crate::model::JourneySchedule>,
     /// <p>The unique identifier for the first activity in the journey. The identifier for this activity can contain a maximum of 128 characters. The characters must be alphanumeric characters.</p>
+    #[doc(hidden)]
     pub start_activity: std::option::Option<std::string::String>,
     /// <p>The segment that defines which users are participants in the journey.</p>
+    #[doc(hidden)]
     pub start_condition: std::option::Option<crate::model::StartCondition>,
     /// <p>The status of the journey. Valid values are:</p>
     /// <ul>
@@ -9425,13 +10445,26 @@ pub struct WriteJourneyRequest {
     /// </ul>
     /// <p>PAUSED, CANCELLED, COMPLETED, and CLOSED states are not supported in requests to create or update a journey. To cancel, pause, or resume a journey, use the
     /// <link linkend="apps-application-id-journeys-journey-id-state">Journey State resource.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::State>,
     /// <p>Specifies whether endpoints in quiet hours should enter a wait till the end of their quiet hours.</p>
+    #[doc(hidden)]
     pub wait_for_quiet_time: bool,
     /// <p>Specifies whether a journey should be refreshed on segment update.</p>
+    #[doc(hidden)]
     pub refresh_on_segment_update: bool,
     /// <p>The channel-specific configurations for the journey.</p>
+    #[doc(hidden)]
     pub journey_channel_settings: std::option::Option<crate::model::JourneyChannelSettings>,
+    /// <p>Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order to allow (OpenHours and ClosedDays)</p>
+    #[doc(hidden)]
+    pub sending_schedule: bool,
+    /// <p>The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+    #[doc(hidden)]
+    pub open_hours: std::option::Option<crate::model::OpenHours>,
+    /// <p>The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+    #[doc(hidden)]
+    pub closed_days: std::option::Option<crate::model::ClosedDays>,
 }
 impl WriteJourneyRequest {
     /// <p>A map that contains a set of Activity objects, one object for each activity in the journey. For each Activity object, the key is the unique identifier (string) for an activity and the value is the settings for the activity. An activity identifier can contain a maximum of 100 characters. The characters must be alphanumeric characters.</p>
@@ -9511,6 +10544,18 @@ impl WriteJourneyRequest {
     ) -> std::option::Option<&crate::model::JourneyChannelSettings> {
         self.journey_channel_settings.as_ref()
     }
+    /// <p>Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order to allow (OpenHours and ClosedDays)</p>
+    pub fn sending_schedule(&self) -> bool {
+        self.sending_schedule
+    }
+    /// <p>The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+    pub fn open_hours(&self) -> std::option::Option<&crate::model::OpenHours> {
+        self.open_hours.as_ref()
+    }
+    /// <p>The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+    pub fn closed_days(&self) -> std::option::Option<&crate::model::ClosedDays> {
+        self.closed_days.as_ref()
+    }
 }
 impl std::fmt::Debug for WriteJourneyRequest {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -9530,14 +10575,16 @@ impl std::fmt::Debug for WriteJourneyRequest {
         formatter.field("wait_for_quiet_time", &self.wait_for_quiet_time);
         formatter.field("refresh_on_segment_update", &self.refresh_on_segment_update);
         formatter.field("journey_channel_settings", &self.journey_channel_settings);
+        formatter.field("sending_schedule", &self.sending_schedule);
+        formatter.field("open_hours", &self.open_hours);
+        formatter.field("closed_days", &self.closed_days);
         formatter.finish()
     }
 }
-/// See [`WriteJourneyRequest`](crate::model::WriteJourneyRequest)
+/// See [`WriteJourneyRequest`](crate::model::WriteJourneyRequest).
 pub mod write_journey_request {
 
-    /// A builder for [`WriteJourneyRequest`](crate::model::WriteJourneyRequest)
-    #[non_exhaustive]
+    /// A builder for [`WriteJourneyRequest`](crate::model::WriteJourneyRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activities: std::option::Option<
@@ -9558,6 +10605,9 @@ pub mod write_journey_request {
         pub(crate) refresh_on_segment_update: std::option::Option<bool>,
         pub(crate) journey_channel_settings:
             std::option::Option<crate::model::JourneyChannelSettings>,
+        pub(crate) sending_schedule: std::option::Option<bool>,
+        pub(crate) open_hours: std::option::Option<crate::model::OpenHours>,
+        pub(crate) closed_days: std::option::Option<crate::model::ClosedDays>,
     }
     impl Builder {
         /// Adds a key-value pair to `activities`.
@@ -9779,7 +10829,43 @@ pub mod write_journey_request {
             self.journey_channel_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`WriteJourneyRequest`](crate::model::WriteJourneyRequest)
+        /// <p>Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order to allow (OpenHours and ClosedDays)</p>
+        pub fn sending_schedule(mut self, input: bool) -> Self {
+            self.sending_schedule = Some(input);
+            self
+        }
+        /// <p>Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order to allow (OpenHours and ClosedDays)</p>
+        pub fn set_sending_schedule(mut self, input: std::option::Option<bool>) -> Self {
+            self.sending_schedule = input;
+            self
+        }
+        /// <p>The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+        pub fn open_hours(mut self, input: crate::model::OpenHours) -> Self {
+            self.open_hours = Some(input);
+            self
+        }
+        /// <p>The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+        pub fn set_open_hours(
+            mut self,
+            input: std::option::Option<crate::model::OpenHours>,
+        ) -> Self {
+            self.open_hours = input;
+            self
+        }
+        /// <p>The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+        pub fn closed_days(mut self, input: crate::model::ClosedDays) -> Self {
+            self.closed_days = Some(input);
+            self
+        }
+        /// <p>The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule should be set to true.</p>
+        pub fn set_closed_days(
+            mut self,
+            input: std::option::Option<crate::model::ClosedDays>,
+        ) -> Self {
+            self.closed_days = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`WriteJourneyRequest`](crate::model::WriteJourneyRequest).
         pub fn build(self) -> crate::model::WriteJourneyRequest {
             crate::model::WriteJourneyRequest {
                 activities: self.activities,
@@ -9797,12 +10883,15 @@ pub mod write_journey_request {
                 wait_for_quiet_time: self.wait_for_quiet_time.unwrap_or_default(),
                 refresh_on_segment_update: self.refresh_on_segment_update.unwrap_or_default(),
                 journey_channel_settings: self.journey_channel_settings,
+                sending_schedule: self.sending_schedule.unwrap_or_default(),
+                open_hours: self.open_hours,
+                closed_days: self.closed_days,
             }
         }
     }
 }
 impl WriteJourneyRequest {
-    /// Creates a new builder-style object to manufacture [`WriteJourneyRequest`](crate::model::WriteJourneyRequest)
+    /// Creates a new builder-style object to manufacture [`WriteJourneyRequest`](crate::model::WriteJourneyRequest).
     pub fn builder() -> crate::model::write_journey_request::Builder {
         crate::model::write_journey_request::Builder::default()
     }
@@ -9813,16 +10902,21 @@ impl WriteJourneyRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InAppTemplateRequest {
     /// <p>The content of the message, can include up to 5 modals. Each modal must contain a message, a header, and background color. ImageUrl and buttons are optional.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::vec::Vec<crate::model::InAppMessageContent>>,
     /// <p>Custom config to be sent to client.</p>
+    #[doc(hidden)]
     pub custom_config:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The layout of the message.</p>
+    #[doc(hidden)]
     pub layout: std::option::Option<crate::model::Layout>,
     /// <p>A string-to-string map of key-value pairs that defines the tags to associate with the message template. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The description of the template.</p>
+    #[doc(hidden)]
     pub template_description: std::option::Option<std::string::String>,
 }
 impl InAppTemplateRequest {
@@ -9864,11 +10958,10 @@ impl std::fmt::Debug for InAppTemplateRequest {
         formatter.finish()
     }
 }
-/// See [`InAppTemplateRequest`](crate::model::InAppTemplateRequest)
+/// See [`InAppTemplateRequest`](crate::model::InAppTemplateRequest).
 pub mod in_app_template_request {
 
-    /// A builder for [`InAppTemplateRequest`](crate::model::InAppTemplateRequest)
-    #[non_exhaustive]
+    /// A builder for [`InAppTemplateRequest`](crate::model::InAppTemplateRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content: std::option::Option<std::vec::Vec<crate::model::InAppMessageContent>>,
@@ -9974,7 +11067,7 @@ pub mod in_app_template_request {
             self.template_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`InAppTemplateRequest`](crate::model::InAppTemplateRequest)
+        /// Consumes the builder and constructs a [`InAppTemplateRequest`](crate::model::InAppTemplateRequest).
         pub fn build(self) -> crate::model::InAppTemplateRequest {
             crate::model::InAppTemplateRequest {
                 content: self.content,
@@ -9987,7 +11080,7 @@ pub mod in_app_template_request {
     }
 }
 impl InAppTemplateRequest {
-    /// Creates a new builder-style object to manufacture [`InAppTemplateRequest`](crate::model::InAppTemplateRequest)
+    /// Creates a new builder-style object to manufacture [`InAppTemplateRequest`](crate::model::InAppTemplateRequest).
     pub fn builder() -> crate::model::in_app_template_request::Builder {
         crate::model::in_app_template_request::Builder::default()
     }
@@ -10076,16 +11169,22 @@ impl AsRef<str> for Layout {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InAppMessageContent {
     /// <p>The background color for the message.</p>
+    #[doc(hidden)]
     pub background_color: std::option::Option<std::string::String>,
     /// <p>The configuration for the message body.</p>
+    #[doc(hidden)]
     pub body_config: std::option::Option<crate::model::InAppMessageBodyConfig>,
     /// <p>The configuration for the message header.</p>
+    #[doc(hidden)]
     pub header_config: std::option::Option<crate::model::InAppMessageHeaderConfig>,
     /// <p>The image url for the background of message.</p>
+    #[doc(hidden)]
     pub image_url: std::option::Option<std::string::String>,
     /// <p>The first button inside the message.</p>
+    #[doc(hidden)]
     pub primary_btn: std::option::Option<crate::model::InAppMessageButton>,
     /// <p>The second button inside message.</p>
+    #[doc(hidden)]
     pub secondary_btn: std::option::Option<crate::model::InAppMessageButton>,
 }
 impl InAppMessageContent {
@@ -10126,11 +11225,10 @@ impl std::fmt::Debug for InAppMessageContent {
         formatter.finish()
     }
 }
-/// See [`InAppMessageContent`](crate::model::InAppMessageContent)
+/// See [`InAppMessageContent`](crate::model::InAppMessageContent).
 pub mod in_app_message_content {
 
-    /// A builder for [`InAppMessageContent`](crate::model::InAppMessageContent)
-    #[non_exhaustive]
+    /// A builder for [`InAppMessageContent`](crate::model::InAppMessageContent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) background_color: std::option::Option<std::string::String>,
@@ -10216,7 +11314,7 @@ pub mod in_app_message_content {
             self.secondary_btn = input;
             self
         }
-        /// Consumes the builder and constructs a [`InAppMessageContent`](crate::model::InAppMessageContent)
+        /// Consumes the builder and constructs a [`InAppMessageContent`](crate::model::InAppMessageContent).
         pub fn build(self) -> crate::model::InAppMessageContent {
             crate::model::InAppMessageContent {
                 background_color: self.background_color,
@@ -10230,7 +11328,7 @@ pub mod in_app_message_content {
     }
 }
 impl InAppMessageContent {
-    /// Creates a new builder-style object to manufacture [`InAppMessageContent`](crate::model::InAppMessageContent)
+    /// Creates a new builder-style object to manufacture [`InAppMessageContent`](crate::model::InAppMessageContent).
     pub fn builder() -> crate::model::in_app_message_content::Builder {
         crate::model::in_app_message_content::Builder::default()
     }
@@ -10241,12 +11339,16 @@ impl InAppMessageContent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InAppMessageButton {
     /// <p>Default button content.</p>
+    #[doc(hidden)]
     pub android: std::option::Option<crate::model::OverrideButtonConfiguration>,
     /// <p>Default button content.</p>
+    #[doc(hidden)]
     pub default_config: std::option::Option<crate::model::DefaultButtonConfiguration>,
     /// <p>Default button content.</p>
+    #[doc(hidden)]
     pub ios: std::option::Option<crate::model::OverrideButtonConfiguration>,
     /// <p>Default button content.</p>
+    #[doc(hidden)]
     pub web: std::option::Option<crate::model::OverrideButtonConfiguration>,
 }
 impl InAppMessageButton {
@@ -10277,11 +11379,10 @@ impl std::fmt::Debug for InAppMessageButton {
         formatter.finish()
     }
 }
-/// See [`InAppMessageButton`](crate::model::InAppMessageButton)
+/// See [`InAppMessageButton`](crate::model::InAppMessageButton).
 pub mod in_app_message_button {
 
-    /// A builder for [`InAppMessageButton`](crate::model::InAppMessageButton)
-    #[non_exhaustive]
+    /// A builder for [`InAppMessageButton`](crate::model::InAppMessageButton).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) android: std::option::Option<crate::model::OverrideButtonConfiguration>,
@@ -10342,7 +11443,7 @@ pub mod in_app_message_button {
             self.web = input;
             self
         }
-        /// Consumes the builder and constructs a [`InAppMessageButton`](crate::model::InAppMessageButton)
+        /// Consumes the builder and constructs a [`InAppMessageButton`](crate::model::InAppMessageButton).
         pub fn build(self) -> crate::model::InAppMessageButton {
             crate::model::InAppMessageButton {
                 android: self.android,
@@ -10354,7 +11455,7 @@ pub mod in_app_message_button {
     }
 }
 impl InAppMessageButton {
-    /// Creates a new builder-style object to manufacture [`InAppMessageButton`](crate::model::InAppMessageButton)
+    /// Creates a new builder-style object to manufacture [`InAppMessageButton`](crate::model::InAppMessageButton).
     pub fn builder() -> crate::model::in_app_message_button::Builder {
         crate::model::in_app_message_button::Builder::default()
     }
@@ -10365,8 +11466,10 @@ impl InAppMessageButton {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OverrideButtonConfiguration {
     /// <p>Action triggered by the button.</p>
+    #[doc(hidden)]
     pub button_action: std::option::Option<crate::model::ButtonAction>,
     /// <p>Button destination.</p>
+    #[doc(hidden)]
     pub link: std::option::Option<std::string::String>,
 }
 impl OverrideButtonConfiguration {
@@ -10387,11 +11490,10 @@ impl std::fmt::Debug for OverrideButtonConfiguration {
         formatter.finish()
     }
 }
-/// See [`OverrideButtonConfiguration`](crate::model::OverrideButtonConfiguration)
+/// See [`OverrideButtonConfiguration`](crate::model::OverrideButtonConfiguration).
 pub mod override_button_configuration {
 
-    /// A builder for [`OverrideButtonConfiguration`](crate::model::OverrideButtonConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`OverrideButtonConfiguration`](crate::model::OverrideButtonConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) button_action: std::option::Option<crate::model::ButtonAction>,
@@ -10421,7 +11523,7 @@ pub mod override_button_configuration {
             self.link = input;
             self
         }
-        /// Consumes the builder and constructs a [`OverrideButtonConfiguration`](crate::model::OverrideButtonConfiguration)
+        /// Consumes the builder and constructs a [`OverrideButtonConfiguration`](crate::model::OverrideButtonConfiguration).
         pub fn build(self) -> crate::model::OverrideButtonConfiguration {
             crate::model::OverrideButtonConfiguration {
                 button_action: self.button_action,
@@ -10431,7 +11533,7 @@ pub mod override_button_configuration {
     }
 }
 impl OverrideButtonConfiguration {
-    /// Creates a new builder-style object to manufacture [`OverrideButtonConfiguration`](crate::model::OverrideButtonConfiguration)
+    /// Creates a new builder-style object to manufacture [`OverrideButtonConfiguration`](crate::model::OverrideButtonConfiguration).
     pub fn builder() -> crate::model::override_button_configuration::Builder {
         crate::model::override_button_configuration::Builder::default()
     }
@@ -10501,16 +11603,22 @@ impl AsRef<str> for ButtonAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DefaultButtonConfiguration {
     /// <p>The background color of the button.</p>
+    #[doc(hidden)]
     pub background_color: std::option::Option<std::string::String>,
     /// <p>The border radius of the button.</p>
+    #[doc(hidden)]
     pub border_radius: i32,
     /// <p>Action triggered by the button.</p>
+    #[doc(hidden)]
     pub button_action: std::option::Option<crate::model::ButtonAction>,
     /// <p>Button destination.</p>
+    #[doc(hidden)]
     pub link: std::option::Option<std::string::String>,
     /// <p>Button text.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>The text color of the button.</p>
+    #[doc(hidden)]
     pub text_color: std::option::Option<std::string::String>,
 }
 impl DefaultButtonConfiguration {
@@ -10551,11 +11659,10 @@ impl std::fmt::Debug for DefaultButtonConfiguration {
         formatter.finish()
     }
 }
-/// See [`DefaultButtonConfiguration`](crate::model::DefaultButtonConfiguration)
+/// See [`DefaultButtonConfiguration`](crate::model::DefaultButtonConfiguration).
 pub mod default_button_configuration {
 
-    /// A builder for [`DefaultButtonConfiguration`](crate::model::DefaultButtonConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DefaultButtonConfiguration`](crate::model::DefaultButtonConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) background_color: std::option::Option<std::string::String>,
@@ -10632,7 +11739,7 @@ pub mod default_button_configuration {
             self.text_color = input;
             self
         }
-        /// Consumes the builder and constructs a [`DefaultButtonConfiguration`](crate::model::DefaultButtonConfiguration)
+        /// Consumes the builder and constructs a [`DefaultButtonConfiguration`](crate::model::DefaultButtonConfiguration).
         pub fn build(self) -> crate::model::DefaultButtonConfiguration {
             crate::model::DefaultButtonConfiguration {
                 background_color: self.background_color,
@@ -10646,7 +11753,7 @@ pub mod default_button_configuration {
     }
 }
 impl DefaultButtonConfiguration {
-    /// Creates a new builder-style object to manufacture [`DefaultButtonConfiguration`](crate::model::DefaultButtonConfiguration)
+    /// Creates a new builder-style object to manufacture [`DefaultButtonConfiguration`](crate::model::DefaultButtonConfiguration).
     pub fn builder() -> crate::model::default_button_configuration::Builder {
         crate::model::default_button_configuration::Builder::default()
     }
@@ -10657,10 +11764,13 @@ impl DefaultButtonConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InAppMessageHeaderConfig {
     /// <p>The alignment of the text. Valid values: LEFT, CENTER, RIGHT.</p>
+    #[doc(hidden)]
     pub alignment: std::option::Option<crate::model::Alignment>,
     /// <p>Message Header.</p>
+    #[doc(hidden)]
     pub header: std::option::Option<std::string::String>,
     /// <p>The text color.</p>
+    #[doc(hidden)]
     pub text_color: std::option::Option<std::string::String>,
 }
 impl InAppMessageHeaderConfig {
@@ -10686,11 +11796,10 @@ impl std::fmt::Debug for InAppMessageHeaderConfig {
         formatter.finish()
     }
 }
-/// See [`InAppMessageHeaderConfig`](crate::model::InAppMessageHeaderConfig)
+/// See [`InAppMessageHeaderConfig`](crate::model::InAppMessageHeaderConfig).
 pub mod in_app_message_header_config {
 
-    /// A builder for [`InAppMessageHeaderConfig`](crate::model::InAppMessageHeaderConfig)
-    #[non_exhaustive]
+    /// A builder for [`InAppMessageHeaderConfig`](crate::model::InAppMessageHeaderConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alignment: std::option::Option<crate::model::Alignment>,
@@ -10731,7 +11840,7 @@ pub mod in_app_message_header_config {
             self.text_color = input;
             self
         }
-        /// Consumes the builder and constructs a [`InAppMessageHeaderConfig`](crate::model::InAppMessageHeaderConfig)
+        /// Consumes the builder and constructs a [`InAppMessageHeaderConfig`](crate::model::InAppMessageHeaderConfig).
         pub fn build(self) -> crate::model::InAppMessageHeaderConfig {
             crate::model::InAppMessageHeaderConfig {
                 alignment: self.alignment,
@@ -10742,7 +11851,7 @@ pub mod in_app_message_header_config {
     }
 }
 impl InAppMessageHeaderConfig {
-    /// Creates a new builder-style object to manufacture [`InAppMessageHeaderConfig`](crate::model::InAppMessageHeaderConfig)
+    /// Creates a new builder-style object to manufacture [`InAppMessageHeaderConfig`](crate::model::InAppMessageHeaderConfig).
     pub fn builder() -> crate::model::in_app_message_header_config::Builder {
         crate::model::in_app_message_header_config::Builder::default()
     }
@@ -10812,10 +11921,13 @@ impl AsRef<str> for Alignment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InAppMessageBodyConfig {
     /// <p>The alignment of the text. Valid values: LEFT, CENTER, RIGHT.</p>
+    #[doc(hidden)]
     pub alignment: std::option::Option<crate::model::Alignment>,
     /// <p>Message Body.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The text color.</p>
+    #[doc(hidden)]
     pub text_color: std::option::Option<std::string::String>,
 }
 impl InAppMessageBodyConfig {
@@ -10841,11 +11953,10 @@ impl std::fmt::Debug for InAppMessageBodyConfig {
         formatter.finish()
     }
 }
-/// See [`InAppMessageBodyConfig`](crate::model::InAppMessageBodyConfig)
+/// See [`InAppMessageBodyConfig`](crate::model::InAppMessageBodyConfig).
 pub mod in_app_message_body_config {
 
-    /// A builder for [`InAppMessageBodyConfig`](crate::model::InAppMessageBodyConfig)
-    #[non_exhaustive]
+    /// A builder for [`InAppMessageBodyConfig`](crate::model::InAppMessageBodyConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alignment: std::option::Option<crate::model::Alignment>,
@@ -10886,7 +11997,7 @@ pub mod in_app_message_body_config {
             self.text_color = input;
             self
         }
-        /// Consumes the builder and constructs a [`InAppMessageBodyConfig`](crate::model::InAppMessageBodyConfig)
+        /// Consumes the builder and constructs a [`InAppMessageBodyConfig`](crate::model::InAppMessageBodyConfig).
         pub fn build(self) -> crate::model::InAppMessageBodyConfig {
             crate::model::InAppMessageBodyConfig {
                 alignment: self.alignment,
@@ -10897,7 +12008,7 @@ pub mod in_app_message_body_config {
     }
 }
 impl InAppMessageBodyConfig {
-    /// Creates a new builder-style object to manufacture [`InAppMessageBodyConfig`](crate::model::InAppMessageBodyConfig)
+    /// Creates a new builder-style object to manufacture [`InAppMessageBodyConfig`](crate::model::InAppMessageBodyConfig).
     pub fn builder() -> crate::model::in_app_message_body_config::Builder {
         crate::model::in_app_message_body_config::Builder::default()
     }
@@ -10908,26 +12019,37 @@ impl InAppMessageBodyConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GcmChannelResponse {
     /// <p>The unique identifier for the application that the GCM channel applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date and time when the GCM channel was enabled.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The Web API Key, also referred to as an <i>API_KEY</i> or <i>server key</i>, that you received from Google to communicate with Google services.</p>
+    #[doc(hidden)]
     pub credential: std::option::Option<std::string::String>,
     /// <p>Specifies whether the GCM channel is enabled for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>(Not used) This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub has_credential: bool,
     /// <p>(Deprecated) An identifier for the GCM channel. This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the GCM channel is archived.</p>
+    #[doc(hidden)]
     pub is_archived: bool,
     /// <p>The user who last modified the GCM channel.</p>
+    #[doc(hidden)]
     pub last_modified_by: std::option::Option<std::string::String>,
     /// <p>The date and time when the GCM channel was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The type of messaging or notification platform for the channel. For the GCM channel, this value is GCM.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The current version of the GCM channel.</p>
+    #[doc(hidden)]
     pub version: i32,
 }
 impl GcmChannelResponse {
@@ -10993,11 +12115,10 @@ impl std::fmt::Debug for GcmChannelResponse {
         formatter.finish()
     }
 }
-/// See [`GcmChannelResponse`](crate::model::GcmChannelResponse)
+/// See [`GcmChannelResponse`](crate::model::GcmChannelResponse).
 pub mod gcm_channel_response {
 
-    /// A builder for [`GcmChannelResponse`](crate::model::GcmChannelResponse)
-    #[non_exhaustive]
+    /// A builder for [`GcmChannelResponse`](crate::model::GcmChannelResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -11135,7 +12256,7 @@ pub mod gcm_channel_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`GcmChannelResponse`](crate::model::GcmChannelResponse)
+        /// Consumes the builder and constructs a [`GcmChannelResponse`](crate::model::GcmChannelResponse).
         pub fn build(self) -> crate::model::GcmChannelResponse {
             crate::model::GcmChannelResponse {
                 application_id: self.application_id,
@@ -11154,7 +12275,7 @@ pub mod gcm_channel_response {
     }
 }
 impl GcmChannelResponse {
-    /// Creates a new builder-style object to manufacture [`GcmChannelResponse`](crate::model::GcmChannelResponse)
+    /// Creates a new builder-style object to manufacture [`GcmChannelResponse`](crate::model::GcmChannelResponse).
     pub fn builder() -> crate::model::gcm_channel_response::Builder {
         crate::model::gcm_channel_response::Builder::default()
     }
@@ -11165,8 +12286,10 @@ impl GcmChannelResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GcmChannelRequest {
     /// <p>The Web API Key, also referred to as an <i>API_KEY</i> or <i>server key</i>, that you received from Google to communicate with Google services.</p>
+    #[doc(hidden)]
     pub api_key: std::option::Option<std::string::String>,
     /// <p>Specifies whether to enable the GCM channel for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl GcmChannelRequest {
@@ -11187,11 +12310,10 @@ impl std::fmt::Debug for GcmChannelRequest {
         formatter.finish()
     }
 }
-/// See [`GcmChannelRequest`](crate::model::GcmChannelRequest)
+/// See [`GcmChannelRequest`](crate::model::GcmChannelRequest).
 pub mod gcm_channel_request {
 
-    /// A builder for [`GcmChannelRequest`](crate::model::GcmChannelRequest)
-    #[non_exhaustive]
+    /// A builder for [`GcmChannelRequest`](crate::model::GcmChannelRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_key: std::option::Option<std::string::String>,
@@ -11218,7 +12340,7 @@ pub mod gcm_channel_request {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`GcmChannelRequest`](crate::model::GcmChannelRequest)
+        /// Consumes the builder and constructs a [`GcmChannelRequest`](crate::model::GcmChannelRequest).
         pub fn build(self) -> crate::model::GcmChannelRequest {
             crate::model::GcmChannelRequest {
                 api_key: self.api_key,
@@ -11228,7 +12350,7 @@ pub mod gcm_channel_request {
     }
 }
 impl GcmChannelRequest {
-    /// Creates a new builder-style object to manufacture [`GcmChannelRequest`](crate::model::GcmChannelRequest)
+    /// Creates a new builder-style object to manufacture [`GcmChannelRequest`](crate::model::GcmChannelRequest).
     pub fn builder() -> crate::model::gcm_channel_request::Builder {
         crate::model::gcm_channel_request::Builder::default()
     }
@@ -11239,6 +12361,7 @@ impl GcmChannelRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointBatchRequest {
     /// <p>An array that defines the endpoints to create or update and, for each endpoint, the property values to set or change. An array can contain a maximum of 100 items.</p>
+    #[doc(hidden)]
     pub item: std::option::Option<std::vec::Vec<crate::model::EndpointBatchItem>>,
 }
 impl EndpointBatchRequest {
@@ -11254,11 +12377,10 @@ impl std::fmt::Debug for EndpointBatchRequest {
         formatter.finish()
     }
 }
-/// See [`EndpointBatchRequest`](crate::model::EndpointBatchRequest)
+/// See [`EndpointBatchRequest`](crate::model::EndpointBatchRequest).
 pub mod endpoint_batch_request {
 
-    /// A builder for [`EndpointBatchRequest`](crate::model::EndpointBatchRequest)
-    #[non_exhaustive]
+    /// A builder for [`EndpointBatchRequest`](crate::model::EndpointBatchRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item: std::option::Option<std::vec::Vec<crate::model::EndpointBatchItem>>,
@@ -11283,14 +12405,14 @@ pub mod endpoint_batch_request {
             self.item = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointBatchRequest`](crate::model::EndpointBatchRequest)
+        /// Consumes the builder and constructs a [`EndpointBatchRequest`](crate::model::EndpointBatchRequest).
         pub fn build(self) -> crate::model::EndpointBatchRequest {
             crate::model::EndpointBatchRequest { item: self.item }
         }
     }
 }
 impl EndpointBatchRequest {
-    /// Creates a new builder-style object to manufacture [`EndpointBatchRequest`](crate::model::EndpointBatchRequest)
+    /// Creates a new builder-style object to manufacture [`EndpointBatchRequest`](crate::model::EndpointBatchRequest).
     pub fn builder() -> crate::model::endpoint_batch_request::Builder {
         crate::model::endpoint_batch_request::Builder::default()
     }
@@ -11301,32 +12423,44 @@ impl EndpointBatchRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointBatchItem {
     /// <p>The destination address for messages or push notifications that you send to the endpoint. The address varies by channel. For a push-notification channel, use the token provided by the push notification service, such as an Apple Push Notification service (APNs) device token or a Firebase Cloud Messaging (FCM) registration token. For the SMS channel, use a phone number in E.164 format, such as +12065550100. For the email channel, use an email address.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
     /// <p>One or more custom attributes that describe the endpoint by associating a name with an array of values. For example, the value of a custom attribute named Interests might be: ["Science", "Music", "Travel"]. You can use these attributes as filter criteria when you create segments. Attribute names are case sensitive.</p>
     /// <p>An attribute name can contain up to 50 characters. An attribute value can contain up to 100 characters. When you define the name of a custom attribute, avoid using the following characters: number sign (#), colon (:), question mark (?), backslash (\), and slash (/). The Amazon Pinpoint console can't display attribute names that contain these characters. This restriction doesn't apply to attribute values.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The channel to use when sending messages or push notifications to the endpoint.</p>
+    #[doc(hidden)]
     pub channel_type: std::option::Option<crate::model::ChannelType>,
     /// <p>The demographic information for the endpoint, such as the time zone and platform.</p>
+    #[doc(hidden)]
     pub demographic: std::option::Option<crate::model::EndpointDemographic>,
     /// <p>The date and time, in ISO 8601 format, when the endpoint was created or updated.</p>
+    #[doc(hidden)]
     pub effective_date: std::option::Option<std::string::String>,
     /// <p>Specifies whether to send messages or push notifications to the endpoint. Valid values are: ACTIVE, messages are sent to the endpoint; and, INACTIVE, messages aren’t sent to the endpoint.</p>
     /// <p>Amazon Pinpoint automatically sets this value to ACTIVE when you create an endpoint or update an existing endpoint. Amazon Pinpoint automatically sets this value to INACTIVE if you update another endpoint that has the same address specified by the Address property.</p>
+    #[doc(hidden)]
     pub endpoint_status: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the endpoint in the context of the batch.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The geographic information for the endpoint.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::EndpointLocation>,
     /// <p>One or more custom metrics that your app reports to Amazon Pinpoint for the endpoint.</p>
+    #[doc(hidden)]
     pub metrics: std::option::Option<std::collections::HashMap<std::string::String, f64>>,
     /// <p>Specifies whether the user who's associated with the endpoint has opted out of receiving messages and push notifications from you. Possible values are: ALL, the user has opted out and doesn't want to receive any messages or push notifications; and, NONE, the user hasn't opted out and wants to receive all messages and push notifications.</p>
+    #[doc(hidden)]
     pub opt_out: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the request to create or update the endpoint.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>One or more custom attributes that describe the user who's associated with the endpoint.</p>
+    #[doc(hidden)]
     pub user: std::option::Option<crate::model::EndpointUser>,
 }
 impl EndpointBatchItem {
@@ -11405,11 +12539,10 @@ impl std::fmt::Debug for EndpointBatchItem {
         formatter.finish()
     }
 }
-/// See [`EndpointBatchItem`](crate::model::EndpointBatchItem)
+/// See [`EndpointBatchItem`](crate::model::EndpointBatchItem).
 pub mod endpoint_batch_item {
 
-    /// A builder for [`EndpointBatchItem`](crate::model::EndpointBatchItem)
-    #[non_exhaustive]
+    /// A builder for [`EndpointBatchItem`](crate::model::EndpointBatchItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) address: std::option::Option<std::string::String>,
@@ -11592,7 +12725,7 @@ pub mod endpoint_batch_item {
             self.user = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointBatchItem`](crate::model::EndpointBatchItem)
+        /// Consumes the builder and constructs a [`EndpointBatchItem`](crate::model::EndpointBatchItem).
         pub fn build(self) -> crate::model::EndpointBatchItem {
             crate::model::EndpointBatchItem {
                 address: self.address,
@@ -11612,7 +12745,7 @@ pub mod endpoint_batch_item {
     }
 }
 impl EndpointBatchItem {
-    /// Creates a new builder-style object to manufacture [`EndpointBatchItem`](crate::model::EndpointBatchItem)
+    /// Creates a new builder-style object to manufacture [`EndpointBatchItem`](crate::model::EndpointBatchItem).
     pub fn builder() -> crate::model::endpoint_batch_item::Builder {
         crate::model::endpoint_batch_item::Builder::default()
     }
@@ -11624,10 +12757,12 @@ impl EndpointBatchItem {
 pub struct EndpointUser {
     /// <p>One or more custom attributes that describe the user by associating a name with an array of values. For example, the value of an attribute named Interests might be: ["Science", "Music", "Travel"]. You can use these attributes as filter criteria when you create segments. Attribute names are case sensitive.</p>
     /// <p>An attribute name can contain up to 50 characters. An attribute value can contain up to 100 characters. When you define the name of a custom attribute, avoid using the following characters: number sign (#), colon (:), question mark (?), backslash (\), and slash (/). The Amazon Pinpoint console can't display attribute names that contain these characters. This restriction doesn't apply to attribute values.</p>
+    #[doc(hidden)]
     pub user_attributes: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The unique identifier for the user.</p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
 }
 impl EndpointUser {
@@ -11653,11 +12788,10 @@ impl std::fmt::Debug for EndpointUser {
         formatter.finish()
     }
 }
-/// See [`EndpointUser`](crate::model::EndpointUser)
+/// See [`EndpointUser`](crate::model::EndpointUser).
 pub mod endpoint_user {
 
-    /// A builder for [`EndpointUser`](crate::model::EndpointUser)
-    #[non_exhaustive]
+    /// A builder for [`EndpointUser`](crate::model::EndpointUser).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_attributes: std::option::Option<
@@ -11703,7 +12837,7 @@ pub mod endpoint_user {
             self.user_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointUser`](crate::model::EndpointUser)
+        /// Consumes the builder and constructs a [`EndpointUser`](crate::model::EndpointUser).
         pub fn build(self) -> crate::model::EndpointUser {
             crate::model::EndpointUser {
                 user_attributes: self.user_attributes,
@@ -11713,7 +12847,7 @@ pub mod endpoint_user {
     }
 }
 impl EndpointUser {
-    /// Creates a new builder-style object to manufacture [`EndpointUser`](crate::model::EndpointUser)
+    /// Creates a new builder-style object to manufacture [`EndpointUser`](crate::model::EndpointUser).
     pub fn builder() -> crate::model::endpoint_user::Builder {
         crate::model::endpoint_user::Builder::default()
     }
@@ -11724,16 +12858,22 @@ impl EndpointUser {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointLocation {
     /// <p>The name of the city where the endpoint is located.</p>
+    #[doc(hidden)]
     pub city: std::option::Option<std::string::String>,
     /// <p>The two-character code, in ISO 3166-1 alpha-2 format, for the country or region where the endpoint is located. For example, US for the United States.</p>
+    #[doc(hidden)]
     pub country: std::option::Option<std::string::String>,
     /// <p>The latitude coordinate of the endpoint location, rounded to one decimal place.</p>
+    #[doc(hidden)]
     pub latitude: f64,
     /// <p>The longitude coordinate of the endpoint location, rounded to one decimal place.</p>
+    #[doc(hidden)]
     pub longitude: f64,
     /// <p>The postal or ZIP code for the area where the endpoint is located.</p>
+    #[doc(hidden)]
     pub postal_code: std::option::Option<std::string::String>,
     /// <p>The name of the region where the endpoint is located. For locations in the United States, this value is the name of a state.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
 }
 impl EndpointLocation {
@@ -11774,11 +12914,10 @@ impl std::fmt::Debug for EndpointLocation {
         formatter.finish()
     }
 }
-/// See [`EndpointLocation`](crate::model::EndpointLocation)
+/// See [`EndpointLocation`](crate::model::EndpointLocation).
 pub mod endpoint_location {
 
-    /// A builder for [`EndpointLocation`](crate::model::EndpointLocation)
-    #[non_exhaustive]
+    /// A builder for [`EndpointLocation`](crate::model::EndpointLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) city: std::option::Option<std::string::String>,
@@ -11849,7 +12988,7 @@ pub mod endpoint_location {
             self.region = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointLocation`](crate::model::EndpointLocation)
+        /// Consumes the builder and constructs a [`EndpointLocation`](crate::model::EndpointLocation).
         pub fn build(self) -> crate::model::EndpointLocation {
             crate::model::EndpointLocation {
                 city: self.city,
@@ -11863,7 +13002,7 @@ pub mod endpoint_location {
     }
 }
 impl EndpointLocation {
-    /// Creates a new builder-style object to manufacture [`EndpointLocation`](crate::model::EndpointLocation)
+    /// Creates a new builder-style object to manufacture [`EndpointLocation`](crate::model::EndpointLocation).
     pub fn builder() -> crate::model::endpoint_location::Builder {
         crate::model::endpoint_location::Builder::default()
     }
@@ -11874,20 +13013,28 @@ impl EndpointLocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointDemographic {
     /// <p>The version of the app that's associated with the endpoint.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<std::string::String>,
     /// <p>The locale of the endpoint, in the following format: the ISO 639-1 alpha-2 code, followed by an underscore (_), followed by an ISO 3166-1 alpha-2 value.</p>
+    #[doc(hidden)]
     pub locale: std::option::Option<std::string::String>,
     /// <p>The manufacturer of the endpoint device, such as apple or samsung.</p>
+    #[doc(hidden)]
     pub make: std::option::Option<std::string::String>,
     /// <p>The model name or number of the endpoint device, such as iPhone or SM-G900F.</p>
+    #[doc(hidden)]
     pub model: std::option::Option<std::string::String>,
     /// <p>The model version of the endpoint device.</p>
+    #[doc(hidden)]
     pub model_version: std::option::Option<std::string::String>,
     /// <p>The platform of the endpoint device, such as ios.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The platform version of the endpoint device.</p>
+    #[doc(hidden)]
     pub platform_version: std::option::Option<std::string::String>,
     /// <p>The time zone of the endpoint, specified as a tz database name value, such as America/Los_Angeles.</p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
 }
 impl EndpointDemographic {
@@ -11938,11 +13085,10 @@ impl std::fmt::Debug for EndpointDemographic {
         formatter.finish()
     }
 }
-/// See [`EndpointDemographic`](crate::model::EndpointDemographic)
+/// See [`EndpointDemographic`](crate::model::EndpointDemographic).
 pub mod endpoint_demographic {
 
-    /// A builder for [`EndpointDemographic`](crate::model::EndpointDemographic)
-    #[non_exhaustive]
+    /// A builder for [`EndpointDemographic`](crate::model::EndpointDemographic).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_version: std::option::Option<std::string::String>,
@@ -12041,7 +13187,7 @@ pub mod endpoint_demographic {
             self.timezone = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointDemographic`](crate::model::EndpointDemographic)
+        /// Consumes the builder and constructs a [`EndpointDemographic`](crate::model::EndpointDemographic).
         pub fn build(self) -> crate::model::EndpointDemographic {
             crate::model::EndpointDemographic {
                 app_version: self.app_version,
@@ -12057,7 +13203,7 @@ pub mod endpoint_demographic {
     }
 }
 impl EndpointDemographic {
-    /// Creates a new builder-style object to manufacture [`EndpointDemographic`](crate::model::EndpointDemographic)
+    /// Creates a new builder-style object to manufacture [`EndpointDemographic`](crate::model::EndpointDemographic).
     pub fn builder() -> crate::model::endpoint_demographic::Builder {
         crate::model::endpoint_demographic::Builder::default()
     }
@@ -12181,30 +13327,41 @@ impl AsRef<str> for ChannelType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointRequest {
     /// <p>The destination address for messages or push notifications that you send to the endpoint. The address varies by channel. For a push-notification channel, use the token provided by the push notification service, such as an Apple Push Notification service (APNs) device token or a Firebase Cloud Messaging (FCM) registration token. For the SMS channel, use a phone number in E.164 format, such as +12065550100. For the email channel, use an email address.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
     /// <p>One or more custom attributes that describe the endpoint by associating a name with an array of values. For example, the value of a custom attribute named Interests might be: ["Science", "Music", "Travel"]. You can use these attributes as filter criteria when you create segments. Attribute names are case sensitive.</p>
     /// <p>An attribute name can contain up to 50 characters. An attribute value can contain up to 100 characters. When you define the name of a custom attribute, avoid using the following characters: number sign (#), colon (:), question mark (?), backslash (\), and slash (/). The Amazon Pinpoint console can't display attribute names that contain these characters. This restriction doesn't apply to attribute values.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The channel to use when sending messages or push notifications to the endpoint.</p>
+    #[doc(hidden)]
     pub channel_type: std::option::Option<crate::model::ChannelType>,
     /// <p>The demographic information for the endpoint, such as the time zone and platform.</p>
+    #[doc(hidden)]
     pub demographic: std::option::Option<crate::model::EndpointDemographic>,
     /// <p>The date and time, in ISO 8601 format, when the endpoint is updated.</p>
+    #[doc(hidden)]
     pub effective_date: std::option::Option<std::string::String>,
     /// <p>Specifies whether to send messages or push notifications to the endpoint. Valid values are: ACTIVE, messages are sent to the endpoint; and, INACTIVE, messages aren’t sent to the endpoint.</p>
     /// <p>Amazon Pinpoint automatically sets this value to ACTIVE when you create an endpoint or update an existing endpoint. Amazon Pinpoint automatically sets this value to INACTIVE if you update another endpoint that has the same address specified by the Address property.</p>
+    #[doc(hidden)]
     pub endpoint_status: std::option::Option<std::string::String>,
     /// <p>The geographic information for the endpoint.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::EndpointLocation>,
     /// <p>One or more custom metrics that your app reports to Amazon Pinpoint for the endpoint.</p>
+    #[doc(hidden)]
     pub metrics: std::option::Option<std::collections::HashMap<std::string::String, f64>>,
     /// <p>Specifies whether the user who's associated with the endpoint has opted out of receiving messages and push notifications from you. Possible values are: ALL, the user has opted out and doesn't want to receive any messages or push notifications; and, NONE, the user hasn't opted out and wants to receive all messages and push notifications.</p>
+    #[doc(hidden)]
     pub opt_out: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the most recent request to update the endpoint.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>One or more custom attributes that describe the user who's associated with the endpoint.</p>
+    #[doc(hidden)]
     pub user: std::option::Option<crate::model::EndpointUser>,
 }
 impl EndpointRequest {
@@ -12278,11 +13435,10 @@ impl std::fmt::Debug for EndpointRequest {
         formatter.finish()
     }
 }
-/// See [`EndpointRequest`](crate::model::EndpointRequest)
+/// See [`EndpointRequest`](crate::model::EndpointRequest).
 pub mod endpoint_request {
 
-    /// A builder for [`EndpointRequest`](crate::model::EndpointRequest)
-    #[non_exhaustive]
+    /// A builder for [`EndpointRequest`](crate::model::EndpointRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) address: std::option::Option<std::string::String>,
@@ -12454,7 +13610,7 @@ pub mod endpoint_request {
             self.user = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointRequest`](crate::model::EndpointRequest)
+        /// Consumes the builder and constructs a [`EndpointRequest`](crate::model::EndpointRequest).
         pub fn build(self) -> crate::model::EndpointRequest {
             crate::model::EndpointRequest {
                 address: self.address,
@@ -12473,7 +13629,7 @@ pub mod endpoint_request {
     }
 }
 impl EndpointRequest {
-    /// Creates a new builder-style object to manufacture [`EndpointRequest`](crate::model::EndpointRequest)
+    /// Creates a new builder-style object to manufacture [`EndpointRequest`](crate::model::EndpointRequest).
     pub fn builder() -> crate::model::endpoint_request::Builder {
         crate::model::endpoint_request::Builder::default()
     }
@@ -12484,19 +13640,26 @@ impl EndpointRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EmailTemplateRequest {
     /// <p>A JSON object that specifies the default values to use for message variables in the message template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the default value for that variable. When you create a message that's based on the template, you can override these defaults with message-specific and address-specific variables and values.</p>
+    #[doc(hidden)]
     pub default_substitutions: std::option::Option<std::string::String>,
     /// <p>The message body, in HTML format, to use in email messages that are based on the message template. We recommend using HTML format for email clients that render HTML content. You can include links, formatted text, and more in an HTML message.</p>
+    #[doc(hidden)]
     pub html_part: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the recommender model to use for the message template. Amazon Pinpoint uses this value to determine how to retrieve and process data from a recommender model when it sends messages that use the template, if the template contains message variables for recommendation data.</p>
+    #[doc(hidden)]
     pub recommender_id: std::option::Option<std::string::String>,
     /// <p>The subject line, or title, to use in email messages that are based on the message template.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<std::string::String>,
     /// <p>A string-to-string map of key-value pairs that defines the tags to associate with the message template. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A custom description of the message template.</p>
+    #[doc(hidden)]
     pub template_description: std::option::Option<std::string::String>,
     /// <p>The message body, in plain text format, to use in email messages that are based on the message template. We recommend using plain text format for email clients that don't render HTML content and clients that are connected to high-latency networks, such as mobile devices.</p>
+    #[doc(hidden)]
     pub text_part: std::option::Option<std::string::String>,
 }
 impl EmailTemplateRequest {
@@ -12545,11 +13708,10 @@ impl std::fmt::Debug for EmailTemplateRequest {
         formatter.finish()
     }
 }
-/// See [`EmailTemplateRequest`](crate::model::EmailTemplateRequest)
+/// See [`EmailTemplateRequest`](crate::model::EmailTemplateRequest).
 pub mod email_template_request {
 
-    /// A builder for [`EmailTemplateRequest`](crate::model::EmailTemplateRequest)
-    #[non_exhaustive]
+    /// A builder for [`EmailTemplateRequest`](crate::model::EmailTemplateRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_substitutions: std::option::Option<std::string::String>,
@@ -12657,7 +13819,7 @@ pub mod email_template_request {
             self.text_part = input;
             self
         }
-        /// Consumes the builder and constructs a [`EmailTemplateRequest`](crate::model::EmailTemplateRequest)
+        /// Consumes the builder and constructs a [`EmailTemplateRequest`](crate::model::EmailTemplateRequest).
         pub fn build(self) -> crate::model::EmailTemplateRequest {
             crate::model::EmailTemplateRequest {
                 default_substitutions: self.default_substitutions,
@@ -12672,7 +13834,7 @@ pub mod email_template_request {
     }
 }
 impl EmailTemplateRequest {
-    /// Creates a new builder-style object to manufacture [`EmailTemplateRequest`](crate::model::EmailTemplateRequest)
+    /// Creates a new builder-style object to manufacture [`EmailTemplateRequest`](crate::model::EmailTemplateRequest).
     pub fn builder() -> crate::model::email_template_request::Builder {
         crate::model::email_template_request::Builder::default()
     }
@@ -12683,34 +13845,49 @@ impl EmailTemplateRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EmailChannelResponse {
     /// <p>The unique identifier for the application that the email channel applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The <a href="https://docs.aws.amazon.com/ses/latest/APIReference/API_ConfigurationSet.html">Amazon SES configuration set</a> that's applied to messages that are sent through the channel.</p>
+    #[doc(hidden)]
     pub configuration_set: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format, when the email channel was enabled.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>Specifies whether the email channel is enabled for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The verified email address that email is sent from when you send email through the channel.</p>
+    #[doc(hidden)]
     pub from_address: std::option::Option<std::string::String>,
     /// <p>(Not used) This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub has_credential: bool,
     /// <p>(Deprecated) An identifier for the email channel. This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the identity, verified with Amazon Simple Email Service (Amazon SES), that's used when you send email through the channel.</p>
+    #[doc(hidden)]
     pub identity: std::option::Option<std::string::String>,
     /// <p>Specifies whether the email channel is archived.</p>
+    #[doc(hidden)]
     pub is_archived: bool,
     /// <p>The user who last modified the email channel.</p>
+    #[doc(hidden)]
     pub last_modified_by: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format, when the email channel was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The maximum number of emails that can be sent through the channel each second.</p>
+    #[doc(hidden)]
     pub messages_per_second: i32,
     /// <p>The type of messaging or notification platform for the channel. For the email channel, this value is EMAIL.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The ARN of the AWS Identity and Access Management (IAM) role that Amazon Pinpoint uses to submit email-related event data for the channel.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The current version of the email channel.</p>
+    #[doc(hidden)]
     pub version: i32,
 }
 impl EmailChannelResponse {
@@ -12796,11 +13973,10 @@ impl std::fmt::Debug for EmailChannelResponse {
         formatter.finish()
     }
 }
-/// See [`EmailChannelResponse`](crate::model::EmailChannelResponse)
+/// See [`EmailChannelResponse`](crate::model::EmailChannelResponse).
 pub mod email_channel_response {
 
-    /// A builder for [`EmailChannelResponse`](crate::model::EmailChannelResponse)
-    #[non_exhaustive]
+    /// A builder for [`EmailChannelResponse`](crate::model::EmailChannelResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -12985,7 +14161,7 @@ pub mod email_channel_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`EmailChannelResponse`](crate::model::EmailChannelResponse)
+        /// Consumes the builder and constructs a [`EmailChannelResponse`](crate::model::EmailChannelResponse).
         pub fn build(self) -> crate::model::EmailChannelResponse {
             crate::model::EmailChannelResponse {
                 application_id: self.application_id,
@@ -13008,7 +14184,7 @@ pub mod email_channel_response {
     }
 }
 impl EmailChannelResponse {
-    /// Creates a new builder-style object to manufacture [`EmailChannelResponse`](crate::model::EmailChannelResponse)
+    /// Creates a new builder-style object to manufacture [`EmailChannelResponse`](crate::model::EmailChannelResponse).
     pub fn builder() -> crate::model::email_channel_response::Builder {
         crate::model::email_channel_response::Builder::default()
     }
@@ -13019,14 +14195,19 @@ impl EmailChannelResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EmailChannelRequest {
     /// <p>The <a href="https://docs.aws.amazon.com/ses/latest/APIReference/API_ConfigurationSet.html">Amazon SES configuration set</a> that you want to apply to messages that you send through the channel.</p>
+    #[doc(hidden)]
     pub configuration_set: std::option::Option<std::string::String>,
     /// <p>Specifies whether to enable the email channel for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The verified email address that you want to send email from when you send email through the channel.</p>
+    #[doc(hidden)]
     pub from_address: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the identity, verified with Amazon Simple Email Service (Amazon SES), that you want to use when you send email through the channel.</p>
+    #[doc(hidden)]
     pub identity: std::option::Option<std::string::String>,
     /// <p>The ARN of the AWS Identity and Access Management (IAM) role that you want Amazon Pinpoint to use when it submits email-related event data for the channel.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl EmailChannelRequest {
@@ -13062,11 +14243,10 @@ impl std::fmt::Debug for EmailChannelRequest {
         formatter.finish()
     }
 }
-/// See [`EmailChannelRequest`](crate::model::EmailChannelRequest)
+/// See [`EmailChannelRequest`](crate::model::EmailChannelRequest).
 pub mod email_channel_request {
 
-    /// A builder for [`EmailChannelRequest`](crate::model::EmailChannelRequest)
-    #[non_exhaustive]
+    /// A builder for [`EmailChannelRequest`](crate::model::EmailChannelRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_set: std::option::Option<std::string::String>,
@@ -13129,7 +14309,7 @@ pub mod email_channel_request {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`EmailChannelRequest`](crate::model::EmailChannelRequest)
+        /// Consumes the builder and constructs a [`EmailChannelRequest`](crate::model::EmailChannelRequest).
         pub fn build(self) -> crate::model::EmailChannelRequest {
             crate::model::EmailChannelRequest {
                 configuration_set: self.configuration_set,
@@ -13142,7 +14322,7 @@ pub mod email_channel_request {
     }
 }
 impl EmailChannelRequest {
-    /// Creates a new builder-style object to manufacture [`EmailChannelRequest`](crate::model::EmailChannelRequest)
+    /// Creates a new builder-style object to manufacture [`EmailChannelRequest`](crate::model::EmailChannelRequest).
     pub fn builder() -> crate::model::email_channel_request::Builder {
         crate::model::email_channel_request::Builder::default()
     }
@@ -13153,56 +14333,81 @@ impl EmailChannelRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CampaignResponse {
     /// <p>An array of responses, one for each treatment that you defined for the campaign, in addition to the default treatment.</p>
+    #[doc(hidden)]
     pub additional_treatments: std::option::Option<std::vec::Vec<crate::model::TreatmentResource>>,
     /// <p>The unique identifier for the application that the campaign applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the campaign.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the campaign was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The delivery configuration settings for sending the campaign through a custom channel.</p>
+    #[doc(hidden)]
     pub custom_delivery_configuration:
         std::option::Option<crate::model::CustomDeliveryConfiguration>,
     /// <p>The current status of the campaign's default treatment. This value exists only for campaigns that have more than one treatment.</p>
+    #[doc(hidden)]
     pub default_state: std::option::Option<crate::model::CampaignState>,
     /// <p>The custom description of the campaign.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The allocated percentage of users (segment members) who shouldn't receive messages from the campaign.</p>
+    #[doc(hidden)]
     pub holdout_percent: i32,
     /// <p>The settings for the AWS Lambda function to use as a code hook for the campaign. You can use this hook to customize the segment that's used by the campaign.</p>
+    #[doc(hidden)]
     pub hook: std::option::Option<crate::model::CampaignHook>,
     /// <p>The unique identifier for the campaign.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the campaign is paused. A paused campaign doesn't run unless you resume it by changing this value to false.</p>
+    #[doc(hidden)]
     pub is_paused: bool,
     /// <p>The date, in ISO 8601 format, when the campaign was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The messaging limits for the campaign.</p>
+    #[doc(hidden)]
     pub limits: std::option::Option<crate::model::CampaignLimits>,
     /// <p>The message configuration settings for the campaign.</p>
+    #[doc(hidden)]
     pub message_configuration: std::option::Option<crate::model::MessageConfiguration>,
     /// <p>The name of the campaign.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The schedule settings for the campaign.</p>
+    #[doc(hidden)]
     pub schedule: std::option::Option<crate::model::Schedule>,
     /// <p>The unique identifier for the segment that's associated with the campaign.</p>
+    #[doc(hidden)]
     pub segment_id: std::option::Option<std::string::String>,
     /// <p>The version number of the segment that's associated with the campaign.</p>
+    #[doc(hidden)]
     pub segment_version: i32,
     /// <p>The current status of the campaign.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::CampaignState>,
     /// <p>A string-to-string map of key-value pairs that identifies the tags that are associated with the campaign. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The message template that’s used for the campaign.</p>
+    #[doc(hidden)]
     pub template_configuration: std::option::Option<crate::model::TemplateConfiguration>,
     /// <p>The custom description of the default treatment for the campaign.</p>
+    #[doc(hidden)]
     pub treatment_description: std::option::Option<std::string::String>,
     /// <p>The custom name of the default treatment for the campaign, if the campaign has multiple treatments. A <i>treatment</i> is a variation of a campaign that's used for A/B testing.</p>
+    #[doc(hidden)]
     pub treatment_name: std::option::Option<std::string::String>,
     /// <p>The version number of the campaign.</p>
+    #[doc(hidden)]
     pub version: i32,
     /// <p>Defines the priority of the campaign, used to decide the order of messages displayed to user if there are multiple messages scheduled to be displayed at the same moment.</p>
+    #[doc(hidden)]
     pub priority: i32,
 }
 impl CampaignResponse {
@@ -13350,11 +14555,10 @@ impl std::fmt::Debug for CampaignResponse {
         formatter.finish()
     }
 }
-/// See [`CampaignResponse`](crate::model::CampaignResponse)
+/// See [`CampaignResponse`](crate::model::CampaignResponse).
 pub mod campaign_response {
 
-    /// A builder for [`CampaignResponse`](crate::model::CampaignResponse)
-    #[non_exhaustive]
+    /// A builder for [`CampaignResponse`](crate::model::CampaignResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) additional_treatments:
@@ -13701,7 +14905,7 @@ pub mod campaign_response {
             self.priority = input;
             self
         }
-        /// Consumes the builder and constructs a [`CampaignResponse`](crate::model::CampaignResponse)
+        /// Consumes the builder and constructs a [`CampaignResponse`](crate::model::CampaignResponse).
         pub fn build(self) -> crate::model::CampaignResponse {
             crate::model::CampaignResponse {
                 additional_treatments: self.additional_treatments,
@@ -13734,7 +14938,7 @@ pub mod campaign_response {
     }
 }
 impl CampaignResponse {
-    /// Creates a new builder-style object to manufacture [`CampaignResponse`](crate::model::CampaignResponse)
+    /// Creates a new builder-style object to manufacture [`CampaignResponse`](crate::model::CampaignResponse).
     pub fn builder() -> crate::model::campaign_response::Builder {
         crate::model::campaign_response::Builder::default()
     }
@@ -13745,12 +14949,16 @@ impl CampaignResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TemplateConfiguration {
     /// <p>The email template to use for the message.</p>
+    #[doc(hidden)]
     pub email_template: std::option::Option<crate::model::Template>,
     /// <p>The push notification template to use for the message.</p>
+    #[doc(hidden)]
     pub push_template: std::option::Option<crate::model::Template>,
     /// <p>The SMS template to use for the message.</p>
+    #[doc(hidden)]
     pub sms_template: std::option::Option<crate::model::Template>,
     /// <p>The voice template to use for the message. This object isn't supported for campaigns.</p>
+    #[doc(hidden)]
     pub voice_template: std::option::Option<crate::model::Template>,
 }
 impl TemplateConfiguration {
@@ -13781,11 +14989,10 @@ impl std::fmt::Debug for TemplateConfiguration {
         formatter.finish()
     }
 }
-/// See [`TemplateConfiguration`](crate::model::TemplateConfiguration)
+/// See [`TemplateConfiguration`](crate::model::TemplateConfiguration).
 pub mod template_configuration {
 
-    /// A builder for [`TemplateConfiguration`](crate::model::TemplateConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`TemplateConfiguration`](crate::model::TemplateConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) email_template: std::option::Option<crate::model::Template>,
@@ -13846,7 +15053,7 @@ pub mod template_configuration {
             self.voice_template = input;
             self
         }
-        /// Consumes the builder and constructs a [`TemplateConfiguration`](crate::model::TemplateConfiguration)
+        /// Consumes the builder and constructs a [`TemplateConfiguration`](crate::model::TemplateConfiguration).
         pub fn build(self) -> crate::model::TemplateConfiguration {
             crate::model::TemplateConfiguration {
                 email_template: self.email_template,
@@ -13858,7 +15065,7 @@ pub mod template_configuration {
     }
 }
 impl TemplateConfiguration {
-    /// Creates a new builder-style object to manufacture [`TemplateConfiguration`](crate::model::TemplateConfiguration)
+    /// Creates a new builder-style object to manufacture [`TemplateConfiguration`](crate::model::TemplateConfiguration).
     pub fn builder() -> crate::model::template_configuration::Builder {
         crate::model::template_configuration::Builder::default()
     }
@@ -13869,10 +15076,12 @@ impl TemplateConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Template {
     /// <p>The name of the message template to use for the message. If specified, this value must match the name of an existing message template.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the version of the message template to use for the message. If specified, this value must match the identifier for an existing template version. To retrieve a list of versions and version identifiers for a template, use the
     /// <link linkend="templates-template-name-template-type-versions">Template Versions resource.</p>
     /// <p>If you don't specify a value for this property, Amazon Pinpoint uses the <i>active version</i> of the template. The <i>active version</i> is typically the version of a template that's been most recently reviewed and approved for use, depending on your workflow. It isn't necessarily the latest version of a template.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl Template {
@@ -13895,11 +15104,10 @@ impl std::fmt::Debug for Template {
         formatter.finish()
     }
 }
-/// See [`Template`](crate::model::Template)
+/// See [`Template`](crate::model::Template).
 pub mod template {
 
-    /// A builder for [`Template`](crate::model::Template)
-    #[non_exhaustive]
+    /// A builder for [`Template`](crate::model::Template).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -13930,7 +15138,7 @@ pub mod template {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`Template`](crate::model::Template)
+        /// Consumes the builder and constructs a [`Template`](crate::model::Template).
         pub fn build(self) -> crate::model::Template {
             crate::model::Template {
                 name: self.name,
@@ -13940,7 +15148,7 @@ pub mod template {
     }
 }
 impl Template {
-    /// Creates a new builder-style object to manufacture [`Template`](crate::model::Template)
+    /// Creates a new builder-style object to manufacture [`Template`](crate::model::Template).
     pub fn builder() -> crate::model::template::Builder {
         crate::model::template::Builder::default()
     }
@@ -13952,6 +15160,7 @@ impl Template {
 pub struct CampaignState {
     /// <p>The current status of the campaign, or the current status of a treatment that belongs to an A/B test campaign.</p>
     /// <p>If a campaign uses A/B testing, the campaign has a status of COMPLETED only if all campaign treatments have a status of COMPLETED. If you delete the segment that's associated with a campaign, the campaign fails and has a status of DELETED.</p>
+    #[doc(hidden)]
     pub campaign_status: std::option::Option<crate::model::CampaignStatus>,
 }
 impl CampaignState {
@@ -13968,11 +15177,10 @@ impl std::fmt::Debug for CampaignState {
         formatter.finish()
     }
 }
-/// See [`CampaignState`](crate::model::CampaignState)
+/// See [`CampaignState`](crate::model::CampaignState).
 pub mod campaign_state {
 
-    /// A builder for [`CampaignState`](crate::model::CampaignState)
-    #[non_exhaustive]
+    /// A builder for [`CampaignState`](crate::model::CampaignState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) campaign_status: std::option::Option<crate::model::CampaignStatus>,
@@ -13993,7 +15201,7 @@ pub mod campaign_state {
             self.campaign_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CampaignState`](crate::model::CampaignState)
+        /// Consumes the builder and constructs a [`CampaignState`](crate::model::CampaignState).
         pub fn build(self) -> crate::model::CampaignState {
             crate::model::CampaignState {
                 campaign_status: self.campaign_status,
@@ -14002,7 +15210,7 @@ pub mod campaign_state {
     }
 }
 impl CampaignState {
-    /// Creates a new builder-style object to manufacture [`CampaignState`](crate::model::CampaignState)
+    /// Creates a new builder-style object to manufacture [`CampaignState`](crate::model::CampaignState).
     pub fn builder() -> crate::model::campaign_state::Builder {
         crate::model::campaign_state::Builder::default()
     }
@@ -14096,12 +15304,16 @@ impl AsRef<str> for CampaignStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Schedule {
     /// <p>The scheduled time, in ISO 8601 format, when the campaign ended or will end.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<std::string::String>,
     /// <p>The type of event that causes the campaign to be sent, if the value of the Frequency property is EVENT.</p>
+    #[doc(hidden)]
     pub event_filter: std::option::Option<crate::model::CampaignEventFilter>,
     /// <p>Specifies how often the campaign is sent or whether the campaign is sent in response to a specific event.</p>
+    #[doc(hidden)]
     pub frequency: std::option::Option<crate::model::Frequency>,
     /// <p>Specifies whether the start and end times for the campaign schedule use each recipient's local time. To base the schedule on each recipient's local time, set this value to true.</p>
+    #[doc(hidden)]
     pub is_local_time: bool,
     /// <p>The default quiet time for the campaign. Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if all the following conditions are met:</p>
     /// <ul>
@@ -14110,10 +15322,13 @@ pub struct Schedule {
     /// <li><p>The current time in the endpoint's time zone is earlier than or equal to the time specified by the QuietTime.End property for the campaign.</p></li>
     /// </ul>
     /// <p>If any of the preceding conditions isn't met, the endpoint will receive messages from the campaign, even if quiet time is enabled.</p>
+    #[doc(hidden)]
     pub quiet_time: std::option::Option<crate::model::QuietTime>,
     /// <p>The scheduled time when the campaign began or will begin. Valid values are: IMMEDIATE, to start the campaign immediately; or, a specific time in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<std::string::String>,
     /// <p>The starting UTC offset for the campaign schedule, if the value of the IsLocalTime property is true. Valid values are: UTC, UTC+01, UTC+02, UTC+03, UTC+03:30, UTC+04, UTC+04:30, UTC+05, UTC+05:30, UTC+05:45, UTC+06, UTC+06:30, UTC+07, UTC+08, UTC+09, UTC+09:30, UTC+10, UTC+10:30, UTC+11, UTC+12, UTC+13, UTC-02, UTC-03, UTC-04, UTC-05, UTC-06, UTC-07, UTC-08, UTC-09, UTC-10, and UTC-11.</p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
 }
 impl Schedule {
@@ -14165,11 +15380,10 @@ impl std::fmt::Debug for Schedule {
         formatter.finish()
     }
 }
-/// See [`Schedule`](crate::model::Schedule)
+/// See [`Schedule`](crate::model::Schedule).
 pub mod schedule {
 
-    /// A builder for [`Schedule`](crate::model::Schedule)
-    #[non_exhaustive]
+    /// A builder for [`Schedule`](crate::model::Schedule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) end_time: std::option::Option<std::string::String>,
@@ -14272,7 +15486,7 @@ pub mod schedule {
             self.timezone = input;
             self
         }
-        /// Consumes the builder and constructs a [`Schedule`](crate::model::Schedule)
+        /// Consumes the builder and constructs a [`Schedule`](crate::model::Schedule).
         pub fn build(self) -> crate::model::Schedule {
             crate::model::Schedule {
                 end_time: self.end_time,
@@ -14287,7 +15501,7 @@ pub mod schedule {
     }
 }
 impl Schedule {
-    /// Creates a new builder-style object to manufacture [`Schedule`](crate::model::Schedule)
+    /// Creates a new builder-style object to manufacture [`Schedule`](crate::model::Schedule).
     pub fn builder() -> crate::model::schedule::Builder {
         crate::model::schedule::Builder::default()
     }
@@ -14381,9 +15595,11 @@ impl AsRef<str> for Frequency {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CampaignEventFilter {
     /// <p>The dimension settings of the event filter for the campaign.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<crate::model::EventDimensions>,
     /// <p>The type of event that causes the campaign to be sent. Valid values are: SYSTEM, sends the campaign when a system event occurs; and, ENDPOINT, sends the campaign when an endpoint event (
     /// <link linkend="apps-application-id-events">Events resource) occurs.</p>
+    #[doc(hidden)]
     pub filter_type: std::option::Option<crate::model::FilterType>,
 }
 impl CampaignEventFilter {
@@ -14405,11 +15621,10 @@ impl std::fmt::Debug for CampaignEventFilter {
         formatter.finish()
     }
 }
-/// See [`CampaignEventFilter`](crate::model::CampaignEventFilter)
+/// See [`CampaignEventFilter`](crate::model::CampaignEventFilter).
 pub mod campaign_event_filter {
 
-    /// A builder for [`CampaignEventFilter`](crate::model::CampaignEventFilter)
-    #[non_exhaustive]
+    /// A builder for [`CampaignEventFilter`](crate::model::CampaignEventFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimensions: std::option::Option<crate::model::EventDimensions>,
@@ -14444,7 +15659,7 @@ pub mod campaign_event_filter {
             self.filter_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`CampaignEventFilter`](crate::model::CampaignEventFilter)
+        /// Consumes the builder and constructs a [`CampaignEventFilter`](crate::model::CampaignEventFilter).
         pub fn build(self) -> crate::model::CampaignEventFilter {
             crate::model::CampaignEventFilter {
                 dimensions: self.dimensions,
@@ -14454,7 +15669,7 @@ pub mod campaign_event_filter {
     }
 }
 impl CampaignEventFilter {
-    /// Creates a new builder-style object to manufacture [`CampaignEventFilter`](crate::model::CampaignEventFilter)
+    /// Creates a new builder-style object to manufacture [`CampaignEventFilter`](crate::model::CampaignEventFilter).
     pub fn builder() -> crate::model::campaign_event_filter::Builder {
         crate::model::campaign_event_filter::Builder::default()
     }
@@ -14465,22 +15680,31 @@ impl CampaignEventFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MessageConfiguration {
     /// <p>The message that the campaign sends through the ADM (Amazon Device Messaging) channel. If specified, this message overrides the default message.</p>
+    #[doc(hidden)]
     pub adm_message: std::option::Option<crate::model::Message>,
     /// <p>The message that the campaign sends through the APNs (Apple Push Notification service) channel. If specified, this message overrides the default message.</p>
+    #[doc(hidden)]
     pub apns_message: std::option::Option<crate::model::Message>,
     /// <p>The message that the campaign sends through the Baidu (Baidu Cloud Push) channel. If specified, this message overrides the default message.</p>
+    #[doc(hidden)]
     pub baidu_message: std::option::Option<crate::model::Message>,
     /// <p>The message that the campaign sends through a custom channel, as specified by the delivery configuration (CustomDeliveryConfiguration) settings for the campaign. If specified, this message overrides the default message.</p>
+    #[doc(hidden)]
     pub custom_message: std::option::Option<crate::model::CampaignCustomMessage>,
     /// <p>The default message that the campaign sends through all the channels that are configured for the campaign.</p>
+    #[doc(hidden)]
     pub default_message: std::option::Option<crate::model::Message>,
     /// <p>The message that the campaign sends through the email channel. If specified, this message overrides the default message.</p>
+    #[doc(hidden)]
     pub email_message: std::option::Option<crate::model::CampaignEmailMessage>,
     /// <p>The message that the campaign sends through the GCM channel, which enables Amazon Pinpoint to send push notifications through the Firebase Cloud Messaging (FCM), formerly Google Cloud Messaging (GCM), service. If specified, this message overrides the default message.</p>
+    #[doc(hidden)]
     pub gcm_message: std::option::Option<crate::model::Message>,
     /// <p>The message that the campaign sends through the SMS channel. If specified, this message overrides the default message.</p>
+    #[doc(hidden)]
     pub sms_message: std::option::Option<crate::model::CampaignSmsMessage>,
     /// <p>The in-app message configuration.</p>
+    #[doc(hidden)]
     pub in_app_message: std::option::Option<crate::model::CampaignInAppMessage>,
 }
 impl MessageConfiguration {
@@ -14536,11 +15760,10 @@ impl std::fmt::Debug for MessageConfiguration {
         formatter.finish()
     }
 }
-/// See [`MessageConfiguration`](crate::model::MessageConfiguration)
+/// See [`MessageConfiguration`](crate::model::MessageConfiguration).
 pub mod message_configuration {
 
-    /// A builder for [`MessageConfiguration`](crate::model::MessageConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MessageConfiguration`](crate::model::MessageConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) adm_message: std::option::Option<crate::model::Message>,
@@ -14671,7 +15894,7 @@ pub mod message_configuration {
             self.in_app_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`MessageConfiguration`](crate::model::MessageConfiguration)
+        /// Consumes the builder and constructs a [`MessageConfiguration`](crate::model::MessageConfiguration).
         pub fn build(self) -> crate::model::MessageConfiguration {
             crate::model::MessageConfiguration {
                 adm_message: self.adm_message,
@@ -14688,7 +15911,7 @@ pub mod message_configuration {
     }
 }
 impl MessageConfiguration {
-    /// Creates a new builder-style object to manufacture [`MessageConfiguration`](crate::model::MessageConfiguration)
+    /// Creates a new builder-style object to manufacture [`MessageConfiguration`](crate::model::MessageConfiguration).
     pub fn builder() -> crate::model::message_configuration::Builder {
         crate::model::message_configuration::Builder::default()
     }
@@ -14699,13 +15922,17 @@ impl MessageConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CampaignInAppMessage {
     /// <p>The message body of the notification, the email body or the text message.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>In-app message content.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::vec::Vec<crate::model::InAppMessageContent>>,
     /// <p>Custom config to be sent to client.</p>
+    #[doc(hidden)]
     pub custom_config:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>In-app message layout.</p>
+    #[doc(hidden)]
     pub layout: std::option::Option<crate::model::Layout>,
 }
 impl CampaignInAppMessage {
@@ -14739,11 +15966,10 @@ impl std::fmt::Debug for CampaignInAppMessage {
         formatter.finish()
     }
 }
-/// See [`CampaignInAppMessage`](crate::model::CampaignInAppMessage)
+/// See [`CampaignInAppMessage`](crate::model::CampaignInAppMessage).
 pub mod campaign_in_app_message {
 
-    /// A builder for [`CampaignInAppMessage`](crate::model::CampaignInAppMessage)
-    #[non_exhaustive]
+    /// A builder for [`CampaignInAppMessage`](crate::model::CampaignInAppMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body: std::option::Option<std::string::String>,
@@ -14818,7 +16044,7 @@ pub mod campaign_in_app_message {
             self.layout = input;
             self
         }
-        /// Consumes the builder and constructs a [`CampaignInAppMessage`](crate::model::CampaignInAppMessage)
+        /// Consumes the builder and constructs a [`CampaignInAppMessage`](crate::model::CampaignInAppMessage).
         pub fn build(self) -> crate::model::CampaignInAppMessage {
             crate::model::CampaignInAppMessage {
                 body: self.body,
@@ -14830,7 +16056,7 @@ pub mod campaign_in_app_message {
     }
 }
 impl CampaignInAppMessage {
-    /// Creates a new builder-style object to manufacture [`CampaignInAppMessage`](crate::model::CampaignInAppMessage)
+    /// Creates a new builder-style object to manufacture [`CampaignInAppMessage`](crate::model::CampaignInAppMessage).
     pub fn builder() -> crate::model::campaign_in_app_message::Builder {
         crate::model::campaign_in_app_message::Builder::default()
     }
@@ -14841,16 +16067,22 @@ impl CampaignInAppMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CampaignSmsMessage {
     /// <p>The body of the SMS message.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The SMS message type. Valid values are TRANSACTIONAL (for messages that are critical or time-sensitive, such as a one-time passwords) and PROMOTIONAL (for messsages that aren't critical or time-sensitive, such as marketing messages).</p>
+    #[doc(hidden)]
     pub message_type: std::option::Option<crate::model::MessageType>,
     /// <p>The long code to send the SMS message from. This value should be one of the dedicated long codes that's assigned to your AWS account. Although it isn't required, we recommend that you specify the long code using an E.164 format to ensure prompt and accurate delivery of the message. For example, +12065550100.</p>
+    #[doc(hidden)]
     pub origination_number: std::option::Option<std::string::String>,
     /// <p>The sender ID to display on recipients' devices when they receive the SMS message.</p>
+    #[doc(hidden)]
     pub sender_id: std::option::Option<std::string::String>,
     /// <p>The entity ID or Principal Entity (PE) id received from the regulatory body for sending SMS in your country.</p>
+    #[doc(hidden)]
     pub entity_id: std::option::Option<std::string::String>,
     /// <p>The template ID received from the regulatory body for sending SMS in your country.</p>
+    #[doc(hidden)]
     pub template_id: std::option::Option<std::string::String>,
 }
 impl CampaignSmsMessage {
@@ -14891,11 +16123,10 @@ impl std::fmt::Debug for CampaignSmsMessage {
         formatter.finish()
     }
 }
-/// See [`CampaignSmsMessage`](crate::model::CampaignSmsMessage)
+/// See [`CampaignSmsMessage`](crate::model::CampaignSmsMessage).
 pub mod campaign_sms_message {
 
-    /// A builder for [`CampaignSmsMessage`](crate::model::CampaignSmsMessage)
-    #[non_exhaustive]
+    /// A builder for [`CampaignSmsMessage`](crate::model::CampaignSmsMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body: std::option::Option<std::string::String>,
@@ -14972,7 +16203,7 @@ pub mod campaign_sms_message {
             self.template_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CampaignSmsMessage`](crate::model::CampaignSmsMessage)
+        /// Consumes the builder and constructs a [`CampaignSmsMessage`](crate::model::CampaignSmsMessage).
         pub fn build(self) -> crate::model::CampaignSmsMessage {
             crate::model::CampaignSmsMessage {
                 body: self.body,
@@ -14986,7 +16217,7 @@ pub mod campaign_sms_message {
     }
 }
 impl CampaignSmsMessage {
-    /// Creates a new builder-style object to manufacture [`CampaignSmsMessage`](crate::model::CampaignSmsMessage)
+    /// Creates a new builder-style object to manufacture [`CampaignSmsMessage`](crate::model::CampaignSmsMessage).
     pub fn builder() -> crate::model::campaign_sms_message::Builder {
         crate::model::campaign_sms_message::Builder::default()
     }
@@ -15002,29 +16233,41 @@ pub struct Message {
     /// <li><p>DEEP_LINK - Your app opens and displays a designated user interface in the app. This setting uses the deep-linking features of iOS and Android.</p></li>
     /// <li><p>URL - The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::Action>,
     /// <p>The body of the notification message. The maximum number of characters is 200.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The URL of the image to display as the push-notification icon, such as the icon for the app.</p>
+    #[doc(hidden)]
     pub image_icon_url: std::option::Option<std::string::String>,
     /// <p>The URL of the image to display as the small, push-notification icon, such as a small version of the icon for the app.</p>
+    #[doc(hidden)]
     pub image_small_icon_url: std::option::Option<std::string::String>,
     /// <p>The URL of an image to display in the push notification.</p>
+    #[doc(hidden)]
     pub image_url: std::option::Option<std::string::String>,
     /// <p>The JSON payload to use for a silent push notification.</p>
+    #[doc(hidden)]
     pub json_body: std::option::Option<std::string::String>,
     /// <p>The URL of the image or video to display in the push notification.</p>
+    #[doc(hidden)]
     pub media_url: std::option::Option<std::string::String>,
     /// <p>The raw, JSON-formatted string to use as the payload for the notification message. If specified, this value overrides all other content for the message.</p>
+    #[doc(hidden)]
     pub raw_content: std::option::Option<std::string::String>,
     /// <p>Specifies whether the notification is a silent push notification, which is a push notification that doesn't display on a recipient's device. Silent push notifications can be used for cases such as updating an app's configuration, displaying messages in an in-app message center, or supporting phone home functionality.</p>
+    #[doc(hidden)]
     pub silent_push: bool,
     /// <p>The number of seconds that the push-notification service should keep the message, if the service is unable to deliver the notification the first time. This value is converted to an expiration value when it's sent to a push-notification service. If this value is 0, the service treats the notification as if it expires immediately and the service doesn't store or try to deliver the notification again.</p>
     /// <p>This value doesn't apply to messages that are sent through the Amazon Device Messaging (ADM) service.</p>
+    #[doc(hidden)]
     pub time_to_live: i32,
     /// <p>The title to display above the notification message on a recipient's device.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p>The URL to open in a recipient's default mobile browser, if a recipient taps the push notification and the value of the Action property is URL.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl Message {
@@ -15101,11 +16344,10 @@ impl std::fmt::Debug for Message {
         formatter.finish()
     }
 }
-/// See [`Message`](crate::model::Message)
+/// See [`Message`](crate::model::Message).
 pub mod message {
 
-    /// A builder for [`Message`](crate::model::Message)
-    #[non_exhaustive]
+    /// A builder for [`Message`](crate::model::Message).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::Action>,
@@ -15260,7 +16502,7 @@ pub mod message {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`Message`](crate::model::Message)
+        /// Consumes the builder and constructs a [`Message`](crate::model::Message).
         pub fn build(self) -> crate::model::Message {
             crate::model::Message {
                 action: self.action,
@@ -15280,7 +16522,7 @@ pub mod message {
     }
 }
 impl Message {
-    /// Creates a new builder-style object to manufacture [`Message`](crate::model::Message)
+    /// Creates a new builder-style object to manufacture [`Message`](crate::model::Message).
     pub fn builder() -> crate::model::message::Builder {
         crate::model::message::Builder::default()
     }
@@ -15291,12 +16533,16 @@ impl Message {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CampaignEmailMessage {
     /// <p>The body of the email for recipients whose email clients don't render HTML content.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The verified email address to send the email from. The default address is the FromAddress specified for the email channel for the application.</p>
+    #[doc(hidden)]
     pub from_address: std::option::Option<std::string::String>,
     /// <p>The body of the email, in HTML format, for recipients whose email clients render HTML content.</p>
+    #[doc(hidden)]
     pub html_body: std::option::Option<std::string::String>,
     /// <p>The subject line, or title, of the email.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
 }
 impl CampaignEmailMessage {
@@ -15327,11 +16573,10 @@ impl std::fmt::Debug for CampaignEmailMessage {
         formatter.finish()
     }
 }
-/// See [`CampaignEmailMessage`](crate::model::CampaignEmailMessage)
+/// See [`CampaignEmailMessage`](crate::model::CampaignEmailMessage).
 pub mod campaign_email_message {
 
-    /// A builder for [`CampaignEmailMessage`](crate::model::CampaignEmailMessage)
-    #[non_exhaustive]
+    /// A builder for [`CampaignEmailMessage`](crate::model::CampaignEmailMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body: std::option::Option<std::string::String>,
@@ -15380,7 +16625,7 @@ pub mod campaign_email_message {
             self.title = input;
             self
         }
-        /// Consumes the builder and constructs a [`CampaignEmailMessage`](crate::model::CampaignEmailMessage)
+        /// Consumes the builder and constructs a [`CampaignEmailMessage`](crate::model::CampaignEmailMessage).
         pub fn build(self) -> crate::model::CampaignEmailMessage {
             crate::model::CampaignEmailMessage {
                 body: self.body,
@@ -15392,7 +16637,7 @@ pub mod campaign_email_message {
     }
 }
 impl CampaignEmailMessage {
-    /// Creates a new builder-style object to manufacture [`CampaignEmailMessage`](crate::model::CampaignEmailMessage)
+    /// Creates a new builder-style object to manufacture [`CampaignEmailMessage`](crate::model::CampaignEmailMessage).
     pub fn builder() -> crate::model::campaign_email_message::Builder {
         crate::model::campaign_email_message::Builder::default()
     }
@@ -15403,6 +16648,7 @@ impl CampaignEmailMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CampaignCustomMessage {
     /// <p>The raw, JSON-formatted string to use as the payload for the message. The maximum size is 5 KB.</p>
+    #[doc(hidden)]
     pub data: std::option::Option<std::string::String>,
 }
 impl CampaignCustomMessage {
@@ -15418,11 +16664,10 @@ impl std::fmt::Debug for CampaignCustomMessage {
         formatter.finish()
     }
 }
-/// See [`CampaignCustomMessage`](crate::model::CampaignCustomMessage)
+/// See [`CampaignCustomMessage`](crate::model::CampaignCustomMessage).
 pub mod campaign_custom_message {
 
-    /// A builder for [`CampaignCustomMessage`](crate::model::CampaignCustomMessage)
-    #[non_exhaustive]
+    /// A builder for [`CampaignCustomMessage`](crate::model::CampaignCustomMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data: std::option::Option<std::string::String>,
@@ -15438,14 +16683,14 @@ pub mod campaign_custom_message {
             self.data = input;
             self
         }
-        /// Consumes the builder and constructs a [`CampaignCustomMessage`](crate::model::CampaignCustomMessage)
+        /// Consumes the builder and constructs a [`CampaignCustomMessage`](crate::model::CampaignCustomMessage).
         pub fn build(self) -> crate::model::CampaignCustomMessage {
             crate::model::CampaignCustomMessage { data: self.data }
         }
     }
 }
 impl CampaignCustomMessage {
-    /// Creates a new builder-style object to manufacture [`CampaignCustomMessage`](crate::model::CampaignCustomMessage)
+    /// Creates a new builder-style object to manufacture [`CampaignCustomMessage`](crate::model::CampaignCustomMessage).
     pub fn builder() -> crate::model::campaign_custom_message::Builder {
         crate::model::campaign_custom_message::Builder::default()
     }
@@ -15456,14 +16701,19 @@ impl CampaignCustomMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CampaignLimits {
     /// <p>The maximum number of messages that a campaign can send to a single endpoint during a 24-hour period. For an application, this value specifies the default limit for the number of messages that campaigns and journeys can send to a single endpoint during a 24-hour period. The maximum value is 100.</p>
+    #[doc(hidden)]
     pub daily: i32,
     /// <p>The maximum amount of time, in seconds, that a campaign can attempt to deliver a message after the scheduled start time for the campaign. The minimum value is 60 seconds.</p>
+    #[doc(hidden)]
     pub maximum_duration: i32,
     /// <p>The maximum number of messages that a campaign can send each second. For an application, this value specifies the default limit for the number of messages that campaigns can send each second. The minimum value is 50. The maximum value is 20,000.</p>
+    #[doc(hidden)]
     pub messages_per_second: i32,
     /// <p>The maximum number of messages that a campaign can send to a single endpoint during the course of the campaign. If a campaign recurs, this setting applies to all runs of the campaign. The maximum value is 100.</p>
+    #[doc(hidden)]
     pub total: i32,
     /// <p>The maximum total number of messages that the campaign can send per user session.</p>
+    #[doc(hidden)]
     pub session: i32,
 }
 impl CampaignLimits {
@@ -15499,11 +16749,10 @@ impl std::fmt::Debug for CampaignLimits {
         formatter.finish()
     }
 }
-/// See [`CampaignLimits`](crate::model::CampaignLimits)
+/// See [`CampaignLimits`](crate::model::CampaignLimits).
 pub mod campaign_limits {
 
-    /// A builder for [`CampaignLimits`](crate::model::CampaignLimits)
-    #[non_exhaustive]
+    /// A builder for [`CampaignLimits`](crate::model::CampaignLimits).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) daily: std::option::Option<i32>,
@@ -15563,7 +16812,7 @@ pub mod campaign_limits {
             self.session = input;
             self
         }
-        /// Consumes the builder and constructs a [`CampaignLimits`](crate::model::CampaignLimits)
+        /// Consumes the builder and constructs a [`CampaignLimits`](crate::model::CampaignLimits).
         pub fn build(self) -> crate::model::CampaignLimits {
             crate::model::CampaignLimits {
                 daily: self.daily.unwrap_or_default(),
@@ -15576,7 +16825,7 @@ pub mod campaign_limits {
     }
 }
 impl CampaignLimits {
-    /// Creates a new builder-style object to manufacture [`CampaignLimits`](crate::model::CampaignLimits)
+    /// Creates a new builder-style object to manufacture [`CampaignLimits`](crate::model::CampaignLimits).
     pub fn builder() -> crate::model::campaign_limits::Builder {
         crate::model::campaign_limits::Builder::default()
     }
@@ -15587,14 +16836,17 @@ impl CampaignLimits {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CampaignHook {
     /// <p>The name or Amazon Resource Name (ARN) of the AWS Lambda function that Amazon Pinpoint invokes to customize a segment for a campaign.</p>
+    #[doc(hidden)]
     pub lambda_function_name: std::option::Option<std::string::String>,
     /// <p>The mode that Amazon Pinpoint uses to invoke the AWS Lambda function. Possible values are:</p>
     /// <ul>
     /// <li><p>FILTER - Invoke the function to customize the segment that's used by a campaign.</p></li>
     /// <li><p>DELIVERY - (Deprecated) Previously, invoked the function to send a campaign through a custom channel. This functionality is not supported anymore. To send a campaign through a custom channel, use the CustomDeliveryConfiguration and CampaignCustomMessage objects of the campaign.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::Mode>,
     /// <p>The web URL that Amazon Pinpoint calls to invoke the AWS Lambda function over HTTPS.</p>
+    #[doc(hidden)]
     pub web_url: std::option::Option<std::string::String>,
 }
 impl CampaignHook {
@@ -15624,11 +16876,10 @@ impl std::fmt::Debug for CampaignHook {
         formatter.finish()
     }
 }
-/// See [`CampaignHook`](crate::model::CampaignHook)
+/// See [`CampaignHook`](crate::model::CampaignHook).
 pub mod campaign_hook {
 
-    /// A builder for [`CampaignHook`](crate::model::CampaignHook)
-    #[non_exhaustive]
+    /// A builder for [`CampaignHook`](crate::model::CampaignHook).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lambda_function_name: std::option::Option<std::string::String>,
@@ -15677,7 +16928,7 @@ pub mod campaign_hook {
             self.web_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`CampaignHook`](crate::model::CampaignHook)
+        /// Consumes the builder and constructs a [`CampaignHook`](crate::model::CampaignHook).
         pub fn build(self) -> crate::model::CampaignHook {
             crate::model::CampaignHook {
                 lambda_function_name: self.lambda_function_name,
@@ -15688,7 +16939,7 @@ pub mod campaign_hook {
     }
 }
 impl CampaignHook {
-    /// Creates a new builder-style object to manufacture [`CampaignHook`](crate::model::CampaignHook)
+    /// Creates a new builder-style object to manufacture [`CampaignHook`](crate::model::CampaignHook).
     pub fn builder() -> crate::model::campaign_hook::Builder {
         crate::model::campaign_hook::Builder::default()
     }
@@ -15758,8 +17009,10 @@ pub struct CustomDeliveryConfiguration {
     /// <li><p>The name or Amazon Resource Name (ARN) of an AWS Lambda function to invoke to handle delivery of the campaign or treatment.</p></li>
     /// <li><p>The URL for a web application or service that supports HTTPS and can receive the message. The URL has to be a full URL, including the HTTPS protocol.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub delivery_uri: std::option::Option<std::string::String>,
     /// <p>The types of endpoints to send the campaign or treatment to. Each valid value maps to a type of channel that you can associate with an endpoint by using the ChannelType property of an endpoint.</p>
+    #[doc(hidden)]
     pub endpoint_types: std::option::Option<std::vec::Vec<crate::model::EndpointTypesElement>>,
 }
 impl CustomDeliveryConfiguration {
@@ -15784,11 +17037,10 @@ impl std::fmt::Debug for CustomDeliveryConfiguration {
         formatter.finish()
     }
 }
-/// See [`CustomDeliveryConfiguration`](crate::model::CustomDeliveryConfiguration)
+/// See [`CustomDeliveryConfiguration`](crate::model::CustomDeliveryConfiguration).
 pub mod custom_delivery_configuration {
 
-    /// A builder for [`CustomDeliveryConfiguration`](crate::model::CustomDeliveryConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CustomDeliveryConfiguration`](crate::model::CustomDeliveryConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_uri: std::option::Option<std::string::String>,
@@ -15833,7 +17085,7 @@ pub mod custom_delivery_configuration {
             self.endpoint_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomDeliveryConfiguration`](crate::model::CustomDeliveryConfiguration)
+        /// Consumes the builder and constructs a [`CustomDeliveryConfiguration`](crate::model::CustomDeliveryConfiguration).
         pub fn build(self) -> crate::model::CustomDeliveryConfiguration {
             crate::model::CustomDeliveryConfiguration {
                 delivery_uri: self.delivery_uri,
@@ -15843,7 +17095,7 @@ pub mod custom_delivery_configuration {
     }
 }
 impl CustomDeliveryConfiguration {
-    /// Creates a new builder-style object to manufacture [`CustomDeliveryConfiguration`](crate::model::CustomDeliveryConfiguration)
+    /// Creates a new builder-style object to manufacture [`CustomDeliveryConfiguration`](crate::model::CustomDeliveryConfiguration).
     pub fn builder() -> crate::model::custom_delivery_configuration::Builder {
         crate::model::custom_delivery_configuration::Builder::default()
     }
@@ -15854,23 +17106,32 @@ impl CustomDeliveryConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TreatmentResource {
     /// <p>The delivery configuration settings for sending the treatment through a custom channel. This object is required if the MessageConfiguration object for the treatment specifies a CustomMessage object.</p>
+    #[doc(hidden)]
     pub custom_delivery_configuration:
         std::option::Option<crate::model::CustomDeliveryConfiguration>,
     /// <p>The unique identifier for the treatment.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The message configuration settings for the treatment.</p>
+    #[doc(hidden)]
     pub message_configuration: std::option::Option<crate::model::MessageConfiguration>,
     /// <p>The schedule settings for the treatment.</p>
+    #[doc(hidden)]
     pub schedule: std::option::Option<crate::model::Schedule>,
     /// <p>The allocated percentage of users (segment members) that the treatment is sent to.</p>
+    #[doc(hidden)]
     pub size_percent: i32,
     /// <p>The current status of the treatment.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::CampaignState>,
     /// <p>The message template to use for the treatment.</p>
+    #[doc(hidden)]
     pub template_configuration: std::option::Option<crate::model::TemplateConfiguration>,
     /// <p>The custom description of the treatment.</p>
+    #[doc(hidden)]
     pub treatment_description: std::option::Option<std::string::String>,
     /// <p>The custom name of the treatment.</p>
+    #[doc(hidden)]
     pub treatment_name: std::option::Option<std::string::String>,
 }
 impl TreatmentResource {
@@ -15935,11 +17196,10 @@ impl std::fmt::Debug for TreatmentResource {
         formatter.finish()
     }
 }
-/// See [`TreatmentResource`](crate::model::TreatmentResource)
+/// See [`TreatmentResource`](crate::model::TreatmentResource).
 pub mod treatment_resource {
 
-    /// A builder for [`TreatmentResource`](crate::model::TreatmentResource)
-    #[non_exhaustive]
+    /// A builder for [`TreatmentResource`](crate::model::TreatmentResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_delivery_configuration:
@@ -16068,7 +17328,7 @@ pub mod treatment_resource {
             self.treatment_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`TreatmentResource`](crate::model::TreatmentResource)
+        /// Consumes the builder and constructs a [`TreatmentResource`](crate::model::TreatmentResource).
         pub fn build(self) -> crate::model::TreatmentResource {
             crate::model::TreatmentResource {
                 custom_delivery_configuration: self.custom_delivery_configuration,
@@ -16085,7 +17345,7 @@ pub mod treatment_resource {
     }
 }
 impl TreatmentResource {
-    /// Creates a new builder-style object to manufacture [`TreatmentResource`](crate::model::TreatmentResource)
+    /// Creates a new builder-style object to manufacture [`TreatmentResource`](crate::model::TreatmentResource).
     pub fn builder() -> crate::model::treatment_resource::Builder {
         crate::model::treatment_resource::Builder::default()
     }
@@ -16096,41 +17356,58 @@ impl TreatmentResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WriteCampaignRequest {
     /// <p>An array of requests that defines additional treatments for the campaign, in addition to the default treatment for the campaign.</p>
+    #[doc(hidden)]
     pub additional_treatments:
         std::option::Option<std::vec::Vec<crate::model::WriteTreatmentResource>>,
     /// <p>The delivery configuration settings for sending the campaign through a custom channel. This object is required if the MessageConfiguration object for the campaign specifies a CustomMessage object.</p>
+    #[doc(hidden)]
     pub custom_delivery_configuration:
         std::option::Option<crate::model::CustomDeliveryConfiguration>,
     /// <p>A custom description of the campaign.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The allocated percentage of users (segment members) who shouldn't receive messages from the campaign.</p>
+    #[doc(hidden)]
     pub holdout_percent: i32,
     /// <p>The settings for the AWS Lambda function to invoke as a code hook for the campaign. You can use this hook to customize the segment that's used by the campaign.</p>
+    #[doc(hidden)]
     pub hook: std::option::Option<crate::model::CampaignHook>,
     /// <p>Specifies whether to pause the campaign. A paused campaign doesn't run unless you resume it by changing this value to false.</p>
+    #[doc(hidden)]
     pub is_paused: bool,
     /// <p>The messaging limits for the campaign.</p>
+    #[doc(hidden)]
     pub limits: std::option::Option<crate::model::CampaignLimits>,
     /// <p>The message configuration settings for the campaign.</p>
+    #[doc(hidden)]
     pub message_configuration: std::option::Option<crate::model::MessageConfiguration>,
     /// <p>A custom name for the campaign.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The schedule settings for the campaign.</p>
+    #[doc(hidden)]
     pub schedule: std::option::Option<crate::model::Schedule>,
     /// <p>The unique identifier for the segment to associate with the campaign.</p>
+    #[doc(hidden)]
     pub segment_id: std::option::Option<std::string::String>,
     /// <p>The version of the segment to associate with the campaign.</p>
+    #[doc(hidden)]
     pub segment_version: i32,
     /// <p>A string-to-string map of key-value pairs that defines the tags to associate with the campaign. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The message template to use for the campaign.</p>
+    #[doc(hidden)]
     pub template_configuration: std::option::Option<crate::model::TemplateConfiguration>,
     /// <p>A custom description of the default treatment for the campaign.</p>
+    #[doc(hidden)]
     pub treatment_description: std::option::Option<std::string::String>,
     /// <p>A custom name of the default treatment for the campaign, if the campaign has multiple treatments. A <i>treatment</i> is a variation of a campaign that's used for A/B testing.</p>
+    #[doc(hidden)]
     pub treatment_name: std::option::Option<std::string::String>,
     /// <p>Defines the priority of the campaign, used to decide the order of messages displayed to user if there are multiple messages scheduled to be displayed at the same moment.</p>
+    #[doc(hidden)]
     pub priority: i32,
 }
 impl WriteCampaignRequest {
@@ -16240,11 +17517,10 @@ impl std::fmt::Debug for WriteCampaignRequest {
         formatter.finish()
     }
 }
-/// See [`WriteCampaignRequest`](crate::model::WriteCampaignRequest)
+/// See [`WriteCampaignRequest`](crate::model::WriteCampaignRequest).
 pub mod write_campaign_request {
 
-    /// A builder for [`WriteCampaignRequest`](crate::model::WriteCampaignRequest)
-    #[non_exhaustive]
+    /// A builder for [`WriteCampaignRequest`](crate::model::WriteCampaignRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) additional_treatments:
@@ -16491,7 +17767,7 @@ pub mod write_campaign_request {
             self.priority = input;
             self
         }
-        /// Consumes the builder and constructs a [`WriteCampaignRequest`](crate::model::WriteCampaignRequest)
+        /// Consumes the builder and constructs a [`WriteCampaignRequest`](crate::model::WriteCampaignRequest).
         pub fn build(self) -> crate::model::WriteCampaignRequest {
             crate::model::WriteCampaignRequest {
                 additional_treatments: self.additional_treatments,
@@ -16516,7 +17792,7 @@ pub mod write_campaign_request {
     }
 }
 impl WriteCampaignRequest {
-    /// Creates a new builder-style object to manufacture [`WriteCampaignRequest`](crate::model::WriteCampaignRequest)
+    /// Creates a new builder-style object to manufacture [`WriteCampaignRequest`](crate::model::WriteCampaignRequest).
     pub fn builder() -> crate::model::write_campaign_request::Builder {
         crate::model::write_campaign_request::Builder::default()
     }
@@ -16527,19 +17803,26 @@ impl WriteCampaignRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WriteTreatmentResource {
     /// <p>The delivery configuration settings for sending the treatment through a custom channel. This object is required if the MessageConfiguration object for the treatment specifies a CustomMessage object.</p>
+    #[doc(hidden)]
     pub custom_delivery_configuration:
         std::option::Option<crate::model::CustomDeliveryConfiguration>,
     /// <p>The message configuration settings for the treatment.</p>
+    #[doc(hidden)]
     pub message_configuration: std::option::Option<crate::model::MessageConfiguration>,
     /// <p>The schedule settings for the treatment.</p>
+    #[doc(hidden)]
     pub schedule: std::option::Option<crate::model::Schedule>,
     /// <p>The allocated percentage of users (segment members) to send the treatment to.</p>
+    #[doc(hidden)]
     pub size_percent: i32,
     /// <p>The message template to use for the treatment.</p>
+    #[doc(hidden)]
     pub template_configuration: std::option::Option<crate::model::TemplateConfiguration>,
     /// <p>A custom description of the treatment.</p>
+    #[doc(hidden)]
     pub treatment_description: std::option::Option<std::string::String>,
     /// <p>A custom name for the treatment.</p>
+    #[doc(hidden)]
     pub treatment_name: std::option::Option<std::string::String>,
 }
 impl WriteTreatmentResource {
@@ -16594,11 +17877,10 @@ impl std::fmt::Debug for WriteTreatmentResource {
         formatter.finish()
     }
 }
-/// See [`WriteTreatmentResource`](crate::model::WriteTreatmentResource)
+/// See [`WriteTreatmentResource`](crate::model::WriteTreatmentResource).
 pub mod write_treatment_resource {
 
-    /// A builder for [`WriteTreatmentResource`](crate::model::WriteTreatmentResource)
-    #[non_exhaustive]
+    /// A builder for [`WriteTreatmentResource`](crate::model::WriteTreatmentResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_delivery_configuration:
@@ -16702,7 +17984,7 @@ pub mod write_treatment_resource {
             self.treatment_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`WriteTreatmentResource`](crate::model::WriteTreatmentResource)
+        /// Consumes the builder and constructs a [`WriteTreatmentResource`](crate::model::WriteTreatmentResource).
         pub fn build(self) -> crate::model::WriteTreatmentResource {
             crate::model::WriteTreatmentResource {
                 custom_delivery_configuration: self.custom_delivery_configuration,
@@ -16717,7 +17999,7 @@ pub mod write_treatment_resource {
     }
 }
 impl WriteTreatmentResource {
-    /// Creates a new builder-style object to manufacture [`WriteTreatmentResource`](crate::model::WriteTreatmentResource)
+    /// Creates a new builder-style object to manufacture [`WriteTreatmentResource`](crate::model::WriteTreatmentResource).
     pub fn builder() -> crate::model::write_treatment_resource::Builder {
         crate::model::write_treatment_resource::Builder::default()
     }
@@ -16728,26 +18010,37 @@ impl WriteTreatmentResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BaiduChannelResponse {
     /// <p>The unique identifier for the application that the Baidu channel applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date and time when the Baidu channel was enabled.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The API key that you received from the Baidu Cloud Push service to communicate with the service.</p>
+    #[doc(hidden)]
     pub credential: std::option::Option<std::string::String>,
     /// <p>Specifies whether the Baidu channel is enabled for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>(Not used) This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub has_credential: bool,
     /// <p>(Deprecated) An identifier for the Baidu channel. This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the Baidu channel is archived.</p>
+    #[doc(hidden)]
     pub is_archived: bool,
     /// <p>The user who last modified the Baidu channel.</p>
+    #[doc(hidden)]
     pub last_modified_by: std::option::Option<std::string::String>,
     /// <p>The date and time when the Baidu channel was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The type of messaging or notification platform for the channel. For the Baidu channel, this value is BAIDU.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The current version of the Baidu channel.</p>
+    #[doc(hidden)]
     pub version: i32,
 }
 impl BaiduChannelResponse {
@@ -16813,11 +18106,10 @@ impl std::fmt::Debug for BaiduChannelResponse {
         formatter.finish()
     }
 }
-/// See [`BaiduChannelResponse`](crate::model::BaiduChannelResponse)
+/// See [`BaiduChannelResponse`](crate::model::BaiduChannelResponse).
 pub mod baidu_channel_response {
 
-    /// A builder for [`BaiduChannelResponse`](crate::model::BaiduChannelResponse)
-    #[non_exhaustive]
+    /// A builder for [`BaiduChannelResponse`](crate::model::BaiduChannelResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -16955,7 +18247,7 @@ pub mod baidu_channel_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`BaiduChannelResponse`](crate::model::BaiduChannelResponse)
+        /// Consumes the builder and constructs a [`BaiduChannelResponse`](crate::model::BaiduChannelResponse).
         pub fn build(self) -> crate::model::BaiduChannelResponse {
             crate::model::BaiduChannelResponse {
                 application_id: self.application_id,
@@ -16974,7 +18266,7 @@ pub mod baidu_channel_response {
     }
 }
 impl BaiduChannelResponse {
-    /// Creates a new builder-style object to manufacture [`BaiduChannelResponse`](crate::model::BaiduChannelResponse)
+    /// Creates a new builder-style object to manufacture [`BaiduChannelResponse`](crate::model::BaiduChannelResponse).
     pub fn builder() -> crate::model::baidu_channel_response::Builder {
         crate::model::baidu_channel_response::Builder::default()
     }
@@ -16985,10 +18277,13 @@ impl BaiduChannelResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BaiduChannelRequest {
     /// <p>The API key that you received from the Baidu Cloud Push service to communicate with the service.</p>
+    #[doc(hidden)]
     pub api_key: std::option::Option<std::string::String>,
     /// <p>Specifies whether to enable the Baidu channel for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The secret key that you received from the Baidu Cloud Push service to communicate with the service.</p>
+    #[doc(hidden)]
     pub secret_key: std::option::Option<std::string::String>,
 }
 impl BaiduChannelRequest {
@@ -17014,11 +18309,10 @@ impl std::fmt::Debug for BaiduChannelRequest {
         formatter.finish()
     }
 }
-/// See [`BaiduChannelRequest`](crate::model::BaiduChannelRequest)
+/// See [`BaiduChannelRequest`](crate::model::BaiduChannelRequest).
 pub mod baidu_channel_request {
 
-    /// A builder for [`BaiduChannelRequest`](crate::model::BaiduChannelRequest)
-    #[non_exhaustive]
+    /// A builder for [`BaiduChannelRequest`](crate::model::BaiduChannelRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_key: std::option::Option<std::string::String>,
@@ -17056,7 +18350,7 @@ pub mod baidu_channel_request {
             self.secret_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`BaiduChannelRequest`](crate::model::BaiduChannelRequest)
+        /// Consumes the builder and constructs a [`BaiduChannelRequest`](crate::model::BaiduChannelRequest).
         pub fn build(self) -> crate::model::BaiduChannelRequest {
             crate::model::BaiduChannelRequest {
                 api_key: self.api_key,
@@ -17067,7 +18361,7 @@ pub mod baidu_channel_request {
     }
 }
 impl BaiduChannelRequest {
-    /// Creates a new builder-style object to manufacture [`BaiduChannelRequest`](crate::model::BaiduChannelRequest)
+    /// Creates a new builder-style object to manufacture [`BaiduChannelRequest`](crate::model::BaiduChannelRequest).
     pub fn builder() -> crate::model::baidu_channel_request::Builder {
         crate::model::baidu_channel_request::Builder::default()
     }
@@ -17078,12 +18372,16 @@ impl BaiduChannelRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationSettingsResource {
     /// <p>The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The settings for the AWS Lambda function to invoke by default as a code hook for campaigns in the application. You can use this hook to customize segments that are used by campaigns in the application.</p>
+    #[doc(hidden)]
     pub campaign_hook: std::option::Option<crate::model::CampaignHook>,
     /// <p>The date and time, in ISO 8601 format, when the application's settings were last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The default sending limits for campaigns in the application.</p>
+    #[doc(hidden)]
     pub limits: std::option::Option<crate::model::CampaignLimits>,
     /// <p>The default quiet time for campaigns in the application. Quiet time is a specific time range when messages aren't sent to endpoints, if all the following conditions are met:</p>
     /// <ul>
@@ -17092,6 +18390,7 @@ pub struct ApplicationSettingsResource {
     /// <li><p>The current time in the endpoint's time zone is earlier than or equal to the time specified by the QuietTime.End property for the application (or a campaign or journey that has custom quiet time settings).</p></li>
     /// </ul>
     /// <p>If any of the preceding conditions isn't met, the endpoint will receive messages from a campaign or journey, even if quiet time is enabled.</p>
+    #[doc(hidden)]
     pub quiet_time: std::option::Option<crate::model::QuietTime>,
 }
 impl ApplicationSettingsResource {
@@ -17133,11 +18432,10 @@ impl std::fmt::Debug for ApplicationSettingsResource {
         formatter.finish()
     }
 }
-/// See [`ApplicationSettingsResource`](crate::model::ApplicationSettingsResource)
+/// See [`ApplicationSettingsResource`](crate::model::ApplicationSettingsResource).
 pub mod application_settings_resource {
 
-    /// A builder for [`ApplicationSettingsResource`](crate::model::ApplicationSettingsResource)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationSettingsResource`](crate::model::ApplicationSettingsResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -17224,7 +18522,7 @@ pub mod application_settings_resource {
             self.quiet_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationSettingsResource`](crate::model::ApplicationSettingsResource)
+        /// Consumes the builder and constructs a [`ApplicationSettingsResource`](crate::model::ApplicationSettingsResource).
         pub fn build(self) -> crate::model::ApplicationSettingsResource {
             crate::model::ApplicationSettingsResource {
                 application_id: self.application_id,
@@ -17237,7 +18535,7 @@ pub mod application_settings_resource {
     }
 }
 impl ApplicationSettingsResource {
-    /// Creates a new builder-style object to manufacture [`ApplicationSettingsResource`](crate::model::ApplicationSettingsResource)
+    /// Creates a new builder-style object to manufacture [`ApplicationSettingsResource`](crate::model::ApplicationSettingsResource).
     pub fn builder() -> crate::model::application_settings_resource::Builder {
         crate::model::application_settings_resource::Builder::default()
     }
@@ -17250,14 +18548,18 @@ pub struct WriteApplicationSettingsRequest {
     /// <p>The settings for the AWS Lambda function to invoke by default as a code hook for campaigns in the application. You can use this hook to customize segments that are used by campaigns in the application.</p>
     /// <p>To override these settings and define custom settings for a specific campaign, use the CampaignHook object of the
     /// <link linkend="apps-application-id-campaigns-campaign-id">Campaign resource.</p>
+    #[doc(hidden)]
     pub campaign_hook: std::option::Option<crate::model::CampaignHook>,
     /// <p>Specifies whether to enable application-related alarms in Amazon CloudWatch.</p>
+    #[doc(hidden)]
     pub cloud_watch_metrics_enabled: bool,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub event_tagging_enabled: bool,
     /// <p>The default sending limits for campaigns in the application. To override these limits and define custom limits for a specific campaign or journey, use the
     /// <link linkend="apps-application-id-campaigns-campaign-id">Campaign resource or the
     /// <link linkend="apps-application-id-journeys-journey-id">Journey resource, respectively.</p>
+    #[doc(hidden)]
     pub limits: std::option::Option<crate::model::CampaignLimits>,
     /// <p>The default quiet time for campaigns in the application. Quiet time is a specific time range when messages aren't sent to endpoints, if all the following conditions are met:</p>
     /// <ul>
@@ -17269,6 +18571,7 @@ pub struct WriteApplicationSettingsRequest {
     /// <p>To override the default quiet time settings for a specific campaign or journey, use the
     /// <link linkend="apps-application-id-campaigns-campaign-id">Campaign resource or the
     /// <link linkend="apps-application-id-journeys-journey-id">Journey resource to define a custom quiet time for the campaign or journey.</p>
+    #[doc(hidden)]
     pub quiet_time: std::option::Option<crate::model::QuietTime>,
 }
 impl WriteApplicationSettingsRequest {
@@ -17320,11 +18623,10 @@ impl std::fmt::Debug for WriteApplicationSettingsRequest {
         formatter.finish()
     }
 }
-/// See [`WriteApplicationSettingsRequest`](crate::model::WriteApplicationSettingsRequest)
+/// See [`WriteApplicationSettingsRequest`](crate::model::WriteApplicationSettingsRequest).
 pub mod write_application_settings_request {
 
-    /// A builder for [`WriteApplicationSettingsRequest`](crate::model::WriteApplicationSettingsRequest)
-    #[non_exhaustive]
+    /// A builder for [`WriteApplicationSettingsRequest`](crate::model::WriteApplicationSettingsRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) campaign_hook: std::option::Option<crate::model::CampaignHook>,
@@ -17419,7 +18721,7 @@ pub mod write_application_settings_request {
             self.quiet_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`WriteApplicationSettingsRequest`](crate::model::WriteApplicationSettingsRequest)
+        /// Consumes the builder and constructs a [`WriteApplicationSettingsRequest`](crate::model::WriteApplicationSettingsRequest).
         pub fn build(self) -> crate::model::WriteApplicationSettingsRequest {
             crate::model::WriteApplicationSettingsRequest {
                 campaign_hook: self.campaign_hook,
@@ -17432,7 +18734,7 @@ pub mod write_application_settings_request {
     }
 }
 impl WriteApplicationSettingsRequest {
-    /// Creates a new builder-style object to manufacture [`WriteApplicationSettingsRequest`](crate::model::WriteApplicationSettingsRequest)
+    /// Creates a new builder-style object to manufacture [`WriteApplicationSettingsRequest`](crate::model::WriteApplicationSettingsRequest).
     pub fn builder() -> crate::model::write_application_settings_request::Builder {
         crate::model::write_application_settings_request::Builder::default()
     }
@@ -17443,28 +18745,40 @@ impl WriteApplicationSettingsRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApnsVoipSandboxChannelResponse {
     /// <p>The unique identifier for the application that the APNs VoIP sandbox channel applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date and time when the APNs VoIP sandbox channel was enabled.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The default authentication method that Amazon Pinpoint uses to authenticate with the APNs sandbox environment for this channel, key or certificate.</p>
+    #[doc(hidden)]
     pub default_authentication_method: std::option::Option<std::string::String>,
     /// <p>Specifies whether the APNs VoIP sandbox channel is enabled for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>(Not used) This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub has_credential: bool,
     /// <p>Specifies whether the APNs VoIP sandbox channel is configured to communicate with APNs by using APNs tokens. To provide an authentication key for APNs tokens, set the TokenKey property of the channel.</p>
+    #[doc(hidden)]
     pub has_token_key: bool,
     /// <p>(Deprecated) An identifier for the APNs VoIP sandbox channel. This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the APNs VoIP sandbox channel is archived.</p>
+    #[doc(hidden)]
     pub is_archived: bool,
     /// <p>The user who last modified the APNs VoIP sandbox channel.</p>
+    #[doc(hidden)]
     pub last_modified_by: std::option::Option<std::string::String>,
     /// <p>The date and time when the APNs VoIP sandbox channel was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The type of messaging or notification platform for the channel. For the APNs VoIP sandbox channel, this value is APNS_VOIP_SANDBOX.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The current version of the APNs VoIP sandbox channel.</p>
+    #[doc(hidden)]
     pub version: i32,
 }
 impl ApnsVoipSandboxChannelResponse {
@@ -17538,11 +18852,10 @@ impl std::fmt::Debug for ApnsVoipSandboxChannelResponse {
         formatter.finish()
     }
 }
-/// See [`ApnsVoipSandboxChannelResponse`](crate::model::ApnsVoipSandboxChannelResponse)
+/// See [`ApnsVoipSandboxChannelResponse`](crate::model::ApnsVoipSandboxChannelResponse).
 pub mod apns_voip_sandbox_channel_response {
 
-    /// A builder for [`ApnsVoipSandboxChannelResponse`](crate::model::ApnsVoipSandboxChannelResponse)
-    #[non_exhaustive]
+    /// A builder for [`ApnsVoipSandboxChannelResponse`](crate::model::ApnsVoipSandboxChannelResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -17697,7 +19010,7 @@ pub mod apns_voip_sandbox_channel_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApnsVoipSandboxChannelResponse`](crate::model::ApnsVoipSandboxChannelResponse)
+        /// Consumes the builder and constructs a [`ApnsVoipSandboxChannelResponse`](crate::model::ApnsVoipSandboxChannelResponse).
         pub fn build(self) -> crate::model::ApnsVoipSandboxChannelResponse {
             crate::model::ApnsVoipSandboxChannelResponse {
                 application_id: self.application_id,
@@ -17717,7 +19030,7 @@ pub mod apns_voip_sandbox_channel_response {
     }
 }
 impl ApnsVoipSandboxChannelResponse {
-    /// Creates a new builder-style object to manufacture [`ApnsVoipSandboxChannelResponse`](crate::model::ApnsVoipSandboxChannelResponse)
+    /// Creates a new builder-style object to manufacture [`ApnsVoipSandboxChannelResponse`](crate::model::ApnsVoipSandboxChannelResponse).
     pub fn builder() -> crate::model::apns_voip_sandbox_channel_response::Builder {
         crate::model::apns_voip_sandbox_channel_response::Builder::default()
     }
@@ -17728,20 +19041,28 @@ impl ApnsVoipSandboxChannelResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApnsVoipSandboxChannelRequest {
     /// <p>The bundle identifier that's assigned to your iOS app. This identifier is used for APNs tokens.</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>The APNs client certificate that you received from Apple, if you want Amazon Pinpoint to communicate with the APNs sandbox environment by using an APNs certificate.</p>
+    #[doc(hidden)]
     pub certificate: std::option::Option<std::string::String>,
     /// <p>The default authentication method that you want Amazon Pinpoint to use when authenticating with the APNs sandbox environment for this channel, key or certificate.</p>
+    #[doc(hidden)]
     pub default_authentication_method: std::option::Option<std::string::String>,
     /// <p>Specifies whether the APNs VoIP sandbox channel is enabled for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The private key for the APNs client certificate that you want Amazon Pinpoint to use to communicate with the APNs sandbox environment.</p>
+    #[doc(hidden)]
     pub private_key: std::option::Option<std::string::String>,
     /// <p>The identifier that's assigned to your Apple developer account team. This identifier is used for APNs tokens.</p>
+    #[doc(hidden)]
     pub team_id: std::option::Option<std::string::String>,
     /// <p>The authentication key to use for APNs tokens.</p>
+    #[doc(hidden)]
     pub token_key: std::option::Option<std::string::String>,
     /// <p>The key identifier that's assigned to your APNs signing key, if you want Amazon Pinpoint to communicate with the APNs sandbox environment by using APNs tokens.</p>
+    #[doc(hidden)]
     pub token_key_id: std::option::Option<std::string::String>,
 }
 impl ApnsVoipSandboxChannelRequest {
@@ -17795,11 +19116,10 @@ impl std::fmt::Debug for ApnsVoipSandboxChannelRequest {
         formatter.finish()
     }
 }
-/// See [`ApnsVoipSandboxChannelRequest`](crate::model::ApnsVoipSandboxChannelRequest)
+/// See [`ApnsVoipSandboxChannelRequest`](crate::model::ApnsVoipSandboxChannelRequest).
 pub mod apns_voip_sandbox_channel_request {
 
-    /// A builder for [`ApnsVoipSandboxChannelRequest`](crate::model::ApnsVoipSandboxChannelRequest)
-    #[non_exhaustive]
+    /// A builder for [`ApnsVoipSandboxChannelRequest`](crate::model::ApnsVoipSandboxChannelRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bundle_id: std::option::Option<std::string::String>,
@@ -17898,7 +19218,7 @@ pub mod apns_voip_sandbox_channel_request {
             self.token_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApnsVoipSandboxChannelRequest`](crate::model::ApnsVoipSandboxChannelRequest)
+        /// Consumes the builder and constructs a [`ApnsVoipSandboxChannelRequest`](crate::model::ApnsVoipSandboxChannelRequest).
         pub fn build(self) -> crate::model::ApnsVoipSandboxChannelRequest {
             crate::model::ApnsVoipSandboxChannelRequest {
                 bundle_id: self.bundle_id,
@@ -17914,7 +19234,7 @@ pub mod apns_voip_sandbox_channel_request {
     }
 }
 impl ApnsVoipSandboxChannelRequest {
-    /// Creates a new builder-style object to manufacture [`ApnsVoipSandboxChannelRequest`](crate::model::ApnsVoipSandboxChannelRequest)
+    /// Creates a new builder-style object to manufacture [`ApnsVoipSandboxChannelRequest`](crate::model::ApnsVoipSandboxChannelRequest).
     pub fn builder() -> crate::model::apns_voip_sandbox_channel_request::Builder {
         crate::model::apns_voip_sandbox_channel_request::Builder::default()
     }
@@ -17925,28 +19245,40 @@ impl ApnsVoipSandboxChannelRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApnsVoipChannelResponse {
     /// <p>The unique identifier for the application that the APNs VoIP channel applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date and time when the APNs VoIP channel was enabled.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The default authentication method that Amazon Pinpoint uses to authenticate with APNs for this channel, key or certificate.</p>
+    #[doc(hidden)]
     pub default_authentication_method: std::option::Option<std::string::String>,
     /// <p>Specifies whether the APNs VoIP channel is enabled for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>(Not used) This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub has_credential: bool,
     /// <p>Specifies whether the APNs VoIP channel is configured to communicate with APNs by using APNs tokens. To provide an authentication key for APNs tokens, set the TokenKey property of the channel.</p>
+    #[doc(hidden)]
     pub has_token_key: bool,
     /// <p>(Deprecated) An identifier for the APNs VoIP channel. This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the APNs VoIP channel is archived.</p>
+    #[doc(hidden)]
     pub is_archived: bool,
     /// <p>The user who last modified the APNs VoIP channel.</p>
+    #[doc(hidden)]
     pub last_modified_by: std::option::Option<std::string::String>,
     /// <p>The date and time when the APNs VoIP channel was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The type of messaging or notification platform for the channel. For the APNs VoIP channel, this value is APNS_VOIP.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The current version of the APNs VoIP channel.</p>
+    #[doc(hidden)]
     pub version: i32,
 }
 impl ApnsVoipChannelResponse {
@@ -18020,11 +19352,10 @@ impl std::fmt::Debug for ApnsVoipChannelResponse {
         formatter.finish()
     }
 }
-/// See [`ApnsVoipChannelResponse`](crate::model::ApnsVoipChannelResponse)
+/// See [`ApnsVoipChannelResponse`](crate::model::ApnsVoipChannelResponse).
 pub mod apns_voip_channel_response {
 
-    /// A builder for [`ApnsVoipChannelResponse`](crate::model::ApnsVoipChannelResponse)
-    #[non_exhaustive]
+    /// A builder for [`ApnsVoipChannelResponse`](crate::model::ApnsVoipChannelResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -18179,7 +19510,7 @@ pub mod apns_voip_channel_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApnsVoipChannelResponse`](crate::model::ApnsVoipChannelResponse)
+        /// Consumes the builder and constructs a [`ApnsVoipChannelResponse`](crate::model::ApnsVoipChannelResponse).
         pub fn build(self) -> crate::model::ApnsVoipChannelResponse {
             crate::model::ApnsVoipChannelResponse {
                 application_id: self.application_id,
@@ -18199,7 +19530,7 @@ pub mod apns_voip_channel_response {
     }
 }
 impl ApnsVoipChannelResponse {
-    /// Creates a new builder-style object to manufacture [`ApnsVoipChannelResponse`](crate::model::ApnsVoipChannelResponse)
+    /// Creates a new builder-style object to manufacture [`ApnsVoipChannelResponse`](crate::model::ApnsVoipChannelResponse).
     pub fn builder() -> crate::model::apns_voip_channel_response::Builder {
         crate::model::apns_voip_channel_response::Builder::default()
     }
@@ -18210,20 +19541,28 @@ impl ApnsVoipChannelResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApnsVoipChannelRequest {
     /// <p>The bundle identifier that's assigned to your iOS app. This identifier is used for APNs tokens.</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>The APNs client certificate that you received from Apple, if you want Amazon Pinpoint to communicate with APNs by using an APNs certificate.</p>
+    #[doc(hidden)]
     pub certificate: std::option::Option<std::string::String>,
     /// <p>The default authentication method that you want Amazon Pinpoint to use when authenticating with APNs, key or certificate.</p>
+    #[doc(hidden)]
     pub default_authentication_method: std::option::Option<std::string::String>,
     /// <p>Specifies whether to enable the APNs VoIP channel for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The private key for the APNs client certificate that you want Amazon Pinpoint to use to communicate with APNs.</p>
+    #[doc(hidden)]
     pub private_key: std::option::Option<std::string::String>,
     /// <p>The identifier that's assigned to your Apple developer account team. This identifier is used for APNs tokens.</p>
+    #[doc(hidden)]
     pub team_id: std::option::Option<std::string::String>,
     /// <p>The authentication key to use for APNs tokens.</p>
+    #[doc(hidden)]
     pub token_key: std::option::Option<std::string::String>,
     /// <p>The key identifier that's assigned to your APNs signing key, if you want Amazon Pinpoint to communicate with APNs by using APNs tokens.</p>
+    #[doc(hidden)]
     pub token_key_id: std::option::Option<std::string::String>,
 }
 impl ApnsVoipChannelRequest {
@@ -18277,11 +19616,10 @@ impl std::fmt::Debug for ApnsVoipChannelRequest {
         formatter.finish()
     }
 }
-/// See [`ApnsVoipChannelRequest`](crate::model::ApnsVoipChannelRequest)
+/// See [`ApnsVoipChannelRequest`](crate::model::ApnsVoipChannelRequest).
 pub mod apns_voip_channel_request {
 
-    /// A builder for [`ApnsVoipChannelRequest`](crate::model::ApnsVoipChannelRequest)
-    #[non_exhaustive]
+    /// A builder for [`ApnsVoipChannelRequest`](crate::model::ApnsVoipChannelRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bundle_id: std::option::Option<std::string::String>,
@@ -18380,7 +19718,7 @@ pub mod apns_voip_channel_request {
             self.token_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApnsVoipChannelRequest`](crate::model::ApnsVoipChannelRequest)
+        /// Consumes the builder and constructs a [`ApnsVoipChannelRequest`](crate::model::ApnsVoipChannelRequest).
         pub fn build(self) -> crate::model::ApnsVoipChannelRequest {
             crate::model::ApnsVoipChannelRequest {
                 bundle_id: self.bundle_id,
@@ -18396,7 +19734,7 @@ pub mod apns_voip_channel_request {
     }
 }
 impl ApnsVoipChannelRequest {
-    /// Creates a new builder-style object to manufacture [`ApnsVoipChannelRequest`](crate::model::ApnsVoipChannelRequest)
+    /// Creates a new builder-style object to manufacture [`ApnsVoipChannelRequest`](crate::model::ApnsVoipChannelRequest).
     pub fn builder() -> crate::model::apns_voip_channel_request::Builder {
         crate::model::apns_voip_channel_request::Builder::default()
     }
@@ -18407,28 +19745,40 @@ impl ApnsVoipChannelRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApnsSandboxChannelResponse {
     /// <p>The unique identifier for the application that the APNs sandbox channel applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date and time when the APNs sandbox channel was enabled.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The default authentication method that Amazon Pinpoint uses to authenticate with the APNs sandbox environment for this channel, key or certificate.</p>
+    #[doc(hidden)]
     pub default_authentication_method: std::option::Option<std::string::String>,
     /// <p>Specifies whether the APNs sandbox channel is enabled for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>(Not used) This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub has_credential: bool,
     /// <p>Specifies whether the APNs sandbox channel is configured to communicate with APNs by using APNs tokens. To provide an authentication key for APNs tokens, set the TokenKey property of the channel.</p>
+    #[doc(hidden)]
     pub has_token_key: bool,
     /// <p>(Deprecated) An identifier for the APNs sandbox channel. This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the APNs sandbox channel is archived.</p>
+    #[doc(hidden)]
     pub is_archived: bool,
     /// <p>The user who last modified the APNs sandbox channel.</p>
+    #[doc(hidden)]
     pub last_modified_by: std::option::Option<std::string::String>,
     /// <p>The date and time when the APNs sandbox channel was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The type of messaging or notification platform for the channel. For the APNs sandbox channel, this value is APNS_SANDBOX.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The current version of the APNs sandbox channel.</p>
+    #[doc(hidden)]
     pub version: i32,
 }
 impl ApnsSandboxChannelResponse {
@@ -18502,11 +19852,10 @@ impl std::fmt::Debug for ApnsSandboxChannelResponse {
         formatter.finish()
     }
 }
-/// See [`ApnsSandboxChannelResponse`](crate::model::ApnsSandboxChannelResponse)
+/// See [`ApnsSandboxChannelResponse`](crate::model::ApnsSandboxChannelResponse).
 pub mod apns_sandbox_channel_response {
 
-    /// A builder for [`ApnsSandboxChannelResponse`](crate::model::ApnsSandboxChannelResponse)
-    #[non_exhaustive]
+    /// A builder for [`ApnsSandboxChannelResponse`](crate::model::ApnsSandboxChannelResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -18661,7 +20010,7 @@ pub mod apns_sandbox_channel_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApnsSandboxChannelResponse`](crate::model::ApnsSandboxChannelResponse)
+        /// Consumes the builder and constructs a [`ApnsSandboxChannelResponse`](crate::model::ApnsSandboxChannelResponse).
         pub fn build(self) -> crate::model::ApnsSandboxChannelResponse {
             crate::model::ApnsSandboxChannelResponse {
                 application_id: self.application_id,
@@ -18681,7 +20030,7 @@ pub mod apns_sandbox_channel_response {
     }
 }
 impl ApnsSandboxChannelResponse {
-    /// Creates a new builder-style object to manufacture [`ApnsSandboxChannelResponse`](crate::model::ApnsSandboxChannelResponse)
+    /// Creates a new builder-style object to manufacture [`ApnsSandboxChannelResponse`](crate::model::ApnsSandboxChannelResponse).
     pub fn builder() -> crate::model::apns_sandbox_channel_response::Builder {
         crate::model::apns_sandbox_channel_response::Builder::default()
     }
@@ -18692,20 +20041,28 @@ impl ApnsSandboxChannelResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApnsSandboxChannelRequest {
     /// <p>The bundle identifier that's assigned to your iOS app. This identifier is used for APNs tokens.</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>The APNs client certificate that you received from Apple, if you want Amazon Pinpoint to communicate with the APNs sandbox environment by using an APNs certificate.</p>
+    #[doc(hidden)]
     pub certificate: std::option::Option<std::string::String>,
     /// <p>The default authentication method that you want Amazon Pinpoint to use when authenticating with the APNs sandbox environment, key or certificate.</p>
+    #[doc(hidden)]
     pub default_authentication_method: std::option::Option<std::string::String>,
     /// <p>Specifies whether to enable the APNs sandbox channel for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The private key for the APNs client certificate that you want Amazon Pinpoint to use to communicate with the APNs sandbox environment.</p>
+    #[doc(hidden)]
     pub private_key: std::option::Option<std::string::String>,
     /// <p>The identifier that's assigned to your Apple developer account team. This identifier is used for APNs tokens.</p>
+    #[doc(hidden)]
     pub team_id: std::option::Option<std::string::String>,
     /// <p>The authentication key to use for APNs tokens.</p>
+    #[doc(hidden)]
     pub token_key: std::option::Option<std::string::String>,
     /// <p>The key identifier that's assigned to your APNs signing key, if you want Amazon Pinpoint to communicate with the APNs sandbox environment by using APNs tokens.</p>
+    #[doc(hidden)]
     pub token_key_id: std::option::Option<std::string::String>,
 }
 impl ApnsSandboxChannelRequest {
@@ -18759,11 +20116,10 @@ impl std::fmt::Debug for ApnsSandboxChannelRequest {
         formatter.finish()
     }
 }
-/// See [`ApnsSandboxChannelRequest`](crate::model::ApnsSandboxChannelRequest)
+/// See [`ApnsSandboxChannelRequest`](crate::model::ApnsSandboxChannelRequest).
 pub mod apns_sandbox_channel_request {
 
-    /// A builder for [`ApnsSandboxChannelRequest`](crate::model::ApnsSandboxChannelRequest)
-    #[non_exhaustive]
+    /// A builder for [`ApnsSandboxChannelRequest`](crate::model::ApnsSandboxChannelRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bundle_id: std::option::Option<std::string::String>,
@@ -18862,7 +20218,7 @@ pub mod apns_sandbox_channel_request {
             self.token_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApnsSandboxChannelRequest`](crate::model::ApnsSandboxChannelRequest)
+        /// Consumes the builder and constructs a [`ApnsSandboxChannelRequest`](crate::model::ApnsSandboxChannelRequest).
         pub fn build(self) -> crate::model::ApnsSandboxChannelRequest {
             crate::model::ApnsSandboxChannelRequest {
                 bundle_id: self.bundle_id,
@@ -18878,7 +20234,7 @@ pub mod apns_sandbox_channel_request {
     }
 }
 impl ApnsSandboxChannelRequest {
-    /// Creates a new builder-style object to manufacture [`ApnsSandboxChannelRequest`](crate::model::ApnsSandboxChannelRequest)
+    /// Creates a new builder-style object to manufacture [`ApnsSandboxChannelRequest`](crate::model::ApnsSandboxChannelRequest).
     pub fn builder() -> crate::model::apns_sandbox_channel_request::Builder {
         crate::model::apns_sandbox_channel_request::Builder::default()
     }
@@ -18889,28 +20245,40 @@ impl ApnsSandboxChannelRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApnsChannelResponse {
     /// <p>The unique identifier for the application that the APNs channel applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date and time when the APNs channel was enabled.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The default authentication method that Amazon Pinpoint uses to authenticate with APNs for this channel, key or certificate.</p>
+    #[doc(hidden)]
     pub default_authentication_method: std::option::Option<std::string::String>,
     /// <p>Specifies whether the APNs channel is enabled for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>(Not used) This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub has_credential: bool,
     /// <p>Specifies whether the APNs channel is configured to communicate with APNs by using APNs tokens. To provide an authentication key for APNs tokens, set the TokenKey property of the channel.</p>
+    #[doc(hidden)]
     pub has_token_key: bool,
     /// <p>(Deprecated) An identifier for the APNs channel. This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the APNs channel is archived.</p>
+    #[doc(hidden)]
     pub is_archived: bool,
     /// <p>The user who last modified the APNs channel.</p>
+    #[doc(hidden)]
     pub last_modified_by: std::option::Option<std::string::String>,
     /// <p>The date and time when the APNs channel was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The type of messaging or notification platform for the channel. For the APNs channel, this value is APNS.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The current version of the APNs channel.</p>
+    #[doc(hidden)]
     pub version: i32,
 }
 impl ApnsChannelResponse {
@@ -18984,11 +20352,10 @@ impl std::fmt::Debug for ApnsChannelResponse {
         formatter.finish()
     }
 }
-/// See [`ApnsChannelResponse`](crate::model::ApnsChannelResponse)
+/// See [`ApnsChannelResponse`](crate::model::ApnsChannelResponse).
 pub mod apns_channel_response {
 
-    /// A builder for [`ApnsChannelResponse`](crate::model::ApnsChannelResponse)
-    #[non_exhaustive]
+    /// A builder for [`ApnsChannelResponse`](crate::model::ApnsChannelResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -19143,7 +20510,7 @@ pub mod apns_channel_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApnsChannelResponse`](crate::model::ApnsChannelResponse)
+        /// Consumes the builder and constructs a [`ApnsChannelResponse`](crate::model::ApnsChannelResponse).
         pub fn build(self) -> crate::model::ApnsChannelResponse {
             crate::model::ApnsChannelResponse {
                 application_id: self.application_id,
@@ -19163,7 +20530,7 @@ pub mod apns_channel_response {
     }
 }
 impl ApnsChannelResponse {
-    /// Creates a new builder-style object to manufacture [`ApnsChannelResponse`](crate::model::ApnsChannelResponse)
+    /// Creates a new builder-style object to manufacture [`ApnsChannelResponse`](crate::model::ApnsChannelResponse).
     pub fn builder() -> crate::model::apns_channel_response::Builder {
         crate::model::apns_channel_response::Builder::default()
     }
@@ -19174,20 +20541,28 @@ impl ApnsChannelResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApnsChannelRequest {
     /// <p>The bundle identifier that's assigned to your iOS app. This identifier is used for APNs tokens.</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>The APNs client certificate that you received from Apple, if you want Amazon Pinpoint to communicate with APNs by using an APNs certificate.</p>
+    #[doc(hidden)]
     pub certificate: std::option::Option<std::string::String>,
     /// <p>The default authentication method that you want Amazon Pinpoint to use when authenticating with APNs, key or certificate.</p>
+    #[doc(hidden)]
     pub default_authentication_method: std::option::Option<std::string::String>,
     /// <p>Specifies whether to enable the APNs channel for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The private key for the APNs client certificate that you want Amazon Pinpoint to use to communicate with APNs.</p>
+    #[doc(hidden)]
     pub private_key: std::option::Option<std::string::String>,
     /// <p>The identifier that's assigned to your Apple developer account team. This identifier is used for APNs tokens.</p>
+    #[doc(hidden)]
     pub team_id: std::option::Option<std::string::String>,
     /// <p>The authentication key to use for APNs tokens.</p>
+    #[doc(hidden)]
     pub token_key: std::option::Option<std::string::String>,
     /// <p>The key identifier that's assigned to your APNs signing key, if you want Amazon Pinpoint to communicate with APNs by using APNs tokens.</p>
+    #[doc(hidden)]
     pub token_key_id: std::option::Option<std::string::String>,
 }
 impl ApnsChannelRequest {
@@ -19241,11 +20616,10 @@ impl std::fmt::Debug for ApnsChannelRequest {
         formatter.finish()
     }
 }
-/// See [`ApnsChannelRequest`](crate::model::ApnsChannelRequest)
+/// See [`ApnsChannelRequest`](crate::model::ApnsChannelRequest).
 pub mod apns_channel_request {
 
-    /// A builder for [`ApnsChannelRequest`](crate::model::ApnsChannelRequest)
-    #[non_exhaustive]
+    /// A builder for [`ApnsChannelRequest`](crate::model::ApnsChannelRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bundle_id: std::option::Option<std::string::String>,
@@ -19344,7 +20718,7 @@ pub mod apns_channel_request {
             self.token_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApnsChannelRequest`](crate::model::ApnsChannelRequest)
+        /// Consumes the builder and constructs a [`ApnsChannelRequest`](crate::model::ApnsChannelRequest).
         pub fn build(self) -> crate::model::ApnsChannelRequest {
             crate::model::ApnsChannelRequest {
                 bundle_id: self.bundle_id,
@@ -19360,7 +20734,7 @@ pub mod apns_channel_request {
     }
 }
 impl ApnsChannelRequest {
-    /// Creates a new builder-style object to manufacture [`ApnsChannelRequest`](crate::model::ApnsChannelRequest)
+    /// Creates a new builder-style object to manufacture [`ApnsChannelRequest`](crate::model::ApnsChannelRequest).
     pub fn builder() -> crate::model::apns_channel_request::Builder {
         crate::model::apns_channel_request::Builder::default()
     }
@@ -19371,24 +20745,34 @@ impl ApnsChannelRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AdmChannelResponse {
     /// <p>The unique identifier for the application that the ADM channel applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date and time when the ADM channel was enabled.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>Specifies whether the ADM channel is enabled for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>(Not used) This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub has_credential: bool,
     /// <p>(Deprecated) An identifier for the ADM channel. This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the ADM channel is archived.</p>
+    #[doc(hidden)]
     pub is_archived: bool,
     /// <p>The user who last modified the ADM channel.</p>
+    #[doc(hidden)]
     pub last_modified_by: std::option::Option<std::string::String>,
     /// <p>The date and time when the ADM channel was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The type of messaging or notification platform for the channel. For the ADM channel, this value is ADM.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The current version of the ADM channel.</p>
+    #[doc(hidden)]
     pub version: i32,
 }
 impl AdmChannelResponse {
@@ -19449,11 +20833,10 @@ impl std::fmt::Debug for AdmChannelResponse {
         formatter.finish()
     }
 }
-/// See [`AdmChannelResponse`](crate::model::AdmChannelResponse)
+/// See [`AdmChannelResponse`](crate::model::AdmChannelResponse).
 pub mod adm_channel_response {
 
-    /// A builder for [`AdmChannelResponse`](crate::model::AdmChannelResponse)
-    #[non_exhaustive]
+    /// A builder for [`AdmChannelResponse`](crate::model::AdmChannelResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -19580,7 +20963,7 @@ pub mod adm_channel_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdmChannelResponse`](crate::model::AdmChannelResponse)
+        /// Consumes the builder and constructs a [`AdmChannelResponse`](crate::model::AdmChannelResponse).
         pub fn build(self) -> crate::model::AdmChannelResponse {
             crate::model::AdmChannelResponse {
                 application_id: self.application_id,
@@ -19598,7 +20981,7 @@ pub mod adm_channel_response {
     }
 }
 impl AdmChannelResponse {
-    /// Creates a new builder-style object to manufacture [`AdmChannelResponse`](crate::model::AdmChannelResponse)
+    /// Creates a new builder-style object to manufacture [`AdmChannelResponse`](crate::model::AdmChannelResponse).
     pub fn builder() -> crate::model::adm_channel_response::Builder {
         crate::model::adm_channel_response::Builder::default()
     }
@@ -19609,10 +20992,13 @@ impl AdmChannelResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AdmChannelRequest {
     /// <p>The Client ID that you received from Amazon to send messages by using ADM.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>The Client Secret that you received from Amazon to send messages by using ADM.</p>
+    #[doc(hidden)]
     pub client_secret: std::option::Option<std::string::String>,
     /// <p>Specifies whether to enable the ADM channel for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl AdmChannelRequest {
@@ -19638,11 +21024,10 @@ impl std::fmt::Debug for AdmChannelRequest {
         formatter.finish()
     }
 }
-/// See [`AdmChannelRequest`](crate::model::AdmChannelRequest)
+/// See [`AdmChannelRequest`](crate::model::AdmChannelRequest).
 pub mod adm_channel_request {
 
-    /// A builder for [`AdmChannelRequest`](crate::model::AdmChannelRequest)
-    #[non_exhaustive]
+    /// A builder for [`AdmChannelRequest`](crate::model::AdmChannelRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_id: std::option::Option<std::string::String>,
@@ -19683,7 +21068,7 @@ pub mod adm_channel_request {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdmChannelRequest`](crate::model::AdmChannelRequest)
+        /// Consumes the builder and constructs a [`AdmChannelRequest`](crate::model::AdmChannelRequest).
         pub fn build(self) -> crate::model::AdmChannelRequest {
             crate::model::AdmChannelRequest {
                 client_id: self.client_id,
@@ -19694,7 +21079,7 @@ pub mod adm_channel_request {
     }
 }
 impl AdmChannelRequest {
-    /// Creates a new builder-style object to manufacture [`AdmChannelRequest`](crate::model::AdmChannelRequest)
+    /// Creates a new builder-style object to manufacture [`AdmChannelRequest`](crate::model::AdmChannelRequest).
     pub fn builder() -> crate::model::adm_channel_request::Builder {
         crate::model::adm_channel_request::Builder::default()
     }
@@ -19706,6 +21091,7 @@ impl AdmChannelRequest {
 pub struct TagsModel {
     /// <p>A string-to-string map of key-value pairs that defines the tags for an application, campaign, message template, or segment. Each of these resources can have a maximum of 50 tags.</p>
     /// <p>Each tag consists of a required tag key and an associated tag value. The maximum length of a tag key is 128 characters. The maximum length of a tag value is 256 characters.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -19726,11 +21112,10 @@ impl std::fmt::Debug for TagsModel {
         formatter.finish()
     }
 }
-/// See [`TagsModel`](crate::model::TagsModel)
+/// See [`TagsModel`](crate::model::TagsModel).
 pub mod tags_model {
 
-    /// A builder for [`TagsModel`](crate::model::TagsModel)
-    #[non_exhaustive]
+    /// A builder for [`TagsModel`](crate::model::TagsModel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -19765,14 +21150,14 @@ pub mod tags_model {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagsModel`](crate::model::TagsModel)
+        /// Consumes the builder and constructs a [`TagsModel`](crate::model::TagsModel).
         pub fn build(self) -> crate::model::TagsModel {
             crate::model::TagsModel { tags: self.tags }
         }
     }
 }
 impl TagsModel {
-    /// Creates a new builder-style object to manufacture [`TagsModel`](crate::model::TagsModel)
+    /// Creates a new builder-style object to manufacture [`TagsModel`](crate::model::TagsModel).
     pub fn builder() -> crate::model::tags_model::Builder {
         crate::model::tags_model::Builder::default()
     }
@@ -19783,10 +21168,13 @@ impl TagsModel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SendUsersMessageResponse {
     /// <p>The unique identifier for the application that was used to send the message.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier that was assigned to the message request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>An object that indicates which endpoints the message was sent to, for each user. The object lists user IDs and, for each user ID, provides the endpoint IDs that the message was sent to. For each endpoint ID, it provides an EndpointMessageResult object.</p>
+    #[doc(hidden)]
     pub result: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -19824,11 +21212,10 @@ impl std::fmt::Debug for SendUsersMessageResponse {
         formatter.finish()
     }
 }
-/// See [`SendUsersMessageResponse`](crate::model::SendUsersMessageResponse)
+/// See [`SendUsersMessageResponse`](crate::model::SendUsersMessageResponse).
 pub mod send_users_message_response {
 
-    /// A builder for [`SendUsersMessageResponse`](crate::model::SendUsersMessageResponse)
-    #[non_exhaustive]
+    /// A builder for [`SendUsersMessageResponse`](crate::model::SendUsersMessageResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -19895,7 +21282,7 @@ pub mod send_users_message_response {
             self.result = input;
             self
         }
-        /// Consumes the builder and constructs a [`SendUsersMessageResponse`](crate::model::SendUsersMessageResponse)
+        /// Consumes the builder and constructs a [`SendUsersMessageResponse`](crate::model::SendUsersMessageResponse).
         pub fn build(self) -> crate::model::SendUsersMessageResponse {
             crate::model::SendUsersMessageResponse {
                 application_id: self.application_id,
@@ -19906,7 +21293,7 @@ pub mod send_users_message_response {
     }
 }
 impl SendUsersMessageResponse {
-    /// Creates a new builder-style object to manufacture [`SendUsersMessageResponse`](crate::model::SendUsersMessageResponse)
+    /// Creates a new builder-style object to manufacture [`SendUsersMessageResponse`](crate::model::SendUsersMessageResponse).
     pub fn builder() -> crate::model::send_users_message_response::Builder {
         crate::model::send_users_message_response::Builder::default()
     }
@@ -19917,6 +21304,7 @@ impl SendUsersMessageResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointMessageResult {
     /// <p>The endpoint address that the message was delivered to.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
     /// <p>The delivery status of the message. Possible values are:</p>
     /// <ul>
@@ -19929,14 +21317,19 @@ pub struct EndpointMessageResult {
     /// <li><p>TIMEOUT - The message couldn't be sent within the timeout period.</p></li>
     /// <li><p>UNKNOWN_FAILURE - An unknown error occurred.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub delivery_status: std::option::Option<crate::model::DeliveryStatus>,
     /// <p>The unique identifier for the message that was sent.</p>
+    #[doc(hidden)]
     pub message_id: std::option::Option<std::string::String>,
     /// <p>The downstream service status code for delivering the message.</p>
+    #[doc(hidden)]
     pub status_code: i32,
     /// <p>The status message for delivering the message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>For push notifications that are sent through the GCM channel, specifies whether the endpoint's device registration token was updated as part of delivering the message.</p>
+    #[doc(hidden)]
     pub updated_token: std::option::Option<std::string::String>,
 }
 impl EndpointMessageResult {
@@ -19987,11 +21380,10 @@ impl std::fmt::Debug for EndpointMessageResult {
         formatter.finish()
     }
 }
-/// See [`EndpointMessageResult`](crate::model::EndpointMessageResult)
+/// See [`EndpointMessageResult`](crate::model::EndpointMessageResult).
 pub mod endpoint_message_result {
 
-    /// A builder for [`EndpointMessageResult`](crate::model::EndpointMessageResult)
-    #[non_exhaustive]
+    /// A builder for [`EndpointMessageResult`](crate::model::EndpointMessageResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) address: std::option::Option<std::string::String>,
@@ -20091,7 +21483,7 @@ pub mod endpoint_message_result {
             self.updated_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointMessageResult`](crate::model::EndpointMessageResult)
+        /// Consumes the builder and constructs a [`EndpointMessageResult`](crate::model::EndpointMessageResult).
         pub fn build(self) -> crate::model::EndpointMessageResult {
             crate::model::EndpointMessageResult {
                 address: self.address,
@@ -20105,7 +21497,7 @@ pub mod endpoint_message_result {
     }
 }
 impl EndpointMessageResult {
-    /// Creates a new builder-style object to manufacture [`EndpointMessageResult`](crate::model::EndpointMessageResult)
+    /// Creates a new builder-style object to manufacture [`EndpointMessageResult`](crate::model::EndpointMessageResult).
     pub fn builder() -> crate::model::endpoint_message_result::Builder {
         crate::model::endpoint_message_result::Builder::default()
     }
@@ -20199,15 +21591,20 @@ impl AsRef<str> for DeliveryStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SendUsersMessageRequest {
     /// <p>A map of custom attribute-value pairs. For a push notification, Amazon Pinpoint adds these attributes to the data.pinpoint object in the body of the notification payload. Amazon Pinpoint also provides these attributes in the events that it generates for users-messages deliveries.</p>
+    #[doc(hidden)]
     pub context:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The settings and content for the default message and any default messages that you defined for specific channels.</p>
+    #[doc(hidden)]
     pub message_configuration: std::option::Option<crate::model::DirectMessageConfiguration>,
     /// <p>The message template to use for the message.</p>
+    #[doc(hidden)]
     pub template_configuration: std::option::Option<crate::model::TemplateConfiguration>,
     /// <p>The unique identifier for tracing the message. This identifier is visible to message recipients.</p>
+    #[doc(hidden)]
     pub trace_id: std::option::Option<std::string::String>,
     /// <p>A map that associates user IDs with <a href="https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-messages.html#apps-application-id-messages-model-endpointsendconfiguration">EndpointSendConfiguration</a> objects. You can use an <a href="https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-messages.html#apps-application-id-messages-model-endpointsendconfiguration">EndpointSendConfiguration</a> object to tailor the message for a user by specifying settings such as content overrides and message variables.</p>
+    #[doc(hidden)]
     pub users: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::EndpointSendConfiguration>,
     >,
@@ -20256,11 +21653,10 @@ impl std::fmt::Debug for SendUsersMessageRequest {
         formatter.finish()
     }
 }
-/// See [`SendUsersMessageRequest`](crate::model::SendUsersMessageRequest)
+/// See [`SendUsersMessageRequest`](crate::model::SendUsersMessageRequest).
 pub mod send_users_message_request {
 
-    /// A builder for [`SendUsersMessageRequest`](crate::model::SendUsersMessageRequest)
-    #[non_exhaustive]
+    /// A builder for [`SendUsersMessageRequest`](crate::model::SendUsersMessageRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) context: std::option::Option<
@@ -20370,7 +21766,7 @@ pub mod send_users_message_request {
             self.users = input;
             self
         }
-        /// Consumes the builder and constructs a [`SendUsersMessageRequest`](crate::model::SendUsersMessageRequest)
+        /// Consumes the builder and constructs a [`SendUsersMessageRequest`](crate::model::SendUsersMessageRequest).
         pub fn build(self) -> crate::model::SendUsersMessageRequest {
             crate::model::SendUsersMessageRequest {
                 context: self.context,
@@ -20383,7 +21779,7 @@ pub mod send_users_message_request {
     }
 }
 impl SendUsersMessageRequest {
-    /// Creates a new builder-style object to manufacture [`SendUsersMessageRequest`](crate::model::SendUsersMessageRequest)
+    /// Creates a new builder-style object to manufacture [`SendUsersMessageRequest`](crate::model::SendUsersMessageRequest).
     pub fn builder() -> crate::model::send_users_message_request::Builder {
         crate::model::send_users_message_request::Builder::default()
     }
@@ -20394,18 +21790,23 @@ impl SendUsersMessageRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointSendConfiguration {
     /// <p>The body of the message. If specified, this value overrides the default message body.</p>
+    #[doc(hidden)]
     pub body_override: std::option::Option<std::string::String>,
     /// <p>A map of custom attributes to attach to the message for the address. Attribute names are case sensitive.</p>
     /// <p>For a push notification, this payload is added to the data.pinpoint object. For an email or text message, this payload is added to email/SMS delivery receipt event attributes.</p>
+    #[doc(hidden)]
     pub context:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The raw, JSON-formatted string to use as the payload for the message. If specified, this value overrides all other values for the message.</p>
+    #[doc(hidden)]
     pub raw_content: std::option::Option<std::string::String>,
     /// <p>A map of the message variables to merge with the variables specified for the default message (DefaultMessage.Substitutions). The variables specified in this map take precedence over all other variables.</p>
+    #[doc(hidden)]
     pub substitutions: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The title or subject line of the message. If specified, this value overrides the default message title or subject line.</p>
+    #[doc(hidden)]
     pub title_override: std::option::Option<std::string::String>,
 }
 impl EndpointSendConfiguration {
@@ -20449,11 +21850,10 @@ impl std::fmt::Debug for EndpointSendConfiguration {
         formatter.finish()
     }
 }
-/// See [`EndpointSendConfiguration`](crate::model::EndpointSendConfiguration)
+/// See [`EndpointSendConfiguration`](crate::model::EndpointSendConfiguration).
 pub mod endpoint_send_configuration {
 
-    /// A builder for [`EndpointSendConfiguration`](crate::model::EndpointSendConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`EndpointSendConfiguration`](crate::model::EndpointSendConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body_override: std::option::Option<std::string::String>,
@@ -20555,7 +21955,7 @@ pub mod endpoint_send_configuration {
             self.title_override = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointSendConfiguration`](crate::model::EndpointSendConfiguration)
+        /// Consumes the builder and constructs a [`EndpointSendConfiguration`](crate::model::EndpointSendConfiguration).
         pub fn build(self) -> crate::model::EndpointSendConfiguration {
             crate::model::EndpointSendConfiguration {
                 body_override: self.body_override,
@@ -20568,7 +21968,7 @@ pub mod endpoint_send_configuration {
     }
 }
 impl EndpointSendConfiguration {
-    /// Creates a new builder-style object to manufacture [`EndpointSendConfiguration`](crate::model::EndpointSendConfiguration)
+    /// Creates a new builder-style object to manufacture [`EndpointSendConfiguration`](crate::model::EndpointSendConfiguration).
     pub fn builder() -> crate::model::endpoint_send_configuration::Builder {
         crate::model::endpoint_send_configuration::Builder::default()
     }
@@ -20579,23 +21979,32 @@ impl EndpointSendConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DirectMessageConfiguration {
     /// <p>The default push notification message for the ADM (Amazon Device Messaging) channel. This message overrides the default push notification message (DefaultPushNotificationMessage).</p>
+    #[doc(hidden)]
     pub adm_message: std::option::Option<crate::model::AdmMessage>,
     /// <p>The default push notification message for the APNs (Apple Push Notification service) channel. This message overrides the default push notification message (DefaultPushNotificationMessage).</p>
+    #[doc(hidden)]
     pub apns_message: std::option::Option<crate::model::ApnsMessage>,
     /// <p>The default push notification message for the Baidu (Baidu Cloud Push) channel. This message overrides the default push notification message (DefaultPushNotificationMessage).</p>
+    #[doc(hidden)]
     pub baidu_message: std::option::Option<crate::model::BaiduMessage>,
     /// <p>The default message for all channels.</p>
+    #[doc(hidden)]
     pub default_message: std::option::Option<crate::model::DefaultMessage>,
     /// <p>The default push notification message for all push notification channels.</p>
+    #[doc(hidden)]
     pub default_push_notification_message:
         std::option::Option<crate::model::DefaultPushNotificationMessage>,
     /// <p>The default message for the email channel. This message overrides the default message (DefaultMessage).</p>
+    #[doc(hidden)]
     pub email_message: std::option::Option<crate::model::EmailMessage>,
     /// <p>The default push notification message for the GCM channel, which is used to send notifications through the Firebase Cloud Messaging (FCM), formerly Google Cloud Messaging (GCM), service. This message overrides the default push notification message (DefaultPushNotificationMessage).</p>
+    #[doc(hidden)]
     pub gcm_message: std::option::Option<crate::model::GcmMessage>,
     /// <p>The default message for the SMS channel. This message overrides the default message (DefaultMessage).</p>
+    #[doc(hidden)]
     pub sms_message: std::option::Option<crate::model::SmsMessage>,
     /// <p>The default message for the voice channel. This message overrides the default message (DefaultMessage).</p>
+    #[doc(hidden)]
     pub voice_message: std::option::Option<crate::model::VoiceMessage>,
 }
 impl DirectMessageConfiguration {
@@ -20656,11 +22065,10 @@ impl std::fmt::Debug for DirectMessageConfiguration {
         formatter.finish()
     }
 }
-/// See [`DirectMessageConfiguration`](crate::model::DirectMessageConfiguration)
+/// See [`DirectMessageConfiguration`](crate::model::DirectMessageConfiguration).
 pub mod direct_message_configuration {
 
-    /// A builder for [`DirectMessageConfiguration`](crate::model::DirectMessageConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DirectMessageConfiguration`](crate::model::DirectMessageConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) adm_message: std::option::Option<crate::model::AdmMessage>,
@@ -20795,7 +22203,7 @@ pub mod direct_message_configuration {
             self.voice_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DirectMessageConfiguration`](crate::model::DirectMessageConfiguration)
+        /// Consumes the builder and constructs a [`DirectMessageConfiguration`](crate::model::DirectMessageConfiguration).
         pub fn build(self) -> crate::model::DirectMessageConfiguration {
             crate::model::DirectMessageConfiguration {
                 adm_message: self.adm_message,
@@ -20812,7 +22220,7 @@ pub mod direct_message_configuration {
     }
 }
 impl DirectMessageConfiguration {
-    /// Creates a new builder-style object to manufacture [`DirectMessageConfiguration`](crate::model::DirectMessageConfiguration)
+    /// Creates a new builder-style object to manufacture [`DirectMessageConfiguration`](crate::model::DirectMessageConfiguration).
     pub fn builder() -> crate::model::direct_message_configuration::Builder {
         crate::model::direct_message_configuration::Builder::default()
     }
@@ -20823,16 +22231,21 @@ impl DirectMessageConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VoiceMessage {
     /// <p>The text of the script to use for the voice message.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The code for the language to use when synthesizing the text of the message script. For a list of supported languages and the code for each one, see the <a href="https://docs.aws.amazon.com/polly/latest/dg/what-is.html">Amazon Polly Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<std::string::String>,
     /// <p>The long code to send the voice message from. This value should be one of the dedicated long codes that's assigned to your AWS account. Although it isn't required, we recommend that you specify the long code in E.164 format, for example +12065550100, to ensure prompt and accurate delivery of the message.</p>
+    #[doc(hidden)]
     pub origination_number: std::option::Option<std::string::String>,
     /// <p>The default message variables to use in the voice message. You can override the default variables with individual address variables.</p>
+    #[doc(hidden)]
     pub substitutions: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The name of the voice to use when delivering the message. For a list of supported voices, see the <a href="https://docs.aws.amazon.com/polly/latest/dg/what-is.html">Amazon Polly Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub voice_id: std::option::Option<std::string::String>,
 }
 impl VoiceMessage {
@@ -20872,11 +22285,10 @@ impl std::fmt::Debug for VoiceMessage {
         formatter.finish()
     }
 }
-/// See [`VoiceMessage`](crate::model::VoiceMessage)
+/// See [`VoiceMessage`](crate::model::VoiceMessage).
 pub mod voice_message {
 
-    /// A builder for [`VoiceMessage`](crate::model::VoiceMessage)
-    #[non_exhaustive]
+    /// A builder for [`VoiceMessage`](crate::model::VoiceMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body: std::option::Option<std::string::String>,
@@ -20959,7 +22371,7 @@ pub mod voice_message {
             self.voice_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`VoiceMessage`](crate::model::VoiceMessage)
+        /// Consumes the builder and constructs a [`VoiceMessage`](crate::model::VoiceMessage).
         pub fn build(self) -> crate::model::VoiceMessage {
             crate::model::VoiceMessage {
                 body: self.body,
@@ -20972,7 +22384,7 @@ pub mod voice_message {
     }
 }
 impl VoiceMessage {
-    /// Creates a new builder-style object to manufacture [`VoiceMessage`](crate::model::VoiceMessage)
+    /// Creates a new builder-style object to manufacture [`VoiceMessage`](crate::model::VoiceMessage).
     pub fn builder() -> crate::model::voice_message::Builder {
         crate::model::voice_message::Builder::default()
     }
@@ -20983,24 +22395,33 @@ impl VoiceMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SmsMessage {
     /// <p>The body of the SMS message.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The SMS program name that you provided to AWS Support when you requested your dedicated number.</p>
+    #[doc(hidden)]
     pub keyword: std::option::Option<std::string::String>,
     /// <p>This field is reserved for future use.</p>
+    #[doc(hidden)]
     pub media_url: std::option::Option<std::string::String>,
     /// <p>The SMS message type. Valid values are TRANSACTIONAL (for messages that are critical or time-sensitive, such as a one-time passwords) and PROMOTIONAL (for messsages that aren't critical or time-sensitive, such as marketing messages).</p>
+    #[doc(hidden)]
     pub message_type: std::option::Option<crate::model::MessageType>,
     /// <p>The number to send the SMS message from. This value should be one of the dedicated long or short codes that's assigned to your AWS account. If you don't specify a long or short code, Amazon Pinpoint assigns a random long code to the SMS message and sends the message from that code.</p>
+    #[doc(hidden)]
     pub origination_number: std::option::Option<std::string::String>,
     /// <p>The sender ID to display as the sender of the message on a recipient's device. Support for sender IDs varies by country or region.</p>
+    #[doc(hidden)]
     pub sender_id: std::option::Option<std::string::String>,
     /// <p>The message variables to use in the SMS message. You can override the default variables with individual address variables.</p>
+    #[doc(hidden)]
     pub substitutions: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The entity ID or Principal Entity (PE) id received from the regulatory body for sending SMS in your country.</p>
+    #[doc(hidden)]
     pub entity_id: std::option::Option<std::string::String>,
     /// <p>The template ID received from the regulatory body for sending SMS in your country.</p>
+    #[doc(hidden)]
     pub template_id: std::option::Option<std::string::String>,
 }
 impl SmsMessage {
@@ -21060,11 +22481,10 @@ impl std::fmt::Debug for SmsMessage {
         formatter.finish()
     }
 }
-/// See [`SmsMessage`](crate::model::SmsMessage)
+/// See [`SmsMessage`](crate::model::SmsMessage).
 pub mod sms_message {
 
-    /// A builder for [`SmsMessage`](crate::model::SmsMessage)
-    #[non_exhaustive]
+    /// A builder for [`SmsMessage`](crate::model::SmsMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body: std::option::Option<std::string::String>,
@@ -21191,7 +22611,7 @@ pub mod sms_message {
             self.template_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SmsMessage`](crate::model::SmsMessage)
+        /// Consumes the builder and constructs a [`SmsMessage`](crate::model::SmsMessage).
         pub fn build(self) -> crate::model::SmsMessage {
             crate::model::SmsMessage {
                 body: self.body,
@@ -21208,7 +22628,7 @@ pub mod sms_message {
     }
 }
 impl SmsMessage {
-    /// Creates a new builder-style object to manufacture [`SmsMessage`](crate::model::SmsMessage)
+    /// Creates a new builder-style object to manufacture [`SmsMessage`](crate::model::SmsMessage).
     pub fn builder() -> crate::model::sms_message::Builder {
         crate::model::sms_message::Builder::default()
     }
@@ -21224,46 +22644,63 @@ pub struct GcmMessage {
     /// <li><p>DEEP_LINK - Your app opens and displays a designated user interface in the app. This action uses the deep-linking features of the Android platform.</p></li>
     /// <li><p>URL - The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::Action>,
     /// <p>The body of the notification message.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>An arbitrary string that identifies a group of messages that can be collapsed to ensure that only the last message is sent when delivery can resume. This helps avoid sending too many instances of the same messages when the recipient's device comes online again or becomes active.</p>
     /// <p>Amazon Pinpoint specifies this value in the Firebase Cloud Messaging (FCM) collapse_key parameter when it sends the notification message to FCM.</p>
+    #[doc(hidden)]
     pub collapse_key: std::option::Option<std::string::String>,
     /// <p>The JSON data payload to use for the push notification, if the notification is a silent push notification. This payload is added to the data.pinpoint.jsonBody object of the notification.</p>
+    #[doc(hidden)]
     pub data:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The icon image name of the asset saved in your app.</p>
+    #[doc(hidden)]
     pub icon_reference: std::option::Option<std::string::String>,
     /// <p>The URL of the large icon image to display in the content view of the push notification.</p>
+    #[doc(hidden)]
     pub image_icon_url: std::option::Option<std::string::String>,
     /// <p>The URL of an image to display in the push notification.</p>
+    #[doc(hidden)]
     pub image_url: std::option::Option<std::string::String>,
     /// <p>para&gt;normal - The notification might be delayed. Delivery is optimized for battery usage on the recipient's device. Use this value unless immediate delivery is required.</p>/listitem&gt;
     /// <li><p>high - The notification is sent immediately and might wake a sleeping device.</p></li>/para&gt;
     /// <p>Amazon Pinpoint specifies this value in the FCM priority parameter when it sends the notification message to FCM.</p>
     /// <p>The equivalent values for Apple Push Notification service (APNs) are 5, for normal, and 10, for high. If you specify an APNs value for this property, Amazon Pinpoint accepts and converts the value to the corresponding FCM value.</p>
+    #[doc(hidden)]
     pub priority: std::option::Option<std::string::String>,
     /// <p>The raw, JSON-formatted string to use as the payload for the notification message. If specified, this value overrides all other content for the message.</p>
+    #[doc(hidden)]
     pub raw_content: std::option::Option<std::string::String>,
     /// <p>The package name of the application where registration tokens must match in order for the recipient to receive the message.</p>
+    #[doc(hidden)]
     pub restricted_package_name: std::option::Option<std::string::String>,
     /// <p>Specifies whether the notification is a silent push notification, which is a push notification that doesn't display on a recipient's device. Silent push notifications can be used for cases such as updating an app's configuration or supporting phone home functionality.</p>
+    #[doc(hidden)]
     pub silent_push: bool,
     /// <p>The URL of the small icon image to display in the status bar and the content view of the push notification.</p>
+    #[doc(hidden)]
     pub small_image_icon_url: std::option::Option<std::string::String>,
     /// <p>The sound to play when the recipient receives the push notification. You can use the default stream or specify the file name of a sound resource that's bundled in your app. On an Android platform, the sound file must reside in /res/raw/.</p>
+    #[doc(hidden)]
     pub sound: std::option::Option<std::string::String>,
     /// <p>The default message variables to use in the notification message. You can override the default variables with individual address variables.</p>
+    #[doc(hidden)]
     pub substitutions: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The amount of time, in seconds, that FCM should store and attempt to deliver the push notification, if the service is unable to deliver the notification the first time. If you don't specify this value, FCM defaults to the maximum value, which is 2,419,200 seconds (28 days).</p>
     /// <p>Amazon Pinpoint specifies this value in the FCM time_to_live parameter when it sends the notification message to FCM.</p>
+    #[doc(hidden)]
     pub time_to_live: i32,
     /// <p>The title to display above the notification message on the recipient's device.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p>The URL to open in the recipient's default mobile browser, if a recipient taps the push notification and the value of the Action property is URL.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl GcmMessage {
@@ -21376,11 +22813,10 @@ impl std::fmt::Debug for GcmMessage {
         formatter.finish()
     }
 }
-/// See [`GcmMessage`](crate::model::GcmMessage)
+/// See [`GcmMessage`](crate::model::GcmMessage).
 pub mod gcm_message {
 
-    /// A builder for [`GcmMessage`](crate::model::GcmMessage)
-    #[non_exhaustive]
+    /// A builder for [`GcmMessage`](crate::model::GcmMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::Action>,
@@ -21638,7 +23074,7 @@ pub mod gcm_message {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`GcmMessage`](crate::model::GcmMessage)
+        /// Consumes the builder and constructs a [`GcmMessage`](crate::model::GcmMessage).
         pub fn build(self) -> crate::model::GcmMessage {
             crate::model::GcmMessage {
                 action: self.action,
@@ -21663,7 +23099,7 @@ pub mod gcm_message {
     }
 }
 impl GcmMessage {
-    /// Creates a new builder-style object to manufacture [`GcmMessage`](crate::model::GcmMessage)
+    /// Creates a new builder-style object to manufacture [`GcmMessage`](crate::model::GcmMessage).
     pub fn builder() -> crate::model::gcm_message::Builder {
         crate::model::gcm_message::Builder::default()
     }
@@ -21674,18 +23110,25 @@ impl GcmMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EmailMessage {
     /// <p>The body of the email message.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The email address to forward bounces and complaints to, if feedback forwarding is enabled.</p>
+    #[doc(hidden)]
     pub feedback_forwarding_address: std::option::Option<std::string::String>,
     /// <p>The verified email address to send the email message from. The default value is the FromAddress specified for the email channel.</p>
+    #[doc(hidden)]
     pub from_address: std::option::Option<std::string::String>,
     /// <p>The email message, represented as a raw MIME message.</p>
+    #[doc(hidden)]
     pub raw_email: std::option::Option<crate::model::RawEmail>,
     /// <p>The reply-to email address(es) for the email message. If a recipient replies to the email, each reply-to address receives the reply.</p>
+    #[doc(hidden)]
     pub reply_to_addresses: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The email message, composed of a subject, a text part, and an HTML part.</p>
+    #[doc(hidden)]
     pub simple_email: std::option::Option<crate::model::SimpleEmail>,
     /// <p>The default message variables to use in the email message. You can override the default variables with individual address variables.</p>
+    #[doc(hidden)]
     pub substitutions: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
@@ -21740,11 +23183,10 @@ impl std::fmt::Debug for EmailMessage {
         formatter.finish()
     }
 }
-/// See [`EmailMessage`](crate::model::EmailMessage)
+/// See [`EmailMessage`](crate::model::EmailMessage).
 pub mod email_message {
 
-    /// A builder for [`EmailMessage`](crate::model::EmailMessage)
-    #[non_exhaustive]
+    /// A builder for [`EmailMessage`](crate::model::EmailMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body: std::option::Option<std::string::String>,
@@ -21861,7 +23303,7 @@ pub mod email_message {
             self.substitutions = input;
             self
         }
-        /// Consumes the builder and constructs a [`EmailMessage`](crate::model::EmailMessage)
+        /// Consumes the builder and constructs a [`EmailMessage`](crate::model::EmailMessage).
         pub fn build(self) -> crate::model::EmailMessage {
             crate::model::EmailMessage {
                 body: self.body,
@@ -21876,7 +23318,7 @@ pub mod email_message {
     }
 }
 impl EmailMessage {
-    /// Creates a new builder-style object to manufacture [`EmailMessage`](crate::model::EmailMessage)
+    /// Creates a new builder-style object to manufacture [`EmailMessage`](crate::model::EmailMessage).
     pub fn builder() -> crate::model::email_message::Builder {
         crate::model::email_message::Builder::default()
     }
@@ -21887,10 +23329,13 @@ impl EmailMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SimpleEmail {
     /// <p>The body of the email message, in HTML format. We recommend using HTML format for email clients that render HTML content. You can include links, formatted text, and more in an HTML message.</p>
+    #[doc(hidden)]
     pub html_part: std::option::Option<crate::model::SimpleEmailPart>,
     /// <p>The subject line, or title, of the email.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<crate::model::SimpleEmailPart>,
     /// <p>The body of the email message, in plain text format. We recommend using plain text format for email clients that don't render HTML content and clients that are connected to high-latency networks, such as mobile devices.</p>
+    #[doc(hidden)]
     pub text_part: std::option::Option<crate::model::SimpleEmailPart>,
 }
 impl SimpleEmail {
@@ -21916,11 +23361,10 @@ impl std::fmt::Debug for SimpleEmail {
         formatter.finish()
     }
 }
-/// See [`SimpleEmail`](crate::model::SimpleEmail)
+/// See [`SimpleEmail`](crate::model::SimpleEmail).
 pub mod simple_email {
 
-    /// A builder for [`SimpleEmail`](crate::model::SimpleEmail)
-    #[non_exhaustive]
+    /// A builder for [`SimpleEmail`](crate::model::SimpleEmail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) html_part: std::option::Option<crate::model::SimpleEmailPart>,
@@ -21967,7 +23411,7 @@ pub mod simple_email {
             self.text_part = input;
             self
         }
-        /// Consumes the builder and constructs a [`SimpleEmail`](crate::model::SimpleEmail)
+        /// Consumes the builder and constructs a [`SimpleEmail`](crate::model::SimpleEmail).
         pub fn build(self) -> crate::model::SimpleEmail {
             crate::model::SimpleEmail {
                 html_part: self.html_part,
@@ -21978,7 +23422,7 @@ pub mod simple_email {
     }
 }
 impl SimpleEmail {
-    /// Creates a new builder-style object to manufacture [`SimpleEmail`](crate::model::SimpleEmail)
+    /// Creates a new builder-style object to manufacture [`SimpleEmail`](crate::model::SimpleEmail).
     pub fn builder() -> crate::model::simple_email::Builder {
         crate::model::simple_email::Builder::default()
     }
@@ -21989,8 +23433,10 @@ impl SimpleEmail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SimpleEmailPart {
     /// <p>The applicable character set for the message content.</p>
+    #[doc(hidden)]
     pub charset: std::option::Option<std::string::String>,
     /// <p>The textual data of the message content.</p>
+    #[doc(hidden)]
     pub data: std::option::Option<std::string::String>,
 }
 impl SimpleEmailPart {
@@ -22011,11 +23457,10 @@ impl std::fmt::Debug for SimpleEmailPart {
         formatter.finish()
     }
 }
-/// See [`SimpleEmailPart`](crate::model::SimpleEmailPart)
+/// See [`SimpleEmailPart`](crate::model::SimpleEmailPart).
 pub mod simple_email_part {
 
-    /// A builder for [`SimpleEmailPart`](crate::model::SimpleEmailPart)
-    #[non_exhaustive]
+    /// A builder for [`SimpleEmailPart`](crate::model::SimpleEmailPart).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) charset: std::option::Option<std::string::String>,
@@ -22042,7 +23487,7 @@ pub mod simple_email_part {
             self.data = input;
             self
         }
-        /// Consumes the builder and constructs a [`SimpleEmailPart`](crate::model::SimpleEmailPart)
+        /// Consumes the builder and constructs a [`SimpleEmailPart`](crate::model::SimpleEmailPart).
         pub fn build(self) -> crate::model::SimpleEmailPart {
             crate::model::SimpleEmailPart {
                 charset: self.charset,
@@ -22052,7 +23497,7 @@ pub mod simple_email_part {
     }
 }
 impl SimpleEmailPart {
-    /// Creates a new builder-style object to manufacture [`SimpleEmailPart`](crate::model::SimpleEmailPart)
+    /// Creates a new builder-style object to manufacture [`SimpleEmailPart`](crate::model::SimpleEmailPart).
     pub fn builder() -> crate::model::simple_email_part::Builder {
         crate::model::simple_email_part::Builder::default()
     }
@@ -22063,6 +23508,7 @@ impl SimpleEmailPart {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RawEmail {
     /// <p>The email message, represented as a raw MIME message. The entire message must be base64 encoded.</p>
+    #[doc(hidden)]
     pub data: std::option::Option<aws_smithy_types::Blob>,
 }
 impl RawEmail {
@@ -22078,11 +23524,10 @@ impl std::fmt::Debug for RawEmail {
         formatter.finish()
     }
 }
-/// See [`RawEmail`](crate::model::RawEmail)
+/// See [`RawEmail`](crate::model::RawEmail).
 pub mod raw_email {
 
-    /// A builder for [`RawEmail`](crate::model::RawEmail)
-    #[non_exhaustive]
+    /// A builder for [`RawEmail`](crate::model::RawEmail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data: std::option::Option<aws_smithy_types::Blob>,
@@ -22098,14 +23543,14 @@ pub mod raw_email {
             self.data = input;
             self
         }
-        /// Consumes the builder and constructs a [`RawEmail`](crate::model::RawEmail)
+        /// Consumes the builder and constructs a [`RawEmail`](crate::model::RawEmail).
         pub fn build(self) -> crate::model::RawEmail {
             crate::model::RawEmail { data: self.data }
         }
     }
 }
 impl RawEmail {
-    /// Creates a new builder-style object to manufacture [`RawEmail`](crate::model::RawEmail)
+    /// Creates a new builder-style object to manufacture [`RawEmail`](crate::model::RawEmail).
     pub fn builder() -> crate::model::raw_email::Builder {
         crate::model::raw_email::Builder::default()
     }
@@ -22121,21 +23566,28 @@ pub struct DefaultPushNotificationMessage {
     /// <li><p>DEEP_LINK - Your app opens and displays a designated user interface in the app. This setting uses the deep-linking features of the iOS and Android platforms.</p></li>
     /// <li><p>URL - The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::Action>,
     /// <p>The default body of the notification message.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The JSON data payload to use for the default push notification, if the notification is a silent push notification. This payload is added to the data.pinpoint.jsonBody object of the notification.</p>
+    #[doc(hidden)]
     pub data:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Specifies whether the default notification is a silent push notification, which is a push notification that doesn't display on a recipient's device. Silent push notifications can be used for cases such as updating an app's configuration or delivering messages to an in-app notification center.</p>
+    #[doc(hidden)]
     pub silent_push: bool,
     /// <p>The default message variables to use in the notification message. You can override the default variables with individual address variables.</p>
+    #[doc(hidden)]
     pub substitutions: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The default title to display above the notification message on a recipient's device.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p>The default URL to open in a recipient's default mobile browser, if a recipient taps the push notification and the value of the Action property is URL.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl DefaultPushNotificationMessage {
@@ -22193,11 +23645,10 @@ impl std::fmt::Debug for DefaultPushNotificationMessage {
         formatter.finish()
     }
 }
-/// See [`DefaultPushNotificationMessage`](crate::model::DefaultPushNotificationMessage)
+/// See [`DefaultPushNotificationMessage`](crate::model::DefaultPushNotificationMessage).
 pub mod default_push_notification_message {
 
-    /// A builder for [`DefaultPushNotificationMessage`](crate::model::DefaultPushNotificationMessage)
-    #[non_exhaustive]
+    /// A builder for [`DefaultPushNotificationMessage`](crate::model::DefaultPushNotificationMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::Action>,
@@ -22323,7 +23774,7 @@ pub mod default_push_notification_message {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`DefaultPushNotificationMessage`](crate::model::DefaultPushNotificationMessage)
+        /// Consumes the builder and constructs a [`DefaultPushNotificationMessage`](crate::model::DefaultPushNotificationMessage).
         pub fn build(self) -> crate::model::DefaultPushNotificationMessage {
             crate::model::DefaultPushNotificationMessage {
                 action: self.action,
@@ -22338,7 +23789,7 @@ pub mod default_push_notification_message {
     }
 }
 impl DefaultPushNotificationMessage {
-    /// Creates a new builder-style object to manufacture [`DefaultPushNotificationMessage`](crate::model::DefaultPushNotificationMessage)
+    /// Creates a new builder-style object to manufacture [`DefaultPushNotificationMessage`](crate::model::DefaultPushNotificationMessage).
     pub fn builder() -> crate::model::default_push_notification_message::Builder {
         crate::model::default_push_notification_message::Builder::default()
     }
@@ -22349,8 +23800,10 @@ impl DefaultPushNotificationMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DefaultMessage {
     /// <p>The default body of the message.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The default message variables to use in the message. You can override these default variables with individual address variables.</p>
+    #[doc(hidden)]
     pub substitutions: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
@@ -22377,11 +23830,10 @@ impl std::fmt::Debug for DefaultMessage {
         formatter.finish()
     }
 }
-/// See [`DefaultMessage`](crate::model::DefaultMessage)
+/// See [`DefaultMessage`](crate::model::DefaultMessage).
 pub mod default_message {
 
-    /// A builder for [`DefaultMessage`](crate::model::DefaultMessage)
-    #[non_exhaustive]
+    /// A builder for [`DefaultMessage`](crate::model::DefaultMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body: std::option::Option<std::string::String>,
@@ -22425,7 +23877,7 @@ pub mod default_message {
             self.substitutions = input;
             self
         }
-        /// Consumes the builder and constructs a [`DefaultMessage`](crate::model::DefaultMessage)
+        /// Consumes the builder and constructs a [`DefaultMessage`](crate::model::DefaultMessage).
         pub fn build(self) -> crate::model::DefaultMessage {
             crate::model::DefaultMessage {
                 body: self.body,
@@ -22435,7 +23887,7 @@ pub mod default_message {
     }
 }
 impl DefaultMessage {
-    /// Creates a new builder-style object to manufacture [`DefaultMessage`](crate::model::DefaultMessage)
+    /// Creates a new builder-style object to manufacture [`DefaultMessage`](crate::model::DefaultMessage).
     pub fn builder() -> crate::model::default_message::Builder {
         crate::model::default_message::Builder::default()
     }
@@ -22451,35 +23903,49 @@ pub struct BaiduMessage {
     /// <li><p>DEEP_LINK - Your app opens and displays a designated user interface in the app. This action uses the deep-linking features of the Android platform.</p></li>
     /// <li><p>URL - The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::Action>,
     /// <p>The body of the notification message.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The JSON data payload to use for the push notification, if the notification is a silent push notification. This payload is added to the data.pinpoint.jsonBody object of the notification.</p>
+    #[doc(hidden)]
     pub data:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The icon image name of the asset saved in your app.</p>
+    #[doc(hidden)]
     pub icon_reference: std::option::Option<std::string::String>,
     /// <p>The URL of the large icon image to display in the content view of the push notification.</p>
+    #[doc(hidden)]
     pub image_icon_url: std::option::Option<std::string::String>,
     /// <p>The URL of an image to display in the push notification.</p>
+    #[doc(hidden)]
     pub image_url: std::option::Option<std::string::String>,
     /// <p>The raw, JSON-formatted string to use as the payload for the notification message. If specified, this value overrides all other content for the message.</p>
+    #[doc(hidden)]
     pub raw_content: std::option::Option<std::string::String>,
     /// <p>Specifies whether the notification is a silent push notification, which is a push notification that doesn't display on a recipient's device. Silent push notifications can be used for cases such as updating an app's configuration or supporting phone home functionality.</p>
+    #[doc(hidden)]
     pub silent_push: bool,
     /// <p>The URL of the small icon image to display in the status bar and the content view of the push notification.</p>
+    #[doc(hidden)]
     pub small_image_icon_url: std::option::Option<std::string::String>,
     /// <p>The sound to play when the recipient receives the push notification. You can use the default stream or specify the file name of a sound resource that's bundled in your app. On an Android platform, the sound file must reside in /res/raw/.</p>
+    #[doc(hidden)]
     pub sound: std::option::Option<std::string::String>,
     /// <p>The default message variables to use in the notification message. You can override the default variables with individual address variables.</p>
+    #[doc(hidden)]
     pub substitutions: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The amount of time, in seconds, that the Baidu Cloud Push service should store the message if the recipient's device is offline. The default value and maximum supported time is 604,800 seconds (7 days).</p>
+    #[doc(hidden)]
     pub time_to_live: i32,
     /// <p>The title to display above the notification message on the recipient's device.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p>The URL to open in the recipient's default mobile browser, if a recipient taps the push notification and the value of the Action property is URL.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl BaiduMessage {
@@ -22572,11 +24038,10 @@ impl std::fmt::Debug for BaiduMessage {
         formatter.finish()
     }
 }
-/// See [`BaiduMessage`](crate::model::BaiduMessage)
+/// See [`BaiduMessage`](crate::model::BaiduMessage).
 pub mod baidu_message {
 
-    /// A builder for [`BaiduMessage`](crate::model::BaiduMessage)
-    #[non_exhaustive]
+    /// A builder for [`BaiduMessage`](crate::model::BaiduMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::Action>,
@@ -22788,7 +24253,7 @@ pub mod baidu_message {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`BaiduMessage`](crate::model::BaiduMessage)
+        /// Consumes the builder and constructs a [`BaiduMessage`](crate::model::BaiduMessage).
         pub fn build(self) -> crate::model::BaiduMessage {
             crate::model::BaiduMessage {
                 action: self.action,
@@ -22810,7 +24275,7 @@ pub mod baidu_message {
     }
 }
 impl BaiduMessage {
-    /// Creates a new builder-style object to manufacture [`BaiduMessage`](crate::model::BaiduMessage)
+    /// Creates a new builder-style object to manufacture [`BaiduMessage`](crate::model::BaiduMessage).
     pub fn builder() -> crate::model::baidu_message::Builder {
         crate::model::baidu_message::Builder::default()
     }
@@ -22831,6 +24296,7 @@ pub struct ApnsMessage {
     /// </ul>
     /// <p>Amazon Pinpoint specifies this value in the apns-push-type request header when it sends the notification message to APNs. If you don't specify a value for this property, Amazon Pinpoint sets the value to alert or background automatically, based on the value that you specify for the SilentPush or RawContent property of the message.</p>
     /// <p>For more information about the apns-push-type request header, see <a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns">Sending Notification Requests to APNs</a> on the Apple Developer website.</p>
+    #[doc(hidden)]
     pub apns_push_type: std::option::Option<std::string::String>,
     /// <p>The action to occur if the recipient taps the push notification. Valid values are:</p>
     /// <ul>
@@ -22838,52 +24304,69 @@ pub struct ApnsMessage {
     /// <li><p>DEEP_LINK - Your app opens and displays a designated user interface in the app. This setting uses the deep-linking features of the iOS platform.</p></li>
     /// <li><p>URL - The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::Action>,
     /// <p>The key that indicates whether and how to modify the badge of your app's icon when the recipient receives the push notification. If this key isn't included in the dictionary, the badge doesn't change. To remove the badge, set this value to 0.</p>
+    #[doc(hidden)]
     pub badge: i32,
     /// <p>The body of the notification message.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The key that indicates the notification type for the push notification. This key is a value that's defined by the identifier property of one of your app's registered categories.</p>
+    #[doc(hidden)]
     pub category: std::option::Option<std::string::String>,
     /// <p>An arbitrary identifier that, if assigned to multiple messages, APNs uses to coalesce the messages into a single push notification instead of delivering each message individually. This value can't exceed 64 bytes.</p>
     /// <p>Amazon Pinpoint specifies this value in the apns-collapse-id request header when it sends the notification message to APNs.</p>
+    #[doc(hidden)]
     pub collapse_id: std::option::Option<std::string::String>,
     /// <p>The JSON payload to use for a silent push notification. This payload is added to the data.pinpoint.jsonBody object of the notification.</p>
+    #[doc(hidden)]
     pub data:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The URL of an image or video to display in the push notification.</p>
+    #[doc(hidden)]
     pub media_url: std::option::Option<std::string::String>,
     /// <p>The authentication method that you want Amazon Pinpoint to use when authenticating with APNs, CERTIFICATE or TOKEN.</p>
+    #[doc(hidden)]
     pub preferred_authentication_method: std::option::Option<std::string::String>,
     /// <p>para&gt;5 - Low priority, the notification might be delayed, delivered as part of a group, or throttled.</p>/listitem&gt;
     /// <li><p>10 - High priority, the notification is sent immediately. This is the default value. A high priority notification should trigger an alert, play a sound, or badge your app's icon on the recipient's device.</p></li>/para&gt;
     /// <p>Amazon Pinpoint specifies this value in the apns-priority request header when it sends the notification message to APNs.</p>
     /// <p>The equivalent values for Firebase Cloud Messaging (FCM), formerly Google Cloud Messaging (GCM), are normal, for 5, and high, for 10. If you specify an FCM value for this property, Amazon Pinpoint accepts and converts the value to the corresponding APNs value.</p>
+    #[doc(hidden)]
     pub priority: std::option::Option<std::string::String>,
     /// <p>The raw, JSON-formatted string to use as the payload for the notification message. If specified, this value overrides all other content for the message.</p> <note>
     /// <p>If you specify the raw content of an APNs push notification, the message payload has to include the content-available key. The value of the content-available key has to be an integer, and can only be 0 or 1. If you're sending a standard notification, set the value of content-available to 0. If you're sending a silent (background) notification, set the value of content-available to 1. Additionally, silent notification payloads can't include the alert, badge, or sound keys. For more information, see <a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification">Generating a Remote Notification</a> and <a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app">Pushing Background Updates to Your App</a> on the Apple Developer website.</p>
     /// </note>
+    #[doc(hidden)]
     pub raw_content: std::option::Option<std::string::String>,
     /// <p>Specifies whether the notification is a silent push notification. A silent (or background) push notification isn't displayed on recipients' devices. You can use silent push notifications to make small updates to your app, or to display messages in an in-app message center.</p>
     /// <p>Amazon Pinpoint uses this property to determine the correct value for the apns-push-type request header when it sends the notification message to APNs. If you specify a value of true for this property, Amazon Pinpoint sets the value for the apns-push-type header field to background.</p> <note>
     /// <p>If you specify the raw content of an APNs push notification, the message payload has to include the content-available key. For silent (background) notifications, set the value of content-available to 1. Additionally, the message payload for a silent notification can't include the alert, badge, or sound keys. For more information, see <a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification">Generating a Remote Notification</a> and <a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app">Pushing Background Updates to Your App</a> on the Apple Developer website.</p>
     /// <p>Apple has indicated that they will throttle "excessive" background notifications based on current traffic volumes. To prevent your notifications being throttled, Apple recommends that you send no more than 3 silent push notifications to each recipient per hour.</p>
     /// </note>
+    #[doc(hidden)]
     pub silent_push: bool,
     /// <p>The key for the sound to play when the recipient receives the push notification. The value for this key is the name of a sound file in your app's main bundle or the Library/Sounds folder in your app's data container. If the sound file can't be found or you specify default for the value, the system plays the default alert sound.</p>
+    #[doc(hidden)]
     pub sound: std::option::Option<std::string::String>,
     /// <p>The default message variables to use in the notification message. You can override these default variables with individual address variables.</p>
+    #[doc(hidden)]
     pub substitutions: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The key that represents your app-specific identifier for grouping notifications. If you provide a Notification Content app extension, you can use this value to group your notifications together.</p>
+    #[doc(hidden)]
     pub thread_id: std::option::Option<std::string::String>,
     /// <p>The amount of time, in seconds, that APNs should store and attempt to deliver the push notification, if the service is unable to deliver the notification the first time. If this value is 0, APNs treats the notification as if it expires immediately and the service doesn't store or try to deliver the notification again.</p>
     /// <p>Amazon Pinpoint specifies this value in the apns-expiration request header when it sends the notification message to APNs.</p>
+    #[doc(hidden)]
     pub time_to_live: i32,
     /// <p>The title to display above the notification message on the recipient's device.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p>The URL to open in the recipient's default mobile browser, if a recipient taps the push notification and the value of the Action property is URL.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl ApnsMessage {
@@ -23020,11 +24503,10 @@ impl std::fmt::Debug for ApnsMessage {
         formatter.finish()
     }
 }
-/// See [`ApnsMessage`](crate::model::ApnsMessage)
+/// See [`ApnsMessage`](crate::model::ApnsMessage).
 pub mod apns_message {
 
-    /// A builder for [`ApnsMessage`](crate::model::ApnsMessage)
-    #[non_exhaustive]
+    /// A builder for [`ApnsMessage`](crate::model::ApnsMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) apns_push_type: std::option::Option<std::string::String>,
@@ -23322,7 +24804,7 @@ pub mod apns_message {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApnsMessage`](crate::model::ApnsMessage)
+        /// Consumes the builder and constructs a [`ApnsMessage`](crate::model::ApnsMessage).
         pub fn build(self) -> crate::model::ApnsMessage {
             crate::model::ApnsMessage {
                 apns_push_type: self.apns_push_type,
@@ -23348,7 +24830,7 @@ pub mod apns_message {
     }
 }
 impl ApnsMessage {
-    /// Creates a new builder-style object to manufacture [`ApnsMessage`](crate::model::ApnsMessage)
+    /// Creates a new builder-style object to manufacture [`ApnsMessage`](crate::model::ApnsMessage).
     pub fn builder() -> crate::model::apns_message::Builder {
         crate::model::apns_message::Builder::default()
     }
@@ -23364,39 +24846,55 @@ pub struct AdmMessage {
     /// <li><p>DEEP_LINK - Your app opens and displays a designated user interface in the app. This action uses the deep-linking features of the Android platform.</p></li>
     /// <li><p>URL - The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::Action>,
     /// <p>The body of the notification message.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>An arbitrary string that indicates that multiple messages are logically the same and that Amazon Device Messaging (ADM) can drop previously enqueued messages in favor of this message.</p>
+    #[doc(hidden)]
     pub consolidation_key: std::option::Option<std::string::String>,
     /// <p>The JSON data payload to use for the push notification, if the notification is a silent push notification. This payload is added to the data.pinpoint.jsonBody object of the notification.</p>
+    #[doc(hidden)]
     pub data:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The amount of time, in seconds, that ADM should store the message if the recipient's device is offline. Amazon Pinpoint specifies this value in the expiresAfter parameter when it sends the notification message to ADM.</p>
+    #[doc(hidden)]
     pub expires_after: std::option::Option<std::string::String>,
     /// <p>The icon image name of the asset saved in your app.</p>
+    #[doc(hidden)]
     pub icon_reference: std::option::Option<std::string::String>,
     /// <p>The URL of the large icon image to display in the content view of the push notification.</p>
+    #[doc(hidden)]
     pub image_icon_url: std::option::Option<std::string::String>,
     /// <p>The URL of an image to display in the push notification.</p>
+    #[doc(hidden)]
     pub image_url: std::option::Option<std::string::String>,
     /// <p>The base64-encoded, MD5 checksum of the value specified by the Data property. ADM uses the MD5 value to verify the integrity of the data.</p>
+    #[doc(hidden)]
     pub md5: std::option::Option<std::string::String>,
     /// <p>The raw, JSON-formatted string to use as the payload for the notification message. If specified, this value overrides all other content for the message.</p>
+    #[doc(hidden)]
     pub raw_content: std::option::Option<std::string::String>,
     /// <p>Specifies whether the notification is a silent push notification, which is a push notification that doesn't display on a recipient's device. Silent push notifications can be used for cases such as updating an app's configuration or supporting phone home functionality.</p>
+    #[doc(hidden)]
     pub silent_push: bool,
     /// <p>The URL of the small icon image to display in the status bar and the content view of the push notification.</p>
+    #[doc(hidden)]
     pub small_image_icon_url: std::option::Option<std::string::String>,
     /// <p>The sound to play when the recipient receives the push notification. You can use the default stream or specify the file name of a sound resource that's bundled in your app. On an Android platform, the sound file must reside in /res/raw/.</p>
+    #[doc(hidden)]
     pub sound: std::option::Option<std::string::String>,
     /// <p>The default message variables to use in the notification message. You can override the default variables with individual address variables.</p>
+    #[doc(hidden)]
     pub substitutions: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The title to display above the notification message on the recipient's device.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p>The URL to open in the recipient's default mobile browser, if a recipient taps the push notification and the value of the Action property is URL.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl AdmMessage {
@@ -23499,11 +24997,10 @@ impl std::fmt::Debug for AdmMessage {
         formatter.finish()
     }
 }
-/// See [`AdmMessage`](crate::model::AdmMessage)
+/// See [`AdmMessage`](crate::model::AdmMessage).
 pub mod adm_message {
 
-    /// A builder for [`AdmMessage`](crate::model::AdmMessage)
-    #[non_exhaustive]
+    /// A builder for [`AdmMessage`](crate::model::AdmMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::Action>,
@@ -23743,7 +25240,7 @@ pub mod adm_message {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdmMessage`](crate::model::AdmMessage)
+        /// Consumes the builder and constructs a [`AdmMessage`](crate::model::AdmMessage).
         pub fn build(self) -> crate::model::AdmMessage {
             crate::model::AdmMessage {
                 action: self.action,
@@ -23767,7 +25264,7 @@ pub mod adm_message {
     }
 }
 impl AdmMessage {
-    /// Creates a new builder-style object to manufacture [`AdmMessage`](crate::model::AdmMessage)
+    /// Creates a new builder-style object to manufacture [`AdmMessage`](crate::model::AdmMessage).
     pub fn builder() -> crate::model::adm_message::Builder {
         crate::model::adm_message::Builder::default()
     }
@@ -23778,14 +25275,18 @@ impl AdmMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MessageResponse {
     /// <p>The unique identifier for the application that was used to send the message.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>A map that contains a multipart response for each address that the message was sent to. In the map, the endpoint ID is the key and the result is the value.</p>
+    #[doc(hidden)]
     pub endpoint_result: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::EndpointMessageResult>,
     >,
     /// <p>The identifier for the original request that the message was delivered for.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>A map that contains a multipart response for each address (email address, phone number, or push notification token) that the message was sent to. In the map, the address is the key and the result is the value.</p>
+    #[doc(hidden)]
     pub result: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::MessageResult>,
     >,
@@ -23826,11 +25327,10 @@ impl std::fmt::Debug for MessageResponse {
         formatter.finish()
     }
 }
-/// See [`MessageResponse`](crate::model::MessageResponse)
+/// See [`MessageResponse`](crate::model::MessageResponse).
 pub mod message_response {
 
-    /// A builder for [`MessageResponse`](crate::model::MessageResponse)
-    #[non_exhaustive]
+    /// A builder for [`MessageResponse`](crate::model::MessageResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -23916,7 +25416,7 @@ pub mod message_response {
             self.result = input;
             self
         }
-        /// Consumes the builder and constructs a [`MessageResponse`](crate::model::MessageResponse)
+        /// Consumes the builder and constructs a [`MessageResponse`](crate::model::MessageResponse).
         pub fn build(self) -> crate::model::MessageResponse {
             crate::model::MessageResponse {
                 application_id: self.application_id,
@@ -23928,7 +25428,7 @@ pub mod message_response {
     }
 }
 impl MessageResponse {
-    /// Creates a new builder-style object to manufacture [`MessageResponse`](crate::model::MessageResponse)
+    /// Creates a new builder-style object to manufacture [`MessageResponse`](crate::model::MessageResponse).
     pub fn builder() -> crate::model::message_response::Builder {
         crate::model::message_response::Builder::default()
     }
@@ -23949,14 +25449,19 @@ pub struct MessageResult {
     /// <li><p>TIMEOUT - The message couldn't be sent within the timeout period.</p></li>
     /// <li><p>UNKNOWN_FAILURE - An unknown error occurred.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub delivery_status: std::option::Option<crate::model::DeliveryStatus>,
     /// <p>The unique identifier for the message that was sent.</p>
+    #[doc(hidden)]
     pub message_id: std::option::Option<std::string::String>,
     /// <p>The downstream service status code for delivering the message.</p>
+    #[doc(hidden)]
     pub status_code: i32,
     /// <p>The status message for delivering the message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>For push notifications that are sent through the GCM channel, specifies whether the endpoint's device registration token was updated as part of delivering the message.</p>
+    #[doc(hidden)]
     pub updated_token: std::option::Option<std::string::String>,
 }
 impl MessageResult {
@@ -24002,11 +25507,10 @@ impl std::fmt::Debug for MessageResult {
         formatter.finish()
     }
 }
-/// See [`MessageResult`](crate::model::MessageResult)
+/// See [`MessageResult`](crate::model::MessageResult).
 pub mod message_result {
 
-    /// A builder for [`MessageResult`](crate::model::MessageResult)
-    #[non_exhaustive]
+    /// A builder for [`MessageResult`](crate::model::MessageResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_status: std::option::Option<crate::model::DeliveryStatus>,
@@ -24095,7 +25599,7 @@ pub mod message_result {
             self.updated_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`MessageResult`](crate::model::MessageResult)
+        /// Consumes the builder and constructs a [`MessageResult`](crate::model::MessageResult).
         pub fn build(self) -> crate::model::MessageResult {
             crate::model::MessageResult {
                 delivery_status: self.delivery_status,
@@ -24108,7 +25612,7 @@ pub mod message_result {
     }
 }
 impl MessageResult {
-    /// Creates a new builder-style object to manufacture [`MessageResult`](crate::model::MessageResult)
+    /// Creates a new builder-style object to manufacture [`MessageResult`](crate::model::MessageResult).
     pub fn builder() -> crate::model::message_result::Builder {
         crate::model::message_result::Builder::default()
     }
@@ -24119,26 +25623,37 @@ impl MessageResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SendOtpMessageRequestParameters {
     /// <p>The attempts allowed to validate an OTP.</p>
+    #[doc(hidden)]
     pub allowed_attempts: i32,
     /// <p>The brand name that will be substituted into the OTP message body. Should be owned by calling AWS account.</p>
+    #[doc(hidden)]
     pub brand_name: std::option::Option<std::string::String>,
     /// <p>Channel type for the OTP message. Supported values: [SMS].</p>
+    #[doc(hidden)]
     pub channel: std::option::Option<std::string::String>,
     /// <p>The number of characters in the generated OTP.</p>
+    #[doc(hidden)]
     pub code_length: i32,
     /// <p>The destination identity to send OTP to.</p>
+    #[doc(hidden)]
     pub destination_identity: std::option::Option<std::string::String>,
     /// <p>A unique Entity ID received from DLT after entity registration is approved.</p>
+    #[doc(hidden)]
     pub entity_id: std::option::Option<std::string::String>,
     /// <p>The language to be used for the outgoing message body containing the OTP.</p>
+    #[doc(hidden)]
     pub language: std::option::Option<std::string::String>,
     /// <p>The origination identity used to send OTP from.</p>
+    #[doc(hidden)]
     pub origination_identity: std::option::Option<std::string::String>,
     /// <p>Developer-specified reference identifier. Required to match during OTP verification.</p>
+    #[doc(hidden)]
     pub reference_id: std::option::Option<std::string::String>,
     /// <p>A unique Template ID received from DLT after entity registration is approved.</p>
+    #[doc(hidden)]
     pub template_id: std::option::Option<std::string::String>,
     /// <p>The time in minutes before the OTP is no longer valid.</p>
+    #[doc(hidden)]
     pub validity_period: i32,
 }
 impl SendOtpMessageRequestParameters {
@@ -24204,11 +25719,10 @@ impl std::fmt::Debug for SendOtpMessageRequestParameters {
         formatter.finish()
     }
 }
-/// See [`SendOtpMessageRequestParameters`](crate::model::SendOtpMessageRequestParameters)
+/// See [`SendOtpMessageRequestParameters`](crate::model::SendOtpMessageRequestParameters).
 pub mod send_otp_message_request_parameters {
 
-    /// A builder for [`SendOtpMessageRequestParameters`](crate::model::SendOtpMessageRequestParameters)
-    #[non_exhaustive]
+    /// A builder for [`SendOtpMessageRequestParameters`](crate::model::SendOtpMessageRequestParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allowed_attempts: std::option::Option<i32>,
@@ -24340,7 +25854,7 @@ pub mod send_otp_message_request_parameters {
             self.validity_period = input;
             self
         }
-        /// Consumes the builder and constructs a [`SendOtpMessageRequestParameters`](crate::model::SendOtpMessageRequestParameters)
+        /// Consumes the builder and constructs a [`SendOtpMessageRequestParameters`](crate::model::SendOtpMessageRequestParameters).
         pub fn build(self) -> crate::model::SendOtpMessageRequestParameters {
             crate::model::SendOtpMessageRequestParameters {
                 allowed_attempts: self.allowed_attempts.unwrap_or_default(),
@@ -24359,7 +25873,7 @@ pub mod send_otp_message_request_parameters {
     }
 }
 impl SendOtpMessageRequestParameters {
-    /// Creates a new builder-style object to manufacture [`SendOtpMessageRequestParameters`](crate::model::SendOtpMessageRequestParameters)
+    /// Creates a new builder-style object to manufacture [`SendOtpMessageRequestParameters`](crate::model::SendOtpMessageRequestParameters).
     pub fn builder() -> crate::model::send_otp_message_request_parameters::Builder {
         crate::model::send_otp_message_request_parameters::Builder::default()
     }
@@ -24370,21 +25884,27 @@ impl SendOtpMessageRequestParameters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MessageRequest {
     /// <p>A map of key-value pairs, where each key is an address and each value is an <a href="https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-messages.html#apps-application-id-messages-model-addressconfiguration">AddressConfiguration</a> object. An address can be a push notification token, a phone number, or an email address. You can use an <a href="https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-messages.html#apps-application-id-messages-model-addressconfiguration">AddressConfiguration</a> object to tailor the message for an address by specifying settings such as content overrides and message variables.</p>
+    #[doc(hidden)]
     pub addresses: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AddressConfiguration>,
     >,
     /// <p>A map of custom attributes to attach to the message. For a push notification, this payload is added to the data.pinpoint object. For an email or text message, this payload is added to email/SMS delivery receipt event attributes.</p>
+    #[doc(hidden)]
     pub context:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A map of key-value pairs, where each key is an endpoint ID and each value is an <a href="https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-messages.html#apps-application-id-messages-model-endpointsendconfiguration">EndpointSendConfiguration</a> object. You can use an <a href="https://docs.aws.amazon.com/pinpoint/latest/apireference/apps-application-id-messages.html#apps-application-id-messages-model-endpointsendconfiguration">EndpointSendConfiguration</a> object to tailor the message for an endpoint by specifying settings such as content overrides and message variables.</p>
+    #[doc(hidden)]
     pub endpoints: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::EndpointSendConfiguration>,
     >,
     /// <p>The settings and content for the default message and any default messages that you defined for specific channels.</p>
+    #[doc(hidden)]
     pub message_configuration: std::option::Option<crate::model::DirectMessageConfiguration>,
     /// <p>The message template to use for the message.</p>
+    #[doc(hidden)]
     pub template_configuration: std::option::Option<crate::model::TemplateConfiguration>,
     /// <p>The unique identifier for tracing the message. This identifier is visible to message recipients.</p>
+    #[doc(hidden)]
     pub trace_id: std::option::Option<std::string::String>,
 }
 impl MessageRequest {
@@ -24440,11 +25960,10 @@ impl std::fmt::Debug for MessageRequest {
         formatter.finish()
     }
 }
-/// See [`MessageRequest`](crate::model::MessageRequest)
+/// See [`MessageRequest`](crate::model::MessageRequest).
 pub mod message_request {
 
-    /// A builder for [`MessageRequest`](crate::model::MessageRequest)
-    #[non_exhaustive]
+    /// A builder for [`MessageRequest`](crate::model::MessageRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) addresses: std::option::Option<
@@ -24582,7 +26101,7 @@ pub mod message_request {
             self.trace_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`MessageRequest`](crate::model::MessageRequest)
+        /// Consumes the builder and constructs a [`MessageRequest`](crate::model::MessageRequest).
         pub fn build(self) -> crate::model::MessageRequest {
             crate::model::MessageRequest {
                 addresses: self.addresses,
@@ -24596,7 +26115,7 @@ pub mod message_request {
     }
 }
 impl MessageRequest {
-    /// Creates a new builder-style object to manufacture [`MessageRequest`](crate::model::MessageRequest)
+    /// Creates a new builder-style object to manufacture [`MessageRequest`](crate::model::MessageRequest).
     pub fn builder() -> crate::model::message_request::Builder {
         crate::model::message_request::Builder::default()
     }
@@ -24607,20 +26126,26 @@ impl MessageRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddressConfiguration {
     /// <p>The message body to use instead of the default message body. This value overrides the default message body.</p>
+    #[doc(hidden)]
     pub body_override: std::option::Option<std::string::String>,
     /// <p>The channel to use when sending the message.</p>
+    #[doc(hidden)]
     pub channel_type: std::option::Option<crate::model::ChannelType>,
     /// <p>An object that maps custom attributes to attributes for the address and is attached to the message. Attribute names are case sensitive.</p>
     /// <p>For a push notification, this payload is added to the data.pinpoint object. For an email or text message, this payload is added to email/SMS delivery receipt event attributes.</p>
+    #[doc(hidden)]
     pub context:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The raw, JSON-formatted string to use as the payload for the message. If specified, this value overrides all other values for the message.</p>
+    #[doc(hidden)]
     pub raw_content: std::option::Option<std::string::String>,
     /// <p>A map of the message variables to merge with the variables specified by properties of the DefaultMessage object. The variables specified in this map take precedence over all other variables.</p>
+    #[doc(hidden)]
     pub substitutions: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The message title to use instead of the default message title. This value overrides the default message title.</p>
+    #[doc(hidden)]
     pub title_override: std::option::Option<std::string::String>,
 }
 impl AddressConfiguration {
@@ -24669,11 +26194,10 @@ impl std::fmt::Debug for AddressConfiguration {
         formatter.finish()
     }
 }
-/// See [`AddressConfiguration`](crate::model::AddressConfiguration)
+/// See [`AddressConfiguration`](crate::model::AddressConfiguration).
 pub mod address_configuration {
 
-    /// A builder for [`AddressConfiguration`](crate::model::AddressConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AddressConfiguration`](crate::model::AddressConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body_override: std::option::Option<std::string::String>,
@@ -24789,7 +26313,7 @@ pub mod address_configuration {
             self.title_override = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddressConfiguration`](crate::model::AddressConfiguration)
+        /// Consumes the builder and constructs a [`AddressConfiguration`](crate::model::AddressConfiguration).
         pub fn build(self) -> crate::model::AddressConfiguration {
             crate::model::AddressConfiguration {
                 body_override: self.body_override,
@@ -24803,7 +26327,7 @@ pub mod address_configuration {
     }
 }
 impl AddressConfiguration {
-    /// Creates a new builder-style object to manufacture [`AddressConfiguration`](crate::model::AddressConfiguration)
+    /// Creates a new builder-style object to manufacture [`AddressConfiguration`](crate::model::AddressConfiguration).
     pub fn builder() -> crate::model::address_configuration::Builder {
         crate::model::address_configuration::Builder::default()
     }
@@ -24814,6 +26338,7 @@ impl AddressConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttributesResource {
     /// <p>The unique identifier for the application.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The type of attribute or attributes that were removed from the endpoints. Valid values are:</p>
     /// <ul>
@@ -24821,8 +26346,10 @@ pub struct AttributesResource {
     /// <li><p>endpoint-metric-attributes - Custom metrics that your app reports to Amazon Pinpoint for endpoints.</p></li>
     /// <li><p>endpoint-user-attributes - Custom attributes that describe users.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub attribute_type: std::option::Option<std::string::String>,
     /// <p>An array that specifies the names of the attributes that were removed from the endpoints.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AttributesResource {
@@ -24853,11 +26380,10 @@ impl std::fmt::Debug for AttributesResource {
         formatter.finish()
     }
 }
-/// See [`AttributesResource`](crate::model::AttributesResource)
+/// See [`AttributesResource`](crate::model::AttributesResource).
 pub mod attributes_resource {
 
-    /// A builder for [`AttributesResource`](crate::model::AttributesResource)
-    #[non_exhaustive]
+    /// A builder for [`AttributesResource`](crate::model::AttributesResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -24920,7 +26446,7 @@ pub mod attributes_resource {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttributesResource`](crate::model::AttributesResource)
+        /// Consumes the builder and constructs a [`AttributesResource`](crate::model::AttributesResource).
         pub fn build(self) -> crate::model::AttributesResource {
             crate::model::AttributesResource {
                 application_id: self.application_id,
@@ -24931,7 +26457,7 @@ pub mod attributes_resource {
     }
 }
 impl AttributesResource {
-    /// Creates a new builder-style object to manufacture [`AttributesResource`](crate::model::AttributesResource)
+    /// Creates a new builder-style object to manufacture [`AttributesResource`](crate::model::AttributesResource).
     pub fn builder() -> crate::model::attributes_resource::Builder {
         crate::model::attributes_resource::Builder::default()
     }
@@ -24942,6 +26468,7 @@ impl AttributesResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAttributesRequest {
     /// <p>An array of the attributes to remove from all the endpoints that are associated with the application. The array can specify the complete, exact name of each attribute to remove or it can specify a glob pattern that an attribute name must match in order for the attribute to be removed.</p>
+    #[doc(hidden)]
     pub blacklist: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl UpdateAttributesRequest {
@@ -24957,11 +26484,10 @@ impl std::fmt::Debug for UpdateAttributesRequest {
         formatter.finish()
     }
 }
-/// See [`UpdateAttributesRequest`](crate::model::UpdateAttributesRequest)
+/// See [`UpdateAttributesRequest`](crate::model::UpdateAttributesRequest).
 pub mod update_attributes_request {
 
-    /// A builder for [`UpdateAttributesRequest`](crate::model::UpdateAttributesRequest)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAttributesRequest`](crate::model::UpdateAttributesRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) blacklist: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -24986,7 +26512,7 @@ pub mod update_attributes_request {
             self.blacklist = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAttributesRequest`](crate::model::UpdateAttributesRequest)
+        /// Consumes the builder and constructs a [`UpdateAttributesRequest`](crate::model::UpdateAttributesRequest).
         pub fn build(self) -> crate::model::UpdateAttributesRequest {
             crate::model::UpdateAttributesRequest {
                 blacklist: self.blacklist,
@@ -24995,7 +26521,7 @@ pub mod update_attributes_request {
     }
 }
 impl UpdateAttributesRequest {
-    /// Creates a new builder-style object to manufacture [`UpdateAttributesRequest`](crate::model::UpdateAttributesRequest)
+    /// Creates a new builder-style object to manufacture [`UpdateAttributesRequest`](crate::model::UpdateAttributesRequest).
     pub fn builder() -> crate::model::update_attributes_request::Builder {
         crate::model::update_attributes_request::Builder::default()
     }
@@ -25006,6 +26532,7 @@ impl UpdateAttributesRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventStream {
     /// <p>The unique identifier for the application to publish event data for.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon Kinesis data stream or Amazon Kinesis Data Firehose delivery stream to publish event data to.</p>
     /// <p>For a Kinesis data stream, the ARN format is: arn:aws:kinesis:<replaceable>
@@ -25022,14 +26549,19 @@ pub struct EventStream {
     /// </replaceable>:deliverystream/<replaceable>
     /// stream_name
     /// </replaceable> </p>
+    #[doc(hidden)]
     pub destination_stream_arn: std::option::Option<std::string::String>,
     /// <p>(Deprecated) Your AWS account ID, which you assigned to an external ID key in an IAM trust policy. Amazon Pinpoint previously used this value to assume an IAM role when publishing event data, but we removed this requirement. We don't recommend use of external IDs for IAM roles that are assumed by Amazon Pinpoint.</p>
+    #[doc(hidden)]
     pub external_id: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the event stream was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The IAM user who last modified the event stream.</p>
+    #[doc(hidden)]
     pub last_updated_by: std::option::Option<std::string::String>,
     /// <p>The AWS Identity and Access Management (IAM) role that authorizes Amazon Pinpoint to publish event data to the stream in your AWS account.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl EventStream {
@@ -25084,11 +26616,10 @@ impl std::fmt::Debug for EventStream {
         formatter.finish()
     }
 }
-/// See [`EventStream`](crate::model::EventStream)
+/// See [`EventStream`](crate::model::EventStream).
 pub mod event_stream {
 
-    /// A builder for [`EventStream`](crate::model::EventStream)
-    #[non_exhaustive]
+    /// A builder for [`EventStream`](crate::model::EventStream).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -25199,7 +26730,7 @@ pub mod event_stream {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventStream`](crate::model::EventStream)
+        /// Consumes the builder and constructs a [`EventStream`](crate::model::EventStream).
         pub fn build(self) -> crate::model::EventStream {
             crate::model::EventStream {
                 application_id: self.application_id,
@@ -25213,7 +26744,7 @@ pub mod event_stream {
     }
 }
 impl EventStream {
-    /// Creates a new builder-style object to manufacture [`EventStream`](crate::model::EventStream)
+    /// Creates a new builder-style object to manufacture [`EventStream`](crate::model::EventStream).
     pub fn builder() -> crate::model::event_stream::Builder {
         crate::model::event_stream::Builder::default()
     }
@@ -25238,8 +26769,10 @@ pub struct WriteEventStream {
     /// </replaceable>:deliverystream/<replaceable>
     /// stream_name
     /// </replaceable> </p>
+    #[doc(hidden)]
     pub destination_stream_arn: std::option::Option<std::string::String>,
     /// <p>The AWS Identity and Access Management (IAM) role that authorizes Amazon Pinpoint to publish event data to the stream in your AWS account.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl WriteEventStream {
@@ -25274,11 +26807,10 @@ impl std::fmt::Debug for WriteEventStream {
         formatter.finish()
     }
 }
-/// See [`WriteEventStream`](crate::model::WriteEventStream)
+/// See [`WriteEventStream`](crate::model::WriteEventStream).
 pub mod write_event_stream {
 
-    /// A builder for [`WriteEventStream`](crate::model::WriteEventStream)
-    #[non_exhaustive]
+    /// A builder for [`WriteEventStream`](crate::model::WriteEventStream).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination_stream_arn: std::option::Option<std::string::String>,
@@ -25336,7 +26868,7 @@ pub mod write_event_stream {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`WriteEventStream`](crate::model::WriteEventStream)
+        /// Consumes the builder and constructs a [`WriteEventStream`](crate::model::WriteEventStream).
         pub fn build(self) -> crate::model::WriteEventStream {
             crate::model::WriteEventStream {
                 destination_stream_arn: self.destination_stream_arn,
@@ -25346,7 +26878,7 @@ pub mod write_event_stream {
     }
 }
 impl WriteEventStream {
-    /// Creates a new builder-style object to manufacture [`WriteEventStream`](crate::model::WriteEventStream)
+    /// Creates a new builder-style object to manufacture [`WriteEventStream`](crate::model::WriteEventStream).
     pub fn builder() -> crate::model::write_event_stream::Builder {
         crate::model::write_event_stream::Builder::default()
     }
@@ -25357,6 +26889,7 @@ impl WriteEventStream {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventsResponse {
     /// <p>A map that contains a multipart response for each endpoint. For each item in this object, the endpoint ID is the key and the item response is the value. If no item response exists, the value can also be one of the following: 202, the request was processed successfully; or 400, the payload wasn't valid or required fields were missing.</p>
+    #[doc(hidden)]
     pub results: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ItemResponse>,
     >,
@@ -25378,11 +26911,10 @@ impl std::fmt::Debug for EventsResponse {
         formatter.finish()
     }
 }
-/// See [`EventsResponse`](crate::model::EventsResponse)
+/// See [`EventsResponse`](crate::model::EventsResponse).
 pub mod events_response {
 
-    /// A builder for [`EventsResponse`](crate::model::EventsResponse)
-    #[non_exhaustive]
+    /// A builder for [`EventsResponse`](crate::model::EventsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) results: std::option::Option<
@@ -25415,7 +26947,7 @@ pub mod events_response {
             self.results = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventsResponse`](crate::model::EventsResponse)
+        /// Consumes the builder and constructs a [`EventsResponse`](crate::model::EventsResponse).
         pub fn build(self) -> crate::model::EventsResponse {
             crate::model::EventsResponse {
                 results: self.results,
@@ -25424,7 +26956,7 @@ pub mod events_response {
     }
 }
 impl EventsResponse {
-    /// Creates a new builder-style object to manufacture [`EventsResponse`](crate::model::EventsResponse)
+    /// Creates a new builder-style object to manufacture [`EventsResponse`](crate::model::EventsResponse).
     pub fn builder() -> crate::model::events_response::Builder {
         crate::model::events_response::Builder::default()
     }
@@ -25435,8 +26967,10 @@ impl EventsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ItemResponse {
     /// <p>The response that was received after the endpoint data was accepted.</p>
+    #[doc(hidden)]
     pub endpoint_item_response: std::option::Option<crate::model::EndpointItemResponse>,
     /// <p>A multipart response object that contains a key and a value for each event in the request. In each object, the event ID is the key and an EventItemResponse object is the value.</p>
+    #[doc(hidden)]
     pub events_item_response: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::EventItemResponse>,
     >,
@@ -25465,11 +26999,10 @@ impl std::fmt::Debug for ItemResponse {
         formatter.finish()
     }
 }
-/// See [`ItemResponse`](crate::model::ItemResponse)
+/// See [`ItemResponse`](crate::model::ItemResponse).
 pub mod item_response {
 
-    /// A builder for [`ItemResponse`](crate::model::ItemResponse)
-    #[non_exhaustive]
+    /// A builder for [`ItemResponse`](crate::model::ItemResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint_item_response: std::option::Option<crate::model::EndpointItemResponse>,
@@ -25516,7 +27049,7 @@ pub mod item_response {
             self.events_item_response = input;
             self
         }
-        /// Consumes the builder and constructs a [`ItemResponse`](crate::model::ItemResponse)
+        /// Consumes the builder and constructs a [`ItemResponse`](crate::model::ItemResponse).
         pub fn build(self) -> crate::model::ItemResponse {
             crate::model::ItemResponse {
                 endpoint_item_response: self.endpoint_item_response,
@@ -25526,7 +27059,7 @@ pub mod item_response {
     }
 }
 impl ItemResponse {
-    /// Creates a new builder-style object to manufacture [`ItemResponse`](crate::model::ItemResponse)
+    /// Creates a new builder-style object to manufacture [`ItemResponse`](crate::model::ItemResponse).
     pub fn builder() -> crate::model::item_response::Builder {
         crate::model::item_response::Builder::default()
     }
@@ -25537,8 +27070,10 @@ impl ItemResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventItemResponse {
     /// <p>A custom message that's returned in the response as a result of processing the event.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The status code that's returned in the response as a result of processing the event. Possible values are: 202, for events that were accepted; and, 400, for events that weren't valid.</p>
+    #[doc(hidden)]
     pub status_code: i32,
 }
 impl EventItemResponse {
@@ -25559,11 +27094,10 @@ impl std::fmt::Debug for EventItemResponse {
         formatter.finish()
     }
 }
-/// See [`EventItemResponse`](crate::model::EventItemResponse)
+/// See [`EventItemResponse`](crate::model::EventItemResponse).
 pub mod event_item_response {
 
-    /// A builder for [`EventItemResponse`](crate::model::EventItemResponse)
-    #[non_exhaustive]
+    /// A builder for [`EventItemResponse`](crate::model::EventItemResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -25590,7 +27124,7 @@ pub mod event_item_response {
             self.status_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventItemResponse`](crate::model::EventItemResponse)
+        /// Consumes the builder and constructs a [`EventItemResponse`](crate::model::EventItemResponse).
         pub fn build(self) -> crate::model::EventItemResponse {
             crate::model::EventItemResponse {
                 message: self.message,
@@ -25600,7 +27134,7 @@ pub mod event_item_response {
     }
 }
 impl EventItemResponse {
-    /// Creates a new builder-style object to manufacture [`EventItemResponse`](crate::model::EventItemResponse)
+    /// Creates a new builder-style object to manufacture [`EventItemResponse`](crate::model::EventItemResponse).
     pub fn builder() -> crate::model::event_item_response::Builder {
         crate::model::event_item_response::Builder::default()
     }
@@ -25611,8 +27145,10 @@ impl EventItemResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointItemResponse {
     /// <p>The custom message that's returned in the response as a result of processing the endpoint data.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The status code that's returned in the response as a result of processing the endpoint data.</p>
+    #[doc(hidden)]
     pub status_code: i32,
 }
 impl EndpointItemResponse {
@@ -25633,11 +27169,10 @@ impl std::fmt::Debug for EndpointItemResponse {
         formatter.finish()
     }
 }
-/// See [`EndpointItemResponse`](crate::model::EndpointItemResponse)
+/// See [`EndpointItemResponse`](crate::model::EndpointItemResponse).
 pub mod endpoint_item_response {
 
-    /// A builder for [`EndpointItemResponse`](crate::model::EndpointItemResponse)
-    #[non_exhaustive]
+    /// A builder for [`EndpointItemResponse`](crate::model::EndpointItemResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -25664,7 +27199,7 @@ pub mod endpoint_item_response {
             self.status_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointItemResponse`](crate::model::EndpointItemResponse)
+        /// Consumes the builder and constructs a [`EndpointItemResponse`](crate::model::EndpointItemResponse).
         pub fn build(self) -> crate::model::EndpointItemResponse {
             crate::model::EndpointItemResponse {
                 message: self.message,
@@ -25674,7 +27209,7 @@ pub mod endpoint_item_response {
     }
 }
 impl EndpointItemResponse {
-    /// Creates a new builder-style object to manufacture [`EndpointItemResponse`](crate::model::EndpointItemResponse)
+    /// Creates a new builder-style object to manufacture [`EndpointItemResponse`](crate::model::EndpointItemResponse).
     pub fn builder() -> crate::model::endpoint_item_response::Builder {
         crate::model::endpoint_item_response::Builder::default()
     }
@@ -25685,6 +27220,7 @@ impl EndpointItemResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventsRequest {
     /// <p>The batch of events to process. For each item in a batch, the endpoint ID acts as a key that has an EventsBatch object as its value.</p>
+    #[doc(hidden)]
     pub batch_item: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::EventsBatch>,
     >,
@@ -25706,11 +27242,10 @@ impl std::fmt::Debug for EventsRequest {
         formatter.finish()
     }
 }
-/// See [`EventsRequest`](crate::model::EventsRequest)
+/// See [`EventsRequest`](crate::model::EventsRequest).
 pub mod events_request {
 
-    /// A builder for [`EventsRequest`](crate::model::EventsRequest)
-    #[non_exhaustive]
+    /// A builder for [`EventsRequest`](crate::model::EventsRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) batch_item: std::option::Option<
@@ -25743,7 +27278,7 @@ pub mod events_request {
             self.batch_item = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventsRequest`](crate::model::EventsRequest)
+        /// Consumes the builder and constructs a [`EventsRequest`](crate::model::EventsRequest).
         pub fn build(self) -> crate::model::EventsRequest {
             crate::model::EventsRequest {
                 batch_item: self.batch_item,
@@ -25752,7 +27287,7 @@ pub mod events_request {
     }
 }
 impl EventsRequest {
-    /// Creates a new builder-style object to manufacture [`EventsRequest`](crate::model::EventsRequest)
+    /// Creates a new builder-style object to manufacture [`EventsRequest`](crate::model::EventsRequest).
     pub fn builder() -> crate::model::events_request::Builder {
         crate::model::events_request::Builder::default()
     }
@@ -25763,8 +27298,10 @@ impl EventsRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventsBatch {
     /// <p>A set of properties and attributes that are associated with the endpoint.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<crate::model::PublicEndpoint>,
     /// <p>A set of properties that are associated with the event.</p>
+    #[doc(hidden)]
     pub events:
         std::option::Option<std::collections::HashMap<std::string::String, crate::model::Event>>,
 }
@@ -25789,11 +27326,10 @@ impl std::fmt::Debug for EventsBatch {
         formatter.finish()
     }
 }
-/// See [`EventsBatch`](crate::model::EventsBatch)
+/// See [`EventsBatch`](crate::model::EventsBatch).
 pub mod events_batch {
 
-    /// A builder for [`EventsBatch`](crate::model::EventsBatch)
-    #[non_exhaustive]
+    /// A builder for [`EventsBatch`](crate::model::EventsBatch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint: std::option::Option<crate::model::PublicEndpoint>,
@@ -25836,7 +27372,7 @@ pub mod events_batch {
             self.events = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventsBatch`](crate::model::EventsBatch)
+        /// Consumes the builder and constructs a [`EventsBatch`](crate::model::EventsBatch).
         pub fn build(self) -> crate::model::EventsBatch {
             crate::model::EventsBatch {
                 endpoint: self.endpoint,
@@ -25846,7 +27382,7 @@ pub mod events_batch {
     }
 }
 impl EventsBatch {
-    /// Creates a new builder-style object to manufacture [`EventsBatch`](crate::model::EventsBatch)
+    /// Creates a new builder-style object to manufacture [`EventsBatch`](crate::model::EventsBatch).
     pub fn builder() -> crate::model::events_batch::Builder {
         crate::model::events_batch::Builder::default()
     }
@@ -25857,25 +27393,35 @@ impl EventsBatch {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Event {
     /// <p>The package name of the app that's recording the event.</p>
+    #[doc(hidden)]
     pub app_package_name: std::option::Option<std::string::String>,
     /// <p>The title of the app that's recording the event.</p>
+    #[doc(hidden)]
     pub app_title: std::option::Option<std::string::String>,
     /// <p>The version number of the app that's recording the event.</p>
+    #[doc(hidden)]
     pub app_version_code: std::option::Option<std::string::String>,
     /// <p>One or more custom attributes that are associated with the event.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The version of the SDK that's running on the client device.</p>
+    #[doc(hidden)]
     pub client_sdk_version: std::option::Option<std::string::String>,
     /// <p>The name of the event.</p>
+    #[doc(hidden)]
     pub event_type: std::option::Option<std::string::String>,
     /// <p>One or more custom metrics that are associated with the event.</p>
+    #[doc(hidden)]
     pub metrics: std::option::Option<std::collections::HashMap<std::string::String, f64>>,
     /// <p>The name of the SDK that's being used to record the event.</p>
+    #[doc(hidden)]
     pub sdk_name: std::option::Option<std::string::String>,
     /// <p>Information about the session in which the event occurred.</p>
+    #[doc(hidden)]
     pub session: std::option::Option<crate::model::Session>,
     /// <p>The date and time, in ISO 8601 format, when the event occurred.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<std::string::String>,
 }
 impl Event {
@@ -25941,11 +27487,10 @@ impl std::fmt::Debug for Event {
         formatter.finish()
     }
 }
-/// See [`Event`](crate::model::Event)
+/// See [`Event`](crate::model::Event).
 pub mod event {
 
-    /// A builder for [`Event`](crate::model::Event)
-    #[non_exhaustive]
+    /// A builder for [`Event`](crate::model::Event).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_package_name: std::option::Option<std::string::String>,
@@ -26096,7 +27641,7 @@ pub mod event {
             self.timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`Event`](crate::model::Event)
+        /// Consumes the builder and constructs a [`Event`](crate::model::Event).
         pub fn build(self) -> crate::model::Event {
             crate::model::Event {
                 app_package_name: self.app_package_name,
@@ -26114,7 +27659,7 @@ pub mod event {
     }
 }
 impl Event {
-    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event)
+    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event).
     pub fn builder() -> crate::model::event::Builder {
         crate::model::event::Builder::default()
     }
@@ -26125,12 +27670,16 @@ impl Event {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Session {
     /// <p>The duration of the session, in milliseconds.</p>
+    #[doc(hidden)]
     pub duration: i32,
     /// <p>The unique identifier for the session.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The date and time when the session began.</p>
+    #[doc(hidden)]
     pub start_timestamp: std::option::Option<std::string::String>,
     /// <p>The date and time when the session ended.</p>
+    #[doc(hidden)]
     pub stop_timestamp: std::option::Option<std::string::String>,
 }
 impl Session {
@@ -26161,11 +27710,10 @@ impl std::fmt::Debug for Session {
         formatter.finish()
     }
 }
-/// See [`Session`](crate::model::Session)
+/// See [`Session`](crate::model::Session).
 pub mod session {
 
-    /// A builder for [`Session`](crate::model::Session)
-    #[non_exhaustive]
+    /// A builder for [`Session`](crate::model::Session).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) duration: std::option::Option<i32>,
@@ -26220,7 +27768,7 @@ pub mod session {
             self.stop_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`Session`](crate::model::Session)
+        /// Consumes the builder and constructs a [`Session`](crate::model::Session).
         pub fn build(self) -> crate::model::Session {
             crate::model::Session {
                 duration: self.duration.unwrap_or_default(),
@@ -26232,7 +27780,7 @@ pub mod session {
     }
 }
 impl Session {
-    /// Creates a new builder-style object to manufacture [`Session`](crate::model::Session)
+    /// Creates a new builder-style object to manufacture [`Session`](crate::model::Session).
     pub fn builder() -> crate::model::session::Builder {
         crate::model::session::Builder::default()
     }
@@ -26243,29 +27791,40 @@ impl Session {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublicEndpoint {
     /// <p>The unique identifier for the recipient, such as a device token, email address, or mobile phone number.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
     /// <p>One or more custom attributes that describe the endpoint by associating a name with an array of values. You can use these attributes as filter criteria when you create segments.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The channel that's used when sending messages or push notifications to the endpoint.</p>
+    #[doc(hidden)]
     pub channel_type: std::option::Option<crate::model::ChannelType>,
     /// <p>The demographic information for the endpoint, such as the time zone and platform.</p>
+    #[doc(hidden)]
     pub demographic: std::option::Option<crate::model::EndpointDemographic>,
     /// <p>The date and time, in ISO 8601 format, when the endpoint was last updated.</p>
+    #[doc(hidden)]
     pub effective_date: std::option::Option<std::string::String>,
     /// <p>Specifies whether to send messages or push notifications to the endpoint. Valid values are: ACTIVE, messages are sent to the endpoint; and, INACTIVE, messages aren’t sent to the endpoint.</p>
     /// <p>Amazon Pinpoint automatically sets this value to ACTIVE when you create an endpoint or update an existing endpoint. Amazon Pinpoint automatically sets this value to INACTIVE if you update another endpoint that has the same address specified by the Address property.</p>
+    #[doc(hidden)]
     pub endpoint_status: std::option::Option<std::string::String>,
     /// <p>The geographic information for the endpoint.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::EndpointLocation>,
     /// <p>One or more custom metrics that your app reports to Amazon Pinpoint for the endpoint.</p>
+    #[doc(hidden)]
     pub metrics: std::option::Option<std::collections::HashMap<std::string::String, f64>>,
     /// <p>Specifies whether the user who's associated with the endpoint has opted out of receiving messages and push notifications from you. Possible values are: ALL, the user has opted out and doesn't want to receive any messages or push notifications; and, NONE, the user hasn't opted out and wants to receive all messages and push notifications.</p>
+    #[doc(hidden)]
     pub opt_out: std::option::Option<std::string::String>,
     /// <p>A unique identifier that's generated each time the endpoint is updated.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>One or more custom user attributes that your app reports to Amazon Pinpoint for the user who's associated with the endpoint.</p>
+    #[doc(hidden)]
     pub user: std::option::Option<crate::model::EndpointUser>,
 }
 impl PublicEndpoint {
@@ -26338,11 +27897,10 @@ impl std::fmt::Debug for PublicEndpoint {
         formatter.finish()
     }
 }
-/// See [`PublicEndpoint`](crate::model::PublicEndpoint)
+/// See [`PublicEndpoint`](crate::model::PublicEndpoint).
 pub mod public_endpoint {
 
-    /// A builder for [`PublicEndpoint`](crate::model::PublicEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`PublicEndpoint`](crate::model::PublicEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) address: std::option::Option<std::string::String>,
@@ -26512,7 +28070,7 @@ pub mod public_endpoint {
             self.user = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublicEndpoint`](crate::model::PublicEndpoint)
+        /// Consumes the builder and constructs a [`PublicEndpoint`](crate::model::PublicEndpoint).
         pub fn build(self) -> crate::model::PublicEndpoint {
             crate::model::PublicEndpoint {
                 address: self.address,
@@ -26531,7 +28089,7 @@ pub mod public_endpoint {
     }
 }
 impl PublicEndpoint {
-    /// Creates a new builder-style object to manufacture [`PublicEndpoint`](crate::model::PublicEndpoint)
+    /// Creates a new builder-style object to manufacture [`PublicEndpoint`](crate::model::PublicEndpoint).
     pub fn builder() -> crate::model::public_endpoint::Builder {
         crate::model::public_endpoint::Builder::default()
     }
@@ -26542,32 +28100,46 @@ impl PublicEndpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NumberValidateResponse {
     /// <p>The carrier or service provider that the phone number is currently registered with. In some countries and regions, this value may be the carrier or service provider that the phone number was originally registered with.</p>
+    #[doc(hidden)]
     pub carrier: std::option::Option<std::string::String>,
     /// <p>The name of the city where the phone number was originally registered.</p>
+    #[doc(hidden)]
     pub city: std::option::Option<std::string::String>,
     /// <p>The cleansed phone number, in E.164 format, for the location where the phone number was originally registered.</p>
+    #[doc(hidden)]
     pub cleansed_phone_number_e164: std::option::Option<std::string::String>,
     /// <p>The cleansed phone number, in the format for the location where the phone number was originally registered.</p>
+    #[doc(hidden)]
     pub cleansed_phone_number_national: std::option::Option<std::string::String>,
     /// <p>The name of the country or region where the phone number was originally registered.</p>
+    #[doc(hidden)]
     pub country: std::option::Option<std::string::String>,
     /// <p>The two-character code, in ISO 3166-1 alpha-2 format, for the country or region where the phone number was originally registered.</p>
+    #[doc(hidden)]
     pub country_code_iso2: std::option::Option<std::string::String>,
     /// <p>The numeric code for the country or region where the phone number was originally registered.</p>
+    #[doc(hidden)]
     pub country_code_numeric: std::option::Option<std::string::String>,
     /// <p>The name of the county where the phone number was originally registered.</p>
+    #[doc(hidden)]
     pub county: std::option::Option<std::string::String>,
     /// <p>The two-character code, in ISO 3166-1 alpha-2 format, that was sent in the request body.</p>
+    #[doc(hidden)]
     pub original_country_code_iso2: std::option::Option<std::string::String>,
     /// <p>The phone number that was sent in the request body.</p>
+    #[doc(hidden)]
     pub original_phone_number: std::option::Option<std::string::String>,
     /// <p>The description of the phone type. Valid values are: MOBILE, LANDLINE, VOIP, INVALID, PREPAID, and OTHER.</p>
+    #[doc(hidden)]
     pub phone_type: std::option::Option<std::string::String>,
     /// <p>The phone type, represented by an integer. Valid values are: 0 (mobile), 1 (landline), 2 (VoIP), 3 (invalid), 4 (other), and 5 (prepaid).</p>
+    #[doc(hidden)]
     pub phone_type_code: i32,
     /// <p>The time zone for the location where the phone number was originally registered.</p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
     /// <p>The postal or ZIP code for the location where the phone number was originally registered.</p>
+    #[doc(hidden)]
     pub zip_code: std::option::Option<std::string::String>,
 }
 impl NumberValidateResponse {
@@ -26657,11 +28229,10 @@ impl std::fmt::Debug for NumberValidateResponse {
         formatter.finish()
     }
 }
-/// See [`NumberValidateResponse`](crate::model::NumberValidateResponse)
+/// See [`NumberValidateResponse`](crate::model::NumberValidateResponse).
 pub mod number_validate_response {
 
-    /// A builder for [`NumberValidateResponse`](crate::model::NumberValidateResponse)
-    #[non_exhaustive]
+    /// A builder for [`NumberValidateResponse`](crate::model::NumberValidateResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) carrier: std::option::Option<std::string::String>,
@@ -26841,7 +28412,7 @@ pub mod number_validate_response {
             self.zip_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`NumberValidateResponse`](crate::model::NumberValidateResponse)
+        /// Consumes the builder and constructs a [`NumberValidateResponse`](crate::model::NumberValidateResponse).
         pub fn build(self) -> crate::model::NumberValidateResponse {
             crate::model::NumberValidateResponse {
                 carrier: self.carrier,
@@ -26863,7 +28434,7 @@ pub mod number_validate_response {
     }
 }
 impl NumberValidateResponse {
-    /// Creates a new builder-style object to manufacture [`NumberValidateResponse`](crate::model::NumberValidateResponse)
+    /// Creates a new builder-style object to manufacture [`NumberValidateResponse`](crate::model::NumberValidateResponse).
     pub fn builder() -> crate::model::number_validate_response::Builder {
         crate::model::number_validate_response::Builder::default()
     }
@@ -26874,8 +28445,10 @@ impl NumberValidateResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NumberValidateRequest {
     /// <p>The two-character code, in ISO 3166-1 alpha-2 format, for the country or region where the phone number was originally registered.</p>
+    #[doc(hidden)]
     pub iso_country_code: std::option::Option<std::string::String>,
     /// <p>The phone number to retrieve information about. The phone number that you provide should include a valid numeric country code. Otherwise, the operation might result in an error.</p>
+    #[doc(hidden)]
     pub phone_number: std::option::Option<std::string::String>,
 }
 impl NumberValidateRequest {
@@ -26896,11 +28469,10 @@ impl std::fmt::Debug for NumberValidateRequest {
         formatter.finish()
     }
 }
-/// See [`NumberValidateRequest`](crate::model::NumberValidateRequest)
+/// See [`NumberValidateRequest`](crate::model::NumberValidateRequest).
 pub mod number_validate_request {
 
-    /// A builder for [`NumberValidateRequest`](crate::model::NumberValidateRequest)
-    #[non_exhaustive]
+    /// A builder for [`NumberValidateRequest`](crate::model::NumberValidateRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) iso_country_code: std::option::Option<std::string::String>,
@@ -26930,7 +28502,7 @@ pub mod number_validate_request {
             self.phone_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`NumberValidateRequest`](crate::model::NumberValidateRequest)
+        /// Consumes the builder and constructs a [`NumberValidateRequest`](crate::model::NumberValidateRequest).
         pub fn build(self) -> crate::model::NumberValidateRequest {
             crate::model::NumberValidateRequest {
                 iso_country_code: self.iso_country_code,
@@ -26940,7 +28512,7 @@ pub mod number_validate_request {
     }
 }
 impl NumberValidateRequest {
-    /// Creates a new builder-style object to manufacture [`NumberValidateRequest`](crate::model::NumberValidateRequest)
+    /// Creates a new builder-style object to manufacture [`NumberValidateRequest`](crate::model::NumberValidateRequest).
     pub fn builder() -> crate::model::number_validate_request::Builder {
         crate::model::number_validate_request::Builder::default()
     }
@@ -26951,12 +28523,16 @@ impl NumberValidateRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TemplateVersionsResponse {
     /// <p>An array of responses, one for each version of the message template.</p>
+    #[doc(hidden)]
     pub item: std::option::Option<std::vec::Vec<crate::model::TemplateVersionResponse>>,
     /// <p>The message that's returned from the API for the request to retrieve information about all the versions of the message template.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the request to retrieve information about all the versions of the message template.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
 }
 impl TemplateVersionsResponse {
@@ -26987,11 +28563,10 @@ impl std::fmt::Debug for TemplateVersionsResponse {
         formatter.finish()
     }
 }
-/// See [`TemplateVersionsResponse`](crate::model::TemplateVersionsResponse)
+/// See [`TemplateVersionsResponse`](crate::model::TemplateVersionsResponse).
 pub mod template_versions_response {
 
-    /// A builder for [`TemplateVersionsResponse`](crate::model::TemplateVersionsResponse)
-    #[non_exhaustive]
+    /// A builder for [`TemplateVersionsResponse`](crate::model::TemplateVersionsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item: std::option::Option<std::vec::Vec<crate::model::TemplateVersionResponse>>,
@@ -27049,7 +28624,7 @@ pub mod template_versions_response {
             self.request_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`TemplateVersionsResponse`](crate::model::TemplateVersionsResponse)
+        /// Consumes the builder and constructs a [`TemplateVersionsResponse`](crate::model::TemplateVersionsResponse).
         pub fn build(self) -> crate::model::TemplateVersionsResponse {
             crate::model::TemplateVersionsResponse {
                 item: self.item,
@@ -27061,7 +28636,7 @@ pub mod template_versions_response {
     }
 }
 impl TemplateVersionsResponse {
-    /// Creates a new builder-style object to manufacture [`TemplateVersionsResponse`](crate::model::TemplateVersionsResponse)
+    /// Creates a new builder-style object to manufacture [`TemplateVersionsResponse`](crate::model::TemplateVersionsResponse).
     pub fn builder() -> crate::model::template_versions_response::Builder {
         crate::model::template_versions_response::Builder::default()
     }
@@ -27072,18 +28647,25 @@ impl TemplateVersionsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TemplateVersionResponse {
     /// <p>The date, in ISO 8601 format, when the version of the message template was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>A JSON object that specifies the default values that are used for message variables in the version of the message template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the default value for that variable.</p>
+    #[doc(hidden)]
     pub default_substitutions: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the version of the message template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The custom description of the version of the message template.</p>
+    #[doc(hidden)]
     pub template_description: std::option::Option<std::string::String>,
     /// <p>The name of the message template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The type of channel that the message template is designed for. Possible values are: EMAIL, PUSH, SMS, and VOICE.</p>
+    #[doc(hidden)]
     pub template_type: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the version of the message template. This value is an integer that Amazon Pinpoint automatically increments and assigns to each new version of a template.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl TemplateVersionResponse {
@@ -27129,11 +28711,10 @@ impl std::fmt::Debug for TemplateVersionResponse {
         formatter.finish()
     }
 }
-/// See [`TemplateVersionResponse`](crate::model::TemplateVersionResponse)
+/// See [`TemplateVersionResponse`](crate::model::TemplateVersionResponse).
 pub mod template_version_response {
 
-    /// A builder for [`TemplateVersionResponse`](crate::model::TemplateVersionResponse)
-    #[non_exhaustive]
+    /// A builder for [`TemplateVersionResponse`](crate::model::TemplateVersionResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_date: std::option::Option<std::string::String>,
@@ -27233,7 +28814,7 @@ pub mod template_version_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`TemplateVersionResponse`](crate::model::TemplateVersionResponse)
+        /// Consumes the builder and constructs a [`TemplateVersionResponse`](crate::model::TemplateVersionResponse).
         pub fn build(self) -> crate::model::TemplateVersionResponse {
             crate::model::TemplateVersionResponse {
                 creation_date: self.creation_date,
@@ -27248,7 +28829,7 @@ pub mod template_version_response {
     }
 }
 impl TemplateVersionResponse {
-    /// Creates a new builder-style object to manufacture [`TemplateVersionResponse`](crate::model::TemplateVersionResponse)
+    /// Creates a new builder-style object to manufacture [`TemplateVersionResponse`](crate::model::TemplateVersionResponse).
     pub fn builder() -> crate::model::template_version_response::Builder {
         crate::model::template_version_response::Builder::default()
     }
@@ -27259,8 +28840,10 @@ impl TemplateVersionResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TemplatesResponse {
     /// <p>An array of responses, one for each message template that's associated with your Amazon Pinpoint account and meets any filter criteria that you specified in the request.</p>
+    #[doc(hidden)]
     pub item: std::option::Option<std::vec::Vec<crate::model::TemplateResponse>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl TemplatesResponse {
@@ -27281,11 +28864,10 @@ impl std::fmt::Debug for TemplatesResponse {
         formatter.finish()
     }
 }
-/// See [`TemplatesResponse`](crate::model::TemplatesResponse)
+/// See [`TemplatesResponse`](crate::model::TemplatesResponse).
 pub mod templates_response {
 
-    /// A builder for [`TemplatesResponse`](crate::model::TemplatesResponse)
-    #[non_exhaustive]
+    /// A builder for [`TemplatesResponse`](crate::model::TemplatesResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item: std::option::Option<std::vec::Vec<crate::model::TemplateResponse>>,
@@ -27321,7 +28903,7 @@ pub mod templates_response {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`TemplatesResponse`](crate::model::TemplatesResponse)
+        /// Consumes the builder and constructs a [`TemplatesResponse`](crate::model::TemplatesResponse).
         pub fn build(self) -> crate::model::TemplatesResponse {
             crate::model::TemplatesResponse {
                 item: self.item,
@@ -27331,7 +28913,7 @@ pub mod templates_response {
     }
 }
 impl TemplatesResponse {
-    /// Creates a new builder-style object to manufacture [`TemplatesResponse`](crate::model::TemplatesResponse)
+    /// Creates a new builder-style object to manufacture [`TemplatesResponse`](crate::model::TemplatesResponse).
     pub fn builder() -> crate::model::templates_response::Builder {
         crate::model::templates_response::Builder::default()
     }
@@ -27342,23 +28924,32 @@ impl TemplatesResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TemplateResponse {
     /// <p>The Amazon Resource Name (ARN) of the message template. This value isn't included in a TemplateResponse object. To retrieve the ARN of a template, use the GetEmailTemplate, GetPushTemplate, GetSmsTemplate, or GetVoiceTemplate operation, depending on the type of template that you want to retrieve the ARN for.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the message template was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The JSON object that specifies the default values that are used for message variables in the message template. This object isn't included in a TemplateResponse object. To retrieve this object for a template, use the GetEmailTemplate, GetPushTemplate, GetSmsTemplate, or GetVoiceTemplate operation, depending on the type of template that you want to retrieve the object for.</p>
+    #[doc(hidden)]
     pub default_substitutions: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the message template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>A map of key-value pairs that identifies the tags that are associated with the message template. This object isn't included in a TemplateResponse object. To retrieve this object for a template, use the GetEmailTemplate, GetPushTemplate, GetSmsTemplate, or GetVoiceTemplate operation, depending on the type of template that you want to retrieve the object for.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The custom description of the message template. This value isn't included in a TemplateResponse object. To retrieve the description of a template, use the GetEmailTemplate, GetPushTemplate, GetSmsTemplate, or GetVoiceTemplate operation, depending on the type of template that you want to retrieve the description for.</p>
+    #[doc(hidden)]
     pub template_description: std::option::Option<std::string::String>,
     /// <p>The name of the message template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The type of channel that the message template is designed for. Possible values are: EMAIL, PUSH, SMS, and VOICE.</p>
+    #[doc(hidden)]
     pub template_type: std::option::Option<crate::model::TemplateType>,
     /// <p>The unique identifier, as an integer, for the active version of the message template.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl TemplateResponse {
@@ -27417,11 +29008,10 @@ impl std::fmt::Debug for TemplateResponse {
         formatter.finish()
     }
 }
-/// See [`TemplateResponse`](crate::model::TemplateResponse)
+/// See [`TemplateResponse`](crate::model::TemplateResponse).
 pub mod template_response {
 
-    /// A builder for [`TemplateResponse`](crate::model::TemplateResponse)
-    #[non_exhaustive]
+    /// A builder for [`TemplateResponse`](crate::model::TemplateResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -27560,7 +29150,7 @@ pub mod template_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`TemplateResponse`](crate::model::TemplateResponse)
+        /// Consumes the builder and constructs a [`TemplateResponse`](crate::model::TemplateResponse).
         pub fn build(self) -> crate::model::TemplateResponse {
             crate::model::TemplateResponse {
                 arn: self.arn,
@@ -27577,7 +29167,7 @@ pub mod template_response {
     }
 }
 impl TemplateResponse {
-    /// Creates a new builder-style object to manufacture [`TemplateResponse`](crate::model::TemplateResponse)
+    /// Creates a new builder-style object to manufacture [`TemplateResponse`](crate::model::TemplateResponse).
     pub fn builder() -> crate::model::template_response::Builder {
         crate::model::template_response::Builder::default()
     }
@@ -27655,8 +29245,10 @@ impl AsRef<str> for TemplateType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JourneysResponse {
     /// <p>An array of responses, one for each journey that's associated with the application.</p>
+    #[doc(hidden)]
     pub item: std::option::Option<std::vec::Vec<crate::model::JourneyResponse>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl JourneysResponse {
@@ -27677,11 +29269,10 @@ impl std::fmt::Debug for JourneysResponse {
         formatter.finish()
     }
 }
-/// See [`JourneysResponse`](crate::model::JourneysResponse)
+/// See [`JourneysResponse`](crate::model::JourneysResponse).
 pub mod journeys_response {
 
-    /// A builder for [`JourneysResponse`](crate::model::JourneysResponse)
-    #[non_exhaustive]
+    /// A builder for [`JourneysResponse`](crate::model::JourneysResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item: std::option::Option<std::vec::Vec<crate::model::JourneyResponse>>,
@@ -27717,7 +29308,7 @@ pub mod journeys_response {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`JourneysResponse`](crate::model::JourneysResponse)
+        /// Consumes the builder and constructs a [`JourneysResponse`](crate::model::JourneysResponse).
         pub fn build(self) -> crate::model::JourneysResponse {
             crate::model::JourneysResponse {
                 item: self.item,
@@ -27727,7 +29318,7 @@ pub mod journeys_response {
     }
 }
 impl JourneysResponse {
-    /// Creates a new builder-style object to manufacture [`JourneysResponse`](crate::model::JourneysResponse)
+    /// Creates a new builder-style object to manufacture [`JourneysResponse`](crate::model::JourneysResponse).
     pub fn builder() -> crate::model::journeys_response::Builder {
         crate::model::journeys_response::Builder::default()
     }
@@ -27738,29 +29329,41 @@ impl JourneysResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VoiceTemplateResponse {
     /// <p>The Amazon Resource Name (ARN) of the message template.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The text of the script that's used in messages that are based on the message template, in plain text format.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the message template was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The JSON object that specifies the default values that are used for message variables in the message template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the default value for that variable.</p>
+    #[doc(hidden)]
     pub default_substitutions: std::option::Option<std::string::String>,
     /// <p>The code for the language that's used when synthesizing the text of the script in messages that are based on the message template. For a list of supported languages and the code for each one, see the <a href="https://docs.aws.amazon.com/polly/latest/dg/what-is.html">Amazon Polly Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the message template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>A string-to-string map of key-value pairs that identifies the tags that are associated with the message template. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The custom description of the message template.</p>
+    #[doc(hidden)]
     pub template_description: std::option::Option<std::string::String>,
     /// <p>The name of the message template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The type of channel that the message template is designed for. For a voice template, this value is VOICE.</p>
+    #[doc(hidden)]
     pub template_type: std::option::Option<crate::model::TemplateType>,
     /// <p>The unique identifier, as an integer, for the active version of the message template, or the version of the template that you specified by using the version parameter in your request.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The name of the voice that's used when delivering messages that are based on the message template. For a list of supported voices, see the <a href="https://docs.aws.amazon.com/polly/latest/dg/what-is.html">Amazon Polly Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub voice_id: std::option::Option<std::string::String>,
 }
 impl VoiceTemplateResponse {
@@ -27834,11 +29437,10 @@ impl std::fmt::Debug for VoiceTemplateResponse {
         formatter.finish()
     }
 }
-/// See [`VoiceTemplateResponse`](crate::model::VoiceTemplateResponse)
+/// See [`VoiceTemplateResponse`](crate::model::VoiceTemplateResponse).
 pub mod voice_template_response {
 
-    /// A builder for [`VoiceTemplateResponse`](crate::model::VoiceTemplateResponse)
-    #[non_exhaustive]
+    /// A builder for [`VoiceTemplateResponse`](crate::model::VoiceTemplateResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -28013,7 +29615,7 @@ pub mod voice_template_response {
             self.voice_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`VoiceTemplateResponse`](crate::model::VoiceTemplateResponse)
+        /// Consumes the builder and constructs a [`VoiceTemplateResponse`](crate::model::VoiceTemplateResponse).
         pub fn build(self) -> crate::model::VoiceTemplateResponse {
             crate::model::VoiceTemplateResponse {
                 arn: self.arn,
@@ -28033,7 +29635,7 @@ pub mod voice_template_response {
     }
 }
 impl VoiceTemplateResponse {
-    /// Creates a new builder-style object to manufacture [`VoiceTemplateResponse`](crate::model::VoiceTemplateResponse)
+    /// Creates a new builder-style object to manufacture [`VoiceTemplateResponse`](crate::model::VoiceTemplateResponse).
     pub fn builder() -> crate::model::voice_template_response::Builder {
         crate::model::voice_template_response::Builder::default()
     }
@@ -28044,6 +29646,7 @@ impl VoiceTemplateResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointsResponse {
     /// <p>An array of responses, one for each endpoint that's associated with the user ID.</p>
+    #[doc(hidden)]
     pub item: std::option::Option<std::vec::Vec<crate::model::EndpointResponse>>,
 }
 impl EndpointsResponse {
@@ -28059,11 +29662,10 @@ impl std::fmt::Debug for EndpointsResponse {
         formatter.finish()
     }
 }
-/// See [`EndpointsResponse`](crate::model::EndpointsResponse)
+/// See [`EndpointsResponse`](crate::model::EndpointsResponse).
 pub mod endpoints_response {
 
-    /// A builder for [`EndpointsResponse`](crate::model::EndpointsResponse)
-    #[non_exhaustive]
+    /// A builder for [`EndpointsResponse`](crate::model::EndpointsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item: std::option::Option<std::vec::Vec<crate::model::EndpointResponse>>,
@@ -28088,14 +29690,14 @@ pub mod endpoints_response {
             self.item = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointsResponse`](crate::model::EndpointsResponse)
+        /// Consumes the builder and constructs a [`EndpointsResponse`](crate::model::EndpointsResponse).
         pub fn build(self) -> crate::model::EndpointsResponse {
             crate::model::EndpointsResponse { item: self.item }
         }
     }
 }
 impl EndpointsResponse {
-    /// Creates a new builder-style object to manufacture [`EndpointsResponse`](crate::model::EndpointsResponse)
+    /// Creates a new builder-style object to manufacture [`EndpointsResponse`](crate::model::EndpointsResponse).
     pub fn builder() -> crate::model::endpoints_response::Builder {
         crate::model::endpoints_response::Builder::default()
     }
@@ -28106,37 +29708,52 @@ impl EndpointsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointResponse {
     /// <p>The destination address for messages or push notifications that you send to the endpoint. The address varies by channel. For example, the address for a push-notification channel is typically the token provided by a push notification service, such as an Apple Push Notification service (APNs) device token or a Firebase Cloud Messaging (FCM) registration token. The address for the SMS channel is a phone number in E.164 format, such as +12065550100. The address for the email channel is an email address.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the application that's associated with the endpoint.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>One or more custom attributes that describe the endpoint by associating a name with an array of values. For example, the value of a custom attribute named Interests might be: ["Science", "Music", "Travel"]. You can use these attributes as filter criteria when you create segments.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The channel that's used when sending messages or push notifications to the endpoint.</p>
+    #[doc(hidden)]
     pub channel_type: std::option::Option<crate::model::ChannelType>,
     /// <p>A number from 0-99 that represents the cohort that the endpoint is assigned to. Endpoints are grouped into cohorts randomly, and each cohort contains approximately 1 percent of the endpoints for an application. Amazon Pinpoint assigns cohorts to the holdout or treatment allocations for campaigns.</p>
+    #[doc(hidden)]
     pub cohort_id: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format, when the endpoint was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The demographic information for the endpoint, such as the time zone and platform.</p>
+    #[doc(hidden)]
     pub demographic: std::option::Option<crate::model::EndpointDemographic>,
     /// <p>The date and time, in ISO 8601 format, when the endpoint was last updated.</p>
+    #[doc(hidden)]
     pub effective_date: std::option::Option<std::string::String>,
     /// <p>Specifies whether messages or push notifications are sent to the endpoint. Possible values are: ACTIVE, messages are sent to the endpoint; and, INACTIVE, messages aren’t sent to the endpoint.</p>
     /// <p>Amazon Pinpoint automatically sets this value to ACTIVE when you create an endpoint or update an existing endpoint. Amazon Pinpoint automatically sets this value to INACTIVE if you update another endpoint that has the same address specified by the Address property.</p>
+    #[doc(hidden)]
     pub endpoint_status: std::option::Option<std::string::String>,
     /// <p>The unique identifier that you assigned to the endpoint. The identifier should be a globally unique identifier (GUID) to ensure that it doesn't conflict with other endpoint identifiers that are associated with the application.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The geographic information for the endpoint.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::EndpointLocation>,
     /// <p>One or more custom metrics that your app reports to Amazon Pinpoint for the endpoint.</p>
+    #[doc(hidden)]
     pub metrics: std::option::Option<std::collections::HashMap<std::string::String, f64>>,
     /// <p>Specifies whether the user who's associated with the endpoint has opted out of receiving messages and push notifications from you. Possible values are: ALL, the user has opted out and doesn't want to receive any messages or push notifications; and, NONE, the user hasn't opted out and wants to receive all messages and push notifications.</p>
+    #[doc(hidden)]
     pub opt_out: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the most recent request to update the endpoint.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>One or more custom user attributes that your app reports to Amazon Pinpoint for the user who's associated with the endpoint.</p>
+    #[doc(hidden)]
     pub user: std::option::Option<crate::model::EndpointUser>,
 }
 impl EndpointResponse {
@@ -28229,11 +29846,10 @@ impl std::fmt::Debug for EndpointResponse {
         formatter.finish()
     }
 }
-/// See [`EndpointResponse`](crate::model::EndpointResponse)
+/// See [`EndpointResponse`](crate::model::EndpointResponse).
 pub mod endpoint_response {
 
-    /// A builder for [`EndpointResponse`](crate::model::EndpointResponse)
-    #[non_exhaustive]
+    /// A builder for [`EndpointResponse`](crate::model::EndpointResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) address: std::option::Option<std::string::String>,
@@ -28453,7 +30069,7 @@ pub mod endpoint_response {
             self.user = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointResponse`](crate::model::EndpointResponse)
+        /// Consumes the builder and constructs a [`EndpointResponse`](crate::model::EndpointResponse).
         pub fn build(self) -> crate::model::EndpointResponse {
             crate::model::EndpointResponse {
                 address: self.address,
@@ -28476,7 +30092,7 @@ pub mod endpoint_response {
     }
 }
 impl EndpointResponse {
-    /// Creates a new builder-style object to manufacture [`EndpointResponse`](crate::model::EndpointResponse)
+    /// Creates a new builder-style object to manufacture [`EndpointResponse`](crate::model::EndpointResponse).
     pub fn builder() -> crate::model::endpoint_response::Builder {
         crate::model::endpoint_response::Builder::default()
     }
@@ -28487,27 +30103,38 @@ impl EndpointResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SmsTemplateResponse {
     /// <p>The Amazon Resource Name (ARN) of the message template.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The message body that's used in text messages that are based on the message template.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the message template was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The JSON object that specifies the default values that are used for message variables in the message template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the default value for that variable.</p>
+    #[doc(hidden)]
     pub default_substitutions: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the message template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the recommender model that's used by the message template.</p>
+    #[doc(hidden)]
     pub recommender_id: std::option::Option<std::string::String>,
     /// <p>A string-to-string map of key-value pairs that identifies the tags that are associated with the message template. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The custom description of the message template.</p>
+    #[doc(hidden)]
     pub template_description: std::option::Option<std::string::String>,
     /// <p>The name of the message template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The type of channel that the message template is designed for. For an SMS template, this value is SMS.</p>
+    #[doc(hidden)]
     pub template_type: std::option::Option<crate::model::TemplateType>,
     /// <p>The unique identifier, as an integer, for the active version of the message template, or the version of the template that you specified by using the version parameter in your request.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl SmsTemplateResponse {
@@ -28576,11 +30203,10 @@ impl std::fmt::Debug for SmsTemplateResponse {
         formatter.finish()
     }
 }
-/// See [`SmsTemplateResponse`](crate::model::SmsTemplateResponse)
+/// See [`SmsTemplateResponse`](crate::model::SmsTemplateResponse).
 pub mod sms_template_response {
 
-    /// A builder for [`SmsTemplateResponse`](crate::model::SmsTemplateResponse)
-    #[non_exhaustive]
+    /// A builder for [`SmsTemplateResponse`](crate::model::SmsTemplateResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -28744,7 +30370,7 @@ pub mod sms_template_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`SmsTemplateResponse`](crate::model::SmsTemplateResponse)
+        /// Consumes the builder and constructs a [`SmsTemplateResponse`](crate::model::SmsTemplateResponse).
         pub fn build(self) -> crate::model::SmsTemplateResponse {
             crate::model::SmsTemplateResponse {
                 arn: self.arn,
@@ -28763,7 +30389,7 @@ pub mod sms_template_response {
     }
 }
 impl SmsTemplateResponse {
-    /// Creates a new builder-style object to manufacture [`SmsTemplateResponse`](crate::model::SmsTemplateResponse)
+    /// Creates a new builder-style object to manufacture [`SmsTemplateResponse`](crate::model::SmsTemplateResponse).
     pub fn builder() -> crate::model::sms_template_response::Builder {
         crate::model::sms_template_response::Builder::default()
     }
@@ -28774,8 +30400,10 @@ impl SmsTemplateResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SegmentsResponse {
     /// <p>An array of responses, one for each segment that's associated with the application (Segments resource) or each version of a segment that's associated with the application (Segment Versions resource).</p>
+    #[doc(hidden)]
     pub item: std::option::Option<std::vec::Vec<crate::model::SegmentResponse>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl SegmentsResponse {
@@ -28796,11 +30424,10 @@ impl std::fmt::Debug for SegmentsResponse {
         formatter.finish()
     }
 }
-/// See [`SegmentsResponse`](crate::model::SegmentsResponse)
+/// See [`SegmentsResponse`](crate::model::SegmentsResponse).
 pub mod segments_response {
 
-    /// A builder for [`SegmentsResponse`](crate::model::SegmentsResponse)
-    #[non_exhaustive]
+    /// A builder for [`SegmentsResponse`](crate::model::SegmentsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item: std::option::Option<std::vec::Vec<crate::model::SegmentResponse>>,
@@ -28836,7 +30463,7 @@ pub mod segments_response {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`SegmentsResponse`](crate::model::SegmentsResponse)
+        /// Consumes the builder and constructs a [`SegmentsResponse`](crate::model::SegmentsResponse).
         pub fn build(self) -> crate::model::SegmentsResponse {
             crate::model::SegmentsResponse {
                 item: self.item,
@@ -28846,7 +30473,7 @@ pub mod segments_response {
     }
 }
 impl SegmentsResponse {
-    /// Creates a new builder-style object to manufacture [`SegmentsResponse`](crate::model::SegmentsResponse)
+    /// Creates a new builder-style object to manufacture [`SegmentsResponse`](crate::model::SegmentsResponse).
     pub fn builder() -> crate::model::segments_response::Builder {
         crate::model::segments_response::Builder::default()
     }
@@ -28857,8 +30484,10 @@ impl SegmentsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportJobsResponse {
     /// <p>An array of responses, one for each import job that's associated with the application (Import Jobs resource) or segment (Segment Import Jobs resource).</p>
+    #[doc(hidden)]
     pub item: std::option::Option<std::vec::Vec<crate::model::ImportJobResponse>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ImportJobsResponse {
@@ -28879,11 +30508,10 @@ impl std::fmt::Debug for ImportJobsResponse {
         formatter.finish()
     }
 }
-/// See [`ImportJobsResponse`](crate::model::ImportJobsResponse)
+/// See [`ImportJobsResponse`](crate::model::ImportJobsResponse).
 pub mod import_jobs_response {
 
-    /// A builder for [`ImportJobsResponse`](crate::model::ImportJobsResponse)
-    #[non_exhaustive]
+    /// A builder for [`ImportJobsResponse`](crate::model::ImportJobsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item: std::option::Option<std::vec::Vec<crate::model::ImportJobResponse>>,
@@ -28919,7 +30547,7 @@ pub mod import_jobs_response {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportJobsResponse`](crate::model::ImportJobsResponse)
+        /// Consumes the builder and constructs a [`ImportJobsResponse`](crate::model::ImportJobsResponse).
         pub fn build(self) -> crate::model::ImportJobsResponse {
             crate::model::ImportJobsResponse {
                 item: self.item,
@@ -28929,7 +30557,7 @@ pub mod import_jobs_response {
     }
 }
 impl ImportJobsResponse {
-    /// Creates a new builder-style object to manufacture [`ImportJobsResponse`](crate::model::ImportJobsResponse)
+    /// Creates a new builder-style object to manufacture [`ImportJobsResponse`](crate::model::ImportJobsResponse).
     pub fn builder() -> crate::model::import_jobs_response::Builder {
         crate::model::import_jobs_response::Builder::default()
     }
@@ -28940,30 +30568,43 @@ impl ImportJobsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportJobResponse {
     /// <p>The unique identifier for the application that's associated with the import job.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The number of pieces that were processed successfully (completed) by the import job, as of the time of the request.</p>
+    #[doc(hidden)]
     pub completed_pieces: i32,
     /// <p>The date, in ISO 8601 format, when the import job was completed.</p>
+    #[doc(hidden)]
     pub completion_date: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the import job was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The resource settings that apply to the import job.</p>
+    #[doc(hidden)]
     pub definition: std::option::Option<crate::model::ImportJobResource>,
     /// <p>The number of pieces that weren't processed successfully (failed) by the import job, as of the time of the request.</p>
+    #[doc(hidden)]
     pub failed_pieces: i32,
     /// <p>An array of entries, one for each of the first 100 entries that weren't processed successfully (failed) by the import job, if any.</p>
+    #[doc(hidden)]
     pub failures: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The unique identifier for the import job.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The status of the import job. The job status is FAILED if Amazon Pinpoint wasn't able to process one or more pieces in the job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>The total number of endpoint definitions that weren't processed successfully (failed) by the import job, typically because an error, such as a syntax error, occurred.</p>
+    #[doc(hidden)]
     pub total_failures: i32,
     /// <p>The total number of pieces that must be processed to complete the import job. Each piece consists of an approximately equal portion of the endpoint definitions that are part of the import job.</p>
+    #[doc(hidden)]
     pub total_pieces: i32,
     /// <p>The total number of endpoint definitions that were processed by the import job.</p>
+    #[doc(hidden)]
     pub total_processed: i32,
     /// <p>The job type. This value is IMPORT for import jobs.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
 }
 impl ImportJobResponse {
@@ -29039,11 +30680,10 @@ impl std::fmt::Debug for ImportJobResponse {
         formatter.finish()
     }
 }
-/// See [`ImportJobResponse`](crate::model::ImportJobResponse)
+/// See [`ImportJobResponse`](crate::model::ImportJobResponse).
 pub mod import_job_response {
 
-    /// A builder for [`ImportJobResponse`](crate::model::ImportJobResponse)
-    #[non_exhaustive]
+    /// A builder for [`ImportJobResponse`](crate::model::ImportJobResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -29215,7 +30855,7 @@ pub mod import_job_response {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportJobResponse`](crate::model::ImportJobResponse)
+        /// Consumes the builder and constructs a [`ImportJobResponse`](crate::model::ImportJobResponse).
         pub fn build(self) -> crate::model::ImportJobResponse {
             crate::model::ImportJobResponse {
                 application_id: self.application_id,
@@ -29236,7 +30876,7 @@ pub mod import_job_response {
     }
 }
 impl ImportJobResponse {
-    /// Creates a new builder-style object to manufacture [`ImportJobResponse`](crate::model::ImportJobResponse)
+    /// Creates a new builder-style object to manufacture [`ImportJobResponse`](crate::model::ImportJobResponse).
     pub fn builder() -> crate::model::import_job_response::Builder {
         crate::model::import_job_response::Builder::default()
     }
@@ -29340,15 +30980,20 @@ impl AsRef<str> for JobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportJobResource {
     /// <p>Specifies whether the import job creates a segment that contains the endpoints, when the endpoint definitions are imported.</p>
+    #[doc(hidden)]
     pub define_segment: bool,
     /// <p>(Deprecated) Your AWS account ID, which you assigned to an external ID key in an IAM trust policy. Amazon Pinpoint previously used this value to assume an IAM role when importing endpoint definitions, but we removed this requirement. We don't recommend use of external IDs for IAM roles that are assumed by Amazon Pinpoint.</p>
+    #[doc(hidden)]
     pub external_id: std::option::Option<std::string::String>,
     /// <p>The format of the files that contain the endpoint definitions to import. Valid values are: CSV, for comma-separated values format; and, JSON, for newline-delimited JSON format.</p>
     /// <p>If the files are stored in an Amazon S3 location and that location contains multiple files that use different formats, Amazon Pinpoint imports data only from the files that use the specified format.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::Format>,
     /// <p>Specifies whether the import job registers the endpoints with Amazon Pinpoint, when the endpoint definitions are imported.</p>
+    #[doc(hidden)]
     pub register_endpoints: bool,
     /// <p>The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorizes Amazon Pinpoint to access the Amazon S3 location to import endpoint definitions from.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The URL of the Amazon Simple Storage Service (Amazon S3) bucket that contains the endpoint definitions to import. This location can be a folder or a single file. If the location is a folder, Amazon Pinpoint imports endpoint definitions from the files in this location, including any subfolders that the folder contains.</p>
     /// <p>The URL should be in the following format: s3://<replaceable>
@@ -29358,10 +31003,13 @@ pub struct ImportJobResource {
     /// </replaceable>/<replaceable>
     /// file-name
     /// </replaceable>. The location can end with the key for an individual object or a prefix that qualifies multiple objects.</p>
+    #[doc(hidden)]
     pub s3_url: std::option::Option<std::string::String>,
     /// <p>The identifier for the segment that the import job updates or adds endpoint definitions to, if the import job updates an existing segment.</p>
+    #[doc(hidden)]
     pub segment_id: std::option::Option<std::string::String>,
     /// <p>The custom name for the segment that's created by the import job, if the value of the DefineSegment property is true.</p>
+    #[doc(hidden)]
     pub segment_name: std::option::Option<std::string::String>,
 }
 impl ImportJobResource {
@@ -29420,11 +31068,10 @@ impl std::fmt::Debug for ImportJobResource {
         formatter.finish()
     }
 }
-/// See [`ImportJobResource`](crate::model::ImportJobResource)
+/// See [`ImportJobResource`](crate::model::ImportJobResource).
 pub mod import_job_resource {
 
-    /// A builder for [`ImportJobResource`](crate::model::ImportJobResource)
-    #[non_exhaustive]
+    /// A builder for [`ImportJobResource`](crate::model::ImportJobResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) define_segment: std::option::Option<bool>,
@@ -29533,7 +31180,7 @@ pub mod import_job_resource {
             self.segment_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportJobResource`](crate::model::ImportJobResource)
+        /// Consumes the builder and constructs a [`ImportJobResource`](crate::model::ImportJobResource).
         pub fn build(self) -> crate::model::ImportJobResource {
             crate::model::ImportJobResource {
                 define_segment: self.define_segment.unwrap_or_default(),
@@ -29549,7 +31196,7 @@ pub mod import_job_resource {
     }
 }
 impl ImportJobResource {
-    /// Creates a new builder-style object to manufacture [`ImportJobResource`](crate::model::ImportJobResource)
+    /// Creates a new builder-style object to manufacture [`ImportJobResource`](crate::model::ImportJobResource).
     pub fn builder() -> crate::model::import_job_resource::Builder {
         crate::model::import_job_resource::Builder::default()
     }
@@ -29560,8 +31207,10 @@ impl ImportJobResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportJobsResponse {
     /// <p>An array of responses, one for each export job that's associated with the application (Export Jobs resource) or segment (Segment Export Jobs resource).</p>
+    #[doc(hidden)]
     pub item: std::option::Option<std::vec::Vec<crate::model::ExportJobResponse>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ExportJobsResponse {
@@ -29582,11 +31231,10 @@ impl std::fmt::Debug for ExportJobsResponse {
         formatter.finish()
     }
 }
-/// See [`ExportJobsResponse`](crate::model::ExportJobsResponse)
+/// See [`ExportJobsResponse`](crate::model::ExportJobsResponse).
 pub mod export_jobs_response {
 
-    /// A builder for [`ExportJobsResponse`](crate::model::ExportJobsResponse)
-    #[non_exhaustive]
+    /// A builder for [`ExportJobsResponse`](crate::model::ExportJobsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item: std::option::Option<std::vec::Vec<crate::model::ExportJobResponse>>,
@@ -29622,7 +31270,7 @@ pub mod export_jobs_response {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportJobsResponse`](crate::model::ExportJobsResponse)
+        /// Consumes the builder and constructs a [`ExportJobsResponse`](crate::model::ExportJobsResponse).
         pub fn build(self) -> crate::model::ExportJobsResponse {
             crate::model::ExportJobsResponse {
                 item: self.item,
@@ -29632,7 +31280,7 @@ pub mod export_jobs_response {
     }
 }
 impl ExportJobsResponse {
-    /// Creates a new builder-style object to manufacture [`ExportJobsResponse`](crate::model::ExportJobsResponse)
+    /// Creates a new builder-style object to manufacture [`ExportJobsResponse`](crate::model::ExportJobsResponse).
     pub fn builder() -> crate::model::export_jobs_response::Builder {
         crate::model::export_jobs_response::Builder::default()
     }
@@ -29643,30 +31291,43 @@ impl ExportJobsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportJobResponse {
     /// <p>The unique identifier for the application that's associated with the export job.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The number of pieces that were processed successfully (completed) by the export job, as of the time of the request.</p>
+    #[doc(hidden)]
     pub completed_pieces: i32,
     /// <p>The date, in ISO 8601 format, when the export job was completed.</p>
+    #[doc(hidden)]
     pub completion_date: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the export job was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The resource settings that apply to the export job.</p>
+    #[doc(hidden)]
     pub definition: std::option::Option<crate::model::ExportJobResource>,
     /// <p>The number of pieces that weren't processed successfully (failed) by the export job, as of the time of the request.</p>
+    #[doc(hidden)]
     pub failed_pieces: i32,
     /// <p>An array of entries, one for each of the first 100 entries that weren't processed successfully (failed) by the export job, if any.</p>
+    #[doc(hidden)]
     pub failures: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The unique identifier for the export job.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The status of the export job. The job status is FAILED if Amazon Pinpoint wasn't able to process one or more pieces in the job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>The total number of endpoint definitions that weren't processed successfully (failed) by the export job, typically because an error, such as a syntax error, occurred.</p>
+    #[doc(hidden)]
     pub total_failures: i32,
     /// <p>The total number of pieces that must be processed to complete the export job. Each piece consists of an approximately equal portion of the endpoint definitions that are part of the export job.</p>
+    #[doc(hidden)]
     pub total_pieces: i32,
     /// <p>The total number of endpoint definitions that were processed by the export job.</p>
+    #[doc(hidden)]
     pub total_processed: i32,
     /// <p>The job type. This value is EXPORT for export jobs.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
 }
 impl ExportJobResponse {
@@ -29742,11 +31403,10 @@ impl std::fmt::Debug for ExportJobResponse {
         formatter.finish()
     }
 }
-/// See [`ExportJobResponse`](crate::model::ExportJobResponse)
+/// See [`ExportJobResponse`](crate::model::ExportJobResponse).
 pub mod export_job_response {
 
-    /// A builder for [`ExportJobResponse`](crate::model::ExportJobResponse)
-    #[non_exhaustive]
+    /// A builder for [`ExportJobResponse`](crate::model::ExportJobResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -29918,7 +31578,7 @@ pub mod export_job_response {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportJobResponse`](crate::model::ExportJobResponse)
+        /// Consumes the builder and constructs a [`ExportJobResponse`](crate::model::ExportJobResponse).
         pub fn build(self) -> crate::model::ExportJobResponse {
             crate::model::ExportJobResponse {
                 application_id: self.application_id,
@@ -29939,7 +31599,7 @@ pub mod export_job_response {
     }
 }
 impl ExportJobResponse {
-    /// Creates a new builder-style object to manufacture [`ExportJobResponse`](crate::model::ExportJobResponse)
+    /// Creates a new builder-style object to manufacture [`ExportJobResponse`](crate::model::ExportJobResponse).
     pub fn builder() -> crate::model::export_job_response::Builder {
         crate::model::export_job_response::Builder::default()
     }
@@ -29950,16 +31610,20 @@ impl ExportJobResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportJobResource {
     /// <p>The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorized Amazon Pinpoint to access the Amazon S3 location where the endpoint definitions were exported to.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The URL of the location in an Amazon Simple Storage Service (Amazon S3) bucket where the endpoint definitions were exported to. This location is typically a folder that contains multiple files. The URL should be in the following format: s3://<replaceable>
     /// bucket-name
     /// </replaceable>/<replaceable>
     /// folder-name
     /// </replaceable>/.</p>
+    #[doc(hidden)]
     pub s3_url_prefix: std::option::Option<std::string::String>,
     /// <p>The identifier for the segment that the endpoint definitions were exported from. If this value isn't present, Amazon Pinpoint exported definitions for all the endpoints that are associated with the application.</p>
+    #[doc(hidden)]
     pub segment_id: std::option::Option<std::string::String>,
     /// <p>The version of the segment that the endpoint definitions were exported from.</p>
+    #[doc(hidden)]
     pub segment_version: i32,
 }
 impl ExportJobResource {
@@ -29994,11 +31658,10 @@ impl std::fmt::Debug for ExportJobResource {
         formatter.finish()
     }
 }
-/// See [`ExportJobResource`](crate::model::ExportJobResource)
+/// See [`ExportJobResource`](crate::model::ExportJobResource).
 pub mod export_job_resource {
 
-    /// A builder for [`ExportJobResource`](crate::model::ExportJobResource)
-    #[non_exhaustive]
+    /// A builder for [`ExportJobResource`](crate::model::ExportJobResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -30058,7 +31721,7 @@ pub mod export_job_resource {
             self.segment_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportJobResource`](crate::model::ExportJobResource)
+        /// Consumes the builder and constructs a [`ExportJobResource`](crate::model::ExportJobResource).
         pub fn build(self) -> crate::model::ExportJobResource {
             crate::model::ExportJobResource {
                 role_arn: self.role_arn,
@@ -30070,7 +31733,7 @@ pub mod export_job_resource {
     }
 }
 impl ExportJobResource {
-    /// Creates a new builder-style object to manufacture [`ExportJobResource`](crate::model::ExportJobResource)
+    /// Creates a new builder-style object to manufacture [`ExportJobResource`](crate::model::ExportJobResource).
     pub fn builder() -> crate::model::export_job_resource::Builder {
         crate::model::export_job_resource::Builder::default()
     }
@@ -30081,8 +31744,10 @@ impl ExportJobResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRecommenderConfigurationsResponse {
     /// <p>An array of responses, one for each recommender model configuration that's associated with your Amazon Pinpoint account.</p>
+    #[doc(hidden)]
     pub item: std::option::Option<std::vec::Vec<crate::model::RecommenderConfigurationResponse>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListRecommenderConfigurationsResponse {
@@ -30103,11 +31768,10 @@ impl std::fmt::Debug for ListRecommenderConfigurationsResponse {
         formatter.finish()
     }
 }
-/// See [`ListRecommenderConfigurationsResponse`](crate::model::ListRecommenderConfigurationsResponse)
+/// See [`ListRecommenderConfigurationsResponse`](crate::model::ListRecommenderConfigurationsResponse).
 pub mod list_recommender_configurations_response {
 
-    /// A builder for [`ListRecommenderConfigurationsResponse`](crate::model::ListRecommenderConfigurationsResponse)
-    #[non_exhaustive]
+    /// A builder for [`ListRecommenderConfigurationsResponse`](crate::model::ListRecommenderConfigurationsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item:
@@ -30146,7 +31810,7 @@ pub mod list_recommender_configurations_response {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRecommenderConfigurationsResponse`](crate::model::ListRecommenderConfigurationsResponse)
+        /// Consumes the builder and constructs a [`ListRecommenderConfigurationsResponse`](crate::model::ListRecommenderConfigurationsResponse).
         pub fn build(self) -> crate::model::ListRecommenderConfigurationsResponse {
             crate::model::ListRecommenderConfigurationsResponse {
                 item: self.item,
@@ -30156,7 +31820,7 @@ pub mod list_recommender_configurations_response {
     }
 }
 impl ListRecommenderConfigurationsResponse {
-    /// Creates a new builder-style object to manufacture [`ListRecommenderConfigurationsResponse`](crate::model::ListRecommenderConfigurationsResponse)
+    /// Creates a new builder-style object to manufacture [`ListRecommenderConfigurationsResponse`](crate::model::ListRecommenderConfigurationsResponse).
     pub fn builder() -> crate::model::list_recommender_configurations_response::Builder {
         crate::model::list_recommender_configurations_response::Builder::default()
     }
@@ -30167,37 +31831,52 @@ impl ListRecommenderConfigurationsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PushNotificationTemplateResponse {
     /// <p>The message template that's used for the ADM (Amazon Device Messaging) channel. This message template overrides the default template for push notification channels (DefaultPushNotificationTemplate).</p>
+    #[doc(hidden)]
     pub adm: std::option::Option<crate::model::AndroidPushNotificationTemplate>,
     /// <p>The message template that's used for the APNs (Apple Push Notification service) channel. This message template overrides the default template for push notification channels (DefaultPushNotificationTemplate).</p>
+    #[doc(hidden)]
     pub apns: std::option::Option<crate::model::ApnsPushNotificationTemplate>,
     /// <p>The Amazon Resource Name (ARN) of the message template.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The message template that's used for the Baidu (Baidu Cloud Push) channel. This message template overrides the default template for push notification channels (DefaultPushNotificationTemplate).</p>
+    #[doc(hidden)]
     pub baidu: std::option::Option<crate::model::AndroidPushNotificationTemplate>,
     /// <p>The date, in ISO 8601 format, when the message template was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The default message template that's used for push notification channels.</p>
     ///
     /// _Note: This member has been renamed from `default`._
+    #[doc(hidden)]
     pub default_value: std::option::Option<crate::model::DefaultPushNotificationTemplate>,
     /// <p>The JSON object that specifies the default values that are used for message variables in the message template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the default value for that variable.</p>
+    #[doc(hidden)]
     pub default_substitutions: std::option::Option<std::string::String>,
     /// <p>The message template that's used for the GCM channel, which is used to send notifications through the Firebase Cloud Messaging (FCM), formerly Google Cloud Messaging (GCM), service. This message template overrides the default template for push notification channels (DefaultPushNotificationTemplate).</p>
+    #[doc(hidden)]
     pub gcm: std::option::Option<crate::model::AndroidPushNotificationTemplate>,
     /// <p>The date, in ISO 8601 format, when the message template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the recommender model that's used by the message template.</p>
+    #[doc(hidden)]
     pub recommender_id: std::option::Option<std::string::String>,
     /// <p>A string-to-string map of key-value pairs that identifies the tags that are associated with the message template. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The custom description of the message template.</p>
+    #[doc(hidden)]
     pub template_description: std::option::Option<std::string::String>,
     /// <p>The name of the message template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The type of channel that the message template is designed for. For a push notification template, this value is PUSH.</p>
+    #[doc(hidden)]
     pub template_type: std::option::Option<crate::model::TemplateType>,
     /// <p>The unique identifier, as an integer, for the active version of the message template, or the version of the template that you specified by using the version parameter in your request.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl PushNotificationTemplateResponse {
@@ -30290,11 +31969,10 @@ impl std::fmt::Debug for PushNotificationTemplateResponse {
         formatter.finish()
     }
 }
-/// See [`PushNotificationTemplateResponse`](crate::model::PushNotificationTemplateResponse)
+/// See [`PushNotificationTemplateResponse`](crate::model::PushNotificationTemplateResponse).
 pub mod push_notification_template_response {
 
-    /// A builder for [`PushNotificationTemplateResponse`](crate::model::PushNotificationTemplateResponse)
-    #[non_exhaustive]
+    /// A builder for [`PushNotificationTemplateResponse`](crate::model::PushNotificationTemplateResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) adm: std::option::Option<crate::model::AndroidPushNotificationTemplate>,
@@ -30521,7 +32199,7 @@ pub mod push_notification_template_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`PushNotificationTemplateResponse`](crate::model::PushNotificationTemplateResponse)
+        /// Consumes the builder and constructs a [`PushNotificationTemplateResponse`](crate::model::PushNotificationTemplateResponse).
         pub fn build(self) -> crate::model::PushNotificationTemplateResponse {
             crate::model::PushNotificationTemplateResponse {
                 adm: self.adm,
@@ -30544,7 +32222,7 @@ pub mod push_notification_template_response {
     }
 }
 impl PushNotificationTemplateResponse {
-    /// Creates a new builder-style object to manufacture [`PushNotificationTemplateResponse`](crate::model::PushNotificationTemplateResponse)
+    /// Creates a new builder-style object to manufacture [`PushNotificationTemplateResponse`](crate::model::PushNotificationTemplateResponse).
     pub fn builder() -> crate::model::push_notification_template_response::Builder {
         crate::model::push_notification_template_response::Builder::default()
     }
@@ -30555,12 +32233,16 @@ impl PushNotificationTemplateResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JourneyExecutionMetricsResponse {
     /// <p>The unique identifier for the application that the metric applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the journey that the metric applies to.</p>
+    #[doc(hidden)]
     pub journey_id: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format, when Amazon Pinpoint last evaluated the journey and updated the data for the metric.</p>
+    #[doc(hidden)]
     pub last_evaluated_time: std::option::Option<std::string::String>,
     /// <p>A JSON object that contains the results of the query. For information about the structure and contents of the results, see the <a href="https://docs.aws.amazon.com//pinpoint/latest/developerguide/analytics-standard-metrics.html">Amazon Pinpoint Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub metrics:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -30595,11 +32277,10 @@ impl std::fmt::Debug for JourneyExecutionMetricsResponse {
         formatter.finish()
     }
 }
-/// See [`JourneyExecutionMetricsResponse`](crate::model::JourneyExecutionMetricsResponse)
+/// See [`JourneyExecutionMetricsResponse`](crate::model::JourneyExecutionMetricsResponse).
 pub mod journey_execution_metrics_response {
 
-    /// A builder for [`JourneyExecutionMetricsResponse`](crate::model::JourneyExecutionMetricsResponse)
-    #[non_exhaustive]
+    /// A builder for [`JourneyExecutionMetricsResponse`](crate::model::JourneyExecutionMetricsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -30671,7 +32352,7 @@ pub mod journey_execution_metrics_response {
             self.metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`JourneyExecutionMetricsResponse`](crate::model::JourneyExecutionMetricsResponse)
+        /// Consumes the builder and constructs a [`JourneyExecutionMetricsResponse`](crate::model::JourneyExecutionMetricsResponse).
         pub fn build(self) -> crate::model::JourneyExecutionMetricsResponse {
             crate::model::JourneyExecutionMetricsResponse {
                 application_id: self.application_id,
@@ -30683,7 +32364,7 @@ pub mod journey_execution_metrics_response {
     }
 }
 impl JourneyExecutionMetricsResponse {
-    /// Creates a new builder-style object to manufacture [`JourneyExecutionMetricsResponse`](crate::model::JourneyExecutionMetricsResponse)
+    /// Creates a new builder-style object to manufacture [`JourneyExecutionMetricsResponse`](crate::model::JourneyExecutionMetricsResponse).
     pub fn builder() -> crate::model::journey_execution_metrics_response::Builder {
         crate::model::journey_execution_metrics_response::Builder::default()
     }
@@ -30702,16 +32383,22 @@ pub struct JourneyExecutionActivityMetricsResponse {
     /// <li><p>RANDOM_SPLIT - For a random split activity, which is an activity that sends specified percentages of participants down one of as many as five paths in a journey.</p></li>
     /// <li><p>WAIT - For a wait activity, which is an activity that waits for a certain amount of time or until a specific date and time before moving participants to the next activity in a journey.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub activity_type: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the application that the metric applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the activity that the metric applies to.</p>
+    #[doc(hidden)]
     pub journey_activity_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the journey that the metric applies to.</p>
+    #[doc(hidden)]
     pub journey_id: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format, when Amazon Pinpoint last evaluated the execution status of the activity and updated the data for the metric.</p>
+    #[doc(hidden)]
     pub last_evaluated_time: std::option::Option<std::string::String>,
     /// <p>A JSON object that contains the results of the query. The results vary depending on the type of activity (ActivityType). For information about the structure and contents of the results, see the <a href="https://docs.aws.amazon.com/pinpoint/latest/developerguide/analytics-standard-metrics.html">Amazon Pinpoint Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub metrics:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -30764,11 +32451,10 @@ impl std::fmt::Debug for JourneyExecutionActivityMetricsResponse {
         formatter.finish()
     }
 }
-/// See [`JourneyExecutionActivityMetricsResponse`](crate::model::JourneyExecutionActivityMetricsResponse)
+/// See [`JourneyExecutionActivityMetricsResponse`](crate::model::JourneyExecutionActivityMetricsResponse).
 pub mod journey_execution_activity_metrics_response {
 
-    /// A builder for [`JourneyExecutionActivityMetricsResponse`](crate::model::JourneyExecutionActivityMetricsResponse)
-    #[non_exhaustive]
+    /// A builder for [`JourneyExecutionActivityMetricsResponse`](crate::model::JourneyExecutionActivityMetricsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activity_type: std::option::Option<std::string::String>,
@@ -30884,7 +32570,7 @@ pub mod journey_execution_activity_metrics_response {
             self.metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`JourneyExecutionActivityMetricsResponse`](crate::model::JourneyExecutionActivityMetricsResponse)
+        /// Consumes the builder and constructs a [`JourneyExecutionActivityMetricsResponse`](crate::model::JourneyExecutionActivityMetricsResponse).
         pub fn build(self) -> crate::model::JourneyExecutionActivityMetricsResponse {
             crate::model::JourneyExecutionActivityMetricsResponse {
                 activity_type: self.activity_type,
@@ -30898,7 +32584,7 @@ pub mod journey_execution_activity_metrics_response {
     }
 }
 impl JourneyExecutionActivityMetricsResponse {
-    /// Creates a new builder-style object to manufacture [`JourneyExecutionActivityMetricsResponse`](crate::model::JourneyExecutionActivityMetricsResponse)
+    /// Creates a new builder-style object to manufacture [`JourneyExecutionActivityMetricsResponse`](crate::model::JourneyExecutionActivityMetricsResponse).
     pub fn builder() -> crate::model::journey_execution_activity_metrics_response::Builder {
         crate::model::journey_execution_activity_metrics_response::Builder::default()
     }
@@ -30909,18 +32595,25 @@ impl JourneyExecutionActivityMetricsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JourneyDateRangeKpiResponse {
     /// <p>The unique identifier for the application that the metric applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The last date and time of the date range that was used to filter the query results, in extended ISO 8601 format. The date range is inclusive.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The unique identifier for the journey that the metric applies to.</p>
+    #[doc(hidden)]
     pub journey_id: std::option::Option<std::string::String>,
     /// <p>The name of the metric, also referred to as a <i>key performance indicator (KPI)</i>, that the data was retrieved for. This value describes the associated metric and consists of two or more terms, which are comprised of lowercase alphanumeric characters, separated by a hyphen. For a list of possible values, see the <a href="https://docs.aws.amazon.com/pinpoint/latest/developerguide/analytics-standard-metrics.html">Amazon Pinpoint Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub kpi_name: std::option::Option<std::string::String>,
     /// <p>An array of objects that contains the results of the query. Each object contains the value for the metric and metadata about that value.</p>
+    #[doc(hidden)]
     pub kpi_result: std::option::Option<crate::model::BaseKpiResult>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null for the Journey Engagement Metrics resource because the resource returns all results in a single page.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The first date and time of the date range that was used to filter the query results, in extended ISO 8601 format. The date range is inclusive.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl JourneyDateRangeKpiResponse {
@@ -30966,11 +32659,10 @@ impl std::fmt::Debug for JourneyDateRangeKpiResponse {
         formatter.finish()
     }
 }
-/// See [`JourneyDateRangeKpiResponse`](crate::model::JourneyDateRangeKpiResponse)
+/// See [`JourneyDateRangeKpiResponse`](crate::model::JourneyDateRangeKpiResponse).
 pub mod journey_date_range_kpi_response {
 
-    /// A builder for [`JourneyDateRangeKpiResponse`](crate::model::JourneyDateRangeKpiResponse)
-    #[non_exhaustive]
+    /// A builder for [`JourneyDateRangeKpiResponse`](crate::model::JourneyDateRangeKpiResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -31064,7 +32756,7 @@ pub mod journey_date_range_kpi_response {
             self.start_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`JourneyDateRangeKpiResponse`](crate::model::JourneyDateRangeKpiResponse)
+        /// Consumes the builder and constructs a [`JourneyDateRangeKpiResponse`](crate::model::JourneyDateRangeKpiResponse).
         pub fn build(self) -> crate::model::JourneyDateRangeKpiResponse {
             crate::model::JourneyDateRangeKpiResponse {
                 application_id: self.application_id,
@@ -31079,7 +32771,7 @@ pub mod journey_date_range_kpi_response {
     }
 }
 impl JourneyDateRangeKpiResponse {
-    /// Creates a new builder-style object to manufacture [`JourneyDateRangeKpiResponse`](crate::model::JourneyDateRangeKpiResponse)
+    /// Creates a new builder-style object to manufacture [`JourneyDateRangeKpiResponse`](crate::model::JourneyDateRangeKpiResponse).
     pub fn builder() -> crate::model::journey_date_range_kpi_response::Builder {
         crate::model::journey_date_range_kpi_response::Builder::default()
     }
@@ -31090,6 +32782,7 @@ impl JourneyDateRangeKpiResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BaseKpiResult {
     /// <p>An array of objects that provides the results of a query that retrieved the data for a standard metric that applies to an application, campaign, or journey.</p>
+    #[doc(hidden)]
     pub rows: std::option::Option<std::vec::Vec<crate::model::ResultRow>>,
 }
 impl BaseKpiResult {
@@ -31105,11 +32798,10 @@ impl std::fmt::Debug for BaseKpiResult {
         formatter.finish()
     }
 }
-/// See [`BaseKpiResult`](crate::model::BaseKpiResult)
+/// See [`BaseKpiResult`](crate::model::BaseKpiResult).
 pub mod base_kpi_result {
 
-    /// A builder for [`BaseKpiResult`](crate::model::BaseKpiResult)
-    #[non_exhaustive]
+    /// A builder for [`BaseKpiResult`](crate::model::BaseKpiResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rows: std::option::Option<std::vec::Vec<crate::model::ResultRow>>,
@@ -31134,14 +32826,14 @@ pub mod base_kpi_result {
             self.rows = input;
             self
         }
-        /// Consumes the builder and constructs a [`BaseKpiResult`](crate::model::BaseKpiResult)
+        /// Consumes the builder and constructs a [`BaseKpiResult`](crate::model::BaseKpiResult).
         pub fn build(self) -> crate::model::BaseKpiResult {
             crate::model::BaseKpiResult { rows: self.rows }
         }
     }
 }
 impl BaseKpiResult {
-    /// Creates a new builder-style object to manufacture [`BaseKpiResult`](crate::model::BaseKpiResult)
+    /// Creates a new builder-style object to manufacture [`BaseKpiResult`](crate::model::BaseKpiResult).
     pub fn builder() -> crate::model::base_kpi_result::Builder {
         crate::model::base_kpi_result::Builder::default()
     }
@@ -31152,8 +32844,10 @@ impl BaseKpiResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResultRow {
     /// <p>An array of objects that defines the field and field values that were used to group data in a result set that contains multiple results. This value is null if the data in a result set isn’t grouped.</p>
+    #[doc(hidden)]
     pub grouped_bys: std::option::Option<std::vec::Vec<crate::model::ResultRowValue>>,
     /// <p>An array of objects that provides pre-aggregated values for a standard metric that applies to an application, campaign, or journey.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<crate::model::ResultRowValue>>,
 }
 impl ResultRow {
@@ -31174,11 +32868,10 @@ impl std::fmt::Debug for ResultRow {
         formatter.finish()
     }
 }
-/// See [`ResultRow`](crate::model::ResultRow)
+/// See [`ResultRow`](crate::model::ResultRow).
 pub mod result_row {
 
-    /// A builder for [`ResultRow`](crate::model::ResultRow)
-    #[non_exhaustive]
+    /// A builder for [`ResultRow`](crate::model::ResultRow).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) grouped_bys: std::option::Option<std::vec::Vec<crate::model::ResultRowValue>>,
@@ -31223,7 +32916,7 @@ pub mod result_row {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultRow`](crate::model::ResultRow)
+        /// Consumes the builder and constructs a [`ResultRow`](crate::model::ResultRow).
         pub fn build(self) -> crate::model::ResultRow {
             crate::model::ResultRow {
                 grouped_bys: self.grouped_bys,
@@ -31233,7 +32926,7 @@ pub mod result_row {
     }
 }
 impl ResultRow {
-    /// Creates a new builder-style object to manufacture [`ResultRow`](crate::model::ResultRow)
+    /// Creates a new builder-style object to manufacture [`ResultRow`](crate::model::ResultRow).
     pub fn builder() -> crate::model::result_row::Builder {
         crate::model::result_row::Builder::default()
     }
@@ -31244,10 +32937,13 @@ impl ResultRow {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResultRowValue {
     /// <p>The friendly name of the metric whose value is specified by the Value property.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The data type of the value specified by the Value property.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>In a Values object, the value for the metric that the query retrieved data for. In a GroupedBys object, the value for the field that was used to group data in a result set that contains multiple results (Values objects).</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl ResultRowValue {
@@ -31273,11 +32969,10 @@ impl std::fmt::Debug for ResultRowValue {
         formatter.finish()
     }
 }
-/// See [`ResultRowValue`](crate::model::ResultRowValue)
+/// See [`ResultRowValue`](crate::model::ResultRowValue).
 pub mod result_row_value {
 
-    /// A builder for [`ResultRowValue`](crate::model::ResultRowValue)
-    #[non_exhaustive]
+    /// A builder for [`ResultRowValue`](crate::model::ResultRowValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -31315,7 +33010,7 @@ pub mod result_row_value {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultRowValue`](crate::model::ResultRowValue)
+        /// Consumes the builder and constructs a [`ResultRowValue`](crate::model::ResultRowValue).
         pub fn build(self) -> crate::model::ResultRowValue {
             crate::model::ResultRowValue {
                 key: self.key,
@@ -31326,7 +33021,7 @@ pub mod result_row_value {
     }
 }
 impl ResultRowValue {
-    /// Creates a new builder-style object to manufacture [`ResultRowValue`](crate::model::ResultRowValue)
+    /// Creates a new builder-style object to manufacture [`ResultRowValue`](crate::model::ResultRowValue).
     pub fn builder() -> crate::model::result_row_value::Builder {
         crate::model::result_row_value::Builder::default()
     }
@@ -31337,28 +33032,39 @@ impl ResultRowValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InAppTemplateResponse {
     /// <p>The resource arn of the template.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The content of the message, can include up to 5 modals. Each modal must contain a message, a header, and background color. ImageUrl and buttons are optional.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::vec::Vec<crate::model::InAppMessageContent>>,
     /// <p>The creation date of the template.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>Custom config to be sent to client.</p>
+    #[doc(hidden)]
     pub custom_config:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The last modified date of the template.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The layout of the message.</p>
+    #[doc(hidden)]
     pub layout: std::option::Option<crate::model::Layout>,
     /// <p>A string-to-string map of key-value pairs that defines the tags to associate with the message template. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The description of the template.</p>
+    #[doc(hidden)]
     pub template_description: std::option::Option<std::string::String>,
     /// <p>The name of the template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The type of the template.</p>
+    #[doc(hidden)]
     pub template_type: std::option::Option<crate::model::TemplateType>,
     /// <p>The version id of the template.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl InAppTemplateResponse {
@@ -31430,11 +33136,10 @@ impl std::fmt::Debug for InAppTemplateResponse {
         formatter.finish()
     }
 }
-/// See [`InAppTemplateResponse`](crate::model::InAppTemplateResponse)
+/// See [`InAppTemplateResponse`](crate::model::InAppTemplateResponse).
 pub mod in_app_template_response {
 
-    /// A builder for [`InAppTemplateResponse`](crate::model::InAppTemplateResponse)
-    #[non_exhaustive]
+    /// A builder for [`InAppTemplateResponse`](crate::model::InAppTemplateResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -31618,7 +33323,7 @@ pub mod in_app_template_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`InAppTemplateResponse`](crate::model::InAppTemplateResponse)
+        /// Consumes the builder and constructs a [`InAppTemplateResponse`](crate::model::InAppTemplateResponse).
         pub fn build(self) -> crate::model::InAppTemplateResponse {
             crate::model::InAppTemplateResponse {
                 arn: self.arn,
@@ -31637,7 +33342,7 @@ pub mod in_app_template_response {
     }
 }
 impl InAppTemplateResponse {
-    /// Creates a new builder-style object to manufacture [`InAppTemplateResponse`](crate::model::InAppTemplateResponse)
+    /// Creates a new builder-style object to manufacture [`InAppTemplateResponse`](crate::model::InAppTemplateResponse).
     pub fn builder() -> crate::model::in_app_template_response::Builder {
         crate::model::in_app_template_response::Builder::default()
     }
@@ -31648,6 +33353,7 @@ impl InAppTemplateResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InAppMessagesResponse {
     /// <p>List of targeted in-app message campaigns.</p>
+    #[doc(hidden)]
     pub in_app_message_campaigns:
         std::option::Option<std::vec::Vec<crate::model::InAppMessageCampaign>>,
 }
@@ -31666,11 +33372,10 @@ impl std::fmt::Debug for InAppMessagesResponse {
         formatter.finish()
     }
 }
-/// See [`InAppMessagesResponse`](crate::model::InAppMessagesResponse)
+/// See [`InAppMessagesResponse`](crate::model::InAppMessagesResponse).
 pub mod in_app_messages_response {
 
-    /// A builder for [`InAppMessagesResponse`](crate::model::InAppMessagesResponse)
-    #[non_exhaustive]
+    /// A builder for [`InAppMessagesResponse`](crate::model::InAppMessagesResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) in_app_message_campaigns:
@@ -31699,7 +33404,7 @@ pub mod in_app_messages_response {
             self.in_app_message_campaigns = input;
             self
         }
-        /// Consumes the builder and constructs a [`InAppMessagesResponse`](crate::model::InAppMessagesResponse)
+        /// Consumes the builder and constructs a [`InAppMessagesResponse`](crate::model::InAppMessagesResponse).
         pub fn build(self) -> crate::model::InAppMessagesResponse {
             crate::model::InAppMessagesResponse {
                 in_app_message_campaigns: self.in_app_message_campaigns,
@@ -31708,7 +33413,7 @@ pub mod in_app_messages_response {
     }
 }
 impl InAppMessagesResponse {
-    /// Creates a new builder-style object to manufacture [`InAppMessagesResponse`](crate::model::InAppMessagesResponse)
+    /// Creates a new builder-style object to manufacture [`InAppMessagesResponse`](crate::model::InAppMessagesResponse).
     pub fn builder() -> crate::model::in_app_messages_response::Builder {
         crate::model::in_app_messages_response::Builder::default()
     }
@@ -31719,20 +33424,28 @@ impl InAppMessagesResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InAppMessageCampaign {
     /// <p>Campaign id of the corresponding campaign.</p>
+    #[doc(hidden)]
     pub campaign_id: std::option::Option<std::string::String>,
     /// <p>Daily cap which controls the number of times any in-app messages can be shown to the endpoint during a day.</p>
+    #[doc(hidden)]
     pub daily_cap: i32,
     /// <p>In-app message content with all fields required for rendering an in-app message.</p>
+    #[doc(hidden)]
     pub in_app_message: std::option::Option<crate::model::InAppMessage>,
     /// <p>Priority of the in-app message.</p>
+    #[doc(hidden)]
     pub priority: i32,
     /// <p>Schedule of the campaign.</p>
+    #[doc(hidden)]
     pub schedule: std::option::Option<crate::model::InAppCampaignSchedule>,
     /// <p>Session cap which controls the number of times an in-app message can be shown to the endpoint during an application session.</p>
+    #[doc(hidden)]
     pub session_cap: i32,
     /// <p>Total cap which controls the number of times an in-app message can be shown to the endpoint.</p>
+    #[doc(hidden)]
     pub total_cap: i32,
     /// <p>Treatment id of the campaign.</p>
+    #[doc(hidden)]
     pub treatment_id: std::option::Option<std::string::String>,
 }
 impl InAppMessageCampaign {
@@ -31783,11 +33496,10 @@ impl std::fmt::Debug for InAppMessageCampaign {
         formatter.finish()
     }
 }
-/// See [`InAppMessageCampaign`](crate::model::InAppMessageCampaign)
+/// See [`InAppMessageCampaign`](crate::model::InAppMessageCampaign).
 pub mod in_app_message_campaign {
 
-    /// A builder for [`InAppMessageCampaign`](crate::model::InAppMessageCampaign)
-    #[non_exhaustive]
+    /// A builder for [`InAppMessageCampaign`](crate::model::InAppMessageCampaign).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) campaign_id: std::option::Option<std::string::String>,
@@ -31886,7 +33598,7 @@ pub mod in_app_message_campaign {
             self.treatment_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`InAppMessageCampaign`](crate::model::InAppMessageCampaign)
+        /// Consumes the builder and constructs a [`InAppMessageCampaign`](crate::model::InAppMessageCampaign).
         pub fn build(self) -> crate::model::InAppMessageCampaign {
             crate::model::InAppMessageCampaign {
                 campaign_id: self.campaign_id,
@@ -31902,7 +33614,7 @@ pub mod in_app_message_campaign {
     }
 }
 impl InAppMessageCampaign {
-    /// Creates a new builder-style object to manufacture [`InAppMessageCampaign`](crate::model::InAppMessageCampaign)
+    /// Creates a new builder-style object to manufacture [`InAppMessageCampaign`](crate::model::InAppMessageCampaign).
     pub fn builder() -> crate::model::in_app_message_campaign::Builder {
         crate::model::in_app_message_campaign::Builder::default()
     }
@@ -31913,10 +33625,13 @@ impl InAppMessageCampaign {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InAppCampaignSchedule {
     /// <p>The scheduled time after which the in-app message should not be shown. Timestamp is in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub end_date: std::option::Option<std::string::String>,
     /// <p>The event filter the SDK has to use to show the in-app message in the application.</p>
+    #[doc(hidden)]
     pub event_filter: std::option::Option<crate::model::CampaignEventFilter>,
     /// <p>Time during which the in-app message should not be shown to the user.</p>
+    #[doc(hidden)]
     pub quiet_time: std::option::Option<crate::model::QuietTime>,
 }
 impl InAppCampaignSchedule {
@@ -31942,11 +33657,10 @@ impl std::fmt::Debug for InAppCampaignSchedule {
         formatter.finish()
     }
 }
-/// See [`InAppCampaignSchedule`](crate::model::InAppCampaignSchedule)
+/// See [`InAppCampaignSchedule`](crate::model::InAppCampaignSchedule).
 pub mod in_app_campaign_schedule {
 
-    /// A builder for [`InAppCampaignSchedule`](crate::model::InAppCampaignSchedule)
-    #[non_exhaustive]
+    /// A builder for [`InAppCampaignSchedule`](crate::model::InAppCampaignSchedule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) end_date: std::option::Option<std::string::String>,
@@ -31990,7 +33704,7 @@ pub mod in_app_campaign_schedule {
             self.quiet_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`InAppCampaignSchedule`](crate::model::InAppCampaignSchedule)
+        /// Consumes the builder and constructs a [`InAppCampaignSchedule`](crate::model::InAppCampaignSchedule).
         pub fn build(self) -> crate::model::InAppCampaignSchedule {
             crate::model::InAppCampaignSchedule {
                 end_date: self.end_date,
@@ -32001,7 +33715,7 @@ pub mod in_app_campaign_schedule {
     }
 }
 impl InAppCampaignSchedule {
-    /// Creates a new builder-style object to manufacture [`InAppCampaignSchedule`](crate::model::InAppCampaignSchedule)
+    /// Creates a new builder-style object to manufacture [`InAppCampaignSchedule`](crate::model::InAppCampaignSchedule).
     pub fn builder() -> crate::model::in_app_campaign_schedule::Builder {
         crate::model::in_app_campaign_schedule::Builder::default()
     }
@@ -32012,11 +33726,14 @@ impl InAppCampaignSchedule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InAppMessage {
     /// <p>In-app message content.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::vec::Vec<crate::model::InAppMessageContent>>,
     /// <p>Custom config to be sent to SDK.</p>
+    #[doc(hidden)]
     pub custom_config:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The layout of the message.</p>
+    #[doc(hidden)]
     pub layout: std::option::Option<crate::model::Layout>,
 }
 impl InAppMessage {
@@ -32045,11 +33762,10 @@ impl std::fmt::Debug for InAppMessage {
         formatter.finish()
     }
 }
-/// See [`InAppMessage`](crate::model::InAppMessage)
+/// See [`InAppMessage`](crate::model::InAppMessage).
 pub mod in_app_message {
 
-    /// A builder for [`InAppMessage`](crate::model::InAppMessage)
-    #[non_exhaustive]
+    /// A builder for [`InAppMessage`](crate::model::InAppMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content: std::option::Option<std::vec::Vec<crate::model::InAppMessageContent>>,
@@ -32113,7 +33829,7 @@ pub mod in_app_message {
             self.layout = input;
             self
         }
-        /// Consumes the builder and constructs a [`InAppMessage`](crate::model::InAppMessage)
+        /// Consumes the builder and constructs a [`InAppMessage`](crate::model::InAppMessage).
         pub fn build(self) -> crate::model::InAppMessage {
             crate::model::InAppMessage {
                 content: self.content,
@@ -32124,7 +33840,7 @@ pub mod in_app_message {
     }
 }
 impl InAppMessage {
-    /// Creates a new builder-style object to manufacture [`InAppMessage`](crate::model::InAppMessage)
+    /// Creates a new builder-style object to manufacture [`InAppMessage`](crate::model::InAppMessage).
     pub fn builder() -> crate::model::in_app_message::Builder {
         crate::model::in_app_message::Builder::default()
     }
@@ -32135,31 +33851,44 @@ impl InAppMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EmailTemplateResponse {
     /// <p>The Amazon Resource Name (ARN) of the message template.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the message template was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The JSON object that specifies the default values that are used for message variables in the message template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the default value for that variable.</p>
+    #[doc(hidden)]
     pub default_substitutions: std::option::Option<std::string::String>,
     /// <p>The message body, in HTML format, that's used in email messages that are based on the message template.</p>
+    #[doc(hidden)]
     pub html_part: std::option::Option<std::string::String>,
     /// <p>The date, in ISO 8601 format, when the message template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the recommender model that's used by the message template.</p>
+    #[doc(hidden)]
     pub recommender_id: std::option::Option<std::string::String>,
     /// <p>The subject line, or title, that's used in email messages that are based on the message template.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<std::string::String>,
     /// <p>A string-to-string map of key-value pairs that identifies the tags that are associated with the message template. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The custom description of the message template.</p>
+    #[doc(hidden)]
     pub template_description: std::option::Option<std::string::String>,
     /// <p>The name of the message template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The type of channel that the message template is designed for. For an email template, this value is EMAIL.</p>
+    #[doc(hidden)]
     pub template_type: std::option::Option<crate::model::TemplateType>,
     /// <p>The message body, in plain text format, that's used in email messages that are based on the message template.</p>
+    #[doc(hidden)]
     pub text_part: std::option::Option<std::string::String>,
     /// <p>The unique identifier, as an integer, for the active version of the message template, or the version of the template that you specified by using the version parameter in your request.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl EmailTemplateResponse {
@@ -32238,11 +33967,10 @@ impl std::fmt::Debug for EmailTemplateResponse {
         formatter.finish()
     }
 }
-/// See [`EmailTemplateResponse`](crate::model::EmailTemplateResponse)
+/// See [`EmailTemplateResponse`](crate::model::EmailTemplateResponse).
 pub mod email_template_response {
 
-    /// A builder for [`EmailTemplateResponse`](crate::model::EmailTemplateResponse)
-    #[non_exhaustive]
+    /// A builder for [`EmailTemplateResponse`](crate::model::EmailTemplateResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -32428,7 +34156,7 @@ pub mod email_template_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`EmailTemplateResponse`](crate::model::EmailTemplateResponse)
+        /// Consumes the builder and constructs a [`EmailTemplateResponse`](crate::model::EmailTemplateResponse).
         pub fn build(self) -> crate::model::EmailTemplateResponse {
             crate::model::EmailTemplateResponse {
                 arn: self.arn,
@@ -32449,7 +34177,7 @@ pub mod email_template_response {
     }
 }
 impl EmailTemplateResponse {
-    /// Creates a new builder-style object to manufacture [`EmailTemplateResponse`](crate::model::EmailTemplateResponse)
+    /// Creates a new builder-style object to manufacture [`EmailTemplateResponse`](crate::model::EmailTemplateResponse).
     pub fn builder() -> crate::model::email_template_response::Builder {
         crate::model::email_template_response::Builder::default()
     }
@@ -32460,6 +34188,7 @@ impl EmailTemplateResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChannelsResponse {
     /// <p>A map that contains a multipart response for each channel. For each item in this object, the ChannelType is the key and the Channel is the value.</p>
+    #[doc(hidden)]
     pub channels: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ChannelResponse>,
     >,
@@ -32481,11 +34210,10 @@ impl std::fmt::Debug for ChannelsResponse {
         formatter.finish()
     }
 }
-/// See [`ChannelsResponse`](crate::model::ChannelsResponse)
+/// See [`ChannelsResponse`](crate::model::ChannelsResponse).
 pub mod channels_response {
 
-    /// A builder for [`ChannelsResponse`](crate::model::ChannelsResponse)
-    #[non_exhaustive]
+    /// A builder for [`ChannelsResponse`](crate::model::ChannelsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channels: std::option::Option<
@@ -32518,7 +34246,7 @@ pub mod channels_response {
             self.channels = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChannelsResponse`](crate::model::ChannelsResponse)
+        /// Consumes the builder and constructs a [`ChannelsResponse`](crate::model::ChannelsResponse).
         pub fn build(self) -> crate::model::ChannelsResponse {
             crate::model::ChannelsResponse {
                 channels: self.channels,
@@ -32527,7 +34255,7 @@ pub mod channels_response {
     }
 }
 impl ChannelsResponse {
-    /// Creates a new builder-style object to manufacture [`ChannelsResponse`](crate::model::ChannelsResponse)
+    /// Creates a new builder-style object to manufacture [`ChannelsResponse`](crate::model::ChannelsResponse).
     pub fn builder() -> crate::model::channels_response::Builder {
         crate::model::channels_response::Builder::default()
     }
@@ -32538,22 +34266,31 @@ impl ChannelsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChannelResponse {
     /// <p>The unique identifier for the application.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format, when the channel was enabled.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>Specifies whether the channel is enabled for the application.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>(Not used) This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub has_credential: bool,
     /// <p>(Deprecated) An identifier for the channel. This property is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the channel is archived.</p>
+    #[doc(hidden)]
     pub is_archived: bool,
     /// <p>The user who last modified the channel.</p>
+    #[doc(hidden)]
     pub last_modified_by: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format, when the channel was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The current version of the channel.</p>
+    #[doc(hidden)]
     pub version: i32,
 }
 impl ChannelResponse {
@@ -32609,11 +34346,10 @@ impl std::fmt::Debug for ChannelResponse {
         formatter.finish()
     }
 }
-/// See [`ChannelResponse`](crate::model::ChannelResponse)
+/// See [`ChannelResponse`](crate::model::ChannelResponse).
 pub mod channel_response {
 
-    /// A builder for [`ChannelResponse`](crate::model::ChannelResponse)
-    #[non_exhaustive]
+    /// A builder for [`ChannelResponse`](crate::model::ChannelResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -32729,7 +34465,7 @@ pub mod channel_response {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChannelResponse`](crate::model::ChannelResponse)
+        /// Consumes the builder and constructs a [`ChannelResponse`](crate::model::ChannelResponse).
         pub fn build(self) -> crate::model::ChannelResponse {
             crate::model::ChannelResponse {
                 application_id: self.application_id,
@@ -32746,7 +34482,7 @@ pub mod channel_response {
     }
 }
 impl ChannelResponse {
-    /// Creates a new builder-style object to manufacture [`ChannelResponse`](crate::model::ChannelResponse)
+    /// Creates a new builder-style object to manufacture [`ChannelResponse`](crate::model::ChannelResponse).
     pub fn builder() -> crate::model::channel_response::Builder {
         crate::model::channel_response::Builder::default()
     }
@@ -32757,8 +34493,10 @@ impl ChannelResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CampaignsResponse {
     /// <p>An array of responses, one for each campaign that's associated with the application.</p>
+    #[doc(hidden)]
     pub item: std::option::Option<std::vec::Vec<crate::model::CampaignResponse>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl CampaignsResponse {
@@ -32779,11 +34517,10 @@ impl std::fmt::Debug for CampaignsResponse {
         formatter.finish()
     }
 }
-/// See [`CampaignsResponse`](crate::model::CampaignsResponse)
+/// See [`CampaignsResponse`](crate::model::CampaignsResponse).
 pub mod campaigns_response {
 
-    /// A builder for [`CampaignsResponse`](crate::model::CampaignsResponse)
-    #[non_exhaustive]
+    /// A builder for [`CampaignsResponse`](crate::model::CampaignsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item: std::option::Option<std::vec::Vec<crate::model::CampaignResponse>>,
@@ -32819,7 +34556,7 @@ pub mod campaigns_response {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CampaignsResponse`](crate::model::CampaignsResponse)
+        /// Consumes the builder and constructs a [`CampaignsResponse`](crate::model::CampaignsResponse).
         pub fn build(self) -> crate::model::CampaignsResponse {
             crate::model::CampaignsResponse {
                 item: self.item,
@@ -32829,7 +34566,7 @@ pub mod campaigns_response {
     }
 }
 impl CampaignsResponse {
-    /// Creates a new builder-style object to manufacture [`CampaignsResponse`](crate::model::CampaignsResponse)
+    /// Creates a new builder-style object to manufacture [`CampaignsResponse`](crate::model::CampaignsResponse).
     pub fn builder() -> crate::model::campaigns_response::Builder {
         crate::model::campaigns_response::Builder::default()
     }
@@ -32840,18 +34577,25 @@ impl CampaignsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CampaignDateRangeKpiResponse {
     /// <p>The unique identifier for the application that the metric applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the campaign that the metric applies to.</p>
+    #[doc(hidden)]
     pub campaign_id: std::option::Option<std::string::String>,
     /// <p>The last date and time of the date range that was used to filter the query results, in extended ISO 8601 format. The date range is inclusive.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the metric, also referred to as a <i>key performance indicator (KPI)</i>, that the data was retrieved for. This value describes the associated metric and consists of two or more terms, which are comprised of lowercase alphanumeric characters, separated by a hyphen. For a list of possible values, see the <a href="https://docs.aws.amazon.com/pinpoint/latest/developerguide/analytics-standard-metrics.html">Amazon Pinpoint Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub kpi_name: std::option::Option<std::string::String>,
     /// <p>An array of objects that contains the results of the query. Each object contains the value for the metric and metadata about that value.</p>
+    #[doc(hidden)]
     pub kpi_result: std::option::Option<crate::model::BaseKpiResult>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null for the Campaign Metrics resource because the resource returns all results in a single page.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The first date and time of the date range that was used to filter the query results, in extended ISO 8601 format. The date range is inclusive.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CampaignDateRangeKpiResponse {
@@ -32897,11 +34641,10 @@ impl std::fmt::Debug for CampaignDateRangeKpiResponse {
         formatter.finish()
     }
 }
-/// See [`CampaignDateRangeKpiResponse`](crate::model::CampaignDateRangeKpiResponse)
+/// See [`CampaignDateRangeKpiResponse`](crate::model::CampaignDateRangeKpiResponse).
 pub mod campaign_date_range_kpi_response {
 
-    /// A builder for [`CampaignDateRangeKpiResponse`](crate::model::CampaignDateRangeKpiResponse)
-    #[non_exhaustive]
+    /// A builder for [`CampaignDateRangeKpiResponse`](crate::model::CampaignDateRangeKpiResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -32995,7 +34738,7 @@ pub mod campaign_date_range_kpi_response {
             self.start_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CampaignDateRangeKpiResponse`](crate::model::CampaignDateRangeKpiResponse)
+        /// Consumes the builder and constructs a [`CampaignDateRangeKpiResponse`](crate::model::CampaignDateRangeKpiResponse).
         pub fn build(self) -> crate::model::CampaignDateRangeKpiResponse {
             crate::model::CampaignDateRangeKpiResponse {
                 application_id: self.application_id,
@@ -33010,7 +34753,7 @@ pub mod campaign_date_range_kpi_response {
     }
 }
 impl CampaignDateRangeKpiResponse {
-    /// Creates a new builder-style object to manufacture [`CampaignDateRangeKpiResponse`](crate::model::CampaignDateRangeKpiResponse)
+    /// Creates a new builder-style object to manufacture [`CampaignDateRangeKpiResponse`](crate::model::CampaignDateRangeKpiResponse).
     pub fn builder() -> crate::model::campaign_date_range_kpi_response::Builder {
         crate::model::campaign_date_range_kpi_response::Builder::default()
     }
@@ -33021,8 +34764,10 @@ impl CampaignDateRangeKpiResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivitiesResponse {
     /// <p>An array of responses, one for each activity that was performed by the campaign.</p>
+    #[doc(hidden)]
     pub item: std::option::Option<std::vec::Vec<crate::model::ActivityResponse>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ActivitiesResponse {
@@ -33043,11 +34788,10 @@ impl std::fmt::Debug for ActivitiesResponse {
         formatter.finish()
     }
 }
-/// See [`ActivitiesResponse`](crate::model::ActivitiesResponse)
+/// See [`ActivitiesResponse`](crate::model::ActivitiesResponse).
 pub mod activities_response {
 
-    /// A builder for [`ActivitiesResponse`](crate::model::ActivitiesResponse)
-    #[non_exhaustive]
+    /// A builder for [`ActivitiesResponse`](crate::model::ActivitiesResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item: std::option::Option<std::vec::Vec<crate::model::ActivityResponse>>,
@@ -33083,7 +34827,7 @@ pub mod activities_response {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivitiesResponse`](crate::model::ActivitiesResponse)
+        /// Consumes the builder and constructs a [`ActivitiesResponse`](crate::model::ActivitiesResponse).
         pub fn build(self) -> crate::model::ActivitiesResponse {
             crate::model::ActivitiesResponse {
                 item: self.item,
@@ -33093,7 +34837,7 @@ pub mod activities_response {
     }
 }
 impl ActivitiesResponse {
-    /// Creates a new builder-style object to manufacture [`ActivitiesResponse`](crate::model::ActivitiesResponse)
+    /// Creates a new builder-style object to manufacture [`ActivitiesResponse`](crate::model::ActivitiesResponse).
     pub fn builder() -> crate::model::activities_response::Builder {
         crate::model::activities_response::Builder::default()
     }
@@ -33104,30 +34848,43 @@ impl ActivitiesResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityResponse {
     /// <p>The unique identifier for the application that the campaign applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the campaign that the activity applies to.</p>
+    #[doc(hidden)]
     pub campaign_id: std::option::Option<std::string::String>,
     /// <p>The actual time, in ISO 8601 format, when the activity was marked CANCELLED or COMPLETED.</p>
+    #[doc(hidden)]
     pub end: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the activity.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the activity succeeded. Possible values are SUCCESS and FAIL.</p>
+    #[doc(hidden)]
     pub result: std::option::Option<std::string::String>,
     /// <p>The scheduled start time, in ISO 8601 format, for the activity.</p>
+    #[doc(hidden)]
     pub scheduled_start: std::option::Option<std::string::String>,
     /// <p>The actual start time, in ISO 8601 format, of the activity.</p>
+    #[doc(hidden)]
     pub start: std::option::Option<std::string::String>,
     /// <p>The current status of the activity. Possible values are: PENDING, INITIALIZING, RUNNING, PAUSED, CANCELLED, and COMPLETED.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>The total number of endpoints that the campaign successfully delivered messages to.</p>
+    #[doc(hidden)]
     pub successful_endpoint_count: i32,
     /// <p>The total number of time zones that were completed.</p>
+    #[doc(hidden)]
     pub timezones_completed_count: i32,
     /// <p>The total number of unique time zones that are in the segment for the campaign.</p>
+    #[doc(hidden)]
     pub timezones_total_count: i32,
     /// <p>The total number of endpoints that the campaign attempted to deliver messages to.</p>
+    #[doc(hidden)]
     pub total_endpoint_count: i32,
     /// <p>The unique identifier for the campaign treatment that the activity applies to. A treatment is a variation of a campaign that's used for A/B testing of a campaign.</p>
+    #[doc(hidden)]
     pub treatment_id: std::option::Option<std::string::String>,
 }
 impl ActivityResponse {
@@ -33203,11 +34960,10 @@ impl std::fmt::Debug for ActivityResponse {
         formatter.finish()
     }
 }
-/// See [`ActivityResponse`](crate::model::ActivityResponse)
+/// See [`ActivityResponse`](crate::model::ActivityResponse).
 pub mod activity_response {
 
-    /// A builder for [`ActivityResponse`](crate::model::ActivityResponse)
-    #[non_exhaustive]
+    /// A builder for [`ActivityResponse`](crate::model::ActivityResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -33361,7 +35117,7 @@ pub mod activity_response {
             self.treatment_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityResponse`](crate::model::ActivityResponse)
+        /// Consumes the builder and constructs a [`ActivityResponse`](crate::model::ActivityResponse).
         pub fn build(self) -> crate::model::ActivityResponse {
             crate::model::ActivityResponse {
                 application_id: self.application_id,
@@ -33382,7 +35138,7 @@ pub mod activity_response {
     }
 }
 impl ActivityResponse {
-    /// Creates a new builder-style object to manufacture [`ActivityResponse`](crate::model::ActivityResponse)
+    /// Creates a new builder-style object to manufacture [`ActivityResponse`](crate::model::ActivityResponse).
     pub fn builder() -> crate::model::activity_response::Builder {
         crate::model::activity_response::Builder::default()
     }
@@ -33393,8 +35149,10 @@ impl ActivityResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationsResponse {
     /// <p>An array of responses, one for each application that was returned.</p>
+    #[doc(hidden)]
     pub item: std::option::Option<std::vec::Vec<crate::model::ApplicationResponse>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ApplicationsResponse {
@@ -33415,11 +35173,10 @@ impl std::fmt::Debug for ApplicationsResponse {
         formatter.finish()
     }
 }
-/// See [`ApplicationsResponse`](crate::model::ApplicationsResponse)
+/// See [`ApplicationsResponse`](crate::model::ApplicationsResponse).
 pub mod applications_response {
 
-    /// A builder for [`ApplicationsResponse`](crate::model::ApplicationsResponse)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationsResponse`](crate::model::ApplicationsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item: std::option::Option<std::vec::Vec<crate::model::ApplicationResponse>>,
@@ -33455,7 +35212,7 @@ pub mod applications_response {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationsResponse`](crate::model::ApplicationsResponse)
+        /// Consumes the builder and constructs a [`ApplicationsResponse`](crate::model::ApplicationsResponse).
         pub fn build(self) -> crate::model::ApplicationsResponse {
             crate::model::ApplicationsResponse {
                 item: self.item,
@@ -33465,7 +35222,7 @@ pub mod applications_response {
     }
 }
 impl ApplicationsResponse {
-    /// Creates a new builder-style object to manufacture [`ApplicationsResponse`](crate::model::ApplicationsResponse)
+    /// Creates a new builder-style object to manufacture [`ApplicationsResponse`](crate::model::ApplicationsResponse).
     pub fn builder() -> crate::model::applications_response::Builder {
         crate::model::applications_response::Builder::default()
     }
@@ -33476,15 +35233,20 @@ impl ApplicationsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationResponse {
     /// <p>The Amazon Resource Name (ARN) of the application.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the application. This identifier is displayed as the <b>Project ID</b> on the Amazon Pinpoint console.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The display name of the application. This name is displayed as the <b>Project name</b> on the Amazon Pinpoint console.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A string-to-string map of key-value pairs that identifies the tags that are associated with the application. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The date and time when the Application was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
 }
 impl ApplicationResponse {
@@ -33523,11 +35285,10 @@ impl std::fmt::Debug for ApplicationResponse {
         formatter.finish()
     }
 }
-/// See [`ApplicationResponse`](crate::model::ApplicationResponse)
+/// See [`ApplicationResponse`](crate::model::ApplicationResponse).
 pub mod application_response {
 
-    /// A builder for [`ApplicationResponse`](crate::model::ApplicationResponse)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationResponse`](crate::model::ApplicationResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -33607,7 +35368,7 @@ pub mod application_response {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationResponse`](crate::model::ApplicationResponse)
+        /// Consumes the builder and constructs a [`ApplicationResponse`](crate::model::ApplicationResponse).
         pub fn build(self) -> crate::model::ApplicationResponse {
             crate::model::ApplicationResponse {
                 arn: self.arn,
@@ -33620,7 +35381,7 @@ pub mod application_response {
     }
 }
 impl ApplicationResponse {
-    /// Creates a new builder-style object to manufacture [`ApplicationResponse`](crate::model::ApplicationResponse)
+    /// Creates a new builder-style object to manufacture [`ApplicationResponse`](crate::model::ApplicationResponse).
     pub fn builder() -> crate::model::application_response::Builder {
         crate::model::application_response::Builder::default()
     }
@@ -33631,16 +35392,22 @@ impl ApplicationResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationDateRangeKpiResponse {
     /// <p>The unique identifier for the application that the metric applies to.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The last date and time of the date range that was used to filter the query results, in extended ISO 8601 format. The date range is inclusive.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the metric, also referred to as a <i>key performance indicator (KPI)</i>, that the data was retrieved for. This value describes the associated metric and consists of two or more terms, which are comprised of lowercase alphanumeric characters, separated by a hyphen. For a list of possible values, see the <a href="https://docs.aws.amazon.com/pinpoint/latest/developerguide/analytics-standard-metrics.html">Amazon Pinpoint Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub kpi_name: std::option::Option<std::string::String>,
     /// <p>An array of objects that contains the results of the query. Each object contains the value for the metric and metadata about that value.</p>
+    #[doc(hidden)]
     pub kpi_result: std::option::Option<crate::model::BaseKpiResult>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null for the Application Metrics resource because the resource returns all results in a single page.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The first date and time of the date range that was used to filter the query results, in extended ISO 8601 format. The date range is inclusive.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ApplicationDateRangeKpiResponse {
@@ -33681,11 +35448,10 @@ impl std::fmt::Debug for ApplicationDateRangeKpiResponse {
         formatter.finish()
     }
 }
-/// See [`ApplicationDateRangeKpiResponse`](crate::model::ApplicationDateRangeKpiResponse)
+/// See [`ApplicationDateRangeKpiResponse`](crate::model::ApplicationDateRangeKpiResponse).
 pub mod application_date_range_kpi_response {
 
-    /// A builder for [`ApplicationDateRangeKpiResponse`](crate::model::ApplicationDateRangeKpiResponse)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationDateRangeKpiResponse`](crate::model::ApplicationDateRangeKpiResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -33768,7 +35534,7 @@ pub mod application_date_range_kpi_response {
             self.start_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationDateRangeKpiResponse`](crate::model::ApplicationDateRangeKpiResponse)
+        /// Consumes the builder and constructs a [`ApplicationDateRangeKpiResponse`](crate::model::ApplicationDateRangeKpiResponse).
         pub fn build(self) -> crate::model::ApplicationDateRangeKpiResponse {
             crate::model::ApplicationDateRangeKpiResponse {
                 application_id: self.application_id,
@@ -33782,7 +35548,7 @@ pub mod application_date_range_kpi_response {
     }
 }
 impl ApplicationDateRangeKpiResponse {
-    /// Creates a new builder-style object to manufacture [`ApplicationDateRangeKpiResponse`](crate::model::ApplicationDateRangeKpiResponse)
+    /// Creates a new builder-style object to manufacture [`ApplicationDateRangeKpiResponse`](crate::model::ApplicationDateRangeKpiResponse).
     pub fn builder() -> crate::model::application_date_range_kpi_response::Builder {
         crate::model::application_date_range_kpi_response::Builder::default()
     }
@@ -33793,10 +35559,13 @@ impl ApplicationDateRangeKpiResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateTemplateMessageBody {
     /// <p>The Amazon Resource Name (ARN) of the message template that was created.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The message that's returned from the API for the request to create the message template.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the request to create the message template.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
 }
 impl CreateTemplateMessageBody {
@@ -33822,11 +35591,10 @@ impl std::fmt::Debug for CreateTemplateMessageBody {
         formatter.finish()
     }
 }
-/// See [`CreateTemplateMessageBody`](crate::model::CreateTemplateMessageBody)
+/// See [`CreateTemplateMessageBody`](crate::model::CreateTemplateMessageBody).
 pub mod create_template_message_body {
 
-    /// A builder for [`CreateTemplateMessageBody`](crate::model::CreateTemplateMessageBody)
-    #[non_exhaustive]
+    /// A builder for [`CreateTemplateMessageBody`](crate::model::CreateTemplateMessageBody).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -33864,7 +35632,7 @@ pub mod create_template_message_body {
             self.request_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateTemplateMessageBody`](crate::model::CreateTemplateMessageBody)
+        /// Consumes the builder and constructs a [`CreateTemplateMessageBody`](crate::model::CreateTemplateMessageBody).
         pub fn build(self) -> crate::model::CreateTemplateMessageBody {
             crate::model::CreateTemplateMessageBody {
                 arn: self.arn,
@@ -33875,7 +35643,7 @@ pub mod create_template_message_body {
     }
 }
 impl CreateTemplateMessageBody {
-    /// Creates a new builder-style object to manufacture [`CreateTemplateMessageBody`](crate::model::CreateTemplateMessageBody)
+    /// Creates a new builder-style object to manufacture [`CreateTemplateMessageBody`](crate::model::CreateTemplateMessageBody).
     pub fn builder() -> crate::model::create_template_message_body::Builder {
         crate::model::create_template_message_body::Builder::default()
     }
@@ -33892,29 +35660,38 @@ pub struct CreateRecommenderConfigurationShape {
     /// <li><p>An attribute display name must start with a letter or number and it can contain up to 25 characters. The characters can be letters, numbers, spaces, underscores (_), or hyphens (-).</p></li>
     /// </ul>
     /// <p>This object is required if the configuration invokes an AWS Lambda function (RecommendationTransformerUri) to process recommendation data. Otherwise, don't include this object in your request.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A custom description of the configuration for the recommender model. The description can contain up to 128 characters. The characters can be letters, numbers, spaces, or the following symbols: _ ; () , ‐.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A custom name of the configuration for the recommender model. The name must start with a letter or number and it can contain up to 128 characters. The characters can be letters, numbers, spaces, underscores (_), or hyphens (-).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of Amazon Pinpoint ID to associate with unique user IDs in the recommender model. This value enables the model to use attribute and event data that’s specific to a particular endpoint or user in an Amazon Pinpoint application. Valid values are:</p>
     /// <ul>
     /// <li><p>PINPOINT_ENDPOINT_ID - Associate each user in the model with a particular endpoint in Amazon Pinpoint. The data is correlated based on endpoint IDs in Amazon Pinpoint. This is the default value.</p></li>
     /// <li><p>PINPOINT_USER_ID - Associate each user in the model with a particular user and endpoint in Amazon Pinpoint. The data is correlated based on user IDs in Amazon Pinpoint. If you specify this value, an endpoint definition in Amazon Pinpoint has to specify both a user ID (UserId) and an endpoint ID. Otherwise, messages won’t be sent to the user's endpoint.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub recommendation_provider_id_type: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorizes Amazon Pinpoint to retrieve recommendation data from the recommender model.</p>
+    #[doc(hidden)]
     pub recommendation_provider_role_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the recommender model to retrieve recommendation data from. This value must match the ARN of an Amazon Personalize campaign.</p>
+    #[doc(hidden)]
     pub recommendation_provider_uri: std::option::Option<std::string::String>,
     /// <p>The name or Amazon Resource Name (ARN) of the AWS Lambda function to invoke for additional processing of recommendation data that's retrieved from the recommender model.</p>
+    #[doc(hidden)]
     pub recommendation_transformer_uri: std::option::Option<std::string::String>,
     /// <p>A custom display name for the standard endpoint or user attribute (RecommendationItems) that temporarily stores recommended items for each endpoint or user, depending on the value for the RecommendationProviderIdType property. This value is required if the configuration doesn't invoke an AWS Lambda function (RecommendationTransformerUri) to perform additional processing of recommendation data.</p>
     /// <p>This name appears in the <b>Attribute finder</b> of the template editor on the Amazon Pinpoint console. The name can contain up to 25 characters. The characters can be letters, numbers, spaces, underscores (_), or hyphens (-). These restrictions don't apply to attribute values.</p>
+    #[doc(hidden)]
     pub recommendations_display_name: std::option::Option<std::string::String>,
     /// <p>The number of recommended items to retrieve from the model for each endpoint or user, depending on the value for the RecommendationProviderIdType property. This number determines how many recommended items are available for use in message variables. The minimum value is 1. The maximum value is 5. The default value is 5.</p>
     /// <p>To use multiple recommended items and custom attributes with message variables, you have to use an AWS Lambda function (RecommendationTransformerUri) to perform additional processing of recommendation data.</p>
+    #[doc(hidden)]
     pub recommendations_per_message: i32,
 }
 impl CreateRecommenderConfigurationShape {
@@ -34003,11 +35780,10 @@ impl std::fmt::Debug for CreateRecommenderConfigurationShape {
         formatter.finish()
     }
 }
-/// See [`CreateRecommenderConfigurationShape`](crate::model::CreateRecommenderConfigurationShape)
+/// See [`CreateRecommenderConfigurationShape`](crate::model::CreateRecommenderConfigurationShape).
 pub mod create_recommender_configuration_shape {
 
-    /// A builder for [`CreateRecommenderConfigurationShape`](crate::model::CreateRecommenderConfigurationShape)
-    #[non_exhaustive]
+    /// A builder for [`CreateRecommenderConfigurationShape`](crate::model::CreateRecommenderConfigurationShape).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<
@@ -34182,7 +35958,7 @@ pub mod create_recommender_configuration_shape {
             self.recommendations_per_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRecommenderConfigurationShape`](crate::model::CreateRecommenderConfigurationShape)
+        /// Consumes the builder and constructs a [`CreateRecommenderConfigurationShape`](crate::model::CreateRecommenderConfigurationShape).
         pub fn build(self) -> crate::model::CreateRecommenderConfigurationShape {
             crate::model::CreateRecommenderConfigurationShape {
                 attributes: self.attributes,
@@ -34199,7 +35975,7 @@ pub mod create_recommender_configuration_shape {
     }
 }
 impl CreateRecommenderConfigurationShape {
-    /// Creates a new builder-style object to manufacture [`CreateRecommenderConfigurationShape`](crate::model::CreateRecommenderConfigurationShape)
+    /// Creates a new builder-style object to manufacture [`CreateRecommenderConfigurationShape`](crate::model::CreateRecommenderConfigurationShape).
     pub fn builder() -> crate::model::create_recommender_configuration_shape::Builder {
         crate::model::create_recommender_configuration_shape::Builder::default()
     }
@@ -34210,10 +35986,13 @@ impl CreateRecommenderConfigurationShape {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TemplateCreateMessageBody {
     /// <p>The Amazon Resource Name (ARN) of the message template that was created.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The message that's returned from the API for the request to create the message template.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the request to create the message template.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
 }
 impl TemplateCreateMessageBody {
@@ -34239,11 +36018,10 @@ impl std::fmt::Debug for TemplateCreateMessageBody {
         formatter.finish()
     }
 }
-/// See [`TemplateCreateMessageBody`](crate::model::TemplateCreateMessageBody)
+/// See [`TemplateCreateMessageBody`](crate::model::TemplateCreateMessageBody).
 pub mod template_create_message_body {
 
-    /// A builder for [`TemplateCreateMessageBody`](crate::model::TemplateCreateMessageBody)
-    #[non_exhaustive]
+    /// A builder for [`TemplateCreateMessageBody`](crate::model::TemplateCreateMessageBody).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -34281,7 +36059,7 @@ pub mod template_create_message_body {
             self.request_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`TemplateCreateMessageBody`](crate::model::TemplateCreateMessageBody)
+        /// Consumes the builder and constructs a [`TemplateCreateMessageBody`](crate::model::TemplateCreateMessageBody).
         pub fn build(self) -> crate::model::TemplateCreateMessageBody {
             crate::model::TemplateCreateMessageBody {
                 arn: self.arn,
@@ -34292,7 +36070,7 @@ pub mod template_create_message_body {
     }
 }
 impl TemplateCreateMessageBody {
-    /// Creates a new builder-style object to manufacture [`TemplateCreateMessageBody`](crate::model::TemplateCreateMessageBody)
+    /// Creates a new builder-style object to manufacture [`TemplateCreateMessageBody`](crate::model::TemplateCreateMessageBody).
     pub fn builder() -> crate::model::template_create_message_body::Builder {
         crate::model::template_create_message_body::Builder::default()
     }
@@ -34303,14 +36081,19 @@ impl TemplateCreateMessageBody {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportJobRequest {
     /// <p>Specifies whether to create a segment that contains the endpoints, when the endpoint definitions are imported.</p>
+    #[doc(hidden)]
     pub define_segment: bool,
     /// <p>(Deprecated) Your AWS account ID, which you assigned to an external ID key in an IAM trust policy. Amazon Pinpoint previously used this value to assume an IAM role when importing endpoint definitions, but we removed this requirement. We don't recommend use of external IDs for IAM roles that are assumed by Amazon Pinpoint.</p>
+    #[doc(hidden)]
     pub external_id: std::option::Option<std::string::String>,
     /// <p>The format of the files that contain the endpoint definitions to import. Valid values are: CSV, for comma-separated values format; and, JSON, for newline-delimited JSON format. If the Amazon S3 location stores multiple files that use different formats, Amazon Pinpoint imports data only from the files that use the specified format.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::Format>,
     /// <p>Specifies whether to register the endpoints with Amazon Pinpoint, when the endpoint definitions are imported.</p>
+    #[doc(hidden)]
     pub register_endpoints: bool,
     /// <p>The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorizes Amazon Pinpoint to access the Amazon S3 location to import endpoint definitions from.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The URL of the Amazon Simple Storage Service (Amazon S3) bucket that contains the endpoint definitions to import. This location can be a folder or a single file. If the location is a folder, Amazon Pinpoint imports endpoint definitions from the files in this location, including any subfolders that the folder contains.</p>
     /// <p>The URL should be in the following format: s3://<replaceable>
@@ -34320,10 +36103,13 @@ pub struct ImportJobRequest {
     /// </replaceable>/<replaceable>
     /// file-name
     /// </replaceable>. The location can end with the key for an individual object or a prefix that qualifies multiple objects.</p>
+    #[doc(hidden)]
     pub s3_url: std::option::Option<std::string::String>,
     /// <p>The identifier for the segment to update or add the imported endpoint definitions to, if the import job is meant to update an existing segment.</p>
+    #[doc(hidden)]
     pub segment_id: std::option::Option<std::string::String>,
     /// <p>A custom name for the segment that's created by the import job, if the value of the DefineSegment property is true.</p>
+    #[doc(hidden)]
     pub segment_name: std::option::Option<std::string::String>,
 }
 impl ImportJobRequest {
@@ -34381,11 +36167,10 @@ impl std::fmt::Debug for ImportJobRequest {
         formatter.finish()
     }
 }
-/// See [`ImportJobRequest`](crate::model::ImportJobRequest)
+/// See [`ImportJobRequest`](crate::model::ImportJobRequest).
 pub mod import_job_request {
 
-    /// A builder for [`ImportJobRequest`](crate::model::ImportJobRequest)
-    #[non_exhaustive]
+    /// A builder for [`ImportJobRequest`](crate::model::ImportJobRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) define_segment: std::option::Option<bool>,
@@ -34492,7 +36277,7 @@ pub mod import_job_request {
             self.segment_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportJobRequest`](crate::model::ImportJobRequest)
+        /// Consumes the builder and constructs a [`ImportJobRequest`](crate::model::ImportJobRequest).
         pub fn build(self) -> crate::model::ImportJobRequest {
             crate::model::ImportJobRequest {
                 define_segment: self.define_segment.unwrap_or_default(),
@@ -34508,7 +36293,7 @@ pub mod import_job_request {
     }
 }
 impl ImportJobRequest {
-    /// Creates a new builder-style object to manufacture [`ImportJobRequest`](crate::model::ImportJobRequest)
+    /// Creates a new builder-style object to manufacture [`ImportJobRequest`](crate::model::ImportJobRequest).
     pub fn builder() -> crate::model::import_job_request::Builder {
         crate::model::import_job_request::Builder::default()
     }
@@ -34519,16 +36304,20 @@ impl ImportJobRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportJobRequest {
     /// <p>The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorizes Amazon Pinpoint to access the Amazon S3 location where you want to export endpoint definitions to.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The URL of the location in an Amazon Simple Storage Service (Amazon S3) bucket where you want to export endpoint definitions to. This location is typically a folder that contains multiple files. The URL should be in the following format: s3://<replaceable>
     /// bucket-name
     /// </replaceable>/<replaceable>
     /// folder-name
     /// </replaceable>/.</p>
+    #[doc(hidden)]
     pub s3_url_prefix: std::option::Option<std::string::String>,
     /// <p>The identifier for the segment to export endpoint definitions from. If you don't specify this value, Amazon Pinpoint exports definitions for all the endpoints that are associated with the application.</p>
+    #[doc(hidden)]
     pub segment_id: std::option::Option<std::string::String>,
     /// <p>The version of the segment to export endpoint definitions from, if specified.</p>
+    #[doc(hidden)]
     pub segment_version: i32,
 }
 impl ExportJobRequest {
@@ -34563,11 +36352,10 @@ impl std::fmt::Debug for ExportJobRequest {
         formatter.finish()
     }
 }
-/// See [`ExportJobRequest`](crate::model::ExportJobRequest)
+/// See [`ExportJobRequest`](crate::model::ExportJobRequest).
 pub mod export_job_request {
 
-    /// A builder for [`ExportJobRequest`](crate::model::ExportJobRequest)
-    #[non_exhaustive]
+    /// A builder for [`ExportJobRequest`](crate::model::ExportJobRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -34627,7 +36415,7 @@ pub mod export_job_request {
             self.segment_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportJobRequest`](crate::model::ExportJobRequest)
+        /// Consumes the builder and constructs a [`ExportJobRequest`](crate::model::ExportJobRequest).
         pub fn build(self) -> crate::model::ExportJobRequest {
             crate::model::ExportJobRequest {
                 role_arn: self.role_arn,
@@ -34639,7 +36427,7 @@ pub mod export_job_request {
     }
 }
 impl ExportJobRequest {
-    /// Creates a new builder-style object to manufacture [`ExportJobRequest`](crate::model::ExportJobRequest)
+    /// Creates a new builder-style object to manufacture [`ExportJobRequest`](crate::model::ExportJobRequest).
     pub fn builder() -> crate::model::export_job_request::Builder {
         crate::model::export_job_request::Builder::default()
     }
@@ -34650,8 +36438,10 @@ impl ExportJobRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateApplicationRequest {
     /// <p>The display name of the application. This name is displayed as the <b>Project name</b> on the Amazon Pinpoint console.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A string-to-string map of key-value pairs that defines the tags to associate with the application. Each tag consists of a required tag key and an associated tag value.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -34676,11 +36466,10 @@ impl std::fmt::Debug for CreateApplicationRequest {
         formatter.finish()
     }
 }
-/// See [`CreateApplicationRequest`](crate::model::CreateApplicationRequest)
+/// See [`CreateApplicationRequest`](crate::model::CreateApplicationRequest).
 pub mod create_application_request {
 
-    /// A builder for [`CreateApplicationRequest`](crate::model::CreateApplicationRequest)
-    #[non_exhaustive]
+    /// A builder for [`CreateApplicationRequest`](crate::model::CreateApplicationRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -34724,7 +36513,7 @@ pub mod create_application_request {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateApplicationRequest`](crate::model::CreateApplicationRequest)
+        /// Consumes the builder and constructs a [`CreateApplicationRequest`](crate::model::CreateApplicationRequest).
         pub fn build(self) -> crate::model::CreateApplicationRequest {
             crate::model::CreateApplicationRequest {
                 name: self.name,
@@ -34734,7 +36523,7 @@ pub mod create_application_request {
     }
 }
 impl CreateApplicationRequest {
-    /// Creates a new builder-style object to manufacture [`CreateApplicationRequest`](crate::model::CreateApplicationRequest)
+    /// Creates a new builder-style object to manufacture [`CreateApplicationRequest`](crate::model::CreateApplicationRequest).
     pub fn builder() -> crate::model::create_application_request::Builder {
         crate::model::create_application_request::Builder::default()
     }

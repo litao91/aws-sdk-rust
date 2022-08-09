@@ -6,6 +6,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateMlModelOutput {
     /// <p>The ID assigned to the <code>MLModel</code> during creation. This value should be identical to the value of the <code>MLModelID</code> in the request.</p>
+    #[doc(hidden)]
     pub ml_model_id: std::option::Option<std::string::String>,
 }
 impl UpdateMlModelOutput {
@@ -21,11 +22,10 @@ impl std::fmt::Debug for UpdateMlModelOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateMlModelOutput`](crate::output::UpdateMlModelOutput)
+/// See [`UpdateMlModelOutput`](crate::output::UpdateMlModelOutput).
 pub mod update_ml_model_output {
 
-    /// A builder for [`UpdateMlModelOutput`](crate::output::UpdateMlModelOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateMlModelOutput`](crate::output::UpdateMlModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ml_model_id: std::option::Option<std::string::String>,
@@ -41,7 +41,7 @@ pub mod update_ml_model_output {
             self.ml_model_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateMlModelOutput`](crate::output::UpdateMlModelOutput)
+        /// Consumes the builder and constructs a [`UpdateMlModelOutput`](crate::output::UpdateMlModelOutput).
         pub fn build(self) -> crate::output::UpdateMlModelOutput {
             crate::output::UpdateMlModelOutput {
                 ml_model_id: self.ml_model_id,
@@ -50,7 +50,7 @@ pub mod update_ml_model_output {
     }
 }
 impl UpdateMlModelOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateMlModelOutput`](crate::output::UpdateMlModelOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateMlModelOutput`](crate::output::UpdateMlModelOutput).
     pub fn builder() -> crate::output::update_ml_model_output::Builder {
         crate::output::update_ml_model_output::Builder::default()
     }
@@ -62,6 +62,7 @@ impl UpdateMlModelOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateEvaluationOutput {
     /// <p>The ID assigned to the <code>Evaluation</code> during creation. This value should be identical to the value of the <code>Evaluation</code> in the request.</p>
+    #[doc(hidden)]
     pub evaluation_id: std::option::Option<std::string::String>,
 }
 impl UpdateEvaluationOutput {
@@ -77,11 +78,10 @@ impl std::fmt::Debug for UpdateEvaluationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateEvaluationOutput`](crate::output::UpdateEvaluationOutput)
+/// See [`UpdateEvaluationOutput`](crate::output::UpdateEvaluationOutput).
 pub mod update_evaluation_output {
 
-    /// A builder for [`UpdateEvaluationOutput`](crate::output::UpdateEvaluationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateEvaluationOutput`](crate::output::UpdateEvaluationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) evaluation_id: std::option::Option<std::string::String>,
@@ -100,7 +100,7 @@ pub mod update_evaluation_output {
             self.evaluation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateEvaluationOutput`](crate::output::UpdateEvaluationOutput)
+        /// Consumes the builder and constructs a [`UpdateEvaluationOutput`](crate::output::UpdateEvaluationOutput).
         pub fn build(self) -> crate::output::UpdateEvaluationOutput {
             crate::output::UpdateEvaluationOutput {
                 evaluation_id: self.evaluation_id,
@@ -109,7 +109,7 @@ pub mod update_evaluation_output {
     }
 }
 impl UpdateEvaluationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateEvaluationOutput`](crate::output::UpdateEvaluationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateEvaluationOutput`](crate::output::UpdateEvaluationOutput).
     pub fn builder() -> crate::output::update_evaluation_output::Builder {
         crate::output::update_evaluation_output::Builder::default()
     }
@@ -121,6 +121,7 @@ impl UpdateEvaluationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDataSourceOutput {
     /// <p>The ID assigned to the <code>DataSource</code> during creation. This value should be identical to the value of the <code>DataSourceID</code> in the request.</p>
+    #[doc(hidden)]
     pub data_source_id: std::option::Option<std::string::String>,
 }
 impl UpdateDataSourceOutput {
@@ -136,11 +137,10 @@ impl std::fmt::Debug for UpdateDataSourceOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput)
+/// See [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput).
 pub mod update_data_source_output {
 
-    /// A builder for [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_source_id: std::option::Option<std::string::String>,
@@ -159,7 +159,7 @@ pub mod update_data_source_output {
             self.data_source_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput)
+        /// Consumes the builder and constructs a [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput).
         pub fn build(self) -> crate::output::UpdateDataSourceOutput {
             crate::output::UpdateDataSourceOutput {
                 data_source_id: self.data_source_id,
@@ -168,7 +168,7 @@ pub mod update_data_source_output {
     }
 }
 impl UpdateDataSourceOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput).
     pub fn builder() -> crate::output::update_data_source_output::Builder {
         crate::output::update_data_source_output::Builder::default()
     }
@@ -180,6 +180,7 @@ impl UpdateDataSourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBatchPredictionOutput {
     /// <p>The ID assigned to the <code>BatchPrediction</code> during creation. This value should be identical to the value of the <code>BatchPredictionId</code> in the request.</p>
+    #[doc(hidden)]
     pub batch_prediction_id: std::option::Option<std::string::String>,
 }
 impl UpdateBatchPredictionOutput {
@@ -195,11 +196,10 @@ impl std::fmt::Debug for UpdateBatchPredictionOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateBatchPredictionOutput`](crate::output::UpdateBatchPredictionOutput)
+/// See [`UpdateBatchPredictionOutput`](crate::output::UpdateBatchPredictionOutput).
 pub mod update_batch_prediction_output {
 
-    /// A builder for [`UpdateBatchPredictionOutput`](crate::output::UpdateBatchPredictionOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBatchPredictionOutput`](crate::output::UpdateBatchPredictionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) batch_prediction_id: std::option::Option<std::string::String>,
@@ -218,7 +218,7 @@ pub mod update_batch_prediction_output {
             self.batch_prediction_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBatchPredictionOutput`](crate::output::UpdateBatchPredictionOutput)
+        /// Consumes the builder and constructs a [`UpdateBatchPredictionOutput`](crate::output::UpdateBatchPredictionOutput).
         pub fn build(self) -> crate::output::UpdateBatchPredictionOutput {
             crate::output::UpdateBatchPredictionOutput {
                 batch_prediction_id: self.batch_prediction_id,
@@ -227,7 +227,7 @@ pub mod update_batch_prediction_output {
     }
 }
 impl UpdateBatchPredictionOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateBatchPredictionOutput`](crate::output::UpdateBatchPredictionOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateBatchPredictionOutput`](crate::output::UpdateBatchPredictionOutput).
     pub fn builder() -> crate::output::update_batch_prediction_output::Builder {
         crate::output::update_batch_prediction_output::Builder::default()
     }
@@ -244,6 +244,7 @@ pub struct PredictOutput {
     /// <li> <p> <code>PredictedScores</code> - Contains the raw classification score corresponding to each label. </p> </li>
     /// <li> <p> <code>PredictedValue</code> - Present for a <code>REGRESSION</code> <code>MLModel</code> request. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub prediction: std::option::Option<crate::model::Prediction>,
 }
 impl PredictOutput {
@@ -265,11 +266,10 @@ impl std::fmt::Debug for PredictOutput {
         formatter.finish()
     }
 }
-/// See [`PredictOutput`](crate::output::PredictOutput)
+/// See [`PredictOutput`](crate::output::PredictOutput).
 pub mod predict_output {
 
-    /// A builder for [`PredictOutput`](crate::output::PredictOutput)
-    #[non_exhaustive]
+    /// A builder for [`PredictOutput`](crate::output::PredictOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prediction: std::option::Option<crate::model::Prediction>,
@@ -300,7 +300,7 @@ pub mod predict_output {
             self.prediction = input;
             self
         }
-        /// Consumes the builder and constructs a [`PredictOutput`](crate::output::PredictOutput)
+        /// Consumes the builder and constructs a [`PredictOutput`](crate::output::PredictOutput).
         pub fn build(self) -> crate::output::PredictOutput {
             crate::output::PredictOutput {
                 prediction: self.prediction,
@@ -309,7 +309,7 @@ pub mod predict_output {
     }
 }
 impl PredictOutput {
-    /// Creates a new builder-style object to manufacture [`PredictOutput`](crate::output::PredictOutput)
+    /// Creates a new builder-style object to manufacture [`PredictOutput`](crate::output::PredictOutput).
     pub fn builder() -> crate::output::predict_output::Builder {
         crate::output::predict_output::Builder::default()
     }
@@ -320,16 +320,22 @@ impl PredictOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetMlModelOutput {
     /// <p>The MLModel ID, which is same as the <code>MLModelId</code> in the request.</p>
+    #[doc(hidden)]
     pub ml_model_id: std::option::Option<std::string::String>,
     /// <p>The ID of the training <code>DataSource</code>.</p>
+    #[doc(hidden)]
     pub training_data_source_id: std::option::Option<std::string::String>,
     /// <p>The AWS user account from which the <code>MLModel</code> was created. The account type can be either an AWS root account or an AWS Identity and Access Management (IAM) user account.</p>
+    #[doc(hidden)]
     pub created_by_iam_user: std::option::Option<std::string::String>,
     /// <p>The time that the <code>MLModel</code> was created. The time is expressed in epoch time.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time of the most recent edit to the <code>MLModel</code>. The time is expressed in epoch time.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A user-supplied name or description of the <code>MLModel</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The current status of the <code>MLModel</code>. This element can have one of the following values:</p>
     /// <ul>
@@ -339,10 +345,13 @@ pub struct GetMlModelOutput {
     /// <li> <p> <code>COMPLETED</code> - The request completed successfully.</p> </li>
     /// <li> <p> <code>DELETED</code> - The <code>MLModel</code> is marked as deleted. It isn't usable.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EntityStatus>,
     /// <p>Long integer type that is a 64-bit signed number.</p>
+    #[doc(hidden)]
     pub size_in_bytes: std::option::Option<i64>,
     /// <p>The current endpoint of the <code>MLModel</code> </p>
+    #[doc(hidden)]
     pub endpoint_info: std::option::Option<crate::model::RealtimeEndpointInfo>,
     /// <p>A list of the training parameters in the <code>MLModel</code>. The list is implemented as a map of key-value pairs.</p>
     /// <p>The following is the current set of training parameters:</p>
@@ -353,9 +362,11 @@ pub struct GetMlModelOutput {
     /// <li> <p> <code>sgd.l1RegularizationAmount</code> - The coefficient regularization L1 norm. It controls overfitting the data by penalizing large coefficients. This tends to drive coefficients to zero, resulting in a sparse feature set. If you use this parameter, start by specifying a small value, such as <code>1.0E-08</code>.</p> <p>The value is a double that ranges from <code>0</code> to <code>MAX_DOUBLE</code>. The default is to not use L1 normalization. This parameter can't be used when <code>L2</code> is specified. Use this parameter sparingly.</p> </li>
     /// <li> <p> <code>sgd.l2RegularizationAmount</code> - The coefficient regularization L2 norm. It controls overfitting the data by penalizing large coefficients. This tends to drive coefficients to small, nonzero values. If you use this parameter, start by specifying a small value, such as <code>1.0E-08</code>.</p> <p>The value is a double that ranges from <code>0</code> to <code>MAX_DOUBLE</code>. The default is to not use L2 normalization. This parameter can't be used when <code>L1</code> is specified. Use this parameter sparingly.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub training_parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The location of the data file or directory in Amazon Simple Storage Service (Amazon S3).</p>
+    #[doc(hidden)]
     pub input_data_location_s3: std::option::Option<std::string::String>,
     /// <p>Identifies the <code>MLModel</code> category. The following are the available types: </p>
     /// <ul>
@@ -363,27 +374,37 @@ pub struct GetMlModelOutput {
     /// <li> <p>BINARY -- Produces one of two possible results. For example, "Is this an e-commerce website?"</p> </li>
     /// <li> <p>MULTICLASS -- Produces one of several possible results. For example, "Is this a HIGH, LOW or MEDIUM risk trade?"</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub ml_model_type: std::option::Option<crate::model::MlModelType>,
     /// <p>The scoring threshold is used in binary classification <code>MLModel</code> models. It marks the boundary between a positive prediction and a negative prediction.</p>
     /// <p>Output values greater than or equal to the threshold receive a positive result from the MLModel, such as <code>true</code>. Output values less than the threshold receive a negative response from the MLModel, such as <code>false</code>.</p>
+    #[doc(hidden)]
     pub score_threshold: std::option::Option<f32>,
     /// <p>The time of the most recent edit to the <code>ScoreThreshold</code>. The time is expressed in epoch time.</p>
+    #[doc(hidden)]
     pub score_threshold_last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A link to the file that contains logs of the <code>CreateMLModel</code> operation.</p>
+    #[doc(hidden)]
     pub log_uri: std::option::Option<std::string::String>,
     /// <p>A description of the most recent details about accessing the <code>MLModel</code>.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The approximate CPU time in milliseconds that Amazon Machine Learning spent processing the <code>MLModel</code>, normalized and scaled on computation resources. <code>ComputeTime</code> is only available if the <code>MLModel</code> is in the <code>COMPLETED</code> state.</p>
+    #[doc(hidden)]
     pub compute_time: std::option::Option<i64>,
     /// <p>The epoch time when Amazon Machine Learning marked the <code>MLModel</code> as <code>COMPLETED</code> or <code>FAILED</code>. <code>FinishedAt</code> is only available when the <code>MLModel</code> is in the <code>COMPLETED</code> or <code>FAILED</code> state.</p>
+    #[doc(hidden)]
     pub finished_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The epoch time when Amazon Machine Learning marked the <code>MLModel</code> as <code>INPROGRESS</code>. <code>StartedAt</code> isn't available if the <code>MLModel</code> is in the <code>PENDING</code> state.</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The recipe to use when training the <code>MLModel</code>. The <code>Recipe</code> provides detailed information about the observation data to use during training, and manipulations to perform on the observation data during training.</p>
     /// <p> <b>Note:</b> This parameter is provided as part of the verbose format.</p>
+    #[doc(hidden)]
     pub recipe: std::option::Option<std::string::String>,
     /// <p>The schema used by all of the data files referenced by the <code>DataSource</code>.</p>
     /// <p> <b>Note:</b> This parameter is provided as part of the verbose format.</p>
+    #[doc(hidden)]
     pub schema: std::option::Option<std::string::String>,
 }
 impl GetMlModelOutput {
@@ -530,11 +551,10 @@ impl std::fmt::Debug for GetMlModelOutput {
         formatter.finish()
     }
 }
-/// See [`GetMlModelOutput`](crate::output::GetMlModelOutput)
+/// See [`GetMlModelOutput`](crate::output::GetMlModelOutput).
 pub mod get_ml_model_output {
 
-    /// A builder for [`GetMlModelOutput`](crate::output::GetMlModelOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetMlModelOutput`](crate::output::GetMlModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ml_model_id: std::option::Option<std::string::String>,
@@ -869,7 +889,7 @@ pub mod get_ml_model_output {
             self.schema = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetMlModelOutput`](crate::output::GetMlModelOutput)
+        /// Consumes the builder and constructs a [`GetMlModelOutput`](crate::output::GetMlModelOutput).
         pub fn build(self) -> crate::output::GetMlModelOutput {
             crate::output::GetMlModelOutput {
                 ml_model_id: self.ml_model_id,
@@ -898,7 +918,7 @@ pub mod get_ml_model_output {
     }
 }
 impl GetMlModelOutput {
-    /// Creates a new builder-style object to manufacture [`GetMlModelOutput`](crate::output::GetMlModelOutput)
+    /// Creates a new builder-style object to manufacture [`GetMlModelOutput`](crate::output::GetMlModelOutput).
     pub fn builder() -> crate::output::get_ml_model_output::Builder {
         crate::output::get_ml_model_output::Builder::default()
     }
@@ -909,20 +929,28 @@ impl GetMlModelOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetEvaluationOutput {
     /// <p>The evaluation ID which is same as the <code>EvaluationId</code> in the request.</p>
+    #[doc(hidden)]
     pub evaluation_id: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>MLModel</code> that was the focus of the evaluation.</p>
+    #[doc(hidden)]
     pub ml_model_id: std::option::Option<std::string::String>,
     /// <p>The <code>DataSource</code> used for this evaluation.</p>
+    #[doc(hidden)]
     pub evaluation_data_source_id: std::option::Option<std::string::String>,
     /// <p>The location of the data file or directory in Amazon Simple Storage Service (Amazon S3).</p>
+    #[doc(hidden)]
     pub input_data_location_s3: std::option::Option<std::string::String>,
     /// <p>The AWS user account that invoked the evaluation. The account type can be either an AWS root account or an AWS Identity and Access Management (IAM) user account.</p>
+    #[doc(hidden)]
     pub created_by_iam_user: std::option::Option<std::string::String>,
     /// <p>The time that the <code>Evaluation</code> was created. The time is expressed in epoch time.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time of the most recent edit to the <code>Evaluation</code>. The time is expressed in epoch time.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A user-supplied name or description of the <code>Evaluation</code>. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The status of the evaluation. This element can have one of the following values:</p>
     /// <ul>
@@ -932,6 +960,7 @@ pub struct GetEvaluationOutput {
     /// <li> <p> <code>COMPLETED</code> - The evaluation process completed successfully.</p> </li>
     /// <li> <p> <code>DELETED</code> - The <code>Evaluation</code> is marked as deleted. It is not usable.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EntityStatus>,
     /// <p>Measurements of how well the <code>MLModel</code> performed using observations referenced by the <code>DataSource</code>. One of the following metric is returned based on the type of the <code>MLModel</code>: </p>
     /// <ul>
@@ -940,16 +969,22 @@ pub struct GetEvaluationOutput {
     /// <li> <p>MulticlassAvgFScore: A multiclass <code>MLModel</code> uses the F1 score technique to measure performance. </p> </li>
     /// </ul>
     /// <p> For more information about performance metrics, please see the <a href="https://docs.aws.amazon.com/machine-learning/latest/dg">Amazon Machine Learning Developer Guide</a>. </p>
+    #[doc(hidden)]
     pub performance_metrics: std::option::Option<crate::model::PerformanceMetrics>,
     /// <p>A link to the file that contains logs of the <code>CreateEvaluation</code> operation.</p>
+    #[doc(hidden)]
     pub log_uri: std::option::Option<std::string::String>,
     /// <p>A description of the most recent details about evaluating the <code>MLModel</code>.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The approximate CPU time in milliseconds that Amazon Machine Learning spent processing the <code>Evaluation</code>, normalized and scaled on computation resources. <code>ComputeTime</code> is only available if the <code>Evaluation</code> is in the <code>COMPLETED</code> state.</p>
+    #[doc(hidden)]
     pub compute_time: std::option::Option<i64>,
     /// <p>The epoch time when Amazon Machine Learning marked the <code>Evaluation</code> as <code>COMPLETED</code> or <code>FAILED</code>. <code>FinishedAt</code> is only available when the <code>Evaluation</code> is in the <code>COMPLETED</code> or <code>FAILED</code> state.</p>
+    #[doc(hidden)]
     pub finished_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The epoch time when Amazon Machine Learning marked the <code>Evaluation</code> as <code>INPROGRESS</code>. <code>StartedAt</code> isn't available if the <code>Evaluation</code> is in the <code>PENDING</code> state.</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GetEvaluationOutput {
@@ -1048,11 +1083,10 @@ impl std::fmt::Debug for GetEvaluationOutput {
         formatter.finish()
     }
 }
-/// See [`GetEvaluationOutput`](crate::output::GetEvaluationOutput)
+/// See [`GetEvaluationOutput`](crate::output::GetEvaluationOutput).
 pub mod get_evaluation_output {
 
-    /// A builder for [`GetEvaluationOutput`](crate::output::GetEvaluationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetEvaluationOutput`](crate::output::GetEvaluationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) evaluation_id: std::option::Option<std::string::String>,
@@ -1278,7 +1312,7 @@ pub mod get_evaluation_output {
             self.started_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetEvaluationOutput`](crate::output::GetEvaluationOutput)
+        /// Consumes the builder and constructs a [`GetEvaluationOutput`](crate::output::GetEvaluationOutput).
         pub fn build(self) -> crate::output::GetEvaluationOutput {
             crate::output::GetEvaluationOutput {
                 evaluation_id: self.evaluation_id,
@@ -1301,7 +1335,7 @@ pub mod get_evaluation_output {
     }
 }
 impl GetEvaluationOutput {
-    /// Creates a new builder-style object to manufacture [`GetEvaluationOutput`](crate::output::GetEvaluationOutput)
+    /// Creates a new builder-style object to manufacture [`GetEvaluationOutput`](crate::output::GetEvaluationOutput).
     pub fn builder() -> crate::output::get_evaluation_output::Builder {
         crate::output::get_evaluation_output::Builder::default()
     }
@@ -1312,22 +1346,31 @@ impl GetEvaluationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDataSourceOutput {
     /// <p>The ID assigned to the <code>DataSource</code> at creation. This value should be identical to the value of the <code>DataSourceId</code> in the request.</p>
+    #[doc(hidden)]
     pub data_source_id: std::option::Option<std::string::String>,
     /// <p>The location of the data file or directory in Amazon Simple Storage Service (Amazon S3).</p>
+    #[doc(hidden)]
     pub data_location_s3: std::option::Option<std::string::String>,
     /// <p>A JSON string that represents the splitting and rearrangement requirement used when this <code>DataSource</code> was created.</p>
+    #[doc(hidden)]
     pub data_rearrangement: std::option::Option<std::string::String>,
     /// <p>The AWS user account from which the <code>DataSource</code> was created. The account type can be either an AWS root account or an AWS Identity and Access Management (IAM) user account.</p>
+    #[doc(hidden)]
     pub created_by_iam_user: std::option::Option<std::string::String>,
     /// <p>The time that the <code>DataSource</code> was created. The time is expressed in epoch time.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time of the most recent edit to the <code>DataSource</code>. The time is expressed in epoch time.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The total size of observations in the data files.</p>
+    #[doc(hidden)]
     pub data_size_in_bytes: std::option::Option<i64>,
     /// <p>The number of data files referenced by the <code>DataSource</code>.</p>
+    #[doc(hidden)]
     pub number_of_files: std::option::Option<i64>,
     /// <p>A user-supplied name or description of the <code>DataSource</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The current status of the <code>DataSource</code>. This element can have one of the following values:</p>
     /// <ul>
@@ -1337,27 +1380,38 @@ pub struct GetDataSourceOutput {
     /// <li> <p> <code>COMPLETED</code> - The creation process completed successfully.</p> </li>
     /// <li> <p> <code>DELETED</code> - The <code>DataSource</code> is marked as deleted. It is not usable.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EntityStatus>,
     /// <p>A link to the file containing logs of <code>CreateDataSourceFrom*</code> operations.</p>
+    #[doc(hidden)]
     pub log_uri: std::option::Option<std::string::String>,
     /// <p>The user-supplied description of the most recent details about creating the <code>DataSource</code>.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>Describes the <code>DataSource</code> details specific to Amazon Redshift.</p>
+    #[doc(hidden)]
     pub redshift_metadata: std::option::Option<crate::model::RedshiftMetadata>,
     /// <p>The datasource details that are specific to Amazon RDS.</p>
+    #[doc(hidden)]
     pub rds_metadata: std::option::Option<crate::model::RdsMetadata>,
     /// <p>The Amazon Resource Name (ARN) of an <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/roles-toplevel.html#roles-about-termsandconcepts">AWS IAM Role</a>, such as the following: arn:aws:iam::account:role/rolename. </p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p> The parameter is <code>true</code> if statistics need to be generated from the observation data. </p>
+    #[doc(hidden)]
     pub compute_statistics: bool,
     /// <p>The approximate CPU time in milliseconds that Amazon Machine Learning spent processing the <code>DataSource</code>, normalized and scaled on computation resources. <code>ComputeTime</code> is only available if the <code>DataSource</code> is in the <code>COMPLETED</code> state and the <code>ComputeStatistics</code> is set to true.</p>
+    #[doc(hidden)]
     pub compute_time: std::option::Option<i64>,
     /// <p>The epoch time when Amazon Machine Learning marked the <code>DataSource</code> as <code>COMPLETED</code> or <code>FAILED</code>. <code>FinishedAt</code> is only available when the <code>DataSource</code> is in the <code>COMPLETED</code> or <code>FAILED</code> state.</p>
+    #[doc(hidden)]
     pub finished_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The epoch time when Amazon Machine Learning marked the <code>DataSource</code> as <code>INPROGRESS</code>. <code>StartedAt</code> isn't available if the <code>DataSource</code> is in the <code>PENDING</code> state.</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The schema used by all of the data files of this <code>DataSource</code>.</p>
     /// <p> <b>Note:</b> This parameter is provided as part of the verbose format.</p>
+    #[doc(hidden)]
     pub data_source_schema: std::option::Option<std::string::String>,
 }
 impl GetDataSourceOutput {
@@ -1476,11 +1530,10 @@ impl std::fmt::Debug for GetDataSourceOutput {
         formatter.finish()
     }
 }
-/// See [`GetDataSourceOutput`](crate::output::GetDataSourceOutput)
+/// See [`GetDataSourceOutput`](crate::output::GetDataSourceOutput).
 pub mod get_data_source_output {
 
-    /// A builder for [`GetDataSourceOutput`](crate::output::GetDataSourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDataSourceOutput`](crate::output::GetDataSourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_source_id: std::option::Option<std::string::String>,
@@ -1757,7 +1810,7 @@ pub mod get_data_source_output {
             self.data_source_schema = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDataSourceOutput`](crate::output::GetDataSourceOutput)
+        /// Consumes the builder and constructs a [`GetDataSourceOutput`](crate::output::GetDataSourceOutput).
         pub fn build(self) -> crate::output::GetDataSourceOutput {
             crate::output::GetDataSourceOutput {
                 data_source_id: self.data_source_id,
@@ -1785,7 +1838,7 @@ pub mod get_data_source_output {
     }
 }
 impl GetDataSourceOutput {
-    /// Creates a new builder-style object to manufacture [`GetDataSourceOutput`](crate::output::GetDataSourceOutput)
+    /// Creates a new builder-style object to manufacture [`GetDataSourceOutput`](crate::output::GetDataSourceOutput).
     pub fn builder() -> crate::output::get_data_source_output::Builder {
         crate::output::get_data_source_output::Builder::default()
     }
@@ -1796,20 +1849,28 @@ impl GetDataSourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBatchPredictionOutput {
     /// <p>An ID assigned to the <code>BatchPrediction</code> at creation. This value should be identical to the value of the <code>BatchPredictionID</code> in the request.</p>
+    #[doc(hidden)]
     pub batch_prediction_id: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>MLModel</code> that generated predictions for the <code>BatchPrediction</code> request.</p>
+    #[doc(hidden)]
     pub ml_model_id: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>DataSource</code> that was used to create the <code>BatchPrediction</code>. </p>
+    #[doc(hidden)]
     pub batch_prediction_data_source_id: std::option::Option<std::string::String>,
     /// <p>The location of the data file or directory in Amazon Simple Storage Service (Amazon S3).</p>
+    #[doc(hidden)]
     pub input_data_location_s3: std::option::Option<std::string::String>,
     /// <p>The AWS user account that invoked the <code>BatchPrediction</code>. The account type can be either an AWS root account or an AWS Identity and Access Management (IAM) user account.</p>
+    #[doc(hidden)]
     pub created_by_iam_user: std::option::Option<std::string::String>,
     /// <p>The time when the <code>BatchPrediction</code> was created. The time is expressed in epoch time.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time of the most recent edit to <code>BatchPrediction</code>. The time is expressed in epoch time.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A user-supplied name or description of the <code>BatchPrediction</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The status of the <code>BatchPrediction</code>, which can be one of the following values:</p>
     /// <ul>
@@ -1819,22 +1880,31 @@ pub struct GetBatchPredictionOutput {
     /// <li> <p> <code>COMPLETED</code> - The batch prediction process completed successfully.</p> </li>
     /// <li> <p> <code>DELETED</code> - The <code>BatchPrediction</code> is marked as deleted. It is not usable.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EntityStatus>,
     /// <p>The location of an Amazon S3 bucket or directory to receive the operation results.</p>
+    #[doc(hidden)]
     pub output_uri: std::option::Option<std::string::String>,
     /// <p>A link to the file that contains logs of the <code>CreateBatchPrediction</code> operation.</p>
+    #[doc(hidden)]
     pub log_uri: std::option::Option<std::string::String>,
     /// <p>A description of the most recent details about processing the batch prediction request.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The approximate CPU time in milliseconds that Amazon Machine Learning spent processing the <code>BatchPrediction</code>, normalized and scaled on computation resources. <code>ComputeTime</code> is only available if the <code>BatchPrediction</code> is in the <code>COMPLETED</code> state.</p>
+    #[doc(hidden)]
     pub compute_time: std::option::Option<i64>,
     /// <p>The epoch time when Amazon Machine Learning marked the <code>BatchPrediction</code> as <code>COMPLETED</code> or <code>FAILED</code>. <code>FinishedAt</code> is only available when the <code>BatchPrediction</code> is in the <code>COMPLETED</code> or <code>FAILED</code> state.</p>
+    #[doc(hidden)]
     pub finished_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The epoch time when Amazon Machine Learning marked the <code>BatchPrediction</code> as <code>INPROGRESS</code>. <code>StartedAt</code> isn't available if the <code>BatchPrediction</code> is in the <code>PENDING</code> state.</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The number of total records that Amazon Machine Learning saw while processing the <code>BatchPrediction</code>.</p>
+    #[doc(hidden)]
     pub total_record_count: std::option::Option<i64>,
     /// <p>The number of invalid records that Amazon Machine Learning saw while processing the <code>BatchPrediction</code>.</p>
+    #[doc(hidden)]
     pub invalid_record_count: std::option::Option<i64>,
 }
 impl GetBatchPredictionOutput {
@@ -1940,11 +2010,10 @@ impl std::fmt::Debug for GetBatchPredictionOutput {
         formatter.finish()
     }
 }
-/// See [`GetBatchPredictionOutput`](crate::output::GetBatchPredictionOutput)
+/// See [`GetBatchPredictionOutput`](crate::output::GetBatchPredictionOutput).
 pub mod get_batch_prediction_output {
 
-    /// A builder for [`GetBatchPredictionOutput`](crate::output::GetBatchPredictionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBatchPredictionOutput`](crate::output::GetBatchPredictionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) batch_prediction_id: std::option::Option<std::string::String>,
@@ -2180,7 +2249,7 @@ pub mod get_batch_prediction_output {
             self.invalid_record_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBatchPredictionOutput`](crate::output::GetBatchPredictionOutput)
+        /// Consumes the builder and constructs a [`GetBatchPredictionOutput`](crate::output::GetBatchPredictionOutput).
         pub fn build(self) -> crate::output::GetBatchPredictionOutput {
             crate::output::GetBatchPredictionOutput {
                 batch_prediction_id: self.batch_prediction_id,
@@ -2205,7 +2274,7 @@ pub mod get_batch_prediction_output {
     }
 }
 impl GetBatchPredictionOutput {
-    /// Creates a new builder-style object to manufacture [`GetBatchPredictionOutput`](crate::output::GetBatchPredictionOutput)
+    /// Creates a new builder-style object to manufacture [`GetBatchPredictionOutput`](crate::output::GetBatchPredictionOutput).
     pub fn builder() -> crate::output::get_batch_prediction_output::Builder {
         crate::output::get_batch_prediction_output::Builder::default()
     }
@@ -2216,10 +2285,13 @@ impl GetBatchPredictionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeTagsOutput {
     /// <p>The ID of the tagged ML object.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The type of the tagged ML object.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::TaggableResourceType>,
     /// <p>A list of tags associated with the ML object.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl DescribeTagsOutput {
@@ -2245,11 +2317,10 @@ impl std::fmt::Debug for DescribeTagsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeTagsOutput`](crate::output::DescribeTagsOutput)
+/// See [`DescribeTagsOutput`](crate::output::DescribeTagsOutput).
 pub mod describe_tags_output {
 
-    /// A builder for [`DescribeTagsOutput`](crate::output::DescribeTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeTagsOutput`](crate::output::DescribeTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_id: std::option::Option<std::string::String>,
@@ -2299,7 +2370,7 @@ pub mod describe_tags_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeTagsOutput`](crate::output::DescribeTagsOutput)
+        /// Consumes the builder and constructs a [`DescribeTagsOutput`](crate::output::DescribeTagsOutput).
         pub fn build(self) -> crate::output::DescribeTagsOutput {
             crate::output::DescribeTagsOutput {
                 resource_id: self.resource_id,
@@ -2310,7 +2381,7 @@ pub mod describe_tags_output {
     }
 }
 impl DescribeTagsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeTagsOutput`](crate::output::DescribeTagsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeTagsOutput`](crate::output::DescribeTagsOutput).
     pub fn builder() -> crate::output::describe_tags_output::Builder {
         crate::output::describe_tags_output::Builder::default()
     }
@@ -2321,8 +2392,10 @@ impl DescribeTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeMlModelsOutput {
     /// <p>A list of <code>MLModel</code> that meet the search criteria.</p>
+    #[doc(hidden)]
     pub results: std::option::Option<std::vec::Vec<crate::model::MlModel>>,
     /// <p>The ID of the next page in the paginated results that indicates at least one more page follows.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeMlModelsOutput {
@@ -2343,11 +2416,10 @@ impl std::fmt::Debug for DescribeMlModelsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeMlModelsOutput`](crate::output::DescribeMlModelsOutput)
+/// See [`DescribeMlModelsOutput`](crate::output::DescribeMlModelsOutput).
 pub mod describe_ml_models_output {
 
-    /// A builder for [`DescribeMlModelsOutput`](crate::output::DescribeMlModelsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeMlModelsOutput`](crate::output::DescribeMlModelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) results: std::option::Option<std::vec::Vec<crate::model::MlModel>>,
@@ -2383,7 +2455,7 @@ pub mod describe_ml_models_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeMlModelsOutput`](crate::output::DescribeMlModelsOutput)
+        /// Consumes the builder and constructs a [`DescribeMlModelsOutput`](crate::output::DescribeMlModelsOutput).
         pub fn build(self) -> crate::output::DescribeMlModelsOutput {
             crate::output::DescribeMlModelsOutput {
                 results: self.results,
@@ -2393,7 +2465,7 @@ pub mod describe_ml_models_output {
     }
 }
 impl DescribeMlModelsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeMlModelsOutput`](crate::output::DescribeMlModelsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeMlModelsOutput`](crate::output::DescribeMlModelsOutput).
     pub fn builder() -> crate::output::describe_ml_models_output::Builder {
         crate::output::describe_ml_models_output::Builder::default()
     }
@@ -2404,8 +2476,10 @@ impl DescribeMlModelsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEvaluationsOutput {
     /// <p>A list of <code>Evaluation</code> that meet the search criteria. </p>
+    #[doc(hidden)]
     pub results: std::option::Option<std::vec::Vec<crate::model::Evaluation>>,
     /// <p>The ID of the next page in the paginated results that indicates at least one more page follows.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeEvaluationsOutput {
@@ -2426,11 +2500,10 @@ impl std::fmt::Debug for DescribeEvaluationsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEvaluationsOutput`](crate::output::DescribeEvaluationsOutput)
+/// See [`DescribeEvaluationsOutput`](crate::output::DescribeEvaluationsOutput).
 pub mod describe_evaluations_output {
 
-    /// A builder for [`DescribeEvaluationsOutput`](crate::output::DescribeEvaluationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEvaluationsOutput`](crate::output::DescribeEvaluationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) results: std::option::Option<std::vec::Vec<crate::model::Evaluation>>,
@@ -2466,7 +2539,7 @@ pub mod describe_evaluations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEvaluationsOutput`](crate::output::DescribeEvaluationsOutput)
+        /// Consumes the builder and constructs a [`DescribeEvaluationsOutput`](crate::output::DescribeEvaluationsOutput).
         pub fn build(self) -> crate::output::DescribeEvaluationsOutput {
             crate::output::DescribeEvaluationsOutput {
                 results: self.results,
@@ -2476,7 +2549,7 @@ pub mod describe_evaluations_output {
     }
 }
 impl DescribeEvaluationsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEvaluationsOutput`](crate::output::DescribeEvaluationsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEvaluationsOutput`](crate::output::DescribeEvaluationsOutput).
     pub fn builder() -> crate::output::describe_evaluations_output::Builder {
         crate::output::describe_evaluations_output::Builder::default()
     }
@@ -2487,8 +2560,10 @@ impl DescribeEvaluationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDataSourcesOutput {
     /// <p>A list of <code>DataSource</code> that meet the search criteria. </p>
+    #[doc(hidden)]
     pub results: std::option::Option<std::vec::Vec<crate::model::DataSource>>,
     /// <p>An ID of the next page in the paginated results that indicates at least one more page follows.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeDataSourcesOutput {
@@ -2509,11 +2584,10 @@ impl std::fmt::Debug for DescribeDataSourcesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDataSourcesOutput`](crate::output::DescribeDataSourcesOutput)
+/// See [`DescribeDataSourcesOutput`](crate::output::DescribeDataSourcesOutput).
 pub mod describe_data_sources_output {
 
-    /// A builder for [`DescribeDataSourcesOutput`](crate::output::DescribeDataSourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDataSourcesOutput`](crate::output::DescribeDataSourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) results: std::option::Option<std::vec::Vec<crate::model::DataSource>>,
@@ -2549,7 +2623,7 @@ pub mod describe_data_sources_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDataSourcesOutput`](crate::output::DescribeDataSourcesOutput)
+        /// Consumes the builder and constructs a [`DescribeDataSourcesOutput`](crate::output::DescribeDataSourcesOutput).
         pub fn build(self) -> crate::output::DescribeDataSourcesOutput {
             crate::output::DescribeDataSourcesOutput {
                 results: self.results,
@@ -2559,7 +2633,7 @@ pub mod describe_data_sources_output {
     }
 }
 impl DescribeDataSourcesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDataSourcesOutput`](crate::output::DescribeDataSourcesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDataSourcesOutput`](crate::output::DescribeDataSourcesOutput).
     pub fn builder() -> crate::output::describe_data_sources_output::Builder {
         crate::output::describe_data_sources_output::Builder::default()
     }
@@ -2570,8 +2644,10 @@ impl DescribeDataSourcesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBatchPredictionsOutput {
     /// <p>A list of <code>BatchPrediction</code> objects that meet the search criteria. </p>
+    #[doc(hidden)]
     pub results: std::option::Option<std::vec::Vec<crate::model::BatchPrediction>>,
     /// <p>The ID of the next page in the paginated results that indicates at least one more page follows.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeBatchPredictionsOutput {
@@ -2592,11 +2668,10 @@ impl std::fmt::Debug for DescribeBatchPredictionsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeBatchPredictionsOutput`](crate::output::DescribeBatchPredictionsOutput)
+/// See [`DescribeBatchPredictionsOutput`](crate::output::DescribeBatchPredictionsOutput).
 pub mod describe_batch_predictions_output {
 
-    /// A builder for [`DescribeBatchPredictionsOutput`](crate::output::DescribeBatchPredictionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeBatchPredictionsOutput`](crate::output::DescribeBatchPredictionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) results: std::option::Option<std::vec::Vec<crate::model::BatchPrediction>>,
@@ -2632,7 +2707,7 @@ pub mod describe_batch_predictions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeBatchPredictionsOutput`](crate::output::DescribeBatchPredictionsOutput)
+        /// Consumes the builder and constructs a [`DescribeBatchPredictionsOutput`](crate::output::DescribeBatchPredictionsOutput).
         pub fn build(self) -> crate::output::DescribeBatchPredictionsOutput {
             crate::output::DescribeBatchPredictionsOutput {
                 results: self.results,
@@ -2642,7 +2717,7 @@ pub mod describe_batch_predictions_output {
     }
 }
 impl DescribeBatchPredictionsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeBatchPredictionsOutput`](crate::output::DescribeBatchPredictionsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeBatchPredictionsOutput`](crate::output::DescribeBatchPredictionsOutput).
     pub fn builder() -> crate::output::describe_batch_predictions_output::Builder {
         crate::output::describe_batch_predictions_output::Builder::default()
     }
@@ -2653,8 +2728,10 @@ impl DescribeBatchPredictionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteTagsOutput {
     /// <p>The ID of the ML object from which tags were deleted.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The type of the ML object from which tags were deleted.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::TaggableResourceType>,
 }
 impl DeleteTagsOutput {
@@ -2675,11 +2752,10 @@ impl std::fmt::Debug for DeleteTagsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteTagsOutput`](crate::output::DeleteTagsOutput)
+/// See [`DeleteTagsOutput`](crate::output::DeleteTagsOutput).
 pub mod delete_tags_output {
 
-    /// A builder for [`DeleteTagsOutput`](crate::output::DeleteTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteTagsOutput`](crate::output::DeleteTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_id: std::option::Option<std::string::String>,
@@ -2709,7 +2785,7 @@ pub mod delete_tags_output {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteTagsOutput`](crate::output::DeleteTagsOutput)
+        /// Consumes the builder and constructs a [`DeleteTagsOutput`](crate::output::DeleteTagsOutput).
         pub fn build(self) -> crate::output::DeleteTagsOutput {
             crate::output::DeleteTagsOutput {
                 resource_id: self.resource_id,
@@ -2719,7 +2795,7 @@ pub mod delete_tags_output {
     }
 }
 impl DeleteTagsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteTagsOutput`](crate::output::DeleteTagsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteTagsOutput`](crate::output::DeleteTagsOutput).
     pub fn builder() -> crate::output::delete_tags_output::Builder {
         crate::output::delete_tags_output::Builder::default()
     }
@@ -2731,8 +2807,10 @@ impl DeleteTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteRealtimeEndpointOutput {
     /// <p>A user-supplied ID that uniquely identifies the <code>MLModel</code>. This value should be identical to the value of the <code>MLModelId</code> in the request.</p>
+    #[doc(hidden)]
     pub ml_model_id: std::option::Option<std::string::String>,
     /// <p>The endpoint information of the <code>MLModel</code> </p>
+    #[doc(hidden)]
     pub realtime_endpoint_info: std::option::Option<crate::model::RealtimeEndpointInfo>,
 }
 impl DeleteRealtimeEndpointOutput {
@@ -2755,11 +2833,10 @@ impl std::fmt::Debug for DeleteRealtimeEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRealtimeEndpointOutput`](crate::output::DeleteRealtimeEndpointOutput)
+/// See [`DeleteRealtimeEndpointOutput`](crate::output::DeleteRealtimeEndpointOutput).
 pub mod delete_realtime_endpoint_output {
 
-    /// A builder for [`DeleteRealtimeEndpointOutput`](crate::output::DeleteRealtimeEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRealtimeEndpointOutput`](crate::output::DeleteRealtimeEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ml_model_id: std::option::Option<std::string::String>,
@@ -2789,7 +2866,7 @@ pub mod delete_realtime_endpoint_output {
             self.realtime_endpoint_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteRealtimeEndpointOutput`](crate::output::DeleteRealtimeEndpointOutput)
+        /// Consumes the builder and constructs a [`DeleteRealtimeEndpointOutput`](crate::output::DeleteRealtimeEndpointOutput).
         pub fn build(self) -> crate::output::DeleteRealtimeEndpointOutput {
             crate::output::DeleteRealtimeEndpointOutput {
                 ml_model_id: self.ml_model_id,
@@ -2799,7 +2876,7 @@ pub mod delete_realtime_endpoint_output {
     }
 }
 impl DeleteRealtimeEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRealtimeEndpointOutput`](crate::output::DeleteRealtimeEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRealtimeEndpointOutput`](crate::output::DeleteRealtimeEndpointOutput).
     pub fn builder() -> crate::output::delete_realtime_endpoint_output::Builder {
         crate::output::delete_realtime_endpoint_output::Builder::default()
     }
@@ -2811,6 +2888,7 @@ impl DeleteRealtimeEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteMlModelOutput {
     /// <p>A user-supplied ID that uniquely identifies the <code>MLModel</code>. This value should be identical to the value of the <code>MLModelID</code> in the request.</p>
+    #[doc(hidden)]
     pub ml_model_id: std::option::Option<std::string::String>,
 }
 impl DeleteMlModelOutput {
@@ -2826,11 +2904,10 @@ impl std::fmt::Debug for DeleteMlModelOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteMlModelOutput`](crate::output::DeleteMlModelOutput)
+/// See [`DeleteMlModelOutput`](crate::output::DeleteMlModelOutput).
 pub mod delete_ml_model_output {
 
-    /// A builder for [`DeleteMlModelOutput`](crate::output::DeleteMlModelOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteMlModelOutput`](crate::output::DeleteMlModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ml_model_id: std::option::Option<std::string::String>,
@@ -2846,7 +2923,7 @@ pub mod delete_ml_model_output {
             self.ml_model_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteMlModelOutput`](crate::output::DeleteMlModelOutput)
+        /// Consumes the builder and constructs a [`DeleteMlModelOutput`](crate::output::DeleteMlModelOutput).
         pub fn build(self) -> crate::output::DeleteMlModelOutput {
             crate::output::DeleteMlModelOutput {
                 ml_model_id: self.ml_model_id,
@@ -2855,7 +2932,7 @@ pub mod delete_ml_model_output {
     }
 }
 impl DeleteMlModelOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteMlModelOutput`](crate::output::DeleteMlModelOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteMlModelOutput`](crate::output::DeleteMlModelOutput).
     pub fn builder() -> crate::output::delete_ml_model_output::Builder {
         crate::output::delete_ml_model_output::Builder::default()
     }
@@ -2867,6 +2944,7 @@ impl DeleteMlModelOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteEvaluationOutput {
     /// <p>A user-supplied ID that uniquely identifies the <code>Evaluation</code>. This value should be identical to the value of the <code>EvaluationId</code> in the request.</p>
+    #[doc(hidden)]
     pub evaluation_id: std::option::Option<std::string::String>,
 }
 impl DeleteEvaluationOutput {
@@ -2882,11 +2960,10 @@ impl std::fmt::Debug for DeleteEvaluationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteEvaluationOutput`](crate::output::DeleteEvaluationOutput)
+/// See [`DeleteEvaluationOutput`](crate::output::DeleteEvaluationOutput).
 pub mod delete_evaluation_output {
 
-    /// A builder for [`DeleteEvaluationOutput`](crate::output::DeleteEvaluationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteEvaluationOutput`](crate::output::DeleteEvaluationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) evaluation_id: std::option::Option<std::string::String>,
@@ -2905,7 +2982,7 @@ pub mod delete_evaluation_output {
             self.evaluation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteEvaluationOutput`](crate::output::DeleteEvaluationOutput)
+        /// Consumes the builder and constructs a [`DeleteEvaluationOutput`](crate::output::DeleteEvaluationOutput).
         pub fn build(self) -> crate::output::DeleteEvaluationOutput {
             crate::output::DeleteEvaluationOutput {
                 evaluation_id: self.evaluation_id,
@@ -2914,7 +2991,7 @@ pub mod delete_evaluation_output {
     }
 }
 impl DeleteEvaluationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteEvaluationOutput`](crate::output::DeleteEvaluationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteEvaluationOutput`](crate::output::DeleteEvaluationOutput).
     pub fn builder() -> crate::output::delete_evaluation_output::Builder {
         crate::output::delete_evaluation_output::Builder::default()
     }
@@ -2925,6 +3002,7 @@ impl DeleteEvaluationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteDataSourceOutput {
     /// <p>A user-supplied ID that uniquely identifies the <code>DataSource</code>. This value should be identical to the value of the <code>DataSourceID</code> in the request.</p>
+    #[doc(hidden)]
     pub data_source_id: std::option::Option<std::string::String>,
 }
 impl DeleteDataSourceOutput {
@@ -2940,11 +3018,10 @@ impl std::fmt::Debug for DeleteDataSourceOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput)
+/// See [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput).
 pub mod delete_data_source_output {
 
-    /// A builder for [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_source_id: std::option::Option<std::string::String>,
@@ -2963,7 +3040,7 @@ pub mod delete_data_source_output {
             self.data_source_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput)
+        /// Consumes the builder and constructs a [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput).
         pub fn build(self) -> crate::output::DeleteDataSourceOutput {
             crate::output::DeleteDataSourceOutput {
                 data_source_id: self.data_source_id,
@@ -2972,7 +3049,7 @@ pub mod delete_data_source_output {
     }
 }
 impl DeleteDataSourceOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput).
     pub fn builder() -> crate::output::delete_data_source_output::Builder {
         crate::output::delete_data_source_output::Builder::default()
     }
@@ -2984,6 +3061,7 @@ impl DeleteDataSourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteBatchPredictionOutput {
     /// <p>A user-supplied ID that uniquely identifies the <code>BatchPrediction</code>. This value should be identical to the value of the <code>BatchPredictionID</code> in the request.</p>
+    #[doc(hidden)]
     pub batch_prediction_id: std::option::Option<std::string::String>,
 }
 impl DeleteBatchPredictionOutput {
@@ -2999,11 +3077,10 @@ impl std::fmt::Debug for DeleteBatchPredictionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBatchPredictionOutput`](crate::output::DeleteBatchPredictionOutput)
+/// See [`DeleteBatchPredictionOutput`](crate::output::DeleteBatchPredictionOutput).
 pub mod delete_batch_prediction_output {
 
-    /// A builder for [`DeleteBatchPredictionOutput`](crate::output::DeleteBatchPredictionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBatchPredictionOutput`](crate::output::DeleteBatchPredictionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) batch_prediction_id: std::option::Option<std::string::String>,
@@ -3022,7 +3099,7 @@ pub mod delete_batch_prediction_output {
             self.batch_prediction_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteBatchPredictionOutput`](crate::output::DeleteBatchPredictionOutput)
+        /// Consumes the builder and constructs a [`DeleteBatchPredictionOutput`](crate::output::DeleteBatchPredictionOutput).
         pub fn build(self) -> crate::output::DeleteBatchPredictionOutput {
             crate::output::DeleteBatchPredictionOutput {
                 batch_prediction_id: self.batch_prediction_id,
@@ -3031,7 +3108,7 @@ pub mod delete_batch_prediction_output {
     }
 }
 impl DeleteBatchPredictionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBatchPredictionOutput`](crate::output::DeleteBatchPredictionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBatchPredictionOutput`](crate::output::DeleteBatchPredictionOutput).
     pub fn builder() -> crate::output::delete_batch_prediction_output::Builder {
         crate::output::delete_batch_prediction_output::Builder::default()
     }
@@ -3044,8 +3121,10 @@ impl DeleteBatchPredictionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRealtimeEndpointOutput {
     /// <p>A user-supplied ID that uniquely identifies the <code>MLModel</code>. This value should be identical to the value of the <code>MLModelId</code> in the request.</p>
+    #[doc(hidden)]
     pub ml_model_id: std::option::Option<std::string::String>,
     /// <p>The endpoint information of the <code>MLModel</code> </p>
+    #[doc(hidden)]
     pub realtime_endpoint_info: std::option::Option<crate::model::RealtimeEndpointInfo>,
 }
 impl CreateRealtimeEndpointOutput {
@@ -3068,11 +3147,10 @@ impl std::fmt::Debug for CreateRealtimeEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRealtimeEndpointOutput`](crate::output::CreateRealtimeEndpointOutput)
+/// See [`CreateRealtimeEndpointOutput`](crate::output::CreateRealtimeEndpointOutput).
 pub mod create_realtime_endpoint_output {
 
-    /// A builder for [`CreateRealtimeEndpointOutput`](crate::output::CreateRealtimeEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRealtimeEndpointOutput`](crate::output::CreateRealtimeEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ml_model_id: std::option::Option<std::string::String>,
@@ -3102,7 +3180,7 @@ pub mod create_realtime_endpoint_output {
             self.realtime_endpoint_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRealtimeEndpointOutput`](crate::output::CreateRealtimeEndpointOutput)
+        /// Consumes the builder and constructs a [`CreateRealtimeEndpointOutput`](crate::output::CreateRealtimeEndpointOutput).
         pub fn build(self) -> crate::output::CreateRealtimeEndpointOutput {
             crate::output::CreateRealtimeEndpointOutput {
                 ml_model_id: self.ml_model_id,
@@ -3112,7 +3190,7 @@ pub mod create_realtime_endpoint_output {
     }
 }
 impl CreateRealtimeEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRealtimeEndpointOutput`](crate::output::CreateRealtimeEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRealtimeEndpointOutput`](crate::output::CreateRealtimeEndpointOutput).
     pub fn builder() -> crate::output::create_realtime_endpoint_output::Builder {
         crate::output::create_realtime_endpoint_output::Builder::default()
     }
@@ -3124,6 +3202,7 @@ impl CreateRealtimeEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateMlModelOutput {
     /// <p>A user-supplied ID that uniquely identifies the <code>MLModel</code>. This value should be identical to the value of the <code>MLModelId</code> in the request. </p>
+    #[doc(hidden)]
     pub ml_model_id: std::option::Option<std::string::String>,
 }
 impl CreateMlModelOutput {
@@ -3139,11 +3218,10 @@ impl std::fmt::Debug for CreateMlModelOutput {
         formatter.finish()
     }
 }
-/// See [`CreateMlModelOutput`](crate::output::CreateMlModelOutput)
+/// See [`CreateMlModelOutput`](crate::output::CreateMlModelOutput).
 pub mod create_ml_model_output {
 
-    /// A builder for [`CreateMlModelOutput`](crate::output::CreateMlModelOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateMlModelOutput`](crate::output::CreateMlModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ml_model_id: std::option::Option<std::string::String>,
@@ -3159,7 +3237,7 @@ pub mod create_ml_model_output {
             self.ml_model_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateMlModelOutput`](crate::output::CreateMlModelOutput)
+        /// Consumes the builder and constructs a [`CreateMlModelOutput`](crate::output::CreateMlModelOutput).
         pub fn build(self) -> crate::output::CreateMlModelOutput {
             crate::output::CreateMlModelOutput {
                 ml_model_id: self.ml_model_id,
@@ -3168,7 +3246,7 @@ pub mod create_ml_model_output {
     }
 }
 impl CreateMlModelOutput {
-    /// Creates a new builder-style object to manufacture [`CreateMlModelOutput`](crate::output::CreateMlModelOutput)
+    /// Creates a new builder-style object to manufacture [`CreateMlModelOutput`](crate::output::CreateMlModelOutput).
     pub fn builder() -> crate::output::create_ml_model_output::Builder {
         crate::output::create_ml_model_output::Builder::default()
     }
@@ -3180,6 +3258,7 @@ impl CreateMlModelOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateEvaluationOutput {
     /// <p>The user-supplied ID that uniquely identifies the <code>Evaluation</code>. This value should be identical to the value of the <code>EvaluationId</code> in the request.</p>
+    #[doc(hidden)]
     pub evaluation_id: std::option::Option<std::string::String>,
 }
 impl CreateEvaluationOutput {
@@ -3195,11 +3274,10 @@ impl std::fmt::Debug for CreateEvaluationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateEvaluationOutput`](crate::output::CreateEvaluationOutput)
+/// See [`CreateEvaluationOutput`](crate::output::CreateEvaluationOutput).
 pub mod create_evaluation_output {
 
-    /// A builder for [`CreateEvaluationOutput`](crate::output::CreateEvaluationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateEvaluationOutput`](crate::output::CreateEvaluationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) evaluation_id: std::option::Option<std::string::String>,
@@ -3218,7 +3296,7 @@ pub mod create_evaluation_output {
             self.evaluation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateEvaluationOutput`](crate::output::CreateEvaluationOutput)
+        /// Consumes the builder and constructs a [`CreateEvaluationOutput`](crate::output::CreateEvaluationOutput).
         pub fn build(self) -> crate::output::CreateEvaluationOutput {
             crate::output::CreateEvaluationOutput {
                 evaluation_id: self.evaluation_id,
@@ -3227,7 +3305,7 @@ pub mod create_evaluation_output {
     }
 }
 impl CreateEvaluationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateEvaluationOutput`](crate::output::CreateEvaluationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateEvaluationOutput`](crate::output::CreateEvaluationOutput).
     pub fn builder() -> crate::output::create_evaluation_output::Builder {
         crate::output::create_evaluation_output::Builder::default()
     }
@@ -3239,6 +3317,7 @@ impl CreateEvaluationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDataSourceFromS3Output {
     /// <p>A user-supplied ID that uniquely identifies the <code>DataSource</code>. This value should be identical to the value of the <code>DataSourceID</code> in the request. </p>
+    #[doc(hidden)]
     pub data_source_id: std::option::Option<std::string::String>,
 }
 impl CreateDataSourceFromS3Output {
@@ -3254,11 +3333,10 @@ impl std::fmt::Debug for CreateDataSourceFromS3Output {
         formatter.finish()
     }
 }
-/// See [`CreateDataSourceFromS3Output`](crate::output::CreateDataSourceFromS3Output)
+/// See [`CreateDataSourceFromS3Output`](crate::output::CreateDataSourceFromS3Output).
 pub mod create_data_source_from_s3_output {
 
-    /// A builder for [`CreateDataSourceFromS3Output`](crate::output::CreateDataSourceFromS3Output)
-    #[non_exhaustive]
+    /// A builder for [`CreateDataSourceFromS3Output`](crate::output::CreateDataSourceFromS3Output).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_source_id: std::option::Option<std::string::String>,
@@ -3277,7 +3355,7 @@ pub mod create_data_source_from_s3_output {
             self.data_source_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDataSourceFromS3Output`](crate::output::CreateDataSourceFromS3Output)
+        /// Consumes the builder and constructs a [`CreateDataSourceFromS3Output`](crate::output::CreateDataSourceFromS3Output).
         pub fn build(self) -> crate::output::CreateDataSourceFromS3Output {
             crate::output::CreateDataSourceFromS3Output {
                 data_source_id: self.data_source_id,
@@ -3286,7 +3364,7 @@ pub mod create_data_source_from_s3_output {
     }
 }
 impl CreateDataSourceFromS3Output {
-    /// Creates a new builder-style object to manufacture [`CreateDataSourceFromS3Output`](crate::output::CreateDataSourceFromS3Output)
+    /// Creates a new builder-style object to manufacture [`CreateDataSourceFromS3Output`](crate::output::CreateDataSourceFromS3Output).
     pub fn builder() -> crate::output::create_data_source_from_s3_output::Builder {
         crate::output::create_data_source_from_s3_output::Builder::default()
     }
@@ -3298,6 +3376,7 @@ impl CreateDataSourceFromS3Output {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDataSourceFromRedshiftOutput {
     /// <p>A user-supplied ID that uniquely identifies the datasource. This value should be identical to the value of the <code>DataSourceID</code> in the request. </p>
+    #[doc(hidden)]
     pub data_source_id: std::option::Option<std::string::String>,
 }
 impl CreateDataSourceFromRedshiftOutput {
@@ -3313,11 +3392,10 @@ impl std::fmt::Debug for CreateDataSourceFromRedshiftOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDataSourceFromRedshiftOutput`](crate::output::CreateDataSourceFromRedshiftOutput)
+/// See [`CreateDataSourceFromRedshiftOutput`](crate::output::CreateDataSourceFromRedshiftOutput).
 pub mod create_data_source_from_redshift_output {
 
-    /// A builder for [`CreateDataSourceFromRedshiftOutput`](crate::output::CreateDataSourceFromRedshiftOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDataSourceFromRedshiftOutput`](crate::output::CreateDataSourceFromRedshiftOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_source_id: std::option::Option<std::string::String>,
@@ -3336,7 +3414,7 @@ pub mod create_data_source_from_redshift_output {
             self.data_source_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDataSourceFromRedshiftOutput`](crate::output::CreateDataSourceFromRedshiftOutput)
+        /// Consumes the builder and constructs a [`CreateDataSourceFromRedshiftOutput`](crate::output::CreateDataSourceFromRedshiftOutput).
         pub fn build(self) -> crate::output::CreateDataSourceFromRedshiftOutput {
             crate::output::CreateDataSourceFromRedshiftOutput {
                 data_source_id: self.data_source_id,
@@ -3345,7 +3423,7 @@ pub mod create_data_source_from_redshift_output {
     }
 }
 impl CreateDataSourceFromRedshiftOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDataSourceFromRedshiftOutput`](crate::output::CreateDataSourceFromRedshiftOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDataSourceFromRedshiftOutput`](crate::output::CreateDataSourceFromRedshiftOutput).
     pub fn builder() -> crate::output::create_data_source_from_redshift_output::Builder {
         crate::output::create_data_source_from_redshift_output::Builder::default()
     }
@@ -3357,6 +3435,7 @@ impl CreateDataSourceFromRedshiftOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDataSourceFromRdsOutput {
     /// <p>A user-supplied ID that uniquely identifies the datasource. This value should be identical to the value of the <code>DataSourceID</code> in the request. </p>
+    #[doc(hidden)]
     pub data_source_id: std::option::Option<std::string::String>,
 }
 impl CreateDataSourceFromRdsOutput {
@@ -3372,11 +3451,10 @@ impl std::fmt::Debug for CreateDataSourceFromRdsOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDataSourceFromRdsOutput`](crate::output::CreateDataSourceFromRdsOutput)
+/// See [`CreateDataSourceFromRdsOutput`](crate::output::CreateDataSourceFromRdsOutput).
 pub mod create_data_source_from_rds_output {
 
-    /// A builder for [`CreateDataSourceFromRdsOutput`](crate::output::CreateDataSourceFromRdsOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDataSourceFromRdsOutput`](crate::output::CreateDataSourceFromRdsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_source_id: std::option::Option<std::string::String>,
@@ -3395,7 +3473,7 @@ pub mod create_data_source_from_rds_output {
             self.data_source_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDataSourceFromRdsOutput`](crate::output::CreateDataSourceFromRdsOutput)
+        /// Consumes the builder and constructs a [`CreateDataSourceFromRdsOutput`](crate::output::CreateDataSourceFromRdsOutput).
         pub fn build(self) -> crate::output::CreateDataSourceFromRdsOutput {
             crate::output::CreateDataSourceFromRdsOutput {
                 data_source_id: self.data_source_id,
@@ -3404,7 +3482,7 @@ pub mod create_data_source_from_rds_output {
     }
 }
 impl CreateDataSourceFromRdsOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDataSourceFromRdsOutput`](crate::output::CreateDataSourceFromRdsOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDataSourceFromRdsOutput`](crate::output::CreateDataSourceFromRdsOutput).
     pub fn builder() -> crate::output::create_data_source_from_rds_output::Builder {
         crate::output::create_data_source_from_rds_output::Builder::default()
     }
@@ -3416,6 +3494,7 @@ impl CreateDataSourceFromRdsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBatchPredictionOutput {
     /// <p>A user-supplied ID that uniquely identifies the <code>BatchPrediction</code>. This value is identical to the value of the <code>BatchPredictionId</code> in the request.</p>
+    #[doc(hidden)]
     pub batch_prediction_id: std::option::Option<std::string::String>,
 }
 impl CreateBatchPredictionOutput {
@@ -3431,11 +3510,10 @@ impl std::fmt::Debug for CreateBatchPredictionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateBatchPredictionOutput`](crate::output::CreateBatchPredictionOutput)
+/// See [`CreateBatchPredictionOutput`](crate::output::CreateBatchPredictionOutput).
 pub mod create_batch_prediction_output {
 
-    /// A builder for [`CreateBatchPredictionOutput`](crate::output::CreateBatchPredictionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateBatchPredictionOutput`](crate::output::CreateBatchPredictionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) batch_prediction_id: std::option::Option<std::string::String>,
@@ -3454,7 +3532,7 @@ pub mod create_batch_prediction_output {
             self.batch_prediction_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBatchPredictionOutput`](crate::output::CreateBatchPredictionOutput)
+        /// Consumes the builder and constructs a [`CreateBatchPredictionOutput`](crate::output::CreateBatchPredictionOutput).
         pub fn build(self) -> crate::output::CreateBatchPredictionOutput {
             crate::output::CreateBatchPredictionOutput {
                 batch_prediction_id: self.batch_prediction_id,
@@ -3463,7 +3541,7 @@ pub mod create_batch_prediction_output {
     }
 }
 impl CreateBatchPredictionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateBatchPredictionOutput`](crate::output::CreateBatchPredictionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateBatchPredictionOutput`](crate::output::CreateBatchPredictionOutput).
     pub fn builder() -> crate::output::create_batch_prediction_output::Builder {
         crate::output::create_batch_prediction_output::Builder::default()
     }
@@ -3474,8 +3552,10 @@ impl CreateBatchPredictionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddTagsOutput {
     /// <p>The ID of the ML object that was tagged.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The type of the ML object that was tagged.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::TaggableResourceType>,
 }
 impl AddTagsOutput {
@@ -3496,11 +3576,10 @@ impl std::fmt::Debug for AddTagsOutput {
         formatter.finish()
     }
 }
-/// See [`AddTagsOutput`](crate::output::AddTagsOutput)
+/// See [`AddTagsOutput`](crate::output::AddTagsOutput).
 pub mod add_tags_output {
 
-    /// A builder for [`AddTagsOutput`](crate::output::AddTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddTagsOutput`](crate::output::AddTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_id: std::option::Option<std::string::String>,
@@ -3530,7 +3609,7 @@ pub mod add_tags_output {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddTagsOutput`](crate::output::AddTagsOutput)
+        /// Consumes the builder and constructs a [`AddTagsOutput`](crate::output::AddTagsOutput).
         pub fn build(self) -> crate::output::AddTagsOutput {
             crate::output::AddTagsOutput {
                 resource_id: self.resource_id,
@@ -3540,7 +3619,7 @@ pub mod add_tags_output {
     }
 }
 impl AddTagsOutput {
-    /// Creates a new builder-style object to manufacture [`AddTagsOutput`](crate::output::AddTagsOutput)
+    /// Creates a new builder-style object to manufacture [`AddTagsOutput`](crate::output::AddTagsOutput).
     pub fn builder() -> crate::output::add_tags_output::Builder {
         crate::output::add_tags_output::Builder::default()
     }

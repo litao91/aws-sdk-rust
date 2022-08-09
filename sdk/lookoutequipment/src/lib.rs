@@ -1,3 +1,4 @@
+#![allow(deprecated)]
 #![allow(clippy::module_inception)]
 #![allow(clippy::upper_case_acronyms)]
 #![allow(clippy::large_enum_variant)]
@@ -8,8 +9,9 @@
 #![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
-//! <p>Amazon Lookout for Equipment is a machine learning service that uses advanced analytics to identify
-//! anomalies in machines from sensor data for use in predictive maintenance. </p>
+//! <p>Amazon Lookout for Equipment is a machine learning service that uses advanced analytics
+//! to identify anomalies in machines from sensor data for use in predictive maintenance.
+//! </p>
 //!
 //! # Crate Organization
 //!

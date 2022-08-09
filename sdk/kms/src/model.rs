@@ -97,6 +97,8 @@ pub enum SigningAlgorithmSpec {
     RsassaPssSha384,
     #[allow(missing_docs)] // documentation missing in model
     RsassaPssSha512,
+    #[allow(missing_docs)] // documentation missing in model
+    Sm2Dsa,
     /// Unknown contains new variants that have been added since this code was generated.
     Unknown(String),
 }
@@ -112,6 +114,7 @@ impl std::convert::From<&str> for SigningAlgorithmSpec {
             "RSASSA_PSS_SHA_256" => SigningAlgorithmSpec::RsassaPssSha256,
             "RSASSA_PSS_SHA_384" => SigningAlgorithmSpec::RsassaPssSha384,
             "RSASSA_PSS_SHA_512" => SigningAlgorithmSpec::RsassaPssSha512,
+            "SM2DSA" => SigningAlgorithmSpec::Sm2Dsa,
             other => SigningAlgorithmSpec::Unknown(other.to_owned()),
         }
     }
@@ -136,6 +139,7 @@ impl SigningAlgorithmSpec {
             SigningAlgorithmSpec::RsassaPssSha256 => "RSASSA_PSS_SHA_256",
             SigningAlgorithmSpec::RsassaPssSha384 => "RSASSA_PSS_SHA_384",
             SigningAlgorithmSpec::RsassaPssSha512 => "RSASSA_PSS_SHA_512",
+            SigningAlgorithmSpec::Sm2Dsa => "SM2DSA",
             SigningAlgorithmSpec::Unknown(s) => s.as_ref(),
         }
     }
@@ -151,6 +155,7 @@ impl SigningAlgorithmSpec {
             "RSASSA_PSS_SHA_256",
             "RSASSA_PSS_SHA_384",
             "RSASSA_PSS_SHA_512",
+            "SM2DSA",
         ]
     }
 }
@@ -221,8 +226,10 @@ impl AsRef<str> for MessageType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key of the tag.</p>
+    #[doc(hidden)]
     pub tag_key: std::option::Option<std::string::String>,
     /// <p>The value of the tag.</p>
+    #[doc(hidden)]
     pub tag_value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -243,11 +250,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_key: std::option::Option<std::string::String>,
@@ -274,7 +280,7 @@ pub mod tag {
             self.tag_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 tag_key: self.tag_key,
@@ -284,7 +290,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -384,51 +390,72 @@ impl AsRef<str> for KeyState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyMetadata {
     /// <p>The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.</p>
+    #[doc(hidden)]
     pub aws_account_id: std::option::Option<std::string::String>,
     /// <p>The globally unique identifier for the KMS key.</p>
+    #[doc(hidden)]
     pub key_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the KMS key. For examples, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Key Management Service (KMS)</a> in the Example ARNs section of the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date and time when the KMS key was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies whether the KMS key is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is true, otherwise it is false.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The description of the KMS key.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">cryptographic operations</a> for which you can use the KMS key.</p>
+    #[doc(hidden)]
     pub key_usage: std::option::Option<crate::model::KeyUsageType>,
     /// <p>The current status of the KMS key.</p>
     /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i>Key Management Service Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub key_state: std::option::Option<crate::model::KeyState>,
     /// <p>The date and time after which KMS deletes this KMS key. This value is present only when the KMS key is scheduled for deletion, that is, when its <code>KeyState</code> is <code>PendingDeletion</code>.</p>
     /// <p>When the primary key in a multi-Region key is scheduled for deletion but still has replica keys, its key state is <code>PendingReplicaDeletion</code> and the length of its waiting period is displayed in the <code>PendingDeletionWindowInDays</code> field.</p>
+    #[doc(hidden)]
     pub deletion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the imported key material expires. When the key material expires, KMS deletes the key material and the KMS key becomes unusable. This value is present only for KMS keys whose <code>Origin</code> is <code>EXTERNAL</code> and whose <code>ExpirationModel</code> is <code>KEY_MATERIAL_EXPIRES</code>, otherwise this value is omitted.</p>
+    #[doc(hidden)]
     pub valid_to: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The source of the key material for the KMS key. When this value is <code>AWS_KMS</code>, KMS created the key material. When this value is <code>EXTERNAL</code>, the key material was imported or the KMS key doesn't have any key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster associated with a custom key store.</p>
+    #[doc(hidden)]
     pub origin: std::option::Option<crate::model::OriginType>,
     /// <p>A unique identifier for the <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a> that contains the KMS key. This value is present only when the KMS key is created in a custom key store.</p>
+    #[doc(hidden)]
     pub custom_key_store_id: std::option::Option<std::string::String>,
     /// <p>The cluster ID of the CloudHSM cluster that contains the key material for the KMS key. When you create a KMS key in a <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>, KMS creates the key material for the KMS key in the associated CloudHSM cluster. This value is present only when the KMS key is created in a custom key store.</p>
+    #[doc(hidden)]
     pub cloud_hsm_cluster_id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the KMS key's key material expires. This value is present only when <code>Origin</code> is <code>EXTERNAL</code>, otherwise this value is omitted.</p>
+    #[doc(hidden)]
     pub expiration_model: std::option::Option<crate::model::ExpirationModelType>,
     /// <p>The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or Amazon Web Services managed. For more information about the difference, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">KMS keys</a> in the <i>Key Management Service Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub key_manager: std::option::Option<crate::model::KeyManagerType>,
     /// <p>Instead, use the <code>KeySpec</code> field.</p>
     /// <p>The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both fields.</p>
+    #[deprecated(note = "This field has been deprecated. Instead, use the KeySpec field.")]
+    #[doc(hidden)]
     pub customer_master_key_spec: std::option::Option<crate::model::CustomerMasterKeySpec>,
     /// <p>Describes the type of key material in the KMS key.</p>
+    #[doc(hidden)]
     pub key_spec: std::option::Option<crate::model::KeySpec>,
     /// <p>The encryption algorithms that the KMS key supports. You cannot use the KMS key with other encryption algorithms within KMS.</p>
     /// <p>This value is present only when the <code>KeyUsage</code> of the KMS key is <code>ENCRYPT_DECRYPT</code>.</p>
+    #[doc(hidden)]
     pub encryption_algorithms:
         std::option::Option<std::vec::Vec<crate::model::EncryptionAlgorithmSpec>>,
     /// <p>The signing algorithms that the KMS key supports. You cannot use the KMS key with other signing algorithms within KMS.</p>
     /// <p>This field appears only when the <code>KeyUsage</code> of the KMS key is <code>SIGN_VERIFY</code>.</p>
+    #[doc(hidden)]
     pub signing_algorithms: std::option::Option<std::vec::Vec<crate::model::SigningAlgorithmSpec>>,
     /// <p>Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This value is <code>True</code> for multi-Region primary and replica keys and <code>False</code> for regional KMS keys.</p>
     /// <p>For more information about multi-Region keys, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in KMS</a> in the <i>Key Management Service Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub multi_region: std::option::Option<bool>,
     /// <p>Lists the primary and replica keys in same multi-Region key. This field is present only when the value of the <code>MultiRegion</code> field is <code>True</code>.</p>
     /// <p>For more information about any listed KMS key, use the <code>DescribeKey</code> operation.</p>
@@ -437,12 +464,15 @@ pub struct KeyMetadata {
     /// <li> <p> <code>PrimaryKey</code> displays the key ARN and Region of the primary key. This field displays the current KMS key if it is the primary key.</p> </li>
     /// <li> <p> <code>ReplicaKeys</code> displays the key ARNs and Regions of all replica keys. This field includes the current KMS key if it is a replica key.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub multi_region_configuration: std::option::Option<crate::model::MultiRegionConfiguration>,
     /// <p>The waiting period before the primary key in a multi-Region key is deleted. This waiting period begins when the last of its replica keys is deleted. This value is present only when the <code>KeyState</code> of the KMS key is <code>PendingReplicaDeletion</code>. That indicates that the KMS key is the primary key in a multi-Region key, it is scheduled for deletion, and it still has existing replica keys.</p>
     /// <p>When a single-Region KMS key or a multi-Region replica key is scheduled for deletion, its deletion date is displayed in the <code>DeletionDate</code> field. However, when the primary key in a multi-Region key is scheduled for deletion, its waiting period doesn't begin until all of its replica keys are deleted. This value displays that waiting period. When the last replica key in the multi-Region key is deleted, the <code>KeyState</code> of the scheduled primary key changes from <code>PendingReplicaDeletion</code> to <code>PendingDeletion</code> and the deletion date appears in the <code>DeletionDate</code> field.</p>
+    #[doc(hidden)]
     pub pending_deletion_window_in_days: std::option::Option<i32>,
     /// <p>The message authentication code (MAC) algorithm that the HMAC KMS key supports.</p>
     /// <p>This value is present only when the <code>KeyUsage</code> of the KMS key is <code>GENERATE_VERIFY_MAC</code>.</p>
+    #[doc(hidden)]
     pub mac_algorithms: std::option::Option<std::vec::Vec<crate::model::MacAlgorithmSpec>>,
 }
 impl KeyMetadata {
@@ -510,6 +540,7 @@ impl KeyMetadata {
     }
     /// <p>Instead, use the <code>KeySpec</code> field.</p>
     /// <p>The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both fields.</p>
+    #[deprecated(note = "This field has been deprecated. Instead, use the KeySpec field.")]
     pub fn customer_master_key_spec(
         &self,
     ) -> std::option::Option<&crate::model::CustomerMasterKeySpec> {
@@ -594,11 +625,10 @@ impl std::fmt::Debug for KeyMetadata {
         formatter.finish()
     }
 }
-/// See [`KeyMetadata`](crate::model::KeyMetadata)
+/// See [`KeyMetadata`](crate::model::KeyMetadata).
 pub mod key_metadata {
 
-    /// A builder for [`KeyMetadata`](crate::model::KeyMetadata)
-    #[non_exhaustive]
+    /// A builder for [`KeyMetadata`](crate::model::KeyMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aws_account_id: std::option::Option<std::string::String>,
@@ -814,6 +844,7 @@ pub mod key_metadata {
         }
         /// <p>Instead, use the <code>KeySpec</code> field.</p>
         /// <p>The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both fields.</p>
+        #[deprecated(note = "This field has been deprecated. Instead, use the KeySpec field.")]
         pub fn customer_master_key_spec(
             mut self,
             input: crate::model::CustomerMasterKeySpec,
@@ -823,6 +854,7 @@ pub mod key_metadata {
         }
         /// <p>Instead, use the <code>KeySpec</code> field.</p>
         /// <p>The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both fields.</p>
+        #[deprecated(note = "This field has been deprecated. Instead, use the KeySpec field.")]
         pub fn set_customer_master_key_spec(
             mut self,
             input: std::option::Option<crate::model::CustomerMasterKeySpec>,
@@ -961,7 +993,7 @@ pub mod key_metadata {
             self.mac_algorithms = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyMetadata`](crate::model::KeyMetadata)
+        /// Consumes the builder and constructs a [`KeyMetadata`](crate::model::KeyMetadata).
         pub fn build(self) -> crate::model::KeyMetadata {
             crate::model::KeyMetadata {
                 aws_account_id: self.aws_account_id,
@@ -992,7 +1024,7 @@ pub mod key_metadata {
     }
 }
 impl KeyMetadata {
-    /// Creates a new builder-style object to manufacture [`KeyMetadata`](crate::model::KeyMetadata)
+    /// Creates a new builder-style object to manufacture [`KeyMetadata`](crate::model::KeyMetadata).
     pub fn builder() -> crate::model::key_metadata::Builder {
         crate::model::key_metadata::Builder::default()
     }
@@ -1004,10 +1036,13 @@ impl KeyMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MultiRegionConfiguration {
     /// <p>Indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code> key.</p>
+    #[doc(hidden)]
     pub multi_region_key_type: std::option::Option<crate::model::MultiRegionKeyType>,
     /// <p>Displays the key ARN and Region of the primary key. This field includes the current KMS key if it is the primary key.</p>
+    #[doc(hidden)]
     pub primary_key: std::option::Option<crate::model::MultiRegionKey>,
     /// <p>displays the key ARNs and Regions of all replica keys. This field includes the current KMS key if it is a replica key.</p>
+    #[doc(hidden)]
     pub replica_keys: std::option::Option<std::vec::Vec<crate::model::MultiRegionKey>>,
 }
 impl MultiRegionConfiguration {
@@ -1033,11 +1068,10 @@ impl std::fmt::Debug for MultiRegionConfiguration {
         formatter.finish()
     }
 }
-/// See [`MultiRegionConfiguration`](crate::model::MultiRegionConfiguration)
+/// See [`MultiRegionConfiguration`](crate::model::MultiRegionConfiguration).
 pub mod multi_region_configuration {
 
-    /// A builder for [`MultiRegionConfiguration`](crate::model::MultiRegionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MultiRegionConfiguration`](crate::model::MultiRegionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) multi_region_key_type: std::option::Option<crate::model::MultiRegionKeyType>,
@@ -1090,7 +1124,7 @@ pub mod multi_region_configuration {
             self.replica_keys = input;
             self
         }
-        /// Consumes the builder and constructs a [`MultiRegionConfiguration`](crate::model::MultiRegionConfiguration)
+        /// Consumes the builder and constructs a [`MultiRegionConfiguration`](crate::model::MultiRegionConfiguration).
         pub fn build(self) -> crate::model::MultiRegionConfiguration {
             crate::model::MultiRegionConfiguration {
                 multi_region_key_type: self.multi_region_key_type,
@@ -1101,7 +1135,7 @@ pub mod multi_region_configuration {
     }
 }
 impl MultiRegionConfiguration {
-    /// Creates a new builder-style object to manufacture [`MultiRegionConfiguration`](crate::model::MultiRegionConfiguration)
+    /// Creates a new builder-style object to manufacture [`MultiRegionConfiguration`](crate::model::MultiRegionConfiguration).
     pub fn builder() -> crate::model::multi_region_configuration::Builder {
         crate::model::multi_region_configuration::Builder::default()
     }
@@ -1112,8 +1146,10 @@ impl MultiRegionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MultiRegionKey {
     /// <p>Displays the key ARN of a primary or replica key of a multi-Region key.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Displays the Amazon Web Services Region of a primary or replica key in a multi-Region key.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
 }
 impl MultiRegionKey {
@@ -1134,11 +1170,10 @@ impl std::fmt::Debug for MultiRegionKey {
         formatter.finish()
     }
 }
-/// See [`MultiRegionKey`](crate::model::MultiRegionKey)
+/// See [`MultiRegionKey`](crate::model::MultiRegionKey).
 pub mod multi_region_key {
 
-    /// A builder for [`MultiRegionKey`](crate::model::MultiRegionKey)
-    #[non_exhaustive]
+    /// A builder for [`MultiRegionKey`](crate::model::MultiRegionKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1165,7 +1200,7 @@ pub mod multi_region_key {
             self.region = input;
             self
         }
-        /// Consumes the builder and constructs a [`MultiRegionKey`](crate::model::MultiRegionKey)
+        /// Consumes the builder and constructs a [`MultiRegionKey`](crate::model::MultiRegionKey).
         pub fn build(self) -> crate::model::MultiRegionKey {
             crate::model::MultiRegionKey {
                 arn: self.arn,
@@ -1175,7 +1210,7 @@ pub mod multi_region_key {
     }
 }
 impl MultiRegionKey {
-    /// Creates a new builder-style object to manufacture [`MultiRegionKey`](crate::model::MultiRegionKey)
+    /// Creates a new builder-style object to manufacture [`MultiRegionKey`](crate::model::MultiRegionKey).
     pub fn builder() -> crate::model::multi_region_key::Builder {
         crate::model::multi_region_key::Builder::default()
     }
@@ -1253,6 +1288,8 @@ pub enum EncryptionAlgorithmSpec {
     #[allow(missing_docs)] // documentation missing in model
     RsaesOaepSha256,
     #[allow(missing_docs)] // documentation missing in model
+    Sm2Pke,
+    #[allow(missing_docs)] // documentation missing in model
     SymmetricDefault,
     /// Unknown contains new variants that have been added since this code was generated.
     Unknown(String),
@@ -1262,6 +1299,7 @@ impl std::convert::From<&str> for EncryptionAlgorithmSpec {
         match s {
             "RSAES_OAEP_SHA_1" => EncryptionAlgorithmSpec::RsaesOaepSha1,
             "RSAES_OAEP_SHA_256" => EncryptionAlgorithmSpec::RsaesOaepSha256,
+            "SM2PKE" => EncryptionAlgorithmSpec::Sm2Pke,
             "SYMMETRIC_DEFAULT" => EncryptionAlgorithmSpec::SymmetricDefault,
             other => EncryptionAlgorithmSpec::Unknown(other.to_owned()),
         }
@@ -1280,6 +1318,7 @@ impl EncryptionAlgorithmSpec {
         match self {
             EncryptionAlgorithmSpec::RsaesOaepSha1 => "RSAES_OAEP_SHA_1",
             EncryptionAlgorithmSpec::RsaesOaepSha256 => "RSAES_OAEP_SHA_256",
+            EncryptionAlgorithmSpec::Sm2Pke => "SM2PKE",
             EncryptionAlgorithmSpec::SymmetricDefault => "SYMMETRIC_DEFAULT",
             EncryptionAlgorithmSpec::Unknown(s) => s.as_ref(),
         }
@@ -1289,6 +1328,7 @@ impl EncryptionAlgorithmSpec {
         &[
             "RSAES_OAEP_SHA_1",
             "RSAES_OAEP_SHA_256",
+            "SM2PKE",
             "SYMMETRIC_DEFAULT",
         ]
     }
@@ -1334,6 +1374,8 @@ pub enum KeySpec {
     #[allow(missing_docs)] // documentation missing in model
     Rsa4096,
     #[allow(missing_docs)] // documentation missing in model
+    Sm2,
+    #[allow(missing_docs)] // documentation missing in model
     SymmetricDefault,
     /// Unknown contains new variants that have been added since this code was generated.
     Unknown(String),
@@ -1352,6 +1394,7 @@ impl std::convert::From<&str> for KeySpec {
             "RSA_2048" => KeySpec::Rsa2048,
             "RSA_3072" => KeySpec::Rsa3072,
             "RSA_4096" => KeySpec::Rsa4096,
+            "SM2" => KeySpec::Sm2,
             "SYMMETRIC_DEFAULT" => KeySpec::SymmetricDefault,
             other => KeySpec::Unknown(other.to_owned()),
         }
@@ -1379,6 +1422,7 @@ impl KeySpec {
             KeySpec::Rsa2048 => "RSA_2048",
             KeySpec::Rsa3072 => "RSA_3072",
             KeySpec::Rsa4096 => "RSA_4096",
+            KeySpec::Sm2 => "SM2",
             KeySpec::SymmetricDefault => "SYMMETRIC_DEFAULT",
             KeySpec::Unknown(s) => s.as_ref(),
         }
@@ -1397,6 +1441,7 @@ impl KeySpec {
             "RSA_2048",
             "RSA_3072",
             "RSA_4096",
+            "SM2",
             "SYMMETRIC_DEFAULT",
         ]
     }
@@ -1408,6 +1453,7 @@ impl AsRef<str> for KeySpec {
 }
 
 #[allow(missing_docs)] // documentation missing in model
+#[deprecated(note = "This enum has been deprecated. Instead, use the KeySpec enum.")]
 #[non_exhaustive]
 #[derive(
     std::clone::Clone,
@@ -1442,6 +1488,8 @@ pub enum CustomerMasterKeySpec {
     #[allow(missing_docs)] // documentation missing in model
     Rsa4096,
     #[allow(missing_docs)] // documentation missing in model
+    Sm2,
+    #[allow(missing_docs)] // documentation missing in model
     SymmetricDefault,
     /// Unknown contains new variants that have been added since this code was generated.
     Unknown(String),
@@ -1460,6 +1508,7 @@ impl std::convert::From<&str> for CustomerMasterKeySpec {
             "RSA_2048" => CustomerMasterKeySpec::Rsa2048,
             "RSA_3072" => CustomerMasterKeySpec::Rsa3072,
             "RSA_4096" => CustomerMasterKeySpec::Rsa4096,
+            "SM2" => CustomerMasterKeySpec::Sm2,
             "SYMMETRIC_DEFAULT" => CustomerMasterKeySpec::SymmetricDefault,
             other => CustomerMasterKeySpec::Unknown(other.to_owned()),
         }
@@ -1487,6 +1536,7 @@ impl CustomerMasterKeySpec {
             CustomerMasterKeySpec::Rsa2048 => "RSA_2048",
             CustomerMasterKeySpec::Rsa3072 => "RSA_3072",
             CustomerMasterKeySpec::Rsa4096 => "RSA_4096",
+            CustomerMasterKeySpec::Sm2 => "SM2",
             CustomerMasterKeySpec::SymmetricDefault => "SYMMETRIC_DEFAULT",
             CustomerMasterKeySpec::Unknown(s) => s.as_ref(),
         }
@@ -1505,6 +1555,7 @@ impl CustomerMasterKeySpec {
             "RSA_2048",
             "RSA_3072",
             "RSA_4096",
+            "SM2",
             "SYMMETRIC_DEFAULT",
         ]
     }
@@ -1748,23 +1799,32 @@ impl AsRef<str> for KeyUsageType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GrantListEntry {
     /// <p>The unique identifier for the KMS key to which the grant applies.</p>
+    #[doc(hidden)]
     pub key_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the grant.</p>
+    #[doc(hidden)]
     pub grant_id: std::option::Option<std::string::String>,
     /// <p>The friendly name that identifies the grant. If a name was provided in the <code>CreateGrant</code> request, that name is returned. Otherwise this value is null.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The date and time when the grant was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The identity that gets the permissions in the grant.</p>
     /// <p>The <code>GranteePrincipal</code> field in the <code>ListGrants</code> response usually contains the user or role designated as the grantee principal in the grant. However, when the grantee principal in the grant is an Amazon Web Services service, the <code>GranteePrincipal</code> field contains the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#principal-services">service principal</a>, which might represent several different grantee principals.</p>
+    #[doc(hidden)]
     pub grantee_principal: std::option::Option<std::string::String>,
     /// <p>The principal that can retire the grant.</p>
+    #[doc(hidden)]
     pub retiring_principal: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services account under which the grant was issued.</p>
+    #[doc(hidden)]
     pub issuing_account: std::option::Option<std::string::String>,
     /// <p>The list of operations permitted by the grant.</p>
+    #[doc(hidden)]
     pub operations: std::option::Option<std::vec::Vec<crate::model::GrantOperation>>,
     /// <p>A list of key-value pairs that must be present in the encryption context of certain subsequent operations that the grant allows.</p>
+    #[doc(hidden)]
     pub constraints: std::option::Option<crate::model::GrantConstraints>,
 }
 impl GrantListEntry {
@@ -1821,11 +1881,10 @@ impl std::fmt::Debug for GrantListEntry {
         formatter.finish()
     }
 }
-/// See [`GrantListEntry`](crate::model::GrantListEntry)
+/// See [`GrantListEntry`](crate::model::GrantListEntry).
 pub mod grant_list_entry {
 
-    /// A builder for [`GrantListEntry`](crate::model::GrantListEntry)
-    #[non_exhaustive]
+    /// A builder for [`GrantListEntry`](crate::model::GrantListEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_id: std::option::Option<std::string::String>,
@@ -1955,7 +2014,7 @@ pub mod grant_list_entry {
             self.constraints = input;
             self
         }
-        /// Consumes the builder and constructs a [`GrantListEntry`](crate::model::GrantListEntry)
+        /// Consumes the builder and constructs a [`GrantListEntry`](crate::model::GrantListEntry).
         pub fn build(self) -> crate::model::GrantListEntry {
             crate::model::GrantListEntry {
                 key_id: self.key_id,
@@ -1972,7 +2031,7 @@ pub mod grant_list_entry {
     }
 }
 impl GrantListEntry {
-    /// Creates a new builder-style object to manufacture [`GrantListEntry`](crate::model::GrantListEntry)
+    /// Creates a new builder-style object to manufacture [`GrantListEntry`](crate::model::GrantListEntry).
     pub fn builder() -> crate::model::grant_list_entry::Builder {
         crate::model::grant_list_entry::Builder::default()
     }
@@ -1988,9 +2047,11 @@ impl GrantListEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GrantConstraints {
     /// <p>A list of key-value pairs that must be included in the encryption context of the <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">cryptographic operation</a> request. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs.</p>
+    #[doc(hidden)]
     pub encryption_context_subset:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A list of key-value pairs that must match the encryption context in the <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">cryptographic operation</a> request. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint.</p>
+    #[doc(hidden)]
     pub encryption_context_equals:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2018,11 +2079,10 @@ impl std::fmt::Debug for GrantConstraints {
         formatter.finish()
     }
 }
-/// See [`GrantConstraints`](crate::model::GrantConstraints)
+/// See [`GrantConstraints`](crate::model::GrantConstraints).
 pub mod grant_constraints {
 
-    /// A builder for [`GrantConstraints`](crate::model::GrantConstraints)
-    #[non_exhaustive]
+    /// A builder for [`GrantConstraints`](crate::model::GrantConstraints).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encryption_context_subset: std::option::Option<
@@ -2083,7 +2143,7 @@ pub mod grant_constraints {
             self.encryption_context_equals = input;
             self
         }
-        /// Consumes the builder and constructs a [`GrantConstraints`](crate::model::GrantConstraints)
+        /// Consumes the builder and constructs a [`GrantConstraints`](crate::model::GrantConstraints).
         pub fn build(self) -> crate::model::GrantConstraints {
             crate::model::GrantConstraints {
                 encryption_context_subset: self.encryption_context_subset,
@@ -2093,7 +2153,7 @@ pub mod grant_constraints {
     }
 }
 impl GrantConstraints {
-    /// Creates a new builder-style object to manufacture [`GrantConstraints`](crate::model::GrantConstraints)
+    /// Creates a new builder-style object to manufacture [`GrantConstraints`](crate::model::GrantConstraints).
     pub fn builder() -> crate::model::grant_constraints::Builder {
         crate::model::grant_constraints::Builder::default()
     }
@@ -2236,8 +2296,10 @@ impl AsRef<str> for GrantOperation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyListEntry {
     /// <p>Unique identifier of the key.</p>
+    #[doc(hidden)]
     pub key_id: std::option::Option<std::string::String>,
     /// <p>ARN of the key.</p>
+    #[doc(hidden)]
     pub key_arn: std::option::Option<std::string::String>,
 }
 impl KeyListEntry {
@@ -2258,11 +2320,10 @@ impl std::fmt::Debug for KeyListEntry {
         formatter.finish()
     }
 }
-/// See [`KeyListEntry`](crate::model::KeyListEntry)
+/// See [`KeyListEntry`](crate::model::KeyListEntry).
 pub mod key_list_entry {
 
-    /// A builder for [`KeyListEntry`](crate::model::KeyListEntry)
-    #[non_exhaustive]
+    /// A builder for [`KeyListEntry`](crate::model::KeyListEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_id: std::option::Option<std::string::String>,
@@ -2289,7 +2350,7 @@ pub mod key_list_entry {
             self.key_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyListEntry`](crate::model::KeyListEntry)
+        /// Consumes the builder and constructs a [`KeyListEntry`](crate::model::KeyListEntry).
         pub fn build(self) -> crate::model::KeyListEntry {
             crate::model::KeyListEntry {
                 key_id: self.key_id,
@@ -2299,7 +2360,7 @@ pub mod key_list_entry {
     }
 }
 impl KeyListEntry {
-    /// Creates a new builder-style object to manufacture [`KeyListEntry`](crate::model::KeyListEntry)
+    /// Creates a new builder-style object to manufacture [`KeyListEntry`](crate::model::KeyListEntry).
     pub fn builder() -> crate::model::key_list_entry::Builder {
         crate::model::key_list_entry::Builder::default()
     }
@@ -2310,14 +2371,19 @@ impl KeyListEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AliasListEntry {
     /// <p>String that contains the alias. This value begins with <code>alias/</code>.</p>
+    #[doc(hidden)]
     pub alias_name: std::option::Option<std::string::String>,
     /// <p>String that contains the key ARN.</p>
+    #[doc(hidden)]
     pub alias_arn: std::option::Option<std::string::String>,
     /// <p>String that contains the key identifier of the KMS key associated with the alias.</p>
+    #[doc(hidden)]
     pub target_key_id: std::option::Option<std::string::String>,
     /// <p>Date and time that the alias was most recently created in the account and Region. Formatted as Unix time.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Date and time that the alias was most recently associated with a KMS key in the account and Region. Formatted as Unix time.</p>
+    #[doc(hidden)]
     pub last_updated_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AliasListEntry {
@@ -2353,11 +2419,10 @@ impl std::fmt::Debug for AliasListEntry {
         formatter.finish()
     }
 }
-/// See [`AliasListEntry`](crate::model::AliasListEntry)
+/// See [`AliasListEntry`](crate::model::AliasListEntry).
 pub mod alias_list_entry {
 
-    /// A builder for [`AliasListEntry`](crate::model::AliasListEntry)
-    #[non_exhaustive]
+    /// A builder for [`AliasListEntry`](crate::model::AliasListEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alias_name: std::option::Option<std::string::String>,
@@ -2426,7 +2491,7 @@ pub mod alias_list_entry {
             self.last_updated_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`AliasListEntry`](crate::model::AliasListEntry)
+        /// Consumes the builder and constructs a [`AliasListEntry`](crate::model::AliasListEntry).
         pub fn build(self) -> crate::model::AliasListEntry {
             crate::model::AliasListEntry {
                 alias_name: self.alias_name,
@@ -2439,7 +2504,7 @@ pub mod alias_list_entry {
     }
 }
 impl AliasListEntry {
-    /// Creates a new builder-style object to manufacture [`AliasListEntry`](crate::model::AliasListEntry)
+    /// Creates a new builder-style object to manufacture [`AliasListEntry`](crate::model::AliasListEntry).
     pub fn builder() -> crate::model::alias_list_entry::Builder {
         crate::model::alias_list_entry::Builder::default()
     }
@@ -2636,6 +2701,8 @@ pub enum DataKeyPairSpec {
     Rsa3072,
     #[allow(missing_docs)] // documentation missing in model
     Rsa4096,
+    #[allow(missing_docs)] // documentation missing in model
+    Sm2,
     /// Unknown contains new variants that have been added since this code was generated.
     Unknown(String),
 }
@@ -2649,6 +2716,7 @@ impl std::convert::From<&str> for DataKeyPairSpec {
             "RSA_2048" => DataKeyPairSpec::Rsa2048,
             "RSA_3072" => DataKeyPairSpec::Rsa3072,
             "RSA_4096" => DataKeyPairSpec::Rsa4096,
+            "SM2" => DataKeyPairSpec::Sm2,
             other => DataKeyPairSpec::Unknown(other.to_owned()),
         }
     }
@@ -2671,6 +2739,7 @@ impl DataKeyPairSpec {
             DataKeyPairSpec::Rsa2048 => "RSA_2048",
             DataKeyPairSpec::Rsa3072 => "RSA_3072",
             DataKeyPairSpec::Rsa4096 => "RSA_4096",
+            DataKeyPairSpec::Sm2 => "SM2",
             DataKeyPairSpec::Unknown(s) => s.as_ref(),
         }
     }
@@ -2684,6 +2753,7 @@ impl DataKeyPairSpec {
             "RSA_2048",
             "RSA_3072",
             "RSA_4096",
+            "SM2",
         ]
     }
 }
@@ -2698,17 +2768,22 @@ impl AsRef<str> for DataKeyPairSpec {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomKeyStoresListEntry {
     /// <p>A unique identifier for the custom key store.</p>
+    #[doc(hidden)]
     pub custom_key_store_id: std::option::Option<std::string::String>,
     /// <p>The user-specified friendly name for the custom key store.</p>
+    #[doc(hidden)]
     pub custom_key_store_name: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the CloudHSM cluster that is associated with the custom key store.</p>
+    #[doc(hidden)]
     pub cloud_hsm_cluster_id: std::option::Option<std::string::String>,
     /// <p>The trust anchor certificate of the associated CloudHSM cluster. When you <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/initialize-cluster.html#sign-csr">initialize the cluster</a>, you create this certificate and save it in the <code>customerCA.crt</code> file.</p>
+    #[doc(hidden)]
     pub trust_anchor_certificate: std::option::Option<std::string::String>,
     /// <p>Indicates whether the custom key store is connected to its CloudHSM cluster.</p>
     /// <p>You can create and use KMS keys in your custom key stores only when its connection state is <code>CONNECTED</code>.</p>
     /// <p>The value is <code>DISCONNECTED</code> if the key store has never been connected or you use the <code>DisconnectCustomKeyStore</code> operation to disconnect it. If the value is <code>CONNECTED</code> but you are having trouble using the custom key store, make sure that its associated CloudHSM cluster is active and contains at least one active HSM.</p>
     /// <p>A value of <code>FAILED</code> indicates that an attempt to connect was unsuccessful. The <code>ConnectionErrorCode</code> field in the response indicates the cause of the failure. For help resolving a connection failure, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore.html">Troubleshooting a Custom Key Store</a> in the <i>Key Management Service Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub connection_state: std::option::Option<crate::model::ConnectionStateType>,
     /// <p>Describes the connection error. This field appears in the response only when the <code>ConnectionState</code> is <code>FAILED</code>. For help resolving these errors, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore.html#fix-keystore-failed">How to Fix a Connection Failure</a> in <i>Key Management Service Developer Guide</i>.</p>
     /// <p>Valid values are:</p>
@@ -2723,8 +2798,10 @@ pub struct CustomKeyStoresListEntry {
     /// <li> <p> <code>USER_LOGGED_IN</code> - The <code>kmsuser</code> CU account is logged into the the associated CloudHSM cluster. This prevents KMS from rotating the <code>kmsuser</code> account password and logging into the cluster. Before you can connect your custom key store to its CloudHSM cluster, you must log the <code>kmsuser</code> CU out of the cluster. If you changed the <code>kmsuser</code> password to log into the cluster, you must also and update the key store password value for the custom key store. For help, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore.html#login-kmsuser-2">How to Log Out and Reconnect</a> in the <i>Key Management Service Developer Guide</i>.</p> </li>
     /// <li> <p> <code>USER_NOT_FOUND</code> - KMS cannot find a <code>kmsuser</code> CU account in the associated CloudHSM cluster. Before you can connect your custom key store to its CloudHSM cluster, you must create a <code>kmsuser</code> CU account in the cluster, and then update the key store password value for the custom key store.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub connection_error_code: std::option::Option<crate::model::ConnectionErrorCodeType>,
     /// <p>The date and time when the custom key store was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CustomKeyStoresListEntry {
@@ -2787,11 +2864,10 @@ impl std::fmt::Debug for CustomKeyStoresListEntry {
         formatter.finish()
     }
 }
-/// See [`CustomKeyStoresListEntry`](crate::model::CustomKeyStoresListEntry)
+/// See [`CustomKeyStoresListEntry`](crate::model::CustomKeyStoresListEntry).
 pub mod custom_key_stores_list_entry {
 
-    /// A builder for [`CustomKeyStoresListEntry`](crate::model::CustomKeyStoresListEntry)
-    #[non_exhaustive]
+    /// A builder for [`CustomKeyStoresListEntry`](crate::model::CustomKeyStoresListEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_key_store_id: std::option::Option<std::string::String>,
@@ -2928,7 +3004,7 @@ pub mod custom_key_stores_list_entry {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomKeyStoresListEntry`](crate::model::CustomKeyStoresListEntry)
+        /// Consumes the builder and constructs a [`CustomKeyStoresListEntry`](crate::model::CustomKeyStoresListEntry).
         pub fn build(self) -> crate::model::CustomKeyStoresListEntry {
             crate::model::CustomKeyStoresListEntry {
                 custom_key_store_id: self.custom_key_store_id,
@@ -2943,7 +3019,7 @@ pub mod custom_key_stores_list_entry {
     }
 }
 impl CustomKeyStoresListEntry {
-    /// Creates a new builder-style object to manufacture [`CustomKeyStoresListEntry`](crate::model::CustomKeyStoresListEntry)
+    /// Creates a new builder-style object to manufacture [`CustomKeyStoresListEntry`](crate::model::CustomKeyStoresListEntry).
     pub fn builder() -> crate::model::custom_key_stores_list_entry::Builder {
         crate::model::custom_key_stores_list_entry::Builder::default()
     }
@@ -2966,6 +3042,8 @@ pub enum ConnectionErrorCodeType {
     #[allow(missing_docs)] // documentation missing in model
     InsufficientCloudhsmHsms,
     #[allow(missing_docs)] // documentation missing in model
+    InsufficientFreeAddressesInSubnet,
+    #[allow(missing_docs)] // documentation missing in model
     InternalError,
     #[allow(missing_docs)] // documentation missing in model
     InvalidCredentials,
@@ -2987,6 +3065,9 @@ impl std::convert::From<&str> for ConnectionErrorCodeType {
         match s {
             "CLUSTER_NOT_FOUND" => ConnectionErrorCodeType::ClusterNotFound,
             "INSUFFICIENT_CLOUDHSM_HSMS" => ConnectionErrorCodeType::InsufficientCloudhsmHsms,
+            "INSUFFICIENT_FREE_ADDRESSES_IN_SUBNET" => {
+                ConnectionErrorCodeType::InsufficientFreeAddressesInSubnet
+            }
             "INTERNAL_ERROR" => ConnectionErrorCodeType::InternalError,
             "INVALID_CREDENTIALS" => ConnectionErrorCodeType::InvalidCredentials,
             "NETWORK_ERRORS" => ConnectionErrorCodeType::NetworkErrors,
@@ -3011,6 +3092,9 @@ impl ConnectionErrorCodeType {
         match self {
             ConnectionErrorCodeType::ClusterNotFound => "CLUSTER_NOT_FOUND",
             ConnectionErrorCodeType::InsufficientCloudhsmHsms => "INSUFFICIENT_CLOUDHSM_HSMS",
+            ConnectionErrorCodeType::InsufficientFreeAddressesInSubnet => {
+                "INSUFFICIENT_FREE_ADDRESSES_IN_SUBNET"
+            }
             ConnectionErrorCodeType::InternalError => "INTERNAL_ERROR",
             ConnectionErrorCodeType::InvalidCredentials => "INVALID_CREDENTIALS",
             ConnectionErrorCodeType::NetworkErrors => "NETWORK_ERRORS",
@@ -3026,6 +3110,7 @@ impl ConnectionErrorCodeType {
         &[
             "CLUSTER_NOT_FOUND",
             "INSUFFICIENT_CLOUDHSM_HSMS",
+            "INSUFFICIENT_FREE_ADDRESSES_IN_SUBNET",
             "INTERNAL_ERROR",
             "INVALID_CREDENTIALS",
             "NETWORK_ERRORS",

@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key for the tag. Keys are not case-sensitive and must be unique.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value associated with a key. The value may be an empty string but it can't be null.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -68,7 +69,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -409,6 +410,7 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SlotTypeConfiguration {
     /// <p>A regular expression used to validate the value of a slot.</p>
+    #[doc(hidden)]
     pub regex_configuration: std::option::Option<crate::model::SlotTypeRegexConfiguration>,
 }
 impl SlotTypeConfiguration {
@@ -426,11 +428,10 @@ impl std::fmt::Debug for SlotTypeConfiguration {
         formatter.finish()
     }
 }
-/// See [`SlotTypeConfiguration`](crate::model::SlotTypeConfiguration)
+/// See [`SlotTypeConfiguration`](crate::model::SlotTypeConfiguration).
 pub mod slot_type_configuration {
 
-    /// A builder for [`SlotTypeConfiguration`](crate::model::SlotTypeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SlotTypeConfiguration`](crate::model::SlotTypeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) regex_configuration:
@@ -453,7 +454,7 @@ pub mod slot_type_configuration {
             self.regex_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`SlotTypeConfiguration`](crate::model::SlotTypeConfiguration)
+        /// Consumes the builder and constructs a [`SlotTypeConfiguration`](crate::model::SlotTypeConfiguration).
         pub fn build(self) -> crate::model::SlotTypeConfiguration {
             crate::model::SlotTypeConfiguration {
                 regex_configuration: self.regex_configuration,
@@ -462,7 +463,7 @@ pub mod slot_type_configuration {
     }
 }
 impl SlotTypeConfiguration {
-    /// Creates a new builder-style object to manufacture [`SlotTypeConfiguration`](crate::model::SlotTypeConfiguration)
+    /// Creates a new builder-style object to manufacture [`SlotTypeConfiguration`](crate::model::SlotTypeConfiguration).
     pub fn builder() -> crate::model::slot_type_configuration::Builder {
         crate::model::slot_type_configuration::Builder::default()
     }
@@ -487,6 +488,7 @@ pub struct SlotTypeRegexConfiguration {
     /// <li> <p>Infinite repeaters: *, +, or {x,} with no upper bound.</p> </li>
     /// <li> <p>Wild card (.)</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub pattern: std::option::Option<std::string::String>,
 }
 impl SlotTypeRegexConfiguration {
@@ -516,11 +518,10 @@ impl std::fmt::Debug for SlotTypeRegexConfiguration {
         formatter.finish()
     }
 }
-/// See [`SlotTypeRegexConfiguration`](crate::model::SlotTypeRegexConfiguration)
+/// See [`SlotTypeRegexConfiguration`](crate::model::SlotTypeRegexConfiguration).
 pub mod slot_type_regex_configuration {
 
-    /// A builder for [`SlotTypeRegexConfiguration`](crate::model::SlotTypeRegexConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SlotTypeRegexConfiguration`](crate::model::SlotTypeRegexConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pattern: std::option::Option<std::string::String>,
@@ -564,7 +565,7 @@ pub mod slot_type_regex_configuration {
             self.pattern = input;
             self
         }
-        /// Consumes the builder and constructs a [`SlotTypeRegexConfiguration`](crate::model::SlotTypeRegexConfiguration)
+        /// Consumes the builder and constructs a [`SlotTypeRegexConfiguration`](crate::model::SlotTypeRegexConfiguration).
         pub fn build(self) -> crate::model::SlotTypeRegexConfiguration {
             crate::model::SlotTypeRegexConfiguration {
                 pattern: self.pattern,
@@ -573,7 +574,7 @@ pub mod slot_type_regex_configuration {
     }
 }
 impl SlotTypeRegexConfiguration {
-    /// Creates a new builder-style object to manufacture [`SlotTypeRegexConfiguration`](crate::model::SlotTypeRegexConfiguration)
+    /// Creates a new builder-style object to manufacture [`SlotTypeRegexConfiguration`](crate::model::SlotTypeRegexConfiguration).
     pub fn builder() -> crate::model::slot_type_regex_configuration::Builder {
         crate::model::slot_type_regex_configuration::Builder::default()
     }
@@ -645,8 +646,10 @@ impl AsRef<str> for SlotValueSelectionStrategy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnumerationValue {
     /// <p>The value of the slot type.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>Additional values related to the slot type value.</p>
+    #[doc(hidden)]
     pub synonyms: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl EnumerationValue {
@@ -667,11 +670,10 @@ impl std::fmt::Debug for EnumerationValue {
         formatter.finish()
     }
 }
-/// See [`EnumerationValue`](crate::model::EnumerationValue)
+/// See [`EnumerationValue`](crate::model::EnumerationValue).
 pub mod enumeration_value {
 
-    /// A builder for [`EnumerationValue`](crate::model::EnumerationValue)
-    #[non_exhaustive]
+    /// A builder for [`EnumerationValue`](crate::model::EnumerationValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<std::string::String>,
@@ -707,7 +709,7 @@ pub mod enumeration_value {
             self.synonyms = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnumerationValue`](crate::model::EnumerationValue)
+        /// Consumes the builder and constructs a [`EnumerationValue`](crate::model::EnumerationValue).
         pub fn build(self) -> crate::model::EnumerationValue {
             crate::model::EnumerationValue {
                 value: self.value,
@@ -717,7 +719,7 @@ pub mod enumeration_value {
     }
 }
 impl EnumerationValue {
-    /// Creates a new builder-style object to manufacture [`EnumerationValue`](crate::model::EnumerationValue)
+    /// Creates a new builder-style object to manufacture [`EnumerationValue`](crate::model::EnumerationValue).
     pub fn builder() -> crate::model::enumeration_value::Builder {
         crate::model::enumeration_value::Builder::default()
     }
@@ -728,10 +730,13 @@ impl EnumerationValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputContext {
     /// <p>The name of the context.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The number of seconds that the context should be active after it is first sent in a <code>PostContent</code> or <code>PostText</code> response. You can set the value between 5 and 86,400 seconds (24 hours).</p>
+    #[doc(hidden)]
     pub time_to_live_in_seconds: std::option::Option<i32>,
     /// <p>The number of conversation turns that the context should be active. A conversation turn is one <code>PostContent</code> or <code>PostText</code> request and the corresponding response from Amazon Lex.</p>
+    #[doc(hidden)]
     pub turns_to_live: std::option::Option<i32>,
 }
 impl OutputContext {
@@ -757,11 +762,10 @@ impl std::fmt::Debug for OutputContext {
         formatter.finish()
     }
 }
-/// See [`OutputContext`](crate::model::OutputContext)
+/// See [`OutputContext`](crate::model::OutputContext).
 pub mod output_context {
 
-    /// A builder for [`OutputContext`](crate::model::OutputContext)
-    #[non_exhaustive]
+    /// A builder for [`OutputContext`](crate::model::OutputContext).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -799,7 +803,7 @@ pub mod output_context {
             self.turns_to_live = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputContext`](crate::model::OutputContext)
+        /// Consumes the builder and constructs a [`OutputContext`](crate::model::OutputContext).
         pub fn build(self) -> crate::model::OutputContext {
             crate::model::OutputContext {
                 name: self.name,
@@ -810,7 +814,7 @@ pub mod output_context {
     }
 }
 impl OutputContext {
-    /// Creates a new builder-style object to manufacture [`OutputContext`](crate::model::OutputContext)
+    /// Creates a new builder-style object to manufacture [`OutputContext`](crate::model::OutputContext).
     pub fn builder() -> crate::model::output_context::Builder {
         crate::model::output_context::Builder::default()
     }
@@ -821,6 +825,7 @@ impl OutputContext {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputContext {
     /// <p>The name of the context.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl InputContext {
@@ -836,11 +841,10 @@ impl std::fmt::Debug for InputContext {
         formatter.finish()
     }
 }
-/// See [`InputContext`](crate::model::InputContext)
+/// See [`InputContext`](crate::model::InputContext).
 pub mod input_context {
 
-    /// A builder for [`InputContext`](crate::model::InputContext)
-    #[non_exhaustive]
+    /// A builder for [`InputContext`](crate::model::InputContext).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -856,14 +860,14 @@ pub mod input_context {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputContext`](crate::model::InputContext)
+        /// Consumes the builder and constructs a [`InputContext`](crate::model::InputContext).
         pub fn build(self) -> crate::model::InputContext {
             crate::model::InputContext { name: self.name }
         }
     }
 }
 impl InputContext {
-    /// Creates a new builder-style object to manufacture [`InputContext`](crate::model::InputContext)
+    /// Creates a new builder-style object to manufacture [`InputContext`](crate::model::InputContext).
     pub fn builder() -> crate::model::input_context::Builder {
         crate::model::input_context::Builder::default()
     }
@@ -874,11 +878,14 @@ impl InputContext {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KendraConfiguration {
     /// <p>The Amazon Resource Name (ARN) of the Amazon Kendra index that you want the AMAZON.KendraSearchIntent intent to search. The index must be in the same account and Region as the Amazon Lex bot. If the Amazon Kendra index does not exist, you get an exception when you call the <code>PutIntent</code> operation.</p>
+    #[doc(hidden)]
     pub kendra_index: std::option::Option<std::string::String>,
     /// <p>A query filter that Amazon Lex sends to Amazon Kendra to filter the response from the query. The filter is in the format defined by Amazon Kendra. For more information, see <a href="http://docs.aws.amazon.com/kendra/latest/dg/filtering.html">Filtering queries</a>.</p>
     /// <p>You can override this filter string with a new filter string at runtime.</p>
+    #[doc(hidden)]
     pub query_filter_string: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of an IAM role that has permission to search the Amazon Kendra index. The role must be in the same account and Region as the Amazon Lex bot. If the role does not exist, you get an exception when you call the <code>PutIntent</code> operation.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<std::string::String>,
 }
 impl KendraConfiguration {
@@ -905,11 +912,10 @@ impl std::fmt::Debug for KendraConfiguration {
         formatter.finish()
     }
 }
-/// See [`KendraConfiguration`](crate::model::KendraConfiguration)
+/// See [`KendraConfiguration`](crate::model::KendraConfiguration).
 pub mod kendra_configuration {
 
-    /// A builder for [`KendraConfiguration`](crate::model::KendraConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`KendraConfiguration`](crate::model::KendraConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) kendra_index: std::option::Option<std::string::String>,
@@ -952,7 +958,7 @@ pub mod kendra_configuration {
             self.role = input;
             self
         }
-        /// Consumes the builder and constructs a [`KendraConfiguration`](crate::model::KendraConfiguration)
+        /// Consumes the builder and constructs a [`KendraConfiguration`](crate::model::KendraConfiguration).
         pub fn build(self) -> crate::model::KendraConfiguration {
             crate::model::KendraConfiguration {
                 kendra_index: self.kendra_index,
@@ -963,7 +969,7 @@ pub mod kendra_configuration {
     }
 }
 impl KendraConfiguration {
-    /// Creates a new builder-style object to manufacture [`KendraConfiguration`](crate::model::KendraConfiguration)
+    /// Creates a new builder-style object to manufacture [`KendraConfiguration`](crate::model::KendraConfiguration).
     pub fn builder() -> crate::model::kendra_configuration::Builder {
         crate::model::kendra_configuration::Builder::default()
     }
@@ -979,8 +985,10 @@ impl KendraConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FulfillmentActivity {
     /// <p> How the intent should be fulfilled, either by running a Lambda function or by returning the slot data to the client application. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::FulfillmentActivityType>,
     /// <p> A description of the Lambda function that is run to fulfill the intent. </p>
+    #[doc(hidden)]
     pub code_hook: std::option::Option<crate::model::CodeHook>,
 }
 impl FulfillmentActivity {
@@ -1001,11 +1009,10 @@ impl std::fmt::Debug for FulfillmentActivity {
         formatter.finish()
     }
 }
-/// See [`FulfillmentActivity`](crate::model::FulfillmentActivity)
+/// See [`FulfillmentActivity`](crate::model::FulfillmentActivity).
 pub mod fulfillment_activity {
 
-    /// A builder for [`FulfillmentActivity`](crate::model::FulfillmentActivity)
-    #[non_exhaustive]
+    /// A builder for [`FulfillmentActivity`](crate::model::FulfillmentActivity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::FulfillmentActivityType>,
@@ -1035,7 +1042,7 @@ pub mod fulfillment_activity {
             self.code_hook = input;
             self
         }
-        /// Consumes the builder and constructs a [`FulfillmentActivity`](crate::model::FulfillmentActivity)
+        /// Consumes the builder and constructs a [`FulfillmentActivity`](crate::model::FulfillmentActivity).
         pub fn build(self) -> crate::model::FulfillmentActivity {
             crate::model::FulfillmentActivity {
                 r#type: self.r#type,
@@ -1045,7 +1052,7 @@ pub mod fulfillment_activity {
     }
 }
 impl FulfillmentActivity {
-    /// Creates a new builder-style object to manufacture [`FulfillmentActivity`](crate::model::FulfillmentActivity)
+    /// Creates a new builder-style object to manufacture [`FulfillmentActivity`](crate::model::FulfillmentActivity).
     pub fn builder() -> crate::model::fulfillment_activity::Builder {
         crate::model::fulfillment_activity::Builder::default()
     }
@@ -1056,8 +1063,10 @@ impl FulfillmentActivity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeHook {
     /// <p>The Amazon Resource Name (ARN) of the Lambda function.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
     /// <p>The version of the request-response that you want Amazon Lex to use to invoke your Lambda function. For more information, see <code>using-lambda</code>.</p>
+    #[doc(hidden)]
     pub message_version: std::option::Option<std::string::String>,
 }
 impl CodeHook {
@@ -1078,11 +1087,10 @@ impl std::fmt::Debug for CodeHook {
         formatter.finish()
     }
 }
-/// See [`CodeHook`](crate::model::CodeHook)
+/// See [`CodeHook`](crate::model::CodeHook).
 pub mod code_hook {
 
-    /// A builder for [`CodeHook`](crate::model::CodeHook)
-    #[non_exhaustive]
+    /// A builder for [`CodeHook`](crate::model::CodeHook).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) uri: std::option::Option<std::string::String>,
@@ -1112,7 +1120,7 @@ pub mod code_hook {
             self.message_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeHook`](crate::model::CodeHook)
+        /// Consumes the builder and constructs a [`CodeHook`](crate::model::CodeHook).
         pub fn build(self) -> crate::model::CodeHook {
             crate::model::CodeHook {
                 uri: self.uri,
@@ -1122,7 +1130,7 @@ pub mod code_hook {
     }
 }
 impl CodeHook {
-    /// Creates a new builder-style object to manufacture [`CodeHook`](crate::model::CodeHook)
+    /// Creates a new builder-style object to manufacture [`CodeHook`](crate::model::CodeHook).
     pub fn builder() -> crate::model::code_hook::Builder {
         crate::model::code_hook::Builder::default()
     }
@@ -1188,8 +1196,10 @@ impl AsRef<str> for FulfillmentActivityType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Statement {
     /// <p>A collection of message objects.</p>
+    #[doc(hidden)]
     pub messages: std::option::Option<std::vec::Vec<crate::model::Message>>,
     /// <p> At runtime, if the client is using the <a href="http://docs.aws.amazon.com/lex/latest/dg/API_runtime_PostText.html">PostText</a> API, Amazon Lex includes the response card in the response. It substitutes all of the session attributes and slot values for placeholders in the response card. </p>
+    #[doc(hidden)]
     pub response_card: std::option::Option<std::string::String>,
 }
 impl Statement {
@@ -1210,11 +1220,10 @@ impl std::fmt::Debug for Statement {
         formatter.finish()
     }
 }
-/// See [`Statement`](crate::model::Statement)
+/// See [`Statement`](crate::model::Statement).
 pub mod statement {
 
-    /// A builder for [`Statement`](crate::model::Statement)
-    #[non_exhaustive]
+    /// A builder for [`Statement`](crate::model::Statement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) messages: std::option::Option<std::vec::Vec<crate::model::Message>>,
@@ -1253,7 +1262,7 @@ pub mod statement {
             self.response_card = input;
             self
         }
-        /// Consumes the builder and constructs a [`Statement`](crate::model::Statement)
+        /// Consumes the builder and constructs a [`Statement`](crate::model::Statement).
         pub fn build(self) -> crate::model::Statement {
             crate::model::Statement {
                 messages: self.messages,
@@ -1263,7 +1272,7 @@ pub mod statement {
     }
 }
 impl Statement {
-    /// Creates a new builder-style object to manufacture [`Statement`](crate::model::Statement)
+    /// Creates a new builder-style object to manufacture [`Statement`](crate::model::Statement).
     pub fn builder() -> crate::model::statement::Builder {
         crate::model::statement::Builder::default()
     }
@@ -1274,10 +1283,13 @@ impl Statement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Message {
     /// <p>The content type of the message string.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<crate::model::ContentType>,
     /// <p>The text of the message.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
     /// <p>Identifies the message group that the message belongs to. When a group is assigned to a message, Amazon Lex returns one message from each group in the response.</p>
+    #[doc(hidden)]
     pub group_number: std::option::Option<i32>,
 }
 impl Message {
@@ -1303,11 +1315,10 @@ impl std::fmt::Debug for Message {
         formatter.finish()
     }
 }
-/// See [`Message`](crate::model::Message)
+/// See [`Message`](crate::model::Message).
 pub mod message {
 
-    /// A builder for [`Message`](crate::model::Message)
-    #[non_exhaustive]
+    /// A builder for [`Message`](crate::model::Message).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_type: std::option::Option<crate::model::ContentType>,
@@ -1348,7 +1359,7 @@ pub mod message {
             self.group_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`Message`](crate::model::Message)
+        /// Consumes the builder and constructs a [`Message`](crate::model::Message).
         pub fn build(self) -> crate::model::Message {
             crate::model::Message {
                 content_type: self.content_type,
@@ -1359,7 +1370,7 @@ pub mod message {
     }
 }
 impl Message {
-    /// Creates a new builder-style object to manufacture [`Message`](crate::model::Message)
+    /// Creates a new builder-style object to manufacture [`Message`](crate::model::Message).
     pub fn builder() -> crate::model::message::Builder {
         crate::model::message::Builder::default()
     }
@@ -1429,8 +1440,10 @@ impl AsRef<str> for ContentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FollowUpPrompt {
     /// <p>Prompts for information from the user. </p>
+    #[doc(hidden)]
     pub prompt: std::option::Option<crate::model::Prompt>,
     /// <p>If the user answers "no" to the question defined in the <code>prompt</code> field, Amazon Lex responds with this statement to acknowledge that the intent was canceled. </p>
+    #[doc(hidden)]
     pub rejection_statement: std::option::Option<crate::model::Statement>,
 }
 impl FollowUpPrompt {
@@ -1451,11 +1464,10 @@ impl std::fmt::Debug for FollowUpPrompt {
         formatter.finish()
     }
 }
-/// See [`FollowUpPrompt`](crate::model::FollowUpPrompt)
+/// See [`FollowUpPrompt`](crate::model::FollowUpPrompt).
 pub mod follow_up_prompt {
 
-    /// A builder for [`FollowUpPrompt`](crate::model::FollowUpPrompt)
-    #[non_exhaustive]
+    /// A builder for [`FollowUpPrompt`](crate::model::FollowUpPrompt).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prompt: std::option::Option<crate::model::Prompt>,
@@ -1485,7 +1497,7 @@ pub mod follow_up_prompt {
             self.rejection_statement = input;
             self
         }
-        /// Consumes the builder and constructs a [`FollowUpPrompt`](crate::model::FollowUpPrompt)
+        /// Consumes the builder and constructs a [`FollowUpPrompt`](crate::model::FollowUpPrompt).
         pub fn build(self) -> crate::model::FollowUpPrompt {
             crate::model::FollowUpPrompt {
                 prompt: self.prompt,
@@ -1495,7 +1507,7 @@ pub mod follow_up_prompt {
     }
 }
 impl FollowUpPrompt {
-    /// Creates a new builder-style object to manufacture [`FollowUpPrompt`](crate::model::FollowUpPrompt)
+    /// Creates a new builder-style object to manufacture [`FollowUpPrompt`](crate::model::FollowUpPrompt).
     pub fn builder() -> crate::model::follow_up_prompt::Builder {
         crate::model::follow_up_prompt::Builder::default()
     }
@@ -1506,10 +1518,13 @@ impl FollowUpPrompt {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Prompt {
     /// <p>An array of objects, each of which provides a message string and its type. You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).</p>
+    #[doc(hidden)]
     pub messages: std::option::Option<std::vec::Vec<crate::model::Message>>,
     /// <p>The number of times to prompt the user for information.</p>
+    #[doc(hidden)]
     pub max_attempts: std::option::Option<i32>,
     /// <p>A response card. Amazon Lex uses this prompt at runtime, in the <code>PostText</code> API response. It substitutes session attributes and slot values for placeholders in the response card. For more information, see <code>ex-resp-card</code>. </p>
+    #[doc(hidden)]
     pub response_card: std::option::Option<std::string::String>,
 }
 impl Prompt {
@@ -1535,11 +1550,10 @@ impl std::fmt::Debug for Prompt {
         formatter.finish()
     }
 }
-/// See [`Prompt`](crate::model::Prompt)
+/// See [`Prompt`](crate::model::Prompt).
 pub mod prompt {
 
-    /// A builder for [`Prompt`](crate::model::Prompt)
-    #[non_exhaustive]
+    /// A builder for [`Prompt`](crate::model::Prompt).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) messages: std::option::Option<std::vec::Vec<crate::model::Message>>,
@@ -1589,7 +1603,7 @@ pub mod prompt {
             self.response_card = input;
             self
         }
-        /// Consumes the builder and constructs a [`Prompt`](crate::model::Prompt)
+        /// Consumes the builder and constructs a [`Prompt`](crate::model::Prompt).
         pub fn build(self) -> crate::model::Prompt {
             crate::model::Prompt {
                 messages: self.messages,
@@ -1600,7 +1614,7 @@ pub mod prompt {
     }
 }
 impl Prompt {
-    /// Creates a new builder-style object to manufacture [`Prompt`](crate::model::Prompt)
+    /// Creates a new builder-style object to manufacture [`Prompt`](crate::model::Prompt).
     pub fn builder() -> crate::model::prompt::Builder {
         crate::model::prompt::Builder::default()
     }
@@ -1611,27 +1625,38 @@ impl Prompt {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Slot {
     /// <p>The name of the slot.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description of the slot.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Specifies whether the slot is required or optional. </p>
+    #[doc(hidden)]
     pub slot_constraint: std::option::Option<crate::model::SlotConstraint>,
     /// <p>The type of the slot, either a custom slot type that you defined or one of the built-in slot types.</p>
+    #[doc(hidden)]
     pub slot_type: std::option::Option<std::string::String>,
     /// <p>The version of the slot type.</p>
+    #[doc(hidden)]
     pub slot_type_version: std::option::Option<std::string::String>,
     /// <p>The prompt that Amazon Lex uses to elicit the slot value from the user.</p>
+    #[doc(hidden)]
     pub value_elicitation_prompt: std::option::Option<crate::model::Prompt>,
     /// <p> Directs Amazon Lex the order in which to elicit this slot value from the user. For example, if the intent has two slots with priorities 1 and 2, AWS Amazon Lex first elicits a value for the slot with priority 1.</p>
     /// <p>If multiple slots share the same priority, the order in which Amazon Lex elicits values is arbitrary.</p>
+    #[doc(hidden)]
     pub priority: std::option::Option<i32>,
     /// <p> If you know a specific pattern with which users might respond to an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This is optional. In most cases, Amazon Lex is capable of understanding user utterances. </p>
+    #[doc(hidden)]
     pub sample_utterances: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> A set of possible responses for the slot type used by text-based clients. A user chooses an option from the response card, instead of using text to reply. </p>
+    #[doc(hidden)]
     pub response_card: std::option::Option<std::string::String>,
     /// <p>Determines whether a slot is obfuscated in conversation logs and stored utterances. When you obfuscate a slot, the value is replaced by the slot name in curly braces ({}). For example, if the slot name is "full_name", obfuscated values are replaced with "{full_name}". For more information, see <a href="https://docs.aws.amazon.com/lex/latest/dg/how-obfuscate.html"> Slot Obfuscation </a>. </p>
+    #[doc(hidden)]
     pub obfuscation_setting: std::option::Option<crate::model::ObfuscationSetting>,
     /// <p>A list of default values for the slot. Default values are used when Amazon Lex hasn't determined a value for a slot. You can specify default values from context variables, session attributes, and defined values.</p>
+    #[doc(hidden)]
     pub default_value_spec: std::option::Option<crate::model::SlotDefaultValueSpec>,
 }
 impl Slot {
@@ -1698,11 +1723,10 @@ impl std::fmt::Debug for Slot {
         formatter.finish()
     }
 }
-/// See [`Slot`](crate::model::Slot)
+/// See [`Slot`](crate::model::Slot).
 pub mod slot {
 
-    /// A builder for [`Slot`](crate::model::Slot)
-    #[non_exhaustive]
+    /// A builder for [`Slot`](crate::model::Slot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1857,7 +1881,7 @@ pub mod slot {
             self.default_value_spec = input;
             self
         }
-        /// Consumes the builder and constructs a [`Slot`](crate::model::Slot)
+        /// Consumes the builder and constructs a [`Slot`](crate::model::Slot).
         pub fn build(self) -> crate::model::Slot {
             crate::model::Slot {
                 name: self.name,
@@ -1876,7 +1900,7 @@ pub mod slot {
     }
 }
 impl Slot {
-    /// Creates a new builder-style object to manufacture [`Slot`](crate::model::Slot)
+    /// Creates a new builder-style object to manufacture [`Slot`](crate::model::Slot).
     pub fn builder() -> crate::model::slot::Builder {
         crate::model::slot::Builder::default()
     }
@@ -1888,6 +1912,7 @@ impl Slot {
 pub struct SlotDefaultValueSpec {
     /// <p>The default values for a slot. You can specify more than one default. For example, you can specify a default value to use from a matching context variable, a session attribute, or a fixed value.</p>
     /// <p>The default value chosen is selected based on the order that you specify them in the list. For example, if you specify a context variable and a fixed value in that order, Amazon Lex uses the context variable if it is available, else it uses the fixed value.</p>
+    #[doc(hidden)]
     pub default_value_list: std::option::Option<std::vec::Vec<crate::model::SlotDefaultValue>>,
 }
 impl SlotDefaultValueSpec {
@@ -1904,11 +1929,10 @@ impl std::fmt::Debug for SlotDefaultValueSpec {
         formatter.finish()
     }
 }
-/// See [`SlotDefaultValueSpec`](crate::model::SlotDefaultValueSpec)
+/// See [`SlotDefaultValueSpec`](crate::model::SlotDefaultValueSpec).
 pub mod slot_default_value_spec {
 
-    /// A builder for [`SlotDefaultValueSpec`](crate::model::SlotDefaultValueSpec)
-    #[non_exhaustive]
+    /// A builder for [`SlotDefaultValueSpec`](crate::model::SlotDefaultValueSpec).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_value_list:
@@ -1936,7 +1960,7 @@ pub mod slot_default_value_spec {
             self.default_value_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`SlotDefaultValueSpec`](crate::model::SlotDefaultValueSpec)
+        /// Consumes the builder and constructs a [`SlotDefaultValueSpec`](crate::model::SlotDefaultValueSpec).
         pub fn build(self) -> crate::model::SlotDefaultValueSpec {
             crate::model::SlotDefaultValueSpec {
                 default_value_list: self.default_value_list,
@@ -1945,7 +1969,7 @@ pub mod slot_default_value_spec {
     }
 }
 impl SlotDefaultValueSpec {
-    /// Creates a new builder-style object to manufacture [`SlotDefaultValueSpec`](crate::model::SlotDefaultValueSpec)
+    /// Creates a new builder-style object to manufacture [`SlotDefaultValueSpec`](crate::model::SlotDefaultValueSpec).
     pub fn builder() -> crate::model::slot_default_value_spec::Builder {
         crate::model::slot_default_value_spec::Builder::default()
     }
@@ -1961,6 +1985,7 @@ pub struct SlotDefaultValue {
     /// <li> <p> <code>{attribute}</code> - The slot value of the session attribute "attribute."</p> </li>
     /// <li> <p> <code>'value'</code> - The discrete value "value."</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
 }
 impl SlotDefaultValue {
@@ -1981,11 +2006,10 @@ impl std::fmt::Debug for SlotDefaultValue {
         formatter.finish()
     }
 }
-/// See [`SlotDefaultValue`](crate::model::SlotDefaultValue)
+/// See [`SlotDefaultValue`](crate::model::SlotDefaultValue).
 pub mod slot_default_value {
 
-    /// A builder for [`SlotDefaultValue`](crate::model::SlotDefaultValue)
-    #[non_exhaustive]
+    /// A builder for [`SlotDefaultValue`](crate::model::SlotDefaultValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_value: std::option::Option<std::string::String>,
@@ -2014,7 +2038,7 @@ pub mod slot_default_value {
             self.default_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`SlotDefaultValue`](crate::model::SlotDefaultValue)
+        /// Consumes the builder and constructs a [`SlotDefaultValue`](crate::model::SlotDefaultValue).
         pub fn build(self) -> crate::model::SlotDefaultValue {
             crate::model::SlotDefaultValue {
                 default_value: self.default_value,
@@ -2023,7 +2047,7 @@ pub mod slot_default_value {
     }
 }
 impl SlotDefaultValue {
-    /// Creates a new builder-style object to manufacture [`SlotDefaultValue`](crate::model::SlotDefaultValue)
+    /// Creates a new builder-style object to manufacture [`SlotDefaultValue`](crate::model::SlotDefaultValue).
     pub fn builder() -> crate::model::slot_default_value::Builder {
         crate::model::slot_default_value::Builder::default()
     }
@@ -2144,8 +2168,10 @@ impl AsRef<str> for SlotConstraint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConversationLogsResponse {
     /// <p>The settings for your conversation logs. You can log text, audio, or both.</p>
+    #[doc(hidden)]
     pub log_settings: std::option::Option<std::vec::Vec<crate::model::LogSettingsResponse>>,
     /// <p>The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
 }
 impl ConversationLogsResponse {
@@ -2166,11 +2192,10 @@ impl std::fmt::Debug for ConversationLogsResponse {
         formatter.finish()
     }
 }
-/// See [`ConversationLogsResponse`](crate::model::ConversationLogsResponse)
+/// See [`ConversationLogsResponse`](crate::model::ConversationLogsResponse).
 pub mod conversation_logs_response {
 
-    /// A builder for [`ConversationLogsResponse`](crate::model::ConversationLogsResponse)
-    #[non_exhaustive]
+    /// A builder for [`ConversationLogsResponse`](crate::model::ConversationLogsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_settings:
@@ -2207,7 +2232,7 @@ pub mod conversation_logs_response {
             self.iam_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConversationLogsResponse`](crate::model::ConversationLogsResponse)
+        /// Consumes the builder and constructs a [`ConversationLogsResponse`](crate::model::ConversationLogsResponse).
         pub fn build(self) -> crate::model::ConversationLogsResponse {
             crate::model::ConversationLogsResponse {
                 log_settings: self.log_settings,
@@ -2217,7 +2242,7 @@ pub mod conversation_logs_response {
     }
 }
 impl ConversationLogsResponse {
-    /// Creates a new builder-style object to manufacture [`ConversationLogsResponse`](crate::model::ConversationLogsResponse)
+    /// Creates a new builder-style object to manufacture [`ConversationLogsResponse`](crate::model::ConversationLogsResponse).
     pub fn builder() -> crate::model::conversation_logs_response::Builder {
         crate::model::conversation_logs_response::Builder::default()
     }
@@ -2228,14 +2253,19 @@ impl ConversationLogsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogSettingsResponse {
     /// <p>The type of logging that is enabled.</p>
+    #[doc(hidden)]
     pub log_type: std::option::Option<crate::model::LogType>,
     /// <p>The destination where logs are delivered.</p>
+    #[doc(hidden)]
     pub destination: std::option::Option<crate::model::Destination>,
     /// <p>The Amazon Resource Name (ARN) of the key used to encrypt audio logs in an S3 bucket.</p>
+    #[doc(hidden)]
     pub kms_key_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the CloudWatch Logs log group or S3 bucket where the logs are delivered.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The resource prefix is the first part of the S3 object key within the S3 bucket that you specified to contain audio logs. For CloudWatch Logs it is the prefix of the log stream name within the log group that you specified. </p>
+    #[doc(hidden)]
     pub resource_prefix: std::option::Option<std::string::String>,
 }
 impl LogSettingsResponse {
@@ -2271,11 +2301,10 @@ impl std::fmt::Debug for LogSettingsResponse {
         formatter.finish()
     }
 }
-/// See [`LogSettingsResponse`](crate::model::LogSettingsResponse)
+/// See [`LogSettingsResponse`](crate::model::LogSettingsResponse).
 pub mod log_settings_response {
 
-    /// A builder for [`LogSettingsResponse`](crate::model::LogSettingsResponse)
-    #[non_exhaustive]
+    /// A builder for [`LogSettingsResponse`](crate::model::LogSettingsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_type: std::option::Option<crate::model::LogType>,
@@ -2341,7 +2370,7 @@ pub mod log_settings_response {
             self.resource_prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogSettingsResponse`](crate::model::LogSettingsResponse)
+        /// Consumes the builder and constructs a [`LogSettingsResponse`](crate::model::LogSettingsResponse).
         pub fn build(self) -> crate::model::LogSettingsResponse {
             crate::model::LogSettingsResponse {
                 log_type: self.log_type,
@@ -2354,7 +2383,7 @@ pub mod log_settings_response {
     }
 }
 impl LogSettingsResponse {
-    /// Creates a new builder-style object to manufacture [`LogSettingsResponse`](crate::model::LogSettingsResponse)
+    /// Creates a new builder-style object to manufacture [`LogSettingsResponse`](crate::model::LogSettingsResponse).
     pub fn builder() -> crate::model::log_settings_response::Builder {
         crate::model::log_settings_response::Builder::default()
     }
@@ -2475,8 +2504,10 @@ impl AsRef<str> for LogType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConversationLogsRequest {
     /// <p>The settings for your conversation logs. You can log the conversation text, conversation audio, or both.</p>
+    #[doc(hidden)]
     pub log_settings: std::option::Option<std::vec::Vec<crate::model::LogSettingsRequest>>,
     /// <p>The Amazon Resource Name (ARN) of an IAM role with permission to write to your CloudWatch Logs for text logs and your S3 bucket for audio logs. If audio encryption is enabled, this role also provides access permission for the AWS KMS key used for encrypting audio logs. For more information, see <a href="https://docs.aws.amazon.com/lex/latest/dg/conversation-logs-role-and-policy.html">Creating an IAM Role and Policy for Conversation Logs</a>.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
 }
 impl ConversationLogsRequest {
@@ -2497,11 +2528,10 @@ impl std::fmt::Debug for ConversationLogsRequest {
         formatter.finish()
     }
 }
-/// See [`ConversationLogsRequest`](crate::model::ConversationLogsRequest)
+/// See [`ConversationLogsRequest`](crate::model::ConversationLogsRequest).
 pub mod conversation_logs_request {
 
-    /// A builder for [`ConversationLogsRequest`](crate::model::ConversationLogsRequest)
-    #[non_exhaustive]
+    /// A builder for [`ConversationLogsRequest`](crate::model::ConversationLogsRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_settings:
@@ -2538,7 +2568,7 @@ pub mod conversation_logs_request {
             self.iam_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConversationLogsRequest`](crate::model::ConversationLogsRequest)
+        /// Consumes the builder and constructs a [`ConversationLogsRequest`](crate::model::ConversationLogsRequest).
         pub fn build(self) -> crate::model::ConversationLogsRequest {
             crate::model::ConversationLogsRequest {
                 log_settings: self.log_settings,
@@ -2548,7 +2578,7 @@ pub mod conversation_logs_request {
     }
 }
 impl ConversationLogsRequest {
-    /// Creates a new builder-style object to manufacture [`ConversationLogsRequest`](crate::model::ConversationLogsRequest)
+    /// Creates a new builder-style object to manufacture [`ConversationLogsRequest`](crate::model::ConversationLogsRequest).
     pub fn builder() -> crate::model::conversation_logs_request::Builder {
         crate::model::conversation_logs_request::Builder::default()
     }
@@ -2559,12 +2589,16 @@ impl ConversationLogsRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogSettingsRequest {
     /// <p>The type of logging to enable. Text logs are delivered to a CloudWatch Logs log group. Audio logs are delivered to an S3 bucket.</p>
+    #[doc(hidden)]
     pub log_type: std::option::Option<crate::model::LogType>,
     /// <p>Where the logs will be delivered. Text logs are delivered to a CloudWatch Logs log group. Audio logs are delivered to an S3 bucket.</p>
+    #[doc(hidden)]
     pub destination: std::option::Option<crate::model::Destination>,
     /// <p>The Amazon Resource Name (ARN) of the AWS KMS customer managed key for encrypting audio logs delivered to an S3 bucket. The key does not apply to CloudWatch Logs and is optional for S3 buckets.</p>
+    #[doc(hidden)]
     pub kms_key_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the CloudWatch Logs log group or S3 bucket where the logs should be delivered.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl LogSettingsRequest {
@@ -2595,11 +2629,10 @@ impl std::fmt::Debug for LogSettingsRequest {
         formatter.finish()
     }
 }
-/// See [`LogSettingsRequest`](crate::model::LogSettingsRequest)
+/// See [`LogSettingsRequest`](crate::model::LogSettingsRequest).
 pub mod log_settings_request {
 
-    /// A builder for [`LogSettingsRequest`](crate::model::LogSettingsRequest)
-    #[non_exhaustive]
+    /// A builder for [`LogSettingsRequest`](crate::model::LogSettingsRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_type: std::option::Option<crate::model::LogType>,
@@ -2651,7 +2684,7 @@ pub mod log_settings_request {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogSettingsRequest`](crate::model::LogSettingsRequest)
+        /// Consumes the builder and constructs a [`LogSettingsRequest`](crate::model::LogSettingsRequest).
         pub fn build(self) -> crate::model::LogSettingsRequest {
             crate::model::LogSettingsRequest {
                 log_type: self.log_type,
@@ -2663,7 +2696,7 @@ pub mod log_settings_request {
     }
 }
 impl LogSettingsRequest {
-    /// Creates a new builder-style object to manufacture [`LogSettingsRequest`](crate::model::LogSettingsRequest)
+    /// Creates a new builder-style object to manufacture [`LogSettingsRequest`](crate::model::LogSettingsRequest).
     pub fn builder() -> crate::model::log_settings_request::Builder {
         crate::model::log_settings_request::Builder::default()
     }
@@ -2747,8 +2780,10 @@ impl AsRef<str> for Status {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Intent {
     /// <p>The name of the intent.</p>
+    #[doc(hidden)]
     pub intent_name: std::option::Option<std::string::String>,
     /// <p>The version of the intent.</p>
+    #[doc(hidden)]
     pub intent_version: std::option::Option<std::string::String>,
 }
 impl Intent {
@@ -2769,11 +2804,10 @@ impl std::fmt::Debug for Intent {
         formatter.finish()
     }
 }
-/// See [`Intent`](crate::model::Intent)
+/// See [`Intent`](crate::model::Intent).
 pub mod intent {
 
-    /// A builder for [`Intent`](crate::model::Intent)
-    #[non_exhaustive]
+    /// A builder for [`Intent`](crate::model::Intent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) intent_name: std::option::Option<std::string::String>,
@@ -2803,7 +2837,7 @@ pub mod intent {
             self.intent_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`Intent`](crate::model::Intent)
+        /// Consumes the builder and constructs a [`Intent`](crate::model::Intent).
         pub fn build(self) -> crate::model::Intent {
             crate::model::Intent {
                 intent_name: self.intent_name,
@@ -2813,7 +2847,7 @@ pub mod intent {
     }
 }
 impl Intent {
-    /// Creates a new builder-style object to manufacture [`Intent`](crate::model::Intent)
+    /// Creates a new builder-style object to manufacture [`Intent`](crate::model::Intent).
     pub fn builder() -> crate::model::intent::Builder {
         crate::model::intent::Builder::default()
     }
@@ -2879,8 +2913,10 @@ impl AsRef<str> for ProcessBehavior {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UtteranceList {
     /// <p>The version of the bot that processed the list.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>One or more <code>UtteranceData</code> objects that contain information about the utterances that have been made to a bot. The maximum number of object is 100.</p>
+    #[doc(hidden)]
     pub utterances: std::option::Option<std::vec::Vec<crate::model::UtteranceData>>,
 }
 impl UtteranceList {
@@ -2901,11 +2937,10 @@ impl std::fmt::Debug for UtteranceList {
         formatter.finish()
     }
 }
-/// See [`UtteranceList`](crate::model::UtteranceList)
+/// See [`UtteranceList`](crate::model::UtteranceList).
 pub mod utterance_list {
 
-    /// A builder for [`UtteranceList`](crate::model::UtteranceList)
-    #[non_exhaustive]
+    /// A builder for [`UtteranceList`](crate::model::UtteranceList).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_version: std::option::Option<std::string::String>,
@@ -2941,7 +2976,7 @@ pub mod utterance_list {
             self.utterances = input;
             self
         }
-        /// Consumes the builder and constructs a [`UtteranceList`](crate::model::UtteranceList)
+        /// Consumes the builder and constructs a [`UtteranceList`](crate::model::UtteranceList).
         pub fn build(self) -> crate::model::UtteranceList {
             crate::model::UtteranceList {
                 bot_version: self.bot_version,
@@ -2951,7 +2986,7 @@ pub mod utterance_list {
     }
 }
 impl UtteranceList {
-    /// Creates a new builder-style object to manufacture [`UtteranceList`](crate::model::UtteranceList)
+    /// Creates a new builder-style object to manufacture [`UtteranceList`](crate::model::UtteranceList).
     pub fn builder() -> crate::model::utterance_list::Builder {
         crate::model::utterance_list::Builder::default()
     }
@@ -2962,14 +2997,19 @@ impl UtteranceList {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UtteranceData {
     /// <p>The text that was entered by the user or the text representation of an audio clip.</p>
+    #[doc(hidden)]
     pub utterance_string: std::option::Option<std::string::String>,
     /// <p>The number of times that the utterance was processed.</p>
+    #[doc(hidden)]
     pub count: std::option::Option<i32>,
     /// <p>The total number of individuals that used the utterance.</p>
+    #[doc(hidden)]
     pub distinct_users: std::option::Option<i32>,
     /// <p>The date that the utterance was first recorded.</p>
+    #[doc(hidden)]
     pub first_uttered_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date that the utterance was last recorded.</p>
+    #[doc(hidden)]
     pub last_uttered_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl UtteranceData {
@@ -3005,11 +3045,10 @@ impl std::fmt::Debug for UtteranceData {
         formatter.finish()
     }
 }
-/// See [`UtteranceData`](crate::model::UtteranceData)
+/// See [`UtteranceData`](crate::model::UtteranceData).
 pub mod utterance_data {
 
-    /// A builder for [`UtteranceData`](crate::model::UtteranceData)
-    #[non_exhaustive]
+    /// A builder for [`UtteranceData`](crate::model::UtteranceData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) utterance_string: std::option::Option<std::string::String>,
@@ -3078,7 +3117,7 @@ pub mod utterance_data {
             self.last_uttered_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`UtteranceData`](crate::model::UtteranceData)
+        /// Consumes the builder and constructs a [`UtteranceData`](crate::model::UtteranceData).
         pub fn build(self) -> crate::model::UtteranceData {
             crate::model::UtteranceData {
                 utterance_string: self.utterance_string,
@@ -3091,7 +3130,7 @@ pub mod utterance_data {
     }
 }
 impl UtteranceData {
-    /// Creates a new builder-style object to manufacture [`UtteranceData`](crate::model::UtteranceData)
+    /// Creates a new builder-style object to manufacture [`UtteranceData`](crate::model::UtteranceData).
     pub fn builder() -> crate::model::utterance_data::Builder {
         crate::model::utterance_data::Builder::default()
     }
@@ -3157,14 +3196,19 @@ impl AsRef<str> for StatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SlotTypeMetadata {
     /// <p>The name of the slot type.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description of the slot type.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date that the slot type was updated. When you create a resource, the creation date and last updated date are the same. </p>
+    #[doc(hidden)]
     pub last_updated_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date that the slot type was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The version of the slot type.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl SlotTypeMetadata {
@@ -3200,11 +3244,10 @@ impl std::fmt::Debug for SlotTypeMetadata {
         formatter.finish()
     }
 }
-/// See [`SlotTypeMetadata`](crate::model::SlotTypeMetadata)
+/// See [`SlotTypeMetadata`](crate::model::SlotTypeMetadata).
 pub mod slot_type_metadata {
 
-    /// A builder for [`SlotTypeMetadata`](crate::model::SlotTypeMetadata)
-    #[non_exhaustive]
+    /// A builder for [`SlotTypeMetadata`](crate::model::SlotTypeMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3270,7 +3313,7 @@ pub mod slot_type_metadata {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`SlotTypeMetadata`](crate::model::SlotTypeMetadata)
+        /// Consumes the builder and constructs a [`SlotTypeMetadata`](crate::model::SlotTypeMetadata).
         pub fn build(self) -> crate::model::SlotTypeMetadata {
             crate::model::SlotTypeMetadata {
                 name: self.name,
@@ -3283,7 +3326,7 @@ pub mod slot_type_metadata {
     }
 }
 impl SlotTypeMetadata {
-    /// Creates a new builder-style object to manufacture [`SlotTypeMetadata`](crate::model::SlotTypeMetadata)
+    /// Creates a new builder-style object to manufacture [`SlotTypeMetadata`](crate::model::SlotTypeMetadata).
     pub fn builder() -> crate::model::slot_type_metadata::Builder {
         crate::model::slot_type_metadata::Builder::default()
     }
@@ -3294,22 +3337,31 @@ impl SlotTypeMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MigrationSummary {
     /// <p>The unique identifier that Amazon Lex assigned to the migration.</p>
+    #[doc(hidden)]
     pub migration_id: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon Lex V1 bot that is the source of the migration.</p>
+    #[doc(hidden)]
     pub v1_bot_name: std::option::Option<std::string::String>,
     /// <p>The version of the Amazon Lex V1 bot that is the source of the migration.</p>
+    #[doc(hidden)]
     pub v1_bot_version: std::option::Option<std::string::String>,
     /// <p>The locale of the Amazon Lex V1 bot that is the source of the migration.</p>
+    #[doc(hidden)]
     pub v1_bot_locale: std::option::Option<crate::model::Locale>,
     /// <p>The unique identifier of the Amazon Lex V2 that is the destination of the migration.</p>
+    #[doc(hidden)]
     pub v2_bot_id: std::option::Option<std::string::String>,
     /// <p>The IAM role that Amazon Lex uses to run the Amazon Lex V2 bot.</p>
+    #[doc(hidden)]
     pub v2_bot_role: std::option::Option<std::string::String>,
     /// <p>The status of the operation. When the status is <code>COMPLETE</code> the bot is available in Amazon Lex V2. There may be alerts and warnings that need to be resolved to complete the migration.</p>
+    #[doc(hidden)]
     pub migration_status: std::option::Option<crate::model::MigrationStatus>,
     /// <p>The strategy used to conduct the migration.</p>
+    #[doc(hidden)]
     pub migration_strategy: std::option::Option<crate::model::MigrationStrategy>,
     /// <p>The date and time that the migration started.</p>
+    #[doc(hidden)]
     pub migration_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl MigrationSummary {
@@ -3365,11 +3417,10 @@ impl std::fmt::Debug for MigrationSummary {
         formatter.finish()
     }
 }
-/// See [`MigrationSummary`](crate::model::MigrationSummary)
+/// See [`MigrationSummary`](crate::model::MigrationSummary).
 pub mod migration_summary {
 
-    /// A builder for [`MigrationSummary`](crate::model::MigrationSummary)
-    #[non_exhaustive]
+    /// A builder for [`MigrationSummary`](crate::model::MigrationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) migration_id: std::option::Option<std::string::String>,
@@ -3488,7 +3539,7 @@ pub mod migration_summary {
             self.migration_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`MigrationSummary`](crate::model::MigrationSummary)
+        /// Consumes the builder and constructs a [`MigrationSummary`](crate::model::MigrationSummary).
         pub fn build(self) -> crate::model::MigrationSummary {
             crate::model::MigrationSummary {
                 migration_id: self.migration_id,
@@ -3505,7 +3556,7 @@ pub mod migration_summary {
     }
 }
 impl MigrationSummary {
-    /// Creates a new builder-style object to manufacture [`MigrationSummary`](crate::model::MigrationSummary)
+    /// Creates a new builder-style object to manufacture [`MigrationSummary`](crate::model::MigrationSummary).
     pub fn builder() -> crate::model::migration_summary::Builder {
         crate::model::migration_summary::Builder::default()
     }
@@ -3689,12 +3740,16 @@ pub struct MigrationAlert {
     /// <li> <p> <code>ERROR</code> - There was an issue with the migration that can't be resolved. The migration stops.</p> </li>
     /// <li> <p> <code>WARN</code> - There was an issue with the migration that requires manual changes to the new Amazon Lex V2 bot. The migration continues.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::MigrationAlertType>,
     /// <p>A message that describes why the alert was issued.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>Additional details about the alert.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A link to the Amazon Lex documentation that describes how to resolve the alert.</p>
+    #[doc(hidden)]
     pub reference_ur_ls: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl MigrationAlert {
@@ -3729,11 +3784,10 @@ impl std::fmt::Debug for MigrationAlert {
         formatter.finish()
     }
 }
-/// See [`MigrationAlert`](crate::model::MigrationAlert)
+/// See [`MigrationAlert`](crate::model::MigrationAlert).
 pub mod migration_alert {
 
-    /// A builder for [`MigrationAlert`](crate::model::MigrationAlert)
-    #[non_exhaustive]
+    /// A builder for [`MigrationAlert`](crate::model::MigrationAlert).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::MigrationAlertType>,
@@ -3811,7 +3865,7 @@ pub mod migration_alert {
             self.reference_ur_ls = input;
             self
         }
-        /// Consumes the builder and constructs a [`MigrationAlert`](crate::model::MigrationAlert)
+        /// Consumes the builder and constructs a [`MigrationAlert`](crate::model::MigrationAlert).
         pub fn build(self) -> crate::model::MigrationAlert {
             crate::model::MigrationAlert {
                 r#type: self.r#type,
@@ -3823,7 +3877,7 @@ pub mod migration_alert {
     }
 }
 impl MigrationAlert {
-    /// Creates a new builder-style object to manufacture [`MigrationAlert`](crate::model::MigrationAlert)
+    /// Creates a new builder-style object to manufacture [`MigrationAlert`](crate::model::MigrationAlert).
     pub fn builder() -> crate::model::migration_alert::Builder {
         crate::model::migration_alert::Builder::default()
     }
@@ -3889,14 +3943,19 @@ impl AsRef<str> for MigrationAlertType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IntentMetadata {
     /// <p>The name of the intent.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description of the intent.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date that the intent was updated. When you create an intent, the creation date and last updated date are the same.</p>
+    #[doc(hidden)]
     pub last_updated_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date that the intent was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The version of the intent.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl IntentMetadata {
@@ -3932,11 +3991,10 @@ impl std::fmt::Debug for IntentMetadata {
         formatter.finish()
     }
 }
-/// See [`IntentMetadata`](crate::model::IntentMetadata)
+/// See [`IntentMetadata`](crate::model::IntentMetadata).
 pub mod intent_metadata {
 
-    /// A builder for [`IntentMetadata`](crate::model::IntentMetadata)
-    #[non_exhaustive]
+    /// A builder for [`IntentMetadata`](crate::model::IntentMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4002,7 +4060,7 @@ pub mod intent_metadata {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`IntentMetadata`](crate::model::IntentMetadata)
+        /// Consumes the builder and constructs a [`IntentMetadata`](crate::model::IntentMetadata).
         pub fn build(self) -> crate::model::IntentMetadata {
             crate::model::IntentMetadata {
                 name: self.name,
@@ -4015,7 +4073,7 @@ pub mod intent_metadata {
     }
 }
 impl IntentMetadata {
-    /// Creates a new builder-style object to manufacture [`IntentMetadata`](crate::model::IntentMetadata)
+    /// Creates a new builder-style object to manufacture [`IntentMetadata`](crate::model::IntentMetadata).
     pub fn builder() -> crate::model::intent_metadata::Builder {
         crate::model::intent_metadata::Builder::default()
     }
@@ -4140,8 +4198,10 @@ impl AsRef<str> for ExportType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BuiltinSlotTypeMetadata {
     /// <p>A unique identifier for the built-in slot type. To find the signature for a slot type, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/slot-type-reference">Slot Type Reference</a> in the <i>Alexa Skills Kit</i>.</p>
+    #[doc(hidden)]
     pub signature: std::option::Option<std::string::String>,
     /// <p>A list of target locales for the slot. </p>
+    #[doc(hidden)]
     pub supported_locales: std::option::Option<std::vec::Vec<crate::model::Locale>>,
 }
 impl BuiltinSlotTypeMetadata {
@@ -4162,11 +4222,10 @@ impl std::fmt::Debug for BuiltinSlotTypeMetadata {
         formatter.finish()
     }
 }
-/// See [`BuiltinSlotTypeMetadata`](crate::model::BuiltinSlotTypeMetadata)
+/// See [`BuiltinSlotTypeMetadata`](crate::model::BuiltinSlotTypeMetadata).
 pub mod builtin_slot_type_metadata {
 
-    /// A builder for [`BuiltinSlotTypeMetadata`](crate::model::BuiltinSlotTypeMetadata)
-    #[non_exhaustive]
+    /// A builder for [`BuiltinSlotTypeMetadata`](crate::model::BuiltinSlotTypeMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) signature: std::option::Option<std::string::String>,
@@ -4202,7 +4261,7 @@ pub mod builtin_slot_type_metadata {
             self.supported_locales = input;
             self
         }
-        /// Consumes the builder and constructs a [`BuiltinSlotTypeMetadata`](crate::model::BuiltinSlotTypeMetadata)
+        /// Consumes the builder and constructs a [`BuiltinSlotTypeMetadata`](crate::model::BuiltinSlotTypeMetadata).
         pub fn build(self) -> crate::model::BuiltinSlotTypeMetadata {
             crate::model::BuiltinSlotTypeMetadata {
                 signature: self.signature,
@@ -4212,7 +4271,7 @@ pub mod builtin_slot_type_metadata {
     }
 }
 impl BuiltinSlotTypeMetadata {
-    /// Creates a new builder-style object to manufacture [`BuiltinSlotTypeMetadata`](crate::model::BuiltinSlotTypeMetadata)
+    /// Creates a new builder-style object to manufacture [`BuiltinSlotTypeMetadata`](crate::model::BuiltinSlotTypeMetadata).
     pub fn builder() -> crate::model::builtin_slot_type_metadata::Builder {
         crate::model::builtin_slot_type_metadata::Builder::default()
     }
@@ -4223,8 +4282,10 @@ impl BuiltinSlotTypeMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BuiltinIntentMetadata {
     /// <p>A unique identifier for the built-in intent. To find the signature for an intent, see <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/standard-intents">Standard Built-in Intents</a> in the <i>Alexa Skills Kit</i>.</p>
+    #[doc(hidden)]
     pub signature: std::option::Option<std::string::String>,
     /// <p>A list of identifiers for the locales that the intent supports.</p>
+    #[doc(hidden)]
     pub supported_locales: std::option::Option<std::vec::Vec<crate::model::Locale>>,
 }
 impl BuiltinIntentMetadata {
@@ -4245,11 +4306,10 @@ impl std::fmt::Debug for BuiltinIntentMetadata {
         formatter.finish()
     }
 }
-/// See [`BuiltinIntentMetadata`](crate::model::BuiltinIntentMetadata)
+/// See [`BuiltinIntentMetadata`](crate::model::BuiltinIntentMetadata).
 pub mod builtin_intent_metadata {
 
-    /// A builder for [`BuiltinIntentMetadata`](crate::model::BuiltinIntentMetadata)
-    #[non_exhaustive]
+    /// A builder for [`BuiltinIntentMetadata`](crate::model::BuiltinIntentMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) signature: std::option::Option<std::string::String>,
@@ -4285,7 +4345,7 @@ pub mod builtin_intent_metadata {
             self.supported_locales = input;
             self
         }
-        /// Consumes the builder and constructs a [`BuiltinIntentMetadata`](crate::model::BuiltinIntentMetadata)
+        /// Consumes the builder and constructs a [`BuiltinIntentMetadata`](crate::model::BuiltinIntentMetadata).
         pub fn build(self) -> crate::model::BuiltinIntentMetadata {
             crate::model::BuiltinIntentMetadata {
                 signature: self.signature,
@@ -4295,7 +4355,7 @@ pub mod builtin_intent_metadata {
     }
 }
 impl BuiltinIntentMetadata {
-    /// Creates a new builder-style object to manufacture [`BuiltinIntentMetadata`](crate::model::BuiltinIntentMetadata)
+    /// Creates a new builder-style object to manufacture [`BuiltinIntentMetadata`](crate::model::BuiltinIntentMetadata).
     pub fn builder() -> crate::model::builtin_intent_metadata::Builder {
         crate::model::builtin_intent_metadata::Builder::default()
     }
@@ -4306,6 +4366,7 @@ impl BuiltinIntentMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BuiltinIntentSlot {
     /// <p>A list of the slots defined for the intent.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl BuiltinIntentSlot {
@@ -4321,11 +4382,10 @@ impl std::fmt::Debug for BuiltinIntentSlot {
         formatter.finish()
     }
 }
-/// See [`BuiltinIntentSlot`](crate::model::BuiltinIntentSlot)
+/// See [`BuiltinIntentSlot`](crate::model::BuiltinIntentSlot).
 pub mod builtin_intent_slot {
 
-    /// A builder for [`BuiltinIntentSlot`](crate::model::BuiltinIntentSlot)
-    #[non_exhaustive]
+    /// A builder for [`BuiltinIntentSlot`](crate::model::BuiltinIntentSlot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4341,14 +4401,14 @@ pub mod builtin_intent_slot {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`BuiltinIntentSlot`](crate::model::BuiltinIntentSlot)
+        /// Consumes the builder and constructs a [`BuiltinIntentSlot`](crate::model::BuiltinIntentSlot).
         pub fn build(self) -> crate::model::BuiltinIntentSlot {
             crate::model::BuiltinIntentSlot { name: self.name }
         }
     }
 }
 impl BuiltinIntentSlot {
-    /// Creates a new builder-style object to manufacture [`BuiltinIntentSlot`](crate::model::BuiltinIntentSlot)
+    /// Creates a new builder-style object to manufacture [`BuiltinIntentSlot`](crate::model::BuiltinIntentSlot).
     pub fn builder() -> crate::model::builtin_intent_slot::Builder {
         crate::model::builtin_intent_slot::Builder::default()
     }
@@ -4359,16 +4419,22 @@ impl BuiltinIntentSlot {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BotMetadata {
     /// <p>The name of the bot. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description of the bot.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The status of the bot.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
     /// <p>The date that the bot was updated. When you create a bot, the creation date and last updated date are the same. </p>
+    #[doc(hidden)]
     pub last_updated_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date that the bot was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The version of the bot. For a new bot, the version is always <code>$LATEST</code>.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl BotMetadata {
@@ -4409,11 +4475,10 @@ impl std::fmt::Debug for BotMetadata {
         formatter.finish()
     }
 }
-/// See [`BotMetadata`](crate::model::BotMetadata)
+/// See [`BotMetadata`](crate::model::BotMetadata).
 pub mod bot_metadata {
 
-    /// A builder for [`BotMetadata`](crate::model::BotMetadata)
-    #[non_exhaustive]
+    /// A builder for [`BotMetadata`](crate::model::BotMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4490,7 +4555,7 @@ pub mod bot_metadata {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`BotMetadata`](crate::model::BotMetadata)
+        /// Consumes the builder and constructs a [`BotMetadata`](crate::model::BotMetadata).
         pub fn build(self) -> crate::model::BotMetadata {
             crate::model::BotMetadata {
                 name: self.name,
@@ -4504,7 +4569,7 @@ pub mod bot_metadata {
     }
 }
 impl BotMetadata {
-    /// Creates a new builder-style object to manufacture [`BotMetadata`](crate::model::BotMetadata)
+    /// Creates a new builder-style object to manufacture [`BotMetadata`](crate::model::BotMetadata).
     pub fn builder() -> crate::model::bot_metadata::Builder {
         crate::model::bot_metadata::Builder::default()
     }
@@ -4515,20 +4580,27 @@ impl BotMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BotChannelAssociation {
     /// <p>The name of the association between the bot and the channel. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A text description of the association you are creating. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>An alias pointing to the specific version of the Amazon Lex bot to which this association is being made. </p>
+    #[doc(hidden)]
     pub bot_alias: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon Lex bot to which this association is being made. </p> <note>
     /// <p>Currently, Amazon Lex supports associations with Facebook and Slack, and Twilio.</p>
     /// </note>
+    #[doc(hidden)]
     pub bot_name: std::option::Option<std::string::String>,
     /// <p>The date that the association between the Amazon Lex bot and the channel was created. </p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the type of association by indicating the type of channel being established between the Amazon Lex bot and the external messaging platform.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ChannelType>,
     /// <p>Provides information necessary to communicate with the messaging platform. </p>
+    #[doc(hidden)]
     pub bot_configuration:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The status of the bot channel. </p>
@@ -4537,8 +4609,10 @@ pub struct BotChannelAssociation {
     /// <li> <p> <code>IN_PROGRESS</code> - Channel creation is in progress.</p> </li>
     /// <li> <p> <code>FAILED</code> - There was an error creating the channel. For information about the reason for the failure, see the <code>failureReason</code> field.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ChannelStatus>,
     /// <p>If <code>status</code> is <code>FAILED</code>, Amazon Lex provides the reason that it failed to create the association.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
 }
 impl BotChannelAssociation {
@@ -4604,11 +4678,10 @@ impl std::fmt::Debug for BotChannelAssociation {
         formatter.finish()
     }
 }
-/// See [`BotChannelAssociation`](crate::model::BotChannelAssociation)
+/// See [`BotChannelAssociation`](crate::model::BotChannelAssociation).
 pub mod bot_channel_association {
 
-    /// A builder for [`BotChannelAssociation`](crate::model::BotChannelAssociation)
-    #[non_exhaustive]
+    /// A builder for [`BotChannelAssociation`](crate::model::BotChannelAssociation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4752,7 +4825,7 @@ pub mod bot_channel_association {
             self.failure_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`BotChannelAssociation`](crate::model::BotChannelAssociation)
+        /// Consumes the builder and constructs a [`BotChannelAssociation`](crate::model::BotChannelAssociation).
         pub fn build(self) -> crate::model::BotChannelAssociation {
             crate::model::BotChannelAssociation {
                 name: self.name,
@@ -4769,7 +4842,7 @@ pub mod bot_channel_association {
     }
 }
 impl BotChannelAssociation {
-    /// Creates a new builder-style object to manufacture [`BotChannelAssociation`](crate::model::BotChannelAssociation)
+    /// Creates a new builder-style object to manufacture [`BotChannelAssociation`](crate::model::BotChannelAssociation).
     pub fn builder() -> crate::model::bot_channel_association::Builder {
         crate::model::bot_channel_association::Builder::default()
     }
@@ -4902,20 +4975,28 @@ impl AsRef<str> for ChannelType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BotAliasMetadata {
     /// <p>The name of the bot alias.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description of the bot alias.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The version of the Amazon Lex bot to which the alias points.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The name of the bot to which the alias points.</p>
+    #[doc(hidden)]
     pub bot_name: std::option::Option<std::string::String>,
     /// <p>The date that the bot alias was updated. When you create a resource, the creation date and last updated date are the same.</p>
+    #[doc(hidden)]
     pub last_updated_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date that the bot alias was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Checksum of the bot alias.</p>
+    #[doc(hidden)]
     pub checksum: std::option::Option<std::string::String>,
     /// <p>Settings that determine how Amazon Lex uses conversation logs for the alias.</p>
+    #[doc(hidden)]
     pub conversation_logs: std::option::Option<crate::model::ConversationLogsResponse>,
 }
 impl BotAliasMetadata {
@@ -4968,11 +5049,10 @@ impl std::fmt::Debug for BotAliasMetadata {
         formatter.finish()
     }
 }
-/// See [`BotAliasMetadata`](crate::model::BotAliasMetadata)
+/// See [`BotAliasMetadata`](crate::model::BotAliasMetadata).
 pub mod bot_alias_metadata {
 
-    /// A builder for [`BotAliasMetadata`](crate::model::BotAliasMetadata)
-    #[non_exhaustive]
+    /// A builder for [`BotAliasMetadata`](crate::model::BotAliasMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5074,7 +5154,7 @@ pub mod bot_alias_metadata {
             self.conversation_logs = input;
             self
         }
-        /// Consumes the builder and constructs a [`BotAliasMetadata`](crate::model::BotAliasMetadata)
+        /// Consumes the builder and constructs a [`BotAliasMetadata`](crate::model::BotAliasMetadata).
         pub fn build(self) -> crate::model::BotAliasMetadata {
             crate::model::BotAliasMetadata {
                 name: self.name,
@@ -5090,7 +5170,7 @@ pub mod bot_alias_metadata {
     }
 }
 impl BotAliasMetadata {
-    /// Creates a new builder-style object to manufacture [`BotAliasMetadata`](crate::model::BotAliasMetadata)
+    /// Creates a new builder-style object to manufacture [`BotAliasMetadata`](crate::model::BotAliasMetadata).
     pub fn builder() -> crate::model::bot_alias_metadata::Builder {
         crate::model::bot_alias_metadata::Builder::default()
     }
@@ -5101,8 +5181,10 @@ impl BotAliasMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceReference {
     /// <p>The name of the resource that is using the resource that you are trying to delete.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The version of the resource that is using the resource that you are trying to delete.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl ResourceReference {
@@ -5123,11 +5205,10 @@ impl std::fmt::Debug for ResourceReference {
         formatter.finish()
     }
 }
-/// See [`ResourceReference`](crate::model::ResourceReference)
+/// See [`ResourceReference`](crate::model::ResourceReference).
 pub mod resource_reference {
 
-    /// A builder for [`ResourceReference`](crate::model::ResourceReference)
-    #[non_exhaustive]
+    /// A builder for [`ResourceReference`](crate::model::ResourceReference).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5154,7 +5235,7 @@ pub mod resource_reference {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceReference`](crate::model::ResourceReference)
+        /// Consumes the builder and constructs a [`ResourceReference`](crate::model::ResourceReference).
         pub fn build(self) -> crate::model::ResourceReference {
             crate::model::ResourceReference {
                 name: self.name,
@@ -5164,7 +5245,7 @@ pub mod resource_reference {
     }
 }
 impl ResourceReference {
-    /// Creates a new builder-style object to manufacture [`ResourceReference`](crate::model::ResourceReference)
+    /// Creates a new builder-style object to manufacture [`ResourceReference`](crate::model::ResourceReference).
     pub fn builder() -> crate::model::resource_reference::Builder {
         crate::model::resource_reference::Builder::default()
     }

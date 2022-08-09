@@ -9,22 +9,21 @@ impl std::fmt::Debug for UpdateEventIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateEventIntegrationOutput`](crate::output::UpdateEventIntegrationOutput)
+/// See [`UpdateEventIntegrationOutput`](crate::output::UpdateEventIntegrationOutput).
 pub mod update_event_integration_output {
 
-    /// A builder for [`UpdateEventIntegrationOutput`](crate::output::UpdateEventIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateEventIntegrationOutput`](crate::output::UpdateEventIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateEventIntegrationOutput`](crate::output::UpdateEventIntegrationOutput)
+        /// Consumes the builder and constructs a [`UpdateEventIntegrationOutput`](crate::output::UpdateEventIntegrationOutput).
         pub fn build(self) -> crate::output::UpdateEventIntegrationOutput {
             crate::output::UpdateEventIntegrationOutput {}
         }
     }
 }
 impl UpdateEventIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateEventIntegrationOutput`](crate::output::UpdateEventIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateEventIntegrationOutput`](crate::output::UpdateEventIntegrationOutput).
     pub fn builder() -> crate::output::update_event_integration_output::Builder {
         crate::output::update_event_integration_output::Builder::default()
     }
@@ -40,22 +39,21 @@ impl std::fmt::Debug for UpdateDataIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDataIntegrationOutput`](crate::output::UpdateDataIntegrationOutput)
+/// See [`UpdateDataIntegrationOutput`](crate::output::UpdateDataIntegrationOutput).
 pub mod update_data_integration_output {
 
-    /// A builder for [`UpdateDataIntegrationOutput`](crate::output::UpdateDataIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateDataIntegrationOutput`](crate::output::UpdateDataIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateDataIntegrationOutput`](crate::output::UpdateDataIntegrationOutput)
+        /// Consumes the builder and constructs a [`UpdateDataIntegrationOutput`](crate::output::UpdateDataIntegrationOutput).
         pub fn build(self) -> crate::output::UpdateDataIntegrationOutput {
             crate::output::UpdateDataIntegrationOutput {}
         }
     }
 }
 impl UpdateDataIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDataIntegrationOutput`](crate::output::UpdateDataIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDataIntegrationOutput`](crate::output::UpdateDataIntegrationOutput).
     pub fn builder() -> crate::output::update_data_integration_output::Builder {
         crate::output::update_data_integration_output::Builder::default()
     }
@@ -71,22 +69,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -102,22 +99,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -128,6 +124,7 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>Information about the tags.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -147,11 +144,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -184,14 +180,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -202,8 +198,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListEventIntegrationsOutput {
     /// <p>The event integrations.</p>
+    #[doc(hidden)]
     pub event_integrations: std::option::Option<std::vec::Vec<crate::model::EventIntegration>>,
     /// <p>If there are additional results, this is the token for the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListEventIntegrationsOutput {
@@ -224,11 +222,10 @@ impl std::fmt::Debug for ListEventIntegrationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListEventIntegrationsOutput`](crate::output::ListEventIntegrationsOutput)
+/// See [`ListEventIntegrationsOutput`](crate::output::ListEventIntegrationsOutput).
 pub mod list_event_integrations_output {
 
-    /// A builder for [`ListEventIntegrationsOutput`](crate::output::ListEventIntegrationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListEventIntegrationsOutput`](crate::output::ListEventIntegrationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_integrations:
@@ -265,7 +262,7 @@ pub mod list_event_integrations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListEventIntegrationsOutput`](crate::output::ListEventIntegrationsOutput)
+        /// Consumes the builder and constructs a [`ListEventIntegrationsOutput`](crate::output::ListEventIntegrationsOutput).
         pub fn build(self) -> crate::output::ListEventIntegrationsOutput {
             crate::output::ListEventIntegrationsOutput {
                 event_integrations: self.event_integrations,
@@ -275,7 +272,7 @@ pub mod list_event_integrations_output {
     }
 }
 impl ListEventIntegrationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListEventIntegrationsOutput`](crate::output::ListEventIntegrationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListEventIntegrationsOutput`](crate::output::ListEventIntegrationsOutput).
     pub fn builder() -> crate::output::list_event_integrations_output::Builder {
         crate::output::list_event_integrations_output::Builder::default()
     }
@@ -286,9 +283,11 @@ impl ListEventIntegrationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListEventIntegrationAssociationsOutput {
     /// <p>The event integration associations.</p>
+    #[doc(hidden)]
     pub event_integration_associations:
         std::option::Option<std::vec::Vec<crate::model::EventIntegrationAssociation>>,
     /// <p>If there are additional results, this is the token for the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListEventIntegrationAssociationsOutput {
@@ -314,11 +313,10 @@ impl std::fmt::Debug for ListEventIntegrationAssociationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListEventIntegrationAssociationsOutput`](crate::output::ListEventIntegrationAssociationsOutput)
+/// See [`ListEventIntegrationAssociationsOutput`](crate::output::ListEventIntegrationAssociationsOutput).
 pub mod list_event_integration_associations_output {
 
-    /// A builder for [`ListEventIntegrationAssociationsOutput`](crate::output::ListEventIntegrationAssociationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListEventIntegrationAssociationsOutput`](crate::output::ListEventIntegrationAssociationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_integration_associations:
@@ -358,7 +356,7 @@ pub mod list_event_integration_associations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListEventIntegrationAssociationsOutput`](crate::output::ListEventIntegrationAssociationsOutput)
+        /// Consumes the builder and constructs a [`ListEventIntegrationAssociationsOutput`](crate::output::ListEventIntegrationAssociationsOutput).
         pub fn build(self) -> crate::output::ListEventIntegrationAssociationsOutput {
             crate::output::ListEventIntegrationAssociationsOutput {
                 event_integration_associations: self.event_integration_associations,
@@ -368,7 +366,7 @@ pub mod list_event_integration_associations_output {
     }
 }
 impl ListEventIntegrationAssociationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListEventIntegrationAssociationsOutput`](crate::output::ListEventIntegrationAssociationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListEventIntegrationAssociationsOutput`](crate::output::ListEventIntegrationAssociationsOutput).
     pub fn builder() -> crate::output::list_event_integration_associations_output::Builder {
         crate::output::list_event_integration_associations_output::Builder::default()
     }
@@ -379,8 +377,10 @@ impl ListEventIntegrationAssociationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDataIntegrationsOutput {
     /// <p>The DataIntegrations associated with this account.</p>
+    #[doc(hidden)]
     pub data_integrations: std::option::Option<std::vec::Vec<crate::model::DataIntegrationSummary>>,
     /// <p>If there are additional results, this is the token for the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListDataIntegrationsOutput {
@@ -403,11 +403,10 @@ impl std::fmt::Debug for ListDataIntegrationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDataIntegrationsOutput`](crate::output::ListDataIntegrationsOutput)
+/// See [`ListDataIntegrationsOutput`](crate::output::ListDataIntegrationsOutput).
 pub mod list_data_integrations_output {
 
-    /// A builder for [`ListDataIntegrationsOutput`](crate::output::ListDataIntegrationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListDataIntegrationsOutput`](crate::output::ListDataIntegrationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_integrations:
@@ -444,7 +443,7 @@ pub mod list_data_integrations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDataIntegrationsOutput`](crate::output::ListDataIntegrationsOutput)
+        /// Consumes the builder and constructs a [`ListDataIntegrationsOutput`](crate::output::ListDataIntegrationsOutput).
         pub fn build(self) -> crate::output::ListDataIntegrationsOutput {
             crate::output::ListDataIntegrationsOutput {
                 data_integrations: self.data_integrations,
@@ -454,7 +453,7 @@ pub mod list_data_integrations_output {
     }
 }
 impl ListDataIntegrationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDataIntegrationsOutput`](crate::output::ListDataIntegrationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDataIntegrationsOutput`](crate::output::ListDataIntegrationsOutput).
     pub fn builder() -> crate::output::list_data_integrations_output::Builder {
         crate::output::list_data_integrations_output::Builder::default()
     }
@@ -465,9 +464,11 @@ impl ListDataIntegrationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDataIntegrationAssociationsOutput {
     /// <p>The Amazon Resource Name (ARN) and unique ID of the DataIntegration association.</p>
+    #[doc(hidden)]
     pub data_integration_associations:
         std::option::Option<std::vec::Vec<crate::model::DataIntegrationAssociationSummary>>,
     /// <p>If there are additional results, this is the token for the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListDataIntegrationAssociationsOutput {
@@ -493,11 +494,10 @@ impl std::fmt::Debug for ListDataIntegrationAssociationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDataIntegrationAssociationsOutput`](crate::output::ListDataIntegrationAssociationsOutput)
+/// See [`ListDataIntegrationAssociationsOutput`](crate::output::ListDataIntegrationAssociationsOutput).
 pub mod list_data_integration_associations_output {
 
-    /// A builder for [`ListDataIntegrationAssociationsOutput`](crate::output::ListDataIntegrationAssociationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListDataIntegrationAssociationsOutput`](crate::output::ListDataIntegrationAssociationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_integration_associations:
@@ -539,7 +539,7 @@ pub mod list_data_integration_associations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDataIntegrationAssociationsOutput`](crate::output::ListDataIntegrationAssociationsOutput)
+        /// Consumes the builder and constructs a [`ListDataIntegrationAssociationsOutput`](crate::output::ListDataIntegrationAssociationsOutput).
         pub fn build(self) -> crate::output::ListDataIntegrationAssociationsOutput {
             crate::output::ListDataIntegrationAssociationsOutput {
                 data_integration_associations: self.data_integration_associations,
@@ -549,7 +549,7 @@ pub mod list_data_integration_associations_output {
     }
 }
 impl ListDataIntegrationAssociationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDataIntegrationAssociationsOutput`](crate::output::ListDataIntegrationAssociationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDataIntegrationAssociationsOutput`](crate::output::ListDataIntegrationAssociationsOutput).
     pub fn builder() -> crate::output::list_data_integration_associations_output::Builder {
         crate::output::list_data_integration_associations_output::Builder::default()
     }
@@ -560,16 +560,22 @@ impl ListDataIntegrationAssociationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetEventIntegrationOutput {
     /// <p>The name of the event integration. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the event integration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the event integration.</p>
+    #[doc(hidden)]
     pub event_integration_arn: std::option::Option<std::string::String>,
     /// <p>The EventBridge bus.</p>
+    #[doc(hidden)]
     pub event_bridge_bus: std::option::Option<std::string::String>,
     /// <p>The event filter.</p>
+    #[doc(hidden)]
     pub event_filter: std::option::Option<crate::model::EventFilter>,
     /// <p>One or more tags.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -614,11 +620,10 @@ impl std::fmt::Debug for GetEventIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`GetEventIntegrationOutput`](crate::output::GetEventIntegrationOutput)
+/// See [`GetEventIntegrationOutput`](crate::output::GetEventIntegrationOutput).
 pub mod get_event_integration_output {
 
-    /// A builder for [`GetEventIntegrationOutput`](crate::output::GetEventIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetEventIntegrationOutput`](crate::output::GetEventIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -715,7 +720,7 @@ pub mod get_event_integration_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetEventIntegrationOutput`](crate::output::GetEventIntegrationOutput)
+        /// Consumes the builder and constructs a [`GetEventIntegrationOutput`](crate::output::GetEventIntegrationOutput).
         pub fn build(self) -> crate::output::GetEventIntegrationOutput {
             crate::output::GetEventIntegrationOutput {
                 name: self.name,
@@ -729,7 +734,7 @@ pub mod get_event_integration_output {
     }
 }
 impl GetEventIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`GetEventIntegrationOutput`](crate::output::GetEventIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`GetEventIntegrationOutput`](crate::output::GetEventIntegrationOutput).
     pub fn builder() -> crate::output::get_event_integration_output::Builder {
         crate::output::get_event_integration_output::Builder::default()
     }
@@ -740,20 +745,28 @@ impl GetEventIntegrationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDataIntegrationOutput {
     /// <p>The Amazon Resource Name (ARN) for the DataIntegration.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>A unique identifier.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the DataIntegration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The KMS key for the DataIntegration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The KMS key for the DataIntegration.</p>
+    #[doc(hidden)]
     pub kms_key: std::option::Option<std::string::String>,
     /// <p>The URI of the data source.</p>
+    #[doc(hidden)]
     pub source_uri: std::option::Option<std::string::String>,
     /// <p>The name of the data and how often it should be pulled from the source.</p>
+    #[doc(hidden)]
     pub schedule_configuration: std::option::Option<crate::model::ScheduleConfiguration>,
     /// <p>One or more tags.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -810,11 +823,10 @@ impl std::fmt::Debug for GetDataIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`GetDataIntegrationOutput`](crate::output::GetDataIntegrationOutput)
+/// See [`GetDataIntegrationOutput`](crate::output::GetDataIntegrationOutput).
 pub mod get_data_integration_output {
 
-    /// A builder for [`GetDataIntegrationOutput`](crate::output::GetDataIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDataIntegrationOutput`](crate::output::GetDataIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -930,7 +942,7 @@ pub mod get_data_integration_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDataIntegrationOutput`](crate::output::GetDataIntegrationOutput)
+        /// Consumes the builder and constructs a [`GetDataIntegrationOutput`](crate::output::GetDataIntegrationOutput).
         pub fn build(self) -> crate::output::GetDataIntegrationOutput {
             crate::output::GetDataIntegrationOutput {
                 arn: self.arn,
@@ -946,7 +958,7 @@ pub mod get_data_integration_output {
     }
 }
 impl GetDataIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`GetDataIntegrationOutput`](crate::output::GetDataIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`GetDataIntegrationOutput`](crate::output::GetDataIntegrationOutput).
     pub fn builder() -> crate::output::get_data_integration_output::Builder {
         crate::output::get_data_integration_output::Builder::default()
     }
@@ -962,22 +974,21 @@ impl std::fmt::Debug for DeleteEventIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteEventIntegrationOutput`](crate::output::DeleteEventIntegrationOutput)
+/// See [`DeleteEventIntegrationOutput`](crate::output::DeleteEventIntegrationOutput).
 pub mod delete_event_integration_output {
 
-    /// A builder for [`DeleteEventIntegrationOutput`](crate::output::DeleteEventIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteEventIntegrationOutput`](crate::output::DeleteEventIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteEventIntegrationOutput`](crate::output::DeleteEventIntegrationOutput)
+        /// Consumes the builder and constructs a [`DeleteEventIntegrationOutput`](crate::output::DeleteEventIntegrationOutput).
         pub fn build(self) -> crate::output::DeleteEventIntegrationOutput {
             crate::output::DeleteEventIntegrationOutput {}
         }
     }
 }
 impl DeleteEventIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteEventIntegrationOutput`](crate::output::DeleteEventIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteEventIntegrationOutput`](crate::output::DeleteEventIntegrationOutput).
     pub fn builder() -> crate::output::delete_event_integration_output::Builder {
         crate::output::delete_event_integration_output::Builder::default()
     }
@@ -993,22 +1004,21 @@ impl std::fmt::Debug for DeleteDataIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDataIntegrationOutput`](crate::output::DeleteDataIntegrationOutput)
+/// See [`DeleteDataIntegrationOutput`](crate::output::DeleteDataIntegrationOutput).
 pub mod delete_data_integration_output {
 
-    /// A builder for [`DeleteDataIntegrationOutput`](crate::output::DeleteDataIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDataIntegrationOutput`](crate::output::DeleteDataIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteDataIntegrationOutput`](crate::output::DeleteDataIntegrationOutput)
+        /// Consumes the builder and constructs a [`DeleteDataIntegrationOutput`](crate::output::DeleteDataIntegrationOutput).
         pub fn build(self) -> crate::output::DeleteDataIntegrationOutput {
             crate::output::DeleteDataIntegrationOutput {}
         }
     }
 }
 impl DeleteDataIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDataIntegrationOutput`](crate::output::DeleteDataIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDataIntegrationOutput`](crate::output::DeleteDataIntegrationOutput).
     pub fn builder() -> crate::output::delete_data_integration_output::Builder {
         crate::output::delete_data_integration_output::Builder::default()
     }
@@ -1019,6 +1029,7 @@ impl DeleteDataIntegrationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateEventIntegrationOutput {
     /// <p>The Amazon Resource Name (ARN) of the event integration. </p>
+    #[doc(hidden)]
     pub event_integration_arn: std::option::Option<std::string::String>,
 }
 impl CreateEventIntegrationOutput {
@@ -1034,11 +1045,10 @@ impl std::fmt::Debug for CreateEventIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateEventIntegrationOutput`](crate::output::CreateEventIntegrationOutput)
+/// See [`CreateEventIntegrationOutput`](crate::output::CreateEventIntegrationOutput).
 pub mod create_event_integration_output {
 
-    /// A builder for [`CreateEventIntegrationOutput`](crate::output::CreateEventIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateEventIntegrationOutput`](crate::output::CreateEventIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_integration_arn: std::option::Option<std::string::String>,
@@ -1057,7 +1067,7 @@ pub mod create_event_integration_output {
             self.event_integration_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateEventIntegrationOutput`](crate::output::CreateEventIntegrationOutput)
+        /// Consumes the builder and constructs a [`CreateEventIntegrationOutput`](crate::output::CreateEventIntegrationOutput).
         pub fn build(self) -> crate::output::CreateEventIntegrationOutput {
             crate::output::CreateEventIntegrationOutput {
                 event_integration_arn: self.event_integration_arn,
@@ -1066,7 +1076,7 @@ pub mod create_event_integration_output {
     }
 }
 impl CreateEventIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateEventIntegrationOutput`](crate::output::CreateEventIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateEventIntegrationOutput`](crate::output::CreateEventIntegrationOutput).
     pub fn builder() -> crate::output::create_event_integration_output::Builder {
         crate::output::create_event_integration_output::Builder::default()
     }
@@ -1077,23 +1087,32 @@ impl CreateEventIntegrationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDataIntegrationOutput {
     /// <p>The Amazon Resource Name (ARN)</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>A unique identifier.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the DataIntegration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description of the DataIntegration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The KMS key for the DataIntegration.</p>
+    #[doc(hidden)]
     pub kms_key: std::option::Option<std::string::String>,
     /// <p>The URI of the data source.</p>
+    #[doc(hidden)]
     pub source_uri: std::option::Option<std::string::String>,
     /// <p>The name of the data and how often it should be pulled from the source.</p>
+    #[doc(hidden)]
     pub schedule_configuration: std::option::Option<crate::model::ScheduleConfiguration>,
     /// <p>One or more tags.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the request.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
 }
 impl CreateDataIntegrationOutput {
@@ -1154,11 +1173,10 @@ impl std::fmt::Debug for CreateDataIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDataIntegrationOutput`](crate::output::CreateDataIntegrationOutput)
+/// See [`CreateDataIntegrationOutput`](crate::output::CreateDataIntegrationOutput).
 pub mod create_data_integration_output {
 
-    /// A builder for [`CreateDataIntegrationOutput`](crate::output::CreateDataIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDataIntegrationOutput`](crate::output::CreateDataIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1285,7 +1303,7 @@ pub mod create_data_integration_output {
             self.client_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDataIntegrationOutput`](crate::output::CreateDataIntegrationOutput)
+        /// Consumes the builder and constructs a [`CreateDataIntegrationOutput`](crate::output::CreateDataIntegrationOutput).
         pub fn build(self) -> crate::output::CreateDataIntegrationOutput {
             crate::output::CreateDataIntegrationOutput {
                 arn: self.arn,
@@ -1302,7 +1320,7 @@ pub mod create_data_integration_output {
     }
 }
 impl CreateDataIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDataIntegrationOutput`](crate::output::CreateDataIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDataIntegrationOutput`](crate::output::CreateDataIntegrationOutput).
     pub fn builder() -> crate::output::create_data_integration_output::Builder {
         crate::output::create_data_integration_output::Builder::default()
     }

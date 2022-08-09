@@ -82,6 +82,7 @@ The AWS SDK for Rust contains one crate for each AWS service, as well as [aws-co
 | AWS Lake Formation | [aws-sdk-lakeformation](https://crates.io/crates/aws-sdk-lakeformation) ([docs](https://docs.rs/aws-sdk-lakeformation)) |
 | AWS Lambda | [aws-sdk-lambda](https://crates.io/crates/aws-sdk-lambda) ([docs](https://docs.rs/aws-sdk-lambda)) ([examples](https://github.com/awslabs/aws-sdk-rust/tree/main/examples/lambda)) |
 | AWS License Manager | [aws-sdk-licensemanager](https://crates.io/crates/aws-sdk-licensemanager) ([docs](https://docs.rs/aws-sdk-licensemanager)) |
+| AWS License Manager User Subscriptions | [aws-sdk-licensemanagerusersubscriptions](https://crates.io/crates/aws-sdk-licensemanagerusersubscriptions) ([docs](https://docs.rs/aws-sdk-licensemanagerusersubscriptions)) |
 | AWS Marketplace Catalog Service | [aws-sdk-marketplacecatalog](https://crates.io/crates/aws-sdk-marketplacecatalog) ([docs](https://docs.rs/aws-sdk-marketplacecatalog)) |
 | AWS Marketplace Commerce Analytics | [aws-sdk-marketplacecommerceanalytics](https://crates.io/crates/aws-sdk-marketplacecommerceanalytics) ([docs](https://docs.rs/aws-sdk-marketplacecommerceanalytics)) |
 | AWS Marketplace Entitlement Service | [aws-sdk-marketplaceentitlement](https://crates.io/crates/aws-sdk-marketplaceentitlement) ([docs](https://docs.rs/aws-sdk-marketplaceentitlement)) |
@@ -300,6 +301,7 @@ The AWS SDK for Rust contains one crate for each AWS service, as well as [aws-co
 | FinSpace User Environment Management service | [aws-sdk-finspace](https://crates.io/crates/aws-sdk-finspace) ([docs](https://docs.rs/aws-sdk-finspace)) |
 | Firewall Management Service | [aws-sdk-fms](https://crates.io/crates/aws-sdk-fms) ([docs](https://docs.rs/aws-sdk-fms)) |
 | GameSparks | [aws-sdk-gamesparks](https://crates.io/crates/aws-sdk-gamesparks) ([docs](https://docs.rs/aws-sdk-gamesparks)) |
+| IAM Roles Anywhere | [aws-sdk-rolesanywhere](https://crates.io/crates/aws-sdk-rolesanywhere) ([docs](https://docs.rs/aws-sdk-rolesanywhere)) |
 | Inspector2 | [aws-sdk-inspector2](https://crates.io/crates/aws-sdk-inspector2) ([docs](https://docs.rs/aws-sdk-inspector2)) |
 | Managed Streaming for Kafka | [aws-sdk-kafka](https://crates.io/crates/aws-sdk-kafka) ([docs](https://docs.rs/aws-sdk-kafka)) |
 | Managed Streaming for Kafka Connect | [aws-sdk-kafkaconnect](https://crates.io/crates/aws-sdk-kafkaconnect) ([docs](https://docs.rs/aws-sdk-kafkaconnect)) |

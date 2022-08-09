@@ -5,27 +5,38 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KnowledgeBaseData {
     /// <p>The identifier of the knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_arn: std::option::Option<std::string::String>,
     /// <p>The name of the knowledge base.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_type: std::option::Option<crate::model::KnowledgeBaseType>,
     /// <p>The status of the knowledge base.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::KnowledgeBaseStatus>,
     /// <p>An epoch timestamp indicating the most recent content modification inside the knowledge base. If no content exists in a knowledge base, this value is unset.</p>
+    #[doc(hidden)]
     pub last_content_modification_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Source configuration information about the knowledge base.</p>
+    #[doc(hidden)]
     pub source_configuration: std::option::Option<crate::model::SourceConfiguration>,
     /// <p>Information about how to render the content.</p>
+    #[doc(hidden)]
     pub rendering_configuration: std::option::Option<crate::model::RenderingConfiguration>,
     /// <p>The KMS key used for encryption.</p>
+    #[doc(hidden)]
     pub server_side_encryption_configuration:
         std::option::Option<crate::model::ServerSideEncryptionConfiguration>,
     /// <p>The description.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -107,11 +118,10 @@ impl std::fmt::Debug for KnowledgeBaseData {
         formatter.finish()
     }
 }
-/// See [`KnowledgeBaseData`](crate::model::KnowledgeBaseData)
+/// See [`KnowledgeBaseData`](crate::model::KnowledgeBaseData).
 pub mod knowledge_base_data {
 
-    /// A builder for [`KnowledgeBaseData`](crate::model::KnowledgeBaseData)
-    #[non_exhaustive]
+    /// A builder for [`KnowledgeBaseData`](crate::model::KnowledgeBaseData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) knowledge_base_id: std::option::Option<std::string::String>,
@@ -286,7 +296,7 @@ pub mod knowledge_base_data {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`KnowledgeBaseData`](crate::model::KnowledgeBaseData)
+        /// Consumes the builder and constructs a [`KnowledgeBaseData`](crate::model::KnowledgeBaseData).
         pub fn build(self) -> crate::model::KnowledgeBaseData {
             crate::model::KnowledgeBaseData {
                 knowledge_base_id: self.knowledge_base_id,
@@ -305,7 +315,7 @@ pub mod knowledge_base_data {
     }
 }
 impl KnowledgeBaseData {
-    /// Creates a new builder-style object to manufacture [`KnowledgeBaseData`](crate::model::KnowledgeBaseData)
+    /// Creates a new builder-style object to manufacture [`KnowledgeBaseData`](crate::model::KnowledgeBaseData).
     pub fn builder() -> crate::model::knowledge_base_data::Builder {
         crate::model::knowledge_base_data::Builder::default()
     }
@@ -316,6 +326,7 @@ impl KnowledgeBaseData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerSideEncryptionConfiguration {
     /// <p>The KMS key. For information about valid ID values, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers (KeyId)</a>.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
 }
 impl ServerSideEncryptionConfiguration {
@@ -331,11 +342,10 @@ impl std::fmt::Debug for ServerSideEncryptionConfiguration {
         formatter.finish()
     }
 }
-/// See [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration)
+/// See [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration).
 pub mod server_side_encryption_configuration {
 
-    /// A builder for [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) kms_key_id: std::option::Option<std::string::String>,
@@ -351,7 +361,7 @@ pub mod server_side_encryption_configuration {
             self.kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration)
+        /// Consumes the builder and constructs a [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration).
         pub fn build(self) -> crate::model::ServerSideEncryptionConfiguration {
             crate::model::ServerSideEncryptionConfiguration {
                 kms_key_id: self.kms_key_id,
@@ -360,7 +370,7 @@ pub mod server_side_encryption_configuration {
     }
 }
 impl ServerSideEncryptionConfiguration {
-    /// Creates a new builder-style object to manufacture [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration)
+    /// Creates a new builder-style object to manufacture [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration).
     pub fn builder() -> crate::model::server_side_encryption_configuration::Builder {
         crate::model::server_side_encryption_configuration::Builder::default()
     }
@@ -376,6 +386,7 @@ pub struct RenderingConfiguration {
     /// <li> <p>ServiceNow: <code>number</code>, <code>short_description</code>, <code>sys_mod_count</code>, <code>workflow_state</code>, or <code>active</code> </p> </li>
     /// </ul>
     /// <p>The variable is replaced with the actual value for a piece of content when calling <a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_GetContent.html">GetContent</a>. </p>
+    #[doc(hidden)]
     pub template_uri: std::option::Option<std::string::String>,
 }
 impl RenderingConfiguration {
@@ -396,11 +407,10 @@ impl std::fmt::Debug for RenderingConfiguration {
         formatter.finish()
     }
 }
-/// See [`RenderingConfiguration`](crate::model::RenderingConfiguration)
+/// See [`RenderingConfiguration`](crate::model::RenderingConfiguration).
 pub mod rendering_configuration {
 
-    /// A builder for [`RenderingConfiguration`](crate::model::RenderingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`RenderingConfiguration`](crate::model::RenderingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_uri: std::option::Option<std::string::String>,
@@ -426,7 +436,7 @@ pub mod rendering_configuration {
             self.template_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`RenderingConfiguration`](crate::model::RenderingConfiguration)
+        /// Consumes the builder and constructs a [`RenderingConfiguration`](crate::model::RenderingConfiguration).
         pub fn build(self) -> crate::model::RenderingConfiguration {
             crate::model::RenderingConfiguration {
                 template_uri: self.template_uri,
@@ -435,7 +445,7 @@ pub mod rendering_configuration {
     }
 }
 impl RenderingConfiguration {
-    /// Creates a new builder-style object to manufacture [`RenderingConfiguration`](crate::model::RenderingConfiguration)
+    /// Creates a new builder-style object to manufacture [`RenderingConfiguration`](crate::model::RenderingConfiguration).
     pub fn builder() -> crate::model::rendering_configuration::Builder {
         crate::model::rendering_configuration::Builder::default()
     }
@@ -485,6 +495,7 @@ impl SourceConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppIntegrationsConfiguration {
     /// <p>The Amazon Resource Name (ARN) of the AppIntegrations DataIntegration to use for ingesting content.</p>
+    #[doc(hidden)]
     pub app_integration_arn: std::option::Option<std::string::String>,
     /// <p>The fields from the source that are made available to your agents in Wisdom. </p>
     /// <ul>
@@ -492,6 +503,7 @@ pub struct AppIntegrationsConfiguration {
     /// <li> <p>For <a href="https://developer.servicenow.com/dev.do#!/reference/api/rome/rest/knowledge-management-api"> ServiceNow</a>, you must include at least <code>number</code>, <code>short_description</code>, <code>sys_mod_count</code>, <code>workflow_state</code>, and <code>active</code>. </p> </li>
     /// </ul>
     /// <p>Make sure to include additional fields. These fields are indexed and used to source recommendations. </p>
+    #[doc(hidden)]
     pub object_fields: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AppIntegrationsConfiguration {
@@ -517,11 +529,10 @@ impl std::fmt::Debug for AppIntegrationsConfiguration {
         formatter.finish()
     }
 }
-/// See [`AppIntegrationsConfiguration`](crate::model::AppIntegrationsConfiguration)
+/// See [`AppIntegrationsConfiguration`](crate::model::AppIntegrationsConfiguration).
 pub mod app_integrations_configuration {
 
-    /// A builder for [`AppIntegrationsConfiguration`](crate::model::AppIntegrationsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AppIntegrationsConfiguration`](crate::model::AppIntegrationsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_integration_arn: std::option::Option<std::string::String>,
@@ -570,7 +581,7 @@ pub mod app_integrations_configuration {
             self.object_fields = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppIntegrationsConfiguration`](crate::model::AppIntegrationsConfiguration)
+        /// Consumes the builder and constructs a [`AppIntegrationsConfiguration`](crate::model::AppIntegrationsConfiguration).
         pub fn build(self) -> crate::model::AppIntegrationsConfiguration {
             crate::model::AppIntegrationsConfiguration {
                 app_integration_arn: self.app_integration_arn,
@@ -580,7 +591,7 @@ pub mod app_integrations_configuration {
     }
 }
 impl AppIntegrationsConfiguration {
-    /// Creates a new builder-style object to manufacture [`AppIntegrationsConfiguration`](crate::model::AppIntegrationsConfiguration)
+    /// Creates a new builder-style object to manufacture [`AppIntegrationsConfiguration`](crate::model::AppIntegrationsConfiguration).
     pub fn builder() -> crate::model::app_integrations_configuration::Builder {
         crate::model::app_integrations_configuration::Builder::default()
     }
@@ -724,27 +735,38 @@ impl AsRef<str> for KnowledgeBaseType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContentSummary {
     /// <p>The Amazon Resource Name (ARN) of the content.</p>
+    #[doc(hidden)]
     pub content_arn: std::option::Option<std::string::String>,
     /// <p>The identifier of the content.</p>
+    #[doc(hidden)]
     pub content_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_arn: std::option::Option<std::string::String>,
     /// <p>The identifier of the knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_id: std::option::Option<std::string::String>,
     /// <p>The name of the content.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The identifier of the revision of the content.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
     /// <p>The title of the content.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p>The media type of the content.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The status of the content.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ContentStatus>,
     /// <p>A key/value map to store attributes without affecting tagging or recommendations. For example, when synchronizing data between an external system and Wisdom, you can store an external version identifier as metadata to utilize for determining drift.</p>
+    #[doc(hidden)]
     pub metadata:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -817,11 +839,10 @@ impl std::fmt::Debug for ContentSummary {
         formatter.finish()
     }
 }
-/// See [`ContentSummary`](crate::model::ContentSummary)
+/// See [`ContentSummary`](crate::model::ContentSummary).
 pub mod content_summary {
 
-    /// A builder for [`ContentSummary`](crate::model::ContentSummary)
-    #[non_exhaustive]
+    /// A builder for [`ContentSummary`](crate::model::ContentSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_arn: std::option::Option<std::string::String>,
@@ -990,7 +1011,7 @@ pub mod content_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContentSummary`](crate::model::ContentSummary)
+        /// Consumes the builder and constructs a [`ContentSummary`](crate::model::ContentSummary).
         pub fn build(self) -> crate::model::ContentSummary {
             crate::model::ContentSummary {
                 content_arn: self.content_arn,
@@ -1009,7 +1030,7 @@ pub mod content_summary {
     }
 }
 impl ContentSummary {
-    /// Creates a new builder-style object to manufacture [`ContentSummary`](crate::model::ContentSummary)
+    /// Creates a new builder-style object to manufacture [`ContentSummary`](crate::model::ContentSummary).
     pub fn builder() -> crate::model::content_summary::Builder {
         crate::model::content_summary::Builder::default()
     }
@@ -1103,6 +1124,7 @@ impl AsRef<str> for ContentStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchExpression {
     /// <p>The search expression filters.</p>
+    #[doc(hidden)]
     pub filters: std::option::Option<std::vec::Vec<crate::model::Filter>>,
 }
 impl SearchExpression {
@@ -1118,11 +1140,10 @@ impl std::fmt::Debug for SearchExpression {
         formatter.finish()
     }
 }
-/// See [`SearchExpression`](crate::model::SearchExpression)
+/// See [`SearchExpression`](crate::model::SearchExpression).
 pub mod search_expression {
 
-    /// A builder for [`SearchExpression`](crate::model::SearchExpression)
-    #[non_exhaustive]
+    /// A builder for [`SearchExpression`](crate::model::SearchExpression).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) filters: std::option::Option<std::vec::Vec<crate::model::Filter>>,
@@ -1147,7 +1168,7 @@ pub mod search_expression {
             self.filters = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchExpression`](crate::model::SearchExpression)
+        /// Consumes the builder and constructs a [`SearchExpression`](crate::model::SearchExpression).
         pub fn build(self) -> crate::model::SearchExpression {
             crate::model::SearchExpression {
                 filters: self.filters,
@@ -1156,7 +1177,7 @@ pub mod search_expression {
     }
 }
 impl SearchExpression {
-    /// Creates a new builder-style object to manufacture [`SearchExpression`](crate::model::SearchExpression)
+    /// Creates a new builder-style object to manufacture [`SearchExpression`](crate::model::SearchExpression).
     pub fn builder() -> crate::model::search_expression::Builder {
         crate::model::search_expression::Builder::default()
     }
@@ -1167,10 +1188,13 @@ impl SearchExpression {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
     /// <p>The field on which to filter.</p>
+    #[doc(hidden)]
     pub field: std::option::Option<crate::model::FilterField>,
     /// <p>The operator to use for comparing the field’s value with the provided value.</p>
+    #[doc(hidden)]
     pub operator: std::option::Option<crate::model::FilterOperator>,
     /// <p>The desired field value on which to filter.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Filter {
@@ -1196,11 +1220,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field: std::option::Option<crate::model::FilterField>,
@@ -1241,7 +1264,7 @@ pub mod filter {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 field: self.field,
@@ -1252,7 +1275,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -1365,25 +1388,35 @@ impl AsRef<str> for FilterField {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KnowledgeBaseSummary {
     /// <p>The identifier of the knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_arn: std::option::Option<std::string::String>,
     /// <p>The name of the knowledge base.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_type: std::option::Option<crate::model::KnowledgeBaseType>,
     /// <p>The status of the knowledge base summary.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::KnowledgeBaseStatus>,
     /// <p>Configuration information about the external data source.</p>
+    #[doc(hidden)]
     pub source_configuration: std::option::Option<crate::model::SourceConfiguration>,
     /// <p>Information about how to render the content.</p>
+    #[doc(hidden)]
     pub rendering_configuration: std::option::Option<crate::model::RenderingConfiguration>,
     /// <p>The KMS key used for encryption.</p>
+    #[doc(hidden)]
     pub server_side_encryption_configuration:
         std::option::Option<crate::model::ServerSideEncryptionConfiguration>,
     /// <p>The description of the knowledge base.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1455,11 +1488,10 @@ impl std::fmt::Debug for KnowledgeBaseSummary {
         formatter.finish()
     }
 }
-/// See [`KnowledgeBaseSummary`](crate::model::KnowledgeBaseSummary)
+/// See [`KnowledgeBaseSummary`](crate::model::KnowledgeBaseSummary).
 pub mod knowledge_base_summary {
 
-    /// A builder for [`KnowledgeBaseSummary`](crate::model::KnowledgeBaseSummary)
-    #[non_exhaustive]
+    /// A builder for [`KnowledgeBaseSummary`](crate::model::KnowledgeBaseSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) knowledge_base_id: std::option::Option<std::string::String>,
@@ -1620,7 +1652,7 @@ pub mod knowledge_base_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`KnowledgeBaseSummary`](crate::model::KnowledgeBaseSummary)
+        /// Consumes the builder and constructs a [`KnowledgeBaseSummary`](crate::model::KnowledgeBaseSummary).
         pub fn build(self) -> crate::model::KnowledgeBaseSummary {
             crate::model::KnowledgeBaseSummary {
                 knowledge_base_id: self.knowledge_base_id,
@@ -1638,7 +1670,7 @@ pub mod knowledge_base_summary {
     }
 }
 impl KnowledgeBaseSummary {
-    /// Creates a new builder-style object to manufacture [`KnowledgeBaseSummary`](crate::model::KnowledgeBaseSummary)
+    /// Creates a new builder-style object to manufacture [`KnowledgeBaseSummary`](crate::model::KnowledgeBaseSummary).
     pub fn builder() -> crate::model::knowledge_base_summary::Builder {
         crate::model::knowledge_base_summary::Builder::default()
     }
@@ -1649,34 +1681,48 @@ impl KnowledgeBaseSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContentData {
     /// <p>The Amazon Resource Name (ARN) of the content.</p>
+    #[doc(hidden)]
     pub content_arn: std::option::Option<std::string::String>,
     /// <p>The identifier of the content.</p>
+    #[doc(hidden)]
     pub content_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_arn: std::option::Option<std::string::String>,
     /// <p>The identifier of the knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_id: std::option::Option<std::string::String>,
     /// <p>The name of the content.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The identifier of the content revision.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
     /// <p>The title of the content.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p>The media type of the content.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The status of the content.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ContentStatus>,
     /// <p>A key/value map to store attributes without affecting tagging or recommendations. For example, when synchronizing data between an external system and Wisdom, you can store an external version identifier as metadata to utilize for determining drift.</p>
+    #[doc(hidden)]
     pub metadata:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The URI of the content.</p>
+    #[doc(hidden)]
     pub link_out_uri: std::option::Option<std::string::String>,
     /// <p>The URL of the content.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// <p>The expiration time of the URL as an epoch timestamp.</p>
+    #[doc(hidden)]
     pub url_expiry: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ContentData {
@@ -1763,11 +1809,10 @@ impl std::fmt::Debug for ContentData {
         formatter.finish()
     }
 }
-/// See [`ContentData`](crate::model::ContentData)
+/// See [`ContentData`](crate::model::ContentData).
 pub mod content_data {
 
-    /// A builder for [`ContentData`](crate::model::ContentData)
-    #[non_exhaustive]
+    /// A builder for [`ContentData`](crate::model::ContentData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_arn: std::option::Option<std::string::String>,
@@ -1972,7 +2017,7 @@ pub mod content_data {
             self.url_expiry = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContentData`](crate::model::ContentData)
+        /// Consumes the builder and constructs a [`ContentData`](crate::model::ContentData).
         pub fn build(self) -> crate::model::ContentData {
             crate::model::ContentData {
                 content_arn: self.content_arn,
@@ -1994,7 +2039,7 @@ pub mod content_data {
     }
 }
 impl ContentData {
-    /// Creates a new builder-style object to manufacture [`ContentData`](crate::model::ContentData)
+    /// Creates a new builder-style object to manufacture [`ContentData`](crate::model::ContentData).
     pub fn builder() -> crate::model::content_data::Builder {
         crate::model::content_data::Builder::default()
     }
@@ -2005,12 +2050,16 @@ impl ContentData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SessionSummary {
     /// <p>The identifier of the session.</p>
+    #[doc(hidden)]
     pub session_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the session.</p>
+    #[doc(hidden)]
     pub session_arn: std::option::Option<std::string::String>,
     /// <p>The identifier of the Wisdom assistant.</p>
+    #[doc(hidden)]
     pub assistant_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Wisdom assistant.</p>
+    #[doc(hidden)]
     pub assistant_arn: std::option::Option<std::string::String>,
 }
 impl SessionSummary {
@@ -2041,11 +2090,10 @@ impl std::fmt::Debug for SessionSummary {
         formatter.finish()
     }
 }
-/// See [`SessionSummary`](crate::model::SessionSummary)
+/// See [`SessionSummary`](crate::model::SessionSummary).
 pub mod session_summary {
 
-    /// A builder for [`SessionSummary`](crate::model::SessionSummary)
-    #[non_exhaustive]
+    /// A builder for [`SessionSummary`](crate::model::SessionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) session_id: std::option::Option<std::string::String>,
@@ -2097,7 +2145,7 @@ pub mod session_summary {
             self.assistant_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`SessionSummary`](crate::model::SessionSummary)
+        /// Consumes the builder and constructs a [`SessionSummary`](crate::model::SessionSummary).
         pub fn build(self) -> crate::model::SessionSummary {
             crate::model::SessionSummary {
                 session_id: self.session_id,
@@ -2109,7 +2157,7 @@ pub mod session_summary {
     }
 }
 impl SessionSummary {
-    /// Creates a new builder-style object to manufacture [`SessionSummary`](crate::model::SessionSummary)
+    /// Creates a new builder-style object to manufacture [`SessionSummary`](crate::model::SessionSummary).
     pub fn builder() -> crate::model::session_summary::Builder {
         crate::model::session_summary::Builder::default()
     }
@@ -2120,10 +2168,13 @@ impl SessionSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResultData {
     /// <p>The identifier of the result data.</p>
+    #[doc(hidden)]
     pub result_id: std::option::Option<std::string::String>,
     /// <p>The document.</p>
+    #[doc(hidden)]
     pub document: std::option::Option<crate::model::Document>,
     /// <p>The relevance score of the results.</p>
+    #[doc(hidden)]
     pub relevance_score: f64,
 }
 impl ResultData {
@@ -2149,11 +2200,10 @@ impl std::fmt::Debug for ResultData {
         formatter.finish()
     }
 }
-/// See [`ResultData`](crate::model::ResultData)
+/// See [`ResultData`](crate::model::ResultData).
 pub mod result_data {
 
-    /// A builder for [`ResultData`](crate::model::ResultData)
-    #[non_exhaustive]
+    /// A builder for [`ResultData`](crate::model::ResultData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) result_id: std::option::Option<std::string::String>,
@@ -2191,7 +2241,7 @@ pub mod result_data {
             self.relevance_score = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultData`](crate::model::ResultData)
+        /// Consumes the builder and constructs a [`ResultData`](crate::model::ResultData).
         pub fn build(self) -> crate::model::ResultData {
             crate::model::ResultData {
                 result_id: self.result_id,
@@ -2202,7 +2252,7 @@ pub mod result_data {
     }
 }
 impl ResultData {
-    /// Creates a new builder-style object to manufacture [`ResultData`](crate::model::ResultData)
+    /// Creates a new builder-style object to manufacture [`ResultData`](crate::model::ResultData).
     pub fn builder() -> crate::model::result_data::Builder {
         crate::model::result_data::Builder::default()
     }
@@ -2213,10 +2263,13 @@ impl ResultData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Document {
     /// <p>A reference to the content resource.</p>
+    #[doc(hidden)]
     pub content_reference: std::option::Option<crate::model::ContentReference>,
     /// <p>The title of the document.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<crate::model::DocumentText>,
     /// <p>The excerpt from the document.</p>
+    #[doc(hidden)]
     pub excerpt: std::option::Option<crate::model::DocumentText>,
 }
 impl Document {
@@ -2242,11 +2295,10 @@ impl std::fmt::Debug for Document {
         formatter.finish()
     }
 }
-/// See [`Document`](crate::model::Document)
+/// See [`Document`](crate::model::Document).
 pub mod document {
 
-    /// A builder for [`Document`](crate::model::Document)
-    #[non_exhaustive]
+    /// A builder for [`Document`](crate::model::Document).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_reference: std::option::Option<crate::model::ContentReference>,
@@ -2290,7 +2342,7 @@ pub mod document {
             self.excerpt = input;
             self
         }
-        /// Consumes the builder and constructs a [`Document`](crate::model::Document)
+        /// Consumes the builder and constructs a [`Document`](crate::model::Document).
         pub fn build(self) -> crate::model::Document {
             crate::model::Document {
                 content_reference: self.content_reference,
@@ -2301,7 +2353,7 @@ pub mod document {
     }
 }
 impl Document {
-    /// Creates a new builder-style object to manufacture [`Document`](crate::model::Document)
+    /// Creates a new builder-style object to manufacture [`Document`](crate::model::Document).
     pub fn builder() -> crate::model::document::Builder {
         crate::model::document::Builder::default()
     }
@@ -2312,8 +2364,10 @@ impl Document {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentText {
     /// <p>Text in the document.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>Highlights in the document text.</p>
+    #[doc(hidden)]
     pub highlights: std::option::Option<std::vec::Vec<crate::model::Highlight>>,
 }
 impl DocumentText {
@@ -2334,11 +2388,10 @@ impl std::fmt::Debug for DocumentText {
         formatter.finish()
     }
 }
-/// See [`DocumentText`](crate::model::DocumentText)
+/// See [`DocumentText`](crate::model::DocumentText).
 pub mod document_text {
 
-    /// A builder for [`DocumentText`](crate::model::DocumentText)
-    #[non_exhaustive]
+    /// A builder for [`DocumentText`](crate::model::DocumentText).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text: std::option::Option<std::string::String>,
@@ -2374,7 +2427,7 @@ pub mod document_text {
             self.highlights = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentText`](crate::model::DocumentText)
+        /// Consumes the builder and constructs a [`DocumentText`](crate::model::DocumentText).
         pub fn build(self) -> crate::model::DocumentText {
             crate::model::DocumentText {
                 text: self.text,
@@ -2384,7 +2437,7 @@ pub mod document_text {
     }
 }
 impl DocumentText {
-    /// Creates a new builder-style object to manufacture [`DocumentText`](crate::model::DocumentText)
+    /// Creates a new builder-style object to manufacture [`DocumentText`](crate::model::DocumentText).
     pub fn builder() -> crate::model::document_text::Builder {
         crate::model::document_text::Builder::default()
     }
@@ -2395,8 +2448,10 @@ impl DocumentText {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Highlight {
     /// <p>The offset for the start of the highlight.</p>
+    #[doc(hidden)]
     pub begin_offset_inclusive: i32,
     /// <p>The offset for the end of the highlight.</p>
+    #[doc(hidden)]
     pub end_offset_exclusive: i32,
 }
 impl Highlight {
@@ -2417,11 +2472,10 @@ impl std::fmt::Debug for Highlight {
         formatter.finish()
     }
 }
-/// See [`Highlight`](crate::model::Highlight)
+/// See [`Highlight`](crate::model::Highlight).
 pub mod highlight {
 
-    /// A builder for [`Highlight`](crate::model::Highlight)
-    #[non_exhaustive]
+    /// A builder for [`Highlight`](crate::model::Highlight).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) begin_offset_inclusive: std::option::Option<i32>,
@@ -2448,7 +2502,7 @@ pub mod highlight {
             self.end_offset_exclusive = input;
             self
         }
-        /// Consumes the builder and constructs a [`Highlight`](crate::model::Highlight)
+        /// Consumes the builder and constructs a [`Highlight`](crate::model::Highlight).
         pub fn build(self) -> crate::model::Highlight {
             crate::model::Highlight {
                 begin_offset_inclusive: self.begin_offset_inclusive.unwrap_or_default(),
@@ -2458,7 +2512,7 @@ pub mod highlight {
     }
 }
 impl Highlight {
-    /// Creates a new builder-style object to manufacture [`Highlight`](crate::model::Highlight)
+    /// Creates a new builder-style object to manufacture [`Highlight`](crate::model::Highlight).
     pub fn builder() -> crate::model::highlight::Builder {
         crate::model::highlight::Builder::default()
     }
@@ -2469,12 +2523,16 @@ impl Highlight {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContentReference {
     /// <p>The Amazon Resource Name (ARN) of the knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_arn: std::option::Option<std::string::String>,
     /// <p>The identifier of the knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the content.</p>
+    #[doc(hidden)]
     pub content_arn: std::option::Option<std::string::String>,
     /// <p>The identifier of the content.</p>
+    #[doc(hidden)]
     pub content_id: std::option::Option<std::string::String>,
 }
 impl ContentReference {
@@ -2505,11 +2563,10 @@ impl std::fmt::Debug for ContentReference {
         formatter.finish()
     }
 }
-/// See [`ContentReference`](crate::model::ContentReference)
+/// See [`ContentReference`](crate::model::ContentReference).
 pub mod content_reference {
 
-    /// A builder for [`ContentReference`](crate::model::ContentReference)
-    #[non_exhaustive]
+    /// A builder for [`ContentReference`](crate::model::ContentReference).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) knowledge_base_arn: std::option::Option<std::string::String>,
@@ -2564,7 +2621,7 @@ pub mod content_reference {
             self.content_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContentReference`](crate::model::ContentReference)
+        /// Consumes the builder and constructs a [`ContentReference`](crate::model::ContentReference).
         pub fn build(self) -> crate::model::ContentReference {
             crate::model::ContentReference {
                 knowledge_base_arn: self.knowledge_base_arn,
@@ -2576,7 +2633,7 @@ pub mod content_reference {
     }
 }
 impl ContentReference {
-    /// Creates a new builder-style object to manufacture [`ContentReference`](crate::model::ContentReference)
+    /// Creates a new builder-style object to manufacture [`ContentReference`](crate::model::ContentReference).
     pub fn builder() -> crate::model::content_reference::Builder {
         crate::model::content_reference::Builder::default()
     }
@@ -2587,8 +2644,10 @@ impl ContentReference {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotifyRecommendationsReceivedError {
     /// <p>The identifier of the recommendation that is in error.</p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
     /// <p>A recommendation is causing an error.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl NotifyRecommendationsReceivedError {
@@ -2609,11 +2668,10 @@ impl std::fmt::Debug for NotifyRecommendationsReceivedError {
         formatter.finish()
     }
 }
-/// See [`NotifyRecommendationsReceivedError`](crate::model::NotifyRecommendationsReceivedError)
+/// See [`NotifyRecommendationsReceivedError`](crate::model::NotifyRecommendationsReceivedError).
 pub mod notify_recommendations_received_error {
 
-    /// A builder for [`NotifyRecommendationsReceivedError`](crate::model::NotifyRecommendationsReceivedError)
-    #[non_exhaustive]
+    /// A builder for [`NotifyRecommendationsReceivedError`](crate::model::NotifyRecommendationsReceivedError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_id: std::option::Option<std::string::String>,
@@ -2643,7 +2701,7 @@ pub mod notify_recommendations_received_error {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotifyRecommendationsReceivedError`](crate::model::NotifyRecommendationsReceivedError)
+        /// Consumes the builder and constructs a [`NotifyRecommendationsReceivedError`](crate::model::NotifyRecommendationsReceivedError).
         pub fn build(self) -> crate::model::NotifyRecommendationsReceivedError {
             crate::model::NotifyRecommendationsReceivedError {
                 recommendation_id: self.recommendation_id,
@@ -2653,7 +2711,7 @@ pub mod notify_recommendations_received_error {
     }
 }
 impl NotifyRecommendationsReceivedError {
-    /// Creates a new builder-style object to manufacture [`NotifyRecommendationsReceivedError`](crate::model::NotifyRecommendationsReceivedError)
+    /// Creates a new builder-style object to manufacture [`NotifyRecommendationsReceivedError`](crate::model::NotifyRecommendationsReceivedError).
     pub fn builder() -> crate::model::notify_recommendations_received_error::Builder {
         crate::model::notify_recommendations_received_error::Builder::default()
     }
@@ -2664,18 +2722,23 @@ impl NotifyRecommendationsReceivedError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecommendationTrigger {
     /// <p>The identifier of the recommendation trigger.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The type of recommendation trigger.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RecommendationTriggerType>,
     /// <p>The source of the recommendation trigger.</p>
     /// <ul>
     /// <li> <p>ISSUE_DETECTION: The corresponding recommendations were triggered by a Contact Lens issue.</p> </li>
     /// <li> <p>RULE_EVALUATION: The corresponding recommendations were triggered by a Contact Lens rule.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub source: std::option::Option<crate::model::RecommendationSourceType>,
     /// <p>A union type containing information related to the trigger.</p>
+    #[doc(hidden)]
     pub data: std::option::Option<crate::model::RecommendationTriggerData>,
     /// <p>The identifiers of the recommendations.</p>
+    #[doc(hidden)]
     pub recommendation_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl RecommendationTrigger {
@@ -2715,11 +2778,10 @@ impl std::fmt::Debug for RecommendationTrigger {
         formatter.finish()
     }
 }
-/// See [`RecommendationTrigger`](crate::model::RecommendationTrigger)
+/// See [`RecommendationTrigger`](crate::model::RecommendationTrigger).
 pub mod recommendation_trigger {
 
-    /// A builder for [`RecommendationTrigger`](crate::model::RecommendationTrigger)
-    #[non_exhaustive]
+    /// A builder for [`RecommendationTrigger`](crate::model::RecommendationTrigger).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2805,7 +2867,7 @@ pub mod recommendation_trigger {
             self.recommendation_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecommendationTrigger`](crate::model::RecommendationTrigger)
+        /// Consumes the builder and constructs a [`RecommendationTrigger`](crate::model::RecommendationTrigger).
         pub fn build(self) -> crate::model::RecommendationTrigger {
             crate::model::RecommendationTrigger {
                 id: self.id,
@@ -2818,7 +2880,7 @@ pub mod recommendation_trigger {
     }
 }
 impl RecommendationTrigger {
-    /// Creates a new builder-style object to manufacture [`RecommendationTrigger`](crate::model::RecommendationTrigger)
+    /// Creates a new builder-style object to manufacture [`RecommendationTrigger`](crate::model::RecommendationTrigger).
     pub fn builder() -> crate::model::recommendation_trigger::Builder {
         crate::model::recommendation_trigger::Builder::default()
     }
@@ -2868,6 +2930,7 @@ impl RecommendationTriggerData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryRecommendationTriggerData {
     /// <p>The text associated with the recommendation trigger.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
 }
 impl QueryRecommendationTriggerData {
@@ -2883,11 +2946,10 @@ impl std::fmt::Debug for QueryRecommendationTriggerData {
         formatter.finish()
     }
 }
-/// See [`QueryRecommendationTriggerData`](crate::model::QueryRecommendationTriggerData)
+/// See [`QueryRecommendationTriggerData`](crate::model::QueryRecommendationTriggerData).
 pub mod query_recommendation_trigger_data {
 
-    /// A builder for [`QueryRecommendationTriggerData`](crate::model::QueryRecommendationTriggerData)
-    #[non_exhaustive]
+    /// A builder for [`QueryRecommendationTriggerData`](crate::model::QueryRecommendationTriggerData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text: std::option::Option<std::string::String>,
@@ -2903,14 +2965,14 @@ pub mod query_recommendation_trigger_data {
             self.text = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryRecommendationTriggerData`](crate::model::QueryRecommendationTriggerData)
+        /// Consumes the builder and constructs a [`QueryRecommendationTriggerData`](crate::model::QueryRecommendationTriggerData).
         pub fn build(self) -> crate::model::QueryRecommendationTriggerData {
             crate::model::QueryRecommendationTriggerData { text: self.text }
         }
     }
 }
 impl QueryRecommendationTriggerData {
-    /// Creates a new builder-style object to manufacture [`QueryRecommendationTriggerData`](crate::model::QueryRecommendationTriggerData)
+    /// Creates a new builder-style object to manufacture [`QueryRecommendationTriggerData`](crate::model::QueryRecommendationTriggerData).
     pub fn builder() -> crate::model::query_recommendation_trigger_data::Builder {
         crate::model::query_recommendation_trigger_data::Builder::default()
     }
@@ -3031,14 +3093,19 @@ impl AsRef<str> for RecommendationTriggerType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecommendationData {
     /// <p>The identifier of the recommendation.</p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
     /// <p>The recommended document.</p>
+    #[doc(hidden)]
     pub document: std::option::Option<crate::model::Document>,
     /// <p>The relevance score of the recommendation.</p>
+    #[doc(hidden)]
     pub relevance_score: f64,
     /// <p>The relevance level of the recommendation.</p>
+    #[doc(hidden)]
     pub relevance_level: std::option::Option<crate::model::RelevanceLevel>,
     /// <p>The type of recommendation.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RecommendationType>,
 }
 impl RecommendationData {
@@ -3074,11 +3141,10 @@ impl std::fmt::Debug for RecommendationData {
         formatter.finish()
     }
 }
-/// See [`RecommendationData`](crate::model::RecommendationData)
+/// See [`RecommendationData`](crate::model::RecommendationData).
 pub mod recommendation_data {
 
-    /// A builder for [`RecommendationData`](crate::model::RecommendationData)
-    #[non_exhaustive]
+    /// A builder for [`RecommendationData`](crate::model::RecommendationData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_id: std::option::Option<std::string::String>,
@@ -3147,7 +3213,7 @@ pub mod recommendation_data {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecommendationData`](crate::model::RecommendationData)
+        /// Consumes the builder and constructs a [`RecommendationData`](crate::model::RecommendationData).
         pub fn build(self) -> crate::model::RecommendationData {
             crate::model::RecommendationData {
                 recommendation_id: self.recommendation_id,
@@ -3160,7 +3226,7 @@ pub mod recommendation_data {
     }
 }
 impl RecommendationData {
-    /// Creates a new builder-style object to manufacture [`RecommendationData`](crate::model::RecommendationData)
+    /// Creates a new builder-style object to manufacture [`RecommendationData`](crate::model::RecommendationData).
     pub fn builder() -> crate::model::recommendation_data::Builder {
         crate::model::recommendation_data::Builder::default()
     }
@@ -3281,21 +3347,29 @@ impl AsRef<str> for RelevanceLevel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssistantSummary {
     /// <p>The identifier of the Wisdom assistant.</p>
+    #[doc(hidden)]
     pub assistant_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Wisdom assistant.</p>
+    #[doc(hidden)]
     pub assistant_arn: std::option::Option<std::string::String>,
     /// <p>The name of the assistant.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of the assistant.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::AssistantType>,
     /// <p>The status of the assistant.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AssistantStatus>,
     /// <p>The description of the assistant.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The KMS key used for encryption.</p>
+    #[doc(hidden)]
     pub server_side_encryption_configuration:
         std::option::Option<crate::model::ServerSideEncryptionConfiguration>,
 }
@@ -3355,11 +3429,10 @@ impl std::fmt::Debug for AssistantSummary {
         formatter.finish()
     }
 }
-/// See [`AssistantSummary`](crate::model::AssistantSummary)
+/// See [`AssistantSummary`](crate::model::AssistantSummary).
 pub mod assistant_summary {
 
-    /// A builder for [`AssistantSummary`](crate::model::AssistantSummary)
-    #[non_exhaustive]
+    /// A builder for [`AssistantSummary`](crate::model::AssistantSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assistant_id: std::option::Option<std::string::String>,
@@ -3482,7 +3555,7 @@ pub mod assistant_summary {
             self.server_side_encryption_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssistantSummary`](crate::model::AssistantSummary)
+        /// Consumes the builder and constructs a [`AssistantSummary`](crate::model::AssistantSummary).
         pub fn build(self) -> crate::model::AssistantSummary {
             crate::model::AssistantSummary {
                 assistant_id: self.assistant_id,
@@ -3498,7 +3571,7 @@ pub mod assistant_summary {
     }
 }
 impl AssistantSummary {
-    /// Creates a new builder-style object to manufacture [`AssistantSummary`](crate::model::AssistantSummary)
+    /// Creates a new builder-style object to manufacture [`AssistantSummary`](crate::model::AssistantSummary).
     pub fn builder() -> crate::model::assistant_summary::Builder {
         crate::model::assistant_summary::Builder::default()
     }
@@ -3638,21 +3711,29 @@ impl AsRef<str> for AssistantType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssistantData {
     /// <p>The identifier of the Wisdom assistant.</p>
+    #[doc(hidden)]
     pub assistant_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Wisdom assistant.</p>
+    #[doc(hidden)]
     pub assistant_arn: std::option::Option<std::string::String>,
     /// <p>The name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of assistant.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::AssistantType>,
     /// <p>The status of the assistant.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AssistantStatus>,
     /// <p>The description.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The KMS key used for encryption.</p>
+    #[doc(hidden)]
     pub server_side_encryption_configuration:
         std::option::Option<crate::model::ServerSideEncryptionConfiguration>,
 }
@@ -3712,11 +3793,10 @@ impl std::fmt::Debug for AssistantData {
         formatter.finish()
     }
 }
-/// See [`AssistantData`](crate::model::AssistantData)
+/// See [`AssistantData`](crate::model::AssistantData).
 pub mod assistant_data {
 
-    /// A builder for [`AssistantData`](crate::model::AssistantData)
-    #[non_exhaustive]
+    /// A builder for [`AssistantData`](crate::model::AssistantData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assistant_id: std::option::Option<std::string::String>,
@@ -3839,7 +3919,7 @@ pub mod assistant_data {
             self.server_side_encryption_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssistantData`](crate::model::AssistantData)
+        /// Consumes the builder and constructs a [`AssistantData`](crate::model::AssistantData).
         pub fn build(self) -> crate::model::AssistantData {
             crate::model::AssistantData {
                 assistant_id: self.assistant_id,
@@ -3855,7 +3935,7 @@ pub mod assistant_data {
     }
 }
 impl AssistantData {
-    /// Creates a new builder-style object to manufacture [`AssistantData`](crate::model::AssistantData)
+    /// Creates a new builder-style object to manufacture [`AssistantData`](crate::model::AssistantData).
     pub fn builder() -> crate::model::assistant_data::Builder {
         crate::model::assistant_data::Builder::default()
     }
@@ -3866,14 +3946,19 @@ impl AssistantData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SessionData {
     /// <p>The Amazon Resource Name (ARN) of the session.</p>
+    #[doc(hidden)]
     pub session_arn: std::option::Option<std::string::String>,
     /// <p>The identifier of the session.</p>
+    #[doc(hidden)]
     pub session_id: std::option::Option<std::string::String>,
     /// <p>The name of the session.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the session.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -3913,11 +3998,10 @@ impl std::fmt::Debug for SessionData {
         formatter.finish()
     }
 }
-/// See [`SessionData`](crate::model::SessionData)
+/// See [`SessionData`](crate::model::SessionData).
 pub mod session_data {
 
-    /// A builder for [`SessionData`](crate::model::SessionData)
-    #[non_exhaustive]
+    /// A builder for [`SessionData`](crate::model::SessionData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) session_arn: std::option::Option<std::string::String>,
@@ -3994,7 +4078,7 @@ pub mod session_data {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`SessionData`](crate::model::SessionData)
+        /// Consumes the builder and constructs a [`SessionData`](crate::model::SessionData).
         pub fn build(self) -> crate::model::SessionData {
             crate::model::SessionData {
                 session_arn: self.session_arn,
@@ -4007,7 +4091,7 @@ pub mod session_data {
     }
 }
 impl SessionData {
-    /// Creates a new builder-style object to manufacture [`SessionData`](crate::model::SessionData)
+    /// Creates a new builder-style object to manufacture [`SessionData`](crate::model::SessionData).
     pub fn builder() -> crate::model::session_data::Builder {
         crate::model::session_data::Builder::default()
     }
@@ -4018,18 +4102,25 @@ impl SessionData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssistantAssociationSummary {
     /// <p>The identifier of the assistant association.</p>
+    #[doc(hidden)]
     pub assistant_association_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the assistant association.</p>
+    #[doc(hidden)]
     pub assistant_association_arn: std::option::Option<std::string::String>,
     /// <p>The identifier of the Wisdom assistant.</p>
+    #[doc(hidden)]
     pub assistant_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Wisdom assistant.</p>
+    #[doc(hidden)]
     pub assistant_arn: std::option::Option<std::string::String>,
     /// <p>The type of association.</p>
+    #[doc(hidden)]
     pub association_type: std::option::Option<crate::model::AssociationType>,
     /// <p>The association data.</p>
+    #[doc(hidden)]
     pub association_data: std::option::Option<crate::model::AssistantAssociationOutputData>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -4081,11 +4172,10 @@ impl std::fmt::Debug for AssistantAssociationSummary {
         formatter.finish()
     }
 }
-/// See [`AssistantAssociationSummary`](crate::model::AssistantAssociationSummary)
+/// See [`AssistantAssociationSummary`](crate::model::AssistantAssociationSummary).
 pub mod assistant_association_summary {
 
-    /// A builder for [`AssistantAssociationSummary`](crate::model::AssistantAssociationSummary)
-    #[non_exhaustive]
+    /// A builder for [`AssistantAssociationSummary`](crate::model::AssistantAssociationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assistant_association_id: std::option::Option<std::string::String>,
@@ -4203,7 +4293,7 @@ pub mod assistant_association_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssistantAssociationSummary`](crate::model::AssistantAssociationSummary)
+        /// Consumes the builder and constructs a [`AssistantAssociationSummary`](crate::model::AssistantAssociationSummary).
         pub fn build(self) -> crate::model::AssistantAssociationSummary {
             crate::model::AssistantAssociationSummary {
                 assistant_association_id: self.assistant_association_id,
@@ -4218,7 +4308,7 @@ pub mod assistant_association_summary {
     }
 }
 impl AssistantAssociationSummary {
-    /// Creates a new builder-style object to manufacture [`AssistantAssociationSummary`](crate::model::AssistantAssociationSummary)
+    /// Creates a new builder-style object to manufacture [`AssistantAssociationSummary`](crate::model::AssistantAssociationSummary).
     pub fn builder() -> crate::model::assistant_association_summary::Builder {
         crate::model::assistant_association_summary::Builder::default()
     }
@@ -4268,8 +4358,10 @@ impl AssistantAssociationOutputData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KnowledgeBaseAssociationData {
     /// <p>The identifier of the knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the knowledge base.</p>
+    #[doc(hidden)]
     pub knowledge_base_arn: std::option::Option<std::string::String>,
 }
 impl KnowledgeBaseAssociationData {
@@ -4290,11 +4382,10 @@ impl std::fmt::Debug for KnowledgeBaseAssociationData {
         formatter.finish()
     }
 }
-/// See [`KnowledgeBaseAssociationData`](crate::model::KnowledgeBaseAssociationData)
+/// See [`KnowledgeBaseAssociationData`](crate::model::KnowledgeBaseAssociationData).
 pub mod knowledge_base_association_data {
 
-    /// A builder for [`KnowledgeBaseAssociationData`](crate::model::KnowledgeBaseAssociationData)
-    #[non_exhaustive]
+    /// A builder for [`KnowledgeBaseAssociationData`](crate::model::KnowledgeBaseAssociationData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) knowledge_base_id: std::option::Option<std::string::String>,
@@ -4327,7 +4418,7 @@ pub mod knowledge_base_association_data {
             self.knowledge_base_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`KnowledgeBaseAssociationData`](crate::model::KnowledgeBaseAssociationData)
+        /// Consumes the builder and constructs a [`KnowledgeBaseAssociationData`](crate::model::KnowledgeBaseAssociationData).
         pub fn build(self) -> crate::model::KnowledgeBaseAssociationData {
             crate::model::KnowledgeBaseAssociationData {
                 knowledge_base_id: self.knowledge_base_id,
@@ -4337,7 +4428,7 @@ pub mod knowledge_base_association_data {
     }
 }
 impl KnowledgeBaseAssociationData {
-    /// Creates a new builder-style object to manufacture [`KnowledgeBaseAssociationData`](crate::model::KnowledgeBaseAssociationData)
+    /// Creates a new builder-style object to manufacture [`KnowledgeBaseAssociationData`](crate::model::KnowledgeBaseAssociationData).
     pub fn builder() -> crate::model::knowledge_base_association_data::Builder {
         crate::model::knowledge_base_association_data::Builder::default()
     }
@@ -4399,18 +4490,25 @@ impl AsRef<str> for AssociationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssistantAssociationData {
     /// <p>The identifier of the assistant association.</p>
+    #[doc(hidden)]
     pub assistant_association_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the assistant association.</p>
+    #[doc(hidden)]
     pub assistant_association_arn: std::option::Option<std::string::String>,
     /// <p>The identifier of the Wisdom assistant.</p>
+    #[doc(hidden)]
     pub assistant_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Wisdom assistant.</p>
+    #[doc(hidden)]
     pub assistant_arn: std::option::Option<std::string::String>,
     /// <p>The type of association.</p>
+    #[doc(hidden)]
     pub association_type: std::option::Option<crate::model::AssociationType>,
     /// <p>A union type that currently has a single argument, the knowledge base ID.</p>
+    #[doc(hidden)]
     pub association_data: std::option::Option<crate::model::AssistantAssociationOutputData>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -4462,11 +4560,10 @@ impl std::fmt::Debug for AssistantAssociationData {
         formatter.finish()
     }
 }
-/// See [`AssistantAssociationData`](crate::model::AssistantAssociationData)
+/// See [`AssistantAssociationData`](crate::model::AssistantAssociationData).
 pub mod assistant_association_data {
 
-    /// A builder for [`AssistantAssociationData`](crate::model::AssistantAssociationData)
-    #[non_exhaustive]
+    /// A builder for [`AssistantAssociationData`](crate::model::AssistantAssociationData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assistant_association_id: std::option::Option<std::string::String>,
@@ -4584,7 +4681,7 @@ pub mod assistant_association_data {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssistantAssociationData`](crate::model::AssistantAssociationData)
+        /// Consumes the builder and constructs a [`AssistantAssociationData`](crate::model::AssistantAssociationData).
         pub fn build(self) -> crate::model::AssistantAssociationData {
             crate::model::AssistantAssociationData {
                 assistant_association_id: self.assistant_association_id,
@@ -4599,7 +4696,7 @@ pub mod assistant_association_data {
     }
 }
 impl AssistantAssociationData {
-    /// Creates a new builder-style object to manufacture [`AssistantAssociationData`](crate::model::AssistantAssociationData)
+    /// Creates a new builder-style object to manufacture [`AssistantAssociationData`](crate::model::AssistantAssociationData).
     pub fn builder() -> crate::model::assistant_association_data::Builder {
         crate::model::assistant_association_data::Builder::default()
     }

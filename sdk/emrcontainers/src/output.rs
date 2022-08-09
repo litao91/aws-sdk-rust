@@ -9,22 +9,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -40,22 +39,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -66,12 +64,16 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartJobRunOutput {
     /// <p>This output displays the started job run ID.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>This output displays the name of the started job run.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>This output lists the ARN of job run.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>This output displays the virtual cluster ID for which the job run was submitted.</p>
+    #[doc(hidden)]
     pub virtual_cluster_id: std::option::Option<std::string::String>,
 }
 impl StartJobRunOutput {
@@ -102,11 +104,10 @@ impl std::fmt::Debug for StartJobRunOutput {
         formatter.finish()
     }
 }
-/// See [`StartJobRunOutput`](crate::output::StartJobRunOutput)
+/// See [`StartJobRunOutput`](crate::output::StartJobRunOutput).
 pub mod start_job_run_output {
 
-    /// A builder for [`StartJobRunOutput`](crate::output::StartJobRunOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartJobRunOutput`](crate::output::StartJobRunOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -158,7 +159,7 @@ pub mod start_job_run_output {
             self.virtual_cluster_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartJobRunOutput`](crate::output::StartJobRunOutput)
+        /// Consumes the builder and constructs a [`StartJobRunOutput`](crate::output::StartJobRunOutput).
         pub fn build(self) -> crate::output::StartJobRunOutput {
             crate::output::StartJobRunOutput {
                 id: self.id,
@@ -170,7 +171,7 @@ pub mod start_job_run_output {
     }
 }
 impl StartJobRunOutput {
-    /// Creates a new builder-style object to manufacture [`StartJobRunOutput`](crate::output::StartJobRunOutput)
+    /// Creates a new builder-style object to manufacture [`StartJobRunOutput`](crate::output::StartJobRunOutput).
     pub fn builder() -> crate::output::start_job_run_output::Builder {
         crate::output::start_job_run_output::Builder::default()
     }
@@ -181,8 +182,10 @@ impl StartJobRunOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListVirtualClustersOutput {
     /// <p>This output lists the specified virtual clusters.</p>
+    #[doc(hidden)]
     pub virtual_clusters: std::option::Option<std::vec::Vec<crate::model::VirtualCluster>>,
     /// <p>This output displays the token for the next set of virtual clusters.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListVirtualClustersOutput {
@@ -203,11 +206,10 @@ impl std::fmt::Debug for ListVirtualClustersOutput {
         formatter.finish()
     }
 }
-/// See [`ListVirtualClustersOutput`](crate::output::ListVirtualClustersOutput)
+/// See [`ListVirtualClustersOutput`](crate::output::ListVirtualClustersOutput).
 pub mod list_virtual_clusters_output {
 
-    /// A builder for [`ListVirtualClustersOutput`](crate::output::ListVirtualClustersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListVirtualClustersOutput`](crate::output::ListVirtualClustersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) virtual_clusters:
@@ -244,7 +246,7 @@ pub mod list_virtual_clusters_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListVirtualClustersOutput`](crate::output::ListVirtualClustersOutput)
+        /// Consumes the builder and constructs a [`ListVirtualClustersOutput`](crate::output::ListVirtualClustersOutput).
         pub fn build(self) -> crate::output::ListVirtualClustersOutput {
             crate::output::ListVirtualClustersOutput {
                 virtual_clusters: self.virtual_clusters,
@@ -254,7 +256,7 @@ pub mod list_virtual_clusters_output {
     }
 }
 impl ListVirtualClustersOutput {
-    /// Creates a new builder-style object to manufacture [`ListVirtualClustersOutput`](crate::output::ListVirtualClustersOutput)
+    /// Creates a new builder-style object to manufacture [`ListVirtualClustersOutput`](crate::output::ListVirtualClustersOutput).
     pub fn builder() -> crate::output::list_virtual_clusters_output::Builder {
         crate::output::list_virtual_clusters_output::Builder::default()
     }
@@ -265,6 +267,7 @@ impl ListVirtualClustersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tags assigned to resources.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -284,11 +287,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -321,14 +323,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -339,8 +341,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListManagedEndpointsOutput {
     /// <p>The managed endpoints to be listed.</p>
+    #[doc(hidden)]
     pub endpoints: std::option::Option<std::vec::Vec<crate::model::Endpoint>>,
     /// <p> The token for the next set of endpoints to return. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListManagedEndpointsOutput {
@@ -361,11 +365,10 @@ impl std::fmt::Debug for ListManagedEndpointsOutput {
         formatter.finish()
     }
 }
-/// See [`ListManagedEndpointsOutput`](crate::output::ListManagedEndpointsOutput)
+/// See [`ListManagedEndpointsOutput`](crate::output::ListManagedEndpointsOutput).
 pub mod list_managed_endpoints_output {
 
-    /// A builder for [`ListManagedEndpointsOutput`](crate::output::ListManagedEndpointsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListManagedEndpointsOutput`](crate::output::ListManagedEndpointsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoints: std::option::Option<std::vec::Vec<crate::model::Endpoint>>,
@@ -401,7 +404,7 @@ pub mod list_managed_endpoints_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListManagedEndpointsOutput`](crate::output::ListManagedEndpointsOutput)
+        /// Consumes the builder and constructs a [`ListManagedEndpointsOutput`](crate::output::ListManagedEndpointsOutput).
         pub fn build(self) -> crate::output::ListManagedEndpointsOutput {
             crate::output::ListManagedEndpointsOutput {
                 endpoints: self.endpoints,
@@ -411,7 +414,7 @@ pub mod list_managed_endpoints_output {
     }
 }
 impl ListManagedEndpointsOutput {
-    /// Creates a new builder-style object to manufacture [`ListManagedEndpointsOutput`](crate::output::ListManagedEndpointsOutput)
+    /// Creates a new builder-style object to manufacture [`ListManagedEndpointsOutput`](crate::output::ListManagedEndpointsOutput).
     pub fn builder() -> crate::output::list_managed_endpoints_output::Builder {
         crate::output::list_managed_endpoints_output::Builder::default()
     }
@@ -422,8 +425,10 @@ impl ListManagedEndpointsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListJobRunsOutput {
     /// <p>This output lists information about the specified job runs.</p>
+    #[doc(hidden)]
     pub job_runs: std::option::Option<std::vec::Vec<crate::model::JobRun>>,
     /// <p>This output displays the token for the next set of job runs.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListJobRunsOutput {
@@ -444,11 +449,10 @@ impl std::fmt::Debug for ListJobRunsOutput {
         formatter.finish()
     }
 }
-/// See [`ListJobRunsOutput`](crate::output::ListJobRunsOutput)
+/// See [`ListJobRunsOutput`](crate::output::ListJobRunsOutput).
 pub mod list_job_runs_output {
 
-    /// A builder for [`ListJobRunsOutput`](crate::output::ListJobRunsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListJobRunsOutput`](crate::output::ListJobRunsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_runs: std::option::Option<std::vec::Vec<crate::model::JobRun>>,
@@ -484,7 +488,7 @@ pub mod list_job_runs_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListJobRunsOutput`](crate::output::ListJobRunsOutput)
+        /// Consumes the builder and constructs a [`ListJobRunsOutput`](crate::output::ListJobRunsOutput).
         pub fn build(self) -> crate::output::ListJobRunsOutput {
             crate::output::ListJobRunsOutput {
                 job_runs: self.job_runs,
@@ -494,7 +498,7 @@ pub mod list_job_runs_output {
     }
 }
 impl ListJobRunsOutput {
-    /// Creates a new builder-style object to manufacture [`ListJobRunsOutput`](crate::output::ListJobRunsOutput)
+    /// Creates a new builder-style object to manufacture [`ListJobRunsOutput`](crate::output::ListJobRunsOutput).
     pub fn builder() -> crate::output::list_job_runs_output::Builder {
         crate::output::list_job_runs_output::Builder::default()
     }
@@ -505,6 +509,7 @@ impl ListJobRunsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeVirtualClusterOutput {
     /// <p>This output displays information about the specified virtual cluster.</p>
+    #[doc(hidden)]
     pub virtual_cluster: std::option::Option<crate::model::VirtualCluster>,
 }
 impl DescribeVirtualClusterOutput {
@@ -520,11 +525,10 @@ impl std::fmt::Debug for DescribeVirtualClusterOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeVirtualClusterOutput`](crate::output::DescribeVirtualClusterOutput)
+/// See [`DescribeVirtualClusterOutput`](crate::output::DescribeVirtualClusterOutput).
 pub mod describe_virtual_cluster_output {
 
-    /// A builder for [`DescribeVirtualClusterOutput`](crate::output::DescribeVirtualClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeVirtualClusterOutput`](crate::output::DescribeVirtualClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) virtual_cluster: std::option::Option<crate::model::VirtualCluster>,
@@ -543,7 +547,7 @@ pub mod describe_virtual_cluster_output {
             self.virtual_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeVirtualClusterOutput`](crate::output::DescribeVirtualClusterOutput)
+        /// Consumes the builder and constructs a [`DescribeVirtualClusterOutput`](crate::output::DescribeVirtualClusterOutput).
         pub fn build(self) -> crate::output::DescribeVirtualClusterOutput {
             crate::output::DescribeVirtualClusterOutput {
                 virtual_cluster: self.virtual_cluster,
@@ -552,7 +556,7 @@ pub mod describe_virtual_cluster_output {
     }
 }
 impl DescribeVirtualClusterOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeVirtualClusterOutput`](crate::output::DescribeVirtualClusterOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeVirtualClusterOutput`](crate::output::DescribeVirtualClusterOutput).
     pub fn builder() -> crate::output::describe_virtual_cluster_output::Builder {
         crate::output::describe_virtual_cluster_output::Builder::default()
     }
@@ -563,6 +567,7 @@ impl DescribeVirtualClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeManagedEndpointOutput {
     /// <p>This output displays information about a managed endpoint.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<crate::model::Endpoint>,
 }
 impl DescribeManagedEndpointOutput {
@@ -578,11 +583,10 @@ impl std::fmt::Debug for DescribeManagedEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeManagedEndpointOutput`](crate::output::DescribeManagedEndpointOutput)
+/// See [`DescribeManagedEndpointOutput`](crate::output::DescribeManagedEndpointOutput).
 pub mod describe_managed_endpoint_output {
 
-    /// A builder for [`DescribeManagedEndpointOutput`](crate::output::DescribeManagedEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeManagedEndpointOutput`](crate::output::DescribeManagedEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint: std::option::Option<crate::model::Endpoint>,
@@ -598,7 +602,7 @@ pub mod describe_managed_endpoint_output {
             self.endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeManagedEndpointOutput`](crate::output::DescribeManagedEndpointOutput)
+        /// Consumes the builder and constructs a [`DescribeManagedEndpointOutput`](crate::output::DescribeManagedEndpointOutput).
         pub fn build(self) -> crate::output::DescribeManagedEndpointOutput {
             crate::output::DescribeManagedEndpointOutput {
                 endpoint: self.endpoint,
@@ -607,7 +611,7 @@ pub mod describe_managed_endpoint_output {
     }
 }
 impl DescribeManagedEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeManagedEndpointOutput`](crate::output::DescribeManagedEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeManagedEndpointOutput`](crate::output::DescribeManagedEndpointOutput).
     pub fn builder() -> crate::output::describe_managed_endpoint_output::Builder {
         crate::output::describe_managed_endpoint_output::Builder::default()
     }
@@ -618,6 +622,7 @@ impl DescribeManagedEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeJobRunOutput {
     /// <p>The output displays information about a job run.</p>
+    #[doc(hidden)]
     pub job_run: std::option::Option<crate::model::JobRun>,
 }
 impl DescribeJobRunOutput {
@@ -633,11 +638,10 @@ impl std::fmt::Debug for DescribeJobRunOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeJobRunOutput`](crate::output::DescribeJobRunOutput)
+/// See [`DescribeJobRunOutput`](crate::output::DescribeJobRunOutput).
 pub mod describe_job_run_output {
 
-    /// A builder for [`DescribeJobRunOutput`](crate::output::DescribeJobRunOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeJobRunOutput`](crate::output::DescribeJobRunOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_run: std::option::Option<crate::model::JobRun>,
@@ -653,7 +657,7 @@ pub mod describe_job_run_output {
             self.job_run = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeJobRunOutput`](crate::output::DescribeJobRunOutput)
+        /// Consumes the builder and constructs a [`DescribeJobRunOutput`](crate::output::DescribeJobRunOutput).
         pub fn build(self) -> crate::output::DescribeJobRunOutput {
             crate::output::DescribeJobRunOutput {
                 job_run: self.job_run,
@@ -662,7 +666,7 @@ pub mod describe_job_run_output {
     }
 }
 impl DescribeJobRunOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeJobRunOutput`](crate::output::DescribeJobRunOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeJobRunOutput`](crate::output::DescribeJobRunOutput).
     pub fn builder() -> crate::output::describe_job_run_output::Builder {
         crate::output::describe_job_run_output::Builder::default()
     }
@@ -673,6 +677,7 @@ impl DescribeJobRunOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteVirtualClusterOutput {
     /// <p>This output contains the ID of the virtual cluster that will be deleted. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
 }
 impl DeleteVirtualClusterOutput {
@@ -688,11 +693,10 @@ impl std::fmt::Debug for DeleteVirtualClusterOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteVirtualClusterOutput`](crate::output::DeleteVirtualClusterOutput)
+/// See [`DeleteVirtualClusterOutput`](crate::output::DeleteVirtualClusterOutput).
 pub mod delete_virtual_cluster_output {
 
-    /// A builder for [`DeleteVirtualClusterOutput`](crate::output::DeleteVirtualClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteVirtualClusterOutput`](crate::output::DeleteVirtualClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -708,14 +712,14 @@ pub mod delete_virtual_cluster_output {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteVirtualClusterOutput`](crate::output::DeleteVirtualClusterOutput)
+        /// Consumes the builder and constructs a [`DeleteVirtualClusterOutput`](crate::output::DeleteVirtualClusterOutput).
         pub fn build(self) -> crate::output::DeleteVirtualClusterOutput {
             crate::output::DeleteVirtualClusterOutput { id: self.id }
         }
     }
 }
 impl DeleteVirtualClusterOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteVirtualClusterOutput`](crate::output::DeleteVirtualClusterOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteVirtualClusterOutput`](crate::output::DeleteVirtualClusterOutput).
     pub fn builder() -> crate::output::delete_virtual_cluster_output::Builder {
         crate::output::delete_virtual_cluster_output::Builder::default()
     }
@@ -726,8 +730,10 @@ impl DeleteVirtualClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteManagedEndpointOutput {
     /// <p>The output displays the ID of the managed endpoint.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The output displays the ID of the endpoint's virtual cluster.</p>
+    #[doc(hidden)]
     pub virtual_cluster_id: std::option::Option<std::string::String>,
 }
 impl DeleteManagedEndpointOutput {
@@ -748,11 +754,10 @@ impl std::fmt::Debug for DeleteManagedEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteManagedEndpointOutput`](crate::output::DeleteManagedEndpointOutput)
+/// See [`DeleteManagedEndpointOutput`](crate::output::DeleteManagedEndpointOutput).
 pub mod delete_managed_endpoint_output {
 
-    /// A builder for [`DeleteManagedEndpointOutput`](crate::output::DeleteManagedEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteManagedEndpointOutput`](crate::output::DeleteManagedEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -782,7 +787,7 @@ pub mod delete_managed_endpoint_output {
             self.virtual_cluster_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteManagedEndpointOutput`](crate::output::DeleteManagedEndpointOutput)
+        /// Consumes the builder and constructs a [`DeleteManagedEndpointOutput`](crate::output::DeleteManagedEndpointOutput).
         pub fn build(self) -> crate::output::DeleteManagedEndpointOutput {
             crate::output::DeleteManagedEndpointOutput {
                 id: self.id,
@@ -792,7 +797,7 @@ pub mod delete_managed_endpoint_output {
     }
 }
 impl DeleteManagedEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteManagedEndpointOutput`](crate::output::DeleteManagedEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteManagedEndpointOutput`](crate::output::DeleteManagedEndpointOutput).
     pub fn builder() -> crate::output::delete_managed_endpoint_output::Builder {
         crate::output::delete_managed_endpoint_output::Builder::default()
     }
@@ -803,10 +808,13 @@ impl DeleteManagedEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateVirtualClusterOutput {
     /// <p>This output contains the virtual cluster ID.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>This output contains the name of the virtual cluster.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>This output contains the ARN of virtual cluster.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl CreateVirtualClusterOutput {
@@ -832,11 +840,10 @@ impl std::fmt::Debug for CreateVirtualClusterOutput {
         formatter.finish()
     }
 }
-/// See [`CreateVirtualClusterOutput`](crate::output::CreateVirtualClusterOutput)
+/// See [`CreateVirtualClusterOutput`](crate::output::CreateVirtualClusterOutput).
 pub mod create_virtual_cluster_output {
 
-    /// A builder for [`CreateVirtualClusterOutput`](crate::output::CreateVirtualClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateVirtualClusterOutput`](crate::output::CreateVirtualClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -874,7 +881,7 @@ pub mod create_virtual_cluster_output {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateVirtualClusterOutput`](crate::output::CreateVirtualClusterOutput)
+        /// Consumes the builder and constructs a [`CreateVirtualClusterOutput`](crate::output::CreateVirtualClusterOutput).
         pub fn build(self) -> crate::output::CreateVirtualClusterOutput {
             crate::output::CreateVirtualClusterOutput {
                 id: self.id,
@@ -885,7 +892,7 @@ pub mod create_virtual_cluster_output {
     }
 }
 impl CreateVirtualClusterOutput {
-    /// Creates a new builder-style object to manufacture [`CreateVirtualClusterOutput`](crate::output::CreateVirtualClusterOutput)
+    /// Creates a new builder-style object to manufacture [`CreateVirtualClusterOutput`](crate::output::CreateVirtualClusterOutput).
     pub fn builder() -> crate::output::create_virtual_cluster_output::Builder {
         crate::output::create_virtual_cluster_output::Builder::default()
     }
@@ -896,12 +903,16 @@ impl CreateVirtualClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateManagedEndpointOutput {
     /// <p>The output contains the ID of the managed endpoint.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The output contains the name of the managed endpoint.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The output contains the ARN of the managed endpoint.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The output contains the ID of the virtual cluster.</p>
+    #[doc(hidden)]
     pub virtual_cluster_id: std::option::Option<std::string::String>,
 }
 impl CreateManagedEndpointOutput {
@@ -932,11 +943,10 @@ impl std::fmt::Debug for CreateManagedEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`CreateManagedEndpointOutput`](crate::output::CreateManagedEndpointOutput)
+/// See [`CreateManagedEndpointOutput`](crate::output::CreateManagedEndpointOutput).
 pub mod create_managed_endpoint_output {
 
-    /// A builder for [`CreateManagedEndpointOutput`](crate::output::CreateManagedEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateManagedEndpointOutput`](crate::output::CreateManagedEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -988,7 +998,7 @@ pub mod create_managed_endpoint_output {
             self.virtual_cluster_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateManagedEndpointOutput`](crate::output::CreateManagedEndpointOutput)
+        /// Consumes the builder and constructs a [`CreateManagedEndpointOutput`](crate::output::CreateManagedEndpointOutput).
         pub fn build(self) -> crate::output::CreateManagedEndpointOutput {
             crate::output::CreateManagedEndpointOutput {
                 id: self.id,
@@ -1000,7 +1010,7 @@ pub mod create_managed_endpoint_output {
     }
 }
 impl CreateManagedEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`CreateManagedEndpointOutput`](crate::output::CreateManagedEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`CreateManagedEndpointOutput`](crate::output::CreateManagedEndpointOutput).
     pub fn builder() -> crate::output::create_managed_endpoint_output::Builder {
         crate::output::create_managed_endpoint_output::Builder::default()
     }
@@ -1011,8 +1021,10 @@ impl CreateManagedEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelJobRunOutput {
     /// <p>The output contains the ID of the cancelled job run.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The output contains the virtual cluster ID for which the job run is cancelled.</p>
+    #[doc(hidden)]
     pub virtual_cluster_id: std::option::Option<std::string::String>,
 }
 impl CancelJobRunOutput {
@@ -1033,11 +1045,10 @@ impl std::fmt::Debug for CancelJobRunOutput {
         formatter.finish()
     }
 }
-/// See [`CancelJobRunOutput`](crate::output::CancelJobRunOutput)
+/// See [`CancelJobRunOutput`](crate::output::CancelJobRunOutput).
 pub mod cancel_job_run_output {
 
-    /// A builder for [`CancelJobRunOutput`](crate::output::CancelJobRunOutput)
-    #[non_exhaustive]
+    /// A builder for [`CancelJobRunOutput`](crate::output::CancelJobRunOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1067,7 +1078,7 @@ pub mod cancel_job_run_output {
             self.virtual_cluster_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelJobRunOutput`](crate::output::CancelJobRunOutput)
+        /// Consumes the builder and constructs a [`CancelJobRunOutput`](crate::output::CancelJobRunOutput).
         pub fn build(self) -> crate::output::CancelJobRunOutput {
             crate::output::CancelJobRunOutput {
                 id: self.id,
@@ -1077,7 +1088,7 @@ pub mod cancel_job_run_output {
     }
 }
 impl CancelJobRunOutput {
-    /// Creates a new builder-style object to manufacture [`CancelJobRunOutput`](crate::output::CancelJobRunOutput)
+    /// Creates a new builder-style object to manufacture [`CancelJobRunOutput`](crate::output::CancelJobRunOutput).
     pub fn builder() -> crate::output::cancel_job_run_output::Builder {
         crate::output::cancel_job_run_output::Builder::default()
     }

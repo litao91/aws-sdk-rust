@@ -5,10 +5,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SanitizationWarning {
     /// <p>The name of the XML attribute that has been sanitized.</p>
+    #[doc(hidden)]
     pub attribute_name: std::option::Option<std::string::String>,
     /// <p>The name of the XML element that has been sanitized.</p>
+    #[doc(hidden)]
     pub element_name: std::option::Option<std::string::String>,
     /// <p>Required. The reason for which the XML elements or attributes were sanitized.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<crate::model::SanitizationWarningReason>,
 }
 impl SanitizationWarning {
@@ -34,11 +37,10 @@ impl std::fmt::Debug for SanitizationWarning {
         formatter.finish()
     }
 }
-/// See [`SanitizationWarning`](crate::model::SanitizationWarning)
+/// See [`SanitizationWarning`](crate::model::SanitizationWarning).
 pub mod sanitization_warning {
 
-    /// A builder for [`SanitizationWarning`](crate::model::SanitizationWarning)
-    #[non_exhaustive]
+    /// A builder for [`SanitizationWarning`](crate::model::SanitizationWarning).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_name: std::option::Option<std::string::String>,
@@ -82,7 +84,7 @@ pub mod sanitization_warning {
             self.reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`SanitizationWarning`](crate::model::SanitizationWarning)
+        /// Consumes the builder and constructs a [`SanitizationWarning`](crate::model::SanitizationWarning).
         pub fn build(self) -> crate::model::SanitizationWarning {
             crate::model::SanitizationWarning {
                 attribute_name: self.attribute_name,
@@ -93,7 +95,7 @@ pub mod sanitization_warning {
     }
 }
 impl SanitizationWarning {
-    /// Creates a new builder-style object to manufacture [`SanitizationWarning`](crate::model::SanitizationWarning)
+    /// Creates a new builder-style object to manufacture [`SanitizationWarning`](crate::model::SanitizationWarning).
     pub fn builder() -> crate::model::sanitization_warning::Builder {
         crate::model::sanitization_warning::Builder::default()
     }
@@ -171,10 +173,13 @@ impl AsRef<str> for SanitizationWarningReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigurationRevision {
     /// <p>Required. The date and time of the configuration revision.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the configuration revision.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Required. The revision number of the configuration.</p>
+    #[doc(hidden)]
     pub revision: i32,
 }
 impl ConfigurationRevision {
@@ -200,11 +205,10 @@ impl std::fmt::Debug for ConfigurationRevision {
         formatter.finish()
     }
 }
-/// See [`ConfigurationRevision`](crate::model::ConfigurationRevision)
+/// See [`ConfigurationRevision`](crate::model::ConfigurationRevision).
 pub mod configuration_revision {
 
-    /// A builder for [`ConfigurationRevision`](crate::model::ConfigurationRevision)
-    #[non_exhaustive]
+    /// A builder for [`ConfigurationRevision`](crate::model::ConfigurationRevision).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) created: std::option::Option<aws_smithy_types::DateTime>,
@@ -245,7 +249,7 @@ pub mod configuration_revision {
             self.revision = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigurationRevision`](crate::model::ConfigurationRevision)
+        /// Consumes the builder and constructs a [`ConfigurationRevision`](crate::model::ConfigurationRevision).
         pub fn build(self) -> crate::model::ConfigurationRevision {
             crate::model::ConfigurationRevision {
                 created: self.created,
@@ -256,7 +260,7 @@ pub mod configuration_revision {
     }
 }
 impl ConfigurationRevision {
-    /// Creates a new builder-style object to manufacture [`ConfigurationRevision`](crate::model::ConfigurationRevision)
+    /// Creates a new builder-style object to manufacture [`ConfigurationRevision`](crate::model::ConfigurationRevision).
     pub fn builder() -> crate::model::configuration_revision::Builder {
         crate::model::configuration_revision::Builder::default()
     }
@@ -267,10 +271,13 @@ impl ConfigurationRevision {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WeeklyStartTime {
     /// <p>Required. The day of the week.</p>
+    #[doc(hidden)]
     pub day_of_week: std::option::Option<crate::model::DayOfWeek>,
     /// <p>Required. The time, in 24-hour format.</p>
+    #[doc(hidden)]
     pub time_of_day: std::option::Option<std::string::String>,
     /// <p>The time zone, UTC by default, in either the Country/City format, or the UTC offset format.</p>
+    #[doc(hidden)]
     pub time_zone: std::option::Option<std::string::String>,
 }
 impl WeeklyStartTime {
@@ -296,11 +303,10 @@ impl std::fmt::Debug for WeeklyStartTime {
         formatter.finish()
     }
 }
-/// See [`WeeklyStartTime`](crate::model::WeeklyStartTime)
+/// See [`WeeklyStartTime`](crate::model::WeeklyStartTime).
 pub mod weekly_start_time {
 
-    /// A builder for [`WeeklyStartTime`](crate::model::WeeklyStartTime)
-    #[non_exhaustive]
+    /// A builder for [`WeeklyStartTime`](crate::model::WeeklyStartTime).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) day_of_week: std::option::Option<crate::model::DayOfWeek>,
@@ -341,7 +347,7 @@ pub mod weekly_start_time {
             self.time_zone = input;
             self
         }
-        /// Consumes the builder and constructs a [`WeeklyStartTime`](crate::model::WeeklyStartTime)
+        /// Consumes the builder and constructs a [`WeeklyStartTime`](crate::model::WeeklyStartTime).
         pub fn build(self) -> crate::model::WeeklyStartTime {
             crate::model::WeeklyStartTime {
                 day_of_week: self.day_of_week,
@@ -352,7 +358,7 @@ pub mod weekly_start_time {
     }
 }
 impl WeeklyStartTime {
-    /// Creates a new builder-style object to manufacture [`WeeklyStartTime`](crate::model::WeeklyStartTime)
+    /// Creates a new builder-style object to manufacture [`WeeklyStartTime`](crate::model::WeeklyStartTime).
     pub fn builder() -> crate::model::weekly_start_time::Builder {
         crate::model::weekly_start_time::Builder::default()
     }
@@ -446,8 +452,10 @@ impl AsRef<str> for DayOfWeek {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Logs {
     /// <p>Enables audit logging. Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not apply to RabbitMQ brokers.</p>
+    #[doc(hidden)]
     pub audit: bool,
     /// <p>Enables general logging.</p>
+    #[doc(hidden)]
     pub general: bool,
 }
 impl Logs {
@@ -468,11 +476,10 @@ impl std::fmt::Debug for Logs {
         formatter.finish()
     }
 }
-/// See [`Logs`](crate::model::Logs)
+/// See [`Logs`](crate::model::Logs).
 pub mod logs {
 
-    /// A builder for [`Logs`](crate::model::Logs)
-    #[non_exhaustive]
+    /// A builder for [`Logs`](crate::model::Logs).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audit: std::option::Option<bool>,
@@ -499,7 +506,7 @@ pub mod logs {
             self.general = input;
             self
         }
-        /// Consumes the builder and constructs a [`Logs`](crate::model::Logs)
+        /// Consumes the builder and constructs a [`Logs`](crate::model::Logs).
         pub fn build(self) -> crate::model::Logs {
             crate::model::Logs {
                 audit: self.audit.unwrap_or_default(),
@@ -509,7 +516,7 @@ pub mod logs {
     }
 }
 impl Logs {
-    /// Creates a new builder-style object to manufacture [`Logs`](crate::model::Logs)
+    /// Creates a new builder-style object to manufacture [`Logs`](crate::model::Logs).
     pub fn builder() -> crate::model::logs::Builder {
         crate::model::logs::Builder::default()
     }
@@ -520,24 +527,34 @@ impl Logs {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LdapServerMetadataOutput {
     /// <p>Specifies the location of the LDAP server such as AWS Directory Service for Microsoft Active Directory . Optional failover server.</p>
+    #[doc(hidden)]
     pub hosts: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The distinguished name of the node in the directory information tree (DIT) to search for roles or groups. For example, ou=group, ou=corp, dc=corp, dc=example, dc=com.</p>
+    #[doc(hidden)]
     pub role_base: std::option::Option<std::string::String>,
     /// <p>Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query.</p>
+    #[doc(hidden)]
     pub role_name: std::option::Option<std::string::String>,
     /// <p>The LDAP search filter used to find roles within the roleBase. The distinguished name of the user matched by userSearchMatching is substituted into the {0} placeholder in the search filter. The client's username is substituted into the {1} placeholder. For example, if you set this option to (member=uid={1})for the user janedoe, the search filter becomes (member=uid=janedoe) after string substitution. It matches all role entries that have a member attribute equal to uid=janedoe under the subtree selected by the roleBase.</p>
+    #[doc(hidden)]
     pub role_search_matching: std::option::Option<std::string::String>,
     /// <p>The directory search scope for the role. If set to true, scope is to search the entire subtree.</p>
+    #[doc(hidden)]
     pub role_search_subtree: bool,
     /// <p>Service account username. A service account is an account in your LDAP server that has access to initiate a connection. For example, cn=admin,dc=corp, dc=example, dc=com.</p>
+    #[doc(hidden)]
     pub service_account_username: std::option::Option<std::string::String>,
     /// <p>Select a particular subtree of the directory information tree (DIT) to search for user entries. The subtree is specified by a DN, which specifies the base node of the subtree. For example, by setting this option to ou=Users,ou=corp, dc=corp, dc=example, dc=com, the search for user entries is restricted to the subtree beneath ou=Users, ou=corp, dc=corp, dc=example, dc=com.</p>
+    #[doc(hidden)]
     pub user_base: std::option::Option<std::string::String>,
     /// <p>Specifies the name of the LDAP attribute for the user group membership.</p>
+    #[doc(hidden)]
     pub user_role_name: std::option::Option<std::string::String>,
     /// <p>The LDAP search filter used to find users within the userBase. The client's username is substituted into the {0} placeholder in the search filter. For example, if this option is set to (uid={0}) and the received username is janedoe, the search filter becomes (uid=janedoe) after string substitution. It will result in matching an entry like uid=janedoe, ou=Users,ou=corp, dc=corp, dc=example, dc=com.</p>
+    #[doc(hidden)]
     pub user_search_matching: std::option::Option<std::string::String>,
     /// <p>The directory search scope for the user. If set to true, scope is to search the entire subtree.</p>
+    #[doc(hidden)]
     pub user_search_subtree: bool,
 }
 impl LdapServerMetadataOutput {
@@ -598,11 +615,10 @@ impl std::fmt::Debug for LdapServerMetadataOutput {
         formatter.finish()
     }
 }
-/// See [`LdapServerMetadataOutput`](crate::model::LdapServerMetadataOutput)
+/// See [`LdapServerMetadataOutput`](crate::model::LdapServerMetadataOutput).
 pub mod ldap_server_metadata_output {
 
-    /// A builder for [`LdapServerMetadataOutput`](crate::model::LdapServerMetadataOutput)
-    #[non_exhaustive]
+    /// A builder for [`LdapServerMetadataOutput`](crate::model::LdapServerMetadataOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hosts: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -738,7 +754,7 @@ pub mod ldap_server_metadata_output {
             self.user_search_subtree = input;
             self
         }
-        /// Consumes the builder and constructs a [`LdapServerMetadataOutput`](crate::model::LdapServerMetadataOutput)
+        /// Consumes the builder and constructs a [`LdapServerMetadataOutput`](crate::model::LdapServerMetadataOutput).
         pub fn build(self) -> crate::model::LdapServerMetadataOutput {
             crate::model::LdapServerMetadataOutput {
                 hosts: self.hosts,
@@ -756,7 +772,7 @@ pub mod ldap_server_metadata_output {
     }
 }
 impl LdapServerMetadataOutput {
-    /// Creates a new builder-style object to manufacture [`LdapServerMetadataOutput`](crate::model::LdapServerMetadataOutput)
+    /// Creates a new builder-style object to manufacture [`LdapServerMetadataOutput`](crate::model::LdapServerMetadataOutput).
     pub fn builder() -> crate::model::ldap_server_metadata_output::Builder {
         crate::model::ldap_server_metadata_output::Builder::default()
     }
@@ -769,8 +785,10 @@ impl LdapServerMetadataOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigurationId {
     /// <p>Required. The unique ID that Amazon MQ generates for the configuration.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The revision number of the configuration.</p>
+    #[doc(hidden)]
     pub revision: i32,
 }
 impl ConfigurationId {
@@ -791,11 +809,10 @@ impl std::fmt::Debug for ConfigurationId {
         formatter.finish()
     }
 }
-/// See [`ConfigurationId`](crate::model::ConfigurationId)
+/// See [`ConfigurationId`](crate::model::ConfigurationId).
 pub mod configuration_id {
 
-    /// A builder for [`ConfigurationId`](crate::model::ConfigurationId)
-    #[non_exhaustive]
+    /// A builder for [`ConfigurationId`](crate::model::ConfigurationId).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -822,7 +839,7 @@ pub mod configuration_id {
             self.revision = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigurationId`](crate::model::ConfigurationId)
+        /// Consumes the builder and constructs a [`ConfigurationId`](crate::model::ConfigurationId).
         pub fn build(self) -> crate::model::ConfigurationId {
             crate::model::ConfigurationId {
                 id: self.id,
@@ -832,7 +849,7 @@ pub mod configuration_id {
     }
 }
 impl ConfigurationId {
-    /// Creates a new builder-style object to manufacture [`ConfigurationId`](crate::model::ConfigurationId)
+    /// Creates a new builder-style object to manufacture [`ConfigurationId`](crate::model::ConfigurationId).
     pub fn builder() -> crate::model::configuration_id::Builder {
         crate::model::configuration_id::Builder::default()
     }
@@ -900,26 +917,37 @@ impl AsRef<str> for AuthenticationStrategy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LdapServerMetadataInput {
     /// <p>Specifies the location of the LDAP server such as AWS Directory Service for Microsoft Active Directory . Optional failover server.</p>
+    #[doc(hidden)]
     pub hosts: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The distinguished name of the node in the directory information tree (DIT) to search for roles or groups. For example, ou=group, ou=corp, dc=corp, dc=example, dc=com.</p>
+    #[doc(hidden)]
     pub role_base: std::option::Option<std::string::String>,
     /// <p>Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query.</p>
+    #[doc(hidden)]
     pub role_name: std::option::Option<std::string::String>,
     /// <p>The LDAP search filter used to find roles within the roleBase. The distinguished name of the user matched by userSearchMatching is substituted into the {0} placeholder in the search filter. The client's username is substituted into the {1} placeholder. For example, if you set this option to (member=uid={1})for the user janedoe, the search filter becomes (member=uid=janedoe) after string substitution. It matches all role entries that have a member attribute equal to uid=janedoe under the subtree selected by the roleBase.</p>
+    #[doc(hidden)]
     pub role_search_matching: std::option::Option<std::string::String>,
     /// <p>The directory search scope for the role. If set to true, scope is to search the entire subtree.</p>
+    #[doc(hidden)]
     pub role_search_subtree: bool,
     /// <p>Service account password. A service account is an account in your LDAP server that has access to initiate a connection. For example, cn=admin,dc=corp, dc=example, dc=com.</p>
+    #[doc(hidden)]
     pub service_account_password: std::option::Option<std::string::String>,
     /// <p>Service account username. A service account is an account in your LDAP server that has access to initiate a connection. For example, cn=admin,dc=corp, dc=example, dc=com.</p>
+    #[doc(hidden)]
     pub service_account_username: std::option::Option<std::string::String>,
     /// <p>Select a particular subtree of the directory information tree (DIT) to search for user entries. The subtree is specified by a DN, which specifies the base node of the subtree. For example, by setting this option to ou=Users,ou=corp, dc=corp, dc=example, dc=com, the search for user entries is restricted to the subtree beneath ou=Users, ou=corp, dc=corp, dc=example, dc=com.</p>
+    #[doc(hidden)]
     pub user_base: std::option::Option<std::string::String>,
     /// <p>Specifies the name of the LDAP attribute for the user group membership.</p>
+    #[doc(hidden)]
     pub user_role_name: std::option::Option<std::string::String>,
     /// <p>The LDAP search filter used to find users within the userBase. The client's username is substituted into the {0} placeholder in the search filter. For example, if this option is set to (uid={0}) and the received username is janedoe, the search filter becomes (uid=janedoe) after string substitution. It will result in matching an entry like uid=janedoe, ou=Users,ou=corp, dc=corp, dc=example, dc=com.</p>
+    #[doc(hidden)]
     pub user_search_matching: std::option::Option<std::string::String>,
     /// <p>The directory search scope for the user. If set to true, scope is to search the entire subtree.</p>
+    #[doc(hidden)]
     pub user_search_subtree: bool,
 }
 impl LdapServerMetadataInput {
@@ -985,11 +1013,10 @@ impl std::fmt::Debug for LdapServerMetadataInput {
         formatter.finish()
     }
 }
-/// See [`LdapServerMetadataInput`](crate::model::LdapServerMetadataInput)
+/// See [`LdapServerMetadataInput`](crate::model::LdapServerMetadataInput).
 pub mod ldap_server_metadata_input {
 
-    /// A builder for [`LdapServerMetadataInput`](crate::model::LdapServerMetadataInput)
-    #[non_exhaustive]
+    /// A builder for [`LdapServerMetadataInput`](crate::model::LdapServerMetadataInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hosts: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1139,7 +1166,7 @@ pub mod ldap_server_metadata_input {
             self.user_search_subtree = input;
             self
         }
-        /// Consumes the builder and constructs a [`LdapServerMetadataInput`](crate::model::LdapServerMetadataInput)
+        /// Consumes the builder and constructs a [`LdapServerMetadataInput`](crate::model::LdapServerMetadataInput).
         pub fn build(self) -> crate::model::LdapServerMetadataInput {
             crate::model::LdapServerMetadataInput {
                 hosts: self.hosts,
@@ -1158,7 +1185,7 @@ pub mod ldap_server_metadata_input {
     }
 }
 impl LdapServerMetadataInput {
-    /// Creates a new builder-style object to manufacture [`LdapServerMetadataInput`](crate::model::LdapServerMetadataInput)
+    /// Creates a new builder-style object to manufacture [`LdapServerMetadataInput`](crate::model::LdapServerMetadataInput).
     pub fn builder() -> crate::model::ldap_server_metadata_input::Builder {
         crate::model::ldap_server_metadata_input::Builder::default()
     }
@@ -1169,8 +1196,10 @@ impl LdapServerMetadataInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserSummary {
     /// <p>The type of change pending for the broker user.</p>
+    #[doc(hidden)]
     pub pending_change: std::option::Option<crate::model::ChangeType>,
     /// <p>Required. The username of the broker user. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes (- . _ ~). This value must be 2-100 characters long.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
 }
 impl UserSummary {
@@ -1191,11 +1220,10 @@ impl std::fmt::Debug for UserSummary {
         formatter.finish()
     }
 }
-/// See [`UserSummary`](crate::model::UserSummary)
+/// See [`UserSummary`](crate::model::UserSummary).
 pub mod user_summary {
 
-    /// A builder for [`UserSummary`](crate::model::UserSummary)
-    #[non_exhaustive]
+    /// A builder for [`UserSummary`](crate::model::UserSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pending_change: std::option::Option<crate::model::ChangeType>,
@@ -1225,7 +1253,7 @@ pub mod user_summary {
             self.username = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserSummary`](crate::model::UserSummary)
+        /// Consumes the builder and constructs a [`UserSummary`](crate::model::UserSummary).
         pub fn build(self) -> crate::model::UserSummary {
             crate::model::UserSummary {
                 pending_change: self.pending_change,
@@ -1235,7 +1263,7 @@ pub mod user_summary {
     }
 }
 impl UserSummary {
-    /// Creates a new builder-style object to manufacture [`UserSummary`](crate::model::UserSummary)
+    /// Creates a new builder-style object to manufacture [`UserSummary`](crate::model::UserSummary).
     pub fn builder() -> crate::model::user_summary::Builder {
         crate::model::user_summary::Builder::default()
     }
@@ -1305,24 +1333,34 @@ impl AsRef<str> for ChangeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Configuration {
     /// <p>Required. The ARN of the configuration.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Optional. The authentication strategy associated with the configuration. The default is SIMPLE.</p>
+    #[doc(hidden)]
     pub authentication_strategy: std::option::Option<crate::model::AuthenticationStrategy>,
     /// <p>Required. The date and time of the configuration revision.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Required. The description of the configuration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Required. The type of broker engine. Currently, Amazon MQ supports ACTIVEMQ and RABBITMQ.</p>
+    #[doc(hidden)]
     pub engine_type: std::option::Option<crate::model::EngineType>,
     /// <p>Required. The broker engine's version. For a list of supported engine versions, see, <a href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/broker-engine.html">Supported engines</a>.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>Required. The unique ID that Amazon MQ generates for the configuration.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Required. The latest revision of the configuration.</p>
+    #[doc(hidden)]
     pub latest_revision: std::option::Option<crate::model::ConfigurationRevision>,
     /// <p>Required. The name of the configuration. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes (- . _ ~). This value must be 1-150 characters long.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The list of all tags associated with this configuration.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1389,11 +1427,10 @@ impl std::fmt::Debug for Configuration {
         formatter.finish()
     }
 }
-/// See [`Configuration`](crate::model::Configuration)
+/// See [`Configuration`](crate::model::Configuration).
 pub mod configuration {
 
-    /// A builder for [`Configuration`](crate::model::Configuration)
-    #[non_exhaustive]
+    /// A builder for [`Configuration`](crate::model::Configuration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1544,7 +1581,7 @@ pub mod configuration {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Configuration`](crate::model::Configuration)
+        /// Consumes the builder and constructs a [`Configuration`](crate::model::Configuration).
         pub fn build(self) -> crate::model::Configuration {
             crate::model::Configuration {
                 arn: self.arn,
@@ -1562,7 +1599,7 @@ pub mod configuration {
     }
 }
 impl Configuration {
-    /// Creates a new builder-style object to manufacture [`Configuration`](crate::model::Configuration)
+    /// Creates a new builder-style object to manufacture [`Configuration`](crate::model::Configuration).
     pub fn builder() -> crate::model::configuration::Builder {
         crate::model::configuration::Builder::default()
     }
@@ -1628,20 +1665,28 @@ impl AsRef<str> for EngineType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BrokerSummary {
     /// <p>The broker's Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub broker_arn: std::option::Option<std::string::String>,
     /// <p>The unique ID that Amazon MQ generates for the broker.</p>
+    #[doc(hidden)]
     pub broker_id: std::option::Option<std::string::String>,
     /// <p>The broker's name. This value is unique in your AWS account, 1-50 characters long, and containing only letters, numbers, dashes, and underscores, and must not contain white spaces, brackets, wildcard characters, or special characters.</p>
+    #[doc(hidden)]
     pub broker_name: std::option::Option<std::string::String>,
     /// <p>The broker's status.</p>
+    #[doc(hidden)]
     pub broker_state: std::option::Option<crate::model::BrokerState>,
     /// <p>The time when the broker was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The broker's deployment mode.</p>
+    #[doc(hidden)]
     pub deployment_mode: std::option::Option<crate::model::DeploymentMode>,
     /// <p>The type of broker engine.</p>
+    #[doc(hidden)]
     pub engine_type: std::option::Option<crate::model::EngineType>,
     /// <p>The broker's instance type.</p>
+    #[doc(hidden)]
     pub host_instance_type: std::option::Option<std::string::String>,
 }
 impl BrokerSummary {
@@ -1692,11 +1737,10 @@ impl std::fmt::Debug for BrokerSummary {
         formatter.finish()
     }
 }
-/// See [`BrokerSummary`](crate::model::BrokerSummary)
+/// See [`BrokerSummary`](crate::model::BrokerSummary).
 pub mod broker_summary {
 
-    /// A builder for [`BrokerSummary`](crate::model::BrokerSummary)
-    #[non_exhaustive]
+    /// A builder for [`BrokerSummary`](crate::model::BrokerSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) broker_arn: std::option::Option<std::string::String>,
@@ -1804,7 +1848,7 @@ pub mod broker_summary {
             self.host_instance_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`BrokerSummary`](crate::model::BrokerSummary)
+        /// Consumes the builder and constructs a [`BrokerSummary`](crate::model::BrokerSummary).
         pub fn build(self) -> crate::model::BrokerSummary {
             crate::model::BrokerSummary {
                 broker_arn: self.broker_arn,
@@ -1820,7 +1864,7 @@ pub mod broker_summary {
     }
 }
 impl BrokerSummary {
-    /// Creates a new builder-style object to manufacture [`BrokerSummary`](crate::model::BrokerSummary)
+    /// Creates a new builder-style object to manufacture [`BrokerSummary`](crate::model::BrokerSummary).
     pub fn builder() -> crate::model::broker_summary::Builder {
         crate::model::broker_summary::Builder::default()
     }
@@ -1972,10 +2016,13 @@ impl AsRef<str> for BrokerState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserPendingChanges {
     /// <p>Enables access to the the ActiveMQ Web Console for the ActiveMQ user.</p>
+    #[doc(hidden)]
     pub console_access: bool,
     /// <p>The list of groups (20 maximum) to which the ActiveMQ user belongs. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes (- . _ ~). This value must be 2-100 characters long.</p>
+    #[doc(hidden)]
     pub groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Required. The type of change pending for the ActiveMQ user.</p>
+    #[doc(hidden)]
     pub pending_change: std::option::Option<crate::model::ChangeType>,
 }
 impl UserPendingChanges {
@@ -2001,11 +2048,10 @@ impl std::fmt::Debug for UserPendingChanges {
         formatter.finish()
     }
 }
-/// See [`UserPendingChanges`](crate::model::UserPendingChanges)
+/// See [`UserPendingChanges`](crate::model::UserPendingChanges).
 pub mod user_pending_changes {
 
-    /// A builder for [`UserPendingChanges`](crate::model::UserPendingChanges)
-    #[non_exhaustive]
+    /// A builder for [`UserPendingChanges`](crate::model::UserPendingChanges).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) console_access: std::option::Option<bool>,
@@ -2055,7 +2101,7 @@ pub mod user_pending_changes {
             self.pending_change = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserPendingChanges`](crate::model::UserPendingChanges)
+        /// Consumes the builder and constructs a [`UserPendingChanges`](crate::model::UserPendingChanges).
         pub fn build(self) -> crate::model::UserPendingChanges {
             crate::model::UserPendingChanges {
                 console_access: self.console_access.unwrap_or_default(),
@@ -2066,7 +2112,7 @@ pub mod user_pending_changes {
     }
 }
 impl UserPendingChanges {
-    /// Creates a new builder-style object to manufacture [`UserPendingChanges`](crate::model::UserPendingChanges)
+    /// Creates a new builder-style object to manufacture [`UserPendingChanges`](crate::model::UserPendingChanges).
     pub fn builder() -> crate::model::user_pending_changes::Builder {
         crate::model::user_pending_changes::Builder::default()
     }
@@ -2077,17 +2123,23 @@ impl UserPendingChanges {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BrokerInstanceOption {
     /// <p>The list of available az.</p>
+    #[doc(hidden)]
     pub availability_zones: std::option::Option<std::vec::Vec<crate::model::AvailabilityZone>>,
     /// <p>The broker's engine type.</p>
+    #[doc(hidden)]
     pub engine_type: std::option::Option<crate::model::EngineType>,
     /// <p>The broker's instance type.</p>
+    #[doc(hidden)]
     pub host_instance_type: std::option::Option<std::string::String>,
     /// <p>The broker's storage type.</p>
+    #[doc(hidden)]
     pub storage_type: std::option::Option<crate::model::BrokerStorageType>,
     /// <p>The list of supported deployment modes.</p>
+    #[doc(hidden)]
     pub supported_deployment_modes:
         std::option::Option<std::vec::Vec<crate::model::DeploymentMode>>,
     /// <p>The list of supported engine versions.</p>
+    #[doc(hidden)]
     pub supported_engine_versions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl BrokerInstanceOption {
@@ -2133,11 +2185,10 @@ impl std::fmt::Debug for BrokerInstanceOption {
         formatter.finish()
     }
 }
-/// See [`BrokerInstanceOption`](crate::model::BrokerInstanceOption)
+/// See [`BrokerInstanceOption`](crate::model::BrokerInstanceOption).
 pub mod broker_instance_option {
 
-    /// A builder for [`BrokerInstanceOption`](crate::model::BrokerInstanceOption)
-    #[non_exhaustive]
+    /// A builder for [`BrokerInstanceOption`](crate::model::BrokerInstanceOption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) availability_zones:
@@ -2247,7 +2298,7 @@ pub mod broker_instance_option {
             self.supported_engine_versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`BrokerInstanceOption`](crate::model::BrokerInstanceOption)
+        /// Consumes the builder and constructs a [`BrokerInstanceOption`](crate::model::BrokerInstanceOption).
         pub fn build(self) -> crate::model::BrokerInstanceOption {
             crate::model::BrokerInstanceOption {
                 availability_zones: self.availability_zones,
@@ -2261,7 +2312,7 @@ pub mod broker_instance_option {
     }
 }
 impl BrokerInstanceOption {
-    /// Creates a new builder-style object to manufacture [`BrokerInstanceOption`](crate::model::BrokerInstanceOption)
+    /// Creates a new builder-style object to manufacture [`BrokerInstanceOption`](crate::model::BrokerInstanceOption).
     pub fn builder() -> crate::model::broker_instance_option::Builder {
         crate::model::broker_instance_option::Builder::default()
     }
@@ -2327,6 +2378,7 @@ impl AsRef<str> for BrokerStorageType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AvailabilityZone {
     /// <p>Id for the availability zone.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl AvailabilityZone {
@@ -2342,11 +2394,10 @@ impl std::fmt::Debug for AvailabilityZone {
         formatter.finish()
     }
 }
-/// See [`AvailabilityZone`](crate::model::AvailabilityZone)
+/// See [`AvailabilityZone`](crate::model::AvailabilityZone).
 pub mod availability_zone {
 
-    /// A builder for [`AvailabilityZone`](crate::model::AvailabilityZone)
-    #[non_exhaustive]
+    /// A builder for [`AvailabilityZone`](crate::model::AvailabilityZone).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2362,14 +2413,14 @@ pub mod availability_zone {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AvailabilityZone`](crate::model::AvailabilityZone)
+        /// Consumes the builder and constructs a [`AvailabilityZone`](crate::model::AvailabilityZone).
         pub fn build(self) -> crate::model::AvailabilityZone {
             crate::model::AvailabilityZone { name: self.name }
         }
     }
 }
 impl AvailabilityZone {
-    /// Creates a new builder-style object to manufacture [`AvailabilityZone`](crate::model::AvailabilityZone)
+    /// Creates a new builder-style object to manufacture [`AvailabilityZone`](crate::model::AvailabilityZone).
     pub fn builder() -> crate::model::availability_zone::Builder {
         crate::model::availability_zone::Builder::default()
     }
@@ -2380,8 +2431,10 @@ impl AvailabilityZone {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BrokerEngineType {
     /// <p>The broker's engine type.</p>
+    #[doc(hidden)]
     pub engine_type: std::option::Option<crate::model::EngineType>,
     /// <p>The list of engine versions.</p>
+    #[doc(hidden)]
     pub engine_versions: std::option::Option<std::vec::Vec<crate::model::EngineVersion>>,
 }
 impl BrokerEngineType {
@@ -2402,11 +2455,10 @@ impl std::fmt::Debug for BrokerEngineType {
         formatter.finish()
     }
 }
-/// See [`BrokerEngineType`](crate::model::BrokerEngineType)
+/// See [`BrokerEngineType`](crate::model::BrokerEngineType).
 pub mod broker_engine_type {
 
-    /// A builder for [`BrokerEngineType`](crate::model::BrokerEngineType)
-    #[non_exhaustive]
+    /// A builder for [`BrokerEngineType`](crate::model::BrokerEngineType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine_type: std::option::Option<crate::model::EngineType>,
@@ -2445,7 +2497,7 @@ pub mod broker_engine_type {
             self.engine_versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`BrokerEngineType`](crate::model::BrokerEngineType)
+        /// Consumes the builder and constructs a [`BrokerEngineType`](crate::model::BrokerEngineType).
         pub fn build(self) -> crate::model::BrokerEngineType {
             crate::model::BrokerEngineType {
                 engine_type: self.engine_type,
@@ -2455,7 +2507,7 @@ pub mod broker_engine_type {
     }
 }
 impl BrokerEngineType {
-    /// Creates a new builder-style object to manufacture [`BrokerEngineType`](crate::model::BrokerEngineType)
+    /// Creates a new builder-style object to manufacture [`BrokerEngineType`](crate::model::BrokerEngineType).
     pub fn builder() -> crate::model::broker_engine_type::Builder {
         crate::model::broker_engine_type::Builder::default()
     }
@@ -2466,6 +2518,7 @@ impl BrokerEngineType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EngineVersion {
     /// <p>Id for the version.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl EngineVersion {
@@ -2481,11 +2534,10 @@ impl std::fmt::Debug for EngineVersion {
         formatter.finish()
     }
 }
-/// See [`EngineVersion`](crate::model::EngineVersion)
+/// See [`EngineVersion`](crate::model::EngineVersion).
 pub mod engine_version {
 
-    /// A builder for [`EngineVersion`](crate::model::EngineVersion)
-    #[non_exhaustive]
+    /// A builder for [`EngineVersion`](crate::model::EngineVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2501,14 +2553,14 @@ pub mod engine_version {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`EngineVersion`](crate::model::EngineVersion)
+        /// Consumes the builder and constructs a [`EngineVersion`](crate::model::EngineVersion).
         pub fn build(self) -> crate::model::EngineVersion {
             crate::model::EngineVersion { name: self.name }
         }
     }
 }
 impl EngineVersion {
-    /// Creates a new builder-style object to manufacture [`EngineVersion`](crate::model::EngineVersion)
+    /// Creates a new builder-style object to manufacture [`EngineVersion`](crate::model::EngineVersion).
     pub fn builder() -> crate::model::engine_version::Builder {
         crate::model::engine_version::Builder::default()
     }
@@ -2519,14 +2571,19 @@ impl EngineVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogsSummary {
     /// <p>Enables audit logging. Every user management action made using JMX or the ActiveMQ Web Console is logged.</p>
+    #[doc(hidden)]
     pub audit: bool,
     /// <p>The location of the CloudWatch Logs log group where audit logs are sent.</p>
+    #[doc(hidden)]
     pub audit_log_group: std::option::Option<std::string::String>,
     /// <p>Enables general logging.</p>
+    #[doc(hidden)]
     pub general: bool,
     /// <p>The location of the CloudWatch Logs log group where general logs are sent.</p>
+    #[doc(hidden)]
     pub general_log_group: std::option::Option<std::string::String>,
     /// <p>The list of information about logs pending to be deployed for the specified broker.</p>
+    #[doc(hidden)]
     pub pending: std::option::Option<crate::model::PendingLogs>,
 }
 impl LogsSummary {
@@ -2562,11 +2619,10 @@ impl std::fmt::Debug for LogsSummary {
         formatter.finish()
     }
 }
-/// See [`LogsSummary`](crate::model::LogsSummary)
+/// See [`LogsSummary`](crate::model::LogsSummary).
 pub mod logs_summary {
 
-    /// A builder for [`LogsSummary`](crate::model::LogsSummary)
-    #[non_exhaustive]
+    /// A builder for [`LogsSummary`](crate::model::LogsSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audit: std::option::Option<bool>,
@@ -2635,7 +2691,7 @@ pub mod logs_summary {
             self.pending = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogsSummary`](crate::model::LogsSummary)
+        /// Consumes the builder and constructs a [`LogsSummary`](crate::model::LogsSummary).
         pub fn build(self) -> crate::model::LogsSummary {
             crate::model::LogsSummary {
                 audit: self.audit.unwrap_or_default(),
@@ -2648,7 +2704,7 @@ pub mod logs_summary {
     }
 }
 impl LogsSummary {
-    /// Creates a new builder-style object to manufacture [`LogsSummary`](crate::model::LogsSummary)
+    /// Creates a new builder-style object to manufacture [`LogsSummary`](crate::model::LogsSummary).
     pub fn builder() -> crate::model::logs_summary::Builder {
         crate::model::logs_summary::Builder::default()
     }
@@ -2659,8 +2715,10 @@ impl LogsSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PendingLogs {
     /// <p>Enables audit logging. Every user management action made using JMX or the ActiveMQ Web Console is logged.</p>
+    #[doc(hidden)]
     pub audit: bool,
     /// <p>Enables general logging.</p>
+    #[doc(hidden)]
     pub general: bool,
 }
 impl PendingLogs {
@@ -2681,11 +2739,10 @@ impl std::fmt::Debug for PendingLogs {
         formatter.finish()
     }
 }
-/// See [`PendingLogs`](crate::model::PendingLogs)
+/// See [`PendingLogs`](crate::model::PendingLogs).
 pub mod pending_logs {
 
-    /// A builder for [`PendingLogs`](crate::model::PendingLogs)
-    #[non_exhaustive]
+    /// A builder for [`PendingLogs`](crate::model::PendingLogs).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audit: std::option::Option<bool>,
@@ -2712,7 +2769,7 @@ pub mod pending_logs {
             self.general = input;
             self
         }
-        /// Consumes the builder and constructs a [`PendingLogs`](crate::model::PendingLogs)
+        /// Consumes the builder and constructs a [`PendingLogs`](crate::model::PendingLogs).
         pub fn build(self) -> crate::model::PendingLogs {
             crate::model::PendingLogs {
                 audit: self.audit.unwrap_or_default(),
@@ -2722,7 +2779,7 @@ pub mod pending_logs {
     }
 }
 impl PendingLogs {
-    /// Creates a new builder-style object to manufacture [`PendingLogs`](crate::model::PendingLogs)
+    /// Creates a new builder-style object to manufacture [`PendingLogs`](crate::model::PendingLogs).
     pub fn builder() -> crate::model::pending_logs::Builder {
         crate::model::pending_logs::Builder::default()
     }
@@ -2736,8 +2793,10 @@ impl PendingLogs {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EncryptionOptions {
     /// <p>The customer master key (CMK) to use for the AWS Key Management Service (KMS). This key is used to encrypt your data at rest. If not provided, Amazon MQ will use a default CMK to encrypt your data.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>Enables the use of an AWS owned CMK using AWS Key Management Service (KMS). Set to true by default, if no value is provided, for example, for RabbitMQ brokers.</p>
+    #[doc(hidden)]
     pub use_aws_owned_key: bool,
 }
 impl EncryptionOptions {
@@ -2758,11 +2817,10 @@ impl std::fmt::Debug for EncryptionOptions {
         formatter.finish()
     }
 }
-/// See [`EncryptionOptions`](crate::model::EncryptionOptions)
+/// See [`EncryptionOptions`](crate::model::EncryptionOptions).
 pub mod encryption_options {
 
-    /// A builder for [`EncryptionOptions`](crate::model::EncryptionOptions)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionOptions`](crate::model::EncryptionOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) kms_key_id: std::option::Option<std::string::String>,
@@ -2789,7 +2847,7 @@ pub mod encryption_options {
             self.use_aws_owned_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionOptions`](crate::model::EncryptionOptions)
+        /// Consumes the builder and constructs a [`EncryptionOptions`](crate::model::EncryptionOptions).
         pub fn build(self) -> crate::model::EncryptionOptions {
             crate::model::EncryptionOptions {
                 kms_key_id: self.kms_key_id,
@@ -2799,7 +2857,7 @@ pub mod encryption_options {
     }
 }
 impl EncryptionOptions {
-    /// Creates a new builder-style object to manufacture [`EncryptionOptions`](crate::model::EncryptionOptions)
+    /// Creates a new builder-style object to manufacture [`EncryptionOptions`](crate::model::EncryptionOptions).
     pub fn builder() -> crate::model::encryption_options::Builder {
         crate::model::encryption_options::Builder::default()
     }
@@ -2810,10 +2868,13 @@ impl EncryptionOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Configurations {
     /// <p>The broker's current configuration.</p>
+    #[doc(hidden)]
     pub current: std::option::Option<crate::model::ConfigurationId>,
     /// <p>The history of configurations applied to the broker.</p>
+    #[doc(hidden)]
     pub history: std::option::Option<std::vec::Vec<crate::model::ConfigurationId>>,
     /// <p>The broker's pending configuration.</p>
+    #[doc(hidden)]
     pub pending: std::option::Option<crate::model::ConfigurationId>,
 }
 impl Configurations {
@@ -2839,11 +2900,10 @@ impl std::fmt::Debug for Configurations {
         formatter.finish()
     }
 }
-/// See [`Configurations`](crate::model::Configurations)
+/// See [`Configurations`](crate::model::Configurations).
 pub mod configurations {
 
-    /// A builder for [`Configurations`](crate::model::Configurations)
-    #[non_exhaustive]
+    /// A builder for [`Configurations`](crate::model::Configurations).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) current: std::option::Option<crate::model::ConfigurationId>,
@@ -2896,7 +2956,7 @@ pub mod configurations {
             self.pending = input;
             self
         }
-        /// Consumes the builder and constructs a [`Configurations`](crate::model::Configurations)
+        /// Consumes the builder and constructs a [`Configurations`](crate::model::Configurations).
         pub fn build(self) -> crate::model::Configurations {
             crate::model::Configurations {
                 current: self.current,
@@ -2907,7 +2967,7 @@ pub mod configurations {
     }
 }
 impl Configurations {
-    /// Creates a new builder-style object to manufacture [`Configurations`](crate::model::Configurations)
+    /// Creates a new builder-style object to manufacture [`Configurations`](crate::model::Configurations).
     pub fn builder() -> crate::model::configurations::Builder {
         crate::model::configurations::Builder::default()
     }
@@ -2918,10 +2978,13 @@ impl Configurations {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BrokerInstance {
     /// <p>The brokers web console URL.</p>
+    #[doc(hidden)]
     pub console_url: std::option::Option<std::string::String>,
     /// <p>The broker's wire-level protocol endpoints.</p>
+    #[doc(hidden)]
     pub endpoints: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The IP address of the Elastic Network Interface (ENI) attached to the broker. Does not apply to RabbitMQ brokers.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
 }
 impl BrokerInstance {
@@ -2947,11 +3010,10 @@ impl std::fmt::Debug for BrokerInstance {
         formatter.finish()
     }
 }
-/// See [`BrokerInstance`](crate::model::BrokerInstance)
+/// See [`BrokerInstance`](crate::model::BrokerInstance).
 pub mod broker_instance {
 
-    /// A builder for [`BrokerInstance`](crate::model::BrokerInstance)
-    #[non_exhaustive]
+    /// A builder for [`BrokerInstance`](crate::model::BrokerInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) console_url: std::option::Option<std::string::String>,
@@ -2998,7 +3060,7 @@ pub mod broker_instance {
             self.ip_address = input;
             self
         }
-        /// Consumes the builder and constructs a [`BrokerInstance`](crate::model::BrokerInstance)
+        /// Consumes the builder and constructs a [`BrokerInstance`](crate::model::BrokerInstance).
         pub fn build(self) -> crate::model::BrokerInstance {
             crate::model::BrokerInstance {
                 console_url: self.console_url,
@@ -3009,7 +3071,7 @@ pub mod broker_instance {
     }
 }
 impl BrokerInstance {
-    /// Creates a new builder-style object to manufacture [`BrokerInstance`](crate::model::BrokerInstance)
+    /// Creates a new builder-style object to manufacture [`BrokerInstance`](crate::model::BrokerInstance).
     pub fn builder() -> crate::model::broker_instance::Builder {
         crate::model::broker_instance::Builder::default()
     }
@@ -3020,8 +3082,10 @@ impl BrokerInstance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActionRequired {
     /// <p>The code you can use to resolve your broker issue when the broker is in a CRITICAL_ACTION_REQUIRED state. You can find instructions by choosing the link for your code from the list of action required codes in <a href="https://docs.aws.amazon.com//latest/developer-guide/troubleshooting-action-required-codes.html">Amazon MQ action required codes</a>. Each code references a topic with detailed information, instructions, and recommendations for how to resolve the issue and prevent future occurrences.</p>
+    #[doc(hidden)]
     pub action_required_code: std::option::Option<std::string::String>,
     /// <p>Information about the action required to resolve your broker issue when the broker is in a CRITICAL_ACTION_REQUIRED state.</p>
+    #[doc(hidden)]
     pub action_required_info: std::option::Option<std::string::String>,
 }
 impl ActionRequired {
@@ -3042,11 +3106,10 @@ impl std::fmt::Debug for ActionRequired {
         formatter.finish()
     }
 }
-/// See [`ActionRequired`](crate::model::ActionRequired)
+/// See [`ActionRequired`](crate::model::ActionRequired).
 pub mod action_required {
 
-    /// A builder for [`ActionRequired`](crate::model::ActionRequired)
-    #[non_exhaustive]
+    /// A builder for [`ActionRequired`](crate::model::ActionRequired).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action_required_code: std::option::Option<std::string::String>,
@@ -3079,7 +3142,7 @@ pub mod action_required {
             self.action_required_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActionRequired`](crate::model::ActionRequired)
+        /// Consumes the builder and constructs a [`ActionRequired`](crate::model::ActionRequired).
         pub fn build(self) -> crate::model::ActionRequired {
             crate::model::ActionRequired {
                 action_required_code: self.action_required_code,
@@ -3089,7 +3152,7 @@ pub mod action_required {
     }
 }
 impl ActionRequired {
-    /// Creates a new builder-style object to manufacture [`ActionRequired`](crate::model::ActionRequired)
+    /// Creates a new builder-style object to manufacture [`ActionRequired`](crate::model::ActionRequired).
     pub fn builder() -> crate::model::action_required::Builder {
         crate::model::action_required::Builder::default()
     }
@@ -3100,10 +3163,13 @@ impl ActionRequired {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct User {
     /// <p>Enables access to the ActiveMQ Web Console for the ActiveMQ user. Does not apply to RabbitMQ brokers.</p>
+    #[doc(hidden)]
     pub console_access: bool,
     /// <p>The list of groups (20 maximum) to which the ActiveMQ user belongs. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes (- . _ ~). This value must be 2-100 characters long. Does not apply to RabbitMQ brokers.</p>
+    #[doc(hidden)]
     pub groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Required. The password of the user. This value must be at least 12 characters long, must contain at least 4 unique characters, and must not contain commas, colons, or equal signs (,:=).</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>important&gt;<title>Amazon MQ for ActiveMQ</title> <para>
     /// For ActiveMQ brokers, this value can contain only alphanumeric characters, dashes, periods, underscores, and tildes (- . _ ~). This value must be 2-100 characters long.
@@ -3111,6 +3177,7 @@ pub struct User {
     /// <title>Amazon MQ for RabbitMQ</title>
     /// <p>For RabbitMQ brokers, this value can contain only alphanumeric characters, dashes, periods, underscores (- . _). This value must not contain a tilde (~) character. Amazon MQ prohibts using guest as a valid usename. This value must be 2-100 characters long.</p>
     /// </important>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
 }
 impl User {
@@ -3146,11 +3213,10 @@ impl std::fmt::Debug for User {
         formatter.finish()
     }
 }
-/// See [`User`](crate::model::User)
+/// See [`User`](crate::model::User).
 pub mod user {
 
-    /// A builder for [`User`](crate::model::User)
-    #[non_exhaustive]
+    /// A builder for [`User`](crate::model::User).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) console_access: std::option::Option<bool>,
@@ -3218,7 +3284,7 @@ pub mod user {
             self.username = input;
             self
         }
-        /// Consumes the builder and constructs a [`User`](crate::model::User)
+        /// Consumes the builder and constructs a [`User`](crate::model::User).
         pub fn build(self) -> crate::model::User {
             crate::model::User {
                 console_access: self.console_access.unwrap_or_default(),
@@ -3230,7 +3296,7 @@ pub mod user {
     }
 }
 impl User {
-    /// Creates a new builder-style object to manufacture [`User`](crate::model::User)
+    /// Creates a new builder-style object to manufacture [`User`](crate::model::User).
     pub fn builder() -> crate::model::user::Builder {
         crate::model::user::Builder::default()
     }

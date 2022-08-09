@@ -5,14 +5,19 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpceConfiguration {
     /// <p>The Amazon Resource Name (ARN) of the VPC endpoint configuration.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The friendly name you give to your VPC endpoint configuration to manage your configurations more easily.</p>
+    #[doc(hidden)]
     pub vpce_configuration_name: std::option::Option<std::string::String>,
     /// <p>The name of the VPC endpoint service running in your AWS account that you want Device Farm to test.</p>
+    #[doc(hidden)]
     pub vpce_service_name: std::option::Option<std::string::String>,
     /// <p>The DNS name that maps to the private IP address of the service you want to access.</p>
+    #[doc(hidden)]
     pub service_dns_name: std::option::Option<std::string::String>,
     /// <p>An optional description that provides details about your VPC endpoint configuration.</p>
+    #[doc(hidden)]
     pub vpce_configuration_description: std::option::Option<std::string::String>,
 }
 impl VpceConfiguration {
@@ -51,11 +56,10 @@ impl std::fmt::Debug for VpceConfiguration {
         formatter.finish()
     }
 }
-/// See [`VpceConfiguration`](crate::model::VpceConfiguration)
+/// See [`VpceConfiguration`](crate::model::VpceConfiguration).
 pub mod vpce_configuration {
 
-    /// A builder for [`VpceConfiguration`](crate::model::VpceConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`VpceConfiguration`](crate::model::VpceConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -130,7 +134,7 @@ pub mod vpce_configuration {
             self.vpce_configuration_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpceConfiguration`](crate::model::VpceConfiguration)
+        /// Consumes the builder and constructs a [`VpceConfiguration`](crate::model::VpceConfiguration).
         pub fn build(self) -> crate::model::VpceConfiguration {
             crate::model::VpceConfiguration {
                 arn: self.arn,
@@ -143,7 +147,7 @@ pub mod vpce_configuration {
     }
 }
 impl VpceConfiguration {
-    /// Creates a new builder-style object to manufacture [`VpceConfiguration`](crate::model::VpceConfiguration)
+    /// Creates a new builder-style object to manufacture [`VpceConfiguration`](crate::model::VpceConfiguration).
     pub fn builder() -> crate::model::vpce_configuration::Builder {
         crate::model::vpce_configuration::Builder::default()
     }
@@ -154,10 +158,13 @@ impl VpceConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Upload {
     /// <p>The upload's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The upload's file name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>When the upload was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The upload's type.</p>
     /// <p>Must be one of the following values:</p>
@@ -195,6 +202,7 @@ pub struct Upload {
     /// <li> <p>INSTRUMENTATION_TEST_SPEC</p> </li>
     /// <li> <p>XCTEST_UI_TEST_SPEC</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::UploadType>,
     /// <p>The upload's status.</p>
     /// <p>Must be one of the following values:</p>
@@ -204,20 +212,26 @@ pub struct Upload {
     /// <li> <p>PROCESSING</p> </li>
     /// <li> <p>SUCCEEDED</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::UploadStatus>,
     /// <p>The presigned Amazon S3 URL that was used to store a file using a PUT request.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// <p>The upload's metadata. For example, for Android, this contains information that is parsed from the manifest and is displayed in the AWS Device Farm console after the associated app is uploaded.</p>
+    #[doc(hidden)]
     pub metadata: std::option::Option<std::string::String>,
     /// <p>The upload's content type (for example, <code>application/octet-stream</code>).</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>A message about the upload's result.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The upload's category. Allowed values include:</p>
     /// <ul>
     /// <li> <p>CURATED: An upload managed by AWS Device Farm.</p> </li>
     /// <li> <p>PRIVATE: An upload managed by the AWS Device Farm customer.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub category: std::option::Option<crate::model::UploadCategory>,
 }
 impl Upload {
@@ -324,11 +338,10 @@ impl std::fmt::Debug for Upload {
         formatter.finish()
     }
 }
-/// See [`Upload`](crate::model::Upload)
+/// See [`Upload`](crate::model::Upload).
 pub mod upload {
 
-    /// A builder for [`Upload`](crate::model::Upload)
-    #[non_exhaustive]
+    /// A builder for [`Upload`](crate::model::Upload).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -544,7 +557,7 @@ pub mod upload {
             self.category = input;
             self
         }
-        /// Consumes the builder and constructs a [`Upload`](crate::model::Upload)
+        /// Consumes the builder and constructs a [`Upload`](crate::model::Upload).
         pub fn build(self) -> crate::model::Upload {
             crate::model::Upload {
                 arn: self.arn,
@@ -562,7 +575,7 @@ pub mod upload {
     }
 }
 impl Upload {
-    /// Creates a new builder-style object to manufacture [`Upload`](crate::model::Upload)
+    /// Creates a new builder-style object to manufacture [`Upload`](crate::model::Upload).
     pub fn builder() -> crate::model::upload::Builder {
         crate::model::upload::Builder::default()
     }
@@ -899,14 +912,19 @@ impl AsRef<str> for UploadType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TestGridProject {
     /// <p>The ARN for the project.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>A human-readable name for the project.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A human-readable description for the project.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The VPC security groups and subnets that are attached to a project.</p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::TestGridVpcConfig>,
     /// <p>When the project was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TestGridProject {
@@ -942,11 +960,10 @@ impl std::fmt::Debug for TestGridProject {
         formatter.finish()
     }
 }
-/// See [`TestGridProject`](crate::model::TestGridProject)
+/// See [`TestGridProject`](crate::model::TestGridProject).
 pub mod test_grid_project {
 
-    /// A builder for [`TestGridProject`](crate::model::TestGridProject)
-    #[non_exhaustive]
+    /// A builder for [`TestGridProject`](crate::model::TestGridProject).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1012,7 +1029,7 @@ pub mod test_grid_project {
             self.created = input;
             self
         }
-        /// Consumes the builder and constructs a [`TestGridProject`](crate::model::TestGridProject)
+        /// Consumes the builder and constructs a [`TestGridProject`](crate::model::TestGridProject).
         pub fn build(self) -> crate::model::TestGridProject {
             crate::model::TestGridProject {
                 arn: self.arn,
@@ -1025,7 +1042,7 @@ pub mod test_grid_project {
     }
 }
 impl TestGridProject {
-    /// Creates a new builder-style object to manufacture [`TestGridProject`](crate::model::TestGridProject)
+    /// Creates a new builder-style object to manufacture [`TestGridProject`](crate::model::TestGridProject).
     pub fn builder() -> crate::model::test_grid_project::Builder {
         crate::model::test_grid_project::Builder::default()
     }
@@ -1036,10 +1053,13 @@ impl TestGridProject {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TestGridVpcConfig {
     /// <p>A list of VPC security group IDs in your Amazon VPC.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of VPC subnet IDs in your Amazon VPC.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ID of the Amazon VPC.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
 }
 impl TestGridVpcConfig {
@@ -1065,11 +1085,10 @@ impl std::fmt::Debug for TestGridVpcConfig {
         formatter.finish()
     }
 }
-/// See [`TestGridVpcConfig`](crate::model::TestGridVpcConfig)
+/// See [`TestGridVpcConfig`](crate::model::TestGridVpcConfig).
 pub mod test_grid_vpc_config {
 
-    /// A builder for [`TestGridVpcConfig`](crate::model::TestGridVpcConfig)
-    #[non_exhaustive]
+    /// A builder for [`TestGridVpcConfig`](crate::model::TestGridVpcConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1125,7 +1144,7 @@ pub mod test_grid_vpc_config {
             self.vpc_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`TestGridVpcConfig`](crate::model::TestGridVpcConfig)
+        /// Consumes the builder and constructs a [`TestGridVpcConfig`](crate::model::TestGridVpcConfig).
         pub fn build(self) -> crate::model::TestGridVpcConfig {
             crate::model::TestGridVpcConfig {
                 security_group_ids: self.security_group_ids,
@@ -1136,7 +1155,7 @@ pub mod test_grid_vpc_config {
     }
 }
 impl TestGridVpcConfig {
-    /// Creates a new builder-style object to manufacture [`TestGridVpcConfig`](crate::model::TestGridVpcConfig)
+    /// Creates a new builder-style object to manufacture [`TestGridVpcConfig`](crate::model::TestGridVpcConfig).
     pub fn builder() -> crate::model::test_grid_vpc_config::Builder {
         crate::model::test_grid_vpc_config::Builder::default()
     }
@@ -1147,12 +1166,16 @@ impl TestGridVpcConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Project {
     /// <p>The project's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The project's name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The default number of minutes (at the project level) a test run executes before it times out. The default value is 150 minutes.</p>
+    #[doc(hidden)]
     pub default_job_timeout_minutes: std::option::Option<i32>,
     /// <p>When the project was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Project {
@@ -1186,11 +1209,10 @@ impl std::fmt::Debug for Project {
         formatter.finish()
     }
 }
-/// See [`Project`](crate::model::Project)
+/// See [`Project`](crate::model::Project).
 pub mod project {
 
-    /// A builder for [`Project`](crate::model::Project)
-    #[non_exhaustive]
+    /// A builder for [`Project`](crate::model::Project).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1242,7 +1264,7 @@ pub mod project {
             self.created = input;
             self
         }
-        /// Consumes the builder and constructs a [`Project`](crate::model::Project)
+        /// Consumes the builder and constructs a [`Project`](crate::model::Project).
         pub fn build(self) -> crate::model::Project {
             crate::model::Project {
                 arn: self.arn,
@@ -1254,7 +1276,7 @@ pub mod project {
     }
 }
 impl Project {
-    /// Creates a new builder-style object to manufacture [`Project`](crate::model::Project)
+    /// Creates a new builder-style object to manufacture [`Project`](crate::model::Project).
     pub fn builder() -> crate::model::project::Builder {
         crate::model::project::Builder::default()
     }
@@ -1265,28 +1287,40 @@ impl Project {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkProfile {
     /// <p>The Amazon Resource Name (ARN) of the network profile.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the network profile.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the network profile.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The type of network profile. Valid values are listed here.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::NetworkProfileType>,
     /// <p>The data throughput rate in bits per second, as an integer from 0 to 104857600.</p>
+    #[doc(hidden)]
     pub uplink_bandwidth_bits: std::option::Option<i64>,
     /// <p>The data throughput rate in bits per second, as an integer from 0 to 104857600.</p>
+    #[doc(hidden)]
     pub downlink_bandwidth_bits: std::option::Option<i64>,
     /// <p>Delay time for all packets to destination in milliseconds as an integer from 0 to 2000.</p>
+    #[doc(hidden)]
     pub uplink_delay_ms: std::option::Option<i64>,
     /// <p>Delay time for all packets to destination in milliseconds as an integer from 0 to 2000.</p>
+    #[doc(hidden)]
     pub downlink_delay_ms: std::option::Option<i64>,
     /// <p>Time variation in the delay of received packets in milliseconds as an integer from 0 to 2000.</p>
+    #[doc(hidden)]
     pub uplink_jitter_ms: std::option::Option<i64>,
     /// <p>Time variation in the delay of received packets in milliseconds as an integer from 0 to 2000.</p>
+    #[doc(hidden)]
     pub downlink_jitter_ms: std::option::Option<i64>,
     /// <p>Proportion of transmitted packets that fail to arrive from 0 to 100 percent.</p>
+    #[doc(hidden)]
     pub uplink_loss_percent: i32,
     /// <p>Proportion of received packets that fail to arrive from 0 to 100 percent.</p>
+    #[doc(hidden)]
     pub downlink_loss_percent: i32,
 }
 impl NetworkProfile {
@@ -1357,11 +1391,10 @@ impl std::fmt::Debug for NetworkProfile {
         formatter.finish()
     }
 }
-/// See [`NetworkProfile`](crate::model::NetworkProfile)
+/// See [`NetworkProfile`](crate::model::NetworkProfile).
 pub mod network_profile {
 
-    /// A builder for [`NetworkProfile`](crate::model::NetworkProfile)
-    #[non_exhaustive]
+    /// A builder for [`NetworkProfile`](crate::model::NetworkProfile).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1501,7 +1534,7 @@ pub mod network_profile {
             self.downlink_loss_percent = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkProfile`](crate::model::NetworkProfile)
+        /// Consumes the builder and constructs a [`NetworkProfile`](crate::model::NetworkProfile).
         pub fn build(self) -> crate::model::NetworkProfile {
             crate::model::NetworkProfile {
                 arn: self.arn,
@@ -1521,7 +1554,7 @@ pub mod network_profile {
     }
 }
 impl NetworkProfile {
-    /// Creates a new builder-style object to manufacture [`NetworkProfile`](crate::model::NetworkProfile)
+    /// Creates a new builder-style object to manufacture [`NetworkProfile`](crate::model::NetworkProfile).
     pub fn builder() -> crate::model::network_profile::Builder {
         crate::model::network_profile::Builder::default()
     }
@@ -1587,17 +1620,23 @@ impl AsRef<str> for NetworkProfileType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceProfile {
     /// <p>The Amazon Resource Name (ARN) of the instance profile.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>When set to <code>true</code>, Device Farm removes app packages after a test run. The default value is <code>false</code> for private devices.</p>
+    #[doc(hidden)]
     pub package_cleanup: std::option::Option<bool>,
     /// <p>An array of strings containing the list of app packages that should not be cleaned up from the device after a test run completes.</p>
     /// <p>The list of packages is considered only if you set <code>packageCleanup</code> to <code>true</code>.</p>
+    #[doc(hidden)]
     pub exclude_app_packages_from_cleanup: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>When set to <code>true</code>, Device Farm reboots the instance after a test run. The default value is <code>true</code>.</p>
+    #[doc(hidden)]
     pub reboot_after_use: std::option::Option<bool>,
     /// <p>The name of the instance profile.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the instance profile.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl InstanceProfile {
@@ -1642,11 +1681,10 @@ impl std::fmt::Debug for InstanceProfile {
         formatter.finish()
     }
 }
-/// See [`InstanceProfile`](crate::model::InstanceProfile)
+/// See [`InstanceProfile`](crate::model::InstanceProfile).
 pub mod instance_profile {
 
-    /// A builder for [`InstanceProfile`](crate::model::InstanceProfile)
-    #[non_exhaustive]
+    /// A builder for [`InstanceProfile`](crate::model::InstanceProfile).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1732,7 +1770,7 @@ pub mod instance_profile {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceProfile`](crate::model::InstanceProfile)
+        /// Consumes the builder and constructs a [`InstanceProfile`](crate::model::InstanceProfile).
         pub fn build(self) -> crate::model::InstanceProfile {
             crate::model::InstanceProfile {
                 arn: self.arn,
@@ -1746,7 +1784,7 @@ pub mod instance_profile {
     }
 }
 impl InstanceProfile {
-    /// Creates a new builder-style object to manufacture [`InstanceProfile`](crate::model::InstanceProfile)
+    /// Creates a new builder-style object to manufacture [`InstanceProfile`](crate::model::InstanceProfile).
     pub fn builder() -> crate::model::instance_profile::Builder {
         crate::model::instance_profile::Builder::default()
     }
@@ -1757,10 +1795,13 @@ impl InstanceProfile {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DevicePool {
     /// <p>The device pool's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The device pool's name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The device pool's description.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The device pool's type.</p>
     /// <p>Allowed values include:</p>
@@ -1768,11 +1809,14 @@ pub struct DevicePool {
     /// <li> <p>CURATED: A device pool that is created and managed by AWS Device Farm.</p> </li>
     /// <li> <p>PRIVATE: A device pool that is created and managed by the device pool developer.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::DevicePoolType>,
     /// <p>Information about the device pool's rules.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::Rule>>,
     /// <p>The number of devices that Device Farm can add to your device pool. Device Farm adds devices that are available and meet the criteria that you assign for the <code>rules</code> parameter. Depending on how many devices meet these constraints, your device pool might contain fewer devices than the value for this parameter.</p>
     /// <p>By specifying the maximum number of devices, you can control the costs that you incur by running tests.</p>
+    #[doc(hidden)]
     pub max_devices: std::option::Option<i32>,
 }
 impl DevicePool {
@@ -1819,11 +1863,10 @@ impl std::fmt::Debug for DevicePool {
         formatter.finish()
     }
 }
-/// See [`DevicePool`](crate::model::DevicePool)
+/// See [`DevicePool`](crate::model::DevicePool).
 pub mod device_pool {
 
-    /// A builder for [`DevicePool`](crate::model::DevicePool)
-    #[non_exhaustive]
+    /// A builder for [`DevicePool`](crate::model::DevicePool).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1918,7 +1961,7 @@ pub mod device_pool {
             self.max_devices = input;
             self
         }
-        /// Consumes the builder and constructs a [`DevicePool`](crate::model::DevicePool)
+        /// Consumes the builder and constructs a [`DevicePool`](crate::model::DevicePool).
         pub fn build(self) -> crate::model::DevicePool {
             crate::model::DevicePool {
                 arn: self.arn,
@@ -1932,7 +1975,7 @@ pub mod device_pool {
     }
 }
 impl DevicePool {
-    /// Creates a new builder-style object to manufacture [`DevicePool`](crate::model::DevicePool)
+    /// Creates a new builder-style object to manufacture [`DevicePool`](crate::model::DevicePool).
     pub fn builder() -> crate::model::device_pool::Builder {
         crate::model::device_pool::Builder::default()
     }
@@ -2038,10 +2081,13 @@ pub struct Rule {
     /// <p>Because remote debugging is <a href="https://docs.aws.amazon.com/devicefarm/latest/developerguide/history.html">no longer supported</a>, this filter is ignored.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub attribute: std::option::Option<crate::model::DeviceAttribute>,
     /// <p>Specifies how Device Farm compares the rule's attribute to the value. For the operators that are supported by each attribute, see the attribute descriptions.</p>
+    #[doc(hidden)]
     pub operator: std::option::Option<crate::model::RuleOperator>,
     /// <p>The rule's value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Rule {
@@ -2162,11 +2208,10 @@ impl std::fmt::Debug for Rule {
         formatter.finish()
     }
 }
-/// See [`Rule`](crate::model::Rule)
+/// See [`Rule`](crate::model::Rule).
 pub mod rule {
 
-    /// A builder for [`Rule`](crate::model::Rule)
-    #[non_exhaustive]
+    /// A builder for [`Rule`](crate::model::Rule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute: std::option::Option<crate::model::DeviceAttribute>,
@@ -2400,7 +2445,7 @@ pub mod rule {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Rule`](crate::model::Rule)
+        /// Consumes the builder and constructs a [`Rule`](crate::model::Rule).
         pub fn build(self) -> crate::model::Rule {
             crate::model::Rule {
                 attribute: self.attribute,
@@ -2411,7 +2456,7 @@ pub mod rule {
     }
 }
 impl Rule {
-    /// Creates a new builder-style object to manufacture [`Rule`](crate::model::Rule)
+    /// Creates a new builder-style object to manufacture [`Rule`](crate::model::Rule).
     pub fn builder() -> crate::model::rule::Builder {
         crate::model::rule::Builder::default()
     }
@@ -2678,16 +2723,22 @@ impl AsRef<str> for DevicePoolType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeviceInstance {
     /// <p>The Amazon Resource Name (ARN) of the device instance.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the device.</p>
+    #[doc(hidden)]
     pub device_arn: std::option::Option<std::string::String>,
     /// <p>An array of strings that describe the device instance.</p>
+    #[doc(hidden)]
     pub labels: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The status of the device instance. Valid values are listed here.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::InstanceStatus>,
     /// <p>Unique device identifier for the device instance.</p>
+    #[doc(hidden)]
     pub udid: std::option::Option<std::string::String>,
     /// <p>A object that contains information about the instance profile.</p>
+    #[doc(hidden)]
     pub instance_profile: std::option::Option<crate::model::InstanceProfile>,
 }
 impl DeviceInstance {
@@ -2728,11 +2779,10 @@ impl std::fmt::Debug for DeviceInstance {
         formatter.finish()
     }
 }
-/// See [`DeviceInstance`](crate::model::DeviceInstance)
+/// See [`DeviceInstance`](crate::model::DeviceInstance).
 pub mod device_instance {
 
-    /// A builder for [`DeviceInstance`](crate::model::DeviceInstance)
-    #[non_exhaustive]
+    /// A builder for [`DeviceInstance`](crate::model::DeviceInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2818,7 +2868,7 @@ pub mod device_instance {
             self.instance_profile = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeviceInstance`](crate::model::DeviceInstance)
+        /// Consumes the builder and constructs a [`DeviceInstance`](crate::model::DeviceInstance).
         pub fn build(self) -> crate::model::DeviceInstance {
             crate::model::DeviceInstance {
                 arn: self.arn,
@@ -2832,7 +2882,7 @@ pub mod device_instance {
     }
 }
 impl DeviceInstance {
-    /// Creates a new builder-style object to manufacture [`DeviceInstance`](crate::model::DeviceInstance)
+    /// Creates a new builder-style object to manufacture [`DeviceInstance`](crate::model::DeviceInstance).
     pub fn builder() -> crate::model::device_instance::Builder {
         crate::model::device_instance::Builder::default()
     }
@@ -2906,8 +2956,10 @@ impl AsRef<str> for InstanceStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>One part of a key-value pair that makes up a tag. A <code>key</code> is a general label that acts like a category for more specific tag values.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The optional part of a key-value pair that makes up a tag. A <code>value</code> acts as a descriptor in a tag category (key).</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -2928,11 +2980,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -2959,7 +3010,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -2969,7 +3020,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -2980,8 +3031,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Run {
     /// <p>The run's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The run's name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The run's type.</p>
     /// <p>Must be one of the following values:</p>
@@ -3007,6 +3060,7 @@ pub struct Run {
     /// <li> <p>XCTEST</p> </li>
     /// <li> <p>XCTEST_UI</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TestType>,
     /// <p>The run's platform.</p>
     /// <p>Allowed values include:</p>
@@ -3014,8 +3068,10 @@ pub struct Run {
     /// <li> <p>ANDROID</p> </li>
     /// <li> <p>IOS</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::DevicePlatform>,
     /// <p>When the run was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The run's status.</p>
     /// <p>Allowed values include:</p>
@@ -3030,6 +3086,7 @@ pub struct Run {
     /// <li> <p>COMPLETED</p> </li>
     /// <li> <p>STOPPING</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ExecutionStatus>,
     /// <p>The run's result.</p>
     /// <p>Allowed values include:</p>
@@ -3042,57 +3099,82 @@ pub struct Run {
     /// <li> <p>ERRORED</p> </li>
     /// <li> <p>STOPPED</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub result: std::option::Option<crate::model::ExecutionResult>,
     /// <p>The run's start time.</p>
+    #[doc(hidden)]
     pub started: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The run's stop time.</p>
+    #[doc(hidden)]
     pub stopped: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The run's result counters.</p>
+    #[doc(hidden)]
     pub counters: std::option::Option<crate::model::Counters>,
     /// <p>A message about the run's result.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The total number of jobs for the run.</p>
+    #[doc(hidden)]
     pub total_jobs: std::option::Option<i32>,
     /// <p>The total number of completed jobs.</p>
+    #[doc(hidden)]
     pub completed_jobs: std::option::Option<i32>,
     /// <p>Specifies the billing method for a test run: <code>metered</code> or <code>unmetered</code>. If the parameter is not specified, the default value is <code>metered</code>.</p> <note>
     /// <p>If you have unmetered device slots, you must set this to <code>unmetered</code> to use them. Otherwise, the run is counted toward metered device minutes.</p>
     /// </note>
+    #[doc(hidden)]
     pub billing_method: std::option::Option<crate::model::BillingMethod>,
     /// <p>Represents the total (metered or unmetered) minutes used by the test run.</p>
+    #[doc(hidden)]
     pub device_minutes: std::option::Option<crate::model::DeviceMinutes>,
     /// <p>The network profile being used for a test run.</p>
+    #[doc(hidden)]
     pub network_profile: std::option::Option<crate::model::NetworkProfile>,
     /// <p>Read-only URL for an object in an S3 bucket where you can get the parsing results of the test package. If the test package doesn't parse, the reason why it doesn't parse appears in the file that this URL points to.</p>
+    #[doc(hidden)]
     pub parsing_result_url: std::option::Option<std::string::String>,
     /// <p>Supporting field for the result field. Set only if <code>result</code> is <code>SKIPPED</code>. <code>PARSING_FAILED</code> if the result is skipped because of test package parsing failure.</p>
+    #[doc(hidden)]
     pub result_code: std::option::Option<crate::model::ExecutionResultCode>,
     /// <p>For fuzz tests, this is a seed to use for randomizing the UI fuzz test. Using the same seed value between tests ensures identical event sequences.</p>
+    #[doc(hidden)]
     pub seed: std::option::Option<i32>,
     /// <p>An app to upload or that has been uploaded.</p>
+    #[doc(hidden)]
     pub app_upload: std::option::Option<std::string::String>,
     /// <p>For fuzz tests, this is the number of events, between 1 and 10000, that the UI fuzz test should perform.</p>
+    #[doc(hidden)]
     pub event_count: std::option::Option<i32>,
     /// <p>The number of minutes the job executes before it times out.</p>
+    #[doc(hidden)]
     pub job_timeout_minutes: std::option::Option<i32>,
     /// <p>The ARN of the device pool for the run.</p>
+    #[doc(hidden)]
     pub device_pool_arn: std::option::Option<std::string::String>,
     /// <p>Information about the locale that is used for the run.</p>
+    #[doc(hidden)]
     pub locale: std::option::Option<std::string::String>,
     /// <p>Information about the radio states for the run.</p>
+    #[doc(hidden)]
     pub radios: std::option::Option<crate::model::Radios>,
     /// <p>Information about the location that is used for the run.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::Location>,
     /// <p>Output <code>CustomerArtifactPaths</code> object for the test run.</p>
+    #[doc(hidden)]
     pub customer_artifact_paths: std::option::Option<crate::model::CustomerArtifactPaths>,
     /// <p>The Device Farm console URL for the recording of the run.</p>
+    #[doc(hidden)]
     pub web_url: std::option::Option<std::string::String>,
     /// <p>When set to <code>true</code>, for private devices, Device Farm does not sign your app again. For public devices, Device Farm always signs your apps again.</p>
     /// <p>For more information about how Device Farm re-signs your apps, see <a href="https://aws.amazon.com/device-farm/faq/">Do you modify my app?</a> in the <i>AWS Device Farm FAQs</i>.</p>
+    #[doc(hidden)]
     pub skip_app_resign: std::option::Option<bool>,
     /// <p>The ARN of the YAML-formatted test specification for the run.</p>
+    #[doc(hidden)]
     pub test_spec_arn: std::option::Option<std::string::String>,
     /// <p>The results of a device filter used to select the devices for a test run.</p>
+    #[doc(hidden)]
     pub device_selection_result: std::option::Option<crate::model::DeviceSelectionResult>,
 }
 impl Run {
@@ -3315,11 +3397,10 @@ impl std::fmt::Debug for Run {
         formatter.finish()
     }
 }
-/// See [`Run`](crate::model::Run)
+/// See [`Run`](crate::model::Run).
 pub mod run {
 
-    /// A builder for [`Run`](crate::model::Run)
-    #[non_exhaustive]
+    /// A builder for [`Run`](crate::model::Run).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3824,7 +3905,7 @@ pub mod run {
             self.device_selection_result = input;
             self
         }
-        /// Consumes the builder and constructs a [`Run`](crate::model::Run)
+        /// Consumes the builder and constructs a [`Run`](crate::model::Run).
         pub fn build(self) -> crate::model::Run {
             crate::model::Run {
                 arn: self.arn,
@@ -3863,7 +3944,7 @@ pub mod run {
     }
 }
 impl Run {
-    /// Creates a new builder-style object to manufacture [`Run`](crate::model::Run)
+    /// Creates a new builder-style object to manufacture [`Run`](crate::model::Run).
     pub fn builder() -> crate::model::run::Builder {
         crate::model::run::Builder::default()
     }
@@ -3874,10 +3955,13 @@ impl Run {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeviceSelectionResult {
     /// <p>The filters in a device selection result.</p>
+    #[doc(hidden)]
     pub filters: std::option::Option<std::vec::Vec<crate::model::DeviceFilter>>,
     /// <p>The number of devices that matched the device filter selection criteria.</p>
+    #[doc(hidden)]
     pub matched_devices_count: std::option::Option<i32>,
     /// <p>The maximum number of devices to be selected by a device filter and included in a test run.</p>
+    #[doc(hidden)]
     pub max_devices: std::option::Option<i32>,
 }
 impl DeviceSelectionResult {
@@ -3903,11 +3987,10 @@ impl std::fmt::Debug for DeviceSelectionResult {
         formatter.finish()
     }
 }
-/// See [`DeviceSelectionResult`](crate::model::DeviceSelectionResult)
+/// See [`DeviceSelectionResult`](crate::model::DeviceSelectionResult).
 pub mod device_selection_result {
 
-    /// A builder for [`DeviceSelectionResult`](crate::model::DeviceSelectionResult)
-    #[non_exhaustive]
+    /// A builder for [`DeviceSelectionResult`](crate::model::DeviceSelectionResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) filters: std::option::Option<std::vec::Vec<crate::model::DeviceFilter>>,
@@ -3954,7 +4037,7 @@ pub mod device_selection_result {
             self.max_devices = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeviceSelectionResult`](crate::model::DeviceSelectionResult)
+        /// Consumes the builder and constructs a [`DeviceSelectionResult`](crate::model::DeviceSelectionResult).
         pub fn build(self) -> crate::model::DeviceSelectionResult {
             crate::model::DeviceSelectionResult {
                 filters: self.filters,
@@ -3965,7 +4048,7 @@ pub mod device_selection_result {
     }
 }
 impl DeviceSelectionResult {
-    /// Creates a new builder-style object to manufacture [`DeviceSelectionResult`](crate::model::DeviceSelectionResult)
+    /// Creates a new builder-style object to manufacture [`DeviceSelectionResult`](crate::model::DeviceSelectionResult).
     pub fn builder() -> crate::model::device_selection_result::Builder {
         crate::model::device_selection_result::Builder::default()
     }
@@ -4065,8 +4148,10 @@ pub struct DeviceFilter {
     /// <p>Supported operators: <code>EQUALS</code> </p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub attribute: std::option::Option<crate::model::DeviceFilterAttribute>,
     /// <p>Specifies how Device Farm compares the filter's attribute to the value. See the attribute descriptions.</p>
+    #[doc(hidden)]
     pub operator: std::option::Option<crate::model::RuleOperator>,
     /// <p>An array of one or more filter values used in a device filter.</p>
     /// <p class="title"> <b>Operator Values</b> </p>
@@ -4081,6 +4166,7 @@ pub struct DeviceFilter {
     /// <li> <p>The FORM_FACTOR attribute can be set to PHONE or TABLET.</p> </li>
     /// <li> <p>The FLEET_TYPE attribute can be set to PUBLIC or PRIVATE.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DeviceFilter {
@@ -4206,11 +4292,10 @@ impl std::fmt::Debug for DeviceFilter {
         formatter.finish()
     }
 }
-/// See [`DeviceFilter`](crate::model::DeviceFilter)
+/// See [`DeviceFilter`](crate::model::DeviceFilter).
 pub mod device_filter {
 
-    /// A builder for [`DeviceFilter`](crate::model::DeviceFilter)
-    #[non_exhaustive]
+    /// A builder for [`DeviceFilter`](crate::model::DeviceFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute: std::option::Option<crate::model::DeviceFilterAttribute>,
@@ -4463,7 +4548,7 @@ pub mod device_filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeviceFilter`](crate::model::DeviceFilter)
+        /// Consumes the builder and constructs a [`DeviceFilter`](crate::model::DeviceFilter).
         pub fn build(self) -> crate::model::DeviceFilter {
             crate::model::DeviceFilter {
                 attribute: self.attribute,
@@ -4474,7 +4559,7 @@ pub mod device_filter {
     }
 }
 impl DeviceFilter {
-    /// Creates a new builder-style object to manufacture [`DeviceFilter`](crate::model::DeviceFilter)
+    /// Creates a new builder-style object to manufacture [`DeviceFilter`](crate::model::DeviceFilter).
     pub fn builder() -> crate::model::device_filter::Builder {
         crate::model::device_filter::Builder::default()
     }
@@ -4595,10 +4680,13 @@ impl AsRef<str> for DeviceFilterAttribute {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomerArtifactPaths {
     /// <p>Comma-separated list of paths on the iOS device where the artifacts generated by the customer's tests are pulled from.</p>
+    #[doc(hidden)]
     pub ios_paths: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Comma-separated list of paths on the Android device where the artifacts generated by the customer's tests are pulled from.</p>
+    #[doc(hidden)]
     pub android_paths: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Comma-separated list of paths in the test execution environment where the artifacts generated by the customer's tests are pulled from.</p>
+    #[doc(hidden)]
     pub device_host_paths: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CustomerArtifactPaths {
@@ -4624,11 +4712,10 @@ impl std::fmt::Debug for CustomerArtifactPaths {
         formatter.finish()
     }
 }
-/// See [`CustomerArtifactPaths`](crate::model::CustomerArtifactPaths)
+/// See [`CustomerArtifactPaths`](crate::model::CustomerArtifactPaths).
 pub mod customer_artifact_paths {
 
-    /// A builder for [`CustomerArtifactPaths`](crate::model::CustomerArtifactPaths)
-    #[non_exhaustive]
+    /// A builder for [`CustomerArtifactPaths`](crate::model::CustomerArtifactPaths).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ios_paths: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -4693,7 +4780,7 @@ pub mod customer_artifact_paths {
             self.device_host_paths = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomerArtifactPaths`](crate::model::CustomerArtifactPaths)
+        /// Consumes the builder and constructs a [`CustomerArtifactPaths`](crate::model::CustomerArtifactPaths).
         pub fn build(self) -> crate::model::CustomerArtifactPaths {
             crate::model::CustomerArtifactPaths {
                 ios_paths: self.ios_paths,
@@ -4704,7 +4791,7 @@ pub mod customer_artifact_paths {
     }
 }
 impl CustomerArtifactPaths {
-    /// Creates a new builder-style object to manufacture [`CustomerArtifactPaths`](crate::model::CustomerArtifactPaths)
+    /// Creates a new builder-style object to manufacture [`CustomerArtifactPaths`](crate::model::CustomerArtifactPaths).
     pub fn builder() -> crate::model::customer_artifact_paths::Builder {
         crate::model::customer_artifact_paths::Builder::default()
     }
@@ -4716,8 +4803,10 @@ impl CustomerArtifactPaths {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Location {
     /// <p>The latitude.</p>
+    #[doc(hidden)]
     pub latitude: std::option::Option<f64>,
     /// <p>The longitude.</p>
+    #[doc(hidden)]
     pub longitude: std::option::Option<f64>,
 }
 impl Location {
@@ -4738,11 +4827,10 @@ impl std::fmt::Debug for Location {
         formatter.finish()
     }
 }
-/// See [`Location`](crate::model::Location)
+/// See [`Location`](crate::model::Location).
 pub mod location {
 
-    /// A builder for [`Location`](crate::model::Location)
-    #[non_exhaustive]
+    /// A builder for [`Location`](crate::model::Location).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) latitude: std::option::Option<f64>,
@@ -4769,7 +4857,7 @@ pub mod location {
             self.longitude = input;
             self
         }
-        /// Consumes the builder and constructs a [`Location`](crate::model::Location)
+        /// Consumes the builder and constructs a [`Location`](crate::model::Location).
         pub fn build(self) -> crate::model::Location {
             crate::model::Location {
                 latitude: self.latitude,
@@ -4779,7 +4867,7 @@ pub mod location {
     }
 }
 impl Location {
-    /// Creates a new builder-style object to manufacture [`Location`](crate::model::Location)
+    /// Creates a new builder-style object to manufacture [`Location`](crate::model::Location).
     pub fn builder() -> crate::model::location::Builder {
         crate::model::location::Builder::default()
     }
@@ -4790,12 +4878,16 @@ impl Location {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Radios {
     /// <p>True if Wi-Fi is enabled at the beginning of the test. Otherwise, false.</p>
+    #[doc(hidden)]
     pub wifi: std::option::Option<bool>,
     /// <p>True if Bluetooth is enabled at the beginning of the test. Otherwise, false.</p>
+    #[doc(hidden)]
     pub bluetooth: std::option::Option<bool>,
     /// <p>True if NFC is enabled at the beginning of the test. Otherwise, false.</p>
+    #[doc(hidden)]
     pub nfc: std::option::Option<bool>,
     /// <p>True if GPS is enabled at the beginning of the test. Otherwise, false.</p>
+    #[doc(hidden)]
     pub gps: std::option::Option<bool>,
 }
 impl Radios {
@@ -4826,11 +4918,10 @@ impl std::fmt::Debug for Radios {
         formatter.finish()
     }
 }
-/// See [`Radios`](crate::model::Radios)
+/// See [`Radios`](crate::model::Radios).
 pub mod radios {
 
-    /// A builder for [`Radios`](crate::model::Radios)
-    #[non_exhaustive]
+    /// A builder for [`Radios`](crate::model::Radios).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) wifi: std::option::Option<bool>,
@@ -4879,7 +4970,7 @@ pub mod radios {
             self.gps = input;
             self
         }
-        /// Consumes the builder and constructs a [`Radios`](crate::model::Radios)
+        /// Consumes the builder and constructs a [`Radios`](crate::model::Radios).
         pub fn build(self) -> crate::model::Radios {
             crate::model::Radios {
                 wifi: self.wifi,
@@ -4891,7 +4982,7 @@ pub mod radios {
     }
 }
 impl Radios {
-    /// Creates a new builder-style object to manufacture [`Radios`](crate::model::Radios)
+    /// Creates a new builder-style object to manufacture [`Radios`](crate::model::Radios).
     pub fn builder() -> crate::model::radios::Builder {
         crate::model::radios::Builder::default()
     }
@@ -4957,10 +5048,13 @@ impl AsRef<str> for ExecutionResultCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeviceMinutes {
     /// <p>When specified, represents the total minutes used by the resource to run tests.</p>
+    #[doc(hidden)]
     pub total: std::option::Option<f64>,
     /// <p>When specified, represents only the sum of metered minutes used by the resource to run tests.</p>
+    #[doc(hidden)]
     pub metered: std::option::Option<f64>,
     /// <p>When specified, represents only the sum of unmetered minutes used by the resource to run tests.</p>
+    #[doc(hidden)]
     pub unmetered: std::option::Option<f64>,
 }
 impl DeviceMinutes {
@@ -4986,11 +5080,10 @@ impl std::fmt::Debug for DeviceMinutes {
         formatter.finish()
     }
 }
-/// See [`DeviceMinutes`](crate::model::DeviceMinutes)
+/// See [`DeviceMinutes`](crate::model::DeviceMinutes).
 pub mod device_minutes {
 
-    /// A builder for [`DeviceMinutes`](crate::model::DeviceMinutes)
-    #[non_exhaustive]
+    /// A builder for [`DeviceMinutes`](crate::model::DeviceMinutes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total: std::option::Option<f64>,
@@ -5028,7 +5121,7 @@ pub mod device_minutes {
             self.unmetered = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeviceMinutes`](crate::model::DeviceMinutes)
+        /// Consumes the builder and constructs a [`DeviceMinutes`](crate::model::DeviceMinutes).
         pub fn build(self) -> crate::model::DeviceMinutes {
             crate::model::DeviceMinutes {
                 total: self.total,
@@ -5039,7 +5132,7 @@ pub mod device_minutes {
     }
 }
 impl DeviceMinutes {
-    /// Creates a new builder-style object to manufacture [`DeviceMinutes`](crate::model::DeviceMinutes)
+    /// Creates a new builder-style object to manufacture [`DeviceMinutes`](crate::model::DeviceMinutes).
     pub fn builder() -> crate::model::device_minutes::Builder {
         crate::model::device_minutes::Builder::default()
     }
@@ -5105,18 +5198,25 @@ impl AsRef<str> for BillingMethod {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Counters {
     /// <p>The total number of entities.</p>
+    #[doc(hidden)]
     pub total: std::option::Option<i32>,
     /// <p>The number of passed entities.</p>
+    #[doc(hidden)]
     pub passed: std::option::Option<i32>,
     /// <p>The number of failed entities.</p>
+    #[doc(hidden)]
     pub failed: std::option::Option<i32>,
     /// <p>The number of warned entities.</p>
+    #[doc(hidden)]
     pub warned: std::option::Option<i32>,
     /// <p>The number of errored entities.</p>
+    #[doc(hidden)]
     pub errored: std::option::Option<i32>,
     /// <p>The number of stopped entities.</p>
+    #[doc(hidden)]
     pub stopped: std::option::Option<i32>,
     /// <p>The number of skipped entities.</p>
+    #[doc(hidden)]
     pub skipped: std::option::Option<i32>,
 }
 impl Counters {
@@ -5162,11 +5262,10 @@ impl std::fmt::Debug for Counters {
         formatter.finish()
     }
 }
-/// See [`Counters`](crate::model::Counters)
+/// See [`Counters`](crate::model::Counters).
 pub mod counters {
 
-    /// A builder for [`Counters`](crate::model::Counters)
-    #[non_exhaustive]
+    /// A builder for [`Counters`](crate::model::Counters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total: std::option::Option<i32>,
@@ -5248,7 +5347,7 @@ pub mod counters {
             self.skipped = input;
             self
         }
-        /// Consumes the builder and constructs a [`Counters`](crate::model::Counters)
+        /// Consumes the builder and constructs a [`Counters`](crate::model::Counters).
         pub fn build(self) -> crate::model::Counters {
             crate::model::Counters {
                 total: self.total,
@@ -5263,7 +5362,7 @@ pub mod counters {
     }
 }
 impl Counters {
-    /// Creates a new builder-style object to manufacture [`Counters`](crate::model::Counters)
+    /// Creates a new builder-style object to manufacture [`Counters`](crate::model::Counters).
     pub fn builder() -> crate::model::counters::Builder {
         crate::model::counters::Builder::default()
     }
@@ -5652,10 +5751,13 @@ impl AsRef<str> for TestType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoteAccessSession {
     /// <p>The Amazon Resource Name (ARN) of the remote access session.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the remote access session.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The date and time the remote access session was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the remote access session. Can be any of the following:</p>
     /// <ul>
@@ -5669,6 +5771,7 @@ pub struct RemoteAccessSession {
     /// <li> <p>COMPLETED.</p> </li>
     /// <li> <p>STOPPING.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ExecutionStatus>,
     /// <p>The result of the remote access session. Can be any of the following:</p>
     /// <ul>
@@ -5680,38 +5783,53 @@ pub struct RemoteAccessSession {
     /// <li> <p>ERRORED.</p> </li>
     /// <li> <p>STOPPED.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub result: std::option::Option<crate::model::ExecutionResult>,
     /// <p>A message about the remote access session.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The date and time the remote access session was started.</p>
+    #[doc(hidden)]
     pub started: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time the remote access session was stopped.</p>
+    #[doc(hidden)]
     pub stopped: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The device (phone or tablet) used in the remote access session.</p>
+    #[doc(hidden)]
     pub device: std::option::Option<crate::model::Device>,
     /// <p>The ARN of the instance.</p>
+    #[doc(hidden)]
     pub instance_arn: std::option::Option<std::string::String>,
     /// <p>This flag is set to <code>true</code> if remote debugging is enabled for the remote access session.</p>
     /// <p>Remote debugging is <a href="https://docs.aws.amazon.com/devicefarm/latest/developerguide/history.html">no longer supported</a>.</p>
+    #[doc(hidden)]
     pub remote_debug_enabled: std::option::Option<bool>,
     /// <p>This flag is set to <code>true</code> if remote recording is enabled for the remote access session.</p>
+    #[doc(hidden)]
     pub remote_record_enabled: std::option::Option<bool>,
     /// <p>The ARN for the app to be recorded in the remote access session.</p>
+    #[doc(hidden)]
     pub remote_record_app_arn: std::option::Option<std::string::String>,
     /// <p>IP address of the EC2 host where you need to connect to remotely debug devices. Only returned if remote debugging is enabled for the remote access session.</p>
     /// <p>Remote debugging is <a href="https://docs.aws.amazon.com/devicefarm/latest/developerguide/history.html">no longer supported</a>.</p>
+    #[doc(hidden)]
     pub host_address: std::option::Option<std::string::String>,
     /// <p>Unique identifier of your client for the remote access session. Only returned if remote debugging is enabled for the remote access session.</p>
     /// <p>Remote debugging is <a href="https://docs.aws.amazon.com/devicefarm/latest/developerguide/history.html">no longer supported</a>.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>The billing method of the remote access session. Possible values include <code>METERED</code> or <code>UNMETERED</code>. For more information about metered devices, see <a href="https://docs.aws.amazon.com/devicefarm/latest/developerguide/welcome.html#welcome-terminology">AWS Device Farm terminology</a>.</p>
+    #[doc(hidden)]
     pub billing_method: std::option::Option<crate::model::BillingMethod>,
     /// <p>The number of minutes a device is used in a remote access session (including setup and teardown minutes).</p>
+    #[doc(hidden)]
     pub device_minutes: std::option::Option<crate::model::DeviceMinutes>,
     /// <p>The endpoint for the remote access sesssion.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>Unique device identifier for the remote device. Only returned if remote debugging is enabled for the remote access session.</p>
     /// <p>Remote debugging is <a href="https://docs.aws.amazon.com/devicefarm/latest/developerguide/history.html">no longer supported</a>.</p>
+    #[doc(hidden)]
     pub device_udid: std::option::Option<std::string::String>,
     /// <p>The interaction mode of the remote access session. Valid values are:</p>
     /// <ul>
@@ -5719,9 +5837,11 @@ pub struct RemoteAccessSession {
     /// <li> <p>NO_VIDEO: You are connected to the device, but cannot interact with it or view the screen. This mode has the fastest test execution speed. You can run XCUITest framework-based tests in this mode.</p> </li>
     /// <li> <p>VIDEO_ONLY: You can view the screen, but cannot touch or rotate it. You can run XCUITest framework-based tests and watch the screen in this mode.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub interaction_mode: std::option::Option<crate::model::InteractionMode>,
     /// <p>When set to <code>true</code>, for private devices, Device Farm does not sign your app again. For public devices, Device Farm always signs your apps again.</p>
     /// <p>For more information about how Device Farm re-signs your apps, see <a href="https://aws.amazon.com/device-farm/faq/">Do you modify my app?</a> in the <i>AWS Device Farm FAQs</i>.</p>
+    #[doc(hidden)]
     pub skip_app_resign: std::option::Option<bool>,
 }
 impl RemoteAccessSession {
@@ -5867,11 +5987,10 @@ impl std::fmt::Debug for RemoteAccessSession {
         formatter.finish()
     }
 }
-/// See [`RemoteAccessSession`](crate::model::RemoteAccessSession)
+/// See [`RemoteAccessSession`](crate::model::RemoteAccessSession).
 pub mod remote_access_session {
 
-    /// A builder for [`RemoteAccessSession`](crate::model::RemoteAccessSession)
-    #[non_exhaustive]
+    /// A builder for [`RemoteAccessSession`](crate::model::RemoteAccessSession).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -6194,7 +6313,7 @@ pub mod remote_access_session {
             self.skip_app_resign = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoteAccessSession`](crate::model::RemoteAccessSession)
+        /// Consumes the builder and constructs a [`RemoteAccessSession`](crate::model::RemoteAccessSession).
         pub fn build(self) -> crate::model::RemoteAccessSession {
             crate::model::RemoteAccessSession {
                 arn: self.arn,
@@ -6223,7 +6342,7 @@ pub mod remote_access_session {
     }
 }
 impl RemoteAccessSession {
-    /// Creates a new builder-style object to manufacture [`RemoteAccessSession`](crate::model::RemoteAccessSession)
+    /// Creates a new builder-style object to manufacture [`RemoteAccessSession`](crate::model::RemoteAccessSession).
     pub fn builder() -> crate::model::remote_access_session::Builder {
         crate::model::remote_access_session::Builder::default()
     }
@@ -6293,14 +6412,19 @@ impl AsRef<str> for InteractionMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Device {
     /// <p>The device's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The device's display name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The device's manufacturer name.</p>
+    #[doc(hidden)]
     pub manufacturer: std::option::Option<std::string::String>,
     /// <p>The device's model name.</p>
+    #[doc(hidden)]
     pub model: std::option::Option<std::string::String>,
     /// <p>The device's model ID.</p>
+    #[doc(hidden)]
     pub model_id: std::option::Option<std::string::String>,
     /// <p>The device's form factor.</p>
     /// <p>Allowed values include:</p>
@@ -6308,6 +6432,7 @@ pub struct Device {
     /// <li> <p>PHONE</p> </li>
     /// <li> <p>TABLET</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub form_factor: std::option::Option<crate::model::DeviceFormFactor>,
     /// <p>The device's platform.</p>
     /// <p>Allowed values include:</p>
@@ -6315,35 +6440,50 @@ pub struct Device {
     /// <li> <p>ANDROID</p> </li>
     /// <li> <p>IOS</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::DevicePlatform>,
     /// <p>The device's operating system type.</p>
+    #[doc(hidden)]
     pub os: std::option::Option<std::string::String>,
     /// <p>Information about the device's CPU.</p>
+    #[doc(hidden)]
     pub cpu: std::option::Option<crate::model::Cpu>,
     /// <p>The resolution of the device.</p>
+    #[doc(hidden)]
     pub resolution: std::option::Option<crate::model::Resolution>,
     /// <p>The device's heap size, expressed in bytes.</p>
+    #[doc(hidden)]
     pub heap_size: std::option::Option<i64>,
     /// <p>The device's total memory size, expressed in bytes.</p>
+    #[doc(hidden)]
     pub memory: std::option::Option<i64>,
     /// <p>The device's image name.</p>
+    #[doc(hidden)]
     pub image: std::option::Option<std::string::String>,
     /// <p>The device's carrier.</p>
+    #[doc(hidden)]
     pub carrier: std::option::Option<std::string::String>,
     /// <p>The device's radio.</p>
+    #[doc(hidden)]
     pub radio: std::option::Option<std::string::String>,
     /// <p>Specifies whether remote access has been enabled for the specified device.</p>
+    #[doc(hidden)]
     pub remote_access_enabled: std::option::Option<bool>,
     /// <p>This flag is set to <code>true</code> if remote debugging is enabled for the device.</p>
     /// <p>Remote debugging is <a href="https://docs.aws.amazon.com/devicefarm/latest/developerguide/history.html">no longer supported</a>.</p>
+    #[doc(hidden)]
     pub remote_debug_enabled: std::option::Option<bool>,
     /// <p>The type of fleet to which this device belongs. Possible values are PRIVATE and PUBLIC.</p>
+    #[doc(hidden)]
     pub fleet_type: std::option::Option<std::string::String>,
     /// <p>The name of the fleet to which this device belongs.</p>
+    #[doc(hidden)]
     pub fleet_name: std::option::Option<std::string::String>,
     /// <p>The instances that belong to this device.</p>
+    #[doc(hidden)]
     pub instances: std::option::Option<std::vec::Vec<crate::model::DeviceInstance>>,
     /// <p>Indicates how likely a device is available for a test run. Currently available in the <code>ListDevices</code> and GetDevice API methods.</p>
+    #[doc(hidden)]
     pub availability: std::option::Option<crate::model::DeviceAvailability>,
 }
 impl Device {
@@ -6470,11 +6610,10 @@ impl std::fmt::Debug for Device {
         formatter.finish()
     }
 }
-/// See [`Device`](crate::model::Device)
+/// See [`Device`](crate::model::Device).
 pub mod device {
 
-    /// A builder for [`Device`](crate::model::Device)
-    #[non_exhaustive]
+    /// A builder for [`Device`](crate::model::Device).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -6753,7 +6892,7 @@ pub mod device {
             self.availability = input;
             self
         }
-        /// Consumes the builder and constructs a [`Device`](crate::model::Device)
+        /// Consumes the builder and constructs a [`Device`](crate::model::Device).
         pub fn build(self) -> crate::model::Device {
             crate::model::Device {
                 arn: self.arn,
@@ -6782,7 +6921,7 @@ pub mod device {
     }
 }
 impl Device {
-    /// Creates a new builder-style object to manufacture [`Device`](crate::model::Device)
+    /// Creates a new builder-style object to manufacture [`Device`](crate::model::Device).
     pub fn builder() -> crate::model::device::Builder {
         crate::model::device::Builder::default()
     }
@@ -6861,8 +7000,10 @@ impl AsRef<str> for DeviceAvailability {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Resolution {
     /// <p>The screen resolution's width, expressed in pixels.</p>
+    #[doc(hidden)]
     pub width: std::option::Option<i32>,
     /// <p>The screen resolution's height, expressed in pixels.</p>
+    #[doc(hidden)]
     pub height: std::option::Option<i32>,
 }
 impl Resolution {
@@ -6883,11 +7024,10 @@ impl std::fmt::Debug for Resolution {
         formatter.finish()
     }
 }
-/// See [`Resolution`](crate::model::Resolution)
+/// See [`Resolution`](crate::model::Resolution).
 pub mod resolution {
 
-    /// A builder for [`Resolution`](crate::model::Resolution)
-    #[non_exhaustive]
+    /// A builder for [`Resolution`](crate::model::Resolution).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) width: std::option::Option<i32>,
@@ -6914,7 +7054,7 @@ pub mod resolution {
             self.height = input;
             self
         }
-        /// Consumes the builder and constructs a [`Resolution`](crate::model::Resolution)
+        /// Consumes the builder and constructs a [`Resolution`](crate::model::Resolution).
         pub fn build(self) -> crate::model::Resolution {
             crate::model::Resolution {
                 width: self.width,
@@ -6924,7 +7064,7 @@ pub mod resolution {
     }
 }
 impl Resolution {
-    /// Creates a new builder-style object to manufacture [`Resolution`](crate::model::Resolution)
+    /// Creates a new builder-style object to manufacture [`Resolution`](crate::model::Resolution).
     pub fn builder() -> crate::model::resolution::Builder {
         crate::model::resolution::Builder::default()
     }
@@ -6935,10 +7075,13 @@ impl Resolution {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Cpu {
     /// <p>The CPU's frequency.</p>
+    #[doc(hidden)]
     pub frequency: std::option::Option<std::string::String>,
     /// <p>The CPU's architecture (for example, x86 or ARM).</p>
+    #[doc(hidden)]
     pub architecture: std::option::Option<std::string::String>,
     /// <p>The clock speed of the device's CPU, expressed in hertz (Hz). For example, a 1.2 GHz CPU is expressed as 1200000000.</p>
+    #[doc(hidden)]
     pub clock: std::option::Option<f64>,
 }
 impl Cpu {
@@ -6964,11 +7107,10 @@ impl std::fmt::Debug for Cpu {
         formatter.finish()
     }
 }
-/// See [`Cpu`](crate::model::Cpu)
+/// See [`Cpu`](crate::model::Cpu).
 pub mod cpu {
 
-    /// A builder for [`Cpu`](crate::model::Cpu)
-    #[non_exhaustive]
+    /// A builder for [`Cpu`](crate::model::Cpu).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) frequency: std::option::Option<std::string::String>,
@@ -7006,7 +7148,7 @@ pub mod cpu {
             self.clock = input;
             self
         }
-        /// Consumes the builder and constructs a [`Cpu`](crate::model::Cpu)
+        /// Consumes the builder and constructs a [`Cpu`](crate::model::Cpu).
         pub fn build(self) -> crate::model::Cpu {
             crate::model::Cpu {
                 frequency: self.frequency,
@@ -7017,7 +7159,7 @@ pub mod cpu {
     }
 }
 impl Cpu {
-    /// Creates a new builder-style object to manufacture [`Cpu`](crate::model::Cpu)
+    /// Creates a new builder-style object to manufacture [`Cpu`](crate::model::Cpu).
     pub fn builder() -> crate::model::cpu::Builder {
         crate::model::cpu::Builder::default()
     }
@@ -7083,8 +7225,10 @@ impl AsRef<str> for DeviceFormFactor {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Job {
     /// <p>The job's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The job's name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The job's type.</p>
     /// <p>Allowed values include the following:</p>
@@ -7108,8 +7252,10 @@ pub struct Job {
     /// <li> <p>XCTEST</p> </li>
     /// <li> <p>XCTEST_UI</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TestType>,
     /// <p>When the job was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The job's status.</p>
     /// <p>Allowed values include:</p>
@@ -7124,6 +7270,7 @@ pub struct Job {
     /// <li> <p>COMPLETED</p> </li>
     /// <li> <p>STOPPING</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ExecutionStatus>,
     /// <p>The job's result.</p>
     /// <p>Allowed values include:</p>
@@ -7136,24 +7283,34 @@ pub struct Job {
     /// <li> <p>ERRORED</p> </li>
     /// <li> <p>STOPPED</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub result: std::option::Option<crate::model::ExecutionResult>,
     /// <p>The job's start time.</p>
+    #[doc(hidden)]
     pub started: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The job's stop time.</p>
+    #[doc(hidden)]
     pub stopped: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The job's result counters.</p>
+    #[doc(hidden)]
     pub counters: std::option::Option<crate::model::Counters>,
     /// <p>A message about the job's result.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The device (phone or tablet).</p>
+    #[doc(hidden)]
     pub device: std::option::Option<crate::model::Device>,
     /// <p>The ARN of the instance.</p>
+    #[doc(hidden)]
     pub instance_arn: std::option::Option<std::string::String>,
     /// <p>Represents the total (metered or unmetered) minutes used by the job.</p>
+    #[doc(hidden)]
     pub device_minutes: std::option::Option<crate::model::DeviceMinutes>,
     /// <p>The endpoint for streaming device video.</p>
+    #[doc(hidden)]
     pub video_endpoint: std::option::Option<std::string::String>,
     /// <p>This value is set to true if video capture is enabled. Otherwise, it is set to false.</p>
+    #[doc(hidden)]
     pub video_capture: std::option::Option<bool>,
 }
 impl Job {
@@ -7282,11 +7439,10 @@ impl std::fmt::Debug for Job {
         formatter.finish()
     }
 }
-/// See [`Job`](crate::model::Job)
+/// See [`Job`](crate::model::Job).
 pub mod job {
 
-    /// A builder for [`Job`](crate::model::Job)
-    #[non_exhaustive]
+    /// A builder for [`Job`](crate::model::Job).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -7563,7 +7719,7 @@ pub mod job {
             self.video_capture = input;
             self
         }
-        /// Consumes the builder and constructs a [`Job`](crate::model::Job)
+        /// Consumes the builder and constructs a [`Job`](crate::model::Job).
         pub fn build(self) -> crate::model::Job {
             crate::model::Job {
                 arn: self.arn,
@@ -7586,7 +7742,7 @@ pub mod job {
     }
 }
 impl Job {
-    /// Creates a new builder-style object to manufacture [`Job`](crate::model::Job)
+    /// Creates a new builder-style object to manufacture [`Job`](crate::model::Job).
     pub fn builder() -> crate::model::job::Builder {
         crate::model::job::Builder::default()
     }
@@ -7597,15 +7753,20 @@ impl Job {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionConfiguration {
     /// <p>The number of minutes a test run executes before it times out.</p>
+    #[doc(hidden)]
     pub job_timeout_minutes: std::option::Option<i32>,
     /// <p>True if account cleanup is enabled at the beginning of the test. Otherwise, false.</p>
+    #[doc(hidden)]
     pub accounts_cleanup: std::option::Option<bool>,
     /// <p>True if app package cleanup is enabled at the beginning of the test. Otherwise, false.</p>
+    #[doc(hidden)]
     pub app_packages_cleanup: std::option::Option<bool>,
     /// <p>Set to true to enable video capture. Otherwise, set to false. The default is true.</p>
+    #[doc(hidden)]
     pub video_capture: std::option::Option<bool>,
     /// <p>When set to <code>true</code>, for private devices, Device Farm does not sign your app again. For public devices, Device Farm always signs your apps again.</p>
     /// <p>For more information about how Device Farm re-signs your apps, see <a href="https://aws.amazon.com/device-farm/faq/">Do you modify my app?</a> in the <i>AWS Device Farm FAQs</i>.</p>
+    #[doc(hidden)]
     pub skip_app_resign: std::option::Option<bool>,
 }
 impl ExecutionConfiguration {
@@ -7642,11 +7803,10 @@ impl std::fmt::Debug for ExecutionConfiguration {
         formatter.finish()
     }
 }
-/// See [`ExecutionConfiguration`](crate::model::ExecutionConfiguration)
+/// See [`ExecutionConfiguration`](crate::model::ExecutionConfiguration).
 pub mod execution_configuration {
 
-    /// A builder for [`ExecutionConfiguration`](crate::model::ExecutionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionConfiguration`](crate::model::ExecutionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_timeout_minutes: std::option::Option<i32>,
@@ -7708,7 +7868,7 @@ pub mod execution_configuration {
             self.skip_app_resign = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionConfiguration`](crate::model::ExecutionConfiguration)
+        /// Consumes the builder and constructs a [`ExecutionConfiguration`](crate::model::ExecutionConfiguration).
         pub fn build(self) -> crate::model::ExecutionConfiguration {
             crate::model::ExecutionConfiguration {
                 job_timeout_minutes: self.job_timeout_minutes,
@@ -7721,7 +7881,7 @@ pub mod execution_configuration {
     }
 }
 impl ExecutionConfiguration {
-    /// Creates a new builder-style object to manufacture [`ExecutionConfiguration`](crate::model::ExecutionConfiguration)
+    /// Creates a new builder-style object to manufacture [`ExecutionConfiguration`](crate::model::ExecutionConfiguration).
     pub fn builder() -> crate::model::execution_configuration::Builder {
         crate::model::execution_configuration::Builder::default()
     }
@@ -7732,24 +7892,33 @@ impl ExecutionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduleRunConfiguration {
     /// <p>The ARN of the extra data for the run. The extra data is a .zip file that AWS Device Farm extracts to external data for Android or the app's sandbox for iOS.</p>
+    #[doc(hidden)]
     pub extra_data_package_arn: std::option::Option<std::string::String>,
     /// <p>Reserved for internal use.</p>
+    #[doc(hidden)]
     pub network_profile_arn: std::option::Option<std::string::String>,
     /// <p>Information about the locale that is used for the run.</p>
+    #[doc(hidden)]
     pub locale: std::option::Option<std::string::String>,
     /// <p>Information about the location that is used for the run.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::Location>,
     /// <p>An array of ARNs for your VPC endpoint configurations.</p>
+    #[doc(hidden)]
     pub vpce_configuration_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Input <code>CustomerArtifactPaths</code> object for the scheduled run configuration.</p>
+    #[doc(hidden)]
     pub customer_artifact_paths: std::option::Option<crate::model::CustomerArtifactPaths>,
     /// <p>Information about the radio states for the run.</p>
+    #[doc(hidden)]
     pub radios: std::option::Option<crate::model::Radios>,
     /// <p>A list of upload ARNs for app packages to be installed with your app.</p>
+    #[doc(hidden)]
     pub auxiliary_apps: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies the billing method for a test run: <code>metered</code> or <code>unmetered</code>. If the parameter is not specified, the default value is <code>metered</code>.</p> <note>
     /// <p>If you have purchased unmetered device slots, you must set this parameter to <code>unmetered</code> to make use of them. Otherwise, your run counts against your metered time.</p>
     /// </note>
+    #[doc(hidden)]
     pub billing_method: std::option::Option<crate::model::BillingMethod>,
 }
 impl ScheduleRunConfiguration {
@@ -7809,11 +7978,10 @@ impl std::fmt::Debug for ScheduleRunConfiguration {
         formatter.finish()
     }
 }
-/// See [`ScheduleRunConfiguration`](crate::model::ScheduleRunConfiguration)
+/// See [`ScheduleRunConfiguration`](crate::model::ScheduleRunConfiguration).
 pub mod schedule_run_configuration {
 
-    /// A builder for [`ScheduleRunConfiguration`](crate::model::ScheduleRunConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ScheduleRunConfiguration`](crate::model::ScheduleRunConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) extra_data_package_arn: std::option::Option<std::string::String>,
@@ -7955,7 +8123,7 @@ pub mod schedule_run_configuration {
             self.billing_method = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduleRunConfiguration`](crate::model::ScheduleRunConfiguration)
+        /// Consumes the builder and constructs a [`ScheduleRunConfiguration`](crate::model::ScheduleRunConfiguration).
         pub fn build(self) -> crate::model::ScheduleRunConfiguration {
             crate::model::ScheduleRunConfiguration {
                 extra_data_package_arn: self.extra_data_package_arn,
@@ -7972,7 +8140,7 @@ pub mod schedule_run_configuration {
     }
 }
 impl ScheduleRunConfiguration {
-    /// Creates a new builder-style object to manufacture [`ScheduleRunConfiguration`](crate::model::ScheduleRunConfiguration)
+    /// Creates a new builder-style object to manufacture [`ScheduleRunConfiguration`](crate::model::ScheduleRunConfiguration).
     pub fn builder() -> crate::model::schedule_run_configuration::Builder {
         crate::model::schedule_run_configuration::Builder::default()
     }
@@ -8004,12 +8172,16 @@ pub struct ScheduleRunTest {
     /// <li> <p>XCTEST</p> </li>
     /// <li> <p>XCTEST_UI</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TestType>,
     /// <p>The ARN of the uploaded test to be run.</p>
+    #[doc(hidden)]
     pub test_package_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the YAML-formatted test specification.</p>
+    #[doc(hidden)]
     pub test_spec_arn: std::option::Option<std::string::String>,
     /// <p>The test's filter.</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<std::string::String>,
     /// <p>The test's parameters, such as test framework parameters and fixture settings. Parameters are represented by name-value pairs of strings.</p>
     /// <p>For all tests:</p>
@@ -8069,6 +8241,7 @@ pub struct ScheduleRunTest {
     /// <li> <p>Running multiple tests: <code>com.android.abc.Test1,com.android.abc.Test2</code> </p> </li>
     /// </ul> </li>
     /// </ul>
+    #[doc(hidden)]
     pub parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -8186,11 +8359,10 @@ impl std::fmt::Debug for ScheduleRunTest {
         formatter.finish()
     }
 }
-/// See [`ScheduleRunTest`](crate::model::ScheduleRunTest)
+/// See [`ScheduleRunTest`](crate::model::ScheduleRunTest).
 pub mod schedule_run_test {
 
-    /// A builder for [`ScheduleRunTest`](crate::model::ScheduleRunTest)
-    #[non_exhaustive]
+    /// A builder for [`ScheduleRunTest`](crate::model::ScheduleRunTest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::TestType>,
@@ -8429,7 +8601,7 @@ pub mod schedule_run_test {
             self.parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduleRunTest`](crate::model::ScheduleRunTest)
+        /// Consumes the builder and constructs a [`ScheduleRunTest`](crate::model::ScheduleRunTest).
         pub fn build(self) -> crate::model::ScheduleRunTest {
             crate::model::ScheduleRunTest {
                 r#type: self.r#type,
@@ -8442,7 +8614,7 @@ pub mod schedule_run_test {
     }
 }
 impl ScheduleRunTest {
-    /// Creates a new builder-style object to manufacture [`ScheduleRunTest`](crate::model::ScheduleRunTest)
+    /// Creates a new builder-style object to manufacture [`ScheduleRunTest`](crate::model::ScheduleRunTest).
     pub fn builder() -> crate::model::schedule_run_test::Builder {
         crate::model::schedule_run_test::Builder::default()
     }
@@ -8488,8 +8660,10 @@ pub struct DeviceSelectionConfiguration {
     /// <li> <p>The FLEET_TYPE attribute can be set to PUBLIC or PRIVATE.</p> </li>
     /// </ul> </li>
     /// </ul>
+    #[doc(hidden)]
     pub filters: std::option::Option<std::vec::Vec<crate::model::DeviceFilter>>,
     /// <p>The maximum number of devices to be included in a test run.</p>
+    #[doc(hidden)]
     pub max_devices: std::option::Option<i32>,
 }
 impl DeviceSelectionConfiguration {
@@ -8545,11 +8719,10 @@ impl std::fmt::Debug for DeviceSelectionConfiguration {
         formatter.finish()
     }
 }
-/// See [`DeviceSelectionConfiguration`](crate::model::DeviceSelectionConfiguration)
+/// See [`DeviceSelectionConfiguration`](crate::model::DeviceSelectionConfiguration).
 pub mod device_selection_configuration {
 
-    /// A builder for [`DeviceSelectionConfiguration`](crate::model::DeviceSelectionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DeviceSelectionConfiguration`](crate::model::DeviceSelectionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) filters: std::option::Option<std::vec::Vec<crate::model::DeviceFilter>>,
@@ -8655,7 +8828,7 @@ pub mod device_selection_configuration {
             self.max_devices = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeviceSelectionConfiguration`](crate::model::DeviceSelectionConfiguration)
+        /// Consumes the builder and constructs a [`DeviceSelectionConfiguration`](crate::model::DeviceSelectionConfiguration).
         pub fn build(self) -> crate::model::DeviceSelectionConfiguration {
             crate::model::DeviceSelectionConfiguration {
                 filters: self.filters,
@@ -8665,7 +8838,7 @@ pub mod device_selection_configuration {
     }
 }
 impl DeviceSelectionConfiguration {
-    /// Creates a new builder-style object to manufacture [`DeviceSelectionConfiguration`](crate::model::DeviceSelectionConfiguration)
+    /// Creates a new builder-style object to manufacture [`DeviceSelectionConfiguration`](crate::model::DeviceSelectionConfiguration).
     pub fn builder() -> crate::model::device_selection_configuration::Builder {
         crate::model::device_selection_configuration::Builder::default()
     }
@@ -8676,14 +8849,19 @@ impl DeviceSelectionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OfferingTransaction {
     /// <p>The status of an offering transaction.</p>
+    #[doc(hidden)]
     pub offering_status: std::option::Option<crate::model::OfferingStatus>,
     /// <p>The transaction ID of the offering transaction.</p>
+    #[doc(hidden)]
     pub transaction_id: std::option::Option<std::string::String>,
     /// <p>The ID that corresponds to a device offering promotion.</p>
+    #[doc(hidden)]
     pub offering_promotion_id: std::option::Option<std::string::String>,
     /// <p>The date on which an offering transaction was created.</p>
+    #[doc(hidden)]
     pub created_on: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The cost of an offering transaction.</p>
+    #[doc(hidden)]
     pub cost: std::option::Option<crate::model::MonetaryAmount>,
 }
 impl OfferingTransaction {
@@ -8719,11 +8897,10 @@ impl std::fmt::Debug for OfferingTransaction {
         formatter.finish()
     }
 }
-/// See [`OfferingTransaction`](crate::model::OfferingTransaction)
+/// See [`OfferingTransaction`](crate::model::OfferingTransaction).
 pub mod offering_transaction {
 
-    /// A builder for [`OfferingTransaction`](crate::model::OfferingTransaction)
-    #[non_exhaustive]
+    /// A builder for [`OfferingTransaction`](crate::model::OfferingTransaction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) offering_status: std::option::Option<crate::model::OfferingStatus>,
@@ -8798,7 +8975,7 @@ pub mod offering_transaction {
             self.cost = input;
             self
         }
-        /// Consumes the builder and constructs a [`OfferingTransaction`](crate::model::OfferingTransaction)
+        /// Consumes the builder and constructs a [`OfferingTransaction`](crate::model::OfferingTransaction).
         pub fn build(self) -> crate::model::OfferingTransaction {
             crate::model::OfferingTransaction {
                 offering_status: self.offering_status,
@@ -8811,7 +8988,7 @@ pub mod offering_transaction {
     }
 }
 impl OfferingTransaction {
-    /// Creates a new builder-style object to manufacture [`OfferingTransaction`](crate::model::OfferingTransaction)
+    /// Creates a new builder-style object to manufacture [`OfferingTransaction`](crate::model::OfferingTransaction).
     pub fn builder() -> crate::model::offering_transaction::Builder {
         crate::model::offering_transaction::Builder::default()
     }
@@ -8822,8 +8999,10 @@ impl OfferingTransaction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MonetaryAmount {
     /// <p>The numerical amount of an offering or transaction.</p>
+    #[doc(hidden)]
     pub amount: std::option::Option<f64>,
     /// <p>The currency code of a monetary amount. For example, <code>USD</code> means U.S. dollars.</p>
+    #[doc(hidden)]
     pub currency_code: std::option::Option<crate::model::CurrencyCode>,
 }
 impl MonetaryAmount {
@@ -8844,11 +9023,10 @@ impl std::fmt::Debug for MonetaryAmount {
         formatter.finish()
     }
 }
-/// See [`MonetaryAmount`](crate::model::MonetaryAmount)
+/// See [`MonetaryAmount`](crate::model::MonetaryAmount).
 pub mod monetary_amount {
 
-    /// A builder for [`MonetaryAmount`](crate::model::MonetaryAmount)
-    #[non_exhaustive]
+    /// A builder for [`MonetaryAmount`](crate::model::MonetaryAmount).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) amount: std::option::Option<f64>,
@@ -8878,7 +9056,7 @@ pub mod monetary_amount {
             self.currency_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`MonetaryAmount`](crate::model::MonetaryAmount)
+        /// Consumes the builder and constructs a [`MonetaryAmount`](crate::model::MonetaryAmount).
         pub fn build(self) -> crate::model::MonetaryAmount {
             crate::model::MonetaryAmount {
                 amount: self.amount,
@@ -8888,7 +9066,7 @@ pub mod monetary_amount {
     }
 }
 impl MonetaryAmount {
-    /// Creates a new builder-style object to manufacture [`MonetaryAmount`](crate::model::MonetaryAmount)
+    /// Creates a new builder-style object to manufacture [`MonetaryAmount`](crate::model::MonetaryAmount).
     pub fn builder() -> crate::model::monetary_amount::Builder {
         crate::model::monetary_amount::Builder::default()
     }
@@ -8950,12 +9128,16 @@ impl AsRef<str> for CurrencyCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OfferingStatus {
     /// <p>The type specified for the offering status.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::OfferingTransactionType>,
     /// <p>Represents the metadata of an offering status.</p>
+    #[doc(hidden)]
     pub offering: std::option::Option<crate::model::Offering>,
     /// <p>The number of available devices in the offering.</p>
+    #[doc(hidden)]
     pub quantity: std::option::Option<i32>,
     /// <p>The date on which the offering is effective.</p>
+    #[doc(hidden)]
     pub effective_on: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl OfferingStatus {
@@ -8986,11 +9168,10 @@ impl std::fmt::Debug for OfferingStatus {
         formatter.finish()
     }
 }
-/// See [`OfferingStatus`](crate::model::OfferingStatus)
+/// See [`OfferingStatus`](crate::model::OfferingStatus).
 pub mod offering_status {
 
-    /// A builder for [`OfferingStatus`](crate::model::OfferingStatus)
-    #[non_exhaustive]
+    /// A builder for [`OfferingStatus`](crate::model::OfferingStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::OfferingTransactionType>,
@@ -9045,7 +9226,7 @@ pub mod offering_status {
             self.effective_on = input;
             self
         }
-        /// Consumes the builder and constructs a [`OfferingStatus`](crate::model::OfferingStatus)
+        /// Consumes the builder and constructs a [`OfferingStatus`](crate::model::OfferingStatus).
         pub fn build(self) -> crate::model::OfferingStatus {
             crate::model::OfferingStatus {
                 r#type: self.r#type,
@@ -9057,7 +9238,7 @@ pub mod offering_status {
     }
 }
 impl OfferingStatus {
-    /// Creates a new builder-style object to manufacture [`OfferingStatus`](crate::model::OfferingStatus)
+    /// Creates a new builder-style object to manufacture [`OfferingStatus`](crate::model::OfferingStatus).
     pub fn builder() -> crate::model::offering_status::Builder {
         crate::model::offering_status::Builder::default()
     }
@@ -9068,14 +9249,19 @@ impl OfferingStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Offering {
     /// <p>The ID that corresponds to a device offering.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A string that describes the offering.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The type of offering (for example, <code>RECURRING</code>) for a device.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::OfferingType>,
     /// <p>The platform of the device (for example, <code>ANDROID</code> or <code>IOS</code>).</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::DevicePlatform>,
     /// <p>Specifies whether there are recurring charges for the offering.</p>
+    #[doc(hidden)]
     pub recurring_charges: std::option::Option<std::vec::Vec<crate::model::RecurringCharge>>,
 }
 impl Offering {
@@ -9111,11 +9297,10 @@ impl std::fmt::Debug for Offering {
         formatter.finish()
     }
 }
-/// See [`Offering`](crate::model::Offering)
+/// See [`Offering`](crate::model::Offering).
 pub mod offering {
 
-    /// A builder for [`Offering`](crate::model::Offering)
-    #[non_exhaustive]
+    /// A builder for [`Offering`](crate::model::Offering).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -9188,7 +9373,7 @@ pub mod offering {
             self.recurring_charges = input;
             self
         }
-        /// Consumes the builder and constructs a [`Offering`](crate::model::Offering)
+        /// Consumes the builder and constructs a [`Offering`](crate::model::Offering).
         pub fn build(self) -> crate::model::Offering {
             crate::model::Offering {
                 id: self.id,
@@ -9201,7 +9386,7 @@ pub mod offering {
     }
 }
 impl Offering {
-    /// Creates a new builder-style object to manufacture [`Offering`](crate::model::Offering)
+    /// Creates a new builder-style object to manufacture [`Offering`](crate::model::Offering).
     pub fn builder() -> crate::model::offering::Builder {
         crate::model::offering::Builder::default()
     }
@@ -9212,8 +9397,10 @@ impl Offering {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecurringCharge {
     /// <p>The cost of the recurring charge.</p>
+    #[doc(hidden)]
     pub cost: std::option::Option<crate::model::MonetaryAmount>,
     /// <p>The frequency in which charges recur.</p>
+    #[doc(hidden)]
     pub frequency: std::option::Option<crate::model::RecurringChargeFrequency>,
 }
 impl RecurringCharge {
@@ -9234,11 +9421,10 @@ impl std::fmt::Debug for RecurringCharge {
         formatter.finish()
     }
 }
-/// See [`RecurringCharge`](crate::model::RecurringCharge)
+/// See [`RecurringCharge`](crate::model::RecurringCharge).
 pub mod recurring_charge {
 
-    /// A builder for [`RecurringCharge`](crate::model::RecurringCharge)
-    #[non_exhaustive]
+    /// A builder for [`RecurringCharge`](crate::model::RecurringCharge).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cost: std::option::Option<crate::model::MonetaryAmount>,
@@ -9271,7 +9457,7 @@ pub mod recurring_charge {
             self.frequency = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecurringCharge`](crate::model::RecurringCharge)
+        /// Consumes the builder and constructs a [`RecurringCharge`](crate::model::RecurringCharge).
         pub fn build(self) -> crate::model::RecurringCharge {
             crate::model::RecurringCharge {
                 cost: self.cost,
@@ -9281,7 +9467,7 @@ pub mod recurring_charge {
     }
 }
 impl RecurringCharge {
-    /// Creates a new builder-style object to manufacture [`RecurringCharge`](crate::model::RecurringCharge)
+    /// Creates a new builder-style object to manufacture [`RecurringCharge`](crate::model::RecurringCharge).
     pub fn builder() -> crate::model::recurring_charge::Builder {
         crate::model::recurring_charge::Builder::default()
     }
@@ -9453,8 +9639,10 @@ impl AsRef<str> for OfferingTransactionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UniqueProblem {
     /// <p>A message about the unique problems' result.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>Information about the problems.</p>
+    #[doc(hidden)]
     pub problems: std::option::Option<std::vec::Vec<crate::model::Problem>>,
 }
 impl UniqueProblem {
@@ -9475,11 +9663,10 @@ impl std::fmt::Debug for UniqueProblem {
         formatter.finish()
     }
 }
-/// See [`UniqueProblem`](crate::model::UniqueProblem)
+/// See [`UniqueProblem`](crate::model::UniqueProblem).
 pub mod unique_problem {
 
-    /// A builder for [`UniqueProblem`](crate::model::UniqueProblem)
-    #[non_exhaustive]
+    /// A builder for [`UniqueProblem`](crate::model::UniqueProblem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9515,7 +9702,7 @@ pub mod unique_problem {
             self.problems = input;
             self
         }
-        /// Consumes the builder and constructs a [`UniqueProblem`](crate::model::UniqueProblem)
+        /// Consumes the builder and constructs a [`UniqueProblem`](crate::model::UniqueProblem).
         pub fn build(self) -> crate::model::UniqueProblem {
             crate::model::UniqueProblem {
                 message: self.message,
@@ -9525,7 +9712,7 @@ pub mod unique_problem {
     }
 }
 impl UniqueProblem {
-    /// Creates a new builder-style object to manufacture [`UniqueProblem`](crate::model::UniqueProblem)
+    /// Creates a new builder-style object to manufacture [`UniqueProblem`](crate::model::UniqueProblem).
     pub fn builder() -> crate::model::unique_problem::Builder {
         crate::model::unique_problem::Builder::default()
     }
@@ -9536,14 +9723,19 @@ impl UniqueProblem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Problem {
     /// <p>Information about the associated run.</p>
+    #[doc(hidden)]
     pub run: std::option::Option<crate::model::ProblemDetail>,
     /// <p>Information about the associated job.</p>
+    #[doc(hidden)]
     pub job: std::option::Option<crate::model::ProblemDetail>,
     /// <p>Information about the associated suite.</p>
+    #[doc(hidden)]
     pub suite: std::option::Option<crate::model::ProblemDetail>,
     /// <p>Information about the associated test.</p>
+    #[doc(hidden)]
     pub test: std::option::Option<crate::model::ProblemDetail>,
     /// <p>Information about the associated device.</p>
+    #[doc(hidden)]
     pub device: std::option::Option<crate::model::Device>,
     /// <p>The problem's result.</p>
     /// <p>Allowed values include:</p>
@@ -9556,8 +9748,10 @@ pub struct Problem {
     /// <li> <p>ERRORED</p> </li>
     /// <li> <p>STOPPED</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub result: std::option::Option<crate::model::ExecutionResult>,
     /// <p>A message about the problem's result.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl Problem {
@@ -9613,11 +9807,10 @@ impl std::fmt::Debug for Problem {
         formatter.finish()
     }
 }
-/// See [`Problem`](crate::model::Problem)
+/// See [`Problem`](crate::model::Problem).
 pub mod problem {
 
-    /// A builder for [`Problem`](crate::model::Problem)
-    #[non_exhaustive]
+    /// A builder for [`Problem`](crate::model::Problem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) run: std::option::Option<crate::model::ProblemDetail>,
@@ -9725,7 +9918,7 @@ pub mod problem {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`Problem`](crate::model::Problem)
+        /// Consumes the builder and constructs a [`Problem`](crate::model::Problem).
         pub fn build(self) -> crate::model::Problem {
             crate::model::Problem {
                 run: self.run,
@@ -9740,7 +9933,7 @@ pub mod problem {
     }
 }
 impl Problem {
-    /// Creates a new builder-style object to manufacture [`Problem`](crate::model::Problem)
+    /// Creates a new builder-style object to manufacture [`Problem`](crate::model::Problem).
     pub fn builder() -> crate::model::problem::Builder {
         crate::model::problem::Builder::default()
     }
@@ -9751,8 +9944,10 @@ impl Problem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProblemDetail {
     /// <p>The problem detail's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The problem detail's name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl ProblemDetail {
@@ -9773,11 +9968,10 @@ impl std::fmt::Debug for ProblemDetail {
         formatter.finish()
     }
 }
-/// See [`ProblemDetail`](crate::model::ProblemDetail)
+/// See [`ProblemDetail`](crate::model::ProblemDetail).
 pub mod problem_detail {
 
-    /// A builder for [`ProblemDetail`](crate::model::ProblemDetail)
-    #[non_exhaustive]
+    /// A builder for [`ProblemDetail`](crate::model::ProblemDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -9804,7 +9998,7 @@ pub mod problem_detail {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProblemDetail`](crate::model::ProblemDetail)
+        /// Consumes the builder and constructs a [`ProblemDetail`](crate::model::ProblemDetail).
         pub fn build(self) -> crate::model::ProblemDetail {
             crate::model::ProblemDetail {
                 arn: self.arn,
@@ -9814,7 +10008,7 @@ pub mod problem_detail {
     }
 }
 impl ProblemDetail {
-    /// Creates a new builder-style object to manufacture [`ProblemDetail`](crate::model::ProblemDetail)
+    /// Creates a new builder-style object to manufacture [`ProblemDetail`](crate::model::ProblemDetail).
     pub fn builder() -> crate::model::problem_detail::Builder {
         crate::model::problem_detail::Builder::default()
     }
@@ -9825,8 +10019,10 @@ impl ProblemDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Test {
     /// <p>The test's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The test's name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The test's type.</p>
     /// <p>Must be one of the following values:</p>
@@ -9852,8 +10048,10 @@ pub struct Test {
     /// <li> <p>XCTEST</p> </li>
     /// <li> <p>XCTEST_UI</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TestType>,
     /// <p>When the test was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The test's status.</p>
     /// <p>Allowed values include:</p>
@@ -9868,6 +10066,7 @@ pub struct Test {
     /// <li> <p>COMPLETED</p> </li>
     /// <li> <p>STOPPING</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ExecutionStatus>,
     /// <p>The test's result.</p>
     /// <p>Allowed values include:</p>
@@ -9880,16 +10079,22 @@ pub struct Test {
     /// <li> <p>ERRORED</p> </li>
     /// <li> <p>STOPPED</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub result: std::option::Option<crate::model::ExecutionResult>,
     /// <p>The test's start time.</p>
+    #[doc(hidden)]
     pub started: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The test's stop time.</p>
+    #[doc(hidden)]
     pub stopped: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The test's result counters.</p>
+    #[doc(hidden)]
     pub counters: std::option::Option<crate::model::Counters>,
     /// <p>A message about the test's result.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>Represents the total (metered or unmetered) minutes used by the test.</p>
+    #[doc(hidden)]
     pub device_minutes: std::option::Option<crate::model::DeviceMinutes>,
 }
 impl Test {
@@ -10000,11 +10205,10 @@ impl std::fmt::Debug for Test {
         formatter.finish()
     }
 }
-/// See [`Test`](crate::model::Test)
+/// See [`Test`](crate::model::Test).
 pub mod test {
 
-    /// A builder for [`Test`](crate::model::Test)
-    #[non_exhaustive]
+    /// A builder for [`Test`](crate::model::Test).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -10238,7 +10442,7 @@ pub mod test {
             self.device_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`Test`](crate::model::Test)
+        /// Consumes the builder and constructs a [`Test`](crate::model::Test).
         pub fn build(self) -> crate::model::Test {
             crate::model::Test {
                 arn: self.arn,
@@ -10257,7 +10461,7 @@ pub mod test {
     }
 }
 impl Test {
-    /// Creates a new builder-style object to manufacture [`Test`](crate::model::Test)
+    /// Creates a new builder-style object to manufacture [`Test`](crate::model::Test).
     pub fn builder() -> crate::model::test::Builder {
         crate::model::test::Builder::default()
     }
@@ -10268,16 +10472,22 @@ impl Test {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TestGridSession {
     /// <p>The ARN of the session.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The state of the session.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TestGridSessionStatus>,
     /// <p>The time that the session was started.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time the session ended.</p>
+    #[doc(hidden)]
     pub ended: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The number of billed minutes that were used for this session. </p>
+    #[doc(hidden)]
     pub billing_minutes: std::option::Option<f64>,
     /// <p>A JSON object of options and parameters passed to the Selenium WebDriver.</p>
+    #[doc(hidden)]
     pub selenium_properties: std::option::Option<std::string::String>,
 }
 impl TestGridSession {
@@ -10318,11 +10528,10 @@ impl std::fmt::Debug for TestGridSession {
         formatter.finish()
     }
 }
-/// See [`TestGridSession`](crate::model::TestGridSession)
+/// See [`TestGridSession`](crate::model::TestGridSession).
 pub mod test_grid_session {
 
-    /// A builder for [`TestGridSession`](crate::model::TestGridSession)
-    #[non_exhaustive]
+    /// A builder for [`TestGridSession`](crate::model::TestGridSession).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -10402,7 +10611,7 @@ pub mod test_grid_session {
             self.selenium_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`TestGridSession`](crate::model::TestGridSession)
+        /// Consumes the builder and constructs a [`TestGridSession`](crate::model::TestGridSession).
         pub fn build(self) -> crate::model::TestGridSession {
             crate::model::TestGridSession {
                 arn: self.arn,
@@ -10416,7 +10625,7 @@ pub mod test_grid_session {
     }
 }
 impl TestGridSession {
-    /// Creates a new builder-style object to manufacture [`TestGridSession`](crate::model::TestGridSession)
+    /// Creates a new builder-style object to manufacture [`TestGridSession`](crate::model::TestGridSession).
     pub fn builder() -> crate::model::test_grid_session::Builder {
         crate::model::test_grid_session::Builder::default()
     }
@@ -10488,10 +10697,13 @@ impl AsRef<str> for TestGridSessionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TestGridSessionArtifact {
     /// <p>The file name of the artifact.</p>
+    #[doc(hidden)]
     pub filename: std::option::Option<std::string::String>,
     /// <p>The kind of artifact.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TestGridSessionArtifactType>,
     /// <p>A semi-stable URL to the content of the object.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl TestGridSessionArtifact {
@@ -10517,11 +10729,10 @@ impl std::fmt::Debug for TestGridSessionArtifact {
         formatter.finish()
     }
 }
-/// See [`TestGridSessionArtifact`](crate::model::TestGridSessionArtifact)
+/// See [`TestGridSessionArtifact`](crate::model::TestGridSessionArtifact).
 pub mod test_grid_session_artifact {
 
-    /// A builder for [`TestGridSessionArtifact`](crate::model::TestGridSessionArtifact)
-    #[non_exhaustive]
+    /// A builder for [`TestGridSessionArtifact`](crate::model::TestGridSessionArtifact).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) filename: std::option::Option<std::string::String>,
@@ -10562,7 +10773,7 @@ pub mod test_grid_session_artifact {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`TestGridSessionArtifact`](crate::model::TestGridSessionArtifact)
+        /// Consumes the builder and constructs a [`TestGridSessionArtifact`](crate::model::TestGridSessionArtifact).
         pub fn build(self) -> crate::model::TestGridSessionArtifact {
             crate::model::TestGridSessionArtifact {
                 filename: self.filename,
@@ -10573,7 +10784,7 @@ pub mod test_grid_session_artifact {
     }
 }
 impl TestGridSessionArtifact {
-    /// Creates a new builder-style object to manufacture [`TestGridSessionArtifact`](crate::model::TestGridSessionArtifact)
+    /// Creates a new builder-style object to manufacture [`TestGridSessionArtifact`](crate::model::TestGridSessionArtifact).
     pub fn builder() -> crate::model::test_grid_session_artifact::Builder {
         crate::model::test_grid_session_artifact::Builder::default()
     }
@@ -10698,14 +10909,19 @@ impl AsRef<str> for TestGridSessionArtifactCategory {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TestGridSessionAction {
     /// <p>The action taken by the session.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<std::string::String>,
     /// <p>The time that the session invoked the action.</p>
+    #[doc(hidden)]
     pub started: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time, in milliseconds, that the action took to complete in the browser.</p>
+    #[doc(hidden)]
     pub duration: std::option::Option<i64>,
     /// <p>HTTP status code returned to the browser when the action was taken.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<std::string::String>,
     /// <p>HTTP method that the browser used to make the request.</p>
+    #[doc(hidden)]
     pub request_method: std::option::Option<std::string::String>,
 }
 impl TestGridSessionAction {
@@ -10741,11 +10957,10 @@ impl std::fmt::Debug for TestGridSessionAction {
         formatter.finish()
     }
 }
-/// See [`TestGridSessionAction`](crate::model::TestGridSessionAction)
+/// See [`TestGridSessionAction`](crate::model::TestGridSessionAction).
 pub mod test_grid_session_action {
 
-    /// A builder for [`TestGridSessionAction`](crate::model::TestGridSessionAction)
-    #[non_exhaustive]
+    /// A builder for [`TestGridSessionAction`](crate::model::TestGridSessionAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<std::string::String>,
@@ -10811,7 +11026,7 @@ pub mod test_grid_session_action {
             self.request_method = input;
             self
         }
-        /// Consumes the builder and constructs a [`TestGridSessionAction`](crate::model::TestGridSessionAction)
+        /// Consumes the builder and constructs a [`TestGridSessionAction`](crate::model::TestGridSessionAction).
         pub fn build(self) -> crate::model::TestGridSessionAction {
             crate::model::TestGridSessionAction {
                 action: self.action,
@@ -10824,7 +11039,7 @@ pub mod test_grid_session_action {
     }
 }
 impl TestGridSessionAction {
-    /// Creates a new builder-style object to manufacture [`TestGridSessionAction`](crate::model::TestGridSessionAction)
+    /// Creates a new builder-style object to manufacture [`TestGridSessionAction`](crate::model::TestGridSessionAction).
     pub fn builder() -> crate::model::test_grid_session_action::Builder {
         crate::model::test_grid_session_action::Builder::default()
     }
@@ -10835,8 +11050,10 @@ impl TestGridSessionAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Suite {
     /// <p>The suite's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The suite's name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The suite's type.</p>
     /// <p>Must be one of the following values:</p>
@@ -10862,8 +11079,10 @@ pub struct Suite {
     /// <li> <p>XCTEST</p> </li>
     /// <li> <p>XCTEST_UI</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TestType>,
     /// <p>When the suite was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The suite's status.</p>
     /// <p>Allowed values include:</p>
@@ -10878,6 +11097,7 @@ pub struct Suite {
     /// <li> <p>COMPLETED</p> </li>
     /// <li> <p>STOPPING</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ExecutionStatus>,
     /// <p>The suite's result.</p>
     /// <p>Allowed values include:</p>
@@ -10890,16 +11110,22 @@ pub struct Suite {
     /// <li> <p>ERRORED</p> </li>
     /// <li> <p>STOPPED</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub result: std::option::Option<crate::model::ExecutionResult>,
     /// <p>The suite's start time.</p>
+    #[doc(hidden)]
     pub started: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The suite's stop time.</p>
+    #[doc(hidden)]
     pub stopped: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The suite's result counters.</p>
+    #[doc(hidden)]
     pub counters: std::option::Option<crate::model::Counters>,
     /// <p>A message about the suite's result.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>Represents the total (metered or unmetered) minutes used by the test suite.</p>
+    #[doc(hidden)]
     pub device_minutes: std::option::Option<crate::model::DeviceMinutes>,
 }
 impl Suite {
@@ -11010,11 +11236,10 @@ impl std::fmt::Debug for Suite {
         formatter.finish()
     }
 }
-/// See [`Suite`](crate::model::Suite)
+/// See [`Suite`](crate::model::Suite).
 pub mod suite {
 
-    /// A builder for [`Suite`](crate::model::Suite)
-    #[non_exhaustive]
+    /// A builder for [`Suite`](crate::model::Suite).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -11248,7 +11473,7 @@ pub mod suite {
             self.device_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`Suite`](crate::model::Suite)
+        /// Consumes the builder and constructs a [`Suite`](crate::model::Suite).
         pub fn build(self) -> crate::model::Suite {
             crate::model::Suite {
                 arn: self.arn,
@@ -11267,7 +11492,7 @@ pub mod suite {
     }
 }
 impl Suite {
-    /// Creates a new builder-style object to manufacture [`Suite`](crate::model::Suite)
+    /// Creates a new builder-style object to manufacture [`Suite`](crate::model::Suite).
     pub fn builder() -> crate::model::suite::Builder {
         crate::model::suite::Builder::default()
     }
@@ -11278,6 +11503,7 @@ impl Suite {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Sample {
     /// <p>The sample's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The sample's type.</p>
     /// <p>Must be one of the following values:</p>
@@ -11300,8 +11526,10 @@ pub struct Sample {
     /// <li> <p>TX</p> </li>
     /// <li> <p>TX_RATE: The total number of bytes per second (TCP and UDP) that are received, by app process.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::SampleType>,
     /// <p>The presigned Amazon S3 URL that can be used with a GET request to download the sample's file.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl Sample {
@@ -11347,11 +11575,10 @@ impl std::fmt::Debug for Sample {
         formatter.finish()
     }
 }
-/// See [`Sample`](crate::model::Sample)
+/// See [`Sample`](crate::model::Sample).
 pub mod sample {
 
-    /// A builder for [`Sample`](crate::model::Sample)
-    #[non_exhaustive]
+    /// A builder for [`Sample`](crate::model::Sample).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -11429,7 +11656,7 @@ pub mod sample {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`Sample`](crate::model::Sample)
+        /// Consumes the builder and constructs a [`Sample`](crate::model::Sample).
         pub fn build(self) -> crate::model::Sample {
             crate::model::Sample {
                 arn: self.arn,
@@ -11440,7 +11667,7 @@ pub mod sample {
     }
 }
 impl Sample {
-    /// Creates a new builder-style object to manufacture [`Sample`](crate::model::Sample)
+    /// Creates a new builder-style object to manufacture [`Sample`](crate::model::Sample).
     pub fn builder() -> crate::model::sample::Builder {
         crate::model::sample::Builder::default()
     }
@@ -11584,8 +11811,10 @@ impl AsRef<str> for SampleType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OfferingPromotion {
     /// <p>The ID of the offering promotion.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A string that describes the offering promotion.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl OfferingPromotion {
@@ -11606,11 +11835,10 @@ impl std::fmt::Debug for OfferingPromotion {
         formatter.finish()
     }
 }
-/// See [`OfferingPromotion`](crate::model::OfferingPromotion)
+/// See [`OfferingPromotion`](crate::model::OfferingPromotion).
 pub mod offering_promotion {
 
-    /// A builder for [`OfferingPromotion`](crate::model::OfferingPromotion)
-    #[non_exhaustive]
+    /// A builder for [`OfferingPromotion`](crate::model::OfferingPromotion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -11637,7 +11865,7 @@ pub mod offering_promotion {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`OfferingPromotion`](crate::model::OfferingPromotion)
+        /// Consumes the builder and constructs a [`OfferingPromotion`](crate::model::OfferingPromotion).
         pub fn build(self) -> crate::model::OfferingPromotion {
             crate::model::OfferingPromotion {
                 id: self.id,
@@ -11647,7 +11875,7 @@ pub mod offering_promotion {
     }
 }
 impl OfferingPromotion {
-    /// Creates a new builder-style object to manufacture [`OfferingPromotion`](crate::model::OfferingPromotion)
+    /// Creates a new builder-style object to manufacture [`OfferingPromotion`](crate::model::OfferingPromotion).
     pub fn builder() -> crate::model::offering_promotion::Builder {
         crate::model::offering_promotion::Builder::default()
     }
@@ -11658,8 +11886,10 @@ impl OfferingPromotion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Artifact {
     /// <p>The artifact's ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The artifact's name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The artifact's type.</p>
     /// <p>Allowed values include the following:</p>
@@ -11693,10 +11923,13 @@ pub struct Artifact {
     /// <li> <p>CUSTOMER_ARTIFACT_LOG</p> </li>
     /// <li> <p>TESTSPEC_OUTPUT</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ArtifactType>,
     /// <p>The artifact's file extension.</p>
+    #[doc(hidden)]
     pub extension: std::option::Option<std::string::String>,
     /// <p>The presigned Amazon S3 URL that can be used with a GET request to download the artifact's file.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl Artifact {
@@ -11763,11 +11996,10 @@ impl std::fmt::Debug for Artifact {
         formatter.finish()
     }
 }
-/// See [`Artifact`](crate::model::Artifact)
+/// See [`Artifact`](crate::model::Artifact).
 pub mod artifact {
 
-    /// A builder for [`Artifact`](crate::model::Artifact)
-    #[non_exhaustive]
+    /// A builder for [`Artifact`](crate::model::Artifact).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -11889,7 +12121,7 @@ pub mod artifact {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`Artifact`](crate::model::Artifact)
+        /// Consumes the builder and constructs a [`Artifact`](crate::model::Artifact).
         pub fn build(self) -> crate::model::Artifact {
             crate::model::Artifact {
                 arn: self.arn,
@@ -11902,7 +12134,7 @@ pub mod artifact {
     }
 }
 impl Artifact {
-    /// Creates a new builder-style object to manufacture [`Artifact`](crate::model::Artifact)
+    /// Creates a new builder-style object to manufacture [`Artifact`](crate::model::Artifact).
     pub fn builder() -> crate::model::artifact::Builder {
         crate::model::artifact::Builder::default()
     }
@@ -12160,10 +12392,13 @@ impl AsRef<str> for ArtifactCategory {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DevicePoolCompatibilityResult {
     /// <p>The device (phone or tablet) to return information about.</p>
+    #[doc(hidden)]
     pub device: std::option::Option<crate::model::Device>,
     /// <p>Whether the result was compatible with the device pool.</p>
+    #[doc(hidden)]
     pub compatible: std::option::Option<bool>,
     /// <p>Information about the compatibility.</p>
+    #[doc(hidden)]
     pub incompatibility_messages:
         std::option::Option<std::vec::Vec<crate::model::IncompatibilityMessage>>,
 }
@@ -12192,11 +12427,10 @@ impl std::fmt::Debug for DevicePoolCompatibilityResult {
         formatter.finish()
     }
 }
-/// See [`DevicePoolCompatibilityResult`](crate::model::DevicePoolCompatibilityResult)
+/// See [`DevicePoolCompatibilityResult`](crate::model::DevicePoolCompatibilityResult).
 pub mod device_pool_compatibility_result {
 
-    /// A builder for [`DevicePoolCompatibilityResult`](crate::model::DevicePoolCompatibilityResult)
-    #[non_exhaustive]
+    /// A builder for [`DevicePoolCompatibilityResult`](crate::model::DevicePoolCompatibilityResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device: std::option::Option<crate::model::Device>,
@@ -12247,7 +12481,7 @@ pub mod device_pool_compatibility_result {
             self.incompatibility_messages = input;
             self
         }
-        /// Consumes the builder and constructs a [`DevicePoolCompatibilityResult`](crate::model::DevicePoolCompatibilityResult)
+        /// Consumes the builder and constructs a [`DevicePoolCompatibilityResult`](crate::model::DevicePoolCompatibilityResult).
         pub fn build(self) -> crate::model::DevicePoolCompatibilityResult {
             crate::model::DevicePoolCompatibilityResult {
                 device: self.device,
@@ -12258,7 +12492,7 @@ pub mod device_pool_compatibility_result {
     }
 }
 impl DevicePoolCompatibilityResult {
-    /// Creates a new builder-style object to manufacture [`DevicePoolCompatibilityResult`](crate::model::DevicePoolCompatibilityResult)
+    /// Creates a new builder-style object to manufacture [`DevicePoolCompatibilityResult`](crate::model::DevicePoolCompatibilityResult).
     pub fn builder() -> crate::model::device_pool_compatibility_result::Builder {
         crate::model::device_pool_compatibility_result::Builder::default()
     }
@@ -12269,6 +12503,7 @@ impl DevicePoolCompatibilityResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IncompatibilityMessage {
     /// <p>A message about the incompatibility.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The type of incompatibility.</p>
     /// <p>Allowed values include:</p>
@@ -12280,6 +12515,7 @@ pub struct IncompatibilityMessage {
     /// <li> <p>REMOTE_ACCESS_ENABLED</p> </li>
     /// <li> <p>APPIUM_VERSION</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::DeviceAttribute>,
 }
 impl IncompatibilityMessage {
@@ -12309,11 +12545,10 @@ impl std::fmt::Debug for IncompatibilityMessage {
         formatter.finish()
     }
 }
-/// See [`IncompatibilityMessage`](crate::model::IncompatibilityMessage)
+/// See [`IncompatibilityMessage`](crate::model::IncompatibilityMessage).
 pub mod incompatibility_message {
 
-    /// A builder for [`IncompatibilityMessage`](crate::model::IncompatibilityMessage)
-    #[non_exhaustive]
+    /// A builder for [`IncompatibilityMessage`](crate::model::IncompatibilityMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -12361,7 +12596,7 @@ pub mod incompatibility_message {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`IncompatibilityMessage`](crate::model::IncompatibilityMessage)
+        /// Consumes the builder and constructs a [`IncompatibilityMessage`](crate::model::IncompatibilityMessage).
         pub fn build(self) -> crate::model::IncompatibilityMessage {
             crate::model::IncompatibilityMessage {
                 message: self.message,
@@ -12371,7 +12606,7 @@ pub mod incompatibility_message {
     }
 }
 impl IncompatibilityMessage {
-    /// Creates a new builder-style object to manufacture [`IncompatibilityMessage`](crate::model::IncompatibilityMessage)
+    /// Creates a new builder-style object to manufacture [`IncompatibilityMessage`](crate::model::IncompatibilityMessage).
     pub fn builder() -> crate::model::incompatibility_message::Builder {
         crate::model::incompatibility_message::Builder::default()
     }
@@ -12382,23 +12617,31 @@ impl IncompatibilityMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountSettings {
     /// <p>The AWS account number specified in the <code>AccountSettings</code> container.</p>
+    #[doc(hidden)]
     pub aws_account_number: std::option::Option<std::string::String>,
     /// <p>Returns the unmetered devices you have purchased or want to purchase.</p>
+    #[doc(hidden)]
     pub unmetered_devices:
         std::option::Option<std::collections::HashMap<crate::model::DevicePlatform, i32>>,
     /// <p>Returns the unmetered remote access devices you have purchased or want to purchase.</p>
+    #[doc(hidden)]
     pub unmetered_remote_access_devices:
         std::option::Option<std::collections::HashMap<crate::model::DevicePlatform, i32>>,
     /// <p>The maximum number of minutes a test run executes before it times out.</p>
+    #[doc(hidden)]
     pub max_job_timeout_minutes: std::option::Option<i32>,
     /// <p>Information about an AWS account's usage of free trial device minutes.</p>
+    #[doc(hidden)]
     pub trial_minutes: std::option::Option<crate::model::TrialMinutes>,
     /// <p>The maximum number of device slots that the AWS account can purchase. Each maximum is expressed as an <code>offering-id:number</code> pair, where the <code>offering-id</code> represents one of the IDs returned by the <code>ListOfferings</code> command.</p>
+    #[doc(hidden)]
     pub max_slots: std::option::Option<std::collections::HashMap<std::string::String, i32>>,
     /// <p>The default number of minutes (at the account level) a test run executes before it times out. The default value is 150 minutes.</p>
+    #[doc(hidden)]
     pub default_job_timeout_minutes: std::option::Option<i32>,
     /// <p>When set to <code>true</code>, for private devices, Device Farm does not sign your app again. For public devices, Device Farm always signs your apps again.</p>
     /// <p>For more information about how Device Farm re-signs your apps, see <a href="https://aws.amazon.com/device-farm/faq/">Do you modify my app?</a> in the <i>AWS Device Farm FAQs</i>.</p>
+    #[doc(hidden)]
     pub skip_app_resign: std::option::Option<bool>,
 }
 impl AccountSettings {
@@ -12462,11 +12705,10 @@ impl std::fmt::Debug for AccountSettings {
         formatter.finish()
     }
 }
-/// See [`AccountSettings`](crate::model::AccountSettings)
+/// See [`AccountSettings`](crate::model::AccountSettings).
 pub mod account_settings {
 
-    /// A builder for [`AccountSettings`](crate::model::AccountSettings)
-    #[non_exhaustive]
+    /// A builder for [`AccountSettings`](crate::model::AccountSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aws_account_number: std::option::Option<std::string::String>,
@@ -12605,7 +12847,7 @@ pub mod account_settings {
             self.skip_app_resign = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountSettings`](crate::model::AccountSettings)
+        /// Consumes the builder and constructs a [`AccountSettings`](crate::model::AccountSettings).
         pub fn build(self) -> crate::model::AccountSettings {
             crate::model::AccountSettings {
                 aws_account_number: self.aws_account_number,
@@ -12621,7 +12863,7 @@ pub mod account_settings {
     }
 }
 impl AccountSettings {
-    /// Creates a new builder-style object to manufacture [`AccountSettings`](crate::model::AccountSettings)
+    /// Creates a new builder-style object to manufacture [`AccountSettings`](crate::model::AccountSettings).
     pub fn builder() -> crate::model::account_settings::Builder {
         crate::model::account_settings::Builder::default()
     }
@@ -12632,8 +12874,10 @@ impl AccountSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrialMinutes {
     /// <p>The total number of free trial minutes that the account started with.</p>
+    #[doc(hidden)]
     pub total: std::option::Option<f64>,
     /// <p>The number of free trial minutes remaining in the account.</p>
+    #[doc(hidden)]
     pub remaining: std::option::Option<f64>,
 }
 impl TrialMinutes {
@@ -12654,11 +12898,10 @@ impl std::fmt::Debug for TrialMinutes {
         formatter.finish()
     }
 }
-/// See [`TrialMinutes`](crate::model::TrialMinutes)
+/// See [`TrialMinutes`](crate::model::TrialMinutes).
 pub mod trial_minutes {
 
-    /// A builder for [`TrialMinutes`](crate::model::TrialMinutes)
-    #[non_exhaustive]
+    /// A builder for [`TrialMinutes`](crate::model::TrialMinutes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total: std::option::Option<f64>,
@@ -12685,7 +12928,7 @@ pub mod trial_minutes {
             self.remaining = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrialMinutes`](crate::model::TrialMinutes)
+        /// Consumes the builder and constructs a [`TrialMinutes`](crate::model::TrialMinutes).
         pub fn build(self) -> crate::model::TrialMinutes {
             crate::model::TrialMinutes {
                 total: self.total,
@@ -12695,7 +12938,7 @@ pub mod trial_minutes {
     }
 }
 impl TrialMinutes {
-    /// Creates a new builder-style object to manufacture [`TrialMinutes`](crate::model::TrialMinutes)
+    /// Creates a new builder-style object to manufacture [`TrialMinutes`](crate::model::TrialMinutes).
     pub fn builder() -> crate::model::trial_minutes::Builder {
         crate::model::trial_minutes::Builder::default()
     }
@@ -12706,8 +12949,10 @@ impl TrialMinutes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRemoteAccessSessionConfiguration {
     /// <p>The billing method for the remote access session.</p>
+    #[doc(hidden)]
     pub billing_method: std::option::Option<crate::model::BillingMethod>,
     /// <p>An array of ARNs included in the VPC endpoint configuration.</p>
+    #[doc(hidden)]
     pub vpce_configuration_arns: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CreateRemoteAccessSessionConfiguration {
@@ -12728,11 +12973,10 @@ impl std::fmt::Debug for CreateRemoteAccessSessionConfiguration {
         formatter.finish()
     }
 }
-/// See [`CreateRemoteAccessSessionConfiguration`](crate::model::CreateRemoteAccessSessionConfiguration)
+/// See [`CreateRemoteAccessSessionConfiguration`](crate::model::CreateRemoteAccessSessionConfiguration).
 pub mod create_remote_access_session_configuration {
 
-    /// A builder for [`CreateRemoteAccessSessionConfiguration`](crate::model::CreateRemoteAccessSessionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CreateRemoteAccessSessionConfiguration`](crate::model::CreateRemoteAccessSessionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) billing_method: std::option::Option<crate::model::BillingMethod>,
@@ -12771,7 +13015,7 @@ pub mod create_remote_access_session_configuration {
             self.vpce_configuration_arns = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRemoteAccessSessionConfiguration`](crate::model::CreateRemoteAccessSessionConfiguration)
+        /// Consumes the builder and constructs a [`CreateRemoteAccessSessionConfiguration`](crate::model::CreateRemoteAccessSessionConfiguration).
         pub fn build(self) -> crate::model::CreateRemoteAccessSessionConfiguration {
             crate::model::CreateRemoteAccessSessionConfiguration {
                 billing_method: self.billing_method,
@@ -12781,7 +13025,7 @@ pub mod create_remote_access_session_configuration {
     }
 }
 impl CreateRemoteAccessSessionConfiguration {
-    /// Creates a new builder-style object to manufacture [`CreateRemoteAccessSessionConfiguration`](crate::model::CreateRemoteAccessSessionConfiguration)
+    /// Creates a new builder-style object to manufacture [`CreateRemoteAccessSessionConfiguration`](crate::model::CreateRemoteAccessSessionConfiguration).
     pub fn builder() -> crate::model::create_remote_access_session_configuration::Builder {
         crate::model::create_remote_access_session_configuration::Builder::default()
     }

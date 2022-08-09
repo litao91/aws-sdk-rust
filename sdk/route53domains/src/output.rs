@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ViewBillingOutput {
     /// <p>If there are more billing records than you specified for <code>MaxItems</code> in the request, submit another request and include the value of <code>NextPageMarker</code> in the value of <code>Marker</code>.</p>
+    #[doc(hidden)]
     pub next_page_marker: std::option::Option<std::string::String>,
     /// <p>A summary of billing records.</p>
+    #[doc(hidden)]
     pub billing_records: std::option::Option<std::vec::Vec<crate::model::BillingRecord>>,
 }
 impl ViewBillingOutput {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ViewBillingOutput {
         formatter.finish()
     }
 }
-/// See [`ViewBillingOutput`](crate::output::ViewBillingOutput)
+/// See [`ViewBillingOutput`](crate::output::ViewBillingOutput).
 pub mod view_billing_output {
 
-    /// A builder for [`ViewBillingOutput`](crate::output::ViewBillingOutput)
-    #[non_exhaustive]
+    /// A builder for [`ViewBillingOutput`](crate::output::ViewBillingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_page_marker: std::option::Option<std::string::String>,
@@ -70,7 +71,7 @@ pub mod view_billing_output {
             self.billing_records = input;
             self
         }
-        /// Consumes the builder and constructs a [`ViewBillingOutput`](crate::output::ViewBillingOutput)
+        /// Consumes the builder and constructs a [`ViewBillingOutput`](crate::output::ViewBillingOutput).
         pub fn build(self) -> crate::output::ViewBillingOutput {
             crate::output::ViewBillingOutput {
                 next_page_marker: self.next_page_marker,
@@ -80,7 +81,7 @@ pub mod view_billing_output {
     }
 }
 impl ViewBillingOutput {
-    /// Creates a new builder-style object to manufacture [`ViewBillingOutput`](crate::output::ViewBillingOutput)
+    /// Creates a new builder-style object to manufacture [`ViewBillingOutput`](crate::output::ViewBillingOutput).
     pub fn builder() -> crate::output::view_billing_output::Builder {
         crate::output::view_billing_output::Builder::default()
     }
@@ -96,22 +97,21 @@ impl std::fmt::Debug for UpdateTagsForDomainOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateTagsForDomainOutput`](crate::output::UpdateTagsForDomainOutput)
+/// See [`UpdateTagsForDomainOutput`](crate::output::UpdateTagsForDomainOutput).
 pub mod update_tags_for_domain_output {
 
-    /// A builder for [`UpdateTagsForDomainOutput`](crate::output::UpdateTagsForDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateTagsForDomainOutput`](crate::output::UpdateTagsForDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateTagsForDomainOutput`](crate::output::UpdateTagsForDomainOutput)
+        /// Consumes the builder and constructs a [`UpdateTagsForDomainOutput`](crate::output::UpdateTagsForDomainOutput).
         pub fn build(self) -> crate::output::UpdateTagsForDomainOutput {
             crate::output::UpdateTagsForDomainOutput {}
         }
     }
 }
 impl UpdateTagsForDomainOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateTagsForDomainOutput`](crate::output::UpdateTagsForDomainOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateTagsForDomainOutput`](crate::output::UpdateTagsForDomainOutput).
     pub fn builder() -> crate::output::update_tags_for_domain_output::Builder {
         crate::output::update_tags_for_domain_output::Builder::default()
     }
@@ -122,6 +122,7 @@ impl UpdateTagsForDomainOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDomainNameserversOutput {
     /// <p>Identifier for tracking the progress of the request. To query the operation status, use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_GetOperationDetail.html">GetOperationDetail</a>.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl UpdateDomainNameserversOutput {
@@ -137,11 +138,10 @@ impl std::fmt::Debug for UpdateDomainNameserversOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDomainNameserversOutput`](crate::output::UpdateDomainNameserversOutput)
+/// See [`UpdateDomainNameserversOutput`](crate::output::UpdateDomainNameserversOutput).
 pub mod update_domain_nameservers_output {
 
-    /// A builder for [`UpdateDomainNameserversOutput`](crate::output::UpdateDomainNameserversOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateDomainNameserversOutput`](crate::output::UpdateDomainNameserversOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -157,7 +157,7 @@ pub mod update_domain_nameservers_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateDomainNameserversOutput`](crate::output::UpdateDomainNameserversOutput)
+        /// Consumes the builder and constructs a [`UpdateDomainNameserversOutput`](crate::output::UpdateDomainNameserversOutput).
         pub fn build(self) -> crate::output::UpdateDomainNameserversOutput {
             crate::output::UpdateDomainNameserversOutput {
                 operation_id: self.operation_id,
@@ -166,7 +166,7 @@ pub mod update_domain_nameservers_output {
     }
 }
 impl UpdateDomainNameserversOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDomainNameserversOutput`](crate::output::UpdateDomainNameserversOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDomainNameserversOutput`](crate::output::UpdateDomainNameserversOutput).
     pub fn builder() -> crate::output::update_domain_nameservers_output::Builder {
         crate::output::update_domain_nameservers_output::Builder::default()
     }
@@ -177,6 +177,7 @@ impl UpdateDomainNameserversOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDomainContactPrivacyOutput {
     /// <p>Identifier for tracking the progress of the request. To use this ID to query the operation status, use GetOperationDetail.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl UpdateDomainContactPrivacyOutput {
@@ -192,11 +193,10 @@ impl std::fmt::Debug for UpdateDomainContactPrivacyOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDomainContactPrivacyOutput`](crate::output::UpdateDomainContactPrivacyOutput)
+/// See [`UpdateDomainContactPrivacyOutput`](crate::output::UpdateDomainContactPrivacyOutput).
 pub mod update_domain_contact_privacy_output {
 
-    /// A builder for [`UpdateDomainContactPrivacyOutput`](crate::output::UpdateDomainContactPrivacyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateDomainContactPrivacyOutput`](crate::output::UpdateDomainContactPrivacyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -212,7 +212,7 @@ pub mod update_domain_contact_privacy_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateDomainContactPrivacyOutput`](crate::output::UpdateDomainContactPrivacyOutput)
+        /// Consumes the builder and constructs a [`UpdateDomainContactPrivacyOutput`](crate::output::UpdateDomainContactPrivacyOutput).
         pub fn build(self) -> crate::output::UpdateDomainContactPrivacyOutput {
             crate::output::UpdateDomainContactPrivacyOutput {
                 operation_id: self.operation_id,
@@ -221,7 +221,7 @@ pub mod update_domain_contact_privacy_output {
     }
 }
 impl UpdateDomainContactPrivacyOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDomainContactPrivacyOutput`](crate::output::UpdateDomainContactPrivacyOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDomainContactPrivacyOutput`](crate::output::UpdateDomainContactPrivacyOutput).
     pub fn builder() -> crate::output::update_domain_contact_privacy_output::Builder {
         crate::output::update_domain_contact_privacy_output::Builder::default()
     }
@@ -232,6 +232,7 @@ impl UpdateDomainContactPrivacyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDomainContactOutput {
     /// <p>Identifier for tracking the progress of the request. To query the operation status, use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_GetOperationDetail.html">GetOperationDetail</a>.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl UpdateDomainContactOutput {
@@ -247,11 +248,10 @@ impl std::fmt::Debug for UpdateDomainContactOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDomainContactOutput`](crate::output::UpdateDomainContactOutput)
+/// See [`UpdateDomainContactOutput`](crate::output::UpdateDomainContactOutput).
 pub mod update_domain_contact_output {
 
-    /// A builder for [`UpdateDomainContactOutput`](crate::output::UpdateDomainContactOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateDomainContactOutput`](crate::output::UpdateDomainContactOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -267,7 +267,7 @@ pub mod update_domain_contact_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateDomainContactOutput`](crate::output::UpdateDomainContactOutput)
+        /// Consumes the builder and constructs a [`UpdateDomainContactOutput`](crate::output::UpdateDomainContactOutput).
         pub fn build(self) -> crate::output::UpdateDomainContactOutput {
             crate::output::UpdateDomainContactOutput {
                 operation_id: self.operation_id,
@@ -276,7 +276,7 @@ pub mod update_domain_contact_output {
     }
 }
 impl UpdateDomainContactOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDomainContactOutput`](crate::output::UpdateDomainContactOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDomainContactOutput`](crate::output::UpdateDomainContactOutput).
     pub fn builder() -> crate::output::update_domain_contact_output::Builder {
         crate::output::update_domain_contact_output::Builder::default()
     }
@@ -287,8 +287,10 @@ impl UpdateDomainContactOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TransferDomainToAnotherAwsAccountOutput {
     /// <p>Identifier for tracking the progress of the request. To query the operation status, use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_GetOperationDetail.html">GetOperationDetail</a>.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
     /// <p>To finish transferring a domain to another Amazon Web Services account, the account that the domain is being transferred to must submit an <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_AcceptDomainTransferFromAnotherAwsAccount.html">AcceptDomainTransferFromAnotherAwsAccount</a> request. The request must include the value of the <code>Password</code> element that was returned in the <code>TransferDomainToAnotherAwsAccount</code> response.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
 }
 impl TransferDomainToAnotherAwsAccountOutput {
@@ -309,11 +311,10 @@ impl std::fmt::Debug for TransferDomainToAnotherAwsAccountOutput {
         formatter.finish()
     }
 }
-/// See [`TransferDomainToAnotherAwsAccountOutput`](crate::output::TransferDomainToAnotherAwsAccountOutput)
+/// See [`TransferDomainToAnotherAwsAccountOutput`](crate::output::TransferDomainToAnotherAwsAccountOutput).
 pub mod transfer_domain_to_another_aws_account_output {
 
-    /// A builder for [`TransferDomainToAnotherAwsAccountOutput`](crate::output::TransferDomainToAnotherAwsAccountOutput)
-    #[non_exhaustive]
+    /// A builder for [`TransferDomainToAnotherAwsAccountOutput`](crate::output::TransferDomainToAnotherAwsAccountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -340,7 +341,7 @@ pub mod transfer_domain_to_another_aws_account_output {
             self.password = input;
             self
         }
-        /// Consumes the builder and constructs a [`TransferDomainToAnotherAwsAccountOutput`](crate::output::TransferDomainToAnotherAwsAccountOutput)
+        /// Consumes the builder and constructs a [`TransferDomainToAnotherAwsAccountOutput`](crate::output::TransferDomainToAnotherAwsAccountOutput).
         pub fn build(self) -> crate::output::TransferDomainToAnotherAwsAccountOutput {
             crate::output::TransferDomainToAnotherAwsAccountOutput {
                 operation_id: self.operation_id,
@@ -350,7 +351,7 @@ pub mod transfer_domain_to_another_aws_account_output {
     }
 }
 impl TransferDomainToAnotherAwsAccountOutput {
-    /// Creates a new builder-style object to manufacture [`TransferDomainToAnotherAwsAccountOutput`](crate::output::TransferDomainToAnotherAwsAccountOutput)
+    /// Creates a new builder-style object to manufacture [`TransferDomainToAnotherAwsAccountOutput`](crate::output::TransferDomainToAnotherAwsAccountOutput).
     pub fn builder() -> crate::output::transfer_domain_to_another_aws_account_output::Builder {
         crate::output::transfer_domain_to_another_aws_account_output::Builder::default()
     }
@@ -361,6 +362,7 @@ impl TransferDomainToAnotherAwsAccountOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TransferDomainOutput {
     /// <p>Identifier for tracking the progress of the request. To query the operation status, use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_GetOperationDetail.html">GetOperationDetail</a>.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl TransferDomainOutput {
@@ -376,11 +378,10 @@ impl std::fmt::Debug for TransferDomainOutput {
         formatter.finish()
     }
 }
-/// See [`TransferDomainOutput`](crate::output::TransferDomainOutput)
+/// See [`TransferDomainOutput`](crate::output::TransferDomainOutput).
 pub mod transfer_domain_output {
 
-    /// A builder for [`TransferDomainOutput`](crate::output::TransferDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`TransferDomainOutput`](crate::output::TransferDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -396,7 +397,7 @@ pub mod transfer_domain_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`TransferDomainOutput`](crate::output::TransferDomainOutput)
+        /// Consumes the builder and constructs a [`TransferDomainOutput`](crate::output::TransferDomainOutput).
         pub fn build(self) -> crate::output::TransferDomainOutput {
             crate::output::TransferDomainOutput {
                 operation_id: self.operation_id,
@@ -405,7 +406,7 @@ pub mod transfer_domain_output {
     }
 }
 impl TransferDomainOutput {
-    /// Creates a new builder-style object to manufacture [`TransferDomainOutput`](crate::output::TransferDomainOutput)
+    /// Creates a new builder-style object to manufacture [`TransferDomainOutput`](crate::output::TransferDomainOutput).
     pub fn builder() -> crate::output::transfer_domain_output::Builder {
         crate::output::transfer_domain_output::Builder::default()
     }
@@ -416,6 +417,7 @@ impl TransferDomainOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RetrieveDomainAuthCodeOutput {
     /// <p>The authorization code for the domain.</p>
+    #[doc(hidden)]
     pub auth_code: std::option::Option<std::string::String>,
 }
 impl RetrieveDomainAuthCodeOutput {
@@ -431,11 +433,10 @@ impl std::fmt::Debug for RetrieveDomainAuthCodeOutput {
         formatter.finish()
     }
 }
-/// See [`RetrieveDomainAuthCodeOutput`](crate::output::RetrieveDomainAuthCodeOutput)
+/// See [`RetrieveDomainAuthCodeOutput`](crate::output::RetrieveDomainAuthCodeOutput).
 pub mod retrieve_domain_auth_code_output {
 
-    /// A builder for [`RetrieveDomainAuthCodeOutput`](crate::output::RetrieveDomainAuthCodeOutput)
-    #[non_exhaustive]
+    /// A builder for [`RetrieveDomainAuthCodeOutput`](crate::output::RetrieveDomainAuthCodeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auth_code: std::option::Option<std::string::String>,
@@ -451,7 +452,7 @@ pub mod retrieve_domain_auth_code_output {
             self.auth_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`RetrieveDomainAuthCodeOutput`](crate::output::RetrieveDomainAuthCodeOutput)
+        /// Consumes the builder and constructs a [`RetrieveDomainAuthCodeOutput`](crate::output::RetrieveDomainAuthCodeOutput).
         pub fn build(self) -> crate::output::RetrieveDomainAuthCodeOutput {
             crate::output::RetrieveDomainAuthCodeOutput {
                 auth_code: self.auth_code,
@@ -460,7 +461,7 @@ pub mod retrieve_domain_auth_code_output {
     }
 }
 impl RetrieveDomainAuthCodeOutput {
-    /// Creates a new builder-style object to manufacture [`RetrieveDomainAuthCodeOutput`](crate::output::RetrieveDomainAuthCodeOutput)
+    /// Creates a new builder-style object to manufacture [`RetrieveDomainAuthCodeOutput`](crate::output::RetrieveDomainAuthCodeOutput).
     pub fn builder() -> crate::output::retrieve_domain_auth_code_output::Builder {
         crate::output::retrieve_domain_auth_code_output::Builder::default()
     }
@@ -471,10 +472,13 @@ impl RetrieveDomainAuthCodeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResendContactReachabilityEmailOutput {
     /// <p>The domain name for which you requested a confirmation email.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The email address for the registrant contact at the time that we sent the verification email.</p>
+    #[doc(hidden)]
     pub email_address: std::option::Option<std::string::String>,
     /// <p> <code>True</code> if the email address for the registrant contact has already been verified, and <code>false</code> otherwise. If the email address has already been verified, we don't send another confirmation email.</p>
+    #[doc(hidden)]
     pub is_already_verified: std::option::Option<bool>,
 }
 impl ResendContactReachabilityEmailOutput {
@@ -500,11 +504,10 @@ impl std::fmt::Debug for ResendContactReachabilityEmailOutput {
         formatter.finish()
     }
 }
-/// See [`ResendContactReachabilityEmailOutput`](crate::output::ResendContactReachabilityEmailOutput)
+/// See [`ResendContactReachabilityEmailOutput`](crate::output::ResendContactReachabilityEmailOutput).
 pub mod resend_contact_reachability_email_output {
 
-    /// A builder for [`ResendContactReachabilityEmailOutput`](crate::output::ResendContactReachabilityEmailOutput)
-    #[non_exhaustive]
+    /// A builder for [`ResendContactReachabilityEmailOutput`](crate::output::ResendContactReachabilityEmailOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -545,7 +548,7 @@ pub mod resend_contact_reachability_email_output {
             self.is_already_verified = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResendContactReachabilityEmailOutput`](crate::output::ResendContactReachabilityEmailOutput)
+        /// Consumes the builder and constructs a [`ResendContactReachabilityEmailOutput`](crate::output::ResendContactReachabilityEmailOutput).
         pub fn build(self) -> crate::output::ResendContactReachabilityEmailOutput {
             crate::output::ResendContactReachabilityEmailOutput {
                 domain_name: self.domain_name,
@@ -556,7 +559,7 @@ pub mod resend_contact_reachability_email_output {
     }
 }
 impl ResendContactReachabilityEmailOutput {
-    /// Creates a new builder-style object to manufacture [`ResendContactReachabilityEmailOutput`](crate::output::ResendContactReachabilityEmailOutput)
+    /// Creates a new builder-style object to manufacture [`ResendContactReachabilityEmailOutput`](crate::output::ResendContactReachabilityEmailOutput).
     pub fn builder() -> crate::output::resend_contact_reachability_email_output::Builder {
         crate::output::resend_contact_reachability_email_output::Builder::default()
     }
@@ -567,6 +570,7 @@ impl ResendContactReachabilityEmailOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RenewDomainOutput {
     /// <p>Identifier for tracking the progress of the request. To query the operation status, use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_GetOperationDetail.html">GetOperationDetail</a>.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl RenewDomainOutput {
@@ -582,11 +586,10 @@ impl std::fmt::Debug for RenewDomainOutput {
         formatter.finish()
     }
 }
-/// See [`RenewDomainOutput`](crate::output::RenewDomainOutput)
+/// See [`RenewDomainOutput`](crate::output::RenewDomainOutput).
 pub mod renew_domain_output {
 
-    /// A builder for [`RenewDomainOutput`](crate::output::RenewDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`RenewDomainOutput`](crate::output::RenewDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -602,7 +605,7 @@ pub mod renew_domain_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RenewDomainOutput`](crate::output::RenewDomainOutput)
+        /// Consumes the builder and constructs a [`RenewDomainOutput`](crate::output::RenewDomainOutput).
         pub fn build(self) -> crate::output::RenewDomainOutput {
             crate::output::RenewDomainOutput {
                 operation_id: self.operation_id,
@@ -611,7 +614,7 @@ pub mod renew_domain_output {
     }
 }
 impl RenewDomainOutput {
-    /// Creates a new builder-style object to manufacture [`RenewDomainOutput`](crate::output::RenewDomainOutput)
+    /// Creates a new builder-style object to manufacture [`RenewDomainOutput`](crate::output::RenewDomainOutput).
     pub fn builder() -> crate::output::renew_domain_output::Builder {
         crate::output::renew_domain_output::Builder::default()
     }
@@ -622,6 +625,7 @@ impl RenewDomainOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RejectDomainTransferFromAnotherAwsAccountOutput {
     /// <p>The identifier that <code>TransferDomainToAnotherAwsAccount</code> returned to track the progress of the request. Because the transfer request was rejected, the value is no longer valid, and you can't use <code>GetOperationDetail</code> to query the operation status.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl RejectDomainTransferFromAnotherAwsAccountOutput {
@@ -637,11 +641,10 @@ impl std::fmt::Debug for RejectDomainTransferFromAnotherAwsAccountOutput {
         formatter.finish()
     }
 }
-/// See [`RejectDomainTransferFromAnotherAwsAccountOutput`](crate::output::RejectDomainTransferFromAnotherAwsAccountOutput)
+/// See [`RejectDomainTransferFromAnotherAwsAccountOutput`](crate::output::RejectDomainTransferFromAnotherAwsAccountOutput).
 pub mod reject_domain_transfer_from_another_aws_account_output {
 
-    /// A builder for [`RejectDomainTransferFromAnotherAwsAccountOutput`](crate::output::RejectDomainTransferFromAnotherAwsAccountOutput)
-    #[non_exhaustive]
+    /// A builder for [`RejectDomainTransferFromAnotherAwsAccountOutput`](crate::output::RejectDomainTransferFromAnotherAwsAccountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -657,7 +660,7 @@ pub mod reject_domain_transfer_from_another_aws_account_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RejectDomainTransferFromAnotherAwsAccountOutput`](crate::output::RejectDomainTransferFromAnotherAwsAccountOutput)
+        /// Consumes the builder and constructs a [`RejectDomainTransferFromAnotherAwsAccountOutput`](crate::output::RejectDomainTransferFromAnotherAwsAccountOutput).
         pub fn build(self) -> crate::output::RejectDomainTransferFromAnotherAwsAccountOutput {
             crate::output::RejectDomainTransferFromAnotherAwsAccountOutput {
                 operation_id: self.operation_id,
@@ -666,7 +669,7 @@ pub mod reject_domain_transfer_from_another_aws_account_output {
     }
 }
 impl RejectDomainTransferFromAnotherAwsAccountOutput {
-    /// Creates a new builder-style object to manufacture [`RejectDomainTransferFromAnotherAwsAccountOutput`](crate::output::RejectDomainTransferFromAnotherAwsAccountOutput)
+    /// Creates a new builder-style object to manufacture [`RejectDomainTransferFromAnotherAwsAccountOutput`](crate::output::RejectDomainTransferFromAnotherAwsAccountOutput).
     pub fn builder(
     ) -> crate::output::reject_domain_transfer_from_another_aws_account_output::Builder {
         crate::output::reject_domain_transfer_from_another_aws_account_output::Builder::default()
@@ -678,6 +681,7 @@ impl RejectDomainTransferFromAnotherAwsAccountOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegisterDomainOutput {
     /// <p>Identifier for tracking the progress of the request. To query the operation status, use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_GetOperationDetail.html">GetOperationDetail</a>.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl RegisterDomainOutput {
@@ -693,11 +697,10 @@ impl std::fmt::Debug for RegisterDomainOutput {
         formatter.finish()
     }
 }
-/// See [`RegisterDomainOutput`](crate::output::RegisterDomainOutput)
+/// See [`RegisterDomainOutput`](crate::output::RegisterDomainOutput).
 pub mod register_domain_output {
 
-    /// A builder for [`RegisterDomainOutput`](crate::output::RegisterDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`RegisterDomainOutput`](crate::output::RegisterDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -713,7 +716,7 @@ pub mod register_domain_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegisterDomainOutput`](crate::output::RegisterDomainOutput)
+        /// Consumes the builder and constructs a [`RegisterDomainOutput`](crate::output::RegisterDomainOutput).
         pub fn build(self) -> crate::output::RegisterDomainOutput {
             crate::output::RegisterDomainOutput {
                 operation_id: self.operation_id,
@@ -722,7 +725,7 @@ pub mod register_domain_output {
     }
 }
 impl RegisterDomainOutput {
-    /// Creates a new builder-style object to manufacture [`RegisterDomainOutput`](crate::output::RegisterDomainOutput)
+    /// Creates a new builder-style object to manufacture [`RegisterDomainOutput`](crate::output::RegisterDomainOutput).
     pub fn builder() -> crate::output::register_domain_output::Builder {
         crate::output::register_domain_output::Builder::default()
     }
@@ -733,6 +736,7 @@ impl RegisterDomainOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForDomainOutput {
     /// <p>A list of the tags that are associated with the specified domain.</p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ListTagsForDomainOutput {
@@ -748,11 +752,10 @@ impl std::fmt::Debug for ListTagsForDomainOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForDomainOutput`](crate::output::ListTagsForDomainOutput)
+/// See [`ListTagsForDomainOutput`](crate::output::ListTagsForDomainOutput).
 pub mod list_tags_for_domain_output {
 
-    /// A builder for [`ListTagsForDomainOutput`](crate::output::ListTagsForDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForDomainOutput`](crate::output::ListTagsForDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -777,7 +780,7 @@ pub mod list_tags_for_domain_output {
             self.tag_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForDomainOutput`](crate::output::ListTagsForDomainOutput)
+        /// Consumes the builder and constructs a [`ListTagsForDomainOutput`](crate::output::ListTagsForDomainOutput).
         pub fn build(self) -> crate::output::ListTagsForDomainOutput {
             crate::output::ListTagsForDomainOutput {
                 tag_list: self.tag_list,
@@ -786,7 +789,7 @@ pub mod list_tags_for_domain_output {
     }
 }
 impl ListTagsForDomainOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForDomainOutput`](crate::output::ListTagsForDomainOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForDomainOutput`](crate::output::ListTagsForDomainOutput).
     pub fn builder() -> crate::output::list_tags_for_domain_output::Builder {
         crate::output::list_tags_for_domain_output::Builder::default()
     }
@@ -797,9 +800,11 @@ impl ListTagsForDomainOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListPricesOutput {
     /// <p>A complex type that includes all the pricing information. If you specify a TLD, this array contains only the pricing for that TLD.</p>
+    #[doc(hidden)]
     pub prices: std::option::Option<std::vec::Vec<crate::model::DomainPrice>>,
     /// <p>If there are more prices than you specified for <code>MaxItems</code> in the request, submit another request and include the value of <code>NextPageMarker</code> in the value of <code>Marker</code>. </p>
     /// <p>Used only for all TLDs. If you specify a TLD, don't specify a <code>NextPageMarker</code>.</p>
+    #[doc(hidden)]
     pub next_page_marker: std::option::Option<std::string::String>,
 }
 impl ListPricesOutput {
@@ -821,11 +826,10 @@ impl std::fmt::Debug for ListPricesOutput {
         formatter.finish()
     }
 }
-/// See [`ListPricesOutput`](crate::output::ListPricesOutput)
+/// See [`ListPricesOutput`](crate::output::ListPricesOutput).
 pub mod list_prices_output {
 
-    /// A builder for [`ListPricesOutput`](crate::output::ListPricesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListPricesOutput`](crate::output::ListPricesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prices: std::option::Option<std::vec::Vec<crate::model::DomainPrice>>,
@@ -866,7 +870,7 @@ pub mod list_prices_output {
             self.next_page_marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPricesOutput`](crate::output::ListPricesOutput)
+        /// Consumes the builder and constructs a [`ListPricesOutput`](crate::output::ListPricesOutput).
         pub fn build(self) -> crate::output::ListPricesOutput {
             crate::output::ListPricesOutput {
                 prices: self.prices,
@@ -876,7 +880,7 @@ pub mod list_prices_output {
     }
 }
 impl ListPricesOutput {
-    /// Creates a new builder-style object to manufacture [`ListPricesOutput`](crate::output::ListPricesOutput)
+    /// Creates a new builder-style object to manufacture [`ListPricesOutput`](crate::output::ListPricesOutput).
     pub fn builder() -> crate::output::list_prices_output::Builder {
         crate::output::list_prices_output::Builder::default()
     }
@@ -887,8 +891,10 @@ impl ListPricesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListOperationsOutput {
     /// <p>Lists summaries of the operations.</p>
+    #[doc(hidden)]
     pub operations: std::option::Option<std::vec::Vec<crate::model::OperationSummary>>,
     /// <p>If there are more operations than you specified for <code>MaxItems</code> in the request, submit another request and include the value of <code>NextPageMarker</code> in the value of <code>Marker</code>.</p>
+    #[doc(hidden)]
     pub next_page_marker: std::option::Option<std::string::String>,
 }
 impl ListOperationsOutput {
@@ -909,11 +915,10 @@ impl std::fmt::Debug for ListOperationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListOperationsOutput`](crate::output::ListOperationsOutput)
+/// See [`ListOperationsOutput`](crate::output::ListOperationsOutput).
 pub mod list_operations_output {
 
-    /// A builder for [`ListOperationsOutput`](crate::output::ListOperationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListOperationsOutput`](crate::output::ListOperationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operations: std::option::Option<std::vec::Vec<crate::model::OperationSummary>>,
@@ -952,7 +957,7 @@ pub mod list_operations_output {
             self.next_page_marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListOperationsOutput`](crate::output::ListOperationsOutput)
+        /// Consumes the builder and constructs a [`ListOperationsOutput`](crate::output::ListOperationsOutput).
         pub fn build(self) -> crate::output::ListOperationsOutput {
             crate::output::ListOperationsOutput {
                 operations: self.operations,
@@ -962,7 +967,7 @@ pub mod list_operations_output {
     }
 }
 impl ListOperationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListOperationsOutput`](crate::output::ListOperationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListOperationsOutput`](crate::output::ListOperationsOutput).
     pub fn builder() -> crate::output::list_operations_output::Builder {
         crate::output::list_operations_output::Builder::default()
     }
@@ -973,8 +978,10 @@ impl ListOperationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDomainsOutput {
     /// <p>A list of domains.</p>
+    #[doc(hidden)]
     pub domains: std::option::Option<std::vec::Vec<crate::model::DomainSummary>>,
     /// <p>If there are more domains than you specified for <code>MaxItems</code> in the request, submit another request and include the value of <code>NextPageMarker</code> in the value of <code>Marker</code>.</p>
+    #[doc(hidden)]
     pub next_page_marker: std::option::Option<std::string::String>,
 }
 impl ListDomainsOutput {
@@ -995,11 +1002,10 @@ impl std::fmt::Debug for ListDomainsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDomainsOutput`](crate::output::ListDomainsOutput)
+/// See [`ListDomainsOutput`](crate::output::ListDomainsOutput).
 pub mod list_domains_output {
 
-    /// A builder for [`ListDomainsOutput`](crate::output::ListDomainsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListDomainsOutput`](crate::output::ListDomainsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domains: std::option::Option<std::vec::Vec<crate::model::DomainSummary>>,
@@ -1038,7 +1044,7 @@ pub mod list_domains_output {
             self.next_page_marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDomainsOutput`](crate::output::ListDomainsOutput)
+        /// Consumes the builder and constructs a [`ListDomainsOutput`](crate::output::ListDomainsOutput).
         pub fn build(self) -> crate::output::ListDomainsOutput {
             crate::output::ListDomainsOutput {
                 domains: self.domains,
@@ -1048,7 +1054,7 @@ pub mod list_domains_output {
     }
 }
 impl ListDomainsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDomainsOutput`](crate::output::ListDomainsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDomainsOutput`](crate::output::ListDomainsOutput).
     pub fn builder() -> crate::output::list_domains_output::Builder {
         crate::output::list_domains_output::Builder::default()
     }
@@ -1059,16 +1065,22 @@ impl ListDomainsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetOperationDetailOutput {
     /// <p>The identifier for the operation.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
     /// <p>The current status of the requested operation in the system.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OperationStatus>,
     /// <p>Detailed information on the status including possible errors.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The name of a domain.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The type of operation that was requested.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::OperationType>,
     /// <p>The date when the request was submitted.</p>
+    #[doc(hidden)]
     pub submitted_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GetOperationDetailOutput {
@@ -1109,11 +1121,10 @@ impl std::fmt::Debug for GetOperationDetailOutput {
         formatter.finish()
     }
 }
-/// See [`GetOperationDetailOutput`](crate::output::GetOperationDetailOutput)
+/// See [`GetOperationDetailOutput`](crate::output::GetOperationDetailOutput).
 pub mod get_operation_detail_output {
 
-    /// A builder for [`GetOperationDetailOutput`](crate::output::GetOperationDetailOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetOperationDetailOutput`](crate::output::GetOperationDetailOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -1190,7 +1201,7 @@ pub mod get_operation_detail_output {
             self.submitted_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetOperationDetailOutput`](crate::output::GetOperationDetailOutput)
+        /// Consumes the builder and constructs a [`GetOperationDetailOutput`](crate::output::GetOperationDetailOutput).
         pub fn build(self) -> crate::output::GetOperationDetailOutput {
             crate::output::GetOperationDetailOutput {
                 operation_id: self.operation_id,
@@ -1204,7 +1215,7 @@ pub mod get_operation_detail_output {
     }
 }
 impl GetOperationDetailOutput {
-    /// Creates a new builder-style object to manufacture [`GetOperationDetailOutput`](crate::output::GetOperationDetailOutput)
+    /// Creates a new builder-style object to manufacture [`GetOperationDetailOutput`](crate::output::GetOperationDetailOutput).
     pub fn builder() -> crate::output::get_operation_detail_output::Builder {
         crate::output::get_operation_detail_output::Builder::default()
     }
@@ -1215,6 +1226,7 @@ impl GetOperationDetailOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDomainSuggestionsOutput {
     /// <p>A list of possible domain names. If you specified <code>true</code> for <code>OnlyAvailable</code> in the request, the list contains only domains that are available for registration.</p>
+    #[doc(hidden)]
     pub suggestions_list: std::option::Option<std::vec::Vec<crate::model::DomainSuggestion>>,
 }
 impl GetDomainSuggestionsOutput {
@@ -1230,11 +1242,10 @@ impl std::fmt::Debug for GetDomainSuggestionsOutput {
         formatter.finish()
     }
 }
-/// See [`GetDomainSuggestionsOutput`](crate::output::GetDomainSuggestionsOutput)
+/// See [`GetDomainSuggestionsOutput`](crate::output::GetDomainSuggestionsOutput).
 pub mod get_domain_suggestions_output {
 
-    /// A builder for [`GetDomainSuggestionsOutput`](crate::output::GetDomainSuggestionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDomainSuggestionsOutput`](crate::output::GetDomainSuggestionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suggestions_list:
@@ -1260,7 +1271,7 @@ pub mod get_domain_suggestions_output {
             self.suggestions_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDomainSuggestionsOutput`](crate::output::GetDomainSuggestionsOutput)
+        /// Consumes the builder and constructs a [`GetDomainSuggestionsOutput`](crate::output::GetDomainSuggestionsOutput).
         pub fn build(self) -> crate::output::GetDomainSuggestionsOutput {
             crate::output::GetDomainSuggestionsOutput {
                 suggestions_list: self.suggestions_list,
@@ -1269,7 +1280,7 @@ pub mod get_domain_suggestions_output {
     }
 }
 impl GetDomainSuggestionsOutput {
-    /// Creates a new builder-style object to manufacture [`GetDomainSuggestionsOutput`](crate::output::GetDomainSuggestionsOutput)
+    /// Creates a new builder-style object to manufacture [`GetDomainSuggestionsOutput`](crate::output::GetDomainSuggestionsOutput).
     pub fn builder() -> crate::output::get_domain_suggestions_output::Builder {
         crate::output::get_domain_suggestions_output::Builder::default()
     }
@@ -1280,48 +1291,69 @@ impl GetDomainSuggestionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDomainDetailOutput {
     /// <p>The name of a domain.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The name of the domain.</p>
+    #[doc(hidden)]
     pub nameservers: std::option::Option<std::vec::Vec<crate::model::Nameserver>>,
     /// <p>Specifies whether the domain registration is set to renew automatically.</p>
+    #[doc(hidden)]
     pub auto_renew: std::option::Option<bool>,
     /// <p>Provides details about the domain administrative contact.</p>
+    #[doc(hidden)]
     pub admin_contact: std::option::Option<crate::model::ContactDetail>,
     /// <p>Provides details about the domain registrant.</p>
+    #[doc(hidden)]
     pub registrant_contact: std::option::Option<crate::model::ContactDetail>,
     /// <p>Provides details about the domain technical contact.</p>
+    #[doc(hidden)]
     pub tech_contact: std::option::Option<crate::model::ContactDetail>,
     /// <p>Specifies whether contact information is concealed from WHOIS queries. If the value is <code>true</code>, WHOIS ("who is") queries return contact information either for Amazon Registrar (for .com, .net, and .org domains) or for our registrar associate, Gandi (for all other TLDs). If the value is <code>false</code>, WHOIS queries return the information that you entered for the admin contact.</p>
+    #[doc(hidden)]
     pub admin_privacy: std::option::Option<bool>,
     /// <p>Specifies whether contact information is concealed from WHOIS queries. If the value is <code>true</code>, WHOIS ("who is") queries return contact information either for Amazon Registrar (for .com, .net, and .org domains) or for our registrar associate, Gandi (for all other TLDs). If the value is <code>false</code>, WHOIS queries return the information that you entered for the registrant contact (domain owner).</p>
+    #[doc(hidden)]
     pub registrant_privacy: std::option::Option<bool>,
     /// <p>Specifies whether contact information is concealed from WHOIS queries. If the value is <code>true</code>, WHOIS ("who is") queries return contact information either for Amazon Registrar (for .com, .net, and .org domains) or for our registrar associate, Gandi (for all other TLDs). If the value is <code>false</code>, WHOIS queries return the information that you entered for the technical contact.</p>
+    #[doc(hidden)]
     pub tech_privacy: std::option::Option<bool>,
     /// <p>Name of the registrar of the domain as identified in the registry. Domains with a .com, .net, or .org TLD are registered by Amazon Registrar. All other domains are registered by our registrar associate, Gandi. The value for domains that are registered by Gandi is <code>"GANDI SAS"</code>. </p>
+    #[doc(hidden)]
     pub registrar_name: std::option::Option<std::string::String>,
     /// <p>The fully qualified name of the WHOIS server that can answer the WHOIS query for the domain.</p>
+    #[doc(hidden)]
     pub who_is_server: std::option::Option<std::string::String>,
     /// <p>Web address of the registrar.</p>
+    #[doc(hidden)]
     pub registrar_url: std::option::Option<std::string::String>,
     /// <p>Email address to contact to report incorrect contact information for a domain, to report that the domain is being used to send spam, to report that someone is cybersquatting on a domain name, or report some other type of abuse.</p>
+    #[doc(hidden)]
     pub abuse_contact_email: std::option::Option<std::string::String>,
     /// <p>Phone number for reporting abuse.</p>
+    #[doc(hidden)]
     pub abuse_contact_phone: std::option::Option<std::string::String>,
     /// <p>Reserved for future use.</p>
+    #[doc(hidden)]
     pub registry_domain_id: std::option::Option<std::string::String>,
     /// <p>The date when the domain was created as found in the response to a WHOIS query. The date and time is in Unix time format and Coordinated Universal time (UTC).</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last updated date of the domain as found in the response to a WHOIS query. The date and time is in Unix time format and Coordinated Universal time (UTC).</p>
+    #[doc(hidden)]
     pub updated_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date when the registration for the domain is set to expire. The date and time is in Unix time format and Coordinated Universal time (UTC).</p>
+    #[doc(hidden)]
     pub expiration_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Reseller of the domain. Domains registered or transferred using Route 53 domains will have <code>"Amazon"</code> as the reseller. </p>
+    #[doc(hidden)]
     pub reseller: std::option::Option<std::string::String>,
     /// <p>Deprecated.</p>
+    #[doc(hidden)]
     pub dns_sec: std::option::Option<std::string::String>,
     /// <p>An array of domain name status codes, also known as Extensible Provisioning Protocol (EPP) status codes.</p>
     /// <p>ICANN, the organization that maintains a central database of domain names, has developed a set of domain name status codes that tell you the status of a variety of operations on a domain name, for example, registering a domain name, transferring a domain name to another registrar, renewing the registration for a domain name, and so on. All registrars use this same set of status codes.</p>
     /// <p>For a current list of domain name status codes and an explanation of what each code means, go to the <a href="https://www.icann.org/">ICANN website</a> and search for <code>epp status codes</code>. (Search on the ICANN website; web searches sometimes return an old version of the document.)</p>
+    #[doc(hidden)]
     pub status_list: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl GetDomainDetailOutput {
@@ -1439,11 +1471,10 @@ impl std::fmt::Debug for GetDomainDetailOutput {
         formatter.finish()
     }
 }
-/// See [`GetDomainDetailOutput`](crate::output::GetDomainDetailOutput)
+/// See [`GetDomainDetailOutput`](crate::output::GetDomainDetailOutput).
 pub mod get_domain_detail_output {
 
-    /// A builder for [`GetDomainDetailOutput`](crate::output::GetDomainDetailOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDomainDetailOutput`](crate::output::GetDomainDetailOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -1737,7 +1768,7 @@ pub mod get_domain_detail_output {
             self.status_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDomainDetailOutput`](crate::output::GetDomainDetailOutput)
+        /// Consumes the builder and constructs a [`GetDomainDetailOutput`](crate::output::GetDomainDetailOutput).
         pub fn build(self) -> crate::output::GetDomainDetailOutput {
             crate::output::GetDomainDetailOutput {
                 domain_name: self.domain_name,
@@ -1766,7 +1797,7 @@ pub mod get_domain_detail_output {
     }
 }
 impl GetDomainDetailOutput {
-    /// Creates a new builder-style object to manufacture [`GetDomainDetailOutput`](crate::output::GetDomainDetailOutput)
+    /// Creates a new builder-style object to manufacture [`GetDomainDetailOutput`](crate::output::GetDomainDetailOutput).
     pub fn builder() -> crate::output::get_domain_detail_output::Builder {
         crate::output::get_domain_detail_output::Builder::default()
     }
@@ -1777,6 +1808,7 @@ impl GetDomainDetailOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetContactReachabilityStatusOutput {
     /// <p>The domain name for which you requested the reachability status.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>Whether the registrant contact has responded. Values include the following:</p>
     /// <dl>
@@ -1799,6 +1831,7 @@ pub struct GetContactReachabilityStatusOutput {
     /// <p>The time limit expired before the registrant contact responded.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ReachabilityStatus>,
 }
 impl GetContactReachabilityStatusOutput {
@@ -1839,11 +1872,10 @@ impl std::fmt::Debug for GetContactReachabilityStatusOutput {
         formatter.finish()
     }
 }
-/// See [`GetContactReachabilityStatusOutput`](crate::output::GetContactReachabilityStatusOutput)
+/// See [`GetContactReachabilityStatusOutput`](crate::output::GetContactReachabilityStatusOutput).
 pub mod get_contact_reachability_status_output {
 
-    /// A builder for [`GetContactReachabilityStatusOutput`](crate::output::GetContactReachabilityStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetContactReachabilityStatusOutput`](crate::output::GetContactReachabilityStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -1913,7 +1945,7 @@ pub mod get_contact_reachability_status_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetContactReachabilityStatusOutput`](crate::output::GetContactReachabilityStatusOutput)
+        /// Consumes the builder and constructs a [`GetContactReachabilityStatusOutput`](crate::output::GetContactReachabilityStatusOutput).
         pub fn build(self) -> crate::output::GetContactReachabilityStatusOutput {
             crate::output::GetContactReachabilityStatusOutput {
                 domain_name: self.domain_name,
@@ -1923,7 +1955,7 @@ pub mod get_contact_reachability_status_output {
     }
 }
 impl GetContactReachabilityStatusOutput {
-    /// Creates a new builder-style object to manufacture [`GetContactReachabilityStatusOutput`](crate::output::GetContactReachabilityStatusOutput)
+    /// Creates a new builder-style object to manufacture [`GetContactReachabilityStatusOutput`](crate::output::GetContactReachabilityStatusOutput).
     pub fn builder() -> crate::output::get_contact_reachability_status_output::Builder {
         crate::output::get_contact_reachability_status_output::Builder::default()
     }
@@ -1934,6 +1966,7 @@ impl GetContactReachabilityStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnableDomainTransferLockOutput {
     /// <p>Identifier for tracking the progress of the request. To use this ID to query the operation status, use GetOperationDetail.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl EnableDomainTransferLockOutput {
@@ -1949,11 +1982,10 @@ impl std::fmt::Debug for EnableDomainTransferLockOutput {
         formatter.finish()
     }
 }
-/// See [`EnableDomainTransferLockOutput`](crate::output::EnableDomainTransferLockOutput)
+/// See [`EnableDomainTransferLockOutput`](crate::output::EnableDomainTransferLockOutput).
 pub mod enable_domain_transfer_lock_output {
 
-    /// A builder for [`EnableDomainTransferLockOutput`](crate::output::EnableDomainTransferLockOutput)
-    #[non_exhaustive]
+    /// A builder for [`EnableDomainTransferLockOutput`](crate::output::EnableDomainTransferLockOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -1969,7 +2001,7 @@ pub mod enable_domain_transfer_lock_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnableDomainTransferLockOutput`](crate::output::EnableDomainTransferLockOutput)
+        /// Consumes the builder and constructs a [`EnableDomainTransferLockOutput`](crate::output::EnableDomainTransferLockOutput).
         pub fn build(self) -> crate::output::EnableDomainTransferLockOutput {
             crate::output::EnableDomainTransferLockOutput {
                 operation_id: self.operation_id,
@@ -1978,7 +2010,7 @@ pub mod enable_domain_transfer_lock_output {
     }
 }
 impl EnableDomainTransferLockOutput {
-    /// Creates a new builder-style object to manufacture [`EnableDomainTransferLockOutput`](crate::output::EnableDomainTransferLockOutput)
+    /// Creates a new builder-style object to manufacture [`EnableDomainTransferLockOutput`](crate::output::EnableDomainTransferLockOutput).
     pub fn builder() -> crate::output::enable_domain_transfer_lock_output::Builder {
         crate::output::enable_domain_transfer_lock_output::Builder::default()
     }
@@ -1994,22 +2026,21 @@ impl std::fmt::Debug for EnableDomainAutoRenewOutput {
         formatter.finish()
     }
 }
-/// See [`EnableDomainAutoRenewOutput`](crate::output::EnableDomainAutoRenewOutput)
+/// See [`EnableDomainAutoRenewOutput`](crate::output::EnableDomainAutoRenewOutput).
 pub mod enable_domain_auto_renew_output {
 
-    /// A builder for [`EnableDomainAutoRenewOutput`](crate::output::EnableDomainAutoRenewOutput)
-    #[non_exhaustive]
+    /// A builder for [`EnableDomainAutoRenewOutput`](crate::output::EnableDomainAutoRenewOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`EnableDomainAutoRenewOutput`](crate::output::EnableDomainAutoRenewOutput)
+        /// Consumes the builder and constructs a [`EnableDomainAutoRenewOutput`](crate::output::EnableDomainAutoRenewOutput).
         pub fn build(self) -> crate::output::EnableDomainAutoRenewOutput {
             crate::output::EnableDomainAutoRenewOutput {}
         }
     }
 }
 impl EnableDomainAutoRenewOutput {
-    /// Creates a new builder-style object to manufacture [`EnableDomainAutoRenewOutput`](crate::output::EnableDomainAutoRenewOutput)
+    /// Creates a new builder-style object to manufacture [`EnableDomainAutoRenewOutput`](crate::output::EnableDomainAutoRenewOutput).
     pub fn builder() -> crate::output::enable_domain_auto_renew_output::Builder {
         crate::output::enable_domain_auto_renew_output::Builder::default()
     }
@@ -2020,6 +2051,7 @@ impl EnableDomainAutoRenewOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisableDomainTransferLockOutput {
     /// <p>Identifier for tracking the progress of the request. To query the operation status, use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_GetOperationDetail.html">GetOperationDetail</a>.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl DisableDomainTransferLockOutput {
@@ -2035,11 +2067,10 @@ impl std::fmt::Debug for DisableDomainTransferLockOutput {
         formatter.finish()
     }
 }
-/// See [`DisableDomainTransferLockOutput`](crate::output::DisableDomainTransferLockOutput)
+/// See [`DisableDomainTransferLockOutput`](crate::output::DisableDomainTransferLockOutput).
 pub mod disable_domain_transfer_lock_output {
 
-    /// A builder for [`DisableDomainTransferLockOutput`](crate::output::DisableDomainTransferLockOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisableDomainTransferLockOutput`](crate::output::DisableDomainTransferLockOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -2055,7 +2086,7 @@ pub mod disable_domain_transfer_lock_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisableDomainTransferLockOutput`](crate::output::DisableDomainTransferLockOutput)
+        /// Consumes the builder and constructs a [`DisableDomainTransferLockOutput`](crate::output::DisableDomainTransferLockOutput).
         pub fn build(self) -> crate::output::DisableDomainTransferLockOutput {
             crate::output::DisableDomainTransferLockOutput {
                 operation_id: self.operation_id,
@@ -2064,7 +2095,7 @@ pub mod disable_domain_transfer_lock_output {
     }
 }
 impl DisableDomainTransferLockOutput {
-    /// Creates a new builder-style object to manufacture [`DisableDomainTransferLockOutput`](crate::output::DisableDomainTransferLockOutput)
+    /// Creates a new builder-style object to manufacture [`DisableDomainTransferLockOutput`](crate::output::DisableDomainTransferLockOutput).
     pub fn builder() -> crate::output::disable_domain_transfer_lock_output::Builder {
         crate::output::disable_domain_transfer_lock_output::Builder::default()
     }
@@ -2080,22 +2111,21 @@ impl std::fmt::Debug for DisableDomainAutoRenewOutput {
         formatter.finish()
     }
 }
-/// See [`DisableDomainAutoRenewOutput`](crate::output::DisableDomainAutoRenewOutput)
+/// See [`DisableDomainAutoRenewOutput`](crate::output::DisableDomainAutoRenewOutput).
 pub mod disable_domain_auto_renew_output {
 
-    /// A builder for [`DisableDomainAutoRenewOutput`](crate::output::DisableDomainAutoRenewOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisableDomainAutoRenewOutput`](crate::output::DisableDomainAutoRenewOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisableDomainAutoRenewOutput`](crate::output::DisableDomainAutoRenewOutput)
+        /// Consumes the builder and constructs a [`DisableDomainAutoRenewOutput`](crate::output::DisableDomainAutoRenewOutput).
         pub fn build(self) -> crate::output::DisableDomainAutoRenewOutput {
             crate::output::DisableDomainAutoRenewOutput {}
         }
     }
 }
 impl DisableDomainAutoRenewOutput {
-    /// Creates a new builder-style object to manufacture [`DisableDomainAutoRenewOutput`](crate::output::DisableDomainAutoRenewOutput)
+    /// Creates a new builder-style object to manufacture [`DisableDomainAutoRenewOutput`](crate::output::DisableDomainAutoRenewOutput).
     pub fn builder() -> crate::output::disable_domain_auto_renew_output::Builder {
         crate::output::disable_domain_auto_renew_output::Builder::default()
     }
@@ -2111,22 +2141,21 @@ impl std::fmt::Debug for DeleteTagsForDomainOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteTagsForDomainOutput`](crate::output::DeleteTagsForDomainOutput)
+/// See [`DeleteTagsForDomainOutput`](crate::output::DeleteTagsForDomainOutput).
 pub mod delete_tags_for_domain_output {
 
-    /// A builder for [`DeleteTagsForDomainOutput`](crate::output::DeleteTagsForDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteTagsForDomainOutput`](crate::output::DeleteTagsForDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteTagsForDomainOutput`](crate::output::DeleteTagsForDomainOutput)
+        /// Consumes the builder and constructs a [`DeleteTagsForDomainOutput`](crate::output::DeleteTagsForDomainOutput).
         pub fn build(self) -> crate::output::DeleteTagsForDomainOutput {
             crate::output::DeleteTagsForDomainOutput {}
         }
     }
 }
 impl DeleteTagsForDomainOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteTagsForDomainOutput`](crate::output::DeleteTagsForDomainOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteTagsForDomainOutput`](crate::output::DeleteTagsForDomainOutput).
     pub fn builder() -> crate::output::delete_tags_for_domain_output::Builder {
         crate::output::delete_tags_for_domain_output::Builder::default()
     }
@@ -2137,6 +2166,7 @@ impl DeleteTagsForDomainOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteDomainOutput {
     /// <p>Identifier for tracking the progress of the request. To query the operation status, use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_GetOperationDetail.html">GetOperationDetail</a>.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl DeleteDomainOutput {
@@ -2152,11 +2182,10 @@ impl std::fmt::Debug for DeleteDomainOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDomainOutput`](crate::output::DeleteDomainOutput)
+/// See [`DeleteDomainOutput`](crate::output::DeleteDomainOutput).
 pub mod delete_domain_output {
 
-    /// A builder for [`DeleteDomainOutput`](crate::output::DeleteDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDomainOutput`](crate::output::DeleteDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -2172,7 +2201,7 @@ pub mod delete_domain_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDomainOutput`](crate::output::DeleteDomainOutput)
+        /// Consumes the builder and constructs a [`DeleteDomainOutput`](crate::output::DeleteDomainOutput).
         pub fn build(self) -> crate::output::DeleteDomainOutput {
             crate::output::DeleteDomainOutput {
                 operation_id: self.operation_id,
@@ -2181,7 +2210,7 @@ pub mod delete_domain_output {
     }
 }
 impl DeleteDomainOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDomainOutput`](crate::output::DeleteDomainOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDomainOutput`](crate::output::DeleteDomainOutput).
     pub fn builder() -> crate::output::delete_domain_output::Builder {
         crate::output::delete_domain_output::Builder::default()
     }
@@ -2192,6 +2221,7 @@ impl DeleteDomainOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CheckDomainTransferabilityOutput {
     /// <p>A complex type that contains information about whether the specified domain can be transferred to Route 53.</p>
+    #[doc(hidden)]
     pub transferability: std::option::Option<crate::model::DomainTransferability>,
 }
 impl CheckDomainTransferabilityOutput {
@@ -2207,11 +2237,10 @@ impl std::fmt::Debug for CheckDomainTransferabilityOutput {
         formatter.finish()
     }
 }
-/// See [`CheckDomainTransferabilityOutput`](crate::output::CheckDomainTransferabilityOutput)
+/// See [`CheckDomainTransferabilityOutput`](crate::output::CheckDomainTransferabilityOutput).
 pub mod check_domain_transferability_output {
 
-    /// A builder for [`CheckDomainTransferabilityOutput`](crate::output::CheckDomainTransferabilityOutput)
-    #[non_exhaustive]
+    /// A builder for [`CheckDomainTransferabilityOutput`](crate::output::CheckDomainTransferabilityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transferability: std::option::Option<crate::model::DomainTransferability>,
@@ -2230,7 +2259,7 @@ pub mod check_domain_transferability_output {
             self.transferability = input;
             self
         }
-        /// Consumes the builder and constructs a [`CheckDomainTransferabilityOutput`](crate::output::CheckDomainTransferabilityOutput)
+        /// Consumes the builder and constructs a [`CheckDomainTransferabilityOutput`](crate::output::CheckDomainTransferabilityOutput).
         pub fn build(self) -> crate::output::CheckDomainTransferabilityOutput {
             crate::output::CheckDomainTransferabilityOutput {
                 transferability: self.transferability,
@@ -2239,7 +2268,7 @@ pub mod check_domain_transferability_output {
     }
 }
 impl CheckDomainTransferabilityOutput {
-    /// Creates a new builder-style object to manufacture [`CheckDomainTransferabilityOutput`](crate::output::CheckDomainTransferabilityOutput)
+    /// Creates a new builder-style object to manufacture [`CheckDomainTransferabilityOutput`](crate::output::CheckDomainTransferabilityOutput).
     pub fn builder() -> crate::output::check_domain_transferability_output::Builder {
         crate::output::check_domain_transferability_output::Builder::default()
     }
@@ -2309,6 +2338,7 @@ pub struct CheckDomainAvailabilityOutput {
     /// <p>The domain name is forbidden.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub availability: std::option::Option<crate::model::DomainAvailability>,
 }
 impl CheckDomainAvailabilityOutput {
@@ -2383,11 +2413,10 @@ impl std::fmt::Debug for CheckDomainAvailabilityOutput {
         formatter.finish()
     }
 }
-/// See [`CheckDomainAvailabilityOutput`](crate::output::CheckDomainAvailabilityOutput)
+/// See [`CheckDomainAvailabilityOutput`](crate::output::CheckDomainAvailabilityOutput).
 pub mod check_domain_availability_output {
 
-    /// A builder for [`CheckDomainAvailabilityOutput`](crate::output::CheckDomainAvailabilityOutput)
-    #[non_exhaustive]
+    /// A builder for [`CheckDomainAvailabilityOutput`](crate::output::CheckDomainAvailabilityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) availability: std::option::Option<crate::model::DomainAvailability>,
@@ -2524,7 +2553,7 @@ pub mod check_domain_availability_output {
             self.availability = input;
             self
         }
-        /// Consumes the builder and constructs a [`CheckDomainAvailabilityOutput`](crate::output::CheckDomainAvailabilityOutput)
+        /// Consumes the builder and constructs a [`CheckDomainAvailabilityOutput`](crate::output::CheckDomainAvailabilityOutput).
         pub fn build(self) -> crate::output::CheckDomainAvailabilityOutput {
             crate::output::CheckDomainAvailabilityOutput {
                 availability: self.availability,
@@ -2533,7 +2562,7 @@ pub mod check_domain_availability_output {
     }
 }
 impl CheckDomainAvailabilityOutput {
-    /// Creates a new builder-style object to manufacture [`CheckDomainAvailabilityOutput`](crate::output::CheckDomainAvailabilityOutput)
+    /// Creates a new builder-style object to manufacture [`CheckDomainAvailabilityOutput`](crate::output::CheckDomainAvailabilityOutput).
     pub fn builder() -> crate::output::check_domain_availability_output::Builder {
         crate::output::check_domain_availability_output::Builder::default()
     }
@@ -2544,6 +2573,7 @@ impl CheckDomainAvailabilityOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelDomainTransferToAnotherAwsAccountOutput {
     /// <p>The identifier that <code>TransferDomainToAnotherAwsAccount</code> returned to track the progress of the request. Because the transfer request was canceled, the value is no longer valid, and you can't use <code>GetOperationDetail</code> to query the operation status.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl CancelDomainTransferToAnotherAwsAccountOutput {
@@ -2559,11 +2589,10 @@ impl std::fmt::Debug for CancelDomainTransferToAnotherAwsAccountOutput {
         formatter.finish()
     }
 }
-/// See [`CancelDomainTransferToAnotherAwsAccountOutput`](crate::output::CancelDomainTransferToAnotherAwsAccountOutput)
+/// See [`CancelDomainTransferToAnotherAwsAccountOutput`](crate::output::CancelDomainTransferToAnotherAwsAccountOutput).
 pub mod cancel_domain_transfer_to_another_aws_account_output {
 
-    /// A builder for [`CancelDomainTransferToAnotherAwsAccountOutput`](crate::output::CancelDomainTransferToAnotherAwsAccountOutput)
-    #[non_exhaustive]
+    /// A builder for [`CancelDomainTransferToAnotherAwsAccountOutput`](crate::output::CancelDomainTransferToAnotherAwsAccountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -2579,7 +2608,7 @@ pub mod cancel_domain_transfer_to_another_aws_account_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelDomainTransferToAnotherAwsAccountOutput`](crate::output::CancelDomainTransferToAnotherAwsAccountOutput)
+        /// Consumes the builder and constructs a [`CancelDomainTransferToAnotherAwsAccountOutput`](crate::output::CancelDomainTransferToAnotherAwsAccountOutput).
         pub fn build(self) -> crate::output::CancelDomainTransferToAnotherAwsAccountOutput {
             crate::output::CancelDomainTransferToAnotherAwsAccountOutput {
                 operation_id: self.operation_id,
@@ -2588,7 +2617,7 @@ pub mod cancel_domain_transfer_to_another_aws_account_output {
     }
 }
 impl CancelDomainTransferToAnotherAwsAccountOutput {
-    /// Creates a new builder-style object to manufacture [`CancelDomainTransferToAnotherAwsAccountOutput`](crate::output::CancelDomainTransferToAnotherAwsAccountOutput)
+    /// Creates a new builder-style object to manufacture [`CancelDomainTransferToAnotherAwsAccountOutput`](crate::output::CancelDomainTransferToAnotherAwsAccountOutput).
     pub fn builder() -> crate::output::cancel_domain_transfer_to_another_aws_account_output::Builder
     {
         crate::output::cancel_domain_transfer_to_another_aws_account_output::Builder::default()
@@ -2600,6 +2629,7 @@ impl CancelDomainTransferToAnotherAwsAccountOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AcceptDomainTransferFromAnotherAwsAccountOutput {
     /// <p>Identifier for tracking the progress of the request. To query the operation status, use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_GetOperationDetail.html">GetOperationDetail</a>.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl AcceptDomainTransferFromAnotherAwsAccountOutput {
@@ -2615,11 +2645,10 @@ impl std::fmt::Debug for AcceptDomainTransferFromAnotherAwsAccountOutput {
         formatter.finish()
     }
 }
-/// See [`AcceptDomainTransferFromAnotherAwsAccountOutput`](crate::output::AcceptDomainTransferFromAnotherAwsAccountOutput)
+/// See [`AcceptDomainTransferFromAnotherAwsAccountOutput`](crate::output::AcceptDomainTransferFromAnotherAwsAccountOutput).
 pub mod accept_domain_transfer_from_another_aws_account_output {
 
-    /// A builder for [`AcceptDomainTransferFromAnotherAwsAccountOutput`](crate::output::AcceptDomainTransferFromAnotherAwsAccountOutput)
-    #[non_exhaustive]
+    /// A builder for [`AcceptDomainTransferFromAnotherAwsAccountOutput`](crate::output::AcceptDomainTransferFromAnotherAwsAccountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -2635,7 +2664,7 @@ pub mod accept_domain_transfer_from_another_aws_account_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`AcceptDomainTransferFromAnotherAwsAccountOutput`](crate::output::AcceptDomainTransferFromAnotherAwsAccountOutput)
+        /// Consumes the builder and constructs a [`AcceptDomainTransferFromAnotherAwsAccountOutput`](crate::output::AcceptDomainTransferFromAnotherAwsAccountOutput).
         pub fn build(self) -> crate::output::AcceptDomainTransferFromAnotherAwsAccountOutput {
             crate::output::AcceptDomainTransferFromAnotherAwsAccountOutput {
                 operation_id: self.operation_id,
@@ -2644,7 +2673,7 @@ pub mod accept_domain_transfer_from_another_aws_account_output {
     }
 }
 impl AcceptDomainTransferFromAnotherAwsAccountOutput {
-    /// Creates a new builder-style object to manufacture [`AcceptDomainTransferFromAnotherAwsAccountOutput`](crate::output::AcceptDomainTransferFromAnotherAwsAccountOutput)
+    /// Creates a new builder-style object to manufacture [`AcceptDomainTransferFromAnotherAwsAccountOutput`](crate::output::AcceptDomainTransferFromAnotherAwsAccountOutput).
     pub fn builder(
     ) -> crate::output::accept_domain_transfer_from_another_aws_account_output::Builder {
         crate::output::accept_domain_transfer_from_another_aws_account_output::Builder::default()

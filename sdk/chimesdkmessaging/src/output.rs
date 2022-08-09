@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateChannelReadMarkerOutput {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
 }
 impl UpdateChannelReadMarkerOutput {
@@ -19,11 +20,10 @@ impl std::fmt::Debug for UpdateChannelReadMarkerOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateChannelReadMarkerOutput`](crate::output::UpdateChannelReadMarkerOutput)
+/// See [`UpdateChannelReadMarkerOutput`](crate::output::UpdateChannelReadMarkerOutput).
 pub mod update_channel_read_marker_output {
 
-    /// A builder for [`UpdateChannelReadMarkerOutput`](crate::output::UpdateChannelReadMarkerOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateChannelReadMarkerOutput`](crate::output::UpdateChannelReadMarkerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -39,7 +39,7 @@ pub mod update_channel_read_marker_output {
             self.channel_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateChannelReadMarkerOutput`](crate::output::UpdateChannelReadMarkerOutput)
+        /// Consumes the builder and constructs a [`UpdateChannelReadMarkerOutput`](crate::output::UpdateChannelReadMarkerOutput).
         pub fn build(self) -> crate::output::UpdateChannelReadMarkerOutput {
             crate::output::UpdateChannelReadMarkerOutput {
                 channel_arn: self.channel_arn,
@@ -48,7 +48,7 @@ pub mod update_channel_read_marker_output {
     }
 }
 impl UpdateChannelReadMarkerOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateChannelReadMarkerOutput`](crate::output::UpdateChannelReadMarkerOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateChannelReadMarkerOutput`](crate::output::UpdateChannelReadMarkerOutput).
     pub fn builder() -> crate::output::update_channel_read_marker_output::Builder {
         crate::output::update_channel_read_marker_output::Builder::default()
     }
@@ -59,10 +59,13 @@ impl UpdateChannelReadMarkerOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateChannelMessageOutput {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The ID string of the message being updated.</p>
+    #[doc(hidden)]
     pub message_id: std::option::Option<std::string::String>,
     /// <p>The status of the message update.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ChannelMessageStatusStructure>,
 }
 impl UpdateChannelMessageOutput {
@@ -88,11 +91,10 @@ impl std::fmt::Debug for UpdateChannelMessageOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateChannelMessageOutput`](crate::output::UpdateChannelMessageOutput)
+/// See [`UpdateChannelMessageOutput`](crate::output::UpdateChannelMessageOutput).
 pub mod update_channel_message_output {
 
-    /// A builder for [`UpdateChannelMessageOutput`](crate::output::UpdateChannelMessageOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateChannelMessageOutput`](crate::output::UpdateChannelMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -133,7 +135,7 @@ pub mod update_channel_message_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateChannelMessageOutput`](crate::output::UpdateChannelMessageOutput)
+        /// Consumes the builder and constructs a [`UpdateChannelMessageOutput`](crate::output::UpdateChannelMessageOutput).
         pub fn build(self) -> crate::output::UpdateChannelMessageOutput {
             crate::output::UpdateChannelMessageOutput {
                 channel_arn: self.channel_arn,
@@ -144,7 +146,7 @@ pub mod update_channel_message_output {
     }
 }
 impl UpdateChannelMessageOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateChannelMessageOutput`](crate::output::UpdateChannelMessageOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateChannelMessageOutput`](crate::output::UpdateChannelMessageOutput).
     pub fn builder() -> crate::output::update_channel_message_output::Builder {
         crate::output::update_channel_message_output::Builder::default()
     }
@@ -155,6 +157,7 @@ impl UpdateChannelMessageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateChannelFlowOutput {
     /// <p>The ARN of the channel flow.</p>
+    #[doc(hidden)]
     pub channel_flow_arn: std::option::Option<std::string::String>,
 }
 impl UpdateChannelFlowOutput {
@@ -170,11 +173,10 @@ impl std::fmt::Debug for UpdateChannelFlowOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateChannelFlowOutput`](crate::output::UpdateChannelFlowOutput)
+/// See [`UpdateChannelFlowOutput`](crate::output::UpdateChannelFlowOutput).
 pub mod update_channel_flow_output {
 
-    /// A builder for [`UpdateChannelFlowOutput`](crate::output::UpdateChannelFlowOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateChannelFlowOutput`](crate::output::UpdateChannelFlowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_flow_arn: std::option::Option<std::string::String>,
@@ -193,7 +195,7 @@ pub mod update_channel_flow_output {
             self.channel_flow_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateChannelFlowOutput`](crate::output::UpdateChannelFlowOutput)
+        /// Consumes the builder and constructs a [`UpdateChannelFlowOutput`](crate::output::UpdateChannelFlowOutput).
         pub fn build(self) -> crate::output::UpdateChannelFlowOutput {
             crate::output::UpdateChannelFlowOutput {
                 channel_flow_arn: self.channel_flow_arn,
@@ -202,7 +204,7 @@ pub mod update_channel_flow_output {
     }
 }
 impl UpdateChannelFlowOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateChannelFlowOutput`](crate::output::UpdateChannelFlowOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateChannelFlowOutput`](crate::output::UpdateChannelFlowOutput).
     pub fn builder() -> crate::output::update_channel_flow_output::Builder {
         crate::output::update_channel_flow_output::Builder::default()
     }
@@ -213,6 +215,7 @@ impl UpdateChannelFlowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateChannelOutput {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
 }
 impl UpdateChannelOutput {
@@ -228,11 +231,10 @@ impl std::fmt::Debug for UpdateChannelOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateChannelOutput`](crate::output::UpdateChannelOutput)
+/// See [`UpdateChannelOutput`](crate::output::UpdateChannelOutput).
 pub mod update_channel_output {
 
-    /// A builder for [`UpdateChannelOutput`](crate::output::UpdateChannelOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateChannelOutput`](crate::output::UpdateChannelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -248,7 +250,7 @@ pub mod update_channel_output {
             self.channel_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateChannelOutput`](crate::output::UpdateChannelOutput)
+        /// Consumes the builder and constructs a [`UpdateChannelOutput`](crate::output::UpdateChannelOutput).
         pub fn build(self) -> crate::output::UpdateChannelOutput {
             crate::output::UpdateChannelOutput {
                 channel_arn: self.channel_arn,
@@ -257,7 +259,7 @@ pub mod update_channel_output {
     }
 }
 impl UpdateChannelOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateChannelOutput`](crate::output::UpdateChannelOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateChannelOutput`](crate::output::UpdateChannelOutput).
     pub fn builder() -> crate::output::update_channel_output::Builder {
         crate::output::update_channel_output::Builder::default()
     }
@@ -273,22 +275,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -304,22 +305,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -330,10 +330,13 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SendChannelMessageOutput {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The ID string assigned to each message.</p>
+    #[doc(hidden)]
     pub message_id: std::option::Option<std::string::String>,
     /// <p>The status of the channel message.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ChannelMessageStatusStructure>,
 }
 impl SendChannelMessageOutput {
@@ -359,11 +362,10 @@ impl std::fmt::Debug for SendChannelMessageOutput {
         formatter.finish()
     }
 }
-/// See [`SendChannelMessageOutput`](crate::output::SendChannelMessageOutput)
+/// See [`SendChannelMessageOutput`](crate::output::SendChannelMessageOutput).
 pub mod send_channel_message_output {
 
-    /// A builder for [`SendChannelMessageOutput`](crate::output::SendChannelMessageOutput)
-    #[non_exhaustive]
+    /// A builder for [`SendChannelMessageOutput`](crate::output::SendChannelMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -404,7 +406,7 @@ pub mod send_channel_message_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`SendChannelMessageOutput`](crate::output::SendChannelMessageOutput)
+        /// Consumes the builder and constructs a [`SendChannelMessageOutput`](crate::output::SendChannelMessageOutput).
         pub fn build(self) -> crate::output::SendChannelMessageOutput {
             crate::output::SendChannelMessageOutput {
                 channel_arn: self.channel_arn,
@@ -415,7 +417,7 @@ pub mod send_channel_message_output {
     }
 }
 impl SendChannelMessageOutput {
-    /// Creates a new builder-style object to manufacture [`SendChannelMessageOutput`](crate::output::SendChannelMessageOutput)
+    /// Creates a new builder-style object to manufacture [`SendChannelMessageOutput`](crate::output::SendChannelMessageOutput).
     pub fn builder() -> crate::output::send_channel_message_output::Builder {
         crate::output::send_channel_message_output::Builder::default()
     }
@@ -426,8 +428,10 @@ impl SendChannelMessageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchChannelsOutput {
     /// <p>A list of the channels in the request.</p>
+    #[doc(hidden)]
     pub channels: std::option::Option<std::vec::Vec<crate::model::ChannelSummary>>,
     /// <p>The token returned from previous API responses until the number of channels is reached.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl SearchChannelsOutput {
@@ -448,11 +452,10 @@ impl std::fmt::Debug for SearchChannelsOutput {
         formatter.finish()
     }
 }
-/// See [`SearchChannelsOutput`](crate::output::SearchChannelsOutput)
+/// See [`SearchChannelsOutput`](crate::output::SearchChannelsOutput).
 pub mod search_channels_output {
 
-    /// A builder for [`SearchChannelsOutput`](crate::output::SearchChannelsOutput)
-    #[non_exhaustive]
+    /// A builder for [`SearchChannelsOutput`](crate::output::SearchChannelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channels: std::option::Option<std::vec::Vec<crate::model::ChannelSummary>>,
@@ -488,7 +491,7 @@ pub mod search_channels_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchChannelsOutput`](crate::output::SearchChannelsOutput)
+        /// Consumes the builder and constructs a [`SearchChannelsOutput`](crate::output::SearchChannelsOutput).
         pub fn build(self) -> crate::output::SearchChannelsOutput {
             crate::output::SearchChannelsOutput {
                 channels: self.channels,
@@ -498,7 +501,7 @@ pub mod search_channels_output {
     }
 }
 impl SearchChannelsOutput {
-    /// Creates a new builder-style object to manufacture [`SearchChannelsOutput`](crate::output::SearchChannelsOutput)
+    /// Creates a new builder-style object to manufacture [`SearchChannelsOutput`](crate::output::SearchChannelsOutput).
     pub fn builder() -> crate::output::search_channels_output::Builder {
         crate::output::search_channels_output::Builder::default()
     }
@@ -509,8 +512,10 @@ impl SearchChannelsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RedactChannelMessageOutput {
     /// <p>The ARN of the channel containing the messages that you want to redact.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the message being redacted.</p>
+    #[doc(hidden)]
     pub message_id: std::option::Option<std::string::String>,
 }
 impl RedactChannelMessageOutput {
@@ -531,11 +536,10 @@ impl std::fmt::Debug for RedactChannelMessageOutput {
         formatter.finish()
     }
 }
-/// See [`RedactChannelMessageOutput`](crate::output::RedactChannelMessageOutput)
+/// See [`RedactChannelMessageOutput`](crate::output::RedactChannelMessageOutput).
 pub mod redact_channel_message_output {
 
-    /// A builder for [`RedactChannelMessageOutput`](crate::output::RedactChannelMessageOutput)
-    #[non_exhaustive]
+    /// A builder for [`RedactChannelMessageOutput`](crate::output::RedactChannelMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -562,7 +566,7 @@ pub mod redact_channel_message_output {
             self.message_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RedactChannelMessageOutput`](crate::output::RedactChannelMessageOutput)
+        /// Consumes the builder and constructs a [`RedactChannelMessageOutput`](crate::output::RedactChannelMessageOutput).
         pub fn build(self) -> crate::output::RedactChannelMessageOutput {
             crate::output::RedactChannelMessageOutput {
                 channel_arn: self.channel_arn,
@@ -572,7 +576,7 @@ pub mod redact_channel_message_output {
     }
 }
 impl RedactChannelMessageOutput {
-    /// Creates a new builder-style object to manufacture [`RedactChannelMessageOutput`](crate::output::RedactChannelMessageOutput)
+    /// Creates a new builder-style object to manufacture [`RedactChannelMessageOutput`](crate::output::RedactChannelMessageOutput).
     pub fn builder() -> crate::output::redact_channel_message_output::Builder {
         crate::output::redact_channel_message_output::Builder::default()
     }
@@ -583,10 +587,13 @@ impl RedactChannelMessageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutChannelMembershipPreferencesOutput {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The details of a user.</p>
+    #[doc(hidden)]
     pub member: std::option::Option<crate::model::Identity>,
     /// <p>The ARN and metadata of the member being added.</p>
+    #[doc(hidden)]
     pub preferences: std::option::Option<crate::model::ChannelMembershipPreferences>,
 }
 impl PutChannelMembershipPreferencesOutput {
@@ -612,11 +619,10 @@ impl std::fmt::Debug for PutChannelMembershipPreferencesOutput {
         formatter.finish()
     }
 }
-/// See [`PutChannelMembershipPreferencesOutput`](crate::output::PutChannelMembershipPreferencesOutput)
+/// See [`PutChannelMembershipPreferencesOutput`](crate::output::PutChannelMembershipPreferencesOutput).
 pub mod put_channel_membership_preferences_output {
 
-    /// A builder for [`PutChannelMembershipPreferencesOutput`](crate::output::PutChannelMembershipPreferencesOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutChannelMembershipPreferencesOutput`](crate::output::PutChannelMembershipPreferencesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -657,7 +663,7 @@ pub mod put_channel_membership_preferences_output {
             self.preferences = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutChannelMembershipPreferencesOutput`](crate::output::PutChannelMembershipPreferencesOutput)
+        /// Consumes the builder and constructs a [`PutChannelMembershipPreferencesOutput`](crate::output::PutChannelMembershipPreferencesOutput).
         pub fn build(self) -> crate::output::PutChannelMembershipPreferencesOutput {
             crate::output::PutChannelMembershipPreferencesOutput {
                 channel_arn: self.channel_arn,
@@ -668,7 +674,7 @@ pub mod put_channel_membership_preferences_output {
     }
 }
 impl PutChannelMembershipPreferencesOutput {
-    /// Creates a new builder-style object to manufacture [`PutChannelMembershipPreferencesOutput`](crate::output::PutChannelMembershipPreferencesOutput)
+    /// Creates a new builder-style object to manufacture [`PutChannelMembershipPreferencesOutput`](crate::output::PutChannelMembershipPreferencesOutput).
     pub fn builder() -> crate::output::put_channel_membership_preferences_output::Builder {
         crate::output::put_channel_membership_preferences_output::Builder::default()
     }
@@ -679,6 +685,7 @@ impl PutChannelMembershipPreferencesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tag key-value pairs.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ListTagsForResourceOutput {
@@ -694,11 +701,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -723,14 +729,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -741,9 +747,11 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListChannelsModeratedByAppInstanceUserOutput {
     /// <p>The moderated channels in the request.</p>
+    #[doc(hidden)]
     pub channels:
         std::option::Option<std::vec::Vec<crate::model::ChannelModeratedByAppInstanceUserSummary>>,
     /// <p>The token returned from previous API requests until the number of channels moderated by the user is reached.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListChannelsModeratedByAppInstanceUserOutput {
@@ -766,11 +774,10 @@ impl std::fmt::Debug for ListChannelsModeratedByAppInstanceUserOutput {
         formatter.finish()
     }
 }
-/// See [`ListChannelsModeratedByAppInstanceUserOutput`](crate::output::ListChannelsModeratedByAppInstanceUserOutput)
+/// See [`ListChannelsModeratedByAppInstanceUserOutput`](crate::output::ListChannelsModeratedByAppInstanceUserOutput).
 pub mod list_channels_moderated_by_app_instance_user_output {
 
-    /// A builder for [`ListChannelsModeratedByAppInstanceUserOutput`](crate::output::ListChannelsModeratedByAppInstanceUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListChannelsModeratedByAppInstanceUserOutput`](crate::output::ListChannelsModeratedByAppInstanceUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channels: std::option::Option<
@@ -813,7 +820,7 @@ pub mod list_channels_moderated_by_app_instance_user_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListChannelsModeratedByAppInstanceUserOutput`](crate::output::ListChannelsModeratedByAppInstanceUserOutput)
+        /// Consumes the builder and constructs a [`ListChannelsModeratedByAppInstanceUserOutput`](crate::output::ListChannelsModeratedByAppInstanceUserOutput).
         pub fn build(self) -> crate::output::ListChannelsModeratedByAppInstanceUserOutput {
             crate::output::ListChannelsModeratedByAppInstanceUserOutput {
                 channels: self.channels,
@@ -823,7 +830,7 @@ pub mod list_channels_moderated_by_app_instance_user_output {
     }
 }
 impl ListChannelsModeratedByAppInstanceUserOutput {
-    /// Creates a new builder-style object to manufacture [`ListChannelsModeratedByAppInstanceUserOutput`](crate::output::ListChannelsModeratedByAppInstanceUserOutput)
+    /// Creates a new builder-style object to manufacture [`ListChannelsModeratedByAppInstanceUserOutput`](crate::output::ListChannelsModeratedByAppInstanceUserOutput).
     pub fn builder() -> crate::output::list_channels_moderated_by_app_instance_user_output::Builder
     {
         crate::output::list_channels_moderated_by_app_instance_user_output::Builder::default()
@@ -835,9 +842,11 @@ impl ListChannelsModeratedByAppInstanceUserOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListChannelsAssociatedWithChannelFlowOutput {
     /// <p>The information about each channel.</p>
+    #[doc(hidden)]
     pub channels:
         std::option::Option<std::vec::Vec<crate::model::ChannelAssociatedWithFlowSummary>>,
     /// <p>The token passed by previous API calls until all requested channels are returned.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListChannelsAssociatedWithChannelFlowOutput {
@@ -860,11 +869,10 @@ impl std::fmt::Debug for ListChannelsAssociatedWithChannelFlowOutput {
         formatter.finish()
     }
 }
-/// See [`ListChannelsAssociatedWithChannelFlowOutput`](crate::output::ListChannelsAssociatedWithChannelFlowOutput)
+/// See [`ListChannelsAssociatedWithChannelFlowOutput`](crate::output::ListChannelsAssociatedWithChannelFlowOutput).
 pub mod list_channels_associated_with_channel_flow_output {
 
-    /// A builder for [`ListChannelsAssociatedWithChannelFlowOutput`](crate::output::ListChannelsAssociatedWithChannelFlowOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListChannelsAssociatedWithChannelFlowOutput`](crate::output::ListChannelsAssociatedWithChannelFlowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channels:
@@ -903,7 +911,7 @@ pub mod list_channels_associated_with_channel_flow_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListChannelsAssociatedWithChannelFlowOutput`](crate::output::ListChannelsAssociatedWithChannelFlowOutput)
+        /// Consumes the builder and constructs a [`ListChannelsAssociatedWithChannelFlowOutput`](crate::output::ListChannelsAssociatedWithChannelFlowOutput).
         pub fn build(self) -> crate::output::ListChannelsAssociatedWithChannelFlowOutput {
             crate::output::ListChannelsAssociatedWithChannelFlowOutput {
                 channels: self.channels,
@@ -913,7 +921,7 @@ pub mod list_channels_associated_with_channel_flow_output {
     }
 }
 impl ListChannelsAssociatedWithChannelFlowOutput {
-    /// Creates a new builder-style object to manufacture [`ListChannelsAssociatedWithChannelFlowOutput`](crate::output::ListChannelsAssociatedWithChannelFlowOutput)
+    /// Creates a new builder-style object to manufacture [`ListChannelsAssociatedWithChannelFlowOutput`](crate::output::ListChannelsAssociatedWithChannelFlowOutput).
     pub fn builder() -> crate::output::list_channels_associated_with_channel_flow_output::Builder {
         crate::output::list_channels_associated_with_channel_flow_output::Builder::default()
     }
@@ -924,8 +932,10 @@ impl ListChannelsAssociatedWithChannelFlowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListChannelsOutput {
     /// <p>The information about each channel.</p>
+    #[doc(hidden)]
     pub channels: std::option::Option<std::vec::Vec<crate::model::ChannelSummary>>,
     /// <p>The token returned from previous API requests until the number of channels is reached.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListChannelsOutput {
@@ -946,11 +956,10 @@ impl std::fmt::Debug for ListChannelsOutput {
         formatter.finish()
     }
 }
-/// See [`ListChannelsOutput`](crate::output::ListChannelsOutput)
+/// See [`ListChannelsOutput`](crate::output::ListChannelsOutput).
 pub mod list_channels_output {
 
-    /// A builder for [`ListChannelsOutput`](crate::output::ListChannelsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListChannelsOutput`](crate::output::ListChannelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channels: std::option::Option<std::vec::Vec<crate::model::ChannelSummary>>,
@@ -986,7 +995,7 @@ pub mod list_channels_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListChannelsOutput`](crate::output::ListChannelsOutput)
+        /// Consumes the builder and constructs a [`ListChannelsOutput`](crate::output::ListChannelsOutput).
         pub fn build(self) -> crate::output::ListChannelsOutput {
             crate::output::ListChannelsOutput {
                 channels: self.channels,
@@ -996,7 +1005,7 @@ pub mod list_channels_output {
     }
 }
 impl ListChannelsOutput {
-    /// Creates a new builder-style object to manufacture [`ListChannelsOutput`](crate::output::ListChannelsOutput)
+    /// Creates a new builder-style object to manufacture [`ListChannelsOutput`](crate::output::ListChannelsOutput).
     pub fn builder() -> crate::output::list_channels_output::Builder {
         crate::output::list_channels_output::Builder::default()
     }
@@ -1007,10 +1016,13 @@ impl ListChannelsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListChannelModeratorsOutput {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The token passed by previous API calls until all requested moderators are returned.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The information about and names of each moderator.</p>
+    #[doc(hidden)]
     pub channel_moderators:
         std::option::Option<std::vec::Vec<crate::model::ChannelModeratorSummary>>,
 }
@@ -1039,11 +1051,10 @@ impl std::fmt::Debug for ListChannelModeratorsOutput {
         formatter.finish()
     }
 }
-/// See [`ListChannelModeratorsOutput`](crate::output::ListChannelModeratorsOutput)
+/// See [`ListChannelModeratorsOutput`](crate::output::ListChannelModeratorsOutput).
 pub mod list_channel_moderators_output {
 
-    /// A builder for [`ListChannelModeratorsOutput`](crate::output::ListChannelModeratorsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListChannelModeratorsOutput`](crate::output::ListChannelModeratorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -1091,7 +1102,7 @@ pub mod list_channel_moderators_output {
             self.channel_moderators = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListChannelModeratorsOutput`](crate::output::ListChannelModeratorsOutput)
+        /// Consumes the builder and constructs a [`ListChannelModeratorsOutput`](crate::output::ListChannelModeratorsOutput).
         pub fn build(self) -> crate::output::ListChannelModeratorsOutput {
             crate::output::ListChannelModeratorsOutput {
                 channel_arn: self.channel_arn,
@@ -1102,7 +1113,7 @@ pub mod list_channel_moderators_output {
     }
 }
 impl ListChannelModeratorsOutput {
-    /// Creates a new builder-style object to manufacture [`ListChannelModeratorsOutput`](crate::output::ListChannelModeratorsOutput)
+    /// Creates a new builder-style object to manufacture [`ListChannelModeratorsOutput`](crate::output::ListChannelModeratorsOutput).
     pub fn builder() -> crate::output::list_channel_moderators_output::Builder {
         crate::output::list_channel_moderators_output::Builder::default()
     }
@@ -1113,10 +1124,13 @@ impl ListChannelModeratorsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListChannelMessagesOutput {
     /// <p>The ARN of the channel containing the requested messages.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The token passed by previous API calls until all requested messages are returned.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The information about, and content of, each requested message.</p>
+    #[doc(hidden)]
     pub channel_messages: std::option::Option<std::vec::Vec<crate::model::ChannelMessageSummary>>,
 }
 impl ListChannelMessagesOutput {
@@ -1142,11 +1156,10 @@ impl std::fmt::Debug for ListChannelMessagesOutput {
         formatter.finish()
     }
 }
-/// See [`ListChannelMessagesOutput`](crate::output::ListChannelMessagesOutput)
+/// See [`ListChannelMessagesOutput`](crate::output::ListChannelMessagesOutput).
 pub mod list_channel_messages_output {
 
-    /// A builder for [`ListChannelMessagesOutput`](crate::output::ListChannelMessagesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListChannelMessagesOutput`](crate::output::ListChannelMessagesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -1194,7 +1207,7 @@ pub mod list_channel_messages_output {
             self.channel_messages = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListChannelMessagesOutput`](crate::output::ListChannelMessagesOutput)
+        /// Consumes the builder and constructs a [`ListChannelMessagesOutput`](crate::output::ListChannelMessagesOutput).
         pub fn build(self) -> crate::output::ListChannelMessagesOutput {
             crate::output::ListChannelMessagesOutput {
                 channel_arn: self.channel_arn,
@@ -1205,7 +1218,7 @@ pub mod list_channel_messages_output {
     }
 }
 impl ListChannelMessagesOutput {
-    /// Creates a new builder-style object to manufacture [`ListChannelMessagesOutput`](crate::output::ListChannelMessagesOutput)
+    /// Creates a new builder-style object to manufacture [`ListChannelMessagesOutput`](crate::output::ListChannelMessagesOutput).
     pub fn builder() -> crate::output::list_channel_messages_output::Builder {
         crate::output::list_channel_messages_output::Builder::default()
     }
@@ -1216,10 +1229,12 @@ impl ListChannelMessagesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListChannelMembershipsForAppInstanceUserOutput {
     /// <p>The information for the requested channel memberships.</p>
+    #[doc(hidden)]
     pub channel_memberships: std::option::Option<
         std::vec::Vec<crate::model::ChannelMembershipForAppInstanceUserSummary>,
     >,
     /// <p>The token passed by previous API calls until all requested users are returned.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListChannelMembershipsForAppInstanceUserOutput {
@@ -1242,11 +1257,10 @@ impl std::fmt::Debug for ListChannelMembershipsForAppInstanceUserOutput {
         formatter.finish()
     }
 }
-/// See [`ListChannelMembershipsForAppInstanceUserOutput`](crate::output::ListChannelMembershipsForAppInstanceUserOutput)
+/// See [`ListChannelMembershipsForAppInstanceUserOutput`](crate::output::ListChannelMembershipsForAppInstanceUserOutput).
 pub mod list_channel_memberships_for_app_instance_user_output {
 
-    /// A builder for [`ListChannelMembershipsForAppInstanceUserOutput`](crate::output::ListChannelMembershipsForAppInstanceUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListChannelMembershipsForAppInstanceUserOutput`](crate::output::ListChannelMembershipsForAppInstanceUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_memberships: std::option::Option<
@@ -1289,7 +1303,7 @@ pub mod list_channel_memberships_for_app_instance_user_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListChannelMembershipsForAppInstanceUserOutput`](crate::output::ListChannelMembershipsForAppInstanceUserOutput)
+        /// Consumes the builder and constructs a [`ListChannelMembershipsForAppInstanceUserOutput`](crate::output::ListChannelMembershipsForAppInstanceUserOutput).
         pub fn build(self) -> crate::output::ListChannelMembershipsForAppInstanceUserOutput {
             crate::output::ListChannelMembershipsForAppInstanceUserOutput {
                 channel_memberships: self.channel_memberships,
@@ -1299,7 +1313,7 @@ pub mod list_channel_memberships_for_app_instance_user_output {
     }
 }
 impl ListChannelMembershipsForAppInstanceUserOutput {
-    /// Creates a new builder-style object to manufacture [`ListChannelMembershipsForAppInstanceUserOutput`](crate::output::ListChannelMembershipsForAppInstanceUserOutput)
+    /// Creates a new builder-style object to manufacture [`ListChannelMembershipsForAppInstanceUserOutput`](crate::output::ListChannelMembershipsForAppInstanceUserOutput).
     pub fn builder() -> crate::output::list_channel_memberships_for_app_instance_user_output::Builder
     {
         crate::output::list_channel_memberships_for_app_instance_user_output::Builder::default()
@@ -1311,11 +1325,14 @@ impl ListChannelMembershipsForAppInstanceUserOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListChannelMembershipsOutput {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The information for the requested channel memberships.</p>
+    #[doc(hidden)]
     pub channel_memberships:
         std::option::Option<std::vec::Vec<crate::model::ChannelMembershipSummary>>,
     /// <p>The token passed by previous API calls until all requested channel memberships are returned.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListChannelMembershipsOutput {
@@ -1343,11 +1360,10 @@ impl std::fmt::Debug for ListChannelMembershipsOutput {
         formatter.finish()
     }
 }
-/// See [`ListChannelMembershipsOutput`](crate::output::ListChannelMembershipsOutput)
+/// See [`ListChannelMembershipsOutput`](crate::output::ListChannelMembershipsOutput).
 pub mod list_channel_memberships_output {
 
-    /// A builder for [`ListChannelMembershipsOutput`](crate::output::ListChannelMembershipsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListChannelMembershipsOutput`](crate::output::ListChannelMembershipsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -1398,7 +1414,7 @@ pub mod list_channel_memberships_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListChannelMembershipsOutput`](crate::output::ListChannelMembershipsOutput)
+        /// Consumes the builder and constructs a [`ListChannelMembershipsOutput`](crate::output::ListChannelMembershipsOutput).
         pub fn build(self) -> crate::output::ListChannelMembershipsOutput {
             crate::output::ListChannelMembershipsOutput {
                 channel_arn: self.channel_arn,
@@ -1409,7 +1425,7 @@ pub mod list_channel_memberships_output {
     }
 }
 impl ListChannelMembershipsOutput {
-    /// Creates a new builder-style object to manufacture [`ListChannelMembershipsOutput`](crate::output::ListChannelMembershipsOutput)
+    /// Creates a new builder-style object to manufacture [`ListChannelMembershipsOutput`](crate::output::ListChannelMembershipsOutput).
     pub fn builder() -> crate::output::list_channel_memberships_output::Builder {
         crate::output::list_channel_memberships_output::Builder::default()
     }
@@ -1420,8 +1436,10 @@ impl ListChannelMembershipsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListChannelFlowsOutput {
     /// <p>The information about each channel flow.</p>
+    #[doc(hidden)]
     pub channel_flows: std::option::Option<std::vec::Vec<crate::model::ChannelFlowSummary>>,
     /// <p>The token passed by previous API calls until all requested channels are returned.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListChannelFlowsOutput {
@@ -1442,11 +1460,10 @@ impl std::fmt::Debug for ListChannelFlowsOutput {
         formatter.finish()
     }
 }
-/// See [`ListChannelFlowsOutput`](crate::output::ListChannelFlowsOutput)
+/// See [`ListChannelFlowsOutput`](crate::output::ListChannelFlowsOutput).
 pub mod list_channel_flows_output {
 
-    /// A builder for [`ListChannelFlowsOutput`](crate::output::ListChannelFlowsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListChannelFlowsOutput`](crate::output::ListChannelFlowsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_flows:
@@ -1483,7 +1500,7 @@ pub mod list_channel_flows_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListChannelFlowsOutput`](crate::output::ListChannelFlowsOutput)
+        /// Consumes the builder and constructs a [`ListChannelFlowsOutput`](crate::output::ListChannelFlowsOutput).
         pub fn build(self) -> crate::output::ListChannelFlowsOutput {
             crate::output::ListChannelFlowsOutput {
                 channel_flows: self.channel_flows,
@@ -1493,7 +1510,7 @@ pub mod list_channel_flows_output {
     }
 }
 impl ListChannelFlowsOutput {
-    /// Creates a new builder-style object to manufacture [`ListChannelFlowsOutput`](crate::output::ListChannelFlowsOutput)
+    /// Creates a new builder-style object to manufacture [`ListChannelFlowsOutput`](crate::output::ListChannelFlowsOutput).
     pub fn builder() -> crate::output::list_channel_flows_output::Builder {
         crate::output::list_channel_flows_output::Builder::default()
     }
@@ -1504,10 +1521,13 @@ impl ListChannelFlowsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListChannelBansOutput {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The token passed by previous API calls until all requested bans are returned.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The information for each requested ban.</p>
+    #[doc(hidden)]
     pub channel_bans: std::option::Option<std::vec::Vec<crate::model::ChannelBanSummary>>,
 }
 impl ListChannelBansOutput {
@@ -1533,11 +1553,10 @@ impl std::fmt::Debug for ListChannelBansOutput {
         formatter.finish()
     }
 }
-/// See [`ListChannelBansOutput`](crate::output::ListChannelBansOutput)
+/// See [`ListChannelBansOutput`](crate::output::ListChannelBansOutput).
 pub mod list_channel_bans_output {
 
-    /// A builder for [`ListChannelBansOutput`](crate::output::ListChannelBansOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListChannelBansOutput`](crate::output::ListChannelBansOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -1585,7 +1604,7 @@ pub mod list_channel_bans_output {
             self.channel_bans = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListChannelBansOutput`](crate::output::ListChannelBansOutput)
+        /// Consumes the builder and constructs a [`ListChannelBansOutput`](crate::output::ListChannelBansOutput).
         pub fn build(self) -> crate::output::ListChannelBansOutput {
             crate::output::ListChannelBansOutput {
                 channel_arn: self.channel_arn,
@@ -1596,7 +1615,7 @@ pub mod list_channel_bans_output {
     }
 }
 impl ListChannelBansOutput {
-    /// Creates a new builder-style object to manufacture [`ListChannelBansOutput`](crate::output::ListChannelBansOutput)
+    /// Creates a new builder-style object to manufacture [`ListChannelBansOutput`](crate::output::ListChannelBansOutput).
     pub fn builder() -> crate::output::list_channel_bans_output::Builder {
         crate::output::list_channel_bans_output::Builder::default()
     }
@@ -1607,6 +1626,7 @@ impl ListChannelBansOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetMessagingSessionEndpointOutput {
     /// <p>The endpoint returned in the response.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<crate::model::MessagingSessionEndpoint>,
 }
 impl GetMessagingSessionEndpointOutput {
@@ -1622,11 +1642,10 @@ impl std::fmt::Debug for GetMessagingSessionEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`GetMessagingSessionEndpointOutput`](crate::output::GetMessagingSessionEndpointOutput)
+/// See [`GetMessagingSessionEndpointOutput`](crate::output::GetMessagingSessionEndpointOutput).
 pub mod get_messaging_session_endpoint_output {
 
-    /// A builder for [`GetMessagingSessionEndpointOutput`](crate::output::GetMessagingSessionEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetMessagingSessionEndpointOutput`](crate::output::GetMessagingSessionEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint: std::option::Option<crate::model::MessagingSessionEndpoint>,
@@ -1645,7 +1664,7 @@ pub mod get_messaging_session_endpoint_output {
             self.endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetMessagingSessionEndpointOutput`](crate::output::GetMessagingSessionEndpointOutput)
+        /// Consumes the builder and constructs a [`GetMessagingSessionEndpointOutput`](crate::output::GetMessagingSessionEndpointOutput).
         pub fn build(self) -> crate::output::GetMessagingSessionEndpointOutput {
             crate::output::GetMessagingSessionEndpointOutput {
                 endpoint: self.endpoint,
@@ -1654,7 +1673,7 @@ pub mod get_messaging_session_endpoint_output {
     }
 }
 impl GetMessagingSessionEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`GetMessagingSessionEndpointOutput`](crate::output::GetMessagingSessionEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`GetMessagingSessionEndpointOutput`](crate::output::GetMessagingSessionEndpointOutput).
     pub fn builder() -> crate::output::get_messaging_session_endpoint_output::Builder {
         crate::output::get_messaging_session_endpoint_output::Builder::default()
     }
@@ -1665,6 +1684,7 @@ impl GetMessagingSessionEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetChannelMessageStatusOutput {
     /// <p>The message status and details.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ChannelMessageStatusStructure>,
 }
 impl GetChannelMessageStatusOutput {
@@ -1680,11 +1700,10 @@ impl std::fmt::Debug for GetChannelMessageStatusOutput {
         formatter.finish()
     }
 }
-/// See [`GetChannelMessageStatusOutput`](crate::output::GetChannelMessageStatusOutput)
+/// See [`GetChannelMessageStatusOutput`](crate::output::GetChannelMessageStatusOutput).
 pub mod get_channel_message_status_output {
 
-    /// A builder for [`GetChannelMessageStatusOutput`](crate::output::GetChannelMessageStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetChannelMessageStatusOutput`](crate::output::GetChannelMessageStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ChannelMessageStatusStructure>,
@@ -1703,7 +1722,7 @@ pub mod get_channel_message_status_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetChannelMessageStatusOutput`](crate::output::GetChannelMessageStatusOutput)
+        /// Consumes the builder and constructs a [`GetChannelMessageStatusOutput`](crate::output::GetChannelMessageStatusOutput).
         pub fn build(self) -> crate::output::GetChannelMessageStatusOutput {
             crate::output::GetChannelMessageStatusOutput {
                 status: self.status,
@@ -1712,7 +1731,7 @@ pub mod get_channel_message_status_output {
     }
 }
 impl GetChannelMessageStatusOutput {
-    /// Creates a new builder-style object to manufacture [`GetChannelMessageStatusOutput`](crate::output::GetChannelMessageStatusOutput)
+    /// Creates a new builder-style object to manufacture [`GetChannelMessageStatusOutput`](crate::output::GetChannelMessageStatusOutput).
     pub fn builder() -> crate::output::get_channel_message_status_output::Builder {
         crate::output::get_channel_message_status_output::Builder::default()
     }
@@ -1723,6 +1742,7 @@ impl GetChannelMessageStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetChannelMessageOutput {
     /// <p>The details of and content in the message.</p>
+    #[doc(hidden)]
     pub channel_message: std::option::Option<crate::model::ChannelMessage>,
 }
 impl GetChannelMessageOutput {
@@ -1738,11 +1758,10 @@ impl std::fmt::Debug for GetChannelMessageOutput {
         formatter.finish()
     }
 }
-/// See [`GetChannelMessageOutput`](crate::output::GetChannelMessageOutput)
+/// See [`GetChannelMessageOutput`](crate::output::GetChannelMessageOutput).
 pub mod get_channel_message_output {
 
-    /// A builder for [`GetChannelMessageOutput`](crate::output::GetChannelMessageOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetChannelMessageOutput`](crate::output::GetChannelMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_message: std::option::Option<crate::model::ChannelMessage>,
@@ -1761,7 +1780,7 @@ pub mod get_channel_message_output {
             self.channel_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetChannelMessageOutput`](crate::output::GetChannelMessageOutput)
+        /// Consumes the builder and constructs a [`GetChannelMessageOutput`](crate::output::GetChannelMessageOutput).
         pub fn build(self) -> crate::output::GetChannelMessageOutput {
             crate::output::GetChannelMessageOutput {
                 channel_message: self.channel_message,
@@ -1770,7 +1789,7 @@ pub mod get_channel_message_output {
     }
 }
 impl GetChannelMessageOutput {
-    /// Creates a new builder-style object to manufacture [`GetChannelMessageOutput`](crate::output::GetChannelMessageOutput)
+    /// Creates a new builder-style object to manufacture [`GetChannelMessageOutput`](crate::output::GetChannelMessageOutput).
     pub fn builder() -> crate::output::get_channel_message_output::Builder {
         crate::output::get_channel_message_output::Builder::default()
     }
@@ -1781,10 +1800,13 @@ impl GetChannelMessageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetChannelMembershipPreferencesOutput {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The details of a user.</p>
+    #[doc(hidden)]
     pub member: std::option::Option<crate::model::Identity>,
     /// <p>The channel membership preferences for an <code>AppInstanceUser</code> .</p>
+    #[doc(hidden)]
     pub preferences: std::option::Option<crate::model::ChannelMembershipPreferences>,
 }
 impl GetChannelMembershipPreferencesOutput {
@@ -1810,11 +1832,10 @@ impl std::fmt::Debug for GetChannelMembershipPreferencesOutput {
         formatter.finish()
     }
 }
-/// See [`GetChannelMembershipPreferencesOutput`](crate::output::GetChannelMembershipPreferencesOutput)
+/// See [`GetChannelMembershipPreferencesOutput`](crate::output::GetChannelMembershipPreferencesOutput).
 pub mod get_channel_membership_preferences_output {
 
-    /// A builder for [`GetChannelMembershipPreferencesOutput`](crate::output::GetChannelMembershipPreferencesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetChannelMembershipPreferencesOutput`](crate::output::GetChannelMembershipPreferencesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -1855,7 +1876,7 @@ pub mod get_channel_membership_preferences_output {
             self.preferences = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetChannelMembershipPreferencesOutput`](crate::output::GetChannelMembershipPreferencesOutput)
+        /// Consumes the builder and constructs a [`GetChannelMembershipPreferencesOutput`](crate::output::GetChannelMembershipPreferencesOutput).
         pub fn build(self) -> crate::output::GetChannelMembershipPreferencesOutput {
             crate::output::GetChannelMembershipPreferencesOutput {
                 channel_arn: self.channel_arn,
@@ -1866,7 +1887,7 @@ pub mod get_channel_membership_preferences_output {
     }
 }
 impl GetChannelMembershipPreferencesOutput {
-    /// Creates a new builder-style object to manufacture [`GetChannelMembershipPreferencesOutput`](crate::output::GetChannelMembershipPreferencesOutput)
+    /// Creates a new builder-style object to manufacture [`GetChannelMembershipPreferencesOutput`](crate::output::GetChannelMembershipPreferencesOutput).
     pub fn builder() -> crate::output::get_channel_membership_preferences_output::Builder {
         crate::output::get_channel_membership_preferences_output::Builder::default()
     }
@@ -1882,22 +1903,21 @@ impl std::fmt::Debug for DisassociateChannelFlowOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateChannelFlowOutput`](crate::output::DisassociateChannelFlowOutput)
+/// See [`DisassociateChannelFlowOutput`](crate::output::DisassociateChannelFlowOutput).
 pub mod disassociate_channel_flow_output {
 
-    /// A builder for [`DisassociateChannelFlowOutput`](crate::output::DisassociateChannelFlowOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateChannelFlowOutput`](crate::output::DisassociateChannelFlowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisassociateChannelFlowOutput`](crate::output::DisassociateChannelFlowOutput)
+        /// Consumes the builder and constructs a [`DisassociateChannelFlowOutput`](crate::output::DisassociateChannelFlowOutput).
         pub fn build(self) -> crate::output::DisassociateChannelFlowOutput {
             crate::output::DisassociateChannelFlowOutput {}
         }
     }
 }
 impl DisassociateChannelFlowOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateChannelFlowOutput`](crate::output::DisassociateChannelFlowOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateChannelFlowOutput`](crate::output::DisassociateChannelFlowOutput).
     pub fn builder() -> crate::output::disassociate_channel_flow_output::Builder {
         crate::output::disassociate_channel_flow_output::Builder::default()
     }
@@ -1908,6 +1928,7 @@ impl DisassociateChannelFlowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeChannelModeratorOutput {
     /// <p>The details of the channel moderator.</p>
+    #[doc(hidden)]
     pub channel_moderator: std::option::Option<crate::model::ChannelModerator>,
 }
 impl DescribeChannelModeratorOutput {
@@ -1923,11 +1944,10 @@ impl std::fmt::Debug for DescribeChannelModeratorOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeChannelModeratorOutput`](crate::output::DescribeChannelModeratorOutput)
+/// See [`DescribeChannelModeratorOutput`](crate::output::DescribeChannelModeratorOutput).
 pub mod describe_channel_moderator_output {
 
-    /// A builder for [`DescribeChannelModeratorOutput`](crate::output::DescribeChannelModeratorOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeChannelModeratorOutput`](crate::output::DescribeChannelModeratorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_moderator: std::option::Option<crate::model::ChannelModerator>,
@@ -1946,7 +1966,7 @@ pub mod describe_channel_moderator_output {
             self.channel_moderator = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeChannelModeratorOutput`](crate::output::DescribeChannelModeratorOutput)
+        /// Consumes the builder and constructs a [`DescribeChannelModeratorOutput`](crate::output::DescribeChannelModeratorOutput).
         pub fn build(self) -> crate::output::DescribeChannelModeratorOutput {
             crate::output::DescribeChannelModeratorOutput {
                 channel_moderator: self.channel_moderator,
@@ -1955,7 +1975,7 @@ pub mod describe_channel_moderator_output {
     }
 }
 impl DescribeChannelModeratorOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeChannelModeratorOutput`](crate::output::DescribeChannelModeratorOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeChannelModeratorOutput`](crate::output::DescribeChannelModeratorOutput).
     pub fn builder() -> crate::output::describe_channel_moderator_output::Builder {
         crate::output::describe_channel_moderator_output::Builder::default()
     }
@@ -1966,6 +1986,7 @@ impl DescribeChannelModeratorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeChannelModeratedByAppInstanceUserOutput {
     /// <p>The moderated channel.</p>
+    #[doc(hidden)]
     pub channel: std::option::Option<crate::model::ChannelModeratedByAppInstanceUserSummary>,
 }
 impl DescribeChannelModeratedByAppInstanceUserOutput {
@@ -1983,11 +2004,10 @@ impl std::fmt::Debug for DescribeChannelModeratedByAppInstanceUserOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeChannelModeratedByAppInstanceUserOutput`](crate::output::DescribeChannelModeratedByAppInstanceUserOutput)
+/// See [`DescribeChannelModeratedByAppInstanceUserOutput`](crate::output::DescribeChannelModeratedByAppInstanceUserOutput).
 pub mod describe_channel_moderated_by_app_instance_user_output {
 
-    /// A builder for [`DescribeChannelModeratedByAppInstanceUserOutput`](crate::output::DescribeChannelModeratedByAppInstanceUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeChannelModeratedByAppInstanceUserOutput`](crate::output::DescribeChannelModeratedByAppInstanceUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel:
@@ -2010,7 +2030,7 @@ pub mod describe_channel_moderated_by_app_instance_user_output {
             self.channel = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeChannelModeratedByAppInstanceUserOutput`](crate::output::DescribeChannelModeratedByAppInstanceUserOutput)
+        /// Consumes the builder and constructs a [`DescribeChannelModeratedByAppInstanceUserOutput`](crate::output::DescribeChannelModeratedByAppInstanceUserOutput).
         pub fn build(self) -> crate::output::DescribeChannelModeratedByAppInstanceUserOutput {
             crate::output::DescribeChannelModeratedByAppInstanceUserOutput {
                 channel: self.channel,
@@ -2019,7 +2039,7 @@ pub mod describe_channel_moderated_by_app_instance_user_output {
     }
 }
 impl DescribeChannelModeratedByAppInstanceUserOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeChannelModeratedByAppInstanceUserOutput`](crate::output::DescribeChannelModeratedByAppInstanceUserOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeChannelModeratedByAppInstanceUserOutput`](crate::output::DescribeChannelModeratedByAppInstanceUserOutput).
     pub fn builder(
     ) -> crate::output::describe_channel_moderated_by_app_instance_user_output::Builder {
         crate::output::describe_channel_moderated_by_app_instance_user_output::Builder::default()
@@ -2031,6 +2051,7 @@ impl DescribeChannelModeratedByAppInstanceUserOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeChannelMembershipForAppInstanceUserOutput {
     /// <p>The channel to which a user belongs.</p>
+    #[doc(hidden)]
     pub channel_membership:
         std::option::Option<crate::model::ChannelMembershipForAppInstanceUserSummary>,
 }
@@ -2049,11 +2070,10 @@ impl std::fmt::Debug for DescribeChannelMembershipForAppInstanceUserOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeChannelMembershipForAppInstanceUserOutput`](crate::output::DescribeChannelMembershipForAppInstanceUserOutput)
+/// See [`DescribeChannelMembershipForAppInstanceUserOutput`](crate::output::DescribeChannelMembershipForAppInstanceUserOutput).
 pub mod describe_channel_membership_for_app_instance_user_output {
 
-    /// A builder for [`DescribeChannelMembershipForAppInstanceUserOutput`](crate::output::DescribeChannelMembershipForAppInstanceUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeChannelMembershipForAppInstanceUserOutput`](crate::output::DescribeChannelMembershipForAppInstanceUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_membership:
@@ -2076,7 +2096,7 @@ pub mod describe_channel_membership_for_app_instance_user_output {
             self.channel_membership = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeChannelMembershipForAppInstanceUserOutput`](crate::output::DescribeChannelMembershipForAppInstanceUserOutput)
+        /// Consumes the builder and constructs a [`DescribeChannelMembershipForAppInstanceUserOutput`](crate::output::DescribeChannelMembershipForAppInstanceUserOutput).
         pub fn build(self) -> crate::output::DescribeChannelMembershipForAppInstanceUserOutput {
             crate::output::DescribeChannelMembershipForAppInstanceUserOutput {
                 channel_membership: self.channel_membership,
@@ -2085,7 +2105,7 @@ pub mod describe_channel_membership_for_app_instance_user_output {
     }
 }
 impl DescribeChannelMembershipForAppInstanceUserOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeChannelMembershipForAppInstanceUserOutput`](crate::output::DescribeChannelMembershipForAppInstanceUserOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeChannelMembershipForAppInstanceUserOutput`](crate::output::DescribeChannelMembershipForAppInstanceUserOutput).
     pub fn builder(
     ) -> crate::output::describe_channel_membership_for_app_instance_user_output::Builder {
         crate::output::describe_channel_membership_for_app_instance_user_output::Builder::default()
@@ -2097,6 +2117,7 @@ impl DescribeChannelMembershipForAppInstanceUserOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeChannelMembershipOutput {
     /// <p>The details of the membership.</p>
+    #[doc(hidden)]
     pub channel_membership: std::option::Option<crate::model::ChannelMembership>,
 }
 impl DescribeChannelMembershipOutput {
@@ -2112,11 +2133,10 @@ impl std::fmt::Debug for DescribeChannelMembershipOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeChannelMembershipOutput`](crate::output::DescribeChannelMembershipOutput)
+/// See [`DescribeChannelMembershipOutput`](crate::output::DescribeChannelMembershipOutput).
 pub mod describe_channel_membership_output {
 
-    /// A builder for [`DescribeChannelMembershipOutput`](crate::output::DescribeChannelMembershipOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeChannelMembershipOutput`](crate::output::DescribeChannelMembershipOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_membership: std::option::Option<crate::model::ChannelMembership>,
@@ -2135,7 +2155,7 @@ pub mod describe_channel_membership_output {
             self.channel_membership = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeChannelMembershipOutput`](crate::output::DescribeChannelMembershipOutput)
+        /// Consumes the builder and constructs a [`DescribeChannelMembershipOutput`](crate::output::DescribeChannelMembershipOutput).
         pub fn build(self) -> crate::output::DescribeChannelMembershipOutput {
             crate::output::DescribeChannelMembershipOutput {
                 channel_membership: self.channel_membership,
@@ -2144,7 +2164,7 @@ pub mod describe_channel_membership_output {
     }
 }
 impl DescribeChannelMembershipOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeChannelMembershipOutput`](crate::output::DescribeChannelMembershipOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeChannelMembershipOutput`](crate::output::DescribeChannelMembershipOutput).
     pub fn builder() -> crate::output::describe_channel_membership_output::Builder {
         crate::output::describe_channel_membership_output::Builder::default()
     }
@@ -2155,6 +2175,7 @@ impl DescribeChannelMembershipOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeChannelFlowOutput {
     /// <p>The channel flow details.</p>
+    #[doc(hidden)]
     pub channel_flow: std::option::Option<crate::model::ChannelFlow>,
 }
 impl DescribeChannelFlowOutput {
@@ -2170,11 +2191,10 @@ impl std::fmt::Debug for DescribeChannelFlowOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeChannelFlowOutput`](crate::output::DescribeChannelFlowOutput)
+/// See [`DescribeChannelFlowOutput`](crate::output::DescribeChannelFlowOutput).
 pub mod describe_channel_flow_output {
 
-    /// A builder for [`DescribeChannelFlowOutput`](crate::output::DescribeChannelFlowOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeChannelFlowOutput`](crate::output::DescribeChannelFlowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_flow: std::option::Option<crate::model::ChannelFlow>,
@@ -2193,7 +2213,7 @@ pub mod describe_channel_flow_output {
             self.channel_flow = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeChannelFlowOutput`](crate::output::DescribeChannelFlowOutput)
+        /// Consumes the builder and constructs a [`DescribeChannelFlowOutput`](crate::output::DescribeChannelFlowOutput).
         pub fn build(self) -> crate::output::DescribeChannelFlowOutput {
             crate::output::DescribeChannelFlowOutput {
                 channel_flow: self.channel_flow,
@@ -2202,7 +2222,7 @@ pub mod describe_channel_flow_output {
     }
 }
 impl DescribeChannelFlowOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeChannelFlowOutput`](crate::output::DescribeChannelFlowOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeChannelFlowOutput`](crate::output::DescribeChannelFlowOutput).
     pub fn builder() -> crate::output::describe_channel_flow_output::Builder {
         crate::output::describe_channel_flow_output::Builder::default()
     }
@@ -2213,6 +2233,7 @@ impl DescribeChannelFlowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeChannelBanOutput {
     /// <p>The details of the ban.</p>
+    #[doc(hidden)]
     pub channel_ban: std::option::Option<crate::model::ChannelBan>,
 }
 impl DescribeChannelBanOutput {
@@ -2228,11 +2249,10 @@ impl std::fmt::Debug for DescribeChannelBanOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeChannelBanOutput`](crate::output::DescribeChannelBanOutput)
+/// See [`DescribeChannelBanOutput`](crate::output::DescribeChannelBanOutput).
 pub mod describe_channel_ban_output {
 
-    /// A builder for [`DescribeChannelBanOutput`](crate::output::DescribeChannelBanOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeChannelBanOutput`](crate::output::DescribeChannelBanOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_ban: std::option::Option<crate::model::ChannelBan>,
@@ -2251,7 +2271,7 @@ pub mod describe_channel_ban_output {
             self.channel_ban = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeChannelBanOutput`](crate::output::DescribeChannelBanOutput)
+        /// Consumes the builder and constructs a [`DescribeChannelBanOutput`](crate::output::DescribeChannelBanOutput).
         pub fn build(self) -> crate::output::DescribeChannelBanOutput {
             crate::output::DescribeChannelBanOutput {
                 channel_ban: self.channel_ban,
@@ -2260,7 +2280,7 @@ pub mod describe_channel_ban_output {
     }
 }
 impl DescribeChannelBanOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeChannelBanOutput`](crate::output::DescribeChannelBanOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeChannelBanOutput`](crate::output::DescribeChannelBanOutput).
     pub fn builder() -> crate::output::describe_channel_ban_output::Builder {
         crate::output::describe_channel_ban_output::Builder::default()
     }
@@ -2271,6 +2291,7 @@ impl DescribeChannelBanOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeChannelOutput {
     /// <p>The channel details.</p>
+    #[doc(hidden)]
     pub channel: std::option::Option<crate::model::Channel>,
 }
 impl DescribeChannelOutput {
@@ -2286,11 +2307,10 @@ impl std::fmt::Debug for DescribeChannelOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeChannelOutput`](crate::output::DescribeChannelOutput)
+/// See [`DescribeChannelOutput`](crate::output::DescribeChannelOutput).
 pub mod describe_channel_output {
 
-    /// A builder for [`DescribeChannelOutput`](crate::output::DescribeChannelOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeChannelOutput`](crate::output::DescribeChannelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel: std::option::Option<crate::model::Channel>,
@@ -2306,7 +2326,7 @@ pub mod describe_channel_output {
             self.channel = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeChannelOutput`](crate::output::DescribeChannelOutput)
+        /// Consumes the builder and constructs a [`DescribeChannelOutput`](crate::output::DescribeChannelOutput).
         pub fn build(self) -> crate::output::DescribeChannelOutput {
             crate::output::DescribeChannelOutput {
                 channel: self.channel,
@@ -2315,7 +2335,7 @@ pub mod describe_channel_output {
     }
 }
 impl DescribeChannelOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeChannelOutput`](crate::output::DescribeChannelOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeChannelOutput`](crate::output::DescribeChannelOutput).
     pub fn builder() -> crate::output::describe_channel_output::Builder {
         crate::output::describe_channel_output::Builder::default()
     }
@@ -2331,22 +2351,21 @@ impl std::fmt::Debug for DeleteChannelModeratorOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteChannelModeratorOutput`](crate::output::DeleteChannelModeratorOutput)
+/// See [`DeleteChannelModeratorOutput`](crate::output::DeleteChannelModeratorOutput).
 pub mod delete_channel_moderator_output {
 
-    /// A builder for [`DeleteChannelModeratorOutput`](crate::output::DeleteChannelModeratorOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteChannelModeratorOutput`](crate::output::DeleteChannelModeratorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteChannelModeratorOutput`](crate::output::DeleteChannelModeratorOutput)
+        /// Consumes the builder and constructs a [`DeleteChannelModeratorOutput`](crate::output::DeleteChannelModeratorOutput).
         pub fn build(self) -> crate::output::DeleteChannelModeratorOutput {
             crate::output::DeleteChannelModeratorOutput {}
         }
     }
 }
 impl DeleteChannelModeratorOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteChannelModeratorOutput`](crate::output::DeleteChannelModeratorOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteChannelModeratorOutput`](crate::output::DeleteChannelModeratorOutput).
     pub fn builder() -> crate::output::delete_channel_moderator_output::Builder {
         crate::output::delete_channel_moderator_output::Builder::default()
     }
@@ -2362,22 +2381,21 @@ impl std::fmt::Debug for DeleteChannelMessageOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteChannelMessageOutput`](crate::output::DeleteChannelMessageOutput)
+/// See [`DeleteChannelMessageOutput`](crate::output::DeleteChannelMessageOutput).
 pub mod delete_channel_message_output {
 
-    /// A builder for [`DeleteChannelMessageOutput`](crate::output::DeleteChannelMessageOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteChannelMessageOutput`](crate::output::DeleteChannelMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteChannelMessageOutput`](crate::output::DeleteChannelMessageOutput)
+        /// Consumes the builder and constructs a [`DeleteChannelMessageOutput`](crate::output::DeleteChannelMessageOutput).
         pub fn build(self) -> crate::output::DeleteChannelMessageOutput {
             crate::output::DeleteChannelMessageOutput {}
         }
     }
 }
 impl DeleteChannelMessageOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteChannelMessageOutput`](crate::output::DeleteChannelMessageOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteChannelMessageOutput`](crate::output::DeleteChannelMessageOutput).
     pub fn builder() -> crate::output::delete_channel_message_output::Builder {
         crate::output::delete_channel_message_output::Builder::default()
     }
@@ -2393,22 +2411,21 @@ impl std::fmt::Debug for DeleteChannelMembershipOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteChannelMembershipOutput`](crate::output::DeleteChannelMembershipOutput)
+/// See [`DeleteChannelMembershipOutput`](crate::output::DeleteChannelMembershipOutput).
 pub mod delete_channel_membership_output {
 
-    /// A builder for [`DeleteChannelMembershipOutput`](crate::output::DeleteChannelMembershipOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteChannelMembershipOutput`](crate::output::DeleteChannelMembershipOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteChannelMembershipOutput`](crate::output::DeleteChannelMembershipOutput)
+        /// Consumes the builder and constructs a [`DeleteChannelMembershipOutput`](crate::output::DeleteChannelMembershipOutput).
         pub fn build(self) -> crate::output::DeleteChannelMembershipOutput {
             crate::output::DeleteChannelMembershipOutput {}
         }
     }
 }
 impl DeleteChannelMembershipOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteChannelMembershipOutput`](crate::output::DeleteChannelMembershipOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteChannelMembershipOutput`](crate::output::DeleteChannelMembershipOutput).
     pub fn builder() -> crate::output::delete_channel_membership_output::Builder {
         crate::output::delete_channel_membership_output::Builder::default()
     }
@@ -2424,22 +2441,21 @@ impl std::fmt::Debug for DeleteChannelFlowOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteChannelFlowOutput`](crate::output::DeleteChannelFlowOutput)
+/// See [`DeleteChannelFlowOutput`](crate::output::DeleteChannelFlowOutput).
 pub mod delete_channel_flow_output {
 
-    /// A builder for [`DeleteChannelFlowOutput`](crate::output::DeleteChannelFlowOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteChannelFlowOutput`](crate::output::DeleteChannelFlowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteChannelFlowOutput`](crate::output::DeleteChannelFlowOutput)
+        /// Consumes the builder and constructs a [`DeleteChannelFlowOutput`](crate::output::DeleteChannelFlowOutput).
         pub fn build(self) -> crate::output::DeleteChannelFlowOutput {
             crate::output::DeleteChannelFlowOutput {}
         }
     }
 }
 impl DeleteChannelFlowOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteChannelFlowOutput`](crate::output::DeleteChannelFlowOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteChannelFlowOutput`](crate::output::DeleteChannelFlowOutput).
     pub fn builder() -> crate::output::delete_channel_flow_output::Builder {
         crate::output::delete_channel_flow_output::Builder::default()
     }
@@ -2455,22 +2471,21 @@ impl std::fmt::Debug for DeleteChannelBanOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteChannelBanOutput`](crate::output::DeleteChannelBanOutput)
+/// See [`DeleteChannelBanOutput`](crate::output::DeleteChannelBanOutput).
 pub mod delete_channel_ban_output {
 
-    /// A builder for [`DeleteChannelBanOutput`](crate::output::DeleteChannelBanOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteChannelBanOutput`](crate::output::DeleteChannelBanOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteChannelBanOutput`](crate::output::DeleteChannelBanOutput)
+        /// Consumes the builder and constructs a [`DeleteChannelBanOutput`](crate::output::DeleteChannelBanOutput).
         pub fn build(self) -> crate::output::DeleteChannelBanOutput {
             crate::output::DeleteChannelBanOutput {}
         }
     }
 }
 impl DeleteChannelBanOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteChannelBanOutput`](crate::output::DeleteChannelBanOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteChannelBanOutput`](crate::output::DeleteChannelBanOutput).
     pub fn builder() -> crate::output::delete_channel_ban_output::Builder {
         crate::output::delete_channel_ban_output::Builder::default()
     }
@@ -2486,22 +2501,21 @@ impl std::fmt::Debug for DeleteChannelOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteChannelOutput`](crate::output::DeleteChannelOutput)
+/// See [`DeleteChannelOutput`](crate::output::DeleteChannelOutput).
 pub mod delete_channel_output {
 
-    /// A builder for [`DeleteChannelOutput`](crate::output::DeleteChannelOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteChannelOutput`](crate::output::DeleteChannelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteChannelOutput`](crate::output::DeleteChannelOutput)
+        /// Consumes the builder and constructs a [`DeleteChannelOutput`](crate::output::DeleteChannelOutput).
         pub fn build(self) -> crate::output::DeleteChannelOutput {
             crate::output::DeleteChannelOutput {}
         }
     }
 }
 impl DeleteChannelOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteChannelOutput`](crate::output::DeleteChannelOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteChannelOutput`](crate::output::DeleteChannelOutput).
     pub fn builder() -> crate::output::delete_channel_output::Builder {
         crate::output::delete_channel_output::Builder::default()
     }
@@ -2512,8 +2526,10 @@ impl DeleteChannelOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateChannelModeratorOutput {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The ARNs of the channel and the moderator.</p>
+    #[doc(hidden)]
     pub channel_moderator: std::option::Option<crate::model::Identity>,
 }
 impl CreateChannelModeratorOutput {
@@ -2534,11 +2550,10 @@ impl std::fmt::Debug for CreateChannelModeratorOutput {
         formatter.finish()
     }
 }
-/// See [`CreateChannelModeratorOutput`](crate::output::CreateChannelModeratorOutput)
+/// See [`CreateChannelModeratorOutput`](crate::output::CreateChannelModeratorOutput).
 pub mod create_channel_moderator_output {
 
-    /// A builder for [`CreateChannelModeratorOutput`](crate::output::CreateChannelModeratorOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateChannelModeratorOutput`](crate::output::CreateChannelModeratorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -2568,7 +2583,7 @@ pub mod create_channel_moderator_output {
             self.channel_moderator = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateChannelModeratorOutput`](crate::output::CreateChannelModeratorOutput)
+        /// Consumes the builder and constructs a [`CreateChannelModeratorOutput`](crate::output::CreateChannelModeratorOutput).
         pub fn build(self) -> crate::output::CreateChannelModeratorOutput {
             crate::output::CreateChannelModeratorOutput {
                 channel_arn: self.channel_arn,
@@ -2578,7 +2593,7 @@ pub mod create_channel_moderator_output {
     }
 }
 impl CreateChannelModeratorOutput {
-    /// Creates a new builder-style object to manufacture [`CreateChannelModeratorOutput`](crate::output::CreateChannelModeratorOutput)
+    /// Creates a new builder-style object to manufacture [`CreateChannelModeratorOutput`](crate::output::CreateChannelModeratorOutput).
     pub fn builder() -> crate::output::create_channel_moderator_output::Builder {
         crate::output::create_channel_moderator_output::Builder::default()
     }
@@ -2589,8 +2604,10 @@ impl CreateChannelModeratorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateChannelMembershipOutput {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The ARN and metadata of the member being added.</p>
+    #[doc(hidden)]
     pub member: std::option::Option<crate::model::Identity>,
 }
 impl CreateChannelMembershipOutput {
@@ -2611,11 +2628,10 @@ impl std::fmt::Debug for CreateChannelMembershipOutput {
         formatter.finish()
     }
 }
-/// See [`CreateChannelMembershipOutput`](crate::output::CreateChannelMembershipOutput)
+/// See [`CreateChannelMembershipOutput`](crate::output::CreateChannelMembershipOutput).
 pub mod create_channel_membership_output {
 
-    /// A builder for [`CreateChannelMembershipOutput`](crate::output::CreateChannelMembershipOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateChannelMembershipOutput`](crate::output::CreateChannelMembershipOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -2642,7 +2658,7 @@ pub mod create_channel_membership_output {
             self.member = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateChannelMembershipOutput`](crate::output::CreateChannelMembershipOutput)
+        /// Consumes the builder and constructs a [`CreateChannelMembershipOutput`](crate::output::CreateChannelMembershipOutput).
         pub fn build(self) -> crate::output::CreateChannelMembershipOutput {
             crate::output::CreateChannelMembershipOutput {
                 channel_arn: self.channel_arn,
@@ -2652,7 +2668,7 @@ pub mod create_channel_membership_output {
     }
 }
 impl CreateChannelMembershipOutput {
-    /// Creates a new builder-style object to manufacture [`CreateChannelMembershipOutput`](crate::output::CreateChannelMembershipOutput)
+    /// Creates a new builder-style object to manufacture [`CreateChannelMembershipOutput`](crate::output::CreateChannelMembershipOutput).
     pub fn builder() -> crate::output::create_channel_membership_output::Builder {
         crate::output::create_channel_membership_output::Builder::default()
     }
@@ -2663,6 +2679,7 @@ impl CreateChannelMembershipOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateChannelFlowOutput {
     /// <p>The ARN of the channel flow.</p>
+    #[doc(hidden)]
     pub channel_flow_arn: std::option::Option<std::string::String>,
 }
 impl CreateChannelFlowOutput {
@@ -2678,11 +2695,10 @@ impl std::fmt::Debug for CreateChannelFlowOutput {
         formatter.finish()
     }
 }
-/// See [`CreateChannelFlowOutput`](crate::output::CreateChannelFlowOutput)
+/// See [`CreateChannelFlowOutput`](crate::output::CreateChannelFlowOutput).
 pub mod create_channel_flow_output {
 
-    /// A builder for [`CreateChannelFlowOutput`](crate::output::CreateChannelFlowOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateChannelFlowOutput`](crate::output::CreateChannelFlowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_flow_arn: std::option::Option<std::string::String>,
@@ -2701,7 +2717,7 @@ pub mod create_channel_flow_output {
             self.channel_flow_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateChannelFlowOutput`](crate::output::CreateChannelFlowOutput)
+        /// Consumes the builder and constructs a [`CreateChannelFlowOutput`](crate::output::CreateChannelFlowOutput).
         pub fn build(self) -> crate::output::CreateChannelFlowOutput {
             crate::output::CreateChannelFlowOutput {
                 channel_flow_arn: self.channel_flow_arn,
@@ -2710,7 +2726,7 @@ pub mod create_channel_flow_output {
     }
 }
 impl CreateChannelFlowOutput {
-    /// Creates a new builder-style object to manufacture [`CreateChannelFlowOutput`](crate::output::CreateChannelFlowOutput)
+    /// Creates a new builder-style object to manufacture [`CreateChannelFlowOutput`](crate::output::CreateChannelFlowOutput).
     pub fn builder() -> crate::output::create_channel_flow_output::Builder {
         crate::output::create_channel_flow_output::Builder::default()
     }
@@ -2721,8 +2737,10 @@ impl CreateChannelFlowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateChannelBanOutput {
     /// <p>The ARN of the response to the ban request.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The <code>ChannelArn</code> and <code>BannedIdentity</code> of the member in the ban response.</p>
+    #[doc(hidden)]
     pub member: std::option::Option<crate::model::Identity>,
 }
 impl CreateChannelBanOutput {
@@ -2743,11 +2761,10 @@ impl std::fmt::Debug for CreateChannelBanOutput {
         formatter.finish()
     }
 }
-/// See [`CreateChannelBanOutput`](crate::output::CreateChannelBanOutput)
+/// See [`CreateChannelBanOutput`](crate::output::CreateChannelBanOutput).
 pub mod create_channel_ban_output {
 
-    /// A builder for [`CreateChannelBanOutput`](crate::output::CreateChannelBanOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateChannelBanOutput`](crate::output::CreateChannelBanOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -2774,7 +2791,7 @@ pub mod create_channel_ban_output {
             self.member = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateChannelBanOutput`](crate::output::CreateChannelBanOutput)
+        /// Consumes the builder and constructs a [`CreateChannelBanOutput`](crate::output::CreateChannelBanOutput).
         pub fn build(self) -> crate::output::CreateChannelBanOutput {
             crate::output::CreateChannelBanOutput {
                 channel_arn: self.channel_arn,
@@ -2784,7 +2801,7 @@ pub mod create_channel_ban_output {
     }
 }
 impl CreateChannelBanOutput {
-    /// Creates a new builder-style object to manufacture [`CreateChannelBanOutput`](crate::output::CreateChannelBanOutput)
+    /// Creates a new builder-style object to manufacture [`CreateChannelBanOutput`](crate::output::CreateChannelBanOutput).
     pub fn builder() -> crate::output::create_channel_ban_output::Builder {
         crate::output::create_channel_ban_output::Builder::default()
     }
@@ -2795,6 +2812,7 @@ impl CreateChannelBanOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateChannelOutput {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
 }
 impl CreateChannelOutput {
@@ -2810,11 +2828,10 @@ impl std::fmt::Debug for CreateChannelOutput {
         formatter.finish()
     }
 }
-/// See [`CreateChannelOutput`](crate::output::CreateChannelOutput)
+/// See [`CreateChannelOutput`](crate::output::CreateChannelOutput).
 pub mod create_channel_output {
 
-    /// A builder for [`CreateChannelOutput`](crate::output::CreateChannelOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateChannelOutput`](crate::output::CreateChannelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -2830,7 +2847,7 @@ pub mod create_channel_output {
             self.channel_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateChannelOutput`](crate::output::CreateChannelOutput)
+        /// Consumes the builder and constructs a [`CreateChannelOutput`](crate::output::CreateChannelOutput).
         pub fn build(self) -> crate::output::CreateChannelOutput {
             crate::output::CreateChannelOutput {
                 channel_arn: self.channel_arn,
@@ -2839,7 +2856,7 @@ pub mod create_channel_output {
     }
 }
 impl CreateChannelOutput {
-    /// Creates a new builder-style object to manufacture [`CreateChannelOutput`](crate::output::CreateChannelOutput)
+    /// Creates a new builder-style object to manufacture [`CreateChannelOutput`](crate::output::CreateChannelOutput).
     pub fn builder() -> crate::output::create_channel_output::Builder {
         crate::output::create_channel_output::Builder::default()
     }
@@ -2850,8 +2867,10 @@ impl CreateChannelOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChannelFlowCallbackOutput {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The call back ID passed in the request.</p>
+    #[doc(hidden)]
     pub callback_id: std::option::Option<std::string::String>,
 }
 impl ChannelFlowCallbackOutput {
@@ -2872,11 +2891,10 @@ impl std::fmt::Debug for ChannelFlowCallbackOutput {
         formatter.finish()
     }
 }
-/// See [`ChannelFlowCallbackOutput`](crate::output::ChannelFlowCallbackOutput)
+/// See [`ChannelFlowCallbackOutput`](crate::output::ChannelFlowCallbackOutput).
 pub mod channel_flow_callback_output {
 
-    /// A builder for [`ChannelFlowCallbackOutput`](crate::output::ChannelFlowCallbackOutput)
-    #[non_exhaustive]
+    /// A builder for [`ChannelFlowCallbackOutput`](crate::output::ChannelFlowCallbackOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -2903,7 +2921,7 @@ pub mod channel_flow_callback_output {
             self.callback_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChannelFlowCallbackOutput`](crate::output::ChannelFlowCallbackOutput)
+        /// Consumes the builder and constructs a [`ChannelFlowCallbackOutput`](crate::output::ChannelFlowCallbackOutput).
         pub fn build(self) -> crate::output::ChannelFlowCallbackOutput {
             crate::output::ChannelFlowCallbackOutput {
                 channel_arn: self.channel_arn,
@@ -2913,7 +2931,7 @@ pub mod channel_flow_callback_output {
     }
 }
 impl ChannelFlowCallbackOutput {
-    /// Creates a new builder-style object to manufacture [`ChannelFlowCallbackOutput`](crate::output::ChannelFlowCallbackOutput)
+    /// Creates a new builder-style object to manufacture [`ChannelFlowCallbackOutput`](crate::output::ChannelFlowCallbackOutput).
     pub fn builder() -> crate::output::channel_flow_callback_output::Builder {
         crate::output::channel_flow_callback_output::Builder::default()
     }
@@ -2924,8 +2942,10 @@ impl ChannelFlowCallbackOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchCreateChannelMembershipOutput {
     /// <p>The list of channel memberships in the response.</p>
+    #[doc(hidden)]
     pub batch_channel_memberships: std::option::Option<crate::model::BatchChannelMemberships>,
     /// <p>If the action fails for one or more of the memberships in the request, a list of the memberships is returned, along with error codes and error messages.</p>
+    #[doc(hidden)]
     pub errors: std::option::Option<std::vec::Vec<crate::model::BatchCreateChannelMembershipError>>,
 }
 impl BatchCreateChannelMembershipOutput {
@@ -2950,11 +2970,10 @@ impl std::fmt::Debug for BatchCreateChannelMembershipOutput {
         formatter.finish()
     }
 }
-/// See [`BatchCreateChannelMembershipOutput`](crate::output::BatchCreateChannelMembershipOutput)
+/// See [`BatchCreateChannelMembershipOutput`](crate::output::BatchCreateChannelMembershipOutput).
 pub mod batch_create_channel_membership_output {
 
-    /// A builder for [`BatchCreateChannelMembershipOutput`](crate::output::BatchCreateChannelMembershipOutput)
-    #[non_exhaustive]
+    /// A builder for [`BatchCreateChannelMembershipOutput`](crate::output::BatchCreateChannelMembershipOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) batch_channel_memberships:
@@ -3000,7 +3019,7 @@ pub mod batch_create_channel_membership_output {
             self.errors = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchCreateChannelMembershipOutput`](crate::output::BatchCreateChannelMembershipOutput)
+        /// Consumes the builder and constructs a [`BatchCreateChannelMembershipOutput`](crate::output::BatchCreateChannelMembershipOutput).
         pub fn build(self) -> crate::output::BatchCreateChannelMembershipOutput {
             crate::output::BatchCreateChannelMembershipOutput {
                 batch_channel_memberships: self.batch_channel_memberships,
@@ -3010,7 +3029,7 @@ pub mod batch_create_channel_membership_output {
     }
 }
 impl BatchCreateChannelMembershipOutput {
-    /// Creates a new builder-style object to manufacture [`BatchCreateChannelMembershipOutput`](crate::output::BatchCreateChannelMembershipOutput)
+    /// Creates a new builder-style object to manufacture [`BatchCreateChannelMembershipOutput`](crate::output::BatchCreateChannelMembershipOutput).
     pub fn builder() -> crate::output::batch_create_channel_membership_output::Builder {
         crate::output::batch_create_channel_membership_output::Builder::default()
     }
@@ -3026,22 +3045,21 @@ impl std::fmt::Debug for AssociateChannelFlowOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateChannelFlowOutput`](crate::output::AssociateChannelFlowOutput)
+/// See [`AssociateChannelFlowOutput`](crate::output::AssociateChannelFlowOutput).
 pub mod associate_channel_flow_output {
 
-    /// A builder for [`AssociateChannelFlowOutput`](crate::output::AssociateChannelFlowOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateChannelFlowOutput`](crate::output::AssociateChannelFlowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AssociateChannelFlowOutput`](crate::output::AssociateChannelFlowOutput)
+        /// Consumes the builder and constructs a [`AssociateChannelFlowOutput`](crate::output::AssociateChannelFlowOutput).
         pub fn build(self) -> crate::output::AssociateChannelFlowOutput {
             crate::output::AssociateChannelFlowOutput {}
         }
     }
 }
 impl AssociateChannelFlowOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateChannelFlowOutput`](crate::output::AssociateChannelFlowOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateChannelFlowOutput`](crate::output::AssociateChannelFlowOutput).
     pub fn builder() -> crate::output::associate_channel_flow_output::Builder {
         crate::output::associate_channel_flow_output::Builder::default()
     }

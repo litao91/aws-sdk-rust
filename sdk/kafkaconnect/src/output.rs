@@ -4,8 +4,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateConnectorOutput {
     /// <p>The Amazon Resource Name (ARN) of the connector.</p>
+    #[doc(hidden)]
     pub connector_arn: std::option::Option<std::string::String>,
     /// <p>The state of the connector.</p>
+    #[doc(hidden)]
     pub connector_state: std::option::Option<crate::model::ConnectorState>,
 }
 impl UpdateConnectorOutput {
@@ -26,11 +28,10 @@ impl std::fmt::Debug for UpdateConnectorOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateConnectorOutput`](crate::output::UpdateConnectorOutput)
+/// See [`UpdateConnectorOutput`](crate::output::UpdateConnectorOutput).
 pub mod update_connector_output {
 
-    /// A builder for [`UpdateConnectorOutput`](crate::output::UpdateConnectorOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateConnectorOutput`](crate::output::UpdateConnectorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connector_arn: std::option::Option<std::string::String>,
@@ -63,7 +64,7 @@ pub mod update_connector_output {
             self.connector_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateConnectorOutput`](crate::output::UpdateConnectorOutput)
+        /// Consumes the builder and constructs a [`UpdateConnectorOutput`](crate::output::UpdateConnectorOutput).
         pub fn build(self) -> crate::output::UpdateConnectorOutput {
             crate::output::UpdateConnectorOutput {
                 connector_arn: self.connector_arn,
@@ -73,7 +74,7 @@ pub mod update_connector_output {
     }
 }
 impl UpdateConnectorOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateConnectorOutput`](crate::output::UpdateConnectorOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateConnectorOutput`](crate::output::UpdateConnectorOutput).
     pub fn builder() -> crate::output::update_connector_output::Builder {
         crate::output::update_connector_output::Builder::default()
     }
@@ -84,8 +85,10 @@ impl UpdateConnectorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListWorkerConfigurationsOutput {
     /// <p>If the response of a ListWorkerConfigurations operation is truncated, it will include a NextToken. Send this NextToken in a subsequent request to continue listing from where the previous operation left off.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>An array of worker configuration descriptions.</p>
+    #[doc(hidden)]
     pub worker_configurations:
         std::option::Option<std::vec::Vec<crate::model::WorkerConfigurationSummary>>,
 }
@@ -109,11 +112,10 @@ impl std::fmt::Debug for ListWorkerConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListWorkerConfigurationsOutput`](crate::output::ListWorkerConfigurationsOutput)
+/// See [`ListWorkerConfigurationsOutput`](crate::output::ListWorkerConfigurationsOutput).
 pub mod list_worker_configurations_output {
 
-    /// A builder for [`ListWorkerConfigurationsOutput`](crate::output::ListWorkerConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListWorkerConfigurationsOutput`](crate::output::ListWorkerConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -153,7 +155,7 @@ pub mod list_worker_configurations_output {
             self.worker_configurations = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListWorkerConfigurationsOutput`](crate::output::ListWorkerConfigurationsOutput)
+        /// Consumes the builder and constructs a [`ListWorkerConfigurationsOutput`](crate::output::ListWorkerConfigurationsOutput).
         pub fn build(self) -> crate::output::ListWorkerConfigurationsOutput {
             crate::output::ListWorkerConfigurationsOutput {
                 next_token: self.next_token,
@@ -163,7 +165,7 @@ pub mod list_worker_configurations_output {
     }
 }
 impl ListWorkerConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListWorkerConfigurationsOutput`](crate::output::ListWorkerConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListWorkerConfigurationsOutput`](crate::output::ListWorkerConfigurationsOutput).
     pub fn builder() -> crate::output::list_worker_configurations_output::Builder {
         crate::output::list_worker_configurations_output::Builder::default()
     }
@@ -174,8 +176,10 @@ impl ListWorkerConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListCustomPluginsOutput {
     /// <p>An array of custom plugin descriptions.</p>
+    #[doc(hidden)]
     pub custom_plugins: std::option::Option<std::vec::Vec<crate::model::CustomPluginSummary>>,
     /// <p>If the response of a ListCustomPlugins operation is truncated, it will include a NextToken. Send this NextToken in a subsequent request to continue listing from where the previous operation left off.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListCustomPluginsOutput {
@@ -196,11 +200,10 @@ impl std::fmt::Debug for ListCustomPluginsOutput {
         formatter.finish()
     }
 }
-/// See [`ListCustomPluginsOutput`](crate::output::ListCustomPluginsOutput)
+/// See [`ListCustomPluginsOutput`](crate::output::ListCustomPluginsOutput).
 pub mod list_custom_plugins_output {
 
-    /// A builder for [`ListCustomPluginsOutput`](crate::output::ListCustomPluginsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListCustomPluginsOutput`](crate::output::ListCustomPluginsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_plugins:
@@ -237,7 +240,7 @@ pub mod list_custom_plugins_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListCustomPluginsOutput`](crate::output::ListCustomPluginsOutput)
+        /// Consumes the builder and constructs a [`ListCustomPluginsOutput`](crate::output::ListCustomPluginsOutput).
         pub fn build(self) -> crate::output::ListCustomPluginsOutput {
             crate::output::ListCustomPluginsOutput {
                 custom_plugins: self.custom_plugins,
@@ -247,7 +250,7 @@ pub mod list_custom_plugins_output {
     }
 }
 impl ListCustomPluginsOutput {
-    /// Creates a new builder-style object to manufacture [`ListCustomPluginsOutput`](crate::output::ListCustomPluginsOutput)
+    /// Creates a new builder-style object to manufacture [`ListCustomPluginsOutput`](crate::output::ListCustomPluginsOutput).
     pub fn builder() -> crate::output::list_custom_plugins_output::Builder {
         crate::output::list_custom_plugins_output::Builder::default()
     }
@@ -258,8 +261,10 @@ impl ListCustomPluginsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListConnectorsOutput {
     /// <p>An array of connector descriptions.</p>
+    #[doc(hidden)]
     pub connectors: std::option::Option<std::vec::Vec<crate::model::ConnectorSummary>>,
     /// <p>If the response of a ListConnectors operation is truncated, it will include a NextToken. Send this NextToken in a subsequent request to continue listing from where it left off.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListConnectorsOutput {
@@ -280,11 +285,10 @@ impl std::fmt::Debug for ListConnectorsOutput {
         formatter.finish()
     }
 }
-/// See [`ListConnectorsOutput`](crate::output::ListConnectorsOutput)
+/// See [`ListConnectorsOutput`](crate::output::ListConnectorsOutput).
 pub mod list_connectors_output {
 
-    /// A builder for [`ListConnectorsOutput`](crate::output::ListConnectorsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListConnectorsOutput`](crate::output::ListConnectorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connectors: std::option::Option<std::vec::Vec<crate::model::ConnectorSummary>>,
@@ -320,7 +324,7 @@ pub mod list_connectors_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListConnectorsOutput`](crate::output::ListConnectorsOutput)
+        /// Consumes the builder and constructs a [`ListConnectorsOutput`](crate::output::ListConnectorsOutput).
         pub fn build(self) -> crate::output::ListConnectorsOutput {
             crate::output::ListConnectorsOutput {
                 connectors: self.connectors,
@@ -330,7 +334,7 @@ pub mod list_connectors_output {
     }
 }
 impl ListConnectorsOutput {
-    /// Creates a new builder-style object to manufacture [`ListConnectorsOutput`](crate::output::ListConnectorsOutput)
+    /// Creates a new builder-style object to manufacture [`ListConnectorsOutput`](crate::output::ListConnectorsOutput).
     pub fn builder() -> crate::output::list_connectors_output::Builder {
         crate::output::list_connectors_output::Builder::default()
     }
@@ -341,14 +345,19 @@ impl ListConnectorsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeWorkerConfigurationOutput {
     /// <p>The time that the worker configuration was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the worker configuration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The latest revision of the custom configuration.</p>
+    #[doc(hidden)]
     pub latest_revision: std::option::Option<crate::model::WorkerConfigurationRevisionDescription>,
     /// <p>The name of the worker configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the custom configuration.</p>
+    #[doc(hidden)]
     pub worker_configuration_arn: std::option::Option<std::string::String>,
 }
 impl DescribeWorkerConfigurationOutput {
@@ -386,11 +395,10 @@ impl std::fmt::Debug for DescribeWorkerConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeWorkerConfigurationOutput`](crate::output::DescribeWorkerConfigurationOutput)
+/// See [`DescribeWorkerConfigurationOutput`](crate::output::DescribeWorkerConfigurationOutput).
 pub mod describe_worker_configuration_output {
 
-    /// A builder for [`DescribeWorkerConfigurationOutput`](crate::output::DescribeWorkerConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeWorkerConfigurationOutput`](crate::output::DescribeWorkerConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -463,7 +471,7 @@ pub mod describe_worker_configuration_output {
             self.worker_configuration_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeWorkerConfigurationOutput`](crate::output::DescribeWorkerConfigurationOutput)
+        /// Consumes the builder and constructs a [`DescribeWorkerConfigurationOutput`](crate::output::DescribeWorkerConfigurationOutput).
         pub fn build(self) -> crate::output::DescribeWorkerConfigurationOutput {
             crate::output::DescribeWorkerConfigurationOutput {
                 creation_time: self.creation_time,
@@ -476,7 +484,7 @@ pub mod describe_worker_configuration_output {
     }
 }
 impl DescribeWorkerConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeWorkerConfigurationOutput`](crate::output::DescribeWorkerConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeWorkerConfigurationOutput`](crate::output::DescribeWorkerConfigurationOutput).
     pub fn builder() -> crate::output::describe_worker_configuration_output::Builder {
         crate::output::describe_worker_configuration_output::Builder::default()
     }
@@ -487,18 +495,25 @@ impl DescribeWorkerConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeCustomPluginOutput {
     /// <p>The time that the custom plugin was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) of the custom plugin.</p>
+    #[doc(hidden)]
     pub custom_plugin_arn: std::option::Option<std::string::String>,
     /// <p>The state of the custom plugin.</p>
+    #[doc(hidden)]
     pub custom_plugin_state: std::option::Option<crate::model::CustomPluginState>,
     /// <p>The description of the custom plugin.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The latest successfully created revision of the custom plugin. If there are no successfully created revisions, this field will be absent.</p>
+    #[doc(hidden)]
     pub latest_revision: std::option::Option<crate::model::CustomPluginRevisionSummary>,
     /// <p>The name of the custom plugin.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Details about the state of a custom plugin.</p>
+    #[doc(hidden)]
     pub state_description: std::option::Option<crate::model::StateDescription>,
 }
 impl DescribeCustomPluginOutput {
@@ -546,11 +561,10 @@ impl std::fmt::Debug for DescribeCustomPluginOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeCustomPluginOutput`](crate::output::DescribeCustomPluginOutput)
+/// See [`DescribeCustomPluginOutput`](crate::output::DescribeCustomPluginOutput).
 pub mod describe_custom_plugin_output {
 
-    /// A builder for [`DescribeCustomPluginOutput`](crate::output::DescribeCustomPluginOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeCustomPluginOutput`](crate::output::DescribeCustomPluginOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -647,7 +661,7 @@ pub mod describe_custom_plugin_output {
             self.state_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeCustomPluginOutput`](crate::output::DescribeCustomPluginOutput)
+        /// Consumes the builder and constructs a [`DescribeCustomPluginOutput`](crate::output::DescribeCustomPluginOutput).
         pub fn build(self) -> crate::output::DescribeCustomPluginOutput {
             crate::output::DescribeCustomPluginOutput {
                 creation_time: self.creation_time,
@@ -662,7 +676,7 @@ pub mod describe_custom_plugin_output {
     }
 }
 impl DescribeCustomPluginOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeCustomPluginOutput`](crate::output::DescribeCustomPluginOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeCustomPluginOutput`](crate::output::DescribeCustomPluginOutput).
     pub fn builder() -> crate::output::describe_custom_plugin_output::Builder {
         crate::output::describe_custom_plugin_output::Builder::default()
     }
@@ -673,41 +687,58 @@ impl DescribeCustomPluginOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeConnectorOutput {
     /// <p>Information about the capacity of the connector, whether it is auto scaled or provisioned.</p>
+    #[doc(hidden)]
     pub capacity: std::option::Option<crate::model::CapacityDescription>,
     /// <p>The Amazon Resource Name (ARN) of the connector.</p>
+    #[doc(hidden)]
     pub connector_arn: std::option::Option<std::string::String>,
     /// <p>A map of keys to values that represent the configuration for the connector.</p>
+    #[doc(hidden)]
     pub connector_configuration:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A summary description of the connector.</p>
+    #[doc(hidden)]
     pub connector_description: std::option::Option<std::string::String>,
     /// <p>The name of the connector.</p>
+    #[doc(hidden)]
     pub connector_name: std::option::Option<std::string::String>,
     /// <p>The state of the connector.</p>
+    #[doc(hidden)]
     pub connector_state: std::option::Option<crate::model::ConnectorState>,
     /// <p>The time the connector was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current version of the connector.</p>
+    #[doc(hidden)]
     pub current_version: std::option::Option<std::string::String>,
     /// <p>The Apache Kafka cluster that the connector is connected to.</p>
+    #[doc(hidden)]
     pub kafka_cluster: std::option::Option<crate::model::KafkaClusterDescription>,
     /// <p>The type of client authentication used to connect to the Apache Kafka cluster. The value is NONE when no client authentication is used.</p>
+    #[doc(hidden)]
     pub kafka_cluster_client_authentication:
         std::option::Option<crate::model::KafkaClusterClientAuthenticationDescription>,
     /// <p>Details of encryption in transit to the Apache Kafka cluster.</p>
+    #[doc(hidden)]
     pub kafka_cluster_encryption_in_transit:
         std::option::Option<crate::model::KafkaClusterEncryptionInTransitDescription>,
     /// <p>The version of Kafka Connect. It has to be compatible with both the Apache Kafka cluster's version and the plugins.</p>
+    #[doc(hidden)]
     pub kafka_connect_version: std::option::Option<std::string::String>,
     /// <p>Details about delivering logs to Amazon CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub log_delivery: std::option::Option<crate::model::LogDeliveryDescription>,
     /// <p>Specifies which plugins were used for this connector.</p>
+    #[doc(hidden)]
     pub plugins: std::option::Option<std::vec::Vec<crate::model::PluginDescription>>,
     /// <p>The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon Web Services resources.</p>
+    #[doc(hidden)]
     pub service_execution_role_arn: std::option::Option<std::string::String>,
     /// <p>Specifies which worker configuration was used for the connector.</p>
+    #[doc(hidden)]
     pub worker_configuration: std::option::Option<crate::model::WorkerConfigurationDescription>,
     /// <p>Details about the state of a connector.</p>
+    #[doc(hidden)]
     pub state_description: std::option::Option<crate::model::StateDescription>,
 }
 impl DescribeConnectorOutput {
@@ -824,11 +855,10 @@ impl std::fmt::Debug for DescribeConnectorOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeConnectorOutput`](crate::output::DescribeConnectorOutput)
+/// See [`DescribeConnectorOutput`](crate::output::DescribeConnectorOutput).
 pub mod describe_connector_output {
 
-    /// A builder for [`DescribeConnectorOutput`](crate::output::DescribeConnectorOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeConnectorOutput`](crate::output::DescribeConnectorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) capacity: std::option::Option<crate::model::CapacityDescription>,
@@ -1103,7 +1133,7 @@ pub mod describe_connector_output {
             self.state_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeConnectorOutput`](crate::output::DescribeConnectorOutput)
+        /// Consumes the builder and constructs a [`DescribeConnectorOutput`](crate::output::DescribeConnectorOutput).
         pub fn build(self) -> crate::output::DescribeConnectorOutput {
             crate::output::DescribeConnectorOutput {
                 capacity: self.capacity,
@@ -1128,7 +1158,7 @@ pub mod describe_connector_output {
     }
 }
 impl DescribeConnectorOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeConnectorOutput`](crate::output::DescribeConnectorOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeConnectorOutput`](crate::output::DescribeConnectorOutput).
     pub fn builder() -> crate::output::describe_connector_output::Builder {
         crate::output::describe_connector_output::Builder::default()
     }
@@ -1139,8 +1169,10 @@ impl DescribeConnectorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteCustomPluginOutput {
     /// <p>The Amazon Resource Name (ARN) of the custom plugin that you requested to delete.</p>
+    #[doc(hidden)]
     pub custom_plugin_arn: std::option::Option<std::string::String>,
     /// <p>The state of the custom plugin.</p>
+    #[doc(hidden)]
     pub custom_plugin_state: std::option::Option<crate::model::CustomPluginState>,
 }
 impl DeleteCustomPluginOutput {
@@ -1161,11 +1193,10 @@ impl std::fmt::Debug for DeleteCustomPluginOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteCustomPluginOutput`](crate::output::DeleteCustomPluginOutput)
+/// See [`DeleteCustomPluginOutput`](crate::output::DeleteCustomPluginOutput).
 pub mod delete_custom_plugin_output {
 
-    /// A builder for [`DeleteCustomPluginOutput`](crate::output::DeleteCustomPluginOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteCustomPluginOutput`](crate::output::DeleteCustomPluginOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_plugin_arn: std::option::Option<std::string::String>,
@@ -1198,7 +1229,7 @@ pub mod delete_custom_plugin_output {
             self.custom_plugin_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteCustomPluginOutput`](crate::output::DeleteCustomPluginOutput)
+        /// Consumes the builder and constructs a [`DeleteCustomPluginOutput`](crate::output::DeleteCustomPluginOutput).
         pub fn build(self) -> crate::output::DeleteCustomPluginOutput {
             crate::output::DeleteCustomPluginOutput {
                 custom_plugin_arn: self.custom_plugin_arn,
@@ -1208,7 +1239,7 @@ pub mod delete_custom_plugin_output {
     }
 }
 impl DeleteCustomPluginOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteCustomPluginOutput`](crate::output::DeleteCustomPluginOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteCustomPluginOutput`](crate::output::DeleteCustomPluginOutput).
     pub fn builder() -> crate::output::delete_custom_plugin_output::Builder {
         crate::output::delete_custom_plugin_output::Builder::default()
     }
@@ -1219,8 +1250,10 @@ impl DeleteCustomPluginOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteConnectorOutput {
     /// <p>The Amazon Resource Name (ARN) of the connector that you requested to delete.</p>
+    #[doc(hidden)]
     pub connector_arn: std::option::Option<std::string::String>,
     /// <p>The state of the connector that you requested to delete.</p>
+    #[doc(hidden)]
     pub connector_state: std::option::Option<crate::model::ConnectorState>,
 }
 impl DeleteConnectorOutput {
@@ -1241,11 +1274,10 @@ impl std::fmt::Debug for DeleteConnectorOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteConnectorOutput`](crate::output::DeleteConnectorOutput)
+/// See [`DeleteConnectorOutput`](crate::output::DeleteConnectorOutput).
 pub mod delete_connector_output {
 
-    /// A builder for [`DeleteConnectorOutput`](crate::output::DeleteConnectorOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteConnectorOutput`](crate::output::DeleteConnectorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connector_arn: std::option::Option<std::string::String>,
@@ -1278,7 +1310,7 @@ pub mod delete_connector_output {
             self.connector_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteConnectorOutput`](crate::output::DeleteConnectorOutput)
+        /// Consumes the builder and constructs a [`DeleteConnectorOutput`](crate::output::DeleteConnectorOutput).
         pub fn build(self) -> crate::output::DeleteConnectorOutput {
             crate::output::DeleteConnectorOutput {
                 connector_arn: self.connector_arn,
@@ -1288,7 +1320,7 @@ pub mod delete_connector_output {
     }
 }
 impl DeleteConnectorOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteConnectorOutput`](crate::output::DeleteConnectorOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteConnectorOutput`](crate::output::DeleteConnectorOutput).
     pub fn builder() -> crate::output::delete_connector_output::Builder {
         crate::output::delete_connector_output::Builder::default()
     }
@@ -1299,12 +1331,16 @@ impl DeleteConnectorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateWorkerConfigurationOutput {
     /// <p>The time that the worker configuration was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The latest revision of the worker configuration.</p>
+    #[doc(hidden)]
     pub latest_revision: std::option::Option<crate::model::WorkerConfigurationRevisionSummary>,
     /// <p>The name of the worker configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) that Amazon assigned to the worker configuration.</p>
+    #[doc(hidden)]
     pub worker_configuration_arn: std::option::Option<std::string::String>,
 }
 impl CreateWorkerConfigurationOutput {
@@ -1337,11 +1373,10 @@ impl std::fmt::Debug for CreateWorkerConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateWorkerConfigurationOutput`](crate::output::CreateWorkerConfigurationOutput)
+/// See [`CreateWorkerConfigurationOutput`](crate::output::CreateWorkerConfigurationOutput).
 pub mod create_worker_configuration_output {
 
-    /// A builder for [`CreateWorkerConfigurationOutput`](crate::output::CreateWorkerConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateWorkerConfigurationOutput`](crate::output::CreateWorkerConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -1403,7 +1438,7 @@ pub mod create_worker_configuration_output {
             self.worker_configuration_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateWorkerConfigurationOutput`](crate::output::CreateWorkerConfigurationOutput)
+        /// Consumes the builder and constructs a [`CreateWorkerConfigurationOutput`](crate::output::CreateWorkerConfigurationOutput).
         pub fn build(self) -> crate::output::CreateWorkerConfigurationOutput {
             crate::output::CreateWorkerConfigurationOutput {
                 creation_time: self.creation_time,
@@ -1415,7 +1450,7 @@ pub mod create_worker_configuration_output {
     }
 }
 impl CreateWorkerConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateWorkerConfigurationOutput`](crate::output::CreateWorkerConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateWorkerConfigurationOutput`](crate::output::CreateWorkerConfigurationOutput).
     pub fn builder() -> crate::output::create_worker_configuration_output::Builder {
         crate::output::create_worker_configuration_output::Builder::default()
     }
@@ -1426,12 +1461,16 @@ impl CreateWorkerConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateCustomPluginOutput {
     /// <p>The Amazon Resource Name (ARN) that Amazon assigned to the custom plugin.</p>
+    #[doc(hidden)]
     pub custom_plugin_arn: std::option::Option<std::string::String>,
     /// <p>The state of the custom plugin.</p>
+    #[doc(hidden)]
     pub custom_plugin_state: std::option::Option<crate::model::CustomPluginState>,
     /// <p>The name of the custom plugin.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The revision of the custom plugin.</p>
+    #[doc(hidden)]
     pub revision: i64,
 }
 impl CreateCustomPluginOutput {
@@ -1462,11 +1501,10 @@ impl std::fmt::Debug for CreateCustomPluginOutput {
         formatter.finish()
     }
 }
-/// See [`CreateCustomPluginOutput`](crate::output::CreateCustomPluginOutput)
+/// See [`CreateCustomPluginOutput`](crate::output::CreateCustomPluginOutput).
 pub mod create_custom_plugin_output {
 
-    /// A builder for [`CreateCustomPluginOutput`](crate::output::CreateCustomPluginOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateCustomPluginOutput`](crate::output::CreateCustomPluginOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_plugin_arn: std::option::Option<std::string::String>,
@@ -1521,7 +1559,7 @@ pub mod create_custom_plugin_output {
             self.revision = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateCustomPluginOutput`](crate::output::CreateCustomPluginOutput)
+        /// Consumes the builder and constructs a [`CreateCustomPluginOutput`](crate::output::CreateCustomPluginOutput).
         pub fn build(self) -> crate::output::CreateCustomPluginOutput {
             crate::output::CreateCustomPluginOutput {
                 custom_plugin_arn: self.custom_plugin_arn,
@@ -1533,7 +1571,7 @@ pub mod create_custom_plugin_output {
     }
 }
 impl CreateCustomPluginOutput {
-    /// Creates a new builder-style object to manufacture [`CreateCustomPluginOutput`](crate::output::CreateCustomPluginOutput)
+    /// Creates a new builder-style object to manufacture [`CreateCustomPluginOutput`](crate::output::CreateCustomPluginOutput).
     pub fn builder() -> crate::output::create_custom_plugin_output::Builder {
         crate::output::create_custom_plugin_output::Builder::default()
     }
@@ -1544,10 +1582,13 @@ impl CreateCustomPluginOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateConnectorOutput {
     /// <p>The Amazon Resource Name (ARN) that Amazon assigned to the connector.</p>
+    #[doc(hidden)]
     pub connector_arn: std::option::Option<std::string::String>,
     /// <p>The name of the connector.</p>
+    #[doc(hidden)]
     pub connector_name: std::option::Option<std::string::String>,
     /// <p>The state of the connector.</p>
+    #[doc(hidden)]
     pub connector_state: std::option::Option<crate::model::ConnectorState>,
 }
 impl CreateConnectorOutput {
@@ -1573,11 +1614,10 @@ impl std::fmt::Debug for CreateConnectorOutput {
         formatter.finish()
     }
 }
-/// See [`CreateConnectorOutput`](crate::output::CreateConnectorOutput)
+/// See [`CreateConnectorOutput`](crate::output::CreateConnectorOutput).
 pub mod create_connector_output {
 
-    /// A builder for [`CreateConnectorOutput`](crate::output::CreateConnectorOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateConnectorOutput`](crate::output::CreateConnectorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connector_arn: std::option::Option<std::string::String>,
@@ -1624,7 +1664,7 @@ pub mod create_connector_output {
             self.connector_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateConnectorOutput`](crate::output::CreateConnectorOutput)
+        /// Consumes the builder and constructs a [`CreateConnectorOutput`](crate::output::CreateConnectorOutput).
         pub fn build(self) -> crate::output::CreateConnectorOutput {
             crate::output::CreateConnectorOutput {
                 connector_arn: self.connector_arn,
@@ -1635,7 +1675,7 @@ pub mod create_connector_output {
     }
 }
 impl CreateConnectorOutput {
-    /// Creates a new builder-style object to manufacture [`CreateConnectorOutput`](crate::output::CreateConnectorOutput)
+    /// Creates a new builder-style object to manufacture [`CreateConnectorOutput`](crate::output::CreateConnectorOutput).
     pub fn builder() -> crate::output::create_connector_output::Builder {
         crate::output::create_connector_output::Builder::default()
     }

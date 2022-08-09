@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationExceptionField {
     /// <p>The name of the validation exception.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A message about the validation exception.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ValidationExceptionField {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ValidationExceptionField {
         formatter.finish()
     }
 }
-/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField).
 pub mod validation_exception_field {
 
-    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField)
-    #[non_exhaustive]
+    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod validation_exception_field {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField).
         pub fn build(self) -> crate::model::ValidationExceptionField {
             crate::model::ValidationExceptionField {
                 name: self.name,
@@ -68,7 +69,7 @@ pub mod validation_exception_field {
     }
 }
 impl ValidationExceptionField {
-    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     pub fn builder() -> crate::model::validation_exception_field::Builder {
         crate::model::validation_exception_field::Builder::default()
     }
@@ -147,23 +148,32 @@ impl AsRef<str> for ValidationExceptionReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnalyzerSummary {
     /// <p>The ARN of the analyzer.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the analyzer.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of analyzer, which corresponds to the zone of trust chosen for the analyzer.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
     /// <p>A timestamp for the time at which the analyzer was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The resource that was most recently analyzed by the analyzer.</p>
+    #[doc(hidden)]
     pub last_resource_analyzed: std::option::Option<std::string::String>,
     /// <p>The time at which the most recently analyzed resource was analyzed.</p>
+    #[doc(hidden)]
     pub last_resource_analyzed_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The tags added to the analyzer.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The status of the analyzer. An <code>Active</code> analyzer successfully monitors supported resources and generates new findings. The analyzer is <code>Disabled</code> when a user action, such as removing trusted access for Identity and Access Management Access Analyzer from Organizations, causes the analyzer to stop generating new findings. The status is <code>Creating</code> when the analyzer creation is in progress and <code>Failed</code> when the analyzer creation has failed. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AnalyzerStatus>,
     /// <p>The <code>statusReason</code> provides more details about the current status of the analyzer. For example, if the creation for the analyzer fails, a <code>Failed</code> status is returned. For an analyzer with organization as the type, this failure can be due to an issue with creating the service-linked roles required in the member accounts of the Amazon Web Services organization.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<crate::model::StatusReason>,
 }
 impl AnalyzerSummary {
@@ -222,11 +232,10 @@ impl std::fmt::Debug for AnalyzerSummary {
         formatter.finish()
     }
 }
-/// See [`AnalyzerSummary`](crate::model::AnalyzerSummary)
+/// See [`AnalyzerSummary`](crate::model::AnalyzerSummary).
 pub mod analyzer_summary {
 
-    /// A builder for [`AnalyzerSummary`](crate::model::AnalyzerSummary)
-    #[non_exhaustive]
+    /// A builder for [`AnalyzerSummary`](crate::model::AnalyzerSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -362,7 +371,7 @@ pub mod analyzer_summary {
             self.status_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnalyzerSummary`](crate::model::AnalyzerSummary)
+        /// Consumes the builder and constructs a [`AnalyzerSummary`](crate::model::AnalyzerSummary).
         pub fn build(self) -> crate::model::AnalyzerSummary {
             crate::model::AnalyzerSummary {
                 arn: self.arn,
@@ -379,7 +388,7 @@ pub mod analyzer_summary {
     }
 }
 impl AnalyzerSummary {
-    /// Creates a new builder-style object to manufacture [`AnalyzerSummary`](crate::model::AnalyzerSummary)
+    /// Creates a new builder-style object to manufacture [`AnalyzerSummary`](crate::model::AnalyzerSummary).
     pub fn builder() -> crate::model::analyzer_summary::Builder {
         crate::model::analyzer_summary::Builder::default()
     }
@@ -390,6 +399,7 @@ impl AnalyzerSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatusReason {
     /// <p>The reason code for the current status of the analyzer.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::ReasonCode>,
 }
 impl StatusReason {
@@ -405,11 +415,10 @@ impl std::fmt::Debug for StatusReason {
         formatter.finish()
     }
 }
-/// See [`StatusReason`](crate::model::StatusReason)
+/// See [`StatusReason`](crate::model::StatusReason).
 pub mod status_reason {
 
-    /// A builder for [`StatusReason`](crate::model::StatusReason)
-    #[non_exhaustive]
+    /// A builder for [`StatusReason`](crate::model::StatusReason).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ReasonCode>,
@@ -425,14 +434,14 @@ pub mod status_reason {
             self.code = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatusReason`](crate::model::StatusReason)
+        /// Consumes the builder and constructs a [`StatusReason`](crate::model::StatusReason).
         pub fn build(self) -> crate::model::StatusReason {
             crate::model::StatusReason { code: self.code }
         }
     }
 }
 impl StatusReason {
-    /// Creates a new builder-style object to manufacture [`StatusReason`](crate::model::StatusReason)
+    /// Creates a new builder-style object to manufacture [`StatusReason`](crate::model::StatusReason).
     pub fn builder() -> crate::model::status_reason::Builder {
         crate::model::status_reason::Builder::default()
     }
@@ -633,8 +642,10 @@ impl AsRef<str> for Type {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InlineArchiveRule {
     /// <p>The name of the rule.</p>
+    #[doc(hidden)]
     pub rule_name: std::option::Option<std::string::String>,
     /// <p>The condition and values for a criterion.</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::Criterion>,
     >,
@@ -660,11 +671,10 @@ impl std::fmt::Debug for InlineArchiveRule {
         formatter.finish()
     }
 }
-/// See [`InlineArchiveRule`](crate::model::InlineArchiveRule)
+/// See [`InlineArchiveRule`](crate::model::InlineArchiveRule).
 pub mod inline_archive_rule {
 
-    /// A builder for [`InlineArchiveRule`](crate::model::InlineArchiveRule)
-    #[non_exhaustive]
+    /// A builder for [`InlineArchiveRule`](crate::model::InlineArchiveRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_name: std::option::Option<std::string::String>,
@@ -708,7 +718,7 @@ pub mod inline_archive_rule {
             self.filter = input;
             self
         }
-        /// Consumes the builder and constructs a [`InlineArchiveRule`](crate::model::InlineArchiveRule)
+        /// Consumes the builder and constructs a [`InlineArchiveRule`](crate::model::InlineArchiveRule).
         pub fn build(self) -> crate::model::InlineArchiveRule {
             crate::model::InlineArchiveRule {
                 rule_name: self.rule_name,
@@ -718,7 +728,7 @@ pub mod inline_archive_rule {
     }
 }
 impl InlineArchiveRule {
-    /// Creates a new builder-style object to manufacture [`InlineArchiveRule`](crate::model::InlineArchiveRule)
+    /// Creates a new builder-style object to manufacture [`InlineArchiveRule`](crate::model::InlineArchiveRule).
     pub fn builder() -> crate::model::inline_archive_rule::Builder {
         crate::model::inline_archive_rule::Builder::default()
     }
@@ -729,12 +739,16 @@ impl InlineArchiveRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Criterion {
     /// <p>An "equals" operator to match for the filter used to create the rule.</p>
+    #[doc(hidden)]
     pub eq: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A "not equals" operator to match for the filter used to create the rule.</p>
+    #[doc(hidden)]
     pub neq: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A "contains" operator to match for the filter used to create the rule.</p>
+    #[doc(hidden)]
     pub contains: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An "exists" operator to match for the filter used to create the rule. </p>
+    #[doc(hidden)]
     pub exists: std::option::Option<bool>,
 }
 impl Criterion {
@@ -765,11 +779,10 @@ impl std::fmt::Debug for Criterion {
         formatter.finish()
     }
 }
-/// See [`Criterion`](crate::model::Criterion)
+/// See [`Criterion`](crate::model::Criterion).
 pub mod criterion {
 
-    /// A builder for [`Criterion`](crate::model::Criterion)
-    #[non_exhaustive]
+    /// A builder for [`Criterion`](crate::model::Criterion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) eq: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -845,7 +858,7 @@ pub mod criterion {
             self.exists = input;
             self
         }
-        /// Consumes the builder and constructs a [`Criterion`](crate::model::Criterion)
+        /// Consumes the builder and constructs a [`Criterion`](crate::model::Criterion).
         pub fn build(self) -> crate::model::Criterion {
             crate::model::Criterion {
                 eq: self.eq,
@@ -857,7 +870,7 @@ pub mod criterion {
     }
 }
 impl Criterion {
-    /// Creates a new builder-style object to manufacture [`Criterion`](crate::model::Criterion)
+    /// Creates a new builder-style object to manufacture [`Criterion`](crate::model::Criterion).
     pub fn builder() -> crate::model::criterion::Builder {
         crate::model::criterion::Builder::default()
     }
@@ -868,14 +881,18 @@ impl Criterion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ArchiveRuleSummary {
     /// <p>The name of the archive rule.</p>
+    #[doc(hidden)]
     pub rule_name: std::option::Option<std::string::String>,
     /// <p>A filter used to define the archive rule.</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::Criterion>,
     >,
     /// <p>The time at which the archive rule was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the archive rule was last updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ArchiveRuleSummary {
@@ -909,11 +926,10 @@ impl std::fmt::Debug for ArchiveRuleSummary {
         formatter.finish()
     }
 }
-/// See [`ArchiveRuleSummary`](crate::model::ArchiveRuleSummary)
+/// See [`ArchiveRuleSummary`](crate::model::ArchiveRuleSummary).
 pub mod archive_rule_summary {
 
-    /// A builder for [`ArchiveRuleSummary`](crate::model::ArchiveRuleSummary)
-    #[non_exhaustive]
+    /// A builder for [`ArchiveRuleSummary`](crate::model::ArchiveRuleSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_name: std::option::Option<std::string::String>,
@@ -985,7 +1001,7 @@ pub mod archive_rule_summary {
             self.updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`ArchiveRuleSummary`](crate::model::ArchiveRuleSummary)
+        /// Consumes the builder and constructs a [`ArchiveRuleSummary`](crate::model::ArchiveRuleSummary).
         pub fn build(self) -> crate::model::ArchiveRuleSummary {
             crate::model::ArchiveRuleSummary {
                 rule_name: self.rule_name,
@@ -997,7 +1013,7 @@ pub mod archive_rule_summary {
     }
 }
 impl ArchiveRuleSummary {
-    /// Creates a new builder-style object to manufacture [`ArchiveRuleSummary`](crate::model::ArchiveRuleSummary)
+    /// Creates a new builder-style object to manufacture [`ArchiveRuleSummary`](crate::model::ArchiveRuleSummary).
     pub fn builder() -> crate::model::archive_rule_summary::Builder {
         crate::model::archive_rule_summary::Builder::default()
     }
@@ -1008,18 +1024,23 @@ impl ArchiveRuleSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidatePolicyFinding {
     /// <p>A localized message that explains the finding and provides guidance on how to address it.</p>
+    #[doc(hidden)]
     pub finding_details: std::option::Option<std::string::String>,
     /// <p>The impact of the finding.</p>
     /// <p>Security warnings report when the policy allows access that we consider overly permissive.</p>
     /// <p>Errors report when a part of the policy is not functional.</p>
     /// <p>Warnings report non-security issues when a policy does not conform to policy writing best practices.</p>
     /// <p>Suggestions recommend stylistic improvements in the policy that do not impact access.</p>
+    #[doc(hidden)]
     pub finding_type: std::option::Option<crate::model::ValidatePolicyFindingType>,
     /// <p>The issue code provides an identifier of the issue associated with this finding.</p>
+    #[doc(hidden)]
     pub issue_code: std::option::Option<std::string::String>,
     /// <p>A link to additional documentation about the type of finding.</p>
+    #[doc(hidden)]
     pub learn_more_link: std::option::Option<std::string::String>,
     /// <p>The list of locations in the policy document that are related to the finding. The issue code provides a summary of an issue identified by the finding.</p>
+    #[doc(hidden)]
     pub locations: std::option::Option<std::vec::Vec<crate::model::Location>>,
 }
 impl ValidatePolicyFinding {
@@ -1059,11 +1080,10 @@ impl std::fmt::Debug for ValidatePolicyFinding {
         formatter.finish()
     }
 }
-/// See [`ValidatePolicyFinding`](crate::model::ValidatePolicyFinding)
+/// See [`ValidatePolicyFinding`](crate::model::ValidatePolicyFinding).
 pub mod validate_policy_finding {
 
-    /// A builder for [`ValidatePolicyFinding`](crate::model::ValidatePolicyFinding)
-    #[non_exhaustive]
+    /// A builder for [`ValidatePolicyFinding`](crate::model::ValidatePolicyFinding).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) finding_details: std::option::Option<std::string::String>,
@@ -1149,7 +1169,7 @@ pub mod validate_policy_finding {
             self.locations = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidatePolicyFinding`](crate::model::ValidatePolicyFinding)
+        /// Consumes the builder and constructs a [`ValidatePolicyFinding`](crate::model::ValidatePolicyFinding).
         pub fn build(self) -> crate::model::ValidatePolicyFinding {
             crate::model::ValidatePolicyFinding {
                 finding_details: self.finding_details,
@@ -1162,7 +1182,7 @@ pub mod validate_policy_finding {
     }
 }
 impl ValidatePolicyFinding {
-    /// Creates a new builder-style object to manufacture [`ValidatePolicyFinding`](crate::model::ValidatePolicyFinding)
+    /// Creates a new builder-style object to manufacture [`ValidatePolicyFinding`](crate::model::ValidatePolicyFinding).
     pub fn builder() -> crate::model::validate_policy_finding::Builder {
         crate::model::validate_policy_finding::Builder::default()
     }
@@ -1173,8 +1193,10 @@ impl ValidatePolicyFinding {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Location {
     /// <p>A path in a policy, represented as a sequence of path elements.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::vec::Vec<crate::model::PathElement>>,
     /// <p>A span in a policy.</p>
+    #[doc(hidden)]
     pub span: std::option::Option<crate::model::Span>,
 }
 impl Location {
@@ -1195,11 +1217,10 @@ impl std::fmt::Debug for Location {
         formatter.finish()
     }
 }
-/// See [`Location`](crate::model::Location)
+/// See [`Location`](crate::model::Location).
 pub mod location {
 
-    /// A builder for [`Location`](crate::model::Location)
-    #[non_exhaustive]
+    /// A builder for [`Location`](crate::model::Location).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::vec::Vec<crate::model::PathElement>>,
@@ -1235,7 +1256,7 @@ pub mod location {
             self.span = input;
             self
         }
-        /// Consumes the builder and constructs a [`Location`](crate::model::Location)
+        /// Consumes the builder and constructs a [`Location`](crate::model::Location).
         pub fn build(self) -> crate::model::Location {
             crate::model::Location {
                 path: self.path,
@@ -1245,7 +1266,7 @@ pub mod location {
     }
 }
 impl Location {
-    /// Creates a new builder-style object to manufacture [`Location`](crate::model::Location)
+    /// Creates a new builder-style object to manufacture [`Location`](crate::model::Location).
     pub fn builder() -> crate::model::location::Builder {
         crate::model::location::Builder::default()
     }
@@ -1256,8 +1277,10 @@ impl Location {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Span {
     /// <p>The start position of the span (inclusive).</p>
+    #[doc(hidden)]
     pub start: std::option::Option<crate::model::Position>,
     /// <p>The end position of the span (exclusive).</p>
+    #[doc(hidden)]
     pub end: std::option::Option<crate::model::Position>,
 }
 impl Span {
@@ -1278,11 +1301,10 @@ impl std::fmt::Debug for Span {
         formatter.finish()
     }
 }
-/// See [`Span`](crate::model::Span)
+/// See [`Span`](crate::model::Span).
 pub mod span {
 
-    /// A builder for [`Span`](crate::model::Span)
-    #[non_exhaustive]
+    /// A builder for [`Span`](crate::model::Span).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start: std::option::Option<crate::model::Position>,
@@ -1309,7 +1331,7 @@ pub mod span {
             self.end = input;
             self
         }
-        /// Consumes the builder and constructs a [`Span`](crate::model::Span)
+        /// Consumes the builder and constructs a [`Span`](crate::model::Span).
         pub fn build(self) -> crate::model::Span {
             crate::model::Span {
                 start: self.start,
@@ -1319,7 +1341,7 @@ pub mod span {
     }
 }
 impl Span {
-    /// Creates a new builder-style object to manufacture [`Span`](crate::model::Span)
+    /// Creates a new builder-style object to manufacture [`Span`](crate::model::Span).
     pub fn builder() -> crate::model::span::Builder {
         crate::model::span::Builder::default()
     }
@@ -1330,10 +1352,13 @@ impl Span {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Position {
     /// <p>The line of the position, starting from 1.</p>
+    #[doc(hidden)]
     pub line: std::option::Option<i32>,
     /// <p>The column of the position, starting from 0.</p>
+    #[doc(hidden)]
     pub column: std::option::Option<i32>,
     /// <p>The offset within the policy that corresponds to the position, starting from 0.</p>
+    #[doc(hidden)]
     pub offset: std::option::Option<i32>,
 }
 impl Position {
@@ -1359,11 +1384,10 @@ impl std::fmt::Debug for Position {
         formatter.finish()
     }
 }
-/// See [`Position`](crate::model::Position)
+/// See [`Position`](crate::model::Position).
 pub mod position {
 
-    /// A builder for [`Position`](crate::model::Position)
-    #[non_exhaustive]
+    /// A builder for [`Position`](crate::model::Position).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) line: std::option::Option<i32>,
@@ -1401,7 +1425,7 @@ pub mod position {
             self.offset = input;
             self
         }
-        /// Consumes the builder and constructs a [`Position`](crate::model::Position)
+        /// Consumes the builder and constructs a [`Position`](crate::model::Position).
         pub fn build(self) -> crate::model::Position {
             crate::model::Position {
                 line: self.line,
@@ -1412,7 +1436,7 @@ pub mod position {
     }
 }
 impl Position {
-    /// Creates a new builder-style object to manufacture [`Position`](crate::model::Position)
+    /// Creates a new builder-style object to manufacture [`Position`](crate::model::Position).
     pub fn builder() -> crate::model::position::Builder {
         crate::model::position::Builder::default()
     }
@@ -1504,8 +1528,10 @@ impl PathElement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Substring {
     /// <p>The start index of the substring, starting from 0.</p>
+    #[doc(hidden)]
     pub start: std::option::Option<i32>,
     /// <p>The length of the substring.</p>
+    #[doc(hidden)]
     pub length: std::option::Option<i32>,
 }
 impl Substring {
@@ -1526,11 +1552,10 @@ impl std::fmt::Debug for Substring {
         formatter.finish()
     }
 }
-/// See [`Substring`](crate::model::Substring)
+/// See [`Substring`](crate::model::Substring).
 pub mod substring {
 
-    /// A builder for [`Substring`](crate::model::Substring)
-    #[non_exhaustive]
+    /// A builder for [`Substring`](crate::model::Substring).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start: std::option::Option<i32>,
@@ -1557,7 +1582,7 @@ pub mod substring {
             self.length = input;
             self
         }
-        /// Consumes the builder and constructs a [`Substring`](crate::model::Substring)
+        /// Consumes the builder and constructs a [`Substring`](crate::model::Substring).
         pub fn build(self) -> crate::model::Substring {
             crate::model::Substring {
                 start: self.start,
@@ -1567,7 +1592,7 @@ pub mod substring {
     }
 }
 impl Substring {
-    /// Creates a new builder-style object to manufacture [`Substring`](crate::model::Substring)
+    /// Creates a new builder-style object to manufacture [`Substring`](crate::model::Substring).
     pub fn builder() -> crate::model::substring::Builder {
         crate::model::substring::Builder::default()
     }
@@ -1924,12 +1949,16 @@ impl AsRef<str> for FindingStatusUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudTrailDetails {
     /// <p>A <code>Trail</code> object that contains settings for a trail.</p>
+    #[doc(hidden)]
     pub trails: std::option::Option<std::vec::Vec<crate::model::Trail>>,
     /// <p>The ARN of the service role that IAM Access Analyzer uses to access your CloudTrail trail and service last accessed information.</p>
+    #[doc(hidden)]
     pub access_role: std::option::Option<std::string::String>,
     /// <p>The start of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a timestamp before this time are not considered to generate a policy.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a timestamp after this time are not considered to generate a policy. If this is not included in the request, the default value is the current time.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CloudTrailDetails {
@@ -1960,11 +1989,10 @@ impl std::fmt::Debug for CloudTrailDetails {
         formatter.finish()
     }
 }
-/// See [`CloudTrailDetails`](crate::model::CloudTrailDetails)
+/// See [`CloudTrailDetails`](crate::model::CloudTrailDetails).
 pub mod cloud_trail_details {
 
-    /// A builder for [`CloudTrailDetails`](crate::model::CloudTrailDetails)
-    #[non_exhaustive]
+    /// A builder for [`CloudTrailDetails`](crate::model::CloudTrailDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) trails: std::option::Option<std::vec::Vec<crate::model::Trail>>,
@@ -2028,7 +2056,7 @@ pub mod cloud_trail_details {
             self.end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudTrailDetails`](crate::model::CloudTrailDetails)
+        /// Consumes the builder and constructs a [`CloudTrailDetails`](crate::model::CloudTrailDetails).
         pub fn build(self) -> crate::model::CloudTrailDetails {
             crate::model::CloudTrailDetails {
                 trails: self.trails,
@@ -2040,7 +2068,7 @@ pub mod cloud_trail_details {
     }
 }
 impl CloudTrailDetails {
-    /// Creates a new builder-style object to manufacture [`CloudTrailDetails`](crate::model::CloudTrailDetails)
+    /// Creates a new builder-style object to manufacture [`CloudTrailDetails`](crate::model::CloudTrailDetails).
     pub fn builder() -> crate::model::cloud_trail_details::Builder {
         crate::model::cloud_trail_details::Builder::default()
     }
@@ -2051,10 +2079,13 @@ impl CloudTrailDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Trail {
     /// <p>Specifies the ARN of the trail. The format of a trail ARN is <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>.</p>
+    #[doc(hidden)]
     pub cloud_trail_arn: std::option::Option<std::string::String>,
     /// <p>A list of regions to get CloudTrail data from and analyze to generate a policy.</p>
+    #[doc(hidden)]
     pub regions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, IAM Access Analyzer retrieves CloudTrail data from all regions to analyze and generate a policy.</p>
+    #[doc(hidden)]
     pub all_regions: std::option::Option<bool>,
 }
 impl Trail {
@@ -2080,11 +2111,10 @@ impl std::fmt::Debug for Trail {
         formatter.finish()
     }
 }
-/// See [`Trail`](crate::model::Trail)
+/// See [`Trail`](crate::model::Trail).
 pub mod trail {
 
-    /// A builder for [`Trail`](crate::model::Trail)
-    #[non_exhaustive]
+    /// A builder for [`Trail`](crate::model::Trail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloud_trail_arn: std::option::Option<std::string::String>,
@@ -2134,7 +2164,7 @@ pub mod trail {
             self.all_regions = input;
             self
         }
-        /// Consumes the builder and constructs a [`Trail`](crate::model::Trail)
+        /// Consumes the builder and constructs a [`Trail`](crate::model::Trail).
         pub fn build(self) -> crate::model::Trail {
             crate::model::Trail {
                 cloud_trail_arn: self.cloud_trail_arn,
@@ -2145,7 +2175,7 @@ pub mod trail {
     }
 }
 impl Trail {
-    /// Creates a new builder-style object to manufacture [`Trail`](crate::model::Trail)
+    /// Creates a new builder-style object to manufacture [`Trail`](crate::model::Trail).
     pub fn builder() -> crate::model::trail::Builder {
         crate::model::trail::Builder::default()
     }
@@ -2156,6 +2186,7 @@ impl Trail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyGenerationDetails {
     /// <p>The ARN of the IAM entity (user or role) for which you are generating a policy.</p>
+    #[doc(hidden)]
     pub principal_arn: std::option::Option<std::string::String>,
 }
 impl PolicyGenerationDetails {
@@ -2171,11 +2202,10 @@ impl std::fmt::Debug for PolicyGenerationDetails {
         formatter.finish()
     }
 }
-/// See [`PolicyGenerationDetails`](crate::model::PolicyGenerationDetails)
+/// See [`PolicyGenerationDetails`](crate::model::PolicyGenerationDetails).
 pub mod policy_generation_details {
 
-    /// A builder for [`PolicyGenerationDetails`](crate::model::PolicyGenerationDetails)
-    #[non_exhaustive]
+    /// A builder for [`PolicyGenerationDetails`](crate::model::PolicyGenerationDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) principal_arn: std::option::Option<std::string::String>,
@@ -2194,7 +2224,7 @@ pub mod policy_generation_details {
             self.principal_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyGenerationDetails`](crate::model::PolicyGenerationDetails)
+        /// Consumes the builder and constructs a [`PolicyGenerationDetails`](crate::model::PolicyGenerationDetails).
         pub fn build(self) -> crate::model::PolicyGenerationDetails {
             crate::model::PolicyGenerationDetails {
                 principal_arn: self.principal_arn,
@@ -2203,7 +2233,7 @@ pub mod policy_generation_details {
     }
 }
 impl PolicyGenerationDetails {
-    /// Creates a new builder-style object to manufacture [`PolicyGenerationDetails`](crate::model::PolicyGenerationDetails)
+    /// Creates a new builder-style object to manufacture [`PolicyGenerationDetails`](crate::model::PolicyGenerationDetails).
     pub fn builder() -> crate::model::policy_generation_details::Builder {
         crate::model::policy_generation_details::Builder::default()
     }
@@ -2214,14 +2244,19 @@ impl PolicyGenerationDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyGeneration {
     /// <p>The <code>JobId</code> that is returned by the <code>StartPolicyGeneration</code> operation. The <code>JobId</code> can be used with <code>GetGeneratedPolicy</code> to retrieve the generated policies or used with <code>CancelPolicyGeneration</code> to cancel the policy generation request.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM entity (user or role) for which you are generating a policy.</p>
+    #[doc(hidden)]
     pub principal_arn: std::option::Option<std::string::String>,
     /// <p>The status of the policy generation request.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobStatus>,
     /// <p>A timestamp of when the policy generation started.</p>
+    #[doc(hidden)]
     pub started_on: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp of when the policy generation was completed.</p>
+    #[doc(hidden)]
     pub completed_on: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PolicyGeneration {
@@ -2257,11 +2292,10 @@ impl std::fmt::Debug for PolicyGeneration {
         formatter.finish()
     }
 }
-/// See [`PolicyGeneration`](crate::model::PolicyGeneration)
+/// See [`PolicyGeneration`](crate::model::PolicyGeneration).
 pub mod policy_generation {
 
-    /// A builder for [`PolicyGeneration`](crate::model::PolicyGeneration)
-    #[non_exhaustive]
+    /// A builder for [`PolicyGeneration`](crate::model::PolicyGeneration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -2330,7 +2364,7 @@ pub mod policy_generation {
             self.completed_on = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyGeneration`](crate::model::PolicyGeneration)
+        /// Consumes the builder and constructs a [`PolicyGeneration`](crate::model::PolicyGeneration).
         pub fn build(self) -> crate::model::PolicyGeneration {
             crate::model::PolicyGeneration {
                 job_id: self.job_id,
@@ -2343,7 +2377,7 @@ pub mod policy_generation {
     }
 }
 impl PolicyGeneration {
-    /// Creates a new builder-style object to manufacture [`PolicyGeneration`](crate::model::PolicyGeneration)
+    /// Creates a new builder-style object to manufacture [`PolicyGeneration`](crate::model::PolicyGeneration).
     pub fn builder() -> crate::model::policy_generation::Builder {
         crate::model::policy_generation::Builder::default()
     }
@@ -2417,34 +2451,48 @@ impl AsRef<str> for JobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FindingSummary {
     /// <p>The ID of the finding.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The external principal that has access to a resource within the zone of trust.</p>
+    #[doc(hidden)]
     pub principal:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The action in the analyzed policy statement that an external principal has permission to use.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The resource that the external principal has access to.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>Indicates whether the finding reports a resource that has a policy that allows public access.</p>
+    #[doc(hidden)]
     pub is_public: std::option::Option<bool>,
     /// <p>The type of the resource that the external principal has access to.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The condition in the analyzed policy statement that resulted in a finding.</p>
+    #[doc(hidden)]
     pub condition:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The time at which the finding was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the resource-based policy that generated the finding was analyzed.</p>
+    #[doc(hidden)]
     pub analyzed_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the finding was most recently updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the finding.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::FindingStatus>,
     /// <p>The Amazon Web Services account ID that owns the resource.</p>
+    #[doc(hidden)]
     pub resource_owner_account: std::option::Option<std::string::String>,
     /// <p>The error that resulted in an Error finding.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>The sources of the finding. This indicates how the access that generated the finding is granted. It is populated for Amazon S3 bucket findings.</p>
+    #[doc(hidden)]
     pub sources: std::option::Option<std::vec::Vec<crate::model::FindingSource>>,
 }
 impl FindingSummary {
@@ -2531,11 +2579,10 @@ impl std::fmt::Debug for FindingSummary {
         formatter.finish()
     }
 }
-/// See [`FindingSummary`](crate::model::FindingSummary)
+/// See [`FindingSummary`](crate::model::FindingSummary).
 pub mod finding_summary {
 
-    /// A builder for [`FindingSummary`](crate::model::FindingSummary)
-    #[non_exhaustive]
+    /// A builder for [`FindingSummary`](crate::model::FindingSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2764,7 +2811,7 @@ pub mod finding_summary {
             self.sources = input;
             self
         }
-        /// Consumes the builder and constructs a [`FindingSummary`](crate::model::FindingSummary)
+        /// Consumes the builder and constructs a [`FindingSummary`](crate::model::FindingSummary).
         pub fn build(self) -> crate::model::FindingSummary {
             crate::model::FindingSummary {
                 id: self.id,
@@ -2786,7 +2833,7 @@ pub mod finding_summary {
     }
 }
 impl FindingSummary {
-    /// Creates a new builder-style object to manufacture [`FindingSummary`](crate::model::FindingSummary)
+    /// Creates a new builder-style object to manufacture [`FindingSummary`](crate::model::FindingSummary).
     pub fn builder() -> crate::model::finding_summary::Builder {
         crate::model::finding_summary::Builder::default()
     }
@@ -2797,8 +2844,10 @@ impl FindingSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FindingSource {
     /// <p>Indicates the type of access that generated the finding.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::FindingSourceType>,
     /// <p>Includes details about how the access that generated the finding is granted. This is populated for Amazon S3 bucket findings.</p>
+    #[doc(hidden)]
     pub detail: std::option::Option<crate::model::FindingSourceDetail>,
 }
 impl FindingSource {
@@ -2819,11 +2868,10 @@ impl std::fmt::Debug for FindingSource {
         formatter.finish()
     }
 }
-/// See [`FindingSource`](crate::model::FindingSource)
+/// See [`FindingSource`](crate::model::FindingSource).
 pub mod finding_source {
 
-    /// A builder for [`FindingSource`](crate::model::FindingSource)
-    #[non_exhaustive]
+    /// A builder for [`FindingSource`](crate::model::FindingSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::FindingSourceType>,
@@ -2856,7 +2904,7 @@ pub mod finding_source {
             self.detail = input;
             self
         }
-        /// Consumes the builder and constructs a [`FindingSource`](crate::model::FindingSource)
+        /// Consumes the builder and constructs a [`FindingSource`](crate::model::FindingSource).
         pub fn build(self) -> crate::model::FindingSource {
             crate::model::FindingSource {
                 r#type: self.r#type,
@@ -2866,7 +2914,7 @@ pub mod finding_source {
     }
 }
 impl FindingSource {
-    /// Creates a new builder-style object to manufacture [`FindingSource`](crate::model::FindingSource)
+    /// Creates a new builder-style object to manufacture [`FindingSource`](crate::model::FindingSource).
     pub fn builder() -> crate::model::finding_source::Builder {
         crate::model::finding_source::Builder::default()
     }
@@ -2877,6 +2925,7 @@ impl FindingSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FindingSourceDetail {
     /// <p>The ARN of the access point that generated the finding. The ARN format depends on whether the ARN represents an access point or a multi-region access point.</p>
+    #[doc(hidden)]
     pub access_point_arn: std::option::Option<std::string::String>,
 }
 impl FindingSourceDetail {
@@ -2892,11 +2941,10 @@ impl std::fmt::Debug for FindingSourceDetail {
         formatter.finish()
     }
 }
-/// See [`FindingSourceDetail`](crate::model::FindingSourceDetail)
+/// See [`FindingSourceDetail`](crate::model::FindingSourceDetail).
 pub mod finding_source_detail {
 
-    /// A builder for [`FindingSourceDetail`](crate::model::FindingSourceDetail)
-    #[non_exhaustive]
+    /// A builder for [`FindingSourceDetail`](crate::model::FindingSourceDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_point_arn: std::option::Option<std::string::String>,
@@ -2915,7 +2963,7 @@ pub mod finding_source_detail {
             self.access_point_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`FindingSourceDetail`](crate::model::FindingSourceDetail)
+        /// Consumes the builder and constructs a [`FindingSourceDetail`](crate::model::FindingSourceDetail).
         pub fn build(self) -> crate::model::FindingSourceDetail {
             crate::model::FindingSourceDetail {
                 access_point_arn: self.access_point_arn,
@@ -2924,7 +2972,7 @@ pub mod finding_source_detail {
     }
 }
 impl FindingSourceDetail {
-    /// Creates a new builder-style object to manufacture [`FindingSourceDetail`](crate::model::FindingSourceDetail)
+    /// Creates a new builder-style object to manufacture [`FindingSourceDetail`](crate::model::FindingSourceDetail).
     pub fn builder() -> crate::model::finding_source_detail::Builder {
         crate::model::finding_source_detail::Builder::default()
     }
@@ -3136,8 +3184,10 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SortCriteria {
     /// <p>The name of the attribute to sort on.</p>
+    #[doc(hidden)]
     pub attribute_name: std::option::Option<std::string::String>,
     /// <p>The sort order, ascending or descending.</p>
+    #[doc(hidden)]
     pub order_by: std::option::Option<crate::model::OrderBy>,
 }
 impl SortCriteria {
@@ -3158,11 +3208,10 @@ impl std::fmt::Debug for SortCriteria {
         formatter.finish()
     }
 }
-/// See [`SortCriteria`](crate::model::SortCriteria)
+/// See [`SortCriteria`](crate::model::SortCriteria).
 pub mod sort_criteria {
 
-    /// A builder for [`SortCriteria`](crate::model::SortCriteria)
-    #[non_exhaustive]
+    /// A builder for [`SortCriteria`](crate::model::SortCriteria).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_name: std::option::Option<std::string::String>,
@@ -3192,7 +3241,7 @@ pub mod sort_criteria {
             self.order_by = input;
             self
         }
-        /// Consumes the builder and constructs a [`SortCriteria`](crate::model::SortCriteria)
+        /// Consumes the builder and constructs a [`SortCriteria`](crate::model::SortCriteria).
         pub fn build(self) -> crate::model::SortCriteria {
             crate::model::SortCriteria {
                 attribute_name: self.attribute_name,
@@ -3202,7 +3251,7 @@ pub mod sort_criteria {
     }
 }
 impl SortCriteria {
-    /// Creates a new builder-style object to manufacture [`SortCriteria`](crate::model::SortCriteria)
+    /// Creates a new builder-style object to manufacture [`SortCriteria`](crate::model::SortCriteria).
     pub fn builder() -> crate::model::sort_criteria::Builder {
         crate::model::sort_criteria::Builder::default()
     }
@@ -3268,10 +3317,13 @@ impl AsRef<str> for OrderBy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnalyzedResourceSummary {
     /// <p>The ARN of the analyzed resource.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services account ID that owns the resource.</p>
+    #[doc(hidden)]
     pub resource_owner_account: std::option::Option<std::string::String>,
     /// <p>The type of resource that was analyzed.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
 }
 impl AnalyzedResourceSummary {
@@ -3297,11 +3349,10 @@ impl std::fmt::Debug for AnalyzedResourceSummary {
         formatter.finish()
     }
 }
-/// See [`AnalyzedResourceSummary`](crate::model::AnalyzedResourceSummary)
+/// See [`AnalyzedResourceSummary`](crate::model::AnalyzedResourceSummary).
 pub mod analyzed_resource_summary {
 
-    /// A builder for [`AnalyzedResourceSummary`](crate::model::AnalyzedResourceSummary)
-    #[non_exhaustive]
+    /// A builder for [`AnalyzedResourceSummary`](crate::model::AnalyzedResourceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -3345,7 +3396,7 @@ pub mod analyzed_resource_summary {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnalyzedResourceSummary`](crate::model::AnalyzedResourceSummary)
+        /// Consumes the builder and constructs a [`AnalyzedResourceSummary`](crate::model::AnalyzedResourceSummary).
         pub fn build(self) -> crate::model::AnalyzedResourceSummary {
             crate::model::AnalyzedResourceSummary {
                 resource_arn: self.resource_arn,
@@ -3356,7 +3407,7 @@ pub mod analyzed_resource_summary {
     }
 }
 impl AnalyzedResourceSummary {
-    /// Creates a new builder-style object to manufacture [`AnalyzedResourceSummary`](crate::model::AnalyzedResourceSummary)
+    /// Creates a new builder-style object to manufacture [`AnalyzedResourceSummary`](crate::model::AnalyzedResourceSummary).
     pub fn builder() -> crate::model::analyzed_resource_summary::Builder {
         crate::model::analyzed_resource_summary::Builder::default()
     }
@@ -3367,10 +3418,13 @@ impl AnalyzedResourceSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessPreviewSummary {
     /// <p>The unique ID for the access preview.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The ARN of the analyzer used to generate the access preview.</p>
+    #[doc(hidden)]
     pub analyzer_arn: std::option::Option<std::string::String>,
     /// <p>The time at which the access preview was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the access preview.</p>
     /// <ul>
@@ -3378,8 +3432,10 @@ pub struct AccessPreviewSummary {
     /// <li> <p> <code>Completed</code> - The access preview is complete and previews the findings for external access to the resource.</p> </li>
     /// <li> <p> <code>Failed</code> - The access preview creation has failed.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AccessPreviewStatus>,
     /// <p>Provides more details about the current status of the access preview. For example, if the creation of the access preview fails, a <code>Failed</code> status is returned. This failure can be due to an internal issue with the analysis or due to an invalid proposed resource configuration.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<crate::model::AccessPreviewStatusReason>,
 }
 impl AccessPreviewSummary {
@@ -3420,11 +3476,10 @@ impl std::fmt::Debug for AccessPreviewSummary {
         formatter.finish()
     }
 }
-/// See [`AccessPreviewSummary`](crate::model::AccessPreviewSummary)
+/// See [`AccessPreviewSummary`](crate::model::AccessPreviewSummary).
 pub mod access_preview_summary {
 
-    /// A builder for [`AccessPreviewSummary`](crate::model::AccessPreviewSummary)
-    #[non_exhaustive]
+    /// A builder for [`AccessPreviewSummary`](crate::model::AccessPreviewSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3503,7 +3558,7 @@ pub mod access_preview_summary {
             self.status_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessPreviewSummary`](crate::model::AccessPreviewSummary)
+        /// Consumes the builder and constructs a [`AccessPreviewSummary`](crate::model::AccessPreviewSummary).
         pub fn build(self) -> crate::model::AccessPreviewSummary {
             crate::model::AccessPreviewSummary {
                 id: self.id,
@@ -3516,7 +3571,7 @@ pub mod access_preview_summary {
     }
 }
 impl AccessPreviewSummary {
-    /// Creates a new builder-style object to manufacture [`AccessPreviewSummary`](crate::model::AccessPreviewSummary)
+    /// Creates a new builder-style object to manufacture [`AccessPreviewSummary`](crate::model::AccessPreviewSummary).
     pub fn builder() -> crate::model::access_preview_summary::Builder {
         crate::model::access_preview_summary::Builder::default()
     }
@@ -3527,6 +3582,7 @@ impl AccessPreviewSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessPreviewStatusReason {
     /// <p>The reason code for the current status of the access preview.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::AccessPreviewStatusReasonCode>,
 }
 impl AccessPreviewStatusReason {
@@ -3542,11 +3598,10 @@ impl std::fmt::Debug for AccessPreviewStatusReason {
         formatter.finish()
     }
 }
-/// See [`AccessPreviewStatusReason`](crate::model::AccessPreviewStatusReason)
+/// See [`AccessPreviewStatusReason`](crate::model::AccessPreviewStatusReason).
 pub mod access_preview_status_reason {
 
-    /// A builder for [`AccessPreviewStatusReason`](crate::model::AccessPreviewStatusReason)
-    #[non_exhaustive]
+    /// A builder for [`AccessPreviewStatusReason`](crate::model::AccessPreviewStatusReason).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::AccessPreviewStatusReasonCode>,
@@ -3565,14 +3620,14 @@ pub mod access_preview_status_reason {
             self.code = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessPreviewStatusReason`](crate::model::AccessPreviewStatusReason)
+        /// Consumes the builder and constructs a [`AccessPreviewStatusReason`](crate::model::AccessPreviewStatusReason).
         pub fn build(self) -> crate::model::AccessPreviewStatusReason {
             crate::model::AccessPreviewStatusReason { code: self.code }
         }
     }
 }
 impl AccessPreviewStatusReason {
-    /// Creates a new builder-style object to manufacture [`AccessPreviewStatusReason`](crate::model::AccessPreviewStatusReason)
+    /// Creates a new builder-style object to manufacture [`AccessPreviewStatusReason`](crate::model::AccessPreviewStatusReason).
     pub fn builder() -> crate::model::access_preview_status_reason::Builder {
         crate::model::access_preview_status_reason::Builder::default()
     }
@@ -3697,26 +3752,36 @@ impl AsRef<str> for AccessPreviewStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessPreviewFinding {
     /// <p>The ID of the access preview finding. This ID uniquely identifies the element in the list of access preview findings and is not related to the finding ID in Access Analyzer.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The existing ID of the finding in IAM Access Analyzer, provided only for existing findings.</p>
+    #[doc(hidden)]
     pub existing_finding_id: std::option::Option<std::string::String>,
     /// <p>The existing status of the finding, provided only for existing findings.</p>
+    #[doc(hidden)]
     pub existing_finding_status: std::option::Option<crate::model::FindingStatus>,
     /// <p>The external principal that has access to a resource within the zone of trust.</p>
+    #[doc(hidden)]
     pub principal:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The action in the analyzed policy statement that an external principal has permission to perform.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The condition in the analyzed policy statement that resulted in a finding.</p>
+    #[doc(hidden)]
     pub condition:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The resource that an external principal has access to. This is the resource associated with the access preview.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>Indicates whether the policy that generated the finding allows public access to the resource.</p>
+    #[doc(hidden)]
     pub is_public: std::option::Option<bool>,
     /// <p>The type of the resource that can be accessed in the finding.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The time at which the access preview finding was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Provides context on how the access preview finding compares to existing access identified in IAM Access Analyzer.</p>
     /// <ul>
@@ -3725,14 +3790,19 @@ pub struct AccessPreviewFinding {
     /// <li> <p> <code>Changed</code> - The preview finding is an existing finding with a change in status.</p> </li>
     /// </ul>
     /// <p>For example, a <code>Changed</code> finding with preview status <code>Resolved</code> and existing status <code>Active</code> indicates the existing <code>Active</code> finding would become <code>Resolved</code> as a result of the proposed permissions change.</p>
+    #[doc(hidden)]
     pub change_type: std::option::Option<crate::model::FindingChangeType>,
     /// <p>The preview status of the finding. This is what the status of the finding would be after permissions deployment. For example, a <code>Changed</code> finding with preview status <code>Resolved</code> and existing status <code>Active</code> indicates the existing <code>Active</code> finding would become <code>Resolved</code> as a result of the proposed permissions change.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::FindingStatus>,
     /// <p>The Amazon Web Services account ID that owns the resource. For most Amazon Web Services resources, the owning account is the account in which the resource was created.</p>
+    #[doc(hidden)]
     pub resource_owner_account: std::option::Option<std::string::String>,
     /// <p>An error.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>The sources of the finding. This indicates how the access that generated the finding is granted. It is populated for Amazon S3 bucket findings.</p>
+    #[doc(hidden)]
     pub sources: std::option::Option<std::vec::Vec<crate::model::FindingSource>>,
 }
 impl AccessPreviewFinding {
@@ -3830,11 +3900,10 @@ impl std::fmt::Debug for AccessPreviewFinding {
         formatter.finish()
     }
 }
-/// See [`AccessPreviewFinding`](crate::model::AccessPreviewFinding)
+/// See [`AccessPreviewFinding`](crate::model::AccessPreviewFinding).
 pub mod access_preview_finding {
 
-    /// A builder for [`AccessPreviewFinding`](crate::model::AccessPreviewFinding)
-    #[non_exhaustive]
+    /// A builder for [`AccessPreviewFinding`](crate::model::AccessPreviewFinding).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4089,7 +4158,7 @@ pub mod access_preview_finding {
             self.sources = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessPreviewFinding`](crate::model::AccessPreviewFinding)
+        /// Consumes the builder and constructs a [`AccessPreviewFinding`](crate::model::AccessPreviewFinding).
         pub fn build(self) -> crate::model::AccessPreviewFinding {
             crate::model::AccessPreviewFinding {
                 id: self.id,
@@ -4112,7 +4181,7 @@ pub mod access_preview_finding {
     }
 }
 impl AccessPreviewFinding {
-    /// Creates a new builder-style object to manufacture [`AccessPreviewFinding`](crate::model::AccessPreviewFinding)
+    /// Creates a new builder-style object to manufacture [`AccessPreviewFinding`](crate::model::AccessPreviewFinding).
     pub fn builder() -> crate::model::access_preview_finding::Builder {
         crate::model::access_preview_finding::Builder::default()
     }
@@ -4182,8 +4251,10 @@ impl AsRef<str> for FindingChangeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GeneratedPolicyResult {
     /// <p>A <code>GeneratedPolicyProperties</code> object that contains properties of the generated policy.</p>
+    #[doc(hidden)]
     pub properties: std::option::Option<crate::model::GeneratedPolicyProperties>,
     /// <p>The text to use as the content for the new policy. The policy is created using the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html">CreatePolicy</a> action.</p>
+    #[doc(hidden)]
     pub generated_policies: std::option::Option<std::vec::Vec<crate::model::GeneratedPolicy>>,
 }
 impl GeneratedPolicyResult {
@@ -4204,11 +4275,10 @@ impl std::fmt::Debug for GeneratedPolicyResult {
         formatter.finish()
     }
 }
-/// See [`GeneratedPolicyResult`](crate::model::GeneratedPolicyResult)
+/// See [`GeneratedPolicyResult`](crate::model::GeneratedPolicyResult).
 pub mod generated_policy_result {
 
-    /// A builder for [`GeneratedPolicyResult`](crate::model::GeneratedPolicyResult)
-    #[non_exhaustive]
+    /// A builder for [`GeneratedPolicyResult`](crate::model::GeneratedPolicyResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) properties: std::option::Option<crate::model::GeneratedPolicyProperties>,
@@ -4248,7 +4318,7 @@ pub mod generated_policy_result {
             self.generated_policies = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeneratedPolicyResult`](crate::model::GeneratedPolicyResult)
+        /// Consumes the builder and constructs a [`GeneratedPolicyResult`](crate::model::GeneratedPolicyResult).
         pub fn build(self) -> crate::model::GeneratedPolicyResult {
             crate::model::GeneratedPolicyResult {
                 properties: self.properties,
@@ -4258,7 +4328,7 @@ pub mod generated_policy_result {
     }
 }
 impl GeneratedPolicyResult {
-    /// Creates a new builder-style object to manufacture [`GeneratedPolicyResult`](crate::model::GeneratedPolicyResult)
+    /// Creates a new builder-style object to manufacture [`GeneratedPolicyResult`](crate::model::GeneratedPolicyResult).
     pub fn builder() -> crate::model::generated_policy_result::Builder {
         crate::model::generated_policy_result::Builder::default()
     }
@@ -4269,6 +4339,7 @@ impl GeneratedPolicyResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GeneratedPolicy {
     /// <p>The text to use as the content for the new policy. The policy is created using the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html">CreatePolicy</a> action.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl GeneratedPolicy {
@@ -4284,11 +4355,10 @@ impl std::fmt::Debug for GeneratedPolicy {
         formatter.finish()
     }
 }
-/// See [`GeneratedPolicy`](crate::model::GeneratedPolicy)
+/// See [`GeneratedPolicy`](crate::model::GeneratedPolicy).
 pub mod generated_policy {
 
-    /// A builder for [`GeneratedPolicy`](crate::model::GeneratedPolicy)
-    #[non_exhaustive]
+    /// A builder for [`GeneratedPolicy`](crate::model::GeneratedPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<std::string::String>,
@@ -4304,7 +4374,7 @@ pub mod generated_policy {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeneratedPolicy`](crate::model::GeneratedPolicy)
+        /// Consumes the builder and constructs a [`GeneratedPolicy`](crate::model::GeneratedPolicy).
         pub fn build(self) -> crate::model::GeneratedPolicy {
             crate::model::GeneratedPolicy {
                 policy: self.policy,
@@ -4313,7 +4383,7 @@ pub mod generated_policy {
     }
 }
 impl GeneratedPolicy {
-    /// Creates a new builder-style object to manufacture [`GeneratedPolicy`](crate::model::GeneratedPolicy)
+    /// Creates a new builder-style object to manufacture [`GeneratedPolicy`](crate::model::GeneratedPolicy).
     pub fn builder() -> crate::model::generated_policy::Builder {
         crate::model::generated_policy::Builder::default()
     }
@@ -4324,10 +4394,13 @@ impl GeneratedPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GeneratedPolicyProperties {
     /// <p>This value is set to <code>true</code> if the generated policy contains all possible actions for a service that IAM Access Analyzer identified from the CloudTrail trail that you specified, and <code>false</code> otherwise.</p>
+    #[doc(hidden)]
     pub is_complete: std::option::Option<bool>,
     /// <p>The ARN of the IAM entity (user or role) for which you are generating a policy.</p>
+    #[doc(hidden)]
     pub principal_arn: std::option::Option<std::string::String>,
     /// <p>Lists details about the <code>Trail</code> used to generated policy.</p>
+    #[doc(hidden)]
     pub cloud_trail_properties: std::option::Option<crate::model::CloudTrailProperties>,
 }
 impl GeneratedPolicyProperties {
@@ -4355,11 +4428,10 @@ impl std::fmt::Debug for GeneratedPolicyProperties {
         formatter.finish()
     }
 }
-/// See [`GeneratedPolicyProperties`](crate::model::GeneratedPolicyProperties)
+/// See [`GeneratedPolicyProperties`](crate::model::GeneratedPolicyProperties).
 pub mod generated_policy_properties {
 
-    /// A builder for [`GeneratedPolicyProperties`](crate::model::GeneratedPolicyProperties)
-    #[non_exhaustive]
+    /// A builder for [`GeneratedPolicyProperties`](crate::model::GeneratedPolicyProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_complete: std::option::Option<bool>,
@@ -4403,7 +4475,7 @@ pub mod generated_policy_properties {
             self.cloud_trail_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeneratedPolicyProperties`](crate::model::GeneratedPolicyProperties)
+        /// Consumes the builder and constructs a [`GeneratedPolicyProperties`](crate::model::GeneratedPolicyProperties).
         pub fn build(self) -> crate::model::GeneratedPolicyProperties {
             crate::model::GeneratedPolicyProperties {
                 is_complete: self.is_complete,
@@ -4414,7 +4486,7 @@ pub mod generated_policy_properties {
     }
 }
 impl GeneratedPolicyProperties {
-    /// Creates a new builder-style object to manufacture [`GeneratedPolicyProperties`](crate::model::GeneratedPolicyProperties)
+    /// Creates a new builder-style object to manufacture [`GeneratedPolicyProperties`](crate::model::GeneratedPolicyProperties).
     pub fn builder() -> crate::model::generated_policy_properties::Builder {
         crate::model::generated_policy_properties::Builder::default()
     }
@@ -4425,10 +4497,13 @@ impl GeneratedPolicyProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudTrailProperties {
     /// <p>A <code>TrailProperties</code> object that contains settings for trail properties.</p>
+    #[doc(hidden)]
     pub trail_properties: std::option::Option<std::vec::Vec<crate::model::TrailProperties>>,
     /// <p>The start of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a timestamp before this time are not considered to generate a policy.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end of the time range for which IAM Access Analyzer reviews your CloudTrail events. Events with a timestamp after this time are not considered to generate a policy. If this is not included in the request, the default value is the current time.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CloudTrailProperties {
@@ -4454,11 +4529,10 @@ impl std::fmt::Debug for CloudTrailProperties {
         formatter.finish()
     }
 }
-/// See [`CloudTrailProperties`](crate::model::CloudTrailProperties)
+/// See [`CloudTrailProperties`](crate::model::CloudTrailProperties).
 pub mod cloud_trail_properties {
 
-    /// A builder for [`CloudTrailProperties`](crate::model::CloudTrailProperties)
-    #[non_exhaustive]
+    /// A builder for [`CloudTrailProperties`](crate::model::CloudTrailProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) trail_properties:
@@ -4512,7 +4586,7 @@ pub mod cloud_trail_properties {
             self.end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudTrailProperties`](crate::model::CloudTrailProperties)
+        /// Consumes the builder and constructs a [`CloudTrailProperties`](crate::model::CloudTrailProperties).
         pub fn build(self) -> crate::model::CloudTrailProperties {
             crate::model::CloudTrailProperties {
                 trail_properties: self.trail_properties,
@@ -4523,7 +4597,7 @@ pub mod cloud_trail_properties {
     }
 }
 impl CloudTrailProperties {
-    /// Creates a new builder-style object to manufacture [`CloudTrailProperties`](crate::model::CloudTrailProperties)
+    /// Creates a new builder-style object to manufacture [`CloudTrailProperties`](crate::model::CloudTrailProperties).
     pub fn builder() -> crate::model::cloud_trail_properties::Builder {
         crate::model::cloud_trail_properties::Builder::default()
     }
@@ -4534,10 +4608,13 @@ impl CloudTrailProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrailProperties {
     /// <p>Specifies the ARN of the trail. The format of a trail ARN is <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>.</p>
+    #[doc(hidden)]
     pub cloud_trail_arn: std::option::Option<std::string::String>,
     /// <p>A list of regions to get CloudTrail data from and analyze to generate a policy.</p>
+    #[doc(hidden)]
     pub regions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Possible values are <code>true</code> or <code>false</code>. If set to <code>true</code>, IAM Access Analyzer retrieves CloudTrail data from all regions to analyze and generate a policy.</p>
+    #[doc(hidden)]
     pub all_regions: std::option::Option<bool>,
 }
 impl TrailProperties {
@@ -4563,11 +4640,10 @@ impl std::fmt::Debug for TrailProperties {
         formatter.finish()
     }
 }
-/// See [`TrailProperties`](crate::model::TrailProperties)
+/// See [`TrailProperties`](crate::model::TrailProperties).
 pub mod trail_properties {
 
-    /// A builder for [`TrailProperties`](crate::model::TrailProperties)
-    #[non_exhaustive]
+    /// A builder for [`TrailProperties`](crate::model::TrailProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloud_trail_arn: std::option::Option<std::string::String>,
@@ -4617,7 +4693,7 @@ pub mod trail_properties {
             self.all_regions = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrailProperties`](crate::model::TrailProperties)
+        /// Consumes the builder and constructs a [`TrailProperties`](crate::model::TrailProperties).
         pub fn build(self) -> crate::model::TrailProperties {
             crate::model::TrailProperties {
                 cloud_trail_arn: self.cloud_trail_arn,
@@ -4628,7 +4704,7 @@ pub mod trail_properties {
     }
 }
 impl TrailProperties {
-    /// Creates a new builder-style object to manufacture [`TrailProperties`](crate::model::TrailProperties)
+    /// Creates a new builder-style object to manufacture [`TrailProperties`](crate::model::TrailProperties).
     pub fn builder() -> crate::model::trail_properties::Builder {
         crate::model::trail_properties::Builder::default()
     }
@@ -4639,14 +4715,19 @@ impl TrailProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobDetails {
     /// <p>The <code>JobId</code> that is returned by the <code>StartPolicyGeneration</code> operation. The <code>JobId</code> can be used with <code>GetGeneratedPolicy</code> to retrieve the generated policies or used with <code>CancelPolicyGeneration</code> to cancel the policy generation request.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The status of the job request.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobStatus>,
     /// <p>A timestamp of when the job was started.</p>
+    #[doc(hidden)]
     pub started_on: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp of when the job was completed.</p>
+    #[doc(hidden)]
     pub completed_on: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The job error for the policy generation request.</p>
+    #[doc(hidden)]
     pub job_error: std::option::Option<crate::model::JobError>,
 }
 impl JobDetails {
@@ -4682,11 +4763,10 @@ impl std::fmt::Debug for JobDetails {
         formatter.finish()
     }
 }
-/// See [`JobDetails`](crate::model::JobDetails)
+/// See [`JobDetails`](crate::model::JobDetails).
 pub mod job_details {
 
-    /// A builder for [`JobDetails`](crate::model::JobDetails)
-    #[non_exhaustive]
+    /// A builder for [`JobDetails`](crate::model::JobDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -4752,7 +4832,7 @@ pub mod job_details {
             self.job_error = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobDetails`](crate::model::JobDetails)
+        /// Consumes the builder and constructs a [`JobDetails`](crate::model::JobDetails).
         pub fn build(self) -> crate::model::JobDetails {
             crate::model::JobDetails {
                 job_id: self.job_id,
@@ -4765,7 +4845,7 @@ pub mod job_details {
     }
 }
 impl JobDetails {
-    /// Creates a new builder-style object to manufacture [`JobDetails`](crate::model::JobDetails)
+    /// Creates a new builder-style object to manufacture [`JobDetails`](crate::model::JobDetails).
     pub fn builder() -> crate::model::job_details::Builder {
         crate::model::job_details::Builder::default()
     }
@@ -4776,8 +4856,10 @@ impl JobDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobError {
     /// <p>The job error code.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::JobErrorCode>,
     /// <p>Specific information about the error. For example, which service quota was exceeded or which resource was not found.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl JobError {
@@ -4798,11 +4880,10 @@ impl std::fmt::Debug for JobError {
         formatter.finish()
     }
 }
-/// See [`JobError`](crate::model::JobError)
+/// See [`JobError`](crate::model::JobError).
 pub mod job_error {
 
-    /// A builder for [`JobError`](crate::model::JobError)
-    #[non_exhaustive]
+    /// A builder for [`JobError`](crate::model::JobError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::JobErrorCode>,
@@ -4829,7 +4910,7 @@ pub mod job_error {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobError`](crate::model::JobError)
+        /// Consumes the builder and constructs a [`JobError`](crate::model::JobError).
         pub fn build(self) -> crate::model::JobError {
             crate::model::JobError {
                 code: self.code,
@@ -4839,7 +4920,7 @@ pub mod job_error {
     }
 }
 impl JobError {
-    /// Creates a new builder-style object to manufacture [`JobError`](crate::model::JobError)
+    /// Creates a new builder-style object to manufacture [`JobError`](crate::model::JobError).
     pub fn builder() -> crate::model::job_error::Builder {
         crate::model::job_error::Builder::default()
     }
@@ -4918,34 +4999,48 @@ impl AsRef<str> for JobErrorCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Finding {
     /// <p>The ID of the finding.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The external principal that access to a resource within the zone of trust.</p>
+    #[doc(hidden)]
     pub principal:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The action in the analyzed policy statement that an external principal has permission to use.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The resource that an external principal has access to.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>Indicates whether the policy that generated the finding allows public access to the resource.</p>
+    #[doc(hidden)]
     pub is_public: std::option::Option<bool>,
     /// <p>The type of the resource identified in the finding.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The condition in the analyzed policy statement that resulted in a finding.</p>
+    #[doc(hidden)]
     pub condition:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The time at which the finding was generated.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the resource was analyzed.</p>
+    #[doc(hidden)]
     pub analyzed_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the finding was updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current status of the finding.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::FindingStatus>,
     /// <p>The Amazon Web Services account ID that owns the resource.</p>
+    #[doc(hidden)]
     pub resource_owner_account: std::option::Option<std::string::String>,
     /// <p>An error.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>The sources of the finding. This indicates how the access that generated the finding is granted. It is populated for Amazon S3 bucket findings.</p>
+    #[doc(hidden)]
     pub sources: std::option::Option<std::vec::Vec<crate::model::FindingSource>>,
 }
 impl Finding {
@@ -5032,11 +5127,10 @@ impl std::fmt::Debug for Finding {
         formatter.finish()
     }
 }
-/// See [`Finding`](crate::model::Finding)
+/// See [`Finding`](crate::model::Finding).
 pub mod finding {
 
-    /// A builder for [`Finding`](crate::model::Finding)
-    #[non_exhaustive]
+    /// A builder for [`Finding`](crate::model::Finding).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -5265,7 +5359,7 @@ pub mod finding {
             self.sources = input;
             self
         }
-        /// Consumes the builder and constructs a [`Finding`](crate::model::Finding)
+        /// Consumes the builder and constructs a [`Finding`](crate::model::Finding).
         pub fn build(self) -> crate::model::Finding {
             crate::model::Finding {
                 id: self.id,
@@ -5287,7 +5381,7 @@ pub mod finding {
     }
 }
 impl Finding {
-    /// Creates a new builder-style object to manufacture [`Finding`](crate::model::Finding)
+    /// Creates a new builder-style object to manufacture [`Finding`](crate::model::Finding).
     pub fn builder() -> crate::model::finding::Builder {
         crate::model::finding::Builder::default()
     }
@@ -5298,26 +5392,37 @@ impl Finding {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnalyzedResource {
     /// <p>The ARN of the resource that was analyzed.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The type of the resource that was analyzed.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The time at which the finding was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the resource was analyzed.</p>
+    #[doc(hidden)]
     pub analyzed_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the finding was updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates whether the policy that generated the finding grants public access to the resource.</p>
+    #[doc(hidden)]
     pub is_public: std::option::Option<bool>,
     /// <p>The actions that an external principal is granted permission to use by the policy that generated the finding.</p>
+    #[doc(hidden)]
     pub actions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Indicates how the access that generated the finding is granted. This is populated for Amazon S3 bucket findings.</p>
+    #[doc(hidden)]
     pub shared_via: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The current status of the finding generated from the analyzed resource.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::FindingStatus>,
     /// <p>The Amazon Web Services account ID that owns the resource.</p>
+    #[doc(hidden)]
     pub resource_owner_account: std::option::Option<std::string::String>,
     /// <p>An error message.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
 }
 impl AnalyzedResource {
@@ -5383,11 +5488,10 @@ impl std::fmt::Debug for AnalyzedResource {
         formatter.finish()
     }
 }
-/// See [`AnalyzedResource`](crate::model::AnalyzedResource)
+/// See [`AnalyzedResource`](crate::model::AnalyzedResource).
 pub mod analyzed_resource {
 
-    /// A builder for [`AnalyzedResource`](crate::model::AnalyzedResource)
-    #[non_exhaustive]
+    /// A builder for [`AnalyzedResource`](crate::model::AnalyzedResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -5549,7 +5653,7 @@ pub mod analyzed_resource {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnalyzedResource`](crate::model::AnalyzedResource)
+        /// Consumes the builder and constructs a [`AnalyzedResource`](crate::model::AnalyzedResource).
         pub fn build(self) -> crate::model::AnalyzedResource {
             crate::model::AnalyzedResource {
                 resource_arn: self.resource_arn,
@@ -5568,7 +5672,7 @@ pub mod analyzed_resource {
     }
 }
 impl AnalyzedResource {
-    /// Creates a new builder-style object to manufacture [`AnalyzedResource`](crate::model::AnalyzedResource)
+    /// Creates a new builder-style object to manufacture [`AnalyzedResource`](crate::model::AnalyzedResource).
     pub fn builder() -> crate::model::analyzed_resource::Builder {
         crate::model::analyzed_resource::Builder::default()
     }
@@ -5579,14 +5683,18 @@ impl AnalyzedResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessPreview {
     /// <p>The unique ID for the access preview.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The ARN of the analyzer used to generate the access preview.</p>
+    #[doc(hidden)]
     pub analyzer_arn: std::option::Option<std::string::String>,
     /// <p>A map of resource ARNs for the proposed resource configuration.</p>
+    #[doc(hidden)]
     pub configurations: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::Configuration>,
     >,
     /// <p>The time at which the access preview was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the access preview.</p>
     /// <ul>
@@ -5594,9 +5702,11 @@ pub struct AccessPreview {
     /// <li> <p> <code>Completed</code> - The access preview is complete. You can preview findings for external access to the resource.</p> </li>
     /// <li> <p> <code>Failed</code> - The access preview creation has failed.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AccessPreviewStatus>,
     /// <p>Provides more details about the current status of the access preview.</p>
     /// <p>For example, if the creation of the access preview fails, a <code>Failed</code> status is returned. This failure can be due to an internal issue with the analysis or due to an invalid resource configuration.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<crate::model::AccessPreviewStatusReason>,
 }
 impl AccessPreview {
@@ -5647,11 +5757,10 @@ impl std::fmt::Debug for AccessPreview {
         formatter.finish()
     }
 }
-/// See [`AccessPreview`](crate::model::AccessPreview)
+/// See [`AccessPreview`](crate::model::AccessPreview).
 pub mod access_preview {
 
-    /// A builder for [`AccessPreview`](crate::model::AccessPreview)
-    #[non_exhaustive]
+    /// A builder for [`AccessPreview`](crate::model::AccessPreview).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -5760,7 +5869,7 @@ pub mod access_preview {
             self.status_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessPreview`](crate::model::AccessPreview)
+        /// Consumes the builder and constructs a [`AccessPreview`](crate::model::AccessPreview).
         pub fn build(self) -> crate::model::AccessPreview {
             crate::model::AccessPreview {
                 id: self.id,
@@ -5774,7 +5883,7 @@ pub mod access_preview {
     }
 }
 impl AccessPreview {
-    /// Creates a new builder-style object to manufacture [`AccessPreview`](crate::model::AccessPreview)
+    /// Creates a new builder-style object to manufacture [`AccessPreview`](crate::model::AccessPreview).
     pub fn builder() -> crate::model::access_preview::Builder {
         crate::model::access_preview::Builder::default()
     }
@@ -5883,6 +5992,7 @@ impl Configuration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SqsQueueConfiguration {
     /// <p> The proposed resource policy for the Amazon SQS queue. </p>
+    #[doc(hidden)]
     pub queue_policy: std::option::Option<std::string::String>,
 }
 impl SqsQueueConfiguration {
@@ -5898,11 +6008,10 @@ impl std::fmt::Debug for SqsQueueConfiguration {
         formatter.finish()
     }
 }
-/// See [`SqsQueueConfiguration`](crate::model::SqsQueueConfiguration)
+/// See [`SqsQueueConfiguration`](crate::model::SqsQueueConfiguration).
 pub mod sqs_queue_configuration {
 
-    /// A builder for [`SqsQueueConfiguration`](crate::model::SqsQueueConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SqsQueueConfiguration`](crate::model::SqsQueueConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) queue_policy: std::option::Option<std::string::String>,
@@ -5918,7 +6027,7 @@ pub mod sqs_queue_configuration {
             self.queue_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`SqsQueueConfiguration`](crate::model::SqsQueueConfiguration)
+        /// Consumes the builder and constructs a [`SqsQueueConfiguration`](crate::model::SqsQueueConfiguration).
         pub fn build(self) -> crate::model::SqsQueueConfiguration {
             crate::model::SqsQueueConfiguration {
                 queue_policy: self.queue_policy,
@@ -5927,7 +6036,7 @@ pub mod sqs_queue_configuration {
     }
 }
 impl SqsQueueConfiguration {
-    /// Creates a new builder-style object to manufacture [`SqsQueueConfiguration`](crate::model::SqsQueueConfiguration)
+    /// Creates a new builder-style object to manufacture [`SqsQueueConfiguration`](crate::model::SqsQueueConfiguration).
     pub fn builder() -> crate::model::sqs_queue_configuration::Builder {
         crate::model::sqs_queue_configuration::Builder::default()
     }
@@ -5938,14 +6047,18 @@ impl SqsQueueConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3BucketConfiguration {
     /// <p>The proposed bucket policy for the Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_policy: std::option::Option<std::string::String>,
     /// <p>The proposed list of ACL grants for the Amazon S3 bucket. You can propose up to 100 ACL grants per bucket. If the proposed grant configuration is for an existing bucket, the access preview uses the proposed list of grant configurations in place of the existing grants. Otherwise, the access preview uses the existing grants for the bucket.</p>
+    #[doc(hidden)]
     pub bucket_acl_grants:
         std::option::Option<std::vec::Vec<crate::model::S3BucketAclGrantConfiguration>>,
     /// <p>The proposed block public access configuration for the Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_public_access_block:
         std::option::Option<crate::model::S3PublicAccessBlockConfiguration>,
     /// <p>The configuration of Amazon S3 access points or multi-region access points for the bucket. You can propose up to 10 new access points per bucket.</p>
+    #[doc(hidden)]
     pub access_points: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::S3AccessPointConfiguration>,
     >,
@@ -5989,11 +6102,10 @@ impl std::fmt::Debug for S3BucketConfiguration {
         formatter.finish()
     }
 }
-/// See [`S3BucketConfiguration`](crate::model::S3BucketConfiguration)
+/// See [`S3BucketConfiguration`](crate::model::S3BucketConfiguration).
 pub mod s3_bucket_configuration {
 
-    /// A builder for [`S3BucketConfiguration`](crate::model::S3BucketConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`S3BucketConfiguration`](crate::model::S3BucketConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_policy: std::option::Option<std::string::String>,
@@ -6088,7 +6200,7 @@ pub mod s3_bucket_configuration {
             self.access_points = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3BucketConfiguration`](crate::model::S3BucketConfiguration)
+        /// Consumes the builder and constructs a [`S3BucketConfiguration`](crate::model::S3BucketConfiguration).
         pub fn build(self) -> crate::model::S3BucketConfiguration {
             crate::model::S3BucketConfiguration {
                 bucket_policy: self.bucket_policy,
@@ -6100,7 +6212,7 @@ pub mod s3_bucket_configuration {
     }
 }
 impl S3BucketConfiguration {
-    /// Creates a new builder-style object to manufacture [`S3BucketConfiguration`](crate::model::S3BucketConfiguration)
+    /// Creates a new builder-style object to manufacture [`S3BucketConfiguration`](crate::model::S3BucketConfiguration).
     pub fn builder() -> crate::model::s3_bucket_configuration::Builder {
         crate::model::s3_bucket_configuration::Builder::default()
     }
@@ -6111,10 +6223,13 @@ impl S3BucketConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3AccessPointConfiguration {
     /// <p>The access point or multi-region access point policy.</p>
+    #[doc(hidden)]
     pub access_point_policy: std::option::Option<std::string::String>,
     /// <p>The proposed <code>S3PublicAccessBlock</code> configuration to apply to this Amazon S3 access point or multi-region access point.</p>
+    #[doc(hidden)]
     pub public_access_block: std::option::Option<crate::model::S3PublicAccessBlockConfiguration>,
     /// <p>The proposed <code>Internet</code> and <code>VpcConfiguration</code> to apply to this Amazon S3 access point. <code>VpcConfiguration</code> does not apply to multi-region access points. If the access preview is for a new resource and neither is specified, the access preview uses <code>Internet</code> for the network origin. If the access preview is for an existing resource and neither is specified, the access preview uses the exiting network origin.</p>
+    #[doc(hidden)]
     pub network_origin: std::option::Option<crate::model::NetworkOriginConfiguration>,
 }
 impl S3AccessPointConfiguration {
@@ -6142,11 +6257,10 @@ impl std::fmt::Debug for S3AccessPointConfiguration {
         formatter.finish()
     }
 }
-/// See [`S3AccessPointConfiguration`](crate::model::S3AccessPointConfiguration)
+/// See [`S3AccessPointConfiguration`](crate::model::S3AccessPointConfiguration).
 pub mod s3_access_point_configuration {
 
-    /// A builder for [`S3AccessPointConfiguration`](crate::model::S3AccessPointConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`S3AccessPointConfiguration`](crate::model::S3AccessPointConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_point_policy: std::option::Option<std::string::String>,
@@ -6197,7 +6311,7 @@ pub mod s3_access_point_configuration {
             self.network_origin = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3AccessPointConfiguration`](crate::model::S3AccessPointConfiguration)
+        /// Consumes the builder and constructs a [`S3AccessPointConfiguration`](crate::model::S3AccessPointConfiguration).
         pub fn build(self) -> crate::model::S3AccessPointConfiguration {
             crate::model::S3AccessPointConfiguration {
                 access_point_policy: self.access_point_policy,
@@ -6208,7 +6322,7 @@ pub mod s3_access_point_configuration {
     }
 }
 impl S3AccessPointConfiguration {
-    /// Creates a new builder-style object to manufacture [`S3AccessPointConfiguration`](crate::model::S3AccessPointConfiguration)
+    /// Creates a new builder-style object to manufacture [`S3AccessPointConfiguration`](crate::model::S3AccessPointConfiguration).
     pub fn builder() -> crate::model::s3_access_point_configuration::Builder {
         crate::model::s3_access_point_configuration::Builder::default()
     }
@@ -6279,22 +6393,21 @@ impl std::fmt::Debug for InternetConfiguration {
         formatter.finish()
     }
 }
-/// See [`InternetConfiguration`](crate::model::InternetConfiguration)
+/// See [`InternetConfiguration`](crate::model::InternetConfiguration).
 pub mod internet_configuration {
 
-    /// A builder for [`InternetConfiguration`](crate::model::InternetConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`InternetConfiguration`](crate::model::InternetConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`InternetConfiguration`](crate::model::InternetConfiguration)
+        /// Consumes the builder and constructs a [`InternetConfiguration`](crate::model::InternetConfiguration).
         pub fn build(self) -> crate::model::InternetConfiguration {
             crate::model::InternetConfiguration {}
         }
     }
 }
 impl InternetConfiguration {
-    /// Creates a new builder-style object to manufacture [`InternetConfiguration`](crate::model::InternetConfiguration)
+    /// Creates a new builder-style object to manufacture [`InternetConfiguration`](crate::model::InternetConfiguration).
     pub fn builder() -> crate::model::internet_configuration::Builder {
         crate::model::internet_configuration::Builder::default()
     }
@@ -6305,6 +6418,7 @@ impl InternetConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcConfiguration {
     /// <p> If this field is specified, this access point will only allow connections from the specified VPC ID. </p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
 }
 impl VpcConfiguration {
@@ -6320,11 +6434,10 @@ impl std::fmt::Debug for VpcConfiguration {
         formatter.finish()
     }
 }
-/// See [`VpcConfiguration`](crate::model::VpcConfiguration)
+/// See [`VpcConfiguration`](crate::model::VpcConfiguration).
 pub mod vpc_configuration {
 
-    /// A builder for [`VpcConfiguration`](crate::model::VpcConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`VpcConfiguration`](crate::model::VpcConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_id: std::option::Option<std::string::String>,
@@ -6340,7 +6453,7 @@ pub mod vpc_configuration {
             self.vpc_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcConfiguration`](crate::model::VpcConfiguration)
+        /// Consumes the builder and constructs a [`VpcConfiguration`](crate::model::VpcConfiguration).
         pub fn build(self) -> crate::model::VpcConfiguration {
             crate::model::VpcConfiguration {
                 vpc_id: self.vpc_id,
@@ -6349,7 +6462,7 @@ pub mod vpc_configuration {
     }
 }
 impl VpcConfiguration {
-    /// Creates a new builder-style object to manufacture [`VpcConfiguration`](crate::model::VpcConfiguration)
+    /// Creates a new builder-style object to manufacture [`VpcConfiguration`](crate::model::VpcConfiguration).
     pub fn builder() -> crate::model::vpc_configuration::Builder {
         crate::model::vpc_configuration::Builder::default()
     }
@@ -6360,8 +6473,10 @@ impl VpcConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3PublicAccessBlockConfiguration {
     /// <p> Specifies whether Amazon S3 should ignore public ACLs for this bucket and objects in this bucket. </p>
+    #[doc(hidden)]
     pub ignore_public_acls: std::option::Option<bool>,
     /// <p> Specifies whether Amazon S3 should restrict public bucket policies for this bucket. </p>
+    #[doc(hidden)]
     pub restrict_public_buckets: std::option::Option<bool>,
 }
 impl S3PublicAccessBlockConfiguration {
@@ -6382,11 +6497,10 @@ impl std::fmt::Debug for S3PublicAccessBlockConfiguration {
         formatter.finish()
     }
 }
-/// See [`S3PublicAccessBlockConfiguration`](crate::model::S3PublicAccessBlockConfiguration)
+/// See [`S3PublicAccessBlockConfiguration`](crate::model::S3PublicAccessBlockConfiguration).
 pub mod s3_public_access_block_configuration {
 
-    /// A builder for [`S3PublicAccessBlockConfiguration`](crate::model::S3PublicAccessBlockConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`S3PublicAccessBlockConfiguration`](crate::model::S3PublicAccessBlockConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ignore_public_acls: std::option::Option<bool>,
@@ -6413,7 +6527,7 @@ pub mod s3_public_access_block_configuration {
             self.restrict_public_buckets = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3PublicAccessBlockConfiguration`](crate::model::S3PublicAccessBlockConfiguration)
+        /// Consumes the builder and constructs a [`S3PublicAccessBlockConfiguration`](crate::model::S3PublicAccessBlockConfiguration).
         pub fn build(self) -> crate::model::S3PublicAccessBlockConfiguration {
             crate::model::S3PublicAccessBlockConfiguration {
                 ignore_public_acls: self.ignore_public_acls,
@@ -6423,7 +6537,7 @@ pub mod s3_public_access_block_configuration {
     }
 }
 impl S3PublicAccessBlockConfiguration {
-    /// Creates a new builder-style object to manufacture [`S3PublicAccessBlockConfiguration`](crate::model::S3PublicAccessBlockConfiguration)
+    /// Creates a new builder-style object to manufacture [`S3PublicAccessBlockConfiguration`](crate::model::S3PublicAccessBlockConfiguration).
     pub fn builder() -> crate::model::s3_public_access_block_configuration::Builder {
         crate::model::s3_public_access_block_configuration::Builder::default()
     }
@@ -6434,8 +6548,10 @@ impl S3PublicAccessBlockConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3BucketAclGrantConfiguration {
     /// <p>The permissions being granted.</p>
+    #[doc(hidden)]
     pub permission: std::option::Option<crate::model::AclPermission>,
     /// <p>The grantee to whom you’re assigning access rights.</p>
+    #[doc(hidden)]
     pub grantee: std::option::Option<crate::model::AclGrantee>,
 }
 impl S3BucketAclGrantConfiguration {
@@ -6456,11 +6572,10 @@ impl std::fmt::Debug for S3BucketAclGrantConfiguration {
         formatter.finish()
     }
 }
-/// See [`S3BucketAclGrantConfiguration`](crate::model::S3BucketAclGrantConfiguration)
+/// See [`S3BucketAclGrantConfiguration`](crate::model::S3BucketAclGrantConfiguration).
 pub mod s3_bucket_acl_grant_configuration {
 
-    /// A builder for [`S3BucketAclGrantConfiguration`](crate::model::S3BucketAclGrantConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`S3BucketAclGrantConfiguration`](crate::model::S3BucketAclGrantConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission: std::option::Option<crate::model::AclPermission>,
@@ -6490,7 +6605,7 @@ pub mod s3_bucket_acl_grant_configuration {
             self.grantee = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3BucketAclGrantConfiguration`](crate::model::S3BucketAclGrantConfiguration)
+        /// Consumes the builder and constructs a [`S3BucketAclGrantConfiguration`](crate::model::S3BucketAclGrantConfiguration).
         pub fn build(self) -> crate::model::S3BucketAclGrantConfiguration {
             crate::model::S3BucketAclGrantConfiguration {
                 permission: self.permission,
@@ -6500,7 +6615,7 @@ pub mod s3_bucket_acl_grant_configuration {
     }
 }
 impl S3BucketAclGrantConfiguration {
-    /// Creates a new builder-style object to manufacture [`S3BucketAclGrantConfiguration`](crate::model::S3BucketAclGrantConfiguration)
+    /// Creates a new builder-style object to manufacture [`S3BucketAclGrantConfiguration`](crate::model::S3BucketAclGrantConfiguration).
     pub fn builder() -> crate::model::s3_bucket_acl_grant_configuration::Builder {
         crate::model::s3_bucket_acl_grant_configuration::Builder::default()
     }
@@ -6630,8 +6745,10 @@ impl AsRef<str> for AclPermission {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SecretsManagerSecretConfiguration {
     /// <p>The proposed ARN, key ID, or alias of the KMS key.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The proposed resource policy defining who can access or manage the secret.</p>
+    #[doc(hidden)]
     pub secret_policy: std::option::Option<std::string::String>,
 }
 impl SecretsManagerSecretConfiguration {
@@ -6652,11 +6769,10 @@ impl std::fmt::Debug for SecretsManagerSecretConfiguration {
         formatter.finish()
     }
 }
-/// See [`SecretsManagerSecretConfiguration`](crate::model::SecretsManagerSecretConfiguration)
+/// See [`SecretsManagerSecretConfiguration`](crate::model::SecretsManagerSecretConfiguration).
 pub mod secrets_manager_secret_configuration {
 
-    /// A builder for [`SecretsManagerSecretConfiguration`](crate::model::SecretsManagerSecretConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SecretsManagerSecretConfiguration`](crate::model::SecretsManagerSecretConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) kms_key_id: std::option::Option<std::string::String>,
@@ -6686,7 +6802,7 @@ pub mod secrets_manager_secret_configuration {
             self.secret_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`SecretsManagerSecretConfiguration`](crate::model::SecretsManagerSecretConfiguration)
+        /// Consumes the builder and constructs a [`SecretsManagerSecretConfiguration`](crate::model::SecretsManagerSecretConfiguration).
         pub fn build(self) -> crate::model::SecretsManagerSecretConfiguration {
             crate::model::SecretsManagerSecretConfiguration {
                 kms_key_id: self.kms_key_id,
@@ -6696,7 +6812,7 @@ pub mod secrets_manager_secret_configuration {
     }
 }
 impl SecretsManagerSecretConfiguration {
-    /// Creates a new builder-style object to manufacture [`SecretsManagerSecretConfiguration`](crate::model::SecretsManagerSecretConfiguration)
+    /// Creates a new builder-style object to manufacture [`SecretsManagerSecretConfiguration`](crate::model::SecretsManagerSecretConfiguration).
     pub fn builder() -> crate::model::secrets_manager_secret_configuration::Builder {
         crate::model::secrets_manager_secret_configuration::Builder::default()
     }
@@ -6708,9 +6824,11 @@ impl SecretsManagerSecretConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KmsKeyConfiguration {
     /// <p>Resource policy configuration for the KMS key. The only valid value for the name of the key policy is <code>default</code>. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default">Default key policy</a>.</p>
+    #[doc(hidden)]
     pub key_policies:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A list of proposed grant configurations for the KMS key. If the proposed grant configuration is for an existing key, the access preview uses the proposed list of grant configurations in place of the existing grants. Otherwise, the access preview uses the existing grants for the key.</p>
+    #[doc(hidden)]
     pub grants: std::option::Option<std::vec::Vec<crate::model::KmsGrantConfiguration>>,
 }
 impl KmsKeyConfiguration {
@@ -6734,11 +6852,10 @@ impl std::fmt::Debug for KmsKeyConfiguration {
         formatter.finish()
     }
 }
-/// See [`KmsKeyConfiguration`](crate::model::KmsKeyConfiguration)
+/// See [`KmsKeyConfiguration`](crate::model::KmsKeyConfiguration).
 pub mod kms_key_configuration {
 
-    /// A builder for [`KmsKeyConfiguration`](crate::model::KmsKeyConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`KmsKeyConfiguration`](crate::model::KmsKeyConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_policies: std::option::Option<
@@ -6791,7 +6908,7 @@ pub mod kms_key_configuration {
             self.grants = input;
             self
         }
-        /// Consumes the builder and constructs a [`KmsKeyConfiguration`](crate::model::KmsKeyConfiguration)
+        /// Consumes the builder and constructs a [`KmsKeyConfiguration`](crate::model::KmsKeyConfiguration).
         pub fn build(self) -> crate::model::KmsKeyConfiguration {
             crate::model::KmsKeyConfiguration {
                 key_policies: self.key_policies,
@@ -6801,7 +6918,7 @@ pub mod kms_key_configuration {
     }
 }
 impl KmsKeyConfiguration {
-    /// Creates a new builder-style object to manufacture [`KmsKeyConfiguration`](crate::model::KmsKeyConfiguration)
+    /// Creates a new builder-style object to manufacture [`KmsKeyConfiguration`](crate::model::KmsKeyConfiguration).
     pub fn builder() -> crate::model::kms_key_configuration::Builder {
         crate::model::kms_key_configuration::Builder::default()
     }
@@ -6812,14 +6929,19 @@ impl KmsKeyConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KmsGrantConfiguration {
     /// <p>A list of operations that the grant permits.</p>
+    #[doc(hidden)]
     pub operations: std::option::Option<std::vec::Vec<crate::model::KmsGrantOperation>>,
     /// <p>The principal that is given permission to perform the operations that the grant permits.</p>
+    #[doc(hidden)]
     pub grantee_principal: std::option::Option<std::string::String>,
     /// <p>The principal that is given permission to retire the grant by using <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html">RetireGrant</a> operation.</p>
+    #[doc(hidden)]
     pub retiring_principal: std::option::Option<std::string::String>,
     /// <p>Use this structure to propose allowing <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">cryptographic operations</a> in the grant only when the operation request includes the specified <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">encryption context</a>.</p>
+    #[doc(hidden)]
     pub constraints: std::option::Option<crate::model::KmsGrantConstraints>,
     /// <p> The Amazon Web Services account under which the grant was issued. The account is used to propose KMS grants issued by accounts other than the owner of the key.</p>
+    #[doc(hidden)]
     pub issuing_account: std::option::Option<std::string::String>,
 }
 impl KmsGrantConfiguration {
@@ -6855,11 +6977,10 @@ impl std::fmt::Debug for KmsGrantConfiguration {
         formatter.finish()
     }
 }
-/// See [`KmsGrantConfiguration`](crate::model::KmsGrantConfiguration)
+/// See [`KmsGrantConfiguration`](crate::model::KmsGrantConfiguration).
 pub mod kms_grant_configuration {
 
-    /// A builder for [`KmsGrantConfiguration`](crate::model::KmsGrantConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`KmsGrantConfiguration`](crate::model::KmsGrantConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operations: std::option::Option<std::vec::Vec<crate::model::KmsGrantOperation>>,
@@ -6940,7 +7061,7 @@ pub mod kms_grant_configuration {
             self.issuing_account = input;
             self
         }
-        /// Consumes the builder and constructs a [`KmsGrantConfiguration`](crate::model::KmsGrantConfiguration)
+        /// Consumes the builder and constructs a [`KmsGrantConfiguration`](crate::model::KmsGrantConfiguration).
         pub fn build(self) -> crate::model::KmsGrantConfiguration {
             crate::model::KmsGrantConfiguration {
                 operations: self.operations,
@@ -6953,7 +7074,7 @@ pub mod kms_grant_configuration {
     }
 }
 impl KmsGrantConfiguration {
-    /// Creates a new builder-style object to manufacture [`KmsGrantConfiguration`](crate::model::KmsGrantConfiguration)
+    /// Creates a new builder-style object to manufacture [`KmsGrantConfiguration`](crate::model::KmsGrantConfiguration).
     pub fn builder() -> crate::model::kms_grant_configuration::Builder {
         crate::model::kms_grant_configuration::Builder::default()
     }
@@ -6964,9 +7085,11 @@ impl KmsGrantConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KmsGrantConstraints {
     /// <p>A list of key-value pairs that must match the encryption context in the <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">cryptographic operation</a> request. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint.</p>
+    #[doc(hidden)]
     pub encryption_context_equals:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A list of key-value pairs that must be included in the encryption context of the <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">cryptographic operation</a> request. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs.</p>
+    #[doc(hidden)]
     pub encryption_context_subset:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -6994,11 +7117,10 @@ impl std::fmt::Debug for KmsGrantConstraints {
         formatter.finish()
     }
 }
-/// See [`KmsGrantConstraints`](crate::model::KmsGrantConstraints)
+/// See [`KmsGrantConstraints`](crate::model::KmsGrantConstraints).
 pub mod kms_grant_constraints {
 
-    /// A builder for [`KmsGrantConstraints`](crate::model::KmsGrantConstraints)
-    #[non_exhaustive]
+    /// A builder for [`KmsGrantConstraints`](crate::model::KmsGrantConstraints).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encryption_context_equals: std::option::Option<
@@ -7059,7 +7181,7 @@ pub mod kms_grant_constraints {
             self.encryption_context_subset = input;
             self
         }
-        /// Consumes the builder and constructs a [`KmsGrantConstraints`](crate::model::KmsGrantConstraints)
+        /// Consumes the builder and constructs a [`KmsGrantConstraints`](crate::model::KmsGrantConstraints).
         pub fn build(self) -> crate::model::KmsGrantConstraints {
             crate::model::KmsGrantConstraints {
                 encryption_context_equals: self.encryption_context_equals,
@@ -7069,7 +7191,7 @@ pub mod kms_grant_constraints {
     }
 }
 impl KmsGrantConstraints {
-    /// Creates a new builder-style object to manufacture [`KmsGrantConstraints`](crate::model::KmsGrantConstraints)
+    /// Creates a new builder-style object to manufacture [`KmsGrantConstraints`](crate::model::KmsGrantConstraints).
     pub fn builder() -> crate::model::kms_grant_constraints::Builder {
         crate::model::kms_grant_constraints::Builder::default()
     }
@@ -7202,6 +7324,7 @@ impl AsRef<str> for KmsGrantOperation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IamRoleConfiguration {
     /// <p>The proposed trust policy for the IAM role.</p>
+    #[doc(hidden)]
     pub trust_policy: std::option::Option<std::string::String>,
 }
 impl IamRoleConfiguration {
@@ -7217,11 +7340,10 @@ impl std::fmt::Debug for IamRoleConfiguration {
         formatter.finish()
     }
 }
-/// See [`IamRoleConfiguration`](crate::model::IamRoleConfiguration)
+/// See [`IamRoleConfiguration`](crate::model::IamRoleConfiguration).
 pub mod iam_role_configuration {
 
-    /// A builder for [`IamRoleConfiguration`](crate::model::IamRoleConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`IamRoleConfiguration`](crate::model::IamRoleConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) trust_policy: std::option::Option<std::string::String>,
@@ -7237,7 +7359,7 @@ pub mod iam_role_configuration {
             self.trust_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`IamRoleConfiguration`](crate::model::IamRoleConfiguration)
+        /// Consumes the builder and constructs a [`IamRoleConfiguration`](crate::model::IamRoleConfiguration).
         pub fn build(self) -> crate::model::IamRoleConfiguration {
             crate::model::IamRoleConfiguration {
                 trust_policy: self.trust_policy,
@@ -7246,7 +7368,7 @@ pub mod iam_role_configuration {
     }
 }
 impl IamRoleConfiguration {
-    /// Creates a new builder-style object to manufacture [`IamRoleConfiguration`](crate::model::IamRoleConfiguration)
+    /// Creates a new builder-style object to manufacture [`IamRoleConfiguration`](crate::model::IamRoleConfiguration).
     pub fn builder() -> crate::model::iam_role_configuration::Builder {
         crate::model::iam_role_configuration::Builder::default()
     }

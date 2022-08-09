@@ -7,18 +7,25 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Script {
     /// <p>A unique identifier for the Realtime script</p>
+    #[doc(hidden)]
     pub script_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a GameLift script resource and uniquely identifies it. ARNs are unique across all Regions. In a GameLift script ARN, the resource ID matches the <i>ScriptId</i> value.</p>
+    #[doc(hidden)]
     pub script_arn: std::option::Option<std::string::String>,
     /// <p>A descriptive label that is associated with a script. Script names do not need to be unique.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Version information that is associated with a build or script. Version strings do not need to be unique.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The file size of the uploaded Realtime script, expressed in bytes. When files are uploaded from an S3 location, this value remains at "0".</p>
+    #[doc(hidden)]
     pub size_on_disk: std::option::Option<i64>,
     /// <p>A time stamp indicating when this data object was created. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The location in Amazon S3 where build or script files are stored for access by Amazon GameLift. This location is specified in <code>CreateBuild</code>, <code>CreateScript</code>, and <code>UpdateScript</code> requests. </p>
+    #[doc(hidden)]
     pub storage_location: std::option::Option<crate::model::S3Location>,
 }
 impl Script {
@@ -64,11 +71,10 @@ impl std::fmt::Debug for Script {
         formatter.finish()
     }
 }
-/// See [`Script`](crate::model::Script)
+/// See [`Script`](crate::model::Script).
 pub mod script {
 
-    /// A builder for [`Script`](crate::model::Script)
-    #[non_exhaustive]
+    /// A builder for [`Script`](crate::model::Script).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) script_id: std::option::Option<std::string::String>,
@@ -156,7 +162,7 @@ pub mod script {
             self.storage_location = input;
             self
         }
-        /// Consumes the builder and constructs a [`Script`](crate::model::Script)
+        /// Consumes the builder and constructs a [`Script`](crate::model::Script).
         pub fn build(self) -> crate::model::Script {
             crate::model::Script {
                 script_id: self.script_id,
@@ -171,7 +177,7 @@ pub mod script {
     }
 }
 impl Script {
-    /// Creates a new builder-style object to manufacture [`Script`](crate::model::Script)
+    /// Creates a new builder-style object to manufacture [`Script`](crate::model::Script).
     pub fn builder() -> crate::model::script::Builder {
         crate::model::script::Builder::default()
     }
@@ -184,12 +190,16 @@ pub struct S3Location {
     /// <p>An Amazon S3 bucket identifier. This is the name of the S3 bucket.</p> <note>
     /// <p>GameLift currently does not support uploading from Amazon S3 buckets with names that contain a dot (.).</p>
     /// </note>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The name of the zip file that contains the build files or script files. </p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that allows Amazon GameLift to access the S3 bucket.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The version of the file, if object versioning is turned on for the bucket. Amazon GameLift uses this information when retrieving files from an S3 bucket that you own. Use this parameter to specify a specific version of the file. If not set, the latest version of the file is retrieved. </p>
+    #[doc(hidden)]
     pub object_version: std::option::Option<std::string::String>,
 }
 impl S3Location {
@@ -222,11 +232,10 @@ impl std::fmt::Debug for S3Location {
         formatter.finish()
     }
 }
-/// See [`S3Location`](crate::model::S3Location)
+/// See [`S3Location`](crate::model::S3Location).
 pub mod s3_location {
 
-    /// A builder for [`S3Location`](crate::model::S3Location)
-    #[non_exhaustive]
+    /// A builder for [`S3Location`](crate::model::S3Location).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -282,7 +291,7 @@ pub mod s3_location {
             self.object_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location)
+        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location).
         pub fn build(self) -> crate::model::S3Location {
             crate::model::S3Location {
                 bucket: self.bucket,
@@ -294,7 +303,7 @@ pub mod s3_location {
     }
 }
 impl S3Location {
-    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location)
+    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location).
     pub fn builder() -> crate::model::s3_location::Builder {
         crate::model::s3_location::Builder::default()
     }
@@ -308,10 +317,13 @@ impl S3Location {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuntimeConfiguration {
     /// <p>A collection of server process configurations that identify what server processes to run on each instance in a fleet.</p>
+    #[doc(hidden)]
     pub server_processes: std::option::Option<std::vec::Vec<crate::model::ServerProcess>>,
     /// <p>The number of game sessions in status <code>ACTIVATING</code> to allow on an instance. This setting limits the instance resources that can be used for new game activations at any one time.</p>
+    #[doc(hidden)]
     pub max_concurrent_game_session_activations: std::option::Option<i32>,
     /// <p>The maximum amount of time (in seconds) allowed to launch a new game session and have it report ready to host players. During this time, the game session is in status <code>ACTIVATING</code>. If the game session does not become active before the timeout, it is ended and the game session status is changed to <code>TERMINATED</code>.</p>
+    #[doc(hidden)]
     pub game_session_activation_timeout_seconds: std::option::Option<i32>,
 }
 impl RuntimeConfiguration {
@@ -343,11 +355,10 @@ impl std::fmt::Debug for RuntimeConfiguration {
         formatter.finish()
     }
 }
-/// See [`RuntimeConfiguration`](crate::model::RuntimeConfiguration)
+/// See [`RuntimeConfiguration`](crate::model::RuntimeConfiguration).
 pub mod runtime_configuration {
 
-    /// A builder for [`RuntimeConfiguration`](crate::model::RuntimeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`RuntimeConfiguration`](crate::model::RuntimeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) server_processes:
@@ -401,7 +412,7 @@ pub mod runtime_configuration {
             self.game_session_activation_timeout_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuntimeConfiguration`](crate::model::RuntimeConfiguration)
+        /// Consumes the builder and constructs a [`RuntimeConfiguration`](crate::model::RuntimeConfiguration).
         pub fn build(self) -> crate::model::RuntimeConfiguration {
             crate::model::RuntimeConfiguration {
                 server_processes: self.server_processes,
@@ -414,7 +425,7 @@ pub mod runtime_configuration {
     }
 }
 impl RuntimeConfiguration {
-    /// Creates a new builder-style object to manufacture [`RuntimeConfiguration`](crate::model::RuntimeConfiguration)
+    /// Creates a new builder-style object to manufacture [`RuntimeConfiguration`](crate::model::RuntimeConfiguration).
     pub fn builder() -> crate::model::runtime_configuration::Builder {
         crate::model::runtime_configuration::Builder::default()
     }
@@ -429,10 +440,13 @@ pub struct ServerProcess {
     /// <li> <p>Windows (custom game builds only): <code>C:\game</code>. Example: "<code>C:\game\MyGame\server.exe</code>" </p> </li>
     /// <li> <p>Linux: <code>/local/game</code>. Examples: "<code>/local/game/MyGame/server.exe</code>" or "<code>/local/game/MyRealtimeScript.js</code>"</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub launch_path: std::option::Option<std::string::String>,
     /// <p>An optional list of parameters to pass to the server executable or Realtime script on launch.</p>
+    #[doc(hidden)]
     pub parameters: std::option::Option<std::string::String>,
     /// <p>The number of server processes using this configuration that run concurrently on each instance.</p>
+    #[doc(hidden)]
     pub concurrent_executions: std::option::Option<i32>,
 }
 impl ServerProcess {
@@ -462,11 +476,10 @@ impl std::fmt::Debug for ServerProcess {
         formatter.finish()
     }
 }
-/// See [`ServerProcess`](crate::model::ServerProcess)
+/// See [`ServerProcess`](crate::model::ServerProcess).
 pub mod server_process {
 
-    /// A builder for [`ServerProcess`](crate::model::ServerProcess)
-    #[non_exhaustive]
+    /// A builder for [`ServerProcess`](crate::model::ServerProcess).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) launch_path: std::option::Option<std::string::String>,
@@ -512,7 +525,7 @@ pub mod server_process {
             self.concurrent_executions = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerProcess`](crate::model::ServerProcess)
+        /// Consumes the builder and constructs a [`ServerProcess`](crate::model::ServerProcess).
         pub fn build(self) -> crate::model::ServerProcess {
             crate::model::ServerProcess {
                 launch_path: self.launch_path,
@@ -523,7 +536,7 @@ pub mod server_process {
     }
 }
 impl ServerProcess {
-    /// Creates a new builder-style object to manufacture [`ServerProcess`](crate::model::ServerProcess)
+    /// Creates a new builder-style object to manufacture [`ServerProcess`](crate::model::ServerProcess).
     pub fn builder() -> crate::model::server_process::Builder {
         crate::model::server_process::Builder::default()
     }
@@ -534,50 +547,67 @@ impl ServerProcess {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MatchmakingConfiguration {
     /// <p>A unique identifier for the matchmaking configuration. This name is used to identify the configuration associated with a matchmaking request or ticket.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a GameLift matchmaking configuration resource and uniquely identifies it. ARNs are unique across all Regions. Format is <code>arn:aws:gamelift:
     /// <region>
     /// ::matchmakingconfiguration/
     /// <matchmaking configuration name></matchmaking>
     /// </region></code>. In a GameLift configuration ARN, the resource ID matches the <i>Name</i> value.</p>
+    #[doc(hidden)]
     pub configuration_arn: std::option::Option<std::string::String>,
     /// <p>A descriptive label that is associated with matchmaking configuration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a GameLift game session queue resource and uniquely identifies it. ARNs are unique across all Regions. Format is <code>arn:aws:gamelift:
     /// <region>
     /// ::gamesessionqueue/
     /// <queue name></queue>
     /// </region></code>. Queues can be located in any Region. Queues are used to start new GameLift-hosted game sessions for matches that are created with this matchmaking configuration. This property is not set when <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.</p>
+    #[doc(hidden)]
     pub game_session_queue_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The maximum duration, in seconds, that a matchmaking ticket can remain in process before timing out. Requests that fail due to timing out can be resubmitted as needed.</p>
+    #[doc(hidden)]
     pub request_timeout_seconds: std::option::Option<i32>,
     /// <p>The length of time (in seconds) to wait for players to accept a proposed match, if acceptance is required. If any player rejects the match or fails to accept before the timeout, the ticket continues to look for an acceptable match.</p>
+    #[doc(hidden)]
     pub acceptance_timeout_seconds: std::option::Option<i32>,
     /// <p>A flag that indicates whether a match that was created with this configuration must be accepted by the matched players. To require acceptance, set to TRUE. When this option is enabled, matchmaking tickets use the status <code>REQUIRES_ACCEPTANCE</code> to indicate when a completed potential match is waiting for player acceptance.</p>
+    #[doc(hidden)]
     pub acceptance_required: std::option::Option<bool>,
     /// <p>A unique identifier for the matchmaking rule set to use with this configuration. A matchmaking configuration can only use rule sets that are defined in the same Region.</p>
+    #[doc(hidden)]
     pub rule_set_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) associated with the GameLift matchmaking rule set resource that this configuration uses.</p>
+    #[doc(hidden)]
     pub rule_set_arn: std::option::Option<std::string::String>,
     /// <p>An SNS topic ARN that is set up to receive matchmaking notifications.</p>
+    #[doc(hidden)]
     pub notification_target: std::option::Option<std::string::String>,
     /// <p>The number of player slots in a match to keep open for future players. For example, if the configuration's rule set specifies a match for a single 12-person team, and the additional player count is set to 2, only 10 players are selected for the match. This parameter is not used when <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.</p>
+    #[doc(hidden)]
     pub additional_player_count: std::option::Option<i32>,
     /// <p>Information to attach to all events related to the matchmaking configuration. </p>
+    #[doc(hidden)]
     pub custom_event_data: std::option::Option<std::string::String>,
     /// <p>A time stamp indicating when this data object was created. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A set of custom properties for a game session, formatted as key:value pairs. These properties are passed to a game server process in the <code>GameSession</code> object with a request to start a new game session (see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession">Start a Game Session</a>). This information is added to the new <code>GameSession</code> object that is created for a successful match. This parameter is not used when <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.</p>
+    #[doc(hidden)]
     pub game_properties: std::option::Option<std::vec::Vec<crate::model::GameProperty>>,
     /// <p>A set of custom game session properties, formatted as a single string value. This data is passed to a game server process in the <code>GameSession</code> object with a request to start a new game session (see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession">Start a Game Session</a>). This information is added to the new <code>GameSession</code> object that is created for a successful match. This parameter is not used when <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.</p>
+    #[doc(hidden)]
     pub game_session_data: std::option::Option<std::string::String>,
     /// <p>The method used to backfill game sessions created with this matchmaking configuration. MANUAL indicates that the game makes backfill requests or does not use the match backfill feature. AUTOMATIC indicates that GameLift creates <code>StartMatchBackfill</code> requests whenever a game session has one or more open slots. Learn more about manual and automatic backfill in <a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-backfill.html">Backfill existing games with FlexMatch</a>. Automatic backfill is not available when <code>FlexMatchMode</code> is set to <code>STANDALONE</code>.</p>
+    #[doc(hidden)]
     pub backfill_mode: std::option::Option<crate::model::BackfillMode>,
     /// <p>Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone matchmaking solution. </p>
     /// <ul>
     /// <li> <p> <b>STANDALONE</b> - FlexMatch forms matches and returns match information, including players and team assignments, in a <a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-events.html#match-events-matchmakingsucceeded"> MatchmakingSucceeded</a> event.</p> </li>
     /// <li> <p> <b>WITH_QUEUE</b> - FlexMatch forms matches and uses the specified GameLift queue to start a game session for the match. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub flex_match_mode: std::option::Option<crate::model::FlexMatchMode>,
 }
 impl MatchmakingConfiguration {
@@ -688,11 +718,10 @@ impl std::fmt::Debug for MatchmakingConfiguration {
         formatter.finish()
     }
 }
-/// See [`MatchmakingConfiguration`](crate::model::MatchmakingConfiguration)
+/// See [`MatchmakingConfiguration`](crate::model::MatchmakingConfiguration).
 pub mod matchmaking_configuration {
 
-    /// A builder for [`MatchmakingConfiguration`](crate::model::MatchmakingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MatchmakingConfiguration`](crate::model::MatchmakingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -950,7 +979,7 @@ pub mod matchmaking_configuration {
             self.flex_match_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`MatchmakingConfiguration`](crate::model::MatchmakingConfiguration)
+        /// Consumes the builder and constructs a [`MatchmakingConfiguration`](crate::model::MatchmakingConfiguration).
         pub fn build(self) -> crate::model::MatchmakingConfiguration {
             crate::model::MatchmakingConfiguration {
                 name: self.name,
@@ -975,7 +1004,7 @@ pub mod matchmaking_configuration {
     }
 }
 impl MatchmakingConfiguration {
-    /// Creates a new builder-style object to manufacture [`MatchmakingConfiguration`](crate::model::MatchmakingConfiguration)
+    /// Creates a new builder-style object to manufacture [`MatchmakingConfiguration`](crate::model::MatchmakingConfiguration).
     pub fn builder() -> crate::model::matchmaking_configuration::Builder {
         crate::model::matchmaking_configuration::Builder::default()
     }
@@ -1096,8 +1125,10 @@ impl AsRef<str> for BackfillMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GameProperty {
     /// <p>The game property identifier.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The game property value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl GameProperty {
@@ -1118,11 +1149,10 @@ impl std::fmt::Debug for GameProperty {
         formatter.finish()
     }
 }
-/// See [`GameProperty`](crate::model::GameProperty)
+/// See [`GameProperty`](crate::model::GameProperty).
 pub mod game_property {
 
-    /// A builder for [`GameProperty`](crate::model::GameProperty)
-    #[non_exhaustive]
+    /// A builder for [`GameProperty`](crate::model::GameProperty).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1149,7 +1179,7 @@ pub mod game_property {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameProperty`](crate::model::GameProperty)
+        /// Consumes the builder and constructs a [`GameProperty`](crate::model::GameProperty).
         pub fn build(self) -> crate::model::GameProperty {
             crate::model::GameProperty {
                 key: self.key,
@@ -1159,7 +1189,7 @@ pub mod game_property {
     }
 }
 impl GameProperty {
-    /// Creates a new builder-style object to manufacture [`GameProperty`](crate::model::GameProperty)
+    /// Creates a new builder-style object to manufacture [`GameProperty`](crate::model::GameProperty).
     pub fn builder() -> crate::model::game_property::Builder {
         crate::model::game_property::Builder::default()
     }
@@ -1172,27 +1202,36 @@ impl GameProperty {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GameSessionQueue {
     /// <p>A descriptive label that is associated with game session queue. Queue names must be unique within each Region.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a GameLift game session queue resource and uniquely identifies it. ARNs are unique across all Regions. Format is <code>arn:aws:gamelift:
     /// <region>
     /// ::gamesessionqueue/
     /// <queue name></queue>
     /// </region></code>. In a GameLift game session queue ARN, the resource ID matches the <i>Name</i> value.</p>
+    #[doc(hidden)]
     pub game_session_queue_arn: std::option::Option<std::string::String>,
     /// <p>The maximum time, in seconds, that a new game session placement request remains in the queue. When a request exceeds this time, the game session placement changes to a <code>TIMED_OUT</code> status.</p>
+    #[doc(hidden)]
     pub timeout_in_seconds: std::option::Option<i32>,
     /// <p>A set of policies that act as a sliding cap on player latency. FleetIQ works to deliver low latency for most players in a game session. These policies ensure that no individual player can be placed into a game with unreasonably high latency. Use multiple policies to gradually relax latency requirements a step at a time. Multiple policies are applied based on their maximum allowed latency, starting with the lowest value. </p>
+    #[doc(hidden)]
     pub player_latency_policies:
         std::option::Option<std::vec::Vec<crate::model::PlayerLatencyPolicy>>,
     /// <p>A list of fleets and/or fleet aliases that can be used to fulfill game session placement requests in the queue. Destinations are identified by either a fleet ARN or a fleet alias ARN, and are listed in order of placement preference.</p>
+    #[doc(hidden)]
     pub destinations: std::option::Option<std::vec::Vec<crate::model::GameSessionQueueDestination>>,
     /// <p>A list of locations where a queue is allowed to place new game sessions. Locations are specified in the form of Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can be placed in any queue location. </p>
+    #[doc(hidden)]
     pub filter_configuration: std::option::Option<crate::model::FilterConfiguration>,
     /// <p>Custom settings to use when prioritizing destinations and locations for game session placements. This configuration replaces the FleetIQ default prioritization process. Priority types that are not explicitly named will be automatically applied at the end of the prioritization process. </p>
+    #[doc(hidden)]
     pub priority_configuration: std::option::Option<crate::model::PriorityConfiguration>,
     /// <p> Information that is added to all events that are related to this game session queue. </p>
+    #[doc(hidden)]
     pub custom_event_data: std::option::Option<std::string::String>,
     /// <p>An SNS topic ARN that is set up to receive game session placement notifications. See <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queue-notification.html"> Setting up notifications for game session placement</a>.</p>
+    #[doc(hidden)]
     pub notification_target: std::option::Option<std::string::String>,
 }
 impl GameSessionQueue {
@@ -1258,11 +1297,10 @@ impl std::fmt::Debug for GameSessionQueue {
         formatter.finish()
     }
 }
-/// See [`GameSessionQueue`](crate::model::GameSessionQueue)
+/// See [`GameSessionQueue`](crate::model::GameSessionQueue).
 pub mod game_session_queue {
 
-    /// A builder for [`GameSessionQueue`](crate::model::GameSessionQueue)
-    #[non_exhaustive]
+    /// A builder for [`GameSessionQueue`](crate::model::GameSessionQueue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1412,7 +1450,7 @@ pub mod game_session_queue {
             self.notification_target = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameSessionQueue`](crate::model::GameSessionQueue)
+        /// Consumes the builder and constructs a [`GameSessionQueue`](crate::model::GameSessionQueue).
         pub fn build(self) -> crate::model::GameSessionQueue {
             crate::model::GameSessionQueue {
                 name: self.name,
@@ -1429,7 +1467,7 @@ pub mod game_session_queue {
     }
 }
 impl GameSessionQueue {
-    /// Creates a new builder-style object to manufacture [`GameSessionQueue`](crate::model::GameSessionQueue)
+    /// Creates a new builder-style object to manufacture [`GameSessionQueue`](crate::model::GameSessionQueue).
     pub fn builder() -> crate::model::game_session_queue::Builder {
         crate::model::game_session_queue::Builder::default()
     }
@@ -1452,8 +1490,10 @@ pub struct PriorityConfiguration {
     /// <li> <p> <code>DESTINATION</code> -- FleetIQ prioritizes based on the order that destinations are listed in the queue configuration.</p> </li>
     /// <li> <p> <code>LOCATION</code> -- FleetIQ prioritizes based on the provided order of locations, as defined in <code>LocationOrder</code>. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub priority_order: std::option::Option<std::vec::Vec<crate::model::PriorityType>>,
     /// <p>The prioritization order to use for fleet locations, when the <code>PriorityOrder</code> property includes <code>LOCATION</code>. Locations are identified by Amazon Web Services Region codes such as <code>us-west-2</code>. Each location can only be listed once. </p>
+    #[doc(hidden)]
     pub location_order: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl PriorityConfiguration {
@@ -1480,11 +1520,10 @@ impl std::fmt::Debug for PriorityConfiguration {
         formatter.finish()
     }
 }
-/// See [`PriorityConfiguration`](crate::model::PriorityConfiguration)
+/// See [`PriorityConfiguration`](crate::model::PriorityConfiguration).
 pub mod priority_configuration {
 
-    /// A builder for [`PriorityConfiguration`](crate::model::PriorityConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`PriorityConfiguration`](crate::model::PriorityConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) priority_order: std::option::Option<std::vec::Vec<crate::model::PriorityType>>,
@@ -1541,7 +1580,7 @@ pub mod priority_configuration {
             self.location_order = input;
             self
         }
-        /// Consumes the builder and constructs a [`PriorityConfiguration`](crate::model::PriorityConfiguration)
+        /// Consumes the builder and constructs a [`PriorityConfiguration`](crate::model::PriorityConfiguration).
         pub fn build(self) -> crate::model::PriorityConfiguration {
             crate::model::PriorityConfiguration {
                 priority_order: self.priority_order,
@@ -1551,7 +1590,7 @@ pub mod priority_configuration {
     }
 }
 impl PriorityConfiguration {
-    /// Creates a new builder-style object to manufacture [`PriorityConfiguration`](crate::model::PriorityConfiguration)
+    /// Creates a new builder-style object to manufacture [`PriorityConfiguration`](crate::model::PriorityConfiguration).
     pub fn builder() -> crate::model::priority_configuration::Builder {
         crate::model::priority_configuration::Builder::default()
     }
@@ -1626,6 +1665,7 @@ impl AsRef<str> for PriorityType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FilterConfiguration {
     /// <p> A list of locations to allow game session placement in, in the form of Amazon Web Services Region codes such as <code>us-west-2</code>. </p>
+    #[doc(hidden)]
     pub allowed_locations: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl FilterConfiguration {
@@ -1641,11 +1681,10 @@ impl std::fmt::Debug for FilterConfiguration {
         formatter.finish()
     }
 }
-/// See [`FilterConfiguration`](crate::model::FilterConfiguration)
+/// See [`FilterConfiguration`](crate::model::FilterConfiguration).
 pub mod filter_configuration {
 
-    /// A builder for [`FilterConfiguration`](crate::model::FilterConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`FilterConfiguration`](crate::model::FilterConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allowed_locations: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1670,7 +1709,7 @@ pub mod filter_configuration {
             self.allowed_locations = input;
             self
         }
-        /// Consumes the builder and constructs a [`FilterConfiguration`](crate::model::FilterConfiguration)
+        /// Consumes the builder and constructs a [`FilterConfiguration`](crate::model::FilterConfiguration).
         pub fn build(self) -> crate::model::FilterConfiguration {
             crate::model::FilterConfiguration {
                 allowed_locations: self.allowed_locations,
@@ -1679,7 +1718,7 @@ pub mod filter_configuration {
     }
 }
 impl FilterConfiguration {
-    /// Creates a new builder-style object to manufacture [`FilterConfiguration`](crate::model::FilterConfiguration)
+    /// Creates a new builder-style object to manufacture [`FilterConfiguration`](crate::model::FilterConfiguration).
     pub fn builder() -> crate::model::filter_configuration::Builder {
         crate::model::filter_configuration::Builder::default()
     }
@@ -1691,6 +1730,7 @@ impl FilterConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GameSessionQueueDestination {
     /// <p>The Amazon Resource Name (ARN) that is assigned to fleet or fleet alias. ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier across all Regions. </p>
+    #[doc(hidden)]
     pub destination_arn: std::option::Option<std::string::String>,
 }
 impl GameSessionQueueDestination {
@@ -1706,11 +1746,10 @@ impl std::fmt::Debug for GameSessionQueueDestination {
         formatter.finish()
     }
 }
-/// See [`GameSessionQueueDestination`](crate::model::GameSessionQueueDestination)
+/// See [`GameSessionQueueDestination`](crate::model::GameSessionQueueDestination).
 pub mod game_session_queue_destination {
 
-    /// A builder for [`GameSessionQueueDestination`](crate::model::GameSessionQueueDestination)
-    #[non_exhaustive]
+    /// A builder for [`GameSessionQueueDestination`](crate::model::GameSessionQueueDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination_arn: std::option::Option<std::string::String>,
@@ -1729,7 +1768,7 @@ pub mod game_session_queue_destination {
             self.destination_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameSessionQueueDestination`](crate::model::GameSessionQueueDestination)
+        /// Consumes the builder and constructs a [`GameSessionQueueDestination`](crate::model::GameSessionQueueDestination).
         pub fn build(self) -> crate::model::GameSessionQueueDestination {
             crate::model::GameSessionQueueDestination {
                 destination_arn: self.destination_arn,
@@ -1738,7 +1777,7 @@ pub mod game_session_queue_destination {
     }
 }
 impl GameSessionQueueDestination {
-    /// Creates a new builder-style object to manufacture [`GameSessionQueueDestination`](crate::model::GameSessionQueueDestination)
+    /// Creates a new builder-style object to manufacture [`GameSessionQueueDestination`](crate::model::GameSessionQueueDestination).
     pub fn builder() -> crate::model::game_session_queue_destination::Builder {
         crate::model::game_session_queue_destination::Builder::default()
     }
@@ -1750,8 +1789,10 @@ impl GameSessionQueueDestination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PlayerLatencyPolicy {
     /// <p>The maximum latency value that is allowed for any player, in milliseconds. All policies must have a value set for this property.</p>
+    #[doc(hidden)]
     pub maximum_individual_player_latency_milliseconds: std::option::Option<i32>,
     /// <p>The length of time, in seconds, that the policy is enforced while placing a new game session. A null value for this property means that the policy is enforced until the queue times out.</p>
+    #[doc(hidden)]
     pub policy_duration_seconds: std::option::Option<i32>,
 }
 impl PlayerLatencyPolicy {
@@ -1775,11 +1816,10 @@ impl std::fmt::Debug for PlayerLatencyPolicy {
         formatter.finish()
     }
 }
-/// See [`PlayerLatencyPolicy`](crate::model::PlayerLatencyPolicy)
+/// See [`PlayerLatencyPolicy`](crate::model::PlayerLatencyPolicy).
 pub mod player_latency_policy {
 
-    /// A builder for [`PlayerLatencyPolicy`](crate::model::PlayerLatencyPolicy)
-    #[non_exhaustive]
+    /// A builder for [`PlayerLatencyPolicy`](crate::model::PlayerLatencyPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) maximum_individual_player_latency_milliseconds: std::option::Option<i32>,
@@ -1809,7 +1849,7 @@ pub mod player_latency_policy {
             self.policy_duration_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`PlayerLatencyPolicy`](crate::model::PlayerLatencyPolicy)
+        /// Consumes the builder and constructs a [`PlayerLatencyPolicy`](crate::model::PlayerLatencyPolicy).
         pub fn build(self) -> crate::model::PlayerLatencyPolicy {
             crate::model::PlayerLatencyPolicy {
                 maximum_individual_player_latency_milliseconds: self
@@ -1820,7 +1860,7 @@ pub mod player_latency_policy {
     }
 }
 impl PlayerLatencyPolicy {
-    /// Creates a new builder-style object to manufacture [`PlayerLatencyPolicy`](crate::model::PlayerLatencyPolicy)
+    /// Creates a new builder-style object to manufacture [`PlayerLatencyPolicy`](crate::model::PlayerLatencyPolicy).
     pub fn builder() -> crate::model::player_latency_policy::Builder {
         crate::model::player_latency_policy::Builder::default()
     }
@@ -1842,28 +1882,40 @@ pub struct GameSession {
     /// <custom id string or idempotency token></custom>
     /// </fleet>
     /// </region></code>.</p>
+    #[doc(hidden)]
     pub game_session_id: std::option::Option<std::string::String>,
     /// <p>A descriptive label that is associated with a game session. Session names do not need to be unique.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the fleet that the game session is running on.</p>
+    #[doc(hidden)]
     pub fleet_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) associated with the GameLift fleet that this game session is running on. </p>
+    #[doc(hidden)]
     pub fleet_arn: std::option::Option<std::string::String>,
     /// <p>A time stamp indicating when this data object was created. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A time stamp indicating when this data object was terminated. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub termination_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Number of players currently in the game session.</p>
+    #[doc(hidden)]
     pub current_player_session_count: std::option::Option<i32>,
     /// <p>The maximum number of players that can be connected simultaneously to the game session.</p>
+    #[doc(hidden)]
     pub maximum_player_session_count: std::option::Option<i32>,
     /// <p>Current status of the game session. A game session must have an <code>ACTIVE</code> status to have player sessions.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::GameSessionStatus>,
     /// <p>Provides additional information about game session status. <code>INTERRUPTED</code> indicates that the game session was hosted on a spot instance that was reclaimed, causing the active game session to be terminated.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<crate::model::GameSessionStatusReason>,
     /// <p>A set of custom properties for a game session, formatted as key:value pairs. These properties are passed to a game server process in the <code>GameSession</code> object with a request to start a new game session (see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession">Start a Game Session</a>). You can search for active game sessions based on this custom data with <code>SearchGameSessions</code>.</p>
+    #[doc(hidden)]
     pub game_properties: std::option::Option<std::vec::Vec<crate::model::GameProperty>>,
     /// <p>The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address and port number.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The DNS identifier assigned to the instance that is running the game session. Values have the following format:</p>
     /// <ul>
@@ -1880,19 +1932,26 @@ pub struct GameSession {
     /// </unique></code>. (See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#concepts-public-addresses">Amazon EC2 Instance IP Addressing</a>.)</p> </li>
     /// </ul>
     /// <p>When connecting to a game session that is running on a TLS-enabled fleet, you must use the DNS name, not the IP address.</p>
+    #[doc(hidden)]
     pub dns_name: std::option::Option<std::string::String>,
     /// <p>The port number for the game session. To connect to a GameLift game server, an app needs both the IP address and port number.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>Indicates whether or not the game session is accepting new players.</p>
+    #[doc(hidden)]
     pub player_session_creation_policy:
         std::option::Option<crate::model::PlayerSessionCreationPolicy>,
     /// <p>A unique identifier for a player. This ID is used to enforce a resource protection policy (if one exists), that limits the number of game sessions a player can create.</p>
+    #[doc(hidden)]
     pub creator_id: std::option::Option<std::string::String>,
     /// <p>A set of custom game session properties, formatted as a single string value. This data is passed to a game server process in the <code>GameSession</code> object with a request to start a new game session (see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession">Start a Game Session</a>).</p>
+    #[doc(hidden)]
     pub game_session_data: std::option::Option<std::string::String>,
     /// <p>Information about the matchmaking process that was used to create the game session. It is in JSON syntax, formatted as a string. In addition the matchmaking configuration used, it contains data on all players assigned to the match, including player attributes and team assignments. For more details on matchmaker data, see <a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data">Match Data</a>. Matchmaker data is useful when requesting match backfills, and is updated whenever new players are added during a successful backfill (see <a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_StartMatchBackfill.html">StartMatchBackfill</a>). </p>
+    #[doc(hidden)]
     pub matchmaker_data: std::option::Option<std::string::String>,
     /// <p>The fleet location where the game session is running. This value might specify the fleet's home Region or a remote location. Location is expressed as an Amazon Web Services Region code such as <code>us-west-2</code>. </p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
 }
 impl GameSession {
@@ -2030,11 +2089,10 @@ impl std::fmt::Debug for GameSession {
         formatter.finish()
     }
 }
-/// See [`GameSession`](crate::model::GameSession)
+/// See [`GameSession`](crate::model::GameSession).
 pub mod game_session {
 
-    /// A builder for [`GameSession`](crate::model::GameSession)
-    #[non_exhaustive]
+    /// A builder for [`GameSession`](crate::model::GameSession).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) game_session_id: std::option::Option<std::string::String>,
@@ -2327,7 +2385,7 @@ pub mod game_session {
             self.location = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameSession`](crate::model::GameSession)
+        /// Consumes the builder and constructs a [`GameSession`](crate::model::GameSession).
         pub fn build(self) -> crate::model::GameSession {
             crate::model::GameSession {
                 game_session_id: self.game_session_id,
@@ -2354,7 +2412,7 @@ pub mod game_session {
     }
 }
 impl GameSession {
-    /// Creates a new builder-style object to manufacture [`GameSession`](crate::model::GameSession)
+    /// Creates a new builder-style object to manufacture [`GameSession`](crate::model::GameSession).
     pub fn builder() -> crate::model::game_session::Builder {
         crate::model::game_session::Builder::default()
     }
@@ -2597,12 +2655,16 @@ impl AsRef<str> for ProtectionPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GameServerGroup {
     /// <p>A developer-defined identifier for the game server group. The name is unique for each Region in each Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub game_server_group_name: std::option::Option<std::string::String>,
     /// <p>A generated unique ID for the game server group.</p>
+    #[doc(hidden)]
     pub game_server_group_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling instances in the corresponding Auto Scaling group. </p>
+    #[doc(hidden)]
     pub instance_definitions: std::option::Option<std::vec::Vec<crate::model::InstanceDefinition>>,
     /// <p>Indicates how GameLift FleetIQ balances the use of Spot Instances and On-Demand Instances in the game server group. Method options include the following:</p>
     /// <ul>
@@ -2610,11 +2672,14 @@ pub struct GameServerGroup {
     /// <li> <p> <code>SPOT_PREFERRED</code> - (default value) Spot Instances are used whenever available in the game server group. If Spot Instances are unavailable, the game server group continues to provide hosting capacity by falling back to On-Demand Instances. Existing nonviable Spot Instances are terminated (after current gameplay ends) and are replaced with new On-Demand Instances.</p> </li>
     /// <li> <p> <code>ON_DEMAND_ONLY</code> - Only On-Demand Instances are used in the game server group. No Spot Instances are used, even when available, while this balancing strategy is in force.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub balancing_strategy: std::option::Option<crate::model::BalancingStrategy>,
     /// <p>A flag that indicates whether instances in the game server group are protected from early termination. Unprotected instances that have active game servers running might be terminated during a scale-down event, causing players to be dropped from the game. Protected instances cannot be terminated while there are active game servers running except in the event of a forced game server group deletion (see ). An exception to this is with Spot Instances, which can be terminated by Amazon Web Services regardless of protection status. </p>
+    #[doc(hidden)]
     pub game_server_protection_policy:
         std::option::Option<crate::model::GameServerProtectionPolicy>,
     /// <p>A generated unique ID for the Amazon EC2 Auto Scaling group that is associated with this game server group.</p>
+    #[doc(hidden)]
     pub auto_scaling_group_arn: std::option::Option<std::string::String>,
     /// <p>The current status of the game server group. Possible statuses include:</p>
     /// <ul>
@@ -2626,14 +2691,19 @@ pub struct GameServerGroup {
     /// <li> <p> <code>DELETED</code> - The game server group has been successfully deleted. </p> </li>
     /// <li> <p> <code>ERROR</code> - The asynchronous processes of activating or deleting a game server group has failed, resulting in an error state.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::GameServerGroupStatus>,
     /// <p>Additional information about the current game server group status. This information might provide additional insight on groups that are in <code>ERROR</code> status.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>A list of activities that are currently suspended for this game server group. If this property is empty, all activities are occurring.</p>
+    #[doc(hidden)]
     pub suspended_actions: std::option::Option<std::vec::Vec<crate::model::GameServerGroupAction>>,
     /// <p>A time stamp indicating when this data object was created. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp that indicates when this game server group was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GameServerGroup {
@@ -2723,11 +2793,10 @@ impl std::fmt::Debug for GameServerGroup {
         formatter.finish()
     }
 }
-/// See [`GameServerGroup`](crate::model::GameServerGroup)
+/// See [`GameServerGroup`](crate::model::GameServerGroup).
 pub mod game_server_group {
 
-    /// A builder for [`GameServerGroup`](crate::model::GameServerGroup)
-    #[non_exhaustive]
+    /// A builder for [`GameServerGroup`](crate::model::GameServerGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) game_server_group_name: std::option::Option<std::string::String>,
@@ -2943,7 +3012,7 @@ pub mod game_server_group {
             self.last_updated_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameServerGroup`](crate::model::GameServerGroup)
+        /// Consumes the builder and constructs a [`GameServerGroup`](crate::model::GameServerGroup).
         pub fn build(self) -> crate::model::GameServerGroup {
             crate::model::GameServerGroup {
                 game_server_group_name: self.game_server_group_name,
@@ -2963,7 +3032,7 @@ pub mod game_server_group {
     }
 }
 impl GameServerGroup {
-    /// Creates a new builder-style object to manufacture [`GameServerGroup`](crate::model::GameServerGroup)
+    /// Creates a new builder-style object to manufacture [`GameServerGroup`](crate::model::GameServerGroup).
     pub fn builder() -> crate::model::game_server_group::Builder {
         crate::model::game_server_group::Builder::default()
     }
@@ -3223,8 +3292,10 @@ impl AsRef<str> for BalancingStrategy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceDefinition {
     /// <p>An Amazon EC2 instance type designation.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<crate::model::GameServerGroupInstanceType>,
     /// <p>Instance weighting that indicates how much this instance type contributes to the total capacity of a game server group. Instance weights are used by GameLift FleetIQ to calculate the instance type's cost per unit hour and better identify the most cost-effective options. For detailed information on weighting instance capacity, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">Instance Weighting</a> in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>. Default value is "1".</p>
+    #[doc(hidden)]
     pub weighted_capacity: std::option::Option<std::string::String>,
 }
 impl InstanceDefinition {
@@ -3245,11 +3316,10 @@ impl std::fmt::Debug for InstanceDefinition {
         formatter.finish()
     }
 }
-/// See [`InstanceDefinition`](crate::model::InstanceDefinition)
+/// See [`InstanceDefinition`](crate::model::InstanceDefinition).
 pub mod instance_definition {
 
-    /// A builder for [`InstanceDefinition`](crate::model::InstanceDefinition)
-    #[non_exhaustive]
+    /// A builder for [`InstanceDefinition`](crate::model::InstanceDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_type: std::option::Option<crate::model::GameServerGroupInstanceType>,
@@ -3282,7 +3352,7 @@ pub mod instance_definition {
             self.weighted_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceDefinition`](crate::model::InstanceDefinition)
+        /// Consumes the builder and constructs a [`InstanceDefinition`](crate::model::InstanceDefinition).
         pub fn build(self) -> crate::model::InstanceDefinition {
             crate::model::InstanceDefinition {
                 instance_type: self.instance_type,
@@ -3292,7 +3362,7 @@ pub mod instance_definition {
     }
 }
 impl InstanceDefinition {
-    /// Creates a new builder-style object to manufacture [`InstanceDefinition`](crate::model::InstanceDefinition)
+    /// Creates a new builder-style object to manufacture [`InstanceDefinition`](crate::model::InstanceDefinition).
     pub fn builder() -> crate::model::instance_definition::Builder {
         crate::model::instance_definition::Builder::default()
     }
@@ -3795,30 +3865,41 @@ impl AsRef<str> for GameServerGroupInstanceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GameServer {
     /// <p>A unique identifier for the game server group where the game server is running. Use either the <code>GameServerGroup</code> name or ARN value.</p>
+    #[doc(hidden)]
     pub game_server_group_name: std::option::Option<std::string::String>,
     /// <p>The ARN identifier for the game server group where the game server is located.</p>
+    #[doc(hidden)]
     pub game_server_group_arn: std::option::Option<std::string::String>,
     /// <p>A custom string that uniquely identifies the game server. Game server IDs are developer-defined and are unique across all game server groups in an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub game_server_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the instance where the game server is running. This ID is available in the instance metadata. EC2 instance IDs use a 17-character format, for example: <code>i-1234567890abcdef0</code>.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p>The port and IP address that must be used to establish a client connection to the game server.</p>
+    #[doc(hidden)]
     pub connection_info: std::option::Option<std::string::String>,
     /// <p>A set of custom game server properties, formatted as a single string value. This data is passed to a game client or service when it requests information on game servers using <code>ListGameServers</code> or <code>ClaimGameServer</code>.</p>
+    #[doc(hidden)]
     pub game_server_data: std::option::Option<std::string::String>,
     /// <p>Indicates when an available game server has been reserved for gameplay but has not yet started hosting a game. Once it is claimed, the game server remains in <code>CLAIMED</code> status for a maximum of one minute. During this time, game clients connect to the game server to start the game and trigger the game server to update its utilization status. After one minute, the game server claim status reverts to null.</p>
+    #[doc(hidden)]
     pub claim_status: std::option::Option<crate::model::GameServerClaimStatus>,
     /// <p>Indicates whether the game server is currently available for new games or is busy. Possible statuses include:</p>
     /// <ul>
     /// <li> <p> <code>AVAILABLE</code> - The game server is available to be claimed. A game server that has been claimed remains in this status until it reports game hosting activity. </p> </li>
     /// <li> <p> <code>UTILIZED</code> - The game server is currently hosting a game session with players. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub utilization_status: std::option::Option<crate::model::GameServerUtilizationStatus>,
     /// <p>Timestamp that indicates when the game server was created with a <code>RegisterGameServer</code> request. The format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub registration_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Timestamp that indicates the last time the game server was claimed with a <code>ClaimGameServer</code> request. The format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>). This value is used to calculate when a claimed game server's status should revert to null.</p>
+    #[doc(hidden)]
     pub last_claim_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Timestamp that indicates the last time the game server was updated with health status using an <code>UpdateGameServer</code> request. The format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>). After game server registration, this property is only changed when a game server update specifies a health check value.</p>
+    #[doc(hidden)]
     pub last_health_check_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GameServer {
@@ -3890,11 +3971,10 @@ impl std::fmt::Debug for GameServer {
         formatter.finish()
     }
 }
-/// See [`GameServer`](crate::model::GameServer)
+/// See [`GameServer`](crate::model::GameServer).
 pub mod game_server {
 
-    /// A builder for [`GameServer`](crate::model::GameServer)
-    #[non_exhaustive]
+    /// A builder for [`GameServer`](crate::model::GameServer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) game_server_group_name: std::option::Option<std::string::String>,
@@ -4062,7 +4142,7 @@ pub mod game_server {
             self.last_health_check_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameServer`](crate::model::GameServer)
+        /// Consumes the builder and constructs a [`GameServer`](crate::model::GameServer).
         pub fn build(self) -> crate::model::GameServer {
             crate::model::GameServer {
                 game_server_group_name: self.game_server_group_name,
@@ -4081,7 +4161,7 @@ pub mod game_server {
     }
 }
 impl GameServer {
-    /// Creates a new builder-style object to manufacture [`GameServer`](crate::model::GameServer)
+    /// Creates a new builder-style object to manufacture [`GameServer`](crate::model::GameServer).
     pub fn builder() -> crate::model::game_server::Builder {
         crate::model::game_server::Builder::default()
     }
@@ -4252,13 +4332,17 @@ impl AsRef<str> for GameServerHealthCheck {
 pub struct IpPermission {
     /// <p>A starting value for a range of allowed port numbers.</p>
     /// <p>For fleets using Windows and Linux builds, only ports 1026-60000 are valid.</p>
+    #[doc(hidden)]
     pub from_port: std::option::Option<i32>,
     /// <p>An ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than <code>FromPort</code>.</p>
     /// <p>For fleets using Windows and Linux builds, only ports 1026-60000 are valid.</p>
+    #[doc(hidden)]
     pub to_port: std::option::Option<i32>,
     /// <p>A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: "<code>000.000.000.000/[subnet mask]</code>" or optionally the shortened version "<code>0.0.0.0/[subnet mask]</code>".</p>
+    #[doc(hidden)]
     pub ip_range: std::option::Option<std::string::String>,
     /// <p>The network communication protocol used by the fleet.</p>
+    #[doc(hidden)]
     pub protocol: std::option::Option<crate::model::IpProtocol>,
 }
 impl IpPermission {
@@ -4291,11 +4375,10 @@ impl std::fmt::Debug for IpPermission {
         formatter.finish()
     }
 }
-/// See [`IpPermission`](crate::model::IpPermission)
+/// See [`IpPermission`](crate::model::IpPermission).
 pub mod ip_permission {
 
-    /// A builder for [`IpPermission`](crate::model::IpPermission)
-    #[non_exhaustive]
+    /// A builder for [`IpPermission`](crate::model::IpPermission).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) from_port: std::option::Option<i32>,
@@ -4351,7 +4434,7 @@ pub mod ip_permission {
             self.protocol = input;
             self
         }
-        /// Consumes the builder and constructs a [`IpPermission`](crate::model::IpPermission)
+        /// Consumes the builder and constructs a [`IpPermission`](crate::model::IpPermission).
         pub fn build(self) -> crate::model::IpPermission {
             crate::model::IpPermission {
                 from_port: self.from_port,
@@ -4363,7 +4446,7 @@ pub mod ip_permission {
     }
 }
 impl IpPermission {
-    /// Creates a new builder-style object to manufacture [`IpPermission`](crate::model::IpPermission)
+    /// Creates a new builder-style object to manufacture [`IpPermission`](crate::model::IpPermission).
     pub fn builder() -> crate::model::ip_permission::Builder {
         crate::model::ip_permission::Builder::default()
     }
@@ -4431,8 +4514,10 @@ impl AsRef<str> for IpProtocol {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceCreationLimitPolicy {
     /// <p>The maximum number of game sessions that an individual can create during the policy period. </p>
+    #[doc(hidden)]
     pub new_game_sessions_per_creator: std::option::Option<i32>,
     /// <p>The time span used in evaluating the resource creation limit policy. </p>
+    #[doc(hidden)]
     pub policy_period_in_minutes: std::option::Option<i32>,
 }
 impl ResourceCreationLimitPolicy {
@@ -4456,11 +4541,10 @@ impl std::fmt::Debug for ResourceCreationLimitPolicy {
         formatter.finish()
     }
 }
-/// See [`ResourceCreationLimitPolicy`](crate::model::ResourceCreationLimitPolicy)
+/// See [`ResourceCreationLimitPolicy`](crate::model::ResourceCreationLimitPolicy).
 pub mod resource_creation_limit_policy {
 
-    /// A builder for [`ResourceCreationLimitPolicy`](crate::model::ResourceCreationLimitPolicy)
-    #[non_exhaustive]
+    /// A builder for [`ResourceCreationLimitPolicy`](crate::model::ResourceCreationLimitPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) new_game_sessions_per_creator: std::option::Option<i32>,
@@ -4490,7 +4574,7 @@ pub mod resource_creation_limit_policy {
             self.policy_period_in_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceCreationLimitPolicy`](crate::model::ResourceCreationLimitPolicy)
+        /// Consumes the builder and constructs a [`ResourceCreationLimitPolicy`](crate::model::ResourceCreationLimitPolicy).
         pub fn build(self) -> crate::model::ResourceCreationLimitPolicy {
             crate::model::ResourceCreationLimitPolicy {
                 new_game_sessions_per_creator: self.new_game_sessions_per_creator,
@@ -4500,7 +4584,7 @@ pub mod resource_creation_limit_policy {
     }
 }
 impl ResourceCreationLimitPolicy {
-    /// Creates a new builder-style object to manufacture [`ResourceCreationLimitPolicy`](crate::model::ResourceCreationLimitPolicy)
+    /// Creates a new builder-style object to manufacture [`ResourceCreationLimitPolicy`](crate::model::ResourceCreationLimitPolicy).
     pub fn builder() -> crate::model::resource_creation_limit_policy::Builder {
         crate::model::resource_creation_limit_policy::Builder::default()
     }
@@ -4513,15 +4597,19 @@ impl ResourceCreationLimitPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Build {
     /// <p>A unique identifier for the build.</p>
+    #[doc(hidden)]
     pub build_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a GameLift build resource and uniquely identifies it. ARNs are unique across all Regions. Format is <code>arn:aws:gamelift:
     /// <region>
     /// ::build/build-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912
     /// </region></code>. In a GameLift build ARN, the resource ID matches the <i>BuildId</i> value.</p>
+    #[doc(hidden)]
     pub build_arn: std::option::Option<std::string::String>,
     /// <p>A descriptive label that is associated with a build. Build names do not need to be unique. It can be set using <code>CreateBuild</code> or <code>UpdateBuild</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Version information that is associated with a build or script. Version strings do not need to be unique. This value can be set using <code>CreateBuild</code> or <code>UpdateBuild</code>.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>Current status of the build.</p>
     /// <p>Possible build statuses include the following:</p>
@@ -4530,12 +4618,16 @@ pub struct Build {
     /// <li> <p> <b>READY</b> -- The game build has been successfully uploaded. You can now create new fleets for this build.</p> </li>
     /// <li> <p> <b>FAILED</b> -- The game build upload failed. You cannot create new fleets for this build. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::BuildStatus>,
     /// <p>File size of the uploaded game build, expressed in bytes. When the build status is <code>INITIALIZED</code> or when using a custom Amazon S3 storage location, this value is 0.</p>
+    #[doc(hidden)]
     pub size_on_disk: std::option::Option<i64>,
     /// <p>Operating system that the game server binaries are built to run on. This value determines the type of fleet resources that you can use for this build.</p>
+    #[doc(hidden)]
     pub operating_system: std::option::Option<crate::model::OperatingSystem>,
     /// <p>A time stamp indicating when this data object was created. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Build {
@@ -4595,11 +4687,10 @@ impl std::fmt::Debug for Build {
         formatter.finish()
     }
 }
-/// See [`Build`](crate::model::Build)
+/// See [`Build`](crate::model::Build).
 pub mod build {
 
-    /// A builder for [`Build`](crate::model::Build)
-    #[non_exhaustive]
+    /// A builder for [`Build`](crate::model::Build).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) build_id: std::option::Option<std::string::String>,
@@ -4716,7 +4807,7 @@ pub mod build {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`Build`](crate::model::Build)
+        /// Consumes the builder and constructs a [`Build`](crate::model::Build).
         pub fn build(self) -> crate::model::Build {
             crate::model::Build {
                 build_id: self.build_id,
@@ -4732,7 +4823,7 @@ pub mod build {
     }
 }
 impl Build {
-    /// Creates a new builder-style object to manufacture [`Build`](crate::model::Build)
+    /// Creates a new builder-style object to manufacture [`Build`](crate::model::Build).
     pub fn builder() -> crate::model::build::Builder {
         crate::model::build::Builder::default()
     }
@@ -4863,21 +4954,28 @@ impl AsRef<str> for BuildStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Alias {
     /// <p>A unique identifier for the alias. Alias IDs are unique within a Region.</p>
+    #[doc(hidden)]
     pub alias_id: std::option::Option<std::string::String>,
     /// <p>A descriptive label that is associated with an alias. Alias names do not need to be unique.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a GameLift alias resource and uniquely identifies it. ARNs are unique across all Regions. Format is <code>arn:aws:gamelift:
     /// <region>
     /// ::alias/alias-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912
     /// </region></code>. In a GameLift alias ARN, the resource ID matches the alias ID value.</p>
+    #[doc(hidden)]
     pub alias_arn: std::option::Option<std::string::String>,
     /// <p>A human-readable description of an alias.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The routing configuration, including routing type and fleet target, for the alias. </p>
+    #[doc(hidden)]
     pub routing_strategy: std::option::Option<crate::model::RoutingStrategy>,
     /// <p>A time stamp indicating when this data object was created. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that this data object was last modified. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Alias {
@@ -4926,11 +5024,10 @@ impl std::fmt::Debug for Alias {
         formatter.finish()
     }
 }
-/// See [`Alias`](crate::model::Alias)
+/// See [`Alias`](crate::model::Alias).
 pub mod alias {
 
-    /// A builder for [`Alias`](crate::model::Alias)
-    #[non_exhaustive]
+    /// A builder for [`Alias`](crate::model::Alias).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alias_id: std::option::Option<std::string::String>,
@@ -5027,7 +5124,7 @@ pub mod alias {
             self.last_updated_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`Alias`](crate::model::Alias)
+        /// Consumes the builder and constructs a [`Alias`](crate::model::Alias).
         pub fn build(self) -> crate::model::Alias {
             crate::model::Alias {
                 alias_id: self.alias_id,
@@ -5042,7 +5139,7 @@ pub mod alias {
     }
 }
 impl Alias {
-    /// Creates a new builder-style object to manufacture [`Alias`](crate::model::Alias)
+    /// Creates a new builder-style object to manufacture [`Alias`](crate::model::Alias).
     pub fn builder() -> crate::model::alias::Builder {
         crate::model::alias::Builder::default()
     }
@@ -5060,10 +5157,13 @@ pub struct RoutingStrategy {
     /// <li> <p> <b>SIMPLE</b> - The alias resolves to one specific fleet. Use this type when routing to active fleets.</p> </li>
     /// <li> <p> <b>TERMINAL</b> - The alias does not resolve to a fleet but instead can be used to display a message to the user. A terminal alias throws a TerminalRoutingStrategyException with the <code>RoutingStrategy</code> message embedded.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RoutingStrategyType>,
     /// <p>A unique identifier for the fleet that the alias points to. This value is the fleet ID, not the fleet ARN.</p>
+    #[doc(hidden)]
     pub fleet_id: std::option::Option<std::string::String>,
     /// <p>The message text to be used with a terminal routing strategy.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl RoutingStrategy {
@@ -5094,11 +5194,10 @@ impl std::fmt::Debug for RoutingStrategy {
         formatter.finish()
     }
 }
-/// See [`RoutingStrategy`](crate::model::RoutingStrategy)
+/// See [`RoutingStrategy`](crate::model::RoutingStrategy).
 pub mod routing_strategy {
 
-    /// A builder for [`RoutingStrategy`](crate::model::RoutingStrategy)
-    #[non_exhaustive]
+    /// A builder for [`RoutingStrategy`](crate::model::RoutingStrategy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::RoutingStrategyType>,
@@ -5149,7 +5248,7 @@ pub mod routing_strategy {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`RoutingStrategy`](crate::model::RoutingStrategy)
+        /// Consumes the builder and constructs a [`RoutingStrategy`](crate::model::RoutingStrategy).
         pub fn build(self) -> crate::model::RoutingStrategy {
             crate::model::RoutingStrategy {
                 r#type: self.r#type,
@@ -5160,7 +5259,7 @@ pub mod routing_strategy {
     }
 }
 impl RoutingStrategy {
-    /// Creates a new builder-style object to manufacture [`RoutingStrategy`](crate::model::RoutingStrategy)
+    /// Creates a new builder-style object to manufacture [`RoutingStrategy`](crate::model::RoutingStrategy).
     pub fn builder() -> crate::model::routing_strategy::Builder {
         crate::model::routing_strategy::Builder::default()
     }
@@ -5231,8 +5330,10 @@ impl AsRef<str> for RoutingStrategyType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p> The key for a developer-defined key:value pair for tagging an Amazon Web Services resource. </p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p> The value for a developer-defined key:value pair for tagging an Amazon Web Services resource. </p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -5253,11 +5354,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -5284,7 +5384,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -5294,7 +5394,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -5311,8 +5411,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GameSessionPlacement {
     /// <p>A unique identifier for a game session placement.</p>
+    #[doc(hidden)]
     pub placement_id: std::option::Option<std::string::String>,
     /// <p>A descriptive label that is associated with game session queue. Queue names must be unique within each Region.</p>
+    #[doc(hidden)]
     pub game_session_queue_name: std::option::Option<std::string::String>,
     /// <p>Current status of the game session placement request.</p>
     /// <ul>
@@ -5322,26 +5424,37 @@ pub struct GameSessionPlacement {
     /// <li> <p> <b>TIMED_OUT</b> -- A new game session was not successfully created before the time limit expired. You can resubmit the placement request as needed.</p> </li>
     /// <li> <p> <b>FAILED</b> -- GameLift is not able to complete the process of placing the game session. Common reasons are the game session terminated before the placement process was completed, or an unexpected internal error.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::GameSessionPlacementState>,
     /// <p>A set of custom properties for a game session, formatted as key:value pairs. These properties are passed to a game server process in the <code>GameSession</code> object with a request to start a new game session (see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession">Start a Game Session</a>).</p>
+    #[doc(hidden)]
     pub game_properties: std::option::Option<std::vec::Vec<crate::model::GameProperty>>,
     /// <p>The maximum number of players that can be connected simultaneously to the game session.</p>
+    #[doc(hidden)]
     pub maximum_player_session_count: std::option::Option<i32>,
     /// <p>A descriptive label that is associated with a game session. Session names do not need to be unique.</p>
+    #[doc(hidden)]
     pub game_session_name: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the game session. This value is set once the new game session is placed (placement status is <code>FULFILLED</code>).</p>
+    #[doc(hidden)]
     pub game_session_id: std::option::Option<std::string::String>,
     /// <p>Identifier for the game session created by this placement request. This value is set once the new game session is placed (placement status is <code>FULFILLED</code>). This identifier is unique across all Regions. You can use this value as a <code>GameSessionId</code> value as needed.</p>
+    #[doc(hidden)]
     pub game_session_arn: std::option::Option<std::string::String>,
     /// <p>Name of the Region where the game session created by this placement request is running. This value is set once the new game session is placed (placement status is <code>FULFILLED</code>).</p>
+    #[doc(hidden)]
     pub game_session_region: std::option::Option<std::string::String>,
     /// <p>A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when connected to @aws; Regions.</p>
+    #[doc(hidden)]
     pub player_latencies: std::option::Option<std::vec::Vec<crate::model::PlayerLatency>>,
     /// <p>Time stamp indicating when this request was placed in the queue. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Time stamp indicating when this request was completed, canceled, or timed out.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address and port number. This value is set once the new game session is placed (placement status is <code>FULFILLED</code>). </p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The DNS identifier assigned to the instance that is running the game session. Values have the following format:</p>
     /// <ul>
@@ -5358,15 +5471,20 @@ pub struct GameSessionPlacement {
     /// </unique></code>. (See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#concepts-public-addresses">Amazon EC2 Instance IP Addressing</a>.)</p> </li>
     /// </ul>
     /// <p>When connecting to a game session that is running on a TLS-enabled fleet, you must use the DNS name, not the IP address.</p>
+    #[doc(hidden)]
     pub dns_name: std::option::Option<std::string::String>,
     /// <p>The port number for the game session. To connect to a GameLift game server, an app needs both the IP address and port number. This value is set once the new game session is placed (placement status is <code>FULFILLED</code>).</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>A collection of information on player sessions created in response to the game session placement request. These player sessions are created only once a new game session is successfully placed (placement status is <code>FULFILLED</code>). This information includes the player ID (as provided in the placement request) and the corresponding player session ID. Retrieve full player sessions by calling <code>DescribePlayerSessions</code> with the player session ID.</p>
+    #[doc(hidden)]
     pub placed_player_sessions:
         std::option::Option<std::vec::Vec<crate::model::PlacedPlayerSession>>,
     /// <p>A set of custom game session properties, formatted as a single string value. This data is passed to a game server process in the <code>GameSession</code> object with a request to start a new game session (see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession">Start a Game Session</a>).</p>
+    #[doc(hidden)]
     pub game_session_data: std::option::Option<std::string::String>,
     /// <p>Information on the matchmaking process for this game. Data is in JSON syntax, formatted as a string. It identifies the matchmaking configuration used to create the match, and contains data on all players assigned to the match, including player attributes and team assignments. For more details on matchmaker data, see <a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data">Match Data</a>.</p>
+    #[doc(hidden)]
     pub matchmaker_data: std::option::Option<std::string::String>,
 }
 impl GameSessionPlacement {
@@ -5493,11 +5611,10 @@ impl std::fmt::Debug for GameSessionPlacement {
         formatter.finish()
     }
 }
-/// See [`GameSessionPlacement`](crate::model::GameSessionPlacement)
+/// See [`GameSessionPlacement`](crate::model::GameSessionPlacement).
 pub mod game_session_placement {
 
-    /// A builder for [`GameSessionPlacement`](crate::model::GameSessionPlacement)
-    #[non_exhaustive]
+    /// A builder for [`GameSessionPlacement`](crate::model::GameSessionPlacement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) placement_id: std::option::Option<std::string::String>,
@@ -5801,7 +5918,7 @@ pub mod game_session_placement {
             self.matchmaker_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameSessionPlacement`](crate::model::GameSessionPlacement)
+        /// Consumes the builder and constructs a [`GameSessionPlacement`](crate::model::GameSessionPlacement).
         pub fn build(self) -> crate::model::GameSessionPlacement {
             crate::model::GameSessionPlacement {
                 placement_id: self.placement_id,
@@ -5827,7 +5944,7 @@ pub mod game_session_placement {
     }
 }
 impl GameSessionPlacement {
-    /// Creates a new builder-style object to manufacture [`GameSessionPlacement`](crate::model::GameSessionPlacement)
+    /// Creates a new builder-style object to manufacture [`GameSessionPlacement`](crate::model::GameSessionPlacement).
     pub fn builder() -> crate::model::game_session_placement::Builder {
         crate::model::game_session_placement::Builder::default()
     }
@@ -5840,8 +5957,10 @@ impl GameSessionPlacement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PlacedPlayerSession {
     /// <p>A unique identifier for a player that is associated with this player session.</p>
+    #[doc(hidden)]
     pub player_id: std::option::Option<std::string::String>,
     /// <p>A unique identifier for a player session.</p>
+    #[doc(hidden)]
     pub player_session_id: std::option::Option<std::string::String>,
 }
 impl PlacedPlayerSession {
@@ -5862,11 +5981,10 @@ impl std::fmt::Debug for PlacedPlayerSession {
         formatter.finish()
     }
 }
-/// See [`PlacedPlayerSession`](crate::model::PlacedPlayerSession)
+/// See [`PlacedPlayerSession`](crate::model::PlacedPlayerSession).
 pub mod placed_player_session {
 
-    /// A builder for [`PlacedPlayerSession`](crate::model::PlacedPlayerSession)
-    #[non_exhaustive]
+    /// A builder for [`PlacedPlayerSession`](crate::model::PlacedPlayerSession).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) player_id: std::option::Option<std::string::String>,
@@ -5896,7 +6014,7 @@ pub mod placed_player_session {
             self.player_session_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PlacedPlayerSession`](crate::model::PlacedPlayerSession)
+        /// Consumes the builder and constructs a [`PlacedPlayerSession`](crate::model::PlacedPlayerSession).
         pub fn build(self) -> crate::model::PlacedPlayerSession {
             crate::model::PlacedPlayerSession {
                 player_id: self.player_id,
@@ -5906,7 +6024,7 @@ pub mod placed_player_session {
     }
 }
 impl PlacedPlayerSession {
-    /// Creates a new builder-style object to manufacture [`PlacedPlayerSession`](crate::model::PlacedPlayerSession)
+    /// Creates a new builder-style object to manufacture [`PlacedPlayerSession`](crate::model::PlacedPlayerSession).
     pub fn builder() -> crate::model::placed_player_session::Builder {
         crate::model::placed_player_session::Builder::default()
     }
@@ -5917,10 +6035,13 @@ impl PlacedPlayerSession {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PlayerLatency {
     /// <p>A unique identifier for a player associated with the latency data.</p>
+    #[doc(hidden)]
     pub player_id: std::option::Option<std::string::String>,
     /// <p>Name of the Region that is associated with the latency value.</p>
+    #[doc(hidden)]
     pub region_identifier: std::option::Option<std::string::String>,
     /// <p>Amount of time that represents the time lag experienced by the player when connected to the specified Region.</p>
+    #[doc(hidden)]
     pub latency_in_milliseconds: f32,
 }
 impl PlayerLatency {
@@ -5946,11 +6067,10 @@ impl std::fmt::Debug for PlayerLatency {
         formatter.finish()
     }
 }
-/// See [`PlayerLatency`](crate::model::PlayerLatency)
+/// See [`PlayerLatency`](crate::model::PlayerLatency).
 pub mod player_latency {
 
-    /// A builder for [`PlayerLatency`](crate::model::PlayerLatency)
-    #[non_exhaustive]
+    /// A builder for [`PlayerLatency`](crate::model::PlayerLatency).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) player_id: std::option::Option<std::string::String>,
@@ -5991,7 +6111,7 @@ pub mod player_latency {
             self.latency_in_milliseconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`PlayerLatency`](crate::model::PlayerLatency)
+        /// Consumes the builder and constructs a [`PlayerLatency`](crate::model::PlayerLatency).
         pub fn build(self) -> crate::model::PlayerLatency {
             crate::model::PlayerLatency {
                 player_id: self.player_id,
@@ -6002,7 +6122,7 @@ pub mod player_latency {
     }
 }
 impl PlayerLatency {
-    /// Creates a new builder-style object to manufacture [`PlayerLatency`](crate::model::PlayerLatency)
+    /// Creates a new builder-style object to manufacture [`PlayerLatency`](crate::model::PlayerLatency).
     pub fn builder() -> crate::model::player_latency::Builder {
         crate::model::player_latency::Builder::default()
     }
@@ -6131,10 +6251,13 @@ impl AsRef<str> for FleetAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MatchmakingTicket {
     /// <p>A unique identifier for a matchmaking ticket.</p>
+    #[doc(hidden)]
     pub ticket_id: std::option::Option<std::string::String>,
     /// <p>Name of the <code>MatchmakingConfiguration</code> that is used with this ticket. Matchmaking configurations determine how players are grouped into a match and how a new game session is created for the match.</p>
+    #[doc(hidden)]
     pub configuration_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) associated with the GameLift matchmaking configuration resource that is used with this ticket.</p>
+    #[doc(hidden)]
     pub configuration_arn: std::option::Option<std::string::String>,
     /// <p>Current status of the matchmaking request.</p>
     /// <ul>
@@ -6149,20 +6272,28 @@ pub struct MatchmakingTicket {
     /// </ul> <note>
     /// <p>Matchmaking requests that fail to successfully complete (statuses FAILED, CANCELLED, TIMED_OUT) can be resubmitted as new requests with new ticket IDs.</p>
     /// </note>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::MatchmakingConfigurationStatus>,
     /// <p>Code to explain the current status. For example, a status reason may indicate when a ticket has returned to <code>SEARCHING</code> status after a proposed match fails to receive player acceptances.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>Additional information about the current status.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Time stamp indicating when this matchmaking request was received. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Time stamp indicating when this matchmaking request stopped being processed due to success, failure, or cancellation. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A set of <code>Player</code> objects, each representing a player to find matches for. Players are identified by a unique player ID and may include latency data for use during matchmaking. If the ticket is in status <code>COMPLETED</code>, the <code>Player</code> objects include the team the players were assigned to in the resulting match.</p>
+    #[doc(hidden)]
     pub players: std::option::Option<std::vec::Vec<crate::model::Player>>,
     /// <p>Identifier and connection information of the game session created for the match. This information is added to the ticket only after the matchmaking request has been successfully completed. This parameter is not set when FlexMatch is being used without GameLift hosting.</p>
+    #[doc(hidden)]
     pub game_session_connection_info: std::option::Option<crate::model::GameSessionConnectionInfo>,
     /// <p>Average amount of time (in seconds) that players are currently waiting for a match. If there is not enough recent data, this property may be empty.</p>
+    #[doc(hidden)]
     pub estimated_wait_time: std::option::Option<i32>,
 }
 impl MatchmakingTicket {
@@ -6245,11 +6376,10 @@ impl std::fmt::Debug for MatchmakingTicket {
         formatter.finish()
     }
 }
-/// See [`MatchmakingTicket`](crate::model::MatchmakingTicket)
+/// See [`MatchmakingTicket`](crate::model::MatchmakingTicket).
 pub mod matchmaking_ticket {
 
-    /// A builder for [`MatchmakingTicket`](crate::model::MatchmakingTicket)
-    #[non_exhaustive]
+    /// A builder for [`MatchmakingTicket`](crate::model::MatchmakingTicket).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ticket_id: std::option::Option<std::string::String>,
@@ -6436,7 +6566,7 @@ pub mod matchmaking_ticket {
             self.estimated_wait_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`MatchmakingTicket`](crate::model::MatchmakingTicket)
+        /// Consumes the builder and constructs a [`MatchmakingTicket`](crate::model::MatchmakingTicket).
         pub fn build(self) -> crate::model::MatchmakingTicket {
             crate::model::MatchmakingTicket {
                 ticket_id: self.ticket_id,
@@ -6455,7 +6585,7 @@ pub mod matchmaking_ticket {
     }
 }
 impl MatchmakingTicket {
-    /// Creates a new builder-style object to manufacture [`MatchmakingTicket`](crate::model::MatchmakingTicket)
+    /// Creates a new builder-style object to manufacture [`MatchmakingTicket`](crate::model::MatchmakingTicket).
     pub fn builder() -> crate::model::matchmaking_ticket::Builder {
         crate::model::matchmaking_ticket::Builder::default()
     }
@@ -6466,8 +6596,10 @@ impl MatchmakingTicket {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GameSessionConnectionInfo {
     /// <p>A unique identifier for the game session. Use the game session ID.</p>
+    #[doc(hidden)]
     pub game_session_arn: std::option::Option<std::string::String>,
     /// <p>The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address and port number.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The DNS identifier assigned to the instance that is running the game session. Values have the following format:</p>
     /// <ul>
@@ -6484,10 +6616,13 @@ pub struct GameSessionConnectionInfo {
     /// </unique></code>. (See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#concepts-public-addresses">Amazon EC2 Instance IP Addressing</a>.)</p> </li>
     /// </ul>
     /// <p>When connecting to a game session that is running on a TLS-enabled fleet, you must use the DNS name, not the IP address.</p>
+    #[doc(hidden)]
     pub dns_name: std::option::Option<std::string::String>,
     /// <p>The port number for the game session. To connect to a GameLift game server, an app needs both the IP address and port number.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>A collection of player session IDs, one for each player ID that was included in the original matchmaking request. </p>
+    #[doc(hidden)]
     pub matched_player_sessions:
         std::option::Option<std::vec::Vec<crate::model::MatchedPlayerSession>>,
 }
@@ -6540,11 +6675,10 @@ impl std::fmt::Debug for GameSessionConnectionInfo {
         formatter.finish()
     }
 }
-/// See [`GameSessionConnectionInfo`](crate::model::GameSessionConnectionInfo)
+/// See [`GameSessionConnectionInfo`](crate::model::GameSessionConnectionInfo).
 pub mod game_session_connection_info {
 
-    /// A builder for [`GameSessionConnectionInfo`](crate::model::GameSessionConnectionInfo)
-    #[non_exhaustive]
+    /// A builder for [`GameSessionConnectionInfo`](crate::model::GameSessionConnectionInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) game_session_arn: std::option::Option<std::string::String>,
@@ -6648,7 +6782,7 @@ pub mod game_session_connection_info {
             self.matched_player_sessions = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameSessionConnectionInfo`](crate::model::GameSessionConnectionInfo)
+        /// Consumes the builder and constructs a [`GameSessionConnectionInfo`](crate::model::GameSessionConnectionInfo).
         pub fn build(self) -> crate::model::GameSessionConnectionInfo {
             crate::model::GameSessionConnectionInfo {
                 game_session_arn: self.game_session_arn,
@@ -6661,7 +6795,7 @@ pub mod game_session_connection_info {
     }
 }
 impl GameSessionConnectionInfo {
-    /// Creates a new builder-style object to manufacture [`GameSessionConnectionInfo`](crate::model::GameSessionConnectionInfo)
+    /// Creates a new builder-style object to manufacture [`GameSessionConnectionInfo`](crate::model::GameSessionConnectionInfo).
     pub fn builder() -> crate::model::game_session_connection_info::Builder {
         crate::model::game_session_connection_info::Builder::default()
     }
@@ -6673,8 +6807,10 @@ impl GameSessionConnectionInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MatchedPlayerSession {
     /// <p>A unique identifier for a player </p>
+    #[doc(hidden)]
     pub player_id: std::option::Option<std::string::String>,
     /// <p>A unique identifier for a player session</p>
+    #[doc(hidden)]
     pub player_session_id: std::option::Option<std::string::String>,
 }
 impl MatchedPlayerSession {
@@ -6695,11 +6831,10 @@ impl std::fmt::Debug for MatchedPlayerSession {
         formatter.finish()
     }
 }
-/// See [`MatchedPlayerSession`](crate::model::MatchedPlayerSession)
+/// See [`MatchedPlayerSession`](crate::model::MatchedPlayerSession).
 pub mod matched_player_session {
 
-    /// A builder for [`MatchedPlayerSession`](crate::model::MatchedPlayerSession)
-    #[non_exhaustive]
+    /// A builder for [`MatchedPlayerSession`](crate::model::MatchedPlayerSession).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) player_id: std::option::Option<std::string::String>,
@@ -6729,7 +6864,7 @@ pub mod matched_player_session {
             self.player_session_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`MatchedPlayerSession`](crate::model::MatchedPlayerSession)
+        /// Consumes the builder and constructs a [`MatchedPlayerSession`](crate::model::MatchedPlayerSession).
         pub fn build(self) -> crate::model::MatchedPlayerSession {
             crate::model::MatchedPlayerSession {
                 player_id: self.player_id,
@@ -6739,7 +6874,7 @@ pub mod matched_player_session {
     }
 }
 impl MatchedPlayerSession {
-    /// Creates a new builder-style object to manufacture [`MatchedPlayerSession`](crate::model::MatchedPlayerSession)
+    /// Creates a new builder-style object to manufacture [`MatchedPlayerSession`](crate::model::MatchedPlayerSession).
     pub fn builder() -> crate::model::matched_player_session::Builder {
         crate::model::matched_player_session::Builder::default()
     }
@@ -6750,15 +6885,19 @@ impl MatchedPlayerSession {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Player {
     /// <p>A unique identifier for a player</p>
+    #[doc(hidden)]
     pub player_id: std::option::Option<std::string::String>,
     /// <p>A collection of key:value pairs containing player information for use in matchmaking. Player attribute keys must match the <i>playerAttributes</i> used in a matchmaking rule set. Example: <code>"PlayerAttributes": {"skill": {"N": "23"}, "gameMode": {"S": "deathmatch"}}</code>.</p>
+    #[doc(hidden)]
     pub player_attributes: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AttributeValue>,
     >,
     /// <p>Name of the team that the player is assigned to in a match. Team names are defined in a matchmaking rule set.</p>
+    #[doc(hidden)]
     pub team: std::option::Option<std::string::String>,
     /// <p>A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when connected to @aws; Regions. If this property is present, FlexMatch considers placing the match only in Regions for which latency is reported. </p>
     /// <p>If a matchmaker has a rule that evaluates player latency, players must report latency in order to be matched. If no latency is reported in this scenario, FlexMatch assumes that no Regions are available to the player and the ticket is not matchable. </p>
+    #[doc(hidden)]
     pub latency_in_ms: std::option::Option<std::collections::HashMap<std::string::String, i32>>,
 }
 impl Player {
@@ -6796,11 +6935,10 @@ impl std::fmt::Debug for Player {
         formatter.finish()
     }
 }
-/// See [`Player`](crate::model::Player)
+/// See [`Player`](crate::model::Player).
 pub mod player {
 
-    /// A builder for [`Player`](crate::model::Player)
-    #[non_exhaustive]
+    /// A builder for [`Player`](crate::model::Player).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) player_id: std::option::Option<std::string::String>,
@@ -6878,7 +7016,7 @@ pub mod player {
             self.latency_in_ms = input;
             self
         }
-        /// Consumes the builder and constructs a [`Player`](crate::model::Player)
+        /// Consumes the builder and constructs a [`Player`](crate::model::Player).
         pub fn build(self) -> crate::model::Player {
             crate::model::Player {
                 player_id: self.player_id,
@@ -6890,7 +7028,7 @@ pub mod player {
     }
 }
 impl Player {
-    /// Creates a new builder-style object to manufacture [`Player`](crate::model::Player)
+    /// Creates a new builder-style object to manufacture [`Player`](crate::model::Player).
     pub fn builder() -> crate::model::player::Builder {
         crate::model::player::Builder::default()
     }
@@ -6901,12 +7039,16 @@ impl Player {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttributeValue {
     /// <p>For single string values. Maximum string length is 100 characters.</p>
+    #[doc(hidden)]
     pub s: std::option::Option<std::string::String>,
     /// <p>For number values, expressed as double.</p>
+    #[doc(hidden)]
     pub n: std::option::Option<f64>,
     /// <p>For a list of up to 100 strings. Maximum length for each string is 100 characters. Duplicate values are not recognized; all occurrences of the repeated value after the first of a repeated value are ignored.</p>
+    #[doc(hidden)]
     pub sl: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>For a map of up to 10 data type:value pairs. Maximum length for each string value is 100 characters. </p>
+    #[doc(hidden)]
     pub sdm: std::option::Option<std::collections::HashMap<std::string::String, f64>>,
 }
 impl AttributeValue {
@@ -6937,11 +7079,10 @@ impl std::fmt::Debug for AttributeValue {
         formatter.finish()
     }
 }
-/// See [`AttributeValue`](crate::model::AttributeValue)
+/// See [`AttributeValue`](crate::model::AttributeValue).
 pub mod attribute_value {
 
-    /// A builder for [`AttributeValue`](crate::model::AttributeValue)
-    #[non_exhaustive]
+    /// A builder for [`AttributeValue`](crate::model::AttributeValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s: std::option::Option<std::string::String>,
@@ -7008,7 +7149,7 @@ pub mod attribute_value {
             self.sdm = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttributeValue`](crate::model::AttributeValue)
+        /// Consumes the builder and constructs a [`AttributeValue`](crate::model::AttributeValue).
         pub fn build(self) -> crate::model::AttributeValue {
             crate::model::AttributeValue {
                 s: self.s,
@@ -7020,7 +7161,7 @@ pub mod attribute_value {
     }
 }
 impl AttributeValue {
-    /// Creates a new builder-style object to manufacture [`AttributeValue`](crate::model::AttributeValue)
+    /// Creates a new builder-style object to manufacture [`AttributeValue`](crate::model::AttributeValue).
     pub fn builder() -> crate::model::attribute_value::Builder {
         crate::model::attribute_value::Builder::default()
     }
@@ -7119,8 +7260,10 @@ impl AsRef<str> for MatchmakingConfigurationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DesiredPlayerSession {
     /// <p>A unique identifier for a player to associate with the player session.</p>
+    #[doc(hidden)]
     pub player_id: std::option::Option<std::string::String>,
     /// <p>Developer-defined information related to a player. GameLift does not use this data, so it can be formatted as needed for use in the game.</p>
+    #[doc(hidden)]
     pub player_data: std::option::Option<std::string::String>,
 }
 impl DesiredPlayerSession {
@@ -7141,11 +7284,10 @@ impl std::fmt::Debug for DesiredPlayerSession {
         formatter.finish()
     }
 }
-/// See [`DesiredPlayerSession`](crate::model::DesiredPlayerSession)
+/// See [`DesiredPlayerSession`](crate::model::DesiredPlayerSession).
 pub mod desired_player_session {
 
-    /// A builder for [`DesiredPlayerSession`](crate::model::DesiredPlayerSession)
-    #[non_exhaustive]
+    /// A builder for [`DesiredPlayerSession`](crate::model::DesiredPlayerSession).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) player_id: std::option::Option<std::string::String>,
@@ -7172,7 +7314,7 @@ pub mod desired_player_session {
             self.player_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`DesiredPlayerSession`](crate::model::DesiredPlayerSession)
+        /// Consumes the builder and constructs a [`DesiredPlayerSession`](crate::model::DesiredPlayerSession).
         pub fn build(self) -> crate::model::DesiredPlayerSession {
             crate::model::DesiredPlayerSession {
                 player_id: self.player_id,
@@ -7182,7 +7324,7 @@ pub mod desired_player_session {
     }
 }
 impl DesiredPlayerSession {
-    /// Creates a new builder-style object to manufacture [`DesiredPlayerSession`](crate::model::DesiredPlayerSession)
+    /// Creates a new builder-style object to manufacture [`DesiredPlayerSession`](crate::model::DesiredPlayerSession).
     pub fn builder() -> crate::model::desired_player_session::Builder {
         crate::model::desired_player_session::Builder::default()
     }
@@ -7193,10 +7335,13 @@ impl DesiredPlayerSession {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AwsCredentials {
     /// <p>Temporary key allowing access to the Amazon GameLift S3 account.</p>
+    #[doc(hidden)]
     pub access_key_id: std::option::Option<std::string::String>,
     /// <p>Temporary secret key allowing access to the Amazon GameLift S3 account.</p>
+    #[doc(hidden)]
     pub secret_access_key: std::option::Option<std::string::String>,
     /// <p>Token used to associate a specific build ID with the files uploaded using these credentials.</p>
+    #[doc(hidden)]
     pub session_token: std::option::Option<std::string::String>,
 }
 impl AwsCredentials {
@@ -7222,11 +7367,10 @@ impl std::fmt::Debug for AwsCredentials {
         formatter.finish()
     }
 }
-/// See [`AwsCredentials`](crate::model::AwsCredentials)
+/// See [`AwsCredentials`](crate::model::AwsCredentials).
 pub mod aws_credentials {
 
-    /// A builder for [`AwsCredentials`](crate::model::AwsCredentials)
-    #[non_exhaustive]
+    /// A builder for [`AwsCredentials`](crate::model::AwsCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_key_id: std::option::Option<std::string::String>,
@@ -7273,7 +7417,7 @@ pub mod aws_credentials {
             self.session_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`AwsCredentials`](crate::model::AwsCredentials)
+        /// Consumes the builder and constructs a [`AwsCredentials`](crate::model::AwsCredentials).
         pub fn build(self) -> crate::model::AwsCredentials {
             crate::model::AwsCredentials {
                 access_key_id: self.access_key_id,
@@ -7284,7 +7428,7 @@ pub mod aws_credentials {
     }
 }
 impl AwsCredentials {
-    /// Creates a new builder-style object to manufacture [`AwsCredentials`](crate::model::AwsCredentials)
+    /// Creates a new builder-style object to manufacture [`AwsCredentials`](crate::model::AwsCredentials).
     pub fn builder() -> crate::model::aws_credentials::Builder {
         crate::model::aws_credentials::Builder::default()
     }
@@ -7297,6 +7441,7 @@ impl AwsCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetConfiguration {
     /// <p>Desired value to use with a target-based scaling policy. The value must be relevant for whatever metric the scaling policy is using. For example, in a policy using the metric PercentAvailableGameSessions, the target value should be the preferred size of the fleet's buffer (the percent of capacity that should be idle and ready for new game sessions).</p>
+    #[doc(hidden)]
     pub target_value: f64,
 }
 impl TargetConfiguration {
@@ -7312,11 +7457,10 @@ impl std::fmt::Debug for TargetConfiguration {
         formatter.finish()
     }
 }
-/// See [`TargetConfiguration`](crate::model::TargetConfiguration)
+/// See [`TargetConfiguration`](crate::model::TargetConfiguration).
 pub mod target_configuration {
 
-    /// A builder for [`TargetConfiguration`](crate::model::TargetConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`TargetConfiguration`](crate::model::TargetConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_value: std::option::Option<f64>,
@@ -7332,7 +7476,7 @@ pub mod target_configuration {
             self.target_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetConfiguration`](crate::model::TargetConfiguration)
+        /// Consumes the builder and constructs a [`TargetConfiguration`](crate::model::TargetConfiguration).
         pub fn build(self) -> crate::model::TargetConfiguration {
             crate::model::TargetConfiguration {
                 target_value: self.target_value.unwrap_or_default(),
@@ -7341,7 +7485,7 @@ pub mod target_configuration {
     }
 }
 impl TargetConfiguration {
-    /// Creates a new builder-style object to manufacture [`TargetConfiguration`](crate::model::TargetConfiguration)
+    /// Creates a new builder-style object to manufacture [`TargetConfiguration`](crate::model::TargetConfiguration).
     pub fn builder() -> crate::model::target_configuration::Builder {
         crate::model::target_configuration::Builder::default()
     }
@@ -7700,14 +7844,19 @@ impl AsRef<str> for SortOrder {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceAccess {
     /// <p>A unique identifier for the fleet containing the instance being accessed.</p>
+    #[doc(hidden)]
     pub fleet_id: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the instance being accessed.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p>IP address that is assigned to the instance.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>Operating system that is running on the instance.</p>
+    #[doc(hidden)]
     pub operating_system: std::option::Option<crate::model::OperatingSystem>,
     /// <p>Credentials required to access the instance.</p>
+    #[doc(hidden)]
     pub credentials: std::option::Option<crate::model::InstanceCredentials>,
 }
 impl InstanceAccess {
@@ -7743,11 +7892,10 @@ impl std::fmt::Debug for InstanceAccess {
         formatter.finish()
     }
 }
-/// See [`InstanceAccess`](crate::model::InstanceAccess)
+/// See [`InstanceAccess`](crate::model::InstanceAccess).
 pub mod instance_access {
 
-    /// A builder for [`InstanceAccess`](crate::model::InstanceAccess)
-    #[non_exhaustive]
+    /// A builder for [`InstanceAccess`](crate::model::InstanceAccess).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fleet_id: std::option::Option<std::string::String>,
@@ -7813,7 +7961,7 @@ pub mod instance_access {
             self.credentials = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceAccess`](crate::model::InstanceAccess)
+        /// Consumes the builder and constructs a [`InstanceAccess`](crate::model::InstanceAccess).
         pub fn build(self) -> crate::model::InstanceAccess {
             crate::model::InstanceAccess {
                 fleet_id: self.fleet_id,
@@ -7826,7 +7974,7 @@ pub mod instance_access {
     }
 }
 impl InstanceAccess {
-    /// Creates a new builder-style object to manufacture [`InstanceAccess`](crate::model::InstanceAccess)
+    /// Creates a new builder-style object to manufacture [`InstanceAccess`](crate::model::InstanceAccess).
     pub fn builder() -> crate::model::instance_access::Builder {
         crate::model::instance_access::Builder::default()
     }
@@ -7837,8 +7985,10 @@ impl InstanceAccess {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceCredentials {
     /// <p>User login string.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>Secret string. For Windows instances, the secret is a password for use with Windows Remote Desktop. For Linux instances, it is a private key (which must be saved as a <code>.pem</code> file) for use with SSH.</p>
+    #[doc(hidden)]
     pub secret: std::option::Option<std::string::String>,
 }
 impl InstanceCredentials {
@@ -7859,11 +8009,10 @@ impl std::fmt::Debug for InstanceCredentials {
         formatter.finish()
     }
 }
-/// See [`InstanceCredentials`](crate::model::InstanceCredentials)
+/// See [`InstanceCredentials`](crate::model::InstanceCredentials).
 pub mod instance_credentials {
 
-    /// A builder for [`InstanceCredentials`](crate::model::InstanceCredentials)
-    #[non_exhaustive]
+    /// A builder for [`InstanceCredentials`](crate::model::InstanceCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -7890,7 +8039,7 @@ pub mod instance_credentials {
             self.secret = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceCredentials`](crate::model::InstanceCredentials)
+        /// Consumes the builder and constructs a [`InstanceCredentials`](crate::model::InstanceCredentials).
         pub fn build(self) -> crate::model::InstanceCredentials {
             crate::model::InstanceCredentials {
                 user_name: self.user_name,
@@ -7900,7 +8049,7 @@ pub mod instance_credentials {
     }
 }
 impl InstanceCredentials {
-    /// Creates a new builder-style object to manufacture [`InstanceCredentials`](crate::model::InstanceCredentials)
+    /// Creates a new builder-style object to manufacture [`InstanceCredentials`](crate::model::InstanceCredentials).
     pub fn builder() -> crate::model::instance_credentials::Builder {
         crate::model::instance_credentials::Builder::default()
     }
@@ -7913,18 +8062,25 @@ impl InstanceCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcPeeringConnection {
     /// <p>A unique identifier for the fleet. This ID determines the ID of the Amazon GameLift VPC for your fleet.</p>
+    #[doc(hidden)]
     pub fleet_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) associated with the GameLift fleet resource for this connection. </p>
+    #[doc(hidden)]
     pub fleet_arn: std::option::Option<std::string::String>,
     /// <p>CIDR block of IPv4 addresses assigned to the VPC peering connection for the GameLift VPC. The peered VPC also has an IPv4 CIDR block associated with it; these blocks cannot overlap or the peering connection cannot be created. </p>
+    #[doc(hidden)]
     pub ip_v4_cidr_block: std::option::Option<std::string::String>,
     /// <p>A unique identifier that is automatically assigned to the connection record. This ID is referenced in VPC peering connection events, and is used when deleting a connection with <code>DeleteVpcPeeringConnection</code>. </p>
+    #[doc(hidden)]
     pub vpc_peering_connection_id: std::option::Option<std::string::String>,
     /// <p>The status information about the connection. Status indicates if a connection is pending, successful, or failed.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::VpcPeeringConnectionStatus>,
     /// <p>A unique identifier for a VPC with resources to be accessed by your GameLift fleet. The VPC must be in the same Region as your fleet. To look up a VPC ID, use the <a href="https://console.aws.amazon.com/vpc/">VPC Dashboard</a> in the Amazon Web Services Management Console. Learn more about VPC peering in <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html">VPC Peering with GameLift Fleets</a>.</p>
+    #[doc(hidden)]
     pub peer_vpc_id: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the VPC that contains the Amazon GameLift fleet for this connection. This VPC is managed by Amazon GameLift and does not appear in your Amazon Web Services account. </p>
+    #[doc(hidden)]
     pub game_lift_vpc_id: std::option::Option<std::string::String>,
 }
 impl VpcPeeringConnection {
@@ -7970,11 +8126,10 @@ impl std::fmt::Debug for VpcPeeringConnection {
         formatter.finish()
     }
 }
-/// See [`VpcPeeringConnection`](crate::model::VpcPeeringConnection)
+/// See [`VpcPeeringConnection`](crate::model::VpcPeeringConnection).
 pub mod vpc_peering_connection {
 
-    /// A builder for [`VpcPeeringConnection`](crate::model::VpcPeeringConnection)
-    #[non_exhaustive]
+    /// A builder for [`VpcPeeringConnection`](crate::model::VpcPeeringConnection).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fleet_id: std::option::Option<std::string::String>,
@@ -8068,7 +8223,7 @@ pub mod vpc_peering_connection {
             self.game_lift_vpc_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcPeeringConnection`](crate::model::VpcPeeringConnection)
+        /// Consumes the builder and constructs a [`VpcPeeringConnection`](crate::model::VpcPeeringConnection).
         pub fn build(self) -> crate::model::VpcPeeringConnection {
             crate::model::VpcPeeringConnection {
                 fleet_id: self.fleet_id,
@@ -8083,7 +8238,7 @@ pub mod vpc_peering_connection {
     }
 }
 impl VpcPeeringConnection {
-    /// Creates a new builder-style object to manufacture [`VpcPeeringConnection`](crate::model::VpcPeeringConnection)
+    /// Creates a new builder-style object to manufacture [`VpcPeeringConnection`](crate::model::VpcPeeringConnection).
     pub fn builder() -> crate::model::vpc_peering_connection::Builder {
         crate::model::vpc_peering_connection::Builder::default()
     }
@@ -8094,8 +8249,10 @@ impl VpcPeeringConnection {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcPeeringConnectionStatus {
     /// <p>Code indicating the status of a VPC peering connection.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>Additional messaging associated with the connection status. </p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl VpcPeeringConnectionStatus {
@@ -8116,11 +8273,10 @@ impl std::fmt::Debug for VpcPeeringConnectionStatus {
         formatter.finish()
     }
 }
-/// See [`VpcPeeringConnectionStatus`](crate::model::VpcPeeringConnectionStatus)
+/// See [`VpcPeeringConnectionStatus`](crate::model::VpcPeeringConnectionStatus).
 pub mod vpc_peering_connection_status {
 
-    /// A builder for [`VpcPeeringConnectionStatus`](crate::model::VpcPeeringConnectionStatus)
-    #[non_exhaustive]
+    /// A builder for [`VpcPeeringConnectionStatus`](crate::model::VpcPeeringConnectionStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<std::string::String>,
@@ -8147,7 +8303,7 @@ pub mod vpc_peering_connection_status {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcPeeringConnectionStatus`](crate::model::VpcPeeringConnectionStatus)
+        /// Consumes the builder and constructs a [`VpcPeeringConnectionStatus`](crate::model::VpcPeeringConnectionStatus).
         pub fn build(self) -> crate::model::VpcPeeringConnectionStatus {
             crate::model::VpcPeeringConnectionStatus {
                 code: self.code,
@@ -8157,7 +8313,7 @@ pub mod vpc_peering_connection_status {
     }
 }
 impl VpcPeeringConnectionStatus {
-    /// Creates a new builder-style object to manufacture [`VpcPeeringConnectionStatus`](crate::model::VpcPeeringConnectionStatus)
+    /// Creates a new builder-style object to manufacture [`VpcPeeringConnectionStatus`](crate::model::VpcPeeringConnectionStatus).
     pub fn builder() -> crate::model::vpc_peering_connection_status::Builder {
         crate::model::vpc_peering_connection_status::Builder::default()
     }
@@ -8170,14 +8326,19 @@ impl VpcPeeringConnectionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcPeeringAuthorization {
     /// <p>A unique identifier for the Amazon Web Services account that you use to manage your GameLift fleet. You can find your Account ID in the Amazon Web Services Management Console under account settings.</p>
+    #[doc(hidden)]
     pub game_lift_aws_account_id: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub peer_vpc_aws_account_id: std::option::Option<std::string::String>,
     /// <p>A unique identifier for a VPC with resources to be accessed by your GameLift fleet. The VPC must be in the same Region as your fleet. To look up a VPC ID, use the <a href="https://console.aws.amazon.com/vpc/">VPC Dashboard</a> in the Amazon Web Services Management Console. Learn more about VPC peering in <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html">VPC Peering with GameLift Fleets</a>.</p>
+    #[doc(hidden)]
     pub peer_vpc_id: std::option::Option<std::string::String>,
     /// <p>Time stamp indicating when this authorization was issued. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Time stamp indicating when this authorization expires (24 hours after issuance). Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub expiration_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl VpcPeeringAuthorization {
@@ -8213,11 +8374,10 @@ impl std::fmt::Debug for VpcPeeringAuthorization {
         formatter.finish()
     }
 }
-/// See [`VpcPeeringAuthorization`](crate::model::VpcPeeringAuthorization)
+/// See [`VpcPeeringAuthorization`](crate::model::VpcPeeringAuthorization).
 pub mod vpc_peering_authorization {
 
-    /// A builder for [`VpcPeeringAuthorization`](crate::model::VpcPeeringAuthorization)
-    #[non_exhaustive]
+    /// A builder for [`VpcPeeringAuthorization`](crate::model::VpcPeeringAuthorization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) game_lift_aws_account_id: std::option::Option<std::string::String>,
@@ -8289,7 +8449,7 @@ pub mod vpc_peering_authorization {
             self.expiration_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcPeeringAuthorization`](crate::model::VpcPeeringAuthorization)
+        /// Consumes the builder and constructs a [`VpcPeeringAuthorization`](crate::model::VpcPeeringAuthorization).
         pub fn build(self) -> crate::model::VpcPeeringAuthorization {
             crate::model::VpcPeeringAuthorization {
                 game_lift_aws_account_id: self.game_lift_aws_account_id,
@@ -8302,7 +8462,7 @@ pub mod vpc_peering_authorization {
     }
 }
 impl VpcPeeringAuthorization {
-    /// Creates a new builder-style object to manufacture [`VpcPeeringAuthorization`](crate::model::VpcPeeringAuthorization)
+    /// Creates a new builder-style object to manufacture [`VpcPeeringAuthorization`](crate::model::VpcPeeringAuthorization).
     pub fn builder() -> crate::model::vpc_peering_authorization::Builder {
         crate::model::vpc_peering_authorization::Builder::default()
     }
@@ -8315,13 +8475,16 @@ impl VpcPeeringAuthorization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScalingPolicy {
     /// <p>A unique identifier for the fleet that is associated with this scaling policy.</p>
+    #[doc(hidden)]
     pub fleet_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is <code>arn:aws:gamelift:
     /// <region>
     /// ::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912
     /// </region></code>.</p>
+    #[doc(hidden)]
     pub fleet_arn: std::option::Option<std::string::String>,
     /// <p>A descriptive label that is associated with a fleet's scaling policy. Policy names do not need to be unique.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Current status of the scaling policy. The scaling policy can be in force only when in an <code>ACTIVE</code> status. Scaling policies can be suspended for individual fleets (see <code>StopFleetActions</code>; if suspended for a fleet, the policy status does not change. View a fleet's stopped actions by calling <code>DescribeFleetCapacity</code>.</p>
     /// <ul>
@@ -8333,8 +8496,10 @@ pub struct ScalingPolicy {
     /// <li> <p> <b>DELETED</b> -- The scaling policy has been deleted.</p> </li>
     /// <li> <p> <b>ERROR</b> -- An error occurred in creating the policy. It should be removed and recreated.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ScalingStatusType>,
     /// <p>Amount of adjustment to make, based on the scaling adjustment type.</p>
+    #[doc(hidden)]
     pub scaling_adjustment: i32,
     /// <p>The type of adjustment to make to a fleet's instance count (see <code>FleetCapacity</code>):</p>
     /// <ul>
@@ -8342,12 +8507,16 @@ pub struct ScalingPolicy {
     /// <li> <p> <b>ExactCapacity</b> -- set the instance count to the scaling adjustment value.</p> </li>
     /// <li> <p> <b>PercentChangeInCapacity</b> -- increase or reduce the current instance count by the scaling adjustment, read as a percentage. Positive values scale up while negative values scale down.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub scaling_adjustment_type: std::option::Option<crate::model::ScalingAdjustmentType>,
     /// <p>Comparison operator to use when measuring a metric against the threshold value.</p>
+    #[doc(hidden)]
     pub comparison_operator: std::option::Option<crate::model::ComparisonOperatorType>,
     /// <p>Metric value used to trigger a scaling event.</p>
+    #[doc(hidden)]
     pub threshold: f64,
     /// <p>Length of time (in minutes) the metric must be at or beyond the threshold before a scaling event is triggered.</p>
+    #[doc(hidden)]
     pub evaluation_periods: std::option::Option<i32>,
     /// <p>Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment. For detailed descriptions of fleet metrics, see <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor Amazon GameLift with Amazon CloudWatch</a>. </p>
     /// <ul>
@@ -8363,14 +8532,19 @@ pub struct ScalingPolicy {
     /// <li> <p> <b>QueueDepth</b> -- Pending game session placement requests, in any queue, where the current fleet is the top-priority destination.</p> </li>
     /// <li> <p> <b>WaitTime</b> -- Current wait time for pending game session placement requests, in any queue, where the current fleet is the top-priority destination. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<crate::model::MetricName>,
     /// <p>The type of scaling policy to create. For a target-based policy, set the parameter <i>MetricName</i> to 'PercentAvailableGameSessions' and specify a <i>TargetConfiguration</i>. For a rule-based policy set the following parameters: <i>MetricName</i>, <i>ComparisonOperator</i>, <i>Threshold</i>, <i>EvaluationPeriods</i>, <i>ScalingAdjustmentType</i>, and <i>ScalingAdjustment</i>.</p>
+    #[doc(hidden)]
     pub policy_type: std::option::Option<crate::model::PolicyType>,
     /// <p>An object that contains settings for a target-based scaling policy.</p>
+    #[doc(hidden)]
     pub target_configuration: std::option::Option<crate::model::TargetConfiguration>,
     /// <p>The current status of the fleet's scaling policies in a requested fleet location. The status <code>PENDING_UPDATE</code> indicates that an update was requested for the fleet but has not yet been completed for the location.</p>
+    #[doc(hidden)]
     pub update_status: std::option::Option<crate::model::LocationUpdateStatus>,
     /// <p> The fleet location. </p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
 }
 impl ScalingPolicy {
@@ -8485,11 +8659,10 @@ impl std::fmt::Debug for ScalingPolicy {
         formatter.finish()
     }
 }
-/// See [`ScalingPolicy`](crate::model::ScalingPolicy)
+/// See [`ScalingPolicy`](crate::model::ScalingPolicy).
 pub mod scaling_policy {
 
-    /// A builder for [`ScalingPolicy`](crate::model::ScalingPolicy)
-    #[non_exhaustive]
+    /// A builder for [`ScalingPolicy`](crate::model::ScalingPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fleet_id: std::option::Option<std::string::String>,
@@ -8733,7 +8906,7 @@ pub mod scaling_policy {
             self.location = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalingPolicy`](crate::model::ScalingPolicy)
+        /// Consumes the builder and constructs a [`ScalingPolicy`](crate::model::ScalingPolicy).
         pub fn build(self) -> crate::model::ScalingPolicy {
             crate::model::ScalingPolicy {
                 fleet_id: self.fleet_id,
@@ -8755,7 +8928,7 @@ pub mod scaling_policy {
     }
 }
 impl ScalingPolicy {
-    /// Creates a new builder-style object to manufacture [`ScalingPolicy`](crate::model::ScalingPolicy)
+    /// Creates a new builder-style object to manufacture [`ScalingPolicy`](crate::model::ScalingPolicy).
     pub fn builder() -> crate::model::scaling_policy::Builder {
         crate::model::scaling_policy::Builder::default()
     }
@@ -8902,18 +9075,25 @@ impl AsRef<str> for ScalingStatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PlayerSession {
     /// <p>A unique identifier for a player session.</p>
+    #[doc(hidden)]
     pub player_session_id: std::option::Option<std::string::String>,
     /// <p>A unique identifier for a player that is associated with this player session.</p>
+    #[doc(hidden)]
     pub player_id: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the game session that the player session is connected to.</p>
+    #[doc(hidden)]
     pub game_session_id: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the fleet that the player's game session is running on.</p>
+    #[doc(hidden)]
     pub fleet_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) associated with the GameLift fleet that the player's game session is running on. </p>
+    #[doc(hidden)]
     pub fleet_arn: std::option::Option<std::string::String>,
     /// <p>A time stamp indicating when this data object was created. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A time stamp indicating when this data object was terminated. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub termination_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Current status of the player session.</p>
     /// <p>Possible player session statuses include the following:</p>
@@ -8923,8 +9103,10 @@ pub struct PlayerSession {
     /// <li> <p> <b>COMPLETED</b> -- The player connection has been dropped.</p> </li>
     /// <li> <p> <b>TIMEDOUT</b> -- A player session request was received, but the player did not connect and/or was not validated within the timeout limit (60 seconds).</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::PlayerSessionStatus>,
     /// <p>The IP address of the game session. To connect to a GameLift game server, an app needs both the IP address and port number.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The DNS identifier assigned to the instance that is running the game session. Values have the following format:</p>
     /// <ul>
@@ -8941,10 +9123,13 @@ pub struct PlayerSession {
     /// </unique></code>. (See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#concepts-public-addresses">Amazon EC2 Instance IP Addressing</a>.)</p> </li>
     /// </ul>
     /// <p>When connecting to a game session that is running on a TLS-enabled fleet, you must use the DNS name, not the IP address.</p>
+    #[doc(hidden)]
     pub dns_name: std::option::Option<std::string::String>,
     /// <p>Port number for the game session. To connect to a Amazon GameLift server process, an app needs both the IP address and port number.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>Developer-defined information related to a player. GameLift does not use this data, so it can be formatted as needed for use in the game. </p>
+    #[doc(hidden)]
     pub player_data: std::option::Option<std::string::String>,
 }
 impl PlayerSession {
@@ -9036,11 +9221,10 @@ impl std::fmt::Debug for PlayerSession {
         formatter.finish()
     }
 }
-/// See [`PlayerSession`](crate::model::PlayerSession)
+/// See [`PlayerSession`](crate::model::PlayerSession).
 pub mod player_session {
 
-    /// A builder for [`PlayerSession`](crate::model::PlayerSession)
-    #[non_exhaustive]
+    /// A builder for [`PlayerSession`](crate::model::PlayerSession).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) player_session_id: std::option::Option<std::string::String>,
@@ -9234,7 +9418,7 @@ pub mod player_session {
             self.player_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`PlayerSession`](crate::model::PlayerSession)
+        /// Consumes the builder and constructs a [`PlayerSession`](crate::model::PlayerSession).
         pub fn build(self) -> crate::model::PlayerSession {
             crate::model::PlayerSession {
                 player_session_id: self.player_session_id,
@@ -9254,7 +9438,7 @@ pub mod player_session {
     }
 }
 impl PlayerSession {
-    /// Creates a new builder-style object to manufacture [`PlayerSession`](crate::model::PlayerSession)
+    /// Creates a new builder-style object to manufacture [`PlayerSession`](crate::model::PlayerSession).
     pub fn builder() -> crate::model::player_session::Builder {
         crate::model::player_session::Builder::default()
     }
@@ -9335,16 +9519,20 @@ impl AsRef<str> for PlayerSessionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MatchmakingRuleSet {
     /// <p>A unique identifier for the matchmaking rule set</p>
+    #[doc(hidden)]
     pub rule_set_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a GameLift matchmaking rule set resource and uniquely identifies it. ARNs are unique across all Regions. Format is <code>arn:aws:gamelift:
     /// <region>
     /// ::matchmakingruleset/
     /// <ruleset name></ruleset>
     /// </region></code>. In a GameLift rule set ARN, the resource ID matches the <i>RuleSetName</i> value.</p>
+    #[doc(hidden)]
     pub rule_set_arn: std::option::Option<std::string::String>,
     /// <p>A collection of matchmaking rules, formatted as a JSON string. Comments are not allowed in JSON, but most elements support a description field.</p>
+    #[doc(hidden)]
     pub rule_set_body: std::option::Option<std::string::String>,
     /// <p>A time stamp indicating when this data object was created. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl MatchmakingRuleSet {
@@ -9379,11 +9567,10 @@ impl std::fmt::Debug for MatchmakingRuleSet {
         formatter.finish()
     }
 }
-/// See [`MatchmakingRuleSet`](crate::model::MatchmakingRuleSet)
+/// See [`MatchmakingRuleSet`](crate::model::MatchmakingRuleSet).
 pub mod matchmaking_rule_set {
 
-    /// A builder for [`MatchmakingRuleSet`](crate::model::MatchmakingRuleSet)
-    #[non_exhaustive]
+    /// A builder for [`MatchmakingRuleSet`](crate::model::MatchmakingRuleSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_set_name: std::option::Option<std::string::String>,
@@ -9449,7 +9636,7 @@ pub mod matchmaking_rule_set {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`MatchmakingRuleSet`](crate::model::MatchmakingRuleSet)
+        /// Consumes the builder and constructs a [`MatchmakingRuleSet`](crate::model::MatchmakingRuleSet).
         pub fn build(self) -> crate::model::MatchmakingRuleSet {
             crate::model::MatchmakingRuleSet {
                 rule_set_name: self.rule_set_name,
@@ -9461,7 +9648,7 @@ pub mod matchmaking_rule_set {
     }
 }
 impl MatchmakingRuleSet {
-    /// Creates a new builder-style object to manufacture [`MatchmakingRuleSet`](crate::model::MatchmakingRuleSet)
+    /// Creates a new builder-style object to manufacture [`MatchmakingRuleSet`](crate::model::MatchmakingRuleSet).
     pub fn builder() -> crate::model::matchmaking_rule_set::Builder {
         crate::model::matchmaking_rule_set::Builder::default()
     }
@@ -9474,15 +9661,19 @@ impl MatchmakingRuleSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Instance {
     /// <p>A unique identifier for the fleet that the instance is in.</p>
+    #[doc(hidden)]
     pub fleet_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is <code>arn:aws:gamelift:
     /// <region>
     /// ::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912
     /// </region></code>.</p>
+    #[doc(hidden)]
     pub fleet_arn: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the instance.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p>IP address that is assigned to the instance.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The DNS identifier assigned to the instance that is running the game session. Values have the following format:</p>
     /// <ul>
@@ -9499,10 +9690,13 @@ pub struct Instance {
     /// </unique></code>. (See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#concepts-public-addresses">Amazon EC2 Instance IP Addressing</a>.)</p> </li>
     /// </ul>
     /// <p>When connecting to a game session that is running on a TLS-enabled fleet, you must use the DNS name, not the IP address.</p>
+    #[doc(hidden)]
     pub dns_name: std::option::Option<std::string::String>,
     /// <p>Operating system that is running on this instance. </p>
+    #[doc(hidden)]
     pub operating_system: std::option::Option<crate::model::OperatingSystem>,
     /// <p>Amazon EC2 instance type that defines the computing resources of this instance. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Ec2InstanceType>,
     /// <p>Current status of the instance. Possible statuses include the following:</p>
     /// <ul>
@@ -9510,10 +9704,13 @@ pub struct Instance {
     /// <li> <p> <b>ACTIVE</b> -- The instance has been successfully created and at least one server process has successfully launched and reported back to GameLift that it is ready to host a game session. The instance is now considered ready to host game sessions. </p> </li>
     /// <li> <p> <b>TERMINATING</b> -- The instance is in the process of shutting down. This may happen to reduce capacity during a scaling down event or to recycle resources in the event of a problem.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::InstanceStatus>,
     /// <p>A time stamp indicating when this data object was created. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The fleet location of the instance, expressed as an Amazon Web Services Region code, such as <code>us-west-2</code>. </p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
 }
 impl Instance {
@@ -9596,11 +9793,10 @@ impl std::fmt::Debug for Instance {
         formatter.finish()
     }
 }
-/// See [`Instance`](crate::model::Instance)
+/// See [`Instance`](crate::model::Instance).
 pub mod instance {
 
-    /// A builder for [`Instance`](crate::model::Instance)
-    #[non_exhaustive]
+    /// A builder for [`Instance`](crate::model::Instance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fleet_id: std::option::Option<std::string::String>,
@@ -9771,7 +9967,7 @@ pub mod instance {
             self.location = input;
             self
         }
-        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance)
+        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance).
         pub fn build(self) -> crate::model::Instance {
             crate::model::Instance {
                 fleet_id: self.fleet_id,
@@ -9789,7 +9985,7 @@ pub mod instance {
     }
 }
 impl Instance {
-    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance)
+    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance).
     pub fn builder() -> crate::model::instance::Builder {
         crate::model::instance::Builder::default()
     }
@@ -10317,12 +10513,14 @@ impl AsRef<str> for Ec2InstanceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GameSessionDetail {
     /// <p>Object that describes a game session.</p>
+    #[doc(hidden)]
     pub game_session: std::option::Option<crate::model::GameSession>,
     /// <p>Current status of protection for the game session.</p>
     /// <ul>
     /// <li> <p> <b>NoProtection</b> -- The game session can be terminated during a scale-down event.</p> </li>
     /// <li> <p> <b>FullProtection</b> -- If the game session is in an <code>ACTIVE</code> status, it cannot be terminated during a scale-down event.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub protection_policy: std::option::Option<crate::model::ProtectionPolicy>,
 }
 impl GameSessionDetail {
@@ -10347,11 +10545,10 @@ impl std::fmt::Debug for GameSessionDetail {
         formatter.finish()
     }
 }
-/// See [`GameSessionDetail`](crate::model::GameSessionDetail)
+/// See [`GameSessionDetail`](crate::model::GameSessionDetail).
 pub mod game_session_detail {
 
-    /// A builder for [`GameSessionDetail`](crate::model::GameSessionDetail)
-    #[non_exhaustive]
+    /// A builder for [`GameSessionDetail`](crate::model::GameSessionDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) game_session: std::option::Option<crate::model::GameSession>,
@@ -10392,7 +10589,7 @@ pub mod game_session_detail {
             self.protection_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameSessionDetail`](crate::model::GameSessionDetail)
+        /// Consumes the builder and constructs a [`GameSessionDetail`](crate::model::GameSessionDetail).
         pub fn build(self) -> crate::model::GameSessionDetail {
             crate::model::GameSessionDetail {
                 game_session: self.game_session,
@@ -10402,7 +10599,7 @@ pub mod game_session_detail {
     }
 }
 impl GameSessionDetail {
-    /// Creates a new builder-style object to manufacture [`GameSessionDetail`](crate::model::GameSessionDetail)
+    /// Creates a new builder-style object to manufacture [`GameSessionDetail`](crate::model::GameSessionDetail).
     pub fn builder() -> crate::model::game_session_detail::Builder {
         crate::model::game_session_detail::Builder::default()
     }
@@ -10417,10 +10614,13 @@ impl GameSessionDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GameServerInstance {
     /// <p>A developer-defined identifier for the game server group that includes the game server instance. The name is unique for each Region in each Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub game_server_group_name: std::option::Option<std::string::String>,
     /// <p>A generated unique identifier for the game server group that includes the game server instance. </p>
+    #[doc(hidden)]
     pub game_server_group_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the instance where the game server is running. This ID is available in the instance metadata. EC2 instance IDs use a 17-character format, for example: <code>i-1234567890abcdef0</code>.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p> Current status of the game server instance. </p>
     /// <ul>
@@ -10428,6 +10628,7 @@ pub struct GameServerInstance {
     /// <li> <p> <b>DRAINING</b> -- The instance is not viable for hosting game servers. Existing game servers are in the process of ending, and new game servers are not started on this instance unless no other resources are available. When the instance is put in DRAINING, a new instance is started up to replace it. Once the instance has no UTILIZED game servers, it will be terminated in favor of the new instance.</p> </li>
     /// <li> <p> <b>SPOT_TERMINATING</b> -- The instance is in the process of shutting down due to a Spot instance interruption. No new game servers are started on this instance.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub instance_status: std::option::Option<crate::model::GameServerInstanceStatus>,
 }
 impl GameServerInstance {
@@ -10463,11 +10664,10 @@ impl std::fmt::Debug for GameServerInstance {
         formatter.finish()
     }
 }
-/// See [`GameServerInstance`](crate::model::GameServerInstance)
+/// See [`GameServerInstance`](crate::model::GameServerInstance).
 pub mod game_server_instance {
 
-    /// A builder for [`GameServerInstance`](crate::model::GameServerInstance)
-    #[non_exhaustive]
+    /// A builder for [`GameServerInstance`](crate::model::GameServerInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) game_server_group_name: std::option::Option<std::string::String>,
@@ -10535,7 +10735,7 @@ pub mod game_server_instance {
             self.instance_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameServerInstance`](crate::model::GameServerInstance)
+        /// Consumes the builder and constructs a [`GameServerInstance`](crate::model::GameServerInstance).
         pub fn build(self) -> crate::model::GameServerInstance {
             crate::model::GameServerInstance {
                 game_server_group_name: self.game_server_group_name,
@@ -10547,7 +10747,7 @@ pub mod game_server_instance {
     }
 }
 impl GameServerInstance {
-    /// Creates a new builder-style object to manufacture [`GameServerInstance`](crate::model::GameServerInstance)
+    /// Creates a new builder-style object to manufacture [`GameServerInstance`](crate::model::GameServerInstance).
     pub fn builder() -> crate::model::game_server_instance::Builder {
         crate::model::game_server_instance::Builder::default()
     }
@@ -10619,21 +10819,28 @@ impl AsRef<str> for GameServerInstanceStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FleetUtilization {
     /// <p>A unique identifier for the fleet associated with the location.</p>
+    #[doc(hidden)]
     pub fleet_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is <code>arn:aws:gamelift:
     /// <region>
     /// ::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912
     /// </region></code>.</p>
+    #[doc(hidden)]
     pub fleet_arn: std::option::Option<std::string::String>,
     /// <p>The number of server processes in <code>ACTIVE</code> status that are currently running across all instances in the fleet location. </p>
+    #[doc(hidden)]
     pub active_server_process_count: std::option::Option<i32>,
     /// <p>The number of active game sessions that are currently being hosted across all instances in the fleet location.</p>
+    #[doc(hidden)]
     pub active_game_session_count: std::option::Option<i32>,
     /// <p>The number of active player sessions that are currently being hosted across all instances in the fleet location.</p>
+    #[doc(hidden)]
     pub current_player_session_count: std::option::Option<i32>,
     /// <p>The maximum number of players allowed across all game sessions that are currently being hosted across all instances in the fleet location.</p>
+    #[doc(hidden)]
     pub maximum_player_session_count: std::option::Option<i32>,
     /// <p>The fleet location for the fleet utilization information, expressed as an Amazon Web Services Region code, such as <code>us-west-2</code>. </p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
 }
 impl FleetUtilization {
@@ -10691,11 +10898,10 @@ impl std::fmt::Debug for FleetUtilization {
         formatter.finish()
     }
 }
-/// See [`FleetUtilization`](crate::model::FleetUtilization)
+/// See [`FleetUtilization`](crate::model::FleetUtilization).
 pub mod fleet_utilization {
 
-    /// A builder for [`FleetUtilization`](crate::model::FleetUtilization)
-    #[non_exhaustive]
+    /// A builder for [`FleetUtilization`](crate::model::FleetUtilization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fleet_id: std::option::Option<std::string::String>,
@@ -10783,7 +10989,7 @@ pub mod fleet_utilization {
             self.location = input;
             self
         }
-        /// Consumes the builder and constructs a [`FleetUtilization`](crate::model::FleetUtilization)
+        /// Consumes the builder and constructs a [`FleetUtilization`](crate::model::FleetUtilization).
         pub fn build(self) -> crate::model::FleetUtilization {
             crate::model::FleetUtilization {
                 fleet_id: self.fleet_id,
@@ -10798,7 +11004,7 @@ pub mod fleet_utilization {
     }
 }
 impl FleetUtilization {
-    /// Creates a new builder-style object to manufacture [`FleetUtilization`](crate::model::FleetUtilization)
+    /// Creates a new builder-style object to manufacture [`FleetUtilization`](crate::model::FleetUtilization).
     pub fn builder() -> crate::model::fleet_utilization::Builder {
         crate::model::fleet_utilization::Builder::default()
     }
@@ -10811,17 +11017,22 @@ impl FleetUtilization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FleetCapacity {
     /// <p>A unique identifier for the fleet associated with the location.</p>
+    #[doc(hidden)]
     pub fleet_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is <code>arn:aws:gamelift:
     /// <region>
     /// ::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912
     /// </region></code>.</p>
+    #[doc(hidden)]
     pub fleet_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon EC2 instance type that is used for all instances in a fleet. The instance type determines the computing resources in use, including CPU, memory, storage, and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed descriptions.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<crate::model::Ec2InstanceType>,
     /// <p>The current instance count and capacity settings for the fleet location. </p>
+    #[doc(hidden)]
     pub instance_counts: std::option::Option<crate::model::Ec2InstanceCounts>,
     /// <p>The fleet location for the instance count information, expressed as an Amazon Web Services Region code, such as <code>us-west-2</code>. </p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
 }
 impl FleetCapacity {
@@ -10860,11 +11071,10 @@ impl std::fmt::Debug for FleetCapacity {
         formatter.finish()
     }
 }
-/// See [`FleetCapacity`](crate::model::FleetCapacity)
+/// See [`FleetCapacity`](crate::model::FleetCapacity).
 pub mod fleet_capacity {
 
-    /// A builder for [`FleetCapacity`](crate::model::FleetCapacity)
-    #[non_exhaustive]
+    /// A builder for [`FleetCapacity`](crate::model::FleetCapacity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fleet_id: std::option::Option<std::string::String>,
@@ -10936,7 +11146,7 @@ pub mod fleet_capacity {
             self.location = input;
             self
         }
-        /// Consumes the builder and constructs a [`FleetCapacity`](crate::model::FleetCapacity)
+        /// Consumes the builder and constructs a [`FleetCapacity`](crate::model::FleetCapacity).
         pub fn build(self) -> crate::model::FleetCapacity {
             crate::model::FleetCapacity {
                 fleet_id: self.fleet_id,
@@ -10949,7 +11159,7 @@ pub mod fleet_capacity {
     }
 }
 impl FleetCapacity {
-    /// Creates a new builder-style object to manufacture [`FleetCapacity`](crate::model::FleetCapacity)
+    /// Creates a new builder-style object to manufacture [`FleetCapacity`](crate::model::FleetCapacity).
     pub fn builder() -> crate::model::fleet_capacity::Builder {
         crate::model::fleet_capacity::Builder::default()
     }
@@ -10961,18 +11171,25 @@ impl FleetCapacity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ec2InstanceCounts {
     /// <p>Ideal number of active instances. GameLift will always try to maintain the desired number of instances. Capacity is scaled up or down by changing the desired instances. </p>
+    #[doc(hidden)]
     pub desired: std::option::Option<i32>,
     /// <p>The minimum instance count value allowed.</p>
+    #[doc(hidden)]
     pub minimum: std::option::Option<i32>,
     /// <p>The maximum instance count value allowed.</p>
+    #[doc(hidden)]
     pub maximum: std::option::Option<i32>,
     /// <p>Number of instances that are starting but not yet active.</p>
+    #[doc(hidden)]
     pub pending: std::option::Option<i32>,
     /// <p>Actual number of instances that are ready to host game sessions.</p>
+    #[doc(hidden)]
     pub active: std::option::Option<i32>,
     /// <p>Number of active instances that are not currently hosting a game session.</p>
+    #[doc(hidden)]
     pub idle: std::option::Option<i32>,
     /// <p>Number of instances that are no longer active but haven't yet been terminated.</p>
+    #[doc(hidden)]
     pub terminating: std::option::Option<i32>,
 }
 impl Ec2InstanceCounts {
@@ -11018,11 +11235,10 @@ impl std::fmt::Debug for Ec2InstanceCounts {
         formatter.finish()
     }
 }
-/// See [`Ec2InstanceCounts`](crate::model::Ec2InstanceCounts)
+/// See [`Ec2InstanceCounts`](crate::model::Ec2InstanceCounts).
 pub mod ec2_instance_counts {
 
-    /// A builder for [`Ec2InstanceCounts`](crate::model::Ec2InstanceCounts)
-    #[non_exhaustive]
+    /// A builder for [`Ec2InstanceCounts`](crate::model::Ec2InstanceCounts).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) desired: std::option::Option<i32>,
@@ -11104,7 +11320,7 @@ pub mod ec2_instance_counts {
             self.terminating = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2InstanceCounts`](crate::model::Ec2InstanceCounts)
+        /// Consumes the builder and constructs a [`Ec2InstanceCounts`](crate::model::Ec2InstanceCounts).
         pub fn build(self) -> crate::model::Ec2InstanceCounts {
             crate::model::Ec2InstanceCounts {
                 desired: self.desired,
@@ -11119,7 +11335,7 @@ pub mod ec2_instance_counts {
     }
 }
 impl Ec2InstanceCounts {
-    /// Creates a new builder-style object to manufacture [`Ec2InstanceCounts`](crate::model::Ec2InstanceCounts)
+    /// Creates a new builder-style object to manufacture [`Ec2InstanceCounts`](crate::model::Ec2InstanceCounts).
     pub fn builder() -> crate::model::ec2_instance_counts::Builder {
         crate::model::ec2_instance_counts::Builder::default()
     }
@@ -11132,10 +11348,13 @@ impl Ec2InstanceCounts {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LocationAttributes {
     /// <p>A fleet location and its current life-cycle state.</p>
+    #[doc(hidden)]
     pub location_state: std::option::Option<crate::model::LocationState>,
     /// <p>A list of fleet actions that have been suspended in the fleet location.</p>
+    #[doc(hidden)]
     pub stopped_actions: std::option::Option<std::vec::Vec<crate::model::FleetAction>>,
     /// <p>The status of fleet activity updates to the location. The status <code>PENDING_UPDATE</code> indicates that <code>StopFleetActions</code> or <code>StartFleetActions</code> has been requested but the update has not yet been completed for the location.</p>
+    #[doc(hidden)]
     pub update_status: std::option::Option<crate::model::LocationUpdateStatus>,
 }
 impl LocationAttributes {
@@ -11161,11 +11380,10 @@ impl std::fmt::Debug for LocationAttributes {
         formatter.finish()
     }
 }
-/// See [`LocationAttributes`](crate::model::LocationAttributes)
+/// See [`LocationAttributes`](crate::model::LocationAttributes).
 pub mod location_attributes {
 
-    /// A builder for [`LocationAttributes`](crate::model::LocationAttributes)
-    #[non_exhaustive]
+    /// A builder for [`LocationAttributes`](crate::model::LocationAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_state: std::option::Option<crate::model::LocationState>,
@@ -11218,7 +11436,7 @@ pub mod location_attributes {
             self.update_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`LocationAttributes`](crate::model::LocationAttributes)
+        /// Consumes the builder and constructs a [`LocationAttributes`](crate::model::LocationAttributes).
         pub fn build(self) -> crate::model::LocationAttributes {
             crate::model::LocationAttributes {
                 location_state: self.location_state,
@@ -11229,7 +11447,7 @@ pub mod location_attributes {
     }
 }
 impl LocationAttributes {
-    /// Creates a new builder-style object to manufacture [`LocationAttributes`](crate::model::LocationAttributes)
+    /// Creates a new builder-style object to manufacture [`LocationAttributes`](crate::model::LocationAttributes).
     pub fn builder() -> crate::model::location_attributes::Builder {
         crate::model::location_attributes::Builder::default()
     }
@@ -11242,8 +11460,10 @@ impl LocationAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LocationState {
     /// <p>The fleet location, expressed as an Amazon Web Services Region code such as <code>us-west-2</code>. </p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>The life-cycle status of a fleet location. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::FleetStatus>,
 }
 impl LocationState {
@@ -11264,11 +11484,10 @@ impl std::fmt::Debug for LocationState {
         formatter.finish()
     }
 }
-/// See [`LocationState`](crate::model::LocationState)
+/// See [`LocationState`](crate::model::LocationState).
 pub mod location_state {
 
-    /// A builder for [`LocationState`](crate::model::LocationState)
-    #[non_exhaustive]
+    /// A builder for [`LocationState`](crate::model::LocationState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location: std::option::Option<std::string::String>,
@@ -11295,7 +11514,7 @@ pub mod location_state {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`LocationState`](crate::model::LocationState)
+        /// Consumes the builder and constructs a [`LocationState`](crate::model::LocationState).
         pub fn build(self) -> crate::model::LocationState {
             crate::model::LocationState {
                 location: self.location,
@@ -11305,7 +11524,7 @@ pub mod location_state {
     }
 }
 impl LocationState {
-    /// Creates a new builder-style object to manufacture [`LocationState`](crate::model::LocationState)
+    /// Creates a new builder-style object to manufacture [`LocationState`](crate::model::LocationState).
     pub fn builder() -> crate::model::location_state::Builder {
         crate::model::location_state::Builder::default()
     }
@@ -11411,8 +11630,10 @@ impl AsRef<str> for FleetStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Event {
     /// <p>A unique identifier for a fleet event.</p>
+    #[doc(hidden)]
     pub event_id: std::option::Option<std::string::String>,
     /// <p>A unique identifier for an event resource, such as a fleet ID.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The type of event being logged. </p>
     /// <p> <b>Fleet state transition events:</b> </p>
@@ -11469,12 +11690,16 @@ pub struct Event {
     /// <li> <p>FLEET_DELETED -- A request to delete a fleet was initiated.</p> </li>
     /// <li> <p> GENERIC_EVENT -- An unspecified event has occurred.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub event_code: std::option::Option<crate::model::EventCode>,
     /// <p>Additional information related to the event.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>Time stamp indicating when this event occurred. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub event_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Location of stored logs with additional detail that is related to the event. This is useful for debugging issues. The URL is valid for 15 minutes. You can also access fleet creation logs through the GameLift console.</p>
+    #[doc(hidden)]
     pub pre_signed_log_url: std::option::Option<std::string::String>,
 }
 impl Event {
@@ -11569,11 +11794,10 @@ impl std::fmt::Debug for Event {
         formatter.finish()
     }
 }
-/// See [`Event`](crate::model::Event)
+/// See [`Event`](crate::model::Event).
 pub mod event {
 
-    /// A builder for [`Event`](crate::model::Event)
-    #[non_exhaustive]
+    /// A builder for [`Event`](crate::model::Event).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_id: std::option::Option<std::string::String>,
@@ -11761,7 +11985,7 @@ pub mod event {
             self.pre_signed_log_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`Event`](crate::model::Event)
+        /// Consumes the builder and constructs a [`Event`](crate::model::Event).
         pub fn build(self) -> crate::model::Event {
             crate::model::Event {
                 event_id: self.event_id,
@@ -11775,7 +11999,7 @@ pub mod event {
     }
 }
 impl Event {
-    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event)
+    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event).
     pub fn builder() -> crate::model::event::Builder {
         crate::model::event::Builder::default()
     }
@@ -12021,23 +12245,31 @@ impl AsRef<str> for EventCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FleetAttributes {
     /// <p>A unique identifier for the fleet.</p>
+    #[doc(hidden)]
     pub fleet_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) that is assigned to a GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions. Format is <code>arn:aws:gamelift:
     /// <region>
     /// ::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912
     /// </region></code>. In a GameLift fleet ARN, the resource ID matches the <code>FleetId</code> value.</p>
+    #[doc(hidden)]
     pub fleet_arn: std::option::Option<std::string::String>,
     /// <p>The kind of instances, On-Demand or Spot, that this fleet uses.</p>
+    #[doc(hidden)]
     pub fleet_type: std::option::Option<crate::model::FleetType>,
     /// <p>The Amazon EC2 instance type that determines the computing resources of each instance in the fleet. Instance type defines the CPU, memory, storage, and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed descriptions.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<crate::model::Ec2InstanceType>,
     /// <p>A human-readable description of the fleet.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A descriptive label that is associated with a fleet. Fleet names do not need to be unique.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A time stamp indicating when this data object was created. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A time stamp indicating when this data object was terminated. Format is a number expressed in Unix time as milliseconds (for example <code>"1469498468.057"</code>).</p>
+    #[doc(hidden)]
     pub termination_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Current status of the fleet. Possible fleet statuses include the following:</p>
     /// <ul>
@@ -12048,39 +12280,54 @@ pub struct FleetAttributes {
     /// <li> <p> <b>DELETING</b> -- Hosts are responding to a delete fleet request.</p> </li>
     /// <li> <p> <b>TERMINATED</b> -- The fleet no longer exists.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::FleetStatus>,
     /// <p>A unique identifier for the build resource that is deployed on instances in this fleet.</p>
+    #[doc(hidden)]
     pub build_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) associated with the GameLift build resource that is deployed on instances in this fleet. In a GameLift build ARN, the resource ID matches the <code>BuildId</code> value.</p>
+    #[doc(hidden)]
     pub build_arn: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the Realtime script resource that is deployed on instances in this fleet.</p>
+    #[doc(hidden)]
     pub script_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) associated with the GameLift script resource that is deployed on instances in this fleet. In a GameLift script ARN, the resource ID matches the <code>ScriptId</code> value.</p>
+    #[doc(hidden)]
     pub script_arn: std::option::Option<std::string::String>,
     /// <p> <b>This parameter is no longer used.</b> Server launch paths are now defined using the fleet's <code>RuntimeConfiguration</code> parameter. Requests that use this parameter instead continue to be valid.</p>
+    #[doc(hidden)]
     pub server_launch_path: std::option::Option<std::string::String>,
     /// <p> <b>This parameter is no longer used.</b> Server launch parameters are now defined using the fleet's <code>RuntimeConfiguration</code> parameter. Requests that use this parameter instead continue to be valid.</p>
+    #[doc(hidden)]
     pub server_launch_parameters: std::option::Option<std::string::String>,
     /// <p> <b>This parameter is no longer used.</b> Game session log paths are now defined using the GameLift server API <code>ProcessReady()</code> <code>logParameters</code>. See more information in the <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api-ref.html#gamelift-sdk-server-api-ref-dataypes-process">Server API Reference</a>. </p>
+    #[doc(hidden)]
     pub log_paths: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The type of game session protection to set on all new instances that are started in the fleet.</p>
     /// <ul>
     /// <li> <p> <b>NoProtection</b> -- The game session can be terminated during a scale-down event.</p> </li>
     /// <li> <p> <b>FullProtection</b> -- If the game session is in an <code>ACTIVE</code> status, it cannot be terminated during a scale-down event.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub new_game_session_protection_policy: std::option::Option<crate::model::ProtectionPolicy>,
     /// <p>The operating system of the fleet's computing resources. A fleet's operating system is determined by the OS of the build or script that is deployed on this fleet.</p>
+    #[doc(hidden)]
     pub operating_system: std::option::Option<crate::model::OperatingSystem>,
     /// <p>The fleet policy that limits the number of game sessions an individual player can create over a span of time.</p>
+    #[doc(hidden)]
     pub resource_creation_limit_policy:
         std::option::Option<crate::model::ResourceCreationLimitPolicy>,
     /// <p>Name of a metric group that metrics for this fleet are added to. In Amazon CloudWatch, you can view aggregated metrics for fleets that are in a metric group. A fleet can be included in only one metric group at a time.</p>
+    #[doc(hidden)]
     pub metric_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of fleet activity that has been suspended using <code>StopFleetActions</code>. This includes fleet auto-scaling.</p>
+    #[doc(hidden)]
     pub stopped_actions: std::option::Option<std::vec::Vec<crate::model::FleetAction>>,
     /// <p>A unique identifier for an IAM role that manages access to your Amazon Web Services services. With an instance role ARN set, any application that runs on an instance in this fleet can assume the role, including install scripts, server processes, and daemons (background processes). Create a role or look up a role's ARN by using the <a href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the Amazon Web Services Management Console. Learn more about using on-box credentials for your game servers at <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html"> Access external resources from a game server</a>.</p>
+    #[doc(hidden)]
     pub instance_role_arn: std::option::Option<std::string::String>,
     /// <p>Indicates whether a TLS/SSL certificate was generated for the fleet. </p>
+    #[doc(hidden)]
     pub certificate_configuration: std::option::Option<crate::model::CertificateConfiguration>,
 }
 impl FleetAttributes {
@@ -12233,11 +12480,10 @@ impl std::fmt::Debug for FleetAttributes {
         formatter.finish()
     }
 }
-/// See [`FleetAttributes`](crate::model::FleetAttributes)
+/// See [`FleetAttributes`](crate::model::FleetAttributes).
 pub mod fleet_attributes {
 
-    /// A builder for [`FleetAttributes`](crate::model::FleetAttributes)
-    #[non_exhaustive]
+    /// A builder for [`FleetAttributes`](crate::model::FleetAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fleet_id: std::option::Option<std::string::String>,
@@ -12597,7 +12843,7 @@ pub mod fleet_attributes {
             self.certificate_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`FleetAttributes`](crate::model::FleetAttributes)
+        /// Consumes the builder and constructs a [`FleetAttributes`](crate::model::FleetAttributes).
         pub fn build(self) -> crate::model::FleetAttributes {
             crate::model::FleetAttributes {
                 fleet_id: self.fleet_id,
@@ -12628,7 +12874,7 @@ pub mod fleet_attributes {
     }
 }
 impl FleetAttributes {
-    /// Creates a new builder-style object to manufacture [`FleetAttributes`](crate::model::FleetAttributes)
+    /// Creates a new builder-style object to manufacture [`FleetAttributes`](crate::model::FleetAttributes).
     pub fn builder() -> crate::model::fleet_attributes::Builder {
         crate::model::fleet_attributes::Builder::default()
     }
@@ -12645,6 +12891,7 @@ pub struct CertificateConfiguration {
     /// <li> <p> <b>GENERATED</b> - Generate a TLS/SSL certificate for this fleet.</p> </li>
     /// <li> <p> <b>DISABLED</b> - (default) Do not generate a TLS/SSL certificate for this fleet. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub certificate_type: std::option::Option<crate::model::CertificateType>,
 }
 impl CertificateConfiguration {
@@ -12665,11 +12912,10 @@ impl std::fmt::Debug for CertificateConfiguration {
         formatter.finish()
     }
 }
-/// See [`CertificateConfiguration`](crate::model::CertificateConfiguration)
+/// See [`CertificateConfiguration`](crate::model::CertificateConfiguration).
 pub mod certificate_configuration {
 
-    /// A builder for [`CertificateConfiguration`](crate::model::CertificateConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CertificateConfiguration`](crate::model::CertificateConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_type: std::option::Option<crate::model::CertificateType>,
@@ -12698,7 +12944,7 @@ pub mod certificate_configuration {
             self.certificate_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`CertificateConfiguration`](crate::model::CertificateConfiguration)
+        /// Consumes the builder and constructs a [`CertificateConfiguration`](crate::model::CertificateConfiguration).
         pub fn build(self) -> crate::model::CertificateConfiguration {
             crate::model::CertificateConfiguration {
                 certificate_type: self.certificate_type,
@@ -12707,7 +12953,7 @@ pub mod certificate_configuration {
     }
 }
 impl CertificateConfiguration {
-    /// Creates a new builder-style object to manufacture [`CertificateConfiguration`](crate::model::CertificateConfiguration)
+    /// Creates a new builder-style object to manufacture [`CertificateConfiguration`](crate::model::CertificateConfiguration).
     pub fn builder() -> crate::model::certificate_configuration::Builder {
         crate::model::certificate_configuration::Builder::default()
     }
@@ -12830,12 +13076,16 @@ impl AsRef<str> for FleetType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ec2InstanceLimit {
     /// <p>The name of an Amazon EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed descriptions. </p>
+    #[doc(hidden)]
     pub ec2_instance_type: std::option::Option<crate::model::Ec2InstanceType>,
     /// <p>The number of instances for the specified type and location that are currently being used by the Amazon Web Services account. </p>
+    #[doc(hidden)]
     pub current_instances: std::option::Option<i32>,
     /// <p>The number of instances that is allowed for the specified instance type and location.</p>
+    #[doc(hidden)]
     pub instance_limit: std::option::Option<i32>,
     /// <p>An Amazon Web Services Region code, such as <code>us-west-2</code>. </p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
 }
 impl Ec2InstanceLimit {
@@ -12866,11 +13116,10 @@ impl std::fmt::Debug for Ec2InstanceLimit {
         formatter.finish()
     }
 }
-/// See [`Ec2InstanceLimit`](crate::model::Ec2InstanceLimit)
+/// See [`Ec2InstanceLimit`](crate::model::Ec2InstanceLimit).
 pub mod ec2_instance_limit {
 
-    /// A builder for [`Ec2InstanceLimit`](crate::model::Ec2InstanceLimit)
-    #[non_exhaustive]
+    /// A builder for [`Ec2InstanceLimit`](crate::model::Ec2InstanceLimit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ec2_instance_type: std::option::Option<crate::model::Ec2InstanceType>,
@@ -12922,7 +13171,7 @@ pub mod ec2_instance_limit {
             self.location = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2InstanceLimit`](crate::model::Ec2InstanceLimit)
+        /// Consumes the builder and constructs a [`Ec2InstanceLimit`](crate::model::Ec2InstanceLimit).
         pub fn build(self) -> crate::model::Ec2InstanceLimit {
             crate::model::Ec2InstanceLimit {
                 ec2_instance_type: self.ec2_instance_type,
@@ -12934,7 +13183,7 @@ pub mod ec2_instance_limit {
     }
 }
 impl Ec2InstanceLimit {
-    /// Creates a new builder-style object to manufacture [`Ec2InstanceLimit`](crate::model::Ec2InstanceLimit)
+    /// Creates a new builder-style object to manufacture [`Ec2InstanceLimit`](crate::model::Ec2InstanceLimit).
     pub fn builder() -> crate::model::ec2_instance_limit::Builder {
         crate::model::ec2_instance_limit::Builder::default()
     }
@@ -13005,8 +13254,10 @@ impl AsRef<str> for GameServerGroupDeleteOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GameServerGroupAutoScalingPolicy {
     /// <p>Length of time, in seconds, it takes for a new instance to start new game server processes and register with GameLift FleetIQ. Specifying a warm-up time can be useful, particularly with game servers that take a long time to start up, because it avoids prematurely starting new instances. </p>
+    #[doc(hidden)]
     pub estimated_instance_warmup: std::option::Option<i32>,
     /// <p>Settings for a target-based scaling policy applied to Auto Scaling group. These settings are used to create a target-based policy that tracks the GameLift FleetIQ metric <code>"PercentUtilizedGameServers"</code> and specifies a target value for the metric. As player usage changes, the policy triggers to adjust the game server group capacity so that the metric returns to the target value. </p>
+    #[doc(hidden)]
     pub target_tracking_configuration:
         std::option::Option<crate::model::TargetTrackingConfiguration>,
 }
@@ -13033,11 +13284,10 @@ impl std::fmt::Debug for GameServerGroupAutoScalingPolicy {
         formatter.finish()
     }
 }
-/// See [`GameServerGroupAutoScalingPolicy`](crate::model::GameServerGroupAutoScalingPolicy)
+/// See [`GameServerGroupAutoScalingPolicy`](crate::model::GameServerGroupAutoScalingPolicy).
 pub mod game_server_group_auto_scaling_policy {
 
-    /// A builder for [`GameServerGroupAutoScalingPolicy`](crate::model::GameServerGroupAutoScalingPolicy)
-    #[non_exhaustive]
+    /// A builder for [`GameServerGroupAutoScalingPolicy`](crate::model::GameServerGroupAutoScalingPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) estimated_instance_warmup: std::option::Option<i32>,
@@ -13071,7 +13321,7 @@ pub mod game_server_group_auto_scaling_policy {
             self.target_tracking_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameServerGroupAutoScalingPolicy`](crate::model::GameServerGroupAutoScalingPolicy)
+        /// Consumes the builder and constructs a [`GameServerGroupAutoScalingPolicy`](crate::model::GameServerGroupAutoScalingPolicy).
         pub fn build(self) -> crate::model::GameServerGroupAutoScalingPolicy {
             crate::model::GameServerGroupAutoScalingPolicy {
                 estimated_instance_warmup: self.estimated_instance_warmup,
@@ -13081,7 +13331,7 @@ pub mod game_server_group_auto_scaling_policy {
     }
 }
 impl GameServerGroupAutoScalingPolicy {
-    /// Creates a new builder-style object to manufacture [`GameServerGroupAutoScalingPolicy`](crate::model::GameServerGroupAutoScalingPolicy)
+    /// Creates a new builder-style object to manufacture [`GameServerGroupAutoScalingPolicy`](crate::model::GameServerGroupAutoScalingPolicy).
     pub fn builder() -> crate::model::game_server_group_auto_scaling_policy::Builder {
         crate::model::game_server_group_auto_scaling_policy::Builder::default()
     }
@@ -13093,6 +13343,7 @@ impl GameServerGroupAutoScalingPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetTrackingConfiguration {
     /// <p>Desired value to use with a game server group target-based scaling policy. </p>
+    #[doc(hidden)]
     pub target_value: std::option::Option<f64>,
 }
 impl TargetTrackingConfiguration {
@@ -13108,11 +13359,10 @@ impl std::fmt::Debug for TargetTrackingConfiguration {
         formatter.finish()
     }
 }
-/// See [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration)
+/// See [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration).
 pub mod target_tracking_configuration {
 
-    /// A builder for [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_value: std::option::Option<f64>,
@@ -13128,7 +13378,7 @@ pub mod target_tracking_configuration {
             self.target_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration)
+        /// Consumes the builder and constructs a [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration).
         pub fn build(self) -> crate::model::TargetTrackingConfiguration {
             crate::model::TargetTrackingConfiguration {
                 target_value: self.target_value,
@@ -13137,7 +13387,7 @@ pub mod target_tracking_configuration {
     }
 }
 impl TargetTrackingConfiguration {
-    /// Creates a new builder-style object to manufacture [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration)
+    /// Creates a new builder-style object to manufacture [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration).
     pub fn builder() -> crate::model::target_tracking_configuration::Builder {
         crate::model::target_tracking_configuration::Builder::default()
     }
@@ -13149,10 +13399,13 @@ impl TargetTrackingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchTemplateSpecification {
     /// <p>A unique identifier for an existing Amazon EC2 launch template.</p>
+    #[doc(hidden)]
     pub launch_template_id: std::option::Option<std::string::String>,
     /// <p>A readable identifier for an existing Amazon EC2 launch template. </p>
+    #[doc(hidden)]
     pub launch_template_name: std::option::Option<std::string::String>,
     /// <p>The version of the Amazon EC2 launch template to use. If no version is specified, the default version will be used. With Amazon EC2, you can specify a default version for a launch template. If none is set, the default is the first version created.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl LaunchTemplateSpecification {
@@ -13178,11 +13431,10 @@ impl std::fmt::Debug for LaunchTemplateSpecification {
         formatter.finish()
     }
 }
-/// See [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
+/// See [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
 pub mod launch_template_specification {
 
-    /// A builder for [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
-    #[non_exhaustive]
+    /// A builder for [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) launch_template_id: std::option::Option<std::string::String>,
@@ -13226,7 +13478,7 @@ pub mod launch_template_specification {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
+        /// Consumes the builder and constructs a [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
         pub fn build(self) -> crate::model::LaunchTemplateSpecification {
             crate::model::LaunchTemplateSpecification {
                 launch_template_id: self.launch_template_id,
@@ -13237,7 +13489,7 @@ pub mod launch_template_specification {
     }
 }
 impl LaunchTemplateSpecification {
-    /// Creates a new builder-style object to manufacture [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
+    /// Creates a new builder-style object to manufacture [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
     pub fn builder() -> crate::model::launch_template_specification::Builder {
         crate::model::launch_template_specification::Builder::default()
     }
@@ -13250,6 +13502,7 @@ impl LaunchTemplateSpecification {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LocationConfiguration {
     /// <p>An Amazon Web Services Region code, such as <code>us-west-2</code>. </p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
 }
 impl LocationConfiguration {
@@ -13265,11 +13518,10 @@ impl std::fmt::Debug for LocationConfiguration {
         formatter.finish()
     }
 }
-/// See [`LocationConfiguration`](crate::model::LocationConfiguration)
+/// See [`LocationConfiguration`](crate::model::LocationConfiguration).
 pub mod location_configuration {
 
-    /// A builder for [`LocationConfiguration`](crate::model::LocationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LocationConfiguration`](crate::model::LocationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location: std::option::Option<std::string::String>,
@@ -13285,7 +13537,7 @@ pub mod location_configuration {
             self.location = input;
             self
         }
-        /// Consumes the builder and constructs a [`LocationConfiguration`](crate::model::LocationConfiguration)
+        /// Consumes the builder and constructs a [`LocationConfiguration`](crate::model::LocationConfiguration).
         pub fn build(self) -> crate::model::LocationConfiguration {
             crate::model::LocationConfiguration {
                 location: self.location,
@@ -13294,7 +13546,7 @@ pub mod location_configuration {
     }
 }
 impl LocationConfiguration {
-    /// Creates a new builder-style object to manufacture [`LocationConfiguration`](crate::model::LocationConfiguration)
+    /// Creates a new builder-style object to manufacture [`LocationConfiguration`](crate::model::LocationConfiguration).
     pub fn builder() -> crate::model::location_configuration::Builder {
         crate::model::location_configuration::Builder::default()
     }

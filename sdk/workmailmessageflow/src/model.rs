@@ -16,6 +16,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RawMessageContent {
     /// <p>The S3 reference of an email message.</p>
+    #[doc(hidden)]
     pub s3_reference: std::option::Option<crate::model::S3Reference>,
 }
 impl RawMessageContent {
@@ -31,11 +32,10 @@ impl std::fmt::Debug for RawMessageContent {
         formatter.finish()
     }
 }
-/// See [`RawMessageContent`](crate::model::RawMessageContent)
+/// See [`RawMessageContent`](crate::model::RawMessageContent).
 pub mod raw_message_content {
 
-    /// A builder for [`RawMessageContent`](crate::model::RawMessageContent)
-    #[non_exhaustive]
+    /// A builder for [`RawMessageContent`](crate::model::RawMessageContent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_reference: std::option::Option<crate::model::S3Reference>,
@@ -54,7 +54,7 @@ pub mod raw_message_content {
             self.s3_reference = input;
             self
         }
-        /// Consumes the builder and constructs a [`RawMessageContent`](crate::model::RawMessageContent)
+        /// Consumes the builder and constructs a [`RawMessageContent`](crate::model::RawMessageContent).
         pub fn build(self) -> crate::model::RawMessageContent {
             crate::model::RawMessageContent {
                 s3_reference: self.s3_reference,
@@ -63,7 +63,7 @@ pub mod raw_message_content {
     }
 }
 impl RawMessageContent {
-    /// Creates a new builder-style object to manufacture [`RawMessageContent`](crate::model::RawMessageContent)
+    /// Creates a new builder-style object to manufacture [`RawMessageContent`](crate::model::RawMessageContent).
     pub fn builder() -> crate::model::raw_message_content::Builder {
         crate::model::raw_message_content::Builder::default()
     }
@@ -76,10 +76,13 @@ impl RawMessageContent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Reference {
     /// <p>The S3 bucket name.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The S3 key object name.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>If you enable versioning for the bucket, you can specify the object version.</p>
+    #[doc(hidden)]
     pub object_version: std::option::Option<std::string::String>,
 }
 impl S3Reference {
@@ -105,11 +108,10 @@ impl std::fmt::Debug for S3Reference {
         formatter.finish()
     }
 }
-/// See [`S3Reference`](crate::model::S3Reference)
+/// See [`S3Reference`](crate::model::S3Reference).
 pub mod s3_reference {
 
-    /// A builder for [`S3Reference`](crate::model::S3Reference)
-    #[non_exhaustive]
+    /// A builder for [`S3Reference`](crate::model::S3Reference).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -150,7 +152,7 @@ pub mod s3_reference {
             self.object_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Reference`](crate::model::S3Reference)
+        /// Consumes the builder and constructs a [`S3Reference`](crate::model::S3Reference).
         pub fn build(self) -> crate::model::S3Reference {
             crate::model::S3Reference {
                 bucket: self.bucket,
@@ -161,7 +163,7 @@ pub mod s3_reference {
     }
 }
 impl S3Reference {
-    /// Creates a new builder-style object to manufacture [`S3Reference`](crate::model::S3Reference)
+    /// Creates a new builder-style object to manufacture [`S3Reference`](crate::model::S3Reference).
     pub fn builder() -> crate::model::s3_reference::Builder {
         crate::model::s3_reference::Builder::default()
     }

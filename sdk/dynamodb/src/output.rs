@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateTimeToLiveOutput {
     /// <p>Represents the output of an <code>UpdateTimeToLive</code> operation.</p>
+    #[doc(hidden)]
     pub time_to_live_specification: std::option::Option<crate::model::TimeToLiveSpecification>,
 }
 impl UpdateTimeToLiveOutput {
@@ -24,11 +25,10 @@ impl std::fmt::Debug for UpdateTimeToLiveOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateTimeToLiveOutput`](crate::output::UpdateTimeToLiveOutput)
+/// See [`UpdateTimeToLiveOutput`](crate::output::UpdateTimeToLiveOutput).
 pub mod update_time_to_live_output {
 
-    /// A builder for [`UpdateTimeToLiveOutput`](crate::output::UpdateTimeToLiveOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateTimeToLiveOutput`](crate::output::UpdateTimeToLiveOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) time_to_live_specification:
@@ -51,7 +51,7 @@ pub mod update_time_to_live_output {
             self.time_to_live_specification = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateTimeToLiveOutput`](crate::output::UpdateTimeToLiveOutput)
+        /// Consumes the builder and constructs a [`UpdateTimeToLiveOutput`](crate::output::UpdateTimeToLiveOutput).
         pub fn build(self) -> crate::output::UpdateTimeToLiveOutput {
             crate::output::UpdateTimeToLiveOutput {
                 time_to_live_specification: self.time_to_live_specification,
@@ -60,7 +60,7 @@ pub mod update_time_to_live_output {
     }
 }
 impl UpdateTimeToLiveOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateTimeToLiveOutput`](crate::output::UpdateTimeToLiveOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateTimeToLiveOutput`](crate::output::UpdateTimeToLiveOutput).
     pub fn builder() -> crate::output::update_time_to_live_output::Builder {
         crate::output::update_time_to_live_output::Builder::default()
     }
@@ -71,6 +71,7 @@ impl UpdateTimeToLiveOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateTableReplicaAutoScalingOutput {
     /// <p>Returns information about the auto scaling settings of a table with replicas.</p>
+    #[doc(hidden)]
     pub table_auto_scaling_description:
         std::option::Option<crate::model::TableAutoScalingDescription>,
 }
@@ -92,11 +93,10 @@ impl std::fmt::Debug for UpdateTableReplicaAutoScalingOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateTableReplicaAutoScalingOutput`](crate::output::UpdateTableReplicaAutoScalingOutput)
+/// See [`UpdateTableReplicaAutoScalingOutput`](crate::output::UpdateTableReplicaAutoScalingOutput).
 pub mod update_table_replica_auto_scaling_output {
 
-    /// A builder for [`UpdateTableReplicaAutoScalingOutput`](crate::output::UpdateTableReplicaAutoScalingOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateTableReplicaAutoScalingOutput`](crate::output::UpdateTableReplicaAutoScalingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_auto_scaling_description:
@@ -119,7 +119,7 @@ pub mod update_table_replica_auto_scaling_output {
             self.table_auto_scaling_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateTableReplicaAutoScalingOutput`](crate::output::UpdateTableReplicaAutoScalingOutput)
+        /// Consumes the builder and constructs a [`UpdateTableReplicaAutoScalingOutput`](crate::output::UpdateTableReplicaAutoScalingOutput).
         pub fn build(self) -> crate::output::UpdateTableReplicaAutoScalingOutput {
             crate::output::UpdateTableReplicaAutoScalingOutput {
                 table_auto_scaling_description: self.table_auto_scaling_description,
@@ -128,7 +128,7 @@ pub mod update_table_replica_auto_scaling_output {
     }
 }
 impl UpdateTableReplicaAutoScalingOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateTableReplicaAutoScalingOutput`](crate::output::UpdateTableReplicaAutoScalingOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateTableReplicaAutoScalingOutput`](crate::output::UpdateTableReplicaAutoScalingOutput).
     pub fn builder() -> crate::output::update_table_replica_auto_scaling_output::Builder {
         crate::output::update_table_replica_auto_scaling_output::Builder::default()
     }
@@ -139,6 +139,7 @@ impl UpdateTableReplicaAutoScalingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateTableOutput {
     /// <p>Represents the properties of the table.</p>
+    #[doc(hidden)]
     pub table_description: std::option::Option<crate::model::TableDescription>,
 }
 impl UpdateTableOutput {
@@ -154,11 +155,10 @@ impl std::fmt::Debug for UpdateTableOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateTableOutput`](crate::output::UpdateTableOutput)
+/// See [`UpdateTableOutput`](crate::output::UpdateTableOutput).
 pub mod update_table_output {
 
-    /// A builder for [`UpdateTableOutput`](crate::output::UpdateTableOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateTableOutput`](crate::output::UpdateTableOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_description: std::option::Option<crate::model::TableDescription>,
@@ -177,7 +177,7 @@ pub mod update_table_output {
             self.table_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateTableOutput`](crate::output::UpdateTableOutput)
+        /// Consumes the builder and constructs a [`UpdateTableOutput`](crate::output::UpdateTableOutput).
         pub fn build(self) -> crate::output::UpdateTableOutput {
             crate::output::UpdateTableOutput {
                 table_description: self.table_description,
@@ -186,7 +186,7 @@ pub mod update_table_output {
     }
 }
 impl UpdateTableOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateTableOutput`](crate::output::UpdateTableOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateTableOutput`](crate::output::UpdateTableOutput).
     pub fn builder() -> crate::output::update_table_output::Builder {
         crate::output::update_table_output::Builder::default()
     }
@@ -198,10 +198,12 @@ impl UpdateTableOutput {
 pub struct UpdateItemOutput {
     /// <p>A map of attribute values as they appear before or after the <code>UpdateItem</code> operation, as determined by the <code>ReturnValues</code> parameter.</p>
     /// <p>The <code>Attributes</code> map is only present if <code>ReturnValues</code> was specified as something other than <code>NONE</code> in the request. Each element represents one attribute.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AttributeValue>,
     >,
     /// <p>The capacity units consumed by the <code>UpdateItem</code> operation. The data returned includes the total provisioned throughput consumed, along with statistics for the table and any indexes involved in the operation. <code>ConsumedCapacity</code> is only returned if the <code>ReturnConsumedCapacity</code> parameter was specified. For more information, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html">Provisioned Throughput</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<crate::model::ConsumedCapacity>,
     /// <p>Information about item collections, if any, that were affected by the <code>UpdateItem</code> operation. <code>ItemCollectionMetrics</code> is only returned if the <code>ReturnItemCollectionMetrics</code> parameter was specified. If the table does not have any local secondary indexes, this information is not returned in the response.</p>
     /// <p>Each <code>ItemCollectionMetrics</code> element consists of:</p>
@@ -209,6 +211,7 @@ pub struct UpdateItemOutput {
     /// <li> <p> <code>ItemCollectionKey</code> - The partition key value of the item collection. This is the same as the partition key value of the item itself.</p> </li>
     /// <li> <p> <code>SizeEstimateRangeGB</code> - An estimate of item collection size, in gigabytes. This value is a two-element array containing a lower bound and an upper bound for the estimate. The estimate includes the size of all the items in the table, plus the size of all attributes projected into all of the local secondary indexes on that table. Use this estimate to measure whether a local secondary index is approaching its size limit.</p> <p>The estimate is subject to change over time; therefore, do not rely on the precision or accuracy of the estimate.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub item_collection_metrics: std::option::Option<crate::model::ItemCollectionMetrics>,
 }
 impl UpdateItemOutput {
@@ -246,11 +249,10 @@ impl std::fmt::Debug for UpdateItemOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateItemOutput`](crate::output::UpdateItemOutput)
+/// See [`UpdateItemOutput`](crate::output::UpdateItemOutput).
 pub mod update_item_output {
 
-    /// A builder for [`UpdateItemOutput`](crate::output::UpdateItemOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateItemOutput`](crate::output::UpdateItemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<
@@ -327,7 +329,7 @@ pub mod update_item_output {
             self.item_collection_metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateItemOutput`](crate::output::UpdateItemOutput)
+        /// Consumes the builder and constructs a [`UpdateItemOutput`](crate::output::UpdateItemOutput).
         pub fn build(self) -> crate::output::UpdateItemOutput {
             crate::output::UpdateItemOutput {
                 attributes: self.attributes,
@@ -338,7 +340,7 @@ pub mod update_item_output {
     }
 }
 impl UpdateItemOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateItemOutput`](crate::output::UpdateItemOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateItemOutput`](crate::output::UpdateItemOutput).
     pub fn builder() -> crate::output::update_item_output::Builder {
         crate::output::update_item_output::Builder::default()
     }
@@ -349,8 +351,10 @@ impl UpdateItemOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateGlobalTableSettingsOutput {
     /// <p>The name of the global table.</p>
+    #[doc(hidden)]
     pub global_table_name: std::option::Option<std::string::String>,
     /// <p>The Region-specific settings for the global table.</p>
+    #[doc(hidden)]
     pub replica_settings:
         std::option::Option<std::vec::Vec<crate::model::ReplicaSettingsDescription>>,
 }
@@ -374,11 +378,10 @@ impl std::fmt::Debug for UpdateGlobalTableSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateGlobalTableSettingsOutput`](crate::output::UpdateGlobalTableSettingsOutput)
+/// See [`UpdateGlobalTableSettingsOutput`](crate::output::UpdateGlobalTableSettingsOutput).
 pub mod update_global_table_settings_output {
 
-    /// A builder for [`UpdateGlobalTableSettingsOutput`](crate::output::UpdateGlobalTableSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateGlobalTableSettingsOutput`](crate::output::UpdateGlobalTableSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_table_name: std::option::Option<std::string::String>,
@@ -418,7 +421,7 @@ pub mod update_global_table_settings_output {
             self.replica_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateGlobalTableSettingsOutput`](crate::output::UpdateGlobalTableSettingsOutput)
+        /// Consumes the builder and constructs a [`UpdateGlobalTableSettingsOutput`](crate::output::UpdateGlobalTableSettingsOutput).
         pub fn build(self) -> crate::output::UpdateGlobalTableSettingsOutput {
             crate::output::UpdateGlobalTableSettingsOutput {
                 global_table_name: self.global_table_name,
@@ -428,7 +431,7 @@ pub mod update_global_table_settings_output {
     }
 }
 impl UpdateGlobalTableSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateGlobalTableSettingsOutput`](crate::output::UpdateGlobalTableSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateGlobalTableSettingsOutput`](crate::output::UpdateGlobalTableSettingsOutput).
     pub fn builder() -> crate::output::update_global_table_settings_output::Builder {
         crate::output::update_global_table_settings_output::Builder::default()
     }
@@ -439,6 +442,7 @@ impl UpdateGlobalTableSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateGlobalTableOutput {
     /// <p>Contains the details of the global table.</p>
+    #[doc(hidden)]
     pub global_table_description: std::option::Option<crate::model::GlobalTableDescription>,
 }
 impl UpdateGlobalTableOutput {
@@ -456,11 +460,10 @@ impl std::fmt::Debug for UpdateGlobalTableOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateGlobalTableOutput`](crate::output::UpdateGlobalTableOutput)
+/// See [`UpdateGlobalTableOutput`](crate::output::UpdateGlobalTableOutput).
 pub mod update_global_table_output {
 
-    /// A builder for [`UpdateGlobalTableOutput`](crate::output::UpdateGlobalTableOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateGlobalTableOutput`](crate::output::UpdateGlobalTableOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_table_description:
@@ -483,7 +486,7 @@ pub mod update_global_table_output {
             self.global_table_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateGlobalTableOutput`](crate::output::UpdateGlobalTableOutput)
+        /// Consumes the builder and constructs a [`UpdateGlobalTableOutput`](crate::output::UpdateGlobalTableOutput).
         pub fn build(self) -> crate::output::UpdateGlobalTableOutput {
             crate::output::UpdateGlobalTableOutput {
                 global_table_description: self.global_table_description,
@@ -492,7 +495,7 @@ pub mod update_global_table_output {
     }
 }
 impl UpdateGlobalTableOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateGlobalTableOutput`](crate::output::UpdateGlobalTableOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateGlobalTableOutput`](crate::output::UpdateGlobalTableOutput).
     pub fn builder() -> crate::output::update_global_table_output::Builder {
         crate::output::update_global_table_output::Builder::default()
     }
@@ -503,10 +506,13 @@ impl UpdateGlobalTableOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateContributorInsightsOutput {
     /// <p>The name of the table.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>The name of the global secondary index, if applicable.</p>
+    #[doc(hidden)]
     pub index_name: std::option::Option<std::string::String>,
     /// <p>The status of contributor insights</p>
+    #[doc(hidden)]
     pub contributor_insights_status: std::option::Option<crate::model::ContributorInsightsStatus>,
 }
 impl UpdateContributorInsightsOutput {
@@ -537,11 +543,10 @@ impl std::fmt::Debug for UpdateContributorInsightsOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateContributorInsightsOutput`](crate::output::UpdateContributorInsightsOutput)
+/// See [`UpdateContributorInsightsOutput`](crate::output::UpdateContributorInsightsOutput).
 pub mod update_contributor_insights_output {
 
-    /// A builder for [`UpdateContributorInsightsOutput`](crate::output::UpdateContributorInsightsOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateContributorInsightsOutput`](crate::output::UpdateContributorInsightsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_name: std::option::Option<std::string::String>,
@@ -586,7 +591,7 @@ pub mod update_contributor_insights_output {
             self.contributor_insights_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateContributorInsightsOutput`](crate::output::UpdateContributorInsightsOutput)
+        /// Consumes the builder and constructs a [`UpdateContributorInsightsOutput`](crate::output::UpdateContributorInsightsOutput).
         pub fn build(self) -> crate::output::UpdateContributorInsightsOutput {
             crate::output::UpdateContributorInsightsOutput {
                 table_name: self.table_name,
@@ -597,7 +602,7 @@ pub mod update_contributor_insights_output {
     }
 }
 impl UpdateContributorInsightsOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateContributorInsightsOutput`](crate::output::UpdateContributorInsightsOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateContributorInsightsOutput`](crate::output::UpdateContributorInsightsOutput).
     pub fn builder() -> crate::output::update_contributor_insights_output::Builder {
         crate::output::update_contributor_insights_output::Builder::default()
     }
@@ -608,6 +613,7 @@ impl UpdateContributorInsightsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateContinuousBackupsOutput {
     /// <p>Represents the continuous backups and point in time recovery settings on the table.</p>
+    #[doc(hidden)]
     pub continuous_backups_description:
         std::option::Option<crate::model::ContinuousBackupsDescription>,
 }
@@ -629,11 +635,10 @@ impl std::fmt::Debug for UpdateContinuousBackupsOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateContinuousBackupsOutput`](crate::output::UpdateContinuousBackupsOutput)
+/// See [`UpdateContinuousBackupsOutput`](crate::output::UpdateContinuousBackupsOutput).
 pub mod update_continuous_backups_output {
 
-    /// A builder for [`UpdateContinuousBackupsOutput`](crate::output::UpdateContinuousBackupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateContinuousBackupsOutput`](crate::output::UpdateContinuousBackupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) continuous_backups_description:
@@ -656,7 +661,7 @@ pub mod update_continuous_backups_output {
             self.continuous_backups_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateContinuousBackupsOutput`](crate::output::UpdateContinuousBackupsOutput)
+        /// Consumes the builder and constructs a [`UpdateContinuousBackupsOutput`](crate::output::UpdateContinuousBackupsOutput).
         pub fn build(self) -> crate::output::UpdateContinuousBackupsOutput {
             crate::output::UpdateContinuousBackupsOutput {
                 continuous_backups_description: self.continuous_backups_description,
@@ -665,7 +670,7 @@ pub mod update_continuous_backups_output {
     }
 }
 impl UpdateContinuousBackupsOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateContinuousBackupsOutput`](crate::output::UpdateContinuousBackupsOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateContinuousBackupsOutput`](crate::output::UpdateContinuousBackupsOutput).
     pub fn builder() -> crate::output::update_continuous_backups_output::Builder {
         crate::output::update_continuous_backups_output::Builder::default()
     }
@@ -681,22 +686,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -707,8 +711,10 @@ impl UntagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TransactWriteItemsOutput {
     /// <p>The capacity units consumed by the entire <code>TransactWriteItems</code> operation. The values of the list are ordered according to the ordering of the <code>TransactItems</code> request parameter. </p>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<std::vec::Vec<crate::model::ConsumedCapacity>>,
     /// <p>A list of tables that were processed by <code>TransactWriteItems</code> and, for each table, information about any item collections that were affected by individual <code>UpdateItem</code>, <code>PutItem</code>, or <code>DeleteItem</code> operations. </p>
+    #[doc(hidden)]
     pub item_collection_metrics: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -741,11 +747,10 @@ impl std::fmt::Debug for TransactWriteItemsOutput {
         formatter.finish()
     }
 }
-/// See [`TransactWriteItemsOutput`](crate::output::TransactWriteItemsOutput)
+/// See [`TransactWriteItemsOutput`](crate::output::TransactWriteItemsOutput).
 pub mod transact_write_items_output {
 
-    /// A builder for [`TransactWriteItemsOutput`](crate::output::TransactWriteItemsOutput)
-    #[non_exhaustive]
+    /// A builder for [`TransactWriteItemsOutput`](crate::output::TransactWriteItemsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) consumed_capacity:
@@ -805,7 +810,7 @@ pub mod transact_write_items_output {
             self.item_collection_metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`TransactWriteItemsOutput`](crate::output::TransactWriteItemsOutput)
+        /// Consumes the builder and constructs a [`TransactWriteItemsOutput`](crate::output::TransactWriteItemsOutput).
         pub fn build(self) -> crate::output::TransactWriteItemsOutput {
             crate::output::TransactWriteItemsOutput {
                 consumed_capacity: self.consumed_capacity,
@@ -815,7 +820,7 @@ pub mod transact_write_items_output {
     }
 }
 impl TransactWriteItemsOutput {
-    /// Creates a new builder-style object to manufacture [`TransactWriteItemsOutput`](crate::output::TransactWriteItemsOutput)
+    /// Creates a new builder-style object to manufacture [`TransactWriteItemsOutput`](crate::output::TransactWriteItemsOutput).
     pub fn builder() -> crate::output::transact_write_items_output::Builder {
         crate::output::transact_write_items_output::Builder::default()
     }
@@ -826,9 +831,11 @@ impl TransactWriteItemsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TransactGetItemsOutput {
     /// <p>If the <i>ReturnConsumedCapacity</i> value was <code>TOTAL</code>, this is an array of <code>ConsumedCapacity</code> objects, one for each table addressed by <code>TransactGetItem</code> objects in the <i>TransactItems</i> parameter. These <code>ConsumedCapacity</code> objects report the read-capacity units consumed by the <code>TransactGetItems</code> call in that table.</p>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<std::vec::Vec<crate::model::ConsumedCapacity>>,
     /// <p>An ordered array of up to 25 <code>ItemResponse</code> objects, each of which corresponds to the <code>TransactGetItem</code> object in the same position in the <i>TransactItems</i> array. Each <code>ItemResponse</code> object contains a Map of the name-value pairs that are the projected attributes of the requested item.</p>
     /// <p>If a requested item could not be retrieved, the corresponding <code>ItemResponse</code> object is Null, or if the requested item has no projected attributes, the corresponding <code>ItemResponse</code> object is an empty Map. </p>
+    #[doc(hidden)]
     pub responses: std::option::Option<std::vec::Vec<crate::model::ItemResponse>>,
 }
 impl TransactGetItemsOutput {
@@ -850,11 +857,10 @@ impl std::fmt::Debug for TransactGetItemsOutput {
         formatter.finish()
     }
 }
-/// See [`TransactGetItemsOutput`](crate::output::TransactGetItemsOutput)
+/// See [`TransactGetItemsOutput`](crate::output::TransactGetItemsOutput).
 pub mod transact_get_items_output {
 
-    /// A builder for [`TransactGetItemsOutput`](crate::output::TransactGetItemsOutput)
-    #[non_exhaustive]
+    /// A builder for [`TransactGetItemsOutput`](crate::output::TransactGetItemsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) consumed_capacity:
@@ -902,7 +908,7 @@ pub mod transact_get_items_output {
             self.responses = input;
             self
         }
-        /// Consumes the builder and constructs a [`TransactGetItemsOutput`](crate::output::TransactGetItemsOutput)
+        /// Consumes the builder and constructs a [`TransactGetItemsOutput`](crate::output::TransactGetItemsOutput).
         pub fn build(self) -> crate::output::TransactGetItemsOutput {
             crate::output::TransactGetItemsOutput {
                 consumed_capacity: self.consumed_capacity,
@@ -912,7 +918,7 @@ pub mod transact_get_items_output {
     }
 }
 impl TransactGetItemsOutput {
-    /// Creates a new builder-style object to manufacture [`TransactGetItemsOutput`](crate::output::TransactGetItemsOutput)
+    /// Creates a new builder-style object to manufacture [`TransactGetItemsOutput`](crate::output::TransactGetItemsOutput).
     pub fn builder() -> crate::output::transact_get_items_output::Builder {
         crate::output::transact_get_items_output::Builder::default()
     }
@@ -928,22 +934,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -954,23 +959,28 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScanOutput {
     /// <p>An array of item attributes that match the scan criteria. Each element in this array consists of an attribute name and the value for that attribute.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<
         std::vec::Vec<std::collections::HashMap<std::string::String, crate::model::AttributeValue>>,
     >,
     /// <p>The number of items in the response.</p>
     /// <p>If you set <code>ScanFilter</code> in the request, then <code>Count</code> is the number of items returned after the filter was applied, and <code>ScannedCount</code> is the number of matching items before the filter was applied.</p>
     /// <p>If you did not use a filter in the request, then <code>Count</code> is the same as <code>ScannedCount</code>.</p>
+    #[doc(hidden)]
     pub count: i32,
     /// <p>The number of items evaluated, before any <code>ScanFilter</code> is applied. A high <code>ScannedCount</code> value with few, or no, <code>Count</code> results indicates an inefficient <code>Scan</code> operation. For more information, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Count">Count and ScannedCount</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
     /// <p>If you did not use a filter in the request, then <code>ScannedCount</code> is the same as <code>Count</code>.</p>
+    #[doc(hidden)]
     pub scanned_count: i32,
     /// <p>The primary key of the item where the operation stopped, inclusive of the previous result set. Use this value to start a new operation, excluding this value in the new request.</p>
     /// <p>If <code>LastEvaluatedKey</code> is empty, then the "last page" of results has been processed and there is no more data to be retrieved.</p>
     /// <p>If <code>LastEvaluatedKey</code> is not empty, it does not necessarily mean that there is more data in the result set. The only way to know when you have reached the end of the result set is when <code>LastEvaluatedKey</code> is empty.</p>
+    #[doc(hidden)]
     pub last_evaluated_key: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AttributeValue>,
     >,
     /// <p>The capacity units consumed by the <code>Scan</code> operation. The data returned includes the total provisioned throughput consumed, along with statistics for the table and any indexes involved in the operation. <code>ConsumedCapacity</code> is only returned if the <code>ReturnConsumedCapacity</code> parameter was specified. For more information, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html">Provisioned Throughput</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<crate::model::ConsumedCapacity>,
 }
 impl ScanOutput {
@@ -1019,11 +1029,10 @@ impl std::fmt::Debug for ScanOutput {
         formatter.finish()
     }
 }
-/// See [`ScanOutput`](crate::output::ScanOutput)
+/// See [`ScanOutput`](crate::output::ScanOutput).
 pub mod scan_output {
 
-    /// A builder for [`ScanOutput`](crate::output::ScanOutput)
-    #[non_exhaustive]
+    /// A builder for [`ScanOutput`](crate::output::ScanOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<
@@ -1133,7 +1142,7 @@ pub mod scan_output {
             self.consumed_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScanOutput`](crate::output::ScanOutput)
+        /// Consumes the builder and constructs a [`ScanOutput`](crate::output::ScanOutput).
         pub fn build(self) -> crate::output::ScanOutput {
             crate::output::ScanOutput {
                 items: self.items,
@@ -1146,7 +1155,7 @@ pub mod scan_output {
     }
 }
 impl ScanOutput {
-    /// Creates a new builder-style object to manufacture [`ScanOutput`](crate::output::ScanOutput)
+    /// Creates a new builder-style object to manufacture [`ScanOutput`](crate::output::ScanOutput).
     pub fn builder() -> crate::output::scan_output::Builder {
         crate::output::scan_output::Builder::default()
     }
@@ -1157,6 +1166,7 @@ impl ScanOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RestoreTableToPointInTimeOutput {
     /// <p>Represents the properties of a table.</p>
+    #[doc(hidden)]
     pub table_description: std::option::Option<crate::model::TableDescription>,
 }
 impl RestoreTableToPointInTimeOutput {
@@ -1172,11 +1182,10 @@ impl std::fmt::Debug for RestoreTableToPointInTimeOutput {
         formatter.finish()
     }
 }
-/// See [`RestoreTableToPointInTimeOutput`](crate::output::RestoreTableToPointInTimeOutput)
+/// See [`RestoreTableToPointInTimeOutput`](crate::output::RestoreTableToPointInTimeOutput).
 pub mod restore_table_to_point_in_time_output {
 
-    /// A builder for [`RestoreTableToPointInTimeOutput`](crate::output::RestoreTableToPointInTimeOutput)
-    #[non_exhaustive]
+    /// A builder for [`RestoreTableToPointInTimeOutput`](crate::output::RestoreTableToPointInTimeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_description: std::option::Option<crate::model::TableDescription>,
@@ -1195,7 +1204,7 @@ pub mod restore_table_to_point_in_time_output {
             self.table_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreTableToPointInTimeOutput`](crate::output::RestoreTableToPointInTimeOutput)
+        /// Consumes the builder and constructs a [`RestoreTableToPointInTimeOutput`](crate::output::RestoreTableToPointInTimeOutput).
         pub fn build(self) -> crate::output::RestoreTableToPointInTimeOutput {
             crate::output::RestoreTableToPointInTimeOutput {
                 table_description: self.table_description,
@@ -1204,7 +1213,7 @@ pub mod restore_table_to_point_in_time_output {
     }
 }
 impl RestoreTableToPointInTimeOutput {
-    /// Creates a new builder-style object to manufacture [`RestoreTableToPointInTimeOutput`](crate::output::RestoreTableToPointInTimeOutput)
+    /// Creates a new builder-style object to manufacture [`RestoreTableToPointInTimeOutput`](crate::output::RestoreTableToPointInTimeOutput).
     pub fn builder() -> crate::output::restore_table_to_point_in_time_output::Builder {
         crate::output::restore_table_to_point_in_time_output::Builder::default()
     }
@@ -1215,6 +1224,7 @@ impl RestoreTableToPointInTimeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RestoreTableFromBackupOutput {
     /// <p>The description of the table created from an existing backup.</p>
+    #[doc(hidden)]
     pub table_description: std::option::Option<crate::model::TableDescription>,
 }
 impl RestoreTableFromBackupOutput {
@@ -1230,11 +1240,10 @@ impl std::fmt::Debug for RestoreTableFromBackupOutput {
         formatter.finish()
     }
 }
-/// See [`RestoreTableFromBackupOutput`](crate::output::RestoreTableFromBackupOutput)
+/// See [`RestoreTableFromBackupOutput`](crate::output::RestoreTableFromBackupOutput).
 pub mod restore_table_from_backup_output {
 
-    /// A builder for [`RestoreTableFromBackupOutput`](crate::output::RestoreTableFromBackupOutput)
-    #[non_exhaustive]
+    /// A builder for [`RestoreTableFromBackupOutput`](crate::output::RestoreTableFromBackupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_description: std::option::Option<crate::model::TableDescription>,
@@ -1253,7 +1262,7 @@ pub mod restore_table_from_backup_output {
             self.table_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreTableFromBackupOutput`](crate::output::RestoreTableFromBackupOutput)
+        /// Consumes the builder and constructs a [`RestoreTableFromBackupOutput`](crate::output::RestoreTableFromBackupOutput).
         pub fn build(self) -> crate::output::RestoreTableFromBackupOutput {
             crate::output::RestoreTableFromBackupOutput {
                 table_description: self.table_description,
@@ -1262,7 +1271,7 @@ pub mod restore_table_from_backup_output {
     }
 }
 impl RestoreTableFromBackupOutput {
-    /// Creates a new builder-style object to manufacture [`RestoreTableFromBackupOutput`](crate::output::RestoreTableFromBackupOutput)
+    /// Creates a new builder-style object to manufacture [`RestoreTableFromBackupOutput`](crate::output::RestoreTableFromBackupOutput).
     pub fn builder() -> crate::output::restore_table_from_backup_output::Builder {
         crate::output::restore_table_from_backup_output::Builder::default()
     }
@@ -1273,23 +1282,28 @@ impl RestoreTableFromBackupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryOutput {
     /// <p>An array of item attributes that match the query criteria. Each element in this array consists of an attribute name and the value for that attribute.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<
         std::vec::Vec<std::collections::HashMap<std::string::String, crate::model::AttributeValue>>,
     >,
     /// <p>The number of items in the response.</p>
     /// <p>If you used a <code>QueryFilter</code> in the request, then <code>Count</code> is the number of items returned after the filter was applied, and <code>ScannedCount</code> is the number of matching items before the filter was applied.</p>
     /// <p>If you did not use a filter in the request, then <code>Count</code> and <code>ScannedCount</code> are the same.</p>
+    #[doc(hidden)]
     pub count: i32,
     /// <p>The number of items evaluated, before any <code>QueryFilter</code> is applied. A high <code>ScannedCount</code> value with few, or no, <code>Count</code> results indicates an inefficient <code>Query</code> operation. For more information, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Count">Count and ScannedCount</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
     /// <p>If you did not use a filter in the request, then <code>ScannedCount</code> is the same as <code>Count</code>.</p>
+    #[doc(hidden)]
     pub scanned_count: i32,
     /// <p>The primary key of the item where the operation stopped, inclusive of the previous result set. Use this value to start a new operation, excluding this value in the new request.</p>
     /// <p>If <code>LastEvaluatedKey</code> is empty, then the "last page" of results has been processed and there is no more data to be retrieved.</p>
     /// <p>If <code>LastEvaluatedKey</code> is not empty, it does not necessarily mean that there is more data in the result set. The only way to know when you have reached the end of the result set is when <code>LastEvaluatedKey</code> is empty.</p>
+    #[doc(hidden)]
     pub last_evaluated_key: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AttributeValue>,
     >,
     /// <p>The capacity units consumed by the <code>Query</code> operation. The data returned includes the total provisioned throughput consumed, along with statistics for the table and any indexes involved in the operation. <code>ConsumedCapacity</code> is only returned if the <code>ReturnConsumedCapacity</code> parameter was specified. For more information, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html">Provisioned Throughput</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<crate::model::ConsumedCapacity>,
 }
 impl QueryOutput {
@@ -1338,11 +1352,10 @@ impl std::fmt::Debug for QueryOutput {
         formatter.finish()
     }
 }
-/// See [`QueryOutput`](crate::output::QueryOutput)
+/// See [`QueryOutput`](crate::output::QueryOutput).
 pub mod query_output {
 
-    /// A builder for [`QueryOutput`](crate::output::QueryOutput)
-    #[non_exhaustive]
+    /// A builder for [`QueryOutput`](crate::output::QueryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<
@@ -1452,7 +1465,7 @@ pub mod query_output {
             self.consumed_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryOutput`](crate::output::QueryOutput)
+        /// Consumes the builder and constructs a [`QueryOutput`](crate::output::QueryOutput).
         pub fn build(self) -> crate::output::QueryOutput {
             crate::output::QueryOutput {
                 items: self.items,
@@ -1465,7 +1478,7 @@ pub mod query_output {
     }
 }
 impl QueryOutput {
-    /// Creates a new builder-style object to manufacture [`QueryOutput`](crate::output::QueryOutput)
+    /// Creates a new builder-style object to manufacture [`QueryOutput`](crate::output::QueryOutput).
     pub fn builder() -> crate::output::query_output::Builder {
         crate::output::query_output::Builder::default()
     }
@@ -1476,10 +1489,12 @@ impl QueryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutItemOutput {
     /// <p>The attribute values as they appeared before the <code>PutItem</code> operation, but only if <code>ReturnValues</code> is specified as <code>ALL_OLD</code> in the request. Each element consists of an attribute name and an attribute value.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AttributeValue>,
     >,
     /// <p>The capacity units consumed by the <code>PutItem</code> operation. The data returned includes the total provisioned throughput consumed, along with statistics for the table and any indexes involved in the operation. <code>ConsumedCapacity</code> is only returned if the <code>ReturnConsumedCapacity</code> parameter was specified. For more information, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html">Read/Write Capacity Mode</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<crate::model::ConsumedCapacity>,
     /// <p>Information about item collections, if any, that were affected by the <code>PutItem</code> operation. <code>ItemCollectionMetrics</code> is only returned if the <code>ReturnItemCollectionMetrics</code> parameter was specified. If the table does not have any local secondary indexes, this information is not returned in the response.</p>
     /// <p>Each <code>ItemCollectionMetrics</code> element consists of:</p>
@@ -1487,6 +1502,7 @@ pub struct PutItemOutput {
     /// <li> <p> <code>ItemCollectionKey</code> - The partition key value of the item collection. This is the same as the partition key value of the item itself.</p> </li>
     /// <li> <p> <code>SizeEstimateRangeGB</code> - An estimate of item collection size, in gigabytes. This value is a two-element array containing a lower bound and an upper bound for the estimate. The estimate includes the size of all the items in the table, plus the size of all attributes projected into all of the local secondary indexes on that table. Use this estimate to measure whether a local secondary index is approaching its size limit.</p> <p>The estimate is subject to change over time; therefore, do not rely on the precision or accuracy of the estimate.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub item_collection_metrics: std::option::Option<crate::model::ItemCollectionMetrics>,
 }
 impl PutItemOutput {
@@ -1523,11 +1539,10 @@ impl std::fmt::Debug for PutItemOutput {
         formatter.finish()
     }
 }
-/// See [`PutItemOutput`](crate::output::PutItemOutput)
+/// See [`PutItemOutput`](crate::output::PutItemOutput).
 pub mod put_item_output {
 
-    /// A builder for [`PutItemOutput`](crate::output::PutItemOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutItemOutput`](crate::output::PutItemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<
@@ -1602,7 +1617,7 @@ pub mod put_item_output {
             self.item_collection_metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutItemOutput`](crate::output::PutItemOutput)
+        /// Consumes the builder and constructs a [`PutItemOutput`](crate::output::PutItemOutput).
         pub fn build(self) -> crate::output::PutItemOutput {
             crate::output::PutItemOutput {
                 attributes: self.attributes,
@@ -1613,7 +1628,7 @@ pub mod put_item_output {
     }
 }
 impl PutItemOutput {
-    /// Creates a new builder-style object to manufacture [`PutItemOutput`](crate::output::PutItemOutput)
+    /// Creates a new builder-style object to manufacture [`PutItemOutput`](crate::output::PutItemOutput).
     pub fn builder() -> crate::output::put_item_output::Builder {
         crate::output::put_item_output::Builder::default()
     }
@@ -1624,8 +1639,10 @@ impl PutItemOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsOfResourceOutput {
     /// <p>The tags currently associated with the Amazon DynamoDB resource.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>If this value is returned, there are additional results to be displayed. To retrieve them, call ListTagsOfResource again, with NextToken set to this value.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListTagsOfResourceOutput {
@@ -1646,11 +1663,10 @@ impl std::fmt::Debug for ListTagsOfResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsOfResourceOutput`](crate::output::ListTagsOfResourceOutput)
+/// See [`ListTagsOfResourceOutput`](crate::output::ListTagsOfResourceOutput).
 pub mod list_tags_of_resource_output {
 
-    /// A builder for [`ListTagsOfResourceOutput`](crate::output::ListTagsOfResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsOfResourceOutput`](crate::output::ListTagsOfResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -1686,7 +1702,7 @@ pub mod list_tags_of_resource_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsOfResourceOutput`](crate::output::ListTagsOfResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsOfResourceOutput`](crate::output::ListTagsOfResourceOutput).
         pub fn build(self) -> crate::output::ListTagsOfResourceOutput {
             crate::output::ListTagsOfResourceOutput {
                 tags: self.tags,
@@ -1696,7 +1712,7 @@ pub mod list_tags_of_resource_output {
     }
 }
 impl ListTagsOfResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsOfResourceOutput`](crate::output::ListTagsOfResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsOfResourceOutput`](crate::output::ListTagsOfResourceOutput).
     pub fn builder() -> crate::output::list_tags_of_resource_output::Builder {
         crate::output::list_tags_of_resource_output::Builder::default()
     }
@@ -1708,9 +1724,11 @@ impl ListTagsOfResourceOutput {
 pub struct ListTablesOutput {
     /// <p>The names of the tables associated with the current account at the current endpoint. The maximum size of this array is 100.</p>
     /// <p>If <code>LastEvaluatedTableName</code> also appears in the output, you can use this value as the <code>ExclusiveStartTableName</code> parameter in a subsequent <code>ListTables</code> request and obtain the next page of results.</p>
+    #[doc(hidden)]
     pub table_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The name of the last table in the current page of results. Use this value as the <code>ExclusiveStartTableName</code> in a new request to obtain the next page of results, until all the table names are returned.</p>
     /// <p>If you do not receive a <code>LastEvaluatedTableName</code> value in the response, this means that there are no more table names to be retrieved.</p>
+    #[doc(hidden)]
     pub last_evaluated_table_name: std::option::Option<std::string::String>,
 }
 impl ListTablesOutput {
@@ -1733,11 +1751,10 @@ impl std::fmt::Debug for ListTablesOutput {
         formatter.finish()
     }
 }
-/// See [`ListTablesOutput`](crate::output::ListTablesOutput)
+/// See [`ListTablesOutput`](crate::output::ListTablesOutput).
 pub mod list_tables_output {
 
-    /// A builder for [`ListTablesOutput`](crate::output::ListTablesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTablesOutput`](crate::output::ListTablesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1780,7 +1797,7 @@ pub mod list_tables_output {
             self.last_evaluated_table_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTablesOutput`](crate::output::ListTablesOutput)
+        /// Consumes the builder and constructs a [`ListTablesOutput`](crate::output::ListTablesOutput).
         pub fn build(self) -> crate::output::ListTablesOutput {
             crate::output::ListTablesOutput {
                 table_names: self.table_names,
@@ -1790,7 +1807,7 @@ pub mod list_tables_output {
     }
 }
 impl ListTablesOutput {
-    /// Creates a new builder-style object to manufacture [`ListTablesOutput`](crate::output::ListTablesOutput)
+    /// Creates a new builder-style object to manufacture [`ListTablesOutput`](crate::output::ListTablesOutput).
     pub fn builder() -> crate::output::list_tables_output::Builder {
         crate::output::list_tables_output::Builder::default()
     }
@@ -1801,8 +1818,10 @@ impl ListTablesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListGlobalTablesOutput {
     /// <p>List of global table names.</p>
+    #[doc(hidden)]
     pub global_tables: std::option::Option<std::vec::Vec<crate::model::GlobalTable>>,
     /// <p>Last evaluated global table name.</p>
+    #[doc(hidden)]
     pub last_evaluated_global_table_name: std::option::Option<std::string::String>,
 }
 impl ListGlobalTablesOutput {
@@ -1826,11 +1845,10 @@ impl std::fmt::Debug for ListGlobalTablesOutput {
         formatter.finish()
     }
 }
-/// See [`ListGlobalTablesOutput`](crate::output::ListGlobalTablesOutput)
+/// See [`ListGlobalTablesOutput`](crate::output::ListGlobalTablesOutput).
 pub mod list_global_tables_output {
 
-    /// A builder for [`ListGlobalTablesOutput`](crate::output::ListGlobalTablesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListGlobalTablesOutput`](crate::output::ListGlobalTablesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_tables: std::option::Option<std::vec::Vec<crate::model::GlobalTable>>,
@@ -1872,7 +1890,7 @@ pub mod list_global_tables_output {
             self.last_evaluated_global_table_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGlobalTablesOutput`](crate::output::ListGlobalTablesOutput)
+        /// Consumes the builder and constructs a [`ListGlobalTablesOutput`](crate::output::ListGlobalTablesOutput).
         pub fn build(self) -> crate::output::ListGlobalTablesOutput {
             crate::output::ListGlobalTablesOutput {
                 global_tables: self.global_tables,
@@ -1882,7 +1900,7 @@ pub mod list_global_tables_output {
     }
 }
 impl ListGlobalTablesOutput {
-    /// Creates a new builder-style object to manufacture [`ListGlobalTablesOutput`](crate::output::ListGlobalTablesOutput)
+    /// Creates a new builder-style object to manufacture [`ListGlobalTablesOutput`](crate::output::ListGlobalTablesOutput).
     pub fn builder() -> crate::output::list_global_tables_output::Builder {
         crate::output::list_global_tables_output::Builder::default()
     }
@@ -1893,8 +1911,10 @@ impl ListGlobalTablesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListExportsOutput {
     /// <p>A list of <code>ExportSummary</code> objects.</p>
+    #[doc(hidden)]
     pub export_summaries: std::option::Option<std::vec::Vec<crate::model::ExportSummary>>,
     /// <p>If this value is returned, there are additional results to be displayed. To retrieve them, call <code>ListExports</code> again, with <code>NextToken</code> set to this value.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListExportsOutput {
@@ -1915,11 +1935,10 @@ impl std::fmt::Debug for ListExportsOutput {
         formatter.finish()
     }
 }
-/// See [`ListExportsOutput`](crate::output::ListExportsOutput)
+/// See [`ListExportsOutput`](crate::output::ListExportsOutput).
 pub mod list_exports_output {
 
-    /// A builder for [`ListExportsOutput`](crate::output::ListExportsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListExportsOutput`](crate::output::ListExportsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_summaries:
@@ -1956,7 +1975,7 @@ pub mod list_exports_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListExportsOutput`](crate::output::ListExportsOutput)
+        /// Consumes the builder and constructs a [`ListExportsOutput`](crate::output::ListExportsOutput).
         pub fn build(self) -> crate::output::ListExportsOutput {
             crate::output::ListExportsOutput {
                 export_summaries: self.export_summaries,
@@ -1966,7 +1985,7 @@ pub mod list_exports_output {
     }
 }
 impl ListExportsOutput {
-    /// Creates a new builder-style object to manufacture [`ListExportsOutput`](crate::output::ListExportsOutput)
+    /// Creates a new builder-style object to manufacture [`ListExportsOutput`](crate::output::ListExportsOutput).
     pub fn builder() -> crate::output::list_exports_output::Builder {
         crate::output::list_exports_output::Builder::default()
     }
@@ -1977,9 +1996,11 @@ impl ListExportsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListContributorInsightsOutput {
     /// <p>A list of ContributorInsightsSummary.</p>
+    #[doc(hidden)]
     pub contributor_insights_summaries:
         std::option::Option<std::vec::Vec<crate::model::ContributorInsightsSummary>>,
     /// <p>A token to go to the next page if there is one.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListContributorInsightsOutput {
@@ -2005,11 +2026,10 @@ impl std::fmt::Debug for ListContributorInsightsOutput {
         formatter.finish()
     }
 }
-/// See [`ListContributorInsightsOutput`](crate::output::ListContributorInsightsOutput)
+/// See [`ListContributorInsightsOutput`](crate::output::ListContributorInsightsOutput).
 pub mod list_contributor_insights_output {
 
-    /// A builder for [`ListContributorInsightsOutput`](crate::output::ListContributorInsightsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListContributorInsightsOutput`](crate::output::ListContributorInsightsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) contributor_insights_summaries:
@@ -2049,7 +2069,7 @@ pub mod list_contributor_insights_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListContributorInsightsOutput`](crate::output::ListContributorInsightsOutput)
+        /// Consumes the builder and constructs a [`ListContributorInsightsOutput`](crate::output::ListContributorInsightsOutput).
         pub fn build(self) -> crate::output::ListContributorInsightsOutput {
             crate::output::ListContributorInsightsOutput {
                 contributor_insights_summaries: self.contributor_insights_summaries,
@@ -2059,7 +2079,7 @@ pub mod list_contributor_insights_output {
     }
 }
 impl ListContributorInsightsOutput {
-    /// Creates a new builder-style object to manufacture [`ListContributorInsightsOutput`](crate::output::ListContributorInsightsOutput)
+    /// Creates a new builder-style object to manufacture [`ListContributorInsightsOutput`](crate::output::ListContributorInsightsOutput).
     pub fn builder() -> crate::output::list_contributor_insights_output::Builder {
         crate::output::list_contributor_insights_output::Builder::default()
     }
@@ -2070,10 +2090,12 @@ impl ListContributorInsightsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBackupsOutput {
     /// <p>List of <code>BackupSummary</code> objects.</p>
+    #[doc(hidden)]
     pub backup_summaries: std::option::Option<std::vec::Vec<crate::model::BackupSummary>>,
     /// <p> The ARN of the backup last evaluated when the current page of results was returned, inclusive of the current page of results. This value may be specified as the <code>ExclusiveStartBackupArn</code> of a new <code>ListBackups</code> operation in order to fetch the next page of results. </p>
     /// <p> If <code>LastEvaluatedBackupArn</code> is empty, then the last page of results has been processed and there are no more results to be retrieved. </p>
     /// <p> If <code>LastEvaluatedBackupArn</code> is not empty, this may or may not indicate that there is more data to be returned. All results are guaranteed to have been returned if and only if no value for <code>LastEvaluatedBackupArn</code> is returned. </p>
+    #[doc(hidden)]
     pub last_evaluated_backup_arn: std::option::Option<std::string::String>,
 }
 impl ListBackupsOutput {
@@ -2096,11 +2118,10 @@ impl std::fmt::Debug for ListBackupsOutput {
         formatter.finish()
     }
 }
-/// See [`ListBackupsOutput`](crate::output::ListBackupsOutput)
+/// See [`ListBackupsOutput`](crate::output::ListBackupsOutput).
 pub mod list_backups_output {
 
-    /// A builder for [`ListBackupsOutput`](crate::output::ListBackupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBackupsOutput`](crate::output::ListBackupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_summaries:
@@ -2144,7 +2165,7 @@ pub mod list_backups_output {
             self.last_evaluated_backup_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBackupsOutput`](crate::output::ListBackupsOutput)
+        /// Consumes the builder and constructs a [`ListBackupsOutput`](crate::output::ListBackupsOutput).
         pub fn build(self) -> crate::output::ListBackupsOutput {
             crate::output::ListBackupsOutput {
                 backup_summaries: self.backup_summaries,
@@ -2154,7 +2175,7 @@ pub mod list_backups_output {
     }
 }
 impl ListBackupsOutput {
-    /// Creates a new builder-style object to manufacture [`ListBackupsOutput`](crate::output::ListBackupsOutput)
+    /// Creates a new builder-style object to manufacture [`ListBackupsOutput`](crate::output::ListBackupsOutput).
     pub fn builder() -> crate::output::list_backups_output::Builder {
         crate::output::list_backups_output::Builder::default()
     }
@@ -2165,10 +2186,12 @@ impl ListBackupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetItemOutput {
     /// <p>A map of attribute names to <code>AttributeValue</code> objects, as specified by <code>ProjectionExpression</code>.</p>
+    #[doc(hidden)]
     pub item: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AttributeValue>,
     >,
     /// <p>The capacity units consumed by the <code>GetItem</code> operation. The data returned includes the total provisioned throughput consumed, along with statistics for the table and any indexes involved in the operation. <code>ConsumedCapacity</code> is only returned if the <code>ReturnConsumedCapacity</code> parameter was specified. For more information, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html">Read/Write Capacity Mode</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<crate::model::ConsumedCapacity>,
 }
 impl GetItemOutput {
@@ -2193,11 +2216,10 @@ impl std::fmt::Debug for GetItemOutput {
         formatter.finish()
     }
 }
-/// See [`GetItemOutput`](crate::output::GetItemOutput)
+/// See [`GetItemOutput`](crate::output::GetItemOutput).
 pub mod get_item_output {
 
-    /// A builder for [`GetItemOutput`](crate::output::GetItemOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetItemOutput`](crate::output::GetItemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item: std::option::Option<
@@ -2244,7 +2266,7 @@ pub mod get_item_output {
             self.consumed_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetItemOutput`](crate::output::GetItemOutput)
+        /// Consumes the builder and constructs a [`GetItemOutput`](crate::output::GetItemOutput).
         pub fn build(self) -> crate::output::GetItemOutput {
             crate::output::GetItemOutput {
                 item: self.item,
@@ -2254,7 +2276,7 @@ pub mod get_item_output {
     }
 }
 impl GetItemOutput {
-    /// Creates a new builder-style object to manufacture [`GetItemOutput`](crate::output::GetItemOutput)
+    /// Creates a new builder-style object to manufacture [`GetItemOutput`](crate::output::GetItemOutput).
     pub fn builder() -> crate::output::get_item_output::Builder {
         crate::output::get_item_output::Builder::default()
     }
@@ -2265,6 +2287,7 @@ impl GetItemOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportTableToPointInTimeOutput {
     /// <p>Contains a description of the table export.</p>
+    #[doc(hidden)]
     pub export_description: std::option::Option<crate::model::ExportDescription>,
 }
 impl ExportTableToPointInTimeOutput {
@@ -2280,11 +2303,10 @@ impl std::fmt::Debug for ExportTableToPointInTimeOutput {
         formatter.finish()
     }
 }
-/// See [`ExportTableToPointInTimeOutput`](crate::output::ExportTableToPointInTimeOutput)
+/// See [`ExportTableToPointInTimeOutput`](crate::output::ExportTableToPointInTimeOutput).
 pub mod export_table_to_point_in_time_output {
 
-    /// A builder for [`ExportTableToPointInTimeOutput`](crate::output::ExportTableToPointInTimeOutput)
-    #[non_exhaustive]
+    /// A builder for [`ExportTableToPointInTimeOutput`](crate::output::ExportTableToPointInTimeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_description: std::option::Option<crate::model::ExportDescription>,
@@ -2303,7 +2325,7 @@ pub mod export_table_to_point_in_time_output {
             self.export_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportTableToPointInTimeOutput`](crate::output::ExportTableToPointInTimeOutput)
+        /// Consumes the builder and constructs a [`ExportTableToPointInTimeOutput`](crate::output::ExportTableToPointInTimeOutput).
         pub fn build(self) -> crate::output::ExportTableToPointInTimeOutput {
             crate::output::ExportTableToPointInTimeOutput {
                 export_description: self.export_description,
@@ -2312,7 +2334,7 @@ pub mod export_table_to_point_in_time_output {
     }
 }
 impl ExportTableToPointInTimeOutput {
-    /// Creates a new builder-style object to manufacture [`ExportTableToPointInTimeOutput`](crate::output::ExportTableToPointInTimeOutput)
+    /// Creates a new builder-style object to manufacture [`ExportTableToPointInTimeOutput`](crate::output::ExportTableToPointInTimeOutput).
     pub fn builder() -> crate::output::export_table_to_point_in_time_output::Builder {
         crate::output::export_table_to_point_in_time_output::Builder::default()
     }
@@ -2323,8 +2345,10 @@ impl ExportTableToPointInTimeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecuteTransactionOutput {
     /// <p>The response to a PartiQL transaction.</p>
+    #[doc(hidden)]
     pub responses: std::option::Option<std::vec::Vec<crate::model::ItemResponse>>,
     /// <p>The capacity units consumed by the entire operation. The values of the list are ordered according to the ordering of the statements.</p>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<std::vec::Vec<crate::model::ConsumedCapacity>>,
 }
 impl ExecuteTransactionOutput {
@@ -2345,11 +2369,10 @@ impl std::fmt::Debug for ExecuteTransactionOutput {
         formatter.finish()
     }
 }
-/// See [`ExecuteTransactionOutput`](crate::output::ExecuteTransactionOutput)
+/// See [`ExecuteTransactionOutput`](crate::output::ExecuteTransactionOutput).
 pub mod execute_transaction_output {
 
-    /// A builder for [`ExecuteTransactionOutput`](crate::output::ExecuteTransactionOutput)
-    #[non_exhaustive]
+    /// A builder for [`ExecuteTransactionOutput`](crate::output::ExecuteTransactionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) responses: std::option::Option<std::vec::Vec<crate::model::ItemResponse>>,
@@ -2395,7 +2418,7 @@ pub mod execute_transaction_output {
             self.consumed_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecuteTransactionOutput`](crate::output::ExecuteTransactionOutput)
+        /// Consumes the builder and constructs a [`ExecuteTransactionOutput`](crate::output::ExecuteTransactionOutput).
         pub fn build(self) -> crate::output::ExecuteTransactionOutput {
             crate::output::ExecuteTransactionOutput {
                 responses: self.responses,
@@ -2405,7 +2428,7 @@ pub mod execute_transaction_output {
     }
 }
 impl ExecuteTransactionOutput {
-    /// Creates a new builder-style object to manufacture [`ExecuteTransactionOutput`](crate::output::ExecuteTransactionOutput)
+    /// Creates a new builder-style object to manufacture [`ExecuteTransactionOutput`](crate::output::ExecuteTransactionOutput).
     pub fn builder() -> crate::output::execute_transaction_output::Builder {
         crate::output::execute_transaction_output::Builder::default()
     }
@@ -2416,14 +2439,18 @@ impl ExecuteTransactionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecuteStatementOutput {
     /// <p>If a read operation was used, this property will contain the result of the read operation; a map of attribute names and their values. For the write operations this value will be empty.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<
         std::vec::Vec<std::collections::HashMap<std::string::String, crate::model::AttributeValue>>,
     >,
     /// <p>If the response of a read request exceeds the response payload limit DynamoDB will set this value in the response. If set, you can use that this value in the subsequent request to get the remaining results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The capacity units consumed by an operation. The data returned includes the total provisioned throughput consumed, along with statistics for the table and any indexes involved in the operation. <code>ConsumedCapacity</code> is only returned if the request asked for it. For more information, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html">Provisioned Throughput</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<crate::model::ConsumedCapacity>,
     /// <p>The primary key of the item where the operation stopped, inclusive of the previous result set. Use this value to start a new operation, excluding this value in the new request. If <code>LastEvaluatedKey</code> is empty, then the "last page" of results has been processed and there is no more data to be retrieved. If <code>LastEvaluatedKey</code> is not empty, it does not necessarily mean that there is more data in the result set. The only way to know when you have reached the end of the result set is when <code>LastEvaluatedKey</code> is empty. </p>
+    #[doc(hidden)]
     pub last_evaluated_key: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AttributeValue>,
     >,
@@ -2464,11 +2491,10 @@ impl std::fmt::Debug for ExecuteStatementOutput {
         formatter.finish()
     }
 }
-/// See [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput)
+/// See [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput).
 pub mod execute_statement_output {
 
-    /// A builder for [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput)
-    #[non_exhaustive]
+    /// A builder for [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<
@@ -2557,7 +2583,7 @@ pub mod execute_statement_output {
             self.last_evaluated_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput)
+        /// Consumes the builder and constructs a [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput).
         pub fn build(self) -> crate::output::ExecuteStatementOutput {
             crate::output::ExecuteStatementOutput {
                 items: self.items,
@@ -2569,7 +2595,7 @@ pub mod execute_statement_output {
     }
 }
 impl ExecuteStatementOutput {
-    /// Creates a new builder-style object to manufacture [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput)
+    /// Creates a new builder-style object to manufacture [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput).
     pub fn builder() -> crate::output::execute_statement_output::Builder {
         crate::output::execute_statement_output::Builder::default()
     }
@@ -2580,10 +2606,13 @@ impl ExecuteStatementOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnableKinesisStreamingDestinationOutput {
     /// <p>The name of the table being modified.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>The ARN for the specific Kinesis data stream.</p>
+    #[doc(hidden)]
     pub stream_arn: std::option::Option<std::string::String>,
     /// <p>The current status of the replication.</p>
+    #[doc(hidden)]
     pub destination_status: std::option::Option<crate::model::DestinationStatus>,
 }
 impl EnableKinesisStreamingDestinationOutput {
@@ -2609,11 +2638,10 @@ impl std::fmt::Debug for EnableKinesisStreamingDestinationOutput {
         formatter.finish()
     }
 }
-/// See [`EnableKinesisStreamingDestinationOutput`](crate::output::EnableKinesisStreamingDestinationOutput)
+/// See [`EnableKinesisStreamingDestinationOutput`](crate::output::EnableKinesisStreamingDestinationOutput).
 pub mod enable_kinesis_streaming_destination_output {
 
-    /// A builder for [`EnableKinesisStreamingDestinationOutput`](crate::output::EnableKinesisStreamingDestinationOutput)
-    #[non_exhaustive]
+    /// A builder for [`EnableKinesisStreamingDestinationOutput`](crate::output::EnableKinesisStreamingDestinationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_name: std::option::Option<std::string::String>,
@@ -2654,7 +2682,7 @@ pub mod enable_kinesis_streaming_destination_output {
             self.destination_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnableKinesisStreamingDestinationOutput`](crate::output::EnableKinesisStreamingDestinationOutput)
+        /// Consumes the builder and constructs a [`EnableKinesisStreamingDestinationOutput`](crate::output::EnableKinesisStreamingDestinationOutput).
         pub fn build(self) -> crate::output::EnableKinesisStreamingDestinationOutput {
             crate::output::EnableKinesisStreamingDestinationOutput {
                 table_name: self.table_name,
@@ -2665,7 +2693,7 @@ pub mod enable_kinesis_streaming_destination_output {
     }
 }
 impl EnableKinesisStreamingDestinationOutput {
-    /// Creates a new builder-style object to manufacture [`EnableKinesisStreamingDestinationOutput`](crate::output::EnableKinesisStreamingDestinationOutput)
+    /// Creates a new builder-style object to manufacture [`EnableKinesisStreamingDestinationOutput`](crate::output::EnableKinesisStreamingDestinationOutput).
     pub fn builder() -> crate::output::enable_kinesis_streaming_destination_output::Builder {
         crate::output::enable_kinesis_streaming_destination_output::Builder::default()
     }
@@ -2676,10 +2704,13 @@ impl EnableKinesisStreamingDestinationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisableKinesisStreamingDestinationOutput {
     /// <p>The name of the table being modified.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>The ARN for the specific Kinesis data stream.</p>
+    #[doc(hidden)]
     pub stream_arn: std::option::Option<std::string::String>,
     /// <p>The current status of the replication.</p>
+    #[doc(hidden)]
     pub destination_status: std::option::Option<crate::model::DestinationStatus>,
 }
 impl DisableKinesisStreamingDestinationOutput {
@@ -2705,11 +2736,10 @@ impl std::fmt::Debug for DisableKinesisStreamingDestinationOutput {
         formatter.finish()
     }
 }
-/// See [`DisableKinesisStreamingDestinationOutput`](crate::output::DisableKinesisStreamingDestinationOutput)
+/// See [`DisableKinesisStreamingDestinationOutput`](crate::output::DisableKinesisStreamingDestinationOutput).
 pub mod disable_kinesis_streaming_destination_output {
 
-    /// A builder for [`DisableKinesisStreamingDestinationOutput`](crate::output::DisableKinesisStreamingDestinationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisableKinesisStreamingDestinationOutput`](crate::output::DisableKinesisStreamingDestinationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_name: std::option::Option<std::string::String>,
@@ -2750,7 +2780,7 @@ pub mod disable_kinesis_streaming_destination_output {
             self.destination_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisableKinesisStreamingDestinationOutput`](crate::output::DisableKinesisStreamingDestinationOutput)
+        /// Consumes the builder and constructs a [`DisableKinesisStreamingDestinationOutput`](crate::output::DisableKinesisStreamingDestinationOutput).
         pub fn build(self) -> crate::output::DisableKinesisStreamingDestinationOutput {
             crate::output::DisableKinesisStreamingDestinationOutput {
                 table_name: self.table_name,
@@ -2761,7 +2791,7 @@ pub mod disable_kinesis_streaming_destination_output {
     }
 }
 impl DisableKinesisStreamingDestinationOutput {
-    /// Creates a new builder-style object to manufacture [`DisableKinesisStreamingDestinationOutput`](crate::output::DisableKinesisStreamingDestinationOutput)
+    /// Creates a new builder-style object to manufacture [`DisableKinesisStreamingDestinationOutput`](crate::output::DisableKinesisStreamingDestinationOutput).
     pub fn builder() -> crate::output::disable_kinesis_streaming_destination_output::Builder {
         crate::output::disable_kinesis_streaming_destination_output::Builder::default()
     }
@@ -2772,6 +2802,7 @@ impl DisableKinesisStreamingDestinationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeTimeToLiveOutput {
     /// <p></p>
+    #[doc(hidden)]
     pub time_to_live_description: std::option::Option<crate::model::TimeToLiveDescription>,
 }
 impl DescribeTimeToLiveOutput {
@@ -2789,11 +2820,10 @@ impl std::fmt::Debug for DescribeTimeToLiveOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeTimeToLiveOutput`](crate::output::DescribeTimeToLiveOutput)
+/// See [`DescribeTimeToLiveOutput`](crate::output::DescribeTimeToLiveOutput).
 pub mod describe_time_to_live_output {
 
-    /// A builder for [`DescribeTimeToLiveOutput`](crate::output::DescribeTimeToLiveOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeTimeToLiveOutput`](crate::output::DescribeTimeToLiveOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) time_to_live_description:
@@ -2816,7 +2846,7 @@ pub mod describe_time_to_live_output {
             self.time_to_live_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeTimeToLiveOutput`](crate::output::DescribeTimeToLiveOutput)
+        /// Consumes the builder and constructs a [`DescribeTimeToLiveOutput`](crate::output::DescribeTimeToLiveOutput).
         pub fn build(self) -> crate::output::DescribeTimeToLiveOutput {
             crate::output::DescribeTimeToLiveOutput {
                 time_to_live_description: self.time_to_live_description,
@@ -2825,7 +2855,7 @@ pub mod describe_time_to_live_output {
     }
 }
 impl DescribeTimeToLiveOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeTimeToLiveOutput`](crate::output::DescribeTimeToLiveOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeTimeToLiveOutput`](crate::output::DescribeTimeToLiveOutput).
     pub fn builder() -> crate::output::describe_time_to_live_output::Builder {
         crate::output::describe_time_to_live_output::Builder::default()
     }
@@ -2836,6 +2866,7 @@ impl DescribeTimeToLiveOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeTableReplicaAutoScalingOutput {
     /// <p>Represents the auto scaling properties of the table.</p>
+    #[doc(hidden)]
     pub table_auto_scaling_description:
         std::option::Option<crate::model::TableAutoScalingDescription>,
 }
@@ -2857,11 +2888,10 @@ impl std::fmt::Debug for DescribeTableReplicaAutoScalingOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeTableReplicaAutoScalingOutput`](crate::output::DescribeTableReplicaAutoScalingOutput)
+/// See [`DescribeTableReplicaAutoScalingOutput`](crate::output::DescribeTableReplicaAutoScalingOutput).
 pub mod describe_table_replica_auto_scaling_output {
 
-    /// A builder for [`DescribeTableReplicaAutoScalingOutput`](crate::output::DescribeTableReplicaAutoScalingOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeTableReplicaAutoScalingOutput`](crate::output::DescribeTableReplicaAutoScalingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_auto_scaling_description:
@@ -2884,7 +2914,7 @@ pub mod describe_table_replica_auto_scaling_output {
             self.table_auto_scaling_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeTableReplicaAutoScalingOutput`](crate::output::DescribeTableReplicaAutoScalingOutput)
+        /// Consumes the builder and constructs a [`DescribeTableReplicaAutoScalingOutput`](crate::output::DescribeTableReplicaAutoScalingOutput).
         pub fn build(self) -> crate::output::DescribeTableReplicaAutoScalingOutput {
             crate::output::DescribeTableReplicaAutoScalingOutput {
                 table_auto_scaling_description: self.table_auto_scaling_description,
@@ -2893,7 +2923,7 @@ pub mod describe_table_replica_auto_scaling_output {
     }
 }
 impl DescribeTableReplicaAutoScalingOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeTableReplicaAutoScalingOutput`](crate::output::DescribeTableReplicaAutoScalingOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeTableReplicaAutoScalingOutput`](crate::output::DescribeTableReplicaAutoScalingOutput).
     pub fn builder() -> crate::output::describe_table_replica_auto_scaling_output::Builder {
         crate::output::describe_table_replica_auto_scaling_output::Builder::default()
     }
@@ -2904,6 +2934,7 @@ impl DescribeTableReplicaAutoScalingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeTableOutput {
     /// <p>The properties of the table.</p>
+    #[doc(hidden)]
     pub table: std::option::Option<crate::model::TableDescription>,
 }
 impl DescribeTableOutput {
@@ -2919,11 +2950,10 @@ impl std::fmt::Debug for DescribeTableOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeTableOutput`](crate::output::DescribeTableOutput)
+/// See [`DescribeTableOutput`](crate::output::DescribeTableOutput).
 pub mod describe_table_output {
 
-    /// A builder for [`DescribeTableOutput`](crate::output::DescribeTableOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeTableOutput`](crate::output::DescribeTableOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table: std::option::Option<crate::model::TableDescription>,
@@ -2942,14 +2972,14 @@ pub mod describe_table_output {
             self.table = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeTableOutput`](crate::output::DescribeTableOutput)
+        /// Consumes the builder and constructs a [`DescribeTableOutput`](crate::output::DescribeTableOutput).
         pub fn build(self) -> crate::output::DescribeTableOutput {
             crate::output::DescribeTableOutput { table: self.table }
         }
     }
 }
 impl DescribeTableOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeTableOutput`](crate::output::DescribeTableOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeTableOutput`](crate::output::DescribeTableOutput).
     pub fn builder() -> crate::output::describe_table_output::Builder {
         crate::output::describe_table_output::Builder::default()
     }
@@ -2960,12 +2990,16 @@ impl DescribeTableOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeLimitsOutput {
     /// <p>The maximum total read capacity units that your account allows you to provision across all of your tables in this Region.</p>
+    #[doc(hidden)]
     pub account_max_read_capacity_units: std::option::Option<i64>,
     /// <p>The maximum total write capacity units that your account allows you to provision across all of your tables in this Region.</p>
+    #[doc(hidden)]
     pub account_max_write_capacity_units: std::option::Option<i64>,
     /// <p>The maximum read capacity units that your account allows you to provision for a new table that you are creating in this Region, including the read capacity units provisioned for its global secondary indexes (GSIs).</p>
+    #[doc(hidden)]
     pub table_max_read_capacity_units: std::option::Option<i64>,
     /// <p>The maximum write capacity units that your account allows you to provision for a new table that you are creating in this Region, including the write capacity units provisioned for its global secondary indexes (GSIs).</p>
+    #[doc(hidden)]
     pub table_max_write_capacity_units: std::option::Option<i64>,
 }
 impl DescribeLimitsOutput {
@@ -3008,11 +3042,10 @@ impl std::fmt::Debug for DescribeLimitsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeLimitsOutput`](crate::output::DescribeLimitsOutput)
+/// See [`DescribeLimitsOutput`](crate::output::DescribeLimitsOutput).
 pub mod describe_limits_output {
 
-    /// A builder for [`DescribeLimitsOutput`](crate::output::DescribeLimitsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeLimitsOutput`](crate::output::DescribeLimitsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_max_read_capacity_units: std::option::Option<i64>,
@@ -3073,7 +3106,7 @@ pub mod describe_limits_output {
             self.table_max_write_capacity_units = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeLimitsOutput`](crate::output::DescribeLimitsOutput)
+        /// Consumes the builder and constructs a [`DescribeLimitsOutput`](crate::output::DescribeLimitsOutput).
         pub fn build(self) -> crate::output::DescribeLimitsOutput {
             crate::output::DescribeLimitsOutput {
                 account_max_read_capacity_units: self.account_max_read_capacity_units,
@@ -3085,7 +3118,7 @@ pub mod describe_limits_output {
     }
 }
 impl DescribeLimitsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeLimitsOutput`](crate::output::DescribeLimitsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeLimitsOutput`](crate::output::DescribeLimitsOutput).
     pub fn builder() -> crate::output::describe_limits_output::Builder {
         crate::output::describe_limits_output::Builder::default()
     }
@@ -3096,8 +3129,10 @@ impl DescribeLimitsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeKinesisStreamingDestinationOutput {
     /// <p>The name of the table being described.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>The list of replica structures for the table being described.</p>
+    #[doc(hidden)]
     pub kinesis_data_stream_destinations:
         std::option::Option<std::vec::Vec<crate::model::KinesisDataStreamDestination>>,
 }
@@ -3124,11 +3159,10 @@ impl std::fmt::Debug for DescribeKinesisStreamingDestinationOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeKinesisStreamingDestinationOutput`](crate::output::DescribeKinesisStreamingDestinationOutput)
+/// See [`DescribeKinesisStreamingDestinationOutput`](crate::output::DescribeKinesisStreamingDestinationOutput).
 pub mod describe_kinesis_streaming_destination_output {
 
-    /// A builder for [`DescribeKinesisStreamingDestinationOutput`](crate::output::DescribeKinesisStreamingDestinationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeKinesisStreamingDestinationOutput`](crate::output::DescribeKinesisStreamingDestinationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_name: std::option::Option<std::string::String>,
@@ -3168,7 +3202,7 @@ pub mod describe_kinesis_streaming_destination_output {
             self.kinesis_data_stream_destinations = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeKinesisStreamingDestinationOutput`](crate::output::DescribeKinesisStreamingDestinationOutput)
+        /// Consumes the builder and constructs a [`DescribeKinesisStreamingDestinationOutput`](crate::output::DescribeKinesisStreamingDestinationOutput).
         pub fn build(self) -> crate::output::DescribeKinesisStreamingDestinationOutput {
             crate::output::DescribeKinesisStreamingDestinationOutput {
                 table_name: self.table_name,
@@ -3178,7 +3212,7 @@ pub mod describe_kinesis_streaming_destination_output {
     }
 }
 impl DescribeKinesisStreamingDestinationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeKinesisStreamingDestinationOutput`](crate::output::DescribeKinesisStreamingDestinationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeKinesisStreamingDestinationOutput`](crate::output::DescribeKinesisStreamingDestinationOutput).
     pub fn builder() -> crate::output::describe_kinesis_streaming_destination_output::Builder {
         crate::output::describe_kinesis_streaming_destination_output::Builder::default()
     }
@@ -3189,8 +3223,10 @@ impl DescribeKinesisStreamingDestinationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeGlobalTableSettingsOutput {
     /// <p>The name of the global table.</p>
+    #[doc(hidden)]
     pub global_table_name: std::option::Option<std::string::String>,
     /// <p>The Region-specific settings for the global table.</p>
+    #[doc(hidden)]
     pub replica_settings:
         std::option::Option<std::vec::Vec<crate::model::ReplicaSettingsDescription>>,
 }
@@ -3214,11 +3250,10 @@ impl std::fmt::Debug for DescribeGlobalTableSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeGlobalTableSettingsOutput`](crate::output::DescribeGlobalTableSettingsOutput)
+/// See [`DescribeGlobalTableSettingsOutput`](crate::output::DescribeGlobalTableSettingsOutput).
 pub mod describe_global_table_settings_output {
 
-    /// A builder for [`DescribeGlobalTableSettingsOutput`](crate::output::DescribeGlobalTableSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeGlobalTableSettingsOutput`](crate::output::DescribeGlobalTableSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_table_name: std::option::Option<std::string::String>,
@@ -3258,7 +3293,7 @@ pub mod describe_global_table_settings_output {
             self.replica_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeGlobalTableSettingsOutput`](crate::output::DescribeGlobalTableSettingsOutput)
+        /// Consumes the builder and constructs a [`DescribeGlobalTableSettingsOutput`](crate::output::DescribeGlobalTableSettingsOutput).
         pub fn build(self) -> crate::output::DescribeGlobalTableSettingsOutput {
             crate::output::DescribeGlobalTableSettingsOutput {
                 global_table_name: self.global_table_name,
@@ -3268,7 +3303,7 @@ pub mod describe_global_table_settings_output {
     }
 }
 impl DescribeGlobalTableSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeGlobalTableSettingsOutput`](crate::output::DescribeGlobalTableSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeGlobalTableSettingsOutput`](crate::output::DescribeGlobalTableSettingsOutput).
     pub fn builder() -> crate::output::describe_global_table_settings_output::Builder {
         crate::output::describe_global_table_settings_output::Builder::default()
     }
@@ -3279,6 +3314,7 @@ impl DescribeGlobalTableSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeGlobalTableOutput {
     /// <p>Contains the details of the global table.</p>
+    #[doc(hidden)]
     pub global_table_description: std::option::Option<crate::model::GlobalTableDescription>,
 }
 impl DescribeGlobalTableOutput {
@@ -3296,11 +3332,10 @@ impl std::fmt::Debug for DescribeGlobalTableOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeGlobalTableOutput`](crate::output::DescribeGlobalTableOutput)
+/// See [`DescribeGlobalTableOutput`](crate::output::DescribeGlobalTableOutput).
 pub mod describe_global_table_output {
 
-    /// A builder for [`DescribeGlobalTableOutput`](crate::output::DescribeGlobalTableOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeGlobalTableOutput`](crate::output::DescribeGlobalTableOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_table_description:
@@ -3323,7 +3358,7 @@ pub mod describe_global_table_output {
             self.global_table_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeGlobalTableOutput`](crate::output::DescribeGlobalTableOutput)
+        /// Consumes the builder and constructs a [`DescribeGlobalTableOutput`](crate::output::DescribeGlobalTableOutput).
         pub fn build(self) -> crate::output::DescribeGlobalTableOutput {
             crate::output::DescribeGlobalTableOutput {
                 global_table_description: self.global_table_description,
@@ -3332,7 +3367,7 @@ pub mod describe_global_table_output {
     }
 }
 impl DescribeGlobalTableOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeGlobalTableOutput`](crate::output::DescribeGlobalTableOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeGlobalTableOutput`](crate::output::DescribeGlobalTableOutput).
     pub fn builder() -> crate::output::describe_global_table_output::Builder {
         crate::output::describe_global_table_output::Builder::default()
     }
@@ -3343,6 +3378,7 @@ impl DescribeGlobalTableOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeExportOutput {
     /// <p>Represents the properties of the export.</p>
+    #[doc(hidden)]
     pub export_description: std::option::Option<crate::model::ExportDescription>,
 }
 impl DescribeExportOutput {
@@ -3358,11 +3394,10 @@ impl std::fmt::Debug for DescribeExportOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeExportOutput`](crate::output::DescribeExportOutput)
+/// See [`DescribeExportOutput`](crate::output::DescribeExportOutput).
 pub mod describe_export_output {
 
-    /// A builder for [`DescribeExportOutput`](crate::output::DescribeExportOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeExportOutput`](crate::output::DescribeExportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_description: std::option::Option<crate::model::ExportDescription>,
@@ -3381,7 +3416,7 @@ pub mod describe_export_output {
             self.export_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeExportOutput`](crate::output::DescribeExportOutput)
+        /// Consumes the builder and constructs a [`DescribeExportOutput`](crate::output::DescribeExportOutput).
         pub fn build(self) -> crate::output::DescribeExportOutput {
             crate::output::DescribeExportOutput {
                 export_description: self.export_description,
@@ -3390,7 +3425,7 @@ pub mod describe_export_output {
     }
 }
 impl DescribeExportOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeExportOutput`](crate::output::DescribeExportOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeExportOutput`](crate::output::DescribeExportOutput).
     pub fn builder() -> crate::output::describe_export_output::Builder {
         crate::output::describe_export_output::Builder::default()
     }
@@ -3401,6 +3436,7 @@ impl DescribeExportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEndpointsOutput {
     /// <p>List of endpoints.</p>
+    #[doc(hidden)]
     pub endpoints: std::option::Option<std::vec::Vec<crate::model::Endpoint>>,
 }
 impl DescribeEndpointsOutput {
@@ -3416,11 +3452,10 @@ impl std::fmt::Debug for DescribeEndpointsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput)
+/// See [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput).
 pub mod describe_endpoints_output {
 
-    /// A builder for [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoints: std::option::Option<std::vec::Vec<crate::model::Endpoint>>,
@@ -3445,7 +3480,7 @@ pub mod describe_endpoints_output {
             self.endpoints = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput)
+        /// Consumes the builder and constructs a [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput).
         pub fn build(self) -> crate::output::DescribeEndpointsOutput {
             crate::output::DescribeEndpointsOutput {
                 endpoints: self.endpoints,
@@ -3454,7 +3489,7 @@ pub mod describe_endpoints_output {
     }
 }
 impl DescribeEndpointsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput).
     pub fn builder() -> crate::output::describe_endpoints_output::Builder {
         crate::output::describe_endpoints_output::Builder::default()
     }
@@ -3465,14 +3500,19 @@ impl DescribeEndpointsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeContributorInsightsOutput {
     /// <p>The name of the table being described.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>The name of the global secondary index being described.</p>
+    #[doc(hidden)]
     pub index_name: std::option::Option<std::string::String>,
     /// <p>List of names of the associated contributor insights rules.</p>
+    #[doc(hidden)]
     pub contributor_insights_rule_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Current status of contributor insights.</p>
+    #[doc(hidden)]
     pub contributor_insights_status: std::option::Option<crate::model::ContributorInsightsStatus>,
     /// <p>Timestamp of the last time the status was changed.</p>
+    #[doc(hidden)]
     pub last_update_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Returns information about the last failure that was encountered.</p>
     /// <p>The most common exceptions for a FAILED status are:</p>
@@ -3482,6 +3522,7 @@ pub struct DescribeContributorInsightsOutput {
     /// <li> <p>AccessDeniedException - Failed to create service-linked role for Contributor Insights due to insufficient permissions.</p> </li>
     /// <li> <p>InternalServerError - Failed to create Amazon CloudWatch Contributor Insights rules. Please retry request.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub failure_exception: std::option::Option<crate::model::FailureException>,
 }
 impl DescribeContributorInsightsOutput {
@@ -3537,11 +3578,10 @@ impl std::fmt::Debug for DescribeContributorInsightsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeContributorInsightsOutput`](crate::output::DescribeContributorInsightsOutput)
+/// See [`DescribeContributorInsightsOutput`](crate::output::DescribeContributorInsightsOutput).
 pub mod describe_contributor_insights_output {
 
-    /// A builder for [`DescribeContributorInsightsOutput`](crate::output::DescribeContributorInsightsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeContributorInsightsOutput`](crate::output::DescribeContributorInsightsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_name: std::option::Option<std::string::String>,
@@ -3652,7 +3692,7 @@ pub mod describe_contributor_insights_output {
             self.failure_exception = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeContributorInsightsOutput`](crate::output::DescribeContributorInsightsOutput)
+        /// Consumes the builder and constructs a [`DescribeContributorInsightsOutput`](crate::output::DescribeContributorInsightsOutput).
         pub fn build(self) -> crate::output::DescribeContributorInsightsOutput {
             crate::output::DescribeContributorInsightsOutput {
                 table_name: self.table_name,
@@ -3666,7 +3706,7 @@ pub mod describe_contributor_insights_output {
     }
 }
 impl DescribeContributorInsightsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeContributorInsightsOutput`](crate::output::DescribeContributorInsightsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeContributorInsightsOutput`](crate::output::DescribeContributorInsightsOutput).
     pub fn builder() -> crate::output::describe_contributor_insights_output::Builder {
         crate::output::describe_contributor_insights_output::Builder::default()
     }
@@ -3677,6 +3717,7 @@ impl DescribeContributorInsightsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeContinuousBackupsOutput {
     /// <p>Represents the continuous backups and point in time recovery settings on the table.</p>
+    #[doc(hidden)]
     pub continuous_backups_description:
         std::option::Option<crate::model::ContinuousBackupsDescription>,
 }
@@ -3698,11 +3739,10 @@ impl std::fmt::Debug for DescribeContinuousBackupsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeContinuousBackupsOutput`](crate::output::DescribeContinuousBackupsOutput)
+/// See [`DescribeContinuousBackupsOutput`](crate::output::DescribeContinuousBackupsOutput).
 pub mod describe_continuous_backups_output {
 
-    /// A builder for [`DescribeContinuousBackupsOutput`](crate::output::DescribeContinuousBackupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeContinuousBackupsOutput`](crate::output::DescribeContinuousBackupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) continuous_backups_description:
@@ -3725,7 +3765,7 @@ pub mod describe_continuous_backups_output {
             self.continuous_backups_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeContinuousBackupsOutput`](crate::output::DescribeContinuousBackupsOutput)
+        /// Consumes the builder and constructs a [`DescribeContinuousBackupsOutput`](crate::output::DescribeContinuousBackupsOutput).
         pub fn build(self) -> crate::output::DescribeContinuousBackupsOutput {
             crate::output::DescribeContinuousBackupsOutput {
                 continuous_backups_description: self.continuous_backups_description,
@@ -3734,7 +3774,7 @@ pub mod describe_continuous_backups_output {
     }
 }
 impl DescribeContinuousBackupsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeContinuousBackupsOutput`](crate::output::DescribeContinuousBackupsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeContinuousBackupsOutput`](crate::output::DescribeContinuousBackupsOutput).
     pub fn builder() -> crate::output::describe_continuous_backups_output::Builder {
         crate::output::describe_continuous_backups_output::Builder::default()
     }
@@ -3745,6 +3785,7 @@ impl DescribeContinuousBackupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBackupOutput {
     /// <p>Contains the description of the backup created for the table.</p>
+    #[doc(hidden)]
     pub backup_description: std::option::Option<crate::model::BackupDescription>,
 }
 impl DescribeBackupOutput {
@@ -3760,11 +3801,10 @@ impl std::fmt::Debug for DescribeBackupOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeBackupOutput`](crate::output::DescribeBackupOutput)
+/// See [`DescribeBackupOutput`](crate::output::DescribeBackupOutput).
 pub mod describe_backup_output {
 
-    /// A builder for [`DescribeBackupOutput`](crate::output::DescribeBackupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeBackupOutput`](crate::output::DescribeBackupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_description: std::option::Option<crate::model::BackupDescription>,
@@ -3783,7 +3823,7 @@ pub mod describe_backup_output {
             self.backup_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeBackupOutput`](crate::output::DescribeBackupOutput)
+        /// Consumes the builder and constructs a [`DescribeBackupOutput`](crate::output::DescribeBackupOutput).
         pub fn build(self) -> crate::output::DescribeBackupOutput {
             crate::output::DescribeBackupOutput {
                 backup_description: self.backup_description,
@@ -3792,7 +3832,7 @@ pub mod describe_backup_output {
     }
 }
 impl DescribeBackupOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeBackupOutput`](crate::output::DescribeBackupOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeBackupOutput`](crate::output::DescribeBackupOutput).
     pub fn builder() -> crate::output::describe_backup_output::Builder {
         crate::output::describe_backup_output::Builder::default()
     }
@@ -3803,6 +3843,7 @@ impl DescribeBackupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteTableOutput {
     /// <p>Represents the properties of a table.</p>
+    #[doc(hidden)]
     pub table_description: std::option::Option<crate::model::TableDescription>,
 }
 impl DeleteTableOutput {
@@ -3818,11 +3859,10 @@ impl std::fmt::Debug for DeleteTableOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteTableOutput`](crate::output::DeleteTableOutput)
+/// See [`DeleteTableOutput`](crate::output::DeleteTableOutput).
 pub mod delete_table_output {
 
-    /// A builder for [`DeleteTableOutput`](crate::output::DeleteTableOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteTableOutput`](crate::output::DeleteTableOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_description: std::option::Option<crate::model::TableDescription>,
@@ -3841,7 +3881,7 @@ pub mod delete_table_output {
             self.table_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteTableOutput`](crate::output::DeleteTableOutput)
+        /// Consumes the builder and constructs a [`DeleteTableOutput`](crate::output::DeleteTableOutput).
         pub fn build(self) -> crate::output::DeleteTableOutput {
             crate::output::DeleteTableOutput {
                 table_description: self.table_description,
@@ -3850,7 +3890,7 @@ pub mod delete_table_output {
     }
 }
 impl DeleteTableOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteTableOutput`](crate::output::DeleteTableOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteTableOutput`](crate::output::DeleteTableOutput).
     pub fn builder() -> crate::output::delete_table_output::Builder {
         crate::output::delete_table_output::Builder::default()
     }
@@ -3861,10 +3901,12 @@ impl DeleteTableOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteItemOutput {
     /// <p>A map of attribute names to <code>AttributeValue</code> objects, representing the item as it appeared before the <code>DeleteItem</code> operation. This map appears in the response only if <code>ReturnValues</code> was specified as <code>ALL_OLD</code> in the request.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AttributeValue>,
     >,
     /// <p>The capacity units consumed by the <code>DeleteItem</code> operation. The data returned includes the total provisioned throughput consumed, along with statistics for the table and any indexes involved in the operation. <code>ConsumedCapacity</code> is only returned if the <code>ReturnConsumedCapacity</code> parameter was specified. For more information, see <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html">Provisioned Mode</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<crate::model::ConsumedCapacity>,
     /// <p>Information about item collections, if any, that were affected by the <code>DeleteItem</code> operation. <code>ItemCollectionMetrics</code> is only returned if the <code>ReturnItemCollectionMetrics</code> parameter was specified. If the table does not have any local secondary indexes, this information is not returned in the response.</p>
     /// <p>Each <code>ItemCollectionMetrics</code> element consists of:</p>
@@ -3872,6 +3914,7 @@ pub struct DeleteItemOutput {
     /// <li> <p> <code>ItemCollectionKey</code> - The partition key value of the item collection. This is the same as the partition key value of the item itself.</p> </li>
     /// <li> <p> <code>SizeEstimateRangeGB</code> - An estimate of item collection size, in gigabytes. This value is a two-element array containing a lower bound and an upper bound for the estimate. The estimate includes the size of all the items in the table, plus the size of all attributes projected into all of the local secondary indexes on that table. Use this estimate to measure whether a local secondary index is approaching its size limit.</p> <p>The estimate is subject to change over time; therefore, do not rely on the precision or accuracy of the estimate.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub item_collection_metrics: std::option::Option<crate::model::ItemCollectionMetrics>,
 }
 impl DeleteItemOutput {
@@ -3908,11 +3951,10 @@ impl std::fmt::Debug for DeleteItemOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteItemOutput`](crate::output::DeleteItemOutput)
+/// See [`DeleteItemOutput`](crate::output::DeleteItemOutput).
 pub mod delete_item_output {
 
-    /// A builder for [`DeleteItemOutput`](crate::output::DeleteItemOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteItemOutput`](crate::output::DeleteItemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<
@@ -3987,7 +4029,7 @@ pub mod delete_item_output {
             self.item_collection_metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteItemOutput`](crate::output::DeleteItemOutput)
+        /// Consumes the builder and constructs a [`DeleteItemOutput`](crate::output::DeleteItemOutput).
         pub fn build(self) -> crate::output::DeleteItemOutput {
             crate::output::DeleteItemOutput {
                 attributes: self.attributes,
@@ -3998,7 +4040,7 @@ pub mod delete_item_output {
     }
 }
 impl DeleteItemOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteItemOutput`](crate::output::DeleteItemOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteItemOutput`](crate::output::DeleteItemOutput).
     pub fn builder() -> crate::output::delete_item_output::Builder {
         crate::output::delete_item_output::Builder::default()
     }
@@ -4009,6 +4051,7 @@ impl DeleteItemOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteBackupOutput {
     /// <p>Contains the description of the backup created for the table.</p>
+    #[doc(hidden)]
     pub backup_description: std::option::Option<crate::model::BackupDescription>,
 }
 impl DeleteBackupOutput {
@@ -4024,11 +4067,10 @@ impl std::fmt::Debug for DeleteBackupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBackupOutput`](crate::output::DeleteBackupOutput)
+/// See [`DeleteBackupOutput`](crate::output::DeleteBackupOutput).
 pub mod delete_backup_output {
 
-    /// A builder for [`DeleteBackupOutput`](crate::output::DeleteBackupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBackupOutput`](crate::output::DeleteBackupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_description: std::option::Option<crate::model::BackupDescription>,
@@ -4047,7 +4089,7 @@ pub mod delete_backup_output {
             self.backup_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteBackupOutput`](crate::output::DeleteBackupOutput)
+        /// Consumes the builder and constructs a [`DeleteBackupOutput`](crate::output::DeleteBackupOutput).
         pub fn build(self) -> crate::output::DeleteBackupOutput {
             crate::output::DeleteBackupOutput {
                 backup_description: self.backup_description,
@@ -4056,7 +4098,7 @@ pub mod delete_backup_output {
     }
 }
 impl DeleteBackupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBackupOutput`](crate::output::DeleteBackupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBackupOutput`](crate::output::DeleteBackupOutput).
     pub fn builder() -> crate::output::delete_backup_output::Builder {
         crate::output::delete_backup_output::Builder::default()
     }
@@ -4067,6 +4109,7 @@ impl DeleteBackupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateTableOutput {
     /// <p>Represents the properties of the table.</p>
+    #[doc(hidden)]
     pub table_description: std::option::Option<crate::model::TableDescription>,
 }
 impl CreateTableOutput {
@@ -4082,11 +4125,10 @@ impl std::fmt::Debug for CreateTableOutput {
         formatter.finish()
     }
 }
-/// See [`CreateTableOutput`](crate::output::CreateTableOutput)
+/// See [`CreateTableOutput`](crate::output::CreateTableOutput).
 pub mod create_table_output {
 
-    /// A builder for [`CreateTableOutput`](crate::output::CreateTableOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateTableOutput`](crate::output::CreateTableOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_description: std::option::Option<crate::model::TableDescription>,
@@ -4105,7 +4147,7 @@ pub mod create_table_output {
             self.table_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateTableOutput`](crate::output::CreateTableOutput)
+        /// Consumes the builder and constructs a [`CreateTableOutput`](crate::output::CreateTableOutput).
         pub fn build(self) -> crate::output::CreateTableOutput {
             crate::output::CreateTableOutput {
                 table_description: self.table_description,
@@ -4114,7 +4156,7 @@ pub mod create_table_output {
     }
 }
 impl CreateTableOutput {
-    /// Creates a new builder-style object to manufacture [`CreateTableOutput`](crate::output::CreateTableOutput)
+    /// Creates a new builder-style object to manufacture [`CreateTableOutput`](crate::output::CreateTableOutput).
     pub fn builder() -> crate::output::create_table_output::Builder {
         crate::output::create_table_output::Builder::default()
     }
@@ -4125,6 +4167,7 @@ impl CreateTableOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateGlobalTableOutput {
     /// <p>Contains the details of the global table.</p>
+    #[doc(hidden)]
     pub global_table_description: std::option::Option<crate::model::GlobalTableDescription>,
 }
 impl CreateGlobalTableOutput {
@@ -4142,11 +4185,10 @@ impl std::fmt::Debug for CreateGlobalTableOutput {
         formatter.finish()
     }
 }
-/// See [`CreateGlobalTableOutput`](crate::output::CreateGlobalTableOutput)
+/// See [`CreateGlobalTableOutput`](crate::output::CreateGlobalTableOutput).
 pub mod create_global_table_output {
 
-    /// A builder for [`CreateGlobalTableOutput`](crate::output::CreateGlobalTableOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateGlobalTableOutput`](crate::output::CreateGlobalTableOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_table_description:
@@ -4169,7 +4211,7 @@ pub mod create_global_table_output {
             self.global_table_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateGlobalTableOutput`](crate::output::CreateGlobalTableOutput)
+        /// Consumes the builder and constructs a [`CreateGlobalTableOutput`](crate::output::CreateGlobalTableOutput).
         pub fn build(self) -> crate::output::CreateGlobalTableOutput {
             crate::output::CreateGlobalTableOutput {
                 global_table_description: self.global_table_description,
@@ -4178,7 +4220,7 @@ pub mod create_global_table_output {
     }
 }
 impl CreateGlobalTableOutput {
-    /// Creates a new builder-style object to manufacture [`CreateGlobalTableOutput`](crate::output::CreateGlobalTableOutput)
+    /// Creates a new builder-style object to manufacture [`CreateGlobalTableOutput`](crate::output::CreateGlobalTableOutput).
     pub fn builder() -> crate::output::create_global_table_output::Builder {
         crate::output::create_global_table_output::Builder::default()
     }
@@ -4189,6 +4231,7 @@ impl CreateGlobalTableOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBackupOutput {
     /// <p>Contains the details of the backup created for the table.</p>
+    #[doc(hidden)]
     pub backup_details: std::option::Option<crate::model::BackupDetails>,
 }
 impl CreateBackupOutput {
@@ -4204,11 +4247,10 @@ impl std::fmt::Debug for CreateBackupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateBackupOutput`](crate::output::CreateBackupOutput)
+/// See [`CreateBackupOutput`](crate::output::CreateBackupOutput).
 pub mod create_backup_output {
 
-    /// A builder for [`CreateBackupOutput`](crate::output::CreateBackupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateBackupOutput`](crate::output::CreateBackupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_details: std::option::Option<crate::model::BackupDetails>,
@@ -4227,7 +4269,7 @@ pub mod create_backup_output {
             self.backup_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBackupOutput`](crate::output::CreateBackupOutput)
+        /// Consumes the builder and constructs a [`CreateBackupOutput`](crate::output::CreateBackupOutput).
         pub fn build(self) -> crate::output::CreateBackupOutput {
             crate::output::CreateBackupOutput {
                 backup_details: self.backup_details,
@@ -4236,7 +4278,7 @@ pub mod create_backup_output {
     }
 }
 impl CreateBackupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateBackupOutput`](crate::output::CreateBackupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateBackupOutput`](crate::output::CreateBackupOutput).
     pub fn builder() -> crate::output::create_backup_output::Builder {
         crate::output::create_backup_output::Builder::default()
     }
@@ -4259,6 +4301,7 @@ pub struct BatchWriteItemOutput {
     /// </ul> </li>
     /// </ul>
     /// <p>If there are no unprocessed items remaining, the response contains an empty <code>UnprocessedItems</code> map.</p>
+    #[doc(hidden)]
     pub unprocessed_items: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<crate::model::WriteRequest>>,
     >,
@@ -4268,6 +4311,7 @@ pub struct BatchWriteItemOutput {
     /// <li> <p> <code>ItemCollectionKey</code> - The partition key value of the item collection. This is the same as the partition key value of the item.</p> </li>
     /// <li> <p> <code>SizeEstimateRangeGB</code> - An estimate of item collection size, expressed in GB. This is a two-element array containing a lower bound and an upper bound for the estimate. The estimate includes the size of all the items in the table, plus the size of all attributes projected into all of the local secondary indexes on the table. Use this estimate to measure whether a local secondary index is approaching its size limit.</p> <p>The estimate is subject to change over time; therefore, do not rely on the precision or accuracy of the estimate.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub item_collection_metrics: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -4280,6 +4324,7 @@ pub struct BatchWriteItemOutput {
     /// <li> <p> <code>TableName</code> - The table that consumed the provisioned throughput.</p> </li>
     /// <li> <p> <code>CapacityUnits</code> - The total number of capacity units consumed.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<std::vec::Vec<crate::model::ConsumedCapacity>>,
 }
 impl BatchWriteItemOutput {
@@ -4338,11 +4383,10 @@ impl std::fmt::Debug for BatchWriteItemOutput {
         formatter.finish()
     }
 }
-/// See [`BatchWriteItemOutput`](crate::output::BatchWriteItemOutput)
+/// See [`BatchWriteItemOutput`](crate::output::BatchWriteItemOutput).
 pub mod batch_write_item_output {
 
-    /// A builder for [`BatchWriteItemOutput`](crate::output::BatchWriteItemOutput)
-    #[non_exhaustive]
+    /// A builder for [`BatchWriteItemOutput`](crate::output::BatchWriteItemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) unprocessed_items: std::option::Option<
@@ -4480,7 +4524,7 @@ pub mod batch_write_item_output {
             self.consumed_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchWriteItemOutput`](crate::output::BatchWriteItemOutput)
+        /// Consumes the builder and constructs a [`BatchWriteItemOutput`](crate::output::BatchWriteItemOutput).
         pub fn build(self) -> crate::output::BatchWriteItemOutput {
             crate::output::BatchWriteItemOutput {
                 unprocessed_items: self.unprocessed_items,
@@ -4491,7 +4535,7 @@ pub mod batch_write_item_output {
     }
 }
 impl BatchWriteItemOutput {
-    /// Creates a new builder-style object to manufacture [`BatchWriteItemOutput`](crate::output::BatchWriteItemOutput)
+    /// Creates a new builder-style object to manufacture [`BatchWriteItemOutput`](crate::output::BatchWriteItemOutput).
     pub fn builder() -> crate::output::batch_write_item_output::Builder {
         crate::output::batch_write_item_output::Builder::default()
     }
@@ -4502,6 +4546,7 @@ impl BatchWriteItemOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchGetItemOutput {
     /// <p>A map of table name to a list of items. Each object in <code>Responses</code> consists of a table name, along with a map of attribute data consisting of the data type and attribute value.</p>
+    #[doc(hidden)]
     pub responses: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -4518,6 +4563,7 @@ pub struct BatchGetItemOutput {
     /// <li> <p> <code>ConsistentRead</code> - The consistency of a read operation. If set to <code>true</code>, then a strongly consistent read is used; otherwise, an eventually consistent read is used.</p> </li>
     /// </ul>
     /// <p>If there are no unprocessed keys remaining, the response contains an empty <code>UnprocessedKeys</code> map.</p>
+    #[doc(hidden)]
     pub unprocessed_keys: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::KeysAndAttributes>,
     >,
@@ -4527,6 +4573,7 @@ pub struct BatchGetItemOutput {
     /// <li> <p> <code>TableName</code> - The table that consumed the provisioned throughput.</p> </li>
     /// <li> <p> <code>CapacityUnits</code> - The total number of capacity units consumed.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<std::vec::Vec<crate::model::ConsumedCapacity>>,
 }
 impl BatchGetItemOutput {
@@ -4577,11 +4624,10 @@ impl std::fmt::Debug for BatchGetItemOutput {
         formatter.finish()
     }
 }
-/// See [`BatchGetItemOutput`](crate::output::BatchGetItemOutput)
+/// See [`BatchGetItemOutput`](crate::output::BatchGetItemOutput).
 pub mod batch_get_item_output {
 
-    /// A builder for [`BatchGetItemOutput`](crate::output::BatchGetItemOutput)
-    #[non_exhaustive]
+    /// A builder for [`BatchGetItemOutput`](crate::output::BatchGetItemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) responses: std::option::Option<
@@ -4702,7 +4748,7 @@ pub mod batch_get_item_output {
             self.consumed_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchGetItemOutput`](crate::output::BatchGetItemOutput)
+        /// Consumes the builder and constructs a [`BatchGetItemOutput`](crate::output::BatchGetItemOutput).
         pub fn build(self) -> crate::output::BatchGetItemOutput {
             crate::output::BatchGetItemOutput {
                 responses: self.responses,
@@ -4713,7 +4759,7 @@ pub mod batch_get_item_output {
     }
 }
 impl BatchGetItemOutput {
-    /// Creates a new builder-style object to manufacture [`BatchGetItemOutput`](crate::output::BatchGetItemOutput)
+    /// Creates a new builder-style object to manufacture [`BatchGetItemOutput`](crate::output::BatchGetItemOutput).
     pub fn builder() -> crate::output::batch_get_item_output::Builder {
         crate::output::batch_get_item_output::Builder::default()
     }
@@ -4724,8 +4770,10 @@ impl BatchGetItemOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchExecuteStatementOutput {
     /// <p>The response to each PartiQL statement in the batch.</p>
+    #[doc(hidden)]
     pub responses: std::option::Option<std::vec::Vec<crate::model::BatchStatementResponse>>,
     /// <p>The capacity units consumed by the entire operation. The values of the list are ordered according to the ordering of the statements.</p>
+    #[doc(hidden)]
     pub consumed_capacity: std::option::Option<std::vec::Vec<crate::model::ConsumedCapacity>>,
 }
 impl BatchExecuteStatementOutput {
@@ -4746,11 +4794,10 @@ impl std::fmt::Debug for BatchExecuteStatementOutput {
         formatter.finish()
     }
 }
-/// See [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput)
+/// See [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput).
 pub mod batch_execute_statement_output {
 
-    /// A builder for [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput)
-    #[non_exhaustive]
+    /// A builder for [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) responses:
@@ -4797,7 +4844,7 @@ pub mod batch_execute_statement_output {
             self.consumed_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput)
+        /// Consumes the builder and constructs a [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput).
         pub fn build(self) -> crate::output::BatchExecuteStatementOutput {
             crate::output::BatchExecuteStatementOutput {
                 responses: self.responses,
@@ -4807,7 +4854,7 @@ pub mod batch_execute_statement_output {
     }
 }
 impl BatchExecuteStatementOutput {
-    /// Creates a new builder-style object to manufacture [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput)
+    /// Creates a new builder-style object to manufacture [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput).
     pub fn builder() -> crate::output::batch_execute_statement_output::Builder {
         crate::output::batch_execute_statement_output::Builder::default()
     }

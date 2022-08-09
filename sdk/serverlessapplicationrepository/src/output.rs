@@ -4,39 +4,52 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateApplicationOutput {
     /// <p>The application Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The name of the author publishing the app.</p>
     /// <p>Minimum length=1. Maximum length=127.</p>
     /// <p>Pattern "^[a-z0-9](([a-z0-9]|-(?!-))*[a-z0-9])?$";</p>
+    #[doc(hidden)]
     pub author: std::option::Option<std::string::String>,
     /// <p>The date and time this resource was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<std::string::String>,
     /// <p>The description of the application.</p>
     /// <p>Minimum length=1. Maximum length=256</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A URL with more information about the application, for example the location of your GitHub repository for the application.</p>
+    #[doc(hidden)]
     pub home_page_url: std::option::Option<std::string::String>,
     /// <p>Whether the author of this application has been verified. This means means that AWS has made a good faith review, as a reasonable and prudent service provider, of the information provided by the requester and has confirmed that the requester's identity is as claimed.</p>
+    #[doc(hidden)]
     pub is_verified_author: bool,
     /// <p>Labels to improve discovery of apps in search results.</p>
     /// <p>Minimum length=1. Maximum length=127. Maximum number of labels: 10</p>
     /// <p>Pattern: "^[a-zA-Z0-9+\\-_:\\/@]+$";</p>
+    #[doc(hidden)]
     pub labels: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A link to a license file of the app that matches the spdxLicenseID value of your application.</p>
     /// <p>Maximum size 5 MB</p>
+    #[doc(hidden)]
     pub license_url: std::option::Option<std::string::String>,
     /// <p>The name of the application.</p>
     /// <p>Minimum length=1. Maximum length=140</p>
     /// <p>Pattern: "[a-zA-Z0-9\\-]+";</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A link to the readme file in Markdown language that contains a more detailed description of the application and how it works.</p>
     /// <p>Maximum size 5 MB</p>
+    #[doc(hidden)]
     pub readme_url: std::option::Option<std::string::String>,
     /// <p>A valid identifier from https://spdx.org/licenses/.</p>
+    #[doc(hidden)]
     pub spdx_license_id: std::option::Option<std::string::String>,
     /// <p>The URL to the public profile of a verified author. This URL is submitted by the author.</p>
+    #[doc(hidden)]
     pub verified_author_url: std::option::Option<std::string::String>,
     /// <p>Version information about the application.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<crate::model::Version>,
 }
 impl UpdateApplicationOutput {
@@ -121,11 +134,10 @@ impl std::fmt::Debug for UpdateApplicationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput)
+/// See [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput).
 pub mod update_application_output {
 
-    /// A builder for [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -315,7 +327,7 @@ pub mod update_application_output {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput)
+        /// Consumes the builder and constructs a [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput).
         pub fn build(self) -> crate::output::UpdateApplicationOutput {
             crate::output::UpdateApplicationOutput {
                 application_id: self.application_id,
@@ -336,7 +348,7 @@ pub mod update_application_output {
     }
 }
 impl UpdateApplicationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput).
     pub fn builder() -> crate::output::update_application_output::Builder {
         crate::output::update_application_output::Builder::default()
     }
@@ -352,22 +364,21 @@ impl std::fmt::Debug for UnshareApplicationOutput {
         formatter.finish()
     }
 }
-/// See [`UnshareApplicationOutput`](crate::output::UnshareApplicationOutput)
+/// See [`UnshareApplicationOutput`](crate::output::UnshareApplicationOutput).
 pub mod unshare_application_output {
 
-    /// A builder for [`UnshareApplicationOutput`](crate::output::UnshareApplicationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UnshareApplicationOutput`](crate::output::UnshareApplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UnshareApplicationOutput`](crate::output::UnshareApplicationOutput)
+        /// Consumes the builder and constructs a [`UnshareApplicationOutput`](crate::output::UnshareApplicationOutput).
         pub fn build(self) -> crate::output::UnshareApplicationOutput {
             crate::output::UnshareApplicationOutput {}
         }
     }
 }
 impl UnshareApplicationOutput {
-    /// Creates a new builder-style object to manufacture [`UnshareApplicationOutput`](crate::output::UnshareApplicationOutput)
+    /// Creates a new builder-style object to manufacture [`UnshareApplicationOutput`](crate::output::UnshareApplicationOutput).
     pub fn builder() -> crate::output::unshare_application_output::Builder {
         crate::output::unshare_application_output::Builder::default()
     }
@@ -378,6 +389,7 @@ impl UnshareApplicationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutApplicationPolicyOutput {
     /// <p>An array of policy statements applied to the application.</p>
+    #[doc(hidden)]
     pub statements: std::option::Option<std::vec::Vec<crate::model::ApplicationPolicyStatement>>,
 }
 impl PutApplicationPolicyOutput {
@@ -393,11 +405,10 @@ impl std::fmt::Debug for PutApplicationPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutApplicationPolicyOutput`](crate::output::PutApplicationPolicyOutput)
+/// See [`PutApplicationPolicyOutput`](crate::output::PutApplicationPolicyOutput).
 pub mod put_application_policy_output {
 
-    /// A builder for [`PutApplicationPolicyOutput`](crate::output::PutApplicationPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutApplicationPolicyOutput`](crate::output::PutApplicationPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) statements:
@@ -423,7 +434,7 @@ pub mod put_application_policy_output {
             self.statements = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutApplicationPolicyOutput`](crate::output::PutApplicationPolicyOutput)
+        /// Consumes the builder and constructs a [`PutApplicationPolicyOutput`](crate::output::PutApplicationPolicyOutput).
         pub fn build(self) -> crate::output::PutApplicationPolicyOutput {
             crate::output::PutApplicationPolicyOutput {
                 statements: self.statements,
@@ -432,7 +443,7 @@ pub mod put_application_policy_output {
     }
 }
 impl PutApplicationPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutApplicationPolicyOutput`](crate::output::PutApplicationPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutApplicationPolicyOutput`](crate::output::PutApplicationPolicyOutput).
     pub fn builder() -> crate::output::put_application_policy_output::Builder {
         crate::output::put_application_policy_output::Builder::default()
     }
@@ -443,8 +454,10 @@ impl PutApplicationPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListApplicationVersionsOutput {
     /// <p>The token to request the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>An array of version summaries for the application.</p>
+    #[doc(hidden)]
     pub versions: std::option::Option<std::vec::Vec<crate::model::VersionSummary>>,
 }
 impl ListApplicationVersionsOutput {
@@ -465,11 +478,10 @@ impl std::fmt::Debug for ListApplicationVersionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListApplicationVersionsOutput`](crate::output::ListApplicationVersionsOutput)
+/// See [`ListApplicationVersionsOutput`](crate::output::ListApplicationVersionsOutput).
 pub mod list_application_versions_output {
 
-    /// A builder for [`ListApplicationVersionsOutput`](crate::output::ListApplicationVersionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListApplicationVersionsOutput`](crate::output::ListApplicationVersionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -505,7 +517,7 @@ pub mod list_application_versions_output {
             self.versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListApplicationVersionsOutput`](crate::output::ListApplicationVersionsOutput)
+        /// Consumes the builder and constructs a [`ListApplicationVersionsOutput`](crate::output::ListApplicationVersionsOutput).
         pub fn build(self) -> crate::output::ListApplicationVersionsOutput {
             crate::output::ListApplicationVersionsOutput {
                 next_token: self.next_token,
@@ -515,7 +527,7 @@ pub mod list_application_versions_output {
     }
 }
 impl ListApplicationVersionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListApplicationVersionsOutput`](crate::output::ListApplicationVersionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListApplicationVersionsOutput`](crate::output::ListApplicationVersionsOutput).
     pub fn builder() -> crate::output::list_application_versions_output::Builder {
         crate::output::list_application_versions_output::Builder::default()
     }
@@ -526,8 +538,10 @@ impl ListApplicationVersionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListApplicationsOutput {
     /// <p>An array of application summaries.</p>
+    #[doc(hidden)]
     pub applications: std::option::Option<std::vec::Vec<crate::model::ApplicationSummary>>,
     /// <p>The token to request the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListApplicationsOutput {
@@ -548,11 +562,10 @@ impl std::fmt::Debug for ListApplicationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListApplicationsOutput`](crate::output::ListApplicationsOutput)
+/// See [`ListApplicationsOutput`](crate::output::ListApplicationsOutput).
 pub mod list_applications_output {
 
-    /// A builder for [`ListApplicationsOutput`](crate::output::ListApplicationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListApplicationsOutput`](crate::output::ListApplicationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) applications:
@@ -589,7 +602,7 @@ pub mod list_applications_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListApplicationsOutput`](crate::output::ListApplicationsOutput)
+        /// Consumes the builder and constructs a [`ListApplicationsOutput`](crate::output::ListApplicationsOutput).
         pub fn build(self) -> crate::output::ListApplicationsOutput {
             crate::output::ListApplicationsOutput {
                 applications: self.applications,
@@ -599,7 +612,7 @@ pub mod list_applications_output {
     }
 }
 impl ListApplicationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListApplicationsOutput`](crate::output::ListApplicationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListApplicationsOutput`](crate::output::ListApplicationsOutput).
     pub fn builder() -> crate::output::list_applications_output::Builder {
         crate::output::list_applications_output::Builder::default()
     }
@@ -610,9 +623,11 @@ impl ListApplicationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListApplicationDependenciesOutput {
     /// <p>An array of application summaries nested in the application.</p>
+    #[doc(hidden)]
     pub dependencies:
         std::option::Option<std::vec::Vec<crate::model::ApplicationDependencySummary>>,
     /// <p>The token to request the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListApplicationDependenciesOutput {
@@ -635,11 +650,10 @@ impl std::fmt::Debug for ListApplicationDependenciesOutput {
         formatter.finish()
     }
 }
-/// See [`ListApplicationDependenciesOutput`](crate::output::ListApplicationDependenciesOutput)
+/// See [`ListApplicationDependenciesOutput`](crate::output::ListApplicationDependenciesOutput).
 pub mod list_application_dependencies_output {
 
-    /// A builder for [`ListApplicationDependenciesOutput`](crate::output::ListApplicationDependenciesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListApplicationDependenciesOutput`](crate::output::ListApplicationDependenciesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dependencies:
@@ -676,7 +690,7 @@ pub mod list_application_dependencies_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListApplicationDependenciesOutput`](crate::output::ListApplicationDependenciesOutput)
+        /// Consumes the builder and constructs a [`ListApplicationDependenciesOutput`](crate::output::ListApplicationDependenciesOutput).
         pub fn build(self) -> crate::output::ListApplicationDependenciesOutput {
             crate::output::ListApplicationDependenciesOutput {
                 dependencies: self.dependencies,
@@ -686,7 +700,7 @@ pub mod list_application_dependencies_output {
     }
 }
 impl ListApplicationDependenciesOutput {
-    /// Creates a new builder-style object to manufacture [`ListApplicationDependenciesOutput`](crate::output::ListApplicationDependenciesOutput)
+    /// Creates a new builder-style object to manufacture [`ListApplicationDependenciesOutput`](crate::output::ListApplicationDependenciesOutput).
     pub fn builder() -> crate::output::list_application_dependencies_output::Builder {
         crate::output::list_application_dependencies_output::Builder::default()
     }
@@ -697,21 +711,28 @@ impl ListApplicationDependenciesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCloudFormationTemplateOutput {
     /// <p>The application Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date and time this resource was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<std::string::String>,
     /// <p>The date and time this template expires. Templates expire 1 hour after creation.</p>
+    #[doc(hidden)]
     pub expiration_time: std::option::Option<std::string::String>,
     /// <p>The semantic version of the application:</p>
     /// <p> <a href="https://semver.org/">https://semver.org/</a> </p>
+    #[doc(hidden)]
     pub semantic_version: std::option::Option<std::string::String>,
     /// <p>Status of the template creation workflow.</p>
     /// <p>Possible values: PREPARING | ACTIVE | EXPIRED </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
     /// <p>The UUID returned by CreateCloudFormationTemplate.</p>
     /// <p>Pattern: [0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}</p>
+    #[doc(hidden)]
     pub template_id: std::option::Option<std::string::String>,
     /// <p>A link to the template that can be used to deploy the application using AWS CloudFormation.</p>
+    #[doc(hidden)]
     pub template_url: std::option::Option<std::string::String>,
 }
 impl GetCloudFormationTemplateOutput {
@@ -760,11 +781,10 @@ impl std::fmt::Debug for GetCloudFormationTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`GetCloudFormationTemplateOutput`](crate::output::GetCloudFormationTemplateOutput)
+/// See [`GetCloudFormationTemplateOutput`](crate::output::GetCloudFormationTemplateOutput).
 pub mod get_cloud_formation_template_output {
 
-    /// A builder for [`GetCloudFormationTemplateOutput`](crate::output::GetCloudFormationTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCloudFormationTemplateOutput`](crate::output::GetCloudFormationTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -864,7 +884,7 @@ pub mod get_cloud_formation_template_output {
             self.template_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCloudFormationTemplateOutput`](crate::output::GetCloudFormationTemplateOutput)
+        /// Consumes the builder and constructs a [`GetCloudFormationTemplateOutput`](crate::output::GetCloudFormationTemplateOutput).
         pub fn build(self) -> crate::output::GetCloudFormationTemplateOutput {
             crate::output::GetCloudFormationTemplateOutput {
                 application_id: self.application_id,
@@ -879,7 +899,7 @@ pub mod get_cloud_formation_template_output {
     }
 }
 impl GetCloudFormationTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`GetCloudFormationTemplateOutput`](crate::output::GetCloudFormationTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`GetCloudFormationTemplateOutput`](crate::output::GetCloudFormationTemplateOutput).
     pub fn builder() -> crate::output::get_cloud_formation_template_output::Builder {
         crate::output::get_cloud_formation_template_output::Builder::default()
     }
@@ -890,6 +910,7 @@ impl GetCloudFormationTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetApplicationPolicyOutput {
     /// <p>An array of policy statements applied to the application.</p>
+    #[doc(hidden)]
     pub statements: std::option::Option<std::vec::Vec<crate::model::ApplicationPolicyStatement>>,
 }
 impl GetApplicationPolicyOutput {
@@ -905,11 +926,10 @@ impl std::fmt::Debug for GetApplicationPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetApplicationPolicyOutput`](crate::output::GetApplicationPolicyOutput)
+/// See [`GetApplicationPolicyOutput`](crate::output::GetApplicationPolicyOutput).
 pub mod get_application_policy_output {
 
-    /// A builder for [`GetApplicationPolicyOutput`](crate::output::GetApplicationPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetApplicationPolicyOutput`](crate::output::GetApplicationPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) statements:
@@ -935,7 +955,7 @@ pub mod get_application_policy_output {
             self.statements = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetApplicationPolicyOutput`](crate::output::GetApplicationPolicyOutput)
+        /// Consumes the builder and constructs a [`GetApplicationPolicyOutput`](crate::output::GetApplicationPolicyOutput).
         pub fn build(self) -> crate::output::GetApplicationPolicyOutput {
             crate::output::GetApplicationPolicyOutput {
                 statements: self.statements,
@@ -944,7 +964,7 @@ pub mod get_application_policy_output {
     }
 }
 impl GetApplicationPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetApplicationPolicyOutput`](crate::output::GetApplicationPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetApplicationPolicyOutput`](crate::output::GetApplicationPolicyOutput).
     pub fn builder() -> crate::output::get_application_policy_output::Builder {
         crate::output::get_application_policy_output::Builder::default()
     }
@@ -955,39 +975,52 @@ impl GetApplicationPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetApplicationOutput {
     /// <p>The application Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The name of the author publishing the app.</p>
     /// <p>Minimum length=1. Maximum length=127.</p>
     /// <p>Pattern "^[a-z0-9](([a-z0-9]|-(?!-))*[a-z0-9])?$";</p>
+    #[doc(hidden)]
     pub author: std::option::Option<std::string::String>,
     /// <p>The date and time this resource was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<std::string::String>,
     /// <p>The description of the application.</p>
     /// <p>Minimum length=1. Maximum length=256</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A URL with more information about the application, for example the location of your GitHub repository for the application.</p>
+    #[doc(hidden)]
     pub home_page_url: std::option::Option<std::string::String>,
     /// <p>Whether the author of this application has been verified. This means means that AWS has made a good faith review, as a reasonable and prudent service provider, of the information provided by the requester and has confirmed that the requester's identity is as claimed.</p>
+    #[doc(hidden)]
     pub is_verified_author: bool,
     /// <p>Labels to improve discovery of apps in search results.</p>
     /// <p>Minimum length=1. Maximum length=127. Maximum number of labels: 10</p>
     /// <p>Pattern: "^[a-zA-Z0-9+\\-_:\\/@]+$";</p>
+    #[doc(hidden)]
     pub labels: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A link to a license file of the app that matches the spdxLicenseID value of your application.</p>
     /// <p>Maximum size 5 MB</p>
+    #[doc(hidden)]
     pub license_url: std::option::Option<std::string::String>,
     /// <p>The name of the application.</p>
     /// <p>Minimum length=1. Maximum length=140</p>
     /// <p>Pattern: "[a-zA-Z0-9\\-]+";</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A link to the readme file in Markdown language that contains a more detailed description of the application and how it works.</p>
     /// <p>Maximum size 5 MB</p>
+    #[doc(hidden)]
     pub readme_url: std::option::Option<std::string::String>,
     /// <p>A valid identifier from https://spdx.org/licenses/.</p>
+    #[doc(hidden)]
     pub spdx_license_id: std::option::Option<std::string::String>,
     /// <p>The URL to the public profile of a verified author. This URL is submitted by the author.</p>
+    #[doc(hidden)]
     pub verified_author_url: std::option::Option<std::string::String>,
     /// <p>Version information about the application.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<crate::model::Version>,
 }
 impl GetApplicationOutput {
@@ -1072,11 +1105,10 @@ impl std::fmt::Debug for GetApplicationOutput {
         formatter.finish()
     }
 }
-/// See [`GetApplicationOutput`](crate::output::GetApplicationOutput)
+/// See [`GetApplicationOutput`](crate::output::GetApplicationOutput).
 pub mod get_application_output {
 
-    /// A builder for [`GetApplicationOutput`](crate::output::GetApplicationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetApplicationOutput`](crate::output::GetApplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -1266,7 +1298,7 @@ pub mod get_application_output {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetApplicationOutput`](crate::output::GetApplicationOutput)
+        /// Consumes the builder and constructs a [`GetApplicationOutput`](crate::output::GetApplicationOutput).
         pub fn build(self) -> crate::output::GetApplicationOutput {
             crate::output::GetApplicationOutput {
                 application_id: self.application_id,
@@ -1287,7 +1319,7 @@ pub mod get_application_output {
     }
 }
 impl GetApplicationOutput {
-    /// Creates a new builder-style object to manufacture [`GetApplicationOutput`](crate::output::GetApplicationOutput)
+    /// Creates a new builder-style object to manufacture [`GetApplicationOutput`](crate::output::GetApplicationOutput).
     pub fn builder() -> crate::output::get_application_output::Builder {
         crate::output::get_application_output::Builder::default()
     }
@@ -1303,22 +1335,21 @@ impl std::fmt::Debug for DeleteApplicationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput)
+/// See [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput).
 pub mod delete_application_output {
 
-    /// A builder for [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput)
+        /// Consumes the builder and constructs a [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput).
         pub fn build(self) -> crate::output::DeleteApplicationOutput {
             crate::output::DeleteApplicationOutput {}
         }
     }
 }
 impl DeleteApplicationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput).
     pub fn builder() -> crate::output::delete_application_output::Builder {
         crate::output::delete_application_output::Builder::default()
     }
@@ -1329,21 +1360,28 @@ impl DeleteApplicationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateCloudFormationTemplateOutput {
     /// <p>The application Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date and time this resource was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<std::string::String>,
     /// <p>The date and time this template expires. Templates expire 1 hour after creation.</p>
+    #[doc(hidden)]
     pub expiration_time: std::option::Option<std::string::String>,
     /// <p>The semantic version of the application:</p>
     /// <p> <a href="https://semver.org/">https://semver.org/</a> </p>
+    #[doc(hidden)]
     pub semantic_version: std::option::Option<std::string::String>,
     /// <p>Status of the template creation workflow.</p>
     /// <p>Possible values: PREPARING | ACTIVE | EXPIRED </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
     /// <p>The UUID returned by CreateCloudFormationTemplate.</p>
     /// <p>Pattern: [0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}</p>
+    #[doc(hidden)]
     pub template_id: std::option::Option<std::string::String>,
     /// <p>A link to the template that can be used to deploy the application using AWS CloudFormation.</p>
+    #[doc(hidden)]
     pub template_url: std::option::Option<std::string::String>,
 }
 impl CreateCloudFormationTemplateOutput {
@@ -1392,11 +1430,10 @@ impl std::fmt::Debug for CreateCloudFormationTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`CreateCloudFormationTemplateOutput`](crate::output::CreateCloudFormationTemplateOutput)
+/// See [`CreateCloudFormationTemplateOutput`](crate::output::CreateCloudFormationTemplateOutput).
 pub mod create_cloud_formation_template_output {
 
-    /// A builder for [`CreateCloudFormationTemplateOutput`](crate::output::CreateCloudFormationTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateCloudFormationTemplateOutput`](crate::output::CreateCloudFormationTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -1496,7 +1533,7 @@ pub mod create_cloud_formation_template_output {
             self.template_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateCloudFormationTemplateOutput`](crate::output::CreateCloudFormationTemplateOutput)
+        /// Consumes the builder and constructs a [`CreateCloudFormationTemplateOutput`](crate::output::CreateCloudFormationTemplateOutput).
         pub fn build(self) -> crate::output::CreateCloudFormationTemplateOutput {
             crate::output::CreateCloudFormationTemplateOutput {
                 application_id: self.application_id,
@@ -1511,7 +1548,7 @@ pub mod create_cloud_formation_template_output {
     }
 }
 impl CreateCloudFormationTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`CreateCloudFormationTemplateOutput`](crate::output::CreateCloudFormationTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`CreateCloudFormationTemplateOutput`](crate::output::CreateCloudFormationTemplateOutput).
     pub fn builder() -> crate::output::create_cloud_formation_template_output::Builder {
         crate::output::create_cloud_formation_template_output::Builder::default()
     }
@@ -1522,15 +1559,19 @@ impl CreateCloudFormationTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateCloudFormationChangeSetOutput {
     /// <p>The application Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the change set.</p>
     /// <p>Length constraints: Minimum length of 1.</p>
     /// <p>Pattern: ARN:[-a-zA-Z0-9:/]*</p>
+    #[doc(hidden)]
     pub change_set_id: std::option::Option<std::string::String>,
     /// <p>The semantic version of the application:</p>
     /// <p> <a href="https://semver.org/">https://semver.org/</a> </p>
+    #[doc(hidden)]
     pub semantic_version: std::option::Option<std::string::String>,
     /// <p>The unique ID of the stack.</p>
+    #[doc(hidden)]
     pub stack_id: std::option::Option<std::string::String>,
 }
 impl CreateCloudFormationChangeSetOutput {
@@ -1564,11 +1605,10 @@ impl std::fmt::Debug for CreateCloudFormationChangeSetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateCloudFormationChangeSetOutput`](crate::output::CreateCloudFormationChangeSetOutput)
+/// See [`CreateCloudFormationChangeSetOutput`](crate::output::CreateCloudFormationChangeSetOutput).
 pub mod create_cloud_formation_change_set_output {
 
-    /// A builder for [`CreateCloudFormationChangeSetOutput`](crate::output::CreateCloudFormationChangeSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateCloudFormationChangeSetOutput`](crate::output::CreateCloudFormationChangeSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -1632,7 +1672,7 @@ pub mod create_cloud_formation_change_set_output {
             self.stack_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateCloudFormationChangeSetOutput`](crate::output::CreateCloudFormationChangeSetOutput)
+        /// Consumes the builder and constructs a [`CreateCloudFormationChangeSetOutput`](crate::output::CreateCloudFormationChangeSetOutput).
         pub fn build(self) -> crate::output::CreateCloudFormationChangeSetOutput {
             crate::output::CreateCloudFormationChangeSetOutput {
                 application_id: self.application_id,
@@ -1644,7 +1684,7 @@ pub mod create_cloud_formation_change_set_output {
     }
 }
 impl CreateCloudFormationChangeSetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateCloudFormationChangeSetOutput`](crate::output::CreateCloudFormationChangeSetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateCloudFormationChangeSetOutput`](crate::output::CreateCloudFormationChangeSetOutput).
     pub fn builder() -> crate::output::create_cloud_formation_change_set_output::Builder {
         crate::output::create_cloud_formation_change_set_output::Builder::default()
     }
@@ -1655,10 +1695,13 @@ impl CreateCloudFormationChangeSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateApplicationVersionOutput {
     /// <p>The application Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The date and time this resource was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<std::string::String>,
     /// <p>An array of parameter types supported by the application.</p>
+    #[doc(hidden)]
     pub parameter_definitions:
         std::option::Option<std::vec::Vec<crate::model::ParameterDefinition>>,
     /// <p>A list of values that you must specify before you can deploy certain applications. Some applications might include resources that can affect permissions in your AWS account, for example, by creating new AWS Identity and Access Management (IAM) users. For those applications, you must explicitly acknowledge their capabilities by specifying this parameter.</p>
@@ -1667,18 +1710,24 @@ pub struct CreateApplicationVersionOutput {
     /// <p>The following resources require you to specify CAPABILITY_RESOURCE_POLICY: <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html">AWS::Lambda::Permission</a>, <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html">AWS::IAM:Policy</a>, <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html">AWS::ApplicationAutoScaling::ScalingPolicy</a>, <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html">AWS::S3::BucketPolicy</a>, <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-policy.html">AWS::SQS::QueuePolicy</a>, and <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html">AWS::SNS::TopicPolicy</a>.</p>
     /// <p>Applications that contain one or more nested applications require you to specify CAPABILITY_AUTO_EXPAND.</p>
     /// <p>If your application template contains any of the above resources, we recommend that you review all permissions associated with the application before deploying. If you don't specify this parameter for an application that requires capabilities, the call will fail.</p>
+    #[doc(hidden)]
     pub required_capabilities: std::option::Option<std::vec::Vec<crate::model::Capability>>,
     /// <p>Whether all of the AWS resources contained in this application are supported in the region in which it is being retrieved.</p>
+    #[doc(hidden)]
     pub resources_supported: bool,
     /// <p>The semantic version of the application:</p>
     /// <p> <a href="https://semver.org/">https://semver.org/</a> </p>
+    #[doc(hidden)]
     pub semantic_version: std::option::Option<std::string::String>,
     /// <p>A link to the S3 object that contains the ZIP archive of the source code for this version of your application.</p>
     /// <p>Maximum size 50 MB</p>
+    #[doc(hidden)]
     pub source_code_archive_url: std::option::Option<std::string::String>,
     /// <p>A link to a public repository for the source code of your application, for example the URL of a specific GitHub commit.</p>
+    #[doc(hidden)]
     pub source_code_url: std::option::Option<std::string::String>,
     /// <p>A link to the packaged AWS SAM template of your application.</p>
+    #[doc(hidden)]
     pub template_url: std::option::Option<std::string::String>,
 }
 impl CreateApplicationVersionOutput {
@@ -1743,11 +1792,10 @@ impl std::fmt::Debug for CreateApplicationVersionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateApplicationVersionOutput`](crate::output::CreateApplicationVersionOutput)
+/// See [`CreateApplicationVersionOutput`](crate::output::CreateApplicationVersionOutput).
 pub mod create_application_version_output {
 
-    /// A builder for [`CreateApplicationVersionOutput`](crate::output::CreateApplicationVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateApplicationVersionOutput`](crate::output::CreateApplicationVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -1900,7 +1948,7 @@ pub mod create_application_version_output {
             self.template_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateApplicationVersionOutput`](crate::output::CreateApplicationVersionOutput)
+        /// Consumes the builder and constructs a [`CreateApplicationVersionOutput`](crate::output::CreateApplicationVersionOutput).
         pub fn build(self) -> crate::output::CreateApplicationVersionOutput {
             crate::output::CreateApplicationVersionOutput {
                 application_id: self.application_id,
@@ -1917,7 +1965,7 @@ pub mod create_application_version_output {
     }
 }
 impl CreateApplicationVersionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateApplicationVersionOutput`](crate::output::CreateApplicationVersionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateApplicationVersionOutput`](crate::output::CreateApplicationVersionOutput).
     pub fn builder() -> crate::output::create_application_version_output::Builder {
         crate::output::create_application_version_output::Builder::default()
     }
@@ -1928,39 +1976,52 @@ impl CreateApplicationVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateApplicationOutput {
     /// <p>The application Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The name of the author publishing the app.</p>
     /// <p>Minimum length=1. Maximum length=127.</p>
     /// <p>Pattern "^[a-z0-9](([a-z0-9]|-(?!-))*[a-z0-9])?$";</p>
+    #[doc(hidden)]
     pub author: std::option::Option<std::string::String>,
     /// <p>The date and time this resource was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<std::string::String>,
     /// <p>The description of the application.</p>
     /// <p>Minimum length=1. Maximum length=256</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A URL with more information about the application, for example the location of your GitHub repository for the application.</p>
+    #[doc(hidden)]
     pub home_page_url: std::option::Option<std::string::String>,
     /// <p>Whether the author of this application has been verified. This means means that AWS has made a good faith review, as a reasonable and prudent service provider, of the information provided by the requester and has confirmed that the requester's identity is as claimed.</p>
+    #[doc(hidden)]
     pub is_verified_author: bool,
     /// <p>Labels to improve discovery of apps in search results.</p>
     /// <p>Minimum length=1. Maximum length=127. Maximum number of labels: 10</p>
     /// <p>Pattern: "^[a-zA-Z0-9+\\-_:\\/@]+$";</p>
+    #[doc(hidden)]
     pub labels: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A link to a license file of the app that matches the spdxLicenseID value of your application.</p>
     /// <p>Maximum size 5 MB</p>
+    #[doc(hidden)]
     pub license_url: std::option::Option<std::string::String>,
     /// <p>The name of the application.</p>
     /// <p>Minimum length=1. Maximum length=140</p>
     /// <p>Pattern: "[a-zA-Z0-9\\-]+";</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A link to the readme file in Markdown language that contains a more detailed description of the application and how it works.</p>
     /// <p>Maximum size 5 MB</p>
+    #[doc(hidden)]
     pub readme_url: std::option::Option<std::string::String>,
     /// <p>A valid identifier from https://spdx.org/licenses/.</p>
+    #[doc(hidden)]
     pub spdx_license_id: std::option::Option<std::string::String>,
     /// <p>The URL to the public profile of a verified author. This URL is submitted by the author.</p>
+    #[doc(hidden)]
     pub verified_author_url: std::option::Option<std::string::String>,
     /// <p>Version information about the application.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<crate::model::Version>,
 }
 impl CreateApplicationOutput {
@@ -2045,11 +2106,10 @@ impl std::fmt::Debug for CreateApplicationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateApplicationOutput`](crate::output::CreateApplicationOutput)
+/// See [`CreateApplicationOutput`](crate::output::CreateApplicationOutput).
 pub mod create_application_output {
 
-    /// A builder for [`CreateApplicationOutput`](crate::output::CreateApplicationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateApplicationOutput`](crate::output::CreateApplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -2239,7 +2299,7 @@ pub mod create_application_output {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateApplicationOutput`](crate::output::CreateApplicationOutput)
+        /// Consumes the builder and constructs a [`CreateApplicationOutput`](crate::output::CreateApplicationOutput).
         pub fn build(self) -> crate::output::CreateApplicationOutput {
             crate::output::CreateApplicationOutput {
                 application_id: self.application_id,
@@ -2260,7 +2320,7 @@ pub mod create_application_output {
     }
 }
 impl CreateApplicationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateApplicationOutput`](crate::output::CreateApplicationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateApplicationOutput`](crate::output::CreateApplicationOutput).
     pub fn builder() -> crate::output::create_application_output::Builder {
         crate::output::create_application_output::Builder::default()
     }

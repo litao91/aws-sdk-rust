@@ -9,22 +9,21 @@ impl std::fmt::Debug for UntagQueueOutput {
         formatter.finish()
     }
 }
-/// See [`UntagQueueOutput`](crate::output::UntagQueueOutput)
+/// See [`UntagQueueOutput`](crate::output::UntagQueueOutput).
 pub mod untag_queue_output {
 
-    /// A builder for [`UntagQueueOutput`](crate::output::UntagQueueOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagQueueOutput`](crate::output::UntagQueueOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagQueueOutput`](crate::output::UntagQueueOutput)
+        /// Consumes the builder and constructs a [`UntagQueueOutput`](crate::output::UntagQueueOutput).
         pub fn build(self) -> crate::output::UntagQueueOutput {
             crate::output::UntagQueueOutput {}
         }
     }
 }
 impl UntagQueueOutput {
-    /// Creates a new builder-style object to manufacture [`UntagQueueOutput`](crate::output::UntagQueueOutput)
+    /// Creates a new builder-style object to manufacture [`UntagQueueOutput`](crate::output::UntagQueueOutput).
     pub fn builder() -> crate::output::untag_queue_output::Builder {
         crate::output::untag_queue_output::Builder::default()
     }
@@ -40,22 +39,21 @@ impl std::fmt::Debug for TagQueueOutput {
         formatter.finish()
     }
 }
-/// See [`TagQueueOutput`](crate::output::TagQueueOutput)
+/// See [`TagQueueOutput`](crate::output::TagQueueOutput).
 pub mod tag_queue_output {
 
-    /// A builder for [`TagQueueOutput`](crate::output::TagQueueOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagQueueOutput`](crate::output::TagQueueOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagQueueOutput`](crate::output::TagQueueOutput)
+        /// Consumes the builder and constructs a [`TagQueueOutput`](crate::output::TagQueueOutput).
         pub fn build(self) -> crate::output::TagQueueOutput {
             crate::output::TagQueueOutput {}
         }
     }
 }
 impl TagQueueOutput {
-    /// Creates a new builder-style object to manufacture [`TagQueueOutput`](crate::output::TagQueueOutput)
+    /// Creates a new builder-style object to manufacture [`TagQueueOutput`](crate::output::TagQueueOutput).
     pub fn builder() -> crate::output::tag_queue_output::Builder {
         crate::output::tag_queue_output::Builder::default()
     }
@@ -71,22 +69,21 @@ impl std::fmt::Debug for SetQueueAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`SetQueueAttributesOutput`](crate::output::SetQueueAttributesOutput)
+/// See [`SetQueueAttributesOutput`](crate::output::SetQueueAttributesOutput).
 pub mod set_queue_attributes_output {
 
-    /// A builder for [`SetQueueAttributesOutput`](crate::output::SetQueueAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`SetQueueAttributesOutput`](crate::output::SetQueueAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`SetQueueAttributesOutput`](crate::output::SetQueueAttributesOutput)
+        /// Consumes the builder and constructs a [`SetQueueAttributesOutput`](crate::output::SetQueueAttributesOutput).
         pub fn build(self) -> crate::output::SetQueueAttributesOutput {
             crate::output::SetQueueAttributesOutput {}
         }
     }
 }
 impl SetQueueAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`SetQueueAttributesOutput`](crate::output::SetQueueAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`SetQueueAttributesOutput`](crate::output::SetQueueAttributesOutput).
     pub fn builder() -> crate::output::set_queue_attributes_output::Builder {
         crate::output::set_queue_attributes_output::Builder::default()
     }
@@ -97,8 +94,10 @@ impl SetQueueAttributesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SendMessageBatchOutput {
     /// <p>A list of <code> <code>SendMessageBatchResultEntry</code> </code> items.</p>
+    #[doc(hidden)]
     pub successful: std::option::Option<std::vec::Vec<crate::model::SendMessageBatchResultEntry>>,
     /// <p>A list of <code> <code>BatchResultErrorEntry</code> </code> items with error details about each message that can't be enqueued.</p>
+    #[doc(hidden)]
     pub failed: std::option::Option<std::vec::Vec<crate::model::BatchResultErrorEntry>>,
 }
 impl SendMessageBatchOutput {
@@ -119,11 +118,10 @@ impl std::fmt::Debug for SendMessageBatchOutput {
         formatter.finish()
     }
 }
-/// See [`SendMessageBatchOutput`](crate::output::SendMessageBatchOutput)
+/// See [`SendMessageBatchOutput`](crate::output::SendMessageBatchOutput).
 pub mod send_message_batch_output {
 
-    /// A builder for [`SendMessageBatchOutput`](crate::output::SendMessageBatchOutput)
-    #[non_exhaustive]
+    /// A builder for [`SendMessageBatchOutput`](crate::output::SendMessageBatchOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) successful:
@@ -169,7 +167,7 @@ pub mod send_message_batch_output {
             self.failed = input;
             self
         }
-        /// Consumes the builder and constructs a [`SendMessageBatchOutput`](crate::output::SendMessageBatchOutput)
+        /// Consumes the builder and constructs a [`SendMessageBatchOutput`](crate::output::SendMessageBatchOutput).
         pub fn build(self) -> crate::output::SendMessageBatchOutput {
             crate::output::SendMessageBatchOutput {
                 successful: self.successful,
@@ -179,7 +177,7 @@ pub mod send_message_batch_output {
     }
 }
 impl SendMessageBatchOutput {
-    /// Creates a new builder-style object to manufacture [`SendMessageBatchOutput`](crate::output::SendMessageBatchOutput)
+    /// Creates a new builder-style object to manufacture [`SendMessageBatchOutput`](crate::output::SendMessageBatchOutput).
     pub fn builder() -> crate::output::send_message_batch_output::Builder {
         crate::output::send_message_batch_output::Builder::default()
     }
@@ -190,16 +188,21 @@ impl SendMessageBatchOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SendMessageOutput {
     /// <p>An MD5 digest of the non-URL-encoded message body string. You can use this attribute to verify that Amazon SQS received the message correctly. Amazon SQS URL-decodes the message before creating the MD5 digest. For information about MD5, see <a href="https://www.ietf.org/rfc/rfc1321.txt">RFC1321</a>.</p>
+    #[doc(hidden)]
     pub md5_of_message_body: std::option::Option<std::string::String>,
     /// <p>An MD5 digest of the non-URL-encoded message attribute string. You can use this attribute to verify that Amazon SQS received the message correctly. Amazon SQS URL-decodes the message before creating the MD5 digest. For information about MD5, see <a href="https://www.ietf.org/rfc/rfc1321.txt">RFC1321</a>.</p>
+    #[doc(hidden)]
     pub md5_of_message_attributes: std::option::Option<std::string::String>,
     /// <p>An MD5 digest of the non-URL-encoded message system attribute string. You can use this attribute to verify that Amazon SQS received the message correctly. Amazon SQS URL-decodes the message before creating the MD5 digest.</p>
+    #[doc(hidden)]
     pub md5_of_message_system_attributes: std::option::Option<std::string::String>,
     /// <p>An attribute containing the <code>MessageId</code> of the message sent to the queue. For more information, see <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-queue-message-identifiers.html">Queue and Message Identifiers</a> in the <i>Amazon SQS Developer Guide</i>. </p>
+    #[doc(hidden)]
     pub message_id: std::option::Option<std::string::String>,
     /// <p>This parameter applies only to FIFO (first-in-first-out) queues.</p>
     /// <p>The large, non-consecutive number that Amazon SQS assigns to each message.</p>
     /// <p>The length of <code>SequenceNumber</code> is 128 bits. <code>SequenceNumber</code> continues to increase for a particular <code>MessageGroupId</code>.</p>
+    #[doc(hidden)]
     pub sequence_number: std::option::Option<std::string::String>,
 }
 impl SendMessageOutput {
@@ -240,11 +243,10 @@ impl std::fmt::Debug for SendMessageOutput {
         formatter.finish()
     }
 }
-/// See [`SendMessageOutput`](crate::output::SendMessageOutput)
+/// See [`SendMessageOutput`](crate::output::SendMessageOutput).
 pub mod send_message_output {
 
-    /// A builder for [`SendMessageOutput`](crate::output::SendMessageOutput)
-    #[non_exhaustive]
+    /// A builder for [`SendMessageOutput`](crate::output::SendMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) md5_of_message_body: std::option::Option<std::string::String>,
@@ -323,7 +325,7 @@ pub mod send_message_output {
             self.sequence_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`SendMessageOutput`](crate::output::SendMessageOutput)
+        /// Consumes the builder and constructs a [`SendMessageOutput`](crate::output::SendMessageOutput).
         pub fn build(self) -> crate::output::SendMessageOutput {
             crate::output::SendMessageOutput {
                 md5_of_message_body: self.md5_of_message_body,
@@ -336,7 +338,7 @@ pub mod send_message_output {
     }
 }
 impl SendMessageOutput {
-    /// Creates a new builder-style object to manufacture [`SendMessageOutput`](crate::output::SendMessageOutput)
+    /// Creates a new builder-style object to manufacture [`SendMessageOutput`](crate::output::SendMessageOutput).
     pub fn builder() -> crate::output::send_message_output::Builder {
         crate::output::send_message_output::Builder::default()
     }
@@ -352,22 +354,21 @@ impl std::fmt::Debug for RemovePermissionOutput {
         formatter.finish()
     }
 }
-/// See [`RemovePermissionOutput`](crate::output::RemovePermissionOutput)
+/// See [`RemovePermissionOutput`](crate::output::RemovePermissionOutput).
 pub mod remove_permission_output {
 
-    /// A builder for [`RemovePermissionOutput`](crate::output::RemovePermissionOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemovePermissionOutput`](crate::output::RemovePermissionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RemovePermissionOutput`](crate::output::RemovePermissionOutput)
+        /// Consumes the builder and constructs a [`RemovePermissionOutput`](crate::output::RemovePermissionOutput).
         pub fn build(self) -> crate::output::RemovePermissionOutput {
             crate::output::RemovePermissionOutput {}
         }
     }
 }
 impl RemovePermissionOutput {
-    /// Creates a new builder-style object to manufacture [`RemovePermissionOutput`](crate::output::RemovePermissionOutput)
+    /// Creates a new builder-style object to manufacture [`RemovePermissionOutput`](crate::output::RemovePermissionOutput).
     pub fn builder() -> crate::output::remove_permission_output::Builder {
         crate::output::remove_permission_output::Builder::default()
     }
@@ -378,6 +379,7 @@ impl RemovePermissionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReceiveMessageOutput {
     /// <p>A list of messages.</p>
+    #[doc(hidden)]
     pub messages: std::option::Option<std::vec::Vec<crate::model::Message>>,
 }
 impl ReceiveMessageOutput {
@@ -393,11 +395,10 @@ impl std::fmt::Debug for ReceiveMessageOutput {
         formatter.finish()
     }
 }
-/// See [`ReceiveMessageOutput`](crate::output::ReceiveMessageOutput)
+/// See [`ReceiveMessageOutput`](crate::output::ReceiveMessageOutput).
 pub mod receive_message_output {
 
-    /// A builder for [`ReceiveMessageOutput`](crate::output::ReceiveMessageOutput)
-    #[non_exhaustive]
+    /// A builder for [`ReceiveMessageOutput`](crate::output::ReceiveMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) messages: std::option::Option<std::vec::Vec<crate::model::Message>>,
@@ -422,7 +423,7 @@ pub mod receive_message_output {
             self.messages = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReceiveMessageOutput`](crate::output::ReceiveMessageOutput)
+        /// Consumes the builder and constructs a [`ReceiveMessageOutput`](crate::output::ReceiveMessageOutput).
         pub fn build(self) -> crate::output::ReceiveMessageOutput {
             crate::output::ReceiveMessageOutput {
                 messages: self.messages,
@@ -431,7 +432,7 @@ pub mod receive_message_output {
     }
 }
 impl ReceiveMessageOutput {
-    /// Creates a new builder-style object to manufacture [`ReceiveMessageOutput`](crate::output::ReceiveMessageOutput)
+    /// Creates a new builder-style object to manufacture [`ReceiveMessageOutput`](crate::output::ReceiveMessageOutput).
     pub fn builder() -> crate::output::receive_message_output::Builder {
         crate::output::receive_message_output::Builder::default()
     }
@@ -447,22 +448,21 @@ impl std::fmt::Debug for PurgeQueueOutput {
         formatter.finish()
     }
 }
-/// See [`PurgeQueueOutput`](crate::output::PurgeQueueOutput)
+/// See [`PurgeQueueOutput`](crate::output::PurgeQueueOutput).
 pub mod purge_queue_output {
 
-    /// A builder for [`PurgeQueueOutput`](crate::output::PurgeQueueOutput)
-    #[non_exhaustive]
+    /// A builder for [`PurgeQueueOutput`](crate::output::PurgeQueueOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PurgeQueueOutput`](crate::output::PurgeQueueOutput)
+        /// Consumes the builder and constructs a [`PurgeQueueOutput`](crate::output::PurgeQueueOutput).
         pub fn build(self) -> crate::output::PurgeQueueOutput {
             crate::output::PurgeQueueOutput {}
         }
     }
 }
 impl PurgeQueueOutput {
-    /// Creates a new builder-style object to manufacture [`PurgeQueueOutput`](crate::output::PurgeQueueOutput)
+    /// Creates a new builder-style object to manufacture [`PurgeQueueOutput`](crate::output::PurgeQueueOutput).
     pub fn builder() -> crate::output::purge_queue_output::Builder {
         crate::output::purge_queue_output::Builder::default()
     }
@@ -473,6 +473,7 @@ impl PurgeQueueOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListQueueTagsOutput {
     /// <p>The list of all tags added to the specified queue.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -492,11 +493,10 @@ impl std::fmt::Debug for ListQueueTagsOutput {
         formatter.finish()
     }
 }
-/// See [`ListQueueTagsOutput`](crate::output::ListQueueTagsOutput)
+/// See [`ListQueueTagsOutput`](crate::output::ListQueueTagsOutput).
 pub mod list_queue_tags_output {
 
-    /// A builder for [`ListQueueTagsOutput`](crate::output::ListQueueTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListQueueTagsOutput`](crate::output::ListQueueTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -529,14 +529,14 @@ pub mod list_queue_tags_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListQueueTagsOutput`](crate::output::ListQueueTagsOutput)
+        /// Consumes the builder and constructs a [`ListQueueTagsOutput`](crate::output::ListQueueTagsOutput).
         pub fn build(self) -> crate::output::ListQueueTagsOutput {
             crate::output::ListQueueTagsOutput { tags: self.tags }
         }
     }
 }
 impl ListQueueTagsOutput {
-    /// Creates a new builder-style object to manufacture [`ListQueueTagsOutput`](crate::output::ListQueueTagsOutput)
+    /// Creates a new builder-style object to manufacture [`ListQueueTagsOutput`](crate::output::ListQueueTagsOutput).
     pub fn builder() -> crate::output::list_queue_tags_output::Builder {
         crate::output::list_queue_tags_output::Builder::default()
     }
@@ -547,8 +547,10 @@ impl ListQueueTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListQueuesOutput {
     /// <p>Pagination token to include in the next request. Token value is <code>null</code> if there are no additional results to request, or if you did not set <code>MaxResults</code> in the request.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>A list of queue URLs, up to 1,000 entries, or the value of MaxResults that you sent in the request.</p>
+    #[doc(hidden)]
     pub queue_urls: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ListQueuesOutput {
@@ -569,11 +571,10 @@ impl std::fmt::Debug for ListQueuesOutput {
         formatter.finish()
     }
 }
-/// See [`ListQueuesOutput`](crate::output::ListQueuesOutput)
+/// See [`ListQueuesOutput`](crate::output::ListQueuesOutput).
 pub mod list_queues_output {
 
-    /// A builder for [`ListQueuesOutput`](crate::output::ListQueuesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListQueuesOutput`](crate::output::ListQueuesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -609,7 +610,7 @@ pub mod list_queues_output {
             self.queue_urls = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListQueuesOutput`](crate::output::ListQueuesOutput)
+        /// Consumes the builder and constructs a [`ListQueuesOutput`](crate::output::ListQueuesOutput).
         pub fn build(self) -> crate::output::ListQueuesOutput {
             crate::output::ListQueuesOutput {
                 next_token: self.next_token,
@@ -619,7 +620,7 @@ pub mod list_queues_output {
     }
 }
 impl ListQueuesOutput {
-    /// Creates a new builder-style object to manufacture [`ListQueuesOutput`](crate::output::ListQueuesOutput)
+    /// Creates a new builder-style object to manufacture [`ListQueuesOutput`](crate::output::ListQueuesOutput).
     pub fn builder() -> crate::output::list_queues_output::Builder {
         crate::output::list_queues_output::Builder::default()
     }
@@ -630,8 +631,10 @@ impl ListQueuesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDeadLetterSourceQueuesOutput {
     /// <p>A list of source queue URLs that have the <code>RedrivePolicy</code> queue attribute configured with a dead-letter queue.</p>
+    #[doc(hidden)]
     pub queue_urls: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Pagination token to include in the next request. Token value is <code>null</code> if there are no additional results to request, or if you did not set <code>MaxResults</code> in the request.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListDeadLetterSourceQueuesOutput {
@@ -652,11 +655,10 @@ impl std::fmt::Debug for ListDeadLetterSourceQueuesOutput {
         formatter.finish()
     }
 }
-/// See [`ListDeadLetterSourceQueuesOutput`](crate::output::ListDeadLetterSourceQueuesOutput)
+/// See [`ListDeadLetterSourceQueuesOutput`](crate::output::ListDeadLetterSourceQueuesOutput).
 pub mod list_dead_letter_source_queues_output {
 
-    /// A builder for [`ListDeadLetterSourceQueuesOutput`](crate::output::ListDeadLetterSourceQueuesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListDeadLetterSourceQueuesOutput`](crate::output::ListDeadLetterSourceQueuesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) queue_urls: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -692,7 +694,7 @@ pub mod list_dead_letter_source_queues_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDeadLetterSourceQueuesOutput`](crate::output::ListDeadLetterSourceQueuesOutput)
+        /// Consumes the builder and constructs a [`ListDeadLetterSourceQueuesOutput`](crate::output::ListDeadLetterSourceQueuesOutput).
         pub fn build(self) -> crate::output::ListDeadLetterSourceQueuesOutput {
             crate::output::ListDeadLetterSourceQueuesOutput {
                 queue_urls: self.queue_urls,
@@ -702,7 +704,7 @@ pub mod list_dead_letter_source_queues_output {
     }
 }
 impl ListDeadLetterSourceQueuesOutput {
-    /// Creates a new builder-style object to manufacture [`ListDeadLetterSourceQueuesOutput`](crate::output::ListDeadLetterSourceQueuesOutput)
+    /// Creates a new builder-style object to manufacture [`ListDeadLetterSourceQueuesOutput`](crate::output::ListDeadLetterSourceQueuesOutput).
     pub fn builder() -> crate::output::list_dead_letter_source_queues_output::Builder {
         crate::output::list_dead_letter_source_queues_output::Builder::default()
     }
@@ -713,6 +715,7 @@ impl ListDeadLetterSourceQueuesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetQueueUrlOutput {
     /// <p>The URL of the queue.</p>
+    #[doc(hidden)]
     pub queue_url: std::option::Option<std::string::String>,
 }
 impl GetQueueUrlOutput {
@@ -728,11 +731,10 @@ impl std::fmt::Debug for GetQueueUrlOutput {
         formatter.finish()
     }
 }
-/// See [`GetQueueUrlOutput`](crate::output::GetQueueUrlOutput)
+/// See [`GetQueueUrlOutput`](crate::output::GetQueueUrlOutput).
 pub mod get_queue_url_output {
 
-    /// A builder for [`GetQueueUrlOutput`](crate::output::GetQueueUrlOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetQueueUrlOutput`](crate::output::GetQueueUrlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) queue_url: std::option::Option<std::string::String>,
@@ -748,7 +750,7 @@ pub mod get_queue_url_output {
             self.queue_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetQueueUrlOutput`](crate::output::GetQueueUrlOutput)
+        /// Consumes the builder and constructs a [`GetQueueUrlOutput`](crate::output::GetQueueUrlOutput).
         pub fn build(self) -> crate::output::GetQueueUrlOutput {
             crate::output::GetQueueUrlOutput {
                 queue_url: self.queue_url,
@@ -757,7 +759,7 @@ pub mod get_queue_url_output {
     }
 }
 impl GetQueueUrlOutput {
-    /// Creates a new builder-style object to manufacture [`GetQueueUrlOutput`](crate::output::GetQueueUrlOutput)
+    /// Creates a new builder-style object to manufacture [`GetQueueUrlOutput`](crate::output::GetQueueUrlOutput).
     pub fn builder() -> crate::output::get_queue_url_output::Builder {
         crate::output::get_queue_url_output::Builder::default()
     }
@@ -768,6 +770,7 @@ impl GetQueueUrlOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetQueueAttributesOutput {
     /// <p>A map of attributes to their respective values.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<
         std::collections::HashMap<crate::model::QueueAttributeName, std::string::String>,
     >,
@@ -789,11 +792,10 @@ impl std::fmt::Debug for GetQueueAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`GetQueueAttributesOutput`](crate::output::GetQueueAttributesOutput)
+/// See [`GetQueueAttributesOutput`](crate::output::GetQueueAttributesOutput).
 pub mod get_queue_attributes_output {
 
-    /// A builder for [`GetQueueAttributesOutput`](crate::output::GetQueueAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetQueueAttributesOutput`](crate::output::GetQueueAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<
@@ -826,7 +828,7 @@ pub mod get_queue_attributes_output {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetQueueAttributesOutput`](crate::output::GetQueueAttributesOutput)
+        /// Consumes the builder and constructs a [`GetQueueAttributesOutput`](crate::output::GetQueueAttributesOutput).
         pub fn build(self) -> crate::output::GetQueueAttributesOutput {
             crate::output::GetQueueAttributesOutput {
                 attributes: self.attributes,
@@ -835,7 +837,7 @@ pub mod get_queue_attributes_output {
     }
 }
 impl GetQueueAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`GetQueueAttributesOutput`](crate::output::GetQueueAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`GetQueueAttributesOutput`](crate::output::GetQueueAttributesOutput).
     pub fn builder() -> crate::output::get_queue_attributes_output::Builder {
         crate::output::get_queue_attributes_output::Builder::default()
     }
@@ -851,22 +853,21 @@ impl std::fmt::Debug for DeleteQueueOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteQueueOutput`](crate::output::DeleteQueueOutput)
+/// See [`DeleteQueueOutput`](crate::output::DeleteQueueOutput).
 pub mod delete_queue_output {
 
-    /// A builder for [`DeleteQueueOutput`](crate::output::DeleteQueueOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteQueueOutput`](crate::output::DeleteQueueOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteQueueOutput`](crate::output::DeleteQueueOutput)
+        /// Consumes the builder and constructs a [`DeleteQueueOutput`](crate::output::DeleteQueueOutput).
         pub fn build(self) -> crate::output::DeleteQueueOutput {
             crate::output::DeleteQueueOutput {}
         }
     }
 }
 impl DeleteQueueOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteQueueOutput`](crate::output::DeleteQueueOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteQueueOutput`](crate::output::DeleteQueueOutput).
     pub fn builder() -> crate::output::delete_queue_output::Builder {
         crate::output::delete_queue_output::Builder::default()
     }
@@ -877,8 +878,10 @@ impl DeleteQueueOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteMessageBatchOutput {
     /// <p>A list of <code> <code>DeleteMessageBatchResultEntry</code> </code> items.</p>
+    #[doc(hidden)]
     pub successful: std::option::Option<std::vec::Vec<crate::model::DeleteMessageBatchResultEntry>>,
     /// <p>A list of <code> <code>BatchResultErrorEntry</code> </code> items.</p>
+    #[doc(hidden)]
     pub failed: std::option::Option<std::vec::Vec<crate::model::BatchResultErrorEntry>>,
 }
 impl DeleteMessageBatchOutput {
@@ -901,11 +904,10 @@ impl std::fmt::Debug for DeleteMessageBatchOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteMessageBatchOutput`](crate::output::DeleteMessageBatchOutput)
+/// See [`DeleteMessageBatchOutput`](crate::output::DeleteMessageBatchOutput).
 pub mod delete_message_batch_output {
 
-    /// A builder for [`DeleteMessageBatchOutput`](crate::output::DeleteMessageBatchOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteMessageBatchOutput`](crate::output::DeleteMessageBatchOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) successful:
@@ -951,7 +953,7 @@ pub mod delete_message_batch_output {
             self.failed = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteMessageBatchOutput`](crate::output::DeleteMessageBatchOutput)
+        /// Consumes the builder and constructs a [`DeleteMessageBatchOutput`](crate::output::DeleteMessageBatchOutput).
         pub fn build(self) -> crate::output::DeleteMessageBatchOutput {
             crate::output::DeleteMessageBatchOutput {
                 successful: self.successful,
@@ -961,7 +963,7 @@ pub mod delete_message_batch_output {
     }
 }
 impl DeleteMessageBatchOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteMessageBatchOutput`](crate::output::DeleteMessageBatchOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteMessageBatchOutput`](crate::output::DeleteMessageBatchOutput).
     pub fn builder() -> crate::output::delete_message_batch_output::Builder {
         crate::output::delete_message_batch_output::Builder::default()
     }
@@ -977,22 +979,21 @@ impl std::fmt::Debug for DeleteMessageOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteMessageOutput`](crate::output::DeleteMessageOutput)
+/// See [`DeleteMessageOutput`](crate::output::DeleteMessageOutput).
 pub mod delete_message_output {
 
-    /// A builder for [`DeleteMessageOutput`](crate::output::DeleteMessageOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteMessageOutput`](crate::output::DeleteMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteMessageOutput`](crate::output::DeleteMessageOutput)
+        /// Consumes the builder and constructs a [`DeleteMessageOutput`](crate::output::DeleteMessageOutput).
         pub fn build(self) -> crate::output::DeleteMessageOutput {
             crate::output::DeleteMessageOutput {}
         }
     }
 }
 impl DeleteMessageOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteMessageOutput`](crate::output::DeleteMessageOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteMessageOutput`](crate::output::DeleteMessageOutput).
     pub fn builder() -> crate::output::delete_message_output::Builder {
         crate::output::delete_message_output::Builder::default()
     }
@@ -1003,6 +1004,7 @@ impl DeleteMessageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateQueueOutput {
     /// <p>The URL of the created Amazon SQS queue.</p>
+    #[doc(hidden)]
     pub queue_url: std::option::Option<std::string::String>,
 }
 impl CreateQueueOutput {
@@ -1018,11 +1020,10 @@ impl std::fmt::Debug for CreateQueueOutput {
         formatter.finish()
     }
 }
-/// See [`CreateQueueOutput`](crate::output::CreateQueueOutput)
+/// See [`CreateQueueOutput`](crate::output::CreateQueueOutput).
 pub mod create_queue_output {
 
-    /// A builder for [`CreateQueueOutput`](crate::output::CreateQueueOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateQueueOutput`](crate::output::CreateQueueOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) queue_url: std::option::Option<std::string::String>,
@@ -1038,7 +1039,7 @@ pub mod create_queue_output {
             self.queue_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateQueueOutput`](crate::output::CreateQueueOutput)
+        /// Consumes the builder and constructs a [`CreateQueueOutput`](crate::output::CreateQueueOutput).
         pub fn build(self) -> crate::output::CreateQueueOutput {
             crate::output::CreateQueueOutput {
                 queue_url: self.queue_url,
@@ -1047,7 +1048,7 @@ pub mod create_queue_output {
     }
 }
 impl CreateQueueOutput {
-    /// Creates a new builder-style object to manufacture [`CreateQueueOutput`](crate::output::CreateQueueOutput)
+    /// Creates a new builder-style object to manufacture [`CreateQueueOutput`](crate::output::CreateQueueOutput).
     pub fn builder() -> crate::output::create_queue_output::Builder {
         crate::output::create_queue_output::Builder::default()
     }
@@ -1058,9 +1059,11 @@ impl CreateQueueOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChangeMessageVisibilityBatchOutput {
     /// <p>A list of <code> <code>ChangeMessageVisibilityBatchResultEntry</code> </code> items.</p>
+    #[doc(hidden)]
     pub successful:
         std::option::Option<std::vec::Vec<crate::model::ChangeMessageVisibilityBatchResultEntry>>,
     /// <p>A list of <code> <code>BatchResultErrorEntry</code> </code> items.</p>
+    #[doc(hidden)]
     pub failed: std::option::Option<std::vec::Vec<crate::model::BatchResultErrorEntry>>,
 }
 impl ChangeMessageVisibilityBatchOutput {
@@ -1083,11 +1086,10 @@ impl std::fmt::Debug for ChangeMessageVisibilityBatchOutput {
         formatter.finish()
     }
 }
-/// See [`ChangeMessageVisibilityBatchOutput`](crate::output::ChangeMessageVisibilityBatchOutput)
+/// See [`ChangeMessageVisibilityBatchOutput`](crate::output::ChangeMessageVisibilityBatchOutput).
 pub mod change_message_visibility_batch_output {
 
-    /// A builder for [`ChangeMessageVisibilityBatchOutput`](crate::output::ChangeMessageVisibilityBatchOutput)
-    #[non_exhaustive]
+    /// A builder for [`ChangeMessageVisibilityBatchOutput`](crate::output::ChangeMessageVisibilityBatchOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) successful: std::option::Option<
@@ -1139,7 +1141,7 @@ pub mod change_message_visibility_batch_output {
             self.failed = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeMessageVisibilityBatchOutput`](crate::output::ChangeMessageVisibilityBatchOutput)
+        /// Consumes the builder and constructs a [`ChangeMessageVisibilityBatchOutput`](crate::output::ChangeMessageVisibilityBatchOutput).
         pub fn build(self) -> crate::output::ChangeMessageVisibilityBatchOutput {
             crate::output::ChangeMessageVisibilityBatchOutput {
                 successful: self.successful,
@@ -1149,7 +1151,7 @@ pub mod change_message_visibility_batch_output {
     }
 }
 impl ChangeMessageVisibilityBatchOutput {
-    /// Creates a new builder-style object to manufacture [`ChangeMessageVisibilityBatchOutput`](crate::output::ChangeMessageVisibilityBatchOutput)
+    /// Creates a new builder-style object to manufacture [`ChangeMessageVisibilityBatchOutput`](crate::output::ChangeMessageVisibilityBatchOutput).
     pub fn builder() -> crate::output::change_message_visibility_batch_output::Builder {
         crate::output::change_message_visibility_batch_output::Builder::default()
     }
@@ -1165,22 +1167,21 @@ impl std::fmt::Debug for ChangeMessageVisibilityOutput {
         formatter.finish()
     }
 }
-/// See [`ChangeMessageVisibilityOutput`](crate::output::ChangeMessageVisibilityOutput)
+/// See [`ChangeMessageVisibilityOutput`](crate::output::ChangeMessageVisibilityOutput).
 pub mod change_message_visibility_output {
 
-    /// A builder for [`ChangeMessageVisibilityOutput`](crate::output::ChangeMessageVisibilityOutput)
-    #[non_exhaustive]
+    /// A builder for [`ChangeMessageVisibilityOutput`](crate::output::ChangeMessageVisibilityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`ChangeMessageVisibilityOutput`](crate::output::ChangeMessageVisibilityOutput)
+        /// Consumes the builder and constructs a [`ChangeMessageVisibilityOutput`](crate::output::ChangeMessageVisibilityOutput).
         pub fn build(self) -> crate::output::ChangeMessageVisibilityOutput {
             crate::output::ChangeMessageVisibilityOutput {}
         }
     }
 }
 impl ChangeMessageVisibilityOutput {
-    /// Creates a new builder-style object to manufacture [`ChangeMessageVisibilityOutput`](crate::output::ChangeMessageVisibilityOutput)
+    /// Creates a new builder-style object to manufacture [`ChangeMessageVisibilityOutput`](crate::output::ChangeMessageVisibilityOutput).
     pub fn builder() -> crate::output::change_message_visibility_output::Builder {
         crate::output::change_message_visibility_output::Builder::default()
     }
@@ -1196,22 +1197,21 @@ impl std::fmt::Debug for AddPermissionOutput {
         formatter.finish()
     }
 }
-/// See [`AddPermissionOutput`](crate::output::AddPermissionOutput)
+/// See [`AddPermissionOutput`](crate::output::AddPermissionOutput).
 pub mod add_permission_output {
 
-    /// A builder for [`AddPermissionOutput`](crate::output::AddPermissionOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddPermissionOutput`](crate::output::AddPermissionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AddPermissionOutput`](crate::output::AddPermissionOutput)
+        /// Consumes the builder and constructs a [`AddPermissionOutput`](crate::output::AddPermissionOutput).
         pub fn build(self) -> crate::output::AddPermissionOutput {
             crate::output::AddPermissionOutput {}
         }
     }
 }
 impl AddPermissionOutput {
-    /// Creates a new builder-style object to manufacture [`AddPermissionOutput`](crate::output::AddPermissionOutput)
+    /// Creates a new builder-style object to manufacture [`AddPermissionOutput`](crate::output::AddPermissionOutput).
     pub fn builder() -> crate::output::add_permission_output::Builder {
         crate::output::add_permission_output::Builder::default()
     }

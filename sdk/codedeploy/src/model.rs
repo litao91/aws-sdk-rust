@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoScalingGroup {
     /// <p>The Auto Scaling group name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>An Auto Scaling lifecycle event hook name.</p>
+    #[doc(hidden)]
     pub hook: std::option::Option<std::string::String>,
 }
 impl AutoScalingGroup {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for AutoScalingGroup {
         formatter.finish()
     }
 }
-/// See [`AutoScalingGroup`](crate::model::AutoScalingGroup)
+/// See [`AutoScalingGroup`](crate::model::AutoScalingGroup).
 pub mod auto_scaling_group {
 
-    /// A builder for [`AutoScalingGroup`](crate::model::AutoScalingGroup)
-    #[non_exhaustive]
+    /// A builder for [`AutoScalingGroup`](crate::model::AutoScalingGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod auto_scaling_group {
             self.hook = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoScalingGroup`](crate::model::AutoScalingGroup)
+        /// Consumes the builder and constructs a [`AutoScalingGroup`](crate::model::AutoScalingGroup).
         pub fn build(self) -> crate::model::AutoScalingGroup {
             crate::model::AutoScalingGroup {
                 name: self.name,
@@ -68,7 +69,7 @@ pub mod auto_scaling_group {
     }
 }
 impl AutoScalingGroup {
-    /// Creates a new builder-style object to manufacture [`AutoScalingGroup`](crate::model::AutoScalingGroup)
+    /// Creates a new builder-style object to manufacture [`AutoScalingGroup`](crate::model::AutoScalingGroup).
     pub fn builder() -> crate::model::auto_scaling_group::Builder {
         crate::model::auto_scaling_group::Builder::default()
     }
@@ -79,6 +80,7 @@ impl AutoScalingGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OnPremisesTagSet {
     /// <p>A list that contains other lists of on-premises instance tag groups. For an instance to be included in the deployment group, it must be identified by all of the tag groups in the list.</p>
+    #[doc(hidden)]
     pub on_premises_tag_set_list:
         std::option::Option<std::vec::Vec<std::vec::Vec<crate::model::TagFilter>>>,
 }
@@ -97,11 +99,10 @@ impl std::fmt::Debug for OnPremisesTagSet {
         formatter.finish()
     }
 }
-/// See [`OnPremisesTagSet`](crate::model::OnPremisesTagSet)
+/// See [`OnPremisesTagSet`](crate::model::OnPremisesTagSet).
 pub mod on_premises_tag_set {
 
-    /// A builder for [`OnPremisesTagSet`](crate::model::OnPremisesTagSet)
-    #[non_exhaustive]
+    /// A builder for [`OnPremisesTagSet`](crate::model::OnPremisesTagSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) on_premises_tag_set_list:
@@ -130,7 +131,7 @@ pub mod on_premises_tag_set {
             self.on_premises_tag_set_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`OnPremisesTagSet`](crate::model::OnPremisesTagSet)
+        /// Consumes the builder and constructs a [`OnPremisesTagSet`](crate::model::OnPremisesTagSet).
         pub fn build(self) -> crate::model::OnPremisesTagSet {
             crate::model::OnPremisesTagSet {
                 on_premises_tag_set_list: self.on_premises_tag_set_list,
@@ -139,7 +140,7 @@ pub mod on_premises_tag_set {
     }
 }
 impl OnPremisesTagSet {
-    /// Creates a new builder-style object to manufacture [`OnPremisesTagSet`](crate::model::OnPremisesTagSet)
+    /// Creates a new builder-style object to manufacture [`OnPremisesTagSet`](crate::model::OnPremisesTagSet).
     pub fn builder() -> crate::model::on_premises_tag_set::Builder {
         crate::model::on_premises_tag_set::Builder::default()
     }
@@ -150,8 +151,10 @@ impl OnPremisesTagSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TagFilter {
     /// <p>The on-premises instance tag filter key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The on-premises instance tag filter value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The on-premises instance tag filter type:</p>
     /// <ul>
@@ -159,6 +162,7 @@ pub struct TagFilter {
     /// <li> <p>VALUE_ONLY: Value only.</p> </li>
     /// <li> <p>KEY_AND_VALUE: Key and value.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TagFilterType>,
 }
 impl TagFilter {
@@ -189,11 +193,10 @@ impl std::fmt::Debug for TagFilter {
         formatter.finish()
     }
 }
-/// See [`TagFilter`](crate::model::TagFilter)
+/// See [`TagFilter`](crate::model::TagFilter).
 pub mod tag_filter {
 
-    /// A builder for [`TagFilter`](crate::model::TagFilter)
-    #[non_exhaustive]
+    /// A builder for [`TagFilter`](crate::model::TagFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -241,7 +244,7 @@ pub mod tag_filter {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagFilter`](crate::model::TagFilter)
+        /// Consumes the builder and constructs a [`TagFilter`](crate::model::TagFilter).
         pub fn build(self) -> crate::model::TagFilter {
             crate::model::TagFilter {
                 key: self.key,
@@ -252,7 +255,7 @@ pub mod tag_filter {
     }
 }
 impl TagFilter {
-    /// Creates a new builder-style object to manufacture [`TagFilter`](crate::model::TagFilter)
+    /// Creates a new builder-style object to manufacture [`TagFilter`](crate::model::TagFilter).
     pub fn builder() -> crate::model::tag_filter::Builder {
         crate::model::tag_filter::Builder::default()
     }
@@ -322,8 +325,10 @@ impl AsRef<str> for TagFilterType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EcsService {
     /// <p> The name of the target Amazon ECS service. </p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
     /// <p> The name of the cluster that the Amazon ECS service is associated with. </p>
+    #[doc(hidden)]
     pub cluster_name: std::option::Option<std::string::String>,
 }
 impl EcsService {
@@ -344,11 +349,10 @@ impl std::fmt::Debug for EcsService {
         formatter.finish()
     }
 }
-/// See [`EcsService`](crate::model::EcsService)
+/// See [`EcsService`](crate::model::EcsService).
 pub mod ecs_service {
 
-    /// A builder for [`EcsService`](crate::model::EcsService)
-    #[non_exhaustive]
+    /// A builder for [`EcsService`](crate::model::EcsService).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_name: std::option::Option<std::string::String>,
@@ -375,7 +379,7 @@ pub mod ecs_service {
             self.cluster_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`EcsService`](crate::model::EcsService)
+        /// Consumes the builder and constructs a [`EcsService`](crate::model::EcsService).
         pub fn build(self) -> crate::model::EcsService {
             crate::model::EcsService {
                 service_name: self.service_name,
@@ -385,7 +389,7 @@ pub mod ecs_service {
     }
 }
 impl EcsService {
-    /// Creates a new builder-style object to manufacture [`EcsService`](crate::model::EcsService)
+    /// Creates a new builder-style object to manufacture [`EcsService`](crate::model::EcsService).
     pub fn builder() -> crate::model::ecs_service::Builder {
         crate::model::ecs_service::Builder::default()
     }
@@ -396,6 +400,7 @@ impl EcsService {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ec2TagSet {
     /// <p>A list that contains other lists of EC2 instance tag groups. For an instance to be included in the deployment group, it must be identified by all of the tag groups in the list.</p>
+    #[doc(hidden)]
     pub ec2_tag_set_list:
         std::option::Option<std::vec::Vec<std::vec::Vec<crate::model::Ec2TagFilter>>>,
 }
@@ -414,11 +419,10 @@ impl std::fmt::Debug for Ec2TagSet {
         formatter.finish()
     }
 }
-/// See [`Ec2TagSet`](crate::model::Ec2TagSet)
+/// See [`Ec2TagSet`](crate::model::Ec2TagSet).
 pub mod ec2_tag_set {
 
-    /// A builder for [`Ec2TagSet`](crate::model::Ec2TagSet)
-    #[non_exhaustive]
+    /// A builder for [`Ec2TagSet`](crate::model::Ec2TagSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ec2_tag_set_list:
@@ -447,7 +451,7 @@ pub mod ec2_tag_set {
             self.ec2_tag_set_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2TagSet`](crate::model::Ec2TagSet)
+        /// Consumes the builder and constructs a [`Ec2TagSet`](crate::model::Ec2TagSet).
         pub fn build(self) -> crate::model::Ec2TagSet {
             crate::model::Ec2TagSet {
                 ec2_tag_set_list: self.ec2_tag_set_list,
@@ -456,7 +460,7 @@ pub mod ec2_tag_set {
     }
 }
 impl Ec2TagSet {
-    /// Creates a new builder-style object to manufacture [`Ec2TagSet`](crate::model::Ec2TagSet)
+    /// Creates a new builder-style object to manufacture [`Ec2TagSet`](crate::model::Ec2TagSet).
     pub fn builder() -> crate::model::ec2_tag_set::Builder {
         crate::model::ec2_tag_set::Builder::default()
     }
@@ -467,8 +471,10 @@ impl Ec2TagSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ec2TagFilter {
     /// <p>The tag filter key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The tag filter value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The tag filter type:</p>
     /// <ul>
@@ -476,6 +482,7 @@ pub struct Ec2TagFilter {
     /// <li> <p> <code>VALUE_ONLY</code>: Value only.</p> </li>
     /// <li> <p> <code>KEY_AND_VALUE</code>: Key and value.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Ec2TagFilterType>,
 }
 impl Ec2TagFilter {
@@ -506,11 +513,10 @@ impl std::fmt::Debug for Ec2TagFilter {
         formatter.finish()
     }
 }
-/// See [`Ec2TagFilter`](crate::model::Ec2TagFilter)
+/// See [`Ec2TagFilter`](crate::model::Ec2TagFilter).
 pub mod ec2_tag_filter {
 
-    /// A builder for [`Ec2TagFilter`](crate::model::Ec2TagFilter)
-    #[non_exhaustive]
+    /// A builder for [`Ec2TagFilter`](crate::model::Ec2TagFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -561,7 +567,7 @@ pub mod ec2_tag_filter {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2TagFilter`](crate::model::Ec2TagFilter)
+        /// Consumes the builder and constructs a [`Ec2TagFilter`](crate::model::Ec2TagFilter).
         pub fn build(self) -> crate::model::Ec2TagFilter {
             crate::model::Ec2TagFilter {
                 key: self.key,
@@ -572,7 +578,7 @@ pub mod ec2_tag_filter {
     }
 }
 impl Ec2TagFilter {
-    /// Creates a new builder-style object to manufacture [`Ec2TagFilter`](crate::model::Ec2TagFilter)
+    /// Creates a new builder-style object to manufacture [`Ec2TagFilter`](crate::model::Ec2TagFilter).
     pub fn builder() -> crate::model::ec2_tag_filter::Builder {
         crate::model::ec2_tag_filter::Builder::default()
     }
@@ -644,12 +650,15 @@ pub struct LoadBalancerInfo {
     /// <p>An array that contains information about the load balancer to use for load balancing in a deployment. In Elastic Load Balancing, load balancers are used with Classic Load Balancers.</p> <note>
     /// <p> Adding more than one load balancer to the array is not supported. </p>
     /// </note>
+    #[doc(hidden)]
     pub elb_info_list: std::option::Option<std::vec::Vec<crate::model::ElbInfo>>,
     /// <p>An array that contains information about the target group to use for load balancing in a deployment. In Elastic Load Balancing, target groups are used with Application Load Balancers.</p> <note>
     /// <p> Adding more than one target group to the array is not supported. </p>
     /// </note>
+    #[doc(hidden)]
     pub target_group_info_list: std::option::Option<std::vec::Vec<crate::model::TargetGroupInfo>>,
     /// <p> The target group pair information. This is an array of <code>TargeGroupPairInfo</code> objects with a maximum size of one. </p>
+    #[doc(hidden)]
     pub target_group_pair_info_list:
         std::option::Option<std::vec::Vec<crate::model::TargetGroupPairInfo>>,
 }
@@ -685,11 +694,10 @@ impl std::fmt::Debug for LoadBalancerInfo {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerInfo`](crate::model::LoadBalancerInfo)
+/// See [`LoadBalancerInfo`](crate::model::LoadBalancerInfo).
 pub mod load_balancer_info {
 
-    /// A builder for [`LoadBalancerInfo`](crate::model::LoadBalancerInfo)
-    #[non_exhaustive]
+    /// A builder for [`LoadBalancerInfo`](crate::model::LoadBalancerInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) elb_info_list: std::option::Option<std::vec::Vec<crate::model::ElbInfo>>,
@@ -767,7 +775,7 @@ pub mod load_balancer_info {
             self.target_group_pair_info_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerInfo`](crate::model::LoadBalancerInfo)
+        /// Consumes the builder and constructs a [`LoadBalancerInfo`](crate::model::LoadBalancerInfo).
         pub fn build(self) -> crate::model::LoadBalancerInfo {
             crate::model::LoadBalancerInfo {
                 elb_info_list: self.elb_info_list,
@@ -778,7 +786,7 @@ pub mod load_balancer_info {
     }
 }
 impl LoadBalancerInfo {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerInfo`](crate::model::LoadBalancerInfo)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerInfo`](crate::model::LoadBalancerInfo).
     pub fn builder() -> crate::model::load_balancer_info::Builder {
         crate::model::load_balancer_info::Builder::default()
     }
@@ -789,10 +797,13 @@ impl LoadBalancerInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetGroupPairInfo {
     /// <p> One pair of target groups. One is associated with the original task set. The second is associated with the task set that serves traffic after the deployment is complete. </p>
+    #[doc(hidden)]
     pub target_groups: std::option::Option<std::vec::Vec<crate::model::TargetGroupInfo>>,
     /// <p> The path used by a load balancer to route production traffic when an Amazon ECS deployment is complete. </p>
+    #[doc(hidden)]
     pub prod_traffic_route: std::option::Option<crate::model::TrafficRoute>,
     /// <p> An optional path used by a load balancer to route test traffic after an Amazon ECS deployment. Validation can occur while test traffic is served during a deployment. </p>
+    #[doc(hidden)]
     pub test_traffic_route: std::option::Option<crate::model::TrafficRoute>,
 }
 impl TargetGroupPairInfo {
@@ -818,11 +829,10 @@ impl std::fmt::Debug for TargetGroupPairInfo {
         formatter.finish()
     }
 }
-/// See [`TargetGroupPairInfo`](crate::model::TargetGroupPairInfo)
+/// See [`TargetGroupPairInfo`](crate::model::TargetGroupPairInfo).
 pub mod target_group_pair_info {
 
-    /// A builder for [`TargetGroupPairInfo`](crate::model::TargetGroupPairInfo)
-    #[non_exhaustive]
+    /// A builder for [`TargetGroupPairInfo`](crate::model::TargetGroupPairInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_groups: std::option::Option<std::vec::Vec<crate::model::TargetGroupInfo>>,
@@ -875,7 +885,7 @@ pub mod target_group_pair_info {
             self.test_traffic_route = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetGroupPairInfo`](crate::model::TargetGroupPairInfo)
+        /// Consumes the builder and constructs a [`TargetGroupPairInfo`](crate::model::TargetGroupPairInfo).
         pub fn build(self) -> crate::model::TargetGroupPairInfo {
             crate::model::TargetGroupPairInfo {
                 target_groups: self.target_groups,
@@ -886,7 +896,7 @@ pub mod target_group_pair_info {
     }
 }
 impl TargetGroupPairInfo {
-    /// Creates a new builder-style object to manufacture [`TargetGroupPairInfo`](crate::model::TargetGroupPairInfo)
+    /// Creates a new builder-style object to manufacture [`TargetGroupPairInfo`](crate::model::TargetGroupPairInfo).
     pub fn builder() -> crate::model::target_group_pair_info::Builder {
         crate::model::target_group_pair_info::Builder::default()
     }
@@ -897,6 +907,7 @@ impl TargetGroupPairInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrafficRoute {
     /// <p> The Amazon Resource Name (ARN) of one listener. The listener identifies the route between a target group and a load balancer. This is an array of strings with a maximum size of one. </p>
+    #[doc(hidden)]
     pub listener_arns: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl TrafficRoute {
@@ -912,11 +923,10 @@ impl std::fmt::Debug for TrafficRoute {
         formatter.finish()
     }
 }
-/// See [`TrafficRoute`](crate::model::TrafficRoute)
+/// See [`TrafficRoute`](crate::model::TrafficRoute).
 pub mod traffic_route {
 
-    /// A builder for [`TrafficRoute`](crate::model::TrafficRoute)
-    #[non_exhaustive]
+    /// A builder for [`TrafficRoute`](crate::model::TrafficRoute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) listener_arns: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -941,7 +951,7 @@ pub mod traffic_route {
             self.listener_arns = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrafficRoute`](crate::model::TrafficRoute)
+        /// Consumes the builder and constructs a [`TrafficRoute`](crate::model::TrafficRoute).
         pub fn build(self) -> crate::model::TrafficRoute {
             crate::model::TrafficRoute {
                 listener_arns: self.listener_arns,
@@ -950,7 +960,7 @@ pub mod traffic_route {
     }
 }
 impl TrafficRoute {
-    /// Creates a new builder-style object to manufacture [`TrafficRoute`](crate::model::TrafficRoute)
+    /// Creates a new builder-style object to manufacture [`TrafficRoute`](crate::model::TrafficRoute).
     pub fn builder() -> crate::model::traffic_route::Builder {
         crate::model::traffic_route::Builder::default()
     }
@@ -961,6 +971,7 @@ impl TrafficRoute {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetGroupInfo {
     /// <p>For blue/green deployments, the name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment are registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment is complete. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl TargetGroupInfo {
@@ -976,11 +987,10 @@ impl std::fmt::Debug for TargetGroupInfo {
         formatter.finish()
     }
 }
-/// See [`TargetGroupInfo`](crate::model::TargetGroupInfo)
+/// See [`TargetGroupInfo`](crate::model::TargetGroupInfo).
 pub mod target_group_info {
 
-    /// A builder for [`TargetGroupInfo`](crate::model::TargetGroupInfo)
-    #[non_exhaustive]
+    /// A builder for [`TargetGroupInfo`](crate::model::TargetGroupInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -996,14 +1006,14 @@ pub mod target_group_info {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetGroupInfo`](crate::model::TargetGroupInfo)
+        /// Consumes the builder and constructs a [`TargetGroupInfo`](crate::model::TargetGroupInfo).
         pub fn build(self) -> crate::model::TargetGroupInfo {
             crate::model::TargetGroupInfo { name: self.name }
         }
     }
 }
 impl TargetGroupInfo {
-    /// Creates a new builder-style object to manufacture [`TargetGroupInfo`](crate::model::TargetGroupInfo)
+    /// Creates a new builder-style object to manufacture [`TargetGroupInfo`](crate::model::TargetGroupInfo).
     pub fn builder() -> crate::model::target_group_info::Builder {
         crate::model::target_group_info::Builder::default()
     }
@@ -1014,6 +1024,7 @@ impl TargetGroupInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ElbInfo {
     /// <p>For blue/green deployments, the name of the load balancer that is used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment is complete.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl ElbInfo {
@@ -1029,11 +1040,10 @@ impl std::fmt::Debug for ElbInfo {
         formatter.finish()
     }
 }
-/// See [`ElbInfo`](crate::model::ElbInfo)
+/// See [`ElbInfo`](crate::model::ElbInfo).
 pub mod elb_info {
 
-    /// A builder for [`ElbInfo`](crate::model::ElbInfo)
-    #[non_exhaustive]
+    /// A builder for [`ElbInfo`](crate::model::ElbInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1049,14 +1059,14 @@ pub mod elb_info {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ElbInfo`](crate::model::ElbInfo)
+        /// Consumes the builder and constructs a [`ElbInfo`](crate::model::ElbInfo).
         pub fn build(self) -> crate::model::ElbInfo {
             crate::model::ElbInfo { name: self.name }
         }
     }
 }
 impl ElbInfo {
-    /// Creates a new builder-style object to manufacture [`ElbInfo`](crate::model::ElbInfo)
+    /// Creates a new builder-style object to manufacture [`ElbInfo`](crate::model::ElbInfo).
     pub fn builder() -> crate::model::elb_info::Builder {
         crate::model::elb_info::Builder::default()
     }
@@ -1067,11 +1077,14 @@ impl ElbInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BlueGreenDeploymentConfiguration {
     /// <p>Information about whether to terminate instances in the original fleet during a blue/green deployment.</p>
+    #[doc(hidden)]
     pub terminate_blue_instances_on_deployment_success:
         std::option::Option<crate::model::BlueInstanceTerminationOption>,
     /// <p>Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment.</p>
+    #[doc(hidden)]
     pub deployment_ready_option: std::option::Option<crate::model::DeploymentReadyOption>,
     /// <p>Information about how instances are provisioned for a replacement environment in a blue/green deployment.</p>
+    #[doc(hidden)]
     pub green_fleet_provisioning_option:
         std::option::Option<crate::model::GreenFleetProvisioningOption>,
 }
@@ -1110,11 +1123,10 @@ impl std::fmt::Debug for BlueGreenDeploymentConfiguration {
         formatter.finish()
     }
 }
-/// See [`BlueGreenDeploymentConfiguration`](crate::model::BlueGreenDeploymentConfiguration)
+/// See [`BlueGreenDeploymentConfiguration`](crate::model::BlueGreenDeploymentConfiguration).
 pub mod blue_green_deployment_configuration {
 
-    /// A builder for [`BlueGreenDeploymentConfiguration`](crate::model::BlueGreenDeploymentConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`BlueGreenDeploymentConfiguration`](crate::model::BlueGreenDeploymentConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) terminate_blue_instances_on_deployment_success:
@@ -1173,7 +1185,7 @@ pub mod blue_green_deployment_configuration {
             self.green_fleet_provisioning_option = input;
             self
         }
-        /// Consumes the builder and constructs a [`BlueGreenDeploymentConfiguration`](crate::model::BlueGreenDeploymentConfiguration)
+        /// Consumes the builder and constructs a [`BlueGreenDeploymentConfiguration`](crate::model::BlueGreenDeploymentConfiguration).
         pub fn build(self) -> crate::model::BlueGreenDeploymentConfiguration {
             crate::model::BlueGreenDeploymentConfiguration {
                 terminate_blue_instances_on_deployment_success: self
@@ -1185,7 +1197,7 @@ pub mod blue_green_deployment_configuration {
     }
 }
 impl BlueGreenDeploymentConfiguration {
-    /// Creates a new builder-style object to manufacture [`BlueGreenDeploymentConfiguration`](crate::model::BlueGreenDeploymentConfiguration)
+    /// Creates a new builder-style object to manufacture [`BlueGreenDeploymentConfiguration`](crate::model::BlueGreenDeploymentConfiguration).
     pub fn builder() -> crate::model::blue_green_deployment_configuration::Builder {
         crate::model::blue_green_deployment_configuration::Builder::default()
     }
@@ -1200,6 +1212,7 @@ pub struct GreenFleetProvisioningOption {
     /// <li> <p> <code>DISCOVER_EXISTING</code>: Use instances that already exist or will be created manually.</p> </li>
     /// <li> <p> <code>COPY_AUTO_SCALING_GROUP</code>: Use settings from a specified Auto Scaling group to define and create instances in a new Auto Scaling group.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::GreenFleetProvisioningAction>,
 }
 impl GreenFleetProvisioningOption {
@@ -1219,11 +1232,10 @@ impl std::fmt::Debug for GreenFleetProvisioningOption {
         formatter.finish()
     }
 }
-/// See [`GreenFleetProvisioningOption`](crate::model::GreenFleetProvisioningOption)
+/// See [`GreenFleetProvisioningOption`](crate::model::GreenFleetProvisioningOption).
 pub mod green_fleet_provisioning_option {
 
-    /// A builder for [`GreenFleetProvisioningOption`](crate::model::GreenFleetProvisioningOption)
-    #[non_exhaustive]
+    /// A builder for [`GreenFleetProvisioningOption`](crate::model::GreenFleetProvisioningOption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::GreenFleetProvisioningAction>,
@@ -1250,7 +1262,7 @@ pub mod green_fleet_provisioning_option {
             self.action = input;
             self
         }
-        /// Consumes the builder and constructs a [`GreenFleetProvisioningOption`](crate::model::GreenFleetProvisioningOption)
+        /// Consumes the builder and constructs a [`GreenFleetProvisioningOption`](crate::model::GreenFleetProvisioningOption).
         pub fn build(self) -> crate::model::GreenFleetProvisioningOption {
             crate::model::GreenFleetProvisioningOption {
                 action: self.action,
@@ -1259,7 +1271,7 @@ pub mod green_fleet_provisioning_option {
     }
 }
 impl GreenFleetProvisioningOption {
-    /// Creates a new builder-style object to manufacture [`GreenFleetProvisioningOption`](crate::model::GreenFleetProvisioningOption)
+    /// Creates a new builder-style object to manufacture [`GreenFleetProvisioningOption`](crate::model::GreenFleetProvisioningOption).
     pub fn builder() -> crate::model::green_fleet_provisioning_option::Builder {
         crate::model::green_fleet_provisioning_option::Builder::default()
     }
@@ -1329,8 +1341,10 @@ pub struct DeploymentReadyOption {
     /// <li> <p>CONTINUE_DEPLOYMENT: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.</p> </li>
     /// <li> <p>STOP_DEPLOYMENT: Do not register new instances with a load balancer unless traffic rerouting is started using <code>ContinueDeployment</code>. If traffic rerouting is not started before the end of the specified wait period, the deployment status is changed to Stopped.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub action_on_timeout: std::option::Option<crate::model::DeploymentReadyAction>,
     /// <p>The number of minutes to wait before the status of a blue/green deployment is changed to Stopped if rerouting is not started manually. Applies only to the <code>STOP_DEPLOYMENT</code> option for <code>actionOnTimeout</code>.</p>
+    #[doc(hidden)]
     pub wait_time_in_minutes: i32,
 }
 impl DeploymentReadyOption {
@@ -1355,11 +1369,10 @@ impl std::fmt::Debug for DeploymentReadyOption {
         formatter.finish()
     }
 }
-/// See [`DeploymentReadyOption`](crate::model::DeploymentReadyOption)
+/// See [`DeploymentReadyOption`](crate::model::DeploymentReadyOption).
 pub mod deployment_ready_option {
 
-    /// A builder for [`DeploymentReadyOption`](crate::model::DeploymentReadyOption)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentReadyOption`](crate::model::DeploymentReadyOption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action_on_timeout: std::option::Option<crate::model::DeploymentReadyAction>,
@@ -1397,7 +1410,7 @@ pub mod deployment_ready_option {
             self.wait_time_in_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentReadyOption`](crate::model::DeploymentReadyOption)
+        /// Consumes the builder and constructs a [`DeploymentReadyOption`](crate::model::DeploymentReadyOption).
         pub fn build(self) -> crate::model::DeploymentReadyOption {
             crate::model::DeploymentReadyOption {
                 action_on_timeout: self.action_on_timeout,
@@ -1407,7 +1420,7 @@ pub mod deployment_ready_option {
     }
 }
 impl DeploymentReadyOption {
-    /// Creates a new builder-style object to manufacture [`DeploymentReadyOption`](crate::model::DeploymentReadyOption)
+    /// Creates a new builder-style object to manufacture [`DeploymentReadyOption`](crate::model::DeploymentReadyOption).
     pub fn builder() -> crate::model::deployment_ready_option::Builder {
         crate::model::deployment_ready_option::Builder::default()
     }
@@ -1477,10 +1490,12 @@ pub struct BlueInstanceTerminationOption {
     /// <li> <p> <code>TERMINATE</code>: Instances are terminated after a specified wait time.</p> </li>
     /// <li> <p> <code>KEEP_ALIVE</code>: Instances are left running after they are deregistered from the load balancer and removed from the deployment group.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::InstanceAction>,
     /// <p>For an Amazon EC2 deployment, the number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.</p>
     /// <p> For an Amazon ECS deployment, the number of minutes before deleting the original (blue) task set. During an Amazon ECS deployment, CodeDeploy shifts traffic from the original (blue) task set to a replacement (green) task set. </p>
     /// <p> The maximum setting is 2880 minutes (2 days). </p>
+    #[doc(hidden)]
     pub termination_wait_time_in_minutes: i32,
 }
 impl BlueInstanceTerminationOption {
@@ -1510,11 +1525,10 @@ impl std::fmt::Debug for BlueInstanceTerminationOption {
         formatter.finish()
     }
 }
-/// See [`BlueInstanceTerminationOption`](crate::model::BlueInstanceTerminationOption)
+/// See [`BlueInstanceTerminationOption`](crate::model::BlueInstanceTerminationOption).
 pub mod blue_instance_termination_option {
 
-    /// A builder for [`BlueInstanceTerminationOption`](crate::model::BlueInstanceTerminationOption)
-    #[non_exhaustive]
+    /// A builder for [`BlueInstanceTerminationOption`](crate::model::BlueInstanceTerminationOption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::InstanceAction>,
@@ -1559,7 +1573,7 @@ pub mod blue_instance_termination_option {
             self.termination_wait_time_in_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`BlueInstanceTerminationOption`](crate::model::BlueInstanceTerminationOption)
+        /// Consumes the builder and constructs a [`BlueInstanceTerminationOption`](crate::model::BlueInstanceTerminationOption).
         pub fn build(self) -> crate::model::BlueInstanceTerminationOption {
             crate::model::BlueInstanceTerminationOption {
                 action: self.action,
@@ -1571,7 +1585,7 @@ pub mod blue_instance_termination_option {
     }
 }
 impl BlueInstanceTerminationOption {
-    /// Creates a new builder-style object to manufacture [`BlueInstanceTerminationOption`](crate::model::BlueInstanceTerminationOption)
+    /// Creates a new builder-style object to manufacture [`BlueInstanceTerminationOption`](crate::model::BlueInstanceTerminationOption).
     pub fn builder() -> crate::model::blue_instance_termination_option::Builder {
         crate::model::blue_instance_termination_option::Builder::default()
     }
@@ -1637,8 +1651,10 @@ impl AsRef<str> for InstanceAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeploymentStyle {
     /// <p>Indicates whether to run an in-place deployment or a blue/green deployment.</p>
+    #[doc(hidden)]
     pub deployment_type: std::option::Option<crate::model::DeploymentType>,
     /// <p>Indicates whether to route deployment traffic behind a load balancer.</p>
+    #[doc(hidden)]
     pub deployment_option: std::option::Option<crate::model::DeploymentOption>,
 }
 impl DeploymentStyle {
@@ -1659,11 +1675,10 @@ impl std::fmt::Debug for DeploymentStyle {
         formatter.finish()
     }
 }
-/// See [`DeploymentStyle`](crate::model::DeploymentStyle)
+/// See [`DeploymentStyle`](crate::model::DeploymentStyle).
 pub mod deployment_style {
 
-    /// A builder for [`DeploymentStyle`](crate::model::DeploymentStyle)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentStyle`](crate::model::DeploymentStyle).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_type: std::option::Option<crate::model::DeploymentType>,
@@ -1696,7 +1711,7 @@ pub mod deployment_style {
             self.deployment_option = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentStyle`](crate::model::DeploymentStyle)
+        /// Consumes the builder and constructs a [`DeploymentStyle`](crate::model::DeploymentStyle).
         pub fn build(self) -> crate::model::DeploymentStyle {
             crate::model::DeploymentStyle {
                 deployment_type: self.deployment_type,
@@ -1706,7 +1721,7 @@ pub mod deployment_style {
     }
 }
 impl DeploymentStyle {
-    /// Creates a new builder-style object to manufacture [`DeploymentStyle`](crate::model::DeploymentStyle)
+    /// Creates a new builder-style object to manufacture [`DeploymentStyle`](crate::model::DeploymentStyle).
     pub fn builder() -> crate::model::deployment_style::Builder {
         crate::model::deployment_style::Builder::default()
     }
@@ -1882,8 +1897,10 @@ impl AsRef<str> for OutdatedInstancesStrategy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoRollbackConfiguration {
     /// <p>Indicates whether a defined automatic rollback configuration is currently enabled.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The event type or types that trigger a rollback.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<std::vec::Vec<crate::model::AutoRollbackEvent>>,
 }
 impl AutoRollbackConfiguration {
@@ -1904,11 +1921,10 @@ impl std::fmt::Debug for AutoRollbackConfiguration {
         formatter.finish()
     }
 }
-/// See [`AutoRollbackConfiguration`](crate::model::AutoRollbackConfiguration)
+/// See [`AutoRollbackConfiguration`](crate::model::AutoRollbackConfiguration).
 pub mod auto_rollback_configuration {
 
-    /// A builder for [`AutoRollbackConfiguration`](crate::model::AutoRollbackConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AutoRollbackConfiguration`](crate::model::AutoRollbackConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -1944,7 +1960,7 @@ pub mod auto_rollback_configuration {
             self.events = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoRollbackConfiguration`](crate::model::AutoRollbackConfiguration)
+        /// Consumes the builder and constructs a [`AutoRollbackConfiguration`](crate::model::AutoRollbackConfiguration).
         pub fn build(self) -> crate::model::AutoRollbackConfiguration {
             crate::model::AutoRollbackConfiguration {
                 enabled: self.enabled.unwrap_or_default(),
@@ -1954,7 +1970,7 @@ pub mod auto_rollback_configuration {
     }
 }
 impl AutoRollbackConfiguration {
-    /// Creates a new builder-style object to manufacture [`AutoRollbackConfiguration`](crate::model::AutoRollbackConfiguration)
+    /// Creates a new builder-style object to manufacture [`AutoRollbackConfiguration`](crate::model::AutoRollbackConfiguration).
     pub fn builder() -> crate::model::auto_rollback_configuration::Builder {
         crate::model::auto_rollback_configuration::Builder::default()
     }
@@ -2028,14 +2044,17 @@ impl AsRef<str> for AutoRollbackEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AlarmConfiguration {
     /// <p>Indicates whether the alarm configuration is enabled.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from Amazon CloudWatch. The default value is false.</p>
     /// <ul>
     /// <li> <p> <code>true</code>: The deployment proceeds even if alarm status information can't be retrieved from Amazon CloudWatch.</p> </li>
     /// <li> <p> <code>false</code>: The deployment stops if alarm status information can't be retrieved from Amazon CloudWatch.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub ignore_poll_alarm_failure: bool,
     /// <p>A list of alarms configured for the deployment group. A maximum of 10 alarms can be added to a deployment group.</p>
+    #[doc(hidden)]
     pub alarms: std::option::Option<std::vec::Vec<crate::model::Alarm>>,
 }
 impl AlarmConfiguration {
@@ -2065,11 +2084,10 @@ impl std::fmt::Debug for AlarmConfiguration {
         formatter.finish()
     }
 }
-/// See [`AlarmConfiguration`](crate::model::AlarmConfiguration)
+/// See [`AlarmConfiguration`](crate::model::AlarmConfiguration).
 pub mod alarm_configuration {
 
-    /// A builder for [`AlarmConfiguration`](crate::model::AlarmConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AlarmConfiguration`](crate::model::AlarmConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -2124,7 +2142,7 @@ pub mod alarm_configuration {
             self.alarms = input;
             self
         }
-        /// Consumes the builder and constructs a [`AlarmConfiguration`](crate::model::AlarmConfiguration)
+        /// Consumes the builder and constructs a [`AlarmConfiguration`](crate::model::AlarmConfiguration).
         pub fn build(self) -> crate::model::AlarmConfiguration {
             crate::model::AlarmConfiguration {
                 enabled: self.enabled.unwrap_or_default(),
@@ -2135,7 +2153,7 @@ pub mod alarm_configuration {
     }
 }
 impl AlarmConfiguration {
-    /// Creates a new builder-style object to manufacture [`AlarmConfiguration`](crate::model::AlarmConfiguration)
+    /// Creates a new builder-style object to manufacture [`AlarmConfiguration`](crate::model::AlarmConfiguration).
     pub fn builder() -> crate::model::alarm_configuration::Builder {
         crate::model::alarm_configuration::Builder::default()
     }
@@ -2146,6 +2164,7 @@ impl AlarmConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Alarm {
     /// <p>The name of the alarm. Maximum length is 255 characters. Each alarm name can be used only once in a list of alarms.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl Alarm {
@@ -2161,11 +2180,10 @@ impl std::fmt::Debug for Alarm {
         formatter.finish()
     }
 }
-/// See [`Alarm`](crate::model::Alarm)
+/// See [`Alarm`](crate::model::Alarm).
 pub mod alarm {
 
-    /// A builder for [`Alarm`](crate::model::Alarm)
-    #[non_exhaustive]
+    /// A builder for [`Alarm`](crate::model::Alarm).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2181,14 +2199,14 @@ pub mod alarm {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Alarm`](crate::model::Alarm)
+        /// Consumes the builder and constructs a [`Alarm`](crate::model::Alarm).
         pub fn build(self) -> crate::model::Alarm {
             crate::model::Alarm { name: self.name }
         }
     }
 }
 impl Alarm {
-    /// Creates a new builder-style object to manufacture [`Alarm`](crate::model::Alarm)
+    /// Creates a new builder-style object to manufacture [`Alarm`](crate::model::Alarm).
     pub fn builder() -> crate::model::alarm::Builder {
         crate::model::alarm::Builder::default()
     }
@@ -2199,10 +2217,13 @@ impl Alarm {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TriggerConfig {
     /// <p>The name of the notification trigger.</p>
+    #[doc(hidden)]
     pub trigger_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon Simple Notification Service topic through which notifications about deployment or instance events are sent.</p>
+    #[doc(hidden)]
     pub trigger_target_arn: std::option::Option<std::string::String>,
     /// <p>The event type or types for which notifications are triggered.</p>
+    #[doc(hidden)]
     pub trigger_events: std::option::Option<std::vec::Vec<crate::model::TriggerEventType>>,
 }
 impl TriggerConfig {
@@ -2228,11 +2249,10 @@ impl std::fmt::Debug for TriggerConfig {
         formatter.finish()
     }
 }
-/// See [`TriggerConfig`](crate::model::TriggerConfig)
+/// See [`TriggerConfig`](crate::model::TriggerConfig).
 pub mod trigger_config {
 
-    /// A builder for [`TriggerConfig`](crate::model::TriggerConfig)
-    #[non_exhaustive]
+    /// A builder for [`TriggerConfig`](crate::model::TriggerConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) trigger_name: std::option::Option<std::string::String>,
@@ -2283,7 +2303,7 @@ pub mod trigger_config {
             self.trigger_events = input;
             self
         }
-        /// Consumes the builder and constructs a [`TriggerConfig`](crate::model::TriggerConfig)
+        /// Consumes the builder and constructs a [`TriggerConfig`](crate::model::TriggerConfig).
         pub fn build(self) -> crate::model::TriggerConfig {
             crate::model::TriggerConfig {
                 trigger_name: self.trigger_name,
@@ -2294,7 +2314,7 @@ pub mod trigger_config {
     }
 }
 impl TriggerConfig {
-    /// Creates a new builder-style object to manufacture [`TriggerConfig`](crate::model::TriggerConfig)
+    /// Creates a new builder-style object to manufacture [`TriggerConfig`](crate::model::TriggerConfig).
     pub fn builder() -> crate::model::trigger_config::Builder {
         crate::model::trigger_config::Builder::default()
     }
@@ -2403,8 +2423,10 @@ impl AsRef<str> for TriggerEventType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The tag's key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The tag's value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -2425,11 +2447,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -2456,7 +2477,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -2466,7 +2487,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -2538,14 +2559,19 @@ pub struct RevisionLocation {
     /// <li> <p>String: A YAML-formatted or JSON-formatted string (AWS Lambda deployments only).</p> </li>
     /// <li> <p>AppSpecContent: An <code>AppSpecContent</code> object that contains the contents of an AppSpec file for an AWS Lambda or Amazon ECS deployment. The content is formatted as JSON or YAML stored as a RawString.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub revision_type: std::option::Option<crate::model::RevisionLocationType>,
     /// <p>Information about the location of a revision stored in Amazon S3. </p>
+    #[doc(hidden)]
     pub s3_location: std::option::Option<crate::model::S3Location>,
     /// <p>Information about the location of application artifacts stored in GitHub.</p>
+    #[doc(hidden)]
     pub git_hub_location: std::option::Option<crate::model::GitHubLocation>,
     /// <p>Information about the location of an AWS Lambda deployment revision stored as a RawString.</p>
+    #[doc(hidden)]
     pub string: std::option::Option<crate::model::RawString>,
     /// <p> The content of an AppSpec file for an AWS Lambda or Amazon ECS deployment. The content is formatted as JSON or YAML and stored as a RawString. </p>
+    #[doc(hidden)]
     pub app_spec_content: std::option::Option<crate::model::AppSpecContent>,
 }
 impl RevisionLocation {
@@ -2587,11 +2613,10 @@ impl std::fmt::Debug for RevisionLocation {
         formatter.finish()
     }
 }
-/// See [`RevisionLocation`](crate::model::RevisionLocation)
+/// See [`RevisionLocation`](crate::model::RevisionLocation).
 pub mod revision_location {
 
-    /// A builder for [`RevisionLocation`](crate::model::RevisionLocation)
-    #[non_exhaustive]
+    /// A builder for [`RevisionLocation`](crate::model::RevisionLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) revision_type: std::option::Option<crate::model::RevisionLocationType>,
@@ -2675,7 +2700,7 @@ pub mod revision_location {
             self.app_spec_content = input;
             self
         }
-        /// Consumes the builder and constructs a [`RevisionLocation`](crate::model::RevisionLocation)
+        /// Consumes the builder and constructs a [`RevisionLocation`](crate::model::RevisionLocation).
         pub fn build(self) -> crate::model::RevisionLocation {
             crate::model::RevisionLocation {
                 revision_type: self.revision_type,
@@ -2688,7 +2713,7 @@ pub mod revision_location {
     }
 }
 impl RevisionLocation {
-    /// Creates a new builder-style object to manufacture [`RevisionLocation`](crate::model::RevisionLocation)
+    /// Creates a new builder-style object to manufacture [`RevisionLocation`](crate::model::RevisionLocation).
     pub fn builder() -> crate::model::revision_location::Builder {
         crate::model::revision_location::Builder::default()
     }
@@ -2702,8 +2727,10 @@ pub struct AppSpecContent {
     /// <p> For an AWS Lambda deployment, the content includes a Lambda function name, the alias for its original version, and the alias for its replacement version. The deployment shifts traffic from the original version of the Lambda function to the replacement version. </p>
     /// <p> For an Amazon ECS deployment, the content includes the task name, information about the load balancer that serves traffic to the container, and more. </p>
     /// <p> For both types of deployments, the content can specify Lambda functions that run at specified hooks, such as <code>BeforeInstall</code>, during a deployment. </p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
     /// <p> The SHA256 hash value of the revision content. </p>
+    #[doc(hidden)]
     pub sha256: std::option::Option<std::string::String>,
 }
 impl AppSpecContent {
@@ -2727,11 +2754,10 @@ impl std::fmt::Debug for AppSpecContent {
         formatter.finish()
     }
 }
-/// See [`AppSpecContent`](crate::model::AppSpecContent)
+/// See [`AppSpecContent`](crate::model::AppSpecContent).
 pub mod app_spec_content {
 
-    /// A builder for [`AppSpecContent`](crate::model::AppSpecContent)
-    #[non_exhaustive]
+    /// A builder for [`AppSpecContent`](crate::model::AppSpecContent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content: std::option::Option<std::string::String>,
@@ -2764,7 +2790,7 @@ pub mod app_spec_content {
             self.sha256 = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppSpecContent`](crate::model::AppSpecContent)
+        /// Consumes the builder and constructs a [`AppSpecContent`](crate::model::AppSpecContent).
         pub fn build(self) -> crate::model::AppSpecContent {
             crate::model::AppSpecContent {
                 content: self.content,
@@ -2774,19 +2800,24 @@ pub mod app_spec_content {
     }
 }
 impl AppSpecContent {
-    /// Creates a new builder-style object to manufacture [`AppSpecContent`](crate::model::AppSpecContent)
+    /// Creates a new builder-style object to manufacture [`AppSpecContent`](crate::model::AppSpecContent).
     pub fn builder() -> crate::model::app_spec_content::Builder {
         crate::model::app_spec_content::Builder::default()
     }
 }
 
 /// <p>A revision for an AWS Lambda deployment that is a YAML-formatted or JSON-formatted string. For AWS Lambda deployments, the revision is the same as the AppSpec file.</p>
+#[deprecated(
+    note = "RawString and String revision type are deprecated, use AppSpecContent type instead."
+)]
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RawString {
     /// <p>The YAML-formatted or JSON-formatted revision string. It includes information about which Lambda function to update and optional Lambda functions that validate deployment lifecycle events.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
     /// <p>The SHA256 hash value of the revision content.</p>
+    #[doc(hidden)]
     pub sha256: std::option::Option<std::string::String>,
 }
 impl RawString {
@@ -2807,11 +2838,10 @@ impl std::fmt::Debug for RawString {
         formatter.finish()
     }
 }
-/// See [`RawString`](crate::model::RawString)
+/// See [`RawString`](crate::model::RawString).
 pub mod raw_string {
 
-    /// A builder for [`RawString`](crate::model::RawString)
-    #[non_exhaustive]
+    /// A builder for [`RawString`](crate::model::RawString).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content: std::option::Option<std::string::String>,
@@ -2838,7 +2868,7 @@ pub mod raw_string {
             self.sha256 = input;
             self
         }
-        /// Consumes the builder and constructs a [`RawString`](crate::model::RawString)
+        /// Consumes the builder and constructs a [`RawString`](crate::model::RawString).
         pub fn build(self) -> crate::model::RawString {
             crate::model::RawString {
                 content: self.content,
@@ -2848,7 +2878,7 @@ pub mod raw_string {
     }
 }
 impl RawString {
-    /// Creates a new builder-style object to manufacture [`RawString`](crate::model::RawString)
+    /// Creates a new builder-style object to manufacture [`RawString`](crate::model::RawString).
     pub fn builder() -> crate::model::raw_string::Builder {
         crate::model::raw_string::Builder::default()
     }
@@ -2860,8 +2890,10 @@ impl RawString {
 pub struct GitHubLocation {
     /// <p>The GitHub account and repository pair that stores a reference to the commit that represents the bundled artifacts for the application revision. </p>
     /// <p>Specified as account/repository.</p>
+    #[doc(hidden)]
     pub repository: std::option::Option<std::string::String>,
     /// <p>The SHA1 commit ID of the GitHub commit that represents the bundled artifacts for the application revision.</p>
+    #[doc(hidden)]
     pub commit_id: std::option::Option<std::string::String>,
 }
 impl GitHubLocation {
@@ -2883,11 +2915,10 @@ impl std::fmt::Debug for GitHubLocation {
         formatter.finish()
     }
 }
-/// See [`GitHubLocation`](crate::model::GitHubLocation)
+/// See [`GitHubLocation`](crate::model::GitHubLocation).
 pub mod git_hub_location {
 
-    /// A builder for [`GitHubLocation`](crate::model::GitHubLocation)
-    #[non_exhaustive]
+    /// A builder for [`GitHubLocation`](crate::model::GitHubLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) repository: std::option::Option<std::string::String>,
@@ -2916,7 +2947,7 @@ pub mod git_hub_location {
             self.commit_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`GitHubLocation`](crate::model::GitHubLocation)
+        /// Consumes the builder and constructs a [`GitHubLocation`](crate::model::GitHubLocation).
         pub fn build(self) -> crate::model::GitHubLocation {
             crate::model::GitHubLocation {
                 repository: self.repository,
@@ -2926,7 +2957,7 @@ pub mod git_hub_location {
     }
 }
 impl GitHubLocation {
-    /// Creates a new builder-style object to manufacture [`GitHubLocation`](crate::model::GitHubLocation)
+    /// Creates a new builder-style object to manufacture [`GitHubLocation`](crate::model::GitHubLocation).
     pub fn builder() -> crate::model::git_hub_location::Builder {
         crate::model::git_hub_location::Builder::default()
     }
@@ -2937,8 +2968,10 @@ impl GitHubLocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Location {
     /// <p>The name of the Amazon S3 bucket where the application revision is stored.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon S3 object that represents the bundled artifacts for the application revision.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The file type of the application revision. Must be one of the following:</p>
     /// <ul>
@@ -2946,12 +2979,15 @@ pub struct S3Location {
     /// <li> <p> <code>tgz</code>: A compressed tar archive file.</p> </li>
     /// <li> <p> <code>zip</code>: A zip archive file.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub bundle_type: std::option::Option<crate::model::BundleType>,
     /// <p>A specific version of the Amazon S3 object that represents the bundled artifacts for the application revision.</p>
     /// <p>If the version is not specified, the system uses the most recent version by default.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The ETag of the Amazon S3 object that represents the bundled artifacts for the application revision.</p>
     /// <p>If the ETag is not specified as an input parameter, ETag validation of the object is skipped.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
 }
 impl S3Location {
@@ -2994,11 +3030,10 @@ impl std::fmt::Debug for S3Location {
         formatter.finish()
     }
 }
-/// See [`S3Location`](crate::model::S3Location)
+/// See [`S3Location`](crate::model::S3Location).
 pub mod s3_location {
 
-    /// A builder for [`S3Location`](crate::model::S3Location)
-    #[non_exhaustive]
+    /// A builder for [`S3Location`](crate::model::S3Location).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -3075,7 +3110,7 @@ pub mod s3_location {
             self.e_tag = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location)
+        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location).
         pub fn build(self) -> crate::model::S3Location {
             crate::model::S3Location {
                 bucket: self.bucket,
@@ -3088,7 +3123,7 @@ pub mod s3_location {
     }
 }
 impl S3Location {
-    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location)
+    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location).
     pub fn builder() -> crate::model::s3_location::Builder {
         crate::model::s3_location::Builder::default()
     }
@@ -3419,10 +3454,12 @@ pub struct TimeRange {
     /// <p>The start time of the time range.</p> <note>
     /// <p>Specify null to leave the start time open-ended.</p>
     /// </note>
+    #[doc(hidden)]
     pub start: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end time of the time range.</p> <note>
     /// <p>Specify null to leave the end time open-ended.</p>
     /// </note>
+    #[doc(hidden)]
     pub end: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TimeRange {
@@ -3447,11 +3484,10 @@ impl std::fmt::Debug for TimeRange {
         formatter.finish()
     }
 }
-/// See [`TimeRange`](crate::model::TimeRange)
+/// See [`TimeRange`](crate::model::TimeRange).
 pub mod time_range {
 
-    /// A builder for [`TimeRange`](crate::model::TimeRange)
-    #[non_exhaustive]
+    /// A builder for [`TimeRange`](crate::model::TimeRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start: std::option::Option<aws_smithy_types::DateTime>,
@@ -3486,7 +3522,7 @@ pub mod time_range {
             self.end = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimeRange`](crate::model::TimeRange)
+        /// Consumes the builder and constructs a [`TimeRange`](crate::model::TimeRange).
         pub fn build(self) -> crate::model::TimeRange {
             crate::model::TimeRange {
                 start: self.start,
@@ -3496,7 +3532,7 @@ pub mod time_range {
     }
 }
 impl TimeRange {
-    /// Creates a new builder-style object to manufacture [`TimeRange`](crate::model::TimeRange)
+    /// Creates a new builder-style object to manufacture [`TimeRange`](crate::model::TimeRange).
     pub fn builder() -> crate::model::time_range::Builder {
         crate::model::time_range::Builder::default()
     }
@@ -3646,6 +3682,7 @@ impl AsRef<str> for InstanceType {
 }
 
 /// _Note: `InstanceStatus::Unknown` has been renamed to `::UnknownValue`._
+#[deprecated(note = "InstanceStatus is deprecated, use TargetStatus instead.")]
 #[non_exhaustive]
 #[derive(
     std::clone::Clone,
@@ -3906,18 +3943,25 @@ impl AsRef<str> for ApplicationRevisionSortBy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceInfo {
     /// <p>The name of the on-premises instance.</p>
+    #[doc(hidden)]
     pub instance_name: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM session associated with the on-premises instance.</p>
+    #[doc(hidden)]
     pub iam_session_arn: std::option::Option<std::string::String>,
     /// <p>The IAM user ARN associated with the on-premises instance.</p>
+    #[doc(hidden)]
     pub iam_user_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the on-premises instance.</p>
+    #[doc(hidden)]
     pub instance_arn: std::option::Option<std::string::String>,
     /// <p>The time at which the on-premises instance was registered.</p>
+    #[doc(hidden)]
     pub register_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If the on-premises instance was deregistered, the time at which the on-premises instance was deregistered.</p>
+    #[doc(hidden)]
     pub deregister_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The tags currently associated with the on-premises instance.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl InstanceInfo {
@@ -3963,11 +4007,10 @@ impl std::fmt::Debug for InstanceInfo {
         formatter.finish()
     }
 }
-/// See [`InstanceInfo`](crate::model::InstanceInfo)
+/// See [`InstanceInfo`](crate::model::InstanceInfo).
 pub mod instance_info {
 
-    /// A builder for [`InstanceInfo`](crate::model::InstanceInfo)
-    #[non_exhaustive]
+    /// A builder for [`InstanceInfo`](crate::model::InstanceInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_name: std::option::Option<std::string::String>,
@@ -4070,7 +4113,7 @@ pub mod instance_info {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceInfo`](crate::model::InstanceInfo)
+        /// Consumes the builder and constructs a [`InstanceInfo`](crate::model::InstanceInfo).
         pub fn build(self) -> crate::model::InstanceInfo {
             crate::model::InstanceInfo {
                 instance_name: self.instance_name,
@@ -4085,7 +4128,7 @@ pub mod instance_info {
     }
 }
 impl InstanceInfo {
-    /// Creates a new builder-style object to manufacture [`InstanceInfo`](crate::model::InstanceInfo)
+    /// Creates a new builder-style object to manufacture [`InstanceInfo`](crate::model::InstanceInfo).
     pub fn builder() -> crate::model::instance_info::Builder {
         crate::model::instance_info::Builder::default()
     }
@@ -4096,14 +4139,19 @@ impl InstanceInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeploymentTarget {
     /// <p>The deployment type that is specific to the deployment's compute platform or deployments initiated by a CloudFormation stack update.</p>
+    #[doc(hidden)]
     pub deployment_target_type: std::option::Option<crate::model::DeploymentTargetType>,
     /// <p> Information about the target for a deployment that uses the EC2/On-premises compute platform. </p>
+    #[doc(hidden)]
     pub instance_target: std::option::Option<crate::model::InstanceTarget>,
     /// <p> Information about the target for a deployment that uses the AWS Lambda compute platform. </p>
+    #[doc(hidden)]
     pub lambda_target: std::option::Option<crate::model::LambdaTarget>,
     /// <p> Information about the target for a deployment that uses the Amazon ECS compute platform. </p>
+    #[doc(hidden)]
     pub ecs_target: std::option::Option<crate::model::EcsTarget>,
     /// <p> Information about the target to be updated by an AWS CloudFormation blue/green deployment. This target type is used for all deployments initiated by a CloudFormation stack update.</p>
+    #[doc(hidden)]
     pub cloud_formation_target: std::option::Option<crate::model::CloudFormationTarget>,
 }
 impl DeploymentTarget {
@@ -4143,11 +4191,10 @@ impl std::fmt::Debug for DeploymentTarget {
         formatter.finish()
     }
 }
-/// See [`DeploymentTarget`](crate::model::DeploymentTarget)
+/// See [`DeploymentTarget`](crate::model::DeploymentTarget).
 pub mod deployment_target {
 
-    /// A builder for [`DeploymentTarget`](crate::model::DeploymentTarget)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentTarget`](crate::model::DeploymentTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_target_type: std::option::Option<crate::model::DeploymentTargetType>,
@@ -4222,7 +4269,7 @@ pub mod deployment_target {
             self.cloud_formation_target = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentTarget`](crate::model::DeploymentTarget)
+        /// Consumes the builder and constructs a [`DeploymentTarget`](crate::model::DeploymentTarget).
         pub fn build(self) -> crate::model::DeploymentTarget {
             crate::model::DeploymentTarget {
                 deployment_target_type: self.deployment_target_type,
@@ -4235,7 +4282,7 @@ pub mod deployment_target {
     }
 }
 impl DeploymentTarget {
-    /// Creates a new builder-style object to manufacture [`DeploymentTarget`](crate::model::DeploymentTarget)
+    /// Creates a new builder-style object to manufacture [`DeploymentTarget`](crate::model::DeploymentTarget).
     pub fn builder() -> crate::model::deployment_target::Builder {
         crate::model::deployment_target::Builder::default()
     }
@@ -4246,18 +4293,25 @@ impl DeploymentTarget {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudFormationTarget {
     /// <p>The unique ID of an AWS CloudFormation blue/green deployment.</p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p> The unique ID of a deployment target that has a type of&nbsp;<code>CloudFormationTarget</code>. </p>
+    #[doc(hidden)]
     pub target_id: std::option::Option<std::string::String>,
     /// <p> The date and time when the target application was updated by an AWS CloudFormation blue/green deployment. </p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The lifecycle events of the AWS CloudFormation blue/green deployment to this target application. </p>
+    #[doc(hidden)]
     pub lifecycle_events: std::option::Option<std::vec::Vec<crate::model::LifecycleEvent>>,
     /// <p> The status of an AWS CloudFormation blue/green deployment's target application. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TargetStatus>,
     /// <p>The resource type for the AWS CloudFormation blue/green deployment.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The percentage of production traffic that the target version of an AWS CloudFormation blue/green deployment receives.</p>
+    #[doc(hidden)]
     pub target_version_weight: f64,
 }
 impl CloudFormationTarget {
@@ -4303,11 +4357,10 @@ impl std::fmt::Debug for CloudFormationTarget {
         formatter.finish()
     }
 }
-/// See [`CloudFormationTarget`](crate::model::CloudFormationTarget)
+/// See [`CloudFormationTarget`](crate::model::CloudFormationTarget).
 pub mod cloud_formation_target {
 
-    /// A builder for [`CloudFormationTarget`](crate::model::CloudFormationTarget)
-    #[non_exhaustive]
+    /// A builder for [`CloudFormationTarget`](crate::model::CloudFormationTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_id: std::option::Option<std::string::String>,
@@ -4411,7 +4464,7 @@ pub mod cloud_formation_target {
             self.target_version_weight = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudFormationTarget`](crate::model::CloudFormationTarget)
+        /// Consumes the builder and constructs a [`CloudFormationTarget`](crate::model::CloudFormationTarget).
         pub fn build(self) -> crate::model::CloudFormationTarget {
             crate::model::CloudFormationTarget {
                 deployment_id: self.deployment_id,
@@ -4426,7 +4479,7 @@ pub mod cloud_formation_target {
     }
 }
 impl CloudFormationTarget {
-    /// Creates a new builder-style object to manufacture [`CloudFormationTarget`](crate::model::CloudFormationTarget)
+    /// Creates a new builder-style object to manufacture [`CloudFormationTarget`](crate::model::CloudFormationTarget).
     pub fn builder() -> crate::model::cloud_formation_target::Builder {
         crate::model::cloud_formation_target::Builder::default()
     }
@@ -4520,12 +4573,16 @@ impl AsRef<str> for TargetStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecycleEvent {
     /// <p>The deployment lifecycle event name, such as <code>ApplicationStop</code>, <code>BeforeInstall</code>, <code>AfterInstall</code>, <code>ApplicationStart</code>, or <code>ValidateService</code>.</p>
+    #[doc(hidden)]
     pub lifecycle_event_name: std::option::Option<std::string::String>,
     /// <p>Diagnostic information about the deployment lifecycle event.</p>
+    #[doc(hidden)]
     pub diagnostics: std::option::Option<crate::model::Diagnostics>,
     /// <p>A timestamp that indicates when the deployment lifecycle event started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp that indicates when the deployment lifecycle event ended.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The deployment lifecycle event status:</p>
     /// <ul>
@@ -4536,6 +4593,7 @@ pub struct LifecycleEvent {
     /// <li> <p>Skipped: The deployment lifecycle event has been skipped.</p> </li>
     /// <li> <p>Unknown: The deployment lifecycle event is unknown.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::LifecycleEventStatus>,
 }
 impl LifecycleEvent {
@@ -4579,11 +4637,10 @@ impl std::fmt::Debug for LifecycleEvent {
         formatter.finish()
     }
 }
-/// See [`LifecycleEvent`](crate::model::LifecycleEvent)
+/// See [`LifecycleEvent`](crate::model::LifecycleEvent).
 pub mod lifecycle_event {
 
-    /// A builder for [`LifecycleEvent`](crate::model::LifecycleEvent)
-    #[non_exhaustive]
+    /// A builder for [`LifecycleEvent`](crate::model::LifecycleEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lifecycle_event_name: std::option::Option<std::string::String>,
@@ -4674,7 +4731,7 @@ pub mod lifecycle_event {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecycleEvent`](crate::model::LifecycleEvent)
+        /// Consumes the builder and constructs a [`LifecycleEvent`](crate::model::LifecycleEvent).
         pub fn build(self) -> crate::model::LifecycleEvent {
             crate::model::LifecycleEvent {
                 lifecycle_event_name: self.lifecycle_event_name,
@@ -4687,7 +4744,7 @@ pub mod lifecycle_event {
     }
 }
 impl LifecycleEvent {
-    /// Creates a new builder-style object to manufacture [`LifecycleEvent`](crate::model::LifecycleEvent)
+    /// Creates a new builder-style object to manufacture [`LifecycleEvent`](crate::model::LifecycleEvent).
     pub fn builder() -> crate::model::lifecycle_event::Builder {
         crate::model::lifecycle_event::Builder::default()
     }
@@ -4706,13 +4763,17 @@ pub struct Diagnostics {
     /// <li> <p>ScriptFailed: The specified script failed to run as expected.</p> </li>
     /// <li> <p>UnknownError: The specified script did not run for an unknown reason.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub error_code: std::option::Option<crate::model::LifecycleErrorCode>,
     /// <p>The name of the script.</p>
+    #[doc(hidden)]
     pub script_name: std::option::Option<std::string::String>,
     /// <p>The message associated with the error.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The last portion of the diagnostic log.</p>
     /// <p>If available, AWS CodeDeploy returns up to the last 4 KB of the diagnostic log.</p>
+    #[doc(hidden)]
     pub log_tail: std::option::Option<std::string::String>,
 }
 impl Diagnostics {
@@ -4752,11 +4813,10 @@ impl std::fmt::Debug for Diagnostics {
         formatter.finish()
     }
 }
-/// See [`Diagnostics`](crate::model::Diagnostics)
+/// See [`Diagnostics`](crate::model::Diagnostics).
 pub mod diagnostics {
 
-    /// A builder for [`Diagnostics`](crate::model::Diagnostics)
-    #[non_exhaustive]
+    /// A builder for [`Diagnostics`](crate::model::Diagnostics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_code: std::option::Option<crate::model::LifecycleErrorCode>,
@@ -4826,7 +4886,7 @@ pub mod diagnostics {
             self.log_tail = input;
             self
         }
-        /// Consumes the builder and constructs a [`Diagnostics`](crate::model::Diagnostics)
+        /// Consumes the builder and constructs a [`Diagnostics`](crate::model::Diagnostics).
         pub fn build(self) -> crate::model::Diagnostics {
             crate::model::Diagnostics {
                 error_code: self.error_code,
@@ -4838,7 +4898,7 @@ pub mod diagnostics {
     }
 }
 impl Diagnostics {
-    /// Creates a new builder-style object to manufacture [`Diagnostics`](crate::model::Diagnostics)
+    /// Creates a new builder-style object to manufacture [`Diagnostics`](crate::model::Diagnostics).
     pub fn builder() -> crate::model::diagnostics::Builder {
         crate::model::diagnostics::Builder::default()
     }
@@ -4927,18 +4987,25 @@ impl AsRef<str> for LifecycleErrorCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EcsTarget {
     /// <p> The unique ID of a deployment. </p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p> The unique ID of a deployment target that has a type of <code>ecsTarget</code>. </p>
+    #[doc(hidden)]
     pub target_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the target. </p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
     /// <p> The date and time when the target Amazon ECS application was updated by a deployment. </p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The lifecycle events of the deployment to this target Amazon ECS application. </p>
+    #[doc(hidden)]
     pub lifecycle_events: std::option::Option<std::vec::Vec<crate::model::LifecycleEvent>>,
     /// <p> The status an Amazon ECS deployment's target ECS application. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TargetStatus>,
     /// <p> The <code>ECSTaskSet</code> objects associated with the ECS target. </p>
+    #[doc(hidden)]
     pub task_sets_info: std::option::Option<std::vec::Vec<crate::model::EcsTaskSet>>,
 }
 impl EcsTarget {
@@ -4984,11 +5051,10 @@ impl std::fmt::Debug for EcsTarget {
         formatter.finish()
     }
 }
-/// See [`EcsTarget`](crate::model::EcsTarget)
+/// See [`EcsTarget`](crate::model::EcsTarget).
 pub mod ecs_target {
 
-    /// A builder for [`EcsTarget`](crate::model::EcsTarget)
-    #[non_exhaustive]
+    /// A builder for [`EcsTarget`](crate::model::EcsTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_id: std::option::Option<std::string::String>,
@@ -5098,7 +5164,7 @@ pub mod ecs_target {
             self.task_sets_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`EcsTarget`](crate::model::EcsTarget)
+        /// Consumes the builder and constructs a [`EcsTarget`](crate::model::EcsTarget).
         pub fn build(self) -> crate::model::EcsTarget {
             crate::model::EcsTarget {
                 deployment_id: self.deployment_id,
@@ -5113,7 +5179,7 @@ pub mod ecs_target {
     }
 }
 impl EcsTarget {
-    /// Creates a new builder-style object to manufacture [`EcsTarget`](crate::model::EcsTarget)
+    /// Creates a new builder-style object to manufacture [`EcsTarget`](crate::model::EcsTarget).
     pub fn builder() -> crate::model::ecs_target::Builder {
         crate::model::ecs_target::Builder::default()
     }
@@ -5124,12 +5190,16 @@ impl EcsTarget {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EcsTaskSet {
     /// <p> A unique ID of an <code>ECSTaskSet</code>. </p>
+    #[doc(hidden)]
     pub identifer: std::option::Option<std::string::String>,
     /// <p> The number of tasks in a task set. During a deployment that uses the Amazon ECS compute type, CodeDeploy instructs Amazon ECS to create a new task set and uses this value to determine how many tasks to create. After the updated task set is created, CodeDeploy shifts traffic to the new task set. </p>
+    #[doc(hidden)]
     pub desired_count: i64,
     /// <p> The number of tasks in the task set that are in the <code>PENDING</code> status during an Amazon ECS deployment. A task in the <code>PENDING</code> state is preparing to enter the <code>RUNNING</code> state. A task set enters the <code>PENDING</code> status when it launches for the first time, or when it is restarted after being in the <code>STOPPED</code> state. </p>
+    #[doc(hidden)]
     pub pending_count: i64,
     /// <p> The number of tasks in the task set that are in the <code>RUNNING</code> status during an Amazon ECS deployment. A task in the <code>RUNNING</code> state is running and ready for use. </p>
+    #[doc(hidden)]
     pub running_count: i64,
     /// <p> The status of the task set. There are three valid task set statuses: </p>
     /// <ul>
@@ -5137,12 +5207,16 @@ pub struct EcsTaskSet {
     /// <li> <p> <code>ACTIVE</code>: Indicates the task set is not serving production traffic. </p> </li>
     /// <li> <p> <code>DRAINING</code>: Indicates the tasks in the task set are being stopped and their corresponding targets are being deregistered from their target group. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p> The percentage of traffic served by this task set. </p>
+    #[doc(hidden)]
     pub traffic_weight: f64,
     /// <p> The target group associated with the task set. The target group is used by AWS CodeDeploy to manage traffic to a task set. </p>
+    #[doc(hidden)]
     pub target_group: std::option::Option<crate::model::TargetGroupInfo>,
     /// <p> A label that identifies whether the ECS task set is an original target (<code>BLUE</code>) or a replacement target (<code>GREEN</code>). </p>
+    #[doc(hidden)]
     pub task_set_label: std::option::Option<crate::model::TargetLabel>,
 }
 impl EcsTaskSet {
@@ -5198,11 +5272,10 @@ impl std::fmt::Debug for EcsTaskSet {
         formatter.finish()
     }
 }
-/// See [`EcsTaskSet`](crate::model::EcsTaskSet)
+/// See [`EcsTaskSet`](crate::model::EcsTaskSet).
 pub mod ecs_task_set {
 
-    /// A builder for [`EcsTaskSet`](crate::model::EcsTaskSet)
-    #[non_exhaustive]
+    /// A builder for [`EcsTaskSet`](crate::model::EcsTaskSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identifer: std::option::Option<std::string::String>,
@@ -5311,7 +5384,7 @@ pub mod ecs_task_set {
             self.task_set_label = input;
             self
         }
-        /// Consumes the builder and constructs a [`EcsTaskSet`](crate::model::EcsTaskSet)
+        /// Consumes the builder and constructs a [`EcsTaskSet`](crate::model::EcsTaskSet).
         pub fn build(self) -> crate::model::EcsTaskSet {
             crate::model::EcsTaskSet {
                 identifer: self.identifer,
@@ -5327,7 +5400,7 @@ pub mod ecs_task_set {
     }
 }
 impl EcsTaskSet {
-    /// Creates a new builder-style object to manufacture [`EcsTaskSet`](crate::model::EcsTaskSet)
+    /// Creates a new builder-style object to manufacture [`EcsTaskSet`](crate::model::EcsTaskSet).
     pub fn builder() -> crate::model::ecs_task_set::Builder {
         crate::model::ecs_task_set::Builder::default()
     }
@@ -5393,18 +5466,25 @@ impl AsRef<str> for TargetLabel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaTarget {
     /// <p> The unique ID of a deployment. </p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p> The unique ID of a deployment target that has a type of <code>lambdaTarget</code>. </p>
+    #[doc(hidden)]
     pub target_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the target. </p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
     /// <p> The status an AWS Lambda deployment's target Lambda function. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TargetStatus>,
     /// <p> The date and time when the target Lambda function was updated by a deployment. </p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The lifecycle events of the deployment to this target Lambda function. </p>
+    #[doc(hidden)]
     pub lifecycle_events: std::option::Option<std::vec::Vec<crate::model::LifecycleEvent>>,
     /// <p> A <code>LambdaFunctionInfo</code> object that describes a target Lambda function. </p>
+    #[doc(hidden)]
     pub lambda_function_info: std::option::Option<crate::model::LambdaFunctionInfo>,
 }
 impl LambdaTarget {
@@ -5450,11 +5530,10 @@ impl std::fmt::Debug for LambdaTarget {
         formatter.finish()
     }
 }
-/// See [`LambdaTarget`](crate::model::LambdaTarget)
+/// See [`LambdaTarget`](crate::model::LambdaTarget).
 pub mod lambda_target {
 
-    /// A builder for [`LambdaTarget`](crate::model::LambdaTarget)
-    #[non_exhaustive]
+    /// A builder for [`LambdaTarget`](crate::model::LambdaTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_id: std::option::Option<std::string::String>,
@@ -5558,7 +5637,7 @@ pub mod lambda_target {
             self.lambda_function_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaTarget`](crate::model::LambdaTarget)
+        /// Consumes the builder and constructs a [`LambdaTarget`](crate::model::LambdaTarget).
         pub fn build(self) -> crate::model::LambdaTarget {
             crate::model::LambdaTarget {
                 deployment_id: self.deployment_id,
@@ -5573,7 +5652,7 @@ pub mod lambda_target {
     }
 }
 impl LambdaTarget {
-    /// Creates a new builder-style object to manufacture [`LambdaTarget`](crate::model::LambdaTarget)
+    /// Creates a new builder-style object to manufacture [`LambdaTarget`](crate::model::LambdaTarget).
     pub fn builder() -> crate::model::lambda_target::Builder {
         crate::model::lambda_target::Builder::default()
     }
@@ -5584,14 +5663,19 @@ impl LambdaTarget {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionInfo {
     /// <p> The name of a Lambda function. </p>
+    #[doc(hidden)]
     pub function_name: std::option::Option<std::string::String>,
     /// <p> The alias of a Lambda function. For more information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html">AWS Lambda Function Aliases</a> in the <i>AWS Lambda Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub function_alias: std::option::Option<std::string::String>,
     /// <p> The version of a Lambda function that production traffic points to. </p>
+    #[doc(hidden)]
     pub current_version: std::option::Option<std::string::String>,
     /// <p> The version of a Lambda function that production traffic points to after the Lambda function is deployed. </p>
+    #[doc(hidden)]
     pub target_version: std::option::Option<std::string::String>,
     /// <p> The percentage of production traffic that the target version of a Lambda function receives. </p>
+    #[doc(hidden)]
     pub target_version_weight: f64,
 }
 impl LambdaFunctionInfo {
@@ -5627,11 +5711,10 @@ impl std::fmt::Debug for LambdaFunctionInfo {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionInfo`](crate::model::LambdaFunctionInfo)
+/// See [`LambdaFunctionInfo`](crate::model::LambdaFunctionInfo).
 pub mod lambda_function_info {
 
-    /// A builder for [`LambdaFunctionInfo`](crate::model::LambdaFunctionInfo)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionInfo`](crate::model::LambdaFunctionInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) function_name: std::option::Option<std::string::String>,
@@ -5703,7 +5786,7 @@ pub mod lambda_function_info {
             self.target_version_weight = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionInfo`](crate::model::LambdaFunctionInfo)
+        /// Consumes the builder and constructs a [`LambdaFunctionInfo`](crate::model::LambdaFunctionInfo).
         pub fn build(self) -> crate::model::LambdaFunctionInfo {
             crate::model::LambdaFunctionInfo {
                 function_name: self.function_name,
@@ -5716,7 +5799,7 @@ pub mod lambda_function_info {
     }
 }
 impl LambdaFunctionInfo {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionInfo`](crate::model::LambdaFunctionInfo)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionInfo`](crate::model::LambdaFunctionInfo).
     pub fn builder() -> crate::model::lambda_function_info::Builder {
         crate::model::lambda_function_info::Builder::default()
     }
@@ -5727,18 +5810,25 @@ impl LambdaFunctionInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceTarget {
     /// <p> The unique ID of a deployment. </p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p> The unique ID of a deployment target that has a type of <code>instanceTarget</code>. </p>
+    #[doc(hidden)]
     pub target_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the target. </p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
     /// <p> The status an EC2/On-premises deployment's target instance. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TargetStatus>,
     /// <p> The date and time when the target instance was updated by a deployment. </p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The lifecycle events of the deployment to this target instance. </p>
+    #[doc(hidden)]
     pub lifecycle_events: std::option::Option<std::vec::Vec<crate::model::LifecycleEvent>>,
     /// <p> A label that identifies whether the instance is an original target (<code>BLUE</code>) or a replacement target (<code>GREEN</code>). </p>
+    #[doc(hidden)]
     pub instance_label: std::option::Option<crate::model::TargetLabel>,
 }
 impl InstanceTarget {
@@ -5784,11 +5874,10 @@ impl std::fmt::Debug for InstanceTarget {
         formatter.finish()
     }
 }
-/// See [`InstanceTarget`](crate::model::InstanceTarget)
+/// See [`InstanceTarget`](crate::model::InstanceTarget).
 pub mod instance_target {
 
-    /// A builder for [`InstanceTarget`](crate::model::InstanceTarget)
-    #[non_exhaustive]
+    /// A builder for [`InstanceTarget`](crate::model::InstanceTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_id: std::option::Option<std::string::String>,
@@ -5892,7 +5981,7 @@ pub mod instance_target {
             self.instance_label = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceTarget`](crate::model::InstanceTarget)
+        /// Consumes the builder and constructs a [`InstanceTarget`](crate::model::InstanceTarget).
         pub fn build(self) -> crate::model::InstanceTarget {
             crate::model::InstanceTarget {
                 deployment_id: self.deployment_id,
@@ -5907,7 +5996,7 @@ pub mod instance_target {
     }
 }
 impl InstanceTarget {
-    /// Creates a new builder-style object to manufacture [`InstanceTarget`](crate::model::InstanceTarget)
+    /// Creates a new builder-style object to manufacture [`InstanceTarget`](crate::model::InstanceTarget).
     pub fn builder() -> crate::model::instance_target::Builder {
         crate::model::instance_target::Builder::default()
     }
@@ -5982,12 +6071,15 @@ impl AsRef<str> for DeploymentTargetType {
 }
 
 /// <p>Information about an instance in a deployment.</p>
+#[deprecated(note = "InstanceSummary is deprecated, use DeploymentTarget instead.")]
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceSummary {
     /// <p> The unique ID of a deployment. </p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>The instance ID.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p>The deployment status for this instance:</p>
     /// <ul>
@@ -5998,16 +6090,20 @@ pub struct InstanceSummary {
     /// <li> <p> <code>Skipped</code>: The deployment has been skipped for this instance.</p> </li>
     /// <li> <p> <code>Unknown</code>: The deployment status is unknown for this instance.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::InstanceStatus>,
     /// <p>A timestamp that indicates when the instance information was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of lifecycle events for this instance.</p>
+    #[doc(hidden)]
     pub lifecycle_events: std::option::Option<std::vec::Vec<crate::model::LifecycleEvent>>,
     /// <p>Information about which environment an instance belongs to in a blue/green deployment.</p>
     /// <ul>
     /// <li> <p>BLUE: The instance is part of the original environment.</p> </li>
     /// <li> <p>GREEN: The instance is part of the replacement environment.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<crate::model::InstanceType>,
 }
 impl InstanceSummary {
@@ -6060,11 +6156,10 @@ impl std::fmt::Debug for InstanceSummary {
         formatter.finish()
     }
 }
-/// See [`InstanceSummary`](crate::model::InstanceSummary)
+/// See [`InstanceSummary`](crate::model::InstanceSummary).
 pub mod instance_summary {
 
-    /// A builder for [`InstanceSummary`](crate::model::InstanceSummary)
-    #[non_exhaustive]
+    /// A builder for [`InstanceSummary`](crate::model::InstanceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_id: std::option::Option<std::string::String>,
@@ -6181,7 +6276,7 @@ pub mod instance_summary {
             self.instance_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceSummary`](crate::model::InstanceSummary)
+        /// Consumes the builder and constructs a [`InstanceSummary`](crate::model::InstanceSummary).
         pub fn build(self) -> crate::model::InstanceSummary {
             crate::model::InstanceSummary {
                 deployment_id: self.deployment_id,
@@ -6195,7 +6290,7 @@ pub mod instance_summary {
     }
 }
 impl InstanceSummary {
-    /// Creates a new builder-style object to manufacture [`InstanceSummary`](crate::model::InstanceSummary)
+    /// Creates a new builder-style object to manufacture [`InstanceSummary`](crate::model::InstanceSummary).
     pub fn builder() -> crate::model::instance_summary::Builder {
         crate::model::instance_summary::Builder::default()
     }
@@ -6206,56 +6301,78 @@ impl InstanceSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeploymentGroupInfo {
     /// <p>The application name.</p>
+    #[doc(hidden)]
     pub application_name: std::option::Option<std::string::String>,
     /// <p>The deployment group ID.</p>
+    #[doc(hidden)]
     pub deployment_group_id: std::option::Option<std::string::String>,
     /// <p>The deployment group name.</p>
+    #[doc(hidden)]
     pub deployment_group_name: std::option::Option<std::string::String>,
     /// <p>The deployment configuration name.</p>
+    #[doc(hidden)]
     pub deployment_config_name: std::option::Option<std::string::String>,
     /// <p>The Amazon EC2 tags on which to filter. The deployment group includes EC2 instances with any of the specified tags.</p>
+    #[doc(hidden)]
     pub ec2_tag_filters: std::option::Option<std::vec::Vec<crate::model::Ec2TagFilter>>,
     /// <p>The on-premises instance tags on which to filter. The deployment group includes on-premises instances with any of the specified tags.</p>
+    #[doc(hidden)]
     pub on_premises_instance_tag_filters:
         std::option::Option<std::vec::Vec<crate::model::TagFilter>>,
     /// <p>A list of associated Auto Scaling groups.</p>
+    #[doc(hidden)]
     pub auto_scaling_groups: std::option::Option<std::vec::Vec<crate::model::AutoScalingGroup>>,
     /// <p>A service role Amazon Resource Name (ARN) that grants CodeDeploy permission to make calls to AWS services on your behalf. For more information, see <a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-create-service-role.html">Create a Service Role for AWS CodeDeploy</a> in the <i>AWS CodeDeploy User Guide</i>.</p>
+    #[doc(hidden)]
     pub service_role_arn: std::option::Option<std::string::String>,
     /// <p>Information about the deployment group's target revision, including type and location.</p>
+    #[doc(hidden)]
     pub target_revision: std::option::Option<crate::model::RevisionLocation>,
     /// <p>Information about triggers associated with the deployment group.</p>
+    #[doc(hidden)]
     pub trigger_configurations: std::option::Option<std::vec::Vec<crate::model::TriggerConfig>>,
     /// <p>A list of alarms associated with the deployment group.</p>
+    #[doc(hidden)]
     pub alarm_configuration: std::option::Option<crate::model::AlarmConfiguration>,
     /// <p>Information about the automatic rollback configuration associated with the deployment group.</p>
+    #[doc(hidden)]
     pub auto_rollback_configuration: std::option::Option<crate::model::AutoRollbackConfiguration>,
     /// <p>Information about the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer.</p>
+    #[doc(hidden)]
     pub deployment_style: std::option::Option<crate::model::DeploymentStyle>,
     /// <p>Indicates what happens when new EC2 instances are launched mid-deployment and do not receive the deployed application revision.</p>
     /// <p>If this option is set to <code>UPDATE</code> or is unspecified, CodeDeploy initiates one or more 'auto-update outdated instances' deployments to apply the deployed application revision to the new EC2 instances.</p>
     /// <p>If this option is set to <code>IGNORE</code>, CodeDeploy does not initiate a deployment to update the new EC2 instances. This may result in instances having different revisions.</p>
+    #[doc(hidden)]
     pub outdated_instances_strategy: std::option::Option<crate::model::OutdatedInstancesStrategy>,
     /// <p>Information about blue/green deployment options for a deployment group.</p>
+    #[doc(hidden)]
     pub blue_green_deployment_configuration:
         std::option::Option<crate::model::BlueGreenDeploymentConfiguration>,
     /// <p>Information about the load balancer to use in a deployment.</p>
+    #[doc(hidden)]
     pub load_balancer_info: std::option::Option<crate::model::LoadBalancerInfo>,
     /// <p>Information about the most recent successful deployment to the deployment group.</p>
+    #[doc(hidden)]
     pub last_successful_deployment: std::option::Option<crate::model::LastDeploymentInfo>,
     /// <p>Information about the most recent attempted deployment to the deployment group.</p>
+    #[doc(hidden)]
     pub last_attempted_deployment: std::option::Option<crate::model::LastDeploymentInfo>,
     /// <p>Information about groups of tags applied to an EC2 instance. The deployment group includes only EC2 instances identified by all of the tag groups. Cannot be used in the same call as ec2TagFilters.</p>
+    #[doc(hidden)]
     pub ec2_tag_set: std::option::Option<crate::model::Ec2TagSet>,
     /// <p>Information about groups of tags applied to an on-premises instance. The deployment group includes only on-premises instances identified by all the tag groups. Cannot be used in the same call as onPremisesInstanceTagFilters.</p>
+    #[doc(hidden)]
     pub on_premises_tag_set: std::option::Option<crate::model::OnPremisesTagSet>,
     /// <p>The destination platform type for the deployment (<code>Lambda</code>, <code>Server</code>, or <code>ECS</code>).</p>
+    #[doc(hidden)]
     pub compute_platform: std::option::Option<crate::model::ComputePlatform>,
     /// <p> The target Amazon ECS services in the deployment group. This applies only to deployment groups that use the Amazon ECS compute platform. A target Amazon ECS service is specified as an Amazon ECS cluster and service name pair using the format <code>
     /// <clustername>
     /// :
     /// <servicename></servicename>
     /// </clustername></code>. </p>
+    #[doc(hidden)]
     pub ecs_services: std::option::Option<std::vec::Vec<crate::model::EcsService>>,
 }
 impl DeploymentGroupInfo {
@@ -6409,11 +6526,10 @@ impl std::fmt::Debug for DeploymentGroupInfo {
         formatter.finish()
     }
 }
-/// See [`DeploymentGroupInfo`](crate::model::DeploymentGroupInfo)
+/// See [`DeploymentGroupInfo`](crate::model::DeploymentGroupInfo).
 pub mod deployment_group_info {
 
-    /// A builder for [`DeploymentGroupInfo`](crate::model::DeploymentGroupInfo)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentGroupInfo`](crate::model::DeploymentGroupInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_name: std::option::Option<std::string::String>,
@@ -6790,7 +6906,7 @@ pub mod deployment_group_info {
             self.ecs_services = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentGroupInfo`](crate::model::DeploymentGroupInfo)
+        /// Consumes the builder and constructs a [`DeploymentGroupInfo`](crate::model::DeploymentGroupInfo).
         pub fn build(self) -> crate::model::DeploymentGroupInfo {
             crate::model::DeploymentGroupInfo {
                 application_name: self.application_name,
@@ -6820,7 +6936,7 @@ pub mod deployment_group_info {
     }
 }
 impl DeploymentGroupInfo {
-    /// Creates a new builder-style object to manufacture [`DeploymentGroupInfo`](crate::model::DeploymentGroupInfo)
+    /// Creates a new builder-style object to manufacture [`DeploymentGroupInfo`](crate::model::DeploymentGroupInfo).
     pub fn builder() -> crate::model::deployment_group_info::Builder {
         crate::model::deployment_group_info::Builder::default()
     }
@@ -6890,12 +7006,16 @@ impl AsRef<str> for ComputePlatform {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LastDeploymentInfo {
     /// <p> The unique ID of a deployment. </p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>The status of the most recent deployment.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>A timestamp that indicates when the most recent deployment to the deployment group was complete.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp that indicates when the most recent deployment to the deployment group started.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl LastDeploymentInfo {
@@ -6926,11 +7046,10 @@ impl std::fmt::Debug for LastDeploymentInfo {
         formatter.finish()
     }
 }
-/// See [`LastDeploymentInfo`](crate::model::LastDeploymentInfo)
+/// See [`LastDeploymentInfo`](crate::model::LastDeploymentInfo).
 pub mod last_deployment_info {
 
-    /// A builder for [`LastDeploymentInfo`](crate::model::LastDeploymentInfo)
-    #[non_exhaustive]
+    /// A builder for [`LastDeploymentInfo`](crate::model::LastDeploymentInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_id: std::option::Option<std::string::String>,
@@ -6991,7 +7110,7 @@ pub mod last_deployment_info {
             self.create_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`LastDeploymentInfo`](crate::model::LastDeploymentInfo)
+        /// Consumes the builder and constructs a [`LastDeploymentInfo`](crate::model::LastDeploymentInfo).
         pub fn build(self) -> crate::model::LastDeploymentInfo {
             crate::model::LastDeploymentInfo {
                 deployment_id: self.deployment_id,
@@ -7003,7 +7122,7 @@ pub mod last_deployment_info {
     }
 }
 impl LastDeploymentInfo {
-    /// Creates a new builder-style object to manufacture [`LastDeploymentInfo`](crate::model::LastDeploymentInfo)
+    /// Creates a new builder-style object to manufacture [`LastDeploymentInfo`](crate::model::LastDeploymentInfo).
     pub fn builder() -> crate::model::last_deployment_info::Builder {
         crate::model::last_deployment_info::Builder::default()
     }
@@ -7014,16 +7133,22 @@ impl LastDeploymentInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeploymentConfigInfo {
     /// <p>The deployment configuration ID.</p>
+    #[doc(hidden)]
     pub deployment_config_id: std::option::Option<std::string::String>,
     /// <p>The deployment configuration name.</p>
+    #[doc(hidden)]
     pub deployment_config_name: std::option::Option<std::string::String>,
     /// <p>Information about the number or percentage of minimum healthy instance.</p>
+    #[doc(hidden)]
     pub minimum_healthy_hosts: std::option::Option<crate::model::MinimumHealthyHosts>,
     /// <p>The time at which the deployment configuration was created.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The destination platform type for the deployment (<code>Lambda</code>, <code>Server</code>, or <code>ECS</code>).</p>
+    #[doc(hidden)]
     pub compute_platform: std::option::Option<crate::model::ComputePlatform>,
     /// <p>The configuration that specifies how the deployment traffic is routed. Used for deployments with a Lambda or ECS compute platform only.</p>
+    #[doc(hidden)]
     pub traffic_routing_config: std::option::Option<crate::model::TrafficRoutingConfig>,
 }
 impl DeploymentConfigInfo {
@@ -7066,11 +7191,10 @@ impl std::fmt::Debug for DeploymentConfigInfo {
         formatter.finish()
     }
 }
-/// See [`DeploymentConfigInfo`](crate::model::DeploymentConfigInfo)
+/// See [`DeploymentConfigInfo`](crate::model::DeploymentConfigInfo).
 pub mod deployment_config_info {
 
-    /// A builder for [`DeploymentConfigInfo`](crate::model::DeploymentConfigInfo)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentConfigInfo`](crate::model::DeploymentConfigInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_config_id: std::option::Option<std::string::String>,
@@ -7159,7 +7283,7 @@ pub mod deployment_config_info {
             self.traffic_routing_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentConfigInfo`](crate::model::DeploymentConfigInfo)
+        /// Consumes the builder and constructs a [`DeploymentConfigInfo`](crate::model::DeploymentConfigInfo).
         pub fn build(self) -> crate::model::DeploymentConfigInfo {
             crate::model::DeploymentConfigInfo {
                 deployment_config_id: self.deployment_config_id,
@@ -7173,7 +7297,7 @@ pub mod deployment_config_info {
     }
 }
 impl DeploymentConfigInfo {
-    /// Creates a new builder-style object to manufacture [`DeploymentConfigInfo`](crate::model::DeploymentConfigInfo)
+    /// Creates a new builder-style object to manufacture [`DeploymentConfigInfo`](crate::model::DeploymentConfigInfo).
     pub fn builder() -> crate::model::deployment_config_info::Builder {
         crate::model::deployment_config_info::Builder::default()
     }
@@ -7184,10 +7308,13 @@ impl DeploymentConfigInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrafficRoutingConfig {
     /// <p>The type of traffic shifting (<code>TimeBasedCanary</code> or <code>TimeBasedLinear</code>) used by a deployment configuration.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TrafficRoutingType>,
     /// <p>A configuration that shifts traffic from one version of a Lambda function or ECS task set to another in two increments. The original and target Lambda function versions or ECS task sets are specified in the deployment's AppSpec file.</p>
+    #[doc(hidden)]
     pub time_based_canary: std::option::Option<crate::model::TimeBasedCanary>,
     /// <p>A configuration that shifts traffic from one version of a Lambda function or ECS task set to another in equal increments, with an equal number of minutes between each increment. The original and target Lambda function versions or ECS task sets are specified in the deployment's AppSpec file.</p>
+    #[doc(hidden)]
     pub time_based_linear: std::option::Option<crate::model::TimeBasedLinear>,
 }
 impl TrafficRoutingConfig {
@@ -7213,11 +7340,10 @@ impl std::fmt::Debug for TrafficRoutingConfig {
         formatter.finish()
     }
 }
-/// See [`TrafficRoutingConfig`](crate::model::TrafficRoutingConfig)
+/// See [`TrafficRoutingConfig`](crate::model::TrafficRoutingConfig).
 pub mod traffic_routing_config {
 
-    /// A builder for [`TrafficRoutingConfig`](crate::model::TrafficRoutingConfig)
-    #[non_exhaustive]
+    /// A builder for [`TrafficRoutingConfig`](crate::model::TrafficRoutingConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::TrafficRoutingType>,
@@ -7264,7 +7390,7 @@ pub mod traffic_routing_config {
             self.time_based_linear = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrafficRoutingConfig`](crate::model::TrafficRoutingConfig)
+        /// Consumes the builder and constructs a [`TrafficRoutingConfig`](crate::model::TrafficRoutingConfig).
         pub fn build(self) -> crate::model::TrafficRoutingConfig {
             crate::model::TrafficRoutingConfig {
                 r#type: self.r#type,
@@ -7275,7 +7401,7 @@ pub mod traffic_routing_config {
     }
 }
 impl TrafficRoutingConfig {
-    /// Creates a new builder-style object to manufacture [`TrafficRoutingConfig`](crate::model::TrafficRoutingConfig)
+    /// Creates a new builder-style object to manufacture [`TrafficRoutingConfig`](crate::model::TrafficRoutingConfig).
     pub fn builder() -> crate::model::traffic_routing_config::Builder {
         crate::model::traffic_routing_config::Builder::default()
     }
@@ -7286,8 +7412,10 @@ impl TrafficRoutingConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimeBasedLinear {
     /// <p>The percentage of traffic that is shifted at the start of each increment of a <code>TimeBasedLinear</code> deployment.</p>
+    #[doc(hidden)]
     pub linear_percentage: i32,
     /// <p>The number of minutes between each incremental traffic shift of a <code>TimeBasedLinear</code> deployment.</p>
+    #[doc(hidden)]
     pub linear_interval: i32,
 }
 impl TimeBasedLinear {
@@ -7308,11 +7436,10 @@ impl std::fmt::Debug for TimeBasedLinear {
         formatter.finish()
     }
 }
-/// See [`TimeBasedLinear`](crate::model::TimeBasedLinear)
+/// See [`TimeBasedLinear`](crate::model::TimeBasedLinear).
 pub mod time_based_linear {
 
-    /// A builder for [`TimeBasedLinear`](crate::model::TimeBasedLinear)
-    #[non_exhaustive]
+    /// A builder for [`TimeBasedLinear`](crate::model::TimeBasedLinear).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) linear_percentage: std::option::Option<i32>,
@@ -7339,7 +7466,7 @@ pub mod time_based_linear {
             self.linear_interval = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimeBasedLinear`](crate::model::TimeBasedLinear)
+        /// Consumes the builder and constructs a [`TimeBasedLinear`](crate::model::TimeBasedLinear).
         pub fn build(self) -> crate::model::TimeBasedLinear {
             crate::model::TimeBasedLinear {
                 linear_percentage: self.linear_percentage.unwrap_or_default(),
@@ -7349,7 +7476,7 @@ pub mod time_based_linear {
     }
 }
 impl TimeBasedLinear {
-    /// Creates a new builder-style object to manufacture [`TimeBasedLinear`](crate::model::TimeBasedLinear)
+    /// Creates a new builder-style object to manufacture [`TimeBasedLinear`](crate::model::TimeBasedLinear).
     pub fn builder() -> crate::model::time_based_linear::Builder {
         crate::model::time_based_linear::Builder::default()
     }
@@ -7360,8 +7487,10 @@ impl TimeBasedLinear {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimeBasedCanary {
     /// <p>The percentage of traffic to shift in the first increment of a <code>TimeBasedCanary</code> deployment.</p>
+    #[doc(hidden)]
     pub canary_percentage: i32,
     /// <p>The number of minutes between the first and second traffic shifts of a <code>TimeBasedCanary</code> deployment.</p>
+    #[doc(hidden)]
     pub canary_interval: i32,
 }
 impl TimeBasedCanary {
@@ -7382,11 +7511,10 @@ impl std::fmt::Debug for TimeBasedCanary {
         formatter.finish()
     }
 }
-/// See [`TimeBasedCanary`](crate::model::TimeBasedCanary)
+/// See [`TimeBasedCanary`](crate::model::TimeBasedCanary).
 pub mod time_based_canary {
 
-    /// A builder for [`TimeBasedCanary`](crate::model::TimeBasedCanary)
-    #[non_exhaustive]
+    /// A builder for [`TimeBasedCanary`](crate::model::TimeBasedCanary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) canary_percentage: std::option::Option<i32>,
@@ -7413,7 +7541,7 @@ pub mod time_based_canary {
             self.canary_interval = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimeBasedCanary`](crate::model::TimeBasedCanary)
+        /// Consumes the builder and constructs a [`TimeBasedCanary`](crate::model::TimeBasedCanary).
         pub fn build(self) -> crate::model::TimeBasedCanary {
             crate::model::TimeBasedCanary {
                 canary_percentage: self.canary_percentage.unwrap_or_default(),
@@ -7423,7 +7551,7 @@ pub mod time_based_canary {
     }
 }
 impl TimeBasedCanary {
-    /// Creates a new builder-style object to manufacture [`TimeBasedCanary`](crate::model::TimeBasedCanary)
+    /// Creates a new builder-style object to manufacture [`TimeBasedCanary`](crate::model::TimeBasedCanary).
     pub fn builder() -> crate::model::time_based_canary::Builder {
         crate::model::time_based_canary::Builder::default()
     }
@@ -7501,8 +7629,10 @@ pub struct MinimumHealthyHosts {
     /// <p>In a call to the <code>GetDeploymentConfig</code>, CodeDeployDefault.OneAtATime returns a minimum healthy instance type of MOST_CONCURRENCY and a value of 1. This means a deployment to only one instance at a time. (You cannot set the type to MOST_CONCURRENCY, only to HOST_COUNT or FLEET_PERCENT.) In addition, with CodeDeployDefault.OneAtATime, AWS CodeDeploy attempts to ensure that all instances but one are kept in a healthy state during the deployment. Although this allows one instance at a time to be taken offline for a new deployment, it also means that if the deployment to the last instance fails, the overall deployment is still successful.</p>
     /// </note>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-health.html">AWS CodeDeploy Instance Health</a> in the <i>AWS CodeDeploy User Guide</i>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::MinimumHealthyHostsType>,
     /// <p>The minimum healthy instance value.</p>
+    #[doc(hidden)]
     pub value: i32,
 }
 impl MinimumHealthyHosts {
@@ -7531,11 +7661,10 @@ impl std::fmt::Debug for MinimumHealthyHosts {
         formatter.finish()
     }
 }
-/// See [`MinimumHealthyHosts`](crate::model::MinimumHealthyHosts)
+/// See [`MinimumHealthyHosts`](crate::model::MinimumHealthyHosts).
 pub mod minimum_healthy_hosts {
 
-    /// A builder for [`MinimumHealthyHosts`](crate::model::MinimumHealthyHosts)
-    #[non_exhaustive]
+    /// A builder for [`MinimumHealthyHosts`](crate::model::MinimumHealthyHosts).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::MinimumHealthyHostsType>,
@@ -7581,7 +7710,7 @@ pub mod minimum_healthy_hosts {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`MinimumHealthyHosts`](crate::model::MinimumHealthyHosts)
+        /// Consumes the builder and constructs a [`MinimumHealthyHosts`](crate::model::MinimumHealthyHosts).
         pub fn build(self) -> crate::model::MinimumHealthyHosts {
             crate::model::MinimumHealthyHosts {
                 r#type: self.r#type,
@@ -7591,7 +7720,7 @@ pub mod minimum_healthy_hosts {
     }
 }
 impl MinimumHealthyHosts {
-    /// Creates a new builder-style object to manufacture [`MinimumHealthyHosts`](crate::model::MinimumHealthyHosts)
+    /// Creates a new builder-style object to manufacture [`MinimumHealthyHosts`](crate::model::MinimumHealthyHosts).
     pub fn builder() -> crate::model::minimum_healthy_hosts::Builder {
         crate::model::minimum_healthy_hosts::Builder::default()
     }
@@ -7657,31 +7786,44 @@ impl AsRef<str> for MinimumHealthyHostsType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeploymentInfo {
     /// <p>The application name.</p>
+    #[doc(hidden)]
     pub application_name: std::option::Option<std::string::String>,
     /// <p> The deployment group name. </p>
+    #[doc(hidden)]
     pub deployment_group_name: std::option::Option<std::string::String>,
     /// <p> The deployment configuration name. </p>
+    #[doc(hidden)]
     pub deployment_config_name: std::option::Option<std::string::String>,
     /// <p> The unique ID of a deployment. </p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>Information about the application revision that was deployed to the deployment group before the most recent successful deployment.</p>
+    #[doc(hidden)]
     pub previous_revision: std::option::Option<crate::model::RevisionLocation>,
     /// <p>Information about the location of stored application artifacts and the service from which to retrieve them.</p>
+    #[doc(hidden)]
     pub revision: std::option::Option<crate::model::RevisionLocation>,
     /// <p>The current state of the deployment as a whole.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>Information about any error associated with this deployment.</p>
+    #[doc(hidden)]
     pub error_information: std::option::Option<crate::model::ErrorInformation>,
     /// <p>A timestamp that indicates when the deployment was created.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp that indicates when the deployment was deployed to the deployment group.</p>
     /// <p>In some cases, the reported value of the start time might be later than the complete time. This is due to differences in the clock settings of backend servers that participate in the deployment process.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp that indicates when the deployment was complete.</p>
+    #[doc(hidden)]
     pub complete_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A summary of the deployment status of the instances in the deployment.</p>
+    #[doc(hidden)]
     pub deployment_overview: std::option::Option<crate::model::DeploymentOverview>,
     /// <p>A comment about the deployment.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The means by which the deployment was created:</p>
     /// <ul>
@@ -7690,30 +7832,41 @@ pub struct DeploymentInfo {
     /// <li> <p> <code>codeDeployRollback</code>: A rollback process created the deployment.</p> </li>
     /// <li> <p> <code>CodeDeployAutoUpdate</code>: An auto-update process created the deployment when it detected outdated EC2 instances.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub creator: std::option::Option<crate::model::DeploymentCreator>,
     /// <p> If true, then if an <code>ApplicationStop</code>, <code>BeforeBlockTraffic</code>, or <code>AfterBlockTraffic</code> deployment lifecycle event to an instance fails, then the deployment continues to the next deployment lifecycle event. For example, if <code>ApplicationStop</code> fails, the deployment continues with DownloadBundle. If <code>BeforeBlockTraffic</code> fails, the deployment continues with <code>BlockTraffic</code>. If <code>AfterBlockTraffic</code> fails, the deployment continues with <code>ApplicationStop</code>. </p>
     /// <p> If false or not specified, then if a lifecycle event fails during a deployment to an instance, that deployment fails. If deployment to that instance is part of an overall deployment and the number of healthy hosts is not less than the minimum number of healthy hosts, then a deployment to the next instance is attempted. </p>
     /// <p> During a deployment, the AWS CodeDeploy agent runs the scripts specified for <code>ApplicationStop</code>, <code>BeforeBlockTraffic</code>, and <code>AfterBlockTraffic</code> in the AppSpec file from the previous successful deployment. (All other scripts are run from the AppSpec file in the current deployment.) If one of these scripts contains an error and does not run successfully, the deployment can fail. </p>
     /// <p> If the cause of the failure is a script from the last successful deployment that will never run successfully, create a new deployment and use <code>ignoreApplicationStopFailures</code> to specify that the <code>ApplicationStop</code>, <code>BeforeBlockTraffic</code>, and <code>AfterBlockTraffic</code> failures should be ignored. </p>
+    #[doc(hidden)]
     pub ignore_application_stop_failures: bool,
     /// <p>Information about the automatic rollback configuration associated with the deployment.</p>
+    #[doc(hidden)]
     pub auto_rollback_configuration: std::option::Option<crate::model::AutoRollbackConfiguration>,
     /// <p>Indicates whether only instances that are not running the latest application revision are to be deployed to.</p>
+    #[doc(hidden)]
     pub update_outdated_instances_only: bool,
     /// <p>Information about a deployment rollback.</p>
+    #[doc(hidden)]
     pub rollback_info: std::option::Option<crate::model::RollbackInfo>,
     /// <p>Information about the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer.</p>
+    #[doc(hidden)]
     pub deployment_style: std::option::Option<crate::model::DeploymentStyle>,
     /// <p>Information about the instances that belong to the replacement environment in a blue/green deployment.</p>
+    #[doc(hidden)]
     pub target_instances: std::option::Option<crate::model::TargetInstances>,
     /// <p>Indicates whether the wait period set for the termination of instances in the original environment has started. Status is 'false' if the KEEP_ALIVE option is specified. Otherwise, 'true' as soon as the termination wait period starts.</p>
+    #[doc(hidden)]
     pub instance_termination_wait_time_started: bool,
     /// <p>Information about blue/green deployment options for this deployment.</p>
+    #[doc(hidden)]
     pub blue_green_deployment_configuration:
         std::option::Option<crate::model::BlueGreenDeploymentConfiguration>,
     /// <p>Information about the load balancer used in the deployment.</p>
+    #[doc(hidden)]
     pub load_balancer_info: std::option::Option<crate::model::LoadBalancerInfo>,
     /// <p>Provides information about the results of a deployment, such as whether instances in the original environment in a blue/green deployment were not terminated.</p>
+    #[doc(hidden)]
     pub additional_deployment_status_info: std::option::Option<std::string::String>,
     /// <p>Information about how AWS CodeDeploy handles files that already exist in a deployment target location but weren't part of the previous successful deployment.</p>
     /// <ul>
@@ -7721,14 +7874,19 @@ pub struct DeploymentInfo {
     /// <li> <p> <code>OVERWRITE</code>: The version of the file from the application revision currently being deployed replaces the version already on the instance.</p> </li>
     /// <li> <p> <code>RETAIN</code>: The version of the file already on the instance is kept and used as part of the new deployment.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub file_exists_behavior: std::option::Option<crate::model::FileExistsBehavior>,
     /// <p>Messages that contain information about the status of a deployment.</p>
+    #[doc(hidden)]
     pub deployment_status_messages: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The destination platform type for the deployment (<code>Lambda</code>, <code>Server</code>, or <code>ECS</code>).</p>
+    #[doc(hidden)]
     pub compute_platform: std::option::Option<crate::model::ComputePlatform>,
     /// <p>The unique ID for an external resource (for example, a CloudFormation stack ID) that is linked to this deployment.</p>
+    #[doc(hidden)]
     pub external_id: std::option::Option<std::string::String>,
     /// <p>Information about deployments related to the specified deployment.</p>
+    #[doc(hidden)]
     pub related_deployments: std::option::Option<crate::model::RelatedDeployments>,
 }
 impl DeploymentInfo {
@@ -7924,11 +8082,10 @@ impl std::fmt::Debug for DeploymentInfo {
         formatter.finish()
     }
 }
-/// See [`DeploymentInfo`](crate::model::DeploymentInfo)
+/// See [`DeploymentInfo`](crate::model::DeploymentInfo).
 pub mod deployment_info {
 
-    /// A builder for [`DeploymentInfo`](crate::model::DeploymentInfo)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentInfo`](crate::model::DeploymentInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_name: std::option::Option<std::string::String>,
@@ -8381,7 +8538,7 @@ pub mod deployment_info {
             self.related_deployments = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentInfo`](crate::model::DeploymentInfo)
+        /// Consumes the builder and constructs a [`DeploymentInfo`](crate::model::DeploymentInfo).
         pub fn build(self) -> crate::model::DeploymentInfo {
             crate::model::DeploymentInfo {
                 application_name: self.application_name,
@@ -8424,7 +8581,7 @@ pub mod deployment_info {
     }
 }
 impl DeploymentInfo {
-    /// Creates a new builder-style object to manufacture [`DeploymentInfo`](crate::model::DeploymentInfo)
+    /// Creates a new builder-style object to manufacture [`DeploymentInfo`](crate::model::DeploymentInfo).
     pub fn builder() -> crate::model::deployment_info::Builder {
         crate::model::deployment_info::Builder::default()
     }
@@ -8435,8 +8592,10 @@ impl DeploymentInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RelatedDeployments {
     /// <p>The deployment ID of the root deployment that triggered this deployment.</p>
+    #[doc(hidden)]
     pub auto_update_outdated_instances_root_deployment_id: std::option::Option<std::string::String>,
     /// <p>The deployment IDs of 'auto-update outdated instances' deployments triggered by this deployment.</p>
+    #[doc(hidden)]
     pub auto_update_outdated_instances_deployment_ids:
         std::option::Option<std::vec::Vec<std::string::String>>,
 }
@@ -8468,11 +8627,10 @@ impl std::fmt::Debug for RelatedDeployments {
         formatter.finish()
     }
 }
-/// See [`RelatedDeployments`](crate::model::RelatedDeployments)
+/// See [`RelatedDeployments`](crate::model::RelatedDeployments).
 pub mod related_deployments {
 
-    /// A builder for [`RelatedDeployments`](crate::model::RelatedDeployments)
-    #[non_exhaustive]
+    /// A builder for [`RelatedDeployments`](crate::model::RelatedDeployments).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_update_outdated_instances_root_deployment_id:
@@ -8521,7 +8679,7 @@ pub mod related_deployments {
             self.auto_update_outdated_instances_deployment_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`RelatedDeployments`](crate::model::RelatedDeployments)
+        /// Consumes the builder and constructs a [`RelatedDeployments`](crate::model::RelatedDeployments).
         pub fn build(self) -> crate::model::RelatedDeployments {
             crate::model::RelatedDeployments {
                 auto_update_outdated_instances_root_deployment_id: self
@@ -8533,7 +8691,7 @@ pub mod related_deployments {
     }
 }
 impl RelatedDeployments {
-    /// Creates a new builder-style object to manufacture [`RelatedDeployments`](crate::model::RelatedDeployments)
+    /// Creates a new builder-style object to manufacture [`RelatedDeployments`](crate::model::RelatedDeployments).
     pub fn builder() -> crate::model::related_deployments::Builder {
         crate::model::related_deployments::Builder::default()
     }
@@ -8603,10 +8761,13 @@ impl AsRef<str> for FileExistsBehavior {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetInstances {
     /// <p>The tag filter key, type, and value used to identify Amazon EC2 instances in a replacement environment for a blue/green deployment. Cannot be used in the same call as <code>ec2TagSet</code>.</p>
+    #[doc(hidden)]
     pub tag_filters: std::option::Option<std::vec::Vec<crate::model::Ec2TagFilter>>,
     /// <p>The names of one or more Auto Scaling groups to identify a replacement environment for a blue/green deployment.</p>
+    #[doc(hidden)]
     pub auto_scaling_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Information about the groups of EC2 instance tags that an instance must be identified by in order for it to be included in the replacement environment for a blue/green deployment. Cannot be used in the same call as <code>tagFilters</code>.</p>
+    #[doc(hidden)]
     pub ec2_tag_set: std::option::Option<crate::model::Ec2TagSet>,
 }
 impl TargetInstances {
@@ -8632,11 +8793,10 @@ impl std::fmt::Debug for TargetInstances {
         formatter.finish()
     }
 }
-/// See [`TargetInstances`](crate::model::TargetInstances)
+/// See [`TargetInstances`](crate::model::TargetInstances).
 pub mod target_instances {
 
-    /// A builder for [`TargetInstances`](crate::model::TargetInstances)
-    #[non_exhaustive]
+    /// A builder for [`TargetInstances`](crate::model::TargetInstances).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_filters: std::option::Option<std::vec::Vec<crate::model::Ec2TagFilter>>,
@@ -8695,7 +8855,7 @@ pub mod target_instances {
             self.ec2_tag_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetInstances`](crate::model::TargetInstances)
+        /// Consumes the builder and constructs a [`TargetInstances`](crate::model::TargetInstances).
         pub fn build(self) -> crate::model::TargetInstances {
             crate::model::TargetInstances {
                 tag_filters: self.tag_filters,
@@ -8706,7 +8866,7 @@ pub mod target_instances {
     }
 }
 impl TargetInstances {
-    /// Creates a new builder-style object to manufacture [`TargetInstances`](crate::model::TargetInstances)
+    /// Creates a new builder-style object to manufacture [`TargetInstances`](crate::model::TargetInstances).
     pub fn builder() -> crate::model::target_instances::Builder {
         crate::model::target_instances::Builder::default()
     }
@@ -8717,10 +8877,13 @@ impl TargetInstances {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RollbackInfo {
     /// <p>The ID of the deployment rollback.</p>
+    #[doc(hidden)]
     pub rollback_deployment_id: std::option::Option<std::string::String>,
     /// <p>The deployment ID of the deployment that was underway and triggered a rollback deployment because it failed or was stopped.</p>
+    #[doc(hidden)]
     pub rollback_triggering_deployment_id: std::option::Option<std::string::String>,
     /// <p>Information that describes the status of a deployment rollback (for example, whether the deployment can't be rolled back, is in progress, failed, or succeeded). </p>
+    #[doc(hidden)]
     pub rollback_message: std::option::Option<std::string::String>,
 }
 impl RollbackInfo {
@@ -8749,11 +8912,10 @@ impl std::fmt::Debug for RollbackInfo {
         formatter.finish()
     }
 }
-/// See [`RollbackInfo`](crate::model::RollbackInfo)
+/// See [`RollbackInfo`](crate::model::RollbackInfo).
 pub mod rollback_info {
 
-    /// A builder for [`RollbackInfo`](crate::model::RollbackInfo)
-    #[non_exhaustive]
+    /// A builder for [`RollbackInfo`](crate::model::RollbackInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rollback_deployment_id: std::option::Option<std::string::String>,
@@ -8803,7 +8965,7 @@ pub mod rollback_info {
             self.rollback_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`RollbackInfo`](crate::model::RollbackInfo)
+        /// Consumes the builder and constructs a [`RollbackInfo`](crate::model::RollbackInfo).
         pub fn build(self) -> crate::model::RollbackInfo {
             crate::model::RollbackInfo {
                 rollback_deployment_id: self.rollback_deployment_id,
@@ -8814,7 +8976,7 @@ pub mod rollback_info {
     }
 }
 impl RollbackInfo {
-    /// Creates a new builder-style object to manufacture [`RollbackInfo`](crate::model::RollbackInfo)
+    /// Creates a new builder-style object to manufacture [`RollbackInfo`](crate::model::RollbackInfo).
     pub fn builder() -> crate::model::rollback_info::Builder {
         crate::model::rollback_info::Builder::default()
     }
@@ -8908,16 +9070,22 @@ impl AsRef<str> for DeploymentCreator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeploymentOverview {
     /// <p>The number of instances in the deployment in a pending state.</p>
+    #[doc(hidden)]
     pub pending: i64,
     /// <p>The number of instances in which the deployment is in progress.</p>
+    #[doc(hidden)]
     pub in_progress: i64,
     /// <p>The number of instances in the deployment to which revisions have been successfully deployed.</p>
+    #[doc(hidden)]
     pub succeeded: i64,
     /// <p>The number of instances in the deployment in a failed state.</p>
+    #[doc(hidden)]
     pub failed: i64,
     /// <p>The number of instances in the deployment in a skipped state.</p>
+    #[doc(hidden)]
     pub skipped: i64,
     /// <p>The number of instances in a replacement environment ready to receive traffic in a blue/green deployment.</p>
+    #[doc(hidden)]
     pub ready: i64,
 }
 impl DeploymentOverview {
@@ -8958,11 +9126,10 @@ impl std::fmt::Debug for DeploymentOverview {
         formatter.finish()
     }
 }
-/// See [`DeploymentOverview`](crate::model::DeploymentOverview)
+/// See [`DeploymentOverview`](crate::model::DeploymentOverview).
 pub mod deployment_overview {
 
-    /// A builder for [`DeploymentOverview`](crate::model::DeploymentOverview)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentOverview`](crate::model::DeploymentOverview).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pending: std::option::Option<i64>,
@@ -9033,7 +9200,7 @@ pub mod deployment_overview {
             self.ready = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentOverview`](crate::model::DeploymentOverview)
+        /// Consumes the builder and constructs a [`DeploymentOverview`](crate::model::DeploymentOverview).
         pub fn build(self) -> crate::model::DeploymentOverview {
             crate::model::DeploymentOverview {
                 pending: self.pending.unwrap_or_default(),
@@ -9047,7 +9214,7 @@ pub mod deployment_overview {
     }
 }
 impl DeploymentOverview {
-    /// Creates a new builder-style object to manufacture [`DeploymentOverview`](crate::model::DeploymentOverview)
+    /// Creates a new builder-style object to manufacture [`DeploymentOverview`](crate::model::DeploymentOverview).
     pub fn builder() -> crate::model::deployment_overview::Builder {
         crate::model::deployment_overview::Builder::default()
     }
@@ -9074,8 +9241,10 @@ pub struct ErrorInformation {
     /// <li> <p>TIMEOUT: The deployment has timed out.</p> </li>
     /// <li> <p>REVISION_MISSING: The revision ID was missing. This error code is most likely raised if the revision is deleted after the deployment is created, but before it is started.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::ErrorCode>,
     /// <p>An accompanying error message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ErrorInformation {
@@ -9112,11 +9281,10 @@ impl std::fmt::Debug for ErrorInformation {
         formatter.finish()
     }
 }
-/// See [`ErrorInformation`](crate::model::ErrorInformation)
+/// See [`ErrorInformation`](crate::model::ErrorInformation).
 pub mod error_information {
 
-    /// A builder for [`ErrorInformation`](crate::model::ErrorInformation)
-    #[non_exhaustive]
+    /// A builder for [`ErrorInformation`](crate::model::ErrorInformation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ErrorCode>,
@@ -9175,7 +9343,7 @@ pub mod error_information {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ErrorInformation`](crate::model::ErrorInformation)
+        /// Consumes the builder and constructs a [`ErrorInformation`](crate::model::ErrorInformation).
         pub fn build(self) -> crate::model::ErrorInformation {
             crate::model::ErrorInformation {
                 code: self.code,
@@ -9185,7 +9353,7 @@ pub mod error_information {
     }
 }
 impl ErrorInformation {
-    /// Creates a new builder-style object to manufacture [`ErrorInformation`](crate::model::ErrorInformation)
+    /// Creates a new builder-style object to manufacture [`ErrorInformation`](crate::model::ErrorInformation).
     pub fn builder() -> crate::model::error_information::Builder {
         crate::model::error_information::Builder::default()
     }
@@ -9418,14 +9586,19 @@ impl AsRef<str> for ErrorCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GenericRevisionInfo {
     /// <p>A comment about the revision.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The deployment groups for which this is the current target revision.</p>
+    #[doc(hidden)]
     pub deployment_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>When the revision was first used by AWS CodeDeploy.</p>
+    #[doc(hidden)]
     pub first_used_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>When the revision was last used by AWS CodeDeploy.</p>
+    #[doc(hidden)]
     pub last_used_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>When the revision was registered with AWS CodeDeploy.</p>
+    #[doc(hidden)]
     pub register_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GenericRevisionInfo {
@@ -9461,11 +9634,10 @@ impl std::fmt::Debug for GenericRevisionInfo {
         formatter.finish()
     }
 }
-/// See [`GenericRevisionInfo`](crate::model::GenericRevisionInfo)
+/// See [`GenericRevisionInfo`](crate::model::GenericRevisionInfo).
 pub mod generic_revision_info {
 
-    /// A builder for [`GenericRevisionInfo`](crate::model::GenericRevisionInfo)
-    #[non_exhaustive]
+    /// A builder for [`GenericRevisionInfo`](crate::model::GenericRevisionInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -9543,7 +9715,7 @@ pub mod generic_revision_info {
             self.register_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`GenericRevisionInfo`](crate::model::GenericRevisionInfo)
+        /// Consumes the builder and constructs a [`GenericRevisionInfo`](crate::model::GenericRevisionInfo).
         pub fn build(self) -> crate::model::GenericRevisionInfo {
             crate::model::GenericRevisionInfo {
                 description: self.description,
@@ -9556,7 +9728,7 @@ pub mod generic_revision_info {
     }
 }
 impl GenericRevisionInfo {
-    /// Creates a new builder-style object to manufacture [`GenericRevisionInfo`](crate::model::GenericRevisionInfo)
+    /// Creates a new builder-style object to manufacture [`GenericRevisionInfo`](crate::model::GenericRevisionInfo).
     pub fn builder() -> crate::model::generic_revision_info::Builder {
         crate::model::generic_revision_info::Builder::default()
     }
@@ -9567,16 +9739,22 @@ impl GenericRevisionInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationInfo {
     /// <p>The application ID.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The application name.</p>
+    #[doc(hidden)]
     pub application_name: std::option::Option<std::string::String>,
     /// <p>The time at which the application was created.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>True if the user has authenticated with GitHub for the specified application. Otherwise, false.</p>
+    #[doc(hidden)]
     pub linked_to_git_hub: bool,
     /// <p>The name for a connection to a GitHub account.</p>
+    #[doc(hidden)]
     pub git_hub_account_name: std::option::Option<std::string::String>,
     /// <p>The destination platform type for deployment of the application (<code>Lambda</code> or <code>Server</code>).</p>
+    #[doc(hidden)]
     pub compute_platform: std::option::Option<crate::model::ComputePlatform>,
 }
 impl ApplicationInfo {
@@ -9617,11 +9795,10 @@ impl std::fmt::Debug for ApplicationInfo {
         formatter.finish()
     }
 }
-/// See [`ApplicationInfo`](crate::model::ApplicationInfo)
+/// See [`ApplicationInfo`](crate::model::ApplicationInfo).
 pub mod application_info {
 
-    /// A builder for [`ApplicationInfo`](crate::model::ApplicationInfo)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationInfo`](crate::model::ApplicationInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -9707,7 +9884,7 @@ pub mod application_info {
             self.compute_platform = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationInfo`](crate::model::ApplicationInfo)
+        /// Consumes the builder and constructs a [`ApplicationInfo`](crate::model::ApplicationInfo).
         pub fn build(self) -> crate::model::ApplicationInfo {
             crate::model::ApplicationInfo {
                 application_id: self.application_id,
@@ -9721,7 +9898,7 @@ pub mod application_info {
     }
 }
 impl ApplicationInfo {
-    /// Creates a new builder-style object to manufacture [`ApplicationInfo`](crate::model::ApplicationInfo)
+    /// Creates a new builder-style object to manufacture [`ApplicationInfo`](crate::model::ApplicationInfo).
     pub fn builder() -> crate::model::application_info::Builder {
         crate::model::application_info::Builder::default()
     }
@@ -9787,8 +9964,10 @@ impl AsRef<str> for DeploymentWaitType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RevisionInfo {
     /// <p>Information about the location and type of an application revision.</p>
+    #[doc(hidden)]
     pub revision_location: std::option::Option<crate::model::RevisionLocation>,
     /// <p>Information about an application revision, including usage details and associated deployment groups.</p>
+    #[doc(hidden)]
     pub generic_revision_info: std::option::Option<crate::model::GenericRevisionInfo>,
 }
 impl RevisionInfo {
@@ -9809,11 +9988,10 @@ impl std::fmt::Debug for RevisionInfo {
         formatter.finish()
     }
 }
-/// See [`RevisionInfo`](crate::model::RevisionInfo)
+/// See [`RevisionInfo`](crate::model::RevisionInfo).
 pub mod revision_info {
 
-    /// A builder for [`RevisionInfo`](crate::model::RevisionInfo)
-    #[non_exhaustive]
+    /// A builder for [`RevisionInfo`](crate::model::RevisionInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) revision_location: std::option::Option<crate::model::RevisionLocation>,
@@ -9846,7 +10024,7 @@ pub mod revision_info {
             self.generic_revision_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`RevisionInfo`](crate::model::RevisionInfo)
+        /// Consumes the builder and constructs a [`RevisionInfo`](crate::model::RevisionInfo).
         pub fn build(self) -> crate::model::RevisionInfo {
             crate::model::RevisionInfo {
                 revision_location: self.revision_location,
@@ -9856,7 +10034,7 @@ pub mod revision_info {
     }
 }
 impl RevisionInfo {
-    /// Creates a new builder-style object to manufacture [`RevisionInfo`](crate::model::RevisionInfo)
+    /// Creates a new builder-style object to manufacture [`RevisionInfo`](crate::model::RevisionInfo).
     pub fn builder() -> crate::model::revision_info::Builder {
         crate::model::revision_info::Builder::default()
     }

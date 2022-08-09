@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateEnvironmentOutput {
     /// <p>Returns the FinSpace environment object.</p>
+    #[doc(hidden)]
     pub environment: std::option::Option<crate::model::Environment>,
 }
 impl UpdateEnvironmentOutput {
@@ -19,11 +20,10 @@ impl std::fmt::Debug for UpdateEnvironmentOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateEnvironmentOutput`](crate::output::UpdateEnvironmentOutput)
+/// See [`UpdateEnvironmentOutput`](crate::output::UpdateEnvironmentOutput).
 pub mod update_environment_output {
 
-    /// A builder for [`UpdateEnvironmentOutput`](crate::output::UpdateEnvironmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateEnvironmentOutput`](crate::output::UpdateEnvironmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) environment: std::option::Option<crate::model::Environment>,
@@ -42,7 +42,7 @@ pub mod update_environment_output {
             self.environment = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateEnvironmentOutput`](crate::output::UpdateEnvironmentOutput)
+        /// Consumes the builder and constructs a [`UpdateEnvironmentOutput`](crate::output::UpdateEnvironmentOutput).
         pub fn build(self) -> crate::output::UpdateEnvironmentOutput {
             crate::output::UpdateEnvironmentOutput {
                 environment: self.environment,
@@ -51,7 +51,7 @@ pub mod update_environment_output {
     }
 }
 impl UpdateEnvironmentOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateEnvironmentOutput`](crate::output::UpdateEnvironmentOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateEnvironmentOutput`](crate::output::UpdateEnvironmentOutput).
     pub fn builder() -> crate::output::update_environment_output::Builder {
         crate::output::update_environment_output::Builder::default()
     }
@@ -67,22 +67,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -98,22 +97,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -124,6 +122,7 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>A list of all tags for a resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -143,11 +142,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -180,14 +178,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -198,8 +196,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListEnvironmentsOutput {
     /// <p>A list of all of your FinSpace environments.</p>
+    #[doc(hidden)]
     pub environments: std::option::Option<std::vec::Vec<crate::model::Environment>>,
     /// <p>A token that you can use in a subsequent call to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListEnvironmentsOutput {
@@ -220,11 +220,10 @@ impl std::fmt::Debug for ListEnvironmentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput)
+/// See [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput).
 pub mod list_environments_output {
 
-    /// A builder for [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) environments: std::option::Option<std::vec::Vec<crate::model::Environment>>,
@@ -260,7 +259,7 @@ pub mod list_environments_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput)
+        /// Consumes the builder and constructs a [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput).
         pub fn build(self) -> crate::output::ListEnvironmentsOutput {
             crate::output::ListEnvironmentsOutput {
                 environments: self.environments,
@@ -270,7 +269,7 @@ pub mod list_environments_output {
     }
 }
 impl ListEnvironmentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput).
     pub fn builder() -> crate::output::list_environments_output::Builder {
         crate::output::list_environments_output::Builder::default()
     }
@@ -281,6 +280,7 @@ impl ListEnvironmentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetEnvironmentOutput {
     /// <p>The name of the FinSpace environment.</p>
+    #[doc(hidden)]
     pub environment: std::option::Option<crate::model::Environment>,
 }
 impl GetEnvironmentOutput {
@@ -296,11 +296,10 @@ impl std::fmt::Debug for GetEnvironmentOutput {
         formatter.finish()
     }
 }
-/// See [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput)
+/// See [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput).
 pub mod get_environment_output {
 
-    /// A builder for [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) environment: std::option::Option<crate::model::Environment>,
@@ -319,7 +318,7 @@ pub mod get_environment_output {
             self.environment = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput)
+        /// Consumes the builder and constructs a [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput).
         pub fn build(self) -> crate::output::GetEnvironmentOutput {
             crate::output::GetEnvironmentOutput {
                 environment: self.environment,
@@ -328,7 +327,7 @@ pub mod get_environment_output {
     }
 }
 impl GetEnvironmentOutput {
-    /// Creates a new builder-style object to manufacture [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput)
+    /// Creates a new builder-style object to manufacture [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput).
     pub fn builder() -> crate::output::get_environment_output::Builder {
         crate::output::get_environment_output::Builder::default()
     }
@@ -344,22 +343,21 @@ impl std::fmt::Debug for DeleteEnvironmentOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput)
+/// See [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput).
 pub mod delete_environment_output {
 
-    /// A builder for [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput)
+        /// Consumes the builder and constructs a [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput).
         pub fn build(self) -> crate::output::DeleteEnvironmentOutput {
             crate::output::DeleteEnvironmentOutput {}
         }
     }
 }
 impl DeleteEnvironmentOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput).
     pub fn builder() -> crate::output::delete_environment_output::Builder {
         crate::output::delete_environment_output::Builder::default()
     }
@@ -370,10 +368,13 @@ impl DeleteEnvironmentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateEnvironmentOutput {
     /// <p>The unique identifier for FinSpace environment that you created.</p>
+    #[doc(hidden)]
     pub environment_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the FinSpace environment that you created.</p>
+    #[doc(hidden)]
     pub environment_arn: std::option::Option<std::string::String>,
     /// <p>The sign-in url for the web application of the FinSpace environment you created.</p>
+    #[doc(hidden)]
     pub environment_url: std::option::Option<std::string::String>,
 }
 impl CreateEnvironmentOutput {
@@ -399,11 +400,10 @@ impl std::fmt::Debug for CreateEnvironmentOutput {
         formatter.finish()
     }
 }
-/// See [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput)
+/// See [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput).
 pub mod create_environment_output {
 
-    /// A builder for [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) environment_id: std::option::Option<std::string::String>,
@@ -450,7 +450,7 @@ pub mod create_environment_output {
             self.environment_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput)
+        /// Consumes the builder and constructs a [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput).
         pub fn build(self) -> crate::output::CreateEnvironmentOutput {
             crate::output::CreateEnvironmentOutput {
                 environment_id: self.environment_id,
@@ -461,7 +461,7 @@ pub mod create_environment_output {
     }
 }
 impl CreateEnvironmentOutput {
-    /// Creates a new builder-style object to manufacture [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput)
+    /// Creates a new builder-style object to manufacture [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput).
     pub fn builder() -> crate::output::create_environment_output::Builder {
         crate::output::create_environment_output::Builder::default()
     }

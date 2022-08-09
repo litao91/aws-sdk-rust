@@ -226,8 +226,10 @@ impl AsRef<str> for ParameterExceptionField {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct XssMatchSetUpdate {
     /// <p>Specify <code>INSERT</code> to add an <code>XssMatchSetUpdate</code> to an <code>XssMatchSet</code>. Use <code>DELETE</code> to remove an <code>XssMatchSetUpdate</code> from an <code>XssMatchSet</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ChangeAction>,
     /// <p>Specifies the part of a web request that you want AWS WAF to inspect for cross-site scripting attacks and, if you want AWS WAF to inspect a header, the name of the header.</p>
+    #[doc(hidden)]
     pub xss_match_tuple: std::option::Option<crate::model::XssMatchTuple>,
 }
 impl XssMatchSetUpdate {
@@ -248,11 +250,10 @@ impl std::fmt::Debug for XssMatchSetUpdate {
         formatter.finish()
     }
 }
-/// See [`XssMatchSetUpdate`](crate::model::XssMatchSetUpdate)
+/// See [`XssMatchSetUpdate`](crate::model::XssMatchSetUpdate).
 pub mod xss_match_set_update {
 
-    /// A builder for [`XssMatchSetUpdate`](crate::model::XssMatchSetUpdate)
-    #[non_exhaustive]
+    /// A builder for [`XssMatchSetUpdate`](crate::model::XssMatchSetUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ChangeAction>,
@@ -285,7 +286,7 @@ pub mod xss_match_set_update {
             self.xss_match_tuple = input;
             self
         }
-        /// Consumes the builder and constructs a [`XssMatchSetUpdate`](crate::model::XssMatchSetUpdate)
+        /// Consumes the builder and constructs a [`XssMatchSetUpdate`](crate::model::XssMatchSetUpdate).
         pub fn build(self) -> crate::model::XssMatchSetUpdate {
             crate::model::XssMatchSetUpdate {
                 action: self.action,
@@ -295,7 +296,7 @@ pub mod xss_match_set_update {
     }
 }
 impl XssMatchSetUpdate {
-    /// Creates a new builder-style object to manufacture [`XssMatchSetUpdate`](crate::model::XssMatchSetUpdate)
+    /// Creates a new builder-style object to manufacture [`XssMatchSetUpdate`](crate::model::XssMatchSetUpdate).
     pub fn builder() -> crate::model::xss_match_set_update::Builder {
         crate::model::xss_match_set_update::Builder::default()
     }
@@ -310,6 +311,7 @@ impl XssMatchSetUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct XssMatchTuple {
     /// <p>Specifies where in a web request to look for cross-site scripting attacks.</p>
+    #[doc(hidden)]
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF. If you specify a transformation, AWS WAF performs the transformation on <code>FieldToMatch</code> before inspecting it for a match.</p>
     /// <p>You can only specify a single type of TextTransformation.</p>
@@ -349,6 +351,7 @@ pub struct XssMatchTuple {
     /// <p>Use this option to decode a URL-encoded value.</p>
     /// <p> <b>NONE</b> </p>
     /// <p>Specify <code>NONE</code> if you don't want to perform any text transformations.</p>
+    #[doc(hidden)]
     pub text_transformation: std::option::Option<crate::model::TextTransformation>,
 }
 impl XssMatchTuple {
@@ -406,11 +409,10 @@ impl std::fmt::Debug for XssMatchTuple {
         formatter.finish()
     }
 }
-/// See [`XssMatchTuple`](crate::model::XssMatchTuple)
+/// See [`XssMatchTuple`](crate::model::XssMatchTuple).
 pub mod xss_match_tuple {
 
-    /// A builder for [`XssMatchTuple`](crate::model::XssMatchTuple)
-    #[non_exhaustive]
+    /// A builder for [`XssMatchTuple`](crate::model::XssMatchTuple).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field_to_match: std::option::Option<crate::model::FieldToMatch>,
@@ -517,7 +519,7 @@ pub mod xss_match_tuple {
             self.text_transformation = input;
             self
         }
-        /// Consumes the builder and constructs a [`XssMatchTuple`](crate::model::XssMatchTuple)
+        /// Consumes the builder and constructs a [`XssMatchTuple`](crate::model::XssMatchTuple).
         pub fn build(self) -> crate::model::XssMatchTuple {
             crate::model::XssMatchTuple {
                 field_to_match: self.field_to_match,
@@ -527,7 +529,7 @@ pub mod xss_match_tuple {
     }
 }
 impl XssMatchTuple {
-    /// Creates a new builder-style object to manufacture [`XssMatchTuple`](crate::model::XssMatchTuple)
+    /// Creates a new builder-style object to manufacture [`XssMatchTuple`](crate::model::XssMatchTuple).
     pub fn builder() -> crate::model::xss_match_tuple::Builder {
         crate::model::xss_match_tuple::Builder::default()
     }
@@ -629,10 +631,12 @@ pub struct FieldToMatch {
     /// <li> <p> <code>SINGLE_QUERY_ARG</code>: The parameter in the query string that you will inspect, such as <i>UserName</i> or <i>SalesRegion</i>. The maximum length for <code>SINGLE_QUERY_ARG</code> is 30 characters.</p> </li>
     /// <li> <p> <code>ALL_QUERY_ARGS</code>: Similar to <code>SINGLE_QUERY_ARG</code>, but rather than inspecting a single parameter, AWS WAF will inspect all parameters within the query for the value or regex pattern that you specify in <code>TargetString</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::MatchFieldType>,
     /// <p>When the value of <code>Type</code> is <code>HEADER</code>, enter the name of the header that you want AWS WAF to search, for example, <code>User-Agent</code> or <code>Referer</code>. The name of the header is not case sensitive.</p>
     /// <p>When the value of <code>Type</code> is <code>SINGLE_QUERY_ARG</code>, enter the name of the parameter that you want AWS WAF to search, for example, <code>UserName</code> or <code>SalesRegion</code>. The parameter name is not case sensitive.</p>
     /// <p>If the value of <code>Type</code> is any other value, omit <code>Data</code>.</p>
+    #[doc(hidden)]
     pub data: std::option::Option<std::string::String>,
 }
 impl FieldToMatch {
@@ -664,11 +668,10 @@ impl std::fmt::Debug for FieldToMatch {
         formatter.finish()
     }
 }
-/// See [`FieldToMatch`](crate::model::FieldToMatch)
+/// See [`FieldToMatch`](crate::model::FieldToMatch).
 pub mod field_to_match {
 
-    /// A builder for [`FieldToMatch`](crate::model::FieldToMatch)
-    #[non_exhaustive]
+    /// A builder for [`FieldToMatch`](crate::model::FieldToMatch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::MatchFieldType>,
@@ -720,7 +723,7 @@ pub mod field_to_match {
             self.data = input;
             self
         }
-        /// Consumes the builder and constructs a [`FieldToMatch`](crate::model::FieldToMatch)
+        /// Consumes the builder and constructs a [`FieldToMatch`](crate::model::FieldToMatch).
         pub fn build(self) -> crate::model::FieldToMatch {
             crate::model::FieldToMatch {
                 r#type: self.r#type,
@@ -730,7 +733,7 @@ pub mod field_to_match {
     }
 }
 impl FieldToMatch {
-    /// Creates a new builder-style object to manufacture [`FieldToMatch`](crate::model::FieldToMatch)
+    /// Creates a new builder-style object to manufacture [`FieldToMatch`](crate::model::FieldToMatch).
     pub fn builder() -> crate::model::field_to_match::Builder {
         crate::model::field_to_match::Builder::default()
     }
@@ -888,6 +891,7 @@ pub struct WafAction {
     /// <li> <p> <code>BLOCK</code>: AWS WAF blocks requests</p> </li>
     /// <li> <p> <code>COUNT</code>: AWS WAF increments a counter of the requests that match all of the conditions in the rule. AWS WAF then continues to inspect the web request based on the remaining rules in the web ACL. You can't specify <code>COUNT</code> for the default action for a <code>WebACL</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::WafActionType>,
 }
 impl WafAction {
@@ -908,11 +912,10 @@ impl std::fmt::Debug for WafAction {
         formatter.finish()
     }
 }
-/// See [`WafAction`](crate::model::WafAction)
+/// See [`WafAction`](crate::model::WafAction).
 pub mod waf_action {
 
-    /// A builder for [`WafAction`](crate::model::WafAction)
-    #[non_exhaustive]
+    /// A builder for [`WafAction`](crate::model::WafAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::WafActionType>,
@@ -938,7 +941,7 @@ pub mod waf_action {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`WafAction`](crate::model::WafAction)
+        /// Consumes the builder and constructs a [`WafAction`](crate::model::WafAction).
         pub fn build(self) -> crate::model::WafAction {
             crate::model::WafAction {
                 r#type: self.r#type,
@@ -947,7 +950,7 @@ pub mod waf_action {
     }
 }
 impl WafAction {
-    /// Creates a new builder-style object to manufacture [`WafAction`](crate::model::WafAction)
+    /// Creates a new builder-style object to manufacture [`WafAction`](crate::model::WafAction).
     pub fn builder() -> crate::model::waf_action::Builder {
         crate::model::waf_action::Builder::default()
     }
@@ -1021,8 +1024,10 @@ impl AsRef<str> for WafActionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WebAclUpdate {
     /// <p>Specifies whether to insert a <code>Rule</code> into or delete a <code>Rule</code> from a <code>WebACL</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ChangeAction>,
     /// <p>The <code>ActivatedRule</code> object in an <code>UpdateWebACL</code> request specifies a <code>Rule</code> that you want to insert or delete, the priority of the <code>Rule</code> in the <code>WebACL</code>, and the action that you want AWS WAF to take when a web request matches the <code>Rule</code> (<code>ALLOW</code>, <code>BLOCK</code>, or <code>COUNT</code>).</p>
+    #[doc(hidden)]
     pub activated_rule: std::option::Option<crate::model::ActivatedRule>,
 }
 impl WebAclUpdate {
@@ -1043,11 +1048,10 @@ impl std::fmt::Debug for WebAclUpdate {
         formatter.finish()
     }
 }
-/// See [`WebAclUpdate`](crate::model::WebAclUpdate)
+/// See [`WebAclUpdate`](crate::model::WebAclUpdate).
 pub mod web_acl_update {
 
-    /// A builder for [`WebAclUpdate`](crate::model::WebAclUpdate)
-    #[non_exhaustive]
+    /// A builder for [`WebAclUpdate`](crate::model::WebAclUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ChangeAction>,
@@ -1080,7 +1084,7 @@ pub mod web_acl_update {
             self.activated_rule = input;
             self
         }
-        /// Consumes the builder and constructs a [`WebAclUpdate`](crate::model::WebAclUpdate)
+        /// Consumes the builder and constructs a [`WebAclUpdate`](crate::model::WebAclUpdate).
         pub fn build(self) -> crate::model::WebAclUpdate {
             crate::model::WebAclUpdate {
                 action: self.action,
@@ -1090,7 +1094,7 @@ pub mod web_acl_update {
     }
 }
 impl WebAclUpdate {
-    /// Creates a new builder-style object to manufacture [`WebAclUpdate`](crate::model::WebAclUpdate)
+    /// Creates a new builder-style object to manufacture [`WebAclUpdate`](crate::model::WebAclUpdate).
     pub fn builder() -> crate::model::web_acl_update::Builder {
         crate::model::web_acl_update::Builder::default()
     }
@@ -1106,9 +1110,11 @@ impl WebAclUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivatedRule {
     /// <p>Specifies the order in which the <code>Rules</code> in a <code>WebACL</code> are evaluated. Rules with a lower value for <code>Priority</code> are evaluated before <code>Rules</code> with a higher value. The value must be a unique integer. If you add multiple <code>Rules</code> to a <code>WebACL</code>, the values don't need to be consecutive.</p>
+    #[doc(hidden)]
     pub priority: std::option::Option<i32>,
     /// <p>The <code>RuleId</code> for a <code>Rule</code>. You use <code>RuleId</code> to get more information about a <code>Rule</code> (see <code>GetRule</code>), update a <code>Rule</code> (see <code>UpdateRule</code>), insert a <code>Rule</code> into a <code>WebACL</code> or delete a one from a <code>WebACL</code> (see <code>UpdateWebACL</code>), or delete a <code>Rule</code> from AWS WAF (see <code>DeleteRule</code>).</p>
     /// <p> <code>RuleId</code> is returned by <code>CreateRule</code> and by <code>ListRules</code>.</p>
+    #[doc(hidden)]
     pub rule_id: std::option::Option<std::string::String>,
     /// <p>Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the <code>Rule</code>. Valid values for <code>Action</code> include the following:</p>
     /// <ul>
@@ -1117,12 +1123,15 @@ pub struct ActivatedRule {
     /// <li> <p> <code>COUNT</code>: AWS WAF increments a counter of requests that match the conditions in the rule and then continues to inspect the web request based on the remaining rules in the web ACL. </p> </li>
     /// </ul>
     /// <p> <code>ActivatedRule|OverrideAction</code> applies only when updating or adding a <code>RuleGroup</code> to a <code>WebACL</code>. In this case, you do not use <code>ActivatedRule|Action</code>. For all other update requests, <code>ActivatedRule|Action</code> is used instead of <code>ActivatedRule|OverrideAction</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::WafAction>,
     /// <p>Use the <code>OverrideAction</code> to test your <code>RuleGroup</code>.</p>
     /// <p>Any rule in a <code>RuleGroup</code> can potentially block a request. If you set the <code>OverrideAction</code> to <code>None</code>, the <code>RuleGroup</code> will block a request if any individual rule in the <code>RuleGroup</code> matches the request and is configured to block that request. However if you first want to test the <code>RuleGroup</code>, set the <code>OverrideAction</code> to <code>Count</code>. The <code>RuleGroup</code> will then override any block action specified by individual rules contained within the group. Instead of blocking matching requests, those requests will be counted. You can view a record of counted requests using <code>GetSampledRequests</code>. </p>
     /// <p> <code>ActivatedRule|OverrideAction</code> applies only when updating or adding a <code>RuleGroup</code> to a <code>WebACL</code>. In this case you do not use <code>ActivatedRule|Action</code>. For all other update requests, <code>ActivatedRule|Action</code> is used instead of <code>ActivatedRule|OverrideAction</code>.</p>
+    #[doc(hidden)]
     pub override_action: std::option::Option<crate::model::WafOverrideAction>,
     /// <p>The rule type, either <code>REGULAR</code>, as defined by <code>Rule</code>, <code>RATE_BASED</code>, as defined by <code>RateBasedRule</code>, or <code>GROUP</code>, as defined by <code>RuleGroup</code>. The default is REGULAR. Although this field is optional, be aware that if you try to add a RATE_BASED rule to a web ACL without setting the type, the <code>UpdateWebACL</code> request will fail because the request tries to add a REGULAR rule with the specified ID, which does not exist. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::WafRuleType>,
     /// <p>An array of rules to exclude from a rule group. This is applicable only when the <code>ActivatedRule</code> refers to a <code>RuleGroup</code>.</p>
     /// <p>Sometimes it is necessary to troubleshoot rule groups that are blocking traffic unexpectedly (false positives). One troubleshooting technique is to identify the specific rule within the rule group that is blocking the legitimate traffic and then disable (exclude) that particular rule. You can exclude rules from both your own rule groups and AWS Marketplace rule groups that have been associated with a web ACL.</p>
@@ -1136,6 +1145,7 @@ pub struct ActivatedRule {
     /// <li> <p>The second action inserts the same rule group back in, but specifying the rules to exclude. That is, the second <code>Updates:Action</code> should be <code>INSERT</code>, <code>Updates:ActivatedRule:RuleId</code> should be the rule group that you just removed, and <code>ExcludedRules</code> should contain the rules that you want to exclude.</p> </li>
     /// </ul> </li>
     /// </ol>
+    #[doc(hidden)]
     pub excluded_rules: std::option::Option<std::vec::Vec<crate::model::ExcludedRule>>,
 }
 impl ActivatedRule {
@@ -1196,11 +1206,10 @@ impl std::fmt::Debug for ActivatedRule {
         formatter.finish()
     }
 }
-/// See [`ActivatedRule`](crate::model::ActivatedRule)
+/// See [`ActivatedRule`](crate::model::ActivatedRule).
 pub mod activated_rule {
 
-    /// A builder for [`ActivatedRule`](crate::model::ActivatedRule)
-    #[non_exhaustive]
+    /// A builder for [`ActivatedRule`](crate::model::ActivatedRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) priority: std::option::Option<i32>,
@@ -1323,7 +1332,7 @@ pub mod activated_rule {
             self.excluded_rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivatedRule`](crate::model::ActivatedRule)
+        /// Consumes the builder and constructs a [`ActivatedRule`](crate::model::ActivatedRule).
         pub fn build(self) -> crate::model::ActivatedRule {
             crate::model::ActivatedRule {
                 priority: self.priority,
@@ -1337,7 +1346,7 @@ pub mod activated_rule {
     }
 }
 impl ActivatedRule {
-    /// Creates a new builder-style object to manufacture [`ActivatedRule`](crate::model::ActivatedRule)
+    /// Creates a new builder-style object to manufacture [`ActivatedRule`](crate::model::ActivatedRule).
     pub fn builder() -> crate::model::activated_rule::Builder {
         crate::model::activated_rule::Builder::default()
     }
@@ -1352,6 +1361,7 @@ impl ActivatedRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExcludedRule {
     /// <p>The unique identifier for the rule to exclude from the rule group.</p>
+    #[doc(hidden)]
     pub rule_id: std::option::Option<std::string::String>,
 }
 impl ExcludedRule {
@@ -1367,11 +1377,10 @@ impl std::fmt::Debug for ExcludedRule {
         formatter.finish()
     }
 }
-/// See [`ExcludedRule`](crate::model::ExcludedRule)
+/// See [`ExcludedRule`](crate::model::ExcludedRule).
 pub mod excluded_rule {
 
-    /// A builder for [`ExcludedRule`](crate::model::ExcludedRule)
-    #[non_exhaustive]
+    /// A builder for [`ExcludedRule`](crate::model::ExcludedRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_id: std::option::Option<std::string::String>,
@@ -1387,7 +1396,7 @@ pub mod excluded_rule {
             self.rule_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExcludedRule`](crate::model::ExcludedRule)
+        /// Consumes the builder and constructs a [`ExcludedRule`](crate::model::ExcludedRule).
         pub fn build(self) -> crate::model::ExcludedRule {
             crate::model::ExcludedRule {
                 rule_id: self.rule_id,
@@ -1396,7 +1405,7 @@ pub mod excluded_rule {
     }
 }
 impl ExcludedRule {
-    /// Creates a new builder-style object to manufacture [`ExcludedRule`](crate::model::ExcludedRule)
+    /// Creates a new builder-style object to manufacture [`ExcludedRule`](crate::model::ExcludedRule).
     pub fn builder() -> crate::model::excluded_rule::Builder {
         crate::model::excluded_rule::Builder::default()
     }
@@ -1470,6 +1479,7 @@ impl AsRef<str> for WafRuleType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WafOverrideAction {
     /// <p> <code>COUNT</code> overrides the action specified by the individual rule within a <code>RuleGroup</code> . If set to <code>NONE</code>, the rule's action will take place.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::WafOverrideActionType>,
 }
 impl WafOverrideAction {
@@ -1485,11 +1495,10 @@ impl std::fmt::Debug for WafOverrideAction {
         formatter.finish()
     }
 }
-/// See [`WafOverrideAction`](crate::model::WafOverrideAction)
+/// See [`WafOverrideAction`](crate::model::WafOverrideAction).
 pub mod waf_override_action {
 
-    /// A builder for [`WafOverrideAction`](crate::model::WafOverrideAction)
-    #[non_exhaustive]
+    /// A builder for [`WafOverrideAction`](crate::model::WafOverrideAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::WafOverrideActionType>,
@@ -1508,7 +1517,7 @@ pub mod waf_override_action {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`WafOverrideAction`](crate::model::WafOverrideAction)
+        /// Consumes the builder and constructs a [`WafOverrideAction`](crate::model::WafOverrideAction).
         pub fn build(self) -> crate::model::WafOverrideAction {
             crate::model::WafOverrideAction {
                 r#type: self.r#type,
@@ -1517,7 +1526,7 @@ pub mod waf_override_action {
     }
 }
 impl WafOverrideAction {
-    /// Creates a new builder-style object to manufacture [`WafOverrideAction`](crate::model::WafOverrideAction)
+    /// Creates a new builder-style object to manufacture [`WafOverrideAction`](crate::model::WafOverrideAction).
     pub fn builder() -> crate::model::waf_override_action::Builder {
         crate::model::waf_override_action::Builder::default()
     }
@@ -1587,8 +1596,10 @@ impl AsRef<str> for WafOverrideActionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SqlInjectionMatchSetUpdate {
     /// <p>Specify <code>INSERT</code> to add a <code>SqlInjectionMatchSetUpdate</code> to a <code>SqlInjectionMatchSet</code>. Use <code>DELETE</code> to remove a <code>SqlInjectionMatchSetUpdate</code> from a <code>SqlInjectionMatchSet</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ChangeAction>,
     /// <p>Specifies the part of a web request that you want AWS WAF to inspect for snippets of malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.</p>
+    #[doc(hidden)]
     pub sql_injection_match_tuple: std::option::Option<crate::model::SqlInjectionMatchTuple>,
 }
 impl SqlInjectionMatchSetUpdate {
@@ -1611,11 +1622,10 @@ impl std::fmt::Debug for SqlInjectionMatchSetUpdate {
         formatter.finish()
     }
 }
-/// See [`SqlInjectionMatchSetUpdate`](crate::model::SqlInjectionMatchSetUpdate)
+/// See [`SqlInjectionMatchSetUpdate`](crate::model::SqlInjectionMatchSetUpdate).
 pub mod sql_injection_match_set_update {
 
-    /// A builder for [`SqlInjectionMatchSetUpdate`](crate::model::SqlInjectionMatchSetUpdate)
-    #[non_exhaustive]
+    /// A builder for [`SqlInjectionMatchSetUpdate`](crate::model::SqlInjectionMatchSetUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ChangeAction>,
@@ -1652,7 +1662,7 @@ pub mod sql_injection_match_set_update {
             self.sql_injection_match_tuple = input;
             self
         }
-        /// Consumes the builder and constructs a [`SqlInjectionMatchSetUpdate`](crate::model::SqlInjectionMatchSetUpdate)
+        /// Consumes the builder and constructs a [`SqlInjectionMatchSetUpdate`](crate::model::SqlInjectionMatchSetUpdate).
         pub fn build(self) -> crate::model::SqlInjectionMatchSetUpdate {
             crate::model::SqlInjectionMatchSetUpdate {
                 action: self.action,
@@ -1662,7 +1672,7 @@ pub mod sql_injection_match_set_update {
     }
 }
 impl SqlInjectionMatchSetUpdate {
-    /// Creates a new builder-style object to manufacture [`SqlInjectionMatchSetUpdate`](crate::model::SqlInjectionMatchSetUpdate)
+    /// Creates a new builder-style object to manufacture [`SqlInjectionMatchSetUpdate`](crate::model::SqlInjectionMatchSetUpdate).
     pub fn builder() -> crate::model::sql_injection_match_set_update::Builder {
         crate::model::sql_injection_match_set_update::Builder::default()
     }
@@ -1677,6 +1687,7 @@ impl SqlInjectionMatchSetUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SqlInjectionMatchTuple {
     /// <p>Specifies where in a web request to look for snippets of malicious SQL code.</p>
+    #[doc(hidden)]
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF. If you specify a transformation, AWS WAF performs the transformation on <code>FieldToMatch</code> before inspecting it for a match.</p>
     /// <p>You can only specify a single type of TextTransformation.</p>
@@ -1716,6 +1727,7 @@ pub struct SqlInjectionMatchTuple {
     /// <p>Use this option to decode a URL-encoded value.</p>
     /// <p> <b>NONE</b> </p>
     /// <p>Specify <code>NONE</code> if you don't want to perform any text transformations.</p>
+    #[doc(hidden)]
     pub text_transformation: std::option::Option<crate::model::TextTransformation>,
 }
 impl SqlInjectionMatchTuple {
@@ -1773,11 +1785,10 @@ impl std::fmt::Debug for SqlInjectionMatchTuple {
         formatter.finish()
     }
 }
-/// See [`SqlInjectionMatchTuple`](crate::model::SqlInjectionMatchTuple)
+/// See [`SqlInjectionMatchTuple`](crate::model::SqlInjectionMatchTuple).
 pub mod sql_injection_match_tuple {
 
-    /// A builder for [`SqlInjectionMatchTuple`](crate::model::SqlInjectionMatchTuple)
-    #[non_exhaustive]
+    /// A builder for [`SqlInjectionMatchTuple`](crate::model::SqlInjectionMatchTuple).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field_to_match: std::option::Option<crate::model::FieldToMatch>,
@@ -1884,7 +1895,7 @@ pub mod sql_injection_match_tuple {
             self.text_transformation = input;
             self
         }
-        /// Consumes the builder and constructs a [`SqlInjectionMatchTuple`](crate::model::SqlInjectionMatchTuple)
+        /// Consumes the builder and constructs a [`SqlInjectionMatchTuple`](crate::model::SqlInjectionMatchTuple).
         pub fn build(self) -> crate::model::SqlInjectionMatchTuple {
             crate::model::SqlInjectionMatchTuple {
                 field_to_match: self.field_to_match,
@@ -1894,7 +1905,7 @@ pub mod sql_injection_match_tuple {
     }
 }
 impl SqlInjectionMatchTuple {
-    /// Creates a new builder-style object to manufacture [`SqlInjectionMatchTuple`](crate::model::SqlInjectionMatchTuple)
+    /// Creates a new builder-style object to manufacture [`SqlInjectionMatchTuple`](crate::model::SqlInjectionMatchTuple).
     pub fn builder() -> crate::model::sql_injection_match_tuple::Builder {
         crate::model::sql_injection_match_tuple::Builder::default()
     }
@@ -1909,8 +1920,10 @@ impl SqlInjectionMatchTuple {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SizeConstraintSetUpdate {
     /// <p>Specify <code>INSERT</code> to add a <code>SizeConstraintSetUpdate</code> to a <code>SizeConstraintSet</code>. Use <code>DELETE</code> to remove a <code>SizeConstraintSetUpdate</code> from a <code>SizeConstraintSet</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ChangeAction>,
     /// <p>Specifies a constraint on the size of a part of the web request. AWS WAF uses the <code>Size</code>, <code>ComparisonOperator</code>, and <code>FieldToMatch</code> to build an expression in the form of "<code>Size</code> <code>ComparisonOperator</code> size in bytes of <code>FieldToMatch</code>". If that expression is true, the <code>SizeConstraint</code> is considered to match.</p>
+    #[doc(hidden)]
     pub size_constraint: std::option::Option<crate::model::SizeConstraint>,
 }
 impl SizeConstraintSetUpdate {
@@ -1931,11 +1944,10 @@ impl std::fmt::Debug for SizeConstraintSetUpdate {
         formatter.finish()
     }
 }
-/// See [`SizeConstraintSetUpdate`](crate::model::SizeConstraintSetUpdate)
+/// See [`SizeConstraintSetUpdate`](crate::model::SizeConstraintSetUpdate).
 pub mod size_constraint_set_update {
 
-    /// A builder for [`SizeConstraintSetUpdate`](crate::model::SizeConstraintSetUpdate)
-    #[non_exhaustive]
+    /// A builder for [`SizeConstraintSetUpdate`](crate::model::SizeConstraintSetUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ChangeAction>,
@@ -1968,7 +1980,7 @@ pub mod size_constraint_set_update {
             self.size_constraint = input;
             self
         }
-        /// Consumes the builder and constructs a [`SizeConstraintSetUpdate`](crate::model::SizeConstraintSetUpdate)
+        /// Consumes the builder and constructs a [`SizeConstraintSetUpdate`](crate::model::SizeConstraintSetUpdate).
         pub fn build(self) -> crate::model::SizeConstraintSetUpdate {
             crate::model::SizeConstraintSetUpdate {
                 action: self.action,
@@ -1978,7 +1990,7 @@ pub mod size_constraint_set_update {
     }
 }
 impl SizeConstraintSetUpdate {
-    /// Creates a new builder-style object to manufacture [`SizeConstraintSetUpdate`](crate::model::SizeConstraintSetUpdate)
+    /// Creates a new builder-style object to manufacture [`SizeConstraintSetUpdate`](crate::model::SizeConstraintSetUpdate).
     pub fn builder() -> crate::model::size_constraint_set_update::Builder {
         crate::model::size_constraint_set_update::Builder::default()
     }
@@ -1993,6 +2005,7 @@ impl SizeConstraintSetUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SizeConstraint {
     /// <p>Specifies where in a web request to look for the size constraint.</p>
+    #[doc(hidden)]
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF. If you specify a transformation, AWS WAF performs the transformation on <code>FieldToMatch</code> before inspecting it for a match.</p>
     /// <p>You can only specify a single type of TextTransformation.</p>
@@ -2033,6 +2046,7 @@ pub struct SizeConstraint {
     /// <p>Use this option to convert uppercase letters (A-Z) to lowercase (a-z).</p>
     /// <p> <b>URL_DECODE</b> </p>
     /// <p>Use this option to decode a URL-encoded value.</p>
+    #[doc(hidden)]
     pub text_transformation: std::option::Option<crate::model::TextTransformation>,
     /// <p>The type of comparison you want AWS WAF to perform. AWS WAF uses this in combination with the provided <code>Size</code> and <code>FieldToMatch</code> to build an expression in the form of "<code>Size</code> <code>ComparisonOperator</code> size in bytes of <code>FieldToMatch</code>". If that expression is true, the <code>SizeConstraint</code> is considered to match.</p>
     /// <p> <b>EQ</b>: Used to test if the <code>Size</code> is equal to the size of the <code>FieldToMatch</code> </p>
@@ -2041,10 +2055,12 @@ pub struct SizeConstraint {
     /// <p> <b>LT</b>: Used to test if the <code>Size</code> is strictly less than the size of the <code>FieldToMatch</code> </p>
     /// <p> <b>GE</b>: Used to test if the <code>Size</code> is greater than or equal to the size of the <code>FieldToMatch</code> </p>
     /// <p> <b>GT</b>: Used to test if the <code>Size</code> is strictly greater than the size of the <code>FieldToMatch</code> </p>
+    #[doc(hidden)]
     pub comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
     /// <p>The size in bytes that you want AWS WAF to compare against the size of the specified <code>FieldToMatch</code>. AWS WAF uses this in combination with <code>ComparisonOperator</code> and <code>FieldToMatch</code> to build an expression in the form of "<code>Size</code> <code>ComparisonOperator</code> size in bytes of <code>FieldToMatch</code>". If that expression is true, the <code>SizeConstraint</code> is considered to match.</p>
     /// <p>Valid values for size are 0 - 21474836480 bytes (0 - 20 GB).</p>
     /// <p>If you specify <code>URI</code> for the value of <code>Type</code>, the / in the URI counts as one character. For example, the URI <code>/logo.jpg</code> is nine characters long.</p>
+    #[doc(hidden)]
     pub size: i64,
 }
 impl SizeConstraint {
@@ -2121,11 +2137,10 @@ impl std::fmt::Debug for SizeConstraint {
         formatter.finish()
     }
 }
-/// See [`SizeConstraint`](crate::model::SizeConstraint)
+/// See [`SizeConstraint`](crate::model::SizeConstraint).
 pub mod size_constraint {
 
-    /// A builder for [`SizeConstraint`](crate::model::SizeConstraint)
-    #[non_exhaustive]
+    /// A builder for [`SizeConstraint`](crate::model::SizeConstraint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field_to_match: std::option::Option<crate::model::FieldToMatch>,
@@ -2275,7 +2290,7 @@ pub mod size_constraint {
             self.size = input;
             self
         }
-        /// Consumes the builder and constructs a [`SizeConstraint`](crate::model::SizeConstraint)
+        /// Consumes the builder and constructs a [`SizeConstraint`](crate::model::SizeConstraint).
         pub fn build(self) -> crate::model::SizeConstraint {
             crate::model::SizeConstraint {
                 field_to_match: self.field_to_match,
@@ -2287,7 +2302,7 @@ pub mod size_constraint {
     }
 }
 impl SizeConstraint {
-    /// Creates a new builder-style object to manufacture [`SizeConstraint`](crate::model::SizeConstraint)
+    /// Creates a new builder-style object to manufacture [`SizeConstraint`](crate::model::SizeConstraint).
     pub fn builder() -> crate::model::size_constraint::Builder {
         crate::model::size_constraint::Builder::default()
     }
@@ -2373,8 +2388,10 @@ impl AsRef<str> for ComparisonOperator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleGroupUpdate {
     /// <p>Specify <code>INSERT</code> to add an <code>ActivatedRule</code> to a <code>RuleGroup</code>. Use <code>DELETE</code> to remove an <code>ActivatedRule</code> from a <code>RuleGroup</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ChangeAction>,
     /// <p>The <code>ActivatedRule</code> object specifies a <code>Rule</code> that you want to insert or delete, the priority of the <code>Rule</code> in the <code>WebACL</code>, and the action that you want AWS WAF to take when a web request matches the <code>Rule</code> (<code>ALLOW</code>, <code>BLOCK</code>, or <code>COUNT</code>).</p>
+    #[doc(hidden)]
     pub activated_rule: std::option::Option<crate::model::ActivatedRule>,
 }
 impl RuleGroupUpdate {
@@ -2395,11 +2412,10 @@ impl std::fmt::Debug for RuleGroupUpdate {
         formatter.finish()
     }
 }
-/// See [`RuleGroupUpdate`](crate::model::RuleGroupUpdate)
+/// See [`RuleGroupUpdate`](crate::model::RuleGroupUpdate).
 pub mod rule_group_update {
 
-    /// A builder for [`RuleGroupUpdate`](crate::model::RuleGroupUpdate)
-    #[non_exhaustive]
+    /// A builder for [`RuleGroupUpdate`](crate::model::RuleGroupUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ChangeAction>,
@@ -2432,7 +2448,7 @@ pub mod rule_group_update {
             self.activated_rule = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleGroupUpdate`](crate::model::RuleGroupUpdate)
+        /// Consumes the builder and constructs a [`RuleGroupUpdate`](crate::model::RuleGroupUpdate).
         pub fn build(self) -> crate::model::RuleGroupUpdate {
             crate::model::RuleGroupUpdate {
                 action: self.action,
@@ -2442,7 +2458,7 @@ pub mod rule_group_update {
     }
 }
 impl RuleGroupUpdate {
-    /// Creates a new builder-style object to manufacture [`RuleGroupUpdate`](crate::model::RuleGroupUpdate)
+    /// Creates a new builder-style object to manufacture [`RuleGroupUpdate`](crate::model::RuleGroupUpdate).
     pub fn builder() -> crate::model::rule_group_update::Builder {
         crate::model::rule_group_update::Builder::default()
     }
@@ -2457,8 +2473,10 @@ impl RuleGroupUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleUpdate {
     /// <p>Specify <code>INSERT</code> to add a <code>Predicate</code> to a <code>Rule</code>. Use <code>DELETE</code> to remove a <code>Predicate</code> from a <code>Rule</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ChangeAction>,
     /// <p>The ID of the <code>Predicate</code> (such as an <code>IPSet</code>) that you want to add to a <code>Rule</code>.</p>
+    #[doc(hidden)]
     pub predicate: std::option::Option<crate::model::Predicate>,
 }
 impl RuleUpdate {
@@ -2479,11 +2497,10 @@ impl std::fmt::Debug for RuleUpdate {
         formatter.finish()
     }
 }
-/// See [`RuleUpdate`](crate::model::RuleUpdate)
+/// See [`RuleUpdate`](crate::model::RuleUpdate).
 pub mod rule_update {
 
-    /// A builder for [`RuleUpdate`](crate::model::RuleUpdate)
-    #[non_exhaustive]
+    /// A builder for [`RuleUpdate`](crate::model::RuleUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ChangeAction>,
@@ -2516,7 +2533,7 @@ pub mod rule_update {
             self.predicate = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleUpdate`](crate::model::RuleUpdate)
+        /// Consumes the builder and constructs a [`RuleUpdate`](crate::model::RuleUpdate).
         pub fn build(self) -> crate::model::RuleUpdate {
             crate::model::RuleUpdate {
                 action: self.action,
@@ -2526,7 +2543,7 @@ pub mod rule_update {
     }
 }
 impl RuleUpdate {
-    /// Creates a new builder-style object to manufacture [`RuleUpdate`](crate::model::RuleUpdate)
+    /// Creates a new builder-style object to manufacture [`RuleUpdate`](crate::model::RuleUpdate).
     pub fn builder() -> crate::model::rule_update::Builder {
         crate::model::rule_update::Builder::default()
     }
@@ -2542,10 +2559,13 @@ impl RuleUpdate {
 pub struct Predicate {
     /// <p>Set <code>Negated</code> to <code>False</code> if you want AWS WAF to allow, block, or count requests based on the settings in the specified <code>ByteMatchSet</code>, <code>IPSet</code>, <code>SqlInjectionMatchSet</code>, <code>XssMatchSet</code>, <code>RegexMatchSet</code>, <code>GeoMatchSet</code>, or <code>SizeConstraintSet</code>. For example, if an <code>IPSet</code> includes the IP address <code>192.0.2.44</code>, AWS WAF will allow or block requests based on that IP address.</p>
     /// <p>Set <code>Negated</code> to <code>True</code> if you want AWS WAF to allow or block a request based on the negation of the settings in the <code>ByteMatchSet</code>, <code>IPSet</code>, <code>SqlInjectionMatchSet</code>, <code>XssMatchSet</code>, <code>RegexMatchSet</code>, <code>GeoMatchSet</code>, or <code>SizeConstraintSet</code>. For example, if an <code>IPSet</code> includes the IP address <code>192.0.2.44</code>, AWS WAF will allow, block, or count requests based on all IP addresses <i>except</i> <code>192.0.2.44</code>.</p>
+    #[doc(hidden)]
     pub negated: std::option::Option<bool>,
     /// <p>The type of predicate in a <code>Rule</code>, such as <code>ByteMatch</code> or <code>IPSet</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::PredicateType>,
     /// <p>A unique identifier for a predicate in a <code>Rule</code>, such as <code>ByteMatchSetId</code> or <code>IPSetId</code>. The ID is returned by the corresponding <code>Create</code> or <code>List</code> command.</p>
+    #[doc(hidden)]
     pub data_id: std::option::Option<std::string::String>,
 }
 impl Predicate {
@@ -2572,11 +2592,10 @@ impl std::fmt::Debug for Predicate {
         formatter.finish()
     }
 }
-/// See [`Predicate`](crate::model::Predicate)
+/// See [`Predicate`](crate::model::Predicate).
 pub mod predicate {
 
-    /// A builder for [`Predicate`](crate::model::Predicate)
-    #[non_exhaustive]
+    /// A builder for [`Predicate`](crate::model::Predicate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) negated: std::option::Option<bool>,
@@ -2616,7 +2635,7 @@ pub mod predicate {
             self.data_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Predicate`](crate::model::Predicate)
+        /// Consumes the builder and constructs a [`Predicate`](crate::model::Predicate).
         pub fn build(self) -> crate::model::Predicate {
             crate::model::Predicate {
                 negated: self.negated,
@@ -2627,7 +2646,7 @@ pub mod predicate {
     }
 }
 impl Predicate {
-    /// Creates a new builder-style object to manufacture [`Predicate`](crate::model::Predicate)
+    /// Creates a new builder-style object to manufacture [`Predicate`](crate::model::Predicate).
     pub fn builder() -> crate::model::predicate::Builder {
         crate::model::predicate::Builder::default()
     }
@@ -2725,8 +2744,10 @@ impl AsRef<str> for PredicateType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegexPatternSetUpdate {
     /// <p>Specifies whether to insert or delete a <code>RegexPatternString</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ChangeAction>,
     /// <p>Specifies the regular expression (regex) pattern that you want AWS WAF to search for, such as <code>B[a@]dB[o0]t</code>.</p>
+    #[doc(hidden)]
     pub regex_pattern_string: std::option::Option<std::string::String>,
 }
 impl RegexPatternSetUpdate {
@@ -2747,11 +2768,10 @@ impl std::fmt::Debug for RegexPatternSetUpdate {
         formatter.finish()
     }
 }
-/// See [`RegexPatternSetUpdate`](crate::model::RegexPatternSetUpdate)
+/// See [`RegexPatternSetUpdate`](crate::model::RegexPatternSetUpdate).
 pub mod regex_pattern_set_update {
 
-    /// A builder for [`RegexPatternSetUpdate`](crate::model::RegexPatternSetUpdate)
-    #[non_exhaustive]
+    /// A builder for [`RegexPatternSetUpdate`](crate::model::RegexPatternSetUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ChangeAction>,
@@ -2784,7 +2804,7 @@ pub mod regex_pattern_set_update {
             self.regex_pattern_string = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegexPatternSetUpdate`](crate::model::RegexPatternSetUpdate)
+        /// Consumes the builder and constructs a [`RegexPatternSetUpdate`](crate::model::RegexPatternSetUpdate).
         pub fn build(self) -> crate::model::RegexPatternSetUpdate {
             crate::model::RegexPatternSetUpdate {
                 action: self.action,
@@ -2794,7 +2814,7 @@ pub mod regex_pattern_set_update {
     }
 }
 impl RegexPatternSetUpdate {
-    /// Creates a new builder-style object to manufacture [`RegexPatternSetUpdate`](crate::model::RegexPatternSetUpdate)
+    /// Creates a new builder-style object to manufacture [`RegexPatternSetUpdate`](crate::model::RegexPatternSetUpdate).
     pub fn builder() -> crate::model::regex_pattern_set_update::Builder {
         crate::model::regex_pattern_set_update::Builder::default()
     }
@@ -2809,8 +2829,10 @@ impl RegexPatternSetUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegexMatchSetUpdate {
     /// <p>Specifies whether to insert or delete a <code>RegexMatchTuple</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ChangeAction>,
     /// <p>Information about the part of a web request that you want AWS WAF to inspect and the identifier of the regular expression (regex) pattern that you want AWS WAF to search for. If you specify <code>DELETE</code> for the value of <code>Action</code>, the <code>RegexMatchTuple</code> values must exactly match the values in the <code>RegexMatchTuple</code> that you want to delete from the <code>RegexMatchSet</code>.</p>
+    #[doc(hidden)]
     pub regex_match_tuple: std::option::Option<crate::model::RegexMatchTuple>,
 }
 impl RegexMatchSetUpdate {
@@ -2831,11 +2853,10 @@ impl std::fmt::Debug for RegexMatchSetUpdate {
         formatter.finish()
     }
 }
-/// See [`RegexMatchSetUpdate`](crate::model::RegexMatchSetUpdate)
+/// See [`RegexMatchSetUpdate`](crate::model::RegexMatchSetUpdate).
 pub mod regex_match_set_update {
 
-    /// A builder for [`RegexMatchSetUpdate`](crate::model::RegexMatchSetUpdate)
-    #[non_exhaustive]
+    /// A builder for [`RegexMatchSetUpdate`](crate::model::RegexMatchSetUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ChangeAction>,
@@ -2868,7 +2889,7 @@ pub mod regex_match_set_update {
             self.regex_match_tuple = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegexMatchSetUpdate`](crate::model::RegexMatchSetUpdate)
+        /// Consumes the builder and constructs a [`RegexMatchSetUpdate`](crate::model::RegexMatchSetUpdate).
         pub fn build(self) -> crate::model::RegexMatchSetUpdate {
             crate::model::RegexMatchSetUpdate {
                 action: self.action,
@@ -2878,7 +2899,7 @@ pub mod regex_match_set_update {
     }
 }
 impl RegexMatchSetUpdate {
-    /// Creates a new builder-style object to manufacture [`RegexMatchSetUpdate`](crate::model::RegexMatchSetUpdate)
+    /// Creates a new builder-style object to manufacture [`RegexMatchSetUpdate`](crate::model::RegexMatchSetUpdate).
     pub fn builder() -> crate::model::regex_match_set_update::Builder {
         crate::model::regex_match_set_update::Builder::default()
     }
@@ -2898,6 +2919,7 @@ impl RegexMatchSetUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegexMatchTuple {
     /// <p>Specifies where in a web request to look for the <code>RegexPatternSet</code>.</p>
+    #[doc(hidden)]
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF. If you specify a transformation, AWS WAF performs the transformation on <code>RegexPatternSet</code> before inspecting a request for a match.</p>
     /// <p>You can only specify a single type of TextTransformation.</p>
@@ -2937,9 +2959,11 @@ pub struct RegexMatchTuple {
     /// <p>Use this option to decode a URL-encoded value.</p>
     /// <p> <b>NONE</b> </p>
     /// <p>Specify <code>NONE</code> if you don't want to perform any text transformations.</p>
+    #[doc(hidden)]
     pub text_transformation: std::option::Option<crate::model::TextTransformation>,
     /// <p>The <code>RegexPatternSetId</code> for a <code>RegexPatternSet</code>. You use <code>RegexPatternSetId</code> to get information about a <code>RegexPatternSet</code> (see <code>GetRegexPatternSet</code>), update a <code>RegexPatternSet</code> (see <code>UpdateRegexPatternSet</code>), insert a <code>RegexPatternSet</code> into a <code>RegexMatchSet</code> or delete one from a <code>RegexMatchSet</code> (see <code>UpdateRegexMatchSet</code>), and delete an <code>RegexPatternSet</code> from AWS WAF (see <code>DeleteRegexPatternSet</code>).</p>
     /// <p> <code>RegexPatternSetId</code> is returned by <code>CreateRegexPatternSet</code> and by <code>ListRegexPatternSets</code>.</p>
+    #[doc(hidden)]
     pub regex_pattern_set_id: std::option::Option<std::string::String>,
 }
 impl RegexMatchTuple {
@@ -3003,11 +3027,10 @@ impl std::fmt::Debug for RegexMatchTuple {
         formatter.finish()
     }
 }
-/// See [`RegexMatchTuple`](crate::model::RegexMatchTuple)
+/// See [`RegexMatchTuple`](crate::model::RegexMatchTuple).
 pub mod regex_match_tuple {
 
-    /// A builder for [`RegexMatchTuple`](crate::model::RegexMatchTuple)
-    #[non_exhaustive]
+    /// A builder for [`RegexMatchTuple`](crate::model::RegexMatchTuple).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field_to_match: std::option::Option<crate::model::FieldToMatch>,
@@ -3130,7 +3153,7 @@ pub mod regex_match_tuple {
             self.regex_pattern_set_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegexMatchTuple`](crate::model::RegexMatchTuple)
+        /// Consumes the builder and constructs a [`RegexMatchTuple`](crate::model::RegexMatchTuple).
         pub fn build(self) -> crate::model::RegexMatchTuple {
             crate::model::RegexMatchTuple {
                 field_to_match: self.field_to_match,
@@ -3141,7 +3164,7 @@ pub mod regex_match_tuple {
     }
 }
 impl RegexMatchTuple {
-    /// Creates a new builder-style object to manufacture [`RegexMatchTuple`](crate::model::RegexMatchTuple)
+    /// Creates a new builder-style object to manufacture [`RegexMatchTuple`](crate::model::RegexMatchTuple).
     pub fn builder() -> crate::model::regex_match_tuple::Builder {
         crate::model::regex_match_tuple::Builder::default()
     }
@@ -3156,8 +3179,10 @@ impl RegexMatchTuple {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IpSetUpdate {
     /// <p>Specifies whether to insert or delete an IP address with <code>UpdateIPSet</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ChangeAction>,
     /// <p>The IP address type (<code>IPV4</code> or <code>IPV6</code>) and the IP address range (in CIDR notation) that web requests originate from.</p>
+    #[doc(hidden)]
     pub ip_set_descriptor: std::option::Option<crate::model::IpSetDescriptor>,
 }
 impl IpSetUpdate {
@@ -3178,11 +3203,10 @@ impl std::fmt::Debug for IpSetUpdate {
         formatter.finish()
     }
 }
-/// See [`IpSetUpdate`](crate::model::IpSetUpdate)
+/// See [`IpSetUpdate`](crate::model::IpSetUpdate).
 pub mod ip_set_update {
 
-    /// A builder for [`IpSetUpdate`](crate::model::IpSetUpdate)
-    #[non_exhaustive]
+    /// A builder for [`IpSetUpdate`](crate::model::IpSetUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ChangeAction>,
@@ -3215,7 +3239,7 @@ pub mod ip_set_update {
             self.ip_set_descriptor = input;
             self
         }
-        /// Consumes the builder and constructs a [`IpSetUpdate`](crate::model::IpSetUpdate)
+        /// Consumes the builder and constructs a [`IpSetUpdate`](crate::model::IpSetUpdate).
         pub fn build(self) -> crate::model::IpSetUpdate {
             crate::model::IpSetUpdate {
                 action: self.action,
@@ -3225,7 +3249,7 @@ pub mod ip_set_update {
     }
 }
 impl IpSetUpdate {
-    /// Creates a new builder-style object to manufacture [`IpSetUpdate`](crate::model::IpSetUpdate)
+    /// Creates a new builder-style object to manufacture [`IpSetUpdate`](crate::model::IpSetUpdate).
     pub fn builder() -> crate::model::ip_set_update::Builder {
         crate::model::ip_set_update::Builder::default()
     }
@@ -3240,6 +3264,7 @@ impl IpSetUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IpSetDescriptor {
     /// <p>Specify <code>IPV4</code> or <code>IPV6</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::IpSetDescriptorType>,
     /// <p>Specify an IPv4 address by using CIDR notation. For example:</p>
     /// <ul>
@@ -3252,6 +3277,7 @@ pub struct IpSetDescriptor {
     /// <li> <p>To configure AWS WAF to allow, block, or count requests that originated from the IP address 1111:0000:0000:0000:0000:0000:0000:0111, specify <code>1111:0000:0000:0000:0000:0000:0000:0111/128</code>.</p> </li>
     /// <li> <p>To configure AWS WAF to allow, block, or count requests that originated from IP addresses 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify <code>1111:0000:0000:0000:0000:0000:0000:0000/64</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl IpSetDescriptor {
@@ -3282,11 +3308,10 @@ impl std::fmt::Debug for IpSetDescriptor {
         formatter.finish()
     }
 }
-/// See [`IpSetDescriptor`](crate::model::IpSetDescriptor)
+/// See [`IpSetDescriptor`](crate::model::IpSetDescriptor).
 pub mod ip_set_descriptor {
 
-    /// A builder for [`IpSetDescriptor`](crate::model::IpSetDescriptor)
-    #[non_exhaustive]
+    /// A builder for [`IpSetDescriptor`](crate::model::IpSetDescriptor).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::IpSetDescriptorType>,
@@ -3336,7 +3361,7 @@ pub mod ip_set_descriptor {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`IpSetDescriptor`](crate::model::IpSetDescriptor)
+        /// Consumes the builder and constructs a [`IpSetDescriptor`](crate::model::IpSetDescriptor).
         pub fn build(self) -> crate::model::IpSetDescriptor {
             crate::model::IpSetDescriptor {
                 r#type: self.r#type,
@@ -3346,7 +3371,7 @@ pub mod ip_set_descriptor {
     }
 }
 impl IpSetDescriptor {
-    /// Creates a new builder-style object to manufacture [`IpSetDescriptor`](crate::model::IpSetDescriptor)
+    /// Creates a new builder-style object to manufacture [`IpSetDescriptor`](crate::model::IpSetDescriptor).
     pub fn builder() -> crate::model::ip_set_descriptor::Builder {
         crate::model::ip_set_descriptor::Builder::default()
     }
@@ -3416,8 +3441,10 @@ impl AsRef<str> for IpSetDescriptorType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GeoMatchSetUpdate {
     /// <p>Specifies whether to insert or delete a country with <code>UpdateGeoMatchSet</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ChangeAction>,
     /// <p>The country from which web requests originate that you want AWS WAF to search for.</p>
+    #[doc(hidden)]
     pub geo_match_constraint: std::option::Option<crate::model::GeoMatchConstraint>,
 }
 impl GeoMatchSetUpdate {
@@ -3438,11 +3465,10 @@ impl std::fmt::Debug for GeoMatchSetUpdate {
         formatter.finish()
     }
 }
-/// See [`GeoMatchSetUpdate`](crate::model::GeoMatchSetUpdate)
+/// See [`GeoMatchSetUpdate`](crate::model::GeoMatchSetUpdate).
 pub mod geo_match_set_update {
 
-    /// A builder for [`GeoMatchSetUpdate`](crate::model::GeoMatchSetUpdate)
-    #[non_exhaustive]
+    /// A builder for [`GeoMatchSetUpdate`](crate::model::GeoMatchSetUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ChangeAction>,
@@ -3475,7 +3501,7 @@ pub mod geo_match_set_update {
             self.geo_match_constraint = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeoMatchSetUpdate`](crate::model::GeoMatchSetUpdate)
+        /// Consumes the builder and constructs a [`GeoMatchSetUpdate`](crate::model::GeoMatchSetUpdate).
         pub fn build(self) -> crate::model::GeoMatchSetUpdate {
             crate::model::GeoMatchSetUpdate {
                 action: self.action,
@@ -3485,7 +3511,7 @@ pub mod geo_match_set_update {
     }
 }
 impl GeoMatchSetUpdate {
-    /// Creates a new builder-style object to manufacture [`GeoMatchSetUpdate`](crate::model::GeoMatchSetUpdate)
+    /// Creates a new builder-style object to manufacture [`GeoMatchSetUpdate`](crate::model::GeoMatchSetUpdate).
     pub fn builder() -> crate::model::geo_match_set_update::Builder {
         crate::model::geo_match_set_update::Builder::default()
     }
@@ -3500,8 +3526,10 @@ impl GeoMatchSetUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GeoMatchConstraint {
     /// <p>The type of geographical area you want AWS WAF to search for. Currently <code>Country</code> is the only valid value.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::GeoMatchConstraintType>,
     /// <p>The country that you want AWS WAF to search for.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<crate::model::GeoMatchConstraintValue>,
 }
 impl GeoMatchConstraint {
@@ -3522,11 +3550,10 @@ impl std::fmt::Debug for GeoMatchConstraint {
         formatter.finish()
     }
 }
-/// See [`GeoMatchConstraint`](crate::model::GeoMatchConstraint)
+/// See [`GeoMatchConstraint`](crate::model::GeoMatchConstraint).
 pub mod geo_match_constraint {
 
-    /// A builder for [`GeoMatchConstraint`](crate::model::GeoMatchConstraint)
-    #[non_exhaustive]
+    /// A builder for [`GeoMatchConstraint`](crate::model::GeoMatchConstraint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::GeoMatchConstraintType>,
@@ -3559,7 +3586,7 @@ pub mod geo_match_constraint {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeoMatchConstraint`](crate::model::GeoMatchConstraint)
+        /// Consumes the builder and constructs a [`GeoMatchConstraint`](crate::model::GeoMatchConstraint).
         pub fn build(self) -> crate::model::GeoMatchConstraint {
             crate::model::GeoMatchConstraint {
                 r#type: self.r#type,
@@ -3569,7 +3596,7 @@ pub mod geo_match_constraint {
     }
 }
 impl GeoMatchConstraint {
-    /// Creates a new builder-style object to manufacture [`GeoMatchConstraint`](crate::model::GeoMatchConstraint)
+    /// Creates a new builder-style object to manufacture [`GeoMatchConstraint`](crate::model::GeoMatchConstraint).
     pub fn builder() -> crate::model::geo_match_constraint::Builder {
         crate::model::geo_match_constraint::Builder::default()
     }
@@ -4697,8 +4724,10 @@ impl AsRef<str> for GeoMatchConstraintType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ByteMatchSetUpdate {
     /// <p>Specifies whether to insert or delete a <code>ByteMatchTuple</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ChangeAction>,
     /// <p>Information about the part of a web request that you want AWS WAF to inspect and the value that you want AWS WAF to search for. If you specify <code>DELETE</code> for the value of <code>Action</code>, the <code>ByteMatchTuple</code> values must exactly match the values in the <code>ByteMatchTuple</code> that you want to delete from the <code>ByteMatchSet</code>.</p>
+    #[doc(hidden)]
     pub byte_match_tuple: std::option::Option<crate::model::ByteMatchTuple>,
 }
 impl ByteMatchSetUpdate {
@@ -4719,11 +4748,10 @@ impl std::fmt::Debug for ByteMatchSetUpdate {
         formatter.finish()
     }
 }
-/// See [`ByteMatchSetUpdate`](crate::model::ByteMatchSetUpdate)
+/// See [`ByteMatchSetUpdate`](crate::model::ByteMatchSetUpdate).
 pub mod byte_match_set_update {
 
-    /// A builder for [`ByteMatchSetUpdate`](crate::model::ByteMatchSetUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ByteMatchSetUpdate`](crate::model::ByteMatchSetUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ChangeAction>,
@@ -4756,7 +4784,7 @@ pub mod byte_match_set_update {
             self.byte_match_tuple = input;
             self
         }
-        /// Consumes the builder and constructs a [`ByteMatchSetUpdate`](crate::model::ByteMatchSetUpdate)
+        /// Consumes the builder and constructs a [`ByteMatchSetUpdate`](crate::model::ByteMatchSetUpdate).
         pub fn build(self) -> crate::model::ByteMatchSetUpdate {
             crate::model::ByteMatchSetUpdate {
                 action: self.action,
@@ -4766,7 +4794,7 @@ pub mod byte_match_set_update {
     }
 }
 impl ByteMatchSetUpdate {
-    /// Creates a new builder-style object to manufacture [`ByteMatchSetUpdate`](crate::model::ByteMatchSetUpdate)
+    /// Creates a new builder-style object to manufacture [`ByteMatchSetUpdate`](crate::model::ByteMatchSetUpdate).
     pub fn builder() -> crate::model::byte_match_set_update::Builder {
         crate::model::byte_match_set_update::Builder::default()
     }
@@ -4781,6 +4809,7 @@ impl ByteMatchSetUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ByteMatchTuple {
     /// <p>The part of a web request that you want AWS WAF to search, such as a specified header or a query string. For more information, see <code>FieldToMatch</code>.</p>
+    #[doc(hidden)]
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>The value that you want AWS WAF to search for. AWS WAF searches for the specified string in the part of web requests that you specified in <code>FieldToMatch</code>. The maximum length of the value is 50 bytes.</p>
     /// <p>Valid values depend on the values that you specified for <code>FieldToMatch</code>:</p>
@@ -4799,6 +4828,7 @@ pub struct ByteMatchTuple {
     /// <p>For example, suppose the value of <code>Type</code> is <code>HEADER</code> and the value of <code>Data</code> is <code>User-Agent</code>. If you want to search the <code>User-Agent</code> header for the value <code>BadBot</code>, you base64-encode <code>BadBot</code> using MIME base64-encoding and include the resulting value, <code>QmFkQm90</code>, in the value of <code>TargetString</code>.</p>
     /// <p> <b>If you're using the AWS CLI or one of the AWS SDKs</b> </p>
     /// <p>The value that you want AWS WAF to search for. The SDK automatically base64 encodes the value.</p>
+    #[doc(hidden)]
     pub target_string: std::option::Option<aws_smithy_types::Blob>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF. If you specify a transformation, AWS WAF performs the transformation on <code>FieldToMatch</code> before inspecting it for a match.</p>
     /// <p>You can only specify a single type of TextTransformation.</p>
@@ -4838,6 +4868,7 @@ pub struct ByteMatchTuple {
     /// <p>Use this option to decode a URL-encoded value.</p>
     /// <p> <b>NONE</b> </p>
     /// <p>Specify <code>NONE</code> if you don't want to perform any text transformations.</p>
+    #[doc(hidden)]
     pub text_transformation: std::option::Option<crate::model::TextTransformation>,
     /// <p>Within the portion of a web request that you want to search (for example, in the query string, if any), specify where you want AWS WAF to search. Valid values include the following:</p>
     /// <p> <b>CONTAINS</b> </p>
@@ -4856,6 +4887,7 @@ pub struct ByteMatchTuple {
     /// <p>The value of <code>TargetString</code> must appear at the beginning of the specified part of the web request.</p>
     /// <p> <b>ENDS_WITH</b> </p>
     /// <p>The value of <code>TargetString</code> must appear at the end of the specified part of the web request.</p>
+    #[doc(hidden)]
     pub positional_constraint: std::option::Option<crate::model::PositionalConstraint>,
 }
 impl ByteMatchTuple {
@@ -4957,11 +4989,10 @@ impl std::fmt::Debug for ByteMatchTuple {
         formatter.finish()
     }
 }
-/// See [`ByteMatchTuple`](crate::model::ByteMatchTuple)
+/// See [`ByteMatchTuple`](crate::model::ByteMatchTuple).
 pub mod byte_match_tuple {
 
-    /// A builder for [`ByteMatchTuple`](crate::model::ByteMatchTuple)
-    #[non_exhaustive]
+    /// A builder for [`ByteMatchTuple`](crate::model::ByteMatchTuple).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field_to_match: std::option::Option<crate::model::FieldToMatch>,
@@ -5160,7 +5191,7 @@ pub mod byte_match_tuple {
             self.positional_constraint = input;
             self
         }
-        /// Consumes the builder and constructs a [`ByteMatchTuple`](crate::model::ByteMatchTuple)
+        /// Consumes the builder and constructs a [`ByteMatchTuple`](crate::model::ByteMatchTuple).
         pub fn build(self) -> crate::model::ByteMatchTuple {
             crate::model::ByteMatchTuple {
                 field_to_match: self.field_to_match,
@@ -5172,7 +5203,7 @@ pub mod byte_match_tuple {
     }
 }
 impl ByteMatchTuple {
-    /// Creates a new builder-style object to manufacture [`ByteMatchTuple`](crate::model::ByteMatchTuple)
+    /// Creates a new builder-style object to manufacture [`ByteMatchTuple`](crate::model::ByteMatchTuple).
     pub fn builder() -> crate::model::byte_match_tuple::Builder {
         crate::model::byte_match_tuple::Builder::default()
     }
@@ -5261,8 +5292,10 @@ impl AsRef<str> for PositionalConstraint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p></p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -5283,11 +5316,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -5314,7 +5346,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -5324,7 +5356,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -5339,10 +5371,13 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoggingConfiguration {
     /// <p>The Amazon Resource Name (ARN) of the web ACL that you want to associate with <code>LogDestinationConfigs</code>.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>An array of Amazon Kinesis Data Firehose ARNs.</p>
+    #[doc(hidden)]
     pub log_destination_configs: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The parts of the request that you want redacted from the logs. For example, if you redact the cookie field, the cookie field in the firehose will be <code>xxx</code>. </p>
+    #[doc(hidden)]
     pub redacted_fields: std::option::Option<std::vec::Vec<crate::model::FieldToMatch>>,
 }
 impl LoggingConfiguration {
@@ -5368,11 +5403,10 @@ impl std::fmt::Debug for LoggingConfiguration {
         formatter.finish()
     }
 }
-/// See [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+/// See [`LoggingConfiguration`](crate::model::LoggingConfiguration).
 pub mod logging_configuration {
 
-    /// A builder for [`LoggingConfiguration`](crate::model::LoggingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LoggingConfiguration`](crate::model::LoggingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -5428,7 +5462,7 @@ pub mod logging_configuration {
             self.redacted_fields = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+        /// Consumes the builder and constructs a [`LoggingConfiguration`](crate::model::LoggingConfiguration).
         pub fn build(self) -> crate::model::LoggingConfiguration {
             crate::model::LoggingConfiguration {
                 resource_arn: self.resource_arn,
@@ -5439,7 +5473,7 @@ pub mod logging_configuration {
     }
 }
 impl LoggingConfiguration {
-    /// Creates a new builder-style object to manufacture [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+    /// Creates a new builder-style object to manufacture [`LoggingConfiguration`](crate::model::LoggingConfiguration).
     pub fn builder() -> crate::model::logging_configuration::Builder {
         crate::model::logging_configuration::Builder::default()
     }
@@ -5455,8 +5489,10 @@ impl LoggingConfiguration {
 pub struct XssMatchSetSummary {
     /// <p>A unique identifier for an <code>XssMatchSet</code>. You use <code>XssMatchSetId</code> to get information about a <code>XssMatchSet</code> (see <code>GetXssMatchSet</code>), update an <code>XssMatchSet</code> (see <code>UpdateXssMatchSet</code>), insert an <code>XssMatchSet</code> into a <code>Rule</code> or delete one from a <code>Rule</code> (see <code>UpdateRule</code>), and delete an <code>XssMatchSet</code> from AWS WAF (see <code>DeleteXssMatchSet</code>).</p>
     /// <p> <code>XssMatchSetId</code> is returned by <code>CreateXssMatchSet</code> and by <code>ListXssMatchSets</code>.</p>
+    #[doc(hidden)]
     pub xss_match_set_id: std::option::Option<std::string::String>,
     /// <p>The name of the <code>XssMatchSet</code>, if any, specified by <code>Id</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl XssMatchSetSummary {
@@ -5478,11 +5514,10 @@ impl std::fmt::Debug for XssMatchSetSummary {
         formatter.finish()
     }
 }
-/// See [`XssMatchSetSummary`](crate::model::XssMatchSetSummary)
+/// See [`XssMatchSetSummary`](crate::model::XssMatchSetSummary).
 pub mod xss_match_set_summary {
 
-    /// A builder for [`XssMatchSetSummary`](crate::model::XssMatchSetSummary)
-    #[non_exhaustive]
+    /// A builder for [`XssMatchSetSummary`](crate::model::XssMatchSetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) xss_match_set_id: std::option::Option<std::string::String>,
@@ -5514,7 +5549,7 @@ pub mod xss_match_set_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`XssMatchSetSummary`](crate::model::XssMatchSetSummary)
+        /// Consumes the builder and constructs a [`XssMatchSetSummary`](crate::model::XssMatchSetSummary).
         pub fn build(self) -> crate::model::XssMatchSetSummary {
             crate::model::XssMatchSetSummary {
                 xss_match_set_id: self.xss_match_set_id,
@@ -5524,7 +5559,7 @@ pub mod xss_match_set_summary {
     }
 }
 impl XssMatchSetSummary {
-    /// Creates a new builder-style object to manufacture [`XssMatchSetSummary`](crate::model::XssMatchSetSummary)
+    /// Creates a new builder-style object to manufacture [`XssMatchSetSummary`](crate::model::XssMatchSetSummary).
     pub fn builder() -> crate::model::xss_match_set_summary::Builder {
         crate::model::xss_match_set_summary::Builder::default()
     }
@@ -5540,8 +5575,10 @@ impl XssMatchSetSummary {
 pub struct WebAclSummary {
     /// <p>A unique identifier for a <code>WebACL</code>. You use <code>WebACLId</code> to get information about a <code>WebACL</code> (see <code>GetWebACL</code>), update a <code>WebACL</code> (see <code>UpdateWebACL</code>), and delete a <code>WebACL</code> from AWS WAF (see <code>DeleteWebACL</code>).</p>
     /// <p> <code>WebACLId</code> is returned by <code>CreateWebACL</code> and by <code>ListWebACLs</code>.</p>
+    #[doc(hidden)]
     pub web_acl_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>WebACL</code>. You can't change the name of a <code>WebACL</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl WebAclSummary {
@@ -5563,11 +5600,10 @@ impl std::fmt::Debug for WebAclSummary {
         formatter.finish()
     }
 }
-/// See [`WebAclSummary`](crate::model::WebAclSummary)
+/// See [`WebAclSummary`](crate::model::WebAclSummary).
 pub mod web_acl_summary {
 
-    /// A builder for [`WebAclSummary`](crate::model::WebAclSummary)
-    #[non_exhaustive]
+    /// A builder for [`WebAclSummary`](crate::model::WebAclSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) web_acl_id: std::option::Option<std::string::String>,
@@ -5596,7 +5632,7 @@ pub mod web_acl_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`WebAclSummary`](crate::model::WebAclSummary)
+        /// Consumes the builder and constructs a [`WebAclSummary`](crate::model::WebAclSummary).
         pub fn build(self) -> crate::model::WebAclSummary {
             crate::model::WebAclSummary {
                 web_acl_id: self.web_acl_id,
@@ -5606,7 +5642,7 @@ pub mod web_acl_summary {
     }
 }
 impl WebAclSummary {
-    /// Creates a new builder-style object to manufacture [`WebAclSummary`](crate::model::WebAclSummary)
+    /// Creates a new builder-style object to manufacture [`WebAclSummary`](crate::model::WebAclSummary).
     pub fn builder() -> crate::model::web_acl_summary::Builder {
         crate::model::web_acl_summary::Builder::default()
     }
@@ -5622,8 +5658,10 @@ impl WebAclSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TagInfoForResource {
     /// <p></p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl TagInfoForResource {
@@ -5644,11 +5682,10 @@ impl std::fmt::Debug for TagInfoForResource {
         formatter.finish()
     }
 }
-/// See [`TagInfoForResource`](crate::model::TagInfoForResource)
+/// See [`TagInfoForResource`](crate::model::TagInfoForResource).
 pub mod tag_info_for_resource {
 
-    /// A builder for [`TagInfoForResource`](crate::model::TagInfoForResource)
-    #[non_exhaustive]
+    /// A builder for [`TagInfoForResource`](crate::model::TagInfoForResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -5684,7 +5721,7 @@ pub mod tag_info_for_resource {
             self.tag_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagInfoForResource`](crate::model::TagInfoForResource)
+        /// Consumes the builder and constructs a [`TagInfoForResource`](crate::model::TagInfoForResource).
         pub fn build(self) -> crate::model::TagInfoForResource {
             crate::model::TagInfoForResource {
                 resource_arn: self.resource_arn,
@@ -5694,7 +5731,7 @@ pub mod tag_info_for_resource {
     }
 }
 impl TagInfoForResource {
-    /// Creates a new builder-style object to manufacture [`TagInfoForResource`](crate::model::TagInfoForResource)
+    /// Creates a new builder-style object to manufacture [`TagInfoForResource`](crate::model::TagInfoForResource).
     pub fn builder() -> crate::model::tag_info_for_resource::Builder {
         crate::model::tag_info_for_resource::Builder::default()
     }
@@ -5709,10 +5746,13 @@ impl TagInfoForResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SubscribedRuleGroupSummary {
     /// <p>A unique identifier for a <code>RuleGroup</code>.</p>
+    #[doc(hidden)]
     pub rule_group_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>RuleGroup</code>. You can't change the name of a <code>RuleGroup</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A friendly name or description for the metrics for this <code>RuleGroup</code>. The name can contain only alphanumeric characters (A-Z, a-z, 0-9), with maximum length 128 and minimum length one. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default_Action." You can't change the name of the metric after you create the <code>RuleGroup</code>.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
 }
 impl SubscribedRuleGroupSummary {
@@ -5738,11 +5778,10 @@ impl std::fmt::Debug for SubscribedRuleGroupSummary {
         formatter.finish()
     }
 }
-/// See [`SubscribedRuleGroupSummary`](crate::model::SubscribedRuleGroupSummary)
+/// See [`SubscribedRuleGroupSummary`](crate::model::SubscribedRuleGroupSummary).
 pub mod subscribed_rule_group_summary {
 
-    /// A builder for [`SubscribedRuleGroupSummary`](crate::model::SubscribedRuleGroupSummary)
-    #[non_exhaustive]
+    /// A builder for [`SubscribedRuleGroupSummary`](crate::model::SubscribedRuleGroupSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_group_id: std::option::Option<std::string::String>,
@@ -5783,7 +5822,7 @@ pub mod subscribed_rule_group_summary {
             self.metric_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`SubscribedRuleGroupSummary`](crate::model::SubscribedRuleGroupSummary)
+        /// Consumes the builder and constructs a [`SubscribedRuleGroupSummary`](crate::model::SubscribedRuleGroupSummary).
         pub fn build(self) -> crate::model::SubscribedRuleGroupSummary {
             crate::model::SubscribedRuleGroupSummary {
                 rule_group_id: self.rule_group_id,
@@ -5794,7 +5833,7 @@ pub mod subscribed_rule_group_summary {
     }
 }
 impl SubscribedRuleGroupSummary {
-    /// Creates a new builder-style object to manufacture [`SubscribedRuleGroupSummary`](crate::model::SubscribedRuleGroupSummary)
+    /// Creates a new builder-style object to manufacture [`SubscribedRuleGroupSummary`](crate::model::SubscribedRuleGroupSummary).
     pub fn builder() -> crate::model::subscribed_rule_group_summary::Builder {
         crate::model::subscribed_rule_group_summary::Builder::default()
     }
@@ -5810,8 +5849,10 @@ impl SubscribedRuleGroupSummary {
 pub struct SqlInjectionMatchSetSummary {
     /// <p>A unique identifier for a <code>SqlInjectionMatchSet</code>. You use <code>SqlInjectionMatchSetId</code> to get information about a <code>SqlInjectionMatchSet</code> (see <code>GetSqlInjectionMatchSet</code>), update a <code>SqlInjectionMatchSet</code> (see <code>UpdateSqlInjectionMatchSet</code>), insert a <code>SqlInjectionMatchSet</code> into a <code>Rule</code> or delete one from a <code>Rule</code> (see <code>UpdateRule</code>), and delete a <code>SqlInjectionMatchSet</code> from AWS WAF (see <code>DeleteSqlInjectionMatchSet</code>).</p>
     /// <p> <code>SqlInjectionMatchSetId</code> is returned by <code>CreateSqlInjectionMatchSet</code> and by <code>ListSqlInjectionMatchSets</code>.</p>
+    #[doc(hidden)]
     pub sql_injection_match_set_id: std::option::Option<std::string::String>,
     /// <p>The name of the <code>SqlInjectionMatchSet</code>, if any, specified by <code>Id</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl SqlInjectionMatchSetSummary {
@@ -5836,11 +5877,10 @@ impl std::fmt::Debug for SqlInjectionMatchSetSummary {
         formatter.finish()
     }
 }
-/// See [`SqlInjectionMatchSetSummary`](crate::model::SqlInjectionMatchSetSummary)
+/// See [`SqlInjectionMatchSetSummary`](crate::model::SqlInjectionMatchSetSummary).
 pub mod sql_injection_match_set_summary {
 
-    /// A builder for [`SqlInjectionMatchSetSummary`](crate::model::SqlInjectionMatchSetSummary)
-    #[non_exhaustive]
+    /// A builder for [`SqlInjectionMatchSetSummary`](crate::model::SqlInjectionMatchSetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sql_injection_match_set_id: std::option::Option<std::string::String>,
@@ -5872,7 +5912,7 @@ pub mod sql_injection_match_set_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`SqlInjectionMatchSetSummary`](crate::model::SqlInjectionMatchSetSummary)
+        /// Consumes the builder and constructs a [`SqlInjectionMatchSetSummary`](crate::model::SqlInjectionMatchSetSummary).
         pub fn build(self) -> crate::model::SqlInjectionMatchSetSummary {
             crate::model::SqlInjectionMatchSetSummary {
                 sql_injection_match_set_id: self.sql_injection_match_set_id,
@@ -5882,7 +5922,7 @@ pub mod sql_injection_match_set_summary {
     }
 }
 impl SqlInjectionMatchSetSummary {
-    /// Creates a new builder-style object to manufacture [`SqlInjectionMatchSetSummary`](crate::model::SqlInjectionMatchSetSummary)
+    /// Creates a new builder-style object to manufacture [`SqlInjectionMatchSetSummary`](crate::model::SqlInjectionMatchSetSummary).
     pub fn builder() -> crate::model::sql_injection_match_set_summary::Builder {
         crate::model::sql_injection_match_set_summary::Builder::default()
     }
@@ -5898,8 +5938,10 @@ impl SqlInjectionMatchSetSummary {
 pub struct SizeConstraintSetSummary {
     /// <p>A unique identifier for a <code>SizeConstraintSet</code>. You use <code>SizeConstraintSetId</code> to get information about a <code>SizeConstraintSet</code> (see <code>GetSizeConstraintSet</code>), update a <code>SizeConstraintSet</code> (see <code>UpdateSizeConstraintSet</code>), insert a <code>SizeConstraintSet</code> into a <code>Rule</code> or delete one from a <code>Rule</code> (see <code>UpdateRule</code>), and delete a <code>SizeConstraintSet</code> from AWS WAF (see <code>DeleteSizeConstraintSet</code>).</p>
     /// <p> <code>SizeConstraintSetId</code> is returned by <code>CreateSizeConstraintSet</code> and by <code>ListSizeConstraintSets</code>.</p>
+    #[doc(hidden)]
     pub size_constraint_set_id: std::option::Option<std::string::String>,
     /// <p>The name of the <code>SizeConstraintSet</code>, if any.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl SizeConstraintSetSummary {
@@ -5921,11 +5963,10 @@ impl std::fmt::Debug for SizeConstraintSetSummary {
         formatter.finish()
     }
 }
-/// See [`SizeConstraintSetSummary`](crate::model::SizeConstraintSetSummary)
+/// See [`SizeConstraintSetSummary`](crate::model::SizeConstraintSetSummary).
 pub mod size_constraint_set_summary {
 
-    /// A builder for [`SizeConstraintSetSummary`](crate::model::SizeConstraintSetSummary)
-    #[non_exhaustive]
+    /// A builder for [`SizeConstraintSetSummary`](crate::model::SizeConstraintSetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) size_constraint_set_id: std::option::Option<std::string::String>,
@@ -5957,7 +5998,7 @@ pub mod size_constraint_set_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`SizeConstraintSetSummary`](crate::model::SizeConstraintSetSummary)
+        /// Consumes the builder and constructs a [`SizeConstraintSetSummary`](crate::model::SizeConstraintSetSummary).
         pub fn build(self) -> crate::model::SizeConstraintSetSummary {
             crate::model::SizeConstraintSetSummary {
                 size_constraint_set_id: self.size_constraint_set_id,
@@ -5967,7 +6008,7 @@ pub mod size_constraint_set_summary {
     }
 }
 impl SizeConstraintSetSummary {
-    /// Creates a new builder-style object to manufacture [`SizeConstraintSetSummary`](crate::model::SizeConstraintSetSummary)
+    /// Creates a new builder-style object to manufacture [`SizeConstraintSetSummary`](crate::model::SizeConstraintSetSummary).
     pub fn builder() -> crate::model::size_constraint_set_summary::Builder {
         crate::model::size_constraint_set_summary::Builder::default()
     }
@@ -5983,8 +6024,10 @@ impl SizeConstraintSetSummary {
 pub struct RuleSummary {
     /// <p>A unique identifier for a <code>Rule</code>. You use <code>RuleId</code> to get more information about a <code>Rule</code> (see <code>GetRule</code>), update a <code>Rule</code> (see <code>UpdateRule</code>), insert a <code>Rule</code> into a <code>WebACL</code> or delete one from a <code>WebACL</code> (see <code>UpdateWebACL</code>), or delete a <code>Rule</code> from AWS WAF (see <code>DeleteRule</code>).</p>
     /// <p> <code>RuleId</code> is returned by <code>CreateRule</code> and by <code>ListRules</code>.</p>
+    #[doc(hidden)]
     pub rule_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>Rule</code>. You can't change the name of a <code>Rule</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl RuleSummary {
@@ -6006,11 +6049,10 @@ impl std::fmt::Debug for RuleSummary {
         formatter.finish()
     }
 }
-/// See [`RuleSummary`](crate::model::RuleSummary)
+/// See [`RuleSummary`](crate::model::RuleSummary).
 pub mod rule_summary {
 
-    /// A builder for [`RuleSummary`](crate::model::RuleSummary)
-    #[non_exhaustive]
+    /// A builder for [`RuleSummary`](crate::model::RuleSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_id: std::option::Option<std::string::String>,
@@ -6039,7 +6081,7 @@ pub mod rule_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleSummary`](crate::model::RuleSummary)
+        /// Consumes the builder and constructs a [`RuleSummary`](crate::model::RuleSummary).
         pub fn build(self) -> crate::model::RuleSummary {
             crate::model::RuleSummary {
                 rule_id: self.rule_id,
@@ -6049,7 +6091,7 @@ pub mod rule_summary {
     }
 }
 impl RuleSummary {
-    /// Creates a new builder-style object to manufacture [`RuleSummary`](crate::model::RuleSummary)
+    /// Creates a new builder-style object to manufacture [`RuleSummary`](crate::model::RuleSummary).
     pub fn builder() -> crate::model::rule_summary::Builder {
         crate::model::rule_summary::Builder::default()
     }
@@ -6065,8 +6107,10 @@ impl RuleSummary {
 pub struct RuleGroupSummary {
     /// <p>A unique identifier for a <code>RuleGroup</code>. You use <code>RuleGroupId</code> to get more information about a <code>RuleGroup</code> (see <code>GetRuleGroup</code>), update a <code>RuleGroup</code> (see <code>UpdateRuleGroup</code>), insert a <code>RuleGroup</code> into a <code>WebACL</code> or delete one from a <code>WebACL</code> (see <code>UpdateWebACL</code>), or delete a <code>RuleGroup</code> from AWS WAF (see <code>DeleteRuleGroup</code>).</p>
     /// <p> <code>RuleGroupId</code> is returned by <code>CreateRuleGroup</code> and by <code>ListRuleGroups</code>.</p>
+    #[doc(hidden)]
     pub rule_group_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>RuleGroup</code>. You can't change the name of a <code>RuleGroup</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl RuleGroupSummary {
@@ -6088,11 +6132,10 @@ impl std::fmt::Debug for RuleGroupSummary {
         formatter.finish()
     }
 }
-/// See [`RuleGroupSummary`](crate::model::RuleGroupSummary)
+/// See [`RuleGroupSummary`](crate::model::RuleGroupSummary).
 pub mod rule_group_summary {
 
-    /// A builder for [`RuleGroupSummary`](crate::model::RuleGroupSummary)
-    #[non_exhaustive]
+    /// A builder for [`RuleGroupSummary`](crate::model::RuleGroupSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_group_id: std::option::Option<std::string::String>,
@@ -6124,7 +6167,7 @@ pub mod rule_group_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleGroupSummary`](crate::model::RuleGroupSummary)
+        /// Consumes the builder and constructs a [`RuleGroupSummary`](crate::model::RuleGroupSummary).
         pub fn build(self) -> crate::model::RuleGroupSummary {
             crate::model::RuleGroupSummary {
                 rule_group_id: self.rule_group_id,
@@ -6134,7 +6177,7 @@ pub mod rule_group_summary {
     }
 }
 impl RuleGroupSummary {
-    /// Creates a new builder-style object to manufacture [`RuleGroupSummary`](crate::model::RuleGroupSummary)
+    /// Creates a new builder-style object to manufacture [`RuleGroupSummary`](crate::model::RuleGroupSummary).
     pub fn builder() -> crate::model::rule_group_summary::Builder {
         crate::model::rule_group_summary::Builder::default()
     }
@@ -6150,8 +6193,10 @@ impl RuleGroupSummary {
 pub struct RegexPatternSetSummary {
     /// <p>The <code>RegexPatternSetId</code> for a <code>RegexPatternSet</code>. You use <code>RegexPatternSetId</code> to get information about a <code>RegexPatternSet</code>, update a <code>RegexPatternSet</code>, remove a <code>RegexPatternSet</code> from a <code>RegexMatchSet</code>, and delete a <code>RegexPatternSet</code> from AWS WAF.</p>
     /// <p> <code>RegexPatternSetId</code> is returned by <code>CreateRegexPatternSet</code> and by <code>ListRegexPatternSets</code>.</p>
+    #[doc(hidden)]
     pub regex_pattern_set_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>RegexPatternSet</code>. You can't change <code>Name</code> after you create a <code>RegexPatternSet</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl RegexPatternSetSummary {
@@ -6173,11 +6218,10 @@ impl std::fmt::Debug for RegexPatternSetSummary {
         formatter.finish()
     }
 }
-/// See [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary)
+/// See [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary).
 pub mod regex_pattern_set_summary {
 
-    /// A builder for [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary)
-    #[non_exhaustive]
+    /// A builder for [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) regex_pattern_set_id: std::option::Option<std::string::String>,
@@ -6209,7 +6253,7 @@ pub mod regex_pattern_set_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary)
+        /// Consumes the builder and constructs a [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary).
         pub fn build(self) -> crate::model::RegexPatternSetSummary {
             crate::model::RegexPatternSetSummary {
                 regex_pattern_set_id: self.regex_pattern_set_id,
@@ -6219,7 +6263,7 @@ pub mod regex_pattern_set_summary {
     }
 }
 impl RegexPatternSetSummary {
-    /// Creates a new builder-style object to manufacture [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary)
+    /// Creates a new builder-style object to manufacture [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary).
     pub fn builder() -> crate::model::regex_pattern_set_summary::Builder {
         crate::model::regex_pattern_set_summary::Builder::default()
     }
@@ -6235,8 +6279,10 @@ impl RegexPatternSetSummary {
 pub struct RegexMatchSetSummary {
     /// <p>The <code>RegexMatchSetId</code> for a <code>RegexMatchSet</code>. You use <code>RegexMatchSetId</code> to get information about a <code>RegexMatchSet</code>, update a <code>RegexMatchSet</code>, remove a <code>RegexMatchSet</code> from a <code>Rule</code>, and delete a <code>RegexMatchSet</code> from AWS WAF.</p>
     /// <p> <code>RegexMatchSetId</code> is returned by <code>CreateRegexMatchSet</code> and by <code>ListRegexMatchSets</code>.</p>
+    #[doc(hidden)]
     pub regex_match_set_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>RegexMatchSet</code>. You can't change <code>Name</code> after you create a <code>RegexMatchSet</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl RegexMatchSetSummary {
@@ -6258,11 +6304,10 @@ impl std::fmt::Debug for RegexMatchSetSummary {
         formatter.finish()
     }
 }
-/// See [`RegexMatchSetSummary`](crate::model::RegexMatchSetSummary)
+/// See [`RegexMatchSetSummary`](crate::model::RegexMatchSetSummary).
 pub mod regex_match_set_summary {
 
-    /// A builder for [`RegexMatchSetSummary`](crate::model::RegexMatchSetSummary)
-    #[non_exhaustive]
+    /// A builder for [`RegexMatchSetSummary`](crate::model::RegexMatchSetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) regex_match_set_id: std::option::Option<std::string::String>,
@@ -6294,7 +6339,7 @@ pub mod regex_match_set_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegexMatchSetSummary`](crate::model::RegexMatchSetSummary)
+        /// Consumes the builder and constructs a [`RegexMatchSetSummary`](crate::model::RegexMatchSetSummary).
         pub fn build(self) -> crate::model::RegexMatchSetSummary {
             crate::model::RegexMatchSetSummary {
                 regex_match_set_id: self.regex_match_set_id,
@@ -6304,7 +6349,7 @@ pub mod regex_match_set_summary {
     }
 }
 impl RegexMatchSetSummary {
-    /// Creates a new builder-style object to manufacture [`RegexMatchSetSummary`](crate::model::RegexMatchSetSummary)
+    /// Creates a new builder-style object to manufacture [`RegexMatchSetSummary`](crate::model::RegexMatchSetSummary).
     pub fn builder() -> crate::model::regex_match_set_summary::Builder {
         crate::model::regex_match_set_summary::Builder::default()
     }
@@ -6319,8 +6364,10 @@ impl RegexMatchSetSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IpSetSummary {
     /// <p>The <code>IPSetId</code> for an <code>IPSet</code>. You can use <code>IPSetId</code> in a <code>GetIPSet</code> request to get detailed information about an <code>IPSet</code>.</p>
+    #[doc(hidden)]
     pub ip_set_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>IPSet</code>. You can't change the name of an <code>IPSet</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl IpSetSummary {
@@ -6341,11 +6388,10 @@ impl std::fmt::Debug for IpSetSummary {
         formatter.finish()
     }
 }
-/// See [`IpSetSummary`](crate::model::IpSetSummary)
+/// See [`IpSetSummary`](crate::model::IpSetSummary).
 pub mod ip_set_summary {
 
-    /// A builder for [`IpSetSummary`](crate::model::IpSetSummary)
-    #[non_exhaustive]
+    /// A builder for [`IpSetSummary`](crate::model::IpSetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_set_id: std::option::Option<std::string::String>,
@@ -6372,7 +6418,7 @@ pub mod ip_set_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`IpSetSummary`](crate::model::IpSetSummary)
+        /// Consumes the builder and constructs a [`IpSetSummary`](crate::model::IpSetSummary).
         pub fn build(self) -> crate::model::IpSetSummary {
             crate::model::IpSetSummary {
                 ip_set_id: self.ip_set_id,
@@ -6382,7 +6428,7 @@ pub mod ip_set_summary {
     }
 }
 impl IpSetSummary {
-    /// Creates a new builder-style object to manufacture [`IpSetSummary`](crate::model::IpSetSummary)
+    /// Creates a new builder-style object to manufacture [`IpSetSummary`](crate::model::IpSetSummary).
     pub fn builder() -> crate::model::ip_set_summary::Builder {
         crate::model::ip_set_summary::Builder::default()
     }
@@ -6397,8 +6443,10 @@ impl IpSetSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GeoMatchSetSummary {
     /// <p>The <code>GeoMatchSetId</code> for an <code>GeoMatchSet</code>. You can use <code>GeoMatchSetId</code> in a <code>GetGeoMatchSet</code> request to get detailed information about an <code>GeoMatchSet</code>.</p>
+    #[doc(hidden)]
     pub geo_match_set_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>GeoMatchSet</code>. You can't change the name of an <code>GeoMatchSet</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl GeoMatchSetSummary {
@@ -6419,11 +6467,10 @@ impl std::fmt::Debug for GeoMatchSetSummary {
         formatter.finish()
     }
 }
-/// See [`GeoMatchSetSummary`](crate::model::GeoMatchSetSummary)
+/// See [`GeoMatchSetSummary`](crate::model::GeoMatchSetSummary).
 pub mod geo_match_set_summary {
 
-    /// A builder for [`GeoMatchSetSummary`](crate::model::GeoMatchSetSummary)
-    #[non_exhaustive]
+    /// A builder for [`GeoMatchSetSummary`](crate::model::GeoMatchSetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) geo_match_set_id: std::option::Option<std::string::String>,
@@ -6453,7 +6500,7 @@ pub mod geo_match_set_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeoMatchSetSummary`](crate::model::GeoMatchSetSummary)
+        /// Consumes the builder and constructs a [`GeoMatchSetSummary`](crate::model::GeoMatchSetSummary).
         pub fn build(self) -> crate::model::GeoMatchSetSummary {
             crate::model::GeoMatchSetSummary {
                 geo_match_set_id: self.geo_match_set_id,
@@ -6463,7 +6510,7 @@ pub mod geo_match_set_summary {
     }
 }
 impl GeoMatchSetSummary {
-    /// Creates a new builder-style object to manufacture [`GeoMatchSetSummary`](crate::model::GeoMatchSetSummary)
+    /// Creates a new builder-style object to manufacture [`GeoMatchSetSummary`](crate::model::GeoMatchSetSummary).
     pub fn builder() -> crate::model::geo_match_set_summary::Builder {
         crate::model::geo_match_set_summary::Builder::default()
     }
@@ -6479,8 +6526,10 @@ impl GeoMatchSetSummary {
 pub struct ByteMatchSetSummary {
     /// <p>The <code>ByteMatchSetId</code> for a <code>ByteMatchSet</code>. You use <code>ByteMatchSetId</code> to get information about a <code>ByteMatchSet</code>, update a <code>ByteMatchSet</code>, remove a <code>ByteMatchSet</code> from a <code>Rule</code>, and delete a <code>ByteMatchSet</code> from AWS WAF.</p>
     /// <p> <code>ByteMatchSetId</code> is returned by <code>CreateByteMatchSet</code> and by <code>ListByteMatchSets</code>.</p>
+    #[doc(hidden)]
     pub byte_match_set_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>ByteMatchSet</code>. You can't change <code>Name</code> after you create a <code>ByteMatchSet</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl ByteMatchSetSummary {
@@ -6502,11 +6551,10 @@ impl std::fmt::Debug for ByteMatchSetSummary {
         formatter.finish()
     }
 }
-/// See [`ByteMatchSetSummary`](crate::model::ByteMatchSetSummary)
+/// See [`ByteMatchSetSummary`](crate::model::ByteMatchSetSummary).
 pub mod byte_match_set_summary {
 
-    /// A builder for [`ByteMatchSetSummary`](crate::model::ByteMatchSetSummary)
-    #[non_exhaustive]
+    /// A builder for [`ByteMatchSetSummary`](crate::model::ByteMatchSetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) byte_match_set_id: std::option::Option<std::string::String>,
@@ -6538,7 +6586,7 @@ pub mod byte_match_set_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ByteMatchSetSummary`](crate::model::ByteMatchSetSummary)
+        /// Consumes the builder and constructs a [`ByteMatchSetSummary`](crate::model::ByteMatchSetSummary).
         pub fn build(self) -> crate::model::ByteMatchSetSummary {
             crate::model::ByteMatchSetSummary {
                 byte_match_set_id: self.byte_match_set_id,
@@ -6548,7 +6596,7 @@ pub mod byte_match_set_summary {
     }
 }
 impl ByteMatchSetSummary {
-    /// Creates a new builder-style object to manufacture [`ByteMatchSetSummary`](crate::model::ByteMatchSetSummary)
+    /// Creates a new builder-style object to manufacture [`ByteMatchSetSummary`](crate::model::ByteMatchSetSummary).
     pub fn builder() -> crate::model::byte_match_set_summary::Builder {
         crate::model::byte_match_set_summary::Builder::default()
     }
@@ -6564,10 +6612,13 @@ impl ByteMatchSetSummary {
 pub struct XssMatchSet {
     /// <p>A unique identifier for an <code>XssMatchSet</code>. You use <code>XssMatchSetId</code> to get information about an <code>XssMatchSet</code> (see <code>GetXssMatchSet</code>), update an <code>XssMatchSet</code> (see <code>UpdateXssMatchSet</code>), insert an <code>XssMatchSet</code> into a <code>Rule</code> or delete one from a <code>Rule</code> (see <code>UpdateRule</code>), and delete an <code>XssMatchSet</code> from AWS WAF (see <code>DeleteXssMatchSet</code>).</p>
     /// <p> <code>XssMatchSetId</code> is returned by <code>CreateXssMatchSet</code> and by <code>ListXssMatchSets</code>.</p>
+    #[doc(hidden)]
     pub xss_match_set_id: std::option::Option<std::string::String>,
     /// <p>The name, if any, of the <code>XssMatchSet</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Specifies the parts of web requests that you want to inspect for cross-site scripting attacks.</p>
+    #[doc(hidden)]
     pub xss_match_tuples: std::option::Option<std::vec::Vec<crate::model::XssMatchTuple>>,
 }
 impl XssMatchSet {
@@ -6594,11 +6645,10 @@ impl std::fmt::Debug for XssMatchSet {
         formatter.finish()
     }
 }
-/// See [`XssMatchSet`](crate::model::XssMatchSet)
+/// See [`XssMatchSet`](crate::model::XssMatchSet).
 pub mod xss_match_set {
 
-    /// A builder for [`XssMatchSet`](crate::model::XssMatchSet)
-    #[non_exhaustive]
+    /// A builder for [`XssMatchSet`](crate::model::XssMatchSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) xss_match_set_id: std::option::Option<std::string::String>,
@@ -6651,7 +6701,7 @@ pub mod xss_match_set {
             self.xss_match_tuples = input;
             self
         }
-        /// Consumes the builder and constructs a [`XssMatchSet`](crate::model::XssMatchSet)
+        /// Consumes the builder and constructs a [`XssMatchSet`](crate::model::XssMatchSet).
         pub fn build(self) -> crate::model::XssMatchSet {
             crate::model::XssMatchSet {
                 xss_match_set_id: self.xss_match_set_id,
@@ -6662,7 +6712,7 @@ pub mod xss_match_set {
     }
 }
 impl XssMatchSet {
-    /// Creates a new builder-style object to manufacture [`XssMatchSet`](crate::model::XssMatchSet)
+    /// Creates a new builder-style object to manufacture [`XssMatchSet`](crate::model::XssMatchSet).
     pub fn builder() -> crate::model::xss_match_set::Builder {
         crate::model::xss_match_set::Builder::default()
     }
@@ -6678,16 +6728,22 @@ impl XssMatchSet {
 pub struct WebAcl {
     /// <p>A unique identifier for a <code>WebACL</code>. You use <code>WebACLId</code> to get information about a <code>WebACL</code> (see <code>GetWebACL</code>), update a <code>WebACL</code> (see <code>UpdateWebACL</code>), and delete a <code>WebACL</code> from AWS WAF (see <code>DeleteWebACL</code>).</p>
     /// <p> <code>WebACLId</code> is returned by <code>CreateWebACL</code> and by <code>ListWebACLs</code>.</p>
+    #[doc(hidden)]
     pub web_acl_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>WebACL</code>. You can't change the name of a <code>WebACL</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A friendly name or description for the metrics for this <code>WebACL</code>. The name can contain only alphanumeric characters (A-Z, a-z, 0-9), with maximum length 128 and minimum length one. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default_Action." You can't change <code>MetricName</code> after you create the <code>WebACL</code>.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The action to perform if none of the <code>Rules</code> contained in the <code>WebACL</code> match. The action is specified by the <code>WafAction</code> object.</p>
+    #[doc(hidden)]
     pub default_action: std::option::Option<crate::model::WafAction>,
     /// <p>An array that contains the action for each <code>Rule</code> in a <code>WebACL</code>, the priority of the <code>Rule</code>, and the ID of the <code>Rule</code>.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::ActivatedRule>>,
     /// <p>Tha Amazon Resource Name (ARN) of the web ACL.</p>
+    #[doc(hidden)]
     pub web_acl_arn: std::option::Option<std::string::String>,
 }
 impl WebAcl {
@@ -6729,11 +6785,10 @@ impl std::fmt::Debug for WebAcl {
         formatter.finish()
     }
 }
-/// See [`WebAcl`](crate::model::WebAcl)
+/// See [`WebAcl`](crate::model::WebAcl).
 pub mod web_acl {
 
-    /// A builder for [`WebAcl`](crate::model::WebAcl)
-    #[non_exhaustive]
+    /// A builder for [`WebAcl`](crate::model::WebAcl).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) web_acl_id: std::option::Option<std::string::String>,
@@ -6818,7 +6873,7 @@ pub mod web_acl {
             self.web_acl_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`WebAcl`](crate::model::WebAcl)
+        /// Consumes the builder and constructs a [`WebAcl`](crate::model::WebAcl).
         pub fn build(self) -> crate::model::WebAcl {
             crate::model::WebAcl {
                 web_acl_id: self.web_acl_id,
@@ -6832,7 +6887,7 @@ pub mod web_acl {
     }
 }
 impl WebAcl {
-    /// Creates a new builder-style object to manufacture [`WebAcl`](crate::model::WebAcl)
+    /// Creates a new builder-style object to manufacture [`WebAcl`](crate::model::WebAcl).
     pub fn builder() -> crate::model::web_acl::Builder {
         crate::model::web_acl::Builder::default()
     }
@@ -6848,10 +6903,13 @@ impl WebAcl {
 pub struct SqlInjectionMatchSet {
     /// <p>A unique identifier for a <code>SqlInjectionMatchSet</code>. You use <code>SqlInjectionMatchSetId</code> to get information about a <code>SqlInjectionMatchSet</code> (see <code>GetSqlInjectionMatchSet</code>), update a <code>SqlInjectionMatchSet</code> (see <code>UpdateSqlInjectionMatchSet</code>), insert a <code>SqlInjectionMatchSet</code> into a <code>Rule</code> or delete one from a <code>Rule</code> (see <code>UpdateRule</code>), and delete a <code>SqlInjectionMatchSet</code> from AWS WAF (see <code>DeleteSqlInjectionMatchSet</code>).</p>
     /// <p> <code>SqlInjectionMatchSetId</code> is returned by <code>CreateSqlInjectionMatchSet</code> and by <code>ListSqlInjectionMatchSets</code>.</p>
+    #[doc(hidden)]
     pub sql_injection_match_set_id: std::option::Option<std::string::String>,
     /// <p>The name, if any, of the <code>SqlInjectionMatchSet</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Specifies the parts of web requests that you want to inspect for snippets of malicious SQL code.</p>
+    #[doc(hidden)]
     pub sql_injection_match_tuples:
         std::option::Option<std::vec::Vec<crate::model::SqlInjectionMatchTuple>>,
 }
@@ -6887,11 +6945,10 @@ impl std::fmt::Debug for SqlInjectionMatchSet {
         formatter.finish()
     }
 }
-/// See [`SqlInjectionMatchSet`](crate::model::SqlInjectionMatchSet)
+/// See [`SqlInjectionMatchSet`](crate::model::SqlInjectionMatchSet).
 pub mod sql_injection_match_set {
 
-    /// A builder for [`SqlInjectionMatchSet`](crate::model::SqlInjectionMatchSet)
-    #[non_exhaustive]
+    /// A builder for [`SqlInjectionMatchSet`](crate::model::SqlInjectionMatchSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sql_injection_match_set_id: std::option::Option<std::string::String>,
@@ -6947,7 +7004,7 @@ pub mod sql_injection_match_set {
             self.sql_injection_match_tuples = input;
             self
         }
-        /// Consumes the builder and constructs a [`SqlInjectionMatchSet`](crate::model::SqlInjectionMatchSet)
+        /// Consumes the builder and constructs a [`SqlInjectionMatchSet`](crate::model::SqlInjectionMatchSet).
         pub fn build(self) -> crate::model::SqlInjectionMatchSet {
             crate::model::SqlInjectionMatchSet {
                 sql_injection_match_set_id: self.sql_injection_match_set_id,
@@ -6958,7 +7015,7 @@ pub mod sql_injection_match_set {
     }
 }
 impl SqlInjectionMatchSet {
-    /// Creates a new builder-style object to manufacture [`SqlInjectionMatchSet`](crate::model::SqlInjectionMatchSet)
+    /// Creates a new builder-style object to manufacture [`SqlInjectionMatchSet`](crate::model::SqlInjectionMatchSet).
     pub fn builder() -> crate::model::sql_injection_match_set::Builder {
         crate::model::sql_injection_match_set::Builder::default()
     }
@@ -6974,10 +7031,13 @@ impl SqlInjectionMatchSet {
 pub struct SizeConstraintSet {
     /// <p>A unique identifier for a <code>SizeConstraintSet</code>. You use <code>SizeConstraintSetId</code> to get information about a <code>SizeConstraintSet</code> (see <code>GetSizeConstraintSet</code>), update a <code>SizeConstraintSet</code> (see <code>UpdateSizeConstraintSet</code>), insert a <code>SizeConstraintSet</code> into a <code>Rule</code> or delete one from a <code>Rule</code> (see <code>UpdateRule</code>), and delete a <code>SizeConstraintSet</code> from AWS WAF (see <code>DeleteSizeConstraintSet</code>).</p>
     /// <p> <code>SizeConstraintSetId</code> is returned by <code>CreateSizeConstraintSet</code> and by <code>ListSizeConstraintSets</code>.</p>
+    #[doc(hidden)]
     pub size_constraint_set_id: std::option::Option<std::string::String>,
     /// <p>The name, if any, of the <code>SizeConstraintSet</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Specifies the parts of web requests that you want to inspect the size of.</p>
+    #[doc(hidden)]
     pub size_constraints: std::option::Option<std::vec::Vec<crate::model::SizeConstraint>>,
 }
 impl SizeConstraintSet {
@@ -7004,11 +7064,10 @@ impl std::fmt::Debug for SizeConstraintSet {
         formatter.finish()
     }
 }
-/// See [`SizeConstraintSet`](crate::model::SizeConstraintSet)
+/// See [`SizeConstraintSet`](crate::model::SizeConstraintSet).
 pub mod size_constraint_set {
 
-    /// A builder for [`SizeConstraintSet`](crate::model::SizeConstraintSet)
-    #[non_exhaustive]
+    /// A builder for [`SizeConstraintSet`](crate::model::SizeConstraintSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) size_constraint_set_id: std::option::Option<std::string::String>,
@@ -7061,7 +7120,7 @@ pub mod size_constraint_set {
             self.size_constraints = input;
             self
         }
-        /// Consumes the builder and constructs a [`SizeConstraintSet`](crate::model::SizeConstraintSet)
+        /// Consumes the builder and constructs a [`SizeConstraintSet`](crate::model::SizeConstraintSet).
         pub fn build(self) -> crate::model::SizeConstraintSet {
             crate::model::SizeConstraintSet {
                 size_constraint_set_id: self.size_constraint_set_id,
@@ -7072,7 +7131,7 @@ pub mod size_constraint_set {
     }
 }
 impl SizeConstraintSet {
-    /// Creates a new builder-style object to manufacture [`SizeConstraintSet`](crate::model::SizeConstraintSet)
+    /// Creates a new builder-style object to manufacture [`SizeConstraintSet`](crate::model::SizeConstraintSet).
     pub fn builder() -> crate::model::size_constraint_set::Builder {
         crate::model::size_constraint_set::Builder::default()
     }
@@ -7089,8 +7148,10 @@ impl SizeConstraintSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimeWindow {
     /// <p>The beginning of the time range from which you want <code>GetSampledRequests</code> to return a sample of the requests that your AWS resource received. You must specify the date and time in Coordinated Universal Time (UTC) format. UTC format includes the special designator, <code>Z</code>. For example, <code>"2016-09-27T14:50Z"</code>. You can specify any time range in the previous three hours.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end of the time range from which you want <code>GetSampledRequests</code> to return a sample of the requests that your AWS resource received. You must specify the date and time in Coordinated Universal Time (UTC) format. UTC format includes the special designator, <code>Z</code>. For example, <code>"2016-09-27T14:50Z"</code>. You can specify any time range in the previous three hours.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TimeWindow {
@@ -7111,11 +7172,10 @@ impl std::fmt::Debug for TimeWindow {
         formatter.finish()
     }
 }
-/// See [`TimeWindow`](crate::model::TimeWindow)
+/// See [`TimeWindow`](crate::model::TimeWindow).
 pub mod time_window {
 
-    /// A builder for [`TimeWindow`](crate::model::TimeWindow)
-    #[non_exhaustive]
+    /// A builder for [`TimeWindow`](crate::model::TimeWindow).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -7148,7 +7208,7 @@ pub mod time_window {
             self.end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimeWindow`](crate::model::TimeWindow)
+        /// Consumes the builder and constructs a [`TimeWindow`](crate::model::TimeWindow).
         pub fn build(self) -> crate::model::TimeWindow {
             crate::model::TimeWindow {
                 start_time: self.start_time,
@@ -7158,7 +7218,7 @@ pub mod time_window {
     }
 }
 impl TimeWindow {
-    /// Creates a new builder-style object to manufacture [`TimeWindow`](crate::model::TimeWindow)
+    /// Creates a new builder-style object to manufacture [`TimeWindow`](crate::model::TimeWindow).
     pub fn builder() -> crate::model::time_window::Builder {
         crate::model::time_window::Builder::default()
     }
@@ -7173,14 +7233,19 @@ impl TimeWindow {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SampledHttpRequest {
     /// <p>A complex type that contains detailed information about the request.</p>
+    #[doc(hidden)]
     pub request: std::option::Option<crate::model::HttpRequest>,
     /// <p>A value that indicates how one result in the response relates proportionally to other results in the response. A result that has a weight of <code>2</code> represents roughly twice as many CloudFront web requests as a result that has a weight of <code>1</code>.</p>
+    #[doc(hidden)]
     pub weight: i64,
     /// <p>The time at which AWS WAF received the request from your AWS resource, in Unix time format (in seconds).</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The action for the <code>Rule</code> that the request matched: <code>ALLOW</code>, <code>BLOCK</code>, or <code>COUNT</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<std::string::String>,
     /// <p>This value is returned if the <code>GetSampledRequests</code> request specifies the ID of a <code>RuleGroup</code> rather than the ID of an individual rule. <code>RuleWithinRuleGroup</code> is the rule within the specified <code>RuleGroup</code> that matched the request listed in the response.</p>
+    #[doc(hidden)]
     pub rule_within_rule_group: std::option::Option<std::string::String>,
 }
 impl SampledHttpRequest {
@@ -7216,11 +7281,10 @@ impl std::fmt::Debug for SampledHttpRequest {
         formatter.finish()
     }
 }
-/// See [`SampledHttpRequest`](crate::model::SampledHttpRequest)
+/// See [`SampledHttpRequest`](crate::model::SampledHttpRequest).
 pub mod sampled_http_request {
 
-    /// A builder for [`SampledHttpRequest`](crate::model::SampledHttpRequest)
-    #[non_exhaustive]
+    /// A builder for [`SampledHttpRequest`](crate::model::SampledHttpRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request: std::option::Option<crate::model::HttpRequest>,
@@ -7289,7 +7353,7 @@ pub mod sampled_http_request {
             self.rule_within_rule_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`SampledHttpRequest`](crate::model::SampledHttpRequest)
+        /// Consumes the builder and constructs a [`SampledHttpRequest`](crate::model::SampledHttpRequest).
         pub fn build(self) -> crate::model::SampledHttpRequest {
             crate::model::SampledHttpRequest {
                 request: self.request,
@@ -7302,7 +7366,7 @@ pub mod sampled_http_request {
     }
 }
 impl SampledHttpRequest {
-    /// Creates a new builder-style object to manufacture [`SampledHttpRequest`](crate::model::SampledHttpRequest)
+    /// Creates a new builder-style object to manufacture [`SampledHttpRequest`](crate::model::SampledHttpRequest).
     pub fn builder() -> crate::model::sampled_http_request::Builder {
         crate::model::sampled_http_request::Builder::default()
     }
@@ -7321,16 +7385,22 @@ pub struct HttpRequest {
     /// <li> <p> <code>c-ip</code>, if the viewer did not use an HTTP proxy or a load balancer to send the request</p> </li>
     /// <li> <p> <code>x-forwarded-for</code>, if the viewer did use an HTTP proxy or a load balancer to send the request</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub client_ip: std::option::Option<std::string::String>,
     /// <p>The two-letter country code for the country that the request originated from. For a current list of country codes, see the Wikipedia entry <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    #[doc(hidden)]
     pub country: std::option::Option<std::string::String>,
     /// <p>The part of a web request that identifies the resource, for example, <code>/images/daily-ad.jpg</code>.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
     /// <p>The HTTP method specified in the sampled web request. CloudFront supports the following methods: <code>DELETE</code>, <code>GET</code>, <code>HEAD</code>, <code>OPTIONS</code>, <code>PATCH</code>, <code>POST</code>, and <code>PUT</code>. </p>
+    #[doc(hidden)]
     pub method: std::option::Option<std::string::String>,
     /// <p>The HTTP version specified in the sampled web request, for example, <code>HTTP/1.1</code>.</p>
+    #[doc(hidden)]
     pub http_version: std::option::Option<std::string::String>,
     /// <p>A complex type that contains two values for each header in the sampled web request: the name of the header and the value of the header.</p>
+    #[doc(hidden)]
     pub headers: std::option::Option<std::vec::Vec<crate::model::HttpHeader>>,
 }
 impl HttpRequest {
@@ -7375,11 +7445,10 @@ impl std::fmt::Debug for HttpRequest {
         formatter.finish()
     }
 }
-/// See [`HttpRequest`](crate::model::HttpRequest)
+/// See [`HttpRequest`](crate::model::HttpRequest).
 pub mod http_request {
 
-    /// A builder for [`HttpRequest`](crate::model::HttpRequest)
-    #[non_exhaustive]
+    /// A builder for [`HttpRequest`](crate::model::HttpRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_ip: std::option::Option<std::string::String>,
@@ -7467,7 +7536,7 @@ pub mod http_request {
             self.headers = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpRequest`](crate::model::HttpRequest)
+        /// Consumes the builder and constructs a [`HttpRequest`](crate::model::HttpRequest).
         pub fn build(self) -> crate::model::HttpRequest {
             crate::model::HttpRequest {
                 client_ip: self.client_ip,
@@ -7481,7 +7550,7 @@ pub mod http_request {
     }
 }
 impl HttpRequest {
-    /// Creates a new builder-style object to manufacture [`HttpRequest`](crate::model::HttpRequest)
+    /// Creates a new builder-style object to manufacture [`HttpRequest`](crate::model::HttpRequest).
     pub fn builder() -> crate::model::http_request::Builder {
         crate::model::http_request::Builder::default()
     }
@@ -7496,8 +7565,10 @@ impl HttpRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpHeader {
     /// <p>The name of one of the headers in the sampled web request.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value of one of the headers in the sampled web request.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl HttpHeader {
@@ -7518,11 +7589,10 @@ impl std::fmt::Debug for HttpHeader {
         formatter.finish()
     }
 }
-/// See [`HttpHeader`](crate::model::HttpHeader)
+/// See [`HttpHeader`](crate::model::HttpHeader).
 pub mod http_header {
 
-    /// A builder for [`HttpHeader`](crate::model::HttpHeader)
-    #[non_exhaustive]
+    /// A builder for [`HttpHeader`](crate::model::HttpHeader).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -7549,7 +7619,7 @@ pub mod http_header {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpHeader`](crate::model::HttpHeader)
+        /// Consumes the builder and constructs a [`HttpHeader`](crate::model::HttpHeader).
         pub fn build(self) -> crate::model::HttpHeader {
             crate::model::HttpHeader {
                 name: self.name,
@@ -7559,7 +7629,7 @@ pub mod http_header {
     }
 }
 impl HttpHeader {
-    /// Creates a new builder-style object to manufacture [`HttpHeader`](crate::model::HttpHeader)
+    /// Creates a new builder-style object to manufacture [`HttpHeader`](crate::model::HttpHeader).
     pub fn builder() -> crate::model::http_header::Builder {
         crate::model::http_header::Builder::default()
     }
@@ -7581,10 +7651,13 @@ impl HttpHeader {
 pub struct RuleGroup {
     /// <p>A unique identifier for a <code>RuleGroup</code>. You use <code>RuleGroupId</code> to get more information about a <code>RuleGroup</code> (see <code>GetRuleGroup</code>), update a <code>RuleGroup</code> (see <code>UpdateRuleGroup</code>), insert a <code>RuleGroup</code> into a <code>WebACL</code> or delete a one from a <code>WebACL</code> (see <code>UpdateWebACL</code>), or delete a <code>RuleGroup</code> from AWS WAF (see <code>DeleteRuleGroup</code>).</p>
     /// <p> <code>RuleGroupId</code> is returned by <code>CreateRuleGroup</code> and by <code>ListRuleGroups</code>.</p>
+    #[doc(hidden)]
     pub rule_group_id: std::option::Option<std::string::String>,
     /// <p>The friendly name or description for the <code>RuleGroup</code>. You can't change the name of a <code>RuleGroup</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A friendly name or description for the metrics for this <code>RuleGroup</code>. The name can contain only alphanumeric characters (A-Z, a-z, 0-9), with maximum length 128 and minimum length one. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default_Action." You can't change the name of the metric after you create the <code>RuleGroup</code>.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
 }
 impl RuleGroup {
@@ -7611,11 +7684,10 @@ impl std::fmt::Debug for RuleGroup {
         formatter.finish()
     }
 }
-/// See [`RuleGroup`](crate::model::RuleGroup)
+/// See [`RuleGroup`](crate::model::RuleGroup).
 pub mod rule_group {
 
-    /// A builder for [`RuleGroup`](crate::model::RuleGroup)
-    #[non_exhaustive]
+    /// A builder for [`RuleGroup`](crate::model::RuleGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_group_id: std::option::Option<std::string::String>,
@@ -7658,7 +7730,7 @@ pub mod rule_group {
             self.metric_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleGroup`](crate::model::RuleGroup)
+        /// Consumes the builder and constructs a [`RuleGroup`](crate::model::RuleGroup).
         pub fn build(self) -> crate::model::RuleGroup {
             crate::model::RuleGroup {
                 rule_group_id: self.rule_group_id,
@@ -7669,7 +7741,7 @@ pub mod rule_group {
     }
 }
 impl RuleGroup {
-    /// Creates a new builder-style object to manufacture [`RuleGroup`](crate::model::RuleGroup)
+    /// Creates a new builder-style object to manufacture [`RuleGroup`](crate::model::RuleGroup).
     pub fn builder() -> crate::model::rule_group::Builder {
         crate::model::rule_group::Builder::default()
     }
@@ -7690,12 +7762,16 @@ impl RuleGroup {
 pub struct Rule {
     /// <p>A unique identifier for a <code>Rule</code>. You use <code>RuleId</code> to get more information about a <code>Rule</code> (see <code>GetRule</code>), update a <code>Rule</code> (see <code>UpdateRule</code>), insert a <code>Rule</code> into a <code>WebACL</code> or delete a one from a <code>WebACL</code> (see <code>UpdateWebACL</code>), or delete a <code>Rule</code> from AWS WAF (see <code>DeleteRule</code>).</p>
     /// <p> <code>RuleId</code> is returned by <code>CreateRule</code> and by <code>ListRules</code>.</p>
+    #[doc(hidden)]
     pub rule_id: std::option::Option<std::string::String>,
     /// <p>The friendly name or description for the <code>Rule</code>. You can't change the name of a <code>Rule</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A friendly name or description for the metrics for this <code>Rule</code>. The name can contain only alphanumeric characters (A-Z, a-z, 0-9), with maximum length 128 and minimum length one. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default_Action." You can't change <code>MetricName</code> after you create the <code>Rule</code>.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The <code>Predicates</code> object contains one <code>Predicate</code> element for each <code>ByteMatchSet</code>, <code>IPSet</code>, or <code>SqlInjectionMatchSet</code> object that you want to include in a <code>Rule</code>.</p>
+    #[doc(hidden)]
     pub predicates: std::option::Option<std::vec::Vec<crate::model::Predicate>>,
 }
 impl Rule {
@@ -7727,11 +7803,10 @@ impl std::fmt::Debug for Rule {
         formatter.finish()
     }
 }
-/// See [`Rule`](crate::model::Rule)
+/// See [`Rule`](crate::model::Rule).
 pub mod rule {
 
-    /// A builder for [`Rule`](crate::model::Rule)
-    #[non_exhaustive]
+    /// A builder for [`Rule`](crate::model::Rule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_id: std::option::Option<std::string::String>,
@@ -7791,7 +7866,7 @@ pub mod rule {
             self.predicates = input;
             self
         }
-        /// Consumes the builder and constructs a [`Rule`](crate::model::Rule)
+        /// Consumes the builder and constructs a [`Rule`](crate::model::Rule).
         pub fn build(self) -> crate::model::Rule {
             crate::model::Rule {
                 rule_id: self.rule_id,
@@ -7803,7 +7878,7 @@ pub mod rule {
     }
 }
 impl Rule {
-    /// Creates a new builder-style object to manufacture [`Rule`](crate::model::Rule)
+    /// Creates a new builder-style object to manufacture [`Rule`](crate::model::Rule).
     pub fn builder() -> crate::model::rule::Builder {
         crate::model::rule::Builder::default()
     }
@@ -7819,10 +7894,13 @@ impl Rule {
 pub struct RegexPatternSet {
     /// <p>The identifier for the <code>RegexPatternSet</code>. You use <code>RegexPatternSetId</code> to get information about a <code>RegexPatternSet</code>, update a <code>RegexPatternSet</code>, remove a <code>RegexPatternSet</code> from a <code>RegexMatchSet</code>, and delete a <code>RegexPatternSet</code> from AWS WAF.</p>
     /// <p> <code>RegexMatchSetId</code> is returned by <code>CreateRegexPatternSet</code> and by <code>ListRegexPatternSets</code>.</p>
+    #[doc(hidden)]
     pub regex_pattern_set_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>RegexPatternSet</code>. You can't change <code>Name</code> after you create a <code>RegexPatternSet</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Specifies the regular expression (regex) patterns that you want AWS WAF to search for, such as <code>B[a@]dB[o0]t</code>.</p>
+    #[doc(hidden)]
     pub regex_pattern_strings: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl RegexPatternSet {
@@ -7849,11 +7927,10 @@ impl std::fmt::Debug for RegexPatternSet {
         formatter.finish()
     }
 }
-/// See [`RegexPatternSet`](crate::model::RegexPatternSet)
+/// See [`RegexPatternSet`](crate::model::RegexPatternSet).
 pub mod regex_pattern_set {
 
-    /// A builder for [`RegexPatternSet`](crate::model::RegexPatternSet)
-    #[non_exhaustive]
+    /// A builder for [`RegexPatternSet`](crate::model::RegexPatternSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) regex_pattern_set_id: std::option::Option<std::string::String>,
@@ -7905,7 +7982,7 @@ pub mod regex_pattern_set {
             self.regex_pattern_strings = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegexPatternSet`](crate::model::RegexPatternSet)
+        /// Consumes the builder and constructs a [`RegexPatternSet`](crate::model::RegexPatternSet).
         pub fn build(self) -> crate::model::RegexPatternSet {
             crate::model::RegexPatternSet {
                 regex_pattern_set_id: self.regex_pattern_set_id,
@@ -7916,7 +7993,7 @@ pub mod regex_pattern_set {
     }
 }
 impl RegexPatternSet {
-    /// Creates a new builder-style object to manufacture [`RegexPatternSet`](crate::model::RegexPatternSet)
+    /// Creates a new builder-style object to manufacture [`RegexPatternSet`](crate::model::RegexPatternSet).
     pub fn builder() -> crate::model::regex_pattern_set::Builder {
         crate::model::regex_pattern_set::Builder::default()
     }
@@ -7933,8 +8010,10 @@ impl RegexPatternSet {
 pub struct RegexMatchSet {
     /// <p>The <code>RegexMatchSetId</code> for a <code>RegexMatchSet</code>. You use <code>RegexMatchSetId</code> to get information about a <code>RegexMatchSet</code> (see <code>GetRegexMatchSet</code>), update a <code>RegexMatchSet</code> (see <code>UpdateRegexMatchSet</code>), insert a <code>RegexMatchSet</code> into a <code>Rule</code> or delete one from a <code>Rule</code> (see <code>UpdateRule</code>), and delete a <code>RegexMatchSet</code> from AWS WAF (see <code>DeleteRegexMatchSet</code>).</p>
     /// <p> <code>RegexMatchSetId</code> is returned by <code>CreateRegexMatchSet</code> and by <code>ListRegexMatchSets</code>.</p>
+    #[doc(hidden)]
     pub regex_match_set_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>RegexMatchSet</code>. You can't change <code>Name</code> after you create a <code>RegexMatchSet</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Contains an array of <code>RegexMatchTuple</code> objects. Each <code>RegexMatchTuple</code> object contains: </p>
     /// <ul>
@@ -7942,6 +8021,7 @@ pub struct RegexMatchSet {
     /// <li> <p>The identifier of the pattern (a regular expression) that you want AWS WAF to look for. For more information, see <code>RegexPatternSet</code>.</p> </li>
     /// <li> <p>Whether to perform any conversions on the request, such as converting it to lowercase, before inspecting it for the specified string.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub regex_match_tuples: std::option::Option<std::vec::Vec<crate::model::RegexMatchTuple>>,
 }
 impl RegexMatchSet {
@@ -7973,11 +8053,10 @@ impl std::fmt::Debug for RegexMatchSet {
         formatter.finish()
     }
 }
-/// See [`RegexMatchSet`](crate::model::RegexMatchSet)
+/// See [`RegexMatchSet`](crate::model::RegexMatchSet).
 pub mod regex_match_set {
 
-    /// A builder for [`RegexMatchSet`](crate::model::RegexMatchSet)
-    #[non_exhaustive]
+    /// A builder for [`RegexMatchSet`](crate::model::RegexMatchSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) regex_match_set_id: std::option::Option<std::string::String>,
@@ -8040,7 +8119,7 @@ pub mod regex_match_set {
             self.regex_match_tuples = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegexMatchSet`](crate::model::RegexMatchSet)
+        /// Consumes the builder and constructs a [`RegexMatchSet`](crate::model::RegexMatchSet).
         pub fn build(self) -> crate::model::RegexMatchSet {
             crate::model::RegexMatchSet {
                 regex_match_set_id: self.regex_match_set_id,
@@ -8051,7 +8130,7 @@ pub mod regex_match_set {
     }
 }
 impl RegexMatchSet {
-    /// Creates a new builder-style object to manufacture [`RegexMatchSet`](crate::model::RegexMatchSet)
+    /// Creates a new builder-style object to manufacture [`RegexMatchSet`](crate::model::RegexMatchSet).
     pub fn builder() -> crate::model::regex_match_set::Builder {
         crate::model::regex_match_set::Builder::default()
     }
@@ -8072,16 +8151,22 @@ impl RegexMatchSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RateBasedRule {
     /// <p>A unique identifier for a <code>RateBasedRule</code>. You use <code>RuleId</code> to get more information about a <code>RateBasedRule</code> (see <code>GetRateBasedRule</code>), update a <code>RateBasedRule</code> (see <code>UpdateRateBasedRule</code>), insert a <code>RateBasedRule</code> into a <code>WebACL</code> or delete one from a <code>WebACL</code> (see <code>UpdateWebACL</code>), or delete a <code>RateBasedRule</code> from AWS WAF (see <code>DeleteRateBasedRule</code>).</p>
+    #[doc(hidden)]
     pub rule_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description for a <code>RateBasedRule</code>. You can't change the name of a <code>RateBasedRule</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A friendly name or description for the metrics for a <code>RateBasedRule</code>. The name can contain only alphanumeric characters (A-Z, a-z, 0-9), with maximum length 128 and minimum length one. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default_Action." You can't change the name of the metric after you create the <code>RateBasedRule</code>.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The <code>Predicates</code> object contains one <code>Predicate</code> element for each <code>ByteMatchSet</code>, <code>IPSet</code>, or <code>SqlInjectionMatchSet</code> object that you want to include in a <code>RateBasedRule</code>.</p>
+    #[doc(hidden)]
     pub match_predicates: std::option::Option<std::vec::Vec<crate::model::Predicate>>,
     /// <p>The field that AWS WAF uses to determine if requests are likely arriving from single source and thus subject to rate monitoring. The only valid value for <code>RateKey</code> is <code>IP</code>. <code>IP</code> indicates that requests arriving from the same IP address are subject to the <code>RateLimit</code> that is specified in the <code>RateBasedRule</code>.</p>
+    #[doc(hidden)]
     pub rate_key: std::option::Option<crate::model::RateKey>,
     /// <p>The maximum number of requests, which have an identical value in the field specified by the <code>RateKey</code>, allowed in a five-minute period. If the number of requests exceeds the <code>RateLimit</code> and the other predicates specified in the rule are also met, AWS WAF triggers the action that is specified for this rule.</p>
+    #[doc(hidden)]
     pub rate_limit: i64,
 }
 impl RateBasedRule {
@@ -8122,11 +8207,10 @@ impl std::fmt::Debug for RateBasedRule {
         formatter.finish()
     }
 }
-/// See [`RateBasedRule`](crate::model::RateBasedRule)
+/// See [`RateBasedRule`](crate::model::RateBasedRule).
 pub mod rate_based_rule {
 
-    /// A builder for [`RateBasedRule`](crate::model::RateBasedRule)
-    #[non_exhaustive]
+    /// A builder for [`RateBasedRule`](crate::model::RateBasedRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_id: std::option::Option<std::string::String>,
@@ -8206,7 +8290,7 @@ pub mod rate_based_rule {
             self.rate_limit = input;
             self
         }
-        /// Consumes the builder and constructs a [`RateBasedRule`](crate::model::RateBasedRule)
+        /// Consumes the builder and constructs a [`RateBasedRule`](crate::model::RateBasedRule).
         pub fn build(self) -> crate::model::RateBasedRule {
             crate::model::RateBasedRule {
                 rule_id: self.rule_id,
@@ -8220,7 +8304,7 @@ pub mod rate_based_rule {
     }
 }
 impl RateBasedRule {
-    /// Creates a new builder-style object to manufacture [`RateBasedRule`](crate::model::RateBasedRule)
+    /// Creates a new builder-style object to manufacture [`RateBasedRule`](crate::model::RateBasedRule).
     pub fn builder() -> crate::model::rate_based_rule::Builder {
         crate::model::rate_based_rule::Builder::default()
     }
@@ -8288,10 +8372,13 @@ impl AsRef<str> for RateKey {
 pub struct IpSet {
     /// <p>The <code>IPSetId</code> for an <code>IPSet</code>. You use <code>IPSetId</code> to get information about an <code>IPSet</code> (see <code>GetIPSet</code>), update an <code>IPSet</code> (see <code>UpdateIPSet</code>), insert an <code>IPSet</code> into a <code>Rule</code> or delete one from a <code>Rule</code> (see <code>UpdateRule</code>), and delete an <code>IPSet</code> from AWS WAF (see <code>DeleteIPSet</code>).</p>
     /// <p> <code>IPSetId</code> is returned by <code>CreateIPSet</code> and by <code>ListIPSets</code>.</p>
+    #[doc(hidden)]
     pub ip_set_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>IPSet</code>. You can't change the name of an <code>IPSet</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The IP address type (<code>IPV4</code> or <code>IPV6</code>) and the IP address range (in CIDR notation) that web requests originate from. If the <code>WebACL</code> is associated with a CloudFront distribution and the viewer did not use an HTTP proxy or a load balancer to send the request, this is the value of the c-ip field in the CloudFront access logs.</p>
+    #[doc(hidden)]
     pub ip_set_descriptors: std::option::Option<std::vec::Vec<crate::model::IpSetDescriptor>>,
 }
 impl IpSet {
@@ -8318,11 +8405,10 @@ impl std::fmt::Debug for IpSet {
         formatter.finish()
     }
 }
-/// See [`IpSet`](crate::model::IpSet)
+/// See [`IpSet`](crate::model::IpSet).
 pub mod ip_set {
 
-    /// A builder for [`IpSet`](crate::model::IpSet)
-    #[non_exhaustive]
+    /// A builder for [`IpSet`](crate::model::IpSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_set_id: std::option::Option<std::string::String>,
@@ -8372,7 +8458,7 @@ pub mod ip_set {
             self.ip_set_descriptors = input;
             self
         }
-        /// Consumes the builder and constructs a [`IpSet`](crate::model::IpSet)
+        /// Consumes the builder and constructs a [`IpSet`](crate::model::IpSet).
         pub fn build(self) -> crate::model::IpSet {
             crate::model::IpSet {
                 ip_set_id: self.ip_set_id,
@@ -8383,7 +8469,7 @@ pub mod ip_set {
     }
 }
 impl IpSet {
-    /// Creates a new builder-style object to manufacture [`IpSet`](crate::model::IpSet)
+    /// Creates a new builder-style object to manufacture [`IpSet`](crate::model::IpSet).
     pub fn builder() -> crate::model::ip_set::Builder {
         crate::model::ip_set::Builder::default()
     }
@@ -8399,10 +8485,13 @@ impl IpSet {
 pub struct GeoMatchSet {
     /// <p>The <code>GeoMatchSetId</code> for an <code>GeoMatchSet</code>. You use <code>GeoMatchSetId</code> to get information about a <code>GeoMatchSet</code> (see <code>GeoMatchSet</code>), update a <code>GeoMatchSet</code> (see <code>UpdateGeoMatchSet</code>), insert a <code>GeoMatchSet</code> into a <code>Rule</code> or delete one from a <code>Rule</code> (see <code>UpdateRule</code>), and delete a <code>GeoMatchSet</code> from AWS WAF (see <code>DeleteGeoMatchSet</code>).</p>
     /// <p> <code>GeoMatchSetId</code> is returned by <code>CreateGeoMatchSet</code> and by <code>ListGeoMatchSets</code>.</p>
+    #[doc(hidden)]
     pub geo_match_set_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>GeoMatchSet</code>. You can't change the name of an <code>GeoMatchSet</code> after you create it.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>An array of <code>GeoMatchConstraint</code> objects, which contain the country that you want AWS WAF to search for.</p>
+    #[doc(hidden)]
     pub geo_match_constraints: std::option::Option<std::vec::Vec<crate::model::GeoMatchConstraint>>,
 }
 impl GeoMatchSet {
@@ -8431,11 +8520,10 @@ impl std::fmt::Debug for GeoMatchSet {
         formatter.finish()
     }
 }
-/// See [`GeoMatchSet`](crate::model::GeoMatchSet)
+/// See [`GeoMatchSet`](crate::model::GeoMatchSet).
 pub mod geo_match_set {
 
-    /// A builder for [`GeoMatchSet`](crate::model::GeoMatchSet)
-    #[non_exhaustive]
+    /// A builder for [`GeoMatchSet`](crate::model::GeoMatchSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) geo_match_set_id: std::option::Option<std::string::String>,
@@ -8488,7 +8576,7 @@ pub mod geo_match_set {
             self.geo_match_constraints = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeoMatchSet`](crate::model::GeoMatchSet)
+        /// Consumes the builder and constructs a [`GeoMatchSet`](crate::model::GeoMatchSet).
         pub fn build(self) -> crate::model::GeoMatchSet {
             crate::model::GeoMatchSet {
                 geo_match_set_id: self.geo_match_set_id,
@@ -8499,7 +8587,7 @@ pub mod geo_match_set {
     }
 }
 impl GeoMatchSet {
-    /// Creates a new builder-style object to manufacture [`GeoMatchSet`](crate::model::GeoMatchSet)
+    /// Creates a new builder-style object to manufacture [`GeoMatchSet`](crate::model::GeoMatchSet).
     pub fn builder() -> crate::model::geo_match_set::Builder {
         crate::model::geo_match_set::Builder::default()
     }
@@ -8575,10 +8663,13 @@ impl AsRef<str> for ChangeTokenStatus {
 pub struct ByteMatchSet {
     /// <p>The <code>ByteMatchSetId</code> for a <code>ByteMatchSet</code>. You use <code>ByteMatchSetId</code> to get information about a <code>ByteMatchSet</code> (see <code>GetByteMatchSet</code>), update a <code>ByteMatchSet</code> (see <code>UpdateByteMatchSet</code>), insert a <code>ByteMatchSet</code> into a <code>Rule</code> or delete one from a <code>Rule</code> (see <code>UpdateRule</code>), and delete a <code>ByteMatchSet</code> from AWS WAF (see <code>DeleteByteMatchSet</code>).</p>
     /// <p> <code>ByteMatchSetId</code> is returned by <code>CreateByteMatchSet</code> and by <code>ListByteMatchSets</code>.</p>
+    #[doc(hidden)]
     pub byte_match_set_id: std::option::Option<std::string::String>,
     /// <p>A friendly name or description of the <code>ByteMatchSet</code>. You can't change <code>Name</code> after you create a <code>ByteMatchSet</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Specifies the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings.</p>
+    #[doc(hidden)]
     pub byte_match_tuples: std::option::Option<std::vec::Vec<crate::model::ByteMatchTuple>>,
 }
 impl ByteMatchSet {
@@ -8605,11 +8696,10 @@ impl std::fmt::Debug for ByteMatchSet {
         formatter.finish()
     }
 }
-/// See [`ByteMatchSet`](crate::model::ByteMatchSet)
+/// See [`ByteMatchSet`](crate::model::ByteMatchSet).
 pub mod byte_match_set {
 
-    /// A builder for [`ByteMatchSet`](crate::model::ByteMatchSet)
-    #[non_exhaustive]
+    /// A builder for [`ByteMatchSet`](crate::model::ByteMatchSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) byte_match_set_id: std::option::Option<std::string::String>,
@@ -8662,7 +8752,7 @@ pub mod byte_match_set {
             self.byte_match_tuples = input;
             self
         }
-        /// Consumes the builder and constructs a [`ByteMatchSet`](crate::model::ByteMatchSet)
+        /// Consumes the builder and constructs a [`ByteMatchSet`](crate::model::ByteMatchSet).
         pub fn build(self) -> crate::model::ByteMatchSet {
             crate::model::ByteMatchSet {
                 byte_match_set_id: self.byte_match_set_id,
@@ -8673,7 +8763,7 @@ pub mod byte_match_set {
     }
 }
 impl ByteMatchSet {
-    /// Creates a new builder-style object to manufacture [`ByteMatchSet`](crate::model::ByteMatchSet)
+    /// Creates a new builder-style object to manufacture [`ByteMatchSet`](crate::model::ByteMatchSet).
     pub fn builder() -> crate::model::byte_match_set::Builder {
         crate::model::byte_match_set::Builder::default()
     }

@@ -5,26 +5,35 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Channel {
     /// <p>Channel ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Channel name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>. (Note: In the Amazon IVS console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard, respectively.)</p>
+    #[doc(hidden)]
     pub latency_mode: std::option::Option<crate::model::ChannelLatencyMode>,
     /// <p>Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>. Valid values:</p>
     /// <ul>
     /// <li> <p> <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers the best experience for their devices and network conditions. Resolution can be up to 1080p and bitrate can be up to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through.</p> </li>
     /// <li> <p> <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ChannelType>,
     /// <p>Recording-configuration ARN. A value other than an empty string indicates that recording is enabled. Default: "" (empty string, recording is disabled).</p>
+    #[doc(hidden)]
     pub recording_configuration_arn: std::option::Option<std::string::String>,
     /// <p>Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.</p>
+    #[doc(hidden)]
     pub ingest_endpoint: std::option::Option<std::string::String>,
     /// <p>Channel playback URL.</p>
+    #[doc(hidden)]
     pub playback_url: std::option::Option<std::string::String>,
     /// <p>Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.</p>
+    #[doc(hidden)]
     pub authorized: bool,
     /// <p>Array of 1-50 maps, each of the form <code>string:string (key:value)</code>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -91,11 +100,10 @@ impl std::fmt::Debug for Channel {
         formatter.finish()
     }
 }
-/// See [`Channel`](crate::model::Channel)
+/// See [`Channel`](crate::model::Channel).
 pub mod channel {
 
-    /// A builder for [`Channel`](crate::model::Channel)
-    #[non_exhaustive]
+    /// A builder for [`Channel`](crate::model::Channel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -236,7 +244,7 @@ pub mod channel {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Channel`](crate::model::Channel)
+        /// Consumes the builder and constructs a [`Channel`](crate::model::Channel).
         pub fn build(self) -> crate::model::Channel {
             crate::model::Channel {
                 arn: self.arn,
@@ -253,7 +261,7 @@ pub mod channel {
     }
 }
 impl Channel {
-    /// Creates a new builder-style object to manufacture [`Channel`](crate::model::Channel)
+    /// Creates a new builder-style object to manufacture [`Channel`](crate::model::Channel).
     pub fn builder() -> crate::model::channel::Builder {
         crate::model::channel::Builder::default()
     }
@@ -374,12 +382,16 @@ impl AsRef<str> for ChannelLatencyMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamSessionSummary {
     /// <p>Unique identifier for a live or previously live stream in the specified channel.</p>
+    #[doc(hidden)]
     pub stream_id: std::option::Option<std::string::String>,
     /// <p>UTC ISO-8601 formatted timestamp of when the channel went live.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>UTC ISO-8601 formatted timestamp of when the channel went offline. For live streams, this is <code>NULL</code>.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If <code>true</code>, this stream encountered a quota breach or failure.</p>
+    #[doc(hidden)]
     pub has_error_event: bool,
 }
 impl StreamSessionSummary {
@@ -410,11 +422,10 @@ impl std::fmt::Debug for StreamSessionSummary {
         formatter.finish()
     }
 }
-/// See [`StreamSessionSummary`](crate::model::StreamSessionSummary)
+/// See [`StreamSessionSummary`](crate::model::StreamSessionSummary).
 pub mod stream_session_summary {
 
-    /// A builder for [`StreamSessionSummary`](crate::model::StreamSessionSummary)
-    #[non_exhaustive]
+    /// A builder for [`StreamSessionSummary`](crate::model::StreamSessionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stream_id: std::option::Option<std::string::String>,
@@ -469,7 +480,7 @@ pub mod stream_session_summary {
             self.has_error_event = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamSessionSummary`](crate::model::StreamSessionSummary)
+        /// Consumes the builder and constructs a [`StreamSessionSummary`](crate::model::StreamSessionSummary).
         pub fn build(self) -> crate::model::StreamSessionSummary {
             crate::model::StreamSessionSummary {
                 stream_id: self.stream_id,
@@ -481,7 +492,7 @@ pub mod stream_session_summary {
     }
 }
 impl StreamSessionSummary {
-    /// Creates a new builder-style object to manufacture [`StreamSessionSummary`](crate::model::StreamSessionSummary)
+    /// Creates a new builder-style object to manufacture [`StreamSessionSummary`](crate::model::StreamSessionSummary).
     pub fn builder() -> crate::model::stream_session_summary::Builder {
         crate::model::stream_session_summary::Builder::default()
     }
@@ -492,16 +503,22 @@ impl StreamSessionSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamSummary {
     /// <p>Channel ARN for the stream.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>Unique identifier for a live or previously live stream in the specified channel.</p>
+    #[doc(hidden)]
     pub stream_id: std::option::Option<std::string::String>,
     /// <p>The stream’s state.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::StreamState>,
     /// <p>The stream’s health.</p>
+    #[doc(hidden)]
     pub health: std::option::Option<crate::model::StreamHealth>,
     /// <p>A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15 seconds of when video playback starts and a view is removed from <code>viewerCount</code> within 1 minute of when video playback ends. A value of -1 indicates that the request timed out; in this case, retry.</p>
+    #[doc(hidden)]
     pub viewer_count: i64,
     /// <p>Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl StreamSummary {
@@ -542,11 +559,10 @@ impl std::fmt::Debug for StreamSummary {
         formatter.finish()
     }
 }
-/// See [`StreamSummary`](crate::model::StreamSummary)
+/// See [`StreamSummary`](crate::model::StreamSummary).
 pub mod stream_summary {
 
-    /// A builder for [`StreamSummary`](crate::model::StreamSummary)
-    #[non_exhaustive]
+    /// A builder for [`StreamSummary`](crate::model::StreamSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -623,7 +639,7 @@ pub mod stream_summary {
             self.start_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamSummary`](crate::model::StreamSummary)
+        /// Consumes the builder and constructs a [`StreamSummary`](crate::model::StreamSummary).
         pub fn build(self) -> crate::model::StreamSummary {
             crate::model::StreamSummary {
                 channel_arn: self.channel_arn,
@@ -637,7 +653,7 @@ pub mod stream_summary {
     }
 }
 impl StreamSummary {
-    /// Creates a new builder-style object to manufacture [`StreamSummary`](crate::model::StreamSummary)
+    /// Creates a new builder-style object to manufacture [`StreamSummary`](crate::model::StreamSummary).
     pub fn builder() -> crate::model::stream_summary::Builder {
         crate::model::stream_summary::Builder::default()
     }
@@ -762,6 +778,7 @@ impl AsRef<str> for StreamState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamFilters {
     /// <p>The stream’s health.</p>
+    #[doc(hidden)]
     pub health: std::option::Option<crate::model::StreamHealth>,
 }
 impl StreamFilters {
@@ -777,11 +794,10 @@ impl std::fmt::Debug for StreamFilters {
         formatter.finish()
     }
 }
-/// See [`StreamFilters`](crate::model::StreamFilters)
+/// See [`StreamFilters`](crate::model::StreamFilters).
 pub mod stream_filters {
 
-    /// A builder for [`StreamFilters`](crate::model::StreamFilters)
-    #[non_exhaustive]
+    /// A builder for [`StreamFilters`](crate::model::StreamFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) health: std::option::Option<crate::model::StreamHealth>,
@@ -800,7 +816,7 @@ pub mod stream_filters {
             self.health = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamFilters`](crate::model::StreamFilters)
+        /// Consumes the builder and constructs a [`StreamFilters`](crate::model::StreamFilters).
         pub fn build(self) -> crate::model::StreamFilters {
             crate::model::StreamFilters {
                 health: self.health,
@@ -809,7 +825,7 @@ pub mod stream_filters {
     }
 }
 impl StreamFilters {
-    /// Creates a new builder-style object to manufacture [`StreamFilters`](crate::model::StreamFilters)
+    /// Creates a new builder-style object to manufacture [`StreamFilters`](crate::model::StreamFilters).
     pub fn builder() -> crate::model::stream_filters::Builder {
         crate::model::stream_filters::Builder::default()
     }
@@ -820,10 +836,13 @@ impl StreamFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamKeySummary {
     /// <p>Stream-key ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Channel ARN for the stream.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>Array of 1-50 maps, each of the form <code>string:string (key:value)</code>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -853,11 +872,10 @@ impl std::fmt::Debug for StreamKeySummary {
         formatter.finish()
     }
 }
-/// See [`StreamKeySummary`](crate::model::StreamKeySummary)
+/// See [`StreamKeySummary`](crate::model::StreamKeySummary).
 pub mod stream_key_summary {
 
-    /// A builder for [`StreamKeySummary`](crate::model::StreamKeySummary)
-    #[non_exhaustive]
+    /// A builder for [`StreamKeySummary`](crate::model::StreamKeySummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -912,7 +930,7 @@ pub mod stream_key_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamKeySummary`](crate::model::StreamKeySummary)
+        /// Consumes the builder and constructs a [`StreamKeySummary`](crate::model::StreamKeySummary).
         pub fn build(self) -> crate::model::StreamKeySummary {
             crate::model::StreamKeySummary {
                 arn: self.arn,
@@ -923,7 +941,7 @@ pub mod stream_key_summary {
     }
 }
 impl StreamKeySummary {
-    /// Creates a new builder-style object to manufacture [`StreamKeySummary`](crate::model::StreamKeySummary)
+    /// Creates a new builder-style object to manufacture [`StreamKeySummary`](crate::model::StreamKeySummary).
     pub fn builder() -> crate::model::stream_key_summary::Builder {
         crate::model::stream_key_summary::Builder::default()
     }
@@ -934,14 +952,19 @@ impl StreamKeySummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecordingConfigurationSummary {
     /// <p>Recording-configuration ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Recording-configuration name. The value does not need to be unique.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A complex type that contains information about where recorded video will be stored.</p>
+    #[doc(hidden)]
     pub destination_configuration: std::option::Option<crate::model::DestinationConfiguration>,
     /// <p>Indicates the current state of the recording configuration. When the state is <code>ACTIVE</code>, the configuration is ready for recording a channel stream.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::RecordingConfigurationState>,
     /// <p>Array of 1-50 maps, each of the form <code>string:string (key:value)</code>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -983,11 +1006,10 @@ impl std::fmt::Debug for RecordingConfigurationSummary {
         formatter.finish()
     }
 }
-/// See [`RecordingConfigurationSummary`](crate::model::RecordingConfigurationSummary)
+/// See [`RecordingConfigurationSummary`](crate::model::RecordingConfigurationSummary).
 pub mod recording_configuration_summary {
 
-    /// A builder for [`RecordingConfigurationSummary`](crate::model::RecordingConfigurationSummary)
-    #[non_exhaustive]
+    /// A builder for [`RecordingConfigurationSummary`](crate::model::RecordingConfigurationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1074,7 +1096,7 @@ pub mod recording_configuration_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecordingConfigurationSummary`](crate::model::RecordingConfigurationSummary)
+        /// Consumes the builder and constructs a [`RecordingConfigurationSummary`](crate::model::RecordingConfigurationSummary).
         pub fn build(self) -> crate::model::RecordingConfigurationSummary {
             crate::model::RecordingConfigurationSummary {
                 arn: self.arn,
@@ -1087,7 +1109,7 @@ pub mod recording_configuration_summary {
     }
 }
 impl RecordingConfigurationSummary {
-    /// Creates a new builder-style object to manufacture [`RecordingConfigurationSummary`](crate::model::RecordingConfigurationSummary)
+    /// Creates a new builder-style object to manufacture [`RecordingConfigurationSummary`](crate::model::RecordingConfigurationSummary).
     pub fn builder() -> crate::model::recording_configuration_summary::Builder {
         crate::model::recording_configuration_summary::Builder::default()
     }
@@ -1157,6 +1179,7 @@ impl AsRef<str> for RecordingConfigurationState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DestinationConfiguration {
     /// <p>An S3 destination configuration where recorded videos will be stored.</p>
+    #[doc(hidden)]
     pub s3: std::option::Option<crate::model::S3DestinationConfiguration>,
 }
 impl DestinationConfiguration {
@@ -1172,11 +1195,10 @@ impl std::fmt::Debug for DestinationConfiguration {
         formatter.finish()
     }
 }
-/// See [`DestinationConfiguration`](crate::model::DestinationConfiguration)
+/// See [`DestinationConfiguration`](crate::model::DestinationConfiguration).
 pub mod destination_configuration {
 
-    /// A builder for [`DestinationConfiguration`](crate::model::DestinationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DestinationConfiguration`](crate::model::DestinationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3: std::option::Option<crate::model::S3DestinationConfiguration>,
@@ -1195,14 +1217,14 @@ pub mod destination_configuration {
             self.s3 = input;
             self
         }
-        /// Consumes the builder and constructs a [`DestinationConfiguration`](crate::model::DestinationConfiguration)
+        /// Consumes the builder and constructs a [`DestinationConfiguration`](crate::model::DestinationConfiguration).
         pub fn build(self) -> crate::model::DestinationConfiguration {
             crate::model::DestinationConfiguration { s3: self.s3 }
         }
     }
 }
 impl DestinationConfiguration {
-    /// Creates a new builder-style object to manufacture [`DestinationConfiguration`](crate::model::DestinationConfiguration)
+    /// Creates a new builder-style object to manufacture [`DestinationConfiguration`](crate::model::DestinationConfiguration).
     pub fn builder() -> crate::model::destination_configuration::Builder {
         crate::model::destination_configuration::Builder::default()
     }
@@ -1213,6 +1235,7 @@ impl DestinationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3DestinationConfiguration {
     /// <p>Location (S3 bucket name) where recorded videos will be stored.</p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
 }
 impl S3DestinationConfiguration {
@@ -1228,11 +1251,10 @@ impl std::fmt::Debug for S3DestinationConfiguration {
         formatter.finish()
     }
 }
-/// See [`S3DestinationConfiguration`](crate::model::S3DestinationConfiguration)
+/// See [`S3DestinationConfiguration`](crate::model::S3DestinationConfiguration).
 pub mod s3_destination_configuration {
 
-    /// A builder for [`S3DestinationConfiguration`](crate::model::S3DestinationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`S3DestinationConfiguration`](crate::model::S3DestinationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_name: std::option::Option<std::string::String>,
@@ -1248,7 +1270,7 @@ pub mod s3_destination_configuration {
             self.bucket_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3DestinationConfiguration`](crate::model::S3DestinationConfiguration)
+        /// Consumes the builder and constructs a [`S3DestinationConfiguration`](crate::model::S3DestinationConfiguration).
         pub fn build(self) -> crate::model::S3DestinationConfiguration {
             crate::model::S3DestinationConfiguration {
                 bucket_name: self.bucket_name,
@@ -1257,7 +1279,7 @@ pub mod s3_destination_configuration {
     }
 }
 impl S3DestinationConfiguration {
-    /// Creates a new builder-style object to manufacture [`S3DestinationConfiguration`](crate::model::S3DestinationConfiguration)
+    /// Creates a new builder-style object to manufacture [`S3DestinationConfiguration`](crate::model::S3DestinationConfiguration).
     pub fn builder() -> crate::model::s3_destination_configuration::Builder {
         crate::model::s3_destination_configuration::Builder::default()
     }
@@ -1268,10 +1290,13 @@ impl S3DestinationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PlaybackKeyPairSummary {
     /// <p>Key-pair ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Playback-key-pair name. The value does not need to be unique.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Array of 1-50 maps, each of the form <code>string:string (key:value)</code>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1301,11 +1326,10 @@ impl std::fmt::Debug for PlaybackKeyPairSummary {
         formatter.finish()
     }
 }
-/// See [`PlaybackKeyPairSummary`](crate::model::PlaybackKeyPairSummary)
+/// See [`PlaybackKeyPairSummary`](crate::model::PlaybackKeyPairSummary).
 pub mod playback_key_pair_summary {
 
-    /// A builder for [`PlaybackKeyPairSummary`](crate::model::PlaybackKeyPairSummary)
-    #[non_exhaustive]
+    /// A builder for [`PlaybackKeyPairSummary`](crate::model::PlaybackKeyPairSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1360,7 +1384,7 @@ pub mod playback_key_pair_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`PlaybackKeyPairSummary`](crate::model::PlaybackKeyPairSummary)
+        /// Consumes the builder and constructs a [`PlaybackKeyPairSummary`](crate::model::PlaybackKeyPairSummary).
         pub fn build(self) -> crate::model::PlaybackKeyPairSummary {
             crate::model::PlaybackKeyPairSummary {
                 arn: self.arn,
@@ -1371,7 +1395,7 @@ pub mod playback_key_pair_summary {
     }
 }
 impl PlaybackKeyPairSummary {
-    /// Creates a new builder-style object to manufacture [`PlaybackKeyPairSummary`](crate::model::PlaybackKeyPairSummary)
+    /// Creates a new builder-style object to manufacture [`PlaybackKeyPairSummary`](crate::model::PlaybackKeyPairSummary).
     pub fn builder() -> crate::model::playback_key_pair_summary::Builder {
         crate::model::playback_key_pair_summary::Builder::default()
     }
@@ -1382,16 +1406,22 @@ impl PlaybackKeyPairSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChannelSummary {
     /// <p>Channel ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Channel name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>. (Note: In the Amazon IVS console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard, respectively.)</p>
+    #[doc(hidden)]
     pub latency_mode: std::option::Option<crate::model::ChannelLatencyMode>,
     /// <p>Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.</p>
+    #[doc(hidden)]
     pub authorized: bool,
     /// <p>Recording-configuration ARN. A value other than an empty string indicates that recording is enabled. Default: "" (empty string, recording is disabled).</p>
+    #[doc(hidden)]
     pub recording_configuration_arn: std::option::Option<std::string::String>,
     /// <p>Array of 1-50 maps, each of the form <code>string:string (key:value)</code>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1439,11 +1469,10 @@ impl std::fmt::Debug for ChannelSummary {
         formatter.finish()
     }
 }
-/// See [`ChannelSummary`](crate::model::ChannelSummary)
+/// See [`ChannelSummary`](crate::model::ChannelSummary).
 pub mod channel_summary {
 
-    /// A builder for [`ChannelSummary`](crate::model::ChannelSummary)
-    #[non_exhaustive]
+    /// A builder for [`ChannelSummary`](crate::model::ChannelSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1540,7 +1569,7 @@ pub mod channel_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChannelSummary`](crate::model::ChannelSummary)
+        /// Consumes the builder and constructs a [`ChannelSummary`](crate::model::ChannelSummary).
         pub fn build(self) -> crate::model::ChannelSummary {
             crate::model::ChannelSummary {
                 arn: self.arn,
@@ -1554,7 +1583,7 @@ pub mod channel_summary {
     }
 }
 impl ChannelSummary {
-    /// Creates a new builder-style object to manufacture [`ChannelSummary`](crate::model::ChannelSummary)
+    /// Creates a new builder-style object to manufacture [`ChannelSummary`](crate::model::ChannelSummary).
     pub fn builder() -> crate::model::channel_summary::Builder {
         crate::model::channel_summary::Builder::default()
     }
@@ -1565,12 +1594,16 @@ impl ChannelSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PlaybackKeyPair {
     /// <p>Key-pair ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Playback-key-pair name. The value does not need to be unique.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Key-pair identifier.</p>
+    #[doc(hidden)]
     pub fingerprint: std::option::Option<std::string::String>,
     /// <p>Array of 1-50 maps, each of the form <code>string:string (key:value)</code>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1605,11 +1638,10 @@ impl std::fmt::Debug for PlaybackKeyPair {
         formatter.finish()
     }
 }
-/// See [`PlaybackKeyPair`](crate::model::PlaybackKeyPair)
+/// See [`PlaybackKeyPair`](crate::model::PlaybackKeyPair).
 pub mod playback_key_pair {
 
-    /// A builder for [`PlaybackKeyPair`](crate::model::PlaybackKeyPair)
-    #[non_exhaustive]
+    /// A builder for [`PlaybackKeyPair`](crate::model::PlaybackKeyPair).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1675,7 +1707,7 @@ pub mod playback_key_pair {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`PlaybackKeyPair`](crate::model::PlaybackKeyPair)
+        /// Consumes the builder and constructs a [`PlaybackKeyPair`](crate::model::PlaybackKeyPair).
         pub fn build(self) -> crate::model::PlaybackKeyPair {
             crate::model::PlaybackKeyPair {
                 arn: self.arn,
@@ -1687,7 +1719,7 @@ pub mod playback_key_pair {
     }
 }
 impl PlaybackKeyPair {
-    /// Creates a new builder-style object to manufacture [`PlaybackKeyPair`](crate::model::PlaybackKeyPair)
+    /// Creates a new builder-style object to manufacture [`PlaybackKeyPair`](crate::model::PlaybackKeyPair).
     pub fn builder() -> crate::model::playback_key_pair::Builder {
         crate::model::playback_key_pair::Builder::default()
     }
@@ -1698,18 +1730,25 @@ impl PlaybackKeyPair {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamSession {
     /// <p>Unique identifier for a live or previously live stream in the specified channel.</p>
+    #[doc(hidden)]
     pub stream_id: std::option::Option<std::string::String>,
     /// <p>UTC ISO-8601 formatted timestamp of when the channel went live.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>UTC ISO-8601 formatted timestamp of when the channel went offline. For live streams, this is <code>NULL</code>.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The properties of the channel at the time of going live.</p>
+    #[doc(hidden)]
     pub channel: std::option::Option<crate::model::Channel>,
     /// <p>The properties of the incoming RTMP stream for the stream.</p>
+    #[doc(hidden)]
     pub ingest_configuration: std::option::Option<crate::model::IngestConfiguration>,
     /// <p>The properties of recording the live stream.</p>
+    #[doc(hidden)]
     pub recording_configuration: std::option::Option<crate::model::RecordingConfiguration>,
     /// <p>List of Amazon IVS events that the stream encountered. The list is sorted by most recent events and contains up to 500 events. For Amazon IVS events, see <a href="https://docs.aws.amazon.com/ivs/latest/userguide/eventbridge.html">Using Amazon EventBridge with Amazon IVS</a>.</p>
+    #[doc(hidden)]
     pub truncated_events: std::option::Option<std::vec::Vec<crate::model::StreamEvent>>,
 }
 impl StreamSession {
@@ -1757,11 +1796,10 @@ impl std::fmt::Debug for StreamSession {
         formatter.finish()
     }
 }
-/// See [`StreamSession`](crate::model::StreamSession)
+/// See [`StreamSession`](crate::model::StreamSession).
 pub mod stream_session {
 
-    /// A builder for [`StreamSession`](crate::model::StreamSession)
-    #[non_exhaustive]
+    /// A builder for [`StreamSession`](crate::model::StreamSession).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stream_id: std::option::Option<std::string::String>,
@@ -1868,7 +1906,7 @@ pub mod stream_session {
             self.truncated_events = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamSession`](crate::model::StreamSession)
+        /// Consumes the builder and constructs a [`StreamSession`](crate::model::StreamSession).
         pub fn build(self) -> crate::model::StreamSession {
             crate::model::StreamSession {
                 stream_id: self.stream_id,
@@ -1883,7 +1921,7 @@ pub mod stream_session {
     }
 }
 impl StreamSession {
-    /// Creates a new builder-style object to manufacture [`StreamSession`](crate::model::StreamSession)
+    /// Creates a new builder-style object to manufacture [`StreamSession`](crate::model::StreamSession).
     pub fn builder() -> crate::model::stream_session::Builder {
         crate::model::stream_session::Builder::default()
     }
@@ -1894,10 +1932,13 @@ impl StreamSession {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamEvent {
     /// <p>Name that identifies the stream event within a <code>type</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Logical group for certain events.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>UTC ISO-8601 formatted timestamp of when the event occurred.</p>
+    #[doc(hidden)]
     pub event_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl StreamEvent {
@@ -1923,11 +1964,10 @@ impl std::fmt::Debug for StreamEvent {
         formatter.finish()
     }
 }
-/// See [`StreamEvent`](crate::model::StreamEvent)
+/// See [`StreamEvent`](crate::model::StreamEvent).
 pub mod stream_event {
 
-    /// A builder for [`StreamEvent`](crate::model::StreamEvent)
-    #[non_exhaustive]
+    /// A builder for [`StreamEvent`](crate::model::StreamEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1968,7 +2008,7 @@ pub mod stream_event {
             self.event_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamEvent`](crate::model::StreamEvent)
+        /// Consumes the builder and constructs a [`StreamEvent`](crate::model::StreamEvent).
         pub fn build(self) -> crate::model::StreamEvent {
             crate::model::StreamEvent {
                 name: self.name,
@@ -1979,7 +2019,7 @@ pub mod stream_event {
     }
 }
 impl StreamEvent {
-    /// Creates a new builder-style object to manufacture [`StreamEvent`](crate::model::StreamEvent)
+    /// Creates a new builder-style object to manufacture [`StreamEvent`](crate::model::StreamEvent).
     pub fn builder() -> crate::model::stream_event::Builder {
         crate::model::stream_event::Builder::default()
     }
@@ -1990,17 +2030,23 @@ impl StreamEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecordingConfiguration {
     /// <p>Recording-configuration ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Recording-configuration name. The value does not need to be unique.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A complex type that contains information about where recorded video will be stored.</p>
+    #[doc(hidden)]
     pub destination_configuration: std::option::Option<crate::model::DestinationConfiguration>,
     /// <p>Indicates the current state of the recording configuration. When the state is <code>ACTIVE</code>, the configuration is ready for recording a channel stream.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::RecordingConfigurationState>,
     /// <p>Array of 1-50 maps, each of the form <code>string:string (key:value)</code>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A complex type that allows you to enable/disable the recording of thumbnails for a live session and modify the interval at which thumbnails are generated for the live session.</p>
+    #[doc(hidden)]
     pub thumbnail_configuration: std::option::Option<crate::model::ThumbnailConfiguration>,
 }
 impl RecordingConfiguration {
@@ -2048,11 +2094,10 @@ impl std::fmt::Debug for RecordingConfiguration {
         formatter.finish()
     }
 }
-/// See [`RecordingConfiguration`](crate::model::RecordingConfiguration)
+/// See [`RecordingConfiguration`](crate::model::RecordingConfiguration).
 pub mod recording_configuration {
 
-    /// A builder for [`RecordingConfiguration`](crate::model::RecordingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`RecordingConfiguration`](crate::model::RecordingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2157,7 +2202,7 @@ pub mod recording_configuration {
             self.thumbnail_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecordingConfiguration`](crate::model::RecordingConfiguration)
+        /// Consumes the builder and constructs a [`RecordingConfiguration`](crate::model::RecordingConfiguration).
         pub fn build(self) -> crate::model::RecordingConfiguration {
             crate::model::RecordingConfiguration {
                 arn: self.arn,
@@ -2171,7 +2216,7 @@ pub mod recording_configuration {
     }
 }
 impl RecordingConfiguration {
-    /// Creates a new builder-style object to manufacture [`RecordingConfiguration`](crate::model::RecordingConfiguration)
+    /// Creates a new builder-style object to manufacture [`RecordingConfiguration`](crate::model::RecordingConfiguration).
     pub fn builder() -> crate::model::recording_configuration::Builder {
         crate::model::recording_configuration::Builder::default()
     }
@@ -2182,9 +2227,11 @@ impl RecordingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThumbnailConfiguration {
     /// <p>Thumbnail recording mode. Default: <code>INTERVAL</code>.</p>
+    #[doc(hidden)]
     pub recording_mode: std::option::Option<crate::model::RecordingMode>,
     /// <p>The targeted thumbnail-generation interval in seconds. This is configurable (and required) only if <code>recordingMode</code> is <code>INTERVAL</code>. Default: 60.</p>
     /// <p> <b>Important:</b> Setting a value for <code>targetIntervalSeconds</code> does not guarantee that thumbnails are generated at the specified interval. For thumbnails to be generated at the <code>targetIntervalSeconds</code> interval, the <code>IDR/Keyframe</code> value for the input video must be less than the <code>targetIntervalSeconds</code> value. See <a href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html"> Amazon IVS Streaming Configuration</a> for information on setting <code>IDR/Keyframe</code> to the recommended value in video-encoder settings.</p>
+    #[doc(hidden)]
     pub target_interval_seconds: i64,
 }
 impl ThumbnailConfiguration {
@@ -2206,11 +2253,10 @@ impl std::fmt::Debug for ThumbnailConfiguration {
         formatter.finish()
     }
 }
-/// See [`ThumbnailConfiguration`](crate::model::ThumbnailConfiguration)
+/// See [`ThumbnailConfiguration`](crate::model::ThumbnailConfiguration).
 pub mod thumbnail_configuration {
 
-    /// A builder for [`ThumbnailConfiguration`](crate::model::ThumbnailConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ThumbnailConfiguration`](crate::model::ThumbnailConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recording_mode: std::option::Option<crate::model::RecordingMode>,
@@ -2242,7 +2288,7 @@ pub mod thumbnail_configuration {
             self.target_interval_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThumbnailConfiguration`](crate::model::ThumbnailConfiguration)
+        /// Consumes the builder and constructs a [`ThumbnailConfiguration`](crate::model::ThumbnailConfiguration).
         pub fn build(self) -> crate::model::ThumbnailConfiguration {
             crate::model::ThumbnailConfiguration {
                 recording_mode: self.recording_mode,
@@ -2252,7 +2298,7 @@ pub mod thumbnail_configuration {
     }
 }
 impl ThumbnailConfiguration {
-    /// Creates a new builder-style object to manufacture [`ThumbnailConfiguration`](crate::model::ThumbnailConfiguration)
+    /// Creates a new builder-style object to manufacture [`ThumbnailConfiguration`](crate::model::ThumbnailConfiguration).
     pub fn builder() -> crate::model::thumbnail_configuration::Builder {
         crate::model::thumbnail_configuration::Builder::default()
     }
@@ -2318,8 +2364,10 @@ impl AsRef<str> for RecordingMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IngestConfiguration {
     /// <p>Encoder settings for video.</p>
+    #[doc(hidden)]
     pub video: std::option::Option<crate::model::VideoConfiguration>,
     /// <p>Encoder settings for audio.</p>
+    #[doc(hidden)]
     pub audio: std::option::Option<crate::model::AudioConfiguration>,
 }
 impl IngestConfiguration {
@@ -2340,11 +2388,10 @@ impl std::fmt::Debug for IngestConfiguration {
         formatter.finish()
     }
 }
-/// See [`IngestConfiguration`](crate::model::IngestConfiguration)
+/// See [`IngestConfiguration`](crate::model::IngestConfiguration).
 pub mod ingest_configuration {
 
-    /// A builder for [`IngestConfiguration`](crate::model::IngestConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`IngestConfiguration`](crate::model::IngestConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) video: std::option::Option<crate::model::VideoConfiguration>,
@@ -2377,7 +2424,7 @@ pub mod ingest_configuration {
             self.audio = input;
             self
         }
-        /// Consumes the builder and constructs a [`IngestConfiguration`](crate::model::IngestConfiguration)
+        /// Consumes the builder and constructs a [`IngestConfiguration`](crate::model::IngestConfiguration).
         pub fn build(self) -> crate::model::IngestConfiguration {
             crate::model::IngestConfiguration {
                 video: self.video,
@@ -2387,7 +2434,7 @@ pub mod ingest_configuration {
     }
 }
 impl IngestConfiguration {
-    /// Creates a new builder-style object to manufacture [`IngestConfiguration`](crate::model::IngestConfiguration)
+    /// Creates a new builder-style object to manufacture [`IngestConfiguration`](crate::model::IngestConfiguration).
     pub fn builder() -> crate::model::ingest_configuration::Builder {
         crate::model::ingest_configuration::Builder::default()
     }
@@ -2398,12 +2445,16 @@ impl IngestConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AudioConfiguration {
     /// <p>Codec used for the audio encoding.</p>
+    #[doc(hidden)]
     pub codec: std::option::Option<std::string::String>,
     /// <p>The expected ingest bitrate (bits per second). This is configured in the encoder.</p>
+    #[doc(hidden)]
     pub target_bitrate: i64,
     /// <p>Number of audio samples recorded per second.</p>
+    #[doc(hidden)]
     pub sample_rate: i64,
     /// <p>Number of audio channels.</p>
+    #[doc(hidden)]
     pub channels: i64,
 }
 impl AudioConfiguration {
@@ -2434,11 +2485,10 @@ impl std::fmt::Debug for AudioConfiguration {
         formatter.finish()
     }
 }
-/// See [`AudioConfiguration`](crate::model::AudioConfiguration)
+/// See [`AudioConfiguration`](crate::model::AudioConfiguration).
 pub mod audio_configuration {
 
-    /// A builder for [`AudioConfiguration`](crate::model::AudioConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AudioConfiguration`](crate::model::AudioConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) codec: std::option::Option<std::string::String>,
@@ -2487,7 +2537,7 @@ pub mod audio_configuration {
             self.channels = input;
             self
         }
-        /// Consumes the builder and constructs a [`AudioConfiguration`](crate::model::AudioConfiguration)
+        /// Consumes the builder and constructs a [`AudioConfiguration`](crate::model::AudioConfiguration).
         pub fn build(self) -> crate::model::AudioConfiguration {
             crate::model::AudioConfiguration {
                 codec: self.codec,
@@ -2499,7 +2549,7 @@ pub mod audio_configuration {
     }
 }
 impl AudioConfiguration {
-    /// Creates a new builder-style object to manufacture [`AudioConfiguration`](crate::model::AudioConfiguration)
+    /// Creates a new builder-style object to manufacture [`AudioConfiguration`](crate::model::AudioConfiguration).
     pub fn builder() -> crate::model::audio_configuration::Builder {
         crate::model::audio_configuration::Builder::default()
     }
@@ -2510,20 +2560,28 @@ impl AudioConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VideoConfiguration {
     /// <p>Indicates to the decoder the requirements for decoding the stream. For definitions of the valid values, see the H.264 specification.</p>
+    #[doc(hidden)]
     pub avc_profile: std::option::Option<std::string::String>,
     /// <p>Indicates the degree of required decoder performance for a profile. Normally this is set automatically by the encoder. For details, see the H.264 specification.</p>
+    #[doc(hidden)]
     pub avc_level: std::option::Option<std::string::String>,
     /// <p>Codec used for the video encoding.</p>
+    #[doc(hidden)]
     pub codec: std::option::Option<std::string::String>,
     /// <p>Software or hardware used to encode the video.</p>
+    #[doc(hidden)]
     pub encoder: std::option::Option<std::string::String>,
     /// <p>The expected ingest bitrate (bits per second). This is configured in the encoder.</p>
+    #[doc(hidden)]
     pub target_bitrate: i64,
     /// <p>The expected ingest framerate. This is configured in the encoder.</p>
+    #[doc(hidden)]
     pub target_framerate: i64,
     /// <p>Video-resolution height in pixels.</p>
+    #[doc(hidden)]
     pub video_height: i64,
     /// <p>Video-resolution width in pixels.</p>
+    #[doc(hidden)]
     pub video_width: i64,
 }
 impl VideoConfiguration {
@@ -2574,11 +2632,10 @@ impl std::fmt::Debug for VideoConfiguration {
         formatter.finish()
     }
 }
-/// See [`VideoConfiguration`](crate::model::VideoConfiguration)
+/// See [`VideoConfiguration`](crate::model::VideoConfiguration).
 pub mod video_configuration {
 
-    /// A builder for [`VideoConfiguration`](crate::model::VideoConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`VideoConfiguration`](crate::model::VideoConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) avc_profile: std::option::Option<std::string::String>,
@@ -2671,7 +2728,7 @@ pub mod video_configuration {
             self.video_width = input;
             self
         }
-        /// Consumes the builder and constructs a [`VideoConfiguration`](crate::model::VideoConfiguration)
+        /// Consumes the builder and constructs a [`VideoConfiguration`](crate::model::VideoConfiguration).
         pub fn build(self) -> crate::model::VideoConfiguration {
             crate::model::VideoConfiguration {
                 avc_profile: self.avc_profile,
@@ -2687,7 +2744,7 @@ pub mod video_configuration {
     }
 }
 impl VideoConfiguration {
-    /// Creates a new builder-style object to manufacture [`VideoConfiguration`](crate::model::VideoConfiguration)
+    /// Creates a new builder-style object to manufacture [`VideoConfiguration`](crate::model::VideoConfiguration).
     pub fn builder() -> crate::model::video_configuration::Builder {
         crate::model::video_configuration::Builder::default()
     }
@@ -2698,12 +2755,16 @@ impl VideoConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamKey {
     /// <p>Stream-key ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Stream-key value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>Channel ARN for the stream.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>Array of 1-50 maps, each of the form <code>string:string (key:value)</code>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2738,11 +2799,10 @@ impl std::fmt::Debug for StreamKey {
         formatter.finish()
     }
 }
-/// See [`StreamKey`](crate::model::StreamKey)
+/// See [`StreamKey`](crate::model::StreamKey).
 pub mod stream_key {
 
-    /// A builder for [`StreamKey`](crate::model::StreamKey)
-    #[non_exhaustive]
+    /// A builder for [`StreamKey`](crate::model::StreamKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2808,7 +2868,7 @@ pub mod stream_key {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamKey`](crate::model::StreamKey)
+        /// Consumes the builder and constructs a [`StreamKey`](crate::model::StreamKey).
         pub fn build(self) -> crate::model::StreamKey {
             crate::model::StreamKey {
                 arn: self.arn,
@@ -2820,7 +2880,7 @@ pub mod stream_key {
     }
 }
 impl StreamKey {
-    /// Creates a new builder-style object to manufacture [`StreamKey`](crate::model::StreamKey)
+    /// Creates a new builder-style object to manufacture [`StreamKey`](crate::model::StreamKey).
     pub fn builder() -> crate::model::stream_key::Builder {
         crate::model::stream_key::Builder::default()
     }
@@ -2831,18 +2891,25 @@ impl StreamKey {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Stream {
     /// <p>Channel ARN for the stream.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>Unique identifier for a live or previously live stream in the specified channel.</p>
+    #[doc(hidden)]
     pub stream_id: std::option::Option<std::string::String>,
     /// <p>URL of the master playlist, required by the video player to play the HLS stream.</p>
+    #[doc(hidden)]
     pub playback_url: std::option::Option<std::string::String>,
     /// <p>Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The stream’s state.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::StreamState>,
     /// <p>The stream’s health.</p>
+    #[doc(hidden)]
     pub health: std::option::Option<crate::model::StreamHealth>,
     /// <p>A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15 seconds of when video playback starts and a view is removed from <code>viewerCount</code> within 1 minute of when video playback ends. A value of -1 indicates that the request timed out; in this case, retry.</p>
+    #[doc(hidden)]
     pub viewer_count: i64,
 }
 impl Stream {
@@ -2888,11 +2955,10 @@ impl std::fmt::Debug for Stream {
         formatter.finish()
     }
 }
-/// See [`Stream`](crate::model::Stream)
+/// See [`Stream`](crate::model::Stream).
 pub mod stream {
 
-    /// A builder for [`Stream`](crate::model::Stream)
-    #[non_exhaustive]
+    /// A builder for [`Stream`](crate::model::Stream).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -2980,7 +3046,7 @@ pub mod stream {
             self.viewer_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`Stream`](crate::model::Stream)
+        /// Consumes the builder and constructs a [`Stream`](crate::model::Stream).
         pub fn build(self) -> crate::model::Stream {
             crate::model::Stream {
                 channel_arn: self.channel_arn,
@@ -2995,7 +3061,7 @@ pub mod stream {
     }
 }
 impl Stream {
-    /// Creates a new builder-style object to manufacture [`Stream`](crate::model::Stream)
+    /// Creates a new builder-style object to manufacture [`Stream`](crate::model::Stream).
     pub fn builder() -> crate::model::stream::Builder {
         crate::model::stream::Builder::default()
     }
@@ -3006,10 +3072,13 @@ impl Stream {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchError {
     /// <p>Channel ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Error code.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>Error message, determined by the application.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl BatchError {
@@ -3035,11 +3104,10 @@ impl std::fmt::Debug for BatchError {
         formatter.finish()
     }
 }
-/// See [`BatchError`](crate::model::BatchError)
+/// See [`BatchError`](crate::model::BatchError).
 pub mod batch_error {
 
-    /// A builder for [`BatchError`](crate::model::BatchError)
-    #[non_exhaustive]
+    /// A builder for [`BatchError`](crate::model::BatchError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3077,7 +3145,7 @@ pub mod batch_error {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchError`](crate::model::BatchError)
+        /// Consumes the builder and constructs a [`BatchError`](crate::model::BatchError).
         pub fn build(self) -> crate::model::BatchError {
             crate::model::BatchError {
                 arn: self.arn,
@@ -3088,7 +3156,7 @@ pub mod batch_error {
     }
 }
 impl BatchError {
-    /// Creates a new builder-style object to manufacture [`BatchError`](crate::model::BatchError)
+    /// Creates a new builder-style object to manufacture [`BatchError`](crate::model::BatchError).
     pub fn builder() -> crate::model::batch_error::Builder {
         crate::model::batch_error::Builder::default()
     }

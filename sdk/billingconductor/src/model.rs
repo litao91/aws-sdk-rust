@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationExceptionField {
     /// <p>The field name. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The message describing why the field failed validation. </p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ValidationExceptionField {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ValidationExceptionField {
         formatter.finish()
     }
 }
-/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField).
 pub mod validation_exception_field {
 
-    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField)
-    #[non_exhaustive]
+    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod validation_exception_field {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField).
         pub fn build(self) -> crate::model::ValidationExceptionField {
             crate::model::ValidationExceptionField {
                 name: self.name,
@@ -68,7 +69,7 @@ pub mod validation_exception_field {
     }
 }
 impl ValidationExceptionField {
-    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     pub fn builder() -> crate::model::validation_exception_field::Builder {
         crate::model::validation_exception_field::Builder::default()
     }
@@ -371,24 +372,34 @@ impl AsRef<str> for ValidationExceptionReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PricingRuleListElement {
     /// <p> The name of a pricing rule. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) used to uniquely identify a pricing rule. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> The pricing rule description. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The scope of pricing rule that indicates if it is globally applicable, or if it is service-specific. </p>
+    #[doc(hidden)]
     pub scope: std::option::Option<crate::model::PricingRuleScope>,
     /// <p> The type of pricing rule. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::PricingRuleType>,
     /// <p> A percentage modifier applied on the public pricing rates. </p>
+    #[doc(hidden)]
     pub modifier_percentage: std::option::Option<f64>,
     /// <p> If the <code>Scope</code> attribute is <code>SERVICE</code>, this attribute indicates which service the <code>PricingRule</code> is applicable for. </p>
+    #[doc(hidden)]
     pub service: std::option::Option<std::string::String>,
     /// <p> The pricing plans count that this pricing rule is associated with. </p>
+    #[doc(hidden)]
     pub associated_pricing_plan_count: i64,
     /// <p> The time the pricing rule was created. </p>
+    #[doc(hidden)]
     pub creation_time: i64,
     /// <p> The most recent time the pricing rule was modified. </p>
+    #[doc(hidden)]
     pub last_modified_time: i64,
 }
 impl PricingRuleListElement {
@@ -452,11 +463,10 @@ impl std::fmt::Debug for PricingRuleListElement {
         formatter.finish()
     }
 }
-/// See [`PricingRuleListElement`](crate::model::PricingRuleListElement)
+/// See [`PricingRuleListElement`](crate::model::PricingRuleListElement).
 pub mod pricing_rule_list_element {
 
-    /// A builder for [`PricingRuleListElement`](crate::model::PricingRuleListElement)
-    #[non_exhaustive]
+    /// A builder for [`PricingRuleListElement`](crate::model::PricingRuleListElement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -580,7 +590,7 @@ pub mod pricing_rule_list_element {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`PricingRuleListElement`](crate::model::PricingRuleListElement)
+        /// Consumes the builder and constructs a [`PricingRuleListElement`](crate::model::PricingRuleListElement).
         pub fn build(self) -> crate::model::PricingRuleListElement {
             crate::model::PricingRuleListElement {
                 name: self.name,
@@ -600,7 +610,7 @@ pub mod pricing_rule_list_element {
     }
 }
 impl PricingRuleListElement {
-    /// Creates a new builder-style object to manufacture [`PricingRuleListElement`](crate::model::PricingRuleListElement)
+    /// Creates a new builder-style object to manufacture [`PricingRuleListElement`](crate::model::PricingRuleListElement).
     pub fn builder() -> crate::model::pricing_rule_list_element::Builder {
         crate::model::pricing_rule_list_element::Builder::default()
     }
@@ -721,6 +731,7 @@ impl AsRef<str> for PricingRuleScope {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListPricingRulesFilter {
     /// <p> A list containing the pricing rule Amazon Resource Names (ARNs) to include in the API response. </p>
+    #[doc(hidden)]
     pub arns: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ListPricingRulesFilter {
@@ -736,11 +747,10 @@ impl std::fmt::Debug for ListPricingRulesFilter {
         formatter.finish()
     }
 }
-/// See [`ListPricingRulesFilter`](crate::model::ListPricingRulesFilter)
+/// See [`ListPricingRulesFilter`](crate::model::ListPricingRulesFilter).
 pub mod list_pricing_rules_filter {
 
-    /// A builder for [`ListPricingRulesFilter`](crate::model::ListPricingRulesFilter)
-    #[non_exhaustive]
+    /// A builder for [`ListPricingRulesFilter`](crate::model::ListPricingRulesFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arns: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -765,14 +775,14 @@ pub mod list_pricing_rules_filter {
             self.arns = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPricingRulesFilter`](crate::model::ListPricingRulesFilter)
+        /// Consumes the builder and constructs a [`ListPricingRulesFilter`](crate::model::ListPricingRulesFilter).
         pub fn build(self) -> crate::model::ListPricingRulesFilter {
             crate::model::ListPricingRulesFilter { arns: self.arns }
         }
     }
 }
 impl ListPricingRulesFilter {
-    /// Creates a new builder-style object to manufacture [`ListPricingRulesFilter`](crate::model::ListPricingRulesFilter)
+    /// Creates a new builder-style object to manufacture [`ListPricingRulesFilter`](crate::model::ListPricingRulesFilter).
     pub fn builder() -> crate::model::list_pricing_rules_filter::Builder {
         crate::model::list_pricing_rules_filter::Builder::default()
     }
@@ -783,16 +793,22 @@ impl ListPricingRulesFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PricingPlanListElement {
     /// <p>The name of a pricing plan. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The pricing plan Amazon Resource Names (ARN). This can be used to uniquely identify a pricing plan. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The pricing plan description. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The pricing rules count currently associated with this pricing plan list element. </p>
+    #[doc(hidden)]
     pub size: i64,
     /// <p> The time the pricing plan was created. </p>
+    #[doc(hidden)]
     pub creation_time: i64,
     /// <p> The most recent time the pricing plan was modified. </p>
+    #[doc(hidden)]
     pub last_modified_time: i64,
 }
 impl PricingPlanListElement {
@@ -833,11 +849,10 @@ impl std::fmt::Debug for PricingPlanListElement {
         formatter.finish()
     }
 }
-/// See [`PricingPlanListElement`](crate::model::PricingPlanListElement)
+/// See [`PricingPlanListElement`](crate::model::PricingPlanListElement).
 pub mod pricing_plan_list_element {
 
-    /// A builder for [`PricingPlanListElement`](crate::model::PricingPlanListElement)
-    #[non_exhaustive]
+    /// A builder for [`PricingPlanListElement`](crate::model::PricingPlanListElement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -908,7 +923,7 @@ pub mod pricing_plan_list_element {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`PricingPlanListElement`](crate::model::PricingPlanListElement)
+        /// Consumes the builder and constructs a [`PricingPlanListElement`](crate::model::PricingPlanListElement).
         pub fn build(self) -> crate::model::PricingPlanListElement {
             crate::model::PricingPlanListElement {
                 name: self.name,
@@ -922,7 +937,7 @@ pub mod pricing_plan_list_element {
     }
 }
 impl PricingPlanListElement {
-    /// Creates a new builder-style object to manufacture [`PricingPlanListElement`](crate::model::PricingPlanListElement)
+    /// Creates a new builder-style object to manufacture [`PricingPlanListElement`](crate::model::PricingPlanListElement).
     pub fn builder() -> crate::model::pricing_plan_list_element::Builder {
         crate::model::pricing_plan_list_element::Builder::default()
     }
@@ -933,6 +948,7 @@ impl PricingPlanListElement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListPricingPlansFilter {
     /// <p>A list of pricing plan Amazon Resource Names (ARNs) to retrieve information. </p>
+    #[doc(hidden)]
     pub arns: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ListPricingPlansFilter {
@@ -948,11 +964,10 @@ impl std::fmt::Debug for ListPricingPlansFilter {
         formatter.finish()
     }
 }
-/// See [`ListPricingPlansFilter`](crate::model::ListPricingPlansFilter)
+/// See [`ListPricingPlansFilter`](crate::model::ListPricingPlansFilter).
 pub mod list_pricing_plans_filter {
 
-    /// A builder for [`ListPricingPlansFilter`](crate::model::ListPricingPlansFilter)
-    #[non_exhaustive]
+    /// A builder for [`ListPricingPlansFilter`](crate::model::ListPricingPlansFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arns: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -977,14 +992,14 @@ pub mod list_pricing_plans_filter {
             self.arns = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPricingPlansFilter`](crate::model::ListPricingPlansFilter)
+        /// Consumes the builder and constructs a [`ListPricingPlansFilter`](crate::model::ListPricingPlansFilter).
         pub fn build(self) -> crate::model::ListPricingPlansFilter {
             crate::model::ListPricingPlansFilter { arns: self.arns }
         }
     }
 }
 impl ListPricingPlansFilter {
-    /// Creates a new builder-style object to manufacture [`ListPricingPlansFilter`](crate::model::ListPricingPlansFilter)
+    /// Creates a new builder-style object to manufacture [`ListPricingPlansFilter`](crate::model::ListPricingPlansFilter).
     pub fn builder() -> crate::model::list_pricing_plans_filter::Builder {
         crate::model::list_pricing_plans_filter::Builder::default()
     }
@@ -995,8 +1010,10 @@ impl ListPricingPlansFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListResourcesAssociatedToCustomLineItemResponseElement {
     /// <p> The ARN of the associated resource. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> The type of relationship between the custom line item and the associated resource. </p>
+    #[doc(hidden)]
     pub relationship: std::option::Option<crate::model::CustomLineItemRelationship>,
 }
 impl ListResourcesAssociatedToCustomLineItemResponseElement {
@@ -1018,11 +1035,10 @@ impl std::fmt::Debug for ListResourcesAssociatedToCustomLineItemResponseElement 
         formatter.finish()
     }
 }
-/// See [`ListResourcesAssociatedToCustomLineItemResponseElement`](crate::model::ListResourcesAssociatedToCustomLineItemResponseElement)
+/// See [`ListResourcesAssociatedToCustomLineItemResponseElement`](crate::model::ListResourcesAssociatedToCustomLineItemResponseElement).
 pub mod list_resources_associated_to_custom_line_item_response_element {
 
-    /// A builder for [`ListResourcesAssociatedToCustomLineItemResponseElement`](crate::model::ListResourcesAssociatedToCustomLineItemResponseElement)
-    #[non_exhaustive]
+    /// A builder for [`ListResourcesAssociatedToCustomLineItemResponseElement`](crate::model::ListResourcesAssociatedToCustomLineItemResponseElement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1052,7 +1068,7 @@ pub mod list_resources_associated_to_custom_line_item_response_element {
             self.relationship = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListResourcesAssociatedToCustomLineItemResponseElement`](crate::model::ListResourcesAssociatedToCustomLineItemResponseElement)
+        /// Consumes the builder and constructs a [`ListResourcesAssociatedToCustomLineItemResponseElement`](crate::model::ListResourcesAssociatedToCustomLineItemResponseElement).
         pub fn build(self) -> crate::model::ListResourcesAssociatedToCustomLineItemResponseElement {
             crate::model::ListResourcesAssociatedToCustomLineItemResponseElement {
                 arn: self.arn,
@@ -1062,7 +1078,7 @@ pub mod list_resources_associated_to_custom_line_item_response_element {
     }
 }
 impl ListResourcesAssociatedToCustomLineItemResponseElement {
-    /// Creates a new builder-style object to manufacture [`ListResourcesAssociatedToCustomLineItemResponseElement`](crate::model::ListResourcesAssociatedToCustomLineItemResponseElement)
+    /// Creates a new builder-style object to manufacture [`ListResourcesAssociatedToCustomLineItemResponseElement`](crate::model::ListResourcesAssociatedToCustomLineItemResponseElement).
     pub fn builder(
     ) -> crate::model::list_resources_associated_to_custom_line_item_response_element::Builder {
         crate::model::list_resources_associated_to_custom_line_item_response_element::Builder::default()
@@ -1129,6 +1145,7 @@ impl AsRef<str> for CustomLineItemRelationship {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListResourcesAssociatedToCustomLineItemFilter {
     /// <p> The type of relationship between the custom line item and the associated resource. </p>
+    #[doc(hidden)]
     pub relationship: std::option::Option<crate::model::CustomLineItemRelationship>,
 }
 impl ListResourcesAssociatedToCustomLineItemFilter {
@@ -1144,11 +1161,10 @@ impl std::fmt::Debug for ListResourcesAssociatedToCustomLineItemFilter {
         formatter.finish()
     }
 }
-/// See [`ListResourcesAssociatedToCustomLineItemFilter`](crate::model::ListResourcesAssociatedToCustomLineItemFilter)
+/// See [`ListResourcesAssociatedToCustomLineItemFilter`](crate::model::ListResourcesAssociatedToCustomLineItemFilter).
 pub mod list_resources_associated_to_custom_line_item_filter {
 
-    /// A builder for [`ListResourcesAssociatedToCustomLineItemFilter`](crate::model::ListResourcesAssociatedToCustomLineItemFilter)
-    #[non_exhaustive]
+    /// A builder for [`ListResourcesAssociatedToCustomLineItemFilter`](crate::model::ListResourcesAssociatedToCustomLineItemFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) relationship: std::option::Option<crate::model::CustomLineItemRelationship>,
@@ -1167,7 +1183,7 @@ pub mod list_resources_associated_to_custom_line_item_filter {
             self.relationship = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListResourcesAssociatedToCustomLineItemFilter`](crate::model::ListResourcesAssociatedToCustomLineItemFilter)
+        /// Consumes the builder and constructs a [`ListResourcesAssociatedToCustomLineItemFilter`](crate::model::ListResourcesAssociatedToCustomLineItemFilter).
         pub fn build(self) -> crate::model::ListResourcesAssociatedToCustomLineItemFilter {
             crate::model::ListResourcesAssociatedToCustomLineItemFilter {
                 relationship: self.relationship,
@@ -1176,7 +1192,7 @@ pub mod list_resources_associated_to_custom_line_item_filter {
     }
 }
 impl ListResourcesAssociatedToCustomLineItemFilter {
-    /// Creates a new builder-style object to manufacture [`ListResourcesAssociatedToCustomLineItemFilter`](crate::model::ListResourcesAssociatedToCustomLineItemFilter)
+    /// Creates a new builder-style object to manufacture [`ListResourcesAssociatedToCustomLineItemFilter`](crate::model::ListResourcesAssociatedToCustomLineItemFilter).
     pub fn builder() -> crate::model::list_resources_associated_to_custom_line_item_filter::Builder
     {
         crate::model::list_resources_associated_to_custom_line_item_filter::Builder::default()
@@ -1188,8 +1204,10 @@ impl ListResourcesAssociatedToCustomLineItemFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisassociateResourceResponseElement {
     /// <p> The resource ARN that was disassociated from the custom line item. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> An <code>AssociateResourceError</code> shown if the resource disassociation fails. </p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::AssociateResourceError>,
 }
 impl DisassociateResourceResponseElement {
@@ -1210,11 +1228,10 @@ impl std::fmt::Debug for DisassociateResourceResponseElement {
         formatter.finish()
     }
 }
-/// See [`DisassociateResourceResponseElement`](crate::model::DisassociateResourceResponseElement)
+/// See [`DisassociateResourceResponseElement`](crate::model::DisassociateResourceResponseElement).
 pub mod disassociate_resource_response_element {
 
-    /// A builder for [`DisassociateResourceResponseElement`](crate::model::DisassociateResourceResponseElement)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateResourceResponseElement`](crate::model::DisassociateResourceResponseElement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1244,7 +1261,7 @@ pub mod disassociate_resource_response_element {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociateResourceResponseElement`](crate::model::DisassociateResourceResponseElement)
+        /// Consumes the builder and constructs a [`DisassociateResourceResponseElement`](crate::model::DisassociateResourceResponseElement).
         pub fn build(self) -> crate::model::DisassociateResourceResponseElement {
             crate::model::DisassociateResourceResponseElement {
                 arn: self.arn,
@@ -1254,7 +1271,7 @@ pub mod disassociate_resource_response_element {
     }
 }
 impl DisassociateResourceResponseElement {
-    /// Creates a new builder-style object to manufacture [`DisassociateResourceResponseElement`](crate::model::DisassociateResourceResponseElement)
+    /// Creates a new builder-style object to manufacture [`DisassociateResourceResponseElement`](crate::model::DisassociateResourceResponseElement).
     pub fn builder() -> crate::model::disassociate_resource_response_element::Builder {
         crate::model::disassociate_resource_response_element::Builder::default()
     }
@@ -1265,8 +1282,10 @@ impl DisassociateResourceResponseElement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateResourceError {
     /// <p> The reason the resource association failed. </p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p> A static error code that used to classify the type of failure. </p>
+    #[doc(hidden)]
     pub reason: std::option::Option<crate::model::AssociateResourceErrorReason>,
 }
 impl AssociateResourceError {
@@ -1287,11 +1306,10 @@ impl std::fmt::Debug for AssociateResourceError {
         formatter.finish()
     }
 }
-/// See [`AssociateResourceError`](crate::model::AssociateResourceError)
+/// See [`AssociateResourceError`](crate::model::AssociateResourceError).
 pub mod associate_resource_error {
 
-    /// A builder for [`AssociateResourceError`](crate::model::AssociateResourceError)
-    #[non_exhaustive]
+    /// A builder for [`AssociateResourceError`](crate::model::AssociateResourceError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -1321,7 +1339,7 @@ pub mod associate_resource_error {
             self.reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateResourceError`](crate::model::AssociateResourceError)
+        /// Consumes the builder and constructs a [`AssociateResourceError`](crate::model::AssociateResourceError).
         pub fn build(self) -> crate::model::AssociateResourceError {
             crate::model::AssociateResourceError {
                 message: self.message,
@@ -1331,7 +1349,7 @@ pub mod associate_resource_error {
     }
 }
 impl AssociateResourceError {
-    /// Creates a new builder-style object to manufacture [`AssociateResourceError`](crate::model::AssociateResourceError)
+    /// Creates a new builder-style object to manufacture [`AssociateResourceError`](crate::model::AssociateResourceError).
     pub fn builder() -> crate::model::associate_resource_error::Builder {
         crate::model::associate_resource_error::Builder::default()
     }
@@ -1410,8 +1428,10 @@ impl AsRef<str> for AssociateResourceErrorReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomLineItemBillingPeriodRange {
     /// <p> The inclusive start billing period that defines a billing period range where a custom line is applied. </p>
+    #[doc(hidden)]
     pub inclusive_start_billing_period: std::option::Option<std::string::String>,
     /// <p> The inclusive end billing period that defines a billing period range where a custom line is applied. </p>
+    #[doc(hidden)]
     pub exclusive_end_billing_period: std::option::Option<std::string::String>,
 }
 impl CustomLineItemBillingPeriodRange {
@@ -1438,11 +1458,10 @@ impl std::fmt::Debug for CustomLineItemBillingPeriodRange {
         formatter.finish()
     }
 }
-/// See [`CustomLineItemBillingPeriodRange`](crate::model::CustomLineItemBillingPeriodRange)
+/// See [`CustomLineItemBillingPeriodRange`](crate::model::CustomLineItemBillingPeriodRange).
 pub mod custom_line_item_billing_period_range {
 
-    /// A builder for [`CustomLineItemBillingPeriodRange`](crate::model::CustomLineItemBillingPeriodRange)
-    #[non_exhaustive]
+    /// A builder for [`CustomLineItemBillingPeriodRange`](crate::model::CustomLineItemBillingPeriodRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) inclusive_start_billing_period: std::option::Option<std::string::String>,
@@ -1481,7 +1500,7 @@ pub mod custom_line_item_billing_period_range {
             self.exclusive_end_billing_period = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomLineItemBillingPeriodRange`](crate::model::CustomLineItemBillingPeriodRange)
+        /// Consumes the builder and constructs a [`CustomLineItemBillingPeriodRange`](crate::model::CustomLineItemBillingPeriodRange).
         pub fn build(self) -> crate::model::CustomLineItemBillingPeriodRange {
             crate::model::CustomLineItemBillingPeriodRange {
                 inclusive_start_billing_period: self.inclusive_start_billing_period,
@@ -1491,7 +1510,7 @@ pub mod custom_line_item_billing_period_range {
     }
 }
 impl CustomLineItemBillingPeriodRange {
-    /// Creates a new builder-style object to manufacture [`CustomLineItemBillingPeriodRange`](crate::model::CustomLineItemBillingPeriodRange)
+    /// Creates a new builder-style object to manufacture [`CustomLineItemBillingPeriodRange`](crate::model::CustomLineItemBillingPeriodRange).
     pub fn builder() -> crate::model::custom_line_item_billing_period_range::Builder {
         crate::model::custom_line_item_billing_period_range::Builder::default()
     }
@@ -1502,8 +1521,10 @@ impl CustomLineItemBillingPeriodRange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateResourceResponseElement {
     /// <p> The resource ARN that was associated to the custom line item. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> An <code>AssociateResourceError</code> that will populate if the resource association fails. </p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::AssociateResourceError>,
 }
 impl AssociateResourceResponseElement {
@@ -1524,11 +1545,10 @@ impl std::fmt::Debug for AssociateResourceResponseElement {
         formatter.finish()
     }
 }
-/// See [`AssociateResourceResponseElement`](crate::model::AssociateResourceResponseElement)
+/// See [`AssociateResourceResponseElement`](crate::model::AssociateResourceResponseElement).
 pub mod associate_resource_response_element {
 
-    /// A builder for [`AssociateResourceResponseElement`](crate::model::AssociateResourceResponseElement)
-    #[non_exhaustive]
+    /// A builder for [`AssociateResourceResponseElement`](crate::model::AssociateResourceResponseElement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1558,7 +1578,7 @@ pub mod associate_resource_response_element {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateResourceResponseElement`](crate::model::AssociateResourceResponseElement)
+        /// Consumes the builder and constructs a [`AssociateResourceResponseElement`](crate::model::AssociateResourceResponseElement).
         pub fn build(self) -> crate::model::AssociateResourceResponseElement {
             crate::model::AssociateResourceResponseElement {
                 arn: self.arn,
@@ -1568,7 +1588,7 @@ pub mod associate_resource_response_element {
     }
 }
 impl AssociateResourceResponseElement {
-    /// Creates a new builder-style object to manufacture [`AssociateResourceResponseElement`](crate::model::AssociateResourceResponseElement)
+    /// Creates a new builder-style object to manufacture [`AssociateResourceResponseElement`](crate::model::AssociateResourceResponseElement).
     pub fn builder() -> crate::model::associate_resource_response_element::Builder {
         crate::model::associate_resource_response_element::Builder::default()
     }
@@ -1579,24 +1599,34 @@ impl AssociateResourceResponseElement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomLineItemListElement {
     /// <p> The Amazon Resource Names (ARNs) for custom line items. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> The custom line item's name. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> A <code>ListCustomLineItemChargeDetails</code> that describes the charge details of a custom line item. </p>
+    #[doc(hidden)]
     pub charge_details: std::option::Option<crate::model::ListCustomLineItemChargeDetails>,
     /// <p> The custom line item's charge value currency. Only one of the valid values can be used. </p>
+    #[doc(hidden)]
     pub currency_code: std::option::Option<crate::model::CurrencyCode>,
     /// <p> The custom line item's description. This is shown on the Bills page in association with the charge value. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The product code associated with the custom line item. </p>
+    #[doc(hidden)]
     pub product_code: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) that references the billing group where the custom line item applies to. </p>
+    #[doc(hidden)]
     pub billing_group_arn: std::option::Option<std::string::String>,
     /// <p> The time created. </p>
+    #[doc(hidden)]
     pub creation_time: i64,
     /// <p> The most recent time the custom line item was modified. </p>
+    #[doc(hidden)]
     pub last_modified_time: i64,
     /// <p> The number of resources that are associated to the custom line item. </p>
+    #[doc(hidden)]
     pub association_size: i64,
 }
 impl CustomLineItemListElement {
@@ -1659,11 +1689,10 @@ impl std::fmt::Debug for CustomLineItemListElement {
         formatter.finish()
     }
 }
-/// See [`CustomLineItemListElement`](crate::model::CustomLineItemListElement)
+/// See [`CustomLineItemListElement`](crate::model::CustomLineItemListElement).
 pub mod custom_line_item_list_element {
 
-    /// A builder for [`CustomLineItemListElement`](crate::model::CustomLineItemListElement)
-    #[non_exhaustive]
+    /// A builder for [`CustomLineItemListElement`](crate::model::CustomLineItemListElement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1791,7 +1820,7 @@ pub mod custom_line_item_list_element {
             self.association_size = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomLineItemListElement`](crate::model::CustomLineItemListElement)
+        /// Consumes the builder and constructs a [`CustomLineItemListElement`](crate::model::CustomLineItemListElement).
         pub fn build(self) -> crate::model::CustomLineItemListElement {
             crate::model::CustomLineItemListElement {
                 arn: self.arn,
@@ -1809,7 +1838,7 @@ pub mod custom_line_item_list_element {
     }
 }
 impl CustomLineItemListElement {
-    /// Creates a new builder-style object to manufacture [`CustomLineItemListElement`](crate::model::CustomLineItemListElement)
+    /// Creates a new builder-style object to manufacture [`CustomLineItemListElement`](crate::model::CustomLineItemListElement).
     pub fn builder() -> crate::model::custom_line_item_list_element::Builder {
         crate::model::custom_line_item_list_element::Builder::default()
     }
@@ -1875,10 +1904,13 @@ impl AsRef<str> for CurrencyCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListCustomLineItemChargeDetails {
     /// <p> A <code>ListCustomLineItemFlatChargeDetails</code> that describes the charge details of a flat custom line item. </p>
+    #[doc(hidden)]
     pub flat: std::option::Option<crate::model::ListCustomLineItemFlatChargeDetails>,
     /// <p> A <code>ListCustomLineItemPercentageChargeDetails</code> that describes the charge details of a percentage custom line item. </p>
+    #[doc(hidden)]
     pub percentage: std::option::Option<crate::model::ListCustomLineItemPercentageChargeDetails>,
     /// <p> The type of the custom line item that indicates whether the charge is a <code>fee</code> or <code>credit</code>. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::CustomLineItemType>,
 }
 impl ListCustomLineItemChargeDetails {
@@ -1906,11 +1938,10 @@ impl std::fmt::Debug for ListCustomLineItemChargeDetails {
         formatter.finish()
     }
 }
-/// See [`ListCustomLineItemChargeDetails`](crate::model::ListCustomLineItemChargeDetails)
+/// See [`ListCustomLineItemChargeDetails`](crate::model::ListCustomLineItemChargeDetails).
 pub mod list_custom_line_item_charge_details {
 
-    /// A builder for [`ListCustomLineItemChargeDetails`](crate::model::ListCustomLineItemChargeDetails)
-    #[non_exhaustive]
+    /// A builder for [`ListCustomLineItemChargeDetails`](crate::model::ListCustomLineItemChargeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flat: std::option::Option<crate::model::ListCustomLineItemFlatChargeDetails>,
@@ -1961,7 +1992,7 @@ pub mod list_custom_line_item_charge_details {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListCustomLineItemChargeDetails`](crate::model::ListCustomLineItemChargeDetails)
+        /// Consumes the builder and constructs a [`ListCustomLineItemChargeDetails`](crate::model::ListCustomLineItemChargeDetails).
         pub fn build(self) -> crate::model::ListCustomLineItemChargeDetails {
             crate::model::ListCustomLineItemChargeDetails {
                 flat: self.flat,
@@ -1972,7 +2003,7 @@ pub mod list_custom_line_item_charge_details {
     }
 }
 impl ListCustomLineItemChargeDetails {
-    /// Creates a new builder-style object to manufacture [`ListCustomLineItemChargeDetails`](crate::model::ListCustomLineItemChargeDetails)
+    /// Creates a new builder-style object to manufacture [`ListCustomLineItemChargeDetails`](crate::model::ListCustomLineItemChargeDetails).
     pub fn builder() -> crate::model::list_custom_line_item_charge_details::Builder {
         crate::model::list_custom_line_item_charge_details::Builder::default()
     }
@@ -2038,6 +2069,7 @@ impl AsRef<str> for CustomLineItemType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListCustomLineItemPercentageChargeDetails {
     /// <p> The custom line item's percentage value. This will be multiplied against the combined value of its associated resources to determine its charge value. </p>
+    #[doc(hidden)]
     pub percentage_value: std::option::Option<f64>,
 }
 impl ListCustomLineItemPercentageChargeDetails {
@@ -2053,11 +2085,10 @@ impl std::fmt::Debug for ListCustomLineItemPercentageChargeDetails {
         formatter.finish()
     }
 }
-/// See [`ListCustomLineItemPercentageChargeDetails`](crate::model::ListCustomLineItemPercentageChargeDetails)
+/// See [`ListCustomLineItemPercentageChargeDetails`](crate::model::ListCustomLineItemPercentageChargeDetails).
 pub mod list_custom_line_item_percentage_charge_details {
 
-    /// A builder for [`ListCustomLineItemPercentageChargeDetails`](crate::model::ListCustomLineItemPercentageChargeDetails)
-    #[non_exhaustive]
+    /// A builder for [`ListCustomLineItemPercentageChargeDetails`](crate::model::ListCustomLineItemPercentageChargeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) percentage_value: std::option::Option<f64>,
@@ -2073,7 +2104,7 @@ pub mod list_custom_line_item_percentage_charge_details {
             self.percentage_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListCustomLineItemPercentageChargeDetails`](crate::model::ListCustomLineItemPercentageChargeDetails)
+        /// Consumes the builder and constructs a [`ListCustomLineItemPercentageChargeDetails`](crate::model::ListCustomLineItemPercentageChargeDetails).
         pub fn build(self) -> crate::model::ListCustomLineItemPercentageChargeDetails {
             crate::model::ListCustomLineItemPercentageChargeDetails {
                 percentage_value: self.percentage_value,
@@ -2082,7 +2113,7 @@ pub mod list_custom_line_item_percentage_charge_details {
     }
 }
 impl ListCustomLineItemPercentageChargeDetails {
-    /// Creates a new builder-style object to manufacture [`ListCustomLineItemPercentageChargeDetails`](crate::model::ListCustomLineItemPercentageChargeDetails)
+    /// Creates a new builder-style object to manufacture [`ListCustomLineItemPercentageChargeDetails`](crate::model::ListCustomLineItemPercentageChargeDetails).
     pub fn builder() -> crate::model::list_custom_line_item_percentage_charge_details::Builder {
         crate::model::list_custom_line_item_percentage_charge_details::Builder::default()
     }
@@ -2093,6 +2124,7 @@ impl ListCustomLineItemPercentageChargeDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListCustomLineItemFlatChargeDetails {
     /// <p> The custom line item's fixed charge value in USD. </p>
+    #[doc(hidden)]
     pub charge_value: std::option::Option<f64>,
 }
 impl ListCustomLineItemFlatChargeDetails {
@@ -2108,11 +2140,10 @@ impl std::fmt::Debug for ListCustomLineItemFlatChargeDetails {
         formatter.finish()
     }
 }
-/// See [`ListCustomLineItemFlatChargeDetails`](crate::model::ListCustomLineItemFlatChargeDetails)
+/// See [`ListCustomLineItemFlatChargeDetails`](crate::model::ListCustomLineItemFlatChargeDetails).
 pub mod list_custom_line_item_flat_charge_details {
 
-    /// A builder for [`ListCustomLineItemFlatChargeDetails`](crate::model::ListCustomLineItemFlatChargeDetails)
-    #[non_exhaustive]
+    /// A builder for [`ListCustomLineItemFlatChargeDetails`](crate::model::ListCustomLineItemFlatChargeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) charge_value: std::option::Option<f64>,
@@ -2128,7 +2159,7 @@ pub mod list_custom_line_item_flat_charge_details {
             self.charge_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListCustomLineItemFlatChargeDetails`](crate::model::ListCustomLineItemFlatChargeDetails)
+        /// Consumes the builder and constructs a [`ListCustomLineItemFlatChargeDetails`](crate::model::ListCustomLineItemFlatChargeDetails).
         pub fn build(self) -> crate::model::ListCustomLineItemFlatChargeDetails {
             crate::model::ListCustomLineItemFlatChargeDetails {
                 charge_value: self.charge_value,
@@ -2137,7 +2168,7 @@ pub mod list_custom_line_item_flat_charge_details {
     }
 }
 impl ListCustomLineItemFlatChargeDetails {
-    /// Creates a new builder-style object to manufacture [`ListCustomLineItemFlatChargeDetails`](crate::model::ListCustomLineItemFlatChargeDetails)
+    /// Creates a new builder-style object to manufacture [`ListCustomLineItemFlatChargeDetails`](crate::model::ListCustomLineItemFlatChargeDetails).
     pub fn builder() -> crate::model::list_custom_line_item_flat_charge_details::Builder {
         crate::model::list_custom_line_item_flat_charge_details::Builder::default()
     }
@@ -2148,10 +2179,13 @@ impl ListCustomLineItemFlatChargeDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListCustomLineItemsFilter {
     /// <p> A list of custom line items to retrieve information. </p>
+    #[doc(hidden)]
     pub names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> The billing group Amazon Resource Names (ARNs) to retrieve information. </p>
+    #[doc(hidden)]
     pub billing_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> A list of custom line item ARNs to retrieve information. </p>
+    #[doc(hidden)]
     pub arns: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ListCustomLineItemsFilter {
@@ -2177,11 +2211,10 @@ impl std::fmt::Debug for ListCustomLineItemsFilter {
         formatter.finish()
     }
 }
-/// See [`ListCustomLineItemsFilter`](crate::model::ListCustomLineItemsFilter)
+/// See [`ListCustomLineItemsFilter`](crate::model::ListCustomLineItemsFilter).
 pub mod list_custom_line_items_filter {
 
-    /// A builder for [`ListCustomLineItemsFilter`](crate::model::ListCustomLineItemsFilter)
-    #[non_exhaustive]
+    /// A builder for [`ListCustomLineItemsFilter`](crate::model::ListCustomLineItemsFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2246,7 +2279,7 @@ pub mod list_custom_line_items_filter {
             self.arns = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListCustomLineItemsFilter`](crate::model::ListCustomLineItemsFilter)
+        /// Consumes the builder and constructs a [`ListCustomLineItemsFilter`](crate::model::ListCustomLineItemsFilter).
         pub fn build(self) -> crate::model::ListCustomLineItemsFilter {
             crate::model::ListCustomLineItemsFilter {
                 names: self.names,
@@ -2257,7 +2290,7 @@ pub mod list_custom_line_items_filter {
     }
 }
 impl ListCustomLineItemsFilter {
-    /// Creates a new builder-style object to manufacture [`ListCustomLineItemsFilter`](crate::model::ListCustomLineItemsFilter)
+    /// Creates a new builder-style object to manufacture [`ListCustomLineItemsFilter`](crate::model::ListCustomLineItemsFilter).
     pub fn builder() -> crate::model::list_custom_line_items_filter::Builder {
         crate::model::list_custom_line_items_filter::Builder::default()
     }
@@ -2268,10 +2301,13 @@ impl ListCustomLineItemsFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomLineItemChargeDetails {
     /// <p> A <code>CustomLineItemFlatChargeDetails</code> that describes the charge details of a flat custom line item. </p>
+    #[doc(hidden)]
     pub flat: std::option::Option<crate::model::CustomLineItemFlatChargeDetails>,
     /// <p> A <code>CustomLineItemPercentageChargeDetails</code> that describes the charge details of a percentage custom line item. </p>
+    #[doc(hidden)]
     pub percentage: std::option::Option<crate::model::CustomLineItemPercentageChargeDetails>,
     /// <p> The type of the custom line item that indicates whether the charge is a fee or credit. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::CustomLineItemType>,
 }
 impl CustomLineItemChargeDetails {
@@ -2299,11 +2335,10 @@ impl std::fmt::Debug for CustomLineItemChargeDetails {
         formatter.finish()
     }
 }
-/// See [`CustomLineItemChargeDetails`](crate::model::CustomLineItemChargeDetails)
+/// See [`CustomLineItemChargeDetails`](crate::model::CustomLineItemChargeDetails).
 pub mod custom_line_item_charge_details {
 
-    /// A builder for [`CustomLineItemChargeDetails`](crate::model::CustomLineItemChargeDetails)
-    #[non_exhaustive]
+    /// A builder for [`CustomLineItemChargeDetails`](crate::model::CustomLineItemChargeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flat: std::option::Option<crate::model::CustomLineItemFlatChargeDetails>,
@@ -2354,7 +2389,7 @@ pub mod custom_line_item_charge_details {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomLineItemChargeDetails`](crate::model::CustomLineItemChargeDetails)
+        /// Consumes the builder and constructs a [`CustomLineItemChargeDetails`](crate::model::CustomLineItemChargeDetails).
         pub fn build(self) -> crate::model::CustomLineItemChargeDetails {
             crate::model::CustomLineItemChargeDetails {
                 flat: self.flat,
@@ -2365,7 +2400,7 @@ pub mod custom_line_item_charge_details {
     }
 }
 impl CustomLineItemChargeDetails {
-    /// Creates a new builder-style object to manufacture [`CustomLineItemChargeDetails`](crate::model::CustomLineItemChargeDetails)
+    /// Creates a new builder-style object to manufacture [`CustomLineItemChargeDetails`](crate::model::CustomLineItemChargeDetails).
     pub fn builder() -> crate::model::custom_line_item_charge_details::Builder {
         crate::model::custom_line_item_charge_details::Builder::default()
     }
@@ -2376,8 +2411,10 @@ impl CustomLineItemChargeDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomLineItemPercentageChargeDetails {
     /// <p> The custom line item's percentage value. This will be multiplied against the combined value of its associated resources to determine its charge value. </p>
+    #[doc(hidden)]
     pub percentage_value: std::option::Option<f64>,
     /// <p> A list of resource ARNs to associate to the percentage custom line item. </p>
+    #[doc(hidden)]
     pub associated_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CustomLineItemPercentageChargeDetails {
@@ -2398,11 +2435,10 @@ impl std::fmt::Debug for CustomLineItemPercentageChargeDetails {
         formatter.finish()
     }
 }
-/// See [`CustomLineItemPercentageChargeDetails`](crate::model::CustomLineItemPercentageChargeDetails)
+/// See [`CustomLineItemPercentageChargeDetails`](crate::model::CustomLineItemPercentageChargeDetails).
 pub mod custom_line_item_percentage_charge_details {
 
-    /// A builder for [`CustomLineItemPercentageChargeDetails`](crate::model::CustomLineItemPercentageChargeDetails)
-    #[non_exhaustive]
+    /// A builder for [`CustomLineItemPercentageChargeDetails`](crate::model::CustomLineItemPercentageChargeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) percentage_value: std::option::Option<f64>,
@@ -2438,7 +2474,7 @@ pub mod custom_line_item_percentage_charge_details {
             self.associated_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomLineItemPercentageChargeDetails`](crate::model::CustomLineItemPercentageChargeDetails)
+        /// Consumes the builder and constructs a [`CustomLineItemPercentageChargeDetails`](crate::model::CustomLineItemPercentageChargeDetails).
         pub fn build(self) -> crate::model::CustomLineItemPercentageChargeDetails {
             crate::model::CustomLineItemPercentageChargeDetails {
                 percentage_value: self.percentage_value,
@@ -2448,7 +2484,7 @@ pub mod custom_line_item_percentage_charge_details {
     }
 }
 impl CustomLineItemPercentageChargeDetails {
-    /// Creates a new builder-style object to manufacture [`CustomLineItemPercentageChargeDetails`](crate::model::CustomLineItemPercentageChargeDetails)
+    /// Creates a new builder-style object to manufacture [`CustomLineItemPercentageChargeDetails`](crate::model::CustomLineItemPercentageChargeDetails).
     pub fn builder() -> crate::model::custom_line_item_percentage_charge_details::Builder {
         crate::model::custom_line_item_percentage_charge_details::Builder::default()
     }
@@ -2459,6 +2495,7 @@ impl CustomLineItemPercentageChargeDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomLineItemFlatChargeDetails {
     /// <p> The custom line item's fixed charge value in USD. </p>
+    #[doc(hidden)]
     pub charge_value: std::option::Option<f64>,
 }
 impl CustomLineItemFlatChargeDetails {
@@ -2474,11 +2511,10 @@ impl std::fmt::Debug for CustomLineItemFlatChargeDetails {
         formatter.finish()
     }
 }
-/// See [`CustomLineItemFlatChargeDetails`](crate::model::CustomLineItemFlatChargeDetails)
+/// See [`CustomLineItemFlatChargeDetails`](crate::model::CustomLineItemFlatChargeDetails).
 pub mod custom_line_item_flat_charge_details {
 
-    /// A builder for [`CustomLineItemFlatChargeDetails`](crate::model::CustomLineItemFlatChargeDetails)
-    #[non_exhaustive]
+    /// A builder for [`CustomLineItemFlatChargeDetails`](crate::model::CustomLineItemFlatChargeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) charge_value: std::option::Option<f64>,
@@ -2494,7 +2530,7 @@ pub mod custom_line_item_flat_charge_details {
             self.charge_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomLineItemFlatChargeDetails`](crate::model::CustomLineItemFlatChargeDetails)
+        /// Consumes the builder and constructs a [`CustomLineItemFlatChargeDetails`](crate::model::CustomLineItemFlatChargeDetails).
         pub fn build(self) -> crate::model::CustomLineItemFlatChargeDetails {
             crate::model::CustomLineItemFlatChargeDetails {
                 charge_value: self.charge_value,
@@ -2503,7 +2539,7 @@ pub mod custom_line_item_flat_charge_details {
     }
 }
 impl CustomLineItemFlatChargeDetails {
-    /// Creates a new builder-style object to manufacture [`CustomLineItemFlatChargeDetails`](crate::model::CustomLineItemFlatChargeDetails)
+    /// Creates a new builder-style object to manufacture [`CustomLineItemFlatChargeDetails`](crate::model::CustomLineItemFlatChargeDetails).
     pub fn builder() -> crate::model::custom_line_item_flat_charge_details::Builder {
         crate::model::custom_line_item_flat_charge_details::Builder::default()
     }
@@ -2514,8 +2550,10 @@ impl CustomLineItemFlatChargeDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateCustomLineItemChargeDetails {
     /// <p> An <code>UpdateCustomLineItemFlatChargeDetails</code> that describes the new charge details of a flat custom line item. </p>
+    #[doc(hidden)]
     pub flat: std::option::Option<crate::model::UpdateCustomLineItemFlatChargeDetails>,
     /// <p> An <code>UpdateCustomLineItemPercentageChargeDetails</code> that describes the new charge details of a percentage custom line item. </p>
+    #[doc(hidden)]
     pub percentage: std::option::Option<crate::model::UpdateCustomLineItemPercentageChargeDetails>,
 }
 impl UpdateCustomLineItemChargeDetails {
@@ -2540,11 +2578,10 @@ impl std::fmt::Debug for UpdateCustomLineItemChargeDetails {
         formatter.finish()
     }
 }
-/// See [`UpdateCustomLineItemChargeDetails`](crate::model::UpdateCustomLineItemChargeDetails)
+/// See [`UpdateCustomLineItemChargeDetails`](crate::model::UpdateCustomLineItemChargeDetails).
 pub mod update_custom_line_item_charge_details {
 
-    /// A builder for [`UpdateCustomLineItemChargeDetails`](crate::model::UpdateCustomLineItemChargeDetails)
-    #[non_exhaustive]
+    /// A builder for [`UpdateCustomLineItemChargeDetails`](crate::model::UpdateCustomLineItemChargeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flat: std::option::Option<crate::model::UpdateCustomLineItemFlatChargeDetails>,
@@ -2581,7 +2618,7 @@ pub mod update_custom_line_item_charge_details {
             self.percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateCustomLineItemChargeDetails`](crate::model::UpdateCustomLineItemChargeDetails)
+        /// Consumes the builder and constructs a [`UpdateCustomLineItemChargeDetails`](crate::model::UpdateCustomLineItemChargeDetails).
         pub fn build(self) -> crate::model::UpdateCustomLineItemChargeDetails {
             crate::model::UpdateCustomLineItemChargeDetails {
                 flat: self.flat,
@@ -2591,7 +2628,7 @@ pub mod update_custom_line_item_charge_details {
     }
 }
 impl UpdateCustomLineItemChargeDetails {
-    /// Creates a new builder-style object to manufacture [`UpdateCustomLineItemChargeDetails`](crate::model::UpdateCustomLineItemChargeDetails)
+    /// Creates a new builder-style object to manufacture [`UpdateCustomLineItemChargeDetails`](crate::model::UpdateCustomLineItemChargeDetails).
     pub fn builder() -> crate::model::update_custom_line_item_charge_details::Builder {
         crate::model::update_custom_line_item_charge_details::Builder::default()
     }
@@ -2602,6 +2639,7 @@ impl UpdateCustomLineItemChargeDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateCustomLineItemPercentageChargeDetails {
     /// <p> The custom line item's new percentage value. This will be multiplied against the combined value of its associated resources to determine its charge value. </p>
+    #[doc(hidden)]
     pub percentage_value: std::option::Option<f64>,
 }
 impl UpdateCustomLineItemPercentageChargeDetails {
@@ -2617,11 +2655,10 @@ impl std::fmt::Debug for UpdateCustomLineItemPercentageChargeDetails {
         formatter.finish()
     }
 }
-/// See [`UpdateCustomLineItemPercentageChargeDetails`](crate::model::UpdateCustomLineItemPercentageChargeDetails)
+/// See [`UpdateCustomLineItemPercentageChargeDetails`](crate::model::UpdateCustomLineItemPercentageChargeDetails).
 pub mod update_custom_line_item_percentage_charge_details {
 
-    /// A builder for [`UpdateCustomLineItemPercentageChargeDetails`](crate::model::UpdateCustomLineItemPercentageChargeDetails)
-    #[non_exhaustive]
+    /// A builder for [`UpdateCustomLineItemPercentageChargeDetails`](crate::model::UpdateCustomLineItemPercentageChargeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) percentage_value: std::option::Option<f64>,
@@ -2637,7 +2674,7 @@ pub mod update_custom_line_item_percentage_charge_details {
             self.percentage_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateCustomLineItemPercentageChargeDetails`](crate::model::UpdateCustomLineItemPercentageChargeDetails)
+        /// Consumes the builder and constructs a [`UpdateCustomLineItemPercentageChargeDetails`](crate::model::UpdateCustomLineItemPercentageChargeDetails).
         pub fn build(self) -> crate::model::UpdateCustomLineItemPercentageChargeDetails {
             crate::model::UpdateCustomLineItemPercentageChargeDetails {
                 percentage_value: self.percentage_value,
@@ -2646,7 +2683,7 @@ pub mod update_custom_line_item_percentage_charge_details {
     }
 }
 impl UpdateCustomLineItemPercentageChargeDetails {
-    /// Creates a new builder-style object to manufacture [`UpdateCustomLineItemPercentageChargeDetails`](crate::model::UpdateCustomLineItemPercentageChargeDetails)
+    /// Creates a new builder-style object to manufacture [`UpdateCustomLineItemPercentageChargeDetails`](crate::model::UpdateCustomLineItemPercentageChargeDetails).
     pub fn builder() -> crate::model::update_custom_line_item_percentage_charge_details::Builder {
         crate::model::update_custom_line_item_percentage_charge_details::Builder::default()
     }
@@ -2657,6 +2694,7 @@ impl UpdateCustomLineItemPercentageChargeDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateCustomLineItemFlatChargeDetails {
     /// <p> The custom line item's new fixed charge value in USD. </p>
+    #[doc(hidden)]
     pub charge_value: std::option::Option<f64>,
 }
 impl UpdateCustomLineItemFlatChargeDetails {
@@ -2672,11 +2710,10 @@ impl std::fmt::Debug for UpdateCustomLineItemFlatChargeDetails {
         formatter.finish()
     }
 }
-/// See [`UpdateCustomLineItemFlatChargeDetails`](crate::model::UpdateCustomLineItemFlatChargeDetails)
+/// See [`UpdateCustomLineItemFlatChargeDetails`](crate::model::UpdateCustomLineItemFlatChargeDetails).
 pub mod update_custom_line_item_flat_charge_details {
 
-    /// A builder for [`UpdateCustomLineItemFlatChargeDetails`](crate::model::UpdateCustomLineItemFlatChargeDetails)
-    #[non_exhaustive]
+    /// A builder for [`UpdateCustomLineItemFlatChargeDetails`](crate::model::UpdateCustomLineItemFlatChargeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) charge_value: std::option::Option<f64>,
@@ -2692,7 +2729,7 @@ pub mod update_custom_line_item_flat_charge_details {
             self.charge_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateCustomLineItemFlatChargeDetails`](crate::model::UpdateCustomLineItemFlatChargeDetails)
+        /// Consumes the builder and constructs a [`UpdateCustomLineItemFlatChargeDetails`](crate::model::UpdateCustomLineItemFlatChargeDetails).
         pub fn build(self) -> crate::model::UpdateCustomLineItemFlatChargeDetails {
             crate::model::UpdateCustomLineItemFlatChargeDetails {
                 charge_value: self.charge_value,
@@ -2701,7 +2738,7 @@ pub mod update_custom_line_item_flat_charge_details {
     }
 }
 impl UpdateCustomLineItemFlatChargeDetails {
-    /// Creates a new builder-style object to manufacture [`UpdateCustomLineItemFlatChargeDetails`](crate::model::UpdateCustomLineItemFlatChargeDetails)
+    /// Creates a new builder-style object to manufacture [`UpdateCustomLineItemFlatChargeDetails`](crate::model::UpdateCustomLineItemFlatChargeDetails).
     pub fn builder() -> crate::model::update_custom_line_item_flat_charge_details::Builder {
         crate::model::update_custom_line_item_flat_charge_details::Builder::default()
     }
@@ -2712,24 +2749,34 @@ impl UpdateCustomLineItemFlatChargeDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BillingGroupListElement {
     /// <p>The billing group's name. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Number (ARN) that can be used to uniquely identify the billing group. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The billing group description. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The account ID that serves as the main account in a billing group. </p>
+    #[doc(hidden)]
     pub primary_account_id: std::option::Option<std::string::String>,
     /// <p> The preferences and settings that will be used to compute the Amazon Web Services charges for a billing group. </p>
+    #[doc(hidden)]
     pub computation_preference: std::option::Option<crate::model::ComputationPreference>,
     /// <p>The number of accounts in the particular billing group. </p>
+    #[doc(hidden)]
     pub size: i64,
     /// <p> The time the billing group was created. </p>
+    #[doc(hidden)]
     pub creation_time: i64,
     /// <p> The most recent time the billing group was modified. </p>
+    #[doc(hidden)]
     pub last_modified_time: i64,
     /// <p>The billing group status. Only one of the valid values can be used. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::BillingGroupStatus>,
     /// <p>The reason why the billing group is in its current status. </p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
 }
 impl BillingGroupListElement {
@@ -2792,11 +2839,10 @@ impl std::fmt::Debug for BillingGroupListElement {
         formatter.finish()
     }
 }
-/// See [`BillingGroupListElement`](crate::model::BillingGroupListElement)
+/// See [`BillingGroupListElement`](crate::model::BillingGroupListElement).
 pub mod billing_group_list_element {
 
-    /// A builder for [`BillingGroupListElement`](crate::model::BillingGroupListElement)
-    #[non_exhaustive]
+    /// A builder for [`BillingGroupListElement`](crate::model::BillingGroupListElement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2926,7 +2972,7 @@ pub mod billing_group_list_element {
             self.status_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`BillingGroupListElement`](crate::model::BillingGroupListElement)
+        /// Consumes the builder and constructs a [`BillingGroupListElement`](crate::model::BillingGroupListElement).
         pub fn build(self) -> crate::model::BillingGroupListElement {
             crate::model::BillingGroupListElement {
                 name: self.name,
@@ -2944,7 +2990,7 @@ pub mod billing_group_list_element {
     }
 }
 impl BillingGroupListElement {
-    /// Creates a new builder-style object to manufacture [`BillingGroupListElement`](crate::model::BillingGroupListElement)
+    /// Creates a new builder-style object to manufacture [`BillingGroupListElement`](crate::model::BillingGroupListElement).
     pub fn builder() -> crate::model::billing_group_list_element::Builder {
         crate::model::billing_group_list_element::Builder::default()
     }
@@ -3010,6 +3056,7 @@ impl AsRef<str> for BillingGroupStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComputationPreference {
     /// <p> The Amazon Resource Name (ARN) of the pricing plan used to compute the Amazon Web Services charges for a billing group. </p>
+    #[doc(hidden)]
     pub pricing_plan_arn: std::option::Option<std::string::String>,
 }
 impl ComputationPreference {
@@ -3025,11 +3072,10 @@ impl std::fmt::Debug for ComputationPreference {
         formatter.finish()
     }
 }
-/// See [`ComputationPreference`](crate::model::ComputationPreference)
+/// See [`ComputationPreference`](crate::model::ComputationPreference).
 pub mod computation_preference {
 
-    /// A builder for [`ComputationPreference`](crate::model::ComputationPreference)
-    #[non_exhaustive]
+    /// A builder for [`ComputationPreference`](crate::model::ComputationPreference).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pricing_plan_arn: std::option::Option<std::string::String>,
@@ -3048,7 +3094,7 @@ pub mod computation_preference {
             self.pricing_plan_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComputationPreference`](crate::model::ComputationPreference)
+        /// Consumes the builder and constructs a [`ComputationPreference`](crate::model::ComputationPreference).
         pub fn build(self) -> crate::model::ComputationPreference {
             crate::model::ComputationPreference {
                 pricing_plan_arn: self.pricing_plan_arn,
@@ -3057,7 +3103,7 @@ pub mod computation_preference {
     }
 }
 impl ComputationPreference {
-    /// Creates a new builder-style object to manufacture [`ComputationPreference`](crate::model::ComputationPreference)
+    /// Creates a new builder-style object to manufacture [`ComputationPreference`](crate::model::ComputationPreference).
     pub fn builder() -> crate::model::computation_preference::Builder {
         crate::model::computation_preference::Builder::default()
     }
@@ -3068,8 +3114,10 @@ impl ComputationPreference {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBillingGroupsFilter {
     /// <p>The list of billing group Amazon Resource Names (ARNs) to retrieve information. </p>
+    #[doc(hidden)]
     pub arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The pricing plan Amazon Resource Names (ARNs) to retrieve information. </p>
+    #[doc(hidden)]
     pub pricing_plan: std::option::Option<std::string::String>,
 }
 impl ListBillingGroupsFilter {
@@ -3090,11 +3138,10 @@ impl std::fmt::Debug for ListBillingGroupsFilter {
         formatter.finish()
     }
 }
-/// See [`ListBillingGroupsFilter`](crate::model::ListBillingGroupsFilter)
+/// See [`ListBillingGroupsFilter`](crate::model::ListBillingGroupsFilter).
 pub mod list_billing_groups_filter {
 
-    /// A builder for [`ListBillingGroupsFilter`](crate::model::ListBillingGroupsFilter)
-    #[non_exhaustive]
+    /// A builder for [`ListBillingGroupsFilter`](crate::model::ListBillingGroupsFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arns: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3130,7 +3177,7 @@ pub mod list_billing_groups_filter {
             self.pricing_plan = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBillingGroupsFilter`](crate::model::ListBillingGroupsFilter)
+        /// Consumes the builder and constructs a [`ListBillingGroupsFilter`](crate::model::ListBillingGroupsFilter).
         pub fn build(self) -> crate::model::ListBillingGroupsFilter {
             crate::model::ListBillingGroupsFilter {
                 arns: self.arns,
@@ -3140,7 +3187,7 @@ pub mod list_billing_groups_filter {
     }
 }
 impl ListBillingGroupsFilter {
-    /// Creates a new builder-style object to manufacture [`ListBillingGroupsFilter`](crate::model::ListBillingGroupsFilter)
+    /// Creates a new builder-style object to manufacture [`ListBillingGroupsFilter`](crate::model::ListBillingGroupsFilter).
     pub fn builder() -> crate::model::list_billing_groups_filter::Builder {
         crate::model::list_billing_groups_filter::Builder::default()
     }
@@ -3151,6 +3198,7 @@ impl ListBillingGroupsFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountGrouping {
     /// <p> The account IDs that make up the billing group. Account IDs must be a part of the consolidated billing family, and not associated with another billing group. </p>
+    #[doc(hidden)]
     pub linked_account_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AccountGrouping {
@@ -3166,11 +3214,10 @@ impl std::fmt::Debug for AccountGrouping {
         formatter.finish()
     }
 }
-/// See [`AccountGrouping`](crate::model::AccountGrouping)
+/// See [`AccountGrouping`](crate::model::AccountGrouping).
 pub mod account_grouping {
 
-    /// A builder for [`AccountGrouping`](crate::model::AccountGrouping)
-    #[non_exhaustive]
+    /// A builder for [`AccountGrouping`](crate::model::AccountGrouping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) linked_account_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3195,7 +3242,7 @@ pub mod account_grouping {
             self.linked_account_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountGrouping`](crate::model::AccountGrouping)
+        /// Consumes the builder and constructs a [`AccountGrouping`](crate::model::AccountGrouping).
         pub fn build(self) -> crate::model::AccountGrouping {
             crate::model::AccountGrouping {
                 linked_account_ids: self.linked_account_ids,
@@ -3204,7 +3251,7 @@ pub mod account_grouping {
     }
 }
 impl AccountGrouping {
-    /// Creates a new builder-style object to manufacture [`AccountGrouping`](crate::model::AccountGrouping)
+    /// Creates a new builder-style object to manufacture [`AccountGrouping`](crate::model::AccountGrouping).
     pub fn builder() -> crate::model::account_grouping::Builder {
         crate::model::account_grouping::Builder::default()
     }
@@ -3215,16 +3262,22 @@ impl AccountGrouping {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BillingGroupCostReportElement {
     /// <p>The Amazon Resource Name (ARN) of a billing group. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The actual Amazon Web Services charges for the billing group. </p>
+    #[doc(hidden)]
     pub aws_cost: std::option::Option<std::string::String>,
     /// <p>The hypothetical Amazon Web Services charges based on the associated pricing plan of a billing group. </p>
+    #[doc(hidden)]
     pub proforma_cost: std::option::Option<std::string::String>,
     /// <p> The billing group margin. </p>
+    #[doc(hidden)]
     pub margin: std::option::Option<std::string::String>,
     /// <p> The percentage of billing group margin. </p>
+    #[doc(hidden)]
     pub margin_percentage: std::option::Option<std::string::String>,
     /// <p>The displayed currency. </p>
+    #[doc(hidden)]
     pub currency: std::option::Option<std::string::String>,
 }
 impl BillingGroupCostReportElement {
@@ -3265,11 +3318,10 @@ impl std::fmt::Debug for BillingGroupCostReportElement {
         formatter.finish()
     }
 }
-/// See [`BillingGroupCostReportElement`](crate::model::BillingGroupCostReportElement)
+/// See [`BillingGroupCostReportElement`](crate::model::BillingGroupCostReportElement).
 pub mod billing_group_cost_report_element {
 
-    /// A builder for [`BillingGroupCostReportElement`](crate::model::BillingGroupCostReportElement)
-    #[non_exhaustive]
+    /// A builder for [`BillingGroupCostReportElement`](crate::model::BillingGroupCostReportElement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3346,7 +3398,7 @@ pub mod billing_group_cost_report_element {
             self.currency = input;
             self
         }
-        /// Consumes the builder and constructs a [`BillingGroupCostReportElement`](crate::model::BillingGroupCostReportElement)
+        /// Consumes the builder and constructs a [`BillingGroupCostReportElement`](crate::model::BillingGroupCostReportElement).
         pub fn build(self) -> crate::model::BillingGroupCostReportElement {
             crate::model::BillingGroupCostReportElement {
                 arn: self.arn,
@@ -3360,7 +3412,7 @@ pub mod billing_group_cost_report_element {
     }
 }
 impl BillingGroupCostReportElement {
-    /// Creates a new builder-style object to manufacture [`BillingGroupCostReportElement`](crate::model::BillingGroupCostReportElement)
+    /// Creates a new builder-style object to manufacture [`BillingGroupCostReportElement`](crate::model::BillingGroupCostReportElement).
     pub fn builder() -> crate::model::billing_group_cost_report_element::Builder {
         crate::model::billing_group_cost_report_element::Builder::default()
     }
@@ -3371,6 +3423,7 @@ impl BillingGroupCostReportElement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBillingGroupCostReportsFilter {
     /// <p>The list of Amazon Resource Names (ARNs) used to filter billing groups to retrieve reports. </p>
+    #[doc(hidden)]
     pub billing_group_arns: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ListBillingGroupCostReportsFilter {
@@ -3386,11 +3439,10 @@ impl std::fmt::Debug for ListBillingGroupCostReportsFilter {
         formatter.finish()
     }
 }
-/// See [`ListBillingGroupCostReportsFilter`](crate::model::ListBillingGroupCostReportsFilter)
+/// See [`ListBillingGroupCostReportsFilter`](crate::model::ListBillingGroupCostReportsFilter).
 pub mod list_billing_group_cost_reports_filter {
 
-    /// A builder for [`ListBillingGroupCostReportsFilter`](crate::model::ListBillingGroupCostReportsFilter)
-    #[non_exhaustive]
+    /// A builder for [`ListBillingGroupCostReportsFilter`](crate::model::ListBillingGroupCostReportsFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) billing_group_arns: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3415,7 +3467,7 @@ pub mod list_billing_group_cost_reports_filter {
             self.billing_group_arns = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBillingGroupCostReportsFilter`](crate::model::ListBillingGroupCostReportsFilter)
+        /// Consumes the builder and constructs a [`ListBillingGroupCostReportsFilter`](crate::model::ListBillingGroupCostReportsFilter).
         pub fn build(self) -> crate::model::ListBillingGroupCostReportsFilter {
             crate::model::ListBillingGroupCostReportsFilter {
                 billing_group_arns: self.billing_group_arns,
@@ -3424,7 +3476,7 @@ pub mod list_billing_group_cost_reports_filter {
     }
 }
 impl ListBillingGroupCostReportsFilter {
-    /// Creates a new builder-style object to manufacture [`ListBillingGroupCostReportsFilter`](crate::model::ListBillingGroupCostReportsFilter)
+    /// Creates a new builder-style object to manufacture [`ListBillingGroupCostReportsFilter`](crate::model::ListBillingGroupCostReportsFilter).
     pub fn builder() -> crate::model::list_billing_group_cost_reports_filter::Builder {
         crate::model::list_billing_group_cost_reports_filter::Builder::default()
     }
@@ -3436,12 +3488,16 @@ impl ListBillingGroupCostReportsFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountAssociationsListElement {
     /// <p> The associating array of account IDs. </p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p> The Billing Group Arn that the linked account is associated to. </p>
+    #[doc(hidden)]
     pub billing_group_arn: std::option::Option<std::string::String>,
     /// <p> The Amazon Web Services account name. </p>
+    #[doc(hidden)]
     pub account_name: std::option::Option<std::string::String>,
     /// <p> The Amazon Web Services account email. </p>
+    #[doc(hidden)]
     pub account_email: std::option::Option<std::string::String>,
 }
 impl AccountAssociationsListElement {
@@ -3472,11 +3528,10 @@ impl std::fmt::Debug for AccountAssociationsListElement {
         formatter.finish()
     }
 }
-/// See [`AccountAssociationsListElement`](crate::model::AccountAssociationsListElement)
+/// See [`AccountAssociationsListElement`](crate::model::AccountAssociationsListElement).
 pub mod account_associations_list_element {
 
-    /// A builder for [`AccountAssociationsListElement`](crate::model::AccountAssociationsListElement)
-    #[non_exhaustive]
+    /// A builder for [`AccountAssociationsListElement`](crate::model::AccountAssociationsListElement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -3531,7 +3586,7 @@ pub mod account_associations_list_element {
             self.account_email = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountAssociationsListElement`](crate::model::AccountAssociationsListElement)
+        /// Consumes the builder and constructs a [`AccountAssociationsListElement`](crate::model::AccountAssociationsListElement).
         pub fn build(self) -> crate::model::AccountAssociationsListElement {
             crate::model::AccountAssociationsListElement {
                 account_id: self.account_id,
@@ -3543,7 +3598,7 @@ pub mod account_associations_list_element {
     }
 }
 impl AccountAssociationsListElement {
-    /// Creates a new builder-style object to manufacture [`AccountAssociationsListElement`](crate::model::AccountAssociationsListElement)
+    /// Creates a new builder-style object to manufacture [`AccountAssociationsListElement`](crate::model::AccountAssociationsListElement).
     pub fn builder() -> crate::model::account_associations_list_element::Builder {
         crate::model::account_associations_list_element::Builder::default()
     }
@@ -3559,8 +3614,10 @@ pub struct ListAccountAssociationsFilter {
     /// <p> <code>MONITORED</code>: linked accounts that are associated to billing groups.</p>
     /// <p> <code>UNMONITORED</code>: linked accounts that are not associated to billing groups.</p>
     /// <p> <code>Billing Group Arn</code>: linked accounts that are associated to the provided Billing Group Arn. </p>
+    #[doc(hidden)]
     pub association: std::option::Option<std::string::String>,
     /// <p> The Amazon Web Services account ID to filter on. </p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
 }
 impl ListAccountAssociationsFilter {
@@ -3583,11 +3640,10 @@ impl std::fmt::Debug for ListAccountAssociationsFilter {
         formatter.finish()
     }
 }
-/// See [`ListAccountAssociationsFilter`](crate::model::ListAccountAssociationsFilter)
+/// See [`ListAccountAssociationsFilter`](crate::model::ListAccountAssociationsFilter).
 pub mod list_account_associations_filter {
 
-    /// A builder for [`ListAccountAssociationsFilter`](crate::model::ListAccountAssociationsFilter)
-    #[non_exhaustive]
+    /// A builder for [`ListAccountAssociationsFilter`](crate::model::ListAccountAssociationsFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) association: std::option::Option<std::string::String>,
@@ -3618,7 +3674,7 @@ pub mod list_account_associations_filter {
             self.account_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAccountAssociationsFilter`](crate::model::ListAccountAssociationsFilter)
+        /// Consumes the builder and constructs a [`ListAccountAssociationsFilter`](crate::model::ListAccountAssociationsFilter).
         pub fn build(self) -> crate::model::ListAccountAssociationsFilter {
             crate::model::ListAccountAssociationsFilter {
                 association: self.association,
@@ -3628,7 +3684,7 @@ pub mod list_account_associations_filter {
     }
 }
 impl ListAccountAssociationsFilter {
-    /// Creates a new builder-style object to manufacture [`ListAccountAssociationsFilter`](crate::model::ListAccountAssociationsFilter)
+    /// Creates a new builder-style object to manufacture [`ListAccountAssociationsFilter`](crate::model::ListAccountAssociationsFilter).
     pub fn builder() -> crate::model::list_account_associations_filter::Builder {
         crate::model::list_account_associations_filter::Builder::default()
     }

@@ -5,10 +5,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpPackageConfiguration {
     /// <p>The relative path to the URL for this VOD source. This is combined with SourceLocation::HttpConfiguration::BaseUrl to form a valid URL.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The name of the source group. This has to match one of the Channel::Outputs::SourceGroup.</p>
+    #[doc(hidden)]
     pub source_group: std::option::Option<std::string::String>,
     /// <p>The streaming protocol for this package configuration. Supported values are HLS and DASH.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
 }
 impl HttpPackageConfiguration {
@@ -34,11 +37,10 @@ impl std::fmt::Debug for HttpPackageConfiguration {
         formatter.finish()
     }
 }
-/// See [`HttpPackageConfiguration`](crate::model::HttpPackageConfiguration)
+/// See [`HttpPackageConfiguration`](crate::model::HttpPackageConfiguration).
 pub mod http_package_configuration {
 
-    /// A builder for [`HttpPackageConfiguration`](crate::model::HttpPackageConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`HttpPackageConfiguration`](crate::model::HttpPackageConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::string::String>,
@@ -76,7 +78,7 @@ pub mod http_package_configuration {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpPackageConfiguration`](crate::model::HttpPackageConfiguration)
+        /// Consumes the builder and constructs a [`HttpPackageConfiguration`](crate::model::HttpPackageConfiguration).
         pub fn build(self) -> crate::model::HttpPackageConfiguration {
             crate::model::HttpPackageConfiguration {
                 path: self.path,
@@ -87,7 +89,7 @@ pub mod http_package_configuration {
     }
 }
 impl HttpPackageConfiguration {
-    /// Creates a new builder-style object to manufacture [`HttpPackageConfiguration`](crate::model::HttpPackageConfiguration)
+    /// Creates a new builder-style object to manufacture [`HttpPackageConfiguration`](crate::model::HttpPackageConfiguration).
     pub fn builder() -> crate::model::http_package_configuration::Builder {
         crate::model::http_package_configuration::Builder::default()
     }
@@ -153,8 +155,10 @@ impl AsRef<str> for Type {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SegmentDeliveryConfiguration {
     /// <p>The base URL of the host or path of the segment delivery server that you're using to serve segments. This is typically a content delivery network (CDN). The URL can be absolute or relative. To use an absolute URL include the protocol, such as https://example.com/some/path. To use a relative URL specify the relative path, such as /some/path*.</p>
+    #[doc(hidden)]
     pub base_url: std::option::Option<std::string::String>,
     /// <p>A unique identifier used to distinguish between multiple segment delivery configurations in a source location.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl SegmentDeliveryConfiguration {
@@ -175,11 +179,10 @@ impl std::fmt::Debug for SegmentDeliveryConfiguration {
         formatter.finish()
     }
 }
-/// See [`SegmentDeliveryConfiguration`](crate::model::SegmentDeliveryConfiguration)
+/// See [`SegmentDeliveryConfiguration`](crate::model::SegmentDeliveryConfiguration).
 pub mod segment_delivery_configuration {
 
-    /// A builder for [`SegmentDeliveryConfiguration`](crate::model::SegmentDeliveryConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SegmentDeliveryConfiguration`](crate::model::SegmentDeliveryConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) base_url: std::option::Option<std::string::String>,
@@ -206,7 +209,7 @@ pub mod segment_delivery_configuration {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`SegmentDeliveryConfiguration`](crate::model::SegmentDeliveryConfiguration)
+        /// Consumes the builder and constructs a [`SegmentDeliveryConfiguration`](crate::model::SegmentDeliveryConfiguration).
         pub fn build(self) -> crate::model::SegmentDeliveryConfiguration {
             crate::model::SegmentDeliveryConfiguration {
                 base_url: self.base_url,
@@ -216,7 +219,7 @@ pub mod segment_delivery_configuration {
     }
 }
 impl SegmentDeliveryConfiguration {
-    /// Creates a new builder-style object to manufacture [`SegmentDeliveryConfiguration`](crate::model::SegmentDeliveryConfiguration)
+    /// Creates a new builder-style object to manufacture [`SegmentDeliveryConfiguration`](crate::model::SegmentDeliveryConfiguration).
     pub fn builder() -> crate::model::segment_delivery_configuration::Builder {
         crate::model::segment_delivery_configuration::Builder::default()
     }
@@ -227,6 +230,7 @@ impl SegmentDeliveryConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpConfiguration {
     /// <p>The base URL for the source location host server. This string must include the protocol, such as <b>https://</b>.</p>
+    #[doc(hidden)]
     pub base_url: std::option::Option<std::string::String>,
 }
 impl HttpConfiguration {
@@ -242,11 +246,10 @@ impl std::fmt::Debug for HttpConfiguration {
         formatter.finish()
     }
 }
-/// See [`HttpConfiguration`](crate::model::HttpConfiguration)
+/// See [`HttpConfiguration`](crate::model::HttpConfiguration).
 pub mod http_configuration {
 
-    /// A builder for [`HttpConfiguration`](crate::model::HttpConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`HttpConfiguration`](crate::model::HttpConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) base_url: std::option::Option<std::string::String>,
@@ -262,7 +265,7 @@ pub mod http_configuration {
             self.base_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpConfiguration`](crate::model::HttpConfiguration)
+        /// Consumes the builder and constructs a [`HttpConfiguration`](crate::model::HttpConfiguration).
         pub fn build(self) -> crate::model::HttpConfiguration {
             crate::model::HttpConfiguration {
                 base_url: self.base_url,
@@ -271,7 +274,7 @@ pub mod http_configuration {
     }
 }
 impl HttpConfiguration {
-    /// Creates a new builder-style object to manufacture [`HttpConfiguration`](crate::model::HttpConfiguration)
+    /// Creates a new builder-style object to manufacture [`HttpConfiguration`](crate::model::HttpConfiguration).
     pub fn builder() -> crate::model::http_configuration::Builder {
         crate::model::http_configuration::Builder::default()
     }
@@ -282,6 +285,7 @@ impl HttpConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DefaultSegmentDeliveryConfiguration {
     /// <p>The hostname of the server that will be used to serve segments. This string must include the protocol, such as <b>https://</b>.</p>
+    #[doc(hidden)]
     pub base_url: std::option::Option<std::string::String>,
 }
 impl DefaultSegmentDeliveryConfiguration {
@@ -297,11 +301,10 @@ impl std::fmt::Debug for DefaultSegmentDeliveryConfiguration {
         formatter.finish()
     }
 }
-/// See [`DefaultSegmentDeliveryConfiguration`](crate::model::DefaultSegmentDeliveryConfiguration)
+/// See [`DefaultSegmentDeliveryConfiguration`](crate::model::DefaultSegmentDeliveryConfiguration).
 pub mod default_segment_delivery_configuration {
 
-    /// A builder for [`DefaultSegmentDeliveryConfiguration`](crate::model::DefaultSegmentDeliveryConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DefaultSegmentDeliveryConfiguration`](crate::model::DefaultSegmentDeliveryConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) base_url: std::option::Option<std::string::String>,
@@ -317,7 +320,7 @@ pub mod default_segment_delivery_configuration {
             self.base_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`DefaultSegmentDeliveryConfiguration`](crate::model::DefaultSegmentDeliveryConfiguration)
+        /// Consumes the builder and constructs a [`DefaultSegmentDeliveryConfiguration`](crate::model::DefaultSegmentDeliveryConfiguration).
         pub fn build(self) -> crate::model::DefaultSegmentDeliveryConfiguration {
             crate::model::DefaultSegmentDeliveryConfiguration {
                 base_url: self.base_url,
@@ -326,7 +329,7 @@ pub mod default_segment_delivery_configuration {
     }
 }
 impl DefaultSegmentDeliveryConfiguration {
-    /// Creates a new builder-style object to manufacture [`DefaultSegmentDeliveryConfiguration`](crate::model::DefaultSegmentDeliveryConfiguration)
+    /// Creates a new builder-style object to manufacture [`DefaultSegmentDeliveryConfiguration`](crate::model::DefaultSegmentDeliveryConfiguration).
     pub fn builder() -> crate::model::default_segment_delivery_configuration::Builder {
         crate::model::default_segment_delivery_configuration::Builder::default()
     }
@@ -342,8 +345,10 @@ pub struct AccessConfiguration {
     /// <p>• You must allow MediaTailor to access your S3 bucket by granting mediatailor.amazonaws.com principal access in IAM. For information about configuring access in IAM, see Access management in the IAM User Guide.</p>
     /// <p>• The mediatailor.amazonaws.com service principal must have permissions to read all top level manifests referenced by the VodSource packaging configurations.</p>
     /// <p>• The caller of the API must have s3:GetObject IAM permissions to read all top level manifests referenced by your MediaTailor VodSource packaging configurations.</p>
+    #[doc(hidden)]
     pub access_type: std::option::Option<crate::model::AccessType>,
     /// <p>AWS Secrets Manager access token configuration parameters.</p>
+    #[doc(hidden)]
     pub secrets_manager_access_token_configuration:
         std::option::Option<crate::model::SecretsManagerAccessTokenConfiguration>,
 }
@@ -375,11 +380,10 @@ impl std::fmt::Debug for AccessConfiguration {
         formatter.finish()
     }
 }
-/// See [`AccessConfiguration`](crate::model::AccessConfiguration)
+/// See [`AccessConfiguration`](crate::model::AccessConfiguration).
 pub mod access_configuration {
 
-    /// A builder for [`AccessConfiguration`](crate::model::AccessConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AccessConfiguration`](crate::model::AccessConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_type: std::option::Option<crate::model::AccessType>,
@@ -426,7 +430,7 @@ pub mod access_configuration {
             self.secrets_manager_access_token_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessConfiguration`](crate::model::AccessConfiguration)
+        /// Consumes the builder and constructs a [`AccessConfiguration`](crate::model::AccessConfiguration).
         pub fn build(self) -> crate::model::AccessConfiguration {
             crate::model::AccessConfiguration {
                 access_type: self.access_type,
@@ -437,7 +441,7 @@ pub mod access_configuration {
     }
 }
 impl AccessConfiguration {
-    /// Creates a new builder-style object to manufacture [`AccessConfiguration`](crate::model::AccessConfiguration)
+    /// Creates a new builder-style object to manufacture [`AccessConfiguration`](crate::model::AccessConfiguration).
     pub fn builder() -> crate::model::access_configuration::Builder {
         crate::model::access_configuration::Builder::default()
     }
@@ -448,10 +452,13 @@ impl AccessConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SecretsManagerAccessTokenConfiguration {
     /// <p>The name of the HTTP header used to supply the access token in requests to the source location.</p>
+    #[doc(hidden)]
     pub header_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the access token.</p>
+    #[doc(hidden)]
     pub secret_arn: std::option::Option<std::string::String>,
     /// <p>The AWS Secrets Manager <a href="https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html#SecretsManager-CreateSecret-request-SecretString.html">SecretString</a> key associated with the access token. MediaTailor uses the key to look up SecretString key and value pair containing the access token.</p>
+    #[doc(hidden)]
     pub secret_string_key: std::option::Option<std::string::String>,
 }
 impl SecretsManagerAccessTokenConfiguration {
@@ -477,11 +484,10 @@ impl std::fmt::Debug for SecretsManagerAccessTokenConfiguration {
         formatter.finish()
     }
 }
-/// See [`SecretsManagerAccessTokenConfiguration`](crate::model::SecretsManagerAccessTokenConfiguration)
+/// See [`SecretsManagerAccessTokenConfiguration`](crate::model::SecretsManagerAccessTokenConfiguration).
 pub mod secrets_manager_access_token_configuration {
 
-    /// A builder for [`SecretsManagerAccessTokenConfiguration`](crate::model::SecretsManagerAccessTokenConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SecretsManagerAccessTokenConfiguration`](crate::model::SecretsManagerAccessTokenConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) header_name: std::option::Option<std::string::String>,
@@ -522,7 +528,7 @@ pub mod secrets_manager_access_token_configuration {
             self.secret_string_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`SecretsManagerAccessTokenConfiguration`](crate::model::SecretsManagerAccessTokenConfiguration)
+        /// Consumes the builder and constructs a [`SecretsManagerAccessTokenConfiguration`](crate::model::SecretsManagerAccessTokenConfiguration).
         pub fn build(self) -> crate::model::SecretsManagerAccessTokenConfiguration {
             crate::model::SecretsManagerAccessTokenConfiguration {
                 header_name: self.header_name,
@@ -533,7 +539,7 @@ pub mod secrets_manager_access_token_configuration {
     }
 }
 impl SecretsManagerAccessTokenConfiguration {
-    /// Creates a new builder-style object to manufacture [`SecretsManagerAccessTokenConfiguration`](crate::model::SecretsManagerAccessTokenConfiguration)
+    /// Creates a new builder-style object to manufacture [`SecretsManagerAccessTokenConfiguration`](crate::model::SecretsManagerAccessTokenConfiguration).
     pub fn builder() -> crate::model::secrets_manager_access_token_configuration::Builder {
         crate::model::secrets_manager_access_token_configuration::Builder::default()
     }
@@ -599,14 +605,19 @@ impl AsRef<str> for AccessType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResponseOutputItem {
     /// <p>DASH manifest configuration settings.</p>
+    #[doc(hidden)]
     pub dash_playlist_settings: std::option::Option<crate::model::DashPlaylistSettings>,
     /// <p>HLS manifest configuration settings.</p>
+    #[doc(hidden)]
     pub hls_playlist_settings: std::option::Option<crate::model::HlsPlaylistSettings>,
     /// <p>The name of the manifest for the channel that will appear in the channel output's playback URL.</p>
+    #[doc(hidden)]
     pub manifest_name: std::option::Option<std::string::String>,
     /// <p>The URL used for playback by content players.</p>
+    #[doc(hidden)]
     pub playback_url: std::option::Option<std::string::String>,
     /// <p>A string used to associate a package configuration source group with a channel output.</p>
+    #[doc(hidden)]
     pub source_group: std::option::Option<std::string::String>,
 }
 impl ResponseOutputItem {
@@ -644,11 +655,10 @@ impl std::fmt::Debug for ResponseOutputItem {
         formatter.finish()
     }
 }
-/// See [`ResponseOutputItem`](crate::model::ResponseOutputItem)
+/// See [`ResponseOutputItem`](crate::model::ResponseOutputItem).
 pub mod response_output_item {
 
-    /// A builder for [`ResponseOutputItem`](crate::model::ResponseOutputItem)
-    #[non_exhaustive]
+    /// A builder for [`ResponseOutputItem`](crate::model::ResponseOutputItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dash_playlist_settings: std::option::Option<crate::model::DashPlaylistSettings>,
@@ -717,7 +727,7 @@ pub mod response_output_item {
             self.source_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResponseOutputItem`](crate::model::ResponseOutputItem)
+        /// Consumes the builder and constructs a [`ResponseOutputItem`](crate::model::ResponseOutputItem).
         pub fn build(self) -> crate::model::ResponseOutputItem {
             crate::model::ResponseOutputItem {
                 dash_playlist_settings: self.dash_playlist_settings,
@@ -730,7 +740,7 @@ pub mod response_output_item {
     }
 }
 impl ResponseOutputItem {
-    /// Creates a new builder-style object to manufacture [`ResponseOutputItem`](crate::model::ResponseOutputItem)
+    /// Creates a new builder-style object to manufacture [`ResponseOutputItem`](crate::model::ResponseOutputItem).
     pub fn builder() -> crate::model::response_output_item::Builder {
         crate::model::response_output_item::Builder::default()
     }
@@ -741,6 +751,7 @@ impl ResponseOutputItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsPlaylistSettings {
     /// <p>The total duration (in seconds) of each manifest. Minimum value: 30 seconds. Maximum value: 3600 seconds.</p>
+    #[doc(hidden)]
     pub manifest_window_seconds: i32,
 }
 impl HlsPlaylistSettings {
@@ -756,11 +767,10 @@ impl std::fmt::Debug for HlsPlaylistSettings {
         formatter.finish()
     }
 }
-/// See [`HlsPlaylistSettings`](crate::model::HlsPlaylistSettings)
+/// See [`HlsPlaylistSettings`](crate::model::HlsPlaylistSettings).
 pub mod hls_playlist_settings {
 
-    /// A builder for [`HlsPlaylistSettings`](crate::model::HlsPlaylistSettings)
-    #[non_exhaustive]
+    /// A builder for [`HlsPlaylistSettings`](crate::model::HlsPlaylistSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) manifest_window_seconds: std::option::Option<i32>,
@@ -776,7 +786,7 @@ pub mod hls_playlist_settings {
             self.manifest_window_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsPlaylistSettings`](crate::model::HlsPlaylistSettings)
+        /// Consumes the builder and constructs a [`HlsPlaylistSettings`](crate::model::HlsPlaylistSettings).
         pub fn build(self) -> crate::model::HlsPlaylistSettings {
             crate::model::HlsPlaylistSettings {
                 manifest_window_seconds: self.manifest_window_seconds.unwrap_or_default(),
@@ -785,7 +795,7 @@ pub mod hls_playlist_settings {
     }
 }
 impl HlsPlaylistSettings {
-    /// Creates a new builder-style object to manufacture [`HlsPlaylistSettings`](crate::model::HlsPlaylistSettings)
+    /// Creates a new builder-style object to manufacture [`HlsPlaylistSettings`](crate::model::HlsPlaylistSettings).
     pub fn builder() -> crate::model::hls_playlist_settings::Builder {
         crate::model::hls_playlist_settings::Builder::default()
     }
@@ -796,12 +806,16 @@ impl HlsPlaylistSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DashPlaylistSettings {
     /// <p>The total duration (in seconds) of each manifest. Minimum value: 30 seconds. Maximum value: 3600 seconds.</p>
+    #[doc(hidden)]
     pub manifest_window_seconds: i32,
     /// <p>Minimum amount of content (measured in seconds) that a player must keep available in the buffer. Minimum value: 2 seconds. Maximum value: 60 seconds.</p>
+    #[doc(hidden)]
     pub min_buffer_time_seconds: i32,
     /// <p>Minimum amount of time (in seconds) that the player should wait before requesting updates to the manifest. Minimum value: 2 seconds. Maximum value: 60 seconds.</p>
+    #[doc(hidden)]
     pub min_update_period_seconds: i32,
     /// <p>Amount of time (in seconds) that the player should be from the live point at the end of the manifest. Minimum value: 2 seconds. Maximum value: 60 seconds.</p>
+    #[doc(hidden)]
     pub suggested_presentation_delay_seconds: i32,
 }
 impl DashPlaylistSettings {
@@ -835,11 +849,10 @@ impl std::fmt::Debug for DashPlaylistSettings {
         formatter.finish()
     }
 }
-/// See [`DashPlaylistSettings`](crate::model::DashPlaylistSettings)
+/// See [`DashPlaylistSettings`](crate::model::DashPlaylistSettings).
 pub mod dash_playlist_settings {
 
-    /// A builder for [`DashPlaylistSettings`](crate::model::DashPlaylistSettings)
-    #[non_exhaustive]
+    /// A builder for [`DashPlaylistSettings`](crate::model::DashPlaylistSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) manifest_window_seconds: std::option::Option<i32>,
@@ -891,7 +904,7 @@ pub mod dash_playlist_settings {
             self.suggested_presentation_delay_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`DashPlaylistSettings`](crate::model::DashPlaylistSettings)
+        /// Consumes the builder and constructs a [`DashPlaylistSettings`](crate::model::DashPlaylistSettings).
         pub fn build(self) -> crate::model::DashPlaylistSettings {
             crate::model::DashPlaylistSettings {
                 manifest_window_seconds: self.manifest_window_seconds.unwrap_or_default(),
@@ -905,7 +918,7 @@ pub mod dash_playlist_settings {
     }
 }
 impl DashPlaylistSettings {
-    /// Creates a new builder-style object to manufacture [`DashPlaylistSettings`](crate::model::DashPlaylistSettings)
+    /// Creates a new builder-style object to manufacture [`DashPlaylistSettings`](crate::model::DashPlaylistSettings).
     pub fn builder() -> crate::model::dash_playlist_settings::Builder {
         crate::model::dash_playlist_settings::Builder::default()
     }
@@ -916,8 +929,10 @@ impl DashPlaylistSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SlateSource {
     /// <p>The name of the source location where the slate VOD source is stored.</p>
+    #[doc(hidden)]
     pub source_location_name: std::option::Option<std::string::String>,
     /// <p>The slate VOD source name. The VOD source must already exist in a source location before it can be used for slate.</p>
+    #[doc(hidden)]
     pub vod_source_name: std::option::Option<std::string::String>,
 }
 impl SlateSource {
@@ -938,11 +953,10 @@ impl std::fmt::Debug for SlateSource {
         formatter.finish()
     }
 }
-/// See [`SlateSource`](crate::model::SlateSource)
+/// See [`SlateSource`](crate::model::SlateSource).
 pub mod slate_source {
 
-    /// A builder for [`SlateSource`](crate::model::SlateSource)
-    #[non_exhaustive]
+    /// A builder for [`SlateSource`](crate::model::SlateSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_location_name: std::option::Option<std::string::String>,
@@ -975,7 +989,7 @@ pub mod slate_source {
             self.vod_source_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`SlateSource`](crate::model::SlateSource)
+        /// Consumes the builder and constructs a [`SlateSource`](crate::model::SlateSource).
         pub fn build(self) -> crate::model::SlateSource {
             crate::model::SlateSource {
                 source_location_name: self.source_location_name,
@@ -985,7 +999,7 @@ pub mod slate_source {
     }
 }
 impl SlateSource {
-    /// Creates a new builder-style object to manufacture [`SlateSource`](crate::model::SlateSource)
+    /// Creates a new builder-style object to manufacture [`SlateSource`](crate::model::SlateSource).
     pub fn builder() -> crate::model::slate_source::Builder {
         crate::model::slate_source::Builder::default()
     }
@@ -1051,12 +1065,16 @@ impl AsRef<str> for ChannelState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RequestOutputItem {
     /// <p>DASH manifest configuration parameters.</p>
+    #[doc(hidden)]
     pub dash_playlist_settings: std::option::Option<crate::model::DashPlaylistSettings>,
     /// <p>HLS playlist configuration parameters.</p>
+    #[doc(hidden)]
     pub hls_playlist_settings: std::option::Option<crate::model::HlsPlaylistSettings>,
     /// <p>The name of the manifest for the channel. The name appears in the PlaybackUrl.</p>
+    #[doc(hidden)]
     pub manifest_name: std::option::Option<std::string::String>,
     /// <p>A string used to match which HttpPackageConfiguration is used for each VodSource.</p>
+    #[doc(hidden)]
     pub source_group: std::option::Option<std::string::String>,
 }
 impl RequestOutputItem {
@@ -1089,11 +1107,10 @@ impl std::fmt::Debug for RequestOutputItem {
         formatter.finish()
     }
 }
-/// See [`RequestOutputItem`](crate::model::RequestOutputItem)
+/// See [`RequestOutputItem`](crate::model::RequestOutputItem).
 pub mod request_output_item {
 
-    /// A builder for [`RequestOutputItem`](crate::model::RequestOutputItem)
-    #[non_exhaustive]
+    /// A builder for [`RequestOutputItem`](crate::model::RequestOutputItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dash_playlist_settings: std::option::Option<crate::model::DashPlaylistSettings>,
@@ -1151,7 +1168,7 @@ pub mod request_output_item {
             self.source_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`RequestOutputItem`](crate::model::RequestOutputItem)
+        /// Consumes the builder and constructs a [`RequestOutputItem`](crate::model::RequestOutputItem).
         pub fn build(self) -> crate::model::RequestOutputItem {
             crate::model::RequestOutputItem {
                 dash_playlist_settings: self.dash_playlist_settings,
@@ -1163,7 +1180,7 @@ pub mod request_output_item {
     }
 }
 impl RequestOutputItem {
-    /// Creates a new builder-style object to manufacture [`RequestOutputItem`](crate::model::RequestOutputItem)
+    /// Creates a new builder-style object to manufacture [`RequestOutputItem`](crate::model::RequestOutputItem).
     pub fn builder() -> crate::model::request_output_item::Builder {
         crate::model::request_output_item::Builder::default()
     }
@@ -1175,6 +1192,7 @@ impl RequestOutputItem {
 pub struct ManifestProcessingRules {
     /// <p>For HLS, when set to true, MediaTailor passes through EXT-X-CUE-IN, EXT-X-CUE-OUT, and EXT-X-SPLICEPOINT-SCTE35 ad markers from the origin manifest to the MediaTailor personalized manifest.</p>
     /// <p>No logic is applied to these ad markers. For example, if EXT-X-CUE-OUT has a value of 60, but no ads are filled for that ad break, MediaTailor will not set the value to 0.</p>
+    #[doc(hidden)]
     pub ad_marker_passthrough: std::option::Option<crate::model::AdMarkerPassthrough>,
 }
 impl ManifestProcessingRules {
@@ -1191,11 +1209,10 @@ impl std::fmt::Debug for ManifestProcessingRules {
         formatter.finish()
     }
 }
-/// See [`ManifestProcessingRules`](crate::model::ManifestProcessingRules)
+/// See [`ManifestProcessingRules`](crate::model::ManifestProcessingRules).
 pub mod manifest_processing_rules {
 
-    /// A builder for [`ManifestProcessingRules`](crate::model::ManifestProcessingRules)
-    #[non_exhaustive]
+    /// A builder for [`ManifestProcessingRules`](crate::model::ManifestProcessingRules).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ad_marker_passthrough: std::option::Option<crate::model::AdMarkerPassthrough>,
@@ -1216,7 +1233,7 @@ pub mod manifest_processing_rules {
             self.ad_marker_passthrough = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManifestProcessingRules`](crate::model::ManifestProcessingRules)
+        /// Consumes the builder and constructs a [`ManifestProcessingRules`](crate::model::ManifestProcessingRules).
         pub fn build(self) -> crate::model::ManifestProcessingRules {
             crate::model::ManifestProcessingRules {
                 ad_marker_passthrough: self.ad_marker_passthrough,
@@ -1225,7 +1242,7 @@ pub mod manifest_processing_rules {
     }
 }
 impl ManifestProcessingRules {
-    /// Creates a new builder-style object to manufacture [`ManifestProcessingRules`](crate::model::ManifestProcessingRules)
+    /// Creates a new builder-style object to manufacture [`ManifestProcessingRules`](crate::model::ManifestProcessingRules).
     pub fn builder() -> crate::model::manifest_processing_rules::Builder {
         crate::model::manifest_processing_rules::Builder::default()
     }
@@ -1237,6 +1254,7 @@ impl ManifestProcessingRules {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AdMarkerPassthrough {
     /// <p>Enables ad marker passthrough for your configuration.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl AdMarkerPassthrough {
@@ -1252,11 +1270,10 @@ impl std::fmt::Debug for AdMarkerPassthrough {
         formatter.finish()
     }
 }
-/// See [`AdMarkerPassthrough`](crate::model::AdMarkerPassthrough)
+/// See [`AdMarkerPassthrough`](crate::model::AdMarkerPassthrough).
 pub mod ad_marker_passthrough {
 
-    /// A builder for [`AdMarkerPassthrough`](crate::model::AdMarkerPassthrough)
-    #[non_exhaustive]
+    /// A builder for [`AdMarkerPassthrough`](crate::model::AdMarkerPassthrough).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -1272,7 +1289,7 @@ pub mod ad_marker_passthrough {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdMarkerPassthrough`](crate::model::AdMarkerPassthrough)
+        /// Consumes the builder and constructs a [`AdMarkerPassthrough`](crate::model::AdMarkerPassthrough).
         pub fn build(self) -> crate::model::AdMarkerPassthrough {
             crate::model::AdMarkerPassthrough {
                 enabled: self.enabled.unwrap_or_default(),
@@ -1281,7 +1298,7 @@ pub mod ad_marker_passthrough {
     }
 }
 impl AdMarkerPassthrough {
-    /// Creates a new builder-style object to manufacture [`AdMarkerPassthrough`](crate::model::AdMarkerPassthrough)
+    /// Creates a new builder-style object to manufacture [`AdMarkerPassthrough`](crate::model::AdMarkerPassthrough).
     pub fn builder() -> crate::model::ad_marker_passthrough::Builder {
         crate::model::ad_marker_passthrough::Builder::default()
     }
@@ -1293,6 +1310,7 @@ impl AdMarkerPassthrough {
 pub struct LogConfiguration {
     /// <p>The percentage of session logs that MediaTailor sends to your Cloudwatch Logs account. For example, if your playback configuration has 1000 sessions and percentEnabled is set to 60, MediaTailor sends logs for 600 of the sessions to CloudWatch Logs. MediaTailor decides at random which of the playback configuration sessions to send logs for. If you want to view logs for a specific session, you can use the <a href="https://docs.aws.amazon.com/mediatailor/latest/ug/debug-log-mode.html">debug log mode</a>.</p>
     /// <p>Valid values: 0 - 100</p>
+    #[doc(hidden)]
     pub percent_enabled: i32,
 }
 impl LogConfiguration {
@@ -1309,11 +1327,10 @@ impl std::fmt::Debug for LogConfiguration {
         formatter.finish()
     }
 }
-/// See [`LogConfiguration`](crate::model::LogConfiguration)
+/// See [`LogConfiguration`](crate::model::LogConfiguration).
 pub mod log_configuration {
 
-    /// A builder for [`LogConfiguration`](crate::model::LogConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LogConfiguration`](crate::model::LogConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) percent_enabled: std::option::Option<i32>,
@@ -1331,7 +1348,7 @@ pub mod log_configuration {
             self.percent_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogConfiguration`](crate::model::LogConfiguration)
+        /// Consumes the builder and constructs a [`LogConfiguration`](crate::model::LogConfiguration).
         pub fn build(self) -> crate::model::LogConfiguration {
             crate::model::LogConfiguration {
                 percent_enabled: self.percent_enabled.unwrap_or_default(),
@@ -1340,7 +1357,7 @@ pub mod log_configuration {
     }
 }
 impl LogConfiguration {
-    /// Creates a new builder-style object to manufacture [`LogConfiguration`](crate::model::LogConfiguration)
+    /// Creates a new builder-style object to manufacture [`LogConfiguration`](crate::model::LogConfiguration).
     pub fn builder() -> crate::model::log_configuration::Builder {
         crate::model::log_configuration::Builder::default()
     }
@@ -1351,8 +1368,10 @@ impl LogConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LivePreRollConfiguration {
     /// <p>The URL for the ad decision server (ADS) for pre-roll ads. This includes the specification of static parameters and placeholders for dynamic parameters. AWS Elemental MediaTailor substitutes player-specific and session-specific parameters as needed when calling the ADS. Alternately, for testing, you can provide a static VAST URL. The maximum length is 25,000 characters.</p>
+    #[doc(hidden)]
     pub ad_decision_server_url: std::option::Option<std::string::String>,
     /// The maximum allowed duration for the pre-roll ad avail. AWS Elemental MediaTailor won't play pre-roll ads to exceed this duration, regardless of the total duration of ads that the ADS returns.
+    #[doc(hidden)]
     pub max_duration_seconds: i32,
 }
 impl LivePreRollConfiguration {
@@ -1373,11 +1392,10 @@ impl std::fmt::Debug for LivePreRollConfiguration {
         formatter.finish()
     }
 }
-/// See [`LivePreRollConfiguration`](crate::model::LivePreRollConfiguration)
+/// See [`LivePreRollConfiguration`](crate::model::LivePreRollConfiguration).
 pub mod live_pre_roll_configuration {
 
-    /// A builder for [`LivePreRollConfiguration`](crate::model::LivePreRollConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LivePreRollConfiguration`](crate::model::LivePreRollConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ad_decision_server_url: std::option::Option<std::string::String>,
@@ -1407,7 +1425,7 @@ pub mod live_pre_roll_configuration {
             self.max_duration_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`LivePreRollConfiguration`](crate::model::LivePreRollConfiguration)
+        /// Consumes the builder and constructs a [`LivePreRollConfiguration`](crate::model::LivePreRollConfiguration).
         pub fn build(self) -> crate::model::LivePreRollConfiguration {
             crate::model::LivePreRollConfiguration {
                 ad_decision_server_url: self.ad_decision_server_url,
@@ -1417,7 +1435,7 @@ pub mod live_pre_roll_configuration {
     }
 }
 impl LivePreRollConfiguration {
-    /// Creates a new builder-style object to manufacture [`LivePreRollConfiguration`](crate::model::LivePreRollConfiguration)
+    /// Creates a new builder-style object to manufacture [`LivePreRollConfiguration`](crate::model::LivePreRollConfiguration).
     pub fn builder() -> crate::model::live_pre_roll_configuration::Builder {
         crate::model::live_pre_roll_configuration::Builder::default()
     }
@@ -1428,6 +1446,7 @@ impl LivePreRollConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsConfiguration {
     /// <p>The URL that is used to initiate a playback session for devices that support Apple HLS. The session uses server-side reporting.</p>
+    #[doc(hidden)]
     pub manifest_endpoint_prefix: std::option::Option<std::string::String>,
 }
 impl HlsConfiguration {
@@ -1443,11 +1462,10 @@ impl std::fmt::Debug for HlsConfiguration {
         formatter.finish()
     }
 }
-/// See [`HlsConfiguration`](crate::model::HlsConfiguration)
+/// See [`HlsConfiguration`](crate::model::HlsConfiguration).
 pub mod hls_configuration {
 
-    /// A builder for [`HlsConfiguration`](crate::model::HlsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`HlsConfiguration`](crate::model::HlsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) manifest_endpoint_prefix: std::option::Option<std::string::String>,
@@ -1466,7 +1484,7 @@ pub mod hls_configuration {
             self.manifest_endpoint_prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsConfiguration`](crate::model::HlsConfiguration)
+        /// Consumes the builder and constructs a [`HlsConfiguration`](crate::model::HlsConfiguration).
         pub fn build(self) -> crate::model::HlsConfiguration {
             crate::model::HlsConfiguration {
                 manifest_endpoint_prefix: self.manifest_endpoint_prefix,
@@ -1475,7 +1493,7 @@ pub mod hls_configuration {
     }
 }
 impl HlsConfiguration {
-    /// Creates a new builder-style object to manufacture [`HlsConfiguration`](crate::model::HlsConfiguration)
+    /// Creates a new builder-style object to manufacture [`HlsConfiguration`](crate::model::HlsConfiguration).
     pub fn builder() -> crate::model::hls_configuration::Builder {
         crate::model::hls_configuration::Builder::default()
     }
@@ -1486,10 +1504,13 @@ impl HlsConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DashConfiguration {
     /// <p>The URL generated by MediaTailor to initiate a playback session. The session uses server-side reporting. This setting is ignored in PUT operations.</p>
+    #[doc(hidden)]
     pub manifest_endpoint_prefix: std::option::Option<std::string::String>,
     /// <p>The setting that controls whether MediaTailor includes the Location tag in DASH manifests. MediaTailor populates the Location tag with the URL for manifest update requests, to be used by players that don't support sticky redirects. Disable this if you have CDN routing rules set up for accessing MediaTailor manifests, and you are either using client-side reporting or your players support sticky HTTP redirects. Valid values are DISABLED and EMT_DEFAULT. The EMT_DEFAULT setting enables the inclusion of the tag and is the default value.</p>
+    #[doc(hidden)]
     pub mpd_location: std::option::Option<std::string::String>,
     /// <p>The setting that controls whether MediaTailor handles manifests from the origin server as multi-period manifests or single-period manifests. If your origin server produces single-period manifests, set this to SINGLE_PERIOD. The default setting is MULTI_PERIOD. For multi-period manifests, omit this setting or set it to MULTI_PERIOD.</p>
+    #[doc(hidden)]
     pub origin_manifest_type: std::option::Option<crate::model::OriginManifestType>,
 }
 impl DashConfiguration {
@@ -1515,11 +1536,10 @@ impl std::fmt::Debug for DashConfiguration {
         formatter.finish()
     }
 }
-/// See [`DashConfiguration`](crate::model::DashConfiguration)
+/// See [`DashConfiguration`](crate::model::DashConfiguration).
 pub mod dash_configuration {
 
-    /// A builder for [`DashConfiguration`](crate::model::DashConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DashConfiguration`](crate::model::DashConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) manifest_endpoint_prefix: std::option::Option<std::string::String>,
@@ -1563,7 +1583,7 @@ pub mod dash_configuration {
             self.origin_manifest_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`DashConfiguration`](crate::model::DashConfiguration)
+        /// Consumes the builder and constructs a [`DashConfiguration`](crate::model::DashConfiguration).
         pub fn build(self) -> crate::model::DashConfiguration {
             crate::model::DashConfiguration {
                 manifest_endpoint_prefix: self.manifest_endpoint_prefix,
@@ -1574,7 +1594,7 @@ pub mod dash_configuration {
     }
 }
 impl DashConfiguration {
-    /// Creates a new builder-style object to manufacture [`DashConfiguration`](crate::model::DashConfiguration)
+    /// Creates a new builder-style object to manufacture [`DashConfiguration`](crate::model::DashConfiguration).
     pub fn builder() -> crate::model::dash_configuration::Builder {
         crate::model::dash_configuration::Builder::default()
     }
@@ -1640,8 +1660,10 @@ impl AsRef<str> for OriginManifestType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CdnConfiguration {
     /// <p>A non-default content delivery network (CDN) to serve ad segments. By default, AWS Elemental MediaTailor uses Amazon CloudFront with default cache settings as its CDN for ad segments. To set up an alternate CDN, create a rule in your CDN for the origin ads.mediatailor.&amp;lt;region&gt;.amazonaws.com. Then specify the rule's name in this AdSegmentUrlPrefix. When AWS Elemental MediaTailor serves a manifest, it reports your CDN as the source for ad segments.</p>
+    #[doc(hidden)]
     pub ad_segment_url_prefix: std::option::Option<std::string::String>,
     /// <p>A content delivery network (CDN) to cache content segments, so that content requests don’t always have to go to the origin server. First, create a rule in your CDN for the content segment origin server. Then specify the rule's name in this ContentSegmentUrlPrefix. When AWS Elemental MediaTailor serves a manifest, it reports your CDN as the source for content segments.</p>
+    #[doc(hidden)]
     pub content_segment_url_prefix: std::option::Option<std::string::String>,
 }
 impl CdnConfiguration {
@@ -1665,11 +1687,10 @@ impl std::fmt::Debug for CdnConfiguration {
         formatter.finish()
     }
 }
-/// See [`CdnConfiguration`](crate::model::CdnConfiguration)
+/// See [`CdnConfiguration`](crate::model::CdnConfiguration).
 pub mod cdn_configuration {
 
-    /// A builder for [`CdnConfiguration`](crate::model::CdnConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CdnConfiguration`](crate::model::CdnConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ad_segment_url_prefix: std::option::Option<std::string::String>,
@@ -1702,7 +1723,7 @@ pub mod cdn_configuration {
             self.content_segment_url_prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`CdnConfiguration`](crate::model::CdnConfiguration)
+        /// Consumes the builder and constructs a [`CdnConfiguration`](crate::model::CdnConfiguration).
         pub fn build(self) -> crate::model::CdnConfiguration {
             crate::model::CdnConfiguration {
                 ad_segment_url_prefix: self.ad_segment_url_prefix,
@@ -1712,7 +1733,7 @@ pub mod cdn_configuration {
     }
 }
 impl CdnConfiguration {
-    /// Creates a new builder-style object to manufacture [`CdnConfiguration`](crate::model::CdnConfiguration)
+    /// Creates a new builder-style object to manufacture [`CdnConfiguration`](crate::model::CdnConfiguration).
     pub fn builder() -> crate::model::cdn_configuration::Builder {
         crate::model::cdn_configuration::Builder::default()
     }
@@ -1723,8 +1744,10 @@ impl CdnConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Bumper {
     /// <p>The URL for the end bumper asset.</p>
+    #[doc(hidden)]
     pub end_url: std::option::Option<std::string::String>,
     /// <p>The URL for the start bumper asset.</p>
+    #[doc(hidden)]
     pub start_url: std::option::Option<std::string::String>,
 }
 impl Bumper {
@@ -1745,11 +1768,10 @@ impl std::fmt::Debug for Bumper {
         formatter.finish()
     }
 }
-/// See [`Bumper`](crate::model::Bumper)
+/// See [`Bumper`](crate::model::Bumper).
 pub mod bumper {
 
-    /// A builder for [`Bumper`](crate::model::Bumper)
-    #[non_exhaustive]
+    /// A builder for [`Bumper`](crate::model::Bumper).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) end_url: std::option::Option<std::string::String>,
@@ -1776,7 +1798,7 @@ pub mod bumper {
             self.start_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`Bumper`](crate::model::Bumper)
+        /// Consumes the builder and constructs a [`Bumper`](crate::model::Bumper).
         pub fn build(self) -> crate::model::Bumper {
             crate::model::Bumper {
                 end_url: self.end_url,
@@ -1786,7 +1808,7 @@ pub mod bumper {
     }
 }
 impl Bumper {
-    /// Creates a new builder-style object to manufacture [`Bumper`](crate::model::Bumper)
+    /// Creates a new builder-style object to manufacture [`Bumper`](crate::model::Bumper).
     pub fn builder() -> crate::model::bumper::Builder {
         crate::model::bumper::Builder::default()
     }
@@ -1797,8 +1819,10 @@ impl Bumper {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AvailSuppression {
     /// <p>Sets the ad suppression mode. By default, ad suppression is off and all ad breaks are filled with ads or slate. When Mode is set to BEHIND_LIVE_EDGE, ad suppression is active and MediaTailor won't fill ad breaks on or behind the ad suppression Value time in the manifest lookback window.</p>
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::Mode>,
     /// <p>A live edge offset time in HH:MM:SS. MediaTailor won't fill ad breaks on or behind this time in the manifest lookback window. If Value is set to 00:00:00, it is in sync with the live edge, and MediaTailor won't fill any ad breaks on or behind the live edge. If you set a Value time, MediaTailor won't fill any ad breaks on or behind this time in the manifest lookback window. For example, if you set 00:45:00, then MediaTailor will fill ad breaks that occur within 45 minutes behind the live edge, but won't fill ad breaks on or behind 45 minutes behind the live edge.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl AvailSuppression {
@@ -1819,11 +1843,10 @@ impl std::fmt::Debug for AvailSuppression {
         formatter.finish()
     }
 }
-/// See [`AvailSuppression`](crate::model::AvailSuppression)
+/// See [`AvailSuppression`](crate::model::AvailSuppression).
 pub mod avail_suppression {
 
-    /// A builder for [`AvailSuppression`](crate::model::AvailSuppression)
-    #[non_exhaustive]
+    /// A builder for [`AvailSuppression`](crate::model::AvailSuppression).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mode: std::option::Option<crate::model::Mode>,
@@ -1850,7 +1873,7 @@ pub mod avail_suppression {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`AvailSuppression`](crate::model::AvailSuppression)
+        /// Consumes the builder and constructs a [`AvailSuppression`](crate::model::AvailSuppression).
         pub fn build(self) -> crate::model::AvailSuppression {
             crate::model::AvailSuppression {
                 mode: self.mode,
@@ -1860,7 +1883,7 @@ pub mod avail_suppression {
     }
 }
 impl AvailSuppression {
-    /// Creates a new builder-style object to manufacture [`AvailSuppression`](crate::model::AvailSuppression)
+    /// Creates a new builder-style object to manufacture [`AvailSuppression`](crate::model::AvailSuppression).
     pub fn builder() -> crate::model::avail_suppression::Builder {
         crate::model::avail_suppression::Builder::default()
     }
@@ -1926,8 +1949,10 @@ impl AsRef<str> for Mode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DashConfigurationForPut {
     /// <p>The setting that controls whether MediaTailor includes the Location tag in DASH manifests. MediaTailor populates the Location tag with the URL for manifest update requests, to be used by players that don't support sticky redirects. Disable this if you have CDN routing rules set up for accessing MediaTailor manifests, and you are either using client-side reporting or your players support sticky HTTP redirects. Valid values are DISABLED and EMT_DEFAULT. The EMT_DEFAULT setting enables the inclusion of the tag and is the default value.</p>
+    #[doc(hidden)]
     pub mpd_location: std::option::Option<std::string::String>,
     /// <p>The setting that controls whether MediaTailor handles manifests from the origin server as multi-period manifests or single-period manifests. If your origin server produces single-period manifests, set this to SINGLE_PERIOD. The default setting is MULTI_PERIOD. For multi-period manifests, omit this setting or set it to MULTI_PERIOD.</p>
+    #[doc(hidden)]
     pub origin_manifest_type: std::option::Option<crate::model::OriginManifestType>,
 }
 impl DashConfigurationForPut {
@@ -1948,11 +1973,10 @@ impl std::fmt::Debug for DashConfigurationForPut {
         formatter.finish()
     }
 }
-/// See [`DashConfigurationForPut`](crate::model::DashConfigurationForPut)
+/// See [`DashConfigurationForPut`](crate::model::DashConfigurationForPut).
 pub mod dash_configuration_for_put {
 
-    /// A builder for [`DashConfigurationForPut`](crate::model::DashConfigurationForPut)
-    #[non_exhaustive]
+    /// A builder for [`DashConfigurationForPut`](crate::model::DashConfigurationForPut).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mpd_location: std::option::Option<std::string::String>,
@@ -1982,7 +2006,7 @@ pub mod dash_configuration_for_put {
             self.origin_manifest_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`DashConfigurationForPut`](crate::model::DashConfigurationForPut)
+        /// Consumes the builder and constructs a [`DashConfigurationForPut`](crate::model::DashConfigurationForPut).
         pub fn build(self) -> crate::model::DashConfigurationForPut {
             crate::model::DashConfigurationForPut {
                 mpd_location: self.mpd_location,
@@ -1992,7 +2016,7 @@ pub mod dash_configuration_for_put {
     }
 }
 impl DashConfigurationForPut {
-    /// Creates a new builder-style object to manufacture [`DashConfigurationForPut`](crate::model::DashConfigurationForPut)
+    /// Creates a new builder-style object to manufacture [`DashConfigurationForPut`](crate::model::DashConfigurationForPut).
     pub fn builder() -> crate::model::dash_configuration_for_put::Builder {
         crate::model::dash_configuration_for_put::Builder::default()
     }
@@ -2003,20 +2027,27 @@ impl DashConfigurationForPut {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VodSource {
     /// <p>The ARN for the VOD source.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The timestamp that indicates when the VOD source was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The HTTP package configurations for the VOD source.</p>
+    #[doc(hidden)]
     pub http_package_configurations:
         std::option::Option<std::vec::Vec<crate::model::HttpPackageConfiguration>>,
     /// <p>The timestamp that indicates when the VOD source was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the source location that the VOD source is associated with.</p>
+    #[doc(hidden)]
     pub source_location_name: std::option::Option<std::string::String>,
     /// <p>The tags assigned to the VOD source.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The name of the VOD source.</p>
+    #[doc(hidden)]
     pub vod_source_name: std::option::Option<std::string::String>,
 }
 impl VodSource {
@@ -2070,11 +2101,10 @@ impl std::fmt::Debug for VodSource {
         formatter.finish()
     }
 }
-/// See [`VodSource`](crate::model::VodSource)
+/// See [`VodSource`](crate::model::VodSource).
 pub mod vod_source {
 
-    /// A builder for [`VodSource`](crate::model::VodSource)
-    #[non_exhaustive]
+    /// A builder for [`VodSource`](crate::model::VodSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2198,7 +2228,7 @@ pub mod vod_source {
             self.vod_source_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`VodSource`](crate::model::VodSource)
+        /// Consumes the builder and constructs a [`VodSource`](crate::model::VodSource).
         pub fn build(self) -> crate::model::VodSource {
             crate::model::VodSource {
                 arn: self.arn,
@@ -2213,7 +2243,7 @@ pub mod vod_source {
     }
 }
 impl VodSource {
-    /// Creates a new builder-style object to manufacture [`VodSource`](crate::model::VodSource)
+    /// Creates a new builder-style object to manufacture [`VodSource`](crate::model::VodSource).
     pub fn builder() -> crate::model::vod_source::Builder {
         crate::model::vod_source::Builder::default()
     }
@@ -2224,24 +2254,33 @@ impl VodSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceLocation {
     /// <p>The access configuration for the source location.</p>
+    #[doc(hidden)]
     pub access_configuration: std::option::Option<crate::model::AccessConfiguration>,
     /// <p>The ARN of the SourceLocation.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The timestamp that indicates when the source location was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The default segment delivery configuration.</p>
+    #[doc(hidden)]
     pub default_segment_delivery_configuration:
         std::option::Option<crate::model::DefaultSegmentDeliveryConfiguration>,
     /// <p>The HTTP configuration for the source location.</p>
+    #[doc(hidden)]
     pub http_configuration: std::option::Option<crate::model::HttpConfiguration>,
     /// <p>The timestamp that indicates when the source location was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The segment delivery configurations for the source location.</p>
+    #[doc(hidden)]
     pub segment_delivery_configurations:
         std::option::Option<std::vec::Vec<crate::model::SegmentDeliveryConfiguration>>,
     /// <p>The name of the source location.</p>
+    #[doc(hidden)]
     pub source_location_name: std::option::Option<std::string::String>,
     /// <p>The tags assigned to the source location.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2311,11 +2350,10 @@ impl std::fmt::Debug for SourceLocation {
         formatter.finish()
     }
 }
-/// See [`SourceLocation`](crate::model::SourceLocation)
+/// See [`SourceLocation`](crate::model::SourceLocation).
 pub mod source_location {
 
-    /// A builder for [`SourceLocation`](crate::model::SourceLocation)
-    #[non_exhaustive]
+    /// A builder for [`SourceLocation`](crate::model::SourceLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_configuration: std::option::Option<crate::model::AccessConfiguration>,
@@ -2471,7 +2509,7 @@ pub mod source_location {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceLocation`](crate::model::SourceLocation)
+        /// Consumes the builder and constructs a [`SourceLocation`](crate::model::SourceLocation).
         pub fn build(self) -> crate::model::SourceLocation {
             crate::model::SourceLocation {
                 access_configuration: self.access_configuration,
@@ -2488,7 +2526,7 @@ pub mod source_location {
     }
 }
 impl SourceLocation {
-    /// Creates a new builder-style object to manufacture [`SourceLocation`](crate::model::SourceLocation)
+    /// Creates a new builder-style object to manufacture [`SourceLocation`](crate::model::SourceLocation).
     pub fn builder() -> crate::model::source_location::Builder {
         crate::model::source_location::Builder::default()
     }
@@ -2499,16 +2537,22 @@ impl SourceLocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrefetchSchedule {
     /// <p>The Amazon Resource Name (ARN) of the prefetch schedule.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Consumption settings determine how, and when, MediaTailor places the prefetched ads into ad breaks. Ad consumption occurs within a span of time that you define, called a <i>consumption window</i>. You can designate which ad breaks that MediaTailor fills with prefetch ads by setting avail matching criteria.</p>
+    #[doc(hidden)]
     pub consumption: std::option::Option<crate::model::PrefetchConsumption>,
     /// <p>The name of the prefetch schedule. The name must be unique among all prefetch schedules that are associated with the specified playback configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The name of the playback configuration to create the prefetch schedule for.</p>
+    #[doc(hidden)]
     pub playback_configuration_name: std::option::Option<std::string::String>,
     /// <p>A complex type that contains settings for prefetch retrieval from the ad decision server (ADS).</p>
+    #[doc(hidden)]
     pub retrieval: std::option::Option<crate::model::PrefetchRetrieval>,
     /// <p>An optional stream identifier that you can specify in order to prefetch for multiple streams that use the same playback configuration.</p>
+    #[doc(hidden)]
     pub stream_id: std::option::Option<std::string::String>,
 }
 impl PrefetchSchedule {
@@ -2552,11 +2596,10 @@ impl std::fmt::Debug for PrefetchSchedule {
         formatter.finish()
     }
 }
-/// See [`PrefetchSchedule`](crate::model::PrefetchSchedule)
+/// See [`PrefetchSchedule`](crate::model::PrefetchSchedule).
 pub mod prefetch_schedule {
 
-    /// A builder for [`PrefetchSchedule`](crate::model::PrefetchSchedule)
-    #[non_exhaustive]
+    /// A builder for [`PrefetchSchedule`](crate::model::PrefetchSchedule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2639,7 +2682,7 @@ pub mod prefetch_schedule {
             self.stream_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrefetchSchedule`](crate::model::PrefetchSchedule)
+        /// Consumes the builder and constructs a [`PrefetchSchedule`](crate::model::PrefetchSchedule).
         pub fn build(self) -> crate::model::PrefetchSchedule {
             crate::model::PrefetchSchedule {
                 arn: self.arn,
@@ -2653,7 +2696,7 @@ pub mod prefetch_schedule {
     }
 }
 impl PrefetchSchedule {
-    /// Creates a new builder-style object to manufacture [`PrefetchSchedule`](crate::model::PrefetchSchedule)
+    /// Creates a new builder-style object to manufacture [`PrefetchSchedule`](crate::model::PrefetchSchedule).
     pub fn builder() -> crate::model::prefetch_schedule::Builder {
         crate::model::prefetch_schedule::Builder::default()
     }
@@ -2665,11 +2708,14 @@ impl PrefetchSchedule {
 pub struct PrefetchRetrieval {
     /// <p>The dynamic variables to use for substitution during prefetch requests to the ad decision server (ADS).</p>
     /// <p>You intially configure <a href="https://docs.aws.amazon.com/mediatailor/latest/ug/variables.html">dynamic variables</a> for the ADS URL when you set up your playback configuration. When you specify DynamicVariables for prefetch retrieval, MediaTailor includes the dynamic variables in the request to the ADS.</p>
+    #[doc(hidden)]
     pub dynamic_variables:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The time when prefetch retrieval ends for the ad break. Prefetching will be attempted for manifest requests that occur at or before this time.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when prefetch retrievals can start for this break. Ad prefetching will be attempted for manifest requests that occur at or after this time. Defaults to the current time. If not specified, the prefetch retrieval starts as soon as possible.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PrefetchRetrieval {
@@ -2699,11 +2745,10 @@ impl std::fmt::Debug for PrefetchRetrieval {
         formatter.finish()
     }
 }
-/// See [`PrefetchRetrieval`](crate::model::PrefetchRetrieval)
+/// See [`PrefetchRetrieval`](crate::model::PrefetchRetrieval).
 pub mod prefetch_retrieval {
 
-    /// A builder for [`PrefetchRetrieval`](crate::model::PrefetchRetrieval)
-    #[non_exhaustive]
+    /// A builder for [`PrefetchRetrieval`](crate::model::PrefetchRetrieval).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dynamic_variables: std::option::Option<
@@ -2766,7 +2811,7 @@ pub mod prefetch_retrieval {
             self.start_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrefetchRetrieval`](crate::model::PrefetchRetrieval)
+        /// Consumes the builder and constructs a [`PrefetchRetrieval`](crate::model::PrefetchRetrieval).
         pub fn build(self) -> crate::model::PrefetchRetrieval {
             crate::model::PrefetchRetrieval {
                 dynamic_variables: self.dynamic_variables,
@@ -2777,7 +2822,7 @@ pub mod prefetch_retrieval {
     }
 }
 impl PrefetchRetrieval {
-    /// Creates a new builder-style object to manufacture [`PrefetchRetrieval`](crate::model::PrefetchRetrieval)
+    /// Creates a new builder-style object to manufacture [`PrefetchRetrieval`](crate::model::PrefetchRetrieval).
     pub fn builder() -> crate::model::prefetch_retrieval::Builder {
         crate::model::prefetch_retrieval::Builder::default()
     }
@@ -2788,11 +2833,14 @@ impl PrefetchRetrieval {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrefetchConsumption {
     /// <p>If you only want MediaTailor to insert prefetched ads into avails (ad breaks) that match specific dynamic variables, such as scte.event_id, set the avail matching criteria.</p>
+    #[doc(hidden)]
     pub avail_matching_criteria:
         std::option::Option<std::vec::Vec<crate::model::AvailMatchingCriteria>>,
     /// <p>The time when MediaTailor no longer considers the prefetched ads for use in an ad break. MediaTailor automatically deletes prefetch schedules no less than seven days after the end time. If you'd like to manually delete the prefetch schedule, you can call DeletePrefetchSchedule.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when prefetched ads are considered for use in an ad break. If you don't specify StartTime, the prefetched ads are available after MediaTailor retrives them from the ad decision server.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PrefetchConsumption {
@@ -2820,11 +2868,10 @@ impl std::fmt::Debug for PrefetchConsumption {
         formatter.finish()
     }
 }
-/// See [`PrefetchConsumption`](crate::model::PrefetchConsumption)
+/// See [`PrefetchConsumption`](crate::model::PrefetchConsumption).
 pub mod prefetch_consumption {
 
-    /// A builder for [`PrefetchConsumption`](crate::model::PrefetchConsumption)
-    #[non_exhaustive]
+    /// A builder for [`PrefetchConsumption`](crate::model::PrefetchConsumption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) avail_matching_criteria:
@@ -2881,7 +2928,7 @@ pub mod prefetch_consumption {
             self.start_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrefetchConsumption`](crate::model::PrefetchConsumption)
+        /// Consumes the builder and constructs a [`PrefetchConsumption`](crate::model::PrefetchConsumption).
         pub fn build(self) -> crate::model::PrefetchConsumption {
             crate::model::PrefetchConsumption {
                 avail_matching_criteria: self.avail_matching_criteria,
@@ -2892,7 +2939,7 @@ pub mod prefetch_consumption {
     }
 }
 impl PrefetchConsumption {
-    /// Creates a new builder-style object to manufacture [`PrefetchConsumption`](crate::model::PrefetchConsumption)
+    /// Creates a new builder-style object to manufacture [`PrefetchConsumption`](crate::model::PrefetchConsumption).
     pub fn builder() -> crate::model::prefetch_consumption::Builder {
         crate::model::prefetch_consumption::Builder::default()
     }
@@ -2906,8 +2953,10 @@ impl PrefetchConsumption {
 pub struct AvailMatchingCriteria {
     /// <p>The dynamic variable(s) that MediaTailor should use as avail matching criteria. MediaTailor only places the prefetched ads into the avail if the avail matches the criteria defined by the dynamic variable. For information about dynamic variables, see <a href="https://docs.aws.amazon.com/mediatailor/latest/ug/variables.html">Using dynamic ad variables</a> in the <i>MediaTailor User Guide</i>.</p>
     /// <p>You can include up to 100 dynamic variables.</p>
+    #[doc(hidden)]
     pub dynamic_variable: std::option::Option<std::string::String>,
     /// <p>For the DynamicVariable specified in AvailMatchingCriteria, the Operator that is used for the comparison.</p>
+    #[doc(hidden)]
     pub operator: std::option::Option<crate::model::Operator>,
 }
 impl AvailMatchingCriteria {
@@ -2929,11 +2978,10 @@ impl std::fmt::Debug for AvailMatchingCriteria {
         formatter.finish()
     }
 }
-/// See [`AvailMatchingCriteria`](crate::model::AvailMatchingCriteria)
+/// See [`AvailMatchingCriteria`](crate::model::AvailMatchingCriteria).
 pub mod avail_matching_criteria {
 
-    /// A builder for [`AvailMatchingCriteria`](crate::model::AvailMatchingCriteria)
-    #[non_exhaustive]
+    /// A builder for [`AvailMatchingCriteria`](crate::model::AvailMatchingCriteria).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dynamic_variable: std::option::Option<std::string::String>,
@@ -2965,7 +3013,7 @@ pub mod avail_matching_criteria {
             self.operator = input;
             self
         }
-        /// Consumes the builder and constructs a [`AvailMatchingCriteria`](crate::model::AvailMatchingCriteria)
+        /// Consumes the builder and constructs a [`AvailMatchingCriteria`](crate::model::AvailMatchingCriteria).
         pub fn build(self) -> crate::model::AvailMatchingCriteria {
             crate::model::AvailMatchingCriteria {
                 dynamic_variable: self.dynamic_variable,
@@ -2975,7 +3023,7 @@ pub mod avail_matching_criteria {
     }
 }
 impl AvailMatchingCriteria {
-    /// Creates a new builder-style object to manufacture [`AvailMatchingCriteria`](crate::model::AvailMatchingCriteria)
+    /// Creates a new builder-style object to manufacture [`AvailMatchingCriteria`](crate::model::AvailMatchingCriteria).
     pub fn builder() -> crate::model::avail_matching_criteria::Builder {
         crate::model::avail_matching_criteria::Builder::default()
     }
@@ -3037,14 +3085,19 @@ impl AsRef<str> for Operator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PlaybackConfiguration {
     /// <p>The URL for the ad decision server (ADS). This includes the specification of static parameters and placeholders for dynamic parameters. AWS Elemental MediaTailor substitutes player-specific and session-specific parameters as needed when calling the ADS. Alternately, for testing you can provide a static VAST URL. The maximum length is 25,000 characters.</p>
+    #[doc(hidden)]
     pub ad_decision_server_url: std::option::Option<std::string::String>,
     /// <p>The configuration for avail suppression, also known as ad suppression. For more information about ad suppression, see <a href="https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html">Ad Suppression</a>.</p>
+    #[doc(hidden)]
     pub avail_suppression: std::option::Option<crate::model::AvailSuppression>,
     /// <p>The configuration for bumpers. Bumpers are short audio or video clips that play at the start or before the end of an ad break. To learn more about bumpers, see <a href="https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html">Bumpers</a>.</p>
+    #[doc(hidden)]
     pub bumper: std::option::Option<crate::model::Bumper>,
     /// <p>The configuration for using a content delivery network (CDN), like Amazon CloudFront, for content and ad segment management.</p>
+    #[doc(hidden)]
     pub cdn_configuration: std::option::Option<crate::model::CdnConfiguration>,
     /// <p>The player parameters and aliases used as dynamic variables during session initialization. For more information, see <a href="https://docs.aws.amazon.com/mediatailor/latest/ug/variables-domain.html">Domain Variables</a>.</p>
+    #[doc(hidden)]
     pub configuration_aliases: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -3052,33 +3105,47 @@ pub struct PlaybackConfiguration {
         >,
     >,
     /// <p>The configuration for a DASH source.</p>
+    #[doc(hidden)]
     pub dash_configuration: std::option::Option<crate::model::DashConfiguration>,
     /// <p>The configuration for HLS content.</p>
+    #[doc(hidden)]
     pub hls_configuration: std::option::Option<crate::model::HlsConfiguration>,
     /// <p>The configuration for pre-roll ad insertion.</p>
+    #[doc(hidden)]
     pub live_pre_roll_configuration: std::option::Option<crate::model::LivePreRollConfiguration>,
     /// <p>The Amazon CloudWatch log settings for a playback configuration.</p>
+    #[doc(hidden)]
     pub log_configuration: std::option::Option<crate::model::LogConfiguration>,
     /// <p>The configuration for manifest processing rules. Manifest processing rules enable customization of the personalized manifests created by MediaTailor.</p>
+    #[doc(hidden)]
     pub manifest_processing_rules: std::option::Option<crate::model::ManifestProcessingRules>,
     /// <p>The identifier for the playback configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Defines the maximum duration of underfilled ad time (in seconds) allowed in an ad break. If the duration of underfilled ad time exceeds the personalization threshold, then the personalization of the ad break is abandoned and the underlying content is shown. This feature applies to <i>ad replacement</i> in live and VOD streams, rather than ad insertion, because it relies on an underlying content stream. For more information about ad break behavior, including ad replacement and insertion, see <a href="https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html">Ad Behavior in AWS Elemental MediaTailor</a>.</p>
+    #[doc(hidden)]
     pub personalization_threshold_seconds: i32,
     /// <p>The Amazon Resource Name (ARN) for the playback configuration.</p>
+    #[doc(hidden)]
     pub playback_configuration_arn: std::option::Option<std::string::String>,
     /// <p>The URL that the player accesses to get a manifest from AWS Elemental MediaTailor.</p>
+    #[doc(hidden)]
     pub playback_endpoint_prefix: std::option::Option<std::string::String>,
     /// <p>The URL that the player uses to initialize a session that uses client-side reporting.</p>
+    #[doc(hidden)]
     pub session_initialization_endpoint_prefix: std::option::Option<std::string::String>,
     /// <p>The URL for a video asset to transcode and use to fill in time that's not used by ads. AWS Elemental MediaTailor shows the slate to fill in gaps in media content. Configuring the slate is optional for non-VPAID playback configurations. For VPAID, the slate is required because MediaTailor provides it in the slots designated for dynamic ad content. The slate must be a high-quality asset that contains both audio and video.</p>
+    #[doc(hidden)]
     pub slate_ad_url: std::option::Option<std::string::String>,
     /// <p>The tags to assign to the playback configuration.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The name that is used to associate this playback configuration with a custom transcode profile. This overrides the dynamic transcoding defaults of MediaTailor. Use this only if you have already set up custom profiles with the help of AWS Support.</p>
+    #[doc(hidden)]
     pub transcode_profile_name: std::option::Option<std::string::String>,
     /// <p>The URL prefix for the parent manifest for the stream, minus the asset ID. The maximum length is 512 characters.</p>
+    #[doc(hidden)]
     pub video_content_source_url: std::option::Option<std::string::String>,
 }
 impl PlaybackConfiguration {
@@ -3210,11 +3277,10 @@ impl std::fmt::Debug for PlaybackConfiguration {
         formatter.finish()
     }
 }
-/// See [`PlaybackConfiguration`](crate::model::PlaybackConfiguration)
+/// See [`PlaybackConfiguration`](crate::model::PlaybackConfiguration).
 pub mod playback_configuration {
 
-    /// A builder for [`PlaybackConfiguration`](crate::model::PlaybackConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`PlaybackConfiguration`](crate::model::PlaybackConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ad_decision_server_url: std::option::Option<std::string::String>,
@@ -3521,7 +3587,7 @@ pub mod playback_configuration {
             self.video_content_source_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`PlaybackConfiguration`](crate::model::PlaybackConfiguration)
+        /// Consumes the builder and constructs a [`PlaybackConfiguration`](crate::model::PlaybackConfiguration).
         pub fn build(self) -> crate::model::PlaybackConfiguration {
             crate::model::PlaybackConfiguration {
                 ad_decision_server_url: self.ad_decision_server_url,
@@ -3550,7 +3616,7 @@ pub mod playback_configuration {
     }
 }
 impl PlaybackConfiguration {
-    /// Creates a new builder-style object to manufacture [`PlaybackConfiguration`](crate::model::PlaybackConfiguration)
+    /// Creates a new builder-style object to manufacture [`PlaybackConfiguration`](crate::model::PlaybackConfiguration).
     pub fn builder() -> crate::model::playback_configuration::Builder {
         crate::model::playback_configuration::Builder::default()
     }
@@ -3561,19 +3627,26 @@ impl PlaybackConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LiveSource {
     /// <p>The ARN for the live source.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The timestamp that indicates when the live source was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The HTTP package configurations for the live source.</p>
+    #[doc(hidden)]
     pub http_package_configurations:
         std::option::Option<std::vec::Vec<crate::model::HttpPackageConfiguration>>,
     /// <p>The timestamp that indicates when the live source was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name that's used to refer to a live source.</p>
+    #[doc(hidden)]
     pub live_source_name: std::option::Option<std::string::String>,
     /// <p>The name of the source location.</p>
+    #[doc(hidden)]
     pub source_location_name: std::option::Option<std::string::String>,
     /// <p>The tags assigned to the live source.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -3628,11 +3701,10 @@ impl std::fmt::Debug for LiveSource {
         formatter.finish()
     }
 }
-/// See [`LiveSource`](crate::model::LiveSource)
+/// See [`LiveSource`](crate::model::LiveSource).
 pub mod live_source {
 
-    /// A builder for [`LiveSource`](crate::model::LiveSource)
-    #[non_exhaustive]
+    /// A builder for [`LiveSource`](crate::model::LiveSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3756,7 +3828,7 @@ pub mod live_source {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`LiveSource`](crate::model::LiveSource)
+        /// Consumes the builder and constructs a [`LiveSource`](crate::model::LiveSource).
         pub fn build(self) -> crate::model::LiveSource {
             crate::model::LiveSource {
                 arn: self.arn,
@@ -3771,7 +3843,7 @@ pub mod live_source {
     }
 }
 impl LiveSource {
-    /// Creates a new builder-style object to manufacture [`LiveSource`](crate::model::LiveSource)
+    /// Creates a new builder-style object to manufacture [`LiveSource`](crate::model::LiveSource).
     pub fn builder() -> crate::model::live_source::Builder {
         crate::model::live_source::Builder::default()
     }
@@ -3782,27 +3854,37 @@ impl LiveSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Channel {
     /// <p>The ARN of the channel.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the channel.</p>
+    #[doc(hidden)]
     pub channel_name: std::option::Option<std::string::String>,
     /// <p>Returns the state whether the channel is running or not.</p>
+    #[doc(hidden)]
     pub channel_state: std::option::Option<std::string::String>,
     /// <p>The timestamp of when the channel was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the LOOP PlaybackMode.</p>
+    #[doc(hidden)]
     pub filler_slate: std::option::Option<crate::model::SlateSource>,
     /// <p>The timestamp of when the channel was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The channel's output properties.</p>
+    #[doc(hidden)]
     pub outputs: std::option::Option<std::vec::Vec<crate::model::ResponseOutputItem>>,
     /// <p>The type of playback mode for this channel.</p>
     /// <p>LINEAR - Programs play back-to-back only once.</p>
     /// <p>LOOP - Programs play back-to-back in an endless loop. When the last program in the schedule plays, playback loops back to the first program in the schedule.</p>
+    #[doc(hidden)]
     pub playback_mode: std::option::Option<std::string::String>,
     /// <p>The tags to assign to the channel.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The tier for this channel. STANDARD tier channels can contain live programs.</p>
+    #[doc(hidden)]
     pub tier: std::option::Option<std::string::String>,
 }
 impl Channel {
@@ -3868,11 +3950,10 @@ impl std::fmt::Debug for Channel {
         formatter.finish()
     }
 }
-/// See [`Channel`](crate::model::Channel)
+/// See [`Channel`](crate::model::Channel).
 pub mod channel {
 
-    /// A builder for [`Channel`](crate::model::Channel)
-    #[non_exhaustive]
+    /// A builder for [`Channel`](crate::model::Channel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4032,7 +4113,7 @@ pub mod channel {
             self.tier = input;
             self
         }
-        /// Consumes the builder and constructs a [`Channel`](crate::model::Channel)
+        /// Consumes the builder and constructs a [`Channel`](crate::model::Channel).
         pub fn build(self) -> crate::model::Channel {
             crate::model::Channel {
                 arn: self.arn,
@@ -4050,7 +4131,7 @@ pub mod channel {
     }
 }
 impl Channel {
-    /// Creates a new builder-style object to manufacture [`Channel`](crate::model::Channel)
+    /// Creates a new builder-style object to manufacture [`Channel`](crate::model::Channel).
     pub fn builder() -> crate::model::channel::Builder {
         crate::model::channel::Builder::default()
     }
@@ -4061,14 +4142,19 @@ impl Channel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Alert {
     /// <p>The code for the alert. For example, NOT_PROCESSED.</p>
+    #[doc(hidden)]
     pub alert_code: std::option::Option<std::string::String>,
     /// <p>If an alert is generated for a resource, an explanation of the reason for the alert.</p>
+    #[doc(hidden)]
     pub alert_message: std::option::Option<std::string::String>,
     /// <p>The timestamp when the alert was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Names (ARNs) related to this alert.</p>
+    #[doc(hidden)]
     pub related_resource_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the resource.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl Alert {
@@ -4104,11 +4190,10 @@ impl std::fmt::Debug for Alert {
         formatter.finish()
     }
 }
-/// See [`Alert`](crate::model::Alert)
+/// See [`Alert`](crate::model::Alert).
 pub mod alert {
 
-    /// A builder for [`Alert`](crate::model::Alert)
-    #[non_exhaustive]
+    /// A builder for [`Alert`](crate::model::Alert).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alert_code: std::option::Option<std::string::String>,
@@ -4183,7 +4268,7 @@ pub mod alert {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Alert`](crate::model::Alert)
+        /// Consumes the builder and constructs a [`Alert`](crate::model::Alert).
         pub fn build(self) -> crate::model::Alert {
             crate::model::Alert {
                 alert_code: self.alert_code,
@@ -4196,7 +4281,7 @@ pub mod alert {
     }
 }
 impl Alert {
-    /// Creates a new builder-style object to manufacture [`Alert`](crate::model::Alert)
+    /// Creates a new builder-style object to manufacture [`Alert`](crate::model::Alert).
     pub fn builder() -> crate::model::alert::Builder {
         crate::model::alert::Builder::default()
     }
@@ -4207,25 +4292,35 @@ impl Alert {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduleEntry {
     /// <p>The approximate duration of this program, in seconds.</p>
+    #[doc(hidden)]
     pub approximate_duration_seconds: i64,
     /// <p>The approximate time that the program will start playing.</p>
+    #[doc(hidden)]
     pub approximate_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The ARN of the program.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the channel that uses this schedule.</p>
+    #[doc(hidden)]
     pub channel_name: std::option::Option<std::string::String>,
     /// <p>The name of the live source used for the program.</p>
+    #[doc(hidden)]
     pub live_source_name: std::option::Option<std::string::String>,
     /// <p>The name of the program.</p>
+    #[doc(hidden)]
     pub program_name: std::option::Option<std::string::String>,
     /// <p>The schedule's ad break properties.</p>
+    #[doc(hidden)]
     pub schedule_ad_breaks: std::option::Option<std::vec::Vec<crate::model::ScheduleAdBreak>>,
     /// <p>The type of schedule entry.</p>
     /// <p>Valid values: PROGRAM or FILLER_SLATE.</p>
+    #[doc(hidden)]
     pub schedule_entry_type: std::option::Option<crate::model::ScheduleEntryType>,
     /// <p>The name of the source location.</p>
+    #[doc(hidden)]
     pub source_location_name: std::option::Option<std::string::String>,
     /// <p>The name of the VOD source.</p>
+    #[doc(hidden)]
     pub vod_source_name: std::option::Option<std::string::String>,
 }
 impl ScheduleEntry {
@@ -4290,11 +4385,10 @@ impl std::fmt::Debug for ScheduleEntry {
         formatter.finish()
     }
 }
-/// See [`ScheduleEntry`](crate::model::ScheduleEntry)
+/// See [`ScheduleEntry`](crate::model::ScheduleEntry).
 pub mod schedule_entry {
 
-    /// A builder for [`ScheduleEntry`](crate::model::ScheduleEntry)
-    #[non_exhaustive]
+    /// A builder for [`ScheduleEntry`](crate::model::ScheduleEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) approximate_duration_seconds: std::option::Option<i64>,
@@ -4436,7 +4530,7 @@ pub mod schedule_entry {
             self.vod_source_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduleEntry`](crate::model::ScheduleEntry)
+        /// Consumes the builder and constructs a [`ScheduleEntry`](crate::model::ScheduleEntry).
         pub fn build(self) -> crate::model::ScheduleEntry {
             crate::model::ScheduleEntry {
                 approximate_duration_seconds: self.approximate_duration_seconds.unwrap_or_default(),
@@ -4454,7 +4548,7 @@ pub mod schedule_entry {
     }
 }
 impl ScheduleEntry {
-    /// Creates a new builder-style object to manufacture [`ScheduleEntry`](crate::model::ScheduleEntry)
+    /// Creates a new builder-style object to manufacture [`ScheduleEntry`](crate::model::ScheduleEntry).
     pub fn builder() -> crate::model::schedule_entry::Builder {
         crate::model::schedule_entry::Builder::default()
     }
@@ -4520,12 +4614,16 @@ impl AsRef<str> for ScheduleEntryType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduleAdBreak {
     /// <p>The approximate duration of the ad break, in seconds.</p>
+    #[doc(hidden)]
     pub approximate_duration_seconds: i64,
     /// <p>The approximate time that the ad will start playing.</p>
+    #[doc(hidden)]
     pub approximate_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the source location containing the VOD source used for the ad break.</p>
+    #[doc(hidden)]
     pub source_location_name: std::option::Option<std::string::String>,
     /// <p>The name of the VOD source used for the ad break.</p>
+    #[doc(hidden)]
     pub vod_source_name: std::option::Option<std::string::String>,
 }
 impl ScheduleAdBreak {
@@ -4559,11 +4657,10 @@ impl std::fmt::Debug for ScheduleAdBreak {
         formatter.finish()
     }
 }
-/// See [`ScheduleAdBreak`](crate::model::ScheduleAdBreak)
+/// See [`ScheduleAdBreak`](crate::model::ScheduleAdBreak).
 pub mod schedule_ad_break {
 
-    /// A builder for [`ScheduleAdBreak`](crate::model::ScheduleAdBreak)
-    #[non_exhaustive]
+    /// A builder for [`ScheduleAdBreak`](crate::model::ScheduleAdBreak).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) approximate_duration_seconds: std::option::Option<i64>,
@@ -4621,7 +4718,7 @@ pub mod schedule_ad_break {
             self.vod_source_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduleAdBreak`](crate::model::ScheduleAdBreak)
+        /// Consumes the builder and constructs a [`ScheduleAdBreak`](crate::model::ScheduleAdBreak).
         pub fn build(self) -> crate::model::ScheduleAdBreak {
             crate::model::ScheduleAdBreak {
                 approximate_duration_seconds: self.approximate_duration_seconds.unwrap_or_default(),
@@ -4633,7 +4730,7 @@ pub mod schedule_ad_break {
     }
 }
 impl ScheduleAdBreak {
-    /// Creates a new builder-style object to manufacture [`ScheduleAdBreak`](crate::model::ScheduleAdBreak)
+    /// Creates a new builder-style object to manufacture [`ScheduleAdBreak`](crate::model::ScheduleAdBreak).
     pub fn builder() -> crate::model::schedule_ad_break::Builder {
         crate::model::schedule_ad_break::Builder::default()
     }
@@ -4644,12 +4741,16 @@ impl ScheduleAdBreak {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AdBreak {
     /// <p>The SCTE-35 ad insertion type. Accepted value: SPLICE_INSERT.</p>
+    #[doc(hidden)]
     pub message_type: std::option::Option<crate::model::MessageType>,
     /// <p>How long (in milliseconds) after the beginning of the program that an ad starts. This value must fall within 100ms of a segment boundary, otherwise the ad break will be skipped.</p>
+    #[doc(hidden)]
     pub offset_millis: i64,
     /// <p>Ad break slate configuration.</p>
+    #[doc(hidden)]
     pub slate: std::option::Option<crate::model::SlateSource>,
     /// <p>This defines the SCTE-35 splice_insert() message inserted around the ad. For information about using splice_insert(), see the SCTE-35 specficiaiton, section 9.7.3.1.</p>
+    #[doc(hidden)]
     pub splice_insert_message: std::option::Option<crate::model::SpliceInsertMessage>,
 }
 impl AdBreak {
@@ -4680,11 +4781,10 @@ impl std::fmt::Debug for AdBreak {
         formatter.finish()
     }
 }
-/// See [`AdBreak`](crate::model::AdBreak)
+/// See [`AdBreak`](crate::model::AdBreak).
 pub mod ad_break {
 
-    /// A builder for [`AdBreak`](crate::model::AdBreak)
-    #[non_exhaustive]
+    /// A builder for [`AdBreak`](crate::model::AdBreak).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message_type: std::option::Option<crate::model::MessageType>,
@@ -4739,7 +4839,7 @@ pub mod ad_break {
             self.splice_insert_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdBreak`](crate::model::AdBreak)
+        /// Consumes the builder and constructs a [`AdBreak`](crate::model::AdBreak).
         pub fn build(self) -> crate::model::AdBreak {
             crate::model::AdBreak {
                 message_type: self.message_type,
@@ -4751,7 +4851,7 @@ pub mod ad_break {
     }
 }
 impl AdBreak {
-    /// Creates a new builder-style object to manufacture [`AdBreak`](crate::model::AdBreak)
+    /// Creates a new builder-style object to manufacture [`AdBreak`](crate::model::AdBreak).
     pub fn builder() -> crate::model::ad_break::Builder {
         crate::model::ad_break::Builder::default()
     }
@@ -4762,12 +4862,16 @@ impl AdBreak {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SpliceInsertMessage {
     /// <p>This is written to splice_insert.avail_num, as defined in section 9.7.3.1 of the SCTE-35 specification. The default value is 0. Values must be between 0 and 256, inclusive.</p>
+    #[doc(hidden)]
     pub avail_num: i32,
     /// <p>This is written to splice_insert.avails_expected, as defined in section 9.7.3.1 of the SCTE-35 specification. The default value is 0. Values must be between 0 and 256, inclusive.</p>
+    #[doc(hidden)]
     pub avails_expected: i32,
     /// <p>This is written to splice_insert.splice_event_id, as defined in section 9.7.3.1 of the SCTE-35 specification. The default value is 1.</p>
+    #[doc(hidden)]
     pub splice_event_id: i32,
     /// <p>This is written to splice_insert.unique_program_id, as defined in section 9.7.3.1 of the SCTE-35 specification. The default value is 0. Values must be between 0 and 256, inclusive.</p>
+    #[doc(hidden)]
     pub unique_program_id: i32,
 }
 impl SpliceInsertMessage {
@@ -4798,11 +4902,10 @@ impl std::fmt::Debug for SpliceInsertMessage {
         formatter.finish()
     }
 }
-/// See [`SpliceInsertMessage`](crate::model::SpliceInsertMessage)
+/// See [`SpliceInsertMessage`](crate::model::SpliceInsertMessage).
 pub mod splice_insert_message {
 
-    /// A builder for [`SpliceInsertMessage`](crate::model::SpliceInsertMessage)
-    #[non_exhaustive]
+    /// A builder for [`SpliceInsertMessage`](crate::model::SpliceInsertMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) avail_num: std::option::Option<i32>,
@@ -4851,7 +4954,7 @@ pub mod splice_insert_message {
             self.unique_program_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SpliceInsertMessage`](crate::model::SpliceInsertMessage)
+        /// Consumes the builder and constructs a [`SpliceInsertMessage`](crate::model::SpliceInsertMessage).
         pub fn build(self) -> crate::model::SpliceInsertMessage {
             crate::model::SpliceInsertMessage {
                 avail_num: self.avail_num.unwrap_or_default(),
@@ -4863,7 +4966,7 @@ pub mod splice_insert_message {
     }
 }
 impl SpliceInsertMessage {
-    /// Creates a new builder-style object to manufacture [`SpliceInsertMessage`](crate::model::SpliceInsertMessage)
+    /// Creates a new builder-style object to manufacture [`SpliceInsertMessage`](crate::model::SpliceInsertMessage).
     pub fn builder() -> crate::model::splice_insert_message::Builder {
         crate::model::splice_insert_message::Builder::default()
     }
@@ -4925,6 +5028,7 @@ impl AsRef<str> for MessageType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduleConfiguration {
     /// <p>Program transition configurations.</p>
+    #[doc(hidden)]
     pub transition: std::option::Option<crate::model::Transition>,
 }
 impl ScheduleConfiguration {
@@ -4940,11 +5044,10 @@ impl std::fmt::Debug for ScheduleConfiguration {
         formatter.finish()
     }
 }
-/// See [`ScheduleConfiguration`](crate::model::ScheduleConfiguration)
+/// See [`ScheduleConfiguration`](crate::model::ScheduleConfiguration).
 pub mod schedule_configuration {
 
-    /// A builder for [`ScheduleConfiguration`](crate::model::ScheduleConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ScheduleConfiguration`](crate::model::ScheduleConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transition: std::option::Option<crate::model::Transition>,
@@ -4963,7 +5066,7 @@ pub mod schedule_configuration {
             self.transition = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduleConfiguration`](crate::model::ScheduleConfiguration)
+        /// Consumes the builder and constructs a [`ScheduleConfiguration`](crate::model::ScheduleConfiguration).
         pub fn build(self) -> crate::model::ScheduleConfiguration {
             crate::model::ScheduleConfiguration {
                 transition: self.transition,
@@ -4972,7 +5075,7 @@ pub mod schedule_configuration {
     }
 }
 impl ScheduleConfiguration {
-    /// Creates a new builder-style object to manufacture [`ScheduleConfiguration`](crate::model::ScheduleConfiguration)
+    /// Creates a new builder-style object to manufacture [`ScheduleConfiguration`](crate::model::ScheduleConfiguration).
     pub fn builder() -> crate::model::schedule_configuration::Builder {
         crate::model::schedule_configuration::Builder::default()
     }
@@ -4983,12 +5086,16 @@ impl ScheduleConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Transition {
     /// <p>The duration of the live program in seconds.</p>
+    #[doc(hidden)]
     pub duration_millis: i64,
     /// <p>The position where this program will be inserted relative to the RelativePosition.</p>
+    #[doc(hidden)]
     pub relative_position: std::option::Option<crate::model::RelativePosition>,
     /// <p>The name of the program that this program will be inserted next to, as defined by RelativePosition.</p>
+    #[doc(hidden)]
     pub relative_program: std::option::Option<std::string::String>,
     /// <p>The date and time that the program is scheduled to start, in epoch milliseconds.</p>
+    #[doc(hidden)]
     pub scheduled_start_time_millis: i64,
     /// <p>Defines when the program plays in the schedule. You can set the value to ABSOLUTE or RELATIVE.</p>
     /// <p>ABSOLUTE - The program plays at a specific wall clock time. This setting can only be used for channels using the LINEAR PlaybackMode.</p>
@@ -4996,6 +5103,7 @@ pub struct Transition {
     /// <p>If the preceding program in the schedule has a duration that extends past the wall clock time, MediaTailor truncates the preceding program on a common segment boundary.</p>
     /// <p>If there are gaps in playback, MediaTailor plays the FillerSlate you configured for your linear channel.</p>
     /// <p>RELATIVE - The program is inserted into the schedule either before or after a program that you specify via RelativePosition.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
 }
 impl Transition {
@@ -5039,11 +5147,10 @@ impl std::fmt::Debug for Transition {
         formatter.finish()
     }
 }
-/// See [`Transition`](crate::model::Transition)
+/// See [`Transition`](crate::model::Transition).
 pub mod transition {
 
-    /// A builder for [`Transition`](crate::model::Transition)
-    #[non_exhaustive]
+    /// A builder for [`Transition`](crate::model::Transition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) duration_millis: std::option::Option<i64>,
@@ -5119,7 +5226,7 @@ pub mod transition {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Transition`](crate::model::Transition)
+        /// Consumes the builder and constructs a [`Transition`](crate::model::Transition).
         pub fn build(self) -> crate::model::Transition {
             crate::model::Transition {
                 duration_millis: self.duration_millis.unwrap_or_default(),
@@ -5132,7 +5239,7 @@ pub mod transition {
     }
 }
 impl Transition {
-    /// Creates a new builder-style object to manufacture [`Transition`](crate::model::Transition)
+    /// Creates a new builder-style object to manufacture [`Transition`](crate::model::Transition).
     pub fn builder() -> crate::model::transition::Builder {
         crate::model::transition::Builder::default()
     }

@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRealtimeContactAnalysisSegmentsOutput {
     /// <p>An analyzed transcript or category.</p>
+    #[doc(hidden)]
     pub segments: std::option::Option<std::vec::Vec<crate::model::RealtimeContactAnalysisSegment>>,
     /// <p>If there are additional results, this is the token for the next set of results. If response includes <code>nextToken</code> there are two possible scenarios:</p>
     /// <ul>
@@ -11,6 +12,7 @@ pub struct ListRealtimeContactAnalysisSegmentsOutput {
     /// <li> <p>There are no more segments at this time, but more may be available later (real-time analysis is in progress) so the client should call the operation again to get new segments.</p> </li>
     /// </ul>
     /// <p>If response does not include <code>nextToken</code>, the analysis is completed (successfully or failed) and there are no more segments to retrieve.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListRealtimeContactAnalysisSegmentsOutput {
@@ -36,11 +38,10 @@ impl std::fmt::Debug for ListRealtimeContactAnalysisSegmentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListRealtimeContactAnalysisSegmentsOutput`](crate::output::ListRealtimeContactAnalysisSegmentsOutput)
+/// See [`ListRealtimeContactAnalysisSegmentsOutput`](crate::output::ListRealtimeContactAnalysisSegmentsOutput).
 pub mod list_realtime_contact_analysis_segments_output {
 
-    /// A builder for [`ListRealtimeContactAnalysisSegmentsOutput`](crate::output::ListRealtimeContactAnalysisSegmentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRealtimeContactAnalysisSegmentsOutput`](crate::output::ListRealtimeContactAnalysisSegmentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) segments:
@@ -87,7 +88,7 @@ pub mod list_realtime_contact_analysis_segments_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRealtimeContactAnalysisSegmentsOutput`](crate::output::ListRealtimeContactAnalysisSegmentsOutput)
+        /// Consumes the builder and constructs a [`ListRealtimeContactAnalysisSegmentsOutput`](crate::output::ListRealtimeContactAnalysisSegmentsOutput).
         pub fn build(self) -> crate::output::ListRealtimeContactAnalysisSegmentsOutput {
             crate::output::ListRealtimeContactAnalysisSegmentsOutput {
                 segments: self.segments,
@@ -97,7 +98,7 @@ pub mod list_realtime_contact_analysis_segments_output {
     }
 }
 impl ListRealtimeContactAnalysisSegmentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListRealtimeContactAnalysisSegmentsOutput`](crate::output::ListRealtimeContactAnalysisSegmentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListRealtimeContactAnalysisSegmentsOutput`](crate::output::ListRealtimeContactAnalysisSegmentsOutput).
     pub fn builder() -> crate::output::list_realtime_contact_analysis_segments_output::Builder {
         crate::output::list_realtime_contact_analysis_segments_output::Builder::default()
     }

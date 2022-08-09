@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SingleMasterConfiguration {
     /// <p>The period of time a signaling channel retains undelivered messages before they are discarded.</p>
+    #[doc(hidden)]
     pub message_ttl_seconds: std::option::Option<i32>,
 }
 impl SingleMasterConfiguration {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for SingleMasterConfiguration {
         formatter.finish()
     }
 }
-/// See [`SingleMasterConfiguration`](crate::model::SingleMasterConfiguration)
+/// See [`SingleMasterConfiguration`](crate::model::SingleMasterConfiguration).
 pub mod single_master_configuration {
 
-    /// A builder for [`SingleMasterConfiguration`](crate::model::SingleMasterConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SingleMasterConfiguration`](crate::model::SingleMasterConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message_ttl_seconds: std::option::Option<i32>,
@@ -40,7 +40,7 @@ pub mod single_master_configuration {
             self.message_ttl_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`SingleMasterConfiguration`](crate::model::SingleMasterConfiguration)
+        /// Consumes the builder and constructs a [`SingleMasterConfiguration`](crate::model::SingleMasterConfiguration).
         pub fn build(self) -> crate::model::SingleMasterConfiguration {
             crate::model::SingleMasterConfiguration {
                 message_ttl_seconds: self.message_ttl_seconds,
@@ -49,7 +49,7 @@ pub mod single_master_configuration {
     }
 }
 impl SingleMasterConfiguration {
-    /// Creates a new builder-style object to manufacture [`SingleMasterConfiguration`](crate::model::SingleMasterConfiguration)
+    /// Creates a new builder-style object to manufacture [`SingleMasterConfiguration`](crate::model::SingleMasterConfiguration).
     pub fn builder() -> crate::model::single_master_configuration::Builder {
         crate::model::single_master_configuration::Builder::default()
     }
@@ -60,8 +60,10 @@ impl SingleMasterConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotificationConfiguration {
     /// <p>Indicates if a notification configuration is enabled or disabled.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ConfigurationStatus>,
     /// <p>The destination information required to deliver a notification to a customer.</p>
+    #[doc(hidden)]
     pub destination_config: std::option::Option<crate::model::NotificationDestinationConfig>,
 }
 impl NotificationConfiguration {
@@ -84,11 +86,10 @@ impl std::fmt::Debug for NotificationConfiguration {
         formatter.finish()
     }
 }
-/// See [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+/// See [`NotificationConfiguration`](crate::model::NotificationConfiguration).
 pub mod notification_configuration {
 
-    /// A builder for [`NotificationConfiguration`](crate::model::NotificationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NotificationConfiguration`](crate::model::NotificationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ConfigurationStatus>,
@@ -125,7 +126,7 @@ pub mod notification_configuration {
             self.destination_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+        /// Consumes the builder and constructs a [`NotificationConfiguration`](crate::model::NotificationConfiguration).
         pub fn build(self) -> crate::model::NotificationConfiguration {
             crate::model::NotificationConfiguration {
                 status: self.status,
@@ -135,7 +136,7 @@ pub mod notification_configuration {
     }
 }
 impl NotificationConfiguration {
-    /// Creates a new builder-style object to manufacture [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+    /// Creates a new builder-style object to manufacture [`NotificationConfiguration`](crate::model::NotificationConfiguration).
     pub fn builder() -> crate::model::notification_configuration::Builder {
         crate::model::notification_configuration::Builder::default()
     }
@@ -146,6 +147,7 @@ impl NotificationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotificationDestinationConfig {
     /// <p>The Uniform Resource Idenifier (URI) that identifies where the images will be delivered.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
 }
 impl NotificationDestinationConfig {
@@ -161,11 +163,10 @@ impl std::fmt::Debug for NotificationDestinationConfig {
         formatter.finish()
     }
 }
-/// See [`NotificationDestinationConfig`](crate::model::NotificationDestinationConfig)
+/// See [`NotificationDestinationConfig`](crate::model::NotificationDestinationConfig).
 pub mod notification_destination_config {
 
-    /// A builder for [`NotificationDestinationConfig`](crate::model::NotificationDestinationConfig)
-    #[non_exhaustive]
+    /// A builder for [`NotificationDestinationConfig`](crate::model::NotificationDestinationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) uri: std::option::Option<std::string::String>,
@@ -181,14 +182,14 @@ pub mod notification_destination_config {
             self.uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotificationDestinationConfig`](crate::model::NotificationDestinationConfig)
+        /// Consumes the builder and constructs a [`NotificationDestinationConfig`](crate::model::NotificationDestinationConfig).
         pub fn build(self) -> crate::model::NotificationDestinationConfig {
             crate::model::NotificationDestinationConfig { uri: self.uri }
         }
     }
 }
 impl NotificationDestinationConfig {
-    /// Creates a new builder-style object to manufacture [`NotificationDestinationConfig`](crate::model::NotificationDestinationConfig)
+    /// Creates a new builder-style object to manufacture [`NotificationDestinationConfig`](crate::model::NotificationDestinationConfig).
     pub fn builder() -> crate::model::notification_destination_config::Builder {
         crate::model::notification_destination_config::Builder::default()
     }
@@ -254,22 +255,30 @@ impl AsRef<str> for ConfigurationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageGenerationConfiguration {
     /// <p>Indicates whether the <code>ContinuousImageGenerationConfigurations</code> API is enabled or disabled.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ConfigurationStatus>,
     /// <p>The origin of the Server or Producer timestamps to use to generate the images.</p>
+    #[doc(hidden)]
     pub image_selector_type: std::option::Option<crate::model::ImageSelectorType>,
     /// <p>The structure that contains the information required to deliver images to a customer.</p>
+    #[doc(hidden)]
     pub destination_config: std::option::Option<crate::model::ImageGenerationDestinationConfig>,
     /// <p>The time interval in milliseconds (ms) at which the images need to be generated from the stream. The minimum value that can be provided is 33 ms, because a camera that generates content at 30 FPS would create a frame every 33.3 ms. If the timestamp range is less than the sampling interval, the Image from the <code>StartTimestamp</code> will be returned if available. </p>
+    #[doc(hidden)]
     pub sampling_interval: std::option::Option<i32>,
     /// <p>The accepted image format.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::Format>,
     /// <p>The list of a key-value pair structure that contains extra parameters that can be applied when the image is generated. The <code>FormatConfig</code> key is the <code>JPEGQuality</code>, which indicates the JPEG quality key to be used to generate the image. The <code>FormatConfig</code> value accepts ints from 1 to 100. If the value is 1, the image will be generated with less quality and the best compression. If the value is 100, the image will be generated with the best quality and less compression. If no value is provided, the default value of the <code>JPEGQuality</code> key will be set to 80.</p>
+    #[doc(hidden)]
     pub format_config: std::option::Option<
         std::collections::HashMap<crate::model::FormatConfigKey, std::string::String>,
     >,
     /// <p>The width of the output image that is used in conjunction with the <code>HeightPixels</code> parameter. When both <code>WidthPixels</code> and <code>HeightPixels</code> parameters are provided, the image will be stretched to fit the specified aspect ratio. If only the <code>WidthPixels</code> parameter is provided, its original aspect ratio will be used to calculate the <code>HeightPixels</code> ratio. If neither parameter is provided, the original image size will be returned.</p>
+    #[doc(hidden)]
     pub width_pixels: std::option::Option<i32>,
     /// <p>The height of the output image that is used in conjunction with the <code>WidthPixels</code> parameter. When both <code>HeightPixels</code> and <code>WidthPixels</code> parameters are provided, the image will be stretched to fit the specified aspect ratio. If only the <code>HeightPixels</code> parameter is provided, its original aspect ratio will be used to calculate the <code>WidthPixels</code> ratio. If neither parameter is provided, the original image size will be returned.</p>
+    #[doc(hidden)]
     pub height_pixels: std::option::Option<i32>,
 }
 impl ImageGenerationConfiguration {
@@ -326,11 +335,10 @@ impl std::fmt::Debug for ImageGenerationConfiguration {
         formatter.finish()
     }
 }
-/// See [`ImageGenerationConfiguration`](crate::model::ImageGenerationConfiguration)
+/// See [`ImageGenerationConfiguration`](crate::model::ImageGenerationConfiguration).
 pub mod image_generation_configuration {
 
-    /// A builder for [`ImageGenerationConfiguration`](crate::model::ImageGenerationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ImageGenerationConfiguration`](crate::model::ImageGenerationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ConfigurationStatus>,
@@ -453,7 +461,7 @@ pub mod image_generation_configuration {
             self.height_pixels = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageGenerationConfiguration`](crate::model::ImageGenerationConfiguration)
+        /// Consumes the builder and constructs a [`ImageGenerationConfiguration`](crate::model::ImageGenerationConfiguration).
         pub fn build(self) -> crate::model::ImageGenerationConfiguration {
             crate::model::ImageGenerationConfiguration {
                 status: self.status,
@@ -469,7 +477,7 @@ pub mod image_generation_configuration {
     }
 }
 impl ImageGenerationConfiguration {
-    /// Creates a new builder-style object to manufacture [`ImageGenerationConfiguration`](crate::model::ImageGenerationConfiguration)
+    /// Creates a new builder-style object to manufacture [`ImageGenerationConfiguration`](crate::model::ImageGenerationConfiguration).
     pub fn builder() -> crate::model::image_generation_configuration::Builder {
         crate::model::image_generation_configuration::Builder::default()
     }
@@ -586,8 +594,10 @@ impl AsRef<str> for Format {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageGenerationDestinationConfig {
     /// <p>The Uniform Resource Idenifier (URI) that identifies where the images will be delivered.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
     /// <p>The AWS Region of the S3 bucket where images will be delivered. This <code>DestinationRegion</code> must match the Region where the stream is located.</p>
+    #[doc(hidden)]
     pub destination_region: std::option::Option<std::string::String>,
 }
 impl ImageGenerationDestinationConfig {
@@ -608,11 +618,10 @@ impl std::fmt::Debug for ImageGenerationDestinationConfig {
         formatter.finish()
     }
 }
-/// See [`ImageGenerationDestinationConfig`](crate::model::ImageGenerationDestinationConfig)
+/// See [`ImageGenerationDestinationConfig`](crate::model::ImageGenerationDestinationConfig).
 pub mod image_generation_destination_config {
 
-    /// A builder for [`ImageGenerationDestinationConfig`](crate::model::ImageGenerationDestinationConfig)
-    #[non_exhaustive]
+    /// A builder for [`ImageGenerationDestinationConfig`](crate::model::ImageGenerationDestinationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) uri: std::option::Option<std::string::String>,
@@ -642,7 +651,7 @@ pub mod image_generation_destination_config {
             self.destination_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageGenerationDestinationConfig`](crate::model::ImageGenerationDestinationConfig)
+        /// Consumes the builder and constructs a [`ImageGenerationDestinationConfig`](crate::model::ImageGenerationDestinationConfig).
         pub fn build(self) -> crate::model::ImageGenerationDestinationConfig {
             crate::model::ImageGenerationDestinationConfig {
                 uri: self.uri,
@@ -652,7 +661,7 @@ pub mod image_generation_destination_config {
     }
 }
 impl ImageGenerationDestinationConfig {
-    /// Creates a new builder-style object to manufacture [`ImageGenerationDestinationConfig`](crate::model::ImageGenerationDestinationConfig)
+    /// Creates a new builder-style object to manufacture [`ImageGenerationDestinationConfig`](crate::model::ImageGenerationDestinationConfig).
     pub fn builder() -> crate::model::image_generation_destination_config::Builder {
         crate::model::image_generation_destination_config::Builder::default()
     }
@@ -773,8 +782,10 @@ impl AsRef<str> for UpdateDataRetentionOperation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key of the tag that is associated with the specified signaling channel.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the tag that is associated with the specified signaling channel.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -795,11 +806,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -826,7 +836,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -836,7 +846,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -847,22 +857,31 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamInfo {
     /// <p>The name of the device that is associated with the stream.</p>
+    #[doc(hidden)]
     pub device_name: std::option::Option<std::string::String>,
     /// <p>The name of the stream.</p>
+    #[doc(hidden)]
     pub stream_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the stream.</p>
+    #[doc(hidden)]
     pub stream_arn: std::option::Option<std::string::String>,
     /// <p>The <code>MediaType</code> of the stream. </p>
+    #[doc(hidden)]
     pub media_type: std::option::Option<std::string::String>,
     /// <p>The ID of the Key Management Service (KMS) key that Kinesis Video Streams uses to encrypt data on the stream.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The version of the stream.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The status of the stream.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
     /// <p>A time stamp that indicates when the stream was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>How long the stream retains data, in hours.</p>
+    #[doc(hidden)]
     pub data_retention_in_hours: std::option::Option<i32>,
 }
 impl StreamInfo {
@@ -918,11 +937,10 @@ impl std::fmt::Debug for StreamInfo {
         formatter.finish()
     }
 }
-/// See [`StreamInfo`](crate::model::StreamInfo)
+/// See [`StreamInfo`](crate::model::StreamInfo).
 pub mod stream_info {
 
-    /// A builder for [`StreamInfo`](crate::model::StreamInfo)
-    #[non_exhaustive]
+    /// A builder for [`StreamInfo`](crate::model::StreamInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_name: std::option::Option<std::string::String>,
@@ -1029,7 +1047,7 @@ pub mod stream_info {
             self.data_retention_in_hours = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamInfo`](crate::model::StreamInfo)
+        /// Consumes the builder and constructs a [`StreamInfo`](crate::model::StreamInfo).
         pub fn build(self) -> crate::model::StreamInfo {
             crate::model::StreamInfo {
                 device_name: self.device_name,
@@ -1046,7 +1064,7 @@ pub mod stream_info {
     }
 }
 impl StreamInfo {
-    /// Creates a new builder-style object to manufacture [`StreamInfo`](crate::model::StreamInfo)
+    /// Creates a new builder-style object to manufacture [`StreamInfo`](crate::model::StreamInfo).
     pub fn builder() -> crate::model::stream_info::Builder {
         crate::model::stream_info::Builder::default()
     }
@@ -1120,8 +1138,10 @@ impl AsRef<str> for Status {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamNameCondition {
     /// <p>A comparison operator. Currently, you can specify only the <code>BEGINS_WITH</code> operator, which finds streams whose names start with a given prefix.</p>
+    #[doc(hidden)]
     pub comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
     /// <p>A value to compare.</p>
+    #[doc(hidden)]
     pub comparison_value: std::option::Option<std::string::String>,
 }
 impl StreamNameCondition {
@@ -1142,11 +1162,10 @@ impl std::fmt::Debug for StreamNameCondition {
         formatter.finish()
     }
 }
-/// See [`StreamNameCondition`](crate::model::StreamNameCondition)
+/// See [`StreamNameCondition`](crate::model::StreamNameCondition).
 pub mod stream_name_condition {
 
-    /// A builder for [`StreamNameCondition`](crate::model::StreamNameCondition)
-    #[non_exhaustive]
+    /// A builder for [`StreamNameCondition`](crate::model::StreamNameCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
@@ -1179,7 +1198,7 @@ pub mod stream_name_condition {
             self.comparison_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamNameCondition`](crate::model::StreamNameCondition)
+        /// Consumes the builder and constructs a [`StreamNameCondition`](crate::model::StreamNameCondition).
         pub fn build(self) -> crate::model::StreamNameCondition {
             crate::model::StreamNameCondition {
                 comparison_operator: self.comparison_operator,
@@ -1189,7 +1208,7 @@ pub mod stream_name_condition {
     }
 }
 impl StreamNameCondition {
-    /// Creates a new builder-style object to manufacture [`StreamNameCondition`](crate::model::StreamNameCondition)
+    /// Creates a new builder-style object to manufacture [`StreamNameCondition`](crate::model::StreamNameCondition).
     pub fn builder() -> crate::model::stream_name_condition::Builder {
         crate::model::stream_name_condition::Builder::default()
     }
@@ -1251,18 +1270,25 @@ impl AsRef<str> for ComparisonOperator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChannelInfo {
     /// <p>The name of the signaling channel.</p>
+    #[doc(hidden)]
     pub channel_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the signaling channel.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The type of the signaling channel.</p>
+    #[doc(hidden)]
     pub channel_type: std::option::Option<crate::model::ChannelType>,
     /// <p>Current status of the signaling channel.</p>
+    #[doc(hidden)]
     pub channel_status: std::option::Option<crate::model::Status>,
     /// <p>The time at which the signaling channel was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A structure that contains the configuration for the <code>SINGLE_MASTER</code> channel type.</p>
+    #[doc(hidden)]
     pub single_master_configuration: std::option::Option<crate::model::SingleMasterConfiguration>,
     /// <p>The current version of the signaling channel.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl ChannelInfo {
@@ -1313,11 +1339,10 @@ impl std::fmt::Debug for ChannelInfo {
         formatter.finish()
     }
 }
-/// See [`ChannelInfo`](crate::model::ChannelInfo)
+/// See [`ChannelInfo`](crate::model::ChannelInfo).
 pub mod channel_info {
 
-    /// A builder for [`ChannelInfo`](crate::model::ChannelInfo)
-    #[non_exhaustive]
+    /// A builder for [`ChannelInfo`](crate::model::ChannelInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_name: std::option::Option<std::string::String>,
@@ -1415,7 +1440,7 @@ pub mod channel_info {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChannelInfo`](crate::model::ChannelInfo)
+        /// Consumes the builder and constructs a [`ChannelInfo`](crate::model::ChannelInfo).
         pub fn build(self) -> crate::model::ChannelInfo {
             crate::model::ChannelInfo {
                 channel_name: self.channel_name,
@@ -1430,7 +1455,7 @@ pub mod channel_info {
     }
 }
 impl ChannelInfo {
-    /// Creates a new builder-style object to manufacture [`ChannelInfo`](crate::model::ChannelInfo)
+    /// Creates a new builder-style object to manufacture [`ChannelInfo`](crate::model::ChannelInfo).
     pub fn builder() -> crate::model::channel_info::Builder {
         crate::model::channel_info::Builder::default()
     }
@@ -1496,8 +1521,10 @@ impl AsRef<str> for ChannelType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChannelNameCondition {
     /// <p>A comparison operator. Currently, you can only specify the <code>BEGINS_WITH</code> operator, which finds signaling channels whose names begin with a given prefix.</p>
+    #[doc(hidden)]
     pub comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
     /// <p>A value to compare.</p>
+    #[doc(hidden)]
     pub comparison_value: std::option::Option<std::string::String>,
 }
 impl ChannelNameCondition {
@@ -1518,11 +1545,10 @@ impl std::fmt::Debug for ChannelNameCondition {
         formatter.finish()
     }
 }
-/// See [`ChannelNameCondition`](crate::model::ChannelNameCondition)
+/// See [`ChannelNameCondition`](crate::model::ChannelNameCondition).
 pub mod channel_name_condition {
 
-    /// A builder for [`ChannelNameCondition`](crate::model::ChannelNameCondition)
-    #[non_exhaustive]
+    /// A builder for [`ChannelNameCondition`](crate::model::ChannelNameCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
@@ -1555,7 +1581,7 @@ pub mod channel_name_condition {
             self.comparison_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChannelNameCondition`](crate::model::ChannelNameCondition)
+        /// Consumes the builder and constructs a [`ChannelNameCondition`](crate::model::ChannelNameCondition).
         pub fn build(self) -> crate::model::ChannelNameCondition {
             crate::model::ChannelNameCondition {
                 comparison_operator: self.comparison_operator,
@@ -1565,7 +1591,7 @@ pub mod channel_name_condition {
     }
 }
 impl ChannelNameCondition {
-    /// Creates a new builder-style object to manufacture [`ChannelNameCondition`](crate::model::ChannelNameCondition)
+    /// Creates a new builder-style object to manufacture [`ChannelNameCondition`](crate::model::ChannelNameCondition).
     pub fn builder() -> crate::model::channel_name_condition::Builder {
         crate::model::channel_name_condition::Builder::default()
     }
@@ -1576,8 +1602,10 @@ impl ChannelNameCondition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceEndpointListItem {
     /// <p>The protocol of the signaling channel returned by the <code>GetSignalingChannelEndpoint</code> API.</p>
+    #[doc(hidden)]
     pub protocol: std::option::Option<crate::model::ChannelProtocol>,
     /// <p>The endpoint of the signaling channel returned by the <code>GetSignalingChannelEndpoint</code> API.</p>
+    #[doc(hidden)]
     pub resource_endpoint: std::option::Option<std::string::String>,
 }
 impl ResourceEndpointListItem {
@@ -1598,11 +1626,10 @@ impl std::fmt::Debug for ResourceEndpointListItem {
         formatter.finish()
     }
 }
-/// See [`ResourceEndpointListItem`](crate::model::ResourceEndpointListItem)
+/// See [`ResourceEndpointListItem`](crate::model::ResourceEndpointListItem).
 pub mod resource_endpoint_list_item {
 
-    /// A builder for [`ResourceEndpointListItem`](crate::model::ResourceEndpointListItem)
-    #[non_exhaustive]
+    /// A builder for [`ResourceEndpointListItem`](crate::model::ResourceEndpointListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) protocol: std::option::Option<crate::model::ChannelProtocol>,
@@ -1635,7 +1662,7 @@ pub mod resource_endpoint_list_item {
             self.resource_endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceEndpointListItem`](crate::model::ResourceEndpointListItem)
+        /// Consumes the builder and constructs a [`ResourceEndpointListItem`](crate::model::ResourceEndpointListItem).
         pub fn build(self) -> crate::model::ResourceEndpointListItem {
             crate::model::ResourceEndpointListItem {
                 protocol: self.protocol,
@@ -1645,7 +1672,7 @@ pub mod resource_endpoint_list_item {
     }
 }
 impl ResourceEndpointListItem {
-    /// Creates a new builder-style object to manufacture [`ResourceEndpointListItem`](crate::model::ResourceEndpointListItem)
+    /// Creates a new builder-style object to manufacture [`ResourceEndpointListItem`](crate::model::ResourceEndpointListItem).
     pub fn builder() -> crate::model::resource_endpoint_list_item::Builder {
         crate::model::resource_endpoint_list_item::Builder::default()
     }
@@ -1711,8 +1738,10 @@ impl AsRef<str> for ChannelProtocol {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SingleMasterChannelEndpointConfiguration {
     /// <p>This property is used to determine the nature of communication over this <code>SINGLE_MASTER</code> signaling channel. If <code>WSS</code> is specified, this API returns a websocket endpoint. If <code>HTTPS</code> is specified, this API returns an <code>HTTPS</code> endpoint.</p>
+    #[doc(hidden)]
     pub protocols: std::option::Option<std::vec::Vec<crate::model::ChannelProtocol>>,
     /// <p>This property is used to determine messaging permissions in this <code>SINGLE_MASTER</code> signaling channel. If <code>MASTER</code> is specified, this API returns an endpoint that a client can use to receive offers from and send answers to any of the viewers on this signaling channel. If <code>VIEWER</code> is specified, this API returns an endpoint that a client can use only to send offers to another <code>MASTER</code> client on this signaling channel. </p>
+    #[doc(hidden)]
     pub role: std::option::Option<crate::model::ChannelRole>,
 }
 impl SingleMasterChannelEndpointConfiguration {
@@ -1733,11 +1762,10 @@ impl std::fmt::Debug for SingleMasterChannelEndpointConfiguration {
         formatter.finish()
     }
 }
-/// See [`SingleMasterChannelEndpointConfiguration`](crate::model::SingleMasterChannelEndpointConfiguration)
+/// See [`SingleMasterChannelEndpointConfiguration`](crate::model::SingleMasterChannelEndpointConfiguration).
 pub mod single_master_channel_endpoint_configuration {
 
-    /// A builder for [`SingleMasterChannelEndpointConfiguration`](crate::model::SingleMasterChannelEndpointConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SingleMasterChannelEndpointConfiguration`](crate::model::SingleMasterChannelEndpointConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) protocols: std::option::Option<std::vec::Vec<crate::model::ChannelProtocol>>,
@@ -1773,7 +1801,7 @@ pub mod single_master_channel_endpoint_configuration {
             self.role = input;
             self
         }
-        /// Consumes the builder and constructs a [`SingleMasterChannelEndpointConfiguration`](crate::model::SingleMasterChannelEndpointConfiguration)
+        /// Consumes the builder and constructs a [`SingleMasterChannelEndpointConfiguration`](crate::model::SingleMasterChannelEndpointConfiguration).
         pub fn build(self) -> crate::model::SingleMasterChannelEndpointConfiguration {
             crate::model::SingleMasterChannelEndpointConfiguration {
                 protocols: self.protocols,
@@ -1783,7 +1811,7 @@ pub mod single_master_channel_endpoint_configuration {
     }
 }
 impl SingleMasterChannelEndpointConfiguration {
-    /// Creates a new builder-style object to manufacture [`SingleMasterChannelEndpointConfiguration`](crate::model::SingleMasterChannelEndpointConfiguration)
+    /// Creates a new builder-style object to manufacture [`SingleMasterChannelEndpointConfiguration`](crate::model::SingleMasterChannelEndpointConfiguration).
     pub fn builder() -> crate::model::single_master_channel_endpoint_configuration::Builder {
         crate::model::single_master_channel_endpoint_configuration::Builder::default()
     }

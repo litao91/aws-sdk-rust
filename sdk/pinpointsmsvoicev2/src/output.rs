@@ -4,26 +4,37 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdatePoolOutput {
     /// <p>The ARN of the pool.</p>
+    #[doc(hidden)]
     pub pool_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the pool.</p>
+    #[doc(hidden)]
     pub pool_id: std::option::Option<std::string::String>,
     /// <p>The current status of the pool update request.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::PoolStatus>,
     /// <p>The type of message for the pool to use.</p>
+    #[doc(hidden)]
     pub message_type: std::option::Option<crate::model::MessageType>,
     /// <p>By default this is set to false. When set to true you can receive incoming text messages from your end recipients.</p>
+    #[doc(hidden)]
     pub two_way_enabled: bool,
     /// <p>The Amazon Resource Name (ARN) of the two way channel.</p>
+    #[doc(hidden)]
     pub two_way_channel_arn: std::option::Option<std::string::String>,
     /// <p>When an end recipient sends a message that begins with HELP or STOP to one of your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're also responsible for tracking and honoring opt-out requests.</p>
+    #[doc(hidden)]
     pub self_managed_opt_outs_enabled: bool,
     /// <p>The name of the OptOutList associated with the pool.</p>
+    #[doc(hidden)]
     pub opt_out_list_name: std::option::Option<std::string::String>,
     /// <p>Indicates whether shared routes are enabled for the pool.</p>
+    #[doc(hidden)]
     pub shared_routes_enabled: bool,
     /// <p>When set to true the pool can't be deleted.</p>
+    #[doc(hidden)]
     pub deletion_protection_enabled: bool,
     /// <p>The time when the pool was created, in <a href="https://www.epochconverter.com/">UNIX epoch time</a> format.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl UpdatePoolOutput {
@@ -95,11 +106,10 @@ impl std::fmt::Debug for UpdatePoolOutput {
         formatter.finish()
     }
 }
-/// See [`UpdatePoolOutput`](crate::output::UpdatePoolOutput)
+/// See [`UpdatePoolOutput`](crate::output::UpdatePoolOutput).
 pub mod update_pool_output {
 
-    /// A builder for [`UpdatePoolOutput`](crate::output::UpdatePoolOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdatePoolOutput`](crate::output::UpdatePoolOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pool_arn: std::option::Option<std::string::String>,
@@ -240,7 +250,7 @@ pub mod update_pool_output {
             self.created_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdatePoolOutput`](crate::output::UpdatePoolOutput)
+        /// Consumes the builder and constructs a [`UpdatePoolOutput`](crate::output::UpdatePoolOutput).
         pub fn build(self) -> crate::output::UpdatePoolOutput {
             crate::output::UpdatePoolOutput {
                 pool_arn: self.pool_arn,
@@ -261,7 +271,7 @@ pub mod update_pool_output {
     }
 }
 impl UpdatePoolOutput {
-    /// Creates a new builder-style object to manufacture [`UpdatePoolOutput`](crate::output::UpdatePoolOutput)
+    /// Creates a new builder-style object to manufacture [`UpdatePoolOutput`](crate::output::UpdatePoolOutput).
     pub fn builder() -> crate::output::update_pool_output::Builder {
         crate::output::update_pool_output::Builder::default()
     }
@@ -272,34 +282,49 @@ impl UpdatePoolOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdatePhoneNumberOutput {
     /// <p>The Amazon Resource Name (ARN) of the updated phone number.</p>
+    #[doc(hidden)]
     pub phone_number_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the phone number.</p>
+    #[doc(hidden)]
     pub phone_number_id: std::option::Option<std::string::String>,
     /// <p>The phone number that was updated.</p>
+    #[doc(hidden)]
     pub phone_number: std::option::Option<std::string::String>,
     /// <p>The current status of the request.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::NumberStatus>,
     /// <p>The two-character code, in ISO 3166-1 alpha-2 format, for the country or region. </p>
+    #[doc(hidden)]
     pub iso_country_code: std::option::Option<std::string::String>,
     /// <p>The type of message. Valid values are TRANSACTIONAL for messages that are critical or time-sensitive and PROMOTIONAL for messages that aren't critical or time-sensitive.</p>
+    #[doc(hidden)]
     pub message_type: std::option::Option<crate::model::MessageType>,
     /// <p>Specifies if the number could be used for text messages, voice or both.</p>
+    #[doc(hidden)]
     pub number_capabilities: std::option::Option<std::vec::Vec<crate::model::NumberCapability>>,
     /// <p>The type of number that was requested.</p>
+    #[doc(hidden)]
     pub number_type: std::option::Option<crate::model::NumberType>,
     /// <p>The monthly leasing price of the phone number, in US dollars.</p>
+    #[doc(hidden)]
     pub monthly_leasing_price: std::option::Option<std::string::String>,
     /// <p>By default this is set to false. When set to true you can receive incoming text messages from your end recipients.</p>
+    #[doc(hidden)]
     pub two_way_enabled: bool,
     /// <p>The Amazon Resource Name (ARN) of the two way channel.</p>
+    #[doc(hidden)]
     pub two_way_channel_arn: std::option::Option<std::string::String>,
     /// <p>This is true if self managed opt-out are enabled.</p>
+    #[doc(hidden)]
     pub self_managed_opt_outs_enabled: bool,
     /// <p>The name of the OptOutList associated with the phone number.</p>
+    #[doc(hidden)]
     pub opt_out_list_name: std::option::Option<std::string::String>,
     /// <p>When set to true the phone number can't be deleted.</p>
+    #[doc(hidden)]
     pub deletion_protection_enabled: bool,
     /// <p>The time when the phone number was created, in <a href="https://www.epochconverter.com/">UNIX epoch time</a> format.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl UpdatePhoneNumberOutput {
@@ -391,11 +416,10 @@ impl std::fmt::Debug for UpdatePhoneNumberOutput {
         formatter.finish()
     }
 }
-/// See [`UpdatePhoneNumberOutput`](crate::output::UpdatePhoneNumberOutput)
+/// See [`UpdatePhoneNumberOutput`](crate::output::UpdatePhoneNumberOutput).
 pub mod update_phone_number_output {
 
-    /// A builder for [`UpdatePhoneNumberOutput`](crate::output::UpdatePhoneNumberOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdatePhoneNumberOutput`](crate::output::UpdatePhoneNumberOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) phone_number_arn: std::option::Option<std::string::String>,
@@ -608,7 +632,7 @@ pub mod update_phone_number_output {
             self.created_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdatePhoneNumberOutput`](crate::output::UpdatePhoneNumberOutput)
+        /// Consumes the builder and constructs a [`UpdatePhoneNumberOutput`](crate::output::UpdatePhoneNumberOutput).
         pub fn build(self) -> crate::output::UpdatePhoneNumberOutput {
             crate::output::UpdatePhoneNumberOutput {
                 phone_number_arn: self.phone_number_arn,
@@ -633,7 +657,7 @@ pub mod update_phone_number_output {
     }
 }
 impl UpdatePhoneNumberOutput {
-    /// Creates a new builder-style object to manufacture [`UpdatePhoneNumberOutput`](crate::output::UpdatePhoneNumberOutput)
+    /// Creates a new builder-style object to manufacture [`UpdatePhoneNumberOutput`](crate::output::UpdatePhoneNumberOutput).
     pub fn builder() -> crate::output::update_phone_number_output::Builder {
         crate::output::update_phone_number_output::Builder::default()
     }
@@ -644,10 +668,13 @@ impl UpdatePhoneNumberOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateEventDestinationOutput {
     /// <p>The Amazon Resource Name (ARN) for the ConfigurationSet that was updated.</p>
+    #[doc(hidden)]
     pub configuration_set_arn: std::option::Option<std::string::String>,
     /// <p>The name of the configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_name: std::option::Option<std::string::String>,
     /// <p>An EventDestination object containing the details of where events will be logged. </p>
+    #[doc(hidden)]
     pub event_destination: std::option::Option<crate::model::EventDestination>,
 }
 impl UpdateEventDestinationOutput {
@@ -673,11 +700,10 @@ impl std::fmt::Debug for UpdateEventDestinationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateEventDestinationOutput`](crate::output::UpdateEventDestinationOutput)
+/// See [`UpdateEventDestinationOutput`](crate::output::UpdateEventDestinationOutput).
 pub mod update_event_destination_output {
 
-    /// A builder for [`UpdateEventDestinationOutput`](crate::output::UpdateEventDestinationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateEventDestinationOutput`](crate::output::UpdateEventDestinationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_set_arn: std::option::Option<std::string::String>,
@@ -724,7 +750,7 @@ pub mod update_event_destination_output {
             self.event_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateEventDestinationOutput`](crate::output::UpdateEventDestinationOutput)
+        /// Consumes the builder and constructs a [`UpdateEventDestinationOutput`](crate::output::UpdateEventDestinationOutput).
         pub fn build(self) -> crate::output::UpdateEventDestinationOutput {
             crate::output::UpdateEventDestinationOutput {
                 configuration_set_arn: self.configuration_set_arn,
@@ -735,7 +761,7 @@ pub mod update_event_destination_output {
     }
 }
 impl UpdateEventDestinationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateEventDestinationOutput`](crate::output::UpdateEventDestinationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateEventDestinationOutput`](crate::output::UpdateEventDestinationOutput).
     pub fn builder() -> crate::output::update_event_destination_output::Builder {
         crate::output::update_event_destination_output::Builder::default()
     }
@@ -751,22 +777,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -782,22 +807,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -808,6 +832,7 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SetVoiceMessageSpendLimitOverrideOutput {
     /// <p>The current monthly limit to enforce on sending voice messages.</p>
+    #[doc(hidden)]
     pub monthly_limit: std::option::Option<i64>,
 }
 impl SetVoiceMessageSpendLimitOverrideOutput {
@@ -823,11 +848,10 @@ impl std::fmt::Debug for SetVoiceMessageSpendLimitOverrideOutput {
         formatter.finish()
     }
 }
-/// See [`SetVoiceMessageSpendLimitOverrideOutput`](crate::output::SetVoiceMessageSpendLimitOverrideOutput)
+/// See [`SetVoiceMessageSpendLimitOverrideOutput`](crate::output::SetVoiceMessageSpendLimitOverrideOutput).
 pub mod set_voice_message_spend_limit_override_output {
 
-    /// A builder for [`SetVoiceMessageSpendLimitOverrideOutput`](crate::output::SetVoiceMessageSpendLimitOverrideOutput)
-    #[non_exhaustive]
+    /// A builder for [`SetVoiceMessageSpendLimitOverrideOutput`](crate::output::SetVoiceMessageSpendLimitOverrideOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) monthly_limit: std::option::Option<i64>,
@@ -843,7 +867,7 @@ pub mod set_voice_message_spend_limit_override_output {
             self.monthly_limit = input;
             self
         }
-        /// Consumes the builder and constructs a [`SetVoiceMessageSpendLimitOverrideOutput`](crate::output::SetVoiceMessageSpendLimitOverrideOutput)
+        /// Consumes the builder and constructs a [`SetVoiceMessageSpendLimitOverrideOutput`](crate::output::SetVoiceMessageSpendLimitOverrideOutput).
         pub fn build(self) -> crate::output::SetVoiceMessageSpendLimitOverrideOutput {
             crate::output::SetVoiceMessageSpendLimitOverrideOutput {
                 monthly_limit: self.monthly_limit,
@@ -852,7 +876,7 @@ pub mod set_voice_message_spend_limit_override_output {
     }
 }
 impl SetVoiceMessageSpendLimitOverrideOutput {
-    /// Creates a new builder-style object to manufacture [`SetVoiceMessageSpendLimitOverrideOutput`](crate::output::SetVoiceMessageSpendLimitOverrideOutput)
+    /// Creates a new builder-style object to manufacture [`SetVoiceMessageSpendLimitOverrideOutput`](crate::output::SetVoiceMessageSpendLimitOverrideOutput).
     pub fn builder() -> crate::output::set_voice_message_spend_limit_override_output::Builder {
         crate::output::set_voice_message_spend_limit_override_output::Builder::default()
     }
@@ -863,6 +887,7 @@ impl SetVoiceMessageSpendLimitOverrideOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SetTextMessageSpendLimitOverrideOutput {
     /// <p>The current monthly limit to enforce on sending text messages.</p>
+    #[doc(hidden)]
     pub monthly_limit: std::option::Option<i64>,
 }
 impl SetTextMessageSpendLimitOverrideOutput {
@@ -878,11 +903,10 @@ impl std::fmt::Debug for SetTextMessageSpendLimitOverrideOutput {
         formatter.finish()
     }
 }
-/// See [`SetTextMessageSpendLimitOverrideOutput`](crate::output::SetTextMessageSpendLimitOverrideOutput)
+/// See [`SetTextMessageSpendLimitOverrideOutput`](crate::output::SetTextMessageSpendLimitOverrideOutput).
 pub mod set_text_message_spend_limit_override_output {
 
-    /// A builder for [`SetTextMessageSpendLimitOverrideOutput`](crate::output::SetTextMessageSpendLimitOverrideOutput)
-    #[non_exhaustive]
+    /// A builder for [`SetTextMessageSpendLimitOverrideOutput`](crate::output::SetTextMessageSpendLimitOverrideOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) monthly_limit: std::option::Option<i64>,
@@ -898,7 +922,7 @@ pub mod set_text_message_spend_limit_override_output {
             self.monthly_limit = input;
             self
         }
-        /// Consumes the builder and constructs a [`SetTextMessageSpendLimitOverrideOutput`](crate::output::SetTextMessageSpendLimitOverrideOutput)
+        /// Consumes the builder and constructs a [`SetTextMessageSpendLimitOverrideOutput`](crate::output::SetTextMessageSpendLimitOverrideOutput).
         pub fn build(self) -> crate::output::SetTextMessageSpendLimitOverrideOutput {
             crate::output::SetTextMessageSpendLimitOverrideOutput {
                 monthly_limit: self.monthly_limit,
@@ -907,7 +931,7 @@ pub mod set_text_message_spend_limit_override_output {
     }
 }
 impl SetTextMessageSpendLimitOverrideOutput {
-    /// Creates a new builder-style object to manufacture [`SetTextMessageSpendLimitOverrideOutput`](crate::output::SetTextMessageSpendLimitOverrideOutput)
+    /// Creates a new builder-style object to manufacture [`SetTextMessageSpendLimitOverrideOutput`](crate::output::SetTextMessageSpendLimitOverrideOutput).
     pub fn builder() -> crate::output::set_text_message_spend_limit_override_output::Builder {
         crate::output::set_text_message_spend_limit_override_output::Builder::default()
     }
@@ -918,10 +942,13 @@ impl SetTextMessageSpendLimitOverrideOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SetDefaultSenderIdOutput {
     /// <p>The Amazon Resource Name (ARN) of the updated configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_arn: std::option::Option<std::string::String>,
     /// <p>The name of the configuration set that was updated.</p>
+    #[doc(hidden)]
     pub configuration_set_name: std::option::Option<std::string::String>,
     /// <p>The default sender ID to set for the ConfigurationSet.</p>
+    #[doc(hidden)]
     pub sender_id: std::option::Option<std::string::String>,
 }
 impl SetDefaultSenderIdOutput {
@@ -947,11 +974,10 @@ impl std::fmt::Debug for SetDefaultSenderIdOutput {
         formatter.finish()
     }
 }
-/// See [`SetDefaultSenderIdOutput`](crate::output::SetDefaultSenderIdOutput)
+/// See [`SetDefaultSenderIdOutput`](crate::output::SetDefaultSenderIdOutput).
 pub mod set_default_sender_id_output {
 
-    /// A builder for [`SetDefaultSenderIdOutput`](crate::output::SetDefaultSenderIdOutput)
-    #[non_exhaustive]
+    /// A builder for [`SetDefaultSenderIdOutput`](crate::output::SetDefaultSenderIdOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_set_arn: std::option::Option<std::string::String>,
@@ -995,7 +1021,7 @@ pub mod set_default_sender_id_output {
             self.sender_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SetDefaultSenderIdOutput`](crate::output::SetDefaultSenderIdOutput)
+        /// Consumes the builder and constructs a [`SetDefaultSenderIdOutput`](crate::output::SetDefaultSenderIdOutput).
         pub fn build(self) -> crate::output::SetDefaultSenderIdOutput {
             crate::output::SetDefaultSenderIdOutput {
                 configuration_set_arn: self.configuration_set_arn,
@@ -1006,7 +1032,7 @@ pub mod set_default_sender_id_output {
     }
 }
 impl SetDefaultSenderIdOutput {
-    /// Creates a new builder-style object to manufacture [`SetDefaultSenderIdOutput`](crate::output::SetDefaultSenderIdOutput)
+    /// Creates a new builder-style object to manufacture [`SetDefaultSenderIdOutput`](crate::output::SetDefaultSenderIdOutput).
     pub fn builder() -> crate::output::set_default_sender_id_output::Builder {
         crate::output::set_default_sender_id_output::Builder::default()
     }
@@ -1017,10 +1043,13 @@ impl SetDefaultSenderIdOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SetDefaultMessageTypeOutput {
     /// <p>The Amazon Resource Name (ARN) of the updated configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_arn: std::option::Option<std::string::String>,
     /// <p>The name of the configuration set that was updated.</p>
+    #[doc(hidden)]
     pub configuration_set_name: std::option::Option<std::string::String>,
     /// <p>The new default message type of the configuration set.</p>
+    #[doc(hidden)]
     pub message_type: std::option::Option<crate::model::MessageType>,
 }
 impl SetDefaultMessageTypeOutput {
@@ -1046,11 +1075,10 @@ impl std::fmt::Debug for SetDefaultMessageTypeOutput {
         formatter.finish()
     }
 }
-/// See [`SetDefaultMessageTypeOutput`](crate::output::SetDefaultMessageTypeOutput)
+/// See [`SetDefaultMessageTypeOutput`](crate::output::SetDefaultMessageTypeOutput).
 pub mod set_default_message_type_output {
 
-    /// A builder for [`SetDefaultMessageTypeOutput`](crate::output::SetDefaultMessageTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`SetDefaultMessageTypeOutput`](crate::output::SetDefaultMessageTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_set_arn: std::option::Option<std::string::String>,
@@ -1097,7 +1125,7 @@ pub mod set_default_message_type_output {
             self.message_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`SetDefaultMessageTypeOutput`](crate::output::SetDefaultMessageTypeOutput)
+        /// Consumes the builder and constructs a [`SetDefaultMessageTypeOutput`](crate::output::SetDefaultMessageTypeOutput).
         pub fn build(self) -> crate::output::SetDefaultMessageTypeOutput {
             crate::output::SetDefaultMessageTypeOutput {
                 configuration_set_arn: self.configuration_set_arn,
@@ -1108,7 +1136,7 @@ pub mod set_default_message_type_output {
     }
 }
 impl SetDefaultMessageTypeOutput {
-    /// Creates a new builder-style object to manufacture [`SetDefaultMessageTypeOutput`](crate::output::SetDefaultMessageTypeOutput)
+    /// Creates a new builder-style object to manufacture [`SetDefaultMessageTypeOutput`](crate::output::SetDefaultMessageTypeOutput).
     pub fn builder() -> crate::output::set_default_message_type_output::Builder {
         crate::output::set_default_message_type_output::Builder::default()
     }
@@ -1119,6 +1147,7 @@ impl SetDefaultMessageTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SendVoiceMessageOutput {
     /// <p>The unique identifier for the message.</p>
+    #[doc(hidden)]
     pub message_id: std::option::Option<std::string::String>,
 }
 impl SendVoiceMessageOutput {
@@ -1134,11 +1163,10 @@ impl std::fmt::Debug for SendVoiceMessageOutput {
         formatter.finish()
     }
 }
-/// See [`SendVoiceMessageOutput`](crate::output::SendVoiceMessageOutput)
+/// See [`SendVoiceMessageOutput`](crate::output::SendVoiceMessageOutput).
 pub mod send_voice_message_output {
 
-    /// A builder for [`SendVoiceMessageOutput`](crate::output::SendVoiceMessageOutput)
-    #[non_exhaustive]
+    /// A builder for [`SendVoiceMessageOutput`](crate::output::SendVoiceMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message_id: std::option::Option<std::string::String>,
@@ -1154,7 +1182,7 @@ pub mod send_voice_message_output {
             self.message_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SendVoiceMessageOutput`](crate::output::SendVoiceMessageOutput)
+        /// Consumes the builder and constructs a [`SendVoiceMessageOutput`](crate::output::SendVoiceMessageOutput).
         pub fn build(self) -> crate::output::SendVoiceMessageOutput {
             crate::output::SendVoiceMessageOutput {
                 message_id: self.message_id,
@@ -1163,7 +1191,7 @@ pub mod send_voice_message_output {
     }
 }
 impl SendVoiceMessageOutput {
-    /// Creates a new builder-style object to manufacture [`SendVoiceMessageOutput`](crate::output::SendVoiceMessageOutput)
+    /// Creates a new builder-style object to manufacture [`SendVoiceMessageOutput`](crate::output::SendVoiceMessageOutput).
     pub fn builder() -> crate::output::send_voice_message_output::Builder {
         crate::output::send_voice_message_output::Builder::default()
     }
@@ -1174,6 +1202,7 @@ impl SendVoiceMessageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SendTextMessageOutput {
     /// <p>The unique identifier for the message.</p>
+    #[doc(hidden)]
     pub message_id: std::option::Option<std::string::String>,
 }
 impl SendTextMessageOutput {
@@ -1189,11 +1218,10 @@ impl std::fmt::Debug for SendTextMessageOutput {
         formatter.finish()
     }
 }
-/// See [`SendTextMessageOutput`](crate::output::SendTextMessageOutput)
+/// See [`SendTextMessageOutput`](crate::output::SendTextMessageOutput).
 pub mod send_text_message_output {
 
-    /// A builder for [`SendTextMessageOutput`](crate::output::SendTextMessageOutput)
-    #[non_exhaustive]
+    /// A builder for [`SendTextMessageOutput`](crate::output::SendTextMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message_id: std::option::Option<std::string::String>,
@@ -1209,7 +1237,7 @@ pub mod send_text_message_output {
             self.message_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SendTextMessageOutput`](crate::output::SendTextMessageOutput)
+        /// Consumes the builder and constructs a [`SendTextMessageOutput`](crate::output::SendTextMessageOutput).
         pub fn build(self) -> crate::output::SendTextMessageOutput {
             crate::output::SendTextMessageOutput {
                 message_id: self.message_id,
@@ -1218,7 +1246,7 @@ pub mod send_text_message_output {
     }
 }
 impl SendTextMessageOutput {
-    /// Creates a new builder-style object to manufacture [`SendTextMessageOutput`](crate::output::SendTextMessageOutput)
+    /// Creates a new builder-style object to manufacture [`SendTextMessageOutput`](crate::output::SendTextMessageOutput).
     pub fn builder() -> crate::output::send_text_message_output::Builder {
         crate::output::send_text_message_output::Builder::default()
     }
@@ -1229,38 +1257,55 @@ impl SendTextMessageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RequestPhoneNumberOutput {
     /// <p>The Amazon Resource Name (ARN) of the requested phone number.</p>
+    #[doc(hidden)]
     pub phone_number_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the new phone number.</p>
+    #[doc(hidden)]
     pub phone_number_id: std::option::Option<std::string::String>,
     /// <p>The new phone number that was requested.</p>
+    #[doc(hidden)]
     pub phone_number: std::option::Option<std::string::String>,
     /// <p>The current status of the request.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::NumberStatus>,
     /// <p>The two-character code, in ISO 3166-1 alpha-2 format, for the country or region. </p>
+    #[doc(hidden)]
     pub iso_country_code: std::option::Option<std::string::String>,
     /// <p>The type of message. Valid values are TRANSACTIONAL for messages that are critical or time-sensitive and PROMOTIONAL for messages that aren't critical or time-sensitive.</p>
+    #[doc(hidden)]
     pub message_type: std::option::Option<crate::model::MessageType>,
     /// <p>Indicates if the phone number will be used for text messages, voice messages or both. </p>
+    #[doc(hidden)]
     pub number_capabilities: std::option::Option<std::vec::Vec<crate::model::NumberCapability>>,
     /// <p>The type of number that was released.</p>
+    #[doc(hidden)]
     pub number_type: std::option::Option<crate::model::RequestableNumberType>,
     /// <p>The monthly price, in US dollars, to lease the phone number.</p>
+    #[doc(hidden)]
     pub monthly_leasing_price: std::option::Option<std::string::String>,
     /// <p>By default this is set to false. When set to true you can receive incoming text messages from your end recipients.</p>
+    #[doc(hidden)]
     pub two_way_enabled: bool,
     /// <p>The ARN used to identify the two way channel.</p>
+    #[doc(hidden)]
     pub two_way_channel_arn: std::option::Option<std::string::String>,
     /// <p>By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're also responsible for tracking and honoring opt-out requests.</p>
+    #[doc(hidden)]
     pub self_managed_opt_outs_enabled: bool,
     /// <p>The name of the OptOutList that is associated with the requested phone number.</p>
+    #[doc(hidden)]
     pub opt_out_list_name: std::option::Option<std::string::String>,
     /// <p>By default this is set to false. When set to true the phone number can't be deleted. </p>
+    #[doc(hidden)]
     pub deletion_protection_enabled: bool,
     /// <p>The unique identifier of the pool associated with the phone number </p>
+    #[doc(hidden)]
     pub pool_id: std::option::Option<std::string::String>,
     /// <p>An array of key and value pair tags that are associated with the phone number.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The time when the phone number was created, in <a href="https://www.epochconverter.com/">UNIX epoch time</a> format.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RequestPhoneNumberOutput {
@@ -1362,11 +1407,10 @@ impl std::fmt::Debug for RequestPhoneNumberOutput {
         formatter.finish()
     }
 }
-/// See [`RequestPhoneNumberOutput`](crate::output::RequestPhoneNumberOutput)
+/// See [`RequestPhoneNumberOutput`](crate::output::RequestPhoneNumberOutput).
 pub mod request_phone_number_output {
 
-    /// A builder for [`RequestPhoneNumberOutput`](crate::output::RequestPhoneNumberOutput)
-    #[non_exhaustive]
+    /// A builder for [`RequestPhoneNumberOutput`](crate::output::RequestPhoneNumberOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) phone_number_arn: std::option::Option<std::string::String>,
@@ -1610,7 +1654,7 @@ pub mod request_phone_number_output {
             self.created_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`RequestPhoneNumberOutput`](crate::output::RequestPhoneNumberOutput)
+        /// Consumes the builder and constructs a [`RequestPhoneNumberOutput`](crate::output::RequestPhoneNumberOutput).
         pub fn build(self) -> crate::output::RequestPhoneNumberOutput {
             crate::output::RequestPhoneNumberOutput {
                 phone_number_arn: self.phone_number_arn,
@@ -1637,7 +1681,7 @@ pub mod request_phone_number_output {
     }
 }
 impl RequestPhoneNumberOutput {
-    /// Creates a new builder-style object to manufacture [`RequestPhoneNumberOutput`](crate::output::RequestPhoneNumberOutput)
+    /// Creates a new builder-style object to manufacture [`RequestPhoneNumberOutput`](crate::output::RequestPhoneNumberOutput).
     pub fn builder() -> crate::output::request_phone_number_output::Builder {
         crate::output::request_phone_number_output::Builder::default()
     }
@@ -1648,32 +1692,46 @@ impl RequestPhoneNumberOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReleasePhoneNumberOutput {
     /// <p>The PhoneNumberArn of the phone number that was released.</p>
+    #[doc(hidden)]
     pub phone_number_arn: std::option::Option<std::string::String>,
     /// <p>The PhoneNumberId of the phone number that was released.</p>
+    #[doc(hidden)]
     pub phone_number_id: std::option::Option<std::string::String>,
     /// <p>The phone number that was released.</p>
+    #[doc(hidden)]
     pub phone_number: std::option::Option<std::string::String>,
     /// <p>The current status of the request.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::NumberStatus>,
     /// <p>The two-character code, in ISO 3166-1 alpha-2 format, for the country or region.</p>
+    #[doc(hidden)]
     pub iso_country_code: std::option::Option<std::string::String>,
     /// <p>The message type that was associated with the phone number.</p>
+    #[doc(hidden)]
     pub message_type: std::option::Option<crate::model::MessageType>,
     /// <p>Specifies if the number could be used for text messages, voice, or both.</p>
+    #[doc(hidden)]
     pub number_capabilities: std::option::Option<std::vec::Vec<crate::model::NumberCapability>>,
     /// <p>The type of number that was released.</p>
+    #[doc(hidden)]
     pub number_type: std::option::Option<crate::model::NumberType>,
     /// <p>The monthly price of the phone number, in US dollars.</p>
+    #[doc(hidden)]
     pub monthly_leasing_price: std::option::Option<std::string::String>,
     /// <p>By default this is set to false. When set to true you can receive incoming text messages from your end recipients.</p>
+    #[doc(hidden)]
     pub two_way_enabled: bool,
     /// <p>The Amazon Resource Name (ARN) of the TwoWayChannel.</p>
+    #[doc(hidden)]
     pub two_way_channel_arn: std::option::Option<std::string::String>,
     /// <p>By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're also responsible for tracking and honoring opt-out requests.</p>
+    #[doc(hidden)]
     pub self_managed_opt_outs_enabled: bool,
     /// <p>The name of the OptOutList that was associated with the phone number.</p>
+    #[doc(hidden)]
     pub opt_out_list_name: std::option::Option<std::string::String>,
     /// <p>The time when the phone number was created, in <a href="https://www.epochconverter.com/">UNIX epoch time</a> format.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ReleasePhoneNumberOutput {
@@ -1757,11 +1815,10 @@ impl std::fmt::Debug for ReleasePhoneNumberOutput {
         formatter.finish()
     }
 }
-/// See [`ReleasePhoneNumberOutput`](crate::output::ReleasePhoneNumberOutput)
+/// See [`ReleasePhoneNumberOutput`](crate::output::ReleasePhoneNumberOutput).
 pub mod release_phone_number_output {
 
-    /// A builder for [`ReleasePhoneNumberOutput`](crate::output::ReleasePhoneNumberOutput)
-    #[non_exhaustive]
+    /// A builder for [`ReleasePhoneNumberOutput`](crate::output::ReleasePhoneNumberOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) phone_number_arn: std::option::Option<std::string::String>,
@@ -1963,7 +2020,7 @@ pub mod release_phone_number_output {
             self.created_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReleasePhoneNumberOutput`](crate::output::ReleasePhoneNumberOutput)
+        /// Consumes the builder and constructs a [`ReleasePhoneNumberOutput`](crate::output::ReleasePhoneNumberOutput).
         pub fn build(self) -> crate::output::ReleasePhoneNumberOutput {
             crate::output::ReleasePhoneNumberOutput {
                 phone_number_arn: self.phone_number_arn,
@@ -1987,7 +2044,7 @@ pub mod release_phone_number_output {
     }
 }
 impl ReleasePhoneNumberOutput {
-    /// Creates a new builder-style object to manufacture [`ReleasePhoneNumberOutput`](crate::output::ReleasePhoneNumberOutput)
+    /// Creates a new builder-style object to manufacture [`ReleasePhoneNumberOutput`](crate::output::ReleasePhoneNumberOutput).
     pub fn builder() -> crate::output::release_phone_number_output::Builder {
         crate::output::release_phone_number_output::Builder::default()
     }
@@ -1998,14 +2055,19 @@ impl ReleasePhoneNumberOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutOptedOutNumberOutput {
     /// <p>The OptOutListArn that the phone number was removed from.</p>
+    #[doc(hidden)]
     pub opt_out_list_arn: std::option::Option<std::string::String>,
     /// <p>The OptOutListName that the phone number was removed from.</p>
+    #[doc(hidden)]
     pub opt_out_list_name: std::option::Option<std::string::String>,
     /// <p>The phone number that was added to the OptOutList.</p>
+    #[doc(hidden)]
     pub opted_out_number: std::option::Option<std::string::String>,
     /// <p>The time that the phone number was added to the OptOutList, in <a href="https://www.epochconverter.com/">UNIX epoch time</a> format.</p>
+    #[doc(hidden)]
     pub opted_out_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>This is true if it was the end user who requested their phone number be removed. </p>
+    #[doc(hidden)]
     pub end_user_opted_out: bool,
 }
 impl PutOptedOutNumberOutput {
@@ -2041,11 +2103,10 @@ impl std::fmt::Debug for PutOptedOutNumberOutput {
         formatter.finish()
     }
 }
-/// See [`PutOptedOutNumberOutput`](crate::output::PutOptedOutNumberOutput)
+/// See [`PutOptedOutNumberOutput`](crate::output::PutOptedOutNumberOutput).
 pub mod put_opted_out_number_output {
 
-    /// A builder for [`PutOptedOutNumberOutput`](crate::output::PutOptedOutNumberOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutOptedOutNumberOutput`](crate::output::PutOptedOutNumberOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) opt_out_list_arn: std::option::Option<std::string::String>,
@@ -2117,7 +2178,7 @@ pub mod put_opted_out_number_output {
             self.end_user_opted_out = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutOptedOutNumberOutput`](crate::output::PutOptedOutNumberOutput)
+        /// Consumes the builder and constructs a [`PutOptedOutNumberOutput`](crate::output::PutOptedOutNumberOutput).
         pub fn build(self) -> crate::output::PutOptedOutNumberOutput {
             crate::output::PutOptedOutNumberOutput {
                 opt_out_list_arn: self.opt_out_list_arn,
@@ -2130,7 +2191,7 @@ pub mod put_opted_out_number_output {
     }
 }
 impl PutOptedOutNumberOutput {
-    /// Creates a new builder-style object to manufacture [`PutOptedOutNumberOutput`](crate::output::PutOptedOutNumberOutput)
+    /// Creates a new builder-style object to manufacture [`PutOptedOutNumberOutput`](crate::output::PutOptedOutNumberOutput).
     pub fn builder() -> crate::output::put_opted_out_number_output::Builder {
         crate::output::put_opted_out_number_output::Builder::default()
     }
@@ -2141,14 +2202,19 @@ impl PutOptedOutNumberOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutKeywordOutput {
     /// <p>The PhoneNumberArn or PoolArn that the keyword was associated with.</p>
+    #[doc(hidden)]
     pub origination_identity_arn: std::option::Option<std::string::String>,
     /// <p>The PhoneNumberId or PoolId that the keyword was associated with.</p>
+    #[doc(hidden)]
     pub origination_identity: std::option::Option<std::string::String>,
     /// <p>The keyword that was added.</p>
+    #[doc(hidden)]
     pub keyword: std::option::Option<std::string::String>,
     /// <p>The message associated with the keyword.</p>
+    #[doc(hidden)]
     pub keyword_message: std::option::Option<std::string::String>,
     /// <p>The action to perform when the keyword is used.</p>
+    #[doc(hidden)]
     pub keyword_action: std::option::Option<crate::model::KeywordAction>,
 }
 impl PutKeywordOutput {
@@ -2184,11 +2250,10 @@ impl std::fmt::Debug for PutKeywordOutput {
         formatter.finish()
     }
 }
-/// See [`PutKeywordOutput`](crate::output::PutKeywordOutput)
+/// See [`PutKeywordOutput`](crate::output::PutKeywordOutput).
 pub mod put_keyword_output {
 
-    /// A builder for [`PutKeywordOutput`](crate::output::PutKeywordOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutKeywordOutput`](crate::output::PutKeywordOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) origination_identity_arn: std::option::Option<std::string::String>,
@@ -2260,7 +2325,7 @@ pub mod put_keyword_output {
             self.keyword_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutKeywordOutput`](crate::output::PutKeywordOutput)
+        /// Consumes the builder and constructs a [`PutKeywordOutput`](crate::output::PutKeywordOutput).
         pub fn build(self) -> crate::output::PutKeywordOutput {
             crate::output::PutKeywordOutput {
                 origination_identity_arn: self.origination_identity_arn,
@@ -2273,7 +2338,7 @@ pub mod put_keyword_output {
     }
 }
 impl PutKeywordOutput {
-    /// Creates a new builder-style object to manufacture [`PutKeywordOutput`](crate::output::PutKeywordOutput)
+    /// Creates a new builder-style object to manufacture [`PutKeywordOutput`](crate::output::PutKeywordOutput).
     pub fn builder() -> crate::output::put_keyword_output::Builder {
         crate::output::put_keyword_output::Builder::default()
     }
@@ -2284,8 +2349,10 @@ impl PutKeywordOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The ARN of the resource.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>An array of key and value pair tags that are associated with the resource.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ListTagsForResourceOutput {
@@ -2306,11 +2373,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -2346,7 +2412,7 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 resource_arn: self.resource_arn,
@@ -2356,7 +2422,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -2367,13 +2433,17 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListPoolOriginationIdentitiesOutput {
     /// <p>The Amazon Resource Name (ARN) for the pool.</p>
+    #[doc(hidden)]
     pub pool_arn: std::option::Option<std::string::String>,
     /// <p>The unique PoolId of the pool.</p>
+    #[doc(hidden)]
     pub pool_id: std::option::Option<std::string::String>,
     /// <p>An array of any OriginationIdentityMetadata objects.</p>
+    #[doc(hidden)]
     pub origination_identities:
         std::option::Option<std::vec::Vec<crate::model::OriginationIdentityMetadata>>,
     /// <p>The token to be used for the next set of paginated results. If this field is empty then there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListPoolOriginationIdentitiesOutput {
@@ -2406,11 +2476,10 @@ impl std::fmt::Debug for ListPoolOriginationIdentitiesOutput {
         formatter.finish()
     }
 }
-/// See [`ListPoolOriginationIdentitiesOutput`](crate::output::ListPoolOriginationIdentitiesOutput)
+/// See [`ListPoolOriginationIdentitiesOutput`](crate::output::ListPoolOriginationIdentitiesOutput).
 pub mod list_pool_origination_identities_output {
 
-    /// A builder for [`ListPoolOriginationIdentitiesOutput`](crate::output::ListPoolOriginationIdentitiesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListPoolOriginationIdentitiesOutput`](crate::output::ListPoolOriginationIdentitiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pool_arn: std::option::Option<std::string::String>,
@@ -2472,7 +2541,7 @@ pub mod list_pool_origination_identities_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPoolOriginationIdentitiesOutput`](crate::output::ListPoolOriginationIdentitiesOutput)
+        /// Consumes the builder and constructs a [`ListPoolOriginationIdentitiesOutput`](crate::output::ListPoolOriginationIdentitiesOutput).
         pub fn build(self) -> crate::output::ListPoolOriginationIdentitiesOutput {
             crate::output::ListPoolOriginationIdentitiesOutput {
                 pool_arn: self.pool_arn,
@@ -2484,7 +2553,7 @@ pub mod list_pool_origination_identities_output {
     }
 }
 impl ListPoolOriginationIdentitiesOutput {
-    /// Creates a new builder-style object to manufacture [`ListPoolOriginationIdentitiesOutput`](crate::output::ListPoolOriginationIdentitiesOutput)
+    /// Creates a new builder-style object to manufacture [`ListPoolOriginationIdentitiesOutput`](crate::output::ListPoolOriginationIdentitiesOutput).
     pub fn builder() -> crate::output::list_pool_origination_identities_output::Builder {
         crate::output::list_pool_origination_identities_output::Builder::default()
     }
@@ -2495,14 +2564,19 @@ impl ListPoolOriginationIdentitiesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisassociateOriginationIdentityOutput {
     /// <p>The Amazon Resource Name (ARN) of the pool.</p>
+    #[doc(hidden)]
     pub pool_arn: std::option::Option<std::string::String>,
     /// <p>The PoolId of the pool no longer associated with the origination identity.</p>
+    #[doc(hidden)]
     pub pool_id: std::option::Option<std::string::String>,
     /// <p>The PhoneNumberArn or SenderIdArn of the origination identity.</p>
+    #[doc(hidden)]
     pub origination_identity_arn: std::option::Option<std::string::String>,
     /// <p>The PhoneNumberId or SenderId of the origination identity.</p>
+    #[doc(hidden)]
     pub origination_identity: std::option::Option<std::string::String>,
     /// <p>The two-character code, in ISO 3166-1 alpha-2 format, for the country or region.</p>
+    #[doc(hidden)]
     pub iso_country_code: std::option::Option<std::string::String>,
 }
 impl DisassociateOriginationIdentityOutput {
@@ -2538,11 +2612,10 @@ impl std::fmt::Debug for DisassociateOriginationIdentityOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateOriginationIdentityOutput`](crate::output::DisassociateOriginationIdentityOutput)
+/// See [`DisassociateOriginationIdentityOutput`](crate::output::DisassociateOriginationIdentityOutput).
 pub mod disassociate_origination_identity_output {
 
-    /// A builder for [`DisassociateOriginationIdentityOutput`](crate::output::DisassociateOriginationIdentityOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateOriginationIdentityOutput`](crate::output::DisassociateOriginationIdentityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pool_arn: std::option::Option<std::string::String>,
@@ -2611,7 +2684,7 @@ pub mod disassociate_origination_identity_output {
             self.iso_country_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociateOriginationIdentityOutput`](crate::output::DisassociateOriginationIdentityOutput)
+        /// Consumes the builder and constructs a [`DisassociateOriginationIdentityOutput`](crate::output::DisassociateOriginationIdentityOutput).
         pub fn build(self) -> crate::output::DisassociateOriginationIdentityOutput {
             crate::output::DisassociateOriginationIdentityOutput {
                 pool_arn: self.pool_arn,
@@ -2624,7 +2697,7 @@ pub mod disassociate_origination_identity_output {
     }
 }
 impl DisassociateOriginationIdentityOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateOriginationIdentityOutput`](crate::output::DisassociateOriginationIdentityOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateOriginationIdentityOutput`](crate::output::DisassociateOriginationIdentityOutput).
     pub fn builder() -> crate::output::disassociate_origination_identity_output::Builder {
         crate::output::disassociate_origination_identity_output::Builder::default()
     }
@@ -2635,8 +2708,10 @@ impl DisassociateOriginationIdentityOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSpendLimitsOutput {
     /// <p>An array of SpendLimit objects that contain the details for the requested spend limits.</p>
+    #[doc(hidden)]
     pub spend_limits: std::option::Option<std::vec::Vec<crate::model::SpendLimit>>,
     /// <p>The token to be used for the next set of paginated results. If this field is empty then there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeSpendLimitsOutput {
@@ -2657,11 +2732,10 @@ impl std::fmt::Debug for DescribeSpendLimitsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeSpendLimitsOutput`](crate::output::DescribeSpendLimitsOutput)
+/// See [`DescribeSpendLimitsOutput`](crate::output::DescribeSpendLimitsOutput).
 pub mod describe_spend_limits_output {
 
-    /// A builder for [`DescribeSpendLimitsOutput`](crate::output::DescribeSpendLimitsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSpendLimitsOutput`](crate::output::DescribeSpendLimitsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) spend_limits: std::option::Option<std::vec::Vec<crate::model::SpendLimit>>,
@@ -2697,7 +2771,7 @@ pub mod describe_spend_limits_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSpendLimitsOutput`](crate::output::DescribeSpendLimitsOutput)
+        /// Consumes the builder and constructs a [`DescribeSpendLimitsOutput`](crate::output::DescribeSpendLimitsOutput).
         pub fn build(self) -> crate::output::DescribeSpendLimitsOutput {
             crate::output::DescribeSpendLimitsOutput {
                 spend_limits: self.spend_limits,
@@ -2707,7 +2781,7 @@ pub mod describe_spend_limits_output {
     }
 }
 impl DescribeSpendLimitsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeSpendLimitsOutput`](crate::output::DescribeSpendLimitsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeSpendLimitsOutput`](crate::output::DescribeSpendLimitsOutput).
     pub fn builder() -> crate::output::describe_spend_limits_output::Builder {
         crate::output::describe_spend_limits_output::Builder::default()
     }
@@ -2718,8 +2792,10 @@ impl DescribeSpendLimitsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSenderIdsOutput {
     /// <p>An array of SernderIdInformation objects that contain the details for the requested SenderIds.</p>
+    #[doc(hidden)]
     pub sender_ids: std::option::Option<std::vec::Vec<crate::model::SenderIdInformation>>,
     /// <p>The token to be used for the next set of paginated results. If this field is empty then there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeSenderIdsOutput {
@@ -2740,11 +2816,10 @@ impl std::fmt::Debug for DescribeSenderIdsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeSenderIdsOutput`](crate::output::DescribeSenderIdsOutput)
+/// See [`DescribeSenderIdsOutput`](crate::output::DescribeSenderIdsOutput).
 pub mod describe_sender_ids_output {
 
-    /// A builder for [`DescribeSenderIdsOutput`](crate::output::DescribeSenderIdsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSenderIdsOutput`](crate::output::DescribeSenderIdsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sender_ids:
@@ -2781,7 +2856,7 @@ pub mod describe_sender_ids_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSenderIdsOutput`](crate::output::DescribeSenderIdsOutput)
+        /// Consumes the builder and constructs a [`DescribeSenderIdsOutput`](crate::output::DescribeSenderIdsOutput).
         pub fn build(self) -> crate::output::DescribeSenderIdsOutput {
             crate::output::DescribeSenderIdsOutput {
                 sender_ids: self.sender_ids,
@@ -2791,7 +2866,7 @@ pub mod describe_sender_ids_output {
     }
 }
 impl DescribeSenderIdsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeSenderIdsOutput`](crate::output::DescribeSenderIdsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeSenderIdsOutput`](crate::output::DescribeSenderIdsOutput).
     pub fn builder() -> crate::output::describe_sender_ids_output::Builder {
         crate::output::describe_sender_ids_output::Builder::default()
     }
@@ -2802,8 +2877,10 @@ impl DescribeSenderIdsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribePoolsOutput {
     /// <p>An array of PoolInformation objects that contain the details for the requested pools. </p>
+    #[doc(hidden)]
     pub pools: std::option::Option<std::vec::Vec<crate::model::PoolInformation>>,
     /// <p>The token to be used for the next set of paginated results. If this field is empty then there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribePoolsOutput {
@@ -2824,11 +2901,10 @@ impl std::fmt::Debug for DescribePoolsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribePoolsOutput`](crate::output::DescribePoolsOutput)
+/// See [`DescribePoolsOutput`](crate::output::DescribePoolsOutput).
 pub mod describe_pools_output {
 
-    /// A builder for [`DescribePoolsOutput`](crate::output::DescribePoolsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribePoolsOutput`](crate::output::DescribePoolsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pools: std::option::Option<std::vec::Vec<crate::model::PoolInformation>>,
@@ -2864,7 +2940,7 @@ pub mod describe_pools_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribePoolsOutput`](crate::output::DescribePoolsOutput)
+        /// Consumes the builder and constructs a [`DescribePoolsOutput`](crate::output::DescribePoolsOutput).
         pub fn build(self) -> crate::output::DescribePoolsOutput {
             crate::output::DescribePoolsOutput {
                 pools: self.pools,
@@ -2874,7 +2950,7 @@ pub mod describe_pools_output {
     }
 }
 impl DescribePoolsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribePoolsOutput`](crate::output::DescribePoolsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribePoolsOutput`](crate::output::DescribePoolsOutput).
     pub fn builder() -> crate::output::describe_pools_output::Builder {
         crate::output::describe_pools_output::Builder::default()
     }
@@ -2885,8 +2961,10 @@ impl DescribePoolsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribePhoneNumbersOutput {
     /// <p>An array of PhoneNumberInformation objects that contain the details for the requested phone numbers.</p>
+    #[doc(hidden)]
     pub phone_numbers: std::option::Option<std::vec::Vec<crate::model::PhoneNumberInformation>>,
     /// <p>The token to be used for the next set of paginated results. If this field is empty then there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribePhoneNumbersOutput {
@@ -2907,11 +2985,10 @@ impl std::fmt::Debug for DescribePhoneNumbersOutput {
         formatter.finish()
     }
 }
-/// See [`DescribePhoneNumbersOutput`](crate::output::DescribePhoneNumbersOutput)
+/// See [`DescribePhoneNumbersOutput`](crate::output::DescribePhoneNumbersOutput).
 pub mod describe_phone_numbers_output {
 
-    /// A builder for [`DescribePhoneNumbersOutput`](crate::output::DescribePhoneNumbersOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribePhoneNumbersOutput`](crate::output::DescribePhoneNumbersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) phone_numbers:
@@ -2948,7 +3025,7 @@ pub mod describe_phone_numbers_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribePhoneNumbersOutput`](crate::output::DescribePhoneNumbersOutput)
+        /// Consumes the builder and constructs a [`DescribePhoneNumbersOutput`](crate::output::DescribePhoneNumbersOutput).
         pub fn build(self) -> crate::output::DescribePhoneNumbersOutput {
             crate::output::DescribePhoneNumbersOutput {
                 phone_numbers: self.phone_numbers,
@@ -2958,7 +3035,7 @@ pub mod describe_phone_numbers_output {
     }
 }
 impl DescribePhoneNumbersOutput {
-    /// Creates a new builder-style object to manufacture [`DescribePhoneNumbersOutput`](crate::output::DescribePhoneNumbersOutput)
+    /// Creates a new builder-style object to manufacture [`DescribePhoneNumbersOutput`](crate::output::DescribePhoneNumbersOutput).
     pub fn builder() -> crate::output::describe_phone_numbers_output::Builder {
         crate::output::describe_phone_numbers_output::Builder::default()
     }
@@ -2969,8 +3046,10 @@ impl DescribePhoneNumbersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeOptOutListsOutput {
     /// <p>An array of OptOutListInformation objects that contain the details for the requested OptOutLists.</p>
+    #[doc(hidden)]
     pub opt_out_lists: std::option::Option<std::vec::Vec<crate::model::OptOutListInformation>>,
     /// <p>The token to be used for the next set of paginated results. If this field is empty then there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeOptOutListsOutput {
@@ -2991,11 +3070,10 @@ impl std::fmt::Debug for DescribeOptOutListsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOptOutListsOutput`](crate::output::DescribeOptOutListsOutput)
+/// See [`DescribeOptOutListsOutput`](crate::output::DescribeOptOutListsOutput).
 pub mod describe_opt_out_lists_output {
 
-    /// A builder for [`DescribeOptOutListsOutput`](crate::output::DescribeOptOutListsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeOptOutListsOutput`](crate::output::DescribeOptOutListsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) opt_out_lists:
@@ -3032,7 +3110,7 @@ pub mod describe_opt_out_lists_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOptOutListsOutput`](crate::output::DescribeOptOutListsOutput)
+        /// Consumes the builder and constructs a [`DescribeOptOutListsOutput`](crate::output::DescribeOptOutListsOutput).
         pub fn build(self) -> crate::output::DescribeOptOutListsOutput {
             crate::output::DescribeOptOutListsOutput {
                 opt_out_lists: self.opt_out_lists,
@@ -3042,7 +3120,7 @@ pub mod describe_opt_out_lists_output {
     }
 }
 impl DescribeOptOutListsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOptOutListsOutput`](crate::output::DescribeOptOutListsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOptOutListsOutput`](crate::output::DescribeOptOutListsOutput).
     pub fn builder() -> crate::output::describe_opt_out_lists_output::Builder {
         crate::output::describe_opt_out_lists_output::Builder::default()
     }
@@ -3053,13 +3131,17 @@ impl DescribeOptOutListsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeOptedOutNumbersOutput {
     /// <p>The Amazon Resource Name (ARN) of the OptOutList.</p>
+    #[doc(hidden)]
     pub opt_out_list_arn: std::option::Option<std::string::String>,
     /// <p>The name of the OptOutList.</p>
+    #[doc(hidden)]
     pub opt_out_list_name: std::option::Option<std::string::String>,
     /// <p>An array of OptedOutNumbersInformation objects that provide information about the requested OptedOutNumbers.</p>
+    #[doc(hidden)]
     pub opted_out_numbers:
         std::option::Option<std::vec::Vec<crate::model::OptedOutNumberInformation>>,
     /// <p>The token to be used for the next set of paginated results. If this field is empty then there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeOptedOutNumbersOutput {
@@ -3092,11 +3174,10 @@ impl std::fmt::Debug for DescribeOptedOutNumbersOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOptedOutNumbersOutput`](crate::output::DescribeOptedOutNumbersOutput)
+/// See [`DescribeOptedOutNumbersOutput`](crate::output::DescribeOptedOutNumbersOutput).
 pub mod describe_opted_out_numbers_output {
 
-    /// A builder for [`DescribeOptedOutNumbersOutput`](crate::output::DescribeOptedOutNumbersOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeOptedOutNumbersOutput`](crate::output::DescribeOptedOutNumbersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) opt_out_list_arn: std::option::Option<std::string::String>,
@@ -3161,7 +3242,7 @@ pub mod describe_opted_out_numbers_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOptedOutNumbersOutput`](crate::output::DescribeOptedOutNumbersOutput)
+        /// Consumes the builder and constructs a [`DescribeOptedOutNumbersOutput`](crate::output::DescribeOptedOutNumbersOutput).
         pub fn build(self) -> crate::output::DescribeOptedOutNumbersOutput {
             crate::output::DescribeOptedOutNumbersOutput {
                 opt_out_list_arn: self.opt_out_list_arn,
@@ -3173,7 +3254,7 @@ pub mod describe_opted_out_numbers_output {
     }
 }
 impl DescribeOptedOutNumbersOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOptedOutNumbersOutput`](crate::output::DescribeOptedOutNumbersOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOptedOutNumbersOutput`](crate::output::DescribeOptedOutNumbersOutput).
     pub fn builder() -> crate::output::describe_opted_out_numbers_output::Builder {
         crate::output::describe_opted_out_numbers_output::Builder::default()
     }
@@ -3184,12 +3265,16 @@ impl DescribeOptedOutNumbersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeKeywordsOutput {
     /// <p>The PhoneNumberArn or PoolArn that is associated with the OriginationIdentity. </p>
+    #[doc(hidden)]
     pub origination_identity_arn: std::option::Option<std::string::String>,
     /// <p>The PhoneNumberId or PoolId that is associated with the OriginationIdentity.</p>
+    #[doc(hidden)]
     pub origination_identity: std::option::Option<std::string::String>,
     /// <p>An array of KeywordInformation objects that contain the results.</p>
+    #[doc(hidden)]
     pub keywords: std::option::Option<std::vec::Vec<crate::model::KeywordInformation>>,
     /// <p>The token to be used for the next set of paginated results. If this field is empty then there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeKeywordsOutput {
@@ -3220,11 +3305,10 @@ impl std::fmt::Debug for DescribeKeywordsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeKeywordsOutput`](crate::output::DescribeKeywordsOutput)
+/// See [`DescribeKeywordsOutput`](crate::output::DescribeKeywordsOutput).
 pub mod describe_keywords_output {
 
-    /// A builder for [`DescribeKeywordsOutput`](crate::output::DescribeKeywordsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeKeywordsOutput`](crate::output::DescribeKeywordsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) origination_identity_arn: std::option::Option<std::string::String>,
@@ -3288,7 +3372,7 @@ pub mod describe_keywords_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeKeywordsOutput`](crate::output::DescribeKeywordsOutput)
+        /// Consumes the builder and constructs a [`DescribeKeywordsOutput`](crate::output::DescribeKeywordsOutput).
         pub fn build(self) -> crate::output::DescribeKeywordsOutput {
             crate::output::DescribeKeywordsOutput {
                 origination_identity_arn: self.origination_identity_arn,
@@ -3300,7 +3384,7 @@ pub mod describe_keywords_output {
     }
 }
 impl DescribeKeywordsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeKeywordsOutput`](crate::output::DescribeKeywordsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeKeywordsOutput`](crate::output::DescribeKeywordsOutput).
     pub fn builder() -> crate::output::describe_keywords_output::Builder {
         crate::output::describe_keywords_output::Builder::default()
     }
@@ -3311,9 +3395,11 @@ impl DescribeKeywordsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeConfigurationSetsOutput {
     /// <p>An array of ConfigurationSets objects.</p>
+    #[doc(hidden)]
     pub configuration_sets:
         std::option::Option<std::vec::Vec<crate::model::ConfigurationSetInformation>>,
     /// <p>The token to be used for the next set of paginated results. If this field is empty then there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeConfigurationSetsOutput {
@@ -3336,11 +3422,10 @@ impl std::fmt::Debug for DescribeConfigurationSetsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeConfigurationSetsOutput`](crate::output::DescribeConfigurationSetsOutput)
+/// See [`DescribeConfigurationSetsOutput`](crate::output::DescribeConfigurationSetsOutput).
 pub mod describe_configuration_sets_output {
 
-    /// A builder for [`DescribeConfigurationSetsOutput`](crate::output::DescribeConfigurationSetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeConfigurationSetsOutput`](crate::output::DescribeConfigurationSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_sets:
@@ -3380,7 +3465,7 @@ pub mod describe_configuration_sets_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeConfigurationSetsOutput`](crate::output::DescribeConfigurationSetsOutput)
+        /// Consumes the builder and constructs a [`DescribeConfigurationSetsOutput`](crate::output::DescribeConfigurationSetsOutput).
         pub fn build(self) -> crate::output::DescribeConfigurationSetsOutput {
             crate::output::DescribeConfigurationSetsOutput {
                 configuration_sets: self.configuration_sets,
@@ -3390,7 +3475,7 @@ pub mod describe_configuration_sets_output {
     }
 }
 impl DescribeConfigurationSetsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeConfigurationSetsOutput`](crate::output::DescribeConfigurationSetsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeConfigurationSetsOutput`](crate::output::DescribeConfigurationSetsOutput).
     pub fn builder() -> crate::output::describe_configuration_sets_output::Builder {
         crate::output::describe_configuration_sets_output::Builder::default()
     }
@@ -3401,8 +3486,10 @@ impl DescribeConfigurationSetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAccountLimitsOutput {
     /// <p>An array of AccountLimit objects that show the current spend limits.</p>
+    #[doc(hidden)]
     pub account_limits: std::option::Option<std::vec::Vec<crate::model::AccountLimit>>,
     /// <p>The token to be used for the next set of paginated results. If this field is empty then there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeAccountLimitsOutput {
@@ -3423,11 +3510,10 @@ impl std::fmt::Debug for DescribeAccountLimitsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAccountLimitsOutput`](crate::output::DescribeAccountLimitsOutput)
+/// See [`DescribeAccountLimitsOutput`](crate::output::DescribeAccountLimitsOutput).
 pub mod describe_account_limits_output {
 
-    /// A builder for [`DescribeAccountLimitsOutput`](crate::output::DescribeAccountLimitsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAccountLimitsOutput`](crate::output::DescribeAccountLimitsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_limits: std::option::Option<std::vec::Vec<crate::model::AccountLimit>>,
@@ -3463,7 +3549,7 @@ pub mod describe_account_limits_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAccountLimitsOutput`](crate::output::DescribeAccountLimitsOutput)
+        /// Consumes the builder and constructs a [`DescribeAccountLimitsOutput`](crate::output::DescribeAccountLimitsOutput).
         pub fn build(self) -> crate::output::DescribeAccountLimitsOutput {
             crate::output::DescribeAccountLimitsOutput {
                 account_limits: self.account_limits,
@@ -3473,7 +3559,7 @@ pub mod describe_account_limits_output {
     }
 }
 impl DescribeAccountLimitsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAccountLimitsOutput`](crate::output::DescribeAccountLimitsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAccountLimitsOutput`](crate::output::DescribeAccountLimitsOutput).
     pub fn builder() -> crate::output::describe_account_limits_output::Builder {
         crate::output::describe_account_limits_output::Builder::default()
     }
@@ -3484,8 +3570,10 @@ impl DescribeAccountLimitsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAccountAttributesOutput {
     /// <p>An array of AccountAttributes objects.</p>
+    #[doc(hidden)]
     pub account_attributes: std::option::Option<std::vec::Vec<crate::model::AccountAttribute>>,
     /// <p>The token to be used for the next set of paginated results. If this field is empty then there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeAccountAttributesOutput {
@@ -3506,11 +3594,10 @@ impl std::fmt::Debug for DescribeAccountAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
+/// See [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput).
 pub mod describe_account_attributes_output {
 
-    /// A builder for [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_attributes:
@@ -3547,7 +3634,7 @@ pub mod describe_account_attributes_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
+        /// Consumes the builder and constructs a [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput).
         pub fn build(self) -> crate::output::DescribeAccountAttributesOutput {
             crate::output::DescribeAccountAttributesOutput {
                 account_attributes: self.account_attributes,
@@ -3557,7 +3644,7 @@ pub mod describe_account_attributes_output {
     }
 }
 impl DescribeAccountAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput).
     pub fn builder() -> crate::output::describe_account_attributes_output::Builder {
         crate::output::describe_account_attributes_output::Builder::default()
     }
@@ -3568,6 +3655,7 @@ impl DescribeAccountAttributesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteVoiceMessageSpendLimitOverrideOutput {
     /// <p>The current monthly limit, in US dollars.</p>
+    #[doc(hidden)]
     pub monthly_limit: std::option::Option<i64>,
 }
 impl DeleteVoiceMessageSpendLimitOverrideOutput {
@@ -3583,11 +3671,10 @@ impl std::fmt::Debug for DeleteVoiceMessageSpendLimitOverrideOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteVoiceMessageSpendLimitOverrideOutput`](crate::output::DeleteVoiceMessageSpendLimitOverrideOutput)
+/// See [`DeleteVoiceMessageSpendLimitOverrideOutput`](crate::output::DeleteVoiceMessageSpendLimitOverrideOutput).
 pub mod delete_voice_message_spend_limit_override_output {
 
-    /// A builder for [`DeleteVoiceMessageSpendLimitOverrideOutput`](crate::output::DeleteVoiceMessageSpendLimitOverrideOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteVoiceMessageSpendLimitOverrideOutput`](crate::output::DeleteVoiceMessageSpendLimitOverrideOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) monthly_limit: std::option::Option<i64>,
@@ -3603,7 +3690,7 @@ pub mod delete_voice_message_spend_limit_override_output {
             self.monthly_limit = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteVoiceMessageSpendLimitOverrideOutput`](crate::output::DeleteVoiceMessageSpendLimitOverrideOutput)
+        /// Consumes the builder and constructs a [`DeleteVoiceMessageSpendLimitOverrideOutput`](crate::output::DeleteVoiceMessageSpendLimitOverrideOutput).
         pub fn build(self) -> crate::output::DeleteVoiceMessageSpendLimitOverrideOutput {
             crate::output::DeleteVoiceMessageSpendLimitOverrideOutput {
                 monthly_limit: self.monthly_limit,
@@ -3612,7 +3699,7 @@ pub mod delete_voice_message_spend_limit_override_output {
     }
 }
 impl DeleteVoiceMessageSpendLimitOverrideOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteVoiceMessageSpendLimitOverrideOutput`](crate::output::DeleteVoiceMessageSpendLimitOverrideOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteVoiceMessageSpendLimitOverrideOutput`](crate::output::DeleteVoiceMessageSpendLimitOverrideOutput).
     pub fn builder() -> crate::output::delete_voice_message_spend_limit_override_output::Builder {
         crate::output::delete_voice_message_spend_limit_override_output::Builder::default()
     }
@@ -3623,6 +3710,7 @@ impl DeleteVoiceMessageSpendLimitOverrideOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteTextMessageSpendLimitOverrideOutput {
     /// <p>The current monthly limit, in US dollars.</p>
+    #[doc(hidden)]
     pub monthly_limit: std::option::Option<i64>,
 }
 impl DeleteTextMessageSpendLimitOverrideOutput {
@@ -3638,11 +3726,10 @@ impl std::fmt::Debug for DeleteTextMessageSpendLimitOverrideOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteTextMessageSpendLimitOverrideOutput`](crate::output::DeleteTextMessageSpendLimitOverrideOutput)
+/// See [`DeleteTextMessageSpendLimitOverrideOutput`](crate::output::DeleteTextMessageSpendLimitOverrideOutput).
 pub mod delete_text_message_spend_limit_override_output {
 
-    /// A builder for [`DeleteTextMessageSpendLimitOverrideOutput`](crate::output::DeleteTextMessageSpendLimitOverrideOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteTextMessageSpendLimitOverrideOutput`](crate::output::DeleteTextMessageSpendLimitOverrideOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) monthly_limit: std::option::Option<i64>,
@@ -3658,7 +3745,7 @@ pub mod delete_text_message_spend_limit_override_output {
             self.monthly_limit = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteTextMessageSpendLimitOverrideOutput`](crate::output::DeleteTextMessageSpendLimitOverrideOutput)
+        /// Consumes the builder and constructs a [`DeleteTextMessageSpendLimitOverrideOutput`](crate::output::DeleteTextMessageSpendLimitOverrideOutput).
         pub fn build(self) -> crate::output::DeleteTextMessageSpendLimitOverrideOutput {
             crate::output::DeleteTextMessageSpendLimitOverrideOutput {
                 monthly_limit: self.monthly_limit,
@@ -3667,7 +3754,7 @@ pub mod delete_text_message_spend_limit_override_output {
     }
 }
 impl DeleteTextMessageSpendLimitOverrideOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteTextMessageSpendLimitOverrideOutput`](crate::output::DeleteTextMessageSpendLimitOverrideOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteTextMessageSpendLimitOverrideOutput`](crate::output::DeleteTextMessageSpendLimitOverrideOutput).
     pub fn builder() -> crate::output::delete_text_message_spend_limit_override_output::Builder {
         crate::output::delete_text_message_spend_limit_override_output::Builder::default()
     }
@@ -3678,8 +3765,10 @@ impl DeleteTextMessageSpendLimitOverrideOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeletePoolOutput {
     /// <p>The Amazon Resource Name (ARN) of the pool that was deleted.</p>
+    #[doc(hidden)]
     pub pool_arn: std::option::Option<std::string::String>,
     /// <p>The PoolId of the pool that was deleted.</p>
+    #[doc(hidden)]
     pub pool_id: std::option::Option<std::string::String>,
     /// <p>The current status of the pool.</p>
     /// <ul>
@@ -3687,20 +3776,28 @@ pub struct DeletePoolOutput {
     /// <li> <p>ACTIVE: The pool is active and available for use.</p> </li>
     /// <li> <p>DELETING: The pool is being deleted.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::PoolStatus>,
     /// <p>The message type that was associated with the deleted pool.</p>
+    #[doc(hidden)]
     pub message_type: std::option::Option<crate::model::MessageType>,
     /// <p>By default this is set to false. When set to true you can receive incoming text messages from your end recipients.</p>
+    #[doc(hidden)]
     pub two_way_enabled: bool,
     /// <p>The Amazon Resource Name (ARN) of the TwoWayChannel.</p>
+    #[doc(hidden)]
     pub two_way_channel_arn: std::option::Option<std::string::String>,
     /// <p>By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're also responsible for tracking and honoring opt-out requests.</p>
+    #[doc(hidden)]
     pub self_managed_opt_outs_enabled: bool,
     /// <p>The name of the OptOutList that was associated with the deleted pool.</p>
+    #[doc(hidden)]
     pub opt_out_list_name: std::option::Option<std::string::String>,
     /// <p>Indicates whether shared routes are enabled for the pool.</p>
+    #[doc(hidden)]
     pub shared_routes_enabled: bool,
     /// <p>The time when the pool was created, in <a href="https://www.epochconverter.com/">UNIX epoch time</a> format.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DeletePoolOutput {
@@ -3769,11 +3866,10 @@ impl std::fmt::Debug for DeletePoolOutput {
         formatter.finish()
     }
 }
-/// See [`DeletePoolOutput`](crate::output::DeletePoolOutput)
+/// See [`DeletePoolOutput`](crate::output::DeletePoolOutput).
 pub mod delete_pool_output {
 
-    /// A builder for [`DeletePoolOutput`](crate::output::DeletePoolOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeletePoolOutput`](crate::output::DeletePoolOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pool_arn: std::option::Option<std::string::String>,
@@ -3913,7 +4009,7 @@ pub mod delete_pool_output {
             self.created_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeletePoolOutput`](crate::output::DeletePoolOutput)
+        /// Consumes the builder and constructs a [`DeletePoolOutput`](crate::output::DeletePoolOutput).
         pub fn build(self) -> crate::output::DeletePoolOutput {
             crate::output::DeletePoolOutput {
                 pool_arn: self.pool_arn,
@@ -3933,7 +4029,7 @@ pub mod delete_pool_output {
     }
 }
 impl DeletePoolOutput {
-    /// Creates a new builder-style object to manufacture [`DeletePoolOutput`](crate::output::DeletePoolOutput)
+    /// Creates a new builder-style object to manufacture [`DeletePoolOutput`](crate::output::DeletePoolOutput).
     pub fn builder() -> crate::output::delete_pool_output::Builder {
         crate::output::delete_pool_output::Builder::default()
     }
@@ -3944,10 +4040,13 @@ impl DeletePoolOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteOptOutListOutput {
     /// <p>The Amazon Resource Name (ARN) of the OptOutList that was removed.</p>
+    #[doc(hidden)]
     pub opt_out_list_arn: std::option::Option<std::string::String>,
     /// <p>The name of the OptOutList that was removed.</p>
+    #[doc(hidden)]
     pub opt_out_list_name: std::option::Option<std::string::String>,
     /// <p>The time when the OptOutList was created, in <a href="https://www.epochconverter.com/">UNIX epoch time</a> format.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DeleteOptOutListOutput {
@@ -3973,11 +4072,10 @@ impl std::fmt::Debug for DeleteOptOutListOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteOptOutListOutput`](crate::output::DeleteOptOutListOutput)
+/// See [`DeleteOptOutListOutput`](crate::output::DeleteOptOutListOutput).
 pub mod delete_opt_out_list_output {
 
-    /// A builder for [`DeleteOptOutListOutput`](crate::output::DeleteOptOutListOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteOptOutListOutput`](crate::output::DeleteOptOutListOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) opt_out_list_arn: std::option::Option<std::string::String>,
@@ -4024,7 +4122,7 @@ pub mod delete_opt_out_list_output {
             self.created_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteOptOutListOutput`](crate::output::DeleteOptOutListOutput)
+        /// Consumes the builder and constructs a [`DeleteOptOutListOutput`](crate::output::DeleteOptOutListOutput).
         pub fn build(self) -> crate::output::DeleteOptOutListOutput {
             crate::output::DeleteOptOutListOutput {
                 opt_out_list_arn: self.opt_out_list_arn,
@@ -4035,7 +4133,7 @@ pub mod delete_opt_out_list_output {
     }
 }
 impl DeleteOptOutListOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteOptOutListOutput`](crate::output::DeleteOptOutListOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteOptOutListOutput`](crate::output::DeleteOptOutListOutput).
     pub fn builder() -> crate::output::delete_opt_out_list_output::Builder {
         crate::output::delete_opt_out_list_output::Builder::default()
     }
@@ -4046,14 +4144,19 @@ impl DeleteOptOutListOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteOptedOutNumberOutput {
     /// <p>The OptOutListArn that the phone number was removed from.</p>
+    #[doc(hidden)]
     pub opt_out_list_arn: std::option::Option<std::string::String>,
     /// <p>The OptOutListName that the phone number was removed from.</p>
+    #[doc(hidden)]
     pub opt_out_list_name: std::option::Option<std::string::String>,
     /// <p>The phone number that was removed from the OptOutList.</p>
+    #[doc(hidden)]
     pub opted_out_number: std::option::Option<std::string::String>,
     /// <p>The time that the number was removed at, in <a href="https://www.epochconverter.com/">UNIX epoch time</a> format.</p>
+    #[doc(hidden)]
     pub opted_out_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>This is true if it was the end user who requested their phone number be removed. </p>
+    #[doc(hidden)]
     pub end_user_opted_out: bool,
 }
 impl DeleteOptedOutNumberOutput {
@@ -4089,11 +4192,10 @@ impl std::fmt::Debug for DeleteOptedOutNumberOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteOptedOutNumberOutput`](crate::output::DeleteOptedOutNumberOutput)
+/// See [`DeleteOptedOutNumberOutput`](crate::output::DeleteOptedOutNumberOutput).
 pub mod delete_opted_out_number_output {
 
-    /// A builder for [`DeleteOptedOutNumberOutput`](crate::output::DeleteOptedOutNumberOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteOptedOutNumberOutput`](crate::output::DeleteOptedOutNumberOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) opt_out_list_arn: std::option::Option<std::string::String>,
@@ -4165,7 +4267,7 @@ pub mod delete_opted_out_number_output {
             self.end_user_opted_out = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteOptedOutNumberOutput`](crate::output::DeleteOptedOutNumberOutput)
+        /// Consumes the builder and constructs a [`DeleteOptedOutNumberOutput`](crate::output::DeleteOptedOutNumberOutput).
         pub fn build(self) -> crate::output::DeleteOptedOutNumberOutput {
             crate::output::DeleteOptedOutNumberOutput {
                 opt_out_list_arn: self.opt_out_list_arn,
@@ -4178,7 +4280,7 @@ pub mod delete_opted_out_number_output {
     }
 }
 impl DeleteOptedOutNumberOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteOptedOutNumberOutput`](crate::output::DeleteOptedOutNumberOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteOptedOutNumberOutput`](crate::output::DeleteOptedOutNumberOutput).
     pub fn builder() -> crate::output::delete_opted_out_number_output::Builder {
         crate::output::delete_opted_out_number_output::Builder::default()
     }
@@ -4189,14 +4291,19 @@ impl DeleteOptedOutNumberOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteKeywordOutput {
     /// <p>The PhoneNumberArn or PoolArn that the keyword was associated with.</p>
+    #[doc(hidden)]
     pub origination_identity_arn: std::option::Option<std::string::String>,
     /// <p>The PhoneNumberId or PoolId that the keyword was associated with.</p>
+    #[doc(hidden)]
     pub origination_identity: std::option::Option<std::string::String>,
     /// <p>The keyword that was deleted.</p>
+    #[doc(hidden)]
     pub keyword: std::option::Option<std::string::String>,
     /// <p>The message that was associated with the deleted keyword.</p>
+    #[doc(hidden)]
     pub keyword_message: std::option::Option<std::string::String>,
     /// <p>The action that was associated with the deleted keyword.</p>
+    #[doc(hidden)]
     pub keyword_action: std::option::Option<crate::model::KeywordAction>,
 }
 impl DeleteKeywordOutput {
@@ -4232,11 +4339,10 @@ impl std::fmt::Debug for DeleteKeywordOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteKeywordOutput`](crate::output::DeleteKeywordOutput)
+/// See [`DeleteKeywordOutput`](crate::output::DeleteKeywordOutput).
 pub mod delete_keyword_output {
 
-    /// A builder for [`DeleteKeywordOutput`](crate::output::DeleteKeywordOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteKeywordOutput`](crate::output::DeleteKeywordOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) origination_identity_arn: std::option::Option<std::string::String>,
@@ -4308,7 +4414,7 @@ pub mod delete_keyword_output {
             self.keyword_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteKeywordOutput`](crate::output::DeleteKeywordOutput)
+        /// Consumes the builder and constructs a [`DeleteKeywordOutput`](crate::output::DeleteKeywordOutput).
         pub fn build(self) -> crate::output::DeleteKeywordOutput {
             crate::output::DeleteKeywordOutput {
                 origination_identity_arn: self.origination_identity_arn,
@@ -4321,7 +4427,7 @@ pub mod delete_keyword_output {
     }
 }
 impl DeleteKeywordOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteKeywordOutput`](crate::output::DeleteKeywordOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteKeywordOutput`](crate::output::DeleteKeywordOutput).
     pub fn builder() -> crate::output::delete_keyword_output::Builder {
         crate::output::delete_keyword_output::Builder::default()
     }
@@ -4332,10 +4438,13 @@ impl DeleteKeywordOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteEventDestinationOutput {
     /// <p>The Amazon Resource Name (ARN) of the configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_arn: std::option::Option<std::string::String>,
     /// <p>The name of the configuration set the event destination was deleted from.</p>
+    #[doc(hidden)]
     pub configuration_set_name: std::option::Option<std::string::String>,
     /// <p>The event destination object that was deleted.</p>
+    #[doc(hidden)]
     pub event_destination: std::option::Option<crate::model::EventDestination>,
 }
 impl DeleteEventDestinationOutput {
@@ -4361,11 +4470,10 @@ impl std::fmt::Debug for DeleteEventDestinationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteEventDestinationOutput`](crate::output::DeleteEventDestinationOutput)
+/// See [`DeleteEventDestinationOutput`](crate::output::DeleteEventDestinationOutput).
 pub mod delete_event_destination_output {
 
-    /// A builder for [`DeleteEventDestinationOutput`](crate::output::DeleteEventDestinationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteEventDestinationOutput`](crate::output::DeleteEventDestinationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_set_arn: std::option::Option<std::string::String>,
@@ -4412,7 +4520,7 @@ pub mod delete_event_destination_output {
             self.event_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteEventDestinationOutput`](crate::output::DeleteEventDestinationOutput)
+        /// Consumes the builder and constructs a [`DeleteEventDestinationOutput`](crate::output::DeleteEventDestinationOutput).
         pub fn build(self) -> crate::output::DeleteEventDestinationOutput {
             crate::output::DeleteEventDestinationOutput {
                 configuration_set_arn: self.configuration_set_arn,
@@ -4423,7 +4531,7 @@ pub mod delete_event_destination_output {
     }
 }
 impl DeleteEventDestinationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteEventDestinationOutput`](crate::output::DeleteEventDestinationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteEventDestinationOutput`](crate::output::DeleteEventDestinationOutput).
     pub fn builder() -> crate::output::delete_event_destination_output::Builder {
         crate::output::delete_event_destination_output::Builder::default()
     }
@@ -4434,10 +4542,13 @@ impl DeleteEventDestinationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteDefaultSenderIdOutput {
     /// <p>The Amazon Resource Name (ARN) of the configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_arn: std::option::Option<std::string::String>,
     /// <p>The name of the configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_name: std::option::Option<std::string::String>,
     /// <p>The current sender ID for the configuration set.</p>
+    #[doc(hidden)]
     pub sender_id: std::option::Option<std::string::String>,
 }
 impl DeleteDefaultSenderIdOutput {
@@ -4463,11 +4574,10 @@ impl std::fmt::Debug for DeleteDefaultSenderIdOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDefaultSenderIdOutput`](crate::output::DeleteDefaultSenderIdOutput)
+/// See [`DeleteDefaultSenderIdOutput`](crate::output::DeleteDefaultSenderIdOutput).
 pub mod delete_default_sender_id_output {
 
-    /// A builder for [`DeleteDefaultSenderIdOutput`](crate::output::DeleteDefaultSenderIdOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDefaultSenderIdOutput`](crate::output::DeleteDefaultSenderIdOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_set_arn: std::option::Option<std::string::String>,
@@ -4511,7 +4621,7 @@ pub mod delete_default_sender_id_output {
             self.sender_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDefaultSenderIdOutput`](crate::output::DeleteDefaultSenderIdOutput)
+        /// Consumes the builder and constructs a [`DeleteDefaultSenderIdOutput`](crate::output::DeleteDefaultSenderIdOutput).
         pub fn build(self) -> crate::output::DeleteDefaultSenderIdOutput {
             crate::output::DeleteDefaultSenderIdOutput {
                 configuration_set_arn: self.configuration_set_arn,
@@ -4522,7 +4632,7 @@ pub mod delete_default_sender_id_output {
     }
 }
 impl DeleteDefaultSenderIdOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDefaultSenderIdOutput`](crate::output::DeleteDefaultSenderIdOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDefaultSenderIdOutput`](crate::output::DeleteDefaultSenderIdOutput).
     pub fn builder() -> crate::output::delete_default_sender_id_output::Builder {
         crate::output::delete_default_sender_id_output::Builder::default()
     }
@@ -4533,10 +4643,13 @@ impl DeleteDefaultSenderIdOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteDefaultMessageTypeOutput {
     /// <p>The Amazon Resource Name (ARN) of the configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_arn: std::option::Option<std::string::String>,
     /// <p>The name of the configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_name: std::option::Option<std::string::String>,
     /// <p>The current message type for the configuration set.</p>
+    #[doc(hidden)]
     pub message_type: std::option::Option<crate::model::MessageType>,
 }
 impl DeleteDefaultMessageTypeOutput {
@@ -4562,11 +4675,10 @@ impl std::fmt::Debug for DeleteDefaultMessageTypeOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDefaultMessageTypeOutput`](crate::output::DeleteDefaultMessageTypeOutput)
+/// See [`DeleteDefaultMessageTypeOutput`](crate::output::DeleteDefaultMessageTypeOutput).
 pub mod delete_default_message_type_output {
 
-    /// A builder for [`DeleteDefaultMessageTypeOutput`](crate::output::DeleteDefaultMessageTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDefaultMessageTypeOutput`](crate::output::DeleteDefaultMessageTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_set_arn: std::option::Option<std::string::String>,
@@ -4613,7 +4725,7 @@ pub mod delete_default_message_type_output {
             self.message_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDefaultMessageTypeOutput`](crate::output::DeleteDefaultMessageTypeOutput)
+        /// Consumes the builder and constructs a [`DeleteDefaultMessageTypeOutput`](crate::output::DeleteDefaultMessageTypeOutput).
         pub fn build(self) -> crate::output::DeleteDefaultMessageTypeOutput {
             crate::output::DeleteDefaultMessageTypeOutput {
                 configuration_set_arn: self.configuration_set_arn,
@@ -4624,7 +4736,7 @@ pub mod delete_default_message_type_output {
     }
 }
 impl DeleteDefaultMessageTypeOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDefaultMessageTypeOutput`](crate::output::DeleteDefaultMessageTypeOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDefaultMessageTypeOutput`](crate::output::DeleteDefaultMessageTypeOutput).
     pub fn builder() -> crate::output::delete_default_message_type_output::Builder {
         crate::output::delete_default_message_type_output::Builder::default()
     }
@@ -4635,16 +4747,22 @@ impl DeleteDefaultMessageTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteConfigurationSetOutput {
     /// <p>The Amazon Resource Name (ARN) of the deleted configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_arn: std::option::Option<std::string::String>,
     /// <p>The name of the deleted configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_name: std::option::Option<std::string::String>,
     /// <p>An array of any EventDestination objects that were associated with the deleted configuration set.</p>
+    #[doc(hidden)]
     pub event_destinations: std::option::Option<std::vec::Vec<crate::model::EventDestination>>,
     /// <p>The default message type of the configuration set that was deleted.</p>
+    #[doc(hidden)]
     pub default_message_type: std::option::Option<crate::model::MessageType>,
     /// <p>The default Sender ID of the configuration set that was deleted.</p>
+    #[doc(hidden)]
     pub default_sender_id: std::option::Option<std::string::String>,
     /// <p>The time that the deleted configuration set was created in <a href="https://www.epochconverter.com/">UNIX epoch time</a> format.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DeleteConfigurationSetOutput {
@@ -4685,11 +4803,10 @@ impl std::fmt::Debug for DeleteConfigurationSetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteConfigurationSetOutput`](crate::output::DeleteConfigurationSetOutput)
+/// See [`DeleteConfigurationSetOutput`](crate::output::DeleteConfigurationSetOutput).
 pub mod delete_configuration_set_output {
 
-    /// A builder for [`DeleteConfigurationSetOutput`](crate::output::DeleteConfigurationSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteConfigurationSetOutput`](crate::output::DeleteConfigurationSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_set_arn: std::option::Option<std::string::String>,
@@ -4785,7 +4902,7 @@ pub mod delete_configuration_set_output {
             self.created_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteConfigurationSetOutput`](crate::output::DeleteConfigurationSetOutput)
+        /// Consumes the builder and constructs a [`DeleteConfigurationSetOutput`](crate::output::DeleteConfigurationSetOutput).
         pub fn build(self) -> crate::output::DeleteConfigurationSetOutput {
             crate::output::DeleteConfigurationSetOutput {
                 configuration_set_arn: self.configuration_set_arn,
@@ -4799,7 +4916,7 @@ pub mod delete_configuration_set_output {
     }
 }
 impl DeleteConfigurationSetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteConfigurationSetOutput`](crate::output::DeleteConfigurationSetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteConfigurationSetOutput`](crate::output::DeleteConfigurationSetOutput).
     pub fn builder() -> crate::output::delete_configuration_set_output::Builder {
         crate::output::delete_configuration_set_output::Builder::default()
     }
@@ -4810,8 +4927,10 @@ impl DeleteConfigurationSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreatePoolOutput {
     /// <p>The Amazon Resource Name (ARN) for the pool.</p>
+    #[doc(hidden)]
     pub pool_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the pool.</p>
+    #[doc(hidden)]
     pub pool_id: std::option::Option<std::string::String>,
     /// <p>The current status of the pool.</p>
     /// <ul>
@@ -4819,24 +4938,34 @@ pub struct CreatePoolOutput {
     /// <li> <p>ACTIVE: The pool is active and available for use.</p> </li>
     /// <li> <p>DELETING: The pool is being deleted.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::PoolStatus>,
     /// <p>The type of message for the pool to use.</p>
+    #[doc(hidden)]
     pub message_type: std::option::Option<crate::model::MessageType>,
     /// <p>By default this is set to false. When set to true you can receive incoming text messages from your end recipients.</p>
+    #[doc(hidden)]
     pub two_way_enabled: bool,
     /// <p>The Amazon Resource Name (ARN) of the two way channel.</p>
+    #[doc(hidden)]
     pub two_way_channel_arn: std::option::Option<std::string::String>,
     /// <p>By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're also responsible for tracking and honoring opt-out requests.</p>
+    #[doc(hidden)]
     pub self_managed_opt_outs_enabled: bool,
     /// <p>The name of the OptOutList associated with the pool.</p>
+    #[doc(hidden)]
     pub opt_out_list_name: std::option::Option<std::string::String>,
     /// <p>Indicates whether shared routes are enabled for the pool.</p>
+    #[doc(hidden)]
     pub shared_routes_enabled: bool,
     /// <p>When set to true deletion protection is enabled. By default this is set to false. </p>
+    #[doc(hidden)]
     pub deletion_protection_enabled: bool,
     /// <p>An array of tags (key and value pairs) associated with the pool.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The time when the pool was created, in <a href="https://www.epochconverter.com/">UNIX epoch time</a> format.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CreatePoolOutput {
@@ -4918,11 +5047,10 @@ impl std::fmt::Debug for CreatePoolOutput {
         formatter.finish()
     }
 }
-/// See [`CreatePoolOutput`](crate::output::CreatePoolOutput)
+/// See [`CreatePoolOutput`](crate::output::CreatePoolOutput).
 pub mod create_pool_output {
 
-    /// A builder for [`CreatePoolOutput`](crate::output::CreatePoolOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreatePoolOutput`](crate::output::CreatePoolOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pool_arn: std::option::Option<std::string::String>,
@@ -5093,7 +5221,7 @@ pub mod create_pool_output {
             self.created_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreatePoolOutput`](crate::output::CreatePoolOutput)
+        /// Consumes the builder and constructs a [`CreatePoolOutput`](crate::output::CreatePoolOutput).
         pub fn build(self) -> crate::output::CreatePoolOutput {
             crate::output::CreatePoolOutput {
                 pool_arn: self.pool_arn,
@@ -5115,7 +5243,7 @@ pub mod create_pool_output {
     }
 }
 impl CreatePoolOutput {
-    /// Creates a new builder-style object to manufacture [`CreatePoolOutput`](crate::output::CreatePoolOutput)
+    /// Creates a new builder-style object to manufacture [`CreatePoolOutput`](crate::output::CreatePoolOutput).
     pub fn builder() -> crate::output::create_pool_output::Builder {
         crate::output::create_pool_output::Builder::default()
     }
@@ -5126,12 +5254,16 @@ impl CreatePoolOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateOptOutListOutput {
     /// <p>The Amazon Resource Name (ARN) for the OptOutList.</p>
+    #[doc(hidden)]
     pub opt_out_list_arn: std::option::Option<std::string::String>,
     /// <p>The name of the new OptOutList.</p>
+    #[doc(hidden)]
     pub opt_out_list_name: std::option::Option<std::string::String>,
     /// <p>An array of tags (key and value pairs) associated with the new OptOutList.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The time when the pool was created, in <a href="https://www.epochconverter.com/">UNIX epoch time</a> format.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CreateOptOutListOutput {
@@ -5162,11 +5294,10 @@ impl std::fmt::Debug for CreateOptOutListOutput {
         formatter.finish()
     }
 }
-/// See [`CreateOptOutListOutput`](crate::output::CreateOptOutListOutput)
+/// See [`CreateOptOutListOutput`](crate::output::CreateOptOutListOutput).
 pub mod create_opt_out_list_output {
 
-    /// A builder for [`CreateOptOutListOutput`](crate::output::CreateOptOutListOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateOptOutListOutput`](crate::output::CreateOptOutListOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) opt_out_list_arn: std::option::Option<std::string::String>,
@@ -5233,7 +5364,7 @@ pub mod create_opt_out_list_output {
             self.created_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateOptOutListOutput`](crate::output::CreateOptOutListOutput)
+        /// Consumes the builder and constructs a [`CreateOptOutListOutput`](crate::output::CreateOptOutListOutput).
         pub fn build(self) -> crate::output::CreateOptOutListOutput {
             crate::output::CreateOptOutListOutput {
                 opt_out_list_arn: self.opt_out_list_arn,
@@ -5245,7 +5376,7 @@ pub mod create_opt_out_list_output {
     }
 }
 impl CreateOptOutListOutput {
-    /// Creates a new builder-style object to manufacture [`CreateOptOutListOutput`](crate::output::CreateOptOutListOutput)
+    /// Creates a new builder-style object to manufacture [`CreateOptOutListOutput`](crate::output::CreateOptOutListOutput).
     pub fn builder() -> crate::output::create_opt_out_list_output::Builder {
         crate::output::create_opt_out_list_output::Builder::default()
     }
@@ -5256,10 +5387,13 @@ impl CreateOptOutListOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateEventDestinationOutput {
     /// <p>The ARN of the configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_arn: std::option::Option<std::string::String>,
     /// <p>The name of the configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_name: std::option::Option<std::string::String>,
     /// <p>The details of the destination where events are logged.</p>
+    #[doc(hidden)]
     pub event_destination: std::option::Option<crate::model::EventDestination>,
 }
 impl CreateEventDestinationOutput {
@@ -5285,11 +5419,10 @@ impl std::fmt::Debug for CreateEventDestinationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateEventDestinationOutput`](crate::output::CreateEventDestinationOutput)
+/// See [`CreateEventDestinationOutput`](crate::output::CreateEventDestinationOutput).
 pub mod create_event_destination_output {
 
-    /// A builder for [`CreateEventDestinationOutput`](crate::output::CreateEventDestinationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateEventDestinationOutput`](crate::output::CreateEventDestinationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_set_arn: std::option::Option<std::string::String>,
@@ -5336,7 +5469,7 @@ pub mod create_event_destination_output {
             self.event_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateEventDestinationOutput`](crate::output::CreateEventDestinationOutput)
+        /// Consumes the builder and constructs a [`CreateEventDestinationOutput`](crate::output::CreateEventDestinationOutput).
         pub fn build(self) -> crate::output::CreateEventDestinationOutput {
             crate::output::CreateEventDestinationOutput {
                 configuration_set_arn: self.configuration_set_arn,
@@ -5347,7 +5480,7 @@ pub mod create_event_destination_output {
     }
 }
 impl CreateEventDestinationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateEventDestinationOutput`](crate::output::CreateEventDestinationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateEventDestinationOutput`](crate::output::CreateEventDestinationOutput).
     pub fn builder() -> crate::output::create_event_destination_output::Builder {
         crate::output::create_event_destination_output::Builder::default()
     }
@@ -5358,12 +5491,16 @@ impl CreateEventDestinationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateConfigurationSetOutput {
     /// <p>The Amazon Resource Name (ARN) of the newly created configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_arn: std::option::Option<std::string::String>,
     /// <p>The name of the new configuration set.</p>
+    #[doc(hidden)]
     pub configuration_set_name: std::option::Option<std::string::String>,
     /// <p>An array of key and value pair tags that's associated with the configuration set.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The time when the configuration set was created, in <a href="https://www.epochconverter.com/">UNIX epoch time</a> format.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CreateConfigurationSetOutput {
@@ -5394,11 +5531,10 @@ impl std::fmt::Debug for CreateConfigurationSetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateConfigurationSetOutput`](crate::output::CreateConfigurationSetOutput)
+/// See [`CreateConfigurationSetOutput`](crate::output::CreateConfigurationSetOutput).
 pub mod create_configuration_set_output {
 
-    /// A builder for [`CreateConfigurationSetOutput`](crate::output::CreateConfigurationSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateConfigurationSetOutput`](crate::output::CreateConfigurationSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_set_arn: std::option::Option<std::string::String>,
@@ -5465,7 +5601,7 @@ pub mod create_configuration_set_output {
             self.created_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateConfigurationSetOutput`](crate::output::CreateConfigurationSetOutput)
+        /// Consumes the builder and constructs a [`CreateConfigurationSetOutput`](crate::output::CreateConfigurationSetOutput).
         pub fn build(self) -> crate::output::CreateConfigurationSetOutput {
             crate::output::CreateConfigurationSetOutput {
                 configuration_set_arn: self.configuration_set_arn,
@@ -5477,7 +5613,7 @@ pub mod create_configuration_set_output {
     }
 }
 impl CreateConfigurationSetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateConfigurationSetOutput`](crate::output::CreateConfigurationSetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateConfigurationSetOutput`](crate::output::CreateConfigurationSetOutput).
     pub fn builder() -> crate::output::create_configuration_set_output::Builder {
         crate::output::create_configuration_set_output::Builder::default()
     }
@@ -5488,14 +5624,19 @@ impl CreateConfigurationSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateOriginationIdentityOutput {
     /// <p>The Amazon Resource Name (ARN) of the pool that is now associated with the origination identity.</p>
+    #[doc(hidden)]
     pub pool_arn: std::option::Option<std::string::String>,
     /// <p>The PoolId of the pool that is now associated with the origination identity.</p>
+    #[doc(hidden)]
     pub pool_id: std::option::Option<std::string::String>,
     /// <p>The PhoneNumberArn or SenderIdArn of the origination identity.</p>
+    #[doc(hidden)]
     pub origination_identity_arn: std::option::Option<std::string::String>,
     /// <p>The PhoneNumberId or SenderId of the origination identity.</p>
+    #[doc(hidden)]
     pub origination_identity: std::option::Option<std::string::String>,
     /// <p>The two-character code, in ISO 3166-1 alpha-2 format, for the country or region. </p>
+    #[doc(hidden)]
     pub iso_country_code: std::option::Option<std::string::String>,
 }
 impl AssociateOriginationIdentityOutput {
@@ -5531,11 +5672,10 @@ impl std::fmt::Debug for AssociateOriginationIdentityOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateOriginationIdentityOutput`](crate::output::AssociateOriginationIdentityOutput)
+/// See [`AssociateOriginationIdentityOutput`](crate::output::AssociateOriginationIdentityOutput).
 pub mod associate_origination_identity_output {
 
-    /// A builder for [`AssociateOriginationIdentityOutput`](crate::output::AssociateOriginationIdentityOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateOriginationIdentityOutput`](crate::output::AssociateOriginationIdentityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pool_arn: std::option::Option<std::string::String>,
@@ -5604,7 +5744,7 @@ pub mod associate_origination_identity_output {
             self.iso_country_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateOriginationIdentityOutput`](crate::output::AssociateOriginationIdentityOutput)
+        /// Consumes the builder and constructs a [`AssociateOriginationIdentityOutput`](crate::output::AssociateOriginationIdentityOutput).
         pub fn build(self) -> crate::output::AssociateOriginationIdentityOutput {
             crate::output::AssociateOriginationIdentityOutput {
                 pool_arn: self.pool_arn,
@@ -5617,7 +5757,7 @@ pub mod associate_origination_identity_output {
     }
 }
 impl AssociateOriginationIdentityOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateOriginationIdentityOutput`](crate::output::AssociateOriginationIdentityOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateOriginationIdentityOutput`](crate::output::AssociateOriginationIdentityOutput).
     pub fn builder() -> crate::output::associate_origination_identity_output::Builder {
         crate::output::associate_origination_identity_output::Builder::default()
     }

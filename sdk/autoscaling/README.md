@@ -3,9 +3,9 @@
 **Please Note: The SDK is currently in Developer Preview and is intended strictly for
 feedback purposes only. Do not use this SDK for production workloads.**
 
-Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined scaling policies, scheduled actions, and health checks.
+Amazon EC2 Auto Scaling is designed to automatically launch and terminate EC2 instances based on user-defined scaling policies, scheduled actions, and health checks.
 
-For more information about Amazon EC2 Auto Scaling, see the [Amazon EC2 Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html). For information about granting IAM users required permissions for calls to Amazon EC2 Auto Scaling, see [Granting IAM users required permissions for Amazon EC2 Auto Scaling resources](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/ec2-auto-scaling-api-permissions.html) in the _Amazon EC2 Auto Scaling API Reference_.
+For more information, see the [Amazon EC2 Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/ec2/userguide/) and the [Amazon EC2 Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/Welcome.html).
 
 ## Getting Started
 
@@ -18,10 +18,29 @@ your project, add the following to your **Cargo.toml** file:
 
 ```toml
 [dependencies]
-aws-config = "0.14.0"
-aws-sdk-autoscaling = "0.14.0"
+aws-config = "0.47.0"
+aws-sdk-autoscaling = "0.17.0"
 tokio = { version = "1", features = ["full"] }
 ```
+
+Then in code, a client can be created with the following:
+
+```rust
+use aws_sdk_autoscaling as autoscaling;
+
+#[tokio::main]
+async fn main() -> Result<(), autoscaling::Error> {
+    let config = aws_config::load_from_env().await;
+    let client = autoscaling::Client::new(&config);
+
+    // ... make some calls with the client
+
+    Ok(())
+}
+```
+
+See the [client documentation](https://docs.rs/aws-sdk-autoscaling/latest/aws_sdk_autoscaling/client/struct.Client.html)
+for information on what calls can be made, and the inputs and outputs for each of those calls.
 
 ## Using the SDK
 

@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key of the tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -68,7 +69,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -79,8 +80,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DestinationConfig {
     /// <p>The name of the IoT thing to which you want to connect.</p>
+    #[doc(hidden)]
     pub thing_name: std::option::Option<std::string::String>,
     /// <p>A list of service names that identify the target application. The IoT client running on the destination device reads this value and uses it to look up a port or an IP address and a port. The IoT client instantiates the local proxy, which uses this information to connect to the destination application.</p>
+    #[doc(hidden)]
     pub services: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DestinationConfig {
@@ -101,11 +104,10 @@ impl std::fmt::Debug for DestinationConfig {
         formatter.finish()
     }
 }
-/// See [`DestinationConfig`](crate::model::DestinationConfig)
+/// See [`DestinationConfig`](crate::model::DestinationConfig).
 pub mod destination_config {
 
-    /// A builder for [`DestinationConfig`](crate::model::DestinationConfig)
-    #[non_exhaustive]
+    /// A builder for [`DestinationConfig`](crate::model::DestinationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_name: std::option::Option<std::string::String>,
@@ -141,7 +143,7 @@ pub mod destination_config {
             self.services = input;
             self
         }
-        /// Consumes the builder and constructs a [`DestinationConfig`](crate::model::DestinationConfig)
+        /// Consumes the builder and constructs a [`DestinationConfig`](crate::model::DestinationConfig).
         pub fn build(self) -> crate::model::DestinationConfig {
             crate::model::DestinationConfig {
                 thing_name: self.thing_name,
@@ -151,7 +153,7 @@ pub mod destination_config {
     }
 }
 impl DestinationConfig {
-    /// Creates a new builder-style object to manufacture [`DestinationConfig`](crate::model::DestinationConfig)
+    /// Creates a new builder-style object to manufacture [`DestinationConfig`](crate::model::DestinationConfig).
     pub fn builder() -> crate::model::destination_config::Builder {
         crate::model::destination_config::Builder::default()
     }
@@ -221,6 +223,7 @@ impl AsRef<str> for ClientMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimeoutConfig {
     /// <p>The maximum amount of time (in minutes) a tunnel can remain open. If not specified, maxLifetimeTimeoutMinutes defaults to 720 minutes. Valid values are from 1 minute to 12 hours (720 minutes) </p>
+    #[doc(hidden)]
     pub max_lifetime_timeout_minutes: std::option::Option<i32>,
 }
 impl TimeoutConfig {
@@ -239,11 +242,10 @@ impl std::fmt::Debug for TimeoutConfig {
         formatter.finish()
     }
 }
-/// See [`TimeoutConfig`](crate::model::TimeoutConfig)
+/// See [`TimeoutConfig`](crate::model::TimeoutConfig).
 pub mod timeout_config {
 
-    /// A builder for [`TimeoutConfig`](crate::model::TimeoutConfig)
-    #[non_exhaustive]
+    /// A builder for [`TimeoutConfig`](crate::model::TimeoutConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_lifetime_timeout_minutes: std::option::Option<i32>,
@@ -259,7 +261,7 @@ pub mod timeout_config {
             self.max_lifetime_timeout_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimeoutConfig`](crate::model::TimeoutConfig)
+        /// Consumes the builder and constructs a [`TimeoutConfig`](crate::model::TimeoutConfig).
         pub fn build(self) -> crate::model::TimeoutConfig {
             crate::model::TimeoutConfig {
                 max_lifetime_timeout_minutes: self.max_lifetime_timeout_minutes,
@@ -268,7 +270,7 @@ pub mod timeout_config {
     }
 }
 impl TimeoutConfig {
-    /// Creates a new builder-style object to manufacture [`TimeoutConfig`](crate::model::TimeoutConfig)
+    /// Creates a new builder-style object to manufacture [`TimeoutConfig`](crate::model::TimeoutConfig).
     pub fn builder() -> crate::model::timeout_config::Builder {
         crate::model::timeout_config::Builder::default()
     }
@@ -279,16 +281,22 @@ impl TimeoutConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TunnelSummary {
     /// <p>The unique alpha-numeric identifier for the tunnel.</p>
+    #[doc(hidden)]
     pub tunnel_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name of the tunnel. </p>
+    #[doc(hidden)]
     pub tunnel_arn: std::option::Option<std::string::String>,
     /// <p>The status of a tunnel. Valid values are: Open and Closed.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TunnelStatus>,
     /// <p>A description of the tunnel.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The time the tunnel was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time the tunnel was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TunnelSummary {
@@ -329,11 +337,10 @@ impl std::fmt::Debug for TunnelSummary {
         formatter.finish()
     }
 }
-/// See [`TunnelSummary`](crate::model::TunnelSummary)
+/// See [`TunnelSummary`](crate::model::TunnelSummary).
 pub mod tunnel_summary {
 
-    /// A builder for [`TunnelSummary`](crate::model::TunnelSummary)
-    #[non_exhaustive]
+    /// A builder for [`TunnelSummary`](crate::model::TunnelSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tunnel_id: std::option::Option<std::string::String>,
@@ -413,7 +420,7 @@ pub mod tunnel_summary {
             self.last_updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`TunnelSummary`](crate::model::TunnelSummary)
+        /// Consumes the builder and constructs a [`TunnelSummary`](crate::model::TunnelSummary).
         pub fn build(self) -> crate::model::TunnelSummary {
             crate::model::TunnelSummary {
                 tunnel_id: self.tunnel_id,
@@ -427,7 +434,7 @@ pub mod tunnel_summary {
     }
 }
 impl TunnelSummary {
-    /// Creates a new builder-style object to manufacture [`TunnelSummary`](crate::model::TunnelSummary)
+    /// Creates a new builder-style object to manufacture [`TunnelSummary`](crate::model::TunnelSummary).
     pub fn builder() -> crate::model::tunnel_summary::Builder {
         crate::model::tunnel_summary::Builder::default()
     }
@@ -493,26 +500,37 @@ impl AsRef<str> for TunnelStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tunnel {
     /// <p>A unique alpha-numeric ID that identifies a tunnel.</p>
+    #[doc(hidden)]
     pub tunnel_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of a tunnel.</p>
+    #[doc(hidden)]
     pub tunnel_arn: std::option::Option<std::string::String>,
     /// <p>The status of a tunnel. Valid values are: Open and Closed.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TunnelStatus>,
     /// <p>The connection state of the source application.</p>
+    #[doc(hidden)]
     pub source_connection_state: std::option::Option<crate::model::ConnectionState>,
     /// <p>The connection state of the destination application.</p>
+    #[doc(hidden)]
     pub destination_connection_state: std::option::Option<crate::model::ConnectionState>,
     /// <p>A description of the tunnel.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The destination configuration that specifies the thing name of the destination device and a service name that the local proxy uses to connect to the destination application.</p>
+    #[doc(hidden)]
     pub destination_config: std::option::Option<crate::model::DestinationConfig>,
     /// <p>Timeout configuration for the tunnel.</p>
+    #[doc(hidden)]
     pub timeout_config: std::option::Option<crate::model::TimeoutConfig>,
     /// <p>A list of tag metadata associated with the secure tunnel.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The time when the tunnel was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last time the tunnel was updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Tunnel {
@@ -583,11 +601,10 @@ impl std::fmt::Debug for Tunnel {
         formatter.finish()
     }
 }
-/// See [`Tunnel`](crate::model::Tunnel)
+/// See [`Tunnel`](crate::model::Tunnel).
 pub mod tunnel {
 
-    /// A builder for [`Tunnel`](crate::model::Tunnel)
-    #[non_exhaustive]
+    /// A builder for [`Tunnel`](crate::model::Tunnel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tunnel_id: std::option::Option<std::string::String>,
@@ -746,7 +763,7 @@ pub mod tunnel {
             self.last_updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tunnel`](crate::model::Tunnel)
+        /// Consumes the builder and constructs a [`Tunnel`](crate::model::Tunnel).
         pub fn build(self) -> crate::model::Tunnel {
             crate::model::Tunnel {
                 tunnel_id: self.tunnel_id,
@@ -765,7 +782,7 @@ pub mod tunnel {
     }
 }
 impl Tunnel {
-    /// Creates a new builder-style object to manufacture [`Tunnel`](crate::model::Tunnel)
+    /// Creates a new builder-style object to manufacture [`Tunnel`](crate::model::Tunnel).
     pub fn builder() -> crate::model::tunnel::Builder {
         crate::model::tunnel::Builder::default()
     }
@@ -776,8 +793,10 @@ impl Tunnel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectionState {
     /// <p>The connection status of the tunnel. Valid values are <code>CONNECTED</code> and <code>DISCONNECTED</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ConnectionStatus>,
     /// <p>The last time the connection status was updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ConnectionState {
@@ -798,11 +817,10 @@ impl std::fmt::Debug for ConnectionState {
         formatter.finish()
     }
 }
-/// See [`ConnectionState`](crate::model::ConnectionState)
+/// See [`ConnectionState`](crate::model::ConnectionState).
 pub mod connection_state {
 
-    /// A builder for [`ConnectionState`](crate::model::ConnectionState)
-    #[non_exhaustive]
+    /// A builder for [`ConnectionState`](crate::model::ConnectionState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ConnectionStatus>,
@@ -835,7 +853,7 @@ pub mod connection_state {
             self.last_updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectionState`](crate::model::ConnectionState)
+        /// Consumes the builder and constructs a [`ConnectionState`](crate::model::ConnectionState).
         pub fn build(self) -> crate::model::ConnectionState {
             crate::model::ConnectionState {
                 status: self.status,
@@ -845,7 +863,7 @@ pub mod connection_state {
     }
 }
 impl ConnectionState {
-    /// Creates a new builder-style object to manufacture [`ConnectionState`](crate::model::ConnectionState)
+    /// Creates a new builder-style object to manufacture [`ConnectionState`](crate::model::ConnectionState).
     pub fn builder() -> crate::model::connection_state::Builder {
         crate::model::connection_state::Builder::default()
     }

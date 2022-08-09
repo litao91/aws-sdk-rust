@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateThingShadowOutput {
     /// <p>The state information, in JSON format.</p>
+    #[doc(hidden)]
     pub payload: std::option::Option<aws_smithy_types::Blob>,
 }
 impl UpdateThingShadowOutput {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for UpdateThingShadowOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateThingShadowOutput`](crate::output::UpdateThingShadowOutput)
+/// See [`UpdateThingShadowOutput`](crate::output::UpdateThingShadowOutput).
 pub mod update_thing_shadow_output {
 
-    /// A builder for [`UpdateThingShadowOutput`](crate::output::UpdateThingShadowOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateThingShadowOutput`](crate::output::UpdateThingShadowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) payload: std::option::Option<aws_smithy_types::Blob>,
@@ -40,7 +40,7 @@ pub mod update_thing_shadow_output {
             self.payload = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateThingShadowOutput`](crate::output::UpdateThingShadowOutput)
+        /// Consumes the builder and constructs a [`UpdateThingShadowOutput`](crate::output::UpdateThingShadowOutput).
         pub fn build(self) -> crate::output::UpdateThingShadowOutput {
             crate::output::UpdateThingShadowOutput {
                 payload: self.payload,
@@ -49,7 +49,7 @@ pub mod update_thing_shadow_output {
     }
 }
 impl UpdateThingShadowOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateThingShadowOutput`](crate::output::UpdateThingShadowOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateThingShadowOutput`](crate::output::UpdateThingShadowOutput).
     pub fn builder() -> crate::output::update_thing_shadow_output::Builder {
         crate::output::update_thing_shadow_output::Builder::default()
     }
@@ -65,22 +65,21 @@ impl std::fmt::Debug for PublishOutput {
         formatter.finish()
     }
 }
-/// See [`PublishOutput`](crate::output::PublishOutput)
+/// See [`PublishOutput`](crate::output::PublishOutput).
 pub mod publish_output {
 
-    /// A builder for [`PublishOutput`](crate::output::PublishOutput)
-    #[non_exhaustive]
+    /// A builder for [`PublishOutput`](crate::output::PublishOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PublishOutput`](crate::output::PublishOutput)
+        /// Consumes the builder and constructs a [`PublishOutput`](crate::output::PublishOutput).
         pub fn build(self) -> crate::output::PublishOutput {
             crate::output::PublishOutput {}
         }
     }
 }
 impl PublishOutput {
-    /// Creates a new builder-style object to manufacture [`PublishOutput`](crate::output::PublishOutput)
+    /// Creates a new builder-style object to manufacture [`PublishOutput`](crate::output::PublishOutput).
     pub fn builder() -> crate::output::publish_output::Builder {
         crate::output::publish_output::Builder::default()
     }
@@ -91,8 +90,10 @@ impl PublishOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRetainedMessagesOutput {
     /// <p>A summary list the account's retained messages. The information returned doesn't include the message payloads of the retained messages.</p>
+    #[doc(hidden)]
     pub retained_topics: std::option::Option<std::vec::Vec<crate::model::RetainedMessageSummary>>,
     /// <p>The token for the next set of results, or null if there are no additional results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListRetainedMessagesOutput {
@@ -113,11 +114,10 @@ impl std::fmt::Debug for ListRetainedMessagesOutput {
         formatter.finish()
     }
 }
-/// See [`ListRetainedMessagesOutput`](crate::output::ListRetainedMessagesOutput)
+/// See [`ListRetainedMessagesOutput`](crate::output::ListRetainedMessagesOutput).
 pub mod list_retained_messages_output {
 
-    /// A builder for [`ListRetainedMessagesOutput`](crate::output::ListRetainedMessagesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRetainedMessagesOutput`](crate::output::ListRetainedMessagesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) retained_topics:
@@ -154,7 +154,7 @@ pub mod list_retained_messages_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRetainedMessagesOutput`](crate::output::ListRetainedMessagesOutput)
+        /// Consumes the builder and constructs a [`ListRetainedMessagesOutput`](crate::output::ListRetainedMessagesOutput).
         pub fn build(self) -> crate::output::ListRetainedMessagesOutput {
             crate::output::ListRetainedMessagesOutput {
                 retained_topics: self.retained_topics,
@@ -164,7 +164,7 @@ pub mod list_retained_messages_output {
     }
 }
 impl ListRetainedMessagesOutput {
-    /// Creates a new builder-style object to manufacture [`ListRetainedMessagesOutput`](crate::output::ListRetainedMessagesOutput)
+    /// Creates a new builder-style object to manufacture [`ListRetainedMessagesOutput`](crate::output::ListRetainedMessagesOutput).
     pub fn builder() -> crate::output::list_retained_messages_output::Builder {
         crate::output::list_retained_messages_output::Builder::default()
     }
@@ -175,10 +175,13 @@ impl ListRetainedMessagesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListNamedShadowsForThingOutput {
     /// <p>The list of shadows for the specified thing.</p>
+    #[doc(hidden)]
     pub results: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The Epoch date and time the response was generated by IoT.</p>
+    #[doc(hidden)]
     pub timestamp: i64,
 }
 impl ListNamedShadowsForThingOutput {
@@ -204,11 +207,10 @@ impl std::fmt::Debug for ListNamedShadowsForThingOutput {
         formatter.finish()
     }
 }
-/// See [`ListNamedShadowsForThingOutput`](crate::output::ListNamedShadowsForThingOutput)
+/// See [`ListNamedShadowsForThingOutput`](crate::output::ListNamedShadowsForThingOutput).
 pub mod list_named_shadows_for_thing_output {
 
-    /// A builder for [`ListNamedShadowsForThingOutput`](crate::output::ListNamedShadowsForThingOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListNamedShadowsForThingOutput`](crate::output::ListNamedShadowsForThingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) results: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -255,7 +257,7 @@ pub mod list_named_shadows_for_thing_output {
             self.timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListNamedShadowsForThingOutput`](crate::output::ListNamedShadowsForThingOutput)
+        /// Consumes the builder and constructs a [`ListNamedShadowsForThingOutput`](crate::output::ListNamedShadowsForThingOutput).
         pub fn build(self) -> crate::output::ListNamedShadowsForThingOutput {
             crate::output::ListNamedShadowsForThingOutput {
                 results: self.results,
@@ -266,7 +268,7 @@ pub mod list_named_shadows_for_thing_output {
     }
 }
 impl ListNamedShadowsForThingOutput {
-    /// Creates a new builder-style object to manufacture [`ListNamedShadowsForThingOutput`](crate::output::ListNamedShadowsForThingOutput)
+    /// Creates a new builder-style object to manufacture [`ListNamedShadowsForThingOutput`](crate::output::ListNamedShadowsForThingOutput).
     pub fn builder() -> crate::output::list_named_shadows_for_thing_output::Builder {
         crate::output::list_named_shadows_for_thing_output::Builder::default()
     }
@@ -277,6 +279,7 @@ impl ListNamedShadowsForThingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetThingShadowOutput {
     /// <p>The state information, in JSON format.</p>
+    #[doc(hidden)]
     pub payload: std::option::Option<aws_smithy_types::Blob>,
 }
 impl GetThingShadowOutput {
@@ -292,11 +295,10 @@ impl std::fmt::Debug for GetThingShadowOutput {
         formatter.finish()
     }
 }
-/// See [`GetThingShadowOutput`](crate::output::GetThingShadowOutput)
+/// See [`GetThingShadowOutput`](crate::output::GetThingShadowOutput).
 pub mod get_thing_shadow_output {
 
-    /// A builder for [`GetThingShadowOutput`](crate::output::GetThingShadowOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetThingShadowOutput`](crate::output::GetThingShadowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) payload: std::option::Option<aws_smithy_types::Blob>,
@@ -312,7 +314,7 @@ pub mod get_thing_shadow_output {
             self.payload = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetThingShadowOutput`](crate::output::GetThingShadowOutput)
+        /// Consumes the builder and constructs a [`GetThingShadowOutput`](crate::output::GetThingShadowOutput).
         pub fn build(self) -> crate::output::GetThingShadowOutput {
             crate::output::GetThingShadowOutput {
                 payload: self.payload,
@@ -321,7 +323,7 @@ pub mod get_thing_shadow_output {
     }
 }
 impl GetThingShadowOutput {
-    /// Creates a new builder-style object to manufacture [`GetThingShadowOutput`](crate::output::GetThingShadowOutput)
+    /// Creates a new builder-style object to manufacture [`GetThingShadowOutput`](crate::output::GetThingShadowOutput).
     pub fn builder() -> crate::output::get_thing_shadow_output::Builder {
         crate::output::get_thing_shadow_output::Builder::default()
     }
@@ -332,12 +334,16 @@ impl GetThingShadowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRetainedMessageOutput {
     /// <p>The topic name to which the retained message was published.</p>
+    #[doc(hidden)]
     pub topic: std::option::Option<std::string::String>,
     /// <p>The Base64-encoded message payload of the retained message body.</p>
+    #[doc(hidden)]
     pub payload: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The quality of service (QoS) level used to publish the retained message.</p>
+    #[doc(hidden)]
     pub qos: i32,
     /// <p>The Epoch date and time, in milliseconds, when the retained message was stored by IoT.</p>
+    #[doc(hidden)]
     pub last_modified_time: i64,
 }
 impl GetRetainedMessageOutput {
@@ -368,11 +374,10 @@ impl std::fmt::Debug for GetRetainedMessageOutput {
         formatter.finish()
     }
 }
-/// See [`GetRetainedMessageOutput`](crate::output::GetRetainedMessageOutput)
+/// See [`GetRetainedMessageOutput`](crate::output::GetRetainedMessageOutput).
 pub mod get_retained_message_output {
 
-    /// A builder for [`GetRetainedMessageOutput`](crate::output::GetRetainedMessageOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRetainedMessageOutput`](crate::output::GetRetainedMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) topic: std::option::Option<std::string::String>,
@@ -421,7 +426,7 @@ pub mod get_retained_message_output {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRetainedMessageOutput`](crate::output::GetRetainedMessageOutput)
+        /// Consumes the builder and constructs a [`GetRetainedMessageOutput`](crate::output::GetRetainedMessageOutput).
         pub fn build(self) -> crate::output::GetRetainedMessageOutput {
             crate::output::GetRetainedMessageOutput {
                 topic: self.topic,
@@ -433,7 +438,7 @@ pub mod get_retained_message_output {
     }
 }
 impl GetRetainedMessageOutput {
-    /// Creates a new builder-style object to manufacture [`GetRetainedMessageOutput`](crate::output::GetRetainedMessageOutput)
+    /// Creates a new builder-style object to manufacture [`GetRetainedMessageOutput`](crate::output::GetRetainedMessageOutput).
     pub fn builder() -> crate::output::get_retained_message_output::Builder {
         crate::output::get_retained_message_output::Builder::default()
     }
@@ -444,6 +449,7 @@ impl GetRetainedMessageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteThingShadowOutput {
     /// <p>The state information, in JSON format.</p>
+    #[doc(hidden)]
     pub payload: std::option::Option<aws_smithy_types::Blob>,
 }
 impl DeleteThingShadowOutput {
@@ -459,11 +465,10 @@ impl std::fmt::Debug for DeleteThingShadowOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteThingShadowOutput`](crate::output::DeleteThingShadowOutput)
+/// See [`DeleteThingShadowOutput`](crate::output::DeleteThingShadowOutput).
 pub mod delete_thing_shadow_output {
 
-    /// A builder for [`DeleteThingShadowOutput`](crate::output::DeleteThingShadowOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteThingShadowOutput`](crate::output::DeleteThingShadowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) payload: std::option::Option<aws_smithy_types::Blob>,
@@ -479,7 +484,7 @@ pub mod delete_thing_shadow_output {
             self.payload = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteThingShadowOutput`](crate::output::DeleteThingShadowOutput)
+        /// Consumes the builder and constructs a [`DeleteThingShadowOutput`](crate::output::DeleteThingShadowOutput).
         pub fn build(self) -> crate::output::DeleteThingShadowOutput {
             crate::output::DeleteThingShadowOutput {
                 payload: self.payload,
@@ -488,7 +493,7 @@ pub mod delete_thing_shadow_output {
     }
 }
 impl DeleteThingShadowOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteThingShadowOutput`](crate::output::DeleteThingShadowOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteThingShadowOutput`](crate::output::DeleteThingShadowOutput).
     pub fn builder() -> crate::output::delete_thing_shadow_output::Builder {
         crate::output::delete_thing_shadow_output::Builder::default()
     }

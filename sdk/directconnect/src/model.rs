@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -68,7 +69,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -79,16 +80,22 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BgpPeer {
     /// <p>The ID of the BGP peer.</p>
+    #[doc(hidden)]
     pub bgp_peer_id: std::option::Option<std::string::String>,
     /// <p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p>
+    #[doc(hidden)]
     pub asn: i32,
     /// <p>The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters.</p>
+    #[doc(hidden)]
     pub auth_key: std::option::Option<std::string::String>,
     /// <p>The address family for the BGP peer.</p>
+    #[doc(hidden)]
     pub address_family: std::option::Option<crate::model::AddressFamily>,
     /// <p>The IP address assigned to the Amazon interface.</p>
+    #[doc(hidden)]
     pub amazon_address: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the customer interface.</p>
+    #[doc(hidden)]
     pub customer_address: std::option::Option<std::string::String>,
     /// <p>The state of the BGP peer. The following are the possible values:</p>
     /// <ul>
@@ -98,6 +105,7 @@ pub struct BgpPeer {
     /// <li> <p> <code>deleting</code>: The BGP peer is being deleted.</p> </li>
     /// <li> <p> <code>deleted</code>: The BGP peer is deleted and cannot be established.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub bgp_peer_state: std::option::Option<crate::model::BgpPeerState>,
     /// <p>The status of the BGP peer. The following are the possible values:</p>
     /// <ul>
@@ -105,10 +113,13 @@ pub struct BgpPeer {
     /// <li> <p> <code>down</code>: The BGP peer is down.</p> </li>
     /// <li> <p> <code>unknown</code>: The BGP peer status is not available.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub bgp_status: std::option::Option<crate::model::BgpStatus>,
     /// <p>The Direct Connect endpoint that terminates the BGP peer.</p>
+    #[doc(hidden)]
     pub aws_device_v2: std::option::Option<std::string::String>,
     /// <p>The Direct Connect endpoint that terminates the logical connection. This device might be different than the device that terminates the physical connection.</p>
+    #[doc(hidden)]
     pub aws_logical_device_id: std::option::Option<std::string::String>,
 }
 impl BgpPeer {
@@ -181,11 +192,10 @@ impl std::fmt::Debug for BgpPeer {
         formatter.finish()
     }
 }
-/// See [`BgpPeer`](crate::model::BgpPeer)
+/// See [`BgpPeer`](crate::model::BgpPeer).
 pub mod bgp_peer {
 
-    /// A builder for [`BgpPeer`](crate::model::BgpPeer)
-    #[non_exhaustive]
+    /// A builder for [`BgpPeer`](crate::model::BgpPeer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bgp_peer_id: std::option::Option<std::string::String>,
@@ -345,7 +355,7 @@ pub mod bgp_peer {
             self.aws_logical_device_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`BgpPeer`](crate::model::BgpPeer)
+        /// Consumes the builder and constructs a [`BgpPeer`](crate::model::BgpPeer).
         pub fn build(self) -> crate::model::BgpPeer {
             crate::model::BgpPeer {
                 bgp_peer_id: self.bgp_peer_id,
@@ -363,7 +373,7 @@ pub mod bgp_peer {
     }
 }
 impl BgpPeer {
-    /// Creates a new builder-style object to manufacture [`BgpPeer`](crate::model::BgpPeer)
+    /// Creates a new builder-style object to manufacture [`BgpPeer`](crate::model::BgpPeer).
     pub fn builder() -> crate::model::bgp_peer::Builder {
         crate::model::bgp_peer::Builder::default()
     }
@@ -555,6 +565,7 @@ impl AsRef<str> for AddressFamily {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RouteFilterPrefix {
     /// <p>The CIDR block for the advertised route. Separate multiple routes using commas. An IPv6 CIDR must use /64 or shorter.</p>
+    #[doc(hidden)]
     pub cidr: std::option::Option<std::string::String>,
 }
 impl RouteFilterPrefix {
@@ -570,11 +581,10 @@ impl std::fmt::Debug for RouteFilterPrefix {
         formatter.finish()
     }
 }
-/// See [`RouteFilterPrefix`](crate::model::RouteFilterPrefix)
+/// See [`RouteFilterPrefix`](crate::model::RouteFilterPrefix).
 pub mod route_filter_prefix {
 
-    /// A builder for [`RouteFilterPrefix`](crate::model::RouteFilterPrefix)
-    #[non_exhaustive]
+    /// A builder for [`RouteFilterPrefix`](crate::model::RouteFilterPrefix).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cidr: std::option::Option<std::string::String>,
@@ -590,14 +600,14 @@ pub mod route_filter_prefix {
             self.cidr = input;
             self
         }
-        /// Consumes the builder and constructs a [`RouteFilterPrefix`](crate::model::RouteFilterPrefix)
+        /// Consumes the builder and constructs a [`RouteFilterPrefix`](crate::model::RouteFilterPrefix).
         pub fn build(self) -> crate::model::RouteFilterPrefix {
             crate::model::RouteFilterPrefix { cidr: self.cidr }
         }
     }
 }
 impl RouteFilterPrefix {
-    /// Creates a new builder-style object to manufacture [`RouteFilterPrefix`](crate::model::RouteFilterPrefix)
+    /// Creates a new builder-style object to manufacture [`RouteFilterPrefix`](crate::model::RouteFilterPrefix).
     pub fn builder() -> crate::model::route_filter_prefix::Builder {
         crate::model::route_filter_prefix::Builder::default()
     }
@@ -701,8 +711,10 @@ impl AsRef<str> for VirtualInterfaceState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MacSecKey {
     /// <p>The Amazon Resource Name (ARN) of the MAC Security (MACsec) secret key.</p>
+    #[doc(hidden)]
     pub secret_arn: std::option::Option<std::string::String>,
     /// <p>The Connection Key Name (CKN) for the MAC Security secret key.</p>
+    #[doc(hidden)]
     pub ckn: std::option::Option<std::string::String>,
     /// <p>The state of the MAC Security (MACsec) secret key.</p>
     /// <p>The possible values are:</p>
@@ -712,8 +724,10 @@ pub struct MacSecKey {
     /// <li> <p> <code>disassociating</code>: The MAC Security (MACsec) secret key is being disassociated from the connection or LAG</p> </li>
     /// <li> <p> <code>disassociated</code>: The MAC Security (MACsec) secret key is no longer associated with the connection or LAG.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>The date that the MAC Security (MACsec) secret key takes effect. The value is displayed in UTC format.</p>
+    #[doc(hidden)]
     pub start_on: std::option::Option<std::string::String>,
 }
 impl MacSecKey {
@@ -751,11 +765,10 @@ impl std::fmt::Debug for MacSecKey {
         formatter.finish()
     }
 }
-/// See [`MacSecKey`](crate::model::MacSecKey)
+/// See [`MacSecKey`](crate::model::MacSecKey).
 pub mod mac_sec_key {
 
-    /// A builder for [`MacSecKey`](crate::model::MacSecKey)
-    #[non_exhaustive]
+    /// A builder for [`MacSecKey`](crate::model::MacSecKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) secret_arn: std::option::Option<std::string::String>,
@@ -818,7 +831,7 @@ pub mod mac_sec_key {
             self.start_on = input;
             self
         }
-        /// Consumes the builder and constructs a [`MacSecKey`](crate::model::MacSecKey)
+        /// Consumes the builder and constructs a [`MacSecKey`](crate::model::MacSecKey).
         pub fn build(self) -> crate::model::MacSecKey {
             crate::model::MacSecKey {
                 secret_arn: self.secret_arn,
@@ -830,7 +843,7 @@ pub mod mac_sec_key {
     }
 }
 impl MacSecKey {
-    /// Creates a new builder-style object to manufacture [`MacSecKey`](crate::model::MacSecKey)
+    /// Creates a new builder-style object to manufacture [`MacSecKey`](crate::model::MacSecKey).
     pub fn builder() -> crate::model::mac_sec_key::Builder {
         crate::model::mac_sec_key::Builder::default()
     }
@@ -900,10 +913,13 @@ impl AsRef<str> for HasLogicalRedundancy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Connection {
     /// <p>The ID of the Amazon Web Services account that owns the connection.</p>
+    #[doc(hidden)]
     pub owner_account: std::option::Option<std::string::String>,
     /// <p>The ID of the connection.</p>
+    #[doc(hidden)]
     pub connection_id: std::option::Option<std::string::String>,
     /// <p>The name of the connection.</p>
+    #[doc(hidden)]
     pub connection_name: std::option::Option<std::string::String>,
     /// <p>The state of the connection. The following are the possible values:</p>
     /// <ul>
@@ -917,44 +933,63 @@ pub struct Connection {
     /// <li> <p> <code>rejected</code>: A hosted connection in the <code>ordering</code> state enters the <code>rejected</code> state if it is deleted by the customer.</p> </li>
     /// <li> <p> <code>unknown</code>: The state of the connection is not available.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub connection_state: std::option::Option<crate::model::ConnectionState>,
     /// <p>The Amazon Web Services Region where the connection is located.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The location of the connection.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>The bandwidth of the connection.</p>
+    #[doc(hidden)]
     pub bandwidth: std::option::Option<std::string::String>,
     /// <p>The ID of the VLAN.</p>
+    #[doc(hidden)]
     pub vlan: i32,
     /// <p>The name of the Direct Connect service provider associated with the connection.</p>
+    #[doc(hidden)]
     pub partner_name: std::option::Option<std::string::String>,
     /// <p>The time of the most recent call to <code>DescribeLoa</code> for this connection.</p>
+    #[doc(hidden)]
     pub loa_issue_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The ID of the LAG.</p>
+    #[doc(hidden)]
     pub lag_id: std::option::Option<std::string::String>,
     /// <p>The Direct Connect endpoint on which the physical connection terminates.</p>
+    #[doc(hidden)]
     pub aws_device: std::option::Option<std::string::String>,
     /// <p>Indicates whether jumbo frames (9001 MTU) are supported.</p>
+    #[doc(hidden)]
     pub jumbo_frame_capable: std::option::Option<bool>,
     /// <p>The Direct Connect endpoint that terminates the physical connection.</p>
+    #[doc(hidden)]
     pub aws_device_v2: std::option::Option<std::string::String>,
     /// <p>The Direct Connect endpoint that terminates the logical connection. This device might be different than the device that terminates the physical connection.</p>
+    #[doc(hidden)]
     pub aws_logical_device_id: std::option::Option<std::string::String>,
     /// <p>Indicates whether the connection supports a secondary BGP peer in the same address family (IPv4/IPv6).</p>
+    #[doc(hidden)]
     pub has_logical_redundancy: std::option::Option<crate::model::HasLogicalRedundancy>,
     /// <p>The tags associated with the connection.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The name of the service provider associated with the connection.</p>
+    #[doc(hidden)]
     pub provider_name: std::option::Option<std::string::String>,
     /// <p>Indicates whether the connection supports MAC Security (MACsec).</p>
+    #[doc(hidden)]
     pub mac_sec_capable: std::option::Option<bool>,
     /// <p>The MAC Security (MACsec) port link status of the connection.</p>
     /// <p>The valid values are <code>Encryption Up</code>, which means that there is an active Connection Key Name, or <code>Encryption Down</code>.</p>
+    #[doc(hidden)]
     pub port_encryption_status: std::option::Option<std::string::String>,
     /// <p>The MAC Security (MACsec) connection encryption mode.</p>
     /// <p>The valid values are <code>no_encrypt</code>, <code>should_encrypt</code>, and <code>must_encrypt</code>.</p>
+    #[doc(hidden)]
     pub encryption_mode: std::option::Option<std::string::String>,
     /// <p>The MAC Security (MACsec) security keys associated with the connection.</p>
+    #[doc(hidden)]
     pub mac_sec_keys: std::option::Option<std::vec::Vec<crate::model::MacSecKey>>,
 }
 impl Connection {
@@ -1090,11 +1125,10 @@ impl std::fmt::Debug for Connection {
         formatter.finish()
     }
 }
-/// See [`Connection`](crate::model::Connection)
+/// See [`Connection`](crate::model::Connection).
 pub mod connection {
 
-    /// A builder for [`Connection`](crate::model::Connection)
-    #[non_exhaustive]
+    /// A builder for [`Connection`](crate::model::Connection).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner_account: std::option::Option<std::string::String>,
@@ -1418,7 +1452,7 @@ pub mod connection {
             self.mac_sec_keys = input;
             self
         }
-        /// Consumes the builder and constructs a [`Connection`](crate::model::Connection)
+        /// Consumes the builder and constructs a [`Connection`](crate::model::Connection).
         pub fn build(self) -> crate::model::Connection {
             crate::model::Connection {
                 owner_account: self.owner_account,
@@ -1448,7 +1482,7 @@ pub mod connection {
     }
 }
 impl Connection {
-    /// Creates a new builder-style object to manufacture [`Connection`](crate::model::Connection)
+    /// Creates a new builder-style object to manufacture [`Connection`](crate::model::Connection).
     pub fn builder() -> crate::model::connection::Builder {
         crate::model::connection::Builder::default()
     }
@@ -1635,8 +1669,10 @@ impl AsRef<str> for LagState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DirectConnectGatewayAssociation {
     /// <p>The ID of the Direct Connect gateway.</p>
+    #[doc(hidden)]
     pub direct_connect_gateway_id: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services account that owns the associated gateway.</p>
+    #[doc(hidden)]
     pub direct_connect_gateway_owner_account: std::option::Option<std::string::String>,
     /// <p>The state of the association. The following are the possible values:</p>
     /// <ul>
@@ -1645,21 +1681,29 @@ pub struct DirectConnectGatewayAssociation {
     /// <li> <p> <code>disassociating</code>: The initial state after calling <code>DeleteDirectConnectGatewayAssociation</code>.</p> </li>
     /// <li> <p> <code>disassociated</code>: The virtual private gateway or transit gateway is disassociated from the Direct Connect gateway. Traffic flow between the Direct Connect gateway and virtual private gateway or transit gateway is stopped.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub association_state: std::option::Option<crate::model::DirectConnectGatewayAssociationState>,
     /// <p>The error message if the state of an object failed to advance.</p>
+    #[doc(hidden)]
     pub state_change_error: std::option::Option<std::string::String>,
     /// <p>Information about the associated gateway.</p>
+    #[doc(hidden)]
     pub associated_gateway: std::option::Option<crate::model::AssociatedGateway>,
     /// <p>The ID of the Direct Connect gateway association.</p>
+    #[doc(hidden)]
     pub association_id: std::option::Option<std::string::String>,
     /// <p>The Amazon VPC prefixes to advertise to the Direct Connect gateway.</p>
+    #[doc(hidden)]
     pub allowed_prefixes_to_direct_connect_gateway:
         std::option::Option<std::vec::Vec<crate::model::RouteFilterPrefix>>,
     /// <p>The ID of the virtual private gateway. Applies only to private virtual interfaces.</p>
+    #[doc(hidden)]
     pub virtual_gateway_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region where the virtual private gateway is located.</p>
+    #[doc(hidden)]
     pub virtual_gateway_region: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services account that owns the virtual private gateway.</p>
+    #[doc(hidden)]
     pub virtual_gateway_owner_account: std::option::Option<std::string::String>,
 }
 impl DirectConnectGatewayAssociation {
@@ -1739,11 +1783,10 @@ impl std::fmt::Debug for DirectConnectGatewayAssociation {
         formatter.finish()
     }
 }
-/// See [`DirectConnectGatewayAssociation`](crate::model::DirectConnectGatewayAssociation)
+/// See [`DirectConnectGatewayAssociation`](crate::model::DirectConnectGatewayAssociation).
 pub mod direct_connect_gateway_association {
 
-    /// A builder for [`DirectConnectGatewayAssociation`](crate::model::DirectConnectGatewayAssociation)
-    #[non_exhaustive]
+    /// A builder for [`DirectConnectGatewayAssociation`](crate::model::DirectConnectGatewayAssociation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) direct_connect_gateway_id: std::option::Option<std::string::String>,
@@ -1922,7 +1965,7 @@ pub mod direct_connect_gateway_association {
             self.virtual_gateway_owner_account = input;
             self
         }
-        /// Consumes the builder and constructs a [`DirectConnectGatewayAssociation`](crate::model::DirectConnectGatewayAssociation)
+        /// Consumes the builder and constructs a [`DirectConnectGatewayAssociation`](crate::model::DirectConnectGatewayAssociation).
         pub fn build(self) -> crate::model::DirectConnectGatewayAssociation {
             crate::model::DirectConnectGatewayAssociation {
                 direct_connect_gateway_id: self.direct_connect_gateway_id,
@@ -1941,7 +1984,7 @@ pub mod direct_connect_gateway_association {
     }
 }
 impl DirectConnectGatewayAssociation {
-    /// Creates a new builder-style object to manufacture [`DirectConnectGatewayAssociation`](crate::model::DirectConnectGatewayAssociation)
+    /// Creates a new builder-style object to manufacture [`DirectConnectGatewayAssociation`](crate::model::DirectConnectGatewayAssociation).
     pub fn builder() -> crate::model::direct_connect_gateway_association::Builder {
         crate::model::direct_connect_gateway_association::Builder::default()
     }
@@ -1952,12 +1995,16 @@ impl DirectConnectGatewayAssociation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociatedGateway {
     /// <p>The ID of the associated gateway.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The type of associated gateway.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::GatewayType>,
     /// <p>The ID of the Amazon Web Services account that owns the associated virtual private gateway or transit gateway.</p>
+    #[doc(hidden)]
     pub owner_account: std::option::Option<std::string::String>,
     /// <p>The Region where the associated gateway is located.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
 }
 impl AssociatedGateway {
@@ -1988,11 +2035,10 @@ impl std::fmt::Debug for AssociatedGateway {
         formatter.finish()
     }
 }
-/// See [`AssociatedGateway`](crate::model::AssociatedGateway)
+/// See [`AssociatedGateway`](crate::model::AssociatedGateway).
 pub mod associated_gateway {
 
-    /// A builder for [`AssociatedGateway`](crate::model::AssociatedGateway)
-    #[non_exhaustive]
+    /// A builder for [`AssociatedGateway`](crate::model::AssociatedGateway).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2044,7 +2090,7 @@ pub mod associated_gateway {
             self.region = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociatedGateway`](crate::model::AssociatedGateway)
+        /// Consumes the builder and constructs a [`AssociatedGateway`](crate::model::AssociatedGateway).
         pub fn build(self) -> crate::model::AssociatedGateway {
             crate::model::AssociatedGateway {
                 id: self.id,
@@ -2056,7 +2102,7 @@ pub mod associated_gateway {
     }
 }
 impl AssociatedGateway {
-    /// Creates a new builder-style object to manufacture [`AssociatedGateway`](crate::model::AssociatedGateway)
+    /// Creates a new builder-style object to manufacture [`AssociatedGateway`](crate::model::AssociatedGateway).
     pub fn builder() -> crate::model::associated_gateway::Builder {
         crate::model::associated_gateway::Builder::default()
     }
@@ -2195,12 +2241,16 @@ impl AsRef<str> for DirectConnectGatewayAssociationState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DirectConnectGateway {
     /// <p>The ID of the Direct Connect gateway.</p>
+    #[doc(hidden)]
     pub direct_connect_gateway_id: std::option::Option<std::string::String>,
     /// <p>The name of the Direct Connect gateway.</p>
+    #[doc(hidden)]
     pub direct_connect_gateway_name: std::option::Option<std::string::String>,
     /// <p>The autonomous system number (ASN) for the Amazon side of the connection.</p>
+    #[doc(hidden)]
     pub amazon_side_asn: std::option::Option<i64>,
     /// <p>The ID of the Amazon Web Services account that owns the Direct Connect gateway.</p>
+    #[doc(hidden)]
     pub owner_account: std::option::Option<std::string::String>,
     /// <p>The state of the Direct Connect gateway. The following are the possible values:</p>
     /// <ul>
@@ -2209,8 +2259,10 @@ pub struct DirectConnectGateway {
     /// <li> <p> <code>deleting</code>: The initial state after calling <code>DeleteDirectConnectGateway</code>.</p> </li>
     /// <li> <p> <code>deleted</code>: The Direct Connect gateway is deleted and cannot pass traffic.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub direct_connect_gateway_state: std::option::Option<crate::model::DirectConnectGatewayState>,
     /// <p>The error message if the state of an object failed to advance.</p>
+    #[doc(hidden)]
     pub state_change_error: std::option::Option<std::string::String>,
 }
 impl DirectConnectGateway {
@@ -2265,11 +2317,10 @@ impl std::fmt::Debug for DirectConnectGateway {
         formatter.finish()
     }
 }
-/// See [`DirectConnectGateway`](crate::model::DirectConnectGateway)
+/// See [`DirectConnectGateway`](crate::model::DirectConnectGateway).
 pub mod direct_connect_gateway {
 
-    /// A builder for [`DirectConnectGateway`](crate::model::DirectConnectGateway)
-    #[non_exhaustive]
+    /// A builder for [`DirectConnectGateway`](crate::model::DirectConnectGateway).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) direct_connect_gateway_id: std::option::Option<std::string::String>,
@@ -2374,7 +2425,7 @@ pub mod direct_connect_gateway {
             self.state_change_error = input;
             self
         }
-        /// Consumes the builder and constructs a [`DirectConnectGateway`](crate::model::DirectConnectGateway)
+        /// Consumes the builder and constructs a [`DirectConnectGateway`](crate::model::DirectConnectGateway).
         pub fn build(self) -> crate::model::DirectConnectGateway {
             crate::model::DirectConnectGateway {
                 direct_connect_gateway_id: self.direct_connect_gateway_id,
@@ -2388,7 +2439,7 @@ pub mod direct_connect_gateway {
     }
 }
 impl DirectConnectGateway {
-    /// Creates a new builder-style object to manufacture [`DirectConnectGateway`](crate::model::DirectConnectGateway)
+    /// Creates a new builder-style object to manufacture [`DirectConnectGateway`](crate::model::DirectConnectGateway).
     pub fn builder() -> crate::model::direct_connect_gateway::Builder {
         crate::model::direct_connect_gateway::Builder::default()
     }
@@ -2462,20 +2513,28 @@ impl AsRef<str> for DirectConnectGatewayState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VirtualInterfaceTestHistory {
     /// <p>The ID of the virtual interface failover test.</p>
+    #[doc(hidden)]
     pub test_id: std::option::Option<std::string::String>,
     /// <p>The ID of the tested virtual interface.</p>
+    #[doc(hidden)]
     pub virtual_interface_id: std::option::Option<std::string::String>,
     /// <p>The BGP peers that were put in the DOWN state as part of the virtual interface failover test.</p>
+    #[doc(hidden)]
     pub bgp_peers: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The status of the virtual interface failover test.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The owner ID of the tested virtual interface.</p>
+    #[doc(hidden)]
     pub owner_account: std::option::Option<std::string::String>,
     /// <p>The time that the virtual interface failover test ran in minutes.</p>
+    #[doc(hidden)]
     pub test_duration_in_minutes: std::option::Option<i32>,
     /// <p>The time that the virtual interface moves to the DOWN state.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the virtual interface moves out of the DOWN state.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl VirtualInterfaceTestHistory {
@@ -2526,11 +2585,10 @@ impl std::fmt::Debug for VirtualInterfaceTestHistory {
         formatter.finish()
     }
 }
-/// See [`VirtualInterfaceTestHistory`](crate::model::VirtualInterfaceTestHistory)
+/// See [`VirtualInterfaceTestHistory`](crate::model::VirtualInterfaceTestHistory).
 pub mod virtual_interface_test_history {
 
-    /// A builder for [`VirtualInterfaceTestHistory`](crate::model::VirtualInterfaceTestHistory)
-    #[non_exhaustive]
+    /// A builder for [`VirtualInterfaceTestHistory`](crate::model::VirtualInterfaceTestHistory).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) test_id: std::option::Option<std::string::String>,
@@ -2644,7 +2702,7 @@ pub mod virtual_interface_test_history {
             self.end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`VirtualInterfaceTestHistory`](crate::model::VirtualInterfaceTestHistory)
+        /// Consumes the builder and constructs a [`VirtualInterfaceTestHistory`](crate::model::VirtualInterfaceTestHistory).
         pub fn build(self) -> crate::model::VirtualInterfaceTestHistory {
             crate::model::VirtualInterfaceTestHistory {
                 test_id: self.test_id,
@@ -2660,7 +2718,7 @@ pub mod virtual_interface_test_history {
     }
 }
 impl VirtualInterfaceTestHistory {
-    /// Creates a new builder-style object to manufacture [`VirtualInterfaceTestHistory`](crate::model::VirtualInterfaceTestHistory)
+    /// Creates a new builder-style object to manufacture [`VirtualInterfaceTestHistory`](crate::model::VirtualInterfaceTestHistory).
     pub fn builder() -> crate::model::virtual_interface_test_history::Builder {
         crate::model::virtual_interface_test_history::Builder::default()
     }
@@ -2671,31 +2729,44 @@ impl VirtualInterfaceTestHistory {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VirtualInterface {
     /// <p>The ID of the Amazon Web Services account that owns the virtual interface.</p>
+    #[doc(hidden)]
     pub owner_account: std::option::Option<std::string::String>,
     /// <p>The ID of the virtual interface.</p>
+    #[doc(hidden)]
     pub virtual_interface_id: std::option::Option<std::string::String>,
     /// <p>The location of the connection.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>The ID of the connection.</p>
+    #[doc(hidden)]
     pub connection_id: std::option::Option<std::string::String>,
     /// <p>The type of virtual interface. The possible values are <code>private</code> and <code>public</code>.</p>
+    #[doc(hidden)]
     pub virtual_interface_type: std::option::Option<std::string::String>,
     /// <p>The name of the virtual interface assigned by the customer network. The name has a maximum of 100 characters. The following are valid characters: a-z, 0-9 and a hyphen (-).</p>
+    #[doc(hidden)]
     pub virtual_interface_name: std::option::Option<std::string::String>,
     /// <p>The ID of the VLAN.</p>
+    #[doc(hidden)]
     pub vlan: i32,
     /// <p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p>
     /// <p>The valid values are 1-2147483647.</p>
+    #[doc(hidden)]
     pub asn: i32,
     /// <p>The autonomous system number (ASN) for the Amazon side of the connection.</p>
+    #[doc(hidden)]
     pub amazon_side_asn: std::option::Option<i64>,
     /// <p>The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters.</p>
+    #[doc(hidden)]
     pub auth_key: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the Amazon interface.</p>
+    #[doc(hidden)]
     pub amazon_address: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the customer interface.</p>
+    #[doc(hidden)]
     pub customer_address: std::option::Option<std::string::String>,
     /// <p>The address family for the BGP peer.</p>
+    #[doc(hidden)]
     pub address_family: std::option::Option<crate::model::AddressFamily>,
     /// <p>The state of the virtual interface. The following are the possible values:</p>
     /// <ul>
@@ -2709,30 +2780,43 @@ pub struct VirtualInterface {
     /// <li> <p> <code>rejected</code>: The virtual interface owner has declined creation of the virtual interface. If a virtual interface in the <code>Confirming</code> state is deleted by the virtual interface owner, the virtual interface enters the <code>Rejected</code> state.</p> </li>
     /// <li> <p> <code>unknown</code>: The state of the virtual interface is not available.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub virtual_interface_state: std::option::Option<crate::model::VirtualInterfaceState>,
     /// <p>The customer router configuration.</p>
+    #[doc(hidden)]
     pub customer_router_config: std::option::Option<std::string::String>,
     /// <p>The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500.</p>
+    #[doc(hidden)]
     pub mtu: std::option::Option<i32>,
     /// <p>Indicates whether jumbo frames (9001 MTU) are supported.</p>
+    #[doc(hidden)]
     pub jumbo_frame_capable: std::option::Option<bool>,
     /// <p>The ID of the virtual private gateway. Applies only to private virtual interfaces.</p>
+    #[doc(hidden)]
     pub virtual_gateway_id: std::option::Option<std::string::String>,
     /// <p>The ID of the Direct Connect gateway.</p>
+    #[doc(hidden)]
     pub direct_connect_gateway_id: std::option::Option<std::string::String>,
     /// <p>The routes to be advertised to the Amazon Web Services network in this Region. Applies to public virtual interfaces.</p>
+    #[doc(hidden)]
     pub route_filter_prefixes: std::option::Option<std::vec::Vec<crate::model::RouteFilterPrefix>>,
     /// <p>The BGP peers configured on this virtual interface.</p>
+    #[doc(hidden)]
     pub bgp_peers: std::option::Option<std::vec::Vec<crate::model::BgpPeer>>,
     /// <p>The Amazon Web Services Region where the virtual interface is located.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The Direct Connect endpoint that terminates the physical connection.</p>
+    #[doc(hidden)]
     pub aws_device_v2: std::option::Option<std::string::String>,
     /// <p>The Direct Connect endpoint that terminates the logical connection. This device might be different than the device that terminates the physical connection.</p>
+    #[doc(hidden)]
     pub aws_logical_device_id: std::option::Option<std::string::String>,
     /// <p>The tags associated with the virtual interface.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Indicates whether SiteLink is enabled.</p>
+    #[doc(hidden)]
     pub site_link_enabled: std::option::Option<bool>,
 }
 impl VirtualInterface {
@@ -2887,11 +2971,10 @@ impl std::fmt::Debug for VirtualInterface {
         formatter.finish()
     }
 }
-/// See [`VirtualInterface`](crate::model::VirtualInterface)
+/// See [`VirtualInterface`](crate::model::VirtualInterface).
 pub mod virtual_interface {
 
-    /// A builder for [`VirtualInterface`](crate::model::VirtualInterface)
-    #[non_exhaustive]
+    /// A builder for [`VirtualInterface`](crate::model::VirtualInterface).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner_account: std::option::Option<std::string::String>,
@@ -3280,7 +3363,7 @@ pub mod virtual_interface {
             self.site_link_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`VirtualInterface`](crate::model::VirtualInterface)
+        /// Consumes the builder and constructs a [`VirtualInterface`](crate::model::VirtualInterface).
         pub fn build(self) -> crate::model::VirtualInterface {
             crate::model::VirtualInterface {
                 owner_account: self.owner_account,
@@ -3314,7 +3397,7 @@ pub mod virtual_interface {
     }
 }
 impl VirtualInterface {
-    /// Creates a new builder-style object to manufacture [`VirtualInterface`](crate::model::VirtualInterface)
+    /// Creates a new builder-style object to manufacture [`VirtualInterface`](crate::model::VirtualInterface).
     pub fn builder() -> crate::model::virtual_interface::Builder {
         crate::model::virtual_interface::Builder::default()
     }
@@ -3325,6 +3408,7 @@ impl VirtualInterface {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VirtualGateway {
     /// <p>The ID of the virtual private gateway.</p>
+    #[doc(hidden)]
     pub virtual_gateway_id: std::option::Option<std::string::String>,
     /// <p>The state of the virtual private gateway. The following are the possible values:</p>
     /// <ul>
@@ -3333,6 +3417,7 @@ pub struct VirtualGateway {
     /// <li> <p> <code>deleting</code>: Initial state after deleting the virtual private gateway.</p> </li>
     /// <li> <p> <code>deleted</code>: The virtual private gateway is deleted. The private virtual interface is unable to send traffic over this gateway.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub virtual_gateway_state: std::option::Option<std::string::String>,
 }
 impl VirtualGateway {
@@ -3359,11 +3444,10 @@ impl std::fmt::Debug for VirtualGateway {
         formatter.finish()
     }
 }
-/// See [`VirtualGateway`](crate::model::VirtualGateway)
+/// See [`VirtualGateway`](crate::model::VirtualGateway).
 pub mod virtual_gateway {
 
-    /// A builder for [`VirtualGateway`](crate::model::VirtualGateway)
-    #[non_exhaustive]
+    /// A builder for [`VirtualGateway`](crate::model::VirtualGateway).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) virtual_gateway_id: std::option::Option<std::string::String>,
@@ -3408,7 +3492,7 @@ pub mod virtual_gateway {
             self.virtual_gateway_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`VirtualGateway`](crate::model::VirtualGateway)
+        /// Consumes the builder and constructs a [`VirtualGateway`](crate::model::VirtualGateway).
         pub fn build(self) -> crate::model::VirtualGateway {
             crate::model::VirtualGateway {
                 virtual_gateway_id: self.virtual_gateway_id,
@@ -3418,7 +3502,7 @@ pub mod virtual_gateway {
     }
 }
 impl VirtualGateway {
-    /// Creates a new builder-style object to manufacture [`VirtualGateway`](crate::model::VirtualGateway)
+    /// Creates a new builder-style object to manufacture [`VirtualGateway`](crate::model::VirtualGateway).
     pub fn builder() -> crate::model::virtual_gateway::Builder {
         crate::model::virtual_gateway::Builder::default()
     }
@@ -3429,8 +3513,10 @@ impl VirtualGateway {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceTag {
     /// <p>The Amazon Resource Name (ARN) of the resource.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The tags.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ResourceTag {
@@ -3451,11 +3537,10 @@ impl std::fmt::Debug for ResourceTag {
         formatter.finish()
     }
 }
-/// See [`ResourceTag`](crate::model::ResourceTag)
+/// See [`ResourceTag`](crate::model::ResourceTag).
 pub mod resource_tag {
 
-    /// A builder for [`ResourceTag`](crate::model::ResourceTag)
-    #[non_exhaustive]
+    /// A builder for [`ResourceTag`](crate::model::ResourceTag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -3491,7 +3576,7 @@ pub mod resource_tag {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceTag`](crate::model::ResourceTag)
+        /// Consumes the builder and constructs a [`ResourceTag`](crate::model::ResourceTag).
         pub fn build(self) -> crate::model::ResourceTag {
             crate::model::ResourceTag {
                 resource_arn: self.resource_arn,
@@ -3501,7 +3586,7 @@ pub mod resource_tag {
     }
 }
 impl ResourceTag {
-    /// Creates a new builder-style object to manufacture [`ResourceTag`](crate::model::ResourceTag)
+    /// Creates a new builder-style object to manufacture [`ResourceTag`](crate::model::ResourceTag).
     pub fn builder() -> crate::model::resource_tag::Builder {
         crate::model::resource_tag::Builder::default()
     }
@@ -3512,16 +3597,22 @@ impl ResourceTag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RouterType {
     /// <p>The vendor for the virtual interface's router.</p>
+    #[doc(hidden)]
     pub vendor: std::option::Option<std::string::String>,
     /// <p>The virtual interface router platform.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The router software. </p>
+    #[doc(hidden)]
     pub software: std::option::Option<std::string::String>,
     /// <p>The template for the virtual interface's router.</p>
+    #[doc(hidden)]
     pub xslt_template_name: std::option::Option<std::string::String>,
     /// <p>The MAC Security (MACsec) template for the virtual interface's router.</p>
+    #[doc(hidden)]
     pub xslt_template_name_for_mac_sec: std::option::Option<std::string::String>,
     /// <p>Identifies the router by a combination of vendor, platform, and software version. For example, <code>CiscoSystemsInc-2900SeriesRouters-IOS124</code>.</p>
+    #[doc(hidden)]
     pub router_type_identifier: std::option::Option<std::string::String>,
 }
 impl RouterType {
@@ -3565,11 +3656,10 @@ impl std::fmt::Debug for RouterType {
         formatter.finish()
     }
 }
-/// See [`RouterType`](crate::model::RouterType)
+/// See [`RouterType`](crate::model::RouterType).
 pub mod router_type {
 
-    /// A builder for [`RouterType`](crate::model::RouterType)
-    #[non_exhaustive]
+    /// A builder for [`RouterType`](crate::model::RouterType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vendor: std::option::Option<std::string::String>,
@@ -3652,7 +3742,7 @@ pub mod router_type {
             self.router_type_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`RouterType`](crate::model::RouterType)
+        /// Consumes the builder and constructs a [`RouterType`](crate::model::RouterType).
         pub fn build(self) -> crate::model::RouterType {
             crate::model::RouterType {
                 vendor: self.vendor,
@@ -3666,7 +3756,7 @@ pub mod router_type {
     }
 }
 impl RouterType {
-    /// Creates a new builder-style object to manufacture [`RouterType`](crate::model::RouterType)
+    /// Creates a new builder-style object to manufacture [`RouterType`](crate::model::RouterType).
     pub fn builder() -> crate::model::router_type::Builder {
         crate::model::router_type::Builder::default()
     }
@@ -3677,16 +3767,22 @@ impl RouterType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Location {
     /// <p>The code for the location.</p>
+    #[doc(hidden)]
     pub location_code: std::option::Option<std::string::String>,
     /// <p>The name of the location. This includes the name of the colocation partner and the physical site of the building.</p>
+    #[doc(hidden)]
     pub location_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region for the location.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The available port speeds for the location.</p>
+    #[doc(hidden)]
     pub available_port_speeds: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The name of the service provider for the location.</p>
+    #[doc(hidden)]
     pub available_providers: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The available MAC Security (MACsec) port speeds for the location.</p>
+    #[doc(hidden)]
     pub available_mac_sec_port_speeds: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Location {
@@ -3730,11 +3826,10 @@ impl std::fmt::Debug for Location {
         formatter.finish()
     }
 }
-/// See [`Location`](crate::model::Location)
+/// See [`Location`](crate::model::Location).
 pub mod location {
 
-    /// A builder for [`Location`](crate::model::Location)
-    #[non_exhaustive]
+    /// A builder for [`Location`](crate::model::Location).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_code: std::option::Option<std::string::String>,
@@ -3842,7 +3937,7 @@ pub mod location {
             self.available_mac_sec_port_speeds = input;
             self
         }
-        /// Consumes the builder and constructs a [`Location`](crate::model::Location)
+        /// Consumes the builder and constructs a [`Location`](crate::model::Location).
         pub fn build(self) -> crate::model::Location {
             crate::model::Location {
                 location_code: self.location_code,
@@ -3856,7 +3951,7 @@ pub mod location {
     }
 }
 impl Location {
-    /// Creates a new builder-style object to manufacture [`Location`](crate::model::Location)
+    /// Creates a new builder-style object to manufacture [`Location`](crate::model::Location).
     pub fn builder() -> crate::model::location::Builder {
         crate::model::location::Builder::default()
     }
@@ -3918,14 +4013,19 @@ impl AsRef<str> for LoaContentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Lag {
     /// <p>The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps and 10Gbps. </p>
+    #[doc(hidden)]
     pub connections_bandwidth: std::option::Option<std::string::String>,
     /// <p>The number of physical dedicated connections bundled by the LAG, up to a maximum of 10.</p>
+    #[doc(hidden)]
     pub number_of_connections: i32,
     /// <p>The ID of the LAG.</p>
+    #[doc(hidden)]
     pub lag_id: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services account that owns the LAG.</p>
+    #[doc(hidden)]
     pub owner_account: std::option::Option<std::string::String>,
     /// <p>The name of the LAG.</p>
+    #[doc(hidden)]
     pub lag_name: std::option::Option<std::string::String>,
     /// <p>The state of the LAG. The following are the possible values:</p>
     /// <ul>
@@ -3937,37 +4037,53 @@ pub struct Lag {
     /// <li> <p> <code>deleted</code>: The LAG is deleted.</p> </li>
     /// <li> <p> <code>unknown</code>: The state of the LAG is not available.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub lag_state: std::option::Option<crate::model::LagState>,
     /// <p>The location of the LAG.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region where the connection is located.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The minimum number of physical dedicated connections that must be operational for the LAG itself to be operational.</p>
+    #[doc(hidden)]
     pub minimum_links: i32,
     /// <p>The Direct Connect endpoint that hosts the LAG.</p>
+    #[doc(hidden)]
     pub aws_device: std::option::Option<std::string::String>,
     /// <p>The Direct Connect endpoint that hosts the LAG.</p>
+    #[doc(hidden)]
     pub aws_device_v2: std::option::Option<std::string::String>,
     /// <p>The Direct Connect endpoint that terminates the logical connection. This device might be different than the device that terminates the physical connection.</p>
+    #[doc(hidden)]
     pub aws_logical_device_id: std::option::Option<std::string::String>,
     /// <p>The connections bundled by the LAG.</p>
+    #[doc(hidden)]
     pub connections: std::option::Option<std::vec::Vec<crate::model::Connection>>,
     /// <p>Indicates whether the LAG can host other connections.</p>
+    #[doc(hidden)]
     pub allows_hosted_connections: bool,
     /// <p>Indicates whether jumbo frames (9001 MTU) are supported.</p>
+    #[doc(hidden)]
     pub jumbo_frame_capable: std::option::Option<bool>,
     /// <p>Indicates whether the LAG supports a secondary BGP peer in the same address family (IPv4/IPv6).</p>
+    #[doc(hidden)]
     pub has_logical_redundancy: std::option::Option<crate::model::HasLogicalRedundancy>,
     /// <p>The tags associated with the LAG.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The name of the service provider associated with the LAG.</p>
+    #[doc(hidden)]
     pub provider_name: std::option::Option<std::string::String>,
     /// <p>Indicates whether the LAG supports MAC Security (MACsec).</p>
+    #[doc(hidden)]
     pub mac_sec_capable: std::option::Option<bool>,
     /// <p>The LAG MAC Security (MACsec) encryption mode.</p>
     /// <p>The valid values are <code>no_encrypt</code>, <code>should_encrypt</code>, and <code>must_encrypt</code>.</p>
+    #[doc(hidden)]
     pub encryption_mode: std::option::Option<std::string::String>,
     /// <p>The MAC Security (MACsec) security keys associated with the LAG.</p>
+    #[doc(hidden)]
     pub mac_sec_keys: std::option::Option<std::vec::Vec<crate::model::MacSecKey>>,
 }
 impl Lag {
@@ -4095,11 +4211,10 @@ impl std::fmt::Debug for Lag {
         formatter.finish()
     }
 }
-/// See [`Lag`](crate::model::Lag)
+/// See [`Lag`](crate::model::Lag).
 pub mod lag {
 
-    /// A builder for [`Lag`](crate::model::Lag)
-    #[non_exhaustive]
+    /// A builder for [`Lag`](crate::model::Lag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connections_bandwidth: std::option::Option<std::string::String>,
@@ -4403,7 +4518,7 @@ pub mod lag {
             self.mac_sec_keys = input;
             self
         }
-        /// Consumes the builder and constructs a [`Lag`](crate::model::Lag)
+        /// Consumes the builder and constructs a [`Lag`](crate::model::Lag).
         pub fn build(self) -> crate::model::Lag {
             crate::model::Lag {
                 connections_bandwidth: self.connections_bandwidth,
@@ -4432,7 +4547,7 @@ pub mod lag {
     }
 }
 impl Lag {
-    /// Creates a new builder-style object to manufacture [`Lag`](crate::model::Lag)
+    /// Creates a new builder-style object to manufacture [`Lag`](crate::model::Lag).
     pub fn builder() -> crate::model::lag::Builder {
         crate::model::lag::Builder::default()
     }
@@ -4443,8 +4558,10 @@ impl Lag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Interconnect {
     /// <p>The ID of the interconnect.</p>
+    #[doc(hidden)]
     pub interconnect_id: std::option::Option<std::string::String>,
     /// <p>The name of the interconnect.</p>
+    #[doc(hidden)]
     pub interconnect_name: std::option::Option<std::string::String>,
     /// <p>The state of the interconnect. The following are the possible values:</p>
     /// <ul>
@@ -4456,30 +4573,43 @@ pub struct Interconnect {
     /// <li> <p> <code>deleted</code>: The interconnect is deleted.</p> </li>
     /// <li> <p> <code>unknown</code>: The state of the interconnect is not available.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub interconnect_state: std::option::Option<crate::model::InterconnectState>,
     /// <p>The Amazon Web Services Region where the connection is located.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The location of the connection.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>The bandwidth of the connection.</p>
+    #[doc(hidden)]
     pub bandwidth: std::option::Option<std::string::String>,
     /// <p>The time of the most recent call to <code>DescribeLoa</code> for this connection.</p>
+    #[doc(hidden)]
     pub loa_issue_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The ID of the LAG.</p>
+    #[doc(hidden)]
     pub lag_id: std::option::Option<std::string::String>,
     /// <p>The Direct Connect endpoint on which the physical connection terminates.</p>
+    #[doc(hidden)]
     pub aws_device: std::option::Option<std::string::String>,
     /// <p>Indicates whether jumbo frames (9001 MTU) are supported.</p>
+    #[doc(hidden)]
     pub jumbo_frame_capable: std::option::Option<bool>,
     /// <p>The Direct Connect endpoint that terminates the physical connection.</p>
+    #[doc(hidden)]
     pub aws_device_v2: std::option::Option<std::string::String>,
     /// <p>The Direct Connect endpoint that terminates the logical connection. This device might be different than the device that terminates the physical connection.</p>
+    #[doc(hidden)]
     pub aws_logical_device_id: std::option::Option<std::string::String>,
     /// <p>Indicates whether the interconnect supports a secondary BGP in the same address family (IPv4/IPv6).</p>
+    #[doc(hidden)]
     pub has_logical_redundancy: std::option::Option<crate::model::HasLogicalRedundancy>,
     /// <p>The tags associated with the interconnect.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The name of the service provider associated with the interconnect.</p>
+    #[doc(hidden)]
     pub provider_name: std::option::Option<std::string::String>,
 }
 impl Interconnect {
@@ -4576,11 +4706,10 @@ impl std::fmt::Debug for Interconnect {
         formatter.finish()
     }
 }
-/// See [`Interconnect`](crate::model::Interconnect)
+/// See [`Interconnect`](crate::model::Interconnect).
 pub mod interconnect {
 
-    /// A builder for [`Interconnect`](crate::model::Interconnect)
-    #[non_exhaustive]
+    /// A builder for [`Interconnect`](crate::model::Interconnect).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) interconnect_id: std::option::Option<std::string::String>,
@@ -4801,7 +4930,7 @@ pub mod interconnect {
             self.provider_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Interconnect`](crate::model::Interconnect)
+        /// Consumes the builder and constructs a [`Interconnect`](crate::model::Interconnect).
         pub fn build(self) -> crate::model::Interconnect {
             crate::model::Interconnect {
                 interconnect_id: self.interconnect_id,
@@ -4824,7 +4953,7 @@ pub mod interconnect {
     }
 }
 impl Interconnect {
-    /// Creates a new builder-style object to manufacture [`Interconnect`](crate::model::Interconnect)
+    /// Creates a new builder-style object to manufacture [`Interconnect`](crate::model::Interconnect).
     pub fn builder() -> crate::model::interconnect::Builder {
         crate::model::interconnect::Builder::default()
     }
@@ -4918,8 +5047,10 @@ impl AsRef<str> for InterconnectState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Loa {
     /// <p>The binary contents of the LOA-CFA document.</p>
+    #[doc(hidden)]
     pub loa_content: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The standard media type for the LOA-CFA document. The only supported value is application/pdf.</p>
+    #[doc(hidden)]
     pub loa_content_type: std::option::Option<crate::model::LoaContentType>,
 }
 impl Loa {
@@ -4940,11 +5071,10 @@ impl std::fmt::Debug for Loa {
         formatter.finish()
     }
 }
-/// See [`Loa`](crate::model::Loa)
+/// See [`Loa`](crate::model::Loa).
 pub mod loa {
 
-    /// A builder for [`Loa`](crate::model::Loa)
-    #[non_exhaustive]
+    /// A builder for [`Loa`](crate::model::Loa).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) loa_content: std::option::Option<aws_smithy_types::Blob>,
@@ -4977,7 +5107,7 @@ pub mod loa {
             self.loa_content_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Loa`](crate::model::Loa)
+        /// Consumes the builder and constructs a [`Loa`](crate::model::Loa).
         pub fn build(self) -> crate::model::Loa {
             crate::model::Loa {
                 loa_content: self.loa_content,
@@ -4987,7 +5117,7 @@ pub mod loa {
     }
 }
 impl Loa {
-    /// Creates a new builder-style object to manufacture [`Loa`](crate::model::Loa)
+    /// Creates a new builder-style object to manufacture [`Loa`](crate::model::Loa).
     pub fn builder() -> crate::model::loa::Builder {
         crate::model::loa::Builder::default()
     }
@@ -4998,12 +5128,16 @@ impl Loa {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DirectConnectGatewayAttachment {
     /// <p>The ID of the Direct Connect gateway.</p>
+    #[doc(hidden)]
     pub direct_connect_gateway_id: std::option::Option<std::string::String>,
     /// <p>The ID of the virtual interface.</p>
+    #[doc(hidden)]
     pub virtual_interface_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region where the virtual interface is located.</p>
+    #[doc(hidden)]
     pub virtual_interface_region: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services account that owns the virtual interface.</p>
+    #[doc(hidden)]
     pub virtual_interface_owner_account: std::option::Option<std::string::String>,
     /// <p>The state of the attachment. The following are the possible values:</p>
     /// <ul>
@@ -5012,10 +5146,13 @@ pub struct DirectConnectGatewayAttachment {
     /// <li> <p> <code>detaching</code>: The initial state after calling <code>DeleteVirtualInterface</code>.</p> </li>
     /// <li> <p> <code>detached</code>: The virtual interface is detached from the Direct Connect gateway. Traffic flow between the Direct Connect gateway and virtual interface is stopped.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub attachment_state: std::option::Option<crate::model::DirectConnectGatewayAttachmentState>,
     /// <p>The type of attachment.</p>
+    #[doc(hidden)]
     pub attachment_type: std::option::Option<crate::model::DirectConnectGatewayAttachmentType>,
     /// <p>The error message if the state of an object failed to advance.</p>
+    #[doc(hidden)]
     pub state_change_error: std::option::Option<std::string::String>,
 }
 impl DirectConnectGatewayAttachment {
@@ -5074,11 +5211,10 @@ impl std::fmt::Debug for DirectConnectGatewayAttachment {
         formatter.finish()
     }
 }
-/// See [`DirectConnectGatewayAttachment`](crate::model::DirectConnectGatewayAttachment)
+/// See [`DirectConnectGatewayAttachment`](crate::model::DirectConnectGatewayAttachment).
 pub mod direct_connect_gateway_attachment {
 
-    /// A builder for [`DirectConnectGatewayAttachment`](crate::model::DirectConnectGatewayAttachment)
-    #[non_exhaustive]
+    /// A builder for [`DirectConnectGatewayAttachment`](crate::model::DirectConnectGatewayAttachment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) direct_connect_gateway_id: std::option::Option<std::string::String>,
@@ -5204,7 +5340,7 @@ pub mod direct_connect_gateway_attachment {
             self.state_change_error = input;
             self
         }
-        /// Consumes the builder and constructs a [`DirectConnectGatewayAttachment`](crate::model::DirectConnectGatewayAttachment)
+        /// Consumes the builder and constructs a [`DirectConnectGatewayAttachment`](crate::model::DirectConnectGatewayAttachment).
         pub fn build(self) -> crate::model::DirectConnectGatewayAttachment {
             crate::model::DirectConnectGatewayAttachment {
                 direct_connect_gateway_id: self.direct_connect_gateway_id,
@@ -5219,7 +5355,7 @@ pub mod direct_connect_gateway_attachment {
     }
 }
 impl DirectConnectGatewayAttachment {
-    /// Creates a new builder-style object to manufacture [`DirectConnectGatewayAttachment`](crate::model::DirectConnectGatewayAttachment)
+    /// Creates a new builder-style object to manufacture [`DirectConnectGatewayAttachment`](crate::model::DirectConnectGatewayAttachment).
     pub fn builder() -> crate::model::direct_connect_gateway_attachment::Builder {
         crate::model::direct_connect_gateway_attachment::Builder::default()
     }
@@ -5356,10 +5492,13 @@ impl AsRef<str> for DirectConnectGatewayAttachmentState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DirectConnectGatewayAssociationProposal {
     /// <p>The ID of the association proposal.</p>
+    #[doc(hidden)]
     pub proposal_id: std::option::Option<std::string::String>,
     /// <p>The ID of the Direct Connect gateway.</p>
+    #[doc(hidden)]
     pub direct_connect_gateway_id: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services account that owns the Direct Connect gateway.</p>
+    #[doc(hidden)]
     pub direct_connect_gateway_owner_account: std::option::Option<std::string::String>,
     /// <p>The state of the proposal. The following are possible values:</p>
     /// <ul>
@@ -5367,14 +5506,18 @@ pub struct DirectConnectGatewayAssociationProposal {
     /// <li> <p> <code>deleted</code>: The proposal has been deleted by the owner that made the proposal. The Direct Connect gateway association cannot be used in this state.</p> </li>
     /// <li> <p> <code>requested</code>: The proposal has been requested. The Direct Connect gateway association cannot be used in this state.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub proposal_state:
         std::option::Option<crate::model::DirectConnectGatewayAssociationProposalState>,
     /// <p>Information about the associated gateway.</p>
+    #[doc(hidden)]
     pub associated_gateway: std::option::Option<crate::model::AssociatedGateway>,
     /// <p>The existing Amazon VPC prefixes advertised to the Direct Connect gateway.</p>
+    #[doc(hidden)]
     pub existing_allowed_prefixes_to_direct_connect_gateway:
         std::option::Option<std::vec::Vec<crate::model::RouteFilterPrefix>>,
     /// <p>The Amazon VPC prefixes to advertise to the Direct Connect gateway.</p>
+    #[doc(hidden)]
     pub requested_allowed_prefixes_to_direct_connect_gateway:
         std::option::Option<std::vec::Vec<crate::model::RouteFilterPrefix>>,
 }
@@ -5443,11 +5586,10 @@ impl std::fmt::Debug for DirectConnectGatewayAssociationProposal {
         formatter.finish()
     }
 }
-/// See [`DirectConnectGatewayAssociationProposal`](crate::model::DirectConnectGatewayAssociationProposal)
+/// See [`DirectConnectGatewayAssociationProposal`](crate::model::DirectConnectGatewayAssociationProposal).
 pub mod direct_connect_gateway_association_proposal {
 
-    /// A builder for [`DirectConnectGatewayAssociationProposal`](crate::model::DirectConnectGatewayAssociationProposal)
-    #[non_exhaustive]
+    /// A builder for [`DirectConnectGatewayAssociationProposal`](crate::model::DirectConnectGatewayAssociationProposal).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) proposal_id: std::option::Option<std::string::String>,
@@ -5588,7 +5730,7 @@ pub mod direct_connect_gateway_association_proposal {
             self.requested_allowed_prefixes_to_direct_connect_gateway = input;
             self
         }
-        /// Consumes the builder and constructs a [`DirectConnectGatewayAssociationProposal`](crate::model::DirectConnectGatewayAssociationProposal)
+        /// Consumes the builder and constructs a [`DirectConnectGatewayAssociationProposal`](crate::model::DirectConnectGatewayAssociationProposal).
         pub fn build(self) -> crate::model::DirectConnectGatewayAssociationProposal {
             crate::model::DirectConnectGatewayAssociationProposal {
                 proposal_id: self.proposal_id,
@@ -5605,7 +5747,7 @@ pub mod direct_connect_gateway_association_proposal {
     }
 }
 impl DirectConnectGatewayAssociationProposal {
-    /// Creates a new builder-style object to manufacture [`DirectConnectGatewayAssociationProposal`](crate::model::DirectConnectGatewayAssociationProposal)
+    /// Creates a new builder-style object to manufacture [`DirectConnectGatewayAssociationProposal`](crate::model::DirectConnectGatewayAssociationProposal).
     pub fn builder() -> crate::model::direct_connect_gateway_association_proposal::Builder {
         crate::model::direct_connect_gateway_association_proposal::Builder::default()
     }
@@ -5734,8 +5876,10 @@ impl AsRef<str> for NniPartnerType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomerAgreement {
     /// <p>The name of the agreement.</p>
+    #[doc(hidden)]
     pub agreement_name: std::option::Option<std::string::String>,
     /// <p>The status of the customer agreement. This will be either <code>signed</code> or <code>unsigned</code> </p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl CustomerAgreement {
@@ -5756,11 +5900,10 @@ impl std::fmt::Debug for CustomerAgreement {
         formatter.finish()
     }
 }
-/// See [`CustomerAgreement`](crate::model::CustomerAgreement)
+/// See [`CustomerAgreement`](crate::model::CustomerAgreement).
 pub mod customer_agreement {
 
-    /// A builder for [`CustomerAgreement`](crate::model::CustomerAgreement)
-    #[non_exhaustive]
+    /// A builder for [`CustomerAgreement`](crate::model::CustomerAgreement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) agreement_name: std::option::Option<std::string::String>,
@@ -5790,7 +5933,7 @@ pub mod customer_agreement {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomerAgreement`](crate::model::CustomerAgreement)
+        /// Consumes the builder and constructs a [`CustomerAgreement`](crate::model::CustomerAgreement).
         pub fn build(self) -> crate::model::CustomerAgreement {
             crate::model::CustomerAgreement {
                 agreement_name: self.agreement_name,
@@ -5800,7 +5943,7 @@ pub mod customer_agreement {
     }
 }
 impl CustomerAgreement {
-    /// Creates a new builder-style object to manufacture [`CustomerAgreement`](crate::model::CustomerAgreement)
+    /// Creates a new builder-style object to manufacture [`CustomerAgreement`](crate::model::CustomerAgreement).
     pub fn builder() -> crate::model::customer_agreement::Builder {
         crate::model::customer_agreement::Builder::default()
     }
@@ -5811,27 +5954,38 @@ impl CustomerAgreement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NewTransitVirtualInterface {
     /// <p>The name of the virtual interface assigned by the customer network. The name has a maximum of 100 characters. The following are valid characters: a-z, 0-9 and a hyphen (-).</p>
+    #[doc(hidden)]
     pub virtual_interface_name: std::option::Option<std::string::String>,
     /// <p>The ID of the VLAN.</p>
+    #[doc(hidden)]
     pub vlan: i32,
     /// <p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p>
     /// <p>The valid values are 1-2147483647.</p>
+    #[doc(hidden)]
     pub asn: i32,
     /// <p>The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500.</p>
+    #[doc(hidden)]
     pub mtu: std::option::Option<i32>,
     /// <p>The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters.</p>
+    #[doc(hidden)]
     pub auth_key: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the Amazon interface.</p>
+    #[doc(hidden)]
     pub amazon_address: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the customer interface.</p>
+    #[doc(hidden)]
     pub customer_address: std::option::Option<std::string::String>,
     /// <p>The address family for the BGP peer.</p>
+    #[doc(hidden)]
     pub address_family: std::option::Option<crate::model::AddressFamily>,
     /// <p>The ID of the Direct Connect gateway.</p>
+    #[doc(hidden)]
     pub direct_connect_gateway_id: std::option::Option<std::string::String>,
     /// <p>The tags associated with the transitive virtual interface.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Indicates whether to enable or disable SiteLink.</p>
+    #[doc(hidden)]
     pub enable_site_link: std::option::Option<bool>,
 }
 impl NewTransitVirtualInterface {
@@ -5898,11 +6052,10 @@ impl std::fmt::Debug for NewTransitVirtualInterface {
         formatter.finish()
     }
 }
-/// See [`NewTransitVirtualInterface`](crate::model::NewTransitVirtualInterface)
+/// See [`NewTransitVirtualInterface`](crate::model::NewTransitVirtualInterface).
 pub mod new_transit_virtual_interface {
 
-    /// A builder for [`NewTransitVirtualInterface`](crate::model::NewTransitVirtualInterface)
-    #[non_exhaustive]
+    /// A builder for [`NewTransitVirtualInterface`](crate::model::NewTransitVirtualInterface).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) virtual_interface_name: std::option::Option<std::string::String>,
@@ -6054,7 +6207,7 @@ pub mod new_transit_virtual_interface {
             self.enable_site_link = input;
             self
         }
-        /// Consumes the builder and constructs a [`NewTransitVirtualInterface`](crate::model::NewTransitVirtualInterface)
+        /// Consumes the builder and constructs a [`NewTransitVirtualInterface`](crate::model::NewTransitVirtualInterface).
         pub fn build(self) -> crate::model::NewTransitVirtualInterface {
             crate::model::NewTransitVirtualInterface {
                 virtual_interface_name: self.virtual_interface_name,
@@ -6073,7 +6226,7 @@ pub mod new_transit_virtual_interface {
     }
 }
 impl NewTransitVirtualInterface {
-    /// Creates a new builder-style object to manufacture [`NewTransitVirtualInterface`](crate::model::NewTransitVirtualInterface)
+    /// Creates a new builder-style object to manufacture [`NewTransitVirtualInterface`](crate::model::NewTransitVirtualInterface).
     pub fn builder() -> crate::model::new_transit_virtual_interface::Builder {
         crate::model::new_transit_virtual_interface::Builder::default()
     }
@@ -6084,23 +6237,32 @@ impl NewTransitVirtualInterface {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NewPublicVirtualInterface {
     /// <p>The name of the virtual interface assigned by the customer network. The name has a maximum of 100 characters. The following are valid characters: a-z, 0-9 and a hyphen (-).</p>
+    #[doc(hidden)]
     pub virtual_interface_name: std::option::Option<std::string::String>,
     /// <p>The ID of the VLAN.</p>
+    #[doc(hidden)]
     pub vlan: i32,
     /// <p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p>
     /// <p>The valid values are 1-2147483647.</p>
+    #[doc(hidden)]
     pub asn: i32,
     /// <p>The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters.</p>
+    #[doc(hidden)]
     pub auth_key: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the Amazon interface.</p>
+    #[doc(hidden)]
     pub amazon_address: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the customer interface.</p>
+    #[doc(hidden)]
     pub customer_address: std::option::Option<std::string::String>,
     /// <p>The address family for the BGP peer.</p>
+    #[doc(hidden)]
     pub address_family: std::option::Option<crate::model::AddressFamily>,
     /// <p>The routes to be advertised to the Amazon Web Services network in this Region. Applies to public virtual interfaces.</p>
+    #[doc(hidden)]
     pub route_filter_prefixes: std::option::Option<std::vec::Vec<crate::model::RouteFilterPrefix>>,
     /// <p>The tags associated with the public virtual interface.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl NewPublicVirtualInterface {
@@ -6157,11 +6319,10 @@ impl std::fmt::Debug for NewPublicVirtualInterface {
         formatter.finish()
     }
 }
-/// See [`NewPublicVirtualInterface`](crate::model::NewPublicVirtualInterface)
+/// See [`NewPublicVirtualInterface`](crate::model::NewPublicVirtualInterface).
 pub mod new_public_virtual_interface {
 
-    /// A builder for [`NewPublicVirtualInterface`](crate::model::NewPublicVirtualInterface)
-    #[non_exhaustive]
+    /// A builder for [`NewPublicVirtualInterface`](crate::model::NewPublicVirtualInterface).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) virtual_interface_name: std::option::Option<std::string::String>,
@@ -6298,7 +6459,7 @@ pub mod new_public_virtual_interface {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`NewPublicVirtualInterface`](crate::model::NewPublicVirtualInterface)
+        /// Consumes the builder and constructs a [`NewPublicVirtualInterface`](crate::model::NewPublicVirtualInterface).
         pub fn build(self) -> crate::model::NewPublicVirtualInterface {
             crate::model::NewPublicVirtualInterface {
                 virtual_interface_name: self.virtual_interface_name,
@@ -6315,7 +6476,7 @@ pub mod new_public_virtual_interface {
     }
 }
 impl NewPublicVirtualInterface {
-    /// Creates a new builder-style object to manufacture [`NewPublicVirtualInterface`](crate::model::NewPublicVirtualInterface)
+    /// Creates a new builder-style object to manufacture [`NewPublicVirtualInterface`](crate::model::NewPublicVirtualInterface).
     pub fn builder() -> crate::model::new_public_virtual_interface::Builder {
         crate::model::new_public_virtual_interface::Builder::default()
     }
@@ -6326,29 +6487,41 @@ impl NewPublicVirtualInterface {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NewPrivateVirtualInterface {
     /// <p>The name of the virtual interface assigned by the customer network. The name has a maximum of 100 characters. The following are valid characters: a-z, 0-9 and a hyphen (-).</p>
+    #[doc(hidden)]
     pub virtual_interface_name: std::option::Option<std::string::String>,
     /// <p>The ID of the VLAN.</p>
+    #[doc(hidden)]
     pub vlan: i32,
     /// <p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p>
     /// <p>The valid values are 1-2147483647.</p>
+    #[doc(hidden)]
     pub asn: i32,
     /// <p>The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500.</p>
+    #[doc(hidden)]
     pub mtu: std::option::Option<i32>,
     /// <p>The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters.</p>
+    #[doc(hidden)]
     pub auth_key: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the Amazon interface.</p>
+    #[doc(hidden)]
     pub amazon_address: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the customer interface.</p>
+    #[doc(hidden)]
     pub customer_address: std::option::Option<std::string::String>,
     /// <p>The address family for the BGP peer.</p>
+    #[doc(hidden)]
     pub address_family: std::option::Option<crate::model::AddressFamily>,
     /// <p>The ID of the virtual private gateway.</p>
+    #[doc(hidden)]
     pub virtual_gateway_id: std::option::Option<std::string::String>,
     /// <p>The ID of the Direct Connect gateway.</p>
+    #[doc(hidden)]
     pub direct_connect_gateway_id: std::option::Option<std::string::String>,
     /// <p>The tags associated with the private virtual interface.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Indicates whether to enable or disable SiteLink.</p>
+    #[doc(hidden)]
     pub enable_site_link: std::option::Option<bool>,
 }
 impl NewPrivateVirtualInterface {
@@ -6420,11 +6593,10 @@ impl std::fmt::Debug for NewPrivateVirtualInterface {
         formatter.finish()
     }
 }
-/// See [`NewPrivateVirtualInterface`](crate::model::NewPrivateVirtualInterface)
+/// See [`NewPrivateVirtualInterface`](crate::model::NewPrivateVirtualInterface).
 pub mod new_private_virtual_interface {
 
-    /// A builder for [`NewPrivateVirtualInterface`](crate::model::NewPrivateVirtualInterface)
-    #[non_exhaustive]
+    /// A builder for [`NewPrivateVirtualInterface`](crate::model::NewPrivateVirtualInterface).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) virtual_interface_name: std::option::Option<std::string::String>,
@@ -6590,7 +6762,7 @@ pub mod new_private_virtual_interface {
             self.enable_site_link = input;
             self
         }
-        /// Consumes the builder and constructs a [`NewPrivateVirtualInterface`](crate::model::NewPrivateVirtualInterface)
+        /// Consumes the builder and constructs a [`NewPrivateVirtualInterface`](crate::model::NewPrivateVirtualInterface).
         pub fn build(self) -> crate::model::NewPrivateVirtualInterface {
             crate::model::NewPrivateVirtualInterface {
                 virtual_interface_name: self.virtual_interface_name,
@@ -6610,7 +6782,7 @@ pub mod new_private_virtual_interface {
     }
 }
 impl NewPrivateVirtualInterface {
-    /// Creates a new builder-style object to manufacture [`NewPrivateVirtualInterface`](crate::model::NewPrivateVirtualInterface)
+    /// Creates a new builder-style object to manufacture [`NewPrivateVirtualInterface`](crate::model::NewPrivateVirtualInterface).
     pub fn builder() -> crate::model::new_private_virtual_interface::Builder {
         crate::model::new_private_virtual_interface::Builder::default()
     }
@@ -6621,14 +6793,19 @@ impl NewPrivateVirtualInterface {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NewBgpPeer {
     /// <p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p>
+    #[doc(hidden)]
     pub asn: i32,
     /// <p>The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters.</p>
+    #[doc(hidden)]
     pub auth_key: std::option::Option<std::string::String>,
     /// <p>The address family for the BGP peer.</p>
+    #[doc(hidden)]
     pub address_family: std::option::Option<crate::model::AddressFamily>,
     /// <p>The IP address assigned to the Amazon interface.</p>
+    #[doc(hidden)]
     pub amazon_address: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the customer interface.</p>
+    #[doc(hidden)]
     pub customer_address: std::option::Option<std::string::String>,
 }
 impl NewBgpPeer {
@@ -6664,11 +6841,10 @@ impl std::fmt::Debug for NewBgpPeer {
         formatter.finish()
     }
 }
-/// See [`NewBgpPeer`](crate::model::NewBgpPeer)
+/// See [`NewBgpPeer`](crate::model::NewBgpPeer).
 pub mod new_bgp_peer {
 
-    /// A builder for [`NewBgpPeer`](crate::model::NewBgpPeer)
-    #[non_exhaustive]
+    /// A builder for [`NewBgpPeer`](crate::model::NewBgpPeer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asn: std::option::Option<i32>,
@@ -6737,7 +6913,7 @@ pub mod new_bgp_peer {
             self.customer_address = input;
             self
         }
-        /// Consumes the builder and constructs a [`NewBgpPeer`](crate::model::NewBgpPeer)
+        /// Consumes the builder and constructs a [`NewBgpPeer`](crate::model::NewBgpPeer).
         pub fn build(self) -> crate::model::NewBgpPeer {
             crate::model::NewBgpPeer {
                 asn: self.asn.unwrap_or_default(),
@@ -6750,7 +6926,7 @@ pub mod new_bgp_peer {
     }
 }
 impl NewBgpPeer {
-    /// Creates a new builder-style object to manufacture [`NewBgpPeer`](crate::model::NewBgpPeer)
+    /// Creates a new builder-style object to manufacture [`NewBgpPeer`](crate::model::NewBgpPeer).
     pub fn builder() -> crate::model::new_bgp_peer::Builder {
         crate::model::new_bgp_peer::Builder::default()
     }
@@ -6761,23 +6937,32 @@ impl NewBgpPeer {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NewTransitVirtualInterfaceAllocation {
     /// <p>The name of the virtual interface assigned by the customer network. The name has a maximum of 100 characters. The following are valid characters: a-z, 0-9 and a hyphen (-).</p>
+    #[doc(hidden)]
     pub virtual_interface_name: std::option::Option<std::string::String>,
     /// <p>The ID of the VLAN.</p>
+    #[doc(hidden)]
     pub vlan: i32,
     /// <p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p>
     /// <p>The valid values are 1-2147483647.</p>
+    #[doc(hidden)]
     pub asn: i32,
     /// <p>The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500. </p>
+    #[doc(hidden)]
     pub mtu: std::option::Option<i32>,
     /// <p>The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters.</p>
+    #[doc(hidden)]
     pub auth_key: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the Amazon interface.</p>
+    #[doc(hidden)]
     pub amazon_address: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the customer interface.</p>
+    #[doc(hidden)]
     pub customer_address: std::option::Option<std::string::String>,
     /// <p>The address family for the BGP peer.</p>
+    #[doc(hidden)]
     pub address_family: std::option::Option<crate::model::AddressFamily>,
     /// <p>The tags associated with the transitive virtual interface.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl NewTransitVirtualInterfaceAllocation {
@@ -6834,11 +7019,10 @@ impl std::fmt::Debug for NewTransitVirtualInterfaceAllocation {
         formatter.finish()
     }
 }
-/// See [`NewTransitVirtualInterfaceAllocation`](crate::model::NewTransitVirtualInterfaceAllocation)
+/// See [`NewTransitVirtualInterfaceAllocation`](crate::model::NewTransitVirtualInterfaceAllocation).
 pub mod new_transit_virtual_interface_allocation {
 
-    /// A builder for [`NewTransitVirtualInterfaceAllocation`](crate::model::NewTransitVirtualInterfaceAllocation)
-    #[non_exhaustive]
+    /// A builder for [`NewTransitVirtualInterfaceAllocation`](crate::model::NewTransitVirtualInterfaceAllocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) virtual_interface_name: std::option::Option<std::string::String>,
@@ -6965,7 +7149,7 @@ pub mod new_transit_virtual_interface_allocation {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`NewTransitVirtualInterfaceAllocation`](crate::model::NewTransitVirtualInterfaceAllocation)
+        /// Consumes the builder and constructs a [`NewTransitVirtualInterfaceAllocation`](crate::model::NewTransitVirtualInterfaceAllocation).
         pub fn build(self) -> crate::model::NewTransitVirtualInterfaceAllocation {
             crate::model::NewTransitVirtualInterfaceAllocation {
                 virtual_interface_name: self.virtual_interface_name,
@@ -6982,7 +7166,7 @@ pub mod new_transit_virtual_interface_allocation {
     }
 }
 impl NewTransitVirtualInterfaceAllocation {
-    /// Creates a new builder-style object to manufacture [`NewTransitVirtualInterfaceAllocation`](crate::model::NewTransitVirtualInterfaceAllocation)
+    /// Creates a new builder-style object to manufacture [`NewTransitVirtualInterfaceAllocation`](crate::model::NewTransitVirtualInterfaceAllocation).
     pub fn builder() -> crate::model::new_transit_virtual_interface_allocation::Builder {
         crate::model::new_transit_virtual_interface_allocation::Builder::default()
     }
@@ -6993,23 +7177,32 @@ impl NewTransitVirtualInterfaceAllocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NewPublicVirtualInterfaceAllocation {
     /// <p>The name of the virtual interface assigned by the customer network. The name has a maximum of 100 characters. The following are valid characters: a-z, 0-9 and a hyphen (-).</p>
+    #[doc(hidden)]
     pub virtual_interface_name: std::option::Option<std::string::String>,
     /// <p>The ID of the VLAN.</p>
+    #[doc(hidden)]
     pub vlan: i32,
     /// <p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p>
     /// <p>The valid values are 1-2147483647.</p>
+    #[doc(hidden)]
     pub asn: i32,
     /// <p>The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters.</p>
+    #[doc(hidden)]
     pub auth_key: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the Amazon interface.</p>
+    #[doc(hidden)]
     pub amazon_address: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the customer interface.</p>
+    #[doc(hidden)]
     pub customer_address: std::option::Option<std::string::String>,
     /// <p>The address family for the BGP peer.</p>
+    #[doc(hidden)]
     pub address_family: std::option::Option<crate::model::AddressFamily>,
     /// <p>The routes to be advertised to the Amazon Web Services network in this Region. Applies to public virtual interfaces.</p>
+    #[doc(hidden)]
     pub route_filter_prefixes: std::option::Option<std::vec::Vec<crate::model::RouteFilterPrefix>>,
     /// <p>The tags associated with the public virtual interface.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl NewPublicVirtualInterfaceAllocation {
@@ -7066,11 +7259,10 @@ impl std::fmt::Debug for NewPublicVirtualInterfaceAllocation {
         formatter.finish()
     }
 }
-/// See [`NewPublicVirtualInterfaceAllocation`](crate::model::NewPublicVirtualInterfaceAllocation)
+/// See [`NewPublicVirtualInterfaceAllocation`](crate::model::NewPublicVirtualInterfaceAllocation).
 pub mod new_public_virtual_interface_allocation {
 
-    /// A builder for [`NewPublicVirtualInterfaceAllocation`](crate::model::NewPublicVirtualInterfaceAllocation)
-    #[non_exhaustive]
+    /// A builder for [`NewPublicVirtualInterfaceAllocation`](crate::model::NewPublicVirtualInterfaceAllocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) virtual_interface_name: std::option::Option<std::string::String>,
@@ -7207,7 +7399,7 @@ pub mod new_public_virtual_interface_allocation {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`NewPublicVirtualInterfaceAllocation`](crate::model::NewPublicVirtualInterfaceAllocation)
+        /// Consumes the builder and constructs a [`NewPublicVirtualInterfaceAllocation`](crate::model::NewPublicVirtualInterfaceAllocation).
         pub fn build(self) -> crate::model::NewPublicVirtualInterfaceAllocation {
             crate::model::NewPublicVirtualInterfaceAllocation {
                 virtual_interface_name: self.virtual_interface_name,
@@ -7224,7 +7416,7 @@ pub mod new_public_virtual_interface_allocation {
     }
 }
 impl NewPublicVirtualInterfaceAllocation {
-    /// Creates a new builder-style object to manufacture [`NewPublicVirtualInterfaceAllocation`](crate::model::NewPublicVirtualInterfaceAllocation)
+    /// Creates a new builder-style object to manufacture [`NewPublicVirtualInterfaceAllocation`](crate::model::NewPublicVirtualInterfaceAllocation).
     pub fn builder() -> crate::model::new_public_virtual_interface_allocation::Builder {
         crate::model::new_public_virtual_interface_allocation::Builder::default()
     }
@@ -7235,23 +7427,32 @@ impl NewPublicVirtualInterfaceAllocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NewPrivateVirtualInterfaceAllocation {
     /// <p>The name of the virtual interface assigned by the customer network. The name has a maximum of 100 characters. The following are valid characters: a-z, 0-9 and a hyphen (-).</p>
+    #[doc(hidden)]
     pub virtual_interface_name: std::option::Option<std::string::String>,
     /// <p>The ID of the VLAN.</p>
+    #[doc(hidden)]
     pub vlan: i32,
     /// <p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p>
     /// <p>The valid values are 1-2147483647.</p>
+    #[doc(hidden)]
     pub asn: i32,
     /// <p>The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500.</p>
+    #[doc(hidden)]
     pub mtu: std::option::Option<i32>,
     /// <p>The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters.</p>
+    #[doc(hidden)]
     pub auth_key: std::option::Option<std::string::String>,
     /// <p>The IP address assigned to the Amazon interface.</p>
+    #[doc(hidden)]
     pub amazon_address: std::option::Option<std::string::String>,
     /// <p>The address family for the BGP peer.</p>
+    #[doc(hidden)]
     pub address_family: std::option::Option<crate::model::AddressFamily>,
     /// <p>The IP address assigned to the customer interface.</p>
+    #[doc(hidden)]
     pub customer_address: std::option::Option<std::string::String>,
     /// <p>The tags associated with the private virtual interface.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl NewPrivateVirtualInterfaceAllocation {
@@ -7308,11 +7509,10 @@ impl std::fmt::Debug for NewPrivateVirtualInterfaceAllocation {
         formatter.finish()
     }
 }
-/// See [`NewPrivateVirtualInterfaceAllocation`](crate::model::NewPrivateVirtualInterfaceAllocation)
+/// See [`NewPrivateVirtualInterfaceAllocation`](crate::model::NewPrivateVirtualInterfaceAllocation).
 pub mod new_private_virtual_interface_allocation {
 
-    /// A builder for [`NewPrivateVirtualInterfaceAllocation`](crate::model::NewPrivateVirtualInterfaceAllocation)
-    #[non_exhaustive]
+    /// A builder for [`NewPrivateVirtualInterfaceAllocation`](crate::model::NewPrivateVirtualInterfaceAllocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) virtual_interface_name: std::option::Option<std::string::String>,
@@ -7439,7 +7639,7 @@ pub mod new_private_virtual_interface_allocation {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`NewPrivateVirtualInterfaceAllocation`](crate::model::NewPrivateVirtualInterfaceAllocation)
+        /// Consumes the builder and constructs a [`NewPrivateVirtualInterfaceAllocation`](crate::model::NewPrivateVirtualInterfaceAllocation).
         pub fn build(self) -> crate::model::NewPrivateVirtualInterfaceAllocation {
             crate::model::NewPrivateVirtualInterfaceAllocation {
                 virtual_interface_name: self.virtual_interface_name,
@@ -7456,7 +7656,7 @@ pub mod new_private_virtual_interface_allocation {
     }
 }
 impl NewPrivateVirtualInterfaceAllocation {
-    /// Creates a new builder-style object to manufacture [`NewPrivateVirtualInterfaceAllocation`](crate::model::NewPrivateVirtualInterfaceAllocation)
+    /// Creates a new builder-style object to manufacture [`NewPrivateVirtualInterfaceAllocation`](crate::model::NewPrivateVirtualInterfaceAllocation).
     pub fn builder() -> crate::model::new_private_virtual_interface_allocation::Builder {
         crate::model::new_private_virtual_interface_allocation::Builder::default()
     }

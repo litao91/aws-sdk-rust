@@ -16,10 +16,29 @@ your project, add the following to your **Cargo.toml** file:
 
 ```toml
 [dependencies]
-aws-config = "0.14.0"
-aws-sdk-snowball = "0.14.0"
+aws-config = "0.47.0"
+aws-sdk-snowball = "0.17.0"
 tokio = { version = "1", features = ["full"] }
 ```
+
+Then in code, a client can be created with the following:
+
+```rust
+use aws_sdk_snowball as snowball;
+
+#[tokio::main]
+async fn main() -> Result<(), snowball::Error> {
+    let config = aws_config::load_from_env().await;
+    let client = snowball::Client::new(&config);
+
+    // ... make some calls with the client
+
+    Ok(())
+}
+```
+
+See the [client documentation](https://docs.rs/aws-sdk-snowball/latest/aws_sdk_snowball/client/struct.Client.html)
+for information on what calls can be made, and the inputs and outputs for each of those calls.
 
 ## Using the SDK
 

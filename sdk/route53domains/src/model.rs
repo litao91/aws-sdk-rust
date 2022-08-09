@@ -5,15 +5,20 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BillingRecord {
     /// <p>The name of the domain that the billing record applies to. If the domain name contains characters other than a-z, 0-9, and - (hyphen), such as an internationalized domain name, then this value is in Punycode. For more information, see <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DomainNameFormat.html">DNS Domain Name Format</a> in the <i>Amazon Route 53 Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The operation that you were charged for.</p>
+    #[doc(hidden)]
     pub operation: std::option::Option<crate::model::OperationType>,
     /// <p>The ID of the invoice that is associated with the billing record.</p>
+    #[doc(hidden)]
     pub invoice_id: std::option::Option<std::string::String>,
     /// <p>The date that the operation was billed, in Unix format.</p>
+    #[doc(hidden)]
     pub bill_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The price that you were charged for the operation, in US dollars.</p>
     /// <p>Example value: 12.0</p>
+    #[doc(hidden)]
     pub price: f64,
 }
 impl BillingRecord {
@@ -50,11 +55,10 @@ impl std::fmt::Debug for BillingRecord {
         formatter.finish()
     }
 }
-/// See [`BillingRecord`](crate::model::BillingRecord)
+/// See [`BillingRecord`](crate::model::BillingRecord).
 pub mod billing_record {
 
-    /// A builder for [`BillingRecord`](crate::model::BillingRecord)
-    #[non_exhaustive]
+    /// A builder for [`BillingRecord`](crate::model::BillingRecord).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -122,7 +126,7 @@ pub mod billing_record {
             self.price = input;
             self
         }
-        /// Consumes the builder and constructs a [`BillingRecord`](crate::model::BillingRecord)
+        /// Consumes the builder and constructs a [`BillingRecord`](crate::model::BillingRecord).
         pub fn build(self) -> crate::model::BillingRecord {
             crate::model::BillingRecord {
                 domain_name: self.domain_name,
@@ -135,7 +139,7 @@ pub mod billing_record {
     }
 }
 impl BillingRecord {
-    /// Creates a new builder-style object to manufacture [`BillingRecord`](crate::model::BillingRecord)
+    /// Creates a new builder-style object to manufacture [`BillingRecord`](crate::model::BillingRecord).
     pub fn builder() -> crate::model::billing_record::Builder {
         crate::model::billing_record::Builder::default()
     }
@@ -286,10 +290,12 @@ pub struct Tag {
     /// <p>The key (name) of a tag.</p>
     /// <p>Valid values: A-Z, a-z, 0-9, space, ".:/=+\-@"</p>
     /// <p>Constraints: Each key can be 1-128 characters long.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of a tag.</p>
     /// <p>Valid values: A-Z, a-z, 0-9, space, ".:/=+\-@"</p>
     /// <p>Constraints: Each value can be 0-256 characters long.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -314,11 +320,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -353,7 +358,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -363,7 +368,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -375,9 +380,11 @@ impl Tag {
 pub struct Nameserver {
     /// <p>The fully qualified host name of the name server.</p>
     /// <p>Constraint: Maximum 255 characters</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Glue IP address of a name server entry. Glue IP addresses are required only when the name of the name server is a subdomain of the domain. For example, if your domain is example.com and the name server for the domain is ns.example.com, you need to specify the IP address for ns.example.com.</p>
     /// <p>Constraints: The list can contain only one IPv4 and one IPv6 address.</p>
+    #[doc(hidden)]
     pub glue_ips: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Nameserver {
@@ -400,11 +407,10 @@ impl std::fmt::Debug for Nameserver {
         formatter.finish()
     }
 }
-/// See [`Nameserver`](crate::model::Nameserver)
+/// See [`Nameserver`](crate::model::Nameserver).
 pub mod nameserver {
 
-    /// A builder for [`Nameserver`](crate::model::Nameserver)
-    #[non_exhaustive]
+    /// A builder for [`Nameserver`](crate::model::Nameserver).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -444,7 +450,7 @@ pub mod nameserver {
             self.glue_ips = input;
             self
         }
-        /// Consumes the builder and constructs a [`Nameserver`](crate::model::Nameserver)
+        /// Consumes the builder and constructs a [`Nameserver`](crate::model::Nameserver).
         pub fn build(self) -> crate::model::Nameserver {
             crate::model::Nameserver {
                 name: self.name,
@@ -454,7 +460,7 @@ pub mod nameserver {
     }
 }
 impl Nameserver {
-    /// Creates a new builder-style object to manufacture [`Nameserver`](crate::model::Nameserver)
+    /// Creates a new builder-style object to manufacture [`Nameserver`](crate::model::Nameserver).
     pub fn builder() -> crate::model::nameserver::Builder {
         crate::model::nameserver::Builder::default()
     }
@@ -465,8 +471,10 @@ impl Nameserver {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContactDetail {
     /// <p>First name of contact.</p>
+    #[doc(hidden)]
     pub first_name: std::option::Option<std::string::String>,
     /// <p>Last name of contact.</p>
+    #[doc(hidden)]
     pub last_name: std::option::Option<std::string::String>,
     /// <p>Indicates whether the contact is a person, company, association, or public organization. Note the following:</p>
     /// <ul>
@@ -474,30 +482,42 @@ pub struct ContactDetail {
     /// <li> <p>For some TLDs, the privacy protection available depends on the value that you specify for <code>Contact Type</code>. For the privacy protection settings for your TLD, see <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html">Domains that You Can Register with Amazon Route 53</a> in the <i>Amazon Route 53 Developer Guide</i> </p> </li>
     /// <li> <p>For .es domains, the value of <code>ContactType</code> must be <code>PERSON</code> for all three contacts.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub contact_type: std::option::Option<crate::model::ContactType>,
     /// <p>Name of the organization for contact types other than <code>PERSON</code>.</p>
+    #[doc(hidden)]
     pub organization_name: std::option::Option<std::string::String>,
     /// <p>First line of the contact's address.</p>
+    #[doc(hidden)]
     pub address_line1: std::option::Option<std::string::String>,
     /// <p>Second line of contact's address, if any.</p>
+    #[doc(hidden)]
     pub address_line2: std::option::Option<std::string::String>,
     /// <p>The city of the contact's address.</p>
+    #[doc(hidden)]
     pub city: std::option::Option<std::string::String>,
     /// <p>The state or province of the contact's city.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>Code for the country of the contact's address.</p>
+    #[doc(hidden)]
     pub country_code: std::option::Option<crate::model::CountryCode>,
     /// <p>The zip or postal code of the contact's address.</p>
+    #[doc(hidden)]
     pub zip_code: std::option::Option<std::string::String>,
     /// <p>The phone number of the contact.</p>
     /// <p>Constraints: Phone number must be specified in the format "+[country dialing code].[number including any area code&gt;]". For example, a US phone number might appear as <code>"+1.1234567890"</code>.</p>
+    #[doc(hidden)]
     pub phone_number: std::option::Option<std::string::String>,
     /// <p>Email address of the contact.</p>
+    #[doc(hidden)]
     pub email: std::option::Option<std::string::String>,
     /// <p>Fax number of the contact.</p>
     /// <p>Constraints: Phone number must be specified in the format "+[country dialing code].[number including any area code]". For example, a US phone number might appear as <code>"+1.1234567890"</code>.</p>
+    #[doc(hidden)]
     pub fax: std::option::Option<std::string::String>,
     /// <p>A list of name-value pairs for parameters required by certain top-level domains.</p>
+    #[doc(hidden)]
     pub extra_params: std::option::Option<std::vec::Vec<crate::model::ExtraParam>>,
 }
 impl ContactDetail {
@@ -585,11 +605,10 @@ impl std::fmt::Debug for ContactDetail {
         formatter.finish()
     }
 }
-/// See [`ContactDetail`](crate::model::ContactDetail)
+/// See [`ContactDetail`](crate::model::ContactDetail).
 pub mod contact_detail {
 
-    /// A builder for [`ContactDetail`](crate::model::ContactDetail)
-    #[non_exhaustive]
+    /// A builder for [`ContactDetail`](crate::model::ContactDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) first_name: std::option::Option<std::string::String>,
@@ -786,7 +805,7 @@ pub mod contact_detail {
             self.extra_params = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContactDetail`](crate::model::ContactDetail)
+        /// Consumes the builder and constructs a [`ContactDetail`](crate::model::ContactDetail).
         pub fn build(self) -> crate::model::ContactDetail {
             crate::model::ContactDetail {
                 first_name: self.first_name,
@@ -808,7 +827,7 @@ pub mod contact_detail {
     }
 }
 impl ContactDetail {
-    /// Creates a new builder-style object to manufacture [`ContactDetail`](crate::model::ContactDetail)
+    /// Creates a new builder-style object to manufacture [`ContactDetail`](crate::model::ContactDetail).
     pub fn builder() -> crate::model::contact_detail::Builder {
         crate::model::contact_detail::Builder::default()
     }
@@ -1089,8 +1108,10 @@ pub struct ExtraParam {
     /// </dd>
     /// </dl>
     /// <p>In addition, many TLDs require a <code>VAT_NUMBER</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::ExtraParamName>,
     /// <p>The value that corresponds with the name of an extra parameter.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl ExtraParam {
@@ -1381,11 +1402,10 @@ impl std::fmt::Debug for ExtraParam {
         formatter.finish()
     }
 }
-/// See [`ExtraParam`](crate::model::ExtraParam)
+/// See [`ExtraParam`](crate::model::ExtraParam).
 pub mod extra_param {
 
-    /// A builder for [`ExtraParam`](crate::model::ExtraParam)
-    #[non_exhaustive]
+    /// A builder for [`ExtraParam`](crate::model::ExtraParam).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::ExtraParamName>,
@@ -1955,7 +1975,7 @@ pub mod extra_param {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExtraParam`](crate::model::ExtraParam)
+        /// Consumes the builder and constructs a [`ExtraParam`](crate::model::ExtraParam).
         pub fn build(self) -> crate::model::ExtraParam {
             crate::model::ExtraParam {
                 name: self.name,
@@ -1965,7 +1985,7 @@ pub mod extra_param {
     }
 }
 impl ExtraParam {
-    /// Creates a new builder-style object to manufacture [`ExtraParam`](crate::model::ExtraParam)
+    /// Creates a new builder-style object to manufacture [`ExtraParam`](crate::model::ExtraParam).
     pub fn builder() -> crate::model::extra_param::Builder {
         crate::model::extra_param::Builder::default()
     }
@@ -3317,16 +3337,22 @@ impl AsRef<str> for ContactType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainPrice {
     /// <p>The name of the TLD for which the prices apply.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The price for domain registration with Route&nbsp;53.</p>
+    #[doc(hidden)]
     pub registration_price: std::option::Option<crate::model::PriceWithCurrency>,
     /// <p>The price for transferring the domain registration to Route&nbsp;53.</p>
+    #[doc(hidden)]
     pub transfer_price: std::option::Option<crate::model::PriceWithCurrency>,
     /// <p>The price for renewing domain registration with Route&nbsp;53.</p>
+    #[doc(hidden)]
     pub renewal_price: std::option::Option<crate::model::PriceWithCurrency>,
     /// <p>The price for changing domain ownership.</p>
+    #[doc(hidden)]
     pub change_ownership_price: std::option::Option<crate::model::PriceWithCurrency>,
     /// <p>The price for restoring the domain with Route&nbsp;53.</p>
+    #[doc(hidden)]
     pub restoration_price: std::option::Option<crate::model::PriceWithCurrency>,
 }
 impl DomainPrice {
@@ -3367,11 +3393,10 @@ impl std::fmt::Debug for DomainPrice {
         formatter.finish()
     }
 }
-/// See [`DomainPrice`](crate::model::DomainPrice)
+/// See [`DomainPrice`](crate::model::DomainPrice).
 pub mod domain_price {
 
-    /// A builder for [`DomainPrice`](crate::model::DomainPrice)
-    #[non_exhaustive]
+    /// A builder for [`DomainPrice`](crate::model::DomainPrice).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3457,7 +3482,7 @@ pub mod domain_price {
             self.restoration_price = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainPrice`](crate::model::DomainPrice)
+        /// Consumes the builder and constructs a [`DomainPrice`](crate::model::DomainPrice).
         pub fn build(self) -> crate::model::DomainPrice {
             crate::model::DomainPrice {
                 name: self.name,
@@ -3471,7 +3496,7 @@ pub mod domain_price {
     }
 }
 impl DomainPrice {
-    /// Creates a new builder-style object to manufacture [`DomainPrice`](crate::model::DomainPrice)
+    /// Creates a new builder-style object to manufacture [`DomainPrice`](crate::model::DomainPrice).
     pub fn builder() -> crate::model::domain_price::Builder {
         crate::model::domain_price::Builder::default()
     }
@@ -3482,8 +3507,10 @@ impl DomainPrice {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PriceWithCurrency {
     /// <p>The price of a domain, in a specific currency.</p>
+    #[doc(hidden)]
     pub price: f64,
     /// <p>The currency specifier.</p>
+    #[doc(hidden)]
     pub currency: std::option::Option<std::string::String>,
 }
 impl PriceWithCurrency {
@@ -3504,11 +3531,10 @@ impl std::fmt::Debug for PriceWithCurrency {
         formatter.finish()
     }
 }
-/// See [`PriceWithCurrency`](crate::model::PriceWithCurrency)
+/// See [`PriceWithCurrency`](crate::model::PriceWithCurrency).
 pub mod price_with_currency {
 
-    /// A builder for [`PriceWithCurrency`](crate::model::PriceWithCurrency)
-    #[non_exhaustive]
+    /// A builder for [`PriceWithCurrency`](crate::model::PriceWithCurrency).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) price: std::option::Option<f64>,
@@ -3535,7 +3561,7 @@ pub mod price_with_currency {
             self.currency = input;
             self
         }
-        /// Consumes the builder and constructs a [`PriceWithCurrency`](crate::model::PriceWithCurrency)
+        /// Consumes the builder and constructs a [`PriceWithCurrency`](crate::model::PriceWithCurrency).
         pub fn build(self) -> crate::model::PriceWithCurrency {
             crate::model::PriceWithCurrency {
                 price: self.price.unwrap_or_default(),
@@ -3545,7 +3571,7 @@ pub mod price_with_currency {
     }
 }
 impl PriceWithCurrency {
-    /// Creates a new builder-style object to manufacture [`PriceWithCurrency`](crate::model::PriceWithCurrency)
+    /// Creates a new builder-style object to manufacture [`PriceWithCurrency`](crate::model::PriceWithCurrency).
     pub fn builder() -> crate::model::price_with_currency::Builder {
         crate::model::price_with_currency::Builder::default()
     }
@@ -3556,12 +3582,16 @@ impl PriceWithCurrency {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OperationSummary {
     /// <p>Identifier returned to track the requested action.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
     /// <p>The current status of the requested operation in the system.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OperationStatus>,
     /// <p>Type of the action requested.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::OperationType>,
     /// <p>The date when the request was submitted.</p>
+    #[doc(hidden)]
     pub submitted_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl OperationSummary {
@@ -3592,11 +3622,10 @@ impl std::fmt::Debug for OperationSummary {
         formatter.finish()
     }
 }
-/// See [`OperationSummary`](crate::model::OperationSummary)
+/// See [`OperationSummary`](crate::model::OperationSummary).
 pub mod operation_summary {
 
-    /// A builder for [`OperationSummary`](crate::model::OperationSummary)
-    #[non_exhaustive]
+    /// A builder for [`OperationSummary`](crate::model::OperationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -3651,7 +3680,7 @@ pub mod operation_summary {
             self.submitted_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`OperationSummary`](crate::model::OperationSummary)
+        /// Consumes the builder and constructs a [`OperationSummary`](crate::model::OperationSummary).
         pub fn build(self) -> crate::model::OperationSummary {
             crate::model::OperationSummary {
                 operation_id: self.operation_id,
@@ -3663,7 +3692,7 @@ pub mod operation_summary {
     }
 }
 impl OperationSummary {
-    /// Creates a new builder-style object to manufacture [`OperationSummary`](crate::model::OperationSummary)
+    /// Creates a new builder-style object to manufacture [`OperationSummary`](crate::model::OperationSummary).
     pub fn builder() -> crate::model::operation_summary::Builder {
         crate::model::operation_summary::Builder::default()
     }
@@ -3741,12 +3770,16 @@ impl AsRef<str> for OperationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainSummary {
     /// <p>The name of the domain that the summary information applies to.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>Indicates whether the domain is automatically renewed upon expiration.</p>
+    #[doc(hidden)]
     pub auto_renew: std::option::Option<bool>,
     /// <p>Indicates whether a domain is locked from unauthorized transfer to another party.</p>
+    #[doc(hidden)]
     pub transfer_lock: std::option::Option<bool>,
     /// <p>Expiration date of the domain in Unix time format and Coordinated Universal Time (UTC).</p>
+    #[doc(hidden)]
     pub expiry: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DomainSummary {
@@ -3777,11 +3810,10 @@ impl std::fmt::Debug for DomainSummary {
         formatter.finish()
     }
 }
-/// See [`DomainSummary`](crate::model::DomainSummary)
+/// See [`DomainSummary`](crate::model::DomainSummary).
 pub mod domain_summary {
 
-    /// A builder for [`DomainSummary`](crate::model::DomainSummary)
-    #[non_exhaustive]
+    /// A builder for [`DomainSummary`](crate::model::DomainSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -3833,7 +3865,7 @@ pub mod domain_summary {
             self.expiry = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainSummary`](crate::model::DomainSummary)
+        /// Consumes the builder and constructs a [`DomainSummary`](crate::model::DomainSummary).
         pub fn build(self) -> crate::model::DomainSummary {
             crate::model::DomainSummary {
                 domain_name: self.domain_name,
@@ -3845,7 +3877,7 @@ pub mod domain_summary {
     }
 }
 impl DomainSummary {
-    /// Creates a new builder-style object to manufacture [`DomainSummary`](crate::model::DomainSummary)
+    /// Creates a new builder-style object to manufacture [`DomainSummary`](crate::model::DomainSummary).
     pub fn builder() -> crate::model::domain_summary::Builder {
         crate::model::domain_summary::Builder::default()
     }
@@ -3856,8 +3888,10 @@ impl DomainSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SortCondition {
     /// <p>Field to be used for sorting the list of domains. It can be either the name or the expiration for a domain. Note that if <code>filterCondition</code> is used in the same <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains__ListDomains.html">ListDomains</a> call, the field used for sorting has to be the same as the field used for filtering.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::ListDomainsAttributeName>,
     /// <p>The sort order for a list of domains. Either ascending (ASC) or descending (DES).</p>
+    #[doc(hidden)]
     pub sort_order: std::option::Option<crate::model::SortOrder>,
 }
 impl SortCondition {
@@ -3878,11 +3912,10 @@ impl std::fmt::Debug for SortCondition {
         formatter.finish()
     }
 }
-/// See [`SortCondition`](crate::model::SortCondition)
+/// See [`SortCondition`](crate::model::SortCondition).
 pub mod sort_condition {
 
-    /// A builder for [`SortCondition`](crate::model::SortCondition)
-    #[non_exhaustive]
+    /// A builder for [`SortCondition`](crate::model::SortCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::ListDomainsAttributeName>,
@@ -3915,7 +3948,7 @@ pub mod sort_condition {
             self.sort_order = input;
             self
         }
-        /// Consumes the builder and constructs a [`SortCondition`](crate::model::SortCondition)
+        /// Consumes the builder and constructs a [`SortCondition`](crate::model::SortCondition).
         pub fn build(self) -> crate::model::SortCondition {
             crate::model::SortCondition {
                 name: self.name,
@@ -3925,7 +3958,7 @@ pub mod sort_condition {
     }
 }
 impl SortCondition {
-    /// Creates a new builder-style object to manufacture [`SortCondition`](crate::model::SortCondition)
+    /// Creates a new builder-style object to manufacture [`SortCondition`](crate::model::SortCondition).
     pub fn builder() -> crate::model::sort_condition::Builder {
         crate::model::sort_condition::Builder::default()
     }
@@ -4046,6 +4079,7 @@ impl AsRef<str> for ListDomainsAttributeName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FilterCondition {
     /// <p>Name of the field which should be used for filtering the list of domains.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::ListDomainsAttributeName>,
     /// <p>The operator values for filtering domain names. The values can be:</p>
     /// <ul>
@@ -4053,8 +4087,10 @@ pub struct FilterCondition {
     /// <li> <p> <code>GE</code>: Greater than, or equal to</p> </li>
     /// <li> <p> <code>BEGINS_WITH</code>: Begins with</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub operator: std::option::Option<crate::model::Operator>,
     /// <p> An array of strings presenting values to compare. Only 1 item in the list is currently supported.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl FilterCondition {
@@ -4085,11 +4121,10 @@ impl std::fmt::Debug for FilterCondition {
         formatter.finish()
     }
 }
-/// See [`FilterCondition`](crate::model::FilterCondition)
+/// See [`FilterCondition`](crate::model::FilterCondition).
 pub mod filter_condition {
 
-    /// A builder for [`FilterCondition`](crate::model::FilterCondition)
-    #[non_exhaustive]
+    /// A builder for [`FilterCondition`](crate::model::FilterCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::ListDomainsAttributeName>,
@@ -4149,7 +4184,7 @@ pub mod filter_condition {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`FilterCondition`](crate::model::FilterCondition)
+        /// Consumes the builder and constructs a [`FilterCondition`](crate::model::FilterCondition).
         pub fn build(self) -> crate::model::FilterCondition {
             crate::model::FilterCondition {
                 name: self.name,
@@ -4160,7 +4195,7 @@ pub mod filter_condition {
     }
 }
 impl FilterCondition {
-    /// Creates a new builder-style object to manufacture [`FilterCondition`](crate::model::FilterCondition)
+    /// Creates a new builder-style object to manufacture [`FilterCondition`](crate::model::FilterCondition).
     pub fn builder() -> crate::model::filter_condition::Builder {
         crate::model::filter_condition::Builder::default()
     }
@@ -4230,6 +4265,7 @@ impl AsRef<str> for Operator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainSuggestion {
     /// <p>A suggested domain name.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>Whether the domain name is available for registering.</p> <note>
     /// <p>You can register only the domains that are designated as <code>AVAILABLE</code>.</p>
@@ -4291,6 +4327,7 @@ pub struct DomainSuggestion {
     /// <p>The domain name is forbidden.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub availability: std::option::Option<std::string::String>,
 }
 impl DomainSuggestion {
@@ -4370,11 +4407,10 @@ impl std::fmt::Debug for DomainSuggestion {
         formatter.finish()
     }
 }
-/// See [`DomainSuggestion`](crate::model::DomainSuggestion)
+/// See [`DomainSuggestion`](crate::model::DomainSuggestion).
 pub mod domain_suggestion {
 
-    /// A builder for [`DomainSuggestion`](crate::model::DomainSuggestion)
-    #[non_exhaustive]
+    /// A builder for [`DomainSuggestion`](crate::model::DomainSuggestion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -4519,7 +4555,7 @@ pub mod domain_suggestion {
             self.availability = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainSuggestion`](crate::model::DomainSuggestion)
+        /// Consumes the builder and constructs a [`DomainSuggestion`](crate::model::DomainSuggestion).
         pub fn build(self) -> crate::model::DomainSuggestion {
             crate::model::DomainSuggestion {
                 domain_name: self.domain_name,
@@ -4529,7 +4565,7 @@ pub mod domain_suggestion {
     }
 }
 impl DomainSuggestion {
-    /// Creates a new builder-style object to manufacture [`DomainSuggestion`](crate::model::DomainSuggestion)
+    /// Creates a new builder-style object to manufacture [`DomainSuggestion`](crate::model::DomainSuggestion).
     pub fn builder() -> crate::model::domain_suggestion::Builder {
         crate::model::domain_suggestion::Builder::default()
     }
@@ -4622,6 +4658,7 @@ pub struct DomainTransferability {
     /// <p>Reserved for future use.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub transferable: std::option::Option<crate::model::Transferable>,
 }
 impl DomainTransferability {
@@ -4660,11 +4697,10 @@ impl std::fmt::Debug for DomainTransferability {
         formatter.finish()
     }
 }
-/// See [`DomainTransferability`](crate::model::DomainTransferability)
+/// See [`DomainTransferability`](crate::model::DomainTransferability).
 pub mod domain_transferability {
 
-    /// A builder for [`DomainTransferability`](crate::model::DomainTransferability)
-    #[non_exhaustive]
+    /// A builder for [`DomainTransferability`](crate::model::DomainTransferability).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transferable: std::option::Option<crate::model::Transferable>,
@@ -4729,7 +4765,7 @@ pub mod domain_transferability {
             self.transferable = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainTransferability`](crate::model::DomainTransferability)
+        /// Consumes the builder and constructs a [`DomainTransferability`](crate::model::DomainTransferability).
         pub fn build(self) -> crate::model::DomainTransferability {
             crate::model::DomainTransferability {
                 transferable: self.transferable,
@@ -4738,7 +4774,7 @@ pub mod domain_transferability {
     }
 }
 impl DomainTransferability {
-    /// Creates a new builder-style object to manufacture [`DomainTransferability`](crate::model::DomainTransferability)
+    /// Creates a new builder-style object to manufacture [`DomainTransferability`](crate::model::DomainTransferability).
     pub fn builder() -> crate::model::domain_transferability::Builder {
         crate::model::domain_transferability::Builder::default()
     }

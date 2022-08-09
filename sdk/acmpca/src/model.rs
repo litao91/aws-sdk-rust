@@ -87,8 +87,10 @@ impl AsRef<str> for CertificateAuthorityStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RevocationConfiguration {
     /// <p>Configuration of the certificate revocation list (CRL), if any, maintained by your private CA. A CRL is typically updated approximately 30 minutes after a certificate is revoked. If for any reason a CRL update fails, ACM Private CA makes further attempts every 15 minutes.</p>
+    #[doc(hidden)]
     pub crl_configuration: std::option::Option<crate::model::CrlConfiguration>,
     /// <p>Configuration of Online Certificate Status Protocol (OCSP) support, if any, maintained by your private CA. When you revoke a certificate, OCSP responses may take up to 60 minutes to reflect the new status.</p>
+    #[doc(hidden)]
     pub ocsp_configuration: std::option::Option<crate::model::OcspConfiguration>,
 }
 impl RevocationConfiguration {
@@ -109,11 +111,10 @@ impl std::fmt::Debug for RevocationConfiguration {
         formatter.finish()
     }
 }
-/// See [`RevocationConfiguration`](crate::model::RevocationConfiguration)
+/// See [`RevocationConfiguration`](crate::model::RevocationConfiguration).
 pub mod revocation_configuration {
 
-    /// A builder for [`RevocationConfiguration`](crate::model::RevocationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`RevocationConfiguration`](crate::model::RevocationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) crl_configuration: std::option::Option<crate::model::CrlConfiguration>,
@@ -146,7 +147,7 @@ pub mod revocation_configuration {
             self.ocsp_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`RevocationConfiguration`](crate::model::RevocationConfiguration)
+        /// Consumes the builder and constructs a [`RevocationConfiguration`](crate::model::RevocationConfiguration).
         pub fn build(self) -> crate::model::RevocationConfiguration {
             crate::model::RevocationConfiguration {
                 crl_configuration: self.crl_configuration,
@@ -156,7 +157,7 @@ pub mod revocation_configuration {
     }
 }
 impl RevocationConfiguration {
-    /// Creates a new builder-style object to manufacture [`RevocationConfiguration`](crate::model::RevocationConfiguration)
+    /// Creates a new builder-style object to manufacture [`RevocationConfiguration`](crate::model::RevocationConfiguration).
     pub fn builder() -> crate::model::revocation_configuration::Builder {
         crate::model::revocation_configuration::Builder::default()
     }
@@ -168,10 +169,12 @@ impl RevocationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OcspConfiguration {
     /// <p>Flag enabling use of the Online Certificate Status Protocol (OCSP) for validating certificate revocation status.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>By default, ACM Private CA injects an Amazon Web Services domain into certificates being validated by the Online Certificate Status Protocol (OCSP). A customer can alternatively use this object to define a CNAME specifying a customized OCSP domain.</p>
     /// <p>Note: The value of the CNAME must not include a protocol prefix such as "http://" or "https://".</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/ocsp-customize.html">Customizing Online Certificate Status Protocol (OCSP) </a> in the <i>Certificate Manager Private Certificate Authority (PCA) User Guide</i>.</p>
+    #[doc(hidden)]
     pub ocsp_custom_cname: std::option::Option<std::string::String>,
 }
 impl OcspConfiguration {
@@ -194,11 +197,10 @@ impl std::fmt::Debug for OcspConfiguration {
         formatter.finish()
     }
 }
-/// See [`OcspConfiguration`](crate::model::OcspConfiguration)
+/// See [`OcspConfiguration`](crate::model::OcspConfiguration).
 pub mod ocsp_configuration {
 
-    /// A builder for [`OcspConfiguration`](crate::model::OcspConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`OcspConfiguration`](crate::model::OcspConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -232,7 +234,7 @@ pub mod ocsp_configuration {
             self.ocsp_custom_cname = input;
             self
         }
-        /// Consumes the builder and constructs a [`OcspConfiguration`](crate::model::OcspConfiguration)
+        /// Consumes the builder and constructs a [`OcspConfiguration`](crate::model::OcspConfiguration).
         pub fn build(self) -> crate::model::OcspConfiguration {
             crate::model::OcspConfiguration {
                 enabled: self.enabled,
@@ -242,7 +244,7 @@ pub mod ocsp_configuration {
     }
 }
 impl OcspConfiguration {
-    /// Creates a new builder-style object to manufacture [`OcspConfiguration`](crate::model::OcspConfiguration)
+    /// Creates a new builder-style object to manufacture [`OcspConfiguration`](crate::model::OcspConfiguration).
     pub fn builder() -> crate::model::ocsp_configuration::Builder {
         crate::model::ocsp_configuration::Builder::default()
     }
@@ -283,17 +285,22 @@ impl OcspConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CrlConfiguration {
     /// <p>Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. You can use this value to enable certificate revocation for a new CA when you call the <a href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CreateCertificateAuthority.html">CreateCertificateAuthority</a> action or for an existing CA when you call the <a href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html">UpdateCertificateAuthority</a> action. </p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>Validity period of the CRL in days.</p>
+    #[doc(hidden)]
     pub expiration_in_days: std::option::Option<i32>,
     /// <p>Name inserted into the certificate <b>CRL Distribution Points</b> extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public.</p>
+    #[doc(hidden)]
     pub custom_cname: std::option::Option<std::string::String>,
     /// <p>Name of the S3 bucket that contains the CRL. If you do not provide a value for the <b>CustomCname</b> argument, the name of your S3 bucket is placed into the <b>CRL Distribution Points</b> extension of the issued certificate. You can change the name of your bucket by calling the <a href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html">UpdateCertificateAuthority</a> operation. You must specify a <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#s3-policies">bucket policy</a> that allows ACM Private CA to write the CRL to your bucket.</p>
+    #[doc(hidden)]
     pub s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>Determines whether the CRL will be publicly readable or privately held in the CRL Amazon S3 bucket. If you choose PUBLIC_READ, the CRL will be accessible over the public internet. If you choose BUCKET_OWNER_FULL_CONTROL, only the owner of the CRL S3 bucket can access the CRL, and your PKI clients may need an alternative method of access. </p>
     /// <p>If no value is specified, the default is <code>PUBLIC_READ</code>.</p>
     /// <p> <i>Note:</i> This default can cause CA creation to fail in some circumstances. If you have have enabled the Block Public Access (BPA) feature in your S3 account, then you must specify the value of this parameter as <code>BUCKET_OWNER_FULL_CONTROL</code>, and not doing so results in an error. If you have disabled BPA in S3, then you can specify either <code>BUCKET_OWNER_FULL_CONTROL</code> or <code>PUBLIC_READ</code> as the value.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#s3-bpa">Blocking public access to the S3 bucket</a>.</p>
+    #[doc(hidden)]
     pub s3_object_acl: std::option::Option<crate::model::S3ObjectAcl>,
 }
 impl CrlConfiguration {
@@ -332,11 +339,10 @@ impl std::fmt::Debug for CrlConfiguration {
         formatter.finish()
     }
 }
-/// See [`CrlConfiguration`](crate::model::CrlConfiguration)
+/// See [`CrlConfiguration`](crate::model::CrlConfiguration).
 pub mod crl_configuration {
 
-    /// A builder for [`CrlConfiguration`](crate::model::CrlConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CrlConfiguration`](crate::model::CrlConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -408,7 +414,7 @@ pub mod crl_configuration {
             self.s3_object_acl = input;
             self
         }
-        /// Consumes the builder and constructs a [`CrlConfiguration`](crate::model::CrlConfiguration)
+        /// Consumes the builder and constructs a [`CrlConfiguration`](crate::model::CrlConfiguration).
         pub fn build(self) -> crate::model::CrlConfiguration {
             crate::model::CrlConfiguration {
                 enabled: self.enabled,
@@ -421,7 +427,7 @@ pub mod crl_configuration {
     }
 }
 impl CrlConfiguration {
-    /// Creates a new builder-style object to manufacture [`CrlConfiguration`](crate::model::CrlConfiguration)
+    /// Creates a new builder-style object to manufacture [`CrlConfiguration`](crate::model::CrlConfiguration).
     pub fn builder() -> crate::model::crl_configuration::Builder {
         crate::model::crl_configuration::Builder::default()
     }
@@ -487,8 +493,10 @@ impl AsRef<str> for S3ObjectAcl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>Key (name) of the tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Value of the tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -509,11 +517,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -540,7 +547,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -550,7 +557,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -649,16 +656,22 @@ impl AsRef<str> for RevocationReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Permission {
     /// <p>The Amazon Resource Number (ARN) of the private CA from which the permission was issued.</p>
+    #[doc(hidden)]
     pub certificate_authority_arn: std::option::Option<std::string::String>,
     /// <p>The time at which the permission was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Web Services service or entity that holds the permission. At this time, the only valid principal is <code>acm.amazonaws.com</code>.</p>
+    #[doc(hidden)]
     pub principal: std::option::Option<std::string::String>,
     /// <p>The ID of the account that assigned the permission.</p>
+    #[doc(hidden)]
     pub source_account: std::option::Option<std::string::String>,
     /// <p>The private CA actions that can be performed by the designated Amazon Web Services service.</p>
+    #[doc(hidden)]
     pub actions: std::option::Option<std::vec::Vec<crate::model::ActionType>>,
     /// <p>The name of the policy that is associated with the permission.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl Permission {
@@ -699,11 +712,10 @@ impl std::fmt::Debug for Permission {
         formatter.finish()
     }
 }
-/// See [`Permission`](crate::model::Permission)
+/// See [`Permission`](crate::model::Permission).
 pub mod permission {
 
-    /// A builder for [`Permission`](crate::model::Permission)
-    #[non_exhaustive]
+    /// A builder for [`Permission`](crate::model::Permission).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_authority_arn: std::option::Option<std::string::String>,
@@ -792,7 +804,7 @@ pub mod permission {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`Permission`](crate::model::Permission)
+        /// Consumes the builder and constructs a [`Permission`](crate::model::Permission).
         pub fn build(self) -> crate::model::Permission {
             crate::model::Permission {
                 certificate_authority_arn: self.certificate_authority_arn,
@@ -806,7 +818,7 @@ pub mod permission {
     }
 }
 impl Permission {
-    /// Creates a new builder-style object to manufacture [`Permission`](crate::model::Permission)
+    /// Creates a new builder-style object to manufacture [`Permission`](crate::model::Permission).
     pub fn builder() -> crate::model::permission::Builder {
         crate::model::permission::Builder::default()
     }
@@ -876,35 +888,49 @@ impl AsRef<str> for ActionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CertificateAuthority {
     /// <p>Amazon Resource Name (ARN) for your private certificate authority (CA). The format is <code> <i>12345678-1234-1234-1234-123456789012</i> </code>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services account ID that owns the certificate authority.</p>
+    #[doc(hidden)]
     pub owner_account: std::option::Option<std::string::String>,
     /// <p>Date and time at which your private CA was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Date and time at which your private CA was last updated.</p>
+    #[doc(hidden)]
     pub last_state_change_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Type of your private CA.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::CertificateAuthorityType>,
     /// <p>Serial number of your private CA.</p>
+    #[doc(hidden)]
     pub serial: std::option::Option<std::string::String>,
     /// <p>Status of your private CA.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CertificateAuthorityStatus>,
     /// <p>Date and time before which your private CA certificate is not valid.</p>
+    #[doc(hidden)]
     pub not_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Date and time after which your private CA certificate is not valid.</p>
+    #[doc(hidden)]
     pub not_after: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Reason the request to create your private CA failed.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<crate::model::FailureReason>,
     /// <p>Your private CA configuration.</p>
+    #[doc(hidden)]
     pub certificate_authority_configuration:
         std::option::Option<crate::model::CertificateAuthorityConfiguration>,
     /// <p>Information about the Online Certificate Status Protocol (OCSP) configuration or certificate revocation list (CRL) created and maintained by your private CA. </p>
+    #[doc(hidden)]
     pub revocation_configuration: std::option::Option<crate::model::RevocationConfiguration>,
     /// <p>The period during which a deleted CA can be restored. For more information, see the <code>PermanentDeletionTimeInDays</code> parameter of the <a href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_DeleteCertificateAuthorityRequest.html">DeleteCertificateAuthorityRequest</a> action. </p>
+    #[doc(hidden)]
     pub restorable_until: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Defines a cryptographic key management compliance standard used for handling CA keys. </p>
     /// <p>Default: FIPS_140_2_LEVEL_3_OR_HIGHER</p>
     /// <p>Note: Amazon Web Services Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly specify this parameter and value when creating a CA in that Region. Specifying a different value (or no value) results in an <code>InvalidArgsException</code> with the message "A certificate authority cannot be created in this region with the specified security standard."</p>
+    #[doc(hidden)]
     pub key_storage_security_standard:
         std::option::Option<crate::model::KeyStorageSecurityStandard>,
 }
@@ -1000,11 +1026,10 @@ impl std::fmt::Debug for CertificateAuthority {
         formatter.finish()
     }
 }
-/// See [`CertificateAuthority`](crate::model::CertificateAuthority)
+/// See [`CertificateAuthority`](crate::model::CertificateAuthority).
 pub mod certificate_authority {
 
-    /// A builder for [`CertificateAuthority`](crate::model::CertificateAuthority)
-    #[non_exhaustive]
+    /// A builder for [`CertificateAuthority`](crate::model::CertificateAuthority).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1215,7 +1240,7 @@ pub mod certificate_authority {
             self.key_storage_security_standard = input;
             self
         }
-        /// Consumes the builder and constructs a [`CertificateAuthority`](crate::model::CertificateAuthority)
+        /// Consumes the builder and constructs a [`CertificateAuthority`](crate::model::CertificateAuthority).
         pub fn build(self) -> crate::model::CertificateAuthority {
             crate::model::CertificateAuthority {
                 arn: self.arn,
@@ -1237,7 +1262,7 @@ pub mod certificate_authority {
     }
 }
 impl CertificateAuthority {
-    /// Creates a new builder-style object to manufacture [`CertificateAuthority`](crate::model::CertificateAuthority)
+    /// Creates a new builder-style object to manufacture [`CertificateAuthority`](crate::model::CertificateAuthority).
     pub fn builder() -> crate::model::certificate_authority::Builder {
         crate::model::certificate_authority::Builder::default()
     }
@@ -1306,13 +1331,17 @@ impl AsRef<str> for KeyStorageSecurityStandard {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CertificateAuthorityConfiguration {
     /// <p>Type of the public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate. When you create a subordinate CA, you must use a key algorithm supported by the parent CA.</p>
+    #[doc(hidden)]
     pub key_algorithm: std::option::Option<crate::model::KeyAlgorithm>,
     /// <p>Name of the algorithm your private CA uses to sign certificate requests.</p>
     /// <p>This parameter should not be confused with the <code>SigningAlgorithm</code> parameter used to sign certificates when they are issued.</p>
+    #[doc(hidden)]
     pub signing_algorithm: std::option::Option<crate::model::SigningAlgorithm>,
     /// <p>Structure that contains X.500 distinguished name information for your private CA.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<crate::model::Asn1Subject>,
     /// <p>Specifies information to be added to the extension section of the certificate signing request (CSR).</p>
+    #[doc(hidden)]
     pub csr_extensions: std::option::Option<crate::model::CsrExtensions>,
 }
 impl CertificateAuthorityConfiguration {
@@ -1344,11 +1373,10 @@ impl std::fmt::Debug for CertificateAuthorityConfiguration {
         formatter.finish()
     }
 }
-/// See [`CertificateAuthorityConfiguration`](crate::model::CertificateAuthorityConfiguration)
+/// See [`CertificateAuthorityConfiguration`](crate::model::CertificateAuthorityConfiguration).
 pub mod certificate_authority_configuration {
 
-    /// A builder for [`CertificateAuthorityConfiguration`](crate::model::CertificateAuthorityConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CertificateAuthorityConfiguration`](crate::model::CertificateAuthorityConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_algorithm: std::option::Option<crate::model::KeyAlgorithm>,
@@ -1411,7 +1439,7 @@ pub mod certificate_authority_configuration {
             self.csr_extensions = input;
             self
         }
-        /// Consumes the builder and constructs a [`CertificateAuthorityConfiguration`](crate::model::CertificateAuthorityConfiguration)
+        /// Consumes the builder and constructs a [`CertificateAuthorityConfiguration`](crate::model::CertificateAuthorityConfiguration).
         pub fn build(self) -> crate::model::CertificateAuthorityConfiguration {
             crate::model::CertificateAuthorityConfiguration {
                 key_algorithm: self.key_algorithm,
@@ -1423,7 +1451,7 @@ pub mod certificate_authority_configuration {
     }
 }
 impl CertificateAuthorityConfiguration {
-    /// Creates a new builder-style object to manufacture [`CertificateAuthorityConfiguration`](crate::model::CertificateAuthorityConfiguration)
+    /// Creates a new builder-style object to manufacture [`CertificateAuthorityConfiguration`](crate::model::CertificateAuthorityConfiguration).
     pub fn builder() -> crate::model::certificate_authority_configuration::Builder {
         crate::model::certificate_authority_configuration::Builder::default()
     }
@@ -1434,8 +1462,10 @@ impl CertificateAuthorityConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CsrExtensions {
     /// <p>Indicates the purpose of the certificate and of the key contained in the certificate.</p>
+    #[doc(hidden)]
     pub key_usage: std::option::Option<crate::model::KeyUsage>,
     /// <p>For CA certificates, provides a path to additional information pertaining to the CA, such as revocation and policy. For more information, see <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2">Subject Information Access</a> in RFC 5280.</p>
+    #[doc(hidden)]
     pub subject_information_access:
         std::option::Option<std::vec::Vec<crate::model::AccessDescription>>,
 }
@@ -1462,11 +1492,10 @@ impl std::fmt::Debug for CsrExtensions {
         formatter.finish()
     }
 }
-/// See [`CsrExtensions`](crate::model::CsrExtensions)
+/// See [`CsrExtensions`](crate::model::CsrExtensions).
 pub mod csr_extensions {
 
-    /// A builder for [`CsrExtensions`](crate::model::CsrExtensions)
-    #[non_exhaustive]
+    /// A builder for [`CsrExtensions`](crate::model::CsrExtensions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_usage: std::option::Option<crate::model::KeyUsage>,
@@ -1506,7 +1535,7 @@ pub mod csr_extensions {
             self.subject_information_access = input;
             self
         }
-        /// Consumes the builder and constructs a [`CsrExtensions`](crate::model::CsrExtensions)
+        /// Consumes the builder and constructs a [`CsrExtensions`](crate::model::CsrExtensions).
         pub fn build(self) -> crate::model::CsrExtensions {
             crate::model::CsrExtensions {
                 key_usage: self.key_usage,
@@ -1516,7 +1545,7 @@ pub mod csr_extensions {
     }
 }
 impl CsrExtensions {
-    /// Creates a new builder-style object to manufacture [`CsrExtensions`](crate::model::CsrExtensions)
+    /// Creates a new builder-style object to manufacture [`CsrExtensions`](crate::model::CsrExtensions).
     pub fn builder() -> crate::model::csr_extensions::Builder {
         crate::model::csr_extensions::Builder::default()
     }
@@ -1527,8 +1556,10 @@ impl CsrExtensions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessDescription {
     /// <p>The type and format of <code>AccessDescription</code> information.</p>
+    #[doc(hidden)]
     pub access_method: std::option::Option<crate::model::AccessMethod>,
     /// <p>The location of <code>AccessDescription</code> information.</p>
+    #[doc(hidden)]
     pub access_location: std::option::Option<crate::model::GeneralName>,
 }
 impl AccessDescription {
@@ -1549,11 +1580,10 @@ impl std::fmt::Debug for AccessDescription {
         formatter.finish()
     }
 }
-/// See [`AccessDescription`](crate::model::AccessDescription)
+/// See [`AccessDescription`](crate::model::AccessDescription).
 pub mod access_description {
 
-    /// A builder for [`AccessDescription`](crate::model::AccessDescription)
-    #[non_exhaustive]
+    /// A builder for [`AccessDescription`](crate::model::AccessDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_method: std::option::Option<crate::model::AccessMethod>,
@@ -1586,7 +1616,7 @@ pub mod access_description {
             self.access_location = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessDescription`](crate::model::AccessDescription)
+        /// Consumes the builder and constructs a [`AccessDescription`](crate::model::AccessDescription).
         pub fn build(self) -> crate::model::AccessDescription {
             crate::model::AccessDescription {
                 access_method: self.access_method,
@@ -1596,7 +1626,7 @@ pub mod access_description {
     }
 }
 impl AccessDescription {
-    /// Creates a new builder-style object to manufacture [`AccessDescription`](crate::model::AccessDescription)
+    /// Creates a new builder-style object to manufacture [`AccessDescription`](crate::model::AccessDescription).
     pub fn builder() -> crate::model::access_description::Builder {
         crate::model::access_description::Builder::default()
     }
@@ -1607,20 +1637,28 @@ impl AccessDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GeneralName {
     /// <p>Represents <code>GeneralName</code> using an <code>OtherName</code> object.</p>
+    #[doc(hidden)]
     pub other_name: std::option::Option<crate::model::OtherName>,
     /// <p>Represents <code>GeneralName</code> as an <a href="https://datatracker.ietf.org/doc/html/rfc822">RFC 822</a> email address.</p>
+    #[doc(hidden)]
     pub rfc822_name: std::option::Option<std::string::String>,
     /// <p>Represents <code>GeneralName</code> as a DNS name.</p>
+    #[doc(hidden)]
     pub dns_name: std::option::Option<std::string::String>,
     /// <p>Contains information about the certificate subject. The <code>Subject</code> field in the certificate identifies the entity that owns or controls the public key in the certificate. The entity can be a user, computer, device, or service. The <code>Subject </code>must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the certificate.</p>
+    #[doc(hidden)]
     pub directory_name: std::option::Option<crate::model::Asn1Subject>,
     /// <p>Represents <code>GeneralName</code> as an <code>EdiPartyName</code> object.</p>
+    #[doc(hidden)]
     pub edi_party_name: std::option::Option<crate::model::EdiPartyName>,
     /// <p>Represents <code>GeneralName</code> as a URI.</p>
+    #[doc(hidden)]
     pub uniform_resource_identifier: std::option::Option<std::string::String>,
     /// <p>Represents <code>GeneralName</code> as an IPv4 or IPv6 address.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p> Represents <code>GeneralName</code> as an object identifier (OID).</p>
+    #[doc(hidden)]
     pub registered_id: std::option::Option<std::string::String>,
 }
 impl GeneralName {
@@ -1674,11 +1712,10 @@ impl std::fmt::Debug for GeneralName {
         formatter.finish()
     }
 }
-/// See [`GeneralName`](crate::model::GeneralName)
+/// See [`GeneralName`](crate::model::GeneralName).
 pub mod general_name {
 
-    /// A builder for [`GeneralName`](crate::model::GeneralName)
-    #[non_exhaustive]
+    /// A builder for [`GeneralName`](crate::model::GeneralName).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) other_name: std::option::Option<crate::model::OtherName>,
@@ -1789,7 +1826,7 @@ pub mod general_name {
             self.registered_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeneralName`](crate::model::GeneralName)
+        /// Consumes the builder and constructs a [`GeneralName`](crate::model::GeneralName).
         pub fn build(self) -> crate::model::GeneralName {
             crate::model::GeneralName {
                 other_name: self.other_name,
@@ -1805,7 +1842,7 @@ pub mod general_name {
     }
 }
 impl GeneralName {
-    /// Creates a new builder-style object to manufacture [`GeneralName`](crate::model::GeneralName)
+    /// Creates a new builder-style object to manufacture [`GeneralName`](crate::model::GeneralName).
     pub fn builder() -> crate::model::general_name::Builder {
         crate::model::general_name::Builder::default()
     }
@@ -1816,8 +1853,10 @@ impl GeneralName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EdiPartyName {
     /// <p>Specifies the party name.</p>
+    #[doc(hidden)]
     pub party_name: std::option::Option<std::string::String>,
     /// <p>Specifies the name assigner.</p>
+    #[doc(hidden)]
     pub name_assigner: std::option::Option<std::string::String>,
 }
 impl EdiPartyName {
@@ -1838,11 +1877,10 @@ impl std::fmt::Debug for EdiPartyName {
         formatter.finish()
     }
 }
-/// See [`EdiPartyName`](crate::model::EdiPartyName)
+/// See [`EdiPartyName`](crate::model::EdiPartyName).
 pub mod edi_party_name {
 
-    /// A builder for [`EdiPartyName`](crate::model::EdiPartyName)
-    #[non_exhaustive]
+    /// A builder for [`EdiPartyName`](crate::model::EdiPartyName).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) party_name: std::option::Option<std::string::String>,
@@ -1872,7 +1910,7 @@ pub mod edi_party_name {
             self.name_assigner = input;
             self
         }
-        /// Consumes the builder and constructs a [`EdiPartyName`](crate::model::EdiPartyName)
+        /// Consumes the builder and constructs a [`EdiPartyName`](crate::model::EdiPartyName).
         pub fn build(self) -> crate::model::EdiPartyName {
             crate::model::EdiPartyName {
                 party_name: self.party_name,
@@ -1882,7 +1920,7 @@ pub mod edi_party_name {
     }
 }
 impl EdiPartyName {
-    /// Creates a new builder-style object to manufacture [`EdiPartyName`](crate::model::EdiPartyName)
+    /// Creates a new builder-style object to manufacture [`EdiPartyName`](crate::model::EdiPartyName).
     pub fn builder() -> crate::model::edi_party_name::Builder {
         crate::model::edi_party_name::Builder::default()
     }
@@ -1893,38 +1931,53 @@ impl EdiPartyName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Asn1Subject {
     /// <p>Two-digit code that specifies the country in which the certificate subject located.</p>
+    #[doc(hidden)]
     pub country: std::option::Option<std::string::String>,
     /// <p>Legal name of the organization with which the certificate subject is affiliated. </p>
+    #[doc(hidden)]
     pub organization: std::option::Option<std::string::String>,
     /// <p>A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated.</p>
+    #[doc(hidden)]
     pub organizational_unit: std::option::Option<std::string::String>,
     /// <p>Disambiguating information for the certificate subject.</p>
+    #[doc(hidden)]
     pub distinguished_name_qualifier: std::option::Option<std::string::String>,
     /// <p>State in which the subject of the certificate is located.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>For CA and end-entity certificates in a private PKI, the common name (CN) can be any string within the length limit. </p>
     /// <p>Note: In publicly trusted certificates, the common name must be a fully qualified domain name (FQDN) associated with the certificate subject.</p>
+    #[doc(hidden)]
     pub common_name: std::option::Option<std::string::String>,
     /// <p>The certificate serial number.</p>
+    #[doc(hidden)]
     pub serial_number: std::option::Option<std::string::String>,
     /// <p>The locality (such as a city or town) in which the certificate subject is located.</p>
+    #[doc(hidden)]
     pub locality: std::option::Option<std::string::String>,
     /// <p>A title such as Mr. or Ms., which is pre-pended to the name to refer formally to the certificate subject.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p>Family name. In the US and the UK, for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first.</p>
+    #[doc(hidden)]
     pub surname: std::option::Option<std::string::String>,
     /// <p>First name.</p>
+    #[doc(hidden)]
     pub given_name: std::option::Option<std::string::String>,
     /// <p>Concatenation that typically contains the first letter of the <b>GivenName</b>, the first letter of the middle name if one exists, and the first letter of the <b>Surname</b>.</p>
+    #[doc(hidden)]
     pub initials: std::option::Option<std::string::String>,
     /// <p>Typically a shortened version of a longer <b>GivenName</b>. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza.</p>
+    #[doc(hidden)]
     pub pseudonym: std::option::Option<std::string::String>,
     /// <p>Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third.</p>
+    #[doc(hidden)]
     pub generation_qualifier: std::option::Option<std::string::String>,
     /// <p></p>
     /// <p>Contains a sequence of one or more X.500 relative distinguished names (RDNs), each of which consists of an object identifier (OID) and a value. For more information, see NIST’s definition of <a href="https://csrc.nist.gov/glossary/term/Object_Identifier">Object Identifier (OID)</a>.</p> <note>
     /// <p>Custom attributes cannot be used in combination with standard attributes.</p>
     /// </note>
+    #[doc(hidden)]
     pub custom_attributes: std::option::Option<std::vec::Vec<crate::model::CustomAttribute>>,
 }
 impl Asn1Subject {
@@ -2017,11 +2070,10 @@ impl std::fmt::Debug for Asn1Subject {
         formatter.finish()
     }
 }
-/// See [`Asn1Subject`](crate::model::Asn1Subject)
+/// See [`Asn1Subject`](crate::model::Asn1Subject).
 pub mod asn1_subject {
 
-    /// A builder for [`Asn1Subject`](crate::model::Asn1Subject)
-    #[non_exhaustive]
+    /// A builder for [`Asn1Subject`](crate::model::Asn1Subject).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) country: std::option::Option<std::string::String>,
@@ -2224,7 +2276,7 @@ pub mod asn1_subject {
             self.custom_attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`Asn1Subject`](crate::model::Asn1Subject)
+        /// Consumes the builder and constructs a [`Asn1Subject`](crate::model::Asn1Subject).
         pub fn build(self) -> crate::model::Asn1Subject {
             crate::model::Asn1Subject {
                 country: self.country,
@@ -2247,7 +2299,7 @@ pub mod asn1_subject {
     }
 }
 impl Asn1Subject {
-    /// Creates a new builder-style object to manufacture [`Asn1Subject`](crate::model::Asn1Subject)
+    /// Creates a new builder-style object to manufacture [`Asn1Subject`](crate::model::Asn1Subject).
     pub fn builder() -> crate::model::asn1_subject::Builder {
         crate::model::asn1_subject::Builder::default()
     }
@@ -2258,9 +2310,11 @@ impl Asn1Subject {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomAttribute {
     /// <p>Specifies the object identifier (OID) of the attribute type of the relative distinguished name (RDN).</p>
+    #[doc(hidden)]
     pub object_identifier: std::option::Option<std::string::String>,
     /// <p></p>
     /// <p>Specifies the attribute value of relative distinguished name (RDN).</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl CustomAttribute {
@@ -2282,11 +2336,10 @@ impl std::fmt::Debug for CustomAttribute {
         formatter.finish()
     }
 }
-/// See [`CustomAttribute`](crate::model::CustomAttribute)
+/// See [`CustomAttribute`](crate::model::CustomAttribute).
 pub mod custom_attribute {
 
-    /// A builder for [`CustomAttribute`](crate::model::CustomAttribute)
-    #[non_exhaustive]
+    /// A builder for [`CustomAttribute`](crate::model::CustomAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_identifier: std::option::Option<std::string::String>,
@@ -2318,7 +2371,7 @@ pub mod custom_attribute {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomAttribute`](crate::model::CustomAttribute)
+        /// Consumes the builder and constructs a [`CustomAttribute`](crate::model::CustomAttribute).
         pub fn build(self) -> crate::model::CustomAttribute {
             crate::model::CustomAttribute {
                 object_identifier: self.object_identifier,
@@ -2328,7 +2381,7 @@ pub mod custom_attribute {
     }
 }
 impl CustomAttribute {
-    /// Creates a new builder-style object to manufacture [`CustomAttribute`](crate::model::CustomAttribute)
+    /// Creates a new builder-style object to manufacture [`CustomAttribute`](crate::model::CustomAttribute).
     pub fn builder() -> crate::model::custom_attribute::Builder {
         crate::model::custom_attribute::Builder::default()
     }
@@ -2339,8 +2392,10 @@ impl CustomAttribute {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OtherName {
     /// <p>Specifies an OID. </p>
+    #[doc(hidden)]
     pub type_id: std::option::Option<std::string::String>,
     /// <p>Specifies an OID value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl OtherName {
@@ -2361,11 +2416,10 @@ impl std::fmt::Debug for OtherName {
         formatter.finish()
     }
 }
-/// See [`OtherName`](crate::model::OtherName)
+/// See [`OtherName`](crate::model::OtherName).
 pub mod other_name {
 
-    /// A builder for [`OtherName`](crate::model::OtherName)
-    #[non_exhaustive]
+    /// A builder for [`OtherName`](crate::model::OtherName).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) type_id: std::option::Option<std::string::String>,
@@ -2392,7 +2446,7 @@ pub mod other_name {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`OtherName`](crate::model::OtherName)
+        /// Consumes the builder and constructs a [`OtherName`](crate::model::OtherName).
         pub fn build(self) -> crate::model::OtherName {
             crate::model::OtherName {
                 type_id: self.type_id,
@@ -2402,7 +2456,7 @@ pub mod other_name {
     }
 }
 impl OtherName {
-    /// Creates a new builder-style object to manufacture [`OtherName`](crate::model::OtherName)
+    /// Creates a new builder-style object to manufacture [`OtherName`](crate::model::OtherName).
     pub fn builder() -> crate::model::other_name::Builder {
         crate::model::other_name::Builder::default()
     }
@@ -2413,8 +2467,10 @@ impl OtherName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessMethod {
     /// <p>An object identifier (OID) specifying the <code>AccessMethod</code>. The OID must satisfy the regular expression shown below. For more information, see NIST's definition of <a href="https://csrc.nist.gov/glossary/term/Object_Identifier">Object Identifier (OID)</a>.</p>
+    #[doc(hidden)]
     pub custom_object_identifier: std::option::Option<std::string::String>,
     /// <p>Specifies the <code>AccessMethod</code>.</p>
+    #[doc(hidden)]
     pub access_method_type: std::option::Option<crate::model::AccessMethodType>,
 }
 impl AccessMethod {
@@ -2435,11 +2491,10 @@ impl std::fmt::Debug for AccessMethod {
         formatter.finish()
     }
 }
-/// See [`AccessMethod`](crate::model::AccessMethod)
+/// See [`AccessMethod`](crate::model::AccessMethod).
 pub mod access_method {
 
-    /// A builder for [`AccessMethod`](crate::model::AccessMethod)
-    #[non_exhaustive]
+    /// A builder for [`AccessMethod`](crate::model::AccessMethod).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_object_identifier: std::option::Option<std::string::String>,
@@ -2472,7 +2527,7 @@ pub mod access_method {
             self.access_method_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessMethod`](crate::model::AccessMethod)
+        /// Consumes the builder and constructs a [`AccessMethod`](crate::model::AccessMethod).
         pub fn build(self) -> crate::model::AccessMethod {
             crate::model::AccessMethod {
                 custom_object_identifier: self.custom_object_identifier,
@@ -2482,7 +2537,7 @@ pub mod access_method {
     }
 }
 impl AccessMethod {
-    /// Creates a new builder-style object to manufacture [`AccessMethod`](crate::model::AccessMethod)
+    /// Creates a new builder-style object to manufacture [`AccessMethod`](crate::model::AccessMethod).
     pub fn builder() -> crate::model::access_method::Builder {
         crate::model::access_method::Builder::default()
     }
@@ -2556,22 +2611,31 @@ impl AsRef<str> for AccessMethodType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyUsage {
     /// <p> Key can be used for digital signing.</p>
+    #[doc(hidden)]
     pub digital_signature: bool,
     /// <p>Key can be used for non-repudiation.</p>
+    #[doc(hidden)]
     pub non_repudiation: bool,
     /// <p>Key can be used to encipher data.</p>
+    #[doc(hidden)]
     pub key_encipherment: bool,
     /// <p>Key can be used to decipher data.</p>
+    #[doc(hidden)]
     pub data_encipherment: bool,
     /// <p>Key can be used in a key-agreement protocol.</p>
+    #[doc(hidden)]
     pub key_agreement: bool,
     /// <p>Key can be used to sign certificates.</p>
+    #[doc(hidden)]
     pub key_cert_sign: bool,
     /// <p>Key can be used to sign CRLs.</p>
+    #[doc(hidden)]
     pub crl_sign: bool,
     /// <p>Key can be used only to encipher data.</p>
+    #[doc(hidden)]
     pub encipher_only: bool,
     /// <p>Key can be used only to decipher data.</p>
+    #[doc(hidden)]
     pub decipher_only: bool,
 }
 impl KeyUsage {
@@ -2627,11 +2691,10 @@ impl std::fmt::Debug for KeyUsage {
         formatter.finish()
     }
 }
-/// See [`KeyUsage`](crate::model::KeyUsage)
+/// See [`KeyUsage`](crate::model::KeyUsage).
 pub mod key_usage {
 
-    /// A builder for [`KeyUsage`](crate::model::KeyUsage)
-    #[non_exhaustive]
+    /// A builder for [`KeyUsage`](crate::model::KeyUsage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) digital_signature: std::option::Option<bool>,
@@ -2735,7 +2798,7 @@ pub mod key_usage {
             self.decipher_only = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyUsage`](crate::model::KeyUsage)
+        /// Consumes the builder and constructs a [`KeyUsage`](crate::model::KeyUsage).
         pub fn build(self) -> crate::model::KeyUsage {
             crate::model::KeyUsage {
                 digital_signature: self.digital_signature.unwrap_or_default(),
@@ -2752,7 +2815,7 @@ pub mod key_usage {
     }
 }
 impl KeyUsage {
-    /// Creates a new builder-style object to manufacture [`KeyUsage`](crate::model::KeyUsage)
+    /// Creates a new builder-style object to manufacture [`KeyUsage`](crate::model::KeyUsage).
     pub fn builder() -> crate::model::key_usage::Builder {
         crate::model::key_usage::Builder::default()
     }
@@ -3074,6 +3137,7 @@ impl AsRef<str> for ResourceOwner {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Validity {
     /// <p>A long integer interpreted according to the value of <code>Type</code>, below.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<i64>,
     /// <p>Determines how <i>ACM Private CA</i> interprets the <code>Value</code> parameter, an integer. Supported validity types include those listed below. Type definitions with values include a sample input value and the resulting output. </p>
     /// <p> <code>END_DATE</code>: The specific date and time when the certificate will expire, expressed using UTCTime (YYMMDDHHMMSS) or GeneralizedTime (YYYYMMDDHHMMSS) format. When UTCTime is used, if the year field (YY) is greater than or equal to 50, the year is interpreted as 19YY. If the year field is less than 50, the year is interpreted as 20YY.</p>
@@ -3093,6 +3157,7 @@ pub struct Validity {
     /// <li> <p>Output expiration date: 01/10/2020 12:34:54 UTC</p> </li>
     /// </ul>
     /// <p>The minimum validity duration for a certificate using relative time (<code>DAYS</code>) is one day. The minimum validity for a certificate using absolute time (<code>ABSOLUTE</code> or <code>END_DATE</code>) is one second.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ValidityPeriodType>,
 }
 impl Validity {
@@ -3130,11 +3195,10 @@ impl std::fmt::Debug for Validity {
         formatter.finish()
     }
 }
-/// See [`Validity`](crate::model::Validity)
+/// See [`Validity`](crate::model::Validity).
 pub mod validity {
 
-    /// A builder for [`Validity`](crate::model::Validity)
-    #[non_exhaustive]
+    /// A builder for [`Validity`](crate::model::Validity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<i64>,
@@ -3198,7 +3262,7 @@ pub mod validity {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Validity`](crate::model::Validity)
+        /// Consumes the builder and constructs a [`Validity`](crate::model::Validity).
         pub fn build(self) -> crate::model::Validity {
             crate::model::Validity {
                 value: self.value,
@@ -3208,7 +3272,7 @@ pub mod validity {
     }
 }
 impl Validity {
-    /// Creates a new builder-style object to manufacture [`Validity`](crate::model::Validity)
+    /// Creates a new builder-style object to manufacture [`Validity`](crate::model::Validity).
     pub fn builder() -> crate::model::validity::Builder {
         crate::model::validity::Builder::default()
     }
@@ -3287,8 +3351,10 @@ impl AsRef<str> for ValidityPeriodType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApiPassthrough {
     /// <p>Specifies X.509 extension information for a certificate.</p>
+    #[doc(hidden)]
     pub extensions: std::option::Option<crate::model::Extensions>,
     /// <p>Contains information about the certificate subject. The <code>Subject</code> field in the certificate identifies the entity that owns or controls the public key in the certificate. The entity can be a user, computer, device, or service. The <code>Subject </code>must contain an X.500 distinguished name (DN). A DN is a sequence of relative distinguished names (RDNs). The RDNs are separated by commas in the certificate.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<crate::model::Asn1Subject>,
 }
 impl ApiPassthrough {
@@ -3309,11 +3375,10 @@ impl std::fmt::Debug for ApiPassthrough {
         formatter.finish()
     }
 }
-/// See [`ApiPassthrough`](crate::model::ApiPassthrough)
+/// See [`ApiPassthrough`](crate::model::ApiPassthrough).
 pub mod api_passthrough {
 
-    /// A builder for [`ApiPassthrough`](crate::model::ApiPassthrough)
-    #[non_exhaustive]
+    /// A builder for [`ApiPassthrough`](crate::model::ApiPassthrough).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) extensions: std::option::Option<crate::model::Extensions>,
@@ -3346,7 +3411,7 @@ pub mod api_passthrough {
             self.subject = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApiPassthrough`](crate::model::ApiPassthrough)
+        /// Consumes the builder and constructs a [`ApiPassthrough`](crate::model::ApiPassthrough).
         pub fn build(self) -> crate::model::ApiPassthrough {
             crate::model::ApiPassthrough {
                 extensions: self.extensions,
@@ -3356,7 +3421,7 @@ pub mod api_passthrough {
     }
 }
 impl ApiPassthrough {
-    /// Creates a new builder-style object to manufacture [`ApiPassthrough`](crate::model::ApiPassthrough)
+    /// Creates a new builder-style object to manufacture [`ApiPassthrough`](crate::model::ApiPassthrough).
     pub fn builder() -> crate::model::api_passthrough::Builder {
         crate::model::api_passthrough::Builder::default()
     }
@@ -3368,17 +3433,20 @@ impl ApiPassthrough {
 pub struct Extensions {
     /// <p>Contains a sequence of one or more policy information terms, each of which consists of an object identifier (OID) and optional qualifiers. For more information, see NIST's definition of <a href="https://csrc.nist.gov/glossary/term/Object_Identifier">Object Identifier (OID)</a>.</p>
     /// <p>In an end-entity certificate, these terms indicate the policy under which the certificate was issued and the purposes for which it may be used. In a CA certificate, these terms limit the set of policies for certification paths that include this certificate.</p>
+    #[doc(hidden)]
     pub certificate_policies: std::option::Option<std::vec::Vec<crate::model::PolicyInformation>>,
     /// <p>Specifies additional purposes for which the certified public key may be used other than basic purposes indicated in the <code>KeyUsage</code> extension.</p>
+    #[doc(hidden)]
     pub extended_key_usage: std::option::Option<std::vec::Vec<crate::model::ExtendedKeyUsage>>,
     /// <p>Defines one or more purposes for which the key contained in the certificate can be used. Default value for each option is false.</p>
+    #[doc(hidden)]
     pub key_usage: std::option::Option<crate::model::KeyUsage>,
     /// <p>The subject alternative name extension allows identities to be bound to the subject of the certificate. These identities may be included in addition to or in place of the identity in the subject field of the certificate.</p>
+    #[doc(hidden)]
     pub subject_alternative_names: std::option::Option<std::vec::Vec<crate::model::GeneralName>>,
     /// <p></p>
-    /// <p>Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a base64-encoded value, and the critical flag. For more information, see the <a href="https://oidref.com/2.5.29">Global OID reference database.</a> </p> <note>
-    /// <p>The OID value of a <a href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CustomExtension.html">CustomExtension</a> must not match the OID of a predefined extension.</p>
-    /// </note>
+    /// <p>Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a base64-encoded value, and the critical flag. For more information, see the <a href="https://oidref.com/2.5.29">Global OID reference database.</a> </p>
+    #[doc(hidden)]
     pub custom_extensions: std::option::Option<std::vec::Vec<crate::model::CustomExtension>>,
 }
 impl Extensions {
@@ -3400,9 +3468,7 @@ impl Extensions {
         self.subject_alternative_names.as_deref()
     }
     /// <p></p>
-    /// <p>Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a base64-encoded value, and the critical flag. For more information, see the <a href="https://oidref.com/2.5.29">Global OID reference database.</a> </p> <note>
-    /// <p>The OID value of a <a href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CustomExtension.html">CustomExtension</a> must not match the OID of a predefined extension.</p>
-    /// </note>
+    /// <p>Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a base64-encoded value, and the critical flag. For more information, see the <a href="https://oidref.com/2.5.29">Global OID reference database.</a> </p>
     pub fn custom_extensions(&self) -> std::option::Option<&[crate::model::CustomExtension]> {
         self.custom_extensions.as_deref()
     }
@@ -3418,11 +3484,10 @@ impl std::fmt::Debug for Extensions {
         formatter.finish()
     }
 }
-/// See [`Extensions`](crate::model::Extensions)
+/// See [`Extensions`](crate::model::Extensions).
 pub mod extensions {
 
-    /// A builder for [`Extensions`](crate::model::Extensions)
-    #[non_exhaustive]
+    /// A builder for [`Extensions`](crate::model::Extensions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_policies:
@@ -3510,9 +3575,7 @@ pub mod extensions {
         /// To override the contents of this collection use [`set_custom_extensions`](Self::set_custom_extensions).
         ///
         /// <p></p>
-        /// <p>Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a base64-encoded value, and the critical flag. For more information, see the <a href="https://oidref.com/2.5.29">Global OID reference database.</a> </p> <note>
-        /// <p>The OID value of a <a href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CustomExtension.html">CustomExtension</a> must not match the OID of a predefined extension.</p>
-        /// </note>
+        /// <p>Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a base64-encoded value, and the critical flag. For more information, see the <a href="https://oidref.com/2.5.29">Global OID reference database.</a> </p>
         pub fn custom_extensions(mut self, input: crate::model::CustomExtension) -> Self {
             let mut v = self.custom_extensions.unwrap_or_default();
             v.push(input);
@@ -3520,9 +3583,7 @@ pub mod extensions {
             self
         }
         /// <p></p>
-        /// <p>Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a base64-encoded value, and the critical flag. For more information, see the <a href="https://oidref.com/2.5.29">Global OID reference database.</a> </p> <note>
-        /// <p>The OID value of a <a href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CustomExtension.html">CustomExtension</a> must not match the OID of a predefined extension.</p>
-        /// </note>
+        /// <p>Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a base64-encoded value, and the critical flag. For more information, see the <a href="https://oidref.com/2.5.29">Global OID reference database.</a> </p>
         pub fn set_custom_extensions(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::CustomExtension>>,
@@ -3530,7 +3591,7 @@ pub mod extensions {
             self.custom_extensions = input;
             self
         }
-        /// Consumes the builder and constructs a [`Extensions`](crate::model::Extensions)
+        /// Consumes the builder and constructs a [`Extensions`](crate::model::Extensions).
         pub fn build(self) -> crate::model::Extensions {
             crate::model::Extensions {
                 certificate_policies: self.certificate_policies,
@@ -3543,7 +3604,7 @@ pub mod extensions {
     }
 }
 impl Extensions {
-    /// Creates a new builder-style object to manufacture [`Extensions`](crate::model::Extensions)
+    /// Creates a new builder-style object to manufacture [`Extensions`](crate::model::Extensions).
     pub fn builder() -> crate::model::extensions::Builder {
         crate::model::extensions::Builder::default()
     }
@@ -3557,12 +3618,15 @@ impl Extensions {
 pub struct CustomExtension {
     /// <p></p>
     /// <p>Specifies the object identifier (OID) of the X.509 extension. For more information, see the <a href="https://oidref.com/2.5.29">Global OID reference database.</a> </p>
+    #[doc(hidden)]
     pub object_identifier: std::option::Option<std::string::String>,
     /// <p></p>
     /// <p>Specifies the base64-encoded value of the X.509 extension.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p></p>
     /// <p>Specifies the critical flag of the X.509 extension.</p>
+    #[doc(hidden)]
     pub critical: std::option::Option<bool>,
 }
 impl CustomExtension {
@@ -3591,11 +3655,10 @@ impl std::fmt::Debug for CustomExtension {
         formatter.finish()
     }
 }
-/// See [`CustomExtension`](crate::model::CustomExtension)
+/// See [`CustomExtension`](crate::model::CustomExtension).
 pub mod custom_extension {
 
-    /// A builder for [`CustomExtension`](crate::model::CustomExtension)
-    #[non_exhaustive]
+    /// A builder for [`CustomExtension`](crate::model::CustomExtension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_identifier: std::option::Option<std::string::String>,
@@ -3642,7 +3705,7 @@ pub mod custom_extension {
             self.critical = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomExtension`](crate::model::CustomExtension)
+        /// Consumes the builder and constructs a [`CustomExtension`](crate::model::CustomExtension).
         pub fn build(self) -> crate::model::CustomExtension {
             crate::model::CustomExtension {
                 object_identifier: self.object_identifier,
@@ -3653,7 +3716,7 @@ pub mod custom_extension {
     }
 }
 impl CustomExtension {
-    /// Creates a new builder-style object to manufacture [`CustomExtension`](crate::model::CustomExtension)
+    /// Creates a new builder-style object to manufacture [`CustomExtension`](crate::model::CustomExtension).
     pub fn builder() -> crate::model::custom_extension::Builder {
         crate::model::custom_extension::Builder::default()
     }
@@ -3664,8 +3727,10 @@ impl CustomExtension {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExtendedKeyUsage {
     /// <p>Specifies a standard <code>ExtendedKeyUsage</code> as defined as in <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12">RFC 5280</a>.</p>
+    #[doc(hidden)]
     pub extended_key_usage_type: std::option::Option<crate::model::ExtendedKeyUsageType>,
     /// <p>Specifies a custom <code>ExtendedKeyUsage</code> with an object identifier (OID).</p>
+    #[doc(hidden)]
     pub extended_key_usage_object_identifier: std::option::Option<std::string::String>,
 }
 impl ExtendedKeyUsage {
@@ -3691,11 +3756,10 @@ impl std::fmt::Debug for ExtendedKeyUsage {
         formatter.finish()
     }
 }
-/// See [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage)
+/// See [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage).
 pub mod extended_key_usage {
 
-    /// A builder for [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage)
-    #[non_exhaustive]
+    /// A builder for [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) extended_key_usage_type: std::option::Option<crate::model::ExtendedKeyUsageType>,
@@ -3734,7 +3798,7 @@ pub mod extended_key_usage {
             self.extended_key_usage_object_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage)
+        /// Consumes the builder and constructs a [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage).
         pub fn build(self) -> crate::model::ExtendedKeyUsage {
             crate::model::ExtendedKeyUsage {
                 extended_key_usage_type: self.extended_key_usage_type,
@@ -3744,7 +3808,7 @@ pub mod extended_key_usage {
     }
 }
 impl ExtendedKeyUsage {
-    /// Creates a new builder-style object to manufacture [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage)
+    /// Creates a new builder-style object to manufacture [`ExtendedKeyUsage`](crate::model::ExtendedKeyUsage).
     pub fn builder() -> crate::model::extended_key_usage::Builder {
         crate::model::extended_key_usage::Builder::default()
     }
@@ -3848,8 +3912,10 @@ impl AsRef<str> for ExtendedKeyUsageType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyInformation {
     /// <p>Specifies the object identifier (OID) of the certificate policy under which the certificate was issued. For more information, see NIST's definition of <a href="https://csrc.nist.gov/glossary/term/Object_Identifier">Object Identifier (OID)</a>.</p>
+    #[doc(hidden)]
     pub cert_policy_id: std::option::Option<std::string::String>,
     /// <p>Modifies the given <code>CertPolicyId</code> with a qualifier. ACM Private CA supports the certification practice statement (CPS) qualifier.</p>
+    #[doc(hidden)]
     pub policy_qualifiers: std::option::Option<std::vec::Vec<crate::model::PolicyQualifierInfo>>,
 }
 impl PolicyInformation {
@@ -3870,11 +3936,10 @@ impl std::fmt::Debug for PolicyInformation {
         formatter.finish()
     }
 }
-/// See [`PolicyInformation`](crate::model::PolicyInformation)
+/// See [`PolicyInformation`](crate::model::PolicyInformation).
 pub mod policy_information {
 
-    /// A builder for [`PolicyInformation`](crate::model::PolicyInformation)
-    #[non_exhaustive]
+    /// A builder for [`PolicyInformation`](crate::model::PolicyInformation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cert_policy_id: std::option::Option<std::string::String>,
@@ -3914,7 +3979,7 @@ pub mod policy_information {
             self.policy_qualifiers = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyInformation`](crate::model::PolicyInformation)
+        /// Consumes the builder and constructs a [`PolicyInformation`](crate::model::PolicyInformation).
         pub fn build(self) -> crate::model::PolicyInformation {
             crate::model::PolicyInformation {
                 cert_policy_id: self.cert_policy_id,
@@ -3924,7 +3989,7 @@ pub mod policy_information {
     }
 }
 impl PolicyInformation {
-    /// Creates a new builder-style object to manufacture [`PolicyInformation`](crate::model::PolicyInformation)
+    /// Creates a new builder-style object to manufacture [`PolicyInformation`](crate::model::PolicyInformation).
     pub fn builder() -> crate::model::policy_information::Builder {
         crate::model::policy_information::Builder::default()
     }
@@ -3935,8 +4000,10 @@ impl PolicyInformation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyQualifierInfo {
     /// <p>Identifies the qualifier modifying a <code>CertPolicyId</code>.</p>
+    #[doc(hidden)]
     pub policy_qualifier_id: std::option::Option<crate::model::PolicyQualifierId>,
     /// <p>Defines the qualifier type. ACM Private CA supports the use of a URI for a CPS qualifier in this field.</p>
+    #[doc(hidden)]
     pub qualifier: std::option::Option<crate::model::Qualifier>,
 }
 impl PolicyQualifierInfo {
@@ -3957,11 +4024,10 @@ impl std::fmt::Debug for PolicyQualifierInfo {
         formatter.finish()
     }
 }
-/// See [`PolicyQualifierInfo`](crate::model::PolicyQualifierInfo)
+/// See [`PolicyQualifierInfo`](crate::model::PolicyQualifierInfo).
 pub mod policy_qualifier_info {
 
-    /// A builder for [`PolicyQualifierInfo`](crate::model::PolicyQualifierInfo)
-    #[non_exhaustive]
+    /// A builder for [`PolicyQualifierInfo`](crate::model::PolicyQualifierInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_qualifier_id: std::option::Option<crate::model::PolicyQualifierId>,
@@ -3994,7 +4060,7 @@ pub mod policy_qualifier_info {
             self.qualifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyQualifierInfo`](crate::model::PolicyQualifierInfo)
+        /// Consumes the builder and constructs a [`PolicyQualifierInfo`](crate::model::PolicyQualifierInfo).
         pub fn build(self) -> crate::model::PolicyQualifierInfo {
             crate::model::PolicyQualifierInfo {
                 policy_qualifier_id: self.policy_qualifier_id,
@@ -4004,7 +4070,7 @@ pub mod policy_qualifier_info {
     }
 }
 impl PolicyQualifierInfo {
-    /// Creates a new builder-style object to manufacture [`PolicyQualifierInfo`](crate::model::PolicyQualifierInfo)
+    /// Creates a new builder-style object to manufacture [`PolicyQualifierInfo`](crate::model::PolicyQualifierInfo).
     pub fn builder() -> crate::model::policy_qualifier_info::Builder {
         crate::model::policy_qualifier_info::Builder::default()
     }
@@ -4015,6 +4081,7 @@ impl PolicyQualifierInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Qualifier {
     /// <p>Contains a pointer to a certification practice statement (CPS) published by the CA.</p>
+    #[doc(hidden)]
     pub cps_uri: std::option::Option<std::string::String>,
 }
 impl Qualifier {
@@ -4030,11 +4097,10 @@ impl std::fmt::Debug for Qualifier {
         formatter.finish()
     }
 }
-/// See [`Qualifier`](crate::model::Qualifier)
+/// See [`Qualifier`](crate::model::Qualifier).
 pub mod qualifier {
 
-    /// A builder for [`Qualifier`](crate::model::Qualifier)
-    #[non_exhaustive]
+    /// A builder for [`Qualifier`](crate::model::Qualifier).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cps_uri: std::option::Option<std::string::String>,
@@ -4050,7 +4116,7 @@ pub mod qualifier {
             self.cps_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`Qualifier`](crate::model::Qualifier)
+        /// Consumes the builder and constructs a [`Qualifier`](crate::model::Qualifier).
         pub fn build(self) -> crate::model::Qualifier {
             crate::model::Qualifier {
                 cps_uri: self.cps_uri,
@@ -4059,7 +4125,7 @@ pub mod qualifier {
     }
 }
 impl Qualifier {
-    /// Creates a new builder-style object to manufacture [`Qualifier`](crate::model::Qualifier)
+    /// Creates a new builder-style object to manufacture [`Qualifier`](crate::model::Qualifier).
     pub fn builder() -> crate::model::qualifier::Builder {
         crate::model::qualifier::Builder::default()
     }

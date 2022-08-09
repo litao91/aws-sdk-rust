@@ -3,53 +3,75 @@
 #[non_exhaustive]
 pub struct StartStreamTranscriptionOutput {
     /// <p>An identifier for the transcription.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The language code of the input audio stream.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The sample rate, in Hertz (Hz), for the input audio stream.</p>
+    #[doc(hidden)]
     pub media_sample_rate_hertz: std::option::Option<i32>,
     /// <p>The encoding used for the input audio stream.</p>
+    #[doc(hidden)]
     pub media_encoding: std::option::Option<crate::model::MediaEncoding>,
     /// <p>The name of the custom vocabulary used when processing the stream.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
     /// <p>An identifier for a specific transcription session.</p>
+    #[doc(hidden)]
     pub session_id: std::option::Option<std::string::String>,
     /// <p>Represents the stream of transcription events from Amazon Transcribe to your application.</p>
     pub transcript_result_stream: aws_smithy_http::event_stream::Receiver<
         crate::model::TranscriptResultStream,
-        crate::error::StartStreamTranscriptionError,
+        crate::error::TranscriptResultStreamError,
     >,
     /// <p>The name of the vocabulary filter used when processing the stream.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_name: std::option::Option<std::string::String>,
     /// <p>The vocabulary filtering method used when processing the stream.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_method: std::option::Option<crate::model::VocabularyFilterMethod>,
     /// <p>Shows whether speaker identification was enabled in the transcription.</p>
+    #[doc(hidden)]
     pub show_speaker_label: bool,
     /// <p>Shows whether channel identification was enabled in the stream.</p>
+    #[doc(hidden)]
     pub enable_channel_identification: bool,
     /// <p>The number of channels identified in the stream.</p>
+    #[doc(hidden)]
     pub number_of_channels: std::option::Option<i32>,
     /// <p>Shows whether partial results stabilization was enabled in the transcription.</p>
+    #[doc(hidden)]
     pub enable_partial_results_stabilization: bool,
     /// <p>If partial results stabilization has been enabled in the stream, shows the stability level.</p>
+    #[doc(hidden)]
     pub partial_results_stability: std::option::Option<crate::model::PartialResultsStability>,
     /// <p>Shows whether content identification was enabled in this stream.</p>
+    #[doc(hidden)]
     pub content_identification_type: std::option::Option<crate::model::ContentIdentificationType>,
     /// <p>Shows whether content redaction was enabled in this stream.</p>
+    #[doc(hidden)]
     pub content_redaction_type: std::option::Option<crate::model::ContentRedactionType>,
     /// <p>Lists the PII entity types you specified in your request.</p>
+    #[doc(hidden)]
     pub pii_entity_types: std::option::Option<std::string::String>,
     /// <p>The name of the custom language model used in the transcription.</p>
+    #[doc(hidden)]
     pub language_model_name: std::option::Option<std::string::String>,
     /// <p>The language code of the language identified in your media stream.</p>
+    #[doc(hidden)]
     pub identify_language: bool,
     /// <p>The language codes used in the identification of your media stream's predominant language.</p>
+    #[doc(hidden)]
     pub language_options: std::option::Option<std::string::String>,
     /// <p>The preferred language you specified in your request.</p>
+    #[doc(hidden)]
     pub preferred_language: std::option::Option<crate::model::LanguageCode>,
     /// <p>The name of the custom vocabulary used when processing the stream.</p>
+    #[doc(hidden)]
     pub vocabulary_names: std::option::Option<std::string::String>,
     /// <p>The name of the vocabulary filter used when processing the stream.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_names: std::option::Option<std::string::String>,
 }
 impl StartStreamTranscriptionOutput {
@@ -82,7 +104,7 @@ impl StartStreamTranscriptionOutput {
         &self,
     ) -> &aws_smithy_http::event_stream::Receiver<
         crate::model::TranscriptResultStream,
-        crate::error::StartStreamTranscriptionError,
+        crate::error::TranscriptResultStreamError,
     > {
         &self.transcript_result_stream
     }
@@ -197,11 +219,10 @@ impl std::fmt::Debug for StartStreamTranscriptionOutput {
         formatter.finish()
     }
 }
-/// See [`StartStreamTranscriptionOutput`](crate::output::StartStreamTranscriptionOutput)
+/// See [`StartStreamTranscriptionOutput`](crate::output::StartStreamTranscriptionOutput).
 pub mod start_stream_transcription_output {
 
-    /// A builder for [`StartStreamTranscriptionOutput`](crate::output::StartStreamTranscriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartStreamTranscriptionOutput`](crate::output::StartStreamTranscriptionOutput).
     #[derive(std::default::Default, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -213,7 +234,7 @@ pub mod start_stream_transcription_output {
         pub(crate) transcript_result_stream: std::option::Option<
             aws_smithy_http::event_stream::Receiver<
                 crate::model::TranscriptResultStream,
-                crate::error::StartStreamTranscriptionError,
+                crate::error::TranscriptResultStreamError,
             >,
         >,
         pub(crate) vocabulary_filter_name: std::option::Option<std::string::String>,
@@ -311,7 +332,7 @@ pub mod start_stream_transcription_output {
             mut self,
             input: aws_smithy_http::event_stream::Receiver<
                 crate::model::TranscriptResultStream,
-                crate::error::StartStreamTranscriptionError,
+                crate::error::TranscriptResultStreamError,
             >,
         ) -> Self {
             self.transcript_result_stream = Some(input);
@@ -323,7 +344,7 @@ pub mod start_stream_transcription_output {
             input: std::option::Option<
                 aws_smithy_http::event_stream::Receiver<
                     crate::model::TranscriptResultStream,
-                    crate::error::StartStreamTranscriptionError,
+                    crate::error::TranscriptResultStreamError,
                 >,
             >,
         ) -> Self {
@@ -538,10 +559,10 @@ pub mod start_stream_transcription_output {
             self.vocabulary_filter_names = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartStreamTranscriptionOutput`](crate::output::StartStreamTranscriptionOutput)
+        /// Consumes the builder and constructs a [`StartStreamTranscriptionOutput`](crate::output::StartStreamTranscriptionOutput).
         pub fn build(
             self,
-        ) -> std::result::Result<
+        ) -> Result<
             crate::output::StartStreamTranscriptionOutput,
             aws_smithy_http::operation::BuildError,
         > {
@@ -561,7 +582,7 @@ pub mod start_stream_transcription_output {
                     ,
                     transcript_result_stream: self.transcript_result_stream
                         .ok_or(
-                            aws_smithy_http::operation::BuildError::MissingField { field: "transcript_result_stream", details: "transcript_result_stream was not specified but it is required when building StartStreamTranscriptionOutput"}
+                            aws_smithy_http::operation::BuildError::MissingField { field: "transcript_result_stream", details: "transcript_result_stream was not specified but it is required when building StartStreamTranscriptionOutput" }
                         )?
                     ,
                     vocabulary_filter_name: self.vocabulary_filter_name
@@ -606,7 +627,7 @@ pub mod start_stream_transcription_output {
     }
 }
 impl StartStreamTranscriptionOutput {
-    /// Creates a new builder-style object to manufacture [`StartStreamTranscriptionOutput`](crate::output::StartStreamTranscriptionOutput)
+    /// Creates a new builder-style object to manufacture [`StartStreamTranscriptionOutput`](crate::output::StartStreamTranscriptionOutput).
     pub fn builder() -> crate::output::start_stream_transcription_output::Builder {
         crate::output::start_stream_transcription_output::Builder::default()
     }
@@ -616,33 +637,45 @@ impl StartStreamTranscriptionOutput {
 #[non_exhaustive]
 pub struct StartMedicalStreamTranscriptionOutput {
     /// <p>An identifier for the streaming transcription.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The language code for the response transcript. For Amazon Transcribe Medical, this is US English (en-US).</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The sample rate of the input audio, in Hertz (Hz).</p>
+    #[doc(hidden)]
     pub media_sample_rate_hertz: std::option::Option<i32>,
     /// <p>The encoding used for the input audio stream.</p>
+    #[doc(hidden)]
     pub media_encoding: std::option::Option<crate::model::MediaEncoding>,
     /// <p>The name of the vocabulary used when processing the stream.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
     /// <p>The specialty in the medical domain.</p>
+    #[doc(hidden)]
     pub specialty: std::option::Option<crate::model::Specialty>,
     /// <p>The type of audio that was transcribed. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
     /// <p>Shows whether speaker identification was enabled in the stream.</p>
+    #[doc(hidden)]
     pub show_speaker_label: bool,
     /// <p>Optional. An identifier for the transcription session. If you don't provide a session ID, Amazon Transcribe generates one for you and returns it in the response.</p>
+    #[doc(hidden)]
     pub session_id: std::option::Option<std::string::String>,
     /// <p>Represents the stream of transcription events from Amazon Transcribe Medical to your application. </p>
     pub transcript_result_stream: aws_smithy_http::event_stream::Receiver<
         crate::model::MedicalTranscriptResultStream,
-        crate::error::StartMedicalStreamTranscriptionError,
+        crate::error::MedicalTranscriptResultStreamError,
     >,
     /// <p>Shows whether channel identification has been enabled in the stream.</p>
+    #[doc(hidden)]
     pub enable_channel_identification: bool,
     /// <p>The number of channels identified in the stream.</p>
+    #[doc(hidden)]
     pub number_of_channels: std::option::Option<i32>,
     /// <p>If the value is <code>PHI</code>, indicates that you've configured your stream to identify personal health information.</p>
+    #[doc(hidden)]
     pub content_identification_type:
         std::option::Option<crate::model::MedicalContentIdentificationType>,
 }
@@ -688,7 +721,7 @@ impl StartMedicalStreamTranscriptionOutput {
         &self,
     ) -> &aws_smithy_http::event_stream::Receiver<
         crate::model::MedicalTranscriptResultStream,
-        crate::error::StartMedicalStreamTranscriptionError,
+        crate::error::MedicalTranscriptResultStreamError,
     > {
         &self.transcript_result_stream
     }
@@ -732,11 +765,10 @@ impl std::fmt::Debug for StartMedicalStreamTranscriptionOutput {
         formatter.finish()
     }
 }
-/// See [`StartMedicalStreamTranscriptionOutput`](crate::output::StartMedicalStreamTranscriptionOutput)
+/// See [`StartMedicalStreamTranscriptionOutput`](crate::output::StartMedicalStreamTranscriptionOutput).
 pub mod start_medical_stream_transcription_output {
 
-    /// A builder for [`StartMedicalStreamTranscriptionOutput`](crate::output::StartMedicalStreamTranscriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartMedicalStreamTranscriptionOutput`](crate::output::StartMedicalStreamTranscriptionOutput).
     #[derive(std::default::Default, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -751,7 +783,7 @@ pub mod start_medical_stream_transcription_output {
         pub(crate) transcript_result_stream: std::option::Option<
             aws_smithy_http::event_stream::Receiver<
                 crate::model::MedicalTranscriptResultStream,
-                crate::error::StartMedicalStreamTranscriptionError,
+                crate::error::MedicalTranscriptResultStreamError,
             >,
         >,
         pub(crate) enable_channel_identification: std::option::Option<bool>,
@@ -867,7 +899,7 @@ pub mod start_medical_stream_transcription_output {
             mut self,
             input: aws_smithy_http::event_stream::Receiver<
                 crate::model::MedicalTranscriptResultStream,
-                crate::error::StartMedicalStreamTranscriptionError,
+                crate::error::MedicalTranscriptResultStreamError,
             >,
         ) -> Self {
             self.transcript_result_stream = Some(input);
@@ -879,7 +911,7 @@ pub mod start_medical_stream_transcription_output {
             input: std::option::Option<
                 aws_smithy_http::event_stream::Receiver<
                     crate::model::MedicalTranscriptResultStream,
-                    crate::error::StartMedicalStreamTranscriptionError,
+                    crate::error::MedicalTranscriptResultStreamError,
                 >,
             >,
         ) -> Self {
@@ -925,10 +957,10 @@ pub mod start_medical_stream_transcription_output {
             self.content_identification_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartMedicalStreamTranscriptionOutput`](crate::output::StartMedicalStreamTranscriptionOutput)
+        /// Consumes the builder and constructs a [`StartMedicalStreamTranscriptionOutput`](crate::output::StartMedicalStreamTranscriptionOutput).
         pub fn build(
             self,
-        ) -> std::result::Result<
+        ) -> Result<
             crate::output::StartMedicalStreamTranscriptionOutput,
             aws_smithy_http::operation::BuildError,
         > {
@@ -955,7 +987,7 @@ pub mod start_medical_stream_transcription_output {
                     ,
                     transcript_result_stream: self.transcript_result_stream
                         .ok_or(
-                            aws_smithy_http::operation::BuildError::MissingField { field: "transcript_result_stream", details: "transcript_result_stream was not specified but it is required when building StartMedicalStreamTranscriptionOutput"}
+                            aws_smithy_http::operation::BuildError::MissingField { field: "transcript_result_stream", details: "transcript_result_stream was not specified but it is required when building StartMedicalStreamTranscriptionOutput" }
                         )?
                     ,
                     enable_channel_identification: self.enable_channel_identification
@@ -971,7 +1003,7 @@ pub mod start_medical_stream_transcription_output {
     }
 }
 impl StartMedicalStreamTranscriptionOutput {
-    /// Creates a new builder-style object to manufacture [`StartMedicalStreamTranscriptionOutput`](crate::output::StartMedicalStreamTranscriptionOutput)
+    /// Creates a new builder-style object to manufacture [`StartMedicalStreamTranscriptionOutput`](crate::output::StartMedicalStreamTranscriptionOutput).
     pub fn builder() -> crate::output::start_medical_stream_transcription_output::Builder {
         crate::output::start_medical_stream_transcription_output::Builder::default()
     }

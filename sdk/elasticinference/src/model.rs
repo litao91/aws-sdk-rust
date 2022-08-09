@@ -5,10 +5,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AcceleratorType {
     /// <p> The name of the Elastic Inference Accelerator type. </p>
+    #[doc(hidden)]
     pub accelerator_type_name: std::option::Option<std::string::String>,
     /// <p> The memory information of the Elastic Inference Accelerator type. </p>
+    #[doc(hidden)]
     pub memory_info: std::option::Option<crate::model::MemoryInfo>,
     /// <p> The throughput information of the Elastic Inference Accelerator type. </p>
+    #[doc(hidden)]
     pub throughput_info: std::option::Option<std::vec::Vec<crate::model::KeyValuePair>>,
 }
 impl AcceleratorType {
@@ -34,11 +37,10 @@ impl std::fmt::Debug for AcceleratorType {
         formatter.finish()
     }
 }
-/// See [`AcceleratorType`](crate::model::AcceleratorType)
+/// See [`AcceleratorType`](crate::model::AcceleratorType).
 pub mod accelerator_type {
 
-    /// A builder for [`AcceleratorType`](crate::model::AcceleratorType)
-    #[non_exhaustive]
+    /// A builder for [`AcceleratorType`](crate::model::AcceleratorType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) accelerator_type_name: std::option::Option<std::string::String>,
@@ -91,7 +93,7 @@ pub mod accelerator_type {
             self.throughput_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`AcceleratorType`](crate::model::AcceleratorType)
+        /// Consumes the builder and constructs a [`AcceleratorType`](crate::model::AcceleratorType).
         pub fn build(self) -> crate::model::AcceleratorType {
             crate::model::AcceleratorType {
                 accelerator_type_name: self.accelerator_type_name,
@@ -102,7 +104,7 @@ pub mod accelerator_type {
     }
 }
 impl AcceleratorType {
-    /// Creates a new builder-style object to manufacture [`AcceleratorType`](crate::model::AcceleratorType)
+    /// Creates a new builder-style object to manufacture [`AcceleratorType`](crate::model::AcceleratorType).
     pub fn builder() -> crate::model::accelerator_type::Builder {
         crate::model::accelerator_type::Builder::default()
     }
@@ -113,8 +115,10 @@ impl AcceleratorType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyValuePair {
     /// <p> The throughput value of the Elastic Inference Accelerator type. It can assume the following values: TFLOPS16bit: the throughput expressed in 16bit TeraFLOPS. TFLOPS32bit: the throughput expressed in 32bit TeraFLOPS. </p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p> The throughput value of the Elastic Inference Accelerator type. </p>
+    #[doc(hidden)]
     pub value: i32,
 }
 impl KeyValuePair {
@@ -135,11 +139,10 @@ impl std::fmt::Debug for KeyValuePair {
         formatter.finish()
     }
 }
-/// See [`KeyValuePair`](crate::model::KeyValuePair)
+/// See [`KeyValuePair`](crate::model::KeyValuePair).
 pub mod key_value_pair {
 
-    /// A builder for [`KeyValuePair`](crate::model::KeyValuePair)
-    #[non_exhaustive]
+    /// A builder for [`KeyValuePair`](crate::model::KeyValuePair).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -166,7 +169,7 @@ pub mod key_value_pair {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyValuePair`](crate::model::KeyValuePair)
+        /// Consumes the builder and constructs a [`KeyValuePair`](crate::model::KeyValuePair).
         pub fn build(self) -> crate::model::KeyValuePair {
             crate::model::KeyValuePair {
                 key: self.key,
@@ -176,7 +179,7 @@ pub mod key_value_pair {
     }
 }
 impl KeyValuePair {
-    /// Creates a new builder-style object to manufacture [`KeyValuePair`](crate::model::KeyValuePair)
+    /// Creates a new builder-style object to manufacture [`KeyValuePair`](crate::model::KeyValuePair).
     pub fn builder() -> crate::model::key_value_pair::Builder {
         crate::model::key_value_pair::Builder::default()
     }
@@ -187,6 +190,7 @@ impl KeyValuePair {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MemoryInfo {
     /// <p> The size in mebibytes of the Elastic Inference Accelerator type. </p>
+    #[doc(hidden)]
     pub size_in_mi_b: i32,
 }
 impl MemoryInfo {
@@ -202,11 +206,10 @@ impl std::fmt::Debug for MemoryInfo {
         formatter.finish()
     }
 }
-/// See [`MemoryInfo`](crate::model::MemoryInfo)
+/// See [`MemoryInfo`](crate::model::MemoryInfo).
 pub mod memory_info {
 
-    /// A builder for [`MemoryInfo`](crate::model::MemoryInfo)
-    #[non_exhaustive]
+    /// A builder for [`MemoryInfo`](crate::model::MemoryInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) size_in_mi_b: std::option::Option<i32>,
@@ -222,7 +225,7 @@ pub mod memory_info {
             self.size_in_mi_b = input;
             self
         }
-        /// Consumes the builder and constructs a [`MemoryInfo`](crate::model::MemoryInfo)
+        /// Consumes the builder and constructs a [`MemoryInfo`](crate::model::MemoryInfo).
         pub fn build(self) -> crate::model::MemoryInfo {
             crate::model::MemoryInfo {
                 size_in_mi_b: self.size_in_mi_b.unwrap_or_default(),
@@ -231,7 +234,7 @@ pub mod memory_info {
     }
 }
 impl MemoryInfo {
-    /// Creates a new builder-style object to manufacture [`MemoryInfo`](crate::model::MemoryInfo)
+    /// Creates a new builder-style object to manufacture [`MemoryInfo`](crate::model::MemoryInfo).
     pub fn builder() -> crate::model::memory_info::Builder {
         crate::model::memory_info::Builder::default()
     }
@@ -242,14 +245,19 @@ impl MemoryInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ElasticInferenceAccelerator {
     /// <p> The health of the Elastic Inference Accelerator. </p>
+    #[doc(hidden)]
     pub accelerator_health: std::option::Option<crate::model::ElasticInferenceAcceleratorHealth>,
     /// <p> The type of the Elastic Inference Accelerator. </p>
+    #[doc(hidden)]
     pub accelerator_type: std::option::Option<std::string::String>,
     /// <p> The ID of the Elastic Inference Accelerator. </p>
+    #[doc(hidden)]
     pub accelerator_id: std::option::Option<std::string::String>,
     /// <p> The availability zone where the Elastic Inference Accelerator is present. </p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p> The ARN of the resource that the Elastic Inference Accelerator is attached to. </p>
+    #[doc(hidden)]
     pub attached_resource: std::option::Option<std::string::String>,
 }
 impl ElasticInferenceAccelerator {
@@ -287,11 +295,10 @@ impl std::fmt::Debug for ElasticInferenceAccelerator {
         formatter.finish()
     }
 }
-/// See [`ElasticInferenceAccelerator`](crate::model::ElasticInferenceAccelerator)
+/// See [`ElasticInferenceAccelerator`](crate::model::ElasticInferenceAccelerator).
 pub mod elastic_inference_accelerator {
 
-    /// A builder for [`ElasticInferenceAccelerator`](crate::model::ElasticInferenceAccelerator)
-    #[non_exhaustive]
+    /// A builder for [`ElasticInferenceAccelerator`](crate::model::ElasticInferenceAccelerator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) accelerator_health:
@@ -370,7 +377,7 @@ pub mod elastic_inference_accelerator {
             self.attached_resource = input;
             self
         }
-        /// Consumes the builder and constructs a [`ElasticInferenceAccelerator`](crate::model::ElasticInferenceAccelerator)
+        /// Consumes the builder and constructs a [`ElasticInferenceAccelerator`](crate::model::ElasticInferenceAccelerator).
         pub fn build(self) -> crate::model::ElasticInferenceAccelerator {
             crate::model::ElasticInferenceAccelerator {
                 accelerator_health: self.accelerator_health,
@@ -383,7 +390,7 @@ pub mod elastic_inference_accelerator {
     }
 }
 impl ElasticInferenceAccelerator {
-    /// Creates a new builder-style object to manufacture [`ElasticInferenceAccelerator`](crate::model::ElasticInferenceAccelerator)
+    /// Creates a new builder-style object to manufacture [`ElasticInferenceAccelerator`](crate::model::ElasticInferenceAccelerator).
     pub fn builder() -> crate::model::elastic_inference_accelerator::Builder {
         crate::model::elastic_inference_accelerator::Builder::default()
     }
@@ -394,6 +401,7 @@ impl ElasticInferenceAccelerator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ElasticInferenceAcceleratorHealth {
     /// <p> The health status of the Elastic Inference Accelerator. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl ElasticInferenceAcceleratorHealth {
@@ -409,11 +417,10 @@ impl std::fmt::Debug for ElasticInferenceAcceleratorHealth {
         formatter.finish()
     }
 }
-/// See [`ElasticInferenceAcceleratorHealth`](crate::model::ElasticInferenceAcceleratorHealth)
+/// See [`ElasticInferenceAcceleratorHealth`](crate::model::ElasticInferenceAcceleratorHealth).
 pub mod elastic_inference_accelerator_health {
 
-    /// A builder for [`ElasticInferenceAcceleratorHealth`](crate::model::ElasticInferenceAcceleratorHealth)
-    #[non_exhaustive]
+    /// A builder for [`ElasticInferenceAcceleratorHealth`](crate::model::ElasticInferenceAcceleratorHealth).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<std::string::String>,
@@ -429,7 +436,7 @@ pub mod elastic_inference_accelerator_health {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ElasticInferenceAcceleratorHealth`](crate::model::ElasticInferenceAcceleratorHealth)
+        /// Consumes the builder and constructs a [`ElasticInferenceAcceleratorHealth`](crate::model::ElasticInferenceAcceleratorHealth).
         pub fn build(self) -> crate::model::ElasticInferenceAcceleratorHealth {
             crate::model::ElasticInferenceAcceleratorHealth {
                 status: self.status,
@@ -438,7 +445,7 @@ pub mod elastic_inference_accelerator_health {
     }
 }
 impl ElasticInferenceAcceleratorHealth {
-    /// Creates a new builder-style object to manufacture [`ElasticInferenceAcceleratorHealth`](crate::model::ElasticInferenceAcceleratorHealth)
+    /// Creates a new builder-style object to manufacture [`ElasticInferenceAcceleratorHealth`](crate::model::ElasticInferenceAcceleratorHealth).
     pub fn builder() -> crate::model::elastic_inference_accelerator_health::Builder {
         crate::model::elastic_inference_accelerator_health::Builder::default()
     }
@@ -449,8 +456,10 @@ impl ElasticInferenceAcceleratorHealth {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
     /// <p> The filter name for the Elastic Inference Accelerator list. It can assume the following values: accelerator-type: the type of Elastic Inference Accelerator to filter for. instance-id: an EC2 instance id to filter for. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The values for the filter of the Elastic Inference Accelerator list. </p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Filter {
@@ -471,11 +480,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -511,7 +519,7 @@ pub mod filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 name: self.name,
@@ -521,7 +529,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -532,10 +540,13 @@ impl Filter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AcceleratorTypeOffering {
     /// <p> The name of the Elastic Inference Accelerator type. </p>
+    #[doc(hidden)]
     pub accelerator_type: std::option::Option<std::string::String>,
     /// <p> The location type for the offering. It can assume the following values: region: defines that the offering is at the regional level. availability-zone: defines that the offering is at the availability zone level. availability-zone-id: defines that the offering is at the availability zone level, defined by the availability zone id. </p>
+    #[doc(hidden)]
     pub location_type: std::option::Option<crate::model::LocationType>,
     /// <p> The location for the offering. It will return either the region, availability zone or availability zone id for the offering depending on the locationType value. </p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
 }
 impl AcceleratorTypeOffering {
@@ -561,11 +572,10 @@ impl std::fmt::Debug for AcceleratorTypeOffering {
         formatter.finish()
     }
 }
-/// See [`AcceleratorTypeOffering`](crate::model::AcceleratorTypeOffering)
+/// See [`AcceleratorTypeOffering`](crate::model::AcceleratorTypeOffering).
 pub mod accelerator_type_offering {
 
-    /// A builder for [`AcceleratorTypeOffering`](crate::model::AcceleratorTypeOffering)
-    #[non_exhaustive]
+    /// A builder for [`AcceleratorTypeOffering`](crate::model::AcceleratorTypeOffering).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) accelerator_type: std::option::Option<std::string::String>,
@@ -609,7 +619,7 @@ pub mod accelerator_type_offering {
             self.location = input;
             self
         }
-        /// Consumes the builder and constructs a [`AcceleratorTypeOffering`](crate::model::AcceleratorTypeOffering)
+        /// Consumes the builder and constructs a [`AcceleratorTypeOffering`](crate::model::AcceleratorTypeOffering).
         pub fn build(self) -> crate::model::AcceleratorTypeOffering {
             crate::model::AcceleratorTypeOffering {
                 accelerator_type: self.accelerator_type,
@@ -620,7 +630,7 @@ pub mod accelerator_type_offering {
     }
 }
 impl AcceleratorTypeOffering {
-    /// Creates a new builder-style object to manufacture [`AcceleratorTypeOffering`](crate::model::AcceleratorTypeOffering)
+    /// Creates a new builder-style object to manufacture [`AcceleratorTypeOffering`](crate::model::AcceleratorTypeOffering).
     pub fn builder() -> crate::model::accelerator_type_offering::Builder {
         crate::model::accelerator_type_offering::Builder::default()
     }

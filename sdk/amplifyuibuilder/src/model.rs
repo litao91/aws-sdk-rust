@@ -5,22 +5,31 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Theme {
     /// <p>The unique ID for the Amplify app associated with the theme.</p>
+    #[doc(hidden)]
     pub app_id: std::option::Option<std::string::String>,
     /// <p>The name of the backend environment that is a part of the Amplify app.</p>
+    #[doc(hidden)]
     pub environment_name: std::option::Option<std::string::String>,
     /// <p>The ID for the theme.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the theme.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The time that the theme was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the theme was modified.</p>
+    #[doc(hidden)]
     pub modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of key-value pairs that defines the properties of the theme.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<crate::model::ThemeValues>>,
     /// <p>Describes the properties that can be overriden to customize a theme.</p>
+    #[doc(hidden)]
     pub overrides: std::option::Option<std::vec::Vec<crate::model::ThemeValues>>,
     /// <p>One or more key-value pairs to use when tagging the theme.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -80,11 +89,10 @@ impl std::fmt::Debug for Theme {
         formatter.finish()
     }
 }
-/// See [`Theme`](crate::model::Theme)
+/// See [`Theme`](crate::model::Theme).
 pub mod theme {
 
-    /// A builder for [`Theme`](crate::model::Theme)
-    #[non_exhaustive]
+    /// A builder for [`Theme`](crate::model::Theme).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_id: std::option::Option<std::string::String>,
@@ -232,7 +240,7 @@ pub mod theme {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Theme`](crate::model::Theme)
+        /// Consumes the builder and constructs a [`Theme`](crate::model::Theme).
         pub fn build(self) -> crate::model::Theme {
             crate::model::Theme {
                 app_id: self.app_id,
@@ -249,7 +257,7 @@ pub mod theme {
     }
 }
 impl Theme {
-    /// Creates a new builder-style object to manufacture [`Theme`](crate::model::Theme)
+    /// Creates a new builder-style object to manufacture [`Theme`](crate::model::Theme).
     pub fn builder() -> crate::model::theme::Builder {
         crate::model::theme::Builder::default()
     }
@@ -260,8 +268,10 @@ impl Theme {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThemeValues {
     /// <p>The name of the property.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the property.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<crate::model::ThemeValue>,
 }
 impl ThemeValues {
@@ -282,11 +292,10 @@ impl std::fmt::Debug for ThemeValues {
         formatter.finish()
     }
 }
-/// See [`ThemeValues`](crate::model::ThemeValues)
+/// See [`ThemeValues`](crate::model::ThemeValues).
 pub mod theme_values {
 
-    /// A builder for [`ThemeValues`](crate::model::ThemeValues)
-    #[non_exhaustive]
+    /// A builder for [`ThemeValues`](crate::model::ThemeValues).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -313,7 +322,7 @@ pub mod theme_values {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThemeValues`](crate::model::ThemeValues)
+        /// Consumes the builder and constructs a [`ThemeValues`](crate::model::ThemeValues).
         pub fn build(self) -> crate::model::ThemeValues {
             crate::model::ThemeValues {
                 key: self.key,
@@ -323,7 +332,7 @@ pub mod theme_values {
     }
 }
 impl ThemeValues {
-    /// Creates a new builder-style object to manufacture [`ThemeValues`](crate::model::ThemeValues)
+    /// Creates a new builder-style object to manufacture [`ThemeValues`](crate::model::ThemeValues).
     pub fn builder() -> crate::model::theme_values::Builder {
         crate::model::theme_values::Builder::default()
     }
@@ -334,8 +343,10 @@ impl ThemeValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThemeValue {
     /// <p>The value of a theme property.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>A list of key-value pairs that define the theme's properties.</p>
+    #[doc(hidden)]
     pub children: std::option::Option<std::vec::Vec<crate::model::ThemeValues>>,
 }
 impl ThemeValue {
@@ -356,11 +367,10 @@ impl std::fmt::Debug for ThemeValue {
         formatter.finish()
     }
 }
-/// See [`ThemeValue`](crate::model::ThemeValue)
+/// See [`ThemeValue`](crate::model::ThemeValue).
 pub mod theme_value {
 
-    /// A builder for [`ThemeValue`](crate::model::ThemeValue)
-    #[non_exhaustive]
+    /// A builder for [`ThemeValue`](crate::model::ThemeValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<std::string::String>,
@@ -396,7 +406,7 @@ pub mod theme_value {
             self.children = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThemeValue`](crate::model::ThemeValue)
+        /// Consumes the builder and constructs a [`ThemeValue`](crate::model::ThemeValue).
         pub fn build(self) -> crate::model::ThemeValue {
             crate::model::ThemeValue {
                 value: self.value,
@@ -406,7 +416,7 @@ pub mod theme_value {
     }
 }
 impl ThemeValue {
-    /// Creates a new builder-style object to manufacture [`ThemeValue`](crate::model::ThemeValue)
+    /// Creates a new builder-style object to manufacture [`ThemeValue`](crate::model::ThemeValue).
     pub fn builder() -> crate::model::theme_value::Builder {
         crate::model::theme_value::Builder::default()
     }
@@ -417,12 +427,16 @@ impl ThemeValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThemeSummary {
     /// <p>The unique ID for the app associated with the theme summary.</p>
+    #[doc(hidden)]
     pub app_id: std::option::Option<std::string::String>,
     /// <p>The name of the backend environment that is part of the Amplify app.</p>
+    #[doc(hidden)]
     pub environment_name: std::option::Option<std::string::String>,
     /// <p>The ID of the theme.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the theme.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl ThemeSummary {
@@ -453,11 +467,10 @@ impl std::fmt::Debug for ThemeSummary {
         formatter.finish()
     }
 }
-/// See [`ThemeSummary`](crate::model::ThemeSummary)
+/// See [`ThemeSummary`](crate::model::ThemeSummary).
 pub mod theme_summary {
 
-    /// A builder for [`ThemeSummary`](crate::model::ThemeSummary)
-    #[non_exhaustive]
+    /// A builder for [`ThemeSummary`](crate::model::ThemeSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_id: std::option::Option<std::string::String>,
@@ -509,7 +522,7 @@ pub mod theme_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThemeSummary`](crate::model::ThemeSummary)
+        /// Consumes the builder and constructs a [`ThemeSummary`](crate::model::ThemeSummary).
         pub fn build(self) -> crate::model::ThemeSummary {
             crate::model::ThemeSummary {
                 app_id: self.app_id,
@@ -521,7 +534,7 @@ pub mod theme_summary {
     }
 }
 impl ThemeSummary {
-    /// Creates a new builder-style object to manufacture [`ThemeSummary`](crate::model::ThemeSummary)
+    /// Creates a new builder-style object to manufacture [`ThemeSummary`](crate::model::ThemeSummary).
     pub fn builder() -> crate::model::theme_summary::Builder {
         crate::model::theme_summary::Builder::default()
     }
@@ -532,12 +545,16 @@ impl ThemeSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateThemeData {
     /// <p>The name of the theme.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A list of key-value pairs that deﬁnes the properties of the theme.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<crate::model::ThemeValues>>,
     /// <p>Describes the properties that can be overriden to customize an instance of the theme.</p>
+    #[doc(hidden)]
     pub overrides: std::option::Option<std::vec::Vec<crate::model::ThemeValues>>,
     /// <p>One or more key-value pairs to use when tagging the theme data.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -572,11 +589,10 @@ impl std::fmt::Debug for CreateThemeData {
         formatter.finish()
     }
 }
-/// See [`CreateThemeData`](crate::model::CreateThemeData)
+/// See [`CreateThemeData`](crate::model::CreateThemeData).
 pub mod create_theme_data {
 
-    /// A builder for [`CreateThemeData`](crate::model::CreateThemeData)
-    #[non_exhaustive]
+    /// A builder for [`CreateThemeData`](crate::model::CreateThemeData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -660,7 +676,7 @@ pub mod create_theme_data {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateThemeData`](crate::model::CreateThemeData)
+        /// Consumes the builder and constructs a [`CreateThemeData`](crate::model::CreateThemeData).
         pub fn build(self) -> crate::model::CreateThemeData {
             crate::model::CreateThemeData {
                 name: self.name,
@@ -672,7 +688,7 @@ pub mod create_theme_data {
     }
 }
 impl CreateThemeData {
-    /// Creates a new builder-style object to manufacture [`CreateThemeData`](crate::model::CreateThemeData)
+    /// Creates a new builder-style object to manufacture [`CreateThemeData`](crate::model::CreateThemeData).
     pub fn builder() -> crate::model::create_theme_data::Builder {
         crate::model::create_theme_data::Builder::default()
     }
@@ -683,12 +699,16 @@ impl CreateThemeData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateThemeData {
     /// <p>The unique ID of the theme to update.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the theme to update.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A list of key-value pairs that define the theme's properties.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<crate::model::ThemeValues>>,
     /// <p>Describes the properties that can be overriden to customize the theme.</p>
+    #[doc(hidden)]
     pub overrides: std::option::Option<std::vec::Vec<crate::model::ThemeValues>>,
 }
 impl UpdateThemeData {
@@ -719,11 +739,10 @@ impl std::fmt::Debug for UpdateThemeData {
         formatter.finish()
     }
 }
-/// See [`UpdateThemeData`](crate::model::UpdateThemeData)
+/// See [`UpdateThemeData`](crate::model::UpdateThemeData).
 pub mod update_theme_data {
 
-    /// A builder for [`UpdateThemeData`](crate::model::UpdateThemeData)
-    #[non_exhaustive]
+    /// A builder for [`UpdateThemeData`](crate::model::UpdateThemeData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -790,7 +809,7 @@ pub mod update_theme_data {
             self.overrides = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateThemeData`](crate::model::UpdateThemeData)
+        /// Consumes the builder and constructs a [`UpdateThemeData`](crate::model::UpdateThemeData).
         pub fn build(self) -> crate::model::UpdateThemeData {
             crate::model::UpdateThemeData {
                 id: self.id,
@@ -802,7 +821,7 @@ pub mod update_theme_data {
     }
 }
 impl UpdateThemeData {
-    /// Creates a new builder-style object to manufacture [`UpdateThemeData`](crate::model::UpdateThemeData)
+    /// Creates a new builder-style object to manufacture [`UpdateThemeData`](crate::model::UpdateThemeData).
     pub fn builder() -> crate::model::update_theme_data::Builder {
         crate::model::update_theme_data::Builder::default()
     }
@@ -813,26 +832,36 @@ impl UpdateThemeData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Component {
     /// <p>The unique ID of the Amplify app associated with the component.</p>
+    #[doc(hidden)]
     pub app_id: std::option::Option<std::string::String>,
     /// <p>The name of the backend environment that is a part of the Amplify app.</p>
+    #[doc(hidden)]
     pub environment_name: std::option::Option<std::string::String>,
     /// <p>The unique ID of the component in its original source system, such as Figma.</p>
+    #[doc(hidden)]
     pub source_id: std::option::Option<std::string::String>,
     /// <p>The unique ID of the component.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the component.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of the component. This can be an Amplify custom UI component or another custom component.</p>
+    #[doc(hidden)]
     pub component_type: std::option::Option<std::string::String>,
     /// <p>Describes the component's properties. You can't specify <code>tags</code> as a valid property for <code>properties</code>.</p>
+    #[doc(hidden)]
     pub properties: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ComponentProperty>,
     >,
     /// <p>A list of the component's <code>ComponentChild</code> instances.</p>
+    #[doc(hidden)]
     pub children: std::option::Option<std::vec::Vec<crate::model::ComponentChild>>,
     /// <p>A list of the component's variants. A variant is a unique style configuration of a main component.</p>
+    #[doc(hidden)]
     pub variants: std::option::Option<std::vec::Vec<crate::model::ComponentVariant>>,
     /// <p>Describes the component's properties that can be overriden in a customized instance of the component. You can't specify <code>tags</code> as a valid property for <code>overrides</code>.</p>
+    #[doc(hidden)]
     pub overrides: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -841,6 +870,7 @@ pub struct Component {
     >,
     /// <p>The information to connect a component's properties to data at runtime. You can't specify <code>tags</code> as a valid property for <code>bindingProperties</code>.</p>
     /// <p></p>
+    #[doc(hidden)]
     pub binding_properties: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -848,21 +878,27 @@ pub struct Component {
         >,
     >,
     /// <p>The data binding configuration for the component's properties. Use this for a collection component. You can't specify <code>tags</code> as a valid property for <code>collectionProperties</code>.</p>
+    #[doc(hidden)]
     pub collection_properties: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ComponentDataConfiguration>,
     >,
     /// <p>The time that the component was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the component was modified.</p>
+    #[doc(hidden)]
     pub modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>One or more key-value pairs to use when tagging the component.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Describes the events that can be raised on the component. Use for the workflow feature in Amplify Studio that allows you to bind events and actions to components.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ComponentEvent>,
     >,
     /// <p>The schema version of the component when it was imported.</p>
+    #[doc(hidden)]
     pub schema_version: std::option::Option<std::string::String>,
 }
 impl Component {
@@ -988,11 +1024,10 @@ impl std::fmt::Debug for Component {
         formatter.finish()
     }
 }
-/// See [`Component`](crate::model::Component)
+/// See [`Component`](crate::model::Component).
 pub mod component {
 
-    /// A builder for [`Component`](crate::model::Component)
-    #[non_exhaustive]
+    /// A builder for [`Component`](crate::model::Component).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_id: std::option::Option<std::string::String>,
@@ -1339,7 +1374,7 @@ pub mod component {
             self.schema_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`Component`](crate::model::Component)
+        /// Consumes the builder and constructs a [`Component`](crate::model::Component).
         pub fn build(self) -> crate::model::Component {
             crate::model::Component {
                 app_id: self.app_id,
@@ -1364,7 +1399,7 @@ pub mod component {
     }
 }
 impl Component {
-    /// Creates a new builder-style object to manufacture [`Component`](crate::model::Component)
+    /// Creates a new builder-style object to manufacture [`Component`](crate::model::Component).
     pub fn builder() -> crate::model::component::Builder {
         crate::model::component::Builder::default()
     }
@@ -1375,10 +1410,13 @@ impl Component {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentEvent {
     /// <p>The action to perform when a specific event is raised.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<std::string::String>,
     /// <p>Describes information about the action.</p>
+    #[doc(hidden)]
     pub parameters: std::option::Option<crate::model::ActionParameters>,
     /// <p>Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.</p>
+    #[doc(hidden)]
     pub binding_event: std::option::Option<std::string::String>,
 }
 impl ComponentEvent {
@@ -1404,11 +1442,10 @@ impl std::fmt::Debug for ComponentEvent {
         formatter.finish()
     }
 }
-/// See [`ComponentEvent`](crate::model::ComponentEvent)
+/// See [`ComponentEvent`](crate::model::ComponentEvent).
 pub mod component_event {
 
-    /// A builder for [`ComponentEvent`](crate::model::ComponentEvent)
-    #[non_exhaustive]
+    /// A builder for [`ComponentEvent`](crate::model::ComponentEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<std::string::String>,
@@ -1452,7 +1489,7 @@ pub mod component_event {
             self.binding_event = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentEvent`](crate::model::ComponentEvent)
+        /// Consumes the builder and constructs a [`ComponentEvent`](crate::model::ComponentEvent).
         pub fn build(self) -> crate::model::ComponentEvent {
             crate::model::ComponentEvent {
                 action: self.action,
@@ -1463,7 +1500,7 @@ pub mod component_event {
     }
 }
 impl ComponentEvent {
-    /// Creates a new builder-style object to manufacture [`ComponentEvent`](crate::model::ComponentEvent)
+    /// Creates a new builder-style object to manufacture [`ComponentEvent`](crate::model::ComponentEvent).
     pub fn builder() -> crate::model::component_event::Builder {
         crate::model::component_event::Builder::default()
     }
@@ -1474,24 +1511,33 @@ impl ComponentEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActionParameters {
     /// <p>The type of navigation action. Valid values are <code>url</code> and <code>anchor</code>. This value is required for a navigation action.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ComponentProperty>,
     /// <p>The URL to the location to open. Specify this value for a navigation action.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<crate::model::ComponentProperty>,
     /// <p>The HTML anchor link to the location to open. Specify this value for a navigation action.</p>
+    #[doc(hidden)]
     pub anchor: std::option::Option<crate::model::ComponentProperty>,
     /// <p>The element within the same component to modify when the action occurs.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<crate::model::ComponentProperty>,
     /// <p>Specifies whether the user should be signed out globally. Specify this value for an auth sign out action.</p>
+    #[doc(hidden)]
     pub global: std::option::Option<crate::model::ComponentProperty>,
     /// <p>The name of the data model. Use when the action performs an operation on an Amplify DataStore model.</p>
+    #[doc(hidden)]
     pub model: std::option::Option<std::string::String>,
     /// <p>The unique ID of the component that the <code>ActionParameters</code> apply to.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<crate::model::ComponentProperty>,
     /// <p>A dictionary of key-value pairs mapping Amplify Studio properties to fields in a data model. Use when the action performs an operation on an Amplify DataStore model.</p>
+    #[doc(hidden)]
     pub fields: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ComponentProperty>,
     >,
     /// <p>A key-value pair that specifies the state property name and its initial value.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::MutationActionSetStateParameter>,
 }
 impl ActionParameters {
@@ -1551,11 +1597,10 @@ impl std::fmt::Debug for ActionParameters {
         formatter.finish()
     }
 }
-/// See [`ActionParameters`](crate::model::ActionParameters)
+/// See [`ActionParameters`](crate::model::ActionParameters).
 pub mod action_parameters {
 
-    /// A builder for [`ActionParameters`](crate::model::ActionParameters)
-    #[non_exhaustive]
+    /// A builder for [`ActionParameters`](crate::model::ActionParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::ComponentProperty>,
@@ -1697,7 +1742,7 @@ pub mod action_parameters {
             self.state = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActionParameters`](crate::model::ActionParameters)
+        /// Consumes the builder and constructs a [`ActionParameters`](crate::model::ActionParameters).
         pub fn build(self) -> crate::model::ActionParameters {
             crate::model::ActionParameters {
                 r#type: self.r#type,
@@ -1714,7 +1759,7 @@ pub mod action_parameters {
     }
 }
 impl ActionParameters {
-    /// Creates a new builder-style object to manufacture [`ActionParameters`](crate::model::ActionParameters)
+    /// Creates a new builder-style object to manufacture [`ActionParameters`](crate::model::ActionParameters).
     pub fn builder() -> crate::model::action_parameters::Builder {
         crate::model::action_parameters::Builder::default()
     }
@@ -1725,10 +1770,13 @@ impl ActionParameters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MutationActionSetStateParameter {
     /// <p>The name of the component that is being modified.</p>
+    #[doc(hidden)]
     pub component_name: std::option::Option<std::string::String>,
     /// <p>The name of the component property to apply the state configuration to.</p>
+    #[doc(hidden)]
     pub property: std::option::Option<std::string::String>,
     /// <p>The state configuration to assign to the property.</p>
+    #[doc(hidden)]
     pub set: std::option::Option<crate::model::ComponentProperty>,
 }
 impl MutationActionSetStateParameter {
@@ -1754,11 +1802,10 @@ impl std::fmt::Debug for MutationActionSetStateParameter {
         formatter.finish()
     }
 }
-/// See [`MutationActionSetStateParameter`](crate::model::MutationActionSetStateParameter)
+/// See [`MutationActionSetStateParameter`](crate::model::MutationActionSetStateParameter).
 pub mod mutation_action_set_state_parameter {
 
-    /// A builder for [`MutationActionSetStateParameter`](crate::model::MutationActionSetStateParameter)
-    #[non_exhaustive]
+    /// A builder for [`MutationActionSetStateParameter`](crate::model::MutationActionSetStateParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) component_name: std::option::Option<std::string::String>,
@@ -1802,7 +1849,7 @@ pub mod mutation_action_set_state_parameter {
             self.set = input;
             self
         }
-        /// Consumes the builder and constructs a [`MutationActionSetStateParameter`](crate::model::MutationActionSetStateParameter)
+        /// Consumes the builder and constructs a [`MutationActionSetStateParameter`](crate::model::MutationActionSetStateParameter).
         pub fn build(self) -> crate::model::MutationActionSetStateParameter {
             crate::model::MutationActionSetStateParameter {
                 component_name: self.component_name,
@@ -1813,7 +1860,7 @@ pub mod mutation_action_set_state_parameter {
     }
 }
 impl MutationActionSetStateParameter {
-    /// Creates a new builder-style object to manufacture [`MutationActionSetStateParameter`](crate::model::MutationActionSetStateParameter)
+    /// Creates a new builder-style object to manufacture [`MutationActionSetStateParameter`](crate::model::MutationActionSetStateParameter).
     pub fn builder() -> crate::model::mutation_action_set_state_parameter::Builder {
         crate::model::mutation_action_set_state_parameter::Builder::default()
     }
@@ -1824,37 +1871,52 @@ impl MutationActionSetStateParameter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentProperty {
     /// <p>The value to assign to the component property.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The information to bind the component property to data at runtime.</p>
+    #[doc(hidden)]
     pub binding_properties: std::option::Option<crate::model::ComponentPropertyBindingProperties>,
     /// <p>The information to bind the component property to data at runtime. Use this for collection components.</p>
+    #[doc(hidden)]
     pub collection_binding_properties:
         std::option::Option<crate::model::ComponentPropertyBindingProperties>,
     /// <p>The default value to assign to the component property.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
     /// <p>The data model to use to assign a value to the component property.</p>
+    #[doc(hidden)]
     pub model: std::option::Option<std::string::String>,
     /// <p>The information to bind the component property to form data.</p>
+    #[doc(hidden)]
     pub bindings: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::FormBindingElement>,
     >,
     /// <p>An event that occurs in your app. Use this for workflow data binding.</p>
+    #[doc(hidden)]
     pub event: std::option::Option<std::string::String>,
     /// <p>An authenticated user attribute to use to assign a value to the component property.</p>
+    #[doc(hidden)]
     pub user_attribute: std::option::Option<std::string::String>,
     /// <p>A list of component properties to concatenate to create the value to assign to this component property.</p>
+    #[doc(hidden)]
     pub concat: std::option::Option<std::vec::Vec<crate::model::ComponentProperty>>,
     /// <p>The conditional expression to use to assign a value to the component property.</p>
+    #[doc(hidden)]
     pub condition: std::option::Option<crate::model::ComponentConditionProperty>,
     /// <p>Specifies whether the user configured the property in Amplify Studio after importing it.</p>
+    #[doc(hidden)]
     pub configured: std::option::Option<bool>,
     /// <p>The component type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The default value assigned to the property when the component is imported into an app.</p>
+    #[doc(hidden)]
     pub imported_value: std::option::Option<std::string::String>,
     /// <p>The name of the component that is affected by an event.</p>
+    #[doc(hidden)]
     pub component_name: std::option::Option<std::string::String>,
     /// <p>The name of the component's property that is affected by an event.</p>
+    #[doc(hidden)]
     pub property: std::option::Option<std::string::String>,
 }
 impl ComponentProperty {
@@ -1951,11 +2013,10 @@ impl std::fmt::Debug for ComponentProperty {
         formatter.finish()
     }
 }
-/// See [`ComponentProperty`](crate::model::ComponentProperty)
+/// See [`ComponentProperty`](crate::model::ComponentProperty).
 pub mod component_property {
 
-    /// A builder for [`ComponentProperty`](crate::model::ComponentProperty)
-    #[non_exhaustive]
+    /// A builder for [`ComponentProperty`](crate::model::ComponentProperty).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<std::string::String>,
@@ -2180,7 +2241,7 @@ pub mod component_property {
             self.property = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentProperty`](crate::model::ComponentProperty)
+        /// Consumes the builder and constructs a [`ComponentProperty`](crate::model::ComponentProperty).
         pub fn build(self) -> crate::model::ComponentProperty {
             crate::model::ComponentProperty {
                 value: self.value,
@@ -2203,7 +2264,7 @@ pub mod component_property {
     }
 }
 impl ComponentProperty {
-    /// Creates a new builder-style object to manufacture [`ComponentProperty`](crate::model::ComponentProperty)
+    /// Creates a new builder-style object to manufacture [`ComponentProperty`](crate::model::ComponentProperty).
     pub fn builder() -> crate::model::component_property::Builder {
         crate::model::component_property::Builder::default()
     }
@@ -2214,18 +2275,25 @@ impl ComponentProperty {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentConditionProperty {
     /// <p>The name of the conditional property.</p>
+    #[doc(hidden)]
     pub property: std::option::Option<std::string::String>,
     /// <p>The name of a field. Specify this when the property is a data model.</p>
+    #[doc(hidden)]
     pub field: std::option::Option<std::string::String>,
     /// <p>The operator to use to perform the evaluation, such as <code>eq</code> to represent equals.</p>
+    #[doc(hidden)]
     pub operator: std::option::Option<std::string::String>,
     /// <p>The value of the property to evaluate.</p>
+    #[doc(hidden)]
     pub operand: std::option::Option<std::string::String>,
     /// <p>The value to assign to the property if the condition is met.</p>
+    #[doc(hidden)]
     pub then: std::option::Option<std::boxed::Box<crate::model::ComponentProperty>>,
     /// <p>The value to assign to the property if the condition is not met.</p>
+    #[doc(hidden)]
     pub r#else: std::option::Option<std::boxed::Box<crate::model::ComponentProperty>>,
     /// <p>The type of the property to evaluate.</p>
+    #[doc(hidden)]
     pub operand_type: std::option::Option<std::string::String>,
 }
 impl ComponentConditionProperty {
@@ -2271,11 +2339,10 @@ impl std::fmt::Debug for ComponentConditionProperty {
         formatter.finish()
     }
 }
-/// See [`ComponentConditionProperty`](crate::model::ComponentConditionProperty)
+/// See [`ComponentConditionProperty`](crate::model::ComponentConditionProperty).
 pub mod component_condition_property {
 
-    /// A builder for [`ComponentConditionProperty`](crate::model::ComponentConditionProperty)
-    #[non_exhaustive]
+    /// A builder for [`ComponentConditionProperty`](crate::model::ComponentConditionProperty).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) property: std::option::Option<std::string::String>,
@@ -2369,7 +2436,7 @@ pub mod component_condition_property {
             self.operand_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentConditionProperty`](crate::model::ComponentConditionProperty)
+        /// Consumes the builder and constructs a [`ComponentConditionProperty`](crate::model::ComponentConditionProperty).
         pub fn build(self) -> crate::model::ComponentConditionProperty {
             crate::model::ComponentConditionProperty {
                 property: self.property,
@@ -2384,7 +2451,7 @@ pub mod component_condition_property {
     }
 }
 impl ComponentConditionProperty {
-    /// Creates a new builder-style object to manufacture [`ComponentConditionProperty`](crate::model::ComponentConditionProperty)
+    /// Creates a new builder-style object to manufacture [`ComponentConditionProperty`](crate::model::ComponentConditionProperty).
     pub fn builder() -> crate::model::component_condition_property::Builder {
         crate::model::component_condition_property::Builder::default()
     }
@@ -2395,8 +2462,10 @@ impl ComponentConditionProperty {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FormBindingElement {
     /// <p>The name of the component to retrieve a value from.</p>
+    #[doc(hidden)]
     pub element: std::option::Option<std::string::String>,
     /// <p>The property to retrieve a value from.</p>
+    #[doc(hidden)]
     pub property: std::option::Option<std::string::String>,
 }
 impl FormBindingElement {
@@ -2417,11 +2486,10 @@ impl std::fmt::Debug for FormBindingElement {
         formatter.finish()
     }
 }
-/// See [`FormBindingElement`](crate::model::FormBindingElement)
+/// See [`FormBindingElement`](crate::model::FormBindingElement).
 pub mod form_binding_element {
 
-    /// A builder for [`FormBindingElement`](crate::model::FormBindingElement)
-    #[non_exhaustive]
+    /// A builder for [`FormBindingElement`](crate::model::FormBindingElement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) element: std::option::Option<std::string::String>,
@@ -2448,7 +2516,7 @@ pub mod form_binding_element {
             self.property = input;
             self
         }
-        /// Consumes the builder and constructs a [`FormBindingElement`](crate::model::FormBindingElement)
+        /// Consumes the builder and constructs a [`FormBindingElement`](crate::model::FormBindingElement).
         pub fn build(self) -> crate::model::FormBindingElement {
             crate::model::FormBindingElement {
                 element: self.element,
@@ -2458,7 +2526,7 @@ pub mod form_binding_element {
     }
 }
 impl FormBindingElement {
-    /// Creates a new builder-style object to manufacture [`FormBindingElement`](crate::model::FormBindingElement)
+    /// Creates a new builder-style object to manufacture [`FormBindingElement`](crate::model::FormBindingElement).
     pub fn builder() -> crate::model::form_binding_element::Builder {
         crate::model::form_binding_element::Builder::default()
     }
@@ -2469,8 +2537,10 @@ impl FormBindingElement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentPropertyBindingProperties {
     /// <p>The component property to bind to the data field.</p>
+    #[doc(hidden)]
     pub property: std::option::Option<std::string::String>,
     /// <p>The data field to bind the property to.</p>
+    #[doc(hidden)]
     pub field: std::option::Option<std::string::String>,
 }
 impl ComponentPropertyBindingProperties {
@@ -2491,11 +2561,10 @@ impl std::fmt::Debug for ComponentPropertyBindingProperties {
         formatter.finish()
     }
 }
-/// See [`ComponentPropertyBindingProperties`](crate::model::ComponentPropertyBindingProperties)
+/// See [`ComponentPropertyBindingProperties`](crate::model::ComponentPropertyBindingProperties).
 pub mod component_property_binding_properties {
 
-    /// A builder for [`ComponentPropertyBindingProperties`](crate::model::ComponentPropertyBindingProperties)
-    #[non_exhaustive]
+    /// A builder for [`ComponentPropertyBindingProperties`](crate::model::ComponentPropertyBindingProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) property: std::option::Option<std::string::String>,
@@ -2522,7 +2591,7 @@ pub mod component_property_binding_properties {
             self.field = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentPropertyBindingProperties`](crate::model::ComponentPropertyBindingProperties)
+        /// Consumes the builder and constructs a [`ComponentPropertyBindingProperties`](crate::model::ComponentPropertyBindingProperties).
         pub fn build(self) -> crate::model::ComponentPropertyBindingProperties {
             crate::model::ComponentPropertyBindingProperties {
                 property: self.property,
@@ -2532,7 +2601,7 @@ pub mod component_property_binding_properties {
     }
 }
 impl ComponentPropertyBindingProperties {
-    /// Creates a new builder-style object to manufacture [`ComponentPropertyBindingProperties`](crate::model::ComponentPropertyBindingProperties)
+    /// Creates a new builder-style object to manufacture [`ComponentPropertyBindingProperties`](crate::model::ComponentPropertyBindingProperties).
     pub fn builder() -> crate::model::component_property_binding_properties::Builder {
         crate::model::component_property_binding_properties::Builder::default()
     }
@@ -2543,12 +2612,16 @@ impl ComponentPropertyBindingProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentDataConfiguration {
     /// <p>The name of the data model to use to bind data to a component.</p>
+    #[doc(hidden)]
     pub model: std::option::Option<std::string::String>,
     /// <p>Describes how to sort the component's properties.</p>
+    #[doc(hidden)]
     pub sort: std::option::Option<std::vec::Vec<crate::model::SortProperty>>,
     /// <p>Represents the conditional logic to use when binding data to a component. Use this property to retrieve only a subset of the data in a collection.</p>
+    #[doc(hidden)]
     pub predicate: std::option::Option<crate::model::Predicate>,
     /// <p>A list of IDs to use to bind data to a component. Use this property to bind specifically chosen data, rather than data retrieved from a query.</p>
+    #[doc(hidden)]
     pub identifiers: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ComponentDataConfiguration {
@@ -2579,11 +2652,10 @@ impl std::fmt::Debug for ComponentDataConfiguration {
         formatter.finish()
     }
 }
-/// See [`ComponentDataConfiguration`](crate::model::ComponentDataConfiguration)
+/// See [`ComponentDataConfiguration`](crate::model::ComponentDataConfiguration).
 pub mod component_data_configuration {
 
-    /// A builder for [`ComponentDataConfiguration`](crate::model::ComponentDataConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ComponentDataConfiguration`](crate::model::ComponentDataConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model: std::option::Option<std::string::String>,
@@ -2653,7 +2725,7 @@ pub mod component_data_configuration {
             self.identifiers = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentDataConfiguration`](crate::model::ComponentDataConfiguration)
+        /// Consumes the builder and constructs a [`ComponentDataConfiguration`](crate::model::ComponentDataConfiguration).
         pub fn build(self) -> crate::model::ComponentDataConfiguration {
             crate::model::ComponentDataConfiguration {
                 model: self.model,
@@ -2665,7 +2737,7 @@ pub mod component_data_configuration {
     }
 }
 impl ComponentDataConfiguration {
-    /// Creates a new builder-style object to manufacture [`ComponentDataConfiguration`](crate::model::ComponentDataConfiguration)
+    /// Creates a new builder-style object to manufacture [`ComponentDataConfiguration`](crate::model::ComponentDataConfiguration).
     pub fn builder() -> crate::model::component_data_configuration::Builder {
         crate::model::component_data_configuration::Builder::default()
     }
@@ -2676,14 +2748,19 @@ impl ComponentDataConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Predicate {
     /// <p>A list of predicates to combine logically.</p>
+    #[doc(hidden)]
     pub or: std::option::Option<std::vec::Vec<crate::model::Predicate>>,
     /// <p>A list of predicates to combine logically.</p>
+    #[doc(hidden)]
     pub and: std::option::Option<std::vec::Vec<crate::model::Predicate>>,
     /// <p>The field to query.</p>
+    #[doc(hidden)]
     pub field: std::option::Option<std::string::String>,
     /// <p>The operator to use to perform the evaluation.</p>
+    #[doc(hidden)]
     pub operator: std::option::Option<std::string::String>,
     /// <p>The value to use when performing the evaluation.</p>
+    #[doc(hidden)]
     pub operand: std::option::Option<std::string::String>,
 }
 impl Predicate {
@@ -2719,11 +2796,10 @@ impl std::fmt::Debug for Predicate {
         formatter.finish()
     }
 }
-/// See [`Predicate`](crate::model::Predicate)
+/// See [`Predicate`](crate::model::Predicate).
 pub mod predicate {
 
-    /// A builder for [`Predicate`](crate::model::Predicate)
-    #[non_exhaustive]
+    /// A builder for [`Predicate`](crate::model::Predicate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) or: std::option::Option<std::vec::Vec<crate::model::Predicate>>,
@@ -2801,7 +2877,7 @@ pub mod predicate {
             self.operand = input;
             self
         }
-        /// Consumes the builder and constructs a [`Predicate`](crate::model::Predicate)
+        /// Consumes the builder and constructs a [`Predicate`](crate::model::Predicate).
         pub fn build(self) -> crate::model::Predicate {
             crate::model::Predicate {
                 or: self.or,
@@ -2814,7 +2890,7 @@ pub mod predicate {
     }
 }
 impl Predicate {
-    /// Creates a new builder-style object to manufacture [`Predicate`](crate::model::Predicate)
+    /// Creates a new builder-style object to manufacture [`Predicate`](crate::model::Predicate).
     pub fn builder() -> crate::model::predicate::Builder {
         crate::model::predicate::Builder::default()
     }
@@ -2825,8 +2901,10 @@ impl Predicate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SortProperty {
     /// <p>The field to perform the sort on.</p>
+    #[doc(hidden)]
     pub field: std::option::Option<std::string::String>,
     /// <p>The direction of the sort, either ascending or descending.</p>
+    #[doc(hidden)]
     pub direction: std::option::Option<crate::model::SortDirection>,
 }
 impl SortProperty {
@@ -2847,11 +2925,10 @@ impl std::fmt::Debug for SortProperty {
         formatter.finish()
     }
 }
-/// See [`SortProperty`](crate::model::SortProperty)
+/// See [`SortProperty`](crate::model::SortProperty).
 pub mod sort_property {
 
-    /// A builder for [`SortProperty`](crate::model::SortProperty)
-    #[non_exhaustive]
+    /// A builder for [`SortProperty`](crate::model::SortProperty).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field: std::option::Option<std::string::String>,
@@ -2881,7 +2958,7 @@ pub mod sort_property {
             self.direction = input;
             self
         }
-        /// Consumes the builder and constructs a [`SortProperty`](crate::model::SortProperty)
+        /// Consumes the builder and constructs a [`SortProperty`](crate::model::SortProperty).
         pub fn build(self) -> crate::model::SortProperty {
             crate::model::SortProperty {
                 field: self.field,
@@ -2891,7 +2968,7 @@ pub mod sort_property {
     }
 }
 impl SortProperty {
-    /// Creates a new builder-style object to manufacture [`SortProperty`](crate::model::SortProperty)
+    /// Creates a new builder-style object to manufacture [`SortProperty`](crate::model::SortProperty).
     pub fn builder() -> crate::model::sort_property::Builder {
         crate::model::sort_property::Builder::default()
     }
@@ -2933,11 +3010,14 @@ where
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentBindingPropertiesValue {
     /// <p>The property type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>Describes the properties to customize with data at runtime.</p>
+    #[doc(hidden)]
     pub binding_properties:
         std::option::Option<crate::model::ComponentBindingPropertiesValueProperties>,
     /// <p>The default value of the property.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
 }
 impl ComponentBindingPropertiesValue {
@@ -2965,11 +3045,10 @@ impl std::fmt::Debug for ComponentBindingPropertiesValue {
         formatter.finish()
     }
 }
-/// See [`ComponentBindingPropertiesValue`](crate::model::ComponentBindingPropertiesValue)
+/// See [`ComponentBindingPropertiesValue`](crate::model::ComponentBindingPropertiesValue).
 pub mod component_binding_properties_value {
 
-    /// A builder for [`ComponentBindingPropertiesValue`](crate::model::ComponentBindingPropertiesValue)
-    #[non_exhaustive]
+    /// A builder for [`ComponentBindingPropertiesValue`](crate::model::ComponentBindingPropertiesValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<std::string::String>,
@@ -3017,7 +3096,7 @@ pub mod component_binding_properties_value {
             self.default_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentBindingPropertiesValue`](crate::model::ComponentBindingPropertiesValue)
+        /// Consumes the builder and constructs a [`ComponentBindingPropertiesValue`](crate::model::ComponentBindingPropertiesValue).
         pub fn build(self) -> crate::model::ComponentBindingPropertiesValue {
             crate::model::ComponentBindingPropertiesValue {
                 r#type: self.r#type,
@@ -3028,7 +3107,7 @@ pub mod component_binding_properties_value {
     }
 }
 impl ComponentBindingPropertiesValue {
-    /// Creates a new builder-style object to manufacture [`ComponentBindingPropertiesValue`](crate::model::ComponentBindingPropertiesValue)
+    /// Creates a new builder-style object to manufacture [`ComponentBindingPropertiesValue`](crate::model::ComponentBindingPropertiesValue).
     pub fn builder() -> crate::model::component_binding_properties_value::Builder {
         crate::model::component_binding_properties_value::Builder::default()
     }
@@ -3039,18 +3118,25 @@ impl ComponentBindingPropertiesValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentBindingPropertiesValueProperties {
     /// <p>An Amplify DataStore model.</p>
+    #[doc(hidden)]
     pub model: std::option::Option<std::string::String>,
     /// <p>The field to bind the data to.</p>
+    #[doc(hidden)]
     pub field: std::option::Option<std::string::String>,
     /// <p>A list of predicates for binding a component's properties to data.</p>
+    #[doc(hidden)]
     pub predicates: std::option::Option<std::vec::Vec<crate::model::Predicate>>,
     /// <p>An authenticated user attribute.</p>
+    #[doc(hidden)]
     pub user_attribute: std::option::Option<std::string::String>,
     /// <p>An Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The storage key for an Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The default value to assign to the property.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
 }
 impl ComponentBindingPropertiesValueProperties {
@@ -3096,11 +3182,10 @@ impl std::fmt::Debug for ComponentBindingPropertiesValueProperties {
         formatter.finish()
     }
 }
-/// See [`ComponentBindingPropertiesValueProperties`](crate::model::ComponentBindingPropertiesValueProperties)
+/// See [`ComponentBindingPropertiesValueProperties`](crate::model::ComponentBindingPropertiesValueProperties).
 pub mod component_binding_properties_value_properties {
 
-    /// A builder for [`ComponentBindingPropertiesValueProperties`](crate::model::ComponentBindingPropertiesValueProperties)
-    #[non_exhaustive]
+    /// A builder for [`ComponentBindingPropertiesValueProperties`](crate::model::ComponentBindingPropertiesValueProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model: std::option::Option<std::string::String>,
@@ -3197,7 +3282,7 @@ pub mod component_binding_properties_value_properties {
             self.default_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentBindingPropertiesValueProperties`](crate::model::ComponentBindingPropertiesValueProperties)
+        /// Consumes the builder and constructs a [`ComponentBindingPropertiesValueProperties`](crate::model::ComponentBindingPropertiesValueProperties).
         pub fn build(self) -> crate::model::ComponentBindingPropertiesValueProperties {
             crate::model::ComponentBindingPropertiesValueProperties {
                 model: self.model,
@@ -3212,7 +3297,7 @@ pub mod component_binding_properties_value_properties {
     }
 }
 impl ComponentBindingPropertiesValueProperties {
-    /// Creates a new builder-style object to manufacture [`ComponentBindingPropertiesValueProperties`](crate::model::ComponentBindingPropertiesValueProperties)
+    /// Creates a new builder-style object to manufacture [`ComponentBindingPropertiesValueProperties`](crate::model::ComponentBindingPropertiesValueProperties).
     pub fn builder() -> crate::model::component_binding_properties_value_properties::Builder {
         crate::model::component_binding_properties_value_properties::Builder::default()
     }
@@ -3223,9 +3308,11 @@ impl ComponentBindingPropertiesValueProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentVariant {
     /// <p>The combination of variants that comprise this variant. You can't specify <code>tags</code> as a valid property for <code>variantValues</code>.</p>
+    #[doc(hidden)]
     pub variant_values:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The properties of the component variant that can be overriden when customizing an instance of the component. You can't specify <code>tags</code> as a valid property for <code>overrides</code>.</p>
+    #[doc(hidden)]
     pub overrides: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -3261,11 +3348,10 @@ impl std::fmt::Debug for ComponentVariant {
         formatter.finish()
     }
 }
-/// See [`ComponentVariant`](crate::model::ComponentVariant)
+/// See [`ComponentVariant`](crate::model::ComponentVariant).
 pub mod component_variant {
 
-    /// A builder for [`ComponentVariant`](crate::model::ComponentVariant)
-    #[non_exhaustive]
+    /// A builder for [`ComponentVariant`](crate::model::ComponentVariant).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) variant_values: std::option::Option<
@@ -3332,7 +3418,7 @@ pub mod component_variant {
             self.overrides = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentVariant`](crate::model::ComponentVariant)
+        /// Consumes the builder and constructs a [`ComponentVariant`](crate::model::ComponentVariant).
         pub fn build(self) -> crate::model::ComponentVariant {
             crate::model::ComponentVariant {
                 variant_values: self.variant_values,
@@ -3342,7 +3428,7 @@ pub mod component_variant {
     }
 }
 impl ComponentVariant {
-    /// Creates a new builder-style object to manufacture [`ComponentVariant`](crate::model::ComponentVariant)
+    /// Creates a new builder-style object to manufacture [`ComponentVariant`](crate::model::ComponentVariant).
     pub fn builder() -> crate::model::component_variant::Builder {
         crate::model::component_variant::Builder::default()
     }
@@ -3353,20 +3439,26 @@ impl ComponentVariant {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentChild {
     /// <p>The type of the child component. </p>
+    #[doc(hidden)]
     pub component_type: std::option::Option<std::string::String>,
     /// <p>The name of the child component.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Describes the properties of the child component. You can't specify <code>tags</code> as a valid property for <code>properties</code>.</p>
+    #[doc(hidden)]
     pub properties: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ComponentProperty>,
     >,
     /// <p>The list of <code>ComponentChild</code> instances for this component.</p>
+    #[doc(hidden)]
     pub children: std::option::Option<std::vec::Vec<crate::model::ComponentChild>>,
     /// <p>Describes the events that can be raised on the child component. Use for the workflow feature in Amplify Studio that allows you to bind events and actions to components.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ComponentEvent>,
     >,
     /// <p>The unique ID of the child component in its original source system, such as Figma.</p>
+    #[doc(hidden)]
     pub source_id: std::option::Option<std::string::String>,
 }
 impl ComponentChild {
@@ -3415,11 +3507,10 @@ impl std::fmt::Debug for ComponentChild {
         formatter.finish()
     }
 }
-/// See [`ComponentChild`](crate::model::ComponentChild)
+/// See [`ComponentChild`](crate::model::ComponentChild).
 pub mod component_child {
 
-    /// A builder for [`ComponentChild`](crate::model::ComponentChild)
-    #[non_exhaustive]
+    /// A builder for [`ComponentChild`](crate::model::ComponentChild).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) component_type: std::option::Option<std::string::String>,
@@ -3536,7 +3627,7 @@ pub mod component_child {
             self.source_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentChild`](crate::model::ComponentChild)
+        /// Consumes the builder and constructs a [`ComponentChild`](crate::model::ComponentChild).
         pub fn build(self) -> crate::model::ComponentChild {
             crate::model::ComponentChild {
                 component_type: self.component_type,
@@ -3550,7 +3641,7 @@ pub mod component_child {
     }
 }
 impl ComponentChild {
-    /// Creates a new builder-style object to manufacture [`ComponentChild`](crate::model::ComponentChild)
+    /// Creates a new builder-style object to manufacture [`ComponentChild`](crate::model::ComponentChild).
     pub fn builder() -> crate::model::component_child::Builder {
         crate::model::component_child::Builder::default()
     }
@@ -3561,14 +3652,19 @@ impl ComponentChild {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentSummary {
     /// <p>The unique ID of the Amplify app associated with the component.</p>
+    #[doc(hidden)]
     pub app_id: std::option::Option<std::string::String>,
     /// <p>The name of the backend environment that is a part of the Amplify app.</p>
+    #[doc(hidden)]
     pub environment_name: std::option::Option<std::string::String>,
     /// <p>The unique ID of the component.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the component.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The component type.</p>
+    #[doc(hidden)]
     pub component_type: std::option::Option<std::string::String>,
 }
 impl ComponentSummary {
@@ -3604,11 +3700,10 @@ impl std::fmt::Debug for ComponentSummary {
         formatter.finish()
     }
 }
-/// See [`ComponentSummary`](crate::model::ComponentSummary)
+/// See [`ComponentSummary`](crate::model::ComponentSummary).
 pub mod component_summary {
 
-    /// A builder for [`ComponentSummary`](crate::model::ComponentSummary)
-    #[non_exhaustive]
+    /// A builder for [`ComponentSummary`](crate::model::ComponentSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_id: std::option::Option<std::string::String>,
@@ -3674,7 +3769,7 @@ pub mod component_summary {
             self.component_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentSummary`](crate::model::ComponentSummary)
+        /// Consumes the builder and constructs a [`ComponentSummary`](crate::model::ComponentSummary).
         pub fn build(self) -> crate::model::ComponentSummary {
             crate::model::ComponentSummary {
                 app_id: self.app_id,
@@ -3687,7 +3782,7 @@ pub mod component_summary {
     }
 }
 impl ComponentSummary {
-    /// Creates a new builder-style object to manufacture [`ComponentSummary`](crate::model::ComponentSummary)
+    /// Creates a new builder-style object to manufacture [`ComponentSummary`](crate::model::ComponentSummary).
     pub fn builder() -> crate::model::component_summary::Builder {
         crate::model::component_summary::Builder::default()
     }
@@ -3698,20 +3793,27 @@ impl ComponentSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateComponentData {
     /// <p>The name of the component</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The unique ID of the component in its original source system, such as Figma.</p>
+    #[doc(hidden)]
     pub source_id: std::option::Option<std::string::String>,
     /// <p>The component type. This can be an Amplify custom UI component or another custom component.</p>
+    #[doc(hidden)]
     pub component_type: std::option::Option<std::string::String>,
     /// <p>Describes the component's properties.</p>
+    #[doc(hidden)]
     pub properties: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ComponentProperty>,
     >,
     /// <p>A list of child components that are instances of the main component.</p>
+    #[doc(hidden)]
     pub children: std::option::Option<std::vec::Vec<crate::model::ComponentChild>>,
     /// <p>A list of the unique variants of this component.</p>
+    #[doc(hidden)]
     pub variants: std::option::Option<std::vec::Vec<crate::model::ComponentVariant>>,
     /// <p>Describes the component properties that can be overriden to customize an instance of the component.</p>
+    #[doc(hidden)]
     pub overrides: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -3719,6 +3821,7 @@ pub struct CreateComponentData {
         >,
     >,
     /// <p>The data binding information for the component's properties.</p>
+    #[doc(hidden)]
     pub binding_properties: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -3726,17 +3829,21 @@ pub struct CreateComponentData {
         >,
     >,
     /// <p>The data binding configuration for customizing a component's properties. Use this for a collection component.</p>
+    #[doc(hidden)]
     pub collection_properties: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ComponentDataConfiguration>,
     >,
     /// <p>One or more key-value pairs to use when tagging the component data.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The event configuration for the component. Use for the workflow feature in Amplify Studio that allows you to bind events and actions to components.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ComponentEvent>,
     >,
     /// <p>The schema version of the component when it was imported.</p>
+    #[doc(hidden)]
     pub schema_version: std::option::Option<std::string::String>,
 }
 impl CreateComponentData {
@@ -3836,11 +3943,10 @@ impl std::fmt::Debug for CreateComponentData {
         formatter.finish()
     }
 }
-/// See [`CreateComponentData`](crate::model::CreateComponentData)
+/// See [`CreateComponentData`](crate::model::CreateComponentData).
 pub mod create_component_data {
 
-    /// A builder for [`CreateComponentData`](crate::model::CreateComponentData)
-    #[non_exhaustive]
+    /// A builder for [`CreateComponentData`](crate::model::CreateComponentData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4121,7 +4227,7 @@ pub mod create_component_data {
             self.schema_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateComponentData`](crate::model::CreateComponentData)
+        /// Consumes the builder and constructs a [`CreateComponentData`](crate::model::CreateComponentData).
         pub fn build(self) -> crate::model::CreateComponentData {
             crate::model::CreateComponentData {
                 name: self.name,
@@ -4141,7 +4247,7 @@ pub mod create_component_data {
     }
 }
 impl CreateComponentData {
-    /// Creates a new builder-style object to manufacture [`CreateComponentData`](crate::model::CreateComponentData)
+    /// Creates a new builder-style object to manufacture [`CreateComponentData`](crate::model::CreateComponentData).
     pub fn builder() -> crate::model::create_component_data::Builder {
         crate::model::create_component_data::Builder::default()
     }
@@ -4152,22 +4258,30 @@ impl CreateComponentData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateComponentData {
     /// <p>The unique ID of the component to update.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the component to update.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The unique ID of the component in its original source system, such as Figma.</p>
+    #[doc(hidden)]
     pub source_id: std::option::Option<std::string::String>,
     /// <p>The type of the component. This can be an Amplify custom UI component or another custom component.</p>
+    #[doc(hidden)]
     pub component_type: std::option::Option<std::string::String>,
     /// <p>Describes the component's properties.</p>
+    #[doc(hidden)]
     pub properties: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ComponentProperty>,
     >,
     /// <p>The components that are instances of the main component.</p>
+    #[doc(hidden)]
     pub children: std::option::Option<std::vec::Vec<crate::model::ComponentChild>>,
     /// <p>A list of the unique variants of the main component being updated.</p>
+    #[doc(hidden)]
     pub variants: std::option::Option<std::vec::Vec<crate::model::ComponentVariant>>,
     /// <p>Describes the properties that can be overriden to customize the component.</p>
+    #[doc(hidden)]
     pub overrides: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -4175,6 +4289,7 @@ pub struct UpdateComponentData {
         >,
     >,
     /// <p>The data binding information for the component's properties.</p>
+    #[doc(hidden)]
     pub binding_properties: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -4182,14 +4297,17 @@ pub struct UpdateComponentData {
         >,
     >,
     /// <p>The configuration for binding a component's properties to a data model. Use this for a collection component.</p>
+    #[doc(hidden)]
     pub collection_properties: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ComponentDataConfiguration>,
     >,
     /// <p>The event configuration for the component. Use for the workflow feature in Amplify Studio that allows you to bind events and actions to components.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ComponentEvent>,
     >,
     /// <p>The schema version of the component when it was imported.</p>
+    #[doc(hidden)]
     pub schema_version: std::option::Option<std::string::String>,
 }
 impl UpdateComponentData {
@@ -4286,11 +4404,10 @@ impl std::fmt::Debug for UpdateComponentData {
         formatter.finish()
     }
 }
-/// See [`UpdateComponentData`](crate::model::UpdateComponentData)
+/// See [`UpdateComponentData`](crate::model::UpdateComponentData).
 pub mod update_component_data {
 
-    /// A builder for [`UpdateComponentData`](crate::model::UpdateComponentData)
-    #[non_exhaustive]
+    /// A builder for [`UpdateComponentData`](crate::model::UpdateComponentData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4554,7 +4671,7 @@ pub mod update_component_data {
             self.schema_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateComponentData`](crate::model::UpdateComponentData)
+        /// Consumes the builder and constructs a [`UpdateComponentData`](crate::model::UpdateComponentData).
         pub fn build(self) -> crate::model::UpdateComponentData {
             crate::model::UpdateComponentData {
                 id: self.id,
@@ -4574,7 +4691,7 @@ pub mod update_component_data {
     }
 }
 impl UpdateComponentData {
-    /// Creates a new builder-style object to manufacture [`UpdateComponentData`](crate::model::UpdateComponentData)
+    /// Creates a new builder-style object to manufacture [`UpdateComponentData`](crate::model::UpdateComponentData).
     pub fn builder() -> crate::model::update_component_data::Builder {
         crate::model::update_component_data::Builder::default()
     }
@@ -4585,6 +4702,7 @@ impl UpdateComponentData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RefreshTokenRequestBody {
     /// <p>The token to use to refresh a previously issued access token that might have expired.</p>
+    #[doc(hidden)]
     pub token: std::option::Option<std::string::String>,
 }
 impl RefreshTokenRequestBody {
@@ -4600,11 +4718,10 @@ impl std::fmt::Debug for RefreshTokenRequestBody {
         formatter.finish()
     }
 }
-/// See [`RefreshTokenRequestBody`](crate::model::RefreshTokenRequestBody)
+/// See [`RefreshTokenRequestBody`](crate::model::RefreshTokenRequestBody).
 pub mod refresh_token_request_body {
 
-    /// A builder for [`RefreshTokenRequestBody`](crate::model::RefreshTokenRequestBody)
-    #[non_exhaustive]
+    /// A builder for [`RefreshTokenRequestBody`](crate::model::RefreshTokenRequestBody).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) token: std::option::Option<std::string::String>,
@@ -4620,14 +4737,14 @@ pub mod refresh_token_request_body {
             self.token = input;
             self
         }
-        /// Consumes the builder and constructs a [`RefreshTokenRequestBody`](crate::model::RefreshTokenRequestBody)
+        /// Consumes the builder and constructs a [`RefreshTokenRequestBody`](crate::model::RefreshTokenRequestBody).
         pub fn build(self) -> crate::model::RefreshTokenRequestBody {
             crate::model::RefreshTokenRequestBody { token: self.token }
         }
     }
 }
 impl RefreshTokenRequestBody {
-    /// Creates a new builder-style object to manufacture [`RefreshTokenRequestBody`](crate::model::RefreshTokenRequestBody)
+    /// Creates a new builder-style object to manufacture [`RefreshTokenRequestBody`](crate::model::RefreshTokenRequestBody).
     pub fn builder() -> crate::model::refresh_token_request_body::Builder {
         crate::model::refresh_token_request_body::Builder::default()
     }
@@ -4689,8 +4806,10 @@ impl AsRef<str> for TokenProviders {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExchangeCodeForTokenRequestBody {
     /// <p>The access code to send in the request.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>The location of the application that will receive the access code.</p>
+    #[doc(hidden)]
     pub redirect_uri: std::option::Option<std::string::String>,
 }
 impl ExchangeCodeForTokenRequestBody {
@@ -4711,11 +4830,10 @@ impl std::fmt::Debug for ExchangeCodeForTokenRequestBody {
         formatter.finish()
     }
 }
-/// See [`ExchangeCodeForTokenRequestBody`](crate::model::ExchangeCodeForTokenRequestBody)
+/// See [`ExchangeCodeForTokenRequestBody`](crate::model::ExchangeCodeForTokenRequestBody).
 pub mod exchange_code_for_token_request_body {
 
-    /// A builder for [`ExchangeCodeForTokenRequestBody`](crate::model::ExchangeCodeForTokenRequestBody)
-    #[non_exhaustive]
+    /// A builder for [`ExchangeCodeForTokenRequestBody`](crate::model::ExchangeCodeForTokenRequestBody).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<std::string::String>,
@@ -4742,7 +4860,7 @@ pub mod exchange_code_for_token_request_body {
             self.redirect_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExchangeCodeForTokenRequestBody`](crate::model::ExchangeCodeForTokenRequestBody)
+        /// Consumes the builder and constructs a [`ExchangeCodeForTokenRequestBody`](crate::model::ExchangeCodeForTokenRequestBody).
         pub fn build(self) -> crate::model::ExchangeCodeForTokenRequestBody {
             crate::model::ExchangeCodeForTokenRequestBody {
                 code: self.code,
@@ -4752,7 +4870,7 @@ pub mod exchange_code_for_token_request_body {
     }
 }
 impl ExchangeCodeForTokenRequestBody {
-    /// Creates a new builder-style object to manufacture [`ExchangeCodeForTokenRequestBody`](crate::model::ExchangeCodeForTokenRequestBody)
+    /// Creates a new builder-style object to manufacture [`ExchangeCodeForTokenRequestBody`](crate::model::ExchangeCodeForTokenRequestBody).
     pub fn builder() -> crate::model::exchange_code_for_token_request_body::Builder {
         crate::model::exchange_code_for_token_request_body::Builder::default()
     }

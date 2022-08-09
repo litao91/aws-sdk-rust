@@ -114,12 +114,16 @@ impl AsRef<str> for DiscovererState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchSchemaSummary {
     /// <p>The name of the registry.</p>
+    #[doc(hidden)]
     pub registry_name: std::option::Option<std::string::String>,
     /// <p>The ARN of the schema.</p>
+    #[doc(hidden)]
     pub schema_arn: std::option::Option<std::string::String>,
     /// <p>The name of the schema.</p>
+    #[doc(hidden)]
     pub schema_name: std::option::Option<std::string::String>,
     /// <p>An array of schema version summaries.</p>
+    #[doc(hidden)]
     pub schema_versions:
         std::option::Option<std::vec::Vec<crate::model::SearchSchemaVersionSummary>>,
 }
@@ -153,11 +157,10 @@ impl std::fmt::Debug for SearchSchemaSummary {
         formatter.finish()
     }
 }
-/// See [`SearchSchemaSummary`](crate::model::SearchSchemaSummary)
+/// See [`SearchSchemaSummary`](crate::model::SearchSchemaSummary).
 pub mod search_schema_summary {
 
-    /// A builder for [`SearchSchemaSummary`](crate::model::SearchSchemaSummary)
-    #[non_exhaustive]
+    /// A builder for [`SearchSchemaSummary`](crate::model::SearchSchemaSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) registry_name: std::option::Option<std::string::String>,
@@ -219,7 +222,7 @@ pub mod search_schema_summary {
             self.schema_versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchSchemaSummary`](crate::model::SearchSchemaSummary)
+        /// Consumes the builder and constructs a [`SearchSchemaSummary`](crate::model::SearchSchemaSummary).
         pub fn build(self) -> crate::model::SearchSchemaSummary {
             crate::model::SearchSchemaSummary {
                 registry_name: self.registry_name,
@@ -231,7 +234,7 @@ pub mod search_schema_summary {
     }
 }
 impl SearchSchemaSummary {
-    /// Creates a new builder-style object to manufacture [`SearchSchemaSummary`](crate::model::SearchSchemaSummary)
+    /// Creates a new builder-style object to manufacture [`SearchSchemaSummary`](crate::model::SearchSchemaSummary).
     pub fn builder() -> crate::model::search_schema_summary::Builder {
         crate::model::search_schema_summary::Builder::default()
     }
@@ -242,10 +245,13 @@ impl SearchSchemaSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchSchemaVersionSummary {
     /// <p>The date the schema version was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The version number of the schema</p>
+    #[doc(hidden)]
     pub schema_version: std::option::Option<std::string::String>,
     /// <p>The type of schema.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
 }
 impl SearchSchemaVersionSummary {
@@ -271,11 +277,10 @@ impl std::fmt::Debug for SearchSchemaVersionSummary {
         formatter.finish()
     }
 }
-/// See [`SearchSchemaVersionSummary`](crate::model::SearchSchemaVersionSummary)
+/// See [`SearchSchemaVersionSummary`](crate::model::SearchSchemaVersionSummary).
 pub mod search_schema_version_summary {
 
-    /// A builder for [`SearchSchemaVersionSummary`](crate::model::SearchSchemaVersionSummary)
-    #[non_exhaustive]
+    /// A builder for [`SearchSchemaVersionSummary`](crate::model::SearchSchemaVersionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) created_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -319,7 +324,7 @@ pub mod search_schema_version_summary {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchSchemaVersionSummary`](crate::model::SearchSchemaVersionSummary)
+        /// Consumes the builder and constructs a [`SearchSchemaVersionSummary`](crate::model::SearchSchemaVersionSummary).
         pub fn build(self) -> crate::model::SearchSchemaVersionSummary {
             crate::model::SearchSchemaVersionSummary {
                 created_date: self.created_date,
@@ -330,7 +335,7 @@ pub mod search_schema_version_summary {
     }
 }
 impl SearchSchemaVersionSummary {
-    /// Creates a new builder-style object to manufacture [`SearchSchemaVersionSummary`](crate::model::SearchSchemaVersionSummary)
+    /// Creates a new builder-style object to manufacture [`SearchSchemaVersionSummary`](crate::model::SearchSchemaVersionSummary).
     pub fn builder() -> crate::model::search_schema_version_summary::Builder {
         crate::model::search_schema_version_summary::Builder::default()
     }
@@ -400,12 +405,16 @@ impl AsRef<str> for CodeGenerationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SchemaVersionSummary {
     /// <p>The ARN of the schema version.</p>
+    #[doc(hidden)]
     pub schema_arn: std::option::Option<std::string::String>,
     /// <p>The name of the schema.</p>
+    #[doc(hidden)]
     pub schema_name: std::option::Option<std::string::String>,
     /// <p>The version number of the schema.</p>
+    #[doc(hidden)]
     pub schema_version: std::option::Option<std::string::String>,
     /// <p>The type of schema.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
 }
 impl SchemaVersionSummary {
@@ -436,11 +445,10 @@ impl std::fmt::Debug for SchemaVersionSummary {
         formatter.finish()
     }
 }
-/// See [`SchemaVersionSummary`](crate::model::SchemaVersionSummary)
+/// See [`SchemaVersionSummary`](crate::model::SchemaVersionSummary).
 pub mod schema_version_summary {
 
-    /// A builder for [`SchemaVersionSummary`](crate::model::SchemaVersionSummary)
-    #[non_exhaustive]
+    /// A builder for [`SchemaVersionSummary`](crate::model::SchemaVersionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schema_arn: std::option::Option<std::string::String>,
@@ -492,7 +500,7 @@ pub mod schema_version_summary {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`SchemaVersionSummary`](crate::model::SchemaVersionSummary)
+        /// Consumes the builder and constructs a [`SchemaVersionSummary`](crate::model::SchemaVersionSummary).
         pub fn build(self) -> crate::model::SchemaVersionSummary {
             crate::model::SchemaVersionSummary {
                 schema_arn: self.schema_arn,
@@ -504,7 +512,7 @@ pub mod schema_version_summary {
     }
 }
 impl SchemaVersionSummary {
-    /// Creates a new builder-style object to manufacture [`SchemaVersionSummary`](crate::model::SchemaVersionSummary)
+    /// Creates a new builder-style object to manufacture [`SchemaVersionSummary`](crate::model::SchemaVersionSummary).
     pub fn builder() -> crate::model::schema_version_summary::Builder {
         crate::model::schema_version_summary::Builder::default()
     }
@@ -515,15 +523,20 @@ impl SchemaVersionSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SchemaSummary {
     /// <p>The date and time that schema was modified.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The ARN of the schema.</p>
+    #[doc(hidden)]
     pub schema_arn: std::option::Option<std::string::String>,
     /// <p>The name of the schema.</p>
+    #[doc(hidden)]
     pub schema_name: std::option::Option<std::string::String>,
     /// <p>Tags associated with the schema.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The number of versions available for the schema.</p>
+    #[doc(hidden)]
     pub version_count: i64,
 }
 impl SchemaSummary {
@@ -562,11 +575,10 @@ impl std::fmt::Debug for SchemaSummary {
         formatter.finish()
     }
 }
-/// See [`SchemaSummary`](crate::model::SchemaSummary)
+/// See [`SchemaSummary`](crate::model::SchemaSummary).
 pub mod schema_summary {
 
-    /// A builder for [`SchemaSummary`](crate::model::SchemaSummary)
-    #[non_exhaustive]
+    /// A builder for [`SchemaSummary`](crate::model::SchemaSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) last_modified: std::option::Option<aws_smithy_types::DateTime>,
@@ -646,7 +658,7 @@ pub mod schema_summary {
             self.version_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`SchemaSummary`](crate::model::SchemaSummary)
+        /// Consumes the builder and constructs a [`SchemaSummary`](crate::model::SchemaSummary).
         pub fn build(self) -> crate::model::SchemaSummary {
             crate::model::SchemaSummary {
                 last_modified: self.last_modified,
@@ -659,7 +671,7 @@ pub mod schema_summary {
     }
 }
 impl SchemaSummary {
-    /// Creates a new builder-style object to manufacture [`SchemaSummary`](crate::model::SchemaSummary)
+    /// Creates a new builder-style object to manufacture [`SchemaSummary`](crate::model::SchemaSummary).
     pub fn builder() -> crate::model::schema_summary::Builder {
         crate::model::schema_summary::Builder::default()
     }
@@ -670,10 +682,13 @@ impl SchemaSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegistrySummary {
     /// <p>The ARN of the registry.</p>
+    #[doc(hidden)]
     pub registry_arn: std::option::Option<std::string::String>,
     /// <p>The name of the registry.</p>
+    #[doc(hidden)]
     pub registry_name: std::option::Option<std::string::String>,
     /// <p>Tags associated with the registry.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -703,11 +718,10 @@ impl std::fmt::Debug for RegistrySummary {
         formatter.finish()
     }
 }
-/// See [`RegistrySummary`](crate::model::RegistrySummary)
+/// See [`RegistrySummary`](crate::model::RegistrySummary).
 pub mod registry_summary {
 
-    /// A builder for [`RegistrySummary`](crate::model::RegistrySummary)
-    #[non_exhaustive]
+    /// A builder for [`RegistrySummary`](crate::model::RegistrySummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) registry_arn: std::option::Option<std::string::String>,
@@ -765,7 +779,7 @@ pub mod registry_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegistrySummary`](crate::model::RegistrySummary)
+        /// Consumes the builder and constructs a [`RegistrySummary`](crate::model::RegistrySummary).
         pub fn build(self) -> crate::model::RegistrySummary {
             crate::model::RegistrySummary {
                 registry_arn: self.registry_arn,
@@ -776,7 +790,7 @@ pub mod registry_summary {
     }
 }
 impl RegistrySummary {
-    /// Creates a new builder-style object to manufacture [`RegistrySummary`](crate::model::RegistrySummary)
+    /// Creates a new builder-style object to manufacture [`RegistrySummary`](crate::model::RegistrySummary).
     pub fn builder() -> crate::model::registry_summary::Builder {
         crate::model::registry_summary::Builder::default()
     }
@@ -787,16 +801,22 @@ impl RegistrySummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DiscovererSummary {
     /// <p>The ARN of the discoverer.</p>
+    #[doc(hidden)]
     pub discoverer_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the discoverer.</p>
+    #[doc(hidden)]
     pub discoverer_id: std::option::Option<std::string::String>,
     /// <p>The ARN of the event bus.</p>
+    #[doc(hidden)]
     pub source_arn: std::option::Option<std::string::String>,
     /// <p>The state of the discoverer.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::DiscovererState>,
     /// <p>The Status if the discoverer will discover schemas from events sent from another account.</p>
+    #[doc(hidden)]
     pub cross_account: bool,
     /// <p>Tags associated with the resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -841,11 +861,10 @@ impl std::fmt::Debug for DiscovererSummary {
         formatter.finish()
     }
 }
-/// See [`DiscovererSummary`](crate::model::DiscovererSummary)
+/// See [`DiscovererSummary`](crate::model::DiscovererSummary).
 pub mod discoverer_summary {
 
-    /// A builder for [`DiscovererSummary`](crate::model::DiscovererSummary)
-    #[non_exhaustive]
+    /// A builder for [`DiscovererSummary`](crate::model::DiscovererSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) discoverer_arn: std::option::Option<std::string::String>,
@@ -942,7 +961,7 @@ pub mod discoverer_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DiscovererSummary`](crate::model::DiscovererSummary)
+        /// Consumes the builder and constructs a [`DiscovererSummary`](crate::model::DiscovererSummary).
         pub fn build(self) -> crate::model::DiscovererSummary {
             crate::model::DiscovererSummary {
                 discoverer_arn: self.discoverer_arn,
@@ -956,7 +975,7 @@ pub mod discoverer_summary {
     }
 }
 impl DiscovererSummary {
-    /// Creates a new builder-style object to manufacture [`DiscovererSummary`](crate::model::DiscovererSummary)
+    /// Creates a new builder-style object to manufacture [`DiscovererSummary`](crate::model::DiscovererSummary).
     pub fn builder() -> crate::model::discoverer_summary::Builder {
         crate::model::discoverer_summary::Builder::default()
     }

@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p> The key portion of a tag. Tag keys are case sensitive. </p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p> The value portion of tag. Tag values are case sensitive. </p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -68,7 +69,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -191,8 +192,10 @@ impl OutputDataConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Configuration {
     /// <p> The S3Uri is the user specified S3 location of the FHIR data to be imported into Amazon HealthLake. </p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p> The KMS key ID used to access the S3 bucket. </p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
 }
 impl S3Configuration {
@@ -213,11 +216,10 @@ impl std::fmt::Debug for S3Configuration {
         formatter.finish()
     }
 }
-/// See [`S3Configuration`](crate::model::S3Configuration)
+/// See [`S3Configuration`](crate::model::S3Configuration).
 pub mod s3_configuration {
 
-    /// A builder for [`S3Configuration`](crate::model::S3Configuration)
-    #[non_exhaustive]
+    /// A builder for [`S3Configuration`](crate::model::S3Configuration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -244,7 +246,7 @@ pub mod s3_configuration {
             self.kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Configuration`](crate::model::S3Configuration)
+        /// Consumes the builder and constructs a [`S3Configuration`](crate::model::S3Configuration).
         pub fn build(self) -> crate::model::S3Configuration {
             crate::model::S3Configuration {
                 s3_uri: self.s3_uri,
@@ -254,7 +256,7 @@ pub mod s3_configuration {
     }
 }
 impl S3Configuration {
-    /// Creates a new builder-style object to manufacture [`S3Configuration`](crate::model::S3Configuration)
+    /// Creates a new builder-style object to manufacture [`S3Configuration`](crate::model::S3Configuration).
     pub fn builder() -> crate::model::s3_configuration::Builder {
         crate::model::s3_configuration::Builder::default()
     }
@@ -302,24 +304,34 @@ impl InputDataConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportJobProperties {
     /// <p>The AWS-generated id number for the Import job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The user-generated name for an Import job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED, FAILED.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>The time that the Import job was submitted for processing.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the Import job was completed.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The datastore id used when the Import job was created. </p>
+    #[doc(hidden)]
     pub datastore_id: std::option::Option<std::string::String>,
     /// <p>The input data configuration that was supplied when the Import job was created.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
     /// <p>The output data configuration that was supplied when the export job was created.</p>
+    #[doc(hidden)]
     pub job_output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>The Amazon Resource Name (ARN) that gives Amazon HealthLake access to your input data.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>An explanation of any errors that may have occurred during the FHIR import job. </p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ImportJobProperties {
@@ -380,11 +392,10 @@ impl std::fmt::Debug for ImportJobProperties {
         formatter.finish()
     }
 }
-/// See [`ImportJobProperties`](crate::model::ImportJobProperties)
+/// See [`ImportJobProperties`](crate::model::ImportJobProperties).
 pub mod import_job_properties {
 
-    /// A builder for [`ImportJobProperties`](crate::model::ImportJobProperties)
-    #[non_exhaustive]
+    /// A builder for [`ImportJobProperties`](crate::model::ImportJobProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -517,7 +528,7 @@ pub mod import_job_properties {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportJobProperties`](crate::model::ImportJobProperties)
+        /// Consumes the builder and constructs a [`ImportJobProperties`](crate::model::ImportJobProperties).
         pub fn build(self) -> crate::model::ImportJobProperties {
             crate::model::ImportJobProperties {
                 job_id: self.job_id,
@@ -535,7 +546,7 @@ pub mod import_job_properties {
     }
 }
 impl ImportJobProperties {
-    /// Creates a new builder-style object to manufacture [`ImportJobProperties`](crate::model::ImportJobProperties)
+    /// Creates a new builder-style object to manufacture [`ImportJobProperties`](crate::model::ImportJobProperties).
     pub fn builder() -> crate::model::import_job_properties::Builder {
         crate::model::import_job_properties::Builder::default()
     }
@@ -546,22 +557,31 @@ impl ImportJobProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportJobProperties {
     /// <p>The AWS generated ID for an export job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The user generated name for an export job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The status of a FHIR export job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED, or FAILED.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>The time an export job was initiated.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time an export job completed.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The AWS generated ID for the Data Store from which files are being exported for an export job.</p>
+    #[doc(hidden)]
     pub datastore_id: std::option::Option<std::string::String>,
     /// <p>The output data configuration that was supplied when the export job was created.</p>
+    #[doc(hidden)]
     pub output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>The Amazon Resource Name used during the initiation of the job.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>An explanation of any errors that may have occurred during the export job.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ExportJobProperties {
@@ -617,11 +637,10 @@ impl std::fmt::Debug for ExportJobProperties {
         formatter.finish()
     }
 }
-/// See [`ExportJobProperties`](crate::model::ExportJobProperties)
+/// See [`ExportJobProperties`](crate::model::ExportJobProperties).
 pub mod export_job_properties {
 
-    /// A builder for [`ExportJobProperties`](crate::model::ExportJobProperties)
-    #[non_exhaustive]
+    /// A builder for [`ExportJobProperties`](crate::model::ExportJobProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -740,7 +759,7 @@ pub mod export_job_properties {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportJobProperties`](crate::model::ExportJobProperties)
+        /// Consumes the builder and constructs a [`ExportJobProperties`](crate::model::ExportJobProperties).
         pub fn build(self) -> crate::model::ExportJobProperties {
             crate::model::ExportJobProperties {
                 job_id: self.job_id,
@@ -757,7 +776,7 @@ pub mod export_job_properties {
     }
 }
 impl ExportJobProperties {
-    /// Creates a new builder-style object to manufacture [`ExportJobProperties`](crate::model::ExportJobProperties)
+    /// Creates a new builder-style object to manufacture [`ExportJobProperties`](crate::model::ExportJobProperties).
     pub fn builder() -> crate::model::export_job_properties::Builder {
         crate::model::export_job_properties::Builder::default()
     }
@@ -768,22 +787,31 @@ impl ExportJobProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatastoreProperties {
     /// <p>The AWS-generated ID number for the Data Store.</p>
+    #[doc(hidden)]
     pub datastore_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name used in the creation of the Data Store.</p>
+    #[doc(hidden)]
     pub datastore_arn: std::option::Option<std::string::String>,
     /// <p>The user-generated name for the Data Store.</p>
+    #[doc(hidden)]
     pub datastore_name: std::option::Option<std::string::String>,
     /// <p>The status of the Data Store. Possible statuses are 'CREATING', 'ACTIVE', 'DELETING', or 'DELETED'.</p>
+    #[doc(hidden)]
     pub datastore_status: std::option::Option<crate::model::DatastoreStatus>,
     /// <p>The time that a Data Store was created. </p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The FHIR version. Only R4 version data is supported.</p>
+    #[doc(hidden)]
     pub datastore_type_version: std::option::Option<crate::model::FhirVersion>,
     /// <p>The AWS endpoint for the Data Store. Each Data Store will have it's own endpoint with Data Store ID in the endpoint URL.</p>
+    #[doc(hidden)]
     pub datastore_endpoint: std::option::Option<std::string::String>,
     /// <p> The server-side encryption key configuration for a customer provided encryption key (CMK). </p>
+    #[doc(hidden)]
     pub sse_configuration: std::option::Option<crate::model::SseConfiguration>,
     /// <p>The preloaded data configuration for the Data Store. Only data preloaded from Synthea is supported.</p>
+    #[doc(hidden)]
     pub preload_data_config: std::option::Option<crate::model::PreloadDataConfig>,
 }
 impl DatastoreProperties {
@@ -839,11 +867,10 @@ impl std::fmt::Debug for DatastoreProperties {
         formatter.finish()
     }
 }
-/// See [`DatastoreProperties`](crate::model::DatastoreProperties)
+/// See [`DatastoreProperties`](crate::model::DatastoreProperties).
 pub mod datastore_properties {
 
-    /// A builder for [`DatastoreProperties`](crate::model::DatastoreProperties)
-    #[non_exhaustive]
+    /// A builder for [`DatastoreProperties`](crate::model::DatastoreProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) datastore_id: std::option::Option<std::string::String>,
@@ -971,7 +998,7 @@ pub mod datastore_properties {
             self.preload_data_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatastoreProperties`](crate::model::DatastoreProperties)
+        /// Consumes the builder and constructs a [`DatastoreProperties`](crate::model::DatastoreProperties).
         pub fn build(self) -> crate::model::DatastoreProperties {
             crate::model::DatastoreProperties {
                 datastore_id: self.datastore_id,
@@ -988,7 +1015,7 @@ pub mod datastore_properties {
     }
 }
 impl DatastoreProperties {
-    /// Creates a new builder-style object to manufacture [`DatastoreProperties`](crate::model::DatastoreProperties)
+    /// Creates a new builder-style object to manufacture [`DatastoreProperties`](crate::model::DatastoreProperties).
     pub fn builder() -> crate::model::datastore_properties::Builder {
         crate::model::datastore_properties::Builder::default()
     }
@@ -999,6 +1026,7 @@ impl DatastoreProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PreloadDataConfig {
     /// <p>The type of preloaded data. Only Synthea preloaded data is supported.</p>
+    #[doc(hidden)]
     pub preload_data_type: std::option::Option<crate::model::PreloadDataType>,
 }
 impl PreloadDataConfig {
@@ -1014,11 +1042,10 @@ impl std::fmt::Debug for PreloadDataConfig {
         formatter.finish()
     }
 }
-/// See [`PreloadDataConfig`](crate::model::PreloadDataConfig)
+/// See [`PreloadDataConfig`](crate::model::PreloadDataConfig).
 pub mod preload_data_config {
 
-    /// A builder for [`PreloadDataConfig`](crate::model::PreloadDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`PreloadDataConfig`](crate::model::PreloadDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) preload_data_type: std::option::Option<crate::model::PreloadDataType>,
@@ -1037,7 +1064,7 @@ pub mod preload_data_config {
             self.preload_data_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`PreloadDataConfig`](crate::model::PreloadDataConfig)
+        /// Consumes the builder and constructs a [`PreloadDataConfig`](crate::model::PreloadDataConfig).
         pub fn build(self) -> crate::model::PreloadDataConfig {
             crate::model::PreloadDataConfig {
                 preload_data_type: self.preload_data_type,
@@ -1046,7 +1073,7 @@ pub mod preload_data_config {
     }
 }
 impl PreloadDataConfig {
-    /// Creates a new builder-style object to manufacture [`PreloadDataConfig`](crate::model::PreloadDataConfig)
+    /// Creates a new builder-style object to manufacture [`PreloadDataConfig`](crate::model::PreloadDataConfig).
     pub fn builder() -> crate::model::preload_data_config::Builder {
         crate::model::preload_data_config::Builder::default()
     }
@@ -1108,6 +1135,7 @@ impl AsRef<str> for PreloadDataType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SseConfiguration {
     /// <p> The KMS encryption configuration used to provide details for data encryption. </p>
+    #[doc(hidden)]
     pub kms_encryption_config: std::option::Option<crate::model::KmsEncryptionConfig>,
 }
 impl SseConfiguration {
@@ -1123,11 +1151,10 @@ impl std::fmt::Debug for SseConfiguration {
         formatter.finish()
     }
 }
-/// See [`SseConfiguration`](crate::model::SseConfiguration)
+/// See [`SseConfiguration`](crate::model::SseConfiguration).
 pub mod sse_configuration {
 
-    /// A builder for [`SseConfiguration`](crate::model::SseConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SseConfiguration`](crate::model::SseConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) kms_encryption_config: std::option::Option<crate::model::KmsEncryptionConfig>,
@@ -1146,7 +1173,7 @@ pub mod sse_configuration {
             self.kms_encryption_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`SseConfiguration`](crate::model::SseConfiguration)
+        /// Consumes the builder and constructs a [`SseConfiguration`](crate::model::SseConfiguration).
         pub fn build(self) -> crate::model::SseConfiguration {
             crate::model::SseConfiguration {
                 kms_encryption_config: self.kms_encryption_config,
@@ -1155,7 +1182,7 @@ pub mod sse_configuration {
     }
 }
 impl SseConfiguration {
-    /// Creates a new builder-style object to manufacture [`SseConfiguration`](crate::model::SseConfiguration)
+    /// Creates a new builder-style object to manufacture [`SseConfiguration`](crate::model::SseConfiguration).
     pub fn builder() -> crate::model::sse_configuration::Builder {
         crate::model::sse_configuration::Builder::default()
     }
@@ -1166,8 +1193,10 @@ impl SseConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KmsEncryptionConfig {
     /// <p> The type of customer-managed-key(CMK) used for encyrption. The two types of supported CMKs are customer owned CMKs and AWS owned CMKs. </p>
+    #[doc(hidden)]
     pub cmk_type: std::option::Option<crate::model::CmkType>,
     /// <p> The KMS encryption key id/alias used to encrypt the Data Store contents at rest. </p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
 }
 impl KmsEncryptionConfig {
@@ -1188,11 +1217,10 @@ impl std::fmt::Debug for KmsEncryptionConfig {
         formatter.finish()
     }
 }
-/// See [`KmsEncryptionConfig`](crate::model::KmsEncryptionConfig)
+/// See [`KmsEncryptionConfig`](crate::model::KmsEncryptionConfig).
 pub mod kms_encryption_config {
 
-    /// A builder for [`KmsEncryptionConfig`](crate::model::KmsEncryptionConfig)
-    #[non_exhaustive]
+    /// A builder for [`KmsEncryptionConfig`](crate::model::KmsEncryptionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cmk_type: std::option::Option<crate::model::CmkType>,
@@ -1219,7 +1247,7 @@ pub mod kms_encryption_config {
             self.kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`KmsEncryptionConfig`](crate::model::KmsEncryptionConfig)
+        /// Consumes the builder and constructs a [`KmsEncryptionConfig`](crate::model::KmsEncryptionConfig).
         pub fn build(self) -> crate::model::KmsEncryptionConfig {
             crate::model::KmsEncryptionConfig {
                 cmk_type: self.cmk_type,
@@ -1229,7 +1257,7 @@ pub mod kms_encryption_config {
     }
 }
 impl KmsEncryptionConfig {
-    /// Creates a new builder-style object to manufacture [`KmsEncryptionConfig`](crate::model::KmsEncryptionConfig)
+    /// Creates a new builder-style object to manufacture [`KmsEncryptionConfig`](crate::model::KmsEncryptionConfig).
     pub fn builder() -> crate::model::kms_encryption_config::Builder {
         crate::model::kms_encryption_config::Builder::default()
     }
@@ -1409,12 +1437,16 @@ impl AsRef<str> for DatastoreStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatastoreFilter {
     /// <p>Allows the user to filter Data Store results by name.</p>
+    #[doc(hidden)]
     pub datastore_name: std::option::Option<std::string::String>,
     /// <p>Allows the user to filter Data Store results by status.</p>
+    #[doc(hidden)]
     pub datastore_status: std::option::Option<crate::model::DatastoreStatus>,
     /// <p>A filter that allows the user to set cutoff dates for records. All Data Stores created before the specified date will be included in the results. </p>
+    #[doc(hidden)]
     pub created_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A filter that allows the user to set cutoff dates for records. All Data Stores created after the specified date will be included in the results.</p>
+    #[doc(hidden)]
     pub created_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DatastoreFilter {
@@ -1445,11 +1477,10 @@ impl std::fmt::Debug for DatastoreFilter {
         formatter.finish()
     }
 }
-/// See [`DatastoreFilter`](crate::model::DatastoreFilter)
+/// See [`DatastoreFilter`](crate::model::DatastoreFilter).
 pub mod datastore_filter {
 
-    /// A builder for [`DatastoreFilter`](crate::model::DatastoreFilter)
-    #[non_exhaustive]
+    /// A builder for [`DatastoreFilter`](crate::model::DatastoreFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) datastore_name: std::option::Option<std::string::String>,
@@ -1510,7 +1541,7 @@ pub mod datastore_filter {
             self.created_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatastoreFilter`](crate::model::DatastoreFilter)
+        /// Consumes the builder and constructs a [`DatastoreFilter`](crate::model::DatastoreFilter).
         pub fn build(self) -> crate::model::DatastoreFilter {
             crate::model::DatastoreFilter {
                 datastore_name: self.datastore_name,
@@ -1522,7 +1553,7 @@ pub mod datastore_filter {
     }
 }
 impl DatastoreFilter {
-    /// Creates a new builder-style object to manufacture [`DatastoreFilter`](crate::model::DatastoreFilter)
+    /// Creates a new builder-style object to manufacture [`DatastoreFilter`](crate::model::DatastoreFilter).
     pub fn builder() -> crate::model::datastore_filter::Builder {
         crate::model::datastore_filter::Builder::default()
     }

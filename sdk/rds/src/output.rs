@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StopDbInstanceAutomatedBackupsReplicationOutput {
     /// <p>An automated backup of a DB instance. It consists of system backups, transaction logs, and the database instance properties that existed at the time you deleted the source instance.</p>
+    #[doc(hidden)]
     pub db_instance_automated_backup: std::option::Option<crate::model::DbInstanceAutomatedBackup>,
 }
 impl StopDbInstanceAutomatedBackupsReplicationOutput {
@@ -24,11 +25,10 @@ impl std::fmt::Debug for StopDbInstanceAutomatedBackupsReplicationOutput {
         formatter.finish()
     }
 }
-/// See [`StopDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StopDbInstanceAutomatedBackupsReplicationOutput)
+/// See [`StopDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StopDbInstanceAutomatedBackupsReplicationOutput).
 pub mod stop_db_instance_automated_backups_replication_output {
 
-    /// A builder for [`StopDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StopDbInstanceAutomatedBackupsReplicationOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StopDbInstanceAutomatedBackupsReplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance_automated_backup:
@@ -51,7 +51,7 @@ pub mod stop_db_instance_automated_backups_replication_output {
             self.db_instance_automated_backup = input;
             self
         }
-        /// Consumes the builder and constructs a [`StopDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StopDbInstanceAutomatedBackupsReplicationOutput)
+        /// Consumes the builder and constructs a [`StopDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StopDbInstanceAutomatedBackupsReplicationOutput).
         pub fn build(self) -> crate::output::StopDbInstanceAutomatedBackupsReplicationOutput {
             crate::output::StopDbInstanceAutomatedBackupsReplicationOutput {
                 db_instance_automated_backup: self.db_instance_automated_backup,
@@ -60,7 +60,7 @@ pub mod stop_db_instance_automated_backups_replication_output {
     }
 }
 impl StopDbInstanceAutomatedBackupsReplicationOutput {
-    /// Creates a new builder-style object to manufacture [`StopDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StopDbInstanceAutomatedBackupsReplicationOutput)
+    /// Creates a new builder-style object to manufacture [`StopDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StopDbInstanceAutomatedBackupsReplicationOutput).
     pub fn builder() -> crate::output::stop_db_instance_automated_backups_replication_output::Builder
     {
         crate::output::stop_db_instance_automated_backups_replication_output::Builder::default()
@@ -73,6 +73,7 @@ impl StopDbInstanceAutomatedBackupsReplicationOutput {
 pub struct StopDbInstanceOutput {
     /// <p>Contains the details of an Amazon RDS DB instance.</p>
     /// <p>This data type is used as a response element in the operations <code>CreateDBInstance</code>, <code>CreateDBInstanceReadReplica</code>, <code>DeleteDBInstance</code>, <code>DescribeDBInstances</code>, <code>ModifyDBInstance</code>, <code>PromoteReadReplica</code>, <code>RebootDBInstance</code>, <code>RestoreDBInstanceFromDBSnapshot</code>, <code>RestoreDBInstanceFromS3</code>, <code>RestoreDBInstanceToPointInTime</code>, <code>StartDBInstance</code>, and <code>StopDBInstance</code>.</p>
+    #[doc(hidden)]
     pub db_instance: std::option::Option<crate::model::DbInstance>,
 }
 impl StopDbInstanceOutput {
@@ -89,11 +90,10 @@ impl std::fmt::Debug for StopDbInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`StopDbInstanceOutput`](crate::output::StopDbInstanceOutput)
+/// See [`StopDbInstanceOutput`](crate::output::StopDbInstanceOutput).
 pub mod stop_db_instance_output {
 
-    /// A builder for [`StopDbInstanceOutput`](crate::output::StopDbInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopDbInstanceOutput`](crate::output::StopDbInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance: std::option::Option<crate::model::DbInstance>,
@@ -114,7 +114,7 @@ pub mod stop_db_instance_output {
             self.db_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`StopDbInstanceOutput`](crate::output::StopDbInstanceOutput)
+        /// Consumes the builder and constructs a [`StopDbInstanceOutput`](crate::output::StopDbInstanceOutput).
         pub fn build(self) -> crate::output::StopDbInstanceOutput {
             crate::output::StopDbInstanceOutput {
                 db_instance: self.db_instance,
@@ -123,7 +123,7 @@ pub mod stop_db_instance_output {
     }
 }
 impl StopDbInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`StopDbInstanceOutput`](crate::output::StopDbInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`StopDbInstanceOutput`](crate::output::StopDbInstanceOutput).
     pub fn builder() -> crate::output::stop_db_instance_output::Builder {
         crate::output::stop_db_instance_output::Builder::default()
     }
@@ -138,6 +138,7 @@ pub struct StopDbClusterOutput {
     /// <p>For a Multi-AZ DB cluster, this data type is used as a response element in the operations <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>, <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>RebootDBCluster</code>, <code>RestoreDBClusterFromSnapshot</code>, and <code>RestoreDBClusterToPointInTime</code>.</p>
     /// <p>For more information on Amazon Aurora DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide.</i> </p>
     /// <p>For more information on Multi-AZ DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub db_cluster: std::option::Option<crate::model::DbCluster>,
 }
 impl StopDbClusterOutput {
@@ -157,11 +158,10 @@ impl std::fmt::Debug for StopDbClusterOutput {
         formatter.finish()
     }
 }
-/// See [`StopDbClusterOutput`](crate::output::StopDbClusterOutput)
+/// See [`StopDbClusterOutput`](crate::output::StopDbClusterOutput).
 pub mod stop_db_cluster_output {
 
-    /// A builder for [`StopDbClusterOutput`](crate::output::StopDbClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopDbClusterOutput`](crate::output::StopDbClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster: std::option::Option<crate::model::DbCluster>,
@@ -188,7 +188,7 @@ pub mod stop_db_cluster_output {
             self.db_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`StopDbClusterOutput`](crate::output::StopDbClusterOutput)
+        /// Consumes the builder and constructs a [`StopDbClusterOutput`](crate::output::StopDbClusterOutput).
         pub fn build(self) -> crate::output::StopDbClusterOutput {
             crate::output::StopDbClusterOutput {
                 db_cluster: self.db_cluster,
@@ -197,7 +197,7 @@ pub mod stop_db_cluster_output {
     }
 }
 impl StopDbClusterOutput {
-    /// Creates a new builder-style object to manufacture [`StopDbClusterOutput`](crate::output::StopDbClusterOutput)
+    /// Creates a new builder-style object to manufacture [`StopDbClusterOutput`](crate::output::StopDbClusterOutput).
     pub fn builder() -> crate::output::stop_db_cluster_output::Builder {
         crate::output::stop_db_cluster_output::Builder::default()
     }
@@ -209,10 +209,13 @@ impl StopDbClusterOutput {
 pub struct StopActivityStreamOutput {
     /// <p>The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream.</p>
     /// <p>The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon Kinesis data stream used for the database activity stream.</p>
+    #[doc(hidden)]
     pub kinesis_stream_name: std::option::Option<std::string::String>,
     /// <p>The status of the database activity stream.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ActivityStreamStatus>,
 }
 impl StopActivityStreamOutput {
@@ -239,11 +242,10 @@ impl std::fmt::Debug for StopActivityStreamOutput {
         formatter.finish()
     }
 }
-/// See [`StopActivityStreamOutput`](crate::output::StopActivityStreamOutput)
+/// See [`StopActivityStreamOutput`](crate::output::StopActivityStreamOutput).
 pub mod stop_activity_stream_output {
 
-    /// A builder for [`StopActivityStreamOutput`](crate::output::StopActivityStreamOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopActivityStreamOutput`](crate::output::StopActivityStreamOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) kms_key_id: std::option::Option<std::string::String>,
@@ -289,7 +291,7 @@ pub mod stop_activity_stream_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`StopActivityStreamOutput`](crate::output::StopActivityStreamOutput)
+        /// Consumes the builder and constructs a [`StopActivityStreamOutput`](crate::output::StopActivityStreamOutput).
         pub fn build(self) -> crate::output::StopActivityStreamOutput {
             crate::output::StopActivityStreamOutput {
                 kms_key_id: self.kms_key_id,
@@ -300,7 +302,7 @@ pub mod stop_activity_stream_output {
     }
 }
 impl StopActivityStreamOutput {
-    /// Creates a new builder-style object to manufacture [`StopActivityStreamOutput`](crate::output::StopActivityStreamOutput)
+    /// Creates a new builder-style object to manufacture [`StopActivityStreamOutput`](crate::output::StopActivityStreamOutput).
     pub fn builder() -> crate::output::stop_activity_stream_output::Builder {
         crate::output::stop_activity_stream_output::Builder::default()
     }
@@ -312,8 +314,10 @@ impl StopActivityStreamOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartExportTaskOutput {
     /// <p>A unique identifier for the snapshot export task. This ID isn't an identifier for the Amazon S3 bucket where the snapshot is exported to.</p>
+    #[doc(hidden)]
     pub export_task_identifier: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the snapshot exported to Amazon S3.</p>
+    #[doc(hidden)]
     pub source_arn: std::option::Option<std::string::String>,
     /// <p>The data exported from the snapshot. Valid values are the following:</p>
     /// <ul>
@@ -322,30 +326,43 @@ pub struct StartExportTaskOutput {
     /// <li> <p> <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot. This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.</p> </li>
     /// <li> <p> <code>database.schema.table</code> <i>table-name</i> - Export a table of the database schema. This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub export_only: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The time that the snapshot was created.</p>
+    #[doc(hidden)]
     pub snapshot_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the snapshot export task started.</p>
+    #[doc(hidden)]
     pub task_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the snapshot export task completed.</p>
+    #[doc(hidden)]
     pub task_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon S3 bucket that the snapshot is exported to.</p>
+    #[doc(hidden)]
     pub s3_bucket: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 bucket prefix that is the file name and path of the exported snapshot.</p>
+    #[doc(hidden)]
     pub s3_prefix: std::option::Option<std::string::String>,
     /// <p>The name of the IAM role that is used to write to Amazon S3 when exporting a snapshot.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
     /// <p>The key identifier of the Amazon Web Services KMS key that is used to encrypt the snapshot when it's exported to Amazon S3. The KMS key identifier is its key ARN, key ID, alias ARN, or alias name. The IAM role used for the snapshot export must have encryption and decryption permissions to use this KMS key.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The progress status of the export task.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The progress of the snapshot export task as a percentage.</p>
+    #[doc(hidden)]
     pub percent_progress: i32,
     /// <p>The total amount of data exported, in gigabytes.</p>
+    #[doc(hidden)]
     pub total_extracted_data_in_gb: i32,
     /// <p>The reason the export failed, if it failed.</p>
+    #[doc(hidden)]
     pub failure_cause: std::option::Option<std::string::String>,
     /// <p>A warning about the snapshot export task.</p>
+    #[doc(hidden)]
     pub warning_message: std::option::Option<std::string::String>,
 }
 impl StartExportTaskOutput {
@@ -440,11 +457,10 @@ impl std::fmt::Debug for StartExportTaskOutput {
         formatter.finish()
     }
 }
-/// See [`StartExportTaskOutput`](crate::output::StartExportTaskOutput)
+/// See [`StartExportTaskOutput`](crate::output::StartExportTaskOutput).
 pub mod start_export_task_output {
 
-    /// A builder for [`StartExportTaskOutput`](crate::output::StartExportTaskOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartExportTaskOutput`](crate::output::StartExportTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_task_identifier: std::option::Option<std::string::String>,
@@ -653,7 +669,7 @@ pub mod start_export_task_output {
             self.warning_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartExportTaskOutput`](crate::output::StartExportTaskOutput)
+        /// Consumes the builder and constructs a [`StartExportTaskOutput`](crate::output::StartExportTaskOutput).
         pub fn build(self) -> crate::output::StartExportTaskOutput {
             crate::output::StartExportTaskOutput {
                 export_task_identifier: self.export_task_identifier,
@@ -676,7 +692,7 @@ pub mod start_export_task_output {
     }
 }
 impl StartExportTaskOutput {
-    /// Creates a new builder-style object to manufacture [`StartExportTaskOutput`](crate::output::StartExportTaskOutput)
+    /// Creates a new builder-style object to manufacture [`StartExportTaskOutput`](crate::output::StartExportTaskOutput).
     pub fn builder() -> crate::output::start_export_task_output::Builder {
         crate::output::start_export_task_output::Builder::default()
     }
@@ -687,6 +703,7 @@ impl StartExportTaskOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartDbInstanceAutomatedBackupsReplicationOutput {
     /// <p>An automated backup of a DB instance. It consists of system backups, transaction logs, and the database instance properties that existed at the time you deleted the source instance.</p>
+    #[doc(hidden)]
     pub db_instance_automated_backup: std::option::Option<crate::model::DbInstanceAutomatedBackup>,
 }
 impl StartDbInstanceAutomatedBackupsReplicationOutput {
@@ -707,11 +724,10 @@ impl std::fmt::Debug for StartDbInstanceAutomatedBackupsReplicationOutput {
         formatter.finish()
     }
 }
-/// See [`StartDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StartDbInstanceAutomatedBackupsReplicationOutput)
+/// See [`StartDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StartDbInstanceAutomatedBackupsReplicationOutput).
 pub mod start_db_instance_automated_backups_replication_output {
 
-    /// A builder for [`StartDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StartDbInstanceAutomatedBackupsReplicationOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StartDbInstanceAutomatedBackupsReplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance_automated_backup:
@@ -734,7 +750,7 @@ pub mod start_db_instance_automated_backups_replication_output {
             self.db_instance_automated_backup = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StartDbInstanceAutomatedBackupsReplicationOutput)
+        /// Consumes the builder and constructs a [`StartDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StartDbInstanceAutomatedBackupsReplicationOutput).
         pub fn build(self) -> crate::output::StartDbInstanceAutomatedBackupsReplicationOutput {
             crate::output::StartDbInstanceAutomatedBackupsReplicationOutput {
                 db_instance_automated_backup: self.db_instance_automated_backup,
@@ -743,7 +759,7 @@ pub mod start_db_instance_automated_backups_replication_output {
     }
 }
 impl StartDbInstanceAutomatedBackupsReplicationOutput {
-    /// Creates a new builder-style object to manufacture [`StartDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StartDbInstanceAutomatedBackupsReplicationOutput)
+    /// Creates a new builder-style object to manufacture [`StartDbInstanceAutomatedBackupsReplicationOutput`](crate::output::StartDbInstanceAutomatedBackupsReplicationOutput).
     pub fn builder(
     ) -> crate::output::start_db_instance_automated_backups_replication_output::Builder {
         crate::output::start_db_instance_automated_backups_replication_output::Builder::default()
@@ -756,6 +772,7 @@ impl StartDbInstanceAutomatedBackupsReplicationOutput {
 pub struct StartDbInstanceOutput {
     /// <p>Contains the details of an Amazon RDS DB instance.</p>
     /// <p>This data type is used as a response element in the operations <code>CreateDBInstance</code>, <code>CreateDBInstanceReadReplica</code>, <code>DeleteDBInstance</code>, <code>DescribeDBInstances</code>, <code>ModifyDBInstance</code>, <code>PromoteReadReplica</code>, <code>RebootDBInstance</code>, <code>RestoreDBInstanceFromDBSnapshot</code>, <code>RestoreDBInstanceFromS3</code>, <code>RestoreDBInstanceToPointInTime</code>, <code>StartDBInstance</code>, and <code>StopDBInstance</code>.</p>
+    #[doc(hidden)]
     pub db_instance: std::option::Option<crate::model::DbInstance>,
 }
 impl StartDbInstanceOutput {
@@ -772,11 +789,10 @@ impl std::fmt::Debug for StartDbInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`StartDbInstanceOutput`](crate::output::StartDbInstanceOutput)
+/// See [`StartDbInstanceOutput`](crate::output::StartDbInstanceOutput).
 pub mod start_db_instance_output {
 
-    /// A builder for [`StartDbInstanceOutput`](crate::output::StartDbInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartDbInstanceOutput`](crate::output::StartDbInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance: std::option::Option<crate::model::DbInstance>,
@@ -797,7 +813,7 @@ pub mod start_db_instance_output {
             self.db_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartDbInstanceOutput`](crate::output::StartDbInstanceOutput)
+        /// Consumes the builder and constructs a [`StartDbInstanceOutput`](crate::output::StartDbInstanceOutput).
         pub fn build(self) -> crate::output::StartDbInstanceOutput {
             crate::output::StartDbInstanceOutput {
                 db_instance: self.db_instance,
@@ -806,7 +822,7 @@ pub mod start_db_instance_output {
     }
 }
 impl StartDbInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`StartDbInstanceOutput`](crate::output::StartDbInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`StartDbInstanceOutput`](crate::output::StartDbInstanceOutput).
     pub fn builder() -> crate::output::start_db_instance_output::Builder {
         crate::output::start_db_instance_output::Builder::default()
     }
@@ -821,6 +837,7 @@ pub struct StartDbClusterOutput {
     /// <p>For a Multi-AZ DB cluster, this data type is used as a response element in the operations <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>, <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>RebootDBCluster</code>, <code>RestoreDBClusterFromSnapshot</code>, and <code>RestoreDBClusterToPointInTime</code>.</p>
     /// <p>For more information on Amazon Aurora DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide.</i> </p>
     /// <p>For more information on Multi-AZ DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub db_cluster: std::option::Option<crate::model::DbCluster>,
 }
 impl StartDbClusterOutput {
@@ -840,11 +857,10 @@ impl std::fmt::Debug for StartDbClusterOutput {
         formatter.finish()
     }
 }
-/// See [`StartDbClusterOutput`](crate::output::StartDbClusterOutput)
+/// See [`StartDbClusterOutput`](crate::output::StartDbClusterOutput).
 pub mod start_db_cluster_output {
 
-    /// A builder for [`StartDbClusterOutput`](crate::output::StartDbClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartDbClusterOutput`](crate::output::StartDbClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster: std::option::Option<crate::model::DbCluster>,
@@ -871,7 +887,7 @@ pub mod start_db_cluster_output {
             self.db_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartDbClusterOutput`](crate::output::StartDbClusterOutput)
+        /// Consumes the builder and constructs a [`StartDbClusterOutput`](crate::output::StartDbClusterOutput).
         pub fn build(self) -> crate::output::StartDbClusterOutput {
             crate::output::StartDbClusterOutput {
                 db_cluster: self.db_cluster,
@@ -880,7 +896,7 @@ pub mod start_db_cluster_output {
     }
 }
 impl StartDbClusterOutput {
-    /// Creates a new builder-style object to manufacture [`StartDbClusterOutput`](crate::output::StartDbClusterOutput)
+    /// Creates a new builder-style object to manufacture [`StartDbClusterOutput`](crate::output::StartDbClusterOutput).
     pub fn builder() -> crate::output::start_db_cluster_output::Builder {
         crate::output::start_db_cluster_output::Builder::default()
     }
@@ -891,16 +907,22 @@ impl StartDbClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartActivityStreamOutput {
     /// <p>The Amazon Web Services KMS key identifier for encryption of messages in the database activity stream.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon Kinesis data stream to be used for the database activity stream.</p>
+    #[doc(hidden)]
     pub kinesis_stream_name: std::option::Option<std::string::String>,
     /// <p>The status of the database activity stream.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ActivityStreamStatus>,
     /// <p>The mode of the database activity stream.</p>
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::ActivityStreamMode>,
     /// <p>Indicates whether or not the database activity stream will start as soon as possible, regardless of the maintenance window for the database.</p>
+    #[doc(hidden)]
     pub apply_immediately: bool,
     /// <p>Indicates whether engine-native audit fields are included in the database activity stream.</p>
+    #[doc(hidden)]
     pub engine_native_audit_fields_included: std::option::Option<bool>,
 }
 impl StartActivityStreamOutput {
@@ -944,11 +966,10 @@ impl std::fmt::Debug for StartActivityStreamOutput {
         formatter.finish()
     }
 }
-/// See [`StartActivityStreamOutput`](crate::output::StartActivityStreamOutput)
+/// See [`StartActivityStreamOutput`](crate::output::StartActivityStreamOutput).
 pub mod start_activity_stream_output {
 
-    /// A builder for [`StartActivityStreamOutput`](crate::output::StartActivityStreamOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartActivityStreamOutput`](crate::output::StartActivityStreamOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) kms_key_id: std::option::Option<std::string::String>,
@@ -1031,7 +1052,7 @@ pub mod start_activity_stream_output {
             self.engine_native_audit_fields_included = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartActivityStreamOutput`](crate::output::StartActivityStreamOutput)
+        /// Consumes the builder and constructs a [`StartActivityStreamOutput`](crate::output::StartActivityStreamOutput).
         pub fn build(self) -> crate::output::StartActivityStreamOutput {
             crate::output::StartActivityStreamOutput {
                 kms_key_id: self.kms_key_id,
@@ -1045,7 +1066,7 @@ pub mod start_activity_stream_output {
     }
 }
 impl StartActivityStreamOutput {
-    /// Creates a new builder-style object to manufacture [`StartActivityStreamOutput`](crate::output::StartActivityStreamOutput)
+    /// Creates a new builder-style object to manufacture [`StartActivityStreamOutput`](crate::output::StartActivityStreamOutput).
     pub fn builder() -> crate::output::start_activity_stream_output::Builder {
         crate::output::start_activity_stream_output::Builder::default()
     }
@@ -1057,6 +1078,7 @@ impl StartActivityStreamOutput {
 pub struct RevokeDbSecurityGroupIngressOutput {
     /// <p>Contains the details for an Amazon RDS DB security group.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBSecurityGroups</code> action.</p>
+    #[doc(hidden)]
     pub db_security_group: std::option::Option<crate::model::DbSecurityGroup>,
 }
 impl RevokeDbSecurityGroupIngressOutput {
@@ -1073,11 +1095,10 @@ impl std::fmt::Debug for RevokeDbSecurityGroupIngressOutput {
         formatter.finish()
     }
 }
-/// See [`RevokeDbSecurityGroupIngressOutput`](crate::output::RevokeDbSecurityGroupIngressOutput)
+/// See [`RevokeDbSecurityGroupIngressOutput`](crate::output::RevokeDbSecurityGroupIngressOutput).
 pub mod revoke_db_security_group_ingress_output {
 
-    /// A builder for [`RevokeDbSecurityGroupIngressOutput`](crate::output::RevokeDbSecurityGroupIngressOutput)
-    #[non_exhaustive]
+    /// A builder for [`RevokeDbSecurityGroupIngressOutput`](crate::output::RevokeDbSecurityGroupIngressOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_security_group: std::option::Option<crate::model::DbSecurityGroup>,
@@ -1098,7 +1119,7 @@ pub mod revoke_db_security_group_ingress_output {
             self.db_security_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`RevokeDbSecurityGroupIngressOutput`](crate::output::RevokeDbSecurityGroupIngressOutput)
+        /// Consumes the builder and constructs a [`RevokeDbSecurityGroupIngressOutput`](crate::output::RevokeDbSecurityGroupIngressOutput).
         pub fn build(self) -> crate::output::RevokeDbSecurityGroupIngressOutput {
             crate::output::RevokeDbSecurityGroupIngressOutput {
                 db_security_group: self.db_security_group,
@@ -1107,7 +1128,7 @@ pub mod revoke_db_security_group_ingress_output {
     }
 }
 impl RevokeDbSecurityGroupIngressOutput {
-    /// Creates a new builder-style object to manufacture [`RevokeDbSecurityGroupIngressOutput`](crate::output::RevokeDbSecurityGroupIngressOutput)
+    /// Creates a new builder-style object to manufacture [`RevokeDbSecurityGroupIngressOutput`](crate::output::RevokeDbSecurityGroupIngressOutput).
     pub fn builder() -> crate::output::revoke_db_security_group_ingress_output::Builder {
         crate::output::revoke_db_security_group_ingress_output::Builder::default()
     }
@@ -1119,6 +1140,7 @@ impl RevokeDbSecurityGroupIngressOutput {
 pub struct RestoreDbInstanceToPointInTimeOutput {
     /// <p>Contains the details of an Amazon RDS DB instance.</p>
     /// <p>This data type is used as a response element in the operations <code>CreateDBInstance</code>, <code>CreateDBInstanceReadReplica</code>, <code>DeleteDBInstance</code>, <code>DescribeDBInstances</code>, <code>ModifyDBInstance</code>, <code>PromoteReadReplica</code>, <code>RebootDBInstance</code>, <code>RestoreDBInstanceFromDBSnapshot</code>, <code>RestoreDBInstanceFromS3</code>, <code>RestoreDBInstanceToPointInTime</code>, <code>StartDBInstance</code>, and <code>StopDBInstance</code>.</p>
+    #[doc(hidden)]
     pub db_instance: std::option::Option<crate::model::DbInstance>,
 }
 impl RestoreDbInstanceToPointInTimeOutput {
@@ -1135,11 +1157,10 @@ impl std::fmt::Debug for RestoreDbInstanceToPointInTimeOutput {
         formatter.finish()
     }
 }
-/// See [`RestoreDbInstanceToPointInTimeOutput`](crate::output::RestoreDbInstanceToPointInTimeOutput)
+/// See [`RestoreDbInstanceToPointInTimeOutput`](crate::output::RestoreDbInstanceToPointInTimeOutput).
 pub mod restore_db_instance_to_point_in_time_output {
 
-    /// A builder for [`RestoreDbInstanceToPointInTimeOutput`](crate::output::RestoreDbInstanceToPointInTimeOutput)
-    #[non_exhaustive]
+    /// A builder for [`RestoreDbInstanceToPointInTimeOutput`](crate::output::RestoreDbInstanceToPointInTimeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance: std::option::Option<crate::model::DbInstance>,
@@ -1160,7 +1181,7 @@ pub mod restore_db_instance_to_point_in_time_output {
             self.db_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreDbInstanceToPointInTimeOutput`](crate::output::RestoreDbInstanceToPointInTimeOutput)
+        /// Consumes the builder and constructs a [`RestoreDbInstanceToPointInTimeOutput`](crate::output::RestoreDbInstanceToPointInTimeOutput).
         pub fn build(self) -> crate::output::RestoreDbInstanceToPointInTimeOutput {
             crate::output::RestoreDbInstanceToPointInTimeOutput {
                 db_instance: self.db_instance,
@@ -1169,7 +1190,7 @@ pub mod restore_db_instance_to_point_in_time_output {
     }
 }
 impl RestoreDbInstanceToPointInTimeOutput {
-    /// Creates a new builder-style object to manufacture [`RestoreDbInstanceToPointInTimeOutput`](crate::output::RestoreDbInstanceToPointInTimeOutput)
+    /// Creates a new builder-style object to manufacture [`RestoreDbInstanceToPointInTimeOutput`](crate::output::RestoreDbInstanceToPointInTimeOutput).
     pub fn builder() -> crate::output::restore_db_instance_to_point_in_time_output::Builder {
         crate::output::restore_db_instance_to_point_in_time_output::Builder::default()
     }
@@ -1181,6 +1202,7 @@ impl RestoreDbInstanceToPointInTimeOutput {
 pub struct RestoreDbInstanceFromS3Output {
     /// <p>Contains the details of an Amazon RDS DB instance.</p>
     /// <p>This data type is used as a response element in the operations <code>CreateDBInstance</code>, <code>CreateDBInstanceReadReplica</code>, <code>DeleteDBInstance</code>, <code>DescribeDBInstances</code>, <code>ModifyDBInstance</code>, <code>PromoteReadReplica</code>, <code>RebootDBInstance</code>, <code>RestoreDBInstanceFromDBSnapshot</code>, <code>RestoreDBInstanceFromS3</code>, <code>RestoreDBInstanceToPointInTime</code>, <code>StartDBInstance</code>, and <code>StopDBInstance</code>.</p>
+    #[doc(hidden)]
     pub db_instance: std::option::Option<crate::model::DbInstance>,
 }
 impl RestoreDbInstanceFromS3Output {
@@ -1197,11 +1219,10 @@ impl std::fmt::Debug for RestoreDbInstanceFromS3Output {
         formatter.finish()
     }
 }
-/// See [`RestoreDbInstanceFromS3Output`](crate::output::RestoreDbInstanceFromS3Output)
+/// See [`RestoreDbInstanceFromS3Output`](crate::output::RestoreDbInstanceFromS3Output).
 pub mod restore_db_instance_from_s3_output {
 
-    /// A builder for [`RestoreDbInstanceFromS3Output`](crate::output::RestoreDbInstanceFromS3Output)
-    #[non_exhaustive]
+    /// A builder for [`RestoreDbInstanceFromS3Output`](crate::output::RestoreDbInstanceFromS3Output).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance: std::option::Option<crate::model::DbInstance>,
@@ -1222,7 +1243,7 @@ pub mod restore_db_instance_from_s3_output {
             self.db_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreDbInstanceFromS3Output`](crate::output::RestoreDbInstanceFromS3Output)
+        /// Consumes the builder and constructs a [`RestoreDbInstanceFromS3Output`](crate::output::RestoreDbInstanceFromS3Output).
         pub fn build(self) -> crate::output::RestoreDbInstanceFromS3Output {
             crate::output::RestoreDbInstanceFromS3Output {
                 db_instance: self.db_instance,
@@ -1231,7 +1252,7 @@ pub mod restore_db_instance_from_s3_output {
     }
 }
 impl RestoreDbInstanceFromS3Output {
-    /// Creates a new builder-style object to manufacture [`RestoreDbInstanceFromS3Output`](crate::output::RestoreDbInstanceFromS3Output)
+    /// Creates a new builder-style object to manufacture [`RestoreDbInstanceFromS3Output`](crate::output::RestoreDbInstanceFromS3Output).
     pub fn builder() -> crate::output::restore_db_instance_from_s3_output::Builder {
         crate::output::restore_db_instance_from_s3_output::Builder::default()
     }
@@ -1243,6 +1264,7 @@ impl RestoreDbInstanceFromS3Output {
 pub struct RestoreDbInstanceFromDbSnapshotOutput {
     /// <p>Contains the details of an Amazon RDS DB instance.</p>
     /// <p>This data type is used as a response element in the operations <code>CreateDBInstance</code>, <code>CreateDBInstanceReadReplica</code>, <code>DeleteDBInstance</code>, <code>DescribeDBInstances</code>, <code>ModifyDBInstance</code>, <code>PromoteReadReplica</code>, <code>RebootDBInstance</code>, <code>RestoreDBInstanceFromDBSnapshot</code>, <code>RestoreDBInstanceFromS3</code>, <code>RestoreDBInstanceToPointInTime</code>, <code>StartDBInstance</code>, and <code>StopDBInstance</code>.</p>
+    #[doc(hidden)]
     pub db_instance: std::option::Option<crate::model::DbInstance>,
 }
 impl RestoreDbInstanceFromDbSnapshotOutput {
@@ -1259,11 +1281,10 @@ impl std::fmt::Debug for RestoreDbInstanceFromDbSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`RestoreDbInstanceFromDbSnapshotOutput`](crate::output::RestoreDbInstanceFromDbSnapshotOutput)
+/// See [`RestoreDbInstanceFromDbSnapshotOutput`](crate::output::RestoreDbInstanceFromDbSnapshotOutput).
 pub mod restore_db_instance_from_db_snapshot_output {
 
-    /// A builder for [`RestoreDbInstanceFromDbSnapshotOutput`](crate::output::RestoreDbInstanceFromDbSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`RestoreDbInstanceFromDbSnapshotOutput`](crate::output::RestoreDbInstanceFromDbSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance: std::option::Option<crate::model::DbInstance>,
@@ -1284,7 +1305,7 @@ pub mod restore_db_instance_from_db_snapshot_output {
             self.db_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreDbInstanceFromDbSnapshotOutput`](crate::output::RestoreDbInstanceFromDbSnapshotOutput)
+        /// Consumes the builder and constructs a [`RestoreDbInstanceFromDbSnapshotOutput`](crate::output::RestoreDbInstanceFromDbSnapshotOutput).
         pub fn build(self) -> crate::output::RestoreDbInstanceFromDbSnapshotOutput {
             crate::output::RestoreDbInstanceFromDbSnapshotOutput {
                 db_instance: self.db_instance,
@@ -1293,7 +1314,7 @@ pub mod restore_db_instance_from_db_snapshot_output {
     }
 }
 impl RestoreDbInstanceFromDbSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`RestoreDbInstanceFromDbSnapshotOutput`](crate::output::RestoreDbInstanceFromDbSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`RestoreDbInstanceFromDbSnapshotOutput`](crate::output::RestoreDbInstanceFromDbSnapshotOutput).
     pub fn builder() -> crate::output::restore_db_instance_from_db_snapshot_output::Builder {
         crate::output::restore_db_instance_from_db_snapshot_output::Builder::default()
     }
@@ -1308,6 +1329,7 @@ pub struct RestoreDbClusterToPointInTimeOutput {
     /// <p>For a Multi-AZ DB cluster, this data type is used as a response element in the operations <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>, <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>RebootDBCluster</code>, <code>RestoreDBClusterFromSnapshot</code>, and <code>RestoreDBClusterToPointInTime</code>.</p>
     /// <p>For more information on Amazon Aurora DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide.</i> </p>
     /// <p>For more information on Multi-AZ DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub db_cluster: std::option::Option<crate::model::DbCluster>,
 }
 impl RestoreDbClusterToPointInTimeOutput {
@@ -1327,11 +1349,10 @@ impl std::fmt::Debug for RestoreDbClusterToPointInTimeOutput {
         formatter.finish()
     }
 }
-/// See [`RestoreDbClusterToPointInTimeOutput`](crate::output::RestoreDbClusterToPointInTimeOutput)
+/// See [`RestoreDbClusterToPointInTimeOutput`](crate::output::RestoreDbClusterToPointInTimeOutput).
 pub mod restore_db_cluster_to_point_in_time_output {
 
-    /// A builder for [`RestoreDbClusterToPointInTimeOutput`](crate::output::RestoreDbClusterToPointInTimeOutput)
-    #[non_exhaustive]
+    /// A builder for [`RestoreDbClusterToPointInTimeOutput`](crate::output::RestoreDbClusterToPointInTimeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster: std::option::Option<crate::model::DbCluster>,
@@ -1358,7 +1379,7 @@ pub mod restore_db_cluster_to_point_in_time_output {
             self.db_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreDbClusterToPointInTimeOutput`](crate::output::RestoreDbClusterToPointInTimeOutput)
+        /// Consumes the builder and constructs a [`RestoreDbClusterToPointInTimeOutput`](crate::output::RestoreDbClusterToPointInTimeOutput).
         pub fn build(self) -> crate::output::RestoreDbClusterToPointInTimeOutput {
             crate::output::RestoreDbClusterToPointInTimeOutput {
                 db_cluster: self.db_cluster,
@@ -1367,7 +1388,7 @@ pub mod restore_db_cluster_to_point_in_time_output {
     }
 }
 impl RestoreDbClusterToPointInTimeOutput {
-    /// Creates a new builder-style object to manufacture [`RestoreDbClusterToPointInTimeOutput`](crate::output::RestoreDbClusterToPointInTimeOutput)
+    /// Creates a new builder-style object to manufacture [`RestoreDbClusterToPointInTimeOutput`](crate::output::RestoreDbClusterToPointInTimeOutput).
     pub fn builder() -> crate::output::restore_db_cluster_to_point_in_time_output::Builder {
         crate::output::restore_db_cluster_to_point_in_time_output::Builder::default()
     }
@@ -1382,6 +1403,7 @@ pub struct RestoreDbClusterFromSnapshotOutput {
     /// <p>For a Multi-AZ DB cluster, this data type is used as a response element in the operations <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>, <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>RebootDBCluster</code>, <code>RestoreDBClusterFromSnapshot</code>, and <code>RestoreDBClusterToPointInTime</code>.</p>
     /// <p>For more information on Amazon Aurora DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide.</i> </p>
     /// <p>For more information on Multi-AZ DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub db_cluster: std::option::Option<crate::model::DbCluster>,
 }
 impl RestoreDbClusterFromSnapshotOutput {
@@ -1401,11 +1423,10 @@ impl std::fmt::Debug for RestoreDbClusterFromSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`RestoreDbClusterFromSnapshotOutput`](crate::output::RestoreDbClusterFromSnapshotOutput)
+/// See [`RestoreDbClusterFromSnapshotOutput`](crate::output::RestoreDbClusterFromSnapshotOutput).
 pub mod restore_db_cluster_from_snapshot_output {
 
-    /// A builder for [`RestoreDbClusterFromSnapshotOutput`](crate::output::RestoreDbClusterFromSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`RestoreDbClusterFromSnapshotOutput`](crate::output::RestoreDbClusterFromSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster: std::option::Option<crate::model::DbCluster>,
@@ -1432,7 +1453,7 @@ pub mod restore_db_cluster_from_snapshot_output {
             self.db_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreDbClusterFromSnapshotOutput`](crate::output::RestoreDbClusterFromSnapshotOutput)
+        /// Consumes the builder and constructs a [`RestoreDbClusterFromSnapshotOutput`](crate::output::RestoreDbClusterFromSnapshotOutput).
         pub fn build(self) -> crate::output::RestoreDbClusterFromSnapshotOutput {
             crate::output::RestoreDbClusterFromSnapshotOutput {
                 db_cluster: self.db_cluster,
@@ -1441,7 +1462,7 @@ pub mod restore_db_cluster_from_snapshot_output {
     }
 }
 impl RestoreDbClusterFromSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`RestoreDbClusterFromSnapshotOutput`](crate::output::RestoreDbClusterFromSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`RestoreDbClusterFromSnapshotOutput`](crate::output::RestoreDbClusterFromSnapshotOutput).
     pub fn builder() -> crate::output::restore_db_cluster_from_snapshot_output::Builder {
         crate::output::restore_db_cluster_from_snapshot_output::Builder::default()
     }
@@ -1456,6 +1477,7 @@ pub struct RestoreDbClusterFromS3Output {
     /// <p>For a Multi-AZ DB cluster, this data type is used as a response element in the operations <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>, <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>RebootDBCluster</code>, <code>RestoreDBClusterFromSnapshot</code>, and <code>RestoreDBClusterToPointInTime</code>.</p>
     /// <p>For more information on Amazon Aurora DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide.</i> </p>
     /// <p>For more information on Multi-AZ DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub db_cluster: std::option::Option<crate::model::DbCluster>,
 }
 impl RestoreDbClusterFromS3Output {
@@ -1475,11 +1497,10 @@ impl std::fmt::Debug for RestoreDbClusterFromS3Output {
         formatter.finish()
     }
 }
-/// See [`RestoreDbClusterFromS3Output`](crate::output::RestoreDbClusterFromS3Output)
+/// See [`RestoreDbClusterFromS3Output`](crate::output::RestoreDbClusterFromS3Output).
 pub mod restore_db_cluster_from_s3_output {
 
-    /// A builder for [`RestoreDbClusterFromS3Output`](crate::output::RestoreDbClusterFromS3Output)
-    #[non_exhaustive]
+    /// A builder for [`RestoreDbClusterFromS3Output`](crate::output::RestoreDbClusterFromS3Output).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster: std::option::Option<crate::model::DbCluster>,
@@ -1506,7 +1527,7 @@ pub mod restore_db_cluster_from_s3_output {
             self.db_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreDbClusterFromS3Output`](crate::output::RestoreDbClusterFromS3Output)
+        /// Consumes the builder and constructs a [`RestoreDbClusterFromS3Output`](crate::output::RestoreDbClusterFromS3Output).
         pub fn build(self) -> crate::output::RestoreDbClusterFromS3Output {
             crate::output::RestoreDbClusterFromS3Output {
                 db_cluster: self.db_cluster,
@@ -1515,7 +1536,7 @@ pub mod restore_db_cluster_from_s3_output {
     }
 }
 impl RestoreDbClusterFromS3Output {
-    /// Creates a new builder-style object to manufacture [`RestoreDbClusterFromS3Output`](crate::output::RestoreDbClusterFromS3Output)
+    /// Creates a new builder-style object to manufacture [`RestoreDbClusterFromS3Output`](crate::output::RestoreDbClusterFromS3Output).
     pub fn builder() -> crate::output::restore_db_cluster_from_s3_output::Builder {
         crate::output::restore_db_cluster_from_s3_output::Builder::default()
     }
@@ -1526,6 +1547,7 @@ impl RestoreDbClusterFromS3Output {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResetDbParameterGroupOutput {
     /// <p>The name of the DB parameter group.</p>
+    #[doc(hidden)]
     pub db_parameter_group_name: std::option::Option<std::string::String>,
 }
 impl ResetDbParameterGroupOutput {
@@ -1541,11 +1563,10 @@ impl std::fmt::Debug for ResetDbParameterGroupOutput {
         formatter.finish()
     }
 }
-/// See [`ResetDbParameterGroupOutput`](crate::output::ResetDbParameterGroupOutput)
+/// See [`ResetDbParameterGroupOutput`](crate::output::ResetDbParameterGroupOutput).
 pub mod reset_db_parameter_group_output {
 
-    /// A builder for [`ResetDbParameterGroupOutput`](crate::output::ResetDbParameterGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`ResetDbParameterGroupOutput`](crate::output::ResetDbParameterGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_parameter_group_name: std::option::Option<std::string::String>,
@@ -1564,7 +1585,7 @@ pub mod reset_db_parameter_group_output {
             self.db_parameter_group_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResetDbParameterGroupOutput`](crate::output::ResetDbParameterGroupOutput)
+        /// Consumes the builder and constructs a [`ResetDbParameterGroupOutput`](crate::output::ResetDbParameterGroupOutput).
         pub fn build(self) -> crate::output::ResetDbParameterGroupOutput {
             crate::output::ResetDbParameterGroupOutput {
                 db_parameter_group_name: self.db_parameter_group_name,
@@ -1573,7 +1594,7 @@ pub mod reset_db_parameter_group_output {
     }
 }
 impl ResetDbParameterGroupOutput {
-    /// Creates a new builder-style object to manufacture [`ResetDbParameterGroupOutput`](crate::output::ResetDbParameterGroupOutput)
+    /// Creates a new builder-style object to manufacture [`ResetDbParameterGroupOutput`](crate::output::ResetDbParameterGroupOutput).
     pub fn builder() -> crate::output::reset_db_parameter_group_output::Builder {
         crate::output::reset_db_parameter_group_output::Builder::default()
     }
@@ -1592,6 +1613,7 @@ pub struct ResetDbClusterParameterGroupOutput {
     /// </ul> <note>
     /// <p>This value is stored as a lowercase string.</p>
     /// </note>
+    #[doc(hidden)]
     pub db_cluster_parameter_group_name: std::option::Option<std::string::String>,
 }
 impl ResetDbClusterParameterGroupOutput {
@@ -1618,11 +1640,10 @@ impl std::fmt::Debug for ResetDbClusterParameterGroupOutput {
         formatter.finish()
     }
 }
-/// See [`ResetDbClusterParameterGroupOutput`](crate::output::ResetDbClusterParameterGroupOutput)
+/// See [`ResetDbClusterParameterGroupOutput`](crate::output::ResetDbClusterParameterGroupOutput).
 pub mod reset_db_cluster_parameter_group_output {
 
-    /// A builder for [`ResetDbClusterParameterGroupOutput`](crate::output::ResetDbClusterParameterGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`ResetDbClusterParameterGroupOutput`](crate::output::ResetDbClusterParameterGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_parameter_group_name: std::option::Option<std::string::String>,
@@ -1660,7 +1681,7 @@ pub mod reset_db_cluster_parameter_group_output {
             self.db_cluster_parameter_group_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResetDbClusterParameterGroupOutput`](crate::output::ResetDbClusterParameterGroupOutput)
+        /// Consumes the builder and constructs a [`ResetDbClusterParameterGroupOutput`](crate::output::ResetDbClusterParameterGroupOutput).
         pub fn build(self) -> crate::output::ResetDbClusterParameterGroupOutput {
             crate::output::ResetDbClusterParameterGroupOutput {
                 db_cluster_parameter_group_name: self.db_cluster_parameter_group_name,
@@ -1669,7 +1690,7 @@ pub mod reset_db_cluster_parameter_group_output {
     }
 }
 impl ResetDbClusterParameterGroupOutput {
-    /// Creates a new builder-style object to manufacture [`ResetDbClusterParameterGroupOutput`](crate::output::ResetDbClusterParameterGroupOutput)
+    /// Creates a new builder-style object to manufacture [`ResetDbClusterParameterGroupOutput`](crate::output::ResetDbClusterParameterGroupOutput).
     pub fn builder() -> crate::output::reset_db_cluster_parameter_group_output::Builder {
         crate::output::reset_db_cluster_parameter_group_output::Builder::default()
     }
@@ -1685,22 +1706,21 @@ impl std::fmt::Debug for RemoveTagsFromResourceOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
+/// See [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput).
 pub mod remove_tags_from_resource_output {
 
-    /// A builder for [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
+        /// Consumes the builder and constructs a [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput).
         pub fn build(self) -> crate::output::RemoveTagsFromResourceOutput {
             crate::output::RemoveTagsFromResourceOutput {}
         }
     }
 }
 impl RemoveTagsFromResourceOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput).
     pub fn builder() -> crate::output::remove_tags_from_resource_output::Builder {
         crate::output::remove_tags_from_resource_output::Builder::default()
     }
@@ -1711,6 +1731,7 @@ impl RemoveTagsFromResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoveSourceIdentifierFromSubscriptionOutput {
     /// <p>Contains the results of a successful invocation of the <code>DescribeEventSubscriptions</code> action.</p>
+    #[doc(hidden)]
     pub event_subscription: std::option::Option<crate::model::EventSubscription>,
 }
 impl RemoveSourceIdentifierFromSubscriptionOutput {
@@ -1726,11 +1747,10 @@ impl std::fmt::Debug for RemoveSourceIdentifierFromSubscriptionOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveSourceIdentifierFromSubscriptionOutput`](crate::output::RemoveSourceIdentifierFromSubscriptionOutput)
+/// See [`RemoveSourceIdentifierFromSubscriptionOutput`](crate::output::RemoveSourceIdentifierFromSubscriptionOutput).
 pub mod remove_source_identifier_from_subscription_output {
 
-    /// A builder for [`RemoveSourceIdentifierFromSubscriptionOutput`](crate::output::RemoveSourceIdentifierFromSubscriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveSourceIdentifierFromSubscriptionOutput`](crate::output::RemoveSourceIdentifierFromSubscriptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_subscription: std::option::Option<crate::model::EventSubscription>,
@@ -1749,7 +1769,7 @@ pub mod remove_source_identifier_from_subscription_output {
             self.event_subscription = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoveSourceIdentifierFromSubscriptionOutput`](crate::output::RemoveSourceIdentifierFromSubscriptionOutput)
+        /// Consumes the builder and constructs a [`RemoveSourceIdentifierFromSubscriptionOutput`](crate::output::RemoveSourceIdentifierFromSubscriptionOutput).
         pub fn build(self) -> crate::output::RemoveSourceIdentifierFromSubscriptionOutput {
             crate::output::RemoveSourceIdentifierFromSubscriptionOutput {
                 event_subscription: self.event_subscription,
@@ -1758,7 +1778,7 @@ pub mod remove_source_identifier_from_subscription_output {
     }
 }
 impl RemoveSourceIdentifierFromSubscriptionOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveSourceIdentifierFromSubscriptionOutput`](crate::output::RemoveSourceIdentifierFromSubscriptionOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveSourceIdentifierFromSubscriptionOutput`](crate::output::RemoveSourceIdentifierFromSubscriptionOutput).
     pub fn builder() -> crate::output::remove_source_identifier_from_subscription_output::Builder {
         crate::output::remove_source_identifier_from_subscription_output::Builder::default()
     }
@@ -1774,22 +1794,21 @@ impl std::fmt::Debug for RemoveRoleFromDbInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveRoleFromDbInstanceOutput`](crate::output::RemoveRoleFromDbInstanceOutput)
+/// See [`RemoveRoleFromDbInstanceOutput`](crate::output::RemoveRoleFromDbInstanceOutput).
 pub mod remove_role_from_db_instance_output {
 
-    /// A builder for [`RemoveRoleFromDbInstanceOutput`](crate::output::RemoveRoleFromDbInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveRoleFromDbInstanceOutput`](crate::output::RemoveRoleFromDbInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RemoveRoleFromDbInstanceOutput`](crate::output::RemoveRoleFromDbInstanceOutput)
+        /// Consumes the builder and constructs a [`RemoveRoleFromDbInstanceOutput`](crate::output::RemoveRoleFromDbInstanceOutput).
         pub fn build(self) -> crate::output::RemoveRoleFromDbInstanceOutput {
             crate::output::RemoveRoleFromDbInstanceOutput {}
         }
     }
 }
 impl RemoveRoleFromDbInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveRoleFromDbInstanceOutput`](crate::output::RemoveRoleFromDbInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveRoleFromDbInstanceOutput`](crate::output::RemoveRoleFromDbInstanceOutput).
     pub fn builder() -> crate::output::remove_role_from_db_instance_output::Builder {
         crate::output::remove_role_from_db_instance_output::Builder::default()
     }
@@ -1805,22 +1824,21 @@ impl std::fmt::Debug for RemoveRoleFromDbClusterOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveRoleFromDbClusterOutput`](crate::output::RemoveRoleFromDbClusterOutput)
+/// See [`RemoveRoleFromDbClusterOutput`](crate::output::RemoveRoleFromDbClusterOutput).
 pub mod remove_role_from_db_cluster_output {
 
-    /// A builder for [`RemoveRoleFromDbClusterOutput`](crate::output::RemoveRoleFromDbClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveRoleFromDbClusterOutput`](crate::output::RemoveRoleFromDbClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RemoveRoleFromDbClusterOutput`](crate::output::RemoveRoleFromDbClusterOutput)
+        /// Consumes the builder and constructs a [`RemoveRoleFromDbClusterOutput`](crate::output::RemoveRoleFromDbClusterOutput).
         pub fn build(self) -> crate::output::RemoveRoleFromDbClusterOutput {
             crate::output::RemoveRoleFromDbClusterOutput {}
         }
     }
 }
 impl RemoveRoleFromDbClusterOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveRoleFromDbClusterOutput`](crate::output::RemoveRoleFromDbClusterOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveRoleFromDbClusterOutput`](crate::output::RemoveRoleFromDbClusterOutput).
     pub fn builder() -> crate::output::remove_role_from_db_cluster_output::Builder {
         crate::output::remove_role_from_db_cluster_output::Builder::default()
     }
@@ -1831,6 +1849,7 @@ impl RemoveRoleFromDbClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoveFromGlobalClusterOutput {
     /// <p>A data type representing an Aurora global database.</p>
+    #[doc(hidden)]
     pub global_cluster: std::option::Option<crate::model::GlobalCluster>,
 }
 impl RemoveFromGlobalClusterOutput {
@@ -1846,11 +1865,10 @@ impl std::fmt::Debug for RemoveFromGlobalClusterOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveFromGlobalClusterOutput`](crate::output::RemoveFromGlobalClusterOutput)
+/// See [`RemoveFromGlobalClusterOutput`](crate::output::RemoveFromGlobalClusterOutput).
 pub mod remove_from_global_cluster_output {
 
-    /// A builder for [`RemoveFromGlobalClusterOutput`](crate::output::RemoveFromGlobalClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveFromGlobalClusterOutput`](crate::output::RemoveFromGlobalClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_cluster: std::option::Option<crate::model::GlobalCluster>,
@@ -1869,7 +1887,7 @@ pub mod remove_from_global_cluster_output {
             self.global_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoveFromGlobalClusterOutput`](crate::output::RemoveFromGlobalClusterOutput)
+        /// Consumes the builder and constructs a [`RemoveFromGlobalClusterOutput`](crate::output::RemoveFromGlobalClusterOutput).
         pub fn build(self) -> crate::output::RemoveFromGlobalClusterOutput {
             crate::output::RemoveFromGlobalClusterOutput {
                 global_cluster: self.global_cluster,
@@ -1878,7 +1896,7 @@ pub mod remove_from_global_cluster_output {
     }
 }
 impl RemoveFromGlobalClusterOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveFromGlobalClusterOutput`](crate::output::RemoveFromGlobalClusterOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveFromGlobalClusterOutput`](crate::output::RemoveFromGlobalClusterOutput).
     pub fn builder() -> crate::output::remove_from_global_cluster_output::Builder {
         crate::output::remove_from_global_cluster_output::Builder::default()
     }
@@ -1889,6 +1907,7 @@ impl RemoveFromGlobalClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegisterDbProxyTargetsOutput {
     /// <p>One or more <code>DBProxyTarget</code> objects that are created when you register targets with a target group.</p>
+    #[doc(hidden)]
     pub db_proxy_targets: std::option::Option<std::vec::Vec<crate::model::DbProxyTarget>>,
 }
 impl RegisterDbProxyTargetsOutput {
@@ -1904,11 +1923,10 @@ impl std::fmt::Debug for RegisterDbProxyTargetsOutput {
         formatter.finish()
     }
 }
-/// See [`RegisterDbProxyTargetsOutput`](crate::output::RegisterDbProxyTargetsOutput)
+/// See [`RegisterDbProxyTargetsOutput`](crate::output::RegisterDbProxyTargetsOutput).
 pub mod register_db_proxy_targets_output {
 
-    /// A builder for [`RegisterDbProxyTargetsOutput`](crate::output::RegisterDbProxyTargetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`RegisterDbProxyTargetsOutput`](crate::output::RegisterDbProxyTargetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_proxy_targets:
@@ -1934,7 +1952,7 @@ pub mod register_db_proxy_targets_output {
             self.db_proxy_targets = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegisterDbProxyTargetsOutput`](crate::output::RegisterDbProxyTargetsOutput)
+        /// Consumes the builder and constructs a [`RegisterDbProxyTargetsOutput`](crate::output::RegisterDbProxyTargetsOutput).
         pub fn build(self) -> crate::output::RegisterDbProxyTargetsOutput {
             crate::output::RegisterDbProxyTargetsOutput {
                 db_proxy_targets: self.db_proxy_targets,
@@ -1943,7 +1961,7 @@ pub mod register_db_proxy_targets_output {
     }
 }
 impl RegisterDbProxyTargetsOutput {
-    /// Creates a new builder-style object to manufacture [`RegisterDbProxyTargetsOutput`](crate::output::RegisterDbProxyTargetsOutput)
+    /// Creates a new builder-style object to manufacture [`RegisterDbProxyTargetsOutput`](crate::output::RegisterDbProxyTargetsOutput).
     pub fn builder() -> crate::output::register_db_proxy_targets_output::Builder {
         crate::output::register_db_proxy_targets_output::Builder::default()
     }
@@ -1955,6 +1973,7 @@ impl RegisterDbProxyTargetsOutput {
 pub struct RebootDbInstanceOutput {
     /// <p>Contains the details of an Amazon RDS DB instance.</p>
     /// <p>This data type is used as a response element in the operations <code>CreateDBInstance</code>, <code>CreateDBInstanceReadReplica</code>, <code>DeleteDBInstance</code>, <code>DescribeDBInstances</code>, <code>ModifyDBInstance</code>, <code>PromoteReadReplica</code>, <code>RebootDBInstance</code>, <code>RestoreDBInstanceFromDBSnapshot</code>, <code>RestoreDBInstanceFromS3</code>, <code>RestoreDBInstanceToPointInTime</code>, <code>StartDBInstance</code>, and <code>StopDBInstance</code>.</p>
+    #[doc(hidden)]
     pub db_instance: std::option::Option<crate::model::DbInstance>,
 }
 impl RebootDbInstanceOutput {
@@ -1971,11 +1990,10 @@ impl std::fmt::Debug for RebootDbInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`RebootDbInstanceOutput`](crate::output::RebootDbInstanceOutput)
+/// See [`RebootDbInstanceOutput`](crate::output::RebootDbInstanceOutput).
 pub mod reboot_db_instance_output {
 
-    /// A builder for [`RebootDbInstanceOutput`](crate::output::RebootDbInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`RebootDbInstanceOutput`](crate::output::RebootDbInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance: std::option::Option<crate::model::DbInstance>,
@@ -1996,7 +2014,7 @@ pub mod reboot_db_instance_output {
             self.db_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`RebootDbInstanceOutput`](crate::output::RebootDbInstanceOutput)
+        /// Consumes the builder and constructs a [`RebootDbInstanceOutput`](crate::output::RebootDbInstanceOutput).
         pub fn build(self) -> crate::output::RebootDbInstanceOutput {
             crate::output::RebootDbInstanceOutput {
                 db_instance: self.db_instance,
@@ -2005,7 +2023,7 @@ pub mod reboot_db_instance_output {
     }
 }
 impl RebootDbInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`RebootDbInstanceOutput`](crate::output::RebootDbInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`RebootDbInstanceOutput`](crate::output::RebootDbInstanceOutput).
     pub fn builder() -> crate::output::reboot_db_instance_output::Builder {
         crate::output::reboot_db_instance_output::Builder::default()
     }
@@ -2020,6 +2038,7 @@ pub struct RebootDbClusterOutput {
     /// <p>For a Multi-AZ DB cluster, this data type is used as a response element in the operations <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>, <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>RebootDBCluster</code>, <code>RestoreDBClusterFromSnapshot</code>, and <code>RestoreDBClusterToPointInTime</code>.</p>
     /// <p>For more information on Amazon Aurora DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide.</i> </p>
     /// <p>For more information on Multi-AZ DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub db_cluster: std::option::Option<crate::model::DbCluster>,
 }
 impl RebootDbClusterOutput {
@@ -2039,11 +2058,10 @@ impl std::fmt::Debug for RebootDbClusterOutput {
         formatter.finish()
     }
 }
-/// See [`RebootDbClusterOutput`](crate::output::RebootDbClusterOutput)
+/// See [`RebootDbClusterOutput`](crate::output::RebootDbClusterOutput).
 pub mod reboot_db_cluster_output {
 
-    /// A builder for [`RebootDbClusterOutput`](crate::output::RebootDbClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`RebootDbClusterOutput`](crate::output::RebootDbClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster: std::option::Option<crate::model::DbCluster>,
@@ -2070,7 +2088,7 @@ pub mod reboot_db_cluster_output {
             self.db_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`RebootDbClusterOutput`](crate::output::RebootDbClusterOutput)
+        /// Consumes the builder and constructs a [`RebootDbClusterOutput`](crate::output::RebootDbClusterOutput).
         pub fn build(self) -> crate::output::RebootDbClusterOutput {
             crate::output::RebootDbClusterOutput {
                 db_cluster: self.db_cluster,
@@ -2079,7 +2097,7 @@ pub mod reboot_db_cluster_output {
     }
 }
 impl RebootDbClusterOutput {
-    /// Creates a new builder-style object to manufacture [`RebootDbClusterOutput`](crate::output::RebootDbClusterOutput)
+    /// Creates a new builder-style object to manufacture [`RebootDbClusterOutput`](crate::output::RebootDbClusterOutput).
     pub fn builder() -> crate::output::reboot_db_cluster_output::Builder {
         crate::output::reboot_db_cluster_output::Builder::default()
     }
@@ -2090,6 +2108,7 @@ impl RebootDbClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PurchaseReservedDbInstancesOfferingOutput {
     /// <p>This data type is used as a response element in the <code>DescribeReservedDBInstances</code> and <code>PurchaseReservedDBInstancesOffering</code> actions.</p>
+    #[doc(hidden)]
     pub reserved_db_instance: std::option::Option<crate::model::ReservedDbInstance>,
 }
 impl PurchaseReservedDbInstancesOfferingOutput {
@@ -2105,11 +2124,10 @@ impl std::fmt::Debug for PurchaseReservedDbInstancesOfferingOutput {
         formatter.finish()
     }
 }
-/// See [`PurchaseReservedDbInstancesOfferingOutput`](crate::output::PurchaseReservedDbInstancesOfferingOutput)
+/// See [`PurchaseReservedDbInstancesOfferingOutput`](crate::output::PurchaseReservedDbInstancesOfferingOutput).
 pub mod purchase_reserved_db_instances_offering_output {
 
-    /// A builder for [`PurchaseReservedDbInstancesOfferingOutput`](crate::output::PurchaseReservedDbInstancesOfferingOutput)
-    #[non_exhaustive]
+    /// A builder for [`PurchaseReservedDbInstancesOfferingOutput`](crate::output::PurchaseReservedDbInstancesOfferingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reserved_db_instance: std::option::Option<crate::model::ReservedDbInstance>,
@@ -2128,7 +2146,7 @@ pub mod purchase_reserved_db_instances_offering_output {
             self.reserved_db_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`PurchaseReservedDbInstancesOfferingOutput`](crate::output::PurchaseReservedDbInstancesOfferingOutput)
+        /// Consumes the builder and constructs a [`PurchaseReservedDbInstancesOfferingOutput`](crate::output::PurchaseReservedDbInstancesOfferingOutput).
         pub fn build(self) -> crate::output::PurchaseReservedDbInstancesOfferingOutput {
             crate::output::PurchaseReservedDbInstancesOfferingOutput {
                 reserved_db_instance: self.reserved_db_instance,
@@ -2137,7 +2155,7 @@ pub mod purchase_reserved_db_instances_offering_output {
     }
 }
 impl PurchaseReservedDbInstancesOfferingOutput {
-    /// Creates a new builder-style object to manufacture [`PurchaseReservedDbInstancesOfferingOutput`](crate::output::PurchaseReservedDbInstancesOfferingOutput)
+    /// Creates a new builder-style object to manufacture [`PurchaseReservedDbInstancesOfferingOutput`](crate::output::PurchaseReservedDbInstancesOfferingOutput).
     pub fn builder() -> crate::output::purchase_reserved_db_instances_offering_output::Builder {
         crate::output::purchase_reserved_db_instances_offering_output::Builder::default()
     }
@@ -2152,6 +2170,7 @@ pub struct PromoteReadReplicaDbClusterOutput {
     /// <p>For a Multi-AZ DB cluster, this data type is used as a response element in the operations <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>, <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>RebootDBCluster</code>, <code>RestoreDBClusterFromSnapshot</code>, and <code>RestoreDBClusterToPointInTime</code>.</p>
     /// <p>For more information on Amazon Aurora DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide.</i> </p>
     /// <p>For more information on Multi-AZ DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub db_cluster: std::option::Option<crate::model::DbCluster>,
 }
 impl PromoteReadReplicaDbClusterOutput {
@@ -2171,11 +2190,10 @@ impl std::fmt::Debug for PromoteReadReplicaDbClusterOutput {
         formatter.finish()
     }
 }
-/// See [`PromoteReadReplicaDbClusterOutput`](crate::output::PromoteReadReplicaDbClusterOutput)
+/// See [`PromoteReadReplicaDbClusterOutput`](crate::output::PromoteReadReplicaDbClusterOutput).
 pub mod promote_read_replica_db_cluster_output {
 
-    /// A builder for [`PromoteReadReplicaDbClusterOutput`](crate::output::PromoteReadReplicaDbClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`PromoteReadReplicaDbClusterOutput`](crate::output::PromoteReadReplicaDbClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster: std::option::Option<crate::model::DbCluster>,
@@ -2202,7 +2220,7 @@ pub mod promote_read_replica_db_cluster_output {
             self.db_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`PromoteReadReplicaDbClusterOutput`](crate::output::PromoteReadReplicaDbClusterOutput)
+        /// Consumes the builder and constructs a [`PromoteReadReplicaDbClusterOutput`](crate::output::PromoteReadReplicaDbClusterOutput).
         pub fn build(self) -> crate::output::PromoteReadReplicaDbClusterOutput {
             crate::output::PromoteReadReplicaDbClusterOutput {
                 db_cluster: self.db_cluster,
@@ -2211,7 +2229,7 @@ pub mod promote_read_replica_db_cluster_output {
     }
 }
 impl PromoteReadReplicaDbClusterOutput {
-    /// Creates a new builder-style object to manufacture [`PromoteReadReplicaDbClusterOutput`](crate::output::PromoteReadReplicaDbClusterOutput)
+    /// Creates a new builder-style object to manufacture [`PromoteReadReplicaDbClusterOutput`](crate::output::PromoteReadReplicaDbClusterOutput).
     pub fn builder() -> crate::output::promote_read_replica_db_cluster_output::Builder {
         crate::output::promote_read_replica_db_cluster_output::Builder::default()
     }
@@ -2223,6 +2241,7 @@ impl PromoteReadReplicaDbClusterOutput {
 pub struct PromoteReadReplicaOutput {
     /// <p>Contains the details of an Amazon RDS DB instance.</p>
     /// <p>This data type is used as a response element in the operations <code>CreateDBInstance</code>, <code>CreateDBInstanceReadReplica</code>, <code>DeleteDBInstance</code>, <code>DescribeDBInstances</code>, <code>ModifyDBInstance</code>, <code>PromoteReadReplica</code>, <code>RebootDBInstance</code>, <code>RestoreDBInstanceFromDBSnapshot</code>, <code>RestoreDBInstanceFromS3</code>, <code>RestoreDBInstanceToPointInTime</code>, <code>StartDBInstance</code>, and <code>StopDBInstance</code>.</p>
+    #[doc(hidden)]
     pub db_instance: std::option::Option<crate::model::DbInstance>,
 }
 impl PromoteReadReplicaOutput {
@@ -2239,11 +2258,10 @@ impl std::fmt::Debug for PromoteReadReplicaOutput {
         formatter.finish()
     }
 }
-/// See [`PromoteReadReplicaOutput`](crate::output::PromoteReadReplicaOutput)
+/// See [`PromoteReadReplicaOutput`](crate::output::PromoteReadReplicaOutput).
 pub mod promote_read_replica_output {
 
-    /// A builder for [`PromoteReadReplicaOutput`](crate::output::PromoteReadReplicaOutput)
-    #[non_exhaustive]
+    /// A builder for [`PromoteReadReplicaOutput`](crate::output::PromoteReadReplicaOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance: std::option::Option<crate::model::DbInstance>,
@@ -2264,7 +2282,7 @@ pub mod promote_read_replica_output {
             self.db_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`PromoteReadReplicaOutput`](crate::output::PromoteReadReplicaOutput)
+        /// Consumes the builder and constructs a [`PromoteReadReplicaOutput`](crate::output::PromoteReadReplicaOutput).
         pub fn build(self) -> crate::output::PromoteReadReplicaOutput {
             crate::output::PromoteReadReplicaOutput {
                 db_instance: self.db_instance,
@@ -2273,7 +2291,7 @@ pub mod promote_read_replica_output {
     }
 }
 impl PromoteReadReplicaOutput {
-    /// Creates a new builder-style object to manufacture [`PromoteReadReplicaOutput`](crate::output::PromoteReadReplicaOutput)
+    /// Creates a new builder-style object to manufacture [`PromoteReadReplicaOutput`](crate::output::PromoteReadReplicaOutput).
     pub fn builder() -> crate::output::promote_read_replica_output::Builder {
         crate::output::promote_read_replica_output::Builder::default()
     }
@@ -2284,6 +2302,7 @@ impl PromoteReadReplicaOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyOptionGroupOutput {
     /// <p></p>
+    #[doc(hidden)]
     pub option_group: std::option::Option<crate::model::OptionGroup>,
 }
 impl ModifyOptionGroupOutput {
@@ -2299,11 +2318,10 @@ impl std::fmt::Debug for ModifyOptionGroupOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyOptionGroupOutput`](crate::output::ModifyOptionGroupOutput)
+/// See [`ModifyOptionGroupOutput`](crate::output::ModifyOptionGroupOutput).
 pub mod modify_option_group_output {
 
-    /// A builder for [`ModifyOptionGroupOutput`](crate::output::ModifyOptionGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyOptionGroupOutput`](crate::output::ModifyOptionGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) option_group: std::option::Option<crate::model::OptionGroup>,
@@ -2322,7 +2340,7 @@ pub mod modify_option_group_output {
             self.option_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyOptionGroupOutput`](crate::output::ModifyOptionGroupOutput)
+        /// Consumes the builder and constructs a [`ModifyOptionGroupOutput`](crate::output::ModifyOptionGroupOutput).
         pub fn build(self) -> crate::output::ModifyOptionGroupOutput {
             crate::output::ModifyOptionGroupOutput {
                 option_group: self.option_group,
@@ -2331,7 +2349,7 @@ pub mod modify_option_group_output {
     }
 }
 impl ModifyOptionGroupOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyOptionGroupOutput`](crate::output::ModifyOptionGroupOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyOptionGroupOutput`](crate::output::ModifyOptionGroupOutput).
     pub fn builder() -> crate::output::modify_option_group_output::Builder {
         crate::output::modify_option_group_output::Builder::default()
     }
@@ -2342,6 +2360,7 @@ impl ModifyOptionGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyGlobalClusterOutput {
     /// <p>A data type representing an Aurora global database.</p>
+    #[doc(hidden)]
     pub global_cluster: std::option::Option<crate::model::GlobalCluster>,
 }
 impl ModifyGlobalClusterOutput {
@@ -2357,11 +2376,10 @@ impl std::fmt::Debug for ModifyGlobalClusterOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyGlobalClusterOutput`](crate::output::ModifyGlobalClusterOutput)
+/// See [`ModifyGlobalClusterOutput`](crate::output::ModifyGlobalClusterOutput).
 pub mod modify_global_cluster_output {
 
-    /// A builder for [`ModifyGlobalClusterOutput`](crate::output::ModifyGlobalClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyGlobalClusterOutput`](crate::output::ModifyGlobalClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_cluster: std::option::Option<crate::model::GlobalCluster>,
@@ -2380,7 +2398,7 @@ pub mod modify_global_cluster_output {
             self.global_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyGlobalClusterOutput`](crate::output::ModifyGlobalClusterOutput)
+        /// Consumes the builder and constructs a [`ModifyGlobalClusterOutput`](crate::output::ModifyGlobalClusterOutput).
         pub fn build(self) -> crate::output::ModifyGlobalClusterOutput {
             crate::output::ModifyGlobalClusterOutput {
                 global_cluster: self.global_cluster,
@@ -2389,7 +2407,7 @@ pub mod modify_global_cluster_output {
     }
 }
 impl ModifyGlobalClusterOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyGlobalClusterOutput`](crate::output::ModifyGlobalClusterOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyGlobalClusterOutput`](crate::output::ModifyGlobalClusterOutput).
     pub fn builder() -> crate::output::modify_global_cluster_output::Builder {
         crate::output::modify_global_cluster_output::Builder::default()
     }
@@ -2400,6 +2418,7 @@ impl ModifyGlobalClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyEventSubscriptionOutput {
     /// <p>Contains the results of a successful invocation of the <code>DescribeEventSubscriptions</code> action.</p>
+    #[doc(hidden)]
     pub event_subscription: std::option::Option<crate::model::EventSubscription>,
 }
 impl ModifyEventSubscriptionOutput {
@@ -2415,11 +2434,10 @@ impl std::fmt::Debug for ModifyEventSubscriptionOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput)
+/// See [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput).
 pub mod modify_event_subscription_output {
 
-    /// A builder for [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_subscription: std::option::Option<crate::model::EventSubscription>,
@@ -2438,7 +2456,7 @@ pub mod modify_event_subscription_output {
             self.event_subscription = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput)
+        /// Consumes the builder and constructs a [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput).
         pub fn build(self) -> crate::output::ModifyEventSubscriptionOutput {
             crate::output::ModifyEventSubscriptionOutput {
                 event_subscription: self.event_subscription,
@@ -2447,7 +2465,7 @@ pub mod modify_event_subscription_output {
     }
 }
 impl ModifyEventSubscriptionOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput).
     pub fn builder() -> crate::output::modify_event_subscription_output::Builder {
         crate::output::modify_event_subscription_output::Builder::default()
     }
@@ -2459,6 +2477,7 @@ impl ModifyEventSubscriptionOutput {
 pub struct ModifyDbSubnetGroupOutput {
     /// <p>Contains the details of an Amazon RDS DB subnet group.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBSubnetGroups</code> action.</p>
+    #[doc(hidden)]
     pub db_subnet_group: std::option::Option<crate::model::DbSubnetGroup>,
 }
 impl ModifyDbSubnetGroupOutput {
@@ -2475,11 +2494,10 @@ impl std::fmt::Debug for ModifyDbSubnetGroupOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyDbSubnetGroupOutput`](crate::output::ModifyDbSubnetGroupOutput)
+/// See [`ModifyDbSubnetGroupOutput`](crate::output::ModifyDbSubnetGroupOutput).
 pub mod modify_db_subnet_group_output {
 
-    /// A builder for [`ModifyDbSubnetGroupOutput`](crate::output::ModifyDbSubnetGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyDbSubnetGroupOutput`](crate::output::ModifyDbSubnetGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_subnet_group: std::option::Option<crate::model::DbSubnetGroup>,
@@ -2500,7 +2518,7 @@ pub mod modify_db_subnet_group_output {
             self.db_subnet_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyDbSubnetGroupOutput`](crate::output::ModifyDbSubnetGroupOutput)
+        /// Consumes the builder and constructs a [`ModifyDbSubnetGroupOutput`](crate::output::ModifyDbSubnetGroupOutput).
         pub fn build(self) -> crate::output::ModifyDbSubnetGroupOutput {
             crate::output::ModifyDbSubnetGroupOutput {
                 db_subnet_group: self.db_subnet_group,
@@ -2509,7 +2527,7 @@ pub mod modify_db_subnet_group_output {
     }
 }
 impl ModifyDbSubnetGroupOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyDbSubnetGroupOutput`](crate::output::ModifyDbSubnetGroupOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyDbSubnetGroupOutput`](crate::output::ModifyDbSubnetGroupOutput).
     pub fn builder() -> crate::output::modify_db_subnet_group_output::Builder {
         crate::output::modify_db_subnet_group_output::Builder::default()
     }
@@ -2521,6 +2539,7 @@ impl ModifyDbSubnetGroupOutput {
 pub struct ModifyDbSnapshotAttributeOutput {
     /// <p>Contains the results of a successful call to the <code>DescribeDBSnapshotAttributes</code> API action.</p>
     /// <p>Manual DB snapshot attributes are used to authorize other Amazon Web Services accounts to copy or restore a manual DB snapshot. For more information, see the <code>ModifyDBSnapshotAttribute</code> API action.</p>
+    #[doc(hidden)]
     pub db_snapshot_attributes_result:
         std::option::Option<crate::model::DbSnapshotAttributesResult>,
 }
@@ -2543,11 +2562,10 @@ impl std::fmt::Debug for ModifyDbSnapshotAttributeOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyDbSnapshotAttributeOutput`](crate::output::ModifyDbSnapshotAttributeOutput)
+/// See [`ModifyDbSnapshotAttributeOutput`](crate::output::ModifyDbSnapshotAttributeOutput).
 pub mod modify_db_snapshot_attribute_output {
 
-    /// A builder for [`ModifyDbSnapshotAttributeOutput`](crate::output::ModifyDbSnapshotAttributeOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyDbSnapshotAttributeOutput`](crate::output::ModifyDbSnapshotAttributeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_snapshot_attributes_result:
@@ -2572,7 +2590,7 @@ pub mod modify_db_snapshot_attribute_output {
             self.db_snapshot_attributes_result = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyDbSnapshotAttributeOutput`](crate::output::ModifyDbSnapshotAttributeOutput)
+        /// Consumes the builder and constructs a [`ModifyDbSnapshotAttributeOutput`](crate::output::ModifyDbSnapshotAttributeOutput).
         pub fn build(self) -> crate::output::ModifyDbSnapshotAttributeOutput {
             crate::output::ModifyDbSnapshotAttributeOutput {
                 db_snapshot_attributes_result: self.db_snapshot_attributes_result,
@@ -2581,7 +2599,7 @@ pub mod modify_db_snapshot_attribute_output {
     }
 }
 impl ModifyDbSnapshotAttributeOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyDbSnapshotAttributeOutput`](crate::output::ModifyDbSnapshotAttributeOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyDbSnapshotAttributeOutput`](crate::output::ModifyDbSnapshotAttributeOutput).
     pub fn builder() -> crate::output::modify_db_snapshot_attribute_output::Builder {
         crate::output::modify_db_snapshot_attribute_output::Builder::default()
     }
@@ -2593,6 +2611,7 @@ impl ModifyDbSnapshotAttributeOutput {
 pub struct ModifyDbSnapshotOutput {
     /// <p>Contains the details of an Amazon RDS DB snapshot.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBSnapshots</code> action.</p>
+    #[doc(hidden)]
     pub db_snapshot: std::option::Option<crate::model::DbSnapshot>,
 }
 impl ModifyDbSnapshotOutput {
@@ -2609,11 +2628,10 @@ impl std::fmt::Debug for ModifyDbSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyDbSnapshotOutput`](crate::output::ModifyDbSnapshotOutput)
+/// See [`ModifyDbSnapshotOutput`](crate::output::ModifyDbSnapshotOutput).
 pub mod modify_db_snapshot_output {
 
-    /// A builder for [`ModifyDbSnapshotOutput`](crate::output::ModifyDbSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyDbSnapshotOutput`](crate::output::ModifyDbSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_snapshot: std::option::Option<crate::model::DbSnapshot>,
@@ -2634,7 +2652,7 @@ pub mod modify_db_snapshot_output {
             self.db_snapshot = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyDbSnapshotOutput`](crate::output::ModifyDbSnapshotOutput)
+        /// Consumes the builder and constructs a [`ModifyDbSnapshotOutput`](crate::output::ModifyDbSnapshotOutput).
         pub fn build(self) -> crate::output::ModifyDbSnapshotOutput {
             crate::output::ModifyDbSnapshotOutput {
                 db_snapshot: self.db_snapshot,
@@ -2643,7 +2661,7 @@ pub mod modify_db_snapshot_output {
     }
 }
 impl ModifyDbSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyDbSnapshotOutput`](crate::output::ModifyDbSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyDbSnapshotOutput`](crate::output::ModifyDbSnapshotOutput).
     pub fn builder() -> crate::output::modify_db_snapshot_output::Builder {
         crate::output::modify_db_snapshot_output::Builder::default()
     }
@@ -2654,6 +2672,7 @@ impl ModifyDbSnapshotOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyDbProxyTargetGroupOutput {
     /// <p>The settings of the modified <code>DBProxyTarget</code>.</p>
+    #[doc(hidden)]
     pub db_proxy_target_group: std::option::Option<crate::model::DbProxyTargetGroup>,
 }
 impl ModifyDbProxyTargetGroupOutput {
@@ -2669,11 +2688,10 @@ impl std::fmt::Debug for ModifyDbProxyTargetGroupOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyDbProxyTargetGroupOutput`](crate::output::ModifyDbProxyTargetGroupOutput)
+/// See [`ModifyDbProxyTargetGroupOutput`](crate::output::ModifyDbProxyTargetGroupOutput).
 pub mod modify_db_proxy_target_group_output {
 
-    /// A builder for [`ModifyDbProxyTargetGroupOutput`](crate::output::ModifyDbProxyTargetGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyDbProxyTargetGroupOutput`](crate::output::ModifyDbProxyTargetGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_proxy_target_group: std::option::Option<crate::model::DbProxyTargetGroup>,
@@ -2692,7 +2710,7 @@ pub mod modify_db_proxy_target_group_output {
             self.db_proxy_target_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyDbProxyTargetGroupOutput`](crate::output::ModifyDbProxyTargetGroupOutput)
+        /// Consumes the builder and constructs a [`ModifyDbProxyTargetGroupOutput`](crate::output::ModifyDbProxyTargetGroupOutput).
         pub fn build(self) -> crate::output::ModifyDbProxyTargetGroupOutput {
             crate::output::ModifyDbProxyTargetGroupOutput {
                 db_proxy_target_group: self.db_proxy_target_group,
@@ -2701,7 +2719,7 @@ pub mod modify_db_proxy_target_group_output {
     }
 }
 impl ModifyDbProxyTargetGroupOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyDbProxyTargetGroupOutput`](crate::output::ModifyDbProxyTargetGroupOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyDbProxyTargetGroupOutput`](crate::output::ModifyDbProxyTargetGroupOutput).
     pub fn builder() -> crate::output::modify_db_proxy_target_group_output::Builder {
         crate::output::modify_db_proxy_target_group_output::Builder::default()
     }
@@ -2712,6 +2730,7 @@ impl ModifyDbProxyTargetGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyDbProxyEndpointOutput {
     /// <p>The <code>DBProxyEndpoint</code> object representing the new settings for the DB proxy endpoint.</p>
+    #[doc(hidden)]
     pub db_proxy_endpoint: std::option::Option<crate::model::DbProxyEndpoint>,
 }
 impl ModifyDbProxyEndpointOutput {
@@ -2727,11 +2746,10 @@ impl std::fmt::Debug for ModifyDbProxyEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyDbProxyEndpointOutput`](crate::output::ModifyDbProxyEndpointOutput)
+/// See [`ModifyDbProxyEndpointOutput`](crate::output::ModifyDbProxyEndpointOutput).
 pub mod modify_db_proxy_endpoint_output {
 
-    /// A builder for [`ModifyDbProxyEndpointOutput`](crate::output::ModifyDbProxyEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyDbProxyEndpointOutput`](crate::output::ModifyDbProxyEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_proxy_endpoint: std::option::Option<crate::model::DbProxyEndpoint>,
@@ -2750,7 +2768,7 @@ pub mod modify_db_proxy_endpoint_output {
             self.db_proxy_endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyDbProxyEndpointOutput`](crate::output::ModifyDbProxyEndpointOutput)
+        /// Consumes the builder and constructs a [`ModifyDbProxyEndpointOutput`](crate::output::ModifyDbProxyEndpointOutput).
         pub fn build(self) -> crate::output::ModifyDbProxyEndpointOutput {
             crate::output::ModifyDbProxyEndpointOutput {
                 db_proxy_endpoint: self.db_proxy_endpoint,
@@ -2759,7 +2777,7 @@ pub mod modify_db_proxy_endpoint_output {
     }
 }
 impl ModifyDbProxyEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyDbProxyEndpointOutput`](crate::output::ModifyDbProxyEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyDbProxyEndpointOutput`](crate::output::ModifyDbProxyEndpointOutput).
     pub fn builder() -> crate::output::modify_db_proxy_endpoint_output::Builder {
         crate::output::modify_db_proxy_endpoint_output::Builder::default()
     }
@@ -2770,6 +2788,7 @@ impl ModifyDbProxyEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyDbProxyOutput {
     /// <p>The <code>DBProxy</code> object representing the new settings for the proxy.</p>
+    #[doc(hidden)]
     pub db_proxy: std::option::Option<crate::model::DbProxy>,
 }
 impl ModifyDbProxyOutput {
@@ -2785,11 +2804,10 @@ impl std::fmt::Debug for ModifyDbProxyOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyDbProxyOutput`](crate::output::ModifyDbProxyOutput)
+/// See [`ModifyDbProxyOutput`](crate::output::ModifyDbProxyOutput).
 pub mod modify_db_proxy_output {
 
-    /// A builder for [`ModifyDbProxyOutput`](crate::output::ModifyDbProxyOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyDbProxyOutput`](crate::output::ModifyDbProxyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_proxy: std::option::Option<crate::model::DbProxy>,
@@ -2805,7 +2823,7 @@ pub mod modify_db_proxy_output {
             self.db_proxy = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyDbProxyOutput`](crate::output::ModifyDbProxyOutput)
+        /// Consumes the builder and constructs a [`ModifyDbProxyOutput`](crate::output::ModifyDbProxyOutput).
         pub fn build(self) -> crate::output::ModifyDbProxyOutput {
             crate::output::ModifyDbProxyOutput {
                 db_proxy: self.db_proxy,
@@ -2814,7 +2832,7 @@ pub mod modify_db_proxy_output {
     }
 }
 impl ModifyDbProxyOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyDbProxyOutput`](crate::output::ModifyDbProxyOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyDbProxyOutput`](crate::output::ModifyDbProxyOutput).
     pub fn builder() -> crate::output::modify_db_proxy_output::Builder {
         crate::output::modify_db_proxy_output::Builder::default()
     }
@@ -2825,6 +2843,7 @@ impl ModifyDbProxyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyDbParameterGroupOutput {
     /// <p>The name of the DB parameter group.</p>
+    #[doc(hidden)]
     pub db_parameter_group_name: std::option::Option<std::string::String>,
 }
 impl ModifyDbParameterGroupOutput {
@@ -2840,11 +2859,10 @@ impl std::fmt::Debug for ModifyDbParameterGroupOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyDbParameterGroupOutput`](crate::output::ModifyDbParameterGroupOutput)
+/// See [`ModifyDbParameterGroupOutput`](crate::output::ModifyDbParameterGroupOutput).
 pub mod modify_db_parameter_group_output {
 
-    /// A builder for [`ModifyDbParameterGroupOutput`](crate::output::ModifyDbParameterGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyDbParameterGroupOutput`](crate::output::ModifyDbParameterGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_parameter_group_name: std::option::Option<std::string::String>,
@@ -2863,7 +2881,7 @@ pub mod modify_db_parameter_group_output {
             self.db_parameter_group_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyDbParameterGroupOutput`](crate::output::ModifyDbParameterGroupOutput)
+        /// Consumes the builder and constructs a [`ModifyDbParameterGroupOutput`](crate::output::ModifyDbParameterGroupOutput).
         pub fn build(self) -> crate::output::ModifyDbParameterGroupOutput {
             crate::output::ModifyDbParameterGroupOutput {
                 db_parameter_group_name: self.db_parameter_group_name,
@@ -2872,7 +2890,7 @@ pub mod modify_db_parameter_group_output {
     }
 }
 impl ModifyDbParameterGroupOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyDbParameterGroupOutput`](crate::output::ModifyDbParameterGroupOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyDbParameterGroupOutput`](crate::output::ModifyDbParameterGroupOutput).
     pub fn builder() -> crate::output::modify_db_parameter_group_output::Builder {
         crate::output::modify_db_parameter_group_output::Builder::default()
     }
@@ -2884,6 +2902,7 @@ impl ModifyDbParameterGroupOutput {
 pub struct ModifyDbInstanceOutput {
     /// <p>Contains the details of an Amazon RDS DB instance.</p>
     /// <p>This data type is used as a response element in the operations <code>CreateDBInstance</code>, <code>CreateDBInstanceReadReplica</code>, <code>DeleteDBInstance</code>, <code>DescribeDBInstances</code>, <code>ModifyDBInstance</code>, <code>PromoteReadReplica</code>, <code>RebootDBInstance</code>, <code>RestoreDBInstanceFromDBSnapshot</code>, <code>RestoreDBInstanceFromS3</code>, <code>RestoreDBInstanceToPointInTime</code>, <code>StartDBInstance</code>, and <code>StopDBInstance</code>.</p>
+    #[doc(hidden)]
     pub db_instance: std::option::Option<crate::model::DbInstance>,
 }
 impl ModifyDbInstanceOutput {
@@ -2900,11 +2919,10 @@ impl std::fmt::Debug for ModifyDbInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyDbInstanceOutput`](crate::output::ModifyDbInstanceOutput)
+/// See [`ModifyDbInstanceOutput`](crate::output::ModifyDbInstanceOutput).
 pub mod modify_db_instance_output {
 
-    /// A builder for [`ModifyDbInstanceOutput`](crate::output::ModifyDbInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyDbInstanceOutput`](crate::output::ModifyDbInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance: std::option::Option<crate::model::DbInstance>,
@@ -2925,7 +2943,7 @@ pub mod modify_db_instance_output {
             self.db_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyDbInstanceOutput`](crate::output::ModifyDbInstanceOutput)
+        /// Consumes the builder and constructs a [`ModifyDbInstanceOutput`](crate::output::ModifyDbInstanceOutput).
         pub fn build(self) -> crate::output::ModifyDbInstanceOutput {
             crate::output::ModifyDbInstanceOutput {
                 db_instance: self.db_instance,
@@ -2934,7 +2952,7 @@ pub mod modify_db_instance_output {
     }
 }
 impl ModifyDbInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyDbInstanceOutput`](crate::output::ModifyDbInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyDbInstanceOutput`](crate::output::ModifyDbInstanceOutput).
     pub fn builder() -> crate::output::modify_db_instance_output::Builder {
         crate::output::modify_db_instance_output::Builder::default()
     }
@@ -2946,6 +2964,7 @@ impl ModifyDbInstanceOutput {
 pub struct ModifyDbClusterSnapshotAttributeOutput {
     /// <p>Contains the results of a successful call to the <code>DescribeDBClusterSnapshotAttributes</code> API action.</p>
     /// <p>Manual DB cluster snapshot attributes are used to authorize other Amazon Web Services accounts to copy or restore a manual DB cluster snapshot. For more information, see the <code>ModifyDBClusterSnapshotAttribute</code> API action.</p>
+    #[doc(hidden)]
     pub db_cluster_snapshot_attributes_result:
         std::option::Option<crate::model::DbClusterSnapshotAttributesResult>,
 }
@@ -2968,11 +2987,10 @@ impl std::fmt::Debug for ModifyDbClusterSnapshotAttributeOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyDbClusterSnapshotAttributeOutput`](crate::output::ModifyDbClusterSnapshotAttributeOutput)
+/// See [`ModifyDbClusterSnapshotAttributeOutput`](crate::output::ModifyDbClusterSnapshotAttributeOutput).
 pub mod modify_db_cluster_snapshot_attribute_output {
 
-    /// A builder for [`ModifyDbClusterSnapshotAttributeOutput`](crate::output::ModifyDbClusterSnapshotAttributeOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyDbClusterSnapshotAttributeOutput`](crate::output::ModifyDbClusterSnapshotAttributeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_snapshot_attributes_result:
@@ -2997,7 +3015,7 @@ pub mod modify_db_cluster_snapshot_attribute_output {
             self.db_cluster_snapshot_attributes_result = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyDbClusterSnapshotAttributeOutput`](crate::output::ModifyDbClusterSnapshotAttributeOutput)
+        /// Consumes the builder and constructs a [`ModifyDbClusterSnapshotAttributeOutput`](crate::output::ModifyDbClusterSnapshotAttributeOutput).
         pub fn build(self) -> crate::output::ModifyDbClusterSnapshotAttributeOutput {
             crate::output::ModifyDbClusterSnapshotAttributeOutput {
                 db_cluster_snapshot_attributes_result: self.db_cluster_snapshot_attributes_result,
@@ -3006,7 +3024,7 @@ pub mod modify_db_cluster_snapshot_attribute_output {
     }
 }
 impl ModifyDbClusterSnapshotAttributeOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyDbClusterSnapshotAttributeOutput`](crate::output::ModifyDbClusterSnapshotAttributeOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyDbClusterSnapshotAttributeOutput`](crate::output::ModifyDbClusterSnapshotAttributeOutput).
     pub fn builder() -> crate::output::modify_db_cluster_snapshot_attribute_output::Builder {
         crate::output::modify_db_cluster_snapshot_attribute_output::Builder::default()
     }
@@ -3025,6 +3043,7 @@ pub struct ModifyDbClusterParameterGroupOutput {
     /// </ul> <note>
     /// <p>This value is stored as a lowercase string.</p>
     /// </note>
+    #[doc(hidden)]
     pub db_cluster_parameter_group_name: std::option::Option<std::string::String>,
 }
 impl ModifyDbClusterParameterGroupOutput {
@@ -3051,11 +3070,10 @@ impl std::fmt::Debug for ModifyDbClusterParameterGroupOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyDbClusterParameterGroupOutput`](crate::output::ModifyDbClusterParameterGroupOutput)
+/// See [`ModifyDbClusterParameterGroupOutput`](crate::output::ModifyDbClusterParameterGroupOutput).
 pub mod modify_db_cluster_parameter_group_output {
 
-    /// A builder for [`ModifyDbClusterParameterGroupOutput`](crate::output::ModifyDbClusterParameterGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyDbClusterParameterGroupOutput`](crate::output::ModifyDbClusterParameterGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_parameter_group_name: std::option::Option<std::string::String>,
@@ -3093,7 +3111,7 @@ pub mod modify_db_cluster_parameter_group_output {
             self.db_cluster_parameter_group_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyDbClusterParameterGroupOutput`](crate::output::ModifyDbClusterParameterGroupOutput)
+        /// Consumes the builder and constructs a [`ModifyDbClusterParameterGroupOutput`](crate::output::ModifyDbClusterParameterGroupOutput).
         pub fn build(self) -> crate::output::ModifyDbClusterParameterGroupOutput {
             crate::output::ModifyDbClusterParameterGroupOutput {
                 db_cluster_parameter_group_name: self.db_cluster_parameter_group_name,
@@ -3102,7 +3120,7 @@ pub mod modify_db_cluster_parameter_group_output {
     }
 }
 impl ModifyDbClusterParameterGroupOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyDbClusterParameterGroupOutput`](crate::output::ModifyDbClusterParameterGroupOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyDbClusterParameterGroupOutput`](crate::output::ModifyDbClusterParameterGroupOutput).
     pub fn builder() -> crate::output::modify_db_cluster_parameter_group_output::Builder {
         crate::output::modify_db_cluster_parameter_group_output::Builder::default()
     }
@@ -3120,24 +3138,34 @@ impl ModifyDbClusterParameterGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyDbClusterEndpointOutput {
     /// <p>The identifier associated with the endpoint. This parameter is stored as a lowercase string.</p>
+    #[doc(hidden)]
     pub db_cluster_endpoint_identifier: std::option::Option<std::string::String>,
     /// <p>The DB cluster identifier of the DB cluster associated with the endpoint. This parameter is stored as a lowercase string.</p>
+    #[doc(hidden)]
     pub db_cluster_identifier: std::option::Option<std::string::String>,
     /// <p>A unique system-generated identifier for an endpoint. It remains the same for the whole life of the endpoint.</p>
+    #[doc(hidden)]
     pub db_cluster_endpoint_resource_identifier: std::option::Option<std::string::String>,
     /// <p>The DNS address of the endpoint.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The current status of the endpoint. One of: <code>creating</code>, <code>available</code>, <code>deleting</code>, <code>inactive</code>, <code>modifying</code>. The <code>inactive</code> state applies to an endpoint that can't be used for a certain kind of cluster, such as a <code>writer</code> endpoint for a read-only secondary cluster in a global database.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The type of the endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>CUSTOM</code>.</p>
+    #[doc(hidden)]
     pub endpoint_type: std::option::Option<std::string::String>,
     /// <p>The type associated with a custom endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.</p>
+    #[doc(hidden)]
     pub custom_endpoint_type: std::option::Option<std::string::String>,
     /// <p>List of DB instance identifiers that are part of the custom endpoint group.</p>
+    #[doc(hidden)]
     pub static_members: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.</p>
+    #[doc(hidden)]
     pub excluded_members: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) for the endpoint.</p>
+    #[doc(hidden)]
     pub db_cluster_endpoint_arn: std::option::Option<std::string::String>,
 }
 impl ModifyDbClusterEndpointOutput {
@@ -3204,11 +3232,10 @@ impl std::fmt::Debug for ModifyDbClusterEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyDbClusterEndpointOutput`](crate::output::ModifyDbClusterEndpointOutput)
+/// See [`ModifyDbClusterEndpointOutput`](crate::output::ModifyDbClusterEndpointOutput).
 pub mod modify_db_cluster_endpoint_output {
 
-    /// A builder for [`ModifyDbClusterEndpointOutput`](crate::output::ModifyDbClusterEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyDbClusterEndpointOutput`](crate::output::ModifyDbClusterEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_endpoint_identifier: std::option::Option<std::string::String>,
@@ -3366,7 +3393,7 @@ pub mod modify_db_cluster_endpoint_output {
             self.db_cluster_endpoint_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyDbClusterEndpointOutput`](crate::output::ModifyDbClusterEndpointOutput)
+        /// Consumes the builder and constructs a [`ModifyDbClusterEndpointOutput`](crate::output::ModifyDbClusterEndpointOutput).
         pub fn build(self) -> crate::output::ModifyDbClusterEndpointOutput {
             crate::output::ModifyDbClusterEndpointOutput {
                 db_cluster_endpoint_identifier: self.db_cluster_endpoint_identifier,
@@ -3385,7 +3412,7 @@ pub mod modify_db_cluster_endpoint_output {
     }
 }
 impl ModifyDbClusterEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyDbClusterEndpointOutput`](crate::output::ModifyDbClusterEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyDbClusterEndpointOutput`](crate::output::ModifyDbClusterEndpointOutput).
     pub fn builder() -> crate::output::modify_db_cluster_endpoint_output::Builder {
         crate::output::modify_db_cluster_endpoint_output::Builder::default()
     }
@@ -3400,6 +3427,7 @@ pub struct ModifyDbClusterOutput {
     /// <p>For a Multi-AZ DB cluster, this data type is used as a response element in the operations <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>, <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>RebootDBCluster</code>, <code>RestoreDBClusterFromSnapshot</code>, and <code>RestoreDBClusterToPointInTime</code>.</p>
     /// <p>For more information on Amazon Aurora DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide.</i> </p>
     /// <p>For more information on Multi-AZ DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub db_cluster: std::option::Option<crate::model::DbCluster>,
 }
 impl ModifyDbClusterOutput {
@@ -3419,11 +3447,10 @@ impl std::fmt::Debug for ModifyDbClusterOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyDbClusterOutput`](crate::output::ModifyDbClusterOutput)
+/// See [`ModifyDbClusterOutput`](crate::output::ModifyDbClusterOutput).
 pub mod modify_db_cluster_output {
 
-    /// A builder for [`ModifyDbClusterOutput`](crate::output::ModifyDbClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyDbClusterOutput`](crate::output::ModifyDbClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster: std::option::Option<crate::model::DbCluster>,
@@ -3450,7 +3477,7 @@ pub mod modify_db_cluster_output {
             self.db_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyDbClusterOutput`](crate::output::ModifyDbClusterOutput)
+        /// Consumes the builder and constructs a [`ModifyDbClusterOutput`](crate::output::ModifyDbClusterOutput).
         pub fn build(self) -> crate::output::ModifyDbClusterOutput {
             crate::output::ModifyDbClusterOutput {
                 db_cluster: self.db_cluster,
@@ -3459,7 +3486,7 @@ pub mod modify_db_cluster_output {
     }
 }
 impl ModifyDbClusterOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyDbClusterOutput`](crate::output::ModifyDbClusterOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyDbClusterOutput`](crate::output::ModifyDbClusterOutput).
     pub fn builder() -> crate::output::modify_db_cluster_output::Builder {
         crate::output::modify_db_cluster_output::Builder::default()
     }
@@ -3470,33 +3497,47 @@ impl ModifyDbClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyCustomDbEngineVersionOutput {
     /// <p>The name of the database engine.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The version number of the database engine.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The name of the DB parameter group family for the database engine.</p>
+    #[doc(hidden)]
     pub db_parameter_group_family: std::option::Option<std::string::String>,
     /// <p>The description of the database engine.</p>
+    #[doc(hidden)]
     pub db_engine_description: std::option::Option<std::string::String>,
     /// <p>The description of the database engine version.</p>
+    #[doc(hidden)]
     pub db_engine_version_description: std::option::Option<std::string::String>,
     /// <p>The default character set for new instances of this engine version, if the <code>CharacterSetName</code> parameter of the CreateDBInstance API isn't specified.</p>
+    #[doc(hidden)]
     pub default_character_set: std::option::Option<crate::model::CharacterSet>,
     /// <p>A list of the character sets supported by this engine for the <code>CharacterSetName</code> parameter of the <code>CreateDBInstance</code> operation.</p>
+    #[doc(hidden)]
     pub supported_character_sets: std::option::Option<std::vec::Vec<crate::model::CharacterSet>>,
     /// <p>A list of the character sets supported by the Oracle DB engine for the <code>NcharCharacterSetName</code> parameter of the <code>CreateDBInstance</code> operation.</p>
+    #[doc(hidden)]
     pub supported_nchar_character_sets:
         std::option::Option<std::vec::Vec<crate::model::CharacterSet>>,
     /// <p>A list of engine versions that this database engine version can be upgraded to.</p>
+    #[doc(hidden)]
     pub valid_upgrade_target: std::option::Option<std::vec::Vec<crate::model::UpgradeTarget>>,
     /// <p>A list of the time zones supported by this engine for the <code>Timezone</code> parameter of the <code>CreateDBInstance</code> action.</p>
+    #[doc(hidden)]
     pub supported_timezones: std::option::Option<std::vec::Vec<crate::model::Timezone>>,
     /// <p>The types of logs that the database engine has available for export to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub exportable_log_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A value that indicates whether the engine version supports exporting the log types specified by ExportableLogTypes to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub supports_log_exports_to_cloudwatch_logs: bool,
     /// <p>Indicates whether the database engine version supports read replicas.</p>
+    #[doc(hidden)]
     pub supports_read_replica: bool,
     /// <p>A list of the supported DB engine modes.</p>
+    #[doc(hidden)]
     pub supported_engine_modes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of features supported by the DB engine.</p>
     /// <p>The supported features vary by DB engine and DB engine version.</p>
@@ -3509,28 +3550,40 @@ pub struct ModifyCustomDbEngineVersionOutput {
     /// <p>For example, to determine the supported features for RDS for PostgreSQL version 13.3 using the CLI, use the following command:</p>
     /// <p> <code>aws rds describe-db-engine-versions --engine postgres --engine-version 13.3</code> </p>
     /// <p>The supported features are listed under <code>SupportedFeatureNames</code> in the output.</p>
+    #[doc(hidden)]
     pub supported_feature_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The status of the DB engine version, either <code>available</code> or <code>deprecated</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>A value that indicates whether you can use Aurora parallel query with a specific DB engine version.</p>
+    #[doc(hidden)]
     pub supports_parallel_query: bool,
     /// <p>A value that indicates whether you can use Aurora global databases with a specific DB engine version.</p>
+    #[doc(hidden)]
     pub supports_global_databases: bool,
     /// <p>The major engine version of the CEV.</p>
+    #[doc(hidden)]
     pub major_engine_version: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon S3 bucket that contains your database installation files.</p>
+    #[doc(hidden)]
     pub database_installation_files_s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 directory that contains the database installation files. If not specified, then no prefix is assumed.</p>
+    #[doc(hidden)]
     pub database_installation_files_s3_prefix: std::option::Option<std::string::String>,
     /// <p>The ARN of the custom engine version.</p>
+    #[doc(hidden)]
     pub db_engine_version_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services KMS key identifier for an encrypted CEV. This parameter is required for RDS Custom, but optional for Amazon RDS.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The creation time of the DB engine version.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of tags. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A value that indicates whether the engine version supports Babelfish for Aurora PostgreSQL.</p>
+    #[doc(hidden)]
     pub supports_babelfish: bool,
 }
 impl ModifyCustomDbEngineVersionOutput {
@@ -3698,11 +3751,10 @@ impl std::fmt::Debug for ModifyCustomDbEngineVersionOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyCustomDbEngineVersionOutput`](crate::output::ModifyCustomDbEngineVersionOutput)
+/// See [`ModifyCustomDbEngineVersionOutput`](crate::output::ModifyCustomDbEngineVersionOutput).
 pub mod modify_custom_db_engine_version_output {
 
-    /// A builder for [`ModifyCustomDbEngineVersionOutput`](crate::output::ModifyCustomDbEngineVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyCustomDbEngineVersionOutput`](crate::output::ModifyCustomDbEngineVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine: std::option::Option<std::string::String>,
@@ -4131,7 +4183,7 @@ pub mod modify_custom_db_engine_version_output {
             self.supports_babelfish = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyCustomDbEngineVersionOutput`](crate::output::ModifyCustomDbEngineVersionOutput)
+        /// Consumes the builder and constructs a [`ModifyCustomDbEngineVersionOutput`](crate::output::ModifyCustomDbEngineVersionOutput).
         pub fn build(self) -> crate::output::ModifyCustomDbEngineVersionOutput {
             crate::output::ModifyCustomDbEngineVersionOutput {
                 engine: self.engine,
@@ -4168,7 +4220,7 @@ pub mod modify_custom_db_engine_version_output {
     }
 }
 impl ModifyCustomDbEngineVersionOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyCustomDbEngineVersionOutput`](crate::output::ModifyCustomDbEngineVersionOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyCustomDbEngineVersionOutput`](crate::output::ModifyCustomDbEngineVersionOutput).
     pub fn builder() -> crate::output::modify_custom_db_engine_version_output::Builder {
         crate::output::modify_custom_db_engine_version_output::Builder::default()
     }
@@ -4179,14 +4231,19 @@ impl ModifyCustomDbEngineVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyCurrentDbClusterCapacityOutput {
     /// <p>A user-supplied DB cluster identifier. This identifier is the unique key that identifies a DB cluster.</p>
+    #[doc(hidden)]
     pub db_cluster_identifier: std::option::Option<std::string::String>,
     /// <p>A value that specifies the capacity that the DB cluster scales to next.</p>
+    #[doc(hidden)]
     pub pending_capacity: std::option::Option<i32>,
     /// <p>The current capacity of the DB cluster.</p>
+    #[doc(hidden)]
     pub current_capacity: std::option::Option<i32>,
     /// <p>The number of seconds before a call to <code>ModifyCurrentDBClusterCapacity</code> times out.</p>
+    #[doc(hidden)]
     pub seconds_before_timeout: std::option::Option<i32>,
     /// <p>The timeout action of a call to <code>ModifyCurrentDBClusterCapacity</code>, either <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.</p>
+    #[doc(hidden)]
     pub timeout_action: std::option::Option<std::string::String>,
 }
 impl ModifyCurrentDbClusterCapacityOutput {
@@ -4222,11 +4279,10 @@ impl std::fmt::Debug for ModifyCurrentDbClusterCapacityOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyCurrentDbClusterCapacityOutput`](crate::output::ModifyCurrentDbClusterCapacityOutput)
+/// See [`ModifyCurrentDbClusterCapacityOutput`](crate::output::ModifyCurrentDbClusterCapacityOutput).
 pub mod modify_current_db_cluster_capacity_output {
 
-    /// A builder for [`ModifyCurrentDbClusterCapacityOutput`](crate::output::ModifyCurrentDbClusterCapacityOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyCurrentDbClusterCapacityOutput`](crate::output::ModifyCurrentDbClusterCapacityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_identifier: std::option::Option<std::string::String>,
@@ -4292,7 +4348,7 @@ pub mod modify_current_db_cluster_capacity_output {
             self.timeout_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyCurrentDbClusterCapacityOutput`](crate::output::ModifyCurrentDbClusterCapacityOutput)
+        /// Consumes the builder and constructs a [`ModifyCurrentDbClusterCapacityOutput`](crate::output::ModifyCurrentDbClusterCapacityOutput).
         pub fn build(self) -> crate::output::ModifyCurrentDbClusterCapacityOutput {
             crate::output::ModifyCurrentDbClusterCapacityOutput {
                 db_cluster_identifier: self.db_cluster_identifier,
@@ -4305,7 +4361,7 @@ pub mod modify_current_db_cluster_capacity_output {
     }
 }
 impl ModifyCurrentDbClusterCapacityOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyCurrentDbClusterCapacityOutput`](crate::output::ModifyCurrentDbClusterCapacityOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyCurrentDbClusterCapacityOutput`](crate::output::ModifyCurrentDbClusterCapacityOutput).
     pub fn builder() -> crate::output::modify_current_db_cluster_capacity_output::Builder {
         crate::output::modify_current_db_cluster_capacity_output::Builder::default()
     }
@@ -4316,6 +4372,7 @@ impl ModifyCurrentDbClusterCapacityOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyCertificatesOutput {
     /// <p>A CA certificate for an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub certificate: std::option::Option<crate::model::Certificate>,
 }
 impl ModifyCertificatesOutput {
@@ -4331,11 +4388,10 @@ impl std::fmt::Debug for ModifyCertificatesOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyCertificatesOutput`](crate::output::ModifyCertificatesOutput)
+/// See [`ModifyCertificatesOutput`](crate::output::ModifyCertificatesOutput).
 pub mod modify_certificates_output {
 
-    /// A builder for [`ModifyCertificatesOutput`](crate::output::ModifyCertificatesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyCertificatesOutput`](crate::output::ModifyCertificatesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate: std::option::Option<crate::model::Certificate>,
@@ -4354,7 +4410,7 @@ pub mod modify_certificates_output {
             self.certificate = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyCertificatesOutput`](crate::output::ModifyCertificatesOutput)
+        /// Consumes the builder and constructs a [`ModifyCertificatesOutput`](crate::output::ModifyCertificatesOutput).
         pub fn build(self) -> crate::output::ModifyCertificatesOutput {
             crate::output::ModifyCertificatesOutput {
                 certificate: self.certificate,
@@ -4363,9 +4419,182 @@ pub mod modify_certificates_output {
     }
 }
 impl ModifyCertificatesOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyCertificatesOutput`](crate::output::ModifyCertificatesOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyCertificatesOutput`](crate::output::ModifyCertificatesOutput).
     pub fn builder() -> crate::output::modify_certificates_output::Builder {
         crate::output::modify_certificates_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ModifyActivityStreamOutput {
+    /// <p>The Amazon Web Services KMS key identifier for encryption of messages in the database activity stream.</p>
+    #[doc(hidden)]
+    pub kms_key_id: std::option::Option<std::string::String>,
+    /// <p>The name of the Amazon Kinesis data stream to be used for the database activity stream.</p>
+    #[doc(hidden)]
+    pub kinesis_stream_name: std::option::Option<std::string::String>,
+    /// <p>The status of the modification to the database activity stream.</p>
+    #[doc(hidden)]
+    pub status: std::option::Option<crate::model::ActivityStreamStatus>,
+    /// <p>The mode of the database activity stream.</p>
+    #[doc(hidden)]
+    pub mode: std::option::Option<crate::model::ActivityStreamMode>,
+    /// <p>Indicates whether engine-native audit fields are included in the database activity stream.</p>
+    #[doc(hidden)]
+    pub engine_native_audit_fields_included: std::option::Option<bool>,
+    /// <p>The status of the modification to the policy state of the database activity stream.</p>
+    #[doc(hidden)]
+    pub policy_status: std::option::Option<crate::model::ActivityStreamPolicyStatus>,
+}
+impl ModifyActivityStreamOutput {
+    /// <p>The Amazon Web Services KMS key identifier for encryption of messages in the database activity stream.</p>
+    pub fn kms_key_id(&self) -> std::option::Option<&str> {
+        self.kms_key_id.as_deref()
+    }
+    /// <p>The name of the Amazon Kinesis data stream to be used for the database activity stream.</p>
+    pub fn kinesis_stream_name(&self) -> std::option::Option<&str> {
+        self.kinesis_stream_name.as_deref()
+    }
+    /// <p>The status of the modification to the database activity stream.</p>
+    pub fn status(&self) -> std::option::Option<&crate::model::ActivityStreamStatus> {
+        self.status.as_ref()
+    }
+    /// <p>The mode of the database activity stream.</p>
+    pub fn mode(&self) -> std::option::Option<&crate::model::ActivityStreamMode> {
+        self.mode.as_ref()
+    }
+    /// <p>Indicates whether engine-native audit fields are included in the database activity stream.</p>
+    pub fn engine_native_audit_fields_included(&self) -> std::option::Option<bool> {
+        self.engine_native_audit_fields_included
+    }
+    /// <p>The status of the modification to the policy state of the database activity stream.</p>
+    pub fn policy_status(&self) -> std::option::Option<&crate::model::ActivityStreamPolicyStatus> {
+        self.policy_status.as_ref()
+    }
+}
+impl std::fmt::Debug for ModifyActivityStreamOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ModifyActivityStreamOutput");
+        formatter.field("kms_key_id", &self.kms_key_id);
+        formatter.field("kinesis_stream_name", &self.kinesis_stream_name);
+        formatter.field("status", &self.status);
+        formatter.field("mode", &self.mode);
+        formatter.field(
+            "engine_native_audit_fields_included",
+            &self.engine_native_audit_fields_included,
+        );
+        formatter.field("policy_status", &self.policy_status);
+        formatter.finish()
+    }
+}
+/// See [`ModifyActivityStreamOutput`](crate::output::ModifyActivityStreamOutput).
+pub mod modify_activity_stream_output {
+
+    /// A builder for [`ModifyActivityStreamOutput`](crate::output::ModifyActivityStreamOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) kms_key_id: std::option::Option<std::string::String>,
+        pub(crate) kinesis_stream_name: std::option::Option<std::string::String>,
+        pub(crate) status: std::option::Option<crate::model::ActivityStreamStatus>,
+        pub(crate) mode: std::option::Option<crate::model::ActivityStreamMode>,
+        pub(crate) engine_native_audit_fields_included: std::option::Option<bool>,
+        pub(crate) policy_status: std::option::Option<crate::model::ActivityStreamPolicyStatus>,
+    }
+    impl Builder {
+        /// <p>The Amazon Web Services KMS key identifier for encryption of messages in the database activity stream.</p>
+        pub fn kms_key_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.kms_key_id = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Web Services KMS key identifier for encryption of messages in the database activity stream.</p>
+        pub fn set_kms_key_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.kms_key_id = input;
+            self
+        }
+        /// <p>The name of the Amazon Kinesis data stream to be used for the database activity stream.</p>
+        pub fn kinesis_stream_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.kinesis_stream_name = Some(input.into());
+            self
+        }
+        /// <p>The name of the Amazon Kinesis data stream to be used for the database activity stream.</p>
+        pub fn set_kinesis_stream_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.kinesis_stream_name = input;
+            self
+        }
+        /// <p>The status of the modification to the database activity stream.</p>
+        pub fn status(mut self, input: crate::model::ActivityStreamStatus) -> Self {
+            self.status = Some(input);
+            self
+        }
+        /// <p>The status of the modification to the database activity stream.</p>
+        pub fn set_status(
+            mut self,
+            input: std::option::Option<crate::model::ActivityStreamStatus>,
+        ) -> Self {
+            self.status = input;
+            self
+        }
+        /// <p>The mode of the database activity stream.</p>
+        pub fn mode(mut self, input: crate::model::ActivityStreamMode) -> Self {
+            self.mode = Some(input);
+            self
+        }
+        /// <p>The mode of the database activity stream.</p>
+        pub fn set_mode(
+            mut self,
+            input: std::option::Option<crate::model::ActivityStreamMode>,
+        ) -> Self {
+            self.mode = input;
+            self
+        }
+        /// <p>Indicates whether engine-native audit fields are included in the database activity stream.</p>
+        pub fn engine_native_audit_fields_included(mut self, input: bool) -> Self {
+            self.engine_native_audit_fields_included = Some(input);
+            self
+        }
+        /// <p>Indicates whether engine-native audit fields are included in the database activity stream.</p>
+        pub fn set_engine_native_audit_fields_included(
+            mut self,
+            input: std::option::Option<bool>,
+        ) -> Self {
+            self.engine_native_audit_fields_included = input;
+            self
+        }
+        /// <p>The status of the modification to the policy state of the database activity stream.</p>
+        pub fn policy_status(mut self, input: crate::model::ActivityStreamPolicyStatus) -> Self {
+            self.policy_status = Some(input);
+            self
+        }
+        /// <p>The status of the modification to the policy state of the database activity stream.</p>
+        pub fn set_policy_status(
+            mut self,
+            input: std::option::Option<crate::model::ActivityStreamPolicyStatus>,
+        ) -> Self {
+            self.policy_status = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ModifyActivityStreamOutput`](crate::output::ModifyActivityStreamOutput).
+        pub fn build(self) -> crate::output::ModifyActivityStreamOutput {
+            crate::output::ModifyActivityStreamOutput {
+                kms_key_id: self.kms_key_id,
+                kinesis_stream_name: self.kinesis_stream_name,
+                status: self.status,
+                mode: self.mode,
+                engine_native_audit_fields_included: self.engine_native_audit_fields_included,
+                policy_status: self.policy_status,
+            }
+        }
+    }
+}
+impl ModifyActivityStreamOutput {
+    /// Creates a new builder-style object to manufacture [`ModifyActivityStreamOutput`](crate::output::ModifyActivityStreamOutput).
+    pub fn builder() -> crate::output::modify_activity_stream_output::Builder {
+        crate::output::modify_activity_stream_output::Builder::default()
     }
 }
 
@@ -4374,6 +4603,7 @@ impl ModifyCertificatesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>List of tags returned by the <code>ListTagsForResource</code> operation.</p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ListTagsForResourceOutput {
@@ -4389,11 +4619,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -4418,7 +4647,7 @@ pub mod list_tags_for_resource_output {
             self.tag_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 tag_list: self.tag_list,
@@ -4427,7 +4656,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -4438,6 +4667,7 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailoverGlobalClusterOutput {
     /// <p>A data type representing an Aurora global database.</p>
+    #[doc(hidden)]
     pub global_cluster: std::option::Option<crate::model::GlobalCluster>,
 }
 impl FailoverGlobalClusterOutput {
@@ -4453,11 +4683,10 @@ impl std::fmt::Debug for FailoverGlobalClusterOutput {
         formatter.finish()
     }
 }
-/// See [`FailoverGlobalClusterOutput`](crate::output::FailoverGlobalClusterOutput)
+/// See [`FailoverGlobalClusterOutput`](crate::output::FailoverGlobalClusterOutput).
 pub mod failover_global_cluster_output {
 
-    /// A builder for [`FailoverGlobalClusterOutput`](crate::output::FailoverGlobalClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`FailoverGlobalClusterOutput`](crate::output::FailoverGlobalClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_cluster: std::option::Option<crate::model::GlobalCluster>,
@@ -4476,7 +4705,7 @@ pub mod failover_global_cluster_output {
             self.global_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailoverGlobalClusterOutput`](crate::output::FailoverGlobalClusterOutput)
+        /// Consumes the builder and constructs a [`FailoverGlobalClusterOutput`](crate::output::FailoverGlobalClusterOutput).
         pub fn build(self) -> crate::output::FailoverGlobalClusterOutput {
             crate::output::FailoverGlobalClusterOutput {
                 global_cluster: self.global_cluster,
@@ -4485,7 +4714,7 @@ pub mod failover_global_cluster_output {
     }
 }
 impl FailoverGlobalClusterOutput {
-    /// Creates a new builder-style object to manufacture [`FailoverGlobalClusterOutput`](crate::output::FailoverGlobalClusterOutput)
+    /// Creates a new builder-style object to manufacture [`FailoverGlobalClusterOutput`](crate::output::FailoverGlobalClusterOutput).
     pub fn builder() -> crate::output::failover_global_cluster_output::Builder {
         crate::output::failover_global_cluster_output::Builder::default()
     }
@@ -4500,6 +4729,7 @@ pub struct FailoverDbClusterOutput {
     /// <p>For a Multi-AZ DB cluster, this data type is used as a response element in the operations <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>, <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>RebootDBCluster</code>, <code>RestoreDBClusterFromSnapshot</code>, and <code>RestoreDBClusterToPointInTime</code>.</p>
     /// <p>For more information on Amazon Aurora DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide.</i> </p>
     /// <p>For more information on Multi-AZ DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub db_cluster: std::option::Option<crate::model::DbCluster>,
 }
 impl FailoverDbClusterOutput {
@@ -4519,11 +4749,10 @@ impl std::fmt::Debug for FailoverDbClusterOutput {
         formatter.finish()
     }
 }
-/// See [`FailoverDbClusterOutput`](crate::output::FailoverDbClusterOutput)
+/// See [`FailoverDbClusterOutput`](crate::output::FailoverDbClusterOutput).
 pub mod failover_db_cluster_output {
 
-    /// A builder for [`FailoverDbClusterOutput`](crate::output::FailoverDbClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`FailoverDbClusterOutput`](crate::output::FailoverDbClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster: std::option::Option<crate::model::DbCluster>,
@@ -4550,7 +4779,7 @@ pub mod failover_db_cluster_output {
             self.db_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailoverDbClusterOutput`](crate::output::FailoverDbClusterOutput)
+        /// Consumes the builder and constructs a [`FailoverDbClusterOutput`](crate::output::FailoverDbClusterOutput).
         pub fn build(self) -> crate::output::FailoverDbClusterOutput {
             crate::output::FailoverDbClusterOutput {
                 db_cluster: self.db_cluster,
@@ -4559,7 +4788,7 @@ pub mod failover_db_cluster_output {
     }
 }
 impl FailoverDbClusterOutput {
-    /// Creates a new builder-style object to manufacture [`FailoverDbClusterOutput`](crate::output::FailoverDbClusterOutput)
+    /// Creates a new builder-style object to manufacture [`FailoverDbClusterOutput`](crate::output::FailoverDbClusterOutput).
     pub fn builder() -> crate::output::failover_db_cluster_output::Builder {
         crate::output::failover_db_cluster_output::Builder::default()
     }
@@ -4570,10 +4799,13 @@ impl FailoverDbClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DownloadDbLogFilePortionOutput {
     /// <p>Entries from the specified log file.</p>
+    #[doc(hidden)]
     pub log_file_data: std::option::Option<std::string::String>,
     /// <p>A pagination token that can be used in a later <code>DownloadDBLogFilePortion</code> request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>Boolean value that if true, indicates there is more data to be downloaded.</p>
+    #[doc(hidden)]
     pub additional_data_pending: bool,
 }
 impl DownloadDbLogFilePortionOutput {
@@ -4599,11 +4831,10 @@ impl std::fmt::Debug for DownloadDbLogFilePortionOutput {
         formatter.finish()
     }
 }
-/// See [`DownloadDbLogFilePortionOutput`](crate::output::DownloadDbLogFilePortionOutput)
+/// See [`DownloadDbLogFilePortionOutput`](crate::output::DownloadDbLogFilePortionOutput).
 pub mod download_db_log_file_portion_output {
 
-    /// A builder for [`DownloadDbLogFilePortionOutput`](crate::output::DownloadDbLogFilePortionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DownloadDbLogFilePortionOutput`](crate::output::DownloadDbLogFilePortionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_file_data: std::option::Option<std::string::String>,
@@ -4644,7 +4875,7 @@ pub mod download_db_log_file_portion_output {
             self.additional_data_pending = input;
             self
         }
-        /// Consumes the builder and constructs a [`DownloadDbLogFilePortionOutput`](crate::output::DownloadDbLogFilePortionOutput)
+        /// Consumes the builder and constructs a [`DownloadDbLogFilePortionOutput`](crate::output::DownloadDbLogFilePortionOutput).
         pub fn build(self) -> crate::output::DownloadDbLogFilePortionOutput {
             crate::output::DownloadDbLogFilePortionOutput {
                 log_file_data: self.log_file_data,
@@ -4655,7 +4886,7 @@ pub mod download_db_log_file_portion_output {
     }
 }
 impl DownloadDbLogFilePortionOutput {
-    /// Creates a new builder-style object to manufacture [`DownloadDbLogFilePortionOutput`](crate::output::DownloadDbLogFilePortionOutput)
+    /// Creates a new builder-style object to manufacture [`DownloadDbLogFilePortionOutput`](crate::output::DownloadDbLogFilePortionOutput).
     pub fn builder() -> crate::output::download_db_log_file_portion_output::Builder {
         crate::output::download_db_log_file_portion_output::Builder::default()
     }
@@ -4666,6 +4897,7 @@ impl DownloadDbLogFilePortionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeValidDbInstanceModificationsOutput {
     /// <p>Information about valid modifications that you can make to your DB instance. Contains the result of a successful call to the <code>DescribeValidDBInstanceModifications</code> action. You can use this information when you call <code>ModifyDBInstance</code>.</p>
+    #[doc(hidden)]
     pub valid_db_instance_modifications_message:
         std::option::Option<crate::model::ValidDbInstanceModificationsMessage>,
 }
@@ -4687,11 +4919,10 @@ impl std::fmt::Debug for DescribeValidDbInstanceModificationsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeValidDbInstanceModificationsOutput`](crate::output::DescribeValidDbInstanceModificationsOutput)
+/// See [`DescribeValidDbInstanceModificationsOutput`](crate::output::DescribeValidDbInstanceModificationsOutput).
 pub mod describe_valid_db_instance_modifications_output {
 
-    /// A builder for [`DescribeValidDbInstanceModificationsOutput`](crate::output::DescribeValidDbInstanceModificationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeValidDbInstanceModificationsOutput`](crate::output::DescribeValidDbInstanceModificationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) valid_db_instance_modifications_message:
@@ -4714,7 +4945,7 @@ pub mod describe_valid_db_instance_modifications_output {
             self.valid_db_instance_modifications_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeValidDbInstanceModificationsOutput`](crate::output::DescribeValidDbInstanceModificationsOutput)
+        /// Consumes the builder and constructs a [`DescribeValidDbInstanceModificationsOutput`](crate::output::DescribeValidDbInstanceModificationsOutput).
         pub fn build(self) -> crate::output::DescribeValidDbInstanceModificationsOutput {
             crate::output::DescribeValidDbInstanceModificationsOutput {
                 valid_db_instance_modifications_message: self
@@ -4724,7 +4955,7 @@ pub mod describe_valid_db_instance_modifications_output {
     }
 }
 impl DescribeValidDbInstanceModificationsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeValidDbInstanceModificationsOutput`](crate::output::DescribeValidDbInstanceModificationsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeValidDbInstanceModificationsOutput`](crate::output::DescribeValidDbInstanceModificationsOutput).
     pub fn builder() -> crate::output::describe_valid_db_instance_modifications_output::Builder {
         crate::output::describe_valid_db_instance_modifications_output::Builder::default()
     }
@@ -4735,8 +4966,10 @@ impl DescribeValidDbInstanceModificationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSourceRegionsOutput {
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of <code>SourceRegion</code> instances that contains each source Amazon Web Services Region that the current Amazon Web Services Region can get a read replica or a DB snapshot from.</p>
+    #[doc(hidden)]
     pub source_regions: std::option::Option<std::vec::Vec<crate::model::SourceRegion>>,
 }
 impl DescribeSourceRegionsOutput {
@@ -4757,11 +4990,10 @@ impl std::fmt::Debug for DescribeSourceRegionsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeSourceRegionsOutput`](crate::output::DescribeSourceRegionsOutput)
+/// See [`DescribeSourceRegionsOutput`](crate::output::DescribeSourceRegionsOutput).
 pub mod describe_source_regions_output {
 
-    /// A builder for [`DescribeSourceRegionsOutput`](crate::output::DescribeSourceRegionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSourceRegionsOutput`](crate::output::DescribeSourceRegionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -4797,7 +5029,7 @@ pub mod describe_source_regions_output {
             self.source_regions = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSourceRegionsOutput`](crate::output::DescribeSourceRegionsOutput)
+        /// Consumes the builder and constructs a [`DescribeSourceRegionsOutput`](crate::output::DescribeSourceRegionsOutput).
         pub fn build(self) -> crate::output::DescribeSourceRegionsOutput {
             crate::output::DescribeSourceRegionsOutput {
                 marker: self.marker,
@@ -4807,7 +5039,7 @@ pub mod describe_source_regions_output {
     }
 }
 impl DescribeSourceRegionsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeSourceRegionsOutput`](crate::output::DescribeSourceRegionsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeSourceRegionsOutput`](crate::output::DescribeSourceRegionsOutput).
     pub fn builder() -> crate::output::describe_source_regions_output::Builder {
         crate::output::describe_source_regions_output::Builder::default()
     }
@@ -4818,8 +5050,10 @@ impl DescribeSourceRegionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeReservedDbInstancesOfferingsOutput {
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of reserved DB instance offerings.</p>
+    #[doc(hidden)]
     pub reserved_db_instances_offerings:
         std::option::Option<std::vec::Vec<crate::model::ReservedDbInstancesOffering>>,
 }
@@ -4846,11 +5080,10 @@ impl std::fmt::Debug for DescribeReservedDbInstancesOfferingsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeReservedDbInstancesOfferingsOutput`](crate::output::DescribeReservedDbInstancesOfferingsOutput)
+/// See [`DescribeReservedDbInstancesOfferingsOutput`](crate::output::DescribeReservedDbInstancesOfferingsOutput).
 pub mod describe_reserved_db_instances_offerings_output {
 
-    /// A builder for [`DescribeReservedDbInstancesOfferingsOutput`](crate::output::DescribeReservedDbInstancesOfferingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeReservedDbInstancesOfferingsOutput`](crate::output::DescribeReservedDbInstancesOfferingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -4890,7 +5123,7 @@ pub mod describe_reserved_db_instances_offerings_output {
             self.reserved_db_instances_offerings = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeReservedDbInstancesOfferingsOutput`](crate::output::DescribeReservedDbInstancesOfferingsOutput)
+        /// Consumes the builder and constructs a [`DescribeReservedDbInstancesOfferingsOutput`](crate::output::DescribeReservedDbInstancesOfferingsOutput).
         pub fn build(self) -> crate::output::DescribeReservedDbInstancesOfferingsOutput {
             crate::output::DescribeReservedDbInstancesOfferingsOutput {
                 marker: self.marker,
@@ -4900,7 +5133,7 @@ pub mod describe_reserved_db_instances_offerings_output {
     }
 }
 impl DescribeReservedDbInstancesOfferingsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeReservedDbInstancesOfferingsOutput`](crate::output::DescribeReservedDbInstancesOfferingsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeReservedDbInstancesOfferingsOutput`](crate::output::DescribeReservedDbInstancesOfferingsOutput).
     pub fn builder() -> crate::output::describe_reserved_db_instances_offerings_output::Builder {
         crate::output::describe_reserved_db_instances_offerings_output::Builder::default()
     }
@@ -4911,8 +5144,10 @@ impl DescribeReservedDbInstancesOfferingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeReservedDbInstancesOutput {
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of reserved DB instances.</p>
+    #[doc(hidden)]
     pub reserved_db_instances: std::option::Option<std::vec::Vec<crate::model::ReservedDbInstance>>,
 }
 impl DescribeReservedDbInstancesOutput {
@@ -4935,11 +5170,10 @@ impl std::fmt::Debug for DescribeReservedDbInstancesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeReservedDbInstancesOutput`](crate::output::DescribeReservedDbInstancesOutput)
+/// See [`DescribeReservedDbInstancesOutput`](crate::output::DescribeReservedDbInstancesOutput).
 pub mod describe_reserved_db_instances_output {
 
-    /// A builder for [`DescribeReservedDbInstancesOutput`](crate::output::DescribeReservedDbInstancesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeReservedDbInstancesOutput`](crate::output::DescribeReservedDbInstancesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -4976,7 +5210,7 @@ pub mod describe_reserved_db_instances_output {
             self.reserved_db_instances = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeReservedDbInstancesOutput`](crate::output::DescribeReservedDbInstancesOutput)
+        /// Consumes the builder and constructs a [`DescribeReservedDbInstancesOutput`](crate::output::DescribeReservedDbInstancesOutput).
         pub fn build(self) -> crate::output::DescribeReservedDbInstancesOutput {
             crate::output::DescribeReservedDbInstancesOutput {
                 marker: self.marker,
@@ -4986,7 +5220,7 @@ pub mod describe_reserved_db_instances_output {
     }
 }
 impl DescribeReservedDbInstancesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeReservedDbInstancesOutput`](crate::output::DescribeReservedDbInstancesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeReservedDbInstancesOutput`](crate::output::DescribeReservedDbInstancesOutput).
     pub fn builder() -> crate::output::describe_reserved_db_instances_output::Builder {
         crate::output::describe_reserved_db_instances_output::Builder::default()
     }
@@ -4997,9 +5231,11 @@ impl DescribeReservedDbInstancesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribePendingMaintenanceActionsOutput {
     /// <p>A list of the pending maintenance actions for the resource.</p>
+    #[doc(hidden)]
     pub pending_maintenance_actions:
         std::option::Option<std::vec::Vec<crate::model::ResourcePendingMaintenanceActions>>,
     /// <p>An optional pagination token provided by a previous <code>DescribePendingMaintenanceActions</code> request. If this parameter is specified, the response includes only records beyond the marker, up to a number of records specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribePendingMaintenanceActionsOutput {
@@ -5025,11 +5261,10 @@ impl std::fmt::Debug for DescribePendingMaintenanceActionsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput)
+/// See [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput).
 pub mod describe_pending_maintenance_actions_output {
 
-    /// A builder for [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pending_maintenance_actions:
@@ -5071,7 +5306,7 @@ pub mod describe_pending_maintenance_actions_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput)
+        /// Consumes the builder and constructs a [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput).
         pub fn build(self) -> crate::output::DescribePendingMaintenanceActionsOutput {
             crate::output::DescribePendingMaintenanceActionsOutput {
                 pending_maintenance_actions: self.pending_maintenance_actions,
@@ -5081,7 +5316,7 @@ pub mod describe_pending_maintenance_actions_output {
     }
 }
 impl DescribePendingMaintenanceActionsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput).
     pub fn builder() -> crate::output::describe_pending_maintenance_actions_output::Builder {
         crate::output::describe_pending_maintenance_actions_output::Builder::default()
     }
@@ -5092,9 +5327,11 @@ impl DescribePendingMaintenanceActionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeOrderableDbInstanceOptionsOutput {
     /// <p>An <code>OrderableDBInstanceOption</code> structure containing information about orderable options for the DB instance.</p>
+    #[doc(hidden)]
     pub orderable_db_instance_options:
         std::option::Option<std::vec::Vec<crate::model::OrderableDbInstanceOption>>,
     /// <p>An optional pagination token provided by a previous OrderableDBInstanceOptions request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeOrderableDbInstanceOptionsOutput {
@@ -5120,11 +5357,10 @@ impl std::fmt::Debug for DescribeOrderableDbInstanceOptionsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOrderableDbInstanceOptionsOutput`](crate::output::DescribeOrderableDbInstanceOptionsOutput)
+/// See [`DescribeOrderableDbInstanceOptionsOutput`](crate::output::DescribeOrderableDbInstanceOptionsOutput).
 pub mod describe_orderable_db_instance_options_output {
 
-    /// A builder for [`DescribeOrderableDbInstanceOptionsOutput`](crate::output::DescribeOrderableDbInstanceOptionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeOrderableDbInstanceOptionsOutput`](crate::output::DescribeOrderableDbInstanceOptionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) orderable_db_instance_options:
@@ -5164,7 +5400,7 @@ pub mod describe_orderable_db_instance_options_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOrderableDbInstanceOptionsOutput`](crate::output::DescribeOrderableDbInstanceOptionsOutput)
+        /// Consumes the builder and constructs a [`DescribeOrderableDbInstanceOptionsOutput`](crate::output::DescribeOrderableDbInstanceOptionsOutput).
         pub fn build(self) -> crate::output::DescribeOrderableDbInstanceOptionsOutput {
             crate::output::DescribeOrderableDbInstanceOptionsOutput {
                 orderable_db_instance_options: self.orderable_db_instance_options,
@@ -5174,7 +5410,7 @@ pub mod describe_orderable_db_instance_options_output {
     }
 }
 impl DescribeOrderableDbInstanceOptionsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOrderableDbInstanceOptionsOutput`](crate::output::DescribeOrderableDbInstanceOptionsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOrderableDbInstanceOptionsOutput`](crate::output::DescribeOrderableDbInstanceOptionsOutput).
     pub fn builder() -> crate::output::describe_orderable_db_instance_options_output::Builder {
         crate::output::describe_orderable_db_instance_options_output::Builder::default()
     }
@@ -5185,8 +5421,10 @@ impl DescribeOrderableDbInstanceOptionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeOptionGroupsOutput {
     /// <p>List of option groups.</p>
+    #[doc(hidden)]
     pub option_groups_list: std::option::Option<std::vec::Vec<crate::model::OptionGroup>>,
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeOptionGroupsOutput {
@@ -5207,11 +5445,10 @@ impl std::fmt::Debug for DescribeOptionGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOptionGroupsOutput`](crate::output::DescribeOptionGroupsOutput)
+/// See [`DescribeOptionGroupsOutput`](crate::output::DescribeOptionGroupsOutput).
 pub mod describe_option_groups_output {
 
-    /// A builder for [`DescribeOptionGroupsOutput`](crate::output::DescribeOptionGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeOptionGroupsOutput`](crate::output::DescribeOptionGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) option_groups_list:
@@ -5248,7 +5485,7 @@ pub mod describe_option_groups_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOptionGroupsOutput`](crate::output::DescribeOptionGroupsOutput)
+        /// Consumes the builder and constructs a [`DescribeOptionGroupsOutput`](crate::output::DescribeOptionGroupsOutput).
         pub fn build(self) -> crate::output::DescribeOptionGroupsOutput {
             crate::output::DescribeOptionGroupsOutput {
                 option_groups_list: self.option_groups_list,
@@ -5258,7 +5495,7 @@ pub mod describe_option_groups_output {
     }
 }
 impl DescribeOptionGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOptionGroupsOutput`](crate::output::DescribeOptionGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOptionGroupsOutput`](crate::output::DescribeOptionGroupsOutput).
     pub fn builder() -> crate::output::describe_option_groups_output::Builder {
         crate::output::describe_option_groups_output::Builder::default()
     }
@@ -5269,8 +5506,10 @@ impl DescribeOptionGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeOptionGroupOptionsOutput {
     /// <p>List of available option group options.</p>
+    #[doc(hidden)]
     pub option_group_options: std::option::Option<std::vec::Vec<crate::model::OptionGroupOption>>,
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeOptionGroupOptionsOutput {
@@ -5291,11 +5530,10 @@ impl std::fmt::Debug for DescribeOptionGroupOptionsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOptionGroupOptionsOutput`](crate::output::DescribeOptionGroupOptionsOutput)
+/// See [`DescribeOptionGroupOptionsOutput`](crate::output::DescribeOptionGroupOptionsOutput).
 pub mod describe_option_group_options_output {
 
-    /// A builder for [`DescribeOptionGroupOptionsOutput`](crate::output::DescribeOptionGroupOptionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeOptionGroupOptionsOutput`](crate::output::DescribeOptionGroupOptionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) option_group_options:
@@ -5332,7 +5570,7 @@ pub mod describe_option_group_options_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOptionGroupOptionsOutput`](crate::output::DescribeOptionGroupOptionsOutput)
+        /// Consumes the builder and constructs a [`DescribeOptionGroupOptionsOutput`](crate::output::DescribeOptionGroupOptionsOutput).
         pub fn build(self) -> crate::output::DescribeOptionGroupOptionsOutput {
             crate::output::DescribeOptionGroupOptionsOutput {
                 option_group_options: self.option_group_options,
@@ -5342,7 +5580,7 @@ pub mod describe_option_group_options_output {
     }
 }
 impl DescribeOptionGroupOptionsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOptionGroupOptionsOutput`](crate::output::DescribeOptionGroupOptionsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOptionGroupOptionsOutput`](crate::output::DescribeOptionGroupOptionsOutput).
     pub fn builder() -> crate::output::describe_option_group_options_output::Builder {
         crate::output::describe_option_group_options_output::Builder::default()
     }
@@ -5353,8 +5591,10 @@ impl DescribeOptionGroupOptionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeGlobalClustersOutput {
     /// <p>An optional pagination token provided by a previous <code>DescribeGlobalClusters</code> request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>The list of global clusters returned by this request.</p>
+    #[doc(hidden)]
     pub global_clusters: std::option::Option<std::vec::Vec<crate::model::GlobalCluster>>,
 }
 impl DescribeGlobalClustersOutput {
@@ -5375,11 +5615,10 @@ impl std::fmt::Debug for DescribeGlobalClustersOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeGlobalClustersOutput`](crate::output::DescribeGlobalClustersOutput)
+/// See [`DescribeGlobalClustersOutput`](crate::output::DescribeGlobalClustersOutput).
 pub mod describe_global_clusters_output {
 
-    /// A builder for [`DescribeGlobalClustersOutput`](crate::output::DescribeGlobalClustersOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeGlobalClustersOutput`](crate::output::DescribeGlobalClustersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -5415,7 +5654,7 @@ pub mod describe_global_clusters_output {
             self.global_clusters = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeGlobalClustersOutput`](crate::output::DescribeGlobalClustersOutput)
+        /// Consumes the builder and constructs a [`DescribeGlobalClustersOutput`](crate::output::DescribeGlobalClustersOutput).
         pub fn build(self) -> crate::output::DescribeGlobalClustersOutput {
             crate::output::DescribeGlobalClustersOutput {
                 marker: self.marker,
@@ -5425,7 +5664,7 @@ pub mod describe_global_clusters_output {
     }
 }
 impl DescribeGlobalClustersOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeGlobalClustersOutput`](crate::output::DescribeGlobalClustersOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeGlobalClustersOutput`](crate::output::DescribeGlobalClustersOutput).
     pub fn builder() -> crate::output::describe_global_clusters_output::Builder {
         crate::output::describe_global_clusters_output::Builder::default()
     }
@@ -5436,8 +5675,10 @@ impl DescribeGlobalClustersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeExportTasksOutput {
     /// <p>A pagination token that can be used in a later <code>DescribeExportTasks</code> request. A marker is used for pagination to identify the location to begin output for the next response of <code>DescribeExportTasks</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>Information about an export of a snapshot to Amazon S3.</p>
+    #[doc(hidden)]
     pub export_tasks: std::option::Option<std::vec::Vec<crate::model::ExportTask>>,
 }
 impl DescribeExportTasksOutput {
@@ -5458,11 +5699,10 @@ impl std::fmt::Debug for DescribeExportTasksOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeExportTasksOutput`](crate::output::DescribeExportTasksOutput)
+/// See [`DescribeExportTasksOutput`](crate::output::DescribeExportTasksOutput).
 pub mod describe_export_tasks_output {
 
-    /// A builder for [`DescribeExportTasksOutput`](crate::output::DescribeExportTasksOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeExportTasksOutput`](crate::output::DescribeExportTasksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -5498,7 +5738,7 @@ pub mod describe_export_tasks_output {
             self.export_tasks = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeExportTasksOutput`](crate::output::DescribeExportTasksOutput)
+        /// Consumes the builder and constructs a [`DescribeExportTasksOutput`](crate::output::DescribeExportTasksOutput).
         pub fn build(self) -> crate::output::DescribeExportTasksOutput {
             crate::output::DescribeExportTasksOutput {
                 marker: self.marker,
@@ -5508,7 +5748,7 @@ pub mod describe_export_tasks_output {
     }
 }
 impl DescribeExportTasksOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeExportTasksOutput`](crate::output::DescribeExportTasksOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeExportTasksOutput`](crate::output::DescribeExportTasksOutput).
     pub fn builder() -> crate::output::describe_export_tasks_output::Builder {
         crate::output::describe_export_tasks_output::Builder::default()
     }
@@ -5519,8 +5759,10 @@ impl DescribeExportTasksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEventSubscriptionsOutput {
     /// <p>An optional pagination token provided by a previous DescribeOrderableDBInstanceOptions request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of EventSubscriptions data types.</p>
+    #[doc(hidden)]
     pub event_subscriptions_list:
         std::option::Option<std::vec::Vec<crate::model::EventSubscription>>,
 }
@@ -5544,11 +5786,10 @@ impl std::fmt::Debug for DescribeEventSubscriptionsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput)
+/// See [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput).
 pub mod describe_event_subscriptions_output {
 
-    /// A builder for [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -5585,7 +5826,7 @@ pub mod describe_event_subscriptions_output {
             self.event_subscriptions_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput)
+        /// Consumes the builder and constructs a [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput).
         pub fn build(self) -> crate::output::DescribeEventSubscriptionsOutput {
             crate::output::DescribeEventSubscriptionsOutput {
                 marker: self.marker,
@@ -5595,7 +5836,7 @@ pub mod describe_event_subscriptions_output {
     }
 }
 impl DescribeEventSubscriptionsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput).
     pub fn builder() -> crate::output::describe_event_subscriptions_output::Builder {
         crate::output::describe_event_subscriptions_output::Builder::default()
     }
@@ -5606,8 +5847,10 @@ impl DescribeEventSubscriptionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEventsOutput {
     /// <p>An optional pagination token provided by a previous Events request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of <code>Event</code> instances.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<std::vec::Vec<crate::model::Event>>,
 }
 impl DescribeEventsOutput {
@@ -5628,11 +5871,10 @@ impl std::fmt::Debug for DescribeEventsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEventsOutput`](crate::output::DescribeEventsOutput)
+/// See [`DescribeEventsOutput`](crate::output::DescribeEventsOutput).
 pub mod describe_events_output {
 
-    /// A builder for [`DescribeEventsOutput`](crate::output::DescribeEventsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEventsOutput`](crate::output::DescribeEventsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -5668,7 +5910,7 @@ pub mod describe_events_output {
             self.events = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEventsOutput`](crate::output::DescribeEventsOutput)
+        /// Consumes the builder and constructs a [`DescribeEventsOutput`](crate::output::DescribeEventsOutput).
         pub fn build(self) -> crate::output::DescribeEventsOutput {
             crate::output::DescribeEventsOutput {
                 marker: self.marker,
@@ -5678,7 +5920,7 @@ pub mod describe_events_output {
     }
 }
 impl DescribeEventsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEventsOutput`](crate::output::DescribeEventsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEventsOutput`](crate::output::DescribeEventsOutput).
     pub fn builder() -> crate::output::describe_events_output::Builder {
         crate::output::describe_events_output::Builder::default()
     }
@@ -5689,6 +5931,7 @@ impl DescribeEventsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEventCategoriesOutput {
     /// <p>A list of <code>EventCategoriesMap</code> data types.</p>
+    #[doc(hidden)]
     pub event_categories_map_list:
         std::option::Option<std::vec::Vec<crate::model::EventCategoriesMap>>,
 }
@@ -5707,11 +5950,10 @@ impl std::fmt::Debug for DescribeEventCategoriesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput)
+/// See [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput).
 pub mod describe_event_categories_output {
 
-    /// A builder for [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_categories_map_list:
@@ -5740,7 +5982,7 @@ pub mod describe_event_categories_output {
             self.event_categories_map_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput)
+        /// Consumes the builder and constructs a [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput).
         pub fn build(self) -> crate::output::DescribeEventCategoriesOutput {
             crate::output::DescribeEventCategoriesOutput {
                 event_categories_map_list: self.event_categories_map_list,
@@ -5749,7 +5991,7 @@ pub mod describe_event_categories_output {
     }
 }
 impl DescribeEventCategoriesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput).
     pub fn builder() -> crate::output::describe_event_categories_output::Builder {
         crate::output::describe_event_categories_output::Builder::default()
     }
@@ -5760,6 +6002,7 @@ impl DescribeEventCategoriesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEngineDefaultParametersOutput {
     /// <p>Contains the result of a successful invocation of the <code>DescribeEngineDefaultParameters</code> action.</p>
+    #[doc(hidden)]
     pub engine_defaults: std::option::Option<crate::model::EngineDefaults>,
 }
 impl DescribeEngineDefaultParametersOutput {
@@ -5775,11 +6018,10 @@ impl std::fmt::Debug for DescribeEngineDefaultParametersOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEngineDefaultParametersOutput`](crate::output::DescribeEngineDefaultParametersOutput)
+/// See [`DescribeEngineDefaultParametersOutput`](crate::output::DescribeEngineDefaultParametersOutput).
 pub mod describe_engine_default_parameters_output {
 
-    /// A builder for [`DescribeEngineDefaultParametersOutput`](crate::output::DescribeEngineDefaultParametersOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEngineDefaultParametersOutput`](crate::output::DescribeEngineDefaultParametersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine_defaults: std::option::Option<crate::model::EngineDefaults>,
@@ -5798,7 +6040,7 @@ pub mod describe_engine_default_parameters_output {
             self.engine_defaults = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEngineDefaultParametersOutput`](crate::output::DescribeEngineDefaultParametersOutput)
+        /// Consumes the builder and constructs a [`DescribeEngineDefaultParametersOutput`](crate::output::DescribeEngineDefaultParametersOutput).
         pub fn build(self) -> crate::output::DescribeEngineDefaultParametersOutput {
             crate::output::DescribeEngineDefaultParametersOutput {
                 engine_defaults: self.engine_defaults,
@@ -5807,7 +6049,7 @@ pub mod describe_engine_default_parameters_output {
     }
 }
 impl DescribeEngineDefaultParametersOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEngineDefaultParametersOutput`](crate::output::DescribeEngineDefaultParametersOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEngineDefaultParametersOutput`](crate::output::DescribeEngineDefaultParametersOutput).
     pub fn builder() -> crate::output::describe_engine_default_parameters_output::Builder {
         crate::output::describe_engine_default_parameters_output::Builder::default()
     }
@@ -5818,6 +6060,7 @@ impl DescribeEngineDefaultParametersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEngineDefaultClusterParametersOutput {
     /// <p>Contains the result of a successful invocation of the <code>DescribeEngineDefaultParameters</code> action.</p>
+    #[doc(hidden)]
     pub engine_defaults: std::option::Option<crate::model::EngineDefaults>,
 }
 impl DescribeEngineDefaultClusterParametersOutput {
@@ -5833,11 +6076,10 @@ impl std::fmt::Debug for DescribeEngineDefaultClusterParametersOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEngineDefaultClusterParametersOutput`](crate::output::DescribeEngineDefaultClusterParametersOutput)
+/// See [`DescribeEngineDefaultClusterParametersOutput`](crate::output::DescribeEngineDefaultClusterParametersOutput).
 pub mod describe_engine_default_cluster_parameters_output {
 
-    /// A builder for [`DescribeEngineDefaultClusterParametersOutput`](crate::output::DescribeEngineDefaultClusterParametersOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEngineDefaultClusterParametersOutput`](crate::output::DescribeEngineDefaultClusterParametersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine_defaults: std::option::Option<crate::model::EngineDefaults>,
@@ -5856,7 +6098,7 @@ pub mod describe_engine_default_cluster_parameters_output {
             self.engine_defaults = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEngineDefaultClusterParametersOutput`](crate::output::DescribeEngineDefaultClusterParametersOutput)
+        /// Consumes the builder and constructs a [`DescribeEngineDefaultClusterParametersOutput`](crate::output::DescribeEngineDefaultClusterParametersOutput).
         pub fn build(self) -> crate::output::DescribeEngineDefaultClusterParametersOutput {
             crate::output::DescribeEngineDefaultClusterParametersOutput {
                 engine_defaults: self.engine_defaults,
@@ -5865,7 +6107,7 @@ pub mod describe_engine_default_cluster_parameters_output {
     }
 }
 impl DescribeEngineDefaultClusterParametersOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEngineDefaultClusterParametersOutput`](crate::output::DescribeEngineDefaultClusterParametersOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEngineDefaultClusterParametersOutput`](crate::output::DescribeEngineDefaultClusterParametersOutput).
     pub fn builder() -> crate::output::describe_engine_default_cluster_parameters_output::Builder {
         crate::output::describe_engine_default_cluster_parameters_output::Builder::default()
     }
@@ -5876,8 +6118,10 @@ impl DescribeEngineDefaultClusterParametersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbSubnetGroupsOutput {
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of <code>DBSubnetGroup</code> instances.</p>
+    #[doc(hidden)]
     pub db_subnet_groups: std::option::Option<std::vec::Vec<crate::model::DbSubnetGroup>>,
 }
 impl DescribeDbSubnetGroupsOutput {
@@ -5898,11 +6142,10 @@ impl std::fmt::Debug for DescribeDbSubnetGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbSubnetGroupsOutput`](crate::output::DescribeDbSubnetGroupsOutput)
+/// See [`DescribeDbSubnetGroupsOutput`](crate::output::DescribeDbSubnetGroupsOutput).
 pub mod describe_db_subnet_groups_output {
 
-    /// A builder for [`DescribeDbSubnetGroupsOutput`](crate::output::DescribeDbSubnetGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbSubnetGroupsOutput`](crate::output::DescribeDbSubnetGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -5939,7 +6182,7 @@ pub mod describe_db_subnet_groups_output {
             self.db_subnet_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbSubnetGroupsOutput`](crate::output::DescribeDbSubnetGroupsOutput)
+        /// Consumes the builder and constructs a [`DescribeDbSubnetGroupsOutput`](crate::output::DescribeDbSubnetGroupsOutput).
         pub fn build(self) -> crate::output::DescribeDbSubnetGroupsOutput {
             crate::output::DescribeDbSubnetGroupsOutput {
                 marker: self.marker,
@@ -5949,7 +6192,7 @@ pub mod describe_db_subnet_groups_output {
     }
 }
 impl DescribeDbSubnetGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbSubnetGroupsOutput`](crate::output::DescribeDbSubnetGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbSubnetGroupsOutput`](crate::output::DescribeDbSubnetGroupsOutput).
     pub fn builder() -> crate::output::describe_db_subnet_groups_output::Builder {
         crate::output::describe_db_subnet_groups_output::Builder::default()
     }
@@ -5960,8 +6203,10 @@ impl DescribeDbSubnetGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbSnapshotsOutput {
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of <code>DBSnapshot</code> instances.</p>
+    #[doc(hidden)]
     pub db_snapshots: std::option::Option<std::vec::Vec<crate::model::DbSnapshot>>,
 }
 impl DescribeDbSnapshotsOutput {
@@ -5982,11 +6227,10 @@ impl std::fmt::Debug for DescribeDbSnapshotsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbSnapshotsOutput`](crate::output::DescribeDbSnapshotsOutput)
+/// See [`DescribeDbSnapshotsOutput`](crate::output::DescribeDbSnapshotsOutput).
 pub mod describe_db_snapshots_output {
 
-    /// A builder for [`DescribeDbSnapshotsOutput`](crate::output::DescribeDbSnapshotsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbSnapshotsOutput`](crate::output::DescribeDbSnapshotsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -6022,7 +6266,7 @@ pub mod describe_db_snapshots_output {
             self.db_snapshots = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbSnapshotsOutput`](crate::output::DescribeDbSnapshotsOutput)
+        /// Consumes the builder and constructs a [`DescribeDbSnapshotsOutput`](crate::output::DescribeDbSnapshotsOutput).
         pub fn build(self) -> crate::output::DescribeDbSnapshotsOutput {
             crate::output::DescribeDbSnapshotsOutput {
                 marker: self.marker,
@@ -6032,7 +6276,7 @@ pub mod describe_db_snapshots_output {
     }
 }
 impl DescribeDbSnapshotsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbSnapshotsOutput`](crate::output::DescribeDbSnapshotsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbSnapshotsOutput`](crate::output::DescribeDbSnapshotsOutput).
     pub fn builder() -> crate::output::describe_db_snapshots_output::Builder {
         crate::output::describe_db_snapshots_output::Builder::default()
     }
@@ -6044,6 +6288,7 @@ impl DescribeDbSnapshotsOutput {
 pub struct DescribeDbSnapshotAttributesOutput {
     /// <p>Contains the results of a successful call to the <code>DescribeDBSnapshotAttributes</code> API action.</p>
     /// <p>Manual DB snapshot attributes are used to authorize other Amazon Web Services accounts to copy or restore a manual DB snapshot. For more information, see the <code>ModifyDBSnapshotAttribute</code> API action.</p>
+    #[doc(hidden)]
     pub db_snapshot_attributes_result:
         std::option::Option<crate::model::DbSnapshotAttributesResult>,
 }
@@ -6066,11 +6311,10 @@ impl std::fmt::Debug for DescribeDbSnapshotAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbSnapshotAttributesOutput`](crate::output::DescribeDbSnapshotAttributesOutput)
+/// See [`DescribeDbSnapshotAttributesOutput`](crate::output::DescribeDbSnapshotAttributesOutput).
 pub mod describe_db_snapshot_attributes_output {
 
-    /// A builder for [`DescribeDbSnapshotAttributesOutput`](crate::output::DescribeDbSnapshotAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbSnapshotAttributesOutput`](crate::output::DescribeDbSnapshotAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_snapshot_attributes_result:
@@ -6095,7 +6339,7 @@ pub mod describe_db_snapshot_attributes_output {
             self.db_snapshot_attributes_result = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbSnapshotAttributesOutput`](crate::output::DescribeDbSnapshotAttributesOutput)
+        /// Consumes the builder and constructs a [`DescribeDbSnapshotAttributesOutput`](crate::output::DescribeDbSnapshotAttributesOutput).
         pub fn build(self) -> crate::output::DescribeDbSnapshotAttributesOutput {
             crate::output::DescribeDbSnapshotAttributesOutput {
                 db_snapshot_attributes_result: self.db_snapshot_attributes_result,
@@ -6104,7 +6348,7 @@ pub mod describe_db_snapshot_attributes_output {
     }
 }
 impl DescribeDbSnapshotAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbSnapshotAttributesOutput`](crate::output::DescribeDbSnapshotAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbSnapshotAttributesOutput`](crate::output::DescribeDbSnapshotAttributesOutput).
     pub fn builder() -> crate::output::describe_db_snapshot_attributes_output::Builder {
         crate::output::describe_db_snapshot_attributes_output::Builder::default()
     }
@@ -6115,8 +6359,10 @@ impl DescribeDbSnapshotAttributesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbSecurityGroupsOutput {
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of <code>DBSecurityGroup</code> instances.</p>
+    #[doc(hidden)]
     pub db_security_groups: std::option::Option<std::vec::Vec<crate::model::DbSecurityGroup>>,
 }
 impl DescribeDbSecurityGroupsOutput {
@@ -6137,11 +6383,10 @@ impl std::fmt::Debug for DescribeDbSecurityGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbSecurityGroupsOutput`](crate::output::DescribeDbSecurityGroupsOutput)
+/// See [`DescribeDbSecurityGroupsOutput`](crate::output::DescribeDbSecurityGroupsOutput).
 pub mod describe_db_security_groups_output {
 
-    /// A builder for [`DescribeDbSecurityGroupsOutput`](crate::output::DescribeDbSecurityGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbSecurityGroupsOutput`](crate::output::DescribeDbSecurityGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -6178,7 +6423,7 @@ pub mod describe_db_security_groups_output {
             self.db_security_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbSecurityGroupsOutput`](crate::output::DescribeDbSecurityGroupsOutput)
+        /// Consumes the builder and constructs a [`DescribeDbSecurityGroupsOutput`](crate::output::DescribeDbSecurityGroupsOutput).
         pub fn build(self) -> crate::output::DescribeDbSecurityGroupsOutput {
             crate::output::DescribeDbSecurityGroupsOutput {
                 marker: self.marker,
@@ -6188,7 +6433,7 @@ pub mod describe_db_security_groups_output {
     }
 }
 impl DescribeDbSecurityGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbSecurityGroupsOutput`](crate::output::DescribeDbSecurityGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbSecurityGroupsOutput`](crate::output::DescribeDbSecurityGroupsOutput).
     pub fn builder() -> crate::output::describe_db_security_groups_output::Builder {
         crate::output::describe_db_security_groups_output::Builder::default()
     }
@@ -6199,8 +6444,10 @@ impl DescribeDbSecurityGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbProxyTargetsOutput {
     /// <p>An arbitrary number of <code>DBProxyTarget</code> objects, containing details of the corresponding targets.</p>
+    #[doc(hidden)]
     pub targets: std::option::Option<std::vec::Vec<crate::model::DbProxyTarget>>,
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeDbProxyTargetsOutput {
@@ -6221,11 +6468,10 @@ impl std::fmt::Debug for DescribeDbProxyTargetsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbProxyTargetsOutput`](crate::output::DescribeDbProxyTargetsOutput)
+/// See [`DescribeDbProxyTargetsOutput`](crate::output::DescribeDbProxyTargetsOutput).
 pub mod describe_db_proxy_targets_output {
 
-    /// A builder for [`DescribeDbProxyTargetsOutput`](crate::output::DescribeDbProxyTargetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbProxyTargetsOutput`](crate::output::DescribeDbProxyTargetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) targets: std::option::Option<std::vec::Vec<crate::model::DbProxyTarget>>,
@@ -6261,7 +6507,7 @@ pub mod describe_db_proxy_targets_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbProxyTargetsOutput`](crate::output::DescribeDbProxyTargetsOutput)
+        /// Consumes the builder and constructs a [`DescribeDbProxyTargetsOutput`](crate::output::DescribeDbProxyTargetsOutput).
         pub fn build(self) -> crate::output::DescribeDbProxyTargetsOutput {
             crate::output::DescribeDbProxyTargetsOutput {
                 targets: self.targets,
@@ -6271,7 +6517,7 @@ pub mod describe_db_proxy_targets_output {
     }
 }
 impl DescribeDbProxyTargetsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbProxyTargetsOutput`](crate::output::DescribeDbProxyTargetsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbProxyTargetsOutput`](crate::output::DescribeDbProxyTargetsOutput).
     pub fn builder() -> crate::output::describe_db_proxy_targets_output::Builder {
         crate::output::describe_db_proxy_targets_output::Builder::default()
     }
@@ -6282,8 +6528,10 @@ impl DescribeDbProxyTargetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbProxyTargetGroupsOutput {
     /// <p>An arbitrary number of <code>DBProxyTargetGroup</code> objects, containing details of the corresponding target groups.</p>
+    #[doc(hidden)]
     pub target_groups: std::option::Option<std::vec::Vec<crate::model::DbProxyTargetGroup>>,
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeDbProxyTargetGroupsOutput {
@@ -6304,11 +6552,10 @@ impl std::fmt::Debug for DescribeDbProxyTargetGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbProxyTargetGroupsOutput`](crate::output::DescribeDbProxyTargetGroupsOutput)
+/// See [`DescribeDbProxyTargetGroupsOutput`](crate::output::DescribeDbProxyTargetGroupsOutput).
 pub mod describe_db_proxy_target_groups_output {
 
-    /// A builder for [`DescribeDbProxyTargetGroupsOutput`](crate::output::DescribeDbProxyTargetGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbProxyTargetGroupsOutput`](crate::output::DescribeDbProxyTargetGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_groups:
@@ -6345,7 +6592,7 @@ pub mod describe_db_proxy_target_groups_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbProxyTargetGroupsOutput`](crate::output::DescribeDbProxyTargetGroupsOutput)
+        /// Consumes the builder and constructs a [`DescribeDbProxyTargetGroupsOutput`](crate::output::DescribeDbProxyTargetGroupsOutput).
         pub fn build(self) -> crate::output::DescribeDbProxyTargetGroupsOutput {
             crate::output::DescribeDbProxyTargetGroupsOutput {
                 target_groups: self.target_groups,
@@ -6355,7 +6602,7 @@ pub mod describe_db_proxy_target_groups_output {
     }
 }
 impl DescribeDbProxyTargetGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbProxyTargetGroupsOutput`](crate::output::DescribeDbProxyTargetGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbProxyTargetGroupsOutput`](crate::output::DescribeDbProxyTargetGroupsOutput).
     pub fn builder() -> crate::output::describe_db_proxy_target_groups_output::Builder {
         crate::output::describe_db_proxy_target_groups_output::Builder::default()
     }
@@ -6366,8 +6613,10 @@ impl DescribeDbProxyTargetGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbProxyEndpointsOutput {
     /// <p>The list of <code>ProxyEndpoint</code> objects returned by the API operation.</p>
+    #[doc(hidden)]
     pub db_proxy_endpoints: std::option::Option<std::vec::Vec<crate::model::DbProxyEndpoint>>,
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeDbProxyEndpointsOutput {
@@ -6388,11 +6637,10 @@ impl std::fmt::Debug for DescribeDbProxyEndpointsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbProxyEndpointsOutput`](crate::output::DescribeDbProxyEndpointsOutput)
+/// See [`DescribeDbProxyEndpointsOutput`](crate::output::DescribeDbProxyEndpointsOutput).
 pub mod describe_db_proxy_endpoints_output {
 
-    /// A builder for [`DescribeDbProxyEndpointsOutput`](crate::output::DescribeDbProxyEndpointsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbProxyEndpointsOutput`](crate::output::DescribeDbProxyEndpointsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_proxy_endpoints:
@@ -6429,7 +6677,7 @@ pub mod describe_db_proxy_endpoints_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbProxyEndpointsOutput`](crate::output::DescribeDbProxyEndpointsOutput)
+        /// Consumes the builder and constructs a [`DescribeDbProxyEndpointsOutput`](crate::output::DescribeDbProxyEndpointsOutput).
         pub fn build(self) -> crate::output::DescribeDbProxyEndpointsOutput {
             crate::output::DescribeDbProxyEndpointsOutput {
                 db_proxy_endpoints: self.db_proxy_endpoints,
@@ -6439,7 +6687,7 @@ pub mod describe_db_proxy_endpoints_output {
     }
 }
 impl DescribeDbProxyEndpointsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbProxyEndpointsOutput`](crate::output::DescribeDbProxyEndpointsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbProxyEndpointsOutput`](crate::output::DescribeDbProxyEndpointsOutput).
     pub fn builder() -> crate::output::describe_db_proxy_endpoints_output::Builder {
         crate::output::describe_db_proxy_endpoints_output::Builder::default()
     }
@@ -6450,8 +6698,10 @@ impl DescribeDbProxyEndpointsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbProxiesOutput {
     /// <p>A return value representing an arbitrary number of <code>DBProxy</code> data structures.</p>
+    #[doc(hidden)]
     pub db_proxies: std::option::Option<std::vec::Vec<crate::model::DbProxy>>,
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeDbProxiesOutput {
@@ -6472,11 +6722,10 @@ impl std::fmt::Debug for DescribeDbProxiesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbProxiesOutput`](crate::output::DescribeDbProxiesOutput)
+/// See [`DescribeDbProxiesOutput`](crate::output::DescribeDbProxiesOutput).
 pub mod describe_db_proxies_output {
 
-    /// A builder for [`DescribeDbProxiesOutput`](crate::output::DescribeDbProxiesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbProxiesOutput`](crate::output::DescribeDbProxiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_proxies: std::option::Option<std::vec::Vec<crate::model::DbProxy>>,
@@ -6512,7 +6761,7 @@ pub mod describe_db_proxies_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbProxiesOutput`](crate::output::DescribeDbProxiesOutput)
+        /// Consumes the builder and constructs a [`DescribeDbProxiesOutput`](crate::output::DescribeDbProxiesOutput).
         pub fn build(self) -> crate::output::DescribeDbProxiesOutput {
             crate::output::DescribeDbProxiesOutput {
                 db_proxies: self.db_proxies,
@@ -6522,7 +6771,7 @@ pub mod describe_db_proxies_output {
     }
 }
 impl DescribeDbProxiesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbProxiesOutput`](crate::output::DescribeDbProxiesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbProxiesOutput`](crate::output::DescribeDbProxiesOutput).
     pub fn builder() -> crate::output::describe_db_proxies_output::Builder {
         crate::output::describe_db_proxies_output::Builder::default()
     }
@@ -6533,8 +6782,10 @@ impl DescribeDbProxiesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbParametersOutput {
     /// <p>A list of <code>Parameter</code> values.</p>
+    #[doc(hidden)]
     pub parameters: std::option::Option<std::vec::Vec<crate::model::Parameter>>,
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeDbParametersOutput {
@@ -6555,11 +6806,10 @@ impl std::fmt::Debug for DescribeDbParametersOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbParametersOutput`](crate::output::DescribeDbParametersOutput)
+/// See [`DescribeDbParametersOutput`](crate::output::DescribeDbParametersOutput).
 pub mod describe_db_parameters_output {
 
-    /// A builder for [`DescribeDbParametersOutput`](crate::output::DescribeDbParametersOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbParametersOutput`](crate::output::DescribeDbParametersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameters: std::option::Option<std::vec::Vec<crate::model::Parameter>>,
@@ -6595,7 +6845,7 @@ pub mod describe_db_parameters_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbParametersOutput`](crate::output::DescribeDbParametersOutput)
+        /// Consumes the builder and constructs a [`DescribeDbParametersOutput`](crate::output::DescribeDbParametersOutput).
         pub fn build(self) -> crate::output::DescribeDbParametersOutput {
             crate::output::DescribeDbParametersOutput {
                 parameters: self.parameters,
@@ -6605,7 +6855,7 @@ pub mod describe_db_parameters_output {
     }
 }
 impl DescribeDbParametersOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbParametersOutput`](crate::output::DescribeDbParametersOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbParametersOutput`](crate::output::DescribeDbParametersOutput).
     pub fn builder() -> crate::output::describe_db_parameters_output::Builder {
         crate::output::describe_db_parameters_output::Builder::default()
     }
@@ -6616,8 +6866,10 @@ impl DescribeDbParametersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbParameterGroupsOutput {
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of <code>DBParameterGroup</code> instances.</p>
+    #[doc(hidden)]
     pub db_parameter_groups: std::option::Option<std::vec::Vec<crate::model::DbParameterGroup>>,
 }
 impl DescribeDbParameterGroupsOutput {
@@ -6638,11 +6890,10 @@ impl std::fmt::Debug for DescribeDbParameterGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbParameterGroupsOutput`](crate::output::DescribeDbParameterGroupsOutput)
+/// See [`DescribeDbParameterGroupsOutput`](crate::output::DescribeDbParameterGroupsOutput).
 pub mod describe_db_parameter_groups_output {
 
-    /// A builder for [`DescribeDbParameterGroupsOutput`](crate::output::DescribeDbParameterGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbParameterGroupsOutput`](crate::output::DescribeDbParameterGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -6679,7 +6930,7 @@ pub mod describe_db_parameter_groups_output {
             self.db_parameter_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbParameterGroupsOutput`](crate::output::DescribeDbParameterGroupsOutput)
+        /// Consumes the builder and constructs a [`DescribeDbParameterGroupsOutput`](crate::output::DescribeDbParameterGroupsOutput).
         pub fn build(self) -> crate::output::DescribeDbParameterGroupsOutput {
             crate::output::DescribeDbParameterGroupsOutput {
                 marker: self.marker,
@@ -6689,7 +6940,7 @@ pub mod describe_db_parameter_groups_output {
     }
 }
 impl DescribeDbParameterGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbParameterGroupsOutput`](crate::output::DescribeDbParameterGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbParameterGroupsOutput`](crate::output::DescribeDbParameterGroupsOutput).
     pub fn builder() -> crate::output::describe_db_parameter_groups_output::Builder {
         crate::output::describe_db_parameter_groups_output::Builder::default()
     }
@@ -6700,9 +6951,11 @@ impl DescribeDbParameterGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbLogFilesOutput {
     /// <p>The DB log files returned.</p>
+    #[doc(hidden)]
     pub describe_db_log_files:
         std::option::Option<std::vec::Vec<crate::model::DescribeDbLogFilesDetails>>,
     /// <p>A pagination token that can be used in a later <code>DescribeDBLogFiles</code> request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeDbLogFilesOutput {
@@ -6725,11 +6978,10 @@ impl std::fmt::Debug for DescribeDbLogFilesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbLogFilesOutput`](crate::output::DescribeDbLogFilesOutput)
+/// See [`DescribeDbLogFilesOutput`](crate::output::DescribeDbLogFilesOutput).
 pub mod describe_db_log_files_output {
 
-    /// A builder for [`DescribeDbLogFilesOutput`](crate::output::DescribeDbLogFilesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbLogFilesOutput`](crate::output::DescribeDbLogFilesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) describe_db_log_files:
@@ -6769,7 +7021,7 @@ pub mod describe_db_log_files_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbLogFilesOutput`](crate::output::DescribeDbLogFilesOutput)
+        /// Consumes the builder and constructs a [`DescribeDbLogFilesOutput`](crate::output::DescribeDbLogFilesOutput).
         pub fn build(self) -> crate::output::DescribeDbLogFilesOutput {
             crate::output::DescribeDbLogFilesOutput {
                 describe_db_log_files: self.describe_db_log_files,
@@ -6779,7 +7031,7 @@ pub mod describe_db_log_files_output {
     }
 }
 impl DescribeDbLogFilesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbLogFilesOutput`](crate::output::DescribeDbLogFilesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbLogFilesOutput`](crate::output::DescribeDbLogFilesOutput).
     pub fn builder() -> crate::output::describe_db_log_files_output::Builder {
         crate::output::describe_db_log_files_output::Builder::default()
     }
@@ -6790,8 +7042,10 @@ impl DescribeDbLogFilesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbInstancesOutput {
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code> .</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of <code>DBInstance</code> instances.</p>
+    #[doc(hidden)]
     pub db_instances: std::option::Option<std::vec::Vec<crate::model::DbInstance>>,
 }
 impl DescribeDbInstancesOutput {
@@ -6812,11 +7066,10 @@ impl std::fmt::Debug for DescribeDbInstancesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbInstancesOutput`](crate::output::DescribeDbInstancesOutput)
+/// See [`DescribeDbInstancesOutput`](crate::output::DescribeDbInstancesOutput).
 pub mod describe_db_instances_output {
 
-    /// A builder for [`DescribeDbInstancesOutput`](crate::output::DescribeDbInstancesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbInstancesOutput`](crate::output::DescribeDbInstancesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -6852,7 +7105,7 @@ pub mod describe_db_instances_output {
             self.db_instances = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbInstancesOutput`](crate::output::DescribeDbInstancesOutput)
+        /// Consumes the builder and constructs a [`DescribeDbInstancesOutput`](crate::output::DescribeDbInstancesOutput).
         pub fn build(self) -> crate::output::DescribeDbInstancesOutput {
             crate::output::DescribeDbInstancesOutput {
                 marker: self.marker,
@@ -6862,7 +7115,7 @@ pub mod describe_db_instances_output {
     }
 }
 impl DescribeDbInstancesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbInstancesOutput`](crate::output::DescribeDbInstancesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbInstancesOutput`](crate::output::DescribeDbInstancesOutput).
     pub fn builder() -> crate::output::describe_db_instances_output::Builder {
         crate::output::describe_db_instances_output::Builder::default()
     }
@@ -6873,8 +7126,10 @@ impl DescribeDbInstancesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbInstanceAutomatedBackupsOutput {
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of <code>DBInstanceAutomatedBackup</code> instances.</p>
+    #[doc(hidden)]
     pub db_instance_automated_backups:
         std::option::Option<std::vec::Vec<crate::model::DbInstanceAutomatedBackup>>,
 }
@@ -6901,11 +7156,10 @@ impl std::fmt::Debug for DescribeDbInstanceAutomatedBackupsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbInstanceAutomatedBackupsOutput`](crate::output::DescribeDbInstanceAutomatedBackupsOutput)
+/// See [`DescribeDbInstanceAutomatedBackupsOutput`](crate::output::DescribeDbInstanceAutomatedBackupsOutput).
 pub mod describe_db_instance_automated_backups_output {
 
-    /// A builder for [`DescribeDbInstanceAutomatedBackupsOutput`](crate::output::DescribeDbInstanceAutomatedBackupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbInstanceAutomatedBackupsOutput`](crate::output::DescribeDbInstanceAutomatedBackupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -6945,7 +7199,7 @@ pub mod describe_db_instance_automated_backups_output {
             self.db_instance_automated_backups = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbInstanceAutomatedBackupsOutput`](crate::output::DescribeDbInstanceAutomatedBackupsOutput)
+        /// Consumes the builder and constructs a [`DescribeDbInstanceAutomatedBackupsOutput`](crate::output::DescribeDbInstanceAutomatedBackupsOutput).
         pub fn build(self) -> crate::output::DescribeDbInstanceAutomatedBackupsOutput {
             crate::output::DescribeDbInstanceAutomatedBackupsOutput {
                 marker: self.marker,
@@ -6955,7 +7209,7 @@ pub mod describe_db_instance_automated_backups_output {
     }
 }
 impl DescribeDbInstanceAutomatedBackupsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbInstanceAutomatedBackupsOutput`](crate::output::DescribeDbInstanceAutomatedBackupsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbInstanceAutomatedBackupsOutput`](crate::output::DescribeDbInstanceAutomatedBackupsOutput).
     pub fn builder() -> crate::output::describe_db_instance_automated_backups_output::Builder {
         crate::output::describe_db_instance_automated_backups_output::Builder::default()
     }
@@ -6966,8 +7220,10 @@ impl DescribeDbInstanceAutomatedBackupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbEngineVersionsOutput {
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of <code>DBEngineVersion</code> elements.</p>
+    #[doc(hidden)]
     pub db_engine_versions: std::option::Option<std::vec::Vec<crate::model::DbEngineVersion>>,
 }
 impl DescribeDbEngineVersionsOutput {
@@ -6988,11 +7244,10 @@ impl std::fmt::Debug for DescribeDbEngineVersionsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbEngineVersionsOutput`](crate::output::DescribeDbEngineVersionsOutput)
+/// See [`DescribeDbEngineVersionsOutput`](crate::output::DescribeDbEngineVersionsOutput).
 pub mod describe_db_engine_versions_output {
 
-    /// A builder for [`DescribeDbEngineVersionsOutput`](crate::output::DescribeDbEngineVersionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbEngineVersionsOutput`](crate::output::DescribeDbEngineVersionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -7029,7 +7284,7 @@ pub mod describe_db_engine_versions_output {
             self.db_engine_versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbEngineVersionsOutput`](crate::output::DescribeDbEngineVersionsOutput)
+        /// Consumes the builder and constructs a [`DescribeDbEngineVersionsOutput`](crate::output::DescribeDbEngineVersionsOutput).
         pub fn build(self) -> crate::output::DescribeDbEngineVersionsOutput {
             crate::output::DescribeDbEngineVersionsOutput {
                 marker: self.marker,
@@ -7039,7 +7294,7 @@ pub mod describe_db_engine_versions_output {
     }
 }
 impl DescribeDbEngineVersionsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbEngineVersionsOutput`](crate::output::DescribeDbEngineVersionsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbEngineVersionsOutput`](crate::output::DescribeDbEngineVersionsOutput).
     pub fn builder() -> crate::output::describe_db_engine_versions_output::Builder {
         crate::output::describe_db_engine_versions_output::Builder::default()
     }
@@ -7050,8 +7305,10 @@ impl DescribeDbEngineVersionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbClusterSnapshotsOutput {
     /// <p>An optional pagination token provided by a previous <code>DescribeDBClusterSnapshots</code> request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>Provides a list of DB cluster snapshots for the user.</p>
+    #[doc(hidden)]
     pub db_cluster_snapshots: std::option::Option<std::vec::Vec<crate::model::DbClusterSnapshot>>,
 }
 impl DescribeDbClusterSnapshotsOutput {
@@ -7072,11 +7329,10 @@ impl std::fmt::Debug for DescribeDbClusterSnapshotsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbClusterSnapshotsOutput`](crate::output::DescribeDbClusterSnapshotsOutput)
+/// See [`DescribeDbClusterSnapshotsOutput`](crate::output::DescribeDbClusterSnapshotsOutput).
 pub mod describe_db_cluster_snapshots_output {
 
-    /// A builder for [`DescribeDbClusterSnapshotsOutput`](crate::output::DescribeDbClusterSnapshotsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbClusterSnapshotsOutput`](crate::output::DescribeDbClusterSnapshotsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -7113,7 +7369,7 @@ pub mod describe_db_cluster_snapshots_output {
             self.db_cluster_snapshots = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbClusterSnapshotsOutput`](crate::output::DescribeDbClusterSnapshotsOutput)
+        /// Consumes the builder and constructs a [`DescribeDbClusterSnapshotsOutput`](crate::output::DescribeDbClusterSnapshotsOutput).
         pub fn build(self) -> crate::output::DescribeDbClusterSnapshotsOutput {
             crate::output::DescribeDbClusterSnapshotsOutput {
                 marker: self.marker,
@@ -7123,7 +7379,7 @@ pub mod describe_db_cluster_snapshots_output {
     }
 }
 impl DescribeDbClusterSnapshotsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbClusterSnapshotsOutput`](crate::output::DescribeDbClusterSnapshotsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbClusterSnapshotsOutput`](crate::output::DescribeDbClusterSnapshotsOutput).
     pub fn builder() -> crate::output::describe_db_cluster_snapshots_output::Builder {
         crate::output::describe_db_cluster_snapshots_output::Builder::default()
     }
@@ -7135,6 +7391,7 @@ impl DescribeDbClusterSnapshotsOutput {
 pub struct DescribeDbClusterSnapshotAttributesOutput {
     /// <p>Contains the results of a successful call to the <code>DescribeDBClusterSnapshotAttributes</code> API action.</p>
     /// <p>Manual DB cluster snapshot attributes are used to authorize other Amazon Web Services accounts to copy or restore a manual DB cluster snapshot. For more information, see the <code>ModifyDBClusterSnapshotAttribute</code> API action.</p>
+    #[doc(hidden)]
     pub db_cluster_snapshot_attributes_result:
         std::option::Option<crate::model::DbClusterSnapshotAttributesResult>,
 }
@@ -7157,11 +7414,10 @@ impl std::fmt::Debug for DescribeDbClusterSnapshotAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbClusterSnapshotAttributesOutput`](crate::output::DescribeDbClusterSnapshotAttributesOutput)
+/// See [`DescribeDbClusterSnapshotAttributesOutput`](crate::output::DescribeDbClusterSnapshotAttributesOutput).
 pub mod describe_db_cluster_snapshot_attributes_output {
 
-    /// A builder for [`DescribeDbClusterSnapshotAttributesOutput`](crate::output::DescribeDbClusterSnapshotAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbClusterSnapshotAttributesOutput`](crate::output::DescribeDbClusterSnapshotAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_snapshot_attributes_result:
@@ -7186,7 +7442,7 @@ pub mod describe_db_cluster_snapshot_attributes_output {
             self.db_cluster_snapshot_attributes_result = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbClusterSnapshotAttributesOutput`](crate::output::DescribeDbClusterSnapshotAttributesOutput)
+        /// Consumes the builder and constructs a [`DescribeDbClusterSnapshotAttributesOutput`](crate::output::DescribeDbClusterSnapshotAttributesOutput).
         pub fn build(self) -> crate::output::DescribeDbClusterSnapshotAttributesOutput {
             crate::output::DescribeDbClusterSnapshotAttributesOutput {
                 db_cluster_snapshot_attributes_result: self.db_cluster_snapshot_attributes_result,
@@ -7195,7 +7451,7 @@ pub mod describe_db_cluster_snapshot_attributes_output {
     }
 }
 impl DescribeDbClusterSnapshotAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbClusterSnapshotAttributesOutput`](crate::output::DescribeDbClusterSnapshotAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbClusterSnapshotAttributesOutput`](crate::output::DescribeDbClusterSnapshotAttributesOutput).
     pub fn builder() -> crate::output::describe_db_cluster_snapshot_attributes_output::Builder {
         crate::output::describe_db_cluster_snapshot_attributes_output::Builder::default()
     }
@@ -7206,8 +7462,10 @@ impl DescribeDbClusterSnapshotAttributesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbClustersOutput {
     /// <p>A pagination token that can be used in a later DescribeDBClusters request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>Contains a list of DB clusters for the user.</p>
+    #[doc(hidden)]
     pub db_clusters: std::option::Option<std::vec::Vec<crate::model::DbCluster>>,
 }
 impl DescribeDbClustersOutput {
@@ -7228,11 +7486,10 @@ impl std::fmt::Debug for DescribeDbClustersOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbClustersOutput`](crate::output::DescribeDbClustersOutput)
+/// See [`DescribeDbClustersOutput`](crate::output::DescribeDbClustersOutput).
 pub mod describe_db_clusters_output {
 
-    /// A builder for [`DescribeDbClustersOutput`](crate::output::DescribeDbClustersOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbClustersOutput`](crate::output::DescribeDbClustersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -7268,7 +7525,7 @@ pub mod describe_db_clusters_output {
             self.db_clusters = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbClustersOutput`](crate::output::DescribeDbClustersOutput)
+        /// Consumes the builder and constructs a [`DescribeDbClustersOutput`](crate::output::DescribeDbClustersOutput).
         pub fn build(self) -> crate::output::DescribeDbClustersOutput {
             crate::output::DescribeDbClustersOutput {
                 marker: self.marker,
@@ -7278,7 +7535,7 @@ pub mod describe_db_clusters_output {
     }
 }
 impl DescribeDbClustersOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbClustersOutput`](crate::output::DescribeDbClustersOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbClustersOutput`](crate::output::DescribeDbClustersOutput).
     pub fn builder() -> crate::output::describe_db_clusters_output::Builder {
         crate::output::describe_db_clusters_output::Builder::default()
     }
@@ -7289,8 +7546,10 @@ impl DescribeDbClustersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbClusterParametersOutput {
     /// <p>Provides a list of parameters for the DB cluster parameter group.</p>
+    #[doc(hidden)]
     pub parameters: std::option::Option<std::vec::Vec<crate::model::Parameter>>,
     /// <p>An optional pagination token provided by a previous <code>DescribeDBClusterParameters</code> request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeDbClusterParametersOutput {
@@ -7311,11 +7570,10 @@ impl std::fmt::Debug for DescribeDbClusterParametersOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbClusterParametersOutput`](crate::output::DescribeDbClusterParametersOutput)
+/// See [`DescribeDbClusterParametersOutput`](crate::output::DescribeDbClusterParametersOutput).
 pub mod describe_db_cluster_parameters_output {
 
-    /// A builder for [`DescribeDbClusterParametersOutput`](crate::output::DescribeDbClusterParametersOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbClusterParametersOutput`](crate::output::DescribeDbClusterParametersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameters: std::option::Option<std::vec::Vec<crate::model::Parameter>>,
@@ -7351,7 +7609,7 @@ pub mod describe_db_cluster_parameters_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbClusterParametersOutput`](crate::output::DescribeDbClusterParametersOutput)
+        /// Consumes the builder and constructs a [`DescribeDbClusterParametersOutput`](crate::output::DescribeDbClusterParametersOutput).
         pub fn build(self) -> crate::output::DescribeDbClusterParametersOutput {
             crate::output::DescribeDbClusterParametersOutput {
                 parameters: self.parameters,
@@ -7361,7 +7619,7 @@ pub mod describe_db_cluster_parameters_output {
     }
 }
 impl DescribeDbClusterParametersOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbClusterParametersOutput`](crate::output::DescribeDbClusterParametersOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbClusterParametersOutput`](crate::output::DescribeDbClusterParametersOutput).
     pub fn builder() -> crate::output::describe_db_cluster_parameters_output::Builder {
         crate::output::describe_db_cluster_parameters_output::Builder::default()
     }
@@ -7372,8 +7630,10 @@ impl DescribeDbClusterParametersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbClusterParameterGroupsOutput {
     /// <p>An optional pagination token provided by a previous <code>DescribeDBClusterParameterGroups</code> request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of DB cluster parameter groups.</p>
+    #[doc(hidden)]
     pub db_cluster_parameter_groups:
         std::option::Option<std::vec::Vec<crate::model::DbClusterParameterGroup>>,
 }
@@ -7400,11 +7660,10 @@ impl std::fmt::Debug for DescribeDbClusterParameterGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbClusterParameterGroupsOutput`](crate::output::DescribeDbClusterParameterGroupsOutput)
+/// See [`DescribeDbClusterParameterGroupsOutput`](crate::output::DescribeDbClusterParameterGroupsOutput).
 pub mod describe_db_cluster_parameter_groups_output {
 
-    /// A builder for [`DescribeDbClusterParameterGroupsOutput`](crate::output::DescribeDbClusterParameterGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbClusterParameterGroupsOutput`](crate::output::DescribeDbClusterParameterGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -7444,7 +7703,7 @@ pub mod describe_db_cluster_parameter_groups_output {
             self.db_cluster_parameter_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbClusterParameterGroupsOutput`](crate::output::DescribeDbClusterParameterGroupsOutput)
+        /// Consumes the builder and constructs a [`DescribeDbClusterParameterGroupsOutput`](crate::output::DescribeDbClusterParameterGroupsOutput).
         pub fn build(self) -> crate::output::DescribeDbClusterParameterGroupsOutput {
             crate::output::DescribeDbClusterParameterGroupsOutput {
                 marker: self.marker,
@@ -7454,7 +7713,7 @@ pub mod describe_db_cluster_parameter_groups_output {
     }
 }
 impl DescribeDbClusterParameterGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbClusterParameterGroupsOutput`](crate::output::DescribeDbClusterParameterGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbClusterParameterGroupsOutput`](crate::output::DescribeDbClusterParameterGroupsOutput).
     pub fn builder() -> crate::output::describe_db_cluster_parameter_groups_output::Builder {
         crate::output::describe_db_cluster_parameter_groups_output::Builder::default()
     }
@@ -7465,8 +7724,10 @@ impl DescribeDbClusterParameterGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbClusterEndpointsOutput {
     /// <p>An optional pagination token provided by a previous <code>DescribeDBClusterEndpoints</code> request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>Contains the details of the endpoints associated with the cluster and matching any filter conditions.</p>
+    #[doc(hidden)]
     pub db_cluster_endpoints: std::option::Option<std::vec::Vec<crate::model::DbClusterEndpoint>>,
 }
 impl DescribeDbClusterEndpointsOutput {
@@ -7487,11 +7748,10 @@ impl std::fmt::Debug for DescribeDbClusterEndpointsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbClusterEndpointsOutput`](crate::output::DescribeDbClusterEndpointsOutput)
+/// See [`DescribeDbClusterEndpointsOutput`](crate::output::DescribeDbClusterEndpointsOutput).
 pub mod describe_db_cluster_endpoints_output {
 
-    /// A builder for [`DescribeDbClusterEndpointsOutput`](crate::output::DescribeDbClusterEndpointsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbClusterEndpointsOutput`](crate::output::DescribeDbClusterEndpointsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -7528,7 +7788,7 @@ pub mod describe_db_cluster_endpoints_output {
             self.db_cluster_endpoints = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbClusterEndpointsOutput`](crate::output::DescribeDbClusterEndpointsOutput)
+        /// Consumes the builder and constructs a [`DescribeDbClusterEndpointsOutput`](crate::output::DescribeDbClusterEndpointsOutput).
         pub fn build(self) -> crate::output::DescribeDbClusterEndpointsOutput {
             crate::output::DescribeDbClusterEndpointsOutput {
                 marker: self.marker,
@@ -7538,7 +7798,7 @@ pub mod describe_db_cluster_endpoints_output {
     }
 }
 impl DescribeDbClusterEndpointsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbClusterEndpointsOutput`](crate::output::DescribeDbClusterEndpointsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbClusterEndpointsOutput`](crate::output::DescribeDbClusterEndpointsOutput).
     pub fn builder() -> crate::output::describe_db_cluster_endpoints_output::Builder {
         crate::output::describe_db_cluster_endpoints_output::Builder::default()
     }
@@ -7549,8 +7809,10 @@ impl DescribeDbClusterEndpointsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDbClusterBacktracksOutput {
     /// <p>A pagination token that can be used in a later <code>DescribeDBClusterBacktracks</code> request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>Contains a list of backtracks for the user.</p>
+    #[doc(hidden)]
     pub db_cluster_backtracks: std::option::Option<std::vec::Vec<crate::model::DbClusterBacktrack>>,
 }
 impl DescribeDbClusterBacktracksOutput {
@@ -7573,11 +7835,10 @@ impl std::fmt::Debug for DescribeDbClusterBacktracksOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDbClusterBacktracksOutput`](crate::output::DescribeDbClusterBacktracksOutput)
+/// See [`DescribeDbClusterBacktracksOutput`](crate::output::DescribeDbClusterBacktracksOutput).
 pub mod describe_db_cluster_backtracks_output {
 
-    /// A builder for [`DescribeDbClusterBacktracksOutput`](crate::output::DescribeDbClusterBacktracksOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDbClusterBacktracksOutput`](crate::output::DescribeDbClusterBacktracksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -7614,7 +7875,7 @@ pub mod describe_db_cluster_backtracks_output {
             self.db_cluster_backtracks = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDbClusterBacktracksOutput`](crate::output::DescribeDbClusterBacktracksOutput)
+        /// Consumes the builder and constructs a [`DescribeDbClusterBacktracksOutput`](crate::output::DescribeDbClusterBacktracksOutput).
         pub fn build(self) -> crate::output::DescribeDbClusterBacktracksOutput {
             crate::output::DescribeDbClusterBacktracksOutput {
                 marker: self.marker,
@@ -7624,7 +7885,7 @@ pub mod describe_db_cluster_backtracks_output {
     }
 }
 impl DescribeDbClusterBacktracksOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDbClusterBacktracksOutput`](crate::output::DescribeDbClusterBacktracksOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDbClusterBacktracksOutput`](crate::output::DescribeDbClusterBacktracksOutput).
     pub fn builder() -> crate::output::describe_db_cluster_backtracks_output::Builder {
         crate::output::describe_db_cluster_backtracks_output::Builder::default()
     }
@@ -7635,8 +7896,10 @@ impl DescribeDbClusterBacktracksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeCertificatesOutput {
     /// <p>The list of <code>Certificate</code> objects for the Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub certificates: std::option::Option<std::vec::Vec<crate::model::Certificate>>,
     /// <p>An optional pagination token provided by a previous <code>DescribeCertificates</code> request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code> .</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeCertificatesOutput {
@@ -7657,11 +7920,10 @@ impl std::fmt::Debug for DescribeCertificatesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput)
+/// See [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput).
 pub mod describe_certificates_output {
 
-    /// A builder for [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificates: std::option::Option<std::vec::Vec<crate::model::Certificate>>,
@@ -7697,7 +7959,7 @@ pub mod describe_certificates_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput)
+        /// Consumes the builder and constructs a [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput).
         pub fn build(self) -> crate::output::DescribeCertificatesOutput {
             crate::output::DescribeCertificatesOutput {
                 certificates: self.certificates,
@@ -7707,7 +7969,7 @@ pub mod describe_certificates_output {
     }
 }
 impl DescribeCertificatesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput).
     pub fn builder() -> crate::output::describe_certificates_output::Builder {
         crate::output::describe_certificates_output::Builder::default()
     }
@@ -7718,6 +7980,7 @@ impl DescribeCertificatesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAccountAttributesOutput {
     /// <p>A list of <code>AccountQuota</code> objects. Within this list, each quota has a name, a count of usage toward the quota maximum, and a maximum value for the quota.</p>
+    #[doc(hidden)]
     pub account_quotas: std::option::Option<std::vec::Vec<crate::model::AccountQuota>>,
 }
 impl DescribeAccountAttributesOutput {
@@ -7733,11 +7996,10 @@ impl std::fmt::Debug for DescribeAccountAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
+/// See [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput).
 pub mod describe_account_attributes_output {
 
-    /// A builder for [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_quotas: std::option::Option<std::vec::Vec<crate::model::AccountQuota>>,
@@ -7762,7 +8024,7 @@ pub mod describe_account_attributes_output {
             self.account_quotas = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
+        /// Consumes the builder and constructs a [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput).
         pub fn build(self) -> crate::output::DescribeAccountAttributesOutput {
             crate::output::DescribeAccountAttributesOutput {
                 account_quotas: self.account_quotas,
@@ -7771,7 +8033,7 @@ pub mod describe_account_attributes_output {
     }
 }
 impl DescribeAccountAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput).
     pub fn builder() -> crate::output::describe_account_attributes_output::Builder {
         crate::output::describe_account_attributes_output::Builder::default()
     }
@@ -7787,22 +8049,21 @@ impl std::fmt::Debug for DeregisterDbProxyTargetsOutput {
         formatter.finish()
     }
 }
-/// See [`DeregisterDbProxyTargetsOutput`](crate::output::DeregisterDbProxyTargetsOutput)
+/// See [`DeregisterDbProxyTargetsOutput`](crate::output::DeregisterDbProxyTargetsOutput).
 pub mod deregister_db_proxy_targets_output {
 
-    /// A builder for [`DeregisterDbProxyTargetsOutput`](crate::output::DeregisterDbProxyTargetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeregisterDbProxyTargetsOutput`](crate::output::DeregisterDbProxyTargetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeregisterDbProxyTargetsOutput`](crate::output::DeregisterDbProxyTargetsOutput)
+        /// Consumes the builder and constructs a [`DeregisterDbProxyTargetsOutput`](crate::output::DeregisterDbProxyTargetsOutput).
         pub fn build(self) -> crate::output::DeregisterDbProxyTargetsOutput {
             crate::output::DeregisterDbProxyTargetsOutput {}
         }
     }
 }
 impl DeregisterDbProxyTargetsOutput {
-    /// Creates a new builder-style object to manufacture [`DeregisterDbProxyTargetsOutput`](crate::output::DeregisterDbProxyTargetsOutput)
+    /// Creates a new builder-style object to manufacture [`DeregisterDbProxyTargetsOutput`](crate::output::DeregisterDbProxyTargetsOutput).
     pub fn builder() -> crate::output::deregister_db_proxy_targets_output::Builder {
         crate::output::deregister_db_proxy_targets_output::Builder::default()
     }
@@ -7818,22 +8079,21 @@ impl std::fmt::Debug for DeleteOptionGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteOptionGroupOutput`](crate::output::DeleteOptionGroupOutput)
+/// See [`DeleteOptionGroupOutput`](crate::output::DeleteOptionGroupOutput).
 pub mod delete_option_group_output {
 
-    /// A builder for [`DeleteOptionGroupOutput`](crate::output::DeleteOptionGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteOptionGroupOutput`](crate::output::DeleteOptionGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteOptionGroupOutput`](crate::output::DeleteOptionGroupOutput)
+        /// Consumes the builder and constructs a [`DeleteOptionGroupOutput`](crate::output::DeleteOptionGroupOutput).
         pub fn build(self) -> crate::output::DeleteOptionGroupOutput {
             crate::output::DeleteOptionGroupOutput {}
         }
     }
 }
 impl DeleteOptionGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteOptionGroupOutput`](crate::output::DeleteOptionGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteOptionGroupOutput`](crate::output::DeleteOptionGroupOutput).
     pub fn builder() -> crate::output::delete_option_group_output::Builder {
         crate::output::delete_option_group_output::Builder::default()
     }
@@ -7844,6 +8104,7 @@ impl DeleteOptionGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteGlobalClusterOutput {
     /// <p>A data type representing an Aurora global database.</p>
+    #[doc(hidden)]
     pub global_cluster: std::option::Option<crate::model::GlobalCluster>,
 }
 impl DeleteGlobalClusterOutput {
@@ -7859,11 +8120,10 @@ impl std::fmt::Debug for DeleteGlobalClusterOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteGlobalClusterOutput`](crate::output::DeleteGlobalClusterOutput)
+/// See [`DeleteGlobalClusterOutput`](crate::output::DeleteGlobalClusterOutput).
 pub mod delete_global_cluster_output {
 
-    /// A builder for [`DeleteGlobalClusterOutput`](crate::output::DeleteGlobalClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteGlobalClusterOutput`](crate::output::DeleteGlobalClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_cluster: std::option::Option<crate::model::GlobalCluster>,
@@ -7882,7 +8142,7 @@ pub mod delete_global_cluster_output {
             self.global_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteGlobalClusterOutput`](crate::output::DeleteGlobalClusterOutput)
+        /// Consumes the builder and constructs a [`DeleteGlobalClusterOutput`](crate::output::DeleteGlobalClusterOutput).
         pub fn build(self) -> crate::output::DeleteGlobalClusterOutput {
             crate::output::DeleteGlobalClusterOutput {
                 global_cluster: self.global_cluster,
@@ -7891,7 +8151,7 @@ pub mod delete_global_cluster_output {
     }
 }
 impl DeleteGlobalClusterOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteGlobalClusterOutput`](crate::output::DeleteGlobalClusterOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteGlobalClusterOutput`](crate::output::DeleteGlobalClusterOutput).
     pub fn builder() -> crate::output::delete_global_cluster_output::Builder {
         crate::output::delete_global_cluster_output::Builder::default()
     }
@@ -7902,6 +8162,7 @@ impl DeleteGlobalClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteEventSubscriptionOutput {
     /// <p>Contains the results of a successful invocation of the <code>DescribeEventSubscriptions</code> action.</p>
+    #[doc(hidden)]
     pub event_subscription: std::option::Option<crate::model::EventSubscription>,
 }
 impl DeleteEventSubscriptionOutput {
@@ -7917,11 +8178,10 @@ impl std::fmt::Debug for DeleteEventSubscriptionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput)
+/// See [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput).
 pub mod delete_event_subscription_output {
 
-    /// A builder for [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_subscription: std::option::Option<crate::model::EventSubscription>,
@@ -7940,7 +8200,7 @@ pub mod delete_event_subscription_output {
             self.event_subscription = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput)
+        /// Consumes the builder and constructs a [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput).
         pub fn build(self) -> crate::output::DeleteEventSubscriptionOutput {
             crate::output::DeleteEventSubscriptionOutput {
                 event_subscription: self.event_subscription,
@@ -7949,7 +8209,7 @@ pub mod delete_event_subscription_output {
     }
 }
 impl DeleteEventSubscriptionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput).
     pub fn builder() -> crate::output::delete_event_subscription_output::Builder {
         crate::output::delete_event_subscription_output::Builder::default()
     }
@@ -7965,22 +8225,21 @@ impl std::fmt::Debug for DeleteDbSubnetGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDbSubnetGroupOutput`](crate::output::DeleteDbSubnetGroupOutput)
+/// See [`DeleteDbSubnetGroupOutput`](crate::output::DeleteDbSubnetGroupOutput).
 pub mod delete_db_subnet_group_output {
 
-    /// A builder for [`DeleteDbSubnetGroupOutput`](crate::output::DeleteDbSubnetGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDbSubnetGroupOutput`](crate::output::DeleteDbSubnetGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteDbSubnetGroupOutput`](crate::output::DeleteDbSubnetGroupOutput)
+        /// Consumes the builder and constructs a [`DeleteDbSubnetGroupOutput`](crate::output::DeleteDbSubnetGroupOutput).
         pub fn build(self) -> crate::output::DeleteDbSubnetGroupOutput {
             crate::output::DeleteDbSubnetGroupOutput {}
         }
     }
 }
 impl DeleteDbSubnetGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDbSubnetGroupOutput`](crate::output::DeleteDbSubnetGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDbSubnetGroupOutput`](crate::output::DeleteDbSubnetGroupOutput).
     pub fn builder() -> crate::output::delete_db_subnet_group_output::Builder {
         crate::output::delete_db_subnet_group_output::Builder::default()
     }
@@ -7992,6 +8251,7 @@ impl DeleteDbSubnetGroupOutput {
 pub struct DeleteDbSnapshotOutput {
     /// <p>Contains the details of an Amazon RDS DB snapshot.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBSnapshots</code> action.</p>
+    #[doc(hidden)]
     pub db_snapshot: std::option::Option<crate::model::DbSnapshot>,
 }
 impl DeleteDbSnapshotOutput {
@@ -8008,11 +8268,10 @@ impl std::fmt::Debug for DeleteDbSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDbSnapshotOutput`](crate::output::DeleteDbSnapshotOutput)
+/// See [`DeleteDbSnapshotOutput`](crate::output::DeleteDbSnapshotOutput).
 pub mod delete_db_snapshot_output {
 
-    /// A builder for [`DeleteDbSnapshotOutput`](crate::output::DeleteDbSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDbSnapshotOutput`](crate::output::DeleteDbSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_snapshot: std::option::Option<crate::model::DbSnapshot>,
@@ -8033,7 +8292,7 @@ pub mod delete_db_snapshot_output {
             self.db_snapshot = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDbSnapshotOutput`](crate::output::DeleteDbSnapshotOutput)
+        /// Consumes the builder and constructs a [`DeleteDbSnapshotOutput`](crate::output::DeleteDbSnapshotOutput).
         pub fn build(self) -> crate::output::DeleteDbSnapshotOutput {
             crate::output::DeleteDbSnapshotOutput {
                 db_snapshot: self.db_snapshot,
@@ -8042,7 +8301,7 @@ pub mod delete_db_snapshot_output {
     }
 }
 impl DeleteDbSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDbSnapshotOutput`](crate::output::DeleteDbSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDbSnapshotOutput`](crate::output::DeleteDbSnapshotOutput).
     pub fn builder() -> crate::output::delete_db_snapshot_output::Builder {
         crate::output::delete_db_snapshot_output::Builder::default()
     }
@@ -8058,22 +8317,21 @@ impl std::fmt::Debug for DeleteDbSecurityGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDbSecurityGroupOutput`](crate::output::DeleteDbSecurityGroupOutput)
+/// See [`DeleteDbSecurityGroupOutput`](crate::output::DeleteDbSecurityGroupOutput).
 pub mod delete_db_security_group_output {
 
-    /// A builder for [`DeleteDbSecurityGroupOutput`](crate::output::DeleteDbSecurityGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDbSecurityGroupOutput`](crate::output::DeleteDbSecurityGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteDbSecurityGroupOutput`](crate::output::DeleteDbSecurityGroupOutput)
+        /// Consumes the builder and constructs a [`DeleteDbSecurityGroupOutput`](crate::output::DeleteDbSecurityGroupOutput).
         pub fn build(self) -> crate::output::DeleteDbSecurityGroupOutput {
             crate::output::DeleteDbSecurityGroupOutput {}
         }
     }
 }
 impl DeleteDbSecurityGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDbSecurityGroupOutput`](crate::output::DeleteDbSecurityGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDbSecurityGroupOutput`](crate::output::DeleteDbSecurityGroupOutput).
     pub fn builder() -> crate::output::delete_db_security_group_output::Builder {
         crate::output::delete_db_security_group_output::Builder::default()
     }
@@ -8084,6 +8342,7 @@ impl DeleteDbSecurityGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteDbProxyEndpointOutput {
     /// <p>The data structure representing the details of the DB proxy endpoint that you delete.</p>
+    #[doc(hidden)]
     pub db_proxy_endpoint: std::option::Option<crate::model::DbProxyEndpoint>,
 }
 impl DeleteDbProxyEndpointOutput {
@@ -8099,11 +8358,10 @@ impl std::fmt::Debug for DeleteDbProxyEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDbProxyEndpointOutput`](crate::output::DeleteDbProxyEndpointOutput)
+/// See [`DeleteDbProxyEndpointOutput`](crate::output::DeleteDbProxyEndpointOutput).
 pub mod delete_db_proxy_endpoint_output {
 
-    /// A builder for [`DeleteDbProxyEndpointOutput`](crate::output::DeleteDbProxyEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDbProxyEndpointOutput`](crate::output::DeleteDbProxyEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_proxy_endpoint: std::option::Option<crate::model::DbProxyEndpoint>,
@@ -8122,7 +8380,7 @@ pub mod delete_db_proxy_endpoint_output {
             self.db_proxy_endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDbProxyEndpointOutput`](crate::output::DeleteDbProxyEndpointOutput)
+        /// Consumes the builder and constructs a [`DeleteDbProxyEndpointOutput`](crate::output::DeleteDbProxyEndpointOutput).
         pub fn build(self) -> crate::output::DeleteDbProxyEndpointOutput {
             crate::output::DeleteDbProxyEndpointOutput {
                 db_proxy_endpoint: self.db_proxy_endpoint,
@@ -8131,7 +8389,7 @@ pub mod delete_db_proxy_endpoint_output {
     }
 }
 impl DeleteDbProxyEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDbProxyEndpointOutput`](crate::output::DeleteDbProxyEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDbProxyEndpointOutput`](crate::output::DeleteDbProxyEndpointOutput).
     pub fn builder() -> crate::output::delete_db_proxy_endpoint_output::Builder {
         crate::output::delete_db_proxy_endpoint_output::Builder::default()
     }
@@ -8142,6 +8400,7 @@ impl DeleteDbProxyEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteDbProxyOutput {
     /// <p>The data structure representing the details of the DB proxy that you delete.</p>
+    #[doc(hidden)]
     pub db_proxy: std::option::Option<crate::model::DbProxy>,
 }
 impl DeleteDbProxyOutput {
@@ -8157,11 +8416,10 @@ impl std::fmt::Debug for DeleteDbProxyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDbProxyOutput`](crate::output::DeleteDbProxyOutput)
+/// See [`DeleteDbProxyOutput`](crate::output::DeleteDbProxyOutput).
 pub mod delete_db_proxy_output {
 
-    /// A builder for [`DeleteDbProxyOutput`](crate::output::DeleteDbProxyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDbProxyOutput`](crate::output::DeleteDbProxyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_proxy: std::option::Option<crate::model::DbProxy>,
@@ -8177,7 +8435,7 @@ pub mod delete_db_proxy_output {
             self.db_proxy = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDbProxyOutput`](crate::output::DeleteDbProxyOutput)
+        /// Consumes the builder and constructs a [`DeleteDbProxyOutput`](crate::output::DeleteDbProxyOutput).
         pub fn build(self) -> crate::output::DeleteDbProxyOutput {
             crate::output::DeleteDbProxyOutput {
                 db_proxy: self.db_proxy,
@@ -8186,7 +8444,7 @@ pub mod delete_db_proxy_output {
     }
 }
 impl DeleteDbProxyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDbProxyOutput`](crate::output::DeleteDbProxyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDbProxyOutput`](crate::output::DeleteDbProxyOutput).
     pub fn builder() -> crate::output::delete_db_proxy_output::Builder {
         crate::output::delete_db_proxy_output::Builder::default()
     }
@@ -8202,22 +8460,21 @@ impl std::fmt::Debug for DeleteDbParameterGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDbParameterGroupOutput`](crate::output::DeleteDbParameterGroupOutput)
+/// See [`DeleteDbParameterGroupOutput`](crate::output::DeleteDbParameterGroupOutput).
 pub mod delete_db_parameter_group_output {
 
-    /// A builder for [`DeleteDbParameterGroupOutput`](crate::output::DeleteDbParameterGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDbParameterGroupOutput`](crate::output::DeleteDbParameterGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteDbParameterGroupOutput`](crate::output::DeleteDbParameterGroupOutput)
+        /// Consumes the builder and constructs a [`DeleteDbParameterGroupOutput`](crate::output::DeleteDbParameterGroupOutput).
         pub fn build(self) -> crate::output::DeleteDbParameterGroupOutput {
             crate::output::DeleteDbParameterGroupOutput {}
         }
     }
 }
 impl DeleteDbParameterGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDbParameterGroupOutput`](crate::output::DeleteDbParameterGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDbParameterGroupOutput`](crate::output::DeleteDbParameterGroupOutput).
     pub fn builder() -> crate::output::delete_db_parameter_group_output::Builder {
         crate::output::delete_db_parameter_group_output::Builder::default()
     }
@@ -8228,6 +8485,7 @@ impl DeleteDbParameterGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteDbInstanceAutomatedBackupOutput {
     /// <p>An automated backup of a DB instance. It consists of system backups, transaction logs, and the database instance properties that existed at the time you deleted the source instance.</p>
+    #[doc(hidden)]
     pub db_instance_automated_backup: std::option::Option<crate::model::DbInstanceAutomatedBackup>,
 }
 impl DeleteDbInstanceAutomatedBackupOutput {
@@ -8248,11 +8506,10 @@ impl std::fmt::Debug for DeleteDbInstanceAutomatedBackupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDbInstanceAutomatedBackupOutput`](crate::output::DeleteDbInstanceAutomatedBackupOutput)
+/// See [`DeleteDbInstanceAutomatedBackupOutput`](crate::output::DeleteDbInstanceAutomatedBackupOutput).
 pub mod delete_db_instance_automated_backup_output {
 
-    /// A builder for [`DeleteDbInstanceAutomatedBackupOutput`](crate::output::DeleteDbInstanceAutomatedBackupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDbInstanceAutomatedBackupOutput`](crate::output::DeleteDbInstanceAutomatedBackupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance_automated_backup:
@@ -8275,7 +8532,7 @@ pub mod delete_db_instance_automated_backup_output {
             self.db_instance_automated_backup = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDbInstanceAutomatedBackupOutput`](crate::output::DeleteDbInstanceAutomatedBackupOutput)
+        /// Consumes the builder and constructs a [`DeleteDbInstanceAutomatedBackupOutput`](crate::output::DeleteDbInstanceAutomatedBackupOutput).
         pub fn build(self) -> crate::output::DeleteDbInstanceAutomatedBackupOutput {
             crate::output::DeleteDbInstanceAutomatedBackupOutput {
                 db_instance_automated_backup: self.db_instance_automated_backup,
@@ -8284,7 +8541,7 @@ pub mod delete_db_instance_automated_backup_output {
     }
 }
 impl DeleteDbInstanceAutomatedBackupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDbInstanceAutomatedBackupOutput`](crate::output::DeleteDbInstanceAutomatedBackupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDbInstanceAutomatedBackupOutput`](crate::output::DeleteDbInstanceAutomatedBackupOutput).
     pub fn builder() -> crate::output::delete_db_instance_automated_backup_output::Builder {
         crate::output::delete_db_instance_automated_backup_output::Builder::default()
     }
@@ -8296,6 +8553,7 @@ impl DeleteDbInstanceAutomatedBackupOutput {
 pub struct DeleteDbInstanceOutput {
     /// <p>Contains the details of an Amazon RDS DB instance.</p>
     /// <p>This data type is used as a response element in the operations <code>CreateDBInstance</code>, <code>CreateDBInstanceReadReplica</code>, <code>DeleteDBInstance</code>, <code>DescribeDBInstances</code>, <code>ModifyDBInstance</code>, <code>PromoteReadReplica</code>, <code>RebootDBInstance</code>, <code>RestoreDBInstanceFromDBSnapshot</code>, <code>RestoreDBInstanceFromS3</code>, <code>RestoreDBInstanceToPointInTime</code>, <code>StartDBInstance</code>, and <code>StopDBInstance</code>.</p>
+    #[doc(hidden)]
     pub db_instance: std::option::Option<crate::model::DbInstance>,
 }
 impl DeleteDbInstanceOutput {
@@ -8312,11 +8570,10 @@ impl std::fmt::Debug for DeleteDbInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDbInstanceOutput`](crate::output::DeleteDbInstanceOutput)
+/// See [`DeleteDbInstanceOutput`](crate::output::DeleteDbInstanceOutput).
 pub mod delete_db_instance_output {
 
-    /// A builder for [`DeleteDbInstanceOutput`](crate::output::DeleteDbInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDbInstanceOutput`](crate::output::DeleteDbInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance: std::option::Option<crate::model::DbInstance>,
@@ -8337,7 +8594,7 @@ pub mod delete_db_instance_output {
             self.db_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDbInstanceOutput`](crate::output::DeleteDbInstanceOutput)
+        /// Consumes the builder and constructs a [`DeleteDbInstanceOutput`](crate::output::DeleteDbInstanceOutput).
         pub fn build(self) -> crate::output::DeleteDbInstanceOutput {
             crate::output::DeleteDbInstanceOutput {
                 db_instance: self.db_instance,
@@ -8346,7 +8603,7 @@ pub mod delete_db_instance_output {
     }
 }
 impl DeleteDbInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDbInstanceOutput`](crate::output::DeleteDbInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDbInstanceOutput`](crate::output::DeleteDbInstanceOutput).
     pub fn builder() -> crate::output::delete_db_instance_output::Builder {
         crate::output::delete_db_instance_output::Builder::default()
     }
@@ -8358,6 +8615,7 @@ impl DeleteDbInstanceOutput {
 pub struct DeleteDbClusterSnapshotOutput {
     /// <p>Contains the details for an Amazon RDS DB cluster snapshot</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBClusterSnapshots</code> action.</p>
+    #[doc(hidden)]
     pub db_cluster_snapshot: std::option::Option<crate::model::DbClusterSnapshot>,
 }
 impl DeleteDbClusterSnapshotOutput {
@@ -8374,11 +8632,10 @@ impl std::fmt::Debug for DeleteDbClusterSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDbClusterSnapshotOutput`](crate::output::DeleteDbClusterSnapshotOutput)
+/// See [`DeleteDbClusterSnapshotOutput`](crate::output::DeleteDbClusterSnapshotOutput).
 pub mod delete_db_cluster_snapshot_output {
 
-    /// A builder for [`DeleteDbClusterSnapshotOutput`](crate::output::DeleteDbClusterSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDbClusterSnapshotOutput`](crate::output::DeleteDbClusterSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_snapshot: std::option::Option<crate::model::DbClusterSnapshot>,
@@ -8399,7 +8656,7 @@ pub mod delete_db_cluster_snapshot_output {
             self.db_cluster_snapshot = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDbClusterSnapshotOutput`](crate::output::DeleteDbClusterSnapshotOutput)
+        /// Consumes the builder and constructs a [`DeleteDbClusterSnapshotOutput`](crate::output::DeleteDbClusterSnapshotOutput).
         pub fn build(self) -> crate::output::DeleteDbClusterSnapshotOutput {
             crate::output::DeleteDbClusterSnapshotOutput {
                 db_cluster_snapshot: self.db_cluster_snapshot,
@@ -8408,7 +8665,7 @@ pub mod delete_db_cluster_snapshot_output {
     }
 }
 impl DeleteDbClusterSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDbClusterSnapshotOutput`](crate::output::DeleteDbClusterSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDbClusterSnapshotOutput`](crate::output::DeleteDbClusterSnapshotOutput).
     pub fn builder() -> crate::output::delete_db_cluster_snapshot_output::Builder {
         crate::output::delete_db_cluster_snapshot_output::Builder::default()
     }
@@ -8424,22 +8681,21 @@ impl std::fmt::Debug for DeleteDbClusterParameterGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDbClusterParameterGroupOutput`](crate::output::DeleteDbClusterParameterGroupOutput)
+/// See [`DeleteDbClusterParameterGroupOutput`](crate::output::DeleteDbClusterParameterGroupOutput).
 pub mod delete_db_cluster_parameter_group_output {
 
-    /// A builder for [`DeleteDbClusterParameterGroupOutput`](crate::output::DeleteDbClusterParameterGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDbClusterParameterGroupOutput`](crate::output::DeleteDbClusterParameterGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteDbClusterParameterGroupOutput`](crate::output::DeleteDbClusterParameterGroupOutput)
+        /// Consumes the builder and constructs a [`DeleteDbClusterParameterGroupOutput`](crate::output::DeleteDbClusterParameterGroupOutput).
         pub fn build(self) -> crate::output::DeleteDbClusterParameterGroupOutput {
             crate::output::DeleteDbClusterParameterGroupOutput {}
         }
     }
 }
 impl DeleteDbClusterParameterGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDbClusterParameterGroupOutput`](crate::output::DeleteDbClusterParameterGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDbClusterParameterGroupOutput`](crate::output::DeleteDbClusterParameterGroupOutput).
     pub fn builder() -> crate::output::delete_db_cluster_parameter_group_output::Builder {
         crate::output::delete_db_cluster_parameter_group_output::Builder::default()
     }
@@ -8457,24 +8713,34 @@ impl DeleteDbClusterParameterGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteDbClusterEndpointOutput {
     /// <p>The identifier associated with the endpoint. This parameter is stored as a lowercase string.</p>
+    #[doc(hidden)]
     pub db_cluster_endpoint_identifier: std::option::Option<std::string::String>,
     /// <p>The DB cluster identifier of the DB cluster associated with the endpoint. This parameter is stored as a lowercase string.</p>
+    #[doc(hidden)]
     pub db_cluster_identifier: std::option::Option<std::string::String>,
     /// <p>A unique system-generated identifier for an endpoint. It remains the same for the whole life of the endpoint.</p>
+    #[doc(hidden)]
     pub db_cluster_endpoint_resource_identifier: std::option::Option<std::string::String>,
     /// <p>The DNS address of the endpoint.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The current status of the endpoint. One of: <code>creating</code>, <code>available</code>, <code>deleting</code>, <code>inactive</code>, <code>modifying</code>. The <code>inactive</code> state applies to an endpoint that can't be used for a certain kind of cluster, such as a <code>writer</code> endpoint for a read-only secondary cluster in a global database.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The type of the endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>CUSTOM</code>.</p>
+    #[doc(hidden)]
     pub endpoint_type: std::option::Option<std::string::String>,
     /// <p>The type associated with a custom endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.</p>
+    #[doc(hidden)]
     pub custom_endpoint_type: std::option::Option<std::string::String>,
     /// <p>List of DB instance identifiers that are part of the custom endpoint group.</p>
+    #[doc(hidden)]
     pub static_members: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.</p>
+    #[doc(hidden)]
     pub excluded_members: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) for the endpoint.</p>
+    #[doc(hidden)]
     pub db_cluster_endpoint_arn: std::option::Option<std::string::String>,
 }
 impl DeleteDbClusterEndpointOutput {
@@ -8541,11 +8807,10 @@ impl std::fmt::Debug for DeleteDbClusterEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDbClusterEndpointOutput`](crate::output::DeleteDbClusterEndpointOutput)
+/// See [`DeleteDbClusterEndpointOutput`](crate::output::DeleteDbClusterEndpointOutput).
 pub mod delete_db_cluster_endpoint_output {
 
-    /// A builder for [`DeleteDbClusterEndpointOutput`](crate::output::DeleteDbClusterEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDbClusterEndpointOutput`](crate::output::DeleteDbClusterEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_endpoint_identifier: std::option::Option<std::string::String>,
@@ -8703,7 +8968,7 @@ pub mod delete_db_cluster_endpoint_output {
             self.db_cluster_endpoint_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDbClusterEndpointOutput`](crate::output::DeleteDbClusterEndpointOutput)
+        /// Consumes the builder and constructs a [`DeleteDbClusterEndpointOutput`](crate::output::DeleteDbClusterEndpointOutput).
         pub fn build(self) -> crate::output::DeleteDbClusterEndpointOutput {
             crate::output::DeleteDbClusterEndpointOutput {
                 db_cluster_endpoint_identifier: self.db_cluster_endpoint_identifier,
@@ -8722,7 +8987,7 @@ pub mod delete_db_cluster_endpoint_output {
     }
 }
 impl DeleteDbClusterEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDbClusterEndpointOutput`](crate::output::DeleteDbClusterEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDbClusterEndpointOutput`](crate::output::DeleteDbClusterEndpointOutput).
     pub fn builder() -> crate::output::delete_db_cluster_endpoint_output::Builder {
         crate::output::delete_db_cluster_endpoint_output::Builder::default()
     }
@@ -8737,6 +9002,7 @@ pub struct DeleteDbClusterOutput {
     /// <p>For a Multi-AZ DB cluster, this data type is used as a response element in the operations <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>, <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>RebootDBCluster</code>, <code>RestoreDBClusterFromSnapshot</code>, and <code>RestoreDBClusterToPointInTime</code>.</p>
     /// <p>For more information on Amazon Aurora DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide.</i> </p>
     /// <p>For more information on Multi-AZ DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub db_cluster: std::option::Option<crate::model::DbCluster>,
 }
 impl DeleteDbClusterOutput {
@@ -8756,11 +9022,10 @@ impl std::fmt::Debug for DeleteDbClusterOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDbClusterOutput`](crate::output::DeleteDbClusterOutput)
+/// See [`DeleteDbClusterOutput`](crate::output::DeleteDbClusterOutput).
 pub mod delete_db_cluster_output {
 
-    /// A builder for [`DeleteDbClusterOutput`](crate::output::DeleteDbClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDbClusterOutput`](crate::output::DeleteDbClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster: std::option::Option<crate::model::DbCluster>,
@@ -8787,7 +9052,7 @@ pub mod delete_db_cluster_output {
             self.db_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDbClusterOutput`](crate::output::DeleteDbClusterOutput)
+        /// Consumes the builder and constructs a [`DeleteDbClusterOutput`](crate::output::DeleteDbClusterOutput).
         pub fn build(self) -> crate::output::DeleteDbClusterOutput {
             crate::output::DeleteDbClusterOutput {
                 db_cluster: self.db_cluster,
@@ -8796,7 +9061,7 @@ pub mod delete_db_cluster_output {
     }
 }
 impl DeleteDbClusterOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDbClusterOutput`](crate::output::DeleteDbClusterOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDbClusterOutput`](crate::output::DeleteDbClusterOutput).
     pub fn builder() -> crate::output::delete_db_cluster_output::Builder {
         crate::output::delete_db_cluster_output::Builder::default()
     }
@@ -8807,33 +9072,47 @@ impl DeleteDbClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteCustomDbEngineVersionOutput {
     /// <p>The name of the database engine.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The version number of the database engine.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The name of the DB parameter group family for the database engine.</p>
+    #[doc(hidden)]
     pub db_parameter_group_family: std::option::Option<std::string::String>,
     /// <p>The description of the database engine.</p>
+    #[doc(hidden)]
     pub db_engine_description: std::option::Option<std::string::String>,
     /// <p>The description of the database engine version.</p>
+    #[doc(hidden)]
     pub db_engine_version_description: std::option::Option<std::string::String>,
     /// <p>The default character set for new instances of this engine version, if the <code>CharacterSetName</code> parameter of the CreateDBInstance API isn't specified.</p>
+    #[doc(hidden)]
     pub default_character_set: std::option::Option<crate::model::CharacterSet>,
     /// <p>A list of the character sets supported by this engine for the <code>CharacterSetName</code> parameter of the <code>CreateDBInstance</code> operation.</p>
+    #[doc(hidden)]
     pub supported_character_sets: std::option::Option<std::vec::Vec<crate::model::CharacterSet>>,
     /// <p>A list of the character sets supported by the Oracle DB engine for the <code>NcharCharacterSetName</code> parameter of the <code>CreateDBInstance</code> operation.</p>
+    #[doc(hidden)]
     pub supported_nchar_character_sets:
         std::option::Option<std::vec::Vec<crate::model::CharacterSet>>,
     /// <p>A list of engine versions that this database engine version can be upgraded to.</p>
+    #[doc(hidden)]
     pub valid_upgrade_target: std::option::Option<std::vec::Vec<crate::model::UpgradeTarget>>,
     /// <p>A list of the time zones supported by this engine for the <code>Timezone</code> parameter of the <code>CreateDBInstance</code> action.</p>
+    #[doc(hidden)]
     pub supported_timezones: std::option::Option<std::vec::Vec<crate::model::Timezone>>,
     /// <p>The types of logs that the database engine has available for export to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub exportable_log_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A value that indicates whether the engine version supports exporting the log types specified by ExportableLogTypes to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub supports_log_exports_to_cloudwatch_logs: bool,
     /// <p>Indicates whether the database engine version supports read replicas.</p>
+    #[doc(hidden)]
     pub supports_read_replica: bool,
     /// <p>A list of the supported DB engine modes.</p>
+    #[doc(hidden)]
     pub supported_engine_modes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of features supported by the DB engine.</p>
     /// <p>The supported features vary by DB engine and DB engine version.</p>
@@ -8846,28 +9125,40 @@ pub struct DeleteCustomDbEngineVersionOutput {
     /// <p>For example, to determine the supported features for RDS for PostgreSQL version 13.3 using the CLI, use the following command:</p>
     /// <p> <code>aws rds describe-db-engine-versions --engine postgres --engine-version 13.3</code> </p>
     /// <p>The supported features are listed under <code>SupportedFeatureNames</code> in the output.</p>
+    #[doc(hidden)]
     pub supported_feature_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The status of the DB engine version, either <code>available</code> or <code>deprecated</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>A value that indicates whether you can use Aurora parallel query with a specific DB engine version.</p>
+    #[doc(hidden)]
     pub supports_parallel_query: bool,
     /// <p>A value that indicates whether you can use Aurora global databases with a specific DB engine version.</p>
+    #[doc(hidden)]
     pub supports_global_databases: bool,
     /// <p>The major engine version of the CEV.</p>
+    #[doc(hidden)]
     pub major_engine_version: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon S3 bucket that contains your database installation files.</p>
+    #[doc(hidden)]
     pub database_installation_files_s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 directory that contains the database installation files. If not specified, then no prefix is assumed.</p>
+    #[doc(hidden)]
     pub database_installation_files_s3_prefix: std::option::Option<std::string::String>,
     /// <p>The ARN of the custom engine version.</p>
+    #[doc(hidden)]
     pub db_engine_version_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services KMS key identifier for an encrypted CEV. This parameter is required for RDS Custom, but optional for Amazon RDS.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The creation time of the DB engine version.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of tags. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A value that indicates whether the engine version supports Babelfish for Aurora PostgreSQL.</p>
+    #[doc(hidden)]
     pub supports_babelfish: bool,
 }
 impl DeleteCustomDbEngineVersionOutput {
@@ -9035,11 +9326,10 @@ impl std::fmt::Debug for DeleteCustomDbEngineVersionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteCustomDbEngineVersionOutput`](crate::output::DeleteCustomDbEngineVersionOutput)
+/// See [`DeleteCustomDbEngineVersionOutput`](crate::output::DeleteCustomDbEngineVersionOutput).
 pub mod delete_custom_db_engine_version_output {
 
-    /// A builder for [`DeleteCustomDbEngineVersionOutput`](crate::output::DeleteCustomDbEngineVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteCustomDbEngineVersionOutput`](crate::output::DeleteCustomDbEngineVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine: std::option::Option<std::string::String>,
@@ -9468,7 +9758,7 @@ pub mod delete_custom_db_engine_version_output {
             self.supports_babelfish = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteCustomDbEngineVersionOutput`](crate::output::DeleteCustomDbEngineVersionOutput)
+        /// Consumes the builder and constructs a [`DeleteCustomDbEngineVersionOutput`](crate::output::DeleteCustomDbEngineVersionOutput).
         pub fn build(self) -> crate::output::DeleteCustomDbEngineVersionOutput {
             crate::output::DeleteCustomDbEngineVersionOutput {
                 engine: self.engine,
@@ -9505,7 +9795,7 @@ pub mod delete_custom_db_engine_version_output {
     }
 }
 impl DeleteCustomDbEngineVersionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteCustomDbEngineVersionOutput`](crate::output::DeleteCustomDbEngineVersionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteCustomDbEngineVersionOutput`](crate::output::DeleteCustomDbEngineVersionOutput).
     pub fn builder() -> crate::output::delete_custom_db_engine_version_output::Builder {
         crate::output::delete_custom_db_engine_version_output::Builder::default()
     }
@@ -9516,6 +9806,7 @@ impl DeleteCustomDbEngineVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateOptionGroupOutput {
     /// <p></p>
+    #[doc(hidden)]
     pub option_group: std::option::Option<crate::model::OptionGroup>,
 }
 impl CreateOptionGroupOutput {
@@ -9531,11 +9822,10 @@ impl std::fmt::Debug for CreateOptionGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateOptionGroupOutput`](crate::output::CreateOptionGroupOutput)
+/// See [`CreateOptionGroupOutput`](crate::output::CreateOptionGroupOutput).
 pub mod create_option_group_output {
 
-    /// A builder for [`CreateOptionGroupOutput`](crate::output::CreateOptionGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateOptionGroupOutput`](crate::output::CreateOptionGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) option_group: std::option::Option<crate::model::OptionGroup>,
@@ -9554,7 +9844,7 @@ pub mod create_option_group_output {
             self.option_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateOptionGroupOutput`](crate::output::CreateOptionGroupOutput)
+        /// Consumes the builder and constructs a [`CreateOptionGroupOutput`](crate::output::CreateOptionGroupOutput).
         pub fn build(self) -> crate::output::CreateOptionGroupOutput {
             crate::output::CreateOptionGroupOutput {
                 option_group: self.option_group,
@@ -9563,7 +9853,7 @@ pub mod create_option_group_output {
     }
 }
 impl CreateOptionGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateOptionGroupOutput`](crate::output::CreateOptionGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateOptionGroupOutput`](crate::output::CreateOptionGroupOutput).
     pub fn builder() -> crate::output::create_option_group_output::Builder {
         crate::output::create_option_group_output::Builder::default()
     }
@@ -9574,6 +9864,7 @@ impl CreateOptionGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateGlobalClusterOutput {
     /// <p>A data type representing an Aurora global database.</p>
+    #[doc(hidden)]
     pub global_cluster: std::option::Option<crate::model::GlobalCluster>,
 }
 impl CreateGlobalClusterOutput {
@@ -9589,11 +9880,10 @@ impl std::fmt::Debug for CreateGlobalClusterOutput {
         formatter.finish()
     }
 }
-/// See [`CreateGlobalClusterOutput`](crate::output::CreateGlobalClusterOutput)
+/// See [`CreateGlobalClusterOutput`](crate::output::CreateGlobalClusterOutput).
 pub mod create_global_cluster_output {
 
-    /// A builder for [`CreateGlobalClusterOutput`](crate::output::CreateGlobalClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateGlobalClusterOutput`](crate::output::CreateGlobalClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_cluster: std::option::Option<crate::model::GlobalCluster>,
@@ -9612,7 +9902,7 @@ pub mod create_global_cluster_output {
             self.global_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateGlobalClusterOutput`](crate::output::CreateGlobalClusterOutput)
+        /// Consumes the builder and constructs a [`CreateGlobalClusterOutput`](crate::output::CreateGlobalClusterOutput).
         pub fn build(self) -> crate::output::CreateGlobalClusterOutput {
             crate::output::CreateGlobalClusterOutput {
                 global_cluster: self.global_cluster,
@@ -9621,7 +9911,7 @@ pub mod create_global_cluster_output {
     }
 }
 impl CreateGlobalClusterOutput {
-    /// Creates a new builder-style object to manufacture [`CreateGlobalClusterOutput`](crate::output::CreateGlobalClusterOutput)
+    /// Creates a new builder-style object to manufacture [`CreateGlobalClusterOutput`](crate::output::CreateGlobalClusterOutput).
     pub fn builder() -> crate::output::create_global_cluster_output::Builder {
         crate::output::create_global_cluster_output::Builder::default()
     }
@@ -9632,6 +9922,7 @@ impl CreateGlobalClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateEventSubscriptionOutput {
     /// <p>Contains the results of a successful invocation of the <code>DescribeEventSubscriptions</code> action.</p>
+    #[doc(hidden)]
     pub event_subscription: std::option::Option<crate::model::EventSubscription>,
 }
 impl CreateEventSubscriptionOutput {
@@ -9647,11 +9938,10 @@ impl std::fmt::Debug for CreateEventSubscriptionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput)
+/// See [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput).
 pub mod create_event_subscription_output {
 
-    /// A builder for [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_subscription: std::option::Option<crate::model::EventSubscription>,
@@ -9670,7 +9960,7 @@ pub mod create_event_subscription_output {
             self.event_subscription = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput)
+        /// Consumes the builder and constructs a [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput).
         pub fn build(self) -> crate::output::CreateEventSubscriptionOutput {
             crate::output::CreateEventSubscriptionOutput {
                 event_subscription: self.event_subscription,
@@ -9679,7 +9969,7 @@ pub mod create_event_subscription_output {
     }
 }
 impl CreateEventSubscriptionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput).
     pub fn builder() -> crate::output::create_event_subscription_output::Builder {
         crate::output::create_event_subscription_output::Builder::default()
     }
@@ -9691,6 +9981,7 @@ impl CreateEventSubscriptionOutput {
 pub struct CreateDbSubnetGroupOutput {
     /// <p>Contains the details of an Amazon RDS DB subnet group.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBSubnetGroups</code> action.</p>
+    #[doc(hidden)]
     pub db_subnet_group: std::option::Option<crate::model::DbSubnetGroup>,
 }
 impl CreateDbSubnetGroupOutput {
@@ -9707,11 +9998,10 @@ impl std::fmt::Debug for CreateDbSubnetGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDbSubnetGroupOutput`](crate::output::CreateDbSubnetGroupOutput)
+/// See [`CreateDbSubnetGroupOutput`](crate::output::CreateDbSubnetGroupOutput).
 pub mod create_db_subnet_group_output {
 
-    /// A builder for [`CreateDbSubnetGroupOutput`](crate::output::CreateDbSubnetGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDbSubnetGroupOutput`](crate::output::CreateDbSubnetGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_subnet_group: std::option::Option<crate::model::DbSubnetGroup>,
@@ -9732,7 +10022,7 @@ pub mod create_db_subnet_group_output {
             self.db_subnet_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDbSubnetGroupOutput`](crate::output::CreateDbSubnetGroupOutput)
+        /// Consumes the builder and constructs a [`CreateDbSubnetGroupOutput`](crate::output::CreateDbSubnetGroupOutput).
         pub fn build(self) -> crate::output::CreateDbSubnetGroupOutput {
             crate::output::CreateDbSubnetGroupOutput {
                 db_subnet_group: self.db_subnet_group,
@@ -9741,7 +10031,7 @@ pub mod create_db_subnet_group_output {
     }
 }
 impl CreateDbSubnetGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDbSubnetGroupOutput`](crate::output::CreateDbSubnetGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDbSubnetGroupOutput`](crate::output::CreateDbSubnetGroupOutput).
     pub fn builder() -> crate::output::create_db_subnet_group_output::Builder {
         crate::output::create_db_subnet_group_output::Builder::default()
     }
@@ -9753,6 +10043,7 @@ impl CreateDbSubnetGroupOutput {
 pub struct CreateDbSnapshotOutput {
     /// <p>Contains the details of an Amazon RDS DB snapshot.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBSnapshots</code> action.</p>
+    #[doc(hidden)]
     pub db_snapshot: std::option::Option<crate::model::DbSnapshot>,
 }
 impl CreateDbSnapshotOutput {
@@ -9769,11 +10060,10 @@ impl std::fmt::Debug for CreateDbSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDbSnapshotOutput`](crate::output::CreateDbSnapshotOutput)
+/// See [`CreateDbSnapshotOutput`](crate::output::CreateDbSnapshotOutput).
 pub mod create_db_snapshot_output {
 
-    /// A builder for [`CreateDbSnapshotOutput`](crate::output::CreateDbSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDbSnapshotOutput`](crate::output::CreateDbSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_snapshot: std::option::Option<crate::model::DbSnapshot>,
@@ -9794,7 +10084,7 @@ pub mod create_db_snapshot_output {
             self.db_snapshot = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDbSnapshotOutput`](crate::output::CreateDbSnapshotOutput)
+        /// Consumes the builder and constructs a [`CreateDbSnapshotOutput`](crate::output::CreateDbSnapshotOutput).
         pub fn build(self) -> crate::output::CreateDbSnapshotOutput {
             crate::output::CreateDbSnapshotOutput {
                 db_snapshot: self.db_snapshot,
@@ -9803,7 +10093,7 @@ pub mod create_db_snapshot_output {
     }
 }
 impl CreateDbSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDbSnapshotOutput`](crate::output::CreateDbSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDbSnapshotOutput`](crate::output::CreateDbSnapshotOutput).
     pub fn builder() -> crate::output::create_db_snapshot_output::Builder {
         crate::output::create_db_snapshot_output::Builder::default()
     }
@@ -9815,6 +10105,7 @@ impl CreateDbSnapshotOutput {
 pub struct CreateDbSecurityGroupOutput {
     /// <p>Contains the details for an Amazon RDS DB security group.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBSecurityGroups</code> action.</p>
+    #[doc(hidden)]
     pub db_security_group: std::option::Option<crate::model::DbSecurityGroup>,
 }
 impl CreateDbSecurityGroupOutput {
@@ -9831,11 +10122,10 @@ impl std::fmt::Debug for CreateDbSecurityGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDbSecurityGroupOutput`](crate::output::CreateDbSecurityGroupOutput)
+/// See [`CreateDbSecurityGroupOutput`](crate::output::CreateDbSecurityGroupOutput).
 pub mod create_db_security_group_output {
 
-    /// A builder for [`CreateDbSecurityGroupOutput`](crate::output::CreateDbSecurityGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDbSecurityGroupOutput`](crate::output::CreateDbSecurityGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_security_group: std::option::Option<crate::model::DbSecurityGroup>,
@@ -9856,7 +10146,7 @@ pub mod create_db_security_group_output {
             self.db_security_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDbSecurityGroupOutput`](crate::output::CreateDbSecurityGroupOutput)
+        /// Consumes the builder and constructs a [`CreateDbSecurityGroupOutput`](crate::output::CreateDbSecurityGroupOutput).
         pub fn build(self) -> crate::output::CreateDbSecurityGroupOutput {
             crate::output::CreateDbSecurityGroupOutput {
                 db_security_group: self.db_security_group,
@@ -9865,7 +10155,7 @@ pub mod create_db_security_group_output {
     }
 }
 impl CreateDbSecurityGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDbSecurityGroupOutput`](crate::output::CreateDbSecurityGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDbSecurityGroupOutput`](crate::output::CreateDbSecurityGroupOutput).
     pub fn builder() -> crate::output::create_db_security_group_output::Builder {
         crate::output::create_db_security_group_output::Builder::default()
     }
@@ -9876,6 +10166,7 @@ impl CreateDbSecurityGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDbProxyEndpointOutput {
     /// <p>The <code>DBProxyEndpoint</code> object that is created by the API operation. The DB proxy endpoint that you create might provide capabilities such as read/write or read-only operations, or using a different VPC than the proxy's default VPC.</p>
+    #[doc(hidden)]
     pub db_proxy_endpoint: std::option::Option<crate::model::DbProxyEndpoint>,
 }
 impl CreateDbProxyEndpointOutput {
@@ -9891,11 +10182,10 @@ impl std::fmt::Debug for CreateDbProxyEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDbProxyEndpointOutput`](crate::output::CreateDbProxyEndpointOutput)
+/// See [`CreateDbProxyEndpointOutput`](crate::output::CreateDbProxyEndpointOutput).
 pub mod create_db_proxy_endpoint_output {
 
-    /// A builder for [`CreateDbProxyEndpointOutput`](crate::output::CreateDbProxyEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDbProxyEndpointOutput`](crate::output::CreateDbProxyEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_proxy_endpoint: std::option::Option<crate::model::DbProxyEndpoint>,
@@ -9914,7 +10204,7 @@ pub mod create_db_proxy_endpoint_output {
             self.db_proxy_endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDbProxyEndpointOutput`](crate::output::CreateDbProxyEndpointOutput)
+        /// Consumes the builder and constructs a [`CreateDbProxyEndpointOutput`](crate::output::CreateDbProxyEndpointOutput).
         pub fn build(self) -> crate::output::CreateDbProxyEndpointOutput {
             crate::output::CreateDbProxyEndpointOutput {
                 db_proxy_endpoint: self.db_proxy_endpoint,
@@ -9923,7 +10213,7 @@ pub mod create_db_proxy_endpoint_output {
     }
 }
 impl CreateDbProxyEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDbProxyEndpointOutput`](crate::output::CreateDbProxyEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDbProxyEndpointOutput`](crate::output::CreateDbProxyEndpointOutput).
     pub fn builder() -> crate::output::create_db_proxy_endpoint_output::Builder {
         crate::output::create_db_proxy_endpoint_output::Builder::default()
     }
@@ -9934,6 +10224,7 @@ impl CreateDbProxyEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDbProxyOutput {
     /// <p>The <code>DBProxy</code> structure corresponding to the new proxy.</p>
+    #[doc(hidden)]
     pub db_proxy: std::option::Option<crate::model::DbProxy>,
 }
 impl CreateDbProxyOutput {
@@ -9949,11 +10240,10 @@ impl std::fmt::Debug for CreateDbProxyOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDbProxyOutput`](crate::output::CreateDbProxyOutput)
+/// See [`CreateDbProxyOutput`](crate::output::CreateDbProxyOutput).
 pub mod create_db_proxy_output {
 
-    /// A builder for [`CreateDbProxyOutput`](crate::output::CreateDbProxyOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDbProxyOutput`](crate::output::CreateDbProxyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_proxy: std::option::Option<crate::model::DbProxy>,
@@ -9969,7 +10259,7 @@ pub mod create_db_proxy_output {
             self.db_proxy = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDbProxyOutput`](crate::output::CreateDbProxyOutput)
+        /// Consumes the builder and constructs a [`CreateDbProxyOutput`](crate::output::CreateDbProxyOutput).
         pub fn build(self) -> crate::output::CreateDbProxyOutput {
             crate::output::CreateDbProxyOutput {
                 db_proxy: self.db_proxy,
@@ -9978,7 +10268,7 @@ pub mod create_db_proxy_output {
     }
 }
 impl CreateDbProxyOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDbProxyOutput`](crate::output::CreateDbProxyOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDbProxyOutput`](crate::output::CreateDbProxyOutput).
     pub fn builder() -> crate::output::create_db_proxy_output::Builder {
         crate::output::create_db_proxy_output::Builder::default()
     }
@@ -9990,6 +10280,7 @@ impl CreateDbProxyOutput {
 pub struct CreateDbParameterGroupOutput {
     /// <p>Contains the details of an Amazon RDS DB parameter group.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBParameterGroups</code> action.</p>
+    #[doc(hidden)]
     pub db_parameter_group: std::option::Option<crate::model::DbParameterGroup>,
 }
 impl CreateDbParameterGroupOutput {
@@ -10006,11 +10297,10 @@ impl std::fmt::Debug for CreateDbParameterGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDbParameterGroupOutput`](crate::output::CreateDbParameterGroupOutput)
+/// See [`CreateDbParameterGroupOutput`](crate::output::CreateDbParameterGroupOutput).
 pub mod create_db_parameter_group_output {
 
-    /// A builder for [`CreateDbParameterGroupOutput`](crate::output::CreateDbParameterGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDbParameterGroupOutput`](crate::output::CreateDbParameterGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_parameter_group: std::option::Option<crate::model::DbParameterGroup>,
@@ -10031,7 +10321,7 @@ pub mod create_db_parameter_group_output {
             self.db_parameter_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDbParameterGroupOutput`](crate::output::CreateDbParameterGroupOutput)
+        /// Consumes the builder and constructs a [`CreateDbParameterGroupOutput`](crate::output::CreateDbParameterGroupOutput).
         pub fn build(self) -> crate::output::CreateDbParameterGroupOutput {
             crate::output::CreateDbParameterGroupOutput {
                 db_parameter_group: self.db_parameter_group,
@@ -10040,7 +10330,7 @@ pub mod create_db_parameter_group_output {
     }
 }
 impl CreateDbParameterGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDbParameterGroupOutput`](crate::output::CreateDbParameterGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDbParameterGroupOutput`](crate::output::CreateDbParameterGroupOutput).
     pub fn builder() -> crate::output::create_db_parameter_group_output::Builder {
         crate::output::create_db_parameter_group_output::Builder::default()
     }
@@ -10052,6 +10342,7 @@ impl CreateDbParameterGroupOutput {
 pub struct CreateDbInstanceReadReplicaOutput {
     /// <p>Contains the details of an Amazon RDS DB instance.</p>
     /// <p>This data type is used as a response element in the operations <code>CreateDBInstance</code>, <code>CreateDBInstanceReadReplica</code>, <code>DeleteDBInstance</code>, <code>DescribeDBInstances</code>, <code>ModifyDBInstance</code>, <code>PromoteReadReplica</code>, <code>RebootDBInstance</code>, <code>RestoreDBInstanceFromDBSnapshot</code>, <code>RestoreDBInstanceFromS3</code>, <code>RestoreDBInstanceToPointInTime</code>, <code>StartDBInstance</code>, and <code>StopDBInstance</code>.</p>
+    #[doc(hidden)]
     pub db_instance: std::option::Option<crate::model::DbInstance>,
 }
 impl CreateDbInstanceReadReplicaOutput {
@@ -10068,11 +10359,10 @@ impl std::fmt::Debug for CreateDbInstanceReadReplicaOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDbInstanceReadReplicaOutput`](crate::output::CreateDbInstanceReadReplicaOutput)
+/// See [`CreateDbInstanceReadReplicaOutput`](crate::output::CreateDbInstanceReadReplicaOutput).
 pub mod create_db_instance_read_replica_output {
 
-    /// A builder for [`CreateDbInstanceReadReplicaOutput`](crate::output::CreateDbInstanceReadReplicaOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDbInstanceReadReplicaOutput`](crate::output::CreateDbInstanceReadReplicaOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance: std::option::Option<crate::model::DbInstance>,
@@ -10093,7 +10383,7 @@ pub mod create_db_instance_read_replica_output {
             self.db_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDbInstanceReadReplicaOutput`](crate::output::CreateDbInstanceReadReplicaOutput)
+        /// Consumes the builder and constructs a [`CreateDbInstanceReadReplicaOutput`](crate::output::CreateDbInstanceReadReplicaOutput).
         pub fn build(self) -> crate::output::CreateDbInstanceReadReplicaOutput {
             crate::output::CreateDbInstanceReadReplicaOutput {
                 db_instance: self.db_instance,
@@ -10102,7 +10392,7 @@ pub mod create_db_instance_read_replica_output {
     }
 }
 impl CreateDbInstanceReadReplicaOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDbInstanceReadReplicaOutput`](crate::output::CreateDbInstanceReadReplicaOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDbInstanceReadReplicaOutput`](crate::output::CreateDbInstanceReadReplicaOutput).
     pub fn builder() -> crate::output::create_db_instance_read_replica_output::Builder {
         crate::output::create_db_instance_read_replica_output::Builder::default()
     }
@@ -10114,6 +10404,7 @@ impl CreateDbInstanceReadReplicaOutput {
 pub struct CreateDbInstanceOutput {
     /// <p>Contains the details of an Amazon RDS DB instance.</p>
     /// <p>This data type is used as a response element in the operations <code>CreateDBInstance</code>, <code>CreateDBInstanceReadReplica</code>, <code>DeleteDBInstance</code>, <code>DescribeDBInstances</code>, <code>ModifyDBInstance</code>, <code>PromoteReadReplica</code>, <code>RebootDBInstance</code>, <code>RestoreDBInstanceFromDBSnapshot</code>, <code>RestoreDBInstanceFromS3</code>, <code>RestoreDBInstanceToPointInTime</code>, <code>StartDBInstance</code>, and <code>StopDBInstance</code>.</p>
+    #[doc(hidden)]
     pub db_instance: std::option::Option<crate::model::DbInstance>,
 }
 impl CreateDbInstanceOutput {
@@ -10130,11 +10421,10 @@ impl std::fmt::Debug for CreateDbInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDbInstanceOutput`](crate::output::CreateDbInstanceOutput)
+/// See [`CreateDbInstanceOutput`](crate::output::CreateDbInstanceOutput).
 pub mod create_db_instance_output {
 
-    /// A builder for [`CreateDbInstanceOutput`](crate::output::CreateDbInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDbInstanceOutput`](crate::output::CreateDbInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_instance: std::option::Option<crate::model::DbInstance>,
@@ -10155,7 +10445,7 @@ pub mod create_db_instance_output {
             self.db_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDbInstanceOutput`](crate::output::CreateDbInstanceOutput)
+        /// Consumes the builder and constructs a [`CreateDbInstanceOutput`](crate::output::CreateDbInstanceOutput).
         pub fn build(self) -> crate::output::CreateDbInstanceOutput {
             crate::output::CreateDbInstanceOutput {
                 db_instance: self.db_instance,
@@ -10164,7 +10454,7 @@ pub mod create_db_instance_output {
     }
 }
 impl CreateDbInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDbInstanceOutput`](crate::output::CreateDbInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDbInstanceOutput`](crate::output::CreateDbInstanceOutput).
     pub fn builder() -> crate::output::create_db_instance_output::Builder {
         crate::output::create_db_instance_output::Builder::default()
     }
@@ -10176,6 +10466,7 @@ impl CreateDbInstanceOutput {
 pub struct CreateDbClusterSnapshotOutput {
     /// <p>Contains the details for an Amazon RDS DB cluster snapshot</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBClusterSnapshots</code> action.</p>
+    #[doc(hidden)]
     pub db_cluster_snapshot: std::option::Option<crate::model::DbClusterSnapshot>,
 }
 impl CreateDbClusterSnapshotOutput {
@@ -10192,11 +10483,10 @@ impl std::fmt::Debug for CreateDbClusterSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDbClusterSnapshotOutput`](crate::output::CreateDbClusterSnapshotOutput)
+/// See [`CreateDbClusterSnapshotOutput`](crate::output::CreateDbClusterSnapshotOutput).
 pub mod create_db_cluster_snapshot_output {
 
-    /// A builder for [`CreateDbClusterSnapshotOutput`](crate::output::CreateDbClusterSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDbClusterSnapshotOutput`](crate::output::CreateDbClusterSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_snapshot: std::option::Option<crate::model::DbClusterSnapshot>,
@@ -10217,7 +10507,7 @@ pub mod create_db_cluster_snapshot_output {
             self.db_cluster_snapshot = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDbClusterSnapshotOutput`](crate::output::CreateDbClusterSnapshotOutput)
+        /// Consumes the builder and constructs a [`CreateDbClusterSnapshotOutput`](crate::output::CreateDbClusterSnapshotOutput).
         pub fn build(self) -> crate::output::CreateDbClusterSnapshotOutput {
             crate::output::CreateDbClusterSnapshotOutput {
                 db_cluster_snapshot: self.db_cluster_snapshot,
@@ -10226,7 +10516,7 @@ pub mod create_db_cluster_snapshot_output {
     }
 }
 impl CreateDbClusterSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDbClusterSnapshotOutput`](crate::output::CreateDbClusterSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDbClusterSnapshotOutput`](crate::output::CreateDbClusterSnapshotOutput).
     pub fn builder() -> crate::output::create_db_cluster_snapshot_output::Builder {
         crate::output::create_db_cluster_snapshot_output::Builder::default()
     }
@@ -10238,6 +10528,7 @@ impl CreateDbClusterSnapshotOutput {
 pub struct CreateDbClusterParameterGroupOutput {
     /// <p>Contains the details of an Amazon RDS DB cluster parameter group.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBClusterParameterGroups</code> action.</p>
+    #[doc(hidden)]
     pub db_cluster_parameter_group: std::option::Option<crate::model::DbClusterParameterGroup>,
 }
 impl CreateDbClusterParameterGroupOutput {
@@ -10259,11 +10550,10 @@ impl std::fmt::Debug for CreateDbClusterParameterGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDbClusterParameterGroupOutput`](crate::output::CreateDbClusterParameterGroupOutput)
+/// See [`CreateDbClusterParameterGroupOutput`](crate::output::CreateDbClusterParameterGroupOutput).
 pub mod create_db_cluster_parameter_group_output {
 
-    /// A builder for [`CreateDbClusterParameterGroupOutput`](crate::output::CreateDbClusterParameterGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDbClusterParameterGroupOutput`](crate::output::CreateDbClusterParameterGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_parameter_group:
@@ -10288,7 +10578,7 @@ pub mod create_db_cluster_parameter_group_output {
             self.db_cluster_parameter_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDbClusterParameterGroupOutput`](crate::output::CreateDbClusterParameterGroupOutput)
+        /// Consumes the builder and constructs a [`CreateDbClusterParameterGroupOutput`](crate::output::CreateDbClusterParameterGroupOutput).
         pub fn build(self) -> crate::output::CreateDbClusterParameterGroupOutput {
             crate::output::CreateDbClusterParameterGroupOutput {
                 db_cluster_parameter_group: self.db_cluster_parameter_group,
@@ -10297,7 +10587,7 @@ pub mod create_db_cluster_parameter_group_output {
     }
 }
 impl CreateDbClusterParameterGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDbClusterParameterGroupOutput`](crate::output::CreateDbClusterParameterGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDbClusterParameterGroupOutput`](crate::output::CreateDbClusterParameterGroupOutput).
     pub fn builder() -> crate::output::create_db_cluster_parameter_group_output::Builder {
         crate::output::create_db_cluster_parameter_group_output::Builder::default()
     }
@@ -10315,24 +10605,34 @@ impl CreateDbClusterParameterGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDbClusterEndpointOutput {
     /// <p>The identifier associated with the endpoint. This parameter is stored as a lowercase string.</p>
+    #[doc(hidden)]
     pub db_cluster_endpoint_identifier: std::option::Option<std::string::String>,
     /// <p>The DB cluster identifier of the DB cluster associated with the endpoint. This parameter is stored as a lowercase string.</p>
+    #[doc(hidden)]
     pub db_cluster_identifier: std::option::Option<std::string::String>,
     /// <p>A unique system-generated identifier for an endpoint. It remains the same for the whole life of the endpoint.</p>
+    #[doc(hidden)]
     pub db_cluster_endpoint_resource_identifier: std::option::Option<std::string::String>,
     /// <p>The DNS address of the endpoint.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The current status of the endpoint. One of: <code>creating</code>, <code>available</code>, <code>deleting</code>, <code>inactive</code>, <code>modifying</code>. The <code>inactive</code> state applies to an endpoint that can't be used for a certain kind of cluster, such as a <code>writer</code> endpoint for a read-only secondary cluster in a global database.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The type of the endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>CUSTOM</code>.</p>
+    #[doc(hidden)]
     pub endpoint_type: std::option::Option<std::string::String>,
     /// <p>The type associated with a custom endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.</p>
+    #[doc(hidden)]
     pub custom_endpoint_type: std::option::Option<std::string::String>,
     /// <p>List of DB instance identifiers that are part of the custom endpoint group.</p>
+    #[doc(hidden)]
     pub static_members: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.</p>
+    #[doc(hidden)]
     pub excluded_members: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) for the endpoint.</p>
+    #[doc(hidden)]
     pub db_cluster_endpoint_arn: std::option::Option<std::string::String>,
 }
 impl CreateDbClusterEndpointOutput {
@@ -10399,11 +10699,10 @@ impl std::fmt::Debug for CreateDbClusterEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDbClusterEndpointOutput`](crate::output::CreateDbClusterEndpointOutput)
+/// See [`CreateDbClusterEndpointOutput`](crate::output::CreateDbClusterEndpointOutput).
 pub mod create_db_cluster_endpoint_output {
 
-    /// A builder for [`CreateDbClusterEndpointOutput`](crate::output::CreateDbClusterEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDbClusterEndpointOutput`](crate::output::CreateDbClusterEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_endpoint_identifier: std::option::Option<std::string::String>,
@@ -10561,7 +10860,7 @@ pub mod create_db_cluster_endpoint_output {
             self.db_cluster_endpoint_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDbClusterEndpointOutput`](crate::output::CreateDbClusterEndpointOutput)
+        /// Consumes the builder and constructs a [`CreateDbClusterEndpointOutput`](crate::output::CreateDbClusterEndpointOutput).
         pub fn build(self) -> crate::output::CreateDbClusterEndpointOutput {
             crate::output::CreateDbClusterEndpointOutput {
                 db_cluster_endpoint_identifier: self.db_cluster_endpoint_identifier,
@@ -10580,7 +10879,7 @@ pub mod create_db_cluster_endpoint_output {
     }
 }
 impl CreateDbClusterEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDbClusterEndpointOutput`](crate::output::CreateDbClusterEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDbClusterEndpointOutput`](crate::output::CreateDbClusterEndpointOutput).
     pub fn builder() -> crate::output::create_db_cluster_endpoint_output::Builder {
         crate::output::create_db_cluster_endpoint_output::Builder::default()
     }
@@ -10595,6 +10894,7 @@ pub struct CreateDbClusterOutput {
     /// <p>For a Multi-AZ DB cluster, this data type is used as a response element in the operations <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>, <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>RebootDBCluster</code>, <code>RestoreDBClusterFromSnapshot</code>, and <code>RestoreDBClusterToPointInTime</code>.</p>
     /// <p>For more information on Amazon Aurora DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide.</i> </p>
     /// <p>For more information on Multi-AZ DB clusters, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub db_cluster: std::option::Option<crate::model::DbCluster>,
 }
 impl CreateDbClusterOutput {
@@ -10614,11 +10914,10 @@ impl std::fmt::Debug for CreateDbClusterOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDbClusterOutput`](crate::output::CreateDbClusterOutput)
+/// See [`CreateDbClusterOutput`](crate::output::CreateDbClusterOutput).
 pub mod create_db_cluster_output {
 
-    /// A builder for [`CreateDbClusterOutput`](crate::output::CreateDbClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDbClusterOutput`](crate::output::CreateDbClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster: std::option::Option<crate::model::DbCluster>,
@@ -10645,7 +10944,7 @@ pub mod create_db_cluster_output {
             self.db_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDbClusterOutput`](crate::output::CreateDbClusterOutput)
+        /// Consumes the builder and constructs a [`CreateDbClusterOutput`](crate::output::CreateDbClusterOutput).
         pub fn build(self) -> crate::output::CreateDbClusterOutput {
             crate::output::CreateDbClusterOutput {
                 db_cluster: self.db_cluster,
@@ -10654,7 +10953,7 @@ pub mod create_db_cluster_output {
     }
 }
 impl CreateDbClusterOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDbClusterOutput`](crate::output::CreateDbClusterOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDbClusterOutput`](crate::output::CreateDbClusterOutput).
     pub fn builder() -> crate::output::create_db_cluster_output::Builder {
         crate::output::create_db_cluster_output::Builder::default()
     }
@@ -10665,33 +10964,47 @@ impl CreateDbClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateCustomDbEngineVersionOutput {
     /// <p>The name of the database engine.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The version number of the database engine.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The name of the DB parameter group family for the database engine.</p>
+    #[doc(hidden)]
     pub db_parameter_group_family: std::option::Option<std::string::String>,
     /// <p>The description of the database engine.</p>
+    #[doc(hidden)]
     pub db_engine_description: std::option::Option<std::string::String>,
     /// <p>The description of the database engine version.</p>
+    #[doc(hidden)]
     pub db_engine_version_description: std::option::Option<std::string::String>,
     /// <p>The default character set for new instances of this engine version, if the <code>CharacterSetName</code> parameter of the CreateDBInstance API isn't specified.</p>
+    #[doc(hidden)]
     pub default_character_set: std::option::Option<crate::model::CharacterSet>,
     /// <p>A list of the character sets supported by this engine for the <code>CharacterSetName</code> parameter of the <code>CreateDBInstance</code> operation.</p>
+    #[doc(hidden)]
     pub supported_character_sets: std::option::Option<std::vec::Vec<crate::model::CharacterSet>>,
     /// <p>A list of the character sets supported by the Oracle DB engine for the <code>NcharCharacterSetName</code> parameter of the <code>CreateDBInstance</code> operation.</p>
+    #[doc(hidden)]
     pub supported_nchar_character_sets:
         std::option::Option<std::vec::Vec<crate::model::CharacterSet>>,
     /// <p>A list of engine versions that this database engine version can be upgraded to.</p>
+    #[doc(hidden)]
     pub valid_upgrade_target: std::option::Option<std::vec::Vec<crate::model::UpgradeTarget>>,
     /// <p>A list of the time zones supported by this engine for the <code>Timezone</code> parameter of the <code>CreateDBInstance</code> action.</p>
+    #[doc(hidden)]
     pub supported_timezones: std::option::Option<std::vec::Vec<crate::model::Timezone>>,
     /// <p>The types of logs that the database engine has available for export to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub exportable_log_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A value that indicates whether the engine version supports exporting the log types specified by ExportableLogTypes to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub supports_log_exports_to_cloudwatch_logs: bool,
     /// <p>Indicates whether the database engine version supports read replicas.</p>
+    #[doc(hidden)]
     pub supports_read_replica: bool,
     /// <p>A list of the supported DB engine modes.</p>
+    #[doc(hidden)]
     pub supported_engine_modes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of features supported by the DB engine.</p>
     /// <p>The supported features vary by DB engine and DB engine version.</p>
@@ -10704,28 +11017,40 @@ pub struct CreateCustomDbEngineVersionOutput {
     /// <p>For example, to determine the supported features for RDS for PostgreSQL version 13.3 using the CLI, use the following command:</p>
     /// <p> <code>aws rds describe-db-engine-versions --engine postgres --engine-version 13.3</code> </p>
     /// <p>The supported features are listed under <code>SupportedFeatureNames</code> in the output.</p>
+    #[doc(hidden)]
     pub supported_feature_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The status of the DB engine version, either <code>available</code> or <code>deprecated</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>A value that indicates whether you can use Aurora parallel query with a specific DB engine version.</p>
+    #[doc(hidden)]
     pub supports_parallel_query: bool,
     /// <p>A value that indicates whether you can use Aurora global databases with a specific DB engine version.</p>
+    #[doc(hidden)]
     pub supports_global_databases: bool,
     /// <p>The major engine version of the CEV.</p>
+    #[doc(hidden)]
     pub major_engine_version: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon S3 bucket that contains your database installation files.</p>
+    #[doc(hidden)]
     pub database_installation_files_s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 directory that contains the database installation files. If not specified, then no prefix is assumed.</p>
+    #[doc(hidden)]
     pub database_installation_files_s3_prefix: std::option::Option<std::string::String>,
     /// <p>The ARN of the custom engine version.</p>
+    #[doc(hidden)]
     pub db_engine_version_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services KMS key identifier for an encrypted CEV. This parameter is required for RDS Custom, but optional for Amazon RDS.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The creation time of the DB engine version.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of tags. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i> </p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A value that indicates whether the engine version supports Babelfish for Aurora PostgreSQL.</p>
+    #[doc(hidden)]
     pub supports_babelfish: bool,
 }
 impl CreateCustomDbEngineVersionOutput {
@@ -10893,11 +11218,10 @@ impl std::fmt::Debug for CreateCustomDbEngineVersionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateCustomDbEngineVersionOutput`](crate::output::CreateCustomDbEngineVersionOutput)
+/// See [`CreateCustomDbEngineVersionOutput`](crate::output::CreateCustomDbEngineVersionOutput).
 pub mod create_custom_db_engine_version_output {
 
-    /// A builder for [`CreateCustomDbEngineVersionOutput`](crate::output::CreateCustomDbEngineVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateCustomDbEngineVersionOutput`](crate::output::CreateCustomDbEngineVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine: std::option::Option<std::string::String>,
@@ -11326,7 +11650,7 @@ pub mod create_custom_db_engine_version_output {
             self.supports_babelfish = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateCustomDbEngineVersionOutput`](crate::output::CreateCustomDbEngineVersionOutput)
+        /// Consumes the builder and constructs a [`CreateCustomDbEngineVersionOutput`](crate::output::CreateCustomDbEngineVersionOutput).
         pub fn build(self) -> crate::output::CreateCustomDbEngineVersionOutput {
             crate::output::CreateCustomDbEngineVersionOutput {
                 engine: self.engine,
@@ -11363,7 +11687,7 @@ pub mod create_custom_db_engine_version_output {
     }
 }
 impl CreateCustomDbEngineVersionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateCustomDbEngineVersionOutput`](crate::output::CreateCustomDbEngineVersionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateCustomDbEngineVersionOutput`](crate::output::CreateCustomDbEngineVersionOutput).
     pub fn builder() -> crate::output::create_custom_db_engine_version_output::Builder {
         crate::output::create_custom_db_engine_version_output::Builder::default()
     }
@@ -11374,6 +11698,7 @@ impl CreateCustomDbEngineVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CopyOptionGroupOutput {
     /// <p></p>
+    #[doc(hidden)]
     pub option_group: std::option::Option<crate::model::OptionGroup>,
 }
 impl CopyOptionGroupOutput {
@@ -11389,11 +11714,10 @@ impl std::fmt::Debug for CopyOptionGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CopyOptionGroupOutput`](crate::output::CopyOptionGroupOutput)
+/// See [`CopyOptionGroupOutput`](crate::output::CopyOptionGroupOutput).
 pub mod copy_option_group_output {
 
-    /// A builder for [`CopyOptionGroupOutput`](crate::output::CopyOptionGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CopyOptionGroupOutput`](crate::output::CopyOptionGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) option_group: std::option::Option<crate::model::OptionGroup>,
@@ -11412,7 +11736,7 @@ pub mod copy_option_group_output {
             self.option_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CopyOptionGroupOutput`](crate::output::CopyOptionGroupOutput)
+        /// Consumes the builder and constructs a [`CopyOptionGroupOutput`](crate::output::CopyOptionGroupOutput).
         pub fn build(self) -> crate::output::CopyOptionGroupOutput {
             crate::output::CopyOptionGroupOutput {
                 option_group: self.option_group,
@@ -11421,7 +11745,7 @@ pub mod copy_option_group_output {
     }
 }
 impl CopyOptionGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CopyOptionGroupOutput`](crate::output::CopyOptionGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CopyOptionGroupOutput`](crate::output::CopyOptionGroupOutput).
     pub fn builder() -> crate::output::copy_option_group_output::Builder {
         crate::output::copy_option_group_output::Builder::default()
     }
@@ -11433,6 +11757,7 @@ impl CopyOptionGroupOutput {
 pub struct CopyDbSnapshotOutput {
     /// <p>Contains the details of an Amazon RDS DB snapshot.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBSnapshots</code> action.</p>
+    #[doc(hidden)]
     pub db_snapshot: std::option::Option<crate::model::DbSnapshot>,
 }
 impl CopyDbSnapshotOutput {
@@ -11449,11 +11774,10 @@ impl std::fmt::Debug for CopyDbSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`CopyDbSnapshotOutput`](crate::output::CopyDbSnapshotOutput)
+/// See [`CopyDbSnapshotOutput`](crate::output::CopyDbSnapshotOutput).
 pub mod copy_db_snapshot_output {
 
-    /// A builder for [`CopyDbSnapshotOutput`](crate::output::CopyDbSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`CopyDbSnapshotOutput`](crate::output::CopyDbSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_snapshot: std::option::Option<crate::model::DbSnapshot>,
@@ -11474,7 +11798,7 @@ pub mod copy_db_snapshot_output {
             self.db_snapshot = input;
             self
         }
-        /// Consumes the builder and constructs a [`CopyDbSnapshotOutput`](crate::output::CopyDbSnapshotOutput)
+        /// Consumes the builder and constructs a [`CopyDbSnapshotOutput`](crate::output::CopyDbSnapshotOutput).
         pub fn build(self) -> crate::output::CopyDbSnapshotOutput {
             crate::output::CopyDbSnapshotOutput {
                 db_snapshot: self.db_snapshot,
@@ -11483,7 +11807,7 @@ pub mod copy_db_snapshot_output {
     }
 }
 impl CopyDbSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`CopyDbSnapshotOutput`](crate::output::CopyDbSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`CopyDbSnapshotOutput`](crate::output::CopyDbSnapshotOutput).
     pub fn builder() -> crate::output::copy_db_snapshot_output::Builder {
         crate::output::copy_db_snapshot_output::Builder::default()
     }
@@ -11495,6 +11819,7 @@ impl CopyDbSnapshotOutput {
 pub struct CopyDbParameterGroupOutput {
     /// <p>Contains the details of an Amazon RDS DB parameter group.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBParameterGroups</code> action.</p>
+    #[doc(hidden)]
     pub db_parameter_group: std::option::Option<crate::model::DbParameterGroup>,
 }
 impl CopyDbParameterGroupOutput {
@@ -11511,11 +11836,10 @@ impl std::fmt::Debug for CopyDbParameterGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CopyDbParameterGroupOutput`](crate::output::CopyDbParameterGroupOutput)
+/// See [`CopyDbParameterGroupOutput`](crate::output::CopyDbParameterGroupOutput).
 pub mod copy_db_parameter_group_output {
 
-    /// A builder for [`CopyDbParameterGroupOutput`](crate::output::CopyDbParameterGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CopyDbParameterGroupOutput`](crate::output::CopyDbParameterGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_parameter_group: std::option::Option<crate::model::DbParameterGroup>,
@@ -11536,7 +11860,7 @@ pub mod copy_db_parameter_group_output {
             self.db_parameter_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CopyDbParameterGroupOutput`](crate::output::CopyDbParameterGroupOutput)
+        /// Consumes the builder and constructs a [`CopyDbParameterGroupOutput`](crate::output::CopyDbParameterGroupOutput).
         pub fn build(self) -> crate::output::CopyDbParameterGroupOutput {
             crate::output::CopyDbParameterGroupOutput {
                 db_parameter_group: self.db_parameter_group,
@@ -11545,7 +11869,7 @@ pub mod copy_db_parameter_group_output {
     }
 }
 impl CopyDbParameterGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CopyDbParameterGroupOutput`](crate::output::CopyDbParameterGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CopyDbParameterGroupOutput`](crate::output::CopyDbParameterGroupOutput).
     pub fn builder() -> crate::output::copy_db_parameter_group_output::Builder {
         crate::output::copy_db_parameter_group_output::Builder::default()
     }
@@ -11557,6 +11881,7 @@ impl CopyDbParameterGroupOutput {
 pub struct CopyDbClusterSnapshotOutput {
     /// <p>Contains the details for an Amazon RDS DB cluster snapshot</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBClusterSnapshots</code> action.</p>
+    #[doc(hidden)]
     pub db_cluster_snapshot: std::option::Option<crate::model::DbClusterSnapshot>,
 }
 impl CopyDbClusterSnapshotOutput {
@@ -11573,11 +11898,10 @@ impl std::fmt::Debug for CopyDbClusterSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`CopyDbClusterSnapshotOutput`](crate::output::CopyDbClusterSnapshotOutput)
+/// See [`CopyDbClusterSnapshotOutput`](crate::output::CopyDbClusterSnapshotOutput).
 pub mod copy_db_cluster_snapshot_output {
 
-    /// A builder for [`CopyDbClusterSnapshotOutput`](crate::output::CopyDbClusterSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`CopyDbClusterSnapshotOutput`](crate::output::CopyDbClusterSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_snapshot: std::option::Option<crate::model::DbClusterSnapshot>,
@@ -11598,7 +11922,7 @@ pub mod copy_db_cluster_snapshot_output {
             self.db_cluster_snapshot = input;
             self
         }
-        /// Consumes the builder and constructs a [`CopyDbClusterSnapshotOutput`](crate::output::CopyDbClusterSnapshotOutput)
+        /// Consumes the builder and constructs a [`CopyDbClusterSnapshotOutput`](crate::output::CopyDbClusterSnapshotOutput).
         pub fn build(self) -> crate::output::CopyDbClusterSnapshotOutput {
             crate::output::CopyDbClusterSnapshotOutput {
                 db_cluster_snapshot: self.db_cluster_snapshot,
@@ -11607,7 +11931,7 @@ pub mod copy_db_cluster_snapshot_output {
     }
 }
 impl CopyDbClusterSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`CopyDbClusterSnapshotOutput`](crate::output::CopyDbClusterSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`CopyDbClusterSnapshotOutput`](crate::output::CopyDbClusterSnapshotOutput).
     pub fn builder() -> crate::output::copy_db_cluster_snapshot_output::Builder {
         crate::output::copy_db_cluster_snapshot_output::Builder::default()
     }
@@ -11619,6 +11943,7 @@ impl CopyDbClusterSnapshotOutput {
 pub struct CopyDbClusterParameterGroupOutput {
     /// <p>Contains the details of an Amazon RDS DB cluster parameter group.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBClusterParameterGroups</code> action.</p>
+    #[doc(hidden)]
     pub db_cluster_parameter_group: std::option::Option<crate::model::DbClusterParameterGroup>,
 }
 impl CopyDbClusterParameterGroupOutput {
@@ -11640,11 +11965,10 @@ impl std::fmt::Debug for CopyDbClusterParameterGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CopyDbClusterParameterGroupOutput`](crate::output::CopyDbClusterParameterGroupOutput)
+/// See [`CopyDbClusterParameterGroupOutput`](crate::output::CopyDbClusterParameterGroupOutput).
 pub mod copy_db_cluster_parameter_group_output {
 
-    /// A builder for [`CopyDbClusterParameterGroupOutput`](crate::output::CopyDbClusterParameterGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CopyDbClusterParameterGroupOutput`](crate::output::CopyDbClusterParameterGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_parameter_group:
@@ -11669,7 +11993,7 @@ pub mod copy_db_cluster_parameter_group_output {
             self.db_cluster_parameter_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CopyDbClusterParameterGroupOutput`](crate::output::CopyDbClusterParameterGroupOutput)
+        /// Consumes the builder and constructs a [`CopyDbClusterParameterGroupOutput`](crate::output::CopyDbClusterParameterGroupOutput).
         pub fn build(self) -> crate::output::CopyDbClusterParameterGroupOutput {
             crate::output::CopyDbClusterParameterGroupOutput {
                 db_cluster_parameter_group: self.db_cluster_parameter_group,
@@ -11678,7 +12002,7 @@ pub mod copy_db_cluster_parameter_group_output {
     }
 }
 impl CopyDbClusterParameterGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CopyDbClusterParameterGroupOutput`](crate::output::CopyDbClusterParameterGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CopyDbClusterParameterGroupOutput`](crate::output::CopyDbClusterParameterGroupOutput).
     pub fn builder() -> crate::output::copy_db_cluster_parameter_group_output::Builder {
         crate::output::copy_db_cluster_parameter_group_output::Builder::default()
     }
@@ -11690,8 +12014,10 @@ impl CopyDbClusterParameterGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelExportTaskOutput {
     /// <p>A unique identifier for the snapshot export task. This ID isn't an identifier for the Amazon S3 bucket where the snapshot is exported to.</p>
+    #[doc(hidden)]
     pub export_task_identifier: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the snapshot exported to Amazon S3.</p>
+    #[doc(hidden)]
     pub source_arn: std::option::Option<std::string::String>,
     /// <p>The data exported from the snapshot. Valid values are the following:</p>
     /// <ul>
@@ -11700,30 +12026,43 @@ pub struct CancelExportTaskOutput {
     /// <li> <p> <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot. This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.</p> </li>
     /// <li> <p> <code>database.schema.table</code> <i>table-name</i> - Export a table of the database schema. This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub export_only: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The time that the snapshot was created.</p>
+    #[doc(hidden)]
     pub snapshot_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the snapshot export task started.</p>
+    #[doc(hidden)]
     pub task_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the snapshot export task completed.</p>
+    #[doc(hidden)]
     pub task_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon S3 bucket that the snapshot is exported to.</p>
+    #[doc(hidden)]
     pub s3_bucket: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 bucket prefix that is the file name and path of the exported snapshot.</p>
+    #[doc(hidden)]
     pub s3_prefix: std::option::Option<std::string::String>,
     /// <p>The name of the IAM role that is used to write to Amazon S3 when exporting a snapshot.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
     /// <p>The key identifier of the Amazon Web Services KMS key that is used to encrypt the snapshot when it's exported to Amazon S3. The KMS key identifier is its key ARN, key ID, alias ARN, or alias name. The IAM role used for the snapshot export must have encryption and decryption permissions to use this KMS key.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The progress status of the export task.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The progress of the snapshot export task as a percentage.</p>
+    #[doc(hidden)]
     pub percent_progress: i32,
     /// <p>The total amount of data exported, in gigabytes.</p>
+    #[doc(hidden)]
     pub total_extracted_data_in_gb: i32,
     /// <p>The reason the export failed, if it failed.</p>
+    #[doc(hidden)]
     pub failure_cause: std::option::Option<std::string::String>,
     /// <p>A warning about the snapshot export task.</p>
+    #[doc(hidden)]
     pub warning_message: std::option::Option<std::string::String>,
 }
 impl CancelExportTaskOutput {
@@ -11818,11 +12157,10 @@ impl std::fmt::Debug for CancelExportTaskOutput {
         formatter.finish()
     }
 }
-/// See [`CancelExportTaskOutput`](crate::output::CancelExportTaskOutput)
+/// See [`CancelExportTaskOutput`](crate::output::CancelExportTaskOutput).
 pub mod cancel_export_task_output {
 
-    /// A builder for [`CancelExportTaskOutput`](crate::output::CancelExportTaskOutput)
-    #[non_exhaustive]
+    /// A builder for [`CancelExportTaskOutput`](crate::output::CancelExportTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_task_identifier: std::option::Option<std::string::String>,
@@ -12031,7 +12369,7 @@ pub mod cancel_export_task_output {
             self.warning_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelExportTaskOutput`](crate::output::CancelExportTaskOutput)
+        /// Consumes the builder and constructs a [`CancelExportTaskOutput`](crate::output::CancelExportTaskOutput).
         pub fn build(self) -> crate::output::CancelExportTaskOutput {
             crate::output::CancelExportTaskOutput {
                 export_task_identifier: self.export_task_identifier,
@@ -12054,7 +12392,7 @@ pub mod cancel_export_task_output {
     }
 }
 impl CancelExportTaskOutput {
-    /// Creates a new builder-style object to manufacture [`CancelExportTaskOutput`](crate::output::CancelExportTaskOutput)
+    /// Creates a new builder-style object to manufacture [`CancelExportTaskOutput`](crate::output::CancelExportTaskOutput).
     pub fn builder() -> crate::output::cancel_export_task_output::Builder {
         crate::output::cancel_export_task_output::Builder::default()
     }
@@ -12065,14 +12403,19 @@ impl CancelExportTaskOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BacktrackDbClusterOutput {
     /// <p>Contains a user-supplied DB cluster identifier. This identifier is the unique key that identifies a DB cluster.</p>
+    #[doc(hidden)]
     pub db_cluster_identifier: std::option::Option<std::string::String>,
     /// <p>Contains the backtrack identifier.</p>
+    #[doc(hidden)]
     pub backtrack_identifier: std::option::Option<std::string::String>,
     /// <p>The timestamp of the time to which the DB cluster was backtracked.</p>
+    #[doc(hidden)]
     pub backtrack_to: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of the time from which the DB cluster was backtracked.</p>
+    #[doc(hidden)]
     pub backtracked_from: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of the time at which the backtrack was requested.</p>
+    #[doc(hidden)]
     pub backtrack_request_creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the backtrack. This property returns one of the following values:</p>
     /// <ul>
@@ -12081,6 +12424,7 @@ pub struct BacktrackDbClusterOutput {
     /// <li> <p> <code>failed</code> - An error occurred while the backtrack was applied to or rolled back from the DB cluster.</p> </li>
     /// <li> <p> <code>pending</code> - The backtrack is currently pending application to or rollback from the DB cluster.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl BacktrackDbClusterOutput {
@@ -12132,11 +12476,10 @@ impl std::fmt::Debug for BacktrackDbClusterOutput {
         formatter.finish()
     }
 }
-/// See [`BacktrackDbClusterOutput`](crate::output::BacktrackDbClusterOutput)
+/// See [`BacktrackDbClusterOutput`](crate::output::BacktrackDbClusterOutput).
 pub mod backtrack_db_cluster_output {
 
-    /// A builder for [`BacktrackDbClusterOutput`](crate::output::BacktrackDbClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`BacktrackDbClusterOutput`](crate::output::BacktrackDbClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_cluster_identifier: std::option::Option<std::string::String>,
@@ -12237,7 +12580,7 @@ pub mod backtrack_db_cluster_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`BacktrackDbClusterOutput`](crate::output::BacktrackDbClusterOutput)
+        /// Consumes the builder and constructs a [`BacktrackDbClusterOutput`](crate::output::BacktrackDbClusterOutput).
         pub fn build(self) -> crate::output::BacktrackDbClusterOutput {
             crate::output::BacktrackDbClusterOutput {
                 db_cluster_identifier: self.db_cluster_identifier,
@@ -12251,7 +12594,7 @@ pub mod backtrack_db_cluster_output {
     }
 }
 impl BacktrackDbClusterOutput {
-    /// Creates a new builder-style object to manufacture [`BacktrackDbClusterOutput`](crate::output::BacktrackDbClusterOutput)
+    /// Creates a new builder-style object to manufacture [`BacktrackDbClusterOutput`](crate::output::BacktrackDbClusterOutput).
     pub fn builder() -> crate::output::backtrack_db_cluster_output::Builder {
         crate::output::backtrack_db_cluster_output::Builder::default()
     }
@@ -12263,6 +12606,7 @@ impl BacktrackDbClusterOutput {
 pub struct AuthorizeDbSecurityGroupIngressOutput {
     /// <p>Contains the details for an Amazon RDS DB security group.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBSecurityGroups</code> action.</p>
+    #[doc(hidden)]
     pub db_security_group: std::option::Option<crate::model::DbSecurityGroup>,
 }
 impl AuthorizeDbSecurityGroupIngressOutput {
@@ -12279,11 +12623,10 @@ impl std::fmt::Debug for AuthorizeDbSecurityGroupIngressOutput {
         formatter.finish()
     }
 }
-/// See [`AuthorizeDbSecurityGroupIngressOutput`](crate::output::AuthorizeDbSecurityGroupIngressOutput)
+/// See [`AuthorizeDbSecurityGroupIngressOutput`](crate::output::AuthorizeDbSecurityGroupIngressOutput).
 pub mod authorize_db_security_group_ingress_output {
 
-    /// A builder for [`AuthorizeDbSecurityGroupIngressOutput`](crate::output::AuthorizeDbSecurityGroupIngressOutput)
-    #[non_exhaustive]
+    /// A builder for [`AuthorizeDbSecurityGroupIngressOutput`](crate::output::AuthorizeDbSecurityGroupIngressOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) db_security_group: std::option::Option<crate::model::DbSecurityGroup>,
@@ -12304,7 +12647,7 @@ pub mod authorize_db_security_group_ingress_output {
             self.db_security_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthorizeDbSecurityGroupIngressOutput`](crate::output::AuthorizeDbSecurityGroupIngressOutput)
+        /// Consumes the builder and constructs a [`AuthorizeDbSecurityGroupIngressOutput`](crate::output::AuthorizeDbSecurityGroupIngressOutput).
         pub fn build(self) -> crate::output::AuthorizeDbSecurityGroupIngressOutput {
             crate::output::AuthorizeDbSecurityGroupIngressOutput {
                 db_security_group: self.db_security_group,
@@ -12313,7 +12656,7 @@ pub mod authorize_db_security_group_ingress_output {
     }
 }
 impl AuthorizeDbSecurityGroupIngressOutput {
-    /// Creates a new builder-style object to manufacture [`AuthorizeDbSecurityGroupIngressOutput`](crate::output::AuthorizeDbSecurityGroupIngressOutput)
+    /// Creates a new builder-style object to manufacture [`AuthorizeDbSecurityGroupIngressOutput`](crate::output::AuthorizeDbSecurityGroupIngressOutput).
     pub fn builder() -> crate::output::authorize_db_security_group_ingress_output::Builder {
         crate::output::authorize_db_security_group_ingress_output::Builder::default()
     }
@@ -12324,6 +12667,7 @@ impl AuthorizeDbSecurityGroupIngressOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplyPendingMaintenanceActionOutput {
     /// <p>Describes the pending maintenance actions for a resource.</p>
+    #[doc(hidden)]
     pub resource_pending_maintenance_actions:
         std::option::Option<crate::model::ResourcePendingMaintenanceActions>,
 }
@@ -12345,11 +12689,10 @@ impl std::fmt::Debug for ApplyPendingMaintenanceActionOutput {
         formatter.finish()
     }
 }
-/// See [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput)
+/// See [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput).
 pub mod apply_pending_maintenance_action_output {
 
-    /// A builder for [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput)
-    #[non_exhaustive]
+    /// A builder for [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_pending_maintenance_actions:
@@ -12372,7 +12715,7 @@ pub mod apply_pending_maintenance_action_output {
             self.resource_pending_maintenance_actions = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput)
+        /// Consumes the builder and constructs a [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput).
         pub fn build(self) -> crate::output::ApplyPendingMaintenanceActionOutput {
             crate::output::ApplyPendingMaintenanceActionOutput {
                 resource_pending_maintenance_actions: self.resource_pending_maintenance_actions,
@@ -12381,7 +12724,7 @@ pub mod apply_pending_maintenance_action_output {
     }
 }
 impl ApplyPendingMaintenanceActionOutput {
-    /// Creates a new builder-style object to manufacture [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput)
+    /// Creates a new builder-style object to manufacture [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput).
     pub fn builder() -> crate::output::apply_pending_maintenance_action_output::Builder {
         crate::output::apply_pending_maintenance_action_output::Builder::default()
     }
@@ -12397,22 +12740,21 @@ impl std::fmt::Debug for AddTagsToResourceOutput {
         formatter.finish()
     }
 }
-/// See [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
+/// See [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput).
 pub mod add_tags_to_resource_output {
 
-    /// A builder for [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
+        /// Consumes the builder and constructs a [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput).
         pub fn build(self) -> crate::output::AddTagsToResourceOutput {
             crate::output::AddTagsToResourceOutput {}
         }
     }
 }
 impl AddTagsToResourceOutput {
-    /// Creates a new builder-style object to manufacture [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
+    /// Creates a new builder-style object to manufacture [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput).
     pub fn builder() -> crate::output::add_tags_to_resource_output::Builder {
         crate::output::add_tags_to_resource_output::Builder::default()
     }
@@ -12423,6 +12765,7 @@ impl AddTagsToResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddSourceIdentifierToSubscriptionOutput {
     /// <p>Contains the results of a successful invocation of the <code>DescribeEventSubscriptions</code> action.</p>
+    #[doc(hidden)]
     pub event_subscription: std::option::Option<crate::model::EventSubscription>,
 }
 impl AddSourceIdentifierToSubscriptionOutput {
@@ -12438,11 +12781,10 @@ impl std::fmt::Debug for AddSourceIdentifierToSubscriptionOutput {
         formatter.finish()
     }
 }
-/// See [`AddSourceIdentifierToSubscriptionOutput`](crate::output::AddSourceIdentifierToSubscriptionOutput)
+/// See [`AddSourceIdentifierToSubscriptionOutput`](crate::output::AddSourceIdentifierToSubscriptionOutput).
 pub mod add_source_identifier_to_subscription_output {
 
-    /// A builder for [`AddSourceIdentifierToSubscriptionOutput`](crate::output::AddSourceIdentifierToSubscriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddSourceIdentifierToSubscriptionOutput`](crate::output::AddSourceIdentifierToSubscriptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_subscription: std::option::Option<crate::model::EventSubscription>,
@@ -12461,7 +12803,7 @@ pub mod add_source_identifier_to_subscription_output {
             self.event_subscription = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddSourceIdentifierToSubscriptionOutput`](crate::output::AddSourceIdentifierToSubscriptionOutput)
+        /// Consumes the builder and constructs a [`AddSourceIdentifierToSubscriptionOutput`](crate::output::AddSourceIdentifierToSubscriptionOutput).
         pub fn build(self) -> crate::output::AddSourceIdentifierToSubscriptionOutput {
             crate::output::AddSourceIdentifierToSubscriptionOutput {
                 event_subscription: self.event_subscription,
@@ -12470,7 +12812,7 @@ pub mod add_source_identifier_to_subscription_output {
     }
 }
 impl AddSourceIdentifierToSubscriptionOutput {
-    /// Creates a new builder-style object to manufacture [`AddSourceIdentifierToSubscriptionOutput`](crate::output::AddSourceIdentifierToSubscriptionOutput)
+    /// Creates a new builder-style object to manufacture [`AddSourceIdentifierToSubscriptionOutput`](crate::output::AddSourceIdentifierToSubscriptionOutput).
     pub fn builder() -> crate::output::add_source_identifier_to_subscription_output::Builder {
         crate::output::add_source_identifier_to_subscription_output::Builder::default()
     }
@@ -12486,22 +12828,21 @@ impl std::fmt::Debug for AddRoleToDbInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`AddRoleToDbInstanceOutput`](crate::output::AddRoleToDbInstanceOutput)
+/// See [`AddRoleToDbInstanceOutput`](crate::output::AddRoleToDbInstanceOutput).
 pub mod add_role_to_db_instance_output {
 
-    /// A builder for [`AddRoleToDbInstanceOutput`](crate::output::AddRoleToDbInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddRoleToDbInstanceOutput`](crate::output::AddRoleToDbInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AddRoleToDbInstanceOutput`](crate::output::AddRoleToDbInstanceOutput)
+        /// Consumes the builder and constructs a [`AddRoleToDbInstanceOutput`](crate::output::AddRoleToDbInstanceOutput).
         pub fn build(self) -> crate::output::AddRoleToDbInstanceOutput {
             crate::output::AddRoleToDbInstanceOutput {}
         }
     }
 }
 impl AddRoleToDbInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`AddRoleToDbInstanceOutput`](crate::output::AddRoleToDbInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`AddRoleToDbInstanceOutput`](crate::output::AddRoleToDbInstanceOutput).
     pub fn builder() -> crate::output::add_role_to_db_instance_output::Builder {
         crate::output::add_role_to_db_instance_output::Builder::default()
     }
@@ -12517,22 +12858,21 @@ impl std::fmt::Debug for AddRoleToDbClusterOutput {
         formatter.finish()
     }
 }
-/// See [`AddRoleToDbClusterOutput`](crate::output::AddRoleToDbClusterOutput)
+/// See [`AddRoleToDbClusterOutput`](crate::output::AddRoleToDbClusterOutput).
 pub mod add_role_to_db_cluster_output {
 
-    /// A builder for [`AddRoleToDbClusterOutput`](crate::output::AddRoleToDbClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddRoleToDbClusterOutput`](crate::output::AddRoleToDbClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AddRoleToDbClusterOutput`](crate::output::AddRoleToDbClusterOutput)
+        /// Consumes the builder and constructs a [`AddRoleToDbClusterOutput`](crate::output::AddRoleToDbClusterOutput).
         pub fn build(self) -> crate::output::AddRoleToDbClusterOutput {
             crate::output::AddRoleToDbClusterOutput {}
         }
     }
 }
 impl AddRoleToDbClusterOutput {
-    /// Creates a new builder-style object to manufacture [`AddRoleToDbClusterOutput`](crate::output::AddRoleToDbClusterOutput)
+    /// Creates a new builder-style object to manufacture [`AddRoleToDbClusterOutput`](crate::output::AddRoleToDbClusterOutput).
     pub fn builder() -> crate::output::add_role_to_db_cluster_output::Builder {
         crate::output::add_role_to_db_cluster_output::Builder::default()
     }

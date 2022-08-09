@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateXssMatchSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>UpdateXssMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl UpdateXssMatchSetOutput {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for UpdateXssMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateXssMatchSetOutput`](crate::output::UpdateXssMatchSetOutput)
+/// See [`UpdateXssMatchSetOutput`](crate::output::UpdateXssMatchSetOutput).
 pub mod update_xss_match_set_output {
 
-    /// A builder for [`UpdateXssMatchSetOutput`](crate::output::UpdateXssMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateXssMatchSetOutput`](crate::output::UpdateXssMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -40,7 +40,7 @@ pub mod update_xss_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateXssMatchSetOutput`](crate::output::UpdateXssMatchSetOutput)
+        /// Consumes the builder and constructs a [`UpdateXssMatchSetOutput`](crate::output::UpdateXssMatchSetOutput).
         pub fn build(self) -> crate::output::UpdateXssMatchSetOutput {
             crate::output::UpdateXssMatchSetOutput {
                 change_token: self.change_token,
@@ -49,7 +49,7 @@ pub mod update_xss_match_set_output {
     }
 }
 impl UpdateXssMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateXssMatchSetOutput`](crate::output::UpdateXssMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateXssMatchSetOutput`](crate::output::UpdateXssMatchSetOutput).
     pub fn builder() -> crate::output::update_xss_match_set_output::Builder {
         crate::output::update_xss_match_set_output::Builder::default()
     }
@@ -60,6 +60,7 @@ impl UpdateXssMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateWebAclOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>UpdateWebACL</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl UpdateWebAclOutput {
@@ -75,11 +76,10 @@ impl std::fmt::Debug for UpdateWebAclOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput)
+/// See [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput).
 pub mod update_web_acl_output {
 
-    /// A builder for [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -95,7 +95,7 @@ pub mod update_web_acl_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput)
+        /// Consumes the builder and constructs a [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput).
         pub fn build(self) -> crate::output::UpdateWebAclOutput {
             crate::output::UpdateWebAclOutput {
                 change_token: self.change_token,
@@ -104,7 +104,7 @@ pub mod update_web_acl_output {
     }
 }
 impl UpdateWebAclOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput).
     pub fn builder() -> crate::output::update_web_acl_output::Builder {
         crate::output::update_web_acl_output::Builder::default()
     }
@@ -115,6 +115,7 @@ impl UpdateWebAclOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSqlInjectionMatchSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>UpdateSqlInjectionMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl UpdateSqlInjectionMatchSetOutput {
@@ -130,11 +131,10 @@ impl std::fmt::Debug for UpdateSqlInjectionMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSqlInjectionMatchSetOutput`](crate::output::UpdateSqlInjectionMatchSetOutput)
+/// See [`UpdateSqlInjectionMatchSetOutput`](crate::output::UpdateSqlInjectionMatchSetOutput).
 pub mod update_sql_injection_match_set_output {
 
-    /// A builder for [`UpdateSqlInjectionMatchSetOutput`](crate::output::UpdateSqlInjectionMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSqlInjectionMatchSetOutput`](crate::output::UpdateSqlInjectionMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -150,7 +150,7 @@ pub mod update_sql_injection_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSqlInjectionMatchSetOutput`](crate::output::UpdateSqlInjectionMatchSetOutput)
+        /// Consumes the builder and constructs a [`UpdateSqlInjectionMatchSetOutput`](crate::output::UpdateSqlInjectionMatchSetOutput).
         pub fn build(self) -> crate::output::UpdateSqlInjectionMatchSetOutput {
             crate::output::UpdateSqlInjectionMatchSetOutput {
                 change_token: self.change_token,
@@ -159,7 +159,7 @@ pub mod update_sql_injection_match_set_output {
     }
 }
 impl UpdateSqlInjectionMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSqlInjectionMatchSetOutput`](crate::output::UpdateSqlInjectionMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSqlInjectionMatchSetOutput`](crate::output::UpdateSqlInjectionMatchSetOutput).
     pub fn builder() -> crate::output::update_sql_injection_match_set_output::Builder {
         crate::output::update_sql_injection_match_set_output::Builder::default()
     }
@@ -170,6 +170,7 @@ impl UpdateSqlInjectionMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSizeConstraintSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>UpdateSizeConstraintSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl UpdateSizeConstraintSetOutput {
@@ -185,11 +186,10 @@ impl std::fmt::Debug for UpdateSizeConstraintSetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSizeConstraintSetOutput`](crate::output::UpdateSizeConstraintSetOutput)
+/// See [`UpdateSizeConstraintSetOutput`](crate::output::UpdateSizeConstraintSetOutput).
 pub mod update_size_constraint_set_output {
 
-    /// A builder for [`UpdateSizeConstraintSetOutput`](crate::output::UpdateSizeConstraintSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSizeConstraintSetOutput`](crate::output::UpdateSizeConstraintSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -205,7 +205,7 @@ pub mod update_size_constraint_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSizeConstraintSetOutput`](crate::output::UpdateSizeConstraintSetOutput)
+        /// Consumes the builder and constructs a [`UpdateSizeConstraintSetOutput`](crate::output::UpdateSizeConstraintSetOutput).
         pub fn build(self) -> crate::output::UpdateSizeConstraintSetOutput {
             crate::output::UpdateSizeConstraintSetOutput {
                 change_token: self.change_token,
@@ -214,7 +214,7 @@ pub mod update_size_constraint_set_output {
     }
 }
 impl UpdateSizeConstraintSetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSizeConstraintSetOutput`](crate::output::UpdateSizeConstraintSetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSizeConstraintSetOutput`](crate::output::UpdateSizeConstraintSetOutput).
     pub fn builder() -> crate::output::update_size_constraint_set_output::Builder {
         crate::output::update_size_constraint_set_output::Builder::default()
     }
@@ -225,6 +225,7 @@ impl UpdateSizeConstraintSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateRuleGroupOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>UpdateRuleGroup</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl UpdateRuleGroupOutput {
@@ -240,11 +241,10 @@ impl std::fmt::Debug for UpdateRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
+/// See [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput).
 pub mod update_rule_group_output {
 
-    /// A builder for [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -260,7 +260,7 @@ pub mod update_rule_group_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
+        /// Consumes the builder and constructs a [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput).
         pub fn build(self) -> crate::output::UpdateRuleGroupOutput {
             crate::output::UpdateRuleGroupOutput {
                 change_token: self.change_token,
@@ -269,7 +269,7 @@ pub mod update_rule_group_output {
     }
 }
 impl UpdateRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput).
     pub fn builder() -> crate::output::update_rule_group_output::Builder {
         crate::output::update_rule_group_output::Builder::default()
     }
@@ -280,6 +280,7 @@ impl UpdateRuleGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateRuleOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>UpdateRule</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl UpdateRuleOutput {
@@ -295,11 +296,10 @@ impl std::fmt::Debug for UpdateRuleOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRuleOutput`](crate::output::UpdateRuleOutput)
+/// See [`UpdateRuleOutput`](crate::output::UpdateRuleOutput).
 pub mod update_rule_output {
 
-    /// A builder for [`UpdateRuleOutput`](crate::output::UpdateRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRuleOutput`](crate::output::UpdateRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -315,7 +315,7 @@ pub mod update_rule_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRuleOutput`](crate::output::UpdateRuleOutput)
+        /// Consumes the builder and constructs a [`UpdateRuleOutput`](crate::output::UpdateRuleOutput).
         pub fn build(self) -> crate::output::UpdateRuleOutput {
             crate::output::UpdateRuleOutput {
                 change_token: self.change_token,
@@ -324,7 +324,7 @@ pub mod update_rule_output {
     }
 }
 impl UpdateRuleOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRuleOutput`](crate::output::UpdateRuleOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRuleOutput`](crate::output::UpdateRuleOutput).
     pub fn builder() -> crate::output::update_rule_output::Builder {
         crate::output::update_rule_output::Builder::default()
     }
@@ -335,6 +335,7 @@ impl UpdateRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateRegexPatternSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>UpdateRegexPatternSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl UpdateRegexPatternSetOutput {
@@ -350,11 +351,10 @@ impl std::fmt::Debug for UpdateRegexPatternSetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput)
+/// See [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput).
 pub mod update_regex_pattern_set_output {
 
-    /// A builder for [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -370,7 +370,7 @@ pub mod update_regex_pattern_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput)
+        /// Consumes the builder and constructs a [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput).
         pub fn build(self) -> crate::output::UpdateRegexPatternSetOutput {
             crate::output::UpdateRegexPatternSetOutput {
                 change_token: self.change_token,
@@ -379,7 +379,7 @@ pub mod update_regex_pattern_set_output {
     }
 }
 impl UpdateRegexPatternSetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput).
     pub fn builder() -> crate::output::update_regex_pattern_set_output::Builder {
         crate::output::update_regex_pattern_set_output::Builder::default()
     }
@@ -390,6 +390,7 @@ impl UpdateRegexPatternSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateRegexMatchSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>UpdateRegexMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl UpdateRegexMatchSetOutput {
@@ -405,11 +406,10 @@ impl std::fmt::Debug for UpdateRegexMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRegexMatchSetOutput`](crate::output::UpdateRegexMatchSetOutput)
+/// See [`UpdateRegexMatchSetOutput`](crate::output::UpdateRegexMatchSetOutput).
 pub mod update_regex_match_set_output {
 
-    /// A builder for [`UpdateRegexMatchSetOutput`](crate::output::UpdateRegexMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRegexMatchSetOutput`](crate::output::UpdateRegexMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -425,7 +425,7 @@ pub mod update_regex_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRegexMatchSetOutput`](crate::output::UpdateRegexMatchSetOutput)
+        /// Consumes the builder and constructs a [`UpdateRegexMatchSetOutput`](crate::output::UpdateRegexMatchSetOutput).
         pub fn build(self) -> crate::output::UpdateRegexMatchSetOutput {
             crate::output::UpdateRegexMatchSetOutput {
                 change_token: self.change_token,
@@ -434,7 +434,7 @@ pub mod update_regex_match_set_output {
     }
 }
 impl UpdateRegexMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRegexMatchSetOutput`](crate::output::UpdateRegexMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRegexMatchSetOutput`](crate::output::UpdateRegexMatchSetOutput).
     pub fn builder() -> crate::output::update_regex_match_set_output::Builder {
         crate::output::update_regex_match_set_output::Builder::default()
     }
@@ -445,6 +445,7 @@ impl UpdateRegexMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateRateBasedRuleOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>UpdateRateBasedRule</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl UpdateRateBasedRuleOutput {
@@ -460,11 +461,10 @@ impl std::fmt::Debug for UpdateRateBasedRuleOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRateBasedRuleOutput`](crate::output::UpdateRateBasedRuleOutput)
+/// See [`UpdateRateBasedRuleOutput`](crate::output::UpdateRateBasedRuleOutput).
 pub mod update_rate_based_rule_output {
 
-    /// A builder for [`UpdateRateBasedRuleOutput`](crate::output::UpdateRateBasedRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRateBasedRuleOutput`](crate::output::UpdateRateBasedRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -480,7 +480,7 @@ pub mod update_rate_based_rule_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRateBasedRuleOutput`](crate::output::UpdateRateBasedRuleOutput)
+        /// Consumes the builder and constructs a [`UpdateRateBasedRuleOutput`](crate::output::UpdateRateBasedRuleOutput).
         pub fn build(self) -> crate::output::UpdateRateBasedRuleOutput {
             crate::output::UpdateRateBasedRuleOutput {
                 change_token: self.change_token,
@@ -489,7 +489,7 @@ pub mod update_rate_based_rule_output {
     }
 }
 impl UpdateRateBasedRuleOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRateBasedRuleOutput`](crate::output::UpdateRateBasedRuleOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRateBasedRuleOutput`](crate::output::UpdateRateBasedRuleOutput).
     pub fn builder() -> crate::output::update_rate_based_rule_output::Builder {
         crate::output::update_rate_based_rule_output::Builder::default()
     }
@@ -500,6 +500,7 @@ impl UpdateRateBasedRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateIpSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>UpdateIPSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl UpdateIpSetOutput {
@@ -515,11 +516,10 @@ impl std::fmt::Debug for UpdateIpSetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput)
+/// See [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput).
 pub mod update_ip_set_output {
 
-    /// A builder for [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -535,7 +535,7 @@ pub mod update_ip_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput)
+        /// Consumes the builder and constructs a [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput).
         pub fn build(self) -> crate::output::UpdateIpSetOutput {
             crate::output::UpdateIpSetOutput {
                 change_token: self.change_token,
@@ -544,7 +544,7 @@ pub mod update_ip_set_output {
     }
 }
 impl UpdateIpSetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput).
     pub fn builder() -> crate::output::update_ip_set_output::Builder {
         crate::output::update_ip_set_output::Builder::default()
     }
@@ -555,6 +555,7 @@ impl UpdateIpSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateGeoMatchSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>UpdateGeoMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl UpdateGeoMatchSetOutput {
@@ -570,11 +571,10 @@ impl std::fmt::Debug for UpdateGeoMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateGeoMatchSetOutput`](crate::output::UpdateGeoMatchSetOutput)
+/// See [`UpdateGeoMatchSetOutput`](crate::output::UpdateGeoMatchSetOutput).
 pub mod update_geo_match_set_output {
 
-    /// A builder for [`UpdateGeoMatchSetOutput`](crate::output::UpdateGeoMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateGeoMatchSetOutput`](crate::output::UpdateGeoMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -590,7 +590,7 @@ pub mod update_geo_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateGeoMatchSetOutput`](crate::output::UpdateGeoMatchSetOutput)
+        /// Consumes the builder and constructs a [`UpdateGeoMatchSetOutput`](crate::output::UpdateGeoMatchSetOutput).
         pub fn build(self) -> crate::output::UpdateGeoMatchSetOutput {
             crate::output::UpdateGeoMatchSetOutput {
                 change_token: self.change_token,
@@ -599,7 +599,7 @@ pub mod update_geo_match_set_output {
     }
 }
 impl UpdateGeoMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateGeoMatchSetOutput`](crate::output::UpdateGeoMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateGeoMatchSetOutput`](crate::output::UpdateGeoMatchSetOutput).
     pub fn builder() -> crate::output::update_geo_match_set_output::Builder {
         crate::output::update_geo_match_set_output::Builder::default()
     }
@@ -610,6 +610,7 @@ impl UpdateGeoMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateByteMatchSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>UpdateByteMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl UpdateByteMatchSetOutput {
@@ -625,11 +626,10 @@ impl std::fmt::Debug for UpdateByteMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateByteMatchSetOutput`](crate::output::UpdateByteMatchSetOutput)
+/// See [`UpdateByteMatchSetOutput`](crate::output::UpdateByteMatchSetOutput).
 pub mod update_byte_match_set_output {
 
-    /// A builder for [`UpdateByteMatchSetOutput`](crate::output::UpdateByteMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateByteMatchSetOutput`](crate::output::UpdateByteMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -645,7 +645,7 @@ pub mod update_byte_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateByteMatchSetOutput`](crate::output::UpdateByteMatchSetOutput)
+        /// Consumes the builder and constructs a [`UpdateByteMatchSetOutput`](crate::output::UpdateByteMatchSetOutput).
         pub fn build(self) -> crate::output::UpdateByteMatchSetOutput {
             crate::output::UpdateByteMatchSetOutput {
                 change_token: self.change_token,
@@ -654,7 +654,7 @@ pub mod update_byte_match_set_output {
     }
 }
 impl UpdateByteMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateByteMatchSetOutput`](crate::output::UpdateByteMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateByteMatchSetOutput`](crate::output::UpdateByteMatchSetOutput).
     pub fn builder() -> crate::output::update_byte_match_set_output::Builder {
         crate::output::update_byte_match_set_output::Builder::default()
     }
@@ -670,22 +670,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -701,22 +700,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -732,22 +730,21 @@ impl std::fmt::Debug for PutPermissionPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput)
+/// See [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput).
 pub mod put_permission_policy_output {
 
-    /// A builder for [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput)
+        /// Consumes the builder and constructs a [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput).
         pub fn build(self) -> crate::output::PutPermissionPolicyOutput {
             crate::output::PutPermissionPolicyOutput {}
         }
     }
 }
 impl PutPermissionPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput).
     pub fn builder() -> crate::output::put_permission_policy_output::Builder {
         crate::output::put_permission_policy_output::Builder::default()
     }
@@ -758,6 +755,7 @@ impl PutPermissionPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutLoggingConfigurationOutput {
     /// <p>The <code>LoggingConfiguration</code> that you submitted in the request.</p>
+    #[doc(hidden)]
     pub logging_configuration: std::option::Option<crate::model::LoggingConfiguration>,
 }
 impl PutLoggingConfigurationOutput {
@@ -775,11 +773,10 @@ impl std::fmt::Debug for PutLoggingConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput)
+/// See [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput).
 pub mod put_logging_configuration_output {
 
-    /// A builder for [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logging_configuration: std::option::Option<crate::model::LoggingConfiguration>,
@@ -798,7 +795,7 @@ pub mod put_logging_configuration_output {
             self.logging_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput).
         pub fn build(self) -> crate::output::PutLoggingConfigurationOutput {
             crate::output::PutLoggingConfigurationOutput {
                 logging_configuration: self.logging_configuration,
@@ -807,7 +804,7 @@ pub mod put_logging_configuration_output {
     }
 }
 impl PutLoggingConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput).
     pub fn builder() -> crate::output::put_logging_configuration_output::Builder {
         crate::output::put_logging_configuration_output::Builder::default()
     }
@@ -818,8 +815,10 @@ impl PutLoggingConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListXssMatchSetsOutput {
     /// <p>If you have more <code>XssMatchSet</code> objects than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more <code>XssMatchSet</code> objects, submit another <code>ListXssMatchSets</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>XssMatchSetSummary</code> objects.</p>
+    #[doc(hidden)]
     pub xss_match_sets: std::option::Option<std::vec::Vec<crate::model::XssMatchSetSummary>>,
 }
 impl ListXssMatchSetsOutput {
@@ -840,11 +839,10 @@ impl std::fmt::Debug for ListXssMatchSetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListXssMatchSetsOutput`](crate::output::ListXssMatchSetsOutput)
+/// See [`ListXssMatchSetsOutput`](crate::output::ListXssMatchSetsOutput).
 pub mod list_xss_match_sets_output {
 
-    /// A builder for [`ListXssMatchSetsOutput`](crate::output::ListXssMatchSetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListXssMatchSetsOutput`](crate::output::ListXssMatchSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -881,7 +879,7 @@ pub mod list_xss_match_sets_output {
             self.xss_match_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListXssMatchSetsOutput`](crate::output::ListXssMatchSetsOutput)
+        /// Consumes the builder and constructs a [`ListXssMatchSetsOutput`](crate::output::ListXssMatchSetsOutput).
         pub fn build(self) -> crate::output::ListXssMatchSetsOutput {
             crate::output::ListXssMatchSetsOutput {
                 next_marker: self.next_marker,
@@ -891,7 +889,7 @@ pub mod list_xss_match_sets_output {
     }
 }
 impl ListXssMatchSetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListXssMatchSetsOutput`](crate::output::ListXssMatchSetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListXssMatchSetsOutput`](crate::output::ListXssMatchSetsOutput).
     pub fn builder() -> crate::output::list_xss_match_sets_output::Builder {
         crate::output::list_xss_match_sets_output::Builder::default()
     }
@@ -902,8 +900,10 @@ impl ListXssMatchSetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListWebAcLsOutput {
     /// <p>If you have more <code>WebACL</code> objects than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more <code>WebACL</code> objects, submit another <code>ListWebACLs</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>WebACLSummary</code> objects.</p>
+    #[doc(hidden)]
     pub web_ac_ls: std::option::Option<std::vec::Vec<crate::model::WebAclSummary>>,
 }
 impl ListWebAcLsOutput {
@@ -924,11 +924,10 @@ impl std::fmt::Debug for ListWebAcLsOutput {
         formatter.finish()
     }
 }
-/// See [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput)
+/// See [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput).
 pub mod list_web_ac_ls_output {
 
-    /// A builder for [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -964,7 +963,7 @@ pub mod list_web_ac_ls_output {
             self.web_ac_ls = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput)
+        /// Consumes the builder and constructs a [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput).
         pub fn build(self) -> crate::output::ListWebAcLsOutput {
             crate::output::ListWebAcLsOutput {
                 next_marker: self.next_marker,
@@ -974,7 +973,7 @@ pub mod list_web_ac_ls_output {
     }
 }
 impl ListWebAcLsOutput {
-    /// Creates a new builder-style object to manufacture [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput)
+    /// Creates a new builder-style object to manufacture [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput).
     pub fn builder() -> crate::output::list_web_ac_ls_output::Builder {
         crate::output::list_web_ac_ls_output::Builder::default()
     }
@@ -985,8 +984,10 @@ impl ListWebAcLsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p></p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub tag_info_for_resource: std::option::Option<crate::model::TagInfoForResource>,
 }
 impl ListTagsForResourceOutput {
@@ -1007,11 +1008,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1041,7 +1041,7 @@ pub mod list_tags_for_resource_output {
             self.tag_info_for_resource = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 next_marker: self.next_marker,
@@ -1051,7 +1051,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -1062,8 +1062,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSubscribedRuleGroupsOutput {
     /// <p>If you have more objects than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more objects, submit another <code>ListSubscribedRuleGroups</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>RuleGroup</code> objects.</p>
+    #[doc(hidden)]
     pub rule_groups: std::option::Option<std::vec::Vec<crate::model::SubscribedRuleGroupSummary>>,
 }
 impl ListSubscribedRuleGroupsOutput {
@@ -1084,11 +1086,10 @@ impl std::fmt::Debug for ListSubscribedRuleGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`ListSubscribedRuleGroupsOutput`](crate::output::ListSubscribedRuleGroupsOutput)
+/// See [`ListSubscribedRuleGroupsOutput`](crate::output::ListSubscribedRuleGroupsOutput).
 pub mod list_subscribed_rule_groups_output {
 
-    /// A builder for [`ListSubscribedRuleGroupsOutput`](crate::output::ListSubscribedRuleGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSubscribedRuleGroupsOutput`](crate::output::ListSubscribedRuleGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1125,7 +1126,7 @@ pub mod list_subscribed_rule_groups_output {
             self.rule_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSubscribedRuleGroupsOutput`](crate::output::ListSubscribedRuleGroupsOutput)
+        /// Consumes the builder and constructs a [`ListSubscribedRuleGroupsOutput`](crate::output::ListSubscribedRuleGroupsOutput).
         pub fn build(self) -> crate::output::ListSubscribedRuleGroupsOutput {
             crate::output::ListSubscribedRuleGroupsOutput {
                 next_marker: self.next_marker,
@@ -1135,7 +1136,7 @@ pub mod list_subscribed_rule_groups_output {
     }
 }
 impl ListSubscribedRuleGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`ListSubscribedRuleGroupsOutput`](crate::output::ListSubscribedRuleGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`ListSubscribedRuleGroupsOutput`](crate::output::ListSubscribedRuleGroupsOutput).
     pub fn builder() -> crate::output::list_subscribed_rule_groups_output::Builder {
         crate::output::list_subscribed_rule_groups_output::Builder::default()
     }
@@ -1146,8 +1147,10 @@ impl ListSubscribedRuleGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSqlInjectionMatchSetsOutput {
     /// <p>If you have more <code>SqlInjectionMatchSet</code> objects than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more <code>SqlInjectionMatchSet</code> objects, submit another <code>ListSqlInjectionMatchSets</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>SqlInjectionMatchSetSummary</code> objects.</p>
+    #[doc(hidden)]
     pub sql_injection_match_sets:
         std::option::Option<std::vec::Vec<crate::model::SqlInjectionMatchSetSummary>>,
 }
@@ -1171,11 +1174,10 @@ impl std::fmt::Debug for ListSqlInjectionMatchSetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListSqlInjectionMatchSetsOutput`](crate::output::ListSqlInjectionMatchSetsOutput)
+/// See [`ListSqlInjectionMatchSetsOutput`](crate::output::ListSqlInjectionMatchSetsOutput).
 pub mod list_sql_injection_match_sets_output {
 
-    /// A builder for [`ListSqlInjectionMatchSetsOutput`](crate::output::ListSqlInjectionMatchSetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSqlInjectionMatchSetsOutput`](crate::output::ListSqlInjectionMatchSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1215,7 +1217,7 @@ pub mod list_sql_injection_match_sets_output {
             self.sql_injection_match_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSqlInjectionMatchSetsOutput`](crate::output::ListSqlInjectionMatchSetsOutput)
+        /// Consumes the builder and constructs a [`ListSqlInjectionMatchSetsOutput`](crate::output::ListSqlInjectionMatchSetsOutput).
         pub fn build(self) -> crate::output::ListSqlInjectionMatchSetsOutput {
             crate::output::ListSqlInjectionMatchSetsOutput {
                 next_marker: self.next_marker,
@@ -1225,7 +1227,7 @@ pub mod list_sql_injection_match_sets_output {
     }
 }
 impl ListSqlInjectionMatchSetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListSqlInjectionMatchSetsOutput`](crate::output::ListSqlInjectionMatchSetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListSqlInjectionMatchSetsOutput`](crate::output::ListSqlInjectionMatchSetsOutput).
     pub fn builder() -> crate::output::list_sql_injection_match_sets_output::Builder {
         crate::output::list_sql_injection_match_sets_output::Builder::default()
     }
@@ -1236,8 +1238,10 @@ impl ListSqlInjectionMatchSetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSizeConstraintSetsOutput {
     /// <p>If you have more <code>SizeConstraintSet</code> objects than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more <code>SizeConstraintSet</code> objects, submit another <code>ListSizeConstraintSets</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>SizeConstraintSetSummary</code> objects.</p>
+    #[doc(hidden)]
     pub size_constraint_sets:
         std::option::Option<std::vec::Vec<crate::model::SizeConstraintSetSummary>>,
 }
@@ -1261,11 +1265,10 @@ impl std::fmt::Debug for ListSizeConstraintSetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListSizeConstraintSetsOutput`](crate::output::ListSizeConstraintSetsOutput)
+/// See [`ListSizeConstraintSetsOutput`](crate::output::ListSizeConstraintSetsOutput).
 pub mod list_size_constraint_sets_output {
 
-    /// A builder for [`ListSizeConstraintSetsOutput`](crate::output::ListSizeConstraintSetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSizeConstraintSetsOutput`](crate::output::ListSizeConstraintSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1305,7 +1308,7 @@ pub mod list_size_constraint_sets_output {
             self.size_constraint_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSizeConstraintSetsOutput`](crate::output::ListSizeConstraintSetsOutput)
+        /// Consumes the builder and constructs a [`ListSizeConstraintSetsOutput`](crate::output::ListSizeConstraintSetsOutput).
         pub fn build(self) -> crate::output::ListSizeConstraintSetsOutput {
             crate::output::ListSizeConstraintSetsOutput {
                 next_marker: self.next_marker,
@@ -1315,7 +1318,7 @@ pub mod list_size_constraint_sets_output {
     }
 }
 impl ListSizeConstraintSetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListSizeConstraintSetsOutput`](crate::output::ListSizeConstraintSetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListSizeConstraintSetsOutput`](crate::output::ListSizeConstraintSetsOutput).
     pub fn builder() -> crate::output::list_size_constraint_sets_output::Builder {
         crate::output::list_size_constraint_sets_output::Builder::default()
     }
@@ -1326,8 +1329,10 @@ impl ListSizeConstraintSetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRulesOutput {
     /// <p>If you have more <code>Rules</code> than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more <code>Rules</code>, submit another <code>ListRules</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>RuleSummary</code> objects.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::RuleSummary>>,
 }
 impl ListRulesOutput {
@@ -1348,11 +1353,10 @@ impl std::fmt::Debug for ListRulesOutput {
         formatter.finish()
     }
 }
-/// See [`ListRulesOutput`](crate::output::ListRulesOutput)
+/// See [`ListRulesOutput`](crate::output::ListRulesOutput).
 pub mod list_rules_output {
 
-    /// A builder for [`ListRulesOutput`](crate::output::ListRulesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRulesOutput`](crate::output::ListRulesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1388,7 +1392,7 @@ pub mod list_rules_output {
             self.rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRulesOutput`](crate::output::ListRulesOutput)
+        /// Consumes the builder and constructs a [`ListRulesOutput`](crate::output::ListRulesOutput).
         pub fn build(self) -> crate::output::ListRulesOutput {
             crate::output::ListRulesOutput {
                 next_marker: self.next_marker,
@@ -1398,7 +1402,7 @@ pub mod list_rules_output {
     }
 }
 impl ListRulesOutput {
-    /// Creates a new builder-style object to manufacture [`ListRulesOutput`](crate::output::ListRulesOutput)
+    /// Creates a new builder-style object to manufacture [`ListRulesOutput`](crate::output::ListRulesOutput).
     pub fn builder() -> crate::output::list_rules_output::Builder {
         crate::output::list_rules_output::Builder::default()
     }
@@ -1409,8 +1413,10 @@ impl ListRulesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRuleGroupsOutput {
     /// <p>If you have more <code>RuleGroups</code> than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more <code>RuleGroups</code>, submit another <code>ListRuleGroups</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>RuleGroup</code> objects.</p>
+    #[doc(hidden)]
     pub rule_groups: std::option::Option<std::vec::Vec<crate::model::RuleGroupSummary>>,
 }
 impl ListRuleGroupsOutput {
@@ -1431,11 +1437,10 @@ impl std::fmt::Debug for ListRuleGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
+/// See [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput).
 pub mod list_rule_groups_output {
 
-    /// A builder for [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1471,7 +1476,7 @@ pub mod list_rule_groups_output {
             self.rule_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
+        /// Consumes the builder and constructs a [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput).
         pub fn build(self) -> crate::output::ListRuleGroupsOutput {
             crate::output::ListRuleGroupsOutput {
                 next_marker: self.next_marker,
@@ -1481,7 +1486,7 @@ pub mod list_rule_groups_output {
     }
 }
 impl ListRuleGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput).
     pub fn builder() -> crate::output::list_rule_groups_output::Builder {
         crate::output::list_rule_groups_output::Builder::default()
     }
@@ -1492,8 +1497,10 @@ impl ListRuleGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRegexPatternSetsOutput {
     /// <p>If you have more <code>RegexPatternSet</code> objects than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more <code>RegexPatternSet</code> objects, submit another <code>ListRegexPatternSets</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>RegexPatternSetSummary</code> objects.</p>
+    #[doc(hidden)]
     pub regex_pattern_sets:
         std::option::Option<std::vec::Vec<crate::model::RegexPatternSetSummary>>,
 }
@@ -1517,11 +1524,10 @@ impl std::fmt::Debug for ListRegexPatternSetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput)
+/// See [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput).
 pub mod list_regex_pattern_sets_output {
 
-    /// A builder for [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1558,7 +1564,7 @@ pub mod list_regex_pattern_sets_output {
             self.regex_pattern_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput)
+        /// Consumes the builder and constructs a [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput).
         pub fn build(self) -> crate::output::ListRegexPatternSetsOutput {
             crate::output::ListRegexPatternSetsOutput {
                 next_marker: self.next_marker,
@@ -1568,7 +1574,7 @@ pub mod list_regex_pattern_sets_output {
     }
 }
 impl ListRegexPatternSetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput).
     pub fn builder() -> crate::output::list_regex_pattern_sets_output::Builder {
         crate::output::list_regex_pattern_sets_output::Builder::default()
     }
@@ -1579,8 +1585,10 @@ impl ListRegexPatternSetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRegexMatchSetsOutput {
     /// <p>If you have more <code>RegexMatchSet</code> objects than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more <code>RegexMatchSet</code> objects, submit another <code>ListRegexMatchSets</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>RegexMatchSetSummary</code> objects.</p>
+    #[doc(hidden)]
     pub regex_match_sets: std::option::Option<std::vec::Vec<crate::model::RegexMatchSetSummary>>,
 }
 impl ListRegexMatchSetsOutput {
@@ -1601,11 +1609,10 @@ impl std::fmt::Debug for ListRegexMatchSetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListRegexMatchSetsOutput`](crate::output::ListRegexMatchSetsOutput)
+/// See [`ListRegexMatchSetsOutput`](crate::output::ListRegexMatchSetsOutput).
 pub mod list_regex_match_sets_output {
 
-    /// A builder for [`ListRegexMatchSetsOutput`](crate::output::ListRegexMatchSetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRegexMatchSetsOutput`](crate::output::ListRegexMatchSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1642,7 +1649,7 @@ pub mod list_regex_match_sets_output {
             self.regex_match_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRegexMatchSetsOutput`](crate::output::ListRegexMatchSetsOutput)
+        /// Consumes the builder and constructs a [`ListRegexMatchSetsOutput`](crate::output::ListRegexMatchSetsOutput).
         pub fn build(self) -> crate::output::ListRegexMatchSetsOutput {
             crate::output::ListRegexMatchSetsOutput {
                 next_marker: self.next_marker,
@@ -1652,7 +1659,7 @@ pub mod list_regex_match_sets_output {
     }
 }
 impl ListRegexMatchSetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListRegexMatchSetsOutput`](crate::output::ListRegexMatchSetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListRegexMatchSetsOutput`](crate::output::ListRegexMatchSetsOutput).
     pub fn builder() -> crate::output::list_regex_match_sets_output::Builder {
         crate::output::list_regex_match_sets_output::Builder::default()
     }
@@ -1663,8 +1670,10 @@ impl ListRegexMatchSetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRateBasedRulesOutput {
     /// <p>If you have more <code>Rules</code> than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more <code>Rules</code>, submit another <code>ListRateBasedRules</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>RuleSummary</code> objects.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::RuleSummary>>,
 }
 impl ListRateBasedRulesOutput {
@@ -1685,11 +1694,10 @@ impl std::fmt::Debug for ListRateBasedRulesOutput {
         formatter.finish()
     }
 }
-/// See [`ListRateBasedRulesOutput`](crate::output::ListRateBasedRulesOutput)
+/// See [`ListRateBasedRulesOutput`](crate::output::ListRateBasedRulesOutput).
 pub mod list_rate_based_rules_output {
 
-    /// A builder for [`ListRateBasedRulesOutput`](crate::output::ListRateBasedRulesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRateBasedRulesOutput`](crate::output::ListRateBasedRulesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1725,7 +1733,7 @@ pub mod list_rate_based_rules_output {
             self.rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRateBasedRulesOutput`](crate::output::ListRateBasedRulesOutput)
+        /// Consumes the builder and constructs a [`ListRateBasedRulesOutput`](crate::output::ListRateBasedRulesOutput).
         pub fn build(self) -> crate::output::ListRateBasedRulesOutput {
             crate::output::ListRateBasedRulesOutput {
                 next_marker: self.next_marker,
@@ -1735,7 +1743,7 @@ pub mod list_rate_based_rules_output {
     }
 }
 impl ListRateBasedRulesOutput {
-    /// Creates a new builder-style object to manufacture [`ListRateBasedRulesOutput`](crate::output::ListRateBasedRulesOutput)
+    /// Creates a new builder-style object to manufacture [`ListRateBasedRulesOutput`](crate::output::ListRateBasedRulesOutput).
     pub fn builder() -> crate::output::list_rate_based_rules_output::Builder {
         crate::output::list_rate_based_rules_output::Builder::default()
     }
@@ -1746,9 +1754,11 @@ impl ListRateBasedRulesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListLoggingConfigurationsOutput {
     /// <p>An array of <code>LoggingConfiguration</code> objects.</p>
+    #[doc(hidden)]
     pub logging_configurations:
         std::option::Option<std::vec::Vec<crate::model::LoggingConfiguration>>,
     /// <p>If you have more <code>LoggingConfigurations</code> than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more <code>LoggingConfigurations</code>, submit another <code>ListLoggingConfigurations</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
 }
 impl ListLoggingConfigurationsOutput {
@@ -1771,11 +1781,10 @@ impl std::fmt::Debug for ListLoggingConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput)
+/// See [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput).
 pub mod list_logging_configurations_output {
 
-    /// A builder for [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logging_configurations:
@@ -1812,7 +1821,7 @@ pub mod list_logging_configurations_output {
             self.next_marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput)
+        /// Consumes the builder and constructs a [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput).
         pub fn build(self) -> crate::output::ListLoggingConfigurationsOutput {
             crate::output::ListLoggingConfigurationsOutput {
                 logging_configurations: self.logging_configurations,
@@ -1822,7 +1831,7 @@ pub mod list_logging_configurations_output {
     }
 }
 impl ListLoggingConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput).
     pub fn builder() -> crate::output::list_logging_configurations_output::Builder {
         crate::output::list_logging_configurations_output::Builder::default()
     }
@@ -1833,8 +1842,10 @@ impl ListLoggingConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListIpSetsOutput {
     /// <p>To list more <code>IPSet</code> objects, submit another <code>ListIPSets</code> request, and in the next request use the <code>NextMarker</code> response value as the <code>NextMarker</code> value.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>IPSetSummary</code> objects.</p>
+    #[doc(hidden)]
     pub ip_sets: std::option::Option<std::vec::Vec<crate::model::IpSetSummary>>,
 }
 impl ListIpSetsOutput {
@@ -1855,11 +1866,10 @@ impl std::fmt::Debug for ListIpSetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListIpSetsOutput`](crate::output::ListIpSetsOutput)
+/// See [`ListIpSetsOutput`](crate::output::ListIpSetsOutput).
 pub mod list_ip_sets_output {
 
-    /// A builder for [`ListIpSetsOutput`](crate::output::ListIpSetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListIpSetsOutput`](crate::output::ListIpSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1895,7 +1905,7 @@ pub mod list_ip_sets_output {
             self.ip_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListIpSetsOutput`](crate::output::ListIpSetsOutput)
+        /// Consumes the builder and constructs a [`ListIpSetsOutput`](crate::output::ListIpSetsOutput).
         pub fn build(self) -> crate::output::ListIpSetsOutput {
             crate::output::ListIpSetsOutput {
                 next_marker: self.next_marker,
@@ -1905,7 +1915,7 @@ pub mod list_ip_sets_output {
     }
 }
 impl ListIpSetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListIpSetsOutput`](crate::output::ListIpSetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListIpSetsOutput`](crate::output::ListIpSetsOutput).
     pub fn builder() -> crate::output::list_ip_sets_output::Builder {
         crate::output::list_ip_sets_output::Builder::default()
     }
@@ -1916,8 +1926,10 @@ impl ListIpSetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListGeoMatchSetsOutput {
     /// <p>If you have more <code>GeoMatchSet</code> objects than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more <code>GeoMatchSet</code> objects, submit another <code>ListGeoMatchSets</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>GeoMatchSetSummary</code> objects.</p>
+    #[doc(hidden)]
     pub geo_match_sets: std::option::Option<std::vec::Vec<crate::model::GeoMatchSetSummary>>,
 }
 impl ListGeoMatchSetsOutput {
@@ -1938,11 +1950,10 @@ impl std::fmt::Debug for ListGeoMatchSetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListGeoMatchSetsOutput`](crate::output::ListGeoMatchSetsOutput)
+/// See [`ListGeoMatchSetsOutput`](crate::output::ListGeoMatchSetsOutput).
 pub mod list_geo_match_sets_output {
 
-    /// A builder for [`ListGeoMatchSetsOutput`](crate::output::ListGeoMatchSetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListGeoMatchSetsOutput`](crate::output::ListGeoMatchSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1979,7 +1990,7 @@ pub mod list_geo_match_sets_output {
             self.geo_match_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGeoMatchSetsOutput`](crate::output::ListGeoMatchSetsOutput)
+        /// Consumes the builder and constructs a [`ListGeoMatchSetsOutput`](crate::output::ListGeoMatchSetsOutput).
         pub fn build(self) -> crate::output::ListGeoMatchSetsOutput {
             crate::output::ListGeoMatchSetsOutput {
                 next_marker: self.next_marker,
@@ -1989,7 +2000,7 @@ pub mod list_geo_match_sets_output {
     }
 }
 impl ListGeoMatchSetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListGeoMatchSetsOutput`](crate::output::ListGeoMatchSetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListGeoMatchSetsOutput`](crate::output::ListGeoMatchSetsOutput).
     pub fn builder() -> crate::output::list_geo_match_sets_output::Builder {
         crate::output::list_geo_match_sets_output::Builder::default()
     }
@@ -2000,8 +2011,10 @@ impl ListGeoMatchSetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListByteMatchSetsOutput {
     /// <p>If you have more <code>ByteMatchSet</code> objects than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more <code>ByteMatchSet</code> objects, submit another <code>ListByteMatchSets</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>ByteMatchSetSummary</code> objects.</p>
+    #[doc(hidden)]
     pub byte_match_sets: std::option::Option<std::vec::Vec<crate::model::ByteMatchSetSummary>>,
 }
 impl ListByteMatchSetsOutput {
@@ -2022,11 +2035,10 @@ impl std::fmt::Debug for ListByteMatchSetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListByteMatchSetsOutput`](crate::output::ListByteMatchSetsOutput)
+/// See [`ListByteMatchSetsOutput`](crate::output::ListByteMatchSetsOutput).
 pub mod list_byte_match_sets_output {
 
-    /// A builder for [`ListByteMatchSetsOutput`](crate::output::ListByteMatchSetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListByteMatchSetsOutput`](crate::output::ListByteMatchSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -2063,7 +2075,7 @@ pub mod list_byte_match_sets_output {
             self.byte_match_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListByteMatchSetsOutput`](crate::output::ListByteMatchSetsOutput)
+        /// Consumes the builder and constructs a [`ListByteMatchSetsOutput`](crate::output::ListByteMatchSetsOutput).
         pub fn build(self) -> crate::output::ListByteMatchSetsOutput {
             crate::output::ListByteMatchSetsOutput {
                 next_marker: self.next_marker,
@@ -2073,7 +2085,7 @@ pub mod list_byte_match_sets_output {
     }
 }
 impl ListByteMatchSetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListByteMatchSetsOutput`](crate::output::ListByteMatchSetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListByteMatchSetsOutput`](crate::output::ListByteMatchSetsOutput).
     pub fn builder() -> crate::output::list_byte_match_sets_output::Builder {
         crate::output::list_byte_match_sets_output::Builder::default()
     }
@@ -2084,8 +2096,10 @@ impl ListByteMatchSetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListActivatedRulesInRuleGroupOutput {
     /// <p>If you have more <code>ActivatedRules</code> than the number that you specified for <code>Limit</code> in the request, the response includes a <code>NextMarker</code> value. To list more <code>ActivatedRules</code>, submit another <code>ListActivatedRulesInRuleGroup</code> request, and specify the <code>NextMarker</code> value from the response in the <code>NextMarker</code> value in the next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>ActivatedRules</code> objects.</p>
+    #[doc(hidden)]
     pub activated_rules: std::option::Option<std::vec::Vec<crate::model::ActivatedRule>>,
 }
 impl ListActivatedRulesInRuleGroupOutput {
@@ -2106,11 +2120,10 @@ impl std::fmt::Debug for ListActivatedRulesInRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`ListActivatedRulesInRuleGroupOutput`](crate::output::ListActivatedRulesInRuleGroupOutput)
+/// See [`ListActivatedRulesInRuleGroupOutput`](crate::output::ListActivatedRulesInRuleGroupOutput).
 pub mod list_activated_rules_in_rule_group_output {
 
-    /// A builder for [`ListActivatedRulesInRuleGroupOutput`](crate::output::ListActivatedRulesInRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListActivatedRulesInRuleGroupOutput`](crate::output::ListActivatedRulesInRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -2146,7 +2159,7 @@ pub mod list_activated_rules_in_rule_group_output {
             self.activated_rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListActivatedRulesInRuleGroupOutput`](crate::output::ListActivatedRulesInRuleGroupOutput)
+        /// Consumes the builder and constructs a [`ListActivatedRulesInRuleGroupOutput`](crate::output::ListActivatedRulesInRuleGroupOutput).
         pub fn build(self) -> crate::output::ListActivatedRulesInRuleGroupOutput {
             crate::output::ListActivatedRulesInRuleGroupOutput {
                 next_marker: self.next_marker,
@@ -2156,7 +2169,7 @@ pub mod list_activated_rules_in_rule_group_output {
     }
 }
 impl ListActivatedRulesInRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`ListActivatedRulesInRuleGroupOutput`](crate::output::ListActivatedRulesInRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`ListActivatedRulesInRuleGroupOutput`](crate::output::ListActivatedRulesInRuleGroupOutput).
     pub fn builder() -> crate::output::list_activated_rules_in_rule_group_output::Builder {
         crate::output::list_activated_rules_in_rule_group_output::Builder::default()
     }
@@ -2172,6 +2185,7 @@ pub struct GetXssMatchSetOutput {
     /// <li> <p> <code>XssMatchTuple</code>: Each <code>XssMatchTuple</code> object contains <code>FieldToMatch</code> and <code>TextTransformation</code> </p> </li>
     /// <li> <p> <code>FieldToMatch</code>: Contains <code>Data</code> and <code>Type</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub xss_match_set: std::option::Option<crate::model::XssMatchSet>,
 }
 impl GetXssMatchSetOutput {
@@ -2192,11 +2206,10 @@ impl std::fmt::Debug for GetXssMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`GetXssMatchSetOutput`](crate::output::GetXssMatchSetOutput)
+/// See [`GetXssMatchSetOutput`](crate::output::GetXssMatchSetOutput).
 pub mod get_xss_match_set_output {
 
-    /// A builder for [`GetXssMatchSetOutput`](crate::output::GetXssMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetXssMatchSetOutput`](crate::output::GetXssMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) xss_match_set: std::option::Option<crate::model::XssMatchSet>,
@@ -2225,7 +2238,7 @@ pub mod get_xss_match_set_output {
             self.xss_match_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetXssMatchSetOutput`](crate::output::GetXssMatchSetOutput)
+        /// Consumes the builder and constructs a [`GetXssMatchSetOutput`](crate::output::GetXssMatchSetOutput).
         pub fn build(self) -> crate::output::GetXssMatchSetOutput {
             crate::output::GetXssMatchSetOutput {
                 xss_match_set: self.xss_match_set,
@@ -2234,7 +2247,7 @@ pub mod get_xss_match_set_output {
     }
 }
 impl GetXssMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`GetXssMatchSetOutput`](crate::output::GetXssMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`GetXssMatchSetOutput`](crate::output::GetXssMatchSetOutput).
     pub fn builder() -> crate::output::get_xss_match_set_output::Builder {
         crate::output::get_xss_match_set_output::Builder::default()
     }
@@ -2251,6 +2264,7 @@ pub struct GetWebAclOutput {
     /// <li> <p> <code>Rules</code>: Contains an array of <code>ActivatedRule</code> objects, which contain <code>Action</code>, <code>Priority</code>, and <code>RuleId</code> </p> </li>
     /// <li> <p> <code>Action</code>: Contains <code>Type</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub web_acl: std::option::Option<crate::model::WebAcl>,
 }
 impl GetWebAclOutput {
@@ -2272,11 +2286,10 @@ impl std::fmt::Debug for GetWebAclOutput {
         formatter.finish()
     }
 }
-/// See [`GetWebAclOutput`](crate::output::GetWebAclOutput)
+/// See [`GetWebAclOutput`](crate::output::GetWebAclOutput).
 pub mod get_web_acl_output {
 
-    /// A builder for [`GetWebAclOutput`](crate::output::GetWebAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetWebAclOutput`](crate::output::GetWebAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) web_acl: std::option::Option<crate::model::WebAcl>,
@@ -2304,7 +2317,7 @@ pub mod get_web_acl_output {
             self.web_acl = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetWebAclOutput`](crate::output::GetWebAclOutput)
+        /// Consumes the builder and constructs a [`GetWebAclOutput`](crate::output::GetWebAclOutput).
         pub fn build(self) -> crate::output::GetWebAclOutput {
             crate::output::GetWebAclOutput {
                 web_acl: self.web_acl,
@@ -2313,7 +2326,7 @@ pub mod get_web_acl_output {
     }
 }
 impl GetWebAclOutput {
-    /// Creates a new builder-style object to manufacture [`GetWebAclOutput`](crate::output::GetWebAclOutput)
+    /// Creates a new builder-style object to manufacture [`GetWebAclOutput`](crate::output::GetWebAclOutput).
     pub fn builder() -> crate::output::get_web_acl_output::Builder {
         crate::output::get_web_acl_output::Builder::default()
     }
@@ -2329,6 +2342,7 @@ pub struct GetSqlInjectionMatchSetOutput {
     /// <li> <p> <code>SqlInjectionMatchTuple</code>: Each <code>SqlInjectionMatchTuple</code> object contains <code>FieldToMatch</code> and <code>TextTransformation</code> </p> </li>
     /// <li> <p> <code>FieldToMatch</code>: Contains <code>Data</code> and <code>Type</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub sql_injection_match_set: std::option::Option<crate::model::SqlInjectionMatchSet>,
 }
 impl GetSqlInjectionMatchSetOutput {
@@ -2351,11 +2365,10 @@ impl std::fmt::Debug for GetSqlInjectionMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`GetSqlInjectionMatchSetOutput`](crate::output::GetSqlInjectionMatchSetOutput)
+/// See [`GetSqlInjectionMatchSetOutput`](crate::output::GetSqlInjectionMatchSetOutput).
 pub mod get_sql_injection_match_set_output {
 
-    /// A builder for [`GetSqlInjectionMatchSetOutput`](crate::output::GetSqlInjectionMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSqlInjectionMatchSetOutput`](crate::output::GetSqlInjectionMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sql_injection_match_set: std::option::Option<crate::model::SqlInjectionMatchSet>,
@@ -2387,7 +2400,7 @@ pub mod get_sql_injection_match_set_output {
             self.sql_injection_match_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSqlInjectionMatchSetOutput`](crate::output::GetSqlInjectionMatchSetOutput)
+        /// Consumes the builder and constructs a [`GetSqlInjectionMatchSetOutput`](crate::output::GetSqlInjectionMatchSetOutput).
         pub fn build(self) -> crate::output::GetSqlInjectionMatchSetOutput {
             crate::output::GetSqlInjectionMatchSetOutput {
                 sql_injection_match_set: self.sql_injection_match_set,
@@ -2396,7 +2409,7 @@ pub mod get_sql_injection_match_set_output {
     }
 }
 impl GetSqlInjectionMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`GetSqlInjectionMatchSetOutput`](crate::output::GetSqlInjectionMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`GetSqlInjectionMatchSetOutput`](crate::output::GetSqlInjectionMatchSetOutput).
     pub fn builder() -> crate::output::get_sql_injection_match_set_output::Builder {
         crate::output::get_sql_injection_match_set_output::Builder::default()
     }
@@ -2412,6 +2425,7 @@ pub struct GetSizeConstraintSetOutput {
     /// <li> <p> <code>SizeConstraints</code>: Contains an array of <code>SizeConstraint</code> objects. Each <code>SizeConstraint</code> object contains <code>FieldToMatch</code>, <code>TextTransformation</code>, <code>ComparisonOperator</code>, and <code>Size</code> </p> </li>
     /// <li> <p> <code>FieldToMatch</code>: Contains <code>Data</code> and <code>Type</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub size_constraint_set: std::option::Option<crate::model::SizeConstraintSet>,
 }
 impl GetSizeConstraintSetOutput {
@@ -2432,11 +2446,10 @@ impl std::fmt::Debug for GetSizeConstraintSetOutput {
         formatter.finish()
     }
 }
-/// See [`GetSizeConstraintSetOutput`](crate::output::GetSizeConstraintSetOutput)
+/// See [`GetSizeConstraintSetOutput`](crate::output::GetSizeConstraintSetOutput).
 pub mod get_size_constraint_set_output {
 
-    /// A builder for [`GetSizeConstraintSetOutput`](crate::output::GetSizeConstraintSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSizeConstraintSetOutput`](crate::output::GetSizeConstraintSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) size_constraint_set: std::option::Option<crate::model::SizeConstraintSet>,
@@ -2465,7 +2478,7 @@ pub mod get_size_constraint_set_output {
             self.size_constraint_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSizeConstraintSetOutput`](crate::output::GetSizeConstraintSetOutput)
+        /// Consumes the builder and constructs a [`GetSizeConstraintSetOutput`](crate::output::GetSizeConstraintSetOutput).
         pub fn build(self) -> crate::output::GetSizeConstraintSetOutput {
             crate::output::GetSizeConstraintSetOutput {
                 size_constraint_set: self.size_constraint_set,
@@ -2474,7 +2487,7 @@ pub mod get_size_constraint_set_output {
     }
 }
 impl GetSizeConstraintSetOutput {
-    /// Creates a new builder-style object to manufacture [`GetSizeConstraintSetOutput`](crate::output::GetSizeConstraintSetOutput)
+    /// Creates a new builder-style object to manufacture [`GetSizeConstraintSetOutput`](crate::output::GetSizeConstraintSetOutput).
     pub fn builder() -> crate::output::get_size_constraint_set_output::Builder {
         crate::output::get_size_constraint_set_output::Builder::default()
     }
@@ -2485,10 +2498,13 @@ impl GetSizeConstraintSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSampledRequestsOutput {
     /// <p>A complex type that contains detailed information about each of the requests in the sample.</p>
+    #[doc(hidden)]
     pub sampled_requests: std::option::Option<std::vec::Vec<crate::model::SampledHttpRequest>>,
     /// <p>The total number of requests from which <code>GetSampledRequests</code> got a sample of <code>MaxItems</code> requests. If <code>PopulationSize</code> is less than <code>MaxItems</code>, the sample includes every request that your AWS resource received during the specified time range.</p>
+    #[doc(hidden)]
     pub population_size: i64,
     /// <p>Usually, <code>TimeWindow</code> is the time range that you specified in the <code>GetSampledRequests</code> request. However, if your AWS resource received more than 5,000 requests during the time range that you specified in the request, <code>GetSampledRequests</code> returns the time range for the first 5,000 requests. Times are in Coordinated Universal Time (UTC) format.</p>
+    #[doc(hidden)]
     pub time_window: std::option::Option<crate::model::TimeWindow>,
 }
 impl GetSampledRequestsOutput {
@@ -2514,11 +2530,10 @@ impl std::fmt::Debug for GetSampledRequestsOutput {
         formatter.finish()
     }
 }
-/// See [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput)
+/// See [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput).
 pub mod get_sampled_requests_output {
 
-    /// A builder for [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sampled_requests:
@@ -2569,7 +2584,7 @@ pub mod get_sampled_requests_output {
             self.time_window = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput)
+        /// Consumes the builder and constructs a [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput).
         pub fn build(self) -> crate::output::GetSampledRequestsOutput {
             crate::output::GetSampledRequestsOutput {
                 sampled_requests: self.sampled_requests,
@@ -2580,7 +2595,7 @@ pub mod get_sampled_requests_output {
     }
 }
 impl GetSampledRequestsOutput {
-    /// Creates a new builder-style object to manufacture [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput)
+    /// Creates a new builder-style object to manufacture [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput).
     pub fn builder() -> crate::output::get_sampled_requests_output::Builder {
         crate::output::get_sampled_requests_output::Builder::default()
     }
@@ -2591,6 +2606,7 @@ impl GetSampledRequestsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRuleGroupOutput {
     /// <p>Information about the <code>RuleGroup</code> that you specified in the <code>GetRuleGroup</code> request. </p>
+    #[doc(hidden)]
     pub rule_group: std::option::Option<crate::model::RuleGroup>,
 }
 impl GetRuleGroupOutput {
@@ -2606,11 +2622,10 @@ impl std::fmt::Debug for GetRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput)
+/// See [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput).
 pub mod get_rule_group_output {
 
-    /// A builder for [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_group: std::option::Option<crate::model::RuleGroup>,
@@ -2629,7 +2644,7 @@ pub mod get_rule_group_output {
             self.rule_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput)
+        /// Consumes the builder and constructs a [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput).
         pub fn build(self) -> crate::output::GetRuleGroupOutput {
             crate::output::GetRuleGroupOutput {
                 rule_group: self.rule_group,
@@ -2638,7 +2653,7 @@ pub mod get_rule_group_output {
     }
 }
 impl GetRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput).
     pub fn builder() -> crate::output::get_rule_group_output::Builder {
         crate::output::get_rule_group_output::Builder::default()
     }
@@ -2653,6 +2668,7 @@ pub struct GetRuleOutput {
     /// <li> <p> <code>Rule</code>: Contains <code>MetricName</code>, <code>Name</code>, an array of <code>Predicate</code> objects, and <code>RuleId</code> </p> </li>
     /// <li> <p> <code>Predicate</code>: Each <code>Predicate</code> object contains <code>DataId</code>, <code>Negated</code>, and <code>Type</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub rule: std::option::Option<crate::model::Rule>,
 }
 impl GetRuleOutput {
@@ -2672,11 +2688,10 @@ impl std::fmt::Debug for GetRuleOutput {
         formatter.finish()
     }
 }
-/// See [`GetRuleOutput`](crate::output::GetRuleOutput)
+/// See [`GetRuleOutput`](crate::output::GetRuleOutput).
 pub mod get_rule_output {
 
-    /// A builder for [`GetRuleOutput`](crate::output::GetRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRuleOutput`](crate::output::GetRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule: std::option::Option<crate::model::Rule>,
@@ -2700,14 +2715,14 @@ pub mod get_rule_output {
             self.rule = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRuleOutput`](crate::output::GetRuleOutput)
+        /// Consumes the builder and constructs a [`GetRuleOutput`](crate::output::GetRuleOutput).
         pub fn build(self) -> crate::output::GetRuleOutput {
             crate::output::GetRuleOutput { rule: self.rule }
         }
     }
 }
 impl GetRuleOutput {
-    /// Creates a new builder-style object to manufacture [`GetRuleOutput`](crate::output::GetRuleOutput)
+    /// Creates a new builder-style object to manufacture [`GetRuleOutput`](crate::output::GetRuleOutput).
     pub fn builder() -> crate::output::get_rule_output::Builder {
         crate::output::get_rule_output::Builder::default()
     }
@@ -2718,6 +2733,7 @@ impl GetRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRegexPatternSetOutput {
     /// <p>Information about the <code>RegexPatternSet</code> that you specified in the <code>GetRegexPatternSet</code> request, including the identifier of the pattern set and the regular expression patterns you want AWS WAF to search for. </p>
+    #[doc(hidden)]
     pub regex_pattern_set: std::option::Option<crate::model::RegexPatternSet>,
 }
 impl GetRegexPatternSetOutput {
@@ -2733,11 +2749,10 @@ impl std::fmt::Debug for GetRegexPatternSetOutput {
         formatter.finish()
     }
 }
-/// See [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput)
+/// See [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput).
 pub mod get_regex_pattern_set_output {
 
-    /// A builder for [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) regex_pattern_set: std::option::Option<crate::model::RegexPatternSet>,
@@ -2756,7 +2771,7 @@ pub mod get_regex_pattern_set_output {
             self.regex_pattern_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput)
+        /// Consumes the builder and constructs a [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput).
         pub fn build(self) -> crate::output::GetRegexPatternSetOutput {
             crate::output::GetRegexPatternSetOutput {
                 regex_pattern_set: self.regex_pattern_set,
@@ -2765,7 +2780,7 @@ pub mod get_regex_pattern_set_output {
     }
 }
 impl GetRegexPatternSetOutput {
-    /// Creates a new builder-style object to manufacture [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput)
+    /// Creates a new builder-style object to manufacture [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput).
     pub fn builder() -> crate::output::get_regex_pattern_set_output::Builder {
         crate::output::get_regex_pattern_set_output::Builder::default()
     }
@@ -2776,6 +2791,7 @@ impl GetRegexPatternSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRegexMatchSetOutput {
     /// <p>Information about the <code>RegexMatchSet</code> that you specified in the <code>GetRegexMatchSet</code> request. For more information, see <code>RegexMatchTuple</code>.</p>
+    #[doc(hidden)]
     pub regex_match_set: std::option::Option<crate::model::RegexMatchSet>,
 }
 impl GetRegexMatchSetOutput {
@@ -2791,11 +2807,10 @@ impl std::fmt::Debug for GetRegexMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`GetRegexMatchSetOutput`](crate::output::GetRegexMatchSetOutput)
+/// See [`GetRegexMatchSetOutput`](crate::output::GetRegexMatchSetOutput).
 pub mod get_regex_match_set_output {
 
-    /// A builder for [`GetRegexMatchSetOutput`](crate::output::GetRegexMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRegexMatchSetOutput`](crate::output::GetRegexMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) regex_match_set: std::option::Option<crate::model::RegexMatchSet>,
@@ -2814,7 +2829,7 @@ pub mod get_regex_match_set_output {
             self.regex_match_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRegexMatchSetOutput`](crate::output::GetRegexMatchSetOutput)
+        /// Consumes the builder and constructs a [`GetRegexMatchSetOutput`](crate::output::GetRegexMatchSetOutput).
         pub fn build(self) -> crate::output::GetRegexMatchSetOutput {
             crate::output::GetRegexMatchSetOutput {
                 regex_match_set: self.regex_match_set,
@@ -2823,7 +2838,7 @@ pub mod get_regex_match_set_output {
     }
 }
 impl GetRegexMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`GetRegexMatchSetOutput`](crate::output::GetRegexMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`GetRegexMatchSetOutput`](crate::output::GetRegexMatchSetOutput).
     pub fn builder() -> crate::output::get_regex_match_set_output::Builder {
         crate::output::get_regex_match_set_output::Builder::default()
     }
@@ -2834,8 +2849,10 @@ impl GetRegexMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRateBasedRuleManagedKeysOutput {
     /// <p>An array of IP addresses that currently are blocked by the specified <code>RateBasedRule</code>. </p>
+    #[doc(hidden)]
     pub managed_keys: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A null value and not currently used.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
 }
 impl GetRateBasedRuleManagedKeysOutput {
@@ -2856,11 +2873,10 @@ impl std::fmt::Debug for GetRateBasedRuleManagedKeysOutput {
         formatter.finish()
     }
 }
-/// See [`GetRateBasedRuleManagedKeysOutput`](crate::output::GetRateBasedRuleManagedKeysOutput)
+/// See [`GetRateBasedRuleManagedKeysOutput`](crate::output::GetRateBasedRuleManagedKeysOutput).
 pub mod get_rate_based_rule_managed_keys_output {
 
-    /// A builder for [`GetRateBasedRuleManagedKeysOutput`](crate::output::GetRateBasedRuleManagedKeysOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRateBasedRuleManagedKeysOutput`](crate::output::GetRateBasedRuleManagedKeysOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) managed_keys: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2896,7 +2912,7 @@ pub mod get_rate_based_rule_managed_keys_output {
             self.next_marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRateBasedRuleManagedKeysOutput`](crate::output::GetRateBasedRuleManagedKeysOutput)
+        /// Consumes the builder and constructs a [`GetRateBasedRuleManagedKeysOutput`](crate::output::GetRateBasedRuleManagedKeysOutput).
         pub fn build(self) -> crate::output::GetRateBasedRuleManagedKeysOutput {
             crate::output::GetRateBasedRuleManagedKeysOutput {
                 managed_keys: self.managed_keys,
@@ -2906,7 +2922,7 @@ pub mod get_rate_based_rule_managed_keys_output {
     }
 }
 impl GetRateBasedRuleManagedKeysOutput {
-    /// Creates a new builder-style object to manufacture [`GetRateBasedRuleManagedKeysOutput`](crate::output::GetRateBasedRuleManagedKeysOutput)
+    /// Creates a new builder-style object to manufacture [`GetRateBasedRuleManagedKeysOutput`](crate::output::GetRateBasedRuleManagedKeysOutput).
     pub fn builder() -> crate::output::get_rate_based_rule_managed_keys_output::Builder {
         crate::output::get_rate_based_rule_managed_keys_output::Builder::default()
     }
@@ -2917,6 +2933,7 @@ impl GetRateBasedRuleManagedKeysOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRateBasedRuleOutput {
     /// <p>Information about the <code>RateBasedRule</code> that you specified in the <code>GetRateBasedRule</code> request.</p>
+    #[doc(hidden)]
     pub rule: std::option::Option<crate::model::RateBasedRule>,
 }
 impl GetRateBasedRuleOutput {
@@ -2932,11 +2949,10 @@ impl std::fmt::Debug for GetRateBasedRuleOutput {
         formatter.finish()
     }
 }
-/// See [`GetRateBasedRuleOutput`](crate::output::GetRateBasedRuleOutput)
+/// See [`GetRateBasedRuleOutput`](crate::output::GetRateBasedRuleOutput).
 pub mod get_rate_based_rule_output {
 
-    /// A builder for [`GetRateBasedRuleOutput`](crate::output::GetRateBasedRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRateBasedRuleOutput`](crate::output::GetRateBasedRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule: std::option::Option<crate::model::RateBasedRule>,
@@ -2952,14 +2968,14 @@ pub mod get_rate_based_rule_output {
             self.rule = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRateBasedRuleOutput`](crate::output::GetRateBasedRuleOutput)
+        /// Consumes the builder and constructs a [`GetRateBasedRuleOutput`](crate::output::GetRateBasedRuleOutput).
         pub fn build(self) -> crate::output::GetRateBasedRuleOutput {
             crate::output::GetRateBasedRuleOutput { rule: self.rule }
         }
     }
 }
 impl GetRateBasedRuleOutput {
-    /// Creates a new builder-style object to manufacture [`GetRateBasedRuleOutput`](crate::output::GetRateBasedRuleOutput)
+    /// Creates a new builder-style object to manufacture [`GetRateBasedRuleOutput`](crate::output::GetRateBasedRuleOutput).
     pub fn builder() -> crate::output::get_rate_based_rule_output::Builder {
         crate::output::get_rate_based_rule_output::Builder::default()
     }
@@ -2970,6 +2986,7 @@ impl GetRateBasedRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetPermissionPolicyOutput {
     /// <p>The IAM policy attached to the specified RuleGroup.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl GetPermissionPolicyOutput {
@@ -2985,11 +3002,10 @@ impl std::fmt::Debug for GetPermissionPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput)
+/// See [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput).
 pub mod get_permission_policy_output {
 
-    /// A builder for [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<std::string::String>,
@@ -3005,7 +3021,7 @@ pub mod get_permission_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput)
+        /// Consumes the builder and constructs a [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput).
         pub fn build(self) -> crate::output::GetPermissionPolicyOutput {
             crate::output::GetPermissionPolicyOutput {
                 policy: self.policy,
@@ -3014,7 +3030,7 @@ pub mod get_permission_policy_output {
     }
 }
 impl GetPermissionPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput).
     pub fn builder() -> crate::output::get_permission_policy_output::Builder {
         crate::output::get_permission_policy_output::Builder::default()
     }
@@ -3025,6 +3041,7 @@ impl GetPermissionPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetLoggingConfigurationOutput {
     /// <p>The <code>LoggingConfiguration</code> for the specified web ACL.</p>
+    #[doc(hidden)]
     pub logging_configuration: std::option::Option<crate::model::LoggingConfiguration>,
 }
 impl GetLoggingConfigurationOutput {
@@ -3042,11 +3059,10 @@ impl std::fmt::Debug for GetLoggingConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput)
+/// See [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput).
 pub mod get_logging_configuration_output {
 
-    /// A builder for [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logging_configuration: std::option::Option<crate::model::LoggingConfiguration>,
@@ -3065,7 +3081,7 @@ pub mod get_logging_configuration_output {
             self.logging_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput).
         pub fn build(self) -> crate::output::GetLoggingConfigurationOutput {
             crate::output::GetLoggingConfigurationOutput {
                 logging_configuration: self.logging_configuration,
@@ -3074,7 +3090,7 @@ pub mod get_logging_configuration_output {
     }
 }
 impl GetLoggingConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput).
     pub fn builder() -> crate::output::get_logging_configuration_output::Builder {
         crate::output::get_logging_configuration_output::Builder::default()
     }
@@ -3089,6 +3105,7 @@ pub struct GetIpSetOutput {
     /// <li> <p> <code>IPSet</code>: Contains <code>IPSetDescriptors</code>, <code>IPSetId</code>, and <code>Name</code> </p> </li>
     /// <li> <p> <code>IPSetDescriptors</code>: Contains an array of <code>IPSetDescriptor</code> objects. Each <code>IPSetDescriptor</code> object contains <code>Type</code> and <code>Value</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub ip_set: std::option::Option<crate::model::IpSet>,
 }
 impl GetIpSetOutput {
@@ -3108,11 +3125,10 @@ impl std::fmt::Debug for GetIpSetOutput {
         formatter.finish()
     }
 }
-/// See [`GetIpSetOutput`](crate::output::GetIpSetOutput)
+/// See [`GetIpSetOutput`](crate::output::GetIpSetOutput).
 pub mod get_ip_set_output {
 
-    /// A builder for [`GetIpSetOutput`](crate::output::GetIpSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetIpSetOutput`](crate::output::GetIpSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_set: std::option::Option<crate::model::IpSet>,
@@ -3136,7 +3152,7 @@ pub mod get_ip_set_output {
             self.ip_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetIpSetOutput`](crate::output::GetIpSetOutput)
+        /// Consumes the builder and constructs a [`GetIpSetOutput`](crate::output::GetIpSetOutput).
         pub fn build(self) -> crate::output::GetIpSetOutput {
             crate::output::GetIpSetOutput {
                 ip_set: self.ip_set,
@@ -3145,7 +3161,7 @@ pub mod get_ip_set_output {
     }
 }
 impl GetIpSetOutput {
-    /// Creates a new builder-style object to manufacture [`GetIpSetOutput`](crate::output::GetIpSetOutput)
+    /// Creates a new builder-style object to manufacture [`GetIpSetOutput`](crate::output::GetIpSetOutput).
     pub fn builder() -> crate::output::get_ip_set_output::Builder {
         crate::output::get_ip_set_output::Builder::default()
     }
@@ -3156,6 +3172,7 @@ impl GetIpSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetGeoMatchSetOutput {
     /// <p>Information about the <code>GeoMatchSet</code> that you specified in the <code>GetGeoMatchSet</code> request. This includes the <code>Type</code>, which for a <code>GeoMatchContraint</code> is always <code>Country</code>, as well as the <code>Value</code>, which is the identifier for a specific country.</p>
+    #[doc(hidden)]
     pub geo_match_set: std::option::Option<crate::model::GeoMatchSet>,
 }
 impl GetGeoMatchSetOutput {
@@ -3171,11 +3188,10 @@ impl std::fmt::Debug for GetGeoMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`GetGeoMatchSetOutput`](crate::output::GetGeoMatchSetOutput)
+/// See [`GetGeoMatchSetOutput`](crate::output::GetGeoMatchSetOutput).
 pub mod get_geo_match_set_output {
 
-    /// A builder for [`GetGeoMatchSetOutput`](crate::output::GetGeoMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetGeoMatchSetOutput`](crate::output::GetGeoMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) geo_match_set: std::option::Option<crate::model::GeoMatchSet>,
@@ -3194,7 +3210,7 @@ pub mod get_geo_match_set_output {
             self.geo_match_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetGeoMatchSetOutput`](crate::output::GetGeoMatchSetOutput)
+        /// Consumes the builder and constructs a [`GetGeoMatchSetOutput`](crate::output::GetGeoMatchSetOutput).
         pub fn build(self) -> crate::output::GetGeoMatchSetOutput {
             crate::output::GetGeoMatchSetOutput {
                 geo_match_set: self.geo_match_set,
@@ -3203,7 +3219,7 @@ pub mod get_geo_match_set_output {
     }
 }
 impl GetGeoMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`GetGeoMatchSetOutput`](crate::output::GetGeoMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`GetGeoMatchSetOutput`](crate::output::GetGeoMatchSetOutput).
     pub fn builder() -> crate::output::get_geo_match_set_output::Builder {
         crate::output::get_geo_match_set_output::Builder::default()
     }
@@ -3214,6 +3230,7 @@ impl GetGeoMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetChangeTokenStatusOutput {
     /// <p>The status of the change token.</p>
+    #[doc(hidden)]
     pub change_token_status: std::option::Option<crate::model::ChangeTokenStatus>,
 }
 impl GetChangeTokenStatusOutput {
@@ -3229,11 +3246,10 @@ impl std::fmt::Debug for GetChangeTokenStatusOutput {
         formatter.finish()
     }
 }
-/// See [`GetChangeTokenStatusOutput`](crate::output::GetChangeTokenStatusOutput)
+/// See [`GetChangeTokenStatusOutput`](crate::output::GetChangeTokenStatusOutput).
 pub mod get_change_token_status_output {
 
-    /// A builder for [`GetChangeTokenStatusOutput`](crate::output::GetChangeTokenStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetChangeTokenStatusOutput`](crate::output::GetChangeTokenStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token_status: std::option::Option<crate::model::ChangeTokenStatus>,
@@ -3252,7 +3268,7 @@ pub mod get_change_token_status_output {
             self.change_token_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetChangeTokenStatusOutput`](crate::output::GetChangeTokenStatusOutput)
+        /// Consumes the builder and constructs a [`GetChangeTokenStatusOutput`](crate::output::GetChangeTokenStatusOutput).
         pub fn build(self) -> crate::output::GetChangeTokenStatusOutput {
             crate::output::GetChangeTokenStatusOutput {
                 change_token_status: self.change_token_status,
@@ -3261,7 +3277,7 @@ pub mod get_change_token_status_output {
     }
 }
 impl GetChangeTokenStatusOutput {
-    /// Creates a new builder-style object to manufacture [`GetChangeTokenStatusOutput`](crate::output::GetChangeTokenStatusOutput)
+    /// Creates a new builder-style object to manufacture [`GetChangeTokenStatusOutput`](crate::output::GetChangeTokenStatusOutput).
     pub fn builder() -> crate::output::get_change_token_status_output::Builder {
         crate::output::get_change_token_status_output::Builder::default()
     }
@@ -3272,6 +3288,7 @@ impl GetChangeTokenStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetChangeTokenOutput {
     /// <p>The <code>ChangeToken</code> that you used in the request. Use this value in a <code>GetChangeTokenStatus</code> request to get the current status of the request. </p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl GetChangeTokenOutput {
@@ -3287,11 +3304,10 @@ impl std::fmt::Debug for GetChangeTokenOutput {
         formatter.finish()
     }
 }
-/// See [`GetChangeTokenOutput`](crate::output::GetChangeTokenOutput)
+/// See [`GetChangeTokenOutput`](crate::output::GetChangeTokenOutput).
 pub mod get_change_token_output {
 
-    /// A builder for [`GetChangeTokenOutput`](crate::output::GetChangeTokenOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetChangeTokenOutput`](crate::output::GetChangeTokenOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -3307,7 +3323,7 @@ pub mod get_change_token_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetChangeTokenOutput`](crate::output::GetChangeTokenOutput)
+        /// Consumes the builder and constructs a [`GetChangeTokenOutput`](crate::output::GetChangeTokenOutput).
         pub fn build(self) -> crate::output::GetChangeTokenOutput {
             crate::output::GetChangeTokenOutput {
                 change_token: self.change_token,
@@ -3316,7 +3332,7 @@ pub mod get_change_token_output {
     }
 }
 impl GetChangeTokenOutput {
-    /// Creates a new builder-style object to manufacture [`GetChangeTokenOutput`](crate::output::GetChangeTokenOutput)
+    /// Creates a new builder-style object to manufacture [`GetChangeTokenOutput`](crate::output::GetChangeTokenOutput).
     pub fn builder() -> crate::output::get_change_token_output::Builder {
         crate::output::get_change_token_output::Builder::default()
     }
@@ -3332,6 +3348,7 @@ pub struct GetByteMatchSetOutput {
     /// <li> <p> <code>ByteMatchTuples</code>: Contains an array of <code>ByteMatchTuple</code> objects. Each <code>ByteMatchTuple</code> object contains <code>FieldToMatch</code>, <code>PositionalConstraint</code>, <code>TargetString</code>, and <code>TextTransformation</code> </p> </li>
     /// <li> <p> <code>FieldToMatch</code>: Contains <code>Data</code> and <code>Type</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub byte_match_set: std::option::Option<crate::model::ByteMatchSet>,
 }
 impl GetByteMatchSetOutput {
@@ -3352,11 +3369,10 @@ impl std::fmt::Debug for GetByteMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`GetByteMatchSetOutput`](crate::output::GetByteMatchSetOutput)
+/// See [`GetByteMatchSetOutput`](crate::output::GetByteMatchSetOutput).
 pub mod get_byte_match_set_output {
 
-    /// A builder for [`GetByteMatchSetOutput`](crate::output::GetByteMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetByteMatchSetOutput`](crate::output::GetByteMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) byte_match_set: std::option::Option<crate::model::ByteMatchSet>,
@@ -3385,7 +3401,7 @@ pub mod get_byte_match_set_output {
             self.byte_match_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetByteMatchSetOutput`](crate::output::GetByteMatchSetOutput)
+        /// Consumes the builder and constructs a [`GetByteMatchSetOutput`](crate::output::GetByteMatchSetOutput).
         pub fn build(self) -> crate::output::GetByteMatchSetOutput {
             crate::output::GetByteMatchSetOutput {
                 byte_match_set: self.byte_match_set,
@@ -3394,7 +3410,7 @@ pub mod get_byte_match_set_output {
     }
 }
 impl GetByteMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`GetByteMatchSetOutput`](crate::output::GetByteMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`GetByteMatchSetOutput`](crate::output::GetByteMatchSetOutput).
     pub fn builder() -> crate::output::get_byte_match_set_output::Builder {
         crate::output::get_byte_match_set_output::Builder::default()
     }
@@ -3405,6 +3421,7 @@ impl GetByteMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteXssMatchSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>DeleteXssMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl DeleteXssMatchSetOutput {
@@ -3420,11 +3437,10 @@ impl std::fmt::Debug for DeleteXssMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteXssMatchSetOutput`](crate::output::DeleteXssMatchSetOutput)
+/// See [`DeleteXssMatchSetOutput`](crate::output::DeleteXssMatchSetOutput).
 pub mod delete_xss_match_set_output {
 
-    /// A builder for [`DeleteXssMatchSetOutput`](crate::output::DeleteXssMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteXssMatchSetOutput`](crate::output::DeleteXssMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -3440,7 +3456,7 @@ pub mod delete_xss_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteXssMatchSetOutput`](crate::output::DeleteXssMatchSetOutput)
+        /// Consumes the builder and constructs a [`DeleteXssMatchSetOutput`](crate::output::DeleteXssMatchSetOutput).
         pub fn build(self) -> crate::output::DeleteXssMatchSetOutput {
             crate::output::DeleteXssMatchSetOutput {
                 change_token: self.change_token,
@@ -3449,7 +3465,7 @@ pub mod delete_xss_match_set_output {
     }
 }
 impl DeleteXssMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteXssMatchSetOutput`](crate::output::DeleteXssMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteXssMatchSetOutput`](crate::output::DeleteXssMatchSetOutput).
     pub fn builder() -> crate::output::delete_xss_match_set_output::Builder {
         crate::output::delete_xss_match_set_output::Builder::default()
     }
@@ -3460,6 +3476,7 @@ impl DeleteXssMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteWebAclOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>DeleteWebACL</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl DeleteWebAclOutput {
@@ -3475,11 +3492,10 @@ impl std::fmt::Debug for DeleteWebAclOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput)
+/// See [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput).
 pub mod delete_web_acl_output {
 
-    /// A builder for [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -3495,7 +3511,7 @@ pub mod delete_web_acl_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput)
+        /// Consumes the builder and constructs a [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput).
         pub fn build(self) -> crate::output::DeleteWebAclOutput {
             crate::output::DeleteWebAclOutput {
                 change_token: self.change_token,
@@ -3504,7 +3520,7 @@ pub mod delete_web_acl_output {
     }
 }
 impl DeleteWebAclOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput).
     pub fn builder() -> crate::output::delete_web_acl_output::Builder {
         crate::output::delete_web_acl_output::Builder::default()
     }
@@ -3515,6 +3531,7 @@ impl DeleteWebAclOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteSqlInjectionMatchSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>DeleteSqlInjectionMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl DeleteSqlInjectionMatchSetOutput {
@@ -3530,11 +3547,10 @@ impl std::fmt::Debug for DeleteSqlInjectionMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSqlInjectionMatchSetOutput`](crate::output::DeleteSqlInjectionMatchSetOutput)
+/// See [`DeleteSqlInjectionMatchSetOutput`](crate::output::DeleteSqlInjectionMatchSetOutput).
 pub mod delete_sql_injection_match_set_output {
 
-    /// A builder for [`DeleteSqlInjectionMatchSetOutput`](crate::output::DeleteSqlInjectionMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSqlInjectionMatchSetOutput`](crate::output::DeleteSqlInjectionMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -3550,7 +3566,7 @@ pub mod delete_sql_injection_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteSqlInjectionMatchSetOutput`](crate::output::DeleteSqlInjectionMatchSetOutput)
+        /// Consumes the builder and constructs a [`DeleteSqlInjectionMatchSetOutput`](crate::output::DeleteSqlInjectionMatchSetOutput).
         pub fn build(self) -> crate::output::DeleteSqlInjectionMatchSetOutput {
             crate::output::DeleteSqlInjectionMatchSetOutput {
                 change_token: self.change_token,
@@ -3559,7 +3575,7 @@ pub mod delete_sql_injection_match_set_output {
     }
 }
 impl DeleteSqlInjectionMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSqlInjectionMatchSetOutput`](crate::output::DeleteSqlInjectionMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSqlInjectionMatchSetOutput`](crate::output::DeleteSqlInjectionMatchSetOutput).
     pub fn builder() -> crate::output::delete_sql_injection_match_set_output::Builder {
         crate::output::delete_sql_injection_match_set_output::Builder::default()
     }
@@ -3570,6 +3586,7 @@ impl DeleteSqlInjectionMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteSizeConstraintSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>DeleteSizeConstraintSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl DeleteSizeConstraintSetOutput {
@@ -3585,11 +3602,10 @@ impl std::fmt::Debug for DeleteSizeConstraintSetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSizeConstraintSetOutput`](crate::output::DeleteSizeConstraintSetOutput)
+/// See [`DeleteSizeConstraintSetOutput`](crate::output::DeleteSizeConstraintSetOutput).
 pub mod delete_size_constraint_set_output {
 
-    /// A builder for [`DeleteSizeConstraintSetOutput`](crate::output::DeleteSizeConstraintSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSizeConstraintSetOutput`](crate::output::DeleteSizeConstraintSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -3605,7 +3621,7 @@ pub mod delete_size_constraint_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteSizeConstraintSetOutput`](crate::output::DeleteSizeConstraintSetOutput)
+        /// Consumes the builder and constructs a [`DeleteSizeConstraintSetOutput`](crate::output::DeleteSizeConstraintSetOutput).
         pub fn build(self) -> crate::output::DeleteSizeConstraintSetOutput {
             crate::output::DeleteSizeConstraintSetOutput {
                 change_token: self.change_token,
@@ -3614,7 +3630,7 @@ pub mod delete_size_constraint_set_output {
     }
 }
 impl DeleteSizeConstraintSetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSizeConstraintSetOutput`](crate::output::DeleteSizeConstraintSetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSizeConstraintSetOutput`](crate::output::DeleteSizeConstraintSetOutput).
     pub fn builder() -> crate::output::delete_size_constraint_set_output::Builder {
         crate::output::delete_size_constraint_set_output::Builder::default()
     }
@@ -3625,6 +3641,7 @@ impl DeleteSizeConstraintSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteRuleGroupOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>DeleteRuleGroup</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl DeleteRuleGroupOutput {
@@ -3640,11 +3657,10 @@ impl std::fmt::Debug for DeleteRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
+/// See [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput).
 pub mod delete_rule_group_output {
 
-    /// A builder for [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -3660,7 +3676,7 @@ pub mod delete_rule_group_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
+        /// Consumes the builder and constructs a [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput).
         pub fn build(self) -> crate::output::DeleteRuleGroupOutput {
             crate::output::DeleteRuleGroupOutput {
                 change_token: self.change_token,
@@ -3669,7 +3685,7 @@ pub mod delete_rule_group_output {
     }
 }
 impl DeleteRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput).
     pub fn builder() -> crate::output::delete_rule_group_output::Builder {
         crate::output::delete_rule_group_output::Builder::default()
     }
@@ -3680,6 +3696,7 @@ impl DeleteRuleGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteRuleOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>DeleteRule</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl DeleteRuleOutput {
@@ -3695,11 +3712,10 @@ impl std::fmt::Debug for DeleteRuleOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRuleOutput`](crate::output::DeleteRuleOutput)
+/// See [`DeleteRuleOutput`](crate::output::DeleteRuleOutput).
 pub mod delete_rule_output {
 
-    /// A builder for [`DeleteRuleOutput`](crate::output::DeleteRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRuleOutput`](crate::output::DeleteRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -3715,7 +3731,7 @@ pub mod delete_rule_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteRuleOutput`](crate::output::DeleteRuleOutput)
+        /// Consumes the builder and constructs a [`DeleteRuleOutput`](crate::output::DeleteRuleOutput).
         pub fn build(self) -> crate::output::DeleteRuleOutput {
             crate::output::DeleteRuleOutput {
                 change_token: self.change_token,
@@ -3724,7 +3740,7 @@ pub mod delete_rule_output {
     }
 }
 impl DeleteRuleOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRuleOutput`](crate::output::DeleteRuleOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRuleOutput`](crate::output::DeleteRuleOutput).
     pub fn builder() -> crate::output::delete_rule_output::Builder {
         crate::output::delete_rule_output::Builder::default()
     }
@@ -3735,6 +3751,7 @@ impl DeleteRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteRegexPatternSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>DeleteRegexPatternSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl DeleteRegexPatternSetOutput {
@@ -3750,11 +3767,10 @@ impl std::fmt::Debug for DeleteRegexPatternSetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput)
+/// See [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput).
 pub mod delete_regex_pattern_set_output {
 
-    /// A builder for [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -3770,7 +3786,7 @@ pub mod delete_regex_pattern_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput)
+        /// Consumes the builder and constructs a [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput).
         pub fn build(self) -> crate::output::DeleteRegexPatternSetOutput {
             crate::output::DeleteRegexPatternSetOutput {
                 change_token: self.change_token,
@@ -3779,7 +3795,7 @@ pub mod delete_regex_pattern_set_output {
     }
 }
 impl DeleteRegexPatternSetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput).
     pub fn builder() -> crate::output::delete_regex_pattern_set_output::Builder {
         crate::output::delete_regex_pattern_set_output::Builder::default()
     }
@@ -3790,6 +3806,7 @@ impl DeleteRegexPatternSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteRegexMatchSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>DeleteRegexMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl DeleteRegexMatchSetOutput {
@@ -3805,11 +3822,10 @@ impl std::fmt::Debug for DeleteRegexMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRegexMatchSetOutput`](crate::output::DeleteRegexMatchSetOutput)
+/// See [`DeleteRegexMatchSetOutput`](crate::output::DeleteRegexMatchSetOutput).
 pub mod delete_regex_match_set_output {
 
-    /// A builder for [`DeleteRegexMatchSetOutput`](crate::output::DeleteRegexMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRegexMatchSetOutput`](crate::output::DeleteRegexMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -3825,7 +3841,7 @@ pub mod delete_regex_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteRegexMatchSetOutput`](crate::output::DeleteRegexMatchSetOutput)
+        /// Consumes the builder and constructs a [`DeleteRegexMatchSetOutput`](crate::output::DeleteRegexMatchSetOutput).
         pub fn build(self) -> crate::output::DeleteRegexMatchSetOutput {
             crate::output::DeleteRegexMatchSetOutput {
                 change_token: self.change_token,
@@ -3834,7 +3850,7 @@ pub mod delete_regex_match_set_output {
     }
 }
 impl DeleteRegexMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRegexMatchSetOutput`](crate::output::DeleteRegexMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRegexMatchSetOutput`](crate::output::DeleteRegexMatchSetOutput).
     pub fn builder() -> crate::output::delete_regex_match_set_output::Builder {
         crate::output::delete_regex_match_set_output::Builder::default()
     }
@@ -3845,6 +3861,7 @@ impl DeleteRegexMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteRateBasedRuleOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>DeleteRateBasedRule</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl DeleteRateBasedRuleOutput {
@@ -3860,11 +3877,10 @@ impl std::fmt::Debug for DeleteRateBasedRuleOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRateBasedRuleOutput`](crate::output::DeleteRateBasedRuleOutput)
+/// See [`DeleteRateBasedRuleOutput`](crate::output::DeleteRateBasedRuleOutput).
 pub mod delete_rate_based_rule_output {
 
-    /// A builder for [`DeleteRateBasedRuleOutput`](crate::output::DeleteRateBasedRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRateBasedRuleOutput`](crate::output::DeleteRateBasedRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -3880,7 +3896,7 @@ pub mod delete_rate_based_rule_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteRateBasedRuleOutput`](crate::output::DeleteRateBasedRuleOutput)
+        /// Consumes the builder and constructs a [`DeleteRateBasedRuleOutput`](crate::output::DeleteRateBasedRuleOutput).
         pub fn build(self) -> crate::output::DeleteRateBasedRuleOutput {
             crate::output::DeleteRateBasedRuleOutput {
                 change_token: self.change_token,
@@ -3889,7 +3905,7 @@ pub mod delete_rate_based_rule_output {
     }
 }
 impl DeleteRateBasedRuleOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRateBasedRuleOutput`](crate::output::DeleteRateBasedRuleOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRateBasedRuleOutput`](crate::output::DeleteRateBasedRuleOutput).
     pub fn builder() -> crate::output::delete_rate_based_rule_output::Builder {
         crate::output::delete_rate_based_rule_output::Builder::default()
     }
@@ -3905,22 +3921,21 @@ impl std::fmt::Debug for DeletePermissionPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput)
+/// See [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput).
 pub mod delete_permission_policy_output {
 
-    /// A builder for [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput)
+        /// Consumes the builder and constructs a [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput).
         pub fn build(self) -> crate::output::DeletePermissionPolicyOutput {
             crate::output::DeletePermissionPolicyOutput {}
         }
     }
 }
 impl DeletePermissionPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput).
     pub fn builder() -> crate::output::delete_permission_policy_output::Builder {
         crate::output::delete_permission_policy_output::Builder::default()
     }
@@ -3936,22 +3951,21 @@ impl std::fmt::Debug for DeleteLoggingConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput)
+/// See [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput).
 pub mod delete_logging_configuration_output {
 
-    /// A builder for [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteLoggingConfigurationOutput {
             crate::output::DeleteLoggingConfigurationOutput {}
         }
     }
 }
 impl DeleteLoggingConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput).
     pub fn builder() -> crate::output::delete_logging_configuration_output::Builder {
         crate::output::delete_logging_configuration_output::Builder::default()
     }
@@ -3962,6 +3976,7 @@ impl DeleteLoggingConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteIpSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>DeleteIPSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl DeleteIpSetOutput {
@@ -3977,11 +3992,10 @@ impl std::fmt::Debug for DeleteIpSetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput)
+/// See [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput).
 pub mod delete_ip_set_output {
 
-    /// A builder for [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -3997,7 +4011,7 @@ pub mod delete_ip_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput)
+        /// Consumes the builder and constructs a [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput).
         pub fn build(self) -> crate::output::DeleteIpSetOutput {
             crate::output::DeleteIpSetOutput {
                 change_token: self.change_token,
@@ -4006,7 +4020,7 @@ pub mod delete_ip_set_output {
     }
 }
 impl DeleteIpSetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput).
     pub fn builder() -> crate::output::delete_ip_set_output::Builder {
         crate::output::delete_ip_set_output::Builder::default()
     }
@@ -4017,6 +4031,7 @@ impl DeleteIpSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteGeoMatchSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>DeleteGeoMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl DeleteGeoMatchSetOutput {
@@ -4032,11 +4047,10 @@ impl std::fmt::Debug for DeleteGeoMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteGeoMatchSetOutput`](crate::output::DeleteGeoMatchSetOutput)
+/// See [`DeleteGeoMatchSetOutput`](crate::output::DeleteGeoMatchSetOutput).
 pub mod delete_geo_match_set_output {
 
-    /// A builder for [`DeleteGeoMatchSetOutput`](crate::output::DeleteGeoMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteGeoMatchSetOutput`](crate::output::DeleteGeoMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -4052,7 +4066,7 @@ pub mod delete_geo_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteGeoMatchSetOutput`](crate::output::DeleteGeoMatchSetOutput)
+        /// Consumes the builder and constructs a [`DeleteGeoMatchSetOutput`](crate::output::DeleteGeoMatchSetOutput).
         pub fn build(self) -> crate::output::DeleteGeoMatchSetOutput {
             crate::output::DeleteGeoMatchSetOutput {
                 change_token: self.change_token,
@@ -4061,7 +4075,7 @@ pub mod delete_geo_match_set_output {
     }
 }
 impl DeleteGeoMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteGeoMatchSetOutput`](crate::output::DeleteGeoMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteGeoMatchSetOutput`](crate::output::DeleteGeoMatchSetOutput).
     pub fn builder() -> crate::output::delete_geo_match_set_output::Builder {
         crate::output::delete_geo_match_set_output::Builder::default()
     }
@@ -4072,6 +4086,7 @@ impl DeleteGeoMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteByteMatchSetOutput {
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>DeleteByteMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl DeleteByteMatchSetOutput {
@@ -4087,11 +4102,10 @@ impl std::fmt::Debug for DeleteByteMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteByteMatchSetOutput`](crate::output::DeleteByteMatchSetOutput)
+/// See [`DeleteByteMatchSetOutput`](crate::output::DeleteByteMatchSetOutput).
 pub mod delete_byte_match_set_output {
 
-    /// A builder for [`DeleteByteMatchSetOutput`](crate::output::DeleteByteMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteByteMatchSetOutput`](crate::output::DeleteByteMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_token: std::option::Option<std::string::String>,
@@ -4107,7 +4121,7 @@ pub mod delete_byte_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteByteMatchSetOutput`](crate::output::DeleteByteMatchSetOutput)
+        /// Consumes the builder and constructs a [`DeleteByteMatchSetOutput`](crate::output::DeleteByteMatchSetOutput).
         pub fn build(self) -> crate::output::DeleteByteMatchSetOutput {
             crate::output::DeleteByteMatchSetOutput {
                 change_token: self.change_token,
@@ -4116,7 +4130,7 @@ pub mod delete_byte_match_set_output {
     }
 }
 impl DeleteByteMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteByteMatchSetOutput`](crate::output::DeleteByteMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteByteMatchSetOutput`](crate::output::DeleteByteMatchSetOutput).
     pub fn builder() -> crate::output::delete_byte_match_set_output::Builder {
         crate::output::delete_byte_match_set_output::Builder::default()
     }
@@ -4127,8 +4141,10 @@ impl DeleteByteMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateXssMatchSetOutput {
     /// <p>An <code>XssMatchSet</code>.</p>
+    #[doc(hidden)]
     pub xss_match_set: std::option::Option<crate::model::XssMatchSet>,
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>CreateXssMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl CreateXssMatchSetOutput {
@@ -4149,11 +4165,10 @@ impl std::fmt::Debug for CreateXssMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateXssMatchSetOutput`](crate::output::CreateXssMatchSetOutput)
+/// See [`CreateXssMatchSetOutput`](crate::output::CreateXssMatchSetOutput).
 pub mod create_xss_match_set_output {
 
-    /// A builder for [`CreateXssMatchSetOutput`](crate::output::CreateXssMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateXssMatchSetOutput`](crate::output::CreateXssMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) xss_match_set: std::option::Option<crate::model::XssMatchSet>,
@@ -4183,7 +4198,7 @@ pub mod create_xss_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateXssMatchSetOutput`](crate::output::CreateXssMatchSetOutput)
+        /// Consumes the builder and constructs a [`CreateXssMatchSetOutput`](crate::output::CreateXssMatchSetOutput).
         pub fn build(self) -> crate::output::CreateXssMatchSetOutput {
             crate::output::CreateXssMatchSetOutput {
                 xss_match_set: self.xss_match_set,
@@ -4193,7 +4208,7 @@ pub mod create_xss_match_set_output {
     }
 }
 impl CreateXssMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateXssMatchSetOutput`](crate::output::CreateXssMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateXssMatchSetOutput`](crate::output::CreateXssMatchSetOutput).
     pub fn builder() -> crate::output::create_xss_match_set_output::Builder {
         crate::output::create_xss_match_set_output::Builder::default()
     }
@@ -4204,6 +4219,7 @@ impl CreateXssMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateWebAclMigrationStackOutput {
     /// <p>The URL of the template created in Amazon S3. </p>
+    #[doc(hidden)]
     pub s3_object_url: std::option::Option<std::string::String>,
 }
 impl CreateWebAclMigrationStackOutput {
@@ -4219,11 +4235,10 @@ impl std::fmt::Debug for CreateWebAclMigrationStackOutput {
         formatter.finish()
     }
 }
-/// See [`CreateWebAclMigrationStackOutput`](crate::output::CreateWebAclMigrationStackOutput)
+/// See [`CreateWebAclMigrationStackOutput`](crate::output::CreateWebAclMigrationStackOutput).
 pub mod create_web_acl_migration_stack_output {
 
-    /// A builder for [`CreateWebAclMigrationStackOutput`](crate::output::CreateWebAclMigrationStackOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateWebAclMigrationStackOutput`](crate::output::CreateWebAclMigrationStackOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_object_url: std::option::Option<std::string::String>,
@@ -4242,7 +4257,7 @@ pub mod create_web_acl_migration_stack_output {
             self.s3_object_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateWebAclMigrationStackOutput`](crate::output::CreateWebAclMigrationStackOutput)
+        /// Consumes the builder and constructs a [`CreateWebAclMigrationStackOutput`](crate::output::CreateWebAclMigrationStackOutput).
         pub fn build(self) -> crate::output::CreateWebAclMigrationStackOutput {
             crate::output::CreateWebAclMigrationStackOutput {
                 s3_object_url: self.s3_object_url,
@@ -4251,7 +4266,7 @@ pub mod create_web_acl_migration_stack_output {
     }
 }
 impl CreateWebAclMigrationStackOutput {
-    /// Creates a new builder-style object to manufacture [`CreateWebAclMigrationStackOutput`](crate::output::CreateWebAclMigrationStackOutput)
+    /// Creates a new builder-style object to manufacture [`CreateWebAclMigrationStackOutput`](crate::output::CreateWebAclMigrationStackOutput).
     pub fn builder() -> crate::output::create_web_acl_migration_stack_output::Builder {
         crate::output::create_web_acl_migration_stack_output::Builder::default()
     }
@@ -4262,8 +4277,10 @@ impl CreateWebAclMigrationStackOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateWebAclOutput {
     /// <p>The <code>WebACL</code> returned in the <code>CreateWebACL</code> response.</p>
+    #[doc(hidden)]
     pub web_acl: std::option::Option<crate::model::WebAcl>,
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>CreateWebACL</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl CreateWebAclOutput {
@@ -4284,11 +4301,10 @@ impl std::fmt::Debug for CreateWebAclOutput {
         formatter.finish()
     }
 }
-/// See [`CreateWebAclOutput`](crate::output::CreateWebAclOutput)
+/// See [`CreateWebAclOutput`](crate::output::CreateWebAclOutput).
 pub mod create_web_acl_output {
 
-    /// A builder for [`CreateWebAclOutput`](crate::output::CreateWebAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateWebAclOutput`](crate::output::CreateWebAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) web_acl: std::option::Option<crate::model::WebAcl>,
@@ -4315,7 +4331,7 @@ pub mod create_web_acl_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateWebAclOutput`](crate::output::CreateWebAclOutput)
+        /// Consumes the builder and constructs a [`CreateWebAclOutput`](crate::output::CreateWebAclOutput).
         pub fn build(self) -> crate::output::CreateWebAclOutput {
             crate::output::CreateWebAclOutput {
                 web_acl: self.web_acl,
@@ -4325,7 +4341,7 @@ pub mod create_web_acl_output {
     }
 }
 impl CreateWebAclOutput {
-    /// Creates a new builder-style object to manufacture [`CreateWebAclOutput`](crate::output::CreateWebAclOutput)
+    /// Creates a new builder-style object to manufacture [`CreateWebAclOutput`](crate::output::CreateWebAclOutput).
     pub fn builder() -> crate::output::create_web_acl_output::Builder {
         crate::output::create_web_acl_output::Builder::default()
     }
@@ -4336,8 +4352,10 @@ impl CreateWebAclOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSqlInjectionMatchSetOutput {
     /// <p>A <code>SqlInjectionMatchSet</code>.</p>
+    #[doc(hidden)]
     pub sql_injection_match_set: std::option::Option<crate::model::SqlInjectionMatchSet>,
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>CreateSqlInjectionMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl CreateSqlInjectionMatchSetOutput {
@@ -4360,11 +4378,10 @@ impl std::fmt::Debug for CreateSqlInjectionMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSqlInjectionMatchSetOutput`](crate::output::CreateSqlInjectionMatchSetOutput)
+/// See [`CreateSqlInjectionMatchSetOutput`](crate::output::CreateSqlInjectionMatchSetOutput).
 pub mod create_sql_injection_match_set_output {
 
-    /// A builder for [`CreateSqlInjectionMatchSetOutput`](crate::output::CreateSqlInjectionMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSqlInjectionMatchSetOutput`](crate::output::CreateSqlInjectionMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sql_injection_match_set: std::option::Option<crate::model::SqlInjectionMatchSet>,
@@ -4397,7 +4414,7 @@ pub mod create_sql_injection_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSqlInjectionMatchSetOutput`](crate::output::CreateSqlInjectionMatchSetOutput)
+        /// Consumes the builder and constructs a [`CreateSqlInjectionMatchSetOutput`](crate::output::CreateSqlInjectionMatchSetOutput).
         pub fn build(self) -> crate::output::CreateSqlInjectionMatchSetOutput {
             crate::output::CreateSqlInjectionMatchSetOutput {
                 sql_injection_match_set: self.sql_injection_match_set,
@@ -4407,7 +4424,7 @@ pub mod create_sql_injection_match_set_output {
     }
 }
 impl CreateSqlInjectionMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSqlInjectionMatchSetOutput`](crate::output::CreateSqlInjectionMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSqlInjectionMatchSetOutput`](crate::output::CreateSqlInjectionMatchSetOutput).
     pub fn builder() -> crate::output::create_sql_injection_match_set_output::Builder {
         crate::output::create_sql_injection_match_set_output::Builder::default()
     }
@@ -4418,8 +4435,10 @@ impl CreateSqlInjectionMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSizeConstraintSetOutput {
     /// <p>A <code>SizeConstraintSet</code> that contains no <code>SizeConstraint</code> objects.</p>
+    #[doc(hidden)]
     pub size_constraint_set: std::option::Option<crate::model::SizeConstraintSet>,
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>CreateSizeConstraintSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl CreateSizeConstraintSetOutput {
@@ -4440,11 +4459,10 @@ impl std::fmt::Debug for CreateSizeConstraintSetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSizeConstraintSetOutput`](crate::output::CreateSizeConstraintSetOutput)
+/// See [`CreateSizeConstraintSetOutput`](crate::output::CreateSizeConstraintSetOutput).
 pub mod create_size_constraint_set_output {
 
-    /// A builder for [`CreateSizeConstraintSetOutput`](crate::output::CreateSizeConstraintSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSizeConstraintSetOutput`](crate::output::CreateSizeConstraintSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) size_constraint_set: std::option::Option<crate::model::SizeConstraintSet>,
@@ -4474,7 +4492,7 @@ pub mod create_size_constraint_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSizeConstraintSetOutput`](crate::output::CreateSizeConstraintSetOutput)
+        /// Consumes the builder and constructs a [`CreateSizeConstraintSetOutput`](crate::output::CreateSizeConstraintSetOutput).
         pub fn build(self) -> crate::output::CreateSizeConstraintSetOutput {
             crate::output::CreateSizeConstraintSetOutput {
                 size_constraint_set: self.size_constraint_set,
@@ -4484,7 +4502,7 @@ pub mod create_size_constraint_set_output {
     }
 }
 impl CreateSizeConstraintSetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSizeConstraintSetOutput`](crate::output::CreateSizeConstraintSetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSizeConstraintSetOutput`](crate::output::CreateSizeConstraintSetOutput).
     pub fn builder() -> crate::output::create_size_constraint_set_output::Builder {
         crate::output::create_size_constraint_set_output::Builder::default()
     }
@@ -4495,8 +4513,10 @@ impl CreateSizeConstraintSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRuleGroupOutput {
     /// <p>An empty <code>RuleGroup</code>.</p>
+    #[doc(hidden)]
     pub rule_group: std::option::Option<crate::model::RuleGroup>,
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>CreateRuleGroup</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl CreateRuleGroupOutput {
@@ -4517,11 +4537,10 @@ impl std::fmt::Debug for CreateRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
+/// See [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput).
 pub mod create_rule_group_output {
 
-    /// A builder for [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_group: std::option::Option<crate::model::RuleGroup>,
@@ -4551,7 +4570,7 @@ pub mod create_rule_group_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
+        /// Consumes the builder and constructs a [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput).
         pub fn build(self) -> crate::output::CreateRuleGroupOutput {
             crate::output::CreateRuleGroupOutput {
                 rule_group: self.rule_group,
@@ -4561,7 +4580,7 @@ pub mod create_rule_group_output {
     }
 }
 impl CreateRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput).
     pub fn builder() -> crate::output::create_rule_group_output::Builder {
         crate::output::create_rule_group_output::Builder::default()
     }
@@ -4572,8 +4591,10 @@ impl CreateRuleGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRuleOutput {
     /// <p>The <code>Rule</code> returned in the <code>CreateRule</code> response.</p>
+    #[doc(hidden)]
     pub rule: std::option::Option<crate::model::Rule>,
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>CreateRule</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl CreateRuleOutput {
@@ -4594,11 +4615,10 @@ impl std::fmt::Debug for CreateRuleOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRuleOutput`](crate::output::CreateRuleOutput)
+/// See [`CreateRuleOutput`](crate::output::CreateRuleOutput).
 pub mod create_rule_output {
 
-    /// A builder for [`CreateRuleOutput`](crate::output::CreateRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRuleOutput`](crate::output::CreateRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule: std::option::Option<crate::model::Rule>,
@@ -4625,7 +4645,7 @@ pub mod create_rule_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRuleOutput`](crate::output::CreateRuleOutput)
+        /// Consumes the builder and constructs a [`CreateRuleOutput`](crate::output::CreateRuleOutput).
         pub fn build(self) -> crate::output::CreateRuleOutput {
             crate::output::CreateRuleOutput {
                 rule: self.rule,
@@ -4635,7 +4655,7 @@ pub mod create_rule_output {
     }
 }
 impl CreateRuleOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRuleOutput`](crate::output::CreateRuleOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRuleOutput`](crate::output::CreateRuleOutput).
     pub fn builder() -> crate::output::create_rule_output::Builder {
         crate::output::create_rule_output::Builder::default()
     }
@@ -4646,8 +4666,10 @@ impl CreateRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRegexPatternSetOutput {
     /// <p>A <code>RegexPatternSet</code> that contains no objects.</p>
+    #[doc(hidden)]
     pub regex_pattern_set: std::option::Option<crate::model::RegexPatternSet>,
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>CreateRegexPatternSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl CreateRegexPatternSetOutput {
@@ -4668,11 +4690,10 @@ impl std::fmt::Debug for CreateRegexPatternSetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput)
+/// See [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput).
 pub mod create_regex_pattern_set_output {
 
-    /// A builder for [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) regex_pattern_set: std::option::Option<crate::model::RegexPatternSet>,
@@ -4702,7 +4723,7 @@ pub mod create_regex_pattern_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput)
+        /// Consumes the builder and constructs a [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput).
         pub fn build(self) -> crate::output::CreateRegexPatternSetOutput {
             crate::output::CreateRegexPatternSetOutput {
                 regex_pattern_set: self.regex_pattern_set,
@@ -4712,7 +4733,7 @@ pub mod create_regex_pattern_set_output {
     }
 }
 impl CreateRegexPatternSetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput).
     pub fn builder() -> crate::output::create_regex_pattern_set_output::Builder {
         crate::output::create_regex_pattern_set_output::Builder::default()
     }
@@ -4723,8 +4744,10 @@ impl CreateRegexPatternSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRegexMatchSetOutput {
     /// <p>A <code>RegexMatchSet</code> that contains no <code>RegexMatchTuple</code> objects.</p>
+    #[doc(hidden)]
     pub regex_match_set: std::option::Option<crate::model::RegexMatchSet>,
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>CreateRegexMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl CreateRegexMatchSetOutput {
@@ -4745,11 +4768,10 @@ impl std::fmt::Debug for CreateRegexMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRegexMatchSetOutput`](crate::output::CreateRegexMatchSetOutput)
+/// See [`CreateRegexMatchSetOutput`](crate::output::CreateRegexMatchSetOutput).
 pub mod create_regex_match_set_output {
 
-    /// A builder for [`CreateRegexMatchSetOutput`](crate::output::CreateRegexMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRegexMatchSetOutput`](crate::output::CreateRegexMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) regex_match_set: std::option::Option<crate::model::RegexMatchSet>,
@@ -4779,7 +4801,7 @@ pub mod create_regex_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRegexMatchSetOutput`](crate::output::CreateRegexMatchSetOutput)
+        /// Consumes the builder and constructs a [`CreateRegexMatchSetOutput`](crate::output::CreateRegexMatchSetOutput).
         pub fn build(self) -> crate::output::CreateRegexMatchSetOutput {
             crate::output::CreateRegexMatchSetOutput {
                 regex_match_set: self.regex_match_set,
@@ -4789,7 +4811,7 @@ pub mod create_regex_match_set_output {
     }
 }
 impl CreateRegexMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRegexMatchSetOutput`](crate::output::CreateRegexMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRegexMatchSetOutput`](crate::output::CreateRegexMatchSetOutput).
     pub fn builder() -> crate::output::create_regex_match_set_output::Builder {
         crate::output::create_regex_match_set_output::Builder::default()
     }
@@ -4800,8 +4822,10 @@ impl CreateRegexMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRateBasedRuleOutput {
     /// <p>The <code>RateBasedRule</code> that is returned in the <code>CreateRateBasedRule</code> response.</p>
+    #[doc(hidden)]
     pub rule: std::option::Option<crate::model::RateBasedRule>,
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>CreateRateBasedRule</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl CreateRateBasedRuleOutput {
@@ -4822,11 +4846,10 @@ impl std::fmt::Debug for CreateRateBasedRuleOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRateBasedRuleOutput`](crate::output::CreateRateBasedRuleOutput)
+/// See [`CreateRateBasedRuleOutput`](crate::output::CreateRateBasedRuleOutput).
 pub mod create_rate_based_rule_output {
 
-    /// A builder for [`CreateRateBasedRuleOutput`](crate::output::CreateRateBasedRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRateBasedRuleOutput`](crate::output::CreateRateBasedRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule: std::option::Option<crate::model::RateBasedRule>,
@@ -4853,7 +4876,7 @@ pub mod create_rate_based_rule_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRateBasedRuleOutput`](crate::output::CreateRateBasedRuleOutput)
+        /// Consumes the builder and constructs a [`CreateRateBasedRuleOutput`](crate::output::CreateRateBasedRuleOutput).
         pub fn build(self) -> crate::output::CreateRateBasedRuleOutput {
             crate::output::CreateRateBasedRuleOutput {
                 rule: self.rule,
@@ -4863,7 +4886,7 @@ pub mod create_rate_based_rule_output {
     }
 }
 impl CreateRateBasedRuleOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRateBasedRuleOutput`](crate::output::CreateRateBasedRuleOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRateBasedRuleOutput`](crate::output::CreateRateBasedRuleOutput).
     pub fn builder() -> crate::output::create_rate_based_rule_output::Builder {
         crate::output::create_rate_based_rule_output::Builder::default()
     }
@@ -4874,8 +4897,10 @@ impl CreateRateBasedRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateIpSetOutput {
     /// <p>The <code>IPSet</code> returned in the <code>CreateIPSet</code> response.</p>
+    #[doc(hidden)]
     pub ip_set: std::option::Option<crate::model::IpSet>,
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>CreateIPSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl CreateIpSetOutput {
@@ -4896,11 +4921,10 @@ impl std::fmt::Debug for CreateIpSetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateIpSetOutput`](crate::output::CreateIpSetOutput)
+/// See [`CreateIpSetOutput`](crate::output::CreateIpSetOutput).
 pub mod create_ip_set_output {
 
-    /// A builder for [`CreateIpSetOutput`](crate::output::CreateIpSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateIpSetOutput`](crate::output::CreateIpSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_set: std::option::Option<crate::model::IpSet>,
@@ -4927,7 +4951,7 @@ pub mod create_ip_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateIpSetOutput`](crate::output::CreateIpSetOutput)
+        /// Consumes the builder and constructs a [`CreateIpSetOutput`](crate::output::CreateIpSetOutput).
         pub fn build(self) -> crate::output::CreateIpSetOutput {
             crate::output::CreateIpSetOutput {
                 ip_set: self.ip_set,
@@ -4937,7 +4961,7 @@ pub mod create_ip_set_output {
     }
 }
 impl CreateIpSetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateIpSetOutput`](crate::output::CreateIpSetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateIpSetOutput`](crate::output::CreateIpSetOutput).
     pub fn builder() -> crate::output::create_ip_set_output::Builder {
         crate::output::create_ip_set_output::Builder::default()
     }
@@ -4948,8 +4972,10 @@ impl CreateIpSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateGeoMatchSetOutput {
     /// <p>The <code>GeoMatchSet</code> returned in the <code>CreateGeoMatchSet</code> response. The <code>GeoMatchSet</code> contains no <code>GeoMatchConstraints</code>.</p>
+    #[doc(hidden)]
     pub geo_match_set: std::option::Option<crate::model::GeoMatchSet>,
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>CreateGeoMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl CreateGeoMatchSetOutput {
@@ -4970,11 +4996,10 @@ impl std::fmt::Debug for CreateGeoMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateGeoMatchSetOutput`](crate::output::CreateGeoMatchSetOutput)
+/// See [`CreateGeoMatchSetOutput`](crate::output::CreateGeoMatchSetOutput).
 pub mod create_geo_match_set_output {
 
-    /// A builder for [`CreateGeoMatchSetOutput`](crate::output::CreateGeoMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateGeoMatchSetOutput`](crate::output::CreateGeoMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) geo_match_set: std::option::Option<crate::model::GeoMatchSet>,
@@ -5004,7 +5029,7 @@ pub mod create_geo_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateGeoMatchSetOutput`](crate::output::CreateGeoMatchSetOutput)
+        /// Consumes the builder and constructs a [`CreateGeoMatchSetOutput`](crate::output::CreateGeoMatchSetOutput).
         pub fn build(self) -> crate::output::CreateGeoMatchSetOutput {
             crate::output::CreateGeoMatchSetOutput {
                 geo_match_set: self.geo_match_set,
@@ -5014,7 +5039,7 @@ pub mod create_geo_match_set_output {
     }
 }
 impl CreateGeoMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateGeoMatchSetOutput`](crate::output::CreateGeoMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateGeoMatchSetOutput`](crate::output::CreateGeoMatchSetOutput).
     pub fn builder() -> crate::output::create_geo_match_set_output::Builder {
         crate::output::create_geo_match_set_output::Builder::default()
     }
@@ -5025,8 +5050,10 @@ impl CreateGeoMatchSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateByteMatchSetOutput {
     /// <p>A <code>ByteMatchSet</code> that contains no <code>ByteMatchTuple</code> objects.</p>
+    #[doc(hidden)]
     pub byte_match_set: std::option::Option<crate::model::ByteMatchSet>,
     /// <p>The <code>ChangeToken</code> that you used to submit the <code>CreateByteMatchSet</code> request. You can also use this value to query the status of the request. For more information, see <code>GetChangeTokenStatus</code>.</p>
+    #[doc(hidden)]
     pub change_token: std::option::Option<std::string::String>,
 }
 impl CreateByteMatchSetOutput {
@@ -5047,11 +5074,10 @@ impl std::fmt::Debug for CreateByteMatchSetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateByteMatchSetOutput`](crate::output::CreateByteMatchSetOutput)
+/// See [`CreateByteMatchSetOutput`](crate::output::CreateByteMatchSetOutput).
 pub mod create_byte_match_set_output {
 
-    /// A builder for [`CreateByteMatchSetOutput`](crate::output::CreateByteMatchSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateByteMatchSetOutput`](crate::output::CreateByteMatchSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) byte_match_set: std::option::Option<crate::model::ByteMatchSet>,
@@ -5081,7 +5107,7 @@ pub mod create_byte_match_set_output {
             self.change_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateByteMatchSetOutput`](crate::output::CreateByteMatchSetOutput)
+        /// Consumes the builder and constructs a [`CreateByteMatchSetOutput`](crate::output::CreateByteMatchSetOutput).
         pub fn build(self) -> crate::output::CreateByteMatchSetOutput {
             crate::output::CreateByteMatchSetOutput {
                 byte_match_set: self.byte_match_set,
@@ -5091,7 +5117,7 @@ pub mod create_byte_match_set_output {
     }
 }
 impl CreateByteMatchSetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateByteMatchSetOutput`](crate::output::CreateByteMatchSetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateByteMatchSetOutput`](crate::output::CreateByteMatchSetOutput).
     pub fn builder() -> crate::output::create_byte_match_set_output::Builder {
         crate::output::create_byte_match_set_output::Builder::default()
     }

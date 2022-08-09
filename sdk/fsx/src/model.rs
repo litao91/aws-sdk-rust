@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Volume {
     /// <p>The time that the resource was created, in seconds (since 1970-01-01T00:00:00Z), also known as Unix time.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The globally unique ID of the file system, assigned by Amazon FSx.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>The lifecycle status of the volume.</p>
     /// <ul>
@@ -18,25 +20,35 @@ pub struct Volume {
     /// <li> <p> <code>MISCONFIGURED</code> - The volume is in a failed but recoverable state.</p> </li>
     /// <li> <p> <code>PENDING</code> - Amazon FSx hasn't started creating the volume.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::VolumeLifecycle>,
     /// <p>The name of the volume.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The configuration of an Amazon FSx for NetApp ONTAP volume.</p>
+    #[doc(hidden)]
     pub ontap_configuration: std::option::Option<crate::model::OntapVolumeConfiguration>,
     /// <p>The Amazon Resource Name (ARN) for a given resource. ARNs uniquely identify Amazon Web Services resources. We require an ARN when you need to specify a resource unambiguously across all of Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>A list of <code>Tag</code> values, with a maximum of 50 elements.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The system-generated, unique ID of the volume.</p>
+    #[doc(hidden)]
     pub volume_id: std::option::Option<std::string::String>,
     /// <p>The type of the volume.</p>
+    #[doc(hidden)]
     pub volume_type: std::option::Option<crate::model::VolumeType>,
     /// <p>The reason why the volume lifecycle status changed.</p>
+    #[doc(hidden)]
     pub lifecycle_transition_reason: std::option::Option<crate::model::LifecycleTransitionReason>,
     /// <p>A list of administrative actions for the file system that are in process or waiting to be processed. Administrative actions describe changes to the Amazon FSx system that you initiated.</p>
+    #[doc(hidden)]
     pub administrative_actions:
         std::option::Option<std::vec::Vec<crate::model::AdministrativeAction>>,
     /// <p>The configuration of an Amazon FSx for OpenZFS volume.</p>
+    #[doc(hidden)]
     pub open_zfs_configuration: std::option::Option<crate::model::OpenZfsVolumeConfiguration>,
 }
 impl Volume {
@@ -127,11 +139,10 @@ impl std::fmt::Debug for Volume {
         formatter.finish()
     }
 }
-/// See [`Volume`](crate::model::Volume)
+/// See [`Volume`](crate::model::Volume).
 pub mod volume {
 
-    /// A builder for [`Volume`](crate::model::Volume)
-    #[non_exhaustive]
+    /// A builder for [`Volume`](crate::model::Volume).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -337,7 +348,7 @@ pub mod volume {
             self.open_zfs_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`Volume`](crate::model::Volume)
+        /// Consumes the builder and constructs a [`Volume`](crate::model::Volume).
         pub fn build(self) -> crate::model::Volume {
             crate::model::Volume {
                 creation_time: self.creation_time,
@@ -357,7 +368,7 @@ pub mod volume {
     }
 }
 impl Volume {
-    /// Creates a new builder-style object to manufacture [`Volume`](crate::model::Volume)
+    /// Creates a new builder-style object to manufacture [`Volume`](crate::model::Volume).
     pub fn builder() -> crate::model::volume::Builder {
         crate::model::volume::Builder::default()
     }
@@ -368,14 +379,19 @@ impl Volume {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OpenZfsVolumeConfiguration {
     /// <p>The ID of the parent volume.</p>
+    #[doc(hidden)]
     pub parent_volume_id: std::option::Option<std::string::String>,
     /// <p>The path to the volume from the root volume. For example, <code>fsx/parentVolume/volume1</code>.</p>
+    #[doc(hidden)]
     pub volume_path: std::option::Option<std::string::String>,
     /// <p>The amount of storage in gibibytes (GiB) to reserve from the parent volume. You can't reserve more storage than the parent volume has reserved.</p>
+    #[doc(hidden)]
     pub storage_capacity_reservation_gi_b: std::option::Option<i32>,
     /// <p>The maximum amount of storage in gibibtyes (GiB) that the volume can use from its parent. You can specify a quota larger than the storage on the parent volume.</p>
+    #[doc(hidden)]
     pub storage_capacity_quota_gi_b: std::option::Option<i32>,
     /// <p>The record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. For guidance on when to set a custom record size, see the <i>Amazon FSx for OpenZFS User Guide</i>.</p>
+    #[doc(hidden)]
     pub record_size_ki_b: std::option::Option<i32>,
     /// <p>Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by default.</p>
     /// <ul>
@@ -383,16 +399,22 @@ pub struct OpenZfsVolumeConfiguration {
     /// <li> <p> <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.</p> </li>
     /// <li> <p> <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub data_compression_type: std::option::Option<crate::model::OpenZfsDataCompressionType>,
     /// <p>A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are copied from the volume, regardless of this value.</p>
+    #[doc(hidden)]
     pub copy_tags_to_snapshots: std::option::Option<bool>,
     /// <p>The configuration object that specifies the snapshot to use as the origin of the data for the volume.</p>
+    #[doc(hidden)]
     pub origin_snapshot: std::option::Option<crate::model::OpenZfsOriginSnapshotConfiguration>,
     /// <p>A Boolean value indicating whether the volume is read-only.</p>
+    #[doc(hidden)]
     pub read_only: std::option::Option<bool>,
     /// <p>The configuration object for mounting a Network File System (NFS) file system.</p>
+    #[doc(hidden)]
     pub nfs_exports: std::option::Option<std::vec::Vec<crate::model::OpenZfsNfsExport>>,
     /// <p>An object specifying how much storage users or groups can use on the volume.</p>
+    #[doc(hidden)]
     pub user_and_group_quotas:
         std::option::Option<std::vec::Vec<crate::model::OpenZfsUserOrGroupQuota>>,
 }
@@ -476,11 +498,10 @@ impl std::fmt::Debug for OpenZfsVolumeConfiguration {
         formatter.finish()
     }
 }
-/// See [`OpenZfsVolumeConfiguration`](crate::model::OpenZfsVolumeConfiguration)
+/// See [`OpenZfsVolumeConfiguration`](crate::model::OpenZfsVolumeConfiguration).
 pub mod open_zfs_volume_configuration {
 
-    /// A builder for [`OpenZfsVolumeConfiguration`](crate::model::OpenZfsVolumeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`OpenZfsVolumeConfiguration`](crate::model::OpenZfsVolumeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parent_volume_id: std::option::Option<std::string::String>,
@@ -658,7 +679,7 @@ pub mod open_zfs_volume_configuration {
             self.user_and_group_quotas = input;
             self
         }
-        /// Consumes the builder and constructs a [`OpenZfsVolumeConfiguration`](crate::model::OpenZfsVolumeConfiguration)
+        /// Consumes the builder and constructs a [`OpenZfsVolumeConfiguration`](crate::model::OpenZfsVolumeConfiguration).
         pub fn build(self) -> crate::model::OpenZfsVolumeConfiguration {
             crate::model::OpenZfsVolumeConfiguration {
                 parent_volume_id: self.parent_volume_id,
@@ -677,7 +698,7 @@ pub mod open_zfs_volume_configuration {
     }
 }
 impl OpenZfsVolumeConfiguration {
-    /// Creates a new builder-style object to manufacture [`OpenZfsVolumeConfiguration`](crate::model::OpenZfsVolumeConfiguration)
+    /// Creates a new builder-style object to manufacture [`OpenZfsVolumeConfiguration`](crate::model::OpenZfsVolumeConfiguration).
     pub fn builder() -> crate::model::open_zfs_volume_configuration::Builder {
         crate::model::open_zfs_volume_configuration::Builder::default()
     }
@@ -688,10 +709,13 @@ impl OpenZfsVolumeConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OpenZfsUserOrGroupQuota {
     /// <p>A value that specifies whether the quota applies to a user or group.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::OpenZfsQuotaType>,
     /// <p>The ID of the user or group.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<i32>,
     /// <p>The amount of storage that the user or group can use in gibibytes (GiB).</p>
+    #[doc(hidden)]
     pub storage_capacity_quota_gi_b: std::option::Option<i32>,
 }
 impl OpenZfsUserOrGroupQuota {
@@ -720,11 +744,10 @@ impl std::fmt::Debug for OpenZfsUserOrGroupQuota {
         formatter.finish()
     }
 }
-/// See [`OpenZfsUserOrGroupQuota`](crate::model::OpenZfsUserOrGroupQuota)
+/// See [`OpenZfsUserOrGroupQuota`](crate::model::OpenZfsUserOrGroupQuota).
 pub mod open_zfs_user_or_group_quota {
 
-    /// A builder for [`OpenZfsUserOrGroupQuota`](crate::model::OpenZfsUserOrGroupQuota)
-    #[non_exhaustive]
+    /// A builder for [`OpenZfsUserOrGroupQuota`](crate::model::OpenZfsUserOrGroupQuota).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::OpenZfsQuotaType>,
@@ -765,7 +788,7 @@ pub mod open_zfs_user_or_group_quota {
             self.storage_capacity_quota_gi_b = input;
             self
         }
-        /// Consumes the builder and constructs a [`OpenZfsUserOrGroupQuota`](crate::model::OpenZfsUserOrGroupQuota)
+        /// Consumes the builder and constructs a [`OpenZfsUserOrGroupQuota`](crate::model::OpenZfsUserOrGroupQuota).
         pub fn build(self) -> crate::model::OpenZfsUserOrGroupQuota {
             crate::model::OpenZfsUserOrGroupQuota {
                 r#type: self.r#type,
@@ -776,7 +799,7 @@ pub mod open_zfs_user_or_group_quota {
     }
 }
 impl OpenZfsUserOrGroupQuota {
-    /// Creates a new builder-style object to manufacture [`OpenZfsUserOrGroupQuota`](crate::model::OpenZfsUserOrGroupQuota)
+    /// Creates a new builder-style object to manufacture [`OpenZfsUserOrGroupQuota`](crate::model::OpenZfsUserOrGroupQuota).
     pub fn builder() -> crate::model::open_zfs_user_or_group_quota::Builder {
         crate::model::open_zfs_user_or_group_quota::Builder::default()
     }
@@ -842,6 +865,7 @@ impl AsRef<str> for OpenZfsQuotaType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OpenZfsNfsExport {
     /// <p>A list of configuration objects that contain the client and options for mounting the OpenZFS file system. </p>
+    #[doc(hidden)]
     pub client_configurations:
         std::option::Option<std::vec::Vec<crate::model::OpenZfsClientConfiguration>>,
 }
@@ -860,11 +884,10 @@ impl std::fmt::Debug for OpenZfsNfsExport {
         formatter.finish()
     }
 }
-/// See [`OpenZfsNfsExport`](crate::model::OpenZfsNfsExport)
+/// See [`OpenZfsNfsExport`](crate::model::OpenZfsNfsExport).
 pub mod open_zfs_nfs_export {
 
-    /// A builder for [`OpenZfsNfsExport`](crate::model::OpenZfsNfsExport)
-    #[non_exhaustive]
+    /// A builder for [`OpenZfsNfsExport`](crate::model::OpenZfsNfsExport).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_configurations:
@@ -893,7 +916,7 @@ pub mod open_zfs_nfs_export {
             self.client_configurations = input;
             self
         }
-        /// Consumes the builder and constructs a [`OpenZfsNfsExport`](crate::model::OpenZfsNfsExport)
+        /// Consumes the builder and constructs a [`OpenZfsNfsExport`](crate::model::OpenZfsNfsExport).
         pub fn build(self) -> crate::model::OpenZfsNfsExport {
             crate::model::OpenZfsNfsExport {
                 client_configurations: self.client_configurations,
@@ -902,7 +925,7 @@ pub mod open_zfs_nfs_export {
     }
 }
 impl OpenZfsNfsExport {
-    /// Creates a new builder-style object to manufacture [`OpenZfsNfsExport`](crate::model::OpenZfsNfsExport)
+    /// Creates a new builder-style object to manufacture [`OpenZfsNfsExport`](crate::model::OpenZfsNfsExport).
     pub fn builder() -> crate::model::open_zfs_nfs_export::Builder {
         crate::model::open_zfs_nfs_export::Builder::default()
     }
@@ -913,12 +936,14 @@ impl OpenZfsNfsExport {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OpenZfsClientConfiguration {
     /// <p>A value that specifies who can mount the file system. You can provide a wildcard character (<code>*</code>), an IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>). By default, Amazon FSx uses the wildcard character when specifying the client. </p>
+    #[doc(hidden)]
     pub clients: std::option::Option<std::string::String>,
     /// <p>The options to use when mounting the file system. For a list of options that you can use with Network File System (NFS), see the <a href="https://linux.die.net/man/5/exports">exports(5) - Linux man page</a>. When choosing your options, consider the following:</p>
     /// <ul>
     /// <li> <p> <code>crossmnt</code> is used by default. If you don't specify <code>crossmnt</code> when changing the client configuration, you won't be able to see or access snapshots in your file system's snapshot directory.</p> </li>
     /// <li> <p> <code>sync</code> is used by default. If you instead specify <code>async</code>, the system acknowledges writes before writing to disk. If the system crashes before the writes are finished, you lose the unwritten data. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub options: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl OpenZfsClientConfiguration {
@@ -943,11 +968,10 @@ impl std::fmt::Debug for OpenZfsClientConfiguration {
         formatter.finish()
     }
 }
-/// See [`OpenZfsClientConfiguration`](crate::model::OpenZfsClientConfiguration)
+/// See [`OpenZfsClientConfiguration`](crate::model::OpenZfsClientConfiguration).
 pub mod open_zfs_client_configuration {
 
-    /// A builder for [`OpenZfsClientConfiguration`](crate::model::OpenZfsClientConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`OpenZfsClientConfiguration`](crate::model::OpenZfsClientConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) clients: std::option::Option<std::string::String>,
@@ -991,7 +1015,7 @@ pub mod open_zfs_client_configuration {
             self.options = input;
             self
         }
-        /// Consumes the builder and constructs a [`OpenZfsClientConfiguration`](crate::model::OpenZfsClientConfiguration)
+        /// Consumes the builder and constructs a [`OpenZfsClientConfiguration`](crate::model::OpenZfsClientConfiguration).
         pub fn build(self) -> crate::model::OpenZfsClientConfiguration {
             crate::model::OpenZfsClientConfiguration {
                 clients: self.clients,
@@ -1001,7 +1025,7 @@ pub mod open_zfs_client_configuration {
     }
 }
 impl OpenZfsClientConfiguration {
-    /// Creates a new builder-style object to manufacture [`OpenZfsClientConfiguration`](crate::model::OpenZfsClientConfiguration)
+    /// Creates a new builder-style object to manufacture [`OpenZfsClientConfiguration`](crate::model::OpenZfsClientConfiguration).
     pub fn builder() -> crate::model::open_zfs_client_configuration::Builder {
         crate::model::open_zfs_client_configuration::Builder::default()
     }
@@ -1012,12 +1036,14 @@ impl OpenZfsClientConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OpenZfsOriginSnapshotConfiguration {
     /// <p>The Amazon Resource Name (ARN) for a given resource. ARNs uniquely identify Amazon Web Services resources. We require an ARN when you need to specify a resource unambiguously across all of Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub snapshot_arn: std::option::Option<std::string::String>,
     /// <p>The strategy used when copying data from the snapshot to the new volume. </p>
     /// <ul>
     /// <li> <p> <code>CLONE</code> - The new volume references the data in the origin snapshot. Cloning a snapshot is faster than copying the data from a snapshot to a new volume and doesn't consume disk throughput. However, the origin snapshot can't be deleted if there is a volume using its copied data. </p> </li>
     /// <li> <p> <code>FULL_COPY</code> - Copies all data from the snapshot to the new volume. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub copy_strategy: std::option::Option<crate::model::OpenZfsCopyStrategy>,
 }
 impl OpenZfsOriginSnapshotConfiguration {
@@ -1042,11 +1068,10 @@ impl std::fmt::Debug for OpenZfsOriginSnapshotConfiguration {
         formatter.finish()
     }
 }
-/// See [`OpenZfsOriginSnapshotConfiguration`](crate::model::OpenZfsOriginSnapshotConfiguration)
+/// See [`OpenZfsOriginSnapshotConfiguration`](crate::model::OpenZfsOriginSnapshotConfiguration).
 pub mod open_zfs_origin_snapshot_configuration {
 
-    /// A builder for [`OpenZfsOriginSnapshotConfiguration`](crate::model::OpenZfsOriginSnapshotConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`OpenZfsOriginSnapshotConfiguration`](crate::model::OpenZfsOriginSnapshotConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshot_arn: std::option::Option<std::string::String>,
@@ -1084,7 +1109,7 @@ pub mod open_zfs_origin_snapshot_configuration {
             self.copy_strategy = input;
             self
         }
-        /// Consumes the builder and constructs a [`OpenZfsOriginSnapshotConfiguration`](crate::model::OpenZfsOriginSnapshotConfiguration)
+        /// Consumes the builder and constructs a [`OpenZfsOriginSnapshotConfiguration`](crate::model::OpenZfsOriginSnapshotConfiguration).
         pub fn build(self) -> crate::model::OpenZfsOriginSnapshotConfiguration {
             crate::model::OpenZfsOriginSnapshotConfiguration {
                 snapshot_arn: self.snapshot_arn,
@@ -1094,7 +1119,7 @@ pub mod open_zfs_origin_snapshot_configuration {
     }
 }
 impl OpenZfsOriginSnapshotConfiguration {
-    /// Creates a new builder-style object to manufacture [`OpenZfsOriginSnapshotConfiguration`](crate::model::OpenZfsOriginSnapshotConfiguration)
+    /// Creates a new builder-style object to manufacture [`OpenZfsOriginSnapshotConfiguration`](crate::model::OpenZfsOriginSnapshotConfiguration).
     pub fn builder() -> crate::model::open_zfs_origin_snapshot_configuration::Builder {
         crate::model::open_zfs_origin_snapshot_configuration::Builder::default()
     }
@@ -1232,10 +1257,13 @@ pub struct AdministrativeAction {
     /// <li> <p> <code>SNAPSHOT_UPDATE</code> - A snapshot update to an Amazon FSx for OpenZFS volume initiated from the Amazon FSx console, API (<code>UpdateSnapshot</code>), or CLI (<code>update-snapshot</code>).</p> </li>
     /// <li> <p> <code>RELEASE_NFS_V3_LOCKS</code> - Tracks the release of Network File System (NFS) V3 locks on an Amazon FSx for OpenZFS file system. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub administrative_action_type: std::option::Option<crate::model::AdministrativeActionType>,
     /// <p>The percentage-complete status of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not apply to any other administrative action type.</p>
+    #[doc(hidden)]
     pub progress_percent: std::option::Option<i32>,
     /// <p>The time that the administrative action request was received.</p>
+    #[doc(hidden)]
     pub request_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Describes the status of the administrative action, as follows:</p>
     /// <ul>
@@ -1245,14 +1273,19 @@ pub struct AdministrativeAction {
     /// <li> <p> <code>COMPLETED</code> - Amazon FSx has finished processing the administrative task.</p> </li>
     /// <li> <p> <code>UPDATED_OPTIMIZING</code> - For a storage-capacity increase update, Amazon FSx has updated the file system with the new storage capacity, and is now performing the storage-optimization process. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
     /// <p>Describes the target value for the administration action, provided in the <code>UpdateFileSystem</code> operation. Returned for <code>FILE_SYSTEM_UPDATE</code> administrative actions. </p>
+    #[doc(hidden)]
     pub target_file_system_values: std::option::Option<crate::model::FileSystem>,
     /// <p>Provides information about a failed administrative action.</p>
+    #[doc(hidden)]
     pub failure_details: std::option::Option<crate::model::AdministrativeActionFailureDetails>,
     /// <p>Describes an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume.</p>
+    #[doc(hidden)]
     pub target_volume_values: std::option::Option<crate::model::Volume>,
     /// <p>A snapshot of an Amazon FSx for OpenZFS volume.</p>
+    #[doc(hidden)]
     pub target_snapshot_values: std::option::Option<crate::model::Snapshot>,
 }
 impl AdministrativeAction {
@@ -1330,11 +1363,10 @@ impl std::fmt::Debug for AdministrativeAction {
         formatter.finish()
     }
 }
-/// See [`AdministrativeAction`](crate::model::AdministrativeAction)
+/// See [`AdministrativeAction`](crate::model::AdministrativeAction).
 pub mod administrative_action {
 
-    /// A builder for [`AdministrativeAction`](crate::model::AdministrativeAction)
-    #[non_exhaustive]
+    /// A builder for [`AdministrativeAction`](crate::model::AdministrativeAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) administrative_action_type:
@@ -1493,7 +1525,7 @@ pub mod administrative_action {
             self.target_snapshot_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdministrativeAction`](crate::model::AdministrativeAction)
+        /// Consumes the builder and constructs a [`AdministrativeAction`](crate::model::AdministrativeAction).
         pub fn build(self) -> crate::model::AdministrativeAction {
             crate::model::AdministrativeAction {
                 administrative_action_type: self.administrative_action_type,
@@ -1509,7 +1541,7 @@ pub mod administrative_action {
     }
 }
 impl AdministrativeAction {
-    /// Creates a new builder-style object to manufacture [`AdministrativeAction`](crate::model::AdministrativeAction)
+    /// Creates a new builder-style object to manufacture [`AdministrativeAction`](crate::model::AdministrativeAction).
     pub fn builder() -> crate::model::administrative_action::Builder {
         crate::model::administrative_action::Builder::default()
     }
@@ -1520,14 +1552,19 @@ impl AdministrativeAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Snapshot {
     /// <p>The Amazon Resource Name (ARN) for a given resource. ARNs uniquely identify Amazon Web Services resources. We require an ARN when you need to specify a resource unambiguously across all of Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the snapshot.</p>
+    #[doc(hidden)]
     pub snapshot_id: std::option::Option<std::string::String>,
     /// <p>The name of the snapshot.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The ID of the volume that the snapshot is of.</p>
+    #[doc(hidden)]
     pub volume_id: std::option::Option<std::string::String>,
     /// <p>The time that the resource was created, in seconds (since 1970-01-01T00:00:00Z), also known as Unix time.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The lifecycle status of the snapshot.</p>
     /// <ul>
@@ -1536,12 +1573,16 @@ pub struct Snapshot {
     /// <li> <p> <code>DELETING</code> - Amazon FSx is deleting the snapshot.</p> </li>
     /// <li> <p> <code>AVAILABLE</code> - The snapshot is fully available.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::SnapshotLifecycle>,
     /// <p>Describes why a resource lifecycle state changed.</p>
+    #[doc(hidden)]
     pub lifecycle_transition_reason: std::option::Option<crate::model::LifecycleTransitionReason>,
     /// <p>A list of <code>Tag</code> values, with a maximum of 50 elements.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A list of administrative actions for the file system that are in process or waiting to be processed. Administrative actions describe changes to the Amazon FSx system.</p>
+    #[doc(hidden)]
     pub administrative_actions:
         std::option::Option<std::vec::Vec<crate::model::AdministrativeAction>>,
 }
@@ -1611,11 +1652,10 @@ impl std::fmt::Debug for Snapshot {
         formatter.finish()
     }
 }
-/// See [`Snapshot`](crate::model::Snapshot)
+/// See [`Snapshot`](crate::model::Snapshot).
 pub mod snapshot {
 
-    /// A builder for [`Snapshot`](crate::model::Snapshot)
-    #[non_exhaustive]
+    /// A builder for [`Snapshot`](crate::model::Snapshot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -1763,7 +1803,7 @@ pub mod snapshot {
             self.administrative_actions = input;
             self
         }
-        /// Consumes the builder and constructs a [`Snapshot`](crate::model::Snapshot)
+        /// Consumes the builder and constructs a [`Snapshot`](crate::model::Snapshot).
         pub fn build(self) -> crate::model::Snapshot {
             crate::model::Snapshot {
                 resource_arn: self.resource_arn,
@@ -1780,7 +1820,7 @@ pub mod snapshot {
     }
 }
 impl Snapshot {
-    /// Creates a new builder-style object to manufacture [`Snapshot`](crate::model::Snapshot)
+    /// Creates a new builder-style object to manufacture [`Snapshot`](crate::model::Snapshot).
     pub fn builder() -> crate::model::snapshot::Builder {
         crate::model::snapshot::Builder::default()
     }
@@ -1791,8 +1831,10 @@ impl Snapshot {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>A value that specifies the <code>TagKey</code>, the name of the tag. Tag keys must be unique for the resource to which they are attached.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>A value that specifies the <code>TagValue</code>, the value assigned to the corresponding tag key. Tag values can be null and don't have to be unique in a tag set. For example, you can have a key-value pair in a tag set of <code>finances : April</code> and also of <code>payroll : April</code>.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -1813,11 +1855,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1844,7 +1885,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -1854,7 +1895,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -1865,6 +1906,7 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecycleTransitionReason {
     /// <p>A detailed error message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl LifecycleTransitionReason {
@@ -1880,11 +1922,10 @@ impl std::fmt::Debug for LifecycleTransitionReason {
         formatter.finish()
     }
 }
-/// See [`LifecycleTransitionReason`](crate::model::LifecycleTransitionReason)
+/// See [`LifecycleTransitionReason`](crate::model::LifecycleTransitionReason).
 pub mod lifecycle_transition_reason {
 
-    /// A builder for [`LifecycleTransitionReason`](crate::model::LifecycleTransitionReason)
-    #[non_exhaustive]
+    /// A builder for [`LifecycleTransitionReason`](crate::model::LifecycleTransitionReason).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -1900,7 +1941,7 @@ pub mod lifecycle_transition_reason {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecycleTransitionReason`](crate::model::LifecycleTransitionReason)
+        /// Consumes the builder and constructs a [`LifecycleTransitionReason`](crate::model::LifecycleTransitionReason).
         pub fn build(self) -> crate::model::LifecycleTransitionReason {
             crate::model::LifecycleTransitionReason {
                 message: self.message,
@@ -1909,7 +1950,7 @@ pub mod lifecycle_transition_reason {
     }
 }
 impl LifecycleTransitionReason {
-    /// Creates a new builder-style object to manufacture [`LifecycleTransitionReason`](crate::model::LifecycleTransitionReason)
+    /// Creates a new builder-style object to manufacture [`LifecycleTransitionReason`](crate::model::LifecycleTransitionReason).
     pub fn builder() -> crate::model::lifecycle_transition_reason::Builder {
         crate::model::lifecycle_transition_reason::Builder::default()
     }
@@ -1983,6 +2024,7 @@ impl AsRef<str> for SnapshotLifecycle {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AdministrativeActionFailureDetails {
     /// <p>Error message providing details about the failed administrative action.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl AdministrativeActionFailureDetails {
@@ -1998,11 +2040,10 @@ impl std::fmt::Debug for AdministrativeActionFailureDetails {
         formatter.finish()
     }
 }
-/// See [`AdministrativeActionFailureDetails`](crate::model::AdministrativeActionFailureDetails)
+/// See [`AdministrativeActionFailureDetails`](crate::model::AdministrativeActionFailureDetails).
 pub mod administrative_action_failure_details {
 
-    /// A builder for [`AdministrativeActionFailureDetails`](crate::model::AdministrativeActionFailureDetails)
-    #[non_exhaustive]
+    /// A builder for [`AdministrativeActionFailureDetails`](crate::model::AdministrativeActionFailureDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -2018,7 +2059,7 @@ pub mod administrative_action_failure_details {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdministrativeActionFailureDetails`](crate::model::AdministrativeActionFailureDetails)
+        /// Consumes the builder and constructs a [`AdministrativeActionFailureDetails`](crate::model::AdministrativeActionFailureDetails).
         pub fn build(self) -> crate::model::AdministrativeActionFailureDetails {
             crate::model::AdministrativeActionFailureDetails {
                 message: self.message,
@@ -2027,7 +2068,7 @@ pub mod administrative_action_failure_details {
     }
 }
 impl AdministrativeActionFailureDetails {
-    /// Creates a new builder-style object to manufacture [`AdministrativeActionFailureDetails`](crate::model::AdministrativeActionFailureDetails)
+    /// Creates a new builder-style object to manufacture [`AdministrativeActionFailureDetails`](crate::model::AdministrativeActionFailureDetails).
     pub fn builder() -> crate::model::administrative_action_failure_details::Builder {
         crate::model::administrative_action_failure_details::Builder::default()
     }
@@ -2038,12 +2079,16 @@ impl AdministrativeActionFailureDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FileSystem {
     /// <p>The Amazon Web Services account that created the file system. If the file system was created by an Identity and Access Management (IAM) user, the Amazon Web Services account to which the IAM user belongs is the owner.</p>
+    #[doc(hidden)]
     pub owner_id: std::option::Option<std::string::String>,
     /// <p>The time that the file system was created, in seconds (since 1970-01-01T00:00:00Z), also known as Unix time.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The system-generated, unique 17-digit ID of the file system.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, <code>ONTAP</code>, or <code>OPENZFS</code>.</p>
+    #[doc(hidden)]
     pub file_system_type: std::option::Option<crate::model::FileSystemType>,
     /// <p>The lifecycle status of the file system. The following are the possible values and what they mean:</p>
     /// <ul>
@@ -2055,22 +2100,30 @@ pub struct FileSystem {
     /// <li> <p> <code>MISCONFIGURED_UNAVAILABLE</code> - (Amazon FSx for Windows File Server only) The file system is currently unavailable due to a change in your Active Directory configuration.</p> </li>
     /// <li> <p> <code>UPDATING</code> - The file system is undergoing a customer-initiated update.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::FileSystemLifecycle>,
     /// <p>A structure providing details of any failures that occurred when creating a file system.</p>
+    #[doc(hidden)]
     pub failure_details: std::option::Option<crate::model::FileSystemFailureDetails>,
     /// <p>The storage capacity of the file system in gibibytes (GiB).</p>
+    #[doc(hidden)]
     pub storage_capacity: std::option::Option<i32>,
     /// <p>The type of storage the file system is using. If set to <code>SSD</code>, the file system uses solid state drive storage. If set to <code>HDD</code>, the file system uses hard disk drive storage. </p>
+    #[doc(hidden)]
     pub storage_type: std::option::Option<crate::model::StorageType>,
     /// <p>The ID of the primary virtual private cloud (VPC) for the file system.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>Specifies the IDs of the subnets that the file system is accessible from. For the Amazon FSx Windows and ONTAP <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the preferred file server and one for the standby file server. The preferred file server subnet identified in the <code>PreferredSubnetID</code> property. All other file systems have only one subnet ID.</p>
     /// <p>For FSx for Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains the file system's endpoint. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the file system endpoint is available in the <code>PreferredSubnetID</code>.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The IDs of the elastic network interfaces from which a specific file system is accessible. The elastic network interface is automatically created in the same virtual private cloud (VPC) that the Amazon FSx file system was created in. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network Interfaces</a> in the <i>Amazon EC2 User Guide.</i> </p>
     /// <p>For an Amazon FSx for Windows File Server file system, you can have one network interface ID. For an Amazon FSx for Lustre file system, you can have more than one.</p>
+    #[doc(hidden)]
     pub network_interface_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Domain Name System (DNS) name for the file system.</p>
+    #[doc(hidden)]
     pub dns_name: std::option::Option<std::string::String>,
     /// <p>The ID of the Key Management Service (KMS) key used to encrypt Amazon FSx file system data. Used as follows with Amazon FSx file system types:</p>
     /// <ul>
@@ -2079,23 +2132,32 @@ pub struct FileSystem {
     /// <li> <p>Amazon FSx for OpenZFS</p> </li>
     /// <li> <p>Amazon FSx for Windows File Server</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the file system resource.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The tags to associate with the file system. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2 resources</a> in the <i>Amazon EC2 User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The configuration for this Amazon FSx for Windows File Server file system.</p>
+    #[doc(hidden)]
     pub windows_configuration: std::option::Option<crate::model::WindowsFileSystemConfiguration>,
     /// <p>The configuration for the Amazon FSx for Lustre file system.</p>
+    #[doc(hidden)]
     pub lustre_configuration: std::option::Option<crate::model::LustreFileSystemConfiguration>,
     /// <p>A list of administrative actions for the file system that are in process or waiting to be processed. Administrative actions describe changes to the Amazon FSx system that you have initiated using the <code>UpdateFileSystem</code> operation.</p>
+    #[doc(hidden)]
     pub administrative_actions:
         std::option::Option<std::vec::Vec<crate::model::AdministrativeAction>>,
     /// <p>The configuration for this Amazon FSx for NetApp ONTAP file system.</p>
+    #[doc(hidden)]
     pub ontap_configuration: std::option::Option<crate::model::OntapFileSystemConfiguration>,
     /// <p>The Lustre version of the Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.</p>
+    #[doc(hidden)]
     pub file_system_type_version: std::option::Option<std::string::String>,
     /// <p>The configuration for this Amazon FSx for OpenZFS file system.</p>
+    #[doc(hidden)]
     pub open_zfs_configuration: std::option::Option<crate::model::OpenZfsFileSystemConfiguration>,
 }
 impl FileSystem {
@@ -2238,11 +2300,10 @@ impl std::fmt::Debug for FileSystem {
         formatter.finish()
     }
 }
-/// See [`FileSystem`](crate::model::FileSystem)
+/// See [`FileSystem`](crate::model::FileSystem).
 pub mod file_system {
 
-    /// A builder for [`FileSystem`](crate::model::FileSystem)
-    #[non_exhaustive]
+    /// A builder for [`FileSystem`](crate::model::FileSystem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner_id: std::option::Option<std::string::String>,
@@ -2598,7 +2659,7 @@ pub mod file_system {
             self.open_zfs_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`FileSystem`](crate::model::FileSystem)
+        /// Consumes the builder and constructs a [`FileSystem`](crate::model::FileSystem).
         pub fn build(self) -> crate::model::FileSystem {
             crate::model::FileSystem {
                 owner_id: self.owner_id,
@@ -2627,7 +2688,7 @@ pub mod file_system {
     }
 }
 impl FileSystem {
-    /// Creates a new builder-style object to manufacture [`FileSystem`](crate::model::FileSystem)
+    /// Creates a new builder-style object to manufacture [`FileSystem`](crate::model::FileSystem).
     pub fn builder() -> crate::model::file_system::Builder {
         crate::model::file_system::Builder::default()
     }
@@ -2638,25 +2699,34 @@ impl FileSystem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OpenZfsFileSystemConfiguration {
     /// <p>The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic backups. You can retain automatic backups for a maximum of 90 days. The default is <code>0</code>.</p>
+    #[doc(hidden)]
     pub automatic_backup_retention_days: std::option::Option<i32>,
     /// <p>A Boolean value indicating whether tags on the file system should be copied to backups. If it's set to <code>true</code>, all tags on the file system are copied to all automatic backups and any user-initiated backups where the user doesn't specify any tags. If this value is <code>true</code> and you specify one or more tags, only the specified tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file system, regardless of this value. </p>
+    #[doc(hidden)]
     pub copy_tags_to_backups: std::option::Option<bool>,
     /// <p>A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are copied from the volume, regardless of this value. </p>
+    #[doc(hidden)]
     pub copy_tags_to_volumes: std::option::Option<bool>,
     /// <p>A recurring daily time, in the format <code>HH:MM</code>. <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. For example, <code>05:00</code> specifies 5 AM daily. </p>
+    #[doc(hidden)]
     pub daily_automatic_backup_start_time: std::option::Option<std::string::String>,
     /// <p>Specifies the file-system deployment type. Amazon FSx for OpenZFS supports <code>SINGLE_AZ_1</code>. <code>SINGLE_AZ_1</code> is a file system configured for a single Availability Zone (AZ) of redundancy. </p>
+    #[doc(hidden)]
     pub deployment_type: std::option::Option<crate::model::OpenZfsDeploymentType>,
     /// <p>The throughput of an Amazon FSx file system, measured in megabytes per second (MBps). Valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.</p>
+    #[doc(hidden)]
     pub throughput_capacity: std::option::Option<i32>,
     /// <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
     /// <p> <code>D</code> is the day of the week, for which 1 represents Monday and 7 represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
     /// <p> <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. </p>
     /// <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
+    #[doc(hidden)]
     pub weekly_maintenance_start_time: std::option::Option<std::string::String>,
     /// <p>The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS file system. The default is 3 IOPS per GB of storage capacity, but you can provision additional IOPS per GB of storage. The configuration consists of the total number of provisioned SSD IOPS and how the amount was provisioned (by the customer or by the system).</p>
+    #[doc(hidden)]
     pub disk_iops_configuration: std::option::Option<crate::model::DiskIopsConfiguration>,
     /// <p>The ID of the root volume of the OpenZFS file system. </p>
+    #[doc(hidden)]
     pub root_volume_id: std::option::Option<std::string::String>,
 }
 impl OpenZfsFileSystemConfiguration {
@@ -2726,11 +2796,10 @@ impl std::fmt::Debug for OpenZfsFileSystemConfiguration {
         formatter.finish()
     }
 }
-/// See [`OpenZfsFileSystemConfiguration`](crate::model::OpenZfsFileSystemConfiguration)
+/// See [`OpenZfsFileSystemConfiguration`](crate::model::OpenZfsFileSystemConfiguration).
 pub mod open_zfs_file_system_configuration {
 
-    /// A builder for [`OpenZfsFileSystemConfiguration`](crate::model::OpenZfsFileSystemConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`OpenZfsFileSystemConfiguration`](crate::model::OpenZfsFileSystemConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) automatic_backup_retention_days: std::option::Option<i32>,
@@ -2868,7 +2937,7 @@ pub mod open_zfs_file_system_configuration {
             self.root_volume_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`OpenZfsFileSystemConfiguration`](crate::model::OpenZfsFileSystemConfiguration)
+        /// Consumes the builder and constructs a [`OpenZfsFileSystemConfiguration`](crate::model::OpenZfsFileSystemConfiguration).
         pub fn build(self) -> crate::model::OpenZfsFileSystemConfiguration {
             crate::model::OpenZfsFileSystemConfiguration {
                 automatic_backup_retention_days: self.automatic_backup_retention_days,
@@ -2885,7 +2954,7 @@ pub mod open_zfs_file_system_configuration {
     }
 }
 impl OpenZfsFileSystemConfiguration {
-    /// Creates a new builder-style object to manufacture [`OpenZfsFileSystemConfiguration`](crate::model::OpenZfsFileSystemConfiguration)
+    /// Creates a new builder-style object to manufacture [`OpenZfsFileSystemConfiguration`](crate::model::OpenZfsFileSystemConfiguration).
     pub fn builder() -> crate::model::open_zfs_file_system_configuration::Builder {
         crate::model::open_zfs_file_system_configuration::Builder::default()
     }
@@ -2896,8 +2965,10 @@ impl OpenZfsFileSystemConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DiskIopsConfiguration {
     /// <p>Specifies whether the number of IOPS for the file system is using the system default (<code>AUTOMATIC</code>) or was provisioned by the customer (<code>USER_PROVISIONED</code>).</p>
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::DiskIopsConfigurationMode>,
     /// <p>The total number of SSD IOPS provisioned for the file system.</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i64>,
 }
 impl DiskIopsConfiguration {
@@ -2918,11 +2989,10 @@ impl std::fmt::Debug for DiskIopsConfiguration {
         formatter.finish()
     }
 }
-/// See [`DiskIopsConfiguration`](crate::model::DiskIopsConfiguration)
+/// See [`DiskIopsConfiguration`](crate::model::DiskIopsConfiguration).
 pub mod disk_iops_configuration {
 
-    /// A builder for [`DiskIopsConfiguration`](crate::model::DiskIopsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DiskIopsConfiguration`](crate::model::DiskIopsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mode: std::option::Option<crate::model::DiskIopsConfigurationMode>,
@@ -2952,7 +3022,7 @@ pub mod disk_iops_configuration {
             self.iops = input;
             self
         }
-        /// Consumes the builder and constructs a [`DiskIopsConfiguration`](crate::model::DiskIopsConfiguration)
+        /// Consumes the builder and constructs a [`DiskIopsConfiguration`](crate::model::DiskIopsConfiguration).
         pub fn build(self) -> crate::model::DiskIopsConfiguration {
             crate::model::DiskIopsConfiguration {
                 mode: self.mode,
@@ -2962,7 +3032,7 @@ pub mod disk_iops_configuration {
     }
 }
 impl DiskIopsConfiguration {
-    /// Creates a new builder-style object to manufacture [`DiskIopsConfiguration`](crate::model::DiskIopsConfiguration)
+    /// Creates a new builder-style object to manufacture [`DiskIopsConfiguration`](crate::model::DiskIopsConfiguration).
     pub fn builder() -> crate::model::disk_iops_configuration::Builder {
         crate::model::disk_iops_configuration::Builder::default()
     }
@@ -3079,8 +3149,10 @@ impl AsRef<str> for OpenZfsDeploymentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OntapFileSystemConfiguration {
     /// <p>The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic backups. You can retain automatic backups for a maximum of 90 days. The default is <code>0</code>.</p>
+    #[doc(hidden)]
     pub automatic_backup_retention_days: std::option::Option<i32>,
     /// <p>A recurring daily time, in the format <code>HH:MM</code>. <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. For example, <code>05:00</code> specifies 5 AM daily. </p>
+    #[doc(hidden)]
     pub daily_automatic_backup_start_time: std::option::Option<std::string::String>,
     /// <p>Specifies the FSx for ONTAP file system deployment type in use in the file system. </p>
     /// <ul>
@@ -3088,25 +3160,33 @@ pub struct OntapFileSystemConfiguration {
     /// <li> <p> <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.</p> </li>
     /// </ul>
     /// <p>For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ or Single-AZ file system deployment</a>. </p>
+    #[doc(hidden)]
     pub deployment_type: std::option::Option<crate::model::OntapDeploymentType>,
     /// <p>(Multi-AZ only) The IP address range in which the endpoints to access your file system are created.</p> <important>
     /// <p>The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and must be at least /30 or larger. If you do not specify this optional parameter, Amazon FSx will automatically select a CIDR block for you.</p>
     /// </important>
+    #[doc(hidden)]
     pub endpoint_ip_address_range: std::option::Option<std::string::String>,
     /// <p>The <code>Management</code> and <code>Intercluster</code> endpoints that are used to access data or to manage the file system using the NetApp ONTAP CLI, REST API, or NetApp SnapMirror.</p>
+    #[doc(hidden)]
     pub endpoints: std::option::Option<crate::model::FileSystemEndpoints>,
     /// <p>The SSD IOPS configuration for the ONTAP file system, specifying the number of provisioned IOPS and the provision mode.</p>
+    #[doc(hidden)]
     pub disk_iops_configuration: std::option::Option<crate::model::DiskIopsConfiguration>,
     /// <p>The ID for a subnet. A <i>subnet</i> is a range of IP addresses in your virtual private cloud (VPC). For more information, see <a href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html">VPC and subnets</a> in the <i>Amazon VPC User Guide.</i> </p>
+    #[doc(hidden)]
     pub preferred_subnet_id: std::option::Option<std::string::String>,
     /// <p>(Multi-AZ only) The VPC route tables in which your file system's endpoints are created.</p>
+    #[doc(hidden)]
     pub route_table_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The sustained throughput of an Amazon FSx file system in Megabytes per second (MBps).</p>
+    #[doc(hidden)]
     pub throughput_capacity: std::option::Option<i32>,
     /// <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
     /// <p> <code>D</code> is the day of the week, for which 1 represents Monday and 7 represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
     /// <p> <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. </p>
     /// <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
+    #[doc(hidden)]
     pub weekly_maintenance_start_time: std::option::Option<std::string::String>,
 }
 impl OntapFileSystemConfiguration {
@@ -3188,11 +3268,10 @@ impl std::fmt::Debug for OntapFileSystemConfiguration {
         formatter.finish()
     }
 }
-/// See [`OntapFileSystemConfiguration`](crate::model::OntapFileSystemConfiguration)
+/// See [`OntapFileSystemConfiguration`](crate::model::OntapFileSystemConfiguration).
 pub mod ontap_file_system_configuration {
 
-    /// A builder for [`OntapFileSystemConfiguration`](crate::model::OntapFileSystemConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`OntapFileSystemConfiguration`](crate::model::OntapFileSystemConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) automatic_backup_retention_days: std::option::Option<i32>,
@@ -3370,7 +3449,7 @@ pub mod ontap_file_system_configuration {
             self.weekly_maintenance_start_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`OntapFileSystemConfiguration`](crate::model::OntapFileSystemConfiguration)
+        /// Consumes the builder and constructs a [`OntapFileSystemConfiguration`](crate::model::OntapFileSystemConfiguration).
         pub fn build(self) -> crate::model::OntapFileSystemConfiguration {
             crate::model::OntapFileSystemConfiguration {
                 automatic_backup_retention_days: self.automatic_backup_retention_days,
@@ -3388,7 +3467,7 @@ pub mod ontap_file_system_configuration {
     }
 }
 impl OntapFileSystemConfiguration {
-    /// Creates a new builder-style object to manufacture [`OntapFileSystemConfiguration`](crate::model::OntapFileSystemConfiguration)
+    /// Creates a new builder-style object to manufacture [`OntapFileSystemConfiguration`](crate::model::OntapFileSystemConfiguration).
     pub fn builder() -> crate::model::ontap_file_system_configuration::Builder {
         crate::model::ontap_file_system_configuration::Builder::default()
     }
@@ -3399,8 +3478,10 @@ impl OntapFileSystemConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FileSystemEndpoints {
     /// <p>An endpoint for managing your file system by setting up NetApp SnapMirror with other ONTAP systems.</p>
+    #[doc(hidden)]
     pub intercluster: std::option::Option<crate::model::FileSystemEndpoint>,
     /// <p>An endpoint for managing your file system using the NetApp ONTAP CLI and NetApp ONTAP API.</p>
+    #[doc(hidden)]
     pub management: std::option::Option<crate::model::FileSystemEndpoint>,
 }
 impl FileSystemEndpoints {
@@ -3421,11 +3502,10 @@ impl std::fmt::Debug for FileSystemEndpoints {
         formatter.finish()
     }
 }
-/// See [`FileSystemEndpoints`](crate::model::FileSystemEndpoints)
+/// See [`FileSystemEndpoints`](crate::model::FileSystemEndpoints).
 pub mod file_system_endpoints {
 
-    /// A builder for [`FileSystemEndpoints`](crate::model::FileSystemEndpoints)
-    #[non_exhaustive]
+    /// A builder for [`FileSystemEndpoints`](crate::model::FileSystemEndpoints).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) intercluster: std::option::Option<crate::model::FileSystemEndpoint>,
@@ -3458,7 +3538,7 @@ pub mod file_system_endpoints {
             self.management = input;
             self
         }
-        /// Consumes the builder and constructs a [`FileSystemEndpoints`](crate::model::FileSystemEndpoints)
+        /// Consumes the builder and constructs a [`FileSystemEndpoints`](crate::model::FileSystemEndpoints).
         pub fn build(self) -> crate::model::FileSystemEndpoints {
             crate::model::FileSystemEndpoints {
                 intercluster: self.intercluster,
@@ -3468,7 +3548,7 @@ pub mod file_system_endpoints {
     }
 }
 impl FileSystemEndpoints {
-    /// Creates a new builder-style object to manufacture [`FileSystemEndpoints`](crate::model::FileSystemEndpoints)
+    /// Creates a new builder-style object to manufacture [`FileSystemEndpoints`](crate::model::FileSystemEndpoints).
     pub fn builder() -> crate::model::file_system_endpoints::Builder {
         crate::model::file_system_endpoints::Builder::default()
     }
@@ -3479,8 +3559,10 @@ impl FileSystemEndpoints {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FileSystemEndpoint {
     /// <p>The Domain Name Service (DNS) name for the file system. You can mount your file system using its DNS name.</p>
+    #[doc(hidden)]
     pub dns_name: std::option::Option<std::string::String>,
     /// <p>IP addresses of the file system endpoint.</p>
+    #[doc(hidden)]
     pub ip_addresses: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl FileSystemEndpoint {
@@ -3501,11 +3583,10 @@ impl std::fmt::Debug for FileSystemEndpoint {
         formatter.finish()
     }
 }
-/// See [`FileSystemEndpoint`](crate::model::FileSystemEndpoint)
+/// See [`FileSystemEndpoint`](crate::model::FileSystemEndpoint).
 pub mod file_system_endpoint {
 
-    /// A builder for [`FileSystemEndpoint`](crate::model::FileSystemEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`FileSystemEndpoint`](crate::model::FileSystemEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dns_name: std::option::Option<std::string::String>,
@@ -3541,7 +3622,7 @@ pub mod file_system_endpoint {
             self.ip_addresses = input;
             self
         }
-        /// Consumes the builder and constructs a [`FileSystemEndpoint`](crate::model::FileSystemEndpoint)
+        /// Consumes the builder and constructs a [`FileSystemEndpoint`](crate::model::FileSystemEndpoint).
         pub fn build(self) -> crate::model::FileSystemEndpoint {
             crate::model::FileSystemEndpoint {
                 dns_name: self.dns_name,
@@ -3551,7 +3632,7 @@ pub mod file_system_endpoint {
     }
 }
 impl FileSystemEndpoint {
-    /// Creates a new builder-style object to manufacture [`FileSystemEndpoint`](crate::model::FileSystemEndpoint)
+    /// Creates a new builder-style object to manufacture [`FileSystemEndpoint`](crate::model::FileSystemEndpoint).
     pub fn builder() -> crate::model::file_system_endpoint::Builder {
         crate::model::file_system_endpoint::Builder::default()
     }
@@ -3617,15 +3698,18 @@ impl AsRef<str> for OntapDeploymentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LustreFileSystemConfiguration {
     /// <p>The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. Here, <code>d</code> is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
+    #[doc(hidden)]
     pub weekly_maintenance_start_time: std::option::Option<std::string::String>,
     /// <p>The data repository configuration object for Lustre file systems returned in the response of the <code>CreateFileSystem</code> operation.</p>
     /// <p>This data type is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use .</p>
+    #[doc(hidden)]
     pub data_repository_configuration:
         std::option::Option<crate::model::DataRepositoryConfiguration>,
     /// <p>The deployment type of the FSx for Lustre file system. <i>Scratch deployment type</i> is designed for temporary storage and shorter-term processing of data.</p>
     /// <p> <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types are best suited for when you need temporary storage and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.</p>
     /// <p>The <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment type is used for longer-term storage and workloads and encryption of data in transit. <code>PERSISTENT_2</code> is built on Lustre v2.12 and offers higher <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB) along with a lower minimum storage capacity requirement (600 GiB). To learn more about FSx for Lustre deployment types, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre deployment options</a>.</p>
     /// <p>The default is <code>SCRATCH_1</code>.</p>
+    #[doc(hidden)]
     pub deployment_type: std::option::Option<crate::model::LustreDeploymentType>,
     /// <p>Per unit storage throughput represents the megabytes per second of read or write throughput per 1 tebibyte of storage provisioned. File system throughput capacity is equal to Storage capacity (TiB) * PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types. </p>
     /// <p>Valid values:</p>
@@ -3634,18 +3718,24 @@ pub struct LustreFileSystemConfiguration {
     /// <li> <p>For <code>PERSISTENT_1</code> HDD storage: 12, 40.</p> </li>
     /// <li> <p>For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub per_unit_storage_throughput: std::option::Option<i32>,
     /// <p>You use the <code>MountName</code> value when mounting the file system.</p>
     /// <p>For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2</code> deployment types, this value is a string that is unique within an Amazon Web Services Region. </p>
+    #[doc(hidden)]
     pub mount_name: std::option::Option<std::string::String>,
     /// <p>A recurring daily time, in the format <code>HH:MM</code>. <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. For example, <code>05:00</code> specifies 5 AM daily. </p>
+    #[doc(hidden)]
     pub daily_automatic_backup_start_time: std::option::Option<std::string::String>,
     /// <p>The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic backups. You can retain automatic backups for a maximum of 90 days. The default is <code>0</code>.</p>
+    #[doc(hidden)]
     pub automatic_backup_retention_days: std::option::Option<i32>,
     /// <p>A boolean flag indicating whether tags on the file system are copied to backups. If it's set to true, all tags on the file system are copied to all automatic backups and any user-initiated backups where the user doesn't specify any tags. If this value is true, and you specify one or more tags, only the specified tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file system, regardless of this value. (Default = false)</p>
+    #[doc(hidden)]
     pub copy_tags_to_backups: std::option::Option<bool>,
     /// <p>The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD storage devices. This parameter is required when <code>StorageType</code> is HDD. When set to <code>READ</code> the file system has an SSD storage cache that is sized to 20% of the file system's storage capacity. This improves the performance for frequently accessed files by caching up to 20% of the total storage capacity.</p>
     /// <p>This parameter is required when <code>StorageType</code> is set to HDD.</p>
+    #[doc(hidden)]
     pub drive_cache_type: std::option::Option<crate::model::DriveCacheType>,
     /// <p>The data compression configuration for the file system. <code>DataCompressionType</code> can have the following values:</p>
     /// <ul>
@@ -3653,10 +3743,13 @@ pub struct LustreFileSystemConfiguration {
     /// <li> <p> <code>LZ4</code> - Data compression is turned on with the LZ4 algorithm.</p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data compression</a>.</p>
+    #[doc(hidden)]
     pub data_compression_type: std::option::Option<crate::model::DataCompressionType>,
     /// <p>The Lustre logging configuration. Lustre logging writes the enabled log events for your file system to Amazon CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub log_configuration: std::option::Option<crate::model::LustreLogConfiguration>,
     /// <p>The Lustre root squash configuration for an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user.</p>
+    #[doc(hidden)]
     pub root_squash_configuration: std::option::Option<crate::model::LustreRootSquashConfiguration>,
 }
 impl LustreFileSystemConfiguration {
@@ -3763,11 +3856,10 @@ impl std::fmt::Debug for LustreFileSystemConfiguration {
         formatter.finish()
     }
 }
-/// See [`LustreFileSystemConfiguration`](crate::model::LustreFileSystemConfiguration)
+/// See [`LustreFileSystemConfiguration`](crate::model::LustreFileSystemConfiguration).
 pub mod lustre_file_system_configuration {
 
-    /// A builder for [`LustreFileSystemConfiguration`](crate::model::LustreFileSystemConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LustreFileSystemConfiguration`](crate::model::LustreFileSystemConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) weekly_maintenance_start_time: std::option::Option<std::string::String>,
@@ -3979,7 +4071,7 @@ pub mod lustre_file_system_configuration {
             self.root_squash_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`LustreFileSystemConfiguration`](crate::model::LustreFileSystemConfiguration)
+        /// Consumes the builder and constructs a [`LustreFileSystemConfiguration`](crate::model::LustreFileSystemConfiguration).
         pub fn build(self) -> crate::model::LustreFileSystemConfiguration {
             crate::model::LustreFileSystemConfiguration {
                 weekly_maintenance_start_time: self.weekly_maintenance_start_time,
@@ -3999,7 +4091,7 @@ pub mod lustre_file_system_configuration {
     }
 }
 impl LustreFileSystemConfiguration {
-    /// Creates a new builder-style object to manufacture [`LustreFileSystemConfiguration`](crate::model::LustreFileSystemConfiguration)
+    /// Creates a new builder-style object to manufacture [`LustreFileSystemConfiguration`](crate::model::LustreFileSystemConfiguration).
     pub fn builder() -> crate::model::lustre_file_system_configuration::Builder {
         crate::model::lustre_file_system_configuration::Builder::default()
     }
@@ -4016,12 +4108,14 @@ pub struct LustreRootSquashConfiguration {
     /// <li> <p>A value of <code>0</code> (zero) for UID and GID indicates root, and therefore disables root squash.</p> </li>
     /// </ul>
     /// <p>When root squash is enabled, the user ID and group ID of a root user accessing the file system are re-mapped to the UID and GID you provide.</p>
+    #[doc(hidden)]
     pub root_squash: std::option::Option<std::string::String>,
     /// <p>When root squash is enabled, you can optionally specify an array of NIDs of clients for which root squash does not apply. A client NID is a Lustre Network Identifier used to uniquely identify a client. You can specify the NID as either a single address or a range of addresses:</p>
     /// <ul>
     /// <li> <p>A single address is described in standard Lustre NID format by specifying the client’s IP address followed by the Lustre network ID (for example, <code>10.0.1.6@tcp</code>).</p> </li>
     /// <li> <p>An address range is described using a dash to separate the range (for example, <code>10.0.[2-10].[1-255]@tcp</code>).</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub no_squash_nids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl LustreRootSquashConfiguration {
@@ -4051,11 +4145,10 @@ impl std::fmt::Debug for LustreRootSquashConfiguration {
         formatter.finish()
     }
 }
-/// See [`LustreRootSquashConfiguration`](crate::model::LustreRootSquashConfiguration)
+/// See [`LustreRootSquashConfiguration`](crate::model::LustreRootSquashConfiguration).
 pub mod lustre_root_squash_configuration {
 
-    /// A builder for [`LustreRootSquashConfiguration`](crate::model::LustreRootSquashConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LustreRootSquashConfiguration`](crate::model::LustreRootSquashConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) root_squash: std::option::Option<std::string::String>,
@@ -4109,7 +4202,7 @@ pub mod lustre_root_squash_configuration {
             self.no_squash_nids = input;
             self
         }
-        /// Consumes the builder and constructs a [`LustreRootSquashConfiguration`](crate::model::LustreRootSquashConfiguration)
+        /// Consumes the builder and constructs a [`LustreRootSquashConfiguration`](crate::model::LustreRootSquashConfiguration).
         pub fn build(self) -> crate::model::LustreRootSquashConfiguration {
             crate::model::LustreRootSquashConfiguration {
                 root_squash: self.root_squash,
@@ -4119,7 +4212,7 @@ pub mod lustre_root_squash_configuration {
     }
 }
 impl LustreRootSquashConfiguration {
-    /// Creates a new builder-style object to manufacture [`LustreRootSquashConfiguration`](crate::model::LustreRootSquashConfiguration)
+    /// Creates a new builder-style object to manufacture [`LustreRootSquashConfiguration`](crate::model::LustreRootSquashConfiguration).
     pub fn builder() -> crate::model::lustre_root_squash_configuration::Builder {
         crate::model::lustre_root_squash_configuration::Builder::default()
     }
@@ -4137,8 +4230,10 @@ pub struct LustreLogConfiguration {
     /// <li> <p> <code>WARN_ERROR</code> - both warning events and error events are logged.</p> </li>
     /// <li> <p> <code>DISABLED</code> - logging of data repository events is turned off.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub level: std::option::Option<crate::model::LustreAccessAuditLogLevel>,
     /// <p>The Amazon Resource Name (ARN) that specifies the destination of the logs. The destination can be any Amazon CloudWatch Logs log group ARN. The destination ARN must be in the same Amazon Web Services partition, Amazon Web Services Region, and Amazon Web Services account as your Amazon FSx file system.</p>
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
 }
 impl LustreLogConfiguration {
@@ -4165,11 +4260,10 @@ impl std::fmt::Debug for LustreLogConfiguration {
         formatter.finish()
     }
 }
-/// See [`LustreLogConfiguration`](crate::model::LustreLogConfiguration)
+/// See [`LustreLogConfiguration`](crate::model::LustreLogConfiguration).
 pub mod lustre_log_configuration {
 
-    /// A builder for [`LustreLogConfiguration`](crate::model::LustreLogConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LustreLogConfiguration`](crate::model::LustreLogConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) level: std::option::Option<crate::model::LustreAccessAuditLogLevel>,
@@ -4211,7 +4305,7 @@ pub mod lustre_log_configuration {
             self.destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`LustreLogConfiguration`](crate::model::LustreLogConfiguration)
+        /// Consumes the builder and constructs a [`LustreLogConfiguration`](crate::model::LustreLogConfiguration).
         pub fn build(self) -> crate::model::LustreLogConfiguration {
             crate::model::LustreLogConfiguration {
                 level: self.level,
@@ -4221,7 +4315,7 @@ pub mod lustre_log_configuration {
     }
 }
 impl LustreLogConfiguration {
-    /// Creates a new builder-style object to manufacture [`LustreLogConfiguration`](crate::model::LustreLogConfiguration)
+    /// Creates a new builder-style object to manufacture [`LustreLogConfiguration`](crate::model::LustreLogConfiguration).
     pub fn builder() -> crate::model::lustre_log_configuration::Builder {
         crate::model::lustre_log_configuration::Builder::default()
     }
@@ -4476,13 +4570,17 @@ pub struct DataRepositoryConfiguration {
     /// <li> <p> <code>UPDATING</code> - The data repository is undergoing a customer initiated update and availability may be impacted.</p> </li>
     /// <li> <p> <code>FAILED</code> - The data repository is in a terminal state that cannot be recovered.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::DataRepositoryLifecycle>,
     /// <p>The import path to the Amazon S3 bucket (and optional prefix) that you're using as the data repository for your FSx for Lustre file system, for example <code>s3://import-bucket/optional-prefix</code>. If a prefix is specified after the Amazon S3 bucket name, only object keys with that prefix are loaded into the file system.</p>
+    #[doc(hidden)]
     pub import_path: std::option::Option<std::string::String>,
     /// <p>The export path to the Amazon S3 bucket (and prefix) that you are using to store new and changed Lustre file system files in S3.</p>
+    #[doc(hidden)]
     pub export_path: std::option::Option<std::string::String>,
     /// <p>For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. The maximum number of disks that a single file can be striped across is limited by the total number of disks that make up the file system.</p>
     /// <p>The default chunk size is 1,024 MiB (1 GiB) and can go as high as 512,000 MiB (500 GiB). Amazon S3 objects have a maximum size of 5 TB.</p>
+    #[doc(hidden)]
     pub imported_file_chunk_size: std::option::Option<i32>,
     /// <p>Describes the file system's linked S3 data repository's <code>AutoImportPolicy</code>. The AutoImportPolicy configures how Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3 bucket. <code>AutoImportPolicy</code> can have the following values:</p>
     /// <ul>
@@ -4491,8 +4589,10 @@ pub struct DataRepositoryConfiguration {
     /// <li> <p> <code>NEW_CHANGED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings of any new objects added to the S3 bucket and any existing objects that are changed in the S3 bucket after you choose this option.</p> </li>
     /// <li> <p> <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any objects that were deleted in the S3 bucket.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub auto_import_policy: std::option::Option<crate::model::AutoImportPolicyType>,
     /// <p>Provides detailed information about the data respository if its <code>Lifecycle</code> is set to <code>MISCONFIGURED</code> or <code>FAILED</code>.</p>
+    #[doc(hidden)]
     pub failure_details: std::option::Option<crate::model::DataRepositoryFailureDetails>,
 }
 impl DataRepositoryConfiguration {
@@ -4549,11 +4649,10 @@ impl std::fmt::Debug for DataRepositoryConfiguration {
         formatter.finish()
     }
 }
-/// See [`DataRepositoryConfiguration`](crate::model::DataRepositoryConfiguration)
+/// See [`DataRepositoryConfiguration`](crate::model::DataRepositoryConfiguration).
 pub mod data_repository_configuration {
 
-    /// A builder for [`DataRepositoryConfiguration`](crate::model::DataRepositoryConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DataRepositoryConfiguration`](crate::model::DataRepositoryConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lifecycle: std::option::Option<crate::model::DataRepositoryLifecycle>,
@@ -4664,7 +4763,7 @@ pub mod data_repository_configuration {
             self.failure_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataRepositoryConfiguration`](crate::model::DataRepositoryConfiguration)
+        /// Consumes the builder and constructs a [`DataRepositoryConfiguration`](crate::model::DataRepositoryConfiguration).
         pub fn build(self) -> crate::model::DataRepositoryConfiguration {
             crate::model::DataRepositoryConfiguration {
                 lifecycle: self.lifecycle,
@@ -4678,7 +4777,7 @@ pub mod data_repository_configuration {
     }
 }
 impl DataRepositoryConfiguration {
-    /// Creates a new builder-style object to manufacture [`DataRepositoryConfiguration`](crate::model::DataRepositoryConfiguration)
+    /// Creates a new builder-style object to manufacture [`DataRepositoryConfiguration`](crate::model::DataRepositoryConfiguration).
     pub fn builder() -> crate::model::data_repository_configuration::Builder {
         crate::model::data_repository_configuration::Builder::default()
     }
@@ -4689,6 +4788,7 @@ impl DataRepositoryConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataRepositoryFailureDetails {
     /// <p>A detailed error message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DataRepositoryFailureDetails {
@@ -4704,11 +4804,10 @@ impl std::fmt::Debug for DataRepositoryFailureDetails {
         formatter.finish()
     }
 }
-/// See [`DataRepositoryFailureDetails`](crate::model::DataRepositoryFailureDetails)
+/// See [`DataRepositoryFailureDetails`](crate::model::DataRepositoryFailureDetails).
 pub mod data_repository_failure_details {
 
-    /// A builder for [`DataRepositoryFailureDetails`](crate::model::DataRepositoryFailureDetails)
-    #[non_exhaustive]
+    /// A builder for [`DataRepositoryFailureDetails`](crate::model::DataRepositoryFailureDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4724,7 +4823,7 @@ pub mod data_repository_failure_details {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataRepositoryFailureDetails`](crate::model::DataRepositoryFailureDetails)
+        /// Consumes the builder and constructs a [`DataRepositoryFailureDetails`](crate::model::DataRepositoryFailureDetails).
         pub fn build(self) -> crate::model::DataRepositoryFailureDetails {
             crate::model::DataRepositoryFailureDetails {
                 message: self.message,
@@ -4733,7 +4832,7 @@ pub mod data_repository_failure_details {
     }
 }
 impl DataRepositoryFailureDetails {
-    /// Creates a new builder-style object to manufacture [`DataRepositoryFailureDetails`](crate::model::DataRepositoryFailureDetails)
+    /// Creates a new builder-style object to manufacture [`DataRepositoryFailureDetails`](crate::model::DataRepositoryFailureDetails).
     pub fn builder() -> crate::model::data_repository_failure_details::Builder {
         crate::model::data_repository_failure_details::Builder::default()
     }
@@ -4885,8 +4984,10 @@ impl AsRef<str> for DataRepositoryLifecycle {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WindowsFileSystemConfiguration {
     /// <p>The ID for an existing Amazon Web Services Managed Microsoft Active Directory instance that the file system is joined to.</p>
+    #[doc(hidden)]
     pub active_directory_id: std::option::Option<std::string::String>,
     /// <p>The configuration of the self-managed Microsoft Active Directory (AD) directory to which the Windows File Server or ONTAP storage virtual machine (SVM) instance is joined.</p>
+    #[doc(hidden)]
     pub self_managed_active_directory_configuration:
         std::option::Option<crate::model::SelfManagedActiveDirectoryAttributes>,
     /// <p>Specifies the file system deployment type, valid values are the following:</p>
@@ -4896,33 +4997,45 @@ pub struct WindowsFileSystemConfiguration {
     /// <li> <p> <code>SINGLE_AZ_2</code> - Latest generation Single AZ file system. Specifies a file system that is configured for single AZ redundancy and supports SSD and HDD storage.</p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html">Single-AZ and Multi-AZ File Systems</a>.</p>
+    #[doc(hidden)]
     pub deployment_type: std::option::Option<crate::model::WindowsDeploymentType>,
     /// <p>For <code>MULTI_AZ_1</code> deployment types, use this endpoint when performing administrative tasks on the file system using Amazon FSx Remote PowerShell.</p>
     /// <p>For <code>SINGLE_AZ_1</code> and <code>SINGLE_AZ_2</code> deployment types, this is the DNS name of the file system.</p>
     /// <p>This endpoint is temporarily unavailable when the file system is undergoing maintenance.</p>
+    #[doc(hidden)]
     pub remote_administration_endpoint: std::option::Option<std::string::String>,
     /// <p>For <code>MULTI_AZ_1</code> deployment types, it specifies the ID of the subnet where the preferred file server is located. Must be one of the two subnet IDs specified in <code>SubnetIds</code> property. Amazon FSx serves traffic from this subnet except in the event of a failover to the secondary file server.</p>
     /// <p>For <code>SINGLE_AZ_1</code> and <code>SINGLE_AZ_2</code> deployment types, this value is the same as that for <code>SubnetIDs</code>. For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html#single-multi-az-resources">Availability and durability: Single-AZ and Multi-AZ file systems</a>.</p>
+    #[doc(hidden)]
     pub preferred_subnet_id: std::option::Option<std::string::String>,
     /// <p>For <code>MULTI_AZ_1</code> deployment types, the IP address of the primary, or preferred, file server.</p>
     /// <p>Use this IP address when mounting the file system on Linux SMB clients or Windows SMB clients that are not joined to a Microsoft Active Directory. Applicable for all Windows file system deployment types. This IP address is temporarily unavailable when the file system is undergoing maintenance. For Linux and Windows SMB clients that are joined to an Active Directory, use the file system's DNSName instead. For more information on mapping and mounting file shares, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/accessing-file-shares.html">Accessing File Shares</a>.</p>
+    #[doc(hidden)]
     pub preferred_file_server_ip: std::option::Option<std::string::String>,
     /// <p>The throughput of the Amazon FSx file system, measured in megabytes per second.</p>
+    #[doc(hidden)]
     pub throughput_capacity: std::option::Option<i32>,
     /// <p>The list of maintenance operations in progress for this file system.</p>
+    #[doc(hidden)]
     pub maintenance_operations_in_progress:
         std::option::Option<std::vec::Vec<crate::model::FileSystemMaintenanceOperation>>,
     /// <p>The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
+    #[doc(hidden)]
     pub weekly_maintenance_start_time: std::option::Option<std::string::String>,
     /// <p>The preferred time to take daily automatic backups, in the UTC time zone.</p>
+    #[doc(hidden)]
     pub daily_automatic_backup_start_time: std::option::Option<std::string::String>,
     /// <p>The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 90 days.</p>
+    #[doc(hidden)]
     pub automatic_backup_retention_days: std::option::Option<i32>,
     /// <p>A boolean flag indicating whether tags on the file system should be copied to backups. This value defaults to false. If it's set to true, all tags on the file system are copied to all automatic backups and any user-initiated backups where the user doesn't specify any tags. If this value is true, and you specify one or more tags, only the specified tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file system, regardless of this value.</p>
+    #[doc(hidden)]
     pub copy_tags_to_backups: std::option::Option<bool>,
     /// <p>An array of one or more DNS aliases that are currently associated with the Amazon FSx file system. Aliases allow you to use existing DNS names to access the data in your Amazon FSx file system. You can associate up to 50 aliases with a file system at any time. You can associate additional DNS aliases after you create the file system using the AssociateFileSystemAliases operation. You can remove DNS aliases from the file system after it is created using the DisassociateFileSystemAliases operation. You only need to specify the alias name in the request payload. For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html">DNS aliases</a>.</p>
+    #[doc(hidden)]
     pub aliases: std::option::Option<std::vec::Vec<crate::model::Alias>>,
     /// <p>The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system.</p>
+    #[doc(hidden)]
     pub audit_log_configuration: std::option::Option<crate::model::WindowsAuditLogConfiguration>,
 }
 impl WindowsFileSystemConfiguration {
@@ -5037,11 +5150,10 @@ impl std::fmt::Debug for WindowsFileSystemConfiguration {
         formatter.finish()
     }
 }
-/// See [`WindowsFileSystemConfiguration`](crate::model::WindowsFileSystemConfiguration)
+/// See [`WindowsFileSystemConfiguration`](crate::model::WindowsFileSystemConfiguration).
 pub mod windows_file_system_configuration {
 
-    /// A builder for [`WindowsFileSystemConfiguration`](crate::model::WindowsFileSystemConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`WindowsFileSystemConfiguration`](crate::model::WindowsFileSystemConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) active_directory_id: std::option::Option<std::string::String>,
@@ -5289,7 +5401,7 @@ pub mod windows_file_system_configuration {
             self.audit_log_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`WindowsFileSystemConfiguration`](crate::model::WindowsFileSystemConfiguration)
+        /// Consumes the builder and constructs a [`WindowsFileSystemConfiguration`](crate::model::WindowsFileSystemConfiguration).
         pub fn build(self) -> crate::model::WindowsFileSystemConfiguration {
             crate::model::WindowsFileSystemConfiguration {
                 active_directory_id: self.active_directory_id,
@@ -5312,7 +5424,7 @@ pub mod windows_file_system_configuration {
     }
 }
 impl WindowsFileSystemConfiguration {
-    /// Creates a new builder-style object to manufacture [`WindowsFileSystemConfiguration`](crate::model::WindowsFileSystemConfiguration)
+    /// Creates a new builder-style object to manufacture [`WindowsFileSystemConfiguration`](crate::model::WindowsFileSystemConfiguration).
     pub fn builder() -> crate::model::windows_file_system_configuration::Builder {
         crate::model::windows_file_system_configuration::Builder::default()
     }
@@ -5329,6 +5441,7 @@ pub struct WindowsAuditLogConfiguration {
     /// <li> <p> <code>SUCCESS_AND_FAILURE</code> - both successful attempts and failed attempts to access files or folders are logged.</p> </li>
     /// <li> <p> <code>DISABLED</code> - access auditing of files and folders is turned off.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub file_access_audit_log_level: std::option::Option<crate::model::WindowsAccessAuditLogLevel>,
     /// <p>Sets which attempt type is logged by Amazon FSx for file share accesses.</p>
     /// <ul>
@@ -5337,11 +5450,13 @@ pub struct WindowsAuditLogConfiguration {
     /// <li> <p> <code>SUCCESS_AND_FAILURE</code> - both successful attempts and failed attempts to access file shares are logged.</p> </li>
     /// <li> <p> <code>DISABLED</code> - access auditing of file shares is turned off.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub file_share_access_audit_log_level:
         std::option::Option<crate::model::WindowsAccessAuditLogLevel>,
     /// <p>The Amazon Resource Name (ARN) for the destination of the audit logs. The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data Firehose delivery stream ARN.</p>
     /// <p>The name of the Amazon CloudWatch Logs log group must begin with the <code>/aws/fsx</code> prefix. The name of the Amazon Kinesis Data Firehouse delivery stream must begin with the <code>aws-fsx</code> prefix.</p>
     /// <p>The destination ARN (either CloudWatch Logs log group or Kinesis Data Firehose delivery stream) must be in the same Amazon Web Services partition, Amazon Web Services Region, and Amazon Web Services account as your Amazon FSx file system.</p>
+    #[doc(hidden)]
     pub audit_log_destination: std::option::Option<std::string::String>,
 }
 impl WindowsAuditLogConfiguration {
@@ -5391,11 +5506,10 @@ impl std::fmt::Debug for WindowsAuditLogConfiguration {
         formatter.finish()
     }
 }
-/// See [`WindowsAuditLogConfiguration`](crate::model::WindowsAuditLogConfiguration)
+/// See [`WindowsAuditLogConfiguration`](crate::model::WindowsAuditLogConfiguration).
 pub mod windows_audit_log_configuration {
 
-    /// A builder for [`WindowsAuditLogConfiguration`](crate::model::WindowsAuditLogConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`WindowsAuditLogConfiguration`](crate::model::WindowsAuditLogConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_access_audit_log_level:
@@ -5478,7 +5592,7 @@ pub mod windows_audit_log_configuration {
             self.audit_log_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`WindowsAuditLogConfiguration`](crate::model::WindowsAuditLogConfiguration)
+        /// Consumes the builder and constructs a [`WindowsAuditLogConfiguration`](crate::model::WindowsAuditLogConfiguration).
         pub fn build(self) -> crate::model::WindowsAuditLogConfiguration {
             crate::model::WindowsAuditLogConfiguration {
                 file_access_audit_log_level: self.file_access_audit_log_level,
@@ -5489,7 +5603,7 @@ pub mod windows_audit_log_configuration {
     }
 }
 impl WindowsAuditLogConfiguration {
-    /// Creates a new builder-style object to manufacture [`WindowsAuditLogConfiguration`](crate::model::WindowsAuditLogConfiguration)
+    /// Creates a new builder-style object to manufacture [`WindowsAuditLogConfiguration`](crate::model::WindowsAuditLogConfiguration).
     pub fn builder() -> crate::model::windows_audit_log_configuration::Builder {
         crate::model::windows_audit_log_configuration::Builder::default()
     }
@@ -5575,6 +5689,7 @@ pub struct Alias {
     /// <li> <p>Can start with a numeric.</p> </li>
     /// </ul>
     /// <p>For DNS names, Amazon FSx stores alphabetic characters as lowercase letters (a-z), regardless of how you specify them: as uppercase letters, lowercase letters, or the corresponding letters in escape codes.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Describes the state of the DNS alias.</p>
     /// <ul>
@@ -5584,6 +5699,7 @@ pub struct Alias {
     /// <li> <p>DELETING - Amazon FSx is disassociating the DNS alias from the file system and deleting it.</p> </li>
     /// <li> <p>DELETE_FAILED - Amazon FSx was unable to disassociate the DNS alias from the file system.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::AliasLifecycle>,
 }
 impl Alias {
@@ -5618,11 +5734,10 @@ impl std::fmt::Debug for Alias {
         formatter.finish()
     }
 }
-/// See [`Alias`](crate::model::Alias)
+/// See [`Alias`](crate::model::Alias).
 pub mod alias {
 
-    /// A builder for [`Alias`](crate::model::Alias)
-    #[non_exhaustive]
+    /// A builder for [`Alias`](crate::model::Alias).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5680,7 +5795,7 @@ pub mod alias {
             self.lifecycle = input;
             self
         }
-        /// Consumes the builder and constructs a [`Alias`](crate::model::Alias)
+        /// Consumes the builder and constructs a [`Alias`](crate::model::Alias).
         pub fn build(self) -> crate::model::Alias {
             crate::model::Alias {
                 name: self.name,
@@ -5690,7 +5805,7 @@ pub mod alias {
     }
 }
 impl Alias {
-    /// Creates a new builder-style object to manufacture [`Alias`](crate::model::Alias)
+    /// Creates a new builder-style object to manufacture [`Alias`](crate::model::Alias).
     pub fn builder() -> crate::model::alias::Builder {
         crate::model::alias::Builder::default()
     }
@@ -5888,14 +6003,19 @@ impl AsRef<str> for WindowsDeploymentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SelfManagedActiveDirectoryAttributes {
     /// <p>The fully qualified domain name of the self-managed AD directory.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The fully qualified distinguished name of the organizational unit within the self-managed AD directory to which the Windows File Server or ONTAP storage virtual machine (SVM) instance is joined.</p>
+    #[doc(hidden)]
     pub organizational_unit_distinguished_name: std::option::Option<std::string::String>,
     /// <p>The name of the domain group whose members have administrative privileges for the FSx file system.</p>
+    #[doc(hidden)]
     pub file_system_administrators_group: std::option::Option<std::string::String>,
     /// <p>The user name for the service account on your self-managed AD domain that FSx uses to join to your AD domain.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.</p>
+    #[doc(hidden)]
     pub dns_ips: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SelfManagedActiveDirectoryAttributes {
@@ -5937,11 +6057,10 @@ impl std::fmt::Debug for SelfManagedActiveDirectoryAttributes {
         formatter.finish()
     }
 }
-/// See [`SelfManagedActiveDirectoryAttributes`](crate::model::SelfManagedActiveDirectoryAttributes)
+/// See [`SelfManagedActiveDirectoryAttributes`](crate::model::SelfManagedActiveDirectoryAttributes).
 pub mod self_managed_active_directory_attributes {
 
-    /// A builder for [`SelfManagedActiveDirectoryAttributes`](crate::model::SelfManagedActiveDirectoryAttributes)
-    #[non_exhaustive]
+    /// A builder for [`SelfManagedActiveDirectoryAttributes`](crate::model::SelfManagedActiveDirectoryAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -6022,7 +6141,7 @@ pub mod self_managed_active_directory_attributes {
             self.dns_ips = input;
             self
         }
-        /// Consumes the builder and constructs a [`SelfManagedActiveDirectoryAttributes`](crate::model::SelfManagedActiveDirectoryAttributes)
+        /// Consumes the builder and constructs a [`SelfManagedActiveDirectoryAttributes`](crate::model::SelfManagedActiveDirectoryAttributes).
         pub fn build(self) -> crate::model::SelfManagedActiveDirectoryAttributes {
             crate::model::SelfManagedActiveDirectoryAttributes {
                 domain_name: self.domain_name,
@@ -6035,7 +6154,7 @@ pub mod self_managed_active_directory_attributes {
     }
 }
 impl SelfManagedActiveDirectoryAttributes {
-    /// Creates a new builder-style object to manufacture [`SelfManagedActiveDirectoryAttributes`](crate::model::SelfManagedActiveDirectoryAttributes)
+    /// Creates a new builder-style object to manufacture [`SelfManagedActiveDirectoryAttributes`](crate::model::SelfManagedActiveDirectoryAttributes).
     pub fn builder() -> crate::model::self_managed_active_directory_attributes::Builder {
         crate::model::self_managed_active_directory_attributes::Builder::default()
     }
@@ -6101,6 +6220,7 @@ impl AsRef<str> for StorageType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FileSystemFailureDetails {
     /// <p>A message describing any failures that occurred during file system creation.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl FileSystemFailureDetails {
@@ -6116,11 +6236,10 @@ impl std::fmt::Debug for FileSystemFailureDetails {
         formatter.finish()
     }
 }
-/// See [`FileSystemFailureDetails`](crate::model::FileSystemFailureDetails)
+/// See [`FileSystemFailureDetails`](crate::model::FileSystemFailureDetails).
 pub mod file_system_failure_details {
 
-    /// A builder for [`FileSystemFailureDetails`](crate::model::FileSystemFailureDetails)
-    #[non_exhaustive]
+    /// A builder for [`FileSystemFailureDetails`](crate::model::FileSystemFailureDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6136,7 +6255,7 @@ pub mod file_system_failure_details {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`FileSystemFailureDetails`](crate::model::FileSystemFailureDetails)
+        /// Consumes the builder and constructs a [`FileSystemFailureDetails`](crate::model::FileSystemFailureDetails).
         pub fn build(self) -> crate::model::FileSystemFailureDetails {
             crate::model::FileSystemFailureDetails {
                 message: self.message,
@@ -6145,7 +6264,7 @@ pub mod file_system_failure_details {
     }
 }
 impl FileSystemFailureDetails {
-    /// Creates a new builder-style object to manufacture [`FileSystemFailureDetails`](crate::model::FileSystemFailureDetails)
+    /// Creates a new builder-style object to manufacture [`FileSystemFailureDetails`](crate::model::FileSystemFailureDetails).
     pub fn builder() -> crate::model::file_system_failure_details::Builder {
         crate::model::file_system_failure_details::Builder::default()
     }
@@ -6587,23 +6706,32 @@ pub struct OntapVolumeConfiguration {
     /// <li> <p> <code>ORIGIN</code> specifies that the volume is the origin volume for a FlexCache volume.</p> </li>
     /// <li> <p> <code>CACHE</code> specifies that the volume is a FlexCache volume.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub flex_cache_endpoint_type: std::option::Option<crate::model::FlexCacheEndpointType>,
     /// <p>Specifies the directory that network-attached storage (NAS) clients use to mount the volume, along with the storage virtual machine (SVM) Domain Name System (DNS) name or IP address. You can create a <code>JunctionPath</code> directly below a parent volume junction or on a directory within a volume. A <code>JunctionPath</code> for a volume named <code>vol3</code> might be <code>/vol1/vol2/vol3</code>, or <code>/vol1/dir2/vol3</code>, or even <code>/dir1/dir2/vol3</code>.</p>
+    #[doc(hidden)]
     pub junction_path: std::option::Option<std::string::String>,
     /// <p>The security style for the volume, which can be <code>UNIX</code>, <code>NTFS</code>, or <code>MIXED</code>.</p>
+    #[doc(hidden)]
     pub security_style: std::option::Option<crate::model::SecurityStyle>,
     /// <p>The configured size of the volume, in megabytes (MBs).</p>
+    #[doc(hidden)]
     pub size_in_megabytes: std::option::Option<i32>,
     /// <p>The volume's storage efficiency setting.</p>
+    #[doc(hidden)]
     pub storage_efficiency_enabled: std::option::Option<bool>,
     /// <p>The ID of the volume's storage virtual machine.</p>
+    #[doc(hidden)]
     pub storage_virtual_machine_id: std::option::Option<std::string::String>,
     /// <p>A Boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM). Only one volume on an SVM can be the root volume. This value defaults to <code>false</code>. If this value is <code>true</code>, then this is the SVM root volume.</p>
     /// <p>This flag is useful when you're deleting an SVM, because you must first delete all non-root volumes. This flag, when set to <code>false</code>, helps you identify which volumes to delete before you can delete the SVM.</p>
+    #[doc(hidden)]
     pub storage_virtual_machine_root: std::option::Option<bool>,
     /// <p>The volume's <code>TieringPolicy</code> setting.</p>
+    #[doc(hidden)]
     pub tiering_policy: std::option::Option<crate::model::TieringPolicy>,
     /// <p>The volume's universally unique identifier (UUID).</p>
+    #[doc(hidden)]
     pub uuid: std::option::Option<std::string::String>,
     /// <p>Specifies the type of volume. Valid values are the following:</p>
     /// <ul>
@@ -6611,6 +6739,7 @@ pub struct OntapVolumeConfiguration {
     /// <li> <p> <code>DP</code> specifies a data-protection volume. You can protect data by replicating it to data-protection mirror copies. If a disaster occurs, you can use these data-protection mirror copies to recover data.</p> </li>
     /// <li> <p> <code>LS</code> specifies a load-sharing mirror volume. A load-sharing mirror reduces the network traffic to a FlexVol volume by providing additional read-only access to clients.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub ontap_volume_type: std::option::Option<crate::model::OntapVolumeType>,
 }
 impl OntapVolumeConfiguration {
@@ -6693,11 +6822,10 @@ impl std::fmt::Debug for OntapVolumeConfiguration {
         formatter.finish()
     }
 }
-/// See [`OntapVolumeConfiguration`](crate::model::OntapVolumeConfiguration)
+/// See [`OntapVolumeConfiguration`](crate::model::OntapVolumeConfiguration).
 pub mod ontap_volume_configuration {
 
-    /// A builder for [`OntapVolumeConfiguration`](crate::model::OntapVolumeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`OntapVolumeConfiguration`](crate::model::OntapVolumeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flex_cache_endpoint_type:
@@ -6859,7 +6987,7 @@ pub mod ontap_volume_configuration {
             self.ontap_volume_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`OntapVolumeConfiguration`](crate::model::OntapVolumeConfiguration)
+        /// Consumes the builder and constructs a [`OntapVolumeConfiguration`](crate::model::OntapVolumeConfiguration).
         pub fn build(self) -> crate::model::OntapVolumeConfiguration {
             crate::model::OntapVolumeConfiguration {
                 flex_cache_endpoint_type: self.flex_cache_endpoint_type,
@@ -6877,7 +7005,7 @@ pub mod ontap_volume_configuration {
     }
 }
 impl OntapVolumeConfiguration {
-    /// Creates a new builder-style object to manufacture [`OntapVolumeConfiguration`](crate::model::OntapVolumeConfiguration)
+    /// Creates a new builder-style object to manufacture [`OntapVolumeConfiguration`](crate::model::OntapVolumeConfiguration).
     pub fn builder() -> crate::model::ontap_volume_configuration::Builder {
         crate::model::ontap_volume_configuration::Builder::default()
     }
@@ -6960,6 +7088,7 @@ impl AsRef<str> for OntapVolumeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TieringPolicy {
     /// <p>Specifies the number of days that user data in a volume must remain inactive before it is considered "cold" and moved to the capacity pool. Used with the <code>AUTO</code> and <code>SNAPSHOT_ONLY</code> tiering policies. Enter a whole number between 2 and 183. Default values are 31 days for <code>AUTO</code> and 2 days for <code>SNAPSHOT_ONLY</code>.</p>
+    #[doc(hidden)]
     pub cooling_period: std::option::Option<i32>,
     /// <p>Specifies the tiering policy used to transition data. Default value is <code>SNAPSHOT_ONLY</code>.</p>
     /// <ul>
@@ -6968,6 +7097,7 @@ pub struct TieringPolicy {
     /// <li> <p> <code>ALL</code> - moves all user data blocks in both the active file system and Snapshot copies to the storage pool tier.</p> </li>
     /// <li> <p> <code>NONE</code> - keeps a volume's data in the primary storage tier, preventing it from being moved to the capacity pool tier.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::TieringPolicyName>,
 }
 impl TieringPolicy {
@@ -6994,11 +7124,10 @@ impl std::fmt::Debug for TieringPolicy {
         formatter.finish()
     }
 }
-/// See [`TieringPolicy`](crate::model::TieringPolicy)
+/// See [`TieringPolicy`](crate::model::TieringPolicy).
 pub mod tiering_policy {
 
-    /// A builder for [`TieringPolicy`](crate::model::TieringPolicy)
-    #[non_exhaustive]
+    /// A builder for [`TieringPolicy`](crate::model::TieringPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cooling_period: std::option::Option<i32>,
@@ -7040,7 +7169,7 @@ pub mod tiering_policy {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`TieringPolicy`](crate::model::TieringPolicy)
+        /// Consumes the builder and constructs a [`TieringPolicy`](crate::model::TieringPolicy).
         pub fn build(self) -> crate::model::TieringPolicy {
             crate::model::TieringPolicy {
                 cooling_period: self.cooling_period,
@@ -7050,7 +7179,7 @@ pub mod tiering_policy {
     }
 }
 impl TieringPolicy {
-    /// Creates a new builder-style object to manufacture [`TieringPolicy`](crate::model::TieringPolicy)
+    /// Creates a new builder-style object to manufacture [`TieringPolicy`](crate::model::TieringPolicy).
     pub fn builder() -> crate::model::tiering_policy::Builder {
         crate::model::tiering_policy::Builder::default()
     }
@@ -7325,10 +7454,13 @@ impl AsRef<str> for VolumeLifecycle {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateOpenZfsVolumeConfiguration {
     /// <p>The amount of storage in gibibytes (GiB) to reserve from the parent volume. You can't reserve more storage than the parent volume has reserved. You can specify a value of <code>-1</code> to unset a volume's storage capacity reservation.</p>
+    #[doc(hidden)]
     pub storage_capacity_reservation_gi_b: std::option::Option<i32>,
     /// <p>The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can specify a quota larger than the storage on the parent volume. You can specify a value of <code>-1</code> to unset a volume's storage capacity quota.</p>
+    #[doc(hidden)]
     pub storage_capacity_quota_gi_b: std::option::Option<i32>,
     /// <p>Specifies the record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. Database workflows can benefit from a smaller record size, while streaming workflows can benefit from a larger record size. For additional guidance on when to set a custom record size, see <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.</p>
+    #[doc(hidden)]
     pub record_size_ki_b: std::option::Option<i32>,
     /// <p>Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by default.</p>
     /// <ul>
@@ -7336,13 +7468,17 @@ pub struct UpdateOpenZfsVolumeConfiguration {
     /// <li> <p> <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.</p> </li>
     /// <li> <p> <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub data_compression_type: std::option::Option<crate::model::OpenZfsDataCompressionType>,
     /// <p>The configuration object for mounting a Network File System (NFS) file system.</p>
+    #[doc(hidden)]
     pub nfs_exports: std::option::Option<std::vec::Vec<crate::model::OpenZfsNfsExport>>,
     /// <p>An object specifying how much storage users or groups can use on the volume.</p>
+    #[doc(hidden)]
     pub user_and_group_quotas:
         std::option::Option<std::vec::Vec<crate::model::OpenZfsUserOrGroupQuota>>,
     /// <p>A Boolean value indicating whether the volume is read-only.</p>
+    #[doc(hidden)]
     pub read_only: std::option::Option<bool>,
 }
 impl UpdateOpenZfsVolumeConfiguration {
@@ -7403,11 +7539,10 @@ impl std::fmt::Debug for UpdateOpenZfsVolumeConfiguration {
         formatter.finish()
     }
 }
-/// See [`UpdateOpenZfsVolumeConfiguration`](crate::model::UpdateOpenZfsVolumeConfiguration)
+/// See [`UpdateOpenZfsVolumeConfiguration`](crate::model::UpdateOpenZfsVolumeConfiguration).
 pub mod update_open_zfs_volume_configuration {
 
-    /// A builder for [`UpdateOpenZfsVolumeConfiguration`](crate::model::UpdateOpenZfsVolumeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`UpdateOpenZfsVolumeConfiguration`](crate::model::UpdateOpenZfsVolumeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_capacity_reservation_gi_b: std::option::Option<i32>,
@@ -7531,7 +7666,7 @@ pub mod update_open_zfs_volume_configuration {
             self.read_only = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateOpenZfsVolumeConfiguration`](crate::model::UpdateOpenZfsVolumeConfiguration)
+        /// Consumes the builder and constructs a [`UpdateOpenZfsVolumeConfiguration`](crate::model::UpdateOpenZfsVolumeConfiguration).
         pub fn build(self) -> crate::model::UpdateOpenZfsVolumeConfiguration {
             crate::model::UpdateOpenZfsVolumeConfiguration {
                 storage_capacity_reservation_gi_b: self.storage_capacity_reservation_gi_b,
@@ -7546,7 +7681,7 @@ pub mod update_open_zfs_volume_configuration {
     }
 }
 impl UpdateOpenZfsVolumeConfiguration {
-    /// Creates a new builder-style object to manufacture [`UpdateOpenZfsVolumeConfiguration`](crate::model::UpdateOpenZfsVolumeConfiguration)
+    /// Creates a new builder-style object to manufacture [`UpdateOpenZfsVolumeConfiguration`](crate::model::UpdateOpenZfsVolumeConfiguration).
     pub fn builder() -> crate::model::update_open_zfs_volume_configuration::Builder {
         crate::model::update_open_zfs_volume_configuration::Builder::default()
     }
@@ -7557,14 +7692,19 @@ impl UpdateOpenZfsVolumeConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateOntapVolumeConfiguration {
     /// <p>Specifies the location in the SVM's namespace where the volume is mounted. The <code>JunctionPath</code> must have a leading forward slash, such as <code>/vol3</code>.</p>
+    #[doc(hidden)]
     pub junction_path: std::option::Option<std::string::String>,
     /// <p>The security style for the volume, which can be <code>UNIX</code>. <code>NTFS</code>, or <code>MIXED</code>.</p>
+    #[doc(hidden)]
     pub security_style: std::option::Option<crate::model::SecurityStyle>,
     /// <p>Specifies the size of the volume in megabytes.</p>
+    #[doc(hidden)]
     pub size_in_megabytes: std::option::Option<i32>,
     /// <p>Default is <code>false</code>. Set to true to enable the deduplication, compression, and compaction storage efficiency features on the volume.</p>
+    #[doc(hidden)]
     pub storage_efficiency_enabled: std::option::Option<bool>,
     /// <p>Update the volume's data tiering policy.</p>
+    #[doc(hidden)]
     pub tiering_policy: std::option::Option<crate::model::TieringPolicy>,
 }
 impl UpdateOntapVolumeConfiguration {
@@ -7603,11 +7743,10 @@ impl std::fmt::Debug for UpdateOntapVolumeConfiguration {
         formatter.finish()
     }
 }
-/// See [`UpdateOntapVolumeConfiguration`](crate::model::UpdateOntapVolumeConfiguration)
+/// See [`UpdateOntapVolumeConfiguration`](crate::model::UpdateOntapVolumeConfiguration).
 pub mod update_ontap_volume_configuration {
 
-    /// A builder for [`UpdateOntapVolumeConfiguration`](crate::model::UpdateOntapVolumeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`UpdateOntapVolumeConfiguration`](crate::model::UpdateOntapVolumeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) junction_path: std::option::Option<std::string::String>,
@@ -7676,7 +7815,7 @@ pub mod update_ontap_volume_configuration {
             self.tiering_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateOntapVolumeConfiguration`](crate::model::UpdateOntapVolumeConfiguration)
+        /// Consumes the builder and constructs a [`UpdateOntapVolumeConfiguration`](crate::model::UpdateOntapVolumeConfiguration).
         pub fn build(self) -> crate::model::UpdateOntapVolumeConfiguration {
             crate::model::UpdateOntapVolumeConfiguration {
                 junction_path: self.junction_path,
@@ -7689,7 +7828,7 @@ pub mod update_ontap_volume_configuration {
     }
 }
 impl UpdateOntapVolumeConfiguration {
-    /// Creates a new builder-style object to manufacture [`UpdateOntapVolumeConfiguration`](crate::model::UpdateOntapVolumeConfiguration)
+    /// Creates a new builder-style object to manufacture [`UpdateOntapVolumeConfiguration`](crate::model::UpdateOntapVolumeConfiguration).
     pub fn builder() -> crate::model::update_ontap_volume_configuration::Builder {
         crate::model::update_ontap_volume_configuration::Builder::default()
     }
@@ -7700,13 +7839,17 @@ impl UpdateOntapVolumeConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StorageVirtualMachine {
     /// <p>Describes the Microsoft Active Directory configuration to which the SVM is joined, if applicable.</p>
+    #[doc(hidden)]
     pub active_directory_configuration:
         std::option::Option<crate::model::SvmActiveDirectoryConfiguration>,
     /// <p>The time that the resource was created, in seconds (since 1970-01-01T00:00:00Z), also known as Unix time.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The endpoints that are used to access data or to manage the SVM using the NetApp ONTAP CLI, REST API, or NetApp CloudManager. They are the <code>Iscsi</code>, <code>Management</code>, <code>Nfs</code>, and <code>Smb</code> endpoints.</p>
+    #[doc(hidden)]
     pub endpoints: std::option::Option<crate::model::SvmEndpoints>,
     /// <p>The globally unique ID of the file system, assigned by Amazon FSx.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>Describes the SVM's lifecycle status.</p>
     /// <ul>
@@ -7717,22 +7860,31 @@ pub struct StorageVirtualMachine {
     /// <li> <p> <code>MISCONFIGURED</code> - The SVM is in a failed but recoverable state.</p> </li>
     /// <li> <p> <code>PENDING</code> - Amazon FSx has not started creating the SVM.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::StorageVirtualMachineLifecycle>,
     /// <p>The name of the SVM, if provisioned.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for a given resource. ARNs uniquely identify Amazon Web Services resources. We require an ARN when you need to specify a resource unambiguously across all of Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The SVM's system generated unique ID.</p>
+    #[doc(hidden)]
     pub storage_virtual_machine_id: std::option::Option<std::string::String>,
     /// <p>Describes the SVM's subtype.</p>
+    #[doc(hidden)]
     pub subtype: std::option::Option<crate::model::StorageVirtualMachineSubtype>,
     /// <p>The SVM's UUID (universally unique identifier).</p>
+    #[doc(hidden)]
     pub uuid: std::option::Option<std::string::String>,
     /// <p>A list of <code>Tag</code> values, with a maximum of 50 elements.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Describes why the SVM lifecycle state changed.</p>
+    #[doc(hidden)]
     pub lifecycle_transition_reason: std::option::Option<crate::model::LifecycleTransitionReason>,
     /// <p>The security style of the root volume of the SVM.</p>
+    #[doc(hidden)]
     pub root_volume_security_style:
         std::option::Option<crate::model::StorageVirtualMachineRootVolumeSecurityStyle>,
 }
@@ -7835,11 +7987,10 @@ impl std::fmt::Debug for StorageVirtualMachine {
         formatter.finish()
     }
 }
-/// See [`StorageVirtualMachine`](crate::model::StorageVirtualMachine)
+/// See [`StorageVirtualMachine`](crate::model::StorageVirtualMachine).
 pub mod storage_virtual_machine {
 
-    /// A builder for [`StorageVirtualMachine`](crate::model::StorageVirtualMachine)
-    #[non_exhaustive]
+    /// A builder for [`StorageVirtualMachine`](crate::model::StorageVirtualMachine).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) active_directory_configuration:
@@ -8051,7 +8202,7 @@ pub mod storage_virtual_machine {
             self.root_volume_security_style = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageVirtualMachine`](crate::model::StorageVirtualMachine)
+        /// Consumes the builder and constructs a [`StorageVirtualMachine`](crate::model::StorageVirtualMachine).
         pub fn build(self) -> crate::model::StorageVirtualMachine {
             crate::model::StorageVirtualMachine {
                 active_directory_configuration: self.active_directory_configuration,
@@ -8072,7 +8223,7 @@ pub mod storage_virtual_machine {
     }
 }
 impl StorageVirtualMachine {
-    /// Creates a new builder-style object to manufacture [`StorageVirtualMachine`](crate::model::StorageVirtualMachine)
+    /// Creates a new builder-style object to manufacture [`StorageVirtualMachine`](crate::model::StorageVirtualMachine).
     pub fn builder() -> crate::model::storage_virtual_machine::Builder {
         crate::model::storage_virtual_machine::Builder::default()
     }
@@ -8288,12 +8439,16 @@ impl AsRef<str> for StorageVirtualMachineLifecycle {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SvmEndpoints {
     /// <p>An endpoint for connecting using the Internet Small Computer Systems Interface (iSCSI) protocol.</p>
+    #[doc(hidden)]
     pub iscsi: std::option::Option<crate::model::SvmEndpoint>,
     /// <p>An endpoint for managing SVMs using the NetApp ONTAP CLI, NetApp ONTAP API, or NetApp CloudManager.</p>
+    #[doc(hidden)]
     pub management: std::option::Option<crate::model::SvmEndpoint>,
     /// <p>An endpoint for connecting using the Network File System (NFS) protocol.</p>
+    #[doc(hidden)]
     pub nfs: std::option::Option<crate::model::SvmEndpoint>,
     /// <p>An endpoint for connecting using the Server Message Block (SMB) protocol.</p>
+    #[doc(hidden)]
     pub smb: std::option::Option<crate::model::SvmEndpoint>,
 }
 impl SvmEndpoints {
@@ -8324,11 +8479,10 @@ impl std::fmt::Debug for SvmEndpoints {
         formatter.finish()
     }
 }
-/// See [`SvmEndpoints`](crate::model::SvmEndpoints)
+/// See [`SvmEndpoints`](crate::model::SvmEndpoints).
 pub mod svm_endpoints {
 
-    /// A builder for [`SvmEndpoints`](crate::model::SvmEndpoints)
-    #[non_exhaustive]
+    /// A builder for [`SvmEndpoints`](crate::model::SvmEndpoints).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) iscsi: std::option::Option<crate::model::SvmEndpoint>,
@@ -8380,7 +8534,7 @@ pub mod svm_endpoints {
             self.smb = input;
             self
         }
-        /// Consumes the builder and constructs a [`SvmEndpoints`](crate::model::SvmEndpoints)
+        /// Consumes the builder and constructs a [`SvmEndpoints`](crate::model::SvmEndpoints).
         pub fn build(self) -> crate::model::SvmEndpoints {
             crate::model::SvmEndpoints {
                 iscsi: self.iscsi,
@@ -8392,7 +8546,7 @@ pub mod svm_endpoints {
     }
 }
 impl SvmEndpoints {
-    /// Creates a new builder-style object to manufacture [`SvmEndpoints`](crate::model::SvmEndpoints)
+    /// Creates a new builder-style object to manufacture [`SvmEndpoints`](crate::model::SvmEndpoints).
     pub fn builder() -> crate::model::svm_endpoints::Builder {
         crate::model::svm_endpoints::Builder::default()
     }
@@ -8403,8 +8557,10 @@ impl SvmEndpoints {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SvmEndpoint {
     /// <p>The Domain Name Service (DNS) name for the file system. You can mount your file system using its DNS name.</p>
+    #[doc(hidden)]
     pub dns_name: std::option::Option<std::string::String>,
     /// <p>The SVM endpoint's IP addresses.</p>
+    #[doc(hidden)]
     pub ip_addresses: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SvmEndpoint {
@@ -8425,11 +8581,10 @@ impl std::fmt::Debug for SvmEndpoint {
         formatter.finish()
     }
 }
-/// See [`SvmEndpoint`](crate::model::SvmEndpoint)
+/// See [`SvmEndpoint`](crate::model::SvmEndpoint).
 pub mod svm_endpoint {
 
-    /// A builder for [`SvmEndpoint`](crate::model::SvmEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`SvmEndpoint`](crate::model::SvmEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dns_name: std::option::Option<std::string::String>,
@@ -8465,7 +8620,7 @@ pub mod svm_endpoint {
             self.ip_addresses = input;
             self
         }
-        /// Consumes the builder and constructs a [`SvmEndpoint`](crate::model::SvmEndpoint)
+        /// Consumes the builder and constructs a [`SvmEndpoint`](crate::model::SvmEndpoint).
         pub fn build(self) -> crate::model::SvmEndpoint {
             crate::model::SvmEndpoint {
                 dns_name: self.dns_name,
@@ -8475,7 +8630,7 @@ pub mod svm_endpoint {
     }
 }
 impl SvmEndpoint {
-    /// Creates a new builder-style object to manufacture [`SvmEndpoint`](crate::model::SvmEndpoint)
+    /// Creates a new builder-style object to manufacture [`SvmEndpoint`](crate::model::SvmEndpoint).
     pub fn builder() -> crate::model::svm_endpoint::Builder {
         crate::model::svm_endpoint::Builder::default()
     }
@@ -8486,8 +8641,10 @@ impl SvmEndpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SvmActiveDirectoryConfiguration {
     /// <p>The NetBIOS name of the Active Directory computer object that is joined to your SVM.</p>
+    #[doc(hidden)]
     pub net_bios_name: std::option::Option<std::string::String>,
     /// <p>The configuration of the self-managed Microsoft Active Directory (AD) directory to which the Windows File Server or ONTAP storage virtual machine (SVM) instance is joined.</p>
+    #[doc(hidden)]
     pub self_managed_active_directory_configuration:
         std::option::Option<crate::model::SelfManagedActiveDirectoryAttributes>,
 }
@@ -8514,11 +8671,10 @@ impl std::fmt::Debug for SvmActiveDirectoryConfiguration {
         formatter.finish()
     }
 }
-/// See [`SvmActiveDirectoryConfiguration`](crate::model::SvmActiveDirectoryConfiguration)
+/// See [`SvmActiveDirectoryConfiguration`](crate::model::SvmActiveDirectoryConfiguration).
 pub mod svm_active_directory_configuration {
 
-    /// A builder for [`SvmActiveDirectoryConfiguration`](crate::model::SvmActiveDirectoryConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SvmActiveDirectoryConfiguration`](crate::model::SvmActiveDirectoryConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) net_bios_name: std::option::Option<std::string::String>,
@@ -8555,7 +8711,7 @@ pub mod svm_active_directory_configuration {
             self.self_managed_active_directory_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`SvmActiveDirectoryConfiguration`](crate::model::SvmActiveDirectoryConfiguration)
+        /// Consumes the builder and constructs a [`SvmActiveDirectoryConfiguration`](crate::model::SvmActiveDirectoryConfiguration).
         pub fn build(self) -> crate::model::SvmActiveDirectoryConfiguration {
             crate::model::SvmActiveDirectoryConfiguration {
                 net_bios_name: self.net_bios_name,
@@ -8566,7 +8722,7 @@ pub mod svm_active_directory_configuration {
     }
 }
 impl SvmActiveDirectoryConfiguration {
-    /// Creates a new builder-style object to manufacture [`SvmActiveDirectoryConfiguration`](crate::model::SvmActiveDirectoryConfiguration)
+    /// Creates a new builder-style object to manufacture [`SvmActiveDirectoryConfiguration`](crate::model::SvmActiveDirectoryConfiguration).
     pub fn builder() -> crate::model::svm_active_directory_configuration::Builder {
         crate::model::svm_active_directory_configuration::Builder::default()
     }
@@ -8577,6 +8733,7 @@ impl SvmActiveDirectoryConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSvmActiveDirectoryConfiguration {
     /// <p>The configuration that Amazon FSx uses to join the Windows File Server instance to a self-managed Microsoft Active Directory (AD) directory.</p>
+    #[doc(hidden)]
     pub self_managed_active_directory_configuration:
         std::option::Option<crate::model::SelfManagedActiveDirectoryConfigurationUpdates>,
 }
@@ -8598,11 +8755,10 @@ impl std::fmt::Debug for UpdateSvmActiveDirectoryConfiguration {
         formatter.finish()
     }
 }
-/// See [`UpdateSvmActiveDirectoryConfiguration`](crate::model::UpdateSvmActiveDirectoryConfiguration)
+/// See [`UpdateSvmActiveDirectoryConfiguration`](crate::model::UpdateSvmActiveDirectoryConfiguration).
 pub mod update_svm_active_directory_configuration {
 
-    /// A builder for [`UpdateSvmActiveDirectoryConfiguration`](crate::model::UpdateSvmActiveDirectoryConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSvmActiveDirectoryConfiguration`](crate::model::UpdateSvmActiveDirectoryConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) self_managed_active_directory_configuration:
@@ -8627,7 +8783,7 @@ pub mod update_svm_active_directory_configuration {
             self.self_managed_active_directory_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSvmActiveDirectoryConfiguration`](crate::model::UpdateSvmActiveDirectoryConfiguration)
+        /// Consumes the builder and constructs a [`UpdateSvmActiveDirectoryConfiguration`](crate::model::UpdateSvmActiveDirectoryConfiguration).
         pub fn build(self) -> crate::model::UpdateSvmActiveDirectoryConfiguration {
             crate::model::UpdateSvmActiveDirectoryConfiguration {
                 self_managed_active_directory_configuration: self
@@ -8637,7 +8793,7 @@ pub mod update_svm_active_directory_configuration {
     }
 }
 impl UpdateSvmActiveDirectoryConfiguration {
-    /// Creates a new builder-style object to manufacture [`UpdateSvmActiveDirectoryConfiguration`](crate::model::UpdateSvmActiveDirectoryConfiguration)
+    /// Creates a new builder-style object to manufacture [`UpdateSvmActiveDirectoryConfiguration`](crate::model::UpdateSvmActiveDirectoryConfiguration).
     pub fn builder() -> crate::model::update_svm_active_directory_configuration::Builder {
         crate::model::update_svm_active_directory_configuration::Builder::default()
     }
@@ -8648,10 +8804,13 @@ impl UpdateSvmActiveDirectoryConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SelfManagedActiveDirectoryConfigurationUpdates {
     /// <p>The user name for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain. This account must have the permission to join computers to the domain in the organizational unit provided in <code>OrganizationalUnitDistinguishedName</code>.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The password for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.</p>
+    #[doc(hidden)]
     pub dns_ips: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SelfManagedActiveDirectoryConfigurationUpdates {
@@ -8677,11 +8836,10 @@ impl std::fmt::Debug for SelfManagedActiveDirectoryConfigurationUpdates {
         formatter.finish()
     }
 }
-/// See [`SelfManagedActiveDirectoryConfigurationUpdates`](crate::model::SelfManagedActiveDirectoryConfigurationUpdates)
+/// See [`SelfManagedActiveDirectoryConfigurationUpdates`](crate::model::SelfManagedActiveDirectoryConfigurationUpdates).
 pub mod self_managed_active_directory_configuration_updates {
 
-    /// A builder for [`SelfManagedActiveDirectoryConfigurationUpdates`](crate::model::SelfManagedActiveDirectoryConfigurationUpdates)
-    #[non_exhaustive]
+    /// A builder for [`SelfManagedActiveDirectoryConfigurationUpdates`](crate::model::SelfManagedActiveDirectoryConfigurationUpdates).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -8728,7 +8886,7 @@ pub mod self_managed_active_directory_configuration_updates {
             self.dns_ips = input;
             self
         }
-        /// Consumes the builder and constructs a [`SelfManagedActiveDirectoryConfigurationUpdates`](crate::model::SelfManagedActiveDirectoryConfigurationUpdates)
+        /// Consumes the builder and constructs a [`SelfManagedActiveDirectoryConfigurationUpdates`](crate::model::SelfManagedActiveDirectoryConfigurationUpdates).
         pub fn build(self) -> crate::model::SelfManagedActiveDirectoryConfigurationUpdates {
             crate::model::SelfManagedActiveDirectoryConfigurationUpdates {
                 user_name: self.user_name,
@@ -8739,7 +8897,7 @@ pub mod self_managed_active_directory_configuration_updates {
     }
 }
 impl SelfManagedActiveDirectoryConfigurationUpdates {
-    /// Creates a new builder-style object to manufacture [`SelfManagedActiveDirectoryConfigurationUpdates`](crate::model::SelfManagedActiveDirectoryConfigurationUpdates)
+    /// Creates a new builder-style object to manufacture [`SelfManagedActiveDirectoryConfigurationUpdates`](crate::model::SelfManagedActiveDirectoryConfigurationUpdates).
     pub fn builder() -> crate::model::self_managed_active_directory_configuration_updates::Builder {
         crate::model::self_managed_active_directory_configuration_updates::Builder::default()
     }
@@ -8850,21 +9008,28 @@ impl AsRef<str> for ServiceLimit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFileSystemOpenZfsConfiguration {
     /// <p>The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic backups. You can retain automatic backups for a maximum of 90 days. The default is <code>0</code>.</p>
+    #[doc(hidden)]
     pub automatic_backup_retention_days: std::option::Option<i32>,
     /// <p>A Boolean value indicating whether tags for the file system should be copied to backups. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the file system are copied to all automatic and user-initiated backups where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only the specified tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file system, regardless of this value.</p>
+    #[doc(hidden)]
     pub copy_tags_to_backups: std::option::Option<bool>,
     /// <p>A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are copied from the volume, regardless of this value.</p>
+    #[doc(hidden)]
     pub copy_tags_to_volumes: std::option::Option<bool>,
     /// <p>A recurring daily time, in the format <code>HH:MM</code>. <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. For example, <code>05:00</code> specifies 5 AM daily. </p>
+    #[doc(hidden)]
     pub daily_automatic_backup_start_time: std::option::Option<std::string::String>,
     /// <p>The throughput of an Amazon FSx file system, measured in megabytes per second (MBps). Valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.</p>
+    #[doc(hidden)]
     pub throughput_capacity: std::option::Option<i32>,
     /// <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
     /// <p> <code>D</code> is the day of the week, for which 1 represents Monday and 7 represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
     /// <p> <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. </p>
     /// <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
+    #[doc(hidden)]
     pub weekly_maintenance_start_time: std::option::Option<std::string::String>,
     /// <p>The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS file system. The default is 3 IOPS per GB of storage capacity, but you can provision additional IOPS per GB of storage. The configuration consists of the total number of provisioned SSD IOPS and how the amount was provisioned (by the customer or by the system).</p>
+    #[doc(hidden)]
     pub disk_iops_configuration: std::option::Option<crate::model::DiskIopsConfiguration>,
 }
 impl UpdateFileSystemOpenZfsConfiguration {
@@ -8924,11 +9089,10 @@ impl std::fmt::Debug for UpdateFileSystemOpenZfsConfiguration {
         formatter.finish()
     }
 }
-/// See [`UpdateFileSystemOpenZfsConfiguration`](crate::model::UpdateFileSystemOpenZfsConfiguration)
+/// See [`UpdateFileSystemOpenZfsConfiguration`](crate::model::UpdateFileSystemOpenZfsConfiguration).
 pub mod update_file_system_open_zfs_configuration {
 
-    /// A builder for [`UpdateFileSystemOpenZfsConfiguration`](crate::model::UpdateFileSystemOpenZfsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFileSystemOpenZfsConfiguration`](crate::model::UpdateFileSystemOpenZfsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) automatic_backup_retention_days: std::option::Option<i32>,
@@ -9038,7 +9202,7 @@ pub mod update_file_system_open_zfs_configuration {
             self.disk_iops_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFileSystemOpenZfsConfiguration`](crate::model::UpdateFileSystemOpenZfsConfiguration)
+        /// Consumes the builder and constructs a [`UpdateFileSystemOpenZfsConfiguration`](crate::model::UpdateFileSystemOpenZfsConfiguration).
         pub fn build(self) -> crate::model::UpdateFileSystemOpenZfsConfiguration {
             crate::model::UpdateFileSystemOpenZfsConfiguration {
                 automatic_backup_retention_days: self.automatic_backup_retention_days,
@@ -9053,7 +9217,7 @@ pub mod update_file_system_open_zfs_configuration {
     }
 }
 impl UpdateFileSystemOpenZfsConfiguration {
-    /// Creates a new builder-style object to manufacture [`UpdateFileSystemOpenZfsConfiguration`](crate::model::UpdateFileSystemOpenZfsConfiguration)
+    /// Creates a new builder-style object to manufacture [`UpdateFileSystemOpenZfsConfiguration`](crate::model::UpdateFileSystemOpenZfsConfiguration).
     pub fn builder() -> crate::model::update_file_system_open_zfs_configuration::Builder {
         crate::model::update_file_system_open_zfs_configuration::Builder::default()
     }
@@ -9064,19 +9228,25 @@ impl UpdateFileSystemOpenZfsConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFileSystemOntapConfiguration {
     /// <p>The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic backups. You can retain automatic backups for a maximum of 90 days. The default is <code>0</code>.</p>
+    #[doc(hidden)]
     pub automatic_backup_retention_days: std::option::Option<i32>,
     /// <p>A recurring daily time, in the format <code>HH:MM</code>. <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. For example, <code>05:00</code> specifies 5 AM daily. </p>
+    #[doc(hidden)]
     pub daily_automatic_backup_start_time: std::option::Option<std::string::String>,
     /// <p>The ONTAP administrative password for the <code>fsxadmin</code> user.</p>
+    #[doc(hidden)]
     pub fsx_admin_password: std::option::Option<std::string::String>,
     /// <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
     /// <p> <code>D</code> is the day of the week, for which 1 represents Monday and 7 represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
     /// <p> <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. </p>
     /// <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
+    #[doc(hidden)]
     pub weekly_maintenance_start_time: std::option::Option<std::string::String>,
     /// <p>The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp ONTAP file system. The default is 3 IOPS per GB of storage capacity, but you can provision additional IOPS per GB of storage. The configuration consists of an IOPS mode (<code>AUTOMATIC</code> or <code>USER_PROVISIONED</code>), and in the case of <code>USER_PROVISIONED</code> IOPS, the total number of SSD IOPS provisioned.</p>
+    #[doc(hidden)]
     pub disk_iops_configuration: std::option::Option<crate::model::DiskIopsConfiguration>,
     /// <p>Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps). Valid values are 128, 256, 512, 1024, or 2048 MB/s.</p>
+    #[doc(hidden)]
     pub throughput_capacity: std::option::Option<i32>,
 }
 impl UpdateFileSystemOntapConfiguration {
@@ -9131,11 +9301,10 @@ impl std::fmt::Debug for UpdateFileSystemOntapConfiguration {
         formatter.finish()
     }
 }
-/// See [`UpdateFileSystemOntapConfiguration`](crate::model::UpdateFileSystemOntapConfiguration)
+/// See [`UpdateFileSystemOntapConfiguration`](crate::model::UpdateFileSystemOntapConfiguration).
 pub mod update_file_system_ontap_configuration {
 
-    /// A builder for [`UpdateFileSystemOntapConfiguration`](crate::model::UpdateFileSystemOntapConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFileSystemOntapConfiguration`](crate::model::UpdateFileSystemOntapConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) automatic_backup_retention_days: std::option::Option<i32>,
@@ -9237,7 +9406,7 @@ pub mod update_file_system_ontap_configuration {
             self.throughput_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFileSystemOntapConfiguration`](crate::model::UpdateFileSystemOntapConfiguration)
+        /// Consumes the builder and constructs a [`UpdateFileSystemOntapConfiguration`](crate::model::UpdateFileSystemOntapConfiguration).
         pub fn build(self) -> crate::model::UpdateFileSystemOntapConfiguration {
             crate::model::UpdateFileSystemOntapConfiguration {
                 automatic_backup_retention_days: self.automatic_backup_retention_days,
@@ -9251,7 +9420,7 @@ pub mod update_file_system_ontap_configuration {
     }
 }
 impl UpdateFileSystemOntapConfiguration {
-    /// Creates a new builder-style object to manufacture [`UpdateFileSystemOntapConfiguration`](crate::model::UpdateFileSystemOntapConfiguration)
+    /// Creates a new builder-style object to manufacture [`UpdateFileSystemOntapConfiguration`](crate::model::UpdateFileSystemOntapConfiguration).
     pub fn builder() -> crate::model::update_file_system_ontap_configuration::Builder {
         crate::model::update_file_system_ontap_configuration::Builder::default()
     }
@@ -9262,10 +9431,13 @@ impl UpdateFileSystemOntapConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFileSystemLustreConfiguration {
     /// <p>(Optional) The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
+    #[doc(hidden)]
     pub weekly_maintenance_start_time: std::option::Option<std::string::String>,
     /// <p>A recurring daily time, in the format <code>HH:MM</code>. <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. For example, <code>05:00</code> specifies 5 AM daily. </p>
+    #[doc(hidden)]
     pub daily_automatic_backup_start_time: std::option::Option<std::string::String>,
     /// <p>The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic backups. You can retain automatic backups for a maximum of 90 days. The default is <code>0</code>.</p>
+    #[doc(hidden)]
     pub automatic_backup_retention_days: std::option::Option<i32>,
     /// <p> (Optional) When you create your file system, your existing S3 objects appear as file and directory listings. Use this property to choose how Amazon FSx keeps your file and directory listing up to date as you add or modify objects in your linked S3 bucket. <code>AutoImportPolicy</code> can have the following values:</p>
     /// <ul>
@@ -9275,6 +9447,7 @@ pub struct UpdateFileSystemLustreConfiguration {
     /// <li> <p> <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any objects that were deleted in the S3 bucket.</p> </li>
     /// </ul>
     /// <p>The <code>AutoImportPolicy</code> parameter is not supported for Lustre file systems with the <code>Persistent_2</code> deployment type. Instead, use to update a data repository association on your <code>Persistent_2</code> file system.</p>
+    #[doc(hidden)]
     pub auto_import_policy: std::option::Option<crate::model::AutoImportPolicyType>,
     /// <p>Sets the data compression configuration for the file system. <code>DataCompressionType</code> can have the following values:</p>
     /// <ul>
@@ -9283,10 +9456,13 @@ pub struct UpdateFileSystemLustreConfiguration {
     /// </ul>
     /// <p>If you don't use <code>DataCompressionType</code>, the file system retains its current data compression configuration.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data compression</a>.</p>
+    #[doc(hidden)]
     pub data_compression_type: std::option::Option<crate::model::DataCompressionType>,
     /// <p>The Lustre logging configuration used when updating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub log_configuration: std::option::Option<crate::model::LustreLogCreateConfiguration>,
     /// <p>The Lustre root squash configuration used when updating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user.</p>
+    #[doc(hidden)]
     pub root_squash_configuration: std::option::Option<crate::model::LustreRootSquashConfiguration>,
 }
 impl UpdateFileSystemLustreConfiguration {
@@ -9358,11 +9534,10 @@ impl std::fmt::Debug for UpdateFileSystemLustreConfiguration {
         formatter.finish()
     }
 }
-/// See [`UpdateFileSystemLustreConfiguration`](crate::model::UpdateFileSystemLustreConfiguration)
+/// See [`UpdateFileSystemLustreConfiguration`](crate::model::UpdateFileSystemLustreConfiguration).
 pub mod update_file_system_lustre_configuration {
 
-    /// A builder for [`UpdateFileSystemLustreConfiguration`](crate::model::UpdateFileSystemLustreConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFileSystemLustreConfiguration`](crate::model::UpdateFileSystemLustreConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) weekly_maintenance_start_time: std::option::Option<std::string::String>,
@@ -9505,7 +9680,7 @@ pub mod update_file_system_lustre_configuration {
             self.root_squash_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFileSystemLustreConfiguration`](crate::model::UpdateFileSystemLustreConfiguration)
+        /// Consumes the builder and constructs a [`UpdateFileSystemLustreConfiguration`](crate::model::UpdateFileSystemLustreConfiguration).
         pub fn build(self) -> crate::model::UpdateFileSystemLustreConfiguration {
             crate::model::UpdateFileSystemLustreConfiguration {
                 weekly_maintenance_start_time: self.weekly_maintenance_start_time,
@@ -9520,7 +9695,7 @@ pub mod update_file_system_lustre_configuration {
     }
 }
 impl UpdateFileSystemLustreConfiguration {
-    /// Creates a new builder-style object to manufacture [`UpdateFileSystemLustreConfiguration`](crate::model::UpdateFileSystemLustreConfiguration)
+    /// Creates a new builder-style object to manufacture [`UpdateFileSystemLustreConfiguration`](crate::model::UpdateFileSystemLustreConfiguration).
     pub fn builder() -> crate::model::update_file_system_lustre_configuration::Builder {
         crate::model::update_file_system_lustre_configuration::Builder::default()
     }
@@ -9543,6 +9718,7 @@ pub struct LustreLogCreateConfiguration {
     /// <li> <p> <code>WARN_ERROR</code> - both warning events and error events are logged.</p> </li>
     /// <li> <p> <code>DISABLED</code> - logging of data repository events is turned off.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub level: std::option::Option<crate::model::LustreAccessAuditLogLevel>,
     /// <p>The Amazon Resource Name (ARN) that specifies the destination of the logs.</p>
     /// <p>The destination can be any Amazon CloudWatch Logs log group ARN, with the following requirements:</p>
@@ -9553,6 +9729,7 @@ pub struct LustreLogCreateConfiguration {
     /// <li> <p>If <code>Destination</code> is provided and the resource does not exist, the request will fail with a <code>BadRequest</code> error.</p> </li>
     /// <li> <p>If <code>Level</code> is set to <code>DISABLED</code>, you cannot specify a destination in <code>Destination</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
 }
 impl LustreLogCreateConfiguration {
@@ -9587,11 +9764,10 @@ impl std::fmt::Debug for LustreLogCreateConfiguration {
         formatter.finish()
     }
 }
-/// See [`LustreLogCreateConfiguration`](crate::model::LustreLogCreateConfiguration)
+/// See [`LustreLogCreateConfiguration`](crate::model::LustreLogCreateConfiguration).
 pub mod lustre_log_create_configuration {
 
-    /// A builder for [`LustreLogCreateConfiguration`](crate::model::LustreLogCreateConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LustreLogCreateConfiguration`](crate::model::LustreLogCreateConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) level: std::option::Option<crate::model::LustreAccessAuditLogLevel>,
@@ -9649,7 +9825,7 @@ pub mod lustre_log_create_configuration {
             self.destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`LustreLogCreateConfiguration`](crate::model::LustreLogCreateConfiguration)
+        /// Consumes the builder and constructs a [`LustreLogCreateConfiguration`](crate::model::LustreLogCreateConfiguration).
         pub fn build(self) -> crate::model::LustreLogCreateConfiguration {
             crate::model::LustreLogCreateConfiguration {
                 level: self.level,
@@ -9659,7 +9835,7 @@ pub mod lustre_log_create_configuration {
     }
 }
 impl LustreLogCreateConfiguration {
-    /// Creates a new builder-style object to manufacture [`LustreLogCreateConfiguration`](crate::model::LustreLogCreateConfiguration)
+    /// Creates a new builder-style object to manufacture [`LustreLogCreateConfiguration`](crate::model::LustreLogCreateConfiguration).
     pub fn builder() -> crate::model::lustre_log_create_configuration::Builder {
         crate::model::lustre_log_create_configuration::Builder::default()
     }
@@ -9670,17 +9846,23 @@ impl LustreLogCreateConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFileSystemWindowsConfiguration {
     /// <p>The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. Where d is the weekday number, from 1 through 7, with 1 = Monday and 7 = Sunday.</p>
+    #[doc(hidden)]
     pub weekly_maintenance_start_time: std::option::Option<std::string::String>,
     /// <p>The preferred time to start the daily automatic backup, in the UTC time zone, for example, <code>02:00</code> </p>
+    #[doc(hidden)]
     pub daily_automatic_backup_start_time: std::option::Option<std::string::String>,
     /// <p>The number of days to retain automatic daily backups. Setting this to zero (0) disables automatic daily backups. You can retain automatic daily backups for a maximum of 90 days. For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/using-backups.html#automatic-backups">Working with Automatic Daily Backups</a>.</p>
+    #[doc(hidden)]
     pub automatic_backup_retention_days: std::option::Option<i32>,
     /// <p>Sets the target value for a file system's throughput capacity, in MB/s, that you are updating the file system to. Valid values are 8, 16, 32, 64, 128, 256, 512, 1024, 2048. You cannot make a throughput capacity update request if there is an existing throughput capacity update request in progress. For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-throughput-capacity.html">Managing Throughput Capacity</a>.</p>
+    #[doc(hidden)]
     pub throughput_capacity: std::option::Option<i32>,
     /// <p>The configuration Amazon FSx uses to join the Windows File Server instance to the self-managed Microsoft AD directory. You cannot make a self-managed Microsoft AD update request if there is an existing self-managed Microsoft AD update request in progress.</p>
+    #[doc(hidden)]
     pub self_managed_active_directory_configuration:
         std::option::Option<crate::model::SelfManagedActiveDirectoryConfigurationUpdates>,
     /// <p>The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system..</p>
+    #[doc(hidden)]
     pub audit_log_configuration:
         std::option::Option<crate::model::WindowsAuditLogCreateConfiguration>,
 }
@@ -9738,11 +9920,10 @@ impl std::fmt::Debug for UpdateFileSystemWindowsConfiguration {
         formatter.finish()
     }
 }
-/// See [`UpdateFileSystemWindowsConfiguration`](crate::model::UpdateFileSystemWindowsConfiguration)
+/// See [`UpdateFileSystemWindowsConfiguration`](crate::model::UpdateFileSystemWindowsConfiguration).
 pub mod update_file_system_windows_configuration {
 
-    /// A builder for [`UpdateFileSystemWindowsConfiguration`](crate::model::UpdateFileSystemWindowsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFileSystemWindowsConfiguration`](crate::model::UpdateFileSystemWindowsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) weekly_maintenance_start_time: std::option::Option<std::string::String>,
@@ -9844,7 +10025,7 @@ pub mod update_file_system_windows_configuration {
             self.audit_log_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFileSystemWindowsConfiguration`](crate::model::UpdateFileSystemWindowsConfiguration)
+        /// Consumes the builder and constructs a [`UpdateFileSystemWindowsConfiguration`](crate::model::UpdateFileSystemWindowsConfiguration).
         pub fn build(self) -> crate::model::UpdateFileSystemWindowsConfiguration {
             crate::model::UpdateFileSystemWindowsConfiguration {
                 weekly_maintenance_start_time: self.weekly_maintenance_start_time,
@@ -9859,7 +10040,7 @@ pub mod update_file_system_windows_configuration {
     }
 }
 impl UpdateFileSystemWindowsConfiguration {
-    /// Creates a new builder-style object to manufacture [`UpdateFileSystemWindowsConfiguration`](crate::model::UpdateFileSystemWindowsConfiguration)
+    /// Creates a new builder-style object to manufacture [`UpdateFileSystemWindowsConfiguration`](crate::model::UpdateFileSystemWindowsConfiguration).
     pub fn builder() -> crate::model::update_file_system_windows_configuration::Builder {
         crate::model::update_file_system_windows_configuration::Builder::default()
     }
@@ -9876,6 +10057,7 @@ pub struct WindowsAuditLogCreateConfiguration {
     /// <li> <p> <code>SUCCESS_AND_FAILURE</code> - both successful attempts and failed attempts to access files or folders are logged.</p> </li>
     /// <li> <p> <code>DISABLED</code> - access auditing of files and folders is turned off.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub file_access_audit_log_level: std::option::Option<crate::model::WindowsAccessAuditLogLevel>,
     /// <p>Sets which attempt type is logged by Amazon FSx for file share accesses.</p>
     /// <ul>
@@ -9884,6 +10066,7 @@ pub struct WindowsAuditLogCreateConfiguration {
     /// <li> <p> <code>SUCCESS_AND_FAILURE</code> - both successful attempts and failed attempts to access file shares are logged.</p> </li>
     /// <li> <p> <code>DISABLED</code> - access auditing of file shares is turned off.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub file_share_access_audit_log_level:
         std::option::Option<crate::model::WindowsAccessAuditLogLevel>,
     /// <p>The Amazon Resource Name (ARN) that specifies the destination of the audit logs.</p>
@@ -9895,6 +10078,7 @@ pub struct WindowsAuditLogCreateConfiguration {
     /// <li> <p>If <code>AuditLogDestination</code> is provided and the resource does not exist, the request will fail with a <code>BadRequest</code> error.</p> </li>
     /// <li> <p>If <code>FileAccessAuditLogLevel</code> and <code>FileShareAccessAuditLogLevel</code> are both set to <code>DISABLED</code>, you cannot specify a destination in <code>AuditLogDestination</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub audit_log_destination: std::option::Option<std::string::String>,
 }
 impl WindowsAuditLogCreateConfiguration {
@@ -9950,11 +10134,10 @@ impl std::fmt::Debug for WindowsAuditLogCreateConfiguration {
         formatter.finish()
     }
 }
-/// See [`WindowsAuditLogCreateConfiguration`](crate::model::WindowsAuditLogCreateConfiguration)
+/// See [`WindowsAuditLogCreateConfiguration`](crate::model::WindowsAuditLogCreateConfiguration).
 pub mod windows_audit_log_create_configuration {
 
-    /// A builder for [`WindowsAuditLogCreateConfiguration`](crate::model::WindowsAuditLogCreateConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`WindowsAuditLogCreateConfiguration`](crate::model::WindowsAuditLogCreateConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_access_audit_log_level:
@@ -10049,7 +10232,7 @@ pub mod windows_audit_log_create_configuration {
             self.audit_log_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`WindowsAuditLogCreateConfiguration`](crate::model::WindowsAuditLogCreateConfiguration)
+        /// Consumes the builder and constructs a [`WindowsAuditLogCreateConfiguration`](crate::model::WindowsAuditLogCreateConfiguration).
         pub fn build(self) -> crate::model::WindowsAuditLogCreateConfiguration {
             crate::model::WindowsAuditLogCreateConfiguration {
                 file_access_audit_log_level: self.file_access_audit_log_level,
@@ -10060,7 +10243,7 @@ pub mod windows_audit_log_create_configuration {
     }
 }
 impl WindowsAuditLogCreateConfiguration {
-    /// Creates a new builder-style object to manufacture [`WindowsAuditLogCreateConfiguration`](crate::model::WindowsAuditLogCreateConfiguration)
+    /// Creates a new builder-style object to manufacture [`WindowsAuditLogCreateConfiguration`](crate::model::WindowsAuditLogCreateConfiguration).
     pub fn builder() -> crate::model::windows_audit_log_create_configuration::Builder {
         crate::model::windows_audit_log_create_configuration::Builder::default()
     }
@@ -10077,10 +10260,13 @@ impl WindowsAuditLogCreateConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataRepositoryAssociation {
     /// <p>The system-generated, unique ID of the data repository association.</p>
+    #[doc(hidden)]
     pub association_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for a given resource. ARNs uniquely identify Amazon Web Services resources. We require an ARN when you need to specify a resource unambiguously across all of Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The globally unique ID of the file system, assigned by Amazon FSx.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>Describes the state of a data repository association. The lifecycle can have the following values:</p>
     /// <ul>
@@ -10091,26 +10277,35 @@ pub struct DataRepositoryAssociation {
     /// <li> <p> <code>DELETING</code> - The data repository association is undergoing a customer initiated deletion.</p> </li>
     /// <li> <p> <code>FAILED</code> - The data repository association is in a terminal state that cannot be recovered.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::DataRepositoryLifecycle>,
     /// <p>Provides detailed information about the data respository if its <code>Lifecycle</code> is set to <code>MISCONFIGURED</code> or <code>FAILED</code>.</p>
+    #[doc(hidden)]
     pub failure_details: std::option::Option<crate::model::DataRepositoryFailureDetails>,
     /// <p>A path on the file system that points to a high-level directory (such as <code>/ns1/</code>) or subdirectory (such as <code>/ns1/subdir/</code>) that will be mapped 1-1 with <code>DataRepositoryPath</code>. The leading forward slash in the name is required. Two data repository associations cannot have overlapping file system paths. For example, if a data repository is associated with file system path <code>/ns1/</code>, then you cannot link another data repository with file system path <code>/ns1/ns2</code>.</p>
     /// <p>This path specifies where in your file system files will be exported from or imported to. This file system directory can be linked to only one Amazon S3 bucket, and no other S3 bucket can be linked to the directory.</p> <note>
     /// <p>If you specify only a forward slash (<code>/</code>) as the file system path, you can link only 1 data repository to the file system. You can only specify "/" as the file system path for the first data repository associated with a file system.</p>
     /// </note>
+    #[doc(hidden)]
     pub file_system_path: std::option::Option<std::string::String>,
     /// <p>The path to the Amazon S3 data repository that will be linked to the file system. The path can be an S3 bucket or prefix in the format <code>s3://myBucket/myPrefix/</code>. This path specifies where in the S3 data repository files will be imported from or exported to.</p>
+    #[doc(hidden)]
     pub data_repository_path: std::option::Option<std::string::String>,
     /// <p>A boolean flag indicating whether an import data repository task to import metadata should run after the data repository association is created. The task runs if this flag is set to <code>true</code>.</p>
+    #[doc(hidden)]
     pub batch_import_meta_data_on_create: std::option::Option<bool>,
     /// <p>For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. The maximum number of disks that a single file can be striped across is limited by the total number of disks that make up the file system.</p>
     /// <p>The default chunk size is 1,024 MiB (1 GiB) and can go as high as 512,000 MiB (500 GiB). Amazon S3 objects have a maximum size of 5 TB.</p>
+    #[doc(hidden)]
     pub imported_file_chunk_size: std::option::Option<i32>,
     /// <p>The configuration for an Amazon S3 data repository linked to an Amazon FSx Lustre file system with a data repository association. The configuration defines which file events (new, changed, or deleted files or directories) are automatically imported from the linked data repository to the file system or automatically exported from the file system to the data repository.</p>
+    #[doc(hidden)]
     pub s3: std::option::Option<crate::model::S3DataRepositoryConfiguration>,
     /// <p>A list of <code>Tag</code> values, with a maximum of 50 elements.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The time that the resource was created, in seconds (since 1970-01-01T00:00:00Z), also known as Unix time.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DataRepositoryAssociation {
@@ -10198,11 +10393,10 @@ impl std::fmt::Debug for DataRepositoryAssociation {
         formatter.finish()
     }
 }
-/// See [`DataRepositoryAssociation`](crate::model::DataRepositoryAssociation)
+/// See [`DataRepositoryAssociation`](crate::model::DataRepositoryAssociation).
 pub mod data_repository_association {
 
-    /// A builder for [`DataRepositoryAssociation`](crate::model::DataRepositoryAssociation)
-    #[non_exhaustive]
+    /// A builder for [`DataRepositoryAssociation`](crate::model::DataRepositoryAssociation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) association_id: std::option::Option<std::string::String>,
@@ -10402,7 +10596,7 @@ pub mod data_repository_association {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataRepositoryAssociation`](crate::model::DataRepositoryAssociation)
+        /// Consumes the builder and constructs a [`DataRepositoryAssociation`](crate::model::DataRepositoryAssociation).
         pub fn build(self) -> crate::model::DataRepositoryAssociation {
             crate::model::DataRepositoryAssociation {
                 association_id: self.association_id,
@@ -10422,7 +10616,7 @@ pub mod data_repository_association {
     }
 }
 impl DataRepositoryAssociation {
-    /// Creates a new builder-style object to manufacture [`DataRepositoryAssociation`](crate::model::DataRepositoryAssociation)
+    /// Creates a new builder-style object to manufacture [`DataRepositoryAssociation`](crate::model::DataRepositoryAssociation).
     pub fn builder() -> crate::model::data_repository_association::Builder {
         crate::model::data_repository_association::Builder::default()
     }
@@ -10433,8 +10627,10 @@ impl DataRepositoryAssociation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3DataRepositoryConfiguration {
     /// <p>Specifies the type of updated objects (new, changed, deleted) that will be automatically imported from the linked S3 bucket to your file system.</p>
+    #[doc(hidden)]
     pub auto_import_policy: std::option::Option<crate::model::AutoImportPolicy>,
     /// <p>Specifies the type of updated objects (new, changed, deleted) that will be automatically exported from your file system to the linked S3 bucket.</p>
+    #[doc(hidden)]
     pub auto_export_policy: std::option::Option<crate::model::AutoExportPolicy>,
 }
 impl S3DataRepositoryConfiguration {
@@ -10455,11 +10651,10 @@ impl std::fmt::Debug for S3DataRepositoryConfiguration {
         formatter.finish()
     }
 }
-/// See [`S3DataRepositoryConfiguration`](crate::model::S3DataRepositoryConfiguration)
+/// See [`S3DataRepositoryConfiguration`](crate::model::S3DataRepositoryConfiguration).
 pub mod s3_data_repository_configuration {
 
-    /// A builder for [`S3DataRepositoryConfiguration`](crate::model::S3DataRepositoryConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`S3DataRepositoryConfiguration`](crate::model::S3DataRepositoryConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_import_policy: std::option::Option<crate::model::AutoImportPolicy>,
@@ -10492,7 +10687,7 @@ pub mod s3_data_repository_configuration {
             self.auto_export_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3DataRepositoryConfiguration`](crate::model::S3DataRepositoryConfiguration)
+        /// Consumes the builder and constructs a [`S3DataRepositoryConfiguration`](crate::model::S3DataRepositoryConfiguration).
         pub fn build(self) -> crate::model::S3DataRepositoryConfiguration {
             crate::model::S3DataRepositoryConfiguration {
                 auto_import_policy: self.auto_import_policy,
@@ -10502,7 +10697,7 @@ pub mod s3_data_repository_configuration {
     }
 }
 impl S3DataRepositoryConfiguration {
-    /// Creates a new builder-style object to manufacture [`S3DataRepositoryConfiguration`](crate::model::S3DataRepositoryConfiguration)
+    /// Creates a new builder-style object to manufacture [`S3DataRepositoryConfiguration`](crate::model::S3DataRepositoryConfiguration).
     pub fn builder() -> crate::model::s3_data_repository_configuration::Builder {
         crate::model::s3_data_repository_configuration::Builder::default()
     }
@@ -10520,6 +10715,7 @@ pub struct AutoExportPolicy {
     /// <li> <p> <code>DELETED</code> - Files and directories are automatically deleted on the data repository when they are deleted on the file system.</p> </li>
     /// </ul>
     /// <p>You can define any combination of event types for your <code>AutoExportPolicy</code>.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<std::vec::Vec<crate::model::EventType>>,
 }
 impl AutoExportPolicy {
@@ -10541,11 +10737,10 @@ impl std::fmt::Debug for AutoExportPolicy {
         formatter.finish()
     }
 }
-/// See [`AutoExportPolicy`](crate::model::AutoExportPolicy)
+/// See [`AutoExportPolicy`](crate::model::AutoExportPolicy).
 pub mod auto_export_policy {
 
-    /// A builder for [`AutoExportPolicy`](crate::model::AutoExportPolicy)
-    #[non_exhaustive]
+    /// A builder for [`AutoExportPolicy`](crate::model::AutoExportPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) events: std::option::Option<std::vec::Vec<crate::model::EventType>>,
@@ -10582,7 +10777,7 @@ pub mod auto_export_policy {
             self.events = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoExportPolicy`](crate::model::AutoExportPolicy)
+        /// Consumes the builder and constructs a [`AutoExportPolicy`](crate::model::AutoExportPolicy).
         pub fn build(self) -> crate::model::AutoExportPolicy {
             crate::model::AutoExportPolicy {
                 events: self.events,
@@ -10591,7 +10786,7 @@ pub mod auto_export_policy {
     }
 }
 impl AutoExportPolicy {
-    /// Creates a new builder-style object to manufacture [`AutoExportPolicy`](crate::model::AutoExportPolicy)
+    /// Creates a new builder-style object to manufacture [`AutoExportPolicy`](crate::model::AutoExportPolicy).
     pub fn builder() -> crate::model::auto_export_policy::Builder {
         crate::model::auto_export_policy::Builder::default()
     }
@@ -10668,6 +10863,7 @@ pub struct AutoImportPolicy {
     /// <li> <p> <code>DELETED</code> - Amazon FSx automatically deletes files on the file system as corresponding files are deleted in the data repository.</p> </li>
     /// </ul>
     /// <p>You can define any combination of event types for your <code>AutoImportPolicy</code>.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<std::vec::Vec<crate::model::EventType>>,
 }
 impl AutoImportPolicy {
@@ -10689,11 +10885,10 @@ impl std::fmt::Debug for AutoImportPolicy {
         formatter.finish()
     }
 }
-/// See [`AutoImportPolicy`](crate::model::AutoImportPolicy)
+/// See [`AutoImportPolicy`](crate::model::AutoImportPolicy).
 pub mod auto_import_policy {
 
-    /// A builder for [`AutoImportPolicy`](crate::model::AutoImportPolicy)
-    #[non_exhaustive]
+    /// A builder for [`AutoImportPolicy`](crate::model::AutoImportPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) events: std::option::Option<std::vec::Vec<crate::model::EventType>>,
@@ -10730,7 +10925,7 @@ pub mod auto_import_policy {
             self.events = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoImportPolicy`](crate::model::AutoImportPolicy)
+        /// Consumes the builder and constructs a [`AutoImportPolicy`](crate::model::AutoImportPolicy).
         pub fn build(self) -> crate::model::AutoImportPolicy {
             crate::model::AutoImportPolicy {
                 events: self.events,
@@ -10739,7 +10934,7 @@ pub mod auto_import_policy {
     }
 }
 impl AutoImportPolicy {
-    /// Creates a new builder-style object to manufacture [`AutoImportPolicy`](crate::model::AutoImportPolicy)
+    /// Creates a new builder-style object to manufacture [`AutoImportPolicy`](crate::model::AutoImportPolicy).
     pub fn builder() -> crate::model::auto_import_policy::Builder {
         crate::model::auto_import_policy::Builder::default()
     }
@@ -10809,8 +11004,10 @@ impl AsRef<str> for RestoreOpenZfsVolumeOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VolumeFilter {
     /// <p>The name for this filter.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::VolumeFilterName>,
     /// <p>The values of the filter. These are all the values for any of the applied filters.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VolumeFilter {
@@ -10831,11 +11028,10 @@ impl std::fmt::Debug for VolumeFilter {
         formatter.finish()
     }
 }
-/// See [`VolumeFilter`](crate::model::VolumeFilter)
+/// See [`VolumeFilter`](crate::model::VolumeFilter).
 pub mod volume_filter {
 
-    /// A builder for [`VolumeFilter`](crate::model::VolumeFilter)
-    #[non_exhaustive]
+    /// A builder for [`VolumeFilter`](crate::model::VolumeFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::VolumeFilterName>,
@@ -10874,7 +11070,7 @@ pub mod volume_filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`VolumeFilter`](crate::model::VolumeFilter)
+        /// Consumes the builder and constructs a [`VolumeFilter`](crate::model::VolumeFilter).
         pub fn build(self) -> crate::model::VolumeFilter {
             crate::model::VolumeFilter {
                 name: self.name,
@@ -10884,7 +11080,7 @@ pub mod volume_filter {
     }
 }
 impl VolumeFilter {
-    /// Creates a new builder-style object to manufacture [`VolumeFilter`](crate::model::VolumeFilter)
+    /// Creates a new builder-style object to manufacture [`VolumeFilter`](crate::model::VolumeFilter).
     pub fn builder() -> crate::model::volume_filter::Builder {
         crate::model::volume_filter::Builder::default()
     }
@@ -10950,8 +11146,10 @@ impl AsRef<str> for VolumeFilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StorageVirtualMachineFilter {
     /// <p>The name for this filter.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::StorageVirtualMachineFilterName>,
     /// <p>The values of the filter. These are all the values for any of the applied filters.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl StorageVirtualMachineFilter {
@@ -10972,11 +11170,10 @@ impl std::fmt::Debug for StorageVirtualMachineFilter {
         formatter.finish()
     }
 }
-/// See [`StorageVirtualMachineFilter`](crate::model::StorageVirtualMachineFilter)
+/// See [`StorageVirtualMachineFilter`](crate::model::StorageVirtualMachineFilter).
 pub mod storage_virtual_machine_filter {
 
-    /// A builder for [`StorageVirtualMachineFilter`](crate::model::StorageVirtualMachineFilter)
-    #[non_exhaustive]
+    /// A builder for [`StorageVirtualMachineFilter`](crate::model::StorageVirtualMachineFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::StorageVirtualMachineFilterName>,
@@ -11015,7 +11212,7 @@ pub mod storage_virtual_machine_filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageVirtualMachineFilter`](crate::model::StorageVirtualMachineFilter)
+        /// Consumes the builder and constructs a [`StorageVirtualMachineFilter`](crate::model::StorageVirtualMachineFilter).
         pub fn build(self) -> crate::model::StorageVirtualMachineFilter {
             crate::model::StorageVirtualMachineFilter {
                 name: self.name,
@@ -11025,7 +11222,7 @@ pub mod storage_virtual_machine_filter {
     }
 }
 impl StorageVirtualMachineFilter {
-    /// Creates a new builder-style object to manufacture [`StorageVirtualMachineFilter`](crate::model::StorageVirtualMachineFilter)
+    /// Creates a new builder-style object to manufacture [`StorageVirtualMachineFilter`](crate::model::StorageVirtualMachineFilter).
     pub fn builder() -> crate::model::storage_virtual_machine_filter::Builder {
         crate::model::storage_virtual_machine_filter::Builder::default()
     }
@@ -11087,8 +11284,10 @@ impl AsRef<str> for StorageVirtualMachineFilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnapshotFilter {
     /// <p>The name of the filter to use. You can filter by the <code>file-system-id</code> or by <code>volume-id</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::SnapshotFilterName>,
     /// <p>The <code>file-system-id</code> or <code>volume-id</code> that you are filtering for.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SnapshotFilter {
@@ -11109,11 +11308,10 @@ impl std::fmt::Debug for SnapshotFilter {
         formatter.finish()
     }
 }
-/// See [`SnapshotFilter`](crate::model::SnapshotFilter)
+/// See [`SnapshotFilter`](crate::model::SnapshotFilter).
 pub mod snapshot_filter {
 
-    /// A builder for [`SnapshotFilter`](crate::model::SnapshotFilter)
-    #[non_exhaustive]
+    /// A builder for [`SnapshotFilter`](crate::model::SnapshotFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::SnapshotFilterName>,
@@ -11152,7 +11350,7 @@ pub mod snapshot_filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnapshotFilter`](crate::model::SnapshotFilter)
+        /// Consumes the builder and constructs a [`SnapshotFilter`](crate::model::SnapshotFilter).
         pub fn build(self) -> crate::model::SnapshotFilter {
             crate::model::SnapshotFilter {
                 name: self.name,
@@ -11162,7 +11360,7 @@ pub mod snapshot_filter {
     }
 }
 impl SnapshotFilter {
-    /// Creates a new builder-style object to manufacture [`SnapshotFilter`](crate::model::SnapshotFilter)
+    /// Creates a new builder-style object to manufacture [`SnapshotFilter`](crate::model::SnapshotFilter).
     pub fn builder() -> crate::model::snapshot_filter::Builder {
         crate::model::snapshot_filter::Builder::default()
     }
@@ -11228,6 +11426,7 @@ impl AsRef<str> for SnapshotFilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataRepositoryTask {
     /// <p>The system-generated, unique 17-digit ID of the data repository task.</p>
+    #[doc(hidden)]
     pub task_id: std::option::Option<std::string::String>,
     /// <p>The lifecycle status of the data repository task, as follows:</p>
     /// <ul>
@@ -11240,33 +11439,45 @@ pub struct DataRepositoryTask {
     /// </ul> <note>
     /// <p>You cannot delete an FSx for Lustre file system if there are data repository tasks for the file system in the <code>PENDING</code> or <code>EXECUTING</code> states. Please retry when the data repository task is finished (with a status of <code>CANCELED</code>, <code>SUCCEEDED</code>, or <code>FAILED</code>). You can use the DescribeDataRepositoryTask action to monitor the task status. Contact the FSx team if you need to delete your file system immediately.</p>
     /// </note>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::DataRepositoryTaskLifecycle>,
     /// <p>The type of data repository task.</p>
     /// <ul>
     /// <li> <p>The <code>EXPORT_TO_REPOSITORY</code> data repository task exports from your Lustre file system from to a linked S3 bucket.</p> </li>
     /// <li> <p>The <code>IMPORT_METADATA_FROM_REPOSITORY</code> data repository task imports metadata changes from a linked S3 bucket to your Lustre file system.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::DataRepositoryTaskType>,
     /// <p>The time that the resource was created, in seconds (since 1970-01-01T00:00:00Z), also known as Unix time.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that Amazon FSx began processing the task.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that Amazon FSx completed processing the task, populated after the task is complete.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) for a given resource. ARNs uniquely identify Amazon Web Services resources. We require an ARN when you need to specify a resource unambiguously across all of Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>A list of <code>Tag</code> values, with a maximum of 50 elements.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The globally unique ID of the file system, assigned by Amazon FSx.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>An array of paths on the Amazon FSx for Lustre file system that specify the data for the data repository task to process. For example, in an EXPORT_TO_REPOSITORY task, the paths specify which data to export to the linked data repository.</p>
     /// <p>(Default) If <code>Paths</code> is not specified, Amazon FSx uses the file system root directory.</p>
+    #[doc(hidden)]
     pub paths: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Failure message describing why the task failed, it is populated only when <code>Lifecycle</code> is set to <code>FAILED</code>.</p>
+    #[doc(hidden)]
     pub failure_details: std::option::Option<crate::model::DataRepositoryTaskFailureDetails>,
     /// <p>Provides the status of the number of files that the task has processed successfully and failed to process.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DataRepositoryTaskStatus>,
     /// <p>Provides a report detailing the data repository task results of the files processed that match the criteria specified in the report <code>Scope</code> parameter. FSx delivers the report to the file system's linked data repository in Amazon S3, using the path specified in the report <code>Path</code> parameter. You can specify whether or not a report gets generated for a task using the <code>Enabled</code> parameter.</p>
+    #[doc(hidden)]
     pub report: std::option::Option<crate::model::CompletionReport>,
 }
 impl DataRepositoryTask {
@@ -11359,11 +11570,10 @@ impl std::fmt::Debug for DataRepositoryTask {
         formatter.finish()
     }
 }
-/// See [`DataRepositoryTask`](crate::model::DataRepositoryTask)
+/// See [`DataRepositoryTask`](crate::model::DataRepositoryTask).
 pub mod data_repository_task {
 
-    /// A builder for [`DataRepositoryTask`](crate::model::DataRepositoryTask)
-    #[non_exhaustive]
+    /// A builder for [`DataRepositoryTask`](crate::model::DataRepositoryTask).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_id: std::option::Option<std::string::String>,
@@ -11590,7 +11800,7 @@ pub mod data_repository_task {
             self.report = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataRepositoryTask`](crate::model::DataRepositoryTask)
+        /// Consumes the builder and constructs a [`DataRepositoryTask`](crate::model::DataRepositoryTask).
         pub fn build(self) -> crate::model::DataRepositoryTask {
             crate::model::DataRepositoryTask {
                 task_id: self.task_id,
@@ -11611,7 +11821,7 @@ pub mod data_repository_task {
     }
 }
 impl DataRepositoryTask {
-    /// Creates a new builder-style object to manufacture [`DataRepositoryTask`](crate::model::DataRepositoryTask)
+    /// Creates a new builder-style object to manufacture [`DataRepositoryTask`](crate::model::DataRepositoryTask).
     pub fn builder() -> crate::model::data_repository_task::Builder {
         crate::model::data_repository_task::Builder::default()
     }
@@ -11622,12 +11832,16 @@ impl DataRepositoryTask {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CompletionReport {
     /// <p>Set <code>Enabled</code> to <code>True</code> to generate a <code>CompletionReport</code> when the task completes. If set to <code>true</code>, then you need to provide a report <code>Scope</code>, <code>Path</code>, and <code>Format</code>. Set <code>Enabled</code> to <code>False</code> if you do not want a <code>CompletionReport</code> generated when the task completes.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>Required if <code>Enabled</code> is set to <code>true</code>. Specifies the location of the report on the file system's linked S3 data repository. An absolute path that defines where the completion report will be stored in the destination location. The <code>Path</code> you provide must be located within the file system’s ExportPath. An example <code>Path</code> value is "s3://myBucket/myExportPath/optionalPrefix". The report provides the following information for each file in the report: FilePath, FileStatus, and ErrorCode. To learn more about a file system's <code>ExportPath</code>, see . </p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>Required if <code>Enabled</code> is set to <code>true</code>. Specifies the format of the <code>CompletionReport</code>. <code>REPORT_CSV_20191124</code> is the only format currently supported. When <code>Format</code> is set to <code>REPORT_CSV_20191124</code>, the <code>CompletionReport</code> is provided in CSV format, and is delivered to <code>{path}/task-{id}/failures.csv</code>. </p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::ReportFormat>,
     /// <p>Required if <code>Enabled</code> is set to <code>true</code>. Specifies the scope of the <code>CompletionReport</code>; <code>FAILED_FILES_ONLY</code> is the only scope currently supported. When <code>Scope</code> is set to <code>FAILED_FILES_ONLY</code>, the <code>CompletionReport</code> only contains information about files that the data repository task failed to process.</p>
+    #[doc(hidden)]
     pub scope: std::option::Option<crate::model::ReportScope>,
 }
 impl CompletionReport {
@@ -11658,11 +11872,10 @@ impl std::fmt::Debug for CompletionReport {
         formatter.finish()
     }
 }
-/// See [`CompletionReport`](crate::model::CompletionReport)
+/// See [`CompletionReport`](crate::model::CompletionReport).
 pub mod completion_report {
 
-    /// A builder for [`CompletionReport`](crate::model::CompletionReport)
-    #[non_exhaustive]
+    /// A builder for [`CompletionReport`](crate::model::CompletionReport).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -11714,7 +11927,7 @@ pub mod completion_report {
             self.scope = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompletionReport`](crate::model::CompletionReport)
+        /// Consumes the builder and constructs a [`CompletionReport`](crate::model::CompletionReport).
         pub fn build(self) -> crate::model::CompletionReport {
             crate::model::CompletionReport {
                 enabled: self.enabled,
@@ -11726,7 +11939,7 @@ pub mod completion_report {
     }
 }
 impl CompletionReport {
-    /// Creates a new builder-style object to manufacture [`CompletionReport`](crate::model::CompletionReport)
+    /// Creates a new builder-style object to manufacture [`CompletionReport`](crate::model::CompletionReport).
     pub fn builder() -> crate::model::completion_report::Builder {
         crate::model::completion_report::Builder::default()
     }
@@ -11839,12 +12052,16 @@ impl AsRef<str> for ReportFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataRepositoryTaskStatus {
     /// <p>The total number of files that the task will process. While a task is executing, the sum of <code>SucceededCount</code> plus <code>FailedCount</code> may not equal <code>TotalCount</code>. When the task is complete, <code>TotalCount</code> equals the sum of <code>SucceededCount</code> plus <code>FailedCount</code>.</p>
+    #[doc(hidden)]
     pub total_count: std::option::Option<i64>,
     /// <p>A running total of the number of files that the task has successfully processed.</p>
+    #[doc(hidden)]
     pub succeeded_count: std::option::Option<i64>,
     /// <p>A running total of the number of files that the task failed to process.</p>
+    #[doc(hidden)]
     pub failed_count: std::option::Option<i64>,
     /// <p>The time at which the task status was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DataRepositoryTaskStatus {
@@ -11875,11 +12092,10 @@ impl std::fmt::Debug for DataRepositoryTaskStatus {
         formatter.finish()
     }
 }
-/// See [`DataRepositoryTaskStatus`](crate::model::DataRepositoryTaskStatus)
+/// See [`DataRepositoryTaskStatus`](crate::model::DataRepositoryTaskStatus).
 pub mod data_repository_task_status {
 
-    /// A builder for [`DataRepositoryTaskStatus`](crate::model::DataRepositoryTaskStatus)
-    #[non_exhaustive]
+    /// A builder for [`DataRepositoryTaskStatus`](crate::model::DataRepositoryTaskStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_count: std::option::Option<i64>,
@@ -11931,7 +12147,7 @@ pub mod data_repository_task_status {
             self.last_updated_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataRepositoryTaskStatus`](crate::model::DataRepositoryTaskStatus)
+        /// Consumes the builder and constructs a [`DataRepositoryTaskStatus`](crate::model::DataRepositoryTaskStatus).
         pub fn build(self) -> crate::model::DataRepositoryTaskStatus {
             crate::model::DataRepositoryTaskStatus {
                 total_count: self.total_count,
@@ -11943,7 +12159,7 @@ pub mod data_repository_task_status {
     }
 }
 impl DataRepositoryTaskStatus {
-    /// Creates a new builder-style object to manufacture [`DataRepositoryTaskStatus`](crate::model::DataRepositoryTaskStatus)
+    /// Creates a new builder-style object to manufacture [`DataRepositoryTaskStatus`](crate::model::DataRepositoryTaskStatus).
     pub fn builder() -> crate::model::data_repository_task_status::Builder {
         crate::model::data_repository_task_status::Builder::default()
     }
@@ -11954,6 +12170,7 @@ impl DataRepositoryTaskStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataRepositoryTaskFailureDetails {
     /// <p>A detailed error message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DataRepositoryTaskFailureDetails {
@@ -11969,11 +12186,10 @@ impl std::fmt::Debug for DataRepositoryTaskFailureDetails {
         formatter.finish()
     }
 }
-/// See [`DataRepositoryTaskFailureDetails`](crate::model::DataRepositoryTaskFailureDetails)
+/// See [`DataRepositoryTaskFailureDetails`](crate::model::DataRepositoryTaskFailureDetails).
 pub mod data_repository_task_failure_details {
 
-    /// A builder for [`DataRepositoryTaskFailureDetails`](crate::model::DataRepositoryTaskFailureDetails)
-    #[non_exhaustive]
+    /// A builder for [`DataRepositoryTaskFailureDetails`](crate::model::DataRepositoryTaskFailureDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -11989,7 +12205,7 @@ pub mod data_repository_task_failure_details {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataRepositoryTaskFailureDetails`](crate::model::DataRepositoryTaskFailureDetails)
+        /// Consumes the builder and constructs a [`DataRepositoryTaskFailureDetails`](crate::model::DataRepositoryTaskFailureDetails).
         pub fn build(self) -> crate::model::DataRepositoryTaskFailureDetails {
             crate::model::DataRepositoryTaskFailureDetails {
                 message: self.message,
@@ -11998,7 +12214,7 @@ pub mod data_repository_task_failure_details {
     }
 }
 impl DataRepositoryTaskFailureDetails {
-    /// Creates a new builder-style object to manufacture [`DataRepositoryTaskFailureDetails`](crate::model::DataRepositoryTaskFailureDetails)
+    /// Creates a new builder-style object to manufacture [`DataRepositoryTaskFailureDetails`](crate::model::DataRepositoryTaskFailureDetails).
     pub fn builder() -> crate::model::data_repository_task_failure_details::Builder {
         crate::model::data_repository_task_failure_details::Builder::default()
     }
@@ -12146,8 +12362,10 @@ pub struct DataRepositoryTaskFilter {
     /// <li> <p>Use <code>file-system-id</code> to retrieve data repository tasks for specific file systems.</p> </li>
     /// <li> <p>Use <code>task-lifecycle</code> to retrieve data repository tasks with one or more specific lifecycle states, as follows: CANCELED, EXECUTING, FAILED, PENDING, and SUCCEEDED.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::DataRepositoryTaskFilterName>,
     /// <p>Use Values to include the specific file system IDs and task lifecycle states for the filters you are using.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DataRepositoryTaskFilter {
@@ -12172,11 +12390,10 @@ impl std::fmt::Debug for DataRepositoryTaskFilter {
         formatter.finish()
     }
 }
-/// See [`DataRepositoryTaskFilter`](crate::model::DataRepositoryTaskFilter)
+/// See [`DataRepositoryTaskFilter`](crate::model::DataRepositoryTaskFilter).
 pub mod data_repository_task_filter {
 
-    /// A builder for [`DataRepositoryTaskFilter`](crate::model::DataRepositoryTaskFilter)
-    #[non_exhaustive]
+    /// A builder for [`DataRepositoryTaskFilter`](crate::model::DataRepositoryTaskFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::DataRepositoryTaskFilterName>,
@@ -12223,7 +12440,7 @@ pub mod data_repository_task_filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataRepositoryTaskFilter`](crate::model::DataRepositoryTaskFilter)
+        /// Consumes the builder and constructs a [`DataRepositoryTaskFilter`](crate::model::DataRepositoryTaskFilter).
         pub fn build(self) -> crate::model::DataRepositoryTaskFilter {
             crate::model::DataRepositoryTaskFilter {
                 name: self.name,
@@ -12233,7 +12450,7 @@ pub mod data_repository_task_filter {
     }
 }
 impl DataRepositoryTaskFilter {
-    /// Creates a new builder-style object to manufacture [`DataRepositoryTaskFilter`](crate::model::DataRepositoryTaskFilter)
+    /// Creates a new builder-style object to manufacture [`DataRepositoryTaskFilter`](crate::model::DataRepositoryTaskFilter).
     pub fn builder() -> crate::model::data_repository_task_filter::Builder {
         crate::model::data_repository_task_filter::Builder::default()
     }
@@ -12307,8 +12524,10 @@ impl AsRef<str> for DataRepositoryTaskFilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
     /// <p>The name for this filter.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::FilterName>,
     /// <p>The values of the filter. These are all the values for any of the applied filters.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Filter {
@@ -12329,11 +12548,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::FilterName>,
@@ -12369,7 +12587,7 @@ pub mod filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 name: self.name,
@@ -12379,7 +12597,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -12463,6 +12681,7 @@ impl AsRef<str> for FilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Backup {
     /// <p>The ID of the backup.</p>
+    #[doc(hidden)]
     pub backup_id: std::option::Option<std::string::String>,
     /// <p>The lifecycle status of the backup.</p>
     /// <ul>
@@ -12474,34 +12693,49 @@ pub struct Backup {
     /// <li> <p> <code>DELETED</code> - Amazon FSx deleted the backup and it's no longer available.</p> </li>
     /// <li> <p> <code>FAILED</code> - Amazon FSx couldn't finish the backup.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::BackupLifecycle>,
     /// <p>Details explaining any failures that occurred when creating a backup.</p>
+    #[doc(hidden)]
     pub failure_details: std::option::Option<crate::model::BackupFailureDetails>,
     /// <p>The type of the file-system backup.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::BackupType>,
     /// <p>The current percent of progress of an asynchronous task.</p>
+    #[doc(hidden)]
     pub progress_percent: std::option::Option<i32>,
     /// <p>The time when a particular backup was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The ID of the Key Management Service (KMS) key used to encrypt the backup of the Amazon FSx file system's data at rest. </p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the backup resource.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The tags associated with a particular file system.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The metadata of the file system associated with the backup. This metadata is persisted even if the file system is deleted.</p>
+    #[doc(hidden)]
     pub file_system: std::option::Option<crate::model::FileSystem>,
     /// <p>The configuration of the self-managed Microsoft Active Directory directory to which the Windows File Server instance is joined.</p>
+    #[doc(hidden)]
     pub directory_information: std::option::Option<crate::model::ActiveDirectoryBackupAttributes>,
     /// <p>An Amazon Web Services account ID. This ID is a 12-digit number that you use to construct Amazon Resource Names (ARNs) for resources.</p>
+    #[doc(hidden)]
     pub owner_id: std::option::Option<std::string::String>,
     /// <p>The ID of the source backup. Specifies the backup that you are copying.</p>
+    #[doc(hidden)]
     pub source_backup_id: std::option::Option<std::string::String>,
     /// <p>The source Region of the backup. Specifies the Region from where this backup is copied.</p>
+    #[doc(hidden)]
     pub source_backup_region: std::option::Option<std::string::String>,
     /// <p>Specifies the resource type that's backed up.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>Describes an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume.</p>
+    #[doc(hidden)]
     pub volume: std::option::Option<crate::model::Volume>,
 }
 impl Backup {
@@ -12603,11 +12837,10 @@ impl std::fmt::Debug for Backup {
         formatter.finish()
     }
 }
-/// See [`Backup`](crate::model::Backup)
+/// See [`Backup`](crate::model::Backup).
 pub mod backup {
 
-    /// A builder for [`Backup`](crate::model::Backup)
-    #[non_exhaustive]
+    /// A builder for [`Backup`](crate::model::Backup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_id: std::option::Option<std::string::String>,
@@ -12843,7 +13076,7 @@ pub mod backup {
             self.volume = input;
             self
         }
-        /// Consumes the builder and constructs a [`Backup`](crate::model::Backup)
+        /// Consumes the builder and constructs a [`Backup`](crate::model::Backup).
         pub fn build(self) -> crate::model::Backup {
             crate::model::Backup {
                 backup_id: self.backup_id,
@@ -12867,7 +13100,7 @@ pub mod backup {
     }
 }
 impl Backup {
-    /// Creates a new builder-style object to manufacture [`Backup`](crate::model::Backup)
+    /// Creates a new builder-style object to manufacture [`Backup`](crate::model::Backup).
     pub fn builder() -> crate::model::backup::Builder {
         crate::model::backup::Builder::default()
     }
@@ -12933,10 +13166,13 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActiveDirectoryBackupAttributes {
     /// <p>The fully qualified domain name of the self-managed Active Directory directory.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services Managed Microsoft Active Directory instance to which the file system is joined.</p>
+    #[doc(hidden)]
     pub active_directory_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for a given resource. ARNs uniquely identify Amazon Web Services resources. We require an ARN when you need to specify a resource unambiguously across all of Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl ActiveDirectoryBackupAttributes {
@@ -12962,11 +13198,10 @@ impl std::fmt::Debug for ActiveDirectoryBackupAttributes {
         formatter.finish()
     }
 }
-/// See [`ActiveDirectoryBackupAttributes`](crate::model::ActiveDirectoryBackupAttributes)
+/// See [`ActiveDirectoryBackupAttributes`](crate::model::ActiveDirectoryBackupAttributes).
 pub mod active_directory_backup_attributes {
 
-    /// A builder for [`ActiveDirectoryBackupAttributes`](crate::model::ActiveDirectoryBackupAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ActiveDirectoryBackupAttributes`](crate::model::ActiveDirectoryBackupAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -13007,7 +13242,7 @@ pub mod active_directory_backup_attributes {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActiveDirectoryBackupAttributes`](crate::model::ActiveDirectoryBackupAttributes)
+        /// Consumes the builder and constructs a [`ActiveDirectoryBackupAttributes`](crate::model::ActiveDirectoryBackupAttributes).
         pub fn build(self) -> crate::model::ActiveDirectoryBackupAttributes {
             crate::model::ActiveDirectoryBackupAttributes {
                 domain_name: self.domain_name,
@@ -13018,7 +13253,7 @@ pub mod active_directory_backup_attributes {
     }
 }
 impl ActiveDirectoryBackupAttributes {
-    /// Creates a new builder-style object to manufacture [`ActiveDirectoryBackupAttributes`](crate::model::ActiveDirectoryBackupAttributes)
+    /// Creates a new builder-style object to manufacture [`ActiveDirectoryBackupAttributes`](crate::model::ActiveDirectoryBackupAttributes).
     pub fn builder() -> crate::model::active_directory_backup_attributes::Builder {
         crate::model::active_directory_backup_attributes::Builder::default()
     }
@@ -13088,6 +13323,7 @@ impl AsRef<str> for BackupType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackupFailureDetails {
     /// <p>A message describing the backup-creation failure.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl BackupFailureDetails {
@@ -13103,11 +13339,10 @@ impl std::fmt::Debug for BackupFailureDetails {
         formatter.finish()
     }
 }
-/// See [`BackupFailureDetails`](crate::model::BackupFailureDetails)
+/// See [`BackupFailureDetails`](crate::model::BackupFailureDetails).
 pub mod backup_failure_details {
 
-    /// A builder for [`BackupFailureDetails`](crate::model::BackupFailureDetails)
-    #[non_exhaustive]
+    /// A builder for [`BackupFailureDetails`](crate::model::BackupFailureDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -13123,7 +13358,7 @@ pub mod backup_failure_details {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackupFailureDetails`](crate::model::BackupFailureDetails)
+        /// Consumes the builder and constructs a [`BackupFailureDetails`](crate::model::BackupFailureDetails).
         pub fn build(self) -> crate::model::BackupFailureDetails {
             crate::model::BackupFailureDetails {
                 message: self.message,
@@ -13132,7 +13367,7 @@ pub mod backup_failure_details {
     }
 }
 impl BackupFailureDetails {
-    /// Creates a new builder-style object to manufacture [`BackupFailureDetails`](crate::model::BackupFailureDetails)
+    /// Creates a new builder-style object to manufacture [`BackupFailureDetails`](crate::model::BackupFailureDetails).
     pub fn builder() -> crate::model::backup_failure_details::Builder {
         crate::model::backup_failure_details::Builder::default()
     }
@@ -13258,8 +13493,10 @@ impl AsRef<str> for BackupLifecycle {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteVolumeOntapResponse {
     /// <p>The ID of the source backup. Specifies the backup that you are copying.</p>
+    #[doc(hidden)]
     pub final_backup_id: std::option::Option<std::string::String>,
     /// <p>A list of <code>Tag</code> values, with a maximum of 50 elements.</p>
+    #[doc(hidden)]
     pub final_backup_tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl DeleteVolumeOntapResponse {
@@ -13280,11 +13517,10 @@ impl std::fmt::Debug for DeleteVolumeOntapResponse {
         formatter.finish()
     }
 }
-/// See [`DeleteVolumeOntapResponse`](crate::model::DeleteVolumeOntapResponse)
+/// See [`DeleteVolumeOntapResponse`](crate::model::DeleteVolumeOntapResponse).
 pub mod delete_volume_ontap_response {
 
-    /// A builder for [`DeleteVolumeOntapResponse`](crate::model::DeleteVolumeOntapResponse)
-    #[non_exhaustive]
+    /// A builder for [`DeleteVolumeOntapResponse`](crate::model::DeleteVolumeOntapResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) final_backup_id: std::option::Option<std::string::String>,
@@ -13323,7 +13559,7 @@ pub mod delete_volume_ontap_response {
             self.final_backup_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteVolumeOntapResponse`](crate::model::DeleteVolumeOntapResponse)
+        /// Consumes the builder and constructs a [`DeleteVolumeOntapResponse`](crate::model::DeleteVolumeOntapResponse).
         pub fn build(self) -> crate::model::DeleteVolumeOntapResponse {
             crate::model::DeleteVolumeOntapResponse {
                 final_backup_id: self.final_backup_id,
@@ -13333,7 +13569,7 @@ pub mod delete_volume_ontap_response {
     }
 }
 impl DeleteVolumeOntapResponse {
-    /// Creates a new builder-style object to manufacture [`DeleteVolumeOntapResponse`](crate::model::DeleteVolumeOntapResponse)
+    /// Creates a new builder-style object to manufacture [`DeleteVolumeOntapResponse`](crate::model::DeleteVolumeOntapResponse).
     pub fn builder() -> crate::model::delete_volume_ontap_response::Builder {
         crate::model::delete_volume_ontap_response::Builder::default()
     }
@@ -13344,6 +13580,7 @@ impl DeleteVolumeOntapResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteVolumeOpenZfsConfiguration {
     /// <p>To delete the volume's child volumes, snapshots, and clones, use the string <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<std::vec::Vec<crate::model::DeleteOpenZfsVolumeOption>>,
 }
 impl DeleteVolumeOpenZfsConfiguration {
@@ -13359,11 +13596,10 @@ impl std::fmt::Debug for DeleteVolumeOpenZfsConfiguration {
         formatter.finish()
     }
 }
-/// See [`DeleteVolumeOpenZfsConfiguration`](crate::model::DeleteVolumeOpenZfsConfiguration)
+/// See [`DeleteVolumeOpenZfsConfiguration`](crate::model::DeleteVolumeOpenZfsConfiguration).
 pub mod delete_volume_open_zfs_configuration {
 
-    /// A builder for [`DeleteVolumeOpenZfsConfiguration`](crate::model::DeleteVolumeOpenZfsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DeleteVolumeOpenZfsConfiguration`](crate::model::DeleteVolumeOpenZfsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options:
@@ -13389,7 +13625,7 @@ pub mod delete_volume_open_zfs_configuration {
             self.options = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteVolumeOpenZfsConfiguration`](crate::model::DeleteVolumeOpenZfsConfiguration)
+        /// Consumes the builder and constructs a [`DeleteVolumeOpenZfsConfiguration`](crate::model::DeleteVolumeOpenZfsConfiguration).
         pub fn build(self) -> crate::model::DeleteVolumeOpenZfsConfiguration {
             crate::model::DeleteVolumeOpenZfsConfiguration {
                 options: self.options,
@@ -13398,7 +13634,7 @@ pub mod delete_volume_open_zfs_configuration {
     }
 }
 impl DeleteVolumeOpenZfsConfiguration {
-    /// Creates a new builder-style object to manufacture [`DeleteVolumeOpenZfsConfiguration`](crate::model::DeleteVolumeOpenZfsConfiguration)
+    /// Creates a new builder-style object to manufacture [`DeleteVolumeOpenZfsConfiguration`](crate::model::DeleteVolumeOpenZfsConfiguration).
     pub fn builder() -> crate::model::delete_volume_open_zfs_configuration::Builder {
         crate::model::delete_volume_open_zfs_configuration::Builder::default()
     }
@@ -13464,8 +13700,10 @@ impl AsRef<str> for DeleteOpenZfsVolumeOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteVolumeOntapConfiguration {
     /// <p>Set to true if you want to skip taking a final backup of the volume you are deleting.</p>
+    #[doc(hidden)]
     pub skip_final_backup: std::option::Option<bool>,
     /// <p>A list of <code>Tag</code> values, with a maximum of 50 elements.</p>
+    #[doc(hidden)]
     pub final_backup_tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl DeleteVolumeOntapConfiguration {
@@ -13486,11 +13724,10 @@ impl std::fmt::Debug for DeleteVolumeOntapConfiguration {
         formatter.finish()
     }
 }
-/// See [`DeleteVolumeOntapConfiguration`](crate::model::DeleteVolumeOntapConfiguration)
+/// See [`DeleteVolumeOntapConfiguration`](crate::model::DeleteVolumeOntapConfiguration).
 pub mod delete_volume_ontap_configuration {
 
-    /// A builder for [`DeleteVolumeOntapConfiguration`](crate::model::DeleteVolumeOntapConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DeleteVolumeOntapConfiguration`](crate::model::DeleteVolumeOntapConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) skip_final_backup: std::option::Option<bool>,
@@ -13526,7 +13763,7 @@ pub mod delete_volume_ontap_configuration {
             self.final_backup_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteVolumeOntapConfiguration`](crate::model::DeleteVolumeOntapConfiguration)
+        /// Consumes the builder and constructs a [`DeleteVolumeOntapConfiguration`](crate::model::DeleteVolumeOntapConfiguration).
         pub fn build(self) -> crate::model::DeleteVolumeOntapConfiguration {
             crate::model::DeleteVolumeOntapConfiguration {
                 skip_final_backup: self.skip_final_backup,
@@ -13536,7 +13773,7 @@ pub mod delete_volume_ontap_configuration {
     }
 }
 impl DeleteVolumeOntapConfiguration {
-    /// Creates a new builder-style object to manufacture [`DeleteVolumeOntapConfiguration`](crate::model::DeleteVolumeOntapConfiguration)
+    /// Creates a new builder-style object to manufacture [`DeleteVolumeOntapConfiguration`](crate::model::DeleteVolumeOntapConfiguration).
     pub fn builder() -> crate::model::delete_volume_ontap_configuration::Builder {
         crate::model::delete_volume_ontap_configuration::Builder::default()
     }
@@ -13547,8 +13784,10 @@ impl DeleteVolumeOntapConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteFileSystemOpenZfsResponse {
     /// <p>The ID of the source backup. Specifies the backup that you are copying.</p>
+    #[doc(hidden)]
     pub final_backup_id: std::option::Option<std::string::String>,
     /// <p>A list of <code>Tag</code> values, with a maximum of 50 elements.</p>
+    #[doc(hidden)]
     pub final_backup_tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl DeleteFileSystemOpenZfsResponse {
@@ -13569,11 +13808,10 @@ impl std::fmt::Debug for DeleteFileSystemOpenZfsResponse {
         formatter.finish()
     }
 }
-/// See [`DeleteFileSystemOpenZfsResponse`](crate::model::DeleteFileSystemOpenZfsResponse)
+/// See [`DeleteFileSystemOpenZfsResponse`](crate::model::DeleteFileSystemOpenZfsResponse).
 pub mod delete_file_system_open_zfs_response {
 
-    /// A builder for [`DeleteFileSystemOpenZfsResponse`](crate::model::DeleteFileSystemOpenZfsResponse)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFileSystemOpenZfsResponse`](crate::model::DeleteFileSystemOpenZfsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) final_backup_id: std::option::Option<std::string::String>,
@@ -13612,7 +13850,7 @@ pub mod delete_file_system_open_zfs_response {
             self.final_backup_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFileSystemOpenZfsResponse`](crate::model::DeleteFileSystemOpenZfsResponse)
+        /// Consumes the builder and constructs a [`DeleteFileSystemOpenZfsResponse`](crate::model::DeleteFileSystemOpenZfsResponse).
         pub fn build(self) -> crate::model::DeleteFileSystemOpenZfsResponse {
             crate::model::DeleteFileSystemOpenZfsResponse {
                 final_backup_id: self.final_backup_id,
@@ -13622,7 +13860,7 @@ pub mod delete_file_system_open_zfs_response {
     }
 }
 impl DeleteFileSystemOpenZfsResponse {
-    /// Creates a new builder-style object to manufacture [`DeleteFileSystemOpenZfsResponse`](crate::model::DeleteFileSystemOpenZfsResponse)
+    /// Creates a new builder-style object to manufacture [`DeleteFileSystemOpenZfsResponse`](crate::model::DeleteFileSystemOpenZfsResponse).
     pub fn builder() -> crate::model::delete_file_system_open_zfs_response::Builder {
         crate::model::delete_file_system_open_zfs_response::Builder::default()
     }
@@ -13633,8 +13871,10 @@ impl DeleteFileSystemOpenZfsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteFileSystemLustreResponse {
     /// <p>The ID of the final backup for this file system.</p>
+    #[doc(hidden)]
     pub final_backup_id: std::option::Option<std::string::String>,
     /// <p>The set of tags applied to the final backup.</p>
+    #[doc(hidden)]
     pub final_backup_tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl DeleteFileSystemLustreResponse {
@@ -13655,11 +13895,10 @@ impl std::fmt::Debug for DeleteFileSystemLustreResponse {
         formatter.finish()
     }
 }
-/// See [`DeleteFileSystemLustreResponse`](crate::model::DeleteFileSystemLustreResponse)
+/// See [`DeleteFileSystemLustreResponse`](crate::model::DeleteFileSystemLustreResponse).
 pub mod delete_file_system_lustre_response {
 
-    /// A builder for [`DeleteFileSystemLustreResponse`](crate::model::DeleteFileSystemLustreResponse)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFileSystemLustreResponse`](crate::model::DeleteFileSystemLustreResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) final_backup_id: std::option::Option<std::string::String>,
@@ -13698,7 +13937,7 @@ pub mod delete_file_system_lustre_response {
             self.final_backup_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFileSystemLustreResponse`](crate::model::DeleteFileSystemLustreResponse)
+        /// Consumes the builder and constructs a [`DeleteFileSystemLustreResponse`](crate::model::DeleteFileSystemLustreResponse).
         pub fn build(self) -> crate::model::DeleteFileSystemLustreResponse {
             crate::model::DeleteFileSystemLustreResponse {
                 final_backup_id: self.final_backup_id,
@@ -13708,7 +13947,7 @@ pub mod delete_file_system_lustre_response {
     }
 }
 impl DeleteFileSystemLustreResponse {
-    /// Creates a new builder-style object to manufacture [`DeleteFileSystemLustreResponse`](crate::model::DeleteFileSystemLustreResponse)
+    /// Creates a new builder-style object to manufacture [`DeleteFileSystemLustreResponse`](crate::model::DeleteFileSystemLustreResponse).
     pub fn builder() -> crate::model::delete_file_system_lustre_response::Builder {
         crate::model::delete_file_system_lustre_response::Builder::default()
     }
@@ -13719,8 +13958,10 @@ impl DeleteFileSystemLustreResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteFileSystemWindowsResponse {
     /// <p>The ID of the final backup for this file system.</p>
+    #[doc(hidden)]
     pub final_backup_id: std::option::Option<std::string::String>,
     /// <p>The set of tags applied to the final backup.</p>
+    #[doc(hidden)]
     pub final_backup_tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl DeleteFileSystemWindowsResponse {
@@ -13741,11 +13982,10 @@ impl std::fmt::Debug for DeleteFileSystemWindowsResponse {
         formatter.finish()
     }
 }
-/// See [`DeleteFileSystemWindowsResponse`](crate::model::DeleteFileSystemWindowsResponse)
+/// See [`DeleteFileSystemWindowsResponse`](crate::model::DeleteFileSystemWindowsResponse).
 pub mod delete_file_system_windows_response {
 
-    /// A builder for [`DeleteFileSystemWindowsResponse`](crate::model::DeleteFileSystemWindowsResponse)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFileSystemWindowsResponse`](crate::model::DeleteFileSystemWindowsResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) final_backup_id: std::option::Option<std::string::String>,
@@ -13784,7 +14024,7 @@ pub mod delete_file_system_windows_response {
             self.final_backup_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFileSystemWindowsResponse`](crate::model::DeleteFileSystemWindowsResponse)
+        /// Consumes the builder and constructs a [`DeleteFileSystemWindowsResponse`](crate::model::DeleteFileSystemWindowsResponse).
         pub fn build(self) -> crate::model::DeleteFileSystemWindowsResponse {
             crate::model::DeleteFileSystemWindowsResponse {
                 final_backup_id: self.final_backup_id,
@@ -13794,7 +14034,7 @@ pub mod delete_file_system_windows_response {
     }
 }
 impl DeleteFileSystemWindowsResponse {
-    /// Creates a new builder-style object to manufacture [`DeleteFileSystemWindowsResponse`](crate::model::DeleteFileSystemWindowsResponse)
+    /// Creates a new builder-style object to manufacture [`DeleteFileSystemWindowsResponse`](crate::model::DeleteFileSystemWindowsResponse).
     pub fn builder() -> crate::model::delete_file_system_windows_response::Builder {
         crate::model::delete_file_system_windows_response::Builder::default()
     }
@@ -13805,10 +14045,13 @@ impl DeleteFileSystemWindowsResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteFileSystemOpenZfsConfiguration {
     /// <p>By default, Amazon FSx for OpenZFS takes a final backup on your behalf when the <code>DeleteFileSystem</code> operation is invoked. Doing this helps protect you from data loss, and we highly recommend taking the final backup. If you want to skip taking a final backup, set this value to <code>true</code>.</p>
+    #[doc(hidden)]
     pub skip_final_backup: std::option::Option<bool>,
     /// <p>A list of tags to apply to the file system's final backup.</p>
+    #[doc(hidden)]
     pub final_backup_tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>To delete a file system if there are child volumes present below the root volume, use the string <code>DELETE_CHILD_VOLUMES_AND_SNAPSHOTS</code>. If your file system has child volumes and you don't use this option, the delete request will fail.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<std::vec::Vec<crate::model::DeleteFileSystemOpenZfsOption>>,
 }
 impl DeleteFileSystemOpenZfsConfiguration {
@@ -13834,11 +14077,10 @@ impl std::fmt::Debug for DeleteFileSystemOpenZfsConfiguration {
         formatter.finish()
     }
 }
-/// See [`DeleteFileSystemOpenZfsConfiguration`](crate::model::DeleteFileSystemOpenZfsConfiguration)
+/// See [`DeleteFileSystemOpenZfsConfiguration`](crate::model::DeleteFileSystemOpenZfsConfiguration).
 pub mod delete_file_system_open_zfs_configuration {
 
-    /// A builder for [`DeleteFileSystemOpenZfsConfiguration`](crate::model::DeleteFileSystemOpenZfsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFileSystemOpenZfsConfiguration`](crate::model::DeleteFileSystemOpenZfsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) skip_final_backup: std::option::Option<bool>,
@@ -13895,7 +14137,7 @@ pub mod delete_file_system_open_zfs_configuration {
             self.options = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFileSystemOpenZfsConfiguration`](crate::model::DeleteFileSystemOpenZfsConfiguration)
+        /// Consumes the builder and constructs a [`DeleteFileSystemOpenZfsConfiguration`](crate::model::DeleteFileSystemOpenZfsConfiguration).
         pub fn build(self) -> crate::model::DeleteFileSystemOpenZfsConfiguration {
             crate::model::DeleteFileSystemOpenZfsConfiguration {
                 skip_final_backup: self.skip_final_backup,
@@ -13906,7 +14148,7 @@ pub mod delete_file_system_open_zfs_configuration {
     }
 }
 impl DeleteFileSystemOpenZfsConfiguration {
-    /// Creates a new builder-style object to manufacture [`DeleteFileSystemOpenZfsConfiguration`](crate::model::DeleteFileSystemOpenZfsConfiguration)
+    /// Creates a new builder-style object to manufacture [`DeleteFileSystemOpenZfsConfiguration`](crate::model::DeleteFileSystemOpenZfsConfiguration).
     pub fn builder() -> crate::model::delete_file_system_open_zfs_configuration::Builder {
         crate::model::delete_file_system_open_zfs_configuration::Builder::default()
     }
@@ -13974,8 +14216,10 @@ pub struct DeleteFileSystemLustreConfiguration {
     /// <p>Set <code>SkipFinalBackup</code> to false if you want to take a final backup of the file system you are deleting. By default, Amazon FSx will not take a final backup on your behalf when the <code>DeleteFileSystem</code> operation is invoked. (Default = true)</p> <note>
     /// <p>The <code>fsx:CreateBackup</code> permission is required if you set <code>SkipFinalBackup</code> to <code>false</code> in order to delete the file system and take a final backup.</p>
     /// </note>
+    #[doc(hidden)]
     pub skip_final_backup: std::option::Option<bool>,
     /// <p>Use if <code>SkipFinalBackup</code> is set to <code>false</code>, and you want to apply an array of tags to the final backup. If you have set the file system property <code>CopyTagsToBackups</code> to true, and you specify one or more <code>FinalBackupTags</code> when deleting a file system, Amazon FSx will not copy any existing file system tags to the backup.</p>
+    #[doc(hidden)]
     pub final_backup_tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl DeleteFileSystemLustreConfiguration {
@@ -13998,11 +14242,10 @@ impl std::fmt::Debug for DeleteFileSystemLustreConfiguration {
         formatter.finish()
     }
 }
-/// See [`DeleteFileSystemLustreConfiguration`](crate::model::DeleteFileSystemLustreConfiguration)
+/// See [`DeleteFileSystemLustreConfiguration`](crate::model::DeleteFileSystemLustreConfiguration).
 pub mod delete_file_system_lustre_configuration {
 
-    /// A builder for [`DeleteFileSystemLustreConfiguration`](crate::model::DeleteFileSystemLustreConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFileSystemLustreConfiguration`](crate::model::DeleteFileSystemLustreConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) skip_final_backup: std::option::Option<bool>,
@@ -14042,7 +14285,7 @@ pub mod delete_file_system_lustre_configuration {
             self.final_backup_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFileSystemLustreConfiguration`](crate::model::DeleteFileSystemLustreConfiguration)
+        /// Consumes the builder and constructs a [`DeleteFileSystemLustreConfiguration`](crate::model::DeleteFileSystemLustreConfiguration).
         pub fn build(self) -> crate::model::DeleteFileSystemLustreConfiguration {
             crate::model::DeleteFileSystemLustreConfiguration {
                 skip_final_backup: self.skip_final_backup,
@@ -14052,7 +14295,7 @@ pub mod delete_file_system_lustre_configuration {
     }
 }
 impl DeleteFileSystemLustreConfiguration {
-    /// Creates a new builder-style object to manufacture [`DeleteFileSystemLustreConfiguration`](crate::model::DeleteFileSystemLustreConfiguration)
+    /// Creates a new builder-style object to manufacture [`DeleteFileSystemLustreConfiguration`](crate::model::DeleteFileSystemLustreConfiguration).
     pub fn builder() -> crate::model::delete_file_system_lustre_configuration::Builder {
         crate::model::delete_file_system_lustre_configuration::Builder::default()
     }
@@ -14063,8 +14306,10 @@ impl DeleteFileSystemLustreConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteFileSystemWindowsConfiguration {
     /// <p>By default, Amazon FSx for Windows takes a final backup on your behalf when the <code>DeleteFileSystem</code> operation is invoked. Doing this helps protect you from data loss, and we highly recommend taking the final backup. If you want to skip this backup, use this flag to do so.</p>
+    #[doc(hidden)]
     pub skip_final_backup: std::option::Option<bool>,
     /// <p>A set of tags for your final backup.</p>
+    #[doc(hidden)]
     pub final_backup_tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl DeleteFileSystemWindowsConfiguration {
@@ -14085,11 +14330,10 @@ impl std::fmt::Debug for DeleteFileSystemWindowsConfiguration {
         formatter.finish()
     }
 }
-/// See [`DeleteFileSystemWindowsConfiguration`](crate::model::DeleteFileSystemWindowsConfiguration)
+/// See [`DeleteFileSystemWindowsConfiguration`](crate::model::DeleteFileSystemWindowsConfiguration).
 pub mod delete_file_system_windows_configuration {
 
-    /// A builder for [`DeleteFileSystemWindowsConfiguration`](crate::model::DeleteFileSystemWindowsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFileSystemWindowsConfiguration`](crate::model::DeleteFileSystemWindowsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) skip_final_backup: std::option::Option<bool>,
@@ -14125,7 +14369,7 @@ pub mod delete_file_system_windows_configuration {
             self.final_backup_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFileSystemWindowsConfiguration`](crate::model::DeleteFileSystemWindowsConfiguration)
+        /// Consumes the builder and constructs a [`DeleteFileSystemWindowsConfiguration`](crate::model::DeleteFileSystemWindowsConfiguration).
         pub fn build(self) -> crate::model::DeleteFileSystemWindowsConfiguration {
             crate::model::DeleteFileSystemWindowsConfiguration {
                 skip_final_backup: self.skip_final_backup,
@@ -14135,7 +14379,7 @@ pub mod delete_file_system_windows_configuration {
     }
 }
 impl DeleteFileSystemWindowsConfiguration {
-    /// Creates a new builder-style object to manufacture [`DeleteFileSystemWindowsConfiguration`](crate::model::DeleteFileSystemWindowsConfiguration)
+    /// Creates a new builder-style object to manufacture [`DeleteFileSystemWindowsConfiguration`](crate::model::DeleteFileSystemWindowsConfiguration).
     pub fn builder() -> crate::model::delete_file_system_windows_configuration::Builder {
         crate::model::delete_file_system_windows_configuration::Builder::default()
     }
@@ -14146,6 +14390,7 @@ impl DeleteFileSystemWindowsConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateOntapVolumeConfiguration {
     /// <p>Specifies the location in the SVM's namespace where the volume is mounted. The <code>JunctionPath</code> must have a leading forward slash, such as <code>/vol3</code>.</p>
+    #[doc(hidden)]
     pub junction_path: std::option::Option<std::string::String>,
     /// <p>The security style for the volume. Specify one of the following values:</p>
     /// <ul>
@@ -14153,12 +14398,16 @@ pub struct CreateOntapVolumeConfiguration {
     /// <li> <p> <code>NTFS</code> if the file system is managed by a Windows administrator, the majority of users are SMB clients, and an application accessing the data uses a Windows user as the service account.</p> </li>
     /// <li> <p> <code>MIXED</code> if the file system is managed by both UNIX and Windows administrators and users consist of both NFS and SMB clients.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub security_style: std::option::Option<crate::model::SecurityStyle>,
     /// <p>Specifies the size of the volume, in megabytes (MB), that you are creating.</p>
+    #[doc(hidden)]
     pub size_in_megabytes: std::option::Option<i32>,
     /// <p>Set to true to enable deduplication, compression, and compaction storage efficiency features on the volume.</p>
+    #[doc(hidden)]
     pub storage_efficiency_enabled: std::option::Option<bool>,
     /// <p>Specifies the ONTAP SVM in which to create the volume.</p>
+    #[doc(hidden)]
     pub storage_virtual_machine_id: std::option::Option<std::string::String>,
     /// <p>Describes the data tiering policy for an ONTAP volume. When enabled, Amazon FSx for ONTAP's intelligent tiering automatically transitions a volume's data between the file system's primary storage and capacity pool storage based on your access patterns.</p>
     /// <p>Valid tiering policies are the following:</p>
@@ -14174,6 +14423,7 @@ pub struct CreateOntapVolumeConfiguration {
     /// <ul>
     /// <li> <p> <code>NONE</code> - keeps a volume's data in the primary storage tier, preventing it from being moved to the capacity pool tier.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub tiering_policy: std::option::Option<crate::model::TieringPolicy>,
 }
 impl CreateOntapVolumeConfiguration {
@@ -14238,11 +14488,10 @@ impl std::fmt::Debug for CreateOntapVolumeConfiguration {
         formatter.finish()
     }
 }
-/// See [`CreateOntapVolumeConfiguration`](crate::model::CreateOntapVolumeConfiguration)
+/// See [`CreateOntapVolumeConfiguration`](crate::model::CreateOntapVolumeConfiguration).
 pub mod create_ontap_volume_configuration {
 
-    /// A builder for [`CreateOntapVolumeConfiguration`](crate::model::CreateOntapVolumeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CreateOntapVolumeConfiguration`](crate::model::CreateOntapVolumeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) junction_path: std::option::Option<std::string::String>,
@@ -14361,7 +14610,7 @@ pub mod create_ontap_volume_configuration {
             self.tiering_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateOntapVolumeConfiguration`](crate::model::CreateOntapVolumeConfiguration)
+        /// Consumes the builder and constructs a [`CreateOntapVolumeConfiguration`](crate::model::CreateOntapVolumeConfiguration).
         pub fn build(self) -> crate::model::CreateOntapVolumeConfiguration {
             crate::model::CreateOntapVolumeConfiguration {
                 junction_path: self.junction_path,
@@ -14375,7 +14624,7 @@ pub mod create_ontap_volume_configuration {
     }
 }
 impl CreateOntapVolumeConfiguration {
-    /// Creates a new builder-style object to manufacture [`CreateOntapVolumeConfiguration`](crate::model::CreateOntapVolumeConfiguration)
+    /// Creates a new builder-style object to manufacture [`CreateOntapVolumeConfiguration`](crate::model::CreateOntapVolumeConfiguration).
     pub fn builder() -> crate::model::create_ontap_volume_configuration::Builder {
         crate::model::create_ontap_volume_configuration::Builder::default()
     }
@@ -14386,13 +14635,17 @@ impl CreateOntapVolumeConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateOpenZfsVolumeConfiguration {
     /// <p>The ID of the volume to use as the parent volume of the volume that you are creating.</p>
+    #[doc(hidden)]
     pub parent_volume_id: std::option::Option<std::string::String>,
     /// <p>Specifies the amount of storage in gibibytes (GiB) to reserve from the parent volume. Setting <code>StorageCapacityReservationGiB</code> guarantees that the specified amount of storage space on the parent volume will always be available for the volume. You can't reserve more storage than the parent volume has. To <i>not</i> specify a storage capacity reservation, set this to <code>0</code> or <code>-1</code>. For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties">Volume properties</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.</p>
+    #[doc(hidden)]
     pub storage_capacity_reservation_gi_b: std::option::Option<i32>,
     /// <p>Sets the maximum storage size in gibibytes (GiB) for the volume. You can specify a quota that is larger than the storage on the parent volume. A volume quota limits the amount of storage that the volume can consume to the configured amount, but does not guarantee the space will be available on the parent volume. To guarantee quota space, you must also set <code>StorageCapacityReservationGiB</code>. To <i>not</i> specify a storage capacity quota, set this to <code>-1</code>. </p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties">Volume properties</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.</p>
+    #[doc(hidden)]
     pub storage_capacity_quota_gi_b: std::option::Option<i32>,
     /// <p>Specifies the suggested block size for a volume in a ZFS dataset, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. We recommend using the default setting for the majority of use cases. Generally, workloads that write in fixed small or large record sizes may benefit from setting a custom record size, like database workloads (small record size) or media streaming workloads (large record size). For additional guidance on when to set a custom record size, see <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#record-size-performance"> ZFS Record size</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.</p>
+    #[doc(hidden)]
     pub record_size_ki_b: std::option::Option<i32>,
     /// <p>Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by default.</p>
     /// <ul>
@@ -14401,17 +14654,23 @@ pub struct CreateOpenZfsVolumeConfiguration {
     /// <li> <p> <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. LZ4 compression provides a lower level of compression and higher write throughput performance than ZSTD compression.</p> </li>
     /// </ul>
     /// <p>For more information about volume compression types and the performance of your Amazon FSx for OpenZFS file system, see <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for maximizing performance</a> File system and volume settings in the <i>Amazon FSx for OpenZFS User Guide</i>.</p>
+    #[doc(hidden)]
     pub data_compression_type: std::option::Option<crate::model::OpenZfsDataCompressionType>,
     /// <p>A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the user doesn't specify tags. If this value is <code>true</code>, and you specify one or more tags, only the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are copied from the volume, regardless of this value.</p>
+    #[doc(hidden)]
     pub copy_tags_to_snapshots: std::option::Option<bool>,
     /// <p>The configuration object that specifies the snapshot to use as the origin of the data for the volume.</p>
+    #[doc(hidden)]
     pub origin_snapshot:
         std::option::Option<crate::model::CreateOpenZfsOriginSnapshotConfiguration>,
     /// <p>A Boolean value indicating whether the volume is read-only.</p>
+    #[doc(hidden)]
     pub read_only: std::option::Option<bool>,
     /// <p>The configuration object for mounting a Network File System (NFS) file system.</p>
+    #[doc(hidden)]
     pub nfs_exports: std::option::Option<std::vec::Vec<crate::model::OpenZfsNfsExport>>,
     /// <p>An object specifying how much storage users or groups can use on the volume.</p>
+    #[doc(hidden)]
     pub user_and_group_quotas:
         std::option::Option<std::vec::Vec<crate::model::OpenZfsUserOrGroupQuota>>,
 }
@@ -14492,11 +14751,10 @@ impl std::fmt::Debug for CreateOpenZfsVolumeConfiguration {
         formatter.finish()
     }
 }
-/// See [`CreateOpenZfsVolumeConfiguration`](crate::model::CreateOpenZfsVolumeConfiguration)
+/// See [`CreateOpenZfsVolumeConfiguration`](crate::model::CreateOpenZfsVolumeConfiguration).
 pub mod create_open_zfs_volume_configuration {
 
-    /// A builder for [`CreateOpenZfsVolumeConfiguration`](crate::model::CreateOpenZfsVolumeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CreateOpenZfsVolumeConfiguration`](crate::model::CreateOpenZfsVolumeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parent_volume_id: std::option::Option<std::string::String>,
@@ -14667,7 +14925,7 @@ pub mod create_open_zfs_volume_configuration {
             self.user_and_group_quotas = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateOpenZfsVolumeConfiguration`](crate::model::CreateOpenZfsVolumeConfiguration)
+        /// Consumes the builder and constructs a [`CreateOpenZfsVolumeConfiguration`](crate::model::CreateOpenZfsVolumeConfiguration).
         pub fn build(self) -> crate::model::CreateOpenZfsVolumeConfiguration {
             crate::model::CreateOpenZfsVolumeConfiguration {
                 parent_volume_id: self.parent_volume_id,
@@ -14685,7 +14943,7 @@ pub mod create_open_zfs_volume_configuration {
     }
 }
 impl CreateOpenZfsVolumeConfiguration {
-    /// Creates a new builder-style object to manufacture [`CreateOpenZfsVolumeConfiguration`](crate::model::CreateOpenZfsVolumeConfiguration)
+    /// Creates a new builder-style object to manufacture [`CreateOpenZfsVolumeConfiguration`](crate::model::CreateOpenZfsVolumeConfiguration).
     pub fn builder() -> crate::model::create_open_zfs_volume_configuration::Builder {
         crate::model::create_open_zfs_volume_configuration::Builder::default()
     }
@@ -14696,12 +14954,14 @@ impl CreateOpenZfsVolumeConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateOpenZfsOriginSnapshotConfiguration {
     /// <p>The Amazon Resource Name (ARN) for a given resource. ARNs uniquely identify Amazon Web Services resources. We require an ARN when you need to specify a resource unambiguously across all of Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub snapshot_arn: std::option::Option<std::string::String>,
     /// <p>The strategy used when copying data from the snapshot to the new volume. </p>
     /// <ul>
     /// <li> <p> <code>CLONE</code> - The new volume references the data in the origin snapshot. Cloning a snapshot is faster than copying data from the snapshot to a new volume and doesn't consume disk throughput. However, the origin snapshot can't be deleted if there is a volume using its copied data. </p> </li>
     /// <li> <p> <code>FULL_COPY</code> - Copies all data from the snapshot to the new volume. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub copy_strategy: std::option::Option<crate::model::OpenZfsCopyStrategy>,
 }
 impl CreateOpenZfsOriginSnapshotConfiguration {
@@ -14726,11 +14986,10 @@ impl std::fmt::Debug for CreateOpenZfsOriginSnapshotConfiguration {
         formatter.finish()
     }
 }
-/// See [`CreateOpenZfsOriginSnapshotConfiguration`](crate::model::CreateOpenZfsOriginSnapshotConfiguration)
+/// See [`CreateOpenZfsOriginSnapshotConfiguration`](crate::model::CreateOpenZfsOriginSnapshotConfiguration).
 pub mod create_open_zfs_origin_snapshot_configuration {
 
-    /// A builder for [`CreateOpenZfsOriginSnapshotConfiguration`](crate::model::CreateOpenZfsOriginSnapshotConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CreateOpenZfsOriginSnapshotConfiguration`](crate::model::CreateOpenZfsOriginSnapshotConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshot_arn: std::option::Option<std::string::String>,
@@ -14768,7 +15027,7 @@ pub mod create_open_zfs_origin_snapshot_configuration {
             self.copy_strategy = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateOpenZfsOriginSnapshotConfiguration`](crate::model::CreateOpenZfsOriginSnapshotConfiguration)
+        /// Consumes the builder and constructs a [`CreateOpenZfsOriginSnapshotConfiguration`](crate::model::CreateOpenZfsOriginSnapshotConfiguration).
         pub fn build(self) -> crate::model::CreateOpenZfsOriginSnapshotConfiguration {
             crate::model::CreateOpenZfsOriginSnapshotConfiguration {
                 snapshot_arn: self.snapshot_arn,
@@ -14778,7 +15037,7 @@ pub mod create_open_zfs_origin_snapshot_configuration {
     }
 }
 impl CreateOpenZfsOriginSnapshotConfiguration {
-    /// Creates a new builder-style object to manufacture [`CreateOpenZfsOriginSnapshotConfiguration`](crate::model::CreateOpenZfsOriginSnapshotConfiguration)
+    /// Creates a new builder-style object to manufacture [`CreateOpenZfsOriginSnapshotConfiguration`](crate::model::CreateOpenZfsOriginSnapshotConfiguration).
     pub fn builder() -> crate::model::create_open_zfs_origin_snapshot_configuration::Builder {
         crate::model::create_open_zfs_origin_snapshot_configuration::Builder::default()
     }
@@ -14861,8 +15120,10 @@ impl AsRef<str> for ActiveDirectoryErrorType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSvmActiveDirectoryConfiguration {
     /// <p>The NetBIOS name of the Active Directory computer object that will be created for your SVM.</p>
+    #[doc(hidden)]
     pub net_bios_name: std::option::Option<std::string::String>,
     /// <p>The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or an ONTAP storage virtual machine (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory. For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html"> Using Amazon FSx with your self-managed Microsoft Active Directory</a> or <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html">Managing SVMs</a>.</p>
+    #[doc(hidden)]
     pub self_managed_active_directory_configuration:
         std::option::Option<crate::model::SelfManagedActiveDirectoryConfiguration>,
 }
@@ -14889,11 +15150,10 @@ impl std::fmt::Debug for CreateSvmActiveDirectoryConfiguration {
         formatter.finish()
     }
 }
-/// See [`CreateSvmActiveDirectoryConfiguration`](crate::model::CreateSvmActiveDirectoryConfiguration)
+/// See [`CreateSvmActiveDirectoryConfiguration`](crate::model::CreateSvmActiveDirectoryConfiguration).
 pub mod create_svm_active_directory_configuration {
 
-    /// A builder for [`CreateSvmActiveDirectoryConfiguration`](crate::model::CreateSvmActiveDirectoryConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CreateSvmActiveDirectoryConfiguration`](crate::model::CreateSvmActiveDirectoryConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) net_bios_name: std::option::Option<std::string::String>,
@@ -14930,7 +15190,7 @@ pub mod create_svm_active_directory_configuration {
             self.self_managed_active_directory_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSvmActiveDirectoryConfiguration`](crate::model::CreateSvmActiveDirectoryConfiguration)
+        /// Consumes the builder and constructs a [`CreateSvmActiveDirectoryConfiguration`](crate::model::CreateSvmActiveDirectoryConfiguration).
         pub fn build(self) -> crate::model::CreateSvmActiveDirectoryConfiguration {
             crate::model::CreateSvmActiveDirectoryConfiguration {
                 net_bios_name: self.net_bios_name,
@@ -14941,7 +15201,7 @@ pub mod create_svm_active_directory_configuration {
     }
 }
 impl CreateSvmActiveDirectoryConfiguration {
-    /// Creates a new builder-style object to manufacture [`CreateSvmActiveDirectoryConfiguration`](crate::model::CreateSvmActiveDirectoryConfiguration)
+    /// Creates a new builder-style object to manufacture [`CreateSvmActiveDirectoryConfiguration`](crate::model::CreateSvmActiveDirectoryConfiguration).
     pub fn builder() -> crate::model::create_svm_active_directory_configuration::Builder {
         crate::model::create_svm_active_directory_configuration::Builder::default()
     }
@@ -14952,18 +15212,24 @@ impl CreateSvmActiveDirectoryConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SelfManagedActiveDirectoryConfiguration {
     /// <p>The fully qualified domain name of the self-managed AD directory, such as <code>corp.example.com</code>.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>(Optional) The fully qualified distinguished name of the organizational unit within your self-managed AD directory. Amazon FSx only accepts OU as the direct parent of the file system. An example is <code>OU=FSx,DC=yourdomain,DC=corp,DC=com</code>. To learn more, see <a href="https://tools.ietf.org/html/rfc2253">RFC 2253</a>. If none is provided, the FSx file system is created in the default location of your self-managed AD directory. </p> <important>
     /// <p>Only Organizational Unit (OU) objects can be the direct parent of the file system that you're creating.</p>
     /// </important>
+    #[doc(hidden)]
     pub organizational_unit_distinguished_name: std::option::Option<std::string::String>,
     /// <p>(Optional) The name of the domain group whose members are granted administrative privileges for the file system. Administrative privileges include taking ownership of files and folders, setting audit controls (audit ACLs) on files and folders, and administering the file system remotely by using the FSx Remote PowerShell. The group that you specify must already exist in your domain. If you don't provide one, your AD domain's Domain Admins group is used.</p>
+    #[doc(hidden)]
     pub file_system_administrators_group: std::option::Option<std::string::String>,
     /// <p>The user name for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain. This account must have the permission to join computers to the domain in the organizational unit provided in <code>OrganizationalUnitDistinguishedName</code>, or in the default location of your AD domain.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The password for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory. </p>
+    #[doc(hidden)]
     pub dns_ips: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SelfManagedActiveDirectoryConfiguration {
@@ -15012,11 +15278,10 @@ impl std::fmt::Debug for SelfManagedActiveDirectoryConfiguration {
         formatter.finish()
     }
 }
-/// See [`SelfManagedActiveDirectoryConfiguration`](crate::model::SelfManagedActiveDirectoryConfiguration)
+/// See [`SelfManagedActiveDirectoryConfiguration`](crate::model::SelfManagedActiveDirectoryConfiguration).
 pub mod self_managed_active_directory_configuration {
 
-    /// A builder for [`SelfManagedActiveDirectoryConfiguration`](crate::model::SelfManagedActiveDirectoryConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SelfManagedActiveDirectoryConfiguration`](crate::model::SelfManagedActiveDirectoryConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -15112,7 +15377,7 @@ pub mod self_managed_active_directory_configuration {
             self.dns_ips = input;
             self
         }
-        /// Consumes the builder and constructs a [`SelfManagedActiveDirectoryConfiguration`](crate::model::SelfManagedActiveDirectoryConfiguration)
+        /// Consumes the builder and constructs a [`SelfManagedActiveDirectoryConfiguration`](crate::model::SelfManagedActiveDirectoryConfiguration).
         pub fn build(self) -> crate::model::SelfManagedActiveDirectoryConfiguration {
             crate::model::SelfManagedActiveDirectoryConfiguration {
                 domain_name: self.domain_name,
@@ -15126,7 +15391,7 @@ pub mod self_managed_active_directory_configuration {
     }
 }
 impl SelfManagedActiveDirectoryConfiguration {
-    /// Creates a new builder-style object to manufacture [`SelfManagedActiveDirectoryConfiguration`](crate::model::SelfManagedActiveDirectoryConfiguration)
+    /// Creates a new builder-style object to manufacture [`SelfManagedActiveDirectoryConfiguration`](crate::model::SelfManagedActiveDirectoryConfiguration).
     pub fn builder() -> crate::model::self_managed_active_directory_configuration::Builder {
         crate::model::self_managed_active_directory_configuration::Builder::default()
     }
@@ -15137,25 +15402,34 @@ impl SelfManagedActiveDirectoryConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateFileSystemOpenZfsConfiguration {
     /// <p>The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic backups. You can retain automatic backups for a maximum of 90 days. The default is <code>0</code>.</p>
+    #[doc(hidden)]
     pub automatic_backup_retention_days: std::option::Option<i32>,
     /// <p>A Boolean value indicating whether tags for the file system should be copied to backups. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the file system are copied to all automatic and user-initiated backups where the user doesn't specify tags. If this value is <code>true</code>, and you specify one or more tags, only the specified tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file system, regardless of this value.</p>
+    #[doc(hidden)]
     pub copy_tags_to_backups: std::option::Option<bool>,
-    /// <p>A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the user doesn't specify tags. If this value is <code>true</code>, and you specify one or more tags, only the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are copied from the volume, regardless of this value. </p>
+    /// <p>A Boolean value indicating whether tags for the file system should be copied to volumes. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the file system are copied to volumes where the user doesn't specify tags. If this value is <code>true</code>, and you specify one or more tags, only the specified tags are copied to volumes. If you specify one or more tags when creating the volume, no tags are copied from the file system, regardless of this value.</p>
+    #[doc(hidden)]
     pub copy_tags_to_volumes: std::option::Option<bool>,
     /// <p>A recurring daily time, in the format <code>HH:MM</code>. <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. For example, <code>05:00</code> specifies 5 AM daily. </p>
+    #[doc(hidden)]
     pub daily_automatic_backup_start_time: std::option::Option<std::string::String>,
     /// <p>Specifies the file system deployment type. Amazon FSx for OpenZFS supports <code>SINGLE_AZ_1</code>. <code>SINGLE_AZ_1</code> deployment type is configured for redundancy within a single Availability Zone.</p>
+    #[doc(hidden)]
     pub deployment_type: std::option::Option<crate::model::OpenZfsDeploymentType>,
     /// <p>Specifies the throughput of an Amazon FSx for OpenZFS file system, measured in megabytes per second (MB/s). Valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s. You pay for additional throughput capacity that you provision.</p>
+    #[doc(hidden)]
     pub throughput_capacity: std::option::Option<i32>,
     /// <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
     /// <p> <code>D</code> is the day of the week, for which 1 represents Monday and 7 represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
     /// <p> <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. </p>
     /// <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
+    #[doc(hidden)]
     pub weekly_maintenance_start_time: std::option::Option<std::string::String>,
     /// <p>The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS file system. The default is 3 IOPS per GB of storage capacity, but you can provision additional IOPS per GB of storage. The configuration consists of the total number of provisioned SSD IOPS and how the amount was provisioned (by the customer or by the system).</p>
+    #[doc(hidden)]
     pub disk_iops_configuration: std::option::Option<crate::model::DiskIopsConfiguration>,
     /// <p>The configuration Amazon FSx uses when creating the root value of the Amazon FSx for OpenZFS file system. All volumes are children of the root volume. </p>
+    #[doc(hidden)]
     pub root_volume_configuration:
         std::option::Option<crate::model::OpenZfsCreateRootVolumeConfiguration>,
 }
@@ -15168,7 +15442,7 @@ impl CreateFileSystemOpenZfsConfiguration {
     pub fn copy_tags_to_backups(&self) -> std::option::Option<bool> {
         self.copy_tags_to_backups
     }
-    /// <p>A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the user doesn't specify tags. If this value is <code>true</code>, and you specify one or more tags, only the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are copied from the volume, regardless of this value. </p>
+    /// <p>A Boolean value indicating whether tags for the file system should be copied to volumes. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the file system are copied to volumes where the user doesn't specify tags. If this value is <code>true</code>, and you specify one or more tags, only the specified tags are copied to volumes. If you specify one or more tags when creating the volume, no tags are copied from the file system, regardless of this value.</p>
     pub fn copy_tags_to_volumes(&self) -> std::option::Option<bool> {
         self.copy_tags_to_volumes
     }
@@ -15228,11 +15502,10 @@ impl std::fmt::Debug for CreateFileSystemOpenZfsConfiguration {
         formatter.finish()
     }
 }
-/// See [`CreateFileSystemOpenZfsConfiguration`](crate::model::CreateFileSystemOpenZfsConfiguration)
+/// See [`CreateFileSystemOpenZfsConfiguration`](crate::model::CreateFileSystemOpenZfsConfiguration).
 pub mod create_file_system_open_zfs_configuration {
 
-    /// A builder for [`CreateFileSystemOpenZfsConfiguration`](crate::model::CreateFileSystemOpenZfsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CreateFileSystemOpenZfsConfiguration`](crate::model::CreateFileSystemOpenZfsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) automatic_backup_retention_days: std::option::Option<i32>,
@@ -15271,12 +15544,12 @@ pub mod create_file_system_open_zfs_configuration {
             self.copy_tags_to_backups = input;
             self
         }
-        /// <p>A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the user doesn't specify tags. If this value is <code>true</code>, and you specify one or more tags, only the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are copied from the volume, regardless of this value. </p>
+        /// <p>A Boolean value indicating whether tags for the file system should be copied to volumes. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the file system are copied to volumes where the user doesn't specify tags. If this value is <code>true</code>, and you specify one or more tags, only the specified tags are copied to volumes. If you specify one or more tags when creating the volume, no tags are copied from the file system, regardless of this value.</p>
         pub fn copy_tags_to_volumes(mut self, input: bool) -> Self {
             self.copy_tags_to_volumes = Some(input);
             self
         }
-        /// <p>A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the user doesn't specify tags. If this value is <code>true</code>, and you specify one or more tags, only the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are copied from the volume, regardless of this value. </p>
+        /// <p>A Boolean value indicating whether tags for the file system should be copied to volumes. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the file system are copied to volumes where the user doesn't specify tags. If this value is <code>true</code>, and you specify one or more tags, only the specified tags are copied to volumes. If you specify one or more tags when creating the volume, no tags are copied from the file system, regardless of this value.</p>
         pub fn set_copy_tags_to_volumes(mut self, input: std::option::Option<bool>) -> Self {
             self.copy_tags_to_volumes = input;
             self
@@ -15374,7 +15647,7 @@ pub mod create_file_system_open_zfs_configuration {
             self.root_volume_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFileSystemOpenZfsConfiguration`](crate::model::CreateFileSystemOpenZfsConfiguration)
+        /// Consumes the builder and constructs a [`CreateFileSystemOpenZfsConfiguration`](crate::model::CreateFileSystemOpenZfsConfiguration).
         pub fn build(self) -> crate::model::CreateFileSystemOpenZfsConfiguration {
             crate::model::CreateFileSystemOpenZfsConfiguration {
                 automatic_backup_retention_days: self.automatic_backup_retention_days,
@@ -15391,7 +15664,7 @@ pub mod create_file_system_open_zfs_configuration {
     }
 }
 impl CreateFileSystemOpenZfsConfiguration {
-    /// Creates a new builder-style object to manufacture [`CreateFileSystemOpenZfsConfiguration`](crate::model::CreateFileSystemOpenZfsConfiguration)
+    /// Creates a new builder-style object to manufacture [`CreateFileSystemOpenZfsConfiguration`](crate::model::CreateFileSystemOpenZfsConfiguration).
     pub fn builder() -> crate::model::create_file_system_open_zfs_configuration::Builder {
         crate::model::create_file_system_open_zfs_configuration::Builder::default()
     }
@@ -15402,6 +15675,7 @@ impl CreateFileSystemOpenZfsConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OpenZfsCreateRootVolumeConfiguration {
     /// <p>Specifies the record size of an OpenZFS root volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. Database workflows can benefit from a smaller record size, while streaming workflows can benefit from a larger record size. For additional guidance on setting a custom record size, see <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.</p>
+    #[doc(hidden)]
     pub record_size_ki_b: std::option::Option<i32>,
     /// <p>Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by default.</p>
     /// <ul>
@@ -15409,15 +15683,20 @@ pub struct OpenZfsCreateRootVolumeConfiguration {
     /// <li> <p> <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.</p> </li>
     /// <li> <p> <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub data_compression_type: std::option::Option<crate::model::OpenZfsDataCompressionType>,
     /// <p>The configuration object for mounting a file system.</p>
+    #[doc(hidden)]
     pub nfs_exports: std::option::Option<std::vec::Vec<crate::model::OpenZfsNfsExport>>,
     /// <p>An object specifying how much storage users or groups can use on the volume.</p>
+    #[doc(hidden)]
     pub user_and_group_quotas:
         std::option::Option<std::vec::Vec<crate::model::OpenZfsUserOrGroupQuota>>,
     /// <p>A Boolean value indicating whether tags for the volume should be copied to snapshots of the volume. This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are copied from the volume, regardless of this value. </p>
+    #[doc(hidden)]
     pub copy_tags_to_snapshots: std::option::Option<bool>,
     /// <p>A Boolean value indicating whether the volume is read-only. Setting this value to <code>true</code> can be useful after you have completed changes to a volume and no longer want changes to occur. </p>
+    #[doc(hidden)]
     pub read_only: std::option::Option<bool>,
 }
 impl OpenZfsCreateRootVolumeConfiguration {
@@ -15467,11 +15746,10 @@ impl std::fmt::Debug for OpenZfsCreateRootVolumeConfiguration {
         formatter.finish()
     }
 }
-/// See [`OpenZfsCreateRootVolumeConfiguration`](crate::model::OpenZfsCreateRootVolumeConfiguration)
+/// See [`OpenZfsCreateRootVolumeConfiguration`](crate::model::OpenZfsCreateRootVolumeConfiguration).
 pub mod open_zfs_create_root_volume_configuration {
 
-    /// A builder for [`OpenZfsCreateRootVolumeConfiguration`](crate::model::OpenZfsCreateRootVolumeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`OpenZfsCreateRootVolumeConfiguration`](crate::model::OpenZfsCreateRootVolumeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) record_size_ki_b: std::option::Option<i32>,
@@ -15581,7 +15859,7 @@ pub mod open_zfs_create_root_volume_configuration {
             self.read_only = input;
             self
         }
-        /// Consumes the builder and constructs a [`OpenZfsCreateRootVolumeConfiguration`](crate::model::OpenZfsCreateRootVolumeConfiguration)
+        /// Consumes the builder and constructs a [`OpenZfsCreateRootVolumeConfiguration`](crate::model::OpenZfsCreateRootVolumeConfiguration).
         pub fn build(self) -> crate::model::OpenZfsCreateRootVolumeConfiguration {
             crate::model::OpenZfsCreateRootVolumeConfiguration {
                 record_size_ki_b: self.record_size_ki_b,
@@ -15595,7 +15873,7 @@ pub mod open_zfs_create_root_volume_configuration {
     }
 }
 impl OpenZfsCreateRootVolumeConfiguration {
-    /// Creates a new builder-style object to manufacture [`OpenZfsCreateRootVolumeConfiguration`](crate::model::OpenZfsCreateRootVolumeConfiguration)
+    /// Creates a new builder-style object to manufacture [`OpenZfsCreateRootVolumeConfiguration`](crate::model::OpenZfsCreateRootVolumeConfiguration).
     pub fn builder() -> crate::model::open_zfs_create_root_volume_configuration::Builder {
         crate::model::open_zfs_create_root_volume_configuration::Builder::default()
     }
@@ -15614,19 +15892,23 @@ impl OpenZfsCreateRootVolumeConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateFileSystemLustreConfiguration {
     /// <p>(Optional) The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
+    #[doc(hidden)]
     pub weekly_maintenance_start_time: std::option::Option<std::string::String>,
     /// <p>(Optional) The path to the Amazon S3 bucket (including the optional prefix) that you're using as the data repository for your Amazon FSx for Lustre file system. The root of your FSx for Lustre file system will be mapped to the root of the Amazon S3 bucket you select. An example is <code>s3://import-bucket/optional-prefix</code>. If you specify a prefix after the Amazon S3 bucket name, only object keys with that prefix are loaded into the file system.</p> <note>
     /// <p>This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file system to a data repository.</p>
     /// </note>
+    #[doc(hidden)]
     pub import_path: std::option::Option<std::string::String>,
     /// <p>(Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. Specifies the path in the Amazon S3 bucket where the root of your Amazon FSx file system is exported. The path must use the same Amazon S3 bucket as specified in ImportPath. You can provide an optional prefix to which new and changed data is to be exported from your Amazon FSx for Lustre file system. If an <code>ExportPath</code> value is not provided, Amazon FSx sets a default export path, <code>s3://import-bucket/FSxLustre[creation-timestamp]</code>. The timestamp is in UTC format, for example <code>s3://import-bucket/FSxLustre20181105T222312Z</code>.</p>
     /// <p>The Amazon S3 export bucket must be the same as the import bucket specified by <code>ImportPath</code>. If you specify only a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file system objects to S3 bucket objects. This mapping means that the input data in S3 is overwritten on export. If you provide a custom prefix in the export path, such as <code>s3://import-bucket/[custom-optional-prefix]</code>, Amazon FSx exports the contents of your file system to that export prefix in the Amazon S3 bucket.</p> <note>
     /// <p>This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file system to a data repository.</p>
     /// </note>
+    #[doc(hidden)]
     pub export_path: std::option::Option<std::string::String>,
     /// <p>(Optional) For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. The maximum number of disks that a single file can be striped across is limited by the total number of disks that make up the file system.</p>
     /// <p>The default chunk size is 1,024 MiB (1 GiB) and can go as high as 512,000 MiB (500 GiB). Amazon S3 objects have a maximum size of 5 TB.</p>
     /// <p>This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file system to a data repository.</p>
+    #[doc(hidden)]
     pub imported_file_chunk_size: std::option::Option<i32>,
     /// <p>(Optional) Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary storage and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.</p>
     /// <p>Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t latency-sensitive. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all Amazon Web Services Regions in which FSx for Lustre is available.</p>
@@ -15635,6 +15917,7 @@ pub struct CreateFileSystemLustreConfiguration {
     /// </note>
     /// <p>Encryption of data in transit is automatically turned on when you access <code>SCRATCH_2</code>, <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> file systems from Amazon EC2 instances that <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data-                 protection.html">support automatic encryption</a> in the Amazon Web Services Regions where they are available. For more information about encryption in transit for FSx for Lustre file systems, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting data in transit</a> in the <i>Amazon FSx for Lustre User Guide</i>. </p>
     /// <p>(Default = <code>SCRATCH_1</code>)</p>
+    #[doc(hidden)]
     pub deployment_type: std::option::Option<crate::model::LustreDeploymentType>,
     /// <p> (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. When you create your file system, your existing S3 objects appear as file and directory listings. Use this property to choose how Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3 bucket. <code>AutoImportPolicy</code> can have the following values:</p>
     /// <ul>
@@ -15646,6 +15929,7 @@ pub struct CreateFileSystemLustreConfiguration {
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/older-deployment-types.html#legacy-auto-import-from-s3"> Automatically import updates from your S3 bucket</a>.</p> <note>
     /// <p>This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file system to a data repository.</p>
     /// </note>
+    #[doc(hidden)]
     pub auto_import_policy: std::option::Option<crate::model::AutoImportPolicyType>,
     /// <p>Required with <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types, provisions the amount of read and write throughput for each 1 tebibyte (TiB) of file system storage capacity, in MB/s/TiB. File system throughput capacity is calculated by multiplying ﬁle system storage capacity (TiB) by the <code>PerUnitStorageThroughput</code> (MB/s/TiB). For a 2.4-TiB ﬁle system, provisioning 50 MB/s/TiB of <code>PerUnitStorageThroughput</code> yields 120 MB/s of ﬁle system throughput. You pay for the amount of throughput that you provision. </p>
     /// <p>Valid values:</p>
@@ -15654,17 +15938,22 @@ pub struct CreateFileSystemLustreConfiguration {
     /// <li> <p>For <code>PERSISTENT_1</code> HDD storage: 12, 40 MB/s/TiB.</p> </li>
     /// <li> <p>For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000 MB/s/TiB.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub per_unit_storage_throughput: std::option::Option<i32>,
     /// <p>A recurring daily time, in the format <code>HH:MM</code>. <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. For example, <code>05:00</code> specifies 5 AM daily. </p>
+    #[doc(hidden)]
     pub daily_automatic_backup_start_time: std::option::Option<std::string::String>,
     /// <p>The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic backups. You can retain automatic backups for a maximum of 90 days. The default is <code>0</code>.</p>
+    #[doc(hidden)]
     pub automatic_backup_retention_days: std::option::Option<i32>,
     /// <p>(Optional) Not available for use with file systems that are linked to a data repository. A boolean flag indicating whether tags for the file system should be copied to backups. The default value is false. If <code>CopyTagsToBackups</code> is set to true, all file system tags are copied to all automatic and user-initiated backups when the user doesn't specify any backup-specific tags. If <code>CopyTagsToBackups</code> is set to true and you specify one or more backup tags, only the specified tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file system, regardless of this value.</p>
     /// <p>(Default = <code>false</code>)</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html"> Working with backups</a> in the <i>Amazon FSx for Lustre User Guide</i>.</p>
+    #[doc(hidden)]
     pub copy_tags_to_backups: std::option::Option<bool>,
     /// <p>The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD storage devices. This parameter is required when storage type is HDD. Set this property to <code>READ</code> to improve the performance for frequently accessed files by caching up to 20% of the total storage capacity of the file system.</p>
     /// <p>This parameter is required when <code>StorageType</code> is set to <code>HDD</code>.</p>
+    #[doc(hidden)]
     pub drive_cache_type: std::option::Option<crate::model::DriveCacheType>,
     /// <p>Sets the data compression configuration for the file system. <code>DataCompressionType</code> can have the following values:</p>
     /// <ul>
@@ -15672,10 +15961,13 @@ pub struct CreateFileSystemLustreConfiguration {
     /// <li> <p> <code>LZ4</code> - Data compression is turned on with the LZ4 algorithm.</p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data compression</a> in the <i>Amazon FSx for Lustre User Guide</i>.</p>
+    #[doc(hidden)]
     pub data_compression_type: std::option::Option<crate::model::DataCompressionType>,
     /// <p>The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub log_configuration: std::option::Option<crate::model::LustreLogCreateConfiguration>,
     /// <p>The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user.</p>
+    #[doc(hidden)]
     pub root_squash_configuration: std::option::Option<crate::model::LustreRootSquashConfiguration>,
 }
 impl CreateFileSystemLustreConfiguration {
@@ -15808,11 +16100,10 @@ impl std::fmt::Debug for CreateFileSystemLustreConfiguration {
         formatter.finish()
     }
 }
-/// See [`CreateFileSystemLustreConfiguration`](crate::model::CreateFileSystemLustreConfiguration)
+/// See [`CreateFileSystemLustreConfiguration`](crate::model::CreateFileSystemLustreConfiguration).
 pub mod create_file_system_lustre_configuration {
 
-    /// A builder for [`CreateFileSystemLustreConfiguration`](crate::model::CreateFileSystemLustreConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CreateFileSystemLustreConfiguration`](crate::model::CreateFileSystemLustreConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) weekly_maintenance_start_time: std::option::Option<std::string::String>,
@@ -16084,7 +16375,7 @@ pub mod create_file_system_lustre_configuration {
             self.root_squash_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFileSystemLustreConfiguration`](crate::model::CreateFileSystemLustreConfiguration)
+        /// Consumes the builder and constructs a [`CreateFileSystemLustreConfiguration`](crate::model::CreateFileSystemLustreConfiguration).
         pub fn build(self) -> crate::model::CreateFileSystemLustreConfiguration {
             crate::model::CreateFileSystemLustreConfiguration {
                 weekly_maintenance_start_time: self.weekly_maintenance_start_time,
@@ -16106,7 +16397,7 @@ pub mod create_file_system_lustre_configuration {
     }
 }
 impl CreateFileSystemLustreConfiguration {
-    /// Creates a new builder-style object to manufacture [`CreateFileSystemLustreConfiguration`](crate::model::CreateFileSystemLustreConfiguration)
+    /// Creates a new builder-style object to manufacture [`CreateFileSystemLustreConfiguration`](crate::model::CreateFileSystemLustreConfiguration).
     pub fn builder() -> crate::model::create_file_system_lustre_configuration::Builder {
         crate::model::create_file_system_lustre_configuration::Builder::default()
     }
@@ -16117,8 +16408,10 @@ impl CreateFileSystemLustreConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateFileSystemWindowsConfiguration {
     /// <p>The ID for an existing Amazon Web Services Managed Microsoft Active Directory (AD) instance that the file system should join when it's created.</p>
+    #[doc(hidden)]
     pub active_directory_id: std::option::Option<std::string::String>,
     /// <p>The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or an ONTAP storage virtual machine (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory. For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html"> Using Amazon FSx with your self-managed Microsoft Active Directory</a> or <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html">Managing SVMs</a>.</p>
+    #[doc(hidden)]
     pub self_managed_active_directory_configuration:
         std::option::Option<crate::model::SelfManagedActiveDirectoryConfiguration>,
     /// <p>Specifies the file system deployment type, valid values are the following:</p>
@@ -16128,18 +16421,25 @@ pub struct CreateFileSystemWindowsConfiguration {
     /// <li> <p> <code>SINGLE_AZ_2</code> - The latest generation Single AZ file system. Specifies a file system that is configured for single AZ redundancy and supports HDD storage type.</p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html"> Availability and Durability: Single-AZ and Multi-AZ File Systems</a>.</p>
+    #[doc(hidden)]
     pub deployment_type: std::option::Option<crate::model::WindowsDeploymentType>,
     /// <p>Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which you want the preferred file server to be located. For in-Amazon Web Services applications, we recommend that you launch your clients in the same Availability Zone (AZ) as your preferred file server to reduce cross-AZ data transfer costs and minimize latency. </p>
+    #[doc(hidden)]
     pub preferred_subnet_id: std::option::Option<std::string::String>,
     /// <p>Sets the throughput capacity of an Amazon FSx file system, measured in megabytes per second (MB/s), in 2 to the <i>n</i>th increments, between 2^3 (8) and 2^11 (2048).</p>
+    #[doc(hidden)]
     pub throughput_capacity: std::option::Option<i32>,
     /// <p>The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
+    #[doc(hidden)]
     pub weekly_maintenance_start_time: std::option::Option<std::string::String>,
     /// <p>The preferred time to take daily automatic backups, formatted HH:MM in the UTC time zone.</p>
+    #[doc(hidden)]
     pub daily_automatic_backup_start_time: std::option::Option<std::string::String>,
     /// <p>The number of days to retain automatic backups. The default is to retain backups for 7 days. Setting this value to 0 disables the creation of automatic backups. The maximum retention period for backups is 90 days.</p>
+    #[doc(hidden)]
     pub automatic_backup_retention_days: std::option::Option<i32>,
     /// <p>A boolean flag indicating whether tags for the file system should be copied to backups. This value defaults to false. If it's set to true, all tags for the file system are copied to all automatic and user-initiated backups where the user doesn't specify tags. If this value is true, and you specify one or more tags, only the specified tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file system, regardless of this value.</p>
+    #[doc(hidden)]
     pub copy_tags_to_backups: std::option::Option<bool>,
     /// <p>An array of one or more DNS alias names that you want to associate with the Amazon FSx file system. Aliases allow you to use existing DNS names to access the data in your Amazon FSx file system. You can associate up to 50 aliases with a file system at any time. You can associate additional DNS aliases after you create the file system using the AssociateFileSystemAliases operation. You can remove DNS aliases from the file system after it is created using the DisassociateFileSystemAliases operation. You only need to specify the alias name in the request payload.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html">Working with DNS Aliases</a> and <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html">Walkthrough 5: Using DNS aliases to access your file system</a>, including additional steps you must take to be able to access your file system using a DNS alias.</p>
@@ -16151,8 +16451,10 @@ pub struct CreateFileSystemWindowsConfiguration {
     /// <li> <p>Can start with a numeric.</p> </li>
     /// </ul>
     /// <p>For DNS alias names, Amazon FSx stores alphabetic characters as lowercase letters (a-z), regardless of how you specify them: as uppercase letters, lowercase letters, or the corresponding letters in escape codes.</p>
+    #[doc(hidden)]
     pub aliases: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system.</p>
+    #[doc(hidden)]
     pub audit_log_configuration:
         std::option::Option<crate::model::WindowsAuditLogCreateConfiguration>,
 }
@@ -16250,11 +16552,10 @@ impl std::fmt::Debug for CreateFileSystemWindowsConfiguration {
         formatter.finish()
     }
 }
-/// See [`CreateFileSystemWindowsConfiguration`](crate::model::CreateFileSystemWindowsConfiguration)
+/// See [`CreateFileSystemWindowsConfiguration`](crate::model::CreateFileSystemWindowsConfiguration).
 pub mod create_file_system_windows_configuration {
 
-    /// A builder for [`CreateFileSystemWindowsConfiguration`](crate::model::CreateFileSystemWindowsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CreateFileSystemWindowsConfiguration`](crate::model::CreateFileSystemWindowsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) active_directory_id: std::option::Option<std::string::String>,
@@ -16457,7 +16758,7 @@ pub mod create_file_system_windows_configuration {
             self.audit_log_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFileSystemWindowsConfiguration`](crate::model::CreateFileSystemWindowsConfiguration)
+        /// Consumes the builder and constructs a [`CreateFileSystemWindowsConfiguration`](crate::model::CreateFileSystemWindowsConfiguration).
         pub fn build(self) -> crate::model::CreateFileSystemWindowsConfiguration {
             crate::model::CreateFileSystemWindowsConfiguration {
                 active_directory_id: self.active_directory_id,
@@ -16477,7 +16778,7 @@ pub mod create_file_system_windows_configuration {
     }
 }
 impl CreateFileSystemWindowsConfiguration {
-    /// Creates a new builder-style object to manufacture [`CreateFileSystemWindowsConfiguration`](crate::model::CreateFileSystemWindowsConfiguration)
+    /// Creates a new builder-style object to manufacture [`CreateFileSystemWindowsConfiguration`](crate::model::CreateFileSystemWindowsConfiguration).
     pub fn builder() -> crate::model::create_file_system_windows_configuration::Builder {
         crate::model::create_file_system_windows_configuration::Builder::default()
     }
@@ -16488,8 +16789,10 @@ impl CreateFileSystemWindowsConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateFileSystemOntapConfiguration {
     /// <p>The number of days to retain automatic backups. Setting this property to <code>0</code> disables automatic backups. You can retain automatic backups for a maximum of 90 days. The default is <code>0</code>.</p>
+    #[doc(hidden)]
     pub automatic_backup_retention_days: std::option::Option<i32>,
     /// <p>A recurring daily time, in the format <code>HH:MM</code>. <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. For example, <code>05:00</code> specifies 5 AM daily. </p>
+    #[doc(hidden)]
     pub daily_automatic_backup_start_time: std::option::Option<std::string::String>,
     /// <p>Specifies the FSx for ONTAP file system deployment type to use in creating the file system. </p>
     /// <ul>
@@ -16497,25 +16800,33 @@ pub struct CreateFileSystemOntapConfiguration {
     /// <li> <p> <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.</p> </li>
     /// </ul>
     /// <p>For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-AZ.html">Choosing a file system deployment type</a>. </p>
+    #[doc(hidden)]
     pub deployment_type: std::option::Option<crate::model::OntapDeploymentType>,
     /// <p>(Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be created. By default, Amazon FSx selects an unused IP address range for you from the 198.19.* range.</p> <important>
     /// <p>The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and must be at least /30 or larger.</p>
     /// </important>
+    #[doc(hidden)]
     pub endpoint_ip_address_range: std::option::Option<std::string::String>,
     /// <p>The ONTAP administrative password for the <code>fsxadmin</code> user with which you administer your file system using the NetApp ONTAP CLI and REST API.</p>
+    #[doc(hidden)]
     pub fsx_admin_password: std::option::Option<std::string::String>,
     /// <p>The SSD IOPS configuration for the FSx for ONTAP file system.</p>
+    #[doc(hidden)]
     pub disk_iops_configuration: std::option::Option<crate::model::DiskIopsConfiguration>,
     /// <p>Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which you want the preferred file server to be located.</p>
+    #[doc(hidden)]
     pub preferred_subnet_id: std::option::Option<std::string::String>,
     /// <p>(Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be created. You should specify all VPC route tables associated with the subnets in which your clients are located. By default, Amazon FSx selects your VPC's default route table.</p>
+    #[doc(hidden)]
     pub route_table_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Sets the throughput capacity for the file system that you're creating. Valid values are 128, 256, 512, 1024, and 2048 MBps.</p>
+    #[doc(hidden)]
     pub throughput_capacity: std::option::Option<i32>,
     /// <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
     /// <p> <code>D</code> is the day of the week, for which 1 represents Monday and 7 represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
     /// <p> <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. </p>
     /// <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
+    #[doc(hidden)]
     pub weekly_maintenance_start_time: std::option::Option<std::string::String>,
 }
 impl CreateFileSystemOntapConfiguration {
@@ -16597,11 +16908,10 @@ impl std::fmt::Debug for CreateFileSystemOntapConfiguration {
         formatter.finish()
     }
 }
-/// See [`CreateFileSystemOntapConfiguration`](crate::model::CreateFileSystemOntapConfiguration)
+/// See [`CreateFileSystemOntapConfiguration`](crate::model::CreateFileSystemOntapConfiguration).
 pub mod create_file_system_ontap_configuration {
 
-    /// A builder for [`CreateFileSystemOntapConfiguration`](crate::model::CreateFileSystemOntapConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CreateFileSystemOntapConfiguration`](crate::model::CreateFileSystemOntapConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) automatic_backup_retention_days: std::option::Option<i32>,
@@ -16779,7 +17089,7 @@ pub mod create_file_system_ontap_configuration {
             self.weekly_maintenance_start_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFileSystemOntapConfiguration`](crate::model::CreateFileSystemOntapConfiguration)
+        /// Consumes the builder and constructs a [`CreateFileSystemOntapConfiguration`](crate::model::CreateFileSystemOntapConfiguration).
         pub fn build(self) -> crate::model::CreateFileSystemOntapConfiguration {
             crate::model::CreateFileSystemOntapConfiguration {
                 automatic_backup_retention_days: self.automatic_backup_retention_days,
@@ -16797,7 +17107,7 @@ pub mod create_file_system_ontap_configuration {
     }
 }
 impl CreateFileSystemOntapConfiguration {
-    /// Creates a new builder-style object to manufacture [`CreateFileSystemOntapConfiguration`](crate::model::CreateFileSystemOntapConfiguration)
+    /// Creates a new builder-style object to manufacture [`CreateFileSystemOntapConfiguration`](crate::model::CreateFileSystemOntapConfiguration).
     pub fn builder() -> crate::model::create_file_system_ontap_configuration::Builder {
         crate::model::create_file_system_ontap_configuration::Builder::default()
     }

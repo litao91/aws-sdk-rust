@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationError {
     /// <p>The description of an error found in the behaviors.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl ValidationError {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for ValidationError {
         formatter.finish()
     }
 }
-/// See [`ValidationError`](crate::model::ValidationError)
+/// See [`ValidationError`](crate::model::ValidationError).
 pub mod validation_error {
 
-    /// A builder for [`ValidationError`](crate::model::ValidationError)
-    #[non_exhaustive]
+    /// A builder for [`ValidationError`](crate::model::ValidationError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_message: std::option::Option<std::string::String>,
@@ -43,7 +43,7 @@ pub mod validation_error {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationError`](crate::model::ValidationError)
+        /// Consumes the builder and constructs a [`ValidationError`](crate::model::ValidationError).
         pub fn build(self) -> crate::model::ValidationError {
             crate::model::ValidationError {
                 error_message: self.error_message,
@@ -52,7 +52,7 @@ pub mod validation_error {
     }
 }
 impl ValidationError {
-    /// Creates a new builder-style object to manufacture [`ValidationError`](crate::model::ValidationError)
+    /// Creates a new builder-style object to manufacture [`ValidationError`](crate::model::ValidationError).
     pub fn builder() -> crate::model::validation_error::Builder {
         crate::model::validation_error::Builder::default()
     }
@@ -63,14 +63,19 @@ impl ValidationError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Behavior {
     /// <p>The name you've given to the behavior.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>What is measured by the behavior.</p>
+    #[doc(hidden)]
     pub metric: std::option::Option<std::string::String>,
     /// <p>The dimension for a metric in your behavior. For example, using a <code>TOPIC_FILTER</code> dimension, you can narrow down the scope of the metric to only MQTT topics where the name matches the pattern specified in the dimension. This can't be used with custom metrics.</p>
+    #[doc(hidden)]
     pub metric_dimension: std::option::Option<crate::model::MetricDimension>,
     /// <p>The criteria that determine if a device is behaving normally in regard to the <code>metric</code>.</p>
+    #[doc(hidden)]
     pub criteria: std::option::Option<crate::model::BehaviorCriteria>,
     /// <p> Suppresses alerts. </p>
+    #[doc(hidden)]
     pub suppress_alerts: std::option::Option<bool>,
 }
 impl Behavior {
@@ -106,11 +111,10 @@ impl std::fmt::Debug for Behavior {
         formatter.finish()
     }
 }
-/// See [`Behavior`](crate::model::Behavior)
+/// See [`Behavior`](crate::model::Behavior).
 pub mod behavior {
 
-    /// A builder for [`Behavior`](crate::model::Behavior)
-    #[non_exhaustive]
+    /// A builder for [`Behavior`](crate::model::Behavior).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -176,7 +180,7 @@ pub mod behavior {
             self.suppress_alerts = input;
             self
         }
-        /// Consumes the builder and constructs a [`Behavior`](crate::model::Behavior)
+        /// Consumes the builder and constructs a [`Behavior`](crate::model::Behavior).
         pub fn build(self) -> crate::model::Behavior {
             crate::model::Behavior {
                 name: self.name,
@@ -189,7 +193,7 @@ pub mod behavior {
     }
 }
 impl Behavior {
-    /// Creates a new builder-style object to manufacture [`Behavior`](crate::model::Behavior)
+    /// Creates a new builder-style object to manufacture [`Behavior`](crate::model::Behavior).
     pub fn builder() -> crate::model::behavior::Builder {
         crate::model::behavior::Builder::default()
     }
@@ -206,18 +210,25 @@ pub struct BehaviorCriteria {
     /// <li> <p> <code>ip-address-list</code>: <code>in-cidr-set</code> and <code>not-in-cidr-set</code> </p> </li>
     /// <li> <p> <code>number</code>: <code>less-than</code>, <code>less-than-equals</code>, <code>greater-than</code>, and <code>greater-than-equals</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
     /// <p>The value to be compared with the <code>metric</code>.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<crate::model::MetricValue>,
     /// <p>Use this to specify the time duration over which the behavior is evaluated, for those criteria that have a time dimension (for example, <code>NUM_MESSAGES_SENT</code>). For a <code>statisticalThreshhold</code> metric comparison, measurements from all devices are accumulated over this time duration before being used to calculate percentiles, and later, measurements from an individual device are also accumulated over this time duration before being given a percentile rank. Cannot be used with list-based metric datatypes.</p>
+    #[doc(hidden)]
     pub duration_seconds: std::option::Option<i32>,
     /// <p>If a device is in violation of the behavior for the specified number of consecutive datapoints, an alarm occurs. If not specified, the default is 1.</p>
+    #[doc(hidden)]
     pub consecutive_datapoints_to_alarm: std::option::Option<i32>,
     /// <p>If an alarm has occurred and the offending device is no longer in violation of the behavior for the specified number of consecutive datapoints, the alarm is cleared. If not specified, the default is 1.</p>
+    #[doc(hidden)]
     pub consecutive_datapoints_to_clear: std::option::Option<i32>,
     /// <p>A statistical ranking (percentile)that indicates a threshold value by which a behavior is determined to be in compliance or in violation of the behavior.</p>
+    #[doc(hidden)]
     pub statistical_threshold: std::option::Option<crate::model::StatisticalThreshold>,
     /// <p> The configuration of an ML Detect </p>
+    #[doc(hidden)]
     pub ml_detection_config: std::option::Option<crate::model::MachineLearningDetectionConfig>,
 }
 impl BehaviorCriteria {
@@ -279,11 +290,10 @@ impl std::fmt::Debug for BehaviorCriteria {
         formatter.finish()
     }
 }
-/// See [`BehaviorCriteria`](crate::model::BehaviorCriteria)
+/// See [`BehaviorCriteria`](crate::model::BehaviorCriteria).
 pub mod behavior_criteria {
 
-    /// A builder for [`BehaviorCriteria`](crate::model::BehaviorCriteria)
-    #[non_exhaustive]
+    /// A builder for [`BehaviorCriteria`](crate::model::BehaviorCriteria).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
@@ -396,7 +406,7 @@ pub mod behavior_criteria {
             self.ml_detection_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`BehaviorCriteria`](crate::model::BehaviorCriteria)
+        /// Consumes the builder and constructs a [`BehaviorCriteria`](crate::model::BehaviorCriteria).
         pub fn build(self) -> crate::model::BehaviorCriteria {
             crate::model::BehaviorCriteria {
                 comparison_operator: self.comparison_operator,
@@ -411,7 +421,7 @@ pub mod behavior_criteria {
     }
 }
 impl BehaviorCriteria {
-    /// Creates a new builder-style object to manufacture [`BehaviorCriteria`](crate::model::BehaviorCriteria)
+    /// Creates a new builder-style object to manufacture [`BehaviorCriteria`](crate::model::BehaviorCriteria).
     pub fn builder() -> crate::model::behavior_criteria::Builder {
         crate::model::behavior_criteria::Builder::default()
     }
@@ -422,6 +432,7 @@ impl BehaviorCriteria {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MachineLearningDetectionConfig {
     /// <p> The sensitivity of anomalous behavior evaluation. Can be <code>Low</code>, <code>Medium</code>, or <code>High</code>. </p>
+    #[doc(hidden)]
     pub confidence_level: std::option::Option<crate::model::ConfidenceLevel>,
 }
 impl MachineLearningDetectionConfig {
@@ -437,11 +448,10 @@ impl std::fmt::Debug for MachineLearningDetectionConfig {
         formatter.finish()
     }
 }
-/// See [`MachineLearningDetectionConfig`](crate::model::MachineLearningDetectionConfig)
+/// See [`MachineLearningDetectionConfig`](crate::model::MachineLearningDetectionConfig).
 pub mod machine_learning_detection_config {
 
-    /// A builder for [`MachineLearningDetectionConfig`](crate::model::MachineLearningDetectionConfig)
-    #[non_exhaustive]
+    /// A builder for [`MachineLearningDetectionConfig`](crate::model::MachineLearningDetectionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) confidence_level: std::option::Option<crate::model::ConfidenceLevel>,
@@ -460,7 +470,7 @@ pub mod machine_learning_detection_config {
             self.confidence_level = input;
             self
         }
-        /// Consumes the builder and constructs a [`MachineLearningDetectionConfig`](crate::model::MachineLearningDetectionConfig)
+        /// Consumes the builder and constructs a [`MachineLearningDetectionConfig`](crate::model::MachineLearningDetectionConfig).
         pub fn build(self) -> crate::model::MachineLearningDetectionConfig {
             crate::model::MachineLearningDetectionConfig {
                 confidence_level: self.confidence_level,
@@ -469,7 +479,7 @@ pub mod machine_learning_detection_config {
     }
 }
 impl MachineLearningDetectionConfig {
-    /// Creates a new builder-style object to manufacture [`MachineLearningDetectionConfig`](crate::model::MachineLearningDetectionConfig)
+    /// Creates a new builder-style object to manufacture [`MachineLearningDetectionConfig`](crate::model::MachineLearningDetectionConfig).
     pub fn builder() -> crate::model::machine_learning_detection_config::Builder {
         crate::model::machine_learning_detection_config::Builder::default()
     }
@@ -539,6 +549,7 @@ impl AsRef<str> for ConfidenceLevel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatisticalThreshold {
     /// <p>The percentile that resolves to a threshold value by which compliance with a behavior is determined. Metrics are collected over the specified period (<code>durationSeconds</code>) from all reporting devices in your account and statistical ranks are calculated. Then, the measurements from a device are collected over the same period. If the accumulated measurements from the device fall above or below (<code>comparisonOperator</code>) the value associated with the percentile specified, then the device is considered to be in compliance with the behavior, otherwise a violation occurs.</p>
+    #[doc(hidden)]
     pub statistic: std::option::Option<std::string::String>,
 }
 impl StatisticalThreshold {
@@ -554,11 +565,10 @@ impl std::fmt::Debug for StatisticalThreshold {
         formatter.finish()
     }
 }
-/// See [`StatisticalThreshold`](crate::model::StatisticalThreshold)
+/// See [`StatisticalThreshold`](crate::model::StatisticalThreshold).
 pub mod statistical_threshold {
 
-    /// A builder for [`StatisticalThreshold`](crate::model::StatisticalThreshold)
-    #[non_exhaustive]
+    /// A builder for [`StatisticalThreshold`](crate::model::StatisticalThreshold).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) statistic: std::option::Option<std::string::String>,
@@ -574,7 +584,7 @@ pub mod statistical_threshold {
             self.statistic = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatisticalThreshold`](crate::model::StatisticalThreshold)
+        /// Consumes the builder and constructs a [`StatisticalThreshold`](crate::model::StatisticalThreshold).
         pub fn build(self) -> crate::model::StatisticalThreshold {
             crate::model::StatisticalThreshold {
                 statistic: self.statistic,
@@ -583,7 +593,7 @@ pub mod statistical_threshold {
     }
 }
 impl StatisticalThreshold {
-    /// Creates a new builder-style object to manufacture [`StatisticalThreshold`](crate::model::StatisticalThreshold)
+    /// Creates a new builder-style object to manufacture [`StatisticalThreshold`](crate::model::StatisticalThreshold).
     pub fn builder() -> crate::model::statistical_threshold::Builder {
         crate::model::statistical_threshold::Builder::default()
     }
@@ -594,16 +604,22 @@ impl StatisticalThreshold {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricValue {
     /// <p>If the <code>comparisonOperator</code> calls for a numeric value, use this to specify that numeric value to be compared with the <code>metric</code>.</p>
+    #[doc(hidden)]
     pub count: std::option::Option<i64>,
     /// <p>If the <code>comparisonOperator</code> calls for a set of CIDRs, use this to specify that set to be compared with the <code>metric</code>.</p>
+    #[doc(hidden)]
     pub cidrs: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>If the <code>comparisonOperator</code> calls for a set of ports, use this to specify that set to be compared with the <code>metric</code>.</p>
+    #[doc(hidden)]
     pub ports: std::option::Option<std::vec::Vec<i32>>,
     /// <p> The numeral value of a metric. </p>
+    #[doc(hidden)]
     pub number: std::option::Option<f64>,
     /// <p> The numeral values of a metric. </p>
+    #[doc(hidden)]
     pub numbers: std::option::Option<std::vec::Vec<f64>>,
     /// <p> The string values of a metric. </p>
+    #[doc(hidden)]
     pub strings: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl MetricValue {
@@ -644,11 +660,10 @@ impl std::fmt::Debug for MetricValue {
         formatter.finish()
     }
 }
-/// See [`MetricValue`](crate::model::MetricValue)
+/// See [`MetricValue`](crate::model::MetricValue).
 pub mod metric_value {
 
-    /// A builder for [`MetricValue`](crate::model::MetricValue)
-    #[non_exhaustive]
+    /// A builder for [`MetricValue`](crate::model::MetricValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) count: std::option::Option<i64>,
@@ -749,7 +764,7 @@ pub mod metric_value {
             self.strings = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricValue`](crate::model::MetricValue)
+        /// Consumes the builder and constructs a [`MetricValue`](crate::model::MetricValue).
         pub fn build(self) -> crate::model::MetricValue {
             crate::model::MetricValue {
                 count: self.count,
@@ -763,7 +778,7 @@ pub mod metric_value {
     }
 }
 impl MetricValue {
-    /// Creates a new builder-style object to manufacture [`MetricValue`](crate::model::MetricValue)
+    /// Creates a new builder-style object to manufacture [`MetricValue`](crate::model::MetricValue).
     pub fn builder() -> crate::model::metric_value::Builder {
         crate::model::metric_value::Builder::default()
     }
@@ -872,8 +887,10 @@ impl AsRef<str> for ComparisonOperator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDimension {
     /// <p>A unique identifier for the dimension.</p>
+    #[doc(hidden)]
     pub dimension_name: std::option::Option<std::string::String>,
     /// <p>Defines how the <code>dimensionValues</code> of a dimension are interpreted. For example, for dimension type TOPIC_FILTER, the <code>IN</code> operator, a message will be counted only if its topic matches one of the topic filters. With <code>NOT_IN</code> operator, a message will be counted only if it doesn't match any of the topic filters. The operator is optional: if it's not provided (is <code>null</code>), it will be interpreted as <code>IN</code>.</p>
+    #[doc(hidden)]
     pub operator: std::option::Option<crate::model::DimensionValueOperator>,
 }
 impl MetricDimension {
@@ -894,11 +911,10 @@ impl std::fmt::Debug for MetricDimension {
         formatter.finish()
     }
 }
-/// See [`MetricDimension`](crate::model::MetricDimension)
+/// See [`MetricDimension`](crate::model::MetricDimension).
 pub mod metric_dimension {
 
-    /// A builder for [`MetricDimension`](crate::model::MetricDimension)
-    #[non_exhaustive]
+    /// A builder for [`MetricDimension`](crate::model::MetricDimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimension_name: std::option::Option<std::string::String>,
@@ -931,7 +947,7 @@ pub mod metric_dimension {
             self.operator = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDimension`](crate::model::MetricDimension)
+        /// Consumes the builder and constructs a [`MetricDimension`](crate::model::MetricDimension).
         pub fn build(self) -> crate::model::MetricDimension {
             crate::model::MetricDimension {
                 dimension_name: self.dimension_name,
@@ -941,7 +957,7 @@ pub mod metric_dimension {
     }
 }
 impl MetricDimension {
-    /// Creates a new builder-style object to manufacture [`MetricDimension`](crate::model::MetricDimension)
+    /// Creates a new builder-style object to manufacture [`MetricDimension`](crate::model::MetricDimension).
     pub fn builder() -> crate::model::metric_dimension::Builder {
         crate::model::metric_dimension::Builder::default()
     }
@@ -1074,8 +1090,10 @@ impl AsRef<str> for TopicRuleDestinationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThingGroupProperties {
     /// <p>The thing group description.</p>
+    #[doc(hidden)]
     pub thing_group_description: std::option::Option<std::string::String>,
     /// <p>The thing group attributes in JSON format.</p>
+    #[doc(hidden)]
     pub attribute_payload: std::option::Option<crate::model::AttributePayload>,
 }
 impl ThingGroupProperties {
@@ -1096,11 +1114,10 @@ impl std::fmt::Debug for ThingGroupProperties {
         formatter.finish()
     }
 }
-/// See [`ThingGroupProperties`](crate::model::ThingGroupProperties)
+/// See [`ThingGroupProperties`](crate::model::ThingGroupProperties).
 pub mod thing_group_properties {
 
-    /// A builder for [`ThingGroupProperties`](crate::model::ThingGroupProperties)
-    #[non_exhaustive]
+    /// A builder for [`ThingGroupProperties`](crate::model::ThingGroupProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_group_description: std::option::Option<std::string::String>,
@@ -1133,7 +1150,7 @@ pub mod thing_group_properties {
             self.attribute_payload = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThingGroupProperties`](crate::model::ThingGroupProperties)
+        /// Consumes the builder and constructs a [`ThingGroupProperties`](crate::model::ThingGroupProperties).
         pub fn build(self) -> crate::model::ThingGroupProperties {
             crate::model::ThingGroupProperties {
                 thing_group_description: self.thing_group_description,
@@ -1143,7 +1160,7 @@ pub mod thing_group_properties {
     }
 }
 impl ThingGroupProperties {
-    /// Creates a new builder-style object to manufacture [`ThingGroupProperties`](crate::model::ThingGroupProperties)
+    /// Creates a new builder-style object to manufacture [`ThingGroupProperties`](crate::model::ThingGroupProperties).
     pub fn builder() -> crate::model::thing_group_properties::Builder {
         crate::model::thing_group_properties::Builder::default()
     }
@@ -1155,12 +1172,14 @@ impl ThingGroupProperties {
 pub struct AttributePayload {
     /// <p>A JSON string containing up to three key-value pair in JSON format. For example:</p>
     /// <p> <code>{\"attributes\":{\"string1\":\"string2\"}}</code> </p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Specifies whether the list of attributes provided in the <code>AttributePayload</code> is merged with the attributes stored in the registry, instead of overwriting them.</p>
     /// <p>To remove an attribute, call <code>UpdateThing</code> with an empty attribute value.</p> <note>
     /// <p>The <code>merge</code> attribute is only valid when calling <code>UpdateThing</code> or <code>UpdateThingGroup</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub merge: bool,
 }
 impl AttributePayload {
@@ -1188,11 +1207,10 @@ impl std::fmt::Debug for AttributePayload {
         formatter.finish()
     }
 }
-/// See [`AttributePayload`](crate::model::AttributePayload)
+/// See [`AttributePayload`](crate::model::AttributePayload).
 pub mod attribute_payload {
 
-    /// A builder for [`AttributePayload`](crate::model::AttributePayload)
-    #[non_exhaustive]
+    /// A builder for [`AttributePayload`](crate::model::AttributePayload).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<
@@ -1244,7 +1262,7 @@ pub mod attribute_payload {
             self.merge = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttributePayload`](crate::model::AttributePayload)
+        /// Consumes the builder and constructs a [`AttributePayload`](crate::model::AttributePayload).
         pub fn build(self) -> crate::model::AttributePayload {
             crate::model::AttributePayload {
                 attributes: self.attributes,
@@ -1254,7 +1272,7 @@ pub mod attribute_payload {
     }
 }
 impl AttributePayload {
-    /// Creates a new builder-style object to manufacture [`AttributePayload`](crate::model::AttributePayload)
+    /// Creates a new builder-style object to manufacture [`AttributePayload`](crate::model::AttributePayload).
     pub fn builder() -> crate::model::attribute_payload::Builder {
         crate::model::attribute_payload::Builder::default()
     }
@@ -1265,8 +1283,10 @@ impl AttributePayload {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamFile {
     /// <p>The file ID.</p>
+    #[doc(hidden)]
     pub file_id: std::option::Option<i32>,
     /// <p>The location of the file in S3.</p>
+    #[doc(hidden)]
     pub s3_location: std::option::Option<crate::model::S3Location>,
 }
 impl StreamFile {
@@ -1287,11 +1307,10 @@ impl std::fmt::Debug for StreamFile {
         formatter.finish()
     }
 }
-/// See [`StreamFile`](crate::model::StreamFile)
+/// See [`StreamFile`](crate::model::StreamFile).
 pub mod stream_file {
 
-    /// A builder for [`StreamFile`](crate::model::StreamFile)
-    #[non_exhaustive]
+    /// A builder for [`StreamFile`](crate::model::StreamFile).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_id: std::option::Option<i32>,
@@ -1321,7 +1340,7 @@ pub mod stream_file {
             self.s3_location = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamFile`](crate::model::StreamFile)
+        /// Consumes the builder and constructs a [`StreamFile`](crate::model::StreamFile).
         pub fn build(self) -> crate::model::StreamFile {
             crate::model::StreamFile {
                 file_id: self.file_id,
@@ -1331,7 +1350,7 @@ pub mod stream_file {
     }
 }
 impl StreamFile {
-    /// Creates a new builder-style object to manufacture [`StreamFile`](crate::model::StreamFile)
+    /// Creates a new builder-style object to manufacture [`StreamFile`](crate::model::StreamFile).
     pub fn builder() -> crate::model::stream_file::Builder {
         crate::model::stream_file::Builder::default()
     }
@@ -1342,10 +1361,13 @@ impl StreamFile {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Location {
     /// <p>The S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The S3 key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The S3 bucket version.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl S3Location {
@@ -1371,11 +1393,10 @@ impl std::fmt::Debug for S3Location {
         formatter.finish()
     }
 }
-/// See [`S3Location`](crate::model::S3Location)
+/// See [`S3Location`](crate::model::S3Location).
 pub mod s3_location {
 
-    /// A builder for [`S3Location`](crate::model::S3Location)
-    #[non_exhaustive]
+    /// A builder for [`S3Location`](crate::model::S3Location).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -1413,7 +1434,7 @@ pub mod s3_location {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location)
+        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location).
         pub fn build(self) -> crate::model::S3Location {
             crate::model::S3Location {
                 bucket: self.bucket,
@@ -1424,7 +1445,7 @@ pub mod s3_location {
     }
 }
 impl S3Location {
-    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location)
+    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location).
     pub fn builder() -> crate::model::s3_location::Builder {
         crate::model::s3_location::Builder::default()
     }
@@ -1435,8 +1456,10 @@ impl S3Location {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricToRetain {
     /// <p>What is measured by the behavior.</p>
+    #[doc(hidden)]
     pub metric: std::option::Option<std::string::String>,
     /// <p>The dimension of a metric. This can't be used with custom metrics.</p>
+    #[doc(hidden)]
     pub metric_dimension: std::option::Option<crate::model::MetricDimension>,
 }
 impl MetricToRetain {
@@ -1457,11 +1480,10 @@ impl std::fmt::Debug for MetricToRetain {
         formatter.finish()
     }
 }
-/// See [`MetricToRetain`](crate::model::MetricToRetain)
+/// See [`MetricToRetain`](crate::model::MetricToRetain).
 pub mod metric_to_retain {
 
-    /// A builder for [`MetricToRetain`](crate::model::MetricToRetain)
-    #[non_exhaustive]
+    /// A builder for [`MetricToRetain`](crate::model::MetricToRetain).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric: std::option::Option<std::string::String>,
@@ -1491,7 +1513,7 @@ pub mod metric_to_retain {
             self.metric_dimension = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricToRetain`](crate::model::MetricToRetain)
+        /// Consumes the builder and constructs a [`MetricToRetain`](crate::model::MetricToRetain).
         pub fn build(self) -> crate::model::MetricToRetain {
             crate::model::MetricToRetain {
                 metric: self.metric,
@@ -1501,7 +1523,7 @@ pub mod metric_to_retain {
     }
 }
 impl MetricToRetain {
-    /// Creates a new builder-style object to manufacture [`MetricToRetain`](crate::model::MetricToRetain)
+    /// Creates a new builder-style object to manufacture [`MetricToRetain`](crate::model::MetricToRetain).
     pub fn builder() -> crate::model::metric_to_retain::Builder {
         crate::model::metric_to_retain::Builder::default()
     }
@@ -1512,8 +1534,10 @@ impl MetricToRetain {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AlertTarget {
     /// <p>The Amazon Resource Name (ARN) of the notification target to which alerts are sent.</p>
+    #[doc(hidden)]
     pub alert_target_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the role that grants permission to send alerts to the notification target.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl AlertTarget {
@@ -1534,11 +1558,10 @@ impl std::fmt::Debug for AlertTarget {
         formatter.finish()
     }
 }
-/// See [`AlertTarget`](crate::model::AlertTarget)
+/// See [`AlertTarget`](crate::model::AlertTarget).
 pub mod alert_target {
 
-    /// A builder for [`AlertTarget`](crate::model::AlertTarget)
-    #[non_exhaustive]
+    /// A builder for [`AlertTarget`](crate::model::AlertTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alert_target_arn: std::option::Option<std::string::String>,
@@ -1568,7 +1591,7 @@ pub mod alert_target {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AlertTarget`](crate::model::AlertTarget)
+        /// Consumes the builder and constructs a [`AlertTarget`](crate::model::AlertTarget).
         pub fn build(self) -> crate::model::AlertTarget {
             crate::model::AlertTarget {
                 alert_target_arn: self.alert_target_arn,
@@ -1578,7 +1601,7 @@ pub mod alert_target {
     }
 }
 impl AlertTarget {
-    /// Creates a new builder-style object to manufacture [`AlertTarget`](crate::model::AlertTarget)
+    /// Creates a new builder-style object to manufacture [`AlertTarget`](crate::model::AlertTarget).
     pub fn builder() -> crate::model::alert_target::Builder {
         crate::model::alert_target::Builder::default()
     }
@@ -1779,9 +1802,11 @@ impl AsRef<str> for AuditFrequency {
 pub struct ProvisioningHook {
     /// <p>The payload that was sent to the target function.</p>
     /// <p> <i>Note:</i> Only Lambda functions are currently supported.</p>
+    #[doc(hidden)]
     pub payload_version: std::option::Option<std::string::String>,
     /// <p>The ARN of the target function.</p>
     /// <p> <i>Note:</i> Only Lambda functions are currently supported.</p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
 }
 impl ProvisioningHook {
@@ -1804,11 +1829,10 @@ impl std::fmt::Debug for ProvisioningHook {
         formatter.finish()
     }
 }
-/// See [`ProvisioningHook`](crate::model::ProvisioningHook)
+/// See [`ProvisioningHook`](crate::model::ProvisioningHook).
 pub mod provisioning_hook {
 
-    /// A builder for [`ProvisioningHook`](crate::model::ProvisioningHook)
-    #[non_exhaustive]
+    /// A builder for [`ProvisioningHook`](crate::model::ProvisioningHook).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) payload_version: std::option::Option<std::string::String>,
@@ -1842,7 +1866,7 @@ pub mod provisioning_hook {
             self.target_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvisioningHook`](crate::model::ProvisioningHook)
+        /// Consumes the builder and constructs a [`ProvisioningHook`](crate::model::ProvisioningHook).
         pub fn build(self) -> crate::model::ProvisioningHook {
             crate::model::ProvisioningHook {
                 payload_version: self.payload_version,
@@ -1852,7 +1876,7 @@ pub mod provisioning_hook {
     }
 }
 impl ProvisioningHook {
-    /// Creates a new builder-style object to manufacture [`ProvisioningHook`](crate::model::ProvisioningHook)
+    /// Creates a new builder-style object to manufacture [`ProvisioningHook`](crate::model::ProvisioningHook).
     pub fn builder() -> crate::model::provisioning_hook::Builder {
         crate::model::provisioning_hook::Builder::default()
     }
@@ -1863,19 +1887,25 @@ impl ProvisioningHook {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MitigationActionParams {
     /// <p>Parameters to define a mitigation action that changes the state of the device certificate to inactive.</p>
+    #[doc(hidden)]
     pub update_device_certificate_params:
         std::option::Option<crate::model::UpdateDeviceCertificateParams>,
     /// <p>Parameters to define a mitigation action that changes the state of the CA certificate to inactive.</p>
+    #[doc(hidden)]
     pub update_ca_certificate_params: std::option::Option<crate::model::UpdateCaCertificateParams>,
     /// <p>Parameters to define a mitigation action that moves devices associated with a certificate to one or more specified thing groups, typically for quarantine.</p>
+    #[doc(hidden)]
     pub add_things_to_thing_group_params:
         std::option::Option<crate::model::AddThingsToThingGroupParams>,
     /// <p>Parameters to define a mitigation action that adds a blank policy to restrict permissions.</p>
+    #[doc(hidden)]
     pub replace_default_policy_version_params:
         std::option::Option<crate::model::ReplaceDefaultPolicyVersionParams>,
     /// <p>Parameters to define a mitigation action that enables Amazon Web Services IoT Core logging at a specified level of detail.</p>
+    #[doc(hidden)]
     pub enable_io_t_logging_params: std::option::Option<crate::model::EnableIoTLoggingParams>,
     /// <p>Parameters to define a mitigation action that publishes findings to Amazon Simple Notification Service (Amazon SNS. You can implement your own custom actions in response to the Amazon SNS messages.</p>
+    #[doc(hidden)]
     pub publish_finding_to_sns_params: std::option::Option<crate::model::PublishFindingToSnsParams>,
 }
 impl MitigationActionParams {
@@ -1946,11 +1976,10 @@ impl std::fmt::Debug for MitigationActionParams {
         formatter.finish()
     }
 }
-/// See [`MitigationActionParams`](crate::model::MitigationActionParams)
+/// See [`MitigationActionParams`](crate::model::MitigationActionParams).
 pub mod mitigation_action_params {
 
-    /// A builder for [`MitigationActionParams`](crate::model::MitigationActionParams)
-    #[non_exhaustive]
+    /// A builder for [`MitigationActionParams`](crate::model::MitigationActionParams).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) update_device_certificate_params:
@@ -2063,7 +2092,7 @@ pub mod mitigation_action_params {
             self.publish_finding_to_sns_params = input;
             self
         }
-        /// Consumes the builder and constructs a [`MitigationActionParams`](crate::model::MitigationActionParams)
+        /// Consumes the builder and constructs a [`MitigationActionParams`](crate::model::MitigationActionParams).
         pub fn build(self) -> crate::model::MitigationActionParams {
             crate::model::MitigationActionParams {
                 update_device_certificate_params: self.update_device_certificate_params,
@@ -2077,7 +2106,7 @@ pub mod mitigation_action_params {
     }
 }
 impl MitigationActionParams {
-    /// Creates a new builder-style object to manufacture [`MitigationActionParams`](crate::model::MitigationActionParams)
+    /// Creates a new builder-style object to manufacture [`MitigationActionParams`](crate::model::MitigationActionParams).
     pub fn builder() -> crate::model::mitigation_action_params::Builder {
         crate::model::mitigation_action_params::Builder::default()
     }
@@ -2088,6 +2117,7 @@ impl MitigationActionParams {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublishFindingToSnsParams {
     /// <p>The ARN of the topic to which you want to publish the findings.</p>
+    #[doc(hidden)]
     pub topic_arn: std::option::Option<std::string::String>,
 }
 impl PublishFindingToSnsParams {
@@ -2103,11 +2133,10 @@ impl std::fmt::Debug for PublishFindingToSnsParams {
         formatter.finish()
     }
 }
-/// See [`PublishFindingToSnsParams`](crate::model::PublishFindingToSnsParams)
+/// See [`PublishFindingToSnsParams`](crate::model::PublishFindingToSnsParams).
 pub mod publish_finding_to_sns_params {
 
-    /// A builder for [`PublishFindingToSnsParams`](crate::model::PublishFindingToSnsParams)
-    #[non_exhaustive]
+    /// A builder for [`PublishFindingToSnsParams`](crate::model::PublishFindingToSnsParams).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) topic_arn: std::option::Option<std::string::String>,
@@ -2123,7 +2152,7 @@ pub mod publish_finding_to_sns_params {
             self.topic_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublishFindingToSnsParams`](crate::model::PublishFindingToSnsParams)
+        /// Consumes the builder and constructs a [`PublishFindingToSnsParams`](crate::model::PublishFindingToSnsParams).
         pub fn build(self) -> crate::model::PublishFindingToSnsParams {
             crate::model::PublishFindingToSnsParams {
                 topic_arn: self.topic_arn,
@@ -2132,7 +2161,7 @@ pub mod publish_finding_to_sns_params {
     }
 }
 impl PublishFindingToSnsParams {
-    /// Creates a new builder-style object to manufacture [`PublishFindingToSnsParams`](crate::model::PublishFindingToSnsParams)
+    /// Creates a new builder-style object to manufacture [`PublishFindingToSnsParams`](crate::model::PublishFindingToSnsParams).
     pub fn builder() -> crate::model::publish_finding_to_sns_params::Builder {
         crate::model::publish_finding_to_sns_params::Builder::default()
     }
@@ -2143,8 +2172,10 @@ impl PublishFindingToSnsParams {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnableIoTLoggingParams {
     /// <p>The Amazon Resource Name (ARN) of the IAM role used for logging.</p>
+    #[doc(hidden)]
     pub role_arn_for_logging: std::option::Option<std::string::String>,
     /// <p>Specifies the type of information to be logged.</p>
+    #[doc(hidden)]
     pub log_level: std::option::Option<crate::model::LogLevel>,
 }
 impl EnableIoTLoggingParams {
@@ -2165,11 +2196,10 @@ impl std::fmt::Debug for EnableIoTLoggingParams {
         formatter.finish()
     }
 }
-/// See [`EnableIoTLoggingParams`](crate::model::EnableIoTLoggingParams)
+/// See [`EnableIoTLoggingParams`](crate::model::EnableIoTLoggingParams).
 pub mod enable_io_t_logging_params {
 
-    /// A builder for [`EnableIoTLoggingParams`](crate::model::EnableIoTLoggingParams)
-    #[non_exhaustive]
+    /// A builder for [`EnableIoTLoggingParams`](crate::model::EnableIoTLoggingParams).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn_for_logging: std::option::Option<std::string::String>,
@@ -2199,7 +2229,7 @@ pub mod enable_io_t_logging_params {
             self.log_level = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnableIoTLoggingParams`](crate::model::EnableIoTLoggingParams)
+        /// Consumes the builder and constructs a [`EnableIoTLoggingParams`](crate::model::EnableIoTLoggingParams).
         pub fn build(self) -> crate::model::EnableIoTLoggingParams {
             crate::model::EnableIoTLoggingParams {
                 role_arn_for_logging: self.role_arn_for_logging,
@@ -2209,7 +2239,7 @@ pub mod enable_io_t_logging_params {
     }
 }
 impl EnableIoTLoggingParams {
-    /// Creates a new builder-style object to manufacture [`EnableIoTLoggingParams`](crate::model::EnableIoTLoggingParams)
+    /// Creates a new builder-style object to manufacture [`EnableIoTLoggingParams`](crate::model::EnableIoTLoggingParams).
     pub fn builder() -> crate::model::enable_io_t_logging_params::Builder {
         crate::model::enable_io_t_logging_params::Builder::default()
     }
@@ -2287,6 +2317,7 @@ impl AsRef<str> for LogLevel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplaceDefaultPolicyVersionParams {
     /// <p>The name of the template to be applied. The only supported value is <code>BLANK_POLICY</code>.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<crate::model::PolicyTemplateName>,
 }
 impl ReplaceDefaultPolicyVersionParams {
@@ -2302,11 +2333,10 @@ impl std::fmt::Debug for ReplaceDefaultPolicyVersionParams {
         formatter.finish()
     }
 }
-/// See [`ReplaceDefaultPolicyVersionParams`](crate::model::ReplaceDefaultPolicyVersionParams)
+/// See [`ReplaceDefaultPolicyVersionParams`](crate::model::ReplaceDefaultPolicyVersionParams).
 pub mod replace_default_policy_version_params {
 
-    /// A builder for [`ReplaceDefaultPolicyVersionParams`](crate::model::ReplaceDefaultPolicyVersionParams)
-    #[non_exhaustive]
+    /// A builder for [`ReplaceDefaultPolicyVersionParams`](crate::model::ReplaceDefaultPolicyVersionParams).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_name: std::option::Option<crate::model::PolicyTemplateName>,
@@ -2325,7 +2355,7 @@ pub mod replace_default_policy_version_params {
             self.template_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplaceDefaultPolicyVersionParams`](crate::model::ReplaceDefaultPolicyVersionParams)
+        /// Consumes the builder and constructs a [`ReplaceDefaultPolicyVersionParams`](crate::model::ReplaceDefaultPolicyVersionParams).
         pub fn build(self) -> crate::model::ReplaceDefaultPolicyVersionParams {
             crate::model::ReplaceDefaultPolicyVersionParams {
                 template_name: self.template_name,
@@ -2334,7 +2364,7 @@ pub mod replace_default_policy_version_params {
     }
 }
 impl ReplaceDefaultPolicyVersionParams {
-    /// Creates a new builder-style object to manufacture [`ReplaceDefaultPolicyVersionParams`](crate::model::ReplaceDefaultPolicyVersionParams)
+    /// Creates a new builder-style object to manufacture [`ReplaceDefaultPolicyVersionParams`](crate::model::ReplaceDefaultPolicyVersionParams).
     pub fn builder() -> crate::model::replace_default_policy_version_params::Builder {
         crate::model::replace_default_policy_version_params::Builder::default()
     }
@@ -2396,8 +2426,10 @@ impl AsRef<str> for PolicyTemplateName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddThingsToThingGroupParams {
     /// <p>The list of groups to which you want to add the things that triggered the mitigation action. You can add a thing to a maximum of 10 groups, but you can't add a thing to more than one group in the same hierarchy.</p>
+    #[doc(hidden)]
     pub thing_group_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies if this mitigation action can move the things that triggered the mitigation action even if they are part of one or more dynamic thing groups.</p>
+    #[doc(hidden)]
     pub override_dynamic_groups: std::option::Option<bool>,
 }
 impl AddThingsToThingGroupParams {
@@ -2418,11 +2450,10 @@ impl std::fmt::Debug for AddThingsToThingGroupParams {
         formatter.finish()
     }
 }
-/// See [`AddThingsToThingGroupParams`](crate::model::AddThingsToThingGroupParams)
+/// See [`AddThingsToThingGroupParams`](crate::model::AddThingsToThingGroupParams).
 pub mod add_things_to_thing_group_params {
 
-    /// A builder for [`AddThingsToThingGroupParams`](crate::model::AddThingsToThingGroupParams)
-    #[non_exhaustive]
+    /// A builder for [`AddThingsToThingGroupParams`](crate::model::AddThingsToThingGroupParams).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_group_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2458,7 +2489,7 @@ pub mod add_things_to_thing_group_params {
             self.override_dynamic_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddThingsToThingGroupParams`](crate::model::AddThingsToThingGroupParams)
+        /// Consumes the builder and constructs a [`AddThingsToThingGroupParams`](crate::model::AddThingsToThingGroupParams).
         pub fn build(self) -> crate::model::AddThingsToThingGroupParams {
             crate::model::AddThingsToThingGroupParams {
                 thing_group_names: self.thing_group_names,
@@ -2468,7 +2499,7 @@ pub mod add_things_to_thing_group_params {
     }
 }
 impl AddThingsToThingGroupParams {
-    /// Creates a new builder-style object to manufacture [`AddThingsToThingGroupParams`](crate::model::AddThingsToThingGroupParams)
+    /// Creates a new builder-style object to manufacture [`AddThingsToThingGroupParams`](crate::model::AddThingsToThingGroupParams).
     pub fn builder() -> crate::model::add_things_to_thing_group_params::Builder {
         crate::model::add_things_to_thing_group_params::Builder::default()
     }
@@ -2479,6 +2510,7 @@ impl AddThingsToThingGroupParams {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateCaCertificateParams {
     /// <p>The action that you want to apply to the CA certificate. The only supported value is <code>DEACTIVATE</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::CaCertificateUpdateAction>,
 }
 impl UpdateCaCertificateParams {
@@ -2494,11 +2526,10 @@ impl std::fmt::Debug for UpdateCaCertificateParams {
         formatter.finish()
     }
 }
-/// See [`UpdateCaCertificateParams`](crate::model::UpdateCaCertificateParams)
+/// See [`UpdateCaCertificateParams`](crate::model::UpdateCaCertificateParams).
 pub mod update_ca_certificate_params {
 
-    /// A builder for [`UpdateCaCertificateParams`](crate::model::UpdateCaCertificateParams)
-    #[non_exhaustive]
+    /// A builder for [`UpdateCaCertificateParams`](crate::model::UpdateCaCertificateParams).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::CaCertificateUpdateAction>,
@@ -2517,7 +2548,7 @@ pub mod update_ca_certificate_params {
             self.action = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateCaCertificateParams`](crate::model::UpdateCaCertificateParams)
+        /// Consumes the builder and constructs a [`UpdateCaCertificateParams`](crate::model::UpdateCaCertificateParams).
         pub fn build(self) -> crate::model::UpdateCaCertificateParams {
             crate::model::UpdateCaCertificateParams {
                 action: self.action,
@@ -2526,7 +2557,7 @@ pub mod update_ca_certificate_params {
     }
 }
 impl UpdateCaCertificateParams {
-    /// Creates a new builder-style object to manufacture [`UpdateCaCertificateParams`](crate::model::UpdateCaCertificateParams)
+    /// Creates a new builder-style object to manufacture [`UpdateCaCertificateParams`](crate::model::UpdateCaCertificateParams).
     pub fn builder() -> crate::model::update_ca_certificate_params::Builder {
         crate::model::update_ca_certificate_params::Builder::default()
     }
@@ -2588,6 +2619,7 @@ impl AsRef<str> for CaCertificateUpdateAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDeviceCertificateParams {
     /// <p>The action that you want to apply to the device certificate. The only supported value is <code>DEACTIVATE</code>.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::DeviceCertificateUpdateAction>,
 }
 impl UpdateDeviceCertificateParams {
@@ -2603,11 +2635,10 @@ impl std::fmt::Debug for UpdateDeviceCertificateParams {
         formatter.finish()
     }
 }
-/// See [`UpdateDeviceCertificateParams`](crate::model::UpdateDeviceCertificateParams)
+/// See [`UpdateDeviceCertificateParams`](crate::model::UpdateDeviceCertificateParams).
 pub mod update_device_certificate_params {
 
-    /// A builder for [`UpdateDeviceCertificateParams`](crate::model::UpdateDeviceCertificateParams)
-    #[non_exhaustive]
+    /// A builder for [`UpdateDeviceCertificateParams`](crate::model::UpdateDeviceCertificateParams).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::DeviceCertificateUpdateAction>,
@@ -2626,7 +2657,7 @@ pub mod update_device_certificate_params {
             self.action = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateDeviceCertificateParams`](crate::model::UpdateDeviceCertificateParams)
+        /// Consumes the builder and constructs a [`UpdateDeviceCertificateParams`](crate::model::UpdateDeviceCertificateParams).
         pub fn build(self) -> crate::model::UpdateDeviceCertificateParams {
             crate::model::UpdateDeviceCertificateParams {
                 action: self.action,
@@ -2635,7 +2666,7 @@ pub mod update_device_certificate_params {
     }
 }
 impl UpdateDeviceCertificateParams {
-    /// Creates a new builder-style object to manufacture [`UpdateDeviceCertificateParams`](crate::model::UpdateDeviceCertificateParams)
+    /// Creates a new builder-style object to manufacture [`UpdateDeviceCertificateParams`](crate::model::UpdateDeviceCertificateParams).
     pub fn builder() -> crate::model::update_device_certificate_params::Builder {
         crate::model::update_device_certificate_params::Builder::default()
     }
@@ -2697,6 +2728,7 @@ impl AsRef<str> for DeviceCertificateUpdateAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobExecutionsRetryConfig {
     /// <p>The list of criteria that determines how many retries are allowed for each failure type for a job.</p>
+    #[doc(hidden)]
     pub criteria_list: std::option::Option<std::vec::Vec<crate::model::RetryCriteria>>,
 }
 impl JobExecutionsRetryConfig {
@@ -2712,11 +2744,10 @@ impl std::fmt::Debug for JobExecutionsRetryConfig {
         formatter.finish()
     }
 }
-/// See [`JobExecutionsRetryConfig`](crate::model::JobExecutionsRetryConfig)
+/// See [`JobExecutionsRetryConfig`](crate::model::JobExecutionsRetryConfig).
 pub mod job_executions_retry_config {
 
-    /// A builder for [`JobExecutionsRetryConfig`](crate::model::JobExecutionsRetryConfig)
-    #[non_exhaustive]
+    /// A builder for [`JobExecutionsRetryConfig`](crate::model::JobExecutionsRetryConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) criteria_list: std::option::Option<std::vec::Vec<crate::model::RetryCriteria>>,
@@ -2741,7 +2772,7 @@ pub mod job_executions_retry_config {
             self.criteria_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobExecutionsRetryConfig`](crate::model::JobExecutionsRetryConfig)
+        /// Consumes the builder and constructs a [`JobExecutionsRetryConfig`](crate::model::JobExecutionsRetryConfig).
         pub fn build(self) -> crate::model::JobExecutionsRetryConfig {
             crate::model::JobExecutionsRetryConfig {
                 criteria_list: self.criteria_list,
@@ -2750,7 +2781,7 @@ pub mod job_executions_retry_config {
     }
 }
 impl JobExecutionsRetryConfig {
-    /// Creates a new builder-style object to manufacture [`JobExecutionsRetryConfig`](crate::model::JobExecutionsRetryConfig)
+    /// Creates a new builder-style object to manufacture [`JobExecutionsRetryConfig`](crate::model::JobExecutionsRetryConfig).
     pub fn builder() -> crate::model::job_executions_retry_config::Builder {
         crate::model::job_executions_retry_config::Builder::default()
     }
@@ -2761,8 +2792,10 @@ impl JobExecutionsRetryConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RetryCriteria {
     /// <p>The type of job execution failures that can initiate a job retry.</p>
+    #[doc(hidden)]
     pub failure_type: std::option::Option<crate::model::RetryableFailureType>,
     /// <p>The number of retries allowed for a failure type for the job.</p>
+    #[doc(hidden)]
     pub number_of_retries: std::option::Option<i32>,
 }
 impl RetryCriteria {
@@ -2783,11 +2816,10 @@ impl std::fmt::Debug for RetryCriteria {
         formatter.finish()
     }
 }
-/// See [`RetryCriteria`](crate::model::RetryCriteria)
+/// See [`RetryCriteria`](crate::model::RetryCriteria).
 pub mod retry_criteria {
 
-    /// A builder for [`RetryCriteria`](crate::model::RetryCriteria)
-    #[non_exhaustive]
+    /// A builder for [`RetryCriteria`](crate::model::RetryCriteria).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failure_type: std::option::Option<crate::model::RetryableFailureType>,
@@ -2817,7 +2849,7 @@ pub mod retry_criteria {
             self.number_of_retries = input;
             self
         }
-        /// Consumes the builder and constructs a [`RetryCriteria`](crate::model::RetryCriteria)
+        /// Consumes the builder and constructs a [`RetryCriteria`](crate::model::RetryCriteria).
         pub fn build(self) -> crate::model::RetryCriteria {
             crate::model::RetryCriteria {
                 failure_type: self.failure_type,
@@ -2827,7 +2859,7 @@ pub mod retry_criteria {
     }
 }
 impl RetryCriteria {
-    /// Creates a new builder-style object to manufacture [`RetryCriteria`](crate::model::RetryCriteria)
+    /// Creates a new builder-style object to manufacture [`RetryCriteria`](crate::model::RetryCriteria).
     pub fn builder() -> crate::model::retry_criteria::Builder {
         crate::model::retry_criteria::Builder::default()
     }
@@ -2897,6 +2929,7 @@ impl AsRef<str> for RetryableFailureType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimeoutConfig {
     /// <p>Specifies the amount of time, in minutes, this device has to finish execution of this job. The timeout interval can be anywhere between 1 minute and 7 days (1 to 10080 minutes). The in progress timer can't be updated and will apply to all job executions for the job. Whenever a job execution remains in the IN_PROGRESS status for longer than this interval, the job execution will fail and switch to the terminal <code>TIMED_OUT</code> status.</p>
+    #[doc(hidden)]
     pub in_progress_timeout_in_minutes: std::option::Option<i64>,
 }
 impl TimeoutConfig {
@@ -2915,11 +2948,10 @@ impl std::fmt::Debug for TimeoutConfig {
         formatter.finish()
     }
 }
-/// See [`TimeoutConfig`](crate::model::TimeoutConfig)
+/// See [`TimeoutConfig`](crate::model::TimeoutConfig).
 pub mod timeout_config {
 
-    /// A builder for [`TimeoutConfig`](crate::model::TimeoutConfig)
-    #[non_exhaustive]
+    /// A builder for [`TimeoutConfig`](crate::model::TimeoutConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) in_progress_timeout_in_minutes: std::option::Option<i64>,
@@ -2938,7 +2970,7 @@ pub mod timeout_config {
             self.in_progress_timeout_in_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimeoutConfig`](crate::model::TimeoutConfig)
+        /// Consumes the builder and constructs a [`TimeoutConfig`](crate::model::TimeoutConfig).
         pub fn build(self) -> crate::model::TimeoutConfig {
             crate::model::TimeoutConfig {
                 in_progress_timeout_in_minutes: self.in_progress_timeout_in_minutes,
@@ -2947,7 +2979,7 @@ pub mod timeout_config {
     }
 }
 impl TimeoutConfig {
-    /// Creates a new builder-style object to manufacture [`TimeoutConfig`](crate::model::TimeoutConfig)
+    /// Creates a new builder-style object to manufacture [`TimeoutConfig`](crate::model::TimeoutConfig).
     pub fn builder() -> crate::model::timeout_config::Builder {
         crate::model::timeout_config::Builder::default()
     }
@@ -2958,6 +2990,7 @@ impl TimeoutConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AbortConfig {
     /// <p>The list of criteria that determine when and how to abort the job.</p>
+    #[doc(hidden)]
     pub criteria_list: std::option::Option<std::vec::Vec<crate::model::AbortCriteria>>,
 }
 impl AbortConfig {
@@ -2973,11 +3006,10 @@ impl std::fmt::Debug for AbortConfig {
         formatter.finish()
     }
 }
-/// See [`AbortConfig`](crate::model::AbortConfig)
+/// See [`AbortConfig`](crate::model::AbortConfig).
 pub mod abort_config {
 
-    /// A builder for [`AbortConfig`](crate::model::AbortConfig)
-    #[non_exhaustive]
+    /// A builder for [`AbortConfig`](crate::model::AbortConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) criteria_list: std::option::Option<std::vec::Vec<crate::model::AbortCriteria>>,
@@ -3002,7 +3034,7 @@ pub mod abort_config {
             self.criteria_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`AbortConfig`](crate::model::AbortConfig)
+        /// Consumes the builder and constructs a [`AbortConfig`](crate::model::AbortConfig).
         pub fn build(self) -> crate::model::AbortConfig {
             crate::model::AbortConfig {
                 criteria_list: self.criteria_list,
@@ -3011,7 +3043,7 @@ pub mod abort_config {
     }
 }
 impl AbortConfig {
-    /// Creates a new builder-style object to manufacture [`AbortConfig`](crate::model::AbortConfig)
+    /// Creates a new builder-style object to manufacture [`AbortConfig`](crate::model::AbortConfig).
     pub fn builder() -> crate::model::abort_config::Builder {
         crate::model::abort_config::Builder::default()
     }
@@ -3022,13 +3054,17 @@ impl AbortConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AbortCriteria {
     /// <p>The type of job execution failures that can initiate a job abort.</p>
+    #[doc(hidden)]
     pub failure_type: std::option::Option<crate::model::JobExecutionFailureType>,
     /// <p>The type of job action to take to initiate the job abort.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::AbortAction>,
     /// <p>The minimum percentage of job execution failures that must occur to initiate the job abort.</p>
     /// <p>Amazon Web Services IoT Core supports up to two digits after the decimal (for example, 10.9 and 10.99, but not 10.999).</p>
+    #[doc(hidden)]
     pub threshold_percentage: std::option::Option<f64>,
     /// <p>The minimum number of things which must receive job execution notifications before the job can be aborted.</p>
+    #[doc(hidden)]
     pub min_number_of_executed_things: std::option::Option<i32>,
 }
 impl AbortCriteria {
@@ -3063,11 +3099,10 @@ impl std::fmt::Debug for AbortCriteria {
         formatter.finish()
     }
 }
-/// See [`AbortCriteria`](crate::model::AbortCriteria)
+/// See [`AbortCriteria`](crate::model::AbortCriteria).
 pub mod abort_criteria {
 
-    /// A builder for [`AbortCriteria`](crate::model::AbortCriteria)
-    #[non_exhaustive]
+    /// A builder for [`AbortCriteria`](crate::model::AbortCriteria).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failure_type: std::option::Option<crate::model::JobExecutionFailureType>,
@@ -3124,7 +3159,7 @@ pub mod abort_criteria {
             self.min_number_of_executed_things = input;
             self
         }
-        /// Consumes the builder and constructs a [`AbortCriteria`](crate::model::AbortCriteria)
+        /// Consumes the builder and constructs a [`AbortCriteria`](crate::model::AbortCriteria).
         pub fn build(self) -> crate::model::AbortCriteria {
             crate::model::AbortCriteria {
                 failure_type: self.failure_type,
@@ -3136,7 +3171,7 @@ pub mod abort_criteria {
     }
 }
 impl AbortCriteria {
-    /// Creates a new builder-style object to manufacture [`AbortCriteria`](crate::model::AbortCriteria)
+    /// Creates a new builder-style object to manufacture [`AbortCriteria`](crate::model::AbortCriteria).
     pub fn builder() -> crate::model::abort_criteria::Builder {
         crate::model::abort_criteria::Builder::default()
     }
@@ -3261,8 +3296,10 @@ impl AsRef<str> for JobExecutionFailureType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobExecutionsRolloutConfig {
     /// <p>The maximum number of things that will be notified of a pending job, per minute. This parameter allows you to create a staged rollout.</p>
+    #[doc(hidden)]
     pub maximum_per_minute: std::option::Option<i32>,
     /// <p>The rate of increase for a job rollout. This parameter allows you to define an exponential rate for a job rollout.</p>
+    #[doc(hidden)]
     pub exponential_rate: std::option::Option<crate::model::ExponentialRolloutRate>,
 }
 impl JobExecutionsRolloutConfig {
@@ -3283,11 +3320,10 @@ impl std::fmt::Debug for JobExecutionsRolloutConfig {
         formatter.finish()
     }
 }
-/// See [`JobExecutionsRolloutConfig`](crate::model::JobExecutionsRolloutConfig)
+/// See [`JobExecutionsRolloutConfig`](crate::model::JobExecutionsRolloutConfig).
 pub mod job_executions_rollout_config {
 
-    /// A builder for [`JobExecutionsRolloutConfig`](crate::model::JobExecutionsRolloutConfig)
-    #[non_exhaustive]
+    /// A builder for [`JobExecutionsRolloutConfig`](crate::model::JobExecutionsRolloutConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) maximum_per_minute: std::option::Option<i32>,
@@ -3317,7 +3353,7 @@ pub mod job_executions_rollout_config {
             self.exponential_rate = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobExecutionsRolloutConfig`](crate::model::JobExecutionsRolloutConfig)
+        /// Consumes the builder and constructs a [`JobExecutionsRolloutConfig`](crate::model::JobExecutionsRolloutConfig).
         pub fn build(self) -> crate::model::JobExecutionsRolloutConfig {
             crate::model::JobExecutionsRolloutConfig {
                 maximum_per_minute: self.maximum_per_minute,
@@ -3327,7 +3363,7 @@ pub mod job_executions_rollout_config {
     }
 }
 impl JobExecutionsRolloutConfig {
-    /// Creates a new builder-style object to manufacture [`JobExecutionsRolloutConfig`](crate::model::JobExecutionsRolloutConfig)
+    /// Creates a new builder-style object to manufacture [`JobExecutionsRolloutConfig`](crate::model::JobExecutionsRolloutConfig).
     pub fn builder() -> crate::model::job_executions_rollout_config::Builder {
         crate::model::job_executions_rollout_config::Builder::default()
     }
@@ -3338,11 +3374,14 @@ impl JobExecutionsRolloutConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExponentialRolloutRate {
     /// <p>The minimum number of things that will be notified of a pending job, per minute at the start of job rollout. This parameter allows you to define the initial rate of rollout.</p>
+    #[doc(hidden)]
     pub base_rate_per_minute: std::option::Option<i32>,
     /// <p>The exponential factor to increase the rate of rollout for a job.</p>
     /// <p>Amazon Web Services IoT Core supports up to one digit after the decimal (for example, 1.5, but not 1.55).</p>
+    #[doc(hidden)]
     pub increment_factor: f64,
     /// <p>The criteria to initiate the increase in rate of rollout for a job.</p>
+    #[doc(hidden)]
     pub rate_increase_criteria: std::option::Option<crate::model::RateIncreaseCriteria>,
 }
 impl ExponentialRolloutRate {
@@ -3371,11 +3410,10 @@ impl std::fmt::Debug for ExponentialRolloutRate {
         formatter.finish()
     }
 }
-/// See [`ExponentialRolloutRate`](crate::model::ExponentialRolloutRate)
+/// See [`ExponentialRolloutRate`](crate::model::ExponentialRolloutRate).
 pub mod exponential_rollout_rate {
 
-    /// A builder for [`ExponentialRolloutRate`](crate::model::ExponentialRolloutRate)
-    #[non_exhaustive]
+    /// A builder for [`ExponentialRolloutRate`](crate::model::ExponentialRolloutRate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) base_rate_per_minute: std::option::Option<i32>,
@@ -3418,7 +3456,7 @@ pub mod exponential_rollout_rate {
             self.rate_increase_criteria = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExponentialRolloutRate`](crate::model::ExponentialRolloutRate)
+        /// Consumes the builder and constructs a [`ExponentialRolloutRate`](crate::model::ExponentialRolloutRate).
         pub fn build(self) -> crate::model::ExponentialRolloutRate {
             crate::model::ExponentialRolloutRate {
                 base_rate_per_minute: self.base_rate_per_minute,
@@ -3429,7 +3467,7 @@ pub mod exponential_rollout_rate {
     }
 }
 impl ExponentialRolloutRate {
-    /// Creates a new builder-style object to manufacture [`ExponentialRolloutRate`](crate::model::ExponentialRolloutRate)
+    /// Creates a new builder-style object to manufacture [`ExponentialRolloutRate`](crate::model::ExponentialRolloutRate).
     pub fn builder() -> crate::model::exponential_rollout_rate::Builder {
         crate::model::exponential_rollout_rate::Builder::default()
     }
@@ -3440,8 +3478,10 @@ impl ExponentialRolloutRate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RateIncreaseCriteria {
     /// <p>The threshold for number of notified things that will initiate the increase in rate of rollout.</p>
+    #[doc(hidden)]
     pub number_of_notified_things: std::option::Option<i32>,
     /// <p>The threshold for number of succeeded things that will initiate the increase in rate of rollout.</p>
+    #[doc(hidden)]
     pub number_of_succeeded_things: std::option::Option<i32>,
 }
 impl RateIncreaseCriteria {
@@ -3465,11 +3505,10 @@ impl std::fmt::Debug for RateIncreaseCriteria {
         formatter.finish()
     }
 }
-/// See [`RateIncreaseCriteria`](crate::model::RateIncreaseCriteria)
+/// See [`RateIncreaseCriteria`](crate::model::RateIncreaseCriteria).
 pub mod rate_increase_criteria {
 
-    /// A builder for [`RateIncreaseCriteria`](crate::model::RateIncreaseCriteria)
-    #[non_exhaustive]
+    /// A builder for [`RateIncreaseCriteria`](crate::model::RateIncreaseCriteria).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) number_of_notified_things: std::option::Option<i32>,
@@ -3496,7 +3535,7 @@ pub mod rate_increase_criteria {
             self.number_of_succeeded_things = input;
             self
         }
-        /// Consumes the builder and constructs a [`RateIncreaseCriteria`](crate::model::RateIncreaseCriteria)
+        /// Consumes the builder and constructs a [`RateIncreaseCriteria`](crate::model::RateIncreaseCriteria).
         pub fn build(self) -> crate::model::RateIncreaseCriteria {
             crate::model::RateIncreaseCriteria {
                 number_of_notified_things: self.number_of_notified_things,
@@ -3506,7 +3545,7 @@ pub mod rate_increase_criteria {
     }
 }
 impl RateIncreaseCriteria {
-    /// Creates a new builder-style object to manufacture [`RateIncreaseCriteria`](crate::model::RateIncreaseCriteria)
+    /// Creates a new builder-style object to manufacture [`RateIncreaseCriteria`](crate::model::RateIncreaseCriteria).
     pub fn builder() -> crate::model::rate_increase_criteria::Builder {
         crate::model::rate_increase_criteria::Builder::default()
     }
@@ -3516,13 +3555,19 @@ impl RateIncreaseCriteria {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PresignedUrlConfig {
-    /// <p>The ARN of an IAM role that grants grants permission to download files from the S3 bucket where the job data/updates are stored. The role must also grant permission for IoT to download the files.</p>
+    /// <p>The ARN of an IAM role that grants grants permission to download files from the S3 bucket where the job data/updates are stored. The role must also grant permission for IoT to download the files.</p> <important>
+    /// <p>For information about addressing the confused deputy problem, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/cross-service-confused-deputy-prevention.html">cross-service confused deputy prevention</a> in the <i>Amazon Web Services IoT Core developer guide</i>.</p>
+    /// </important>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>How long (in seconds) pre-signed URLs are valid. Valid values are 60 - 3600, the default value is 3600 seconds. Pre-signed URLs are generated when Jobs receives an MQTT request for the job document.</p>
+    #[doc(hidden)]
     pub expires_in_sec: std::option::Option<i64>,
 }
 impl PresignedUrlConfig {
-    /// <p>The ARN of an IAM role that grants grants permission to download files from the S3 bucket where the job data/updates are stored. The role must also grant permission for IoT to download the files.</p>
+    /// <p>The ARN of an IAM role that grants grants permission to download files from the S3 bucket where the job data/updates are stored. The role must also grant permission for IoT to download the files.</p> <important>
+    /// <p>For information about addressing the confused deputy problem, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/cross-service-confused-deputy-prevention.html">cross-service confused deputy prevention</a> in the <i>Amazon Web Services IoT Core developer guide</i>.</p>
+    /// </important>
     pub fn role_arn(&self) -> std::option::Option<&str> {
         self.role_arn.as_deref()
     }
@@ -3539,23 +3584,26 @@ impl std::fmt::Debug for PresignedUrlConfig {
         formatter.finish()
     }
 }
-/// See [`PresignedUrlConfig`](crate::model::PresignedUrlConfig)
+/// See [`PresignedUrlConfig`](crate::model::PresignedUrlConfig).
 pub mod presigned_url_config {
 
-    /// A builder for [`PresignedUrlConfig`](crate::model::PresignedUrlConfig)
-    #[non_exhaustive]
+    /// A builder for [`PresignedUrlConfig`](crate::model::PresignedUrlConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
         pub(crate) expires_in_sec: std::option::Option<i64>,
     }
     impl Builder {
-        /// <p>The ARN of an IAM role that grants grants permission to download files from the S3 bucket where the job data/updates are stored. The role must also grant permission for IoT to download the files.</p>
+        /// <p>The ARN of an IAM role that grants grants permission to download files from the S3 bucket where the job data/updates are stored. The role must also grant permission for IoT to download the files.</p> <important>
+        /// <p>For information about addressing the confused deputy problem, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/cross-service-confused-deputy-prevention.html">cross-service confused deputy prevention</a> in the <i>Amazon Web Services IoT Core developer guide</i>.</p>
+        /// </important>
         pub fn role_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.role_arn = Some(input.into());
             self
         }
-        /// <p>The ARN of an IAM role that grants grants permission to download files from the S3 bucket where the job data/updates are stored. The role must also grant permission for IoT to download the files.</p>
+        /// <p>The ARN of an IAM role that grants grants permission to download files from the S3 bucket where the job data/updates are stored. The role must also grant permission for IoT to download the files.</p> <important>
+        /// <p>For information about addressing the confused deputy problem, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/cross-service-confused-deputy-prevention.html">cross-service confused deputy prevention</a> in the <i>Amazon Web Services IoT Core developer guide</i>.</p>
+        /// </important>
         pub fn set_role_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.role_arn = input;
             self
@@ -3570,7 +3618,7 @@ pub mod presigned_url_config {
             self.expires_in_sec = input;
             self
         }
-        /// Consumes the builder and constructs a [`PresignedUrlConfig`](crate::model::PresignedUrlConfig)
+        /// Consumes the builder and constructs a [`PresignedUrlConfig`](crate::model::PresignedUrlConfig).
         pub fn build(self) -> crate::model::PresignedUrlConfig {
             crate::model::PresignedUrlConfig {
                 role_arn: self.role_arn,
@@ -3580,7 +3628,7 @@ pub mod presigned_url_config {
     }
 }
 impl PresignedUrlConfig {
-    /// Creates a new builder-style object to manufacture [`PresignedUrlConfig`](crate::model::PresignedUrlConfig)
+    /// Creates a new builder-style object to manufacture [`PresignedUrlConfig`](crate::model::PresignedUrlConfig).
     pub fn builder() -> crate::model::presigned_url_config::Builder {
         crate::model::presigned_url_config::Builder::default()
     }
@@ -3591,11 +3639,14 @@ impl PresignedUrlConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThingGroupIndexingConfiguration {
     /// <p>Thing group indexing mode.</p>
+    #[doc(hidden)]
     pub thing_group_indexing_mode: std::option::Option<crate::model::ThingGroupIndexingMode>,
     /// <p>Contains fields that are indexed and whose types are already known by the Fleet Indexing service.</p>
+    #[doc(hidden)]
     pub managed_fields: std::option::Option<std::vec::Vec<crate::model::Field>>,
     /// <p>A list of thing group fields to index. This list cannot contain any managed fields. Use the GetIndexingConfiguration API to get a list of managed fields.</p>
     /// <p>Contains custom field names and their data type.</p>
+    #[doc(hidden)]
     pub custom_fields: std::option::Option<std::vec::Vec<crate::model::Field>>,
 }
 impl ThingGroupIndexingConfiguration {
@@ -3624,11 +3675,10 @@ impl std::fmt::Debug for ThingGroupIndexingConfiguration {
         formatter.finish()
     }
 }
-/// See [`ThingGroupIndexingConfiguration`](crate::model::ThingGroupIndexingConfiguration)
+/// See [`ThingGroupIndexingConfiguration`](crate::model::ThingGroupIndexingConfiguration).
 pub mod thing_group_indexing_configuration {
 
-    /// A builder for [`ThingGroupIndexingConfiguration`](crate::model::ThingGroupIndexingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ThingGroupIndexingConfiguration`](crate::model::ThingGroupIndexingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_group_indexing_mode:
@@ -3693,7 +3743,7 @@ pub mod thing_group_indexing_configuration {
             self.custom_fields = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThingGroupIndexingConfiguration`](crate::model::ThingGroupIndexingConfiguration)
+        /// Consumes the builder and constructs a [`ThingGroupIndexingConfiguration`](crate::model::ThingGroupIndexingConfiguration).
         pub fn build(self) -> crate::model::ThingGroupIndexingConfiguration {
             crate::model::ThingGroupIndexingConfiguration {
                 thing_group_indexing_mode: self.thing_group_indexing_mode,
@@ -3704,7 +3754,7 @@ pub mod thing_group_indexing_configuration {
     }
 }
 impl ThingGroupIndexingConfiguration {
-    /// Creates a new builder-style object to manufacture [`ThingGroupIndexingConfiguration`](crate::model::ThingGroupIndexingConfiguration)
+    /// Creates a new builder-style object to manufacture [`ThingGroupIndexingConfiguration`](crate::model::ThingGroupIndexingConfiguration).
     pub fn builder() -> crate::model::thing_group_indexing_configuration::Builder {
         crate::model::thing_group_indexing_configuration::Builder::default()
     }
@@ -3715,8 +3765,10 @@ impl ThingGroupIndexingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Field {
     /// <p>The name of the field.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The data type of the field.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::FieldType>,
 }
 impl Field {
@@ -3737,11 +3789,10 @@ impl std::fmt::Debug for Field {
         formatter.finish()
     }
 }
-/// See [`Field`](crate::model::Field)
+/// See [`Field`](crate::model::Field).
 pub mod field {
 
-    /// A builder for [`Field`](crate::model::Field)
-    #[non_exhaustive]
+    /// A builder for [`Field`](crate::model::Field).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3768,7 +3819,7 @@ pub mod field {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Field`](crate::model::Field)
+        /// Consumes the builder and constructs a [`Field`](crate::model::Field).
         pub fn build(self) -> crate::model::Field {
             crate::model::Field {
                 name: self.name,
@@ -3778,7 +3829,7 @@ pub mod field {
     }
 }
 impl Field {
-    /// Creates a new builder-style object to manufacture [`Field`](crate::model::Field)
+    /// Creates a new builder-style object to manufacture [`Field`](crate::model::Field).
     pub fn builder() -> crate::model::field::Builder {
         crate::model::field::Builder::default()
     }
@@ -3908,12 +3959,14 @@ pub struct ThingIndexingConfiguration {
     /// <li> <p>REGISTRY_AND_SHADOW - Your thing index contains registry and shadow data.</p> </li>
     /// <li> <p>OFF - Thing indexing is disabled.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub thing_indexing_mode: std::option::Option<crate::model::ThingIndexingMode>,
     /// <p>Thing connectivity indexing mode. Valid values are: </p>
     /// <ul>
     /// <li> <p>STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing, <i>thingIndexMode</i> must not be set to OFF.</p> </li>
     /// <li> <p>OFF - Thing connectivity status indexing is disabled.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub thing_connectivity_indexing_mode:
         std::option::Option<crate::model::ThingConnectivityIndexingMode>,
     /// <p>Device Defender indexing mode. Valid values are:</p>
@@ -3922,6 +3975,7 @@ pub struct ThingIndexingConfiguration {
     /// <li> <p>OFF - Device Defender indexing is disabled.</p> </li>
     /// </ul>
     /// <p>For more information about Device Defender violations, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/device-defender-detect.html">Device Defender Detect.</a> </p>
+    #[doc(hidden)]
     pub device_defender_indexing_mode:
         std::option::Option<crate::model::DeviceDefenderIndexingMode>,
     /// <p>Named shadow indexing mode. Valid values are:</p>
@@ -3930,11 +3984,17 @@ pub struct ThingIndexingConfiguration {
     /// <li> <p>OFF - Named shadow indexing is disabled.</p> </li>
     /// </ul>
     /// <p>For more information about Shadows, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-shadows.html">IoT Device Shadow service.</a> </p>
+    #[doc(hidden)]
     pub named_shadow_indexing_mode: std::option::Option<crate::model::NamedShadowIndexingMode>,
     /// <p>Contains fields that are indexed and whose types are already known by the Fleet Indexing service.</p>
+    #[doc(hidden)]
     pub managed_fields: std::option::Option<std::vec::Vec<crate::model::Field>>,
     /// <p>Contains custom field names and their data type.</p>
+    #[doc(hidden)]
     pub custom_fields: std::option::Option<std::vec::Vec<crate::model::Field>>,
+    /// <p>Provides additional filters for specific data sources. Named shadow is the only data source that currently supports and requires a filter. To add named shadows to your fleet indexing configuration, set <code>namedShadowIndexingMode</code> to be <code>ON</code> and specify your shadow names in <code>filter</code>.</p>
+    #[doc(hidden)]
+    pub filter: std::option::Option<crate::model::IndexingFilter>,
 }
 impl ThingIndexingConfiguration {
     /// <p>Thing indexing mode. Valid values are:</p>
@@ -3986,6 +4046,10 @@ impl ThingIndexingConfiguration {
     pub fn custom_fields(&self) -> std::option::Option<&[crate::model::Field]> {
         self.custom_fields.as_deref()
     }
+    /// <p>Provides additional filters for specific data sources. Named shadow is the only data source that currently supports and requires a filter. To add named shadows to your fleet indexing configuration, set <code>namedShadowIndexingMode</code> to be <code>ON</code> and specify your shadow names in <code>filter</code>.</p>
+    pub fn filter(&self) -> std::option::Option<&crate::model::IndexingFilter> {
+        self.filter.as_ref()
+    }
 }
 impl std::fmt::Debug for ThingIndexingConfiguration {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -4005,14 +4069,14 @@ impl std::fmt::Debug for ThingIndexingConfiguration {
         );
         formatter.field("managed_fields", &self.managed_fields);
         formatter.field("custom_fields", &self.custom_fields);
+        formatter.field("filter", &self.filter);
         formatter.finish()
     }
 }
-/// See [`ThingIndexingConfiguration`](crate::model::ThingIndexingConfiguration)
+/// See [`ThingIndexingConfiguration`](crate::model::ThingIndexingConfiguration).
 pub mod thing_indexing_configuration {
 
-    /// A builder for [`ThingIndexingConfiguration`](crate::model::ThingIndexingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ThingIndexingConfiguration`](crate::model::ThingIndexingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_indexing_mode: std::option::Option<crate::model::ThingIndexingMode>,
@@ -4024,6 +4088,7 @@ pub mod thing_indexing_configuration {
             std::option::Option<crate::model::NamedShadowIndexingMode>,
         pub(crate) managed_fields: std::option::Option<std::vec::Vec<crate::model::Field>>,
         pub(crate) custom_fields: std::option::Option<std::vec::Vec<crate::model::Field>>,
+        pub(crate) filter: std::option::Option<crate::model::IndexingFilter>,
     }
     impl Builder {
         /// <p>Thing indexing mode. Valid values are:</p>
@@ -4163,7 +4228,20 @@ pub mod thing_indexing_configuration {
             self.custom_fields = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThingIndexingConfiguration`](crate::model::ThingIndexingConfiguration)
+        /// <p>Provides additional filters for specific data sources. Named shadow is the only data source that currently supports and requires a filter. To add named shadows to your fleet indexing configuration, set <code>namedShadowIndexingMode</code> to be <code>ON</code> and specify your shadow names in <code>filter</code>.</p>
+        pub fn filter(mut self, input: crate::model::IndexingFilter) -> Self {
+            self.filter = Some(input);
+            self
+        }
+        /// <p>Provides additional filters for specific data sources. Named shadow is the only data source that currently supports and requires a filter. To add named shadows to your fleet indexing configuration, set <code>namedShadowIndexingMode</code> to be <code>ON</code> and specify your shadow names in <code>filter</code>.</p>
+        pub fn set_filter(
+            mut self,
+            input: std::option::Option<crate::model::IndexingFilter>,
+        ) -> Self {
+            self.filter = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ThingIndexingConfiguration`](crate::model::ThingIndexingConfiguration).
         pub fn build(self) -> crate::model::ThingIndexingConfiguration {
             crate::model::ThingIndexingConfiguration {
                 thing_indexing_mode: self.thing_indexing_mode,
@@ -4172,14 +4250,79 @@ pub mod thing_indexing_configuration {
                 named_shadow_indexing_mode: self.named_shadow_indexing_mode,
                 managed_fields: self.managed_fields,
                 custom_fields: self.custom_fields,
+                filter: self.filter,
             }
         }
     }
 }
 impl ThingIndexingConfiguration {
-    /// Creates a new builder-style object to manufacture [`ThingIndexingConfiguration`](crate::model::ThingIndexingConfiguration)
+    /// Creates a new builder-style object to manufacture [`ThingIndexingConfiguration`](crate::model::ThingIndexingConfiguration).
     pub fn builder() -> crate::model::thing_indexing_configuration::Builder {
         crate::model::thing_indexing_configuration::Builder::default()
+    }
+}
+
+/// <p>Provides additional filters for specific data sources. Named shadow is the only data source that currently supports and requires a filter. To add named shadows to your fleet indexing configuration, set <code>namedShadowIndexingMode</code> to be <code>ON</code> and specify your shadow names in <code>filter</code>.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct IndexingFilter {
+    /// <p>The shadow names that you select to index. The default maximum number of shadow names for indexing is 10. To increase the limit, see <a href="https://docs.aws.amazon.com/general/latest/gr/iot_device_management.html#fleet-indexing-limits">Amazon Web Services IoT Device Management Quotas</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    #[doc(hidden)]
+    pub named_shadow_names: std::option::Option<std::vec::Vec<std::string::String>>,
+}
+impl IndexingFilter {
+    /// <p>The shadow names that you select to index. The default maximum number of shadow names for indexing is 10. To increase the limit, see <a href="https://docs.aws.amazon.com/general/latest/gr/iot_device_management.html#fleet-indexing-limits">Amazon Web Services IoT Device Management Quotas</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    pub fn named_shadow_names(&self) -> std::option::Option<&[std::string::String]> {
+        self.named_shadow_names.as_deref()
+    }
+}
+impl std::fmt::Debug for IndexingFilter {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("IndexingFilter");
+        formatter.field("named_shadow_names", &self.named_shadow_names);
+        formatter.finish()
+    }
+}
+/// See [`IndexingFilter`](crate::model::IndexingFilter).
+pub mod indexing_filter {
+
+    /// A builder for [`IndexingFilter`](crate::model::IndexingFilter).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) named_shadow_names: std::option::Option<std::vec::Vec<std::string::String>>,
+    }
+    impl Builder {
+        /// Appends an item to `named_shadow_names`.
+        ///
+        /// To override the contents of this collection use [`set_named_shadow_names`](Self::set_named_shadow_names).
+        ///
+        /// <p>The shadow names that you select to index. The default maximum number of shadow names for indexing is 10. To increase the limit, see <a href="https://docs.aws.amazon.com/general/latest/gr/iot_device_management.html#fleet-indexing-limits">Amazon Web Services IoT Device Management Quotas</a> in the <i>Amazon Web Services General Reference</i>. </p>
+        pub fn named_shadow_names(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.named_shadow_names.unwrap_or_default();
+            v.push(input.into());
+            self.named_shadow_names = Some(v);
+            self
+        }
+        /// <p>The shadow names that you select to index. The default maximum number of shadow names for indexing is 10. To increase the limit, see <a href="https://docs.aws.amazon.com/general/latest/gr/iot_device_management.html#fleet-indexing-limits">Amazon Web Services IoT Device Management Quotas</a> in the <i>Amazon Web Services General Reference</i>. </p>
+        pub fn set_named_shadow_names(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.named_shadow_names = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`IndexingFilter`](crate::model::IndexingFilter).
+        pub fn build(self) -> crate::model::IndexingFilter {
+            crate::model::IndexingFilter {
+                named_shadow_names: self.named_shadow_names,
+            }
+        }
+    }
+}
+impl IndexingFilter {
+    /// Creates a new builder-style object to manufacture [`IndexingFilter`](crate::model::IndexingFilter).
+    pub fn builder() -> crate::model::indexing_filter::Builder {
+        crate::model::indexing_filter::Builder::default()
     }
 }
 
@@ -4595,8 +4738,10 @@ impl AsRef<str> for FleetMetricUnit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregationType {
     /// <p>The name of the aggregation type.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::AggregationTypeName>,
     /// <p>A list of the values of aggregation types.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AggregationType {
@@ -4617,11 +4762,10 @@ impl std::fmt::Debug for AggregationType {
         formatter.finish()
     }
 }
-/// See [`AggregationType`](crate::model::AggregationType)
+/// See [`AggregationType`](crate::model::AggregationType).
 pub mod aggregation_type {
 
-    /// A builder for [`AggregationType`](crate::model::AggregationType)
-    #[non_exhaustive]
+    /// A builder for [`AggregationType`](crate::model::AggregationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::AggregationTypeName>,
@@ -4660,7 +4804,7 @@ pub mod aggregation_type {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregationType`](crate::model::AggregationType)
+        /// Consumes the builder and constructs a [`AggregationType`](crate::model::AggregationType).
         pub fn build(self) -> crate::model::AggregationType {
             crate::model::AggregationType {
                 name: self.name,
@@ -4670,7 +4814,7 @@ pub mod aggregation_type {
     }
 }
 impl AggregationType {
-    /// Creates a new builder-style object to manufacture [`AggregationType`](crate::model::AggregationType)
+    /// Creates a new builder-style object to manufacture [`AggregationType`](crate::model::AggregationType).
     pub fn builder() -> crate::model::aggregation_type::Builder {
         crate::model::aggregation_type::Builder::default()
     }
@@ -4740,6 +4884,7 @@ impl AsRef<str> for AggregationTypeName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Configuration {
     /// <p>True to enable the configuration.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl Configuration {
@@ -4755,11 +4900,10 @@ impl std::fmt::Debug for Configuration {
         formatter.finish()
     }
 }
-/// See [`Configuration`](crate::model::Configuration)
+/// See [`Configuration`](crate::model::Configuration).
 pub mod configuration {
 
-    /// A builder for [`Configuration`](crate::model::Configuration)
-    #[non_exhaustive]
+    /// A builder for [`Configuration`](crate::model::Configuration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -4775,7 +4919,7 @@ pub mod configuration {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`Configuration`](crate::model::Configuration)
+        /// Consumes the builder and constructs a [`Configuration`](crate::model::Configuration).
         pub fn build(self) -> crate::model::Configuration {
             crate::model::Configuration {
                 enabled: self.enabled.unwrap_or_default(),
@@ -4784,7 +4928,7 @@ pub mod configuration {
     }
 }
 impl Configuration {
-    /// Creates a new builder-style object to manufacture [`Configuration`](crate::model::Configuration)
+    /// Creates a new builder-style object to manufacture [`Configuration`](crate::model::Configuration).
     pub fn builder() -> crate::model::configuration::Builder {
         crate::model::configuration::Builder::default()
     }
@@ -4953,8 +5097,10 @@ impl AsRef<str> for DomainConfigurationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuthorizerConfig {
     /// <p>The name of the authorization service for a domain configuration.</p>
+    #[doc(hidden)]
     pub default_authorizer_name: std::option::Option<std::string::String>,
     /// <p>A Boolean that specifies whether the domain configuration's authorization service can be overridden.</p>
+    #[doc(hidden)]
     pub allow_authorizer_override: std::option::Option<bool>,
 }
 impl AuthorizerConfig {
@@ -4975,11 +5121,10 @@ impl std::fmt::Debug for AuthorizerConfig {
         formatter.finish()
     }
 }
-/// See [`AuthorizerConfig`](crate::model::AuthorizerConfig)
+/// See [`AuthorizerConfig`](crate::model::AuthorizerConfig).
 pub mod authorizer_config {
 
-    /// A builder for [`AuthorizerConfig`](crate::model::AuthorizerConfig)
-    #[non_exhaustive]
+    /// A builder for [`AuthorizerConfig`](crate::model::AuthorizerConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_authorizer_name: std::option::Option<std::string::String>,
@@ -5009,7 +5154,7 @@ pub mod authorizer_config {
             self.allow_authorizer_override = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthorizerConfig`](crate::model::AuthorizerConfig)
+        /// Consumes the builder and constructs a [`AuthorizerConfig`](crate::model::AuthorizerConfig).
         pub fn build(self) -> crate::model::AuthorizerConfig {
             crate::model::AuthorizerConfig {
                 default_authorizer_name: self.default_authorizer_name,
@@ -5019,7 +5164,7 @@ pub mod authorizer_config {
     }
 }
 impl AuthorizerConfig {
-    /// Creates a new builder-style object to manufacture [`AuthorizerConfig`](crate::model::AuthorizerConfig)
+    /// Creates a new builder-style object to manufacture [`AuthorizerConfig`](crate::model::AuthorizerConfig).
     pub fn builder() -> crate::model::authorizer_config::Builder {
         crate::model::authorizer_config::Builder::default()
     }
@@ -5222,9 +5367,14 @@ impl AsRef<str> for CertificateStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegistrationConfig {
     /// <p>The template body.</p>
+    #[doc(hidden)]
     pub template_body: std::option::Option<std::string::String>,
     /// <p>The ARN of the role.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
+    /// <p>The name of the provisioning template.</p>
+    #[doc(hidden)]
+    pub template_name: std::option::Option<std::string::String>,
 }
 impl RegistrationConfig {
     /// <p>The template body.</p>
@@ -5235,24 +5385,29 @@ impl RegistrationConfig {
     pub fn role_arn(&self) -> std::option::Option<&str> {
         self.role_arn.as_deref()
     }
+    /// <p>The name of the provisioning template.</p>
+    pub fn template_name(&self) -> std::option::Option<&str> {
+        self.template_name.as_deref()
+    }
 }
 impl std::fmt::Debug for RegistrationConfig {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("RegistrationConfig");
         formatter.field("template_body", &self.template_body);
         formatter.field("role_arn", &self.role_arn);
+        formatter.field("template_name", &self.template_name);
         formatter.finish()
     }
 }
-/// See [`RegistrationConfig`](crate::model::RegistrationConfig)
+/// See [`RegistrationConfig`](crate::model::RegistrationConfig).
 pub mod registration_config {
 
-    /// A builder for [`RegistrationConfig`](crate::model::RegistrationConfig)
-    #[non_exhaustive]
+    /// A builder for [`RegistrationConfig`](crate::model::RegistrationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_body: std::option::Option<std::string::String>,
         pub(crate) role_arn: std::option::Option<std::string::String>,
+        pub(crate) template_name: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>The template body.</p>
@@ -5278,17 +5433,31 @@ pub mod registration_config {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegistrationConfig`](crate::model::RegistrationConfig)
+        /// <p>The name of the provisioning template.</p>
+        pub fn template_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.template_name = Some(input.into());
+            self
+        }
+        /// <p>The name of the provisioning template.</p>
+        pub fn set_template_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.template_name = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`RegistrationConfig`](crate::model::RegistrationConfig).
         pub fn build(self) -> crate::model::RegistrationConfig {
             crate::model::RegistrationConfig {
                 template_body: self.template_body,
                 role_arn: self.role_arn,
+                template_name: self.template_name,
             }
         }
     }
 }
 impl RegistrationConfig {
-    /// Creates a new builder-style object to manufacture [`RegistrationConfig`](crate::model::RegistrationConfig)
+    /// Creates a new builder-style object to manufacture [`RegistrationConfig`](crate::model::RegistrationConfig).
     pub fn builder() -> crate::model::registration_config::Builder {
         crate::model::registration_config::Builder::default()
     }
@@ -5409,6 +5578,7 @@ impl AsRef<str> for CaCertificateStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BillingGroupProperties {
     /// <p>The description of the billing group.</p>
+    #[doc(hidden)]
     pub billing_group_description: std::option::Option<std::string::String>,
 }
 impl BillingGroupProperties {
@@ -5424,11 +5594,10 @@ impl std::fmt::Debug for BillingGroupProperties {
         formatter.finish()
     }
 }
-/// See [`BillingGroupProperties`](crate::model::BillingGroupProperties)
+/// See [`BillingGroupProperties`](crate::model::BillingGroupProperties).
 pub mod billing_group_properties {
 
-    /// A builder for [`BillingGroupProperties`](crate::model::BillingGroupProperties)
-    #[non_exhaustive]
+    /// A builder for [`BillingGroupProperties`](crate::model::BillingGroupProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) billing_group_description: std::option::Option<std::string::String>,
@@ -5447,7 +5616,7 @@ pub mod billing_group_properties {
             self.billing_group_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`BillingGroupProperties`](crate::model::BillingGroupProperties)
+        /// Consumes the builder and constructs a [`BillingGroupProperties`](crate::model::BillingGroupProperties).
         pub fn build(self) -> crate::model::BillingGroupProperties {
             crate::model::BillingGroupProperties {
                 billing_group_description: self.billing_group_description,
@@ -5456,7 +5625,7 @@ pub mod billing_group_properties {
     }
 }
 impl BillingGroupProperties {
-    /// Creates a new builder-style object to manufacture [`BillingGroupProperties`](crate::model::BillingGroupProperties)
+    /// Creates a new builder-style object to manufacture [`BillingGroupProperties`](crate::model::BillingGroupProperties).
     pub fn builder() -> crate::model::billing_group_properties::Builder {
         crate::model::billing_group_properties::Builder::default()
     }
@@ -5522,20 +5691,28 @@ impl AsRef<str> for AuthorizerStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceIdentifier {
     /// <p>The ID of the certificate attached to the resource.</p>
+    #[doc(hidden)]
     pub device_certificate_id: std::option::Option<std::string::String>,
     /// <p>The ID of the CA certificate used to authorize the certificate.</p>
+    #[doc(hidden)]
     pub ca_certificate_id: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Cognito identity pool.</p>
+    #[doc(hidden)]
     pub cognito_identity_pool_id: std::option::Option<std::string::String>,
     /// <p>The client ID.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>The version of the policy associated with the resource.</p>
+    #[doc(hidden)]
     pub policy_version_identifier: std::option::Option<crate::model::PolicyVersionIdentifier>,
     /// <p>The account with which the resource is associated.</p>
+    #[doc(hidden)]
     pub account: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM role that has overly permissive actions.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the role alias that has overly permissive actions.</p>
+    #[doc(hidden)]
     pub role_alias_arn: std::option::Option<std::string::String>,
 }
 impl ResourceIdentifier {
@@ -5588,11 +5765,10 @@ impl std::fmt::Debug for ResourceIdentifier {
         formatter.finish()
     }
 }
-/// See [`ResourceIdentifier`](crate::model::ResourceIdentifier)
+/// See [`ResourceIdentifier`](crate::model::ResourceIdentifier).
 pub mod resource_identifier {
 
-    /// A builder for [`ResourceIdentifier`](crate::model::ResourceIdentifier)
-    #[non_exhaustive]
+    /// A builder for [`ResourceIdentifier`](crate::model::ResourceIdentifier).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_certificate_id: std::option::Option<std::string::String>,
@@ -5704,7 +5880,7 @@ pub mod resource_identifier {
             self.role_alias_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceIdentifier`](crate::model::ResourceIdentifier)
+        /// Consumes the builder and constructs a [`ResourceIdentifier`](crate::model::ResourceIdentifier).
         pub fn build(self) -> crate::model::ResourceIdentifier {
             crate::model::ResourceIdentifier {
                 device_certificate_id: self.device_certificate_id,
@@ -5720,7 +5896,7 @@ pub mod resource_identifier {
     }
 }
 impl ResourceIdentifier {
-    /// Creates a new builder-style object to manufacture [`ResourceIdentifier`](crate::model::ResourceIdentifier)
+    /// Creates a new builder-style object to manufacture [`ResourceIdentifier`](crate::model::ResourceIdentifier).
     pub fn builder() -> crate::model::resource_identifier::Builder {
         crate::model::resource_identifier::Builder::default()
     }
@@ -5731,8 +5907,10 @@ impl ResourceIdentifier {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyVersionIdentifier {
     /// <p>The name of the policy.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The ID of the version of the policy associated with the resource.</p>
+    #[doc(hidden)]
     pub policy_version_id: std::option::Option<std::string::String>,
 }
 impl PolicyVersionIdentifier {
@@ -5753,11 +5931,10 @@ impl std::fmt::Debug for PolicyVersionIdentifier {
         formatter.finish()
     }
 }
-/// See [`PolicyVersionIdentifier`](crate::model::PolicyVersionIdentifier)
+/// See [`PolicyVersionIdentifier`](crate::model::PolicyVersionIdentifier).
 pub mod policy_version_identifier {
 
-    /// A builder for [`PolicyVersionIdentifier`](crate::model::PolicyVersionIdentifier)
-    #[non_exhaustive]
+    /// A builder for [`PolicyVersionIdentifier`](crate::model::PolicyVersionIdentifier).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_name: std::option::Option<std::string::String>,
@@ -5787,7 +5964,7 @@ pub mod policy_version_identifier {
             self.policy_version_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyVersionIdentifier`](crate::model::PolicyVersionIdentifier)
+        /// Consumes the builder and constructs a [`PolicyVersionIdentifier`](crate::model::PolicyVersionIdentifier).
         pub fn build(self) -> crate::model::PolicyVersionIdentifier {
             crate::model::PolicyVersionIdentifier {
                 policy_name: self.policy_name,
@@ -5797,7 +5974,7 @@ pub mod policy_version_identifier {
     }
 }
 impl PolicyVersionIdentifier {
-    /// Creates a new builder-style object to manufacture [`PolicyVersionIdentifier`](crate::model::PolicyVersionIdentifier)
+    /// Creates a new builder-style object to manufacture [`PolicyVersionIdentifier`](crate::model::PolicyVersionIdentifier).
     pub fn builder() -> crate::model::policy_version_identifier::Builder {
         crate::model::policy_version_identifier::Builder::default()
     }
@@ -5808,6 +5985,7 @@ impl PolicyVersionIdentifier {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuditCheckConfiguration {
     /// <p>True if this audit check is enabled for this account.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl AuditCheckConfiguration {
@@ -5823,11 +6001,10 @@ impl std::fmt::Debug for AuditCheckConfiguration {
         formatter.finish()
     }
 }
-/// See [`AuditCheckConfiguration`](crate::model::AuditCheckConfiguration)
+/// See [`AuditCheckConfiguration`](crate::model::AuditCheckConfiguration).
 pub mod audit_check_configuration {
 
-    /// A builder for [`AuditCheckConfiguration`](crate::model::AuditCheckConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AuditCheckConfiguration`](crate::model::AuditCheckConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -5843,7 +6020,7 @@ pub mod audit_check_configuration {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuditCheckConfiguration`](crate::model::AuditCheckConfiguration)
+        /// Consumes the builder and constructs a [`AuditCheckConfiguration`](crate::model::AuditCheckConfiguration).
         pub fn build(self) -> crate::model::AuditCheckConfiguration {
             crate::model::AuditCheckConfiguration {
                 enabled: self.enabled.unwrap_or_default(),
@@ -5852,7 +6029,7 @@ pub mod audit_check_configuration {
     }
 }
 impl AuditCheckConfiguration {
-    /// Creates a new builder-style object to manufacture [`AuditCheckConfiguration`](crate::model::AuditCheckConfiguration)
+    /// Creates a new builder-style object to manufacture [`AuditCheckConfiguration`](crate::model::AuditCheckConfiguration).
     pub fn builder() -> crate::model::audit_check_configuration::Builder {
         crate::model::audit_check_configuration::Builder::default()
     }
@@ -5863,10 +6040,13 @@ impl AuditCheckConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuditNotificationTarget {
     /// <p>The ARN of the target (SNS topic) to which audit notifications are sent.</p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the role that grants permission to send notifications to the target.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>True if notifications to the target are enabled.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl AuditNotificationTarget {
@@ -5892,11 +6072,10 @@ impl std::fmt::Debug for AuditNotificationTarget {
         formatter.finish()
     }
 }
-/// See [`AuditNotificationTarget`](crate::model::AuditNotificationTarget)
+/// See [`AuditNotificationTarget`](crate::model::AuditNotificationTarget).
 pub mod audit_notification_target {
 
-    /// A builder for [`AuditNotificationTarget`](crate::model::AuditNotificationTarget)
-    #[non_exhaustive]
+    /// A builder for [`AuditNotificationTarget`](crate::model::AuditNotificationTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_arn: std::option::Option<std::string::String>,
@@ -5934,7 +6113,7 @@ pub mod audit_notification_target {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuditNotificationTarget`](crate::model::AuditNotificationTarget)
+        /// Consumes the builder and constructs a [`AuditNotificationTarget`](crate::model::AuditNotificationTarget).
         pub fn build(self) -> crate::model::AuditNotificationTarget {
             crate::model::AuditNotificationTarget {
                 target_arn: self.target_arn,
@@ -5945,7 +6124,7 @@ pub mod audit_notification_target {
     }
 }
 impl AuditNotificationTarget {
-    /// Creates a new builder-style object to manufacture [`AuditNotificationTarget`](crate::model::AuditNotificationTarget)
+    /// Creates a new builder-style object to manufacture [`AuditNotificationTarget`](crate::model::AuditNotificationTarget).
     pub fn builder() -> crate::model::audit_notification_target::Builder {
         crate::model::audit_notification_target::Builder::default()
     }
@@ -6007,6 +6186,7 @@ impl AsRef<str> for AuditNotificationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TlsContext {
     /// <p>The value of the <code>serverName</code> key in a TLS authorization request.</p>
+    #[doc(hidden)]
     pub server_name: std::option::Option<std::string::String>,
 }
 impl TlsContext {
@@ -6022,11 +6202,10 @@ impl std::fmt::Debug for TlsContext {
         formatter.finish()
     }
 }
-/// See [`TlsContext`](crate::model::TlsContext)
+/// See [`TlsContext`](crate::model::TlsContext).
 pub mod tls_context {
 
-    /// A builder for [`TlsContext`](crate::model::TlsContext)
-    #[non_exhaustive]
+    /// A builder for [`TlsContext`](crate::model::TlsContext).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) server_name: std::option::Option<std::string::String>,
@@ -6042,7 +6221,7 @@ pub mod tls_context {
             self.server_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`TlsContext`](crate::model::TlsContext)
+        /// Consumes the builder and constructs a [`TlsContext`](crate::model::TlsContext).
         pub fn build(self) -> crate::model::TlsContext {
             crate::model::TlsContext {
                 server_name: self.server_name,
@@ -6051,7 +6230,7 @@ pub mod tls_context {
     }
 }
 impl TlsContext {
-    /// Creates a new builder-style object to manufacture [`TlsContext`](crate::model::TlsContext)
+    /// Creates a new builder-style object to manufacture [`TlsContext`](crate::model::TlsContext).
     pub fn builder() -> crate::model::tls_context::Builder {
         crate::model::tls_context::Builder::default()
     }
@@ -6062,10 +6241,13 @@ impl TlsContext {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MqttContext {
     /// <p>The value of the <code>username</code> key in an MQTT authorization request.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>The value of the <code>password</code> key in an MQTT authorization request.</p>
+    #[doc(hidden)]
     pub password: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The value of the <code>clientId</code> key in an MQTT authorization request.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
 }
 impl MqttContext {
@@ -6091,11 +6273,10 @@ impl std::fmt::Debug for MqttContext {
         formatter.finish()
     }
 }
-/// See [`MqttContext`](crate::model::MqttContext)
+/// See [`MqttContext`](crate::model::MqttContext).
 pub mod mqtt_context {
 
-    /// A builder for [`MqttContext`](crate::model::MqttContext)
-    #[non_exhaustive]
+    /// A builder for [`MqttContext`](crate::model::MqttContext).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) username: std::option::Option<std::string::String>,
@@ -6133,7 +6314,7 @@ pub mod mqtt_context {
             self.client_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`MqttContext`](crate::model::MqttContext)
+        /// Consumes the builder and constructs a [`MqttContext`](crate::model::MqttContext).
         pub fn build(self) -> crate::model::MqttContext {
             crate::model::MqttContext {
                 username: self.username,
@@ -6144,7 +6325,7 @@ pub mod mqtt_context {
     }
 }
 impl MqttContext {
-    /// Creates a new builder-style object to manufacture [`MqttContext`](crate::model::MqttContext)
+    /// Creates a new builder-style object to manufacture [`MqttContext`](crate::model::MqttContext).
     pub fn builder() -> crate::model::mqtt_context::Builder {
         crate::model::mqtt_context::Builder::default()
     }
@@ -6155,9 +6336,11 @@ impl MqttContext {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpContext {
     /// <p>The header keys and values in an HTTP authorization request.</p>
+    #[doc(hidden)]
     pub headers:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The query string keys and values in an HTTP authorization request.</p>
+    #[doc(hidden)]
     pub query_string: std::option::Option<std::string::String>,
 }
 impl HttpContext {
@@ -6181,11 +6364,10 @@ impl std::fmt::Debug for HttpContext {
         formatter.finish()
     }
 }
-/// See [`HttpContext`](crate::model::HttpContext)
+/// See [`HttpContext`](crate::model::HttpContext).
 pub mod http_context {
 
-    /// A builder for [`HttpContext`](crate::model::HttpContext)
-    #[non_exhaustive]
+    /// A builder for [`HttpContext`](crate::model::HttpContext).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) headers: std::option::Option<
@@ -6229,7 +6411,7 @@ pub mod http_context {
             self.query_string = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpContext`](crate::model::HttpContext)
+        /// Consumes the builder and constructs a [`HttpContext`](crate::model::HttpContext).
         pub fn build(self) -> crate::model::HttpContext {
             crate::model::HttpContext {
                 headers: self.headers,
@@ -6239,7 +6421,7 @@ pub mod http_context {
     }
 }
 impl HttpContext {
-    /// Creates a new builder-style object to manufacture [`HttpContext`](crate::model::HttpContext)
+    /// Creates a new builder-style object to manufacture [`HttpContext`](crate::model::HttpContext).
     pub fn builder() -> crate::model::http_context::Builder {
         crate::model::http_context::Builder::default()
     }
@@ -6250,14 +6432,19 @@ impl HttpContext {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuthResult {
     /// <p>Authorization information.</p>
+    #[doc(hidden)]
     pub auth_info: std::option::Option<crate::model::AuthInfo>,
     /// <p>The policies and statements that allowed the specified action.</p>
+    #[doc(hidden)]
     pub allowed: std::option::Option<crate::model::Allowed>,
     /// <p>The policies and statements that denied the specified action.</p>
+    #[doc(hidden)]
     pub denied: std::option::Option<crate::model::Denied>,
     /// <p>The final authorization decision of this scenario. Multiple statements are taken into account when determining the authorization decision. An explicit deny statement can override multiple allow statements.</p>
+    #[doc(hidden)]
     pub auth_decision: std::option::Option<crate::model::AuthDecision>,
     /// <p>Contains any missing context values found while evaluating policy.</p>
+    #[doc(hidden)]
     pub missing_context_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AuthResult {
@@ -6293,11 +6480,10 @@ impl std::fmt::Debug for AuthResult {
         formatter.finish()
     }
 }
-/// See [`AuthResult`](crate::model::AuthResult)
+/// See [`AuthResult`](crate::model::AuthResult).
 pub mod auth_result {
 
-    /// A builder for [`AuthResult`](crate::model::AuthResult)
-    #[non_exhaustive]
+    /// A builder for [`AuthResult`](crate::model::AuthResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auth_info: std::option::Option<crate::model::AuthInfo>,
@@ -6369,7 +6555,7 @@ pub mod auth_result {
             self.missing_context_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthResult`](crate::model::AuthResult)
+        /// Consumes the builder and constructs a [`AuthResult`](crate::model::AuthResult).
         pub fn build(self) -> crate::model::AuthResult {
             crate::model::AuthResult {
                 auth_info: self.auth_info,
@@ -6382,7 +6568,7 @@ pub mod auth_result {
     }
 }
 impl AuthResult {
-    /// Creates a new builder-style object to manufacture [`AuthResult`](crate::model::AuthResult)
+    /// Creates a new builder-style object to manufacture [`AuthResult`](crate::model::AuthResult).
     pub fn builder() -> crate::model::auth_result::Builder {
         crate::model::auth_result::Builder::default()
     }
@@ -6452,8 +6638,10 @@ impl AsRef<str> for AuthDecision {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Denied {
     /// <p>Information that implicitly denies the authorization. When a policy doesn't explicitly deny or allow an action on a resource it is considered an implicit deny.</p>
+    #[doc(hidden)]
     pub implicit_deny: std::option::Option<crate::model::ImplicitDeny>,
     /// <p>Information that explicitly denies the authorization. </p>
+    #[doc(hidden)]
     pub explicit_deny: std::option::Option<crate::model::ExplicitDeny>,
 }
 impl Denied {
@@ -6474,11 +6662,10 @@ impl std::fmt::Debug for Denied {
         formatter.finish()
     }
 }
-/// See [`Denied`](crate::model::Denied)
+/// See [`Denied`](crate::model::Denied).
 pub mod denied {
 
-    /// A builder for [`Denied`](crate::model::Denied)
-    #[non_exhaustive]
+    /// A builder for [`Denied`](crate::model::Denied).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) implicit_deny: std::option::Option<crate::model::ImplicitDeny>,
@@ -6511,7 +6698,7 @@ pub mod denied {
             self.explicit_deny = input;
             self
         }
-        /// Consumes the builder and constructs a [`Denied`](crate::model::Denied)
+        /// Consumes the builder and constructs a [`Denied`](crate::model::Denied).
         pub fn build(self) -> crate::model::Denied {
             crate::model::Denied {
                 implicit_deny: self.implicit_deny,
@@ -6521,7 +6708,7 @@ pub mod denied {
     }
 }
 impl Denied {
-    /// Creates a new builder-style object to manufacture [`Denied`](crate::model::Denied)
+    /// Creates a new builder-style object to manufacture [`Denied`](crate::model::Denied).
     pub fn builder() -> crate::model::denied::Builder {
         crate::model::denied::Builder::default()
     }
@@ -6532,6 +6719,7 @@ impl Denied {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExplicitDeny {
     /// <p>The policies that denied the authorization.</p>
+    #[doc(hidden)]
     pub policies: std::option::Option<std::vec::Vec<crate::model::Policy>>,
 }
 impl ExplicitDeny {
@@ -6547,11 +6735,10 @@ impl std::fmt::Debug for ExplicitDeny {
         formatter.finish()
     }
 }
-/// See [`ExplicitDeny`](crate::model::ExplicitDeny)
+/// See [`ExplicitDeny`](crate::model::ExplicitDeny).
 pub mod explicit_deny {
 
-    /// A builder for [`ExplicitDeny`](crate::model::ExplicitDeny)
-    #[non_exhaustive]
+    /// A builder for [`ExplicitDeny`](crate::model::ExplicitDeny).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policies: std::option::Option<std::vec::Vec<crate::model::Policy>>,
@@ -6576,7 +6763,7 @@ pub mod explicit_deny {
             self.policies = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExplicitDeny`](crate::model::ExplicitDeny)
+        /// Consumes the builder and constructs a [`ExplicitDeny`](crate::model::ExplicitDeny).
         pub fn build(self) -> crate::model::ExplicitDeny {
             crate::model::ExplicitDeny {
                 policies: self.policies,
@@ -6585,7 +6772,7 @@ pub mod explicit_deny {
     }
 }
 impl ExplicitDeny {
-    /// Creates a new builder-style object to manufacture [`ExplicitDeny`](crate::model::ExplicitDeny)
+    /// Creates a new builder-style object to manufacture [`ExplicitDeny`](crate::model::ExplicitDeny).
     pub fn builder() -> crate::model::explicit_deny::Builder {
         crate::model::explicit_deny::Builder::default()
     }
@@ -6596,8 +6783,10 @@ impl ExplicitDeny {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Policy {
     /// <p>The policy name.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The policy ARN.</p>
+    #[doc(hidden)]
     pub policy_arn: std::option::Option<std::string::String>,
 }
 impl Policy {
@@ -6618,11 +6807,10 @@ impl std::fmt::Debug for Policy {
         formatter.finish()
     }
 }
-/// See [`Policy`](crate::model::Policy)
+/// See [`Policy`](crate::model::Policy).
 pub mod policy {
 
-    /// A builder for [`Policy`](crate::model::Policy)
-    #[non_exhaustive]
+    /// A builder for [`Policy`](crate::model::Policy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_name: std::option::Option<std::string::String>,
@@ -6649,7 +6837,7 @@ pub mod policy {
             self.policy_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Policy`](crate::model::Policy)
+        /// Consumes the builder and constructs a [`Policy`](crate::model::Policy).
         pub fn build(self) -> crate::model::Policy {
             crate::model::Policy {
                 policy_name: self.policy_name,
@@ -6659,7 +6847,7 @@ pub mod policy {
     }
 }
 impl Policy {
-    /// Creates a new builder-style object to manufacture [`Policy`](crate::model::Policy)
+    /// Creates a new builder-style object to manufacture [`Policy`](crate::model::Policy).
     pub fn builder() -> crate::model::policy::Builder {
         crate::model::policy::Builder::default()
     }
@@ -6670,6 +6858,7 @@ impl Policy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImplicitDeny {
     /// <p>Policies that don't contain a matching allow or deny statement for the specified action on the specified resource. </p>
+    #[doc(hidden)]
     pub policies: std::option::Option<std::vec::Vec<crate::model::Policy>>,
 }
 impl ImplicitDeny {
@@ -6685,11 +6874,10 @@ impl std::fmt::Debug for ImplicitDeny {
         formatter.finish()
     }
 }
-/// See [`ImplicitDeny`](crate::model::ImplicitDeny)
+/// See [`ImplicitDeny`](crate::model::ImplicitDeny).
 pub mod implicit_deny {
 
-    /// A builder for [`ImplicitDeny`](crate::model::ImplicitDeny)
-    #[non_exhaustive]
+    /// A builder for [`ImplicitDeny`](crate::model::ImplicitDeny).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policies: std::option::Option<std::vec::Vec<crate::model::Policy>>,
@@ -6714,7 +6902,7 @@ pub mod implicit_deny {
             self.policies = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImplicitDeny`](crate::model::ImplicitDeny)
+        /// Consumes the builder and constructs a [`ImplicitDeny`](crate::model::ImplicitDeny).
         pub fn build(self) -> crate::model::ImplicitDeny {
             crate::model::ImplicitDeny {
                 policies: self.policies,
@@ -6723,7 +6911,7 @@ pub mod implicit_deny {
     }
 }
 impl ImplicitDeny {
-    /// Creates a new builder-style object to manufacture [`ImplicitDeny`](crate::model::ImplicitDeny)
+    /// Creates a new builder-style object to manufacture [`ImplicitDeny`](crate::model::ImplicitDeny).
     pub fn builder() -> crate::model::implicit_deny::Builder {
         crate::model::implicit_deny::Builder::default()
     }
@@ -6734,6 +6922,7 @@ impl ImplicitDeny {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Allowed {
     /// <p>A list of policies that allowed the authentication.</p>
+    #[doc(hidden)]
     pub policies: std::option::Option<std::vec::Vec<crate::model::Policy>>,
 }
 impl Allowed {
@@ -6749,11 +6938,10 @@ impl std::fmt::Debug for Allowed {
         formatter.finish()
     }
 }
-/// See [`Allowed`](crate::model::Allowed)
+/// See [`Allowed`](crate::model::Allowed).
 pub mod allowed {
 
-    /// A builder for [`Allowed`](crate::model::Allowed)
-    #[non_exhaustive]
+    /// A builder for [`Allowed`](crate::model::Allowed).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policies: std::option::Option<std::vec::Vec<crate::model::Policy>>,
@@ -6778,7 +6966,7 @@ pub mod allowed {
             self.policies = input;
             self
         }
-        /// Consumes the builder and constructs a [`Allowed`](crate::model::Allowed)
+        /// Consumes the builder and constructs a [`Allowed`](crate::model::Allowed).
         pub fn build(self) -> crate::model::Allowed {
             crate::model::Allowed {
                 policies: self.policies,
@@ -6787,7 +6975,7 @@ pub mod allowed {
     }
 }
 impl Allowed {
-    /// Creates a new builder-style object to manufacture [`Allowed`](crate::model::Allowed)
+    /// Creates a new builder-style object to manufacture [`Allowed`](crate::model::Allowed).
     pub fn builder() -> crate::model::allowed::Builder {
         crate::model::allowed::Builder::default()
     }
@@ -6798,8 +6986,10 @@ impl Allowed {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuthInfo {
     /// <p>The type of action for which the principal is being authorized.</p>
+    #[doc(hidden)]
     pub action_type: std::option::Option<crate::model::ActionType>,
     /// <p>The resources for which the principal is being authorized to perform the specified action.</p>
+    #[doc(hidden)]
     pub resources: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AuthInfo {
@@ -6820,11 +7010,10 @@ impl std::fmt::Debug for AuthInfo {
         formatter.finish()
     }
 }
-/// See [`AuthInfo`](crate::model::AuthInfo)
+/// See [`AuthInfo`](crate::model::AuthInfo).
 pub mod auth_info {
 
-    /// A builder for [`AuthInfo`](crate::model::AuthInfo)
-    #[non_exhaustive]
+    /// A builder for [`AuthInfo`](crate::model::AuthInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action_type: std::option::Option<crate::model::ActionType>,
@@ -6863,7 +7052,7 @@ pub mod auth_info {
             self.resources = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthInfo`](crate::model::AuthInfo)
+        /// Consumes the builder and constructs a [`AuthInfo`](crate::model::AuthInfo).
         pub fn build(self) -> crate::model::AuthInfo {
             crate::model::AuthInfo {
                 action_type: self.action_type,
@@ -6873,7 +7062,7 @@ pub mod auth_info {
     }
 }
 impl AuthInfo {
-    /// Creates a new builder-style object to manufacture [`AuthInfo`](crate::model::AuthInfo)
+    /// Creates a new builder-style object to manufacture [`AuthInfo`](crate::model::AuthInfo).
     pub fn builder() -> crate::model::auth_info::Builder {
         crate::model::auth_info::Builder::default()
     }
@@ -6947,8 +7136,10 @@ impl AsRef<str> for ActionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The tag's key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The tag's value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -6969,11 +7160,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -7000,7 +7190,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -7010,7 +7200,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -7021,8 +7211,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ViolationEventOccurrenceRange {
     /// <p> The start date and time of a time period in which violation events occurred. </p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The end date and time of a time period in which violation events occurred. </p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ViolationEventOccurrenceRange {
@@ -7043,11 +7235,10 @@ impl std::fmt::Debug for ViolationEventOccurrenceRange {
         formatter.finish()
     }
 }
-/// See [`ViolationEventOccurrenceRange`](crate::model::ViolationEventOccurrenceRange)
+/// See [`ViolationEventOccurrenceRange`](crate::model::ViolationEventOccurrenceRange).
 pub mod violation_event_occurrence_range {
 
-    /// A builder for [`ViolationEventOccurrenceRange`](crate::model::ViolationEventOccurrenceRange)
-    #[non_exhaustive]
+    /// A builder for [`ViolationEventOccurrenceRange`](crate::model::ViolationEventOccurrenceRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -7080,7 +7271,7 @@ pub mod violation_event_occurrence_range {
             self.end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ViolationEventOccurrenceRange`](crate::model::ViolationEventOccurrenceRange)
+        /// Consumes the builder and constructs a [`ViolationEventOccurrenceRange`](crate::model::ViolationEventOccurrenceRange).
         pub fn build(self) -> crate::model::ViolationEventOccurrenceRange {
             crate::model::ViolationEventOccurrenceRange {
                 start_time: self.start_time,
@@ -7090,7 +7281,7 @@ pub mod violation_event_occurrence_range {
     }
 }
 impl ViolationEventOccurrenceRange {
-    /// Creates a new builder-style object to manufacture [`ViolationEventOccurrenceRange`](crate::model::ViolationEventOccurrenceRange)
+    /// Creates a new builder-style object to manufacture [`ViolationEventOccurrenceRange`](crate::model::ViolationEventOccurrenceRange).
     pub fn builder() -> crate::model::violation_event_occurrence_range::Builder {
         crate::model::violation_event_occurrence_range::Builder::default()
     }
@@ -7101,10 +7292,13 @@ impl ViolationEventOccurrenceRange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetectMitigationActionsTaskTarget {
     /// <p> The unique identifiers of the violations. </p>
+    #[doc(hidden)]
     pub violation_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> The name of the security profile. </p>
+    #[doc(hidden)]
     pub security_profile_name: std::option::Option<std::string::String>,
     /// <p> The name of the behavior. </p>
+    #[doc(hidden)]
     pub behavior_name: std::option::Option<std::string::String>,
 }
 impl DetectMitigationActionsTaskTarget {
@@ -7130,11 +7324,10 @@ impl std::fmt::Debug for DetectMitigationActionsTaskTarget {
         formatter.finish()
     }
 }
-/// See [`DetectMitigationActionsTaskTarget`](crate::model::DetectMitigationActionsTaskTarget)
+/// See [`DetectMitigationActionsTaskTarget`](crate::model::DetectMitigationActionsTaskTarget).
 pub mod detect_mitigation_actions_task_target {
 
-    /// A builder for [`DetectMitigationActionsTaskTarget`](crate::model::DetectMitigationActionsTaskTarget)
-    #[non_exhaustive]
+    /// A builder for [`DetectMitigationActionsTaskTarget`](crate::model::DetectMitigationActionsTaskTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) violation_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -7187,7 +7380,7 @@ pub mod detect_mitigation_actions_task_target {
             self.behavior_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetectMitigationActionsTaskTarget`](crate::model::DetectMitigationActionsTaskTarget)
+        /// Consumes the builder and constructs a [`DetectMitigationActionsTaskTarget`](crate::model::DetectMitigationActionsTaskTarget).
         pub fn build(self) -> crate::model::DetectMitigationActionsTaskTarget {
             crate::model::DetectMitigationActionsTaskTarget {
                 violation_ids: self.violation_ids,
@@ -7198,7 +7391,7 @@ pub mod detect_mitigation_actions_task_target {
     }
 }
 impl DetectMitigationActionsTaskTarget {
-    /// Creates a new builder-style object to manufacture [`DetectMitigationActionsTaskTarget`](crate::model::DetectMitigationActionsTaskTarget)
+    /// Creates a new builder-style object to manufacture [`DetectMitigationActionsTaskTarget`](crate::model::DetectMitigationActionsTaskTarget).
     pub fn builder() -> crate::model::detect_mitigation_actions_task_target::Builder {
         crate::model::detect_mitigation_actions_task_target::Builder::default()
     }
@@ -7209,10 +7402,13 @@ impl DetectMitigationActionsTaskTarget {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuditMitigationActionsTaskTarget {
     /// <p>If the task will apply a mitigation action to findings from a specific audit, this value uniquely identifies the audit.</p>
+    #[doc(hidden)]
     pub audit_task_id: std::option::Option<std::string::String>,
     /// <p>If the task will apply a mitigation action to one or more listed findings, this value uniquely identifies those findings.</p>
+    #[doc(hidden)]
     pub finding_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies a filter in the form of an audit check and set of reason codes that identify the findings from the audit to which the audit mitigation actions task apply.</p>
+    #[doc(hidden)]
     pub audit_check_to_reason_code_filter: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
@@ -7247,11 +7443,10 @@ impl std::fmt::Debug for AuditMitigationActionsTaskTarget {
         formatter.finish()
     }
 }
-/// See [`AuditMitigationActionsTaskTarget`](crate::model::AuditMitigationActionsTaskTarget)
+/// See [`AuditMitigationActionsTaskTarget`](crate::model::AuditMitigationActionsTaskTarget).
 pub mod audit_mitigation_actions_task_target {
 
-    /// A builder for [`AuditMitigationActionsTaskTarget`](crate::model::AuditMitigationActionsTaskTarget)
-    #[non_exhaustive]
+    /// A builder for [`AuditMitigationActionsTaskTarget`](crate::model::AuditMitigationActionsTaskTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audit_task_id: std::option::Option<std::string::String>,
@@ -7318,7 +7513,7 @@ pub mod audit_mitigation_actions_task_target {
             self.audit_check_to_reason_code_filter = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuditMitigationActionsTaskTarget`](crate::model::AuditMitigationActionsTaskTarget)
+        /// Consumes the builder and constructs a [`AuditMitigationActionsTaskTarget`](crate::model::AuditMitigationActionsTaskTarget).
         pub fn build(self) -> crate::model::AuditMitigationActionsTaskTarget {
             crate::model::AuditMitigationActionsTaskTarget {
                 audit_task_id: self.audit_task_id,
@@ -7329,7 +7524,7 @@ pub mod audit_mitigation_actions_task_target {
     }
 }
 impl AuditMitigationActionsTaskTarget {
-    /// Creates a new builder-style object to manufacture [`AuditMitigationActionsTaskTarget`](crate::model::AuditMitigationActionsTaskTarget)
+    /// Creates a new builder-style object to manufacture [`AuditMitigationActionsTaskTarget`](crate::model::AuditMitigationActionsTaskTarget).
     pub fn builder() -> crate::model::audit_mitigation_actions_task_target::Builder {
         crate::model::audit_mitigation_actions_task_target::Builder::default()
     }
@@ -7340,8 +7535,10 @@ impl AuditMitigationActionsTaskTarget {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogTarget {
     /// <p>The target type.</p>
+    #[doc(hidden)]
     pub target_type: std::option::Option<crate::model::LogTargetType>,
     /// <p>The target name.</p>
+    #[doc(hidden)]
     pub target_name: std::option::Option<std::string::String>,
 }
 impl LogTarget {
@@ -7362,11 +7559,10 @@ impl std::fmt::Debug for LogTarget {
         formatter.finish()
     }
 }
-/// See [`LogTarget`](crate::model::LogTarget)
+/// See [`LogTarget`](crate::model::LogTarget).
 pub mod log_target {
 
-    /// A builder for [`LogTarget`](crate::model::LogTarget)
-    #[non_exhaustive]
+    /// A builder for [`LogTarget`](crate::model::LogTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_type: std::option::Option<crate::model::LogTargetType>,
@@ -7396,7 +7592,7 @@ pub mod log_target {
             self.target_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogTarget`](crate::model::LogTarget)
+        /// Consumes the builder and constructs a [`LogTarget`](crate::model::LogTarget).
         pub fn build(self) -> crate::model::LogTarget {
             crate::model::LogTarget {
                 target_type: self.target_type,
@@ -7406,7 +7602,7 @@ pub mod log_target {
     }
 }
 impl LogTarget {
-    /// Creates a new builder-style object to manufacture [`LogTarget`](crate::model::LogTarget)
+    /// Creates a new builder-style object to manufacture [`LogTarget`](crate::model::LogTarget).
     pub fn builder() -> crate::model::log_target::Builder {
         crate::model::log_target::Builder::default()
     }
@@ -7490,8 +7686,10 @@ impl AsRef<str> for LogTargetType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoggingOptionsPayload {
     /// <p>The ARN of the IAM role that grants access.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The log level.</p>
+    #[doc(hidden)]
     pub log_level: std::option::Option<crate::model::LogLevel>,
 }
 impl LoggingOptionsPayload {
@@ -7512,11 +7710,10 @@ impl std::fmt::Debug for LoggingOptionsPayload {
         formatter.finish()
     }
 }
-/// See [`LoggingOptionsPayload`](crate::model::LoggingOptionsPayload)
+/// See [`LoggingOptionsPayload`](crate::model::LoggingOptionsPayload).
 pub mod logging_options_payload {
 
-    /// A builder for [`LoggingOptionsPayload`](crate::model::LoggingOptionsPayload)
-    #[non_exhaustive]
+    /// A builder for [`LoggingOptionsPayload`](crate::model::LoggingOptionsPayload).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -7543,7 +7740,7 @@ pub mod logging_options_payload {
             self.log_level = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoggingOptionsPayload`](crate::model::LoggingOptionsPayload)
+        /// Consumes the builder and constructs a [`LoggingOptionsPayload`](crate::model::LoggingOptionsPayload).
         pub fn build(self) -> crate::model::LoggingOptionsPayload {
             crate::model::LoggingOptionsPayload {
                 role_arn: self.role_arn,
@@ -7553,7 +7750,7 @@ pub mod logging_options_payload {
     }
 }
 impl LoggingOptionsPayload {
-    /// Creates a new builder-style object to manufacture [`LoggingOptionsPayload`](crate::model::LoggingOptionsPayload)
+    /// Creates a new builder-style object to manufacture [`LoggingOptionsPayload`](crate::model::LoggingOptionsPayload).
     pub fn builder() -> crate::model::logging_options_payload::Builder {
         crate::model::logging_options_payload::Builder::default()
     }
@@ -7564,15 +7761,20 @@ impl LoggingOptionsPayload {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThingGroupDocument {
     /// <p>The thing group name.</p>
+    #[doc(hidden)]
     pub thing_group_name: std::option::Option<std::string::String>,
     /// <p>The thing group ID.</p>
+    #[doc(hidden)]
     pub thing_group_id: std::option::Option<std::string::String>,
     /// <p>The thing group description.</p>
+    #[doc(hidden)]
     pub thing_group_description: std::option::Option<std::string::String>,
     /// <p>The thing group attributes.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Parent group names.</p>
+    #[doc(hidden)]
     pub parent_group_names: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ThingGroupDocument {
@@ -7611,11 +7813,10 @@ impl std::fmt::Debug for ThingGroupDocument {
         formatter.finish()
     }
 }
-/// See [`ThingGroupDocument`](crate::model::ThingGroupDocument)
+/// See [`ThingGroupDocument`](crate::model::ThingGroupDocument).
 pub mod thing_group_document {
 
-    /// A builder for [`ThingGroupDocument`](crate::model::ThingGroupDocument)
-    #[non_exhaustive]
+    /// A builder for [`ThingGroupDocument`](crate::model::ThingGroupDocument).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_group_name: std::option::Option<std::string::String>,
@@ -7710,7 +7911,7 @@ pub mod thing_group_document {
             self.parent_group_names = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThingGroupDocument`](crate::model::ThingGroupDocument)
+        /// Consumes the builder and constructs a [`ThingGroupDocument`](crate::model::ThingGroupDocument).
         pub fn build(self) -> crate::model::ThingGroupDocument {
             crate::model::ThingGroupDocument {
                 thing_group_name: self.thing_group_name,
@@ -7723,7 +7924,7 @@ pub mod thing_group_document {
     }
 }
 impl ThingGroupDocument {
-    /// Creates a new builder-style object to manufacture [`ThingGroupDocument`](crate::model::ThingGroupDocument)
+    /// Creates a new builder-style object to manufacture [`ThingGroupDocument`](crate::model::ThingGroupDocument).
     pub fn builder() -> crate::model::thing_group_document::Builder {
         crate::model::thing_group_document::Builder::default()
     }
@@ -7734,23 +7935,31 @@ impl ThingGroupDocument {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThingDocument {
     /// <p>The thing name.</p>
+    #[doc(hidden)]
     pub thing_name: std::option::Option<std::string::String>,
     /// <p>The thing ID.</p>
+    #[doc(hidden)]
     pub thing_id: std::option::Option<std::string::String>,
     /// <p>The thing type name.</p>
+    #[doc(hidden)]
     pub thing_type_name: std::option::Option<std::string::String>,
     /// <p>Thing group names.</p>
+    #[doc(hidden)]
     pub thing_group_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The attributes.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The unnamed shadow and named shadow.</p>
     /// <p>For more information about shadows, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-shadows.html">IoT Device Shadow service.</a> </p>
+    #[doc(hidden)]
     pub shadow: std::option::Option<std::string::String>,
     /// <p>Contains Device Defender data.</p>
     /// <p>For more information about Device Defender, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/device-defender.html">Device Defender</a>. </p>
+    #[doc(hidden)]
     pub device_defender: std::option::Option<std::string::String>,
     /// <p>Indicates whether the thing is connected to the Amazon Web Services IoT Core service.</p>
+    #[doc(hidden)]
     pub connectivity: std::option::Option<crate::model::ThingConnectivity>,
 }
 impl ThingDocument {
@@ -7806,11 +8015,10 @@ impl std::fmt::Debug for ThingDocument {
         formatter.finish()
     }
 }
-/// See [`ThingDocument`](crate::model::ThingDocument)
+/// See [`ThingDocument`](crate::model::ThingDocument).
 pub mod thing_document {
 
-    /// A builder for [`ThingDocument`](crate::model::ThingDocument)
-    #[non_exhaustive]
+    /// A builder for [`ThingDocument`](crate::model::ThingDocument).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_name: std::option::Option<std::string::String>,
@@ -7942,7 +8150,7 @@ pub mod thing_document {
             self.connectivity = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThingDocument`](crate::model::ThingDocument)
+        /// Consumes the builder and constructs a [`ThingDocument`](crate::model::ThingDocument).
         pub fn build(self) -> crate::model::ThingDocument {
             crate::model::ThingDocument {
                 thing_name: self.thing_name,
@@ -7958,7 +8166,7 @@ pub mod thing_document {
     }
 }
 impl ThingDocument {
-    /// Creates a new builder-style object to manufacture [`ThingDocument`](crate::model::ThingDocument)
+    /// Creates a new builder-style object to manufacture [`ThingDocument`](crate::model::ThingDocument).
     pub fn builder() -> crate::model::thing_document::Builder {
         crate::model::thing_document::Builder::default()
     }
@@ -7969,10 +8177,13 @@ impl ThingDocument {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThingConnectivity {
     /// <p>True if the thing is connected to the Amazon Web Services IoT Core service; false if it is not connected.</p>
+    #[doc(hidden)]
     pub connected: bool,
     /// <p>The epoch time (in milliseconds) when the thing last connected or disconnected. If the thing has been disconnected for approximately an hour, the time value might be missing.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<i64>,
     /// <p>The reason why the client is disconnected. If the thing has been disconnected for approximately an hour, the <code>disconnectReason</code> value might be missing.</p>
+    #[doc(hidden)]
     pub disconnect_reason: std::option::Option<std::string::String>,
 }
 impl ThingConnectivity {
@@ -7998,11 +8209,10 @@ impl std::fmt::Debug for ThingConnectivity {
         formatter.finish()
     }
 }
-/// See [`ThingConnectivity`](crate::model::ThingConnectivity)
+/// See [`ThingConnectivity`](crate::model::ThingConnectivity).
 pub mod thing_connectivity {
 
-    /// A builder for [`ThingConnectivity`](crate::model::ThingConnectivity)
-    #[non_exhaustive]
+    /// A builder for [`ThingConnectivity`](crate::model::ThingConnectivity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connected: std::option::Option<bool>,
@@ -8043,7 +8253,7 @@ pub mod thing_connectivity {
             self.disconnect_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThingConnectivity`](crate::model::ThingConnectivity)
+        /// Consumes the builder and constructs a [`ThingConnectivity`](crate::model::ThingConnectivity).
         pub fn build(self) -> crate::model::ThingConnectivity {
             crate::model::ThingConnectivity {
                 connected: self.connected.unwrap_or_default(),
@@ -8054,7 +8264,7 @@ pub mod thing_connectivity {
     }
 }
 impl ThingConnectivity {
-    /// Creates a new builder-style object to manufacture [`ThingConnectivity`](crate::model::ThingConnectivity)
+    /// Creates a new builder-style object to manufacture [`ThingConnectivity`](crate::model::ThingConnectivity).
     pub fn builder() -> crate::model::thing_connectivity::Builder {
         crate::model::thing_connectivity::Builder::default()
     }
@@ -8065,16 +8275,22 @@ impl ThingConnectivity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TopicRulePayload {
     /// <p>The SQL statement used to query the topic. For more information, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-sql-reference.html">IoT SQL Reference</a> in the <i>IoT Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub sql: std::option::Option<std::string::String>,
     /// <p>The description of the rule.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The actions associated with the rule.</p>
+    #[doc(hidden)]
     pub actions: std::option::Option<std::vec::Vec<crate::model::Action>>,
     /// <p>Specifies whether the rule is disabled.</p>
+    #[doc(hidden)]
     pub rule_disabled: std::option::Option<bool>,
     /// <p>The version of the SQL rules engine to use when evaluating the rule.</p>
+    #[doc(hidden)]
     pub aws_iot_sql_version: std::option::Option<std::string::String>,
     /// <p>The action to take when an error occurs.</p>
+    #[doc(hidden)]
     pub error_action: std::option::Option<crate::model::Action>,
 }
 impl TopicRulePayload {
@@ -8115,11 +8331,10 @@ impl std::fmt::Debug for TopicRulePayload {
         formatter.finish()
     }
 }
-/// See [`TopicRulePayload`](crate::model::TopicRulePayload)
+/// See [`TopicRulePayload`](crate::model::TopicRulePayload).
 pub mod topic_rule_payload {
 
-    /// A builder for [`TopicRulePayload`](crate::model::TopicRulePayload)
-    #[non_exhaustive]
+    /// A builder for [`TopicRulePayload`](crate::model::TopicRulePayload).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sql: std::option::Option<std::string::String>,
@@ -8205,7 +8420,7 @@ pub mod topic_rule_payload {
             self.error_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`TopicRulePayload`](crate::model::TopicRulePayload)
+        /// Consumes the builder and constructs a [`TopicRulePayload`](crate::model::TopicRulePayload).
         pub fn build(self) -> crate::model::TopicRulePayload {
             crate::model::TopicRulePayload {
                 sql: self.sql,
@@ -8219,7 +8434,7 @@ pub mod topic_rule_payload {
     }
 }
 impl TopicRulePayload {
-    /// Creates a new builder-style object to manufacture [`TopicRulePayload`](crate::model::TopicRulePayload)
+    /// Creates a new builder-style object to manufacture [`TopicRulePayload`](crate::model::TopicRulePayload).
     pub fn builder() -> crate::model::topic_rule_payload::Builder {
         crate::model::topic_rule_payload::Builder::default()
     }
@@ -8230,50 +8445,72 @@ impl TopicRulePayload {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Action {
     /// <p>Write to a DynamoDB table.</p>
+    #[doc(hidden)]
     pub dynamo_db: std::option::Option<crate::model::DynamoDbAction>,
     /// <p>Write to a DynamoDB table. This is a new version of the DynamoDB action. It allows you to write each attribute in an MQTT message payload into a separate DynamoDB column.</p>
+    #[doc(hidden)]
     pub dynamo_d_bv2: std::option::Option<crate::model::DynamoDBv2Action>,
     /// <p>Invoke a Lambda function.</p>
+    #[doc(hidden)]
     pub lambda: std::option::Option<crate::model::LambdaAction>,
     /// <p>Publish to an Amazon SNS topic.</p>
+    #[doc(hidden)]
     pub sns: std::option::Option<crate::model::SnsAction>,
     /// <p>Publish to an Amazon SQS queue.</p>
+    #[doc(hidden)]
     pub sqs: std::option::Option<crate::model::SqsAction>,
     /// <p>Write data to an Amazon Kinesis stream.</p>
+    #[doc(hidden)]
     pub kinesis: std::option::Option<crate::model::KinesisAction>,
     /// <p>Publish to another MQTT topic.</p>
+    #[doc(hidden)]
     pub republish: std::option::Option<crate::model::RepublishAction>,
     /// <p>Write to an Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub s3: std::option::Option<crate::model::S3Action>,
     /// <p>Write to an Amazon Kinesis Firehose stream.</p>
+    #[doc(hidden)]
     pub firehose: std::option::Option<crate::model::FirehoseAction>,
     /// <p>Capture a CloudWatch metric.</p>
+    #[doc(hidden)]
     pub cloudwatch_metric: std::option::Option<crate::model::CloudwatchMetricAction>,
     /// <p>Change the state of a CloudWatch alarm.</p>
+    #[doc(hidden)]
     pub cloudwatch_alarm: std::option::Option<crate::model::CloudwatchAlarmAction>,
     /// <p>Send data to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub cloudwatch_logs: std::option::Option<crate::model::CloudwatchLogsAction>,
     /// <p>Write data to an Amazon OpenSearch Service domain.</p> <note>
     /// <p>The <code>Elasticsearch</code> action can only be used by existing rule actions. To create a new rule action or to update an existing rule action, use the <code>OpenSearch</code> rule action instead. For more information, see <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearchAction</a>.</p>
     /// </note>
+    #[doc(hidden)]
     pub elasticsearch: std::option::Option<crate::model::ElasticsearchAction>,
     /// <p>Send a message to a Salesforce IoT Cloud Input Stream.</p>
+    #[doc(hidden)]
     pub salesforce: std::option::Option<crate::model::SalesforceAction>,
     /// <p>Sends message data to an IoT Analytics channel.</p>
+    #[doc(hidden)]
     pub iot_analytics: std::option::Option<crate::model::IotAnalyticsAction>,
     /// <p>Sends an input to an IoT Events detector.</p>
+    #[doc(hidden)]
     pub iot_events: std::option::Option<crate::model::IotEventsAction>,
     /// <p>Sends data from the MQTT message that triggered the rule to IoT SiteWise asset properties.</p>
+    #[doc(hidden)]
     pub iot_site_wise: std::option::Option<crate::model::IotSiteWiseAction>,
     /// <p>Starts execution of a Step Functions state machine.</p>
+    #[doc(hidden)]
     pub step_functions: std::option::Option<crate::model::StepFunctionsAction>,
     /// <p>The Timestream rule action writes attributes (measures) from an MQTT message into an Amazon Timestream table. For more information, see the <a href="https://docs.aws.amazon.com/iot/latest/developerguide/timestream-rule-action.html">Timestream</a> topic rule action documentation.</p>
+    #[doc(hidden)]
     pub timestream: std::option::Option<crate::model::TimestreamAction>,
     /// <p>Send data to an HTTPS endpoint.</p>
+    #[doc(hidden)]
     pub http: std::option::Option<crate::model::HttpAction>,
     /// <p>Send messages to an Amazon Managed Streaming for Apache Kafka (Amazon MSK) or self-managed Apache Kafka cluster.</p>
+    #[doc(hidden)]
     pub kafka: std::option::Option<crate::model::KafkaAction>,
     /// <p>Write data to an Amazon OpenSearch Service domain.</p>
+    #[doc(hidden)]
     pub open_search: std::option::Option<crate::model::OpenSearchAction>,
 }
 impl Action {
@@ -8396,11 +8633,10 @@ impl std::fmt::Debug for Action {
         formatter.finish()
     }
 }
-/// See [`Action`](crate::model::Action)
+/// See [`Action`](crate::model::Action).
 pub mod action {
 
-    /// A builder for [`Action`](crate::model::Action)
-    #[non_exhaustive]
+    /// A builder for [`Action`](crate::model::Action).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dynamo_db: std::option::Option<crate::model::DynamoDbAction>,
@@ -8702,7 +8938,7 @@ pub mod action {
             self.open_search = input;
             self
         }
-        /// Consumes the builder and constructs a [`Action`](crate::model::Action)
+        /// Consumes the builder and constructs a [`Action`](crate::model::Action).
         pub fn build(self) -> crate::model::Action {
             crate::model::Action {
                 dynamo_db: self.dynamo_db,
@@ -8732,7 +8968,7 @@ pub mod action {
     }
 }
 impl Action {
-    /// Creates a new builder-style object to manufacture [`Action`](crate::model::Action)
+    /// Creates a new builder-style object to manufacture [`Action`](crate::model::Action).
     pub fn builder() -> crate::model::action::Builder {
         crate::model::action::Builder::default()
     }
@@ -8743,14 +8979,19 @@ impl Action {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OpenSearchAction {
     /// <p>The IAM role ARN that has access to OpenSearch.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The endpoint of your OpenSearch domain.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The OpenSearch index where you want to store your data.</p>
+    #[doc(hidden)]
     pub index: std::option::Option<std::string::String>,
     /// <p>The type of document you are storing.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the document you are storing.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
 }
 impl OpenSearchAction {
@@ -8786,11 +9027,10 @@ impl std::fmt::Debug for OpenSearchAction {
         formatter.finish()
     }
 }
-/// See [`OpenSearchAction`](crate::model::OpenSearchAction)
+/// See [`OpenSearchAction`](crate::model::OpenSearchAction).
 pub mod open_search_action {
 
-    /// A builder for [`OpenSearchAction`](crate::model::OpenSearchAction)
-    #[non_exhaustive]
+    /// A builder for [`OpenSearchAction`](crate::model::OpenSearchAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -8850,7 +9090,7 @@ pub mod open_search_action {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`OpenSearchAction`](crate::model::OpenSearchAction)
+        /// Consumes the builder and constructs a [`OpenSearchAction`](crate::model::OpenSearchAction).
         pub fn build(self) -> crate::model::OpenSearchAction {
             crate::model::OpenSearchAction {
                 role_arn: self.role_arn,
@@ -8863,7 +9103,7 @@ pub mod open_search_action {
     }
 }
 impl OpenSearchAction {
-    /// Creates a new builder-style object to manufacture [`OpenSearchAction`](crate::model::OpenSearchAction)
+    /// Creates a new builder-style object to manufacture [`OpenSearchAction`](crate::model::OpenSearchAction).
     pub fn builder() -> crate::model::open_search_action::Builder {
         crate::model::open_search_action::Builder::default()
     }
@@ -8874,14 +9114,19 @@ impl OpenSearchAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KafkaAction {
     /// <p>The ARN of Kafka action's VPC <code>TopicRuleDestination</code>.</p>
+    #[doc(hidden)]
     pub destination_arn: std::option::Option<std::string::String>,
     /// <p>The Kafka topic for messages to be sent to the Kafka broker.</p>
+    #[doc(hidden)]
     pub topic: std::option::Option<std::string::String>,
     /// <p>The Kafka message key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The Kafka message partition.</p>
+    #[doc(hidden)]
     pub partition: std::option::Option<std::string::String>,
     /// <p>Properties of the Apache Kafka producer client.</p>
+    #[doc(hidden)]
     pub client_properties:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -8921,11 +9166,10 @@ impl std::fmt::Debug for KafkaAction {
         formatter.finish()
     }
 }
-/// See [`KafkaAction`](crate::model::KafkaAction)
+/// See [`KafkaAction`](crate::model::KafkaAction).
 pub mod kafka_action {
 
-    /// A builder for [`KafkaAction`](crate::model::KafkaAction)
-    #[non_exhaustive]
+    /// A builder for [`KafkaAction`](crate::model::KafkaAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination_arn: std::option::Option<std::string::String>,
@@ -9005,7 +9249,7 @@ pub mod kafka_action {
             self.client_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`KafkaAction`](crate::model::KafkaAction)
+        /// Consumes the builder and constructs a [`KafkaAction`](crate::model::KafkaAction).
         pub fn build(self) -> crate::model::KafkaAction {
             crate::model::KafkaAction {
                 destination_arn: self.destination_arn,
@@ -9018,7 +9262,7 @@ pub mod kafka_action {
     }
 }
 impl KafkaAction {
-    /// Creates a new builder-style object to manufacture [`KafkaAction`](crate::model::KafkaAction)
+    /// Creates a new builder-style object to manufacture [`KafkaAction`](crate::model::KafkaAction).
     pub fn builder() -> crate::model::kafka_action::Builder {
         crate::model::kafka_action::Builder::default()
     }
@@ -9029,12 +9273,16 @@ impl KafkaAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpAction {
     /// <p>The endpoint URL. If substitution templates are used in the URL, you must also specify a <code>confirmationUrl</code>. If this is a new destination, a new <code>TopicRuleDestination</code> is created if possible.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// <p>The URL to which IoT sends a confirmation message. The value of the confirmation URL must be a prefix of the endpoint URL. If you do not specify a confirmation URL IoT uses the endpoint URL as the confirmation URL. If you use substitution templates in the confirmationUrl, you must create and enable topic rule destinations that match each possible value of the substitution template before traffic is allowed to your endpoint URL.</p>
+    #[doc(hidden)]
     pub confirmation_url: std::option::Option<std::string::String>,
     /// <p>The HTTP headers to send with the message data.</p>
+    #[doc(hidden)]
     pub headers: std::option::Option<std::vec::Vec<crate::model::HttpActionHeader>>,
     /// <p>The authentication method to use when sending data to an HTTPS endpoint.</p>
+    #[doc(hidden)]
     pub auth: std::option::Option<crate::model::HttpAuthorization>,
 }
 impl HttpAction {
@@ -9065,11 +9313,10 @@ impl std::fmt::Debug for HttpAction {
         formatter.finish()
     }
 }
-/// See [`HttpAction`](crate::model::HttpAction)
+/// See [`HttpAction`](crate::model::HttpAction).
 pub mod http_action {
 
-    /// A builder for [`HttpAction`](crate::model::HttpAction)
-    #[non_exhaustive]
+    /// A builder for [`HttpAction`](crate::model::HttpAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) url: std::option::Option<std::string::String>,
@@ -9133,7 +9380,7 @@ pub mod http_action {
             self.auth = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpAction`](crate::model::HttpAction)
+        /// Consumes the builder and constructs a [`HttpAction`](crate::model::HttpAction).
         pub fn build(self) -> crate::model::HttpAction {
             crate::model::HttpAction {
                 url: self.url,
@@ -9145,7 +9392,7 @@ pub mod http_action {
     }
 }
 impl HttpAction {
-    /// Creates a new builder-style object to manufacture [`HttpAction`](crate::model::HttpAction)
+    /// Creates a new builder-style object to manufacture [`HttpAction`](crate::model::HttpAction).
     pub fn builder() -> crate::model::http_action::Builder {
         crate::model::http_action::Builder::default()
     }
@@ -9156,6 +9403,7 @@ impl HttpAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpAuthorization {
     /// <p>Use Sig V4 authorization. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>.</p>
+    #[doc(hidden)]
     pub sigv4: std::option::Option<crate::model::SigV4Authorization>,
 }
 impl HttpAuthorization {
@@ -9171,11 +9419,10 @@ impl std::fmt::Debug for HttpAuthorization {
         formatter.finish()
     }
 }
-/// See [`HttpAuthorization`](crate::model::HttpAuthorization)
+/// See [`HttpAuthorization`](crate::model::HttpAuthorization).
 pub mod http_authorization {
 
-    /// A builder for [`HttpAuthorization`](crate::model::HttpAuthorization)
-    #[non_exhaustive]
+    /// A builder for [`HttpAuthorization`](crate::model::HttpAuthorization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sigv4: std::option::Option<crate::model::SigV4Authorization>,
@@ -9194,14 +9441,14 @@ pub mod http_authorization {
             self.sigv4 = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpAuthorization`](crate::model::HttpAuthorization)
+        /// Consumes the builder and constructs a [`HttpAuthorization`](crate::model::HttpAuthorization).
         pub fn build(self) -> crate::model::HttpAuthorization {
             crate::model::HttpAuthorization { sigv4: self.sigv4 }
         }
     }
 }
 impl HttpAuthorization {
-    /// Creates a new builder-style object to manufacture [`HttpAuthorization`](crate::model::HttpAuthorization)
+    /// Creates a new builder-style object to manufacture [`HttpAuthorization`](crate::model::HttpAuthorization).
     pub fn builder() -> crate::model::http_authorization::Builder {
         crate::model::http_authorization::Builder::default()
     }
@@ -9212,10 +9459,13 @@ impl HttpAuthorization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SigV4Authorization {
     /// <p>The signing region.</p>
+    #[doc(hidden)]
     pub signing_region: std::option::Option<std::string::String>,
     /// <p>The service name to use while signing with Sig V4.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
     /// <p>The ARN of the signing role.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl SigV4Authorization {
@@ -9241,11 +9491,10 @@ impl std::fmt::Debug for SigV4Authorization {
         formatter.finish()
     }
 }
-/// See [`SigV4Authorization`](crate::model::SigV4Authorization)
+/// See [`SigV4Authorization`](crate::model::SigV4Authorization).
 pub mod sig_v4_authorization {
 
-    /// A builder for [`SigV4Authorization`](crate::model::SigV4Authorization)
-    #[non_exhaustive]
+    /// A builder for [`SigV4Authorization`](crate::model::SigV4Authorization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) signing_region: std::option::Option<std::string::String>,
@@ -9286,7 +9535,7 @@ pub mod sig_v4_authorization {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`SigV4Authorization`](crate::model::SigV4Authorization)
+        /// Consumes the builder and constructs a [`SigV4Authorization`](crate::model::SigV4Authorization).
         pub fn build(self) -> crate::model::SigV4Authorization {
             crate::model::SigV4Authorization {
                 signing_region: self.signing_region,
@@ -9297,7 +9546,7 @@ pub mod sig_v4_authorization {
     }
 }
 impl SigV4Authorization {
-    /// Creates a new builder-style object to manufacture [`SigV4Authorization`](crate::model::SigV4Authorization)
+    /// Creates a new builder-style object to manufacture [`SigV4Authorization`](crate::model::SigV4Authorization).
     pub fn builder() -> crate::model::sig_v4_authorization::Builder {
         crate::model::sig_v4_authorization::Builder::default()
     }
@@ -9308,8 +9557,10 @@ impl SigV4Authorization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpActionHeader {
     /// <p>The HTTP header key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The HTTP header value. Substitution templates are supported.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl HttpActionHeader {
@@ -9330,11 +9581,10 @@ impl std::fmt::Debug for HttpActionHeader {
         formatter.finish()
     }
 }
-/// See [`HttpActionHeader`](crate::model::HttpActionHeader)
+/// See [`HttpActionHeader`](crate::model::HttpActionHeader).
 pub mod http_action_header {
 
-    /// A builder for [`HttpActionHeader`](crate::model::HttpActionHeader)
-    #[non_exhaustive]
+    /// A builder for [`HttpActionHeader`](crate::model::HttpActionHeader).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -9361,7 +9611,7 @@ pub mod http_action_header {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpActionHeader`](crate::model::HttpActionHeader)
+        /// Consumes the builder and constructs a [`HttpActionHeader`](crate::model::HttpActionHeader).
         pub fn build(self) -> crate::model::HttpActionHeader {
             crate::model::HttpActionHeader {
                 key: self.key,
@@ -9371,7 +9621,7 @@ pub mod http_action_header {
     }
 }
 impl HttpActionHeader {
-    /// Creates a new builder-style object to manufacture [`HttpActionHeader`](crate::model::HttpActionHeader)
+    /// Creates a new builder-style object to manufacture [`HttpActionHeader`](crate::model::HttpActionHeader).
     pub fn builder() -> crate::model::http_action_header::Builder {
         crate::model::http_action_header::Builder::default()
     }
@@ -9382,16 +9632,21 @@ impl HttpActionHeader {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimestreamAction {
     /// <p>The ARN of the role that grants permission to write to the Amazon Timestream database table.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The name of an Amazon Timestream database.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>The name of the database table into which to write the measure records.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>Metadata attributes of the time series that are written in each measure record.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::TimestreamDimension>>,
     /// <p>Specifies an application-defined value to replace the default value assigned to the Timestream record's timestamp in the <code>time</code> column.</p>
     /// <p>You can use this property to specify the value and the precision of the Timestream record's timestamp. You can specify a value from the message payload or a value computed by a substitution template.</p>
     /// <p>If omitted, the topic rule action assigns the timestamp, in milliseconds, at the time it processed the rule. </p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<crate::model::TimestreamTimestamp>,
 }
 impl TimestreamAction {
@@ -9429,11 +9684,10 @@ impl std::fmt::Debug for TimestreamAction {
         formatter.finish()
     }
 }
-/// See [`TimestreamAction`](crate::model::TimestreamAction)
+/// See [`TimestreamAction`](crate::model::TimestreamAction).
 pub mod timestream_action {
 
-    /// A builder for [`TimestreamAction`](crate::model::TimestreamAction)
-    #[non_exhaustive]
+    /// A builder for [`TimestreamAction`](crate::model::TimestreamAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -9513,7 +9767,7 @@ pub mod timestream_action {
             self.timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimestreamAction`](crate::model::TimestreamAction)
+        /// Consumes the builder and constructs a [`TimestreamAction`](crate::model::TimestreamAction).
         pub fn build(self) -> crate::model::TimestreamAction {
             crate::model::TimestreamAction {
                 role_arn: self.role_arn,
@@ -9526,7 +9780,7 @@ pub mod timestream_action {
     }
 }
 impl TimestreamAction {
-    /// Creates a new builder-style object to manufacture [`TimestreamAction`](crate::model::TimestreamAction)
+    /// Creates a new builder-style object to manufacture [`TimestreamAction`](crate::model::TimestreamAction).
     pub fn builder() -> crate::model::timestream_action::Builder {
         crate::model::timestream_action::Builder::default()
     }
@@ -9537,9 +9791,11 @@ impl TimestreamAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimestreamTimestamp {
     /// <p>An expression that returns a long epoch time value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The precision of the timestamp value that results from the expression described in <code>value</code>.</p>
     /// <p>Valid values: <code>SECONDS</code> | <code>MILLISECONDS</code> | <code>MICROSECONDS</code> | <code>NANOSECONDS</code>. The default is <code>MILLISECONDS</code>.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<std::string::String>,
 }
 impl TimestreamTimestamp {
@@ -9561,11 +9817,10 @@ impl std::fmt::Debug for TimestreamTimestamp {
         formatter.finish()
     }
 }
-/// See [`TimestreamTimestamp`](crate::model::TimestreamTimestamp)
+/// See [`TimestreamTimestamp`](crate::model::TimestreamTimestamp).
 pub mod timestream_timestamp {
 
-    /// A builder for [`TimestreamTimestamp`](crate::model::TimestreamTimestamp)
-    #[non_exhaustive]
+    /// A builder for [`TimestreamTimestamp`](crate::model::TimestreamTimestamp).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<std::string::String>,
@@ -9594,7 +9849,7 @@ pub mod timestream_timestamp {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimestreamTimestamp`](crate::model::TimestreamTimestamp)
+        /// Consumes the builder and constructs a [`TimestreamTimestamp`](crate::model::TimestreamTimestamp).
         pub fn build(self) -> crate::model::TimestreamTimestamp {
             crate::model::TimestreamTimestamp {
                 value: self.value,
@@ -9604,7 +9859,7 @@ pub mod timestream_timestamp {
     }
 }
 impl TimestreamTimestamp {
-    /// Creates a new builder-style object to manufacture [`TimestreamTimestamp`](crate::model::TimestreamTimestamp)
+    /// Creates a new builder-style object to manufacture [`TimestreamTimestamp`](crate::model::TimestreamTimestamp).
     pub fn builder() -> crate::model::timestream_timestamp::Builder {
         crate::model::timestream_timestamp::Builder::default()
     }
@@ -9616,8 +9871,10 @@ impl TimestreamTimestamp {
 pub struct TimestreamDimension {
     /// <p>The metadata dimension name. This is the name of the column in the Amazon Timestream database table record.</p>
     /// <p>Dimensions cannot be named: <code>measure_name</code>, <code>measure_value</code>, or <code>time</code>. These names are reserved. Dimension names cannot start with <code>ts_</code> or <code>measure_value</code> and they cannot contain the colon (<code>:</code>) character.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value to write in this column of the database record.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl TimestreamDimension {
@@ -9639,11 +9896,10 @@ impl std::fmt::Debug for TimestreamDimension {
         formatter.finish()
     }
 }
-/// See [`TimestreamDimension`](crate::model::TimestreamDimension)
+/// See [`TimestreamDimension`](crate::model::TimestreamDimension).
 pub mod timestream_dimension {
 
-    /// A builder for [`TimestreamDimension`](crate::model::TimestreamDimension)
-    #[non_exhaustive]
+    /// A builder for [`TimestreamDimension`](crate::model::TimestreamDimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -9672,7 +9928,7 @@ pub mod timestream_dimension {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimestreamDimension`](crate::model::TimestreamDimension)
+        /// Consumes the builder and constructs a [`TimestreamDimension`](crate::model::TimestreamDimension).
         pub fn build(self) -> crate::model::TimestreamDimension {
             crate::model::TimestreamDimension {
                 name: self.name,
@@ -9682,7 +9938,7 @@ pub mod timestream_dimension {
     }
 }
 impl TimestreamDimension {
-    /// Creates a new builder-style object to manufacture [`TimestreamDimension`](crate::model::TimestreamDimension)
+    /// Creates a new builder-style object to manufacture [`TimestreamDimension`](crate::model::TimestreamDimension).
     pub fn builder() -> crate::model::timestream_dimension::Builder {
         crate::model::timestream_dimension::Builder::default()
     }
@@ -9693,10 +9949,13 @@ impl TimestreamDimension {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StepFunctionsAction {
     /// <p>(Optional) A name will be given to the state machine execution consisting of this prefix followed by a UUID. Step Functions automatically creates a unique name for each state machine execution if one is not provided.</p>
+    #[doc(hidden)]
     pub execution_name_prefix: std::option::Option<std::string::String>,
     /// <p>The name of the Step Functions state machine whose execution will be started.</p>
+    #[doc(hidden)]
     pub state_machine_name: std::option::Option<std::string::String>,
     /// <p>The ARN of the role that grants IoT permission to start execution of a state machine ("Action":"states:StartExecution").</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl StepFunctionsAction {
@@ -9722,11 +9981,10 @@ impl std::fmt::Debug for StepFunctionsAction {
         formatter.finish()
     }
 }
-/// See [`StepFunctionsAction`](crate::model::StepFunctionsAction)
+/// See [`StepFunctionsAction`](crate::model::StepFunctionsAction).
 pub mod step_functions_action {
 
-    /// A builder for [`StepFunctionsAction`](crate::model::StepFunctionsAction)
-    #[non_exhaustive]
+    /// A builder for [`StepFunctionsAction`](crate::model::StepFunctionsAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) execution_name_prefix: std::option::Option<std::string::String>,
@@ -9770,7 +10028,7 @@ pub mod step_functions_action {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`StepFunctionsAction`](crate::model::StepFunctionsAction)
+        /// Consumes the builder and constructs a [`StepFunctionsAction`](crate::model::StepFunctionsAction).
         pub fn build(self) -> crate::model::StepFunctionsAction {
             crate::model::StepFunctionsAction {
                 execution_name_prefix: self.execution_name_prefix,
@@ -9781,7 +10039,7 @@ pub mod step_functions_action {
     }
 }
 impl StepFunctionsAction {
-    /// Creates a new builder-style object to manufacture [`StepFunctionsAction`](crate::model::StepFunctionsAction)
+    /// Creates a new builder-style object to manufacture [`StepFunctionsAction`](crate::model::StepFunctionsAction).
     pub fn builder() -> crate::model::step_functions_action::Builder {
         crate::model::step_functions_action::Builder::default()
     }
@@ -9792,9 +10050,11 @@ impl StepFunctionsAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IotSiteWiseAction {
     /// <p>A list of asset property value entries.</p>
+    #[doc(hidden)]
     pub put_asset_property_value_entries:
         std::option::Option<std::vec::Vec<crate::model::PutAssetPropertyValueEntry>>,
     /// <p>The ARN of the role that grants IoT permission to send an asset property value to IoT SiteWise. (<code>"Action": "iotsitewise:BatchPutAssetPropertyValue"</code>). The trust policy can restrict access to specific asset hierarchy paths.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl IotSiteWiseAction {
@@ -9820,11 +10080,10 @@ impl std::fmt::Debug for IotSiteWiseAction {
         formatter.finish()
     }
 }
-/// See [`IotSiteWiseAction`](crate::model::IotSiteWiseAction)
+/// See [`IotSiteWiseAction`](crate::model::IotSiteWiseAction).
 pub mod iot_site_wise_action {
 
-    /// A builder for [`IotSiteWiseAction`](crate::model::IotSiteWiseAction)
-    #[non_exhaustive]
+    /// A builder for [`IotSiteWiseAction`](crate::model::IotSiteWiseAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) put_asset_property_value_entries:
@@ -9864,7 +10123,7 @@ pub mod iot_site_wise_action {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`IotSiteWiseAction`](crate::model::IotSiteWiseAction)
+        /// Consumes the builder and constructs a [`IotSiteWiseAction`](crate::model::IotSiteWiseAction).
         pub fn build(self) -> crate::model::IotSiteWiseAction {
             crate::model::IotSiteWiseAction {
                 put_asset_property_value_entries: self.put_asset_property_value_entries,
@@ -9874,7 +10133,7 @@ pub mod iot_site_wise_action {
     }
 }
 impl IotSiteWiseAction {
-    /// Creates a new builder-style object to manufacture [`IotSiteWiseAction`](crate::model::IotSiteWiseAction)
+    /// Creates a new builder-style object to manufacture [`IotSiteWiseAction`](crate::model::IotSiteWiseAction).
     pub fn builder() -> crate::model::iot_site_wise_action::Builder {
         crate::model::iot_site_wise_action::Builder::default()
     }
@@ -9885,14 +10144,19 @@ impl IotSiteWiseAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutAssetPropertyValueEntry {
     /// <p>Optional. A unique identifier for this entry that you can define to better track which message caused an error in case of failure. Accepts substitution templates. Defaults to a new UUID.</p>
+    #[doc(hidden)]
     pub entry_id: std::option::Option<std::string::String>,
     /// <p>The ID of the IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.</p>
+    #[doc(hidden)]
     pub asset_id: std::option::Option<std::string::String>,
     /// <p>The ID of the asset's property. You must specify either a <code>propertyAlias</code> or both an <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.</p>
+    #[doc(hidden)]
     pub property_id: std::option::Option<std::string::String>,
     /// <p>The name of the property alias associated with your asset property. You must specify either a <code>propertyAlias</code> or both an <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.</p>
+    #[doc(hidden)]
     pub property_alias: std::option::Option<std::string::String>,
     /// <p>A list of property values to insert that each contain timestamp, quality, and value (TQV) information.</p>
+    #[doc(hidden)]
     pub property_values: std::option::Option<std::vec::Vec<crate::model::AssetPropertyValue>>,
 }
 impl PutAssetPropertyValueEntry {
@@ -9928,11 +10192,10 @@ impl std::fmt::Debug for PutAssetPropertyValueEntry {
         formatter.finish()
     }
 }
-/// See [`PutAssetPropertyValueEntry`](crate::model::PutAssetPropertyValueEntry)
+/// See [`PutAssetPropertyValueEntry`](crate::model::PutAssetPropertyValueEntry).
 pub mod put_asset_property_value_entry {
 
-    /// A builder for [`PutAssetPropertyValueEntry`](crate::model::PutAssetPropertyValueEntry)
-    #[non_exhaustive]
+    /// A builder for [`PutAssetPropertyValueEntry`](crate::model::PutAssetPropertyValueEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entry_id: std::option::Option<std::string::String>,
@@ -10005,7 +10268,7 @@ pub mod put_asset_property_value_entry {
             self.property_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutAssetPropertyValueEntry`](crate::model::PutAssetPropertyValueEntry)
+        /// Consumes the builder and constructs a [`PutAssetPropertyValueEntry`](crate::model::PutAssetPropertyValueEntry).
         pub fn build(self) -> crate::model::PutAssetPropertyValueEntry {
             crate::model::PutAssetPropertyValueEntry {
                 entry_id: self.entry_id,
@@ -10018,7 +10281,7 @@ pub mod put_asset_property_value_entry {
     }
 }
 impl PutAssetPropertyValueEntry {
-    /// Creates a new builder-style object to manufacture [`PutAssetPropertyValueEntry`](crate::model::PutAssetPropertyValueEntry)
+    /// Creates a new builder-style object to manufacture [`PutAssetPropertyValueEntry`](crate::model::PutAssetPropertyValueEntry).
     pub fn builder() -> crate::model::put_asset_property_value_entry::Builder {
         crate::model::put_asset_property_value_entry::Builder::default()
     }
@@ -10029,10 +10292,13 @@ impl PutAssetPropertyValueEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssetPropertyValue {
     /// <p>The value of the asset property.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<crate::model::AssetPropertyVariant>,
     /// <p>The asset property value timestamp.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<crate::model::AssetPropertyTimestamp>,
     /// <p>Optional. A string that describes the quality of the value. Accepts substitution templates. Must be <code>GOOD</code>, <code>BAD</code>, or <code>UNCERTAIN</code>.</p>
+    #[doc(hidden)]
     pub quality: std::option::Option<std::string::String>,
 }
 impl AssetPropertyValue {
@@ -10058,11 +10324,10 @@ impl std::fmt::Debug for AssetPropertyValue {
         formatter.finish()
     }
 }
-/// See [`AssetPropertyValue`](crate::model::AssetPropertyValue)
+/// See [`AssetPropertyValue`](crate::model::AssetPropertyValue).
 pub mod asset_property_value {
 
-    /// A builder for [`AssetPropertyValue`](crate::model::AssetPropertyValue)
-    #[non_exhaustive]
+    /// A builder for [`AssetPropertyValue`](crate::model::AssetPropertyValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<crate::model::AssetPropertyVariant>,
@@ -10106,7 +10371,7 @@ pub mod asset_property_value {
             self.quality = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssetPropertyValue`](crate::model::AssetPropertyValue)
+        /// Consumes the builder and constructs a [`AssetPropertyValue`](crate::model::AssetPropertyValue).
         pub fn build(self) -> crate::model::AssetPropertyValue {
             crate::model::AssetPropertyValue {
                 value: self.value,
@@ -10117,7 +10382,7 @@ pub mod asset_property_value {
     }
 }
 impl AssetPropertyValue {
-    /// Creates a new builder-style object to manufacture [`AssetPropertyValue`](crate::model::AssetPropertyValue)
+    /// Creates a new builder-style object to manufacture [`AssetPropertyValue`](crate::model::AssetPropertyValue).
     pub fn builder() -> crate::model::asset_property_value::Builder {
         crate::model::asset_property_value::Builder::default()
     }
@@ -10128,8 +10393,10 @@ impl AssetPropertyValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssetPropertyTimestamp {
     /// <p>A string that contains the time in seconds since epoch. Accepts substitution templates.</p>
+    #[doc(hidden)]
     pub time_in_seconds: std::option::Option<std::string::String>,
     /// <p>Optional. A string that contains the nanosecond time offset. Accepts substitution templates.</p>
+    #[doc(hidden)]
     pub offset_in_nanos: std::option::Option<std::string::String>,
 }
 impl AssetPropertyTimestamp {
@@ -10150,11 +10417,10 @@ impl std::fmt::Debug for AssetPropertyTimestamp {
         formatter.finish()
     }
 }
-/// See [`AssetPropertyTimestamp`](crate::model::AssetPropertyTimestamp)
+/// See [`AssetPropertyTimestamp`](crate::model::AssetPropertyTimestamp).
 pub mod asset_property_timestamp {
 
-    /// A builder for [`AssetPropertyTimestamp`](crate::model::AssetPropertyTimestamp)
-    #[non_exhaustive]
+    /// A builder for [`AssetPropertyTimestamp`](crate::model::AssetPropertyTimestamp).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) time_in_seconds: std::option::Option<std::string::String>,
@@ -10187,7 +10453,7 @@ pub mod asset_property_timestamp {
             self.offset_in_nanos = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssetPropertyTimestamp`](crate::model::AssetPropertyTimestamp)
+        /// Consumes the builder and constructs a [`AssetPropertyTimestamp`](crate::model::AssetPropertyTimestamp).
         pub fn build(self) -> crate::model::AssetPropertyTimestamp {
             crate::model::AssetPropertyTimestamp {
                 time_in_seconds: self.time_in_seconds,
@@ -10197,7 +10463,7 @@ pub mod asset_property_timestamp {
     }
 }
 impl AssetPropertyTimestamp {
-    /// Creates a new builder-style object to manufacture [`AssetPropertyTimestamp`](crate::model::AssetPropertyTimestamp)
+    /// Creates a new builder-style object to manufacture [`AssetPropertyTimestamp`](crate::model::AssetPropertyTimestamp).
     pub fn builder() -> crate::model::asset_property_timestamp::Builder {
         crate::model::asset_property_timestamp::Builder::default()
     }
@@ -10289,16 +10555,20 @@ impl AssetPropertyVariant {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IotEventsAction {
     /// <p>The name of the IoT Events input.</p>
+    #[doc(hidden)]
     pub input_name: std::option::Option<std::string::String>,
     /// <p>The ID of the message. The default <code>messageId</code> is a new UUID value.</p>
     /// <p>When <code>batchMode</code> is <code>true</code>, you can't specify a <code>messageId</code>--a new UUID value will be assigned.</p>
     /// <p>Assign a value to this property to ensure that only one input (message) with a given <code>messageId</code> will be processed by an IoT Events detector.</p>
+    #[doc(hidden)]
     pub message_id: std::option::Option<std::string::String>,
     /// <p>Whether to process the event actions as a batch. The default value is <code>false</code>.</p>
     /// <p>When <code>batchMode</code> is <code>true</code>, you can't specify a <code>messageId</code>. </p>
     /// <p>When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array element is treated as a separate message when it's sent to IoT Events by calling <a href="https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchPutMessage.html"> <code>BatchPutMessage</code> </a>. The resulting array can't have more than 10 messages.</p>
+    #[doc(hidden)]
     pub batch_mode: std::option::Option<bool>,
     /// <p>The ARN of the role that grants IoT permission to send an input to an IoT Events detector. ("Action":"iotevents:BatchPutMessage").</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl IotEventsAction {
@@ -10333,11 +10603,10 @@ impl std::fmt::Debug for IotEventsAction {
         formatter.finish()
     }
 }
-/// See [`IotEventsAction`](crate::model::IotEventsAction)
+/// See [`IotEventsAction`](crate::model::IotEventsAction).
 pub mod iot_events_action {
 
-    /// A builder for [`IotEventsAction`](crate::model::IotEventsAction)
-    #[non_exhaustive]
+    /// A builder for [`IotEventsAction`](crate::model::IotEventsAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_name: std::option::Option<std::string::String>,
@@ -10394,7 +10663,7 @@ pub mod iot_events_action {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`IotEventsAction`](crate::model::IotEventsAction)
+        /// Consumes the builder and constructs a [`IotEventsAction`](crate::model::IotEventsAction).
         pub fn build(self) -> crate::model::IotEventsAction {
             crate::model::IotEventsAction {
                 input_name: self.input_name,
@@ -10406,7 +10675,7 @@ pub mod iot_events_action {
     }
 }
 impl IotEventsAction {
-    /// Creates a new builder-style object to manufacture [`IotEventsAction`](crate::model::IotEventsAction)
+    /// Creates a new builder-style object to manufacture [`IotEventsAction`](crate::model::IotEventsAction).
     pub fn builder() -> crate::model::iot_events_action::Builder {
         crate::model::iot_events_action::Builder::default()
     }
@@ -10417,13 +10686,17 @@ impl IotEventsAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IotAnalyticsAction {
     /// <p>(deprecated) The ARN of the IoT Analytics channel to which message data will be sent.</p>
+    #[doc(hidden)]
     pub channel_arn: std::option::Option<std::string::String>,
     /// <p>The name of the IoT Analytics channel to which message data will be sent.</p>
+    #[doc(hidden)]
     pub channel_name: std::option::Option<std::string::String>,
     /// <p>Whether to process the action as a batch. The default value is <code>false</code>.</p>
     /// <p>When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array element is delivered as a separate message when passed by <a href="https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_BatchPutMessage.html"> <code>BatchPutMessage</code> </a> to the IoT Analytics channel. The resulting array can't have more than 100 messages.</p>
+    #[doc(hidden)]
     pub batch_mode: std::option::Option<bool>,
     /// <p>The ARN of the role which has a policy that grants IoT Analytics permission to send message data via IoT Analytics (iotanalytics:BatchPutMessage).</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl IotAnalyticsAction {
@@ -10455,11 +10728,10 @@ impl std::fmt::Debug for IotAnalyticsAction {
         formatter.finish()
     }
 }
-/// See [`IotAnalyticsAction`](crate::model::IotAnalyticsAction)
+/// See [`IotAnalyticsAction`](crate::model::IotAnalyticsAction).
 pub mod iot_analytics_action {
 
-    /// A builder for [`IotAnalyticsAction`](crate::model::IotAnalyticsAction)
-    #[non_exhaustive]
+    /// A builder for [`IotAnalyticsAction`](crate::model::IotAnalyticsAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_arn: std::option::Option<std::string::String>,
@@ -10510,7 +10782,7 @@ pub mod iot_analytics_action {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`IotAnalyticsAction`](crate::model::IotAnalyticsAction)
+        /// Consumes the builder and constructs a [`IotAnalyticsAction`](crate::model::IotAnalyticsAction).
         pub fn build(self) -> crate::model::IotAnalyticsAction {
             crate::model::IotAnalyticsAction {
                 channel_arn: self.channel_arn,
@@ -10522,7 +10794,7 @@ pub mod iot_analytics_action {
     }
 }
 impl IotAnalyticsAction {
-    /// Creates a new builder-style object to manufacture [`IotAnalyticsAction`](crate::model::IotAnalyticsAction)
+    /// Creates a new builder-style object to manufacture [`IotAnalyticsAction`](crate::model::IotAnalyticsAction).
     pub fn builder() -> crate::model::iot_analytics_action::Builder {
         crate::model::iot_analytics_action::Builder::default()
     }
@@ -10533,8 +10805,10 @@ impl IotAnalyticsAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SalesforceAction {
     /// <p>The token used to authenticate access to the Salesforce IoT Cloud Input Stream. The token is available from the Salesforce IoT Cloud platform after creation of the Input Stream.</p>
+    #[doc(hidden)]
     pub token: std::option::Option<std::string::String>,
     /// <p>The URL exposed by the Salesforce IoT Cloud Input Stream. The URL is available from the Salesforce IoT Cloud platform after creation of the Input Stream.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl SalesforceAction {
@@ -10555,11 +10829,10 @@ impl std::fmt::Debug for SalesforceAction {
         formatter.finish()
     }
 }
-/// See [`SalesforceAction`](crate::model::SalesforceAction)
+/// See [`SalesforceAction`](crate::model::SalesforceAction).
 pub mod salesforce_action {
 
-    /// A builder for [`SalesforceAction`](crate::model::SalesforceAction)
-    #[non_exhaustive]
+    /// A builder for [`SalesforceAction`](crate::model::SalesforceAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) token: std::option::Option<std::string::String>,
@@ -10586,7 +10859,7 @@ pub mod salesforce_action {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`SalesforceAction`](crate::model::SalesforceAction)
+        /// Consumes the builder and constructs a [`SalesforceAction`](crate::model::SalesforceAction).
         pub fn build(self) -> crate::model::SalesforceAction {
             crate::model::SalesforceAction {
                 token: self.token,
@@ -10596,7 +10869,7 @@ pub mod salesforce_action {
     }
 }
 impl SalesforceAction {
-    /// Creates a new builder-style object to manufacture [`SalesforceAction`](crate::model::SalesforceAction)
+    /// Creates a new builder-style object to manufacture [`SalesforceAction`](crate::model::SalesforceAction).
     pub fn builder() -> crate::model::salesforce_action::Builder {
         crate::model::salesforce_action::Builder::default()
     }
@@ -10609,14 +10882,19 @@ impl SalesforceAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ElasticsearchAction {
     /// <p>The IAM role ARN that has access to OpenSearch.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The endpoint of your OpenSearch domain.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The index where you want to store your data.</p>
+    #[doc(hidden)]
     pub index: std::option::Option<std::string::String>,
     /// <p>The type of document you are storing.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the document you are storing.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
 }
 impl ElasticsearchAction {
@@ -10652,11 +10930,10 @@ impl std::fmt::Debug for ElasticsearchAction {
         formatter.finish()
     }
 }
-/// See [`ElasticsearchAction`](crate::model::ElasticsearchAction)
+/// See [`ElasticsearchAction`](crate::model::ElasticsearchAction).
 pub mod elasticsearch_action {
 
-    /// A builder for [`ElasticsearchAction`](crate::model::ElasticsearchAction)
-    #[non_exhaustive]
+    /// A builder for [`ElasticsearchAction`](crate::model::ElasticsearchAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -10716,7 +10993,7 @@ pub mod elasticsearch_action {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ElasticsearchAction`](crate::model::ElasticsearchAction)
+        /// Consumes the builder and constructs a [`ElasticsearchAction`](crate::model::ElasticsearchAction).
         pub fn build(self) -> crate::model::ElasticsearchAction {
             crate::model::ElasticsearchAction {
                 role_arn: self.role_arn,
@@ -10729,7 +11006,7 @@ pub mod elasticsearch_action {
     }
 }
 impl ElasticsearchAction {
-    /// Creates a new builder-style object to manufacture [`ElasticsearchAction`](crate::model::ElasticsearchAction)
+    /// Creates a new builder-style object to manufacture [`ElasticsearchAction`](crate::model::ElasticsearchAction).
     pub fn builder() -> crate::model::elasticsearch_action::Builder {
         crate::model::elasticsearch_action::Builder::default()
     }
@@ -10740,8 +11017,10 @@ impl ElasticsearchAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudwatchLogsAction {
     /// <p>The IAM role that allows access to the CloudWatch log.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The CloudWatch log group to which the action sends data.</p>
+    #[doc(hidden)]
     pub log_group_name: std::option::Option<std::string::String>,
 }
 impl CloudwatchLogsAction {
@@ -10762,11 +11041,10 @@ impl std::fmt::Debug for CloudwatchLogsAction {
         formatter.finish()
     }
 }
-/// See [`CloudwatchLogsAction`](crate::model::CloudwatchLogsAction)
+/// See [`CloudwatchLogsAction`](crate::model::CloudwatchLogsAction).
 pub mod cloudwatch_logs_action {
 
-    /// A builder for [`CloudwatchLogsAction`](crate::model::CloudwatchLogsAction)
-    #[non_exhaustive]
+    /// A builder for [`CloudwatchLogsAction`](crate::model::CloudwatchLogsAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -10796,7 +11074,7 @@ pub mod cloudwatch_logs_action {
             self.log_group_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudwatchLogsAction`](crate::model::CloudwatchLogsAction)
+        /// Consumes the builder and constructs a [`CloudwatchLogsAction`](crate::model::CloudwatchLogsAction).
         pub fn build(self) -> crate::model::CloudwatchLogsAction {
             crate::model::CloudwatchLogsAction {
                 role_arn: self.role_arn,
@@ -10806,7 +11084,7 @@ pub mod cloudwatch_logs_action {
     }
 }
 impl CloudwatchLogsAction {
-    /// Creates a new builder-style object to manufacture [`CloudwatchLogsAction`](crate::model::CloudwatchLogsAction)
+    /// Creates a new builder-style object to manufacture [`CloudwatchLogsAction`](crate::model::CloudwatchLogsAction).
     pub fn builder() -> crate::model::cloudwatch_logs_action::Builder {
         crate::model::cloudwatch_logs_action::Builder::default()
     }
@@ -10817,12 +11095,16 @@ impl CloudwatchLogsAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudwatchAlarmAction {
     /// <p>The IAM role that allows access to the CloudWatch alarm.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The CloudWatch alarm name.</p>
+    #[doc(hidden)]
     pub alarm_name: std::option::Option<std::string::String>,
     /// <p>The reason for the alarm change.</p>
+    #[doc(hidden)]
     pub state_reason: std::option::Option<std::string::String>,
     /// <p>The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.</p>
+    #[doc(hidden)]
     pub state_value: std::option::Option<std::string::String>,
 }
 impl CloudwatchAlarmAction {
@@ -10853,11 +11135,10 @@ impl std::fmt::Debug for CloudwatchAlarmAction {
         formatter.finish()
     }
 }
-/// See [`CloudwatchAlarmAction`](crate::model::CloudwatchAlarmAction)
+/// See [`CloudwatchAlarmAction`](crate::model::CloudwatchAlarmAction).
 pub mod cloudwatch_alarm_action {
 
-    /// A builder for [`CloudwatchAlarmAction`](crate::model::CloudwatchAlarmAction)
-    #[non_exhaustive]
+    /// A builder for [`CloudwatchAlarmAction`](crate::model::CloudwatchAlarmAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -10906,7 +11187,7 @@ pub mod cloudwatch_alarm_action {
             self.state_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudwatchAlarmAction`](crate::model::CloudwatchAlarmAction)
+        /// Consumes the builder and constructs a [`CloudwatchAlarmAction`](crate::model::CloudwatchAlarmAction).
         pub fn build(self) -> crate::model::CloudwatchAlarmAction {
             crate::model::CloudwatchAlarmAction {
                 role_arn: self.role_arn,
@@ -10918,7 +11199,7 @@ pub mod cloudwatch_alarm_action {
     }
 }
 impl CloudwatchAlarmAction {
-    /// Creates a new builder-style object to manufacture [`CloudwatchAlarmAction`](crate::model::CloudwatchAlarmAction)
+    /// Creates a new builder-style object to manufacture [`CloudwatchAlarmAction`](crate::model::CloudwatchAlarmAction).
     pub fn builder() -> crate::model::cloudwatch_alarm_action::Builder {
         crate::model::cloudwatch_alarm_action::Builder::default()
     }
@@ -10929,16 +11210,22 @@ impl CloudwatchAlarmAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudwatchMetricAction {
     /// <p>The IAM role that allows access to the CloudWatch metric.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The CloudWatch metric namespace name.</p>
+    #[doc(hidden)]
     pub metric_namespace: std::option::Option<std::string::String>,
     /// <p>The CloudWatch metric name.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The CloudWatch metric value.</p>
+    #[doc(hidden)]
     pub metric_value: std::option::Option<std::string::String>,
     /// <p>The <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit">metric unit</a> supported by CloudWatch.</p>
+    #[doc(hidden)]
     pub metric_unit: std::option::Option<std::string::String>,
     /// <p>An optional <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp">Unix timestamp</a>.</p>
+    #[doc(hidden)]
     pub metric_timestamp: std::option::Option<std::string::String>,
 }
 impl CloudwatchMetricAction {
@@ -10979,11 +11266,10 @@ impl std::fmt::Debug for CloudwatchMetricAction {
         formatter.finish()
     }
 }
-/// See [`CloudwatchMetricAction`](crate::model::CloudwatchMetricAction)
+/// See [`CloudwatchMetricAction`](crate::model::CloudwatchMetricAction).
 pub mod cloudwatch_metric_action {
 
-    /// A builder for [`CloudwatchMetricAction`](crate::model::CloudwatchMetricAction)
-    #[non_exhaustive]
+    /// A builder for [`CloudwatchMetricAction`](crate::model::CloudwatchMetricAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -11060,7 +11346,7 @@ pub mod cloudwatch_metric_action {
             self.metric_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudwatchMetricAction`](crate::model::CloudwatchMetricAction)
+        /// Consumes the builder and constructs a [`CloudwatchMetricAction`](crate::model::CloudwatchMetricAction).
         pub fn build(self) -> crate::model::CloudwatchMetricAction {
             crate::model::CloudwatchMetricAction {
                 role_arn: self.role_arn,
@@ -11074,7 +11360,7 @@ pub mod cloudwatch_metric_action {
     }
 }
 impl CloudwatchMetricAction {
-    /// Creates a new builder-style object to manufacture [`CloudwatchMetricAction`](crate::model::CloudwatchMetricAction)
+    /// Creates a new builder-style object to manufacture [`CloudwatchMetricAction`](crate::model::CloudwatchMetricAction).
     pub fn builder() -> crate::model::cloudwatch_metric_action::Builder {
         crate::model::cloudwatch_metric_action::Builder::default()
     }
@@ -11085,13 +11371,17 @@ impl CloudwatchMetricAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FirehoseAction {
     /// <p>The IAM role that grants access to the Amazon Kinesis Firehose stream.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The delivery stream name.</p>
+    #[doc(hidden)]
     pub delivery_stream_name: std::option::Option<std::string::String>,
     /// <p>A character separator that will be used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).</p>
+    #[doc(hidden)]
     pub separator: std::option::Option<std::string::String>,
     /// <p>Whether to deliver the Kinesis Data Firehose stream as a batch by using <a href="https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html"> <code>PutRecordBatch</code> </a>. The default value is <code>false</code>.</p>
     /// <p>When <code>batchMode</code> is <code>true</code> and the rule's SQL statement evaluates to an Array, each Array element forms one record in the <a href="https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html"> <code>PutRecordBatch</code> </a> request. The resulting array can't have more than 500 records.</p>
+    #[doc(hidden)]
     pub batch_mode: std::option::Option<bool>,
 }
 impl FirehoseAction {
@@ -11123,11 +11413,10 @@ impl std::fmt::Debug for FirehoseAction {
         formatter.finish()
     }
 }
-/// See [`FirehoseAction`](crate::model::FirehoseAction)
+/// See [`FirehoseAction`](crate::model::FirehoseAction).
 pub mod firehose_action {
 
-    /// A builder for [`FirehoseAction`](crate::model::FirehoseAction)
-    #[non_exhaustive]
+    /// A builder for [`FirehoseAction`](crate::model::FirehoseAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -11181,7 +11470,7 @@ pub mod firehose_action {
             self.batch_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`FirehoseAction`](crate::model::FirehoseAction)
+        /// Consumes the builder and constructs a [`FirehoseAction`](crate::model::FirehoseAction).
         pub fn build(self) -> crate::model::FirehoseAction {
             crate::model::FirehoseAction {
                 role_arn: self.role_arn,
@@ -11193,7 +11482,7 @@ pub mod firehose_action {
     }
 }
 impl FirehoseAction {
-    /// Creates a new builder-style object to manufacture [`FirehoseAction`](crate::model::FirehoseAction)
+    /// Creates a new builder-style object to manufacture [`FirehoseAction`](crate::model::FirehoseAction).
     pub fn builder() -> crate::model::firehose_action::Builder {
         crate::model::firehose_action::Builder::default()
     }
@@ -11204,12 +11493,16 @@ impl FirehoseAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Action {
     /// <p>The ARN of the IAM role that grants access.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p>The object key. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/list_amazons3.html">Actions, resources, and condition keys for Amazon S3</a>.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 canned ACL that controls access to the object identified by the object key. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">S3 canned ACLs</a>.</p>
+    #[doc(hidden)]
     pub canned_acl: std::option::Option<crate::model::CannedAccessControlList>,
 }
 impl S3Action {
@@ -11240,11 +11533,10 @@ impl std::fmt::Debug for S3Action {
         formatter.finish()
     }
 }
-/// See [`S3Action`](crate::model::S3Action)
+/// See [`S3Action`](crate::model::S3Action).
 pub mod s3_action {
 
-    /// A builder for [`S3Action`](crate::model::S3Action)
-    #[non_exhaustive]
+    /// A builder for [`S3Action`](crate::model::S3Action).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -11296,7 +11588,7 @@ pub mod s3_action {
             self.canned_acl = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Action`](crate::model::S3Action)
+        /// Consumes the builder and constructs a [`S3Action`](crate::model::S3Action).
         pub fn build(self) -> crate::model::S3Action {
             crate::model::S3Action {
                 role_arn: self.role_arn,
@@ -11308,7 +11600,7 @@ pub mod s3_action {
     }
 }
 impl S3Action {
-    /// Creates a new builder-style object to manufacture [`S3Action`](crate::model::S3Action)
+    /// Creates a new builder-style object to manufacture [`S3Action`](crate::model::S3Action).
     pub fn builder() -> crate::model::s3_action::Builder {
         crate::model::s3_action::Builder::default()
     }
@@ -11407,10 +11699,13 @@ impl AsRef<str> for CannedAccessControlList {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RepublishAction {
     /// <p>The ARN of the IAM role that grants access.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The name of the MQTT topic.</p>
+    #[doc(hidden)]
     pub topic: std::option::Option<std::string::String>,
     /// <p>The Quality of Service (QoS) level to use when republishing messages. The default value is 0.</p>
+    #[doc(hidden)]
     pub qos: std::option::Option<i32>,
 }
 impl RepublishAction {
@@ -11436,11 +11731,10 @@ impl std::fmt::Debug for RepublishAction {
         formatter.finish()
     }
 }
-/// See [`RepublishAction`](crate::model::RepublishAction)
+/// See [`RepublishAction`](crate::model::RepublishAction).
 pub mod republish_action {
 
-    /// A builder for [`RepublishAction`](crate::model::RepublishAction)
-    #[non_exhaustive]
+    /// A builder for [`RepublishAction`](crate::model::RepublishAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -11478,7 +11772,7 @@ pub mod republish_action {
             self.qos = input;
             self
         }
-        /// Consumes the builder and constructs a [`RepublishAction`](crate::model::RepublishAction)
+        /// Consumes the builder and constructs a [`RepublishAction`](crate::model::RepublishAction).
         pub fn build(self) -> crate::model::RepublishAction {
             crate::model::RepublishAction {
                 role_arn: self.role_arn,
@@ -11489,7 +11783,7 @@ pub mod republish_action {
     }
 }
 impl RepublishAction {
-    /// Creates a new builder-style object to manufacture [`RepublishAction`](crate::model::RepublishAction)
+    /// Creates a new builder-style object to manufacture [`RepublishAction`](crate::model::RepublishAction).
     pub fn builder() -> crate::model::republish_action::Builder {
         crate::model::republish_action::Builder::default()
     }
@@ -11500,10 +11794,13 @@ impl RepublishAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisAction {
     /// <p>The ARN of the IAM role that grants access to the Amazon Kinesis stream.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon Kinesis stream.</p>
+    #[doc(hidden)]
     pub stream_name: std::option::Option<std::string::String>,
     /// <p>The partition key.</p>
+    #[doc(hidden)]
     pub partition_key: std::option::Option<std::string::String>,
 }
 impl KinesisAction {
@@ -11529,11 +11826,10 @@ impl std::fmt::Debug for KinesisAction {
         formatter.finish()
     }
 }
-/// See [`KinesisAction`](crate::model::KinesisAction)
+/// See [`KinesisAction`](crate::model::KinesisAction).
 pub mod kinesis_action {
 
-    /// A builder for [`KinesisAction`](crate::model::KinesisAction)
-    #[non_exhaustive]
+    /// A builder for [`KinesisAction`](crate::model::KinesisAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -11574,7 +11870,7 @@ pub mod kinesis_action {
             self.partition_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisAction`](crate::model::KinesisAction)
+        /// Consumes the builder and constructs a [`KinesisAction`](crate::model::KinesisAction).
         pub fn build(self) -> crate::model::KinesisAction {
             crate::model::KinesisAction {
                 role_arn: self.role_arn,
@@ -11585,7 +11881,7 @@ pub mod kinesis_action {
     }
 }
 impl KinesisAction {
-    /// Creates a new builder-style object to manufacture [`KinesisAction`](crate::model::KinesisAction)
+    /// Creates a new builder-style object to manufacture [`KinesisAction`](crate::model::KinesisAction).
     pub fn builder() -> crate::model::kinesis_action::Builder {
         crate::model::kinesis_action::Builder::default()
     }
@@ -11596,10 +11892,13 @@ impl KinesisAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SqsAction {
     /// <p>The ARN of the IAM role that grants access.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The URL of the Amazon SQS queue.</p>
+    #[doc(hidden)]
     pub queue_url: std::option::Option<std::string::String>,
     /// <p>Specifies whether to use Base64 encoding.</p>
+    #[doc(hidden)]
     pub use_base64: std::option::Option<bool>,
 }
 impl SqsAction {
@@ -11625,11 +11924,10 @@ impl std::fmt::Debug for SqsAction {
         formatter.finish()
     }
 }
-/// See [`SqsAction`](crate::model::SqsAction)
+/// See [`SqsAction`](crate::model::SqsAction).
 pub mod sqs_action {
 
-    /// A builder for [`SqsAction`](crate::model::SqsAction)
-    #[non_exhaustive]
+    /// A builder for [`SqsAction`](crate::model::SqsAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -11667,7 +11965,7 @@ pub mod sqs_action {
             self.use_base64 = input;
             self
         }
-        /// Consumes the builder and constructs a [`SqsAction`](crate::model::SqsAction)
+        /// Consumes the builder and constructs a [`SqsAction`](crate::model::SqsAction).
         pub fn build(self) -> crate::model::SqsAction {
             crate::model::SqsAction {
                 role_arn: self.role_arn,
@@ -11678,7 +11976,7 @@ pub mod sqs_action {
     }
 }
 impl SqsAction {
-    /// Creates a new builder-style object to manufacture [`SqsAction`](crate::model::SqsAction)
+    /// Creates a new builder-style object to manufacture [`SqsAction`](crate::model::SqsAction).
     pub fn builder() -> crate::model::sqs_action::Builder {
         crate::model::sqs_action::Builder::default()
     }
@@ -11689,10 +11987,13 @@ impl SqsAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnsAction {
     /// <p>The ARN of the SNS topic.</p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM role that grants access.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>(Optional) The message format of the message to publish. Accepted values are "JSON" and "RAW". The default value of the attribute is "RAW". SNS uses this setting to determine if the payload should be parsed and relevant platform-specific bits of the payload should be extracted. To read more about SNS message formats, see <a href="https://docs.aws.amazon.com/sns/latest/dg/json-formats.html">https://docs.aws.amazon.com/sns/latest/dg/json-formats.html</a> refer to their official documentation.</p>
+    #[doc(hidden)]
     pub message_format: std::option::Option<crate::model::MessageFormat>,
 }
 impl SnsAction {
@@ -11718,11 +12019,10 @@ impl std::fmt::Debug for SnsAction {
         formatter.finish()
     }
 }
-/// See [`SnsAction`](crate::model::SnsAction)
+/// See [`SnsAction`](crate::model::SnsAction).
 pub mod sns_action {
 
-    /// A builder for [`SnsAction`](crate::model::SnsAction)
-    #[non_exhaustive]
+    /// A builder for [`SnsAction`](crate::model::SnsAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_arn: std::option::Option<std::string::String>,
@@ -11763,7 +12063,7 @@ pub mod sns_action {
             self.message_format = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnsAction`](crate::model::SnsAction)
+        /// Consumes the builder and constructs a [`SnsAction`](crate::model::SnsAction).
         pub fn build(self) -> crate::model::SnsAction {
             crate::model::SnsAction {
                 target_arn: self.target_arn,
@@ -11774,7 +12074,7 @@ pub mod sns_action {
     }
 }
 impl SnsAction {
-    /// Creates a new builder-style object to manufacture [`SnsAction`](crate::model::SnsAction)
+    /// Creates a new builder-style object to manufacture [`SnsAction`](crate::model::SnsAction).
     pub fn builder() -> crate::model::sns_action::Builder {
         crate::model::sns_action::Builder::default()
     }
@@ -11840,6 +12140,7 @@ impl AsRef<str> for MessageFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaAction {
     /// <p>The ARN of the Lambda function.</p>
+    #[doc(hidden)]
     pub function_arn: std::option::Option<std::string::String>,
 }
 impl LambdaAction {
@@ -11855,11 +12156,10 @@ impl std::fmt::Debug for LambdaAction {
         formatter.finish()
     }
 }
-/// See [`LambdaAction`](crate::model::LambdaAction)
+/// See [`LambdaAction`](crate::model::LambdaAction).
 pub mod lambda_action {
 
-    /// A builder for [`LambdaAction`](crate::model::LambdaAction)
-    #[non_exhaustive]
+    /// A builder for [`LambdaAction`](crate::model::LambdaAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) function_arn: std::option::Option<std::string::String>,
@@ -11875,7 +12175,7 @@ pub mod lambda_action {
             self.function_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaAction`](crate::model::LambdaAction)
+        /// Consumes the builder and constructs a [`LambdaAction`](crate::model::LambdaAction).
         pub fn build(self) -> crate::model::LambdaAction {
             crate::model::LambdaAction {
                 function_arn: self.function_arn,
@@ -11884,7 +12184,7 @@ pub mod lambda_action {
     }
 }
 impl LambdaAction {
-    /// Creates a new builder-style object to manufacture [`LambdaAction`](crate::model::LambdaAction)
+    /// Creates a new builder-style object to manufacture [`LambdaAction`](crate::model::LambdaAction).
     pub fn builder() -> crate::model::lambda_action::Builder {
         crate::model::lambda_action::Builder::default()
     }
@@ -11896,10 +12196,12 @@ impl LambdaAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DynamoDBv2Action {
     /// <p>The ARN of the IAM role that grants access to the DynamoDB table.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>Specifies the DynamoDB table to which the message data will be written. For example:</p>
     /// <p> <code>{ "dynamoDBv2": { "roleArn": "aws:iam:12341251:my-role" "putItem": { "tableName": "my-table" } } }</code> </p>
     /// <p>Each attribute in the message payload will be written to a separate column in the DynamoDB database.</p>
+    #[doc(hidden)]
     pub put_item: std::option::Option<crate::model::PutItemInput>,
 }
 impl DynamoDBv2Action {
@@ -11922,11 +12224,10 @@ impl std::fmt::Debug for DynamoDBv2Action {
         formatter.finish()
     }
 }
-/// See [`DynamoDBv2Action`](crate::model::DynamoDBv2Action)
+/// See [`DynamoDBv2Action`](crate::model::DynamoDBv2Action).
 pub mod dynamo_d_bv2_action {
 
-    /// A builder for [`DynamoDBv2Action`](crate::model::DynamoDBv2Action)
-    #[non_exhaustive]
+    /// A builder for [`DynamoDBv2Action`](crate::model::DynamoDBv2Action).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -11960,7 +12261,7 @@ pub mod dynamo_d_bv2_action {
             self.put_item = input;
             self
         }
-        /// Consumes the builder and constructs a [`DynamoDBv2Action`](crate::model::DynamoDBv2Action)
+        /// Consumes the builder and constructs a [`DynamoDBv2Action`](crate::model::DynamoDBv2Action).
         pub fn build(self) -> crate::model::DynamoDBv2Action {
             crate::model::DynamoDBv2Action {
                 role_arn: self.role_arn,
@@ -11970,7 +12271,7 @@ pub mod dynamo_d_bv2_action {
     }
 }
 impl DynamoDBv2Action {
-    /// Creates a new builder-style object to manufacture [`DynamoDBv2Action`](crate::model::DynamoDBv2Action)
+    /// Creates a new builder-style object to manufacture [`DynamoDBv2Action`](crate::model::DynamoDBv2Action).
     pub fn builder() -> crate::model::dynamo_d_bv2_action::Builder {
         crate::model::dynamo_d_bv2_action::Builder::default()
     }
@@ -11981,6 +12282,7 @@ impl DynamoDBv2Action {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutItemInput {
     /// <p>The table where the message data will be written.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
 }
 impl PutItemInput {
@@ -11996,11 +12298,10 @@ impl std::fmt::Debug for PutItemInput {
         formatter.finish()
     }
 }
-/// See [`PutItemInput`](crate::model::PutItemInput)
+/// See [`PutItemInput`](crate::model::PutItemInput).
 pub mod put_item_input {
 
-    /// A builder for [`PutItemInput`](crate::model::PutItemInput)
-    #[non_exhaustive]
+    /// A builder for [`PutItemInput`](crate::model::PutItemInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_name: std::option::Option<std::string::String>,
@@ -12016,7 +12317,7 @@ pub mod put_item_input {
             self.table_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutItemInput`](crate::model::PutItemInput)
+        /// Consumes the builder and constructs a [`PutItemInput`](crate::model::PutItemInput).
         pub fn build(self) -> crate::model::PutItemInput {
             crate::model::PutItemInput {
                 table_name: self.table_name,
@@ -12025,7 +12326,7 @@ pub mod put_item_input {
     }
 }
 impl PutItemInput {
-    /// Creates a new builder-style object to manufacture [`PutItemInput`](crate::model::PutItemInput)
+    /// Creates a new builder-style object to manufacture [`PutItemInput`](crate::model::PutItemInput).
     pub fn builder() -> crate::model::put_item_input::Builder {
         crate::model::put_item_input::Builder::default()
     }
@@ -12042,24 +12343,34 @@ impl PutItemInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DynamoDbAction {
     /// <p>The name of the DynamoDB table.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM role that grants access to the DynamoDB table.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The type of operation to be performed. This follows the substitution template, so it can be <code>${operation}</code>, but the substitution must result in one of the following: <code>INSERT</code>, <code>UPDATE</code>, or <code>DELETE</code>.</p>
+    #[doc(hidden)]
     pub operation: std::option::Option<std::string::String>,
     /// <p>The hash key name.</p>
+    #[doc(hidden)]
     pub hash_key_field: std::option::Option<std::string::String>,
     /// <p>The hash key value.</p>
+    #[doc(hidden)]
     pub hash_key_value: std::option::Option<std::string::String>,
     /// <p>The hash key type. Valid values are "STRING" or "NUMBER"</p>
+    #[doc(hidden)]
     pub hash_key_type: std::option::Option<crate::model::DynamoKeyType>,
     /// <p>The range key name.</p>
+    #[doc(hidden)]
     pub range_key_field: std::option::Option<std::string::String>,
     /// <p>The range key value.</p>
+    #[doc(hidden)]
     pub range_key_value: std::option::Option<std::string::String>,
     /// <p>The range key type. Valid values are "STRING" or "NUMBER"</p>
+    #[doc(hidden)]
     pub range_key_type: std::option::Option<crate::model::DynamoKeyType>,
     /// <p>The action payload. This name can be customized.</p>
+    #[doc(hidden)]
     pub payload_field: std::option::Option<std::string::String>,
 }
 impl DynamoDbAction {
@@ -12120,11 +12431,10 @@ impl std::fmt::Debug for DynamoDbAction {
         formatter.finish()
     }
 }
-/// See [`DynamoDbAction`](crate::model::DynamoDbAction)
+/// See [`DynamoDbAction`](crate::model::DynamoDbAction).
 pub mod dynamo_db_action {
 
-    /// A builder for [`DynamoDbAction`](crate::model::DynamoDbAction)
-    #[non_exhaustive]
+    /// A builder for [`DynamoDbAction`](crate::model::DynamoDbAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_name: std::option::Option<std::string::String>,
@@ -12260,7 +12570,7 @@ pub mod dynamo_db_action {
             self.payload_field = input;
             self
         }
-        /// Consumes the builder and constructs a [`DynamoDbAction`](crate::model::DynamoDbAction)
+        /// Consumes the builder and constructs a [`DynamoDbAction`](crate::model::DynamoDbAction).
         pub fn build(self) -> crate::model::DynamoDbAction {
             crate::model::DynamoDbAction {
                 table_name: self.table_name,
@@ -12278,7 +12588,7 @@ pub mod dynamo_db_action {
     }
 }
 impl DynamoDbAction {
-    /// Creates a new builder-style object to manufacture [`DynamoDbAction`](crate::model::DynamoDbAction)
+    /// Creates a new builder-style object to manufacture [`DynamoDbAction`](crate::model::DynamoDbAction).
     pub fn builder() -> crate::model::dynamo_db_action::Builder {
         crate::model::dynamo_db_action::Builder::default()
     }
@@ -12334,6 +12644,61 @@ impl DynamoKeyType {
     }
 }
 impl AsRef<str> for DynamoKeyType {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum CertificateMode {
+    #[allow(missing_docs)] // documentation missing in model
+    Default,
+    #[allow(missing_docs)] // documentation missing in model
+    SniOnly,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for CertificateMode {
+    fn from(s: &str) -> Self {
+        match s {
+            "DEFAULT" => CertificateMode::Default,
+            "SNI_ONLY" => CertificateMode::SniOnly,
+            other => CertificateMode::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for CertificateMode {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(CertificateMode::from(s))
+    }
+}
+impl CertificateMode {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            CertificateMode::Default => "DEFAULT",
+            CertificateMode::SniOnly => "SNI_ONLY",
+            CertificateMode::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["DEFAULT", "SNI_ONLY"]
+    }
+}
+impl AsRef<str> for CertificateMode {
     fn as_ref(&self) -> &str {
         self.as_str()
     }
@@ -12412,25 +12777,35 @@ impl AsRef<str> for VerificationState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ViolationEvent {
     /// <p>The ID of the violation event.</p>
+    #[doc(hidden)]
     pub violation_id: std::option::Option<std::string::String>,
     /// <p>The name of the thing responsible for the violation event.</p>
+    #[doc(hidden)]
     pub thing_name: std::option::Option<std::string::String>,
     /// <p>The name of the security profile whose behavior was violated.</p>
+    #[doc(hidden)]
     pub security_profile_name: std::option::Option<std::string::String>,
     /// <p>The behavior that was violated.</p>
+    #[doc(hidden)]
     pub behavior: std::option::Option<crate::model::Behavior>,
     /// <p>The value of the metric (the measurement).</p>
+    #[doc(hidden)]
     pub metric_value: std::option::Option<crate::model::MetricValue>,
     /// <p> The details of a violation event. </p>
+    #[doc(hidden)]
     pub violation_event_additional_info:
         std::option::Option<crate::model::ViolationEventAdditionalInfo>,
     /// <p>The type of violation event.</p>
+    #[doc(hidden)]
     pub violation_event_type: std::option::Option<crate::model::ViolationEventType>,
     /// <p>The verification state of the violation (detect alarm).</p>
+    #[doc(hidden)]
     pub verification_state: std::option::Option<crate::model::VerificationState>,
     /// <p>The description of the verification state of the violation.</p>
+    #[doc(hidden)]
     pub verification_state_description: std::option::Option<std::string::String>,
     /// <p>The time the violation event occurred.</p>
+    #[doc(hidden)]
     pub violation_event_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ViolationEvent {
@@ -12499,11 +12874,10 @@ impl std::fmt::Debug for ViolationEvent {
         formatter.finish()
     }
 }
-/// See [`ViolationEvent`](crate::model::ViolationEvent)
+/// See [`ViolationEvent`](crate::model::ViolationEvent).
 pub mod violation_event {
 
-    /// A builder for [`ViolationEvent`](crate::model::ViolationEvent)
-    #[non_exhaustive]
+    /// A builder for [`ViolationEvent`](crate::model::ViolationEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) violation_id: std::option::Option<std::string::String>,
@@ -12646,7 +13020,7 @@ pub mod violation_event {
             self.violation_event_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ViolationEvent`](crate::model::ViolationEvent)
+        /// Consumes the builder and constructs a [`ViolationEvent`](crate::model::ViolationEvent).
         pub fn build(self) -> crate::model::ViolationEvent {
             crate::model::ViolationEvent {
                 violation_id: self.violation_id,
@@ -12664,7 +13038,7 @@ pub mod violation_event {
     }
 }
 impl ViolationEvent {
-    /// Creates a new builder-style object to manufacture [`ViolationEvent`](crate::model::ViolationEvent)
+    /// Creates a new builder-style object to manufacture [`ViolationEvent`](crate::model::ViolationEvent).
     pub fn builder() -> crate::model::violation_event::Builder {
         crate::model::violation_event::Builder::default()
     }
@@ -12734,6 +13108,7 @@ impl AsRef<str> for ViolationEventType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ViolationEventAdditionalInfo {
     /// <p> The sensitivity of anomalous behavior evaluation. Can be <code>Low</code>, <code>Medium</code>, or <code>High</code>. </p>
+    #[doc(hidden)]
     pub confidence_level: std::option::Option<crate::model::ConfidenceLevel>,
 }
 impl ViolationEventAdditionalInfo {
@@ -12749,11 +13124,10 @@ impl std::fmt::Debug for ViolationEventAdditionalInfo {
         formatter.finish()
     }
 }
-/// See [`ViolationEventAdditionalInfo`](crate::model::ViolationEventAdditionalInfo)
+/// See [`ViolationEventAdditionalInfo`](crate::model::ViolationEventAdditionalInfo).
 pub mod violation_event_additional_info {
 
-    /// A builder for [`ViolationEventAdditionalInfo`](crate::model::ViolationEventAdditionalInfo)
-    #[non_exhaustive]
+    /// A builder for [`ViolationEventAdditionalInfo`](crate::model::ViolationEventAdditionalInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) confidence_level: std::option::Option<crate::model::ConfidenceLevel>,
@@ -12772,7 +13146,7 @@ pub mod violation_event_additional_info {
             self.confidence_level = input;
             self
         }
-        /// Consumes the builder and constructs a [`ViolationEventAdditionalInfo`](crate::model::ViolationEventAdditionalInfo)
+        /// Consumes the builder and constructs a [`ViolationEventAdditionalInfo`](crate::model::ViolationEventAdditionalInfo).
         pub fn build(self) -> crate::model::ViolationEventAdditionalInfo {
             crate::model::ViolationEventAdditionalInfo {
                 confidence_level: self.confidence_level,
@@ -12781,7 +13155,7 @@ pub mod violation_event_additional_info {
     }
 }
 impl ViolationEventAdditionalInfo {
-    /// Creates a new builder-style object to manufacture [`ViolationEventAdditionalInfo`](crate::model::ViolationEventAdditionalInfo)
+    /// Creates a new builder-style object to manufacture [`ViolationEventAdditionalInfo`](crate::model::ViolationEventAdditionalInfo).
     pub fn builder() -> crate::model::violation_event_additional_info::Builder {
         crate::model::violation_event_additional_info::Builder::default()
     }
@@ -12851,8 +13225,10 @@ impl AsRef<str> for BehaviorCriteriaType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogTargetConfiguration {
     /// <p>A log target</p>
+    #[doc(hidden)]
     pub log_target: std::option::Option<crate::model::LogTarget>,
     /// <p>The logging level.</p>
+    #[doc(hidden)]
     pub log_level: std::option::Option<crate::model::LogLevel>,
 }
 impl LogTargetConfiguration {
@@ -12873,11 +13249,10 @@ impl std::fmt::Debug for LogTargetConfiguration {
         formatter.finish()
     }
 }
-/// See [`LogTargetConfiguration`](crate::model::LogTargetConfiguration)
+/// See [`LogTargetConfiguration`](crate::model::LogTargetConfiguration).
 pub mod log_target_configuration {
 
-    /// A builder for [`LogTargetConfiguration`](crate::model::LogTargetConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LogTargetConfiguration`](crate::model::LogTargetConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_target: std::option::Option<crate::model::LogTarget>,
@@ -12907,7 +13282,7 @@ pub mod log_target_configuration {
             self.log_level = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogTargetConfiguration`](crate::model::LogTargetConfiguration)
+        /// Consumes the builder and constructs a [`LogTargetConfiguration`](crate::model::LogTargetConfiguration).
         pub fn build(self) -> crate::model::LogTargetConfiguration {
             crate::model::LogTargetConfiguration {
                 log_target: self.log_target,
@@ -12917,7 +13292,7 @@ pub mod log_target_configuration {
     }
 }
 impl LogTargetConfiguration {
-    /// Creates a new builder-style object to manufacture [`LogTargetConfiguration`](crate::model::LogTargetConfiguration)
+    /// Creates a new builder-style object to manufacture [`LogTargetConfiguration`](crate::model::LogTargetConfiguration).
     pub fn builder() -> crate::model::log_target_configuration::Builder {
         crate::model::log_target_configuration::Builder::default()
     }
@@ -12928,14 +13303,19 @@ impl LogTargetConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TopicRuleListItem {
     /// <p>The rule ARN.</p>
+    #[doc(hidden)]
     pub rule_arn: std::option::Option<std::string::String>,
     /// <p>The name of the rule.</p>
+    #[doc(hidden)]
     pub rule_name: std::option::Option<std::string::String>,
     /// <p>The pattern for the topic names that apply.</p>
+    #[doc(hidden)]
     pub topic_pattern: std::option::Option<std::string::String>,
     /// <p>The date and time the rule was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies whether the rule is disabled.</p>
+    #[doc(hidden)]
     pub rule_disabled: std::option::Option<bool>,
 }
 impl TopicRuleListItem {
@@ -12971,11 +13351,10 @@ impl std::fmt::Debug for TopicRuleListItem {
         formatter.finish()
     }
 }
-/// See [`TopicRuleListItem`](crate::model::TopicRuleListItem)
+/// See [`TopicRuleListItem`](crate::model::TopicRuleListItem).
 pub mod topic_rule_list_item {
 
-    /// A builder for [`TopicRuleListItem`](crate::model::TopicRuleListItem)
-    #[non_exhaustive]
+    /// A builder for [`TopicRuleListItem`](crate::model::TopicRuleListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_arn: std::option::Option<std::string::String>,
@@ -13041,7 +13420,7 @@ pub mod topic_rule_list_item {
             self.rule_disabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`TopicRuleListItem`](crate::model::TopicRuleListItem)
+        /// Consumes the builder and constructs a [`TopicRuleListItem`](crate::model::TopicRuleListItem).
         pub fn build(self) -> crate::model::TopicRuleListItem {
             crate::model::TopicRuleListItem {
                 rule_arn: self.rule_arn,
@@ -13054,7 +13433,7 @@ pub mod topic_rule_list_item {
     }
 }
 impl TopicRuleListItem {
-    /// Creates a new builder-style object to manufacture [`TopicRuleListItem`](crate::model::TopicRuleListItem)
+    /// Creates a new builder-style object to manufacture [`TopicRuleListItem`](crate::model::TopicRuleListItem).
     pub fn builder() -> crate::model::topic_rule_list_item::Builder {
         crate::model::topic_rule_list_item::Builder::default()
     }
@@ -13065,6 +13444,7 @@ impl TopicRuleListItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TopicRuleDestinationSummary {
     /// <p>The topic rule destination ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The status of the topic rule destination. Valid values are:</p>
     /// <dl>
@@ -13093,16 +13473,22 @@ pub struct TopicRuleDestinationSummary {
     /// <p>Confirmation could not be completed, for example if the confirmation timed out. You can call <code>GetTopicRuleDestination</code> for details about the error. You can set <code>status</code> to <code>IN_PROGRESS</code> by calling <code>UpdateTopicRuleDestination</code>. Calling <code>UpdateTopicRuleDestination</code> causes a new confirmation challenge to be sent to your confirmation endpoint.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TopicRuleDestinationStatus>,
     /// <p>The date and time when the topic rule destination was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the topic rule destination was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The reason the topic rule destination is in the current status.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>Information about the HTTP URL.</p>
+    #[doc(hidden)]
     pub http_url_summary: std::option::Option<crate::model::HttpUrlDestinationSummary>,
     /// <p>Information about the virtual private cloud (VPC) connection.</p>
+    #[doc(hidden)]
     pub vpc_destination_summary: std::option::Option<crate::model::VpcDestinationSummary>,
 }
 impl TopicRuleDestinationSummary {
@@ -13178,11 +13564,10 @@ impl std::fmt::Debug for TopicRuleDestinationSummary {
         formatter.finish()
     }
 }
-/// See [`TopicRuleDestinationSummary`](crate::model::TopicRuleDestinationSummary)
+/// See [`TopicRuleDestinationSummary`](crate::model::TopicRuleDestinationSummary).
 pub mod topic_rule_destination_summary {
 
-    /// A builder for [`TopicRuleDestinationSummary`](crate::model::TopicRuleDestinationSummary)
-    #[non_exhaustive]
+    /// A builder for [`TopicRuleDestinationSummary`](crate::model::TopicRuleDestinationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -13338,7 +13723,7 @@ pub mod topic_rule_destination_summary {
             self.vpc_destination_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`TopicRuleDestinationSummary`](crate::model::TopicRuleDestinationSummary)
+        /// Consumes the builder and constructs a [`TopicRuleDestinationSummary`](crate::model::TopicRuleDestinationSummary).
         pub fn build(self) -> crate::model::TopicRuleDestinationSummary {
             crate::model::TopicRuleDestinationSummary {
                 arn: self.arn,
@@ -13353,7 +13738,7 @@ pub mod topic_rule_destination_summary {
     }
 }
 impl TopicRuleDestinationSummary {
-    /// Creates a new builder-style object to manufacture [`TopicRuleDestinationSummary`](crate::model::TopicRuleDestinationSummary)
+    /// Creates a new builder-style object to manufacture [`TopicRuleDestinationSummary`](crate::model::TopicRuleDestinationSummary).
     pub fn builder() -> crate::model::topic_rule_destination_summary::Builder {
         crate::model::topic_rule_destination_summary::Builder::default()
     }
@@ -13364,12 +13749,16 @@ impl TopicRuleDestinationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcDestinationSummary {
     /// <p>The subnet IDs of the VPC destination.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The security groups of the VPC destination.</p>
+    #[doc(hidden)]
     pub security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ID of the VPC.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>The ARN of a role that has permission to create and attach to elastic network interfaces (ENIs).</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl VpcDestinationSummary {
@@ -13400,11 +13789,10 @@ impl std::fmt::Debug for VpcDestinationSummary {
         formatter.finish()
     }
 }
-/// See [`VpcDestinationSummary`](crate::model::VpcDestinationSummary)
+/// See [`VpcDestinationSummary`](crate::model::VpcDestinationSummary).
 pub mod vpc_destination_summary {
 
-    /// A builder for [`VpcDestinationSummary`](crate::model::VpcDestinationSummary)
-    #[non_exhaustive]
+    /// A builder for [`VpcDestinationSummary`](crate::model::VpcDestinationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -13471,7 +13859,7 @@ pub mod vpc_destination_summary {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcDestinationSummary`](crate::model::VpcDestinationSummary)
+        /// Consumes the builder and constructs a [`VpcDestinationSummary`](crate::model::VpcDestinationSummary).
         pub fn build(self) -> crate::model::VpcDestinationSummary {
             crate::model::VpcDestinationSummary {
                 subnet_ids: self.subnet_ids,
@@ -13483,7 +13871,7 @@ pub mod vpc_destination_summary {
     }
 }
 impl VpcDestinationSummary {
-    /// Creates a new builder-style object to manufacture [`VpcDestinationSummary`](crate::model::VpcDestinationSummary)
+    /// Creates a new builder-style object to manufacture [`VpcDestinationSummary`](crate::model::VpcDestinationSummary).
     pub fn builder() -> crate::model::vpc_destination_summary::Builder {
         crate::model::vpc_destination_summary::Builder::default()
     }
@@ -13494,6 +13882,7 @@ impl VpcDestinationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpUrlDestinationSummary {
     /// <p>The URL used to confirm ownership of or access to the HTTP topic rule destination URL.</p>
+    #[doc(hidden)]
     pub confirmation_url: std::option::Option<std::string::String>,
 }
 impl HttpUrlDestinationSummary {
@@ -13509,11 +13898,10 @@ impl std::fmt::Debug for HttpUrlDestinationSummary {
         formatter.finish()
     }
 }
-/// See [`HttpUrlDestinationSummary`](crate::model::HttpUrlDestinationSummary)
+/// See [`HttpUrlDestinationSummary`](crate::model::HttpUrlDestinationSummary).
 pub mod http_url_destination_summary {
 
-    /// A builder for [`HttpUrlDestinationSummary`](crate::model::HttpUrlDestinationSummary)
-    #[non_exhaustive]
+    /// A builder for [`HttpUrlDestinationSummary`](crate::model::HttpUrlDestinationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) confirmation_url: std::option::Option<std::string::String>,
@@ -13532,7 +13920,7 @@ pub mod http_url_destination_summary {
             self.confirmation_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpUrlDestinationSummary`](crate::model::HttpUrlDestinationSummary)
+        /// Consumes the builder and constructs a [`HttpUrlDestinationSummary`](crate::model::HttpUrlDestinationSummary).
         pub fn build(self) -> crate::model::HttpUrlDestinationSummary {
             crate::model::HttpUrlDestinationSummary {
                 confirmation_url: self.confirmation_url,
@@ -13541,7 +13929,7 @@ pub mod http_url_destination_summary {
     }
 }
 impl HttpUrlDestinationSummary {
-    /// Creates a new builder-style object to manufacture [`HttpUrlDestinationSummary`](crate::model::HttpUrlDestinationSummary)
+    /// Creates a new builder-style object to manufacture [`HttpUrlDestinationSummary`](crate::model::HttpUrlDestinationSummary).
     pub fn builder() -> crate::model::http_url_destination_summary::Builder {
         crate::model::http_url_destination_summary::Builder::default()
     }
@@ -13552,12 +13940,16 @@ impl HttpUrlDestinationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThingTypeDefinition {
     /// <p>The name of the thing type.</p>
+    #[doc(hidden)]
     pub thing_type_name: std::option::Option<std::string::String>,
     /// <p>The thing type ARN.</p>
+    #[doc(hidden)]
     pub thing_type_arn: std::option::Option<std::string::String>,
     /// <p>The ThingTypeProperties for the thing type.</p>
+    #[doc(hidden)]
     pub thing_type_properties: std::option::Option<crate::model::ThingTypeProperties>,
     /// <p>The ThingTypeMetadata contains additional information about the thing type including: creation date and time, a value indicating whether the thing type is deprecated, and a date and time when it was deprecated.</p>
+    #[doc(hidden)]
     pub thing_type_metadata: std::option::Option<crate::model::ThingTypeMetadata>,
 }
 impl ThingTypeDefinition {
@@ -13588,11 +13980,10 @@ impl std::fmt::Debug for ThingTypeDefinition {
         formatter.finish()
     }
 }
-/// See [`ThingTypeDefinition`](crate::model::ThingTypeDefinition)
+/// See [`ThingTypeDefinition`](crate::model::ThingTypeDefinition).
 pub mod thing_type_definition {
 
-    /// A builder for [`ThingTypeDefinition`](crate::model::ThingTypeDefinition)
-    #[non_exhaustive]
+    /// A builder for [`ThingTypeDefinition`](crate::model::ThingTypeDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_type_name: std::option::Option<std::string::String>,
@@ -13653,7 +14044,7 @@ pub mod thing_type_definition {
             self.thing_type_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThingTypeDefinition`](crate::model::ThingTypeDefinition)
+        /// Consumes the builder and constructs a [`ThingTypeDefinition`](crate::model::ThingTypeDefinition).
         pub fn build(self) -> crate::model::ThingTypeDefinition {
             crate::model::ThingTypeDefinition {
                 thing_type_name: self.thing_type_name,
@@ -13665,7 +14056,7 @@ pub mod thing_type_definition {
     }
 }
 impl ThingTypeDefinition {
-    /// Creates a new builder-style object to manufacture [`ThingTypeDefinition`](crate::model::ThingTypeDefinition)
+    /// Creates a new builder-style object to manufacture [`ThingTypeDefinition`](crate::model::ThingTypeDefinition).
     pub fn builder() -> crate::model::thing_type_definition::Builder {
         crate::model::thing_type_definition::Builder::default()
     }
@@ -13676,10 +14067,13 @@ impl ThingTypeDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThingTypeMetadata {
     /// <p>Whether the thing type is deprecated. If <b>true</b>, no new things could be associated with this type.</p>
+    #[doc(hidden)]
     pub deprecated: bool,
     /// <p>The date and time when the thing type was deprecated.</p>
+    #[doc(hidden)]
     pub deprecation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the thing type was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ThingTypeMetadata {
@@ -13705,11 +14099,10 @@ impl std::fmt::Debug for ThingTypeMetadata {
         formatter.finish()
     }
 }
-/// See [`ThingTypeMetadata`](crate::model::ThingTypeMetadata)
+/// See [`ThingTypeMetadata`](crate::model::ThingTypeMetadata).
 pub mod thing_type_metadata {
 
-    /// A builder for [`ThingTypeMetadata`](crate::model::ThingTypeMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ThingTypeMetadata`](crate::model::ThingTypeMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deprecated: std::option::Option<bool>,
@@ -13753,7 +14146,7 @@ pub mod thing_type_metadata {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThingTypeMetadata`](crate::model::ThingTypeMetadata)
+        /// Consumes the builder and constructs a [`ThingTypeMetadata`](crate::model::ThingTypeMetadata).
         pub fn build(self) -> crate::model::ThingTypeMetadata {
             crate::model::ThingTypeMetadata {
                 deprecated: self.deprecated.unwrap_or_default(),
@@ -13764,7 +14157,7 @@ pub mod thing_type_metadata {
     }
 }
 impl ThingTypeMetadata {
-    /// Creates a new builder-style object to manufacture [`ThingTypeMetadata`](crate::model::ThingTypeMetadata)
+    /// Creates a new builder-style object to manufacture [`ThingTypeMetadata`](crate::model::ThingTypeMetadata).
     pub fn builder() -> crate::model::thing_type_metadata::Builder {
         crate::model::thing_type_metadata::Builder::default()
     }
@@ -13775,8 +14168,10 @@ impl ThingTypeMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThingTypeProperties {
     /// <p>The description of the thing type.</p>
+    #[doc(hidden)]
     pub thing_type_description: std::option::Option<std::string::String>,
     /// <p>A list of searchable thing attribute names.</p>
+    #[doc(hidden)]
     pub searchable_attributes: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ThingTypeProperties {
@@ -13797,11 +14192,10 @@ impl std::fmt::Debug for ThingTypeProperties {
         formatter.finish()
     }
 }
-/// See [`ThingTypeProperties`](crate::model::ThingTypeProperties)
+/// See [`ThingTypeProperties`](crate::model::ThingTypeProperties).
 pub mod thing_type_properties {
 
-    /// A builder for [`ThingTypeProperties`](crate::model::ThingTypeProperties)
-    #[non_exhaustive]
+    /// A builder for [`ThingTypeProperties`](crate::model::ThingTypeProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_type_description: std::option::Option<std::string::String>,
@@ -13840,7 +14234,7 @@ pub mod thing_type_properties {
             self.searchable_attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThingTypeProperties`](crate::model::ThingTypeProperties)
+        /// Consumes the builder and constructs a [`ThingTypeProperties`](crate::model::ThingTypeProperties).
         pub fn build(self) -> crate::model::ThingTypeProperties {
             crate::model::ThingTypeProperties {
                 thing_type_description: self.thing_type_description,
@@ -13850,7 +14244,7 @@ pub mod thing_type_properties {
     }
 }
 impl ThingTypeProperties {
-    /// Creates a new builder-style object to manufacture [`ThingTypeProperties`](crate::model::ThingTypeProperties)
+    /// Creates a new builder-style object to manufacture [`ThingTypeProperties`](crate::model::ThingTypeProperties).
     pub fn builder() -> crate::model::thing_type_properties::Builder {
         crate::model::thing_type_properties::Builder::default()
     }
@@ -13861,15 +14255,20 @@ impl ThingTypeProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThingAttribute {
     /// <p>The name of the thing.</p>
+    #[doc(hidden)]
     pub thing_name: std::option::Option<std::string::String>,
     /// <p>The name of the thing type, if the thing has been associated with a type.</p>
+    #[doc(hidden)]
     pub thing_type_name: std::option::Option<std::string::String>,
     /// <p>The thing ARN.</p>
+    #[doc(hidden)]
     pub thing_arn: std::option::Option<std::string::String>,
     /// <p>A list of thing attributes which are name-value pairs.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The version of the thing record in the registry.</p>
+    #[doc(hidden)]
     pub version: i64,
 }
 impl ThingAttribute {
@@ -13908,11 +14307,10 @@ impl std::fmt::Debug for ThingAttribute {
         formatter.finish()
     }
 }
-/// See [`ThingAttribute`](crate::model::ThingAttribute)
+/// See [`ThingAttribute`](crate::model::ThingAttribute).
 pub mod thing_attribute {
 
-    /// A builder for [`ThingAttribute`](crate::model::ThingAttribute)
-    #[non_exhaustive]
+    /// A builder for [`ThingAttribute`](crate::model::ThingAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_name: std::option::Option<std::string::String>,
@@ -13992,7 +14390,7 @@ pub mod thing_attribute {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThingAttribute`](crate::model::ThingAttribute)
+        /// Consumes the builder and constructs a [`ThingAttribute`](crate::model::ThingAttribute).
         pub fn build(self) -> crate::model::ThingAttribute {
             crate::model::ThingAttribute {
                 thing_name: self.thing_name,
@@ -14005,7 +14403,7 @@ pub mod thing_attribute {
     }
 }
 impl ThingAttribute {
-    /// Creates a new builder-style object to manufacture [`ThingAttribute`](crate::model::ThingAttribute)
+    /// Creates a new builder-style object to manufacture [`ThingAttribute`](crate::model::ThingAttribute).
     pub fn builder() -> crate::model::thing_attribute::Builder {
         crate::model::thing_attribute::Builder::default()
     }
@@ -14144,8 +14542,10 @@ impl AsRef<str> for ReportType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GroupNameAndArn {
     /// <p>The group name.</p>
+    #[doc(hidden)]
     pub group_name: std::option::Option<std::string::String>,
     /// <p>The group ARN.</p>
+    #[doc(hidden)]
     pub group_arn: std::option::Option<std::string::String>,
 }
 impl GroupNameAndArn {
@@ -14166,11 +14566,10 @@ impl std::fmt::Debug for GroupNameAndArn {
         formatter.finish()
     }
 }
-/// See [`GroupNameAndArn`](crate::model::GroupNameAndArn)
+/// See [`GroupNameAndArn`](crate::model::GroupNameAndArn).
 pub mod group_name_and_arn {
 
-    /// A builder for [`GroupNameAndArn`](crate::model::GroupNameAndArn)
-    #[non_exhaustive]
+    /// A builder for [`GroupNameAndArn`](crate::model::GroupNameAndArn).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_name: std::option::Option<std::string::String>,
@@ -14197,7 +14596,7 @@ pub mod group_name_and_arn {
             self.group_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`GroupNameAndArn`](crate::model::GroupNameAndArn)
+        /// Consumes the builder and constructs a [`GroupNameAndArn`](crate::model::GroupNameAndArn).
         pub fn build(self) -> crate::model::GroupNameAndArn {
             crate::model::GroupNameAndArn {
                 group_name: self.group_name,
@@ -14207,7 +14606,7 @@ pub mod group_name_and_arn {
     }
 }
 impl GroupNameAndArn {
-    /// Creates a new builder-style object to manufacture [`GroupNameAndArn`](crate::model::GroupNameAndArn)
+    /// Creates a new builder-style object to manufacture [`GroupNameAndArn`](crate::model::GroupNameAndArn).
     pub fn builder() -> crate::model::group_name_and_arn::Builder {
         crate::model::group_name_and_arn::Builder::default()
     }
@@ -14218,6 +14617,7 @@ impl GroupNameAndArn {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SecurityProfileTarget {
     /// <p>The ARN of the security profile.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl SecurityProfileTarget {
@@ -14233,11 +14633,10 @@ impl std::fmt::Debug for SecurityProfileTarget {
         formatter.finish()
     }
 }
-/// See [`SecurityProfileTarget`](crate::model::SecurityProfileTarget)
+/// See [`SecurityProfileTarget`](crate::model::SecurityProfileTarget).
 pub mod security_profile_target {
 
-    /// A builder for [`SecurityProfileTarget`](crate::model::SecurityProfileTarget)
-    #[non_exhaustive]
+    /// A builder for [`SecurityProfileTarget`](crate::model::SecurityProfileTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -14253,14 +14652,14 @@ pub mod security_profile_target {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`SecurityProfileTarget`](crate::model::SecurityProfileTarget)
+        /// Consumes the builder and constructs a [`SecurityProfileTarget`](crate::model::SecurityProfileTarget).
         pub fn build(self) -> crate::model::SecurityProfileTarget {
             crate::model::SecurityProfileTarget { arn: self.arn }
         }
     }
 }
 impl SecurityProfileTarget {
-    /// Creates a new builder-style object to manufacture [`SecurityProfileTarget`](crate::model::SecurityProfileTarget)
+    /// Creates a new builder-style object to manufacture [`SecurityProfileTarget`](crate::model::SecurityProfileTarget).
     pub fn builder() -> crate::model::security_profile_target::Builder {
         crate::model::security_profile_target::Builder::default()
     }
@@ -14271,12 +14670,16 @@ impl SecurityProfileTarget {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamSummary {
     /// <p>The stream ID.</p>
+    #[doc(hidden)]
     pub stream_id: std::option::Option<std::string::String>,
     /// <p>The stream ARN.</p>
+    #[doc(hidden)]
     pub stream_arn: std::option::Option<std::string::String>,
     /// <p>The stream version.</p>
+    #[doc(hidden)]
     pub stream_version: std::option::Option<i32>,
     /// <p>A description of the stream.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl StreamSummary {
@@ -14307,11 +14710,10 @@ impl std::fmt::Debug for StreamSummary {
         formatter.finish()
     }
 }
-/// See [`StreamSummary`](crate::model::StreamSummary)
+/// See [`StreamSummary`](crate::model::StreamSummary).
 pub mod stream_summary {
 
-    /// A builder for [`StreamSummary`](crate::model::StreamSummary)
-    #[non_exhaustive]
+    /// A builder for [`StreamSummary`](crate::model::StreamSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stream_id: std::option::Option<std::string::String>,
@@ -14360,7 +14762,7 @@ pub mod stream_summary {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamSummary`](crate::model::StreamSummary)
+        /// Consumes the builder and constructs a [`StreamSummary`](crate::model::StreamSummary).
         pub fn build(self) -> crate::model::StreamSummary {
             crate::model::StreamSummary {
                 stream_id: self.stream_id,
@@ -14372,7 +14774,7 @@ pub mod stream_summary {
     }
 }
 impl StreamSummary {
-    /// Creates a new builder-style object to manufacture [`StreamSummary`](crate::model::StreamSummary)
+    /// Creates a new builder-style object to manufacture [`StreamSummary`](crate::model::StreamSummary).
     pub fn builder() -> crate::model::stream_summary::Builder {
         crate::model::stream_summary::Builder::default()
     }
@@ -14383,8 +14785,10 @@ impl StreamSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SecurityProfileTargetMapping {
     /// <p>Information that identifies the security profile.</p>
+    #[doc(hidden)]
     pub security_profile_identifier: std::option::Option<crate::model::SecurityProfileIdentifier>,
     /// <p>Information about the target (thing group) associated with the security profile.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<crate::model::SecurityProfileTarget>,
 }
 impl SecurityProfileTargetMapping {
@@ -14410,11 +14814,10 @@ impl std::fmt::Debug for SecurityProfileTargetMapping {
         formatter.finish()
     }
 }
-/// See [`SecurityProfileTargetMapping`](crate::model::SecurityProfileTargetMapping)
+/// See [`SecurityProfileTargetMapping`](crate::model::SecurityProfileTargetMapping).
 pub mod security_profile_target_mapping {
 
-    /// A builder for [`SecurityProfileTargetMapping`](crate::model::SecurityProfileTargetMapping)
-    #[non_exhaustive]
+    /// A builder for [`SecurityProfileTargetMapping`](crate::model::SecurityProfileTargetMapping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) security_profile_identifier:
@@ -14451,7 +14854,7 @@ pub mod security_profile_target_mapping {
             self.target = input;
             self
         }
-        /// Consumes the builder and constructs a [`SecurityProfileTargetMapping`](crate::model::SecurityProfileTargetMapping)
+        /// Consumes the builder and constructs a [`SecurityProfileTargetMapping`](crate::model::SecurityProfileTargetMapping).
         pub fn build(self) -> crate::model::SecurityProfileTargetMapping {
             crate::model::SecurityProfileTargetMapping {
                 security_profile_identifier: self.security_profile_identifier,
@@ -14461,7 +14864,7 @@ pub mod security_profile_target_mapping {
     }
 }
 impl SecurityProfileTargetMapping {
-    /// Creates a new builder-style object to manufacture [`SecurityProfileTargetMapping`](crate::model::SecurityProfileTargetMapping)
+    /// Creates a new builder-style object to manufacture [`SecurityProfileTargetMapping`](crate::model::SecurityProfileTargetMapping).
     pub fn builder() -> crate::model::security_profile_target_mapping::Builder {
         crate::model::security_profile_target_mapping::Builder::default()
     }
@@ -14472,8 +14875,10 @@ impl SecurityProfileTargetMapping {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SecurityProfileIdentifier {
     /// <p>The name you've given to the security profile.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The ARN of the security profile.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl SecurityProfileIdentifier {
@@ -14494,11 +14899,10 @@ impl std::fmt::Debug for SecurityProfileIdentifier {
         formatter.finish()
     }
 }
-/// See [`SecurityProfileIdentifier`](crate::model::SecurityProfileIdentifier)
+/// See [`SecurityProfileIdentifier`](crate::model::SecurityProfileIdentifier).
 pub mod security_profile_identifier {
 
-    /// A builder for [`SecurityProfileIdentifier`](crate::model::SecurityProfileIdentifier)
-    #[non_exhaustive]
+    /// A builder for [`SecurityProfileIdentifier`](crate::model::SecurityProfileIdentifier).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -14525,7 +14929,7 @@ pub mod security_profile_identifier {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`SecurityProfileIdentifier`](crate::model::SecurityProfileIdentifier)
+        /// Consumes the builder and constructs a [`SecurityProfileIdentifier`](crate::model::SecurityProfileIdentifier).
         pub fn build(self) -> crate::model::SecurityProfileIdentifier {
             crate::model::SecurityProfileIdentifier {
                 name: self.name,
@@ -14535,7 +14939,7 @@ pub mod security_profile_identifier {
     }
 }
 impl SecurityProfileIdentifier {
-    /// Creates a new builder-style object to manufacture [`SecurityProfileIdentifier`](crate::model::SecurityProfileIdentifier)
+    /// Creates a new builder-style object to manufacture [`SecurityProfileIdentifier`](crate::model::SecurityProfileIdentifier).
     pub fn builder() -> crate::model::security_profile_identifier::Builder {
         crate::model::security_profile_identifier::Builder::default()
     }
@@ -14546,14 +14950,19 @@ impl SecurityProfileIdentifier {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduledAuditMetadata {
     /// <p>The name of the scheduled audit.</p>
+    #[doc(hidden)]
     pub scheduled_audit_name: std::option::Option<std::string::String>,
     /// <p>The ARN of the scheduled audit.</p>
+    #[doc(hidden)]
     pub scheduled_audit_arn: std::option::Option<std::string::String>,
     /// <p>How often the scheduled audit occurs.</p>
+    #[doc(hidden)]
     pub frequency: std::option::Option<crate::model::AuditFrequency>,
     /// <p>The day of the month on which the scheduled audit is run (if the <code>frequency</code> is "MONTHLY"). If days 29-31 are specified, and the month does not have that many days, the audit takes place on the "LAST" day of the month.</p>
+    #[doc(hidden)]
     pub day_of_month: std::option::Option<std::string::String>,
     /// <p>The day of the week on which the scheduled audit is run (if the <code>frequency</code> is "WEEKLY" or "BIWEEKLY").</p>
+    #[doc(hidden)]
     pub day_of_week: std::option::Option<crate::model::DayOfWeek>,
 }
 impl ScheduledAuditMetadata {
@@ -14589,11 +14998,10 @@ impl std::fmt::Debug for ScheduledAuditMetadata {
         formatter.finish()
     }
 }
-/// See [`ScheduledAuditMetadata`](crate::model::ScheduledAuditMetadata)
+/// See [`ScheduledAuditMetadata`](crate::model::ScheduledAuditMetadata).
 pub mod scheduled_audit_metadata {
 
-    /// A builder for [`ScheduledAuditMetadata`](crate::model::ScheduledAuditMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ScheduledAuditMetadata`](crate::model::ScheduledAuditMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scheduled_audit_name: std::option::Option<std::string::String>,
@@ -14665,7 +15073,7 @@ pub mod scheduled_audit_metadata {
             self.day_of_week = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduledAuditMetadata`](crate::model::ScheduledAuditMetadata)
+        /// Consumes the builder and constructs a [`ScheduledAuditMetadata`](crate::model::ScheduledAuditMetadata).
         pub fn build(self) -> crate::model::ScheduledAuditMetadata {
             crate::model::ScheduledAuditMetadata {
                 scheduled_audit_name: self.scheduled_audit_name,
@@ -14678,7 +15086,7 @@ pub mod scheduled_audit_metadata {
     }
 }
 impl ScheduledAuditMetadata {
-    /// Creates a new builder-style object to manufacture [`ScheduledAuditMetadata`](crate::model::ScheduledAuditMetadata)
+    /// Creates a new builder-style object to manufacture [`ScheduledAuditMetadata`](crate::model::ScheduledAuditMetadata).
     pub fn builder() -> crate::model::scheduled_audit_metadata::Builder {
         crate::model::scheduled_audit_metadata::Builder::default()
     }
@@ -14689,10 +15097,13 @@ impl ScheduledAuditMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProvisioningTemplateVersionSummary {
     /// <p>The ID of the fleet privisioning template version.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<i32>,
-    /// <p>The date when the fleet provisioning template version was created</p>
+    /// <p>The date when the provisioning template version was created</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
-    /// <p>True if the fleet provisioning template version is the default version, otherwise false.</p>
+    /// <p>True if the provisioning template version is the default version, otherwise false.</p>
+    #[doc(hidden)]
     pub is_default_version: bool,
 }
 impl ProvisioningTemplateVersionSummary {
@@ -14700,11 +15111,11 @@ impl ProvisioningTemplateVersionSummary {
     pub fn version_id(&self) -> std::option::Option<i32> {
         self.version_id
     }
-    /// <p>The date when the fleet provisioning template version was created</p>
+    /// <p>The date when the provisioning template version was created</p>
     pub fn creation_date(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.creation_date.as_ref()
     }
-    /// <p>True if the fleet provisioning template version is the default version, otherwise false.</p>
+    /// <p>True if the provisioning template version is the default version, otherwise false.</p>
     pub fn is_default_version(&self) -> bool {
         self.is_default_version
     }
@@ -14718,11 +15129,10 @@ impl std::fmt::Debug for ProvisioningTemplateVersionSummary {
         formatter.finish()
     }
 }
-/// See [`ProvisioningTemplateVersionSummary`](crate::model::ProvisioningTemplateVersionSummary)
+/// See [`ProvisioningTemplateVersionSummary`](crate::model::ProvisioningTemplateVersionSummary).
 pub mod provisioning_template_version_summary {
 
-    /// A builder for [`ProvisioningTemplateVersionSummary`](crate::model::ProvisioningTemplateVersionSummary)
-    #[non_exhaustive]
+    /// A builder for [`ProvisioningTemplateVersionSummary`](crate::model::ProvisioningTemplateVersionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version_id: std::option::Option<i32>,
@@ -14740,12 +15150,12 @@ pub mod provisioning_template_version_summary {
             self.version_id = input;
             self
         }
-        /// <p>The date when the fleet provisioning template version was created</p>
+        /// <p>The date when the provisioning template version was created</p>
         pub fn creation_date(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.creation_date = Some(input);
             self
         }
-        /// <p>The date when the fleet provisioning template version was created</p>
+        /// <p>The date when the provisioning template version was created</p>
         pub fn set_creation_date(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -14753,17 +15163,17 @@ pub mod provisioning_template_version_summary {
             self.creation_date = input;
             self
         }
-        /// <p>True if the fleet provisioning template version is the default version, otherwise false.</p>
+        /// <p>True if the provisioning template version is the default version, otherwise false.</p>
         pub fn is_default_version(mut self, input: bool) -> Self {
             self.is_default_version = Some(input);
             self
         }
-        /// <p>True if the fleet provisioning template version is the default version, otherwise false.</p>
+        /// <p>True if the provisioning template version is the default version, otherwise false.</p>
         pub fn set_is_default_version(mut self, input: std::option::Option<bool>) -> Self {
             self.is_default_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvisioningTemplateVersionSummary`](crate::model::ProvisioningTemplateVersionSummary)
+        /// Consumes the builder and constructs a [`ProvisioningTemplateVersionSummary`](crate::model::ProvisioningTemplateVersionSummary).
         pub fn build(self) -> crate::model::ProvisioningTemplateVersionSummary {
             crate::model::ProvisioningTemplateVersionSummary {
                 version_id: self.version_id,
@@ -14774,53 +15184,66 @@ pub mod provisioning_template_version_summary {
     }
 }
 impl ProvisioningTemplateVersionSummary {
-    /// Creates a new builder-style object to manufacture [`ProvisioningTemplateVersionSummary`](crate::model::ProvisioningTemplateVersionSummary)
+    /// Creates a new builder-style object to manufacture [`ProvisioningTemplateVersionSummary`](crate::model::ProvisioningTemplateVersionSummary).
     pub fn builder() -> crate::model::provisioning_template_version_summary::Builder {
         crate::model::provisioning_template_version_summary::Builder::default()
     }
 }
 
-/// <p>A summary of information about a fleet provisioning template.</p>
+/// <p>A summary of information about a provisioning template.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProvisioningTemplateSummary {
-    /// <p>The ARN of the fleet provisioning template.</p>
+    /// <p>The ARN of the provisioning template.</p>
+    #[doc(hidden)]
     pub template_arn: std::option::Option<std::string::String>,
-    /// <p>The name of the fleet provisioning template.</p>
+    /// <p>The name of the provisioning template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
-    /// <p>The description of the fleet provisioning template.</p>
+    /// <p>The description of the provisioning template.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
-    /// <p>The date when the fleet provisioning template summary was created.</p>
+    /// <p>The date when the provisioning template summary was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
-    /// <p>The date when the fleet provisioning template summary was last modified.</p>
+    /// <p>The date when the provisioning template summary was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>True if the fleet provision template is enabled, otherwise false.</p>
+    #[doc(hidden)]
     pub enabled: bool,
+    /// <p>The type you define in a provisioning template. You can create a template with only one type. You can't change the template type after its creation. The default value is <code>FLEET_PROVISIONING</code>. For more information about provisioning template, see: <a href="https://docs.aws.amazon.com/iot/latest/developerguide/provision-template.html">Provisioning template</a>. </p>
+    #[doc(hidden)]
+    pub r#type: std::option::Option<crate::model::TemplateType>,
 }
 impl ProvisioningTemplateSummary {
-    /// <p>The ARN of the fleet provisioning template.</p>
+    /// <p>The ARN of the provisioning template.</p>
     pub fn template_arn(&self) -> std::option::Option<&str> {
         self.template_arn.as_deref()
     }
-    /// <p>The name of the fleet provisioning template.</p>
+    /// <p>The name of the provisioning template.</p>
     pub fn template_name(&self) -> std::option::Option<&str> {
         self.template_name.as_deref()
     }
-    /// <p>The description of the fleet provisioning template.</p>
+    /// <p>The description of the provisioning template.</p>
     pub fn description(&self) -> std::option::Option<&str> {
         self.description.as_deref()
     }
-    /// <p>The date when the fleet provisioning template summary was created.</p>
+    /// <p>The date when the provisioning template summary was created.</p>
     pub fn creation_date(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.creation_date.as_ref()
     }
-    /// <p>The date when the fleet provisioning template summary was last modified.</p>
+    /// <p>The date when the provisioning template summary was last modified.</p>
     pub fn last_modified_date(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.last_modified_date.as_ref()
     }
     /// <p>True if the fleet provision template is enabled, otherwise false.</p>
     pub fn enabled(&self) -> bool {
         self.enabled
+    }
+    /// <p>The type you define in a provisioning template. You can create a template with only one type. You can't change the template type after its creation. The default value is <code>FLEET_PROVISIONING</code>. For more information about provisioning template, see: <a href="https://docs.aws.amazon.com/iot/latest/developerguide/provision-template.html">Provisioning template</a>. </p>
+    pub fn r#type(&self) -> std::option::Option<&crate::model::TemplateType> {
+        self.r#type.as_ref()
     }
 }
 impl std::fmt::Debug for ProvisioningTemplateSummary {
@@ -14832,14 +15255,14 @@ impl std::fmt::Debug for ProvisioningTemplateSummary {
         formatter.field("creation_date", &self.creation_date);
         formatter.field("last_modified_date", &self.last_modified_date);
         formatter.field("enabled", &self.enabled);
+        formatter.field("r#type", &self.r#type);
         formatter.finish()
     }
 }
-/// See [`ProvisioningTemplateSummary`](crate::model::ProvisioningTemplateSummary)
+/// See [`ProvisioningTemplateSummary`](crate::model::ProvisioningTemplateSummary).
 pub mod provisioning_template_summary {
 
-    /// A builder for [`ProvisioningTemplateSummary`](crate::model::ProvisioningTemplateSummary)
-    #[non_exhaustive]
+    /// A builder for [`ProvisioningTemplateSummary`](crate::model::ProvisioningTemplateSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_arn: std::option::Option<std::string::String>,
@@ -14848,24 +15271,25 @@ pub mod provisioning_template_summary {
         pub(crate) creation_date: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) enabled: std::option::Option<bool>,
+        pub(crate) r#type: std::option::Option<crate::model::TemplateType>,
     }
     impl Builder {
-        /// <p>The ARN of the fleet provisioning template.</p>
+        /// <p>The ARN of the provisioning template.</p>
         pub fn template_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.template_arn = Some(input.into());
             self
         }
-        /// <p>The ARN of the fleet provisioning template.</p>
+        /// <p>The ARN of the provisioning template.</p>
         pub fn set_template_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.template_arn = input;
             self
         }
-        /// <p>The name of the fleet provisioning template.</p>
+        /// <p>The name of the provisioning template.</p>
         pub fn template_name(mut self, input: impl Into<std::string::String>) -> Self {
             self.template_name = Some(input.into());
             self
         }
-        /// <p>The name of the fleet provisioning template.</p>
+        /// <p>The name of the provisioning template.</p>
         pub fn set_template_name(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -14873,22 +15297,22 @@ pub mod provisioning_template_summary {
             self.template_name = input;
             self
         }
-        /// <p>The description of the fleet provisioning template.</p>
+        /// <p>The description of the provisioning template.</p>
         pub fn description(mut self, input: impl Into<std::string::String>) -> Self {
             self.description = Some(input.into());
             self
         }
-        /// <p>The description of the fleet provisioning template.</p>
+        /// <p>The description of the provisioning template.</p>
         pub fn set_description(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.description = input;
             self
         }
-        /// <p>The date when the fleet provisioning template summary was created.</p>
+        /// <p>The date when the provisioning template summary was created.</p>
         pub fn creation_date(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.creation_date = Some(input);
             self
         }
-        /// <p>The date when the fleet provisioning template summary was created.</p>
+        /// <p>The date when the provisioning template summary was created.</p>
         pub fn set_creation_date(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -14896,12 +15320,12 @@ pub mod provisioning_template_summary {
             self.creation_date = input;
             self
         }
-        /// <p>The date when the fleet provisioning template summary was last modified.</p>
+        /// <p>The date when the provisioning template summary was last modified.</p>
         pub fn last_modified_date(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.last_modified_date = Some(input);
             self
         }
-        /// <p>The date when the fleet provisioning template summary was last modified.</p>
+        /// <p>The date when the provisioning template summary was last modified.</p>
         pub fn set_last_modified_date(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -14919,7 +15343,17 @@ pub mod provisioning_template_summary {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvisioningTemplateSummary`](crate::model::ProvisioningTemplateSummary)
+        /// <p>The type you define in a provisioning template. You can create a template with only one type. You can't change the template type after its creation. The default value is <code>FLEET_PROVISIONING</code>. For more information about provisioning template, see: <a href="https://docs.aws.amazon.com/iot/latest/developerguide/provision-template.html">Provisioning template</a>. </p>
+        pub fn r#type(mut self, input: crate::model::TemplateType) -> Self {
+            self.r#type = Some(input);
+            self
+        }
+        /// <p>The type you define in a provisioning template. You can create a template with only one type. You can't change the template type after its creation. The default value is <code>FLEET_PROVISIONING</code>. For more information about provisioning template, see: <a href="https://docs.aws.amazon.com/iot/latest/developerguide/provision-template.html">Provisioning template</a>. </p>
+        pub fn set_type(mut self, input: std::option::Option<crate::model::TemplateType>) -> Self {
+            self.r#type = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ProvisioningTemplateSummary`](crate::model::ProvisioningTemplateSummary).
         pub fn build(self) -> crate::model::ProvisioningTemplateSummary {
             crate::model::ProvisioningTemplateSummary {
                 template_arn: self.template_arn,
@@ -14928,14 +15362,70 @@ pub mod provisioning_template_summary {
                 creation_date: self.creation_date,
                 last_modified_date: self.last_modified_date,
                 enabled: self.enabled.unwrap_or_default(),
+                r#type: self.r#type,
             }
         }
     }
 }
 impl ProvisioningTemplateSummary {
-    /// Creates a new builder-style object to manufacture [`ProvisioningTemplateSummary`](crate::model::ProvisioningTemplateSummary)
+    /// Creates a new builder-style object to manufacture [`ProvisioningTemplateSummary`](crate::model::ProvisioningTemplateSummary).
     pub fn builder() -> crate::model::provisioning_template_summary::Builder {
         crate::model::provisioning_template_summary::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum TemplateType {
+    #[allow(missing_docs)] // documentation missing in model
+    FleetProvisioning,
+    #[allow(missing_docs)] // documentation missing in model
+    Jitp,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for TemplateType {
+    fn from(s: &str) -> Self {
+        match s {
+            "FLEET_PROVISIONING" => TemplateType::FleetProvisioning,
+            "JITP" => TemplateType::Jitp,
+            other => TemplateType::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for TemplateType {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(TemplateType::from(s))
+    }
+}
+impl TemplateType {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            TemplateType::FleetProvisioning => "FLEET_PROVISIONING",
+            TemplateType::Jitp => "JITP",
+            TemplateType::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["FLEET_PROVISIONING", "JITP"]
+    }
+}
+impl AsRef<str> for TemplateType {
+    fn as_ref(&self) -> &str {
+        self.as_str()
     }
 }
 
@@ -14944,10 +15434,13 @@ impl ProvisioningTemplateSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyVersion {
     /// <p>The policy version ID.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the policy version is the default.</p>
+    #[doc(hidden)]
     pub is_default_version: bool,
     /// <p>The date and time the policy was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PolicyVersion {
@@ -14973,11 +15466,10 @@ impl std::fmt::Debug for PolicyVersion {
         formatter.finish()
     }
 }
-/// See [`PolicyVersion`](crate::model::PolicyVersion)
+/// See [`PolicyVersion`](crate::model::PolicyVersion).
 pub mod policy_version {
 
-    /// A builder for [`PolicyVersion`](crate::model::PolicyVersion)
-    #[non_exhaustive]
+    /// A builder for [`PolicyVersion`](crate::model::PolicyVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version_id: std::option::Option<std::string::String>,
@@ -15018,7 +15510,7 @@ pub mod policy_version {
             self.create_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyVersion`](crate::model::PolicyVersion)
+        /// Consumes the builder and constructs a [`PolicyVersion`](crate::model::PolicyVersion).
         pub fn build(self) -> crate::model::PolicyVersion {
             crate::model::PolicyVersion {
                 version_id: self.version_id,
@@ -15029,7 +15521,7 @@ pub mod policy_version {
     }
 }
 impl PolicyVersion {
-    /// Creates a new builder-style object to manufacture [`PolicyVersion`](crate::model::PolicyVersion)
+    /// Creates a new builder-style object to manufacture [`PolicyVersion`](crate::model::PolicyVersion).
     pub fn builder() -> crate::model::policy_version::Builder {
         crate::model::policy_version::Builder::default()
     }
@@ -15040,16 +15532,22 @@ impl PolicyVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutgoingCertificate {
     /// <p>The certificate ARN.</p>
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// <p>The certificate ID.</p>
+    #[doc(hidden)]
     pub certificate_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services account to which the transfer was made.</p>
+    #[doc(hidden)]
     pub transferred_to: std::option::Option<std::string::String>,
     /// <p>The date the transfer was initiated.</p>
+    #[doc(hidden)]
     pub transfer_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The transfer message.</p>
+    #[doc(hidden)]
     pub transfer_message: std::option::Option<std::string::String>,
     /// <p>The certificate creation date.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl OutgoingCertificate {
@@ -15090,11 +15588,10 @@ impl std::fmt::Debug for OutgoingCertificate {
         formatter.finish()
     }
 }
-/// See [`OutgoingCertificate`](crate::model::OutgoingCertificate)
+/// See [`OutgoingCertificate`](crate::model::OutgoingCertificate).
 pub mod outgoing_certificate {
 
-    /// A builder for [`OutgoingCertificate`](crate::model::OutgoingCertificate)
-    #[non_exhaustive]
+    /// A builder for [`OutgoingCertificate`](crate::model::OutgoingCertificate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -15183,7 +15680,7 @@ pub mod outgoing_certificate {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutgoingCertificate`](crate::model::OutgoingCertificate)
+        /// Consumes the builder and constructs a [`OutgoingCertificate`](crate::model::OutgoingCertificate).
         pub fn build(self) -> crate::model::OutgoingCertificate {
             crate::model::OutgoingCertificate {
                 certificate_arn: self.certificate_arn,
@@ -15197,7 +15694,7 @@ pub mod outgoing_certificate {
     }
 }
 impl OutgoingCertificate {
-    /// Creates a new builder-style object to manufacture [`OutgoingCertificate`](crate::model::OutgoingCertificate)
+    /// Creates a new builder-style object to manufacture [`OutgoingCertificate`](crate::model::OutgoingCertificate).
     pub fn builder() -> crate::model::outgoing_certificate::Builder {
         crate::model::outgoing_certificate::Builder::default()
     }
@@ -15208,10 +15705,13 @@ impl OutgoingCertificate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OtaUpdateSummary {
     /// <p>The OTA update ID.</p>
+    #[doc(hidden)]
     pub ota_update_id: std::option::Option<std::string::String>,
     /// <p>The OTA update ARN.</p>
+    #[doc(hidden)]
     pub ota_update_arn: std::option::Option<std::string::String>,
     /// <p>The date when the OTA update was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl OtaUpdateSummary {
@@ -15237,11 +15737,10 @@ impl std::fmt::Debug for OtaUpdateSummary {
         formatter.finish()
     }
 }
-/// See [`OtaUpdateSummary`](crate::model::OtaUpdateSummary)
+/// See [`OtaUpdateSummary`](crate::model::OtaUpdateSummary).
 pub mod ota_update_summary {
 
-    /// A builder for [`OtaUpdateSummary`](crate::model::OtaUpdateSummary)
-    #[non_exhaustive]
+    /// A builder for [`OtaUpdateSummary`](crate::model::OtaUpdateSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ota_update_id: std::option::Option<std::string::String>,
@@ -15288,7 +15787,7 @@ pub mod ota_update_summary {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`OtaUpdateSummary`](crate::model::OtaUpdateSummary)
+        /// Consumes the builder and constructs a [`OtaUpdateSummary`](crate::model::OtaUpdateSummary).
         pub fn build(self) -> crate::model::OtaUpdateSummary {
             crate::model::OtaUpdateSummary {
                 ota_update_id: self.ota_update_id,
@@ -15299,7 +15798,7 @@ pub mod ota_update_summary {
     }
 }
 impl OtaUpdateSummary {
-    /// Creates a new builder-style object to manufacture [`OtaUpdateSummary`](crate::model::OtaUpdateSummary)
+    /// Creates a new builder-style object to manufacture [`OtaUpdateSummary`](crate::model::OtaUpdateSummary).
     pub fn builder() -> crate::model::ota_update_summary::Builder {
         crate::model::ota_update_summary::Builder::default()
     }
@@ -15378,10 +15877,13 @@ impl AsRef<str> for OtaUpdateStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MitigationActionIdentifier {
     /// <p>The friendly name of the mitigation action.</p>
+    #[doc(hidden)]
     pub action_name: std::option::Option<std::string::String>,
     /// <p>The IAM role ARN used to apply this mitigation action.</p>
+    #[doc(hidden)]
     pub action_arn: std::option::Option<std::string::String>,
     /// <p>The date when this mitigation action was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl MitigationActionIdentifier {
@@ -15407,11 +15909,10 @@ impl std::fmt::Debug for MitigationActionIdentifier {
         formatter.finish()
     }
 }
-/// See [`MitigationActionIdentifier`](crate::model::MitigationActionIdentifier)
+/// See [`MitigationActionIdentifier`](crate::model::MitigationActionIdentifier).
 pub mod mitigation_action_identifier {
 
-    /// A builder for [`MitigationActionIdentifier`](crate::model::MitigationActionIdentifier)
-    #[non_exhaustive]
+    /// A builder for [`MitigationActionIdentifier`](crate::model::MitigationActionIdentifier).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action_name: std::option::Option<std::string::String>,
@@ -15452,7 +15953,7 @@ pub mod mitigation_action_identifier {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`MitigationActionIdentifier`](crate::model::MitigationActionIdentifier)
+        /// Consumes the builder and constructs a [`MitigationActionIdentifier`](crate::model::MitigationActionIdentifier).
         pub fn build(self) -> crate::model::MitigationActionIdentifier {
             crate::model::MitigationActionIdentifier {
                 action_name: self.action_name,
@@ -15463,7 +15964,7 @@ pub mod mitigation_action_identifier {
     }
 }
 impl MitigationActionIdentifier {
-    /// Creates a new builder-style object to manufacture [`MitigationActionIdentifier`](crate::model::MitigationActionIdentifier)
+    /// Creates a new builder-style object to manufacture [`MitigationActionIdentifier`](crate::model::MitigationActionIdentifier).
     pub fn builder() -> crate::model::mitigation_action_identifier::Builder {
         crate::model::mitigation_action_identifier::Builder::default()
     }
@@ -15552,8 +16053,10 @@ impl AsRef<str> for MitigationActionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDatum {
     /// <p>The time the metric value was reported.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The value reported for the metric.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<crate::model::MetricValue>,
 }
 impl MetricDatum {
@@ -15574,11 +16077,10 @@ impl std::fmt::Debug for MetricDatum {
         formatter.finish()
     }
 }
-/// See [`MetricDatum`](crate::model::MetricDatum)
+/// See [`MetricDatum`](crate::model::MetricDatum).
 pub mod metric_datum {
 
-    /// A builder for [`MetricDatum`](crate::model::MetricDatum)
-    #[non_exhaustive]
+    /// A builder for [`MetricDatum`](crate::model::MetricDatum).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timestamp: std::option::Option<aws_smithy_types::DateTime>,
@@ -15608,7 +16110,7 @@ pub mod metric_datum {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDatum`](crate::model::MetricDatum)
+        /// Consumes the builder and constructs a [`MetricDatum`](crate::model::MetricDatum).
         pub fn build(self) -> crate::model::MetricDatum {
             crate::model::MetricDatum {
                 timestamp: self.timestamp,
@@ -15618,7 +16120,7 @@ pub mod metric_datum {
     }
 }
 impl MetricDatum {
-    /// Creates a new builder-style object to manufacture [`MetricDatum`](crate::model::MetricDatum)
+    /// Creates a new builder-style object to manufacture [`MetricDatum`](crate::model::MetricDatum).
     pub fn builder() -> crate::model::metric_datum::Builder {
         crate::model::metric_datum::Builder::default()
     }
@@ -15629,14 +16131,19 @@ impl MetricDatum {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ManagedJobTemplateSummary {
     /// <p>The Amazon Resource Name (ARN) for a managed template.</p>
+    #[doc(hidden)]
     pub template_arn: std::option::Option<std::string::String>,
     /// <p>The unique Name for a managed template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The description for a managed template.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A list of environments that are supported with the managed job template.</p>
+    #[doc(hidden)]
     pub environments: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The version for a managed template.</p>
+    #[doc(hidden)]
     pub template_version: std::option::Option<std::string::String>,
 }
 impl ManagedJobTemplateSummary {
@@ -15672,11 +16179,10 @@ impl std::fmt::Debug for ManagedJobTemplateSummary {
         formatter.finish()
     }
 }
-/// See [`ManagedJobTemplateSummary`](crate::model::ManagedJobTemplateSummary)
+/// See [`ManagedJobTemplateSummary`](crate::model::ManagedJobTemplateSummary).
 pub mod managed_job_template_summary {
 
-    /// A builder for [`ManagedJobTemplateSummary`](crate::model::ManagedJobTemplateSummary)
-    #[non_exhaustive]
+    /// A builder for [`ManagedJobTemplateSummary`](crate::model::ManagedJobTemplateSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_arn: std::option::Option<std::string::String>,
@@ -15751,7 +16257,7 @@ pub mod managed_job_template_summary {
             self.template_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManagedJobTemplateSummary`](crate::model::ManagedJobTemplateSummary)
+        /// Consumes the builder and constructs a [`ManagedJobTemplateSummary`](crate::model::ManagedJobTemplateSummary).
         pub fn build(self) -> crate::model::ManagedJobTemplateSummary {
             crate::model::ManagedJobTemplateSummary {
                 template_arn: self.template_arn,
@@ -15764,7 +16270,7 @@ pub mod managed_job_template_summary {
     }
 }
 impl ManagedJobTemplateSummary {
-    /// Creates a new builder-style object to manufacture [`ManagedJobTemplateSummary`](crate::model::ManagedJobTemplateSummary)
+    /// Creates a new builder-style object to manufacture [`ManagedJobTemplateSummary`](crate::model::ManagedJobTemplateSummary).
     pub fn builder() -> crate::model::managed_job_template_summary::Builder {
         crate::model::managed_job_template_summary::Builder::default()
     }
@@ -15775,12 +16281,16 @@ impl ManagedJobTemplateSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobTemplateSummary {
     /// <p>The ARN of the job template.</p>
+    #[doc(hidden)]
     pub job_template_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the job template.</p>
+    #[doc(hidden)]
     pub job_template_id: std::option::Option<std::string::String>,
     /// <p>A description of the job template.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The time, in seconds since the epoch, when the job template was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl JobTemplateSummary {
@@ -15811,11 +16321,10 @@ impl std::fmt::Debug for JobTemplateSummary {
         formatter.finish()
     }
 }
-/// See [`JobTemplateSummary`](crate::model::JobTemplateSummary)
+/// See [`JobTemplateSummary`](crate::model::JobTemplateSummary).
 pub mod job_template_summary {
 
-    /// A builder for [`JobTemplateSummary`](crate::model::JobTemplateSummary)
-    #[non_exhaustive]
+    /// A builder for [`JobTemplateSummary`](crate::model::JobTemplateSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_template_arn: std::option::Option<std::string::String>,
@@ -15873,7 +16382,7 @@ pub mod job_template_summary {
             self.created_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobTemplateSummary`](crate::model::JobTemplateSummary)
+        /// Consumes the builder and constructs a [`JobTemplateSummary`](crate::model::JobTemplateSummary).
         pub fn build(self) -> crate::model::JobTemplateSummary {
             crate::model::JobTemplateSummary {
                 job_template_arn: self.job_template_arn,
@@ -15885,7 +16394,7 @@ pub mod job_template_summary {
     }
 }
 impl JobTemplateSummary {
-    /// Creates a new builder-style object to manufacture [`JobTemplateSummary`](crate::model::JobTemplateSummary)
+    /// Creates a new builder-style object to manufacture [`JobTemplateSummary`](crate::model::JobTemplateSummary).
     pub fn builder() -> crate::model::job_template_summary::Builder {
         crate::model::job_template_summary::Builder::default()
     }
@@ -15896,24 +16405,33 @@ impl JobTemplateSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobSummary {
     /// <p>The job ARN.</p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier you assigned to this job when it was created.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The ID of the thing group.</p>
+    #[doc(hidden)]
     pub thing_group_id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group.</p> <note>
     /// <p>We recommend that you use continuous jobs instead of snapshot jobs for dynamic thing group targets. By using continuous jobs, devices that join the group receive the job execution even after the job has been created.</p>
     /// </note>
+    #[doc(hidden)]
     pub target_selection: std::option::Option<crate::model::TargetSelection>,
     /// <p>The job summary status.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobStatus>,
     /// <p>The time, in seconds since the epoch, when the job was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time, in seconds since the epoch, when the job was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time, in seconds since the epoch, when the job completed.</p>
+    #[doc(hidden)]
     pub completed_at: std::option::Option<aws_smithy_types::DateTime>,
-    #[allow(missing_docs)] // documentation missing in model
+    /// <p>Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or canceling previously created executions, otherwise false.</p>
+    #[doc(hidden)]
     pub is_concurrent: std::option::Option<bool>,
 }
 impl JobSummary {
@@ -15951,7 +16469,7 @@ impl JobSummary {
     pub fn completed_at(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.completed_at.as_ref()
     }
-    #[allow(missing_docs)] // documentation missing in model
+    /// <p>Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or canceling previously created executions, otherwise false.</p>
     pub fn is_concurrent(&self) -> std::option::Option<bool> {
         self.is_concurrent
     }
@@ -15971,11 +16489,10 @@ impl std::fmt::Debug for JobSummary {
         formatter.finish()
     }
 }
-/// See [`JobSummary`](crate::model::JobSummary)
+/// See [`JobSummary`](crate::model::JobSummary).
 pub mod job_summary {
 
-    /// A builder for [`JobSummary`](crate::model::JobSummary)
-    #[non_exhaustive]
+    /// A builder for [`JobSummary`](crate::model::JobSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_arn: std::option::Option<std::string::String>,
@@ -16088,17 +16605,17 @@ pub mod job_summary {
             self.completed_at = input;
             self
         }
-        #[allow(missing_docs)] // documentation missing in model
+        /// <p>Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or canceling previously created executions, otherwise false.</p>
         pub fn is_concurrent(mut self, input: bool) -> Self {
             self.is_concurrent = Some(input);
             self
         }
-        #[allow(missing_docs)] // documentation missing in model
+        /// <p>Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or canceling previously created executions, otherwise false.</p>
         pub fn set_is_concurrent(mut self, input: std::option::Option<bool>) -> Self {
             self.is_concurrent = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobSummary`](crate::model::JobSummary)
+        /// Consumes the builder and constructs a [`JobSummary`](crate::model::JobSummary).
         pub fn build(self) -> crate::model::JobSummary {
             crate::model::JobSummary {
                 job_arn: self.job_arn,
@@ -16115,7 +16632,7 @@ pub mod job_summary {
     }
 }
 impl JobSummary {
-    /// Creates a new builder-style object to manufacture [`JobSummary`](crate::model::JobSummary)
+    /// Creates a new builder-style object to manufacture [`JobSummary`](crate::model::JobSummary).
     pub fn builder() -> crate::model::job_summary::Builder {
         crate::model::job_summary::Builder::default()
     }
@@ -16249,8 +16766,10 @@ impl AsRef<str> for TargetSelection {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobExecutionSummaryForThing {
     /// <p>The unique identifier you assigned to this job when it was created.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>Contains a subset of information about a job execution.</p>
+    #[doc(hidden)]
     pub job_execution_summary: std::option::Option<crate::model::JobExecutionSummary>,
 }
 impl JobExecutionSummaryForThing {
@@ -16271,11 +16790,10 @@ impl std::fmt::Debug for JobExecutionSummaryForThing {
         formatter.finish()
     }
 }
-/// See [`JobExecutionSummaryForThing`](crate::model::JobExecutionSummaryForThing)
+/// See [`JobExecutionSummaryForThing`](crate::model::JobExecutionSummaryForThing).
 pub mod job_execution_summary_for_thing {
 
-    /// A builder for [`JobExecutionSummaryForThing`](crate::model::JobExecutionSummaryForThing)
-    #[non_exhaustive]
+    /// A builder for [`JobExecutionSummaryForThing`](crate::model::JobExecutionSummaryForThing).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -16305,7 +16823,7 @@ pub mod job_execution_summary_for_thing {
             self.job_execution_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobExecutionSummaryForThing`](crate::model::JobExecutionSummaryForThing)
+        /// Consumes the builder and constructs a [`JobExecutionSummaryForThing`](crate::model::JobExecutionSummaryForThing).
         pub fn build(self) -> crate::model::JobExecutionSummaryForThing {
             crate::model::JobExecutionSummaryForThing {
                 job_id: self.job_id,
@@ -16315,7 +16833,7 @@ pub mod job_execution_summary_for_thing {
     }
 }
 impl JobExecutionSummaryForThing {
-    /// Creates a new builder-style object to manufacture [`JobExecutionSummaryForThing`](crate::model::JobExecutionSummaryForThing)
+    /// Creates a new builder-style object to manufacture [`JobExecutionSummaryForThing`](crate::model::JobExecutionSummaryForThing).
     pub fn builder() -> crate::model::job_execution_summary_for_thing::Builder {
         crate::model::job_execution_summary_for_thing::Builder::default()
     }
@@ -16326,16 +16844,22 @@ impl JobExecutionSummaryForThing {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobExecutionSummary {
     /// <p>The status of the job execution.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobExecutionStatus>,
     /// <p>The time, in seconds since the epoch, when the job execution was queued.</p>
+    #[doc(hidden)]
     pub queued_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time, in seconds since the epoch, when the job execution started.</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time, in seconds since the epoch, when the job execution was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A string (consisting of the digits "0" through "9") which identifies this particular job execution on this particular device. It can be used later in commands which return or update job execution information.</p>
+    #[doc(hidden)]
     pub execution_number: std::option::Option<i64>,
     /// <p>The number that indicates how many retry attempts have been completed for this job on this device.</p>
+    #[doc(hidden)]
     pub retry_attempt: std::option::Option<i32>,
 }
 impl JobExecutionSummary {
@@ -16376,11 +16900,10 @@ impl std::fmt::Debug for JobExecutionSummary {
         formatter.finish()
     }
 }
-/// See [`JobExecutionSummary`](crate::model::JobExecutionSummary)
+/// See [`JobExecutionSummary`](crate::model::JobExecutionSummary).
 pub mod job_execution_summary {
 
-    /// A builder for [`JobExecutionSummary`](crate::model::JobExecutionSummary)
-    #[non_exhaustive]
+    /// A builder for [`JobExecutionSummary`](crate::model::JobExecutionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::JobExecutionStatus>,
@@ -16463,7 +16986,7 @@ pub mod job_execution_summary {
             self.retry_attempt = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobExecutionSummary`](crate::model::JobExecutionSummary)
+        /// Consumes the builder and constructs a [`JobExecutionSummary`](crate::model::JobExecutionSummary).
         pub fn build(self) -> crate::model::JobExecutionSummary {
             crate::model::JobExecutionSummary {
                 status: self.status,
@@ -16477,7 +17000,7 @@ pub mod job_execution_summary {
     }
 }
 impl JobExecutionSummary {
-    /// Creates a new builder-style object to manufacture [`JobExecutionSummary`](crate::model::JobExecutionSummary)
+    /// Creates a new builder-style object to manufacture [`JobExecutionSummary`](crate::model::JobExecutionSummary).
     pub fn builder() -> crate::model::job_execution_summary::Builder {
         crate::model::job_execution_summary::Builder::default()
     }
@@ -16576,8 +17099,10 @@ impl AsRef<str> for JobExecutionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobExecutionSummaryForJob {
     /// <p>The ARN of the thing on which the job execution is running.</p>
+    #[doc(hidden)]
     pub thing_arn: std::option::Option<std::string::String>,
     /// <p>Contains a subset of information about a job execution.</p>
+    #[doc(hidden)]
     pub job_execution_summary: std::option::Option<crate::model::JobExecutionSummary>,
 }
 impl JobExecutionSummaryForJob {
@@ -16598,11 +17123,10 @@ impl std::fmt::Debug for JobExecutionSummaryForJob {
         formatter.finish()
     }
 }
-/// See [`JobExecutionSummaryForJob`](crate::model::JobExecutionSummaryForJob)
+/// See [`JobExecutionSummaryForJob`](crate::model::JobExecutionSummaryForJob).
 pub mod job_execution_summary_for_job {
 
-    /// A builder for [`JobExecutionSummaryForJob`](crate::model::JobExecutionSummaryForJob)
-    #[non_exhaustive]
+    /// A builder for [`JobExecutionSummaryForJob`](crate::model::JobExecutionSummaryForJob).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_arn: std::option::Option<std::string::String>,
@@ -16632,7 +17156,7 @@ pub mod job_execution_summary_for_job {
             self.job_execution_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobExecutionSummaryForJob`](crate::model::JobExecutionSummaryForJob)
+        /// Consumes the builder and constructs a [`JobExecutionSummaryForJob`](crate::model::JobExecutionSummaryForJob).
         pub fn build(self) -> crate::model::JobExecutionSummaryForJob {
             crate::model::JobExecutionSummaryForJob {
                 thing_arn: self.thing_arn,
@@ -16642,7 +17166,7 @@ pub mod job_execution_summary_for_job {
     }
 }
 impl JobExecutionSummaryForJob {
-    /// Creates a new builder-style object to manufacture [`JobExecutionSummaryForJob`](crate::model::JobExecutionSummaryForJob)
+    /// Creates a new builder-style object to manufacture [`JobExecutionSummaryForJob`](crate::model::JobExecutionSummaryForJob).
     pub fn builder() -> crate::model::job_execution_summary_for_job::Builder {
         crate::model::job_execution_summary_for_job::Builder::default()
     }
@@ -16653,8 +17177,10 @@ impl JobExecutionSummaryForJob {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FleetMetricNameAndArn {
     /// <p>The fleet metric name.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The fleet metric ARN.</p>
+    #[doc(hidden)]
     pub metric_arn: std::option::Option<std::string::String>,
 }
 impl FleetMetricNameAndArn {
@@ -16675,11 +17201,10 @@ impl std::fmt::Debug for FleetMetricNameAndArn {
         formatter.finish()
     }
 }
-/// See [`FleetMetricNameAndArn`](crate::model::FleetMetricNameAndArn)
+/// See [`FleetMetricNameAndArn`](crate::model::FleetMetricNameAndArn).
 pub mod fleet_metric_name_and_arn {
 
-    /// A builder for [`FleetMetricNameAndArn`](crate::model::FleetMetricNameAndArn)
-    #[non_exhaustive]
+    /// A builder for [`FleetMetricNameAndArn`](crate::model::FleetMetricNameAndArn).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_name: std::option::Option<std::string::String>,
@@ -16706,7 +17231,7 @@ pub mod fleet_metric_name_and_arn {
             self.metric_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`FleetMetricNameAndArn`](crate::model::FleetMetricNameAndArn)
+        /// Consumes the builder and constructs a [`FleetMetricNameAndArn`](crate::model::FleetMetricNameAndArn).
         pub fn build(self) -> crate::model::FleetMetricNameAndArn {
             crate::model::FleetMetricNameAndArn {
                 metric_name: self.metric_name,
@@ -16716,7 +17241,7 @@ pub mod fleet_metric_name_and_arn {
     }
 }
 impl FleetMetricNameAndArn {
-    /// Creates a new builder-style object to manufacture [`FleetMetricNameAndArn`](crate::model::FleetMetricNameAndArn)
+    /// Creates a new builder-style object to manufacture [`FleetMetricNameAndArn`](crate::model::FleetMetricNameAndArn).
     pub fn builder() -> crate::model::fleet_metric_name_and_arn::Builder {
         crate::model::fleet_metric_name_and_arn::Builder::default()
     }
@@ -16732,10 +17257,13 @@ impl FleetMetricNameAndArn {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainConfigurationSummary {
     /// <p>The name of the domain configuration. This value must be unique to a region.</p>
+    #[doc(hidden)]
     pub domain_configuration_name: std::option::Option<std::string::String>,
     /// <p>The ARN of the domain configuration.</p>
+    #[doc(hidden)]
     pub domain_configuration_arn: std::option::Option<std::string::String>,
     /// <p>The type of service delivered by the endpoint.</p>
+    #[doc(hidden)]
     pub service_type: std::option::Option<crate::model::ServiceType>,
 }
 impl DomainConfigurationSummary {
@@ -16761,11 +17289,10 @@ impl std::fmt::Debug for DomainConfigurationSummary {
         formatter.finish()
     }
 }
-/// See [`DomainConfigurationSummary`](crate::model::DomainConfigurationSummary)
+/// See [`DomainConfigurationSummary`](crate::model::DomainConfigurationSummary).
 pub mod domain_configuration_summary {
 
-    /// A builder for [`DomainConfigurationSummary`](crate::model::DomainConfigurationSummary)
-    #[non_exhaustive]
+    /// A builder for [`DomainConfigurationSummary`](crate::model::DomainConfigurationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_configuration_name: std::option::Option<std::string::String>,
@@ -16812,7 +17339,7 @@ pub mod domain_configuration_summary {
             self.service_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainConfigurationSummary`](crate::model::DomainConfigurationSummary)
+        /// Consumes the builder and constructs a [`DomainConfigurationSummary`](crate::model::DomainConfigurationSummary).
         pub fn build(self) -> crate::model::DomainConfigurationSummary {
             crate::model::DomainConfigurationSummary {
                 domain_configuration_name: self.domain_configuration_name,
@@ -16823,7 +17350,7 @@ pub mod domain_configuration_summary {
     }
 }
 impl DomainConfigurationSummary {
-    /// Creates a new builder-style object to manufacture [`DomainConfigurationSummary`](crate::model::DomainConfigurationSummary)
+    /// Creates a new builder-style object to manufacture [`DomainConfigurationSummary`](crate::model::DomainConfigurationSummary).
     pub fn builder() -> crate::model::domain_configuration_summary::Builder {
         crate::model::domain_configuration_summary::Builder::default()
     }
@@ -16893,25 +17420,35 @@ impl AsRef<str> for ServiceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetectMitigationActionsTaskSummary {
     /// <p> The unique identifier of the task. </p>
+    #[doc(hidden)]
     pub task_id: std::option::Option<std::string::String>,
     /// <p> The status of the task. </p>
+    #[doc(hidden)]
     pub task_status: std::option::Option<crate::model::DetectMitigationActionsTaskStatus>,
     /// <p> The date the task started. </p>
+    #[doc(hidden)]
     pub task_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The date the task ended. </p>
+    #[doc(hidden)]
     pub task_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies the ML Detect findings to which the mitigation actions are applied. </p>
+    #[doc(hidden)]
     pub target: std::option::Option<crate::model::DetectMitigationActionsTaskTarget>,
     /// <p> Specifies the time period of which violation events occurred between. </p>
+    #[doc(hidden)]
     pub violation_event_occurrence_range:
         std::option::Option<crate::model::ViolationEventOccurrenceRange>,
     /// <p> Includes only active violations. </p>
+    #[doc(hidden)]
     pub only_active_violations_included: bool,
     /// <p> Includes suppressed alerts. </p>
+    #[doc(hidden)]
     pub suppressed_alerts_included: bool,
     /// <p> The definition of the actions. </p>
+    #[doc(hidden)]
     pub actions_definition: std::option::Option<std::vec::Vec<crate::model::MitigationAction>>,
     /// <p> The statistics of a mitigation action task. </p>
+    #[doc(hidden)]
     pub task_statistics: std::option::Option<crate::model::DetectMitigationActionsTaskStatistics>,
 }
 impl DetectMitigationActionsTaskSummary {
@@ -16987,11 +17524,10 @@ impl std::fmt::Debug for DetectMitigationActionsTaskSummary {
         formatter.finish()
     }
 }
-/// See [`DetectMitigationActionsTaskSummary`](crate::model::DetectMitigationActionsTaskSummary)
+/// See [`DetectMitigationActionsTaskSummary`](crate::model::DetectMitigationActionsTaskSummary).
 pub mod detect_mitigation_actions_task_summary {
 
-    /// A builder for [`DetectMitigationActionsTaskSummary`](crate::model::DetectMitigationActionsTaskSummary)
-    #[non_exhaustive]
+    /// A builder for [`DetectMitigationActionsTaskSummary`](crate::model::DetectMitigationActionsTaskSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_id: std::option::Option<std::string::String>,
@@ -17149,7 +17685,7 @@ pub mod detect_mitigation_actions_task_summary {
             self.task_statistics = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetectMitigationActionsTaskSummary`](crate::model::DetectMitigationActionsTaskSummary)
+        /// Consumes the builder and constructs a [`DetectMitigationActionsTaskSummary`](crate::model::DetectMitigationActionsTaskSummary).
         pub fn build(self) -> crate::model::DetectMitigationActionsTaskSummary {
             crate::model::DetectMitigationActionsTaskSummary {
                 task_id: self.task_id,
@@ -17169,7 +17705,7 @@ pub mod detect_mitigation_actions_task_summary {
     }
 }
 impl DetectMitigationActionsTaskSummary {
-    /// Creates a new builder-style object to manufacture [`DetectMitigationActionsTaskSummary`](crate::model::DetectMitigationActionsTaskSummary)
+    /// Creates a new builder-style object to manufacture [`DetectMitigationActionsTaskSummary`](crate::model::DetectMitigationActionsTaskSummary).
     pub fn builder() -> crate::model::detect_mitigation_actions_task_summary::Builder {
         crate::model::detect_mitigation_actions_task_summary::Builder::default()
     }
@@ -17180,10 +17716,13 @@ impl DetectMitigationActionsTaskSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetectMitigationActionsTaskStatistics {
     /// <p> The actions that were performed. </p>
+    #[doc(hidden)]
     pub actions_executed: std::option::Option<i64>,
     /// <p> The actions that were skipped. </p>
+    #[doc(hidden)]
     pub actions_skipped: std::option::Option<i64>,
     /// <p> The actions that failed. </p>
+    #[doc(hidden)]
     pub actions_failed: std::option::Option<i64>,
 }
 impl DetectMitigationActionsTaskStatistics {
@@ -17209,11 +17748,10 @@ impl std::fmt::Debug for DetectMitigationActionsTaskStatistics {
         formatter.finish()
     }
 }
-/// See [`DetectMitigationActionsTaskStatistics`](crate::model::DetectMitigationActionsTaskStatistics)
+/// See [`DetectMitigationActionsTaskStatistics`](crate::model::DetectMitigationActionsTaskStatistics).
 pub mod detect_mitigation_actions_task_statistics {
 
-    /// A builder for [`DetectMitigationActionsTaskStatistics`](crate::model::DetectMitigationActionsTaskStatistics)
-    #[non_exhaustive]
+    /// A builder for [`DetectMitigationActionsTaskStatistics`](crate::model::DetectMitigationActionsTaskStatistics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) actions_executed: std::option::Option<i64>,
@@ -17251,7 +17789,7 @@ pub mod detect_mitigation_actions_task_statistics {
             self.actions_failed = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetectMitigationActionsTaskStatistics`](crate::model::DetectMitigationActionsTaskStatistics)
+        /// Consumes the builder and constructs a [`DetectMitigationActionsTaskStatistics`](crate::model::DetectMitigationActionsTaskStatistics).
         pub fn build(self) -> crate::model::DetectMitigationActionsTaskStatistics {
             crate::model::DetectMitigationActionsTaskStatistics {
                 actions_executed: self.actions_executed,
@@ -17262,7 +17800,7 @@ pub mod detect_mitigation_actions_task_statistics {
     }
 }
 impl DetectMitigationActionsTaskStatistics {
-    /// Creates a new builder-style object to manufacture [`DetectMitigationActionsTaskStatistics`](crate::model::DetectMitigationActionsTaskStatistics)
+    /// Creates a new builder-style object to manufacture [`DetectMitigationActionsTaskStatistics`](crate::model::DetectMitigationActionsTaskStatistics).
     pub fn builder() -> crate::model::detect_mitigation_actions_task_statistics::Builder {
         crate::model::detect_mitigation_actions_task_statistics::Builder::default()
     }
@@ -17273,12 +17811,16 @@ impl DetectMitigationActionsTaskStatistics {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MitigationAction {
     /// <p>A user-friendly name for the mitigation action.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the mitigation action.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The IAM role ARN used to apply this mitigation action.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The set of parameters for this mitigation action. The parameters vary, depending on the kind of action you apply.</p>
+    #[doc(hidden)]
     pub action_params: std::option::Option<crate::model::MitigationActionParams>,
 }
 impl MitigationAction {
@@ -17309,11 +17851,10 @@ impl std::fmt::Debug for MitigationAction {
         formatter.finish()
     }
 }
-/// See [`MitigationAction`](crate::model::MitigationAction)
+/// See [`MitigationAction`](crate::model::MitigationAction).
 pub mod mitigation_action {
 
-    /// A builder for [`MitigationAction`](crate::model::MitigationAction)
-    #[non_exhaustive]
+    /// A builder for [`MitigationAction`](crate::model::MitigationAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -17365,7 +17906,7 @@ pub mod mitigation_action {
             self.action_params = input;
             self
         }
-        /// Consumes the builder and constructs a [`MitigationAction`](crate::model::MitigationAction)
+        /// Consumes the builder and constructs a [`MitigationAction`](crate::model::MitigationAction).
         pub fn build(self) -> crate::model::MitigationAction {
             crate::model::MitigationAction {
                 name: self.name,
@@ -17377,7 +17918,7 @@ pub mod mitigation_action {
     }
 }
 impl MitigationAction {
-    /// Creates a new builder-style object to manufacture [`MitigationAction`](crate::model::MitigationAction)
+    /// Creates a new builder-style object to manufacture [`MitigationAction`](crate::model::MitigationAction).
     pub fn builder() -> crate::model::mitigation_action::Builder {
         crate::model::mitigation_action::Builder::default()
     }
@@ -17451,22 +17992,31 @@ impl AsRef<str> for DetectMitigationActionsTaskStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetectMitigationActionExecution {
     /// <p> The unique identifier of the task. </p>
+    #[doc(hidden)]
     pub task_id: std::option::Option<std::string::String>,
     /// <p> The unique identifier of the violation. </p>
+    #[doc(hidden)]
     pub violation_id: std::option::Option<std::string::String>,
     /// <p> The friendly name that uniquely identifies the mitigation action. </p>
+    #[doc(hidden)]
     pub action_name: std::option::Option<std::string::String>,
     /// <p> The name of the thing. </p>
+    #[doc(hidden)]
     pub thing_name: std::option::Option<std::string::String>,
     /// <p> The date a mitigation action was started. </p>
+    #[doc(hidden)]
     pub execution_start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The date a mitigation action ended. </p>
+    #[doc(hidden)]
     pub execution_end_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The status of a mitigation action. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DetectMitigationActionExecutionStatus>,
     /// <p> The error code of a mitigation action. </p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p> The message of a mitigation action. </p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DetectMitigationActionExecution {
@@ -17524,11 +18074,10 @@ impl std::fmt::Debug for DetectMitigationActionExecution {
         formatter.finish()
     }
 }
-/// See [`DetectMitigationActionExecution`](crate::model::DetectMitigationActionExecution)
+/// See [`DetectMitigationActionExecution`](crate::model::DetectMitigationActionExecution).
 pub mod detect_mitigation_action_execution {
 
-    /// A builder for [`DetectMitigationActionExecution`](crate::model::DetectMitigationActionExecution)
-    #[non_exhaustive]
+    /// A builder for [`DetectMitigationActionExecution`](crate::model::DetectMitigationActionExecution).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_id: std::option::Option<std::string::String>,
@@ -17644,7 +18193,7 @@ pub mod detect_mitigation_action_execution {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetectMitigationActionExecution`](crate::model::DetectMitigationActionExecution)
+        /// Consumes the builder and constructs a [`DetectMitigationActionExecution`](crate::model::DetectMitigationActionExecution).
         pub fn build(self) -> crate::model::DetectMitigationActionExecution {
             crate::model::DetectMitigationActionExecution {
                 task_id: self.task_id,
@@ -17661,7 +18210,7 @@ pub mod detect_mitigation_action_execution {
     }
 }
 impl DetectMitigationActionExecution {
-    /// Creates a new builder-style object to manufacture [`DetectMitigationActionExecution`](crate::model::DetectMitigationActionExecution)
+    /// Creates a new builder-style object to manufacture [`DetectMitigationActionExecution`](crate::model::DetectMitigationActionExecution).
     pub fn builder() -> crate::model::detect_mitigation_action_execution::Builder {
         crate::model::detect_mitigation_action_execution::Builder::default()
     }
@@ -17735,15 +18284,22 @@ impl AsRef<str> for DetectMitigationActionExecutionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Certificate {
     /// <p>The ARN of the certificate.</p>
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)</p>
+    #[doc(hidden)]
     pub certificate_id: std::option::Option<std::string::String>,
     /// <p>The status of the certificate.</p>
     /// <p>The status value REGISTER_INACTIVE is deprecated and should not be used.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CertificateStatus>,
     /// <p>The mode of the certificate.</p>
+    /// <p> <code>DEFAULT</code>: A certificate in <code>DEFAULT</code> mode is either generated by Amazon Web Services IoT Core or registered with an issuer certificate authority (CA) in <code>DEFAULT</code> mode. Devices with certificates in <code>DEFAULT</code> mode aren't required to send the Server Name Indication (SNI) extension when connecting to Amazon Web Services IoT Core. However, to use features such as custom domains and VPC endpoints, we recommend that you use the SNI extension when connecting to Amazon Web Services IoT Core.</p>
+    /// <p> <code>SNI_ONLY</code>: A certificate in <code>SNI_ONLY</code> mode is registered without an issuer CA. Devices with certificates in <code>SNI_ONLY</code> mode must send the SNI extension when connecting to Amazon Web Services IoT Core. </p>
+    #[doc(hidden)]
     pub certificate_mode: std::option::Option<crate::model::CertificateMode>,
     /// <p>The date and time the certificate was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Certificate {
@@ -17761,6 +18317,8 @@ impl Certificate {
         self.status.as_ref()
     }
     /// <p>The mode of the certificate.</p>
+    /// <p> <code>DEFAULT</code>: A certificate in <code>DEFAULT</code> mode is either generated by Amazon Web Services IoT Core or registered with an issuer certificate authority (CA) in <code>DEFAULT</code> mode. Devices with certificates in <code>DEFAULT</code> mode aren't required to send the Server Name Indication (SNI) extension when connecting to Amazon Web Services IoT Core. However, to use features such as custom domains and VPC endpoints, we recommend that you use the SNI extension when connecting to Amazon Web Services IoT Core.</p>
+    /// <p> <code>SNI_ONLY</code>: A certificate in <code>SNI_ONLY</code> mode is registered without an issuer CA. Devices with certificates in <code>SNI_ONLY</code> mode must send the SNI extension when connecting to Amazon Web Services IoT Core. </p>
     pub fn certificate_mode(&self) -> std::option::Option<&crate::model::CertificateMode> {
         self.certificate_mode.as_ref()
     }
@@ -17780,11 +18338,10 @@ impl std::fmt::Debug for Certificate {
         formatter.finish()
     }
 }
-/// See [`Certificate`](crate::model::Certificate)
+/// See [`Certificate`](crate::model::Certificate).
 pub mod certificate {
 
-    /// A builder for [`Certificate`](crate::model::Certificate)
-    #[non_exhaustive]
+    /// A builder for [`Certificate`](crate::model::Certificate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -17836,11 +18393,15 @@ pub mod certificate {
             self
         }
         /// <p>The mode of the certificate.</p>
+        /// <p> <code>DEFAULT</code>: A certificate in <code>DEFAULT</code> mode is either generated by Amazon Web Services IoT Core or registered with an issuer certificate authority (CA) in <code>DEFAULT</code> mode. Devices with certificates in <code>DEFAULT</code> mode aren't required to send the Server Name Indication (SNI) extension when connecting to Amazon Web Services IoT Core. However, to use features such as custom domains and VPC endpoints, we recommend that you use the SNI extension when connecting to Amazon Web Services IoT Core.</p>
+        /// <p> <code>SNI_ONLY</code>: A certificate in <code>SNI_ONLY</code> mode is registered without an issuer CA. Devices with certificates in <code>SNI_ONLY</code> mode must send the SNI extension when connecting to Amazon Web Services IoT Core. </p>
         pub fn certificate_mode(mut self, input: crate::model::CertificateMode) -> Self {
             self.certificate_mode = Some(input);
             self
         }
         /// <p>The mode of the certificate.</p>
+        /// <p> <code>DEFAULT</code>: A certificate in <code>DEFAULT</code> mode is either generated by Amazon Web Services IoT Core or registered with an issuer certificate authority (CA) in <code>DEFAULT</code> mode. Devices with certificates in <code>DEFAULT</code> mode aren't required to send the Server Name Indication (SNI) extension when connecting to Amazon Web Services IoT Core. However, to use features such as custom domains and VPC endpoints, we recommend that you use the SNI extension when connecting to Amazon Web Services IoT Core.</p>
+        /// <p> <code>SNI_ONLY</code>: A certificate in <code>SNI_ONLY</code> mode is registered without an issuer CA. Devices with certificates in <code>SNI_ONLY</code> mode must send the SNI extension when connecting to Amazon Web Services IoT Core. </p>
         pub fn set_certificate_mode(
             mut self,
             input: std::option::Option<crate::model::CertificateMode>,
@@ -17861,7 +18422,7 @@ pub mod certificate {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Certificate`](crate::model::Certificate)
+        /// Consumes the builder and constructs a [`Certificate`](crate::model::Certificate).
         pub fn build(self) -> crate::model::Certificate {
             crate::model::Certificate {
                 certificate_arn: self.certificate_arn,
@@ -17874,64 +18435,9 @@ pub mod certificate {
     }
 }
 impl Certificate {
-    /// Creates a new builder-style object to manufacture [`Certificate`](crate::model::Certificate)
+    /// Creates a new builder-style object to manufacture [`Certificate`](crate::model::Certificate).
     pub fn builder() -> crate::model::certificate::Builder {
         crate::model::certificate::Builder::default()
-    }
-}
-
-#[allow(missing_docs)] // documentation missing in model
-#[non_exhaustive]
-#[derive(
-    std::clone::Clone,
-    std::cmp::Eq,
-    std::cmp::Ord,
-    std::cmp::PartialEq,
-    std::cmp::PartialOrd,
-    std::fmt::Debug,
-    std::hash::Hash,
-)]
-pub enum CertificateMode {
-    #[allow(missing_docs)] // documentation missing in model
-    Default,
-    #[allow(missing_docs)] // documentation missing in model
-    SniOnly,
-    /// Unknown contains new variants that have been added since this code was generated.
-    Unknown(String),
-}
-impl std::convert::From<&str> for CertificateMode {
-    fn from(s: &str) -> Self {
-        match s {
-            "DEFAULT" => CertificateMode::Default,
-            "SNI_ONLY" => CertificateMode::SniOnly,
-            other => CertificateMode::Unknown(other.to_owned()),
-        }
-    }
-}
-impl std::str::FromStr for CertificateMode {
-    type Err = std::convert::Infallible;
-
-    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
-        Ok(CertificateMode::from(s))
-    }
-}
-impl CertificateMode {
-    /// Returns the `&str` value of the enum member.
-    pub fn as_str(&self) -> &str {
-        match self {
-            CertificateMode::Default => "DEFAULT",
-            CertificateMode::SniOnly => "SNI_ONLY",
-            CertificateMode::Unknown(s) => s.as_ref(),
-        }
-    }
-    /// Returns all the `&str` values of the enum members.
-    pub fn values() -> &'static [&'static str] {
-        &["DEFAULT", "SNI_ONLY"]
-    }
-}
-impl AsRef<str> for CertificateMode {
-    fn as_ref(&self) -> &str {
-        self.as_str()
     }
 }
 
@@ -17940,13 +18446,17 @@ impl AsRef<str> for CertificateMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CaCertificate {
     /// <p>The ARN of the CA certificate.</p>
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the CA certificate.</p>
+    #[doc(hidden)]
     pub certificate_id: std::option::Option<std::string::String>,
     /// <p>The status of the CA certificate.</p>
     /// <p>The status value REGISTER_INACTIVE is deprecated and should not be used.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CaCertificateStatus>,
     /// <p>The date the CA certificate was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CaCertificate {
@@ -17978,11 +18488,10 @@ impl std::fmt::Debug for CaCertificate {
         formatter.finish()
     }
 }
-/// See [`CaCertificate`](crate::model::CaCertificate)
+/// See [`CaCertificate`](crate::model::CaCertificate).
 pub mod ca_certificate {
 
-    /// A builder for [`CaCertificate`](crate::model::CaCertificate)
-    #[non_exhaustive]
+    /// A builder for [`CaCertificate`](crate::model::CaCertificate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -18045,7 +18554,7 @@ pub mod ca_certificate {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`CaCertificate`](crate::model::CaCertificate)
+        /// Consumes the builder and constructs a [`CaCertificate`](crate::model::CaCertificate).
         pub fn build(self) -> crate::model::CaCertificate {
             crate::model::CaCertificate {
                 certificate_arn: self.certificate_arn,
@@ -18057,7 +18566,7 @@ pub mod ca_certificate {
     }
 }
 impl CaCertificate {
-    /// Creates a new builder-style object to manufacture [`CaCertificate`](crate::model::CaCertificate)
+    /// Creates a new builder-style object to manufacture [`CaCertificate`](crate::model::CaCertificate).
     pub fn builder() -> crate::model::ca_certificate::Builder {
         crate::model::ca_certificate::Builder::default()
     }
@@ -18068,8 +18577,10 @@ impl CaCertificate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuthorizerSummary {
     /// <p>The authorizer name.</p>
+    #[doc(hidden)]
     pub authorizer_name: std::option::Option<std::string::String>,
     /// <p>The authorizer ARN.</p>
+    #[doc(hidden)]
     pub authorizer_arn: std::option::Option<std::string::String>,
 }
 impl AuthorizerSummary {
@@ -18090,11 +18601,10 @@ impl std::fmt::Debug for AuthorizerSummary {
         formatter.finish()
     }
 }
-/// See [`AuthorizerSummary`](crate::model::AuthorizerSummary)
+/// See [`AuthorizerSummary`](crate::model::AuthorizerSummary).
 pub mod authorizer_summary {
 
-    /// A builder for [`AuthorizerSummary`](crate::model::AuthorizerSummary)
-    #[non_exhaustive]
+    /// A builder for [`AuthorizerSummary`](crate::model::AuthorizerSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) authorizer_name: std::option::Option<std::string::String>,
@@ -18127,7 +18637,7 @@ pub mod authorizer_summary {
             self.authorizer_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthorizerSummary`](crate::model::AuthorizerSummary)
+        /// Consumes the builder and constructs a [`AuthorizerSummary`](crate::model::AuthorizerSummary).
         pub fn build(self) -> crate::model::AuthorizerSummary {
             crate::model::AuthorizerSummary {
                 authorizer_name: self.authorizer_name,
@@ -18137,7 +18647,7 @@ pub mod authorizer_summary {
     }
 }
 impl AuthorizerSummary {
-    /// Creates a new builder-style object to manufacture [`AuthorizerSummary`](crate::model::AuthorizerSummary)
+    /// Creates a new builder-style object to manufacture [`AuthorizerSummary`](crate::model::AuthorizerSummary).
     pub fn builder() -> crate::model::authorizer_summary::Builder {
         crate::model::authorizer_summary::Builder::default()
     }
@@ -18148,10 +18658,13 @@ impl AuthorizerSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuditTaskMetadata {
     /// <p>The ID of this audit.</p>
+    #[doc(hidden)]
     pub task_id: std::option::Option<std::string::String>,
     /// <p>The status of this audit. One of "IN_PROGRESS", "COMPLETED", "FAILED", or "CANCELED".</p>
+    #[doc(hidden)]
     pub task_status: std::option::Option<crate::model::AuditTaskStatus>,
     /// <p>The type of this audit. One of "ON_DEMAND_AUDIT_TASK" or "SCHEDULED_AUDIT_TASK".</p>
+    #[doc(hidden)]
     pub task_type: std::option::Option<crate::model::AuditTaskType>,
 }
 impl AuditTaskMetadata {
@@ -18177,11 +18690,10 @@ impl std::fmt::Debug for AuditTaskMetadata {
         formatter.finish()
     }
 }
-/// See [`AuditTaskMetadata`](crate::model::AuditTaskMetadata)
+/// See [`AuditTaskMetadata`](crate::model::AuditTaskMetadata).
 pub mod audit_task_metadata {
 
-    /// A builder for [`AuditTaskMetadata`](crate::model::AuditTaskMetadata)
-    #[non_exhaustive]
+    /// A builder for [`AuditTaskMetadata`](crate::model::AuditTaskMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_id: std::option::Option<std::string::String>,
@@ -18225,7 +18737,7 @@ pub mod audit_task_metadata {
             self.task_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuditTaskMetadata`](crate::model::AuditTaskMetadata)
+        /// Consumes the builder and constructs a [`AuditTaskMetadata`](crate::model::AuditTaskMetadata).
         pub fn build(self) -> crate::model::AuditTaskMetadata {
             crate::model::AuditTaskMetadata {
                 task_id: self.task_id,
@@ -18236,7 +18748,7 @@ pub mod audit_task_metadata {
     }
 }
 impl AuditTaskMetadata {
-    /// Creates a new builder-style object to manufacture [`AuditTaskMetadata`](crate::model::AuditTaskMetadata)
+    /// Creates a new builder-style object to manufacture [`AuditTaskMetadata`](crate::model::AuditTaskMetadata).
     pub fn builder() -> crate::model::audit_task_metadata::Builder {
         crate::model::audit_task_metadata::Builder::default()
     }
@@ -18365,14 +18877,19 @@ impl AsRef<str> for AuditTaskStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuditSuppression {
     /// <p>An audit check name. Checks must be enabled for your account. (Use <code>DescribeAccountAuditConfiguration</code> to see the list of all checks, including those that are enabled or use <code>UpdateAccountAuditConfiguration</code> to select which checks are enabled.)</p>
+    #[doc(hidden)]
     pub check_name: std::option::Option<std::string::String>,
     /// <p>Information that identifies the noncompliant resource.</p>
+    #[doc(hidden)]
     pub resource_identifier: std::option::Option<crate::model::ResourceIdentifier>,
     /// <p> The expiration date (epoch timestamp in seconds) that you want the suppression to adhere to. </p>
+    #[doc(hidden)]
     pub expiration_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Indicates whether a suppression should exist indefinitely or not. </p>
+    #[doc(hidden)]
     pub suppress_indefinitely: std::option::Option<bool>,
     /// <p> The description of the audit suppression. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl AuditSuppression {
@@ -18408,11 +18925,10 @@ impl std::fmt::Debug for AuditSuppression {
         formatter.finish()
     }
 }
-/// See [`AuditSuppression`](crate::model::AuditSuppression)
+/// See [`AuditSuppression`](crate::model::AuditSuppression).
 pub mod audit_suppression {
 
-    /// A builder for [`AuditSuppression`](crate::model::AuditSuppression)
-    #[non_exhaustive]
+    /// A builder for [`AuditSuppression`](crate::model::AuditSuppression).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) check_name: std::option::Option<std::string::String>,
@@ -18478,7 +18994,7 @@ pub mod audit_suppression {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuditSuppression`](crate::model::AuditSuppression)
+        /// Consumes the builder and constructs a [`AuditSuppression`](crate::model::AuditSuppression).
         pub fn build(self) -> crate::model::AuditSuppression {
             crate::model::AuditSuppression {
                 check_name: self.check_name,
@@ -18491,7 +19007,7 @@ pub mod audit_suppression {
     }
 }
 impl AuditSuppression {
-    /// Creates a new builder-style object to manufacture [`AuditSuppression`](crate::model::AuditSuppression)
+    /// Creates a new builder-style object to manufacture [`AuditSuppression`](crate::model::AuditSuppression).
     pub fn builder() -> crate::model::audit_suppression::Builder {
         crate::model::audit_suppression::Builder::default()
     }
@@ -18502,10 +19018,13 @@ impl AuditSuppression {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuditMitigationActionsTaskMetadata {
     /// <p>The unique identifier for the task.</p>
+    #[doc(hidden)]
     pub task_id: std::option::Option<std::string::String>,
     /// <p>The time at which the audit mitigation actions task was started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current state of the audit mitigation actions task.</p>
+    #[doc(hidden)]
     pub task_status: std::option::Option<crate::model::AuditMitigationActionsTaskStatus>,
 }
 impl AuditMitigationActionsTaskMetadata {
@@ -18533,11 +19052,10 @@ impl std::fmt::Debug for AuditMitigationActionsTaskMetadata {
         formatter.finish()
     }
 }
-/// See [`AuditMitigationActionsTaskMetadata`](crate::model::AuditMitigationActionsTaskMetadata)
+/// See [`AuditMitigationActionsTaskMetadata`](crate::model::AuditMitigationActionsTaskMetadata).
 pub mod audit_mitigation_actions_task_metadata {
 
-    /// A builder for [`AuditMitigationActionsTaskMetadata`](crate::model::AuditMitigationActionsTaskMetadata)
-    #[non_exhaustive]
+    /// A builder for [`AuditMitigationActionsTaskMetadata`](crate::model::AuditMitigationActionsTaskMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_id: std::option::Option<std::string::String>,
@@ -18584,7 +19102,7 @@ pub mod audit_mitigation_actions_task_metadata {
             self.task_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuditMitigationActionsTaskMetadata`](crate::model::AuditMitigationActionsTaskMetadata)
+        /// Consumes the builder and constructs a [`AuditMitigationActionsTaskMetadata`](crate::model::AuditMitigationActionsTaskMetadata).
         pub fn build(self) -> crate::model::AuditMitigationActionsTaskMetadata {
             crate::model::AuditMitigationActionsTaskMetadata {
                 task_id: self.task_id,
@@ -18595,7 +19113,7 @@ pub mod audit_mitigation_actions_task_metadata {
     }
 }
 impl AuditMitigationActionsTaskMetadata {
-    /// Creates a new builder-style object to manufacture [`AuditMitigationActionsTaskMetadata`](crate::model::AuditMitigationActionsTaskMetadata)
+    /// Creates a new builder-style object to manufacture [`AuditMitigationActionsTaskMetadata`](crate::model::AuditMitigationActionsTaskMetadata).
     pub fn builder() -> crate::model::audit_mitigation_actions_task_metadata::Builder {
         crate::model::audit_mitigation_actions_task_metadata::Builder::default()
     }
@@ -18669,22 +19187,31 @@ impl AsRef<str> for AuditMitigationActionsTaskStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuditMitigationActionExecutionMetadata {
     /// <p>The unique identifier for the task that applies the mitigation action.</p>
+    #[doc(hidden)]
     pub task_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the findings to which the task and associated mitigation action are applied.</p>
+    #[doc(hidden)]
     pub finding_id: std::option::Option<std::string::String>,
     /// <p>The friendly name of the mitigation action being applied by the task.</p>
+    #[doc(hidden)]
     pub action_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the mitigation action being applied by the task.</p>
+    #[doc(hidden)]
     pub action_id: std::option::Option<std::string::String>,
     /// <p>The current status of the task being executed.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AuditMitigationActionsExecutionStatus>,
     /// <p>The date and time when the task was started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the task was completed or canceled. Blank if the task is still running.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If an error occurred, the code that indicates which type of error occurred.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>If an error occurred, a message that describes the error.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl AuditMitigationActionExecutionMetadata {
@@ -18742,11 +19269,10 @@ impl std::fmt::Debug for AuditMitigationActionExecutionMetadata {
         formatter.finish()
     }
 }
-/// See [`AuditMitigationActionExecutionMetadata`](crate::model::AuditMitigationActionExecutionMetadata)
+/// See [`AuditMitigationActionExecutionMetadata`](crate::model::AuditMitigationActionExecutionMetadata).
 pub mod audit_mitigation_action_execution_metadata {
 
-    /// A builder for [`AuditMitigationActionExecutionMetadata`](crate::model::AuditMitigationActionExecutionMetadata)
-    #[non_exhaustive]
+    /// A builder for [`AuditMitigationActionExecutionMetadata`](crate::model::AuditMitigationActionExecutionMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_id: std::option::Option<std::string::String>,
@@ -18862,7 +19388,7 @@ pub mod audit_mitigation_action_execution_metadata {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuditMitigationActionExecutionMetadata`](crate::model::AuditMitigationActionExecutionMetadata)
+        /// Consumes the builder and constructs a [`AuditMitigationActionExecutionMetadata`](crate::model::AuditMitigationActionExecutionMetadata).
         pub fn build(self) -> crate::model::AuditMitigationActionExecutionMetadata {
             crate::model::AuditMitigationActionExecutionMetadata {
                 task_id: self.task_id,
@@ -18879,7 +19405,7 @@ pub mod audit_mitigation_action_execution_metadata {
     }
 }
 impl AuditMitigationActionExecutionMetadata {
-    /// Creates a new builder-style object to manufacture [`AuditMitigationActionExecutionMetadata`](crate::model::AuditMitigationActionExecutionMetadata)
+    /// Creates a new builder-style object to manufacture [`AuditMitigationActionExecutionMetadata`](crate::model::AuditMitigationActionExecutionMetadata).
     pub fn builder() -> crate::model::audit_mitigation_action_execution_metadata::Builder {
         crate::model::audit_mitigation_action_execution_metadata::Builder::default()
     }
@@ -18968,26 +19494,37 @@ impl AsRef<str> for AuditMitigationActionsExecutionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuditFinding {
     /// <p>A unique identifier for this set of audit findings. This identifier is used to apply mitigation tasks to one or more sets of findings.</p>
+    #[doc(hidden)]
     pub finding_id: std::option::Option<std::string::String>,
     /// <p>The ID of the audit that generated this result (finding).</p>
+    #[doc(hidden)]
     pub task_id: std::option::Option<std::string::String>,
     /// <p>The audit check that generated this result.</p>
+    #[doc(hidden)]
     pub check_name: std::option::Option<std::string::String>,
     /// <p>The time the audit started.</p>
+    #[doc(hidden)]
     pub task_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time the result (finding) was discovered.</p>
+    #[doc(hidden)]
     pub finding_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The severity of the result (finding).</p>
+    #[doc(hidden)]
     pub severity: std::option::Option<crate::model::AuditFindingSeverity>,
     /// <p>The resource that was found to be noncompliant with the audit check.</p>
+    #[doc(hidden)]
     pub non_compliant_resource: std::option::Option<crate::model::NonCompliantResource>,
     /// <p>The list of related resources.</p>
+    #[doc(hidden)]
     pub related_resources: std::option::Option<std::vec::Vec<crate::model::RelatedResource>>,
     /// <p>The reason the resource was noncompliant.</p>
+    #[doc(hidden)]
     pub reason_for_non_compliance: std::option::Option<std::string::String>,
     /// <p>A code that indicates the reason that the resource was noncompliant.</p>
+    #[doc(hidden)]
     pub reason_for_non_compliance_code: std::option::Option<std::string::String>,
     /// <p> Indicates whether the audit finding was suppressed or not during reporting. </p>
+    #[doc(hidden)]
     pub is_suppressed: std::option::Option<bool>,
 }
 impl AuditFinding {
@@ -19058,11 +19595,10 @@ impl std::fmt::Debug for AuditFinding {
         formatter.finish()
     }
 }
-/// See [`AuditFinding`](crate::model::AuditFinding)
+/// See [`AuditFinding`](crate::model::AuditFinding).
 pub mod audit_finding {
 
-    /// A builder for [`AuditFinding`](crate::model::AuditFinding)
-    #[non_exhaustive]
+    /// A builder for [`AuditFinding`](crate::model::AuditFinding).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) finding_id: std::option::Option<std::string::String>,
@@ -19219,7 +19755,7 @@ pub mod audit_finding {
             self.is_suppressed = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuditFinding`](crate::model::AuditFinding)
+        /// Consumes the builder and constructs a [`AuditFinding`](crate::model::AuditFinding).
         pub fn build(self) -> crate::model::AuditFinding {
             crate::model::AuditFinding {
                 finding_id: self.finding_id,
@@ -19238,7 +19774,7 @@ pub mod audit_finding {
     }
 }
 impl AuditFinding {
-    /// Creates a new builder-style object to manufacture [`AuditFinding`](crate::model::AuditFinding)
+    /// Creates a new builder-style object to manufacture [`AuditFinding`](crate::model::AuditFinding).
     pub fn builder() -> crate::model::audit_finding::Builder {
         crate::model::audit_finding::Builder::default()
     }
@@ -19249,10 +19785,13 @@ impl AuditFinding {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RelatedResource {
     /// <p>The type of resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>Information that identifies the resource.</p>
+    #[doc(hidden)]
     pub resource_identifier: std::option::Option<crate::model::ResourceIdentifier>,
     /// <p>Other information about the resource.</p>
+    #[doc(hidden)]
     pub additional_info:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -19282,11 +19821,10 @@ impl std::fmt::Debug for RelatedResource {
         formatter.finish()
     }
 }
-/// See [`RelatedResource`](crate::model::RelatedResource)
+/// See [`RelatedResource`](crate::model::RelatedResource).
 pub mod related_resource {
 
-    /// A builder for [`RelatedResource`](crate::model::RelatedResource)
-    #[non_exhaustive]
+    /// A builder for [`RelatedResource`](crate::model::RelatedResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<crate::model::ResourceType>,
@@ -19347,7 +19885,7 @@ pub mod related_resource {
             self.additional_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`RelatedResource`](crate::model::RelatedResource)
+        /// Consumes the builder and constructs a [`RelatedResource`](crate::model::RelatedResource).
         pub fn build(self) -> crate::model::RelatedResource {
             crate::model::RelatedResource {
                 resource_type: self.resource_type,
@@ -19358,7 +19896,7 @@ pub mod related_resource {
     }
 }
 impl RelatedResource {
-    /// Creates a new builder-style object to manufacture [`RelatedResource`](crate::model::RelatedResource)
+    /// Creates a new builder-style object to manufacture [`RelatedResource`](crate::model::RelatedResource).
     pub fn builder() -> crate::model::related_resource::Builder {
         crate::model::related_resource::Builder::default()
     }
@@ -19457,10 +19995,13 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NonCompliantResource {
     /// <p>The type of the noncompliant resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>Information that identifies the noncompliant resource.</p>
+    #[doc(hidden)]
     pub resource_identifier: std::option::Option<crate::model::ResourceIdentifier>,
     /// <p>Other information about the noncompliant resource.</p>
+    #[doc(hidden)]
     pub additional_info:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -19490,11 +20031,10 @@ impl std::fmt::Debug for NonCompliantResource {
         formatter.finish()
     }
 }
-/// See [`NonCompliantResource`](crate::model::NonCompliantResource)
+/// See [`NonCompliantResource`](crate::model::NonCompliantResource).
 pub mod non_compliant_resource {
 
-    /// A builder for [`NonCompliantResource`](crate::model::NonCompliantResource)
-    #[non_exhaustive]
+    /// A builder for [`NonCompliantResource`](crate::model::NonCompliantResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<crate::model::ResourceType>,
@@ -19555,7 +20095,7 @@ pub mod non_compliant_resource {
             self.additional_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`NonCompliantResource`](crate::model::NonCompliantResource)
+        /// Consumes the builder and constructs a [`NonCompliantResource`](crate::model::NonCompliantResource).
         pub fn build(self) -> crate::model::NonCompliantResource {
             crate::model::NonCompliantResource {
                 resource_type: self.resource_type,
@@ -19566,7 +20106,7 @@ pub mod non_compliant_resource {
     }
 }
 impl NonCompliantResource {
-    /// Creates a new builder-style object to manufacture [`NonCompliantResource`](crate::model::NonCompliantResource)
+    /// Creates a new builder-style object to manufacture [`NonCompliantResource`](crate::model::NonCompliantResource).
     pub fn builder() -> crate::model::non_compliant_resource::Builder {
         crate::model::non_compliant_resource::Builder::default()
     }
@@ -19640,25 +20180,35 @@ impl AsRef<str> for AuditFindingSeverity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActiveViolation {
     /// <p>The ID of the active violation.</p>
+    #[doc(hidden)]
     pub violation_id: std::option::Option<std::string::String>,
     /// <p>The name of the thing responsible for the active violation.</p>
+    #[doc(hidden)]
     pub thing_name: std::option::Option<std::string::String>,
     /// <p>The security profile with the behavior is in violation.</p>
+    #[doc(hidden)]
     pub security_profile_name: std::option::Option<std::string::String>,
     /// <p>The behavior that is being violated.</p>
+    #[doc(hidden)]
     pub behavior: std::option::Option<crate::model::Behavior>,
     /// <p>The value of the metric (the measurement) that caused the most recent violation.</p>
+    #[doc(hidden)]
     pub last_violation_value: std::option::Option<crate::model::MetricValue>,
     /// <p> The details of a violation event. </p>
+    #[doc(hidden)]
     pub violation_event_additional_info:
         std::option::Option<crate::model::ViolationEventAdditionalInfo>,
     /// <p>The verification state of the violation (detect alarm).</p>
+    #[doc(hidden)]
     pub verification_state: std::option::Option<crate::model::VerificationState>,
     /// <p>The description of the verification state of the violation.</p>
+    #[doc(hidden)]
     pub verification_state_description: std::option::Option<std::string::String>,
     /// <p>The time the most recent violation occurred.</p>
+    #[doc(hidden)]
     pub last_violation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time the violation started.</p>
+    #[doc(hidden)]
     pub violation_start_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ActiveViolation {
@@ -19727,11 +20277,10 @@ impl std::fmt::Debug for ActiveViolation {
         formatter.finish()
     }
 }
-/// See [`ActiveViolation`](crate::model::ActiveViolation)
+/// See [`ActiveViolation`](crate::model::ActiveViolation).
 pub mod active_violation {
 
-    /// A builder for [`ActiveViolation`](crate::model::ActiveViolation)
-    #[non_exhaustive]
+    /// A builder for [`ActiveViolation`](crate::model::ActiveViolation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) violation_id: std::option::Option<std::string::String>,
@@ -19874,7 +20423,7 @@ pub mod active_violation {
             self.violation_start_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActiveViolation`](crate::model::ActiveViolation)
+        /// Consumes the builder and constructs a [`ActiveViolation`](crate::model::ActiveViolation).
         pub fn build(self) -> crate::model::ActiveViolation {
             crate::model::ActiveViolation {
                 violation_id: self.violation_id,
@@ -19892,7 +20441,7 @@ pub mod active_violation {
     }
 }
 impl ActiveViolation {
-    /// Creates a new builder-style object to manufacture [`ActiveViolation`](crate::model::ActiveViolation)
+    /// Creates a new builder-style object to manufacture [`ActiveViolation`](crate::model::ActiveViolation).
     pub fn builder() -> crate::model::active_violation::Builder {
         crate::model::active_violation::Builder::default()
     }
@@ -19903,6 +20452,7 @@ impl ActiveViolation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TopicRuleDestination {
     /// <p>The topic rule destination URL.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The status of the topic rule destination. Valid values are:</p>
     /// <dl>
@@ -19931,16 +20481,22 @@ pub struct TopicRuleDestination {
     /// <p>Confirmation could not be completed, for example if the confirmation timed out. You can call <code>GetTopicRuleDestination</code> for details about the error. You can set <code>status</code> to <code>IN_PROGRESS</code> by calling <code>UpdateTopicRuleDestination</code>. Calling <code>UpdateTopicRuleDestination</code> causes a new confirmation challenge to be sent to your confirmation endpoint.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TopicRuleDestinationStatus>,
     /// <p>The date and time when the topic rule destination was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the topic rule destination was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Additional details or reason why the topic rule destination is in the current status.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>Properties of the HTTP URL.</p>
+    #[doc(hidden)]
     pub http_url_properties: std::option::Option<crate::model::HttpUrlDestinationProperties>,
     /// <p>Properties of the virtual private cloud (VPC) connection.</p>
+    #[doc(hidden)]
     pub vpc_properties: std::option::Option<crate::model::VpcDestinationProperties>,
 }
 impl TopicRuleDestination {
@@ -20014,11 +20570,10 @@ impl std::fmt::Debug for TopicRuleDestination {
         formatter.finish()
     }
 }
-/// See [`TopicRuleDestination`](crate::model::TopicRuleDestination)
+/// See [`TopicRuleDestination`](crate::model::TopicRuleDestination).
 pub mod topic_rule_destination {
 
-    /// A builder for [`TopicRuleDestination`](crate::model::TopicRuleDestination)
-    #[non_exhaustive]
+    /// A builder for [`TopicRuleDestination`](crate::model::TopicRuleDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -20174,7 +20729,7 @@ pub mod topic_rule_destination {
             self.vpc_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`TopicRuleDestination`](crate::model::TopicRuleDestination)
+        /// Consumes the builder and constructs a [`TopicRuleDestination`](crate::model::TopicRuleDestination).
         pub fn build(self) -> crate::model::TopicRuleDestination {
             crate::model::TopicRuleDestination {
                 arn: self.arn,
@@ -20189,7 +20744,7 @@ pub mod topic_rule_destination {
     }
 }
 impl TopicRuleDestination {
-    /// Creates a new builder-style object to manufacture [`TopicRuleDestination`](crate::model::TopicRuleDestination)
+    /// Creates a new builder-style object to manufacture [`TopicRuleDestination`](crate::model::TopicRuleDestination).
     pub fn builder() -> crate::model::topic_rule_destination::Builder {
         crate::model::topic_rule_destination::Builder::default()
     }
@@ -20200,12 +20755,16 @@ impl TopicRuleDestination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcDestinationProperties {
     /// <p>The subnet IDs of the VPC destination.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The security groups of the VPC destination.</p>
+    #[doc(hidden)]
     pub security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ID of the VPC.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>The ARN of a role that has permission to create and attach to elastic network interfaces (ENIs).</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl VpcDestinationProperties {
@@ -20236,11 +20795,10 @@ impl std::fmt::Debug for VpcDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`VpcDestinationProperties`](crate::model::VpcDestinationProperties)
+/// See [`VpcDestinationProperties`](crate::model::VpcDestinationProperties).
 pub mod vpc_destination_properties {
 
-    /// A builder for [`VpcDestinationProperties`](crate::model::VpcDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`VpcDestinationProperties`](crate::model::VpcDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -20307,7 +20865,7 @@ pub mod vpc_destination_properties {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcDestinationProperties`](crate::model::VpcDestinationProperties)
+        /// Consumes the builder and constructs a [`VpcDestinationProperties`](crate::model::VpcDestinationProperties).
         pub fn build(self) -> crate::model::VpcDestinationProperties {
             crate::model::VpcDestinationProperties {
                 subnet_ids: self.subnet_ids,
@@ -20319,7 +20877,7 @@ pub mod vpc_destination_properties {
     }
 }
 impl VpcDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`VpcDestinationProperties`](crate::model::VpcDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`VpcDestinationProperties`](crate::model::VpcDestinationProperties).
     pub fn builder() -> crate::model::vpc_destination_properties::Builder {
         crate::model::vpc_destination_properties::Builder::default()
     }
@@ -20330,6 +20888,7 @@ impl VpcDestinationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpUrlDestinationProperties {
     /// <p>The URL used to confirm the HTTP topic rule destination URL.</p>
+    #[doc(hidden)]
     pub confirmation_url: std::option::Option<std::string::String>,
 }
 impl HttpUrlDestinationProperties {
@@ -20345,11 +20904,10 @@ impl std::fmt::Debug for HttpUrlDestinationProperties {
         formatter.finish()
     }
 }
-/// See [`HttpUrlDestinationProperties`](crate::model::HttpUrlDestinationProperties)
+/// See [`HttpUrlDestinationProperties`](crate::model::HttpUrlDestinationProperties).
 pub mod http_url_destination_properties {
 
-    /// A builder for [`HttpUrlDestinationProperties`](crate::model::HttpUrlDestinationProperties)
-    #[non_exhaustive]
+    /// A builder for [`HttpUrlDestinationProperties`](crate::model::HttpUrlDestinationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) confirmation_url: std::option::Option<std::string::String>,
@@ -20368,7 +20926,7 @@ pub mod http_url_destination_properties {
             self.confirmation_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpUrlDestinationProperties`](crate::model::HttpUrlDestinationProperties)
+        /// Consumes the builder and constructs a [`HttpUrlDestinationProperties`](crate::model::HttpUrlDestinationProperties).
         pub fn build(self) -> crate::model::HttpUrlDestinationProperties {
             crate::model::HttpUrlDestinationProperties {
                 confirmation_url: self.confirmation_url,
@@ -20377,7 +20935,7 @@ pub mod http_url_destination_properties {
     }
 }
 impl HttpUrlDestinationProperties {
-    /// Creates a new builder-style object to manufacture [`HttpUrlDestinationProperties`](crate::model::HttpUrlDestinationProperties)
+    /// Creates a new builder-style object to manufacture [`HttpUrlDestinationProperties`](crate::model::HttpUrlDestinationProperties).
     pub fn builder() -> crate::model::http_url_destination_properties::Builder {
         crate::model::http_url_destination_properties::Builder::default()
     }
@@ -20388,20 +20946,28 @@ impl HttpUrlDestinationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TopicRule {
     /// <p>The name of the rule.</p>
+    #[doc(hidden)]
     pub rule_name: std::option::Option<std::string::String>,
     /// <p>The SQL statement used to query the topic. When using a SQL query with multiple lines, be sure to escape the newline characters.</p>
+    #[doc(hidden)]
     pub sql: std::option::Option<std::string::String>,
     /// <p>The description of the rule.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date and time the rule was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The actions associated with the rule.</p>
+    #[doc(hidden)]
     pub actions: std::option::Option<std::vec::Vec<crate::model::Action>>,
     /// <p>Specifies whether the rule is disabled.</p>
+    #[doc(hidden)]
     pub rule_disabled: std::option::Option<bool>,
     /// <p>The version of the SQL rules engine to use when evaluating the rule.</p>
+    #[doc(hidden)]
     pub aws_iot_sql_version: std::option::Option<std::string::String>,
     /// <p>The action to perform when an error occurs.</p>
+    #[doc(hidden)]
     pub error_action: std::option::Option<crate::model::Action>,
 }
 impl TopicRule {
@@ -20452,11 +21018,10 @@ impl std::fmt::Debug for TopicRule {
         formatter.finish()
     }
 }
-/// See [`TopicRule`](crate::model::TopicRule)
+/// See [`TopicRule`](crate::model::TopicRule).
 pub mod topic_rule {
 
-    /// A builder for [`TopicRule`](crate::model::TopicRule)
-    #[non_exhaustive]
+    /// A builder for [`TopicRule`](crate::model::TopicRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_name: std::option::Option<std::string::String>,
@@ -20567,7 +21132,7 @@ pub mod topic_rule {
             self.error_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`TopicRule`](crate::model::TopicRule)
+        /// Consumes the builder and constructs a [`TopicRule`](crate::model::TopicRule).
         pub fn build(self) -> crate::model::TopicRule {
             crate::model::TopicRule {
                 rule_name: self.rule_name,
@@ -20583,7 +21148,7 @@ pub mod topic_rule {
     }
 }
 impl TopicRule {
-    /// Creates a new builder-style object to manufacture [`TopicRule`](crate::model::TopicRule)
+    /// Creates a new builder-style object to manufacture [`TopicRule`](crate::model::TopicRule).
     pub fn builder() -> crate::model::topic_rule::Builder {
         crate::model::topic_rule::Builder::default()
     }
@@ -20594,20 +21159,28 @@ impl TopicRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Statistics {
     /// <p>The count of things that match the query string criteria and contain a valid aggregation field value.</p>
+    #[doc(hidden)]
     pub count: i32,
     /// <p>The average of the aggregated field values.</p>
+    #[doc(hidden)]
     pub average: std::option::Option<f64>,
     /// <p>The sum of the aggregated field values.</p>
+    #[doc(hidden)]
     pub sum: std::option::Option<f64>,
     /// <p>The minimum aggregated field value.</p>
+    #[doc(hidden)]
     pub minimum: std::option::Option<f64>,
     /// <p>The maximum aggregated field value.</p>
+    #[doc(hidden)]
     pub maximum: std::option::Option<f64>,
     /// <p>The sum of the squares of the aggregated field values.</p>
+    #[doc(hidden)]
     pub sum_of_squares: std::option::Option<f64>,
     /// <p>The variance of the aggregated field values.</p>
+    #[doc(hidden)]
     pub variance: std::option::Option<f64>,
     /// <p>The standard deviation of the aggregated field values.</p>
+    #[doc(hidden)]
     pub std_deviation: std::option::Option<f64>,
 }
 impl Statistics {
@@ -20658,11 +21231,10 @@ impl std::fmt::Debug for Statistics {
         formatter.finish()
     }
 }
-/// See [`Statistics`](crate::model::Statistics)
+/// See [`Statistics`](crate::model::Statistics).
 pub mod statistics {
 
-    /// A builder for [`Statistics`](crate::model::Statistics)
-    #[non_exhaustive]
+    /// A builder for [`Statistics`](crate::model::Statistics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) count: std::option::Option<i32>,
@@ -20755,7 +21327,7 @@ pub mod statistics {
             self.std_deviation = input;
             self
         }
-        /// Consumes the builder and constructs a [`Statistics`](crate::model::Statistics)
+        /// Consumes the builder and constructs a [`Statistics`](crate::model::Statistics).
         pub fn build(self) -> crate::model::Statistics {
             crate::model::Statistics {
                 count: self.count.unwrap_or_default(),
@@ -20771,7 +21343,7 @@ pub mod statistics {
     }
 }
 impl Statistics {
-    /// Creates a new builder-style object to manufacture [`Statistics`](crate::model::Statistics)
+    /// Creates a new builder-style object to manufacture [`Statistics`](crate::model::Statistics).
     pub fn builder() -> crate::model::statistics::Builder {
         crate::model::statistics::Builder::default()
     }
@@ -20782,8 +21354,10 @@ impl Statistics {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PercentPair {
     /// <p>The percentile.</p>
+    #[doc(hidden)]
     pub percent: f64,
     /// <p>The value of the percentile.</p>
+    #[doc(hidden)]
     pub value: f64,
 }
 impl PercentPair {
@@ -20804,11 +21378,10 @@ impl std::fmt::Debug for PercentPair {
         formatter.finish()
     }
 }
-/// See [`PercentPair`](crate::model::PercentPair)
+/// See [`PercentPair`](crate::model::PercentPair).
 pub mod percent_pair {
 
-    /// A builder for [`PercentPair`](crate::model::PercentPair)
-    #[non_exhaustive]
+    /// A builder for [`PercentPair`](crate::model::PercentPair).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) percent: std::option::Option<f64>,
@@ -20835,7 +21408,7 @@ pub mod percent_pair {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`PercentPair`](crate::model::PercentPair)
+        /// Consumes the builder and constructs a [`PercentPair`](crate::model::PercentPair).
         pub fn build(self) -> crate::model::PercentPair {
             crate::model::PercentPair {
                 percent: self.percent.unwrap_or_default(),
@@ -20845,7 +21418,7 @@ pub mod percent_pair {
     }
 }
 impl PercentPair {
-    /// Creates a new builder-style object to manufacture [`PercentPair`](crate::model::PercentPair)
+    /// Creates a new builder-style object to manufacture [`PercentPair`](crate::model::PercentPair).
     pub fn builder() -> crate::model::percent_pair::Builder {
         crate::model::percent_pair::Builder::default()
     }
@@ -20856,37 +21429,53 @@ impl PercentPair {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OtaUpdateInfo {
     /// <p>The OTA update ID.</p>
+    #[doc(hidden)]
     pub ota_update_id: std::option::Option<std::string::String>,
     /// <p>The OTA update ARN.</p>
+    #[doc(hidden)]
     pub ota_update_arn: std::option::Option<std::string::String>,
     /// <p>The date when the OTA update was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date when the OTA update was last updated.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A description of the OTA update.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The targets of the OTA update.</p>
+    #[doc(hidden)]
     pub targets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The protocol used to transfer the OTA update image. Valid values are [HTTP], [MQTT], [HTTP, MQTT]. When both HTTP and MQTT are specified, the target device can choose the protocol.</p>
+    #[doc(hidden)]
     pub protocols: std::option::Option<std::vec::Vec<crate::model::Protocol>>,
     /// <p>Configuration for the rollout of OTA updates.</p>
+    #[doc(hidden)]
     pub aws_job_executions_rollout_config:
         std::option::Option<crate::model::AwsJobExecutionsRolloutConfig>,
     /// <p>Configuration information for pre-signed URLs. Valid when <code>protocols</code> contains HTTP.</p>
+    #[doc(hidden)]
     pub aws_job_presigned_url_config: std::option::Option<crate::model::AwsJobPresignedUrlConfig>,
     /// <p>Specifies whether the OTA update will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the OTA update (SNAPSHOT). If continuous, the OTA update may also be run on a thing when a change is detected in a target. For example, an OTA update will run on a thing when the thing is added to a target group, even after the OTA update was completed by all things originally in the group. </p>
+    #[doc(hidden)]
     pub target_selection: std::option::Option<crate::model::TargetSelection>,
     /// <p>A list of files associated with the OTA update.</p>
+    #[doc(hidden)]
     pub ota_update_files: std::option::Option<std::vec::Vec<crate::model::OtaUpdateFile>>,
     /// <p>The status of the OTA update.</p>
+    #[doc(hidden)]
     pub ota_update_status: std::option::Option<crate::model::OtaUpdateStatus>,
     /// <p>The IoT job ID associated with the OTA update.</p>
+    #[doc(hidden)]
     pub aws_iot_job_id: std::option::Option<std::string::String>,
     /// <p>The IoT job ARN associated with the OTA update.</p>
+    #[doc(hidden)]
     pub aws_iot_job_arn: std::option::Option<std::string::String>,
     /// <p>Error information associated with the OTA update.</p>
+    #[doc(hidden)]
     pub error_info: std::option::Option<crate::model::ErrorInfo>,
     /// <p>A collection of name/value pairs</p>
+    #[doc(hidden)]
     pub additional_parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -20991,11 +21580,10 @@ impl std::fmt::Debug for OtaUpdateInfo {
         formatter.finish()
     }
 }
-/// See [`OtaUpdateInfo`](crate::model::OtaUpdateInfo)
+/// See [`OtaUpdateInfo`](crate::model::OtaUpdateInfo).
 pub mod ota_update_info {
 
-    /// A builder for [`OtaUpdateInfo`](crate::model::OtaUpdateInfo)
-    #[non_exhaustive]
+    /// A builder for [`OtaUpdateInfo`](crate::model::OtaUpdateInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ota_update_id: std::option::Option<std::string::String>,
@@ -21262,7 +21850,7 @@ pub mod ota_update_info {
             self.additional_parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`OtaUpdateInfo`](crate::model::OtaUpdateInfo)
+        /// Consumes the builder and constructs a [`OtaUpdateInfo`](crate::model::OtaUpdateInfo).
         pub fn build(self) -> crate::model::OtaUpdateInfo {
             crate::model::OtaUpdateInfo {
                 ota_update_id: self.ota_update_id,
@@ -21286,7 +21874,7 @@ pub mod ota_update_info {
     }
 }
 impl OtaUpdateInfo {
-    /// Creates a new builder-style object to manufacture [`OtaUpdateInfo`](crate::model::OtaUpdateInfo)
+    /// Creates a new builder-style object to manufacture [`OtaUpdateInfo`](crate::model::OtaUpdateInfo).
     pub fn builder() -> crate::model::ota_update_info::Builder {
         crate::model::ota_update_info::Builder::default()
     }
@@ -21297,8 +21885,10 @@ impl OtaUpdateInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ErrorInfo {
     /// <p>The error code.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>The error message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ErrorInfo {
@@ -21319,11 +21909,10 @@ impl std::fmt::Debug for ErrorInfo {
         formatter.finish()
     }
 }
-/// See [`ErrorInfo`](crate::model::ErrorInfo)
+/// See [`ErrorInfo`](crate::model::ErrorInfo).
 pub mod error_info {
 
-    /// A builder for [`ErrorInfo`](crate::model::ErrorInfo)
-    #[non_exhaustive]
+    /// A builder for [`ErrorInfo`](crate::model::ErrorInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<std::string::String>,
@@ -21350,7 +21939,7 @@ pub mod error_info {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ErrorInfo`](crate::model::ErrorInfo)
+        /// Consumes the builder and constructs a [`ErrorInfo`](crate::model::ErrorInfo).
         pub fn build(self) -> crate::model::ErrorInfo {
             crate::model::ErrorInfo {
                 code: self.code,
@@ -21360,7 +21949,7 @@ pub mod error_info {
     }
 }
 impl ErrorInfo {
-    /// Creates a new builder-style object to manufacture [`ErrorInfo`](crate::model::ErrorInfo)
+    /// Creates a new builder-style object to manufacture [`ErrorInfo`](crate::model::ErrorInfo).
     pub fn builder() -> crate::model::error_info::Builder {
         crate::model::error_info::Builder::default()
     }
@@ -21371,16 +21960,22 @@ impl ErrorInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OtaUpdateFile {
     /// <p>The name of the file.</p>
+    #[doc(hidden)]
     pub file_name: std::option::Option<std::string::String>,
     /// <p>An integer value you can include in the job document to allow your devices to identify the type of file received from the cloud.</p>
+    #[doc(hidden)]
     pub file_type: std::option::Option<i32>,
     /// <p>The file version.</p>
+    #[doc(hidden)]
     pub file_version: std::option::Option<std::string::String>,
     /// <p>The location of the updated firmware.</p>
+    #[doc(hidden)]
     pub file_location: std::option::Option<crate::model::FileLocation>,
     /// <p>The code signing method of the file.</p>
+    #[doc(hidden)]
     pub code_signing: std::option::Option<crate::model::CodeSigning>,
     /// <p>A list of name/attribute pairs.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -21425,11 +22020,10 @@ impl std::fmt::Debug for OtaUpdateFile {
         formatter.finish()
     }
 }
-/// See [`OtaUpdateFile`](crate::model::OtaUpdateFile)
+/// See [`OtaUpdateFile`](crate::model::OtaUpdateFile).
 pub mod ota_update_file {
 
-    /// A builder for [`OtaUpdateFile`](crate::model::OtaUpdateFile)
-    #[non_exhaustive]
+    /// A builder for [`OtaUpdateFile`](crate::model::OtaUpdateFile).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_name: std::option::Option<std::string::String>,
@@ -21523,7 +22117,7 @@ pub mod ota_update_file {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`OtaUpdateFile`](crate::model::OtaUpdateFile)
+        /// Consumes the builder and constructs a [`OtaUpdateFile`](crate::model::OtaUpdateFile).
         pub fn build(self) -> crate::model::OtaUpdateFile {
             crate::model::OtaUpdateFile {
                 file_name: self.file_name,
@@ -21537,7 +22131,7 @@ pub mod ota_update_file {
     }
 }
 impl OtaUpdateFile {
-    /// Creates a new builder-style object to manufacture [`OtaUpdateFile`](crate::model::OtaUpdateFile)
+    /// Creates a new builder-style object to manufacture [`OtaUpdateFile`](crate::model::OtaUpdateFile).
     pub fn builder() -> crate::model::ota_update_file::Builder {
         crate::model::ota_update_file::Builder::default()
     }
@@ -21548,10 +22142,13 @@ impl OtaUpdateFile {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeSigning {
     /// <p>The ID of the <code>AWSSignerJob</code> which was created to sign the file.</p>
+    #[doc(hidden)]
     pub aws_signer_job_id: std::option::Option<std::string::String>,
     /// <p>Describes the code-signing job.</p>
+    #[doc(hidden)]
     pub start_signing_job_parameter: std::option::Option<crate::model::StartSigningJobParameter>,
     /// <p>A custom method for code signing a file.</p>
+    #[doc(hidden)]
     pub custom_code_signing: std::option::Option<crate::model::CustomCodeSigning>,
 }
 impl CodeSigning {
@@ -21582,11 +22179,10 @@ impl std::fmt::Debug for CodeSigning {
         formatter.finish()
     }
 }
-/// See [`CodeSigning`](crate::model::CodeSigning)
+/// See [`CodeSigning`](crate::model::CodeSigning).
 pub mod code_signing {
 
-    /// A builder for [`CodeSigning`](crate::model::CodeSigning)
-    #[non_exhaustive]
+    /// A builder for [`CodeSigning`](crate::model::CodeSigning).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aws_signer_job_id: std::option::Option<std::string::String>,
@@ -21637,7 +22233,7 @@ pub mod code_signing {
             self.custom_code_signing = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeSigning`](crate::model::CodeSigning)
+        /// Consumes the builder and constructs a [`CodeSigning`](crate::model::CodeSigning).
         pub fn build(self) -> crate::model::CodeSigning {
             crate::model::CodeSigning {
                 aws_signer_job_id: self.aws_signer_job_id,
@@ -21648,7 +22244,7 @@ pub mod code_signing {
     }
 }
 impl CodeSigning {
-    /// Creates a new builder-style object to manufacture [`CodeSigning`](crate::model::CodeSigning)
+    /// Creates a new builder-style object to manufacture [`CodeSigning`](crate::model::CodeSigning).
     pub fn builder() -> crate::model::code_signing::Builder {
         crate::model::code_signing::Builder::default()
     }
@@ -21659,12 +22255,16 @@ impl CodeSigning {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomCodeSigning {
     /// <p>The signature for the file.</p>
+    #[doc(hidden)]
     pub signature: std::option::Option<crate::model::CodeSigningSignature>,
     /// <p>The certificate chain.</p>
+    #[doc(hidden)]
     pub certificate_chain: std::option::Option<crate::model::CodeSigningCertificateChain>,
     /// <p>The hash algorithm used to code sign the file. You can use a string as the algorithm name if the target over-the-air (OTA) update devices are able to verify the signature that was generated using the same signature algorithm. For example, FreeRTOS uses <code>SHA256</code> or <code>SHA1</code>, so you can pass either of them based on which was used for generating the signature.</p>
+    #[doc(hidden)]
     pub hash_algorithm: std::option::Option<std::string::String>,
     /// <p>The signature algorithm used to code sign the file. You can use a string as the algorithm name if the target over-the-air (OTA) update devices are able to verify the signature that was generated using the same signature algorithm. For example, FreeRTOS uses <code>ECDSA</code> or <code>RSA</code>, so you can pass either of them based on which was used for generating the signature.</p>
+    #[doc(hidden)]
     pub signature_algorithm: std::option::Option<std::string::String>,
 }
 impl CustomCodeSigning {
@@ -21697,11 +22297,10 @@ impl std::fmt::Debug for CustomCodeSigning {
         formatter.finish()
     }
 }
-/// See [`CustomCodeSigning`](crate::model::CustomCodeSigning)
+/// See [`CustomCodeSigning`](crate::model::CustomCodeSigning).
 pub mod custom_code_signing {
 
-    /// A builder for [`CustomCodeSigning`](crate::model::CustomCodeSigning)
-    #[non_exhaustive]
+    /// A builder for [`CustomCodeSigning`](crate::model::CustomCodeSigning).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) signature: std::option::Option<crate::model::CodeSigningSignature>,
@@ -21766,7 +22365,7 @@ pub mod custom_code_signing {
             self.signature_algorithm = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomCodeSigning`](crate::model::CustomCodeSigning)
+        /// Consumes the builder and constructs a [`CustomCodeSigning`](crate::model::CustomCodeSigning).
         pub fn build(self) -> crate::model::CustomCodeSigning {
             crate::model::CustomCodeSigning {
                 signature: self.signature,
@@ -21778,7 +22377,7 @@ pub mod custom_code_signing {
     }
 }
 impl CustomCodeSigning {
-    /// Creates a new builder-style object to manufacture [`CustomCodeSigning`](crate::model::CustomCodeSigning)
+    /// Creates a new builder-style object to manufacture [`CustomCodeSigning`](crate::model::CustomCodeSigning).
     pub fn builder() -> crate::model::custom_code_signing::Builder {
         crate::model::custom_code_signing::Builder::default()
     }
@@ -21789,8 +22388,10 @@ impl CustomCodeSigning {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeSigningCertificateChain {
     /// <p>The name of the certificate.</p>
+    #[doc(hidden)]
     pub certificate_name: std::option::Option<std::string::String>,
     /// <p>A base64 encoded binary representation of the code signing certificate chain.</p>
+    #[doc(hidden)]
     pub inline_document: std::option::Option<std::string::String>,
 }
 impl CodeSigningCertificateChain {
@@ -21811,11 +22412,10 @@ impl std::fmt::Debug for CodeSigningCertificateChain {
         formatter.finish()
     }
 }
-/// See [`CodeSigningCertificateChain`](crate::model::CodeSigningCertificateChain)
+/// See [`CodeSigningCertificateChain`](crate::model::CodeSigningCertificateChain).
 pub mod code_signing_certificate_chain {
 
-    /// A builder for [`CodeSigningCertificateChain`](crate::model::CodeSigningCertificateChain)
-    #[non_exhaustive]
+    /// A builder for [`CodeSigningCertificateChain`](crate::model::CodeSigningCertificateChain).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_name: std::option::Option<std::string::String>,
@@ -21848,7 +22448,7 @@ pub mod code_signing_certificate_chain {
             self.inline_document = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeSigningCertificateChain`](crate::model::CodeSigningCertificateChain)
+        /// Consumes the builder and constructs a [`CodeSigningCertificateChain`](crate::model::CodeSigningCertificateChain).
         pub fn build(self) -> crate::model::CodeSigningCertificateChain {
             crate::model::CodeSigningCertificateChain {
                 certificate_name: self.certificate_name,
@@ -21858,7 +22458,7 @@ pub mod code_signing_certificate_chain {
     }
 }
 impl CodeSigningCertificateChain {
-    /// Creates a new builder-style object to manufacture [`CodeSigningCertificateChain`](crate::model::CodeSigningCertificateChain)
+    /// Creates a new builder-style object to manufacture [`CodeSigningCertificateChain`](crate::model::CodeSigningCertificateChain).
     pub fn builder() -> crate::model::code_signing_certificate_chain::Builder {
         crate::model::code_signing_certificate_chain::Builder::default()
     }
@@ -21869,6 +22469,7 @@ impl CodeSigningCertificateChain {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeSigningSignature {
     /// <p>A base64 encoded binary representation of the code signing signature.</p>
+    #[doc(hidden)]
     pub inline_document: std::option::Option<aws_smithy_types::Blob>,
 }
 impl CodeSigningSignature {
@@ -21884,11 +22485,10 @@ impl std::fmt::Debug for CodeSigningSignature {
         formatter.finish()
     }
 }
-/// See [`CodeSigningSignature`](crate::model::CodeSigningSignature)
+/// See [`CodeSigningSignature`](crate::model::CodeSigningSignature).
 pub mod code_signing_signature {
 
-    /// A builder for [`CodeSigningSignature`](crate::model::CodeSigningSignature)
-    #[non_exhaustive]
+    /// A builder for [`CodeSigningSignature`](crate::model::CodeSigningSignature).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) inline_document: std::option::Option<aws_smithy_types::Blob>,
@@ -21907,7 +22507,7 @@ pub mod code_signing_signature {
             self.inline_document = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeSigningSignature`](crate::model::CodeSigningSignature)
+        /// Consumes the builder and constructs a [`CodeSigningSignature`](crate::model::CodeSigningSignature).
         pub fn build(self) -> crate::model::CodeSigningSignature {
             crate::model::CodeSigningSignature {
                 inline_document: self.inline_document,
@@ -21916,7 +22516,7 @@ pub mod code_signing_signature {
     }
 }
 impl CodeSigningSignature {
-    /// Creates a new builder-style object to manufacture [`CodeSigningSignature`](crate::model::CodeSigningSignature)
+    /// Creates a new builder-style object to manufacture [`CodeSigningSignature`](crate::model::CodeSigningSignature).
     pub fn builder() -> crate::model::code_signing_signature::Builder {
         crate::model::code_signing_signature::Builder::default()
     }
@@ -21927,10 +22527,13 @@ impl CodeSigningSignature {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartSigningJobParameter {
     /// <p>Describes the code-signing profile.</p>
+    #[doc(hidden)]
     pub signing_profile_parameter: std::option::Option<crate::model::SigningProfileParameter>,
     /// <p>The code-signing profile name.</p>
+    #[doc(hidden)]
     pub signing_profile_name: std::option::Option<std::string::String>,
     /// <p>The location to write the code-signed file.</p>
+    #[doc(hidden)]
     pub destination: std::option::Option<crate::model::Destination>,
 }
 impl StartSigningJobParameter {
@@ -21958,11 +22561,10 @@ impl std::fmt::Debug for StartSigningJobParameter {
         formatter.finish()
     }
 }
-/// See [`StartSigningJobParameter`](crate::model::StartSigningJobParameter)
+/// See [`StartSigningJobParameter`](crate::model::StartSigningJobParameter).
 pub mod start_signing_job_parameter {
 
-    /// A builder for [`StartSigningJobParameter`](crate::model::StartSigningJobParameter)
-    #[non_exhaustive]
+    /// A builder for [`StartSigningJobParameter`](crate::model::StartSigningJobParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) signing_profile_parameter:
@@ -22013,7 +22615,7 @@ pub mod start_signing_job_parameter {
             self.destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartSigningJobParameter`](crate::model::StartSigningJobParameter)
+        /// Consumes the builder and constructs a [`StartSigningJobParameter`](crate::model::StartSigningJobParameter).
         pub fn build(self) -> crate::model::StartSigningJobParameter {
             crate::model::StartSigningJobParameter {
                 signing_profile_parameter: self.signing_profile_parameter,
@@ -22024,7 +22626,7 @@ pub mod start_signing_job_parameter {
     }
 }
 impl StartSigningJobParameter {
-    /// Creates a new builder-style object to manufacture [`StartSigningJobParameter`](crate::model::StartSigningJobParameter)
+    /// Creates a new builder-style object to manufacture [`StartSigningJobParameter`](crate::model::StartSigningJobParameter).
     pub fn builder() -> crate::model::start_signing_job_parameter::Builder {
         crate::model::start_signing_job_parameter::Builder::default()
     }
@@ -22035,6 +22637,7 @@ impl StartSigningJobParameter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Destination {
     /// <p>Describes the location in S3 of the updated firmware.</p>
+    #[doc(hidden)]
     pub s3_destination: std::option::Option<crate::model::S3Destination>,
 }
 impl Destination {
@@ -22050,11 +22653,10 @@ impl std::fmt::Debug for Destination {
         formatter.finish()
     }
 }
-/// See [`Destination`](crate::model::Destination)
+/// See [`Destination`](crate::model::Destination).
 pub mod destination {
 
-    /// A builder for [`Destination`](crate::model::Destination)
-    #[non_exhaustive]
+    /// A builder for [`Destination`](crate::model::Destination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_destination: std::option::Option<crate::model::S3Destination>,
@@ -22073,7 +22675,7 @@ pub mod destination {
             self.s3_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`Destination`](crate::model::Destination)
+        /// Consumes the builder and constructs a [`Destination`](crate::model::Destination).
         pub fn build(self) -> crate::model::Destination {
             crate::model::Destination {
                 s3_destination: self.s3_destination,
@@ -22082,7 +22684,7 @@ pub mod destination {
     }
 }
 impl Destination {
-    /// Creates a new builder-style object to manufacture [`Destination`](crate::model::Destination)
+    /// Creates a new builder-style object to manufacture [`Destination`](crate::model::Destination).
     pub fn builder() -> crate::model::destination::Builder {
         crate::model::destination::Builder::default()
     }
@@ -22093,8 +22695,10 @@ impl Destination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Destination {
     /// <p>The S3 bucket that contains the updated firmware.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The S3 prefix.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl S3Destination {
@@ -22115,11 +22719,10 @@ impl std::fmt::Debug for S3Destination {
         formatter.finish()
     }
 }
-/// See [`S3Destination`](crate::model::S3Destination)
+/// See [`S3Destination`](crate::model::S3Destination).
 pub mod s3_destination {
 
-    /// A builder for [`S3Destination`](crate::model::S3Destination)
-    #[non_exhaustive]
+    /// A builder for [`S3Destination`](crate::model::S3Destination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -22146,7 +22749,7 @@ pub mod s3_destination {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Destination`](crate::model::S3Destination)
+        /// Consumes the builder and constructs a [`S3Destination`](crate::model::S3Destination).
         pub fn build(self) -> crate::model::S3Destination {
             crate::model::S3Destination {
                 bucket: self.bucket,
@@ -22156,7 +22759,7 @@ pub mod s3_destination {
     }
 }
 impl S3Destination {
-    /// Creates a new builder-style object to manufacture [`S3Destination`](crate::model::S3Destination)
+    /// Creates a new builder-style object to manufacture [`S3Destination`](crate::model::S3Destination).
     pub fn builder() -> crate::model::s3_destination::Builder {
         crate::model::s3_destination::Builder::default()
     }
@@ -22167,10 +22770,13 @@ impl S3Destination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SigningProfileParameter {
     /// <p>Certificate ARN.</p>
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// <p>The hardware platform of your device.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The location of the code-signing certificate on your device.</p>
+    #[doc(hidden)]
     pub certificate_path_on_device: std::option::Option<std::string::String>,
 }
 impl SigningProfileParameter {
@@ -22199,11 +22805,10 @@ impl std::fmt::Debug for SigningProfileParameter {
         formatter.finish()
     }
 }
-/// See [`SigningProfileParameter`](crate::model::SigningProfileParameter)
+/// See [`SigningProfileParameter`](crate::model::SigningProfileParameter).
 pub mod signing_profile_parameter {
 
-    /// A builder for [`SigningProfileParameter`](crate::model::SigningProfileParameter)
-    #[non_exhaustive]
+    /// A builder for [`SigningProfileParameter`](crate::model::SigningProfileParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -22247,7 +22852,7 @@ pub mod signing_profile_parameter {
             self.certificate_path_on_device = input;
             self
         }
-        /// Consumes the builder and constructs a [`SigningProfileParameter`](crate::model::SigningProfileParameter)
+        /// Consumes the builder and constructs a [`SigningProfileParameter`](crate::model::SigningProfileParameter).
         pub fn build(self) -> crate::model::SigningProfileParameter {
             crate::model::SigningProfileParameter {
                 certificate_arn: self.certificate_arn,
@@ -22258,7 +22863,7 @@ pub mod signing_profile_parameter {
     }
 }
 impl SigningProfileParameter {
-    /// Creates a new builder-style object to manufacture [`SigningProfileParameter`](crate::model::SigningProfileParameter)
+    /// Creates a new builder-style object to manufacture [`SigningProfileParameter`](crate::model::SigningProfileParameter).
     pub fn builder() -> crate::model::signing_profile_parameter::Builder {
         crate::model::signing_profile_parameter::Builder::default()
     }
@@ -22269,8 +22874,10 @@ impl SigningProfileParameter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FileLocation {
     /// <p>The stream that contains the OTA update.</p>
+    #[doc(hidden)]
     pub stream: std::option::Option<crate::model::Stream>,
     /// <p>The location of the updated firmware in S3.</p>
+    #[doc(hidden)]
     pub s3_location: std::option::Option<crate::model::S3Location>,
 }
 impl FileLocation {
@@ -22291,11 +22898,10 @@ impl std::fmt::Debug for FileLocation {
         formatter.finish()
     }
 }
-/// See [`FileLocation`](crate::model::FileLocation)
+/// See [`FileLocation`](crate::model::FileLocation).
 pub mod file_location {
 
-    /// A builder for [`FileLocation`](crate::model::FileLocation)
-    #[non_exhaustive]
+    /// A builder for [`FileLocation`](crate::model::FileLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stream: std::option::Option<crate::model::Stream>,
@@ -22325,7 +22931,7 @@ pub mod file_location {
             self.s3_location = input;
             self
         }
-        /// Consumes the builder and constructs a [`FileLocation`](crate::model::FileLocation)
+        /// Consumes the builder and constructs a [`FileLocation`](crate::model::FileLocation).
         pub fn build(self) -> crate::model::FileLocation {
             crate::model::FileLocation {
                 stream: self.stream,
@@ -22335,7 +22941,7 @@ pub mod file_location {
     }
 }
 impl FileLocation {
-    /// Creates a new builder-style object to manufacture [`FileLocation`](crate::model::FileLocation)
+    /// Creates a new builder-style object to manufacture [`FileLocation`](crate::model::FileLocation).
     pub fn builder() -> crate::model::file_location::Builder {
         crate::model::file_location::Builder::default()
     }
@@ -22346,8 +22952,10 @@ impl FileLocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Stream {
     /// <p>The stream ID.</p>
+    #[doc(hidden)]
     pub stream_id: std::option::Option<std::string::String>,
     /// <p>The ID of a file associated with a stream.</p>
+    #[doc(hidden)]
     pub file_id: std::option::Option<i32>,
 }
 impl Stream {
@@ -22368,11 +22976,10 @@ impl std::fmt::Debug for Stream {
         formatter.finish()
     }
 }
-/// See [`Stream`](crate::model::Stream)
+/// See [`Stream`](crate::model::Stream).
 pub mod stream {
 
-    /// A builder for [`Stream`](crate::model::Stream)
-    #[non_exhaustive]
+    /// A builder for [`Stream`](crate::model::Stream).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stream_id: std::option::Option<std::string::String>,
@@ -22399,7 +23006,7 @@ pub mod stream {
             self.file_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Stream`](crate::model::Stream)
+        /// Consumes the builder and constructs a [`Stream`](crate::model::Stream).
         pub fn build(self) -> crate::model::Stream {
             crate::model::Stream {
                 stream_id: self.stream_id,
@@ -22409,7 +23016,7 @@ pub mod stream {
     }
 }
 impl Stream {
-    /// Creates a new builder-style object to manufacture [`Stream`](crate::model::Stream)
+    /// Creates a new builder-style object to manufacture [`Stream`](crate::model::Stream).
     pub fn builder() -> crate::model::stream::Builder {
         crate::model::stream::Builder::default()
     }
@@ -22420,6 +23027,7 @@ impl Stream {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AwsJobPresignedUrlConfig {
     /// <p>How long (in seconds) pre-signed URLs are valid. Valid values are 60 - 3600, the default value is 1800 seconds. Pre-signed URLs are generated when a request for the job document is received.</p>
+    #[doc(hidden)]
     pub expires_in_sec: std::option::Option<i64>,
 }
 impl AwsJobPresignedUrlConfig {
@@ -22435,11 +23043,10 @@ impl std::fmt::Debug for AwsJobPresignedUrlConfig {
         formatter.finish()
     }
 }
-/// See [`AwsJobPresignedUrlConfig`](crate::model::AwsJobPresignedUrlConfig)
+/// See [`AwsJobPresignedUrlConfig`](crate::model::AwsJobPresignedUrlConfig).
 pub mod aws_job_presigned_url_config {
 
-    /// A builder for [`AwsJobPresignedUrlConfig`](crate::model::AwsJobPresignedUrlConfig)
-    #[non_exhaustive]
+    /// A builder for [`AwsJobPresignedUrlConfig`](crate::model::AwsJobPresignedUrlConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) expires_in_sec: std::option::Option<i64>,
@@ -22455,7 +23062,7 @@ pub mod aws_job_presigned_url_config {
             self.expires_in_sec = input;
             self
         }
-        /// Consumes the builder and constructs a [`AwsJobPresignedUrlConfig`](crate::model::AwsJobPresignedUrlConfig)
+        /// Consumes the builder and constructs a [`AwsJobPresignedUrlConfig`](crate::model::AwsJobPresignedUrlConfig).
         pub fn build(self) -> crate::model::AwsJobPresignedUrlConfig {
             crate::model::AwsJobPresignedUrlConfig {
                 expires_in_sec: self.expires_in_sec,
@@ -22464,7 +23071,7 @@ pub mod aws_job_presigned_url_config {
     }
 }
 impl AwsJobPresignedUrlConfig {
-    /// Creates a new builder-style object to manufacture [`AwsJobPresignedUrlConfig`](crate::model::AwsJobPresignedUrlConfig)
+    /// Creates a new builder-style object to manufacture [`AwsJobPresignedUrlConfig`](crate::model::AwsJobPresignedUrlConfig).
     pub fn builder() -> crate::model::aws_job_presigned_url_config::Builder {
         crate::model::aws_job_presigned_url_config::Builder::default()
     }
@@ -22475,8 +23082,10 @@ impl AwsJobPresignedUrlConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AwsJobExecutionsRolloutConfig {
     /// <p>The maximum number of OTA update job executions started per minute.</p>
+    #[doc(hidden)]
     pub maximum_per_minute: std::option::Option<i32>,
     /// <p>The rate of increase for a job rollout. This parameter allows you to define an exponential rate increase for a job rollout.</p>
+    #[doc(hidden)]
     pub exponential_rate: std::option::Option<crate::model::AwsJobExponentialRolloutRate>,
 }
 impl AwsJobExecutionsRolloutConfig {
@@ -22499,11 +23108,10 @@ impl std::fmt::Debug for AwsJobExecutionsRolloutConfig {
         formatter.finish()
     }
 }
-/// See [`AwsJobExecutionsRolloutConfig`](crate::model::AwsJobExecutionsRolloutConfig)
+/// See [`AwsJobExecutionsRolloutConfig`](crate::model::AwsJobExecutionsRolloutConfig).
 pub mod aws_job_executions_rollout_config {
 
-    /// A builder for [`AwsJobExecutionsRolloutConfig`](crate::model::AwsJobExecutionsRolloutConfig)
-    #[non_exhaustive]
+    /// A builder for [`AwsJobExecutionsRolloutConfig`](crate::model::AwsJobExecutionsRolloutConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) maximum_per_minute: std::option::Option<i32>,
@@ -22537,7 +23145,7 @@ pub mod aws_job_executions_rollout_config {
             self.exponential_rate = input;
             self
         }
-        /// Consumes the builder and constructs a [`AwsJobExecutionsRolloutConfig`](crate::model::AwsJobExecutionsRolloutConfig)
+        /// Consumes the builder and constructs a [`AwsJobExecutionsRolloutConfig`](crate::model::AwsJobExecutionsRolloutConfig).
         pub fn build(self) -> crate::model::AwsJobExecutionsRolloutConfig {
             crate::model::AwsJobExecutionsRolloutConfig {
                 maximum_per_minute: self.maximum_per_minute,
@@ -22547,7 +23155,7 @@ pub mod aws_job_executions_rollout_config {
     }
 }
 impl AwsJobExecutionsRolloutConfig {
-    /// Creates a new builder-style object to manufacture [`AwsJobExecutionsRolloutConfig`](crate::model::AwsJobExecutionsRolloutConfig)
+    /// Creates a new builder-style object to manufacture [`AwsJobExecutionsRolloutConfig`](crate::model::AwsJobExecutionsRolloutConfig).
     pub fn builder() -> crate::model::aws_job_executions_rollout_config::Builder {
         crate::model::aws_job_executions_rollout_config::Builder::default()
     }
@@ -22558,11 +23166,14 @@ impl AwsJobExecutionsRolloutConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AwsJobExponentialRolloutRate {
     /// <p>The minimum number of things that will be notified of a pending job, per minute, at the start of the job rollout. This is the initial rate of the rollout.</p>
+    #[doc(hidden)]
     pub base_rate_per_minute: std::option::Option<i32>,
     /// <p>The rate of increase for a job rollout. The number of things notified is multiplied by this factor.</p>
+    #[doc(hidden)]
     pub increment_factor: f64,
     /// <p>The criteria to initiate the increase in rate of rollout for a job.</p>
     /// <p>Amazon Web Services IoT Core supports up to one digit after the decimal (for example, 1.5, but not 1.55).</p>
+    #[doc(hidden)]
     pub rate_increase_criteria: std::option::Option<crate::model::AwsJobRateIncreaseCriteria>,
 }
 impl AwsJobExponentialRolloutRate {
@@ -22591,11 +23202,10 @@ impl std::fmt::Debug for AwsJobExponentialRolloutRate {
         formatter.finish()
     }
 }
-/// See [`AwsJobExponentialRolloutRate`](crate::model::AwsJobExponentialRolloutRate)
+/// See [`AwsJobExponentialRolloutRate`](crate::model::AwsJobExponentialRolloutRate).
 pub mod aws_job_exponential_rollout_rate {
 
-    /// A builder for [`AwsJobExponentialRolloutRate`](crate::model::AwsJobExponentialRolloutRate)
-    #[non_exhaustive]
+    /// A builder for [`AwsJobExponentialRolloutRate`](crate::model::AwsJobExponentialRolloutRate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) base_rate_per_minute: std::option::Option<i32>,
@@ -22642,7 +23252,7 @@ pub mod aws_job_exponential_rollout_rate {
             self.rate_increase_criteria = input;
             self
         }
-        /// Consumes the builder and constructs a [`AwsJobExponentialRolloutRate`](crate::model::AwsJobExponentialRolloutRate)
+        /// Consumes the builder and constructs a [`AwsJobExponentialRolloutRate`](crate::model::AwsJobExponentialRolloutRate).
         pub fn build(self) -> crate::model::AwsJobExponentialRolloutRate {
             crate::model::AwsJobExponentialRolloutRate {
                 base_rate_per_minute: self.base_rate_per_minute,
@@ -22653,7 +23263,7 @@ pub mod aws_job_exponential_rollout_rate {
     }
 }
 impl AwsJobExponentialRolloutRate {
-    /// Creates a new builder-style object to manufacture [`AwsJobExponentialRolloutRate`](crate::model::AwsJobExponentialRolloutRate)
+    /// Creates a new builder-style object to manufacture [`AwsJobExponentialRolloutRate`](crate::model::AwsJobExponentialRolloutRate).
     pub fn builder() -> crate::model::aws_job_exponential_rollout_rate::Builder {
         crate::model::aws_job_exponential_rollout_rate::Builder::default()
     }
@@ -22664,8 +23274,10 @@ impl AwsJobExponentialRolloutRate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AwsJobRateIncreaseCriteria {
     /// <p>When this number of things have been notified, it will initiate an increase in the rollout rate.</p>
+    #[doc(hidden)]
     pub number_of_notified_things: std::option::Option<i32>,
     /// <p>When this number of things have succeeded in their job execution, it will initiate an increase in the rollout rate.</p>
+    #[doc(hidden)]
     pub number_of_succeeded_things: std::option::Option<i32>,
 }
 impl AwsJobRateIncreaseCriteria {
@@ -22689,11 +23301,10 @@ impl std::fmt::Debug for AwsJobRateIncreaseCriteria {
         formatter.finish()
     }
 }
-/// See [`AwsJobRateIncreaseCriteria`](crate::model::AwsJobRateIncreaseCriteria)
+/// See [`AwsJobRateIncreaseCriteria`](crate::model::AwsJobRateIncreaseCriteria).
 pub mod aws_job_rate_increase_criteria {
 
-    /// A builder for [`AwsJobRateIncreaseCriteria`](crate::model::AwsJobRateIncreaseCriteria)
-    #[non_exhaustive]
+    /// A builder for [`AwsJobRateIncreaseCriteria`](crate::model::AwsJobRateIncreaseCriteria).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) number_of_notified_things: std::option::Option<i32>,
@@ -22720,7 +23331,7 @@ pub mod aws_job_rate_increase_criteria {
             self.number_of_succeeded_things = input;
             self
         }
-        /// Consumes the builder and constructs a [`AwsJobRateIncreaseCriteria`](crate::model::AwsJobRateIncreaseCriteria)
+        /// Consumes the builder and constructs a [`AwsJobRateIncreaseCriteria`](crate::model::AwsJobRateIncreaseCriteria).
         pub fn build(self) -> crate::model::AwsJobRateIncreaseCriteria {
             crate::model::AwsJobRateIncreaseCriteria {
                 number_of_notified_things: self.number_of_notified_things,
@@ -22730,7 +23341,7 @@ pub mod aws_job_rate_increase_criteria {
     }
 }
 impl AwsJobRateIncreaseCriteria {
-    /// Creates a new builder-style object to manufacture [`AwsJobRateIncreaseCriteria`](crate::model::AwsJobRateIncreaseCriteria)
+    /// Creates a new builder-style object to manufacture [`AwsJobRateIncreaseCriteria`](crate::model::AwsJobRateIncreaseCriteria).
     pub fn builder() -> crate::model::aws_job_rate_increase_criteria::Builder {
         crate::model::aws_job_rate_increase_criteria::Builder::default()
     }
@@ -22796,10 +23407,13 @@ impl AsRef<str> for Protocol {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EffectivePolicy {
     /// <p>The policy name.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The policy ARN.</p>
+    #[doc(hidden)]
     pub policy_arn: std::option::Option<std::string::String>,
     /// <p>The IAM policy document.</p>
+    #[doc(hidden)]
     pub policy_document: std::option::Option<std::string::String>,
 }
 impl EffectivePolicy {
@@ -22825,11 +23439,10 @@ impl std::fmt::Debug for EffectivePolicy {
         formatter.finish()
     }
 }
-/// See [`EffectivePolicy`](crate::model::EffectivePolicy)
+/// See [`EffectivePolicy`](crate::model::EffectivePolicy).
 pub mod effective_policy {
 
-    /// A builder for [`EffectivePolicy`](crate::model::EffectivePolicy)
-    #[non_exhaustive]
+    /// A builder for [`EffectivePolicy`](crate::model::EffectivePolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_name: std::option::Option<std::string::String>,
@@ -22870,7 +23483,7 @@ pub mod effective_policy {
             self.policy_document = input;
             self
         }
-        /// Consumes the builder and constructs a [`EffectivePolicy`](crate::model::EffectivePolicy)
+        /// Consumes the builder and constructs a [`EffectivePolicy`](crate::model::EffectivePolicy).
         pub fn build(self) -> crate::model::EffectivePolicy {
             crate::model::EffectivePolicy {
                 policy_name: self.policy_name,
@@ -22881,7 +23494,7 @@ pub mod effective_policy {
     }
 }
 impl EffectivePolicy {
-    /// Creates a new builder-style object to manufacture [`EffectivePolicy`](crate::model::EffectivePolicy)
+    /// Creates a new builder-style object to manufacture [`EffectivePolicy`](crate::model::EffectivePolicy).
     pub fn builder() -> crate::model::effective_policy::Builder {
         crate::model::effective_policy::Builder::default()
     }
@@ -22892,8 +23505,10 @@ impl EffectivePolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Bucket {
     /// <p>The value counted for the particular bucket.</p>
+    #[doc(hidden)]
     pub key_value: std::option::Option<std::string::String>,
     /// <p>The number of documents that have the value counted for the particular bucket.</p>
+    #[doc(hidden)]
     pub count: i32,
 }
 impl Bucket {
@@ -22914,11 +23529,10 @@ impl std::fmt::Debug for Bucket {
         formatter.finish()
     }
 }
-/// See [`Bucket`](crate::model::Bucket)
+/// See [`Bucket`](crate::model::Bucket).
 pub mod bucket {
 
-    /// A builder for [`Bucket`](crate::model::Bucket)
-    #[non_exhaustive]
+    /// A builder for [`Bucket`](crate::model::Bucket).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_value: std::option::Option<std::string::String>,
@@ -22945,7 +23559,7 @@ pub mod bucket {
             self.count = input;
             self
         }
-        /// Consumes the builder and constructs a [`Bucket`](crate::model::Bucket)
+        /// Consumes the builder and constructs a [`Bucket`](crate::model::Bucket).
         pub fn build(self) -> crate::model::Bucket {
             crate::model::Bucket {
                 key_value: self.key_value,
@@ -22955,7 +23569,7 @@ pub mod bucket {
     }
 }
 impl Bucket {
-    /// Creates a new builder-style object to manufacture [`Bucket`](crate::model::Bucket)
+    /// Creates a new builder-style object to manufacture [`Bucket`](crate::model::Bucket).
     pub fn builder() -> crate::model::bucket::Builder {
         crate::model::bucket::Builder::default()
     }
@@ -22966,6 +23580,7 @@ impl Bucket {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BucketsAggregationType {
     /// <p>Performs an aggregation that will return a list of buckets. The list of buckets is a ranked list of the number of occurrences of an aggregation field value.</p>
+    #[doc(hidden)]
     pub terms_aggregation: std::option::Option<crate::model::TermsAggregation>,
 }
 impl BucketsAggregationType {
@@ -22981,11 +23596,10 @@ impl std::fmt::Debug for BucketsAggregationType {
         formatter.finish()
     }
 }
-/// See [`BucketsAggregationType`](crate::model::BucketsAggregationType)
+/// See [`BucketsAggregationType`](crate::model::BucketsAggregationType).
 pub mod buckets_aggregation_type {
 
-    /// A builder for [`BucketsAggregationType`](crate::model::BucketsAggregationType)
-    #[non_exhaustive]
+    /// A builder for [`BucketsAggregationType`](crate::model::BucketsAggregationType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) terms_aggregation: std::option::Option<crate::model::TermsAggregation>,
@@ -23004,7 +23618,7 @@ pub mod buckets_aggregation_type {
             self.terms_aggregation = input;
             self
         }
-        /// Consumes the builder and constructs a [`BucketsAggregationType`](crate::model::BucketsAggregationType)
+        /// Consumes the builder and constructs a [`BucketsAggregationType`](crate::model::BucketsAggregationType).
         pub fn build(self) -> crate::model::BucketsAggregationType {
             crate::model::BucketsAggregationType {
                 terms_aggregation: self.terms_aggregation,
@@ -23013,7 +23627,7 @@ pub mod buckets_aggregation_type {
     }
 }
 impl BucketsAggregationType {
-    /// Creates a new builder-style object to manufacture [`BucketsAggregationType`](crate::model::BucketsAggregationType)
+    /// Creates a new builder-style object to manufacture [`BucketsAggregationType`](crate::model::BucketsAggregationType).
     pub fn builder() -> crate::model::buckets_aggregation_type::Builder {
         crate::model::buckets_aggregation_type::Builder::default()
     }
@@ -23024,6 +23638,7 @@ impl BucketsAggregationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TermsAggregation {
     /// <p>The number of buckets to return in the response. Default to 10.</p>
+    #[doc(hidden)]
     pub max_buckets: i32,
 }
 impl TermsAggregation {
@@ -23039,11 +23654,10 @@ impl std::fmt::Debug for TermsAggregation {
         formatter.finish()
     }
 }
-/// See [`TermsAggregation`](crate::model::TermsAggregation)
+/// See [`TermsAggregation`](crate::model::TermsAggregation).
 pub mod terms_aggregation {
 
-    /// A builder for [`TermsAggregation`](crate::model::TermsAggregation)
-    #[non_exhaustive]
+    /// A builder for [`TermsAggregation`](crate::model::TermsAggregation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_buckets: std::option::Option<i32>,
@@ -23059,7 +23673,7 @@ pub mod terms_aggregation {
             self.max_buckets = input;
             self
         }
-        /// Consumes the builder and constructs a [`TermsAggregation`](crate::model::TermsAggregation)
+        /// Consumes the builder and constructs a [`TermsAggregation`](crate::model::TermsAggregation).
         pub fn build(self) -> crate::model::TermsAggregation {
             crate::model::TermsAggregation {
                 max_buckets: self.max_buckets.unwrap_or_default(),
@@ -23068,7 +23682,7 @@ pub mod terms_aggregation {
     }
 }
 impl TermsAggregation {
-    /// Creates a new builder-style object to manufacture [`TermsAggregation`](crate::model::TermsAggregation)
+    /// Creates a new builder-style object to manufacture [`TermsAggregation`](crate::model::TermsAggregation).
     pub fn builder() -> crate::model::terms_aggregation::Builder {
         crate::model::terms_aggregation::Builder::default()
     }
@@ -23079,16 +23693,22 @@ impl TermsAggregation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BehaviorModelTrainingSummary {
     /// <p> The name of the security profile. </p>
+    #[doc(hidden)]
     pub security_profile_name: std::option::Option<std::string::String>,
     /// <p> The name of the behavior. </p>
+    #[doc(hidden)]
     pub behavior_name: std::option::Option<std::string::String>,
     /// <p> The date a training model started collecting data. </p>
+    #[doc(hidden)]
     pub training_data_collection_start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The status of the behavior model. </p>
+    #[doc(hidden)]
     pub model_status: std::option::Option<crate::model::ModelStatus>,
     /// <p> The percentage of datapoints collected. </p>
+    #[doc(hidden)]
     pub datapoints_collection_percentage: std::option::Option<f64>,
     /// <p> The date the model was last refreshed. </p>
+    #[doc(hidden)]
     pub last_model_refresh_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl BehaviorModelTrainingSummary {
@@ -23137,11 +23757,10 @@ impl std::fmt::Debug for BehaviorModelTrainingSummary {
         formatter.finish()
     }
 }
-/// See [`BehaviorModelTrainingSummary`](crate::model::BehaviorModelTrainingSummary)
+/// See [`BehaviorModelTrainingSummary`](crate::model::BehaviorModelTrainingSummary).
 pub mod behavior_model_training_summary {
 
-    /// A builder for [`BehaviorModelTrainingSummary`](crate::model::BehaviorModelTrainingSummary)
-    #[non_exhaustive]
+    /// A builder for [`BehaviorModelTrainingSummary`](crate::model::BehaviorModelTrainingSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) security_profile_name: std::option::Option<std::string::String>,
@@ -23234,7 +23853,7 @@ pub mod behavior_model_training_summary {
             self.last_model_refresh_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`BehaviorModelTrainingSummary`](crate::model::BehaviorModelTrainingSummary)
+        /// Consumes the builder and constructs a [`BehaviorModelTrainingSummary`](crate::model::BehaviorModelTrainingSummary).
         pub fn build(self) -> crate::model::BehaviorModelTrainingSummary {
             crate::model::BehaviorModelTrainingSummary {
                 security_profile_name: self.security_profile_name,
@@ -23248,7 +23867,7 @@ pub mod behavior_model_training_summary {
     }
 }
 impl BehaviorModelTrainingSummary {
-    /// Creates a new builder-style object to manufacture [`BehaviorModelTrainingSummary`](crate::model::BehaviorModelTrainingSummary)
+    /// Creates a new builder-style object to manufacture [`BehaviorModelTrainingSummary`](crate::model::BehaviorModelTrainingSummary).
     pub fn builder() -> crate::model::behavior_model_training_summary::Builder {
         crate::model::behavior_model_training_summary::Builder::default()
     }
@@ -23377,11 +23996,14 @@ impl AsRef<str> for DynamicGroupStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThingGroupMetadata {
     /// <p>The parent thing group name.</p>
+    #[doc(hidden)]
     pub parent_group_name: std::option::Option<std::string::String>,
     /// <p>The root parent thing group.</p>
+    #[doc(hidden)]
     pub root_to_parent_thing_groups:
         std::option::Option<std::vec::Vec<crate::model::GroupNameAndArn>>,
     /// <p>The UNIX timestamp of when the thing group was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ThingGroupMetadata {
@@ -23412,11 +24034,10 @@ impl std::fmt::Debug for ThingGroupMetadata {
         formatter.finish()
     }
 }
-/// See [`ThingGroupMetadata`](crate::model::ThingGroupMetadata)
+/// See [`ThingGroupMetadata`](crate::model::ThingGroupMetadata).
 pub mod thing_group_metadata {
 
-    /// A builder for [`ThingGroupMetadata`](crate::model::ThingGroupMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ThingGroupMetadata`](crate::model::ThingGroupMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parent_group_name: std::option::Option<std::string::String>,
@@ -23470,7 +24091,7 @@ pub mod thing_group_metadata {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThingGroupMetadata`](crate::model::ThingGroupMetadata)
+        /// Consumes the builder and constructs a [`ThingGroupMetadata`](crate::model::ThingGroupMetadata).
         pub fn build(self) -> crate::model::ThingGroupMetadata {
             crate::model::ThingGroupMetadata {
                 parent_group_name: self.parent_group_name,
@@ -23481,7 +24102,7 @@ pub mod thing_group_metadata {
     }
 }
 impl ThingGroupMetadata {
-    /// Creates a new builder-style object to manufacture [`ThingGroupMetadata`](crate::model::ThingGroupMetadata)
+    /// Creates a new builder-style object to manufacture [`ThingGroupMetadata`](crate::model::ThingGroupMetadata).
     pub fn builder() -> crate::model::thing_group_metadata::Builder {
         crate::model::thing_group_metadata::Builder::default()
     }
@@ -23492,20 +24113,28 @@ impl ThingGroupMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamInfo {
     /// <p>The stream ID.</p>
+    #[doc(hidden)]
     pub stream_id: std::option::Option<std::string::String>,
     /// <p>The stream ARN.</p>
+    #[doc(hidden)]
     pub stream_arn: std::option::Option<std::string::String>,
     /// <p>The stream version.</p>
+    #[doc(hidden)]
     pub stream_version: std::option::Option<i32>,
     /// <p>The description of the stream.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The files to stream.</p>
+    #[doc(hidden)]
     pub files: std::option::Option<std::vec::Vec<crate::model::StreamFile>>,
     /// <p>The date when the stream was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date when the stream was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An IAM role IoT assumes to access your S3 files.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl StreamInfo {
@@ -23556,11 +24185,10 @@ impl std::fmt::Debug for StreamInfo {
         formatter.finish()
     }
 }
-/// See [`StreamInfo`](crate::model::StreamInfo)
+/// See [`StreamInfo`](crate::model::StreamInfo).
 pub mod stream_info {
 
-    /// A builder for [`StreamInfo`](crate::model::StreamInfo)
-    #[non_exhaustive]
+    /// A builder for [`StreamInfo`](crate::model::StreamInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stream_id: std::option::Option<std::string::String>,
@@ -23668,7 +24296,7 @@ pub mod stream_info {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamInfo`](crate::model::StreamInfo)
+        /// Consumes the builder and constructs a [`StreamInfo`](crate::model::StreamInfo).
         pub fn build(self) -> crate::model::StreamInfo {
             crate::model::StreamInfo {
                 stream_id: self.stream_id,
@@ -23684,7 +24312,7 @@ pub mod stream_info {
     }
 }
 impl StreamInfo {
-    /// Creates a new builder-style object to manufacture [`StreamInfo`](crate::model::StreamInfo)
+    /// Creates a new builder-style object to manufacture [`StreamInfo`](crate::model::StreamInfo).
     pub fn builder() -> crate::model::stream_info::Builder {
         crate::model::stream_info::Builder::default()
     }
@@ -23695,18 +24323,25 @@ impl StreamInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RoleAliasDescription {
     /// <p>The role alias.</p>
+    #[doc(hidden)]
     pub role_alias: std::option::Option<std::string::String>,
     /// <p>The ARN of the role alias.</p>
+    #[doc(hidden)]
     pub role_alias_arn: std::option::Option<std::string::String>,
     /// <p>The role ARN.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The role alias owner.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The number of seconds for which the credential is valid.</p>
+    #[doc(hidden)]
     pub credential_duration_seconds: std::option::Option<i32>,
     /// <p>The UNIX timestamp of when the role alias was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The UNIX timestamp of when the role alias was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RoleAliasDescription {
@@ -23755,11 +24390,10 @@ impl std::fmt::Debug for RoleAliasDescription {
         formatter.finish()
     }
 }
-/// See [`RoleAliasDescription`](crate::model::RoleAliasDescription)
+/// See [`RoleAliasDescription`](crate::model::RoleAliasDescription).
 pub mod role_alias_description {
 
-    /// A builder for [`RoleAliasDescription`](crate::model::RoleAliasDescription)
-    #[non_exhaustive]
+    /// A builder for [`RoleAliasDescription`](crate::model::RoleAliasDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_alias: std::option::Option<std::string::String>,
@@ -23850,7 +24484,7 @@ pub mod role_alias_description {
             self.last_modified_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`RoleAliasDescription`](crate::model::RoleAliasDescription)
+        /// Consumes the builder and constructs a [`RoleAliasDescription`](crate::model::RoleAliasDescription).
         pub fn build(self) -> crate::model::RoleAliasDescription {
             crate::model::RoleAliasDescription {
                 role_alias: self.role_alias,
@@ -23865,7 +24499,7 @@ pub mod role_alias_description {
     }
 }
 impl RoleAliasDescription {
-    /// Creates a new builder-style object to manufacture [`RoleAliasDescription`](crate::model::RoleAliasDescription)
+    /// Creates a new builder-style object to manufacture [`RoleAliasDescription`](crate::model::RoleAliasDescription).
     pub fn builder() -> crate::model::role_alias_description::Builder {
         crate::model::role_alias_description::Builder::default()
     }
@@ -23878,14 +24512,19 @@ impl RoleAliasDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentParameter {
     /// <p>Key of the map field containing the patterns that need to be replaced in a managed template job document schema.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Description of the map field containing the patterns that need to be replaced in a managed template job document schema.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A regular expression of the patterns that need to be replaced in a managed template job document schema.</p>
+    #[doc(hidden)]
     pub regex: std::option::Option<std::string::String>,
     /// <p>An example illustrating a pattern that need to be replaced in a managed template job document schema.</p>
+    #[doc(hidden)]
     pub example: std::option::Option<std::string::String>,
     /// <p>Specifies whether a pattern that needs to be replaced in a managed template job document schema is optional or required.</p>
+    #[doc(hidden)]
     pub optional: bool,
 }
 impl DocumentParameter {
@@ -23921,11 +24560,10 @@ impl std::fmt::Debug for DocumentParameter {
         formatter.finish()
     }
 }
-/// See [`DocumentParameter`](crate::model::DocumentParameter)
+/// See [`DocumentParameter`](crate::model::DocumentParameter).
 pub mod document_parameter {
 
-    /// A builder for [`DocumentParameter`](crate::model::DocumentParameter)
-    #[non_exhaustive]
+    /// A builder for [`DocumentParameter`](crate::model::DocumentParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -23985,7 +24623,7 @@ pub mod document_parameter {
             self.optional = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentParameter`](crate::model::DocumentParameter)
+        /// Consumes the builder and constructs a [`DocumentParameter`](crate::model::DocumentParameter).
         pub fn build(self) -> crate::model::DocumentParameter {
             crate::model::DocumentParameter {
                 key: self.key,
@@ -23998,7 +24636,7 @@ pub mod document_parameter {
     }
 }
 impl DocumentParameter {
-    /// Creates a new builder-style object to manufacture [`DocumentParameter`](crate::model::DocumentParameter)
+    /// Creates a new builder-style object to manufacture [`DocumentParameter`](crate::model::DocumentParameter).
     pub fn builder() -> crate::model::document_parameter::Builder {
         crate::model::document_parameter::Builder::default()
     }
@@ -24009,26 +24647,37 @@ impl DocumentParameter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobExecution {
     /// <p>The unique identifier you assigned to the job when it was created.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The status of the job execution (IN_PROGRESS, QUEUED, FAILED, SUCCEEDED, TIMED_OUT, CANCELED, or REJECTED).</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobExecutionStatus>,
     /// <p>Will be <code>true</code> if the job execution was canceled with the optional <code>force</code> parameter set to <code>true</code>.</p>
+    #[doc(hidden)]
     pub force_canceled: std::option::Option<bool>,
     /// <p>A collection of name/value pairs that describe the status of the job execution.</p>
+    #[doc(hidden)]
     pub status_details: std::option::Option<crate::model::JobExecutionStatusDetails>,
     /// <p>The ARN of the thing on which the job execution is running.</p>
+    #[doc(hidden)]
     pub thing_arn: std::option::Option<std::string::String>,
     /// <p>The time, in seconds since the epoch, when the job execution was queued.</p>
+    #[doc(hidden)]
     pub queued_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time, in seconds since the epoch, when the job execution started.</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time, in seconds since the epoch, when the job execution was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A string (consisting of the digits "0" through "9") which identifies this particular job execution on this particular device. It can be used in commands which return or update job execution information. </p>
+    #[doc(hidden)]
     pub execution_number: std::option::Option<i64>,
     /// <p>The version of the job execution. Job execution versions are incremented each time they are updated by a device.</p>
+    #[doc(hidden)]
     pub version_number: i64,
     /// <p>The estimated number of seconds that remain before the job execution status will be changed to <code>TIMED_OUT</code>. The timeout interval can be anywhere between 1 minute and 7 days (1 to 10080 minutes). The actual job execution timeout can occur up to 60 seconds later than the estimated duration. This value will not be included if the job execution has reached a terminal status.</p>
+    #[doc(hidden)]
     pub approximate_seconds_before_timed_out: std::option::Option<i64>,
 }
 impl JobExecution {
@@ -24097,11 +24746,10 @@ impl std::fmt::Debug for JobExecution {
         formatter.finish()
     }
 }
-/// See [`JobExecution`](crate::model::JobExecution)
+/// See [`JobExecution`](crate::model::JobExecution).
 pub mod job_execution {
 
-    /// A builder for [`JobExecution`](crate::model::JobExecution)
-    #[non_exhaustive]
+    /// A builder for [`JobExecution`](crate::model::JobExecution).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -24245,7 +24893,7 @@ pub mod job_execution {
             self.approximate_seconds_before_timed_out = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobExecution`](crate::model::JobExecution)
+        /// Consumes the builder and constructs a [`JobExecution`](crate::model::JobExecution).
         pub fn build(self) -> crate::model::JobExecution {
             crate::model::JobExecution {
                 job_id: self.job_id,
@@ -24264,7 +24912,7 @@ pub mod job_execution {
     }
 }
 impl JobExecution {
-    /// Creates a new builder-style object to manufacture [`JobExecution`](crate::model::JobExecution)
+    /// Creates a new builder-style object to manufacture [`JobExecution`](crate::model::JobExecution).
     pub fn builder() -> crate::model::job_execution::Builder {
         crate::model::job_execution::Builder::default()
     }
@@ -24275,6 +24923,7 @@ impl JobExecution {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobExecutionStatusDetails {
     /// <p>The job execution status.</p>
+    #[doc(hidden)]
     pub details_map:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -24294,11 +24943,10 @@ impl std::fmt::Debug for JobExecutionStatusDetails {
         formatter.finish()
     }
 }
-/// See [`JobExecutionStatusDetails`](crate::model::JobExecutionStatusDetails)
+/// See [`JobExecutionStatusDetails`](crate::model::JobExecutionStatusDetails).
 pub mod job_execution_status_details {
 
-    /// A builder for [`JobExecutionStatusDetails`](crate::model::JobExecutionStatusDetails)
-    #[non_exhaustive]
+    /// A builder for [`JobExecutionStatusDetails`](crate::model::JobExecutionStatusDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) details_map: std::option::Option<
@@ -24331,7 +24979,7 @@ pub mod job_execution_status_details {
             self.details_map = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobExecutionStatusDetails`](crate::model::JobExecutionStatusDetails)
+        /// Consumes the builder and constructs a [`JobExecutionStatusDetails`](crate::model::JobExecutionStatusDetails).
         pub fn build(self) -> crate::model::JobExecutionStatusDetails {
             crate::model::JobExecutionStatusDetails {
                 details_map: self.details_map,
@@ -24340,7 +24988,7 @@ pub mod job_execution_status_details {
     }
 }
 impl JobExecutionStatusDetails {
-    /// Creates a new builder-style object to manufacture [`JobExecutionStatusDetails`](crate::model::JobExecutionStatusDetails)
+    /// Creates a new builder-style object to manufacture [`JobExecutionStatusDetails`](crate::model::JobExecutionStatusDetails).
     pub fn builder() -> crate::model::job_execution_status_details::Builder {
         crate::model::job_execution_status_details::Builder::default()
     }
@@ -24351,58 +24999,80 @@ impl JobExecutionStatusDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Job {
     /// <p>An ARN identifying the job with format "arn:aws:iot:region:account:job/jobId".</p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier you assigned to this job when it was created.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a device when the thing representing the device is added to a target group, even after the job was completed by all things originally in the group. </p> <note>
     /// <p>We recommend that you use continuous jobs instead of snapshot jobs for dynamic thing group targets. By using continuous jobs, devices that join the group receive the job execution even after the job has been created.</p>
     /// </note>
+    #[doc(hidden)]
     pub target_selection: std::option::Option<crate::model::TargetSelection>,
     /// <p>The status of the job, one of <code>IN_PROGRESS</code>, <code>CANCELED</code>, <code>DELETION_IN_PROGRESS</code> or <code>COMPLETED</code>. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobStatus>,
     /// <p>Will be <code>true</code> if the job was canceled with the optional <code>force</code> parameter set to <code>true</code>.</p>
+    #[doc(hidden)]
     pub force_canceled: std::option::Option<bool>,
     /// <p>If the job was updated, provides the reason code for the update.</p>
+    #[doc(hidden)]
     pub reason_code: std::option::Option<std::string::String>,
     /// <p>If the job was updated, describes the reason for the update.</p>
+    #[doc(hidden)]
     pub comment: std::option::Option<std::string::String>,
     /// <p>A list of IoT things and thing groups to which the job should be sent.</p>
+    #[doc(hidden)]
     pub targets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A short text description of the job.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Configuration for pre-signed S3 URLs.</p>
+    #[doc(hidden)]
     pub presigned_url_config: std::option::Option<crate::model::PresignedUrlConfig>,
     /// <p>Allows you to create a staged rollout of a job.</p>
+    #[doc(hidden)]
     pub job_executions_rollout_config:
         std::option::Option<crate::model::JobExecutionsRolloutConfig>,
     /// <p>Configuration for criteria to abort the job.</p>
+    #[doc(hidden)]
     pub abort_config: std::option::Option<crate::model::AbortConfig>,
     /// <p>The time, in seconds since the epoch, when the job was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time, in seconds since the epoch, when the job was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time, in seconds since the epoch, when the job was completed.</p>
+    #[doc(hidden)]
     pub completed_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Details about the job process.</p>
+    #[doc(hidden)]
     pub job_process_details: std::option::Option<crate::model::JobProcessDetails>,
     /// <p>Specifies the amount of time each device has to finish its execution of the job. A timer is started when the job execution status is set to <code>IN_PROGRESS</code>. If the job execution status is not set to another terminal state before the timer expires, it will be automatically set to <code>TIMED_OUT</code>.</p>
+    #[doc(hidden)]
     pub timeout_config: std::option::Option<crate::model::TimeoutConfig>,
     /// <p>The namespace used to indicate that a job is a customer-managed job.</p>
     /// <p>When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p>
     /// <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note>
     /// <p>The <code>namespaceId</code> feature is in public preview.</p>
     /// </note>
+    #[doc(hidden)]
     pub namespace_id: std::option::Option<std::string::String>,
     /// <p>The ARN of the job template used to create the job.</p>
+    #[doc(hidden)]
     pub job_template_arn: std::option::Option<std::string::String>,
     /// <p>The configuration for the criteria to retry the job.</p>
+    #[doc(hidden)]
     pub job_executions_retry_config: std::option::Option<crate::model::JobExecutionsRetryConfig>,
     /// <p>A key-value map that pairs the patterns that need to be replaced in a managed template job document schema. You can use the description of each key as a guidance to specify the inputs during runtime when creating a job.</p> <note>
     /// <p> <code>documentParameters</code> can only be used when creating jobs from Amazon Web Services managed templates. This parameter can't be used with custom job templates or to create jobs from them.</p>
     /// </note>
+    #[doc(hidden)]
     pub document_parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
-    #[allow(missing_docs)] // documentation missing in model
+    /// <p>Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or canceling previously created executions, otherwise false.</p>
+    #[doc(hidden)]
     pub is_concurrent: std::option::Option<bool>,
 }
 impl Job {
@@ -24505,7 +25175,7 @@ impl Job {
     {
         self.document_parameters.as_ref()
     }
-    #[allow(missing_docs)] // documentation missing in model
+    /// <p>Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or canceling previously created executions, otherwise false.</p>
     pub fn is_concurrent(&self) -> std::option::Option<bool> {
         self.is_concurrent
     }
@@ -24544,11 +25214,10 @@ impl std::fmt::Debug for Job {
         formatter.finish()
     }
 }
-/// See [`Job`](crate::model::Job)
+/// See [`Job`](crate::model::Job).
 pub mod job {
 
-    /// A builder for [`Job`](crate::model::Job)
-    #[non_exhaustive]
+    /// A builder for [`Job`](crate::model::Job).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_arn: std::option::Option<std::string::String>,
@@ -24868,17 +25537,17 @@ pub mod job {
             self.document_parameters = input;
             self
         }
-        #[allow(missing_docs)] // documentation missing in model
+        /// <p>Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or canceling previously created executions, otherwise false.</p>
         pub fn is_concurrent(mut self, input: bool) -> Self {
             self.is_concurrent = Some(input);
             self
         }
-        #[allow(missing_docs)] // documentation missing in model
+        /// <p>Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or canceling previously created executions, otherwise false.</p>
         pub fn set_is_concurrent(mut self, input: std::option::Option<bool>) -> Self {
             self.is_concurrent = input;
             self
         }
-        /// Consumes the builder and constructs a [`Job`](crate::model::Job)
+        /// Consumes the builder and constructs a [`Job`](crate::model::Job).
         pub fn build(self) -> crate::model::Job {
             crate::model::Job {
                 job_arn: self.job_arn,
@@ -24908,7 +25577,7 @@ pub mod job {
     }
 }
 impl Job {
-    /// Creates a new builder-style object to manufacture [`Job`](crate::model::Job)
+    /// Creates a new builder-style object to manufacture [`Job`](crate::model::Job).
     pub fn builder() -> crate::model::job::Builder {
         crate::model::job::Builder::default()
     }
@@ -24919,22 +25588,31 @@ impl Job {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobProcessDetails {
     /// <p>The target devices to which the job execution is being rolled out. This value will be null after the job execution has finished rolling out to all the target devices.</p>
+    #[doc(hidden)]
     pub processing_targets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The number of things that cancelled the job.</p>
+    #[doc(hidden)]
     pub number_of_canceled_things: std::option::Option<i32>,
     /// <p>The number of things which successfully completed the job.</p>
+    #[doc(hidden)]
     pub number_of_succeeded_things: std::option::Option<i32>,
     /// <p>The number of things that failed executing the job.</p>
+    #[doc(hidden)]
     pub number_of_failed_things: std::option::Option<i32>,
     /// <p>The number of things that rejected the job.</p>
+    #[doc(hidden)]
     pub number_of_rejected_things: std::option::Option<i32>,
     /// <p>The number of things that are awaiting execution of the job.</p>
+    #[doc(hidden)]
     pub number_of_queued_things: std::option::Option<i32>,
     /// <p>The number of things currently executing the job.</p>
+    #[doc(hidden)]
     pub number_of_in_progress_things: std::option::Option<i32>,
     /// <p>The number of things that are no longer scheduled to execute the job because they have been deleted or have been removed from the group that was a target of the job.</p>
+    #[doc(hidden)]
     pub number_of_removed_things: std::option::Option<i32>,
     /// <p>The number of things whose job execution status is <code>TIMED_OUT</code>.</p>
+    #[doc(hidden)]
     pub number_of_timed_out_things: std::option::Option<i32>,
 }
 impl JobProcessDetails {
@@ -24999,11 +25677,10 @@ impl std::fmt::Debug for JobProcessDetails {
         formatter.finish()
     }
 }
-/// See [`JobProcessDetails`](crate::model::JobProcessDetails)
+/// See [`JobProcessDetails`](crate::model::JobProcessDetails).
 pub mod job_process_details {
 
-    /// A builder for [`JobProcessDetails`](crate::model::JobProcessDetails)
-    #[non_exhaustive]
+    /// A builder for [`JobProcessDetails`](crate::model::JobProcessDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) processing_targets: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -25116,7 +25793,7 @@ pub mod job_process_details {
             self.number_of_timed_out_things = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobProcessDetails`](crate::model::JobProcessDetails)
+        /// Consumes the builder and constructs a [`JobProcessDetails`](crate::model::JobProcessDetails).
         pub fn build(self) -> crate::model::JobProcessDetails {
             crate::model::JobProcessDetails {
                 processing_targets: self.processing_targets,
@@ -25133,7 +25810,7 @@ pub mod job_process_details {
     }
 }
 impl JobProcessDetails {
-    /// Creates a new builder-style object to manufacture [`JobProcessDetails`](crate::model::JobProcessDetails)
+    /// Creates a new builder-style object to manufacture [`JobProcessDetails`](crate::model::JobProcessDetails).
     pub fn builder() -> crate::model::job_process_details::Builder {
         crate::model::job_process_details::Builder::default()
     }
@@ -25262,10 +25939,13 @@ impl AsRef<str> for DomainType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerCertificateSummary {
     /// <p>The ARN of the server certificate.</p>
+    #[doc(hidden)]
     pub server_certificate_arn: std::option::Option<std::string::String>,
     /// <p>The status of the server certificate.</p>
+    #[doc(hidden)]
     pub server_certificate_status: std::option::Option<crate::model::ServerCertificateStatus>,
     /// <p>Details that explain the status of the server certificate.</p>
+    #[doc(hidden)]
     pub server_certificate_status_detail: std::option::Option<std::string::String>,
 }
 impl ServerCertificateSummary {
@@ -25296,11 +25976,10 @@ impl std::fmt::Debug for ServerCertificateSummary {
         formatter.finish()
     }
 }
-/// See [`ServerCertificateSummary`](crate::model::ServerCertificateSummary)
+/// See [`ServerCertificateSummary`](crate::model::ServerCertificateSummary).
 pub mod server_certificate_summary {
 
-    /// A builder for [`ServerCertificateSummary`](crate::model::ServerCertificateSummary)
-    #[non_exhaustive]
+    /// A builder for [`ServerCertificateSummary`](crate::model::ServerCertificateSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) server_certificate_arn: std::option::Option<std::string::String>,
@@ -25354,7 +26033,7 @@ pub mod server_certificate_summary {
             self.server_certificate_status_detail = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerCertificateSummary`](crate::model::ServerCertificateSummary)
+        /// Consumes the builder and constructs a [`ServerCertificateSummary`](crate::model::ServerCertificateSummary).
         pub fn build(self) -> crate::model::ServerCertificateSummary {
             crate::model::ServerCertificateSummary {
                 server_certificate_arn: self.server_certificate_arn,
@@ -25365,7 +26044,7 @@ pub mod server_certificate_summary {
     }
 }
 impl ServerCertificateSummary {
-    /// Creates a new builder-style object to manufacture [`ServerCertificateSummary`](crate::model::ServerCertificateSummary)
+    /// Creates a new builder-style object to manufacture [`ServerCertificateSummary`](crate::model::ServerCertificateSummary).
     pub fn builder() -> crate::model::server_certificate_summary::Builder {
         crate::model::server_certificate_summary::Builder::default()
     }
@@ -25431,25 +26110,35 @@ impl AsRef<str> for ServerCertificateStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuthorizerDescription {
     /// <p>The authorizer name.</p>
+    #[doc(hidden)]
     pub authorizer_name: std::option::Option<std::string::String>,
     /// <p>The authorizer ARN.</p>
+    #[doc(hidden)]
     pub authorizer_arn: std::option::Option<std::string::String>,
     /// <p>The authorizer's Lambda function ARN.</p>
+    #[doc(hidden)]
     pub authorizer_function_arn: std::option::Option<std::string::String>,
     /// <p>The key used to extract the token from the HTTP headers.</p>
+    #[doc(hidden)]
     pub token_key_name: std::option::Option<std::string::String>,
     /// <p>The public keys used to validate the token signature returned by your custom authentication service.</p>
+    #[doc(hidden)]
     pub token_signing_public_keys:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The status of the authorizer.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AuthorizerStatus>,
     /// <p>The UNIX timestamp of when the authorizer was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The UNIX timestamp of when the authorizer was last updated.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies whether IoT validates the token signature in an authorization request.</p>
+    #[doc(hidden)]
     pub signing_disabled: std::option::Option<bool>,
     /// <p>When <code>true</code>, the result from the authorizer’s Lambda function is cached for the time specified in <code>refreshAfterInSeconds</code>. The cached result is used while the device reuses the same HTTP connection.</p>
+    #[doc(hidden)]
     pub enable_caching_for_http: std::option::Option<bool>,
 }
 impl AuthorizerDescription {
@@ -25513,11 +26202,10 @@ impl std::fmt::Debug for AuthorizerDescription {
         formatter.finish()
     }
 }
-/// See [`AuthorizerDescription`](crate::model::AuthorizerDescription)
+/// See [`AuthorizerDescription`](crate::model::AuthorizerDescription).
 pub mod authorizer_description {
 
-    /// A builder for [`AuthorizerDescription`](crate::model::AuthorizerDescription)
-    #[non_exhaustive]
+    /// A builder for [`AuthorizerDescription`](crate::model::AuthorizerDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) authorizer_name: std::option::Option<std::string::String>,
@@ -25670,7 +26358,7 @@ pub mod authorizer_description {
             self.enable_caching_for_http = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthorizerDescription`](crate::model::AuthorizerDescription)
+        /// Consumes the builder and constructs a [`AuthorizerDescription`](crate::model::AuthorizerDescription).
         pub fn build(self) -> crate::model::AuthorizerDescription {
             crate::model::AuthorizerDescription {
                 authorizer_name: self.authorizer_name,
@@ -25688,7 +26376,7 @@ pub mod authorizer_description {
     }
 }
 impl AuthorizerDescription {
-    /// Creates a new builder-style object to manufacture [`AuthorizerDescription`](crate::model::AuthorizerDescription)
+    /// Creates a new builder-style object to manufacture [`AuthorizerDescription`](crate::model::AuthorizerDescription).
     pub fn builder() -> crate::model::authorizer_description::Builder {
         crate::model::authorizer_description::Builder::default()
     }
@@ -25699,32 +26387,49 @@ impl AuthorizerDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CertificateDescription {
     /// <p>The ARN of the certificate.</p>
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the certificate.</p>
+    #[doc(hidden)]
     pub certificate_id: std::option::Option<std::string::String>,
     /// <p>The certificate ID of the CA certificate used to sign this certificate.</p>
+    #[doc(hidden)]
     pub ca_certificate_id: std::option::Option<std::string::String>,
     /// <p>The status of the certificate.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CertificateStatus>,
     /// <p>The certificate data, in PEM format.</p>
+    #[doc(hidden)]
     pub certificate_pem: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services account that owns the certificate.</p>
+    #[doc(hidden)]
     pub owned_by: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services account of the previous owner of the certificate.</p>
+    #[doc(hidden)]
     pub previous_owned_by: std::option::Option<std::string::String>,
     /// <p>The date and time the certificate was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time the certificate was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The customer version of the certificate.</p>
+    #[doc(hidden)]
     pub customer_version: std::option::Option<i32>,
     /// <p>The transfer data.</p>
+    #[doc(hidden)]
     pub transfer_data: std::option::Option<crate::model::TransferData>,
     /// <p>The generation ID of the certificate.</p>
+    #[doc(hidden)]
     pub generation_id: std::option::Option<std::string::String>,
     /// <p>When the certificate is valid.</p>
+    #[doc(hidden)]
     pub validity: std::option::Option<crate::model::CertificateValidity>,
     /// <p>The mode of the certificate.</p>
+    /// <p> <code>DEFAULT</code>: A certificate in <code>DEFAULT</code> mode is either generated by Amazon Web Services IoT Core or registered with an issuer certificate authority (CA) in <code>DEFAULT</code> mode. Devices with certificates in <code>DEFAULT</code> mode aren't required to send the Server Name Indication (SNI) extension when connecting to Amazon Web Services IoT Core. However, to use features such as custom domains and VPC endpoints, we recommend that you use the SNI extension when connecting to Amazon Web Services IoT Core.</p>
+    /// <p> <code>SNI_ONLY</code>: A certificate in <code>SNI_ONLY</code> mode is registered without an issuer CA. Devices with certificates in <code>SNI_ONLY</code> mode must send the SNI extension when connecting to Amazon Web Services IoT Core. </p>
+    /// <p>For more information about the value for SNI extension, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/transport-security.html">Transport security in IoT</a>.</p>
+    #[doc(hidden)]
     pub certificate_mode: std::option::Option<crate::model::CertificateMode>,
 }
 impl CertificateDescription {
@@ -25781,6 +26486,9 @@ impl CertificateDescription {
         self.validity.as_ref()
     }
     /// <p>The mode of the certificate.</p>
+    /// <p> <code>DEFAULT</code>: A certificate in <code>DEFAULT</code> mode is either generated by Amazon Web Services IoT Core or registered with an issuer certificate authority (CA) in <code>DEFAULT</code> mode. Devices with certificates in <code>DEFAULT</code> mode aren't required to send the Server Name Indication (SNI) extension when connecting to Amazon Web Services IoT Core. However, to use features such as custom domains and VPC endpoints, we recommend that you use the SNI extension when connecting to Amazon Web Services IoT Core.</p>
+    /// <p> <code>SNI_ONLY</code>: A certificate in <code>SNI_ONLY</code> mode is registered without an issuer CA. Devices with certificates in <code>SNI_ONLY</code> mode must send the SNI extension when connecting to Amazon Web Services IoT Core. </p>
+    /// <p>For more information about the value for SNI extension, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/transport-security.html">Transport security in IoT</a>.</p>
     pub fn certificate_mode(&self) -> std::option::Option<&crate::model::CertificateMode> {
         self.certificate_mode.as_ref()
     }
@@ -25805,11 +26513,10 @@ impl std::fmt::Debug for CertificateDescription {
         formatter.finish()
     }
 }
-/// See [`CertificateDescription`](crate::model::CertificateDescription)
+/// See [`CertificateDescription`](crate::model::CertificateDescription).
 pub mod certificate_description {
 
-    /// A builder for [`CertificateDescription`](crate::model::CertificateDescription)
-    #[non_exhaustive]
+    /// A builder for [`CertificateDescription`](crate::model::CertificateDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -25992,11 +26699,17 @@ pub mod certificate_description {
             self
         }
         /// <p>The mode of the certificate.</p>
+        /// <p> <code>DEFAULT</code>: A certificate in <code>DEFAULT</code> mode is either generated by Amazon Web Services IoT Core or registered with an issuer certificate authority (CA) in <code>DEFAULT</code> mode. Devices with certificates in <code>DEFAULT</code> mode aren't required to send the Server Name Indication (SNI) extension when connecting to Amazon Web Services IoT Core. However, to use features such as custom domains and VPC endpoints, we recommend that you use the SNI extension when connecting to Amazon Web Services IoT Core.</p>
+        /// <p> <code>SNI_ONLY</code>: A certificate in <code>SNI_ONLY</code> mode is registered without an issuer CA. Devices with certificates in <code>SNI_ONLY</code> mode must send the SNI extension when connecting to Amazon Web Services IoT Core. </p>
+        /// <p>For more information about the value for SNI extension, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/transport-security.html">Transport security in IoT</a>.</p>
         pub fn certificate_mode(mut self, input: crate::model::CertificateMode) -> Self {
             self.certificate_mode = Some(input);
             self
         }
         /// <p>The mode of the certificate.</p>
+        /// <p> <code>DEFAULT</code>: A certificate in <code>DEFAULT</code> mode is either generated by Amazon Web Services IoT Core or registered with an issuer certificate authority (CA) in <code>DEFAULT</code> mode. Devices with certificates in <code>DEFAULT</code> mode aren't required to send the Server Name Indication (SNI) extension when connecting to Amazon Web Services IoT Core. However, to use features such as custom domains and VPC endpoints, we recommend that you use the SNI extension when connecting to Amazon Web Services IoT Core.</p>
+        /// <p> <code>SNI_ONLY</code>: A certificate in <code>SNI_ONLY</code> mode is registered without an issuer CA. Devices with certificates in <code>SNI_ONLY</code> mode must send the SNI extension when connecting to Amazon Web Services IoT Core. </p>
+        /// <p>For more information about the value for SNI extension, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/transport-security.html">Transport security in IoT</a>.</p>
         pub fn set_certificate_mode(
             mut self,
             input: std::option::Option<crate::model::CertificateMode>,
@@ -26004,7 +26717,7 @@ pub mod certificate_description {
             self.certificate_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`CertificateDescription`](crate::model::CertificateDescription)
+        /// Consumes the builder and constructs a [`CertificateDescription`](crate::model::CertificateDescription).
         pub fn build(self) -> crate::model::CertificateDescription {
             crate::model::CertificateDescription {
                 certificate_arn: self.certificate_arn,
@@ -26026,7 +26739,7 @@ pub mod certificate_description {
     }
 }
 impl CertificateDescription {
-    /// Creates a new builder-style object to manufacture [`CertificateDescription`](crate::model::CertificateDescription)
+    /// Creates a new builder-style object to manufacture [`CertificateDescription`](crate::model::CertificateDescription).
     pub fn builder() -> crate::model::certificate_description::Builder {
         crate::model::certificate_description::Builder::default()
     }
@@ -26037,8 +26750,10 @@ impl CertificateDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CertificateValidity {
     /// <p>The certificate is not valid before this date.</p>
+    #[doc(hidden)]
     pub not_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The certificate is not valid after this date.</p>
+    #[doc(hidden)]
     pub not_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CertificateValidity {
@@ -26059,11 +26774,10 @@ impl std::fmt::Debug for CertificateValidity {
         formatter.finish()
     }
 }
-/// See [`CertificateValidity`](crate::model::CertificateValidity)
+/// See [`CertificateValidity`](crate::model::CertificateValidity).
 pub mod certificate_validity {
 
-    /// A builder for [`CertificateValidity`](crate::model::CertificateValidity)
-    #[non_exhaustive]
+    /// A builder for [`CertificateValidity`](crate::model::CertificateValidity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) not_before: std::option::Option<aws_smithy_types::DateTime>,
@@ -26096,7 +26810,7 @@ pub mod certificate_validity {
             self.not_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`CertificateValidity`](crate::model::CertificateValidity)
+        /// Consumes the builder and constructs a [`CertificateValidity`](crate::model::CertificateValidity).
         pub fn build(self) -> crate::model::CertificateValidity {
             crate::model::CertificateValidity {
                 not_before: self.not_before,
@@ -26106,7 +26820,7 @@ pub mod certificate_validity {
     }
 }
 impl CertificateValidity {
-    /// Creates a new builder-style object to manufacture [`CertificateValidity`](crate::model::CertificateValidity)
+    /// Creates a new builder-style object to manufacture [`CertificateValidity`](crate::model::CertificateValidity).
     pub fn builder() -> crate::model::certificate_validity::Builder {
         crate::model::certificate_validity::Builder::default()
     }
@@ -26117,14 +26831,19 @@ impl CertificateValidity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TransferData {
     /// <p>The transfer message.</p>
+    #[doc(hidden)]
     pub transfer_message: std::option::Option<std::string::String>,
     /// <p>The reason why the transfer was rejected.</p>
+    #[doc(hidden)]
     pub reject_reason: std::option::Option<std::string::String>,
     /// <p>The date the transfer took place.</p>
+    #[doc(hidden)]
     pub transfer_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the transfer was accepted.</p>
+    #[doc(hidden)]
     pub accept_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the transfer was rejected.</p>
+    #[doc(hidden)]
     pub reject_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TransferData {
@@ -26160,11 +26879,10 @@ impl std::fmt::Debug for TransferData {
         formatter.finish()
     }
 }
-/// See [`TransferData`](crate::model::TransferData)
+/// See [`TransferData`](crate::model::TransferData).
 pub mod transfer_data {
 
-    /// A builder for [`TransferData`](crate::model::TransferData)
-    #[non_exhaustive]
+    /// A builder for [`TransferData`](crate::model::TransferData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transfer_message: std::option::Option<std::string::String>,
@@ -26239,7 +26957,7 @@ pub mod transfer_data {
             self.reject_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`TransferData`](crate::model::TransferData)
+        /// Consumes the builder and constructs a [`TransferData`](crate::model::TransferData).
         pub fn build(self) -> crate::model::TransferData {
             crate::model::TransferData {
                 transfer_message: self.transfer_message,
@@ -26252,7 +26970,7 @@ pub mod transfer_data {
     }
 }
 impl TransferData {
-    /// Creates a new builder-style object to manufacture [`TransferData`](crate::model::TransferData)
+    /// Creates a new builder-style object to manufacture [`TransferData`](crate::model::TransferData).
     pub fn builder() -> crate::model::transfer_data::Builder {
         crate::model::transfer_data::Builder::default()
     }
@@ -26263,27 +26981,42 @@ impl TransferData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CaCertificateDescription {
     /// <p>The CA certificate ARN.</p>
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// <p>The CA certificate ID.</p>
+    #[doc(hidden)]
     pub certificate_id: std::option::Option<std::string::String>,
     /// <p>The status of a CA certificate.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CaCertificateStatus>,
     /// <p>The CA certificate data, in PEM format.</p>
+    #[doc(hidden)]
     pub certificate_pem: std::option::Option<std::string::String>,
     /// <p>The owner of the CA certificate.</p>
+    #[doc(hidden)]
     pub owned_by: std::option::Option<std::string::String>,
     /// <p>The date the CA certificate was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Whether the CA certificate configured for auto registration of device certificates. Valid values are "ENABLE" and "DISABLE"</p>
+    #[doc(hidden)]
     pub auto_registration_status: std::option::Option<crate::model::AutoRegistrationStatus>,
     /// <p>The date the CA certificate was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The customer version of the CA certificate.</p>
+    #[doc(hidden)]
     pub customer_version: std::option::Option<i32>,
     /// <p>The generation ID of the CA certificate.</p>
+    #[doc(hidden)]
     pub generation_id: std::option::Option<std::string::String>,
     /// <p>When the CA certificate is valid.</p>
+    #[doc(hidden)]
     pub validity: std::option::Option<crate::model::CertificateValidity>,
+    /// <p>The mode of the CA. </p>
+    /// <p>All the device certificates that are registered using this CA will be registered in the same mode as the CA. For more information about certificate mode for device certificates, see <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_CertificateDescription.html#iot-Type-CertificateDescription-certificateMode">certificate mode</a>.</p>
+    #[doc(hidden)]
+    pub certificate_mode: std::option::Option<crate::model::CertificateMode>,
 }
 impl CaCertificateDescription {
     /// <p>The CA certificate ARN.</p>
@@ -26332,6 +27065,11 @@ impl CaCertificateDescription {
     pub fn validity(&self) -> std::option::Option<&crate::model::CertificateValidity> {
         self.validity.as_ref()
     }
+    /// <p>The mode of the CA. </p>
+    /// <p>All the device certificates that are registered using this CA will be registered in the same mode as the CA. For more information about certificate mode for device certificates, see <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_CertificateDescription.html#iot-Type-CertificateDescription-certificateMode">certificate mode</a>.</p>
+    pub fn certificate_mode(&self) -> std::option::Option<&crate::model::CertificateMode> {
+        self.certificate_mode.as_ref()
+    }
 }
 impl std::fmt::Debug for CaCertificateDescription {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -26347,14 +27085,14 @@ impl std::fmt::Debug for CaCertificateDescription {
         formatter.field("customer_version", &self.customer_version);
         formatter.field("generation_id", &self.generation_id);
         formatter.field("validity", &self.validity);
+        formatter.field("certificate_mode", &self.certificate_mode);
         formatter.finish()
     }
 }
-/// See [`CaCertificateDescription`](crate::model::CaCertificateDescription)
+/// See [`CaCertificateDescription`](crate::model::CaCertificateDescription).
 pub mod ca_certificate_description {
 
-    /// A builder for [`CaCertificateDescription`](crate::model::CaCertificateDescription)
-    #[non_exhaustive]
+    /// A builder for [`CaCertificateDescription`](crate::model::CaCertificateDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -26369,6 +27107,7 @@ pub mod ca_certificate_description {
         pub(crate) customer_version: std::option::Option<i32>,
         pub(crate) generation_id: std::option::Option<std::string::String>,
         pub(crate) validity: std::option::Option<crate::model::CertificateValidity>,
+        pub(crate) certificate_mode: std::option::Option<crate::model::CertificateMode>,
     }
     impl Builder {
         /// <p>The CA certificate ARN.</p>
@@ -26511,7 +27250,22 @@ pub mod ca_certificate_description {
             self.validity = input;
             self
         }
-        /// Consumes the builder and constructs a [`CaCertificateDescription`](crate::model::CaCertificateDescription)
+        /// <p>The mode of the CA. </p>
+        /// <p>All the device certificates that are registered using this CA will be registered in the same mode as the CA. For more information about certificate mode for device certificates, see <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_CertificateDescription.html#iot-Type-CertificateDescription-certificateMode">certificate mode</a>.</p>
+        pub fn certificate_mode(mut self, input: crate::model::CertificateMode) -> Self {
+            self.certificate_mode = Some(input);
+            self
+        }
+        /// <p>The mode of the CA. </p>
+        /// <p>All the device certificates that are registered using this CA will be registered in the same mode as the CA. For more information about certificate mode for device certificates, see <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_CertificateDescription.html#iot-Type-CertificateDescription-certificateMode">certificate mode</a>.</p>
+        pub fn set_certificate_mode(
+            mut self,
+            input: std::option::Option<crate::model::CertificateMode>,
+        ) -> Self {
+            self.certificate_mode = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CaCertificateDescription`](crate::model::CaCertificateDescription).
         pub fn build(self) -> crate::model::CaCertificateDescription {
             crate::model::CaCertificateDescription {
                 certificate_arn: self.certificate_arn,
@@ -26525,12 +27279,13 @@ pub mod ca_certificate_description {
                 customer_version: self.customer_version,
                 generation_id: self.generation_id,
                 validity: self.validity,
+                certificate_mode: self.certificate_mode,
             }
         }
     }
 }
 impl CaCertificateDescription {
-    /// Creates a new builder-style object to manufacture [`CaCertificateDescription`](crate::model::CaCertificateDescription)
+    /// Creates a new builder-style object to manufacture [`CaCertificateDescription`](crate::model::CaCertificateDescription).
     pub fn builder() -> crate::model::ca_certificate_description::Builder {
         crate::model::ca_certificate_description::Builder::default()
     }
@@ -26541,6 +27296,7 @@ impl CaCertificateDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BillingGroupMetadata {
     /// <p>The date the billing group was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl BillingGroupMetadata {
@@ -26556,11 +27312,10 @@ impl std::fmt::Debug for BillingGroupMetadata {
         formatter.finish()
     }
 }
-/// See [`BillingGroupMetadata`](crate::model::BillingGroupMetadata)
+/// See [`BillingGroupMetadata`](crate::model::BillingGroupMetadata).
 pub mod billing_group_metadata {
 
-    /// A builder for [`BillingGroupMetadata`](crate::model::BillingGroupMetadata)
-    #[non_exhaustive]
+    /// A builder for [`BillingGroupMetadata`](crate::model::BillingGroupMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -26579,7 +27334,7 @@ pub mod billing_group_metadata {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`BillingGroupMetadata`](crate::model::BillingGroupMetadata)
+        /// Consumes the builder and constructs a [`BillingGroupMetadata`](crate::model::BillingGroupMetadata).
         pub fn build(self) -> crate::model::BillingGroupMetadata {
             crate::model::BillingGroupMetadata {
                 creation_date: self.creation_date,
@@ -26588,7 +27343,7 @@ pub mod billing_group_metadata {
     }
 }
 impl BillingGroupMetadata {
-    /// Creates a new builder-style object to manufacture [`BillingGroupMetadata`](crate::model::BillingGroupMetadata)
+    /// Creates a new builder-style object to manufacture [`BillingGroupMetadata`](crate::model::BillingGroupMetadata).
     pub fn builder() -> crate::model::billing_group_metadata::Builder {
         crate::model::billing_group_metadata::Builder::default()
     }
@@ -26599,18 +27354,25 @@ impl BillingGroupMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuditCheckDetails {
     /// <p>The completion status of this check. One of "IN_PROGRESS", "WAITING_FOR_DATA_COLLECTION", "CANCELED", "COMPLETED_COMPLIANT", "COMPLETED_NON_COMPLIANT", or "FAILED".</p>
+    #[doc(hidden)]
     pub check_run_status: std::option::Option<crate::model::AuditCheckRunStatus>,
     /// <p>True if the check is complete and found all resources compliant.</p>
+    #[doc(hidden)]
     pub check_compliant: std::option::Option<bool>,
     /// <p>The number of resources on which the check was performed.</p>
+    #[doc(hidden)]
     pub total_resources_count: std::option::Option<i64>,
     /// <p>The number of resources that were found noncompliant during the check.</p>
+    #[doc(hidden)]
     pub non_compliant_resources_count: std::option::Option<i64>,
     /// <p> Describes how many of the non-compliant resources created during the evaluation of an audit check were marked as suppressed. </p>
+    #[doc(hidden)]
     pub suppressed_non_compliant_resources_count: std::option::Option<i64>,
     /// <p>The code of any error encountered when this check is performed during this audit. One of "INSUFFICIENT_PERMISSIONS" or "AUDIT_CHECK_DISABLED".</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The message associated with any error encountered when this check is performed during this audit.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl AuditCheckDetails {
@@ -26662,11 +27424,10 @@ impl std::fmt::Debug for AuditCheckDetails {
         formatter.finish()
     }
 }
-/// See [`AuditCheckDetails`](crate::model::AuditCheckDetails)
+/// See [`AuditCheckDetails`](crate::model::AuditCheckDetails).
 pub mod audit_check_details {
 
-    /// A builder for [`AuditCheckDetails`](crate::model::AuditCheckDetails)
-    #[non_exhaustive]
+    /// A builder for [`AuditCheckDetails`](crate::model::AuditCheckDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) check_run_status: std::option::Option<crate::model::AuditCheckRunStatus>,
@@ -26757,7 +27518,7 @@ pub mod audit_check_details {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuditCheckDetails`](crate::model::AuditCheckDetails)
+        /// Consumes the builder and constructs a [`AuditCheckDetails`](crate::model::AuditCheckDetails).
         pub fn build(self) -> crate::model::AuditCheckDetails {
             crate::model::AuditCheckDetails {
                 check_run_status: self.check_run_status,
@@ -26773,7 +27534,7 @@ pub mod audit_check_details {
     }
 }
 impl AuditCheckDetails {
-    /// Creates a new builder-style object to manufacture [`AuditCheckDetails`](crate::model::AuditCheckDetails)
+    /// Creates a new builder-style object to manufacture [`AuditCheckDetails`](crate::model::AuditCheckDetails).
     pub fn builder() -> crate::model::audit_check_details::Builder {
         crate::model::audit_check_details::Builder::default()
     }
@@ -26862,18 +27623,25 @@ impl AsRef<str> for AuditCheckRunStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaskStatistics {
     /// <p>The number of checks in this audit.</p>
+    #[doc(hidden)]
     pub total_checks: std::option::Option<i32>,
     /// <p>The number of checks in progress.</p>
+    #[doc(hidden)]
     pub in_progress_checks: std::option::Option<i32>,
     /// <p>The number of checks waiting for data collection.</p>
+    #[doc(hidden)]
     pub waiting_for_data_collection_checks: std::option::Option<i32>,
     /// <p>The number of checks that found compliant resources.</p>
+    #[doc(hidden)]
     pub compliant_checks: std::option::Option<i32>,
     /// <p>The number of checks that found noncompliant resources.</p>
+    #[doc(hidden)]
     pub non_compliant_checks: std::option::Option<i32>,
     /// <p>The number of checks.</p>
+    #[doc(hidden)]
     pub failed_checks: std::option::Option<i32>,
     /// <p>The number of checks that did not run because the audit was canceled.</p>
+    #[doc(hidden)]
     pub canceled_checks: std::option::Option<i32>,
 }
 impl TaskStatistics {
@@ -26922,11 +27690,10 @@ impl std::fmt::Debug for TaskStatistics {
         formatter.finish()
     }
 }
-/// See [`TaskStatistics`](crate::model::TaskStatistics)
+/// See [`TaskStatistics`](crate::model::TaskStatistics).
 pub mod task_statistics {
 
-    /// A builder for [`TaskStatistics`](crate::model::TaskStatistics)
-    #[non_exhaustive]
+    /// A builder for [`TaskStatistics`](crate::model::TaskStatistics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_checks: std::option::Option<i32>,
@@ -27011,7 +27778,7 @@ pub mod task_statistics {
             self.canceled_checks = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaskStatistics`](crate::model::TaskStatistics)
+        /// Consumes the builder and constructs a [`TaskStatistics`](crate::model::TaskStatistics).
         pub fn build(self) -> crate::model::TaskStatistics {
             crate::model::TaskStatistics {
                 total_checks: self.total_checks,
@@ -27026,7 +27793,7 @@ pub mod task_statistics {
     }
 }
 impl TaskStatistics {
-    /// Creates a new builder-style object to manufacture [`TaskStatistics`](crate::model::TaskStatistics)
+    /// Creates a new builder-style object to manufacture [`TaskStatistics`](crate::model::TaskStatistics).
     pub fn builder() -> crate::model::task_statistics::Builder {
         crate::model::task_statistics::Builder::default()
     }
@@ -27037,14 +27804,19 @@ impl TaskStatistics {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaskStatisticsForAuditCheck {
     /// <p>The total number of findings to which a task is being applied.</p>
+    #[doc(hidden)]
     pub total_findings_count: std::option::Option<i64>,
     /// <p>The number of findings for which at least one of the actions failed when applied.</p>
+    #[doc(hidden)]
     pub failed_findings_count: std::option::Option<i64>,
     /// <p>The number of findings for which all mitigation actions succeeded when applied.</p>
+    #[doc(hidden)]
     pub succeeded_findings_count: std::option::Option<i64>,
     /// <p>The number of findings skipped because of filter conditions provided in the parameters to the command.</p>
+    #[doc(hidden)]
     pub skipped_findings_count: std::option::Option<i64>,
     /// <p>The number of findings to which the mitigation action task was canceled when applied.</p>
+    #[doc(hidden)]
     pub canceled_findings_count: std::option::Option<i64>,
 }
 impl TaskStatisticsForAuditCheck {
@@ -27080,11 +27852,10 @@ impl std::fmt::Debug for TaskStatisticsForAuditCheck {
         formatter.finish()
     }
 }
-/// See [`TaskStatisticsForAuditCheck`](crate::model::TaskStatisticsForAuditCheck)
+/// See [`TaskStatisticsForAuditCheck`](crate::model::TaskStatisticsForAuditCheck).
 pub mod task_statistics_for_audit_check {
 
-    /// A builder for [`TaskStatisticsForAuditCheck`](crate::model::TaskStatisticsForAuditCheck)
-    #[non_exhaustive]
+    /// A builder for [`TaskStatisticsForAuditCheck`](crate::model::TaskStatisticsForAuditCheck).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_findings_count: std::option::Option<i64>,
@@ -27144,7 +27915,7 @@ pub mod task_statistics_for_audit_check {
             self.canceled_findings_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaskStatisticsForAuditCheck`](crate::model::TaskStatisticsForAuditCheck)
+        /// Consumes the builder and constructs a [`TaskStatisticsForAuditCheck`](crate::model::TaskStatisticsForAuditCheck).
         pub fn build(self) -> crate::model::TaskStatisticsForAuditCheck {
             crate::model::TaskStatisticsForAuditCheck {
                 total_findings_count: self.total_findings_count,
@@ -27157,7 +27928,7 @@ pub mod task_statistics_for_audit_check {
     }
 }
 impl TaskStatisticsForAuditCheck {
-    /// Creates a new builder-style object to manufacture [`TaskStatisticsForAuditCheck`](crate::model::TaskStatisticsForAuditCheck)
+    /// Creates a new builder-style object to manufacture [`TaskStatisticsForAuditCheck`](crate::model::TaskStatisticsForAuditCheck).
     pub fn builder() -> crate::model::task_statistics_for_audit_check::Builder {
         crate::model::task_statistics_for_audit_check::Builder::default()
     }
@@ -27168,8 +27939,10 @@ impl TaskStatisticsForAuditCheck {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TopicRuleDestinationConfiguration {
     /// <p>Configuration of the HTTP URL.</p>
+    #[doc(hidden)]
     pub http_url_configuration: std::option::Option<crate::model::HttpUrlDestinationConfiguration>,
     /// <p>Configuration of the virtual private cloud (VPC) connection.</p>
+    #[doc(hidden)]
     pub vpc_configuration: std::option::Option<crate::model::VpcDestinationConfiguration>,
 }
 impl TopicRuleDestinationConfiguration {
@@ -27194,11 +27967,10 @@ impl std::fmt::Debug for TopicRuleDestinationConfiguration {
         formatter.finish()
     }
 }
-/// See [`TopicRuleDestinationConfiguration`](crate::model::TopicRuleDestinationConfiguration)
+/// See [`TopicRuleDestinationConfiguration`](crate::model::TopicRuleDestinationConfiguration).
 pub mod topic_rule_destination_configuration {
 
-    /// A builder for [`TopicRuleDestinationConfiguration`](crate::model::TopicRuleDestinationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`TopicRuleDestinationConfiguration`](crate::model::TopicRuleDestinationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) http_url_configuration:
@@ -27239,7 +28011,7 @@ pub mod topic_rule_destination_configuration {
             self.vpc_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`TopicRuleDestinationConfiguration`](crate::model::TopicRuleDestinationConfiguration)
+        /// Consumes the builder and constructs a [`TopicRuleDestinationConfiguration`](crate::model::TopicRuleDestinationConfiguration).
         pub fn build(self) -> crate::model::TopicRuleDestinationConfiguration {
             crate::model::TopicRuleDestinationConfiguration {
                 http_url_configuration: self.http_url_configuration,
@@ -27249,7 +28021,7 @@ pub mod topic_rule_destination_configuration {
     }
 }
 impl TopicRuleDestinationConfiguration {
-    /// Creates a new builder-style object to manufacture [`TopicRuleDestinationConfiguration`](crate::model::TopicRuleDestinationConfiguration)
+    /// Creates a new builder-style object to manufacture [`TopicRuleDestinationConfiguration`](crate::model::TopicRuleDestinationConfiguration).
     pub fn builder() -> crate::model::topic_rule_destination_configuration::Builder {
         crate::model::topic_rule_destination_configuration::Builder::default()
     }
@@ -27260,12 +28032,16 @@ impl TopicRuleDestinationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcDestinationConfiguration {
     /// <p>The subnet IDs of the VPC destination.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The security groups of the VPC destination.</p>
+    #[doc(hidden)]
     pub security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ID of the VPC.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>The ARN of a role that has permission to create and attach to elastic network interfaces (ENIs).</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl VpcDestinationConfiguration {
@@ -27296,11 +28072,10 @@ impl std::fmt::Debug for VpcDestinationConfiguration {
         formatter.finish()
     }
 }
-/// See [`VpcDestinationConfiguration`](crate::model::VpcDestinationConfiguration)
+/// See [`VpcDestinationConfiguration`](crate::model::VpcDestinationConfiguration).
 pub mod vpc_destination_configuration {
 
-    /// A builder for [`VpcDestinationConfiguration`](crate::model::VpcDestinationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`VpcDestinationConfiguration`](crate::model::VpcDestinationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -27367,7 +28142,7 @@ pub mod vpc_destination_configuration {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcDestinationConfiguration`](crate::model::VpcDestinationConfiguration)
+        /// Consumes the builder and constructs a [`VpcDestinationConfiguration`](crate::model::VpcDestinationConfiguration).
         pub fn build(self) -> crate::model::VpcDestinationConfiguration {
             crate::model::VpcDestinationConfiguration {
                 subnet_ids: self.subnet_ids,
@@ -27379,7 +28154,7 @@ pub mod vpc_destination_configuration {
     }
 }
 impl VpcDestinationConfiguration {
-    /// Creates a new builder-style object to manufacture [`VpcDestinationConfiguration`](crate::model::VpcDestinationConfiguration)
+    /// Creates a new builder-style object to manufacture [`VpcDestinationConfiguration`](crate::model::VpcDestinationConfiguration).
     pub fn builder() -> crate::model::vpc_destination_configuration::Builder {
         crate::model::vpc_destination_configuration::Builder::default()
     }
@@ -27390,6 +28165,7 @@ impl VpcDestinationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpUrlDestinationConfiguration {
     /// <p>The URL IoT uses to confirm ownership of or access to the topic rule destination URL.</p>
+    #[doc(hidden)]
     pub confirmation_url: std::option::Option<std::string::String>,
 }
 impl HttpUrlDestinationConfiguration {
@@ -27405,11 +28181,10 @@ impl std::fmt::Debug for HttpUrlDestinationConfiguration {
         formatter.finish()
     }
 }
-/// See [`HttpUrlDestinationConfiguration`](crate::model::HttpUrlDestinationConfiguration)
+/// See [`HttpUrlDestinationConfiguration`](crate::model::HttpUrlDestinationConfiguration).
 pub mod http_url_destination_configuration {
 
-    /// A builder for [`HttpUrlDestinationConfiguration`](crate::model::HttpUrlDestinationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`HttpUrlDestinationConfiguration`](crate::model::HttpUrlDestinationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) confirmation_url: std::option::Option<std::string::String>,
@@ -27428,7 +28203,7 @@ pub mod http_url_destination_configuration {
             self.confirmation_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpUrlDestinationConfiguration`](crate::model::HttpUrlDestinationConfiguration)
+        /// Consumes the builder and constructs a [`HttpUrlDestinationConfiguration`](crate::model::HttpUrlDestinationConfiguration).
         pub fn build(self) -> crate::model::HttpUrlDestinationConfiguration {
             crate::model::HttpUrlDestinationConfiguration {
                 confirmation_url: self.confirmation_url,
@@ -27437,7 +28212,7 @@ pub mod http_url_destination_configuration {
     }
 }
 impl HttpUrlDestinationConfiguration {
-    /// Creates a new builder-style object to manufacture [`HttpUrlDestinationConfiguration`](crate::model::HttpUrlDestinationConfiguration)
+    /// Creates a new builder-style object to manufacture [`HttpUrlDestinationConfiguration`](crate::model::HttpUrlDestinationConfiguration).
     pub fn builder() -> crate::model::http_url_destination_configuration::Builder {
         crate::model::http_url_destination_configuration::Builder::default()
     }
@@ -27448,8 +28223,10 @@ impl HttpUrlDestinationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyPair {
     /// <p>The public key.</p>
+    #[doc(hidden)]
     pub public_key: std::option::Option<std::string::String>,
     /// <p>The private key.</p>
+    #[doc(hidden)]
     pub private_key: std::option::Option<std::string::String>,
 }
 impl KeyPair {
@@ -27470,11 +28247,10 @@ impl std::fmt::Debug for KeyPair {
         formatter.finish()
     }
 }
-/// See [`KeyPair`](crate::model::KeyPair)
+/// See [`KeyPair`](crate::model::KeyPair).
 pub mod key_pair {
 
-    /// A builder for [`KeyPair`](crate::model::KeyPair)
-    #[non_exhaustive]
+    /// A builder for [`KeyPair`](crate::model::KeyPair).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) public_key: std::option::Option<std::string::String>,
@@ -27501,7 +28277,7 @@ pub mod key_pair {
             self.private_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyPair`](crate::model::KeyPair)
+        /// Consumes the builder and constructs a [`KeyPair`](crate::model::KeyPair).
         pub fn build(self) -> crate::model::KeyPair {
             crate::model::KeyPair {
                 public_key: self.public_key,
@@ -27511,7 +28287,7 @@ pub mod key_pair {
     }
 }
 impl KeyPair {
-    /// Creates a new builder-style object to manufacture [`KeyPair`](crate::model::KeyPair)
+    /// Creates a new builder-style object to manufacture [`KeyPair`](crate::model::KeyPair).
     pub fn builder() -> crate::model::key_pair::Builder {
         crate::model::key_pair::Builder::default()
     }
@@ -27522,6 +28298,7 @@ impl KeyPair {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AwsJobTimeoutConfig {
     /// <p>Specifies the amount of time, in minutes, this device has to finish execution of this job. The timeout interval can be anywhere between 1 minute and 7 days (1 to 10080 minutes). The in progress timer can't be updated and will apply to all job executions for the job. Whenever a job execution remains in the IN_PROGRESS status for longer than this interval, the job execution will fail and switch to the terminal <code>TIMED_OUT</code> status.</p>
+    #[doc(hidden)]
     pub in_progress_timeout_in_minutes: std::option::Option<i64>,
 }
 impl AwsJobTimeoutConfig {
@@ -27540,11 +28317,10 @@ impl std::fmt::Debug for AwsJobTimeoutConfig {
         formatter.finish()
     }
 }
-/// See [`AwsJobTimeoutConfig`](crate::model::AwsJobTimeoutConfig)
+/// See [`AwsJobTimeoutConfig`](crate::model::AwsJobTimeoutConfig).
 pub mod aws_job_timeout_config {
 
-    /// A builder for [`AwsJobTimeoutConfig`](crate::model::AwsJobTimeoutConfig)
-    #[non_exhaustive]
+    /// A builder for [`AwsJobTimeoutConfig`](crate::model::AwsJobTimeoutConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) in_progress_timeout_in_minutes: std::option::Option<i64>,
@@ -27563,7 +28339,7 @@ pub mod aws_job_timeout_config {
             self.in_progress_timeout_in_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`AwsJobTimeoutConfig`](crate::model::AwsJobTimeoutConfig)
+        /// Consumes the builder and constructs a [`AwsJobTimeoutConfig`](crate::model::AwsJobTimeoutConfig).
         pub fn build(self) -> crate::model::AwsJobTimeoutConfig {
             crate::model::AwsJobTimeoutConfig {
                 in_progress_timeout_in_minutes: self.in_progress_timeout_in_minutes,
@@ -27572,7 +28348,7 @@ pub mod aws_job_timeout_config {
     }
 }
 impl AwsJobTimeoutConfig {
-    /// Creates a new builder-style object to manufacture [`AwsJobTimeoutConfig`](crate::model::AwsJobTimeoutConfig)
+    /// Creates a new builder-style object to manufacture [`AwsJobTimeoutConfig`](crate::model::AwsJobTimeoutConfig).
     pub fn builder() -> crate::model::aws_job_timeout_config::Builder {
         crate::model::aws_job_timeout_config::Builder::default()
     }
@@ -27583,6 +28359,7 @@ impl AwsJobTimeoutConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AwsJobAbortConfig {
     /// <p>The list of criteria that determine when and how to abort the job.</p>
+    #[doc(hidden)]
     pub abort_criteria_list: std::option::Option<std::vec::Vec<crate::model::AwsJobAbortCriteria>>,
 }
 impl AwsJobAbortConfig {
@@ -27598,11 +28375,10 @@ impl std::fmt::Debug for AwsJobAbortConfig {
         formatter.finish()
     }
 }
-/// See [`AwsJobAbortConfig`](crate::model::AwsJobAbortConfig)
+/// See [`AwsJobAbortConfig`](crate::model::AwsJobAbortConfig).
 pub mod aws_job_abort_config {
 
-    /// A builder for [`AwsJobAbortConfig`](crate::model::AwsJobAbortConfig)
-    #[non_exhaustive]
+    /// A builder for [`AwsJobAbortConfig`](crate::model::AwsJobAbortConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) abort_criteria_list:
@@ -27628,7 +28404,7 @@ pub mod aws_job_abort_config {
             self.abort_criteria_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`AwsJobAbortConfig`](crate::model::AwsJobAbortConfig)
+        /// Consumes the builder and constructs a [`AwsJobAbortConfig`](crate::model::AwsJobAbortConfig).
         pub fn build(self) -> crate::model::AwsJobAbortConfig {
             crate::model::AwsJobAbortConfig {
                 abort_criteria_list: self.abort_criteria_list,
@@ -27637,7 +28413,7 @@ pub mod aws_job_abort_config {
     }
 }
 impl AwsJobAbortConfig {
-    /// Creates a new builder-style object to manufacture [`AwsJobAbortConfig`](crate::model::AwsJobAbortConfig)
+    /// Creates a new builder-style object to manufacture [`AwsJobAbortConfig`](crate::model::AwsJobAbortConfig).
     pub fn builder() -> crate::model::aws_job_abort_config::Builder {
         crate::model::aws_job_abort_config::Builder::default()
     }
@@ -27648,13 +28424,17 @@ impl AwsJobAbortConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AwsJobAbortCriteria {
     /// <p>The type of job execution failures that can initiate a job abort.</p>
+    #[doc(hidden)]
     pub failure_type: std::option::Option<crate::model::AwsJobAbortCriteriaFailureType>,
     /// <p>The type of job action to take to initiate the job abort.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::AwsJobAbortCriteriaAbortAction>,
     /// <p>The minimum percentage of job execution failures that must occur to initiate the job abort.</p>
     /// <p>Amazon Web Services IoT Core supports up to two digits after the decimal (for example, 10.9 and 10.99, but not 10.999).</p>
+    #[doc(hidden)]
     pub threshold_percentage: std::option::Option<f64>,
     /// <p>The minimum number of things which must receive job execution notifications before the job can be aborted.</p>
+    #[doc(hidden)]
     pub min_number_of_executed_things: std::option::Option<i32>,
 }
 impl AwsJobAbortCriteria {
@@ -27691,11 +28471,10 @@ impl std::fmt::Debug for AwsJobAbortCriteria {
         formatter.finish()
     }
 }
-/// See [`AwsJobAbortCriteria`](crate::model::AwsJobAbortCriteria)
+/// See [`AwsJobAbortCriteria`](crate::model::AwsJobAbortCriteria).
 pub mod aws_job_abort_criteria {
 
-    /// A builder for [`AwsJobAbortCriteria`](crate::model::AwsJobAbortCriteria)
-    #[non_exhaustive]
+    /// A builder for [`AwsJobAbortCriteria`](crate::model::AwsJobAbortCriteria).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failure_type: std::option::Option<crate::model::AwsJobAbortCriteriaFailureType>,
@@ -27755,7 +28534,7 @@ pub mod aws_job_abort_criteria {
             self.min_number_of_executed_things = input;
             self
         }
-        /// Consumes the builder and constructs a [`AwsJobAbortCriteria`](crate::model::AwsJobAbortCriteria)
+        /// Consumes the builder and constructs a [`AwsJobAbortCriteria`](crate::model::AwsJobAbortCriteria).
         pub fn build(self) -> crate::model::AwsJobAbortCriteria {
             crate::model::AwsJobAbortCriteria {
                 failure_type: self.failure_type,
@@ -27767,7 +28546,7 @@ pub mod aws_job_abort_criteria {
     }
 }
 impl AwsJobAbortCriteria {
-    /// Creates a new builder-style object to manufacture [`AwsJobAbortCriteria`](crate::model::AwsJobAbortCriteria)
+    /// Creates a new builder-style object to manufacture [`AwsJobAbortCriteria`](crate::model::AwsJobAbortCriteria).
     pub fn builder() -> crate::model::aws_job_abort_criteria::Builder {
         crate::model::aws_job_abort_criteria::Builder::default()
     }

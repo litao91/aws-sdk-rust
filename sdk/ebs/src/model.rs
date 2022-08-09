@@ -348,8 +348,10 @@ impl AsRef<str> for AccessDeniedExceptionReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key of the tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -370,11 +372,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -401,7 +402,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -411,7 +412,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -532,8 +533,10 @@ impl AsRef<str> for ChecksumAlgorithm {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Block {
     /// <p>The block index.</p>
+    #[doc(hidden)]
     pub block_index: std::option::Option<i32>,
     /// <p>The block token for the block index.</p>
+    #[doc(hidden)]
     pub block_token: std::option::Option<std::string::String>,
 }
 impl Block {
@@ -554,11 +557,10 @@ impl std::fmt::Debug for Block {
         formatter.finish()
     }
 }
-/// See [`Block`](crate::model::Block)
+/// See [`Block`](crate::model::Block).
 pub mod block {
 
-    /// A builder for [`Block`](crate::model::Block)
-    #[non_exhaustive]
+    /// A builder for [`Block`](crate::model::Block).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) block_index: std::option::Option<i32>,
@@ -585,7 +587,7 @@ pub mod block {
             self.block_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`Block`](crate::model::Block)
+        /// Consumes the builder and constructs a [`Block`](crate::model::Block).
         pub fn build(self) -> crate::model::Block {
             crate::model::Block {
                 block_index: self.block_index,
@@ -595,7 +597,7 @@ pub mod block {
     }
 }
 impl Block {
-    /// Creates a new builder-style object to manufacture [`Block`](crate::model::Block)
+    /// Creates a new builder-style object to manufacture [`Block`](crate::model::Block).
     pub fn builder() -> crate::model::block::Builder {
         crate::model::block::Builder::default()
     }
@@ -606,10 +608,13 @@ impl Block {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChangedBlock {
     /// <p>The block index.</p>
+    #[doc(hidden)]
     pub block_index: std::option::Option<i32>,
     /// <p>The block token for the block index of the <code>FirstSnapshotId</code> specified in the <code>ListChangedBlocks</code> operation. This value is absent if the first snapshot does not have the changed block that is on the second snapshot.</p>
+    #[doc(hidden)]
     pub first_block_token: std::option::Option<std::string::String>,
     /// <p>The block token for the block index of the <code>SecondSnapshotId</code> specified in the <code>ListChangedBlocks</code> operation.</p>
+    #[doc(hidden)]
     pub second_block_token: std::option::Option<std::string::String>,
 }
 impl ChangedBlock {
@@ -635,11 +640,10 @@ impl std::fmt::Debug for ChangedBlock {
         formatter.finish()
     }
 }
-/// See [`ChangedBlock`](crate::model::ChangedBlock)
+/// See [`ChangedBlock`](crate::model::ChangedBlock).
 pub mod changed_block {
 
-    /// A builder for [`ChangedBlock`](crate::model::ChangedBlock)
-    #[non_exhaustive]
+    /// A builder for [`ChangedBlock`](crate::model::ChangedBlock).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) block_index: std::option::Option<i32>,
@@ -683,7 +687,7 @@ pub mod changed_block {
             self.second_block_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangedBlock`](crate::model::ChangedBlock)
+        /// Consumes the builder and constructs a [`ChangedBlock`](crate::model::ChangedBlock).
         pub fn build(self) -> crate::model::ChangedBlock {
             crate::model::ChangedBlock {
                 block_index: self.block_index,
@@ -694,7 +698,7 @@ pub mod changed_block {
     }
 }
 impl ChangedBlock {
-    /// Creates a new builder-style object to manufacture [`ChangedBlock`](crate::model::ChangedBlock)
+    /// Creates a new builder-style object to manufacture [`ChangedBlock`](crate::model::ChangedBlock).
     pub fn builder() -> crate::model::changed_block::Builder {
         crate::model::changed_block::Builder::default()
     }

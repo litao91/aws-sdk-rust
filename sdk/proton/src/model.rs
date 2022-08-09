@@ -5,16 +5,22 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TemplateSyncConfig {
     /// <p>The template name.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The template type.</p>
+    #[doc(hidden)]
     pub template_type: std::option::Option<crate::model::TemplateType>,
     /// <p>The repository provider.</p>
+    #[doc(hidden)]
     pub repository_provider: std::option::Option<crate::model::RepositoryProvider>,
     /// <p>The name of the repository, for example <code>myrepos/myrepo</code>.</p>
+    #[doc(hidden)]
     pub repository_name: std::option::Option<std::string::String>,
     /// <p>The repository branch.</p>
+    #[doc(hidden)]
     pub branch: std::option::Option<std::string::String>,
     /// <p>A subdirectory path to your template bundle version.</p>
+    #[doc(hidden)]
     pub subdirectory: std::option::Option<std::string::String>,
 }
 impl TemplateSyncConfig {
@@ -55,11 +61,10 @@ impl std::fmt::Debug for TemplateSyncConfig {
         formatter.finish()
     }
 }
-/// See [`TemplateSyncConfig`](crate::model::TemplateSyncConfig)
+/// See [`TemplateSyncConfig`](crate::model::TemplateSyncConfig).
 pub mod template_sync_config {
 
-    /// A builder for [`TemplateSyncConfig`](crate::model::TemplateSyncConfig)
-    #[non_exhaustive]
+    /// A builder for [`TemplateSyncConfig`](crate::model::TemplateSyncConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_name: std::option::Option<std::string::String>,
@@ -142,7 +147,7 @@ pub mod template_sync_config {
             self.subdirectory = input;
             self
         }
-        /// Consumes the builder and constructs a [`TemplateSyncConfig`](crate::model::TemplateSyncConfig)
+        /// Consumes the builder and constructs a [`TemplateSyncConfig`](crate::model::TemplateSyncConfig).
         pub fn build(self) -> crate::model::TemplateSyncConfig {
             crate::model::TemplateSyncConfig {
                 template_name: self.template_name,
@@ -156,7 +161,7 @@ pub mod template_sync_config {
     }
 }
 impl TemplateSyncConfig {
-    /// Creates a new builder-style object to manufacture [`TemplateSyncConfig`](crate::model::TemplateSyncConfig)
+    /// Creates a new builder-style object to manufacture [`TemplateSyncConfig`](crate::model::TemplateSyncConfig).
     pub fn builder() -> crate::model::template_sync_config::Builder {
         crate::model::template_sync_config::Builder::default()
     }
@@ -281,24 +286,34 @@ impl AsRef<str> for TemplateType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceTemplateVersionSummary {
     /// <p>The name of the service template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The latest major version that's associated with the version of a service template.</p>
+    #[doc(hidden)]
     pub major_version: std::option::Option<std::string::String>,
     /// <p>The minor version of a service template.</p>
+    #[doc(hidden)]
     pub minor_version: std::option::Option<std::string::String>,
     /// <p>The recommended minor version of the service template.</p>
+    #[doc(hidden)]
     pub recommended_minor_version: std::option::Option<std::string::String>,
     /// <p>The service template minor version status.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TemplateVersionStatus>,
     /// <p>A service template minor version status message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>A description of the version of a service template.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the version of a service template.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The time when the version of a service template was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the version of a service template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ServiceTemplateVersionSummary {
@@ -359,11 +374,10 @@ impl std::fmt::Debug for ServiceTemplateVersionSummary {
         formatter.finish()
     }
 }
-/// See [`ServiceTemplateVersionSummary`](crate::model::ServiceTemplateVersionSummary)
+/// See [`ServiceTemplateVersionSummary`](crate::model::ServiceTemplateVersionSummary).
 pub mod service_template_version_summary {
 
-    /// A builder for [`ServiceTemplateVersionSummary`](crate::model::ServiceTemplateVersionSummary)
-    #[non_exhaustive]
+    /// A builder for [`ServiceTemplateVersionSummary`](crate::model::ServiceTemplateVersionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_name: std::option::Option<std::string::String>,
@@ -502,7 +516,7 @@ pub mod service_template_version_summary {
             self.last_modified_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceTemplateVersionSummary`](crate::model::ServiceTemplateVersionSummary)
+        /// Consumes the builder and constructs a [`ServiceTemplateVersionSummary`](crate::model::ServiceTemplateVersionSummary).
         pub fn build(self) -> crate::model::ServiceTemplateVersionSummary {
             crate::model::ServiceTemplateVersionSummary {
                 template_name: self.template_name,
@@ -520,7 +534,7 @@ pub mod service_template_version_summary {
     }
 }
 impl ServiceTemplateVersionSummary {
-    /// Creates a new builder-style object to manufacture [`ServiceTemplateVersionSummary`](crate::model::ServiceTemplateVersionSummary)
+    /// Creates a new builder-style object to manufacture [`ServiceTemplateVersionSummary`](crate::model::ServiceTemplateVersionSummary).
     pub fn builder() -> crate::model::service_template_version_summary::Builder {
         crate::model::service_template_version_summary::Builder::default()
     }
@@ -599,32 +613,45 @@ impl AsRef<str> for TemplateVersionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceTemplateVersion {
     /// <p>The name of the version of a service template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The latest major version that's associated with the version of a service template.</p>
+    #[doc(hidden)]
     pub major_version: std::option::Option<std::string::String>,
     /// <p>The minor version of a service template.</p>
+    #[doc(hidden)]
     pub minor_version: std::option::Option<std::string::String>,
     /// <p>The recommended minor version of the service template.</p>
+    #[doc(hidden)]
     pub recommended_minor_version: std::option::Option<std::string::String>,
     /// <p>The service template version status.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TemplateVersionStatus>,
     /// <p>A service template version status message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>A description of the version of a service template.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the version of a service template.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The time when the version of a service template was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the version of a service template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An array of compatible environment template names for the major version of a service template.</p>
+    #[doc(hidden)]
     pub compatible_environment_templates:
         std::option::Option<std::vec::Vec<crate::model::CompatibleEnvironmentTemplate>>,
     /// <p>The schema of the version of a service template.</p>
+    #[doc(hidden)]
     pub schema: std::option::Option<std::string::String>,
     /// <p>An array of supported component sources. Components with supported sources can be attached to service instances based on this service template version.</p>
     /// <p>For more information about components, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the <i>Proton Administrator Guide</i>.</p>
+    #[doc(hidden)]
     pub supported_component_sources: std::option::Option<
         std::vec::Vec<crate::model::ServiceTemplateSupportedComponentSourceType>,
     >,
@@ -713,11 +740,10 @@ impl std::fmt::Debug for ServiceTemplateVersion {
         formatter.finish()
     }
 }
-/// See [`ServiceTemplateVersion`](crate::model::ServiceTemplateVersion)
+/// See [`ServiceTemplateVersion`](crate::model::ServiceTemplateVersion).
 pub mod service_template_version {
 
-    /// A builder for [`ServiceTemplateVersion`](crate::model::ServiceTemplateVersion)
-    #[non_exhaustive]
+    /// A builder for [`ServiceTemplateVersion`](crate::model::ServiceTemplateVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_name: std::option::Option<std::string::String>,
@@ -920,7 +946,7 @@ pub mod service_template_version {
             self.supported_component_sources = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceTemplateVersion`](crate::model::ServiceTemplateVersion)
+        /// Consumes the builder and constructs a [`ServiceTemplateVersion`](crate::model::ServiceTemplateVersion).
         pub fn build(self) -> crate::model::ServiceTemplateVersion {
             crate::model::ServiceTemplateVersion {
                 template_name: self.template_name,
@@ -941,7 +967,7 @@ pub mod service_template_version {
     }
 }
 impl ServiceTemplateVersion {
-    /// Creates a new builder-style object to manufacture [`ServiceTemplateVersion`](crate::model::ServiceTemplateVersion)
+    /// Creates a new builder-style object to manufacture [`ServiceTemplateVersion`](crate::model::ServiceTemplateVersion).
     pub fn builder() -> crate::model::service_template_version::Builder {
         crate::model::service_template_version::Builder::default()
     }
@@ -1003,8 +1029,10 @@ impl AsRef<str> for ServiceTemplateSupportedComponentSourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CompatibleEnvironmentTemplate {
     /// <p>The compatible environment template name.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The major version of the compatible environment template.</p>
+    #[doc(hidden)]
     pub major_version: std::option::Option<std::string::String>,
 }
 impl CompatibleEnvironmentTemplate {
@@ -1025,11 +1053,10 @@ impl std::fmt::Debug for CompatibleEnvironmentTemplate {
         formatter.finish()
     }
 }
-/// See [`CompatibleEnvironmentTemplate`](crate::model::CompatibleEnvironmentTemplate)
+/// See [`CompatibleEnvironmentTemplate`](crate::model::CompatibleEnvironmentTemplate).
 pub mod compatible_environment_template {
 
-    /// A builder for [`CompatibleEnvironmentTemplate`](crate::model::CompatibleEnvironmentTemplate)
-    #[non_exhaustive]
+    /// A builder for [`CompatibleEnvironmentTemplate`](crate::model::CompatibleEnvironmentTemplate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_name: std::option::Option<std::string::String>,
@@ -1062,7 +1089,7 @@ pub mod compatible_environment_template {
             self.major_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompatibleEnvironmentTemplate`](crate::model::CompatibleEnvironmentTemplate)
+        /// Consumes the builder and constructs a [`CompatibleEnvironmentTemplate`](crate::model::CompatibleEnvironmentTemplate).
         pub fn build(self) -> crate::model::CompatibleEnvironmentTemplate {
             crate::model::CompatibleEnvironmentTemplate {
                 template_name: self.template_name,
@@ -1072,7 +1099,7 @@ pub mod compatible_environment_template {
     }
 }
 impl CompatibleEnvironmentTemplate {
-    /// Creates a new builder-style object to manufacture [`CompatibleEnvironmentTemplate`](crate::model::CompatibleEnvironmentTemplate)
+    /// Creates a new builder-style object to manufacture [`CompatibleEnvironmentTemplate`](crate::model::CompatibleEnvironmentTemplate).
     pub fn builder() -> crate::model::compatible_environment_template::Builder {
         crate::model::compatible_environment_template::Builder::default()
     }
@@ -1083,8 +1110,10 @@ impl CompatibleEnvironmentTemplate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key of the resource tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the resource tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -1105,11 +1134,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1136,7 +1164,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -1146,7 +1174,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -1157,8 +1185,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CompatibleEnvironmentTemplateInput {
     /// <p>The compatible environment template name.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The major version of the compatible environment template.</p>
+    #[doc(hidden)]
     pub major_version: std::option::Option<std::string::String>,
 }
 impl CompatibleEnvironmentTemplateInput {
@@ -1179,11 +1209,10 @@ impl std::fmt::Debug for CompatibleEnvironmentTemplateInput {
         formatter.finish()
     }
 }
-/// See [`CompatibleEnvironmentTemplateInput`](crate::model::CompatibleEnvironmentTemplateInput)
+/// See [`CompatibleEnvironmentTemplateInput`](crate::model::CompatibleEnvironmentTemplateInput).
 pub mod compatible_environment_template_input {
 
-    /// A builder for [`CompatibleEnvironmentTemplateInput`](crate::model::CompatibleEnvironmentTemplateInput)
-    #[non_exhaustive]
+    /// A builder for [`CompatibleEnvironmentTemplateInput`](crate::model::CompatibleEnvironmentTemplateInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_name: std::option::Option<std::string::String>,
@@ -1216,7 +1245,7 @@ pub mod compatible_environment_template_input {
             self.major_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompatibleEnvironmentTemplateInput`](crate::model::CompatibleEnvironmentTemplateInput)
+        /// Consumes the builder and constructs a [`CompatibleEnvironmentTemplateInput`](crate::model::CompatibleEnvironmentTemplateInput).
         pub fn build(self) -> crate::model::CompatibleEnvironmentTemplateInput {
             crate::model::CompatibleEnvironmentTemplateInput {
                 template_name: self.template_name,
@@ -1226,7 +1255,7 @@ pub mod compatible_environment_template_input {
     }
 }
 impl CompatibleEnvironmentTemplateInput {
-    /// Creates a new builder-style object to manufacture [`CompatibleEnvironmentTemplateInput`](crate::model::CompatibleEnvironmentTemplateInput)
+    /// Creates a new builder-style object to manufacture [`CompatibleEnvironmentTemplateInput`](crate::model::CompatibleEnvironmentTemplateInput).
     pub fn builder() -> crate::model::compatible_environment_template_input::Builder {
         crate::model::compatible_environment_template_input::Builder::default()
     }
@@ -1274,8 +1303,10 @@ impl TemplateVersionSourceInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ObjectSource {
     /// <p>The name of the S3 bucket that contains a template bundle.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The path to the S3 bucket that contains a template bundle.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
 }
 impl S3ObjectSource {
@@ -1296,11 +1327,10 @@ impl std::fmt::Debug for S3ObjectSource {
         formatter.finish()
     }
 }
-/// See [`S3ObjectSource`](crate::model::S3ObjectSource)
+/// See [`S3ObjectSource`](crate::model::S3ObjectSource).
 pub mod s3_object_source {
 
-    /// A builder for [`S3ObjectSource`](crate::model::S3ObjectSource)
-    #[non_exhaustive]
+    /// A builder for [`S3ObjectSource`](crate::model::S3ObjectSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -1327,7 +1357,7 @@ pub mod s3_object_source {
             self.key = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ObjectSource`](crate::model::S3ObjectSource)
+        /// Consumes the builder and constructs a [`S3ObjectSource`](crate::model::S3ObjectSource).
         pub fn build(self) -> crate::model::S3ObjectSource {
             crate::model::S3ObjectSource {
                 bucket: self.bucket,
@@ -1337,7 +1367,7 @@ pub mod s3_object_source {
     }
 }
 impl S3ObjectSource {
-    /// Creates a new builder-style object to manufacture [`S3ObjectSource`](crate::model::S3ObjectSource)
+    /// Creates a new builder-style object to manufacture [`S3ObjectSource`](crate::model::S3ObjectSource).
     pub fn builder() -> crate::model::s3_object_source::Builder {
         crate::model::s3_object_source::Builder::default()
     }
@@ -1348,20 +1378,28 @@ impl S3ObjectSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceTemplateSummary {
     /// <p>The name of the service template.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the service template.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The time when the service template was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the service template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The service template name as displayed in the developer interface.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>A description of the service template.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The recommended version of the service template.</p>
+    #[doc(hidden)]
     pub recommended_version: std::option::Option<std::string::String>,
     /// <p>If <code>pipelineProvisioning</code> is <code>true</code>, a service pipeline is included in the service template, otherwise a service pipeline <i>isn't</i> included in the service template.</p>
+    #[doc(hidden)]
     pub pipeline_provisioning: std::option::Option<crate::model::Provisioning>,
 }
 impl ServiceTemplateSummary {
@@ -1412,11 +1450,10 @@ impl std::fmt::Debug for ServiceTemplateSummary {
         formatter.finish()
     }
 }
-/// See [`ServiceTemplateSummary`](crate::model::ServiceTemplateSummary)
+/// See [`ServiceTemplateSummary`](crate::model::ServiceTemplateSummary).
 pub mod service_template_summary {
 
-    /// A builder for [`ServiceTemplateSummary`](crate::model::ServiceTemplateSummary)
-    #[non_exhaustive]
+    /// A builder for [`ServiceTemplateSummary`](crate::model::ServiceTemplateSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1521,7 +1558,7 @@ pub mod service_template_summary {
             self.pipeline_provisioning = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceTemplateSummary`](crate::model::ServiceTemplateSummary)
+        /// Consumes the builder and constructs a [`ServiceTemplateSummary`](crate::model::ServiceTemplateSummary).
         pub fn build(self) -> crate::model::ServiceTemplateSummary {
             crate::model::ServiceTemplateSummary {
                 name: self.name,
@@ -1537,7 +1574,7 @@ pub mod service_template_summary {
     }
 }
 impl ServiceTemplateSummary {
-    /// Creates a new builder-style object to manufacture [`ServiceTemplateSummary`](crate::model::ServiceTemplateSummary)
+    /// Creates a new builder-style object to manufacture [`ServiceTemplateSummary`](crate::model::ServiceTemplateSummary).
     pub fn builder() -> crate::model::service_template_summary::Builder {
         crate::model::service_template_summary::Builder::default()
     }
@@ -1599,22 +1636,31 @@ impl AsRef<str> for Provisioning {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceTemplate {
     /// <p>The name of the service template.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the service template.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The time when the service template was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the service template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The service template name as displayed in the developer interface.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>A description of the service template.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The recommended version of the service template.</p>
+    #[doc(hidden)]
     pub recommended_version: std::option::Option<std::string::String>,
     /// <p>The customer provided service template encryption key that's used to encrypt data.</p>
+    #[doc(hidden)]
     pub encryption_key: std::option::Option<std::string::String>,
     /// <p>If <code>pipelineProvisioning</code> is <code>true</code>, a service pipeline is included in the service template. Otherwise, a service pipeline <i>isn't</i> included in the service template.</p>
+    #[doc(hidden)]
     pub pipeline_provisioning: std::option::Option<crate::model::Provisioning>,
 }
 impl ServiceTemplate {
@@ -1670,11 +1716,10 @@ impl std::fmt::Debug for ServiceTemplate {
         formatter.finish()
     }
 }
-/// See [`ServiceTemplate`](crate::model::ServiceTemplate)
+/// See [`ServiceTemplate`](crate::model::ServiceTemplate).
 pub mod service_template {
 
-    /// A builder for [`ServiceTemplate`](crate::model::ServiceTemplate)
-    #[non_exhaustive]
+    /// A builder for [`ServiceTemplate`](crate::model::ServiceTemplate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1793,7 +1838,7 @@ pub mod service_template {
             self.pipeline_provisioning = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceTemplate`](crate::model::ServiceTemplate)
+        /// Consumes the builder and constructs a [`ServiceTemplate`](crate::model::ServiceTemplate).
         pub fn build(self) -> crate::model::ServiceTemplate {
             crate::model::ServiceTemplate {
                 name: self.name,
@@ -1810,7 +1855,7 @@ pub mod service_template {
     }
 }
 impl ServiceTemplate {
-    /// Creates a new builder-style object to manufacture [`ServiceTemplate`](crate::model::ServiceTemplate)
+    /// Creates a new builder-style object to manufacture [`ServiceTemplate`](crate::model::ServiceTemplate).
     pub fn builder() -> crate::model::service_template::Builder {
         crate::model::service_template::Builder::default()
     }
@@ -1821,20 +1866,28 @@ impl ServiceTemplate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceSummary {
     /// <p>The name of the service.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description of the service.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the service.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the service template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The time when the service was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the service was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the service.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ServiceStatus>,
     /// <p>A service status message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
 }
 impl ServiceSummary {
@@ -1885,11 +1938,10 @@ impl std::fmt::Debug for ServiceSummary {
         formatter.finish()
     }
 }
-/// See [`ServiceSummary`](crate::model::ServiceSummary)
+/// See [`ServiceSummary`](crate::model::ServiceSummary).
 pub mod service_summary {
 
-    /// A builder for [`ServiceSummary`](crate::model::ServiceSummary)
-    #[non_exhaustive]
+    /// A builder for [`ServiceSummary`](crate::model::ServiceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1997,7 +2049,7 @@ pub mod service_summary {
             self.status_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceSummary`](crate::model::ServiceSummary)
+        /// Consumes the builder and constructs a [`ServiceSummary`](crate::model::ServiceSummary).
         pub fn build(self) -> crate::model::ServiceSummary {
             crate::model::ServiceSummary {
                 name: self.name,
@@ -2013,7 +2065,7 @@ pub mod service_summary {
     }
 }
 impl ServiceSummary {
-    /// Creates a new builder-style object to manufacture [`ServiceSummary`](crate::model::ServiceSummary)
+    /// Creates a new builder-style object to manufacture [`ServiceSummary`](crate::model::ServiceSummary).
     pub fn builder() -> crate::model::service_summary::Builder {
         crate::model::service_summary::Builder::default()
     }
@@ -2142,30 +2194,43 @@ impl AsRef<str> for ServiceStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Service {
     /// <p>The name of the service.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description of the service.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the service.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the service template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The time when the service was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the service was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the service.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ServiceStatus>,
     /// <p>A service status message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The formatted specification that defines the service.</p>
+    #[doc(hidden)]
     pub spec: std::option::Option<std::string::String>,
     /// <p>The service pipeline detail data.</p>
+    #[doc(hidden)]
     pub pipeline: std::option::Option<crate::model::ServicePipeline>,
     /// <p>The Amazon Resource Name (ARN) of the repository connection. For more information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting up with Proton</a> in the <i>Proton User Guide</i>.</p>
+    #[doc(hidden)]
     pub repository_connection_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the source code repository.</p>
+    #[doc(hidden)]
     pub repository_id: std::option::Option<std::string::String>,
     /// <p>The name of the code repository branch that holds the code that's deployed in Proton.</p>
+    #[doc(hidden)]
     pub branch_name: std::option::Option<std::string::String>,
 }
 impl Service {
@@ -2241,11 +2306,10 @@ impl std::fmt::Debug for Service {
         formatter.finish()
     }
 }
-/// See [`Service`](crate::model::Service)
+/// See [`Service`](crate::model::Service).
 pub mod service {
 
-    /// A builder for [`Service`](crate::model::Service)
-    #[non_exhaustive]
+    /// A builder for [`Service`](crate::model::Service).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2417,7 +2481,7 @@ pub mod service {
             self.branch_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Service`](crate::model::Service)
+        /// Consumes the builder and constructs a [`Service`](crate::model::Service).
         pub fn build(self) -> crate::model::Service {
             crate::model::Service {
                 name: self.name,
@@ -2438,7 +2502,7 @@ pub mod service {
     }
 }
 impl Service {
-    /// Creates a new builder-style object to manufacture [`Service`](crate::model::Service)
+    /// Creates a new builder-style object to manufacture [`Service`](crate::model::Service).
     pub fn builder() -> crate::model::service::Builder {
         crate::model::service::Builder::default()
     }
@@ -2449,24 +2513,34 @@ impl Service {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServicePipeline {
     /// <p>The Amazon Resource Name (ARN) of the service pipeline.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The time when the service pipeline was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when a deployment of the service pipeline was last attempted.</p>
+    #[doc(hidden)]
     pub last_deployment_attempted_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the service pipeline was last deployed successfully.</p>
+    #[doc(hidden)]
     pub last_deployment_succeeded_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the service template that was used to create the service pipeline.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The major version of the service template that was used to create the service pipeline.</p>
+    #[doc(hidden)]
     pub template_major_version: std::option::Option<std::string::String>,
     /// <p>The minor version of the service template that was used to create the service pipeline.</p>
+    #[doc(hidden)]
     pub template_minor_version: std::option::Option<std::string::String>,
     /// <p>The deployment status of the service pipeline.</p>
+    #[doc(hidden)]
     pub deployment_status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>A service pipeline deployment status message.</p>
+    #[doc(hidden)]
     pub deployment_status_message: std::option::Option<std::string::String>,
     /// <p>The service spec that was used to create the service pipeline.</p>
+    #[doc(hidden)]
     pub spec: std::option::Option<std::string::String>,
 }
 impl ServicePipeline {
@@ -2536,11 +2610,10 @@ impl std::fmt::Debug for ServicePipeline {
         formatter.finish()
     }
 }
-/// See [`ServicePipeline`](crate::model::ServicePipeline)
+/// See [`ServicePipeline`](crate::model::ServicePipeline).
 pub mod service_pipeline {
 
-    /// A builder for [`ServicePipeline`](crate::model::ServicePipeline)
-    #[non_exhaustive]
+    /// A builder for [`ServicePipeline`](crate::model::ServicePipeline).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2679,7 +2752,7 @@ pub mod service_pipeline {
             self.spec = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServicePipeline`](crate::model::ServicePipeline)
+        /// Consumes the builder and constructs a [`ServicePipeline`](crate::model::ServicePipeline).
         pub fn build(self) -> crate::model::ServicePipeline {
             crate::model::ServicePipeline {
                 arn: self.arn,
@@ -2697,7 +2770,7 @@ pub mod service_pipeline {
     }
 }
 impl ServicePipeline {
-    /// Creates a new builder-style object to manufacture [`ServicePipeline`](crate::model::ServicePipeline)
+    /// Creates a new builder-style object to manufacture [`ServicePipeline`](crate::model::ServicePipeline).
     pub fn builder() -> crate::model::service_pipeline::Builder {
         crate::model::service_pipeline::Builder::default()
     }
@@ -2859,11 +2932,14 @@ impl AsRef<str> for DeploymentUpdateType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProvisionedResource {
     /// <p>The provisioned resource name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The provisioned resource identifier.</p>
+    #[doc(hidden)]
     pub identifier: std::option::Option<std::string::String>,
     /// <p>The resource provisioning engine. At this time, <code>CLOUDFORMATION</code> can be used for Amazon Web Services-managed provisioning, and <code>TERRAFORM</code> can be used for self-managed provisioning.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self">Self-managed provisioning</a> in the <i>Proton Administrator Guide</i>.</p>
+    #[doc(hidden)]
     pub provisioning_engine: std::option::Option<crate::model::ProvisionedResourceEngine>,
 }
 impl ProvisionedResource {
@@ -2892,11 +2968,10 @@ impl std::fmt::Debug for ProvisionedResource {
         formatter.finish()
     }
 }
-/// See [`ProvisionedResource`](crate::model::ProvisionedResource)
+/// See [`ProvisionedResource`](crate::model::ProvisionedResource).
 pub mod provisioned_resource {
 
-    /// A builder for [`ProvisionedResource`](crate::model::ProvisionedResource)
-    #[non_exhaustive]
+    /// A builder for [`ProvisionedResource`](crate::model::ProvisionedResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2943,7 +3018,7 @@ pub mod provisioned_resource {
             self.provisioning_engine = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvisionedResource`](crate::model::ProvisionedResource)
+        /// Consumes the builder and constructs a [`ProvisionedResource`](crate::model::ProvisionedResource).
         pub fn build(self) -> crate::model::ProvisionedResource {
             crate::model::ProvisionedResource {
                 name: self.name,
@@ -2954,7 +3029,7 @@ pub mod provisioned_resource {
     }
 }
 impl ProvisionedResource {
-    /// Creates a new builder-style object to manufacture [`ProvisionedResource`](crate::model::ProvisionedResource)
+    /// Creates a new builder-style object to manufacture [`ProvisionedResource`](crate::model::ProvisionedResource).
     pub fn builder() -> crate::model::provisioned_resource::Builder {
         crate::model::provisioned_resource::Builder::default()
     }
@@ -3020,8 +3095,10 @@ impl AsRef<str> for ProvisionedResourceEngine {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Output {
     /// <p>The output key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The output value.</p>
+    #[doc(hidden)]
     pub value_string: std::option::Option<std::string::String>,
 }
 impl Output {
@@ -3042,11 +3119,10 @@ impl std::fmt::Debug for Output {
         formatter.finish()
     }
 }
-/// See [`Output`](crate::model::Output)
+/// See [`Output`](crate::model::Output).
 pub mod output {
 
-    /// A builder for [`Output`](crate::model::Output)
-    #[non_exhaustive]
+    /// A builder for [`Output`](crate::model::Output).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -3073,7 +3149,7 @@ pub mod output {
             self.value_string = input;
             self
         }
-        /// Consumes the builder and constructs a [`Output`](crate::model::Output)
+        /// Consumes the builder and constructs a [`Output`](crate::model::Output).
         pub fn build(self) -> crate::model::Output {
             crate::model::Output {
                 key: self.key,
@@ -3083,7 +3159,7 @@ pub mod output {
     }
 }
 impl Output {
-    /// Creates a new builder-style object to manufacture [`Output`](crate::model::Output)
+    /// Creates a new builder-style object to manufacture [`Output`](crate::model::Output).
     pub fn builder() -> crate::model::output::Builder {
         crate::model::output::Builder::default()
     }
@@ -3094,28 +3170,40 @@ impl Output {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceInstanceSummary {
     /// <p>The name of the service instance.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the service instance.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The time when the service instance was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when a deployment of the service was last attempted.</p>
+    #[doc(hidden)]
     pub last_deployment_attempted_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the service was last deployed successfully.</p>
+    #[doc(hidden)]
     pub last_deployment_succeeded_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the service that the service instance belongs to.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
     /// <p>The name of the environment that the service instance was deployed into.</p>
+    #[doc(hidden)]
     pub environment_name: std::option::Option<std::string::String>,
     /// <p>The name of the service template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The service instance template major version.</p>
+    #[doc(hidden)]
     pub template_major_version: std::option::Option<std::string::String>,
     /// <p>The service instance template minor version.</p>
+    #[doc(hidden)]
     pub template_minor_version: std::option::Option<std::string::String>,
     /// <p>The service instance deployment status.</p>
+    #[doc(hidden)]
     pub deployment_status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>A service instance deployment status message.</p>
+    #[doc(hidden)]
     pub deployment_status_message: std::option::Option<std::string::String>,
 }
 impl ServiceInstanceSummary {
@@ -3195,11 +3283,10 @@ impl std::fmt::Debug for ServiceInstanceSummary {
         formatter.finish()
     }
 }
-/// See [`ServiceInstanceSummary`](crate::model::ServiceInstanceSummary)
+/// See [`ServiceInstanceSummary`](crate::model::ServiceInstanceSummary).
 pub mod service_instance_summary {
 
-    /// A builder for [`ServiceInstanceSummary`](crate::model::ServiceInstanceSummary)
-    #[non_exhaustive]
+    /// A builder for [`ServiceInstanceSummary`](crate::model::ServiceInstanceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3363,7 +3450,7 @@ pub mod service_instance_summary {
             self.deployment_status_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceInstanceSummary`](crate::model::ServiceInstanceSummary)
+        /// Consumes the builder and constructs a [`ServiceInstanceSummary`](crate::model::ServiceInstanceSummary).
         pub fn build(self) -> crate::model::ServiceInstanceSummary {
             crate::model::ServiceInstanceSummary {
                 name: self.name,
@@ -3383,7 +3470,7 @@ pub mod service_instance_summary {
     }
 }
 impl ServiceInstanceSummary {
-    /// Creates a new builder-style object to manufacture [`ServiceInstanceSummary`](crate::model::ServiceInstanceSummary)
+    /// Creates a new builder-style object to manufacture [`ServiceInstanceSummary`](crate::model::ServiceInstanceSummary).
     pub fn builder() -> crate::model::service_instance_summary::Builder {
         crate::model::service_instance_summary::Builder::default()
     }
@@ -3394,30 +3481,43 @@ impl ServiceInstanceSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceInstance {
     /// <p>The name of the service instance.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the service instance.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The time when the service instance was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when a deployment of the service instance was last attempted.</p>
+    #[doc(hidden)]
     pub last_deployment_attempted_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the service instance was last deployed successfully.</p>
+    #[doc(hidden)]
     pub last_deployment_succeeded_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the service that the service instance belongs to.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
     /// <p>The name of the environment that the service instance was deployed into.</p>
+    #[doc(hidden)]
     pub environment_name: std::option::Option<std::string::String>,
     /// <p>The name of the service template that was used to create the service instance.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The major version of the service template that was used to create the service instance.</p>
+    #[doc(hidden)]
     pub template_major_version: std::option::Option<std::string::String>,
     /// <p>The minor version of the service template that was used to create the service instance.</p>
+    #[doc(hidden)]
     pub template_minor_version: std::option::Option<std::string::String>,
     /// <p>The service instance deployment status.</p>
+    #[doc(hidden)]
     pub deployment_status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>The message associated with the service instance deployment status.</p>
+    #[doc(hidden)]
     pub deployment_status_message: std::option::Option<std::string::String>,
     /// <p>The service spec that was used to create the service instance.</p>
+    #[doc(hidden)]
     pub spec: std::option::Option<std::string::String>,
 }
 impl ServiceInstance {
@@ -3502,11 +3602,10 @@ impl std::fmt::Debug for ServiceInstance {
         formatter.finish()
     }
 }
-/// See [`ServiceInstance`](crate::model::ServiceInstance)
+/// See [`ServiceInstance`](crate::model::ServiceInstance).
 pub mod service_instance {
 
-    /// A builder for [`ServiceInstance`](crate::model::ServiceInstance)
-    #[non_exhaustive]
+    /// A builder for [`ServiceInstance`](crate::model::ServiceInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3681,7 +3780,7 @@ pub mod service_instance {
             self.spec = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceInstance`](crate::model::ServiceInstance)
+        /// Consumes the builder and constructs a [`ServiceInstance`](crate::model::ServiceInstance).
         pub fn build(self) -> crate::model::ServiceInstance {
             crate::model::ServiceInstance {
                 name: self.name,
@@ -3702,7 +3801,7 @@ pub mod service_instance {
     }
 }
 impl ServiceInstance {
-    /// Creates a new builder-style object to manufacture [`ServiceInstance`](crate::model::ServiceInstance)
+    /// Creates a new builder-style object to manufacture [`ServiceInstance`](crate::model::ServiceInstance).
     pub fn builder() -> crate::model::service_instance::Builder {
         crate::model::service_instance::Builder::default()
     }
@@ -3713,10 +3812,13 @@ impl ServiceInstance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RepositorySummary {
     /// <p>The Amazon Resource Name (ARN) for a repository.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The repository provider.</p>
+    #[doc(hidden)]
     pub provider: std::option::Option<crate::model::RepositoryProvider>,
     /// <p>The repository name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl RepositorySummary {
@@ -3742,11 +3844,10 @@ impl std::fmt::Debug for RepositorySummary {
         formatter.finish()
     }
 }
-/// See [`RepositorySummary`](crate::model::RepositorySummary)
+/// See [`RepositorySummary`](crate::model::RepositorySummary).
 pub mod repository_summary {
 
-    /// A builder for [`RepositorySummary`](crate::model::RepositorySummary)
-    #[non_exhaustive]
+    /// A builder for [`RepositorySummary`](crate::model::RepositorySummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3787,7 +3888,7 @@ pub mod repository_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RepositorySummary`](crate::model::RepositorySummary)
+        /// Consumes the builder and constructs a [`RepositorySummary`](crate::model::RepositorySummary).
         pub fn build(self) -> crate::model::RepositorySummary {
             crate::model::RepositorySummary {
                 arn: self.arn,
@@ -3798,7 +3899,7 @@ pub mod repository_summary {
     }
 }
 impl RepositorySummary {
-    /// Creates a new builder-style object to manufacture [`RepositorySummary`](crate::model::RepositorySummary)
+    /// Creates a new builder-style object to manufacture [`RepositorySummary`](crate::model::RepositorySummary).
     pub fn builder() -> crate::model::repository_summary::Builder {
         crate::model::repository_summary::Builder::default()
     }
@@ -3809,14 +3910,19 @@ impl RepositorySummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Repository {
     /// <p>The repository Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The repository provider.</p>
+    #[doc(hidden)]
     pub provider: std::option::Option<crate::model::RepositoryProvider>,
     /// <p>The repository name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The repository Amazon Web Services CodeStar connection that connects Proton to your repository.</p>
+    #[doc(hidden)]
     pub connection_arn: std::option::Option<std::string::String>,
     /// <p>Your customer Amazon Web Services KMS encryption key.</p>
+    #[doc(hidden)]
     pub encryption_key: std::option::Option<std::string::String>,
 }
 impl Repository {
@@ -3852,11 +3958,10 @@ impl std::fmt::Debug for Repository {
         formatter.finish()
     }
 }
-/// See [`Repository`](crate::model::Repository)
+/// See [`Repository`](crate::model::Repository).
 pub mod repository {
 
-    /// A builder for [`Repository`](crate::model::Repository)
-    #[non_exhaustive]
+    /// A builder for [`Repository`](crate::model::Repository).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3925,7 +4030,7 @@ pub mod repository {
             self.encryption_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`Repository`](crate::model::Repository)
+        /// Consumes the builder and constructs a [`Repository`](crate::model::Repository).
         pub fn build(self) -> crate::model::Repository {
             crate::model::Repository {
                 arn: self.arn,
@@ -3938,7 +4043,7 @@ pub mod repository {
     }
 }
 impl Repository {
-    /// Creates a new builder-style object to manufacture [`Repository`](crate::model::Repository)
+    /// Creates a new builder-style object to manufacture [`Repository`](crate::model::Repository).
     pub fn builder() -> crate::model::repository::Builder {
         crate::model::repository::Builder::default()
     }
@@ -3949,24 +4054,34 @@ impl Repository {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentTemplateVersionSummary {
     /// <p>The name of the environment template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The latest major version that's associated with the version of an environment template.</p>
+    #[doc(hidden)]
     pub major_version: std::option::Option<std::string::String>,
     /// <p>The version of an environment template.</p>
+    #[doc(hidden)]
     pub minor_version: std::option::Option<std::string::String>,
     /// <p>The recommended minor version of the environment template.</p>
+    #[doc(hidden)]
     pub recommended_minor_version: std::option::Option<std::string::String>,
     /// <p>The status of the version of an environment template.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TemplateVersionStatus>,
     /// <p>The status message of the version of an environment template.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>A description of the version of an environment template.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the version of an environment template.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The time when the version of an environment template was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the version of an environment template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EnvironmentTemplateVersionSummary {
@@ -4027,11 +4142,10 @@ impl std::fmt::Debug for EnvironmentTemplateVersionSummary {
         formatter.finish()
     }
 }
-/// See [`EnvironmentTemplateVersionSummary`](crate::model::EnvironmentTemplateVersionSummary)
+/// See [`EnvironmentTemplateVersionSummary`](crate::model::EnvironmentTemplateVersionSummary).
 pub mod environment_template_version_summary {
 
-    /// A builder for [`EnvironmentTemplateVersionSummary`](crate::model::EnvironmentTemplateVersionSummary)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentTemplateVersionSummary`](crate::model::EnvironmentTemplateVersionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_name: std::option::Option<std::string::String>,
@@ -4170,7 +4284,7 @@ pub mod environment_template_version_summary {
             self.last_modified_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentTemplateVersionSummary`](crate::model::EnvironmentTemplateVersionSummary)
+        /// Consumes the builder and constructs a [`EnvironmentTemplateVersionSummary`](crate::model::EnvironmentTemplateVersionSummary).
         pub fn build(self) -> crate::model::EnvironmentTemplateVersionSummary {
             crate::model::EnvironmentTemplateVersionSummary {
                 template_name: self.template_name,
@@ -4188,7 +4302,7 @@ pub mod environment_template_version_summary {
     }
 }
 impl EnvironmentTemplateVersionSummary {
-    /// Creates a new builder-style object to manufacture [`EnvironmentTemplateVersionSummary`](crate::model::EnvironmentTemplateVersionSummary)
+    /// Creates a new builder-style object to manufacture [`EnvironmentTemplateVersionSummary`](crate::model::EnvironmentTemplateVersionSummary).
     pub fn builder() -> crate::model::environment_template_version_summary::Builder {
         crate::model::environment_template_version_summary::Builder::default()
     }
@@ -4199,26 +4313,37 @@ impl EnvironmentTemplateVersionSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentTemplateVersion {
     /// <p>The name of the version of an environment template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The latest major version that's associated with the version of an environment template.</p>
+    #[doc(hidden)]
     pub major_version: std::option::Option<std::string::String>,
     /// <p>The minor version of an environment template.</p>
+    #[doc(hidden)]
     pub minor_version: std::option::Option<std::string::String>,
     /// <p>The recommended minor version of the environment template.</p>
+    #[doc(hidden)]
     pub recommended_minor_version: std::option::Option<std::string::String>,
     /// <p>The status of the version of an environment template.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TemplateVersionStatus>,
     /// <p>The status message of the version of an environment template.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>A description of the minor version of an environment template.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the version of an environment template.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The time when the version of an environment template was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the version of an environment template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The schema of the version of an environment template.</p>
+    #[doc(hidden)]
     pub schema: std::option::Option<std::string::String>,
 }
 impl EnvironmentTemplateVersion {
@@ -4284,11 +4409,10 @@ impl std::fmt::Debug for EnvironmentTemplateVersion {
         formatter.finish()
     }
 }
-/// See [`EnvironmentTemplateVersion`](crate::model::EnvironmentTemplateVersion)
+/// See [`EnvironmentTemplateVersion`](crate::model::EnvironmentTemplateVersion).
 pub mod environment_template_version {
 
-    /// A builder for [`EnvironmentTemplateVersion`](crate::model::EnvironmentTemplateVersion)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentTemplateVersion`](crate::model::EnvironmentTemplateVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_name: std::option::Option<std::string::String>,
@@ -4438,7 +4562,7 @@ pub mod environment_template_version {
             self.schema = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentTemplateVersion`](crate::model::EnvironmentTemplateVersion)
+        /// Consumes the builder and constructs a [`EnvironmentTemplateVersion`](crate::model::EnvironmentTemplateVersion).
         pub fn build(self) -> crate::model::EnvironmentTemplateVersion {
             crate::model::EnvironmentTemplateVersion {
                 template_name: self.template_name,
@@ -4457,7 +4581,7 @@ pub mod environment_template_version {
     }
 }
 impl EnvironmentTemplateVersion {
-    /// Creates a new builder-style object to manufacture [`EnvironmentTemplateVersion`](crate::model::EnvironmentTemplateVersion)
+    /// Creates a new builder-style object to manufacture [`EnvironmentTemplateVersion`](crate::model::EnvironmentTemplateVersion).
     pub fn builder() -> crate::model::environment_template_version::Builder {
         crate::model::environment_template_version::Builder::default()
     }
@@ -4468,20 +4592,28 @@ impl EnvironmentTemplateVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentTemplateSummary {
     /// <p>The name of the environment template.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the environment template.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The time when the environment template was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the environment template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the environment template as displayed in the developer interface.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>A description of the environment template.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The recommended version of the environment template.</p>
+    #[doc(hidden)]
     pub recommended_version: std::option::Option<std::string::String>,
     /// <p>When included, indicates that the environment template is for customer provisioned and managed infrastructure.</p>
+    #[doc(hidden)]
     pub provisioning: std::option::Option<crate::model::Provisioning>,
 }
 impl EnvironmentTemplateSummary {
@@ -4532,11 +4664,10 @@ impl std::fmt::Debug for EnvironmentTemplateSummary {
         formatter.finish()
     }
 }
-/// See [`EnvironmentTemplateSummary`](crate::model::EnvironmentTemplateSummary)
+/// See [`EnvironmentTemplateSummary`](crate::model::EnvironmentTemplateSummary).
 pub mod environment_template_summary {
 
-    /// A builder for [`EnvironmentTemplateSummary`](crate::model::EnvironmentTemplateSummary)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentTemplateSummary`](crate::model::EnvironmentTemplateSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4641,7 +4772,7 @@ pub mod environment_template_summary {
             self.provisioning = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentTemplateSummary`](crate::model::EnvironmentTemplateSummary)
+        /// Consumes the builder and constructs a [`EnvironmentTemplateSummary`](crate::model::EnvironmentTemplateSummary).
         pub fn build(self) -> crate::model::EnvironmentTemplateSummary {
             crate::model::EnvironmentTemplateSummary {
                 name: self.name,
@@ -4657,7 +4788,7 @@ pub mod environment_template_summary {
     }
 }
 impl EnvironmentTemplateSummary {
-    /// Creates a new builder-style object to manufacture [`EnvironmentTemplateSummary`](crate::model::EnvironmentTemplateSummary)
+    /// Creates a new builder-style object to manufacture [`EnvironmentTemplateSummary`](crate::model::EnvironmentTemplateSummary).
     pub fn builder() -> crate::model::environment_template_summary::Builder {
         crate::model::environment_template_summary::Builder::default()
     }
@@ -4668,22 +4799,31 @@ impl EnvironmentTemplateSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentTemplate {
     /// <p>The name of the environment template.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the environment template.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The time when the environment template was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the environment template was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the environment template as displayed in the developer interface.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>A description of the environment template.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The ID of the recommended version of the environment template.</p>
+    #[doc(hidden)]
     pub recommended_version: std::option::Option<std::string::String>,
     /// <p>The customer provided encryption key for the environment template.</p>
+    #[doc(hidden)]
     pub encryption_key: std::option::Option<std::string::String>,
     /// <p>When included, indicates that the environment template is for customer provisioned and managed infrastructure.</p>
+    #[doc(hidden)]
     pub provisioning: std::option::Option<crate::model::Provisioning>,
 }
 impl EnvironmentTemplate {
@@ -4739,11 +4879,10 @@ impl std::fmt::Debug for EnvironmentTemplate {
         formatter.finish()
     }
 }
-/// See [`EnvironmentTemplate`](crate::model::EnvironmentTemplate)
+/// See [`EnvironmentTemplate`](crate::model::EnvironmentTemplate).
 pub mod environment_template {
 
-    /// A builder for [`EnvironmentTemplate`](crate::model::EnvironmentTemplate)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentTemplate`](crate::model::EnvironmentTemplate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4862,7 +5001,7 @@ pub mod environment_template {
             self.provisioning = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentTemplate`](crate::model::EnvironmentTemplate)
+        /// Consumes the builder and constructs a [`EnvironmentTemplate`](crate::model::EnvironmentTemplate).
         pub fn build(self) -> crate::model::EnvironmentTemplate {
             crate::model::EnvironmentTemplate {
                 name: self.name,
@@ -4879,7 +5018,7 @@ pub mod environment_template {
     }
 }
 impl EnvironmentTemplate {
-    /// Creates a new builder-style object to manufacture [`EnvironmentTemplate`](crate::model::EnvironmentTemplate)
+    /// Creates a new builder-style object to manufacture [`EnvironmentTemplate`](crate::model::EnvironmentTemplate).
     pub fn builder() -> crate::model::environment_template::Builder {
         crate::model::environment_template::Builder::default()
     }
@@ -4890,38 +5029,54 @@ impl EnvironmentTemplate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentSummary {
     /// <p>The name of the environment.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the environment.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The time when the environment was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when a deployment of the environment was last attempted.</p>
+    #[doc(hidden)]
     pub last_deployment_attempted_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the environment was last deployed successfully.</p>
+    #[doc(hidden)]
     pub last_deployment_succeeded_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) of the environment.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the environment template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The major version of the environment template.</p>
+    #[doc(hidden)]
     pub template_major_version: std::option::Option<std::string::String>,
     /// <p>The minor version of the environment template.</p>
+    #[doc(hidden)]
     pub template_minor_version: std::option::Option<std::string::String>,
     /// <p>The environment deployment status.</p>
+    #[doc(hidden)]
     pub deployment_status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>An environment deployment status message.</p>
+    #[doc(hidden)]
     pub deployment_status_message: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on your behalf.</p>
+    #[doc(hidden)]
     pub proton_service_role_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the environment account connection that the environment is associated with.</p>
+    #[doc(hidden)]
     pub environment_account_connection_id: std::option::Option<std::string::String>,
     /// <p>The ID of the environment account that the environment infrastructure resources are provisioned in.</p>
+    #[doc(hidden)]
     pub environment_account_id: std::option::Option<std::string::String>,
     /// <p>When included, indicates that the environment template is for customer provisioned and managed infrastructure.</p>
+    #[doc(hidden)]
     pub provisioning: std::option::Option<crate::model::Provisioning>,
     /// <p>The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly defined components in this environment. It determines the scope of infrastructure that a component can provision.</p>
     /// <p>The environment must have a <code>componentRoleArn</code> to allow directly defined components to be associated with the environment.</p>
     /// <p>For more information about components, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the <i>Proton Administrator Guide</i>.</p>
+    #[doc(hidden)]
     pub component_role_arn: std::option::Option<std::string::String>,
 }
 impl EnvironmentSummary {
@@ -5026,11 +5181,10 @@ impl std::fmt::Debug for EnvironmentSummary {
         formatter.finish()
     }
 }
-/// See [`EnvironmentSummary`](crate::model::EnvironmentSummary)
+/// See [`EnvironmentSummary`](crate::model::EnvironmentSummary).
 pub mod environment_summary {
 
-    /// A builder for [`EnvironmentSummary`](crate::model::EnvironmentSummary)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentSummary`](crate::model::EnvironmentSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5257,7 +5411,7 @@ pub mod environment_summary {
             self.component_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentSummary`](crate::model::EnvironmentSummary)
+        /// Consumes the builder and constructs a [`EnvironmentSummary`](crate::model::EnvironmentSummary).
         pub fn build(self) -> crate::model::EnvironmentSummary {
             crate::model::EnvironmentSummary {
                 name: self.name,
@@ -5281,7 +5435,7 @@ pub mod environment_summary {
     }
 }
 impl EnvironmentSummary {
-    /// Creates a new builder-style object to manufacture [`EnvironmentSummary`](crate::model::EnvironmentSummary)
+    /// Creates a new builder-style object to manufacture [`EnvironmentSummary`](crate::model::EnvironmentSummary).
     pub fn builder() -> crate::model::environment_summary::Builder {
         crate::model::environment_summary::Builder::default()
     }
@@ -5292,8 +5446,10 @@ impl EnvironmentSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentTemplateFilter {
     /// <p>Include <code>templateName</code> to filter search for a template name.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>Include <code>majorVersion</code> to filter search for a major version.</p>
+    #[doc(hidden)]
     pub major_version: std::option::Option<std::string::String>,
 }
 impl EnvironmentTemplateFilter {
@@ -5314,11 +5470,10 @@ impl std::fmt::Debug for EnvironmentTemplateFilter {
         formatter.finish()
     }
 }
-/// See [`EnvironmentTemplateFilter`](crate::model::EnvironmentTemplateFilter)
+/// See [`EnvironmentTemplateFilter`](crate::model::EnvironmentTemplateFilter).
 pub mod environment_template_filter {
 
-    /// A builder for [`EnvironmentTemplateFilter`](crate::model::EnvironmentTemplateFilter)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentTemplateFilter`](crate::model::EnvironmentTemplateFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_name: std::option::Option<std::string::String>,
@@ -5351,7 +5506,7 @@ pub mod environment_template_filter {
             self.major_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentTemplateFilter`](crate::model::EnvironmentTemplateFilter)
+        /// Consumes the builder and constructs a [`EnvironmentTemplateFilter`](crate::model::EnvironmentTemplateFilter).
         pub fn build(self) -> crate::model::EnvironmentTemplateFilter {
             crate::model::EnvironmentTemplateFilter {
                 template_name: self.template_name,
@@ -5361,7 +5516,7 @@ pub mod environment_template_filter {
     }
 }
 impl EnvironmentTemplateFilter {
-    /// Creates a new builder-style object to manufacture [`EnvironmentTemplateFilter`](crate::model::EnvironmentTemplateFilter)
+    /// Creates a new builder-style object to manufacture [`EnvironmentTemplateFilter`](crate::model::EnvironmentTemplateFilter).
     pub fn builder() -> crate::model::environment_template_filter::Builder {
         crate::model::environment_template_filter::Builder::default()
     }
@@ -5372,42 +5527,60 @@ impl EnvironmentTemplateFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Environment {
     /// <p>The name of the environment.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the environment.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The time when the environment was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when a deployment of the environment was last attempted.</p>
+    #[doc(hidden)]
     pub last_deployment_attempted_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the environment was last deployed successfully.</p>
+    #[doc(hidden)]
     pub last_deployment_succeeded_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) of the environment.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the environment template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The major version of the environment template.</p>
+    #[doc(hidden)]
     pub template_major_version: std::option::Option<std::string::String>,
     /// <p>The minor version of the environment template.</p>
+    #[doc(hidden)]
     pub template_minor_version: std::option::Option<std::string::String>,
     /// <p>The environment deployment status.</p>
+    #[doc(hidden)]
     pub deployment_status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>An environment deployment status message.</p>
+    #[doc(hidden)]
     pub deployment_status_message: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on your behalf.</p>
+    #[doc(hidden)]
     pub proton_service_role_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the environment account connection that's used to provision infrastructure resources in an environment account.</p>
+    #[doc(hidden)]
     pub environment_account_connection_id: std::option::Option<std::string::String>,
     /// <p>The ID of the environment account that the environment infrastructure resources are provisioned in.</p>
+    #[doc(hidden)]
     pub environment_account_id: std::option::Option<std::string::String>,
     /// <p>The environment spec.</p>
+    #[doc(hidden)]
     pub spec: std::option::Option<std::string::String>,
     /// <p>When included, indicates that the environment template is for customer provisioned and managed infrastructure.</p>
+    #[doc(hidden)]
     pub provisioning: std::option::Option<crate::model::Provisioning>,
     /// <p>The infrastructure repository that you use to host your rendered infrastructure templates for self-managed provisioning.</p>
+    #[doc(hidden)]
     pub provisioning_repository: std::option::Option<crate::model::RepositoryBranch>,
     /// <p>The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly defined components in this environment. It determines the scope of infrastructure that a component can provision.</p>
     /// <p>The environment must have a <code>componentRoleArn</code> to allow directly defined components to be associated with the environment.</p>
     /// <p>For more information about components, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the <i>Proton Administrator Guide</i>.</p>
+    #[doc(hidden)]
     pub component_role_arn: std::option::Option<std::string::String>,
 }
 impl Environment {
@@ -5522,11 +5695,10 @@ impl std::fmt::Debug for Environment {
         formatter.finish()
     }
 }
-/// See [`Environment`](crate::model::Environment)
+/// See [`Environment`](crate::model::Environment).
 pub mod environment {
 
-    /// A builder for [`Environment`](crate::model::Environment)
-    #[non_exhaustive]
+    /// A builder for [`Environment`](crate::model::Environment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5778,7 +5950,7 @@ pub mod environment {
             self.component_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Environment`](crate::model::Environment)
+        /// Consumes the builder and constructs a [`Environment`](crate::model::Environment).
         pub fn build(self) -> crate::model::Environment {
             crate::model::Environment {
                 name: self.name,
@@ -5804,7 +5976,7 @@ pub mod environment {
     }
 }
 impl Environment {
-    /// Creates a new builder-style object to manufacture [`Environment`](crate::model::Environment)
+    /// Creates a new builder-style object to manufacture [`Environment`](crate::model::Environment).
     pub fn builder() -> crate::model::environment::Builder {
         crate::model::environment::Builder::default()
     }
@@ -5815,12 +5987,16 @@ impl Environment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RepositoryBranch {
     /// <p>The Amazon Resource Name (ARN) of the repository branch.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The repository provider.</p>
+    #[doc(hidden)]
     pub provider: std::option::Option<crate::model::RepositoryProvider>,
     /// <p>The repository name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The repository branch.</p>
+    #[doc(hidden)]
     pub branch: std::option::Option<std::string::String>,
 }
 impl RepositoryBranch {
@@ -5851,11 +6027,10 @@ impl std::fmt::Debug for RepositoryBranch {
         formatter.finish()
     }
 }
-/// See [`RepositoryBranch`](crate::model::RepositoryBranch)
+/// See [`RepositoryBranch`](crate::model::RepositoryBranch).
 pub mod repository_branch {
 
-    /// A builder for [`RepositoryBranch`](crate::model::RepositoryBranch)
-    #[non_exhaustive]
+    /// A builder for [`RepositoryBranch`](crate::model::RepositoryBranch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -5907,7 +6082,7 @@ pub mod repository_branch {
             self.branch = input;
             self
         }
-        /// Consumes the builder and constructs a [`RepositoryBranch`](crate::model::RepositoryBranch)
+        /// Consumes the builder and constructs a [`RepositoryBranch`](crate::model::RepositoryBranch).
         pub fn build(self) -> crate::model::RepositoryBranch {
             crate::model::RepositoryBranch {
                 arn: self.arn,
@@ -5919,7 +6094,7 @@ pub mod repository_branch {
     }
 }
 impl RepositoryBranch {
-    /// Creates a new builder-style object to manufacture [`RepositoryBranch`](crate::model::RepositoryBranch)
+    /// Creates a new builder-style object to manufacture [`RepositoryBranch`](crate::model::RepositoryBranch).
     pub fn builder() -> crate::model::repository_branch::Builder {
         crate::model::repository_branch::Builder::default()
     }
@@ -5930,10 +6105,13 @@ impl RepositoryBranch {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RepositoryBranchInput {
     /// <p>The repository provider.</p>
+    #[doc(hidden)]
     pub provider: std::option::Option<crate::model::RepositoryProvider>,
     /// <p>The repository name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The repository branch.</p>
+    #[doc(hidden)]
     pub branch: std::option::Option<std::string::String>,
 }
 impl RepositoryBranchInput {
@@ -5959,11 +6137,10 @@ impl std::fmt::Debug for RepositoryBranchInput {
         formatter.finish()
     }
 }
-/// See [`RepositoryBranchInput`](crate::model::RepositoryBranchInput)
+/// See [`RepositoryBranchInput`](crate::model::RepositoryBranchInput).
 pub mod repository_branch_input {
 
-    /// A builder for [`RepositoryBranchInput`](crate::model::RepositoryBranchInput)
-    #[non_exhaustive]
+    /// A builder for [`RepositoryBranchInput`](crate::model::RepositoryBranchInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) provider: std::option::Option<crate::model::RepositoryProvider>,
@@ -6004,7 +6181,7 @@ pub mod repository_branch_input {
             self.branch = input;
             self
         }
-        /// Consumes the builder and constructs a [`RepositoryBranchInput`](crate::model::RepositoryBranchInput)
+        /// Consumes the builder and constructs a [`RepositoryBranchInput`](crate::model::RepositoryBranchInput).
         pub fn build(self) -> crate::model::RepositoryBranchInput {
             crate::model::RepositoryBranchInput {
                 provider: self.provider,
@@ -6015,7 +6192,7 @@ pub mod repository_branch_input {
     }
 }
 impl RepositoryBranchInput {
-    /// Creates a new builder-style object to manufacture [`RepositoryBranchInput`](crate::model::RepositoryBranchInput)
+    /// Creates a new builder-style object to manufacture [`RepositoryBranchInput`](crate::model::RepositoryBranchInput).
     pub fn builder() -> crate::model::repository_branch_input::Builder {
         crate::model::repository_branch_input::Builder::default()
     }
@@ -6026,26 +6203,36 @@ impl RepositoryBranchInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentAccountConnection {
     /// <p>The ID of the environment account connection.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the environment account connection.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The ID of the management account that's connected to the environment account connection.</p>
+    #[doc(hidden)]
     pub management_account_id: std::option::Option<std::string::String>,
     /// <p>The environment account that's connected to the environment account connection.</p>
+    #[doc(hidden)]
     pub environment_account_id: std::option::Option<std::string::String>,
     /// <p>The IAM service role that's associated with the environment account connection.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The name of the environment that's associated with the environment account connection.</p>
+    #[doc(hidden)]
     pub environment_name: std::option::Option<std::string::String>,
     /// <p>The time when the environment account connection request was made.</p>
+    #[doc(hidden)]
     pub requested_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the environment account connection was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the environment account connection.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EnvironmentAccountConnectionStatus>,
     /// <p>The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly defined components in the associated environment account. It determines the scope of infrastructure that a component can provision in the account.</p>
     /// <p>The environment account connection must have a <code>componentRoleArn</code> to allow directly defined components to be associated with any environments running in the account.</p>
     /// <p>For more information about components, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the <i>Proton Administrator Guide</i>.</p>
+    #[doc(hidden)]
     pub component_role_arn: std::option::Option<std::string::String>,
 }
 impl EnvironmentAccountConnection {
@@ -6108,11 +6295,10 @@ impl std::fmt::Debug for EnvironmentAccountConnection {
         formatter.finish()
     }
 }
-/// See [`EnvironmentAccountConnection`](crate::model::EnvironmentAccountConnection)
+/// See [`EnvironmentAccountConnection`](crate::model::EnvironmentAccountConnection).
 pub mod environment_account_connection {
 
-    /// A builder for [`EnvironmentAccountConnection`](crate::model::EnvironmentAccountConnection)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentAccountConnection`](crate::model::EnvironmentAccountConnection).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -6252,7 +6438,7 @@ pub mod environment_account_connection {
             self.component_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentAccountConnection`](crate::model::EnvironmentAccountConnection)
+        /// Consumes the builder and constructs a [`EnvironmentAccountConnection`](crate::model::EnvironmentAccountConnection).
         pub fn build(self) -> crate::model::EnvironmentAccountConnection {
             crate::model::EnvironmentAccountConnection {
                 id: self.id,
@@ -6270,7 +6456,7 @@ pub mod environment_account_connection {
     }
 }
 impl EnvironmentAccountConnection {
-    /// Creates a new builder-style object to manufacture [`EnvironmentAccountConnection`](crate::model::EnvironmentAccountConnection)
+    /// Creates a new builder-style object to manufacture [`EnvironmentAccountConnection`](crate::model::EnvironmentAccountConnection).
     pub fn builder() -> crate::model::environment_account_connection::Builder {
         crate::model::environment_account_connection::Builder::default()
     }
@@ -6340,26 +6526,36 @@ impl AsRef<str> for EnvironmentAccountConnectionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentAccountConnectionSummary {
     /// <p>The ID of the environment account connection.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the environment account connection.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The ID of the management account that's connected to the environment account connection.</p>
+    #[doc(hidden)]
     pub management_account_id: std::option::Option<std::string::String>,
     /// <p>The ID of the environment account that's connected to the environment account connection.</p>
+    #[doc(hidden)]
     pub environment_account_id: std::option::Option<std::string::String>,
     /// <p>The IAM service role that's associated with the environment account connection.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The name of the environment that's associated with the environment account connection.</p>
+    #[doc(hidden)]
     pub environment_name: std::option::Option<std::string::String>,
     /// <p>The time when the environment account connection request was made.</p>
+    #[doc(hidden)]
     pub requested_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the environment account connection was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the environment account connection.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EnvironmentAccountConnectionStatus>,
     /// <p>The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly defined components in the associated environment account. It determines the scope of infrastructure that a component can provision in the account.</p>
     /// <p>The environment account connection must have a <code>componentRoleArn</code> to allow directly defined components to be associated with any environments running in the account.</p>
     /// <p>For more information about components, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the <i>Proton Administrator Guide</i>.</p>
+    #[doc(hidden)]
     pub component_role_arn: std::option::Option<std::string::String>,
 }
 impl EnvironmentAccountConnectionSummary {
@@ -6422,11 +6618,10 @@ impl std::fmt::Debug for EnvironmentAccountConnectionSummary {
         formatter.finish()
     }
 }
-/// See [`EnvironmentAccountConnectionSummary`](crate::model::EnvironmentAccountConnectionSummary)
+/// See [`EnvironmentAccountConnectionSummary`](crate::model::EnvironmentAccountConnectionSummary).
 pub mod environment_account_connection_summary {
 
-    /// A builder for [`EnvironmentAccountConnectionSummary`](crate::model::EnvironmentAccountConnectionSummary)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentAccountConnectionSummary`](crate::model::EnvironmentAccountConnectionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -6566,7 +6761,7 @@ pub mod environment_account_connection_summary {
             self.component_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentAccountConnectionSummary`](crate::model::EnvironmentAccountConnectionSummary)
+        /// Consumes the builder and constructs a [`EnvironmentAccountConnectionSummary`](crate::model::EnvironmentAccountConnectionSummary).
         pub fn build(self) -> crate::model::EnvironmentAccountConnectionSummary {
             crate::model::EnvironmentAccountConnectionSummary {
                 id: self.id,
@@ -6584,7 +6779,7 @@ pub mod environment_account_connection_summary {
     }
 }
 impl EnvironmentAccountConnectionSummary {
-    /// Creates a new builder-style object to manufacture [`EnvironmentAccountConnectionSummary`](crate::model::EnvironmentAccountConnectionSummary)
+    /// Creates a new builder-style object to manufacture [`EnvironmentAccountConnectionSummary`](crate::model::EnvironmentAccountConnectionSummary).
     pub fn builder() -> crate::model::environment_account_connection_summary::Builder {
         crate::model::environment_account_connection_summary::Builder::default()
     }
@@ -6659,26 +6854,37 @@ impl AsRef<str> for EnvironmentAccountConnectionRequesterAccountType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentSummary {
     /// <p>The name of the component.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the component.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the Proton environment that this component is associated with.</p>
+    #[doc(hidden)]
     pub environment_name: std::option::Option<std::string::String>,
     /// <p>The name of the service that <code>serviceInstanceName</code> is associated with. Provided when a component is attached to a service instance.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
     /// <p>The name of the service instance that this component is attached to. Provided when a component is attached to a service instance.</p>
+    #[doc(hidden)]
     pub service_instance_name: std::option::Option<std::string::String>,
     /// <p>The time when the component was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the component was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when a deployment of the component was last attempted.</p>
+    #[doc(hidden)]
     pub last_deployment_attempted_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the component was last deployed successfully.</p>
+    #[doc(hidden)]
     pub last_deployment_succeeded_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The component deployment status.</p>
+    #[doc(hidden)]
     pub deployment_status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>The message associated with the component deployment status.</p>
+    #[doc(hidden)]
     pub deployment_status_message: std::option::Option<std::string::String>,
 }
 impl ComponentSummary {
@@ -6753,11 +6959,10 @@ impl std::fmt::Debug for ComponentSummary {
         formatter.finish()
     }
 }
-/// See [`ComponentSummary`](crate::model::ComponentSummary)
+/// See [`ComponentSummary`](crate::model::ComponentSummary).
 pub mod component_summary {
 
-    /// A builder for [`ComponentSummary`](crate::model::ComponentSummary)
-    #[non_exhaustive]
+    /// A builder for [`ComponentSummary`](crate::model::ComponentSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -6907,7 +7112,7 @@ pub mod component_summary {
             self.deployment_status_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentSummary`](crate::model::ComponentSummary)
+        /// Consumes the builder and constructs a [`ComponentSummary`](crate::model::ComponentSummary).
         pub fn build(self) -> crate::model::ComponentSummary {
             crate::model::ComponentSummary {
                 name: self.name,
@@ -6926,7 +7131,7 @@ pub mod component_summary {
     }
 }
 impl ComponentSummary {
-    /// Creates a new builder-style object to manufacture [`ComponentSummary`](crate::model::ComponentSummary)
+    /// Creates a new builder-style object to manufacture [`ComponentSummary`](crate::model::ComponentSummary).
     pub fn builder() -> crate::model::component_summary::Builder {
         crate::model::component_summary::Builder::default()
     }
@@ -6938,30 +7143,43 @@ impl ComponentSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Component {
     /// <p>The name of the component.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A description of the component.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the component.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the Proton environment that this component is associated with.</p>
+    #[doc(hidden)]
     pub environment_name: std::option::Option<std::string::String>,
     /// <p>The name of the service that <code>serviceInstanceName</code> is associated with. Provided when a component is attached to a service instance.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
     /// <p>The name of the service instance that this component is attached to. Provided when a component is attached to a service instance.</p>
+    #[doc(hidden)]
     pub service_instance_name: std::option::Option<std::string::String>,
     /// <p>The time when the component was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the component was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when a deployment of the component was last attempted.</p>
+    #[doc(hidden)]
     pub last_deployment_attempted_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the component was last deployed successfully.</p>
+    #[doc(hidden)]
     pub last_deployment_succeeded_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The component deployment status.</p>
+    #[doc(hidden)]
     pub deployment_status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>The message associated with the component deployment status.</p>
+    #[doc(hidden)]
     pub deployment_status_message: std::option::Option<std::string::String>,
     /// <p>The service spec that the component uses to access service inputs. Provided when a component is attached to a service instance.</p>
+    #[doc(hidden)]
     pub service_spec: std::option::Option<std::string::String>,
 }
 impl Component {
@@ -7046,11 +7264,10 @@ impl std::fmt::Debug for Component {
         formatter.finish()
     }
 }
-/// See [`Component`](crate::model::Component)
+/// See [`Component`](crate::model::Component).
 pub mod component {
 
-    /// A builder for [`Component`](crate::model::Component)
-    #[non_exhaustive]
+    /// A builder for [`Component`](crate::model::Component).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -7222,7 +7439,7 @@ pub mod component {
             self.service_spec = input;
             self
         }
-        /// Consumes the builder and constructs a [`Component`](crate::model::Component)
+        /// Consumes the builder and constructs a [`Component`](crate::model::Component).
         pub fn build(self) -> crate::model::Component {
             crate::model::Component {
                 name: self.name,
@@ -7243,7 +7460,7 @@ pub mod component {
     }
 }
 impl Component {
-    /// Creates a new builder-style object to manufacture [`Component`](crate::model::Component)
+    /// Creates a new builder-style object to manufacture [`Component`](crate::model::Component).
     pub fn builder() -> crate::model::component::Builder {
         crate::model::component::Builder::default()
     }
@@ -7309,8 +7526,10 @@ impl AsRef<str> for ComponentDeploymentUpdateType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountSettings {
     /// <p>The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by Proton for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed provisioning.</p>
+    #[doc(hidden)]
     pub pipeline_service_role_arn: std::option::Option<std::string::String>,
     /// <p>The repository configured in the Amazon Web Services account for pipeline provisioning. Required it if you have environments configured for self-managed provisioning with services that include pipelines.</p>
+    #[doc(hidden)]
     pub pipeline_provisioning_repository: std::option::Option<crate::model::RepositoryBranch>,
 }
 impl AccountSettings {
@@ -7336,11 +7555,10 @@ impl std::fmt::Debug for AccountSettings {
         formatter.finish()
     }
 }
-/// See [`AccountSettings`](crate::model::AccountSettings)
+/// See [`AccountSettings`](crate::model::AccountSettings).
 pub mod account_settings {
 
-    /// A builder for [`AccountSettings`](crate::model::AccountSettings)
-    #[non_exhaustive]
+    /// A builder for [`AccountSettings`](crate::model::AccountSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pipeline_service_role_arn: std::option::Option<std::string::String>,
@@ -7377,7 +7595,7 @@ pub mod account_settings {
             self.pipeline_provisioning_repository = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountSettings`](crate::model::AccountSettings)
+        /// Consumes the builder and constructs a [`AccountSettings`](crate::model::AccountSettings).
         pub fn build(self) -> crate::model::AccountSettings {
             crate::model::AccountSettings {
                 pipeline_service_role_arn: self.pipeline_service_role_arn,
@@ -7387,7 +7605,7 @@ pub mod account_settings {
     }
 }
 impl AccountSettings {
-    /// Creates a new builder-style object to manufacture [`AccountSettings`](crate::model::AccountSettings)
+    /// Creates a new builder-style object to manufacture [`AccountSettings`](crate::model::AccountSettings).
     pub fn builder() -> crate::model::account_settings::Builder {
         crate::model::account_settings::Builder::default()
     }
@@ -7457,12 +7675,16 @@ impl AsRef<str> for ResourceDeploymentStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RepositorySyncDefinition {
     /// <p>The resource that is synced to.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<std::string::String>,
     /// <p>The resource that is synced from.</p>
+    #[doc(hidden)]
     pub parent: std::option::Option<std::string::String>,
     /// <p>The repository branch.</p>
+    #[doc(hidden)]
     pub branch: std::option::Option<std::string::String>,
     /// <p>The directory in the repository.</p>
+    #[doc(hidden)]
     pub directory: std::option::Option<std::string::String>,
 }
 impl RepositorySyncDefinition {
@@ -7493,11 +7715,10 @@ impl std::fmt::Debug for RepositorySyncDefinition {
         formatter.finish()
     }
 }
-/// See [`RepositorySyncDefinition`](crate::model::RepositorySyncDefinition)
+/// See [`RepositorySyncDefinition`](crate::model::RepositorySyncDefinition).
 pub mod repository_sync_definition {
 
-    /// A builder for [`RepositorySyncDefinition`](crate::model::RepositorySyncDefinition)
-    #[non_exhaustive]
+    /// A builder for [`RepositorySyncDefinition`](crate::model::RepositorySyncDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target: std::option::Option<std::string::String>,
@@ -7546,7 +7767,7 @@ pub mod repository_sync_definition {
             self.directory = input;
             self
         }
-        /// Consumes the builder and constructs a [`RepositorySyncDefinition`](crate::model::RepositorySyncDefinition)
+        /// Consumes the builder and constructs a [`RepositorySyncDefinition`](crate::model::RepositorySyncDefinition).
         pub fn build(self) -> crate::model::RepositorySyncDefinition {
             crate::model::RepositorySyncDefinition {
                 target: self.target,
@@ -7558,7 +7779,7 @@ pub mod repository_sync_definition {
     }
 }
 impl RepositorySyncDefinition {
-    /// Creates a new builder-style object to manufacture [`RepositorySyncDefinition`](crate::model::RepositorySyncDefinition)
+    /// Creates a new builder-style object to manufacture [`RepositorySyncDefinition`](crate::model::RepositorySyncDefinition).
     pub fn builder() -> crate::model::repository_sync_definition::Builder {
         crate::model::repository_sync_definition::Builder::default()
     }
@@ -7620,14 +7841,19 @@ impl AsRef<str> for SyncType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Revision {
     /// <p>The repository name.</p>
+    #[doc(hidden)]
     pub repository_name: std::option::Option<std::string::String>,
     /// <p>The repository provider.</p>
+    #[doc(hidden)]
     pub repository_provider: std::option::Option<crate::model::RepositoryProvider>,
     /// <p>The secure hash algorithm (SHA) hash for the revision.</p>
+    #[doc(hidden)]
     pub sha: std::option::Option<std::string::String>,
     /// <p>The repository directory changed by a commit and push that activated the sync attempt.</p>
+    #[doc(hidden)]
     pub directory: std::option::Option<std::string::String>,
     /// <p>The repository branch.</p>
+    #[doc(hidden)]
     pub branch: std::option::Option<std::string::String>,
 }
 impl Revision {
@@ -7663,11 +7889,10 @@ impl std::fmt::Debug for Revision {
         formatter.finish()
     }
 }
-/// See [`Revision`](crate::model::Revision)
+/// See [`Revision`](crate::model::Revision).
 pub mod revision {
 
-    /// A builder for [`Revision`](crate::model::Revision)
-    #[non_exhaustive]
+    /// A builder for [`Revision`](crate::model::Revision).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) repository_name: std::option::Option<std::string::String>,
@@ -7733,7 +7958,7 @@ pub mod revision {
             self.branch = input;
             self
         }
-        /// Consumes the builder and constructs a [`Revision`](crate::model::Revision)
+        /// Consumes the builder and constructs a [`Revision`](crate::model::Revision).
         pub fn build(self) -> crate::model::Revision {
             crate::model::Revision {
                 repository_name: self.repository_name,
@@ -7746,7 +7971,7 @@ pub mod revision {
     }
 }
 impl Revision {
-    /// Creates a new builder-style object to manufacture [`Revision`](crate::model::Revision)
+    /// Creates a new builder-style object to manufacture [`Revision`](crate::model::Revision).
     pub fn builder() -> crate::model::revision::Builder {
         crate::model::revision::Builder::default()
     }
@@ -7757,16 +7982,22 @@ impl Revision {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceSyncAttempt {
     /// <p>Detail data for the initial repository commit, path and push.</p>
+    #[doc(hidden)]
     pub initial_revision: std::option::Option<crate::model::Revision>,
     /// <p>Detail data for the target revision.</p>
+    #[doc(hidden)]
     pub target_revision: std::option::Option<crate::model::Revision>,
     /// <p>The resource that is synced to.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<std::string::String>,
     /// <p>The time when the sync attempt started.</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the sync attempt.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ResourceSyncStatus>,
     /// <p>An array of events with detail data.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<std::vec::Vec<crate::model::ResourceSyncEvent>>,
 }
 impl ResourceSyncAttempt {
@@ -7807,11 +8038,10 @@ impl std::fmt::Debug for ResourceSyncAttempt {
         formatter.finish()
     }
 }
-/// See [`ResourceSyncAttempt`](crate::model::ResourceSyncAttempt)
+/// See [`ResourceSyncAttempt`](crate::model::ResourceSyncAttempt).
 pub mod resource_sync_attempt {
 
-    /// A builder for [`ResourceSyncAttempt`](crate::model::ResourceSyncAttempt)
-    #[non_exhaustive]
+    /// A builder for [`ResourceSyncAttempt`](crate::model::ResourceSyncAttempt).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) initial_revision: std::option::Option<crate::model::Revision>,
@@ -7903,7 +8133,7 @@ pub mod resource_sync_attempt {
             self.events = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceSyncAttempt`](crate::model::ResourceSyncAttempt)
+        /// Consumes the builder and constructs a [`ResourceSyncAttempt`](crate::model::ResourceSyncAttempt).
         pub fn build(self) -> crate::model::ResourceSyncAttempt {
             crate::model::ResourceSyncAttempt {
                 initial_revision: self.initial_revision,
@@ -7917,7 +8147,7 @@ pub mod resource_sync_attempt {
     }
 }
 impl ResourceSyncAttempt {
-    /// Creates a new builder-style object to manufacture [`ResourceSyncAttempt`](crate::model::ResourceSyncAttempt)
+    /// Creates a new builder-style object to manufacture [`ResourceSyncAttempt`](crate::model::ResourceSyncAttempt).
     pub fn builder() -> crate::model::resource_sync_attempt::Builder {
         crate::model::resource_sync_attempt::Builder::default()
     }
@@ -7928,12 +8158,16 @@ impl ResourceSyncAttempt {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceSyncEvent {
     /// <p>The type of event.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The external ID for the event.</p>
+    #[doc(hidden)]
     pub external_id: std::option::Option<std::string::String>,
     /// <p>The time when the event occurred.</p>
+    #[doc(hidden)]
     pub time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A resource sync event.</p>
+    #[doc(hidden)]
     pub event: std::option::Option<std::string::String>,
 }
 impl ResourceSyncEvent {
@@ -7964,11 +8198,10 @@ impl std::fmt::Debug for ResourceSyncEvent {
         formatter.finish()
     }
 }
-/// See [`ResourceSyncEvent`](crate::model::ResourceSyncEvent)
+/// See [`ResourceSyncEvent`](crate::model::ResourceSyncEvent).
 pub mod resource_sync_event {
 
-    /// A builder for [`ResourceSyncEvent`](crate::model::ResourceSyncEvent)
-    #[non_exhaustive]
+    /// A builder for [`ResourceSyncEvent`](crate::model::ResourceSyncEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<std::string::String>,
@@ -8017,7 +8250,7 @@ pub mod resource_sync_event {
             self.event = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceSyncEvent`](crate::model::ResourceSyncEvent)
+        /// Consumes the builder and constructs a [`ResourceSyncEvent`](crate::model::ResourceSyncEvent).
         pub fn build(self) -> crate::model::ResourceSyncEvent {
             crate::model::ResourceSyncEvent {
                 r#type: self.r#type,
@@ -8029,7 +8262,7 @@ pub mod resource_sync_event {
     }
 }
 impl ResourceSyncEvent {
-    /// Creates a new builder-style object to manufacture [`ResourceSyncEvent`](crate::model::ResourceSyncEvent)
+    /// Creates a new builder-style object to manufacture [`ResourceSyncEvent`](crate::model::ResourceSyncEvent).
     pub fn builder() -> crate::model::resource_sync_event::Builder {
         crate::model::resource_sync_event::Builder::default()
     }
@@ -8107,10 +8340,13 @@ impl AsRef<str> for ResourceSyncStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RepositorySyncAttempt {
     /// <p>The time when the sync attempt started.</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The sync attempt status.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::RepositorySyncStatus>,
     /// <p>Detail data for sync attempt events.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<std::vec::Vec<crate::model::RepositorySyncEvent>>,
 }
 impl RepositorySyncAttempt {
@@ -8136,11 +8372,10 @@ impl std::fmt::Debug for RepositorySyncAttempt {
         formatter.finish()
     }
 }
-/// See [`RepositorySyncAttempt`](crate::model::RepositorySyncAttempt)
+/// See [`RepositorySyncAttempt`](crate::model::RepositorySyncAttempt).
 pub mod repository_sync_attempt {
 
-    /// A builder for [`RepositorySyncAttempt`](crate::model::RepositorySyncAttempt)
-    #[non_exhaustive]
+    /// A builder for [`RepositorySyncAttempt`](crate::model::RepositorySyncAttempt).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) started_at: std::option::Option<aws_smithy_types::DateTime>,
@@ -8193,7 +8428,7 @@ pub mod repository_sync_attempt {
             self.events = input;
             self
         }
-        /// Consumes the builder and constructs a [`RepositorySyncAttempt`](crate::model::RepositorySyncAttempt)
+        /// Consumes the builder and constructs a [`RepositorySyncAttempt`](crate::model::RepositorySyncAttempt).
         pub fn build(self) -> crate::model::RepositorySyncAttempt {
             crate::model::RepositorySyncAttempt {
                 started_at: self.started_at,
@@ -8204,7 +8439,7 @@ pub mod repository_sync_attempt {
     }
 }
 impl RepositorySyncAttempt {
-    /// Creates a new builder-style object to manufacture [`RepositorySyncAttempt`](crate::model::RepositorySyncAttempt)
+    /// Creates a new builder-style object to manufacture [`RepositorySyncAttempt`](crate::model::RepositorySyncAttempt).
     pub fn builder() -> crate::model::repository_sync_attempt::Builder {
         crate::model::repository_sync_attempt::Builder::default()
     }
@@ -8215,12 +8450,16 @@ impl RepositorySyncAttempt {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RepositorySyncEvent {
     /// <p>The type of event.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The external ID of the sync event.</p>
+    #[doc(hidden)]
     pub external_id: std::option::Option<std::string::String>,
     /// <p>The time that the sync event occurred.</p>
+    #[doc(hidden)]
     pub time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Event detail for a repository sync attempt.</p>
+    #[doc(hidden)]
     pub event: std::option::Option<std::string::String>,
 }
 impl RepositorySyncEvent {
@@ -8251,11 +8490,10 @@ impl std::fmt::Debug for RepositorySyncEvent {
         formatter.finish()
     }
 }
-/// See [`RepositorySyncEvent`](crate::model::RepositorySyncEvent)
+/// See [`RepositorySyncEvent`](crate::model::RepositorySyncEvent).
 pub mod repository_sync_event {
 
-    /// A builder for [`RepositorySyncEvent`](crate::model::RepositorySyncEvent)
-    #[non_exhaustive]
+    /// A builder for [`RepositorySyncEvent`](crate::model::RepositorySyncEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<std::string::String>,
@@ -8304,7 +8542,7 @@ pub mod repository_sync_event {
             self.event = input;
             self
         }
-        /// Consumes the builder and constructs a [`RepositorySyncEvent`](crate::model::RepositorySyncEvent)
+        /// Consumes the builder and constructs a [`RepositorySyncEvent`](crate::model::RepositorySyncEvent).
         pub fn build(self) -> crate::model::RepositorySyncEvent {
             crate::model::RepositorySyncEvent {
                 r#type: self.r#type,
@@ -8316,7 +8554,7 @@ pub mod repository_sync_event {
     }
 }
 impl RepositorySyncEvent {
-    /// Creates a new builder-style object to manufacture [`RepositorySyncEvent`](crate::model::RepositorySyncEvent)
+    /// Creates a new builder-style object to manufacture [`RepositorySyncEvent`](crate::model::RepositorySyncEvent).
     pub fn builder() -> crate::model::repository_sync_event::Builder {
         crate::model::repository_sync_event::Builder::default()
     }

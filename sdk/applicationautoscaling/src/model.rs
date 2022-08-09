@@ -5,10 +5,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SuspendedState {
     /// <p>Whether scale in by a target tracking scaling policy or a step scaling policy is suspended. Set the value to <code>true</code> if you don't want Application Auto Scaling to remove capacity when a scaling policy is triggered. The default is <code>false</code>. </p>
+    #[doc(hidden)]
     pub dynamic_scaling_in_suspended: std::option::Option<bool>,
     /// <p>Whether scale out by a target tracking scaling policy or a step scaling policy is suspended. Set the value to <code>true</code> if you don't want Application Auto Scaling to add capacity when a scaling policy is triggered. The default is <code>false</code>. </p>
+    #[doc(hidden)]
     pub dynamic_scaling_out_suspended: std::option::Option<bool>,
     /// <p>Whether scheduled scaling is suspended. Set the value to <code>true</code> if you don't want Application Auto Scaling to add or remove capacity by initiating scheduled actions. The default is <code>false</code>. </p>
+    #[doc(hidden)]
     pub scheduled_scaling_suspended: std::option::Option<bool>,
 }
 impl SuspendedState {
@@ -43,11 +46,10 @@ impl std::fmt::Debug for SuspendedState {
         formatter.finish()
     }
 }
-/// See [`SuspendedState`](crate::model::SuspendedState)
+/// See [`SuspendedState`](crate::model::SuspendedState).
 pub mod suspended_state {
 
-    /// A builder for [`SuspendedState`](crate::model::SuspendedState)
-    #[non_exhaustive]
+    /// A builder for [`SuspendedState`](crate::model::SuspendedState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dynamic_scaling_in_suspended: std::option::Option<bool>,
@@ -91,7 +93,7 @@ pub mod suspended_state {
             self.scheduled_scaling_suspended = input;
             self
         }
-        /// Consumes the builder and constructs a [`SuspendedState`](crate::model::SuspendedState)
+        /// Consumes the builder and constructs a [`SuspendedState`](crate::model::SuspendedState).
         pub fn build(self) -> crate::model::SuspendedState {
             crate::model::SuspendedState {
                 dynamic_scaling_in_suspended: self.dynamic_scaling_in_suspended,
@@ -102,7 +104,7 @@ pub mod suspended_state {
     }
 }
 impl SuspendedState {
-    /// Creates a new builder-style object to manufacture [`SuspendedState`](crate::model::SuspendedState)
+    /// Creates a new builder-style object to manufacture [`SuspendedState`](crate::model::SuspendedState).
     pub fn builder() -> crate::model::suspended_state::Builder {
         crate::model::suspended_state::Builder::default()
     }
@@ -432,9 +434,11 @@ impl AsRef<str> for ServiceNamespace {
 pub struct ScalableTargetAction {
     /// <p>The minimum capacity.</p>
     /// <p>For certain resources, the minimum value allowed is 0. This includes Lambda provisioned concurrency, Spot Fleet, ECS services, Aurora DB clusters, EMR clusters, and custom resources. For all other resources, the minimum value allowed is 1.</p>
+    #[doc(hidden)]
     pub min_capacity: std::option::Option<i32>,
     /// <p>The maximum capacity.</p>
     /// <p>Although you can specify a large maximum capacity, note that service quotas may impose lower limits. Each service has its own default quotas for the maximum capacity of the resource. If you want to specify a higher limit, you can request an increase. For more information, consult the documentation for that service. For information about the default quotas for each service, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html">Service Endpoints and Quotas</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub max_capacity: std::option::Option<i32>,
 }
 impl ScalableTargetAction {
@@ -457,11 +461,10 @@ impl std::fmt::Debug for ScalableTargetAction {
         formatter.finish()
     }
 }
-/// See [`ScalableTargetAction`](crate::model::ScalableTargetAction)
+/// See [`ScalableTargetAction`](crate::model::ScalableTargetAction).
 pub mod scalable_target_action {
 
-    /// A builder for [`ScalableTargetAction`](crate::model::ScalableTargetAction)
-    #[non_exhaustive]
+    /// A builder for [`ScalableTargetAction`](crate::model::ScalableTargetAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min_capacity: std::option::Option<i32>,
@@ -492,7 +495,7 @@ pub mod scalable_target_action {
             self.max_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalableTargetAction`](crate::model::ScalableTargetAction)
+        /// Consumes the builder and constructs a [`ScalableTargetAction`](crate::model::ScalableTargetAction).
         pub fn build(self) -> crate::model::ScalableTargetAction {
             crate::model::ScalableTargetAction {
                 min_capacity: self.min_capacity,
@@ -502,7 +505,7 @@ pub mod scalable_target_action {
     }
 }
 impl ScalableTargetAction {
-    /// Creates a new builder-style object to manufacture [`ScalableTargetAction`](crate::model::ScalableTargetAction)
+    /// Creates a new builder-style object to manufacture [`ScalableTargetAction`](crate::model::ScalableTargetAction).
     pub fn builder() -> crate::model::scalable_target_action::Builder {
         crate::model::scalable_target_action::Builder::default()
     }
@@ -513,8 +516,10 @@ impl ScalableTargetAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Alarm {
     /// <p>The name of the alarm.</p>
+    #[doc(hidden)]
     pub alarm_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the alarm.</p>
+    #[doc(hidden)]
     pub alarm_arn: std::option::Option<std::string::String>,
 }
 impl Alarm {
@@ -535,11 +540,10 @@ impl std::fmt::Debug for Alarm {
         formatter.finish()
     }
 }
-/// See [`Alarm`](crate::model::Alarm)
+/// See [`Alarm`](crate::model::Alarm).
 pub mod alarm {
 
-    /// A builder for [`Alarm`](crate::model::Alarm)
-    #[non_exhaustive]
+    /// A builder for [`Alarm`](crate::model::Alarm).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alarm_name: std::option::Option<std::string::String>,
@@ -566,7 +570,7 @@ pub mod alarm {
             self.alarm_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Alarm`](crate::model::Alarm)
+        /// Consumes the builder and constructs a [`Alarm`](crate::model::Alarm).
         pub fn build(self) -> crate::model::Alarm {
             crate::model::Alarm {
                 alarm_name: self.alarm_name,
@@ -576,7 +580,7 @@ pub mod alarm {
     }
 }
 impl Alarm {
-    /// Creates a new builder-style object to manufacture [`Alarm`](crate::model::Alarm)
+    /// Creates a new builder-style object to manufacture [`Alarm`](crate::model::Alarm).
     pub fn builder() -> crate::model::alarm::Builder {
         crate::model::alarm::Builder::default()
     }
@@ -587,11 +591,14 @@ impl Alarm {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetTrackingScalingPolicyConfiguration {
     /// <p>The target value for the metric. Although this property accepts numbers of type Double, it won't accept values that are either too small or too large. Values must be in the range of -2^360 to 2^360. The value must be a valid number based on the choice of metric. For example, if the metric is CPU utilization, then the target value is a percent value that represents how much of the CPU can be used before scaling out. </p>
+    #[doc(hidden)]
     pub target_value: std::option::Option<f64>,
     /// <p>A predefined metric. You can specify either a predefined metric or a customized metric.</p>
+    #[doc(hidden)]
     pub predefined_metric_specification:
         std::option::Option<crate::model::PredefinedMetricSpecification>,
     /// <p>A customized metric. You can specify either a predefined metric or a customized metric.</p>
+    #[doc(hidden)]
     pub customized_metric_specification:
         std::option::Option<crate::model::CustomizedMetricSpecification>,
     /// <p>The amount of time, in seconds, to wait for a previous scale-out activity to take effect.</p>
@@ -615,6 +622,7 @@ pub struct TargetTrackingScalingPolicyConfiguration {
     /// <li> <p>Lambda provisioned concurrency</p> </li>
     /// <li> <p>Amazon MSK broker storage</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub scale_out_cooldown: std::option::Option<i32>,
     /// <p>The amount of time, in seconds, after a scale-in activity completes before another scale-in activity can start.</p>
     /// <p>With the <i>scale-in cooldown period</i>, the intention is to scale in conservatively to protect your application’s availability, so scale-in activities are blocked until the cooldown period has expired. However, if another alarm triggers a scale-out activity during the scale-in cooldown period, Application Auto Scaling scales out the target immediately. In this case, the scale-in cooldown period stops and doesn't complete.</p>
@@ -637,8 +645,10 @@ pub struct TargetTrackingScalingPolicyConfiguration {
     /// <li> <p>Lambda provisioned concurrency</p> </li>
     /// <li> <p>Amazon MSK broker storage</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub scale_in_cooldown: std::option::Option<i32>,
     /// <p>Indicates whether scale in by the target tracking scaling policy is disabled. If the value is <code>true</code>, scale in is disabled and the target tracking scaling policy won't remove capacity from the scalable target. Otherwise, scale in is enabled and the target tracking scaling policy can remove capacity from the scalable target. The default value is <code>false</code>.</p>
+    #[doc(hidden)]
     pub disable_scale_in: std::option::Option<bool>,
 }
 impl TargetTrackingScalingPolicyConfiguration {
@@ -729,11 +739,10 @@ impl std::fmt::Debug for TargetTrackingScalingPolicyConfiguration {
         formatter.finish()
     }
 }
-/// See [`TargetTrackingScalingPolicyConfiguration`](crate::model::TargetTrackingScalingPolicyConfiguration)
+/// See [`TargetTrackingScalingPolicyConfiguration`](crate::model::TargetTrackingScalingPolicyConfiguration).
 pub mod target_tracking_scaling_policy_configuration {
 
-    /// A builder for [`TargetTrackingScalingPolicyConfiguration`](crate::model::TargetTrackingScalingPolicyConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`TargetTrackingScalingPolicyConfiguration`](crate::model::TargetTrackingScalingPolicyConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_value: std::option::Option<f64>,
@@ -898,7 +907,7 @@ pub mod target_tracking_scaling_policy_configuration {
             self.disable_scale_in = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetTrackingScalingPolicyConfiguration`](crate::model::TargetTrackingScalingPolicyConfiguration)
+        /// Consumes the builder and constructs a [`TargetTrackingScalingPolicyConfiguration`](crate::model::TargetTrackingScalingPolicyConfiguration).
         pub fn build(self) -> crate::model::TargetTrackingScalingPolicyConfiguration {
             crate::model::TargetTrackingScalingPolicyConfiguration {
                 target_value: self.target_value,
@@ -912,7 +921,7 @@ pub mod target_tracking_scaling_policy_configuration {
     }
 }
 impl TargetTrackingScalingPolicyConfiguration {
-    /// Creates a new builder-style object to manufacture [`TargetTrackingScalingPolicyConfiguration`](crate::model::TargetTrackingScalingPolicyConfiguration)
+    /// Creates a new builder-style object to manufacture [`TargetTrackingScalingPolicyConfiguration`](crate::model::TargetTrackingScalingPolicyConfiguration).
     pub fn builder() -> crate::model::target_tracking_scaling_policy_configuration::Builder {
         crate::model::target_tracking_scaling_policy_configuration::Builder::default()
     }
@@ -930,15 +939,20 @@ impl TargetTrackingScalingPolicyConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomizedMetricSpecification {
     /// <p>The name of the metric. </p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The namespace of the metric.</p>
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
     /// <p>The dimensions of the metric. </p>
     /// <p>Conditional: If you published your metric with dimensions, you must specify the same dimensions in your scaling policy.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::MetricDimension>>,
     /// <p>The statistic of the metric.</p>
+    #[doc(hidden)]
     pub statistic: std::option::Option<crate::model::MetricStatistic>,
     /// <p>The unit of the metric.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<std::string::String>,
 }
 impl CustomizedMetricSpecification {
@@ -975,11 +989,10 @@ impl std::fmt::Debug for CustomizedMetricSpecification {
         formatter.finish()
     }
 }
-/// See [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification)
+/// See [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification).
 pub mod customized_metric_specification {
 
-    /// A builder for [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification)
-    #[non_exhaustive]
+    /// A builder for [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_name: std::option::Option<std::string::String>,
@@ -1053,7 +1066,7 @@ pub mod customized_metric_specification {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification)
+        /// Consumes the builder and constructs a [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification).
         pub fn build(self) -> crate::model::CustomizedMetricSpecification {
             crate::model::CustomizedMetricSpecification {
                 metric_name: self.metric_name,
@@ -1066,7 +1079,7 @@ pub mod customized_metric_specification {
     }
 }
 impl CustomizedMetricSpecification {
-    /// Creates a new builder-style object to manufacture [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification)
+    /// Creates a new builder-style object to manufacture [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification).
     pub fn builder() -> crate::model::customized_metric_specification::Builder {
         crate::model::customized_metric_specification::Builder::default()
     }
@@ -1144,8 +1157,10 @@ impl AsRef<str> for MetricStatistic {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDimension {
     /// <p>The name of the dimension.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value of the dimension.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl MetricDimension {
@@ -1166,11 +1181,10 @@ impl std::fmt::Debug for MetricDimension {
         formatter.finish()
     }
 }
-/// See [`MetricDimension`](crate::model::MetricDimension)
+/// See [`MetricDimension`](crate::model::MetricDimension).
 pub mod metric_dimension {
 
-    /// A builder for [`MetricDimension`](crate::model::MetricDimension)
-    #[non_exhaustive]
+    /// A builder for [`MetricDimension`](crate::model::MetricDimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1197,7 +1211,7 @@ pub mod metric_dimension {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDimension`](crate::model::MetricDimension)
+        /// Consumes the builder and constructs a [`MetricDimension`](crate::model::MetricDimension).
         pub fn build(self) -> crate::model::MetricDimension {
             crate::model::MetricDimension {
                 name: self.name,
@@ -1207,7 +1221,7 @@ pub mod metric_dimension {
     }
 }
 impl MetricDimension {
-    /// Creates a new builder-style object to manufacture [`MetricDimension`](crate::model::MetricDimension)
+    /// Creates a new builder-style object to manufacture [`MetricDimension`](crate::model::MetricDimension).
     pub fn builder() -> crate::model::metric_dimension::Builder {
         crate::model::metric_dimension::Builder::default()
     }
@@ -1219,6 +1233,7 @@ impl MetricDimension {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PredefinedMetricSpecification {
     /// <p>The metric type. The <code>ALBRequestCountPerTarget</code> metric type applies only to Spot Fleet requests and ECS services.</p>
+    #[doc(hidden)]
     pub predefined_metric_type: std::option::Option<crate::model::MetricType>,
     /// <p>Identifies the resource associated with the metric type. You can't specify a resource label unless the metric type is <code>ALBRequestCountPerTarget</code> and there is a target group attached to the Spot Fleet request or ECS service.</p>
     /// <p>You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). The format of the resource label is:</p>
@@ -1239,6 +1254,7 @@ pub struct PredefinedMetricSpecification {
     /// </target-group-name></p> </li>
     /// </ul>
     /// <p>To find the ARN for an Application Load Balancer, use the <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html">DescribeLoadBalancers</a> API operation. To find the ARN for the target group, use the <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html">DescribeTargetGroups</a> API operation.</p>
+    #[doc(hidden)]
     pub resource_label: std::option::Option<std::string::String>,
 }
 impl PredefinedMetricSpecification {
@@ -1277,11 +1293,10 @@ impl std::fmt::Debug for PredefinedMetricSpecification {
         formatter.finish()
     }
 }
-/// See [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification)
+/// See [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification).
 pub mod predefined_metric_specification {
 
-    /// A builder for [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification)
-    #[non_exhaustive]
+    /// A builder for [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) predefined_metric_type: std::option::Option<crate::model::MetricType>,
@@ -1350,7 +1365,7 @@ pub mod predefined_metric_specification {
             self.resource_label = input;
             self
         }
-        /// Consumes the builder and constructs a [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification)
+        /// Consumes the builder and constructs a [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification).
         pub fn build(self) -> crate::model::PredefinedMetricSpecification {
             crate::model::PredefinedMetricSpecification {
                 predefined_metric_type: self.predefined_metric_type,
@@ -1360,7 +1375,7 @@ pub mod predefined_metric_specification {
     }
 }
 impl PredefinedMetricSpecification {
-    /// Creates a new builder-style object to manufacture [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification)
+    /// Creates a new builder-style object to manufacture [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification).
     pub fn builder() -> crate::model::predefined_metric_specification::Builder {
         crate::model::predefined_metric_specification::Builder::default()
     }
@@ -1565,11 +1580,14 @@ impl AsRef<str> for MetricType {
 pub struct StepScalingPolicyConfiguration {
     /// <p>Specifies how the <code>ScalingAdjustment</code> value in a <a href="https://docs.aws.amazon.com/autoscaling/application/APIReference/API_StepAdjustment.html">StepAdjustment</a> is interpreted (for example, an absolute number or a percentage). The valid values are <code>ChangeInCapacity</code>, <code>ExactCapacity</code>, and <code>PercentChangeInCapacity</code>. </p>
     /// <p> <code>AdjustmentType</code> is required if you are adding a new step scaling policy configuration.</p>
+    #[doc(hidden)]
     pub adjustment_type: std::option::Option<crate::model::AdjustmentType>,
     /// <p>A set of adjustments that enable you to scale based on the size of the alarm breach.</p>
     /// <p>At least one step adjustment is required if you are adding a new step scaling policy configuration.</p>
+    #[doc(hidden)]
     pub step_adjustments: std::option::Option<std::vec::Vec<crate::model::StepAdjustment>>,
     /// <p>The minimum value to scale by when the adjustment type is <code>PercentChangeInCapacity</code>. For example, suppose that you create a step scaling policy to scale out an Amazon ECS service by 25 percent and you specify a <code>MinAdjustmentMagnitude</code> of 2. If the service has 4 tasks and the scaling policy is performed, 25 percent of 4 is 1. However, because you specified a <code>MinAdjustmentMagnitude</code> of 2, Application Auto Scaling scales out the service by 2 tasks.</p>
+    #[doc(hidden)]
     pub min_adjustment_magnitude: std::option::Option<i32>,
     /// <p>The amount of time, in seconds, to wait for a previous scaling activity to take effect. </p>
     /// <p>With scale-out policies, the intention is to continuously (but not excessively) scale out. After Application Auto Scaling successfully scales out using a step scaling policy, it starts to calculate the cooldown time. The scaling policy won't increase the desired capacity again unless either a larger scale out is triggered or the cooldown period ends. While the cooldown period is in effect, capacity added by the initiating scale-out activity is calculated as part of the desired capacity for the next scale-out activity. For example, when an alarm triggers a step scaling policy to increase the capacity by 2, the scaling activity completes successfully, and a cooldown period starts. If the alarm triggers again during the cooldown period but at a more aggressive step adjustment of 3, the previous increase of 2 is considered part of the current capacity. Therefore, only 1 is added to the capacity.</p>
@@ -1593,8 +1611,10 @@ pub struct StepScalingPolicyConfiguration {
     /// <li> <p>Lambda provisioned concurrency</p> </li>
     /// <li> <p>Amazon MSK broker storage</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub cooldown: std::option::Option<i32>,
     /// <p>The aggregation type for the CloudWatch metrics. Valid values are <code>Minimum</code>, <code>Maximum</code>, and <code>Average</code>. If the aggregation type is null, the value is treated as <code>Average</code>.</p>
+    #[doc(hidden)]
     pub metric_aggregation_type: std::option::Option<crate::model::MetricAggregationType>,
 }
 impl StepScalingPolicyConfiguration {
@@ -1655,11 +1675,10 @@ impl std::fmt::Debug for StepScalingPolicyConfiguration {
         formatter.finish()
     }
 }
-/// See [`StepScalingPolicyConfiguration`](crate::model::StepScalingPolicyConfiguration)
+/// See [`StepScalingPolicyConfiguration`](crate::model::StepScalingPolicyConfiguration).
 pub mod step_scaling_policy_configuration {
 
-    /// A builder for [`StepScalingPolicyConfiguration`](crate::model::StepScalingPolicyConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`StepScalingPolicyConfiguration`](crate::model::StepScalingPolicyConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) adjustment_type: std::option::Option<crate::model::AdjustmentType>,
@@ -1785,7 +1804,7 @@ pub mod step_scaling_policy_configuration {
             self.metric_aggregation_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`StepScalingPolicyConfiguration`](crate::model::StepScalingPolicyConfiguration)
+        /// Consumes the builder and constructs a [`StepScalingPolicyConfiguration`](crate::model::StepScalingPolicyConfiguration).
         pub fn build(self) -> crate::model::StepScalingPolicyConfiguration {
             crate::model::StepScalingPolicyConfiguration {
                 adjustment_type: self.adjustment_type,
@@ -1798,7 +1817,7 @@ pub mod step_scaling_policy_configuration {
     }
 }
 impl StepScalingPolicyConfiguration {
-    /// Creates a new builder-style object to manufacture [`StepScalingPolicyConfiguration`](crate::model::StepScalingPolicyConfiguration)
+    /// Creates a new builder-style object to manufacture [`StepScalingPolicyConfiguration`](crate::model::StepScalingPolicyConfiguration).
     pub fn builder() -> crate::model::step_scaling_policy_configuration::Builder {
         crate::model::step_scaling_policy_configuration::Builder::default()
     }
@@ -1880,11 +1899,14 @@ impl AsRef<str> for MetricAggregationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StepAdjustment {
     /// <p>The lower bound for the difference between the alarm threshold and the CloudWatch metric. If the metric value is above the breach threshold, the lower bound is inclusive (the metric must be greater than or equal to the threshold plus the lower bound). Otherwise, it is exclusive (the metric must be greater than the threshold plus the lower bound). A null value indicates negative infinity.</p>
+    #[doc(hidden)]
     pub metric_interval_lower_bound: std::option::Option<f64>,
     /// <p>The upper bound for the difference between the alarm threshold and the CloudWatch metric. If the metric value is above the breach threshold, the upper bound is exclusive (the metric must be less than the threshold plus the upper bound). Otherwise, it is inclusive (the metric must be less than or equal to the threshold plus the upper bound). A null value indicates positive infinity.</p>
     /// <p>The upper bound must be greater than the lower bound.</p>
+    #[doc(hidden)]
     pub metric_interval_upper_bound: std::option::Option<f64>,
     /// <p>The amount by which to scale, based on the specified adjustment type. A positive value adds to the current capacity while a negative number removes from the current capacity. For exact capacity, you must specify a positive value.</p>
+    #[doc(hidden)]
     pub scaling_adjustment: std::option::Option<i32>,
 }
 impl StepAdjustment {
@@ -1917,11 +1939,10 @@ impl std::fmt::Debug for StepAdjustment {
         formatter.finish()
     }
 }
-/// See [`StepAdjustment`](crate::model::StepAdjustment)
+/// See [`StepAdjustment`](crate::model::StepAdjustment).
 pub mod step_adjustment {
 
-    /// A builder for [`StepAdjustment`](crate::model::StepAdjustment)
-    #[non_exhaustive]
+    /// A builder for [`StepAdjustment`](crate::model::StepAdjustment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_interval_lower_bound: std::option::Option<f64>,
@@ -1961,7 +1982,7 @@ pub mod step_adjustment {
             self.scaling_adjustment = input;
             self
         }
-        /// Consumes the builder and constructs a [`StepAdjustment`](crate::model::StepAdjustment)
+        /// Consumes the builder and constructs a [`StepAdjustment`](crate::model::StepAdjustment).
         pub fn build(self) -> crate::model::StepAdjustment {
             crate::model::StepAdjustment {
                 metric_interval_lower_bound: self.metric_interval_lower_bound,
@@ -1972,7 +1993,7 @@ pub mod step_adjustment {
     }
 }
 impl StepAdjustment {
-    /// Creates a new builder-style object to manufacture [`StepAdjustment`](crate::model::StepAdjustment)
+    /// Creates a new builder-style object to manufacture [`StepAdjustment`](crate::model::StepAdjustment).
     pub fn builder() -> crate::model::step_adjustment::Builder {
         crate::model::step_adjustment::Builder::default()
     }
@@ -2101,10 +2122,13 @@ impl AsRef<str> for PolicyType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduledAction {
     /// <p>The name of the scheduled action.</p>
+    #[doc(hidden)]
     pub scheduled_action_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the scheduled action.</p>
+    #[doc(hidden)]
     pub scheduled_action_arn: std::option::Option<std::string::String>,
     /// <p>The namespace of the Amazon Web Services service that provides the resource, or a <code>custom-resource</code>.</p>
+    #[doc(hidden)]
     pub service_namespace: std::option::Option<crate::model::ServiceNamespace>,
     /// <p>The schedule for this action. The following formats are supported:</p>
     /// <ul>
@@ -2117,8 +2141,10 @@ pub struct ScheduledAction {
     /// <p>The cron format consists of six fields separated by white spaces: [Minutes] [Hours] [Day_of_Month] [Month] [Day_of_Week] [Year].</p>
     /// <p>For rate expressions, <i>value</i> is a positive integer and <i>unit</i> is <code>minute</code> | <code>minutes</code> | <code>hour</code> | <code>hours</code> | <code>day</code> | <code>days</code>.</p>
     /// <p>For more information and examples, see <a href="https://docs.aws.amazon.com/autoscaling/application/userguide/examples-scheduled-actions.html">Example scheduled actions for Application Auto Scaling</a> in the <i>Application Auto Scaling User Guide</i>.</p>
+    #[doc(hidden)]
     pub schedule: std::option::Option<std::string::String>,
     /// <p>The time zone used when referring to the date and time of a scheduled action, when the scheduled action uses an at or cron expression.</p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
     /// <p>The identifier of the resource associated with the scaling policy. This string consists of the resource type and unique identifier.</p>
     /// <ul>
@@ -2139,6 +2165,7 @@ pub struct ScheduledAction {
     /// <li> <p>Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique identifier is the replication group name. Example: <code>replication-group/mycluster</code>.</p> </li>
     /// <li> <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The scalable dimension. This string consists of the service namespace, resource type, and scaling property.</p>
     /// <ul>
@@ -2163,14 +2190,19 @@ pub struct ScheduledAction {
     /// <li> <p> <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon ElastiCache replication group.</p> </li>
     /// <li> <p> <code>neptune:cluster:ReadReplicaCount</code> - The count of read replicas in an Amazon Neptune DB cluster.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub scalable_dimension: std::option::Option<crate::model::ScalableDimension>,
     /// <p>The date and time that the action is scheduled to begin, in UTC.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the action is scheduled to end, in UTC.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The new minimum and maximum capacity. You can set both values or just one. At the scheduled time, if the current capacity is below the minimum capacity, Application Auto Scaling scales out to the minimum capacity. If the current capacity is above the maximum capacity, Application Auto Scaling scales in to the maximum capacity.</p>
+    #[doc(hidden)]
     pub scalable_target_action: std::option::Option<crate::model::ScalableTargetAction>,
     /// <p>The date and time that the scheduled action was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ScheduledAction {
@@ -2288,11 +2320,10 @@ impl std::fmt::Debug for ScheduledAction {
         formatter.finish()
     }
 }
-/// See [`ScheduledAction`](crate::model::ScheduledAction)
+/// See [`ScheduledAction`](crate::model::ScheduledAction).
 pub mod scheduled_action {
 
-    /// A builder for [`ScheduledAction`](crate::model::ScheduledAction)
-    #[non_exhaustive]
+    /// A builder for [`ScheduledAction`](crate::model::ScheduledAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scheduled_action_name: std::option::Option<std::string::String>,
@@ -2542,7 +2573,7 @@ pub mod scheduled_action {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduledAction`](crate::model::ScheduledAction)
+        /// Consumes the builder and constructs a [`ScheduledAction`](crate::model::ScheduledAction).
         pub fn build(self) -> crate::model::ScheduledAction {
             crate::model::ScheduledAction {
                 scheduled_action_name: self.scheduled_action_name,
@@ -2561,7 +2592,7 @@ pub mod scheduled_action {
     }
 }
 impl ScheduledAction {
-    /// Creates a new builder-style object to manufacture [`ScheduledAction`](crate::model::ScheduledAction)
+    /// Creates a new builder-style object to manufacture [`ScheduledAction`](crate::model::ScheduledAction).
     pub fn builder() -> crate::model::scheduled_action::Builder {
         crate::model::scheduled_action::Builder::default()
     }
@@ -2573,10 +2604,13 @@ impl ScheduledAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScalingPolicy {
     /// <p>The Amazon Resource Name (ARN) of the scaling policy.</p>
+    #[doc(hidden)]
     pub policy_arn: std::option::Option<std::string::String>,
     /// <p>The name of the scaling policy.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The namespace of the Amazon Web Services service that provides the resource, or a <code>custom-resource</code>.</p>
+    #[doc(hidden)]
     pub service_namespace: std::option::Option<crate::model::ServiceNamespace>,
     /// <p>The identifier of the resource associated with the scaling policy. This string consists of the resource type and unique identifier.</p>
     /// <ul>
@@ -2597,6 +2631,7 @@ pub struct ScalingPolicy {
     /// <li> <p>Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique identifier is the replication group name. Example: <code>replication-group/mycluster</code>.</p> </li>
     /// <li> <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The scalable dimension. This string consists of the service namespace, resource type, and scaling property.</p>
     /// <ul>
@@ -2621,18 +2656,24 @@ pub struct ScalingPolicy {
     /// <li> <p> <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon ElastiCache replication group.</p> </li>
     /// <li> <p> <code>neptune:cluster:ReadReplicaCount</code> - The count of read replicas in an Amazon Neptune DB cluster.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub scalable_dimension: std::option::Option<crate::model::ScalableDimension>,
     /// <p>The scaling policy type.</p>
+    #[doc(hidden)]
     pub policy_type: std::option::Option<crate::model::PolicyType>,
     /// <p>A step scaling policy.</p>
+    #[doc(hidden)]
     pub step_scaling_policy_configuration:
         std::option::Option<crate::model::StepScalingPolicyConfiguration>,
     /// <p>A target tracking scaling policy.</p>
+    #[doc(hidden)]
     pub target_tracking_scaling_policy_configuration:
         std::option::Option<crate::model::TargetTrackingScalingPolicyConfiguration>,
     /// <p>The CloudWatch alarms associated with the scaling policy.</p>
+    #[doc(hidden)]
     pub alarms: std::option::Option<std::vec::Vec<crate::model::Alarm>>,
     /// <p>The Unix timestamp for when the scaling policy was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ScalingPolicy {
@@ -2743,11 +2784,10 @@ impl std::fmt::Debug for ScalingPolicy {
         formatter.finish()
     }
 }
-/// See [`ScalingPolicy`](crate::model::ScalingPolicy)
+/// See [`ScalingPolicy`](crate::model::ScalingPolicy).
 pub mod scaling_policy {
 
-    /// A builder for [`ScalingPolicy`](crate::model::ScalingPolicy)
-    #[non_exhaustive]
+    /// A builder for [`ScalingPolicy`](crate::model::ScalingPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_arn: std::option::Option<std::string::String>,
@@ -2977,7 +3017,7 @@ pub mod scaling_policy {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalingPolicy`](crate::model::ScalingPolicy)
+        /// Consumes the builder and constructs a [`ScalingPolicy`](crate::model::ScalingPolicy).
         pub fn build(self) -> crate::model::ScalingPolicy {
             crate::model::ScalingPolicy {
                 policy_arn: self.policy_arn,
@@ -2996,7 +3036,7 @@ pub mod scaling_policy {
     }
 }
 impl ScalingPolicy {
-    /// Creates a new builder-style object to manufacture [`ScalingPolicy`](crate::model::ScalingPolicy)
+    /// Creates a new builder-style object to manufacture [`ScalingPolicy`](crate::model::ScalingPolicy).
     pub fn builder() -> crate::model::scaling_policy::Builder {
         crate::model::scaling_policy::Builder::default()
     }
@@ -3007,8 +3047,10 @@ impl ScalingPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScalingActivity {
     /// <p>The unique identifier of the scaling activity.</p>
+    #[doc(hidden)]
     pub activity_id: std::option::Option<std::string::String>,
     /// <p>The namespace of the Amazon Web Services service that provides the resource, or a <code>custom-resource</code>.</p>
+    #[doc(hidden)]
     pub service_namespace: std::option::Option<crate::model::ServiceNamespace>,
     /// <p>The identifier of the resource associated with the scaling activity. This string consists of the resource type and unique identifier.</p>
     /// <ul>
@@ -3029,6 +3071,7 @@ pub struct ScalingActivity {
     /// <li> <p>Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique identifier is the replication group name. Example: <code>replication-group/mycluster</code>.</p> </li>
     /// <li> <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The scalable dimension. This string consists of the service namespace, resource type, and scaling property.</p>
     /// <ul>
@@ -3053,20 +3096,28 @@ pub struct ScalingActivity {
     /// <li> <p> <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon ElastiCache replication group.</p> </li>
     /// <li> <p> <code>neptune:cluster:ReadReplicaCount</code> - The count of read replicas in an Amazon Neptune DB cluster.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub scalable_dimension: std::option::Option<crate::model::ScalableDimension>,
     /// <p>A simple description of what action the scaling activity intends to accomplish.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A simple description of what caused the scaling activity to happen.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
     /// <p>The Unix timestamp for when the scaling activity began.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Unix timestamp for when the scaling activity ended.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates the status of the scaling activity.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::ScalingActivityStatusCode>,
     /// <p>A simple message about the current status of the scaling activity.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The details about the scaling activity.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
 }
 impl ScalingActivity {
@@ -3172,11 +3223,10 @@ impl std::fmt::Debug for ScalingActivity {
         formatter.finish()
     }
 }
-/// See [`ScalingActivity`](crate::model::ScalingActivity)
+/// See [`ScalingActivity`](crate::model::ScalingActivity).
 pub mod scaling_activity {
 
-    /// A builder for [`ScalingActivity`](crate::model::ScalingActivity)
-    #[non_exhaustive]
+    /// A builder for [`ScalingActivity`](crate::model::ScalingActivity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activity_id: std::option::Option<std::string::String>,
@@ -3400,7 +3450,7 @@ pub mod scaling_activity {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalingActivity`](crate::model::ScalingActivity)
+        /// Consumes the builder and constructs a [`ScalingActivity`](crate::model::ScalingActivity).
         pub fn build(self) -> crate::model::ScalingActivity {
             crate::model::ScalingActivity {
                 activity_id: self.activity_id,
@@ -3419,7 +3469,7 @@ pub mod scaling_activity {
     }
 }
 impl ScalingActivity {
-    /// Creates a new builder-style object to manufacture [`ScalingActivity`](crate::model::ScalingActivity)
+    /// Creates a new builder-style object to manufacture [`ScalingActivity`](crate::model::ScalingActivity).
     pub fn builder() -> crate::model::scaling_activity::Builder {
         crate::model::scaling_activity::Builder::default()
     }
@@ -3508,6 +3558,7 @@ impl AsRef<str> for ScalingActivityStatusCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScalableTarget {
     /// <p>The namespace of the Amazon Web Services service that provides the resource, or a <code>custom-resource</code>.</p>
+    #[doc(hidden)]
     pub service_namespace: std::option::Option<crate::model::ServiceNamespace>,
     /// <p>The identifier of the resource associated with the scalable target. This string consists of the resource type and unique identifier.</p>
     /// <ul>
@@ -3528,6 +3579,7 @@ pub struct ScalableTarget {
     /// <li> <p>Amazon ElastiCache replication group - The resource type is <code>replication-group</code> and the unique identifier is the replication group name. Example: <code>replication-group/mycluster</code>.</p> </li>
     /// <li> <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The scalable dimension associated with the scalable target. This string consists of the service namespace, resource type, and scaling property.</p>
     /// <ul>
@@ -3552,16 +3604,22 @@ pub struct ScalableTarget {
     /// <li> <p> <code>elasticache:replication-group:Replicas</code> - The number of replicas per node group for an Amazon ElastiCache replication group.</p> </li>
     /// <li> <p> <code>neptune:cluster:ReadReplicaCount</code> - The count of read replicas in an Amazon Neptune DB cluster.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub scalable_dimension: std::option::Option<crate::model::ScalableDimension>,
     /// <p>The minimum value to scale to in response to a scale-in activity.</p>
+    #[doc(hidden)]
     pub min_capacity: std::option::Option<i32>,
     /// <p>The maximum value to scale to in response to a scale-out activity.</p>
+    #[doc(hidden)]
     pub max_capacity: std::option::Option<i32>,
     /// <p>The ARN of an IAM role that allows Application Auto Scaling to modify the scalable target on your behalf.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The Unix timestamp for when the scalable target was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies whether the scaling activities for a scalable target are in a suspended state. </p>
+    #[doc(hidden)]
     pub suspended_state: std::option::Option<crate::model::SuspendedState>,
 }
 impl ScalableTarget {
@@ -3652,11 +3710,10 @@ impl std::fmt::Debug for ScalableTarget {
         formatter.finish()
     }
 }
-/// See [`ScalableTarget`](crate::model::ScalableTarget)
+/// See [`ScalableTarget`](crate::model::ScalableTarget).
 pub mod scalable_target {
 
-    /// A builder for [`ScalableTarget`](crate::model::ScalableTarget)
-    #[non_exhaustive]
+    /// A builder for [`ScalableTarget`](crate::model::ScalableTarget).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_namespace: std::option::Option<crate::model::ServiceNamespace>,
@@ -3841,7 +3898,7 @@ pub mod scalable_target {
             self.suspended_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalableTarget`](crate::model::ScalableTarget)
+        /// Consumes the builder and constructs a [`ScalableTarget`](crate::model::ScalableTarget).
         pub fn build(self) -> crate::model::ScalableTarget {
             crate::model::ScalableTarget {
                 service_namespace: self.service_namespace,
@@ -3857,7 +3914,7 @@ pub mod scalable_target {
     }
 }
 impl ScalableTarget {
-    /// Creates a new builder-style object to manufacture [`ScalableTarget`](crate::model::ScalableTarget)
+    /// Creates a new builder-style object to manufacture [`ScalableTarget`](crate::model::ScalableTarget).
     pub fn builder() -> crate::model::scalable_target::Builder {
         crate::model::scalable_target::Builder::default()
     }

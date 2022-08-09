@@ -3,11 +3,11 @@
 **Please Note: The SDK is currently in Developer Preview and is intended strictly for
 feedback purposes only. Do not use this SDK for production workloads.**
 
-Amazon Web Services Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the configuration of your managed nodes. A _managed node_ is any Amazon Elastic Compute Cloud (Amazon EC2) instance, edge device, or on-premises server or virtual machine (VM) that has been configured for Systems Manager.
+Amazon Web Services Systems Manager is a collection of capabilities to help you manage your applications and infrastructure running in the Amazon Web Services Cloud;. Systems Manager simplifies application and resource management, shortens the time to detect and resolve operational problems, and helps you manage your Amazon Web Services resources securely at scale.
 
 This reference is intended to be used with the [Amazon Web Services Systems Manager User Guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/).
 
-To get started, verify prerequisites and configure managed nodes. For more information, see [Setting up Amazon Web Services Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html) in the _Amazon Web Services Systems Manager User Guide_.
+To get started, verify prerequisites. For more information, see [Setting up Amazon Web Services Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html).
 
 __Related resources__
   - For information about how to use a Query API, see [Making API requests](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/making-api-requests.html).
@@ -26,10 +26,29 @@ your project, add the following to your **Cargo.toml** file:
 
 ```toml
 [dependencies]
-aws-config = "0.14.0"
-aws-sdk-ssm = "0.14.0"
+aws-config = "0.47.0"
+aws-sdk-ssm = "0.17.0"
 tokio = { version = "1", features = ["full"] }
 ```
+
+Then in code, a client can be created with the following:
+
+```rust
+use aws_sdk_ssm as ssm;
+
+#[tokio::main]
+async fn main() -> Result<(), ssm::Error> {
+    let config = aws_config::load_from_env().await;
+    let client = ssm::Client::new(&config);
+
+    // ... make some calls with the client
+
+    Ok(())
+}
+```
+
+See the [client documentation](https://docs.rs/aws-sdk-ssm/latest/aws_sdk_ssm/client/struct.Client.html)
+for information on what calls can be made, and the inputs and outputs for each of those calls.
 
 ## Using the SDK
 

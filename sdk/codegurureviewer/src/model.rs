@@ -59,18 +59,25 @@ impl AsRef<str> for Reaction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RepositoryAssociationSummary {
     /// <p> The Amazon Resource Name (ARN) of the <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html"> <code>RepositoryAssociation</code> </a> object. You can retrieve this ARN by calling <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_ListRepositoryAssociations.html"> <code>ListRepositoryAssociations</code> </a>. </p>
+    #[doc(hidden)]
     pub association_arn: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of an Amazon Web Services CodeStar Connections connection. Its format is <code>arn:aws:codestar-connections:region-id:aws-account_id:connection/connection-id</code>. For more information, see <a href="https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_Connection.html"> <code>Connection</code> </a> in the <i>Amazon Web Services CodeStar Connections API Reference</i>. </p>
+    #[doc(hidden)]
     pub connection_arn: std::option::Option<std::string::String>,
     /// <p>The time, in milliseconds since the epoch, since the repository association was last updated. </p>
+    #[doc(hidden)]
     pub last_updated_time_stamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The repository association ID. </p>
+    #[doc(hidden)]
     pub association_id: std::option::Option<std::string::String>,
     /// <p>The name of the repository association.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web Services account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for the account that owns the repository. For an S3 repository, it can be the username or Amazon Web Services account ID.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The provider type of the repository association.</p>
+    #[doc(hidden)]
     pub provider_type: std::option::Option<crate::model::ProviderType>,
     /// <p>The state of the repository association.</p>
     /// <p>The valid repository association states are:</p>
@@ -87,6 +94,7 @@ pub struct RepositoryAssociationSummary {
     /// <li> <p> <b>Disassociating</b>: CodeGuru Reviewer is removing the repository's pull request notifications and source code access. </p> </li>
     /// <li> <p> <b>Disassociated</b>: CodeGuru Reviewer successfully disassociated the repository. You can create a new association with this repository if you want to review source code in it later. You can control access to code reviews created in an associated repository with tags after it has been disassociated. For more information, see <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/auth-and-access-control-using-tags.html">Using tags to control access to associated repositories</a> in the <i>Amazon CodeGuru Reviewer User Guide</i>. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::RepositoryAssociationState>,
 }
 impl RepositoryAssociationSummary {
@@ -151,11 +159,10 @@ impl std::fmt::Debug for RepositoryAssociationSummary {
         formatter.finish()
     }
 }
-/// See [`RepositoryAssociationSummary`](crate::model::RepositoryAssociationSummary)
+/// See [`RepositoryAssociationSummary`](crate::model::RepositoryAssociationSummary).
 pub mod repository_association_summary {
 
-    /// A builder for [`RepositoryAssociationSummary`](crate::model::RepositoryAssociationSummary)
-    #[non_exhaustive]
+    /// A builder for [`RepositoryAssociationSummary`](crate::model::RepositoryAssociationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) association_arn: std::option::Option<std::string::String>,
@@ -294,7 +301,7 @@ pub mod repository_association_summary {
             self.state = input;
             self
         }
-        /// Consumes the builder and constructs a [`RepositoryAssociationSummary`](crate::model::RepositoryAssociationSummary)
+        /// Consumes the builder and constructs a [`RepositoryAssociationSummary`](crate::model::RepositoryAssociationSummary).
         pub fn build(self) -> crate::model::RepositoryAssociationSummary {
             crate::model::RepositoryAssociationSummary {
                 association_arn: self.association_arn,
@@ -310,7 +317,7 @@ pub mod repository_association_summary {
     }
 }
 impl RepositoryAssociationSummary {
-    /// Creates a new builder-style object to manufacture [`RepositoryAssociationSummary`](crate::model::RepositoryAssociationSummary)
+    /// Creates a new builder-style object to manufacture [`RepositoryAssociationSummary`](crate::model::RepositoryAssociationSummary).
     pub fn builder() -> crate::model::repository_association_summary::Builder {
         crate::model::repository_association_summary::Builder::default()
     }
@@ -467,20 +474,28 @@ impl AsRef<str> for ProviderType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecommendationSummary {
     /// <p>Name of the file on which a recommendation is provided.</p>
+    #[doc(hidden)]
     pub file_path: std::option::Option<std::string::String>,
     /// <p> The recommendation ID that can be used to track the provided recommendations. Later on it can be used to collect the feedback. </p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
     /// <p> Start line from where the recommendation is applicable in the source commit or source branch. </p>
+    #[doc(hidden)]
     pub start_line: std::option::Option<i32>,
     /// <p> Last line where the recommendation is applicable in the source commit or source branch. For a single line comment the start line and end line values are the same. </p>
+    #[doc(hidden)]
     pub end_line: std::option::Option<i32>,
     /// <p> A description of the recommendation generated by CodeGuru Reviewer for the lines of code between the start line and the end line. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The type of a recommendation.</p>
+    #[doc(hidden)]
     pub recommendation_category: std::option::Option<crate::model::RecommendationCategory>,
     /// <p>Metadata about a rule. Rule metadata includes an ID, a name, a list of tags, and a short and long description. CodeGuru Reviewer uses rules to analyze code. A rule's recommendation is included in analysis results if code is detected that violates the rule.</p>
+    #[doc(hidden)]
     pub rule_metadata: std::option::Option<crate::model::RuleMetadata>,
     /// <p>The severity of the issue in the code that generated this recommendation.</p>
+    #[doc(hidden)]
     pub severity: std::option::Option<crate::model::Severity>,
 }
 impl RecommendationSummary {
@@ -533,11 +548,10 @@ impl std::fmt::Debug for RecommendationSummary {
         formatter.finish()
     }
 }
-/// See [`RecommendationSummary`](crate::model::RecommendationSummary)
+/// See [`RecommendationSummary`](crate::model::RecommendationSummary).
 pub mod recommendation_summary {
 
-    /// A builder for [`RecommendationSummary`](crate::model::RecommendationSummary)
-    #[non_exhaustive]
+    /// A builder for [`RecommendationSummary`](crate::model::RecommendationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_path: std::option::Option<std::string::String>,
@@ -643,7 +657,7 @@ pub mod recommendation_summary {
             self.severity = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecommendationSummary`](crate::model::RecommendationSummary)
+        /// Consumes the builder and constructs a [`RecommendationSummary`](crate::model::RecommendationSummary).
         pub fn build(self) -> crate::model::RecommendationSummary {
             crate::model::RecommendationSummary {
                 file_path: self.file_path,
@@ -659,7 +673,7 @@ pub mod recommendation_summary {
     }
 }
 impl RecommendationSummary {
-    /// Creates a new builder-style object to manufacture [`RecommendationSummary`](crate::model::RecommendationSummary)
+    /// Creates a new builder-style object to manufacture [`RecommendationSummary`](crate::model::RecommendationSummary).
     pub fn builder() -> crate::model::recommendation_summary::Builder {
         crate::model::recommendation_summary::Builder::default()
     }
@@ -737,14 +751,19 @@ impl AsRef<str> for Severity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleMetadata {
     /// <p>The ID of the rule.</p>
+    #[doc(hidden)]
     pub rule_id: std::option::Option<std::string::String>,
     /// <p>The name of the rule.</p>
+    #[doc(hidden)]
     pub rule_name: std::option::Option<std::string::String>,
     /// <p>A short description of the rule.</p>
+    #[doc(hidden)]
     pub short_description: std::option::Option<std::string::String>,
     /// <p>A long description of the rule.</p>
+    #[doc(hidden)]
     pub long_description: std::option::Option<std::string::String>,
     /// <p>Tags that are associated with the rule.</p>
+    #[doc(hidden)]
     pub rule_tags: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl RuleMetadata {
@@ -780,11 +799,10 @@ impl std::fmt::Debug for RuleMetadata {
         formatter.finish()
     }
 }
-/// See [`RuleMetadata`](crate::model::RuleMetadata)
+/// See [`RuleMetadata`](crate::model::RuleMetadata).
 pub mod rule_metadata {
 
-    /// A builder for [`RuleMetadata`](crate::model::RuleMetadata)
-    #[non_exhaustive]
+    /// A builder for [`RuleMetadata`](crate::model::RuleMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_id: std::option::Option<std::string::String>,
@@ -859,7 +877,7 @@ pub mod rule_metadata {
             self.rule_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleMetadata`](crate::model::RuleMetadata)
+        /// Consumes the builder and constructs a [`RuleMetadata`](crate::model::RuleMetadata).
         pub fn build(self) -> crate::model::RuleMetadata {
             crate::model::RuleMetadata {
                 rule_id: self.rule_id,
@@ -872,7 +890,7 @@ pub mod rule_metadata {
     }
 }
 impl RuleMetadata {
-    /// Creates a new builder-style object to manufacture [`RuleMetadata`](crate::model::RuleMetadata)
+    /// Creates a new builder-style object to manufacture [`RuleMetadata`](crate::model::RuleMetadata).
     pub fn builder() -> crate::model::rule_metadata::Builder {
         crate::model::rule_metadata::Builder::default()
     }
@@ -986,11 +1004,14 @@ impl AsRef<str> for RecommendationCategory {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecommendationFeedbackSummary {
     /// <p> The recommendation ID that can be used to track the provided recommendations. Later on it can be used to collect the feedback. </p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
     /// <p> List for storing reactions. Reactions are utf-8 text code for emojis. </p>
+    #[doc(hidden)]
     pub reactions: std::option::Option<std::vec::Vec<crate::model::Reaction>>,
     /// <p> The ID of the user that gave the feedback. </p>
     /// <p> The <code>UserId</code> is an IAM principal that can be specified as an Amazon Web Services account ID or an Amazon Resource Name (ARN). For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#Principal_specifying"> Specifying a Principal</a> in the <i>Amazon Web Services Identity and Access Management User Guide</i>. </p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
 }
 impl RecommendationFeedbackSummary {
@@ -1017,11 +1038,10 @@ impl std::fmt::Debug for RecommendationFeedbackSummary {
         formatter.finish()
     }
 }
-/// See [`RecommendationFeedbackSummary`](crate::model::RecommendationFeedbackSummary)
+/// See [`RecommendationFeedbackSummary`](crate::model::RecommendationFeedbackSummary).
 pub mod recommendation_feedback_summary {
 
-    /// A builder for [`RecommendationFeedbackSummary`](crate::model::RecommendationFeedbackSummary)
-    #[non_exhaustive]
+    /// A builder for [`RecommendationFeedbackSummary`](crate::model::RecommendationFeedbackSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_id: std::option::Option<std::string::String>,
@@ -1073,7 +1093,7 @@ pub mod recommendation_feedback_summary {
             self.user_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecommendationFeedbackSummary`](crate::model::RecommendationFeedbackSummary)
+        /// Consumes the builder and constructs a [`RecommendationFeedbackSummary`](crate::model::RecommendationFeedbackSummary).
         pub fn build(self) -> crate::model::RecommendationFeedbackSummary {
             crate::model::RecommendationFeedbackSummary {
                 recommendation_id: self.recommendation_id,
@@ -1084,7 +1104,7 @@ pub mod recommendation_feedback_summary {
     }
 }
 impl RecommendationFeedbackSummary {
-    /// Creates a new builder-style object to manufacture [`RecommendationFeedbackSummary`](crate::model::RecommendationFeedbackSummary)
+    /// Creates a new builder-style object to manufacture [`RecommendationFeedbackSummary`](crate::model::RecommendationFeedbackSummary).
     pub fn builder() -> crate::model::recommendation_feedback_summary::Builder {
         crate::model::recommendation_feedback_summary::Builder::default()
     }
@@ -1095,14 +1115,19 @@ impl RecommendationFeedbackSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeReviewSummary {
     /// <p> The name of the code review. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_CodeReview.html"> <code>CodeReview</code> </a> object. </p>
+    #[doc(hidden)]
     pub code_review_arn: std::option::Option<std::string::String>,
     /// <p> The name of the repository. </p>
+    #[doc(hidden)]
     pub repository_name: std::option::Option<std::string::String>,
     /// <p>The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web Services account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for the account that owns the repository. For an S3 repository, it can be the username or Amazon Web Services account ID.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p> The provider type of the repository association. </p>
+    #[doc(hidden)]
     pub provider_type: std::option::Option<crate::model::ProviderType>,
     /// <p> The state of the code review. </p>
     /// <p>The valid code review states are:</p>
@@ -1112,18 +1137,25 @@ pub struct CodeReviewSummary {
     /// <li> <p> <code>Failed</code>: The code review failed. </p> </li>
     /// <li> <p> <code>Deleting</code>: The code review is being deleted. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::JobState>,
     /// <p> The time, in milliseconds since the epoch, when the code review was created. </p>
+    #[doc(hidden)]
     pub created_time_stamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The time, in milliseconds since the epoch, when the code review was last updated. </p>
+    #[doc(hidden)]
     pub last_updated_time_stamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The type of the code review. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
     /// <p> The pull request ID for the code review. </p>
+    #[doc(hidden)]
     pub pull_request_id: std::option::Option<std::string::String>,
     /// <p> The statistics from the code review. </p>
+    #[doc(hidden)]
     pub metrics_summary: std::option::Option<crate::model::MetricsSummary>,
     /// <p> Specifies the source code that is analyzed in a code review. </p>
+    #[doc(hidden)]
     pub source_code_type: std::option::Option<crate::model::SourceCodeType>,
 }
 impl CodeReviewSummary {
@@ -1201,11 +1233,10 @@ impl std::fmt::Debug for CodeReviewSummary {
         formatter.finish()
     }
 }
-/// See [`CodeReviewSummary`](crate::model::CodeReviewSummary)
+/// See [`CodeReviewSummary`](crate::model::CodeReviewSummary).
 pub mod code_review_summary {
 
-    /// A builder for [`CodeReviewSummary`](crate::model::CodeReviewSummary)
-    #[non_exhaustive]
+    /// A builder for [`CodeReviewSummary`](crate::model::CodeReviewSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1380,7 +1411,7 @@ pub mod code_review_summary {
             self.source_code_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeReviewSummary`](crate::model::CodeReviewSummary)
+        /// Consumes the builder and constructs a [`CodeReviewSummary`](crate::model::CodeReviewSummary).
         pub fn build(self) -> crate::model::CodeReviewSummary {
             crate::model::CodeReviewSummary {
                 name: self.name,
@@ -1400,7 +1431,7 @@ pub mod code_review_summary {
     }
 }
 impl CodeReviewSummary {
-    /// Creates a new builder-style object to manufacture [`CodeReviewSummary`](crate::model::CodeReviewSummary)
+    /// Creates a new builder-style object to manufacture [`CodeReviewSummary`](crate::model::CodeReviewSummary).
     pub fn builder() -> crate::model::code_review_summary::Builder {
         crate::model::code_review_summary::Builder::default()
     }
@@ -1411,14 +1442,19 @@ impl CodeReviewSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceCodeType {
     /// <p> A <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_SourceCodeType"> <code>SourceCodeType</code> </a> that specifies a commit diff created by a pull request on an associated repository. </p>
+    #[doc(hidden)]
     pub commit_diff: std::option::Option<crate::model::CommitDiffSourceCodeType>,
     /// <p> A <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_SourceCodeType"> <code>SourceCodeType</code> </a> that specifies the tip of a branch in an associated repository. </p>
+    #[doc(hidden)]
     pub repository_head: std::option::Option<crate::model::RepositoryHeadSourceCodeType>,
     /// <p> A type of <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_SourceCodeType"> <code>SourceCodeType</code> </a> that specifies a source branch name and a destination branch name in an associated repository. </p>
+    #[doc(hidden)]
     pub branch_diff: std::option::Option<crate::model::BranchDiffSourceCodeType>,
     /// <p> Information about an associated repository in an S3 bucket that includes its name and an <code>S3RepositoryDetails</code> object. The <code>S3RepositoryDetails</code> object includes the name of an S3 bucket, an S3 key for a source code .zip file, and an S3 key for a build artifacts .zip file. <code>S3BucketRepository</code> is required in <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_SourceCodeType"> <code>SourceCodeType</code> </a> for <code>S3BucketRepository</code> based code reviews. </p>
+    #[doc(hidden)]
     pub s3_bucket_repository: std::option::Option<crate::model::S3BucketRepository>,
     /// <p>Metadata that is associated with a code review. This applies to any type of code review supported by CodeGuru Reviewer. The <code>RequestMetadaa</code> field captures any event metadata. For example, it might capture metadata associated with an event trigger, such as a push or a pull request. </p>
+    #[doc(hidden)]
     pub request_metadata: std::option::Option<crate::model::RequestMetadata>,
 }
 impl SourceCodeType {
@@ -1456,11 +1492,10 @@ impl std::fmt::Debug for SourceCodeType {
         formatter.finish()
     }
 }
-/// See [`SourceCodeType`](crate::model::SourceCodeType)
+/// See [`SourceCodeType`](crate::model::SourceCodeType).
 pub mod source_code_type {
 
-    /// A builder for [`SourceCodeType`](crate::model::SourceCodeType)
-    #[non_exhaustive]
+    /// A builder for [`SourceCodeType`](crate::model::SourceCodeType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) commit_diff: std::option::Option<crate::model::CommitDiffSourceCodeType>,
@@ -1538,7 +1573,7 @@ pub mod source_code_type {
             self.request_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceCodeType`](crate::model::SourceCodeType)
+        /// Consumes the builder and constructs a [`SourceCodeType`](crate::model::SourceCodeType).
         pub fn build(self) -> crate::model::SourceCodeType {
             crate::model::SourceCodeType {
                 commit_diff: self.commit_diff,
@@ -1551,7 +1586,7 @@ pub mod source_code_type {
     }
 }
 impl SourceCodeType {
-    /// Creates a new builder-style object to manufacture [`SourceCodeType`](crate::model::SourceCodeType)
+    /// Creates a new builder-style object to manufacture [`SourceCodeType`](crate::model::SourceCodeType).
     pub fn builder() -> crate::model::source_code_type::Builder {
         crate::model::source_code_type::Builder::default()
     }
@@ -1562,12 +1597,16 @@ impl SourceCodeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RequestMetadata {
     /// <p>The ID of the request. This is required for a pull request code review.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>An identifier, such as a name or account ID, that is associated with the requester. The <code>Requester</code> is used to capture the <code>author/actor</code> name of the event request.</p>
+    #[doc(hidden)]
     pub requester: std::option::Option<std::string::String>,
     /// <p>Information about the event associated with a code review.</p>
+    #[doc(hidden)]
     pub event_info: std::option::Option<crate::model::EventInfo>,
     /// <p>The name of the repository vendor used to upload code to an S3 bucket for a CI/CD code review. For example, if code and artifacts are uploaded to an S3 bucket for a CI/CD code review by GitHub scripts from a GitHub repository, then the repository association's <code>ProviderType</code> is <code>S3Bucket</code> and the CI/CD repository vendor name is GitHub. For more information, see the definition for <code>ProviderType</code> in <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html">RepositoryAssociation</a>. </p>
+    #[doc(hidden)]
     pub vendor_name: std::option::Option<crate::model::VendorName>,
 }
 impl RequestMetadata {
@@ -1598,11 +1637,10 @@ impl std::fmt::Debug for RequestMetadata {
         formatter.finish()
     }
 }
-/// See [`RequestMetadata`](crate::model::RequestMetadata)
+/// See [`RequestMetadata`](crate::model::RequestMetadata).
 pub mod request_metadata {
 
-    /// A builder for [`RequestMetadata`](crate::model::RequestMetadata)
-    #[non_exhaustive]
+    /// A builder for [`RequestMetadata`](crate::model::RequestMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -1657,7 +1695,7 @@ pub mod request_metadata {
             self.vendor_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RequestMetadata`](crate::model::RequestMetadata)
+        /// Consumes the builder and constructs a [`RequestMetadata`](crate::model::RequestMetadata).
         pub fn build(self) -> crate::model::RequestMetadata {
             crate::model::RequestMetadata {
                 request_id: self.request_id,
@@ -1669,7 +1707,7 @@ pub mod request_metadata {
     }
 }
 impl RequestMetadata {
-    /// Creates a new builder-style object to manufacture [`RequestMetadata`](crate::model::RequestMetadata)
+    /// Creates a new builder-style object to manufacture [`RequestMetadata`](crate::model::RequestMetadata).
     pub fn builder() -> crate::model::request_metadata::Builder {
         crate::model::request_metadata::Builder::default()
     }
@@ -1739,8 +1777,10 @@ impl AsRef<str> for VendorName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventInfo {
     /// <p>The name of the event. The possible names are <code>pull_request</code>, <code>workflow_dispatch</code>, <code>schedule</code>, and <code>push</code> </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The state of an event. The state might be open, closed, or another state.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
 }
 impl EventInfo {
@@ -1761,11 +1801,10 @@ impl std::fmt::Debug for EventInfo {
         formatter.finish()
     }
 }
-/// See [`EventInfo`](crate::model::EventInfo)
+/// See [`EventInfo`](crate::model::EventInfo).
 pub mod event_info {
 
-    /// A builder for [`EventInfo`](crate::model::EventInfo)
-    #[non_exhaustive]
+    /// A builder for [`EventInfo`](crate::model::EventInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1792,7 +1831,7 @@ pub mod event_info {
             self.state = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventInfo`](crate::model::EventInfo)
+        /// Consumes the builder and constructs a [`EventInfo`](crate::model::EventInfo).
         pub fn build(self) -> crate::model::EventInfo {
             crate::model::EventInfo {
                 name: self.name,
@@ -1802,7 +1841,7 @@ pub mod event_info {
     }
 }
 impl EventInfo {
-    /// Creates a new builder-style object to manufacture [`EventInfo`](crate::model::EventInfo)
+    /// Creates a new builder-style object to manufacture [`EventInfo`](crate::model::EventInfo).
     pub fn builder() -> crate::model::event_info::Builder {
         crate::model::event_info::Builder::default()
     }
@@ -1813,8 +1852,10 @@ impl EventInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3BucketRepository {
     /// <p> The name of the repository when the <code>ProviderType</code> is <code>S3Bucket</code>. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> An <code>S3RepositoryDetails</code> object that specifies the name of an S3 bucket and a <code>CodeArtifacts</code> object. The <code>CodeArtifacts</code> object includes the S3 object keys for a source code .zip file and for a build artifacts .zip file. </p>
+    #[doc(hidden)]
     pub details: std::option::Option<crate::model::S3RepositoryDetails>,
 }
 impl S3BucketRepository {
@@ -1835,11 +1876,10 @@ impl std::fmt::Debug for S3BucketRepository {
         formatter.finish()
     }
 }
-/// See [`S3BucketRepository`](crate::model::S3BucketRepository)
+/// See [`S3BucketRepository`](crate::model::S3BucketRepository).
 pub mod s3_bucket_repository {
 
-    /// A builder for [`S3BucketRepository`](crate::model::S3BucketRepository)
-    #[non_exhaustive]
+    /// A builder for [`S3BucketRepository`](crate::model::S3BucketRepository).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1869,7 +1909,7 @@ pub mod s3_bucket_repository {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3BucketRepository`](crate::model::S3BucketRepository)
+        /// Consumes the builder and constructs a [`S3BucketRepository`](crate::model::S3BucketRepository).
         pub fn build(self) -> crate::model::S3BucketRepository {
             crate::model::S3BucketRepository {
                 name: self.name,
@@ -1879,7 +1919,7 @@ pub mod s3_bucket_repository {
     }
 }
 impl S3BucketRepository {
-    /// Creates a new builder-style object to manufacture [`S3BucketRepository`](crate::model::S3BucketRepository)
+    /// Creates a new builder-style object to manufacture [`S3BucketRepository`](crate::model::S3BucketRepository).
     pub fn builder() -> crate::model::s3_bucket_repository::Builder {
         crate::model::s3_bucket_repository::Builder::default()
     }
@@ -1890,8 +1930,10 @@ impl S3BucketRepository {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3RepositoryDetails {
     /// <p>The name of the S3 bucket used for associating a new S3 repository. It must begin with <code>codeguru-reviewer-</code>. </p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p> A <code>CodeArtifacts</code> object. The <code>CodeArtifacts</code> object includes the S3 object key for a source code .zip file and for a build artifacts .zip file that contains .jar or .class files. </p>
+    #[doc(hidden)]
     pub code_artifacts: std::option::Option<crate::model::CodeArtifacts>,
 }
 impl S3RepositoryDetails {
@@ -1912,11 +1954,10 @@ impl std::fmt::Debug for S3RepositoryDetails {
         formatter.finish()
     }
 }
-/// See [`S3RepositoryDetails`](crate::model::S3RepositoryDetails)
+/// See [`S3RepositoryDetails`](crate::model::S3RepositoryDetails).
 pub mod s3_repository_details {
 
-    /// A builder for [`S3RepositoryDetails`](crate::model::S3RepositoryDetails)
-    #[non_exhaustive]
+    /// A builder for [`S3RepositoryDetails`](crate::model::S3RepositoryDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_name: std::option::Option<std::string::String>,
@@ -1946,7 +1987,7 @@ pub mod s3_repository_details {
             self.code_artifacts = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3RepositoryDetails`](crate::model::S3RepositoryDetails)
+        /// Consumes the builder and constructs a [`S3RepositoryDetails`](crate::model::S3RepositoryDetails).
         pub fn build(self) -> crate::model::S3RepositoryDetails {
             crate::model::S3RepositoryDetails {
                 bucket_name: self.bucket_name,
@@ -1956,7 +1997,7 @@ pub mod s3_repository_details {
     }
 }
 impl S3RepositoryDetails {
-    /// Creates a new builder-style object to manufacture [`S3RepositoryDetails`](crate::model::S3RepositoryDetails)
+    /// Creates a new builder-style object to manufacture [`S3RepositoryDetails`](crate::model::S3RepositoryDetails).
     pub fn builder() -> crate::model::s3_repository_details::Builder {
         crate::model::s3_repository_details::Builder::default()
     }
@@ -1971,8 +2012,10 @@ impl S3RepositoryDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeArtifacts {
     /// <p>The S3 object key for a source code .zip file. This is required for all code reviews.</p>
+    #[doc(hidden)]
     pub source_code_artifacts_object_key: std::option::Option<std::string::String>,
     /// <p>The S3 object key for a build artifacts .zip file that contains .jar or .class files. This is required for a code review with security analysis. For more information, see <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/code-review-security.html">Create code reviews with security analysis</a> in the <i>Amazon CodeGuru Reviewer User Guide</i>.</p>
+    #[doc(hidden)]
     pub build_artifacts_object_key: std::option::Option<std::string::String>,
 }
 impl CodeArtifacts {
@@ -1999,11 +2042,10 @@ impl std::fmt::Debug for CodeArtifacts {
         formatter.finish()
     }
 }
-/// See [`CodeArtifacts`](crate::model::CodeArtifacts)
+/// See [`CodeArtifacts`](crate::model::CodeArtifacts).
 pub mod code_artifacts {
 
-    /// A builder for [`CodeArtifacts`](crate::model::CodeArtifacts)
-    #[non_exhaustive]
+    /// A builder for [`CodeArtifacts`](crate::model::CodeArtifacts).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_code_artifacts_object_key: std::option::Option<std::string::String>,
@@ -2039,7 +2081,7 @@ pub mod code_artifacts {
             self.build_artifacts_object_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeArtifacts`](crate::model::CodeArtifacts)
+        /// Consumes the builder and constructs a [`CodeArtifacts`](crate::model::CodeArtifacts).
         pub fn build(self) -> crate::model::CodeArtifacts {
             crate::model::CodeArtifacts {
                 source_code_artifacts_object_key: self.source_code_artifacts_object_key,
@@ -2049,7 +2091,7 @@ pub mod code_artifacts {
     }
 }
 impl CodeArtifacts {
-    /// Creates a new builder-style object to manufacture [`CodeArtifacts`](crate::model::CodeArtifacts)
+    /// Creates a new builder-style object to manufacture [`CodeArtifacts`](crate::model::CodeArtifacts).
     pub fn builder() -> crate::model::code_artifacts::Builder {
         crate::model::code_artifacts::Builder::default()
     }
@@ -2060,8 +2102,10 @@ impl CodeArtifacts {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BranchDiffSourceCodeType {
     /// <p>The source branch for a diff in an associated repository.</p>
+    #[doc(hidden)]
     pub source_branch_name: std::option::Option<std::string::String>,
     /// <p>The destination branch for a diff in an associated repository.</p>
+    #[doc(hidden)]
     pub destination_branch_name: std::option::Option<std::string::String>,
 }
 impl BranchDiffSourceCodeType {
@@ -2082,11 +2126,10 @@ impl std::fmt::Debug for BranchDiffSourceCodeType {
         formatter.finish()
     }
 }
-/// See [`BranchDiffSourceCodeType`](crate::model::BranchDiffSourceCodeType)
+/// See [`BranchDiffSourceCodeType`](crate::model::BranchDiffSourceCodeType).
 pub mod branch_diff_source_code_type {
 
-    /// A builder for [`BranchDiffSourceCodeType`](crate::model::BranchDiffSourceCodeType)
-    #[non_exhaustive]
+    /// A builder for [`BranchDiffSourceCodeType`](crate::model::BranchDiffSourceCodeType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_branch_name: std::option::Option<std::string::String>,
@@ -2119,7 +2162,7 @@ pub mod branch_diff_source_code_type {
             self.destination_branch_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`BranchDiffSourceCodeType`](crate::model::BranchDiffSourceCodeType)
+        /// Consumes the builder and constructs a [`BranchDiffSourceCodeType`](crate::model::BranchDiffSourceCodeType).
         pub fn build(self) -> crate::model::BranchDiffSourceCodeType {
             crate::model::BranchDiffSourceCodeType {
                 source_branch_name: self.source_branch_name,
@@ -2129,7 +2172,7 @@ pub mod branch_diff_source_code_type {
     }
 }
 impl BranchDiffSourceCodeType {
-    /// Creates a new builder-style object to manufacture [`BranchDiffSourceCodeType`](crate::model::BranchDiffSourceCodeType)
+    /// Creates a new builder-style object to manufacture [`BranchDiffSourceCodeType`](crate::model::BranchDiffSourceCodeType).
     pub fn builder() -> crate::model::branch_diff_source_code_type::Builder {
         crate::model::branch_diff_source_code_type::Builder::default()
     }
@@ -2140,6 +2183,7 @@ impl BranchDiffSourceCodeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RepositoryHeadSourceCodeType {
     /// <p> The name of the branch in an associated repository. The <code>RepositoryHeadSourceCodeType</code> specifies the tip of this branch. </p>
+    #[doc(hidden)]
     pub branch_name: std::option::Option<std::string::String>,
 }
 impl RepositoryHeadSourceCodeType {
@@ -2155,11 +2199,10 @@ impl std::fmt::Debug for RepositoryHeadSourceCodeType {
         formatter.finish()
     }
 }
-/// See [`RepositoryHeadSourceCodeType`](crate::model::RepositoryHeadSourceCodeType)
+/// See [`RepositoryHeadSourceCodeType`](crate::model::RepositoryHeadSourceCodeType).
 pub mod repository_head_source_code_type {
 
-    /// A builder for [`RepositoryHeadSourceCodeType`](crate::model::RepositoryHeadSourceCodeType)
-    #[non_exhaustive]
+    /// A builder for [`RepositoryHeadSourceCodeType`](crate::model::RepositoryHeadSourceCodeType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) branch_name: std::option::Option<std::string::String>,
@@ -2175,7 +2218,7 @@ pub mod repository_head_source_code_type {
             self.branch_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RepositoryHeadSourceCodeType`](crate::model::RepositoryHeadSourceCodeType)
+        /// Consumes the builder and constructs a [`RepositoryHeadSourceCodeType`](crate::model::RepositoryHeadSourceCodeType).
         pub fn build(self) -> crate::model::RepositoryHeadSourceCodeType {
             crate::model::RepositoryHeadSourceCodeType {
                 branch_name: self.branch_name,
@@ -2184,7 +2227,7 @@ pub mod repository_head_source_code_type {
     }
 }
 impl RepositoryHeadSourceCodeType {
-    /// Creates a new builder-style object to manufacture [`RepositoryHeadSourceCodeType`](crate::model::RepositoryHeadSourceCodeType)
+    /// Creates a new builder-style object to manufacture [`RepositoryHeadSourceCodeType`](crate::model::RepositoryHeadSourceCodeType).
     pub fn builder() -> crate::model::repository_head_source_code_type::Builder {
         crate::model::repository_head_source_code_type::Builder::default()
     }
@@ -2195,10 +2238,13 @@ impl RepositoryHeadSourceCodeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CommitDiffSourceCodeType {
     /// <p> The SHA of the source commit used to generate a commit diff. This field is required for a pull request code review. </p>
+    #[doc(hidden)]
     pub source_commit: std::option::Option<std::string::String>,
     /// <p> The SHA of the destination commit used to generate a commit diff. This field is required for a pull request code review. </p>
+    #[doc(hidden)]
     pub destination_commit: std::option::Option<std::string::String>,
     /// <p>The SHA of the merge base of a commit.</p>
+    #[doc(hidden)]
     pub merge_base_commit: std::option::Option<std::string::String>,
 }
 impl CommitDiffSourceCodeType {
@@ -2224,11 +2270,10 @@ impl std::fmt::Debug for CommitDiffSourceCodeType {
         formatter.finish()
     }
 }
-/// See [`CommitDiffSourceCodeType`](crate::model::CommitDiffSourceCodeType)
+/// See [`CommitDiffSourceCodeType`](crate::model::CommitDiffSourceCodeType).
 pub mod commit_diff_source_code_type {
 
-    /// A builder for [`CommitDiffSourceCodeType`](crate::model::CommitDiffSourceCodeType)
-    #[non_exhaustive]
+    /// A builder for [`CommitDiffSourceCodeType`](crate::model::CommitDiffSourceCodeType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_commit: std::option::Option<std::string::String>,
@@ -2275,7 +2320,7 @@ pub mod commit_diff_source_code_type {
             self.merge_base_commit = input;
             self
         }
-        /// Consumes the builder and constructs a [`CommitDiffSourceCodeType`](crate::model::CommitDiffSourceCodeType)
+        /// Consumes the builder and constructs a [`CommitDiffSourceCodeType`](crate::model::CommitDiffSourceCodeType).
         pub fn build(self) -> crate::model::CommitDiffSourceCodeType {
             crate::model::CommitDiffSourceCodeType {
                 source_commit: self.source_commit,
@@ -2286,7 +2331,7 @@ pub mod commit_diff_source_code_type {
     }
 }
 impl CommitDiffSourceCodeType {
-    /// Creates a new builder-style object to manufacture [`CommitDiffSourceCodeType`](crate::model::CommitDiffSourceCodeType)
+    /// Creates a new builder-style object to manufacture [`CommitDiffSourceCodeType`](crate::model::CommitDiffSourceCodeType).
     pub fn builder() -> crate::model::commit_diff_source_code_type::Builder {
         crate::model::commit_diff_source_code_type::Builder::default()
     }
@@ -2297,10 +2342,13 @@ impl CommitDiffSourceCodeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricsSummary {
     /// <p> Lines of code metered in the code review. For the initial code review pull request and all subsequent revisions, this includes all lines of code in the files added to the pull request. In subsequent revisions, for files that already existed in the pull request, this includes only the changed lines of code. In both cases, this does not include non-code lines such as comments and import statements. For example, if you submit a pull request containing 5 files, each with 500 lines of code, and in a subsequent revision you added a new file with 200 lines of code, and also modified a total of 25 lines across the initial 5 files, <code>MeteredLinesOfCodeCount</code> includes the first 5 files (5 * 500 = 2,500 lines), the new file (200 lines) and the 25 changed lines of code for a total of 2,725 lines of code. </p>
+    #[doc(hidden)]
     pub metered_lines_of_code_count: std::option::Option<i64>,
     /// <p>Lines of code suppressed in the code review based on the <code>excludeFiles</code> element in the <code>aws-codeguru-reviewer.yml</code> file. For full repository analyses, this number includes all lines of code in the files that are suppressed. For pull requests, this number only includes the <i>changed</i> lines of code that are suppressed. In both cases, this number does not include non-code lines such as comments and import statements. For example, if you initiate a full repository analysis on a repository containing 5 files, each file with 100 lines of code, and 2 files are listed as excluded in the <code>aws-codeguru-reviewer.yml</code> file, then <code>SuppressedLinesOfCodeCount</code> returns 200 (2 * 100) as the total number of lines of code suppressed. However, if you submit a pull request for the same repository, then <code>SuppressedLinesOfCodeCount</code> only includes the lines in the 2 files that changed. If only 1 of the 2 files changed in the pull request, then <code>SuppressedLinesOfCodeCount</code> returns 100 (1 * 100) as the total number of lines of code suppressed.</p>
+    #[doc(hidden)]
     pub suppressed_lines_of_code_count: std::option::Option<i64>,
     /// <p> Total number of recommendations found in the code review. </p>
+    #[doc(hidden)]
     pub findings_count: std::option::Option<i64>,
 }
 impl MetricsSummary {
@@ -2332,11 +2380,10 @@ impl std::fmt::Debug for MetricsSummary {
         formatter.finish()
     }
 }
-/// See [`MetricsSummary`](crate::model::MetricsSummary)
+/// See [`MetricsSummary`](crate::model::MetricsSummary).
 pub mod metrics_summary {
 
-    /// A builder for [`MetricsSummary`](crate::model::MetricsSummary)
-    #[non_exhaustive]
+    /// A builder for [`MetricsSummary`](crate::model::MetricsSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metered_lines_of_code_count: std::option::Option<i64>,
@@ -2377,7 +2424,7 @@ pub mod metrics_summary {
             self.findings_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricsSummary`](crate::model::MetricsSummary)
+        /// Consumes the builder and constructs a [`MetricsSummary`](crate::model::MetricsSummary).
         pub fn build(self) -> crate::model::MetricsSummary {
             crate::model::MetricsSummary {
                 metered_lines_of_code_count: self.metered_lines_of_code_count,
@@ -2388,7 +2435,7 @@ pub mod metrics_summary {
     }
 }
 impl MetricsSummary {
-    /// Creates a new builder-style object to manufacture [`MetricsSummary`](crate::model::MetricsSummary)
+    /// Creates a new builder-style object to manufacture [`MetricsSummary`](crate::model::MetricsSummary).
     pub fn builder() -> crate::model::metrics_summary::Builder {
         crate::model::metrics_summary::Builder::default()
     }
@@ -2517,16 +2564,22 @@ impl AsRef<str> for JobState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RepositoryAssociation {
     /// <p>The ID of the repository association.</p>
+    #[doc(hidden)]
     pub association_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) identifying the repository association.</p>
+    #[doc(hidden)]
     pub association_arn: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of an Amazon Web Services CodeStar Connections connection. Its format is <code>arn:aws:codestar-connections:region-id:aws-account_id:connection/connection-id</code>. For more information, see <a href="https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_Connection.html"> <code>Connection</code> </a> in the <i>Amazon Web Services CodeStar Connections API Reference</i>. </p>
+    #[doc(hidden)]
     pub connection_arn: std::option::Option<std::string::String>,
     /// <p>The name of the repository.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web Services account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for the account that owns the repository. For an S3 repository, it can be the username or Amazon Web Services account ID.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The provider type of the repository association.</p>
+    #[doc(hidden)]
     pub provider_type: std::option::Option<crate::model::ProviderType>,
     /// <p>The state of the repository association.</p>
     /// <p>The valid repository association states are:</p>
@@ -2543,20 +2596,26 @@ pub struct RepositoryAssociation {
     /// <li> <p> <b>Disassociating</b>: CodeGuru Reviewer is removing the repository's pull request notifications and source code access. </p> </li>
     /// <li> <p> <b>Disassociated</b>: CodeGuru Reviewer successfully disassociated the repository. You can create a new association with this repository if you want to review source code in it later. You can control access to code reviews created in an associated repository with tags after it has been disassociated. For more information, see <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/auth-and-access-control-using-tags.html">Using tags to control access to associated repositories</a> in the <i>Amazon CodeGuru Reviewer User Guide</i>. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::RepositoryAssociationState>,
     /// <p>A description of why the repository association is in the current state.</p>
+    #[doc(hidden)]
     pub state_reason: std::option::Option<std::string::String>,
     /// <p>The time, in milliseconds since the epoch, when the repository association was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_time_stamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time, in milliseconds since the epoch, when the repository association was created.</p>
+    #[doc(hidden)]
     pub created_time_stamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A <code>KMSKeyDetails</code> object that contains:</p>
     /// <ul>
     /// <li> <p>The encryption option for this repository association. It is either owned by Amazon Web Services Key Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).</p> </li>
     /// <li> <p>The ID of the Amazon Web Services KMS key that is associated with this respository association.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub kms_key_details: std::option::Option<crate::model::KmsKeyDetails>,
     /// <p> Specifies the name of an S3 bucket and a <code>CodeArtifacts</code> object that contains the S3 object keys for a source code .zip file and for a build artifacts .zip file that contains .jar or .class files. </p>
+    #[doc(hidden)]
     pub s3_repository_details: std::option::Option<crate::model::S3RepositoryDetails>,
 }
 impl RepositoryAssociation {
@@ -2645,11 +2704,10 @@ impl std::fmt::Debug for RepositoryAssociation {
         formatter.finish()
     }
 }
-/// See [`RepositoryAssociation`](crate::model::RepositoryAssociation)
+/// See [`RepositoryAssociation`](crate::model::RepositoryAssociation).
 pub mod repository_association {
 
-    /// A builder for [`RepositoryAssociation`](crate::model::RepositoryAssociation)
-    #[non_exhaustive]
+    /// A builder for [`RepositoryAssociation`](crate::model::RepositoryAssociation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) association_id: std::option::Option<std::string::String>,
@@ -2849,7 +2907,7 @@ pub mod repository_association {
             self.s3_repository_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`RepositoryAssociation`](crate::model::RepositoryAssociation)
+        /// Consumes the builder and constructs a [`RepositoryAssociation`](crate::model::RepositoryAssociation).
         pub fn build(self) -> crate::model::RepositoryAssociation {
             crate::model::RepositoryAssociation {
                 association_id: self.association_id,
@@ -2869,7 +2927,7 @@ pub mod repository_association {
     }
 }
 impl RepositoryAssociation {
-    /// Creates a new builder-style object to manufacture [`RepositoryAssociation`](crate::model::RepositoryAssociation)
+    /// Creates a new builder-style object to manufacture [`RepositoryAssociation`](crate::model::RepositoryAssociation).
     pub fn builder() -> crate::model::repository_association::Builder {
         crate::model::repository_association::Builder::default()
     }
@@ -2884,8 +2942,10 @@ impl RepositoryAssociation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KmsKeyDetails {
     /// <p>The ID of the Amazon Web Services KMS key that is associated with a respository association.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The encryption option for a repository association. It is either owned by Amazon Web Services Key Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).</p>
+    #[doc(hidden)]
     pub encryption_option: std::option::Option<crate::model::EncryptionOption>,
 }
 impl KmsKeyDetails {
@@ -2906,11 +2966,10 @@ impl std::fmt::Debug for KmsKeyDetails {
         formatter.finish()
     }
 }
-/// See [`KmsKeyDetails`](crate::model::KmsKeyDetails)
+/// See [`KmsKeyDetails`](crate::model::KmsKeyDetails).
 pub mod kms_key_details {
 
-    /// A builder for [`KmsKeyDetails`](crate::model::KmsKeyDetails)
-    #[non_exhaustive]
+    /// A builder for [`KmsKeyDetails`](crate::model::KmsKeyDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) kms_key_id: std::option::Option<std::string::String>,
@@ -2940,7 +2999,7 @@ pub mod kms_key_details {
             self.encryption_option = input;
             self
         }
-        /// Consumes the builder and constructs a [`KmsKeyDetails`](crate::model::KmsKeyDetails)
+        /// Consumes the builder and constructs a [`KmsKeyDetails`](crate::model::KmsKeyDetails).
         pub fn build(self) -> crate::model::KmsKeyDetails {
             crate::model::KmsKeyDetails {
                 kms_key_id: self.kms_key_id,
@@ -2950,7 +3009,7 @@ pub mod kms_key_details {
     }
 }
 impl KmsKeyDetails {
-    /// Creates a new builder-style object to manufacture [`KmsKeyDetails`](crate::model::KmsKeyDetails)
+    /// Creates a new builder-style object to manufacture [`KmsKeyDetails`](crate::model::KmsKeyDetails).
     pub fn builder() -> crate::model::kms_key_details::Builder {
         crate::model::kms_key_details::Builder::default()
     }
@@ -3016,17 +3075,23 @@ impl AsRef<str> for EncryptionOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecommendationFeedback {
     /// <p>The Amazon Resource Name (ARN) of the <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_CodeReview.html"> <code>CodeReview</code> </a> object. </p>
+    #[doc(hidden)]
     pub code_review_arn: std::option::Option<std::string::String>,
     /// <p> The recommendation ID that can be used to track the provided recommendations. Later on it can be used to collect the feedback. </p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
     /// <p> List for storing reactions. Reactions are utf-8 text code for emojis. You can send an empty list to clear off all your feedback. </p>
+    #[doc(hidden)]
     pub reactions: std::option::Option<std::vec::Vec<crate::model::Reaction>>,
     /// <p> The ID of the user that made the API call. </p>
     /// <p> The <code>UserId</code> is an IAM principal that can be specified as an Amazon Web Services account ID or an Amazon Resource Name (ARN). For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#Principal_specifying"> Specifying a Principal</a> in the <i>Amazon Web Services Identity and Access Management User Guide</i>. </p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
     /// <p> The time at which the feedback was created. </p>
+    #[doc(hidden)]
     pub created_time_stamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The time at which the feedback was last updated. </p>
+    #[doc(hidden)]
     pub last_updated_time_stamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RecommendationFeedback {
@@ -3068,11 +3133,10 @@ impl std::fmt::Debug for RecommendationFeedback {
         formatter.finish()
     }
 }
-/// See [`RecommendationFeedback`](crate::model::RecommendationFeedback)
+/// See [`RecommendationFeedback`](crate::model::RecommendationFeedback).
 pub mod recommendation_feedback {
 
-    /// A builder for [`RecommendationFeedback`](crate::model::RecommendationFeedback)
-    #[non_exhaustive]
+    /// A builder for [`RecommendationFeedback`](crate::model::RecommendationFeedback).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code_review_arn: std::option::Option<std::string::String>,
@@ -3166,7 +3230,7 @@ pub mod recommendation_feedback {
             self.last_updated_time_stamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecommendationFeedback`](crate::model::RecommendationFeedback)
+        /// Consumes the builder and constructs a [`RecommendationFeedback`](crate::model::RecommendationFeedback).
         pub fn build(self) -> crate::model::RecommendationFeedback {
             crate::model::RecommendationFeedback {
                 code_review_arn: self.code_review_arn,
@@ -3180,7 +3244,7 @@ pub mod recommendation_feedback {
     }
 }
 impl RecommendationFeedback {
-    /// Creates a new builder-style object to manufacture [`RecommendationFeedback`](crate::model::RecommendationFeedback)
+    /// Creates a new builder-style object to manufacture [`RecommendationFeedback`](crate::model::RecommendationFeedback).
     pub fn builder() -> crate::model::recommendation_feedback::Builder {
         crate::model::recommendation_feedback::Builder::default()
     }
@@ -3191,14 +3255,19 @@ impl RecommendationFeedback {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeReview {
     /// <p> The name of the code review. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_CodeReview.html"> <code>CodeReview</code> </a> object. </p>
+    #[doc(hidden)]
     pub code_review_arn: std::option::Option<std::string::String>,
     /// <p> The name of the repository. </p>
+    #[doc(hidden)]
     pub repository_name: std::option::Option<std::string::String>,
     /// <p>The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web Services account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for the account that owns the repository. For an S3 repository, it can be the username or Amazon Web Services account ID.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p> The type of repository that contains the reviewed code (for example, GitHub or Bitbucket). </p>
+    #[doc(hidden)]
     pub provider_type: std::option::Option<crate::model::ProviderType>,
     /// <p>The valid code review states are:</p>
     /// <ul>
@@ -3207,26 +3276,37 @@ pub struct CodeReview {
     /// <li> <p> <code>Failed</code>: The code review failed. </p> </li>
     /// <li> <p> <code>Deleting</code>: The code review is being deleted. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::JobState>,
     /// <p> The reason for the state of the code review. </p>
+    #[doc(hidden)]
     pub state_reason: std::option::Option<std::string::String>,
     /// <p> The time, in milliseconds since the epoch, when the code review was created. </p>
+    #[doc(hidden)]
     pub created_time_stamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The time, in milliseconds since the epoch, when the code review was last updated. </p>
+    #[doc(hidden)]
     pub last_updated_time_stamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The type of code review. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
     /// <p> The pull request ID for the code review. </p>
+    #[doc(hidden)]
     pub pull_request_id: std::option::Option<std::string::String>,
     /// <p> The type of the source code for the code review. </p>
+    #[doc(hidden)]
     pub source_code_type: std::option::Option<crate::model::SourceCodeType>,
     /// <p> The Amazon Resource Name (ARN) of the <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html"> <code>RepositoryAssociation</code> </a> that contains the reviewed source code. You can retrieve associated repository ARNs by calling <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_ListRepositoryAssociations.html"> <code>ListRepositoryAssociations</code> </a>. </p>
+    #[doc(hidden)]
     pub association_arn: std::option::Option<std::string::String>,
     /// <p> The statistics from the code review. </p>
+    #[doc(hidden)]
     pub metrics: std::option::Option<crate::model::Metrics>,
     /// <p>The types of analysis performed during a repository analysis or a pull request review. You can specify either <code>Security</code>, <code>CodeQuality</code>, or both.</p>
+    #[doc(hidden)]
     pub analysis_types: std::option::Option<std::vec::Vec<crate::model::AnalysisType>>,
     /// <p>The state of the <code>aws-codeguru-reviewer.yml</code> configuration file that allows the configuration of the CodeGuru Reviewer analysis. The file either exists, doesn't exist, or exists with errors at the root directory of your repository.</p>
+    #[doc(hidden)]
     pub config_file_state: std::option::Option<crate::model::ConfigFileState>,
 }
 impl CodeReview {
@@ -3323,11 +3403,10 @@ impl std::fmt::Debug for CodeReview {
         formatter.finish()
     }
 }
-/// See [`CodeReview`](crate::model::CodeReview)
+/// See [`CodeReview`](crate::model::CodeReview).
 pub mod code_review {
 
-    /// A builder for [`CodeReview`](crate::model::CodeReview)
-    #[non_exhaustive]
+    /// A builder for [`CodeReview`](crate::model::CodeReview).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3556,7 +3635,7 @@ pub mod code_review {
             self.config_file_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeReview`](crate::model::CodeReview)
+        /// Consumes the builder and constructs a [`CodeReview`](crate::model::CodeReview).
         pub fn build(self) -> crate::model::CodeReview {
             crate::model::CodeReview {
                 name: self.name,
@@ -3580,7 +3659,7 @@ pub mod code_review {
     }
 }
 impl CodeReview {
-    /// Creates a new builder-style object to manufacture [`CodeReview`](crate::model::CodeReview)
+    /// Creates a new builder-style object to manufacture [`CodeReview`](crate::model::CodeReview).
     pub fn builder() -> crate::model::code_review::Builder {
         crate::model::code_review::Builder::default()
     }
@@ -3705,10 +3784,13 @@ impl AsRef<str> for AnalysisType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Metrics {
     /// <p> <code>MeteredLinesOfCodeCount</code> is the number of lines of code in the repository where the code review happened. This does not include non-code lines such as comments and blank lines. </p>
+    #[doc(hidden)]
     pub metered_lines_of_code_count: std::option::Option<i64>,
     /// <p> <code>SuppressedLinesOfCodeCount</code> is the number of lines of code in the repository where the code review happened that CodeGuru Reviewer did not analyze. The lines suppressed in the analysis is based on the <code>excludeFiles</code> variable in the <code>aws-codeguru-reviewer.yml</code> file. This number does not include non-code lines such as comments and blank lines. </p>
+    #[doc(hidden)]
     pub suppressed_lines_of_code_count: std::option::Option<i64>,
     /// <p> Total number of recommendations found in the code review. </p>
+    #[doc(hidden)]
     pub findings_count: std::option::Option<i64>,
 }
 impl Metrics {
@@ -3740,11 +3822,10 @@ impl std::fmt::Debug for Metrics {
         formatter.finish()
     }
 }
-/// See [`Metrics`](crate::model::Metrics)
+/// See [`Metrics`](crate::model::Metrics).
 pub mod metrics {
 
-    /// A builder for [`Metrics`](crate::model::Metrics)
-    #[non_exhaustive]
+    /// A builder for [`Metrics`](crate::model::Metrics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metered_lines_of_code_count: std::option::Option<i64>,
@@ -3785,7 +3866,7 @@ pub mod metrics {
             self.findings_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`Metrics`](crate::model::Metrics)
+        /// Consumes the builder and constructs a [`Metrics`](crate::model::Metrics).
         pub fn build(self) -> crate::model::Metrics {
             crate::model::Metrics {
                 metered_lines_of_code_count: self.metered_lines_of_code_count,
@@ -3796,7 +3877,7 @@ pub mod metrics {
     }
 }
 impl Metrics {
-    /// Creates a new builder-style object to manufacture [`Metrics`](crate::model::Metrics)
+    /// Creates a new builder-style object to manufacture [`Metrics`](crate::model::Metrics).
     pub fn builder() -> crate::model::metrics::Builder {
         crate::model::metrics::Builder::default()
     }
@@ -3811,8 +3892,10 @@ impl Metrics {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeReviewType {
     /// <p> A code review that analyzes all code under a specified branch in an associated repository. The associated repository is specified using its ARN in <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_CreateCodeReview"> <code>CreateCodeReview</code> </a>. </p>
+    #[doc(hidden)]
     pub repository_analysis: std::option::Option<crate::model::RepositoryAnalysis>,
     /// <p>They types of analysis performed during a repository analysis or a pull request review. You can specify either <code>Security</code>, <code>CodeQuality</code>, or both.</p>
+    #[doc(hidden)]
     pub analysis_types: std::option::Option<std::vec::Vec<crate::model::AnalysisType>>,
 }
 impl CodeReviewType {
@@ -3833,11 +3916,10 @@ impl std::fmt::Debug for CodeReviewType {
         formatter.finish()
     }
 }
-/// See [`CodeReviewType`](crate::model::CodeReviewType)
+/// See [`CodeReviewType`](crate::model::CodeReviewType).
 pub mod code_review_type {
 
-    /// A builder for [`CodeReviewType`](crate::model::CodeReviewType)
-    #[non_exhaustive]
+    /// A builder for [`CodeReviewType`](crate::model::CodeReviewType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) repository_analysis: std::option::Option<crate::model::RepositoryAnalysis>,
@@ -3876,7 +3958,7 @@ pub mod code_review_type {
             self.analysis_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeReviewType`](crate::model::CodeReviewType)
+        /// Consumes the builder and constructs a [`CodeReviewType`](crate::model::CodeReviewType).
         pub fn build(self) -> crate::model::CodeReviewType {
             crate::model::CodeReviewType {
                 repository_analysis: self.repository_analysis,
@@ -3886,7 +3968,7 @@ pub mod code_review_type {
     }
 }
 impl CodeReviewType {
-    /// Creates a new builder-style object to manufacture [`CodeReviewType`](crate::model::CodeReviewType)
+    /// Creates a new builder-style object to manufacture [`CodeReviewType`](crate::model::CodeReviewType).
     pub fn builder() -> crate::model::code_review_type::Builder {
         crate::model::code_review_type::Builder::default()
     }
@@ -3897,8 +3979,10 @@ impl CodeReviewType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RepositoryAnalysis {
     /// <p> A <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_SourceCodeType"> <code>SourceCodeType</code> </a> that specifies the tip of a branch in an associated repository. </p>
+    #[doc(hidden)]
     pub repository_head: std::option::Option<crate::model::RepositoryHeadSourceCodeType>,
     /// <p> Specifies the source code that is analyzed in a code review. </p>
+    #[doc(hidden)]
     pub source_code_type: std::option::Option<crate::model::SourceCodeType>,
 }
 impl RepositoryAnalysis {
@@ -3921,11 +4005,10 @@ impl std::fmt::Debug for RepositoryAnalysis {
         formatter.finish()
     }
 }
-/// See [`RepositoryAnalysis`](crate::model::RepositoryAnalysis)
+/// See [`RepositoryAnalysis`](crate::model::RepositoryAnalysis).
 pub mod repository_analysis {
 
-    /// A builder for [`RepositoryAnalysis`](crate::model::RepositoryAnalysis)
-    #[non_exhaustive]
+    /// A builder for [`RepositoryAnalysis`](crate::model::RepositoryAnalysis).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) repository_head: std::option::Option<crate::model::RepositoryHeadSourceCodeType>,
@@ -3961,7 +4044,7 @@ pub mod repository_analysis {
             self.source_code_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`RepositoryAnalysis`](crate::model::RepositoryAnalysis)
+        /// Consumes the builder and constructs a [`RepositoryAnalysis`](crate::model::RepositoryAnalysis).
         pub fn build(self) -> crate::model::RepositoryAnalysis {
             crate::model::RepositoryAnalysis {
                 repository_head: self.repository_head,
@@ -3971,7 +4054,7 @@ pub mod repository_analysis {
     }
 }
 impl RepositoryAnalysis {
-    /// Creates a new builder-style object to manufacture [`RepositoryAnalysis`](crate::model::RepositoryAnalysis)
+    /// Creates a new builder-style object to manufacture [`RepositoryAnalysis`](crate::model::RepositoryAnalysis).
     pub fn builder() -> crate::model::repository_analysis::Builder {
         crate::model::repository_analysis::Builder::default()
     }
@@ -3982,12 +4065,16 @@ impl RepositoryAnalysis {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Repository {
     /// <p>Information about an Amazon Web Services CodeCommit repository.</p>
+    #[doc(hidden)]
     pub code_commit: std::option::Option<crate::model::CodeCommitRepository>,
     /// <p> Information about a Bitbucket repository. </p>
+    #[doc(hidden)]
     pub bitbucket: std::option::Option<crate::model::ThirdPartySourceRepository>,
     /// <p> Information about a GitHub Enterprise Server repository. </p>
+    #[doc(hidden)]
     pub git_hub_enterprise_server: std::option::Option<crate::model::ThirdPartySourceRepository>,
     /// <p> Information about a repository in an S3 bucket. </p>
+    #[doc(hidden)]
     pub s3_bucket: std::option::Option<crate::model::S3Repository>,
 }
 impl Repository {
@@ -4020,11 +4107,10 @@ impl std::fmt::Debug for Repository {
         formatter.finish()
     }
 }
-/// See [`Repository`](crate::model::Repository)
+/// See [`Repository`](crate::model::Repository).
 pub mod repository {
 
-    /// A builder for [`Repository`](crate::model::Repository)
-    #[non_exhaustive]
+    /// A builder for [`Repository`](crate::model::Repository).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code_commit: std::option::Option<crate::model::CodeCommitRepository>,
@@ -4089,7 +4175,7 @@ pub mod repository {
             self.s3_bucket = input;
             self
         }
-        /// Consumes the builder and constructs a [`Repository`](crate::model::Repository)
+        /// Consumes the builder and constructs a [`Repository`](crate::model::Repository).
         pub fn build(self) -> crate::model::Repository {
             crate::model::Repository {
                 code_commit: self.code_commit,
@@ -4101,7 +4187,7 @@ pub mod repository {
     }
 }
 impl Repository {
-    /// Creates a new builder-style object to manufacture [`Repository`](crate::model::Repository)
+    /// Creates a new builder-style object to manufacture [`Repository`](crate::model::Repository).
     pub fn builder() -> crate::model::repository::Builder {
         crate::model::repository::Builder::default()
     }
@@ -4112,8 +4198,10 @@ impl Repository {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Repository {
     /// <p> The name of the repository in the S3 bucket. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The name of the S3 bucket used for associating a new S3 repository. It must begin with <code>codeguru-reviewer-</code>. </p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
 }
 impl S3Repository {
@@ -4134,11 +4222,10 @@ impl std::fmt::Debug for S3Repository {
         formatter.finish()
     }
 }
-/// See [`S3Repository`](crate::model::S3Repository)
+/// See [`S3Repository`](crate::model::S3Repository).
 pub mod s3_repository {
 
-    /// A builder for [`S3Repository`](crate::model::S3Repository)
-    #[non_exhaustive]
+    /// A builder for [`S3Repository`](crate::model::S3Repository).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4165,7 +4252,7 @@ pub mod s3_repository {
             self.bucket_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Repository`](crate::model::S3Repository)
+        /// Consumes the builder and constructs a [`S3Repository`](crate::model::S3Repository).
         pub fn build(self) -> crate::model::S3Repository {
             crate::model::S3Repository {
                 name: self.name,
@@ -4175,7 +4262,7 @@ pub mod s3_repository {
     }
 }
 impl S3Repository {
-    /// Creates a new builder-style object to manufacture [`S3Repository`](crate::model::S3Repository)
+    /// Creates a new builder-style object to manufacture [`S3Repository`](crate::model::S3Repository).
     pub fn builder() -> crate::model::s3_repository::Builder {
         crate::model::s3_repository::Builder::default()
     }
@@ -4186,10 +4273,13 @@ impl S3Repository {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThirdPartySourceRepository {
     /// <p> The name of the third party source repository. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of an Amazon Web Services CodeStar Connections connection. Its format is <code>arn:aws:codestar-connections:region-id:aws-account_id:connection/connection-id</code>. For more information, see <a href="https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_Connection.html"> <code>Connection</code> </a> in the <i>Amazon Web Services CodeStar Connections API Reference</i>. </p>
+    #[doc(hidden)]
     pub connection_arn: std::option::Option<std::string::String>,
     /// <p> The owner of the repository. For a GitHub, GitHub Enterprise, or Bitbucket repository, this is the username for the account that owns the repository. For an S3 repository, this can be the username or Amazon Web Services account ID. </p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
 }
 impl ThirdPartySourceRepository {
@@ -4215,11 +4305,10 @@ impl std::fmt::Debug for ThirdPartySourceRepository {
         formatter.finish()
     }
 }
-/// See [`ThirdPartySourceRepository`](crate::model::ThirdPartySourceRepository)
+/// See [`ThirdPartySourceRepository`](crate::model::ThirdPartySourceRepository).
 pub mod third_party_source_repository {
 
-    /// A builder for [`ThirdPartySourceRepository`](crate::model::ThirdPartySourceRepository)
-    #[non_exhaustive]
+    /// A builder for [`ThirdPartySourceRepository`](crate::model::ThirdPartySourceRepository).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4260,7 +4349,7 @@ pub mod third_party_source_repository {
             self.owner = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThirdPartySourceRepository`](crate::model::ThirdPartySourceRepository)
+        /// Consumes the builder and constructs a [`ThirdPartySourceRepository`](crate::model::ThirdPartySourceRepository).
         pub fn build(self) -> crate::model::ThirdPartySourceRepository {
             crate::model::ThirdPartySourceRepository {
                 name: self.name,
@@ -4271,7 +4360,7 @@ pub mod third_party_source_repository {
     }
 }
 impl ThirdPartySourceRepository {
-    /// Creates a new builder-style object to manufacture [`ThirdPartySourceRepository`](crate::model::ThirdPartySourceRepository)
+    /// Creates a new builder-style object to manufacture [`ThirdPartySourceRepository`](crate::model::ThirdPartySourceRepository).
     pub fn builder() -> crate::model::third_party_source_repository::Builder {
         crate::model::third_party_source_repository::Builder::default()
     }
@@ -4282,6 +4371,7 @@ impl ThirdPartySourceRepository {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeCommitRepository {
     /// <p>The name of the Amazon Web Services CodeCommit repository. For more information, see <a href="https://docs.aws.amazon.com/codecommit/latest/APIReference/API_GetRepository.html#CodeCommit-GetRepository-request-repositoryName">repositoryName</a> in the <i>Amazon Web Services CodeCommit API Reference</i>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl CodeCommitRepository {
@@ -4297,11 +4387,10 @@ impl std::fmt::Debug for CodeCommitRepository {
         formatter.finish()
     }
 }
-/// See [`CodeCommitRepository`](crate::model::CodeCommitRepository)
+/// See [`CodeCommitRepository`](crate::model::CodeCommitRepository).
 pub mod code_commit_repository {
 
-    /// A builder for [`CodeCommitRepository`](crate::model::CodeCommitRepository)
-    #[non_exhaustive]
+    /// A builder for [`CodeCommitRepository`](crate::model::CodeCommitRepository).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4317,14 +4406,14 @@ pub mod code_commit_repository {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeCommitRepository`](crate::model::CodeCommitRepository)
+        /// Consumes the builder and constructs a [`CodeCommitRepository`](crate::model::CodeCommitRepository).
         pub fn build(self) -> crate::model::CodeCommitRepository {
             crate::model::CodeCommitRepository { name: self.name }
         }
     }
 }
 impl CodeCommitRepository {
-    /// Creates a new builder-style object to manufacture [`CodeCommitRepository`](crate::model::CodeCommitRepository)
+    /// Creates a new builder-style object to manufacture [`CodeCommitRepository`](crate::model::CodeCommitRepository).
     pub fn builder() -> crate::model::code_commit_repository::Builder {
         crate::model::code_commit_repository::Builder::default()
     }

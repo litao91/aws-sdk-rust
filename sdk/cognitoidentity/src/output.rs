@@ -5,26 +5,36 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateIdentityPoolOutput {
     /// <p>An identity pool ID in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_pool_id: std::option::Option<std::string::String>,
     /// <p>A string that you provide.</p>
+    #[doc(hidden)]
     pub identity_pool_name: std::option::Option<std::string::String>,
     /// <p>TRUE if the identity pool supports unauthenticated logins.</p>
+    #[doc(hidden)]
     pub allow_unauthenticated_identities: bool,
     /// <p>Enables or disables the Basic (Classic) authentication flow. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/authentication-flow.html">Identity Pools (Federated Identities) Authentication Flow</a> in the <i>Amazon Cognito Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub allow_classic_flow: std::option::Option<bool>,
     /// <p>Optional key:value pairs mapping provider names to provider app IDs.</p>
+    #[doc(hidden)]
     pub supported_login_providers:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The "domain" by which Cognito will refer to your users.</p>
+    #[doc(hidden)]
     pub developer_provider_name: std::option::Option<std::string::String>,
     /// <p>The ARNs of the OpenID Connect providers.</p>
+    #[doc(hidden)]
     pub open_id_connect_provider_ar_ns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list representing an Amazon Cognito user pool and its client ID.</p>
+    #[doc(hidden)]
     pub cognito_identity_providers:
         std::option::Option<std::vec::Vec<crate::model::CognitoIdentityProvider>>,
     /// <p>An array of Amazon Resource Names (ARNs) of the SAML provider for your identity pool.</p>
+    #[doc(hidden)]
     pub saml_provider_ar_ns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The tags that are assigned to the identity pool. A tag is a label that you can apply to identity pools to categorize and manage them in different ways, such as by purpose, owner, environment, or other criteria.</p>
+    #[doc(hidden)]
     pub identity_pool_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -103,11 +113,10 @@ impl std::fmt::Debug for UpdateIdentityPoolOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateIdentityPoolOutput`](crate::output::UpdateIdentityPoolOutput)
+/// See [`UpdateIdentityPoolOutput`](crate::output::UpdateIdentityPoolOutput).
 pub mod update_identity_pool_output {
 
-    /// A builder for [`UpdateIdentityPoolOutput`](crate::output::UpdateIdentityPoolOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateIdentityPoolOutput`](crate::output::UpdateIdentityPoolOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_pool_id: std::option::Option<std::string::String>,
@@ -303,7 +312,7 @@ pub mod update_identity_pool_output {
             self.identity_pool_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateIdentityPoolOutput`](crate::output::UpdateIdentityPoolOutput)
+        /// Consumes the builder and constructs a [`UpdateIdentityPoolOutput`](crate::output::UpdateIdentityPoolOutput).
         pub fn build(self) -> crate::output::UpdateIdentityPoolOutput {
             crate::output::UpdateIdentityPoolOutput {
                 identity_pool_id: self.identity_pool_id,
@@ -323,7 +332,7 @@ pub mod update_identity_pool_output {
     }
 }
 impl UpdateIdentityPoolOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateIdentityPoolOutput`](crate::output::UpdateIdentityPoolOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateIdentityPoolOutput`](crate::output::UpdateIdentityPoolOutput).
     pub fn builder() -> crate::output::update_identity_pool_output::Builder {
         crate::output::update_identity_pool_output::Builder::default()
     }
@@ -339,22 +348,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -370,22 +378,21 @@ impl std::fmt::Debug for UnlinkIdentityOutput {
         formatter.finish()
     }
 }
-/// See [`UnlinkIdentityOutput`](crate::output::UnlinkIdentityOutput)
+/// See [`UnlinkIdentityOutput`](crate::output::UnlinkIdentityOutput).
 pub mod unlink_identity_output {
 
-    /// A builder for [`UnlinkIdentityOutput`](crate::output::UnlinkIdentityOutput)
-    #[non_exhaustive]
+    /// A builder for [`UnlinkIdentityOutput`](crate::output::UnlinkIdentityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UnlinkIdentityOutput`](crate::output::UnlinkIdentityOutput)
+        /// Consumes the builder and constructs a [`UnlinkIdentityOutput`](crate::output::UnlinkIdentityOutput).
         pub fn build(self) -> crate::output::UnlinkIdentityOutput {
             crate::output::UnlinkIdentityOutput {}
         }
     }
 }
 impl UnlinkIdentityOutput {
-    /// Creates a new builder-style object to manufacture [`UnlinkIdentityOutput`](crate::output::UnlinkIdentityOutput)
+    /// Creates a new builder-style object to manufacture [`UnlinkIdentityOutput`](crate::output::UnlinkIdentityOutput).
     pub fn builder() -> crate::output::unlink_identity_output::Builder {
         crate::output::unlink_identity_output::Builder::default()
     }
@@ -401,22 +408,21 @@ impl std::fmt::Debug for UnlinkDeveloperIdentityOutput {
         formatter.finish()
     }
 }
-/// See [`UnlinkDeveloperIdentityOutput`](crate::output::UnlinkDeveloperIdentityOutput)
+/// See [`UnlinkDeveloperIdentityOutput`](crate::output::UnlinkDeveloperIdentityOutput).
 pub mod unlink_developer_identity_output {
 
-    /// A builder for [`UnlinkDeveloperIdentityOutput`](crate::output::UnlinkDeveloperIdentityOutput)
-    #[non_exhaustive]
+    /// A builder for [`UnlinkDeveloperIdentityOutput`](crate::output::UnlinkDeveloperIdentityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UnlinkDeveloperIdentityOutput`](crate::output::UnlinkDeveloperIdentityOutput)
+        /// Consumes the builder and constructs a [`UnlinkDeveloperIdentityOutput`](crate::output::UnlinkDeveloperIdentityOutput).
         pub fn build(self) -> crate::output::UnlinkDeveloperIdentityOutput {
             crate::output::UnlinkDeveloperIdentityOutput {}
         }
     }
 }
 impl UnlinkDeveloperIdentityOutput {
-    /// Creates a new builder-style object to manufacture [`UnlinkDeveloperIdentityOutput`](crate::output::UnlinkDeveloperIdentityOutput)
+    /// Creates a new builder-style object to manufacture [`UnlinkDeveloperIdentityOutput`](crate::output::UnlinkDeveloperIdentityOutput).
     pub fn builder() -> crate::output::unlink_developer_identity_output::Builder {
         crate::output::unlink_developer_identity_output::Builder::default()
     }
@@ -432,22 +438,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -458,12 +463,16 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SetPrincipalTagAttributeMapOutput {
     /// <p>The ID of the Identity Pool you want to set attribute mappings for.</p>
+    #[doc(hidden)]
     pub identity_pool_id: std::option::Option<std::string::String>,
     /// <p>The provider name you want to use for attribute mappings.</p>
+    #[doc(hidden)]
     pub identity_provider_name: std::option::Option<std::string::String>,
     /// <p>You can use this operation to select default (username and clientID) attribute mappings.</p>
+    #[doc(hidden)]
     pub use_defaults: std::option::Option<bool>,
     /// <p>You can use this operation to add principal tags. The <code>PrincipalTags</code>operation enables you to reference user attributes in your IAM permissions policy.</p>
+    #[doc(hidden)]
     pub principal_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -498,11 +507,10 @@ impl std::fmt::Debug for SetPrincipalTagAttributeMapOutput {
         formatter.finish()
     }
 }
-/// See [`SetPrincipalTagAttributeMapOutput`](crate::output::SetPrincipalTagAttributeMapOutput)
+/// See [`SetPrincipalTagAttributeMapOutput`](crate::output::SetPrincipalTagAttributeMapOutput).
 pub mod set_principal_tag_attribute_map_output {
 
-    /// A builder for [`SetPrincipalTagAttributeMapOutput`](crate::output::SetPrincipalTagAttributeMapOutput)
-    #[non_exhaustive]
+    /// A builder for [`SetPrincipalTagAttributeMapOutput`](crate::output::SetPrincipalTagAttributeMapOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_pool_id: std::option::Option<std::string::String>,
@@ -574,7 +582,7 @@ pub mod set_principal_tag_attribute_map_output {
             self.principal_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`SetPrincipalTagAttributeMapOutput`](crate::output::SetPrincipalTagAttributeMapOutput)
+        /// Consumes the builder and constructs a [`SetPrincipalTagAttributeMapOutput`](crate::output::SetPrincipalTagAttributeMapOutput).
         pub fn build(self) -> crate::output::SetPrincipalTagAttributeMapOutput {
             crate::output::SetPrincipalTagAttributeMapOutput {
                 identity_pool_id: self.identity_pool_id,
@@ -586,7 +594,7 @@ pub mod set_principal_tag_attribute_map_output {
     }
 }
 impl SetPrincipalTagAttributeMapOutput {
-    /// Creates a new builder-style object to manufacture [`SetPrincipalTagAttributeMapOutput`](crate::output::SetPrincipalTagAttributeMapOutput)
+    /// Creates a new builder-style object to manufacture [`SetPrincipalTagAttributeMapOutput`](crate::output::SetPrincipalTagAttributeMapOutput).
     pub fn builder() -> crate::output::set_principal_tag_attribute_map_output::Builder {
         crate::output::set_principal_tag_attribute_map_output::Builder::default()
     }
@@ -602,22 +610,21 @@ impl std::fmt::Debug for SetIdentityPoolRolesOutput {
         formatter.finish()
     }
 }
-/// See [`SetIdentityPoolRolesOutput`](crate::output::SetIdentityPoolRolesOutput)
+/// See [`SetIdentityPoolRolesOutput`](crate::output::SetIdentityPoolRolesOutput).
 pub mod set_identity_pool_roles_output {
 
-    /// A builder for [`SetIdentityPoolRolesOutput`](crate::output::SetIdentityPoolRolesOutput)
-    #[non_exhaustive]
+    /// A builder for [`SetIdentityPoolRolesOutput`](crate::output::SetIdentityPoolRolesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`SetIdentityPoolRolesOutput`](crate::output::SetIdentityPoolRolesOutput)
+        /// Consumes the builder and constructs a [`SetIdentityPoolRolesOutput`](crate::output::SetIdentityPoolRolesOutput).
         pub fn build(self) -> crate::output::SetIdentityPoolRolesOutput {
             crate::output::SetIdentityPoolRolesOutput {}
         }
     }
 }
 impl SetIdentityPoolRolesOutput {
-    /// Creates a new builder-style object to manufacture [`SetIdentityPoolRolesOutput`](crate::output::SetIdentityPoolRolesOutput)
+    /// Creates a new builder-style object to manufacture [`SetIdentityPoolRolesOutput`](crate::output::SetIdentityPoolRolesOutput).
     pub fn builder() -> crate::output::set_identity_pool_roles_output::Builder {
         crate::output::set_identity_pool_roles_output::Builder::default()
     }
@@ -628,6 +635,7 @@ impl SetIdentityPoolRolesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MergeDeveloperIdentitiesOutput {
     /// <p>A unique identifier in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_id: std::option::Option<std::string::String>,
 }
 impl MergeDeveloperIdentitiesOutput {
@@ -643,11 +651,10 @@ impl std::fmt::Debug for MergeDeveloperIdentitiesOutput {
         formatter.finish()
     }
 }
-/// See [`MergeDeveloperIdentitiesOutput`](crate::output::MergeDeveloperIdentitiesOutput)
+/// See [`MergeDeveloperIdentitiesOutput`](crate::output::MergeDeveloperIdentitiesOutput).
 pub mod merge_developer_identities_output {
 
-    /// A builder for [`MergeDeveloperIdentitiesOutput`](crate::output::MergeDeveloperIdentitiesOutput)
-    #[non_exhaustive]
+    /// A builder for [`MergeDeveloperIdentitiesOutput`](crate::output::MergeDeveloperIdentitiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_id: std::option::Option<std::string::String>,
@@ -663,7 +670,7 @@ pub mod merge_developer_identities_output {
             self.identity_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`MergeDeveloperIdentitiesOutput`](crate::output::MergeDeveloperIdentitiesOutput)
+        /// Consumes the builder and constructs a [`MergeDeveloperIdentitiesOutput`](crate::output::MergeDeveloperIdentitiesOutput).
         pub fn build(self) -> crate::output::MergeDeveloperIdentitiesOutput {
             crate::output::MergeDeveloperIdentitiesOutput {
                 identity_id: self.identity_id,
@@ -672,7 +679,7 @@ pub mod merge_developer_identities_output {
     }
 }
 impl MergeDeveloperIdentitiesOutput {
-    /// Creates a new builder-style object to manufacture [`MergeDeveloperIdentitiesOutput`](crate::output::MergeDeveloperIdentitiesOutput)
+    /// Creates a new builder-style object to manufacture [`MergeDeveloperIdentitiesOutput`](crate::output::MergeDeveloperIdentitiesOutput).
     pub fn builder() -> crate::output::merge_developer_identities_output::Builder {
         crate::output::merge_developer_identities_output::Builder::default()
     }
@@ -683,10 +690,13 @@ impl MergeDeveloperIdentitiesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LookupDeveloperIdentityOutput {
     /// <p>A unique identifier in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_id: std::option::Option<std::string::String>,
     /// <p>This is the list of developer user identifiers associated with an identity ID. Cognito supports the association of multiple developer user identifiers with an identity ID.</p>
+    #[doc(hidden)]
     pub developer_user_identifier_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A pagination token. The first call you make will have <code>NextToken</code> set to null. After that the service will return <code>NextToken</code> values as needed. For example, let's say you make a request with <code>MaxResults</code> set to 10, and there are 20 matches in the database. The service will return a pagination token as a part of the response. This token can be used to call the API again and get results starting from the 11th match.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl LookupDeveloperIdentityOutput {
@@ -715,11 +725,10 @@ impl std::fmt::Debug for LookupDeveloperIdentityOutput {
         formatter.finish()
     }
 }
-/// See [`LookupDeveloperIdentityOutput`](crate::output::LookupDeveloperIdentityOutput)
+/// See [`LookupDeveloperIdentityOutput`](crate::output::LookupDeveloperIdentityOutput).
 pub mod lookup_developer_identity_output {
 
-    /// A builder for [`LookupDeveloperIdentityOutput`](crate::output::LookupDeveloperIdentityOutput)
-    #[non_exhaustive]
+    /// A builder for [`LookupDeveloperIdentityOutput`](crate::output::LookupDeveloperIdentityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_id: std::option::Option<std::string::String>,
@@ -770,7 +779,7 @@ pub mod lookup_developer_identity_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`LookupDeveloperIdentityOutput`](crate::output::LookupDeveloperIdentityOutput)
+        /// Consumes the builder and constructs a [`LookupDeveloperIdentityOutput`](crate::output::LookupDeveloperIdentityOutput).
         pub fn build(self) -> crate::output::LookupDeveloperIdentityOutput {
             crate::output::LookupDeveloperIdentityOutput {
                 identity_id: self.identity_id,
@@ -781,7 +790,7 @@ pub mod lookup_developer_identity_output {
     }
 }
 impl LookupDeveloperIdentityOutput {
-    /// Creates a new builder-style object to manufacture [`LookupDeveloperIdentityOutput`](crate::output::LookupDeveloperIdentityOutput)
+    /// Creates a new builder-style object to manufacture [`LookupDeveloperIdentityOutput`](crate::output::LookupDeveloperIdentityOutput).
     pub fn builder() -> crate::output::lookup_developer_identity_output::Builder {
         crate::output::lookup_developer_identity_output::Builder::default()
     }
@@ -792,6 +801,7 @@ impl LookupDeveloperIdentityOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tags that are assigned to the identity pool.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -811,11 +821,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -848,14 +857,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -866,9 +875,11 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListIdentityPoolsOutput {
     /// <p>The identity pools returned by the ListIdentityPools action.</p>
+    #[doc(hidden)]
     pub identity_pools:
         std::option::Option<std::vec::Vec<crate::model::IdentityPoolShortDescription>>,
     /// <p>A pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListIdentityPoolsOutput {
@@ -891,11 +902,10 @@ impl std::fmt::Debug for ListIdentityPoolsOutput {
         formatter.finish()
     }
 }
-/// See [`ListIdentityPoolsOutput`](crate::output::ListIdentityPoolsOutput)
+/// See [`ListIdentityPoolsOutput`](crate::output::ListIdentityPoolsOutput).
 pub mod list_identity_pools_output {
 
-    /// A builder for [`ListIdentityPoolsOutput`](crate::output::ListIdentityPoolsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListIdentityPoolsOutput`](crate::output::ListIdentityPoolsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_pools:
@@ -932,7 +942,7 @@ pub mod list_identity_pools_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListIdentityPoolsOutput`](crate::output::ListIdentityPoolsOutput)
+        /// Consumes the builder and constructs a [`ListIdentityPoolsOutput`](crate::output::ListIdentityPoolsOutput).
         pub fn build(self) -> crate::output::ListIdentityPoolsOutput {
             crate::output::ListIdentityPoolsOutput {
                 identity_pools: self.identity_pools,
@@ -942,7 +952,7 @@ pub mod list_identity_pools_output {
     }
 }
 impl ListIdentityPoolsOutput {
-    /// Creates a new builder-style object to manufacture [`ListIdentityPoolsOutput`](crate::output::ListIdentityPoolsOutput)
+    /// Creates a new builder-style object to manufacture [`ListIdentityPoolsOutput`](crate::output::ListIdentityPoolsOutput).
     pub fn builder() -> crate::output::list_identity_pools_output::Builder {
         crate::output::list_identity_pools_output::Builder::default()
     }
@@ -953,10 +963,13 @@ impl ListIdentityPoolsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListIdentitiesOutput {
     /// <p>An identity pool ID in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_pool_id: std::option::Option<std::string::String>,
     /// <p>An object containing a set of identities and associated mappings.</p>
+    #[doc(hidden)]
     pub identities: std::option::Option<std::vec::Vec<crate::model::IdentityDescription>>,
     /// <p>A pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListIdentitiesOutput {
@@ -982,11 +995,10 @@ impl std::fmt::Debug for ListIdentitiesOutput {
         formatter.finish()
     }
 }
-/// See [`ListIdentitiesOutput`](crate::output::ListIdentitiesOutput)
+/// See [`ListIdentitiesOutput`](crate::output::ListIdentitiesOutput).
 pub mod list_identities_output {
 
-    /// A builder for [`ListIdentitiesOutput`](crate::output::ListIdentitiesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListIdentitiesOutput`](crate::output::ListIdentitiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_pool_id: std::option::Option<std::string::String>,
@@ -1037,7 +1049,7 @@ pub mod list_identities_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListIdentitiesOutput`](crate::output::ListIdentitiesOutput)
+        /// Consumes the builder and constructs a [`ListIdentitiesOutput`](crate::output::ListIdentitiesOutput).
         pub fn build(self) -> crate::output::ListIdentitiesOutput {
             crate::output::ListIdentitiesOutput {
                 identity_pool_id: self.identity_pool_id,
@@ -1048,7 +1060,7 @@ pub mod list_identities_output {
     }
 }
 impl ListIdentitiesOutput {
-    /// Creates a new builder-style object to manufacture [`ListIdentitiesOutput`](crate::output::ListIdentitiesOutput)
+    /// Creates a new builder-style object to manufacture [`ListIdentitiesOutput`](crate::output::ListIdentitiesOutput).
     pub fn builder() -> crate::output::list_identities_output::Builder {
         crate::output::list_identities_output::Builder::default()
     }
@@ -1059,12 +1071,16 @@ impl ListIdentitiesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetPrincipalTagAttributeMapOutput {
     /// <p>You can use this operation to get the ID of the Identity Pool you setup attribute mappings for.</p>
+    #[doc(hidden)]
     pub identity_pool_id: std::option::Option<std::string::String>,
     /// <p>You can use this operation to get the provider name.</p>
+    #[doc(hidden)]
     pub identity_provider_name: std::option::Option<std::string::String>,
     /// <p>You can use this operation to list </p>
+    #[doc(hidden)]
     pub use_defaults: std::option::Option<bool>,
     /// <p>You can use this operation to add principal tags. The <code>PrincipalTags</code>operation enables you to reference user attributes in your IAM permissions policy.</p>
+    #[doc(hidden)]
     pub principal_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1099,11 +1115,10 @@ impl std::fmt::Debug for GetPrincipalTagAttributeMapOutput {
         formatter.finish()
     }
 }
-/// See [`GetPrincipalTagAttributeMapOutput`](crate::output::GetPrincipalTagAttributeMapOutput)
+/// See [`GetPrincipalTagAttributeMapOutput`](crate::output::GetPrincipalTagAttributeMapOutput).
 pub mod get_principal_tag_attribute_map_output {
 
-    /// A builder for [`GetPrincipalTagAttributeMapOutput`](crate::output::GetPrincipalTagAttributeMapOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetPrincipalTagAttributeMapOutput`](crate::output::GetPrincipalTagAttributeMapOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_pool_id: std::option::Option<std::string::String>,
@@ -1175,7 +1190,7 @@ pub mod get_principal_tag_attribute_map_output {
             self.principal_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetPrincipalTagAttributeMapOutput`](crate::output::GetPrincipalTagAttributeMapOutput)
+        /// Consumes the builder and constructs a [`GetPrincipalTagAttributeMapOutput`](crate::output::GetPrincipalTagAttributeMapOutput).
         pub fn build(self) -> crate::output::GetPrincipalTagAttributeMapOutput {
             crate::output::GetPrincipalTagAttributeMapOutput {
                 identity_pool_id: self.identity_pool_id,
@@ -1187,7 +1202,7 @@ pub mod get_principal_tag_attribute_map_output {
     }
 }
 impl GetPrincipalTagAttributeMapOutput {
-    /// Creates a new builder-style object to manufacture [`GetPrincipalTagAttributeMapOutput`](crate::output::GetPrincipalTagAttributeMapOutput)
+    /// Creates a new builder-style object to manufacture [`GetPrincipalTagAttributeMapOutput`](crate::output::GetPrincipalTagAttributeMapOutput).
     pub fn builder() -> crate::output::get_principal_tag_attribute_map_output::Builder {
         crate::output::get_principal_tag_attribute_map_output::Builder::default()
     }
@@ -1198,8 +1213,10 @@ impl GetPrincipalTagAttributeMapOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetOpenIdTokenForDeveloperIdentityOutput {
     /// <p>A unique identifier in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_id: std::option::Option<std::string::String>,
     /// <p>An OpenID token.</p>
+    #[doc(hidden)]
     pub token: std::option::Option<std::string::String>,
 }
 impl GetOpenIdTokenForDeveloperIdentityOutput {
@@ -1220,11 +1237,10 @@ impl std::fmt::Debug for GetOpenIdTokenForDeveloperIdentityOutput {
         formatter.finish()
     }
 }
-/// See [`GetOpenIdTokenForDeveloperIdentityOutput`](crate::output::GetOpenIdTokenForDeveloperIdentityOutput)
+/// See [`GetOpenIdTokenForDeveloperIdentityOutput`](crate::output::GetOpenIdTokenForDeveloperIdentityOutput).
 pub mod get_open_id_token_for_developer_identity_output {
 
-    /// A builder for [`GetOpenIdTokenForDeveloperIdentityOutput`](crate::output::GetOpenIdTokenForDeveloperIdentityOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetOpenIdTokenForDeveloperIdentityOutput`](crate::output::GetOpenIdTokenForDeveloperIdentityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_id: std::option::Option<std::string::String>,
@@ -1251,7 +1267,7 @@ pub mod get_open_id_token_for_developer_identity_output {
             self.token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetOpenIdTokenForDeveloperIdentityOutput`](crate::output::GetOpenIdTokenForDeveloperIdentityOutput)
+        /// Consumes the builder and constructs a [`GetOpenIdTokenForDeveloperIdentityOutput`](crate::output::GetOpenIdTokenForDeveloperIdentityOutput).
         pub fn build(self) -> crate::output::GetOpenIdTokenForDeveloperIdentityOutput {
             crate::output::GetOpenIdTokenForDeveloperIdentityOutput {
                 identity_id: self.identity_id,
@@ -1261,7 +1277,7 @@ pub mod get_open_id_token_for_developer_identity_output {
     }
 }
 impl GetOpenIdTokenForDeveloperIdentityOutput {
-    /// Creates a new builder-style object to manufacture [`GetOpenIdTokenForDeveloperIdentityOutput`](crate::output::GetOpenIdTokenForDeveloperIdentityOutput)
+    /// Creates a new builder-style object to manufacture [`GetOpenIdTokenForDeveloperIdentityOutput`](crate::output::GetOpenIdTokenForDeveloperIdentityOutput).
     pub fn builder() -> crate::output::get_open_id_token_for_developer_identity_output::Builder {
         crate::output::get_open_id_token_for_developer_identity_output::Builder::default()
     }
@@ -1272,8 +1288,10 @@ impl GetOpenIdTokenForDeveloperIdentityOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetOpenIdTokenOutput {
     /// <p>A unique identifier in the format REGION:GUID. Note that the IdentityId returned may not match the one passed on input.</p>
+    #[doc(hidden)]
     pub identity_id: std::option::Option<std::string::String>,
     /// <p>An OpenID token, valid for 10 minutes.</p>
+    #[doc(hidden)]
     pub token: std::option::Option<std::string::String>,
 }
 impl GetOpenIdTokenOutput {
@@ -1294,11 +1312,10 @@ impl std::fmt::Debug for GetOpenIdTokenOutput {
         formatter.finish()
     }
 }
-/// See [`GetOpenIdTokenOutput`](crate::output::GetOpenIdTokenOutput)
+/// See [`GetOpenIdTokenOutput`](crate::output::GetOpenIdTokenOutput).
 pub mod get_open_id_token_output {
 
-    /// A builder for [`GetOpenIdTokenOutput`](crate::output::GetOpenIdTokenOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetOpenIdTokenOutput`](crate::output::GetOpenIdTokenOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_id: std::option::Option<std::string::String>,
@@ -1325,7 +1342,7 @@ pub mod get_open_id_token_output {
             self.token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetOpenIdTokenOutput`](crate::output::GetOpenIdTokenOutput)
+        /// Consumes the builder and constructs a [`GetOpenIdTokenOutput`](crate::output::GetOpenIdTokenOutput).
         pub fn build(self) -> crate::output::GetOpenIdTokenOutput {
             crate::output::GetOpenIdTokenOutput {
                 identity_id: self.identity_id,
@@ -1335,7 +1352,7 @@ pub mod get_open_id_token_output {
     }
 }
 impl GetOpenIdTokenOutput {
-    /// Creates a new builder-style object to manufacture [`GetOpenIdTokenOutput`](crate::output::GetOpenIdTokenOutput)
+    /// Creates a new builder-style object to manufacture [`GetOpenIdTokenOutput`](crate::output::GetOpenIdTokenOutput).
     pub fn builder() -> crate::output::get_open_id_token_output::Builder {
         crate::output::get_open_id_token_output::Builder::default()
     }
@@ -1346,11 +1363,14 @@ impl GetOpenIdTokenOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetIdentityPoolRolesOutput {
     /// <p>An identity pool ID in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_pool_id: std::option::Option<std::string::String>,
     /// <p>The map of roles associated with this pool. Currently only authenticated and unauthenticated roles are supported.</p>
+    #[doc(hidden)]
     pub roles:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>How users for a specific identity provider are to mapped to roles. This is a String-to-<code>RoleMapping</code> object map. The string identifies the identity provider, for example, "graph.facebook.com" or "cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id".</p>
+    #[doc(hidden)]
     pub role_mappings: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::RoleMapping>,
     >,
@@ -1385,11 +1405,10 @@ impl std::fmt::Debug for GetIdentityPoolRolesOutput {
         formatter.finish()
     }
 }
-/// See [`GetIdentityPoolRolesOutput`](crate::output::GetIdentityPoolRolesOutput)
+/// See [`GetIdentityPoolRolesOutput`](crate::output::GetIdentityPoolRolesOutput).
 pub mod get_identity_pool_roles_output {
 
-    /// A builder for [`GetIdentityPoolRolesOutput`](crate::output::GetIdentityPoolRolesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetIdentityPoolRolesOutput`](crate::output::GetIdentityPoolRolesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_pool_id: std::option::Option<std::string::String>,
@@ -1464,7 +1483,7 @@ pub mod get_identity_pool_roles_output {
             self.role_mappings = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetIdentityPoolRolesOutput`](crate::output::GetIdentityPoolRolesOutput)
+        /// Consumes the builder and constructs a [`GetIdentityPoolRolesOutput`](crate::output::GetIdentityPoolRolesOutput).
         pub fn build(self) -> crate::output::GetIdentityPoolRolesOutput {
             crate::output::GetIdentityPoolRolesOutput {
                 identity_pool_id: self.identity_pool_id,
@@ -1475,7 +1494,7 @@ pub mod get_identity_pool_roles_output {
     }
 }
 impl GetIdentityPoolRolesOutput {
-    /// Creates a new builder-style object to manufacture [`GetIdentityPoolRolesOutput`](crate::output::GetIdentityPoolRolesOutput)
+    /// Creates a new builder-style object to manufacture [`GetIdentityPoolRolesOutput`](crate::output::GetIdentityPoolRolesOutput).
     pub fn builder() -> crate::output::get_identity_pool_roles_output::Builder {
         crate::output::get_identity_pool_roles_output::Builder::default()
     }
@@ -1486,6 +1505,7 @@ impl GetIdentityPoolRolesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetIdOutput {
     /// <p>A unique identifier in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_id: std::option::Option<std::string::String>,
 }
 impl GetIdOutput {
@@ -1501,11 +1521,10 @@ impl std::fmt::Debug for GetIdOutput {
         formatter.finish()
     }
 }
-/// See [`GetIdOutput`](crate::output::GetIdOutput)
+/// See [`GetIdOutput`](crate::output::GetIdOutput).
 pub mod get_id_output {
 
-    /// A builder for [`GetIdOutput`](crate::output::GetIdOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetIdOutput`](crate::output::GetIdOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_id: std::option::Option<std::string::String>,
@@ -1521,7 +1540,7 @@ pub mod get_id_output {
             self.identity_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetIdOutput`](crate::output::GetIdOutput)
+        /// Consumes the builder and constructs a [`GetIdOutput`](crate::output::GetIdOutput).
         pub fn build(self) -> crate::output::GetIdOutput {
             crate::output::GetIdOutput {
                 identity_id: self.identity_id,
@@ -1530,7 +1549,7 @@ pub mod get_id_output {
     }
 }
 impl GetIdOutput {
-    /// Creates a new builder-style object to manufacture [`GetIdOutput`](crate::output::GetIdOutput)
+    /// Creates a new builder-style object to manufacture [`GetIdOutput`](crate::output::GetIdOutput).
     pub fn builder() -> crate::output::get_id_output::Builder {
         crate::output::get_id_output::Builder::default()
     }
@@ -1541,8 +1560,10 @@ impl GetIdOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCredentialsForIdentityOutput {
     /// <p>A unique identifier in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_id: std::option::Option<std::string::String>,
     /// <p>Credentials for the provided identity ID.</p>
+    #[doc(hidden)]
     pub credentials: std::option::Option<crate::model::Credentials>,
 }
 impl GetCredentialsForIdentityOutput {
@@ -1563,11 +1584,10 @@ impl std::fmt::Debug for GetCredentialsForIdentityOutput {
         formatter.finish()
     }
 }
-/// See [`GetCredentialsForIdentityOutput`](crate::output::GetCredentialsForIdentityOutput)
+/// See [`GetCredentialsForIdentityOutput`](crate::output::GetCredentialsForIdentityOutput).
 pub mod get_credentials_for_identity_output {
 
-    /// A builder for [`GetCredentialsForIdentityOutput`](crate::output::GetCredentialsForIdentityOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCredentialsForIdentityOutput`](crate::output::GetCredentialsForIdentityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_id: std::option::Option<std::string::String>,
@@ -1597,7 +1617,7 @@ pub mod get_credentials_for_identity_output {
             self.credentials = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCredentialsForIdentityOutput`](crate::output::GetCredentialsForIdentityOutput)
+        /// Consumes the builder and constructs a [`GetCredentialsForIdentityOutput`](crate::output::GetCredentialsForIdentityOutput).
         pub fn build(self) -> crate::output::GetCredentialsForIdentityOutput {
             crate::output::GetCredentialsForIdentityOutput {
                 identity_id: self.identity_id,
@@ -1607,7 +1627,7 @@ pub mod get_credentials_for_identity_output {
     }
 }
 impl GetCredentialsForIdentityOutput {
-    /// Creates a new builder-style object to manufacture [`GetCredentialsForIdentityOutput`](crate::output::GetCredentialsForIdentityOutput)
+    /// Creates a new builder-style object to manufacture [`GetCredentialsForIdentityOutput`](crate::output::GetCredentialsForIdentityOutput).
     pub fn builder() -> crate::output::get_credentials_for_identity_output::Builder {
         crate::output::get_credentials_for_identity_output::Builder::default()
     }
@@ -1618,26 +1638,36 @@ impl GetCredentialsForIdentityOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeIdentityPoolOutput {
     /// <p>An identity pool ID in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_pool_id: std::option::Option<std::string::String>,
     /// <p>A string that you provide.</p>
+    #[doc(hidden)]
     pub identity_pool_name: std::option::Option<std::string::String>,
     /// <p>TRUE if the identity pool supports unauthenticated logins.</p>
+    #[doc(hidden)]
     pub allow_unauthenticated_identities: bool,
     /// <p>Enables or disables the Basic (Classic) authentication flow. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/authentication-flow.html">Identity Pools (Federated Identities) Authentication Flow</a> in the <i>Amazon Cognito Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub allow_classic_flow: std::option::Option<bool>,
     /// <p>Optional key:value pairs mapping provider names to provider app IDs.</p>
+    #[doc(hidden)]
     pub supported_login_providers:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The "domain" by which Cognito will refer to your users.</p>
+    #[doc(hidden)]
     pub developer_provider_name: std::option::Option<std::string::String>,
     /// <p>The ARNs of the OpenID Connect providers.</p>
+    #[doc(hidden)]
     pub open_id_connect_provider_ar_ns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list representing an Amazon Cognito user pool and its client ID.</p>
+    #[doc(hidden)]
     pub cognito_identity_providers:
         std::option::Option<std::vec::Vec<crate::model::CognitoIdentityProvider>>,
     /// <p>An array of Amazon Resource Names (ARNs) of the SAML provider for your identity pool.</p>
+    #[doc(hidden)]
     pub saml_provider_ar_ns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The tags that are assigned to the identity pool. A tag is a label that you can apply to identity pools to categorize and manage them in different ways, such as by purpose, owner, environment, or other criteria.</p>
+    #[doc(hidden)]
     pub identity_pool_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1716,11 +1746,10 @@ impl std::fmt::Debug for DescribeIdentityPoolOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeIdentityPoolOutput`](crate::output::DescribeIdentityPoolOutput)
+/// See [`DescribeIdentityPoolOutput`](crate::output::DescribeIdentityPoolOutput).
 pub mod describe_identity_pool_output {
 
-    /// A builder for [`DescribeIdentityPoolOutput`](crate::output::DescribeIdentityPoolOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeIdentityPoolOutput`](crate::output::DescribeIdentityPoolOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_pool_id: std::option::Option<std::string::String>,
@@ -1916,7 +1945,7 @@ pub mod describe_identity_pool_output {
             self.identity_pool_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeIdentityPoolOutput`](crate::output::DescribeIdentityPoolOutput)
+        /// Consumes the builder and constructs a [`DescribeIdentityPoolOutput`](crate::output::DescribeIdentityPoolOutput).
         pub fn build(self) -> crate::output::DescribeIdentityPoolOutput {
             crate::output::DescribeIdentityPoolOutput {
                 identity_pool_id: self.identity_pool_id,
@@ -1936,7 +1965,7 @@ pub mod describe_identity_pool_output {
     }
 }
 impl DescribeIdentityPoolOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeIdentityPoolOutput`](crate::output::DescribeIdentityPoolOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeIdentityPoolOutput`](crate::output::DescribeIdentityPoolOutput).
     pub fn builder() -> crate::output::describe_identity_pool_output::Builder {
         crate::output::describe_identity_pool_output::Builder::default()
     }
@@ -1947,12 +1976,16 @@ impl DescribeIdentityPoolOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeIdentityOutput {
     /// <p>A unique identifier in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_id: std::option::Option<std::string::String>,
     /// <p>The provider names.</p>
+    #[doc(hidden)]
     pub logins: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Date on which the identity was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Date on which the identity was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeIdentityOutput {
@@ -1983,11 +2016,10 @@ impl std::fmt::Debug for DescribeIdentityOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeIdentityOutput`](crate::output::DescribeIdentityOutput)
+/// See [`DescribeIdentityOutput`](crate::output::DescribeIdentityOutput).
 pub mod describe_identity_output {
 
-    /// A builder for [`DescribeIdentityOutput`](crate::output::DescribeIdentityOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeIdentityOutput`](crate::output::DescribeIdentityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_id: std::option::Option<std::string::String>,
@@ -2051,7 +2083,7 @@ pub mod describe_identity_output {
             self.last_modified_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeIdentityOutput`](crate::output::DescribeIdentityOutput)
+        /// Consumes the builder and constructs a [`DescribeIdentityOutput`](crate::output::DescribeIdentityOutput).
         pub fn build(self) -> crate::output::DescribeIdentityOutput {
             crate::output::DescribeIdentityOutput {
                 identity_id: self.identity_id,
@@ -2063,7 +2095,7 @@ pub mod describe_identity_output {
     }
 }
 impl DescribeIdentityOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeIdentityOutput`](crate::output::DescribeIdentityOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeIdentityOutput`](crate::output::DescribeIdentityOutput).
     pub fn builder() -> crate::output::describe_identity_output::Builder {
         crate::output::describe_identity_output::Builder::default()
     }
@@ -2079,22 +2111,21 @@ impl std::fmt::Debug for DeleteIdentityPoolOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteIdentityPoolOutput`](crate::output::DeleteIdentityPoolOutput)
+/// See [`DeleteIdentityPoolOutput`](crate::output::DeleteIdentityPoolOutput).
 pub mod delete_identity_pool_output {
 
-    /// A builder for [`DeleteIdentityPoolOutput`](crate::output::DeleteIdentityPoolOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteIdentityPoolOutput`](crate::output::DeleteIdentityPoolOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteIdentityPoolOutput`](crate::output::DeleteIdentityPoolOutput)
+        /// Consumes the builder and constructs a [`DeleteIdentityPoolOutput`](crate::output::DeleteIdentityPoolOutput).
         pub fn build(self) -> crate::output::DeleteIdentityPoolOutput {
             crate::output::DeleteIdentityPoolOutput {}
         }
     }
 }
 impl DeleteIdentityPoolOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteIdentityPoolOutput`](crate::output::DeleteIdentityPoolOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteIdentityPoolOutput`](crate::output::DeleteIdentityPoolOutput).
     pub fn builder() -> crate::output::delete_identity_pool_output::Builder {
         crate::output::delete_identity_pool_output::Builder::default()
     }
@@ -2105,6 +2136,7 @@ impl DeleteIdentityPoolOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteIdentitiesOutput {
     /// <p>An array of UnprocessedIdentityId objects, each of which contains an ErrorCode and IdentityId.</p>
+    #[doc(hidden)]
     pub unprocessed_identity_ids:
         std::option::Option<std::vec::Vec<crate::model::UnprocessedIdentityId>>,
 }
@@ -2123,11 +2155,10 @@ impl std::fmt::Debug for DeleteIdentitiesOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteIdentitiesOutput`](crate::output::DeleteIdentitiesOutput)
+/// See [`DeleteIdentitiesOutput`](crate::output::DeleteIdentitiesOutput).
 pub mod delete_identities_output {
 
-    /// A builder for [`DeleteIdentitiesOutput`](crate::output::DeleteIdentitiesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteIdentitiesOutput`](crate::output::DeleteIdentitiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) unprocessed_identity_ids:
@@ -2156,7 +2187,7 @@ pub mod delete_identities_output {
             self.unprocessed_identity_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteIdentitiesOutput`](crate::output::DeleteIdentitiesOutput)
+        /// Consumes the builder and constructs a [`DeleteIdentitiesOutput`](crate::output::DeleteIdentitiesOutput).
         pub fn build(self) -> crate::output::DeleteIdentitiesOutput {
             crate::output::DeleteIdentitiesOutput {
                 unprocessed_identity_ids: self.unprocessed_identity_ids,
@@ -2165,7 +2196,7 @@ pub mod delete_identities_output {
     }
 }
 impl DeleteIdentitiesOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteIdentitiesOutput`](crate::output::DeleteIdentitiesOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteIdentitiesOutput`](crate::output::DeleteIdentitiesOutput).
     pub fn builder() -> crate::output::delete_identities_output::Builder {
         crate::output::delete_identities_output::Builder::default()
     }
@@ -2176,26 +2207,36 @@ impl DeleteIdentitiesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateIdentityPoolOutput {
     /// <p>An identity pool ID in the format REGION:GUID.</p>
+    #[doc(hidden)]
     pub identity_pool_id: std::option::Option<std::string::String>,
     /// <p>A string that you provide.</p>
+    #[doc(hidden)]
     pub identity_pool_name: std::option::Option<std::string::String>,
     /// <p>TRUE if the identity pool supports unauthenticated logins.</p>
+    #[doc(hidden)]
     pub allow_unauthenticated_identities: bool,
     /// <p>Enables or disables the Basic (Classic) authentication flow. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/authentication-flow.html">Identity Pools (Federated Identities) Authentication Flow</a> in the <i>Amazon Cognito Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub allow_classic_flow: std::option::Option<bool>,
     /// <p>Optional key:value pairs mapping provider names to provider app IDs.</p>
+    #[doc(hidden)]
     pub supported_login_providers:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The "domain" by which Cognito will refer to your users.</p>
+    #[doc(hidden)]
     pub developer_provider_name: std::option::Option<std::string::String>,
     /// <p>The ARNs of the OpenID Connect providers.</p>
+    #[doc(hidden)]
     pub open_id_connect_provider_ar_ns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list representing an Amazon Cognito user pool and its client ID.</p>
+    #[doc(hidden)]
     pub cognito_identity_providers:
         std::option::Option<std::vec::Vec<crate::model::CognitoIdentityProvider>>,
     /// <p>An array of Amazon Resource Names (ARNs) of the SAML provider for your identity pool.</p>
+    #[doc(hidden)]
     pub saml_provider_ar_ns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The tags that are assigned to the identity pool. A tag is a label that you can apply to identity pools to categorize and manage them in different ways, such as by purpose, owner, environment, or other criteria.</p>
+    #[doc(hidden)]
     pub identity_pool_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2274,11 +2315,10 @@ impl std::fmt::Debug for CreateIdentityPoolOutput {
         formatter.finish()
     }
 }
-/// See [`CreateIdentityPoolOutput`](crate::output::CreateIdentityPoolOutput)
+/// See [`CreateIdentityPoolOutput`](crate::output::CreateIdentityPoolOutput).
 pub mod create_identity_pool_output {
 
-    /// A builder for [`CreateIdentityPoolOutput`](crate::output::CreateIdentityPoolOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateIdentityPoolOutput`](crate::output::CreateIdentityPoolOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_pool_id: std::option::Option<std::string::String>,
@@ -2474,7 +2514,7 @@ pub mod create_identity_pool_output {
             self.identity_pool_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateIdentityPoolOutput`](crate::output::CreateIdentityPoolOutput)
+        /// Consumes the builder and constructs a [`CreateIdentityPoolOutput`](crate::output::CreateIdentityPoolOutput).
         pub fn build(self) -> crate::output::CreateIdentityPoolOutput {
             crate::output::CreateIdentityPoolOutput {
                 identity_pool_id: self.identity_pool_id,
@@ -2494,7 +2534,7 @@ pub mod create_identity_pool_output {
     }
 }
 impl CreateIdentityPoolOutput {
-    /// Creates a new builder-style object to manufacture [`CreateIdentityPoolOutput`](crate::output::CreateIdentityPoolOutput)
+    /// Creates a new builder-style object to manufacture [`CreateIdentityPoolOutput`](crate::output::CreateIdentityPoolOutput).
     pub fn builder() -> crate::output::create_identity_pool_output::Builder {
         crate::output::create_identity_pool_output::Builder::default()
     }

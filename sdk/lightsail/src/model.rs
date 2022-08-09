@@ -5,28 +5,40 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Operation {
     /// <p>The ID of the operation.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The resource name.</p>
+    #[doc(hidden)]
     pub resource_name: std::option::Option<std::string::String>,
     /// <p>The resource type. </p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The timestamp when the operation was initialized (e.g., <code>1479816991.349</code>).</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Web Services Region and Availability Zone.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>A Boolean value indicating whether the operation is terminal.</p>
+    #[doc(hidden)]
     pub is_terminal: std::option::Option<bool>,
     /// <p>Details about the operation (e.g., <code>Debian-1GB-Ohio-1</code>).</p>
+    #[doc(hidden)]
     pub operation_details: std::option::Option<std::string::String>,
     /// <p>The type of operation. </p>
+    #[doc(hidden)]
     pub operation_type: std::option::Option<crate::model::OperationType>,
     /// <p>The status of the operation. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OperationStatus>,
     /// <p>The timestamp when the status was changed (e.g., <code>1479816991.349</code>).</p>
+    #[doc(hidden)]
     pub status_changed_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The error code.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The error details.</p>
+    #[doc(hidden)]
     pub error_details: std::option::Option<std::string::String>,
 }
 impl Operation {
@@ -97,11 +109,10 @@ impl std::fmt::Debug for Operation {
         formatter.finish()
     }
 }
-/// See [`Operation`](crate::model::Operation)
+/// See [`Operation`](crate::model::Operation).
 pub mod operation {
 
-    /// A builder for [`Operation`](crate::model::Operation)
-    #[non_exhaustive]
+    /// A builder for [`Operation`](crate::model::Operation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -265,7 +276,7 @@ pub mod operation {
             self.error_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`Operation`](crate::model::Operation)
+        /// Consumes the builder and constructs a [`Operation`](crate::model::Operation).
         pub fn build(self) -> crate::model::Operation {
             crate::model::Operation {
                 id: self.id,
@@ -285,7 +296,7 @@ pub mod operation {
     }
 }
 impl Operation {
-    /// Creates a new builder-style object to manufacture [`Operation`](crate::model::Operation)
+    /// Creates a new builder-style object to manufacture [`Operation`](crate::model::Operation).
     pub fn builder() -> crate::model::operation::Builder {
         crate::model::operation::Builder::default()
     }
@@ -818,8 +829,10 @@ impl AsRef<str> for OperationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceLocation {
     /// <p>The Availability Zone. Follows the format <code>us-east-2a</code> (case-sensitive).</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>The AWS Region name.</p>
+    #[doc(hidden)]
     pub region_name: std::option::Option<crate::model::RegionName>,
 }
 impl ResourceLocation {
@@ -840,11 +853,10 @@ impl std::fmt::Debug for ResourceLocation {
         formatter.finish()
     }
 }
-/// See [`ResourceLocation`](crate::model::ResourceLocation)
+/// See [`ResourceLocation`](crate::model::ResourceLocation).
 pub mod resource_location {
 
-    /// A builder for [`ResourceLocation`](crate::model::ResourceLocation)
-    #[non_exhaustive]
+    /// A builder for [`ResourceLocation`](crate::model::ResourceLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) availability_zone: std::option::Option<std::string::String>,
@@ -877,7 +889,7 @@ pub mod resource_location {
             self.region_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceLocation`](crate::model::ResourceLocation)
+        /// Consumes the builder and constructs a [`ResourceLocation`](crate::model::ResourceLocation).
         pub fn build(self) -> crate::model::ResourceLocation {
             crate::model::ResourceLocation {
                 availability_zone: self.availability_zone,
@@ -887,7 +899,7 @@ pub mod resource_location {
     }
 }
 impl ResourceLocation {
-    /// Creates a new builder-style object to manufacture [`ResourceLocation`](crate::model::ResourceLocation)
+    /// Creates a new builder-style object to manufacture [`ResourceLocation`](crate::model::ResourceLocation).
     pub fn builder() -> crate::model::resource_location::Builder {
         crate::model::resource_location::Builder::default()
     }
@@ -1169,21 +1181,29 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RelationalDatabaseParameter {
     /// <p>Specifies the valid range of values for the parameter.</p>
+    #[doc(hidden)]
     pub allowed_values: std::option::Option<std::string::String>,
     /// <p>Indicates when parameter updates are applied.</p>
     /// <p>Can be <code>immediate</code> or <code>pending-reboot</code>.</p>
+    #[doc(hidden)]
     pub apply_method: std::option::Option<std::string::String>,
     /// <p>Specifies the engine-specific parameter type.</p>
+    #[doc(hidden)]
     pub apply_type: std::option::Option<std::string::String>,
     /// <p>Specifies the valid data type for the parameter.</p>
+    #[doc(hidden)]
     pub data_type: std::option::Option<std::string::String>,
     /// <p>Provides a description of the parameter.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A Boolean value indicating whether the parameter can be modified.</p>
+    #[doc(hidden)]
     pub is_modifiable: std::option::Option<bool>,
     /// <p>Specifies the name of the parameter.</p>
+    #[doc(hidden)]
     pub parameter_name: std::option::Option<std::string::String>,
     /// <p>Specifies the value of the parameter.</p>
+    #[doc(hidden)]
     pub parameter_value: std::option::Option<std::string::String>,
 }
 impl RelationalDatabaseParameter {
@@ -1235,11 +1255,10 @@ impl std::fmt::Debug for RelationalDatabaseParameter {
         formatter.finish()
     }
 }
-/// See [`RelationalDatabaseParameter`](crate::model::RelationalDatabaseParameter)
+/// See [`RelationalDatabaseParameter`](crate::model::RelationalDatabaseParameter).
 pub mod relational_database_parameter {
 
-    /// A builder for [`RelationalDatabaseParameter`](crate::model::RelationalDatabaseParameter)
-    #[non_exhaustive]
+    /// A builder for [`RelationalDatabaseParameter`](crate::model::RelationalDatabaseParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allowed_values: std::option::Option<std::string::String>,
@@ -1343,7 +1362,7 @@ pub mod relational_database_parameter {
             self.parameter_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`RelationalDatabaseParameter`](crate::model::RelationalDatabaseParameter)
+        /// Consumes the builder and constructs a [`RelationalDatabaseParameter`](crate::model::RelationalDatabaseParameter).
         pub fn build(self) -> crate::model::RelationalDatabaseParameter {
             crate::model::RelationalDatabaseParameter {
                 allowed_values: self.allowed_values,
@@ -1359,7 +1378,7 @@ pub mod relational_database_parameter {
     }
 }
 impl RelationalDatabaseParameter {
-    /// Creates a new builder-style object to manufacture [`RelationalDatabaseParameter`](crate::model::RelationalDatabaseParameter)
+    /// Creates a new builder-style object to manufacture [`RelationalDatabaseParameter`](crate::model::RelationalDatabaseParameter).
     pub fn builder() -> crate::model::relational_database_parameter::Builder {
         crate::model::relational_database_parameter::Builder::default()
     }
@@ -1447,13 +1466,17 @@ impl AsRef<str> for LoadBalancerAttributeName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainEntry {
     /// <p>The ID of the domain recordset entry.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the domain.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The target IP address (e.g., <code>192.0.2.0</code>), or AWS name server (e.g., <code>ns-111.awsdns-22.com.</code>).</p>
     /// <p>For Lightsail load balancers, the value looks like <code>ab1234c56789c6b86aba6fb203d443bc-123456789.us-east-2.elb.amazonaws.com</code>. For Lightsail distributions, the value looks like <code>exampled1182ne.cloudfront.net</code>. For Lightsail container services, the value looks like <code>container-service-1.example23scljs.us-west-2.cs.amazonlightsail.com</code>. Be sure to also set <code>isAlias</code> to <code>true</code> when setting up an A record for a Lightsail load balancer, distribution, or container service.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<std::string::String>,
     /// <p>When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load balancer. You can include an alias (A type) record in your request, which points to a load balancer DNS name and routes traffic to your load balancer.</p>
+    #[doc(hidden)]
     pub is_alias: std::option::Option<bool>,
     /// <p>The type of domain entry, such as address for IPv4 (A), address for IPv6 (AAAA), canonical name (CNAME), mail exchanger (MX), name server (NS), start of authority (SOA), service locator (SRV), or text (TXT).</p>
     /// <p>The following domain entry types can be used:</p>
@@ -1467,10 +1490,13 @@ pub struct DomainEntry {
     /// <li> <p> <code>SRV</code> </p> </li>
     /// <li> <p> <code>TXT</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>(Deprecated) The options for the domain entry.</p> <note>
     /// <p>In releases prior to November 29, 2017, this parameter was not included in the API response. It is now deprecated.</p>
     /// </note>
+    #[deprecated]
+    #[doc(hidden)]
     pub options:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1510,6 +1536,7 @@ impl DomainEntry {
     /// <p>(Deprecated) The options for the domain entry.</p> <note>
     /// <p>In releases prior to November 29, 2017, this parameter was not included in the API response. It is now deprecated.</p>
     /// </note>
+    #[deprecated]
     pub fn options(
         &self,
     ) -> std::option::Option<&std::collections::HashMap<std::string::String, std::string::String>>
@@ -1529,11 +1556,10 @@ impl std::fmt::Debug for DomainEntry {
         formatter.finish()
     }
 }
-/// See [`DomainEntry`](crate::model::DomainEntry)
+/// See [`DomainEntry`](crate::model::DomainEntry).
 pub mod domain_entry {
 
-    /// A builder for [`DomainEntry`](crate::model::DomainEntry)
-    #[non_exhaustive]
+    /// A builder for [`DomainEntry`](crate::model::DomainEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1627,6 +1653,7 @@ pub mod domain_entry {
         /// <p>(Deprecated) The options for the domain entry.</p> <note>
         /// <p>In releases prior to November 29, 2017, this parameter was not included in the API response. It is now deprecated.</p>
         /// </note>
+        #[deprecated]
         pub fn options(
             mut self,
             k: impl Into<std::string::String>,
@@ -1640,6 +1667,7 @@ pub mod domain_entry {
         /// <p>(Deprecated) The options for the domain entry.</p> <note>
         /// <p>In releases prior to November 29, 2017, this parameter was not included in the API response. It is now deprecated.</p>
         /// </note>
+        #[deprecated]
         pub fn set_options(
             mut self,
             input: std::option::Option<
@@ -1649,7 +1677,7 @@ pub mod domain_entry {
             self.options = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainEntry`](crate::model::DomainEntry)
+        /// Consumes the builder and constructs a [`DomainEntry`](crate::model::DomainEntry).
         pub fn build(self) -> crate::model::DomainEntry {
             crate::model::DomainEntry {
                 id: self.id,
@@ -1663,7 +1691,7 @@ pub mod domain_entry {
     }
 }
 impl DomainEntry {
-    /// Creates a new builder-style object to manufacture [`DomainEntry`](crate::model::DomainEntry)
+    /// Creates a new builder-style object to manufacture [`DomainEntry`](crate::model::DomainEntry).
     pub fn builder() -> crate::model::domain_entry::Builder {
         crate::model::domain_entry::Builder::default()
     }
@@ -1682,6 +1710,7 @@ pub struct CacheBehaviorPerPath {
     /// <li> <p>Specify the following to cache only the .html files in the document root of an Apache web server.</p> <p> <code>var/www/html/*.html</code> </p> </li>
     /// <li> <p>Specify the following to cache only the .jpg, .png, and .gif files in the images sub-directory of the document root of an Apache web server.</p> <p> <code>var/www/html/images/*.jpg</code> </p> <p> <code>var/www/html/images/*.png</code> </p> <p> <code>var/www/html/images/*.gif</code> </p> <p>Specify the following to cache all files in the images sub-directory of the document root of an Apache web server.</p> <p> <code>var/www/html/images/</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The cache behavior for the specified path.</p>
     /// <p>You can specify one of the following per-path cache behaviors:</p>
@@ -1689,6 +1718,7 @@ pub struct CacheBehaviorPerPath {
     /// <li> <p> <b> <code>cache</code> </b> - This behavior caches the specified path. </p> </li>
     /// <li> <p> <b> <code>dont-cache</code> </b> - This behavior doesn't cache the specified path. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub behavior: std::option::Option<crate::model::BehaviorEnum>,
 }
 impl CacheBehaviorPerPath {
@@ -1721,11 +1751,10 @@ impl std::fmt::Debug for CacheBehaviorPerPath {
         formatter.finish()
     }
 }
-/// See [`CacheBehaviorPerPath`](crate::model::CacheBehaviorPerPath)
+/// See [`CacheBehaviorPerPath`](crate::model::CacheBehaviorPerPath).
 pub mod cache_behavior_per_path {
 
-    /// A builder for [`CacheBehaviorPerPath`](crate::model::CacheBehaviorPerPath)
-    #[non_exhaustive]
+    /// A builder for [`CacheBehaviorPerPath`](crate::model::CacheBehaviorPerPath).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::string::String>,
@@ -1779,7 +1808,7 @@ pub mod cache_behavior_per_path {
             self.behavior = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheBehaviorPerPath`](crate::model::CacheBehaviorPerPath)
+        /// Consumes the builder and constructs a [`CacheBehaviorPerPath`](crate::model::CacheBehaviorPerPath).
         pub fn build(self) -> crate::model::CacheBehaviorPerPath {
             crate::model::CacheBehaviorPerPath {
                 path: self.path,
@@ -1789,7 +1818,7 @@ pub mod cache_behavior_per_path {
     }
 }
 impl CacheBehaviorPerPath {
-    /// Creates a new builder-style object to manufacture [`CacheBehaviorPerPath`](crate::model::CacheBehaviorPerPath)
+    /// Creates a new builder-style object to manufacture [`CacheBehaviorPerPath`](crate::model::CacheBehaviorPerPath).
     pub fn builder() -> crate::model::cache_behavior_per_path::Builder {
         crate::model::cache_behavior_per_path::Builder::default()
     }
@@ -1858,12 +1887,15 @@ pub struct CacheSettings {
     /// <p>The default amount of time that objects stay in the distribution's cache before the distribution forwards another request to the origin to determine whether the content has been updated.</p> <note>
     /// <p>The value specified applies only when the origin does not add HTTP headers such as <code>Cache-Control max-age</code>, <code>Cache-Control s-maxage</code>, and <code>Expires</code> to objects.</p>
     /// </note>
+    #[doc(hidden)]
     pub default_ttl: std::option::Option<i64>,
     /// <p>The minimum amount of time that objects stay in the distribution's cache before the distribution forwards another request to the origin to determine whether the object has been updated.</p>
     /// <p>A value of <code>0</code> must be specified for <code>minimumTTL</code> if the distribution is configured to forward all headers to the origin.</p>
+    #[doc(hidden)]
     pub minimum_ttl: std::option::Option<i64>,
     /// <p>The maximum amount of time that objects stay in the distribution's cache before the distribution forwards another request to the origin to determine whether the object has been updated.</p>
     /// <p>The value specified applies only when the origin adds HTTP headers such as <code>Cache-Control max-age</code>, <code>Cache-Control s-maxage</code>, and <code>Expires</code> to objects.</p>
+    #[doc(hidden)]
     pub maximum_ttl: std::option::Option<i64>,
     /// <p>The HTTP methods that are processed and forwarded to the distribution's origin.</p>
     /// <p>You can specify the following options:</p>
@@ -1873,6 +1905,7 @@ pub struct CacheSettings {
     /// <li> <p> <code>GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE</code> - The distribution forwards the <code>GET</code>, <code>HEAD</code>, <code>OPTIONS</code>, <code>PUT</code>, <code>PATCH</code>, <code>POST</code>, and <code>DELETE</code> methods.</p> </li>
     /// </ul>
     /// <p>If you specify the third option, you might need to restrict access to your distribution's origin so users can't perform operations that you don't want them to. For example, you might not want users to have permission to delete objects from your origin.</p>
+    #[doc(hidden)]
     pub allowed_http_methods: std::option::Option<std::string::String>,
     /// <p>The HTTP method responses that are cached by your distribution.</p>
     /// <p>You can specify the following options:</p>
@@ -1880,12 +1913,16 @@ pub struct CacheSettings {
     /// <li> <p> <code>GET,HEAD</code> - The distribution caches responses to the <code>GET</code> and <code>HEAD</code> methods.</p> </li>
     /// <li> <p> <code>GET,HEAD,OPTIONS</code> - The distribution caches responses to the <code>GET</code>, <code>HEAD</code>, and <code>OPTIONS</code> methods.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub cached_http_methods: std::option::Option<std::string::String>,
     /// <p>An object that describes the cookies that are forwarded to the origin. Your content is cached based on the cookies that are forwarded.</p>
+    #[doc(hidden)]
     pub forwarded_cookies: std::option::Option<crate::model::CookieObject>,
     /// <p>An object that describes the headers that are forwarded to the origin. Your content is cached based on the headers that are forwarded.</p>
+    #[doc(hidden)]
     pub forwarded_headers: std::option::Option<crate::model::HeaderObject>,
     /// <p>An object that describes the query strings that are forwarded to the origin. Your content is cached based on the query strings that are forwarded.</p>
+    #[doc(hidden)]
     pub forwarded_query_strings: std::option::Option<crate::model::QueryStringObject>,
 }
 impl CacheSettings {
@@ -1952,11 +1989,10 @@ impl std::fmt::Debug for CacheSettings {
         formatter.finish()
     }
 }
-/// See [`CacheSettings`](crate::model::CacheSettings)
+/// See [`CacheSettings`](crate::model::CacheSettings).
 pub mod cache_settings {
 
-    /// A builder for [`CacheSettings`](crate::model::CacheSettings)
-    #[non_exhaustive]
+    /// A builder for [`CacheSettings`](crate::model::CacheSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_ttl: std::option::Option<i64>,
@@ -2096,7 +2132,7 @@ pub mod cache_settings {
             self.forwarded_query_strings = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheSettings`](crate::model::CacheSettings)
+        /// Consumes the builder and constructs a [`CacheSettings`](crate::model::CacheSettings).
         pub fn build(self) -> crate::model::CacheSettings {
             crate::model::CacheSettings {
                 default_ttl: self.default_ttl,
@@ -2112,7 +2148,7 @@ pub mod cache_settings {
     }
 }
 impl CacheSettings {
-    /// Creates a new builder-style object to manufacture [`CacheSettings`](crate::model::CacheSettings)
+    /// Creates a new builder-style object to manufacture [`CacheSettings`](crate::model::CacheSettings).
     pub fn builder() -> crate::model::cache_settings::Builder {
         crate::model::cache_settings::Builder::default()
     }
@@ -2124,10 +2160,12 @@ impl CacheSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryStringObject {
     /// <p>Indicates whether the distribution forwards and caches based on query strings.</p>
+    #[doc(hidden)]
     pub option: std::option::Option<bool>,
     /// <p>The specific query strings that the distribution forwards to the origin.</p>
     /// <p>Your distribution will cache content based on the specified query strings.</p>
     /// <p>If the <code>option</code> parameter is true, then your distribution forwards all query strings, regardless of what you specify using the <code>queryStringsAllowList</code> parameter.</p>
+    #[doc(hidden)]
     pub query_strings_allow_list: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl QueryStringObject {
@@ -2150,11 +2188,10 @@ impl std::fmt::Debug for QueryStringObject {
         formatter.finish()
     }
 }
-/// See [`QueryStringObject`](crate::model::QueryStringObject)
+/// See [`QueryStringObject`](crate::model::QueryStringObject).
 pub mod query_string_object {
 
-    /// A builder for [`QueryStringObject`](crate::model::QueryStringObject)
-    #[non_exhaustive]
+    /// A builder for [`QueryStringObject`](crate::model::QueryStringObject).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) option: std::option::Option<bool>,
@@ -2195,7 +2232,7 @@ pub mod query_string_object {
             self.query_strings_allow_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryStringObject`](crate::model::QueryStringObject)
+        /// Consumes the builder and constructs a [`QueryStringObject`](crate::model::QueryStringObject).
         pub fn build(self) -> crate::model::QueryStringObject {
             crate::model::QueryStringObject {
                 option: self.option,
@@ -2205,7 +2242,7 @@ pub mod query_string_object {
     }
 }
 impl QueryStringObject {
-    /// Creates a new builder-style object to manufacture [`QueryStringObject`](crate::model::QueryStringObject)
+    /// Creates a new builder-style object to manufacture [`QueryStringObject`](crate::model::QueryStringObject).
     pub fn builder() -> crate::model::query_string_object::Builder {
         crate::model::query_string_object::Builder::default()
     }
@@ -2223,8 +2260,10 @@ pub struct HeaderObject {
     /// <li> <p> <b> <code>none</code> </b> - Forward only the default headers.</p> </li>
     /// <li> <p> <b> <code>allow-list</code> </b> - Forward only the headers you specify using the <code>headersAllowList</code> parameter.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub option: std::option::Option<crate::model::ForwardValues>,
     /// <p>The specific headers to forward to your distribution's origin.</p>
+    #[doc(hidden)]
     pub headers_allow_list: std::option::Option<std::vec::Vec<crate::model::HeaderEnum>>,
 }
 impl HeaderObject {
@@ -2251,11 +2290,10 @@ impl std::fmt::Debug for HeaderObject {
         formatter.finish()
     }
 }
-/// See [`HeaderObject`](crate::model::HeaderObject)
+/// See [`HeaderObject`](crate::model::HeaderObject).
 pub mod header_object {
 
-    /// A builder for [`HeaderObject`](crate::model::HeaderObject)
-    #[non_exhaustive]
+    /// A builder for [`HeaderObject`](crate::model::HeaderObject).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) option: std::option::Option<crate::model::ForwardValues>,
@@ -2306,7 +2344,7 @@ pub mod header_object {
             self.headers_allow_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`HeaderObject`](crate::model::HeaderObject)
+        /// Consumes the builder and constructs a [`HeaderObject`](crate::model::HeaderObject).
         pub fn build(self) -> crate::model::HeaderObject {
             crate::model::HeaderObject {
                 option: self.option,
@@ -2316,7 +2354,7 @@ pub mod header_object {
     }
 }
 impl HeaderObject {
-    /// Creates a new builder-style object to manufacture [`HeaderObject`](crate::model::HeaderObject)
+    /// Creates a new builder-style object to manufacture [`HeaderObject`](crate::model::HeaderObject).
     pub fn builder() -> crate::model::header_object::Builder {
         crate::model::header_object::Builder::default()
     }
@@ -2510,8 +2548,10 @@ impl AsRef<str> for ForwardValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CookieObject {
     /// <p>Specifies which cookies to forward to the distribution's origin for a cache behavior: <code>all</code>, <code>none</code>, or <code>allow-list</code> to forward only the cookies specified in the <code>cookiesAllowList</code> parameter.</p>
+    #[doc(hidden)]
     pub option: std::option::Option<crate::model::ForwardValues>,
     /// <p>The specific cookies to forward to your distribution's origin.</p>
+    #[doc(hidden)]
     pub cookies_allow_list: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CookieObject {
@@ -2532,11 +2572,10 @@ impl std::fmt::Debug for CookieObject {
         formatter.finish()
     }
 }
-/// See [`CookieObject`](crate::model::CookieObject)
+/// See [`CookieObject`](crate::model::CookieObject).
 pub mod cookie_object {
 
-    /// A builder for [`CookieObject`](crate::model::CookieObject)
-    #[non_exhaustive]
+    /// A builder for [`CookieObject`](crate::model::CookieObject).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) option: std::option::Option<crate::model::ForwardValues>,
@@ -2575,7 +2614,7 @@ pub mod cookie_object {
             self.cookies_allow_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`CookieObject`](crate::model::CookieObject)
+        /// Consumes the builder and constructs a [`CookieObject`](crate::model::CookieObject).
         pub fn build(self) -> crate::model::CookieObject {
             crate::model::CookieObject {
                 option: self.option,
@@ -2585,7 +2624,7 @@ pub mod cookie_object {
     }
 }
 impl CookieObject {
-    /// Creates a new builder-style object to manufacture [`CookieObject`](crate::model::CookieObject)
+    /// Creates a new builder-style object to manufacture [`CookieObject`](crate::model::CookieObject).
     pub fn builder() -> crate::model::cookie_object::Builder {
         crate::model::cookie_object::Builder::default()
     }
@@ -2601,6 +2640,7 @@ pub struct CacheBehavior {
     /// <li> <p> <b> <code>cache</code> </b> - This option is best for static sites. When specified, your distribution caches and serves your entire website as static content. This behavior is ideal for websites with static content that doesn't change depending on who views it, or for websites that don't use cookies, headers, or query strings to personalize content.</p> </li>
     /// <li> <p> <b> <code>dont-cache</code> </b> - This option is best for sites that serve a mix of static and dynamic content. When specified, your distribution caches and serve only the content that is specified in the distribution's <code>CacheBehaviorPerPath</code> parameter. This behavior is ideal for websites or web applications that use cookies, headers, and query strings to personalize content for individual users.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub behavior: std::option::Option<crate::model::BehaviorEnum>,
 }
 impl CacheBehavior {
@@ -2621,11 +2661,10 @@ impl std::fmt::Debug for CacheBehavior {
         formatter.finish()
     }
 }
-/// See [`CacheBehavior`](crate::model::CacheBehavior)
+/// See [`CacheBehavior`](crate::model::CacheBehavior).
 pub mod cache_behavior {
 
-    /// A builder for [`CacheBehavior`](crate::model::CacheBehavior)
-    #[non_exhaustive]
+    /// A builder for [`CacheBehavior`](crate::model::CacheBehavior).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) behavior: std::option::Option<crate::model::BehaviorEnum>,
@@ -2654,7 +2693,7 @@ pub mod cache_behavior {
             self.behavior = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheBehavior`](crate::model::CacheBehavior)
+        /// Consumes the builder and constructs a [`CacheBehavior`](crate::model::CacheBehavior).
         pub fn build(self) -> crate::model::CacheBehavior {
             crate::model::CacheBehavior {
                 behavior: self.behavior,
@@ -2663,7 +2702,7 @@ pub mod cache_behavior {
     }
 }
 impl CacheBehavior {
-    /// Creates a new builder-style object to manufacture [`CacheBehavior`](crate::model::CacheBehavior)
+    /// Creates a new builder-style object to manufacture [`CacheBehavior`](crate::model::CacheBehavior).
     pub fn builder() -> crate::model::cache_behavior::Builder {
         crate::model::cache_behavior::Builder::default()
     }
@@ -2675,10 +2714,13 @@ impl CacheBehavior {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputOrigin {
     /// <p>The name of the origin resource.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The AWS Region name of the origin resource.</p>
+    #[doc(hidden)]
     pub region_name: std::option::Option<crate::model::RegionName>,
     /// <p>The protocol that your Amazon Lightsail distribution uses when establishing a connection with your origin to pull content.</p>
+    #[doc(hidden)]
     pub protocol_policy: std::option::Option<crate::model::OriginProtocolPolicyEnum>,
 }
 impl InputOrigin {
@@ -2704,11 +2746,10 @@ impl std::fmt::Debug for InputOrigin {
         formatter.finish()
     }
 }
-/// See [`InputOrigin`](crate::model::InputOrigin)
+/// See [`InputOrigin`](crate::model::InputOrigin).
 pub mod input_origin {
 
-    /// A builder for [`InputOrigin`](crate::model::InputOrigin)
-    #[non_exhaustive]
+    /// A builder for [`InputOrigin`](crate::model::InputOrigin).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2752,7 +2793,7 @@ pub mod input_origin {
             self.protocol_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputOrigin`](crate::model::InputOrigin)
+        /// Consumes the builder and constructs a [`InputOrigin`](crate::model::InputOrigin).
         pub fn build(self) -> crate::model::InputOrigin {
             crate::model::InputOrigin {
                 name: self.name,
@@ -2763,7 +2804,7 @@ pub mod input_origin {
     }
 }
 impl InputOrigin {
-    /// Creates a new builder-style object to manufacture [`InputOrigin`](crate::model::InputOrigin)
+    /// Creates a new builder-style object to manufacture [`InputOrigin`](crate::model::InputOrigin).
     pub fn builder() -> crate::model::input_origin::Builder {
         crate::model::input_origin::Builder::default()
     }
@@ -2829,21 +2870,29 @@ impl AsRef<str> for OriginProtocolPolicyEnum {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerService {
     /// <p>The name of the container service.</p>
+    #[doc(hidden)]
     pub container_service_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the container service.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The timestamp when the container service was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An object that describes the location of the container service, such as the Amazon Web Services Region and Availability Zone.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The Lightsail resource type of the container service (i.e., <code>ContainerService</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The power specification of the container service.</p>
     /// <p>The power specifies the amount of RAM, the number of vCPUs, and the base price of the container service.</p>
+    #[doc(hidden)]
     pub power: std::option::Option<crate::model::ContainerServicePowerName>,
     /// <p>The ID of the power of the container service.</p>
+    #[doc(hidden)]
     pub power_id: std::option::Option<std::string::String>,
     /// <p>The current state of the container service.</p>
     /// <p>The following container service states are possible:</p>
@@ -2856,26 +2905,34 @@ pub struct ContainerService {
     /// <li> <p> <code>DELETING</code> - The container service is being deleted.</p> </li>
     /// <li> <p> <code>DISABLED</code> - The container service is disabled, and its active deployment and containers, if any, are shut down.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ContainerServiceState>,
     /// <p>An object that describes the current state of the container service.</p> <note>
     /// <p>The state detail is populated only when a container service is in a <code>PENDING</code>, <code>DEPLOYING</code>, or <code>UPDATING</code> state.</p>
     /// </note>
+    #[doc(hidden)]
     pub state_detail: std::option::Option<crate::model::ContainerServiceStateDetail>,
     /// <p>The scale specification of the container service.</p>
     /// <p>The scale specifies the allocated compute nodes of the container service.</p>
+    #[doc(hidden)]
     pub scale: std::option::Option<i32>,
     /// <p>An object that describes the current container deployment of the container service.</p>
+    #[doc(hidden)]
     pub current_deployment: std::option::Option<crate::model::ContainerServiceDeployment>,
     /// <p>An object that describes the next deployment of the container service.</p>
     /// <p>This value is <code>null</code> when there is no deployment in a <code>pending</code> state.</p>
+    #[doc(hidden)]
     pub next_deployment: std::option::Option<crate::model::ContainerServiceDeployment>,
     /// <p>A Boolean value indicating whether the container service is disabled.</p>
+    #[doc(hidden)]
     pub is_disabled: std::option::Option<bool>,
     /// <p>The principal ARN of the container service.</p>
     /// <p>The principal ARN can be used to create a trust relationship between your standard Amazon Web Services account and your Lightsail container service. This allows you to give your service permission to access resources in your standard Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub principal_arn: std::option::Option<std::string::String>,
     /// <p>The private domain name of the container service.</p>
     /// <p>The private domain name is accessible only by other resources within the default virtual private cloud (VPC) of your Lightsail account.</p>
+    #[doc(hidden)]
     pub private_domain_name: std::option::Option<std::string::String>,
     /// <p>The public domain name of the container service, such as <code>example.com</code> and <code>www.example.com</code>.</p>
     /// <p>You can specify up to four public domain names for a container service. The domain names that you specify are used when you create a deployment with a container configured as the public endpoint of your container service.</p>
@@ -2883,14 +2940,17 @@ pub struct ContainerService {
     /// <p>You must create and validate an SSL/TLS certificate before you can use public domain names with your container service. Use the <code>CreateCertificate</code> action to create a certificate for the public domain names you want to use with your container service.</p>
     /// </important>
     /// <p>See <code>CreateContainerService</code> or <code>UpdateContainerService</code> for information about how to specify public domain names for your Lightsail container service.</p>
+    #[doc(hidden)]
     pub public_domain_names: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The publicly accessible URL of the container service.</p>
     /// <p>If no public endpoint is specified in the <code>currentDeployment</code>, this URL returns a 404 response.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// <p>An object that describes the configuration for the container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories.</p>
     /// <p>For more information, see <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-container-service-ecr-private-repo-access">Configuring access to an Amazon ECR private repository for an Amazon Lightsail container service</a> in the <i>Amazon Lightsail Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub private_registry_access: std::option::Option<crate::model::PrivateRegistryAccess>,
 }
 impl ContainerService {
@@ -3030,11 +3090,10 @@ impl std::fmt::Debug for ContainerService {
         formatter.finish()
     }
 }
-/// See [`ContainerService`](crate::model::ContainerService)
+/// See [`ContainerService`](crate::model::ContainerService).
 pub mod container_service {
 
-    /// A builder for [`ContainerService`](crate::model::ContainerService)
-    #[non_exhaustive]
+    /// A builder for [`ContainerService`](crate::model::ContainerService).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) container_service_name: std::option::Option<std::string::String>,
@@ -3366,7 +3425,7 @@ pub mod container_service {
             self.private_registry_access = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerService`](crate::model::ContainerService)
+        /// Consumes the builder and constructs a [`ContainerService`](crate::model::ContainerService).
         pub fn build(self) -> crate::model::ContainerService {
             crate::model::ContainerService {
                 container_service_name: self.container_service_name,
@@ -3393,7 +3452,7 @@ pub mod container_service {
     }
 }
 impl ContainerService {
-    /// Creates a new builder-style object to manufacture [`ContainerService`](crate::model::ContainerService)
+    /// Creates a new builder-style object to manufacture [`ContainerService`](crate::model::ContainerService).
     pub fn builder() -> crate::model::container_service::Builder {
         crate::model::container_service::Builder::default()
     }
@@ -3405,6 +3464,7 @@ impl ContainerService {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrivateRegistryAccess {
     /// <p>An object that describes the activation status of the role that you can use to grant a Lightsail container service access to Amazon ECR private repositories. If the role is activated, the Amazon Resource Name (ARN) of the role is also listed.</p>
+    #[doc(hidden)]
     pub ecr_image_puller_role:
         std::option::Option<crate::model::ContainerServiceEcrImagePullerRole>,
 }
@@ -3423,11 +3483,10 @@ impl std::fmt::Debug for PrivateRegistryAccess {
         formatter.finish()
     }
 }
-/// See [`PrivateRegistryAccess`](crate::model::PrivateRegistryAccess)
+/// See [`PrivateRegistryAccess`](crate::model::PrivateRegistryAccess).
 pub mod private_registry_access {
 
-    /// A builder for [`PrivateRegistryAccess`](crate::model::PrivateRegistryAccess)
-    #[non_exhaustive]
+    /// A builder for [`PrivateRegistryAccess`](crate::model::PrivateRegistryAccess).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ecr_image_puller_role:
@@ -3450,7 +3509,7 @@ pub mod private_registry_access {
             self.ecr_image_puller_role = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrivateRegistryAccess`](crate::model::PrivateRegistryAccess)
+        /// Consumes the builder and constructs a [`PrivateRegistryAccess`](crate::model::PrivateRegistryAccess).
         pub fn build(self) -> crate::model::PrivateRegistryAccess {
             crate::model::PrivateRegistryAccess {
                 ecr_image_puller_role: self.ecr_image_puller_role,
@@ -3459,7 +3518,7 @@ pub mod private_registry_access {
     }
 }
 impl PrivateRegistryAccess {
-    /// Creates a new builder-style object to manufacture [`PrivateRegistryAccess`](crate::model::PrivateRegistryAccess)
+    /// Creates a new builder-style object to manufacture [`PrivateRegistryAccess`](crate::model::PrivateRegistryAccess).
     pub fn builder() -> crate::model::private_registry_access::Builder {
         crate::model::private_registry_access::Builder::default()
     }
@@ -3471,8 +3530,10 @@ impl PrivateRegistryAccess {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerServiceEcrImagePullerRole {
     /// <p>A Boolean value that indicates whether the role is activated.</p>
+    #[doc(hidden)]
     pub is_active: std::option::Option<bool>,
     /// <p>The Amazon Resource Name (ARN) of the role, if it is activated.</p>
+    #[doc(hidden)]
     pub principal_arn: std::option::Option<std::string::String>,
 }
 impl ContainerServiceEcrImagePullerRole {
@@ -3493,11 +3554,10 @@ impl std::fmt::Debug for ContainerServiceEcrImagePullerRole {
         formatter.finish()
     }
 }
-/// See [`ContainerServiceEcrImagePullerRole`](crate::model::ContainerServiceEcrImagePullerRole)
+/// See [`ContainerServiceEcrImagePullerRole`](crate::model::ContainerServiceEcrImagePullerRole).
 pub mod container_service_ecr_image_puller_role {
 
-    /// A builder for [`ContainerServiceEcrImagePullerRole`](crate::model::ContainerServiceEcrImagePullerRole)
-    #[non_exhaustive]
+    /// A builder for [`ContainerServiceEcrImagePullerRole`](crate::model::ContainerServiceEcrImagePullerRole).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_active: std::option::Option<bool>,
@@ -3527,7 +3587,7 @@ pub mod container_service_ecr_image_puller_role {
             self.principal_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerServiceEcrImagePullerRole`](crate::model::ContainerServiceEcrImagePullerRole)
+        /// Consumes the builder and constructs a [`ContainerServiceEcrImagePullerRole`](crate::model::ContainerServiceEcrImagePullerRole).
         pub fn build(self) -> crate::model::ContainerServiceEcrImagePullerRole {
             crate::model::ContainerServiceEcrImagePullerRole {
                 is_active: self.is_active,
@@ -3537,7 +3597,7 @@ pub mod container_service_ecr_image_puller_role {
     }
 }
 impl ContainerServiceEcrImagePullerRole {
-    /// Creates a new builder-style object to manufacture [`ContainerServiceEcrImagePullerRole`](crate::model::ContainerServiceEcrImagePullerRole)
+    /// Creates a new builder-style object to manufacture [`ContainerServiceEcrImagePullerRole`](crate::model::ContainerServiceEcrImagePullerRole).
     pub fn builder() -> crate::model::container_service_ecr_image_puller_role::Builder {
         crate::model::container_service_ecr_image_puller_role::Builder::default()
     }
@@ -3549,6 +3609,7 @@ impl ContainerServiceEcrImagePullerRole {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerServiceDeployment {
     /// <p>The version number of the deployment.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<i32>,
     /// <p>The state of the deployment.</p>
     /// <p>A deployment can be in one of the following states:</p>
@@ -3558,14 +3619,18 @@ pub struct ContainerServiceDeployment {
     /// <li> <p> <code>Inactive</code> - The deployment was previously successfully created, but it is not currently running on the container service.</p> </li>
     /// <li> <p> <code>Failed</code> - The deployment failed. Use the <code>GetContainerLog</code> action to view the log events for the containers in the deployment to try to determine the reason for the failure.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ContainerServiceDeploymentState>,
     /// <p>An object that describes the configuration for the containers of the deployment.</p>
+    #[doc(hidden)]
     pub containers: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::Container>,
     >,
     /// <p>An object that describes the endpoint of the deployment.</p>
+    #[doc(hidden)]
     pub public_endpoint: std::option::Option<crate::model::ContainerServiceEndpoint>,
     /// <p>The timestamp when the deployment was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ContainerServiceDeployment {
@@ -3611,11 +3676,10 @@ impl std::fmt::Debug for ContainerServiceDeployment {
         formatter.finish()
     }
 }
-/// See [`ContainerServiceDeployment`](crate::model::ContainerServiceDeployment)
+/// See [`ContainerServiceDeployment`](crate::model::ContainerServiceDeployment).
 pub mod container_service_deployment {
 
-    /// A builder for [`ContainerServiceDeployment`](crate::model::ContainerServiceDeployment)
-    #[non_exhaustive]
+    /// A builder for [`ContainerServiceDeployment`](crate::model::ContainerServiceDeployment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version: std::option::Option<i32>,
@@ -3715,7 +3779,7 @@ pub mod container_service_deployment {
             self.created_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerServiceDeployment`](crate::model::ContainerServiceDeployment)
+        /// Consumes the builder and constructs a [`ContainerServiceDeployment`](crate::model::ContainerServiceDeployment).
         pub fn build(self) -> crate::model::ContainerServiceDeployment {
             crate::model::ContainerServiceDeployment {
                 version: self.version,
@@ -3728,7 +3792,7 @@ pub mod container_service_deployment {
     }
 }
 impl ContainerServiceDeployment {
-    /// Creates a new builder-style object to manufacture [`ContainerServiceDeployment`](crate::model::ContainerServiceDeployment)
+    /// Creates a new builder-style object to manufacture [`ContainerServiceDeployment`](crate::model::ContainerServiceDeployment).
     pub fn builder() -> crate::model::container_service_deployment::Builder {
         crate::model::container_service_deployment::Builder::default()
     }
@@ -3739,10 +3803,13 @@ impl ContainerServiceDeployment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerServiceEndpoint {
     /// <p>The name of the container entry of the deployment that the endpoint configuration applies to.</p>
+    #[doc(hidden)]
     pub container_name: std::option::Option<std::string::String>,
     /// <p>The port of the specified container to which traffic is forwarded to.</p>
+    #[doc(hidden)]
     pub container_port: std::option::Option<i32>,
     /// <p>An object that describes the health check configuration of the container.</p>
+    #[doc(hidden)]
     pub health_check: std::option::Option<crate::model::ContainerServiceHealthCheckConfig>,
 }
 impl ContainerServiceEndpoint {
@@ -3770,11 +3837,10 @@ impl std::fmt::Debug for ContainerServiceEndpoint {
         formatter.finish()
     }
 }
-/// See [`ContainerServiceEndpoint`](crate::model::ContainerServiceEndpoint)
+/// See [`ContainerServiceEndpoint`](crate::model::ContainerServiceEndpoint).
 pub mod container_service_endpoint {
 
-    /// A builder for [`ContainerServiceEndpoint`](crate::model::ContainerServiceEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`ContainerServiceEndpoint`](crate::model::ContainerServiceEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) container_name: std::option::Option<std::string::String>,
@@ -3822,7 +3888,7 @@ pub mod container_service_endpoint {
             self.health_check = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerServiceEndpoint`](crate::model::ContainerServiceEndpoint)
+        /// Consumes the builder and constructs a [`ContainerServiceEndpoint`](crate::model::ContainerServiceEndpoint).
         pub fn build(self) -> crate::model::ContainerServiceEndpoint {
             crate::model::ContainerServiceEndpoint {
                 container_name: self.container_name,
@@ -3833,7 +3899,7 @@ pub mod container_service_endpoint {
     }
 }
 impl ContainerServiceEndpoint {
-    /// Creates a new builder-style object to manufacture [`ContainerServiceEndpoint`](crate::model::ContainerServiceEndpoint)
+    /// Creates a new builder-style object to manufacture [`ContainerServiceEndpoint`](crate::model::ContainerServiceEndpoint).
     pub fn builder() -> crate::model::container_service_endpoint::Builder {
         crate::model::container_service_endpoint::Builder::default()
     }
@@ -3844,16 +3910,22 @@ impl ContainerServiceEndpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerServiceHealthCheckConfig {
     /// <p>The number of consecutive health checks successes required before moving the container to the <code>Healthy</code> state. The default value is <code>2</code>.</p>
+    #[doc(hidden)]
     pub healthy_threshold: std::option::Option<i32>,
     /// <p>The number of consecutive health check failures required before moving the container to the <code>Unhealthy</code> state. The default value is <code>2</code>.</p>
+    #[doc(hidden)]
     pub unhealthy_threshold: std::option::Option<i32>,
     /// <p>The amount of time, in seconds, during which no response means a failed health check. You can specify between 2 and 60 seconds. The default value is <code>2</code>.</p>
+    #[doc(hidden)]
     pub timeout_seconds: std::option::Option<i32>,
     /// <p>The approximate interval, in seconds, between health checks of an individual container. You can specify between 5 and 300 seconds. The default value is <code>5</code>.</p>
+    #[doc(hidden)]
     pub interval_seconds: std::option::Option<i32>,
     /// <p>The path on the container on which to perform the health check. The default value is <code>/</code>.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The HTTP codes to use when checking for a successful response from a container. You can specify values between <code>200</code> and <code>499</code>. You can specify multiple values (for example, <code>200,202</code>) or a range of values (for example, <code>200-299</code>).</p>
+    #[doc(hidden)]
     pub success_codes: std::option::Option<std::string::String>,
 }
 impl ContainerServiceHealthCheckConfig {
@@ -3894,11 +3966,10 @@ impl std::fmt::Debug for ContainerServiceHealthCheckConfig {
         formatter.finish()
     }
 }
-/// See [`ContainerServiceHealthCheckConfig`](crate::model::ContainerServiceHealthCheckConfig)
+/// See [`ContainerServiceHealthCheckConfig`](crate::model::ContainerServiceHealthCheckConfig).
 pub mod container_service_health_check_config {
 
-    /// A builder for [`ContainerServiceHealthCheckConfig`](crate::model::ContainerServiceHealthCheckConfig)
-    #[non_exhaustive]
+    /// A builder for [`ContainerServiceHealthCheckConfig`](crate::model::ContainerServiceHealthCheckConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) healthy_threshold: std::option::Option<i32>,
@@ -3972,7 +4043,7 @@ pub mod container_service_health_check_config {
             self.success_codes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerServiceHealthCheckConfig`](crate::model::ContainerServiceHealthCheckConfig)
+        /// Consumes the builder and constructs a [`ContainerServiceHealthCheckConfig`](crate::model::ContainerServiceHealthCheckConfig).
         pub fn build(self) -> crate::model::ContainerServiceHealthCheckConfig {
             crate::model::ContainerServiceHealthCheckConfig {
                 healthy_threshold: self.healthy_threshold,
@@ -3986,7 +4057,7 @@ pub mod container_service_health_check_config {
     }
 }
 impl ContainerServiceHealthCheckConfig {
-    /// Creates a new builder-style object to manufacture [`ContainerServiceHealthCheckConfig`](crate::model::ContainerServiceHealthCheckConfig)
+    /// Creates a new builder-style object to manufacture [`ContainerServiceHealthCheckConfig`](crate::model::ContainerServiceHealthCheckConfig).
     pub fn builder() -> crate::model::container_service_health_check_config::Builder {
         crate::model::container_service_health_check_config::Builder::default()
     }
@@ -3999,13 +4070,17 @@ pub struct Container {
     /// <p>The name of the image used for the container.</p>
     /// <p>Container images sourced from your Lightsail container service, that are registered and stored on your service, start with a colon (<code>:</code>). For example, if your container service name is <code>container-service-1</code>, the container image label is <code>mystaticsite</code>, and you want to use the third (<code>3</code>) version of the registered container image, then you should specify <code>:container-service-1.mystaticsite.3</code>. To use the latest version of a container image, specify <code>latest</code> instead of a version number (for example, <code>:container-service-1.mystaticsite.latest</code>). Lightsail will automatically use the highest numbered version of the registered container image.</p>
     /// <p>Container images sourced from a public registry like Docker Hub don't start with a colon. For example, <code>nginx:latest</code> or <code>nginx</code>.</p>
+    #[doc(hidden)]
     pub image: std::option::Option<std::string::String>,
     /// <p>The launch command for the container.</p>
+    #[doc(hidden)]
     pub command: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The environment variables of the container.</p>
+    #[doc(hidden)]
     pub environment:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The open firewall ports of the container.</p>
+    #[doc(hidden)]
     pub ports: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ContainerServiceProtocol>,
     >,
@@ -4047,11 +4122,10 @@ impl std::fmt::Debug for Container {
         formatter.finish()
     }
 }
-/// See [`Container`](crate::model::Container)
+/// See [`Container`](crate::model::Container).
 pub mod container {
 
-    /// A builder for [`Container`](crate::model::Container)
-    #[non_exhaustive]
+    /// A builder for [`Container`](crate::model::Container).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) image: std::option::Option<std::string::String>,
@@ -4150,7 +4224,7 @@ pub mod container {
             self.ports = input;
             self
         }
-        /// Consumes the builder and constructs a [`Container`](crate::model::Container)
+        /// Consumes the builder and constructs a [`Container`](crate::model::Container).
         pub fn build(self) -> crate::model::Container {
             crate::model::Container {
                 image: self.image,
@@ -4162,7 +4236,7 @@ pub mod container {
     }
 }
 impl Container {
-    /// Creates a new builder-style object to manufacture [`Container`](crate::model::Container)
+    /// Creates a new builder-style object to manufacture [`Container`](crate::model::Container).
     pub fn builder() -> crate::model::container::Builder {
         crate::model::container::Builder::default()
     }
@@ -4317,10 +4391,12 @@ pub struct ContainerServiceStateDetail {
     /// <li> <p> <code>UNKNOWN_ERROR</code> - An error was experienced when your container service was being created.</p> </li>
     /// </ul> </li>
     /// </ul>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::ContainerServiceStateDetailCode>,
     /// <p>A message that provides more information for the state code.</p> <note>
     /// <p>The state detail is populated only when a container service is in a <code>PENDING</code>, <code>DEPLOYING</code>, or <code>UPDATING</code> state.</p>
     /// </note>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ContainerServiceStateDetail {
@@ -4361,11 +4437,10 @@ impl std::fmt::Debug for ContainerServiceStateDetail {
         formatter.finish()
     }
 }
-/// See [`ContainerServiceStateDetail`](crate::model::ContainerServiceStateDetail)
+/// See [`ContainerServiceStateDetail`](crate::model::ContainerServiceStateDetail).
 pub mod container_service_state_detail {
 
-    /// A builder for [`ContainerServiceStateDetail`](crate::model::ContainerServiceStateDetail)
-    #[non_exhaustive]
+    /// A builder for [`ContainerServiceStateDetail`](crate::model::ContainerServiceStateDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ContainerServiceStateDetailCode>,
@@ -4435,7 +4510,7 @@ pub mod container_service_state_detail {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerServiceStateDetail`](crate::model::ContainerServiceStateDetail)
+        /// Consumes the builder and constructs a [`ContainerServiceStateDetail`](crate::model::ContainerServiceStateDetail).
         pub fn build(self) -> crate::model::ContainerServiceStateDetail {
             crate::model::ContainerServiceStateDetail {
                 code: self.code,
@@ -4445,7 +4520,7 @@ pub mod container_service_state_detail {
     }
 }
 impl ContainerServiceStateDetail {
-    /// Creates a new builder-style object to manufacture [`ContainerServiceStateDetail`](crate::model::ContainerServiceStateDetail)
+    /// Creates a new builder-style object to manufacture [`ContainerServiceStateDetail`](crate::model::ContainerServiceStateDetail).
     pub fn builder() -> crate::model::container_service_state_detail::Builder {
         crate::model::container_service_state_detail::Builder::default()
     }
@@ -4713,9 +4788,11 @@ impl AsRef<str> for ContainerServicePowerName {
 pub struct Tag {
     /// <p>The key of the tag.</p>
     /// <p>Constraints: Tag keys accept a maximum of 128 letters, numbers, spaces in UTF-8, or the following characters: + - = . _ : / @</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the tag.</p>
     /// <p>Constraints: Tag values accept a maximum of 256 letters, numbers, spaces in UTF-8, or the following characters: + - = . _ : / @</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -4738,11 +4815,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -4773,7 +4849,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -4783,7 +4859,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -4795,6 +4871,7 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrivateRegistryAccessRequest {
     /// <p>An object to describe a request to activate or deactivate the role that you can use to grant an Amazon Lightsail container service access to Amazon Elastic Container Registry (Amazon ECR) private repositories.</p>
+    #[doc(hidden)]
     pub ecr_image_puller_role:
         std::option::Option<crate::model::ContainerServiceEcrImagePullerRoleRequest>,
 }
@@ -4813,11 +4890,10 @@ impl std::fmt::Debug for PrivateRegistryAccessRequest {
         formatter.finish()
     }
 }
-/// See [`PrivateRegistryAccessRequest`](crate::model::PrivateRegistryAccessRequest)
+/// See [`PrivateRegistryAccessRequest`](crate::model::PrivateRegistryAccessRequest).
 pub mod private_registry_access_request {
 
-    /// A builder for [`PrivateRegistryAccessRequest`](crate::model::PrivateRegistryAccessRequest)
-    #[non_exhaustive]
+    /// A builder for [`PrivateRegistryAccessRequest`](crate::model::PrivateRegistryAccessRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ecr_image_puller_role:
@@ -4840,7 +4916,7 @@ pub mod private_registry_access_request {
             self.ecr_image_puller_role = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrivateRegistryAccessRequest`](crate::model::PrivateRegistryAccessRequest)
+        /// Consumes the builder and constructs a [`PrivateRegistryAccessRequest`](crate::model::PrivateRegistryAccessRequest).
         pub fn build(self) -> crate::model::PrivateRegistryAccessRequest {
             crate::model::PrivateRegistryAccessRequest {
                 ecr_image_puller_role: self.ecr_image_puller_role,
@@ -4849,7 +4925,7 @@ pub mod private_registry_access_request {
     }
 }
 impl PrivateRegistryAccessRequest {
-    /// Creates a new builder-style object to manufacture [`PrivateRegistryAccessRequest`](crate::model::PrivateRegistryAccessRequest)
+    /// Creates a new builder-style object to manufacture [`PrivateRegistryAccessRequest`](crate::model::PrivateRegistryAccessRequest).
     pub fn builder() -> crate::model::private_registry_access_request::Builder {
         crate::model::private_registry_access_request::Builder::default()
     }
@@ -4861,6 +4937,7 @@ impl PrivateRegistryAccessRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerServiceEcrImagePullerRoleRequest {
     /// <p>A Boolean value that indicates whether to activate the role.</p>
+    #[doc(hidden)]
     pub is_active: std::option::Option<bool>,
 }
 impl ContainerServiceEcrImagePullerRoleRequest {
@@ -4876,11 +4953,10 @@ impl std::fmt::Debug for ContainerServiceEcrImagePullerRoleRequest {
         formatter.finish()
     }
 }
-/// See [`ContainerServiceEcrImagePullerRoleRequest`](crate::model::ContainerServiceEcrImagePullerRoleRequest)
+/// See [`ContainerServiceEcrImagePullerRoleRequest`](crate::model::ContainerServiceEcrImagePullerRoleRequest).
 pub mod container_service_ecr_image_puller_role_request {
 
-    /// A builder for [`ContainerServiceEcrImagePullerRoleRequest`](crate::model::ContainerServiceEcrImagePullerRoleRequest)
-    #[non_exhaustive]
+    /// A builder for [`ContainerServiceEcrImagePullerRoleRequest`](crate::model::ContainerServiceEcrImagePullerRoleRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_active: std::option::Option<bool>,
@@ -4896,7 +4972,7 @@ pub mod container_service_ecr_image_puller_role_request {
             self.is_active = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerServiceEcrImagePullerRoleRequest`](crate::model::ContainerServiceEcrImagePullerRoleRequest)
+        /// Consumes the builder and constructs a [`ContainerServiceEcrImagePullerRoleRequest`](crate::model::ContainerServiceEcrImagePullerRoleRequest).
         pub fn build(self) -> crate::model::ContainerServiceEcrImagePullerRoleRequest {
             crate::model::ContainerServiceEcrImagePullerRoleRequest {
                 is_active: self.is_active,
@@ -4905,7 +4981,7 @@ pub mod container_service_ecr_image_puller_role_request {
     }
 }
 impl ContainerServiceEcrImagePullerRoleRequest {
-    /// Creates a new builder-style object to manufacture [`ContainerServiceEcrImagePullerRoleRequest`](crate::model::ContainerServiceEcrImagePullerRoleRequest)
+    /// Creates a new builder-style object to manufacture [`ContainerServiceEcrImagePullerRoleRequest`](crate::model::ContainerServiceEcrImagePullerRoleRequest).
     pub fn builder() -> crate::model::container_service_ecr_image_puller_role_request::Builder {
         crate::model::container_service_ecr_image_puller_role_request::Builder::default()
     }
@@ -4916,26 +4992,36 @@ impl ContainerServiceEcrImagePullerRoleRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Bucket {
     /// <p>The Lightsail resource type of the bucket (for example, <code>Bucket</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>An object that describes the access rules of the bucket.</p>
+    #[doc(hidden)]
     pub access_rules: std::option::Option<crate::model::AccessRules>,
     /// <p>The Amazon Resource Name (ARN) of the bucket.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The ID of the bundle currently applied to the bucket.</p>
     /// <p>A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.</p>
     /// <p>Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">UpdateBucketBundle</a> action to change the bundle of a bucket.</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>The timestamp when the distribution was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The URL of the bucket.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// <p>An object that describes the location of the bucket, such as the Amazon Web Services Region and Availability Zone.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The name of the bucket.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The support code for a bucket. Include this code in your email to support when you have questions about a Lightsail bucket. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>The tag keys and optional values for the bucket. For more information, see <a href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-tags">Tags in Amazon Lightsail</a> in the <i>Amazon Lightsail Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Indicates whether object versioning is enabled for the bucket.</p>
     /// <p>The following options can be configured:</p>
@@ -4944,20 +5030,26 @@ pub struct Bucket {
     /// <li> <p> <code>Suspended</code> - Object versioning was previously enabled but is currently suspended. Existing object versions are retained.</p> </li>
     /// <li> <p> <code>NeverEnabled</code> - Object versioning has never been enabled.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub object_versioning: std::option::Option<std::string::String>,
     /// <p>Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle.</p>
     /// <p>You can update a bucket's bundle only one time within a monthly Amazon Web Services billing cycle.</p>
     /// <p>Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">UpdateBucketBundle</a> action to change a bucket's bundle.</p>
+    #[doc(hidden)]
     pub able_to_update_bundle: std::option::Option<bool>,
     /// <p>An array of strings that specify the Amazon Web Services account IDs that have read-only access to the bucket.</p>
+    #[doc(hidden)]
     pub readonly_access_accounts: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array of objects that describe Lightsail instances that have access to the bucket.</p>
     /// <p>Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html">SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.</p>
+    #[doc(hidden)]
     pub resources_receiving_access:
         std::option::Option<std::vec::Vec<crate::model::ResourceReceivingAccess>>,
     /// <p>An object that describes the state of the bucket.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::BucketState>,
     /// <p>An object that describes the access log configuration for the bucket.</p>
+    #[doc(hidden)]
     pub access_log_config: std::option::Option<crate::model::BucketAccessLogConfig>,
 }
 impl Bucket {
@@ -5064,11 +5156,10 @@ impl std::fmt::Debug for Bucket {
         formatter.finish()
     }
 }
-/// See [`Bucket`](crate::model::Bucket)
+/// See [`Bucket`](crate::model::Bucket).
 pub mod bucket {
 
-    /// A builder for [`Bucket`](crate::model::Bucket)
-    #[non_exhaustive]
+    /// A builder for [`Bucket`](crate::model::Bucket).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -5321,7 +5412,7 @@ pub mod bucket {
             self.access_log_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`Bucket`](crate::model::Bucket)
+        /// Consumes the builder and constructs a [`Bucket`](crate::model::Bucket).
         pub fn build(self) -> crate::model::Bucket {
             crate::model::Bucket {
                 resource_type: self.resource_type,
@@ -5345,7 +5436,7 @@ pub mod bucket {
     }
 }
 impl Bucket {
-    /// Creates a new builder-style object to manufacture [`Bucket`](crate::model::Bucket)
+    /// Creates a new builder-style object to manufacture [`Bucket`](crate::model::Bucket).
     pub fn builder() -> crate::model::bucket::Builder {
         crate::model::bucket::Builder::default()
     }
@@ -5357,15 +5448,18 @@ impl Bucket {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BucketAccessLogConfig {
     /// <p>A Boolean value that indicates whether bucket access logging is enabled for the bucket.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>The name of the bucket where the access logs are saved. The destination can be a Lightsail bucket in the same account, and in the same Amazon Web Services Region as the source bucket.</p> <note>
     /// <p>This parameter is required when enabling the access log for a bucket, and should be omitted when disabling the access log.</p>
     /// </note>
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
     /// <p>The optional object prefix for the bucket access log.</p>
     /// <p>The prefix is an optional addition to the object key that organizes your access log files in the destination bucket. For example, if you specify a <code>logs/</code> prefix, then each log object will begin with the <code>logs/</code> prefix in its key (for example, <code>logs/2021-11-01-21-32-16-E568B2907131C0C0</code>).</p> <note>
     /// <p>This parameter can be optionally specified when enabling the access log for a bucket, and should be omitted when disabling the access log.</p>
     /// </note>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl BucketAccessLogConfig {
@@ -5396,11 +5490,10 @@ impl std::fmt::Debug for BucketAccessLogConfig {
         formatter.finish()
     }
 }
-/// See [`BucketAccessLogConfig`](crate::model::BucketAccessLogConfig)
+/// See [`BucketAccessLogConfig`](crate::model::BucketAccessLogConfig).
 pub mod bucket_access_log_config {
 
-    /// A builder for [`BucketAccessLogConfig`](crate::model::BucketAccessLogConfig)
-    #[non_exhaustive]
+    /// A builder for [`BucketAccessLogConfig`](crate::model::BucketAccessLogConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -5448,7 +5541,7 @@ pub mod bucket_access_log_config {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`BucketAccessLogConfig`](crate::model::BucketAccessLogConfig)
+        /// Consumes the builder and constructs a [`BucketAccessLogConfig`](crate::model::BucketAccessLogConfig).
         pub fn build(self) -> crate::model::BucketAccessLogConfig {
             crate::model::BucketAccessLogConfig {
                 enabled: self.enabled,
@@ -5459,7 +5552,7 @@ pub mod bucket_access_log_config {
     }
 }
 impl BucketAccessLogConfig {
-    /// Creates a new builder-style object to manufacture [`BucketAccessLogConfig`](crate::model::BucketAccessLogConfig)
+    /// Creates a new builder-style object to manufacture [`BucketAccessLogConfig`](crate::model::BucketAccessLogConfig).
     pub fn builder() -> crate::model::bucket_access_log_config::Builder {
         crate::model::bucket_access_log_config::Builder::default()
     }
@@ -5475,8 +5568,10 @@ pub struct BucketState {
     /// <li> <p> <code>OK</code> - The bucket is in a running state.</p> </li>
     /// <li> <p> <code>Unknown</code> - Creation of the bucket might have timed-out. You might want to delete the bucket and create a new one.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>A message that describes the state of the bucket.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl BucketState {
@@ -5502,11 +5597,10 @@ impl std::fmt::Debug for BucketState {
         formatter.finish()
     }
 }
-/// See [`BucketState`](crate::model::BucketState)
+/// See [`BucketState`](crate::model::BucketState).
 pub mod bucket_state {
 
-    /// A builder for [`BucketState`](crate::model::BucketState)
-    #[non_exhaustive]
+    /// A builder for [`BucketState`](crate::model::BucketState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<std::string::String>,
@@ -5543,7 +5637,7 @@ pub mod bucket_state {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`BucketState`](crate::model::BucketState)
+        /// Consumes the builder and constructs a [`BucketState`](crate::model::BucketState).
         pub fn build(self) -> crate::model::BucketState {
             crate::model::BucketState {
                 code: self.code,
@@ -5553,7 +5647,7 @@ pub mod bucket_state {
     }
 }
 impl BucketState {
-    /// Creates a new builder-style object to manufacture [`BucketState`](crate::model::BucketState)
+    /// Creates a new builder-style object to manufacture [`BucketState`](crate::model::BucketState).
     pub fn builder() -> crate::model::bucket_state::Builder {
         crate::model::bucket_state::Builder::default()
     }
@@ -5564,8 +5658,10 @@ impl BucketState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceReceivingAccess {
     /// <p>The name of the Lightsail instance.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Lightsail resource type (for example, <code>Instance</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
 }
 impl ResourceReceivingAccess {
@@ -5586,11 +5682,10 @@ impl std::fmt::Debug for ResourceReceivingAccess {
         formatter.finish()
     }
 }
-/// See [`ResourceReceivingAccess`](crate::model::ResourceReceivingAccess)
+/// See [`ResourceReceivingAccess`](crate::model::ResourceReceivingAccess).
 pub mod resource_receiving_access {
 
-    /// A builder for [`ResourceReceivingAccess`](crate::model::ResourceReceivingAccess)
-    #[non_exhaustive]
+    /// A builder for [`ResourceReceivingAccess`](crate::model::ResourceReceivingAccess).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5620,7 +5715,7 @@ pub mod resource_receiving_access {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceReceivingAccess`](crate::model::ResourceReceivingAccess)
+        /// Consumes the builder and constructs a [`ResourceReceivingAccess`](crate::model::ResourceReceivingAccess).
         pub fn build(self) -> crate::model::ResourceReceivingAccess {
             crate::model::ResourceReceivingAccess {
                 name: self.name,
@@ -5630,7 +5725,7 @@ pub mod resource_receiving_access {
     }
 }
 impl ResourceReceivingAccess {
-    /// Creates a new builder-style object to manufacture [`ResourceReceivingAccess`](crate::model::ResourceReceivingAccess)
+    /// Creates a new builder-style object to manufacture [`ResourceReceivingAccess`](crate::model::ResourceReceivingAccess).
     pub fn builder() -> crate::model::resource_receiving_access::Builder {
         crate::model::resource_receiving_access::Builder::default()
     }
@@ -5648,9 +5743,11 @@ pub struct AccessRules {
     /// <li> <p> <code>public</code> - Sets all objects in the bucket to public (read-only), making them readable by anyone in the world.</p> <p>If the <code>getObject</code> value is set to <code>public</code>, then all objects in the bucket default to public regardless of the <code>allowPublicOverrides</code> value.</p> </li>
     /// <li> <p> <code>private</code> - Sets all objects in the bucket to private, making them readable only by you or anyone you give access to.</p> <p>If the <code>getObject</code> value is set to <code>private</code>, and the <code>allowPublicOverrides</code> value is set to <code>true</code>, then all objects in the bucket default to private unless they are configured with a <code>public-read</code> ACL. Individual objects with a <code>public-read</code> ACL are readable by anyone in the world.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub get_object: std::option::Option<crate::model::AccessType>,
     /// <p>A Boolean value that indicates whether the access control list (ACL) permissions that are applied to individual objects override the <code>getObject</code> option that is currently specified.</p>
     /// <p>When this is true, you can use the <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObjectAcl.html">PutObjectAcl</a> Amazon S3 API action to set individual objects to public (read-only) using the <code>public-read</code> ACL, or to private using the <code>private</code> ACL.</p>
+    #[doc(hidden)]
     pub allow_public_overrides: std::option::Option<bool>,
 }
 impl AccessRules {
@@ -5677,11 +5774,10 @@ impl std::fmt::Debug for AccessRules {
         formatter.finish()
     }
 }
-/// See [`AccessRules`](crate::model::AccessRules)
+/// See [`AccessRules`](crate::model::AccessRules).
 pub mod access_rules {
 
-    /// A builder for [`AccessRules`](crate::model::AccessRules)
-    #[non_exhaustive]
+    /// A builder for [`AccessRules`](crate::model::AccessRules).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) get_object: std::option::Option<crate::model::AccessType>,
@@ -5723,7 +5819,7 @@ pub mod access_rules {
             self.allow_public_overrides = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessRules`](crate::model::AccessRules)
+        /// Consumes the builder and constructs a [`AccessRules`](crate::model::AccessRules).
         pub fn build(self) -> crate::model::AccessRules {
             crate::model::AccessRules {
                 get_object: self.get_object,
@@ -5733,7 +5829,7 @@ pub mod access_rules {
     }
 }
 impl AccessRules {
-    /// Creates a new builder-style object to manufacture [`AccessRules`](crate::model::AccessRules)
+    /// Creates a new builder-style object to manufacture [`AccessRules`](crate::model::AccessRules).
     pub fn builder() -> crate::model::access_rules::Builder {
         crate::model::access_rules::Builder::default()
     }
@@ -6019,10 +6115,13 @@ impl AsRef<str> for ContactMethodVerificationProtocol {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerImage {
     /// <p>The name of the container image.</p>
+    #[doc(hidden)]
     pub image: std::option::Option<std::string::String>,
     /// <p>The digest of the container image.</p>
+    #[doc(hidden)]
     pub digest: std::option::Option<std::string::String>,
     /// <p>The timestamp when the container image was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ContainerImage {
@@ -6048,11 +6147,10 @@ impl std::fmt::Debug for ContainerImage {
         formatter.finish()
     }
 }
-/// See [`ContainerImage`](crate::model::ContainerImage)
+/// See [`ContainerImage`](crate::model::ContainerImage).
 pub mod container_image {
 
-    /// A builder for [`ContainerImage`](crate::model::ContainerImage)
-    #[non_exhaustive]
+    /// A builder for [`ContainerImage`](crate::model::ContainerImage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) image: std::option::Option<std::string::String>,
@@ -6093,7 +6191,7 @@ pub mod container_image {
             self.created_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerImage`](crate::model::ContainerImage)
+        /// Consumes the builder and constructs a [`ContainerImage`](crate::model::ContainerImage).
         pub fn build(self) -> crate::model::ContainerImage {
             crate::model::ContainerImage {
                 image: self.image,
@@ -6104,7 +6202,7 @@ pub mod container_image {
     }
 }
 impl ContainerImage {
-    /// Creates a new builder-style object to manufacture [`ContainerImage`](crate::model::ContainerImage)
+    /// Creates a new builder-style object to manufacture [`ContainerImage`](crate::model::ContainerImage).
     pub fn builder() -> crate::model::container_image::Builder {
         crate::model::container_image::Builder::default()
     }
@@ -6121,6 +6219,7 @@ pub struct PortInfo {
     /// <li> <p>ICMP - The ICMP type for IPv4 addresses. For example, specify <code>8</code> as the <code>fromPort</code> (ICMP type), and <code>-1</code> as the <code>toPort</code> (ICMP code), to enable ICMP Ping. For more information, see <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages">Control Messages</a> on <i>Wikipedia</i>.</p> </li>
     /// <li> <p>ICMPv6 - The ICMP type for IPv6 addresses. For example, specify <code>128</code> as the <code>fromPort</code> (ICMPv6 type), and <code>0</code> as <code>toPort</code> (ICMPv6 code). For more information, see <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol_for_IPv6">Internet Control Message Protocol for IPv6</a>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub from_port: i32,
     /// <p>The last port in a range of open ports on an instance.</p>
     /// <p>Allowed ports:</p>
@@ -6129,6 +6228,7 @@ pub struct PortInfo {
     /// <li> <p>ICMP - The ICMP code for IPv4 addresses. For example, specify <code>8</code> as the <code>fromPort</code> (ICMP type), and <code>-1</code> as the <code>toPort</code> (ICMP code), to enable ICMP Ping. For more information, see <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages">Control Messages</a> on <i>Wikipedia</i>.</p> </li>
     /// <li> <p>ICMPv6 - The ICMP code for IPv6 addresses. For example, specify <code>128</code> as the <code>fromPort</code> (ICMPv6 type), and <code>0</code> as <code>toPort</code> (ICMPv6 code). For more information, see <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol_for_IPv6">Internet Control Message Protocol for IPv6</a>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub to_port: i32,
     /// <p>The IP protocol name.</p>
     /// <p>The name can be one of the following:</p>
@@ -6138,6 +6238,7 @@ pub struct PortInfo {
     /// <li> <p> <code>udp</code> - With User Datagram Protocol (UDP), computer applications can send messages (or datagrams) to other hosts on an Internet Protocol (IP) network. Prior communications are not required to set up transmission channels or data paths. Applications that don't require reliable data stream service can use UDP, which provides a connectionless datagram service that emphasizes reduced latency over reliability. If you do require reliable data stream service, use TCP instead.</p> </li>
     /// <li> <p> <code>icmp</code> - Internet Control Message Protocol (ICMP) is used to send error messages and operational information indicating success or failure when communicating with an instance. For example, an error is indicated when an instance could not be reached. When you specify <code>icmp</code> as the <code>protocol</code>, you must specify the ICMP type using the <code>fromPort</code> parameter, and ICMP code using the <code>toPort</code> parameter.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub protocol: std::option::Option<crate::model::NetworkProtocol>,
     /// <p>The IPv4 address, or range of IPv4 addresses (in CIDR notation) that are allowed to connect to an instance through the ports, and the protocol.</p> <note>
     /// <p>The <code>ipv6Cidrs</code> parameter lists the IPv6 addresses that are allowed to connect to an instance.</p>
@@ -6148,14 +6249,17 @@ pub struct PortInfo {
     /// <li> <p>To allow the IP addresses <code>192.0.2.0</code> to <code>192.0.2.255</code>, specify <code>192.0.2.0/24</code>.</p> </li>
     /// </ul>
     /// <p>For more information about CIDR block notation, see <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">Classless Inter-Domain Routing</a> on <i>Wikipedia</i>.</p>
+    #[doc(hidden)]
     pub cidrs: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The IPv6 address, or range of IPv6 addresses (in CIDR notation) that are allowed to connect to an instance through the ports, and the protocol. Only devices with an IPv6 address can connect to an instance through IPv6; otherwise, IPv4 should be used.</p> <note>
     /// <p>The <code>cidrs</code> parameter lists the IPv4 addresses that are allowed to connect to an instance.</p>
     /// </note>
     /// <p>For more information about CIDR block notation, see <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">Classless Inter-Domain Routing</a> on <i>Wikipedia</i>.</p>
+    #[doc(hidden)]
     pub ipv6_cidrs: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An alias that defines access for a preconfigured range of IP addresses.</p>
     /// <p>The only alias currently supported is <code>lightsail-connect</code>, which allows IP addresses of the browser-based RDP/SSH client in the Lightsail console to connect to your instance.</p>
+    #[doc(hidden)]
     pub cidr_list_aliases: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl PortInfo {
@@ -6227,11 +6331,10 @@ impl std::fmt::Debug for PortInfo {
         formatter.finish()
     }
 }
-/// See [`PortInfo`](crate::model::PortInfo)
+/// See [`PortInfo`](crate::model::PortInfo).
 pub mod port_info {
 
-    /// A builder for [`PortInfo`](crate::model::PortInfo)
-    #[non_exhaustive]
+    /// A builder for [`PortInfo`](crate::model::PortInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) from_port: std::option::Option<i32>,
@@ -6394,7 +6497,7 @@ pub mod port_info {
             self.cidr_list_aliases = input;
             self
         }
-        /// Consumes the builder and constructs a [`PortInfo`](crate::model::PortInfo)
+        /// Consumes the builder and constructs a [`PortInfo`](crate::model::PortInfo).
         pub fn build(self) -> crate::model::PortInfo {
             crate::model::PortInfo {
                 from_port: self.from_port.unwrap_or_default(),
@@ -6408,7 +6511,7 @@ pub mod port_info {
     }
 }
 impl PortInfo {
-    /// Creates a new builder-style object to manufacture [`PortInfo`](crate::model::PortInfo)
+    /// Creates a new builder-style object to manufacture [`PortInfo`](crate::model::PortInfo).
     pub fn builder() -> crate::model::port_info::Builder {
         crate::model::port_info::Builder::default()
     }
@@ -6841,22 +6944,31 @@ impl AsRef<str> for MetricName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StaticIp {
     /// <p>The name of the static IP (e.g., <code>StaticIP-Ohio-EXAMPLE</code>).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the static IP (e.g., <code>arn:aws:lightsail:us-east-2:123456789101:StaticIp/9cbb4a9e-f8e3-4dfe-b57e-12345EXAMPLE</code>).</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The support code. Include this code in your email to support when you have questions about an instance or another resource in Lightsail. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>The timestamp when the static IP was created (e.g., <code>1479735304.222</code>).</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The region and Availability Zone where the static IP was created.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The resource type (usually <code>StaticIp</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The static IP address.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The instance where the static IP is attached (e.g., <code>Amazon_Linux-1GB-Ohio-1</code>).</p>
+    #[doc(hidden)]
     pub attached_to: std::option::Option<std::string::String>,
     /// <p>A Boolean value indicating whether the static IP is attached.</p>
+    #[doc(hidden)]
     pub is_attached: std::option::Option<bool>,
 }
 impl StaticIp {
@@ -6912,11 +7024,10 @@ impl std::fmt::Debug for StaticIp {
         formatter.finish()
     }
 }
-/// See [`StaticIp`](crate::model::StaticIp)
+/// See [`StaticIp`](crate::model::StaticIp).
 pub mod static_ip {
 
-    /// A builder for [`StaticIp`](crate::model::StaticIp)
-    #[non_exhaustive]
+    /// A builder for [`StaticIp`](crate::model::StaticIp).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -7029,7 +7140,7 @@ pub mod static_ip {
             self.is_attached = input;
             self
         }
-        /// Consumes the builder and constructs a [`StaticIp`](crate::model::StaticIp)
+        /// Consumes the builder and constructs a [`StaticIp`](crate::model::StaticIp).
         pub fn build(self) -> crate::model::StaticIp {
             crate::model::StaticIp {
                 name: self.name,
@@ -7046,7 +7157,7 @@ pub mod static_ip {
     }
 }
 impl StaticIp {
-    /// Creates a new builder-style object to manufacture [`StaticIp`](crate::model::StaticIp)
+    /// Creates a new builder-style object to manufacture [`StaticIp`](crate::model::StaticIp).
     pub fn builder() -> crate::model::static_ip::Builder {
         crate::model::static_ip::Builder::default()
     }
@@ -7057,34 +7168,49 @@ impl StaticIp {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RelationalDatabaseSnapshot {
     /// <p>The name of the database snapshot.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the database snapshot.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The support code for the database snapshot. Include this code in your email to support when you have questions about a database snapshot in Lightsail. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>The timestamp when the database snapshot was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Region name and Availability Zone where the database snapshot is located.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The Lightsail resource type.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The software of the database snapshot (for example, <code>MySQL</code>)</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The database engine version for the database snapshot (for example, <code>5.7.23</code>).</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The size of the disk in GB (for example, <code>32</code>) for the database snapshot.</p>
+    #[doc(hidden)]
     pub size_in_gb: std::option::Option<i32>,
     /// <p>The state of the database snapshot.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>The name of the source database from which the database snapshot was created.</p>
+    #[doc(hidden)]
     pub from_relational_database_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the database from which the database snapshot was created.</p>
+    #[doc(hidden)]
     pub from_relational_database_arn: std::option::Option<std::string::String>,
     /// <p>The bundle ID of the database from which the database snapshot was created.</p>
+    #[doc(hidden)]
     pub from_relational_database_bundle_id: std::option::Option<std::string::String>,
     /// <p>The blueprint ID of the database from which the database snapshot was created. A blueprint describes the major engine version of a database.</p>
+    #[doc(hidden)]
     pub from_relational_database_blueprint_id: std::option::Option<std::string::String>,
 }
 impl RelationalDatabaseSnapshot {
@@ -7182,11 +7308,10 @@ impl std::fmt::Debug for RelationalDatabaseSnapshot {
         formatter.finish()
     }
 }
-/// See [`RelationalDatabaseSnapshot`](crate::model::RelationalDatabaseSnapshot)
+/// See [`RelationalDatabaseSnapshot`](crate::model::RelationalDatabaseSnapshot).
 pub mod relational_database_snapshot {
 
-    /// A builder for [`RelationalDatabaseSnapshot`](crate::model::RelationalDatabaseSnapshot)
-    #[non_exhaustive]
+    /// A builder for [`RelationalDatabaseSnapshot`](crate::model::RelationalDatabaseSnapshot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -7401,7 +7526,7 @@ pub mod relational_database_snapshot {
             self.from_relational_database_blueprint_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RelationalDatabaseSnapshot`](crate::model::RelationalDatabaseSnapshot)
+        /// Consumes the builder and constructs a [`RelationalDatabaseSnapshot`](crate::model::RelationalDatabaseSnapshot).
         pub fn build(self) -> crate::model::RelationalDatabaseSnapshot {
             crate::model::RelationalDatabaseSnapshot {
                 name: self.name,
@@ -7424,7 +7549,7 @@ pub mod relational_database_snapshot {
     }
 }
 impl RelationalDatabaseSnapshot {
-    /// Creates a new builder-style object to manufacture [`RelationalDatabaseSnapshot`](crate::model::RelationalDatabaseSnapshot)
+    /// Creates a new builder-style object to manufacture [`RelationalDatabaseSnapshot`](crate::model::RelationalDatabaseSnapshot).
     pub fn builder() -> crate::model::relational_database_snapshot::Builder {
         crate::model::relational_database_snapshot::Builder::default()
     }
@@ -7435,60 +7560,86 @@ impl RelationalDatabaseSnapshot {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RelationalDatabase {
     /// <p>The unique name of the database resource in Lightsail.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the database.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The support code for the database. Include this code in your email to support when you have questions about a database in Lightsail. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>The timestamp when the database was created. Formatted in Unix time.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Region name and Availability Zone where the database is located.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The Lightsail resource type for the database (for example, <code>RelationalDatabase</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The blueprint ID for the database. A blueprint describes the major engine version of a database.</p>
+    #[doc(hidden)]
     pub relational_database_blueprint_id: std::option::Option<std::string::String>,
     /// <p>The bundle ID for the database. A bundle describes the performance specifications for your database.</p>
+    #[doc(hidden)]
     pub relational_database_bundle_id: std::option::Option<std::string::String>,
     /// <p>The name of the master database created when the Lightsail database resource is created.</p>
+    #[doc(hidden)]
     pub master_database_name: std::option::Option<std::string::String>,
     /// <p>Describes the hardware of the database.</p>
+    #[doc(hidden)]
     pub hardware: std::option::Option<crate::model::RelationalDatabaseHardware>,
     /// <p>Describes the current state of the database.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>Describes the secondary Availability Zone of a high availability database.</p>
     /// <p>The secondary database is used for failover support of a high availability database.</p>
+    #[doc(hidden)]
     pub secondary_availability_zone: std::option::Option<std::string::String>,
     /// <p>A Boolean value indicating whether automated backup retention is enabled for the database.</p>
+    #[doc(hidden)]
     pub backup_retention_enabled: std::option::Option<bool>,
     /// <p>Describes pending database value modifications.</p>
+    #[doc(hidden)]
     pub pending_modified_values:
         std::option::Option<crate::model::PendingModifiedRelationalDatabaseValues>,
     /// <p>The database software (for example, <code>MySQL</code>).</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The database engine version (for example, <code>5.7.23</code>).</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The latest point in time to which the database can be restored. Formatted in Unix time.</p>
+    #[doc(hidden)]
     pub latest_restorable_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The master user name of the database.</p>
+    #[doc(hidden)]
     pub master_username: std::option::Option<std::string::String>,
     /// <p>The status of parameter updates for the database.</p>
+    #[doc(hidden)]
     pub parameter_apply_status: std::option::Option<std::string::String>,
     /// <p>The daily time range during which automated backups are created for the database (for example, <code>16:00-16:30</code>).</p>
+    #[doc(hidden)]
     pub preferred_backup_window: std::option::Option<std::string::String>,
     /// <p>The weekly time range during which system maintenance can occur on the database.</p>
     /// <p>In the format <code>ddd:hh24:mi-ddd:hh24:mi</code>. For example, <code>Tue:17:00-Tue:17:30</code>.</p>
+    #[doc(hidden)]
     pub preferred_maintenance_window: std::option::Option<std::string::String>,
     /// <p>A Boolean value indicating whether the database is publicly accessible.</p>
+    #[doc(hidden)]
     pub publicly_accessible: std::option::Option<bool>,
     /// <p>The master endpoint for the database.</p>
+    #[doc(hidden)]
     pub master_endpoint: std::option::Option<crate::model::RelationalDatabaseEndpoint>,
     /// <p>Describes the pending maintenance actions for the database.</p>
+    #[doc(hidden)]
     pub pending_maintenance_actions:
         std::option::Option<std::vec::Vec<crate::model::PendingMaintenanceAction>>,
     /// <p>The certificate associated with the database.</p>
+    #[doc(hidden)]
     pub ca_certificate_identifier: std::option::Option<std::string::String>,
 }
 impl RelationalDatabase {
@@ -7652,11 +7803,10 @@ impl std::fmt::Debug for RelationalDatabase {
         formatter.finish()
     }
 }
-/// See [`RelationalDatabase`](crate::model::RelationalDatabase)
+/// See [`RelationalDatabase`](crate::model::RelationalDatabase).
 pub mod relational_database {
 
-    /// A builder for [`RelationalDatabase`](crate::model::RelationalDatabase)
-    #[non_exhaustive]
+    /// A builder for [`RelationalDatabase`](crate::model::RelationalDatabase).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -8040,7 +8190,7 @@ pub mod relational_database {
             self.ca_certificate_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`RelationalDatabase`](crate::model::RelationalDatabase)
+        /// Consumes the builder and constructs a [`RelationalDatabase`](crate::model::RelationalDatabase).
         pub fn build(self) -> crate::model::RelationalDatabase {
             crate::model::RelationalDatabase {
                 name: self.name,
@@ -8074,7 +8224,7 @@ pub mod relational_database {
     }
 }
 impl RelationalDatabase {
-    /// Creates a new builder-style object to manufacture [`RelationalDatabase`](crate::model::RelationalDatabase)
+    /// Creates a new builder-style object to manufacture [`RelationalDatabase`](crate::model::RelationalDatabase).
     pub fn builder() -> crate::model::relational_database::Builder {
         crate::model::relational_database::Builder::default()
     }
@@ -8085,10 +8235,13 @@ impl RelationalDatabase {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PendingMaintenanceAction {
     /// <p>The type of pending database maintenance action.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<std::string::String>,
     /// <p>Additional detail about the pending database maintenance action.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The effective date of the pending database maintenance action.</p>
+    #[doc(hidden)]
     pub current_apply_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PendingMaintenanceAction {
@@ -8114,11 +8267,10 @@ impl std::fmt::Debug for PendingMaintenanceAction {
         formatter.finish()
     }
 }
-/// See [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction)
+/// See [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction).
 pub mod pending_maintenance_action {
 
-    /// A builder for [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction)
-    #[non_exhaustive]
+    /// A builder for [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<std::string::String>,
@@ -8159,7 +8311,7 @@ pub mod pending_maintenance_action {
             self.current_apply_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction)
+        /// Consumes the builder and constructs a [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction).
         pub fn build(self) -> crate::model::PendingMaintenanceAction {
             crate::model::PendingMaintenanceAction {
                 action: self.action,
@@ -8170,7 +8322,7 @@ pub mod pending_maintenance_action {
     }
 }
 impl PendingMaintenanceAction {
-    /// Creates a new builder-style object to manufacture [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction)
+    /// Creates a new builder-style object to manufacture [`PendingMaintenanceAction`](crate::model::PendingMaintenanceAction).
     pub fn builder() -> crate::model::pending_maintenance_action::Builder {
         crate::model::pending_maintenance_action::Builder::default()
     }
@@ -8181,8 +8333,10 @@ impl PendingMaintenanceAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RelationalDatabaseEndpoint {
     /// <p>Specifies the port that the database is listening on.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>Specifies the DNS address of the database.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
 }
 impl RelationalDatabaseEndpoint {
@@ -8203,11 +8357,10 @@ impl std::fmt::Debug for RelationalDatabaseEndpoint {
         formatter.finish()
     }
 }
-/// See [`RelationalDatabaseEndpoint`](crate::model::RelationalDatabaseEndpoint)
+/// See [`RelationalDatabaseEndpoint`](crate::model::RelationalDatabaseEndpoint).
 pub mod relational_database_endpoint {
 
-    /// A builder for [`RelationalDatabaseEndpoint`](crate::model::RelationalDatabaseEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`RelationalDatabaseEndpoint`](crate::model::RelationalDatabaseEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) port: std::option::Option<i32>,
@@ -8234,7 +8387,7 @@ pub mod relational_database_endpoint {
             self.address = input;
             self
         }
-        /// Consumes the builder and constructs a [`RelationalDatabaseEndpoint`](crate::model::RelationalDatabaseEndpoint)
+        /// Consumes the builder and constructs a [`RelationalDatabaseEndpoint`](crate::model::RelationalDatabaseEndpoint).
         pub fn build(self) -> crate::model::RelationalDatabaseEndpoint {
             crate::model::RelationalDatabaseEndpoint {
                 port: self.port,
@@ -8244,7 +8397,7 @@ pub mod relational_database_endpoint {
     }
 }
 impl RelationalDatabaseEndpoint {
-    /// Creates a new builder-style object to manufacture [`RelationalDatabaseEndpoint`](crate::model::RelationalDatabaseEndpoint)
+    /// Creates a new builder-style object to manufacture [`RelationalDatabaseEndpoint`](crate::model::RelationalDatabaseEndpoint).
     pub fn builder() -> crate::model::relational_database_endpoint::Builder {
         crate::model::relational_database_endpoint::Builder::default()
     }
@@ -8255,10 +8408,13 @@ impl RelationalDatabaseEndpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PendingModifiedRelationalDatabaseValues {
     /// <p>The password for the master user of the database.</p>
+    #[doc(hidden)]
     pub master_user_password: std::option::Option<std::string::String>,
     /// <p>The database engine version.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>A Boolean value indicating whether automated backup retention is enabled.</p>
+    #[doc(hidden)]
     pub backup_retention_enabled: std::option::Option<bool>,
 }
 impl PendingModifiedRelationalDatabaseValues {
@@ -8284,11 +8440,10 @@ impl std::fmt::Debug for PendingModifiedRelationalDatabaseValues {
         formatter.finish()
     }
 }
-/// See [`PendingModifiedRelationalDatabaseValues`](crate::model::PendingModifiedRelationalDatabaseValues)
+/// See [`PendingModifiedRelationalDatabaseValues`](crate::model::PendingModifiedRelationalDatabaseValues).
 pub mod pending_modified_relational_database_values {
 
-    /// A builder for [`PendingModifiedRelationalDatabaseValues`](crate::model::PendingModifiedRelationalDatabaseValues)
-    #[non_exhaustive]
+    /// A builder for [`PendingModifiedRelationalDatabaseValues`](crate::model::PendingModifiedRelationalDatabaseValues).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) master_user_password: std::option::Option<std::string::String>,
@@ -8332,7 +8487,7 @@ pub mod pending_modified_relational_database_values {
             self.backup_retention_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`PendingModifiedRelationalDatabaseValues`](crate::model::PendingModifiedRelationalDatabaseValues)
+        /// Consumes the builder and constructs a [`PendingModifiedRelationalDatabaseValues`](crate::model::PendingModifiedRelationalDatabaseValues).
         pub fn build(self) -> crate::model::PendingModifiedRelationalDatabaseValues {
             crate::model::PendingModifiedRelationalDatabaseValues {
                 master_user_password: self.master_user_password,
@@ -8343,7 +8498,7 @@ pub mod pending_modified_relational_database_values {
     }
 }
 impl PendingModifiedRelationalDatabaseValues {
-    /// Creates a new builder-style object to manufacture [`PendingModifiedRelationalDatabaseValues`](crate::model::PendingModifiedRelationalDatabaseValues)
+    /// Creates a new builder-style object to manufacture [`PendingModifiedRelationalDatabaseValues`](crate::model::PendingModifiedRelationalDatabaseValues).
     pub fn builder() -> crate::model::pending_modified_relational_database_values::Builder {
         crate::model::pending_modified_relational_database_values::Builder::default()
     }
@@ -8354,10 +8509,13 @@ impl PendingModifiedRelationalDatabaseValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RelationalDatabaseHardware {
     /// <p>The number of vCPUs for the database.</p>
+    #[doc(hidden)]
     pub cpu_count: std::option::Option<i32>,
     /// <p>The size of the disk for the database.</p>
+    #[doc(hidden)]
     pub disk_size_in_gb: std::option::Option<i32>,
     /// <p>The amount of RAM in GB for the database.</p>
+    #[doc(hidden)]
     pub ram_size_in_gb: std::option::Option<f32>,
 }
 impl RelationalDatabaseHardware {
@@ -8383,11 +8541,10 @@ impl std::fmt::Debug for RelationalDatabaseHardware {
         formatter.finish()
     }
 }
-/// See [`RelationalDatabaseHardware`](crate::model::RelationalDatabaseHardware)
+/// See [`RelationalDatabaseHardware`](crate::model::RelationalDatabaseHardware).
 pub mod relational_database_hardware {
 
-    /// A builder for [`RelationalDatabaseHardware`](crate::model::RelationalDatabaseHardware)
-    #[non_exhaustive]
+    /// A builder for [`RelationalDatabaseHardware`](crate::model::RelationalDatabaseHardware).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cpu_count: std::option::Option<i32>,
@@ -8425,7 +8582,7 @@ pub mod relational_database_hardware {
             self.ram_size_in_gb = input;
             self
         }
-        /// Consumes the builder and constructs a [`RelationalDatabaseHardware`](crate::model::RelationalDatabaseHardware)
+        /// Consumes the builder and constructs a [`RelationalDatabaseHardware`](crate::model::RelationalDatabaseHardware).
         pub fn build(self) -> crate::model::RelationalDatabaseHardware {
             crate::model::RelationalDatabaseHardware {
                 cpu_count: self.cpu_count,
@@ -8436,7 +8593,7 @@ pub mod relational_database_hardware {
     }
 }
 impl RelationalDatabaseHardware {
-    /// Creates a new builder-style object to manufacture [`RelationalDatabaseHardware`](crate::model::RelationalDatabaseHardware)
+    /// Creates a new builder-style object to manufacture [`RelationalDatabaseHardware`](crate::model::RelationalDatabaseHardware).
     pub fn builder() -> crate::model::relational_database_hardware::Builder {
         crate::model::relational_database_hardware::Builder::default()
     }
@@ -8447,18 +8604,25 @@ impl RelationalDatabaseHardware {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDatapoint {
     /// <p>The average.</p>
+    #[doc(hidden)]
     pub average: std::option::Option<f64>,
     /// <p>The maximum.</p>
+    #[doc(hidden)]
     pub maximum: std::option::Option<f64>,
     /// <p>The minimum.</p>
+    #[doc(hidden)]
     pub minimum: std::option::Option<f64>,
     /// <p>The sample count.</p>
+    #[doc(hidden)]
     pub sample_count: std::option::Option<f64>,
     /// <p>The sum.</p>
+    #[doc(hidden)]
     pub sum: std::option::Option<f64>,
     /// <p>The timestamp (e.g., <code>1479816991.349</code>).</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The unit. </p>
+    #[doc(hidden)]
     pub unit: std::option::Option<crate::model::MetricUnit>,
 }
 impl MetricDatapoint {
@@ -8504,11 +8668,10 @@ impl std::fmt::Debug for MetricDatapoint {
         formatter.finish()
     }
 }
-/// See [`MetricDatapoint`](crate::model::MetricDatapoint)
+/// See [`MetricDatapoint`](crate::model::MetricDatapoint).
 pub mod metric_datapoint {
 
-    /// A builder for [`MetricDatapoint`](crate::model::MetricDatapoint)
-    #[non_exhaustive]
+    /// A builder for [`MetricDatapoint`](crate::model::MetricDatapoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) average: std::option::Option<f64>,
@@ -8593,7 +8756,7 @@ pub mod metric_datapoint {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDatapoint`](crate::model::MetricDatapoint)
+        /// Consumes the builder and constructs a [`MetricDatapoint`](crate::model::MetricDatapoint).
         pub fn build(self) -> crate::model::MetricDatapoint {
             crate::model::MetricDatapoint {
                 average: self.average,
@@ -8608,7 +8771,7 @@ pub mod metric_datapoint {
     }
 }
 impl MetricDatapoint {
-    /// Creates a new builder-style object to manufacture [`MetricDatapoint`](crate::model::MetricDatapoint)
+    /// Creates a new builder-style object to manufacture [`MetricDatapoint`](crate::model::MetricDatapoint).
     pub fn builder() -> crate::model::metric_datapoint::Builder {
         crate::model::metric_datapoint::Builder::default()
     }
@@ -9006,8 +9169,10 @@ impl AsRef<str> for RelationalDatabasePasswordVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogEvent {
     /// <p>The timestamp when the database log event was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The message of the database log event.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl LogEvent {
@@ -9028,11 +9193,10 @@ impl std::fmt::Debug for LogEvent {
         formatter.finish()
     }
 }
-/// See [`LogEvent`](crate::model::LogEvent)
+/// See [`LogEvent`](crate::model::LogEvent).
 pub mod log_event {
 
-    /// A builder for [`LogEvent`](crate::model::LogEvent)
-    #[non_exhaustive]
+    /// A builder for [`LogEvent`](crate::model::LogEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) created_at: std::option::Option<aws_smithy_types::DateTime>,
@@ -9062,7 +9226,7 @@ pub mod log_event {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogEvent`](crate::model::LogEvent)
+        /// Consumes the builder and constructs a [`LogEvent`](crate::model::LogEvent).
         pub fn build(self) -> crate::model::LogEvent {
             crate::model::LogEvent {
                 created_at: self.created_at,
@@ -9072,7 +9236,7 @@ pub mod log_event {
     }
 }
 impl LogEvent {
-    /// Creates a new builder-style object to manufacture [`LogEvent`](crate::model::LogEvent)
+    /// Creates a new builder-style object to manufacture [`LogEvent`](crate::model::LogEvent).
     pub fn builder() -> crate::model::log_event::Builder {
         crate::model::log_event::Builder::default()
     }
@@ -9083,12 +9247,16 @@ impl LogEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RelationalDatabaseEvent {
     /// <p>The database that the database event relates to.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<std::string::String>,
     /// <p>The timestamp when the database event was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The message of the database event.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The category that the database event belongs to.</p>
+    #[doc(hidden)]
     pub event_categories: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl RelationalDatabaseEvent {
@@ -9119,11 +9287,10 @@ impl std::fmt::Debug for RelationalDatabaseEvent {
         formatter.finish()
     }
 }
-/// See [`RelationalDatabaseEvent`](crate::model::RelationalDatabaseEvent)
+/// See [`RelationalDatabaseEvent`](crate::model::RelationalDatabaseEvent).
 pub mod relational_database_event {
 
-    /// A builder for [`RelationalDatabaseEvent`](crate::model::RelationalDatabaseEvent)
-    #[non_exhaustive]
+    /// A builder for [`RelationalDatabaseEvent`](crate::model::RelationalDatabaseEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource: std::option::Option<std::string::String>,
@@ -9184,7 +9351,7 @@ pub mod relational_database_event {
             self.event_categories = input;
             self
         }
-        /// Consumes the builder and constructs a [`RelationalDatabaseEvent`](crate::model::RelationalDatabaseEvent)
+        /// Consumes the builder and constructs a [`RelationalDatabaseEvent`](crate::model::RelationalDatabaseEvent).
         pub fn build(self) -> crate::model::RelationalDatabaseEvent {
             crate::model::RelationalDatabaseEvent {
                 resource: self.resource,
@@ -9196,7 +9363,7 @@ pub mod relational_database_event {
     }
 }
 impl RelationalDatabaseEvent {
-    /// Creates a new builder-style object to manufacture [`RelationalDatabaseEvent`](crate::model::RelationalDatabaseEvent)
+    /// Creates a new builder-style object to manufacture [`RelationalDatabaseEvent`](crate::model::RelationalDatabaseEvent).
     pub fn builder() -> crate::model::relational_database_event::Builder {
         crate::model::relational_database_event::Builder::default()
     }
@@ -9207,22 +9374,31 @@ impl RelationalDatabaseEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RelationalDatabaseBundle {
     /// <p>The ID for the database bundle.</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>The name for the database bundle.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The cost of the database bundle in US currency.</p>
+    #[doc(hidden)]
     pub price: std::option::Option<f32>,
     /// <p>The amount of RAM in GB (for example, <code>2.0</code>) for the database bundle.</p>
+    #[doc(hidden)]
     pub ram_size_in_gb: std::option::Option<f32>,
     /// <p>The size of the disk for the database bundle.</p>
+    #[doc(hidden)]
     pub disk_size_in_gb: std::option::Option<i32>,
     /// <p>The data transfer rate per month in GB for the database bundle.</p>
+    #[doc(hidden)]
     pub transfer_per_month_in_gb: std::option::Option<i32>,
     /// <p>The number of virtual CPUs (vCPUs) for the database bundle.</p>
+    #[doc(hidden)]
     pub cpu_count: std::option::Option<i32>,
     /// <p>A Boolean value indicating whether the database bundle is encrypted.</p>
+    #[doc(hidden)]
     pub is_encrypted: std::option::Option<bool>,
     /// <p>A Boolean value indicating whether the database bundle is active.</p>
+    #[doc(hidden)]
     pub is_active: std::option::Option<bool>,
 }
 impl RelationalDatabaseBundle {
@@ -9278,11 +9454,10 @@ impl std::fmt::Debug for RelationalDatabaseBundle {
         formatter.finish()
     }
 }
-/// See [`RelationalDatabaseBundle`](crate::model::RelationalDatabaseBundle)
+/// See [`RelationalDatabaseBundle`](crate::model::RelationalDatabaseBundle).
 pub mod relational_database_bundle {
 
-    /// A builder for [`RelationalDatabaseBundle`](crate::model::RelationalDatabaseBundle)
-    #[non_exhaustive]
+    /// A builder for [`RelationalDatabaseBundle`](crate::model::RelationalDatabaseBundle).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bundle_id: std::option::Option<std::string::String>,
@@ -9386,7 +9561,7 @@ pub mod relational_database_bundle {
             self.is_active = input;
             self
         }
-        /// Consumes the builder and constructs a [`RelationalDatabaseBundle`](crate::model::RelationalDatabaseBundle)
+        /// Consumes the builder and constructs a [`RelationalDatabaseBundle`](crate::model::RelationalDatabaseBundle).
         pub fn build(self) -> crate::model::RelationalDatabaseBundle {
             crate::model::RelationalDatabaseBundle {
                 bundle_id: self.bundle_id,
@@ -9403,7 +9578,7 @@ pub mod relational_database_bundle {
     }
 }
 impl RelationalDatabaseBundle {
-    /// Creates a new builder-style object to manufacture [`RelationalDatabaseBundle`](crate::model::RelationalDatabaseBundle)
+    /// Creates a new builder-style object to manufacture [`RelationalDatabaseBundle`](crate::model::RelationalDatabaseBundle).
     pub fn builder() -> crate::model::relational_database_bundle::Builder {
         crate::model::relational_database_bundle::Builder::default()
     }
@@ -9414,16 +9589,22 @@ impl RelationalDatabaseBundle {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RelationalDatabaseBlueprint {
     /// <p>The ID for the database blueprint.</p>
+    #[doc(hidden)]
     pub blueprint_id: std::option::Option<std::string::String>,
     /// <p>The database software of the database blueprint (for example, <code>MySQL</code>).</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<crate::model::RelationalDatabaseEngine>,
     /// <p>The database engine version for the database blueprint (for example, <code>5.7.23</code>).</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The description of the database engine for the database blueprint.</p>
+    #[doc(hidden)]
     pub engine_description: std::option::Option<std::string::String>,
     /// <p>The description of the database engine version for the database blueprint.</p>
+    #[doc(hidden)]
     pub engine_version_description: std::option::Option<std::string::String>,
     /// <p>A Boolean value indicating whether the engine version is the default for the database blueprint.</p>
+    #[doc(hidden)]
     pub is_engine_default: std::option::Option<bool>,
 }
 impl RelationalDatabaseBlueprint {
@@ -9467,11 +9648,10 @@ impl std::fmt::Debug for RelationalDatabaseBlueprint {
         formatter.finish()
     }
 }
-/// See [`RelationalDatabaseBlueprint`](crate::model::RelationalDatabaseBlueprint)
+/// See [`RelationalDatabaseBlueprint`](crate::model::RelationalDatabaseBlueprint).
 pub mod relational_database_blueprint {
 
-    /// A builder for [`RelationalDatabaseBlueprint`](crate::model::RelationalDatabaseBlueprint)
-    #[non_exhaustive]
+    /// A builder for [`RelationalDatabaseBlueprint`](crate::model::RelationalDatabaseBlueprint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) blueprint_id: std::option::Option<std::string::String>,
@@ -9554,7 +9734,7 @@ pub mod relational_database_blueprint {
             self.is_engine_default = input;
             self
         }
-        /// Consumes the builder and constructs a [`RelationalDatabaseBlueprint`](crate::model::RelationalDatabaseBlueprint)
+        /// Consumes the builder and constructs a [`RelationalDatabaseBlueprint`](crate::model::RelationalDatabaseBlueprint).
         pub fn build(self) -> crate::model::RelationalDatabaseBlueprint {
             crate::model::RelationalDatabaseBlueprint {
                 blueprint_id: self.blueprint_id,
@@ -9568,7 +9748,7 @@ pub mod relational_database_blueprint {
     }
 }
 impl RelationalDatabaseBlueprint {
-    /// Creates a new builder-style object to manufacture [`RelationalDatabaseBlueprint`](crate::model::RelationalDatabaseBlueprint)
+    /// Creates a new builder-style object to manufacture [`RelationalDatabaseBlueprint`](crate::model::RelationalDatabaseBlueprint).
     pub fn builder() -> crate::model::relational_database_blueprint::Builder {
         crate::model::relational_database_blueprint::Builder::default()
     }
@@ -9630,16 +9810,22 @@ impl AsRef<str> for RelationalDatabaseEngine {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Region {
     /// <p>The continent code (e.g., <code>NA</code>, meaning North America).</p>
+    #[doc(hidden)]
     pub continent_code: std::option::Option<std::string::String>,
     /// <p>The description of the AWS Region (e.g., <code>This region is recommended to serve users in the eastern United States and eastern Canada</code>).</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The display name (e.g., <code>Ohio</code>).</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>The region name (e.g., <code>us-east-2</code>).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::RegionName>,
     /// <p>The Availability Zones. Follows the format <code>us-east-2a</code> (case-sensitive).</p>
+    #[doc(hidden)]
     pub availability_zones: std::option::Option<std::vec::Vec<crate::model::AvailabilityZone>>,
     /// <p>The Availability Zones for databases. Follows the format <code>us-east-2a</code> (case-sensitive).</p>
+    #[doc(hidden)]
     pub relational_database_availability_zones:
         std::option::Option<std::vec::Vec<crate::model::AvailabilityZone>>,
 }
@@ -9686,11 +9872,10 @@ impl std::fmt::Debug for Region {
         formatter.finish()
     }
 }
-/// See [`Region`](crate::model::Region)
+/// See [`Region`](crate::model::Region).
 pub mod region {
 
-    /// A builder for [`Region`](crate::model::Region)
-    #[non_exhaustive]
+    /// A builder for [`Region`](crate::model::Region).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) continent_code: std::option::Option<std::string::String>,
@@ -9789,7 +9974,7 @@ pub mod region {
             self.relational_database_availability_zones = input;
             self
         }
-        /// Consumes the builder and constructs a [`Region`](crate::model::Region)
+        /// Consumes the builder and constructs a [`Region`](crate::model::Region).
         pub fn build(self) -> crate::model::Region {
             crate::model::Region {
                 continent_code: self.continent_code,
@@ -9803,7 +9988,7 @@ pub mod region {
     }
 }
 impl Region {
-    /// Creates a new builder-style object to manufacture [`Region`](crate::model::Region)
+    /// Creates a new builder-style object to manufacture [`Region`](crate::model::Region).
     pub fn builder() -> crate::model::region::Builder {
         crate::model::region::Builder::default()
     }
@@ -9814,8 +9999,10 @@ impl Region {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AvailabilityZone {
     /// <p>The name of the Availability Zone. The format is <code>us-east-2a</code> (case-sensitive).</p>
+    #[doc(hidden)]
     pub zone_name: std::option::Option<std::string::String>,
     /// <p>The state of the Availability Zone.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
 }
 impl AvailabilityZone {
@@ -9836,11 +10023,10 @@ impl std::fmt::Debug for AvailabilityZone {
         formatter.finish()
     }
 }
-/// See [`AvailabilityZone`](crate::model::AvailabilityZone)
+/// See [`AvailabilityZone`](crate::model::AvailabilityZone).
 pub mod availability_zone {
 
-    /// A builder for [`AvailabilityZone`](crate::model::AvailabilityZone)
-    #[non_exhaustive]
+    /// A builder for [`AvailabilityZone`](crate::model::AvailabilityZone).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) zone_name: std::option::Option<std::string::String>,
@@ -9867,7 +10053,7 @@ pub mod availability_zone {
             self.state = input;
             self
         }
-        /// Consumes the builder and constructs a [`AvailabilityZone`](crate::model::AvailabilityZone)
+        /// Consumes the builder and constructs a [`AvailabilityZone`](crate::model::AvailabilityZone).
         pub fn build(self) -> crate::model::AvailabilityZone {
             crate::model::AvailabilityZone {
                 zone_name: self.zone_name,
@@ -9877,7 +10063,7 @@ pub mod availability_zone {
     }
 }
 impl AvailabilityZone {
-    /// Creates a new builder-style object to manufacture [`AvailabilityZone`](crate::model::AvailabilityZone)
+    /// Creates a new builder-style object to manufacture [`AvailabilityZone`](crate::model::AvailabilityZone).
     pub fn builder() -> crate::model::availability_zone::Builder {
         crate::model::availability_zone::Builder::default()
     }
@@ -9889,15 +10075,20 @@ impl AvailabilityZone {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoadBalancerTlsPolicy {
     /// <p>The name of the TLS security policy.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A Boolean value that indicates whether the TLS security policy is the default.</p>
+    #[doc(hidden)]
     pub is_default: std::option::Option<bool>,
     /// <p>The description of the TLS security policy.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The protocols used in a given TLS security policy.</p>
+    #[doc(hidden)]
     pub protocols: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ciphers used by the TLS security policy.</p>
     /// <p>The ciphers are listed in order of preference.</p>
+    #[doc(hidden)]
     pub ciphers: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl LoadBalancerTlsPolicy {
@@ -9934,11 +10125,10 @@ impl std::fmt::Debug for LoadBalancerTlsPolicy {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerTlsPolicy`](crate::model::LoadBalancerTlsPolicy)
+/// See [`LoadBalancerTlsPolicy`](crate::model::LoadBalancerTlsPolicy).
 pub mod load_balancer_tls_policy {
 
-    /// A builder for [`LoadBalancerTlsPolicy`](crate::model::LoadBalancerTlsPolicy)
-    #[non_exhaustive]
+    /// A builder for [`LoadBalancerTlsPolicy`](crate::model::LoadBalancerTlsPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -10018,7 +10208,7 @@ pub mod load_balancer_tls_policy {
             self.ciphers = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerTlsPolicy`](crate::model::LoadBalancerTlsPolicy)
+        /// Consumes the builder and constructs a [`LoadBalancerTlsPolicy`](crate::model::LoadBalancerTlsPolicy).
         pub fn build(self) -> crate::model::LoadBalancerTlsPolicy {
             crate::model::LoadBalancerTlsPolicy {
                 name: self.name,
@@ -10031,7 +10221,7 @@ pub mod load_balancer_tls_policy {
     }
 }
 impl LoadBalancerTlsPolicy {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerTlsPolicy`](crate::model::LoadBalancerTlsPolicy)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerTlsPolicy`](crate::model::LoadBalancerTlsPolicy).
     pub fn builder() -> crate::model::load_balancer_tls_policy::Builder {
         crate::model::load_balancer_tls_policy::Builder::default()
     }
@@ -10043,14 +10233,19 @@ impl LoadBalancerTlsPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoadBalancerTlsCertificate {
     /// <p>The name of the SSL/TLS certificate (e.g., <code>my-certificate</code>).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the SSL/TLS certificate.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The support code. Include this code in your email to support when you have questions about your Lightsail load balancer or SSL/TLS certificate. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>The time when you created your SSL/TLS certificate.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The AWS Region and Availability Zone where you created your certificate.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The resource type (e.g., <code>LoadBalancerTlsCertificate</code>).</p>
     /// <ul>
@@ -10065,18 +10260,25 @@ pub struct LoadBalancerTlsCertificate {
     /// <li> <p> <b> <code>Disk</code> </b> - A Lightsail block storage disk</p> </li>
     /// <li> <p> <b> <code>DiskSnapshot</code> </b> - A block storage disk snapshot</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The load balancer name where your SSL/TLS certificate is attached.</p>
+    #[doc(hidden)]
     pub load_balancer_name: std::option::Option<std::string::String>,
     /// <p>When <code>true</code>, the SSL/TLS certificate is attached to the Lightsail load balancer.</p>
+    #[doc(hidden)]
     pub is_attached: std::option::Option<bool>,
     /// <p>The validation status of the SSL/TLS certificate. Valid values are below.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::LoadBalancerTlsCertificateStatus>,
     /// <p>The domain name for your SSL/TLS certificate.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>An array of LoadBalancerTlsCertificateDomainValidationRecord objects describing the records.</p>
+    #[doc(hidden)]
     pub domain_validation_records: std::option::Option<
         std::vec::Vec<crate::model::LoadBalancerTlsCertificateDomainValidationRecord>,
     >,
@@ -10091,32 +10293,45 @@ pub struct LoadBalancerTlsCertificate {
     /// <li> <p> <b> <code>INVALID_PUBLIC_DOMAIN</code> </b> - One or more of the domain names in the certificate request is not valid. Typically, this is because a domain name in the request is not a valid top-level domain. Try to request a certificate again, correcting any spelling errors or typos that were in the failed request, and ensure that all domain names in the request are for valid top-level domains. For example, you cannot request a certificate for <code>example.invalidpublicdomain</code> because <code>invalidpublicdomain</code> is not a valid top-level domain.</p> </li>
     /// <li> <p> <b> <code>OTHER</code> </b> - Typically, this failure occurs when there is a typographical error in one or more of the domain names in the certificate request. Try to request a certificate again, correcting any spelling errors or typos that were in the failed request. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<crate::model::LoadBalancerTlsCertificateFailureReason>,
     /// <p>The time when the SSL/TLS certificate was issued.</p>
+    #[doc(hidden)]
     pub issued_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The issuer of the certificate.</p>
+    #[doc(hidden)]
     pub issuer: std::option::Option<std::string::String>,
     /// <p>The algorithm used to generate the key pair (the public and private key).</p>
+    #[doc(hidden)]
     pub key_algorithm: std::option::Option<std::string::String>,
     /// <p>The timestamp when the SSL/TLS certificate expires.</p>
+    #[doc(hidden)]
     pub not_after: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp when the SSL/TLS certificate is first valid.</p>
+    #[doc(hidden)]
     pub not_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An object that describes the status of the certificate renewal managed by Lightsail.</p>
+    #[doc(hidden)]
     pub renewal_summary:
         std::option::Option<crate::model::LoadBalancerTlsCertificateRenewalSummary>,
     /// <p>The reason the certificate was revoked. This value is present only when the certificate status is <code>REVOKED</code>.</p>
+    #[doc(hidden)]
     pub revocation_reason:
         std::option::Option<crate::model::LoadBalancerTlsCertificateRevocationReason>,
     /// <p>The timestamp when the certificate was revoked. This value is present only when the certificate status is <code>REVOKED</code>.</p>
+    #[doc(hidden)]
     pub revoked_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The serial number of the certificate.</p>
+    #[doc(hidden)]
     pub serial: std::option::Option<std::string::String>,
     /// <p>The algorithm that was used to sign the certificate.</p>
+    #[doc(hidden)]
     pub signature_algorithm: std::option::Option<std::string::String>,
     /// <p>The name of the entity that is associated with the public key contained in the certificate.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<std::string::String>,
     /// <p>An array of strings that specify the alternate domains (e.g., <code>example2.com</code>) and subdomains (e.g., <code>blog.example.com</code>) for the certificate.</p>
+    #[doc(hidden)]
     pub subject_alternative_names: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl LoadBalancerTlsCertificate {
@@ -10283,11 +10498,10 @@ impl std::fmt::Debug for LoadBalancerTlsCertificate {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerTlsCertificate`](crate::model::LoadBalancerTlsCertificate)
+/// See [`LoadBalancerTlsCertificate`](crate::model::LoadBalancerTlsCertificate).
 pub mod load_balancer_tls_certificate {
 
-    /// A builder for [`LoadBalancerTlsCertificate`](crate::model::LoadBalancerTlsCertificate)
-    #[non_exhaustive]
+    /// A builder for [`LoadBalancerTlsCertificate`](crate::model::LoadBalancerTlsCertificate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -10700,7 +10914,7 @@ pub mod load_balancer_tls_certificate {
             self.subject_alternative_names = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerTlsCertificate`](crate::model::LoadBalancerTlsCertificate)
+        /// Consumes the builder and constructs a [`LoadBalancerTlsCertificate`](crate::model::LoadBalancerTlsCertificate).
         pub fn build(self) -> crate::model::LoadBalancerTlsCertificate {
             crate::model::LoadBalancerTlsCertificate {
                 name: self.name,
@@ -10733,7 +10947,7 @@ pub mod load_balancer_tls_certificate {
     }
 }
 impl LoadBalancerTlsCertificate {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerTlsCertificate`](crate::model::LoadBalancerTlsCertificate)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerTlsCertificate`](crate::model::LoadBalancerTlsCertificate).
     pub fn builder() -> crate::model::load_balancer_tls_certificate::Builder {
         crate::model::load_balancer_tls_certificate::Builder::default()
     }
@@ -10861,8 +11075,10 @@ pub struct LoadBalancerTlsCertificateRenewalSummary {
     /// <li> <p> <b> <code>Success</code> </b> - All domain names in the certificate are validated, and Lightsail renewed the certificate. No further action is required. </p> </li>
     /// <li> <p> <b> <code>Failed</code> </b> - One or more domain names were not validated before the certificate expired, and Lightsail did not renew the certificate. You can request a new certificate using the <code>CreateCertificate</code> action.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub renewal_status: std::option::Option<crate::model::LoadBalancerTlsCertificateRenewalStatus>,
     /// <p>Contains information about the validation of each domain name in the certificate, as it pertains to Lightsail's managed renewal. This is different from the initial validation that occurs as a result of the RequestCertificate request.</p>
+    #[doc(hidden)]
     pub domain_validation_options: std::option::Option<
         std::vec::Vec<crate::model::LoadBalancerTlsCertificateDomainValidationOption>,
     >,
@@ -10897,11 +11113,10 @@ impl std::fmt::Debug for LoadBalancerTlsCertificateRenewalSummary {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerTlsCertificateRenewalSummary`](crate::model::LoadBalancerTlsCertificateRenewalSummary)
+/// See [`LoadBalancerTlsCertificateRenewalSummary`](crate::model::LoadBalancerTlsCertificateRenewalSummary).
 pub mod load_balancer_tls_certificate_renewal_summary {
 
-    /// A builder for [`LoadBalancerTlsCertificateRenewalSummary`](crate::model::LoadBalancerTlsCertificateRenewalSummary)
-    #[non_exhaustive]
+    /// A builder for [`LoadBalancerTlsCertificateRenewalSummary`](crate::model::LoadBalancerTlsCertificateRenewalSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) renewal_status:
@@ -10965,7 +11180,7 @@ pub mod load_balancer_tls_certificate_renewal_summary {
             self.domain_validation_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerTlsCertificateRenewalSummary`](crate::model::LoadBalancerTlsCertificateRenewalSummary)
+        /// Consumes the builder and constructs a [`LoadBalancerTlsCertificateRenewalSummary`](crate::model::LoadBalancerTlsCertificateRenewalSummary).
         pub fn build(self) -> crate::model::LoadBalancerTlsCertificateRenewalSummary {
             crate::model::LoadBalancerTlsCertificateRenewalSummary {
                 renewal_status: self.renewal_status,
@@ -10975,7 +11190,7 @@ pub mod load_balancer_tls_certificate_renewal_summary {
     }
 }
 impl LoadBalancerTlsCertificateRenewalSummary {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerTlsCertificateRenewalSummary`](crate::model::LoadBalancerTlsCertificateRenewalSummary)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerTlsCertificateRenewalSummary`](crate::model::LoadBalancerTlsCertificateRenewalSummary).
     pub fn builder() -> crate::model::load_balancer_tls_certificate_renewal_summary::Builder {
         crate::model::load_balancer_tls_certificate_renewal_summary::Builder::default()
     }
@@ -10986,8 +11201,10 @@ impl LoadBalancerTlsCertificateRenewalSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoadBalancerTlsCertificateDomainValidationOption {
     /// <p>The fully qualified domain name in the certificate request.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The status of the domain validation. Valid values are listed below.</p>
+    #[doc(hidden)]
     pub validation_status:
         std::option::Option<crate::model::LoadBalancerTlsCertificateDomainStatus>,
 }
@@ -11011,11 +11228,10 @@ impl std::fmt::Debug for LoadBalancerTlsCertificateDomainValidationOption {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerTlsCertificateDomainValidationOption`](crate::model::LoadBalancerTlsCertificateDomainValidationOption)
+/// See [`LoadBalancerTlsCertificateDomainValidationOption`](crate::model::LoadBalancerTlsCertificateDomainValidationOption).
 pub mod load_balancer_tls_certificate_domain_validation_option {
 
-    /// A builder for [`LoadBalancerTlsCertificateDomainValidationOption`](crate::model::LoadBalancerTlsCertificateDomainValidationOption)
-    #[non_exhaustive]
+    /// A builder for [`LoadBalancerTlsCertificateDomainValidationOption`](crate::model::LoadBalancerTlsCertificateDomainValidationOption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -11049,7 +11265,7 @@ pub mod load_balancer_tls_certificate_domain_validation_option {
             self.validation_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerTlsCertificateDomainValidationOption`](crate::model::LoadBalancerTlsCertificateDomainValidationOption)
+        /// Consumes the builder and constructs a [`LoadBalancerTlsCertificateDomainValidationOption`](crate::model::LoadBalancerTlsCertificateDomainValidationOption).
         pub fn build(self) -> crate::model::LoadBalancerTlsCertificateDomainValidationOption {
             crate::model::LoadBalancerTlsCertificateDomainValidationOption {
                 domain_name: self.domain_name,
@@ -11059,7 +11275,7 @@ pub mod load_balancer_tls_certificate_domain_validation_option {
     }
 }
 impl LoadBalancerTlsCertificateDomainValidationOption {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerTlsCertificateDomainValidationOption`](crate::model::LoadBalancerTlsCertificateDomainValidationOption)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerTlsCertificateDomainValidationOption`](crate::model::LoadBalancerTlsCertificateDomainValidationOption).
     pub fn builder() -> crate::model::load_balancer_tls_certificate_domain_validation_option::Builder
     {
         crate::model::load_balancer_tls_certificate_domain_validation_option::Builder::default()
@@ -11275,15 +11491,20 @@ impl AsRef<str> for LoadBalancerTlsCertificateFailureReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoadBalancerTlsCertificateDomainValidationRecord {
     /// <p>A fully qualified domain name in the certificate. For example, <code>example.com</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of validation record. For example, <code>CNAME</code> for domain validation.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The value for that type.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The validation status. Valid values are listed below.</p>
+    #[doc(hidden)]
     pub validation_status:
         std::option::Option<crate::model::LoadBalancerTlsCertificateDomainStatus>,
     /// <p>The domain name against which your SSL/TLS certificate was validated.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
 }
 impl LoadBalancerTlsCertificateDomainValidationRecord {
@@ -11321,11 +11542,10 @@ impl std::fmt::Debug for LoadBalancerTlsCertificateDomainValidationRecord {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerTlsCertificateDomainValidationRecord`](crate::model::LoadBalancerTlsCertificateDomainValidationRecord)
+/// See [`LoadBalancerTlsCertificateDomainValidationRecord`](crate::model::LoadBalancerTlsCertificateDomainValidationRecord).
 pub mod load_balancer_tls_certificate_domain_validation_record {
 
-    /// A builder for [`LoadBalancerTlsCertificateDomainValidationRecord`](crate::model::LoadBalancerTlsCertificateDomainValidationRecord)
-    #[non_exhaustive]
+    /// A builder for [`LoadBalancerTlsCertificateDomainValidationRecord`](crate::model::LoadBalancerTlsCertificateDomainValidationRecord).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -11392,7 +11612,7 @@ pub mod load_balancer_tls_certificate_domain_validation_record {
             self.domain_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerTlsCertificateDomainValidationRecord`](crate::model::LoadBalancerTlsCertificateDomainValidationRecord)
+        /// Consumes the builder and constructs a [`LoadBalancerTlsCertificateDomainValidationRecord`](crate::model::LoadBalancerTlsCertificateDomainValidationRecord).
         pub fn build(self) -> crate::model::LoadBalancerTlsCertificateDomainValidationRecord {
             crate::model::LoadBalancerTlsCertificateDomainValidationRecord {
                 name: self.name,
@@ -11405,7 +11625,7 @@ pub mod load_balancer_tls_certificate_domain_validation_record {
     }
 }
 impl LoadBalancerTlsCertificateDomainValidationRecord {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerTlsCertificateDomainValidationRecord`](crate::model::LoadBalancerTlsCertificateDomainValidationRecord)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerTlsCertificateDomainValidationRecord`](crate::model::LoadBalancerTlsCertificateDomainValidationRecord).
     pub fn builder() -> crate::model::load_balancer_tls_certificate_domain_validation_record::Builder
     {
         crate::model::load_balancer_tls_certificate_domain_validation_record::Builder::default()
@@ -11505,48 +11725,67 @@ impl AsRef<str> for LoadBalancerTlsCertificateStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoadBalancer {
     /// <p>The name of the load balancer (e.g., <code>my-load-balancer</code>).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the load balancer.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The support code. Include this code in your email to support when you have questions about your Lightsail load balancer. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>The date when your load balancer was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The AWS Region where your load balancer was created (e.g., <code>us-east-2a</code>). Lightsail automatically creates your load balancer across Availability Zones.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The resource type (e.g., <code>LoadBalancer</code>.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The DNS name of your Lightsail load balancer.</p>
+    #[doc(hidden)]
     pub dns_name: std::option::Option<std::string::String>,
     /// <p>The status of your load balancer. Valid values are below.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::LoadBalancerState>,
     /// <p>The protocol you have enabled for your load balancer. Valid values are below.</p>
     /// <p>You can't just have <code>HTTP_HTTPS</code>, but you can have just <code>HTTP</code>.</p>
+    #[doc(hidden)]
     pub protocol: std::option::Option<crate::model::LoadBalancerProtocol>,
     /// <p>An array of public port settings for your load balancer. For HTTP, use port 80. For HTTPS, use port 443.</p>
+    #[doc(hidden)]
     pub public_ports: std::option::Option<std::vec::Vec<i32>>,
     /// <p>The path you specified to perform your health checks. If no path is specified, the load balancer tries to make a request to the default (root) page.</p>
+    #[doc(hidden)]
     pub health_check_path: std::option::Option<std::string::String>,
     /// <p>The port where the load balancer will direct traffic to your Lightsail instances. For HTTP traffic, it's port 80. For HTTPS traffic, it's port 443.</p>
+    #[doc(hidden)]
     pub instance_port: std::option::Option<i32>,
     /// <p>An array of InstanceHealthSummary objects describing the health of the load balancer.</p>
+    #[doc(hidden)]
     pub instance_health_summary:
         std::option::Option<std::vec::Vec<crate::model::InstanceHealthSummary>>,
     /// <p>An array of LoadBalancerTlsCertificateSummary objects that provide additional information about the SSL/TLS certificates. For example, if <code>true</code>, the certificate is attached to the load balancer.</p>
+    #[doc(hidden)]
     pub tls_certificate_summaries:
         std::option::Option<std::vec::Vec<crate::model::LoadBalancerTlsCertificateSummary>>,
     /// <p>A string to string map of the configuration options for your load balancer. Valid values are listed below.</p>
+    #[doc(hidden)]
     pub configuration_options: std::option::Option<
         std::collections::HashMap<crate::model::LoadBalancerAttributeName, std::string::String>,
     >,
     /// <p>The IP address type of the load balancer.</p>
     /// <p>The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.</p>
+    #[doc(hidden)]
     pub ip_address_type: std::option::Option<crate::model::IpAddressType>,
     /// <p>A Boolean value that indicates whether HTTPS redirection is enabled for the load balancer.</p>
+    #[doc(hidden)]
     pub https_redirection_enabled: std::option::Option<bool>,
     /// <p>The name of the TLS security policy for the load balancer.</p>
+    #[doc(hidden)]
     pub tls_policy_name: std::option::Option<std::string::String>,
 }
 impl LoadBalancer {
@@ -11662,11 +11901,10 @@ impl std::fmt::Debug for LoadBalancer {
         formatter.finish()
     }
 }
-/// See [`LoadBalancer`](crate::model::LoadBalancer)
+/// See [`LoadBalancer`](crate::model::LoadBalancer).
 pub mod load_balancer {
 
-    /// A builder for [`LoadBalancer`](crate::model::LoadBalancer)
-    #[non_exhaustive]
+    /// A builder for [`LoadBalancer`](crate::model::LoadBalancer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -11971,7 +12209,7 @@ pub mod load_balancer {
             self.tls_policy_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancer`](crate::model::LoadBalancer)
+        /// Consumes the builder and constructs a [`LoadBalancer`](crate::model::LoadBalancer).
         pub fn build(self) -> crate::model::LoadBalancer {
             crate::model::LoadBalancer {
                 name: self.name,
@@ -11998,7 +12236,7 @@ pub mod load_balancer {
     }
 }
 impl LoadBalancer {
-    /// Creates a new builder-style object to manufacture [`LoadBalancer`](crate::model::LoadBalancer)
+    /// Creates a new builder-style object to manufacture [`LoadBalancer`](crate::model::LoadBalancer).
     pub fn builder() -> crate::model::load_balancer::Builder {
         crate::model::load_balancer::Builder::default()
     }
@@ -12009,8 +12247,10 @@ impl LoadBalancer {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoadBalancerTlsCertificateSummary {
     /// <p>The name of the SSL/TLS certificate.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>When <code>true</code>, the SSL/TLS certificate is attached to the Lightsail load balancer.</p>
+    #[doc(hidden)]
     pub is_attached: std::option::Option<bool>,
 }
 impl LoadBalancerTlsCertificateSummary {
@@ -12031,11 +12271,10 @@ impl std::fmt::Debug for LoadBalancerTlsCertificateSummary {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerTlsCertificateSummary`](crate::model::LoadBalancerTlsCertificateSummary)
+/// See [`LoadBalancerTlsCertificateSummary`](crate::model::LoadBalancerTlsCertificateSummary).
 pub mod load_balancer_tls_certificate_summary {
 
-    /// A builder for [`LoadBalancerTlsCertificateSummary`](crate::model::LoadBalancerTlsCertificateSummary)
-    #[non_exhaustive]
+    /// A builder for [`LoadBalancerTlsCertificateSummary`](crate::model::LoadBalancerTlsCertificateSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -12062,7 +12301,7 @@ pub mod load_balancer_tls_certificate_summary {
             self.is_attached = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerTlsCertificateSummary`](crate::model::LoadBalancerTlsCertificateSummary)
+        /// Consumes the builder and constructs a [`LoadBalancerTlsCertificateSummary`](crate::model::LoadBalancerTlsCertificateSummary).
         pub fn build(self) -> crate::model::LoadBalancerTlsCertificateSummary {
             crate::model::LoadBalancerTlsCertificateSummary {
                 name: self.name,
@@ -12072,7 +12311,7 @@ pub mod load_balancer_tls_certificate_summary {
     }
 }
 impl LoadBalancerTlsCertificateSummary {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerTlsCertificateSummary`](crate::model::LoadBalancerTlsCertificateSummary)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerTlsCertificateSummary`](crate::model::LoadBalancerTlsCertificateSummary).
     pub fn builder() -> crate::model::load_balancer_tls_certificate_summary::Builder {
         crate::model::load_balancer_tls_certificate_summary::Builder::default()
     }
@@ -12083,8 +12322,10 @@ impl LoadBalancerTlsCertificateSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceHealthSummary {
     /// <p>The name of the Lightsail instance for which you are requesting health check data.</p>
+    #[doc(hidden)]
     pub instance_name: std::option::Option<std::string::String>,
     /// <p>Describes the overall instance health. Valid values are below.</p>
+    #[doc(hidden)]
     pub instance_health: std::option::Option<crate::model::InstanceHealthState>,
     /// <p>More information about the instance health. If the <code>instanceHealth</code> is <code>healthy</code>, then an <code>instanceHealthReason</code> value is not provided.</p>
     /// <p>If <b> <code>instanceHealth</code> </b> is <code>initial</code>, the <b> <code>instanceHealthReason</code> </b> value can be one of the following:</p>
@@ -12110,6 +12351,7 @@ pub struct InstanceHealthSummary {
     /// <ul>
     /// <li> <p> <b> <code>Instance.DeregistrationInProgress</code> </b> - The target instance is in the process of being deregistered and the deregistration delay period has not expired.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub instance_health_reason: std::option::Option<crate::model::InstanceHealthReason>,
 }
 impl InstanceHealthSummary {
@@ -12160,11 +12402,10 @@ impl std::fmt::Debug for InstanceHealthSummary {
         formatter.finish()
     }
 }
-/// See [`InstanceHealthSummary`](crate::model::InstanceHealthSummary)
+/// See [`InstanceHealthSummary`](crate::model::InstanceHealthSummary).
 pub mod instance_health_summary {
 
-    /// A builder for [`InstanceHealthSummary`](crate::model::InstanceHealthSummary)
-    #[non_exhaustive]
+    /// A builder for [`InstanceHealthSummary`](crate::model::InstanceHealthSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_name: std::option::Option<std::string::String>,
@@ -12257,7 +12498,7 @@ pub mod instance_health_summary {
             self.instance_health_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceHealthSummary`](crate::model::InstanceHealthSummary)
+        /// Consumes the builder and constructs a [`InstanceHealthSummary`](crate::model::InstanceHealthSummary).
         pub fn build(self) -> crate::model::InstanceHealthSummary {
             crate::model::InstanceHealthSummary {
                 instance_name: self.instance_name,
@@ -12268,7 +12509,7 @@ pub mod instance_health_summary {
     }
 }
 impl InstanceHealthSummary {
-    /// Creates a new builder-style object to manufacture [`InstanceHealthSummary`](crate::model::InstanceHealthSummary)
+    /// Creates a new builder-style object to manufacture [`InstanceHealthSummary`](crate::model::InstanceHealthSummary).
     pub fn builder() -> crate::model::instance_health_summary::Builder {
         crate::model::instance_health_summary::Builder::default()
     }
@@ -12704,20 +12945,28 @@ impl AsRef<str> for LoadBalancerMetricName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyPair {
     /// <p>The friendly name of the SSH key pair.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the key pair (e.g., <code>arn:aws:lightsail:us-east-2:123456789101:KeyPair/05859e3d-331d-48ba-9034-12345EXAMPLE</code>).</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The support code. Include this code in your email to support when you have questions about an instance or another resource in Lightsail. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>The timestamp when the key pair was created (e.g., <code>1479816991.349</code>).</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The region name and Availability Zone where the key pair was created.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The resource type (usually <code>KeyPair</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The RSA fingerprint of the key pair.</p>
+    #[doc(hidden)]
     pub fingerprint: std::option::Option<std::string::String>,
 }
 impl KeyPair {
@@ -12768,11 +13017,10 @@ impl std::fmt::Debug for KeyPair {
         formatter.finish()
     }
 }
-/// See [`KeyPair`](crate::model::KeyPair)
+/// See [`KeyPair`](crate::model::KeyPair).
 pub mod key_pair {
 
-    /// A builder for [`KeyPair`](crate::model::KeyPair)
-    #[non_exhaustive]
+    /// A builder for [`KeyPair`](crate::model::KeyPair).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -12883,7 +13131,7 @@ pub mod key_pair {
             self.fingerprint = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyPair`](crate::model::KeyPair)
+        /// Consumes the builder and constructs a [`KeyPair`](crate::model::KeyPair).
         pub fn build(self) -> crate::model::KeyPair {
             crate::model::KeyPair {
                 name: self.name,
@@ -12899,7 +13147,7 @@ pub mod key_pair {
     }
 }
 impl KeyPair {
-    /// Creates a new builder-style object to manufacture [`KeyPair`](crate::model::KeyPair)
+    /// Creates a new builder-style object to manufacture [`KeyPair`](crate::model::KeyPair).
     pub fn builder() -> crate::model::key_pair::Builder {
         crate::model::key_pair::Builder::default()
     }
@@ -12910,8 +13158,10 @@ impl KeyPair {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceState {
     /// <p>The status code for the instance.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<i32>,
     /// <p>The state of the instance (e.g., <code>running</code> or <code>pending</code>).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl InstanceState {
@@ -12932,11 +13182,10 @@ impl std::fmt::Debug for InstanceState {
         formatter.finish()
     }
 }
-/// See [`InstanceState`](crate::model::InstanceState)
+/// See [`InstanceState`](crate::model::InstanceState).
 pub mod instance_state {
 
-    /// A builder for [`InstanceState`](crate::model::InstanceState)
-    #[non_exhaustive]
+    /// A builder for [`InstanceState`](crate::model::InstanceState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<i32>,
@@ -12963,7 +13212,7 @@ pub mod instance_state {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceState`](crate::model::InstanceState)
+        /// Consumes the builder and constructs a [`InstanceState`](crate::model::InstanceState).
         pub fn build(self) -> crate::model::InstanceState {
             crate::model::InstanceState {
                 code: self.code,
@@ -12973,7 +13222,7 @@ pub mod instance_state {
     }
 }
 impl InstanceState {
-    /// Creates a new builder-style object to manufacture [`InstanceState`](crate::model::InstanceState)
+    /// Creates a new builder-style object to manufacture [`InstanceState`](crate::model::InstanceState).
     pub fn builder() -> crate::model::instance_state::Builder {
         crate::model::instance_state::Builder::default()
     }
@@ -12984,38 +13233,54 @@ impl InstanceState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceSnapshot {
     /// <p>The name of the snapshot.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the snapshot (e.g., <code>arn:aws:lightsail:us-east-2:123456789101:InstanceSnapshot/d23b5706-3322-4d83-81e5-12345EXAMPLE</code>).</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The support code. Include this code in your email to support when you have questions about an instance or another resource in Lightsail. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>The timestamp when the snapshot was created (e.g., <code>1479907467.024</code>).</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The region name and Availability Zone where you created the snapshot.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The type of resource (usually <code>InstanceSnapshot</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The state the snapshot is in.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::InstanceSnapshotState>,
     /// <p>The progress of the snapshot.</p> <note>
     /// <p>This is populated only for disk snapshots, and is <code>null</code> for instance snapshots.</p>
     /// </note>
+    #[doc(hidden)]
     pub progress: std::option::Option<std::string::String>,
     /// <p>An array of disk objects containing information about all block storage disks.</p>
+    #[doc(hidden)]
     pub from_attached_disks: std::option::Option<std::vec::Vec<crate::model::Disk>>,
     /// <p>The instance from which the snapshot was created.</p>
+    #[doc(hidden)]
     pub from_instance_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the instance from which the snapshot was created (e.g., <code>arn:aws:lightsail:us-east-2:123456789101:Instance/64b8404c-ccb1-430b-8daf-12345EXAMPLE</code>).</p>
+    #[doc(hidden)]
     pub from_instance_arn: std::option::Option<std::string::String>,
     /// <p>The blueprint ID from which you created the snapshot (e.g., <code>os_debian_8_3</code>). A blueprint is a virtual private server (or <i>instance</i>) image used to create instances quickly.</p>
+    #[doc(hidden)]
     pub from_blueprint_id: std::option::Option<std::string::String>,
     /// <p>The bundle ID from which you created the snapshot (e.g., <code>micro_1_0</code>).</p>
+    #[doc(hidden)]
     pub from_bundle_id: std::option::Option<std::string::String>,
     /// <p>A Boolean value indicating whether the snapshot was created from an automatic snapshot.</p>
+    #[doc(hidden)]
     pub is_from_auto_snapshot: std::option::Option<bool>,
     /// <p>The size in GB of the SSD.</p>
+    #[doc(hidden)]
     pub size_in_gb: std::option::Option<i32>,
 }
 impl InstanceSnapshot {
@@ -13108,11 +13373,10 @@ impl std::fmt::Debug for InstanceSnapshot {
         formatter.finish()
     }
 }
-/// See [`InstanceSnapshot`](crate::model::InstanceSnapshot)
+/// See [`InstanceSnapshot`](crate::model::InstanceSnapshot).
 pub mod instance_snapshot {
 
-    /// A builder for [`InstanceSnapshot`](crate::model::InstanceSnapshot)
-    #[non_exhaustive]
+    /// A builder for [`InstanceSnapshot`](crate::model::InstanceSnapshot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -13339,7 +13603,7 @@ pub mod instance_snapshot {
             self.size_in_gb = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceSnapshot`](crate::model::InstanceSnapshot)
+        /// Consumes the builder and constructs a [`InstanceSnapshot`](crate::model::InstanceSnapshot).
         pub fn build(self) -> crate::model::InstanceSnapshot {
             crate::model::InstanceSnapshot {
                 name: self.name,
@@ -13363,7 +13627,7 @@ pub mod instance_snapshot {
     }
 }
 impl InstanceSnapshot {
-    /// Creates a new builder-style object to manufacture [`InstanceSnapshot`](crate::model::InstanceSnapshot)
+    /// Creates a new builder-style object to manufacture [`InstanceSnapshot`](crate::model::InstanceSnapshot).
     pub fn builder() -> crate::model::instance_snapshot::Builder {
         crate::model::instance_snapshot::Builder::default()
     }
@@ -13374,42 +13638,61 @@ impl InstanceSnapshot {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Disk {
     /// <p>The unique name of the disk.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the disk.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The support code. Include this code in your email to support when you have questions about an instance or another resource in Lightsail. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>The date when the disk was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The AWS Region and Availability Zone where the disk is located.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The Lightsail resource type (e.g., <code>Disk</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>An array of objects representing the add-ons enabled on the disk.</p>
+    #[doc(hidden)]
     pub add_ons: std::option::Option<std::vec::Vec<crate::model::AddOn>>,
     /// <p>The size of the disk in GB.</p>
+    #[doc(hidden)]
     pub size_in_gb: std::option::Option<i32>,
     /// <p>A Boolean value indicating whether this disk is a system disk (has an operating system loaded on it).</p>
+    #[doc(hidden)]
     pub is_system_disk: std::option::Option<bool>,
     /// <p>The input/output operations per second (IOPS) of the disk.</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
     /// <p>The disk path.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>Describes the status of the disk.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::DiskState>,
     /// <p>The resources to which the disk is attached.</p>
+    #[doc(hidden)]
     pub attached_to: std::option::Option<std::string::String>,
     /// <p>A Boolean value indicating whether the disk is attached.</p>
+    #[doc(hidden)]
     pub is_attached: std::option::Option<bool>,
     /// <p>(Deprecated) The attachment state of the disk.</p> <note>
     /// <p>In releases prior to November 14, 2017, this parameter returned <code>attached</code> for system disks in the API response. It is now deprecated, but still included in the response. Use <code>isAttached</code> instead.</p>
     /// </note>
+    #[deprecated]
+    #[doc(hidden)]
     pub attachment_state: std::option::Option<std::string::String>,
     /// <p>(Deprecated) The number of GB in use by the disk.</p> <note>
     /// <p>In releases prior to November 14, 2017, this parameter was not included in the API response. It is now deprecated.</p>
     /// </note>
+    #[deprecated]
+    #[doc(hidden)]
     pub gb_in_use: std::option::Option<i32>,
 }
 impl Disk {
@@ -13476,12 +13759,14 @@ impl Disk {
     /// <p>(Deprecated) The attachment state of the disk.</p> <note>
     /// <p>In releases prior to November 14, 2017, this parameter returned <code>attached</code> for system disks in the API response. It is now deprecated, but still included in the response. Use <code>isAttached</code> instead.</p>
     /// </note>
+    #[deprecated]
     pub fn attachment_state(&self) -> std::option::Option<&str> {
         self.attachment_state.as_deref()
     }
     /// <p>(Deprecated) The number of GB in use by the disk.</p> <note>
     /// <p>In releases prior to November 14, 2017, this parameter was not included in the API response. It is now deprecated.</p>
     /// </note>
+    #[deprecated]
     pub fn gb_in_use(&self) -> std::option::Option<i32> {
         self.gb_in_use
     }
@@ -13509,11 +13794,10 @@ impl std::fmt::Debug for Disk {
         formatter.finish()
     }
 }
-/// See [`Disk`](crate::model::Disk)
+/// See [`Disk`](crate::model::Disk).
 pub mod disk {
 
-    /// A builder for [`Disk`](crate::model::Disk)
-    #[non_exhaustive]
+    /// A builder for [`Disk`](crate::model::Disk).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -13715,6 +13999,7 @@ pub mod disk {
         /// <p>(Deprecated) The attachment state of the disk.</p> <note>
         /// <p>In releases prior to November 14, 2017, this parameter returned <code>attached</code> for system disks in the API response. It is now deprecated, but still included in the response. Use <code>isAttached</code> instead.</p>
         /// </note>
+        #[deprecated]
         pub fn attachment_state(mut self, input: impl Into<std::string::String>) -> Self {
             self.attachment_state = Some(input.into());
             self
@@ -13722,6 +14007,7 @@ pub mod disk {
         /// <p>(Deprecated) The attachment state of the disk.</p> <note>
         /// <p>In releases prior to November 14, 2017, this parameter returned <code>attached</code> for system disks in the API response. It is now deprecated, but still included in the response. Use <code>isAttached</code> instead.</p>
         /// </note>
+        #[deprecated]
         pub fn set_attachment_state(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -13732,6 +14018,7 @@ pub mod disk {
         /// <p>(Deprecated) The number of GB in use by the disk.</p> <note>
         /// <p>In releases prior to November 14, 2017, this parameter was not included in the API response. It is now deprecated.</p>
         /// </note>
+        #[deprecated]
         pub fn gb_in_use(mut self, input: i32) -> Self {
             self.gb_in_use = Some(input);
             self
@@ -13739,11 +14026,12 @@ pub mod disk {
         /// <p>(Deprecated) The number of GB in use by the disk.</p> <note>
         /// <p>In releases prior to November 14, 2017, this parameter was not included in the API response. It is now deprecated.</p>
         /// </note>
+        #[deprecated]
         pub fn set_gb_in_use(mut self, input: std::option::Option<i32>) -> Self {
             self.gb_in_use = input;
             self
         }
-        /// Consumes the builder and constructs a [`Disk`](crate::model::Disk)
+        /// Consumes the builder and constructs a [`Disk`](crate::model::Disk).
         pub fn build(self) -> crate::model::Disk {
             crate::model::Disk {
                 name: self.name,
@@ -13768,7 +14056,7 @@ pub mod disk {
     }
 }
 impl Disk {
-    /// Creates a new builder-style object to manufacture [`Disk`](crate::model::Disk)
+    /// Creates a new builder-style object to manufacture [`Disk`](crate::model::Disk).
     pub fn builder() -> crate::model::disk::Builder {
         crate::model::disk::Builder::default()
     }
@@ -13846,16 +14134,20 @@ impl AsRef<str> for DiskState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddOn {
     /// <p>The name of the add-on.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The status of the add-on.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The daily time when an automatic snapshot is created.</p>
     /// <p>The time shown is in <code>HH:00</code> format, and in Coordinated Universal Time (UTC).</p>
     /// <p>The snapshot is automatically created between the time shown and up to 45 minutes after.</p>
+    #[doc(hidden)]
     pub snapshot_time_of_day: std::option::Option<std::string::String>,
     /// <p>The next daily time an automatic snapshot will be created.</p>
     /// <p>The time shown is in <code>HH:00</code> format, and in Coordinated Universal Time (UTC).</p>
     /// <p>The snapshot is automatically created between the time shown and up to 45 minutes after.</p>
+    #[doc(hidden)]
     pub next_snapshot_time_of_day: std::option::Option<std::string::String>,
 }
 impl AddOn {
@@ -13890,11 +14182,10 @@ impl std::fmt::Debug for AddOn {
         formatter.finish()
     }
 }
-/// See [`AddOn`](crate::model::AddOn)
+/// See [`AddOn`](crate::model::AddOn).
 pub mod add_on {
 
-    /// A builder for [`AddOn`](crate::model::AddOn)
-    #[non_exhaustive]
+    /// A builder for [`AddOn`](crate::model::AddOn).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -13957,7 +14248,7 @@ pub mod add_on {
             self.next_snapshot_time_of_day = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddOn`](crate::model::AddOn)
+        /// Consumes the builder and constructs a [`AddOn`](crate::model::AddOn).
         pub fn build(self) -> crate::model::AddOn {
             crate::model::AddOn {
                 name: self.name,
@@ -13969,7 +14260,7 @@ pub mod add_on {
     }
 }
 impl AddOn {
-    /// Creates a new builder-style object to manufacture [`AddOn`](crate::model::AddOn)
+    /// Creates a new builder-style object to manufacture [`AddOn`](crate::model::AddOn).
     pub fn builder() -> crate::model::add_on::Builder {
         crate::model::add_on::Builder::default()
     }
@@ -14039,47 +14330,68 @@ impl AsRef<str> for InstanceSnapshotState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Instance {
     /// <p>The name the user gave the instance (e.g., <code>Amazon_Linux-1GB-Ohio-1</code>).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the instance (e.g., <code>arn:aws:lightsail:us-east-2:123456789101:Instance/244ad76f-8aad-4741-809f-12345EXAMPLE</code>).</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The support code. Include this code in your email to support when you have questions about an instance or another resource in Lightsail. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>The timestamp when the instance was created (e.g., <code>1479734909.17</code>) in Unix time format.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The region name and Availability Zone where the instance is located.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The type of resource (usually <code>Instance</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The blueprint ID (e.g., <code>os_amlinux_2016_03</code>).</p>
+    #[doc(hidden)]
     pub blueprint_id: std::option::Option<std::string::String>,
     /// <p>The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).</p>
+    #[doc(hidden)]
     pub blueprint_name: std::option::Option<std::string::String>,
     /// <p>The bundle for the instance (e.g., <code>micro_1_0</code>).</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>An array of objects representing the add-ons enabled on the instance.</p>
+    #[doc(hidden)]
     pub add_ons: std::option::Option<std::vec::Vec<crate::model::AddOn>>,
     /// <p>A Boolean value indicating whether this instance has a static IP assigned to it.</p>
+    #[doc(hidden)]
     pub is_static_ip: std::option::Option<bool>,
     /// <p>The private IP address of the instance.</p>
+    #[doc(hidden)]
     pub private_ip_address: std::option::Option<std::string::String>,
     /// <p>The public IP address of the instance.</p>
+    #[doc(hidden)]
     pub public_ip_address: std::option::Option<std::string::String>,
     /// <p>The IPv6 addresses of the instance.</p>
+    #[doc(hidden)]
     pub ipv6_addresses: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The IP address type of the instance.</p>
     /// <p>The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.</p>
+    #[doc(hidden)]
     pub ip_address_type: std::option::Option<crate::model::IpAddressType>,
     /// <p>The size of the vCPU and the amount of RAM for the instance.</p>
+    #[doc(hidden)]
     pub hardware: std::option::Option<crate::model::InstanceHardware>,
     /// <p>Information about the public ports and monthly data transfer rates for the instance.</p>
+    #[doc(hidden)]
     pub networking: std::option::Option<crate::model::InstanceNetworking>,
     /// <p>The status code and the state (e.g., <code>running</code>) for the instance.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::InstanceState>,
     /// <p>The user name for connecting to the instance (e.g., <code>ec2-user</code>).</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>The name of the SSH key being used to connect to the instance (e.g., <code>LightsailDefaultKeyPair</code>).</p>
+    #[doc(hidden)]
     pub ssh_key_name: std::option::Option<std::string::String>,
 }
 impl Instance {
@@ -14196,11 +14508,10 @@ impl std::fmt::Debug for Instance {
         formatter.finish()
     }
 }
-/// See [`Instance`](crate::model::Instance)
+/// See [`Instance`](crate::model::Instance).
 pub mod instance {
 
-    /// A builder for [`Instance`](crate::model::Instance)
-    #[non_exhaustive]
+    /// A builder for [`Instance`](crate::model::Instance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -14495,7 +14806,7 @@ pub mod instance {
             self.ssh_key_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance)
+        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance).
         pub fn build(self) -> crate::model::Instance {
             crate::model::Instance {
                 name: self.name,
@@ -14524,7 +14835,7 @@ pub mod instance {
     }
 }
 impl Instance {
-    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance)
+    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance).
     pub fn builder() -> crate::model::instance::Builder {
         crate::model::instance::Builder::default()
     }
@@ -14535,8 +14846,10 @@ impl Instance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceNetworking {
     /// <p>The amount of data in GB allocated for monthly data transfers.</p>
+    #[doc(hidden)]
     pub monthly_transfer: std::option::Option<crate::model::MonthlyTransfer>,
     /// <p>An array of key-value pairs containing information about the ports on the instance.</p>
+    #[doc(hidden)]
     pub ports: std::option::Option<std::vec::Vec<crate::model::InstancePortInfo>>,
 }
 impl InstanceNetworking {
@@ -14557,11 +14870,10 @@ impl std::fmt::Debug for InstanceNetworking {
         formatter.finish()
     }
 }
-/// See [`InstanceNetworking`](crate::model::InstanceNetworking)
+/// See [`InstanceNetworking`](crate::model::InstanceNetworking).
 pub mod instance_networking {
 
-    /// A builder for [`InstanceNetworking`](crate::model::InstanceNetworking)
-    #[non_exhaustive]
+    /// A builder for [`InstanceNetworking`](crate::model::InstanceNetworking).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) monthly_transfer: std::option::Option<crate::model::MonthlyTransfer>,
@@ -14600,7 +14912,7 @@ pub mod instance_networking {
             self.ports = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceNetworking`](crate::model::InstanceNetworking)
+        /// Consumes the builder and constructs a [`InstanceNetworking`](crate::model::InstanceNetworking).
         pub fn build(self) -> crate::model::InstanceNetworking {
             crate::model::InstanceNetworking {
                 monthly_transfer: self.monthly_transfer,
@@ -14610,7 +14922,7 @@ pub mod instance_networking {
     }
 }
 impl InstanceNetworking {
-    /// Creates a new builder-style object to manufacture [`InstanceNetworking`](crate::model::InstanceNetworking)
+    /// Creates a new builder-style object to manufacture [`InstanceNetworking`](crate::model::InstanceNetworking).
     pub fn builder() -> crate::model::instance_networking::Builder {
         crate::model::instance_networking::Builder::default()
     }
@@ -14627,6 +14939,7 @@ pub struct InstancePortInfo {
     /// <li> <p>ICMP - The ICMP type for IPv4 addresses. For example, specify <code>8</code> as the <code>fromPort</code> (ICMP type), and <code>-1</code> as the <code>toPort</code> (ICMP code), to enable ICMP Ping. For more information, see <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages">Control Messages</a> on <i>Wikipedia</i>.</p> </li>
     /// <li> <p>ICMPv6 - The ICMP type for IPv6 addresses. For example, specify <code>128</code> as the <code>fromPort</code> (ICMPv6 type), and <code>0</code> as <code>toPort</code> (ICMPv6 code). For more information, see <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol_for_IPv6">Internet Control Message Protocol for IPv6</a>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub from_port: i32,
     /// <p>The last port in a range of open ports on an instance.</p>
     /// <p>Allowed ports:</p>
@@ -14635,6 +14948,7 @@ pub struct InstancePortInfo {
     /// <li> <p>ICMP - The ICMP code for IPv4 addresses. For example, specify <code>8</code> as the <code>fromPort</code> (ICMP type), and <code>-1</code> as the <code>toPort</code> (ICMP code), to enable ICMP Ping. For more information, see <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages">Control Messages</a> on <i>Wikipedia</i>.</p> </li>
     /// <li> <p>ICMPv6 - The ICMP code for IPv6 addresses. For example, specify <code>128</code> as the <code>fromPort</code> (ICMPv6 type), and <code>0</code> as <code>toPort</code> (ICMPv6 code). For more information, see <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol_for_IPv6">Internet Control Message Protocol for IPv6</a>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub to_port: i32,
     /// <p>The IP protocol name.</p>
     /// <p>The name can be one of the following:</p>
@@ -14644,29 +14958,37 @@ pub struct InstancePortInfo {
     /// <li> <p> <code>udp</code> - With User Datagram Protocol (UDP), computer applications can send messages (or datagrams) to other hosts on an Internet Protocol (IP) network. Prior communications are not required to set up transmission channels or data paths. Applications that don't require reliable data stream service can use UDP, which provides a connectionless datagram service that emphasizes reduced latency over reliability. If you do require reliable data stream service, use TCP instead.</p> </li>
     /// <li> <p> <code>icmp</code> - Internet Control Message Protocol (ICMP) is used to send error messages and operational information indicating success or failure when communicating with an instance. For example, an error is indicated when an instance could not be reached. When you specify <code>icmp</code> as the <code>protocol</code>, you must specify the ICMP type using the <code>fromPort</code> parameter, and ICMP code using the <code>toPort</code> parameter.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub protocol: std::option::Option<crate::model::NetworkProtocol>,
     /// <p>The location from which access is allowed. For example, <code>Anywhere (0.0.0.0/0)</code>, or <code>Custom</code> if a specific IP address or range of IP addresses is allowed.</p>
+    #[doc(hidden)]
     pub access_from: std::option::Option<std::string::String>,
     /// <p>The type of access (<code>Public</code> or <code>Private</code>).</p>
+    #[doc(hidden)]
     pub access_type: std::option::Option<crate::model::PortAccessType>,
     /// <p>The common name of the port information.</p>
+    #[doc(hidden)]
     pub common_name: std::option::Option<std::string::String>,
     /// <p>The access direction (<code>inbound</code> or <code>outbound</code>).</p> <note>
     /// <p>Lightsail currently supports only <code>inbound</code> access direction.</p>
     /// </note>
+    #[doc(hidden)]
     pub access_direction: std::option::Option<crate::model::AccessDirection>,
     /// <p>The IPv4 address, or range of IPv4 addresses (in CIDR notation) that are allowed to connect to an instance through the ports, and the protocol.</p> <note>
     /// <p>The <code>ipv6Cidrs</code> parameter lists the IPv6 addresses that are allowed to connect to an instance.</p>
     /// </note>
     /// <p>For more information about CIDR block notation, see <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">Classless Inter-Domain Routing</a> on <i>Wikipedia</i>.</p>
+    #[doc(hidden)]
     pub cidrs: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The IPv6 address, or range of IPv6 addresses (in CIDR notation) that are allowed to connect to an instance through the ports, and the protocol. Only devices with an IPv6 address can connect to an instance through IPv6; otherwise, IPv4 should be used.</p> <note>
     /// <p>The <code>cidrs</code> parameter lists the IPv4 addresses that are allowed to connect to an instance.</p>
     /// </note>
     /// <p>For more information about CIDR block notation, see <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">Classless Inter-Domain Routing</a> on <i>Wikipedia</i>.</p>
+    #[doc(hidden)]
     pub ipv6_cidrs: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An alias that defines access for a preconfigured range of IP addresses.</p>
     /// <p>The only alias currently supported is <code>lightsail-connect</code>, which allows IP addresses of the browser-based RDP/SSH client in the Lightsail console to connect to your instance.</p>
+    #[doc(hidden)]
     pub cidr_list_aliases: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl InstancePortInfo {
@@ -14755,11 +15077,10 @@ impl std::fmt::Debug for InstancePortInfo {
         formatter.finish()
     }
 }
-/// See [`InstancePortInfo`](crate::model::InstancePortInfo)
+/// See [`InstancePortInfo`](crate::model::InstancePortInfo).
 pub mod instance_port_info {
 
-    /// A builder for [`InstancePortInfo`](crate::model::InstancePortInfo)
-    #[non_exhaustive]
+    /// A builder for [`InstancePortInfo`](crate::model::InstancePortInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) from_port: std::option::Option<i32>,
@@ -14966,7 +15287,7 @@ pub mod instance_port_info {
             self.cidr_list_aliases = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstancePortInfo`](crate::model::InstancePortInfo)
+        /// Consumes the builder and constructs a [`InstancePortInfo`](crate::model::InstancePortInfo).
         pub fn build(self) -> crate::model::InstancePortInfo {
             crate::model::InstancePortInfo {
                 from_port: self.from_port.unwrap_or_default(),
@@ -14984,7 +15305,7 @@ pub mod instance_port_info {
     }
 }
 impl InstancePortInfo {
-    /// Creates a new builder-style object to manufacture [`InstancePortInfo`](crate::model::InstancePortInfo)
+    /// Creates a new builder-style object to manufacture [`InstancePortInfo`](crate::model::InstancePortInfo).
     pub fn builder() -> crate::model::instance_port_info::Builder {
         crate::model::instance_port_info::Builder::default()
     }
@@ -15105,6 +15426,7 @@ impl AsRef<str> for PortAccessType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MonthlyTransfer {
     /// <p>The amount allocated per month (in GB).</p>
+    #[doc(hidden)]
     pub gb_per_month_allocated: std::option::Option<i32>,
 }
 impl MonthlyTransfer {
@@ -15120,11 +15442,10 @@ impl std::fmt::Debug for MonthlyTransfer {
         formatter.finish()
     }
 }
-/// See [`MonthlyTransfer`](crate::model::MonthlyTransfer)
+/// See [`MonthlyTransfer`](crate::model::MonthlyTransfer).
 pub mod monthly_transfer {
 
-    /// A builder for [`MonthlyTransfer`](crate::model::MonthlyTransfer)
-    #[non_exhaustive]
+    /// A builder for [`MonthlyTransfer`](crate::model::MonthlyTransfer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gb_per_month_allocated: std::option::Option<i32>,
@@ -15140,7 +15461,7 @@ pub mod monthly_transfer {
             self.gb_per_month_allocated = input;
             self
         }
-        /// Consumes the builder and constructs a [`MonthlyTransfer`](crate::model::MonthlyTransfer)
+        /// Consumes the builder and constructs a [`MonthlyTransfer`](crate::model::MonthlyTransfer).
         pub fn build(self) -> crate::model::MonthlyTransfer {
             crate::model::MonthlyTransfer {
                 gb_per_month_allocated: self.gb_per_month_allocated,
@@ -15149,7 +15470,7 @@ pub mod monthly_transfer {
     }
 }
 impl MonthlyTransfer {
-    /// Creates a new builder-style object to manufacture [`MonthlyTransfer`](crate::model::MonthlyTransfer)
+    /// Creates a new builder-style object to manufacture [`MonthlyTransfer`](crate::model::MonthlyTransfer).
     pub fn builder() -> crate::model::monthly_transfer::Builder {
         crate::model::monthly_transfer::Builder::default()
     }
@@ -15160,10 +15481,13 @@ impl MonthlyTransfer {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceHardware {
     /// <p>The number of vCPUs the instance has.</p>
+    #[doc(hidden)]
     pub cpu_count: std::option::Option<i32>,
     /// <p>The disks attached to the instance.</p>
+    #[doc(hidden)]
     pub disks: std::option::Option<std::vec::Vec<crate::model::Disk>>,
     /// <p>The amount of RAM in GB on the instance (e.g., <code>1.0</code>).</p>
+    #[doc(hidden)]
     pub ram_size_in_gb: std::option::Option<f32>,
 }
 impl InstanceHardware {
@@ -15189,11 +15513,10 @@ impl std::fmt::Debug for InstanceHardware {
         formatter.finish()
     }
 }
-/// See [`InstanceHardware`](crate::model::InstanceHardware)
+/// See [`InstanceHardware`](crate::model::InstanceHardware).
 pub mod instance_hardware {
 
-    /// A builder for [`InstanceHardware`](crate::model::InstanceHardware)
-    #[non_exhaustive]
+    /// A builder for [`InstanceHardware`](crate::model::InstanceHardware).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cpu_count: std::option::Option<i32>,
@@ -15240,7 +15563,7 @@ pub mod instance_hardware {
             self.ram_size_in_gb = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceHardware`](crate::model::InstanceHardware)
+        /// Consumes the builder and constructs a [`InstanceHardware`](crate::model::InstanceHardware).
         pub fn build(self) -> crate::model::InstanceHardware {
             crate::model::InstanceHardware {
                 cpu_count: self.cpu_count,
@@ -15251,7 +15574,7 @@ pub mod instance_hardware {
     }
 }
 impl InstanceHardware {
-    /// Creates a new builder-style object to manufacture [`InstanceHardware`](crate::model::InstanceHardware)
+    /// Creates a new builder-style object to manufacture [`InstanceHardware`](crate::model::InstanceHardware).
     pub fn builder() -> crate::model::instance_hardware::Builder {
         crate::model::instance_hardware::Builder::default()
     }
@@ -15268,6 +15591,7 @@ pub struct InstancePortState {
     /// <li> <p>ICMP - The ICMP type for IPv4 addresses. For example, specify <code>8</code> as the <code>fromPort</code> (ICMP type), and <code>-1</code> as the <code>toPort</code> (ICMP code), to enable ICMP Ping. For more information, see <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages">Control Messages</a> on <i>Wikipedia</i>.</p> </li>
     /// <li> <p>ICMPv6 - The ICMP type for IPv6 addresses. For example, specify <code>128</code> as the <code>fromPort</code> (ICMPv6 type), and <code>0</code> as <code>toPort</code> (ICMPv6 code). For more information, see <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol_for_IPv6">Internet Control Message Protocol for IPv6</a>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub from_port: i32,
     /// <p>The last port in a range of open ports on an instance.</p>
     /// <p>Allowed ports:</p>
@@ -15276,6 +15600,7 @@ pub struct InstancePortState {
     /// <li> <p>ICMP - The ICMP code for IPv4 addresses. For example, specify <code>8</code> as the <code>fromPort</code> (ICMP type), and <code>-1</code> as the <code>toPort</code> (ICMP code), to enable ICMP Ping. For more information, see <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages">Control Messages</a> on <i>Wikipedia</i>.</p> </li>
     /// <li> <p>ICMPv6 - The ICMP code for IPv6 addresses. For example, specify <code>128</code> as the <code>fromPort</code> (ICMPv6 type), and <code>0</code> as <code>toPort</code> (ICMPv6 code). For more information, see <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol_for_IPv6">Internet Control Message Protocol for IPv6</a>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub to_port: i32,
     /// <p>The IP protocol name.</p>
     /// <p>The name can be one of the following:</p>
@@ -15285,23 +15610,28 @@ pub struct InstancePortState {
     /// <li> <p> <code>udp</code> - With User Datagram Protocol (UDP), computer applications can send messages (or datagrams) to other hosts on an Internet Protocol (IP) network. Prior communications are not required to set up transmission channels or data paths. Applications that don't require reliable data stream service can use UDP, which provides a connectionless datagram service that emphasizes reduced latency over reliability. If you do require reliable data stream service, use TCP instead.</p> </li>
     /// <li> <p> <code>icmp</code> - Internet Control Message Protocol (ICMP) is used to send error messages and operational information indicating success or failure when communicating with an instance. For example, an error is indicated when an instance could not be reached. When you specify <code>icmp</code> as the <code>protocol</code>, you must specify the ICMP type using the <code>fromPort</code> parameter, and ICMP code using the <code>toPort</code> parameter.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub protocol: std::option::Option<crate::model::NetworkProtocol>,
     /// <p>Specifies whether the instance port is <code>open</code> or <code>closed</code>.</p> <note>
     /// <p>The port state for Lightsail instances is always <code>open</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::PortState>,
     /// <p>The IPv4 address, or range of IPv4 addresses (in CIDR notation) that are allowed to connect to an instance through the ports, and the protocol.</p> <note>
     /// <p>The <code>ipv6Cidrs</code> parameter lists the IPv6 addresses that are allowed to connect to an instance.</p>
     /// </note>
     /// <p>For more information about CIDR block notation, see <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">Classless Inter-Domain Routing</a> on <i>Wikipedia</i>.</p>
+    #[doc(hidden)]
     pub cidrs: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The IPv6 address, or range of IPv6 addresses (in CIDR notation) that are allowed to connect to an instance through the ports, and the protocol. Only devices with an IPv6 address can connect to an instance through IPv6; otherwise, IPv4 should be used.</p> <note>
     /// <p>The <code>cidrs</code> parameter lists the IPv4 addresses that are allowed to connect to an instance.</p>
     /// </note>
     /// <p>For more information about CIDR block notation, see <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">Classless Inter-Domain Routing</a> on <i>Wikipedia</i>.</p>
+    #[doc(hidden)]
     pub ipv6_cidrs: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An alias that defines access for a preconfigured range of IP addresses.</p>
     /// <p>The only alias currently supported is <code>lightsail-connect</code>, which allows IP addresses of the browser-based RDP/SSH client in the Lightsail console to connect to your instance.</p>
+    #[doc(hidden)]
     pub cidr_list_aliases: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl InstancePortState {
@@ -15375,11 +15705,10 @@ impl std::fmt::Debug for InstancePortState {
         formatter.finish()
     }
 }
-/// See [`InstancePortState`](crate::model::InstancePortState)
+/// See [`InstancePortState`](crate::model::InstancePortState).
 pub mod instance_port_state {
 
-    /// A builder for [`InstancePortState`](crate::model::InstancePortState)
-    #[non_exhaustive]
+    /// A builder for [`InstancePortState`](crate::model::InstancePortState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) from_port: std::option::Option<i32>,
@@ -15547,7 +15876,7 @@ pub mod instance_port_state {
             self.cidr_list_aliases = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstancePortState`](crate::model::InstancePortState)
+        /// Consumes the builder and constructs a [`InstancePortState`](crate::model::InstancePortState).
         pub fn build(self) -> crate::model::InstancePortState {
             crate::model::InstancePortState {
                 from_port: self.from_port.unwrap_or_default(),
@@ -15562,7 +15891,7 @@ pub mod instance_port_state {
     }
 }
 impl InstancePortState {
-    /// Creates a new builder-style object to manufacture [`InstancePortState`](crate::model::InstancePortState)
+    /// Creates a new builder-style object to manufacture [`InstancePortState`](crate::model::InstancePortState).
     pub fn builder() -> crate::model::instance_port_state::Builder {
         crate::model::instance_port_state::Builder::default()
     }
@@ -15716,27 +16045,37 @@ impl AsRef<str> for InstanceMetricName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceAccessDetails {
     /// <p>For SSH access, the public key to use when accessing your instance For OpenSSH clients (e.g., command line SSH), you should save this value to <code>tempkey-cert.pub</code>.</p>
+    #[doc(hidden)]
     pub cert_key: std::option::Option<std::string::String>,
     /// <p>For SSH access, the date on which the temporary keys expire.</p>
+    #[doc(hidden)]
     pub expires_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The public IP address of the Amazon Lightsail instance.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>For RDP access, the password for your Amazon Lightsail instance. Password will be an empty string if the password for your new instance is not ready yet. When you create an instance, it can take up to 15 minutes for the instance to be ready.</p> <note>
     /// <p>If you create an instance using any key pair other than the default (<code>LightsailDefaultKeyPair</code>), <code>password</code> will always be an empty string.</p>
     /// <p>If you change the Administrator password on the instance, Lightsail will continue to return the original password value. When accessing the instance using RDP, you need to manually enter the Administrator password after changing it from the default.</p>
     /// </note>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>For a Windows Server-based instance, an object with the data you can use to retrieve your password. This is only needed if <code>password</code> is empty and the instance is not new (and therefore the password is not ready yet). When you create an instance, it can take up to 15 minutes for the instance to be ready.</p>
+    #[doc(hidden)]
     pub password_data: std::option::Option<crate::model::PasswordData>,
     /// <p>For SSH access, the temporary private key. For OpenSSH clients (e.g., command line SSH), you should save this value to <code>tempkey</code>).</p>
+    #[doc(hidden)]
     pub private_key: std::option::Option<std::string::String>,
     /// <p>The protocol for these Amazon Lightsail instance access details.</p>
+    #[doc(hidden)]
     pub protocol: std::option::Option<crate::model::InstanceAccessProtocol>,
     /// <p>The name of this Amazon Lightsail instance.</p>
+    #[doc(hidden)]
     pub instance_name: std::option::Option<std::string::String>,
     /// <p>The user name to use when logging in to the Amazon Lightsail instance.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>Describes the public SSH host keys or the RDP certificate.</p>
+    #[doc(hidden)]
     pub host_keys: std::option::Option<std::vec::Vec<crate::model::HostKeyAttributes>>,
 }
 impl InstanceAccessDetails {
@@ -15800,11 +16139,10 @@ impl std::fmt::Debug for InstanceAccessDetails {
         formatter.finish()
     }
 }
-/// See [`InstanceAccessDetails`](crate::model::InstanceAccessDetails)
+/// See [`InstanceAccessDetails`](crate::model::InstanceAccessDetails).
 pub mod instance_access_details {
 
-    /// A builder for [`InstanceAccessDetails`](crate::model::InstanceAccessDetails)
-    #[non_exhaustive]
+    /// A builder for [`InstanceAccessDetails`](crate::model::InstanceAccessDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cert_key: std::option::Option<std::string::String>,
@@ -15946,7 +16284,7 @@ pub mod instance_access_details {
             self.host_keys = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceAccessDetails`](crate::model::InstanceAccessDetails)
+        /// Consumes the builder and constructs a [`InstanceAccessDetails`](crate::model::InstanceAccessDetails).
         pub fn build(self) -> crate::model::InstanceAccessDetails {
             crate::model::InstanceAccessDetails {
                 cert_key: self.cert_key,
@@ -15964,7 +16302,7 @@ pub mod instance_access_details {
     }
 }
 impl InstanceAccessDetails {
-    /// Creates a new builder-style object to manufacture [`InstanceAccessDetails`](crate::model::InstanceAccessDetails)
+    /// Creates a new builder-style object to manufacture [`InstanceAccessDetails`](crate::model::InstanceAccessDetails).
     pub fn builder() -> crate::model::instance_access_details::Builder {
         crate::model::instance_access_details::Builder::default()
     }
@@ -15976,28 +16314,35 @@ impl InstanceAccessDetails {
 pub struct HostKeyAttributes {
     /// <p>The SSH host key algorithm or the RDP certificate format.</p>
     /// <p>For SSH host keys, the algorithm may be <code>ssh-rsa</code>, <code>ecdsa-sha2-nistp256</code>, <code>ssh-ed25519</code>, etc. For RDP certificates, the algorithm is always <code>x509-cert</code>.</p>
+    #[doc(hidden)]
     pub algorithm: std::option::Option<std::string::String>,
     /// <p>The public SSH host key or the RDP certificate.</p>
+    #[doc(hidden)]
     pub public_key: std::option::Option<std::string::String>,
     /// <p>The time that the SSH host key or RDP certificate was recorded by Lightsail.</p>
+    #[doc(hidden)]
     pub witnessed_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The SHA-1 fingerprint of the returned SSH host key or RDP certificate.</p>
     /// <ul>
     /// <li> <p>Example of an SHA-1 SSH fingerprint:</p> <p> <code>SHA1:1CHH6FaAaXjtFOsR/t83vf91SR0</code> </p> </li>
     /// <li> <p>Example of an SHA-1 RDP fingerprint:</p> <p> <code>af:34:51:fe:09:f0:e0:da:b8:4e:56:ca:60:c2:10:ff:38:06:db:45</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub fingerprint_sha1: std::option::Option<std::string::String>,
     /// <p>The SHA-256 fingerprint of the returned SSH host key or RDP certificate.</p>
     /// <ul>
     /// <li> <p>Example of an SHA-256 SSH fingerprint:</p> <p> <code>SHA256:KTsMnRBh1IhD17HpdfsbzeGA4jOijm5tyXsMjKVbB8o</code> </p> </li>
     /// <li> <p>Example of an SHA-256 RDP fingerprint:</p> <p> <code>03:9b:36:9f:4b:de:4e:61:70:fc:7c:c9:78:e7:d2:1a:1c:25:a8:0c:91:f6:7c:e4:d6:a0:85:c8:b4:53:99:68</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub fingerprint_sha256: std::option::Option<std::string::String>,
     /// <p>The returned RDP certificate is valid after this point in time.</p>
     /// <p>This value is listed only for RDP certificates.</p>
+    #[doc(hidden)]
     pub not_valid_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The returned RDP certificate is not valid after this point in time.</p>
     /// <p>This value is listed only for RDP certificates.</p>
+    #[doc(hidden)]
     pub not_valid_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl HostKeyAttributes {
@@ -16054,11 +16399,10 @@ impl std::fmt::Debug for HostKeyAttributes {
         formatter.finish()
     }
 }
-/// See [`HostKeyAttributes`](crate::model::HostKeyAttributes)
+/// See [`HostKeyAttributes`](crate::model::HostKeyAttributes).
 pub mod host_key_attributes {
 
-    /// A builder for [`HostKeyAttributes`](crate::model::HostKeyAttributes)
-    #[non_exhaustive]
+    /// A builder for [`HostKeyAttributes`](crate::model::HostKeyAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) algorithm: std::option::Option<std::string::String>,
@@ -16177,7 +16521,7 @@ pub mod host_key_attributes {
             self.not_valid_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`HostKeyAttributes`](crate::model::HostKeyAttributes)
+        /// Consumes the builder and constructs a [`HostKeyAttributes`](crate::model::HostKeyAttributes).
         pub fn build(self) -> crate::model::HostKeyAttributes {
             crate::model::HostKeyAttributes {
                 algorithm: self.algorithm,
@@ -16192,7 +16536,7 @@ pub mod host_key_attributes {
     }
 }
 impl HostKeyAttributes {
-    /// Creates a new builder-style object to manufacture [`HostKeyAttributes`](crate::model::HostKeyAttributes)
+    /// Creates a new builder-style object to manufacture [`HostKeyAttributes`](crate::model::HostKeyAttributes).
     pub fn builder() -> crate::model::host_key_attributes::Builder {
         crate::model::host_key_attributes::Builder::default()
     }
@@ -16262,9 +16606,11 @@ pub struct PasswordData {
     /// <p>If you are using a custom key pair, you need to use your own means of decryption.</p>
     /// <p>If you change the Administrator password on the instance, Lightsail will continue to return the original ciphertext value. When accessing the instance using RDP, you need to manually enter the Administrator password after changing it from the default.</p>
     /// </note>
+    #[doc(hidden)]
     pub ciphertext: std::option::Option<std::string::String>,
     /// <p>The name of the key pair that you used when creating your instance. If no key pair name was specified when creating the instance, Lightsail uses the default key pair (<code>LightsailDefaultKeyPair</code>).</p>
     /// <p>If you are using a custom key pair, you need to use your own means of decrypting your password using the <code>ciphertext</code>. Lightsail creates the ciphertext by encrypting your password with the public key part of this key pair.</p>
+    #[doc(hidden)]
     pub key_pair_name: std::option::Option<std::string::String>,
 }
 impl PasswordData {
@@ -16290,11 +16636,10 @@ impl std::fmt::Debug for PasswordData {
         formatter.finish()
     }
 }
-/// See [`PasswordData`](crate::model::PasswordData)
+/// See [`PasswordData`](crate::model::PasswordData).
 pub mod password_data {
 
-    /// A builder for [`PasswordData`](crate::model::PasswordData)
-    #[non_exhaustive]
+    /// A builder for [`PasswordData`](crate::model::PasswordData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ciphertext: std::option::Option<std::string::String>,
@@ -16334,7 +16679,7 @@ pub mod password_data {
             self.key_pair_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`PasswordData`](crate::model::PasswordData)
+        /// Consumes the builder and constructs a [`PasswordData`](crate::model::PasswordData).
         pub fn build(self) -> crate::model::PasswordData {
             crate::model::PasswordData {
                 ciphertext: self.ciphertext,
@@ -16344,7 +16689,7 @@ pub mod password_data {
     }
 }
 impl PasswordData {
-    /// Creates a new builder-style object to manufacture [`PasswordData`](crate::model::PasswordData)
+    /// Creates a new builder-style object to manufacture [`PasswordData`](crate::model::PasswordData).
     pub fn builder() -> crate::model::password_data::Builder {
         crate::model::password_data::Builder::default()
     }
@@ -16355,20 +16700,28 @@ impl PasswordData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportSnapshotRecord {
     /// <p>The export snapshot record name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the export snapshot record.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date when the export snapshot record was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The AWS Region and Availability Zone where the export snapshot record is located.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The state of the export snapshot record.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::RecordState>,
     /// <p>A list of objects describing the source of the export snapshot record.</p>
+    #[doc(hidden)]
     pub source_info: std::option::Option<crate::model::ExportSnapshotRecordSourceInfo>,
     /// <p>A list of objects describing the destination of the export snapshot record.</p>
+    #[doc(hidden)]
     pub destination_info: std::option::Option<crate::model::DestinationInfo>,
 }
 impl ExportSnapshotRecord {
@@ -16421,11 +16774,10 @@ impl std::fmt::Debug for ExportSnapshotRecord {
         formatter.finish()
     }
 }
-/// See [`ExportSnapshotRecord`](crate::model::ExportSnapshotRecord)
+/// See [`ExportSnapshotRecord`](crate::model::ExportSnapshotRecord).
 pub mod export_snapshot_record {
 
-    /// A builder for [`ExportSnapshotRecord`](crate::model::ExportSnapshotRecord)
-    #[non_exhaustive]
+    /// A builder for [`ExportSnapshotRecord`](crate::model::ExportSnapshotRecord).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -16533,7 +16885,7 @@ pub mod export_snapshot_record {
             self.destination_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportSnapshotRecord`](crate::model::ExportSnapshotRecord)
+        /// Consumes the builder and constructs a [`ExportSnapshotRecord`](crate::model::ExportSnapshotRecord).
         pub fn build(self) -> crate::model::ExportSnapshotRecord {
             crate::model::ExportSnapshotRecord {
                 name: self.name,
@@ -16549,7 +16901,7 @@ pub mod export_snapshot_record {
     }
 }
 impl ExportSnapshotRecord {
-    /// Creates a new builder-style object to manufacture [`ExportSnapshotRecord`](crate::model::ExportSnapshotRecord)
+    /// Creates a new builder-style object to manufacture [`ExportSnapshotRecord`](crate::model::ExportSnapshotRecord).
     pub fn builder() -> crate::model::export_snapshot_record::Builder {
         crate::model::export_snapshot_record::Builder::default()
     }
@@ -16560,8 +16912,10 @@ impl ExportSnapshotRecord {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DestinationInfo {
     /// <p>The ID of the resource created at the destination.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The destination service of the record.</p>
+    #[doc(hidden)]
     pub service: std::option::Option<std::string::String>,
 }
 impl DestinationInfo {
@@ -16582,11 +16936,10 @@ impl std::fmt::Debug for DestinationInfo {
         formatter.finish()
     }
 }
-/// See [`DestinationInfo`](crate::model::DestinationInfo)
+/// See [`DestinationInfo`](crate::model::DestinationInfo).
 pub mod destination_info {
 
-    /// A builder for [`DestinationInfo`](crate::model::DestinationInfo)
-    #[non_exhaustive]
+    /// A builder for [`DestinationInfo`](crate::model::DestinationInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -16613,7 +16966,7 @@ pub mod destination_info {
             self.service = input;
             self
         }
-        /// Consumes the builder and constructs a [`DestinationInfo`](crate::model::DestinationInfo)
+        /// Consumes the builder and constructs a [`DestinationInfo`](crate::model::DestinationInfo).
         pub fn build(self) -> crate::model::DestinationInfo {
             crate::model::DestinationInfo {
                 id: self.id,
@@ -16623,7 +16976,7 @@ pub mod destination_info {
     }
 }
 impl DestinationInfo {
-    /// Creates a new builder-style object to manufacture [`DestinationInfo`](crate::model::DestinationInfo)
+    /// Creates a new builder-style object to manufacture [`DestinationInfo`](crate::model::DestinationInfo).
     pub fn builder() -> crate::model::destination_info::Builder {
         crate::model::destination_info::Builder::default()
     }
@@ -16634,20 +16987,28 @@ impl DestinationInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportSnapshotRecordSourceInfo {
     /// <p>The Lightsail resource type (e.g., <code>InstanceSnapshot</code> or <code>DiskSnapshot</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ExportSnapshotRecordSourceType>,
     /// <p>The date when the source instance or disk snapshot was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the source instance or disk snapshot.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the source instance or disk snapshot.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the snapshot's source instance or disk.</p>
+    #[doc(hidden)]
     pub from_resource_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the snapshot's source instance or disk.</p>
+    #[doc(hidden)]
     pub from_resource_arn: std::option::Option<std::string::String>,
     /// <p>A list of objects describing an instance snapshot.</p>
+    #[doc(hidden)]
     pub instance_snapshot_info: std::option::Option<crate::model::InstanceSnapshotInfo>,
     /// <p>A list of objects describing a disk snapshot.</p>
+    #[doc(hidden)]
     pub disk_snapshot_info: std::option::Option<crate::model::DiskSnapshotInfo>,
 }
 impl ExportSnapshotRecordSourceInfo {
@@ -16702,11 +17063,10 @@ impl std::fmt::Debug for ExportSnapshotRecordSourceInfo {
         formatter.finish()
     }
 }
-/// See [`ExportSnapshotRecordSourceInfo`](crate::model::ExportSnapshotRecordSourceInfo)
+/// See [`ExportSnapshotRecordSourceInfo`](crate::model::ExportSnapshotRecordSourceInfo).
 pub mod export_snapshot_record_source_info {
 
-    /// A builder for [`ExportSnapshotRecordSourceInfo`](crate::model::ExportSnapshotRecordSourceInfo)
-    #[non_exhaustive]
+    /// A builder for [`ExportSnapshotRecordSourceInfo`](crate::model::ExportSnapshotRecordSourceInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<crate::model::ExportSnapshotRecordSourceType>,
@@ -16820,7 +17180,7 @@ pub mod export_snapshot_record_source_info {
             self.disk_snapshot_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportSnapshotRecordSourceInfo`](crate::model::ExportSnapshotRecordSourceInfo)
+        /// Consumes the builder and constructs a [`ExportSnapshotRecordSourceInfo`](crate::model::ExportSnapshotRecordSourceInfo).
         pub fn build(self) -> crate::model::ExportSnapshotRecordSourceInfo {
             crate::model::ExportSnapshotRecordSourceInfo {
                 resource_type: self.resource_type,
@@ -16836,7 +17196,7 @@ pub mod export_snapshot_record_source_info {
     }
 }
 impl ExportSnapshotRecordSourceInfo {
-    /// Creates a new builder-style object to manufacture [`ExportSnapshotRecordSourceInfo`](crate::model::ExportSnapshotRecordSourceInfo)
+    /// Creates a new builder-style object to manufacture [`ExportSnapshotRecordSourceInfo`](crate::model::ExportSnapshotRecordSourceInfo).
     pub fn builder() -> crate::model::export_snapshot_record_source_info::Builder {
         crate::model::export_snapshot_record_source_info::Builder::default()
     }
@@ -16847,6 +17207,7 @@ impl ExportSnapshotRecordSourceInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DiskSnapshotInfo {
     /// <p>The size of the disk in GB (e.g., <code>32</code>).</p>
+    #[doc(hidden)]
     pub size_in_gb: std::option::Option<i32>,
 }
 impl DiskSnapshotInfo {
@@ -16862,11 +17223,10 @@ impl std::fmt::Debug for DiskSnapshotInfo {
         formatter.finish()
     }
 }
-/// See [`DiskSnapshotInfo`](crate::model::DiskSnapshotInfo)
+/// See [`DiskSnapshotInfo`](crate::model::DiskSnapshotInfo).
 pub mod disk_snapshot_info {
 
-    /// A builder for [`DiskSnapshotInfo`](crate::model::DiskSnapshotInfo)
-    #[non_exhaustive]
+    /// A builder for [`DiskSnapshotInfo`](crate::model::DiskSnapshotInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) size_in_gb: std::option::Option<i32>,
@@ -16882,7 +17242,7 @@ pub mod disk_snapshot_info {
             self.size_in_gb = input;
             self
         }
-        /// Consumes the builder and constructs a [`DiskSnapshotInfo`](crate::model::DiskSnapshotInfo)
+        /// Consumes the builder and constructs a [`DiskSnapshotInfo`](crate::model::DiskSnapshotInfo).
         pub fn build(self) -> crate::model::DiskSnapshotInfo {
             crate::model::DiskSnapshotInfo {
                 size_in_gb: self.size_in_gb,
@@ -16891,7 +17251,7 @@ pub mod disk_snapshot_info {
     }
 }
 impl DiskSnapshotInfo {
-    /// Creates a new builder-style object to manufacture [`DiskSnapshotInfo`](crate::model::DiskSnapshotInfo)
+    /// Creates a new builder-style object to manufacture [`DiskSnapshotInfo`](crate::model::DiskSnapshotInfo).
     pub fn builder() -> crate::model::disk_snapshot_info::Builder {
         crate::model::disk_snapshot_info::Builder::default()
     }
@@ -16902,10 +17262,13 @@ impl DiskSnapshotInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceSnapshotInfo {
     /// <p>The bundle ID from which the source instance was created (e.g., <code>micro_1_0</code>).</p>
+    #[doc(hidden)]
     pub from_bundle_id: std::option::Option<std::string::String>,
     /// <p>The blueprint ID from which the source instance (e.g., <code>os_debian_8_3</code>).</p>
+    #[doc(hidden)]
     pub from_blueprint_id: std::option::Option<std::string::String>,
     /// <p>A list of objects describing the disks that were attached to the source instance.</p>
+    #[doc(hidden)]
     pub from_disk_info: std::option::Option<std::vec::Vec<crate::model::DiskInfo>>,
 }
 impl InstanceSnapshotInfo {
@@ -16931,11 +17294,10 @@ impl std::fmt::Debug for InstanceSnapshotInfo {
         formatter.finish()
     }
 }
-/// See [`InstanceSnapshotInfo`](crate::model::InstanceSnapshotInfo)
+/// See [`InstanceSnapshotInfo`](crate::model::InstanceSnapshotInfo).
 pub mod instance_snapshot_info {
 
-    /// A builder for [`InstanceSnapshotInfo`](crate::model::InstanceSnapshotInfo)
-    #[non_exhaustive]
+    /// A builder for [`InstanceSnapshotInfo`](crate::model::InstanceSnapshotInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) from_bundle_id: std::option::Option<std::string::String>,
@@ -16988,7 +17350,7 @@ pub mod instance_snapshot_info {
             self.from_disk_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceSnapshotInfo`](crate::model::InstanceSnapshotInfo)
+        /// Consumes the builder and constructs a [`InstanceSnapshotInfo`](crate::model::InstanceSnapshotInfo).
         pub fn build(self) -> crate::model::InstanceSnapshotInfo {
             crate::model::InstanceSnapshotInfo {
                 from_bundle_id: self.from_bundle_id,
@@ -16999,7 +17361,7 @@ pub mod instance_snapshot_info {
     }
 }
 impl InstanceSnapshotInfo {
-    /// Creates a new builder-style object to manufacture [`InstanceSnapshotInfo`](crate::model::InstanceSnapshotInfo)
+    /// Creates a new builder-style object to manufacture [`InstanceSnapshotInfo`](crate::model::InstanceSnapshotInfo).
     pub fn builder() -> crate::model::instance_snapshot_info::Builder {
         crate::model::instance_snapshot_info::Builder::default()
     }
@@ -17010,12 +17372,16 @@ impl InstanceSnapshotInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DiskInfo {
     /// <p>The disk name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The disk path.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The size of the disk in GB (e.g., <code>32</code>).</p>
+    #[doc(hidden)]
     pub size_in_gb: std::option::Option<i32>,
     /// <p>A Boolean value indicating whether this disk is a system disk (has an operating system loaded on it).</p>
+    #[doc(hidden)]
     pub is_system_disk: std::option::Option<bool>,
 }
 impl DiskInfo {
@@ -17046,11 +17412,10 @@ impl std::fmt::Debug for DiskInfo {
         formatter.finish()
     }
 }
-/// See [`DiskInfo`](crate::model::DiskInfo)
+/// See [`DiskInfo`](crate::model::DiskInfo).
 pub mod disk_info {
 
-    /// A builder for [`DiskInfo`](crate::model::DiskInfo)
-    #[non_exhaustive]
+    /// A builder for [`DiskInfo`](crate::model::DiskInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -17099,7 +17464,7 @@ pub mod disk_info {
             self.is_system_disk = input;
             self
         }
-        /// Consumes the builder and constructs a [`DiskInfo`](crate::model::DiskInfo)
+        /// Consumes the builder and constructs a [`DiskInfo`](crate::model::DiskInfo).
         pub fn build(self) -> crate::model::DiskInfo {
             crate::model::DiskInfo {
                 name: self.name,
@@ -17111,7 +17476,7 @@ pub mod disk_info {
     }
 }
 impl DiskInfo {
-    /// Creates a new builder-style object to manufacture [`DiskInfo`](crate::model::DiskInfo)
+    /// Creates a new builder-style object to manufacture [`DiskInfo`](crate::model::DiskInfo).
     pub fn builder() -> crate::model::disk_info::Builder {
         crate::model::disk_info::Builder::default()
     }
@@ -17236,20 +17601,28 @@ impl AsRef<str> for RecordState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Domain {
     /// <p>The name of the domain.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the domain recordset (e.g., <code>arn:aws:lightsail:global:123456789101:Domain/824cede0-abc7-4f84-8dbc-12345EXAMPLE</code>).</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The support code. Include this code in your email to support when you have questions about an instance or another resource in Lightsail. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>The date when the domain recordset was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The AWS Region and Availability Zones where the domain recordset was created.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The resource type. </p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>An array of key-value pairs containing information about the domain entries.</p>
+    #[doc(hidden)]
     pub domain_entries: std::option::Option<std::vec::Vec<crate::model::DomainEntry>>,
 }
 impl Domain {
@@ -17300,11 +17673,10 @@ impl std::fmt::Debug for Domain {
         formatter.finish()
     }
 }
-/// See [`Domain`](crate::model::Domain)
+/// See [`Domain`](crate::model::Domain).
 pub mod domain {
 
-    /// A builder for [`Domain`](crate::model::Domain)
-    #[non_exhaustive]
+    /// A builder for [`Domain`](crate::model::Domain).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -17424,7 +17796,7 @@ pub mod domain {
             self.domain_entries = input;
             self
         }
-        /// Consumes the builder and constructs a [`Domain`](crate::model::Domain)
+        /// Consumes the builder and constructs a [`Domain`](crate::model::Domain).
         pub fn build(self) -> crate::model::Domain {
             crate::model::Domain {
                 name: self.name,
@@ -17440,7 +17812,7 @@ pub mod domain {
     }
 }
 impl Domain {
-    /// Creates a new builder-style object to manufacture [`Domain`](crate::model::Domain)
+    /// Creates a new builder-style object to manufacture [`Domain`](crate::model::Domain).
     pub fn builder() -> crate::model::domain::Builder {
         crate::model::domain::Builder::default()
     }
@@ -17451,49 +17823,69 @@ impl Domain {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LightsailDistribution {
     /// <p>The name of the distribution.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the distribution.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The support code. Include this code in your email to support when you have questions about your Lightsail distribution. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>The timestamp when the distribution was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An object that describes the location of the distribution, such as the Amazon Web Services Region and Availability Zone.</p> <note>
     /// <p>Lightsail distributions are global resources that can reference an origin in any Amazon Web Services Region, and distribute its content globally. However, all distributions are located in the <code>us-east-1</code> Region.</p>
     /// </note>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The Lightsail resource type (e.g., <code>Distribution</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The alternate domain names of the distribution.</p>
+    #[doc(hidden)]
     pub alternative_domain_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The status of the distribution.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>Indicates whether the distribution is enabled.</p>
+    #[doc(hidden)]
     pub is_enabled: std::option::Option<bool>,
     /// <p>The domain name of the distribution.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The ID of the bundle currently applied to the distribution.</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>The name of the SSL/TLS certificate attached to the distribution, if any.</p>
+    #[doc(hidden)]
     pub certificate_name: std::option::Option<std::string::String>,
     /// <p>An object that describes the origin resource of the distribution, such as a Lightsail instance, bucket, or load balancer.</p>
     /// <p>The distribution pulls, caches, and serves content from the origin.</p>
+    #[doc(hidden)]
     pub origin: std::option::Option<crate::model::Origin>,
     /// <p>The public DNS of the origin.</p>
+    #[doc(hidden)]
     pub origin_public_dns: std::option::Option<std::string::String>,
     /// <p>An object that describes the default cache behavior of the distribution.</p>
+    #[doc(hidden)]
     pub default_cache_behavior: std::option::Option<crate::model::CacheBehavior>,
     /// <p>An object that describes the cache behavior settings of the distribution.</p>
+    #[doc(hidden)]
     pub cache_behavior_settings: std::option::Option<crate::model::CacheSettings>,
     /// <p>An array of objects that describe the per-path cache behavior of the distribution.</p>
+    #[doc(hidden)]
     pub cache_behaviors: std::option::Option<std::vec::Vec<crate::model::CacheBehaviorPerPath>>,
     /// <p>Indicates whether the bundle that is currently applied to your distribution, specified using the <code>distributionName</code> parameter, can be changed to another bundle.</p>
     /// <p>Use the <code>UpdateDistributionBundle</code> action to change your distribution's bundle.</p>
+    #[doc(hidden)]
     pub able_to_update_bundle: std::option::Option<bool>,
     /// <p>The IP address type of the distribution.</p>
     /// <p>The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.</p>
+    #[doc(hidden)]
     pub ip_address_type: std::option::Option<crate::model::IpAddressType>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl LightsailDistribution {
@@ -17609,11 +18001,10 @@ impl std::fmt::Debug for LightsailDistribution {
         formatter.finish()
     }
 }
-/// See [`LightsailDistribution`](crate::model::LightsailDistribution)
+/// See [`LightsailDistribution`](crate::model::LightsailDistribution).
 pub mod lightsail_distribution {
 
-    /// A builder for [`LightsailDistribution`](crate::model::LightsailDistribution)
-    #[non_exhaustive]
+    /// A builder for [`LightsailDistribution`](crate::model::LightsailDistribution).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -17901,7 +18292,7 @@ pub mod lightsail_distribution {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`LightsailDistribution`](crate::model::LightsailDistribution)
+        /// Consumes the builder and constructs a [`LightsailDistribution`](crate::model::LightsailDistribution).
         pub fn build(self) -> crate::model::LightsailDistribution {
             crate::model::LightsailDistribution {
                 name: self.name,
@@ -17929,7 +18320,7 @@ pub mod lightsail_distribution {
     }
 }
 impl LightsailDistribution {
-    /// Creates a new builder-style object to manufacture [`LightsailDistribution`](crate::model::LightsailDistribution)
+    /// Creates a new builder-style object to manufacture [`LightsailDistribution`](crate::model::LightsailDistribution).
     pub fn builder() -> crate::model::lightsail_distribution::Builder {
         crate::model::lightsail_distribution::Builder::default()
     }
@@ -17941,12 +18332,16 @@ impl LightsailDistribution {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Origin {
     /// <p>The name of the origin resource.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The resource type of the origin resource (e.g., <i>Instance</i>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The AWS Region name of the origin resource.</p>
+    #[doc(hidden)]
     pub region_name: std::option::Option<crate::model::RegionName>,
     /// <p>The protocol that your Amazon Lightsail distribution uses when establishing a connection with your origin to pull content.</p>
+    #[doc(hidden)]
     pub protocol_policy: std::option::Option<crate::model::OriginProtocolPolicyEnum>,
 }
 impl Origin {
@@ -17977,11 +18372,10 @@ impl std::fmt::Debug for Origin {
         formatter.finish()
     }
 }
-/// See [`Origin`](crate::model::Origin)
+/// See [`Origin`](crate::model::Origin).
 pub mod origin {
 
-    /// A builder for [`Origin`](crate::model::Origin)
-    #[non_exhaustive]
+    /// A builder for [`Origin`](crate::model::Origin).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -18039,7 +18433,7 @@ pub mod origin {
             self.protocol_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`Origin`](crate::model::Origin)
+        /// Consumes the builder and constructs a [`Origin`](crate::model::Origin).
         pub fn build(self) -> crate::model::Origin {
             crate::model::Origin {
                 name: self.name,
@@ -18051,7 +18445,7 @@ pub mod origin {
     }
 }
 impl Origin {
-    /// Creates a new builder-style object to manufacture [`Origin`](crate::model::Origin)
+    /// Creates a new builder-style object to manufacture [`Origin`](crate::model::Origin).
     pub fn builder() -> crate::model::origin::Builder {
         crate::model::origin::Builder::default()
     }
@@ -18140,14 +18534,19 @@ impl AsRef<str> for DistributionMetricName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DistributionBundle {
     /// <p>The ID of the bundle.</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>The name of the distribution bundle.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The monthly price, in US dollars, of the bundle.</p>
+    #[doc(hidden)]
     pub price: std::option::Option<f32>,
     /// <p>The monthly network transfer quota of the bundle.</p>
+    #[doc(hidden)]
     pub transfer_per_month_in_gb: std::option::Option<i32>,
     /// <p>Indicates whether the bundle is active, and can be specified for a new or existing distribution.</p>
+    #[doc(hidden)]
     pub is_active: std::option::Option<bool>,
 }
 impl DistributionBundle {
@@ -18183,11 +18582,10 @@ impl std::fmt::Debug for DistributionBundle {
         formatter.finish()
     }
 }
-/// See [`DistributionBundle`](crate::model::DistributionBundle)
+/// See [`DistributionBundle`](crate::model::DistributionBundle).
 pub mod distribution_bundle {
 
-    /// A builder for [`DistributionBundle`](crate::model::DistributionBundle)
-    #[non_exhaustive]
+    /// A builder for [`DistributionBundle`](crate::model::DistributionBundle).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bundle_id: std::option::Option<std::string::String>,
@@ -18247,7 +18645,7 @@ pub mod distribution_bundle {
             self.is_active = input;
             self
         }
-        /// Consumes the builder and constructs a [`DistributionBundle`](crate::model::DistributionBundle)
+        /// Consumes the builder and constructs a [`DistributionBundle`](crate::model::DistributionBundle).
         pub fn build(self) -> crate::model::DistributionBundle {
             crate::model::DistributionBundle {
                 bundle_id: self.bundle_id,
@@ -18260,7 +18658,7 @@ pub mod distribution_bundle {
     }
 }
 impl DistributionBundle {
-    /// Creates a new builder-style object to manufacture [`DistributionBundle`](crate::model::DistributionBundle)
+    /// Creates a new builder-style object to manufacture [`DistributionBundle`](crate::model::DistributionBundle).
     pub fn builder() -> crate::model::distribution_bundle::Builder {
         crate::model::distribution_bundle::Builder::default()
     }
@@ -18271,34 +18669,49 @@ impl DistributionBundle {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DiskSnapshot {
     /// <p>The name of the disk snapshot (e.g., <code>my-disk-snapshot</code>).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the disk snapshot.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The support code. Include this code in your email to support when you have questions about an instance or another resource in Lightsail. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>The date when the disk snapshot was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The AWS Region and Availability Zone where the disk snapshot was created.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The Lightsail resource type (e.g., <code>DiskSnapshot</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The size of the disk in GB.</p>
+    #[doc(hidden)]
     pub size_in_gb: std::option::Option<i32>,
     /// <p>The status of the disk snapshot operation.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::DiskSnapshotState>,
     /// <p>The progress of the snapshot.</p>
+    #[doc(hidden)]
     pub progress: std::option::Option<std::string::String>,
     /// <p>The unique name of the source disk from which the disk snapshot was created.</p>
+    #[doc(hidden)]
     pub from_disk_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the source disk from which the disk snapshot was created.</p>
+    #[doc(hidden)]
     pub from_disk_arn: std::option::Option<std::string::String>,
     /// <p>The unique name of the source instance from which the disk (system volume) snapshot was created.</p>
+    #[doc(hidden)]
     pub from_instance_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the source instance from which the disk (system volume) snapshot was created.</p>
+    #[doc(hidden)]
     pub from_instance_arn: std::option::Option<std::string::String>,
     /// <p>A Boolean value indicating whether the snapshot was created from an automatic snapshot.</p>
+    #[doc(hidden)]
     pub is_from_auto_snapshot: std::option::Option<bool>,
 }
 impl DiskSnapshot {
@@ -18384,11 +18797,10 @@ impl std::fmt::Debug for DiskSnapshot {
         formatter.finish()
     }
 }
-/// See [`DiskSnapshot`](crate::model::DiskSnapshot)
+/// See [`DiskSnapshot`](crate::model::DiskSnapshot).
 pub mod disk_snapshot {
 
-    /// A builder for [`DiskSnapshot`](crate::model::DiskSnapshot)
-    #[non_exhaustive]
+    /// A builder for [`DiskSnapshot`](crate::model::DiskSnapshot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -18591,7 +19003,7 @@ pub mod disk_snapshot {
             self.is_from_auto_snapshot = input;
             self
         }
-        /// Consumes the builder and constructs a [`DiskSnapshot`](crate::model::DiskSnapshot)
+        /// Consumes the builder and constructs a [`DiskSnapshot`](crate::model::DiskSnapshot).
         pub fn build(self) -> crate::model::DiskSnapshot {
             crate::model::DiskSnapshot {
                 name: self.name,
@@ -18614,7 +19026,7 @@ pub mod disk_snapshot {
     }
 }
 impl DiskSnapshot {
-    /// Creates a new builder-style object to manufacture [`DiskSnapshot`](crate::model::DiskSnapshot)
+    /// Creates a new builder-style object to manufacture [`DiskSnapshot`](crate::model::DiskSnapshot).
     pub fn builder() -> crate::model::disk_snapshot::Builder {
         crate::model::disk_snapshot::Builder::default()
     }
@@ -18689,16 +19101,22 @@ impl AsRef<str> for DiskSnapshotState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerServicePower {
     /// <p>The ID of the power (e.g., <code>nano-1</code>).</p>
+    #[doc(hidden)]
     pub power_id: std::option::Option<std::string::String>,
     /// <p>The monthly price of the power in USD.</p>
+    #[doc(hidden)]
     pub price: std::option::Option<f32>,
     /// <p>The number of vCPUs included in the power.</p>
+    #[doc(hidden)]
     pub cpu_count: std::option::Option<f32>,
     /// <p>The amount of RAM (in GB) of the power.</p>
+    #[doc(hidden)]
     pub ram_size_in_gb: std::option::Option<f32>,
     /// <p>The friendly name of the power (e.g., <code>nano</code>).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A Boolean value indicating whether the power is active and can be specified for container services.</p>
+    #[doc(hidden)]
     pub is_active: std::option::Option<bool>,
 }
 impl ContainerServicePower {
@@ -18739,11 +19157,10 @@ impl std::fmt::Debug for ContainerServicePower {
         formatter.finish()
     }
 }
-/// See [`ContainerServicePower`](crate::model::ContainerServicePower)
+/// See [`ContainerServicePower`](crate::model::ContainerServicePower).
 pub mod container_service_power {
 
-    /// A builder for [`ContainerServicePower`](crate::model::ContainerServicePower)
-    #[non_exhaustive]
+    /// A builder for [`ContainerServicePower`](crate::model::ContainerServicePower).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) power_id: std::option::Option<std::string::String>,
@@ -18814,7 +19231,7 @@ pub mod container_service_power {
             self.is_active = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerServicePower`](crate::model::ContainerServicePower)
+        /// Consumes the builder and constructs a [`ContainerServicePower`](crate::model::ContainerServicePower).
         pub fn build(self) -> crate::model::ContainerServicePower {
             crate::model::ContainerServicePower {
                 power_id: self.power_id,
@@ -18828,7 +19245,7 @@ pub mod container_service_power {
     }
 }
 impl ContainerServicePower {
-    /// Creates a new builder-style object to manufacture [`ContainerServicePower`](crate::model::ContainerServicePower)
+    /// Creates a new builder-style object to manufacture [`ContainerServicePower`](crate::model::ContainerServicePower).
     pub fn builder() -> crate::model::container_service_power::Builder {
         crate::model::container_service_power::Builder::default()
     }
@@ -18894,8 +19311,10 @@ impl AsRef<str> for ContainerServiceMetricName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerServiceLogEvent {
     /// <p>The timestamp when the container service log event was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The message of the container service log event.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ContainerServiceLogEvent {
@@ -18916,11 +19335,10 @@ impl std::fmt::Debug for ContainerServiceLogEvent {
         formatter.finish()
     }
 }
-/// See [`ContainerServiceLogEvent`](crate::model::ContainerServiceLogEvent)
+/// See [`ContainerServiceLogEvent`](crate::model::ContainerServiceLogEvent).
 pub mod container_service_log_event {
 
-    /// A builder for [`ContainerServiceLogEvent`](crate::model::ContainerServiceLogEvent)
-    #[non_exhaustive]
+    /// A builder for [`ContainerServiceLogEvent`](crate::model::ContainerServiceLogEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) created_at: std::option::Option<aws_smithy_types::DateTime>,
@@ -18950,7 +19368,7 @@ pub mod container_service_log_event {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerServiceLogEvent`](crate::model::ContainerServiceLogEvent)
+        /// Consumes the builder and constructs a [`ContainerServiceLogEvent`](crate::model::ContainerServiceLogEvent).
         pub fn build(self) -> crate::model::ContainerServiceLogEvent {
             crate::model::ContainerServiceLogEvent {
                 created_at: self.created_at,
@@ -18960,7 +19378,7 @@ pub mod container_service_log_event {
     }
 }
 impl ContainerServiceLogEvent {
-    /// Creates a new builder-style object to manufacture [`ContainerServiceLogEvent`](crate::model::ContainerServiceLogEvent)
+    /// Creates a new builder-style object to manufacture [`ContainerServiceLogEvent`](crate::model::ContainerServiceLogEvent).
     pub fn builder() -> crate::model::container_service_log_event::Builder {
         crate::model::container_service_log_event::Builder::default()
     }
@@ -18972,6 +19390,7 @@ impl ContainerServiceLogEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContactMethod {
     /// <p>The destination of the contact method, such as an email address or a mobile phone number.</p>
+    #[doc(hidden)]
     pub contact_endpoint: std::option::Option<std::string::String>,
     /// <p>The current status of the contact method.</p>
     /// <p>A contact method has the following possible status:</p>
@@ -18980,20 +19399,28 @@ pub struct ContactMethod {
     /// <li> <p> <code>Valid</code> - The contact method has been verified.</p> </li>
     /// <li> <p> <code>InValid</code> - An attempt was made to verify the contact method, but the verification has expired.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ContactMethodStatus>,
     /// <p>The protocol of the contact method, such as email or SMS (text messaging).</p>
+    #[doc(hidden)]
     pub protocol: std::option::Option<crate::model::ContactProtocol>,
     /// <p>The name of the contact method.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the contact method.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The timestamp when the contact method was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An object that describes the location of the contact method, such as the Amazon Web Services Region and Availability Zone.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The Lightsail resource type (e.g., <code>ContactMethod</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The support code. Include this code in your email to support when you have questions about your Lightsail contact method. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
 }
 impl ContactMethod {
@@ -19055,11 +19482,10 @@ impl std::fmt::Debug for ContactMethod {
         formatter.finish()
     }
 }
-/// See [`ContactMethod`](crate::model::ContactMethod)
+/// See [`ContactMethod`](crate::model::ContactMethod).
 pub mod contact_method {
 
-    /// A builder for [`ContactMethod`](crate::model::ContactMethod)
-    #[non_exhaustive]
+    /// A builder for [`ContactMethod`](crate::model::ContactMethod).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) contact_endpoint: std::option::Option<std::string::String>,
@@ -19193,7 +19619,7 @@ pub mod contact_method {
             self.support_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContactMethod`](crate::model::ContactMethod)
+        /// Consumes the builder and constructs a [`ContactMethod`](crate::model::ContactMethod).
         pub fn build(self) -> crate::model::ContactMethod {
             crate::model::ContactMethod {
                 contact_endpoint: self.contact_endpoint,
@@ -19210,7 +19636,7 @@ pub mod contact_method {
     }
 }
 impl ContactMethod {
-    /// Creates a new builder-style object to manufacture [`ContactMethod`](crate::model::ContactMethod)
+    /// Creates a new builder-style object to manufacture [`ContactMethod`](crate::model::ContactMethod).
     pub fn builder() -> crate::model::contact_method::Builder {
         crate::model::contact_method::Builder::default()
     }
@@ -19281,21 +19707,29 @@ impl AsRef<str> for ContactMethodStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudFormationStackRecord {
     /// <p>The name of the CloudFormation stack record. It starts with <code>CloudFormationStackRecord</code> followed by a GUID.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the CloudFormation stack record.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date when the CloudFormation stack record was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of objects describing the Availability Zone and Amazon Web Services Region of the CloudFormation stack record.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The Lightsail resource type (e.g., <code>CloudFormationStackRecord</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The current state of the CloudFormation stack record.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::RecordState>,
     /// <p>A list of objects describing the source of the CloudFormation stack record.</p>
+    #[doc(hidden)]
     pub source_info:
         std::option::Option<std::vec::Vec<crate::model::CloudFormationStackRecordSourceInfo>>,
     /// <p>A list of objects describing the destination service, which is AWS CloudFormation, and the Amazon Resource Name (ARN) of the AWS CloudFormation stack.</p>
+    #[doc(hidden)]
     pub destination_info: std::option::Option<crate::model::DestinationInfo>,
 }
 impl CloudFormationStackRecord {
@@ -19348,11 +19782,10 @@ impl std::fmt::Debug for CloudFormationStackRecord {
         formatter.finish()
     }
 }
-/// See [`CloudFormationStackRecord`](crate::model::CloudFormationStackRecord)
+/// See [`CloudFormationStackRecord`](crate::model::CloudFormationStackRecord).
 pub mod cloud_formation_stack_record {
 
-    /// A builder for [`CloudFormationStackRecord`](crate::model::CloudFormationStackRecord)
-    #[non_exhaustive]
+    /// A builder for [`CloudFormationStackRecord`](crate::model::CloudFormationStackRecord).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -19472,7 +19905,7 @@ pub mod cloud_formation_stack_record {
             self.destination_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudFormationStackRecord`](crate::model::CloudFormationStackRecord)
+        /// Consumes the builder and constructs a [`CloudFormationStackRecord`](crate::model::CloudFormationStackRecord).
         pub fn build(self) -> crate::model::CloudFormationStackRecord {
             crate::model::CloudFormationStackRecord {
                 name: self.name,
@@ -19488,7 +19921,7 @@ pub mod cloud_formation_stack_record {
     }
 }
 impl CloudFormationStackRecord {
-    /// Creates a new builder-style object to manufacture [`CloudFormationStackRecord`](crate::model::CloudFormationStackRecord)
+    /// Creates a new builder-style object to manufacture [`CloudFormationStackRecord`](crate::model::CloudFormationStackRecord).
     pub fn builder() -> crate::model::cloud_formation_stack_record::Builder {
         crate::model::cloud_formation_stack_record::Builder::default()
     }
@@ -19499,10 +19932,13 @@ impl CloudFormationStackRecord {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudFormationStackRecordSourceInfo {
     /// <p>The Lightsail resource type (e.g., <code>ExportSnapshotRecord</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::CloudFormationStackRecordSourceType>,
     /// <p>The name of the record.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the export snapshot record.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl CloudFormationStackRecordSourceInfo {
@@ -19530,11 +19966,10 @@ impl std::fmt::Debug for CloudFormationStackRecordSourceInfo {
         formatter.finish()
     }
 }
-/// See [`CloudFormationStackRecordSourceInfo`](crate::model::CloudFormationStackRecordSourceInfo)
+/// See [`CloudFormationStackRecordSourceInfo`](crate::model::CloudFormationStackRecordSourceInfo).
 pub mod cloud_formation_stack_record_source_info {
 
-    /// A builder for [`CloudFormationStackRecordSourceInfo`](crate::model::CloudFormationStackRecordSourceInfo)
-    #[non_exhaustive]
+    /// A builder for [`CloudFormationStackRecordSourceInfo`](crate::model::CloudFormationStackRecordSourceInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type:
@@ -19579,7 +20014,7 @@ pub mod cloud_formation_stack_record_source_info {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudFormationStackRecordSourceInfo`](crate::model::CloudFormationStackRecordSourceInfo)
+        /// Consumes the builder and constructs a [`CloudFormationStackRecordSourceInfo`](crate::model::CloudFormationStackRecordSourceInfo).
         pub fn build(self) -> crate::model::CloudFormationStackRecordSourceInfo {
             crate::model::CloudFormationStackRecordSourceInfo {
                 resource_type: self.resource_type,
@@ -19590,7 +20025,7 @@ pub mod cloud_formation_stack_record_source_info {
     }
 }
 impl CloudFormationStackRecordSourceInfo {
-    /// Creates a new builder-style object to manufacture [`CloudFormationStackRecordSourceInfo`](crate::model::CloudFormationStackRecordSourceInfo)
+    /// Creates a new builder-style object to manufacture [`CloudFormationStackRecordSourceInfo`](crate::model::CloudFormationStackRecordSourceInfo).
     pub fn builder() -> crate::model::cloud_formation_stack_record_source_info::Builder {
         crate::model::cloud_formation_stack_record_source_info::Builder::default()
     }
@@ -19652,14 +20087,19 @@ impl AsRef<str> for CloudFormationStackRecordSourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CertificateSummary {
     /// <p>The Amazon Resource Name (ARN) of the certificate.</p>
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// <p>The name of the certificate.</p>
+    #[doc(hidden)]
     pub certificate_name: std::option::Option<std::string::String>,
     /// <p>The domain name of the certificate.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>An object that describes a certificate in detail.</p>
+    #[doc(hidden)]
     pub certificate_detail: std::option::Option<crate::model::Certificate>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl CertificateSummary {
@@ -19695,11 +20135,10 @@ impl std::fmt::Debug for CertificateSummary {
         formatter.finish()
     }
 }
-/// See [`CertificateSummary`](crate::model::CertificateSummary)
+/// See [`CertificateSummary`](crate::model::CertificateSummary).
 pub mod certificate_summary {
 
-    /// A builder for [`CertificateSummary`](crate::model::CertificateSummary)
-    #[non_exhaustive]
+    /// A builder for [`CertificateSummary`](crate::model::CertificateSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -19777,7 +20216,7 @@ pub mod certificate_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CertificateSummary`](crate::model::CertificateSummary)
+        /// Consumes the builder and constructs a [`CertificateSummary`](crate::model::CertificateSummary).
         pub fn build(self) -> crate::model::CertificateSummary {
             crate::model::CertificateSummary {
                 certificate_arn: self.certificate_arn,
@@ -19790,7 +20229,7 @@ pub mod certificate_summary {
     }
 }
 impl CertificateSummary {
-    /// Creates a new builder-style object to manufacture [`CertificateSummary`](crate::model::CertificateSummary)
+    /// Creates a new builder-style object to manufacture [`CertificateSummary`](crate::model::CertificateSummary).
     pub fn builder() -> crate::model::certificate_summary::Builder {
         crate::model::certificate_summary::Builder::default()
     }
@@ -19803,18 +20242,25 @@ impl CertificateSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Certificate {
     /// <p>The Amazon Resource Name (ARN) of the certificate.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the certificate (e.g., <code>my-certificate</code>).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The domain name of the certificate.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The validation status of the certificate.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CertificateStatus>,
     /// <p>The serial number of the certificate.</p>
+    #[doc(hidden)]
     pub serial_number: std::option::Option<std::string::String>,
     /// <p>An array of strings that specify the alternate domains (e.g., <code>example2.com</code>) and subdomains (e.g., <code>blog.example.com</code>) of the certificate.</p>
+    #[doc(hidden)]
     pub subject_alternative_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array of objects that describe the domain validation records of the certificate.</p>
+    #[doc(hidden)]
     pub domain_validation_records:
         std::option::Option<std::vec::Vec<crate::model::DomainValidationRecord>>,
     /// <p>The validation failure reason, if any, of the certificate.</p>
@@ -19828,32 +20274,46 @@ pub struct Certificate {
     /// <li> <p> <b> <code>INVALID_PUBLIC_DOMAIN</code> </b> - One or more of the domain names in the certificate request is not valid. Typically, this is because a domain name in the request is not a valid top-level domain. Try to request a certificate again, correcting any spelling errors or typos that were in the failed request, and ensure that all domain names in the request are for valid top-level domains. For example, you cannot request a certificate for <code>example.invalidpublicdomain</code> because <code>invalidpublicdomain</code> is not a valid top-level domain.</p> </li>
     /// <li> <p> <b> <code>OTHER</code> </b> - Typically, this failure occurs when there is a typographical error in one or more of the domain names in the certificate request. Try to request a certificate again, correcting any spelling errors or typos that were in the failed request. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub request_failure_reason: std::option::Option<std::string::String>,
     /// <p>The number of Lightsail resources that the certificate is attached to.</p>
+    #[doc(hidden)]
     pub in_use_resource_count: i32,
     /// <p>The algorithm used to generate the key pair (the public and private key) of the certificate.</p>
+    #[doc(hidden)]
     pub key_algorithm: std::option::Option<std::string::String>,
     /// <p>The timestamp when the certificate was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp when the certificate was issued.</p>
+    #[doc(hidden)]
     pub issued_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The certificate authority that issued the certificate.</p>
+    #[doc(hidden)]
     pub issuer_ca: std::option::Option<std::string::String>,
     /// <p>The timestamp when the certificate is first valid.</p>
+    #[doc(hidden)]
     pub not_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp when the certificate expires.</p>
+    #[doc(hidden)]
     pub not_after: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The renewal eligibility of the certificate.</p>
+    #[doc(hidden)]
     pub eligible_to_renew: std::option::Option<std::string::String>,
     /// <p>An object that describes the status of the certificate renewal managed by Lightsail.</p>
+    #[doc(hidden)]
     pub renewal_summary: std::option::Option<crate::model::RenewalSummary>,
     /// <p>The timestamp when the certificate was revoked. This value is present only when the certificate status is <code>REVOKED</code>.</p>
+    #[doc(hidden)]
     pub revoked_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The reason the certificate was revoked. This value is present only when the certificate status is <code>REVOKED</code>.</p>
+    #[doc(hidden)]
     pub revocation_reason: std::option::Option<std::string::String>,
     /// <p>The tag keys and optional values for the resource. For more information about tags in Lightsail, see the <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tags">Amazon Lightsail Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The support code. Include this code in your email to support when you have questions about your Lightsail certificate. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
 }
 impl Certificate {
@@ -19981,11 +20441,10 @@ impl std::fmt::Debug for Certificate {
         formatter.finish()
     }
 }
-/// See [`Certificate`](crate::model::Certificate)
+/// See [`Certificate`](crate::model::Certificate).
 pub mod certificate {
 
-    /// A builder for [`Certificate`](crate::model::Certificate)
-    #[non_exhaustive]
+    /// A builder for [`Certificate`](crate::model::Certificate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -20309,7 +20768,7 @@ pub mod certificate {
             self.support_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`Certificate`](crate::model::Certificate)
+        /// Consumes the builder and constructs a [`Certificate`](crate::model::Certificate).
         pub fn build(self) -> crate::model::Certificate {
             crate::model::Certificate {
                 arn: self.arn,
@@ -20338,7 +20797,7 @@ pub mod certificate {
     }
 }
 impl Certificate {
-    /// Creates a new builder-style object to manufacture [`Certificate`](crate::model::Certificate)
+    /// Creates a new builder-style object to manufacture [`Certificate`](crate::model::Certificate).
     pub fn builder() -> crate::model::certificate::Builder {
         crate::model::certificate::Builder::default()
     }
@@ -20349,6 +20808,7 @@ impl Certificate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RenewalSummary {
     /// <p>An array of objects that describe the domain validation records of the certificate.</p>
+    #[doc(hidden)]
     pub domain_validation_records:
         std::option::Option<std::vec::Vec<crate::model::DomainValidationRecord>>,
     /// <p>The renewal status of the certificate.</p>
@@ -20359,10 +20819,13 @@ pub struct RenewalSummary {
     /// <li> <p> <b> <code>Success</code> </b> - All domain names in the certificate are validated, and Lightsail renewed the certificate. No further action is required. </p> </li>
     /// <li> <p> <b> <code>Failed</code> </b> - One or more domain names were not validated before the certificate expired, and Lightsail did not renew the certificate. You can request a new certificate using the <code>CreateCertificate</code> action.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub renewal_status: std::option::Option<crate::model::RenewalStatus>,
     /// <p>The reason for the renewal status of the certificate.</p>
+    #[doc(hidden)]
     pub renewal_status_reason: std::option::Option<std::string::String>,
     /// <p>The timestamp when the certificate was last updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RenewalSummary {
@@ -20402,11 +20865,10 @@ impl std::fmt::Debug for RenewalSummary {
         formatter.finish()
     }
 }
-/// See [`RenewalSummary`](crate::model::RenewalSummary)
+/// See [`RenewalSummary`](crate::model::RenewalSummary).
 pub mod renewal_summary {
 
-    /// A builder for [`RenewalSummary`](crate::model::RenewalSummary)
-    #[non_exhaustive]
+    /// A builder for [`RenewalSummary`](crate::model::RenewalSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_validation_records:
@@ -20491,7 +20953,7 @@ pub mod renewal_summary {
             self.updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`RenewalSummary`](crate::model::RenewalSummary)
+        /// Consumes the builder and constructs a [`RenewalSummary`](crate::model::RenewalSummary).
         pub fn build(self) -> crate::model::RenewalSummary {
             crate::model::RenewalSummary {
                 domain_validation_records: self.domain_validation_records,
@@ -20503,7 +20965,7 @@ pub mod renewal_summary {
     }
 }
 impl RenewalSummary {
-    /// Creates a new builder-style object to manufacture [`RenewalSummary`](crate::model::RenewalSummary)
+    /// Creates a new builder-style object to manufacture [`RenewalSummary`](crate::model::RenewalSummary).
     pub fn builder() -> crate::model::renewal_summary::Builder {
         crate::model::renewal_summary::Builder::default()
     }
@@ -20582,8 +21044,10 @@ impl AsRef<str> for RenewalStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainValidationRecord {
     /// <p>The domain name of the certificate validation record. For example, <code>example.com</code> or <code>www.example.com</code>.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>An object that describes the DNS records to add to your domain's DNS to validate it for the certificate.</p>
+    #[doc(hidden)]
     pub resource_record: std::option::Option<crate::model::ResourceRecord>,
 }
 impl DomainValidationRecord {
@@ -20604,11 +21068,10 @@ impl std::fmt::Debug for DomainValidationRecord {
         formatter.finish()
     }
 }
-/// See [`DomainValidationRecord`](crate::model::DomainValidationRecord)
+/// See [`DomainValidationRecord`](crate::model::DomainValidationRecord).
 pub mod domain_validation_record {
 
-    /// A builder for [`DomainValidationRecord`](crate::model::DomainValidationRecord)
-    #[non_exhaustive]
+    /// A builder for [`DomainValidationRecord`](crate::model::DomainValidationRecord).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -20638,7 +21101,7 @@ pub mod domain_validation_record {
             self.resource_record = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainValidationRecord`](crate::model::DomainValidationRecord)
+        /// Consumes the builder and constructs a [`DomainValidationRecord`](crate::model::DomainValidationRecord).
         pub fn build(self) -> crate::model::DomainValidationRecord {
             crate::model::DomainValidationRecord {
                 domain_name: self.domain_name,
@@ -20648,7 +21111,7 @@ pub mod domain_validation_record {
     }
 }
 impl DomainValidationRecord {
-    /// Creates a new builder-style object to manufacture [`DomainValidationRecord`](crate::model::DomainValidationRecord)
+    /// Creates a new builder-style object to manufacture [`DomainValidationRecord`](crate::model::DomainValidationRecord).
     pub fn builder() -> crate::model::domain_validation_record::Builder {
         crate::model::domain_validation_record::Builder::default()
     }
@@ -20659,10 +21122,13 @@ impl DomainValidationRecord {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceRecord {
     /// <p>The name of the record.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The DNS record type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The value for the DNS record.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl ResourceRecord {
@@ -20688,11 +21154,10 @@ impl std::fmt::Debug for ResourceRecord {
         formatter.finish()
     }
 }
-/// See [`ResourceRecord`](crate::model::ResourceRecord)
+/// See [`ResourceRecord`](crate::model::ResourceRecord).
 pub mod resource_record {
 
-    /// A builder for [`ResourceRecord`](crate::model::ResourceRecord)
-    #[non_exhaustive]
+    /// A builder for [`ResourceRecord`](crate::model::ResourceRecord).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -20730,7 +21195,7 @@ pub mod resource_record {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceRecord`](crate::model::ResourceRecord)
+        /// Consumes the builder and constructs a [`ResourceRecord`](crate::model::ResourceRecord).
         pub fn build(self) -> crate::model::ResourceRecord {
             crate::model::ResourceRecord {
                 name: self.name,
@@ -20741,7 +21206,7 @@ pub mod resource_record {
     }
 }
 impl ResourceRecord {
-    /// Creates a new builder-style object to manufacture [`ResourceRecord`](crate::model::ResourceRecord)
+    /// Creates a new builder-style object to manufacture [`ResourceRecord`](crate::model::ResourceRecord).
     pub fn builder() -> crate::model::resource_record::Builder {
         crate::model::resource_record::Builder::default()
     }
@@ -20835,26 +21300,37 @@ impl AsRef<str> for CertificateStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Bundle {
     /// <p>The price in US dollars (e.g., <code>5.0</code>) of the bundle.</p>
+    #[doc(hidden)]
     pub price: std::option::Option<f32>,
     /// <p>The number of vCPUs included in the bundle (e.g., <code>2</code>).</p>
+    #[doc(hidden)]
     pub cpu_count: std::option::Option<i32>,
     /// <p>The size of the SSD (e.g., <code>30</code>).</p>
+    #[doc(hidden)]
     pub disk_size_in_gb: std::option::Option<i32>,
     /// <p>The bundle ID (e.g., <code>micro_1_0</code>).</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>The Amazon EC2 instance type (e.g., <code>t2.micro</code>).</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>A Boolean value indicating whether the bundle is active.</p>
+    #[doc(hidden)]
     pub is_active: std::option::Option<bool>,
     /// <p>A friendly name for the bundle (e.g., <code>Micro</code>).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A numeric value that represents the power of the bundle (e.g., <code>500</code>). You can use the bundle's power value in conjunction with a blueprint's minimum power value to determine whether the blueprint will run on the bundle. For example, you need a bundle with a power value of 500 or more to create an instance that uses a blueprint with a minimum power value of 500.</p>
+    #[doc(hidden)]
     pub power: std::option::Option<i32>,
     /// <p>The amount of RAM in GB (e.g., <code>2.0</code>).</p>
+    #[doc(hidden)]
     pub ram_size_in_gb: std::option::Option<f32>,
     /// <p>The data transfer rate per month in GB (e.g., <code>2000</code>).</p>
+    #[doc(hidden)]
     pub transfer_per_month_in_gb: std::option::Option<i32>,
     /// <p>The operating system platform (Linux/Unix-based or Windows Server-based) that the bundle supports. You can only launch a <code>WINDOWS</code> bundle on a blueprint that supports the <code>WINDOWS</code> platform. <code>LINUX_UNIX</code> blueprints require a <code>LINUX_UNIX</code> bundle.</p>
+    #[doc(hidden)]
     pub supported_platforms: std::option::Option<std::vec::Vec<crate::model::InstancePlatform>>,
 }
 impl Bundle {
@@ -20920,11 +21396,10 @@ impl std::fmt::Debug for Bundle {
         formatter.finish()
     }
 }
-/// See [`Bundle`](crate::model::Bundle)
+/// See [`Bundle`](crate::model::Bundle).
 pub mod bundle {
 
-    /// A builder for [`Bundle`](crate::model::Bundle)
-    #[non_exhaustive]
+    /// A builder for [`Bundle`](crate::model::Bundle).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) price: std::option::Option<f32>,
@@ -21063,7 +21538,7 @@ pub mod bundle {
             self.supported_platforms = input;
             self
         }
-        /// Consumes the builder and constructs a [`Bundle`](crate::model::Bundle)
+        /// Consumes the builder and constructs a [`Bundle`](crate::model::Bundle).
         pub fn build(self) -> crate::model::Bundle {
             crate::model::Bundle {
                 price: self.price,
@@ -21082,7 +21557,7 @@ pub mod bundle {
     }
 }
 impl Bundle {
-    /// Creates a new builder-style object to manufacture [`Bundle`](crate::model::Bundle)
+    /// Creates a new builder-style object to manufacture [`Bundle`](crate::model::Bundle).
     pub fn builder() -> crate::model::bundle::Builder {
         crate::model::bundle::Builder::default()
     }
@@ -21158,8 +21633,10 @@ pub struct AccountLevelBpaSync {
     /// </ul> <note>
     /// <p>You might need to complete further actions if the status is <code>Failed</code> or <code>Defaulted</code>. The <code>message</code> parameter provides more information for those statuses.</p>
     /// </note>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AccountLevelBpaSyncStatus>,
     /// <p>The timestamp of when the account-level BPA configuration was last synchronized. This value is null when the account-level BPA configuration has not been synchronized.</p>
+    #[doc(hidden)]
     pub last_synced_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A message that provides a reason for a <code>Failed</code> or <code>Defaulted</code> synchronization status.</p>
     /// <p>The following messages are possible:</p>
@@ -21169,8 +21646,10 @@ pub struct AccountLevelBpaSync {
     /// <li> <p> <code>DEFAULTED_FOR_SLR_MISSING_ON_HOLD</code> - The synchronization failed because the required service-linked role is missing from your Amazon Web Services account. Account-level BPA is not yet configured for your Lightsail buckets. Therefore, only the bucket access permissions and individual object access permissions apply to your Lightsail buckets. For more information about how to create the required service-linked role to allow synchronization, see <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-using-service-linked-roles">Using Service-Linked Roles for Amazon Lightsail</a> in the <i>Amazon Lightsail Developer Guide</i>.</p> </li>
     /// <li> <p> <code>Unknown</code> - The reason that synchronization failed is unknown. Contact Amazon Web Services Support for more information.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub message: std::option::Option<crate::model::BpaStatusMessage>,
     /// <p>A Boolean value that indicates whether account-level block public access is affecting your Lightsail buckets.</p>
+    #[doc(hidden)]
     pub bpa_impacts_lightsail: std::option::Option<bool>,
 }
 impl AccountLevelBpaSync {
@@ -21217,11 +21696,10 @@ impl std::fmt::Debug for AccountLevelBpaSync {
         formatter.finish()
     }
 }
-/// See [`AccountLevelBpaSync`](crate::model::AccountLevelBpaSync)
+/// See [`AccountLevelBpaSync`](crate::model::AccountLevelBpaSync).
 pub mod account_level_bpa_sync {
 
-    /// A builder for [`AccountLevelBpaSync`](crate::model::AccountLevelBpaSync)
-    #[non_exhaustive]
+    /// A builder for [`AccountLevelBpaSync`](crate::model::AccountLevelBpaSync).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::AccountLevelBpaSyncStatus>,
@@ -21311,7 +21789,7 @@ pub mod account_level_bpa_sync {
             self.bpa_impacts_lightsail = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountLevelBpaSync`](crate::model::AccountLevelBpaSync)
+        /// Consumes the builder and constructs a [`AccountLevelBpaSync`](crate::model::AccountLevelBpaSync).
         pub fn build(self) -> crate::model::AccountLevelBpaSync {
             crate::model::AccountLevelBpaSync {
                 status: self.status,
@@ -21323,7 +21801,7 @@ pub mod account_level_bpa_sync {
     }
 }
 impl AccountLevelBpaSync {
-    /// Creates a new builder-style object to manufacture [`AccountLevelBpaSync`](crate::model::AccountLevelBpaSync)
+    /// Creates a new builder-style object to manufacture [`AccountLevelBpaSync`](crate::model::AccountLevelBpaSync).
     pub fn builder() -> crate::model::account_level_bpa_sync::Builder {
         crate::model::account_level_bpa_sync::Builder::default()
     }
@@ -21521,16 +21999,22 @@ impl AsRef<str> for BucketMetricName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BucketBundle {
     /// <p>The ID of the bundle.</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>The name of the bundle.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The monthly price of the bundle, in US dollars.</p>
+    #[doc(hidden)]
     pub price: std::option::Option<f32>,
     /// <p>The storage size of the bundle, in GB.</p>
+    #[doc(hidden)]
     pub storage_per_month_in_gb: std::option::Option<i32>,
     /// <p>The monthly network transfer quota of the bundle.</p>
+    #[doc(hidden)]
     pub transfer_per_month_in_gb: std::option::Option<i32>,
     /// <p>Indicates whether the bundle is active. Use for a new or existing bucket.</p>
+    #[doc(hidden)]
     pub is_active: std::option::Option<bool>,
 }
 impl BucketBundle {
@@ -21571,11 +22055,10 @@ impl std::fmt::Debug for BucketBundle {
         formatter.finish()
     }
 }
-/// See [`BucketBundle`](crate::model::BucketBundle)
+/// See [`BucketBundle`](crate::model::BucketBundle).
 pub mod bucket_bundle {
 
-    /// A builder for [`BucketBundle`](crate::model::BucketBundle)
-    #[non_exhaustive]
+    /// A builder for [`BucketBundle`](crate::model::BucketBundle).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bundle_id: std::option::Option<std::string::String>,
@@ -21646,7 +22129,7 @@ pub mod bucket_bundle {
             self.is_active = input;
             self
         }
-        /// Consumes the builder and constructs a [`BucketBundle`](crate::model::BucketBundle)
+        /// Consumes the builder and constructs a [`BucketBundle`](crate::model::BucketBundle).
         pub fn build(self) -> crate::model::BucketBundle {
             crate::model::BucketBundle {
                 bundle_id: self.bundle_id,
@@ -21660,7 +22143,7 @@ pub mod bucket_bundle {
     }
 }
 impl BucketBundle {
-    /// Creates a new builder-style object to manufacture [`BucketBundle`](crate::model::BucketBundle)
+    /// Creates a new builder-style object to manufacture [`BucketBundle`](crate::model::BucketBundle).
     pub fn builder() -> crate::model::bucket_bundle::Builder {
         crate::model::bucket_bundle::Builder::default()
     }
@@ -21674,18 +22157,23 @@ impl BucketBundle {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessKey {
     /// <p>The ID of the access key.</p>
+    #[doc(hidden)]
     pub access_key_id: std::option::Option<std::string::String>,
     /// <p>The secret access key used to sign requests.</p>
     /// <p>You should store the secret access key in a safe location. We recommend that you delete the access key if the secret access key is compromised.</p>
+    #[doc(hidden)]
     pub secret_access_key: std::option::Option<std::string::String>,
     /// <p>The status of the access key.</p>
     /// <p>A status of <code>Active</code> means that the key is valid, while <code>Inactive</code> means it is not.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusType>,
     /// <p>The timestamp when the access key was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An object that describes the last time the access key was used.</p> <note>
     /// <p>This object does not include data in the response of a <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_CreateBucketAccessKey.html">CreateBucketAccessKey</a> action. If the access key has not been used, the <code>region</code> and <code>serviceName</code> values are <code>N/A</code>, and the <code>lastUsedDate</code> value is null.</p>
     /// </note>
+    #[doc(hidden)]
     pub last_used: std::option::Option<crate::model::AccessKeyLastUsed>,
 }
 impl AccessKey {
@@ -21725,11 +22213,10 @@ impl std::fmt::Debug for AccessKey {
         formatter.finish()
     }
 }
-/// See [`AccessKey`](crate::model::AccessKey)
+/// See [`AccessKey`](crate::model::AccessKey).
 pub mod access_key {
 
-    /// A builder for [`AccessKey`](crate::model::AccessKey)
-    #[non_exhaustive]
+    /// A builder for [`AccessKey`](crate::model::AccessKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_key_id: std::option::Option<std::string::String>,
@@ -21809,7 +22296,7 @@ pub mod access_key {
             self.last_used = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessKey`](crate::model::AccessKey)
+        /// Consumes the builder and constructs a [`AccessKey`](crate::model::AccessKey).
         pub fn build(self) -> crate::model::AccessKey {
             crate::model::AccessKey {
                 access_key_id: self.access_key_id,
@@ -21822,7 +22309,7 @@ pub mod access_key {
     }
 }
 impl AccessKey {
-    /// Creates a new builder-style object to manufacture [`AccessKey`](crate::model::AccessKey)
+    /// Creates a new builder-style object to manufacture [`AccessKey`](crate::model::AccessKey).
     pub fn builder() -> crate::model::access_key::Builder {
         crate::model::access_key::Builder::default()
     }
@@ -21836,12 +22323,15 @@ impl AccessKey {
 pub struct AccessKeyLastUsed {
     /// <p>The date and time when the access key was most recently used.</p>
     /// <p>This value is null if the access key has not been used.</p>
+    #[doc(hidden)]
     pub last_used_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The AWS Region where this access key was most recently used.</p>
     /// <p>This value is <code>N/A</code> if the access key has not been used.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The name of the AWS service with which this access key was most recently used.</p>
     /// <p>This value is <code>N/A</code> if the access key has not been used.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
 }
 impl AccessKeyLastUsed {
@@ -21870,11 +22360,10 @@ impl std::fmt::Debug for AccessKeyLastUsed {
         formatter.finish()
     }
 }
-/// See [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed)
+/// See [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed).
 pub mod access_key_last_used {
 
-    /// A builder for [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed)
-    #[non_exhaustive]
+    /// A builder for [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) last_used_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -21921,7 +22410,7 @@ pub mod access_key_last_used {
             self.service_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed)
+        /// Consumes the builder and constructs a [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed).
         pub fn build(self) -> crate::model::AccessKeyLastUsed {
             crate::model::AccessKeyLastUsed {
                 last_used_date: self.last_used_date,
@@ -21932,7 +22421,7 @@ pub mod access_key_last_used {
     }
 }
 impl AccessKeyLastUsed {
-    /// Creates a new builder-style object to manufacture [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed)
+    /// Creates a new builder-style object to manufacture [`AccessKeyLastUsed`](crate::model::AccessKeyLastUsed).
     pub fn builder() -> crate::model::access_key_last_used::Builder {
         crate::model::access_key_last_used::Builder::default()
     }
@@ -21998,28 +22487,40 @@ impl AsRef<str> for StatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Blueprint {
     /// <p>The ID for the virtual private server image (e.g., <code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).</p>
+    #[doc(hidden)]
     pub blueprint_id: std::option::Option<std::string::String>,
     /// <p>The friendly name of the blueprint (e.g., <code>Amazon Linux</code>).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The group name of the blueprint (e.g., <code>amazon-linux</code>).</p>
+    #[doc(hidden)]
     pub group: std::option::Option<std::string::String>,
     /// <p>The type of the blueprint (e.g., <code>os</code> or <code>app</code>).</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::BlueprintType>,
     /// <p>The description of the blueprint.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A Boolean value indicating whether the blueprint is active. Inactive blueprints are listed to support customers with existing instances but are not necessarily available for launch of new instances. Blueprints are marked inactive when they become outdated due to operating system updates or new application releases.</p>
+    #[doc(hidden)]
     pub is_active: std::option::Option<bool>,
     /// <p>The minimum bundle power required to run this blueprint. For example, you need a bundle with a power value of 500 or more to create an instance that uses a blueprint with a minimum power value of 500. <code>0</code> indicates that the blueprint runs on all instance sizes. </p>
+    #[doc(hidden)]
     pub min_power: std::option::Option<i32>,
     /// <p>The version number of the operating system, application, or stack (e.g., <code>2016.03.0</code>).</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The version code.</p>
+    #[doc(hidden)]
     pub version_code: std::option::Option<std::string::String>,
     /// <p>The product URL to learn more about the image or blueprint.</p>
+    #[doc(hidden)]
     pub product_url: std::option::Option<std::string::String>,
     /// <p>The end-user license agreement URL for the image or blueprint.</p>
+    #[doc(hidden)]
     pub license_url: std::option::Option<std::string::String>,
     /// <p>The operating system platform (either Linux/Unix-based or Windows Server-based) of the blueprint.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::InstancePlatform>,
 }
 impl Blueprint {
@@ -22090,11 +22591,10 @@ impl std::fmt::Debug for Blueprint {
         formatter.finish()
     }
 }
-/// See [`Blueprint`](crate::model::Blueprint)
+/// See [`Blueprint`](crate::model::Blueprint).
 pub mod blueprint {
 
-    /// A builder for [`Blueprint`](crate::model::Blueprint)
-    #[non_exhaustive]
+    /// A builder for [`Blueprint`](crate::model::Blueprint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) blueprint_id: std::option::Option<std::string::String>,
@@ -22234,7 +22734,7 @@ pub mod blueprint {
             self.platform = input;
             self
         }
-        /// Consumes the builder and constructs a [`Blueprint`](crate::model::Blueprint)
+        /// Consumes the builder and constructs a [`Blueprint`](crate::model::Blueprint).
         pub fn build(self) -> crate::model::Blueprint {
             crate::model::Blueprint {
                 blueprint_id: self.blueprint_id,
@@ -22254,7 +22754,7 @@ pub mod blueprint {
     }
 }
 impl Blueprint {
-    /// Creates a new builder-style object to manufacture [`Blueprint`](crate::model::Blueprint)
+    /// Creates a new builder-style object to manufacture [`Blueprint`](crate::model::Blueprint).
     pub fn builder() -> crate::model::blueprint::Builder {
         crate::model::blueprint::Builder::default()
     }
@@ -22320,12 +22820,16 @@ impl AsRef<str> for BlueprintType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoSnapshotDetails {
     /// <p>The date of the automatic snapshot in <code>YYYY-MM-DD</code> format.</p>
+    #[doc(hidden)]
     pub date: std::option::Option<std::string::String>,
     /// <p>The timestamp when the automatic snapshot was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the automatic snapshot.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AutoSnapshotStatus>,
     /// <p>An array of objects that describe the block storage disks attached to the instance when the automatic snapshot was created.</p>
+    #[doc(hidden)]
     pub from_attached_disks: std::option::Option<std::vec::Vec<crate::model::AttachedDisk>>,
 }
 impl AutoSnapshotDetails {
@@ -22356,11 +22860,10 @@ impl std::fmt::Debug for AutoSnapshotDetails {
         formatter.finish()
     }
 }
-/// See [`AutoSnapshotDetails`](crate::model::AutoSnapshotDetails)
+/// See [`AutoSnapshotDetails`](crate::model::AutoSnapshotDetails).
 pub mod auto_snapshot_details {
 
-    /// A builder for [`AutoSnapshotDetails`](crate::model::AutoSnapshotDetails)
-    #[non_exhaustive]
+    /// A builder for [`AutoSnapshotDetails`](crate::model::AutoSnapshotDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) date: std::option::Option<std::string::String>,
@@ -22425,7 +22928,7 @@ pub mod auto_snapshot_details {
             self.from_attached_disks = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoSnapshotDetails`](crate::model::AutoSnapshotDetails)
+        /// Consumes the builder and constructs a [`AutoSnapshotDetails`](crate::model::AutoSnapshotDetails).
         pub fn build(self) -> crate::model::AutoSnapshotDetails {
             crate::model::AutoSnapshotDetails {
                 date: self.date,
@@ -22437,7 +22940,7 @@ pub mod auto_snapshot_details {
     }
 }
 impl AutoSnapshotDetails {
-    /// Creates a new builder-style object to manufacture [`AutoSnapshotDetails`](crate::model::AutoSnapshotDetails)
+    /// Creates a new builder-style object to manufacture [`AutoSnapshotDetails`](crate::model::AutoSnapshotDetails).
     pub fn builder() -> crate::model::auto_snapshot_details::Builder {
         crate::model::auto_snapshot_details::Builder::default()
     }
@@ -22448,8 +22951,10 @@ impl AutoSnapshotDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttachedDisk {
     /// <p>The path of the disk (e.g., <code>/dev/xvdf</code>).</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The size of the disk in GB.</p>
+    #[doc(hidden)]
     pub size_in_gb: std::option::Option<i32>,
 }
 impl AttachedDisk {
@@ -22470,11 +22975,10 @@ impl std::fmt::Debug for AttachedDisk {
         formatter.finish()
     }
 }
-/// See [`AttachedDisk`](crate::model::AttachedDisk)
+/// See [`AttachedDisk`](crate::model::AttachedDisk).
 pub mod attached_disk {
 
-    /// A builder for [`AttachedDisk`](crate::model::AttachedDisk)
-    #[non_exhaustive]
+    /// A builder for [`AttachedDisk`](crate::model::AttachedDisk).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::string::String>,
@@ -22501,7 +23005,7 @@ pub mod attached_disk {
             self.size_in_gb = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttachedDisk`](crate::model::AttachedDisk)
+        /// Consumes the builder and constructs a [`AttachedDisk`](crate::model::AttachedDisk).
         pub fn build(self) -> crate::model::AttachedDisk {
             crate::model::AttachedDisk {
                 path: self.path,
@@ -22511,7 +23015,7 @@ pub mod attached_disk {
     }
 }
 impl AttachedDisk {
-    /// Creates a new builder-style object to manufacture [`AttachedDisk`](crate::model::AttachedDisk)
+    /// Creates a new builder-style object to manufacture [`AttachedDisk`](crate::model::AttachedDisk).
     pub fn builder() -> crate::model::attached_disk::Builder {
         crate::model::attached_disk::Builder::default()
     }
@@ -22586,28 +23090,40 @@ impl AsRef<str> for AutoSnapshotStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Alarm {
     /// <p>The name of the alarm.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the alarm.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The timestamp when the alarm was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An object that lists information about the location of the alarm.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::ResourceLocation>,
     /// <p>The Lightsail resource type (e.g., <code>Alarm</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The support code. Include this code in your email to support when you have questions about your Lightsail alarm. This code enables our support team to look up your Lightsail information more easily.</p>
+    #[doc(hidden)]
     pub support_code: std::option::Option<std::string::String>,
     /// <p>An object that lists information about the resource monitored by the alarm.</p>
+    #[doc(hidden)]
     pub monitored_resource_info: std::option::Option<crate::model::MonitoredResourceInfo>,
     /// <p>The arithmetic operation used when comparing the specified statistic and threshold.</p>
+    #[doc(hidden)]
     pub comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
     /// <p>The number of periods over which data is compared to the specified threshold.</p>
+    #[doc(hidden)]
     pub evaluation_periods: std::option::Option<i32>,
     /// <p>The period, in seconds, over which the statistic is applied.</p>
+    #[doc(hidden)]
     pub period: i32,
     /// <p>The value against which the specified statistic is compared.</p>
+    #[doc(hidden)]
     pub threshold: std::option::Option<f64>,
     /// <p>The number of data points that must not within the specified threshold to trigger the alarm.</p>
+    #[doc(hidden)]
     pub datapoints_to_alarm: std::option::Option<i32>,
     /// <p>Specifies how the alarm handles missing data points.</p>
     /// <p>An alarm can treat missing data in the following ways:</p>
@@ -22617,6 +23133,7 @@ pub struct Alarm {
     /// <li> <p> <code>ignore</code> - Ignore the missing data. Maintains the current alarm state.</p> </li>
     /// <li> <p> <code>missing</code> - Missing data is treated as missing.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub treat_missing_data: std::option::Option<crate::model::TreatMissingData>,
     /// <p>The statistic for the metric associated with the alarm.</p>
     /// <p>The following statistics are available:</p>
@@ -22627,8 +23144,10 @@ pub struct Alarm {
     /// <li> <p> <code>Average</code> - The value of Sum / SampleCount during the specified period. By comparing this statistic with the Minimum and Maximum values, you can determine the full scope of a metric and how close the average use is to the Minimum and Maximum values. This comparison helps you to know when to increase or decrease your resources.</p> </li>
     /// <li> <p> <code>SampleCount</code> - The count, or number, of data points used for the statistical calculation.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub statistic: std::option::Option<crate::model::MetricStatistic>,
     /// <p>The name of the metric associated with the alarm.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<crate::model::MetricName>,
     /// <p>The current state of the alarm.</p>
     /// <p>An alarm has the following possible states:</p>
@@ -22637,14 +23156,19 @@ pub struct Alarm {
     /// <li> <p> <code>INSUFFICIENT_DATA</code> - The alarm has just started, the metric is not available, or not enough data is available for the metric to determine the alarm state.</p> </li>
     /// <li> <p> <code>OK</code> - The metric is within the defined threshold.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::AlarmState>,
     /// <p>The unit of the metric associated with the alarm.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<crate::model::MetricUnit>,
     /// <p>The contact protocols for the alarm, such as <code>Email</code>, <code>SMS</code> (text messaging), or both.</p>
+    #[doc(hidden)]
     pub contact_protocols: std::option::Option<std::vec::Vec<crate::model::ContactProtocol>>,
     /// <p>The alarm states that trigger a notification.</p>
+    #[doc(hidden)]
     pub notification_triggers: std::option::Option<std::vec::Vec<crate::model::AlarmState>>,
     /// <p>Indicates whether the alarm is enabled.</p>
+    #[doc(hidden)]
     pub notification_enabled: std::option::Option<bool>,
 }
 impl Alarm {
@@ -22778,11 +23302,10 @@ impl std::fmt::Debug for Alarm {
         formatter.finish()
     }
 }
-/// See [`Alarm`](crate::model::Alarm)
+/// See [`Alarm`](crate::model::Alarm).
 pub mod alarm {
 
-    /// A builder for [`Alarm`](crate::model::Alarm)
-    #[non_exhaustive]
+    /// A builder for [`Alarm`](crate::model::Alarm).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -23097,7 +23620,7 @@ pub mod alarm {
             self.notification_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`Alarm`](crate::model::Alarm)
+        /// Consumes the builder and constructs a [`Alarm`](crate::model::Alarm).
         pub fn build(self) -> crate::model::Alarm {
             crate::model::Alarm {
                 name: self.name,
@@ -23125,7 +23648,7 @@ pub mod alarm {
     }
 }
 impl Alarm {
-    /// Creates a new builder-style object to manufacture [`Alarm`](crate::model::Alarm)
+    /// Creates a new builder-style object to manufacture [`Alarm`](crate::model::Alarm).
     pub fn builder() -> crate::model::alarm::Builder {
         crate::model::alarm::Builder::default()
     }
@@ -23137,11 +23660,14 @@ impl Alarm {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MonitoredResourceInfo {
     /// <p>The Amazon Resource Name (ARN) of the resource being monitored.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the Lightsail resource being monitored.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Lightsail resource type of the resource being monitored.</p>
     /// <p>Instances, load balancers, and relational databases are the only Lightsail resources that can currently be monitored by alarms.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
 }
 impl MonitoredResourceInfo {
@@ -23168,11 +23694,10 @@ impl std::fmt::Debug for MonitoredResourceInfo {
         formatter.finish()
     }
 }
-/// See [`MonitoredResourceInfo`](crate::model::MonitoredResourceInfo)
+/// See [`MonitoredResourceInfo`](crate::model::MonitoredResourceInfo).
 pub mod monitored_resource_info {
 
-    /// A builder for [`MonitoredResourceInfo`](crate::model::MonitoredResourceInfo)
-    #[non_exhaustive]
+    /// A builder for [`MonitoredResourceInfo`](crate::model::MonitoredResourceInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -23215,7 +23740,7 @@ pub mod monitored_resource_info {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`MonitoredResourceInfo`](crate::model::MonitoredResourceInfo)
+        /// Consumes the builder and constructs a [`MonitoredResourceInfo`](crate::model::MonitoredResourceInfo).
         pub fn build(self) -> crate::model::MonitoredResourceInfo {
             crate::model::MonitoredResourceInfo {
                 arn: self.arn,
@@ -23226,7 +23751,7 @@ pub mod monitored_resource_info {
     }
 }
 impl MonitoredResourceInfo {
-    /// Creates a new builder-style object to manufacture [`MonitoredResourceInfo`](crate::model::MonitoredResourceInfo)
+    /// Creates a new builder-style object to manufacture [`MonitoredResourceInfo`](crate::model::MonitoredResourceInfo).
     pub fn builder() -> crate::model::monitored_resource_info::Builder {
         crate::model::monitored_resource_info::Builder::default()
     }
@@ -23239,8 +23764,10 @@ impl MonitoredResourceInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddOnRequest {
     /// <p>The add-on type.</p>
+    #[doc(hidden)]
     pub add_on_type: std::option::Option<crate::model::AddOnType>,
     /// <p>An object that represents additional parameters when enabling or modifying the automatic snapshot add-on.</p>
+    #[doc(hidden)]
     pub auto_snapshot_add_on_request: std::option::Option<crate::model::AutoSnapshotAddOnRequest>,
 }
 impl AddOnRequest {
@@ -23266,11 +23793,10 @@ impl std::fmt::Debug for AddOnRequest {
         formatter.finish()
     }
 }
-/// See [`AddOnRequest`](crate::model::AddOnRequest)
+/// See [`AddOnRequest`](crate::model::AddOnRequest).
 pub mod add_on_request {
 
-    /// A builder for [`AddOnRequest`](crate::model::AddOnRequest)
-    #[non_exhaustive]
+    /// A builder for [`AddOnRequest`](crate::model::AddOnRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) add_on_type: std::option::Option<crate::model::AddOnType>,
@@ -23307,7 +23833,7 @@ pub mod add_on_request {
             self.auto_snapshot_add_on_request = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddOnRequest`](crate::model::AddOnRequest)
+        /// Consumes the builder and constructs a [`AddOnRequest`](crate::model::AddOnRequest).
         pub fn build(self) -> crate::model::AddOnRequest {
             crate::model::AddOnRequest {
                 add_on_type: self.add_on_type,
@@ -23317,7 +23843,7 @@ pub mod add_on_request {
     }
 }
 impl AddOnRequest {
-    /// Creates a new builder-style object to manufacture [`AddOnRequest`](crate::model::AddOnRequest)
+    /// Creates a new builder-style object to manufacture [`AddOnRequest`](crate::model::AddOnRequest).
     pub fn builder() -> crate::model::add_on_request::Builder {
         crate::model::add_on_request::Builder::default()
     }
@@ -23341,6 +23867,7 @@ pub struct AutoSnapshotAddOnRequest {
     /// <li> <p>Specified in Coordinated Universal Time (UTC).</p> </li>
     /// <li> <p>The snapshot will be automatically created between the time specified and up to 45 minutes after.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub snapshot_time_of_day: std::option::Option<std::string::String>,
 }
 impl AutoSnapshotAddOnRequest {
@@ -23362,11 +23889,10 @@ impl std::fmt::Debug for AutoSnapshotAddOnRequest {
         formatter.finish()
     }
 }
-/// See [`AutoSnapshotAddOnRequest`](crate::model::AutoSnapshotAddOnRequest)
+/// See [`AutoSnapshotAddOnRequest`](crate::model::AutoSnapshotAddOnRequest).
 pub mod auto_snapshot_add_on_request {
 
-    /// A builder for [`AutoSnapshotAddOnRequest`](crate::model::AutoSnapshotAddOnRequest)
-    #[non_exhaustive]
+    /// A builder for [`AutoSnapshotAddOnRequest`](crate::model::AutoSnapshotAddOnRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshot_time_of_day: std::option::Option<std::string::String>,
@@ -23397,7 +23923,7 @@ pub mod auto_snapshot_add_on_request {
             self.snapshot_time_of_day = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoSnapshotAddOnRequest`](crate::model::AutoSnapshotAddOnRequest)
+        /// Consumes the builder and constructs a [`AutoSnapshotAddOnRequest`](crate::model::AutoSnapshotAddOnRequest).
         pub fn build(self) -> crate::model::AutoSnapshotAddOnRequest {
             crate::model::AutoSnapshotAddOnRequest {
                 snapshot_time_of_day: self.snapshot_time_of_day,
@@ -23406,7 +23932,7 @@ pub mod auto_snapshot_add_on_request {
     }
 }
 impl AutoSnapshotAddOnRequest {
-    /// Creates a new builder-style object to manufacture [`AutoSnapshotAddOnRequest`](crate::model::AutoSnapshotAddOnRequest)
+    /// Creates a new builder-style object to manufacture [`AutoSnapshotAddOnRequest`](crate::model::AutoSnapshotAddOnRequest).
     pub fn builder() -> crate::model::auto_snapshot_add_on_request::Builder {
         crate::model::auto_snapshot_add_on_request::Builder::default()
     }
@@ -23468,8 +23994,10 @@ impl AsRef<str> for AddOnType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DiskMap {
     /// <p>The original disk path exposed to the instance (for example, <code>/dev/sdh</code>).</p>
+    #[doc(hidden)]
     pub original_disk_path: std::option::Option<std::string::String>,
     /// <p>The new disk name (e.g., <code>my-new-disk</code>).</p>
+    #[doc(hidden)]
     pub new_disk_name: std::option::Option<std::string::String>,
 }
 impl DiskMap {
@@ -23490,11 +24018,10 @@ impl std::fmt::Debug for DiskMap {
         formatter.finish()
     }
 }
-/// See [`DiskMap`](crate::model::DiskMap)
+/// See [`DiskMap`](crate::model::DiskMap).
 pub mod disk_map {
 
-    /// A builder for [`DiskMap`](crate::model::DiskMap)
-    #[non_exhaustive]
+    /// A builder for [`DiskMap`](crate::model::DiskMap).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) original_disk_path: std::option::Option<std::string::String>,
@@ -23527,7 +24054,7 @@ pub mod disk_map {
             self.new_disk_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DiskMap`](crate::model::DiskMap)
+        /// Consumes the builder and constructs a [`DiskMap`](crate::model::DiskMap).
         pub fn build(self) -> crate::model::DiskMap {
             crate::model::DiskMap {
                 original_disk_path: self.original_disk_path,
@@ -23537,7 +24064,7 @@ pub mod disk_map {
     }
 }
 impl DiskMap {
-    /// Creates a new builder-style object to manufacture [`DiskMap`](crate::model::DiskMap)
+    /// Creates a new builder-style object to manufacture [`DiskMap`](crate::model::DiskMap).
     pub fn builder() -> crate::model::disk_map::Builder {
         crate::model::disk_map::Builder::default()
     }
@@ -23548,13 +24075,17 @@ impl DiskMap {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerServiceRegistryLogin {
     /// <p>The container service registry username to use to push container images to the container image registry of a Lightsail account.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>The container service registry password to use to push container images to the container image registry of a Lightsail account</p>
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// <p>The timestamp of when the container image registry username and password expire.</p>
     /// <p>The log in credentials expire 12 hours after they are created, at which point you will need to create a new set of log in credentials using the <code>CreateContainerServiceRegistryLogin</code> action.</p>
+    #[doc(hidden)]
     pub expires_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The address to use to push container images to the container image registry of a Lightsail account.</p>
+    #[doc(hidden)]
     pub registry: std::option::Option<std::string::String>,
 }
 impl ContainerServiceRegistryLogin {
@@ -23586,11 +24117,10 @@ impl std::fmt::Debug for ContainerServiceRegistryLogin {
         formatter.finish()
     }
 }
-/// See [`ContainerServiceRegistryLogin`](crate::model::ContainerServiceRegistryLogin)
+/// See [`ContainerServiceRegistryLogin`](crate::model::ContainerServiceRegistryLogin).
 pub mod container_service_registry_login {
 
-    /// A builder for [`ContainerServiceRegistryLogin`](crate::model::ContainerServiceRegistryLogin)
-    #[non_exhaustive]
+    /// A builder for [`ContainerServiceRegistryLogin`](crate::model::ContainerServiceRegistryLogin).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) username: std::option::Option<std::string::String>,
@@ -23644,7 +24174,7 @@ pub mod container_service_registry_login {
             self.registry = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerServiceRegistryLogin`](crate::model::ContainerServiceRegistryLogin)
+        /// Consumes the builder and constructs a [`ContainerServiceRegistryLogin`](crate::model::ContainerServiceRegistryLogin).
         pub fn build(self) -> crate::model::ContainerServiceRegistryLogin {
             crate::model::ContainerServiceRegistryLogin {
                 username: self.username,
@@ -23656,7 +24186,7 @@ pub mod container_service_registry_login {
     }
 }
 impl ContainerServiceRegistryLogin {
-    /// Creates a new builder-style object to manufacture [`ContainerServiceRegistryLogin`](crate::model::ContainerServiceRegistryLogin)
+    /// Creates a new builder-style object to manufacture [`ContainerServiceRegistryLogin`](crate::model::ContainerServiceRegistryLogin).
     pub fn builder() -> crate::model::container_service_registry_login::Builder {
         crate::model::container_service_registry_login::Builder::default()
     }
@@ -23667,10 +24197,13 @@ impl ContainerServiceRegistryLogin {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointRequest {
     /// <p>The name of the container for the endpoint.</p>
+    #[doc(hidden)]
     pub container_name: std::option::Option<std::string::String>,
     /// <p>The port of the container to which traffic is forwarded to.</p>
+    #[doc(hidden)]
     pub container_port: std::option::Option<i32>,
     /// <p>An object that describes the health check configuration of the container.</p>
+    #[doc(hidden)]
     pub health_check: std::option::Option<crate::model::ContainerServiceHealthCheckConfig>,
 }
 impl EndpointRequest {
@@ -23698,11 +24231,10 @@ impl std::fmt::Debug for EndpointRequest {
         formatter.finish()
     }
 }
-/// See [`EndpointRequest`](crate::model::EndpointRequest)
+/// See [`EndpointRequest`](crate::model::EndpointRequest).
 pub mod endpoint_request {
 
-    /// A builder for [`EndpointRequest`](crate::model::EndpointRequest)
-    #[non_exhaustive]
+    /// A builder for [`EndpointRequest`](crate::model::EndpointRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) container_name: std::option::Option<std::string::String>,
@@ -23750,7 +24282,7 @@ pub mod endpoint_request {
             self.health_check = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointRequest`](crate::model::EndpointRequest)
+        /// Consumes the builder and constructs a [`EndpointRequest`](crate::model::EndpointRequest).
         pub fn build(self) -> crate::model::EndpointRequest {
             crate::model::EndpointRequest {
                 container_name: self.container_name,
@@ -23761,7 +24293,7 @@ pub mod endpoint_request {
     }
 }
 impl EndpointRequest {
-    /// Creates a new builder-style object to manufacture [`EndpointRequest`](crate::model::EndpointRequest)
+    /// Creates a new builder-style object to manufacture [`EndpointRequest`](crate::model::EndpointRequest).
     pub fn builder() -> crate::model::endpoint_request::Builder {
         crate::model::endpoint_request::Builder::default()
     }
@@ -23773,10 +24305,12 @@ impl EndpointRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerServiceDeploymentRequest {
     /// <p>An object that describes the configuration for the containers of the deployment.</p>
+    #[doc(hidden)]
     pub containers: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::Container>,
     >,
     /// <p>An object that describes the endpoint of the deployment.</p>
+    #[doc(hidden)]
     pub public_endpoint: std::option::Option<crate::model::EndpointRequest>,
 }
 impl ContainerServiceDeploymentRequest {
@@ -23800,11 +24334,10 @@ impl std::fmt::Debug for ContainerServiceDeploymentRequest {
         formatter.finish()
     }
 }
-/// See [`ContainerServiceDeploymentRequest`](crate::model::ContainerServiceDeploymentRequest)
+/// See [`ContainerServiceDeploymentRequest`](crate::model::ContainerServiceDeploymentRequest).
 pub mod container_service_deployment_request {
 
-    /// A builder for [`ContainerServiceDeploymentRequest`](crate::model::ContainerServiceDeploymentRequest)
-    #[non_exhaustive]
+    /// A builder for [`ContainerServiceDeploymentRequest`](crate::model::ContainerServiceDeploymentRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) containers: std::option::Option<
@@ -23851,7 +24384,7 @@ pub mod container_service_deployment_request {
             self.public_endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerServiceDeploymentRequest`](crate::model::ContainerServiceDeploymentRequest)
+        /// Consumes the builder and constructs a [`ContainerServiceDeploymentRequest`](crate::model::ContainerServiceDeploymentRequest).
         pub fn build(self) -> crate::model::ContainerServiceDeploymentRequest {
             crate::model::ContainerServiceDeploymentRequest {
                 containers: self.containers,
@@ -23861,7 +24394,7 @@ pub mod container_service_deployment_request {
     }
 }
 impl ContainerServiceDeploymentRequest {
-    /// Creates a new builder-style object to manufacture [`ContainerServiceDeploymentRequest`](crate::model::ContainerServiceDeploymentRequest)
+    /// Creates a new builder-style object to manufacture [`ContainerServiceDeploymentRequest`](crate::model::ContainerServiceDeploymentRequest).
     pub fn builder() -> crate::model::container_service_deployment_request::Builder {
         crate::model::container_service_deployment_request::Builder::default()
     }
@@ -23873,8 +24406,10 @@ impl ContainerServiceDeploymentRequest {
 pub struct InstanceEntry {
     /// <p>The name of the export snapshot record, which contains the exported Lightsail instance snapshot that will be used as the source of the new Amazon EC2 instance.</p>
     /// <p>Use the <code>get export snapshot records</code> operation to get a list of export snapshot records that you can use to create a CloudFormation stack.</p>
+    #[doc(hidden)]
     pub source_name: std::option::Option<std::string::String>,
     /// <p>The instance type (e.g., <code>t2.micro</code>) to use for the new Amazon EC2 instance.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The port configuration to use for the new Amazon EC2 instance.</p>
     /// <p>The following configuration options are available:</p>
@@ -23886,12 +24421,15 @@ pub struct InstanceEntry {
     /// </ul> <note>
     /// <p>If you configured <code>lightsail-connect</code> as a <code>cidrListAliases</code> on your instance, or if you chose to allow the Lightsail browser-based SSH or RDP clients to connect to your instance, that configuration is not carried over to your new Amazon EC2 instance.</p>
     /// </note>
+    #[doc(hidden)]
     pub port_info_source: std::option::Option<crate::model::PortInfoSourceType>,
     /// <p>A launch script you can create that configures a server with additional user data. For example, you might want to run <code>apt-get -y update</code>.</p> <note>
     /// <p>Depending on the machine image you choose, the command to get software on your instance varies. Amazon Linux and CentOS use <code>yum</code>, Debian and Ubuntu use <code>apt-get</code>, and FreeBSD uses <code>pkg</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub user_data: std::option::Option<std::string::String>,
     /// <p>The Availability Zone for the new Amazon EC2 instance.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
 }
 impl InstanceEntry {
@@ -23939,11 +24477,10 @@ impl std::fmt::Debug for InstanceEntry {
         formatter.finish()
     }
 }
-/// See [`InstanceEntry`](crate::model::InstanceEntry)
+/// See [`InstanceEntry`](crate::model::InstanceEntry).
 pub mod instance_entry {
 
-    /// A builder for [`InstanceEntry`](crate::model::InstanceEntry)
-    #[non_exhaustive]
+    /// A builder for [`InstanceEntry`](crate::model::InstanceEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_name: std::option::Option<std::string::String>,
@@ -24036,7 +24573,7 @@ pub mod instance_entry {
             self.availability_zone = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceEntry`](crate::model::InstanceEntry)
+        /// Consumes the builder and constructs a [`InstanceEntry`](crate::model::InstanceEntry).
         pub fn build(self) -> crate::model::InstanceEntry {
             crate::model::InstanceEntry {
                 source_name: self.source_name,
@@ -24049,7 +24586,7 @@ pub mod instance_entry {
     }
 }
 impl InstanceEntry {
-    /// Creates a new builder-style object to manufacture [`InstanceEntry`](crate::model::InstanceEntry)
+    /// Creates a new builder-style object to manufacture [`InstanceEntry`](crate::model::InstanceEntry).
     pub fn builder() -> crate::model::instance_entry::Builder {
         crate::model::instance_entry::Builder::default()
     }

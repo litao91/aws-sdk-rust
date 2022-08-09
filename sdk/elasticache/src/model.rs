@@ -5,74 +5,103 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationGroup {
     /// <p>The identifier for the replication group.</p>
+    #[doc(hidden)]
     pub replication_group_id: std::option::Option<std::string::String>,
     /// <p>The user supplied description of the replication group.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The name of the Global datastore and role of this replication group in the Global datastore.</p>
+    #[doc(hidden)]
     pub global_replication_group_info:
         std::option::Option<crate::model::GlobalReplicationGroupInfo>,
     /// <p>The current state of this replication group - <code>creating</code>, <code>available</code>, <code>modifying</code>, <code>deleting</code>, <code>create-failed</code>, <code>snapshotting</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>A group of settings to be applied to the replication group, either immediately or during the next maintenance window.</p>
+    #[doc(hidden)]
     pub pending_modified_values:
         std::option::Option<crate::model::ReplicationGroupPendingModifiedValues>,
     /// <p>The names of all the cache clusters that are part of this replication group.</p>
+    #[doc(hidden)]
     pub member_clusters: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of node groups in this replication group. For Redis (cluster mode disabled) replication groups, this is a single-element list. For Redis (cluster mode enabled) replication groups, the list contains an entry for each node group (shard).</p>
+    #[doc(hidden)]
     pub node_groups: std::option::Option<std::vec::Vec<crate::model::NodeGroup>>,
     /// <p>The cluster ID that is used as the daily snapshot source for the replication group.</p>
+    #[doc(hidden)]
     pub snapshotting_cluster_id: std::option::Option<std::string::String>,
     /// <p>Indicates the status of automatic failover for this Redis replication group.</p>
+    #[doc(hidden)]
     pub automatic_failover: std::option::Option<crate::model::AutomaticFailoverStatus>,
     /// <p>A flag indicating if you have Multi-AZ enabled to enhance fault tolerance. For more information, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/AutoFailover.html">Minimizing Downtime: Multi-AZ</a> </p>
+    #[doc(hidden)]
     pub multi_az: std::option::Option<crate::model::MultiAzStatus>,
     /// <p>The configuration endpoint for this replication group. Use the configuration endpoint to connect to this replication group.</p>
+    #[doc(hidden)]
     pub configuration_endpoint: std::option::Option<crate::model::Endpoint>,
     /// <p>The number of days for which ElastiCache retains automatic cluster snapshots before deleting them. For example, if you set <code>SnapshotRetentionLimit</code> to 5, a snapshot that was taken today is retained for 5 days before being deleted.</p> <important>
     /// <p> If the value of <code>SnapshotRetentionLimit</code> is set to zero (0), backups are turned off.</p>
     /// </important>
+    #[doc(hidden)]
     pub snapshot_retention_limit: std::option::Option<i32>,
     /// <p>The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).</p>
     /// <p>Example: <code>05:00-09:00</code> </p>
     /// <p>If you do not specify this parameter, ElastiCache automatically chooses an appropriate time range.</p> <note>
     /// <p>This parameter is only valid if the <code>Engine</code> parameter is <code>redis</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub snapshot_window: std::option::Option<std::string::String>,
     /// <p>A flag indicating whether or not this replication group is cluster enabled; i.e., whether its data can be partitioned across multiple shards (API/CLI: node groups).</p>
     /// <p>Valid values: <code>true</code> | <code>false</code> </p>
+    #[doc(hidden)]
     pub cluster_enabled: std::option::Option<bool>,
     /// <p>The name of the compute and memory capacity node type for each node in the replication group.</p>
+    #[doc(hidden)]
     pub cache_node_type: std::option::Option<std::string::String>,
     /// <p>A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.</p>
     /// <p>Default: <code>false</code> </p>
+    #[doc(hidden)]
     pub auth_token_enabled: std::option::Option<bool>,
     /// <p>The date the auth token was last modified</p>
+    #[doc(hidden)]
     pub auth_token_last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A flag that enables in-transit encryption when set to <code>true</code>.</p>
     /// <p>You cannot modify the value of <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a cluster you must set <code>TransitEncryptionEnabled</code> to <code>true</code> when you create a cluster.</p>
     /// <p> <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version <code>3.2.6</code>, <code>4.x</code> or later.</p>
     /// <p>Default: <code>false</code> </p>
+    #[doc(hidden)]
     pub transit_encryption_enabled: std::option::Option<bool>,
     /// <p>A flag that enables encryption at-rest when set to <code>true</code>.</p>
     /// <p>You cannot modify the value of <code>AtRestEncryptionEnabled</code> after the cluster is created. To enable encryption at-rest on a cluster you must set <code>AtRestEncryptionEnabled</code> to <code>true</code> when you create a cluster.</p>
     /// <p> <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version <code>3.2.6</code>, <code>4.x</code> or later.</p>
     /// <p>Default: <code>false</code> </p>
+    #[doc(hidden)]
     pub at_rest_encryption_enabled: std::option::Option<bool>,
     /// <p>The outpost ARNs of the replication group's member clusters.</p>
+    #[doc(hidden)]
     pub member_clusters_outpost_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ID of the KMS key used to encrypt the disk in the cluster.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The ARN (Amazon Resource Name) of the replication group.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The ID of the user group associated to the replication group.</p>
+    #[doc(hidden)]
     pub user_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Returns the destination, format and type of the logs. </p>
+    #[doc(hidden)]
     pub log_delivery_configurations:
         std::option::Option<std::vec::Vec<crate::model::LogDeliveryConfiguration>>,
     /// <p>The date and time when the cluster was created.</p>
+    #[doc(hidden)]
     pub replication_group_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This parameter must be set to true when using r6gd nodes. For more information, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.</p>
+    #[doc(hidden)]
     pub data_tiering: std::option::Option<crate::model::DataTieringStatus>,
+    /// <p>&nbsp;If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the next auto minor version upgrade campaign. This parameter is disabled for previous versions.&nbsp; </p>
+    #[doc(hidden)]
+    pub auto_minor_version_upgrade: bool,
 }
 impl ReplicationGroup {
     /// <p>The identifier for the replication group.</p>
@@ -205,6 +234,10 @@ impl ReplicationGroup {
     pub fn data_tiering(&self) -> std::option::Option<&crate::model::DataTieringStatus> {
         self.data_tiering.as_ref()
     }
+    /// <p>&nbsp;If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the next auto minor version upgrade campaign. This parameter is disabled for previous versions.&nbsp; </p>
+    pub fn auto_minor_version_upgrade(&self) -> bool {
+        self.auto_minor_version_upgrade
+    }
 }
 impl std::fmt::Debug for ReplicationGroup {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -256,14 +289,17 @@ impl std::fmt::Debug for ReplicationGroup {
             &self.replication_group_create_time,
         );
         formatter.field("data_tiering", &self.data_tiering);
+        formatter.field(
+            "auto_minor_version_upgrade",
+            &self.auto_minor_version_upgrade,
+        );
         formatter.finish()
     }
 }
-/// See [`ReplicationGroup`](crate::model::ReplicationGroup)
+/// See [`ReplicationGroup`](crate::model::ReplicationGroup).
 pub mod replication_group {
 
-    /// A builder for [`ReplicationGroup`](crate::model::ReplicationGroup)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationGroup`](crate::model::ReplicationGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_group_id: std::option::Option<std::string::String>,
@@ -296,6 +332,7 @@ pub mod replication_group {
             std::option::Option<std::vec::Vec<crate::model::LogDeliveryConfiguration>>,
         pub(crate) replication_group_create_time: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) data_tiering: std::option::Option<crate::model::DataTieringStatus>,
+        pub(crate) auto_minor_version_upgrade: std::option::Option<bool>,
     }
     impl Builder {
         /// <p>The identifier for the replication group.</p>
@@ -679,7 +716,17 @@ pub mod replication_group {
             self.data_tiering = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationGroup`](crate::model::ReplicationGroup)
+        /// <p>&nbsp;If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the next auto minor version upgrade campaign. This parameter is disabled for previous versions.&nbsp; </p>
+        pub fn auto_minor_version_upgrade(mut self, input: bool) -> Self {
+            self.auto_minor_version_upgrade = Some(input);
+            self
+        }
+        /// <p>&nbsp;If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the next auto minor version upgrade campaign. This parameter is disabled for previous versions.&nbsp; </p>
+        pub fn set_auto_minor_version_upgrade(mut self, input: std::option::Option<bool>) -> Self {
+            self.auto_minor_version_upgrade = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ReplicationGroup`](crate::model::ReplicationGroup).
         pub fn build(self) -> crate::model::ReplicationGroup {
             crate::model::ReplicationGroup {
                 replication_group_id: self.replication_group_id,
@@ -708,12 +755,13 @@ pub mod replication_group {
                 log_delivery_configurations: self.log_delivery_configurations,
                 replication_group_create_time: self.replication_group_create_time,
                 data_tiering: self.data_tiering,
+                auto_minor_version_upgrade: self.auto_minor_version_upgrade.unwrap_or_default(),
             }
         }
     }
 }
 impl ReplicationGroup {
-    /// Creates a new builder-style object to manufacture [`ReplicationGroup`](crate::model::ReplicationGroup)
+    /// Creates a new builder-style object to manufacture [`ReplicationGroup`](crate::model::ReplicationGroup).
     pub fn builder() -> crate::model::replication_group::Builder {
         crate::model::replication_group::Builder::default()
     }
@@ -779,16 +827,22 @@ impl AsRef<str> for DataTieringStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogDeliveryConfiguration {
     /// <p>Refers to <a href="https://redis.io/commands/slowlog">slow-log</a> or engine-log.</p>
+    #[doc(hidden)]
     pub log_type: std::option::Option<crate::model::LogType>,
     /// <p>Returns the destination type, either <code>cloudwatch-logs</code> or <code>kinesis-firehose</code>.</p>
+    #[doc(hidden)]
     pub destination_type: std::option::Option<crate::model::DestinationType>,
     /// <p>Configuration details of either a CloudWatch Logs destination or Kinesis Data Firehose destination.</p>
+    #[doc(hidden)]
     pub destination_details: std::option::Option<crate::model::DestinationDetails>,
     /// <p>Returns the log format, either JSON or TEXT.</p>
+    #[doc(hidden)]
     pub log_format: std::option::Option<crate::model::LogFormat>,
     /// <p>Returns the log delivery configuration status. Values are one of <code>enabling</code> | <code>disabling</code> | <code>modifying</code> | <code>active</code> | <code>error</code> </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::LogDeliveryConfigurationStatus>,
     /// <p>Returns an error message for the log delivery configuration.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl LogDeliveryConfiguration {
@@ -829,11 +883,10 @@ impl std::fmt::Debug for LogDeliveryConfiguration {
         formatter.finish()
     }
 }
-/// See [`LogDeliveryConfiguration`](crate::model::LogDeliveryConfiguration)
+/// See [`LogDeliveryConfiguration`](crate::model::LogDeliveryConfiguration).
 pub mod log_delivery_configuration {
 
-    /// A builder for [`LogDeliveryConfiguration`](crate::model::LogDeliveryConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LogDeliveryConfiguration`](crate::model::LogDeliveryConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_type: std::option::Option<crate::model::LogType>,
@@ -916,7 +969,7 @@ pub mod log_delivery_configuration {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogDeliveryConfiguration`](crate::model::LogDeliveryConfiguration)
+        /// Consumes the builder and constructs a [`LogDeliveryConfiguration`](crate::model::LogDeliveryConfiguration).
         pub fn build(self) -> crate::model::LogDeliveryConfiguration {
             crate::model::LogDeliveryConfiguration {
                 log_type: self.log_type,
@@ -930,7 +983,7 @@ pub mod log_delivery_configuration {
     }
 }
 impl LogDeliveryConfiguration {
-    /// Creates a new builder-style object to manufacture [`LogDeliveryConfiguration`](crate::model::LogDeliveryConfiguration)
+    /// Creates a new builder-style object to manufacture [`LogDeliveryConfiguration`](crate::model::LogDeliveryConfiguration).
     pub fn builder() -> crate::model::log_delivery_configuration::Builder {
         crate::model::log_delivery_configuration::Builder::default()
     }
@@ -1063,9 +1116,11 @@ impl AsRef<str> for LogFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DestinationDetails {
     /// <p>The configuration details of the CloudWatch Logs destination.</p>
+    #[doc(hidden)]
     pub cloud_watch_logs_details:
         std::option::Option<crate::model::CloudWatchLogsDestinationDetails>,
     /// <p>The configuration details of the Kinesis Data Firehose destination.</p>
+    #[doc(hidden)]
     pub kinesis_firehose_details:
         std::option::Option<crate::model::KinesisFirehoseDestinationDetails>,
 }
@@ -1091,11 +1146,10 @@ impl std::fmt::Debug for DestinationDetails {
         formatter.finish()
     }
 }
-/// See [`DestinationDetails`](crate::model::DestinationDetails)
+/// See [`DestinationDetails`](crate::model::DestinationDetails).
 pub mod destination_details {
 
-    /// A builder for [`DestinationDetails`](crate::model::DestinationDetails)
-    #[non_exhaustive]
+    /// A builder for [`DestinationDetails`](crate::model::DestinationDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloud_watch_logs_details:
@@ -1136,7 +1190,7 @@ pub mod destination_details {
             self.kinesis_firehose_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`DestinationDetails`](crate::model::DestinationDetails)
+        /// Consumes the builder and constructs a [`DestinationDetails`](crate::model::DestinationDetails).
         pub fn build(self) -> crate::model::DestinationDetails {
             crate::model::DestinationDetails {
                 cloud_watch_logs_details: self.cloud_watch_logs_details,
@@ -1146,7 +1200,7 @@ pub mod destination_details {
     }
 }
 impl DestinationDetails {
-    /// Creates a new builder-style object to manufacture [`DestinationDetails`](crate::model::DestinationDetails)
+    /// Creates a new builder-style object to manufacture [`DestinationDetails`](crate::model::DestinationDetails).
     pub fn builder() -> crate::model::destination_details::Builder {
         crate::model::destination_details::Builder::default()
     }
@@ -1157,6 +1211,7 @@ impl DestinationDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisFirehoseDestinationDetails {
     /// <p>The name of the Kinesis Data Firehose delivery stream.</p>
+    #[doc(hidden)]
     pub delivery_stream: std::option::Option<std::string::String>,
 }
 impl KinesisFirehoseDestinationDetails {
@@ -1172,11 +1227,10 @@ impl std::fmt::Debug for KinesisFirehoseDestinationDetails {
         formatter.finish()
     }
 }
-/// See [`KinesisFirehoseDestinationDetails`](crate::model::KinesisFirehoseDestinationDetails)
+/// See [`KinesisFirehoseDestinationDetails`](crate::model::KinesisFirehoseDestinationDetails).
 pub mod kinesis_firehose_destination_details {
 
-    /// A builder for [`KinesisFirehoseDestinationDetails`](crate::model::KinesisFirehoseDestinationDetails)
-    #[non_exhaustive]
+    /// A builder for [`KinesisFirehoseDestinationDetails`](crate::model::KinesisFirehoseDestinationDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_stream: std::option::Option<std::string::String>,
@@ -1195,7 +1249,7 @@ pub mod kinesis_firehose_destination_details {
             self.delivery_stream = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisFirehoseDestinationDetails`](crate::model::KinesisFirehoseDestinationDetails)
+        /// Consumes the builder and constructs a [`KinesisFirehoseDestinationDetails`](crate::model::KinesisFirehoseDestinationDetails).
         pub fn build(self) -> crate::model::KinesisFirehoseDestinationDetails {
             crate::model::KinesisFirehoseDestinationDetails {
                 delivery_stream: self.delivery_stream,
@@ -1204,7 +1258,7 @@ pub mod kinesis_firehose_destination_details {
     }
 }
 impl KinesisFirehoseDestinationDetails {
-    /// Creates a new builder-style object to manufacture [`KinesisFirehoseDestinationDetails`](crate::model::KinesisFirehoseDestinationDetails)
+    /// Creates a new builder-style object to manufacture [`KinesisFirehoseDestinationDetails`](crate::model::KinesisFirehoseDestinationDetails).
     pub fn builder() -> crate::model::kinesis_firehose_destination_details::Builder {
         crate::model::kinesis_firehose_destination_details::Builder::default()
     }
@@ -1215,6 +1269,7 @@ impl KinesisFirehoseDestinationDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchLogsDestinationDetails {
     /// <p>The name of the CloudWatch Logs log group.</p>
+    #[doc(hidden)]
     pub log_group: std::option::Option<std::string::String>,
 }
 impl CloudWatchLogsDestinationDetails {
@@ -1230,11 +1285,10 @@ impl std::fmt::Debug for CloudWatchLogsDestinationDetails {
         formatter.finish()
     }
 }
-/// See [`CloudWatchLogsDestinationDetails`](crate::model::CloudWatchLogsDestinationDetails)
+/// See [`CloudWatchLogsDestinationDetails`](crate::model::CloudWatchLogsDestinationDetails).
 pub mod cloud_watch_logs_destination_details {
 
-    /// A builder for [`CloudWatchLogsDestinationDetails`](crate::model::CloudWatchLogsDestinationDetails)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchLogsDestinationDetails`](crate::model::CloudWatchLogsDestinationDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_group: std::option::Option<std::string::String>,
@@ -1250,7 +1304,7 @@ pub mod cloud_watch_logs_destination_details {
             self.log_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchLogsDestinationDetails`](crate::model::CloudWatchLogsDestinationDetails)
+        /// Consumes the builder and constructs a [`CloudWatchLogsDestinationDetails`](crate::model::CloudWatchLogsDestinationDetails).
         pub fn build(self) -> crate::model::CloudWatchLogsDestinationDetails {
             crate::model::CloudWatchLogsDestinationDetails {
                 log_group: self.log_group,
@@ -1259,7 +1313,7 @@ pub mod cloud_watch_logs_destination_details {
     }
 }
 impl CloudWatchLogsDestinationDetails {
-    /// Creates a new builder-style object to manufacture [`CloudWatchLogsDestinationDetails`](crate::model::CloudWatchLogsDestinationDetails)
+    /// Creates a new builder-style object to manufacture [`CloudWatchLogsDestinationDetails`](crate::model::CloudWatchLogsDestinationDetails).
     pub fn builder() -> crate::model::cloud_watch_logs_destination_details::Builder {
         crate::model::cloud_watch_logs_destination_details::Builder::default()
     }
@@ -1380,8 +1434,10 @@ impl AsRef<str> for LogType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Endpoint {
     /// <p>The DNS hostname of the cache node.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
     /// <p>The port number that the cache engine is listening on.</p>
+    #[doc(hidden)]
     pub port: i32,
 }
 impl Endpoint {
@@ -1402,11 +1458,10 @@ impl std::fmt::Debug for Endpoint {
         formatter.finish()
     }
 }
-/// See [`Endpoint`](crate::model::Endpoint)
+/// See [`Endpoint`](crate::model::Endpoint).
 pub mod endpoint {
 
-    /// A builder for [`Endpoint`](crate::model::Endpoint)
-    #[non_exhaustive]
+    /// A builder for [`Endpoint`](crate::model::Endpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) address: std::option::Option<std::string::String>,
@@ -1433,7 +1488,7 @@ pub mod endpoint {
             self.port = input;
             self
         }
-        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint)
+        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint).
         pub fn build(self) -> crate::model::Endpoint {
             crate::model::Endpoint {
                 address: self.address,
@@ -1443,7 +1498,7 @@ pub mod endpoint {
     }
 }
 impl Endpoint {
-    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint)
+    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint).
     pub fn builder() -> crate::model::endpoint::Builder {
         crate::model::endpoint::Builder::default()
     }
@@ -1572,16 +1627,22 @@ impl AsRef<str> for AutomaticFailoverStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeGroup {
     /// <p>The identifier for the node group (shard). A Redis (cluster mode disabled) replication group contains only 1 node group; therefore, the node group ID is 0001. A Redis (cluster mode enabled) replication group contains 1 to 90 node groups numbered 0001 to 0090. Optionally, the user can provide the id for a node group. </p>
+    #[doc(hidden)]
     pub node_group_id: std::option::Option<std::string::String>,
     /// <p>The current state of this replication group - <code>creating</code>, <code>available</code>, <code>modifying</code>, <code>deleting</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The endpoint of the primary node in this node group (shard).</p>
+    #[doc(hidden)]
     pub primary_endpoint: std::option::Option<crate::model::Endpoint>,
     /// <p>The endpoint of the replica nodes in this node group (shard).</p>
+    #[doc(hidden)]
     pub reader_endpoint: std::option::Option<crate::model::Endpoint>,
     /// <p>The keyspace for this node group (shard).</p>
+    #[doc(hidden)]
     pub slots: std::option::Option<std::string::String>,
     /// <p>A list containing information about individual nodes within the node group (shard).</p>
+    #[doc(hidden)]
     pub node_group_members: std::option::Option<std::vec::Vec<crate::model::NodeGroupMember>>,
 }
 impl NodeGroup {
@@ -1622,11 +1683,10 @@ impl std::fmt::Debug for NodeGroup {
         formatter.finish()
     }
 }
-/// See [`NodeGroup`](crate::model::NodeGroup)
+/// See [`NodeGroup`](crate::model::NodeGroup).
 pub mod node_group {
 
-    /// A builder for [`NodeGroup`](crate::model::NodeGroup)
-    #[non_exhaustive]
+    /// A builder for [`NodeGroup`](crate::model::NodeGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) node_group_id: std::option::Option<std::string::String>,
@@ -1716,7 +1776,7 @@ pub mod node_group {
             self.node_group_members = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeGroup`](crate::model::NodeGroup)
+        /// Consumes the builder and constructs a [`NodeGroup`](crate::model::NodeGroup).
         pub fn build(self) -> crate::model::NodeGroup {
             crate::model::NodeGroup {
                 node_group_id: self.node_group_id,
@@ -1730,7 +1790,7 @@ pub mod node_group {
     }
 }
 impl NodeGroup {
-    /// Creates a new builder-style object to manufacture [`NodeGroup`](crate::model::NodeGroup)
+    /// Creates a new builder-style object to manufacture [`NodeGroup`](crate::model::NodeGroup).
     pub fn builder() -> crate::model::node_group::Builder {
         crate::model::node_group::Builder::default()
     }
@@ -1741,16 +1801,22 @@ impl NodeGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeGroupMember {
     /// <p>The ID of the cluster to which the node belongs.</p>
+    #[doc(hidden)]
     pub cache_cluster_id: std::option::Option<std::string::String>,
     /// <p>The ID of the node within its cluster. A node ID is a numeric identifier (0001, 0002, etc.).</p>
+    #[doc(hidden)]
     pub cache_node_id: std::option::Option<std::string::String>,
     /// <p>The information required for client programs to connect to a node for read operations. The read endpoint is only applicable on Redis (cluster mode disabled) clusters.</p>
+    #[doc(hidden)]
     pub read_endpoint: std::option::Option<crate::model::Endpoint>,
     /// <p>The name of the Availability Zone in which the node is located.</p>
+    #[doc(hidden)]
     pub preferred_availability_zone: std::option::Option<std::string::String>,
     /// <p>The outpost ARN of the node group member.</p>
+    #[doc(hidden)]
     pub preferred_outpost_arn: std::option::Option<std::string::String>,
     /// <p>The role that is currently assigned to the node - <code>primary</code> or <code>replica</code>. This member is only applicable for Redis (cluster mode disabled) replication groups.</p>
+    #[doc(hidden)]
     pub current_role: std::option::Option<std::string::String>,
 }
 impl NodeGroupMember {
@@ -1794,11 +1860,10 @@ impl std::fmt::Debug for NodeGroupMember {
         formatter.finish()
     }
 }
-/// See [`NodeGroupMember`](crate::model::NodeGroupMember)
+/// See [`NodeGroupMember`](crate::model::NodeGroupMember).
 pub mod node_group_member {
 
-    /// A builder for [`NodeGroupMember`](crate::model::NodeGroupMember)
-    #[non_exhaustive]
+    /// A builder for [`NodeGroupMember`](crate::model::NodeGroupMember).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cache_cluster_id: std::option::Option<std::string::String>,
@@ -1887,7 +1952,7 @@ pub mod node_group_member {
             self.current_role = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeGroupMember`](crate::model::NodeGroupMember)
+        /// Consumes the builder and constructs a [`NodeGroupMember`](crate::model::NodeGroupMember).
         pub fn build(self) -> crate::model::NodeGroupMember {
             crate::model::NodeGroupMember {
                 cache_cluster_id: self.cache_cluster_id,
@@ -1901,7 +1966,7 @@ pub mod node_group_member {
     }
 }
 impl NodeGroupMember {
-    /// Creates a new builder-style object to manufacture [`NodeGroupMember`](crate::model::NodeGroupMember)
+    /// Creates a new builder-style object to manufacture [`NodeGroupMember`](crate::model::NodeGroupMember).
     pub fn builder() -> crate::model::node_group_member::Builder {
         crate::model::node_group_member::Builder::default()
     }
@@ -1912,17 +1977,23 @@ impl NodeGroupMember {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationGroupPendingModifiedValues {
     /// <p>The primary cluster ID that is applied immediately (if <code>--apply-immediately</code> was specified), or during the next maintenance window.</p>
+    #[doc(hidden)]
     pub primary_cluster_id: std::option::Option<std::string::String>,
     /// <p>Indicates the status of automatic failover for this Redis replication group.</p>
+    #[doc(hidden)]
     pub automatic_failover_status:
         std::option::Option<crate::model::PendingAutomaticFailoverStatus>,
     /// <p>The status of an online resharding operation.</p>
+    #[doc(hidden)]
     pub resharding: std::option::Option<crate::model::ReshardingStatus>,
     /// <p>The auth token status</p>
+    #[doc(hidden)]
     pub auth_token_status: std::option::Option<crate::model::AuthTokenUpdateStatus>,
     /// <p>The user group being modified.</p>
+    #[doc(hidden)]
     pub user_groups: std::option::Option<crate::model::UserGroupsUpdateStatus>,
     /// <p>The log delivery configurations being modified </p>
+    #[doc(hidden)]
     pub log_delivery_configurations:
         std::option::Option<std::vec::Vec<crate::model::PendingLogDeliveryConfiguration>>,
 }
@@ -1971,11 +2042,10 @@ impl std::fmt::Debug for ReplicationGroupPendingModifiedValues {
         formatter.finish()
     }
 }
-/// See [`ReplicationGroupPendingModifiedValues`](crate::model::ReplicationGroupPendingModifiedValues)
+/// See [`ReplicationGroupPendingModifiedValues`](crate::model::ReplicationGroupPendingModifiedValues).
 pub mod replication_group_pending_modified_values {
 
-    /// A builder for [`ReplicationGroupPendingModifiedValues`](crate::model::ReplicationGroupPendingModifiedValues)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationGroupPendingModifiedValues`](crate::model::ReplicationGroupPendingModifiedValues).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) primary_cluster_id: std::option::Option<std::string::String>,
@@ -2080,7 +2150,7 @@ pub mod replication_group_pending_modified_values {
             self.log_delivery_configurations = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationGroupPendingModifiedValues`](crate::model::ReplicationGroupPendingModifiedValues)
+        /// Consumes the builder and constructs a [`ReplicationGroupPendingModifiedValues`](crate::model::ReplicationGroupPendingModifiedValues).
         pub fn build(self) -> crate::model::ReplicationGroupPendingModifiedValues {
             crate::model::ReplicationGroupPendingModifiedValues {
                 primary_cluster_id: self.primary_cluster_id,
@@ -2094,7 +2164,7 @@ pub mod replication_group_pending_modified_values {
     }
 }
 impl ReplicationGroupPendingModifiedValues {
-    /// Creates a new builder-style object to manufacture [`ReplicationGroupPendingModifiedValues`](crate::model::ReplicationGroupPendingModifiedValues)
+    /// Creates a new builder-style object to manufacture [`ReplicationGroupPendingModifiedValues`](crate::model::ReplicationGroupPendingModifiedValues).
     pub fn builder() -> crate::model::replication_group_pending_modified_values::Builder {
         crate::model::replication_group_pending_modified_values::Builder::default()
     }
@@ -2105,12 +2175,16 @@ impl ReplicationGroupPendingModifiedValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PendingLogDeliveryConfiguration {
     /// <p>Refers to <a href="https://redis.io/commands/slowlog">slow-log</a> or engine-log..</p>
+    #[doc(hidden)]
     pub log_type: std::option::Option<crate::model::LogType>,
     /// <p>Returns the destination type, either CloudWatch Logs or Kinesis Data Firehose.</p>
+    #[doc(hidden)]
     pub destination_type: std::option::Option<crate::model::DestinationType>,
     /// <p>Configuration details of either a CloudWatch Logs destination or Kinesis Data Firehose destination.</p>
+    #[doc(hidden)]
     pub destination_details: std::option::Option<crate::model::DestinationDetails>,
     /// <p>Returns the log format, either JSON or TEXT</p>
+    #[doc(hidden)]
     pub log_format: std::option::Option<crate::model::LogFormat>,
 }
 impl PendingLogDeliveryConfiguration {
@@ -2141,11 +2215,10 @@ impl std::fmt::Debug for PendingLogDeliveryConfiguration {
         formatter.finish()
     }
 }
-/// See [`PendingLogDeliveryConfiguration`](crate::model::PendingLogDeliveryConfiguration)
+/// See [`PendingLogDeliveryConfiguration`](crate::model::PendingLogDeliveryConfiguration).
 pub mod pending_log_delivery_configuration {
 
-    /// A builder for [`PendingLogDeliveryConfiguration`](crate::model::PendingLogDeliveryConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`PendingLogDeliveryConfiguration`](crate::model::PendingLogDeliveryConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_type: std::option::Option<crate::model::LogType>,
@@ -2203,7 +2276,7 @@ pub mod pending_log_delivery_configuration {
             self.log_format = input;
             self
         }
-        /// Consumes the builder and constructs a [`PendingLogDeliveryConfiguration`](crate::model::PendingLogDeliveryConfiguration)
+        /// Consumes the builder and constructs a [`PendingLogDeliveryConfiguration`](crate::model::PendingLogDeliveryConfiguration).
         pub fn build(self) -> crate::model::PendingLogDeliveryConfiguration {
             crate::model::PendingLogDeliveryConfiguration {
                 log_type: self.log_type,
@@ -2215,7 +2288,7 @@ pub mod pending_log_delivery_configuration {
     }
 }
 impl PendingLogDeliveryConfiguration {
-    /// Creates a new builder-style object to manufacture [`PendingLogDeliveryConfiguration`](crate::model::PendingLogDeliveryConfiguration)
+    /// Creates a new builder-style object to manufacture [`PendingLogDeliveryConfiguration`](crate::model::PendingLogDeliveryConfiguration).
     pub fn builder() -> crate::model::pending_log_delivery_configuration::Builder {
         crate::model::pending_log_delivery_configuration::Builder::default()
     }
@@ -2226,8 +2299,10 @@ impl PendingLogDeliveryConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserGroupsUpdateStatus {
     /// <p>The ID of the user group to add.</p>
+    #[doc(hidden)]
     pub user_group_ids_to_add: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ID of the user group to remove.</p>
+    #[doc(hidden)]
     pub user_group_ids_to_remove: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl UserGroupsUpdateStatus {
@@ -2248,11 +2323,10 @@ impl std::fmt::Debug for UserGroupsUpdateStatus {
         formatter.finish()
     }
 }
-/// See [`UserGroupsUpdateStatus`](crate::model::UserGroupsUpdateStatus)
+/// See [`UserGroupsUpdateStatus`](crate::model::UserGroupsUpdateStatus).
 pub mod user_groups_update_status {
 
-    /// A builder for [`UserGroupsUpdateStatus`](crate::model::UserGroupsUpdateStatus)
-    #[non_exhaustive]
+    /// A builder for [`UserGroupsUpdateStatus`](crate::model::UserGroupsUpdateStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_group_ids_to_add: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2298,7 +2372,7 @@ pub mod user_groups_update_status {
             self.user_group_ids_to_remove = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserGroupsUpdateStatus`](crate::model::UserGroupsUpdateStatus)
+        /// Consumes the builder and constructs a [`UserGroupsUpdateStatus`](crate::model::UserGroupsUpdateStatus).
         pub fn build(self) -> crate::model::UserGroupsUpdateStatus {
             crate::model::UserGroupsUpdateStatus {
                 user_group_ids_to_add: self.user_group_ids_to_add,
@@ -2308,7 +2382,7 @@ pub mod user_groups_update_status {
     }
 }
 impl UserGroupsUpdateStatus {
-    /// Creates a new builder-style object to manufacture [`UserGroupsUpdateStatus`](crate::model::UserGroupsUpdateStatus)
+    /// Creates a new builder-style object to manufacture [`UserGroupsUpdateStatus`](crate::model::UserGroupsUpdateStatus).
     pub fn builder() -> crate::model::user_groups_update_status::Builder {
         crate::model::user_groups_update_status::Builder::default()
     }
@@ -2374,6 +2448,7 @@ impl AsRef<str> for AuthTokenUpdateStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReshardingStatus {
     /// <p>Represents the progress of an online resharding operation.</p>
+    #[doc(hidden)]
     pub slot_migration: std::option::Option<crate::model::SlotMigration>,
 }
 impl ReshardingStatus {
@@ -2389,11 +2464,10 @@ impl std::fmt::Debug for ReshardingStatus {
         formatter.finish()
     }
 }
-/// See [`ReshardingStatus`](crate::model::ReshardingStatus)
+/// See [`ReshardingStatus`](crate::model::ReshardingStatus).
 pub mod resharding_status {
 
-    /// A builder for [`ReshardingStatus`](crate::model::ReshardingStatus)
-    #[non_exhaustive]
+    /// A builder for [`ReshardingStatus`](crate::model::ReshardingStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) slot_migration: std::option::Option<crate::model::SlotMigration>,
@@ -2412,7 +2486,7 @@ pub mod resharding_status {
             self.slot_migration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReshardingStatus`](crate::model::ReshardingStatus)
+        /// Consumes the builder and constructs a [`ReshardingStatus`](crate::model::ReshardingStatus).
         pub fn build(self) -> crate::model::ReshardingStatus {
             crate::model::ReshardingStatus {
                 slot_migration: self.slot_migration,
@@ -2421,7 +2495,7 @@ pub mod resharding_status {
     }
 }
 impl ReshardingStatus {
-    /// Creates a new builder-style object to manufacture [`ReshardingStatus`](crate::model::ReshardingStatus)
+    /// Creates a new builder-style object to manufacture [`ReshardingStatus`](crate::model::ReshardingStatus).
     pub fn builder() -> crate::model::resharding_status::Builder {
         crate::model::resharding_status::Builder::default()
     }
@@ -2432,6 +2506,7 @@ impl ReshardingStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SlotMigration {
     /// <p>The percentage of the slot migration that is complete.</p>
+    #[doc(hidden)]
     pub progress_percentage: f64,
 }
 impl SlotMigration {
@@ -2447,11 +2522,10 @@ impl std::fmt::Debug for SlotMigration {
         formatter.finish()
     }
 }
-/// See [`SlotMigration`](crate::model::SlotMigration)
+/// See [`SlotMigration`](crate::model::SlotMigration).
 pub mod slot_migration {
 
-    /// A builder for [`SlotMigration`](crate::model::SlotMigration)
-    #[non_exhaustive]
+    /// A builder for [`SlotMigration`](crate::model::SlotMigration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) progress_percentage: std::option::Option<f64>,
@@ -2467,7 +2541,7 @@ pub mod slot_migration {
             self.progress_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`SlotMigration`](crate::model::SlotMigration)
+        /// Consumes the builder and constructs a [`SlotMigration`](crate::model::SlotMigration).
         pub fn build(self) -> crate::model::SlotMigration {
             crate::model::SlotMigration {
                 progress_percentage: self.progress_percentage.unwrap_or_default(),
@@ -2476,7 +2550,7 @@ pub mod slot_migration {
     }
 }
 impl SlotMigration {
-    /// Creates a new builder-style object to manufacture [`SlotMigration`](crate::model::SlotMigration)
+    /// Creates a new builder-style object to manufacture [`SlotMigration`](crate::model::SlotMigration).
     pub fn builder() -> crate::model::slot_migration::Builder {
         crate::model::slot_migration::Builder::default()
     }
@@ -2542,8 +2616,10 @@ impl AsRef<str> for PendingAutomaticFailoverStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GlobalReplicationGroupInfo {
     /// <p>The name of the Global datastore</p>
+    #[doc(hidden)]
     pub global_replication_group_id: std::option::Option<std::string::String>,
     /// <p>The role of the replication group in a Global datastore. Can be primary or secondary.</p>
+    #[doc(hidden)]
     pub global_replication_group_member_role: std::option::Option<std::string::String>,
 }
 impl GlobalReplicationGroupInfo {
@@ -2570,11 +2646,10 @@ impl std::fmt::Debug for GlobalReplicationGroupInfo {
         formatter.finish()
     }
 }
-/// See [`GlobalReplicationGroupInfo`](crate::model::GlobalReplicationGroupInfo)
+/// See [`GlobalReplicationGroupInfo`](crate::model::GlobalReplicationGroupInfo).
 pub mod global_replication_group_info {
 
-    /// A builder for [`GlobalReplicationGroupInfo`](crate::model::GlobalReplicationGroupInfo)
-    #[non_exhaustive]
+    /// A builder for [`GlobalReplicationGroupInfo`](crate::model::GlobalReplicationGroupInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_replication_group_id: std::option::Option<std::string::String>,
@@ -2613,7 +2688,7 @@ pub mod global_replication_group_info {
             self.global_replication_group_member_role = input;
             self
         }
-        /// Consumes the builder and constructs a [`GlobalReplicationGroupInfo`](crate::model::GlobalReplicationGroupInfo)
+        /// Consumes the builder and constructs a [`GlobalReplicationGroupInfo`](crate::model::GlobalReplicationGroupInfo).
         pub fn build(self) -> crate::model::GlobalReplicationGroupInfo {
             crate::model::GlobalReplicationGroupInfo {
                 global_replication_group_id: self.global_replication_group_id,
@@ -2623,7 +2698,7 @@ pub mod global_replication_group_info {
     }
 }
 impl GlobalReplicationGroupInfo {
-    /// Creates a new builder-style object to manufacture [`GlobalReplicationGroupInfo`](crate::model::GlobalReplicationGroupInfo)
+    /// Creates a new builder-style object to manufacture [`GlobalReplicationGroupInfo`](crate::model::GlobalReplicationGroupInfo).
     pub fn builder() -> crate::model::global_replication_group_info::Builder {
         crate::model::global_replication_group_info::Builder::default()
     }
@@ -2634,8 +2709,10 @@ impl GlobalReplicationGroupInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomerNodeEndpoint {
     /// <p>The address of the node endpoint</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
     /// <p>The port of the node endpoint</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
 }
 impl CustomerNodeEndpoint {
@@ -2656,11 +2733,10 @@ impl std::fmt::Debug for CustomerNodeEndpoint {
         formatter.finish()
     }
 }
-/// See [`CustomerNodeEndpoint`](crate::model::CustomerNodeEndpoint)
+/// See [`CustomerNodeEndpoint`](crate::model::CustomerNodeEndpoint).
 pub mod customer_node_endpoint {
 
-    /// A builder for [`CustomerNodeEndpoint`](crate::model::CustomerNodeEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`CustomerNodeEndpoint`](crate::model::CustomerNodeEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) address: std::option::Option<std::string::String>,
@@ -2687,7 +2763,7 @@ pub mod customer_node_endpoint {
             self.port = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomerNodeEndpoint`](crate::model::CustomerNodeEndpoint)
+        /// Consumes the builder and constructs a [`CustomerNodeEndpoint`](crate::model::CustomerNodeEndpoint).
         pub fn build(self) -> crate::model::CustomerNodeEndpoint {
             crate::model::CustomerNodeEndpoint {
                 address: self.address,
@@ -2697,7 +2773,7 @@ pub mod customer_node_endpoint {
     }
 }
 impl CustomerNodeEndpoint {
-    /// Creates a new builder-style object to manufacture [`CustomerNodeEndpoint`](crate::model::CustomerNodeEndpoint)
+    /// Creates a new builder-style object to manufacture [`CustomerNodeEndpoint`](crate::model::CustomerNodeEndpoint).
     pub fn builder() -> crate::model::customer_node_endpoint::Builder {
         crate::model::customer_node_endpoint::Builder::default()
     }
@@ -2713,14 +2789,19 @@ impl CustomerNodeEndpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CacheSecurityGroup {
     /// <p>The Amazon account ID of the cache security group owner.</p>
+    #[doc(hidden)]
     pub owner_id: std::option::Option<std::string::String>,
     /// <p>The name of the cache security group.</p>
+    #[doc(hidden)]
     pub cache_security_group_name: std::option::Option<std::string::String>,
     /// <p>The description of the cache security group.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A list of Amazon EC2 security groups that are associated with this cache security group.</p>
+    #[doc(hidden)]
     pub ec2_security_groups: std::option::Option<std::vec::Vec<crate::model::Ec2SecurityGroup>>,
     /// <p>The ARN of the cache security group,</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl CacheSecurityGroup {
@@ -2756,11 +2837,10 @@ impl std::fmt::Debug for CacheSecurityGroup {
         formatter.finish()
     }
 }
-/// See [`CacheSecurityGroup`](crate::model::CacheSecurityGroup)
+/// See [`CacheSecurityGroup`](crate::model::CacheSecurityGroup).
 pub mod cache_security_group {
 
-    /// A builder for [`CacheSecurityGroup`](crate::model::CacheSecurityGroup)
-    #[non_exhaustive]
+    /// A builder for [`CacheSecurityGroup`](crate::model::CacheSecurityGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner_id: std::option::Option<std::string::String>,
@@ -2833,7 +2913,7 @@ pub mod cache_security_group {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheSecurityGroup`](crate::model::CacheSecurityGroup)
+        /// Consumes the builder and constructs a [`CacheSecurityGroup`](crate::model::CacheSecurityGroup).
         pub fn build(self) -> crate::model::CacheSecurityGroup {
             crate::model::CacheSecurityGroup {
                 owner_id: self.owner_id,
@@ -2846,7 +2926,7 @@ pub mod cache_security_group {
     }
 }
 impl CacheSecurityGroup {
-    /// Creates a new builder-style object to manufacture [`CacheSecurityGroup`](crate::model::CacheSecurityGroup)
+    /// Creates a new builder-style object to manufacture [`CacheSecurityGroup`](crate::model::CacheSecurityGroup).
     pub fn builder() -> crate::model::cache_security_group::Builder {
         crate::model::cache_security_group::Builder::default()
     }
@@ -2857,10 +2937,13 @@ impl CacheSecurityGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ec2SecurityGroup {
     /// <p>The status of the Amazon EC2 security group.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon EC2 security group.</p>
+    #[doc(hidden)]
     pub ec2_security_group_name: std::option::Option<std::string::String>,
     /// <p>The Amazon account ID of the Amazon EC2 security group owner.</p>
+    #[doc(hidden)]
     pub ec2_security_group_owner_id: std::option::Option<std::string::String>,
 }
 impl Ec2SecurityGroup {
@@ -2889,11 +2972,10 @@ impl std::fmt::Debug for Ec2SecurityGroup {
         formatter.finish()
     }
 }
-/// See [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup)
+/// See [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup).
 pub mod ec2_security_group {
 
-    /// A builder for [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup)
-    #[non_exhaustive]
+    /// A builder for [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<std::string::String>,
@@ -2940,7 +3022,7 @@ pub mod ec2_security_group {
             self.ec2_security_group_owner_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup)
+        /// Consumes the builder and constructs a [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup).
         pub fn build(self) -> crate::model::Ec2SecurityGroup {
             crate::model::Ec2SecurityGroup {
                 status: self.status,
@@ -2951,7 +3033,7 @@ pub mod ec2_security_group {
     }
 }
 impl Ec2SecurityGroup {
-    /// Creates a new builder-style object to manufacture [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup)
+    /// Creates a new builder-style object to manufacture [`Ec2SecurityGroup`](crate::model::Ec2SecurityGroup).
     pub fn builder() -> crate::model::ec2_security_group::Builder {
         crate::model::ec2_security_group::Builder::default()
     }
@@ -2962,8 +3044,10 @@ impl Ec2SecurityGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ParameterNameValue {
     /// <p>The name of the parameter.</p>
+    #[doc(hidden)]
     pub parameter_name: std::option::Option<std::string::String>,
     /// <p>The value of the parameter.</p>
+    #[doc(hidden)]
     pub parameter_value: std::option::Option<std::string::String>,
 }
 impl ParameterNameValue {
@@ -2984,11 +3068,10 @@ impl std::fmt::Debug for ParameterNameValue {
         formatter.finish()
     }
 }
-/// See [`ParameterNameValue`](crate::model::ParameterNameValue)
+/// See [`ParameterNameValue`](crate::model::ParameterNameValue).
 pub mod parameter_name_value {
 
-    /// A builder for [`ParameterNameValue`](crate::model::ParameterNameValue)
-    #[non_exhaustive]
+    /// A builder for [`ParameterNameValue`](crate::model::ParameterNameValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_name: std::option::Option<std::string::String>,
@@ -3021,7 +3104,7 @@ pub mod parameter_name_value {
             self.parameter_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParameterNameValue`](crate::model::ParameterNameValue)
+        /// Consumes the builder and constructs a [`ParameterNameValue`](crate::model::ParameterNameValue).
         pub fn build(self) -> crate::model::ParameterNameValue {
             crate::model::ParameterNameValue {
                 parameter_name: self.parameter_name,
@@ -3031,7 +3114,7 @@ pub mod parameter_name_value {
     }
 }
 impl ParameterNameValue {
-    /// Creates a new builder-style object to manufacture [`ParameterNameValue`](crate::model::ParameterNameValue)
+    /// Creates a new builder-style object to manufacture [`ParameterNameValue`](crate::model::ParameterNameValue).
     pub fn builder() -> crate::model::parameter_name_value::Builder {
         crate::model::parameter_name_value::Builder::default()
     }
@@ -3042,8 +3125,10 @@ impl ParameterNameValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key for the tag. May not be null.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The tag's value. May be null.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -3064,11 +3149,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -3095,7 +3179,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -3105,7 +3189,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -3116,11 +3200,14 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CacheCluster {
     /// <p>The user-supplied identifier of the cluster. This identifier is a unique key that identifies a cluster.</p>
+    #[doc(hidden)]
     pub cache_cluster_id: std::option::Option<std::string::String>,
     /// <p>Represents a Memcached cluster endpoint which can be used by an application to connect to any node in the cluster. The configuration endpoint will always have <code>.cfg</code> in it.</p>
     /// <p>Example: <code>mem-3.9dvc4r<u>.cfg</u>.usw2.cache.amazonaws.com:11211</code> </p>
+    #[doc(hidden)]
     pub configuration_endpoint: std::option::Option<crate::model::Endpoint>,
     /// <p>The URL of the web page where you can download the latest ElastiCache client library.</p>
+    #[doc(hidden)]
     pub client_download_landing_page: std::option::Option<std::string::String>,
     /// <p>The name of the compute and memory capacity node type for the cluster.</p>
     /// <p>The following node types are supported by ElastiCache. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts.</p>
@@ -3130,11 +3217,11 @@ pub struct CacheCluster {
     /// <li> <p>Current generation: </p> <p> <b>M6g node types:</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Compute optimized:</p>
     /// <ul>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Memory optimized with data tiering:</p>
     /// <ul>
@@ -3145,7 +3232,7 @@ pub struct CacheCluster {
     /// <li> <p>Current generation: </p> <p> <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
     /// </ul> </li>
     /// </ul>
     /// <p> <b>Additional node type info</b> </p>
@@ -3155,21 +3242,29 @@ pub struct CacheCluster {
     /// <li> <p>Redis Multi-AZ with automatic failover is not supported on T1 instances.</p> </li>
     /// <li> <p>Redis configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on Redis version 2.8.22 and later.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub cache_node_type: std::option::Option<std::string::String>,
     /// <p>The name of the cache engine (<code>memcached</code> or <code>redis</code>) to be used for this cluster.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The version of the cache engine that is used in this cluster.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The current state of this cluster, one of the following values: <code>available</code>, <code>creating</code>, <code>deleted</code>, <code>deleting</code>, <code>incompatible-network</code>, <code>modifying</code>, <code>rebooting cluster nodes</code>, <code>restore-failed</code>, or <code>snapshotting</code>.</p>
+    #[doc(hidden)]
     pub cache_cluster_status: std::option::Option<std::string::String>,
     /// <p>The number of cache nodes in the cluster.</p>
     /// <p>For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1 and 40.</p>
+    #[doc(hidden)]
     pub num_cache_nodes: std::option::Option<i32>,
     /// <p>The name of the Availability Zone in which the cluster is located or "Multiple" if the cache nodes are located in different Availability Zones.</p>
+    #[doc(hidden)]
     pub preferred_availability_zone: std::option::Option<std::string::String>,
     /// <p>The outpost ARN in which the cache cluster is created.</p>
+    #[doc(hidden)]
     pub preferred_outpost_arn: std::option::Option<std::string::String>,
     /// <p>The date and time when the cluster was created.</p>
+    #[doc(hidden)]
     pub cache_cluster_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period.</p>
     /// <p>Valid values for <code>ddd</code> are:</p>
@@ -3183,53 +3278,72 @@ pub struct CacheCluster {
     /// <li> <p> <code>sat</code> </p> </li>
     /// </ul>
     /// <p>Example: <code>sun:23:00-mon:01:30</code> </p>
+    #[doc(hidden)]
     pub preferred_maintenance_window: std::option::Option<std::string::String>,
     /// <p>A group of settings that are applied to the cluster in the future, or that are currently being applied.</p>
+    #[doc(hidden)]
     pub pending_modified_values: std::option::Option<crate::model::PendingModifiedValues>,
     /// <p>Describes a notification topic and its status. Notification topics are used for publishing ElastiCache events to subscribers using Amazon Simple Notification Service (SNS). </p>
+    #[doc(hidden)]
     pub notification_configuration: std::option::Option<crate::model::NotificationConfiguration>,
     /// <p>A list of cache security group elements, composed of name and status sub-elements.</p>
+    #[doc(hidden)]
     pub cache_security_groups:
         std::option::Option<std::vec::Vec<crate::model::CacheSecurityGroupMembership>>,
     /// <p>Status of the cache parameter group.</p>
+    #[doc(hidden)]
     pub cache_parameter_group: std::option::Option<crate::model::CacheParameterGroupStatus>,
     /// <p>The name of the cache subnet group associated with the cluster.</p>
+    #[doc(hidden)]
     pub cache_subnet_group_name: std::option::Option<std::string::String>,
     /// <p>A list of cache nodes that are members of the cluster.</p>
+    #[doc(hidden)]
     pub cache_nodes: std::option::Option<std::vec::Vec<crate::model::CacheNode>>,
     /// <p>&nbsp;If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the next auto minor version upgrade campaign. This parameter is disabled for previous versions.&nbsp; </p>
+    #[doc(hidden)]
     pub auto_minor_version_upgrade: bool,
     /// <p>A list of VPC Security Groups associated with the cluster.</p>
+    #[doc(hidden)]
     pub security_groups: std::option::Option<std::vec::Vec<crate::model::SecurityGroupMembership>>,
     /// <p>The replication group to which this cluster belongs. If this field is empty, the cluster is not associated with any replication group.</p>
+    #[doc(hidden)]
     pub replication_group_id: std::option::Option<std::string::String>,
     /// <p>The number of days for which ElastiCache retains automatic cluster snapshots before deleting them. For example, if you set <code>SnapshotRetentionLimit</code> to 5, a snapshot that was taken today is retained for 5 days before being deleted.</p> <important>
     /// <p> If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.</p>
     /// </important>
+    #[doc(hidden)]
     pub snapshot_retention_limit: std::option::Option<i32>,
     /// <p>The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your cluster.</p>
     /// <p>Example: <code>05:00-09:00</code> </p>
+    #[doc(hidden)]
     pub snapshot_window: std::option::Option<std::string::String>,
     /// <p>A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.</p>
     /// <p>Default: <code>false</code> </p>
+    #[doc(hidden)]
     pub auth_token_enabled: std::option::Option<bool>,
     /// <p>The date the auth token was last modified</p>
+    #[doc(hidden)]
     pub auth_token_last_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A flag that enables in-transit encryption when set to <code>true</code>.</p>
     /// <p>You cannot modify the value of <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a cluster you must set <code>TransitEncryptionEnabled</code> to <code>true</code> when you create a cluster.</p>
     /// <p> <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version <code>3.2.6</code>, <code>4.x</code> or later.</p>
     /// <p>Default: <code>false</code> </p>
+    #[doc(hidden)]
     pub transit_encryption_enabled: std::option::Option<bool>,
     /// <p>A flag that enables encryption at-rest when set to <code>true</code>.</p>
     /// <p>You cannot modify the value of <code>AtRestEncryptionEnabled</code> after the cluster is created. To enable at-rest encryption on a cluster you must set <code>AtRestEncryptionEnabled</code> to <code>true</code> when you create a cluster.</p>
     /// <p> <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version <code>3.2.6</code>, <code>4.x</code> or later.</p>
     /// <p>Default: <code>false</code> </p>
+    #[doc(hidden)]
     pub at_rest_encryption_enabled: std::option::Option<bool>,
     /// <p>The ARN (Amazon Resource Name) of the cache cluster.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>A boolean value indicating whether log delivery is enabled for the replication group.</p>
+    #[doc(hidden)]
     pub replication_group_log_delivery_enabled: bool,
     /// <p>Returns the destination, format and type of the logs.</p>
+    #[doc(hidden)]
     pub log_delivery_configurations:
         std::option::Option<std::vec::Vec<crate::model::LogDeliveryConfiguration>>,
 }
@@ -3255,11 +3369,11 @@ impl CacheCluster {
     /// <li> <p>Current generation: </p> <p> <b>M6g node types:</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Compute optimized:</p>
     /// <ul>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Memory optimized with data tiering:</p>
     /// <ul>
@@ -3270,7 +3384,7 @@ impl CacheCluster {
     /// <li> <p>Current generation: </p> <p> <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
     /// </ul> </li>
     /// </ul>
     /// <p> <b>Additional node type info</b> </p>
@@ -3488,11 +3602,10 @@ impl std::fmt::Debug for CacheCluster {
         formatter.finish()
     }
 }
-/// See [`CacheCluster`](crate::model::CacheCluster)
+/// See [`CacheCluster`](crate::model::CacheCluster).
 pub mod cache_cluster {
 
-    /// A builder for [`CacheCluster`](crate::model::CacheCluster)
-    #[non_exhaustive]
+    /// A builder for [`CacheCluster`](crate::model::CacheCluster).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cache_cluster_id: std::option::Option<std::string::String>,
@@ -3585,11 +3698,11 @@ pub mod cache_cluster {
         /// <li> <p>Current generation: </p> <p> <b>M6g node types:</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Compute optimized:</p>
         /// <ul>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Memory optimized with data tiering:</p>
         /// <ul>
@@ -3600,7 +3713,7 @@ pub mod cache_cluster {
         /// <li> <p>Current generation: </p> <p> <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
         /// </ul> </li>
         /// </ul>
         /// <p> <b>Additional node type info</b> </p>
@@ -3622,11 +3735,11 @@ pub mod cache_cluster {
         /// <li> <p>Current generation: </p> <p> <b>M6g node types:</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Compute optimized:</p>
         /// <ul>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Memory optimized with data tiering:</p>
         /// <ul>
@@ -3637,7 +3750,7 @@ pub mod cache_cluster {
         /// <li> <p>Current generation: </p> <p> <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
         /// </ul> </li>
         /// </ul>
         /// <p> <b>Additional node type info</b> </p>
@@ -4057,7 +4170,7 @@ pub mod cache_cluster {
             self.log_delivery_configurations = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheCluster`](crate::model::CacheCluster)
+        /// Consumes the builder and constructs a [`CacheCluster`](crate::model::CacheCluster).
         pub fn build(self) -> crate::model::CacheCluster {
             crate::model::CacheCluster {
                 cache_cluster_id: self.cache_cluster_id,
@@ -4097,7 +4210,7 @@ pub mod cache_cluster {
     }
 }
 impl CacheCluster {
-    /// Creates a new builder-style object to manufacture [`CacheCluster`](crate::model::CacheCluster)
+    /// Creates a new builder-style object to manufacture [`CacheCluster`](crate::model::CacheCluster).
     pub fn builder() -> crate::model::cache_cluster::Builder {
         crate::model::cache_cluster::Builder::default()
     }
@@ -4108,8 +4221,10 @@ impl CacheCluster {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SecurityGroupMembership {
     /// <p>The identifier of the cache security group.</p>
+    #[doc(hidden)]
     pub security_group_id: std::option::Option<std::string::String>,
     /// <p>The status of the cache security group membership. The status changes whenever a cache security group is modified, or when the cache security groups assigned to a cluster are modified.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl SecurityGroupMembership {
@@ -4130,11 +4245,10 @@ impl std::fmt::Debug for SecurityGroupMembership {
         formatter.finish()
     }
 }
-/// See [`SecurityGroupMembership`](crate::model::SecurityGroupMembership)
+/// See [`SecurityGroupMembership`](crate::model::SecurityGroupMembership).
 pub mod security_group_membership {
 
-    /// A builder for [`SecurityGroupMembership`](crate::model::SecurityGroupMembership)
-    #[non_exhaustive]
+    /// A builder for [`SecurityGroupMembership`](crate::model::SecurityGroupMembership).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) security_group_id: std::option::Option<std::string::String>,
@@ -4164,7 +4278,7 @@ pub mod security_group_membership {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`SecurityGroupMembership`](crate::model::SecurityGroupMembership)
+        /// Consumes the builder and constructs a [`SecurityGroupMembership`](crate::model::SecurityGroupMembership).
         pub fn build(self) -> crate::model::SecurityGroupMembership {
             crate::model::SecurityGroupMembership {
                 security_group_id: self.security_group_id,
@@ -4174,7 +4288,7 @@ pub mod security_group_membership {
     }
 }
 impl SecurityGroupMembership {
-    /// Creates a new builder-style object to manufacture [`SecurityGroupMembership`](crate::model::SecurityGroupMembership)
+    /// Creates a new builder-style object to manufacture [`SecurityGroupMembership`](crate::model::SecurityGroupMembership).
     pub fn builder() -> crate::model::security_group_membership::Builder {
         crate::model::security_group_membership::Builder::default()
     }
@@ -4188,11 +4302,11 @@ impl SecurityGroupMembership {
 /// <li> <p>Current generation: </p> <p> <b>M6g node types:</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
 /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
 /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-/// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+/// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
 /// </ul> </li>
 /// <li> <p>Compute optimized:</p>
 /// <ul>
-/// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+/// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
 /// </ul> </li>
 /// <li> <p>Memory optimized with data tiering:</p>
 /// <ul>
@@ -4203,7 +4317,7 @@ impl SecurityGroupMembership {
 /// <li> <p>Current generation: </p> <p> <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code> </p> <note>
 /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
 /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-/// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+/// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
 /// </ul> </li>
 /// </ul>
 /// <p> <b>Additional node type info</b> </p>
@@ -4217,20 +4331,28 @@ impl SecurityGroupMembership {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CacheNode {
     /// <p>The cache node identifier. A node ID is a numeric identifier (0001, 0002, etc.). The combination of cluster ID and node ID uniquely identifies every cache node used in a customer's Amazon account.</p>
+    #[doc(hidden)]
     pub cache_node_id: std::option::Option<std::string::String>,
     /// <p>The current state of this cache node, one of the following values: <code>available</code>, <code>creating</code>, <code>rebooting</code>, or <code>deleting</code>.</p>
+    #[doc(hidden)]
     pub cache_node_status: std::option::Option<std::string::String>,
     /// <p>The date and time when the cache node was created.</p>
+    #[doc(hidden)]
     pub cache_node_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The hostname for connecting to this cache node.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<crate::model::Endpoint>,
     /// <p>The status of the parameter group applied to this cache node.</p>
+    #[doc(hidden)]
     pub parameter_group_status: std::option::Option<std::string::String>,
     /// <p>The ID of the primary node to which this read replica node is synchronized. If this field is empty, this node is not associated with a primary cluster.</p>
+    #[doc(hidden)]
     pub source_cache_node_id: std::option::Option<std::string::String>,
     /// <p>The Availability Zone where this node was created and now resides.</p>
+    #[doc(hidden)]
     pub customer_availability_zone: std::option::Option<std::string::String>,
     /// <p>The customer outpost ARN of the cache node.</p>
+    #[doc(hidden)]
     pub customer_outpost_arn: std::option::Option<std::string::String>,
 }
 impl CacheNode {
@@ -4284,11 +4406,10 @@ impl std::fmt::Debug for CacheNode {
         formatter.finish()
     }
 }
-/// See [`CacheNode`](crate::model::CacheNode)
+/// See [`CacheNode`](crate::model::CacheNode).
 pub mod cache_node {
 
-    /// A builder for [`CacheNode`](crate::model::CacheNode)
-    #[non_exhaustive]
+    /// A builder for [`CacheNode`](crate::model::CacheNode).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cache_node_id: std::option::Option<std::string::String>,
@@ -4402,7 +4523,7 @@ pub mod cache_node {
             self.customer_outpost_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheNode`](crate::model::CacheNode)
+        /// Consumes the builder and constructs a [`CacheNode`](crate::model::CacheNode).
         pub fn build(self) -> crate::model::CacheNode {
             crate::model::CacheNode {
                 cache_node_id: self.cache_node_id,
@@ -4418,7 +4539,7 @@ pub mod cache_node {
     }
 }
 impl CacheNode {
-    /// Creates a new builder-style object to manufacture [`CacheNode`](crate::model::CacheNode)
+    /// Creates a new builder-style object to manufacture [`CacheNode`](crate::model::CacheNode).
     pub fn builder() -> crate::model::cache_node::Builder {
         crate::model::cache_node::Builder::default()
     }
@@ -4429,10 +4550,13 @@ impl CacheNode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CacheParameterGroupStatus {
     /// <p>The name of the cache parameter group.</p>
+    #[doc(hidden)]
     pub cache_parameter_group_name: std::option::Option<std::string::String>,
     /// <p>The status of parameter updates.</p>
+    #[doc(hidden)]
     pub parameter_apply_status: std::option::Option<std::string::String>,
     /// <p>A list of the cache node IDs which need to be rebooted for parameter changes to be applied. A node ID is a numeric identifier (0001, 0002, etc.).</p>
+    #[doc(hidden)]
     pub cache_node_ids_to_reboot: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CacheParameterGroupStatus {
@@ -4461,11 +4585,10 @@ impl std::fmt::Debug for CacheParameterGroupStatus {
         formatter.finish()
     }
 }
-/// See [`CacheParameterGroupStatus`](crate::model::CacheParameterGroupStatus)
+/// See [`CacheParameterGroupStatus`](crate::model::CacheParameterGroupStatus).
 pub mod cache_parameter_group_status {
 
-    /// A builder for [`CacheParameterGroupStatus`](crate::model::CacheParameterGroupStatus)
-    #[non_exhaustive]
+    /// A builder for [`CacheParameterGroupStatus`](crate::model::CacheParameterGroupStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cache_parameter_group_name: std::option::Option<std::string::String>,
@@ -4519,7 +4642,7 @@ pub mod cache_parameter_group_status {
             self.cache_node_ids_to_reboot = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheParameterGroupStatus`](crate::model::CacheParameterGroupStatus)
+        /// Consumes the builder and constructs a [`CacheParameterGroupStatus`](crate::model::CacheParameterGroupStatus).
         pub fn build(self) -> crate::model::CacheParameterGroupStatus {
             crate::model::CacheParameterGroupStatus {
                 cache_parameter_group_name: self.cache_parameter_group_name,
@@ -4530,7 +4653,7 @@ pub mod cache_parameter_group_status {
     }
 }
 impl CacheParameterGroupStatus {
-    /// Creates a new builder-style object to manufacture [`CacheParameterGroupStatus`](crate::model::CacheParameterGroupStatus)
+    /// Creates a new builder-style object to manufacture [`CacheParameterGroupStatus`](crate::model::CacheParameterGroupStatus).
     pub fn builder() -> crate::model::cache_parameter_group_status::Builder {
         crate::model::cache_parameter_group_status::Builder::default()
     }
@@ -4541,8 +4664,10 @@ impl CacheParameterGroupStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CacheSecurityGroupMembership {
     /// <p>The name of the cache security group.</p>
+    #[doc(hidden)]
     pub cache_security_group_name: std::option::Option<std::string::String>,
     /// <p>The membership status in the cache security group. The status changes when a cache security group is modified, or when the cache security groups assigned to a cluster are modified.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl CacheSecurityGroupMembership {
@@ -4563,11 +4688,10 @@ impl std::fmt::Debug for CacheSecurityGroupMembership {
         formatter.finish()
     }
 }
-/// See [`CacheSecurityGroupMembership`](crate::model::CacheSecurityGroupMembership)
+/// See [`CacheSecurityGroupMembership`](crate::model::CacheSecurityGroupMembership).
 pub mod cache_security_group_membership {
 
-    /// A builder for [`CacheSecurityGroupMembership`](crate::model::CacheSecurityGroupMembership)
-    #[non_exhaustive]
+    /// A builder for [`CacheSecurityGroupMembership`](crate::model::CacheSecurityGroupMembership).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cache_security_group_name: std::option::Option<std::string::String>,
@@ -4597,7 +4721,7 @@ pub mod cache_security_group_membership {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheSecurityGroupMembership`](crate::model::CacheSecurityGroupMembership)
+        /// Consumes the builder and constructs a [`CacheSecurityGroupMembership`](crate::model::CacheSecurityGroupMembership).
         pub fn build(self) -> crate::model::CacheSecurityGroupMembership {
             crate::model::CacheSecurityGroupMembership {
                 cache_security_group_name: self.cache_security_group_name,
@@ -4607,7 +4731,7 @@ pub mod cache_security_group_membership {
     }
 }
 impl CacheSecurityGroupMembership {
-    /// Creates a new builder-style object to manufacture [`CacheSecurityGroupMembership`](crate::model::CacheSecurityGroupMembership)
+    /// Creates a new builder-style object to manufacture [`CacheSecurityGroupMembership`](crate::model::CacheSecurityGroupMembership).
     pub fn builder() -> crate::model::cache_security_group_membership::Builder {
         crate::model::cache_security_group_membership::Builder::default()
     }
@@ -4618,8 +4742,10 @@ impl CacheSecurityGroupMembership {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotificationConfiguration {
     /// <p>The Amazon Resource Name (ARN) that identifies the topic.</p>
+    #[doc(hidden)]
     pub topic_arn: std::option::Option<std::string::String>,
     /// <p>The current state of the topic.</p>
+    #[doc(hidden)]
     pub topic_status: std::option::Option<std::string::String>,
 }
 impl NotificationConfiguration {
@@ -4640,11 +4766,10 @@ impl std::fmt::Debug for NotificationConfiguration {
         formatter.finish()
     }
 }
-/// See [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+/// See [`NotificationConfiguration`](crate::model::NotificationConfiguration).
 pub mod notification_configuration {
 
-    /// A builder for [`NotificationConfiguration`](crate::model::NotificationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NotificationConfiguration`](crate::model::NotificationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) topic_arn: std::option::Option<std::string::String>,
@@ -4671,7 +4796,7 @@ pub mod notification_configuration {
             self.topic_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+        /// Consumes the builder and constructs a [`NotificationConfiguration`](crate::model::NotificationConfiguration).
         pub fn build(self) -> crate::model::NotificationConfiguration {
             crate::model::NotificationConfiguration {
                 topic_arn: self.topic_arn,
@@ -4681,7 +4806,7 @@ pub mod notification_configuration {
     }
 }
 impl NotificationConfiguration {
-    /// Creates a new builder-style object to manufacture [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+    /// Creates a new builder-style object to manufacture [`NotificationConfiguration`](crate::model::NotificationConfiguration).
     pub fn builder() -> crate::model::notification_configuration::Builder {
         crate::model::notification_configuration::Builder::default()
     }
@@ -4693,16 +4818,22 @@ impl NotificationConfiguration {
 pub struct PendingModifiedValues {
     /// <p>The new number of cache nodes for the cluster.</p>
     /// <p>For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1 and 40.</p>
+    #[doc(hidden)]
     pub num_cache_nodes: std::option::Option<i32>,
     /// <p>A list of cache node IDs that are being removed (or will be removed) from the cluster. A node ID is a 4-digit numeric identifier (0001, 0002, etc.).</p>
+    #[doc(hidden)]
     pub cache_node_ids_to_remove: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The new cache engine version that the cluster runs.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The cache node type that this cluster or replication group is scaled to.</p>
+    #[doc(hidden)]
     pub cache_node_type: std::option::Option<std::string::String>,
     /// <p>The auth token status</p>
+    #[doc(hidden)]
     pub auth_token_status: std::option::Option<crate::model::AuthTokenUpdateStatus>,
     /// <p>The log delivery configurations being modified </p>
+    #[doc(hidden)]
     pub log_delivery_configurations:
         std::option::Option<std::vec::Vec<crate::model::PendingLogDeliveryConfiguration>>,
 }
@@ -4750,11 +4881,10 @@ impl std::fmt::Debug for PendingModifiedValues {
         formatter.finish()
     }
 }
-/// See [`PendingModifiedValues`](crate::model::PendingModifiedValues)
+/// See [`PendingModifiedValues`](crate::model::PendingModifiedValues).
 pub mod pending_modified_values {
 
-    /// A builder for [`PendingModifiedValues`](crate::model::PendingModifiedValues)
-    #[non_exhaustive]
+    /// A builder for [`PendingModifiedValues`](crate::model::PendingModifiedValues).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) num_cache_nodes: std::option::Option<i32>,
@@ -4861,7 +4991,7 @@ pub mod pending_modified_values {
             self.log_delivery_configurations = input;
             self
         }
-        /// Consumes the builder and constructs a [`PendingModifiedValues`](crate::model::PendingModifiedValues)
+        /// Consumes the builder and constructs a [`PendingModifiedValues`](crate::model::PendingModifiedValues).
         pub fn build(self) -> crate::model::PendingModifiedValues {
             crate::model::PendingModifiedValues {
                 num_cache_nodes: self.num_cache_nodes,
@@ -4875,7 +5005,7 @@ pub mod pending_modified_values {
     }
 }
 impl PendingModifiedValues {
-    /// Creates a new builder-style object to manufacture [`PendingModifiedValues`](crate::model::PendingModifiedValues)
+    /// Creates a new builder-style object to manufacture [`PendingModifiedValues`](crate::model::PendingModifiedValues).
     pub fn builder() -> crate::model::pending_modified_values::Builder {
         crate::model::pending_modified_values::Builder::default()
     }
@@ -4889,34 +5019,47 @@ impl PendingModifiedValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GlobalReplicationGroup {
     /// <p>The name of the Global datastore</p>
+    #[doc(hidden)]
     pub global_replication_group_id: std::option::Option<std::string::String>,
     /// <p>The optional description of the Global datastore</p>
+    #[doc(hidden)]
     pub global_replication_group_description: std::option::Option<std::string::String>,
     /// <p>The status of the Global datastore</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The cache node type of the Global datastore</p>
+    #[doc(hidden)]
     pub cache_node_type: std::option::Option<std::string::String>,
     /// <p>The Elasticache engine. For Redis only.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The Elasticache Redis engine version.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The replication groups that comprise the Global datastore.</p>
+    #[doc(hidden)]
     pub members: std::option::Option<std::vec::Vec<crate::model::GlobalReplicationGroupMember>>,
     /// <p>A flag that indicates whether the Global datastore is cluster enabled.</p>
+    #[doc(hidden)]
     pub cluster_enabled: std::option::Option<bool>,
     /// <p>Indicates the slot configuration and global identifier for each slice group.</p>
+    #[doc(hidden)]
     pub global_node_groups: std::option::Option<std::vec::Vec<crate::model::GlobalNodeGroup>>,
     /// <p>A flag that enables using an <code>AuthToken</code> (password) when issuing Redis commands.</p>
     /// <p>Default: <code>false</code> </p>
+    #[doc(hidden)]
     pub auth_token_enabled: std::option::Option<bool>,
     /// <p>A flag that enables in-transit encryption when set to true. You cannot modify the value of <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a cluster you must set <code>TransitEncryptionEnabled</code> to true when you create a cluster. </p>
     /// <p> <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version <code>3.2.6</code>, <code>4.x</code> or later.</p>
+    #[doc(hidden)]
     pub transit_encryption_enabled: std::option::Option<bool>,
     /// <p>A flag that enables encryption at rest when set to <code>true</code>.</p>
     /// <p>You cannot modify the value of <code>AtRestEncryptionEnabled</code> after the replication group is created. To enable encryption at rest on a replication group you must set <code>AtRestEncryptionEnabled</code> to <code>true</code> when you create the replication group. </p>
     /// <p> <b>Required:</b> Only available when creating a replication group in an Amazon VPC using redis version <code>3.2.6</code>, <code>4.x</code> or later.</p>
+    #[doc(hidden)]
     pub at_rest_encryption_enabled: std::option::Option<bool>,
     /// <p>The ARN (Amazon Resource Name) of the global replication group.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl GlobalReplicationGroup {
@@ -5008,11 +5151,10 @@ impl std::fmt::Debug for GlobalReplicationGroup {
         formatter.finish()
     }
 }
-/// See [`GlobalReplicationGroup`](crate::model::GlobalReplicationGroup)
+/// See [`GlobalReplicationGroup`](crate::model::GlobalReplicationGroup).
 pub mod global_replication_group {
 
-    /// A builder for [`GlobalReplicationGroup`](crate::model::GlobalReplicationGroup)
-    #[non_exhaustive]
+    /// A builder for [`GlobalReplicationGroup`](crate::model::GlobalReplicationGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_replication_group_id: std::option::Option<std::string::String>,
@@ -5206,7 +5348,7 @@ pub mod global_replication_group {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`GlobalReplicationGroup`](crate::model::GlobalReplicationGroup)
+        /// Consumes the builder and constructs a [`GlobalReplicationGroup`](crate::model::GlobalReplicationGroup).
         pub fn build(self) -> crate::model::GlobalReplicationGroup {
             crate::model::GlobalReplicationGroup {
                 global_replication_group_id: self.global_replication_group_id,
@@ -5227,7 +5369,7 @@ pub mod global_replication_group {
     }
 }
 impl GlobalReplicationGroup {
-    /// Creates a new builder-style object to manufacture [`GlobalReplicationGroup`](crate::model::GlobalReplicationGroup)
+    /// Creates a new builder-style object to manufacture [`GlobalReplicationGroup`](crate::model::GlobalReplicationGroup).
     pub fn builder() -> crate::model::global_replication_group::Builder {
         crate::model::global_replication_group::Builder::default()
     }
@@ -5238,8 +5380,10 @@ impl GlobalReplicationGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GlobalNodeGroup {
     /// <p>The name of the global node group</p>
+    #[doc(hidden)]
     pub global_node_group_id: std::option::Option<std::string::String>,
     /// <p>The keyspace for this node group</p>
+    #[doc(hidden)]
     pub slots: std::option::Option<std::string::String>,
 }
 impl GlobalNodeGroup {
@@ -5260,11 +5404,10 @@ impl std::fmt::Debug for GlobalNodeGroup {
         formatter.finish()
     }
 }
-/// See [`GlobalNodeGroup`](crate::model::GlobalNodeGroup)
+/// See [`GlobalNodeGroup`](crate::model::GlobalNodeGroup).
 pub mod global_node_group {
 
-    /// A builder for [`GlobalNodeGroup`](crate::model::GlobalNodeGroup)
-    #[non_exhaustive]
+    /// A builder for [`GlobalNodeGroup`](crate::model::GlobalNodeGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global_node_group_id: std::option::Option<std::string::String>,
@@ -5294,7 +5437,7 @@ pub mod global_node_group {
             self.slots = input;
             self
         }
-        /// Consumes the builder and constructs a [`GlobalNodeGroup`](crate::model::GlobalNodeGroup)
+        /// Consumes the builder and constructs a [`GlobalNodeGroup`](crate::model::GlobalNodeGroup).
         pub fn build(self) -> crate::model::GlobalNodeGroup {
             crate::model::GlobalNodeGroup {
                 global_node_group_id: self.global_node_group_id,
@@ -5304,7 +5447,7 @@ pub mod global_node_group {
     }
 }
 impl GlobalNodeGroup {
-    /// Creates a new builder-style object to manufacture [`GlobalNodeGroup`](crate::model::GlobalNodeGroup)
+    /// Creates a new builder-style object to manufacture [`GlobalNodeGroup`](crate::model::GlobalNodeGroup).
     pub fn builder() -> crate::model::global_node_group::Builder {
         crate::model::global_node_group::Builder::default()
     }
@@ -5315,14 +5458,19 @@ impl GlobalNodeGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GlobalReplicationGroupMember {
     /// <p>The replication group id of the Global datastore member.</p>
+    #[doc(hidden)]
     pub replication_group_id: std::option::Option<std::string::String>,
     /// <p>The Amazon region of the Global datastore member.</p>
+    #[doc(hidden)]
     pub replication_group_region: std::option::Option<std::string::String>,
     /// <p>Indicates the role of the replication group, primary or secondary.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<std::string::String>,
     /// <p>Indicates whether automatic failover is enabled for the replication group.</p>
+    #[doc(hidden)]
     pub automatic_failover: std::option::Option<crate::model::AutomaticFailoverStatus>,
     /// <p>The status of the membership of the replication group.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl GlobalReplicationGroupMember {
@@ -5360,11 +5508,10 @@ impl std::fmt::Debug for GlobalReplicationGroupMember {
         formatter.finish()
     }
 }
-/// See [`GlobalReplicationGroupMember`](crate::model::GlobalReplicationGroupMember)
+/// See [`GlobalReplicationGroupMember`](crate::model::GlobalReplicationGroupMember).
 pub mod global_replication_group_member {
 
-    /// A builder for [`GlobalReplicationGroupMember`](crate::model::GlobalReplicationGroupMember)
-    #[non_exhaustive]
+    /// A builder for [`GlobalReplicationGroupMember`](crate::model::GlobalReplicationGroupMember).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_group_id: std::option::Option<std::string::String>,
@@ -5433,7 +5580,7 @@ pub mod global_replication_group_member {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`GlobalReplicationGroupMember`](crate::model::GlobalReplicationGroupMember)
+        /// Consumes the builder and constructs a [`GlobalReplicationGroupMember`](crate::model::GlobalReplicationGroupMember).
         pub fn build(self) -> crate::model::GlobalReplicationGroupMember {
             crate::model::GlobalReplicationGroupMember {
                 replication_group_id: self.replication_group_id,
@@ -5446,7 +5593,7 @@ pub mod global_replication_group_member {
     }
 }
 impl GlobalReplicationGroupMember {
-    /// Creates a new builder-style object to manufacture [`GlobalReplicationGroupMember`](crate::model::GlobalReplicationGroupMember)
+    /// Creates a new builder-style object to manufacture [`GlobalReplicationGroupMember`](crate::model::GlobalReplicationGroupMember).
     pub fn builder() -> crate::model::global_replication_group_member::Builder {
         crate::model::global_replication_group_member::Builder::default()
     }
@@ -5457,8 +5604,10 @@ impl GlobalReplicationGroupMember {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservedCacheNode {
     /// <p>The unique identifier for the reservation.</p>
+    #[doc(hidden)]
     pub reserved_cache_node_id: std::option::Option<std::string::String>,
     /// <p>The offering identifier.</p>
+    #[doc(hidden)]
     pub reserved_cache_nodes_offering_id: std::option::Option<std::string::String>,
     /// <p>The cache node type for the reserved cache nodes.</p>
     /// <p>The following node types are supported by ElastiCache. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts.</p>
@@ -5468,11 +5617,11 @@ pub struct ReservedCacheNode {
     /// <li> <p>Current generation: </p> <p> <b>M6g node types:</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Compute optimized:</p>
     /// <ul>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Memory optimized with data tiering:</p>
     /// <ul>
@@ -5483,7 +5632,7 @@ pub struct ReservedCacheNode {
     /// <li> <p>Current generation: </p> <p> <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
     /// </ul> </li>
     /// </ul>
     /// <p> <b>Additional node type info</b> </p>
@@ -5493,27 +5642,38 @@ pub struct ReservedCacheNode {
     /// <li> <p>Redis Multi-AZ with automatic failover is not supported on T1 instances.</p> </li>
     /// <li> <p>Redis configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on Redis version 2.8.22 and later.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub cache_node_type: std::option::Option<std::string::String>,
     /// <p>The time the reservation started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The duration of the reservation in seconds.</p>
+    #[doc(hidden)]
     pub duration: i32,
     /// <p>The fixed price charged for this reserved cache node.</p>
+    #[doc(hidden)]
     pub fixed_price: f64,
     /// <p>The hourly price charged for this reserved cache node.</p>
+    #[doc(hidden)]
     pub usage_price: f64,
     /// <p>The number of cache nodes that have been reserved.</p>
+    #[doc(hidden)]
     pub cache_node_count: i32,
     /// <p>The description of the reserved cache node.</p>
+    #[doc(hidden)]
     pub product_description: std::option::Option<std::string::String>,
     /// <p>The offering type of this reserved cache node.</p>
+    #[doc(hidden)]
     pub offering_type: std::option::Option<std::string::String>,
     /// <p>The state of the reserved cache node.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>The recurring price charged to run this reserved cache node.</p>
+    #[doc(hidden)]
     pub recurring_charges: std::option::Option<std::vec::Vec<crate::model::RecurringCharge>>,
     /// <p>The Amazon Resource Name (ARN) of the reserved cache node.</p>
     /// <p>Example: <code>arn:aws:elasticache:us-east-1:123456789012:reserved-instance:ri-2017-03-27-08-33-25-582</code> </p>
+    #[doc(hidden)]
     pub reservation_arn: std::option::Option<std::string::String>,
 }
 impl ReservedCacheNode {
@@ -5533,11 +5693,11 @@ impl ReservedCacheNode {
     /// <li> <p>Current generation: </p> <p> <b>M6g node types:</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Compute optimized:</p>
     /// <ul>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Memory optimized with data tiering:</p>
     /// <ul>
@@ -5548,7 +5708,7 @@ impl ReservedCacheNode {
     /// <li> <p>Current generation: </p> <p> <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
     /// </ul> </li>
     /// </ul>
     /// <p> <b>Additional node type info</b> </p>
@@ -5625,11 +5785,10 @@ impl std::fmt::Debug for ReservedCacheNode {
         formatter.finish()
     }
 }
-/// See [`ReservedCacheNode`](crate::model::ReservedCacheNode)
+/// See [`ReservedCacheNode`](crate::model::ReservedCacheNode).
 pub mod reserved_cache_node {
 
-    /// A builder for [`ReservedCacheNode`](crate::model::ReservedCacheNode)
-    #[non_exhaustive]
+    /// A builder for [`ReservedCacheNode`](crate::model::ReservedCacheNode).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reserved_cache_node_id: std::option::Option<std::string::String>,
@@ -5685,11 +5844,11 @@ pub mod reserved_cache_node {
         /// <li> <p>Current generation: </p> <p> <b>M6g node types:</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Compute optimized:</p>
         /// <ul>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Memory optimized with data tiering:</p>
         /// <ul>
@@ -5700,7 +5859,7 @@ pub mod reserved_cache_node {
         /// <li> <p>Current generation: </p> <p> <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
         /// </ul> </li>
         /// </ul>
         /// <p> <b>Additional node type info</b> </p>
@@ -5722,11 +5881,11 @@ pub mod reserved_cache_node {
         /// <li> <p>Current generation: </p> <p> <b>M6g node types:</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Compute optimized:</p>
         /// <ul>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Memory optimized with data tiering:</p>
         /// <ul>
@@ -5737,7 +5896,7 @@ pub mod reserved_cache_node {
         /// <li> <p>Current generation: </p> <p> <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
         /// </ul> </li>
         /// </ul>
         /// <p> <b>Additional node type info</b> </p>
@@ -5877,7 +6036,7 @@ pub mod reserved_cache_node {
             self.reservation_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservedCacheNode`](crate::model::ReservedCacheNode)
+        /// Consumes the builder and constructs a [`ReservedCacheNode`](crate::model::ReservedCacheNode).
         pub fn build(self) -> crate::model::ReservedCacheNode {
             crate::model::ReservedCacheNode {
                 reserved_cache_node_id: self.reserved_cache_node_id,
@@ -5898,7 +6057,7 @@ pub mod reserved_cache_node {
     }
 }
 impl ReservedCacheNode {
-    /// Creates a new builder-style object to manufacture [`ReservedCacheNode`](crate::model::ReservedCacheNode)
+    /// Creates a new builder-style object to manufacture [`ReservedCacheNode`](crate::model::ReservedCacheNode).
     pub fn builder() -> crate::model::reserved_cache_node::Builder {
         crate::model::reserved_cache_node::Builder::default()
     }
@@ -5909,8 +6068,10 @@ impl ReservedCacheNode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecurringCharge {
     /// <p>The monetary amount of the recurring charge.</p>
+    #[doc(hidden)]
     pub recurring_charge_amount: f64,
     /// <p>The frequency of the recurring charge.</p>
+    #[doc(hidden)]
     pub recurring_charge_frequency: std::option::Option<std::string::String>,
 }
 impl RecurringCharge {
@@ -5934,11 +6095,10 @@ impl std::fmt::Debug for RecurringCharge {
         formatter.finish()
     }
 }
-/// See [`RecurringCharge`](crate::model::RecurringCharge)
+/// See [`RecurringCharge`](crate::model::RecurringCharge).
 pub mod recurring_charge {
 
-    /// A builder for [`RecurringCharge`](crate::model::RecurringCharge)
-    #[non_exhaustive]
+    /// A builder for [`RecurringCharge`](crate::model::RecurringCharge).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recurring_charge_amount: std::option::Option<f64>,
@@ -5968,7 +6128,7 @@ pub mod recurring_charge {
             self.recurring_charge_frequency = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecurringCharge`](crate::model::RecurringCharge)
+        /// Consumes the builder and constructs a [`RecurringCharge`](crate::model::RecurringCharge).
         pub fn build(self) -> crate::model::RecurringCharge {
             crate::model::RecurringCharge {
                 recurring_charge_amount: self.recurring_charge_amount.unwrap_or_default(),
@@ -5978,7 +6138,7 @@ pub mod recurring_charge {
     }
 }
 impl RecurringCharge {
-    /// Creates a new builder-style object to manufacture [`RecurringCharge`](crate::model::RecurringCharge)
+    /// Creates a new builder-style object to manufacture [`RecurringCharge`](crate::model::RecurringCharge).
     pub fn builder() -> crate::model::recurring_charge::Builder {
         crate::model::recurring_charge::Builder::default()
     }
@@ -5989,8 +6149,10 @@ impl RecurringCharge {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserGroupPendingChanges {
     /// <p>The list of user IDs to remove.</p>
+    #[doc(hidden)]
     pub user_ids_to_remove: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The list of user IDs to add.</p>
+    #[doc(hidden)]
     pub user_ids_to_add: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl UserGroupPendingChanges {
@@ -6011,11 +6173,10 @@ impl std::fmt::Debug for UserGroupPendingChanges {
         formatter.finish()
     }
 }
-/// See [`UserGroupPendingChanges`](crate::model::UserGroupPendingChanges)
+/// See [`UserGroupPendingChanges`](crate::model::UserGroupPendingChanges).
 pub mod user_group_pending_changes {
 
-    /// A builder for [`UserGroupPendingChanges`](crate::model::UserGroupPendingChanges)
-    #[non_exhaustive]
+    /// A builder for [`UserGroupPendingChanges`](crate::model::UserGroupPendingChanges).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_ids_to_remove: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -6060,7 +6221,7 @@ pub mod user_group_pending_changes {
             self.user_ids_to_add = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserGroupPendingChanges`](crate::model::UserGroupPendingChanges)
+        /// Consumes the builder and constructs a [`UserGroupPendingChanges`](crate::model::UserGroupPendingChanges).
         pub fn build(self) -> crate::model::UserGroupPendingChanges {
             crate::model::UserGroupPendingChanges {
                 user_ids_to_remove: self.user_ids_to_remove,
@@ -6070,7 +6231,7 @@ pub mod user_group_pending_changes {
     }
 }
 impl UserGroupPendingChanges {
-    /// Creates a new builder-style object to manufacture [`UserGroupPendingChanges`](crate::model::UserGroupPendingChanges)
+    /// Creates a new builder-style object to manufacture [`UserGroupPendingChanges`](crate::model::UserGroupPendingChanges).
     pub fn builder() -> crate::model::user_group_pending_changes::Builder {
         crate::model::user_group_pending_changes::Builder::default()
     }
@@ -6081,8 +6242,10 @@ impl UserGroupPendingChanges {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Authentication {
     /// <p>Indicates whether the user requires a password to authenticate.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::AuthenticationType>,
     /// <p>The number of passwords belonging to the user. The maximum is two.</p>
+    #[doc(hidden)]
     pub password_count: std::option::Option<i32>,
 }
 impl Authentication {
@@ -6103,11 +6266,10 @@ impl std::fmt::Debug for Authentication {
         formatter.finish()
     }
 }
-/// See [`Authentication`](crate::model::Authentication)
+/// See [`Authentication`](crate::model::Authentication).
 pub mod authentication {
 
-    /// A builder for [`Authentication`](crate::model::Authentication)
-    #[non_exhaustive]
+    /// A builder for [`Authentication`](crate::model::Authentication).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::AuthenticationType>,
@@ -6137,7 +6299,7 @@ pub mod authentication {
             self.password_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`Authentication`](crate::model::Authentication)
+        /// Consumes the builder and constructs a [`Authentication`](crate::model::Authentication).
         pub fn build(self) -> crate::model::Authentication {
             crate::model::Authentication {
                 r#type: self.r#type,
@@ -6147,7 +6309,7 @@ pub mod authentication {
     }
 }
 impl Authentication {
-    /// Creates a new builder-style object to manufacture [`Authentication`](crate::model::Authentication)
+    /// Creates a new builder-style object to manufacture [`Authentication`](crate::model::Authentication).
     pub fn builder() -> crate::model::authentication::Builder {
         crate::model::authentication::Builder::default()
     }
@@ -6213,8 +6375,10 @@ impl AsRef<str> for AuthenticationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReshardingConfiguration {
     /// <p>Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node group these configuration values apply to.</p>
+    #[doc(hidden)]
     pub node_group_id: std::option::Option<std::string::String>,
     /// <p>A list of preferred availability zones for the nodes in this cluster.</p>
+    #[doc(hidden)]
     pub preferred_availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ReshardingConfiguration {
@@ -6238,11 +6402,10 @@ impl std::fmt::Debug for ReshardingConfiguration {
         formatter.finish()
     }
 }
-/// See [`ReshardingConfiguration`](crate::model::ReshardingConfiguration)
+/// See [`ReshardingConfiguration`](crate::model::ReshardingConfiguration).
 pub mod resharding_configuration {
 
-    /// A builder for [`ReshardingConfiguration`](crate::model::ReshardingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ReshardingConfiguration`](crate::model::ReshardingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) node_group_id: std::option::Option<std::string::String>,
@@ -6285,7 +6448,7 @@ pub mod resharding_configuration {
             self.preferred_availability_zones = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReshardingConfiguration`](crate::model::ReshardingConfiguration)
+        /// Consumes the builder and constructs a [`ReshardingConfiguration`](crate::model::ReshardingConfiguration).
         pub fn build(self) -> crate::model::ReshardingConfiguration {
             crate::model::ReshardingConfiguration {
                 node_group_id: self.node_group_id,
@@ -6295,7 +6458,7 @@ pub mod resharding_configuration {
     }
 }
 impl ReshardingConfiguration {
-    /// Creates a new builder-style object to manufacture [`ReshardingConfiguration`](crate::model::ReshardingConfiguration)
+    /// Creates a new builder-style object to manufacture [`ReshardingConfiguration`](crate::model::ReshardingConfiguration).
     pub fn builder() -> crate::model::resharding_configuration::Builder {
         crate::model::resharding_configuration::Builder::default()
     }
@@ -6306,14 +6469,19 @@ impl ReshardingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogDeliveryConfigurationRequest {
     /// <p>Refers to <a href="https://redis.io/commands/slowlog">slow-log</a> or engine-log..</p>
+    #[doc(hidden)]
     pub log_type: std::option::Option<crate::model::LogType>,
     /// <p>Specify either <code>cloudwatch-logs</code> or <code>kinesis-firehose</code> as the destination type.</p>
+    #[doc(hidden)]
     pub destination_type: std::option::Option<crate::model::DestinationType>,
     /// <p>Configuration details of either a CloudWatch Logs destination or Kinesis Data Firehose destination.</p>
+    #[doc(hidden)]
     pub destination_details: std::option::Option<crate::model::DestinationDetails>,
     /// <p>Specifies either JSON or TEXT</p>
+    #[doc(hidden)]
     pub log_format: std::option::Option<crate::model::LogFormat>,
     /// <p>Specify if log delivery is enabled. Default <code>true</code>.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
 }
 impl LogDeliveryConfigurationRequest {
@@ -6349,11 +6517,10 @@ impl std::fmt::Debug for LogDeliveryConfigurationRequest {
         formatter.finish()
     }
 }
-/// See [`LogDeliveryConfigurationRequest`](crate::model::LogDeliveryConfigurationRequest)
+/// See [`LogDeliveryConfigurationRequest`](crate::model::LogDeliveryConfigurationRequest).
 pub mod log_delivery_configuration_request {
 
-    /// A builder for [`LogDeliveryConfigurationRequest`](crate::model::LogDeliveryConfigurationRequest)
-    #[non_exhaustive]
+    /// A builder for [`LogDeliveryConfigurationRequest`](crate::model::LogDeliveryConfigurationRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_type: std::option::Option<crate::model::LogType>,
@@ -6422,7 +6589,7 @@ pub mod log_delivery_configuration_request {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogDeliveryConfigurationRequest`](crate::model::LogDeliveryConfigurationRequest)
+        /// Consumes the builder and constructs a [`LogDeliveryConfigurationRequest`](crate::model::LogDeliveryConfigurationRequest).
         pub fn build(self) -> crate::model::LogDeliveryConfigurationRequest {
             crate::model::LogDeliveryConfigurationRequest {
                 log_type: self.log_type,
@@ -6435,7 +6602,7 @@ pub mod log_delivery_configuration_request {
     }
 }
 impl LogDeliveryConfigurationRequest {
-    /// Creates a new builder-style object to manufacture [`LogDeliveryConfigurationRequest`](crate::model::LogDeliveryConfigurationRequest)
+    /// Creates a new builder-style object to manufacture [`LogDeliveryConfigurationRequest`](crate::model::LogDeliveryConfigurationRequest).
     pub fn builder() -> crate::model::log_delivery_configuration_request::Builder {
         crate::model::log_delivery_configuration_request::Builder::default()
     }
@@ -6509,14 +6676,19 @@ impl AsRef<str> for AuthTokenUpdateStrategyType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CacheSubnetGroup {
     /// <p>The name of the cache subnet group.</p>
+    #[doc(hidden)]
     pub cache_subnet_group_name: std::option::Option<std::string::String>,
     /// <p>The description of the cache subnet group.</p>
+    #[doc(hidden)]
     pub cache_subnet_group_description: std::option::Option<std::string::String>,
     /// <p>The Amazon Virtual Private Cloud identifier (VPC ID) of the cache subnet group.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>A list of subnets associated with the cache subnet group.</p>
+    #[doc(hidden)]
     pub subnets: std::option::Option<std::vec::Vec<crate::model::Subnet>>,
     /// <p>The ARN (Amazon Resource Name) of the cache subnet group.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl CacheSubnetGroup {
@@ -6555,11 +6727,10 @@ impl std::fmt::Debug for CacheSubnetGroup {
         formatter.finish()
     }
 }
-/// See [`CacheSubnetGroup`](crate::model::CacheSubnetGroup)
+/// See [`CacheSubnetGroup`](crate::model::CacheSubnetGroup).
 pub mod cache_subnet_group {
 
-    /// A builder for [`CacheSubnetGroup`](crate::model::CacheSubnetGroup)
-    #[non_exhaustive]
+    /// A builder for [`CacheSubnetGroup`](crate::model::CacheSubnetGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cache_subnet_group_name: std::option::Option<std::string::String>,
@@ -6637,7 +6808,7 @@ pub mod cache_subnet_group {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheSubnetGroup`](crate::model::CacheSubnetGroup)
+        /// Consumes the builder and constructs a [`CacheSubnetGroup`](crate::model::CacheSubnetGroup).
         pub fn build(self) -> crate::model::CacheSubnetGroup {
             crate::model::CacheSubnetGroup {
                 cache_subnet_group_name: self.cache_subnet_group_name,
@@ -6650,7 +6821,7 @@ pub mod cache_subnet_group {
     }
 }
 impl CacheSubnetGroup {
-    /// Creates a new builder-style object to manufacture [`CacheSubnetGroup`](crate::model::CacheSubnetGroup)
+    /// Creates a new builder-style object to manufacture [`CacheSubnetGroup`](crate::model::CacheSubnetGroup).
     pub fn builder() -> crate::model::cache_subnet_group::Builder {
         crate::model::cache_subnet_group::Builder::default()
     }
@@ -6661,10 +6832,13 @@ impl CacheSubnetGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Subnet {
     /// <p>The unique identifier for the subnet.</p>
+    #[doc(hidden)]
     pub subnet_identifier: std::option::Option<std::string::String>,
     /// <p>The Availability Zone associated with the subnet.</p>
+    #[doc(hidden)]
     pub subnet_availability_zone: std::option::Option<crate::model::AvailabilityZone>,
     /// <p>The outpost ARN of the subnet.</p>
+    #[doc(hidden)]
     pub subnet_outpost: std::option::Option<crate::model::SubnetOutpost>,
 }
 impl Subnet {
@@ -6690,11 +6864,10 @@ impl std::fmt::Debug for Subnet {
         formatter.finish()
     }
 }
-/// See [`Subnet`](crate::model::Subnet)
+/// See [`Subnet`](crate::model::Subnet).
 pub mod subnet {
 
-    /// A builder for [`Subnet`](crate::model::Subnet)
-    #[non_exhaustive]
+    /// A builder for [`Subnet`](crate::model::Subnet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_identifier: std::option::Option<std::string::String>,
@@ -6741,7 +6914,7 @@ pub mod subnet {
             self.subnet_outpost = input;
             self
         }
-        /// Consumes the builder and constructs a [`Subnet`](crate::model::Subnet)
+        /// Consumes the builder and constructs a [`Subnet`](crate::model::Subnet).
         pub fn build(self) -> crate::model::Subnet {
             crate::model::Subnet {
                 subnet_identifier: self.subnet_identifier,
@@ -6752,7 +6925,7 @@ pub mod subnet {
     }
 }
 impl Subnet {
-    /// Creates a new builder-style object to manufacture [`Subnet`](crate::model::Subnet)
+    /// Creates a new builder-style object to manufacture [`Subnet`](crate::model::Subnet).
     pub fn builder() -> crate::model::subnet::Builder {
         crate::model::subnet::Builder::default()
     }
@@ -6763,6 +6936,7 @@ impl Subnet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SubnetOutpost {
     /// <p>The outpost ARN of the subnet.</p>
+    #[doc(hidden)]
     pub subnet_outpost_arn: std::option::Option<std::string::String>,
 }
 impl SubnetOutpost {
@@ -6778,11 +6952,10 @@ impl std::fmt::Debug for SubnetOutpost {
         formatter.finish()
     }
 }
-/// See [`SubnetOutpost`](crate::model::SubnetOutpost)
+/// See [`SubnetOutpost`](crate::model::SubnetOutpost).
 pub mod subnet_outpost {
 
-    /// A builder for [`SubnetOutpost`](crate::model::SubnetOutpost)
-    #[non_exhaustive]
+    /// A builder for [`SubnetOutpost`](crate::model::SubnetOutpost).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_outpost_arn: std::option::Option<std::string::String>,
@@ -6801,7 +6974,7 @@ pub mod subnet_outpost {
             self.subnet_outpost_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`SubnetOutpost`](crate::model::SubnetOutpost)
+        /// Consumes the builder and constructs a [`SubnetOutpost`](crate::model::SubnetOutpost).
         pub fn build(self) -> crate::model::SubnetOutpost {
             crate::model::SubnetOutpost {
                 subnet_outpost_arn: self.subnet_outpost_arn,
@@ -6810,7 +6983,7 @@ pub mod subnet_outpost {
     }
 }
 impl SubnetOutpost {
-    /// Creates a new builder-style object to manufacture [`SubnetOutpost`](crate::model::SubnetOutpost)
+    /// Creates a new builder-style object to manufacture [`SubnetOutpost`](crate::model::SubnetOutpost).
     pub fn builder() -> crate::model::subnet_outpost::Builder {
         crate::model::subnet_outpost::Builder::default()
     }
@@ -6821,6 +6994,7 @@ impl SubnetOutpost {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AvailabilityZone {
     /// <p>The name of the Availability Zone.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl AvailabilityZone {
@@ -6836,11 +7010,10 @@ impl std::fmt::Debug for AvailabilityZone {
         formatter.finish()
     }
 }
-/// See [`AvailabilityZone`](crate::model::AvailabilityZone)
+/// See [`AvailabilityZone`](crate::model::AvailabilityZone).
 pub mod availability_zone {
 
-    /// A builder for [`AvailabilityZone`](crate::model::AvailabilityZone)
-    #[non_exhaustive]
+    /// A builder for [`AvailabilityZone`](crate::model::AvailabilityZone).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -6856,14 +7029,14 @@ pub mod availability_zone {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AvailabilityZone`](crate::model::AvailabilityZone)
+        /// Consumes the builder and constructs a [`AvailabilityZone`](crate::model::AvailabilityZone).
         pub fn build(self) -> crate::model::AvailabilityZone {
             crate::model::AvailabilityZone { name: self.name }
         }
     }
 }
 impl AvailabilityZone {
-    /// Creates a new builder-style object to manufacture [`AvailabilityZone`](crate::model::AvailabilityZone)
+    /// Creates a new builder-style object to manufacture [`AvailabilityZone`](crate::model::AvailabilityZone).
     pub fn builder() -> crate::model::availability_zone::Builder {
         crate::model::availability_zone::Builder::default()
     }
@@ -6929,6 +7102,7 @@ impl AsRef<str> for AzMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigureShard {
     /// <p>The 4-digit id for the node group you are configuring. For Redis (cluster mode disabled) replication groups, the node group id is always 0001. To find a Redis (cluster mode enabled)'s node group's (shard's) id, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/shard-find-id.html">Finding a Shard's Id</a>.</p>
+    #[doc(hidden)]
     pub node_group_id: std::option::Option<std::string::String>,
     /// <p>The number of replicas you want in this node group at the end of this operation. The maximum value for <code>NewReplicaCount</code> is 5. The minimum value depends upon the type of Redis replication group you are working with.</p>
     /// <p>The minimum number of replicas in a shard or replication group is:</p>
@@ -6940,10 +7114,13 @@ pub struct ConfigureShard {
     /// </ul> </li>
     /// <li> <p>Redis (cluster mode enabled): 0 (though you will not be able to failover to a replica if your primary node fails)</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub new_replica_count: i32,
     /// <p>A list of <code>PreferredAvailabilityZone</code> strings that specify which availability zones the replication group's nodes are to be in. The nummber of <code>PreferredAvailabilityZone</code> values must equal the value of <code>NewReplicaCount</code> plus 1 to account for the primary node. If this member of <code>ReplicaConfiguration</code> is omitted, ElastiCache for Redis selects the availability zone for each of the replicas.</p>
+    #[doc(hidden)]
     pub preferred_availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The outpost ARNs in which the cache cluster is created.</p>
+    #[doc(hidden)]
     pub preferred_outpost_arns: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ConfigureShard {
@@ -6986,11 +7163,10 @@ impl std::fmt::Debug for ConfigureShard {
         formatter.finish()
     }
 }
-/// See [`ConfigureShard`](crate::model::ConfigureShard)
+/// See [`ConfigureShard`](crate::model::ConfigureShard).
 pub mod configure_shard {
 
-    /// A builder for [`ConfigureShard`](crate::model::ConfigureShard)
-    #[non_exhaustive]
+    /// A builder for [`ConfigureShard`](crate::model::ConfigureShard).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) node_group_id: std::option::Option<std::string::String>,
@@ -7082,7 +7258,7 @@ pub mod configure_shard {
             self.preferred_outpost_arns = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigureShard`](crate::model::ConfigureShard)
+        /// Consumes the builder and constructs a [`ConfigureShard`](crate::model::ConfigureShard).
         pub fn build(self) -> crate::model::ConfigureShard {
             crate::model::ConfigureShard {
                 node_group_id: self.node_group_id,
@@ -7094,7 +7270,7 @@ pub mod configure_shard {
     }
 }
 impl ConfigureShard {
-    /// Creates a new builder-style object to manufacture [`ConfigureShard`](crate::model::ConfigureShard)
+    /// Creates a new builder-style object to manufacture [`ConfigureShard`](crate::model::ConfigureShard).
     pub fn builder() -> crate::model::configure_shard::Builder {
         crate::model::configure_shard::Builder::default()
     }
@@ -7105,10 +7281,13 @@ impl ConfigureShard {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegionalConfiguration {
     /// <p>The name of the secondary cluster</p>
+    #[doc(hidden)]
     pub replication_group_id: std::option::Option<std::string::String>,
     /// <p>The Amazon region where the cluster is stored</p>
+    #[doc(hidden)]
     pub replication_group_region: std::option::Option<std::string::String>,
     /// <p>A list of <code>PreferredAvailabilityZones</code> objects that specifies the configuration of a node group in the resharded cluster. </p>
+    #[doc(hidden)]
     pub resharding_configuration:
         std::option::Option<std::vec::Vec<crate::model::ReshardingConfiguration>>,
 }
@@ -7137,11 +7316,10 @@ impl std::fmt::Debug for RegionalConfiguration {
         formatter.finish()
     }
 }
-/// See [`RegionalConfiguration`](crate::model::RegionalConfiguration)
+/// See [`RegionalConfiguration`](crate::model::RegionalConfiguration).
 pub mod regional_configuration {
 
-    /// A builder for [`RegionalConfiguration`](crate::model::RegionalConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`RegionalConfiguration`](crate::model::RegionalConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_group_id: std::option::Option<std::string::String>,
@@ -7198,7 +7376,7 @@ pub mod regional_configuration {
             self.resharding_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegionalConfiguration`](crate::model::RegionalConfiguration)
+        /// Consumes the builder and constructs a [`RegionalConfiguration`](crate::model::RegionalConfiguration).
         pub fn build(self) -> crate::model::RegionalConfiguration {
             crate::model::RegionalConfiguration {
                 replication_group_id: self.replication_group_id,
@@ -7209,7 +7387,7 @@ pub mod regional_configuration {
     }
 }
 impl RegionalConfiguration {
-    /// Creates a new builder-style object to manufacture [`RegionalConfiguration`](crate::model::RegionalConfiguration)
+    /// Creates a new builder-style object to manufacture [`RegionalConfiguration`](crate::model::RegionalConfiguration).
     pub fn builder() -> crate::model::regional_configuration::Builder {
         crate::model::regional_configuration::Builder::default()
     }
@@ -7220,22 +7398,31 @@ impl RegionalConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct User {
     /// <p>The ID of the user.</p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
     /// <p>The username of the user.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>Indicates the user status. Can be "active", "modifying" or "deleting".</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The current supported value is Redis.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The minimum engine version required, which is Redis 6.0</p>
+    #[doc(hidden)]
     pub minimum_engine_version: std::option::Option<std::string::String>,
     /// <p>Access permissions string used for this user.</p>
+    #[doc(hidden)]
     pub access_string: std::option::Option<std::string::String>,
     /// <p>Returns a list of the user group IDs the user belongs to.</p>
+    #[doc(hidden)]
     pub user_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Denotes whether the user requires a password to authenticate.</p>
+    #[doc(hidden)]
     pub authentication: std::option::Option<crate::model::Authentication>,
     /// <p>The Amazon Resource Name (ARN) of the user.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl User {
@@ -7291,11 +7478,10 @@ impl std::fmt::Debug for User {
         formatter.finish()
     }
 }
-/// See [`User`](crate::model::User)
+/// See [`User`](crate::model::User).
 pub mod user {
 
-    /// A builder for [`User`](crate::model::User)
-    #[non_exhaustive]
+    /// A builder for [`User`](crate::model::User).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_id: std::option::Option<std::string::String>,
@@ -7417,7 +7603,7 @@ pub mod user {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`User`](crate::model::User)
+        /// Consumes the builder and constructs a [`User`](crate::model::User).
         pub fn build(self) -> crate::model::User {
             crate::model::User {
                 user_id: self.user_id,
@@ -7434,7 +7620,7 @@ pub mod user {
     }
 }
 impl User {
-    /// Creates a new builder-style object to manufacture [`User`](crate::model::User)
+    /// Creates a new builder-style object to manufacture [`User`](crate::model::User).
     pub fn builder() -> crate::model::user::Builder {
         crate::model::user::Builder::default()
     }
@@ -7445,8 +7631,10 @@ impl User {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
     /// <p>The property being filtered. For example, UserId.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The property values to filter on. For example, "user-123".</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Filter {
@@ -7467,11 +7655,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -7507,7 +7694,7 @@ pub mod filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 name: self.name,
@@ -7517,7 +7704,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -7528,20 +7715,28 @@ impl Filter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserGroup {
     /// <p>The ID of the user group.</p>
+    #[doc(hidden)]
     pub user_group_id: std::option::Option<std::string::String>,
     /// <p>Indicates user group status. Can be "creating", "active", "modifying", "deleting".</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The current supported value is Redis. </p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The list of user IDs that belong to the user group.</p>
+    #[doc(hidden)]
     pub user_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The minimum engine version required, which is Redis 6.0</p>
+    #[doc(hidden)]
     pub minimum_engine_version: std::option::Option<std::string::String>,
     /// <p>A list of updates being applied to the user group.</p>
+    #[doc(hidden)]
     pub pending_changes: std::option::Option<crate::model::UserGroupPendingChanges>,
     /// <p>A list of replication groups that the user group can access.</p>
+    #[doc(hidden)]
     pub replication_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the user group.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl UserGroup {
@@ -7592,11 +7787,10 @@ impl std::fmt::Debug for UserGroup {
         formatter.finish()
     }
 }
-/// See [`UserGroup`](crate::model::UserGroup)
+/// See [`UserGroup`](crate::model::UserGroup).
 pub mod user_group {
 
-    /// A builder for [`UserGroup`](crate::model::UserGroup)
-    #[non_exhaustive]
+    /// A builder for [`UserGroup`](crate::model::UserGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_group_id: std::option::Option<std::string::String>,
@@ -7716,7 +7910,7 @@ pub mod user_group {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserGroup`](crate::model::UserGroup)
+        /// Consumes the builder and constructs a [`UserGroup`](crate::model::UserGroup).
         pub fn build(self) -> crate::model::UserGroup {
             crate::model::UserGroup {
                 user_group_id: self.user_group_id,
@@ -7732,7 +7926,7 @@ pub mod user_group {
     }
 }
 impl UserGroup {
-    /// Creates a new builder-style object to manufacture [`UserGroup`](crate::model::UserGroup)
+    /// Creates a new builder-style object to manufacture [`UserGroup`](crate::model::UserGroup).
     pub fn builder() -> crate::model::user_group::Builder {
         crate::model::user_group::Builder::default()
     }
@@ -7743,40 +7937,57 @@ impl UserGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAction {
     /// <p>The ID of the replication group</p>
+    #[doc(hidden)]
     pub replication_group_id: std::option::Option<std::string::String>,
     /// <p>The ID of the cache cluster</p>
+    #[doc(hidden)]
     pub cache_cluster_id: std::option::Option<std::string::String>,
     /// <p>The unique ID of the service update</p>
+    #[doc(hidden)]
     pub service_update_name: std::option::Option<std::string::String>,
     /// <p>The date the update is first available</p>
+    #[doc(hidden)]
     pub service_update_release_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The severity of the service update</p>
+    #[doc(hidden)]
     pub service_update_severity: std::option::Option<crate::model::ServiceUpdateSeverity>,
     /// <p>The status of the service update</p>
+    #[doc(hidden)]
     pub service_update_status: std::option::Option<crate::model::ServiceUpdateStatus>,
     /// <p>The recommended date to apply the service update to ensure compliance. For information on compliance, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/elasticache-compliance.html#elasticache-compliance-self-service">Self-Service Security Updates for Compliance</a>.</p>
+    #[doc(hidden)]
     pub service_update_recommended_apply_by_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Reflects the nature of the service update </p>
+    #[doc(hidden)]
     pub service_update_type: std::option::Option<crate::model::ServiceUpdateType>,
     /// <p>The date that the service update is available to a replication group</p>
+    #[doc(hidden)]
     pub update_action_available_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the update action</p>
+    #[doc(hidden)]
     pub update_action_status: std::option::Option<crate::model::UpdateActionStatus>,
     /// <p>The progress of the service update on the replication group</p>
+    #[doc(hidden)]
     pub nodes_updated: std::option::Option<std::string::String>,
     /// <p>The date when the UpdateActionStatus was last modified</p>
+    #[doc(hidden)]
     pub update_action_status_modified_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If yes, all nodes in the replication group have been updated by the recommended apply-by date. If no, at least one node in the replication group have not been updated by the recommended apply-by date. If N/A, the replication group was created after the recommended apply-by date.</p>
+    #[doc(hidden)]
     pub sla_met: std::option::Option<crate::model::SlaMet>,
     /// <p>The status of the service update on the node group</p>
+    #[doc(hidden)]
     pub node_group_update_status:
         std::option::Option<std::vec::Vec<crate::model::NodeGroupUpdateStatus>>,
     /// <p>The status of the service update on the cache node</p>
+    #[doc(hidden)]
     pub cache_node_update_status:
         std::option::Option<std::vec::Vec<crate::model::CacheNodeUpdateStatus>>,
     /// <p>The estimated length of time for the update to complete</p>
+    #[doc(hidden)]
     pub estimated_update_time: std::option::Option<std::string::String>,
     /// <p>The Elasticache engine to which the update applies. Either Redis or Memcached</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
 }
 impl UpdateAction {
@@ -7894,11 +8105,10 @@ impl std::fmt::Debug for UpdateAction {
         formatter.finish()
     }
 }
-/// See [`UpdateAction`](crate::model::UpdateAction)
+/// See [`UpdateAction`](crate::model::UpdateAction).
 pub mod update_action {
 
-    /// A builder for [`UpdateAction`](crate::model::UpdateAction)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAction`](crate::model::UpdateAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_group_id: std::option::Option<std::string::String>,
@@ -8167,7 +8377,7 @@ pub mod update_action {
             self.engine = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAction`](crate::model::UpdateAction)
+        /// Consumes the builder and constructs a [`UpdateAction`](crate::model::UpdateAction).
         pub fn build(self) -> crate::model::UpdateAction {
             crate::model::UpdateAction {
                 replication_group_id: self.replication_group_id,
@@ -8193,7 +8403,7 @@ pub mod update_action {
     }
 }
 impl UpdateAction {
-    /// Creates a new builder-style object to manufacture [`UpdateAction`](crate::model::UpdateAction)
+    /// Creates a new builder-style object to manufacture [`UpdateAction`](crate::model::UpdateAction).
     pub fn builder() -> crate::model::update_action::Builder {
         crate::model::update_action::Builder::default()
     }
@@ -8204,20 +8414,28 @@ impl UpdateAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CacheNodeUpdateStatus {
     /// <p>The node ID of the cache cluster</p>
+    #[doc(hidden)]
     pub cache_node_id: std::option::Option<std::string::String>,
     /// <p>The update status of the node</p>
+    #[doc(hidden)]
     pub node_update_status: std::option::Option<crate::model::NodeUpdateStatus>,
     /// <p>The deletion date of the node</p>
+    #[doc(hidden)]
     pub node_deletion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The start date of the update for a node</p>
+    #[doc(hidden)]
     pub node_update_start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end date of the update for a node</p>
+    #[doc(hidden)]
     pub node_update_end_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Reflects whether the update was initiated by the customer or automatically applied</p>
+    #[doc(hidden)]
     pub node_update_initiated_by: std::option::Option<crate::model::NodeUpdateInitiatedBy>,
     /// <p>The date when the update is triggered</p>
+    #[doc(hidden)]
     pub node_update_initiated_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date when the NodeUpdateStatus was last modified&gt;</p>
+    #[doc(hidden)]
     pub node_update_status_modified_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CacheNodeUpdateStatus {
@@ -8278,11 +8496,10 @@ impl std::fmt::Debug for CacheNodeUpdateStatus {
         formatter.finish()
     }
 }
-/// See [`CacheNodeUpdateStatus`](crate::model::CacheNodeUpdateStatus)
+/// See [`CacheNodeUpdateStatus`](crate::model::CacheNodeUpdateStatus).
 pub mod cache_node_update_status {
 
-    /// A builder for [`CacheNodeUpdateStatus`](crate::model::CacheNodeUpdateStatus)
-    #[non_exhaustive]
+    /// A builder for [`CacheNodeUpdateStatus`](crate::model::CacheNodeUpdateStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cache_node_id: std::option::Option<std::string::String>,
@@ -8407,7 +8624,7 @@ pub mod cache_node_update_status {
             self.node_update_status_modified_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheNodeUpdateStatus`](crate::model::CacheNodeUpdateStatus)
+        /// Consumes the builder and constructs a [`CacheNodeUpdateStatus`](crate::model::CacheNodeUpdateStatus).
         pub fn build(self) -> crate::model::CacheNodeUpdateStatus {
             crate::model::CacheNodeUpdateStatus {
                 cache_node_id: self.cache_node_id,
@@ -8423,7 +8640,7 @@ pub mod cache_node_update_status {
     }
 }
 impl CacheNodeUpdateStatus {
-    /// Creates a new builder-style object to manufacture [`CacheNodeUpdateStatus`](crate::model::CacheNodeUpdateStatus)
+    /// Creates a new builder-style object to manufacture [`CacheNodeUpdateStatus`](crate::model::CacheNodeUpdateStatus).
     pub fn builder() -> crate::model::cache_node_update_status::Builder {
         crate::model::cache_node_update_status::Builder::default()
     }
@@ -8567,8 +8784,10 @@ impl AsRef<str> for NodeUpdateStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeGroupUpdateStatus {
     /// <p>The ID of the node group</p>
+    #[doc(hidden)]
     pub node_group_id: std::option::Option<std::string::String>,
     /// <p>The status of the service update on the node group member</p>
+    #[doc(hidden)]
     pub node_group_member_update_status:
         std::option::Option<std::vec::Vec<crate::model::NodeGroupMemberUpdateStatus>>,
 }
@@ -8595,11 +8814,10 @@ impl std::fmt::Debug for NodeGroupUpdateStatus {
         formatter.finish()
     }
 }
-/// See [`NodeGroupUpdateStatus`](crate::model::NodeGroupUpdateStatus)
+/// See [`NodeGroupUpdateStatus`](crate::model::NodeGroupUpdateStatus).
 pub mod node_group_update_status {
 
-    /// A builder for [`NodeGroupUpdateStatus`](crate::model::NodeGroupUpdateStatus)
-    #[non_exhaustive]
+    /// A builder for [`NodeGroupUpdateStatus`](crate::model::NodeGroupUpdateStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) node_group_id: std::option::Option<std::string::String>,
@@ -8642,7 +8860,7 @@ pub mod node_group_update_status {
             self.node_group_member_update_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeGroupUpdateStatus`](crate::model::NodeGroupUpdateStatus)
+        /// Consumes the builder and constructs a [`NodeGroupUpdateStatus`](crate::model::NodeGroupUpdateStatus).
         pub fn build(self) -> crate::model::NodeGroupUpdateStatus {
             crate::model::NodeGroupUpdateStatus {
                 node_group_id: self.node_group_id,
@@ -8652,7 +8870,7 @@ pub mod node_group_update_status {
     }
 }
 impl NodeGroupUpdateStatus {
-    /// Creates a new builder-style object to manufacture [`NodeGroupUpdateStatus`](crate::model::NodeGroupUpdateStatus)
+    /// Creates a new builder-style object to manufacture [`NodeGroupUpdateStatus`](crate::model::NodeGroupUpdateStatus).
     pub fn builder() -> crate::model::node_group_update_status::Builder {
         crate::model::node_group_update_status::Builder::default()
     }
@@ -8663,22 +8881,31 @@ impl NodeGroupUpdateStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeGroupMemberUpdateStatus {
     /// <p>The cache cluster ID</p>
+    #[doc(hidden)]
     pub cache_cluster_id: std::option::Option<std::string::String>,
     /// <p>The node ID of the cache cluster</p>
+    #[doc(hidden)]
     pub cache_node_id: std::option::Option<std::string::String>,
     /// <p>The update status of the node</p>
+    #[doc(hidden)]
     pub node_update_status: std::option::Option<crate::model::NodeUpdateStatus>,
     /// <p>The deletion date of the node</p>
+    #[doc(hidden)]
     pub node_deletion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The start date of the update for a node</p>
+    #[doc(hidden)]
     pub node_update_start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end date of the update for a node</p>
+    #[doc(hidden)]
     pub node_update_end_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Reflects whether the update was initiated by the customer or automatically applied</p>
+    #[doc(hidden)]
     pub node_update_initiated_by: std::option::Option<crate::model::NodeUpdateInitiatedBy>,
     /// <p>The date when the update is triggered</p>
+    #[doc(hidden)]
     pub node_update_initiated_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date when the NodeUpdateStatus was last modified</p>
+    #[doc(hidden)]
     pub node_update_status_modified_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl NodeGroupMemberUpdateStatus {
@@ -8744,11 +8971,10 @@ impl std::fmt::Debug for NodeGroupMemberUpdateStatus {
         formatter.finish()
     }
 }
-/// See [`NodeGroupMemberUpdateStatus`](crate::model::NodeGroupMemberUpdateStatus)
+/// See [`NodeGroupMemberUpdateStatus`](crate::model::NodeGroupMemberUpdateStatus).
 pub mod node_group_member_update_status {
 
-    /// A builder for [`NodeGroupMemberUpdateStatus`](crate::model::NodeGroupMemberUpdateStatus)
-    #[non_exhaustive]
+    /// A builder for [`NodeGroupMemberUpdateStatus`](crate::model::NodeGroupMemberUpdateStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cache_cluster_id: std::option::Option<std::string::String>,
@@ -8887,7 +9113,7 @@ pub mod node_group_member_update_status {
             self.node_update_status_modified_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeGroupMemberUpdateStatus`](crate::model::NodeGroupMemberUpdateStatus)
+        /// Consumes the builder and constructs a [`NodeGroupMemberUpdateStatus`](crate::model::NodeGroupMemberUpdateStatus).
         pub fn build(self) -> crate::model::NodeGroupMemberUpdateStatus {
             crate::model::NodeGroupMemberUpdateStatus {
                 cache_cluster_id: self.cache_cluster_id,
@@ -8904,7 +9130,7 @@ pub mod node_group_member_update_status {
     }
 }
 impl NodeGroupMemberUpdateStatus {
-    /// Creates a new builder-style object to manufacture [`NodeGroupMemberUpdateStatus`](crate::model::NodeGroupMemberUpdateStatus)
+    /// Creates a new builder-style object to manufacture [`NodeGroupMemberUpdateStatus`](crate::model::NodeGroupMemberUpdateStatus).
     pub fn builder() -> crate::model::node_group_member_update_status::Builder {
         crate::model::node_group_member_update_status::Builder::default()
     }
@@ -9240,8 +9466,10 @@ impl AsRef<str> for ServiceUpdateSeverity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimeRangeFilter {
     /// <p>The start time of the time range filter</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end time of the time range filter</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TimeRangeFilter {
@@ -9262,11 +9490,10 @@ impl std::fmt::Debug for TimeRangeFilter {
         formatter.finish()
     }
 }
-/// See [`TimeRangeFilter`](crate::model::TimeRangeFilter)
+/// See [`TimeRangeFilter`](crate::model::TimeRangeFilter).
 pub mod time_range_filter {
 
-    /// A builder for [`TimeRangeFilter`](crate::model::TimeRangeFilter)
-    #[non_exhaustive]
+    /// A builder for [`TimeRangeFilter`](crate::model::TimeRangeFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -9299,7 +9526,7 @@ pub mod time_range_filter {
             self.end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimeRangeFilter`](crate::model::TimeRangeFilter)
+        /// Consumes the builder and constructs a [`TimeRangeFilter`](crate::model::TimeRangeFilter).
         pub fn build(self) -> crate::model::TimeRangeFilter {
             crate::model::TimeRangeFilter {
                 start_time: self.start_time,
@@ -9309,7 +9536,7 @@ pub mod time_range_filter {
     }
 }
 impl TimeRangeFilter {
-    /// Creates a new builder-style object to manufacture [`TimeRangeFilter`](crate::model::TimeRangeFilter)
+    /// Creates a new builder-style object to manufacture [`TimeRangeFilter`](crate::model::TimeRangeFilter).
     pub fn builder() -> crate::model::time_range_filter::Builder {
         crate::model::time_range_filter::Builder::default()
     }
@@ -9320,16 +9547,22 @@ impl TimeRangeFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Snapshot {
     /// <p>The name of a snapshot. For an automatic snapshot, the name is system-generated. For a manual snapshot, this is the user-provided name.</p>
+    #[doc(hidden)]
     pub snapshot_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the source replication group.</p>
+    #[doc(hidden)]
     pub replication_group_id: std::option::Option<std::string::String>,
     /// <p>A description of the source replication group.</p>
+    #[doc(hidden)]
     pub replication_group_description: std::option::Option<std::string::String>,
     /// <p>The user-supplied identifier of the source cluster.</p>
+    #[doc(hidden)]
     pub cache_cluster_id: std::option::Option<std::string::String>,
     /// <p>The status of the snapshot. Valid values: <code>creating</code> | <code>available</code> | <code>restoring</code> | <code>copying</code> | <code>deleting</code>.</p>
+    #[doc(hidden)]
     pub snapshot_status: std::option::Option<std::string::String>,
     /// <p>Indicates whether the snapshot is from an automatic backup (<code>automated</code>) or was created manually (<code>manual</code>).</p>
+    #[doc(hidden)]
     pub snapshot_source: std::option::Option<std::string::String>,
     /// <p>The name of the compute and memory capacity node type for the source cluster.</p>
     /// <p>The following node types are supported by ElastiCache. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts.</p>
@@ -9339,11 +9572,11 @@ pub struct Snapshot {
     /// <li> <p>Current generation: </p> <p> <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16 onward):</p> <p> <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Compute optimized:</p>
     /// <ul>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Memory optimized with data tiering:</p>
     /// <ul>
@@ -9356,7 +9589,7 @@ pub struct Snapshot {
     /// </note> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
     /// </ul> </li>
     /// </ul>
     /// <p> <b>Additional node type info</b> </p>
@@ -9366,19 +9599,26 @@ pub struct Snapshot {
     /// <li> <p>Redis Multi-AZ with automatic failover is not supported on T1 instances.</p> </li>
     /// <li> <p>Redis configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on Redis version 2.8.22 and later.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub cache_node_type: std::option::Option<std::string::String>,
     /// <p>The name of the cache engine (<code>memcached</code> or <code>redis</code>) used by the source cluster.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The version of the cache engine version that is used by the source cluster.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The number of cache nodes in the source cluster.</p>
     /// <p>For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1 and 40.</p>
+    #[doc(hidden)]
     pub num_cache_nodes: std::option::Option<i32>,
     /// <p>The name of the Availability Zone in which the source cluster is located.</p>
+    #[doc(hidden)]
     pub preferred_availability_zone: std::option::Option<std::string::String>,
     /// <p>The ARN (Amazon Resource Name) of the preferred outpost.</p>
+    #[doc(hidden)]
     pub preferred_outpost_arn: std::option::Option<std::string::String>,
     /// <p>The date and time when the source cluster was created.</p>
+    #[doc(hidden)]
     pub cache_cluster_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period.</p>
     /// <p>Valid values for <code>ddd</code> are:</p>
@@ -9392,36 +9632,51 @@ pub struct Snapshot {
     /// <li> <p> <code>sat</code> </p> </li>
     /// </ul>
     /// <p>Example: <code>sun:23:00-mon:01:30</code> </p>
+    #[doc(hidden)]
     pub preferred_maintenance_window: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the topic used by the source cluster for publishing notifications.</p>
+    #[doc(hidden)]
     pub topic_arn: std::option::Option<std::string::String>,
     /// <p>The port number used by each cache nodes in the source cluster.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>The cache parameter group that is associated with the source cluster.</p>
+    #[doc(hidden)]
     pub cache_parameter_group_name: std::option::Option<std::string::String>,
     /// <p>The name of the cache subnet group associated with the source cluster.</p>
+    #[doc(hidden)]
     pub cache_subnet_group_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Virtual Private Cloud identifier (VPC ID) of the cache subnet group for the source cluster.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>&nbsp;If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the next auto minor version upgrade campaign. This parameter is disabled for previous versions.&nbsp; </p>
+    #[doc(hidden)]
     pub auto_minor_version_upgrade: bool,
     /// <p>For an automatic snapshot, the number of days for which ElastiCache retains the snapshot before deleting it.</p>
     /// <p>For manual snapshots, this field reflects the <code>SnapshotRetentionLimit</code> for the source cluster when the snapshot was created. This field is otherwise ignored: Manual snapshots do not expire, and can only be deleted using the <code>DeleteSnapshot</code> operation. </p>
     /// <p> <b>Important</b> If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.</p>
+    #[doc(hidden)]
     pub snapshot_retention_limit: std::option::Option<i32>,
     /// <p>The daily time range during which ElastiCache takes daily snapshots of the source cluster.</p>
+    #[doc(hidden)]
     pub snapshot_window: std::option::Option<std::string::String>,
     /// <p>The number of node groups (shards) in this snapshot. When restoring from a snapshot, the number of node groups (shards) in the snapshot and in the restored replication group must be the same.</p>
+    #[doc(hidden)]
     pub num_node_groups: std::option::Option<i32>,
     /// <p>Indicates the status of automatic failover for the source Redis replication group.</p>
+    #[doc(hidden)]
     pub automatic_failover: std::option::Option<crate::model::AutomaticFailoverStatus>,
     /// <p>A list of the cache nodes in the source cluster.</p>
+    #[doc(hidden)]
     pub node_snapshots: std::option::Option<std::vec::Vec<crate::model::NodeSnapshot>>,
     /// <p>The ID of the KMS key used to encrypt the snapshot.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The ARN (Amazon Resource Name) of the snapshot.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This parameter must be set to true when using r6gd nodes. For more information, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.</p>
+    #[doc(hidden)]
     pub data_tiering: std::option::Option<crate::model::DataTieringStatus>,
 }
 impl Snapshot {
@@ -9457,11 +9712,11 @@ impl Snapshot {
     /// <li> <p>Current generation: </p> <p> <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16 onward):</p> <p> <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Compute optimized:</p>
     /// <ul>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Memory optimized with data tiering:</p>
     /// <ul>
@@ -9474,7 +9729,7 @@ impl Snapshot {
     /// </note> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
     /// </ul> </li>
     /// </ul>
     /// <p> <b>Additional node type info</b> </p>
@@ -9637,11 +9892,10 @@ impl std::fmt::Debug for Snapshot {
         formatter.finish()
     }
 }
-/// See [`Snapshot`](crate::model::Snapshot)
+/// See [`Snapshot`](crate::model::Snapshot).
 pub mod snapshot {
 
-    /// A builder for [`Snapshot`](crate::model::Snapshot)
-    #[non_exhaustive]
+    /// A builder for [`Snapshot`](crate::model::Snapshot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshot_name: std::option::Option<std::string::String>,
@@ -9763,11 +10017,11 @@ pub mod snapshot {
         /// <li> <p>Current generation: </p> <p> <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16 onward):</p> <p> <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Compute optimized:</p>
         /// <ul>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Memory optimized with data tiering:</p>
         /// <ul>
@@ -9780,7 +10034,7 @@ pub mod snapshot {
         /// </note> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
         /// </ul> </li>
         /// </ul>
         /// <p> <b>Additional node type info</b> </p>
@@ -9802,11 +10056,11 @@ pub mod snapshot {
         /// <li> <p>Current generation: </p> <p> <b>M6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16 onward):</p> <p> <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Compute optimized:</p>
         /// <ul>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Memory optimized with data tiering:</p>
         /// <ul>
@@ -9819,7 +10073,7 @@ pub mod snapshot {
         /// </note> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
         /// </ul> </li>
         /// </ul>
         /// <p> <b>Additional node type info</b> </p>
@@ -10119,7 +10373,7 @@ pub mod snapshot {
             self.data_tiering = input;
             self
         }
-        /// Consumes the builder and constructs a [`Snapshot`](crate::model::Snapshot)
+        /// Consumes the builder and constructs a [`Snapshot`](crate::model::Snapshot).
         pub fn build(self) -> crate::model::Snapshot {
             crate::model::Snapshot {
                 snapshot_name: self.snapshot_name,
@@ -10155,7 +10409,7 @@ pub mod snapshot {
     }
 }
 impl Snapshot {
-    /// Creates a new builder-style object to manufacture [`Snapshot`](crate::model::Snapshot)
+    /// Creates a new builder-style object to manufacture [`Snapshot`](crate::model::Snapshot).
     pub fn builder() -> crate::model::snapshot::Builder {
         crate::model::snapshot::Builder::default()
     }
@@ -10166,18 +10420,25 @@ impl Snapshot {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeSnapshot {
     /// <p>A unique identifier for the source cluster.</p>
+    #[doc(hidden)]
     pub cache_cluster_id: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the source node group (shard).</p>
+    #[doc(hidden)]
     pub node_group_id: std::option::Option<std::string::String>,
     /// <p>The cache node identifier for the node in the source cluster.</p>
+    #[doc(hidden)]
     pub cache_node_id: std::option::Option<std::string::String>,
     /// <p>The configuration for the source node group (shard).</p>
+    #[doc(hidden)]
     pub node_group_configuration: std::option::Option<crate::model::NodeGroupConfiguration>,
     /// <p>The size of the cache on the source cache node.</p>
+    #[doc(hidden)]
     pub cache_size: std::option::Option<std::string::String>,
     /// <p>The date and time when the cache node was created in the source cluster.</p>
+    #[doc(hidden)]
     pub cache_node_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the source node's metadata and cache data set was obtained for the snapshot.</p>
+    #[doc(hidden)]
     pub snapshot_create_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl NodeSnapshot {
@@ -10225,11 +10486,10 @@ impl std::fmt::Debug for NodeSnapshot {
         formatter.finish()
     }
 }
-/// See [`NodeSnapshot`](crate::model::NodeSnapshot)
+/// See [`NodeSnapshot`](crate::model::NodeSnapshot).
 pub mod node_snapshot {
 
-    /// A builder for [`NodeSnapshot`](crate::model::NodeSnapshot)
-    #[non_exhaustive]
+    /// A builder for [`NodeSnapshot`](crate::model::NodeSnapshot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cache_cluster_id: std::option::Option<std::string::String>,
@@ -10333,7 +10593,7 @@ pub mod node_snapshot {
             self.snapshot_create_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeSnapshot`](crate::model::NodeSnapshot)
+        /// Consumes the builder and constructs a [`NodeSnapshot`](crate::model::NodeSnapshot).
         pub fn build(self) -> crate::model::NodeSnapshot {
             crate::model::NodeSnapshot {
                 cache_cluster_id: self.cache_cluster_id,
@@ -10348,7 +10608,7 @@ pub mod node_snapshot {
     }
 }
 impl NodeSnapshot {
-    /// Creates a new builder-style object to manufacture [`NodeSnapshot`](crate::model::NodeSnapshot)
+    /// Creates a new builder-style object to manufacture [`NodeSnapshot`](crate::model::NodeSnapshot).
     pub fn builder() -> crate::model::node_snapshot::Builder {
         crate::model::node_snapshot::Builder::default()
     }
@@ -10359,19 +10619,26 @@ impl NodeSnapshot {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeGroupConfiguration {
     /// <p>Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node group these configuration values apply to.</p>
+    #[doc(hidden)]
     pub node_group_id: std::option::Option<std::string::String>,
     /// <p>A string that specifies the keyspace for a particular node group. Keyspaces range from 0 to 16,383. The string is in the format <code>startkey-endkey</code>.</p>
     /// <p>Example: <code>"0-3999"</code> </p>
+    #[doc(hidden)]
     pub slots: std::option::Option<std::string::String>,
     /// <p>The number of read replica nodes in this node group (shard).</p>
+    #[doc(hidden)]
     pub replica_count: std::option::Option<i32>,
     /// <p>The Availability Zone where the primary node of this node group (shard) is launched.</p>
+    #[doc(hidden)]
     pub primary_availability_zone: std::option::Option<std::string::String>,
     /// <p>A list of Availability Zones to be used for the read replicas. The number of Availability Zones in this list must match the value of <code>ReplicaCount</code> or <code>ReplicasPerNodeGroup</code> if not specified.</p>
+    #[doc(hidden)]
     pub replica_availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The outpost ARN of the primary node.</p>
+    #[doc(hidden)]
     pub primary_outpost_arn: std::option::Option<std::string::String>,
     /// <p>The outpost ARN of the node replicas.</p>
+    #[doc(hidden)]
     pub replica_outpost_arns: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl NodeGroupConfiguration {
@@ -10421,11 +10688,10 @@ impl std::fmt::Debug for NodeGroupConfiguration {
         formatter.finish()
     }
 }
-/// See [`NodeGroupConfiguration`](crate::model::NodeGroupConfiguration)
+/// See [`NodeGroupConfiguration`](crate::model::NodeGroupConfiguration).
 pub mod node_group_configuration {
 
-    /// A builder for [`NodeGroupConfiguration`](crate::model::NodeGroupConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NodeGroupConfiguration`](crate::model::NodeGroupConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) node_group_id: std::option::Option<std::string::String>,
@@ -10537,7 +10803,7 @@ pub mod node_group_configuration {
             self.replica_outpost_arns = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeGroupConfiguration`](crate::model::NodeGroupConfiguration)
+        /// Consumes the builder and constructs a [`NodeGroupConfiguration`](crate::model::NodeGroupConfiguration).
         pub fn build(self) -> crate::model::NodeGroupConfiguration {
             crate::model::NodeGroupConfiguration {
                 node_group_id: self.node_group_id,
@@ -10552,7 +10818,7 @@ pub mod node_group_configuration {
     }
 }
 impl NodeGroupConfiguration {
-    /// Creates a new builder-style object to manufacture [`NodeGroupConfiguration`](crate::model::NodeGroupConfiguration)
+    /// Creates a new builder-style object to manufacture [`NodeGroupConfiguration`](crate::model::NodeGroupConfiguration).
     pub fn builder() -> crate::model::node_group_configuration::Builder {
         crate::model::node_group_configuration::Builder::default()
     }
@@ -10563,28 +10829,40 @@ impl NodeGroupConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceUpdate {
     /// <p>The unique ID of the service update</p>
+    #[doc(hidden)]
     pub service_update_name: std::option::Option<std::string::String>,
     /// <p>The date when the service update is initially available</p>
+    #[doc(hidden)]
     pub service_update_release_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date after which the service update is no longer available</p>
+    #[doc(hidden)]
     pub service_update_end_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The severity of the service update</p>
+    #[doc(hidden)]
     pub service_update_severity: std::option::Option<crate::model::ServiceUpdateSeverity>,
     /// <p>The recommendend date to apply the service update in order to ensure compliance. For information on compliance, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/elasticache-compliance.html#elasticache-compliance-self-service">Self-Service Security Updates for Compliance</a>.</p>
+    #[doc(hidden)]
     pub service_update_recommended_apply_by_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the service update</p>
+    #[doc(hidden)]
     pub service_update_status: std::option::Option<crate::model::ServiceUpdateStatus>,
     /// <p>Provides details of the service update</p>
+    #[doc(hidden)]
     pub service_update_description: std::option::Option<std::string::String>,
     /// <p>Reflects the nature of the service update</p>
+    #[doc(hidden)]
     pub service_update_type: std::option::Option<crate::model::ServiceUpdateType>,
     /// <p>The Elasticache engine to which the update applies. Either Redis or Memcached</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The Elasticache engine version to which the update applies. Either Redis or Memcached engine version</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>Indicates whether the service update will be automatically applied once the recommended apply-by date has expired. </p>
+    #[doc(hidden)]
     pub auto_update_after_recommended_apply_by_date: std::option::Option<bool>,
     /// <p>The estimated length of time the service update will take</p>
+    #[doc(hidden)]
     pub estimated_update_time: std::option::Option<std::string::String>,
 }
 impl ServiceUpdate {
@@ -10671,11 +10949,10 @@ impl std::fmt::Debug for ServiceUpdate {
         formatter.finish()
     }
 }
-/// See [`ServiceUpdate`](crate::model::ServiceUpdate)
+/// See [`ServiceUpdate`](crate::model::ServiceUpdate).
 pub mod service_update {
 
-    /// A builder for [`ServiceUpdate`](crate::model::ServiceUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ServiceUpdate`](crate::model::ServiceUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_update_name: std::option::Option<std::string::String>,
@@ -10853,7 +11130,7 @@ pub mod service_update {
             self.estimated_update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceUpdate`](crate::model::ServiceUpdate)
+        /// Consumes the builder and constructs a [`ServiceUpdate`](crate::model::ServiceUpdate).
         pub fn build(self) -> crate::model::ServiceUpdate {
             crate::model::ServiceUpdate {
                 service_update_name: self.service_update_name,
@@ -10875,7 +11152,7 @@ pub mod service_update {
     }
 }
 impl ServiceUpdate {
-    /// Creates a new builder-style object to manufacture [`ServiceUpdate`](crate::model::ServiceUpdate)
+    /// Creates a new builder-style object to manufacture [`ServiceUpdate`](crate::model::ServiceUpdate).
     pub fn builder() -> crate::model::service_update::Builder {
         crate::model::service_update::Builder::default()
     }
@@ -10886,6 +11163,7 @@ impl ServiceUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservedCacheNodesOffering {
     /// <p>A unique identifier for the reserved cache node offering.</p>
+    #[doc(hidden)]
     pub reserved_cache_nodes_offering_id: std::option::Option<std::string::String>,
     /// <p>The cache node type for the reserved cache node.</p>
     /// <p>The following node types are supported by ElastiCache. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts.</p>
@@ -10895,11 +11173,11 @@ pub struct ReservedCacheNodesOffering {
     /// <li> <p>Current generation: </p> <p> <b>M6g node types:</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Compute optimized:</p>
     /// <ul>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Memory optimized with data tiering:</p>
     /// <ul>
@@ -10910,7 +11188,7 @@ pub struct ReservedCacheNodesOffering {
     /// <li> <p>Current generation: </p> <p> <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
     /// </ul> </li>
     /// </ul>
     /// <p> <b>Additional node type info</b> </p>
@@ -10920,18 +11198,25 @@ pub struct ReservedCacheNodesOffering {
     /// <li> <p>Redis Multi-AZ with automatic failover is not supported on T1 instances.</p> </li>
     /// <li> <p>Redis configuration variables <code>appendonly</code> and <code>appendfsync</code> are not supported on Redis version 2.8.22 and later.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub cache_node_type: std::option::Option<std::string::String>,
     /// <p>The duration of the offering. in seconds.</p>
+    #[doc(hidden)]
     pub duration: i32,
     /// <p>The fixed price charged for this offering.</p>
+    #[doc(hidden)]
     pub fixed_price: f64,
     /// <p>The hourly price charged for this offering.</p>
+    #[doc(hidden)]
     pub usage_price: f64,
     /// <p>The cache engine used by the offering.</p>
+    #[doc(hidden)]
     pub product_description: std::option::Option<std::string::String>,
     /// <p>The offering type.</p>
+    #[doc(hidden)]
     pub offering_type: std::option::Option<std::string::String>,
     /// <p>The recurring price charged to run this reserved cache node.</p>
+    #[doc(hidden)]
     pub recurring_charges: std::option::Option<std::vec::Vec<crate::model::RecurringCharge>>,
 }
 impl ReservedCacheNodesOffering {
@@ -10947,11 +11232,11 @@ impl ReservedCacheNodesOffering {
     /// <li> <p>Current generation: </p> <p> <b>M6g node types:</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Compute optimized:</p>
     /// <ul>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Memory optimized with data tiering:</p>
     /// <ul>
@@ -10962,7 +11247,7 @@ impl ReservedCacheNodesOffering {
     /// <li> <p>Current generation: </p> <p> <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code> </p> <note>
     /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
     /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-    /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+    /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
     /// </ul> </li>
     /// </ul>
     /// <p> <b>Additional node type info</b> </p>
@@ -11017,11 +11302,10 @@ impl std::fmt::Debug for ReservedCacheNodesOffering {
         formatter.finish()
     }
 }
-/// See [`ReservedCacheNodesOffering`](crate::model::ReservedCacheNodesOffering)
+/// See [`ReservedCacheNodesOffering`](crate::model::ReservedCacheNodesOffering).
 pub mod reserved_cache_nodes_offering {
 
-    /// A builder for [`ReservedCacheNodesOffering`](crate::model::ReservedCacheNodesOffering)
-    #[non_exhaustive]
+    /// A builder for [`ReservedCacheNodesOffering`](crate::model::ReservedCacheNodesOffering).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reserved_cache_nodes_offering_id: std::option::Option<std::string::String>,
@@ -11059,11 +11343,11 @@ pub mod reserved_cache_nodes_offering {
         /// <li> <p>Current generation: </p> <p> <b>M6g node types:</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Compute optimized:</p>
         /// <ul>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Memory optimized with data tiering:</p>
         /// <ul>
@@ -11074,7 +11358,7 @@ pub mod reserved_cache_nodes_offering {
         /// <li> <p>Current generation: </p> <p> <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
         /// </ul> </li>
         /// </ul>
         /// <p> <b>Additional node type info</b> </p>
@@ -11096,11 +11380,11 @@ pub mod reserved_cache_nodes_offering {
         /// <li> <p>Current generation: </p> <p> <b>M6g node types:</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward): <code>cache.m6g.large</code>, <code>cache.m6g.xlarge</code>, <code>cache.m6g.2xlarge</code>, <code>cache.m6g.4xlarge</code>, <code>cache.m6g.8xlarge</code>, <code>cache.m6g.12xlarge</code>, <code>cache.m6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>M5 node types:</b> <code>cache.m5.large</code>, <code>cache.m5.xlarge</code>, <code>cache.m5.2xlarge</code>, <code>cache.m5.4xlarge</code>, <code>cache.m5.12xlarge</code>, <code>cache.m5.24xlarge</code> </p> <p> <b>M4 node types:</b> <code>cache.m4.large</code>, <code>cache.m4.xlarge</code>, <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code> </p> <p> <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code> </p> <p> <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code> </p> <p> <b>T2 node types:</b> <code>cache.t2.micro</code>, <code>cache.t2.small</code>, <code>cache.t2.medium</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>T1 node types:</b> <code>cache.t1.micro</code> </p> <p> <b>M1 node types:</b> <code>cache.m1.small</code>, <code>cache.m1.medium</code>, <code>cache.m1.large</code>, <code>cache.m1.xlarge</code> </p> <p> <b>M3 node types:</b> <code>cache.m3.medium</code>, <code>cache.m3.large</code>, <code>cache.m3.xlarge</code>, <code>cache.m3.2xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Compute optimized:</p>
         /// <ul>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>C1 node types:</b> <code>cache.c1.xlarge</code> </p> </li>
         /// </ul> </li>
         /// <li> <p>Memory optimized with data tiering:</p>
         /// <ul>
@@ -11111,7 +11395,7 @@ pub mod reserved_cache_nodes_offering {
         /// <li> <p>Current generation: </p> <p> <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).</p> <p> <code>cache.r6g.large</code>, <code>cache.r6g.xlarge</code>, <code>cache.r6g.2xlarge</code>, <code>cache.r6g.4xlarge</code>, <code>cache.r6g.8xlarge</code>, <code>cache.r6g.12xlarge</code>, <code>cache.r6g.16xlarge</code> </p> <note>
         /// <p>For region availability, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion">Supported Node Types</a> </p>
         /// </note> <p> <b>R5 node types:</b> <code>cache.r5.large</code>, <code>cache.r5.xlarge</code>, <code>cache.r5.2xlarge</code>, <code>cache.r5.4xlarge</code>, <code>cache.r5.12xlarge</code>, <code>cache.r5.24xlarge</code> </p> <p> <b>R4 node types:</b> <code>cache.r4.large</code>, <code>cache.r4.xlarge</code>, <code>cache.r4.2xlarge</code>, <code>cache.r4.4xlarge</code>, <code>cache.r4.8xlarge</code>, <code>cache.r4.16xlarge</code> </p> </li>
-        /// <li> <p>Previous generation: (not recommended)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
+        /// <li> <p>Previous generation: (not recommended. Existing clusters are still supported but creation of new clusters is not supported for these types.)</p> <p> <b>M2 node types:</b> <code>cache.m2.xlarge</code>, <code>cache.m2.2xlarge</code>, <code>cache.m2.4xlarge</code> </p> <p> <b>R3 node types:</b> <code>cache.r3.large</code>, <code>cache.r3.xlarge</code>, <code>cache.r3.2xlarge</code>, <code>cache.r3.4xlarge</code>, <code>cache.r3.8xlarge</code> </p> </li>
         /// </ul> </li>
         /// </ul>
         /// <p> <b>Additional node type info</b> </p>
@@ -11203,7 +11487,7 @@ pub mod reserved_cache_nodes_offering {
             self.recurring_charges = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservedCacheNodesOffering`](crate::model::ReservedCacheNodesOffering)
+        /// Consumes the builder and constructs a [`ReservedCacheNodesOffering`](crate::model::ReservedCacheNodesOffering).
         pub fn build(self) -> crate::model::ReservedCacheNodesOffering {
             crate::model::ReservedCacheNodesOffering {
                 reserved_cache_nodes_offering_id: self.reserved_cache_nodes_offering_id,
@@ -11219,7 +11503,7 @@ pub mod reserved_cache_nodes_offering {
     }
 }
 impl ReservedCacheNodesOffering {
-    /// Creates a new builder-style object to manufacture [`ReservedCacheNodesOffering`](crate::model::ReservedCacheNodesOffering)
+    /// Creates a new builder-style object to manufacture [`ReservedCacheNodesOffering`](crate::model::ReservedCacheNodesOffering).
     pub fn builder() -> crate::model::reserved_cache_nodes_offering::Builder {
         crate::model::reserved_cache_nodes_offering::Builder::default()
     }
@@ -11230,12 +11514,16 @@ impl ReservedCacheNodesOffering {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Event {
     /// <p>The identifier for the source of the event. For example, if the event occurred at the cluster level, the identifier would be the name of the cluster.</p>
+    #[doc(hidden)]
     pub source_identifier: std::option::Option<std::string::String>,
     /// <p>Specifies the origin of this event - a cluster, a parameter group, a security group, etc.</p>
+    #[doc(hidden)]
     pub source_type: std::option::Option<crate::model::SourceType>,
     /// <p>The text of the event.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The date and time when the event occurred.</p>
+    #[doc(hidden)]
     pub date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Event {
@@ -11266,11 +11554,10 @@ impl std::fmt::Debug for Event {
         formatter.finish()
     }
 }
-/// See [`Event`](crate::model::Event)
+/// See [`Event`](crate::model::Event).
 pub mod event {
 
-    /// A builder for [`Event`](crate::model::Event)
-    #[non_exhaustive]
+    /// A builder for [`Event`](crate::model::Event).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_identifier: std::option::Option<std::string::String>,
@@ -11325,7 +11612,7 @@ pub mod event {
             self.date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Event`](crate::model::Event)
+        /// Consumes the builder and constructs a [`Event`](crate::model::Event).
         pub fn build(self) -> crate::model::Event {
             crate::model::Event {
                 source_identifier: self.source_identifier,
@@ -11337,7 +11624,7 @@ pub mod event {
     }
 }
 impl Event {
-    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event)
+    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event).
     pub fn builder() -> crate::model::event::Builder {
         crate::model::event::Builder::default()
     }
@@ -11432,12 +11719,16 @@ impl AsRef<str> for SourceType {
 pub struct EngineDefaults {
     /// <p>Specifies the name of the cache parameter group family to which the engine default parameters apply.</p>
     /// <p>Valid values are: <code>memcached1.4</code> | <code>memcached1.5</code> | <code>memcached1.6</code> | <code>redis2.6</code> | <code>redis2.8</code> | <code>redis3.2</code> | <code>redis4.0</code> | <code>redis5.0</code> | <code>redis6.0</code> | <code>redis6.x</code> </p>
+    #[doc(hidden)]
     pub cache_parameter_group_family: std::option::Option<std::string::String>,
     /// <p>Provides an identifier to allow retrieval of paginated results.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>Contains a list of engine default parameters.</p>
+    #[doc(hidden)]
     pub parameters: std::option::Option<std::vec::Vec<crate::model::Parameter>>,
     /// <p>A list of parameters specific to a particular cache node type. Each element in the list contains detailed information about one parameter.</p>
+    #[doc(hidden)]
     pub cache_node_type_specific_parameters:
         std::option::Option<std::vec::Vec<crate::model::CacheNodeTypeSpecificParameter>>,
 }
@@ -11478,11 +11769,10 @@ impl std::fmt::Debug for EngineDefaults {
         formatter.finish()
     }
 }
-/// See [`EngineDefaults`](crate::model::EngineDefaults)
+/// See [`EngineDefaults`](crate::model::EngineDefaults).
 pub mod engine_defaults {
 
-    /// A builder for [`EngineDefaults`](crate::model::EngineDefaults)
-    #[non_exhaustive]
+    /// A builder for [`EngineDefaults`](crate::model::EngineDefaults).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cache_parameter_group_family: std::option::Option<std::string::String>,
@@ -11561,7 +11851,7 @@ pub mod engine_defaults {
             self.cache_node_type_specific_parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`EngineDefaults`](crate::model::EngineDefaults)
+        /// Consumes the builder and constructs a [`EngineDefaults`](crate::model::EngineDefaults).
         pub fn build(self) -> crate::model::EngineDefaults {
             crate::model::EngineDefaults {
                 cache_parameter_group_family: self.cache_parameter_group_family,
@@ -11573,7 +11863,7 @@ pub mod engine_defaults {
     }
 }
 impl EngineDefaults {
-    /// Creates a new builder-style object to manufacture [`EngineDefaults`](crate::model::EngineDefaults)
+    /// Creates a new builder-style object to manufacture [`EngineDefaults`](crate::model::EngineDefaults).
     pub fn builder() -> crate::model::engine_defaults::Builder {
         crate::model::engine_defaults::Builder::default()
     }
@@ -11584,23 +11874,32 @@ impl EngineDefaults {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CacheNodeTypeSpecificParameter {
     /// <p>The name of the parameter.</p>
+    #[doc(hidden)]
     pub parameter_name: std::option::Option<std::string::String>,
     /// <p>A description of the parameter.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The source of the parameter value.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<std::string::String>,
     /// <p>The valid data type for the parameter.</p>
+    #[doc(hidden)]
     pub data_type: std::option::Option<std::string::String>,
     /// <p>The valid range of values for the parameter.</p>
+    #[doc(hidden)]
     pub allowed_values: std::option::Option<std::string::String>,
     /// <p>Indicates whether (<code>true</code>) or not (<code>false</code>) the parameter can be modified. Some parameters have security or operational implications that prevent them from being changed.</p>
+    #[doc(hidden)]
     pub is_modifiable: bool,
     /// <p>The earliest cache engine version to which the parameter can apply.</p>
+    #[doc(hidden)]
     pub minimum_engine_version: std::option::Option<std::string::String>,
     /// <p>A list of cache node types and their corresponding values for this parameter.</p>
+    #[doc(hidden)]
     pub cache_node_type_specific_values:
         std::option::Option<std::vec::Vec<crate::model::CacheNodeTypeSpecificValue>>,
     /// <p>Indicates whether a change to the parameter is applied immediately or requires a reboot for the change to be applied. You can force a reboot or wait until the next maintenance window's reboot. For more information, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Rebooting.html">Rebooting a Cluster</a>.</p>
+    #[doc(hidden)]
     pub change_type: std::option::Option<crate::model::ChangeType>,
 }
 impl CacheNodeTypeSpecificParameter {
@@ -11661,11 +11960,10 @@ impl std::fmt::Debug for CacheNodeTypeSpecificParameter {
         formatter.finish()
     }
 }
-/// See [`CacheNodeTypeSpecificParameter`](crate::model::CacheNodeTypeSpecificParameter)
+/// See [`CacheNodeTypeSpecificParameter`](crate::model::CacheNodeTypeSpecificParameter).
 pub mod cache_node_type_specific_parameter {
 
-    /// A builder for [`CacheNodeTypeSpecificParameter`](crate::model::CacheNodeTypeSpecificParameter)
-    #[non_exhaustive]
+    /// A builder for [`CacheNodeTypeSpecificParameter`](crate::model::CacheNodeTypeSpecificParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_name: std::option::Option<std::string::String>,
@@ -11794,7 +12092,7 @@ pub mod cache_node_type_specific_parameter {
             self.change_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheNodeTypeSpecificParameter`](crate::model::CacheNodeTypeSpecificParameter)
+        /// Consumes the builder and constructs a [`CacheNodeTypeSpecificParameter`](crate::model::CacheNodeTypeSpecificParameter).
         pub fn build(self) -> crate::model::CacheNodeTypeSpecificParameter {
             crate::model::CacheNodeTypeSpecificParameter {
                 parameter_name: self.parameter_name,
@@ -11811,7 +12109,7 @@ pub mod cache_node_type_specific_parameter {
     }
 }
 impl CacheNodeTypeSpecificParameter {
-    /// Creates a new builder-style object to manufacture [`CacheNodeTypeSpecificParameter`](crate::model::CacheNodeTypeSpecificParameter)
+    /// Creates a new builder-style object to manufacture [`CacheNodeTypeSpecificParameter`](crate::model::CacheNodeTypeSpecificParameter).
     pub fn builder() -> crate::model::cache_node_type_specific_parameter::Builder {
         crate::model::cache_node_type_specific_parameter::Builder::default()
     }
@@ -11877,8 +12175,10 @@ impl AsRef<str> for ChangeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CacheNodeTypeSpecificValue {
     /// <p>The cache node type for which this value applies.</p>
+    #[doc(hidden)]
     pub cache_node_type: std::option::Option<std::string::String>,
     /// <p>The value for the cache node type.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl CacheNodeTypeSpecificValue {
@@ -11899,11 +12199,10 @@ impl std::fmt::Debug for CacheNodeTypeSpecificValue {
         formatter.finish()
     }
 }
-/// See [`CacheNodeTypeSpecificValue`](crate::model::CacheNodeTypeSpecificValue)
+/// See [`CacheNodeTypeSpecificValue`](crate::model::CacheNodeTypeSpecificValue).
 pub mod cache_node_type_specific_value {
 
-    /// A builder for [`CacheNodeTypeSpecificValue`](crate::model::CacheNodeTypeSpecificValue)
-    #[non_exhaustive]
+    /// A builder for [`CacheNodeTypeSpecificValue`](crate::model::CacheNodeTypeSpecificValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cache_node_type: std::option::Option<std::string::String>,
@@ -11933,7 +12232,7 @@ pub mod cache_node_type_specific_value {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheNodeTypeSpecificValue`](crate::model::CacheNodeTypeSpecificValue)
+        /// Consumes the builder and constructs a [`CacheNodeTypeSpecificValue`](crate::model::CacheNodeTypeSpecificValue).
         pub fn build(self) -> crate::model::CacheNodeTypeSpecificValue {
             crate::model::CacheNodeTypeSpecificValue {
                 cache_node_type: self.cache_node_type,
@@ -11943,7 +12242,7 @@ pub mod cache_node_type_specific_value {
     }
 }
 impl CacheNodeTypeSpecificValue {
-    /// Creates a new builder-style object to manufacture [`CacheNodeTypeSpecificValue`](crate::model::CacheNodeTypeSpecificValue)
+    /// Creates a new builder-style object to manufacture [`CacheNodeTypeSpecificValue`](crate::model::CacheNodeTypeSpecificValue).
     pub fn builder() -> crate::model::cache_node_type_specific_value::Builder {
         crate::model::cache_node_type_specific_value::Builder::default()
     }
@@ -11954,22 +12253,31 @@ impl CacheNodeTypeSpecificValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Parameter {
     /// <p>The name of the parameter.</p>
+    #[doc(hidden)]
     pub parameter_name: std::option::Option<std::string::String>,
     /// <p>The value of the parameter.</p>
+    #[doc(hidden)]
     pub parameter_value: std::option::Option<std::string::String>,
     /// <p>A description of the parameter.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The source of the parameter.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<std::string::String>,
     /// <p>The valid data type for the parameter.</p>
+    #[doc(hidden)]
     pub data_type: std::option::Option<std::string::String>,
     /// <p>The valid range of values for the parameter.</p>
+    #[doc(hidden)]
     pub allowed_values: std::option::Option<std::string::String>,
     /// <p>Indicates whether (<code>true</code>) or not (<code>false</code>) the parameter can be modified. Some parameters have security or operational implications that prevent them from being changed.</p>
+    #[doc(hidden)]
     pub is_modifiable: bool,
     /// <p>The earliest cache engine version to which the parameter can apply.</p>
+    #[doc(hidden)]
     pub minimum_engine_version: std::option::Option<std::string::String>,
     /// <p>Indicates whether a change to the parameter is applied immediately or requires a reboot for the change to be applied. You can force a reboot or wait until the next maintenance window's reboot. For more information, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Rebooting.html">Rebooting a Cluster</a>.</p>
+    #[doc(hidden)]
     pub change_type: std::option::Option<crate::model::ChangeType>,
 }
 impl Parameter {
@@ -12025,11 +12333,10 @@ impl std::fmt::Debug for Parameter {
         formatter.finish()
     }
 }
-/// See [`Parameter`](crate::model::Parameter)
+/// See [`Parameter`](crate::model::Parameter).
 pub mod parameter {
 
-    /// A builder for [`Parameter`](crate::model::Parameter)
-    #[non_exhaustive]
+    /// A builder for [`Parameter`](crate::model::Parameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_name: std::option::Option<std::string::String>,
@@ -12148,7 +12455,7 @@ pub mod parameter {
             self.change_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Parameter`](crate::model::Parameter)
+        /// Consumes the builder and constructs a [`Parameter`](crate::model::Parameter).
         pub fn build(self) -> crate::model::Parameter {
             crate::model::Parameter {
                 parameter_name: self.parameter_name,
@@ -12165,7 +12472,7 @@ pub mod parameter {
     }
 }
 impl Parameter {
-    /// Creates a new builder-style object to manufacture [`Parameter`](crate::model::Parameter)
+    /// Creates a new builder-style object to manufacture [`Parameter`](crate::model::Parameter).
     pub fn builder() -> crate::model::parameter::Builder {
         crate::model::parameter::Builder::default()
     }
@@ -12176,15 +12483,20 @@ impl Parameter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CacheParameterGroup {
     /// <p>The name of the cache parameter group.</p>
+    #[doc(hidden)]
     pub cache_parameter_group_name: std::option::Option<std::string::String>,
     /// <p>The name of the cache parameter group family that this cache parameter group is compatible with.</p>
     /// <p>Valid values are: <code>memcached1.4</code> | <code>memcached1.5</code> | <code>memcached1.6</code> | <code>redis2.6</code> | <code>redis2.8</code> | <code>redis3.2</code> | <code>redis4.0</code> | <code>redis5.0</code> | <code>redis6.x</code> | </p>
+    #[doc(hidden)]
     pub cache_parameter_group_family: std::option::Option<std::string::String>,
     /// <p>The description for this cache parameter group.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Indicates whether the parameter group is associated with a Global datastore</p>
+    #[doc(hidden)]
     pub is_global: bool,
     /// <p>The ARN (Amazon Resource Name) of the cache parameter group.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl CacheParameterGroup {
@@ -12227,11 +12539,10 @@ impl std::fmt::Debug for CacheParameterGroup {
         formatter.finish()
     }
 }
-/// See [`CacheParameterGroup`](crate::model::CacheParameterGroup)
+/// See [`CacheParameterGroup`](crate::model::CacheParameterGroup).
 pub mod cache_parameter_group {
 
-    /// A builder for [`CacheParameterGroup`](crate::model::CacheParameterGroup)
-    #[non_exhaustive]
+    /// A builder for [`CacheParameterGroup`](crate::model::CacheParameterGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cache_parameter_group_name: std::option::Option<std::string::String>,
@@ -12302,7 +12613,7 @@ pub mod cache_parameter_group {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheParameterGroup`](crate::model::CacheParameterGroup)
+        /// Consumes the builder and constructs a [`CacheParameterGroup`](crate::model::CacheParameterGroup).
         pub fn build(self) -> crate::model::CacheParameterGroup {
             crate::model::CacheParameterGroup {
                 cache_parameter_group_name: self.cache_parameter_group_name,
@@ -12315,7 +12626,7 @@ pub mod cache_parameter_group {
     }
 }
 impl CacheParameterGroup {
-    /// Creates a new builder-style object to manufacture [`CacheParameterGroup`](crate::model::CacheParameterGroup)
+    /// Creates a new builder-style object to manufacture [`CacheParameterGroup`](crate::model::CacheParameterGroup).
     pub fn builder() -> crate::model::cache_parameter_group::Builder {
         crate::model::cache_parameter_group::Builder::default()
     }
@@ -12326,15 +12637,20 @@ impl CacheParameterGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CacheEngineVersion {
     /// <p>The name of the cache engine.</p>
+    #[doc(hidden)]
     pub engine: std::option::Option<std::string::String>,
     /// <p>The version number of the cache engine.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<std::string::String>,
     /// <p>The name of the cache parameter group family associated with this cache engine.</p>
     /// <p>Valid values are: <code>memcached1.4</code> | <code>memcached1.5</code> | <code>memcached1.6</code> | <code>redis2.6</code> | <code>redis2.8</code> | <code>redis3.2</code> | <code>redis4.0</code> | <code>redis5.0</code> | <code>redis6.x</code> </p>
+    #[doc(hidden)]
     pub cache_parameter_group_family: std::option::Option<std::string::String>,
     /// <p>The description of the cache engine.</p>
+    #[doc(hidden)]
     pub cache_engine_description: std::option::Option<std::string::String>,
     /// <p>The description of the cache engine version.</p>
+    #[doc(hidden)]
     pub cache_engine_version_description: std::option::Option<std::string::String>,
 }
 impl CacheEngineVersion {
@@ -12377,11 +12693,10 @@ impl std::fmt::Debug for CacheEngineVersion {
         formatter.finish()
     }
 }
-/// See [`CacheEngineVersion`](crate::model::CacheEngineVersion)
+/// See [`CacheEngineVersion`](crate::model::CacheEngineVersion).
 pub mod cache_engine_version {
 
-    /// A builder for [`CacheEngineVersion`](crate::model::CacheEngineVersion)
-    #[non_exhaustive]
+    /// A builder for [`CacheEngineVersion`](crate::model::CacheEngineVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine: std::option::Option<std::string::String>,
@@ -12461,7 +12776,7 @@ pub mod cache_engine_version {
             self.cache_engine_version_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`CacheEngineVersion`](crate::model::CacheEngineVersion)
+        /// Consumes the builder and constructs a [`CacheEngineVersion`](crate::model::CacheEngineVersion).
         pub fn build(self) -> crate::model::CacheEngineVersion {
             crate::model::CacheEngineVersion {
                 engine: self.engine,
@@ -12474,7 +12789,7 @@ pub mod cache_engine_version {
     }
 }
 impl CacheEngineVersion {
-    /// Creates a new builder-style object to manufacture [`CacheEngineVersion`](crate::model::CacheEngineVersion)
+    /// Creates a new builder-style object to manufacture [`CacheEngineVersion`](crate::model::CacheEngineVersion).
     pub fn builder() -> crate::model::cache_engine_version::Builder {
         crate::model::cache_engine_version::Builder::default()
     }
@@ -12540,14 +12855,19 @@ impl AsRef<str> for OutpostMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UnprocessedUpdateAction {
     /// <p>The replication group ID</p>
+    #[doc(hidden)]
     pub replication_group_id: std::option::Option<std::string::String>,
     /// <p>The ID of the cache cluster</p>
+    #[doc(hidden)]
     pub cache_cluster_id: std::option::Option<std::string::String>,
     /// <p>The unique ID of the service update</p>
+    #[doc(hidden)]
     pub service_update_name: std::option::Option<std::string::String>,
     /// <p>The error type for requests that are not processed</p>
+    #[doc(hidden)]
     pub error_type: std::option::Option<std::string::String>,
     /// <p>The error message that describes the reason the request was not processed</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl UnprocessedUpdateAction {
@@ -12583,11 +12903,10 @@ impl std::fmt::Debug for UnprocessedUpdateAction {
         formatter.finish()
     }
 }
-/// See [`UnprocessedUpdateAction`](crate::model::UnprocessedUpdateAction)
+/// See [`UnprocessedUpdateAction`](crate::model::UnprocessedUpdateAction).
 pub mod unprocessed_update_action {
 
-    /// A builder for [`UnprocessedUpdateAction`](crate::model::UnprocessedUpdateAction)
-    #[non_exhaustive]
+    /// A builder for [`UnprocessedUpdateAction`](crate::model::UnprocessedUpdateAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_group_id: std::option::Option<std::string::String>,
@@ -12659,7 +12978,7 @@ pub mod unprocessed_update_action {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`UnprocessedUpdateAction`](crate::model::UnprocessedUpdateAction)
+        /// Consumes the builder and constructs a [`UnprocessedUpdateAction`](crate::model::UnprocessedUpdateAction).
         pub fn build(self) -> crate::model::UnprocessedUpdateAction {
             crate::model::UnprocessedUpdateAction {
                 replication_group_id: self.replication_group_id,
@@ -12672,7 +12991,7 @@ pub mod unprocessed_update_action {
     }
 }
 impl UnprocessedUpdateAction {
-    /// Creates a new builder-style object to manufacture [`UnprocessedUpdateAction`](crate::model::UnprocessedUpdateAction)
+    /// Creates a new builder-style object to manufacture [`UnprocessedUpdateAction`](crate::model::UnprocessedUpdateAction).
     pub fn builder() -> crate::model::unprocessed_update_action::Builder {
         crate::model::unprocessed_update_action::Builder::default()
     }
@@ -12683,12 +13002,16 @@ impl UnprocessedUpdateAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProcessedUpdateAction {
     /// <p>The ID of the replication group</p>
+    #[doc(hidden)]
     pub replication_group_id: std::option::Option<std::string::String>,
     /// <p>The ID of the cache cluster</p>
+    #[doc(hidden)]
     pub cache_cluster_id: std::option::Option<std::string::String>,
     /// <p>The unique ID of the service update</p>
+    #[doc(hidden)]
     pub service_update_name: std::option::Option<std::string::String>,
     /// <p>The status of the update action on the Redis cluster</p>
+    #[doc(hidden)]
     pub update_action_status: std::option::Option<crate::model::UpdateActionStatus>,
 }
 impl ProcessedUpdateAction {
@@ -12719,11 +13042,10 @@ impl std::fmt::Debug for ProcessedUpdateAction {
         formatter.finish()
     }
 }
-/// See [`ProcessedUpdateAction`](crate::model::ProcessedUpdateAction)
+/// See [`ProcessedUpdateAction`](crate::model::ProcessedUpdateAction).
 pub mod processed_update_action {
 
-    /// A builder for [`ProcessedUpdateAction`](crate::model::ProcessedUpdateAction)
-    #[non_exhaustive]
+    /// A builder for [`ProcessedUpdateAction`](crate::model::ProcessedUpdateAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_group_id: std::option::Option<std::string::String>,
@@ -12784,7 +13106,7 @@ pub mod processed_update_action {
             self.update_action_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProcessedUpdateAction`](crate::model::ProcessedUpdateAction)
+        /// Consumes the builder and constructs a [`ProcessedUpdateAction`](crate::model::ProcessedUpdateAction).
         pub fn build(self) -> crate::model::ProcessedUpdateAction {
             crate::model::ProcessedUpdateAction {
                 replication_group_id: self.replication_group_id,
@@ -12796,7 +13118,7 @@ pub mod processed_update_action {
     }
 }
 impl ProcessedUpdateAction {
-    /// Creates a new builder-style object to manufacture [`ProcessedUpdateAction`](crate::model::ProcessedUpdateAction)
+    /// Creates a new builder-style object to manufacture [`ProcessedUpdateAction`](crate::model::ProcessedUpdateAction).
     pub fn builder() -> crate::model::processed_update_action::Builder {
         crate::model::processed_update_action::Builder::default()
     }

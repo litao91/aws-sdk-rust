@@ -59,12 +59,16 @@ impl AsRef<str> for Origination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MssPackage {
     /// A Microsoft Smooth Streaming (MSS) encryption configuration.
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::MssEncryption>,
     /// The time window (in seconds) contained in each manifest.
+    #[doc(hidden)]
     pub manifest_window_seconds: i32,
     /// The duration (in seconds) of each segment.
+    #[doc(hidden)]
     pub segment_duration_seconds: i32,
     /// A StreamSelection configuration.
+    #[doc(hidden)]
     pub stream_selection: std::option::Option<crate::model::StreamSelection>,
 }
 impl MssPackage {
@@ -95,11 +99,10 @@ impl std::fmt::Debug for MssPackage {
         formatter.finish()
     }
 }
-/// See [`MssPackage`](crate::model::MssPackage)
+/// See [`MssPackage`](crate::model::MssPackage).
 pub mod mss_package {
 
-    /// A builder for [`MssPackage`](crate::model::MssPackage)
-    #[non_exhaustive]
+    /// A builder for [`MssPackage`](crate::model::MssPackage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encryption: std::option::Option<crate::model::MssEncryption>,
@@ -154,7 +157,7 @@ pub mod mss_package {
             self.stream_selection = input;
             self
         }
-        /// Consumes the builder and constructs a [`MssPackage`](crate::model::MssPackage)
+        /// Consumes the builder and constructs a [`MssPackage`](crate::model::MssPackage).
         pub fn build(self) -> crate::model::MssPackage {
             crate::model::MssPackage {
                 encryption: self.encryption,
@@ -166,7 +169,7 @@ pub mod mss_package {
     }
 }
 impl MssPackage {
-    /// Creates a new builder-style object to manufacture [`MssPackage`](crate::model::MssPackage)
+    /// Creates a new builder-style object to manufacture [`MssPackage`](crate::model::MssPackage).
     pub fn builder() -> crate::model::mss_package::Builder {
         crate::model::mss_package::Builder::default()
     }
@@ -177,10 +180,13 @@ impl MssPackage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamSelection {
     /// The maximum video bitrate (bps) to include in output.
+    #[doc(hidden)]
     pub max_video_bits_per_second: i32,
     /// The minimum video bitrate (bps) to include in output.
+    #[doc(hidden)]
     pub min_video_bits_per_second: i32,
     /// A directive that determines the order of streams in the output.
+    #[doc(hidden)]
     pub stream_order: std::option::Option<crate::model::StreamOrder>,
 }
 impl StreamSelection {
@@ -206,11 +212,10 @@ impl std::fmt::Debug for StreamSelection {
         formatter.finish()
     }
 }
-/// See [`StreamSelection`](crate::model::StreamSelection)
+/// See [`StreamSelection`](crate::model::StreamSelection).
 pub mod stream_selection {
 
-    /// A builder for [`StreamSelection`](crate::model::StreamSelection)
-    #[non_exhaustive]
+    /// A builder for [`StreamSelection`](crate::model::StreamSelection).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_video_bits_per_second: std::option::Option<i32>,
@@ -251,7 +256,7 @@ pub mod stream_selection {
             self.stream_order = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamSelection`](crate::model::StreamSelection)
+        /// Consumes the builder and constructs a [`StreamSelection`](crate::model::StreamSelection).
         pub fn build(self) -> crate::model::StreamSelection {
             crate::model::StreamSelection {
                 max_video_bits_per_second: self.max_video_bits_per_second.unwrap_or_default(),
@@ -262,7 +267,7 @@ pub mod stream_selection {
     }
 }
 impl StreamSelection {
-    /// Creates a new builder-style object to manufacture [`StreamSelection`](crate::model::StreamSelection)
+    /// Creates a new builder-style object to manufacture [`StreamSelection`](crate::model::StreamSelection).
     pub fn builder() -> crate::model::stream_selection::Builder {
         crate::model::stream_selection::Builder::default()
     }
@@ -336,6 +341,7 @@ impl AsRef<str> for StreamOrder {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MssEncryption {
     /// A configuration for accessing an external Secure Packager and Encoder Key Exchange (SPEKE) service that will provide encryption keys.
+    #[doc(hidden)]
     pub speke_key_provider: std::option::Option<crate::model::SpekeKeyProvider>,
 }
 impl MssEncryption {
@@ -351,11 +357,10 @@ impl std::fmt::Debug for MssEncryption {
         formatter.finish()
     }
 }
-/// See [`MssEncryption`](crate::model::MssEncryption)
+/// See [`MssEncryption`](crate::model::MssEncryption).
 pub mod mss_encryption {
 
-    /// A builder for [`MssEncryption`](crate::model::MssEncryption)
-    #[non_exhaustive]
+    /// A builder for [`MssEncryption`](crate::model::MssEncryption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) speke_key_provider: std::option::Option<crate::model::SpekeKeyProvider>,
@@ -374,7 +379,7 @@ pub mod mss_encryption {
             self.speke_key_provider = input;
             self
         }
-        /// Consumes the builder and constructs a [`MssEncryption`](crate::model::MssEncryption)
+        /// Consumes the builder and constructs a [`MssEncryption`](crate::model::MssEncryption).
         pub fn build(self) -> crate::model::MssEncryption {
             crate::model::MssEncryption {
                 speke_key_provider: self.speke_key_provider,
@@ -383,7 +388,7 @@ pub mod mss_encryption {
     }
 }
 impl MssEncryption {
-    /// Creates a new builder-style object to manufacture [`MssEncryption`](crate::model::MssEncryption)
+    /// Creates a new builder-style object to manufacture [`MssEncryption`](crate::model::MssEncryption).
     pub fn builder() -> crate::model::mss_encryption::Builder {
         crate::model::mss_encryption::Builder::default()
     }
@@ -394,17 +399,23 @@ impl MssEncryption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SpekeKeyProvider {
     /// An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// Use encryptionContractConfiguration to configure one or more content encryption keys for your endpoints that use SPEKE 2.0. The encryption contract defines which content keys are used to encrypt the audio and video tracks in your stream. To configure the encryption contract, specify which audio and video encryption presets to use. Note the following considerations when using encryptionContractConfiguration: encryptionContractConfiguration can be used for DASH or CMAF endpoints that use SPEKE 2.0. SPEKE 2.0 relies on the CPIX 2.3 specification. You must disable key rotation for this endpoint by setting keyRotationIntervalSeconds to 0.
+    #[doc(hidden)]
     pub encryption_contract_configuration:
         std::option::Option<crate::model::EncryptionContractConfiguration>,
     /// The resource ID to include in key requests.
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// An Amazon Resource Name (ARN) of an IAM role that AWS Elemental MediaPackage will assume when accessing the key provider service.
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// The system IDs to include in key requests.
+    #[doc(hidden)]
     pub system_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// The URL of the external key provider service.
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl SpekeKeyProvider {
@@ -450,11 +461,10 @@ impl std::fmt::Debug for SpekeKeyProvider {
         formatter.finish()
     }
 }
-/// See [`SpekeKeyProvider`](crate::model::SpekeKeyProvider)
+/// See [`SpekeKeyProvider`](crate::model::SpekeKeyProvider).
 pub mod speke_key_provider {
 
-    /// A builder for [`SpekeKeyProvider`](crate::model::SpekeKeyProvider)
-    #[non_exhaustive]
+    /// A builder for [`SpekeKeyProvider`](crate::model::SpekeKeyProvider).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -544,7 +554,7 @@ pub mod speke_key_provider {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`SpekeKeyProvider`](crate::model::SpekeKeyProvider)
+        /// Consumes the builder and constructs a [`SpekeKeyProvider`](crate::model::SpekeKeyProvider).
         pub fn build(self) -> crate::model::SpekeKeyProvider {
             crate::model::SpekeKeyProvider {
                 certificate_arn: self.certificate_arn,
@@ -558,7 +568,7 @@ pub mod speke_key_provider {
     }
 }
 impl SpekeKeyProvider {
-    /// Creates a new builder-style object to manufacture [`SpekeKeyProvider`](crate::model::SpekeKeyProvider)
+    /// Creates a new builder-style object to manufacture [`SpekeKeyProvider`](crate::model::SpekeKeyProvider).
     pub fn builder() -> crate::model::speke_key_provider::Builder {
         crate::model::speke_key_provider::Builder::default()
     }
@@ -569,8 +579,10 @@ impl SpekeKeyProvider {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EncryptionContractConfiguration {
     /// A collection of audio encryption presets.
+    #[doc(hidden)]
     pub preset_speke20_audio: std::option::Option<crate::model::PresetSpeke20Audio>,
     /// A collection of video encryption presets.
+    #[doc(hidden)]
     pub preset_speke20_video: std::option::Option<crate::model::PresetSpeke20Video>,
 }
 impl EncryptionContractConfiguration {
@@ -591,11 +603,10 @@ impl std::fmt::Debug for EncryptionContractConfiguration {
         formatter.finish()
     }
 }
-/// See [`EncryptionContractConfiguration`](crate::model::EncryptionContractConfiguration)
+/// See [`EncryptionContractConfiguration`](crate::model::EncryptionContractConfiguration).
 pub mod encryption_contract_configuration {
 
-    /// A builder for [`EncryptionContractConfiguration`](crate::model::EncryptionContractConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionContractConfiguration`](crate::model::EncryptionContractConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) preset_speke20_audio: std::option::Option<crate::model::PresetSpeke20Audio>,
@@ -628,7 +639,7 @@ pub mod encryption_contract_configuration {
             self.preset_speke20_video = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionContractConfiguration`](crate::model::EncryptionContractConfiguration)
+        /// Consumes the builder and constructs a [`EncryptionContractConfiguration`](crate::model::EncryptionContractConfiguration).
         pub fn build(self) -> crate::model::EncryptionContractConfiguration {
             crate::model::EncryptionContractConfiguration {
                 preset_speke20_audio: self.preset_speke20_audio,
@@ -638,7 +649,7 @@ pub mod encryption_contract_configuration {
     }
 }
 impl EncryptionContractConfiguration {
-    /// Creates a new builder-style object to manufacture [`EncryptionContractConfiguration`](crate::model::EncryptionContractConfiguration)
+    /// Creates a new builder-style object to manufacture [`EncryptionContractConfiguration`](crate::model::EncryptionContractConfiguration).
     pub fn builder() -> crate::model::encryption_contract_configuration::Builder {
         crate::model::encryption_contract_configuration::Builder::default()
     }
@@ -658,6 +669,24 @@ impl EncryptionContractConfiguration {
 pub enum PresetSpeke20Video {
     #[allow(missing_docs)] // documentation missing in model
     PresetVideo1,
+    #[allow(missing_docs)] // documentation missing in model
+    PresetVideo2,
+    #[allow(missing_docs)] // documentation missing in model
+    PresetVideo3,
+    #[allow(missing_docs)] // documentation missing in model
+    PresetVideo4,
+    #[allow(missing_docs)] // documentation missing in model
+    PresetVideo5,
+    #[allow(missing_docs)] // documentation missing in model
+    PresetVideo6,
+    #[allow(missing_docs)] // documentation missing in model
+    PresetVideo7,
+    #[allow(missing_docs)] // documentation missing in model
+    PresetVideo8,
+    #[allow(missing_docs)] // documentation missing in model
+    Shared,
+    #[allow(missing_docs)] // documentation missing in model
+    Unencrypted,
     /// Unknown contains new variants that have been added since this code was generated.
     Unknown(String),
 }
@@ -665,6 +694,15 @@ impl std::convert::From<&str> for PresetSpeke20Video {
     fn from(s: &str) -> Self {
         match s {
             "PRESET-VIDEO-1" => PresetSpeke20Video::PresetVideo1,
+            "PRESET-VIDEO-2" => PresetSpeke20Video::PresetVideo2,
+            "PRESET-VIDEO-3" => PresetSpeke20Video::PresetVideo3,
+            "PRESET-VIDEO-4" => PresetSpeke20Video::PresetVideo4,
+            "PRESET-VIDEO-5" => PresetSpeke20Video::PresetVideo5,
+            "PRESET-VIDEO-6" => PresetSpeke20Video::PresetVideo6,
+            "PRESET-VIDEO-7" => PresetSpeke20Video::PresetVideo7,
+            "PRESET-VIDEO-8" => PresetSpeke20Video::PresetVideo8,
+            "SHARED" => PresetSpeke20Video::Shared,
+            "UNENCRYPTED" => PresetSpeke20Video::Unencrypted,
             other => PresetSpeke20Video::Unknown(other.to_owned()),
         }
     }
@@ -681,12 +719,32 @@ impl PresetSpeke20Video {
     pub fn as_str(&self) -> &str {
         match self {
             PresetSpeke20Video::PresetVideo1 => "PRESET-VIDEO-1",
+            PresetSpeke20Video::PresetVideo2 => "PRESET-VIDEO-2",
+            PresetSpeke20Video::PresetVideo3 => "PRESET-VIDEO-3",
+            PresetSpeke20Video::PresetVideo4 => "PRESET-VIDEO-4",
+            PresetSpeke20Video::PresetVideo5 => "PRESET-VIDEO-5",
+            PresetSpeke20Video::PresetVideo6 => "PRESET-VIDEO-6",
+            PresetSpeke20Video::PresetVideo7 => "PRESET-VIDEO-7",
+            PresetSpeke20Video::PresetVideo8 => "PRESET-VIDEO-8",
+            PresetSpeke20Video::Shared => "SHARED",
+            PresetSpeke20Video::Unencrypted => "UNENCRYPTED",
             PresetSpeke20Video::Unknown(s) => s.as_ref(),
         }
     }
     /// Returns all the `&str` values of the enum members.
     pub fn values() -> &'static [&'static str] {
-        &["PRESET-VIDEO-1"]
+        &[
+            "PRESET-VIDEO-1",
+            "PRESET-VIDEO-2",
+            "PRESET-VIDEO-3",
+            "PRESET-VIDEO-4",
+            "PRESET-VIDEO-5",
+            "PRESET-VIDEO-6",
+            "PRESET-VIDEO-7",
+            "PRESET-VIDEO-8",
+            "SHARED",
+            "UNENCRYPTED",
+        ]
     }
 }
 impl AsRef<str> for PresetSpeke20Video {
@@ -709,6 +767,14 @@ impl AsRef<str> for PresetSpeke20Video {
 pub enum PresetSpeke20Audio {
     #[allow(missing_docs)] // documentation missing in model
     PresetAudio1,
+    #[allow(missing_docs)] // documentation missing in model
+    PresetAudio2,
+    #[allow(missing_docs)] // documentation missing in model
+    PresetAudio3,
+    #[allow(missing_docs)] // documentation missing in model
+    Shared,
+    #[allow(missing_docs)] // documentation missing in model
+    Unencrypted,
     /// Unknown contains new variants that have been added since this code was generated.
     Unknown(String),
 }
@@ -716,6 +782,10 @@ impl std::convert::From<&str> for PresetSpeke20Audio {
     fn from(s: &str) -> Self {
         match s {
             "PRESET-AUDIO-1" => PresetSpeke20Audio::PresetAudio1,
+            "PRESET-AUDIO-2" => PresetSpeke20Audio::PresetAudio2,
+            "PRESET-AUDIO-3" => PresetSpeke20Audio::PresetAudio3,
+            "SHARED" => PresetSpeke20Audio::Shared,
+            "UNENCRYPTED" => PresetSpeke20Audio::Unencrypted,
             other => PresetSpeke20Audio::Unknown(other.to_owned()),
         }
     }
@@ -732,12 +802,22 @@ impl PresetSpeke20Audio {
     pub fn as_str(&self) -> &str {
         match self {
             PresetSpeke20Audio::PresetAudio1 => "PRESET-AUDIO-1",
+            PresetSpeke20Audio::PresetAudio2 => "PRESET-AUDIO-2",
+            PresetSpeke20Audio::PresetAudio3 => "PRESET-AUDIO-3",
+            PresetSpeke20Audio::Shared => "SHARED",
+            PresetSpeke20Audio::Unencrypted => "UNENCRYPTED",
             PresetSpeke20Audio::Unknown(s) => s.as_ref(),
         }
     }
     /// Returns all the `&str` values of the enum members.
     pub fn values() -> &'static [&'static str] {
-        &["PRESET-AUDIO-1"]
+        &[
+            "PRESET-AUDIO-1",
+            "PRESET-AUDIO-2",
+            "PRESET-AUDIO-3",
+            "SHARED",
+            "UNENCRYPTED",
+        ]
     }
 }
 impl AsRef<str> for PresetSpeke20Audio {
@@ -751,28 +831,40 @@ impl AsRef<str> for PresetSpeke20Audio {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsPackage {
     /// This setting controls how ad markers are included in the packaged OriginEndpoint. "NONE" will omit all SCTE-35 ad markers from the output. "PASSTHROUGH" causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. "SCTE35_ENHANCED" generates ad markers and blackout tags based on SCTE-35 messages in the input source. "DATERANGE" inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
+    #[doc(hidden)]
     pub ad_markers: std::option::Option<crate::model::AdMarkers>,
     /// A list of SCTE-35 message types that are treated as ad markers in the output. If empty, no ad markers are output. Specify multiple items to create ad markers for all of the included message types.
+    #[doc(hidden)]
     pub ad_triggers: std::option::Option<std::vec::Vec<crate::model::AdTriggersElement>>,
     /// This setting allows the delivery restriction flags on SCTE-35 segmentation descriptors to determine whether a message signals an ad. Choosing "NONE" means no SCTE-35 messages become ads. Choosing "RESTRICTED" means SCTE-35 messages of the types specified in AdTriggers that contain delivery restrictions will be treated as ads. Choosing "UNRESTRICTED" means SCTE-35 messages of the types specified in AdTriggers that do not contain delivery restrictions will be treated as ads. Choosing "BOTH" means all SCTE-35 messages of the types specified in AdTriggers will be treated as ads. Note that Splice Insert messages do not have these flags and are always treated as ads if specified in AdTriggers.
+    #[doc(hidden)]
     pub ads_on_delivery_restrictions: std::option::Option<crate::model::AdsOnDeliveryRestrictions>,
     /// An HTTP Live Streaming (HLS) encryption configuration.
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::HlsEncryption>,
     /// When enabled, MediaPackage passes through digital video broadcasting (DVB) subtitles into the output.
+    #[doc(hidden)]
     pub include_dvb_subtitles: bool,
     /// When enabled, an I-Frame only stream will be included in the output.
+    #[doc(hidden)]
     pub include_iframe_only_stream: bool,
     /// The HTTP Live Streaming (HLS) playlist type. When either "EVENT" or "VOD" is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
+    #[doc(hidden)]
     pub playlist_type: std::option::Option<crate::model::PlaylistType>,
     /// Time window (in seconds) contained in each parent manifest.
+    #[doc(hidden)]
     pub playlist_window_seconds: i32,
     /// The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
+    #[doc(hidden)]
     pub program_date_time_interval_seconds: i32,
     /// Duration (in seconds) of each fragment. Actual fragments will be rounded to the nearest multiple of the source fragment duration.
+    #[doc(hidden)]
     pub segment_duration_seconds: i32,
     /// A StreamSelection configuration.
+    #[doc(hidden)]
     pub stream_selection: std::option::Option<crate::model::StreamSelection>,
     /// When enabled, audio streams will be placed in rendition groups in the output.
+    #[doc(hidden)]
     pub use_audio_rendition_group: bool,
 }
 impl HlsPackage {
@@ -854,11 +946,10 @@ impl std::fmt::Debug for HlsPackage {
         formatter.finish()
     }
 }
-/// See [`HlsPackage`](crate::model::HlsPackage)
+/// See [`HlsPackage`](crate::model::HlsPackage).
 pub mod hls_package {
 
-    /// A builder for [`HlsPackage`](crate::model::HlsPackage)
-    #[non_exhaustive]
+    /// A builder for [`HlsPackage`](crate::model::HlsPackage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ad_markers: std::option::Option<crate::model::AdMarkers>,
@@ -1026,7 +1117,7 @@ pub mod hls_package {
             self.use_audio_rendition_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsPackage`](crate::model::HlsPackage)
+        /// Consumes the builder and constructs a [`HlsPackage`](crate::model::HlsPackage).
         pub fn build(self) -> crate::model::HlsPackage {
             crate::model::HlsPackage {
                 ad_markers: self.ad_markers,
@@ -1048,7 +1139,7 @@ pub mod hls_package {
     }
 }
 impl HlsPackage {
-    /// Creates a new builder-style object to manufacture [`HlsPackage`](crate::model::HlsPackage)
+    /// Creates a new builder-style object to manufacture [`HlsPackage`](crate::model::HlsPackage).
     pub fn builder() -> crate::model::hls_package::Builder {
         crate::model::hls_package::Builder::default()
     }
@@ -1118,14 +1209,19 @@ impl AsRef<str> for PlaylistType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsEncryption {
     /// A constant initialization vector for encryption (optional). When not specified the initialization vector will be periodically rotated.
+    #[doc(hidden)]
     pub constant_initialization_vector: std::option::Option<std::string::String>,
     /// The encryption method to use.
+    #[doc(hidden)]
     pub encryption_method: std::option::Option<crate::model::EncryptionMethod>,
     /// Interval (in seconds) between each encryption key rotation.
+    #[doc(hidden)]
     pub key_rotation_interval_seconds: i32,
     /// When enabled, the EXT-X-KEY tag will be repeated in output manifests.
+    #[doc(hidden)]
     pub repeat_ext_x_key: bool,
     /// A configuration for accessing an external Secure Packager and Encoder Key Exchange (SPEKE) service that will provide encryption keys.
+    #[doc(hidden)]
     pub speke_key_provider: std::option::Option<crate::model::SpekeKeyProvider>,
 }
 impl HlsEncryption {
@@ -1167,11 +1263,10 @@ impl std::fmt::Debug for HlsEncryption {
         formatter.finish()
     }
 }
-/// See [`HlsEncryption`](crate::model::HlsEncryption)
+/// See [`HlsEncryption`](crate::model::HlsEncryption).
 pub mod hls_encryption {
 
-    /// A builder for [`HlsEncryption`](crate::model::HlsEncryption)
-    #[non_exhaustive]
+    /// A builder for [`HlsEncryption`](crate::model::HlsEncryption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) constant_initialization_vector: std::option::Option<std::string::String>,
@@ -1246,7 +1341,7 @@ pub mod hls_encryption {
             self.speke_key_provider = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsEncryption`](crate::model::HlsEncryption)
+        /// Consumes the builder and constructs a [`HlsEncryption`](crate::model::HlsEncryption).
         pub fn build(self) -> crate::model::HlsEncryption {
             crate::model::HlsEncryption {
                 constant_initialization_vector: self.constant_initialization_vector,
@@ -1261,7 +1356,7 @@ pub mod hls_encryption {
     }
 }
 impl HlsEncryption {
-    /// Creates a new builder-style object to manufacture [`HlsEncryption`](crate::model::HlsEncryption)
+    /// Creates a new builder-style object to manufacture [`HlsEncryption`](crate::model::HlsEncryption).
     pub fn builder() -> crate::model::hls_encryption::Builder {
         crate::model::hls_encryption::Builder::default()
     }
@@ -1560,34 +1655,52 @@ impl AsRef<str> for AdMarkers {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DashPackage {
     /// A list of SCTE-35 message types that are treated as ad markers in the output. If empty, no ad markers are output. Specify multiple items to create ad markers for all of the included message types.
+    #[doc(hidden)]
     pub ad_triggers: std::option::Option<std::vec::Vec<crate::model::AdTriggersElement>>,
     /// This setting allows the delivery restriction flags on SCTE-35 segmentation descriptors to determine whether a message signals an ad. Choosing "NONE" means no SCTE-35 messages become ads. Choosing "RESTRICTED" means SCTE-35 messages of the types specified in AdTriggers that contain delivery restrictions will be treated as ads. Choosing "UNRESTRICTED" means SCTE-35 messages of the types specified in AdTriggers that do not contain delivery restrictions will be treated as ads. Choosing "BOTH" means all SCTE-35 messages of the types specified in AdTriggers will be treated as ads. Note that Splice Insert messages do not have these flags and are always treated as ads if specified in AdTriggers.
+    #[doc(hidden)]
     pub ads_on_delivery_restrictions: std::option::Option<crate::model::AdsOnDeliveryRestrictions>,
     /// A Dynamic Adaptive Streaming over HTTP (DASH) encryption configuration.
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::DashEncryption>,
+    /// When enabled, an I-Frame only stream will be included in the output.
+    #[doc(hidden)]
+    pub include_iframe_only_stream: bool,
     /// Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
+    #[doc(hidden)]
     pub manifest_layout: std::option::Option<crate::model::ManifestLayout>,
     /// Time window (in seconds) contained in each manifest.
+    #[doc(hidden)]
     pub manifest_window_seconds: i32,
     /// Minimum duration (in seconds) that a player will buffer media before starting the presentation.
+    #[doc(hidden)]
     pub min_buffer_time_seconds: i32,
     /// Minimum duration (in seconds) between potential changes to the Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD).
+    #[doc(hidden)]
     pub min_update_period_seconds: i32,
     /// A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Channel source contains SCTE-35 ad markers.
+    #[doc(hidden)]
     pub period_triggers: std::option::Option<std::vec::Vec<crate::model::PeriodTriggersElement>>,
     /// The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
+    #[doc(hidden)]
     pub profile: std::option::Option<crate::model::Profile>,
     /// Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+    #[doc(hidden)]
     pub segment_duration_seconds: i32,
     /// Determines the type of SegmentTemplate included in the Media Presentation Description (MPD). When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs. When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.
+    #[doc(hidden)]
     pub segment_template_format: std::option::Option<crate::model::SegmentTemplateFormat>,
     /// A StreamSelection configuration.
+    #[doc(hidden)]
     pub stream_selection: std::option::Option<crate::model::StreamSelection>,
     /// Duration (in seconds) to delay live content before presentation.
+    #[doc(hidden)]
     pub suggested_presentation_delay_seconds: i32,
     /// Determines the type of UTCTiming included in the Media Presentation Description (MPD)
+    #[doc(hidden)]
     pub utc_timing: std::option::Option<crate::model::UtcTiming>,
     /// Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE
+    #[doc(hidden)]
     pub utc_timing_uri: std::option::Option<std::string::String>,
 }
 impl DashPackage {
@@ -1604,6 +1717,10 @@ impl DashPackage {
     /// A Dynamic Adaptive Streaming over HTTP (DASH) encryption configuration.
     pub fn encryption(&self) -> std::option::Option<&crate::model::DashEncryption> {
         self.encryption.as_ref()
+    }
+    /// When enabled, an I-Frame only stream will be included in the output.
+    pub fn include_iframe_only_stream(&self) -> bool {
+        self.include_iframe_only_stream
     }
     /// Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
     pub fn manifest_layout(&self) -> std::option::Option<&crate::model::ManifestLayout> {
@@ -1665,6 +1782,10 @@ impl std::fmt::Debug for DashPackage {
             &self.ads_on_delivery_restrictions,
         );
         formatter.field("encryption", &self.encryption);
+        formatter.field(
+            "include_iframe_only_stream",
+            &self.include_iframe_only_stream,
+        );
         formatter.field("manifest_layout", &self.manifest_layout);
         formatter.field("manifest_window_seconds", &self.manifest_window_seconds);
         formatter.field("min_buffer_time_seconds", &self.min_buffer_time_seconds);
@@ -1683,17 +1804,17 @@ impl std::fmt::Debug for DashPackage {
         formatter.finish()
     }
 }
-/// See [`DashPackage`](crate::model::DashPackage)
+/// See [`DashPackage`](crate::model::DashPackage).
 pub mod dash_package {
 
-    /// A builder for [`DashPackage`](crate::model::DashPackage)
-    #[non_exhaustive]
+    /// A builder for [`DashPackage`](crate::model::DashPackage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ad_triggers: std::option::Option<std::vec::Vec<crate::model::AdTriggersElement>>,
         pub(crate) ads_on_delivery_restrictions:
             std::option::Option<crate::model::AdsOnDeliveryRestrictions>,
         pub(crate) encryption: std::option::Option<crate::model::DashEncryption>,
+        pub(crate) include_iframe_only_stream: std::option::Option<bool>,
         pub(crate) manifest_layout: std::option::Option<crate::model::ManifestLayout>,
         pub(crate) manifest_window_seconds: std::option::Option<i32>,
         pub(crate) min_buffer_time_seconds: std::option::Option<i32>,
@@ -1756,6 +1877,16 @@ pub mod dash_package {
             input: std::option::Option<crate::model::DashEncryption>,
         ) -> Self {
             self.encryption = input;
+            self
+        }
+        /// When enabled, an I-Frame only stream will be included in the output.
+        pub fn include_iframe_only_stream(mut self, input: bool) -> Self {
+            self.include_iframe_only_stream = Some(input);
+            self
+        }
+        /// When enabled, an I-Frame only stream will be included in the output.
+        pub fn set_include_iframe_only_stream(mut self, input: std::option::Option<bool>) -> Self {
+            self.include_iframe_only_stream = input;
             self
         }
         /// Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
@@ -1908,12 +2039,13 @@ pub mod dash_package {
             self.utc_timing_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`DashPackage`](crate::model::DashPackage)
+        /// Consumes the builder and constructs a [`DashPackage`](crate::model::DashPackage).
         pub fn build(self) -> crate::model::DashPackage {
             crate::model::DashPackage {
                 ad_triggers: self.ad_triggers,
                 ads_on_delivery_restrictions: self.ads_on_delivery_restrictions,
                 encryption: self.encryption,
+                include_iframe_only_stream: self.include_iframe_only_stream.unwrap_or_default(),
                 manifest_layout: self.manifest_layout,
                 manifest_window_seconds: self.manifest_window_seconds.unwrap_or_default(),
                 min_buffer_time_seconds: self.min_buffer_time_seconds.unwrap_or_default(),
@@ -1933,7 +2065,7 @@ pub mod dash_package {
     }
 }
 impl DashPackage {
-    /// Creates a new builder-style object to manufacture [`DashPackage`](crate::model::DashPackage)
+    /// Creates a new builder-style object to manufacture [`DashPackage`](crate::model::DashPackage).
     pub fn builder() -> crate::model::dash_package::Builder {
         crate::model::dash_package::Builder::default()
     }
@@ -2239,8 +2371,10 @@ impl AsRef<str> for ManifestLayout {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DashEncryption {
     /// Time (in seconds) between each encryption key rotation.
+    #[doc(hidden)]
     pub key_rotation_interval_seconds: i32,
     /// A configuration for accessing an external Secure Packager and Encoder Key Exchange (SPEKE) service that will provide encryption keys.
+    #[doc(hidden)]
     pub speke_key_provider: std::option::Option<crate::model::SpekeKeyProvider>,
 }
 impl DashEncryption {
@@ -2264,11 +2398,10 @@ impl std::fmt::Debug for DashEncryption {
         formatter.finish()
     }
 }
-/// See [`DashEncryption`](crate::model::DashEncryption)
+/// See [`DashEncryption`](crate::model::DashEncryption).
 pub mod dash_encryption {
 
-    /// A builder for [`DashEncryption`](crate::model::DashEncryption)
-    #[non_exhaustive]
+    /// A builder for [`DashEncryption`](crate::model::DashEncryption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_rotation_interval_seconds: std::option::Option<i32>,
@@ -2301,7 +2434,7 @@ pub mod dash_encryption {
             self.speke_key_provider = input;
             self
         }
-        /// Consumes the builder and constructs a [`DashEncryption`](crate::model::DashEncryption)
+        /// Consumes the builder and constructs a [`DashEncryption`](crate::model::DashEncryption).
         pub fn build(self) -> crate::model::DashEncryption {
             crate::model::DashEncryption {
                 key_rotation_interval_seconds: self
@@ -2313,7 +2446,7 @@ pub mod dash_encryption {
     }
 }
 impl DashEncryption {
-    /// Creates a new builder-style object to manufacture [`DashEncryption`](crate::model::DashEncryption)
+    /// Creates a new builder-style object to manufacture [`DashEncryption`](crate::model::DashEncryption).
     pub fn builder() -> crate::model::dash_encryption::Builder {
         crate::model::dash_encryption::Builder::default()
     }
@@ -2324,14 +2457,19 @@ impl DashEncryption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CmafPackage {
     /// A Common Media Application Format (CMAF) encryption configuration.
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::CmafEncryption>,
     /// A list of HLS manifest configurations
+    #[doc(hidden)]
     pub hls_manifests: std::option::Option<std::vec::Vec<crate::model::HlsManifest>>,
     /// Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+    #[doc(hidden)]
     pub segment_duration_seconds: i32,
     /// An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
+    #[doc(hidden)]
     pub segment_prefix: std::option::Option<std::string::String>,
     /// A StreamSelection configuration.
+    #[doc(hidden)]
     pub stream_selection: std::option::Option<crate::model::StreamSelection>,
 }
 impl CmafPackage {
@@ -2367,11 +2505,10 @@ impl std::fmt::Debug for CmafPackage {
         formatter.finish()
     }
 }
-/// See [`CmafPackage`](crate::model::CmafPackage)
+/// See [`CmafPackage`](crate::model::CmafPackage).
 pub mod cmaf_package {
 
-    /// A builder for [`CmafPackage`](crate::model::CmafPackage)
-    #[non_exhaustive]
+    /// A builder for [`CmafPackage`](crate::model::CmafPackage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encryption: std::option::Option<crate::model::CmafEncryption>,
@@ -2449,7 +2586,7 @@ pub mod cmaf_package {
             self.stream_selection = input;
             self
         }
-        /// Consumes the builder and constructs a [`CmafPackage`](crate::model::CmafPackage)
+        /// Consumes the builder and constructs a [`CmafPackage`](crate::model::CmafPackage).
         pub fn build(self) -> crate::model::CmafPackage {
             crate::model::CmafPackage {
                 encryption: self.encryption,
@@ -2462,7 +2599,7 @@ pub mod cmaf_package {
     }
 }
 impl CmafPackage {
-    /// Creates a new builder-style object to manufacture [`CmafPackage`](crate::model::CmafPackage)
+    /// Creates a new builder-style object to manufacture [`CmafPackage`](crate::model::CmafPackage).
     pub fn builder() -> crate::model::cmaf_package::Builder {
         crate::model::cmaf_package::Builder::default()
     }
@@ -2473,20 +2610,28 @@ impl CmafPackage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsManifest {
     /// This setting controls how ad markers are included in the packaged OriginEndpoint. "NONE" will omit all SCTE-35 ad markers from the output. "PASSTHROUGH" causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. "SCTE35_ENHANCED" generates ad markers and blackout tags based on SCTE-35 messages in the input source. "DATERANGE" inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
+    #[doc(hidden)]
     pub ad_markers: std::option::Option<crate::model::AdMarkers>,
     /// The ID of the manifest. The ID must be unique within the OriginEndpoint and it cannot be changed after it is created.
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// When enabled, an I-Frame only stream will be included in the output.
+    #[doc(hidden)]
     pub include_iframe_only_stream: bool,
     /// An optional short string appended to the end of the OriginEndpoint URL. If not specified, defaults to the manifestName for the OriginEndpoint.
+    #[doc(hidden)]
     pub manifest_name: std::option::Option<std::string::String>,
     /// The HTTP Live Streaming (HLS) playlist type. When either "EVENT" or "VOD" is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
+    #[doc(hidden)]
     pub playlist_type: std::option::Option<crate::model::PlaylistType>,
     /// Time window (in seconds) contained in each parent manifest.
+    #[doc(hidden)]
     pub playlist_window_seconds: i32,
     /// The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
+    #[doc(hidden)]
     pub program_date_time_interval_seconds: i32,
     /// The URL of the packaged OriginEndpoint for consumption.
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl HlsManifest {
@@ -2543,11 +2688,10 @@ impl std::fmt::Debug for HlsManifest {
         formatter.finish()
     }
 }
-/// See [`HlsManifest`](crate::model::HlsManifest)
+/// See [`HlsManifest`](crate::model::HlsManifest).
 pub mod hls_manifest {
 
-    /// A builder for [`HlsManifest`](crate::model::HlsManifest)
-    #[non_exhaustive]
+    /// A builder for [`HlsManifest`](crate::model::HlsManifest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ad_markers: std::option::Option<crate::model::AdMarkers>,
@@ -2652,7 +2796,7 @@ pub mod hls_manifest {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsManifest`](crate::model::HlsManifest)
+        /// Consumes the builder and constructs a [`HlsManifest`](crate::model::HlsManifest).
         pub fn build(self) -> crate::model::HlsManifest {
             crate::model::HlsManifest {
                 ad_markers: self.ad_markers,
@@ -2670,7 +2814,7 @@ pub mod hls_manifest {
     }
 }
 impl HlsManifest {
-    /// Creates a new builder-style object to manufacture [`HlsManifest`](crate::model::HlsManifest)
+    /// Creates a new builder-style object to manufacture [`HlsManifest`](crate::model::HlsManifest).
     pub fn builder() -> crate::model::hls_manifest::Builder {
         crate::model::hls_manifest::Builder::default()
     }
@@ -2681,10 +2825,13 @@ impl HlsManifest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CmafEncryption {
     /// An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don't specify a value, then MediaPackage creates the constant initialization vector (IV).
+    #[doc(hidden)]
     pub constant_initialization_vector: std::option::Option<std::string::String>,
     /// Time (in seconds) between each encryption key rotation.
+    #[doc(hidden)]
     pub key_rotation_interval_seconds: i32,
     /// A configuration for accessing an external Secure Packager and Encoder Key Exchange (SPEKE) service that will provide encryption keys.
+    #[doc(hidden)]
     pub speke_key_provider: std::option::Option<crate::model::SpekeKeyProvider>,
 }
 impl CmafEncryption {
@@ -2716,11 +2863,10 @@ impl std::fmt::Debug for CmafEncryption {
         formatter.finish()
     }
 }
-/// See [`CmafEncryption`](crate::model::CmafEncryption)
+/// See [`CmafEncryption`](crate::model::CmafEncryption).
 pub mod cmaf_encryption {
 
-    /// A builder for [`CmafEncryption`](crate::model::CmafEncryption)
-    #[non_exhaustive]
+    /// A builder for [`CmafEncryption`](crate::model::CmafEncryption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) constant_initialization_vector: std::option::Option<std::string::String>,
@@ -2770,7 +2916,7 @@ pub mod cmaf_encryption {
             self.speke_key_provider = input;
             self
         }
-        /// Consumes the builder and constructs a [`CmafEncryption`](crate::model::CmafEncryption)
+        /// Consumes the builder and constructs a [`CmafEncryption`](crate::model::CmafEncryption).
         pub fn build(self) -> crate::model::CmafEncryption {
             crate::model::CmafEncryption {
                 constant_initialization_vector: self.constant_initialization_vector,
@@ -2783,7 +2929,7 @@ pub mod cmaf_encryption {
     }
 }
 impl CmafEncryption {
-    /// Creates a new builder-style object to manufacture [`CmafEncryption`](crate::model::CmafEncryption)
+    /// Creates a new builder-style object to manufacture [`CmafEncryption`](crate::model::CmafEncryption).
     pub fn builder() -> crate::model::cmaf_encryption::Builder {
         crate::model::cmaf_encryption::Builder::default()
     }
@@ -2794,8 +2940,10 @@ impl CmafEncryption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Authorization {
     /// The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
+    #[doc(hidden)]
     pub cdn_identifier_secret: std::option::Option<std::string::String>,
     /// The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
+    #[doc(hidden)]
     pub secrets_role_arn: std::option::Option<std::string::String>,
 }
 impl Authorization {
@@ -2816,11 +2964,10 @@ impl std::fmt::Debug for Authorization {
         formatter.finish()
     }
 }
-/// See [`Authorization`](crate::model::Authorization)
+/// See [`Authorization`](crate::model::Authorization).
 pub mod authorization {
 
-    /// A builder for [`Authorization`](crate::model::Authorization)
-    #[non_exhaustive]
+    /// A builder for [`Authorization`](crate::model::Authorization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cdn_identifier_secret: std::option::Option<std::string::String>,
@@ -2853,7 +3000,7 @@ pub mod authorization {
             self.secrets_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Authorization`](crate::model::Authorization)
+        /// Consumes the builder and constructs a [`Authorization`](crate::model::Authorization).
         pub fn build(self) -> crate::model::Authorization {
             crate::model::Authorization {
                 cdn_identifier_secret: self.cdn_identifier_secret,
@@ -2863,7 +3010,7 @@ pub mod authorization {
     }
 }
 impl Authorization {
-    /// Creates a new builder-style object to manufacture [`Authorization`](crate::model::Authorization)
+    /// Creates a new builder-style object to manufacture [`Authorization`](crate::model::Authorization).
     pub fn builder() -> crate::model::authorization::Builder {
         crate::model::authorization::Builder::default()
     }
@@ -2874,15 +3021,20 @@ impl Authorization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CmafPackageCreateOrUpdateParameters {
     /// A Common Media Application Format (CMAF) encryption configuration.
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::CmafEncryption>,
     /// A list of HLS manifest configurations
+    #[doc(hidden)]
     pub hls_manifests:
         std::option::Option<std::vec::Vec<crate::model::HlsManifestCreateOrUpdateParameters>>,
     /// Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+    #[doc(hidden)]
     pub segment_duration_seconds: i32,
     /// An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
+    #[doc(hidden)]
     pub segment_prefix: std::option::Option<std::string::String>,
     /// A StreamSelection configuration.
+    #[doc(hidden)]
     pub stream_selection: std::option::Option<crate::model::StreamSelection>,
 }
 impl CmafPackageCreateOrUpdateParameters {
@@ -2920,11 +3072,10 @@ impl std::fmt::Debug for CmafPackageCreateOrUpdateParameters {
         formatter.finish()
     }
 }
-/// See [`CmafPackageCreateOrUpdateParameters`](crate::model::CmafPackageCreateOrUpdateParameters)
+/// See [`CmafPackageCreateOrUpdateParameters`](crate::model::CmafPackageCreateOrUpdateParameters).
 pub mod cmaf_package_create_or_update_parameters {
 
-    /// A builder for [`CmafPackageCreateOrUpdateParameters`](crate::model::CmafPackageCreateOrUpdateParameters)
-    #[non_exhaustive]
+    /// A builder for [`CmafPackageCreateOrUpdateParameters`](crate::model::CmafPackageCreateOrUpdateParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encryption: std::option::Option<crate::model::CmafEncryption>,
@@ -3008,7 +3159,7 @@ pub mod cmaf_package_create_or_update_parameters {
             self.stream_selection = input;
             self
         }
-        /// Consumes the builder and constructs a [`CmafPackageCreateOrUpdateParameters`](crate::model::CmafPackageCreateOrUpdateParameters)
+        /// Consumes the builder and constructs a [`CmafPackageCreateOrUpdateParameters`](crate::model::CmafPackageCreateOrUpdateParameters).
         pub fn build(self) -> crate::model::CmafPackageCreateOrUpdateParameters {
             crate::model::CmafPackageCreateOrUpdateParameters {
                 encryption: self.encryption,
@@ -3021,7 +3172,7 @@ pub mod cmaf_package_create_or_update_parameters {
     }
 }
 impl CmafPackageCreateOrUpdateParameters {
-    /// Creates a new builder-style object to manufacture [`CmafPackageCreateOrUpdateParameters`](crate::model::CmafPackageCreateOrUpdateParameters)
+    /// Creates a new builder-style object to manufacture [`CmafPackageCreateOrUpdateParameters`](crate::model::CmafPackageCreateOrUpdateParameters).
     pub fn builder() -> crate::model::cmaf_package_create_or_update_parameters::Builder {
         crate::model::cmaf_package_create_or_update_parameters::Builder::default()
     }
@@ -3032,22 +3183,31 @@ impl CmafPackageCreateOrUpdateParameters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsManifestCreateOrUpdateParameters {
     /// This setting controls how ad markers are included in the packaged OriginEndpoint. "NONE" will omit all SCTE-35 ad markers from the output. "PASSTHROUGH" causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. "SCTE35_ENHANCED" generates ad markers and blackout tags based on SCTE-35 messages in the input source. "DATERANGE" inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
+    #[doc(hidden)]
     pub ad_markers: std::option::Option<crate::model::AdMarkers>,
     /// A list of SCTE-35 message types that are treated as ad markers in the output. If empty, no ad markers are output. Specify multiple items to create ad markers for all of the included message types.
+    #[doc(hidden)]
     pub ad_triggers: std::option::Option<std::vec::Vec<crate::model::AdTriggersElement>>,
     /// This setting allows the delivery restriction flags on SCTE-35 segmentation descriptors to determine whether a message signals an ad. Choosing "NONE" means no SCTE-35 messages become ads. Choosing "RESTRICTED" means SCTE-35 messages of the types specified in AdTriggers that contain delivery restrictions will be treated as ads. Choosing "UNRESTRICTED" means SCTE-35 messages of the types specified in AdTriggers that do not contain delivery restrictions will be treated as ads. Choosing "BOTH" means all SCTE-35 messages of the types specified in AdTriggers will be treated as ads. Note that Splice Insert messages do not have these flags and are always treated as ads if specified in AdTriggers.
+    #[doc(hidden)]
     pub ads_on_delivery_restrictions: std::option::Option<crate::model::AdsOnDeliveryRestrictions>,
     /// The ID of the manifest. The ID must be unique within the OriginEndpoint and it cannot be changed after it is created.
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// When enabled, an I-Frame only stream will be included in the output.
+    #[doc(hidden)]
     pub include_iframe_only_stream: bool,
     /// An optional short string appended to the end of the OriginEndpoint URL. If not specified, defaults to the manifestName for the OriginEndpoint.
+    #[doc(hidden)]
     pub manifest_name: std::option::Option<std::string::String>,
     /// The HTTP Live Streaming (HLS) playlist type. When either "EVENT" or "VOD" is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
+    #[doc(hidden)]
     pub playlist_type: std::option::Option<crate::model::PlaylistType>,
     /// Time window (in seconds) contained in each parent manifest.
+    #[doc(hidden)]
     pub playlist_window_seconds: i32,
     /// The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
+    #[doc(hidden)]
     pub program_date_time_interval_seconds: i32,
 }
 impl HlsManifestCreateOrUpdateParameters {
@@ -3114,11 +3274,10 @@ impl std::fmt::Debug for HlsManifestCreateOrUpdateParameters {
         formatter.finish()
     }
 }
-/// See [`HlsManifestCreateOrUpdateParameters`](crate::model::HlsManifestCreateOrUpdateParameters)
+/// See [`HlsManifestCreateOrUpdateParameters`](crate::model::HlsManifestCreateOrUpdateParameters).
 pub mod hls_manifest_create_or_update_parameters {
 
-    /// A builder for [`HlsManifestCreateOrUpdateParameters`](crate::model::HlsManifestCreateOrUpdateParameters)
-    #[non_exhaustive]
+    /// A builder for [`HlsManifestCreateOrUpdateParameters`](crate::model::HlsManifestCreateOrUpdateParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ad_markers: std::option::Option<crate::model::AdMarkers>,
@@ -3250,7 +3409,7 @@ pub mod hls_manifest_create_or_update_parameters {
             self.program_date_time_interval_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsManifestCreateOrUpdateParameters`](crate::model::HlsManifestCreateOrUpdateParameters)
+        /// Consumes the builder and constructs a [`HlsManifestCreateOrUpdateParameters`](crate::model::HlsManifestCreateOrUpdateParameters).
         pub fn build(self) -> crate::model::HlsManifestCreateOrUpdateParameters {
             crate::model::HlsManifestCreateOrUpdateParameters {
                 ad_markers: self.ad_markers,
@@ -3269,7 +3428,7 @@ pub mod hls_manifest_create_or_update_parameters {
     }
 }
 impl HlsManifestCreateOrUpdateParameters {
-    /// Creates a new builder-style object to manufacture [`HlsManifestCreateOrUpdateParameters`](crate::model::HlsManifestCreateOrUpdateParameters)
+    /// Creates a new builder-style object to manufacture [`HlsManifestCreateOrUpdateParameters`](crate::model::HlsManifestCreateOrUpdateParameters).
     pub fn builder() -> crate::model::hls_manifest_create_or_update_parameters::Builder {
         crate::model::hls_manifest_create_or_update_parameters::Builder::default()
     }
@@ -3280,6 +3439,7 @@ impl HlsManifestCreateOrUpdateParameters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IngressAccessLogs {
     /// Customize the log group name.
+    #[doc(hidden)]
     pub log_group_name: std::option::Option<std::string::String>,
 }
 impl IngressAccessLogs {
@@ -3295,11 +3455,10 @@ impl std::fmt::Debug for IngressAccessLogs {
         formatter.finish()
     }
 }
-/// See [`IngressAccessLogs`](crate::model::IngressAccessLogs)
+/// See [`IngressAccessLogs`](crate::model::IngressAccessLogs).
 pub mod ingress_access_logs {
 
-    /// A builder for [`IngressAccessLogs`](crate::model::IngressAccessLogs)
-    #[non_exhaustive]
+    /// A builder for [`IngressAccessLogs`](crate::model::IngressAccessLogs).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_group_name: std::option::Option<std::string::String>,
@@ -3318,7 +3477,7 @@ pub mod ingress_access_logs {
             self.log_group_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`IngressAccessLogs`](crate::model::IngressAccessLogs)
+        /// Consumes the builder and constructs a [`IngressAccessLogs`](crate::model::IngressAccessLogs).
         pub fn build(self) -> crate::model::IngressAccessLogs {
             crate::model::IngressAccessLogs {
                 log_group_name: self.log_group_name,
@@ -3327,7 +3486,7 @@ pub mod ingress_access_logs {
     }
 }
 impl IngressAccessLogs {
-    /// Creates a new builder-style object to manufacture [`IngressAccessLogs`](crate::model::IngressAccessLogs)
+    /// Creates a new builder-style object to manufacture [`IngressAccessLogs`](crate::model::IngressAccessLogs).
     pub fn builder() -> crate::model::ingress_access_logs::Builder {
         crate::model::ingress_access_logs::Builder::default()
     }
@@ -3338,6 +3497,7 @@ impl IngressAccessLogs {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsIngest {
     /// A list of endpoints to which the source stream should be sent.
+    #[doc(hidden)]
     pub ingest_endpoints: std::option::Option<std::vec::Vec<crate::model::IngestEndpoint>>,
 }
 impl HlsIngest {
@@ -3353,11 +3513,10 @@ impl std::fmt::Debug for HlsIngest {
         formatter.finish()
     }
 }
-/// See [`HlsIngest`](crate::model::HlsIngest)
+/// See [`HlsIngest`](crate::model::HlsIngest).
 pub mod hls_ingest {
 
-    /// A builder for [`HlsIngest`](crate::model::HlsIngest)
-    #[non_exhaustive]
+    /// A builder for [`HlsIngest`](crate::model::HlsIngest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ingest_endpoints:
@@ -3383,7 +3542,7 @@ pub mod hls_ingest {
             self.ingest_endpoints = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsIngest`](crate::model::HlsIngest)
+        /// Consumes the builder and constructs a [`HlsIngest`](crate::model::HlsIngest).
         pub fn build(self) -> crate::model::HlsIngest {
             crate::model::HlsIngest {
                 ingest_endpoints: self.ingest_endpoints,
@@ -3392,7 +3551,7 @@ pub mod hls_ingest {
     }
 }
 impl HlsIngest {
-    /// Creates a new builder-style object to manufacture [`HlsIngest`](crate::model::HlsIngest)
+    /// Creates a new builder-style object to manufacture [`HlsIngest`](crate::model::HlsIngest).
     pub fn builder() -> crate::model::hls_ingest::Builder {
         crate::model::hls_ingest::Builder::default()
     }
@@ -3403,12 +3562,16 @@ impl HlsIngest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IngestEndpoint {
     /// The system generated unique identifier for the IngestEndpoint
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// The system generated password for ingest authentication.
+    #[doc(hidden)]
     pub password: std::option::Option<std::string::String>,
     /// The ingest URL to which the source stream should be sent.
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// The system generated username for ingest authentication.
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
 }
 impl IngestEndpoint {
@@ -3439,11 +3602,10 @@ impl std::fmt::Debug for IngestEndpoint {
         formatter.finish()
     }
 }
-/// See [`IngestEndpoint`](crate::model::IngestEndpoint)
+/// See [`IngestEndpoint`](crate::model::IngestEndpoint).
 pub mod ingest_endpoint {
 
-    /// A builder for [`IngestEndpoint`](crate::model::IngestEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`IngestEndpoint`](crate::model::IngestEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3492,7 +3654,7 @@ pub mod ingest_endpoint {
             self.username = input;
             self
         }
-        /// Consumes the builder and constructs a [`IngestEndpoint`](crate::model::IngestEndpoint)
+        /// Consumes the builder and constructs a [`IngestEndpoint`](crate::model::IngestEndpoint).
         pub fn build(self) -> crate::model::IngestEndpoint {
             crate::model::IngestEndpoint {
                 id: self.id,
@@ -3504,7 +3666,7 @@ pub mod ingest_endpoint {
     }
 }
 impl IngestEndpoint {
-    /// Creates a new builder-style object to manufacture [`IngestEndpoint`](crate::model::IngestEndpoint)
+    /// Creates a new builder-style object to manufacture [`IngestEndpoint`](crate::model::IngestEndpoint).
     pub fn builder() -> crate::model::ingest_endpoint::Builder {
         crate::model::ingest_endpoint::Builder::default()
     }
@@ -3515,6 +3677,7 @@ impl IngestEndpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EgressAccessLogs {
     /// Customize the log group name.
+    #[doc(hidden)]
     pub log_group_name: std::option::Option<std::string::String>,
 }
 impl EgressAccessLogs {
@@ -3530,11 +3693,10 @@ impl std::fmt::Debug for EgressAccessLogs {
         formatter.finish()
     }
 }
-/// See [`EgressAccessLogs`](crate::model::EgressAccessLogs)
+/// See [`EgressAccessLogs`](crate::model::EgressAccessLogs).
 pub mod egress_access_logs {
 
-    /// A builder for [`EgressAccessLogs`](crate::model::EgressAccessLogs)
-    #[non_exhaustive]
+    /// A builder for [`EgressAccessLogs`](crate::model::EgressAccessLogs).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_group_name: std::option::Option<std::string::String>,
@@ -3553,7 +3715,7 @@ pub mod egress_access_logs {
             self.log_group_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`EgressAccessLogs`](crate::model::EgressAccessLogs)
+        /// Consumes the builder and constructs a [`EgressAccessLogs`](crate::model::EgressAccessLogs).
         pub fn build(self) -> crate::model::EgressAccessLogs {
             crate::model::EgressAccessLogs {
                 log_group_name: self.log_group_name,
@@ -3562,7 +3724,7 @@ pub mod egress_access_logs {
     }
 }
 impl EgressAccessLogs {
-    /// Creates a new builder-style object to manufacture [`EgressAccessLogs`](crate::model::EgressAccessLogs)
+    /// Creates a new builder-style object to manufacture [`EgressAccessLogs`](crate::model::EgressAccessLogs).
     pub fn builder() -> crate::model::egress_access_logs::Builder {
         crate::model::egress_access_logs::Builder::default()
     }
@@ -3573,37 +3735,53 @@ impl EgressAccessLogs {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OriginEndpoint {
     /// The Amazon Resource Name (ARN) assigned to the OriginEndpoint.
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// CDN Authorization credentials
+    #[doc(hidden)]
     pub authorization: std::option::Option<crate::model::Authorization>,
     /// The ID of the Channel the OriginEndpoint is associated with.
+    #[doc(hidden)]
     pub channel_id: std::option::Option<std::string::String>,
     /// A Common Media Application Format (CMAF) packaging configuration.
+    #[doc(hidden)]
     pub cmaf_package: std::option::Option<crate::model::CmafPackage>,
     /// A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
+    #[doc(hidden)]
     pub dash_package: std::option::Option<crate::model::DashPackage>,
     /// A short text description of the OriginEndpoint.
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// An HTTP Live Streaming (HLS) packaging configuration.
+    #[doc(hidden)]
     pub hls_package: std::option::Option<crate::model::HlsPackage>,
     /// The ID of the OriginEndpoint.
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// A short string appended to the end of the OriginEndpoint URL.
+    #[doc(hidden)]
     pub manifest_name: std::option::Option<std::string::String>,
     /// A Microsoft Smooth Streaming (MSS) packaging configuration.
+    #[doc(hidden)]
     pub mss_package: std::option::Option<crate::model::MssPackage>,
     /// Control whether origination of video is allowed for this OriginEndpoint. If set to ALLOW, the OriginEndpoint may by requested, pursuant to any other form of access control. If set to DENY, the OriginEndpoint may not be requested. This can be helpful for Live to VOD harvesting, or for temporarily disabling origination
+    #[doc(hidden)]
     pub origination: std::option::Option<crate::model::Origination>,
     /// Maximum duration (seconds) of content to retain for startover playback. If not specified, startover playback will be disabled for the OriginEndpoint.
+    #[doc(hidden)]
     pub startover_window_seconds: i32,
     /// A collection of tags associated with a resource
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// Amount of delay (seconds) to enforce on the playback of live content. If not specified, there will be no time delay in effect for the OriginEndpoint.
+    #[doc(hidden)]
     pub time_delay_seconds: i32,
     /// The URL of the packaged OriginEndpoint for consumption.
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// A list of source IP CIDR blocks that will be allowed to access the OriginEndpoint.
+    #[doc(hidden)]
     pub whitelist: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl OriginEndpoint {
@@ -3697,11 +3875,10 @@ impl std::fmt::Debug for OriginEndpoint {
         formatter.finish()
     }
 }
-/// See [`OriginEndpoint`](crate::model::OriginEndpoint)
+/// See [`OriginEndpoint`](crate::model::OriginEndpoint).
 pub mod origin_endpoint {
 
-    /// A builder for [`OriginEndpoint`](crate::model::OriginEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`OriginEndpoint`](crate::model::OriginEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3929,7 +4106,7 @@ pub mod origin_endpoint {
             self.whitelist = input;
             self
         }
-        /// Consumes the builder and constructs a [`OriginEndpoint`](crate::model::OriginEndpoint)
+        /// Consumes the builder and constructs a [`OriginEndpoint`](crate::model::OriginEndpoint).
         pub fn build(self) -> crate::model::OriginEndpoint {
             crate::model::OriginEndpoint {
                 arn: self.arn,
@@ -3953,7 +4130,7 @@ pub mod origin_endpoint {
     }
 }
 impl OriginEndpoint {
-    /// Creates a new builder-style object to manufacture [`OriginEndpoint`](crate::model::OriginEndpoint)
+    /// Creates a new builder-style object to manufacture [`OriginEndpoint`](crate::model::OriginEndpoint).
     pub fn builder() -> crate::model::origin_endpoint::Builder {
         crate::model::origin_endpoint::Builder::default()
     }
@@ -3964,22 +4141,31 @@ impl OriginEndpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HarvestJob {
     /// The Amazon Resource Name (ARN) assigned to the HarvestJob.
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// The ID of the Channel that the HarvestJob will harvest from.
+    #[doc(hidden)]
     pub channel_id: std::option::Option<std::string::String>,
     /// The time the HarvestJob was submitted
+    #[doc(hidden)]
     pub created_at: std::option::Option<std::string::String>,
     /// The end of the time-window which will be harvested.
+    #[doc(hidden)]
     pub end_time: std::option::Option<std::string::String>,
     /// The ID of the HarvestJob. The ID must be unique within the region and it cannot be changed after the HarvestJob is submitted.
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// The ID of the OriginEndpoint that the HarvestJob will harvest from. This cannot be changed after the HarvestJob is submitted.
+    #[doc(hidden)]
     pub origin_endpoint_id: std::option::Option<std::string::String>,
     /// Configuration parameters for where in an S3 bucket to place the harvested content
+    #[doc(hidden)]
     pub s3_destination: std::option::Option<crate::model::S3Destination>,
     /// The start of the time-window which will be harvested.
+    #[doc(hidden)]
     pub start_time: std::option::Option<std::string::String>,
     /// The current status of the HarvestJob. Consider setting up a CloudWatch Event to listen for HarvestJobs as they succeed or fail. In the event of failure, the CloudWatch Event will include an explanation of why the HarvestJob failed.
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
 }
 impl HarvestJob {
@@ -4035,11 +4221,10 @@ impl std::fmt::Debug for HarvestJob {
         formatter.finish()
     }
 }
-/// See [`HarvestJob`](crate::model::HarvestJob)
+/// See [`HarvestJob`](crate::model::HarvestJob).
 pub mod harvest_job {
 
-    /// A builder for [`HarvestJob`](crate::model::HarvestJob)
-    #[non_exhaustive]
+    /// A builder for [`HarvestJob`](crate::model::HarvestJob).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4149,7 +4334,7 @@ pub mod harvest_job {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`HarvestJob`](crate::model::HarvestJob)
+        /// Consumes the builder and constructs a [`HarvestJob`](crate::model::HarvestJob).
         pub fn build(self) -> crate::model::HarvestJob {
             crate::model::HarvestJob {
                 arn: self.arn,
@@ -4166,7 +4351,7 @@ pub mod harvest_job {
     }
 }
 impl HarvestJob {
-    /// Creates a new builder-style object to manufacture [`HarvestJob`](crate::model::HarvestJob)
+    /// Creates a new builder-style object to manufacture [`HarvestJob`](crate::model::HarvestJob).
     pub fn builder() -> crate::model::harvest_job::Builder {
         crate::model::harvest_job::Builder::default()
     }
@@ -4236,10 +4421,13 @@ impl AsRef<str> for Status {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Destination {
     /// The name of an S3 bucket within which harvested content will be exported
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// The key in the specified S3 bucket where the harvested top-level manifest will be placed.
+    #[doc(hidden)]
     pub manifest_key: std::option::Option<std::string::String>,
     /// The IAM role used to write to the specified S3 bucket
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl S3Destination {
@@ -4265,11 +4453,10 @@ impl std::fmt::Debug for S3Destination {
         formatter.finish()
     }
 }
-/// See [`S3Destination`](crate::model::S3Destination)
+/// See [`S3Destination`](crate::model::S3Destination).
 pub mod s3_destination {
 
-    /// A builder for [`S3Destination`](crate::model::S3Destination)
-    #[non_exhaustive]
+    /// A builder for [`S3Destination`](crate::model::S3Destination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_name: std::option::Option<std::string::String>,
@@ -4307,7 +4494,7 @@ pub mod s3_destination {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Destination`](crate::model::S3Destination)
+        /// Consumes the builder and constructs a [`S3Destination`](crate::model::S3Destination).
         pub fn build(self) -> crate::model::S3Destination {
             crate::model::S3Destination {
                 bucket_name: self.bucket_name,
@@ -4318,7 +4505,7 @@ pub mod s3_destination {
     }
 }
 impl S3Destination {
-    /// Creates a new builder-style object to manufacture [`S3Destination`](crate::model::S3Destination)
+    /// Creates a new builder-style object to manufacture [`S3Destination`](crate::model::S3Destination).
     pub fn builder() -> crate::model::s3_destination::Builder {
         crate::model::s3_destination::Builder::default()
     }
@@ -4329,18 +4516,25 @@ impl S3Destination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Channel {
     /// The Amazon Resource Name (ARN) assigned to the Channel.
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// A short text description of the Channel.
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// Configure egress access logging.
+    #[doc(hidden)]
     pub egress_access_logs: std::option::Option<crate::model::EgressAccessLogs>,
     /// An HTTP Live Streaming (HLS) ingest resource configuration.
+    #[doc(hidden)]
     pub hls_ingest: std::option::Option<crate::model::HlsIngest>,
     /// The ID of the Channel.
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// Configure ingress access logging.
+    #[doc(hidden)]
     pub ingress_access_logs: std::option::Option<crate::model::IngressAccessLogs>,
     /// A collection of tags associated with a resource
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -4390,11 +4584,10 @@ impl std::fmt::Debug for Channel {
         formatter.finish()
     }
 }
-/// See [`Channel`](crate::model::Channel)
+/// See [`Channel`](crate::model::Channel).
 pub mod channel {
 
-    /// A builder for [`Channel`](crate::model::Channel)
-    #[non_exhaustive]
+    /// A builder for [`Channel`](crate::model::Channel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4502,7 +4695,7 @@ pub mod channel {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Channel`](crate::model::Channel)
+        /// Consumes the builder and constructs a [`Channel`](crate::model::Channel).
         pub fn build(self) -> crate::model::Channel {
             crate::model::Channel {
                 arn: self.arn,
@@ -4517,7 +4710,7 @@ pub mod channel {
     }
 }
 impl Channel {
-    /// Creates a new builder-style object to manufacture [`Channel`](crate::model::Channel)
+    /// Creates a new builder-style object to manufacture [`Channel`](crate::model::Channel).
     pub fn builder() -> crate::model::channel::Builder {
         crate::model::channel::Builder::default()
     }

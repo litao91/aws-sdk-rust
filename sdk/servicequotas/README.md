@@ -16,10 +16,29 @@ your project, add the following to your **Cargo.toml** file:
 
 ```toml
 [dependencies]
-aws-config = "0.14.0"
-aws-sdk-servicequotas = "0.14.0"
+aws-config = "0.47.0"
+aws-sdk-servicequotas = "0.17.0"
 tokio = { version = "1", features = ["full"] }
 ```
+
+Then in code, a client can be created with the following:
+
+```rust
+use aws_sdk_servicequotas as servicequotas;
+
+#[tokio::main]
+async fn main() -> Result<(), servicequotas::Error> {
+    let config = aws_config::load_from_env().await;
+    let client = servicequotas::Client::new(&config);
+
+    // ... make some calls with the client
+
+    Ok(())
+}
+```
+
+See the [client documentation](https://docs.rs/aws-sdk-servicequotas/latest/aws_sdk_servicequotas/client/struct.Client.html)
+for information on what calls can be made, and the inputs and outputs for each of those calls.
 
 ## Using the SDK
 

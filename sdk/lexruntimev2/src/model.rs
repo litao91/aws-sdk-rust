@@ -5,11 +5,14 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Interpretation {
     /// <p>Determines the threshold where Amazon Lex V2 will insert the <code>AMAZON.FallbackIntent</code>, <code>AMAZON.KendraSearchIntent</code>, or both when returning alternative intents in a response. <code>AMAZON.FallbackIntent</code> and <code>AMAZON.KendraSearchIntent</code> are only inserted if they are configured for the bot.</p>
+    #[doc(hidden)]
     pub nlu_confidence: std::option::Option<crate::model::ConfidenceScore>,
     /// <p>The sentiment expressed in an utterance. </p>
     /// <p>When the bot is configured to send utterances to Amazon Comprehend for sentiment analysis, this field contains the result of the analysis.</p>
+    #[doc(hidden)]
     pub sentiment_response: std::option::Option<crate::model::SentimentResponse>,
     /// <p>A list of intents that might satisfy the user's utterance. The intents are ordered by the confidence score.</p>
+    #[doc(hidden)]
     pub intent: std::option::Option<crate::model::Intent>,
 }
 impl Interpretation {
@@ -36,11 +39,10 @@ impl std::fmt::Debug for Interpretation {
         formatter.finish()
     }
 }
-/// See [`Interpretation`](crate::model::Interpretation)
+/// See [`Interpretation`](crate::model::Interpretation).
 pub mod interpretation {
 
-    /// A builder for [`Interpretation`](crate::model::Interpretation)
-    #[non_exhaustive]
+    /// A builder for [`Interpretation`](crate::model::Interpretation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) nlu_confidence: std::option::Option<crate::model::ConfidenceScore>,
@@ -86,7 +88,7 @@ pub mod interpretation {
             self.intent = input;
             self
         }
-        /// Consumes the builder and constructs a [`Interpretation`](crate::model::Interpretation)
+        /// Consumes the builder and constructs a [`Interpretation`](crate::model::Interpretation).
         pub fn build(self) -> crate::model::Interpretation {
             crate::model::Interpretation {
                 nlu_confidence: self.nlu_confidence,
@@ -97,7 +99,7 @@ pub mod interpretation {
     }
 }
 impl Interpretation {
-    /// Creates a new builder-style object to manufacture [`Interpretation`](crate::model::Interpretation)
+    /// Creates a new builder-style object to manufacture [`Interpretation`](crate::model::Interpretation).
     pub fn builder() -> crate::model::interpretation::Builder {
         crate::model::interpretation::Builder::default()
     }
@@ -108,13 +110,17 @@ impl Interpretation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Intent {
     /// <p>The name of the intent.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A map of all of the slots for the intent. The name of the slot maps to the value of the slot. If a slot has not been filled, the value is null.</p>
+    #[doc(hidden)]
     pub slots:
         std::option::Option<std::collections::HashMap<std::string::String, crate::model::Slot>>,
     /// <p>Contains fulfillment information for the intent. </p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::IntentState>,
     /// <p>Contains information about whether fulfillment of the intent has been confirmed.</p>
+    #[doc(hidden)]
     pub confirmation_state: std::option::Option<crate::model::ConfirmationState>,
 }
 impl Intent {
@@ -148,11 +154,10 @@ impl std::fmt::Debug for Intent {
         formatter.finish()
     }
 }
-/// See [`Intent`](crate::model::Intent)
+/// See [`Intent`](crate::model::Intent).
 pub mod intent {
 
-    /// A builder for [`Intent`](crate::model::Intent)
-    #[non_exhaustive]
+    /// A builder for [`Intent`](crate::model::Intent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -216,7 +221,7 @@ pub mod intent {
             self.confirmation_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`Intent`](crate::model::Intent)
+        /// Consumes the builder and constructs a [`Intent`](crate::model::Intent).
         pub fn build(self) -> crate::model::Intent {
             crate::model::Intent {
                 name: self.name,
@@ -228,7 +233,7 @@ pub mod intent {
     }
 }
 impl Intent {
-    /// Creates a new builder-style object to manufacture [`Intent`](crate::model::Intent)
+    /// Creates a new builder-style object to manufacture [`Intent`](crate::model::Intent).
     pub fn builder() -> crate::model::intent::Builder {
         crate::model::intent::Builder::default()
     }
@@ -376,10 +381,13 @@ impl AsRef<str> for IntentState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Slot {
     /// <p>The current value of the slot.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<crate::model::Value>,
     /// <p>When the <code>shape</code> value is <code>List</code>, it indicates that the <code>values</code> field contains a list of slot values. When the value is <code>Scalar</code>, it indicates that the <code>value</code> field contains a single value.</p>
+    #[doc(hidden)]
     pub shape: std::option::Option<crate::model::Shape>,
     /// <p>A list of one or more values that the user provided for the slot. For example, if a for a slot that elicits pizza toppings, the values might be "pepperoni" and "pineapple." </p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<crate::model::Slot>>,
 }
 impl Slot {
@@ -405,11 +413,10 @@ impl std::fmt::Debug for Slot {
         formatter.finish()
     }
 }
-/// See [`Slot`](crate::model::Slot)
+/// See [`Slot`](crate::model::Slot).
 pub mod slot {
 
-    /// A builder for [`Slot`](crate::model::Slot)
-    #[non_exhaustive]
+    /// A builder for [`Slot`](crate::model::Slot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<crate::model::Value>,
@@ -456,7 +463,7 @@ pub mod slot {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`Slot`](crate::model::Slot)
+        /// Consumes the builder and constructs a [`Slot`](crate::model::Slot).
         pub fn build(self) -> crate::model::Slot {
             crate::model::Slot {
                 value: self.value,
@@ -467,7 +474,7 @@ pub mod slot {
     }
 }
 impl Slot {
-    /// Creates a new builder-style object to manufacture [`Slot`](crate::model::Slot)
+    /// Creates a new builder-style object to manufacture [`Slot`](crate::model::Slot).
     pub fn builder() -> crate::model::slot::Builder {
         crate::model::slot::Builder::default()
     }
@@ -533,10 +540,13 @@ impl AsRef<str> for Shape {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Value {
     /// <p>The text of the utterance from the user that was entered for the slot.</p>
+    #[doc(hidden)]
     pub original_value: std::option::Option<std::string::String>,
     /// <p>The value that Amazon Lex V2 determines for the slot. The actual value depends on the setting of the value selection strategy for the bot. You can choose to use the value entered by the user, or you can have Amazon Lex V2 choose the first value in the <code>resolvedValues</code> list.</p>
+    #[doc(hidden)]
     pub interpreted_value: std::option::Option<std::string::String>,
     /// <p>A list of additional values that have been recognized for the slot.</p>
+    #[doc(hidden)]
     pub resolved_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Value {
@@ -562,11 +572,10 @@ impl std::fmt::Debug for Value {
         formatter.finish()
     }
 }
-/// See [`Value`](crate::model::Value)
+/// See [`Value`](crate::model::Value).
 pub mod value {
 
-    /// A builder for [`Value`](crate::model::Value)
-    #[non_exhaustive]
+    /// A builder for [`Value`](crate::model::Value).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) original_value: std::option::Option<std::string::String>,
@@ -619,7 +628,7 @@ pub mod value {
             self.resolved_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`Value`](crate::model::Value)
+        /// Consumes the builder and constructs a [`Value`](crate::model::Value).
         pub fn build(self) -> crate::model::Value {
             crate::model::Value {
                 original_value: self.original_value,
@@ -630,7 +639,7 @@ pub mod value {
     }
 }
 impl Value {
-    /// Creates a new builder-style object to manufacture [`Value`](crate::model::Value)
+    /// Creates a new builder-style object to manufacture [`Value`](crate::model::Value).
     pub fn builder() -> crate::model::value::Builder {
         crate::model::value::Builder::default()
     }
@@ -642,8 +651,10 @@ impl Value {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SentimentResponse {
     /// <p>The overall sentiment expressed in the user's response. This is the sentiment most likely expressed by the user based on the analysis by Amazon Comprehend.</p>
+    #[doc(hidden)]
     pub sentiment: std::option::Option<crate::model::SentimentType>,
     /// <p>The individual sentiment responses for the utterance.</p>
+    #[doc(hidden)]
     pub sentiment_score: std::option::Option<crate::model::SentimentScore>,
 }
 impl SentimentResponse {
@@ -664,11 +675,10 @@ impl std::fmt::Debug for SentimentResponse {
         formatter.finish()
     }
 }
-/// See [`SentimentResponse`](crate::model::SentimentResponse)
+/// See [`SentimentResponse`](crate::model::SentimentResponse).
 pub mod sentiment_response {
 
-    /// A builder for [`SentimentResponse`](crate::model::SentimentResponse)
-    #[non_exhaustive]
+    /// A builder for [`SentimentResponse`](crate::model::SentimentResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sentiment: std::option::Option<crate::model::SentimentType>,
@@ -701,7 +711,7 @@ pub mod sentiment_response {
             self.sentiment_score = input;
             self
         }
-        /// Consumes the builder and constructs a [`SentimentResponse`](crate::model::SentimentResponse)
+        /// Consumes the builder and constructs a [`SentimentResponse`](crate::model::SentimentResponse).
         pub fn build(self) -> crate::model::SentimentResponse {
             crate::model::SentimentResponse {
                 sentiment: self.sentiment,
@@ -711,7 +721,7 @@ pub mod sentiment_response {
     }
 }
 impl SentimentResponse {
-    /// Creates a new builder-style object to manufacture [`SentimentResponse`](crate::model::SentimentResponse)
+    /// Creates a new builder-style object to manufacture [`SentimentResponse`](crate::model::SentimentResponse).
     pub fn builder() -> crate::model::sentiment_response::Builder {
         crate::model::sentiment_response::Builder::default()
     }
@@ -722,12 +732,16 @@ impl SentimentResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SentimentScore {
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>POSITIVE</code> sentiment.</p>
+    #[doc(hidden)]
     pub positive: f64,
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEGATIVE</code> sentiment.</p>
+    #[doc(hidden)]
     pub negative: f64,
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEUTRAL</code> sentiment.</p>
+    #[doc(hidden)]
     pub neutral: f64,
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>MIXED</code> sentiment.</p>
+    #[doc(hidden)]
     pub mixed: f64,
 }
 impl SentimentScore {
@@ -758,11 +772,10 @@ impl std::fmt::Debug for SentimentScore {
         formatter.finish()
     }
 }
-/// See [`SentimentScore`](crate::model::SentimentScore)
+/// See [`SentimentScore`](crate::model::SentimentScore).
 pub mod sentiment_score {
 
-    /// A builder for [`SentimentScore`](crate::model::SentimentScore)
-    #[non_exhaustive]
+    /// A builder for [`SentimentScore`](crate::model::SentimentScore).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) positive: std::option::Option<f64>,
@@ -811,7 +824,7 @@ pub mod sentiment_score {
             self.mixed = input;
             self
         }
-        /// Consumes the builder and constructs a [`SentimentScore`](crate::model::SentimentScore)
+        /// Consumes the builder and constructs a [`SentimentScore`](crate::model::SentimentScore).
         pub fn build(self) -> crate::model::SentimentScore {
             crate::model::SentimentScore {
                 positive: self.positive.unwrap_or_default(),
@@ -823,7 +836,7 @@ pub mod sentiment_score {
     }
 }
 impl SentimentScore {
-    /// Creates a new builder-style object to manufacture [`SentimentScore`](crate::model::SentimentScore)
+    /// Creates a new builder-style object to manufacture [`SentimentScore`](crate::model::SentimentScore).
     pub fn builder() -> crate::model::sentiment_score::Builder {
         crate::model::sentiment_score::Builder::default()
     }
@@ -897,6 +910,7 @@ impl AsRef<str> for SentimentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfidenceScore {
     /// <p>A score that indicates how confident Amazon Lex V2 is that an intent satisfies the user's intent. Ranges between 0.00 and 1.00. Higher scores indicate higher confidence.</p>
+    #[doc(hidden)]
     pub score: f64,
 }
 impl ConfidenceScore {
@@ -912,11 +926,10 @@ impl std::fmt::Debug for ConfidenceScore {
         formatter.finish()
     }
 }
-/// See [`ConfidenceScore`](crate::model::ConfidenceScore)
+/// See [`ConfidenceScore`](crate::model::ConfidenceScore).
 pub mod confidence_score {
 
-    /// A builder for [`ConfidenceScore`](crate::model::ConfidenceScore)
-    #[non_exhaustive]
+    /// A builder for [`ConfidenceScore`](crate::model::ConfidenceScore).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) score: std::option::Option<f64>,
@@ -932,7 +945,7 @@ pub mod confidence_score {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfidenceScore`](crate::model::ConfidenceScore)
+        /// Consumes the builder and constructs a [`ConfidenceScore`](crate::model::ConfidenceScore).
         pub fn build(self) -> crate::model::ConfidenceScore {
             crate::model::ConfidenceScore {
                 score: self.score.unwrap_or_default(),
@@ -941,7 +954,7 @@ pub mod confidence_score {
     }
 }
 impl ConfidenceScore {
-    /// Creates a new builder-style object to manufacture [`ConfidenceScore`](crate::model::ConfidenceScore)
+    /// Creates a new builder-style object to manufacture [`ConfidenceScore`](crate::model::ConfidenceScore).
     pub fn builder() -> crate::model::confidence_score::Builder {
         crate::model::confidence_score::Builder::default()
     }
@@ -952,17 +965,23 @@ impl ConfidenceScore {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SessionState {
     /// <p>The next step that Amazon Lex V2 should take in the conversation with a user.</p>
+    #[doc(hidden)]
     pub dialog_action: std::option::Option<crate::model::DialogAction>,
     /// <p>The active intent that Amazon Lex V2 is processing.</p>
+    #[doc(hidden)]
     pub intent: std::option::Option<crate::model::Intent>,
     /// <p>One or more contexts that indicate to Amazon Lex V2 the context of a request. When a context is active, Amazon Lex V2 considers intents with the matching context as a trigger as the next intent in a session.</p>
+    #[doc(hidden)]
     pub active_contexts: std::option::Option<std::vec::Vec<crate::model::ActiveContext>>,
     /// <p>Map of key/value pairs representing session-specific context information. It contains application information passed between Amazon Lex V2 and a client application.</p>
+    #[doc(hidden)]
     pub session_attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A unique identifier for a specific request.</p>
+    #[doc(hidden)]
     pub originating_request_id: std::option::Option<std::string::String>,
     /// <p>Hints for phrases that a customer is likely to use for a slot. Amazon Lex V2 uses the hints to help determine the correct value of a slot.</p>
+    #[doc(hidden)]
     pub runtime_hints: std::option::Option<crate::model::RuntimeHints>,
 }
 impl SessionState {
@@ -1006,11 +1025,10 @@ impl std::fmt::Debug for SessionState {
         formatter.finish()
     }
 }
-/// See [`SessionState`](crate::model::SessionState)
+/// See [`SessionState`](crate::model::SessionState).
 pub mod session_state {
 
-    /// A builder for [`SessionState`](crate::model::SessionState)
-    #[non_exhaustive]
+    /// A builder for [`SessionState`](crate::model::SessionState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dialog_action: std::option::Option<crate::model::DialogAction>,
@@ -1116,7 +1134,7 @@ pub mod session_state {
             self.runtime_hints = input;
             self
         }
-        /// Consumes the builder and constructs a [`SessionState`](crate::model::SessionState)
+        /// Consumes the builder and constructs a [`SessionState`](crate::model::SessionState).
         pub fn build(self) -> crate::model::SessionState {
             crate::model::SessionState {
                 dialog_action: self.dialog_action,
@@ -1130,7 +1148,7 @@ pub mod session_state {
     }
 }
 impl SessionState {
-    /// Creates a new builder-style object to manufacture [`SessionState`](crate::model::SessionState)
+    /// Creates a new builder-style object to manufacture [`SessionState`](crate::model::SessionState).
     pub fn builder() -> crate::model::session_state::Builder {
         crate::model::session_state::Builder::default()
     }
@@ -1145,6 +1163,7 @@ pub struct RuntimeHints {
     /// <p>A list of the slots in the intent that should have runtime hints added, and the phrases that should be added for each slot.</p>
     /// <p>The first level of the <code>slotHints</code> map is the name of the intent. The second level is the name of the slot within the intent. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/using-hints.xml">Using hints to improve accuracy</a>.</p>
     /// <p>The intent name and slot name must exist.</p>
+    #[doc(hidden)]
     pub slot_hints: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -1174,11 +1193,10 @@ impl std::fmt::Debug for RuntimeHints {
         formatter.finish()
     }
 }
-/// See [`RuntimeHints`](crate::model::RuntimeHints)
+/// See [`RuntimeHints`](crate::model::RuntimeHints).
 pub mod runtime_hints {
 
-    /// A builder for [`RuntimeHints`](crate::model::RuntimeHints)
-    #[non_exhaustive]
+    /// A builder for [`RuntimeHints`](crate::model::RuntimeHints).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) slot_hints: std::option::Option<
@@ -1224,7 +1242,7 @@ pub mod runtime_hints {
             self.slot_hints = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuntimeHints`](crate::model::RuntimeHints)
+        /// Consumes the builder and constructs a [`RuntimeHints`](crate::model::RuntimeHints).
         pub fn build(self) -> crate::model::RuntimeHints {
             crate::model::RuntimeHints {
                 slot_hints: self.slot_hints,
@@ -1233,7 +1251,7 @@ pub mod runtime_hints {
     }
 }
 impl RuntimeHints {
-    /// Creates a new builder-style object to manufacture [`RuntimeHints`](crate::model::RuntimeHints)
+    /// Creates a new builder-style object to manufacture [`RuntimeHints`](crate::model::RuntimeHints).
     pub fn builder() -> crate::model::runtime_hints::Builder {
         crate::model::runtime_hints::Builder::default()
     }
@@ -1244,6 +1262,7 @@ impl RuntimeHints {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuntimeHintDetails {
     /// <p>One or more strings that Amazon Lex V2 should look for in the input to the bot. Each phrase is given preference when deciding on slot values.</p>
+    #[doc(hidden)]
     pub runtime_hint_values: std::option::Option<std::vec::Vec<crate::model::RuntimeHintValue>>,
 }
 impl RuntimeHintDetails {
@@ -1259,11 +1278,10 @@ impl std::fmt::Debug for RuntimeHintDetails {
         formatter.finish()
     }
 }
-/// See [`RuntimeHintDetails`](crate::model::RuntimeHintDetails)
+/// See [`RuntimeHintDetails`](crate::model::RuntimeHintDetails).
 pub mod runtime_hint_details {
 
-    /// A builder for [`RuntimeHintDetails`](crate::model::RuntimeHintDetails)
-    #[non_exhaustive]
+    /// A builder for [`RuntimeHintDetails`](crate::model::RuntimeHintDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) runtime_hint_values:
@@ -1289,7 +1307,7 @@ pub mod runtime_hint_details {
             self.runtime_hint_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuntimeHintDetails`](crate::model::RuntimeHintDetails)
+        /// Consumes the builder and constructs a [`RuntimeHintDetails`](crate::model::RuntimeHintDetails).
         pub fn build(self) -> crate::model::RuntimeHintDetails {
             crate::model::RuntimeHintDetails {
                 runtime_hint_values: self.runtime_hint_values,
@@ -1298,7 +1316,7 @@ pub mod runtime_hint_details {
     }
 }
 impl RuntimeHintDetails {
-    /// Creates a new builder-style object to manufacture [`RuntimeHintDetails`](crate::model::RuntimeHintDetails)
+    /// Creates a new builder-style object to manufacture [`RuntimeHintDetails`](crate::model::RuntimeHintDetails).
     pub fn builder() -> crate::model::runtime_hint_details::Builder {
         crate::model::runtime_hint_details::Builder::default()
     }
@@ -1309,6 +1327,7 @@ impl RuntimeHintDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuntimeHintValue {
     /// <p>The phrase that Amazon Lex V2 should look for in the user's input to the bot.</p>
+    #[doc(hidden)]
     pub phrase: std::option::Option<std::string::String>,
 }
 impl RuntimeHintValue {
@@ -1324,11 +1343,10 @@ impl std::fmt::Debug for RuntimeHintValue {
         formatter.finish()
     }
 }
-/// See [`RuntimeHintValue`](crate::model::RuntimeHintValue)
+/// See [`RuntimeHintValue`](crate::model::RuntimeHintValue).
 pub mod runtime_hint_value {
 
-    /// A builder for [`RuntimeHintValue`](crate::model::RuntimeHintValue)
-    #[non_exhaustive]
+    /// A builder for [`RuntimeHintValue`](crate::model::RuntimeHintValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) phrase: std::option::Option<std::string::String>,
@@ -1344,7 +1362,7 @@ pub mod runtime_hint_value {
             self.phrase = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuntimeHintValue`](crate::model::RuntimeHintValue)
+        /// Consumes the builder and constructs a [`RuntimeHintValue`](crate::model::RuntimeHintValue).
         pub fn build(self) -> crate::model::RuntimeHintValue {
             crate::model::RuntimeHintValue {
                 phrase: self.phrase,
@@ -1353,7 +1371,7 @@ pub mod runtime_hint_value {
     }
 }
 impl RuntimeHintValue {
-    /// Creates a new builder-style object to manufacture [`RuntimeHintValue`](crate::model::RuntimeHintValue)
+    /// Creates a new builder-style object to manufacture [`RuntimeHintValue`](crate::model::RuntimeHintValue).
     pub fn builder() -> crate::model::runtime_hint_value::Builder {
         crate::model::runtime_hint_value::Builder::default()
     }
@@ -1365,11 +1383,14 @@ impl RuntimeHintValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActiveContext {
     /// <p>The name of the context.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Indicates the number of turns or seconds that the context is active. Once the time to live expires, the context is no longer returned in a response.</p>
+    #[doc(hidden)]
     pub time_to_live: std::option::Option<crate::model::ActiveContextTimeToLive>,
     /// <p>A list of contexts active for the request. A context can be activated when a previous intent is fulfilled, or by including the context in the request.</p>
     /// <p>If you don't specify a list of contexts, Amazon Lex V2 will use the current list of contexts for the session. If you specify an empty list, all contexts for the session are cleared. </p>
+    #[doc(hidden)]
     pub context_attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1400,11 +1421,10 @@ impl std::fmt::Debug for ActiveContext {
         formatter.finish()
     }
 }
-/// See [`ActiveContext`](crate::model::ActiveContext)
+/// See [`ActiveContext`](crate::model::ActiveContext).
 pub mod active_context {
 
-    /// A builder for [`ActiveContext`](crate::model::ActiveContext)
-    #[non_exhaustive]
+    /// A builder for [`ActiveContext`](crate::model::ActiveContext).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1464,7 +1484,7 @@ pub mod active_context {
             self.context_attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActiveContext`](crate::model::ActiveContext)
+        /// Consumes the builder and constructs a [`ActiveContext`](crate::model::ActiveContext).
         pub fn build(self) -> crate::model::ActiveContext {
             crate::model::ActiveContext {
                 name: self.name,
@@ -1475,7 +1495,7 @@ pub mod active_context {
     }
 }
 impl ActiveContext {
-    /// Creates a new builder-style object to manufacture [`ActiveContext`](crate::model::ActiveContext)
+    /// Creates a new builder-style object to manufacture [`ActiveContext`](crate::model::ActiveContext).
     pub fn builder() -> crate::model::active_context::Builder {
         crate::model::active_context::Builder::default()
     }
@@ -1486,8 +1506,10 @@ impl ActiveContext {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActiveContextTimeToLive {
     /// <p>The number of seconds that the context is active. You can specify between 5 and 86400 seconds (24 hours).</p>
+    #[doc(hidden)]
     pub time_to_live_in_seconds: std::option::Option<i32>,
     /// <p>The number of turns that the context is active. You can specify up to 20 turns. Each request and response from the bot is a turn.</p>
+    #[doc(hidden)]
     pub turns_to_live: std::option::Option<i32>,
 }
 impl ActiveContextTimeToLive {
@@ -1508,11 +1530,10 @@ impl std::fmt::Debug for ActiveContextTimeToLive {
         formatter.finish()
     }
 }
-/// See [`ActiveContextTimeToLive`](crate::model::ActiveContextTimeToLive)
+/// See [`ActiveContextTimeToLive`](crate::model::ActiveContextTimeToLive).
 pub mod active_context_time_to_live {
 
-    /// A builder for [`ActiveContextTimeToLive`](crate::model::ActiveContextTimeToLive)
-    #[non_exhaustive]
+    /// A builder for [`ActiveContextTimeToLive`](crate::model::ActiveContextTimeToLive).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) time_to_live_in_seconds: std::option::Option<i32>,
@@ -1539,7 +1560,7 @@ pub mod active_context_time_to_live {
             self.turns_to_live = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActiveContextTimeToLive`](crate::model::ActiveContextTimeToLive)
+        /// Consumes the builder and constructs a [`ActiveContextTimeToLive`](crate::model::ActiveContextTimeToLive).
         pub fn build(self) -> crate::model::ActiveContextTimeToLive {
             crate::model::ActiveContextTimeToLive {
                 time_to_live_in_seconds: self.time_to_live_in_seconds,
@@ -1549,7 +1570,7 @@ pub mod active_context_time_to_live {
     }
 }
 impl ActiveContextTimeToLive {
-    /// Creates a new builder-style object to manufacture [`ActiveContextTimeToLive`](crate::model::ActiveContextTimeToLive)
+    /// Creates a new builder-style object to manufacture [`ActiveContextTimeToLive`](crate::model::ActiveContextTimeToLive).
     pub fn builder() -> crate::model::active_context_time_to_live::Builder {
         crate::model::active_context_time_to_live::Builder::default()
     }
@@ -1566,8 +1587,10 @@ pub struct DialogAction {
     /// <li> <p> <code>Delegate</code> - The next action is determined by Amazon Lex V2.</p> </li>
     /// <li> <p> <code>ElicitSlot</code> - The next action is to elicit a slot value from the user.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::DialogActionType>,
     /// <p>The name of the slot that should be elicited from the user.</p>
+    #[doc(hidden)]
     pub slot_to_elicit: std::option::Option<std::string::String>,
     /// <p>Configures the slot to use spell-by-letter or spell-by-word style. When you use a style on a slot, users can spell out their input to make it clear to your bot.</p>
     /// <ul>
@@ -1575,6 +1598,7 @@ pub struct DialogAction {
     /// <li> <p>Spell by word - "b as in boy" "o as in oscar" "b as in boy"</p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/using-spelling.html"> Using spelling to enter slot values </a>.</p>
+    #[doc(hidden)]
     pub slot_elicitation_style: std::option::Option<crate::model::StyleType>,
 }
 impl DialogAction {
@@ -1611,11 +1635,10 @@ impl std::fmt::Debug for DialogAction {
         formatter.finish()
     }
 }
-/// See [`DialogAction`](crate::model::DialogAction)
+/// See [`DialogAction`](crate::model::DialogAction).
 pub mod dialog_action {
 
-    /// A builder for [`DialogAction`](crate::model::DialogAction)
-    #[non_exhaustive]
+    /// A builder for [`DialogAction`](crate::model::DialogAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::DialogActionType>,
@@ -1684,7 +1707,7 @@ pub mod dialog_action {
             self.slot_elicitation_style = input;
             self
         }
-        /// Consumes the builder and constructs a [`DialogAction`](crate::model::DialogAction)
+        /// Consumes the builder and constructs a [`DialogAction`](crate::model::DialogAction).
         pub fn build(self) -> crate::model::DialogAction {
             crate::model::DialogAction {
                 r#type: self.r#type,
@@ -1695,7 +1718,7 @@ pub mod dialog_action {
     }
 }
 impl DialogAction {
-    /// Creates a new builder-style object to manufacture [`DialogAction`](crate::model::DialogAction)
+    /// Creates a new builder-style object to manufacture [`DialogAction`](crate::model::DialogAction).
     pub fn builder() -> crate::model::dialog_action::Builder {
         crate::model::dialog_action::Builder::default()
     }
@@ -1843,11 +1866,14 @@ impl AsRef<str> for DialogActionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Message {
     /// <p>The text of the message.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
     /// <p>Indicates the type of response.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<crate::model::MessageContentType>,
     /// <p>A card that is shown to the user by a messaging platform. You define the contents of the card, the card is displayed by the platform. </p>
     /// <p>When you use a response card, the response from the user is constrained to the text associated with a button on the card.</p>
+    #[doc(hidden)]
     pub image_response_card: std::option::Option<crate::model::ImageResponseCard>,
 }
 impl Message {
@@ -1874,11 +1900,10 @@ impl std::fmt::Debug for Message {
         formatter.finish()
     }
 }
-/// See [`Message`](crate::model::Message)
+/// See [`Message`](crate::model::Message).
 pub mod message {
 
-    /// A builder for [`Message`](crate::model::Message)
-    #[non_exhaustive]
+    /// A builder for [`Message`](crate::model::Message).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content: std::option::Option<std::string::String>,
@@ -1924,7 +1949,7 @@ pub mod message {
             self.image_response_card = input;
             self
         }
-        /// Consumes the builder and constructs a [`Message`](crate::model::Message)
+        /// Consumes the builder and constructs a [`Message`](crate::model::Message).
         pub fn build(self) -> crate::model::Message {
             crate::model::Message {
                 content: self.content,
@@ -1935,7 +1960,7 @@ pub mod message {
     }
 }
 impl Message {
-    /// Creates a new builder-style object to manufacture [`Message`](crate::model::Message)
+    /// Creates a new builder-style object to manufacture [`Message`](crate::model::Message).
     pub fn builder() -> crate::model::message::Builder {
         crate::model::message::Builder::default()
     }
@@ -1947,12 +1972,16 @@ impl Message {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageResponseCard {
     /// <p>The title to display on the response card. The format of the title is determined by the platform displaying the response card.</p>
+    #[doc(hidden)]
     pub title: std::option::Option<std::string::String>,
     /// <p>The subtitle to display on the response card. The format of the subtitle is determined by the platform displaying the response card.</p>
+    #[doc(hidden)]
     pub subtitle: std::option::Option<std::string::String>,
     /// <p>The URL of an image to display on the response card. The image URL must be publicly available so that the platform displaying the response card has access to the image.</p>
+    #[doc(hidden)]
     pub image_url: std::option::Option<std::string::String>,
     /// <p>A list of buttons that should be displayed on the response card. The arrangement of the buttons is determined by the platform that displays the button.</p>
+    #[doc(hidden)]
     pub buttons: std::option::Option<std::vec::Vec<crate::model::Button>>,
 }
 impl ImageResponseCard {
@@ -1983,11 +2012,10 @@ impl std::fmt::Debug for ImageResponseCard {
         formatter.finish()
     }
 }
-/// See [`ImageResponseCard`](crate::model::ImageResponseCard)
+/// See [`ImageResponseCard`](crate::model::ImageResponseCard).
 pub mod image_response_card {
 
-    /// A builder for [`ImageResponseCard`](crate::model::ImageResponseCard)
-    #[non_exhaustive]
+    /// A builder for [`ImageResponseCard`](crate::model::ImageResponseCard).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) title: std::option::Option<std::string::String>,
@@ -2045,7 +2073,7 @@ pub mod image_response_card {
             self.buttons = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageResponseCard`](crate::model::ImageResponseCard)
+        /// Consumes the builder and constructs a [`ImageResponseCard`](crate::model::ImageResponseCard).
         pub fn build(self) -> crate::model::ImageResponseCard {
             crate::model::ImageResponseCard {
                 title: self.title,
@@ -2057,7 +2085,7 @@ pub mod image_response_card {
     }
 }
 impl ImageResponseCard {
-    /// Creates a new builder-style object to manufacture [`ImageResponseCard`](crate::model::ImageResponseCard)
+    /// Creates a new builder-style object to manufacture [`ImageResponseCard`](crate::model::ImageResponseCard).
     pub fn builder() -> crate::model::image_response_card::Builder {
         crate::model::image_response_card::Builder::default()
     }
@@ -2068,8 +2096,10 @@ impl ImageResponseCard {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Button {
     /// <p>The text that is displayed on the button.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>The value returned to Amazon Lex V2 when a user chooses the button.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Button {
@@ -2090,11 +2120,10 @@ impl std::fmt::Debug for Button {
         formatter.finish()
     }
 }
-/// See [`Button`](crate::model::Button)
+/// See [`Button`](crate::model::Button).
 pub mod button {
 
-    /// A builder for [`Button`](crate::model::Button)
-    #[non_exhaustive]
+    /// A builder for [`Button`](crate::model::Button).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text: std::option::Option<std::string::String>,
@@ -2121,7 +2150,7 @@ pub mod button {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Button`](crate::model::Button)
+        /// Consumes the builder and constructs a [`Button`](crate::model::Button).
         pub fn build(self) -> crate::model::Button {
             crate::model::Button {
                 text: self.text,
@@ -2131,7 +2160,7 @@ pub mod button {
     }
 }
 impl Button {
-    /// Creates a new builder-style object to manufacture [`Button`](crate::model::Button)
+    /// Creates a new builder-style object to manufacture [`Button`](crate::model::Button).
     pub fn builder() -> crate::model::button::Builder {
         crate::model::button::Builder::default()
     }

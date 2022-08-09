@@ -7,6 +7,7 @@ pub struct GetSessionTokenOutput {
     /// <p>The temporary security credentials, which include an access key ID, a secret access key, and a security (or session) token.</p> <note>
     /// <p>The size of the security token that STS API operations return is not fixed. We strongly recommend that you make no assumptions about the maximum size.</p>
     /// </note>
+    #[doc(hidden)]
     pub credentials: std::option::Option<crate::model::Credentials>,
 }
 impl GetSessionTokenOutput {
@@ -24,11 +25,10 @@ impl std::fmt::Debug for GetSessionTokenOutput {
         formatter.finish()
     }
 }
-/// See [`GetSessionTokenOutput`](crate::output::GetSessionTokenOutput)
+/// See [`GetSessionTokenOutput`](crate::output::GetSessionTokenOutput).
 pub mod get_session_token_output {
 
-    /// A builder for [`GetSessionTokenOutput`](crate::output::GetSessionTokenOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSessionTokenOutput`](crate::output::GetSessionTokenOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) credentials: std::option::Option<crate::model::Credentials>,
@@ -51,7 +51,7 @@ pub mod get_session_token_output {
             self.credentials = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSessionTokenOutput`](crate::output::GetSessionTokenOutput)
+        /// Consumes the builder and constructs a [`GetSessionTokenOutput`](crate::output::GetSessionTokenOutput).
         pub fn build(self) -> crate::output::GetSessionTokenOutput {
             crate::output::GetSessionTokenOutput {
                 credentials: self.credentials,
@@ -60,7 +60,7 @@ pub mod get_session_token_output {
     }
 }
 impl GetSessionTokenOutput {
-    /// Creates a new builder-style object to manufacture [`GetSessionTokenOutput`](crate::output::GetSessionTokenOutput)
+    /// Creates a new builder-style object to manufacture [`GetSessionTokenOutput`](crate::output::GetSessionTokenOutput).
     pub fn builder() -> crate::output::get_session_token_output::Builder {
         crate::output::get_session_token_output::Builder::default()
     }
@@ -73,10 +73,13 @@ pub struct GetFederationTokenOutput {
     /// <p>The temporary security credentials, which include an access key ID, a secret access key, and a security (or session) token.</p> <note>
     /// <p>The size of the security token that STS API operations return is not fixed. We strongly recommend that you make no assumptions about the maximum size.</p>
     /// </note>
+    #[doc(hidden)]
     pub credentials: std::option::Option<crate::model::Credentials>,
     /// <p>Identifiers for the federated user associated with the credentials (such as <code>arn:aws:sts::123456789012:federated-user/Bob</code> or <code>123456789012:Bob</code>). You can use the federated user's ARN in your resource-based policies, such as an Amazon S3 bucket policy. </p>
+    #[doc(hidden)]
     pub federated_user: std::option::Option<crate::model::FederatedUser>,
     /// <p>A percentage value that indicates the packed size of the session policies and session tags combined passed in the request. The request fails if the packed size is greater than 100 percent, which means the policies and tags exceeded the allowed space.</p>
+    #[doc(hidden)]
     pub packed_policy_size: std::option::Option<i32>,
 }
 impl GetFederationTokenOutput {
@@ -104,11 +107,10 @@ impl std::fmt::Debug for GetFederationTokenOutput {
         formatter.finish()
     }
 }
-/// See [`GetFederationTokenOutput`](crate::output::GetFederationTokenOutput)
+/// See [`GetFederationTokenOutput`](crate::output::GetFederationTokenOutput).
 pub mod get_federation_token_output {
 
-    /// A builder for [`GetFederationTokenOutput`](crate::output::GetFederationTokenOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetFederationTokenOutput`](crate::output::GetFederationTokenOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) credentials: std::option::Option<crate::model::Credentials>,
@@ -156,7 +158,7 @@ pub mod get_federation_token_output {
             self.packed_policy_size = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetFederationTokenOutput`](crate::output::GetFederationTokenOutput)
+        /// Consumes the builder and constructs a [`GetFederationTokenOutput`](crate::output::GetFederationTokenOutput).
         pub fn build(self) -> crate::output::GetFederationTokenOutput {
             crate::output::GetFederationTokenOutput {
                 credentials: self.credentials,
@@ -167,7 +169,7 @@ pub mod get_federation_token_output {
     }
 }
 impl GetFederationTokenOutput {
-    /// Creates a new builder-style object to manufacture [`GetFederationTokenOutput`](crate::output::GetFederationTokenOutput)
+    /// Creates a new builder-style object to manufacture [`GetFederationTokenOutput`](crate::output::GetFederationTokenOutput).
     pub fn builder() -> crate::output::get_federation_token_output::Builder {
         crate::output::get_federation_token_output::Builder::default()
     }
@@ -178,10 +180,13 @@ impl GetFederationTokenOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCallerIdentityOutput {
     /// <p>The unique identifier of the calling entity. The exact value depends on the type of entity that is making the call. The values returned are those listed in the <b>aws:userid</b> column in the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_variables.html#principaltable">Principal table</a> found on the <b>Policy Variables</b> reference page in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services account ID number of the account that owns or contains the calling entity.</p>
+    #[doc(hidden)]
     pub account: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services ARN associated with the calling entity.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl GetCallerIdentityOutput {
@@ -207,11 +212,10 @@ impl std::fmt::Debug for GetCallerIdentityOutput {
         formatter.finish()
     }
 }
-/// See [`GetCallerIdentityOutput`](crate::output::GetCallerIdentityOutput)
+/// See [`GetCallerIdentityOutput`](crate::output::GetCallerIdentityOutput).
 pub mod get_caller_identity_output {
 
-    /// A builder for [`GetCallerIdentityOutput`](crate::output::GetCallerIdentityOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCallerIdentityOutput`](crate::output::GetCallerIdentityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_id: std::option::Option<std::string::String>,
@@ -249,7 +253,7 @@ pub mod get_caller_identity_output {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCallerIdentityOutput`](crate::output::GetCallerIdentityOutput)
+        /// Consumes the builder and constructs a [`GetCallerIdentityOutput`](crate::output::GetCallerIdentityOutput).
         pub fn build(self) -> crate::output::GetCallerIdentityOutput {
             crate::output::GetCallerIdentityOutput {
                 user_id: self.user_id,
@@ -260,7 +264,7 @@ pub mod get_caller_identity_output {
     }
 }
 impl GetCallerIdentityOutput {
-    /// Creates a new builder-style object to manufacture [`GetCallerIdentityOutput`](crate::output::GetCallerIdentityOutput)
+    /// Creates a new builder-style object to manufacture [`GetCallerIdentityOutput`](crate::output::GetCallerIdentityOutput).
     pub fn builder() -> crate::output::get_caller_identity_output::Builder {
         crate::output::get_caller_identity_output::Builder::default()
     }
@@ -271,6 +275,7 @@ impl GetCallerIdentityOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAccessKeyInfoOutput {
     /// <p>The number used to identify the Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub account: std::option::Option<std::string::String>,
 }
 impl GetAccessKeyInfoOutput {
@@ -286,11 +291,10 @@ impl std::fmt::Debug for GetAccessKeyInfoOutput {
         formatter.finish()
     }
 }
-/// See [`GetAccessKeyInfoOutput`](crate::output::GetAccessKeyInfoOutput)
+/// See [`GetAccessKeyInfoOutput`](crate::output::GetAccessKeyInfoOutput).
 pub mod get_access_key_info_output {
 
-    /// A builder for [`GetAccessKeyInfoOutput`](crate::output::GetAccessKeyInfoOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAccessKeyInfoOutput`](crate::output::GetAccessKeyInfoOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account: std::option::Option<std::string::String>,
@@ -306,7 +310,7 @@ pub mod get_access_key_info_output {
             self.account = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAccessKeyInfoOutput`](crate::output::GetAccessKeyInfoOutput)
+        /// Consumes the builder and constructs a [`GetAccessKeyInfoOutput`](crate::output::GetAccessKeyInfoOutput).
         pub fn build(self) -> crate::output::GetAccessKeyInfoOutput {
             crate::output::GetAccessKeyInfoOutput {
                 account: self.account,
@@ -315,7 +319,7 @@ pub mod get_access_key_info_output {
     }
 }
 impl GetAccessKeyInfoOutput {
-    /// Creates a new builder-style object to manufacture [`GetAccessKeyInfoOutput`](crate::output::GetAccessKeyInfoOutput)
+    /// Creates a new builder-style object to manufacture [`GetAccessKeyInfoOutput`](crate::output::GetAccessKeyInfoOutput).
     pub fn builder() -> crate::output::get_access_key_info_output::Builder {
         crate::output::get_access_key_info_output::Builder::default()
     }
@@ -326,6 +330,7 @@ impl GetAccessKeyInfoOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DecodeAuthorizationMessageOutput {
     /// <p>The API returns a response with the decoded message.</p>
+    #[doc(hidden)]
     pub decoded_message: std::option::Option<std::string::String>,
 }
 impl DecodeAuthorizationMessageOutput {
@@ -341,11 +346,10 @@ impl std::fmt::Debug for DecodeAuthorizationMessageOutput {
         formatter.finish()
     }
 }
-/// See [`DecodeAuthorizationMessageOutput`](crate::output::DecodeAuthorizationMessageOutput)
+/// See [`DecodeAuthorizationMessageOutput`](crate::output::DecodeAuthorizationMessageOutput).
 pub mod decode_authorization_message_output {
 
-    /// A builder for [`DecodeAuthorizationMessageOutput`](crate::output::DecodeAuthorizationMessageOutput)
-    #[non_exhaustive]
+    /// A builder for [`DecodeAuthorizationMessageOutput`](crate::output::DecodeAuthorizationMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) decoded_message: std::option::Option<std::string::String>,
@@ -364,7 +368,7 @@ pub mod decode_authorization_message_output {
             self.decoded_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DecodeAuthorizationMessageOutput`](crate::output::DecodeAuthorizationMessageOutput)
+        /// Consumes the builder and constructs a [`DecodeAuthorizationMessageOutput`](crate::output::DecodeAuthorizationMessageOutput).
         pub fn build(self) -> crate::output::DecodeAuthorizationMessageOutput {
             crate::output::DecodeAuthorizationMessageOutput {
                 decoded_message: self.decoded_message,
@@ -373,7 +377,7 @@ pub mod decode_authorization_message_output {
     }
 }
 impl DecodeAuthorizationMessageOutput {
-    /// Creates a new builder-style object to manufacture [`DecodeAuthorizationMessageOutput`](crate::output::DecodeAuthorizationMessageOutput)
+    /// Creates a new builder-style object to manufacture [`DecodeAuthorizationMessageOutput`](crate::output::DecodeAuthorizationMessageOutput).
     pub fn builder() -> crate::output::decode_authorization_message_output::Builder {
         crate::output::decode_authorization_message_output::Builder::default()
     }
@@ -386,20 +390,27 @@ pub struct AssumeRoleWithWebIdentityOutput {
     /// <p>The temporary security credentials, which include an access key ID, a secret access key, and a security token.</p> <note>
     /// <p>The size of the security token that STS API operations return is not fixed. We strongly recommend that you make no assumptions about the maximum size.</p>
     /// </note>
+    #[doc(hidden)]
     pub credentials: std::option::Option<crate::model::Credentials>,
     /// <p>The unique user identifier that is returned by the identity provider. This identifier is associated with the <code>WebIdentityToken</code> that was submitted with the <code>AssumeRoleWithWebIdentity</code> call. The identifier is typically unique to the user and the application that acquired the <code>WebIdentityToken</code> (pairwise identifier). For OpenID Connect ID tokens, this field contains the value returned by the identity provider as the token's <code>sub</code> (Subject) claim. </p>
+    #[doc(hidden)]
     pub subject_from_web_identity_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) and the assumed role ID, which are identifiers that you can use to refer to the resulting temporary security credentials. For example, you can reference these credentials as a principal in a resource-based policy by using the ARN or assumed role ID. The ARN and ID include the <code>RoleSessionName</code> that you specified when you called <code>AssumeRole</code>. </p>
+    #[doc(hidden)]
     pub assumed_role_user: std::option::Option<crate::model::AssumedRoleUser>,
     /// <p>A percentage value that indicates the packed size of the session policies and session tags combined passed in the request. The request fails if the packed size is greater than 100 percent, which means the policies and tags exceeded the allowed space.</p>
+    #[doc(hidden)]
     pub packed_policy_size: std::option::Option<i32>,
     /// <p> The issuing authority of the web identity token presented. For OpenID Connect ID tokens, this contains the value of the <code>iss</code> field. For OAuth 2.0 access tokens, this contains the value of the <code>ProviderId</code> parameter that was passed in the <code>AssumeRoleWithWebIdentity</code> request.</p>
+    #[doc(hidden)]
     pub provider: std::option::Option<std::string::String>,
     /// <p>The intended audience (also known as client ID) of the web identity token. This is traditionally the client identifier issued to the application that requested the web identity token.</p>
+    #[doc(hidden)]
     pub audience: std::option::Option<std::string::String>,
     /// <p>The value of the source identity that is returned in the JSON web token (JWT) from the identity provider.</p>
     /// <p>You can require users to set a source identity value when they assume a role. You do this by using the <code>sts:SourceIdentity</code> condition key in a role trust policy. That way, actions that are taken with the role are associated with that user. After the source identity is set, the value cannot be changed. It is present in the request for all actions that are taken by the role and persists across <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts#iam-term-role-chaining">chained role</a> sessions. You can configure your identity provider to use an attribute associated with your users, like user name or email, as the source identity when calling <code>AssumeRoleWithWebIdentity</code>. You do this by adding a claim to the JSON web token. To learn more about OIDC tokens and claims, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-with-identity-providers.html">Using Tokens with User Pools</a> in the <i>Amazon Cognito Developer Guide</i>. For more information about using source identity, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_control-access_monitor.html">Monitor and control actions taken with assumed roles</a> in the <i>IAM User Guide</i>.</p>
     /// <p>The regex used to validate this parameter is a string of characters consisting of upper- and lower-case alphanumeric characters with no spaces. You can also include underscores or any of the following characters: =,.@-</p>
+    #[doc(hidden)]
     pub source_identity: std::option::Option<std::string::String>,
 }
 impl AssumeRoleWithWebIdentityOutput {
@@ -452,11 +463,10 @@ impl std::fmt::Debug for AssumeRoleWithWebIdentityOutput {
         formatter.finish()
     }
 }
-/// See [`AssumeRoleWithWebIdentityOutput`](crate::output::AssumeRoleWithWebIdentityOutput)
+/// See [`AssumeRoleWithWebIdentityOutput`](crate::output::AssumeRoleWithWebIdentityOutput).
 pub mod assume_role_with_web_identity_output {
 
-    /// A builder for [`AssumeRoleWithWebIdentityOutput`](crate::output::AssumeRoleWithWebIdentityOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssumeRoleWithWebIdentityOutput`](crate::output::AssumeRoleWithWebIdentityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) credentials: std::option::Option<crate::model::Credentials>,
@@ -561,7 +571,7 @@ pub mod assume_role_with_web_identity_output {
             self.source_identity = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssumeRoleWithWebIdentityOutput`](crate::output::AssumeRoleWithWebIdentityOutput)
+        /// Consumes the builder and constructs a [`AssumeRoleWithWebIdentityOutput`](crate::output::AssumeRoleWithWebIdentityOutput).
         pub fn build(self) -> crate::output::AssumeRoleWithWebIdentityOutput {
             crate::output::AssumeRoleWithWebIdentityOutput {
                 credentials: self.credentials,
@@ -576,7 +586,7 @@ pub mod assume_role_with_web_identity_output {
     }
 }
 impl AssumeRoleWithWebIdentityOutput {
-    /// Creates a new builder-style object to manufacture [`AssumeRoleWithWebIdentityOutput`](crate::output::AssumeRoleWithWebIdentityOutput)
+    /// Creates a new builder-style object to manufacture [`AssumeRoleWithWebIdentityOutput`](crate::output::AssumeRoleWithWebIdentityOutput).
     pub fn builder() -> crate::output::assume_role_with_web_identity_output::Builder {
         crate::output::assume_role_with_web_identity_output::Builder::default()
     }
@@ -589,19 +599,26 @@ pub struct AssumeRoleWithSamlOutput {
     /// <p>The temporary security credentials, which include an access key ID, a secret access key, and a security (or session) token.</p> <note>
     /// <p>The size of the security token that STS API operations return is not fixed. We strongly recommend that you make no assumptions about the maximum size.</p>
     /// </note>
+    #[doc(hidden)]
     pub credentials: std::option::Option<crate::model::Credentials>,
     /// <p>The identifiers for the temporary security credentials that the operation returns.</p>
+    #[doc(hidden)]
     pub assumed_role_user: std::option::Option<crate::model::AssumedRoleUser>,
     /// <p>A percentage value that indicates the packed size of the session policies and session tags combined passed in the request. The request fails if the packed size is greater than 100 percent, which means the policies and tags exceeded the allowed space.</p>
+    #[doc(hidden)]
     pub packed_policy_size: std::option::Option<i32>,
     /// <p>The value of the <code>NameID</code> element in the <code>Subject</code> element of the SAML assertion.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<std::string::String>,
     /// <p> The format of the name ID, as defined by the <code>Format</code> attribute in the <code>NameID</code> element of the SAML assertion. Typical examples of the format are <code>transient</code> or <code>persistent</code>. </p>
     /// <p> If the format includes the prefix <code>urn:oasis:names:tc:SAML:2.0:nameid-format</code>, that prefix is removed. For example, <code>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</code> is returned as <code>transient</code>. If the format includes any other prefix, the format is returned with no modifications.</p>
+    #[doc(hidden)]
     pub subject_type: std::option::Option<std::string::String>,
     /// <p>The value of the <code>Issuer</code> element of the SAML assertion.</p>
+    #[doc(hidden)]
     pub issuer: std::option::Option<std::string::String>,
     /// <p> The value of the <code>Recipient</code> attribute of the <code>SubjectConfirmationData</code> element of the SAML assertion. </p>
+    #[doc(hidden)]
     pub audience: std::option::Option<std::string::String>,
     /// <p>A hash value based on the concatenation of the following:</p>
     /// <ul>
@@ -612,10 +629,12 @@ pub struct AssumeRoleWithSamlOutput {
     /// <p>The combination of <code>NameQualifier</code> and <code>Subject</code> can be used to uniquely identify a federated user.</p>
     /// <p>The following pseudocode shows how the hash value is calculated:</p>
     /// <p> <code>BASE64 ( SHA1 ( "https://example.com/saml" + "123456789012" + "/MySAMLIdP" ) )</code> </p>
+    #[doc(hidden)]
     pub name_qualifier: std::option::Option<std::string::String>,
     /// <p>The value in the <code>SourceIdentity</code> attribute in the SAML assertion. </p>
     /// <p>You can require users to set a source identity value when they assume a role. You do this by using the <code>sts:SourceIdentity</code> condition key in a role trust policy. That way, actions that are taken with the role are associated with that user. After the source identity is set, the value cannot be changed. It is present in the request for all actions that are taken by the role and persists across <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts#iam-term-role-chaining">chained role</a> sessions. You can configure your SAML identity provider to use an attribute associated with your users, like user name or email, as the source identity when calling <code>AssumeRoleWithSAML</code>. You do this by adding an attribute to the SAML assertion. For more information about using source identity, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_control-access_monitor.html">Monitor and control actions taken with assumed roles</a> in the <i>IAM User Guide</i>.</p>
     /// <p>The regex used to validate this parameter is a string of characters consisting of upper- and lower-case alphanumeric characters with no spaces. You can also include underscores or any of the following characters: =,.@-</p>
+    #[doc(hidden)]
     pub source_identity: std::option::Option<std::string::String>,
 }
 impl AssumeRoleWithSamlOutput {
@@ -684,11 +703,10 @@ impl std::fmt::Debug for AssumeRoleWithSamlOutput {
         formatter.finish()
     }
 }
-/// See [`AssumeRoleWithSamlOutput`](crate::output::AssumeRoleWithSamlOutput)
+/// See [`AssumeRoleWithSamlOutput`](crate::output::AssumeRoleWithSamlOutput).
 pub mod assume_role_with_saml_output {
 
-    /// A builder for [`AssumeRoleWithSamlOutput`](crate::output::AssumeRoleWithSamlOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssumeRoleWithSamlOutput`](crate::output::AssumeRoleWithSamlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) credentials: std::option::Option<crate::model::Credentials>,
@@ -830,7 +848,7 @@ pub mod assume_role_with_saml_output {
             self.source_identity = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssumeRoleWithSamlOutput`](crate::output::AssumeRoleWithSamlOutput)
+        /// Consumes the builder and constructs a [`AssumeRoleWithSamlOutput`](crate::output::AssumeRoleWithSamlOutput).
         pub fn build(self) -> crate::output::AssumeRoleWithSamlOutput {
             crate::output::AssumeRoleWithSamlOutput {
                 credentials: self.credentials,
@@ -847,7 +865,7 @@ pub mod assume_role_with_saml_output {
     }
 }
 impl AssumeRoleWithSamlOutput {
-    /// Creates a new builder-style object to manufacture [`AssumeRoleWithSamlOutput`](crate::output::AssumeRoleWithSamlOutput)
+    /// Creates a new builder-style object to manufacture [`AssumeRoleWithSamlOutput`](crate::output::AssumeRoleWithSamlOutput).
     pub fn builder() -> crate::output::assume_role_with_saml_output::Builder {
         crate::output::assume_role_with_saml_output::Builder::default()
     }
@@ -860,14 +878,18 @@ pub struct AssumeRoleOutput {
     /// <p>The temporary security credentials, which include an access key ID, a secret access key, and a security (or session) token.</p> <note>
     /// <p>The size of the security token that STS API operations return is not fixed. We strongly recommend that you make no assumptions about the maximum size.</p>
     /// </note>
+    #[doc(hidden)]
     pub credentials: std::option::Option<crate::model::Credentials>,
     /// <p>The Amazon Resource Name (ARN) and the assumed role ID, which are identifiers that you can use to refer to the resulting temporary security credentials. For example, you can reference these credentials as a principal in a resource-based policy by using the ARN or assumed role ID. The ARN and ID include the <code>RoleSessionName</code> that you specified when you called <code>AssumeRole</code>. </p>
+    #[doc(hidden)]
     pub assumed_role_user: std::option::Option<crate::model::AssumedRoleUser>,
     /// <p>A percentage value that indicates the packed size of the session policies and session tags combined passed in the request. The request fails if the packed size is greater than 100 percent, which means the policies and tags exceeded the allowed space.</p>
+    #[doc(hidden)]
     pub packed_policy_size: std::option::Option<i32>,
     /// <p>The source identity specified by the principal that is calling the <code>AssumeRole</code> operation.</p>
     /// <p>You can require users to specify a source identity when they assume a role. You do this by using the <code>sts:SourceIdentity</code> condition key in a role trust policy. You can use source identity information in CloudTrail logs to determine who took actions with a role. You can use the <code>aws:SourceIdentity</code> condition key to further control access to Amazon Web Services resources based on the value of source identity. For more information about using source identity, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_control-access_monitor.html">Monitor and control actions taken with assumed roles</a> in the <i>IAM User Guide</i>.</p>
     /// <p>The regex used to validate this parameter is a string of characters consisting of upper- and lower-case alphanumeric characters with no spaces. You can also include underscores or any of the following characters: =,.@-</p>
+    #[doc(hidden)]
     pub source_identity: std::option::Option<std::string::String>,
 }
 impl AssumeRoleOutput {
@@ -902,11 +924,10 @@ impl std::fmt::Debug for AssumeRoleOutput {
         formatter.finish()
     }
 }
-/// See [`AssumeRoleOutput`](crate::output::AssumeRoleOutput)
+/// See [`AssumeRoleOutput`](crate::output::AssumeRoleOutput).
 pub mod assume_role_output {
 
-    /// A builder for [`AssumeRoleOutput`](crate::output::AssumeRoleOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssumeRoleOutput`](crate::output::AssumeRoleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) credentials: std::option::Option<crate::model::Credentials>,
@@ -972,7 +993,7 @@ pub mod assume_role_output {
             self.source_identity = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssumeRoleOutput`](crate::output::AssumeRoleOutput)
+        /// Consumes the builder and constructs a [`AssumeRoleOutput`](crate::output::AssumeRoleOutput).
         pub fn build(self) -> crate::output::AssumeRoleOutput {
             crate::output::AssumeRoleOutput {
                 credentials: self.credentials,
@@ -984,7 +1005,7 @@ pub mod assume_role_output {
     }
 }
 impl AssumeRoleOutput {
-    /// Creates a new builder-style object to manufacture [`AssumeRoleOutput`](crate::output::AssumeRoleOutput)
+    /// Creates a new builder-style object to manufacture [`AssumeRoleOutput`](crate::output::AssumeRoleOutput).
     pub fn builder() -> crate::output::assume_role_output::Builder {
         crate::output::assume_role_output::Builder::default()
     }

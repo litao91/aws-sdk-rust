@@ -5,10 +5,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceChange {
     /// <p>A description for the service.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Information about the Route 53 DNS records that you want Cloud Map to create when you register an instance.</p>
+    #[doc(hidden)]
     pub dns_config: std::option::Option<crate::model::DnsConfigChange>,
     /// <p> <i>Public DNS and HTTP namespaces only.</i> Settings for an optional health check. If you specify settings for a health check, Cloud Map associates the health check with the records that you specify in <code>DnsConfig</code>.</p>
+    #[doc(hidden)]
     pub health_check_config: std::option::Option<crate::model::HealthCheckConfig>,
 }
 impl ServiceChange {
@@ -34,11 +37,10 @@ impl std::fmt::Debug for ServiceChange {
         formatter.finish()
     }
 }
-/// See [`ServiceChange`](crate::model::ServiceChange)
+/// See [`ServiceChange`](crate::model::ServiceChange).
 pub mod service_change {
 
-    /// A builder for [`ServiceChange`](crate::model::ServiceChange)
-    #[non_exhaustive]
+    /// A builder for [`ServiceChange`](crate::model::ServiceChange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -82,7 +84,7 @@ pub mod service_change {
             self.health_check_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceChange`](crate::model::ServiceChange)
+        /// Consumes the builder and constructs a [`ServiceChange`](crate::model::ServiceChange).
         pub fn build(self) -> crate::model::ServiceChange {
             crate::model::ServiceChange {
                 description: self.description,
@@ -93,7 +95,7 @@ pub mod service_change {
     }
 }
 impl ServiceChange {
-    /// Creates a new builder-style object to manufacture [`ServiceChange`](crate::model::ServiceChange)
+    /// Creates a new builder-style object to manufacture [`ServiceChange`](crate::model::ServiceChange).
     pub fn builder() -> crate::model::service_change::Builder {
         crate::model::service_change::Builder::default()
     }
@@ -161,11 +163,14 @@ pub struct HealthCheckConfig {
     /// <li> <p> <b>TCP</b>: Route 53 tries to establish a TCP connection.</p> <p>If you specify <code>TCP</code> for <code>Type</code>, don't specify a value for <code>ResourcePath</code>.</p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html">How Route 53 Determines Whether an Endpoint Is Healthy</a> in the <i>Route 53 Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::HealthCheckType>,
     /// <p>The path that you want Route 53 to request when performing health checks. The path can be any value that your endpoint returns an HTTP status code of a 2xx or 3xx format for when the endpoint is healthy. An example file is <code>/docs/route53-health-check.html</code>. Route 53 automatically adds the DNS name for the service. If you don't specify a value for <code>ResourcePath</code>, the default value is <code>/</code>.</p>
     /// <p>If you specify <code>TCP</code> for <code>Type</code>, you must <i>not</i> specify a value for <code>ResourcePath</code>.</p>
+    #[doc(hidden)]
     pub resource_path: std::option::Option<std::string::String>,
     /// <p>The number of consecutive health checks that an endpoint must pass or fail for Route 53 to change the current status of the endpoint from unhealthy to healthy or the other way around. For more information, see <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html">How Route 53 Determines Whether an Endpoint Is Healthy</a> in the <i>Route 53 Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub failure_threshold: std::option::Option<i32>,
 }
 impl HealthCheckConfig {
@@ -203,11 +208,10 @@ impl std::fmt::Debug for HealthCheckConfig {
         formatter.finish()
     }
 }
-/// See [`HealthCheckConfig`](crate::model::HealthCheckConfig)
+/// See [`HealthCheckConfig`](crate::model::HealthCheckConfig).
 pub mod health_check_config {
 
-    /// A builder for [`HealthCheckConfig`](crate::model::HealthCheckConfig)
-    #[non_exhaustive]
+    /// A builder for [`HealthCheckConfig`](crate::model::HealthCheckConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::HealthCheckType>,
@@ -275,7 +279,7 @@ pub mod health_check_config {
             self.failure_threshold = input;
             self
         }
-        /// Consumes the builder and constructs a [`HealthCheckConfig`](crate::model::HealthCheckConfig)
+        /// Consumes the builder and constructs a [`HealthCheckConfig`](crate::model::HealthCheckConfig).
         pub fn build(self) -> crate::model::HealthCheckConfig {
             crate::model::HealthCheckConfig {
                 r#type: self.r#type,
@@ -286,7 +290,7 @@ pub mod health_check_config {
     }
 }
 impl HealthCheckConfig {
-    /// Creates a new builder-style object to manufacture [`HealthCheckConfig`](crate::model::HealthCheckConfig)
+    /// Creates a new builder-style object to manufacture [`HealthCheckConfig`](crate::model::HealthCheckConfig).
     pub fn builder() -> crate::model::health_check_config::Builder {
         crate::model::health_check_config::Builder::default()
     }
@@ -356,6 +360,7 @@ impl AsRef<str> for HealthCheckType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DnsConfigChange {
     /// <p>An array that contains one <code>DnsRecord</code> object for each Route 53 record that you want Cloud Map to create when you register an instance.</p>
+    #[doc(hidden)]
     pub dns_records: std::option::Option<std::vec::Vec<crate::model::DnsRecord>>,
 }
 impl DnsConfigChange {
@@ -371,11 +376,10 @@ impl std::fmt::Debug for DnsConfigChange {
         formatter.finish()
     }
 }
-/// See [`DnsConfigChange`](crate::model::DnsConfigChange)
+/// See [`DnsConfigChange`](crate::model::DnsConfigChange).
 pub mod dns_config_change {
 
-    /// A builder for [`DnsConfigChange`](crate::model::DnsConfigChange)
-    #[non_exhaustive]
+    /// A builder for [`DnsConfigChange`](crate::model::DnsConfigChange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dns_records: std::option::Option<std::vec::Vec<crate::model::DnsRecord>>,
@@ -400,7 +404,7 @@ pub mod dns_config_change {
             self.dns_records = input;
             self
         }
-        /// Consumes the builder and constructs a [`DnsConfigChange`](crate::model::DnsConfigChange)
+        /// Consumes the builder and constructs a [`DnsConfigChange`](crate::model::DnsConfigChange).
         pub fn build(self) -> crate::model::DnsConfigChange {
             crate::model::DnsConfigChange {
                 dns_records: self.dns_records,
@@ -409,7 +413,7 @@ pub mod dns_config_change {
     }
 }
 impl DnsConfigChange {
-    /// Creates a new builder-style object to manufacture [`DnsConfigChange`](crate::model::DnsConfigChange)
+    /// Creates a new builder-style object to manufacture [`DnsConfigChange`](crate::model::DnsConfigChange).
     pub fn builder() -> crate::model::dns_config_change::Builder {
         crate::model::dns_config_change::Builder::default()
     }
@@ -478,10 +482,12 @@ pub struct DnsRecord {
     /// </ul>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RecordType>,
     /// <p>The amount of time, in seconds, that you want DNS resolvers to cache the settings for this record.</p> <note>
     /// <p>Alias records don't include a TTL because Route 53 uses the TTL for the Amazon Web Services resource that an alias record routes traffic to. If you include the <code>AWS_ALIAS_DNS_NAME</code> attribute when you submit a <a href="https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html">RegisterInstance</a> request, the <code>TTL</code> value is ignored. Always specify a TTL for the service; you can use a service to register instances that create either alias or non-alias records.</p>
     /// </note>
+    #[doc(hidden)]
     pub ttl: std::option::Option<i64>,
 }
 impl DnsRecord {
@@ -562,11 +568,10 @@ impl std::fmt::Debug for DnsRecord {
         formatter.finish()
     }
 }
-/// See [`DnsRecord`](crate::model::DnsRecord)
+/// See [`DnsRecord`](crate::model::DnsRecord).
 pub mod dns_record {
 
-    /// A builder for [`DnsRecord`](crate::model::DnsRecord)
-    #[non_exhaustive]
+    /// A builder for [`DnsRecord`](crate::model::DnsRecord).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::RecordType>,
@@ -713,7 +718,7 @@ pub mod dns_record {
             self.ttl = input;
             self
         }
-        /// Consumes the builder and constructs a [`DnsRecord`](crate::model::DnsRecord)
+        /// Consumes the builder and constructs a [`DnsRecord`](crate::model::DnsRecord).
         pub fn build(self) -> crate::model::DnsRecord {
             crate::model::DnsRecord {
                 r#type: self.r#type,
@@ -723,7 +728,7 @@ pub mod dns_record {
     }
 }
 impl DnsRecord {
-    /// Creates a new builder-style object to manufacture [`DnsRecord`](crate::model::DnsRecord)
+    /// Creates a new builder-style object to manufacture [`DnsRecord`](crate::model::DnsRecord).
     pub fn builder() -> crate::model::dns_record::Builder {
         crate::model::dns_record::Builder::default()
     }
@@ -797,8 +802,10 @@ impl AsRef<str> for RecordType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublicDnsNamespaceChange {
     /// <p>An updated description for the public DNS namespace.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Properties to be updated in the public DNS namespace.</p>
+    #[doc(hidden)]
     pub properties: std::option::Option<crate::model::PublicDnsNamespacePropertiesChange>,
 }
 impl PublicDnsNamespaceChange {
@@ -821,11 +828,10 @@ impl std::fmt::Debug for PublicDnsNamespaceChange {
         formatter.finish()
     }
 }
-/// See [`PublicDnsNamespaceChange`](crate::model::PublicDnsNamespaceChange)
+/// See [`PublicDnsNamespaceChange`](crate::model::PublicDnsNamespaceChange).
 pub mod public_dns_namespace_change {
 
-    /// A builder for [`PublicDnsNamespaceChange`](crate::model::PublicDnsNamespaceChange)
-    #[non_exhaustive]
+    /// A builder for [`PublicDnsNamespaceChange`](crate::model::PublicDnsNamespaceChange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -859,7 +865,7 @@ pub mod public_dns_namespace_change {
             self.properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublicDnsNamespaceChange`](crate::model::PublicDnsNamespaceChange)
+        /// Consumes the builder and constructs a [`PublicDnsNamespaceChange`](crate::model::PublicDnsNamespaceChange).
         pub fn build(self) -> crate::model::PublicDnsNamespaceChange {
             crate::model::PublicDnsNamespaceChange {
                 description: self.description,
@@ -869,7 +875,7 @@ pub mod public_dns_namespace_change {
     }
 }
 impl PublicDnsNamespaceChange {
-    /// Creates a new builder-style object to manufacture [`PublicDnsNamespaceChange`](crate::model::PublicDnsNamespaceChange)
+    /// Creates a new builder-style object to manufacture [`PublicDnsNamespaceChange`](crate::model::PublicDnsNamespaceChange).
     pub fn builder() -> crate::model::public_dns_namespace_change::Builder {
         crate::model::public_dns_namespace_change::Builder::default()
     }
@@ -880,6 +886,7 @@ impl PublicDnsNamespaceChange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublicDnsNamespacePropertiesChange {
     /// <p>Updated DNS properties for the hosted zone for the public DNS namespace.</p>
+    #[doc(hidden)]
     pub dns_properties: std::option::Option<crate::model::PublicDnsPropertiesMutableChange>,
 }
 impl PublicDnsNamespacePropertiesChange {
@@ -897,11 +904,10 @@ impl std::fmt::Debug for PublicDnsNamespacePropertiesChange {
         formatter.finish()
     }
 }
-/// See [`PublicDnsNamespacePropertiesChange`](crate::model::PublicDnsNamespacePropertiesChange)
+/// See [`PublicDnsNamespacePropertiesChange`](crate::model::PublicDnsNamespacePropertiesChange).
 pub mod public_dns_namespace_properties_change {
 
-    /// A builder for [`PublicDnsNamespacePropertiesChange`](crate::model::PublicDnsNamespacePropertiesChange)
-    #[non_exhaustive]
+    /// A builder for [`PublicDnsNamespacePropertiesChange`](crate::model::PublicDnsNamespacePropertiesChange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dns_properties:
@@ -924,7 +930,7 @@ pub mod public_dns_namespace_properties_change {
             self.dns_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublicDnsNamespacePropertiesChange`](crate::model::PublicDnsNamespacePropertiesChange)
+        /// Consumes the builder and constructs a [`PublicDnsNamespacePropertiesChange`](crate::model::PublicDnsNamespacePropertiesChange).
         pub fn build(self) -> crate::model::PublicDnsNamespacePropertiesChange {
             crate::model::PublicDnsNamespacePropertiesChange {
                 dns_properties: self.dns_properties,
@@ -933,7 +939,7 @@ pub mod public_dns_namespace_properties_change {
     }
 }
 impl PublicDnsNamespacePropertiesChange {
-    /// Creates a new builder-style object to manufacture [`PublicDnsNamespacePropertiesChange`](crate::model::PublicDnsNamespacePropertiesChange)
+    /// Creates a new builder-style object to manufacture [`PublicDnsNamespacePropertiesChange`](crate::model::PublicDnsNamespacePropertiesChange).
     pub fn builder() -> crate::model::public_dns_namespace_properties_change::Builder {
         crate::model::public_dns_namespace_properties_change::Builder::default()
     }
@@ -944,6 +950,7 @@ impl PublicDnsNamespacePropertiesChange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublicDnsPropertiesMutableChange {
     /// <p>Updated fields for the Start of Authority (SOA) record for the hosted zone for the public DNS namespace.</p>
+    #[doc(hidden)]
     pub soa: std::option::Option<crate::model::SoaChange>,
 }
 impl PublicDnsPropertiesMutableChange {
@@ -959,11 +966,10 @@ impl std::fmt::Debug for PublicDnsPropertiesMutableChange {
         formatter.finish()
     }
 }
-/// See [`PublicDnsPropertiesMutableChange`](crate::model::PublicDnsPropertiesMutableChange)
+/// See [`PublicDnsPropertiesMutableChange`](crate::model::PublicDnsPropertiesMutableChange).
 pub mod public_dns_properties_mutable_change {
 
-    /// A builder for [`PublicDnsPropertiesMutableChange`](crate::model::PublicDnsPropertiesMutableChange)
-    #[non_exhaustive]
+    /// A builder for [`PublicDnsPropertiesMutableChange`](crate::model::PublicDnsPropertiesMutableChange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) soa: std::option::Option<crate::model::SoaChange>,
@@ -979,14 +985,14 @@ pub mod public_dns_properties_mutable_change {
             self.soa = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublicDnsPropertiesMutableChange`](crate::model::PublicDnsPropertiesMutableChange)
+        /// Consumes the builder and constructs a [`PublicDnsPropertiesMutableChange`](crate::model::PublicDnsPropertiesMutableChange).
         pub fn build(self) -> crate::model::PublicDnsPropertiesMutableChange {
             crate::model::PublicDnsPropertiesMutableChange { soa: self.soa }
         }
     }
 }
 impl PublicDnsPropertiesMutableChange {
-    /// Creates a new builder-style object to manufacture [`PublicDnsPropertiesMutableChange`](crate::model::PublicDnsPropertiesMutableChange)
+    /// Creates a new builder-style object to manufacture [`PublicDnsPropertiesMutableChange`](crate::model::PublicDnsPropertiesMutableChange).
     pub fn builder() -> crate::model::public_dns_properties_mutable_change::Builder {
         crate::model::public_dns_properties_mutable_change::Builder::default()
     }
@@ -997,6 +1003,7 @@ impl PublicDnsPropertiesMutableChange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SoaChange {
     /// <p>The updated time to live (TTL) for purposes of negative caching.</p>
+    #[doc(hidden)]
     pub ttl: std::option::Option<i64>,
 }
 impl SoaChange {
@@ -1012,11 +1019,10 @@ impl std::fmt::Debug for SoaChange {
         formatter.finish()
     }
 }
-/// See [`SoaChange`](crate::model::SoaChange)
+/// See [`SoaChange`](crate::model::SoaChange).
 pub mod soa_change {
 
-    /// A builder for [`SoaChange`](crate::model::SoaChange)
-    #[non_exhaustive]
+    /// A builder for [`SoaChange`](crate::model::SoaChange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ttl: std::option::Option<i64>,
@@ -1032,14 +1038,14 @@ pub mod soa_change {
             self.ttl = input;
             self
         }
-        /// Consumes the builder and constructs a [`SoaChange`](crate::model::SoaChange)
+        /// Consumes the builder and constructs a [`SoaChange`](crate::model::SoaChange).
         pub fn build(self) -> crate::model::SoaChange {
             crate::model::SoaChange { ttl: self.ttl }
         }
     }
 }
 impl SoaChange {
-    /// Creates a new builder-style object to manufacture [`SoaChange`](crate::model::SoaChange)
+    /// Creates a new builder-style object to manufacture [`SoaChange`](crate::model::SoaChange).
     pub fn builder() -> crate::model::soa_change::Builder {
         crate::model::soa_change::Builder::default()
     }
@@ -1050,8 +1056,10 @@ impl SoaChange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrivateDnsNamespaceChange {
     /// <p>An updated description for the private DNS namespace.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Properties to be updated in the private DNS namespace.</p>
+    #[doc(hidden)]
     pub properties: std::option::Option<crate::model::PrivateDnsNamespacePropertiesChange>,
 }
 impl PrivateDnsNamespaceChange {
@@ -1074,11 +1082,10 @@ impl std::fmt::Debug for PrivateDnsNamespaceChange {
         formatter.finish()
     }
 }
-/// See [`PrivateDnsNamespaceChange`](crate::model::PrivateDnsNamespaceChange)
+/// See [`PrivateDnsNamespaceChange`](crate::model::PrivateDnsNamespaceChange).
 pub mod private_dns_namespace_change {
 
-    /// A builder for [`PrivateDnsNamespaceChange`](crate::model::PrivateDnsNamespaceChange)
-    #[non_exhaustive]
+    /// A builder for [`PrivateDnsNamespaceChange`](crate::model::PrivateDnsNamespaceChange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -1112,7 +1119,7 @@ pub mod private_dns_namespace_change {
             self.properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrivateDnsNamespaceChange`](crate::model::PrivateDnsNamespaceChange)
+        /// Consumes the builder and constructs a [`PrivateDnsNamespaceChange`](crate::model::PrivateDnsNamespaceChange).
         pub fn build(self) -> crate::model::PrivateDnsNamespaceChange {
             crate::model::PrivateDnsNamespaceChange {
                 description: self.description,
@@ -1122,7 +1129,7 @@ pub mod private_dns_namespace_change {
     }
 }
 impl PrivateDnsNamespaceChange {
-    /// Creates a new builder-style object to manufacture [`PrivateDnsNamespaceChange`](crate::model::PrivateDnsNamespaceChange)
+    /// Creates a new builder-style object to manufacture [`PrivateDnsNamespaceChange`](crate::model::PrivateDnsNamespaceChange).
     pub fn builder() -> crate::model::private_dns_namespace_change::Builder {
         crate::model::private_dns_namespace_change::Builder::default()
     }
@@ -1133,6 +1140,7 @@ impl PrivateDnsNamespaceChange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrivateDnsNamespacePropertiesChange {
     /// <p>Updated DNS properties for the private DNS namespace.</p>
+    #[doc(hidden)]
     pub dns_properties: std::option::Option<crate::model::PrivateDnsPropertiesMutableChange>,
 }
 impl PrivateDnsNamespacePropertiesChange {
@@ -1150,11 +1158,10 @@ impl std::fmt::Debug for PrivateDnsNamespacePropertiesChange {
         formatter.finish()
     }
 }
-/// See [`PrivateDnsNamespacePropertiesChange`](crate::model::PrivateDnsNamespacePropertiesChange)
+/// See [`PrivateDnsNamespacePropertiesChange`](crate::model::PrivateDnsNamespacePropertiesChange).
 pub mod private_dns_namespace_properties_change {
 
-    /// A builder for [`PrivateDnsNamespacePropertiesChange`](crate::model::PrivateDnsNamespacePropertiesChange)
-    #[non_exhaustive]
+    /// A builder for [`PrivateDnsNamespacePropertiesChange`](crate::model::PrivateDnsNamespacePropertiesChange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dns_properties:
@@ -1177,7 +1184,7 @@ pub mod private_dns_namespace_properties_change {
             self.dns_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrivateDnsNamespacePropertiesChange`](crate::model::PrivateDnsNamespacePropertiesChange)
+        /// Consumes the builder and constructs a [`PrivateDnsNamespacePropertiesChange`](crate::model::PrivateDnsNamespacePropertiesChange).
         pub fn build(self) -> crate::model::PrivateDnsNamespacePropertiesChange {
             crate::model::PrivateDnsNamespacePropertiesChange {
                 dns_properties: self.dns_properties,
@@ -1186,7 +1193,7 @@ pub mod private_dns_namespace_properties_change {
     }
 }
 impl PrivateDnsNamespacePropertiesChange {
-    /// Creates a new builder-style object to manufacture [`PrivateDnsNamespacePropertiesChange`](crate::model::PrivateDnsNamespacePropertiesChange)
+    /// Creates a new builder-style object to manufacture [`PrivateDnsNamespacePropertiesChange`](crate::model::PrivateDnsNamespacePropertiesChange).
     pub fn builder() -> crate::model::private_dns_namespace_properties_change::Builder {
         crate::model::private_dns_namespace_properties_change::Builder::default()
     }
@@ -1197,6 +1204,7 @@ impl PrivateDnsNamespacePropertiesChange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrivateDnsPropertiesMutableChange {
     /// <p>Updated fields for the Start of Authority (SOA) record for the hosted zone for the private DNS namespace.</p>
+    #[doc(hidden)]
     pub soa: std::option::Option<crate::model::SoaChange>,
 }
 impl PrivateDnsPropertiesMutableChange {
@@ -1212,11 +1220,10 @@ impl std::fmt::Debug for PrivateDnsPropertiesMutableChange {
         formatter.finish()
     }
 }
-/// See [`PrivateDnsPropertiesMutableChange`](crate::model::PrivateDnsPropertiesMutableChange)
+/// See [`PrivateDnsPropertiesMutableChange`](crate::model::PrivateDnsPropertiesMutableChange).
 pub mod private_dns_properties_mutable_change {
 
-    /// A builder for [`PrivateDnsPropertiesMutableChange`](crate::model::PrivateDnsPropertiesMutableChange)
-    #[non_exhaustive]
+    /// A builder for [`PrivateDnsPropertiesMutableChange`](crate::model::PrivateDnsPropertiesMutableChange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) soa: std::option::Option<crate::model::SoaChange>,
@@ -1232,14 +1239,14 @@ pub mod private_dns_properties_mutable_change {
             self.soa = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrivateDnsPropertiesMutableChange`](crate::model::PrivateDnsPropertiesMutableChange)
+        /// Consumes the builder and constructs a [`PrivateDnsPropertiesMutableChange`](crate::model::PrivateDnsPropertiesMutableChange).
         pub fn build(self) -> crate::model::PrivateDnsPropertiesMutableChange {
             crate::model::PrivateDnsPropertiesMutableChange { soa: self.soa }
         }
     }
 }
 impl PrivateDnsPropertiesMutableChange {
-    /// Creates a new builder-style object to manufacture [`PrivateDnsPropertiesMutableChange`](crate::model::PrivateDnsPropertiesMutableChange)
+    /// Creates a new builder-style object to manufacture [`PrivateDnsPropertiesMutableChange`](crate::model::PrivateDnsPropertiesMutableChange).
     pub fn builder() -> crate::model::private_dns_properties_mutable_change::Builder {
         crate::model::private_dns_properties_mutable_change::Builder::default()
     }
@@ -1305,6 +1312,7 @@ impl AsRef<str> for CustomHealthStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpNamespaceChange {
     /// <p>An updated description for the HTTP namespace.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl HttpNamespaceChange {
@@ -1320,11 +1328,10 @@ impl std::fmt::Debug for HttpNamespaceChange {
         formatter.finish()
     }
 }
-/// See [`HttpNamespaceChange`](crate::model::HttpNamespaceChange)
+/// See [`HttpNamespaceChange`](crate::model::HttpNamespaceChange).
 pub mod http_namespace_change {
 
-    /// A builder for [`HttpNamespaceChange`](crate::model::HttpNamespaceChange)
-    #[non_exhaustive]
+    /// A builder for [`HttpNamespaceChange`](crate::model::HttpNamespaceChange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -1340,7 +1347,7 @@ pub mod http_namespace_change {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpNamespaceChange`](crate::model::HttpNamespaceChange)
+        /// Consumes the builder and constructs a [`HttpNamespaceChange`](crate::model::HttpNamespaceChange).
         pub fn build(self) -> crate::model::HttpNamespaceChange {
             crate::model::HttpNamespaceChange {
                 description: self.description,
@@ -1349,7 +1356,7 @@ pub mod http_namespace_change {
     }
 }
 impl HttpNamespaceChange {
-    /// Creates a new builder-style object to manufacture [`HttpNamespaceChange`](crate::model::HttpNamespaceChange)
+    /// Creates a new builder-style object to manufacture [`HttpNamespaceChange`](crate::model::HttpNamespaceChange).
     pub fn builder() -> crate::model::http_namespace_change::Builder {
         crate::model::http_namespace_change::Builder::default()
     }
@@ -1360,8 +1367,10 @@ impl HttpNamespaceChange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key identifier, or name, of the tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The string value that's associated with the key of the tag. You can set the value of a tag to an empty string, but you can't set the value of a tag to null.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -1382,11 +1391,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1413,7 +1421,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -1423,7 +1431,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -1434,10 +1442,13 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceSummary {
     /// <p>The ID that Cloud Map assigned to the service when you created it.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) that Cloud Map assigns to the service when you create it.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the service.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Describes the systems that can be used to discover the service instances.</p>
     /// <dl>
@@ -1460,14 +1471,19 @@ pub struct ServiceSummary {
     /// <p>Reserved.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ServiceType>,
     /// <p>The description that you specify when you create the service.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The number of instances that are currently associated with the service. Instances that were previously associated with the service but that are deleted aren't included in the count. The count might not reflect pending registrations and deregistrations.</p>
+    #[doc(hidden)]
     pub instance_count: std::option::Option<i32>,
     /// <p>Information about the Route 53 DNS records that you want Cloud Map to create when you register an instance.</p>
+    #[doc(hidden)]
     pub dns_config: std::option::Option<crate::model::DnsConfig>,
     /// <p> <i>Public DNS and HTTP namespaces only.</i> Settings for an optional health check. If you specify settings for a health check, Cloud Map associates the health check with the records that you specify in <code>DnsConfig</code>.</p>
+    #[doc(hidden)]
     pub health_check_config: std::option::Option<crate::model::HealthCheckConfig>,
     /// <p>Information about an optional custom health check. A custom health check, which requires that you use a third-party health checker to evaluate the health of your resources, is useful in the following circumstances:</p>
     /// <ul>
@@ -1476,8 +1492,10 @@ pub struct ServiceSummary {
     /// </ul> <important>
     /// <p>If you specify a health check configuration, you can specify either <code>HealthCheckCustomConfig</code> or <code>HealthCheckConfig</code> but not both.</p>
     /// </important>
+    #[doc(hidden)]
     pub health_check_custom_config: std::option::Option<crate::model::HealthCheckCustomConfig>,
     /// <p>The date and time that the service was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ServiceSummary {
@@ -1569,11 +1587,10 @@ impl std::fmt::Debug for ServiceSummary {
         formatter.finish()
     }
 }
-/// See [`ServiceSummary`](crate::model::ServiceSummary)
+/// See [`ServiceSummary`](crate::model::ServiceSummary).
 pub mod service_summary {
 
-    /// A builder for [`ServiceSummary`](crate::model::ServiceSummary)
-    #[non_exhaustive]
+    /// A builder for [`ServiceSummary`](crate::model::ServiceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1756,7 +1773,7 @@ pub mod service_summary {
             self.create_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceSummary`](crate::model::ServiceSummary)
+        /// Consumes the builder and constructs a [`ServiceSummary`](crate::model::ServiceSummary).
         pub fn build(self) -> crate::model::ServiceSummary {
             crate::model::ServiceSummary {
                 id: self.id,
@@ -1774,7 +1791,7 @@ pub mod service_summary {
     }
 }
 impl ServiceSummary {
-    /// Creates a new builder-style object to manufacture [`ServiceSummary`](crate::model::ServiceSummary)
+    /// Creates a new builder-style object to manufacture [`ServiceSummary`](crate::model::ServiceSummary).
     pub fn builder() -> crate::model::service_summary::Builder {
         crate::model::service_summary::Builder::default()
     }
@@ -1808,6 +1825,10 @@ pub struct HealthCheckCustomConfig {
     /// </important>
     /// <p>The number of 30-second intervals that you want Cloud Map to wait after receiving an <code>UpdateInstanceCustomHealthStatus</code> request before it changes the health status of a service instance.</p>
     /// <p>Sending a second or subsequent <code>UpdateInstanceCustomHealthStatus</code> request with the same value before 30 seconds has passed doesn't accelerate the change. Cloud Map still waits <code>30</code> seconds after the first request to make the change.</p>
+    #[deprecated(
+        note = "Configurable FailureThreshold of HealthCheckCustomConfig is deprecated.  It will always have value 1."
+    )]
+    #[doc(hidden)]
     pub failure_threshold: std::option::Option<i32>,
 }
 impl HealthCheckCustomConfig {
@@ -1816,6 +1837,9 @@ impl HealthCheckCustomConfig {
     /// </important>
     /// <p>The number of 30-second intervals that you want Cloud Map to wait after receiving an <code>UpdateInstanceCustomHealthStatus</code> request before it changes the health status of a service instance.</p>
     /// <p>Sending a second or subsequent <code>UpdateInstanceCustomHealthStatus</code> request with the same value before 30 seconds has passed doesn't accelerate the change. Cloud Map still waits <code>30</code> seconds after the first request to make the change.</p>
+    #[deprecated(
+        note = "Configurable FailureThreshold of HealthCheckCustomConfig is deprecated.  It will always have value 1."
+    )]
     pub fn failure_threshold(&self) -> std::option::Option<i32> {
         self.failure_threshold
     }
@@ -1827,11 +1851,10 @@ impl std::fmt::Debug for HealthCheckCustomConfig {
         formatter.finish()
     }
 }
-/// See [`HealthCheckCustomConfig`](crate::model::HealthCheckCustomConfig)
+/// See [`HealthCheckCustomConfig`](crate::model::HealthCheckCustomConfig).
 pub mod health_check_custom_config {
 
-    /// A builder for [`HealthCheckCustomConfig`](crate::model::HealthCheckCustomConfig)
-    #[non_exhaustive]
+    /// A builder for [`HealthCheckCustomConfig`](crate::model::HealthCheckCustomConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failure_threshold: std::option::Option<i32>,
@@ -1842,6 +1865,9 @@ pub mod health_check_custom_config {
         /// </important>
         /// <p>The number of 30-second intervals that you want Cloud Map to wait after receiving an <code>UpdateInstanceCustomHealthStatus</code> request before it changes the health status of a service instance.</p>
         /// <p>Sending a second or subsequent <code>UpdateInstanceCustomHealthStatus</code> request with the same value before 30 seconds has passed doesn't accelerate the change. Cloud Map still waits <code>30</code> seconds after the first request to make the change.</p>
+        #[deprecated(
+            note = "Configurable FailureThreshold of HealthCheckCustomConfig is deprecated.  It will always have value 1."
+        )]
         pub fn failure_threshold(mut self, input: i32) -> Self {
             self.failure_threshold = Some(input);
             self
@@ -1851,11 +1877,14 @@ pub mod health_check_custom_config {
         /// </important>
         /// <p>The number of 30-second intervals that you want Cloud Map to wait after receiving an <code>UpdateInstanceCustomHealthStatus</code> request before it changes the health status of a service instance.</p>
         /// <p>Sending a second or subsequent <code>UpdateInstanceCustomHealthStatus</code> request with the same value before 30 seconds has passed doesn't accelerate the change. Cloud Map still waits <code>30</code> seconds after the first request to make the change.</p>
+        #[deprecated(
+            note = "Configurable FailureThreshold of HealthCheckCustomConfig is deprecated.  It will always have value 1."
+        )]
         pub fn set_failure_threshold(mut self, input: std::option::Option<i32>) -> Self {
             self.failure_threshold = input;
             self
         }
-        /// Consumes the builder and constructs a [`HealthCheckCustomConfig`](crate::model::HealthCheckCustomConfig)
+        /// Consumes the builder and constructs a [`HealthCheckCustomConfig`](crate::model::HealthCheckCustomConfig).
         pub fn build(self) -> crate::model::HealthCheckCustomConfig {
             crate::model::HealthCheckCustomConfig {
                 failure_threshold: self.failure_threshold,
@@ -1864,7 +1893,7 @@ pub mod health_check_custom_config {
     }
 }
 impl HealthCheckCustomConfig {
-    /// Creates a new builder-style object to manufacture [`HealthCheckCustomConfig`](crate::model::HealthCheckCustomConfig)
+    /// Creates a new builder-style object to manufacture [`HealthCheckCustomConfig`](crate::model::HealthCheckCustomConfig).
     pub fn builder() -> crate::model::health_check_custom_config::Builder {
         crate::model::health_check_custom_config::Builder::default()
     }
@@ -1875,6 +1904,8 @@ impl HealthCheckCustomConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DnsConfig {
     /// <p>The ID of the namespace to use for DNS configuration.</p>
+    #[deprecated(note = "Top level attribute in request should be used to reference namespace-id")]
+    #[doc(hidden)]
     pub namespace_id: std::option::Option<std::string::String>,
     /// <p>The routing policy that you want to apply to all Route 53 DNS records that Cloud Map creates when you register an instance and specify this service.</p> <note>
     /// <p>If you want to use this service to register instances that create alias records, specify <code>WEIGHTED</code> for the routing policy.</p>
@@ -1900,12 +1931,15 @@ pub struct DnsConfig {
     /// <p>For more information about the weighted routing policy, see <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted">Weighted Routing</a> in the <i>Route 53 Developer Guide</i>.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub routing_policy: std::option::Option<crate::model::RoutingPolicy>,
     /// <p>An array that contains one <code>DnsRecord</code> object for each Route 53 DNS record that you want Cloud Map to create when you register an instance.</p>
+    #[doc(hidden)]
     pub dns_records: std::option::Option<std::vec::Vec<crate::model::DnsRecord>>,
 }
 impl DnsConfig {
     /// <p>The ID of the namespace to use for DNS configuration.</p>
+    #[deprecated(note = "Top level attribute in request should be used to reference namespace-id")]
     pub fn namespace_id(&self) -> std::option::Option<&str> {
         self.namespace_id.as_deref()
     }
@@ -1950,11 +1984,10 @@ impl std::fmt::Debug for DnsConfig {
         formatter.finish()
     }
 }
-/// See [`DnsConfig`](crate::model::DnsConfig)
+/// See [`DnsConfig`](crate::model::DnsConfig).
 pub mod dns_config {
 
-    /// A builder for [`DnsConfig`](crate::model::DnsConfig)
-    #[non_exhaustive]
+    /// A builder for [`DnsConfig`](crate::model::DnsConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace_id: std::option::Option<std::string::String>,
@@ -1963,11 +1996,17 @@ pub mod dns_config {
     }
     impl Builder {
         /// <p>The ID of the namespace to use for DNS configuration.</p>
+        #[deprecated(
+            note = "Top level attribute in request should be used to reference namespace-id"
+        )]
         pub fn namespace_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.namespace_id = Some(input.into());
             self
         }
         /// <p>The ID of the namespace to use for DNS configuration.</p>
+        #[deprecated(
+            note = "Top level attribute in request should be used to reference namespace-id"
+        )]
         pub fn set_namespace_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.namespace_id = input;
             self
@@ -2050,7 +2089,7 @@ pub mod dns_config {
             self.dns_records = input;
             self
         }
-        /// Consumes the builder and constructs a [`DnsConfig`](crate::model::DnsConfig)
+        /// Consumes the builder and constructs a [`DnsConfig`](crate::model::DnsConfig).
         pub fn build(self) -> crate::model::DnsConfig {
             crate::model::DnsConfig {
                 namespace_id: self.namespace_id,
@@ -2061,7 +2100,7 @@ pub mod dns_config {
     }
 }
 impl DnsConfig {
-    /// Creates a new builder-style object to manufacture [`DnsConfig`](crate::model::DnsConfig)
+    /// Creates a new builder-style object to manufacture [`DnsConfig`](crate::model::DnsConfig).
     pub fn builder() -> crate::model::dns_config::Builder {
         crate::model::dns_config::Builder::default()
     }
@@ -2186,8 +2225,10 @@ impl AsRef<str> for ServiceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceFilter {
     /// <p>Specify <code>NAMESPACE_ID</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::ServiceFilterName>,
     /// <p>The values that are applicable to the value that you specify for <code>Condition</code> to filter the list of services.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The operator that you want to use to determine whether a service is returned by <code>ListServices</code>. Valid values for <code>Condition</code> include the following:</p>
     /// <ul>
@@ -2195,6 +2236,7 @@ pub struct ServiceFilter {
     /// <li> <p> <code>IN</code>: When you specify <code>IN</code>, specify a list of the IDs for the namespaces that you want <code>ListServices</code> to return a list of services for.</p> </li>
     /// <li> <p> <code>BETWEEN</code>: Not applicable.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub condition: std::option::Option<crate::model::FilterCondition>,
 }
 impl ServiceFilter {
@@ -2225,11 +2267,10 @@ impl std::fmt::Debug for ServiceFilter {
         formatter.finish()
     }
 }
-/// See [`ServiceFilter`](crate::model::ServiceFilter)
+/// See [`ServiceFilter`](crate::model::ServiceFilter).
 pub mod service_filter {
 
-    /// A builder for [`ServiceFilter`](crate::model::ServiceFilter)
-    #[non_exhaustive]
+    /// A builder for [`ServiceFilter`](crate::model::ServiceFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::ServiceFilterName>,
@@ -2292,7 +2333,7 @@ pub mod service_filter {
             self.condition = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceFilter`](crate::model::ServiceFilter)
+        /// Consumes the builder and constructs a [`ServiceFilter`](crate::model::ServiceFilter).
         pub fn build(self) -> crate::model::ServiceFilter {
             crate::model::ServiceFilter {
                 name: self.name,
@@ -2303,7 +2344,7 @@ pub mod service_filter {
     }
 }
 impl ServiceFilter {
-    /// Creates a new builder-style object to manufacture [`ServiceFilter`](crate::model::ServiceFilter)
+    /// Creates a new builder-style object to manufacture [`ServiceFilter`](crate::model::ServiceFilter).
     pub fn builder() -> crate::model::service_filter::Builder {
         crate::model::service_filter::Builder::default()
     }
@@ -2424,6 +2465,7 @@ impl AsRef<str> for ServiceFilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OperationSummary {
     /// <p>The ID for an operation.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The status of the operation. Values include the following:</p>
     /// <ul>
@@ -2432,6 +2474,7 @@ pub struct OperationSummary {
     /// <li> <p> <b>SUCCESS</b>: The operation succeeded.</p> </li>
     /// <li> <p> <b>FAIL</b>: The operation failed. For the failure reason, see <code>ErrorMessage</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OperationStatus>,
 }
 impl OperationSummary {
@@ -2458,11 +2501,10 @@ impl std::fmt::Debug for OperationSummary {
         formatter.finish()
     }
 }
-/// See [`OperationSummary`](crate::model::OperationSummary)
+/// See [`OperationSummary`](crate::model::OperationSummary).
 pub mod operation_summary {
 
-    /// A builder for [`OperationSummary`](crate::model::OperationSummary)
-    #[non_exhaustive]
+    /// A builder for [`OperationSummary`](crate::model::OperationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2504,7 +2546,7 @@ pub mod operation_summary {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`OperationSummary`](crate::model::OperationSummary)
+        /// Consumes the builder and constructs a [`OperationSummary`](crate::model::OperationSummary).
         pub fn build(self) -> crate::model::OperationSummary {
             crate::model::OperationSummary {
                 id: self.id,
@@ -2514,7 +2556,7 @@ pub mod operation_summary {
     }
 }
 impl OperationSummary {
-    /// Creates a new builder-style object to manufacture [`OperationSummary`](crate::model::OperationSummary)
+    /// Creates a new builder-style object to manufacture [`OperationSummary`](crate::model::OperationSummary).
     pub fn builder() -> crate::model::operation_summary::Builder {
         crate::model::operation_summary::Builder::default()
     }
@@ -2595,6 +2637,7 @@ pub struct OperationFilter {
     /// <li> <p> <b>TYPE</b>: Gets specified types of operation.</p> </li>
     /// <li> <p> <b>UPDATE_DATE</b>: Gets operations that changed status during a specified date/time range. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::OperationFilterName>,
     /// <p>Specify values that are applicable to the value that you specify for <code>Name</code>: </p>
     /// <ul>
@@ -2604,6 +2647,7 @@ pub struct OperationFilter {
     /// <li> <p> <b>TYPE</b>: Specify one or more of the following types: <code>CREATE_NAMESPACE</code>, <code>DELETE_NAMESPACE</code>, <code>UPDATE_SERVICE</code>, <code>REGISTER_INSTANCE</code>, or <code>DEREGISTER_INSTANCE</code>.</p> </li>
     /// <li> <p> <b>UPDATE_DATE</b>: Specify a start date and an end date in Unix date/time format and Coordinated Universal Time (UTC). The start date must be the first value.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The operator that you want to use to determine whether an operation matches the specified value. Valid values for condition include:</p>
     /// <ul>
@@ -2611,6 +2655,7 @@ pub struct OperationFilter {
     /// <li> <p> <code>IN</code>: When you specify <code>IN</code> for the condition, you can specify a list of one or more values. <code>IN</code> is supported for <code>STATUS</code> and <code>TYPE</code>. An operation must match one of the specified values to be returned in the response.</p> </li>
     /// <li> <p> <code>BETWEEN</code>: Specify a start date and an end date in Unix date/time format and Coordinated Universal Time (UTC). The start date must be the first value. <code>BETWEEN</code> is supported for <code>UPDATE_DATE</code>. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub condition: std::option::Option<crate::model::FilterCondition>,
 }
 impl OperationFilter {
@@ -2655,11 +2700,10 @@ impl std::fmt::Debug for OperationFilter {
         formatter.finish()
     }
 }
-/// See [`OperationFilter`](crate::model::OperationFilter)
+/// See [`OperationFilter`](crate::model::OperationFilter).
 pub mod operation_filter {
 
-    /// A builder for [`OperationFilter`](crate::model::OperationFilter)
-    #[non_exhaustive]
+    /// A builder for [`OperationFilter`](crate::model::OperationFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::OperationFilterName>,
@@ -2750,7 +2794,7 @@ pub mod operation_filter {
             self.condition = input;
             self
         }
-        /// Consumes the builder and constructs a [`OperationFilter`](crate::model::OperationFilter)
+        /// Consumes the builder and constructs a [`OperationFilter`](crate::model::OperationFilter).
         pub fn build(self) -> crate::model::OperationFilter {
             crate::model::OperationFilter {
                 name: self.name,
@@ -2761,7 +2805,7 @@ pub mod operation_filter {
     }
 }
 impl OperationFilter {
-    /// Creates a new builder-style object to manufacture [`OperationFilter`](crate::model::OperationFilter)
+    /// Creates a new builder-style object to manufacture [`OperationFilter`](crate::model::OperationFilter).
     pub fn builder() -> crate::model::operation_filter::Builder {
         crate::model::operation_filter::Builder::default()
     }
@@ -2845,20 +2889,28 @@ impl AsRef<str> for OperationFilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NamespaceSummary {
     /// <p>The ID of the namespace.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) that Cloud Map assigns to the namespace when you create it.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the namespace. When you create a namespace, Cloud Map automatically creates a Route 53 hosted zone that has the same name as the namespace.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of the namespace, either public or private.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::NamespaceType>,
     /// <p>A description for the namespace.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The number of services that were created using the namespace.</p>
+    #[doc(hidden)]
     pub service_count: std::option::Option<i32>,
     /// <p>The properties of the namespace.</p>
+    #[doc(hidden)]
     pub properties: std::option::Option<crate::model::NamespaceProperties>,
     /// <p>The date and time that the namespace was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl NamespaceSummary {
@@ -2909,11 +2961,10 @@ impl std::fmt::Debug for NamespaceSummary {
         formatter.finish()
     }
 }
-/// See [`NamespaceSummary`](crate::model::NamespaceSummary)
+/// See [`NamespaceSummary`](crate::model::NamespaceSummary).
 pub mod namespace_summary {
 
-    /// A builder for [`NamespaceSummary`](crate::model::NamespaceSummary)
-    #[non_exhaustive]
+    /// A builder for [`NamespaceSummary`](crate::model::NamespaceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3012,7 +3063,7 @@ pub mod namespace_summary {
             self.create_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`NamespaceSummary`](crate::model::NamespaceSummary)
+        /// Consumes the builder and constructs a [`NamespaceSummary`](crate::model::NamespaceSummary).
         pub fn build(self) -> crate::model::NamespaceSummary {
             crate::model::NamespaceSummary {
                 id: self.id,
@@ -3028,7 +3079,7 @@ pub mod namespace_summary {
     }
 }
 impl NamespaceSummary {
-    /// Creates a new builder-style object to manufacture [`NamespaceSummary`](crate::model::NamespaceSummary)
+    /// Creates a new builder-style object to manufacture [`NamespaceSummary`](crate::model::NamespaceSummary).
     pub fn builder() -> crate::model::namespace_summary::Builder {
         crate::model::namespace_summary::Builder::default()
     }
@@ -3039,8 +3090,10 @@ impl NamespaceSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NamespaceProperties {
     /// <p>A complex type that contains the ID for the Route 53 hosted zone that Cloud Map creates when you create a namespace.</p>
+    #[doc(hidden)]
     pub dns_properties: std::option::Option<crate::model::DnsProperties>,
     /// <p>A complex type that contains the name of an HTTP namespace.</p>
+    #[doc(hidden)]
     pub http_properties: std::option::Option<crate::model::HttpProperties>,
 }
 impl NamespaceProperties {
@@ -3061,11 +3114,10 @@ impl std::fmt::Debug for NamespaceProperties {
         formatter.finish()
     }
 }
-/// See [`NamespaceProperties`](crate::model::NamespaceProperties)
+/// See [`NamespaceProperties`](crate::model::NamespaceProperties).
 pub mod namespace_properties {
 
-    /// A builder for [`NamespaceProperties`](crate::model::NamespaceProperties)
-    #[non_exhaustive]
+    /// A builder for [`NamespaceProperties`](crate::model::NamespaceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dns_properties: std::option::Option<crate::model::DnsProperties>,
@@ -3098,7 +3150,7 @@ pub mod namespace_properties {
             self.http_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`NamespaceProperties`](crate::model::NamespaceProperties)
+        /// Consumes the builder and constructs a [`NamespaceProperties`](crate::model::NamespaceProperties).
         pub fn build(self) -> crate::model::NamespaceProperties {
             crate::model::NamespaceProperties {
                 dns_properties: self.dns_properties,
@@ -3108,7 +3160,7 @@ pub mod namespace_properties {
     }
 }
 impl NamespaceProperties {
-    /// Creates a new builder-style object to manufacture [`NamespaceProperties`](crate::model::NamespaceProperties)
+    /// Creates a new builder-style object to manufacture [`NamespaceProperties`](crate::model::NamespaceProperties).
     pub fn builder() -> crate::model::namespace_properties::Builder {
         crate::model::namespace_properties::Builder::default()
     }
@@ -3119,6 +3171,7 @@ impl NamespaceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpProperties {
     /// <p>The name of an HTTP namespace.</p>
+    #[doc(hidden)]
     pub http_name: std::option::Option<std::string::String>,
 }
 impl HttpProperties {
@@ -3134,11 +3187,10 @@ impl std::fmt::Debug for HttpProperties {
         formatter.finish()
     }
 }
-/// See [`HttpProperties`](crate::model::HttpProperties)
+/// See [`HttpProperties`](crate::model::HttpProperties).
 pub mod http_properties {
 
-    /// A builder for [`HttpProperties`](crate::model::HttpProperties)
-    #[non_exhaustive]
+    /// A builder for [`HttpProperties`](crate::model::HttpProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) http_name: std::option::Option<std::string::String>,
@@ -3154,7 +3206,7 @@ pub mod http_properties {
             self.http_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpProperties`](crate::model::HttpProperties)
+        /// Consumes the builder and constructs a [`HttpProperties`](crate::model::HttpProperties).
         pub fn build(self) -> crate::model::HttpProperties {
             crate::model::HttpProperties {
                 http_name: self.http_name,
@@ -3163,7 +3215,7 @@ pub mod http_properties {
     }
 }
 impl HttpProperties {
-    /// Creates a new builder-style object to manufacture [`HttpProperties`](crate::model::HttpProperties)
+    /// Creates a new builder-style object to manufacture [`HttpProperties`](crate::model::HttpProperties).
     pub fn builder() -> crate::model::http_properties::Builder {
         crate::model::http_properties::Builder::default()
     }
@@ -3174,8 +3226,10 @@ impl HttpProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DnsProperties {
     /// <p>The ID for the Route 53 hosted zone that Cloud Map creates when you create a namespace.</p>
+    #[doc(hidden)]
     pub hosted_zone_id: std::option::Option<std::string::String>,
     /// <p>Start of Authority (SOA) record for the hosted zone.</p>
+    #[doc(hidden)]
     pub soa: std::option::Option<crate::model::Soa>,
 }
 impl DnsProperties {
@@ -3196,11 +3250,10 @@ impl std::fmt::Debug for DnsProperties {
         formatter.finish()
     }
 }
-/// See [`DnsProperties`](crate::model::DnsProperties)
+/// See [`DnsProperties`](crate::model::DnsProperties).
 pub mod dns_properties {
 
-    /// A builder for [`DnsProperties`](crate::model::DnsProperties)
-    #[non_exhaustive]
+    /// A builder for [`DnsProperties`](crate::model::DnsProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hosted_zone_id: std::option::Option<std::string::String>,
@@ -3230,7 +3283,7 @@ pub mod dns_properties {
             self.soa = input;
             self
         }
-        /// Consumes the builder and constructs a [`DnsProperties`](crate::model::DnsProperties)
+        /// Consumes the builder and constructs a [`DnsProperties`](crate::model::DnsProperties).
         pub fn build(self) -> crate::model::DnsProperties {
             crate::model::DnsProperties {
                 hosted_zone_id: self.hosted_zone_id,
@@ -3240,7 +3293,7 @@ pub mod dns_properties {
     }
 }
 impl DnsProperties {
-    /// Creates a new builder-style object to manufacture [`DnsProperties`](crate::model::DnsProperties)
+    /// Creates a new builder-style object to manufacture [`DnsProperties`](crate::model::DnsProperties).
     pub fn builder() -> crate::model::dns_properties::Builder {
         crate::model::dns_properties::Builder::default()
     }
@@ -3251,6 +3304,7 @@ impl DnsProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Soa {
     /// <p>The time to live (TTL) for purposes of negative caching.</p>
+    #[doc(hidden)]
     pub ttl: std::option::Option<i64>,
 }
 impl Soa {
@@ -3266,11 +3320,10 @@ impl std::fmt::Debug for Soa {
         formatter.finish()
     }
 }
-/// See [`Soa`](crate::model::Soa)
+/// See [`Soa`](crate::model::Soa).
 pub mod soa {
 
-    /// A builder for [`Soa`](crate::model::Soa)
-    #[non_exhaustive]
+    /// A builder for [`Soa`](crate::model::Soa).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ttl: std::option::Option<i64>,
@@ -3286,14 +3339,14 @@ pub mod soa {
             self.ttl = input;
             self
         }
-        /// Consumes the builder and constructs a [`Soa`](crate::model::Soa)
+        /// Consumes the builder and constructs a [`Soa`](crate::model::Soa).
         pub fn build(self) -> crate::model::Soa {
             crate::model::Soa { ttl: self.ttl }
         }
     }
 }
 impl Soa {
-    /// Creates a new builder-style object to manufacture [`Soa`](crate::model::Soa)
+    /// Creates a new builder-style object to manufacture [`Soa`](crate::model::Soa).
     pub fn builder() -> crate::model::soa::Builder {
         crate::model::soa::Builder::default()
     }
@@ -3363,9 +3416,11 @@ impl AsRef<str> for NamespaceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NamespaceFilter {
     /// <p>Specify <code>TYPE</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::NamespaceFilterName>,
     /// <p>If you specify <code>EQ</code> for <code>Condition</code>, specify either <code>DNS_PUBLIC</code> or <code>DNS_PRIVATE</code>.</p>
     /// <p>If you specify <code>IN</code> for <code>Condition</code>, you can specify <code>DNS_PUBLIC</code>, <code>DNS_PRIVATE</code>, or both.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The operator that you want to use to determine whether <code>ListNamespaces</code> returns a namespace. Valid values for <code>condition</code> include:</p>
     /// <dl>
@@ -3388,6 +3443,7 @@ pub struct NamespaceFilter {
     /// <p> Not applicable</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub condition: std::option::Option<crate::model::FilterCondition>,
 }
 impl NamespaceFilter {
@@ -3434,11 +3490,10 @@ impl std::fmt::Debug for NamespaceFilter {
         formatter.finish()
     }
 }
-/// See [`NamespaceFilter`](crate::model::NamespaceFilter)
+/// See [`NamespaceFilter`](crate::model::NamespaceFilter).
 pub mod namespace_filter {
 
-    /// A builder for [`NamespaceFilter`](crate::model::NamespaceFilter)
-    #[non_exhaustive]
+    /// A builder for [`NamespaceFilter`](crate::model::NamespaceFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::NamespaceFilterName>,
@@ -3533,7 +3588,7 @@ pub mod namespace_filter {
             self.condition = input;
             self
         }
-        /// Consumes the builder and constructs a [`NamespaceFilter`](crate::model::NamespaceFilter)
+        /// Consumes the builder and constructs a [`NamespaceFilter`](crate::model::NamespaceFilter).
         pub fn build(self) -> crate::model::NamespaceFilter {
             crate::model::NamespaceFilter {
                 name: self.name,
@@ -3544,7 +3599,7 @@ pub mod namespace_filter {
     }
 }
 impl NamespaceFilter {
-    /// Creates a new builder-style object to manufacture [`NamespaceFilter`](crate::model::NamespaceFilter)
+    /// Creates a new builder-style object to manufacture [`NamespaceFilter`](crate::model::NamespaceFilter).
     pub fn builder() -> crate::model::namespace_filter::Builder {
         crate::model::namespace_filter::Builder::default()
     }
@@ -3606,6 +3661,7 @@ impl AsRef<str> for NamespaceFilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceSummary {
     /// <p>The ID for an instance that you created by using a specified service.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A string map that contains the following information:</p>
     /// <ul>
@@ -3657,6 +3713,7 @@ pub struct InstanceSummary {
     /// <p>For an <code>SRV</code> record, the value that Route 53 returns for the port. In addition, if the service includes <code>HealthCheckConfig</code>, the port on the endpoint that Route 53 sends requests to.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -3730,11 +3787,10 @@ impl std::fmt::Debug for InstanceSummary {
         formatter.finish()
     }
 }
-/// See [`InstanceSummary`](crate::model::InstanceSummary)
+/// See [`InstanceSummary`](crate::model::InstanceSummary).
 pub mod instance_summary {
 
-    /// A builder for [`InstanceSummary`](crate::model::InstanceSummary)
-    #[non_exhaustive]
+    /// A builder for [`InstanceSummary`](crate::model::InstanceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3876,7 +3932,7 @@ pub mod instance_summary {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceSummary`](crate::model::InstanceSummary)
+        /// Consumes the builder and constructs a [`InstanceSummary`](crate::model::InstanceSummary).
         pub fn build(self) -> crate::model::InstanceSummary {
             crate::model::InstanceSummary {
                 id: self.id,
@@ -3886,7 +3942,7 @@ pub mod instance_summary {
     }
 }
 impl InstanceSummary {
-    /// Creates a new builder-style object to manufacture [`InstanceSummary`](crate::model::InstanceSummary)
+    /// Creates a new builder-style object to manufacture [`InstanceSummary`](crate::model::InstanceSummary).
     pub fn builder() -> crate::model::instance_summary::Builder {
         crate::model::instance_summary::Builder::default()
     }
@@ -3897,18 +3953,25 @@ impl InstanceSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Service {
     /// <p>The ID that Cloud Map assigned to the service when you created it.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) that Cloud Map assigns to the service when you create it.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the service.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The ID of the namespace that was used to create the service.</p>
+    #[doc(hidden)]
     pub namespace_id: std::option::Option<std::string::String>,
     /// <p>The description of the service.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The number of instances that are currently associated with the service. Instances that were previously associated with the service but that are deleted aren't included in the count. The count might not reflect pending registrations and deregistrations.</p>
+    #[doc(hidden)]
     pub instance_count: std::option::Option<i32>,
     /// <p>A complex type that contains information about the Route 53 DNS records that you want Cloud Map to create when you register an instance.</p>
+    #[doc(hidden)]
     pub dns_config: std::option::Option<crate::model::DnsConfig>,
     /// <p>Describes the systems that can be used to discover the service instances.</p>
     /// <dl>
@@ -3931,17 +3994,22 @@ pub struct Service {
     /// <p>Reserved.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ServiceType>,
     /// <p> <i>Public DNS and HTTP namespaces only.</i> A complex type that contains settings for an optional health check. If you specify settings for a health check, Cloud Map associates the health check with the records that you specify in <code>DnsConfig</code>.</p>
     /// <p>For information about the charges for health checks, see <a href="http://aws.amazon.com/route53/pricing/">Amazon Route 53 Pricing</a>.</p>
+    #[doc(hidden)]
     pub health_check_config: std::option::Option<crate::model::HealthCheckConfig>,
     /// <p>A complex type that contains information about an optional custom health check.</p> <important>
     /// <p>If you specify a health check configuration, you can specify either <code>HealthCheckCustomConfig</code> or <code>HealthCheckConfig</code> but not both.</p>
     /// </important>
+    #[doc(hidden)]
     pub health_check_custom_config: std::option::Option<crate::model::HealthCheckCustomConfig>,
     /// <p>The date and time that the service was created, in Unix format and Coordinated Universal Time (UTC). The value of <code>CreateDate</code> is accurate to milliseconds. For example, the value <code>1516925490.087</code> represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A unique string that identifies the request and that allows failed requests to be retried without the risk of running the operation twice. <code>CreatorRequestId</code> can be any unique string (for example, a date/timestamp).</p>
+    #[doc(hidden)]
     pub creator_request_id: std::option::Option<std::string::String>,
 }
 impl Service {
@@ -4040,11 +4108,10 @@ impl std::fmt::Debug for Service {
         formatter.finish()
     }
 }
-/// See [`Service`](crate::model::Service)
+/// See [`Service`](crate::model::Service).
 pub mod service {
 
-    /// A builder for [`Service`](crate::model::Service)
-    #[non_exhaustive]
+    /// A builder for [`Service`](crate::model::Service).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4246,7 +4313,7 @@ pub mod service {
             self.creator_request_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Service`](crate::model::Service)
+        /// Consumes the builder and constructs a [`Service`](crate::model::Service).
         pub fn build(self) -> crate::model::Service {
             crate::model::Service {
                 id: self.id,
@@ -4266,7 +4333,7 @@ pub mod service {
     }
 }
 impl Service {
-    /// Creates a new builder-style object to manufacture [`Service`](crate::model::Service)
+    /// Creates a new builder-style object to manufacture [`Service`](crate::model::Service).
     pub fn builder() -> crate::model::service::Builder {
         crate::model::service::Builder::default()
     }
@@ -4277,8 +4344,10 @@ impl Service {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Operation {
     /// <p>The ID of the operation that you want to get information about.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the operation that's associated with the specified ID.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::OperationType>,
     /// <p>The status of the operation. Values include the following:</p>
     /// <dl>
@@ -4307,8 +4376,10 @@ pub struct Operation {
     /// <p>The operation failed. For the failure reason, see <code>ErrorMessage</code>.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OperationStatus>,
     /// <p>If the value of <code>Status</code> is <code>FAIL</code>, the reason that the operation failed.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>The code associated with <code>ErrorMessage</code>. Values for <code>ErrorCode</code> include the following:</p>
     /// <ul>
@@ -4320,10 +4391,13 @@ pub struct Operation {
     /// <li> <p> <code>INVALID_CHANGE_BATCH</code> </p> </li>
     /// <li> <p> <code>THROTTLED_REQUEST</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The date and time that the request was submitted, in Unix date/time format and Coordinated Universal Time (UTC). The value of <code>CreateDate</code> is accurate to milliseconds. For example, the value <code>1516925490.087</code> represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the value of <code>Status</code> changed to the current value, in Unix date/time format and Coordinated Universal Time (UTC). The value of <code>UpdateDate</code> is accurate to milliseconds. For example, the value <code>1516925490.087</code> represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub update_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the target entity that's associated with the operation:</p>
     /// <dl>
@@ -4346,6 +4420,7 @@ pub struct Operation {
     /// <p>The instance ID is returned in the <code>ResourceId</code> property.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub targets: std::option::Option<
         std::collections::HashMap<crate::model::OperationTargetType, std::string::String>,
     >,
@@ -4457,11 +4532,10 @@ impl std::fmt::Debug for Operation {
         formatter.finish()
     }
 }
-/// See [`Operation`](crate::model::Operation)
+/// See [`Operation`](crate::model::Operation).
 pub mod operation {
 
-    /// A builder for [`Operation`](crate::model::Operation)
-    #[non_exhaustive]
+    /// A builder for [`Operation`](crate::model::Operation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4693,7 +4767,7 @@ pub mod operation {
             self.targets = input;
             self
         }
-        /// Consumes the builder and constructs a [`Operation`](crate::model::Operation)
+        /// Consumes the builder and constructs a [`Operation`](crate::model::Operation).
         pub fn build(self) -> crate::model::Operation {
             crate::model::Operation {
                 id: self.id,
@@ -4709,7 +4783,7 @@ pub mod operation {
     }
 }
 impl Operation {
-    /// Creates a new builder-style object to manufacture [`Operation`](crate::model::Operation)
+    /// Creates a new builder-style object to manufacture [`Operation`](crate::model::Operation).
     pub fn builder() -> crate::model::operation::Builder {
         crate::model::operation::Builder::default()
     }
@@ -4857,10 +4931,13 @@ impl AsRef<str> for OperationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Namespace {
     /// <p>The ID of a namespace.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) that Cloud Map assigns to the namespace when you create it.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the namespace, such as <code>example.com</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of the namespace. The methods for discovering instances depends on the value that you specify:</p>
     /// <dl>
@@ -4883,16 +4960,22 @@ pub struct Namespace {
     /// <p>Instances can be discovered using DNS queries in VPCs and using the <code>DiscoverInstances</code> API.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::NamespaceType>,
     /// <p>The description that you specify for the namespace when you create it.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The number of services that are associated with the namespace.</p>
+    #[doc(hidden)]
     pub service_count: std::option::Option<i32>,
     /// <p>A complex type that contains information that's specific to the type of the namespace.</p>
+    #[doc(hidden)]
     pub properties: std::option::Option<crate::model::NamespaceProperties>,
     /// <p>The date that the namespace was created, in Unix date/time format and Coordinated Universal Time (UTC). The value of <code>CreateDate</code> is accurate to milliseconds. For example, the value <code>1516925490.087</code> represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A unique string that identifies the request and that allows failed requests to be retried without the risk of running an operation twice. </p>
+    #[doc(hidden)]
     pub creator_request_id: std::option::Option<std::string::String>,
 }
 impl Namespace {
@@ -4968,11 +5051,10 @@ impl std::fmt::Debug for Namespace {
         formatter.finish()
     }
 }
-/// See [`Namespace`](crate::model::Namespace)
+/// See [`Namespace`](crate::model::Namespace).
 pub mod namespace {
 
-    /// A builder for [`Namespace`](crate::model::Namespace)
-    #[non_exhaustive]
+    /// A builder for [`Namespace`](crate::model::Namespace).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -5125,7 +5207,7 @@ pub mod namespace {
             self.creator_request_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Namespace`](crate::model::Namespace)
+        /// Consumes the builder and constructs a [`Namespace`](crate::model::Namespace).
         pub fn build(self) -> crate::model::Namespace {
             crate::model::Namespace {
                 id: self.id,
@@ -5142,7 +5224,7 @@ pub mod namespace {
     }
 }
 impl Namespace {
-    /// Creates a new builder-style object to manufacture [`Namespace`](crate::model::Namespace)
+    /// Creates a new builder-style object to manufacture [`Namespace`](crate::model::Namespace).
     pub fn builder() -> crate::model::namespace::Builder {
         crate::model::namespace::Builder::default()
     }
@@ -5220,8 +5302,10 @@ pub struct Instance {
     /// <p>The health check isn't deleted immediately, so it will still appear for a while if you submit a <code>ListHealthChecks</code> request, for example.</p>
     /// </note> </li>
     /// </ul>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A unique string that identifies the request and that allows failed <code>RegisterInstance</code> requests to be retried without the risk of executing the operation twice. You must use a unique <code>CreatorRequestId</code> string every time you submit a <code>RegisterInstance</code> request if you're registering additional instances for the same namespace and service. <code>CreatorRequestId</code> can be any unique string (for example, a date/time stamp).</p>
+    #[doc(hidden)]
     pub creator_request_id: std::option::Option<std::string::String>,
     /// <p>A string map that contains the following information for the service that you specify in <code>ServiceId</code>:</p>
     /// <ul>
@@ -5286,6 +5370,7 @@ pub struct Instance {
     /// <p>This value is required if you specified settings for an <code>SRV</code> record or a Route 53 health check when you created the service.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -5385,11 +5470,10 @@ impl std::fmt::Debug for Instance {
         formatter.finish()
     }
 }
-/// See [`Instance`](crate::model::Instance)
+/// See [`Instance`](crate::model::Instance).
 pub mod instance {
 
-    /// A builder for [`Instance`](crate::model::Instance)
-    #[non_exhaustive]
+    /// A builder for [`Instance`](crate::model::Instance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -5587,7 +5671,7 @@ pub mod instance {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance)
+        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance).
         pub fn build(self) -> crate::model::Instance {
             crate::model::Instance {
                 id: self.id,
@@ -5598,7 +5682,7 @@ pub mod instance {
     }
 }
 impl Instance {
-    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance)
+    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance).
     pub fn builder() -> crate::model::instance::Builder {
         crate::model::instance::Builder::default()
     }
@@ -5609,15 +5693,20 @@ impl Instance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HttpInstanceSummary {
     /// <p>The ID of an instance that matches the values that you specified in the request.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p> <code></code> <code></code> <code></code> </p>
     /// <p>The <code>HttpName</code> name of the namespace. It's found in the <code>HttpProperties</code> member of the <code>Properties</code> member of the namespace.</p>
+    #[doc(hidden)]
     pub namespace_name: std::option::Option<std::string::String>,
     /// <p>The name of the service that you specified when you registered the instance.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
     /// <p>If you configured health checking in the service, the current health status of the service instance.</p>
+    #[doc(hidden)]
     pub health_status: std::option::Option<crate::model::HealthStatus>,
     /// <p>If you included any attributes when you registered the instance, the values of those attributes.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -5658,11 +5747,10 @@ impl std::fmt::Debug for HttpInstanceSummary {
         formatter.finish()
     }
 }
-/// See [`HttpInstanceSummary`](crate::model::HttpInstanceSummary)
+/// See [`HttpInstanceSummary`](crate::model::HttpInstanceSummary).
 pub mod http_instance_summary {
 
-    /// A builder for [`HttpInstanceSummary`](crate::model::HttpInstanceSummary)
-    #[non_exhaustive]
+    /// A builder for [`HttpInstanceSummary`](crate::model::HttpInstanceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_id: std::option::Option<std::string::String>,
@@ -5747,7 +5835,7 @@ pub mod http_instance_summary {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpInstanceSummary`](crate::model::HttpInstanceSummary)
+        /// Consumes the builder and constructs a [`HttpInstanceSummary`](crate::model::HttpInstanceSummary).
         pub fn build(self) -> crate::model::HttpInstanceSummary {
             crate::model::HttpInstanceSummary {
                 instance_id: self.instance_id,
@@ -5760,7 +5848,7 @@ pub mod http_instance_summary {
     }
 }
 impl HttpInstanceSummary {
-    /// Creates a new builder-style object to manufacture [`HttpInstanceSummary`](crate::model::HttpInstanceSummary)
+    /// Creates a new builder-style object to manufacture [`HttpInstanceSummary`](crate::model::HttpInstanceSummary).
     pub fn builder() -> crate::model::http_instance_summary::Builder {
         crate::model::http_instance_summary::Builder::default()
     }
@@ -5885,6 +5973,7 @@ impl AsRef<str> for ServiceTypeOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublicDnsNamespaceProperties {
     /// <p>DNS properties for the public DNS namespace.</p>
+    #[doc(hidden)]
     pub dns_properties: std::option::Option<crate::model::PublicDnsPropertiesMutable>,
 }
 impl PublicDnsNamespaceProperties {
@@ -5900,11 +5989,10 @@ impl std::fmt::Debug for PublicDnsNamespaceProperties {
         formatter.finish()
     }
 }
-/// See [`PublicDnsNamespaceProperties`](crate::model::PublicDnsNamespaceProperties)
+/// See [`PublicDnsNamespaceProperties`](crate::model::PublicDnsNamespaceProperties).
 pub mod public_dns_namespace_properties {
 
-    /// A builder for [`PublicDnsNamespaceProperties`](crate::model::PublicDnsNamespaceProperties)
-    #[non_exhaustive]
+    /// A builder for [`PublicDnsNamespaceProperties`](crate::model::PublicDnsNamespaceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dns_properties: std::option::Option<crate::model::PublicDnsPropertiesMutable>,
@@ -5923,7 +6011,7 @@ pub mod public_dns_namespace_properties {
             self.dns_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublicDnsNamespaceProperties`](crate::model::PublicDnsNamespaceProperties)
+        /// Consumes the builder and constructs a [`PublicDnsNamespaceProperties`](crate::model::PublicDnsNamespaceProperties).
         pub fn build(self) -> crate::model::PublicDnsNamespaceProperties {
             crate::model::PublicDnsNamespaceProperties {
                 dns_properties: self.dns_properties,
@@ -5932,7 +6020,7 @@ pub mod public_dns_namespace_properties {
     }
 }
 impl PublicDnsNamespaceProperties {
-    /// Creates a new builder-style object to manufacture [`PublicDnsNamespaceProperties`](crate::model::PublicDnsNamespaceProperties)
+    /// Creates a new builder-style object to manufacture [`PublicDnsNamespaceProperties`](crate::model::PublicDnsNamespaceProperties).
     pub fn builder() -> crate::model::public_dns_namespace_properties::Builder {
         crate::model::public_dns_namespace_properties::Builder::default()
     }
@@ -5943,6 +6031,7 @@ impl PublicDnsNamespaceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublicDnsPropertiesMutable {
     /// <p>Start of Authority (SOA) record for the hosted zone for the public DNS namespace.</p>
+    #[doc(hidden)]
     pub soa: std::option::Option<crate::model::Soa>,
 }
 impl PublicDnsPropertiesMutable {
@@ -5958,11 +6047,10 @@ impl std::fmt::Debug for PublicDnsPropertiesMutable {
         formatter.finish()
     }
 }
-/// See [`PublicDnsPropertiesMutable`](crate::model::PublicDnsPropertiesMutable)
+/// See [`PublicDnsPropertiesMutable`](crate::model::PublicDnsPropertiesMutable).
 pub mod public_dns_properties_mutable {
 
-    /// A builder for [`PublicDnsPropertiesMutable`](crate::model::PublicDnsPropertiesMutable)
-    #[non_exhaustive]
+    /// A builder for [`PublicDnsPropertiesMutable`](crate::model::PublicDnsPropertiesMutable).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) soa: std::option::Option<crate::model::Soa>,
@@ -5978,14 +6066,14 @@ pub mod public_dns_properties_mutable {
             self.soa = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublicDnsPropertiesMutable`](crate::model::PublicDnsPropertiesMutable)
+        /// Consumes the builder and constructs a [`PublicDnsPropertiesMutable`](crate::model::PublicDnsPropertiesMutable).
         pub fn build(self) -> crate::model::PublicDnsPropertiesMutable {
             crate::model::PublicDnsPropertiesMutable { soa: self.soa }
         }
     }
 }
 impl PublicDnsPropertiesMutable {
-    /// Creates a new builder-style object to manufacture [`PublicDnsPropertiesMutable`](crate::model::PublicDnsPropertiesMutable)
+    /// Creates a new builder-style object to manufacture [`PublicDnsPropertiesMutable`](crate::model::PublicDnsPropertiesMutable).
     pub fn builder() -> crate::model::public_dns_properties_mutable::Builder {
         crate::model::public_dns_properties_mutable::Builder::default()
     }
@@ -5996,6 +6084,7 @@ impl PublicDnsPropertiesMutable {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrivateDnsNamespaceProperties {
     /// <p>DNS properties for the private DNS namespace.</p>
+    #[doc(hidden)]
     pub dns_properties: std::option::Option<crate::model::PrivateDnsPropertiesMutable>,
 }
 impl PrivateDnsNamespaceProperties {
@@ -6013,11 +6102,10 @@ impl std::fmt::Debug for PrivateDnsNamespaceProperties {
         formatter.finish()
     }
 }
-/// See [`PrivateDnsNamespaceProperties`](crate::model::PrivateDnsNamespaceProperties)
+/// See [`PrivateDnsNamespaceProperties`](crate::model::PrivateDnsNamespaceProperties).
 pub mod private_dns_namespace_properties {
 
-    /// A builder for [`PrivateDnsNamespaceProperties`](crate::model::PrivateDnsNamespaceProperties)
-    #[non_exhaustive]
+    /// A builder for [`PrivateDnsNamespaceProperties`](crate::model::PrivateDnsNamespaceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dns_properties: std::option::Option<crate::model::PrivateDnsPropertiesMutable>,
@@ -6036,7 +6124,7 @@ pub mod private_dns_namespace_properties {
             self.dns_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrivateDnsNamespaceProperties`](crate::model::PrivateDnsNamespaceProperties)
+        /// Consumes the builder and constructs a [`PrivateDnsNamespaceProperties`](crate::model::PrivateDnsNamespaceProperties).
         pub fn build(self) -> crate::model::PrivateDnsNamespaceProperties {
             crate::model::PrivateDnsNamespaceProperties {
                 dns_properties: self.dns_properties,
@@ -6045,7 +6133,7 @@ pub mod private_dns_namespace_properties {
     }
 }
 impl PrivateDnsNamespaceProperties {
-    /// Creates a new builder-style object to manufacture [`PrivateDnsNamespaceProperties`](crate::model::PrivateDnsNamespaceProperties)
+    /// Creates a new builder-style object to manufacture [`PrivateDnsNamespaceProperties`](crate::model::PrivateDnsNamespaceProperties).
     pub fn builder() -> crate::model::private_dns_namespace_properties::Builder {
         crate::model::private_dns_namespace_properties::Builder::default()
     }
@@ -6056,6 +6144,7 @@ impl PrivateDnsNamespaceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrivateDnsPropertiesMutable {
     /// <p>Fields for the Start of Authority (SOA) record for the hosted zone for the private DNS namespace.</p>
+    #[doc(hidden)]
     pub soa: std::option::Option<crate::model::Soa>,
 }
 impl PrivateDnsPropertiesMutable {
@@ -6071,11 +6160,10 @@ impl std::fmt::Debug for PrivateDnsPropertiesMutable {
         formatter.finish()
     }
 }
-/// See [`PrivateDnsPropertiesMutable`](crate::model::PrivateDnsPropertiesMutable)
+/// See [`PrivateDnsPropertiesMutable`](crate::model::PrivateDnsPropertiesMutable).
 pub mod private_dns_properties_mutable {
 
-    /// A builder for [`PrivateDnsPropertiesMutable`](crate::model::PrivateDnsPropertiesMutable)
-    #[non_exhaustive]
+    /// A builder for [`PrivateDnsPropertiesMutable`](crate::model::PrivateDnsPropertiesMutable).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) soa: std::option::Option<crate::model::Soa>,
@@ -6091,14 +6179,14 @@ pub mod private_dns_properties_mutable {
             self.soa = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrivateDnsPropertiesMutable`](crate::model::PrivateDnsPropertiesMutable)
+        /// Consumes the builder and constructs a [`PrivateDnsPropertiesMutable`](crate::model::PrivateDnsPropertiesMutable).
         pub fn build(self) -> crate::model::PrivateDnsPropertiesMutable {
             crate::model::PrivateDnsPropertiesMutable { soa: self.soa }
         }
     }
 }
 impl PrivateDnsPropertiesMutable {
-    /// Creates a new builder-style object to manufacture [`PrivateDnsPropertiesMutable`](crate::model::PrivateDnsPropertiesMutable)
+    /// Creates a new builder-style object to manufacture [`PrivateDnsPropertiesMutable`](crate::model::PrivateDnsPropertiesMutable).
     pub fn builder() -> crate::model::private_dns_properties_mutable::Builder {
         crate::model::private_dns_properties_mutable::Builder::default()
     }

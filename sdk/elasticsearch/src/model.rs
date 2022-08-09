@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChangeProgressDetails {
     /// <p>The unique change identifier associated with a specific domain configuration change.</p>
+    #[doc(hidden)]
     pub change_id: std::option::Option<std::string::String>,
     /// <p>Contains an optional message associated with the domain configuration change.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ChangeProgressDetails {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ChangeProgressDetails {
         formatter.finish()
     }
 }
-/// See [`ChangeProgressDetails`](crate::model::ChangeProgressDetails)
+/// See [`ChangeProgressDetails`](crate::model::ChangeProgressDetails).
 pub mod change_progress_details {
 
-    /// A builder for [`ChangeProgressDetails`](crate::model::ChangeProgressDetails)
-    #[non_exhaustive]
+    /// A builder for [`ChangeProgressDetails`](crate::model::ChangeProgressDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_id: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod change_progress_details {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeProgressDetails`](crate::model::ChangeProgressDetails)
+        /// Consumes the builder and constructs a [`ChangeProgressDetails`](crate::model::ChangeProgressDetails).
         pub fn build(self) -> crate::model::ChangeProgressDetails {
             crate::model::ChangeProgressDetails {
                 change_id: self.change_id,
@@ -68,7 +69,7 @@ pub mod change_progress_details {
     }
 }
 impl ChangeProgressDetails {
-    /// Creates a new builder-style object to manufacture [`ChangeProgressDetails`](crate::model::ChangeProgressDetails)
+    /// Creates a new builder-style object to manufacture [`ChangeProgressDetails`](crate::model::ChangeProgressDetails).
     pub fn builder() -> crate::model::change_progress_details::Builder {
         crate::model::change_progress_details::Builder::default()
     }
@@ -79,22 +80,31 @@ impl ChangeProgressDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PackageDetails {
     /// <p>Internal ID of the package.</p>
+    #[doc(hidden)]
     pub package_id: std::option::Option<std::string::String>,
     /// <p>User specified name of the package.</p>
+    #[doc(hidden)]
     pub package_name: std::option::Option<std::string::String>,
     /// <p>Currently supports only TXT-DICTIONARY.</p>
+    #[doc(hidden)]
     pub package_type: std::option::Option<crate::model::PackageType>,
     /// <p>User-specified description of the package.</p>
+    #[doc(hidden)]
     pub package_description: std::option::Option<std::string::String>,
     /// <p>Current state of the package. Values are COPYING/COPY_FAILED/AVAILABLE/DELETING/DELETE_FAILED</p>
+    #[doc(hidden)]
     pub package_status: std::option::Option<crate::model::PackageStatus>,
     /// <p>Timestamp which tells creation date of the package.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub available_package_version: std::option::Option<std::string::String>,
     /// <p>Additional information if the package is in an error state. Null otherwise.</p>
+    #[doc(hidden)]
     pub error_details: std::option::Option<crate::model::ErrorDetails>,
 }
 impl PackageDetails {
@@ -150,11 +160,10 @@ impl std::fmt::Debug for PackageDetails {
         formatter.finish()
     }
 }
-/// See [`PackageDetails`](crate::model::PackageDetails)
+/// See [`PackageDetails`](crate::model::PackageDetails).
 pub mod package_details {
 
-    /// A builder for [`PackageDetails`](crate::model::PackageDetails)
-    #[non_exhaustive]
+    /// A builder for [`PackageDetails`](crate::model::PackageDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) package_id: std::option::Option<std::string::String>,
@@ -279,7 +288,7 @@ pub mod package_details {
             self.error_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`PackageDetails`](crate::model::PackageDetails)
+        /// Consumes the builder and constructs a [`PackageDetails`](crate::model::PackageDetails).
         pub fn build(self) -> crate::model::PackageDetails {
             crate::model::PackageDetails {
                 package_id: self.package_id,
@@ -296,7 +305,7 @@ pub mod package_details {
     }
 }
 impl PackageDetails {
-    /// Creates a new builder-style object to manufacture [`PackageDetails`](crate::model::PackageDetails)
+    /// Creates a new builder-style object to manufacture [`PackageDetails`](crate::model::PackageDetails).
     pub fn builder() -> crate::model::package_details::Builder {
         crate::model::package_details::Builder::default()
     }
@@ -307,8 +316,10 @@ impl PackageDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ErrorDetails {
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub error_type: std::option::Option<std::string::String>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl ErrorDetails {
@@ -329,11 +340,10 @@ impl std::fmt::Debug for ErrorDetails {
         formatter.finish()
     }
 }
-/// See [`ErrorDetails`](crate::model::ErrorDetails)
+/// See [`ErrorDetails`](crate::model::ErrorDetails).
 pub mod error_details {
 
-    /// A builder for [`ErrorDetails`](crate::model::ErrorDetails)
-    #[non_exhaustive]
+    /// A builder for [`ErrorDetails`](crate::model::ErrorDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_type: std::option::Option<std::string::String>,
@@ -363,7 +373,7 @@ pub mod error_details {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ErrorDetails`](crate::model::ErrorDetails)
+        /// Consumes the builder and constructs a [`ErrorDetails`](crate::model::ErrorDetails).
         pub fn build(self) -> crate::model::ErrorDetails {
             crate::model::ErrorDetails {
                 error_type: self.error_type,
@@ -373,7 +383,7 @@ pub mod error_details {
     }
 }
 impl ErrorDetails {
-    /// Creates a new builder-style object to manufacture [`ErrorDetails`](crate::model::ErrorDetails)
+    /// Creates a new builder-style object to manufacture [`ErrorDetails`](crate::model::ErrorDetails).
     pub fn builder() -> crate::model::error_details::Builder {
         crate::model::error_details::Builder::default()
     }
@@ -523,8 +533,10 @@ impl AsRef<str> for PackageType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PackageSource {
     /// <p>Name of the bucket containing the package.</p>
+    #[doc(hidden)]
     pub s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>Key (file name) of the package.</p>
+    #[doc(hidden)]
     pub s3_key: std::option::Option<std::string::String>,
 }
 impl PackageSource {
@@ -545,11 +557,10 @@ impl std::fmt::Debug for PackageSource {
         formatter.finish()
     }
 }
-/// See [`PackageSource`](crate::model::PackageSource)
+/// See [`PackageSource`](crate::model::PackageSource).
 pub mod package_source {
 
-    /// A builder for [`PackageSource`](crate::model::PackageSource)
-    #[non_exhaustive]
+    /// A builder for [`PackageSource`](crate::model::PackageSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_bucket_name: std::option::Option<std::string::String>,
@@ -579,7 +590,7 @@ pub mod package_source {
             self.s3_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`PackageSource`](crate::model::PackageSource)
+        /// Consumes the builder and constructs a [`PackageSource`](crate::model::PackageSource).
         pub fn build(self) -> crate::model::PackageSource {
             crate::model::PackageSource {
                 s3_bucket_name: self.s3_bucket_name,
@@ -589,7 +600,7 @@ pub mod package_source {
     }
 }
 impl PackageSource {
-    /// Creates a new builder-style object to manufacture [`PackageSource`](crate::model::PackageSource)
+    /// Creates a new builder-style object to manufacture [`PackageSource`](crate::model::PackageSource).
     pub fn builder() -> crate::model::package_source::Builder {
         crate::model::package_source::Builder::default()
     }
@@ -600,8 +611,10 @@ impl PackageSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DryRunResults {
     /// <p> Specifies the deployment mechanism through which the update shall be applied on the domain. Possible responses are <code>Blue/Green</code> (The update will require a blue/green deployment.) <code>DynamicUpdate</code> (The update can be applied in-place without a Blue/Green deployment required.) <code>Undetermined</code> (The domain is undergoing an update which needs to complete before the deployment type can be predicted.) <code>None</code> (The configuration change matches the current configuration and will not result in any update.) </p>
+    #[doc(hidden)]
     pub deployment_type: std::option::Option<std::string::String>,
     /// <p>Contains an optional message associated with the DryRunResults.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DryRunResults {
@@ -622,11 +635,10 @@ impl std::fmt::Debug for DryRunResults {
         formatter.finish()
     }
 }
-/// See [`DryRunResults`](crate::model::DryRunResults)
+/// See [`DryRunResults`](crate::model::DryRunResults).
 pub mod dry_run_results {
 
-    /// A builder for [`DryRunResults`](crate::model::DryRunResults)
-    #[non_exhaustive]
+    /// A builder for [`DryRunResults`](crate::model::DryRunResults).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_type: std::option::Option<std::string::String>,
@@ -656,7 +668,7 @@ pub mod dry_run_results {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DryRunResults`](crate::model::DryRunResults)
+        /// Consumes the builder and constructs a [`DryRunResults`](crate::model::DryRunResults).
         pub fn build(self) -> crate::model::DryRunResults {
             crate::model::DryRunResults {
                 deployment_type: self.deployment_type,
@@ -666,7 +678,7 @@ pub mod dry_run_results {
     }
 }
 impl DryRunResults {
-    /// Creates a new builder-style object to manufacture [`DryRunResults`](crate::model::DryRunResults)
+    /// Creates a new builder-style object to manufacture [`DryRunResults`](crate::model::DryRunResults).
     pub fn builder() -> crate::model::dry_run_results::Builder {
         crate::model::dry_run_results::Builder::default()
     }
@@ -677,37 +689,52 @@ impl DryRunResults {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ElasticsearchDomainConfig {
     /// <p>String of format X.Y to specify version for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub elasticsearch_version: std::option::Option<crate::model::ElasticsearchVersionStatus>,
     /// <p>Specifies the <code>ElasticsearchClusterConfig</code> for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub elasticsearch_cluster_config:
         std::option::Option<crate::model::ElasticsearchClusterConfigStatus>,
     /// <p>Specifies the <code>EBSOptions</code> for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub ebs_options: std::option::Option<crate::model::EbsOptionsStatus>,
     /// <p>IAM access policy as a JSON-formatted string.</p>
+    #[doc(hidden)]
     pub access_policies: std::option::Option<crate::model::AccessPoliciesStatus>,
     /// <p>Specifies the <code>SnapshotOptions</code> for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub snapshot_options: std::option::Option<crate::model::SnapshotOptionsStatus>,
     /// <p>The <code>VPCOptions</code> for the specified domain. For more information, see <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html" target="_blank">VPC Endpoints for Amazon Elasticsearch Service Domains</a>.</p>
+    #[doc(hidden)]
     pub vpc_options: std::option::Option<crate::model::VpcDerivedInfoStatus>,
     /// <p>The <code>CognitoOptions</code> for the specified domain. For more information, see <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-cognito-auth.html" target="_blank">Amazon Cognito Authentication for Kibana</a>.</p>
+    #[doc(hidden)]
     pub cognito_options: std::option::Option<crate::model::CognitoOptionsStatus>,
     /// <p>Specifies the <code>EncryptionAtRestOptions</code> for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub encryption_at_rest_options:
         std::option::Option<crate::model::EncryptionAtRestOptionsStatus>,
     /// <p>Specifies the <code>NodeToNodeEncryptionOptions</code> for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub node_to_node_encryption_options:
         std::option::Option<crate::model::NodeToNodeEncryptionOptionsStatus>,
     /// <p>Specifies the <code>AdvancedOptions</code> for the domain. See <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-advanced-options" target="_blank">Configuring Advanced Options</a> for more information.</p>
+    #[doc(hidden)]
     pub advanced_options: std::option::Option<crate::model::AdvancedOptionsStatus>,
     /// <p>Log publishing options for the given domain.</p>
+    #[doc(hidden)]
     pub log_publishing_options: std::option::Option<crate::model::LogPublishingOptionsStatus>,
     /// <p>Specifies the <code>DomainEndpointOptions</code> for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub domain_endpoint_options: std::option::Option<crate::model::DomainEndpointOptionsStatus>,
     /// <p>Specifies <code>AdvancedSecurityOptions</code> for the domain. </p>
+    #[doc(hidden)]
     pub advanced_security_options: std::option::Option<crate::model::AdvancedSecurityOptionsStatus>,
     /// <p>Specifies <code>AutoTuneOptions</code> for the domain. </p>
+    #[doc(hidden)]
     pub auto_tune_options: std::option::Option<crate::model::AutoTuneOptionsStatus>,
     /// <p>Specifies change details of the domain configuration change.</p>
+    #[doc(hidden)]
     pub change_progress_details: std::option::Option<crate::model::ChangeProgressDetails>,
 }
 impl ElasticsearchDomainConfig {
@@ -818,11 +845,10 @@ impl std::fmt::Debug for ElasticsearchDomainConfig {
         formatter.finish()
     }
 }
-/// See [`ElasticsearchDomainConfig`](crate::model::ElasticsearchDomainConfig)
+/// See [`ElasticsearchDomainConfig`](crate::model::ElasticsearchDomainConfig).
 pub mod elasticsearch_domain_config {
 
-    /// A builder for [`ElasticsearchDomainConfig`](crate::model::ElasticsearchDomainConfig)
-    #[non_exhaustive]
+    /// A builder for [`ElasticsearchDomainConfig`](crate::model::ElasticsearchDomainConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) elasticsearch_version:
@@ -1069,7 +1095,7 @@ pub mod elasticsearch_domain_config {
             self.change_progress_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ElasticsearchDomainConfig`](crate::model::ElasticsearchDomainConfig)
+        /// Consumes the builder and constructs a [`ElasticsearchDomainConfig`](crate::model::ElasticsearchDomainConfig).
         pub fn build(self) -> crate::model::ElasticsearchDomainConfig {
             crate::model::ElasticsearchDomainConfig {
                 elasticsearch_version: self.elasticsearch_version,
@@ -1092,7 +1118,7 @@ pub mod elasticsearch_domain_config {
     }
 }
 impl ElasticsearchDomainConfig {
-    /// Creates a new builder-style object to manufacture [`ElasticsearchDomainConfig`](crate::model::ElasticsearchDomainConfig)
+    /// Creates a new builder-style object to manufacture [`ElasticsearchDomainConfig`](crate::model::ElasticsearchDomainConfig).
     pub fn builder() -> crate::model::elasticsearch_domain_config::Builder {
         crate::model::elasticsearch_domain_config::Builder::default()
     }
@@ -1103,8 +1129,10 @@ impl ElasticsearchDomainConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoTuneOptionsStatus {
     /// <p> Specifies Auto-Tune options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::AutoTuneOptions>,
     /// <p> Specifies Status of the Auto-Tune options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AutoTuneStatus>,
 }
 impl AutoTuneOptionsStatus {
@@ -1125,11 +1153,10 @@ impl std::fmt::Debug for AutoTuneOptionsStatus {
         formatter.finish()
     }
 }
-/// See [`AutoTuneOptionsStatus`](crate::model::AutoTuneOptionsStatus)
+/// See [`AutoTuneOptionsStatus`](crate::model::AutoTuneOptionsStatus).
 pub mod auto_tune_options_status {
 
-    /// A builder for [`AutoTuneOptionsStatus`](crate::model::AutoTuneOptionsStatus)
-    #[non_exhaustive]
+    /// A builder for [`AutoTuneOptionsStatus`](crate::model::AutoTuneOptionsStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::AutoTuneOptions>,
@@ -1162,7 +1189,7 @@ pub mod auto_tune_options_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoTuneOptionsStatus`](crate::model::AutoTuneOptionsStatus)
+        /// Consumes the builder and constructs a [`AutoTuneOptionsStatus`](crate::model::AutoTuneOptionsStatus).
         pub fn build(self) -> crate::model::AutoTuneOptionsStatus {
             crate::model::AutoTuneOptionsStatus {
                 options: self.options,
@@ -1172,7 +1199,7 @@ pub mod auto_tune_options_status {
     }
 }
 impl AutoTuneOptionsStatus {
-    /// Creates a new builder-style object to manufacture [`AutoTuneOptionsStatus`](crate::model::AutoTuneOptionsStatus)
+    /// Creates a new builder-style object to manufacture [`AutoTuneOptionsStatus`](crate::model::AutoTuneOptionsStatus).
     pub fn builder() -> crate::model::auto_tune_options_status::Builder {
         crate::model::auto_tune_options_status::Builder::default()
     }
@@ -1183,16 +1210,22 @@ impl AutoTuneOptionsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoTuneStatus {
     /// <p>Timestamp which tells Auto-Tune options creation date .</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Timestamp which tells Auto-Tune options last updated time.</p>
+    #[doc(hidden)]
     pub update_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the Auto-Tune options latest version.</p>
+    #[doc(hidden)]
     pub update_version: i32,
     /// <p>Specifies the <code>AutoTuneState</code> for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::AutoTuneState>,
     /// <p>Specifies the error message while enabling or disabling the Auto-Tune options.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>Indicates whether the Elasticsearch domain is being deleted.</p>
+    #[doc(hidden)]
     pub pending_deletion: std::option::Option<bool>,
 }
 impl AutoTuneStatus {
@@ -1233,11 +1266,10 @@ impl std::fmt::Debug for AutoTuneStatus {
         formatter.finish()
     }
 }
-/// See [`AutoTuneStatus`](crate::model::AutoTuneStatus)
+/// See [`AutoTuneStatus`](crate::model::AutoTuneStatus).
 pub mod auto_tune_status {
 
-    /// A builder for [`AutoTuneStatus`](crate::model::AutoTuneStatus)
-    #[non_exhaustive]
+    /// A builder for [`AutoTuneStatus`](crate::model::AutoTuneStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -1320,7 +1352,7 @@ pub mod auto_tune_status {
             self.pending_deletion = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoTuneStatus`](crate::model::AutoTuneStatus)
+        /// Consumes the builder and constructs a [`AutoTuneStatus`](crate::model::AutoTuneStatus).
         pub fn build(self) -> crate::model::AutoTuneStatus {
             crate::model::AutoTuneStatus {
                 creation_date: self.creation_date,
@@ -1334,7 +1366,7 @@ pub mod auto_tune_status {
     }
 }
 impl AutoTuneStatus {
-    /// Creates a new builder-style object to manufacture [`AutoTuneStatus`](crate::model::AutoTuneStatus)
+    /// Creates a new builder-style object to manufacture [`AutoTuneStatus`](crate::model::AutoTuneStatus).
     pub fn builder() -> crate::model::auto_tune_status::Builder {
         crate::model::auto_tune_status::Builder::default()
     }
@@ -1438,10 +1470,13 @@ impl AsRef<str> for AutoTuneState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoTuneOptions {
     /// <p>Specifies the Auto-Tune desired state. Valid values are ENABLED, DISABLED. </p>
+    #[doc(hidden)]
     pub desired_state: std::option::Option<crate::model::AutoTuneDesiredState>,
     /// <p>Specifies the rollback state while disabling Auto-Tune for the domain. Valid values are NO_ROLLBACK, DEFAULT_ROLLBACK. </p>
+    #[doc(hidden)]
     pub rollback_on_disable: std::option::Option<crate::model::RollbackOnDisable>,
     /// <p>Specifies list of maitenance schedules. See the <a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/auto-tune.html" target="_blank">Developer Guide</a> for more information.</p>
+    #[doc(hidden)]
     pub maintenance_schedules:
         std::option::Option<std::vec::Vec<crate::model::AutoTuneMaintenanceSchedule>>,
 }
@@ -1470,11 +1505,10 @@ impl std::fmt::Debug for AutoTuneOptions {
         formatter.finish()
     }
 }
-/// See [`AutoTuneOptions`](crate::model::AutoTuneOptions)
+/// See [`AutoTuneOptions`](crate::model::AutoTuneOptions).
 pub mod auto_tune_options {
 
-    /// A builder for [`AutoTuneOptions`](crate::model::AutoTuneOptions)
-    #[non_exhaustive]
+    /// A builder for [`AutoTuneOptions`](crate::model::AutoTuneOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) desired_state: std::option::Option<crate::model::AutoTuneDesiredState>,
@@ -1531,7 +1565,7 @@ pub mod auto_tune_options {
             self.maintenance_schedules = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoTuneOptions`](crate::model::AutoTuneOptions)
+        /// Consumes the builder and constructs a [`AutoTuneOptions`](crate::model::AutoTuneOptions).
         pub fn build(self) -> crate::model::AutoTuneOptions {
             crate::model::AutoTuneOptions {
                 desired_state: self.desired_state,
@@ -1542,7 +1576,7 @@ pub mod auto_tune_options {
     }
 }
 impl AutoTuneOptions {
-    /// Creates a new builder-style object to manufacture [`AutoTuneOptions`](crate::model::AutoTuneOptions)
+    /// Creates a new builder-style object to manufacture [`AutoTuneOptions`](crate::model::AutoTuneOptions).
     pub fn builder() -> crate::model::auto_tune_options::Builder {
         crate::model::auto_tune_options::Builder::default()
     }
@@ -1553,10 +1587,13 @@ impl AutoTuneOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoTuneMaintenanceSchedule {
     /// <p>Specifies timestamp at which Auto-Tune maintenance schedule start. </p>
+    #[doc(hidden)]
     pub start_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies maintenance schedule duration: duration value and duration unit. See the <a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/auto-tune.html" target="_blank">Developer Guide</a> for more information.</p>
+    #[doc(hidden)]
     pub duration: std::option::Option<crate::model::Duration>,
     /// <p>Specifies cron expression for a recurring maintenance schedule. See the <a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/auto-tune.html" target="_blank">Developer Guide</a> for more information.</p>
+    #[doc(hidden)]
     pub cron_expression_for_recurrence: std::option::Option<std::string::String>,
 }
 impl AutoTuneMaintenanceSchedule {
@@ -1585,11 +1622,10 @@ impl std::fmt::Debug for AutoTuneMaintenanceSchedule {
         formatter.finish()
     }
 }
-/// See [`AutoTuneMaintenanceSchedule`](crate::model::AutoTuneMaintenanceSchedule)
+/// See [`AutoTuneMaintenanceSchedule`](crate::model::AutoTuneMaintenanceSchedule).
 pub mod auto_tune_maintenance_schedule {
 
-    /// A builder for [`AutoTuneMaintenanceSchedule`](crate::model::AutoTuneMaintenanceSchedule)
-    #[non_exhaustive]
+    /// A builder for [`AutoTuneMaintenanceSchedule`](crate::model::AutoTuneMaintenanceSchedule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_at: std::option::Option<aws_smithy_types::DateTime>,
@@ -1636,7 +1672,7 @@ pub mod auto_tune_maintenance_schedule {
             self.cron_expression_for_recurrence = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoTuneMaintenanceSchedule`](crate::model::AutoTuneMaintenanceSchedule)
+        /// Consumes the builder and constructs a [`AutoTuneMaintenanceSchedule`](crate::model::AutoTuneMaintenanceSchedule).
         pub fn build(self) -> crate::model::AutoTuneMaintenanceSchedule {
             crate::model::AutoTuneMaintenanceSchedule {
                 start_at: self.start_at,
@@ -1647,7 +1683,7 @@ pub mod auto_tune_maintenance_schedule {
     }
 }
 impl AutoTuneMaintenanceSchedule {
-    /// Creates a new builder-style object to manufacture [`AutoTuneMaintenanceSchedule`](crate::model::AutoTuneMaintenanceSchedule)
+    /// Creates a new builder-style object to manufacture [`AutoTuneMaintenanceSchedule`](crate::model::AutoTuneMaintenanceSchedule).
     pub fn builder() -> crate::model::auto_tune_maintenance_schedule::Builder {
         crate::model::auto_tune_maintenance_schedule::Builder::default()
     }
@@ -1658,8 +1694,10 @@ impl AutoTuneMaintenanceSchedule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Duration {
     /// <p> Integer to specify the value of a maintenance schedule duration. See the <a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/auto-tune.html" target="_blank">Developer Guide</a> for more information.</p>
+    #[doc(hidden)]
     pub value: i64,
     /// <p>Specifies the unit of a maintenance schedule duration. Valid value is HOURS. See the <a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/auto-tune.html" target="_blank">Developer Guide</a> for more information.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<crate::model::TimeUnit>,
 }
 impl Duration {
@@ -1680,11 +1718,10 @@ impl std::fmt::Debug for Duration {
         formatter.finish()
     }
 }
-/// See [`Duration`](crate::model::Duration)
+/// See [`Duration`](crate::model::Duration).
 pub mod duration {
 
-    /// A builder for [`Duration`](crate::model::Duration)
-    #[non_exhaustive]
+    /// A builder for [`Duration`](crate::model::Duration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<i64>,
@@ -1711,7 +1748,7 @@ pub mod duration {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`Duration`](crate::model::Duration)
+        /// Consumes the builder and constructs a [`Duration`](crate::model::Duration).
         pub fn build(self) -> crate::model::Duration {
             crate::model::Duration {
                 value: self.value.unwrap_or_default(),
@@ -1721,7 +1758,7 @@ pub mod duration {
     }
 }
 impl Duration {
-    /// Creates a new builder-style object to manufacture [`Duration`](crate::model::Duration)
+    /// Creates a new builder-style object to manufacture [`Duration`](crate::model::Duration).
     pub fn builder() -> crate::model::duration::Builder {
         crate::model::duration::Builder::default()
     }
@@ -1893,8 +1930,10 @@ impl AsRef<str> for AutoTuneDesiredState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AdvancedSecurityOptionsStatus {
     /// <p> Specifies advanced security options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::AdvancedSecurityOptions>,
     /// <p> Status of the advanced security options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl AdvancedSecurityOptionsStatus {
@@ -1915,11 +1954,10 @@ impl std::fmt::Debug for AdvancedSecurityOptionsStatus {
         formatter.finish()
     }
 }
-/// See [`AdvancedSecurityOptionsStatus`](crate::model::AdvancedSecurityOptionsStatus)
+/// See [`AdvancedSecurityOptionsStatus`](crate::model::AdvancedSecurityOptionsStatus).
 pub mod advanced_security_options_status {
 
-    /// A builder for [`AdvancedSecurityOptionsStatus`](crate::model::AdvancedSecurityOptionsStatus)
-    #[non_exhaustive]
+    /// A builder for [`AdvancedSecurityOptionsStatus`](crate::model::AdvancedSecurityOptionsStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::AdvancedSecurityOptions>,
@@ -1952,7 +1990,7 @@ pub mod advanced_security_options_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdvancedSecurityOptionsStatus`](crate::model::AdvancedSecurityOptionsStatus)
+        /// Consumes the builder and constructs a [`AdvancedSecurityOptionsStatus`](crate::model::AdvancedSecurityOptionsStatus).
         pub fn build(self) -> crate::model::AdvancedSecurityOptionsStatus {
             crate::model::AdvancedSecurityOptionsStatus {
                 options: self.options,
@@ -1962,7 +2000,7 @@ pub mod advanced_security_options_status {
     }
 }
 impl AdvancedSecurityOptionsStatus {
-    /// Creates a new builder-style object to manufacture [`AdvancedSecurityOptionsStatus`](crate::model::AdvancedSecurityOptionsStatus)
+    /// Creates a new builder-style object to manufacture [`AdvancedSecurityOptionsStatus`](crate::model::AdvancedSecurityOptionsStatus).
     pub fn builder() -> crate::model::advanced_security_options_status::Builder {
         crate::model::advanced_security_options_status::Builder::default()
     }
@@ -1973,14 +2011,19 @@ impl AdvancedSecurityOptionsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OptionStatus {
     /// <p>Timestamp which tells the creation date for the entity.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Timestamp which tells the last updated time for the entity.</p>
+    #[doc(hidden)]
     pub update_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the latest version for the entity.</p>
+    #[doc(hidden)]
     pub update_version: i32,
     /// <p>Provides the <code>OptionState</code> for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::OptionState>,
     /// <p>Indicates whether the Elasticsearch domain is being deleted.</p>
+    #[doc(hidden)]
     pub pending_deletion: std::option::Option<bool>,
 }
 impl OptionStatus {
@@ -2016,11 +2059,10 @@ impl std::fmt::Debug for OptionStatus {
         formatter.finish()
     }
 }
-/// See [`OptionStatus`](crate::model::OptionStatus)
+/// See [`OptionStatus`](crate::model::OptionStatus).
 pub mod option_status {
 
-    /// A builder for [`OptionStatus`](crate::model::OptionStatus)
-    #[non_exhaustive]
+    /// A builder for [`OptionStatus`](crate::model::OptionStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -2086,7 +2128,7 @@ pub mod option_status {
             self.pending_deletion = input;
             self
         }
-        /// Consumes the builder and constructs a [`OptionStatus`](crate::model::OptionStatus)
+        /// Consumes the builder and constructs a [`OptionStatus`](crate::model::OptionStatus).
         pub fn build(self) -> crate::model::OptionStatus {
             crate::model::OptionStatus {
                 creation_date: self.creation_date,
@@ -2099,7 +2141,7 @@ pub mod option_status {
     }
 }
 impl OptionStatus {
-    /// Creates a new builder-style object to manufacture [`OptionStatus`](crate::model::OptionStatus)
+    /// Creates a new builder-style object to manufacture [`OptionStatus`](crate::model::OptionStatus).
     pub fn builder() -> crate::model::option_status::Builder {
         crate::model::option_status::Builder::default()
     }
@@ -2173,14 +2215,19 @@ impl AsRef<str> for OptionState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AdvancedSecurityOptions {
     /// <p>True if advanced security is enabled.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>True if the internal user database is enabled.</p>
+    #[doc(hidden)]
     pub internal_user_database_enabled: std::option::Option<bool>,
     /// <p>Describes the SAML application configured for a domain.</p>
+    #[doc(hidden)]
     pub saml_options: std::option::Option<crate::model::SamlOptionsOutput>,
     /// <p>Specifies the Anonymous Auth Disable Date when Anonymous Auth is enabled.</p>
+    #[doc(hidden)]
     pub anonymous_auth_disable_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>True if Anonymous auth is enabled. Anonymous auth can be enabled only when AdvancedSecurity is enabled on existing domains.</p>
+    #[doc(hidden)]
     pub anonymous_auth_enabled: std::option::Option<bool>,
 }
 impl AdvancedSecurityOptions {
@@ -2222,11 +2269,10 @@ impl std::fmt::Debug for AdvancedSecurityOptions {
         formatter.finish()
     }
 }
-/// See [`AdvancedSecurityOptions`](crate::model::AdvancedSecurityOptions)
+/// See [`AdvancedSecurityOptions`](crate::model::AdvancedSecurityOptions).
 pub mod advanced_security_options {
 
-    /// A builder for [`AdvancedSecurityOptions`](crate::model::AdvancedSecurityOptions)
-    #[non_exhaustive]
+    /// A builder for [`AdvancedSecurityOptions`](crate::model::AdvancedSecurityOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -2295,7 +2341,7 @@ pub mod advanced_security_options {
             self.anonymous_auth_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdvancedSecurityOptions`](crate::model::AdvancedSecurityOptions)
+        /// Consumes the builder and constructs a [`AdvancedSecurityOptions`](crate::model::AdvancedSecurityOptions).
         pub fn build(self) -> crate::model::AdvancedSecurityOptions {
             crate::model::AdvancedSecurityOptions {
                 enabled: self.enabled,
@@ -2308,7 +2354,7 @@ pub mod advanced_security_options {
     }
 }
 impl AdvancedSecurityOptions {
-    /// Creates a new builder-style object to manufacture [`AdvancedSecurityOptions`](crate::model::AdvancedSecurityOptions)
+    /// Creates a new builder-style object to manufacture [`AdvancedSecurityOptions`](crate::model::AdvancedSecurityOptions).
     pub fn builder() -> crate::model::advanced_security_options::Builder {
         crate::model::advanced_security_options::Builder::default()
     }
@@ -2319,14 +2365,19 @@ impl AdvancedSecurityOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SamlOptionsOutput {
     /// <p>True if SAML is enabled.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>Describes the SAML Identity Provider's information.</p>
+    #[doc(hidden)]
     pub idp: std::option::Option<crate::model::SamlIdp>,
     /// <p>The key used for matching the SAML Subject attribute.</p>
+    #[doc(hidden)]
     pub subject_key: std::option::Option<std::string::String>,
     /// <p>The key used for matching the SAML Roles attribute.</p>
+    #[doc(hidden)]
     pub roles_key: std::option::Option<std::string::String>,
     /// <p>The duration, in minutes, after which a user session becomes inactive.</p>
+    #[doc(hidden)]
     pub session_timeout_minutes: std::option::Option<i32>,
 }
 impl SamlOptionsOutput {
@@ -2362,11 +2413,10 @@ impl std::fmt::Debug for SamlOptionsOutput {
         formatter.finish()
     }
 }
-/// See [`SamlOptionsOutput`](crate::model::SamlOptionsOutput)
+/// See [`SamlOptionsOutput`](crate::model::SamlOptionsOutput).
 pub mod saml_options_output {
 
-    /// A builder for [`SamlOptionsOutput`](crate::model::SamlOptionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`SamlOptionsOutput`](crate::model::SamlOptionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -2426,7 +2476,7 @@ pub mod saml_options_output {
             self.session_timeout_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`SamlOptionsOutput`](crate::model::SamlOptionsOutput)
+        /// Consumes the builder and constructs a [`SamlOptionsOutput`](crate::model::SamlOptionsOutput).
         pub fn build(self) -> crate::model::SamlOptionsOutput {
             crate::model::SamlOptionsOutput {
                 enabled: self.enabled,
@@ -2439,7 +2489,7 @@ pub mod saml_options_output {
     }
 }
 impl SamlOptionsOutput {
-    /// Creates a new builder-style object to manufacture [`SamlOptionsOutput`](crate::model::SamlOptionsOutput)
+    /// Creates a new builder-style object to manufacture [`SamlOptionsOutput`](crate::model::SamlOptionsOutput).
     pub fn builder() -> crate::model::saml_options_output::Builder {
         crate::model::saml_options_output::Builder::default()
     }
@@ -2450,8 +2500,10 @@ impl SamlOptionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SamlIdp {
     /// <p>The Metadata of the SAML application in xml format.</p>
+    #[doc(hidden)]
     pub metadata_content: std::option::Option<std::string::String>,
     /// <p>The unique Entity ID of the application in SAML Identity Provider.</p>
+    #[doc(hidden)]
     pub entity_id: std::option::Option<std::string::String>,
 }
 impl SamlIdp {
@@ -2472,11 +2524,10 @@ impl std::fmt::Debug for SamlIdp {
         formatter.finish()
     }
 }
-/// See [`SamlIdp`](crate::model::SamlIdp)
+/// See [`SamlIdp`](crate::model::SamlIdp).
 pub mod saml_idp {
 
-    /// A builder for [`SamlIdp`](crate::model::SamlIdp)
-    #[non_exhaustive]
+    /// A builder for [`SamlIdp`](crate::model::SamlIdp).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metadata_content: std::option::Option<std::string::String>,
@@ -2506,7 +2557,7 @@ pub mod saml_idp {
             self.entity_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SamlIdp`](crate::model::SamlIdp)
+        /// Consumes the builder and constructs a [`SamlIdp`](crate::model::SamlIdp).
         pub fn build(self) -> crate::model::SamlIdp {
             crate::model::SamlIdp {
                 metadata_content: self.metadata_content,
@@ -2516,7 +2567,7 @@ pub mod saml_idp {
     }
 }
 impl SamlIdp {
-    /// Creates a new builder-style object to manufacture [`SamlIdp`](crate::model::SamlIdp)
+    /// Creates a new builder-style object to manufacture [`SamlIdp`](crate::model::SamlIdp).
     pub fn builder() -> crate::model::saml_idp::Builder {
         crate::model::saml_idp::Builder::default()
     }
@@ -2527,8 +2578,10 @@ impl SamlIdp {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainEndpointOptionsStatus {
     /// <p>Options to configure endpoint for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::DomainEndpointOptions>,
     /// <p>The status of the endpoint options for the Elasticsearch domain. See <code>OptionStatus</code> for the status information that's included. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl DomainEndpointOptionsStatus {
@@ -2549,11 +2602,10 @@ impl std::fmt::Debug for DomainEndpointOptionsStatus {
         formatter.finish()
     }
 }
-/// See [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus)
+/// See [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus).
 pub mod domain_endpoint_options_status {
 
-    /// A builder for [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus)
-    #[non_exhaustive]
+    /// A builder for [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::DomainEndpointOptions>,
@@ -2586,7 +2638,7 @@ pub mod domain_endpoint_options_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus)
+        /// Consumes the builder and constructs a [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus).
         pub fn build(self) -> crate::model::DomainEndpointOptionsStatus {
             crate::model::DomainEndpointOptionsStatus {
                 options: self.options,
@@ -2596,7 +2648,7 @@ pub mod domain_endpoint_options_status {
     }
 }
 impl DomainEndpointOptionsStatus {
-    /// Creates a new builder-style object to manufacture [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus)
+    /// Creates a new builder-style object to manufacture [`DomainEndpointOptionsStatus`](crate::model::DomainEndpointOptionsStatus).
     pub fn builder() -> crate::model::domain_endpoint_options_status::Builder {
         crate::model::domain_endpoint_options_status::Builder::default()
     }
@@ -2607,6 +2659,7 @@ impl DomainEndpointOptionsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainEndpointOptions {
     /// <p>Specify if only HTTPS endpoint should be enabled for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub enforce_https: std::option::Option<bool>,
     /// <p>Specify the TLS security policy that needs to be applied to the HTTPS endpoint of Elasticsearch domain. <br><br> It can be one of the following values: </p>
     /// <ul>
@@ -2614,12 +2667,16 @@ pub struct DomainEndpointOptions {
     /// <li><b>Policy-Min-TLS-1-2-2019-07: </b> TLS security policy which supports only TLSv1.2</li>
     /// </ul>
     /// <p></p>
+    #[doc(hidden)]
     pub tls_security_policy: std::option::Option<crate::model::TlsSecurityPolicy>,
     /// <p>Specify if custom endpoint should be enabled for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub custom_endpoint_enabled: std::option::Option<bool>,
     /// <p>Specify the fully qualified domain for your custom endpoint.</p>
+    #[doc(hidden)]
     pub custom_endpoint: std::option::Option<std::string::String>,
     /// <p>Specify ACM certificate ARN for your custom endpoint.</p>
+    #[doc(hidden)]
     pub custom_endpoint_certificate_arn: std::option::Option<std::string::String>,
 }
 impl DomainEndpointOptions {
@@ -2663,11 +2720,10 @@ impl std::fmt::Debug for DomainEndpointOptions {
         formatter.finish()
     }
 }
-/// See [`DomainEndpointOptions`](crate::model::DomainEndpointOptions)
+/// See [`DomainEndpointOptions`](crate::model::DomainEndpointOptions).
 pub mod domain_endpoint_options {
 
-    /// A builder for [`DomainEndpointOptions`](crate::model::DomainEndpointOptions)
-    #[non_exhaustive]
+    /// A builder for [`DomainEndpointOptions`](crate::model::DomainEndpointOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enforce_https: std::option::Option<bool>,
@@ -2749,7 +2805,7 @@ pub mod domain_endpoint_options {
             self.custom_endpoint_certificate_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainEndpointOptions`](crate::model::DomainEndpointOptions)
+        /// Consumes the builder and constructs a [`DomainEndpointOptions`](crate::model::DomainEndpointOptions).
         pub fn build(self) -> crate::model::DomainEndpointOptions {
             crate::model::DomainEndpointOptions {
                 enforce_https: self.enforce_https,
@@ -2762,7 +2818,7 @@ pub mod domain_endpoint_options {
     }
 }
 impl DomainEndpointOptions {
-    /// Creates a new builder-style object to manufacture [`DomainEndpointOptions`](crate::model::DomainEndpointOptions)
+    /// Creates a new builder-style object to manufacture [`DomainEndpointOptions`](crate::model::DomainEndpointOptions).
     pub fn builder() -> crate::model::domain_endpoint_options::Builder {
         crate::model::domain_endpoint_options::Builder::default()
     }
@@ -2828,10 +2884,12 @@ impl AsRef<str> for TlsSecurityPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogPublishingOptionsStatus {
     /// <p>The log publishing options configured for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<
         std::collections::HashMap<crate::model::LogType, crate::model::LogPublishingOption>,
     >,
     /// <p>The status of the log publishing options for the Elasticsearch domain. See <code>OptionStatus</code> for the status information that's included. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl LogPublishingOptionsStatus {
@@ -2856,11 +2914,10 @@ impl std::fmt::Debug for LogPublishingOptionsStatus {
         formatter.finish()
     }
 }
-/// See [`LogPublishingOptionsStatus`](crate::model::LogPublishingOptionsStatus)
+/// See [`LogPublishingOptionsStatus`](crate::model::LogPublishingOptionsStatus).
 pub mod log_publishing_options_status {
 
-    /// A builder for [`LogPublishingOptionsStatus`](crate::model::LogPublishingOptionsStatus)
-    #[non_exhaustive]
+    /// A builder for [`LogPublishingOptionsStatus`](crate::model::LogPublishingOptionsStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<
@@ -2907,7 +2964,7 @@ pub mod log_publishing_options_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogPublishingOptionsStatus`](crate::model::LogPublishingOptionsStatus)
+        /// Consumes the builder and constructs a [`LogPublishingOptionsStatus`](crate::model::LogPublishingOptionsStatus).
         pub fn build(self) -> crate::model::LogPublishingOptionsStatus {
             crate::model::LogPublishingOptionsStatus {
                 options: self.options,
@@ -2917,7 +2974,7 @@ pub mod log_publishing_options_status {
     }
 }
 impl LogPublishingOptionsStatus {
-    /// Creates a new builder-style object to manufacture [`LogPublishingOptionsStatus`](crate::model::LogPublishingOptionsStatus)
+    /// Creates a new builder-style object to manufacture [`LogPublishingOptionsStatus`](crate::model::LogPublishingOptionsStatus).
     pub fn builder() -> crate::model::log_publishing_options_status::Builder {
         crate::model::log_publishing_options_status::Builder::default()
     }
@@ -2933,8 +2990,10 @@ impl LogPublishingOptionsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogPublishingOption {
     /// <p>ARN of the Cloudwatch log group to which log needs to be published.</p>
+    #[doc(hidden)]
     pub cloud_watch_logs_log_group_arn: std::option::Option<std::string::String>,
     /// <p> Specifies whether given log publishing option is enabled or not.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
 }
 impl LogPublishingOption {
@@ -2958,11 +3017,10 @@ impl std::fmt::Debug for LogPublishingOption {
         formatter.finish()
     }
 }
-/// See [`LogPublishingOption`](crate::model::LogPublishingOption)
+/// See [`LogPublishingOption`](crate::model::LogPublishingOption).
 pub mod log_publishing_option {
 
-    /// A builder for [`LogPublishingOption`](crate::model::LogPublishingOption)
-    #[non_exhaustive]
+    /// A builder for [`LogPublishingOption`](crate::model::LogPublishingOption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloud_watch_logs_log_group_arn: std::option::Option<std::string::String>,
@@ -2995,7 +3053,7 @@ pub mod log_publishing_option {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogPublishingOption`](crate::model::LogPublishingOption)
+        /// Consumes the builder and constructs a [`LogPublishingOption`](crate::model::LogPublishingOption).
         pub fn build(self) -> crate::model::LogPublishingOption {
             crate::model::LogPublishingOption {
                 cloud_watch_logs_log_group_arn: self.cloud_watch_logs_log_group_arn,
@@ -3005,7 +3063,7 @@ pub mod log_publishing_option {
     }
 }
 impl LogPublishingOption {
-    /// Creates a new builder-style object to manufacture [`LogPublishingOption`](crate::model::LogPublishingOption)
+    /// Creates a new builder-style object to manufacture [`LogPublishingOption`](crate::model::LogPublishingOption).
     pub fn builder() -> crate::model::log_publishing_option::Builder {
         crate::model::log_publishing_option::Builder::default()
     }
@@ -3096,9 +3154,11 @@ impl AsRef<str> for LogType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AdvancedOptionsStatus {
     /// <p> Specifies the status of advanced options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub options:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p> Specifies the status of <code>OptionStatus</code> for advanced options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl AdvancedOptionsStatus {
@@ -3122,11 +3182,10 @@ impl std::fmt::Debug for AdvancedOptionsStatus {
         formatter.finish()
     }
 }
-/// See [`AdvancedOptionsStatus`](crate::model::AdvancedOptionsStatus)
+/// See [`AdvancedOptionsStatus`](crate::model::AdvancedOptionsStatus).
 pub mod advanced_options_status {
 
-    /// A builder for [`AdvancedOptionsStatus`](crate::model::AdvancedOptionsStatus)
-    #[non_exhaustive]
+    /// A builder for [`AdvancedOptionsStatus`](crate::model::AdvancedOptionsStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<
@@ -3173,7 +3232,7 @@ pub mod advanced_options_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdvancedOptionsStatus`](crate::model::AdvancedOptionsStatus)
+        /// Consumes the builder and constructs a [`AdvancedOptionsStatus`](crate::model::AdvancedOptionsStatus).
         pub fn build(self) -> crate::model::AdvancedOptionsStatus {
             crate::model::AdvancedOptionsStatus {
                 options: self.options,
@@ -3183,7 +3242,7 @@ pub mod advanced_options_status {
     }
 }
 impl AdvancedOptionsStatus {
-    /// Creates a new builder-style object to manufacture [`AdvancedOptionsStatus`](crate::model::AdvancedOptionsStatus)
+    /// Creates a new builder-style object to manufacture [`AdvancedOptionsStatus`](crate::model::AdvancedOptionsStatus).
     pub fn builder() -> crate::model::advanced_options_status::Builder {
         crate::model::advanced_options_status::Builder::default()
     }
@@ -3194,8 +3253,10 @@ impl AdvancedOptionsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeToNodeEncryptionOptionsStatus {
     /// <p>Specifies the node-to-node encryption options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::NodeToNodeEncryptionOptions>,
     /// <p>Specifies the status of the node-to-node encryption options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl NodeToNodeEncryptionOptionsStatus {
@@ -3216,11 +3277,10 @@ impl std::fmt::Debug for NodeToNodeEncryptionOptionsStatus {
         formatter.finish()
     }
 }
-/// See [`NodeToNodeEncryptionOptionsStatus`](crate::model::NodeToNodeEncryptionOptionsStatus)
+/// See [`NodeToNodeEncryptionOptionsStatus`](crate::model::NodeToNodeEncryptionOptionsStatus).
 pub mod node_to_node_encryption_options_status {
 
-    /// A builder for [`NodeToNodeEncryptionOptionsStatus`](crate::model::NodeToNodeEncryptionOptionsStatus)
-    #[non_exhaustive]
+    /// A builder for [`NodeToNodeEncryptionOptionsStatus`](crate::model::NodeToNodeEncryptionOptionsStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::NodeToNodeEncryptionOptions>,
@@ -3253,7 +3313,7 @@ pub mod node_to_node_encryption_options_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeToNodeEncryptionOptionsStatus`](crate::model::NodeToNodeEncryptionOptionsStatus)
+        /// Consumes the builder and constructs a [`NodeToNodeEncryptionOptionsStatus`](crate::model::NodeToNodeEncryptionOptionsStatus).
         pub fn build(self) -> crate::model::NodeToNodeEncryptionOptionsStatus {
             crate::model::NodeToNodeEncryptionOptionsStatus {
                 options: self.options,
@@ -3263,7 +3323,7 @@ pub mod node_to_node_encryption_options_status {
     }
 }
 impl NodeToNodeEncryptionOptionsStatus {
-    /// Creates a new builder-style object to manufacture [`NodeToNodeEncryptionOptionsStatus`](crate::model::NodeToNodeEncryptionOptionsStatus)
+    /// Creates a new builder-style object to manufacture [`NodeToNodeEncryptionOptionsStatus`](crate::model::NodeToNodeEncryptionOptionsStatus).
     pub fn builder() -> crate::model::node_to_node_encryption_options_status::Builder {
         crate::model::node_to_node_encryption_options_status::Builder::default()
     }
@@ -3274,6 +3334,7 @@ impl NodeToNodeEncryptionOptionsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeToNodeEncryptionOptions {
     /// <p>Specify true to enable node-to-node encryption.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
 }
 impl NodeToNodeEncryptionOptions {
@@ -3289,11 +3350,10 @@ impl std::fmt::Debug for NodeToNodeEncryptionOptions {
         formatter.finish()
     }
 }
-/// See [`NodeToNodeEncryptionOptions`](crate::model::NodeToNodeEncryptionOptions)
+/// See [`NodeToNodeEncryptionOptions`](crate::model::NodeToNodeEncryptionOptions).
 pub mod node_to_node_encryption_options {
 
-    /// A builder for [`NodeToNodeEncryptionOptions`](crate::model::NodeToNodeEncryptionOptions)
-    #[non_exhaustive]
+    /// A builder for [`NodeToNodeEncryptionOptions`](crate::model::NodeToNodeEncryptionOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -3309,7 +3369,7 @@ pub mod node_to_node_encryption_options {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeToNodeEncryptionOptions`](crate::model::NodeToNodeEncryptionOptions)
+        /// Consumes the builder and constructs a [`NodeToNodeEncryptionOptions`](crate::model::NodeToNodeEncryptionOptions).
         pub fn build(self) -> crate::model::NodeToNodeEncryptionOptions {
             crate::model::NodeToNodeEncryptionOptions {
                 enabled: self.enabled,
@@ -3318,7 +3378,7 @@ pub mod node_to_node_encryption_options {
     }
 }
 impl NodeToNodeEncryptionOptions {
-    /// Creates a new builder-style object to manufacture [`NodeToNodeEncryptionOptions`](crate::model::NodeToNodeEncryptionOptions)
+    /// Creates a new builder-style object to manufacture [`NodeToNodeEncryptionOptions`](crate::model::NodeToNodeEncryptionOptions).
     pub fn builder() -> crate::model::node_to_node_encryption_options::Builder {
         crate::model::node_to_node_encryption_options::Builder::default()
     }
@@ -3329,8 +3389,10 @@ impl NodeToNodeEncryptionOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EncryptionAtRestOptionsStatus {
     /// <p> Specifies the Encryption At Rest options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::EncryptionAtRestOptions>,
     /// <p> Specifies the status of the Encryption At Rest options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl EncryptionAtRestOptionsStatus {
@@ -3351,11 +3413,10 @@ impl std::fmt::Debug for EncryptionAtRestOptionsStatus {
         formatter.finish()
     }
 }
-/// See [`EncryptionAtRestOptionsStatus`](crate::model::EncryptionAtRestOptionsStatus)
+/// See [`EncryptionAtRestOptionsStatus`](crate::model::EncryptionAtRestOptionsStatus).
 pub mod encryption_at_rest_options_status {
 
-    /// A builder for [`EncryptionAtRestOptionsStatus`](crate::model::EncryptionAtRestOptionsStatus)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionAtRestOptionsStatus`](crate::model::EncryptionAtRestOptionsStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::EncryptionAtRestOptions>,
@@ -3388,7 +3449,7 @@ pub mod encryption_at_rest_options_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionAtRestOptionsStatus`](crate::model::EncryptionAtRestOptionsStatus)
+        /// Consumes the builder and constructs a [`EncryptionAtRestOptionsStatus`](crate::model::EncryptionAtRestOptionsStatus).
         pub fn build(self) -> crate::model::EncryptionAtRestOptionsStatus {
             crate::model::EncryptionAtRestOptionsStatus {
                 options: self.options,
@@ -3398,7 +3459,7 @@ pub mod encryption_at_rest_options_status {
     }
 }
 impl EncryptionAtRestOptionsStatus {
-    /// Creates a new builder-style object to manufacture [`EncryptionAtRestOptionsStatus`](crate::model::EncryptionAtRestOptionsStatus)
+    /// Creates a new builder-style object to manufacture [`EncryptionAtRestOptionsStatus`](crate::model::EncryptionAtRestOptionsStatus).
     pub fn builder() -> crate::model::encryption_at_rest_options_status::Builder {
         crate::model::encryption_at_rest_options_status::Builder::default()
     }
@@ -3409,8 +3470,10 @@ impl EncryptionAtRestOptionsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EncryptionAtRestOptions {
     /// <p>Specifies the option to enable Encryption At Rest.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p> Specifies the KMS Key ID for Encryption At Rest options.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
 }
 impl EncryptionAtRestOptions {
@@ -3431,11 +3494,10 @@ impl std::fmt::Debug for EncryptionAtRestOptions {
         formatter.finish()
     }
 }
-/// See [`EncryptionAtRestOptions`](crate::model::EncryptionAtRestOptions)
+/// See [`EncryptionAtRestOptions`](crate::model::EncryptionAtRestOptions).
 pub mod encryption_at_rest_options {
 
-    /// A builder for [`EncryptionAtRestOptions`](crate::model::EncryptionAtRestOptions)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionAtRestOptions`](crate::model::EncryptionAtRestOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -3462,7 +3524,7 @@ pub mod encryption_at_rest_options {
             self.kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionAtRestOptions`](crate::model::EncryptionAtRestOptions)
+        /// Consumes the builder and constructs a [`EncryptionAtRestOptions`](crate::model::EncryptionAtRestOptions).
         pub fn build(self) -> crate::model::EncryptionAtRestOptions {
             crate::model::EncryptionAtRestOptions {
                 enabled: self.enabled,
@@ -3472,7 +3534,7 @@ pub mod encryption_at_rest_options {
     }
 }
 impl EncryptionAtRestOptions {
-    /// Creates a new builder-style object to manufacture [`EncryptionAtRestOptions`](crate::model::EncryptionAtRestOptions)
+    /// Creates a new builder-style object to manufacture [`EncryptionAtRestOptions`](crate::model::EncryptionAtRestOptions).
     pub fn builder() -> crate::model::encryption_at_rest_options::Builder {
         crate::model::encryption_at_rest_options::Builder::default()
     }
@@ -3483,8 +3545,10 @@ impl EncryptionAtRestOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CognitoOptionsStatus {
     /// <p>Specifies the Cognito options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::CognitoOptions>,
     /// <p>Specifies the status of the Cognito options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl CognitoOptionsStatus {
@@ -3505,11 +3569,10 @@ impl std::fmt::Debug for CognitoOptionsStatus {
         formatter.finish()
     }
 }
-/// See [`CognitoOptionsStatus`](crate::model::CognitoOptionsStatus)
+/// See [`CognitoOptionsStatus`](crate::model::CognitoOptionsStatus).
 pub mod cognito_options_status {
 
-    /// A builder for [`CognitoOptionsStatus`](crate::model::CognitoOptionsStatus)
-    #[non_exhaustive]
+    /// A builder for [`CognitoOptionsStatus`](crate::model::CognitoOptionsStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::CognitoOptions>,
@@ -3542,7 +3605,7 @@ pub mod cognito_options_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CognitoOptionsStatus`](crate::model::CognitoOptionsStatus)
+        /// Consumes the builder and constructs a [`CognitoOptionsStatus`](crate::model::CognitoOptionsStatus).
         pub fn build(self) -> crate::model::CognitoOptionsStatus {
             crate::model::CognitoOptionsStatus {
                 options: self.options,
@@ -3552,7 +3615,7 @@ pub mod cognito_options_status {
     }
 }
 impl CognitoOptionsStatus {
-    /// Creates a new builder-style object to manufacture [`CognitoOptionsStatus`](crate::model::CognitoOptionsStatus)
+    /// Creates a new builder-style object to manufacture [`CognitoOptionsStatus`](crate::model::CognitoOptionsStatus).
     pub fn builder() -> crate::model::cognito_options_status::Builder {
         crate::model::cognito_options_status::Builder::default()
     }
@@ -3563,12 +3626,16 @@ impl CognitoOptionsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CognitoOptions {
     /// <p>Specifies the option to enable Cognito for Kibana authentication.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>Specifies the Cognito user pool ID for Kibana authentication.</p>
+    #[doc(hidden)]
     pub user_pool_id: std::option::Option<std::string::String>,
     /// <p>Specifies the Cognito identity pool ID for Kibana authentication.</p>
+    #[doc(hidden)]
     pub identity_pool_id: std::option::Option<std::string::String>,
     /// <p>Specifies the role ARN that provides Elasticsearch permissions for accessing Cognito resources.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl CognitoOptions {
@@ -3599,11 +3666,10 @@ impl std::fmt::Debug for CognitoOptions {
         formatter.finish()
     }
 }
-/// See [`CognitoOptions`](crate::model::CognitoOptions)
+/// See [`CognitoOptions`](crate::model::CognitoOptions).
 pub mod cognito_options {
 
-    /// A builder for [`CognitoOptions`](crate::model::CognitoOptions)
-    #[non_exhaustive]
+    /// A builder for [`CognitoOptions`](crate::model::CognitoOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -3655,7 +3721,7 @@ pub mod cognito_options {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CognitoOptions`](crate::model::CognitoOptions)
+        /// Consumes the builder and constructs a [`CognitoOptions`](crate::model::CognitoOptions).
         pub fn build(self) -> crate::model::CognitoOptions {
             crate::model::CognitoOptions {
                 enabled: self.enabled,
@@ -3667,7 +3733,7 @@ pub mod cognito_options {
     }
 }
 impl CognitoOptions {
-    /// Creates a new builder-style object to manufacture [`CognitoOptions`](crate::model::CognitoOptions)
+    /// Creates a new builder-style object to manufacture [`CognitoOptions`](crate::model::CognitoOptions).
     pub fn builder() -> crate::model::cognito_options::Builder {
         crate::model::cognito_options::Builder::default()
     }
@@ -3678,8 +3744,10 @@ impl CognitoOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcDerivedInfoStatus {
     /// <p> Specifies the VPC options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::VpcDerivedInfo>,
     /// <p> Specifies the status of the VPC options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl VpcDerivedInfoStatus {
@@ -3700,11 +3768,10 @@ impl std::fmt::Debug for VpcDerivedInfoStatus {
         formatter.finish()
     }
 }
-/// See [`VpcDerivedInfoStatus`](crate::model::VpcDerivedInfoStatus)
+/// See [`VpcDerivedInfoStatus`](crate::model::VpcDerivedInfoStatus).
 pub mod vpc_derived_info_status {
 
-    /// A builder for [`VpcDerivedInfoStatus`](crate::model::VpcDerivedInfoStatus)
-    #[non_exhaustive]
+    /// A builder for [`VpcDerivedInfoStatus`](crate::model::VpcDerivedInfoStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::VpcDerivedInfo>,
@@ -3737,7 +3804,7 @@ pub mod vpc_derived_info_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcDerivedInfoStatus`](crate::model::VpcDerivedInfoStatus)
+        /// Consumes the builder and constructs a [`VpcDerivedInfoStatus`](crate::model::VpcDerivedInfoStatus).
         pub fn build(self) -> crate::model::VpcDerivedInfoStatus {
             crate::model::VpcDerivedInfoStatus {
                 options: self.options,
@@ -3747,7 +3814,7 @@ pub mod vpc_derived_info_status {
     }
 }
 impl VpcDerivedInfoStatus {
-    /// Creates a new builder-style object to manufacture [`VpcDerivedInfoStatus`](crate::model::VpcDerivedInfoStatus)
+    /// Creates a new builder-style object to manufacture [`VpcDerivedInfoStatus`](crate::model::VpcDerivedInfoStatus).
     pub fn builder() -> crate::model::vpc_derived_info_status::Builder {
         crate::model::vpc_derived_info_status::Builder::default()
     }
@@ -3758,12 +3825,16 @@ impl VpcDerivedInfoStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcDerivedInfo {
     /// <p>The VPC Id for the Elasticsearch domain. Exists only if the domain was created with VPCOptions.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>Specifies the subnets for VPC endpoint.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The availability zones for the Elasticsearch domain. Exists only if the domain was created with VPCOptions.</p>
+    #[doc(hidden)]
     pub availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies the security groups for VPC endpoint.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VpcDerivedInfo {
@@ -3794,11 +3865,10 @@ impl std::fmt::Debug for VpcDerivedInfo {
         formatter.finish()
     }
 }
-/// See [`VpcDerivedInfo`](crate::model::VpcDerivedInfo)
+/// See [`VpcDerivedInfo`](crate::model::VpcDerivedInfo).
 pub mod vpc_derived_info {
 
-    /// A builder for [`VpcDerivedInfo`](crate::model::VpcDerivedInfo)
-    #[non_exhaustive]
+    /// A builder for [`VpcDerivedInfo`](crate::model::VpcDerivedInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_id: std::option::Option<std::string::String>,
@@ -3874,7 +3944,7 @@ pub mod vpc_derived_info {
             self.security_group_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcDerivedInfo`](crate::model::VpcDerivedInfo)
+        /// Consumes the builder and constructs a [`VpcDerivedInfo`](crate::model::VpcDerivedInfo).
         pub fn build(self) -> crate::model::VpcDerivedInfo {
             crate::model::VpcDerivedInfo {
                 vpc_id: self.vpc_id,
@@ -3886,7 +3956,7 @@ pub mod vpc_derived_info {
     }
 }
 impl VpcDerivedInfo {
-    /// Creates a new builder-style object to manufacture [`VpcDerivedInfo`](crate::model::VpcDerivedInfo)
+    /// Creates a new builder-style object to manufacture [`VpcDerivedInfo`](crate::model::VpcDerivedInfo).
     pub fn builder() -> crate::model::vpc_derived_info::Builder {
         crate::model::vpc_derived_info::Builder::default()
     }
@@ -3897,8 +3967,10 @@ impl VpcDerivedInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnapshotOptionsStatus {
     /// <p>Specifies the daily snapshot options specified for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::SnapshotOptions>,
     /// <p>Specifies the status of a daily automated snapshot.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl SnapshotOptionsStatus {
@@ -3919,11 +3991,10 @@ impl std::fmt::Debug for SnapshotOptionsStatus {
         formatter.finish()
     }
 }
-/// See [`SnapshotOptionsStatus`](crate::model::SnapshotOptionsStatus)
+/// See [`SnapshotOptionsStatus`](crate::model::SnapshotOptionsStatus).
 pub mod snapshot_options_status {
 
-    /// A builder for [`SnapshotOptionsStatus`](crate::model::SnapshotOptionsStatus)
-    #[non_exhaustive]
+    /// A builder for [`SnapshotOptionsStatus`](crate::model::SnapshotOptionsStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::SnapshotOptions>,
@@ -3956,7 +4027,7 @@ pub mod snapshot_options_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnapshotOptionsStatus`](crate::model::SnapshotOptionsStatus)
+        /// Consumes the builder and constructs a [`SnapshotOptionsStatus`](crate::model::SnapshotOptionsStatus).
         pub fn build(self) -> crate::model::SnapshotOptionsStatus {
             crate::model::SnapshotOptionsStatus {
                 options: self.options,
@@ -3966,7 +4037,7 @@ pub mod snapshot_options_status {
     }
 }
 impl SnapshotOptionsStatus {
-    /// Creates a new builder-style object to manufacture [`SnapshotOptionsStatus`](crate::model::SnapshotOptionsStatus)
+    /// Creates a new builder-style object to manufacture [`SnapshotOptionsStatus`](crate::model::SnapshotOptionsStatus).
     pub fn builder() -> crate::model::snapshot_options_status::Builder {
         crate::model::snapshot_options_status::Builder::default()
     }
@@ -3977,6 +4048,7 @@ impl SnapshotOptionsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnapshotOptions {
     /// <p>Specifies the time, in UTC format, when the service takes a daily automated snapshot of the specified Elasticsearch domain. Default value is <code>0</code> hours.</p>
+    #[doc(hidden)]
     pub automated_snapshot_start_hour: std::option::Option<i32>,
 }
 impl SnapshotOptions {
@@ -3995,11 +4067,10 @@ impl std::fmt::Debug for SnapshotOptions {
         formatter.finish()
     }
 }
-/// See [`SnapshotOptions`](crate::model::SnapshotOptions)
+/// See [`SnapshotOptions`](crate::model::SnapshotOptions).
 pub mod snapshot_options {
 
-    /// A builder for [`SnapshotOptions`](crate::model::SnapshotOptions)
-    #[non_exhaustive]
+    /// A builder for [`SnapshotOptions`](crate::model::SnapshotOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) automated_snapshot_start_hour: std::option::Option<i32>,
@@ -4018,7 +4089,7 @@ pub mod snapshot_options {
             self.automated_snapshot_start_hour = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnapshotOptions`](crate::model::SnapshotOptions)
+        /// Consumes the builder and constructs a [`SnapshotOptions`](crate::model::SnapshotOptions).
         pub fn build(self) -> crate::model::SnapshotOptions {
             crate::model::SnapshotOptions {
                 automated_snapshot_start_hour: self.automated_snapshot_start_hour,
@@ -4027,7 +4098,7 @@ pub mod snapshot_options {
     }
 }
 impl SnapshotOptions {
-    /// Creates a new builder-style object to manufacture [`SnapshotOptions`](crate::model::SnapshotOptions)
+    /// Creates a new builder-style object to manufacture [`SnapshotOptions`](crate::model::SnapshotOptions).
     pub fn builder() -> crate::model::snapshot_options::Builder {
         crate::model::snapshot_options::Builder::default()
     }
@@ -4038,8 +4109,10 @@ impl SnapshotOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessPoliciesStatus {
     /// <p>The access policy configured for the Elasticsearch domain. Access policies may be resource-based, IP-based, or IAM-based. See <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-access-policies" target="_blank"> Configuring Access Policies</a>for more information.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<std::string::String>,
     /// <p>The status of the access policy for the Elasticsearch domain. See <code>OptionStatus</code> for the status information that's included. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl AccessPoliciesStatus {
@@ -4060,11 +4133,10 @@ impl std::fmt::Debug for AccessPoliciesStatus {
         formatter.finish()
     }
 }
-/// See [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus)
+/// See [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus).
 pub mod access_policies_status {
 
-    /// A builder for [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus)
-    #[non_exhaustive]
+    /// A builder for [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<std::string::String>,
@@ -4094,7 +4166,7 @@ pub mod access_policies_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus)
+        /// Consumes the builder and constructs a [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus).
         pub fn build(self) -> crate::model::AccessPoliciesStatus {
             crate::model::AccessPoliciesStatus {
                 options: self.options,
@@ -4104,7 +4176,7 @@ pub mod access_policies_status {
     }
 }
 impl AccessPoliciesStatus {
-    /// Creates a new builder-style object to manufacture [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus)
+    /// Creates a new builder-style object to manufacture [`AccessPoliciesStatus`](crate::model::AccessPoliciesStatus).
     pub fn builder() -> crate::model::access_policies_status::Builder {
         crate::model::access_policies_status::Builder::default()
     }
@@ -4115,8 +4187,10 @@ impl AccessPoliciesStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EbsOptionsStatus {
     /// <p> Specifies the EBS options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::EbsOptions>,
     /// <p> Specifies the status of the EBS options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl EbsOptionsStatus {
@@ -4137,11 +4211,10 @@ impl std::fmt::Debug for EbsOptionsStatus {
         formatter.finish()
     }
 }
-/// See [`EbsOptionsStatus`](crate::model::EbsOptionsStatus)
+/// See [`EbsOptionsStatus`](crate::model::EbsOptionsStatus).
 pub mod ebs_options_status {
 
-    /// A builder for [`EbsOptionsStatus`](crate::model::EbsOptionsStatus)
-    #[non_exhaustive]
+    /// A builder for [`EbsOptionsStatus`](crate::model::EbsOptionsStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::EbsOptions>,
@@ -4171,7 +4244,7 @@ pub mod ebs_options_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`EbsOptionsStatus`](crate::model::EbsOptionsStatus)
+        /// Consumes the builder and constructs a [`EbsOptionsStatus`](crate::model::EbsOptionsStatus).
         pub fn build(self) -> crate::model::EbsOptionsStatus {
             crate::model::EbsOptionsStatus {
                 options: self.options,
@@ -4181,7 +4254,7 @@ pub mod ebs_options_status {
     }
 }
 impl EbsOptionsStatus {
-    /// Creates a new builder-style object to manufacture [`EbsOptionsStatus`](crate::model::EbsOptionsStatus)
+    /// Creates a new builder-style object to manufacture [`EbsOptionsStatus`](crate::model::EbsOptionsStatus).
     pub fn builder() -> crate::model::ebs_options_status::Builder {
         crate::model::ebs_options_status::Builder::default()
     }
@@ -4192,13 +4265,20 @@ impl EbsOptionsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EbsOptions {
     /// <p>Specifies whether EBS-based storage is enabled.</p>
+    #[doc(hidden)]
     pub ebs_enabled: std::option::Option<bool>,
     /// <p> Specifies the volume type for EBS-based storage.</p>
+    #[doc(hidden)]
     pub volume_type: std::option::Option<crate::model::VolumeType>,
     /// <p> Integer to specify the size of an EBS volume.</p>
+    #[doc(hidden)]
     pub volume_size: std::option::Option<i32>,
-    /// <p>Specifies the IOPD for a Provisioned IOPS EBS volume (SSD).</p>
+    /// <p>Specifies the IOPS for Provisioned IOPS And GP3 EBS volume (SSD).</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
+    /// <p>Specifies the Throughput for GP3 EBS volume (SSD).</p>
+    #[doc(hidden)]
+    pub throughput: std::option::Option<i32>,
 }
 impl EbsOptions {
     /// <p>Specifies whether EBS-based storage is enabled.</p>
@@ -4213,9 +4293,13 @@ impl EbsOptions {
     pub fn volume_size(&self) -> std::option::Option<i32> {
         self.volume_size
     }
-    /// <p>Specifies the IOPD for a Provisioned IOPS EBS volume (SSD).</p>
+    /// <p>Specifies the IOPS for Provisioned IOPS And GP3 EBS volume (SSD).</p>
     pub fn iops(&self) -> std::option::Option<i32> {
         self.iops
+    }
+    /// <p>Specifies the Throughput for GP3 EBS volume (SSD).</p>
+    pub fn throughput(&self) -> std::option::Option<i32> {
+        self.throughput
     }
 }
 impl std::fmt::Debug for EbsOptions {
@@ -4225,20 +4309,21 @@ impl std::fmt::Debug for EbsOptions {
         formatter.field("volume_type", &self.volume_type);
         formatter.field("volume_size", &self.volume_size);
         formatter.field("iops", &self.iops);
+        formatter.field("throughput", &self.throughput);
         formatter.finish()
     }
 }
-/// See [`EbsOptions`](crate::model::EbsOptions)
+/// See [`EbsOptions`](crate::model::EbsOptions).
 pub mod ebs_options {
 
-    /// A builder for [`EbsOptions`](crate::model::EbsOptions)
-    #[non_exhaustive]
+    /// A builder for [`EbsOptions`](crate::model::EbsOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ebs_enabled: std::option::Option<bool>,
         pub(crate) volume_type: std::option::Option<crate::model::VolumeType>,
         pub(crate) volume_size: std::option::Option<i32>,
         pub(crate) iops: std::option::Option<i32>,
+        pub(crate) throughput: std::option::Option<i32>,
     }
     impl Builder {
         /// <p>Specifies whether EBS-based storage is enabled.</p>
@@ -4274,35 +4359,46 @@ pub mod ebs_options {
             self.volume_size = input;
             self
         }
-        /// <p>Specifies the IOPD for a Provisioned IOPS EBS volume (SSD).</p>
+        /// <p>Specifies the IOPS for Provisioned IOPS And GP3 EBS volume (SSD).</p>
         pub fn iops(mut self, input: i32) -> Self {
             self.iops = Some(input);
             self
         }
-        /// <p>Specifies the IOPD for a Provisioned IOPS EBS volume (SSD).</p>
+        /// <p>Specifies the IOPS for Provisioned IOPS And GP3 EBS volume (SSD).</p>
         pub fn set_iops(mut self, input: std::option::Option<i32>) -> Self {
             self.iops = input;
             self
         }
-        /// Consumes the builder and constructs a [`EbsOptions`](crate::model::EbsOptions)
+        /// <p>Specifies the Throughput for GP3 EBS volume (SSD).</p>
+        pub fn throughput(mut self, input: i32) -> Self {
+            self.throughput = Some(input);
+            self
+        }
+        /// <p>Specifies the Throughput for GP3 EBS volume (SSD).</p>
+        pub fn set_throughput(mut self, input: std::option::Option<i32>) -> Self {
+            self.throughput = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`EbsOptions`](crate::model::EbsOptions).
         pub fn build(self) -> crate::model::EbsOptions {
             crate::model::EbsOptions {
                 ebs_enabled: self.ebs_enabled,
                 volume_type: self.volume_type,
                 volume_size: self.volume_size,
                 iops: self.iops,
+                throughput: self.throughput,
             }
         }
     }
 }
 impl EbsOptions {
-    /// Creates a new builder-style object to manufacture [`EbsOptions`](crate::model::EbsOptions)
+    /// Creates a new builder-style object to manufacture [`EbsOptions`](crate::model::EbsOptions).
     pub fn builder() -> crate::model::ebs_options::Builder {
         crate::model::ebs_options::Builder::default()
     }
 }
 
-/// <p> The type of EBS volume, standard, gp2, or io1. See <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs" target="_blank">Configuring EBS-based Storage</a>for more information.</p>
+/// <p> The type of EBS volume, standard, gp2, gp3 or io1. See <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs" target="_blank">Configuring EBS-based Storage</a>for more information.</p>
 #[non_exhaustive]
 #[derive(
     std::clone::Clone,
@@ -4317,6 +4413,8 @@ pub enum VolumeType {
     #[allow(missing_docs)] // documentation missing in model
     Gp2,
     #[allow(missing_docs)] // documentation missing in model
+    Gp3,
+    #[allow(missing_docs)] // documentation missing in model
     Io1,
     #[allow(missing_docs)] // documentation missing in model
     Standard,
@@ -4327,6 +4425,7 @@ impl std::convert::From<&str> for VolumeType {
     fn from(s: &str) -> Self {
         match s {
             "gp2" => VolumeType::Gp2,
+            "gp3" => VolumeType::Gp3,
             "io1" => VolumeType::Io1,
             "standard" => VolumeType::Standard,
             other => VolumeType::Unknown(other.to_owned()),
@@ -4345,6 +4444,7 @@ impl VolumeType {
     pub fn as_str(&self) -> &str {
         match self {
             VolumeType::Gp2 => "gp2",
+            VolumeType::Gp3 => "gp3",
             VolumeType::Io1 => "io1",
             VolumeType::Standard => "standard",
             VolumeType::Unknown(s) => s.as_ref(),
@@ -4352,7 +4452,7 @@ impl VolumeType {
     }
     /// Returns all the `&str` values of the enum members.
     pub fn values() -> &'static [&'static str] {
-        &["gp2", "io1", "standard"]
+        &["gp2", "gp3", "io1", "standard"]
     }
 }
 impl AsRef<str> for VolumeType {
@@ -4366,8 +4466,10 @@ impl AsRef<str> for VolumeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ElasticsearchClusterConfigStatus {
     /// <p> Specifies the cluster configuration for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<crate::model::ElasticsearchClusterConfig>,
     /// <p> Specifies the status of the configuration for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl ElasticsearchClusterConfigStatus {
@@ -4388,11 +4490,10 @@ impl std::fmt::Debug for ElasticsearchClusterConfigStatus {
         formatter.finish()
     }
 }
-/// See [`ElasticsearchClusterConfigStatus`](crate::model::ElasticsearchClusterConfigStatus)
+/// See [`ElasticsearchClusterConfigStatus`](crate::model::ElasticsearchClusterConfigStatus).
 pub mod elasticsearch_cluster_config_status {
 
-    /// A builder for [`ElasticsearchClusterConfigStatus`](crate::model::ElasticsearchClusterConfigStatus)
-    #[non_exhaustive]
+    /// A builder for [`ElasticsearchClusterConfigStatus`](crate::model::ElasticsearchClusterConfigStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<crate::model::ElasticsearchClusterConfig>,
@@ -4425,7 +4526,7 @@ pub mod elasticsearch_cluster_config_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ElasticsearchClusterConfigStatus`](crate::model::ElasticsearchClusterConfigStatus)
+        /// Consumes the builder and constructs a [`ElasticsearchClusterConfigStatus`](crate::model::ElasticsearchClusterConfigStatus).
         pub fn build(self) -> crate::model::ElasticsearchClusterConfigStatus {
             crate::model::ElasticsearchClusterConfigStatus {
                 options: self.options,
@@ -4435,7 +4536,7 @@ pub mod elasticsearch_cluster_config_status {
     }
 }
 impl ElasticsearchClusterConfigStatus {
-    /// Creates a new builder-style object to manufacture [`ElasticsearchClusterConfigStatus`](crate::model::ElasticsearchClusterConfigStatus)
+    /// Creates a new builder-style object to manufacture [`ElasticsearchClusterConfigStatus`](crate::model::ElasticsearchClusterConfigStatus).
     pub fn builder() -> crate::model::elasticsearch_cluster_config_status::Builder {
         crate::model::elasticsearch_cluster_config_status::Builder::default()
     }
@@ -4446,26 +4547,37 @@ impl ElasticsearchClusterConfigStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ElasticsearchClusterConfig {
     /// <p>The instance type for an Elasticsearch cluster. UltraWarm instance types are not supported for data instances.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<crate::model::EsPartitionInstanceType>,
     /// <p>The number of instances in the specified domain cluster.</p>
+    #[doc(hidden)]
     pub instance_count: std::option::Option<i32>,
     /// <p>A boolean value to indicate whether a dedicated master node is enabled. See <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains.html#es-managedomains-dedicatedmasternodes" target="_blank">About Dedicated Master Nodes</a> for more information.</p>
+    #[doc(hidden)]
     pub dedicated_master_enabled: std::option::Option<bool>,
     /// <p>A boolean value to indicate whether zone awareness is enabled. See <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains.html#es-managedomains-zoneawareness" target="_blank">About Zone Awareness</a> for more information.</p>
+    #[doc(hidden)]
     pub zone_awareness_enabled: std::option::Option<bool>,
     /// <p>Specifies the zone awareness configuration for a domain when zone awareness is enabled.</p>
+    #[doc(hidden)]
     pub zone_awareness_config: std::option::Option<crate::model::ZoneAwarenessConfig>,
     /// <p>The instance type for a dedicated master node.</p>
+    #[doc(hidden)]
     pub dedicated_master_type: std::option::Option<crate::model::EsPartitionInstanceType>,
     /// <p>Total number of dedicated master nodes, active and on standby, for the cluster.</p>
+    #[doc(hidden)]
     pub dedicated_master_count: std::option::Option<i32>,
     /// <p>True to enable warm storage.</p>
+    #[doc(hidden)]
     pub warm_enabled: std::option::Option<bool>,
     /// <p>The instance type for the Elasticsearch cluster's warm nodes.</p>
+    #[doc(hidden)]
     pub warm_type: std::option::Option<crate::model::EsWarmPartitionInstanceType>,
     /// <p>The number of warm nodes in the cluster.</p>
+    #[doc(hidden)]
     pub warm_count: std::option::Option<i32>,
     /// <p>Specifies the <code>ColdStorageOptions</code> config for Elasticsearch Domain</p>
+    #[doc(hidden)]
     pub cold_storage_options: std::option::Option<crate::model::ColdStorageOptions>,
 }
 impl ElasticsearchClusterConfig {
@@ -4533,11 +4645,10 @@ impl std::fmt::Debug for ElasticsearchClusterConfig {
         formatter.finish()
     }
 }
-/// See [`ElasticsearchClusterConfig`](crate::model::ElasticsearchClusterConfig)
+/// See [`ElasticsearchClusterConfig`](crate::model::ElasticsearchClusterConfig).
 pub mod elasticsearch_cluster_config {
 
-    /// A builder for [`ElasticsearchClusterConfig`](crate::model::ElasticsearchClusterConfig)
-    #[non_exhaustive]
+    /// A builder for [`ElasticsearchClusterConfig`](crate::model::ElasticsearchClusterConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_type: std::option::Option<crate::model::EsPartitionInstanceType>,
@@ -4682,7 +4793,7 @@ pub mod elasticsearch_cluster_config {
             self.cold_storage_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`ElasticsearchClusterConfig`](crate::model::ElasticsearchClusterConfig)
+        /// Consumes the builder and constructs a [`ElasticsearchClusterConfig`](crate::model::ElasticsearchClusterConfig).
         pub fn build(self) -> crate::model::ElasticsearchClusterConfig {
             crate::model::ElasticsearchClusterConfig {
                 instance_type: self.instance_type,
@@ -4701,7 +4812,7 @@ pub mod elasticsearch_cluster_config {
     }
 }
 impl ElasticsearchClusterConfig {
-    /// Creates a new builder-style object to manufacture [`ElasticsearchClusterConfig`](crate::model::ElasticsearchClusterConfig)
+    /// Creates a new builder-style object to manufacture [`ElasticsearchClusterConfig`](crate::model::ElasticsearchClusterConfig).
     pub fn builder() -> crate::model::elasticsearch_cluster_config::Builder {
         crate::model::elasticsearch_cluster_config::Builder::default()
     }
@@ -4712,6 +4823,7 @@ impl ElasticsearchClusterConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ColdStorageOptions {
     /// <p>Enable cold storage option. Accepted values true or false</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
 }
 impl ColdStorageOptions {
@@ -4727,11 +4839,10 @@ impl std::fmt::Debug for ColdStorageOptions {
         formatter.finish()
     }
 }
-/// See [`ColdStorageOptions`](crate::model::ColdStorageOptions)
+/// See [`ColdStorageOptions`](crate::model::ColdStorageOptions).
 pub mod cold_storage_options {
 
-    /// A builder for [`ColdStorageOptions`](crate::model::ColdStorageOptions)
-    #[non_exhaustive]
+    /// A builder for [`ColdStorageOptions`](crate::model::ColdStorageOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -4747,7 +4858,7 @@ pub mod cold_storage_options {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`ColdStorageOptions`](crate::model::ColdStorageOptions)
+        /// Consumes the builder and constructs a [`ColdStorageOptions`](crate::model::ColdStorageOptions).
         pub fn build(self) -> crate::model::ColdStorageOptions {
             crate::model::ColdStorageOptions {
                 enabled: self.enabled,
@@ -4756,7 +4867,7 @@ pub mod cold_storage_options {
     }
 }
 impl ColdStorageOptions {
-    /// Creates a new builder-style object to manufacture [`ColdStorageOptions`](crate::model::ColdStorageOptions)
+    /// Creates a new builder-style object to manufacture [`ColdStorageOptions`](crate::model::ColdStorageOptions).
     pub fn builder() -> crate::model::cold_storage_options::Builder {
         crate::model::cold_storage_options::Builder::default()
     }
@@ -5179,6 +5290,7 @@ impl AsRef<str> for EsPartitionInstanceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ZoneAwarenessConfig {
     /// <p>An integer value to indicate the number of availability zones for a domain when zone awareness is enabled. This should be equal to number of subnets if VPC endpoints is enabled</p>
+    #[doc(hidden)]
     pub availability_zone_count: std::option::Option<i32>,
 }
 impl ZoneAwarenessConfig {
@@ -5194,11 +5306,10 @@ impl std::fmt::Debug for ZoneAwarenessConfig {
         formatter.finish()
     }
 }
-/// See [`ZoneAwarenessConfig`](crate::model::ZoneAwarenessConfig)
+/// See [`ZoneAwarenessConfig`](crate::model::ZoneAwarenessConfig).
 pub mod zone_awareness_config {
 
-    /// A builder for [`ZoneAwarenessConfig`](crate::model::ZoneAwarenessConfig)
-    #[non_exhaustive]
+    /// A builder for [`ZoneAwarenessConfig`](crate::model::ZoneAwarenessConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) availability_zone_count: std::option::Option<i32>,
@@ -5214,7 +5325,7 @@ pub mod zone_awareness_config {
             self.availability_zone_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`ZoneAwarenessConfig`](crate::model::ZoneAwarenessConfig)
+        /// Consumes the builder and constructs a [`ZoneAwarenessConfig`](crate::model::ZoneAwarenessConfig).
         pub fn build(self) -> crate::model::ZoneAwarenessConfig {
             crate::model::ZoneAwarenessConfig {
                 availability_zone_count: self.availability_zone_count,
@@ -5223,7 +5334,7 @@ pub mod zone_awareness_config {
     }
 }
 impl ZoneAwarenessConfig {
-    /// Creates a new builder-style object to manufacture [`ZoneAwarenessConfig`](crate::model::ZoneAwarenessConfig)
+    /// Creates a new builder-style object to manufacture [`ZoneAwarenessConfig`](crate::model::ZoneAwarenessConfig).
     pub fn builder() -> crate::model::zone_awareness_config::Builder {
         crate::model::zone_awareness_config::Builder::default()
     }
@@ -5234,8 +5345,10 @@ impl ZoneAwarenessConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ElasticsearchVersionStatus {
     /// <p> Specifies the Elasticsearch version for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub options: std::option::Option<std::string::String>,
     /// <p> Specifies the status of the Elasticsearch version options for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OptionStatus>,
 }
 impl ElasticsearchVersionStatus {
@@ -5256,11 +5369,10 @@ impl std::fmt::Debug for ElasticsearchVersionStatus {
         formatter.finish()
     }
 }
-/// See [`ElasticsearchVersionStatus`](crate::model::ElasticsearchVersionStatus)
+/// See [`ElasticsearchVersionStatus`](crate::model::ElasticsearchVersionStatus).
 pub mod elasticsearch_version_status {
 
-    /// A builder for [`ElasticsearchVersionStatus`](crate::model::ElasticsearchVersionStatus)
-    #[non_exhaustive]
+    /// A builder for [`ElasticsearchVersionStatus`](crate::model::ElasticsearchVersionStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) options: std::option::Option<std::string::String>,
@@ -5290,7 +5402,7 @@ pub mod elasticsearch_version_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ElasticsearchVersionStatus`](crate::model::ElasticsearchVersionStatus)
+        /// Consumes the builder and constructs a [`ElasticsearchVersionStatus`](crate::model::ElasticsearchVersionStatus).
         pub fn build(self) -> crate::model::ElasticsearchVersionStatus {
             crate::model::ElasticsearchVersionStatus {
                 options: self.options,
@@ -5300,7 +5412,7 @@ pub mod elasticsearch_version_status {
     }
 }
 impl ElasticsearchVersionStatus {
-    /// Creates a new builder-style object to manufacture [`ElasticsearchVersionStatus`](crate::model::ElasticsearchVersionStatus)
+    /// Creates a new builder-style object to manufacture [`ElasticsearchVersionStatus`](crate::model::ElasticsearchVersionStatus).
     pub fn builder() -> crate::model::elasticsearch_version_status::Builder {
         crate::model::elasticsearch_version_status::Builder::default()
     }
@@ -5311,14 +5423,19 @@ impl ElasticsearchVersionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AdvancedSecurityOptionsInput {
     /// <p>True if advanced security is enabled.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>True if the internal user database is enabled.</p>
+    #[doc(hidden)]
     pub internal_user_database_enabled: std::option::Option<bool>,
     /// <p>Credentials for the master user: username and password, ARN, or both.</p>
+    #[doc(hidden)]
     pub master_user_options: std::option::Option<crate::model::MasterUserOptions>,
     /// <p>Specifies the SAML application configuration for the domain.</p>
+    #[doc(hidden)]
     pub saml_options: std::option::Option<crate::model::SamlOptionsInput>,
     /// <p>True if Anonymous auth is enabled. Anonymous auth can be enabled only when AdvancedSecurity is enabled on existing domains.</p>
+    #[doc(hidden)]
     pub anonymous_auth_enabled: std::option::Option<bool>,
 }
 impl AdvancedSecurityOptionsInput {
@@ -5357,11 +5474,10 @@ impl std::fmt::Debug for AdvancedSecurityOptionsInput {
         formatter.finish()
     }
 }
-/// See [`AdvancedSecurityOptionsInput`](crate::model::AdvancedSecurityOptionsInput)
+/// See [`AdvancedSecurityOptionsInput`](crate::model::AdvancedSecurityOptionsInput).
 pub mod advanced_security_options_input {
 
-    /// A builder for [`AdvancedSecurityOptionsInput`](crate::model::AdvancedSecurityOptionsInput)
-    #[non_exhaustive]
+    /// A builder for [`AdvancedSecurityOptionsInput`](crate::model::AdvancedSecurityOptionsInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -5430,7 +5546,7 @@ pub mod advanced_security_options_input {
             self.anonymous_auth_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdvancedSecurityOptionsInput`](crate::model::AdvancedSecurityOptionsInput)
+        /// Consumes the builder and constructs a [`AdvancedSecurityOptionsInput`](crate::model::AdvancedSecurityOptionsInput).
         pub fn build(self) -> crate::model::AdvancedSecurityOptionsInput {
             crate::model::AdvancedSecurityOptionsInput {
                 enabled: self.enabled,
@@ -5443,7 +5559,7 @@ pub mod advanced_security_options_input {
     }
 }
 impl AdvancedSecurityOptionsInput {
-    /// Creates a new builder-style object to manufacture [`AdvancedSecurityOptionsInput`](crate::model::AdvancedSecurityOptionsInput)
+    /// Creates a new builder-style object to manufacture [`AdvancedSecurityOptionsInput`](crate::model::AdvancedSecurityOptionsInput).
     pub fn builder() -> crate::model::advanced_security_options_input::Builder {
         crate::model::advanced_security_options_input::Builder::default()
     }
@@ -5454,18 +5570,25 @@ impl AdvancedSecurityOptionsInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SamlOptionsInput {
     /// <p>True if SAML is enabled.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>Specifies the SAML Identity Provider's information.</p>
+    #[doc(hidden)]
     pub idp: std::option::Option<crate::model::SamlIdp>,
     /// <p>The SAML master username, which is stored in the Amazon Elasticsearch Service domain's internal database.</p>
+    #[doc(hidden)]
     pub master_user_name: std::option::Option<std::string::String>,
     /// <p>The backend role to which the SAML master user is mapped to.</p>
+    #[doc(hidden)]
     pub master_backend_role: std::option::Option<std::string::String>,
     /// <p>The key to use for matching the SAML Subject attribute.</p>
+    #[doc(hidden)]
     pub subject_key: std::option::Option<std::string::String>,
     /// <p>The key to use for matching the SAML Roles attribute.</p>
+    #[doc(hidden)]
     pub roles_key: std::option::Option<std::string::String>,
     /// <p>The duration, in minutes, after which a user session becomes inactive. Acceptable values are between 1 and 1440, and the default value is 60.</p>
+    #[doc(hidden)]
     pub session_timeout_minutes: std::option::Option<i32>,
 }
 impl SamlOptionsInput {
@@ -5511,11 +5634,10 @@ impl std::fmt::Debug for SamlOptionsInput {
         formatter.finish()
     }
 }
-/// See [`SamlOptionsInput`](crate::model::SamlOptionsInput)
+/// See [`SamlOptionsInput`](crate::model::SamlOptionsInput).
 pub mod saml_options_input {
 
-    /// A builder for [`SamlOptionsInput`](crate::model::SamlOptionsInput)
-    #[non_exhaustive]
+    /// A builder for [`SamlOptionsInput`](crate::model::SamlOptionsInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -5603,7 +5725,7 @@ pub mod saml_options_input {
             self.session_timeout_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`SamlOptionsInput`](crate::model::SamlOptionsInput)
+        /// Consumes the builder and constructs a [`SamlOptionsInput`](crate::model::SamlOptionsInput).
         pub fn build(self) -> crate::model::SamlOptionsInput {
             crate::model::SamlOptionsInput {
                 enabled: self.enabled,
@@ -5618,7 +5740,7 @@ pub mod saml_options_input {
     }
 }
 impl SamlOptionsInput {
-    /// Creates a new builder-style object to manufacture [`SamlOptionsInput`](crate::model::SamlOptionsInput)
+    /// Creates a new builder-style object to manufacture [`SamlOptionsInput`](crate::model::SamlOptionsInput).
     pub fn builder() -> crate::model::saml_options_input::Builder {
         crate::model::saml_options_input::Builder::default()
     }
@@ -5629,10 +5751,13 @@ impl SamlOptionsInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MasterUserOptions {
     /// <p>ARN for the master user (if IAM is enabled).</p>
+    #[doc(hidden)]
     pub master_user_arn: std::option::Option<std::string::String>,
     /// <p>The master user's username, which is stored in the Amazon Elasticsearch Service domain's internal database.</p>
+    #[doc(hidden)]
     pub master_user_name: std::option::Option<std::string::String>,
     /// <p>The master user's password, which is stored in the Amazon Elasticsearch Service domain's internal database.</p>
+    #[doc(hidden)]
     pub master_user_password: std::option::Option<std::string::String>,
 }
 impl MasterUserOptions {
@@ -5658,11 +5783,10 @@ impl std::fmt::Debug for MasterUserOptions {
         formatter.finish()
     }
 }
-/// See [`MasterUserOptions`](crate::model::MasterUserOptions)
+/// See [`MasterUserOptions`](crate::model::MasterUserOptions).
 pub mod master_user_options {
 
-    /// A builder for [`MasterUserOptions`](crate::model::MasterUserOptions)
-    #[non_exhaustive]
+    /// A builder for [`MasterUserOptions`](crate::model::MasterUserOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) master_user_arn: std::option::Option<std::string::String>,
@@ -5709,7 +5833,7 @@ pub mod master_user_options {
             self.master_user_password = input;
             self
         }
-        /// Consumes the builder and constructs a [`MasterUserOptions`](crate::model::MasterUserOptions)
+        /// Consumes the builder and constructs a [`MasterUserOptions`](crate::model::MasterUserOptions).
         pub fn build(self) -> crate::model::MasterUserOptions {
             crate::model::MasterUserOptions {
                 master_user_arn: self.master_user_arn,
@@ -5720,7 +5844,7 @@ pub mod master_user_options {
     }
 }
 impl MasterUserOptions {
-    /// Creates a new builder-style object to manufacture [`MasterUserOptions`](crate::model::MasterUserOptions)
+    /// Creates a new builder-style object to manufacture [`MasterUserOptions`](crate::model::MasterUserOptions).
     pub fn builder() -> crate::model::master_user_options::Builder {
         crate::model::master_user_options::Builder::default()
     }
@@ -5731,8 +5855,10 @@ impl MasterUserOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcOptions {
     /// <p>Specifies the subnets for VPC endpoint.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies the security groups for VPC endpoint.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VpcOptions {
@@ -5753,11 +5879,10 @@ impl std::fmt::Debug for VpcOptions {
         formatter.finish()
     }
 }
-/// See [`VpcOptions`](crate::model::VpcOptions)
+/// See [`VpcOptions`](crate::model::VpcOptions).
 pub mod vpc_options {
 
-    /// A builder for [`VpcOptions`](crate::model::VpcOptions)
-    #[non_exhaustive]
+    /// A builder for [`VpcOptions`](crate::model::VpcOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -5802,7 +5927,7 @@ pub mod vpc_options {
             self.security_group_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcOptions`](crate::model::VpcOptions)
+        /// Consumes the builder and constructs a [`VpcOptions`](crate::model::VpcOptions).
         pub fn build(self) -> crate::model::VpcOptions {
             crate::model::VpcOptions {
                 subnet_ids: self.subnet_ids,
@@ -5812,7 +5937,7 @@ pub mod vpc_options {
     }
 }
 impl VpcOptions {
-    /// Creates a new builder-style object to manufacture [`VpcOptions`](crate::model::VpcOptions)
+    /// Creates a new builder-style object to manufacture [`VpcOptions`](crate::model::VpcOptions).
     pub fn builder() -> crate::model::vpc_options::Builder {
         crate::model::vpc_options::Builder::default()
     }
@@ -5823,20 +5948,28 @@ impl VpcOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceSoftwareOptions {
     /// <p>The current service software version that is present on the domain.</p>
+    #[doc(hidden)]
     pub current_version: std::option::Option<std::string::String>,
     /// <p>The new service software version if one is available.</p>
+    #[doc(hidden)]
     pub new_version: std::option::Option<std::string::String>,
     /// <p><code>True</code> if you are able to update you service software version. <code>False</code> if you are not able to update your service software version. </p>
+    #[doc(hidden)]
     pub update_available: std::option::Option<bool>,
     /// <p><code>True</code> if you are able to cancel your service software version update. <code>False</code> if you are not able to cancel your service software version. </p>
+    #[doc(hidden)]
     pub cancellable: std::option::Option<bool>,
     /// <p>The status of your service software update. This field can take the following values: <code>ELIGIBLE</code>, <code>PENDING_UPDATE</code>, <code>IN_PROGRESS</code>, <code>COMPLETED</code>, and <code>NOT_ELIGIBLE</code>.</p>
+    #[doc(hidden)]
     pub update_status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>The description of the <code>UpdateStatus</code>.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Timestamp, in Epoch time, until which you can manually request a service software update. After this date, we automatically update your service software.</p>
+    #[doc(hidden)]
     pub automated_update_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p><code>True</code> if a service software is never automatically updated. <code>False</code> if a service software is automatically updated after <code>AutomatedUpdateDate</code>. </p>
+    #[doc(hidden)]
     pub optional_deployment: std::option::Option<bool>,
 }
 impl ServiceSoftwareOptions {
@@ -5887,11 +6020,10 @@ impl std::fmt::Debug for ServiceSoftwareOptions {
         formatter.finish()
     }
 }
-/// See [`ServiceSoftwareOptions`](crate::model::ServiceSoftwareOptions)
+/// See [`ServiceSoftwareOptions`](crate::model::ServiceSoftwareOptions).
 pub mod service_software_options {
 
-    /// A builder for [`ServiceSoftwareOptions`](crate::model::ServiceSoftwareOptions)
-    #[non_exhaustive]
+    /// A builder for [`ServiceSoftwareOptions`](crate::model::ServiceSoftwareOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) current_version: std::option::Option<std::string::String>,
@@ -5993,7 +6125,7 @@ pub mod service_software_options {
             self.optional_deployment = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceSoftwareOptions`](crate::model::ServiceSoftwareOptions)
+        /// Consumes the builder and constructs a [`ServiceSoftwareOptions`](crate::model::ServiceSoftwareOptions).
         pub fn build(self) -> crate::model::ServiceSoftwareOptions {
             crate::model::ServiceSoftwareOptions {
                 current_version: self.current_version,
@@ -6009,7 +6141,7 @@ pub mod service_software_options {
     }
 }
 impl ServiceSoftwareOptions {
-    /// Creates a new builder-style object to manufacture [`ServiceSoftwareOptions`](crate::model::ServiceSoftwareOptions)
+    /// Creates a new builder-style object to manufacture [`ServiceSoftwareOptions`](crate::model::ServiceSoftwareOptions).
     pub fn builder() -> crate::model::service_software_options::Builder {
         crate::model::service_software_options::Builder::default()
     }
@@ -6093,12 +6225,16 @@ impl AsRef<str> for DeploymentStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InboundCrossClusterSearchConnection {
     /// <p>Specifies the <code><code>DomainInformation</code></code> for the source Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub source_domain_info: std::option::Option<crate::model::DomainInformation>,
     /// <p>Specifies the <code><code>DomainInformation</code></code> for the destination Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub destination_domain_info: std::option::Option<crate::model::DomainInformation>,
     /// <p>Specifies the connection id for the inbound cross-cluster search connection.</p>
+    #[doc(hidden)]
     pub cross_cluster_search_connection_id: std::option::Option<std::string::String>,
     /// <p>Specifies the <code><code>InboundCrossClusterSearchConnectionStatus</code></code> for the outbound connection.</p>
+    #[doc(hidden)]
     pub connection_status:
         std::option::Option<crate::model::InboundCrossClusterSearchConnectionStatus>,
 }
@@ -6135,11 +6271,10 @@ impl std::fmt::Debug for InboundCrossClusterSearchConnection {
         formatter.finish()
     }
 }
-/// See [`InboundCrossClusterSearchConnection`](crate::model::InboundCrossClusterSearchConnection)
+/// See [`InboundCrossClusterSearchConnection`](crate::model::InboundCrossClusterSearchConnection).
 pub mod inbound_cross_cluster_search_connection {
 
-    /// A builder for [`InboundCrossClusterSearchConnection`](crate::model::InboundCrossClusterSearchConnection)
-    #[non_exhaustive]
+    /// A builder for [`InboundCrossClusterSearchConnection`](crate::model::InboundCrossClusterSearchConnection).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_domain_info: std::option::Option<crate::model::DomainInformation>,
@@ -6207,7 +6342,7 @@ pub mod inbound_cross_cluster_search_connection {
             self.connection_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`InboundCrossClusterSearchConnection`](crate::model::InboundCrossClusterSearchConnection)
+        /// Consumes the builder and constructs a [`InboundCrossClusterSearchConnection`](crate::model::InboundCrossClusterSearchConnection).
         pub fn build(self) -> crate::model::InboundCrossClusterSearchConnection {
             crate::model::InboundCrossClusterSearchConnection {
                 source_domain_info: self.source_domain_info,
@@ -6219,7 +6354,7 @@ pub mod inbound_cross_cluster_search_connection {
     }
 }
 impl InboundCrossClusterSearchConnection {
-    /// Creates a new builder-style object to manufacture [`InboundCrossClusterSearchConnection`](crate::model::InboundCrossClusterSearchConnection)
+    /// Creates a new builder-style object to manufacture [`InboundCrossClusterSearchConnection`](crate::model::InboundCrossClusterSearchConnection).
     pub fn builder() -> crate::model::inbound_cross_cluster_search_connection::Builder {
         crate::model::inbound_cross_cluster_search_connection::Builder::default()
     }
@@ -6238,9 +6373,11 @@ pub struct InboundCrossClusterSearchConnectionStatus {
     /// <li>DELETING: Inbound connection deletion is in progress.</li>
     /// <li>DELETED: Inbound connection is deleted and cannot be used further.</li>
     /// </ul>
+    #[doc(hidden)]
     pub status_code:
         std::option::Option<crate::model::InboundCrossClusterSearchConnectionStatusCode>,
     /// <p>Specifies verbose information for the inbound connection status.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl InboundCrossClusterSearchConnectionStatus {
@@ -6271,11 +6408,10 @@ impl std::fmt::Debug for InboundCrossClusterSearchConnectionStatus {
         formatter.finish()
     }
 }
-/// See [`InboundCrossClusterSearchConnectionStatus`](crate::model::InboundCrossClusterSearchConnectionStatus)
+/// See [`InboundCrossClusterSearchConnectionStatus`](crate::model::InboundCrossClusterSearchConnectionStatus).
 pub mod inbound_cross_cluster_search_connection_status {
 
-    /// A builder for [`InboundCrossClusterSearchConnectionStatus`](crate::model::InboundCrossClusterSearchConnectionStatus)
-    #[non_exhaustive]
+    /// A builder for [`InboundCrossClusterSearchConnectionStatus`](crate::model::InboundCrossClusterSearchConnectionStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status_code:
@@ -6325,7 +6461,7 @@ pub mod inbound_cross_cluster_search_connection_status {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InboundCrossClusterSearchConnectionStatus`](crate::model::InboundCrossClusterSearchConnectionStatus)
+        /// Consumes the builder and constructs a [`InboundCrossClusterSearchConnectionStatus`](crate::model::InboundCrossClusterSearchConnectionStatus).
         pub fn build(self) -> crate::model::InboundCrossClusterSearchConnectionStatus {
             crate::model::InboundCrossClusterSearchConnectionStatus {
                 status_code: self.status_code,
@@ -6335,7 +6471,7 @@ pub mod inbound_cross_cluster_search_connection_status {
     }
 }
 impl InboundCrossClusterSearchConnectionStatus {
-    /// Creates a new builder-style object to manufacture [`InboundCrossClusterSearchConnectionStatus`](crate::model::InboundCrossClusterSearchConnectionStatus)
+    /// Creates a new builder-style object to manufacture [`InboundCrossClusterSearchConnectionStatus`](crate::model::InboundCrossClusterSearchConnectionStatus).
     pub fn builder() -> crate::model::inbound_cross_cluster_search_connection_status::Builder {
         crate::model::inbound_cross_cluster_search_connection_status::Builder::default()
     }
@@ -6428,10 +6564,13 @@ impl AsRef<str> for InboundCrossClusterSearchConnectionStatusCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainInformation {
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub owner_id: std::option::Option<std::string::String>,
     /// <p>The name of an Elasticsearch domain. Domain names are unique across the domains owned by an account within an AWS region. Domain names start with a letter or number and can contain the following characters: a-z (lowercase), 0-9, and - (hyphen).</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
 }
 impl DomainInformation {
@@ -6457,11 +6596,10 @@ impl std::fmt::Debug for DomainInformation {
         formatter.finish()
     }
 }
-/// See [`DomainInformation`](crate::model::DomainInformation)
+/// See [`DomainInformation`](crate::model::DomainInformation).
 pub mod domain_information {
 
-    /// A builder for [`DomainInformation`](crate::model::DomainInformation)
-    #[non_exhaustive]
+    /// A builder for [`DomainInformation`](crate::model::DomainInformation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner_id: std::option::Option<std::string::String>,
@@ -6499,7 +6637,7 @@ pub mod domain_information {
             self.region = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainInformation`](crate::model::DomainInformation)
+        /// Consumes the builder and constructs a [`DomainInformation`](crate::model::DomainInformation).
         pub fn build(self) -> crate::model::DomainInformation {
             crate::model::DomainInformation {
                 owner_id: self.owner_id,
@@ -6510,7 +6648,7 @@ pub mod domain_information {
     }
 }
 impl DomainInformation {
-    /// Creates a new builder-style object to manufacture [`DomainInformation`](crate::model::DomainInformation)
+    /// Creates a new builder-style object to manufacture [`DomainInformation`](crate::model::DomainInformation).
     pub fn builder() -> crate::model::domain_information::Builder {
         crate::model::domain_information::Builder::default()
     }
@@ -6521,8 +6659,10 @@ impl DomainInformation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>Specifies the <code>TagKey</code>, the name of the tag. Tag keys must be unique for the Elasticsearch domain to which they are attached.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Specifies the <code>TagValue</code>, the value assigned to the corresponding tag key. Tag values can be null and do not have to be unique in a tag set. For example, you can have a key value pair in a tag set of <code>project : Trinity</code> and <code>cost-center : Trinity</code></p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -6543,11 +6683,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -6574,7 +6713,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -6584,7 +6723,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -6595,22 +6734,31 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainPackageDetails {
     /// <p>Internal ID of the package.</p>
+    #[doc(hidden)]
     pub package_id: std::option::Option<std::string::String>,
     /// <p>User specified name of the package.</p>
+    #[doc(hidden)]
     pub package_name: std::option::Option<std::string::String>,
     /// <p>Currently supports only TXT-DICTIONARY.</p>
+    #[doc(hidden)]
     pub package_type: std::option::Option<crate::model::PackageType>,
     /// <p>Timestamp of the most-recent update to the association status.</p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Name of the domain you've associated a package with.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>State of the association. Values are ASSOCIATING/ASSOCIATION_FAILED/ACTIVE/DISSOCIATING/DISSOCIATION_FAILED.</p>
+    #[doc(hidden)]
     pub domain_package_status: std::option::Option<crate::model::DomainPackageStatus>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub package_version: std::option::Option<std::string::String>,
     /// <p>The relative path on Amazon ES nodes, which can be used as synonym_path when the package is synonym file.</p>
+    #[doc(hidden)]
     pub reference_path: std::option::Option<std::string::String>,
     /// <p>Additional information if the package is in an error state. Null otherwise.</p>
+    #[doc(hidden)]
     pub error_details: std::option::Option<crate::model::ErrorDetails>,
 }
 impl DomainPackageDetails {
@@ -6666,11 +6814,10 @@ impl std::fmt::Debug for DomainPackageDetails {
         formatter.finish()
     }
 }
-/// See [`DomainPackageDetails`](crate::model::DomainPackageDetails)
+/// See [`DomainPackageDetails`](crate::model::DomainPackageDetails).
 pub mod domain_package_details {
 
-    /// A builder for [`DomainPackageDetails`](crate::model::DomainPackageDetails)
-    #[non_exhaustive]
+    /// A builder for [`DomainPackageDetails`](crate::model::DomainPackageDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) package_id: std::option::Option<std::string::String>,
@@ -6792,7 +6939,7 @@ pub mod domain_package_details {
             self.error_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainPackageDetails`](crate::model::DomainPackageDetails)
+        /// Consumes the builder and constructs a [`DomainPackageDetails`](crate::model::DomainPackageDetails).
         pub fn build(self) -> crate::model::DomainPackageDetails {
             crate::model::DomainPackageDetails {
                 package_id: self.package_id,
@@ -6809,7 +6956,7 @@ pub mod domain_package_details {
     }
 }
 impl DomainPackageDetails {
-    /// Creates a new builder-style object to manufacture [`DomainPackageDetails`](crate::model::DomainPackageDetails)
+    /// Creates a new builder-style object to manufacture [`DomainPackageDetails`](crate::model::DomainPackageDetails).
     pub fn builder() -> crate::model::domain_package_details::Builder {
         crate::model::domain_package_details::Builder::default()
     }
@@ -6893,8 +7040,10 @@ impl AsRef<str> for DomainPackageStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainInfo {
     /// <p> Specifies the <code>DomainName</code>.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p> Specifies the <code>EngineType</code> of the domain.</p>
+    #[doc(hidden)]
     pub engine_type: std::option::Option<crate::model::EngineType>,
 }
 impl DomainInfo {
@@ -6915,11 +7064,10 @@ impl std::fmt::Debug for DomainInfo {
         formatter.finish()
     }
 }
-/// See [`DomainInfo`](crate::model::DomainInfo)
+/// See [`DomainInfo`](crate::model::DomainInfo).
 pub mod domain_info {
 
-    /// A builder for [`DomainInfo`](crate::model::DomainInfo)
-    #[non_exhaustive]
+    /// A builder for [`DomainInfo`](crate::model::DomainInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -6949,7 +7097,7 @@ pub mod domain_info {
             self.engine_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainInfo`](crate::model::DomainInfo)
+        /// Consumes the builder and constructs a [`DomainInfo`](crate::model::DomainInfo).
         pub fn build(self) -> crate::model::DomainInfo {
             crate::model::DomainInfo {
                 domain_name: self.domain_name,
@@ -6959,7 +7107,7 @@ pub mod domain_info {
     }
 }
 impl DomainInfo {
-    /// Creates a new builder-style object to manufacture [`DomainInfo`](crate::model::DomainInfo)
+    /// Creates a new builder-style object to manufacture [`DomainInfo`](crate::model::DomainInfo).
     pub fn builder() -> crate::model::domain_info::Builder {
         crate::model::domain_info::Builder::default()
     }
@@ -7152,8 +7300,10 @@ impl AsRef<str> for UpgradeStep {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpgradeHistory {
     /// <p>A string that describes the update briefly</p>
+    #[doc(hidden)]
     pub upgrade_name: std::option::Option<std::string::String>,
     /// <p>UTC Timestamp at which the Upgrade API call was made in "yyyy-MM-ddTHH:mm:ssZ" format.</p>
+    #[doc(hidden)]
     pub start_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The overall status of the update. The status can take one of the following values: </p>
     /// <ul>
@@ -7163,8 +7313,10 @@ pub struct UpgradeHistory {
     /// <li>Failed</li>
     /// </ul>
     /// <p></p>
+    #[doc(hidden)]
     pub upgrade_status: std::option::Option<crate::model::UpgradeStatus>,
     /// <p> A list of <code> <code>UpgradeStepItem</code> </code> s representing information about each step performed as pard of a specific Upgrade or Upgrade Eligibility Check. </p>
+    #[doc(hidden)]
     pub steps_list: std::option::Option<std::vec::Vec<crate::model::UpgradeStepItem>>,
 }
 impl UpgradeHistory {
@@ -7202,11 +7354,10 @@ impl std::fmt::Debug for UpgradeHistory {
         formatter.finish()
     }
 }
-/// See [`UpgradeHistory`](crate::model::UpgradeHistory)
+/// See [`UpgradeHistory`](crate::model::UpgradeHistory).
 pub mod upgrade_history {
 
-    /// A builder for [`UpgradeHistory`](crate::model::UpgradeHistory)
-    #[non_exhaustive]
+    /// A builder for [`UpgradeHistory`](crate::model::UpgradeHistory).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) upgrade_name: std::option::Option<std::string::String>,
@@ -7284,7 +7435,7 @@ pub mod upgrade_history {
             self.steps_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpgradeHistory`](crate::model::UpgradeHistory)
+        /// Consumes the builder and constructs a [`UpgradeHistory`](crate::model::UpgradeHistory).
         pub fn build(self) -> crate::model::UpgradeHistory {
             crate::model::UpgradeHistory {
                 upgrade_name: self.upgrade_name,
@@ -7296,7 +7447,7 @@ pub mod upgrade_history {
     }
 }
 impl UpgradeHistory {
-    /// Creates a new builder-style object to manufacture [`UpgradeHistory`](crate::model::UpgradeHistory)
+    /// Creates a new builder-style object to manufacture [`UpgradeHistory`](crate::model::UpgradeHistory).
     pub fn builder() -> crate::model::upgrade_history::Builder {
         crate::model::upgrade_history::Builder::default()
     }
@@ -7313,6 +7464,7 @@ pub struct UpgradeStepItem {
     /// <li>Upgrade</li>
     /// </ul>
     /// <p></p>
+    #[doc(hidden)]
     pub upgrade_step: std::option::Option<crate::model::UpgradeStep>,
     /// <p> The status of a particular step during an upgrade. The status can take one of the following values: </p>
     /// <ul>
@@ -7322,10 +7474,13 @@ pub struct UpgradeStepItem {
     /// <li>Failed</li>
     /// </ul>
     /// <p></p>
+    #[doc(hidden)]
     pub upgrade_step_status: std::option::Option<crate::model::UpgradeStatus>,
     /// <p>A list of strings containing detailed information about the errors encountered in a particular step.</p>
+    #[doc(hidden)]
     pub issues: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Floating point value representing progress percentage of a particular step.</p>
+    #[doc(hidden)]
     pub progress_percent: std::option::Option<f64>,
 }
 impl UpgradeStepItem {
@@ -7369,11 +7524,10 @@ impl std::fmt::Debug for UpgradeStepItem {
         formatter.finish()
     }
 }
-/// See [`UpgradeStepItem`](crate::model::UpgradeStepItem)
+/// See [`UpgradeStepItem`](crate::model::UpgradeStepItem).
 pub mod upgrade_step_item {
 
-    /// A builder for [`UpgradeStepItem`](crate::model::UpgradeStepItem)
-    #[non_exhaustive]
+    /// A builder for [`UpgradeStepItem`](crate::model::UpgradeStepItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) upgrade_step: std::option::Option<crate::model::UpgradeStep>,
@@ -7463,7 +7617,7 @@ pub mod upgrade_step_item {
             self.progress_percent = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpgradeStepItem`](crate::model::UpgradeStepItem)
+        /// Consumes the builder and constructs a [`UpgradeStepItem`](crate::model::UpgradeStepItem).
         pub fn build(self) -> crate::model::UpgradeStepItem {
             crate::model::UpgradeStepItem {
                 upgrade_step: self.upgrade_step,
@@ -7475,7 +7629,7 @@ pub mod upgrade_step_item {
     }
 }
 impl UpgradeStepItem {
-    /// Creates a new builder-style object to manufacture [`UpgradeStepItem`](crate::model::UpgradeStepItem)
+    /// Creates a new builder-style object to manufacture [`UpgradeStepItem`](crate::model::UpgradeStepItem).
     pub fn builder() -> crate::model::upgrade_step_item::Builder {
         crate::model::upgrade_step_item::Builder::default()
     }
@@ -7486,10 +7640,13 @@ impl UpgradeStepItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PackageVersionHistory {
     /// <p>Version of the package.</p>
+    #[doc(hidden)]
     pub package_version: std::option::Option<std::string::String>,
     /// <p>A message associated with the version.</p>
+    #[doc(hidden)]
     pub commit_message: std::option::Option<std::string::String>,
     /// <p>Timestamp which tells creation time of the package version.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PackageVersionHistory {
@@ -7515,11 +7672,10 @@ impl std::fmt::Debug for PackageVersionHistory {
         formatter.finish()
     }
 }
-/// See [`PackageVersionHistory`](crate::model::PackageVersionHistory)
+/// See [`PackageVersionHistory`](crate::model::PackageVersionHistory).
 pub mod package_version_history {
 
-    /// A builder for [`PackageVersionHistory`](crate::model::PackageVersionHistory)
-    #[non_exhaustive]
+    /// A builder for [`PackageVersionHistory`](crate::model::PackageVersionHistory).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) package_version: std::option::Option<std::string::String>,
@@ -7566,7 +7722,7 @@ pub mod package_version_history {
             self.created_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`PackageVersionHistory`](crate::model::PackageVersionHistory)
+        /// Consumes the builder and constructs a [`PackageVersionHistory`](crate::model::PackageVersionHistory).
         pub fn build(self) -> crate::model::PackageVersionHistory {
             crate::model::PackageVersionHistory {
                 package_version: self.package_version,
@@ -7577,7 +7733,7 @@ pub mod package_version_history {
     }
 }
 impl PackageVersionHistory {
-    /// Creates a new builder-style object to manufacture [`PackageVersionHistory`](crate::model::PackageVersionHistory)
+    /// Creates a new builder-style object to manufacture [`PackageVersionHistory`](crate::model::PackageVersionHistory).
     pub fn builder() -> crate::model::package_version_history::Builder {
         crate::model::package_version_history::Builder::default()
     }
@@ -7588,8 +7744,10 @@ impl PackageVersionHistory {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CompatibleVersionsMap {
     /// <p>The current version of Elasticsearch on which a domain is.</p>
+    #[doc(hidden)]
     pub source_version: std::option::Option<std::string::String>,
     /// <p>List of supported elastic search versions. </p>
+    #[doc(hidden)]
     pub target_versions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CompatibleVersionsMap {
@@ -7610,11 +7768,10 @@ impl std::fmt::Debug for CompatibleVersionsMap {
         formatter.finish()
     }
 }
-/// See [`CompatibleVersionsMap`](crate::model::CompatibleVersionsMap)
+/// See [`CompatibleVersionsMap`](crate::model::CompatibleVersionsMap).
 pub mod compatible_versions_map {
 
-    /// A builder for [`CompatibleVersionsMap`](crate::model::CompatibleVersionsMap)
-    #[non_exhaustive]
+    /// A builder for [`CompatibleVersionsMap`](crate::model::CompatibleVersionsMap).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_version: std::option::Option<std::string::String>,
@@ -7653,7 +7810,7 @@ pub mod compatible_versions_map {
             self.target_versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompatibleVersionsMap`](crate::model::CompatibleVersionsMap)
+        /// Consumes the builder and constructs a [`CompatibleVersionsMap`](crate::model::CompatibleVersionsMap).
         pub fn build(self) -> crate::model::CompatibleVersionsMap {
             crate::model::CompatibleVersionsMap {
                 source_version: self.source_version,
@@ -7663,7 +7820,7 @@ pub mod compatible_versions_map {
     }
 }
 impl CompatibleVersionsMap {
-    /// Creates a new builder-style object to manufacture [`CompatibleVersionsMap`](crate::model::CompatibleVersionsMap)
+    /// Creates a new builder-style object to manufacture [`CompatibleVersionsMap`](crate::model::CompatibleVersionsMap).
     pub fn builder() -> crate::model::compatible_versions_map::Builder {
         crate::model::compatible_versions_map::Builder::default()
     }
@@ -7674,31 +7831,44 @@ impl CompatibleVersionsMap {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservedElasticsearchInstance {
     /// <p>The customer-specified identifier to track this reservation.</p>
+    #[doc(hidden)]
     pub reservation_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the reservation.</p>
+    #[doc(hidden)]
     pub reserved_elasticsearch_instance_id: std::option::Option<std::string::String>,
     /// <p>The offering identifier.</p>
+    #[doc(hidden)]
     pub reserved_elasticsearch_instance_offering_id: std::option::Option<std::string::String>,
     /// <p>The Elasticsearch instance type offered by the reserved instance offering.</p>
+    #[doc(hidden)]
     pub elasticsearch_instance_type: std::option::Option<crate::model::EsPartitionInstanceType>,
     /// <p>The time the reservation started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The duration, in seconds, for which the Elasticsearch instance is reserved.</p>
+    #[doc(hidden)]
     pub duration: i32,
     /// <p>The upfront fixed charge you will paid to purchase the specific reserved Elasticsearch instance offering. </p>
+    #[doc(hidden)]
     pub fixed_price: std::option::Option<f64>,
     /// <p>The rate you are charged for each hour for the domain that is using this reserved instance.</p>
+    #[doc(hidden)]
     pub usage_price: std::option::Option<f64>,
     /// <p>The currency code for the reserved Elasticsearch instance offering.</p>
+    #[doc(hidden)]
     pub currency_code: std::option::Option<std::string::String>,
     /// <p>The number of Elasticsearch instances that have been reserved.</p>
+    #[doc(hidden)]
     pub elasticsearch_instance_count: i32,
     /// <p>The state of the reserved Elasticsearch instance.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>The payment option as defined in the reserved Elasticsearch instance offering.</p>
+    #[doc(hidden)]
     pub payment_option:
         std::option::Option<crate::model::ReservedElasticsearchInstancePaymentOption>,
     /// <p>The charge to your account regardless of whether you are creating any domains using the instance offering.</p>
+    #[doc(hidden)]
     pub recurring_charges: std::option::Option<std::vec::Vec<crate::model::RecurringCharge>>,
 }
 impl ReservedElasticsearchInstance {
@@ -7790,11 +7960,10 @@ impl std::fmt::Debug for ReservedElasticsearchInstance {
         formatter.finish()
     }
 }
-/// See [`ReservedElasticsearchInstance`](crate::model::ReservedElasticsearchInstance)
+/// See [`ReservedElasticsearchInstance`](crate::model::ReservedElasticsearchInstance).
 pub mod reserved_elasticsearch_instance {
 
-    /// A builder for [`ReservedElasticsearchInstance`](crate::model::ReservedElasticsearchInstance)
-    #[non_exhaustive]
+    /// A builder for [`ReservedElasticsearchInstance`](crate::model::ReservedElasticsearchInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reservation_name: std::option::Option<std::string::String>,
@@ -7988,7 +8157,7 @@ pub mod reserved_elasticsearch_instance {
             self.recurring_charges = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservedElasticsearchInstance`](crate::model::ReservedElasticsearchInstance)
+        /// Consumes the builder and constructs a [`ReservedElasticsearchInstance`](crate::model::ReservedElasticsearchInstance).
         pub fn build(self) -> crate::model::ReservedElasticsearchInstance {
             crate::model::ReservedElasticsearchInstance {
                 reservation_name: self.reservation_name,
@@ -8010,7 +8179,7 @@ pub mod reserved_elasticsearch_instance {
     }
 }
 impl ReservedElasticsearchInstance {
-    /// Creates a new builder-style object to manufacture [`ReservedElasticsearchInstance`](crate::model::ReservedElasticsearchInstance)
+    /// Creates a new builder-style object to manufacture [`ReservedElasticsearchInstance`](crate::model::ReservedElasticsearchInstance).
     pub fn builder() -> crate::model::reserved_elasticsearch_instance::Builder {
         crate::model::reserved_elasticsearch_instance::Builder::default()
     }
@@ -8021,8 +8190,10 @@ impl ReservedElasticsearchInstance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecurringCharge {
     /// <p>The monetary amount of the recurring charge.</p>
+    #[doc(hidden)]
     pub recurring_charge_amount: std::option::Option<f64>,
     /// <p>The frequency of the recurring charge.</p>
+    #[doc(hidden)]
     pub recurring_charge_frequency: std::option::Option<std::string::String>,
 }
 impl RecurringCharge {
@@ -8046,11 +8217,10 @@ impl std::fmt::Debug for RecurringCharge {
         formatter.finish()
     }
 }
-/// See [`RecurringCharge`](crate::model::RecurringCharge)
+/// See [`RecurringCharge`](crate::model::RecurringCharge).
 pub mod recurring_charge {
 
-    /// A builder for [`RecurringCharge`](crate::model::RecurringCharge)
-    #[non_exhaustive]
+    /// A builder for [`RecurringCharge`](crate::model::RecurringCharge).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recurring_charge_amount: std::option::Option<f64>,
@@ -8080,7 +8250,7 @@ pub mod recurring_charge {
             self.recurring_charge_frequency = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecurringCharge`](crate::model::RecurringCharge)
+        /// Consumes the builder and constructs a [`RecurringCharge`](crate::model::RecurringCharge).
         pub fn build(self) -> crate::model::RecurringCharge {
             crate::model::RecurringCharge {
                 recurring_charge_amount: self.recurring_charge_amount,
@@ -8090,7 +8260,7 @@ pub mod recurring_charge {
     }
 }
 impl RecurringCharge {
-    /// Creates a new builder-style object to manufacture [`RecurringCharge`](crate::model::RecurringCharge)
+    /// Creates a new builder-style object to manufacture [`RecurringCharge`](crate::model::RecurringCharge).
     pub fn builder() -> crate::model::recurring_charge::Builder {
         crate::model::recurring_charge::Builder::default()
     }
@@ -8160,21 +8330,29 @@ impl AsRef<str> for ReservedElasticsearchInstancePaymentOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservedElasticsearchInstanceOffering {
     /// <p>The Elasticsearch reserved instance offering identifier.</p>
+    #[doc(hidden)]
     pub reserved_elasticsearch_instance_offering_id: std::option::Option<std::string::String>,
     /// <p>The Elasticsearch instance type offered by the reserved instance offering.</p>
+    #[doc(hidden)]
     pub elasticsearch_instance_type: std::option::Option<crate::model::EsPartitionInstanceType>,
     /// <p>The duration, in seconds, for which the offering will reserve the Elasticsearch instance.</p>
+    #[doc(hidden)]
     pub duration: i32,
     /// <p>The upfront fixed charge you will pay to purchase the specific reserved Elasticsearch instance offering. </p>
+    #[doc(hidden)]
     pub fixed_price: std::option::Option<f64>,
     /// <p>The rate you are charged for each hour the domain that is using the offering is running.</p>
+    #[doc(hidden)]
     pub usage_price: std::option::Option<f64>,
     /// <p>The currency code for the reserved Elasticsearch instance offering.</p>
+    #[doc(hidden)]
     pub currency_code: std::option::Option<std::string::String>,
     /// <p>Payment option for the reserved Elasticsearch instance offering</p>
+    #[doc(hidden)]
     pub payment_option:
         std::option::Option<crate::model::ReservedElasticsearchInstancePaymentOption>,
     /// <p>The charge to your account regardless of whether you are creating any domains using the instance offering.</p>
+    #[doc(hidden)]
     pub recurring_charges: std::option::Option<std::vec::Vec<crate::model::RecurringCharge>>,
 }
 impl ReservedElasticsearchInstanceOffering {
@@ -8235,11 +8413,10 @@ impl std::fmt::Debug for ReservedElasticsearchInstanceOffering {
         formatter.finish()
     }
 }
-/// See [`ReservedElasticsearchInstanceOffering`](crate::model::ReservedElasticsearchInstanceOffering)
+/// See [`ReservedElasticsearchInstanceOffering`](crate::model::ReservedElasticsearchInstanceOffering).
 pub mod reserved_elasticsearch_instance_offering {
 
-    /// A builder for [`ReservedElasticsearchInstanceOffering`](crate::model::ReservedElasticsearchInstanceOffering)
-    #[non_exhaustive]
+    /// A builder for [`ReservedElasticsearchInstanceOffering`](crate::model::ReservedElasticsearchInstanceOffering).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reserved_elasticsearch_instance_offering_id:
@@ -8366,7 +8543,7 @@ pub mod reserved_elasticsearch_instance_offering {
             self.recurring_charges = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservedElasticsearchInstanceOffering`](crate::model::ReservedElasticsearchInstanceOffering)
+        /// Consumes the builder and constructs a [`ReservedElasticsearchInstanceOffering`](crate::model::ReservedElasticsearchInstanceOffering).
         pub fn build(self) -> crate::model::ReservedElasticsearchInstanceOffering {
             crate::model::ReservedElasticsearchInstanceOffering {
                 reserved_elasticsearch_instance_offering_id: self
@@ -8383,7 +8560,7 @@ pub mod reserved_elasticsearch_instance_offering {
     }
 }
 impl ReservedElasticsearchInstanceOffering {
-    /// Creates a new builder-style object to manufacture [`ReservedElasticsearchInstanceOffering`](crate::model::ReservedElasticsearchInstanceOffering)
+    /// Creates a new builder-style object to manufacture [`ReservedElasticsearchInstanceOffering`](crate::model::ReservedElasticsearchInstanceOffering).
     pub fn builder() -> crate::model::reserved_elasticsearch_instance_offering::Builder {
         crate::model::reserved_elasticsearch_instance_offering::Builder::default()
     }
@@ -8394,8 +8571,10 @@ impl ReservedElasticsearchInstanceOffering {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribePackagesFilter {
     /// <p>Any field from <code>PackageDetails</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::DescribePackagesFilterName>,
     /// <p>A list of values for the specified field.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DescribePackagesFilter {
@@ -8416,11 +8595,10 @@ impl std::fmt::Debug for DescribePackagesFilter {
         formatter.finish()
     }
 }
-/// See [`DescribePackagesFilter`](crate::model::DescribePackagesFilter)
+/// See [`DescribePackagesFilter`](crate::model::DescribePackagesFilter).
 pub mod describe_packages_filter {
 
-    /// A builder for [`DescribePackagesFilter`](crate::model::DescribePackagesFilter)
-    #[non_exhaustive]
+    /// A builder for [`DescribePackagesFilter`](crate::model::DescribePackagesFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::DescribePackagesFilterName>,
@@ -8459,7 +8637,7 @@ pub mod describe_packages_filter {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribePackagesFilter`](crate::model::DescribePackagesFilter)
+        /// Consumes the builder and constructs a [`DescribePackagesFilter`](crate::model::DescribePackagesFilter).
         pub fn build(self) -> crate::model::DescribePackagesFilter {
             crate::model::DescribePackagesFilter {
                 name: self.name,
@@ -8469,7 +8647,7 @@ pub mod describe_packages_filter {
     }
 }
 impl DescribePackagesFilter {
-    /// Creates a new builder-style object to manufacture [`DescribePackagesFilter`](crate::model::DescribePackagesFilter)
+    /// Creates a new builder-style object to manufacture [`DescribePackagesFilter`](crate::model::DescribePackagesFilter).
     pub fn builder() -> crate::model::describe_packages_filter::Builder {
         crate::model::describe_packages_filter::Builder::default()
     }
@@ -8539,14 +8717,19 @@ impl AsRef<str> for DescribePackagesFilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutboundCrossClusterSearchConnection {
     /// <p>Specifies the <code><code>DomainInformation</code></code> for the source Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub source_domain_info: std::option::Option<crate::model::DomainInformation>,
     /// <p>Specifies the <code><code>DomainInformation</code></code> for the destination Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub destination_domain_info: std::option::Option<crate::model::DomainInformation>,
     /// <p>Specifies the connection id for the outbound cross-cluster search connection.</p>
+    #[doc(hidden)]
     pub cross_cluster_search_connection_id: std::option::Option<std::string::String>,
     /// <p>Specifies the connection alias for the outbound cross-cluster search connection.</p>
+    #[doc(hidden)]
     pub connection_alias: std::option::Option<std::string::String>,
     /// <p>Specifies the <code><code>OutboundCrossClusterSearchConnectionStatus</code></code> for the outbound connection.</p>
+    #[doc(hidden)]
     pub connection_status:
         std::option::Option<crate::model::OutboundCrossClusterSearchConnectionStatus>,
 }
@@ -8588,11 +8771,10 @@ impl std::fmt::Debug for OutboundCrossClusterSearchConnection {
         formatter.finish()
     }
 }
-/// See [`OutboundCrossClusterSearchConnection`](crate::model::OutboundCrossClusterSearchConnection)
+/// See [`OutboundCrossClusterSearchConnection`](crate::model::OutboundCrossClusterSearchConnection).
 pub mod outbound_cross_cluster_search_connection {
 
-    /// A builder for [`OutboundCrossClusterSearchConnection`](crate::model::OutboundCrossClusterSearchConnection)
-    #[non_exhaustive]
+    /// A builder for [`OutboundCrossClusterSearchConnection`](crate::model::OutboundCrossClusterSearchConnection).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_domain_info: std::option::Option<crate::model::DomainInformation>,
@@ -8674,7 +8856,7 @@ pub mod outbound_cross_cluster_search_connection {
             self.connection_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutboundCrossClusterSearchConnection`](crate::model::OutboundCrossClusterSearchConnection)
+        /// Consumes the builder and constructs a [`OutboundCrossClusterSearchConnection`](crate::model::OutboundCrossClusterSearchConnection).
         pub fn build(self) -> crate::model::OutboundCrossClusterSearchConnection {
             crate::model::OutboundCrossClusterSearchConnection {
                 source_domain_info: self.source_domain_info,
@@ -8687,7 +8869,7 @@ pub mod outbound_cross_cluster_search_connection {
     }
 }
 impl OutboundCrossClusterSearchConnection {
-    /// Creates a new builder-style object to manufacture [`OutboundCrossClusterSearchConnection`](crate::model::OutboundCrossClusterSearchConnection)
+    /// Creates a new builder-style object to manufacture [`OutboundCrossClusterSearchConnection`](crate::model::OutboundCrossClusterSearchConnection).
     pub fn builder() -> crate::model::outbound_cross_cluster_search_connection::Builder {
         crate::model::outbound_cross_cluster_search_connection::Builder::default()
     }
@@ -8708,9 +8890,11 @@ pub struct OutboundCrossClusterSearchConnectionStatus {
     /// <li>DELETING: Outbound connection deletion is in progress.</li>
     /// <li>DELETED: Outbound connection is deleted and cannot be used further.</li>
     /// </ul>
+    #[doc(hidden)]
     pub status_code:
         std::option::Option<crate::model::OutboundCrossClusterSearchConnectionStatusCode>,
     /// <p>Specifies verbose information for the outbound connection status.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl OutboundCrossClusterSearchConnectionStatus {
@@ -8743,11 +8927,10 @@ impl std::fmt::Debug for OutboundCrossClusterSearchConnectionStatus {
         formatter.finish()
     }
 }
-/// See [`OutboundCrossClusterSearchConnectionStatus`](crate::model::OutboundCrossClusterSearchConnectionStatus)
+/// See [`OutboundCrossClusterSearchConnectionStatus`](crate::model::OutboundCrossClusterSearchConnectionStatus).
 pub mod outbound_cross_cluster_search_connection_status {
 
-    /// A builder for [`OutboundCrossClusterSearchConnectionStatus`](crate::model::OutboundCrossClusterSearchConnectionStatus)
-    #[non_exhaustive]
+    /// A builder for [`OutboundCrossClusterSearchConnectionStatus`](crate::model::OutboundCrossClusterSearchConnectionStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status_code:
@@ -8803,7 +8986,7 @@ pub mod outbound_cross_cluster_search_connection_status {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutboundCrossClusterSearchConnectionStatus`](crate::model::OutboundCrossClusterSearchConnectionStatus)
+        /// Consumes the builder and constructs a [`OutboundCrossClusterSearchConnectionStatus`](crate::model::OutboundCrossClusterSearchConnectionStatus).
         pub fn build(self) -> crate::model::OutboundCrossClusterSearchConnectionStatus {
             crate::model::OutboundCrossClusterSearchConnectionStatus {
                 status_code: self.status_code,
@@ -8813,7 +8996,7 @@ pub mod outbound_cross_cluster_search_connection_status {
     }
 }
 impl OutboundCrossClusterSearchConnectionStatus {
-    /// Creates a new builder-style object to manufacture [`OutboundCrossClusterSearchConnectionStatus`](crate::model::OutboundCrossClusterSearchConnectionStatus)
+    /// Creates a new builder-style object to manufacture [`OutboundCrossClusterSearchConnectionStatus`](crate::model::OutboundCrossClusterSearchConnectionStatus).
     pub fn builder() -> crate::model::outbound_cross_cluster_search_connection_status::Builder {
         crate::model::outbound_cross_cluster_search_connection_status::Builder::default()
     }
@@ -8916,8 +9099,10 @@ impl AsRef<str> for OutboundCrossClusterSearchConnectionStatusCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
     /// <p> Specifies the name of the filter. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> Contains one or more values for the filter. </p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Filter {
@@ -8938,11 +9123,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -8978,7 +9162,7 @@ pub mod filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 name: self.name,
@@ -8988,7 +9172,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -8999,10 +9183,13 @@ impl Filter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Limits {
     /// <p>StorageType represents the list of storage related types and attributes that are available for given InstanceType. </p>
+    #[doc(hidden)]
     pub storage_types: std::option::Option<std::vec::Vec<crate::model::StorageType>>,
     /// <p>InstanceLimits represents the list of instance related attributes that are available for given InstanceType. </p>
+    #[doc(hidden)]
     pub instance_limits: std::option::Option<crate::model::InstanceLimits>,
     /// <p> List of additional limits that are specific to a given InstanceType and for each of it's <code> <code>InstanceRole</code> </code> . </p>
+    #[doc(hidden)]
     pub additional_limits: std::option::Option<std::vec::Vec<crate::model::AdditionalLimit>>,
 }
 impl Limits {
@@ -9028,11 +9215,10 @@ impl std::fmt::Debug for Limits {
         formatter.finish()
     }
 }
-/// See [`Limits`](crate::model::Limits)
+/// See [`Limits`](crate::model::Limits).
 pub mod limits {
 
-    /// A builder for [`Limits`](crate::model::Limits)
-    #[non_exhaustive]
+    /// A builder for [`Limits`](crate::model::Limits).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_types: std::option::Option<std::vec::Vec<crate::model::StorageType>>,
@@ -9092,7 +9278,7 @@ pub mod limits {
             self.additional_limits = input;
             self
         }
-        /// Consumes the builder and constructs a [`Limits`](crate::model::Limits)
+        /// Consumes the builder and constructs a [`Limits`](crate::model::Limits).
         pub fn build(self) -> crate::model::Limits {
             crate::model::Limits {
                 storage_types: self.storage_types,
@@ -9103,7 +9289,7 @@ pub mod limits {
     }
 }
 impl Limits {
-    /// Creates a new builder-style object to manufacture [`Limits`](crate::model::Limits)
+    /// Creates a new builder-style object to manufacture [`Limits`](crate::model::Limits).
     pub fn builder() -> crate::model::limits::Builder {
         crate::model::limits::Builder::default()
     }
@@ -9119,8 +9305,10 @@ pub struct AdditionalLimit {
     /// <li>MaximumNumberOfDataNodesWithoutMasterNode</li> This attribute will be present in Data node only to specify how much data nodes of given <code> <code>ESPartitionInstanceType</code> </code> upto which you don't need any master nodes to govern them.
     /// </ul>
     /// <p></p>
+    #[doc(hidden)]
     pub limit_name: std::option::Option<std::string::String>,
     /// <p> Value for given <code> <code>AdditionalLimit$LimitName</code> </code> . </p>
+    #[doc(hidden)]
     pub limit_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AdditionalLimit {
@@ -9146,11 +9334,10 @@ impl std::fmt::Debug for AdditionalLimit {
         formatter.finish()
     }
 }
-/// See [`AdditionalLimit`](crate::model::AdditionalLimit)
+/// See [`AdditionalLimit`](crate::model::AdditionalLimit).
 pub mod additional_limit {
 
-    /// A builder for [`AdditionalLimit`](crate::model::AdditionalLimit)
-    #[non_exhaustive]
+    /// A builder for [`AdditionalLimit`](crate::model::AdditionalLimit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) limit_name: std::option::Option<std::string::String>,
@@ -9196,7 +9383,7 @@ pub mod additional_limit {
             self.limit_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdditionalLimit`](crate::model::AdditionalLimit)
+        /// Consumes the builder and constructs a [`AdditionalLimit`](crate::model::AdditionalLimit).
         pub fn build(self) -> crate::model::AdditionalLimit {
             crate::model::AdditionalLimit {
                 limit_name: self.limit_name,
@@ -9206,7 +9393,7 @@ pub mod additional_limit {
     }
 }
 impl AdditionalLimit {
-    /// Creates a new builder-style object to manufacture [`AdditionalLimit`](crate::model::AdditionalLimit)
+    /// Creates a new builder-style object to manufacture [`AdditionalLimit`](crate::model::AdditionalLimit).
     pub fn builder() -> crate::model::additional_limit::Builder {
         crate::model::additional_limit::Builder::default()
     }
@@ -9217,6 +9404,7 @@ impl AdditionalLimit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceLimits {
     /// <p> InstanceCountLimits represents the limits on number of instances that be created in Amazon Elasticsearch for given InstanceType. </p>
+    #[doc(hidden)]
     pub instance_count_limits: std::option::Option<crate::model::InstanceCountLimits>,
 }
 impl InstanceLimits {
@@ -9232,11 +9420,10 @@ impl std::fmt::Debug for InstanceLimits {
         formatter.finish()
     }
 }
-/// See [`InstanceLimits`](crate::model::InstanceLimits)
+/// See [`InstanceLimits`](crate::model::InstanceLimits).
 pub mod instance_limits {
 
-    /// A builder for [`InstanceLimits`](crate::model::InstanceLimits)
-    #[non_exhaustive]
+    /// A builder for [`InstanceLimits`](crate::model::InstanceLimits).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_count_limits: std::option::Option<crate::model::InstanceCountLimits>,
@@ -9255,7 +9442,7 @@ pub mod instance_limits {
             self.instance_count_limits = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceLimits`](crate::model::InstanceLimits)
+        /// Consumes the builder and constructs a [`InstanceLimits`](crate::model::InstanceLimits).
         pub fn build(self) -> crate::model::InstanceLimits {
             crate::model::InstanceLimits {
                 instance_count_limits: self.instance_count_limits,
@@ -9264,7 +9451,7 @@ pub mod instance_limits {
     }
 }
 impl InstanceLimits {
-    /// Creates a new builder-style object to manufacture [`InstanceLimits`](crate::model::InstanceLimits)
+    /// Creates a new builder-style object to manufacture [`InstanceLimits`](crate::model::InstanceLimits).
     pub fn builder() -> crate::model::instance_limits::Builder {
         crate::model::instance_limits::Builder::default()
     }
@@ -9275,8 +9462,10 @@ impl InstanceLimits {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceCountLimits {
     /// <p> Minimum number of Instances that can be instantiated for given InstanceType. </p>
+    #[doc(hidden)]
     pub minimum_instance_count: i32,
     /// <p> Maximum number of Instances that can be instantiated for given InstanceType. </p>
+    #[doc(hidden)]
     pub maximum_instance_count: i32,
 }
 impl InstanceCountLimits {
@@ -9297,11 +9486,10 @@ impl std::fmt::Debug for InstanceCountLimits {
         formatter.finish()
     }
 }
-/// See [`InstanceCountLimits`](crate::model::InstanceCountLimits)
+/// See [`InstanceCountLimits`](crate::model::InstanceCountLimits).
 pub mod instance_count_limits {
 
-    /// A builder for [`InstanceCountLimits`](crate::model::InstanceCountLimits)
-    #[non_exhaustive]
+    /// A builder for [`InstanceCountLimits`](crate::model::InstanceCountLimits).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) minimum_instance_count: std::option::Option<i32>,
@@ -9328,7 +9516,7 @@ pub mod instance_count_limits {
             self.maximum_instance_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceCountLimits`](crate::model::InstanceCountLimits)
+        /// Consumes the builder and constructs a [`InstanceCountLimits`](crate::model::InstanceCountLimits).
         pub fn build(self) -> crate::model::InstanceCountLimits {
             crate::model::InstanceCountLimits {
                 minimum_instance_count: self.minimum_instance_count.unwrap_or_default(),
@@ -9338,7 +9526,7 @@ pub mod instance_count_limits {
     }
 }
 impl InstanceCountLimits {
-    /// Creates a new builder-style object to manufacture [`InstanceCountLimits`](crate::model::InstanceCountLimits)
+    /// Creates a new builder-style object to manufacture [`InstanceCountLimits`](crate::model::InstanceCountLimits).
     pub fn builder() -> crate::model::instance_count_limits::Builder {
         crate::model::instance_count_limits::Builder::default()
     }
@@ -9354,16 +9542,20 @@ pub struct StorageType {
     /// <li>ebs</li> Elastic block storage that would be attached to the given Instance
     /// </ol>
     /// <p></p>
+    #[doc(hidden)]
     pub storage_type_name: std::option::Option<std::string::String>,
     /// <p> SubType of the given storage type. List of available sub-storage options: For "instance" storageType we wont have any storageSubType, in case of "ebs" storageType we will have following valid storageSubTypes </p>
     /// <ol>
     /// <li>standard</li>
     /// <li>gp2</li>
+    /// <li>gp3</li>
     /// <li>io1</li>
     /// </ol> Refer <code><code>VolumeType</code></code> for more information regarding above EBS storage options.
     /// <p></p>
+    #[doc(hidden)]
     pub storage_sub_type_name: std::option::Option<std::string::String>,
     /// <p>List of limits that are applicable for given storage type. </p>
+    #[doc(hidden)]
     pub storage_type_limits: std::option::Option<std::vec::Vec<crate::model::StorageTypeLimit>>,
 }
 impl StorageType {
@@ -9380,6 +9572,7 @@ impl StorageType {
     /// <ol>
     /// <li>standard</li>
     /// <li>gp2</li>
+    /// <li>gp3</li>
     /// <li>io1</li>
     /// </ol> Refer <code><code>VolumeType</code></code> for more information regarding above EBS storage options.
     /// <p></p>
@@ -9400,11 +9593,10 @@ impl std::fmt::Debug for StorageType {
         formatter.finish()
     }
 }
-/// See [`StorageType`](crate::model::StorageType)
+/// See [`StorageType`](crate::model::StorageType).
 pub mod storage_type {
 
-    /// A builder for [`StorageType`](crate::model::StorageType)
-    #[non_exhaustive]
+    /// A builder for [`StorageType`](crate::model::StorageType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_type_name: std::option::Option<std::string::String>,
@@ -9440,6 +9632,7 @@ pub mod storage_type {
         /// <ol>
         /// <li>standard</li>
         /// <li>gp2</li>
+        /// <li>gp3</li>
         /// <li>io1</li>
         /// </ol> Refer <code><code>VolumeType</code></code> for more information regarding above EBS storage options.
         /// <p></p>
@@ -9451,6 +9644,7 @@ pub mod storage_type {
         /// <ol>
         /// <li>standard</li>
         /// <li>gp2</li>
+        /// <li>gp3</li>
         /// <li>io1</li>
         /// </ol> Refer <code><code>VolumeType</code></code> for more information regarding above EBS storage options.
         /// <p></p>
@@ -9480,7 +9674,7 @@ pub mod storage_type {
             self.storage_type_limits = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageType`](crate::model::StorageType)
+        /// Consumes the builder and constructs a [`StorageType`](crate::model::StorageType).
         pub fn build(self) -> crate::model::StorageType {
             crate::model::StorageType {
                 storage_type_name: self.storage_type_name,
@@ -9491,7 +9685,7 @@ pub mod storage_type {
     }
 }
 impl StorageType {
-    /// Creates a new builder-style object to manufacture [`StorageType`](crate::model::StorageType)
+    /// Creates a new builder-style object to manufacture [`StorageType`](crate::model::StorageType).
     pub fn builder() -> crate::model::storage_type::Builder {
         crate::model::storage_type::Builder::default()
     }
@@ -9507,10 +9701,14 @@ pub struct StorageTypeLimit {
     /// <li>MaximumVolumeSize</li> Maximum amount of volume size that is applicable for given storage type.It can be empty if it is not applicable.
     /// <li>MaximumIops</li> Maximum amount of Iops that is applicable for given storage type.It can be empty if it is not applicable.
     /// <li>MinimumIops</li> Minimum amount of Iops that is applicable for given storage type.It can be empty if it is not applicable.
+    /// <li>MaximumThroughput</li> Maximum amount of Throughput that is applicable for given storage type.It can be empty if it is not applicable.
+    /// <li>MinimumThroughput</li> Minimum amount of Throughput that is applicable for given storage type.It can be empty if it is not applicable.
     /// </ol>
     /// <p></p>
+    #[doc(hidden)]
     pub limit_name: std::option::Option<std::string::String>,
     /// <p> Values for the <code> <code>StorageTypeLimit$LimitName</code> </code> . </p>
+    #[doc(hidden)]
     pub limit_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl StorageTypeLimit {
@@ -9520,6 +9718,8 @@ impl StorageTypeLimit {
     /// <li>MaximumVolumeSize</li> Maximum amount of volume size that is applicable for given storage type.It can be empty if it is not applicable.
     /// <li>MaximumIops</li> Maximum amount of Iops that is applicable for given storage type.It can be empty if it is not applicable.
     /// <li>MinimumIops</li> Minimum amount of Iops that is applicable for given storage type.It can be empty if it is not applicable.
+    /// <li>MaximumThroughput</li> Maximum amount of Throughput that is applicable for given storage type.It can be empty if it is not applicable.
+    /// <li>MinimumThroughput</li> Minimum amount of Throughput that is applicable for given storage type.It can be empty if it is not applicable.
     /// </ol>
     /// <p></p>
     pub fn limit_name(&self) -> std::option::Option<&str> {
@@ -9538,11 +9738,10 @@ impl std::fmt::Debug for StorageTypeLimit {
         formatter.finish()
     }
 }
-/// See [`StorageTypeLimit`](crate::model::StorageTypeLimit)
+/// See [`StorageTypeLimit`](crate::model::StorageTypeLimit).
 pub mod storage_type_limit {
 
-    /// A builder for [`StorageTypeLimit`](crate::model::StorageTypeLimit)
-    #[non_exhaustive]
+    /// A builder for [`StorageTypeLimit`](crate::model::StorageTypeLimit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) limit_name: std::option::Option<std::string::String>,
@@ -9555,6 +9754,8 @@ pub mod storage_type_limit {
         /// <li>MaximumVolumeSize</li> Maximum amount of volume size that is applicable for given storage type.It can be empty if it is not applicable.
         /// <li>MaximumIops</li> Maximum amount of Iops that is applicable for given storage type.It can be empty if it is not applicable.
         /// <li>MinimumIops</li> Minimum amount of Iops that is applicable for given storage type.It can be empty if it is not applicable.
+        /// <li>MaximumThroughput</li> Maximum amount of Throughput that is applicable for given storage type.It can be empty if it is not applicable.
+        /// <li>MinimumThroughput</li> Minimum amount of Throughput that is applicable for given storage type.It can be empty if it is not applicable.
         /// </ol>
         /// <p></p>
         pub fn limit_name(mut self, input: impl Into<std::string::String>) -> Self {
@@ -9567,6 +9768,8 @@ pub mod storage_type_limit {
         /// <li>MaximumVolumeSize</li> Maximum amount of volume size that is applicable for given storage type.It can be empty if it is not applicable.
         /// <li>MaximumIops</li> Maximum amount of Iops that is applicable for given storage type.It can be empty if it is not applicable.
         /// <li>MinimumIops</li> Minimum amount of Iops that is applicable for given storage type.It can be empty if it is not applicable.
+        /// <li>MaximumThroughput</li> Maximum amount of Throughput that is applicable for given storage type.It can be empty if it is not applicable.
+        /// <li>MinimumThroughput</li> Minimum amount of Throughput that is applicable for given storage type.It can be empty if it is not applicable.
         /// </ol>
         /// <p></p>
         pub fn set_limit_name(mut self, input: std::option::Option<std::string::String>) -> Self {
@@ -9592,7 +9795,7 @@ pub mod storage_type_limit {
             self.limit_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageTypeLimit`](crate::model::StorageTypeLimit)
+        /// Consumes the builder and constructs a [`StorageTypeLimit`](crate::model::StorageTypeLimit).
         pub fn build(self) -> crate::model::StorageTypeLimit {
             crate::model::StorageTypeLimit {
                 limit_name: self.limit_name,
@@ -9602,7 +9805,7 @@ pub mod storage_type_limit {
     }
 }
 impl StorageTypeLimit {
-    /// Creates a new builder-style object to manufacture [`StorageTypeLimit`](crate::model::StorageTypeLimit)
+    /// Creates a new builder-style object to manufacture [`StorageTypeLimit`](crate::model::StorageTypeLimit).
     pub fn builder() -> crate::model::storage_type_limit::Builder {
         crate::model::storage_type_limit::Builder::default()
     }
@@ -9613,59 +9816,84 @@ impl StorageTypeLimit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ElasticsearchDomainStatus {
     /// <p>The unique identifier for the specified Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub domain_id: std::option::Option<std::string::String>,
     /// <p>The name of an Elasticsearch domain. Domain names are unique across the domains owned by an account within an AWS region. Domain names start with a letter or number and can contain the following characters: a-z (lowercase), 0-9, and - (hyphen).</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The Amazon resource name (ARN) of an Elasticsearch domain. See <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/index.html?Using_Identifiers.html" target="_blank">Identifiers for IAM Entities</a> in <i>Using AWS Identity and Access Management</i> for more information.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The domain creation status. <code>True</code> if the creation of an Elasticsearch domain is complete. <code>False</code> if domain creation is still in progress.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<bool>,
     /// <p>The domain deletion status. <code>True</code> if a delete request has been received for the domain but resource cleanup is still in progress. <code>False</code> if the domain has not been deleted. Once domain deletion is complete, the status of the domain is no longer returned.</p>
+    #[doc(hidden)]
     pub deleted: std::option::Option<bool>,
     /// <p>The Elasticsearch domain endpoint that you use to submit index and search requests.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>Map containing the Elasticsearch domain endpoints used to submit index and search requests. Example <code>key, value</code>: <code>'vpc','vpc-endpoint-h2dsd34efgyghrtguk5gt6j2foh4.us-east-1.es.amazonaws.com'</code>.</p>
+    #[doc(hidden)]
     pub endpoints:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The status of the Elasticsearch domain configuration. <code>True</code> if Amazon Elasticsearch Service is processing configuration changes. <code>False</code> if the configuration is active.</p>
+    #[doc(hidden)]
     pub processing: std::option::Option<bool>,
     /// <p>The status of an Elasticsearch domain version upgrade. <code>True</code> if Amazon Elasticsearch Service is undergoing a version upgrade. <code>False</code> if the configuration is active.</p>
+    #[doc(hidden)]
     pub upgrade_processing: std::option::Option<bool>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub elasticsearch_version: std::option::Option<std::string::String>,
     /// <p>The type and number of instances in the domain cluster.</p>
+    #[doc(hidden)]
     pub elasticsearch_cluster_config: std::option::Option<crate::model::ElasticsearchClusterConfig>,
     /// <p>The <code>EBSOptions</code> for the specified domain. See <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs" target="_blank">Configuring EBS-based Storage</a> for more information.</p>
+    #[doc(hidden)]
     pub ebs_options: std::option::Option<crate::model::EbsOptions>,
     /// <p> IAM access policy as a JSON-formatted string.</p>
+    #[doc(hidden)]
     pub access_policies: std::option::Option<std::string::String>,
     /// <p>Specifies the status of the <code>SnapshotOptions</code></p>
+    #[doc(hidden)]
     pub snapshot_options: std::option::Option<crate::model::SnapshotOptions>,
     /// <p>The <code>VPCOptions</code> for the specified domain. For more information, see <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html" target="_blank">VPC Endpoints for Amazon Elasticsearch Service Domains</a>.</p>
+    #[doc(hidden)]
     pub vpc_options: std::option::Option<crate::model::VpcDerivedInfo>,
     /// <p>The <code>CognitoOptions</code> for the specified domain. For more information, see <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-cognito-auth.html" target="_blank">Amazon Cognito Authentication for Kibana</a>.</p>
+    #[doc(hidden)]
     pub cognito_options: std::option::Option<crate::model::CognitoOptions>,
     /// <p> Specifies the status of the <code>EncryptionAtRestOptions</code>.</p>
+    #[doc(hidden)]
     pub encryption_at_rest_options: std::option::Option<crate::model::EncryptionAtRestOptions>,
     /// <p>Specifies the status of the <code>NodeToNodeEncryptionOptions</code>.</p>
+    #[doc(hidden)]
     pub node_to_node_encryption_options:
         std::option::Option<crate::model::NodeToNodeEncryptionOptions>,
     /// <p>Specifies the status of the <code>AdvancedOptions</code></p>
+    #[doc(hidden)]
     pub advanced_options:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Log publishing options for the given domain.</p>
+    #[doc(hidden)]
     pub log_publishing_options: std::option::Option<
         std::collections::HashMap<crate::model::LogType, crate::model::LogPublishingOption>,
     >,
     /// <p>The current status of the Elasticsearch domain's service software.</p>
+    #[doc(hidden)]
     pub service_software_options: std::option::Option<crate::model::ServiceSoftwareOptions>,
     /// <p>The current status of the Elasticsearch domain's endpoint options.</p>
+    #[doc(hidden)]
     pub domain_endpoint_options: std::option::Option<crate::model::DomainEndpointOptions>,
     /// <p>The current status of the Elasticsearch domain's advanced security options.</p>
+    #[doc(hidden)]
     pub advanced_security_options: std::option::Option<crate::model::AdvancedSecurityOptions>,
     /// <p>The current status of the Elasticsearch domain's Auto-Tune options.</p>
+    #[doc(hidden)]
     pub auto_tune_options: std::option::Option<crate::model::AutoTuneOptionsOutput>,
     /// <p>Specifies change details of the domain configuration change.</p>
+    #[doc(hidden)]
     pub change_progress_details: std::option::Option<crate::model::ChangeProgressDetails>,
 }
 impl ElasticsearchDomainStatus {
@@ -9834,11 +10062,10 @@ impl std::fmt::Debug for ElasticsearchDomainStatus {
         formatter.finish()
     }
 }
-/// See [`ElasticsearchDomainStatus`](crate::model::ElasticsearchDomainStatus)
+/// See [`ElasticsearchDomainStatus`](crate::model::ElasticsearchDomainStatus).
 pub mod elasticsearch_domain_status {
 
-    /// A builder for [`ElasticsearchDomainStatus`](crate::model::ElasticsearchDomainStatus)
-    #[non_exhaustive]
+    /// A builder for [`ElasticsearchDomainStatus`](crate::model::ElasticsearchDomainStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_id: std::option::Option<std::string::String>,
@@ -10239,7 +10466,7 @@ pub mod elasticsearch_domain_status {
             self.change_progress_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ElasticsearchDomainStatus`](crate::model::ElasticsearchDomainStatus)
+        /// Consumes the builder and constructs a [`ElasticsearchDomainStatus`](crate::model::ElasticsearchDomainStatus).
         pub fn build(self) -> crate::model::ElasticsearchDomainStatus {
             crate::model::ElasticsearchDomainStatus {
                 domain_id: self.domain_id,
@@ -10272,7 +10499,7 @@ pub mod elasticsearch_domain_status {
     }
 }
 impl ElasticsearchDomainStatus {
-    /// Creates a new builder-style object to manufacture [`ElasticsearchDomainStatus`](crate::model::ElasticsearchDomainStatus)
+    /// Creates a new builder-style object to manufacture [`ElasticsearchDomainStatus`](crate::model::ElasticsearchDomainStatus).
     pub fn builder() -> crate::model::elasticsearch_domain_status::Builder {
         crate::model::elasticsearch_domain_status::Builder::default()
     }
@@ -10283,8 +10510,10 @@ impl ElasticsearchDomainStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoTuneOptionsOutput {
     /// <p>Specifies the <code>AutoTuneState</code> for the Elasticsearch domain.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::AutoTuneState>,
     /// <p>Specifies the error message while enabling or disabling the Auto-Tune.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl AutoTuneOptionsOutput {
@@ -10305,11 +10534,10 @@ impl std::fmt::Debug for AutoTuneOptionsOutput {
         formatter.finish()
     }
 }
-/// See [`AutoTuneOptionsOutput`](crate::model::AutoTuneOptionsOutput)
+/// See [`AutoTuneOptionsOutput`](crate::model::AutoTuneOptionsOutput).
 pub mod auto_tune_options_output {
 
-    /// A builder for [`AutoTuneOptionsOutput`](crate::model::AutoTuneOptionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`AutoTuneOptionsOutput`](crate::model::AutoTuneOptionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::AutoTuneState>,
@@ -10342,7 +10570,7 @@ pub mod auto_tune_options_output {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoTuneOptionsOutput`](crate::model::AutoTuneOptionsOutput)
+        /// Consumes the builder and constructs a [`AutoTuneOptionsOutput`](crate::model::AutoTuneOptionsOutput).
         pub fn build(self) -> crate::model::AutoTuneOptionsOutput {
             crate::model::AutoTuneOptionsOutput {
                 state: self.state,
@@ -10352,7 +10580,7 @@ pub mod auto_tune_options_output {
     }
 }
 impl AutoTuneOptionsOutput {
-    /// Creates a new builder-style object to manufacture [`AutoTuneOptionsOutput`](crate::model::AutoTuneOptionsOutput)
+    /// Creates a new builder-style object to manufacture [`AutoTuneOptionsOutput`](crate::model::AutoTuneOptionsOutput).
     pub fn builder() -> crate::model::auto_tune_options_output::Builder {
         crate::model::auto_tune_options_output::Builder::default()
     }
@@ -10363,18 +10591,25 @@ impl AutoTuneOptionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChangeProgressStatusDetails {
     /// <p>The unique change identifier associated with a specific domain configuration change.</p>
+    #[doc(hidden)]
     pub change_id: std::option::Option<std::string::String>,
     /// <p>The time at which the configuration change is made on the domain.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The overall status of the domain configuration change. This field can take the following values: <code>PENDING</code>, <code>PROCESSING</code>, <code>COMPLETED</code> and <code>FAILED</code></p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OverallChangeStatus>,
     /// <p>The list of properties involved in the domain configuration change that are still in pending.</p>
+    #[doc(hidden)]
     pub pending_properties: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The list of properties involved in the domain configuration change that are completed.</p>
+    #[doc(hidden)]
     pub completed_properties: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The total number of stages required for the configuration change.</p>
+    #[doc(hidden)]
     pub total_number_of_stages: i32,
     /// <p>The specific stages that the domain is going through to perform the configuration change.</p>
+    #[doc(hidden)]
     pub change_progress_stages:
         std::option::Option<std::vec::Vec<crate::model::ChangeProgressStage>>,
 }
@@ -10423,11 +10658,10 @@ impl std::fmt::Debug for ChangeProgressStatusDetails {
         formatter.finish()
     }
 }
-/// See [`ChangeProgressStatusDetails`](crate::model::ChangeProgressStatusDetails)
+/// See [`ChangeProgressStatusDetails`](crate::model::ChangeProgressStatusDetails).
 pub mod change_progress_status_details {
 
-    /// A builder for [`ChangeProgressStatusDetails`](crate::model::ChangeProgressStatusDetails)
-    #[non_exhaustive]
+    /// A builder for [`ChangeProgressStatusDetails`](crate::model::ChangeProgressStatusDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_id: std::option::Option<std::string::String>,
@@ -10543,7 +10777,7 @@ pub mod change_progress_status_details {
             self.change_progress_stages = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeProgressStatusDetails`](crate::model::ChangeProgressStatusDetails)
+        /// Consumes the builder and constructs a [`ChangeProgressStatusDetails`](crate::model::ChangeProgressStatusDetails).
         pub fn build(self) -> crate::model::ChangeProgressStatusDetails {
             crate::model::ChangeProgressStatusDetails {
                 change_id: self.change_id,
@@ -10558,7 +10792,7 @@ pub mod change_progress_status_details {
     }
 }
 impl ChangeProgressStatusDetails {
-    /// Creates a new builder-style object to manufacture [`ChangeProgressStatusDetails`](crate::model::ChangeProgressStatusDetails)
+    /// Creates a new builder-style object to manufacture [`ChangeProgressStatusDetails`](crate::model::ChangeProgressStatusDetails).
     pub fn builder() -> crate::model::change_progress_status_details::Builder {
         crate::model::change_progress_status_details::Builder::default()
     }
@@ -10569,12 +10803,16 @@ impl ChangeProgressStatusDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChangeProgressStage {
     /// <p>The name of the specific progress stage.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The overall status of a specific progress stage.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The description of the progress stage.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The last updated timestamp of the progress stage.</p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ChangeProgressStage {
@@ -10605,11 +10843,10 @@ impl std::fmt::Debug for ChangeProgressStage {
         formatter.finish()
     }
 }
-/// See [`ChangeProgressStage`](crate::model::ChangeProgressStage)
+/// See [`ChangeProgressStage`](crate::model::ChangeProgressStage).
 pub mod change_progress_stage {
 
-    /// A builder for [`ChangeProgressStage`](crate::model::ChangeProgressStage)
-    #[non_exhaustive]
+    /// A builder for [`ChangeProgressStage`](crate::model::ChangeProgressStage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -10661,7 +10898,7 @@ pub mod change_progress_stage {
             self.last_updated = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeProgressStage`](crate::model::ChangeProgressStage)
+        /// Consumes the builder and constructs a [`ChangeProgressStage`](crate::model::ChangeProgressStage).
         pub fn build(self) -> crate::model::ChangeProgressStage {
             crate::model::ChangeProgressStage {
                 name: self.name,
@@ -10673,7 +10910,7 @@ pub mod change_progress_stage {
     }
 }
 impl ChangeProgressStage {
-    /// Creates a new builder-style object to manufacture [`ChangeProgressStage`](crate::model::ChangeProgressStage)
+    /// Creates a new builder-style object to manufacture [`ChangeProgressStage`](crate::model::ChangeProgressStage).
     pub fn builder() -> crate::model::change_progress_stage::Builder {
         crate::model::change_progress_stage::Builder::default()
     }
@@ -10747,8 +10984,10 @@ impl AsRef<str> for OverallChangeStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoTune {
     /// <p>Specifies Auto-Tune type. Valid value is SCHEDULED_ACTION. </p>
+    #[doc(hidden)]
     pub auto_tune_type: std::option::Option<crate::model::AutoTuneType>,
     /// <p>Specifies details of the Auto-Tune action. See the <a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/auto-tune.html" target="_blank">Developer Guide</a> for more information. </p>
+    #[doc(hidden)]
     pub auto_tune_details: std::option::Option<crate::model::AutoTuneDetails>,
 }
 impl AutoTune {
@@ -10769,11 +11008,10 @@ impl std::fmt::Debug for AutoTune {
         formatter.finish()
     }
 }
-/// See [`AutoTune`](crate::model::AutoTune)
+/// See [`AutoTune`](crate::model::AutoTune).
 pub mod auto_tune {
 
-    /// A builder for [`AutoTune`](crate::model::AutoTune)
-    #[non_exhaustive]
+    /// A builder for [`AutoTune`](crate::model::AutoTune).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_tune_type: std::option::Option<crate::model::AutoTuneType>,
@@ -10806,7 +11044,7 @@ pub mod auto_tune {
             self.auto_tune_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoTune`](crate::model::AutoTune)
+        /// Consumes the builder and constructs a [`AutoTune`](crate::model::AutoTune).
         pub fn build(self) -> crate::model::AutoTune {
             crate::model::AutoTune {
                 auto_tune_type: self.auto_tune_type,
@@ -10816,7 +11054,7 @@ pub mod auto_tune {
     }
 }
 impl AutoTune {
-    /// Creates a new builder-style object to manufacture [`AutoTune`](crate::model::AutoTune)
+    /// Creates a new builder-style object to manufacture [`AutoTune`](crate::model::AutoTune).
     pub fn builder() -> crate::model::auto_tune::Builder {
         crate::model::auto_tune::Builder::default()
     }
@@ -10827,6 +11065,7 @@ impl AutoTune {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoTuneDetails {
     /// <p>Specifies details of the scheduled Auto-Tune action. See the <a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/auto-tune.html" target="_blank">Developer Guide</a> for more information. </p>
+    #[doc(hidden)]
     pub scheduled_auto_tune_details: std::option::Option<crate::model::ScheduledAutoTuneDetails>,
 }
 impl AutoTuneDetails {
@@ -10847,11 +11086,10 @@ impl std::fmt::Debug for AutoTuneDetails {
         formatter.finish()
     }
 }
-/// See [`AutoTuneDetails`](crate::model::AutoTuneDetails)
+/// See [`AutoTuneDetails`](crate::model::AutoTuneDetails).
 pub mod auto_tune_details {
 
-    /// A builder for [`AutoTuneDetails`](crate::model::AutoTuneDetails)
-    #[non_exhaustive]
+    /// A builder for [`AutoTuneDetails`](crate::model::AutoTuneDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scheduled_auto_tune_details:
@@ -10874,7 +11112,7 @@ pub mod auto_tune_details {
             self.scheduled_auto_tune_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoTuneDetails`](crate::model::AutoTuneDetails)
+        /// Consumes the builder and constructs a [`AutoTuneDetails`](crate::model::AutoTuneDetails).
         pub fn build(self) -> crate::model::AutoTuneDetails {
             crate::model::AutoTuneDetails {
                 scheduled_auto_tune_details: self.scheduled_auto_tune_details,
@@ -10883,7 +11121,7 @@ pub mod auto_tune_details {
     }
 }
 impl AutoTuneDetails {
-    /// Creates a new builder-style object to manufacture [`AutoTuneDetails`](crate::model::AutoTuneDetails)
+    /// Creates a new builder-style object to manufacture [`AutoTuneDetails`](crate::model::AutoTuneDetails).
     pub fn builder() -> crate::model::auto_tune_details::Builder {
         crate::model::auto_tune_details::Builder::default()
     }
@@ -10894,12 +11132,16 @@ impl AutoTuneDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduledAutoTuneDetails {
     /// <p>Specifies timestamp for the Auto-Tune action scheduled for the domain. </p>
+    #[doc(hidden)]
     pub date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies Auto-Tune action type. Valid values are JVM_HEAP_SIZE_TUNING and JVM_YOUNG_GEN_TUNING. </p>
+    #[doc(hidden)]
     pub action_type: std::option::Option<crate::model::ScheduledAutoTuneActionType>,
     /// <p>Specifies Auto-Tune action description. </p>
+    #[doc(hidden)]
     pub action: std::option::Option<std::string::String>,
     /// <p>Specifies Auto-Tune action severity. Valid values are LOW, MEDIUM and HIGH. </p>
+    #[doc(hidden)]
     pub severity: std::option::Option<crate::model::ScheduledAutoTuneSeverityType>,
 }
 impl ScheduledAutoTuneDetails {
@@ -10930,11 +11172,10 @@ impl std::fmt::Debug for ScheduledAutoTuneDetails {
         formatter.finish()
     }
 }
-/// See [`ScheduledAutoTuneDetails`](crate::model::ScheduledAutoTuneDetails)
+/// See [`ScheduledAutoTuneDetails`](crate::model::ScheduledAutoTuneDetails).
 pub mod scheduled_auto_tune_details {
 
-    /// A builder for [`ScheduledAutoTuneDetails`](crate::model::ScheduledAutoTuneDetails)
-    #[non_exhaustive]
+    /// A builder for [`ScheduledAutoTuneDetails`](crate::model::ScheduledAutoTuneDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) date: std::option::Option<aws_smithy_types::DateTime>,
@@ -10989,7 +11230,7 @@ pub mod scheduled_auto_tune_details {
             self.severity = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduledAutoTuneDetails`](crate::model::ScheduledAutoTuneDetails)
+        /// Consumes the builder and constructs a [`ScheduledAutoTuneDetails`](crate::model::ScheduledAutoTuneDetails).
         pub fn build(self) -> crate::model::ScheduledAutoTuneDetails {
             crate::model::ScheduledAutoTuneDetails {
                 date: self.date,
@@ -11001,7 +11242,7 @@ pub mod scheduled_auto_tune_details {
     }
 }
 impl ScheduledAutoTuneDetails {
-    /// Creates a new builder-style object to manufacture [`ScheduledAutoTuneDetails`](crate::model::ScheduledAutoTuneDetails)
+    /// Creates a new builder-style object to manufacture [`ScheduledAutoTuneDetails`](crate::model::ScheduledAutoTuneDetails).
     pub fn builder() -> crate::model::scheduled_auto_tune_details::Builder {
         crate::model::scheduled_auto_tune_details::Builder::default()
     }
@@ -11177,8 +11418,10 @@ impl AsRef<str> for AutoTuneType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoTuneOptionsInput {
     /// <p>Specifies the Auto-Tune desired state. Valid values are ENABLED, DISABLED. </p>
+    #[doc(hidden)]
     pub desired_state: std::option::Option<crate::model::AutoTuneDesiredState>,
     /// <p>Specifies list of maitenance schedules. See the <a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/auto-tune.html" target="_blank">Developer Guide</a> for more information.</p>
+    #[doc(hidden)]
     pub maintenance_schedules:
         std::option::Option<std::vec::Vec<crate::model::AutoTuneMaintenanceSchedule>>,
 }
@@ -11202,11 +11445,10 @@ impl std::fmt::Debug for AutoTuneOptionsInput {
         formatter.finish()
     }
 }
-/// See [`AutoTuneOptionsInput`](crate::model::AutoTuneOptionsInput)
+/// See [`AutoTuneOptionsInput`](crate::model::AutoTuneOptionsInput).
 pub mod auto_tune_options_input {
 
-    /// A builder for [`AutoTuneOptionsInput`](crate::model::AutoTuneOptionsInput)
-    #[non_exhaustive]
+    /// A builder for [`AutoTuneOptionsInput`](crate::model::AutoTuneOptionsInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) desired_state: std::option::Option<crate::model::AutoTuneDesiredState>,
@@ -11249,7 +11491,7 @@ pub mod auto_tune_options_input {
             self.maintenance_schedules = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoTuneOptionsInput`](crate::model::AutoTuneOptionsInput)
+        /// Consumes the builder and constructs a [`AutoTuneOptionsInput`](crate::model::AutoTuneOptionsInput).
         pub fn build(self) -> crate::model::AutoTuneOptionsInput {
             crate::model::AutoTuneOptionsInput {
                 desired_state: self.desired_state,
@@ -11259,7 +11501,7 @@ pub mod auto_tune_options_input {
     }
 }
 impl AutoTuneOptionsInput {
-    /// Creates a new builder-style object to manufacture [`AutoTuneOptionsInput`](crate::model::AutoTuneOptionsInput)
+    /// Creates a new builder-style object to manufacture [`AutoTuneOptionsInput`](crate::model::AutoTuneOptionsInput).
     pub fn builder() -> crate::model::auto_tune_options_input::Builder {
         crate::model::auto_tune_options_input::Builder::default()
     }

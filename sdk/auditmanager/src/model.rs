@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationExceptionField {
     /// <p> The name of the validation error. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The body of the error message. </p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ValidationExceptionField {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ValidationExceptionField {
         formatter.finish()
     }
 }
-/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField).
 pub mod validation_exception_field {
 
-    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField)
-    #[non_exhaustive]
+    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod validation_exception_field {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField).
         pub fn build(self) -> crate::model::ValidationExceptionField {
             crate::model::ValidationExceptionField {
                 name: self.name,
@@ -68,7 +69,7 @@ pub mod validation_exception_field {
     }
 }
 impl ValidationExceptionField {
-    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     pub fn builder() -> crate::model::validation_exception_field::Builder {
         crate::model::validation_exception_field::Builder::default()
     }
@@ -147,15 +148,20 @@ impl AsRef<str> for ValidationExceptionReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Settings {
     /// <p> Specifies whether Organizations is enabled. </p>
+    #[doc(hidden)]
     pub is_aws_org_enabled: std::option::Option<bool>,
     /// <p> The designated Amazon Simple Notification Service (Amazon SNS) topic. </p>
+    #[doc(hidden)]
     pub sns_topic: std::option::Option<std::string::String>,
     /// <p> The default storage destination for assessment reports. </p>
+    #[doc(hidden)]
     pub default_assessment_reports_destination:
         std::option::Option<crate::model::AssessmentReportsDestination>,
     /// <p> The designated default audit owners. </p>
+    #[doc(hidden)]
     pub default_process_owners: std::option::Option<std::vec::Vec<crate::model::Role>>,
     /// <p> The KMS key details. </p>
+    #[doc(hidden)]
     pub kms_key: std::option::Option<std::string::String>,
 }
 impl Settings {
@@ -196,11 +202,10 @@ impl std::fmt::Debug for Settings {
         formatter.finish()
     }
 }
-/// See [`Settings`](crate::model::Settings)
+/// See [`Settings`](crate::model::Settings).
 pub mod settings {
 
-    /// A builder for [`Settings`](crate::model::Settings)
-    #[non_exhaustive]
+    /// A builder for [`Settings`](crate::model::Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_aws_org_enabled: std::option::Option<bool>,
@@ -276,7 +281,7 @@ pub mod settings {
             self.kms_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`Settings`](crate::model::Settings)
+        /// Consumes the builder and constructs a [`Settings`](crate::model::Settings).
         pub fn build(self) -> crate::model::Settings {
             crate::model::Settings {
                 is_aws_org_enabled: self.is_aws_org_enabled,
@@ -289,7 +294,7 @@ pub mod settings {
     }
 }
 impl Settings {
-    /// Creates a new builder-style object to manufacture [`Settings`](crate::model::Settings)
+    /// Creates a new builder-style object to manufacture [`Settings`](crate::model::Settings).
     pub fn builder() -> crate::model::settings::Builder {
         crate::model::settings::Builder::default()
     }
@@ -304,8 +309,10 @@ pub struct Role {
     /// <p>In <code>UpdateSettings</code>, <code>roleType</code> can only be <code>PROCESS_OWNER</code>.</p>
     /// <p>In <code>BatchCreateDelegationByAssessment</code>, <code>roleType</code> can only be <code>RESOURCE_OWNER</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub role_type: std::option::Option<crate::model::RoleType>,
     /// <p> The Amazon Resource Name (ARN) of the IAM role. </p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl Role {
@@ -330,11 +337,10 @@ impl std::fmt::Debug for Role {
         formatter.finish()
     }
 }
-/// See [`Role`](crate::model::Role)
+/// See [`Role`](crate::model::Role).
 pub mod role {
 
-    /// A builder for [`Role`](crate::model::Role)
-    #[non_exhaustive]
+    /// A builder for [`Role`](crate::model::Role).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_type: std::option::Option<crate::model::RoleType>,
@@ -369,7 +375,7 @@ pub mod role {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Role`](crate::model::Role)
+        /// Consumes the builder and constructs a [`Role`](crate::model::Role).
         pub fn build(self) -> crate::model::Role {
             crate::model::Role {
                 role_type: self.role_type,
@@ -379,7 +385,7 @@ pub mod role {
     }
 }
 impl Role {
-    /// Creates a new builder-style object to manufacture [`Role`](crate::model::Role)
+    /// Creates a new builder-style object to manufacture [`Role`](crate::model::Role).
     pub fn builder() -> crate::model::role::Builder {
         crate::model::role::Builder::default()
     }
@@ -445,8 +451,10 @@ impl AsRef<str> for RoleType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssessmentReportsDestination {
     /// <p> The destination type, such as Amazon S3. </p>
+    #[doc(hidden)]
     pub destination_type: std::option::Option<crate::model::AssessmentReportDestinationType>,
     /// <p> The destination of the assessment report. </p>
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
 }
 impl AssessmentReportsDestination {
@@ -469,11 +477,10 @@ impl std::fmt::Debug for AssessmentReportsDestination {
         formatter.finish()
     }
 }
-/// See [`AssessmentReportsDestination`](crate::model::AssessmentReportsDestination)
+/// See [`AssessmentReportsDestination`](crate::model::AssessmentReportsDestination).
 pub mod assessment_reports_destination {
 
-    /// A builder for [`AssessmentReportsDestination`](crate::model::AssessmentReportsDestination)
-    #[non_exhaustive]
+    /// A builder for [`AssessmentReportsDestination`](crate::model::AssessmentReportsDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination_type:
@@ -507,7 +514,7 @@ pub mod assessment_reports_destination {
             self.destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssessmentReportsDestination`](crate::model::AssessmentReportsDestination)
+        /// Consumes the builder and constructs a [`AssessmentReportsDestination`](crate::model::AssessmentReportsDestination).
         pub fn build(self) -> crate::model::AssessmentReportsDestination {
             crate::model::AssessmentReportsDestination {
                 destination_type: self.destination_type,
@@ -517,7 +524,7 @@ pub mod assessment_reports_destination {
     }
 }
 impl AssessmentReportsDestination {
-    /// Creates a new builder-style object to manufacture [`AssessmentReportsDestination`](crate::model::AssessmentReportsDestination)
+    /// Creates a new builder-style object to manufacture [`AssessmentReportsDestination`](crate::model::AssessmentReportsDestination).
     pub fn builder() -> crate::model::assessment_reports_destination::Builder {
         crate::model::assessment_reports_destination::Builder::default()
     }
@@ -579,35 +586,50 @@ impl AsRef<str> for AssessmentReportDestinationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Control {
     /// <p> The Amazon Resource Name (ARN) of the control. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> The unique identifier for the control. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The type of control, such as a custom control or a standard control. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ControlType>,
     /// <p> The name of the control. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The description of the control. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The steps that you should follow to determine if the control has been satisfied. </p>
+    #[doc(hidden)]
     pub testing_information: std::option::Option<std::string::String>,
     /// <p> The title of the action plan for remediating the control. </p>
+    #[doc(hidden)]
     pub action_plan_title: std::option::Option<std::string::String>,
     /// <p> The recommended actions to carry out if the control isn't fulfilled. </p>
+    #[doc(hidden)]
     pub action_plan_instructions: std::option::Option<std::string::String>,
     /// <p> The data source that determines where Audit Manager collects evidence from for the control. </p>
+    #[doc(hidden)]
     pub control_sources: std::option::Option<std::string::String>,
     /// <p> The data mapping sources for the control. </p>
+    #[doc(hidden)]
     pub control_mapping_sources:
         std::option::Option<std::vec::Vec<crate::model::ControlMappingSource>>,
     /// <p> Specifies when the control was created. </p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies when the control was most recently updated. </p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The IAM user or role that created the control. </p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
     /// <p> The IAM user or role that most recently updated the control. </p>
+    #[doc(hidden)]
     pub last_updated_by: std::option::Option<std::string::String>,
     /// <p> The tags associated with the control. </p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -699,11 +721,10 @@ impl std::fmt::Debug for Control {
         formatter.finish()
     }
 }
-/// See [`Control`](crate::model::Control)
+/// See [`Control`](crate::model::Control).
 pub mod control {
 
-    /// A builder for [`Control`](crate::model::Control)
-    #[non_exhaustive]
+    /// A builder for [`Control`](crate::model::Control).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -924,7 +945,7 @@ pub mod control {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Control`](crate::model::Control)
+        /// Consumes the builder and constructs a [`Control`](crate::model::Control).
         pub fn build(self) -> crate::model::Control {
             crate::model::Control {
                 arn: self.arn,
@@ -947,7 +968,7 @@ pub mod control {
     }
 }
 impl Control {
-    /// Creates a new builder-style object to manufacture [`Control`](crate::model::Control)
+    /// Creates a new builder-style object to manufacture [`Control`](crate::model::Control).
     pub fn builder() -> crate::model::control::Builder {
         crate::model::control::Builder::default()
     }
@@ -958,20 +979,35 @@ impl Control {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ControlMappingSource {
     /// <p> The unique identifier for the source. </p>
+    #[doc(hidden)]
     pub source_id: std::option::Option<std::string::String>,
     /// <p> The name of the source. </p>
+    #[doc(hidden)]
     pub source_name: std::option::Option<std::string::String>,
     /// <p> The description of the source. </p>
+    #[doc(hidden)]
     pub source_description: std::option::Option<std::string::String>,
     /// <p> The setup option for the data source. This option reflects if the evidence collection is automated or manual. </p>
+    #[doc(hidden)]
     pub source_set_up_option: std::option::Option<crate::model::SourceSetUpOption>,
     /// <p> Specifies one of the five types of data sources for evidence collection. </p>
+    #[doc(hidden)]
     pub source_type: std::option::Option<crate::model::SourceType>,
     /// <p> The keyword to search for in CloudTrail logs, Config rules, Security Hub checks, and Amazon Web Services API names. </p>
+    /// <p> To learn more about the supported keywords that you can use when mapping a control data source, see the following pages in the <i>Audit Manager User Guide</i>:</p>
+    /// <ul>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-ash.html">Config rules supported by Audit Manager</a> </p> </li>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-config.html">Security Hub controls supported by Audit Manager</a> </p> </li>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-api.html">API calls supported by Audit Manager</a> </p> </li>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-cloudtrail.html">CloudTrail event names supported by Audit Manager</a> </p> </li>
+    /// </ul>
+    #[doc(hidden)]
     pub source_keyword: std::option::Option<crate::model::SourceKeyword>,
     /// <p> The frequency of evidence collection for the control mapping source. </p>
+    #[doc(hidden)]
     pub source_frequency: std::option::Option<crate::model::SourceFrequency>,
     /// <p> The instructions for troubleshooting the control. </p>
+    #[doc(hidden)]
     pub troubleshooting_text: std::option::Option<std::string::String>,
 }
 impl ControlMappingSource {
@@ -996,6 +1032,13 @@ impl ControlMappingSource {
         self.source_type.as_ref()
     }
     /// <p> The keyword to search for in CloudTrail logs, Config rules, Security Hub checks, and Amazon Web Services API names. </p>
+    /// <p> To learn more about the supported keywords that you can use when mapping a control data source, see the following pages in the <i>Audit Manager User Guide</i>:</p>
+    /// <ul>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-ash.html">Config rules supported by Audit Manager</a> </p> </li>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-config.html">Security Hub controls supported by Audit Manager</a> </p> </li>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-api.html">API calls supported by Audit Manager</a> </p> </li>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-cloudtrail.html">CloudTrail event names supported by Audit Manager</a> </p> </li>
+    /// </ul>
     pub fn source_keyword(&self) -> std::option::Option<&crate::model::SourceKeyword> {
         self.source_keyword.as_ref()
     }
@@ -1022,11 +1065,10 @@ impl std::fmt::Debug for ControlMappingSource {
         formatter.finish()
     }
 }
-/// See [`ControlMappingSource`](crate::model::ControlMappingSource)
+/// See [`ControlMappingSource`](crate::model::ControlMappingSource).
 pub mod control_mapping_source {
 
-    /// A builder for [`ControlMappingSource`](crate::model::ControlMappingSource)
-    #[non_exhaustive]
+    /// A builder for [`ControlMappingSource`](crate::model::ControlMappingSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_id: std::option::Option<std::string::String>,
@@ -1099,11 +1141,25 @@ pub mod control_mapping_source {
             self
         }
         /// <p> The keyword to search for in CloudTrail logs, Config rules, Security Hub checks, and Amazon Web Services API names. </p>
+        /// <p> To learn more about the supported keywords that you can use when mapping a control data source, see the following pages in the <i>Audit Manager User Guide</i>:</p>
+        /// <ul>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-ash.html">Config rules supported by Audit Manager</a> </p> </li>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-config.html">Security Hub controls supported by Audit Manager</a> </p> </li>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-api.html">API calls supported by Audit Manager</a> </p> </li>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-cloudtrail.html">CloudTrail event names supported by Audit Manager</a> </p> </li>
+        /// </ul>
         pub fn source_keyword(mut self, input: crate::model::SourceKeyword) -> Self {
             self.source_keyword = Some(input);
             self
         }
         /// <p> The keyword to search for in CloudTrail logs, Config rules, Security Hub checks, and Amazon Web Services API names. </p>
+        /// <p> To learn more about the supported keywords that you can use when mapping a control data source, see the following pages in the <i>Audit Manager User Guide</i>:</p>
+        /// <ul>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-ash.html">Config rules supported by Audit Manager</a> </p> </li>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-config.html">Security Hub controls supported by Audit Manager</a> </p> </li>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-api.html">API calls supported by Audit Manager</a> </p> </li>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-cloudtrail.html">CloudTrail event names supported by Audit Manager</a> </p> </li>
+        /// </ul>
         pub fn set_source_keyword(
             mut self,
             input: std::option::Option<crate::model::SourceKeyword>,
@@ -1137,7 +1193,7 @@ pub mod control_mapping_source {
             self.troubleshooting_text = input;
             self
         }
-        /// Consumes the builder and constructs a [`ControlMappingSource`](crate::model::ControlMappingSource)
+        /// Consumes the builder and constructs a [`ControlMappingSource`](crate::model::ControlMappingSource).
         pub fn build(self) -> crate::model::ControlMappingSource {
             crate::model::ControlMappingSource {
                 source_id: self.source_id,
@@ -1153,7 +1209,7 @@ pub mod control_mapping_source {
     }
 }
 impl ControlMappingSource {
-    /// Creates a new builder-style object to manufacture [`ControlMappingSource`](crate::model::ControlMappingSource)
+    /// Creates a new builder-style object to manufacture [`ControlMappingSource`](crate::model::ControlMappingSource).
     pub fn builder() -> crate::model::control_mapping_source::Builder {
         crate::model::control_mapping_source::Builder::default()
     }
@@ -1219,10 +1275,18 @@ impl AsRef<str> for SourceFrequency {
 }
 
 /// <p> The keyword to search for in CloudTrail logs, Config rules, Security Hub checks, and Amazon Web Services API names. </p>
+/// <p> To learn more about the supported keywords that you can use when mapping a control data source, see the following pages in the <i>Audit Manager User Guide</i>:</p>
+/// <ul>
+/// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-ash.html">Config rules supported by Audit Manager</a> </p> </li>
+/// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-config.html">Security Hub controls supported by Audit Manager</a> </p> </li>
+/// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-api.html">API calls supported by Audit Manager</a> </p> </li>
+/// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-cloudtrail.html">CloudTrail event names supported by Audit Manager</a> </p> </li>
+/// </ul>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceKeyword {
     /// <p> The input method for the keyword. </p>
+    #[doc(hidden)]
     pub keyword_input_type: std::option::Option<crate::model::KeywordInputType>,
     /// <p> The value of the keyword that's used when mapping a control data source. For example, this can be a CloudTrail event name, a rule name for Config, a Security Hub control, or the name of an Amazon Web Services API call. </p>
     /// <p>If you’re mapping a data source to a rule in Config, the <code>keywordValue</code> that you specify depends on the type of rule:</p>
@@ -1242,6 +1306,7 @@ pub struct SourceKeyword {
     /// <li> <p>Service-linked rule name: OrgConfigRule-s3-bucket-versioning-enabled-dbgzf8ba</p> <p> <code>keywordValue</code>: <code>Custom_OrgConfigRule-s3-bucket-versioning-enabled</code> </p> </li>
     /// </ul> </li>
     /// </ul>
+    #[doc(hidden)]
     pub keyword_value: std::option::Option<std::string::String>,
 }
 impl SourceKeyword {
@@ -1279,11 +1344,10 @@ impl std::fmt::Debug for SourceKeyword {
         formatter.finish()
     }
 }
-/// See [`SourceKeyword`](crate::model::SourceKeyword)
+/// See [`SourceKeyword`](crate::model::SourceKeyword).
 pub mod source_keyword {
 
-    /// A builder for [`SourceKeyword`](crate::model::SourceKeyword)
-    #[non_exhaustive]
+    /// A builder for [`SourceKeyword`](crate::model::SourceKeyword).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) keyword_input_type: std::option::Option<crate::model::KeywordInputType>,
@@ -1350,7 +1414,7 @@ pub mod source_keyword {
             self.keyword_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceKeyword`](crate::model::SourceKeyword)
+        /// Consumes the builder and constructs a [`SourceKeyword`](crate::model::SourceKeyword).
         pub fn build(self) -> crate::model::SourceKeyword {
             crate::model::SourceKeyword {
                 keyword_input_type: self.keyword_input_type,
@@ -1360,7 +1424,7 @@ pub mod source_keyword {
     }
 }
 impl SourceKeyword {
-    /// Creates a new builder-style object to manufacture [`SourceKeyword`](crate::model::SourceKeyword)
+    /// Creates a new builder-style object to manufacture [`SourceKeyword`](crate::model::SourceKeyword).
     pub fn builder() -> crate::model::source_keyword::Builder {
         crate::model::source_keyword::Builder::default()
     }
@@ -1605,14 +1669,19 @@ impl AsRef<str> for ControlType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Assessment {
     /// <p> The Amazon Resource Name (ARN) of the assessment. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> The Amazon Web Services account that's associated with the assessment. </p>
+    #[doc(hidden)]
     pub aws_account: std::option::Option<crate::model::AwsAccount>,
     /// <p> The metadata for the assessment. </p>
+    #[doc(hidden)]
     pub metadata: std::option::Option<crate::model::AssessmentMetadata>,
     /// <p> The framework that the assessment was created from. </p>
+    #[doc(hidden)]
     pub framework: std::option::Option<crate::model::AssessmentFramework>,
     /// <p> The tags that are associated with the assessment. </p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1652,11 +1721,10 @@ impl std::fmt::Debug for Assessment {
         formatter.finish()
     }
 }
-/// See [`Assessment`](crate::model::Assessment)
+/// See [`Assessment`](crate::model::Assessment).
 pub mod assessment {
 
-    /// A builder for [`Assessment`](crate::model::Assessment)
-    #[non_exhaustive]
+    /// A builder for [`Assessment`](crate::model::Assessment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1742,7 +1810,7 @@ pub mod assessment {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Assessment`](crate::model::Assessment)
+        /// Consumes the builder and constructs a [`Assessment`](crate::model::Assessment).
         pub fn build(self) -> crate::model::Assessment {
             crate::model::Assessment {
                 arn: self.arn,
@@ -1755,7 +1823,7 @@ pub mod assessment {
     }
 }
 impl Assessment {
-    /// Creates a new builder-style object to manufacture [`Assessment`](crate::model::Assessment)
+    /// Creates a new builder-style object to manufacture [`Assessment`](crate::model::Assessment).
     pub fn builder() -> crate::model::assessment::Builder {
         crate::model::assessment::Builder::default()
     }
@@ -1766,12 +1834,16 @@ impl Assessment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssessmentFramework {
     /// <p> The unique identifier for the framework. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the framework. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> The metadata of a framework, such as the name, ID, or description. </p>
+    #[doc(hidden)]
     pub metadata: std::option::Option<crate::model::FrameworkMetadata>,
     /// <p> The control sets that are associated with the framework. </p>
+    #[doc(hidden)]
     pub control_sets: std::option::Option<std::vec::Vec<crate::model::AssessmentControlSet>>,
 }
 impl AssessmentFramework {
@@ -1802,11 +1874,10 @@ impl std::fmt::Debug for AssessmentFramework {
         formatter.finish()
     }
 }
-/// See [`AssessmentFramework`](crate::model::AssessmentFramework)
+/// See [`AssessmentFramework`](crate::model::AssessmentFramework).
 pub mod assessment_framework {
 
-    /// A builder for [`AssessmentFramework`](crate::model::AssessmentFramework)
-    #[non_exhaustive]
+    /// A builder for [`AssessmentFramework`](crate::model::AssessmentFramework).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1868,7 +1939,7 @@ pub mod assessment_framework {
             self.control_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssessmentFramework`](crate::model::AssessmentFramework)
+        /// Consumes the builder and constructs a [`AssessmentFramework`](crate::model::AssessmentFramework).
         pub fn build(self) -> crate::model::AssessmentFramework {
             crate::model::AssessmentFramework {
                 id: self.id,
@@ -1880,7 +1951,7 @@ pub mod assessment_framework {
     }
 }
 impl AssessmentFramework {
-    /// Creates a new builder-style object to manufacture [`AssessmentFramework`](crate::model::AssessmentFramework)
+    /// Creates a new builder-style object to manufacture [`AssessmentFramework`](crate::model::AssessmentFramework).
     pub fn builder() -> crate::model::assessment_framework::Builder {
         crate::model::assessment_framework::Builder::default()
     }
@@ -1891,20 +1962,28 @@ impl AssessmentFramework {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssessmentControlSet {
     /// <p> The identifier of the control set in the assessment. This is the control set name in a plain string format. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The description for the control set. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> Specifies the current status of the control set. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ControlSetStatus>,
     /// <p> The roles that are associated with the control set. </p>
+    #[doc(hidden)]
     pub roles: std::option::Option<std::vec::Vec<crate::model::Role>>,
     /// <p> The list of controls that's contained with the control set. </p>
+    #[doc(hidden)]
     pub controls: std::option::Option<std::vec::Vec<crate::model::AssessmentControl>>,
     /// <p> The delegations that are associated with the control set. </p>
+    #[doc(hidden)]
     pub delegations: std::option::Option<std::vec::Vec<crate::model::Delegation>>,
     /// <p> The total number of evidence objects that are retrieved automatically for the control set. </p>
+    #[doc(hidden)]
     pub system_evidence_count: i32,
     /// <p> The total number of evidence objects that are uploaded manually to the control set. </p>
+    #[doc(hidden)]
     pub manual_evidence_count: i32,
 }
 impl AssessmentControlSet {
@@ -1955,11 +2034,10 @@ impl std::fmt::Debug for AssessmentControlSet {
         formatter.finish()
     }
 }
-/// See [`AssessmentControlSet`](crate::model::AssessmentControlSet)
+/// See [`AssessmentControlSet`](crate::model::AssessmentControlSet).
 pub mod assessment_control_set {
 
-    /// A builder for [`AssessmentControlSet`](crate::model::AssessmentControlSet)
-    #[non_exhaustive]
+    /// A builder for [`AssessmentControlSet`](crate::model::AssessmentControlSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2082,7 +2160,7 @@ pub mod assessment_control_set {
             self.manual_evidence_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssessmentControlSet`](crate::model::AssessmentControlSet)
+        /// Consumes the builder and constructs a [`AssessmentControlSet`](crate::model::AssessmentControlSet).
         pub fn build(self) -> crate::model::AssessmentControlSet {
             crate::model::AssessmentControlSet {
                 id: self.id,
@@ -2098,7 +2176,7 @@ pub mod assessment_control_set {
     }
 }
 impl AssessmentControlSet {
-    /// Creates a new builder-style object to manufacture [`AssessmentControlSet`](crate::model::AssessmentControlSet)
+    /// Creates a new builder-style object to manufacture [`AssessmentControlSet`](crate::model::AssessmentControlSet).
     pub fn builder() -> crate::model::assessment_control_set::Builder {
         crate::model::assessment_control_set::Builder::default()
     }
@@ -2109,30 +2187,41 @@ impl AssessmentControlSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Delegation {
     /// <p> The unique identifier for the delegation. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The name of the assessment that's associated with the delegation. </p>
+    #[doc(hidden)]
     pub assessment_name: std::option::Option<std::string::String>,
     /// <p> The identifier for the assessment that's associated with the delegation. </p>
+    #[doc(hidden)]
     pub assessment_id: std::option::Option<std::string::String>,
     /// <p> The status of the delegation. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DelegationStatus>,
     /// <p> The Amazon Resource Name (ARN) of the IAM role. </p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p> The type of customer persona. </p> <note>
     /// <p>In <code>CreateAssessment</code>, <code>roleType</code> can only be <code>PROCESS_OWNER</code>. </p>
     /// <p>In <code>UpdateSettings</code>, <code>roleType</code> can only be <code>PROCESS_OWNER</code>.</p>
     /// <p>In <code>BatchCreateDelegationByAssessment</code>, <code>roleType</code> can only be <code>RESOURCE_OWNER</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub role_type: std::option::Option<crate::model::RoleType>,
     /// <p> Specifies when the delegation was created. </p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies when the delegation was last updated. </p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The identifier for the control set that's associated with the delegation. </p>
+    #[doc(hidden)]
     pub control_set_id: std::option::Option<std::string::String>,
     /// <p> The comment that's related to the delegation. </p>
+    #[doc(hidden)]
     pub comment: std::option::Option<std::string::String>,
     /// <p> The IAM user or role that created the delegation. </p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
 }
 impl Delegation {
@@ -2202,11 +2291,10 @@ impl std::fmt::Debug for Delegation {
         formatter.finish()
     }
 }
-/// See [`Delegation`](crate::model::Delegation)
+/// See [`Delegation`](crate::model::Delegation).
 pub mod delegation {
 
-    /// A builder for [`Delegation`](crate::model::Delegation)
-    #[non_exhaustive]
+    /// A builder for [`Delegation`](crate::model::Delegation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2358,7 +2446,7 @@ pub mod delegation {
             self.created_by = input;
             self
         }
-        /// Consumes the builder and constructs a [`Delegation`](crate::model::Delegation)
+        /// Consumes the builder and constructs a [`Delegation`](crate::model::Delegation).
         pub fn build(self) -> crate::model::Delegation {
             crate::model::Delegation {
                 id: self.id,
@@ -2377,7 +2465,7 @@ pub mod delegation {
     }
 }
 impl Delegation {
-    /// Creates a new builder-style object to manufacture [`Delegation`](crate::model::Delegation)
+    /// Creates a new builder-style object to manufacture [`Delegation`](crate::model::Delegation).
     pub fn builder() -> crate::model::delegation::Builder {
         crate::model::delegation::Builder::default()
     }
@@ -2447,22 +2535,31 @@ impl AsRef<str> for DelegationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssessmentControl {
     /// <p> The identifier for the control. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The name of the control. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The description of the control. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The status of the control. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ControlStatus>,
     /// <p> The response of the control. </p>
+    #[doc(hidden)]
     pub response: std::option::Option<crate::model::ControlResponse>,
     /// <p> The list of comments that's attached to the control. </p>
+    #[doc(hidden)]
     pub comments: std::option::Option<std::vec::Vec<crate::model::ControlComment>>,
     /// <p> The list of data sources for the evidence. </p>
+    #[doc(hidden)]
     pub evidence_sources: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> The amount of evidence that's generated for the control. </p>
+    #[doc(hidden)]
     pub evidence_count: i32,
     /// <p> The amount of evidence in the assessment report. </p>
+    #[doc(hidden)]
     pub assessment_report_evidence_count: i32,
 }
 impl AssessmentControl {
@@ -2521,11 +2618,10 @@ impl std::fmt::Debug for AssessmentControl {
         formatter.finish()
     }
 }
-/// See [`AssessmentControl`](crate::model::AssessmentControl)
+/// See [`AssessmentControl`](crate::model::AssessmentControl).
 pub mod assessment_control {
 
-    /// A builder for [`AssessmentControl`](crate::model::AssessmentControl)
-    #[non_exhaustive]
+    /// A builder for [`AssessmentControl`](crate::model::AssessmentControl).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2656,7 +2752,7 @@ pub mod assessment_control {
             self.assessment_report_evidence_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssessmentControl`](crate::model::AssessmentControl)
+        /// Consumes the builder and constructs a [`AssessmentControl`](crate::model::AssessmentControl).
         pub fn build(self) -> crate::model::AssessmentControl {
             crate::model::AssessmentControl {
                 id: self.id,
@@ -2675,7 +2771,7 @@ pub mod assessment_control {
     }
 }
 impl AssessmentControl {
-    /// Creates a new builder-style object to manufacture [`AssessmentControl`](crate::model::AssessmentControl)
+    /// Creates a new builder-style object to manufacture [`AssessmentControl`](crate::model::AssessmentControl).
     pub fn builder() -> crate::model::assessment_control::Builder {
         crate::model::assessment_control::Builder::default()
     }
@@ -2686,10 +2782,13 @@ impl AssessmentControl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ControlComment {
     /// <p> The name of the user who authored the comment. </p>
+    #[doc(hidden)]
     pub author_name: std::option::Option<std::string::String>,
     /// <p> The body text of a control comment. </p>
+    #[doc(hidden)]
     pub comment_body: std::option::Option<std::string::String>,
     /// <p> The time when the comment was posted. </p>
+    #[doc(hidden)]
     pub posted_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ControlComment {
@@ -2715,11 +2814,10 @@ impl std::fmt::Debug for ControlComment {
         formatter.finish()
     }
 }
-/// See [`ControlComment`](crate::model::ControlComment)
+/// See [`ControlComment`](crate::model::ControlComment).
 pub mod control_comment {
 
-    /// A builder for [`ControlComment`](crate::model::ControlComment)
-    #[non_exhaustive]
+    /// A builder for [`ControlComment`](crate::model::ControlComment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) author_name: std::option::Option<std::string::String>,
@@ -2760,7 +2858,7 @@ pub mod control_comment {
             self.posted_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ControlComment`](crate::model::ControlComment)
+        /// Consumes the builder and constructs a [`ControlComment`](crate::model::ControlComment).
         pub fn build(self) -> crate::model::ControlComment {
             crate::model::ControlComment {
                 author_name: self.author_name,
@@ -2771,7 +2869,7 @@ pub mod control_comment {
     }
 }
 impl ControlComment {
-    /// Creates a new builder-style object to manufacture [`ControlComment`](crate::model::ControlComment)
+    /// Creates a new builder-style object to manufacture [`ControlComment`](crate::model::ControlComment).
     pub fn builder() -> crate::model::control_comment::Builder {
         crate::model::control_comment::Builder::default()
     }
@@ -2963,12 +3061,16 @@ impl AsRef<str> for ControlSetStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FrameworkMetadata {
     /// <p> The name of the framework. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The description of the framework. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The logo that's associated with the framework. </p>
+    #[doc(hidden)]
     pub logo: std::option::Option<std::string::String>,
     /// <p> The compliance standard that's associated with the framework. For example, this could be PCI DSS or HIPAA. </p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<std::string::String>,
 }
 impl FrameworkMetadata {
@@ -2999,11 +3101,10 @@ impl std::fmt::Debug for FrameworkMetadata {
         formatter.finish()
     }
 }
-/// See [`FrameworkMetadata`](crate::model::FrameworkMetadata)
+/// See [`FrameworkMetadata`](crate::model::FrameworkMetadata).
 pub mod framework_metadata {
 
-    /// A builder for [`FrameworkMetadata`](crate::model::FrameworkMetadata)
-    #[non_exhaustive]
+    /// A builder for [`FrameworkMetadata`](crate::model::FrameworkMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3055,7 +3156,7 @@ pub mod framework_metadata {
             self.compliance_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`FrameworkMetadata`](crate::model::FrameworkMetadata)
+        /// Consumes the builder and constructs a [`FrameworkMetadata`](crate::model::FrameworkMetadata).
         pub fn build(self) -> crate::model::FrameworkMetadata {
             crate::model::FrameworkMetadata {
                 name: self.name,
@@ -3067,7 +3168,7 @@ pub mod framework_metadata {
     }
 }
 impl FrameworkMetadata {
-    /// Creates a new builder-style object to manufacture [`FrameworkMetadata`](crate::model::FrameworkMetadata)
+    /// Creates a new builder-style object to manufacture [`FrameworkMetadata`](crate::model::FrameworkMetadata).
     pub fn builder() -> crate::model::framework_metadata::Builder {
         crate::model::framework_metadata::Builder::default()
     }
@@ -3078,27 +3179,38 @@ impl FrameworkMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssessmentMetadata {
     /// <p> The name of the assessment. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The unique identifier for the assessment. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The description of the assessment. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The name of the compliance standard that's related to the assessment, such as PCI-DSS. </p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<std::string::String>,
     /// <p> The overall status of the assessment. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AssessmentStatus>,
     /// <p> The destination that evidence reports are stored in for the assessment. </p>
+    #[doc(hidden)]
     pub assessment_reports_destination:
         std::option::Option<crate::model::AssessmentReportsDestination>,
     /// <p> The wrapper of Amazon Web Services accounts and services that are in scope for the assessment. </p>
+    #[doc(hidden)]
     pub scope: std::option::Option<crate::model::Scope>,
     /// <p> The roles that are associated with the assessment. </p>
+    #[doc(hidden)]
     pub roles: std::option::Option<std::vec::Vec<crate::model::Role>>,
     /// <p> The delegations that are associated with the assessment. </p>
+    #[doc(hidden)]
     pub delegations: std::option::Option<std::vec::Vec<crate::model::Delegation>>,
     /// <p> Specifies when the assessment was created. </p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The time of the most recent update. </p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AssessmentMetadata {
@@ -3169,11 +3281,10 @@ impl std::fmt::Debug for AssessmentMetadata {
         formatter.finish()
     }
 }
-/// See [`AssessmentMetadata`](crate::model::AssessmentMetadata)
+/// See [`AssessmentMetadata`](crate::model::AssessmentMetadata).
 pub mod assessment_metadata {
 
-    /// A builder for [`AssessmentMetadata`](crate::model::AssessmentMetadata)
-    #[non_exhaustive]
+    /// A builder for [`AssessmentMetadata`](crate::model::AssessmentMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3336,7 +3447,7 @@ pub mod assessment_metadata {
             self.last_updated = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssessmentMetadata`](crate::model::AssessmentMetadata)
+        /// Consumes the builder and constructs a [`AssessmentMetadata`](crate::model::AssessmentMetadata).
         pub fn build(self) -> crate::model::AssessmentMetadata {
             crate::model::AssessmentMetadata {
                 name: self.name,
@@ -3355,7 +3466,7 @@ pub mod assessment_metadata {
     }
 }
 impl AssessmentMetadata {
-    /// Creates a new builder-style object to manufacture [`AssessmentMetadata`](crate::model::AssessmentMetadata)
+    /// Creates a new builder-style object to manufacture [`AssessmentMetadata`](crate::model::AssessmentMetadata).
     pub fn builder() -> crate::model::assessment_metadata::Builder {
         crate::model::assessment_metadata::Builder::default()
     }
@@ -3366,8 +3477,10 @@ impl AssessmentMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Scope {
     /// <p> The Amazon Web Services accounts that are included in the scope of the assessment. </p>
+    #[doc(hidden)]
     pub aws_accounts: std::option::Option<std::vec::Vec<crate::model::AwsAccount>>,
     /// <p> The Amazon Web Services services that are included in the scope of the assessment. </p>
+    #[doc(hidden)]
     pub aws_services: std::option::Option<std::vec::Vec<crate::model::AwsService>>,
 }
 impl Scope {
@@ -3388,11 +3501,10 @@ impl std::fmt::Debug for Scope {
         formatter.finish()
     }
 }
-/// See [`Scope`](crate::model::Scope)
+/// See [`Scope`](crate::model::Scope).
 pub mod scope {
 
-    /// A builder for [`Scope`](crate::model::Scope)
-    #[non_exhaustive]
+    /// A builder for [`Scope`](crate::model::Scope).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aws_accounts: std::option::Option<std::vec::Vec<crate::model::AwsAccount>>,
@@ -3437,7 +3549,7 @@ pub mod scope {
             self.aws_services = input;
             self
         }
-        /// Consumes the builder and constructs a [`Scope`](crate::model::Scope)
+        /// Consumes the builder and constructs a [`Scope`](crate::model::Scope).
         pub fn build(self) -> crate::model::Scope {
             crate::model::Scope {
                 aws_accounts: self.aws_accounts,
@@ -3447,7 +3559,7 @@ pub mod scope {
     }
 }
 impl Scope {
-    /// Creates a new builder-style object to manufacture [`Scope`](crate::model::Scope)
+    /// Creates a new builder-style object to manufacture [`Scope`](crate::model::Scope).
     pub fn builder() -> crate::model::scope::Builder {
         crate::model::scope::Builder::default()
     }
@@ -3458,6 +3570,7 @@ impl Scope {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AwsService {
     /// <p> The name of the Amazon Web Service. </p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
 }
 impl AwsService {
@@ -3473,11 +3586,10 @@ impl std::fmt::Debug for AwsService {
         formatter.finish()
     }
 }
-/// See [`AwsService`](crate::model::AwsService)
+/// See [`AwsService`](crate::model::AwsService).
 pub mod aws_service {
 
-    /// A builder for [`AwsService`](crate::model::AwsService)
-    #[non_exhaustive]
+    /// A builder for [`AwsService`](crate::model::AwsService).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_name: std::option::Option<std::string::String>,
@@ -3493,7 +3605,7 @@ pub mod aws_service {
             self.service_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AwsService`](crate::model::AwsService)
+        /// Consumes the builder and constructs a [`AwsService`](crate::model::AwsService).
         pub fn build(self) -> crate::model::AwsService {
             crate::model::AwsService {
                 service_name: self.service_name,
@@ -3502,7 +3614,7 @@ pub mod aws_service {
     }
 }
 impl AwsService {
-    /// Creates a new builder-style object to manufacture [`AwsService`](crate::model::AwsService)
+    /// Creates a new builder-style object to manufacture [`AwsService`](crate::model::AwsService).
     pub fn builder() -> crate::model::aws_service::Builder {
         crate::model::aws_service::Builder::default()
     }
@@ -3513,10 +3625,13 @@ impl AwsService {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AwsAccount {
     /// <p> The identifier for the Amazon Web Services account. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The email address that's associated with the Amazon Web Services account. </p>
+    #[doc(hidden)]
     pub email_address: std::option::Option<std::string::String>,
     /// <p> The name of the Amazon Web Services account. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl AwsAccount {
@@ -3542,11 +3657,10 @@ impl std::fmt::Debug for AwsAccount {
         formatter.finish()
     }
 }
-/// See [`AwsAccount`](crate::model::AwsAccount)
+/// See [`AwsAccount`](crate::model::AwsAccount).
 pub mod aws_account {
 
-    /// A builder for [`AwsAccount`](crate::model::AwsAccount)
-    #[non_exhaustive]
+    /// A builder for [`AwsAccount`](crate::model::AwsAccount).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3587,7 +3701,7 @@ pub mod aws_account {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AwsAccount`](crate::model::AwsAccount)
+        /// Consumes the builder and constructs a [`AwsAccount`](crate::model::AwsAccount).
         pub fn build(self) -> crate::model::AwsAccount {
             crate::model::AwsAccount {
                 id: self.id,
@@ -3598,7 +3712,7 @@ pub mod aws_account {
     }
 }
 impl AwsAccount {
-    /// Creates a new builder-style object to manufacture [`AwsAccount`](crate::model::AwsAccount)
+    /// Creates a new builder-style object to manufacture [`AwsAccount`](crate::model::AwsAccount).
     pub fn builder() -> crate::model::aws_account::Builder {
         crate::model::aws_account::Builder::default()
     }
@@ -3664,34 +3778,49 @@ impl AsRef<str> for AssessmentStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssessmentFrameworkShareRequest {
     /// <p> The unique identifier for the share request. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the shared custom framework. </p>
+    #[doc(hidden)]
     pub framework_id: std::option::Option<std::string::String>,
     /// <p> The name of the custom framework that the share request is for. </p>
+    #[doc(hidden)]
     pub framework_name: std::option::Option<std::string::String>,
     /// <p>The description of the shared custom framework.</p>
+    #[doc(hidden)]
     pub framework_description: std::option::Option<std::string::String>,
     /// <p> The status of the share request. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ShareRequestStatus>,
     /// <p> The Amazon Web Services account of the sender. </p>
+    #[doc(hidden)]
     pub source_account: std::option::Option<std::string::String>,
     /// <p> The Amazon Web Services account of the recipient. </p>
+    #[doc(hidden)]
     pub destination_account: std::option::Option<std::string::String>,
     /// <p> The Amazon Web Services Region of the recipient. </p>
+    #[doc(hidden)]
     pub destination_region: std::option::Option<std::string::String>,
     /// <p> The time when the share request expires. </p>
+    #[doc(hidden)]
     pub expiration_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The time when the share request was created. </p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies when the share request was last updated. </p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> An optional comment from the sender about the share request. </p>
+    #[doc(hidden)]
     pub comment: std::option::Option<std::string::String>,
     /// <p>The number of standard controls that are part of the shared custom framework. </p>
+    #[doc(hidden)]
     pub standard_controls_count: std::option::Option<i32>,
     /// <p>The number of custom controls that are part of the shared custom framework.</p>
+    #[doc(hidden)]
     pub custom_controls_count: std::option::Option<i32>,
     /// <p>The compliance type that the shared custom framework supports, such as CIS or HIPAA.</p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<std::string::String>,
 }
 impl AssessmentFrameworkShareRequest {
@@ -3777,11 +3906,10 @@ impl std::fmt::Debug for AssessmentFrameworkShareRequest {
         formatter.finish()
     }
 }
-/// See [`AssessmentFrameworkShareRequest`](crate::model::AssessmentFrameworkShareRequest)
+/// See [`AssessmentFrameworkShareRequest`](crate::model::AssessmentFrameworkShareRequest).
 pub mod assessment_framework_share_request {
 
-    /// A builder for [`AssessmentFrameworkShareRequest`](crate::model::AssessmentFrameworkShareRequest)
-    #[non_exhaustive]
+    /// A builder for [`AssessmentFrameworkShareRequest`](crate::model::AssessmentFrameworkShareRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3981,7 +4109,7 @@ pub mod assessment_framework_share_request {
             self.compliance_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssessmentFrameworkShareRequest`](crate::model::AssessmentFrameworkShareRequest)
+        /// Consumes the builder and constructs a [`AssessmentFrameworkShareRequest`](crate::model::AssessmentFrameworkShareRequest).
         pub fn build(self) -> crate::model::AssessmentFrameworkShareRequest {
             crate::model::AssessmentFrameworkShareRequest {
                 id: self.id,
@@ -4004,7 +4132,7 @@ pub mod assessment_framework_share_request {
     }
 }
 impl AssessmentFrameworkShareRequest {
-    /// Creates a new builder-style object to manufacture [`AssessmentFrameworkShareRequest`](crate::model::AssessmentFrameworkShareRequest)
+    /// Creates a new builder-style object to manufacture [`AssessmentFrameworkShareRequest`](crate::model::AssessmentFrameworkShareRequest).
     pub fn builder() -> crate::model::assessment_framework_share_request::Builder {
         crate::model::assessment_framework_share_request::Builder::default()
     }
@@ -4217,32 +4345,46 @@ impl AsRef<str> for ShareRequestType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Framework {
     /// <p> The Amazon Resource Name (ARN) of the framework. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> The unique identifier for the framework. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The name of the framework. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The framework type, such as a custom framework or a standard framework. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::FrameworkType>,
     /// <p> The compliance type that the new custom framework supports, such as CIS or HIPAA. </p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<std::string::String>,
     /// <p> The description of the framework. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The logo that's associated with the framework. </p>
+    #[doc(hidden)]
     pub logo: std::option::Option<std::string::String>,
     /// <p> The sources that Audit Manager collects evidence from for the control. </p>
+    #[doc(hidden)]
     pub control_sources: std::option::Option<std::string::String>,
     /// <p> The control sets that are associated with the framework. </p>
+    #[doc(hidden)]
     pub control_sets: std::option::Option<std::vec::Vec<crate::model::ControlSet>>,
     /// <p> Specifies when the framework was created. </p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies when the framework was most recently updated. </p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The IAM user or role that created the framework. </p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
     /// <p> The IAM user or role that most recently updated the framework. </p>
+    #[doc(hidden)]
     pub last_updated_by: std::option::Option<std::string::String>,
     /// <p> The tags that are associated with the framework. </p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -4327,11 +4469,10 @@ impl std::fmt::Debug for Framework {
         formatter.finish()
     }
 }
-/// See [`Framework`](crate::model::Framework)
+/// See [`Framework`](crate::model::Framework).
 pub mod framework {
 
-    /// A builder for [`Framework`](crate::model::Framework)
-    #[non_exhaustive]
+    /// A builder for [`Framework`](crate::model::Framework).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4531,7 +4672,7 @@ pub mod framework {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Framework`](crate::model::Framework)
+        /// Consumes the builder and constructs a [`Framework`](crate::model::Framework).
         pub fn build(self) -> crate::model::Framework {
             crate::model::Framework {
                 arn: self.arn,
@@ -4553,7 +4694,7 @@ pub mod framework {
     }
 }
 impl Framework {
-    /// Creates a new builder-style object to manufacture [`Framework`](crate::model::Framework)
+    /// Creates a new builder-style object to manufacture [`Framework`](crate::model::Framework).
     pub fn builder() -> crate::model::framework::Builder {
         crate::model::framework::Builder::default()
     }
@@ -4564,10 +4705,13 @@ impl Framework {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ControlSet {
     /// <p> The identifier of the control set in the assessment. This is the control set name in a plain string format. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The name of the control set. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The list of controls within the control set. </p>
+    #[doc(hidden)]
     pub controls: std::option::Option<std::vec::Vec<crate::model::Control>>,
 }
 impl ControlSet {
@@ -4593,11 +4737,10 @@ impl std::fmt::Debug for ControlSet {
         formatter.finish()
     }
 }
-/// See [`ControlSet`](crate::model::ControlSet)
+/// See [`ControlSet`](crate::model::ControlSet).
 pub mod control_set {
 
-    /// A builder for [`ControlSet`](crate::model::ControlSet)
-    #[non_exhaustive]
+    /// A builder for [`ControlSet`](crate::model::ControlSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4644,7 +4787,7 @@ pub mod control_set {
             self.controls = input;
             self
         }
-        /// Consumes the builder and constructs a [`ControlSet`](crate::model::ControlSet)
+        /// Consumes the builder and constructs a [`ControlSet`](crate::model::ControlSet).
         pub fn build(self) -> crate::model::ControlSet {
             crate::model::ControlSet {
                 id: self.id,
@@ -4655,7 +4798,7 @@ pub mod control_set {
     }
 }
 impl ControlSet {
-    /// Creates a new builder-style object to manufacture [`ControlSet`](crate::model::ControlSet)
+    /// Creates a new builder-style object to manufacture [`ControlSet`](crate::model::ControlSet).
     pub fn builder() -> crate::model::control_set::Builder {
         crate::model::control_set::Builder::default()
     }
@@ -4721,10 +4864,13 @@ impl AsRef<str> for FrameworkType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAssessmentFrameworkControlSet {
     /// <p> The unique identifier for the control set. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The name of the control set. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The list of controls that are contained within the control set. </p>
+    #[doc(hidden)]
     pub controls:
         std::option::Option<std::vec::Vec<crate::model::CreateAssessmentFrameworkControl>>,
 }
@@ -4753,11 +4899,10 @@ impl std::fmt::Debug for UpdateAssessmentFrameworkControlSet {
         formatter.finish()
     }
 }
-/// See [`UpdateAssessmentFrameworkControlSet`](crate::model::UpdateAssessmentFrameworkControlSet)
+/// See [`UpdateAssessmentFrameworkControlSet`](crate::model::UpdateAssessmentFrameworkControlSet).
 pub mod update_assessment_framework_control_set {
 
-    /// A builder for [`UpdateAssessmentFrameworkControlSet`](crate::model::UpdateAssessmentFrameworkControlSet)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAssessmentFrameworkControlSet`](crate::model::UpdateAssessmentFrameworkControlSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4807,7 +4952,7 @@ pub mod update_assessment_framework_control_set {
             self.controls = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAssessmentFrameworkControlSet`](crate::model::UpdateAssessmentFrameworkControlSet)
+        /// Consumes the builder and constructs a [`UpdateAssessmentFrameworkControlSet`](crate::model::UpdateAssessmentFrameworkControlSet).
         pub fn build(self) -> crate::model::UpdateAssessmentFrameworkControlSet {
             crate::model::UpdateAssessmentFrameworkControlSet {
                 id: self.id,
@@ -4818,7 +4963,7 @@ pub mod update_assessment_framework_control_set {
     }
 }
 impl UpdateAssessmentFrameworkControlSet {
-    /// Creates a new builder-style object to manufacture [`UpdateAssessmentFrameworkControlSet`](crate::model::UpdateAssessmentFrameworkControlSet)
+    /// Creates a new builder-style object to manufacture [`UpdateAssessmentFrameworkControlSet`](crate::model::UpdateAssessmentFrameworkControlSet).
     pub fn builder() -> crate::model::update_assessment_framework_control_set::Builder {
         crate::model::update_assessment_framework_control_set::Builder::default()
     }
@@ -4829,6 +4974,7 @@ impl UpdateAssessmentFrameworkControlSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAssessmentFrameworkControl {
     /// <p> The unique identifier of the control. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
 }
 impl CreateAssessmentFrameworkControl {
@@ -4844,11 +4990,10 @@ impl std::fmt::Debug for CreateAssessmentFrameworkControl {
         formatter.finish()
     }
 }
-/// See [`CreateAssessmentFrameworkControl`](crate::model::CreateAssessmentFrameworkControl)
+/// See [`CreateAssessmentFrameworkControl`](crate::model::CreateAssessmentFrameworkControl).
 pub mod create_assessment_framework_control {
 
-    /// A builder for [`CreateAssessmentFrameworkControl`](crate::model::CreateAssessmentFrameworkControl)
-    #[non_exhaustive]
+    /// A builder for [`CreateAssessmentFrameworkControl`](crate::model::CreateAssessmentFrameworkControl).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4864,14 +5009,14 @@ pub mod create_assessment_framework_control {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAssessmentFrameworkControl`](crate::model::CreateAssessmentFrameworkControl)
+        /// Consumes the builder and constructs a [`CreateAssessmentFrameworkControl`](crate::model::CreateAssessmentFrameworkControl).
         pub fn build(self) -> crate::model::CreateAssessmentFrameworkControl {
             crate::model::CreateAssessmentFrameworkControl { id: self.id }
         }
     }
 }
 impl CreateAssessmentFrameworkControl {
-    /// Creates a new builder-style object to manufacture [`CreateAssessmentFrameworkControl`](crate::model::CreateAssessmentFrameworkControl)
+    /// Creates a new builder-style object to manufacture [`CreateAssessmentFrameworkControl`](crate::model::CreateAssessmentFrameworkControl).
     pub fn builder() -> crate::model::create_assessment_framework_control::Builder {
         crate::model::create_assessment_framework_control::Builder::default()
     }
@@ -4941,20 +5086,28 @@ impl AsRef<str> for AccountStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Notification {
     /// <p> The unique identifier for the notification. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The identifier for the assessment. </p>
+    #[doc(hidden)]
     pub assessment_id: std::option::Option<std::string::String>,
     /// <p> The name of the related assessment. </p>
+    #[doc(hidden)]
     pub assessment_name: std::option::Option<std::string::String>,
     /// <p> The identifier for the control set. </p>
+    #[doc(hidden)]
     pub control_set_id: std::option::Option<std::string::String>,
     /// <p> Specifies the name of the control set that the notification is about. </p>
+    #[doc(hidden)]
     pub control_set_name: std::option::Option<std::string::String>,
     /// <p> The description of the notification. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The time when the notification was sent. </p>
+    #[doc(hidden)]
     pub event_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The sender of the notification. </p>
+    #[doc(hidden)]
     pub source: std::option::Option<std::string::String>,
 }
 impl Notification {
@@ -5005,11 +5158,10 @@ impl std::fmt::Debug for Notification {
         formatter.finish()
     }
 }
-/// See [`Notification`](crate::model::Notification)
+/// See [`Notification`](crate::model::Notification).
 pub mod notification {
 
-    /// A builder for [`Notification`](crate::model::Notification)
-    #[non_exhaustive]
+    /// A builder for [`Notification`](crate::model::Notification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -5117,7 +5269,7 @@ pub mod notification {
             self.source = input;
             self
         }
-        /// Consumes the builder and constructs a [`Notification`](crate::model::Notification)
+        /// Consumes the builder and constructs a [`Notification`](crate::model::Notification).
         pub fn build(self) -> crate::model::Notification {
             crate::model::Notification {
                 id: self.id,
@@ -5133,7 +5285,7 @@ pub mod notification {
     }
 }
 impl Notification {
-    /// Creates a new builder-style object to manufacture [`Notification`](crate::model::Notification)
+    /// Creates a new builder-style object to manufacture [`Notification`](crate::model::Notification).
     pub fn builder() -> crate::model::notification::Builder {
         crate::model::notification::Builder::default()
     }
@@ -5144,16 +5296,22 @@ impl Notification {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ControlMetadata {
     /// <p> The Amazon Resource Name (ARN) of the control. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> The unique identifier for the control. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The name of the control. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The data source that determines where Audit Manager collects evidence from for the control. </p>
+    #[doc(hidden)]
     pub control_sources: std::option::Option<std::string::String>,
     /// <p> Specifies when the control was created. </p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies when the control was most recently updated. </p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ControlMetadata {
@@ -5194,11 +5352,10 @@ impl std::fmt::Debug for ControlMetadata {
         formatter.finish()
     }
 }
-/// See [`ControlMetadata`](crate::model::ControlMetadata)
+/// See [`ControlMetadata`](crate::model::ControlMetadata).
 pub mod control_metadata {
 
-    /// A builder for [`ControlMetadata`](crate::model::ControlMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ControlMetadata`](crate::model::ControlMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -5278,7 +5435,7 @@ pub mod control_metadata {
             self.last_updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`ControlMetadata`](crate::model::ControlMetadata)
+        /// Consumes the builder and constructs a [`ControlMetadata`](crate::model::ControlMetadata).
         pub fn build(self) -> crate::model::ControlMetadata {
             crate::model::ControlMetadata {
                 arn: self.arn,
@@ -5292,7 +5449,7 @@ pub mod control_metadata {
     }
 }
 impl ControlMetadata {
-    /// Creates a new builder-style object to manufacture [`ControlMetadata`](crate::model::ControlMetadata)
+    /// Creates a new builder-style object to manufacture [`ControlMetadata`](crate::model::ControlMetadata).
     pub fn builder() -> crate::model::control_metadata::Builder {
         crate::model::control_metadata::Builder::default()
     }
@@ -5304,12 +5461,16 @@ impl ControlMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ControlInsightsMetadataItem {
     /// <p>The name of the control. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the control. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A breakdown of the compliance check status for the evidence that’s associated with the control. </p>
+    #[doc(hidden)]
     pub evidence_insights: std::option::Option<crate::model::EvidenceInsights>,
     /// <p>The time when the control insights were last updated. </p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ControlInsightsMetadataItem {
@@ -5340,11 +5501,10 @@ impl std::fmt::Debug for ControlInsightsMetadataItem {
         formatter.finish()
     }
 }
-/// See [`ControlInsightsMetadataItem`](crate::model::ControlInsightsMetadataItem)
+/// See [`ControlInsightsMetadataItem`](crate::model::ControlInsightsMetadataItem).
 pub mod control_insights_metadata_item {
 
-    /// A builder for [`ControlInsightsMetadataItem`](crate::model::ControlInsightsMetadataItem)
-    #[non_exhaustive]
+    /// A builder for [`ControlInsightsMetadataItem`](crate::model::ControlInsightsMetadataItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5399,7 +5559,7 @@ pub mod control_insights_metadata_item {
             self.last_updated = input;
             self
         }
-        /// Consumes the builder and constructs a [`ControlInsightsMetadataItem`](crate::model::ControlInsightsMetadataItem)
+        /// Consumes the builder and constructs a [`ControlInsightsMetadataItem`](crate::model::ControlInsightsMetadataItem).
         pub fn build(self) -> crate::model::ControlInsightsMetadataItem {
             crate::model::ControlInsightsMetadataItem {
                 name: self.name,
@@ -5411,7 +5571,7 @@ pub mod control_insights_metadata_item {
     }
 }
 impl ControlInsightsMetadataItem {
-    /// Creates a new builder-style object to manufacture [`ControlInsightsMetadataItem`](crate::model::ControlInsightsMetadataItem)
+    /// Creates a new builder-style object to manufacture [`ControlInsightsMetadataItem`](crate::model::ControlInsightsMetadataItem).
     pub fn builder() -> crate::model::control_insights_metadata_item::Builder {
         crate::model::control_insights_metadata_item::Builder::default()
     }
@@ -5422,12 +5582,15 @@ impl ControlInsightsMetadataItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EvidenceInsights {
     /// <p>The number of compliance check evidence that Audit Manager classified as non-compliant. This includes evidence that was collected from Security Hub with a <i>Fail</i> ruling, or collected from Config with a <i>Non-compliant</i> ruling. </p>
+    #[doc(hidden)]
     pub noncompliant_evidence_count: std::option::Option<i32>,
     /// <p>The number of compliance check evidence that Audit Manager classified as compliant. This includes evidence that was collected from Security Hub with a <i>Pass</i> ruling, or collected from Config with a <i>Compliant</i> ruling. </p>
+    #[doc(hidden)]
     pub compliant_evidence_count: std::option::Option<i32>,
     /// <p>The number of evidence that a compliance check ruling isn't available for. Evidence is inconclusive when the associated control uses Security Hub or Config as a data source but you didn't enable those services. This is also the case when a control uses a data source that doesn’t support compliance checks (for example, manual evidence, API calls, or CloudTrail). </p> <note>
     /// <p>If evidence has a compliance check status of <i>not applicable</i> in the console, it's classified as <i>inconclusive</i> in <code>EvidenceInsights</code> data.</p>
     /// </note>
+    #[doc(hidden)]
     pub inconclusive_evidence_count: std::option::Option<i32>,
 }
 impl EvidenceInsights {
@@ -5461,11 +5624,10 @@ impl std::fmt::Debug for EvidenceInsights {
         formatter.finish()
     }
 }
-/// See [`EvidenceInsights`](crate::model::EvidenceInsights)
+/// See [`EvidenceInsights`](crate::model::EvidenceInsights).
 pub mod evidence_insights {
 
-    /// A builder for [`EvidenceInsights`](crate::model::EvidenceInsights)
-    #[non_exhaustive]
+    /// A builder for [`EvidenceInsights`](crate::model::EvidenceInsights).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) noncompliant_evidence_count: std::option::Option<i32>,
@@ -5507,7 +5669,7 @@ pub mod evidence_insights {
             self.inconclusive_evidence_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`EvidenceInsights`](crate::model::EvidenceInsights)
+        /// Consumes the builder and constructs a [`EvidenceInsights`](crate::model::EvidenceInsights).
         pub fn build(self) -> crate::model::EvidenceInsights {
             crate::model::EvidenceInsights {
                 noncompliant_evidence_count: self.noncompliant_evidence_count,
@@ -5518,7 +5680,7 @@ pub mod evidence_insights {
     }
 }
 impl EvidenceInsights {
-    /// Creates a new builder-style object to manufacture [`EvidenceInsights`](crate::model::EvidenceInsights)
+    /// Creates a new builder-style object to manufacture [`EvidenceInsights`](crate::model::EvidenceInsights).
     pub fn builder() -> crate::model::evidence_insights::Builder {
         crate::model::evidence_insights::Builder::default()
     }
@@ -5530,16 +5692,22 @@ impl EvidenceInsights {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ControlDomainInsights {
     /// <p>The name of the control domain. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the control domain. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The number of controls in the control domain that collected non-compliant evidence on the <code>lastUpdated</code> date. </p>
+    #[doc(hidden)]
     pub controls_count_by_noncompliant_evidence: std::option::Option<i32>,
     /// <p>The total number of controls in the control domain. </p>
+    #[doc(hidden)]
     pub total_controls_count: std::option::Option<i32>,
     /// <p>A breakdown of the compliance check status for the evidence that’s associated with the control domain. </p>
+    #[doc(hidden)]
     pub evidence_insights: std::option::Option<crate::model::EvidenceInsights>,
     /// <p>The time when the control domain insights were last updated. </p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ControlDomainInsights {
@@ -5583,11 +5751,10 @@ impl std::fmt::Debug for ControlDomainInsights {
         formatter.finish()
     }
 }
-/// See [`ControlDomainInsights`](crate::model::ControlDomainInsights)
+/// See [`ControlDomainInsights`](crate::model::ControlDomainInsights).
 pub mod control_domain_insights {
 
-    /// A builder for [`ControlDomainInsights`](crate::model::ControlDomainInsights)
-    #[non_exhaustive]
+    /// A builder for [`ControlDomainInsights`](crate::model::ControlDomainInsights).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5667,7 +5834,7 @@ pub mod control_domain_insights {
             self.last_updated = input;
             self
         }
-        /// Consumes the builder and constructs a [`ControlDomainInsights`](crate::model::ControlDomainInsights)
+        /// Consumes the builder and constructs a [`ControlDomainInsights`](crate::model::ControlDomainInsights).
         pub fn build(self) -> crate::model::ControlDomainInsights {
             crate::model::ControlDomainInsights {
                 name: self.name,
@@ -5682,7 +5849,7 @@ pub mod control_domain_insights {
     }
 }
 impl ControlDomainInsights {
-    /// Creates a new builder-style object to manufacture [`ControlDomainInsights`](crate::model::ControlDomainInsights)
+    /// Creates a new builder-style object to manufacture [`ControlDomainInsights`](crate::model::ControlDomainInsights).
     pub fn builder() -> crate::model::control_domain_insights::Builder {
         crate::model::control_domain_insights::Builder::default()
     }
@@ -5693,20 +5860,28 @@ impl ControlDomainInsights {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssessmentMetadataItem {
     /// <p> The name of the assessment. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The unique identifier for the assessment. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The name of the compliance standard that's related to the assessment, such as PCI-DSS. </p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<std::string::String>,
     /// <p> The current status of the assessment. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AssessmentStatus>,
     /// <p> The roles that are associated with the assessment. </p>
+    #[doc(hidden)]
     pub roles: std::option::Option<std::vec::Vec<crate::model::Role>>,
     /// <p> The delegations that are associated with the assessment. </p>
+    #[doc(hidden)]
     pub delegations: std::option::Option<std::vec::Vec<crate::model::Delegation>>,
     /// <p> Specifies when the assessment was created. </p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The time of the most recent update. </p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AssessmentMetadataItem {
@@ -5757,11 +5932,10 @@ impl std::fmt::Debug for AssessmentMetadataItem {
         formatter.finish()
     }
 }
-/// See [`AssessmentMetadataItem`](crate::model::AssessmentMetadataItem)
+/// See [`AssessmentMetadataItem`](crate::model::AssessmentMetadataItem).
 pub mod assessment_metadata_item {
 
-    /// A builder for [`AssessmentMetadataItem`](crate::model::AssessmentMetadataItem)
-    #[non_exhaustive]
+    /// A builder for [`AssessmentMetadataItem`](crate::model::AssessmentMetadataItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5884,7 +6058,7 @@ pub mod assessment_metadata_item {
             self.last_updated = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssessmentMetadataItem`](crate::model::AssessmentMetadataItem)
+        /// Consumes the builder and constructs a [`AssessmentMetadataItem`](crate::model::AssessmentMetadataItem).
         pub fn build(self) -> crate::model::AssessmentMetadataItem {
             crate::model::AssessmentMetadataItem {
                 name: self.name,
@@ -5900,7 +6074,7 @@ pub mod assessment_metadata_item {
     }
 }
 impl AssessmentMetadataItem {
-    /// Creates a new builder-style object to manufacture [`AssessmentMetadataItem`](crate::model::AssessmentMetadataItem)
+    /// Creates a new builder-style object to manufacture [`AssessmentMetadataItem`](crate::model::AssessmentMetadataItem).
     pub fn builder() -> crate::model::assessment_metadata_item::Builder {
         crate::model::assessment_metadata_item::Builder::default()
     }
@@ -5911,20 +6085,28 @@ impl AssessmentMetadataItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssessmentReportMetadata {
     /// <p> The unique identifier for the assessment report. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The name of the assessment report. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The description of the assessment report. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The unique identifier for the associated assessment. </p>
+    #[doc(hidden)]
     pub assessment_id: std::option::Option<std::string::String>,
     /// <p>The name of the associated assessment. </p>
+    #[doc(hidden)]
     pub assessment_name: std::option::Option<std::string::String>,
     /// <p> The name of the user who created the assessment report. </p>
+    #[doc(hidden)]
     pub author: std::option::Option<std::string::String>,
     /// <p> The current status of the assessment report. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AssessmentReportStatus>,
     /// <p> Specifies when the assessment report was created. </p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AssessmentReportMetadata {
@@ -5975,11 +6157,10 @@ impl std::fmt::Debug for AssessmentReportMetadata {
         formatter.finish()
     }
 }
-/// See [`AssessmentReportMetadata`](crate::model::AssessmentReportMetadata)
+/// See [`AssessmentReportMetadata`](crate::model::AssessmentReportMetadata).
 pub mod assessment_report_metadata {
 
-    /// A builder for [`AssessmentReportMetadata`](crate::model::AssessmentReportMetadata)
-    #[non_exhaustive]
+    /// A builder for [`AssessmentReportMetadata`](crate::model::AssessmentReportMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -6084,7 +6265,7 @@ pub mod assessment_report_metadata {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssessmentReportMetadata`](crate::model::AssessmentReportMetadata)
+        /// Consumes the builder and constructs a [`AssessmentReportMetadata`](crate::model::AssessmentReportMetadata).
         pub fn build(self) -> crate::model::AssessmentReportMetadata {
             crate::model::AssessmentReportMetadata {
                 id: self.id,
@@ -6100,7 +6281,7 @@ pub mod assessment_report_metadata {
     }
 }
 impl AssessmentReportMetadata {
-    /// Creates a new builder-style object to manufacture [`AssessmentReportMetadata`](crate::model::AssessmentReportMetadata)
+    /// Creates a new builder-style object to manufacture [`AssessmentReportMetadata`](crate::model::AssessmentReportMetadata).
     pub fn builder() -> crate::model::assessment_report_metadata::Builder {
         crate::model::assessment_report_metadata::Builder::default()
     }
@@ -6170,26 +6351,37 @@ impl AsRef<str> for AssessmentReportStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssessmentFrameworkMetadata {
     /// <p> The Amazon Resource Name (ARN) of the framework. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> The unique identifier for the framework. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The framework type, such as a standard framework or a custom framework. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::FrameworkType>,
     /// <p> The name of the framework. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The description of the framework. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The logo that's associated with the framework. </p>
+    #[doc(hidden)]
     pub logo: std::option::Option<std::string::String>,
     /// <p> The compliance type that the new custom framework supports, such as CIS or HIPAA. </p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<std::string::String>,
     /// <p> The number of controls that are associated with the framework. </p>
+    #[doc(hidden)]
     pub controls_count: i32,
     /// <p> The number of control sets that are associated with the framework. </p>
+    #[doc(hidden)]
     pub control_sets_count: i32,
     /// <p> Specifies when the framework was created. </p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies when the framework was most recently updated. </p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AssessmentFrameworkMetadata {
@@ -6255,11 +6447,10 @@ impl std::fmt::Debug for AssessmentFrameworkMetadata {
         formatter.finish()
     }
 }
-/// See [`AssessmentFrameworkMetadata`](crate::model::AssessmentFrameworkMetadata)
+/// See [`AssessmentFrameworkMetadata`](crate::model::AssessmentFrameworkMetadata).
 pub mod assessment_framework_metadata {
 
-    /// A builder for [`AssessmentFrameworkMetadata`](crate::model::AssessmentFrameworkMetadata)
-    #[non_exhaustive]
+    /// A builder for [`AssessmentFrameworkMetadata`](crate::model::AssessmentFrameworkMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -6394,7 +6585,7 @@ pub mod assessment_framework_metadata {
             self.last_updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssessmentFrameworkMetadata`](crate::model::AssessmentFrameworkMetadata)
+        /// Consumes the builder and constructs a [`AssessmentFrameworkMetadata`](crate::model::AssessmentFrameworkMetadata).
         pub fn build(self) -> crate::model::AssessmentFrameworkMetadata {
             crate::model::AssessmentFrameworkMetadata {
                 arn: self.arn,
@@ -6413,7 +6604,7 @@ pub mod assessment_framework_metadata {
     }
 }
 impl AssessmentFrameworkMetadata {
-    /// Creates a new builder-style object to manufacture [`AssessmentFrameworkMetadata`](crate::model::AssessmentFrameworkMetadata)
+    /// Creates a new builder-style object to manufacture [`AssessmentFrameworkMetadata`](crate::model::AssessmentFrameworkMetadata).
     pub fn builder() -> crate::model::assessment_framework_metadata::Builder {
         crate::model::assessment_framework_metadata::Builder::default()
     }
@@ -6425,14 +6616,19 @@ impl AssessmentFrameworkMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ControlInsightsMetadataByAssessmentItem {
     /// <p>The name of the assessment control. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the assessment control. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A breakdown of the compliance check status for the evidence that’s associated with the assessment control. </p>
+    #[doc(hidden)]
     pub evidence_insights: std::option::Option<crate::model::EvidenceInsights>,
     /// <p>The name of the control set that the assessment control belongs to. </p>
+    #[doc(hidden)]
     pub control_set_name: std::option::Option<std::string::String>,
     /// <p>The time when the assessment control insights were last updated. </p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ControlInsightsMetadataByAssessmentItem {
@@ -6468,11 +6664,10 @@ impl std::fmt::Debug for ControlInsightsMetadataByAssessmentItem {
         formatter.finish()
     }
 }
-/// See [`ControlInsightsMetadataByAssessmentItem`](crate::model::ControlInsightsMetadataByAssessmentItem)
+/// See [`ControlInsightsMetadataByAssessmentItem`](crate::model::ControlInsightsMetadataByAssessmentItem).
 pub mod control_insights_metadata_by_assessment_item {
 
-    /// A builder for [`ControlInsightsMetadataByAssessmentItem`](crate::model::ControlInsightsMetadataByAssessmentItem)
-    #[non_exhaustive]
+    /// A builder for [`ControlInsightsMetadataByAssessmentItem`](crate::model::ControlInsightsMetadataByAssessmentItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -6541,7 +6736,7 @@ pub mod control_insights_metadata_by_assessment_item {
             self.last_updated = input;
             self
         }
-        /// Consumes the builder and constructs a [`ControlInsightsMetadataByAssessmentItem`](crate::model::ControlInsightsMetadataByAssessmentItem)
+        /// Consumes the builder and constructs a [`ControlInsightsMetadataByAssessmentItem`](crate::model::ControlInsightsMetadataByAssessmentItem).
         pub fn build(self) -> crate::model::ControlInsightsMetadataByAssessmentItem {
             crate::model::ControlInsightsMetadataByAssessmentItem {
                 name: self.name,
@@ -6554,7 +6749,7 @@ pub mod control_insights_metadata_by_assessment_item {
     }
 }
 impl ControlInsightsMetadataByAssessmentItem {
-    /// Creates a new builder-style object to manufacture [`ControlInsightsMetadataByAssessmentItem`](crate::model::ControlInsightsMetadataByAssessmentItem)
+    /// Creates a new builder-style object to manufacture [`ControlInsightsMetadataByAssessmentItem`](crate::model::ControlInsightsMetadataByAssessmentItem).
     pub fn builder() -> crate::model::control_insights_metadata_by_assessment_item::Builder {
         crate::model::control_insights_metadata_by_assessment_item::Builder::default()
     }
@@ -6642,12 +6837,16 @@ impl AsRef<str> for SettingAttribute {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceMetadata {
     /// <p> The name of the Amazon Web Service. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The display name of the Amazon Web Service. </p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p> The description of the Amazon Web Service. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The category that the Amazon Web Service belongs to, such as compute, storage, or database. </p>
+    #[doc(hidden)]
     pub category: std::option::Option<std::string::String>,
 }
 impl ServiceMetadata {
@@ -6678,11 +6877,10 @@ impl std::fmt::Debug for ServiceMetadata {
         formatter.finish()
     }
 }
-/// See [`ServiceMetadata`](crate::model::ServiceMetadata)
+/// See [`ServiceMetadata`](crate::model::ServiceMetadata).
 pub mod service_metadata {
 
-    /// A builder for [`ServiceMetadata`](crate::model::ServiceMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ServiceMetadata`](crate::model::ServiceMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -6731,7 +6929,7 @@ pub mod service_metadata {
             self.category = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceMetadata`](crate::model::ServiceMetadata)
+        /// Consumes the builder and constructs a [`ServiceMetadata`](crate::model::ServiceMetadata).
         pub fn build(self) -> crate::model::ServiceMetadata {
             crate::model::ServiceMetadata {
                 name: self.name,
@@ -6743,7 +6941,7 @@ pub mod service_metadata {
     }
 }
 impl ServiceMetadata {
-    /// Creates a new builder-style object to manufacture [`ServiceMetadata`](crate::model::ServiceMetadata)
+    /// Creates a new builder-style object to manufacture [`ServiceMetadata`](crate::model::ServiceMetadata).
     pub fn builder() -> crate::model::service_metadata::Builder {
         crate::model::service_metadata::Builder::default()
     }
@@ -6762,18 +6960,24 @@ impl ServiceMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InsightsByAssessment {
     /// <p>The number of compliance check evidence that Audit Manager classified as non-compliant. This includes evidence that was collected from Security Hub with a <i>Fail</i> ruling, or collected from Config with a <i>Non-compliant</i> ruling. </p>
+    #[doc(hidden)]
     pub noncompliant_evidence_count: std::option::Option<i32>,
     /// <p>The number of compliance check evidence that Audit Manager classified as compliant. This includes evidence that was collected from Security Hub with a <i>Pass</i> ruling, or collected from Config with a <i>Compliant</i> ruling. </p>
+    #[doc(hidden)]
     pub compliant_evidence_count: std::option::Option<i32>,
     /// <p>The amount of evidence without a compliance check ruling. Evidence is inconclusive if the associated control uses Security Hub or Config as a data source and you didn't enable those services. This is also the case if a control uses a data source that doesn’t support compliance checks (for example, manual evidence, API calls, or CloudTrail). </p> <note>
     /// <p>If evidence has a compliance check status of <i>not applicable</i>, it's classified as <i>inconclusive</i> in <code>InsightsByAssessment</code> data.</p>
     /// </note>
+    #[doc(hidden)]
     pub inconclusive_evidence_count: std::option::Option<i32>,
     /// <p>The number of assessment controls that collected non-compliant evidence on the <code>lastUpdated</code> date. </p>
+    #[doc(hidden)]
     pub assessment_controls_count_by_noncompliant_evidence: std::option::Option<i32>,
     /// <p>The total number of controls in the assessment. </p>
+    #[doc(hidden)]
     pub total_assessment_controls_count: std::option::Option<i32>,
     /// <p>The time when the assessment insights were last updated.</p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl InsightsByAssessment {
@@ -6828,11 +7032,10 @@ impl std::fmt::Debug for InsightsByAssessment {
         formatter.finish()
     }
 }
-/// See [`InsightsByAssessment`](crate::model::InsightsByAssessment)
+/// See [`InsightsByAssessment`](crate::model::InsightsByAssessment).
 pub mod insights_by_assessment {
 
-    /// A builder for [`InsightsByAssessment`](crate::model::InsightsByAssessment)
-    #[non_exhaustive]
+    /// A builder for [`InsightsByAssessment`](crate::model::InsightsByAssessment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) noncompliant_evidence_count: std::option::Option<i32>,
@@ -6916,7 +7119,7 @@ pub mod insights_by_assessment {
             self.last_updated = input;
             self
         }
-        /// Consumes the builder and constructs a [`InsightsByAssessment`](crate::model::InsightsByAssessment)
+        /// Consumes the builder and constructs a [`InsightsByAssessment`](crate::model::InsightsByAssessment).
         pub fn build(self) -> crate::model::InsightsByAssessment {
             crate::model::InsightsByAssessment {
                 noncompliant_evidence_count: self.noncompliant_evidence_count,
@@ -6931,7 +7134,7 @@ pub mod insights_by_assessment {
     }
 }
 impl InsightsByAssessment {
-    /// Creates a new builder-style object to manufacture [`InsightsByAssessment`](crate::model::InsightsByAssessment)
+    /// Creates a new builder-style object to manufacture [`InsightsByAssessment`](crate::model::InsightsByAssessment).
     pub fn builder() -> crate::model::insights_by_assessment::Builder {
         crate::model::insights_by_assessment::Builder::default()
     }
@@ -6950,20 +7153,27 @@ impl InsightsByAssessment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Insights {
     /// <p>The number of active assessments in Audit Manager. </p>
+    #[doc(hidden)]
     pub active_assessments_count: std::option::Option<i32>,
     /// <p>The number of compliance check evidence that Audit Manager classified as non-compliant on the <code>lastUpdated</code> date. This includes evidence that was collected from Security Hub with a <i>Fail</i> ruling, or collected from Config with a <i>Non-compliant</i> ruling. </p>
+    #[doc(hidden)]
     pub noncompliant_evidence_count: std::option::Option<i32>,
     /// <p>The number of compliance check evidence that Audit Manager classified as compliant on the <code>lastUpdated</code> date. This includes evidence that was collected from Security Hub with a <i>Pass</i> ruling, or collected from Config with a <i>Compliant</i> ruling. </p>
+    #[doc(hidden)]
     pub compliant_evidence_count: std::option::Option<i32>,
     /// <p>The number of evidence without a compliance check ruling. Evidence is inconclusive when the associated control uses Security Hub or Config as a data source but you didn't enable those services. This is also the case when a control uses a data source that doesn’t support compliance checks (for example: manual evidence, API calls, or CloudTrail). </p> <note>
     /// <p>If evidence has a compliance check status of <i>not applicable</i>, it's classed as <i>inconclusive</i> in <code>Insights</code> data.</p>
     /// </note>
+    #[doc(hidden)]
     pub inconclusive_evidence_count: std::option::Option<i32>,
     /// <p>The number of assessment controls that collected non-compliant evidence on the <code>lastUpdated</code> date. </p>
+    #[doc(hidden)]
     pub assessment_controls_count_by_noncompliant_evidence: std::option::Option<i32>,
     /// <p>The total number of controls across all active assessments. </p>
+    #[doc(hidden)]
     pub total_assessment_controls_count: std::option::Option<i32>,
     /// <p>The time when the cross-assessment insights were last updated. </p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Insights {
@@ -7023,11 +7233,10 @@ impl std::fmt::Debug for Insights {
         formatter.finish()
     }
 }
-/// See [`Insights`](crate::model::Insights)
+/// See [`Insights`](crate::model::Insights).
 pub mod insights {
 
-    /// A builder for [`Insights`](crate::model::Insights)
-    #[non_exhaustive]
+    /// A builder for [`Insights`](crate::model::Insights).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) active_assessments_count: std::option::Option<i32>,
@@ -7122,7 +7331,7 @@ pub mod insights {
             self.last_updated = input;
             self
         }
-        /// Consumes the builder and constructs a [`Insights`](crate::model::Insights)
+        /// Consumes the builder and constructs a [`Insights`](crate::model::Insights).
         pub fn build(self) -> crate::model::Insights {
             crate::model::Insights {
                 active_assessments_count: self.active_assessments_count,
@@ -7138,7 +7347,7 @@ pub mod insights {
     }
 }
 impl Insights {
-    /// Creates a new builder-style object to manufacture [`Insights`](crate::model::Insights)
+    /// Creates a new builder-style object to manufacture [`Insights`](crate::model::Insights).
     pub fn builder() -> crate::model::insights::Builder {
         crate::model::insights::Builder::default()
     }
@@ -7149,40 +7358,58 @@ impl Insights {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssessmentEvidenceFolder {
     /// <p> The name of the evidence folder. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The date when the first evidence was added to the evidence folder. </p>
+    #[doc(hidden)]
     pub date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The identifier for the assessment. </p>
+    #[doc(hidden)]
     pub assessment_id: std::option::Option<std::string::String>,
     /// <p> The identifier for the control set. </p>
+    #[doc(hidden)]
     pub control_set_id: std::option::Option<std::string::String>,
     /// <p> The unique identifier for the control. </p>
+    #[doc(hidden)]
     pub control_id: std::option::Option<std::string::String>,
     /// <p> The identifier for the folder that the evidence is stored in. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The Amazon Web Service that the evidence was collected from. </p>
+    #[doc(hidden)]
     pub data_source: std::option::Option<std::string::String>,
     /// <p> The name of the user who created the evidence folder. </p>
+    #[doc(hidden)]
     pub author: std::option::Option<std::string::String>,
     /// <p> The total amount of evidence in the evidence folder. </p>
+    #[doc(hidden)]
     pub total_evidence: i32,
     /// <p> The total count of evidence that's included in the assessment report. </p>
+    #[doc(hidden)]
     pub assessment_report_selection_count: i32,
     /// <p> The name of the control. </p>
+    #[doc(hidden)]
     pub control_name: std::option::Option<std::string::String>,
     /// <p> The amount of evidence that's included in the evidence folder. </p>
+    #[doc(hidden)]
     pub evidence_resources_included_count: i32,
     /// <p> The number of evidence that falls under the configuration data category. This evidence is collected from configuration snapshots of other Amazon Web Services such as Amazon EC2, Amazon S3, or IAM. </p>
+    #[doc(hidden)]
     pub evidence_by_type_configuration_data_count: i32,
     /// <p> The number of evidence that falls under the manual category. This evidence is imported manually. </p>
+    #[doc(hidden)]
     pub evidence_by_type_manual_count: i32,
     /// <p> The number of evidence that falls under the compliance check category. This evidence is collected from Config or Security Hub. </p>
+    #[doc(hidden)]
     pub evidence_by_type_compliance_check_count: i32,
     /// <p> The total number of issues that were reported directly from Security Hub, Config, or both. </p>
+    #[doc(hidden)]
     pub evidence_by_type_compliance_check_issues_count: i32,
     /// <p> The number of evidence that falls under the user activity category. This evidence is collected from CloudTrail logs. </p>
+    #[doc(hidden)]
     pub evidence_by_type_user_activity_count: i32,
     /// <p> The total number of Amazon Web Services resources that were assessed to generate the evidence. </p>
+    #[doc(hidden)]
     pub evidence_aws_service_source_count: i32,
 }
 impl AssessmentEvidenceFolder {
@@ -7307,11 +7534,10 @@ impl std::fmt::Debug for AssessmentEvidenceFolder {
         formatter.finish()
     }
 }
-/// See [`AssessmentEvidenceFolder`](crate::model::AssessmentEvidenceFolder)
+/// See [`AssessmentEvidenceFolder`](crate::model::AssessmentEvidenceFolder).
 pub mod assessment_evidence_folder {
 
-    /// A builder for [`AssessmentEvidenceFolder`](crate::model::AssessmentEvidenceFolder)
-    #[non_exhaustive]
+    /// A builder for [`AssessmentEvidenceFolder`](crate::model::AssessmentEvidenceFolder).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -7544,7 +7770,7 @@ pub mod assessment_evidence_folder {
             self.evidence_aws_service_source_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssessmentEvidenceFolder`](crate::model::AssessmentEvidenceFolder)
+        /// Consumes the builder and constructs a [`AssessmentEvidenceFolder`](crate::model::AssessmentEvidenceFolder).
         pub fn build(self) -> crate::model::AssessmentEvidenceFolder {
             crate::model::AssessmentEvidenceFolder {
                 name: self.name,
@@ -7586,7 +7812,7 @@ pub mod assessment_evidence_folder {
     }
 }
 impl AssessmentEvidenceFolder {
-    /// Creates a new builder-style object to manufacture [`AssessmentEvidenceFolder`](crate::model::AssessmentEvidenceFolder)
+    /// Creates a new builder-style object to manufacture [`AssessmentEvidenceFolder`](crate::model::AssessmentEvidenceFolder).
     pub fn builder() -> crate::model::assessment_evidence_folder::Builder {
         crate::model::assessment_evidence_folder::Builder::default()
     }
@@ -7597,35 +7823,50 @@ impl AssessmentEvidenceFolder {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Evidence {
     /// <p> The data source where the evidence was collected from. </p>
+    #[doc(hidden)]
     pub data_source: std::option::Option<std::string::String>,
     /// <p> The identifier for the Amazon Web Services account. </p>
+    #[doc(hidden)]
     pub evidence_aws_account_id: std::option::Option<std::string::String>,
     /// <p> The timestamp that represents when the evidence was collected. </p>
+    #[doc(hidden)]
     pub time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The Amazon Web Service that the evidence is collected from. </p>
+    #[doc(hidden)]
     pub event_source: std::option::Option<std::string::String>,
     /// <p> The name of the evidence event. </p>
+    #[doc(hidden)]
     pub event_name: std::option::Option<std::string::String>,
     /// <p> The type of automated evidence. </p>
+    #[doc(hidden)]
     pub evidence_by_type: std::option::Option<std::string::String>,
     /// <p> The list of resources that are assessed to generate the evidence. </p>
+    #[doc(hidden)]
     pub resources_included: std::option::Option<std::vec::Vec<crate::model::Resource>>,
     /// <p> The names and values that are used by the evidence event. This includes an attribute name (such as <code>allowUsersToChangePassword</code>) and value (such as <code>true</code> or <code>false</code>). </p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p> The unique identifier for the IAM user or role that's associated with the evidence. </p>
+    #[doc(hidden)]
     pub iam_id: std::option::Option<std::string::String>,
     /// <p> The evaluation status for evidence that falls under the compliance check category. For evidence collected from Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from Config, a <i>Compliant</i> or <i>Noncompliant</i> result is shown. </p>
+    #[doc(hidden)]
     pub compliance_check: std::option::Option<std::string::String>,
     /// <p> The Amazon Web Services account that the evidence is collected from, and its organization path. </p>
+    #[doc(hidden)]
     pub aws_organization: std::option::Option<std::string::String>,
     /// <p> The identifier for the Amazon Web Services account. </p>
+    #[doc(hidden)]
     pub aws_account_id: std::option::Option<std::string::String>,
     /// <p> The identifier for the folder that the evidence is stored in. </p>
+    #[doc(hidden)]
     pub evidence_folder_id: std::option::Option<std::string::String>,
     /// <p> The identifier for the evidence. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> Specifies whether the evidence is included in the assessment report. </p>
+    #[doc(hidden)]
     pub assessment_report_selection: std::option::Option<std::string::String>,
 }
 impl Evidence {
@@ -7717,11 +7958,10 @@ impl std::fmt::Debug for Evidence {
         formatter.finish()
     }
 }
-/// See [`Evidence`](crate::model::Evidence)
+/// See [`Evidence`](crate::model::Evidence).
 pub mod evidence {
 
-    /// A builder for [`Evidence`](crate::model::Evidence)
-    #[non_exhaustive]
+    /// A builder for [`Evidence`](crate::model::Evidence).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_source: std::option::Option<std::string::String>,
@@ -7941,7 +8181,7 @@ pub mod evidence {
             self.assessment_report_selection = input;
             self
         }
-        /// Consumes the builder and constructs a [`Evidence`](crate::model::Evidence)
+        /// Consumes the builder and constructs a [`Evidence`](crate::model::Evidence).
         pub fn build(self) -> crate::model::Evidence {
             crate::model::Evidence {
                 data_source: self.data_source,
@@ -7964,7 +8204,7 @@ pub mod evidence {
     }
 }
 impl Evidence {
-    /// Creates a new builder-style object to manufacture [`Evidence`](crate::model::Evidence)
+    /// Creates a new builder-style object to manufacture [`Evidence`](crate::model::Evidence).
     pub fn builder() -> crate::model::evidence::Builder {
         crate::model::evidence::Builder::default()
     }
@@ -7975,8 +8215,10 @@ impl Evidence {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Resource {
     /// <p> The Amazon Resource Name (ARN) for the resource. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p> The value of the resource. </p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Resource {
@@ -7997,11 +8239,10 @@ impl std::fmt::Debug for Resource {
         formatter.finish()
     }
 }
-/// See [`Resource`](crate::model::Resource)
+/// See [`Resource`](crate::model::Resource).
 pub mod resource {
 
-    /// A builder for [`Resource`](crate::model::Resource)
-    #[non_exhaustive]
+    /// A builder for [`Resource`](crate::model::Resource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -8028,7 +8269,7 @@ pub mod resource {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource)
+        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource).
         pub fn build(self) -> crate::model::Resource {
             crate::model::Resource {
                 arn: self.arn,
@@ -8038,7 +8279,7 @@ pub mod resource {
     }
 }
 impl Resource {
-    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource)
+    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource).
     pub fn builder() -> crate::model::resource::Builder {
         crate::model::resource::Builder::default()
     }
@@ -8049,18 +8290,25 @@ impl Resource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DelegationMetadata {
     /// <p> The unique identifier for the delegation. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The name of the associated assessment. </p>
+    #[doc(hidden)]
     pub assessment_name: std::option::Option<std::string::String>,
     /// <p> The unique identifier for the assessment. </p>
+    #[doc(hidden)]
     pub assessment_id: std::option::Option<std::string::String>,
     /// <p> The current status of the delegation. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DelegationStatus>,
     /// <p> The Amazon Resource Name (ARN) of the IAM role. </p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p> Specifies when the delegation was created. </p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Specifies the name of the control set that was delegated for review. </p>
+    #[doc(hidden)]
     pub control_set_name: std::option::Option<std::string::String>,
 }
 impl DelegationMetadata {
@@ -8106,11 +8354,10 @@ impl std::fmt::Debug for DelegationMetadata {
         formatter.finish()
     }
 }
-/// See [`DelegationMetadata`](crate::model::DelegationMetadata)
+/// See [`DelegationMetadata`](crate::model::DelegationMetadata).
 pub mod delegation_metadata {
 
-    /// A builder for [`DelegationMetadata`](crate::model::DelegationMetadata)
-    #[non_exhaustive]
+    /// A builder for [`DelegationMetadata`](crate::model::DelegationMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -8207,7 +8454,7 @@ pub mod delegation_metadata {
             self.control_set_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DelegationMetadata`](crate::model::DelegationMetadata)
+        /// Consumes the builder and constructs a [`DelegationMetadata`](crate::model::DelegationMetadata).
         pub fn build(self) -> crate::model::DelegationMetadata {
             crate::model::DelegationMetadata {
                 id: self.id,
@@ -8222,7 +8469,7 @@ pub mod delegation_metadata {
     }
 }
 impl DelegationMetadata {
-    /// Creates a new builder-style object to manufacture [`DelegationMetadata`](crate::model::DelegationMetadata)
+    /// Creates a new builder-style object to manufacture [`DelegationMetadata`](crate::model::DelegationMetadata).
     pub fn builder() -> crate::model::delegation_metadata::Builder {
         crate::model::delegation_metadata::Builder::default()
     }
@@ -8233,14 +8480,19 @@ impl DelegationMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChangeLog {
     /// <p> The object that was changed, such as an assessment, control, or control set. </p>
+    #[doc(hidden)]
     pub object_type: std::option::Option<crate::model::ObjectTypeEnum>,
     /// <p> The name of the object that changed. This could be the name of an assessment, control, or control set.</p>
+    #[doc(hidden)]
     pub object_name: std::option::Option<std::string::String>,
     /// <p> The action that was performed. </p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ActionEnum>,
     /// <p> The time when the action was performed and the changelog record was created. </p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The IAM user or role that performed the action. </p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
 }
 impl ChangeLog {
@@ -8276,11 +8528,10 @@ impl std::fmt::Debug for ChangeLog {
         formatter.finish()
     }
 }
-/// See [`ChangeLog`](crate::model::ChangeLog)
+/// See [`ChangeLog`](crate::model::ChangeLog).
 pub mod change_log {
 
-    /// A builder for [`ChangeLog`](crate::model::ChangeLog)
-    #[non_exhaustive]
+    /// A builder for [`ChangeLog`](crate::model::ChangeLog).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_type: std::option::Option<crate::model::ObjectTypeEnum>,
@@ -8346,7 +8597,7 @@ pub mod change_log {
             self.created_by = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeLog`](crate::model::ChangeLog)
+        /// Consumes the builder and constructs a [`ChangeLog`](crate::model::ChangeLog).
         pub fn build(self) -> crate::model::ChangeLog {
             crate::model::ChangeLog {
                 object_type: self.object_type,
@@ -8359,7 +8610,7 @@ pub mod change_log {
     }
 }
 impl ChangeLog {
-    /// Creates a new builder-style object to manufacture [`ChangeLog`](crate::model::ChangeLog)
+    /// Creates a new builder-style object to manufacture [`ChangeLog`](crate::model::ChangeLog).
     pub fn builder() -> crate::model::change_log::Builder {
         crate::model::change_log::Builder::default()
     }
@@ -8531,8 +8782,10 @@ impl AsRef<str> for ObjectTypeEnum {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Url {
     /// <p> The name or word that's used as a hyperlink to the URL. </p>
+    #[doc(hidden)]
     pub hyperlink_name: std::option::Option<std::string::String>,
     /// <p> The unique identifier for the internet resource. </p>
+    #[doc(hidden)]
     pub link: std::option::Option<std::string::String>,
 }
 impl Url {
@@ -8553,11 +8806,10 @@ impl std::fmt::Debug for Url {
         formatter.finish()
     }
 }
-/// See [`Url`](crate::model::Url)
+/// See [`Url`](crate::model::Url).
 pub mod url {
 
-    /// A builder for [`Url`](crate::model::Url)
-    #[non_exhaustive]
+    /// A builder for [`Url`](crate::model::Url).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hyperlink_name: std::option::Option<std::string::String>,
@@ -8587,7 +8839,7 @@ pub mod url {
             self.link = input;
             self
         }
-        /// Consumes the builder and constructs a [`Url`](crate::model::Url)
+        /// Consumes the builder and constructs a [`Url`](crate::model::Url).
         pub fn build(self) -> crate::model::Url {
             crate::model::Url {
                 hyperlink_name: self.hyperlink_name,
@@ -8597,7 +8849,7 @@ pub mod url {
     }
 }
 impl Url {
-    /// Creates a new builder-style object to manufacture [`Url`](crate::model::Url)
+    /// Creates a new builder-style object to manufacture [`Url`](crate::model::Url).
     pub fn builder() -> crate::model::url::Builder {
         crate::model::url::Builder::default()
     }
@@ -8608,18 +8860,32 @@ impl Url {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateControlMappingSource {
     /// <p> The name of the control mapping data source. </p>
+    #[doc(hidden)]
     pub source_name: std::option::Option<std::string::String>,
     /// <p> The description of the data source that determines where Audit Manager collects evidence from for the control. </p>
+    #[doc(hidden)]
     pub source_description: std::option::Option<std::string::String>,
     /// <p> The setup option for the data source, which reflects if the evidence collection is automated or manual. </p>
+    #[doc(hidden)]
     pub source_set_up_option: std::option::Option<crate::model::SourceSetUpOption>,
     /// <p> Specifies one of the five types of data sources for evidence collection. </p>
+    #[doc(hidden)]
     pub source_type: std::option::Option<crate::model::SourceType>,
     /// <p> The keyword to search for in CloudTrail logs, Config rules, Security Hub checks, and Amazon Web Services API names. </p>
+    /// <p> To learn more about the supported keywords that you can use when mapping a control data source, see the following pages in the <i>Audit Manager User Guide</i>:</p>
+    /// <ul>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-ash.html">Config rules supported by Audit Manager</a> </p> </li>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-config.html">Security Hub controls supported by Audit Manager</a> </p> </li>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-api.html">API calls supported by Audit Manager</a> </p> </li>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-cloudtrail.html">CloudTrail event names supported by Audit Manager</a> </p> </li>
+    /// </ul>
+    #[doc(hidden)]
     pub source_keyword: std::option::Option<crate::model::SourceKeyword>,
     /// <p> The frequency of evidence collection for the control mapping source. </p>
+    #[doc(hidden)]
     pub source_frequency: std::option::Option<crate::model::SourceFrequency>,
     /// <p> The instructions for troubleshooting the control. </p>
+    #[doc(hidden)]
     pub troubleshooting_text: std::option::Option<std::string::String>,
 }
 impl CreateControlMappingSource {
@@ -8640,6 +8906,13 @@ impl CreateControlMappingSource {
         self.source_type.as_ref()
     }
     /// <p> The keyword to search for in CloudTrail logs, Config rules, Security Hub checks, and Amazon Web Services API names. </p>
+    /// <p> To learn more about the supported keywords that you can use when mapping a control data source, see the following pages in the <i>Audit Manager User Guide</i>:</p>
+    /// <ul>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-ash.html">Config rules supported by Audit Manager</a> </p> </li>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-config.html">Security Hub controls supported by Audit Manager</a> </p> </li>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-api.html">API calls supported by Audit Manager</a> </p> </li>
+    /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-cloudtrail.html">CloudTrail event names supported by Audit Manager</a> </p> </li>
+    /// </ul>
     pub fn source_keyword(&self) -> std::option::Option<&crate::model::SourceKeyword> {
         self.source_keyword.as_ref()
     }
@@ -8665,11 +8938,10 @@ impl std::fmt::Debug for CreateControlMappingSource {
         formatter.finish()
     }
 }
-/// See [`CreateControlMappingSource`](crate::model::CreateControlMappingSource)
+/// See [`CreateControlMappingSource`](crate::model::CreateControlMappingSource).
 pub mod create_control_mapping_source {
 
-    /// A builder for [`CreateControlMappingSource`](crate::model::CreateControlMappingSource)
-    #[non_exhaustive]
+    /// A builder for [`CreateControlMappingSource`](crate::model::CreateControlMappingSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_name: std::option::Option<std::string::String>,
@@ -8731,11 +9003,25 @@ pub mod create_control_mapping_source {
             self
         }
         /// <p> The keyword to search for in CloudTrail logs, Config rules, Security Hub checks, and Amazon Web Services API names. </p>
+        /// <p> To learn more about the supported keywords that you can use when mapping a control data source, see the following pages in the <i>Audit Manager User Guide</i>:</p>
+        /// <ul>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-ash.html">Config rules supported by Audit Manager</a> </p> </li>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-config.html">Security Hub controls supported by Audit Manager</a> </p> </li>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-api.html">API calls supported by Audit Manager</a> </p> </li>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-cloudtrail.html">CloudTrail event names supported by Audit Manager</a> </p> </li>
+        /// </ul>
         pub fn source_keyword(mut self, input: crate::model::SourceKeyword) -> Self {
             self.source_keyword = Some(input);
             self
         }
         /// <p> The keyword to search for in CloudTrail logs, Config rules, Security Hub checks, and Amazon Web Services API names. </p>
+        /// <p> To learn more about the supported keywords that you can use when mapping a control data source, see the following pages in the <i>Audit Manager User Guide</i>:</p>
+        /// <ul>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-ash.html">Config rules supported by Audit Manager</a> </p> </li>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-config.html">Security Hub controls supported by Audit Manager</a> </p> </li>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-api.html">API calls supported by Audit Manager</a> </p> </li>
+        /// <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/control-data-sources-cloudtrail.html">CloudTrail event names supported by Audit Manager</a> </p> </li>
+        /// </ul>
         pub fn set_source_keyword(
             mut self,
             input: std::option::Option<crate::model::SourceKeyword>,
@@ -8769,7 +9055,7 @@ pub mod create_control_mapping_source {
             self.troubleshooting_text = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateControlMappingSource`](crate::model::CreateControlMappingSource)
+        /// Consumes the builder and constructs a [`CreateControlMappingSource`](crate::model::CreateControlMappingSource).
         pub fn build(self) -> crate::model::CreateControlMappingSource {
             crate::model::CreateControlMappingSource {
                 source_name: self.source_name,
@@ -8784,7 +9070,7 @@ pub mod create_control_mapping_source {
     }
 }
 impl CreateControlMappingSource {
-    /// Creates a new builder-style object to manufacture [`CreateControlMappingSource`](crate::model::CreateControlMappingSource)
+    /// Creates a new builder-style object to manufacture [`CreateControlMappingSource`](crate::model::CreateControlMappingSource).
     pub fn builder() -> crate::model::create_control_mapping_source::Builder {
         crate::model::create_control_mapping_source::Builder::default()
     }
@@ -8795,22 +9081,31 @@ impl CreateControlMappingSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssessmentReport {
     /// <p> The unique identifier for the assessment report. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The name that's given to the assessment report. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The description of the specified assessment report. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The identifier for the specified Amazon Web Services account. </p>
+    #[doc(hidden)]
     pub aws_account_id: std::option::Option<std::string::String>,
     /// <p> The identifier for the specified assessment. </p>
+    #[doc(hidden)]
     pub assessment_id: std::option::Option<std::string::String>,
     /// <p> The name of the associated assessment. </p>
+    #[doc(hidden)]
     pub assessment_name: std::option::Option<std::string::String>,
     /// <p> The name of the user who created the assessment report. </p>
+    #[doc(hidden)]
     pub author: std::option::Option<std::string::String>,
     /// <p> The current status of the specified assessment report. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AssessmentReportStatus>,
     /// <p> Specifies when the assessment report was created. </p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AssessmentReport {
@@ -8866,11 +9161,10 @@ impl std::fmt::Debug for AssessmentReport {
         formatter.finish()
     }
 }
-/// See [`AssessmentReport`](crate::model::AssessmentReport)
+/// See [`AssessmentReport`](crate::model::AssessmentReport).
 pub mod assessment_report {
 
-    /// A builder for [`AssessmentReport`](crate::model::AssessmentReport)
-    #[non_exhaustive]
+    /// A builder for [`AssessmentReport`](crate::model::AssessmentReport).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -8989,7 +9283,7 @@ pub mod assessment_report {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssessmentReport`](crate::model::AssessmentReport)
+        /// Consumes the builder and constructs a [`AssessmentReport`](crate::model::AssessmentReport).
         pub fn build(self) -> crate::model::AssessmentReport {
             crate::model::AssessmentReport {
                 id: self.id,
@@ -9006,7 +9300,7 @@ pub mod assessment_report {
     }
 }
 impl AssessmentReport {
-    /// Creates a new builder-style object to manufacture [`AssessmentReport`](crate::model::AssessmentReport)
+    /// Creates a new builder-style object to manufacture [`AssessmentReport`](crate::model::AssessmentReport).
     pub fn builder() -> crate::model::assessment_report::Builder {
         crate::model::assessment_report::Builder::default()
     }
@@ -9017,8 +9311,10 @@ impl AssessmentReport {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAssessmentFrameworkControlSet {
     /// <p> The name of the control set. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The list of controls within the control set. This doesn't contain the control set ID. </p>
+    #[doc(hidden)]
     pub controls:
         std::option::Option<std::vec::Vec<crate::model::CreateAssessmentFrameworkControl>>,
 }
@@ -9042,11 +9338,10 @@ impl std::fmt::Debug for CreateAssessmentFrameworkControlSet {
         formatter.finish()
     }
 }
-/// See [`CreateAssessmentFrameworkControlSet`](crate::model::CreateAssessmentFrameworkControlSet)
+/// See [`CreateAssessmentFrameworkControlSet`](crate::model::CreateAssessmentFrameworkControlSet).
 pub mod create_assessment_framework_control_set {
 
-    /// A builder for [`CreateAssessmentFrameworkControlSet`](crate::model::CreateAssessmentFrameworkControlSet)
-    #[non_exhaustive]
+    /// A builder for [`CreateAssessmentFrameworkControlSet`](crate::model::CreateAssessmentFrameworkControlSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -9085,7 +9380,7 @@ pub mod create_assessment_framework_control_set {
             self.controls = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAssessmentFrameworkControlSet`](crate::model::CreateAssessmentFrameworkControlSet)
+        /// Consumes the builder and constructs a [`CreateAssessmentFrameworkControlSet`](crate::model::CreateAssessmentFrameworkControlSet).
         pub fn build(self) -> crate::model::CreateAssessmentFrameworkControlSet {
             crate::model::CreateAssessmentFrameworkControlSet {
                 name: self.name,
@@ -9095,7 +9390,7 @@ pub mod create_assessment_framework_control_set {
     }
 }
 impl CreateAssessmentFrameworkControlSet {
-    /// Creates a new builder-style object to manufacture [`CreateAssessmentFrameworkControlSet`](crate::model::CreateAssessmentFrameworkControlSet)
+    /// Creates a new builder-style object to manufacture [`CreateAssessmentFrameworkControlSet`](crate::model::CreateAssessmentFrameworkControlSet).
     pub fn builder() -> crate::model::create_assessment_framework_control_set::Builder {
         crate::model::create_assessment_framework_control_set::Builder::default()
     }
@@ -9106,10 +9401,13 @@ impl CreateAssessmentFrameworkControlSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchImportEvidenceToAssessmentControlError {
     /// <p> Manual evidence that can't be collected automatically by Audit Manager. </p>
+    #[doc(hidden)]
     pub manual_evidence: std::option::Option<crate::model::ManualEvidence>,
     /// <p> The error code that the <code>BatchImportEvidenceToAssessmentControl</code> API returned. </p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p> The error message that the <code>BatchImportEvidenceToAssessmentControl</code> API returned. </p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl BatchImportEvidenceToAssessmentControlError {
@@ -9135,11 +9433,10 @@ impl std::fmt::Debug for BatchImportEvidenceToAssessmentControlError {
         formatter.finish()
     }
 }
-/// See [`BatchImportEvidenceToAssessmentControlError`](crate::model::BatchImportEvidenceToAssessmentControlError)
+/// See [`BatchImportEvidenceToAssessmentControlError`](crate::model::BatchImportEvidenceToAssessmentControlError).
 pub mod batch_import_evidence_to_assessment_control_error {
 
-    /// A builder for [`BatchImportEvidenceToAssessmentControlError`](crate::model::BatchImportEvidenceToAssessmentControlError)
-    #[non_exhaustive]
+    /// A builder for [`BatchImportEvidenceToAssessmentControlError`](crate::model::BatchImportEvidenceToAssessmentControlError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) manual_evidence: std::option::Option<crate::model::ManualEvidence>,
@@ -9183,7 +9480,7 @@ pub mod batch_import_evidence_to_assessment_control_error {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchImportEvidenceToAssessmentControlError`](crate::model::BatchImportEvidenceToAssessmentControlError)
+        /// Consumes the builder and constructs a [`BatchImportEvidenceToAssessmentControlError`](crate::model::BatchImportEvidenceToAssessmentControlError).
         pub fn build(self) -> crate::model::BatchImportEvidenceToAssessmentControlError {
             crate::model::BatchImportEvidenceToAssessmentControlError {
                 manual_evidence: self.manual_evidence,
@@ -9194,7 +9491,7 @@ pub mod batch_import_evidence_to_assessment_control_error {
     }
 }
 impl BatchImportEvidenceToAssessmentControlError {
-    /// Creates a new builder-style object to manufacture [`BatchImportEvidenceToAssessmentControlError`](crate::model::BatchImportEvidenceToAssessmentControlError)
+    /// Creates a new builder-style object to manufacture [`BatchImportEvidenceToAssessmentControlError`](crate::model::BatchImportEvidenceToAssessmentControlError).
     pub fn builder() -> crate::model::batch_import_evidence_to_assessment_control_error::Builder {
         crate::model::batch_import_evidence_to_assessment_control_error::Builder::default()
     }
@@ -9205,6 +9502,7 @@ impl BatchImportEvidenceToAssessmentControlError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ManualEvidence {
     /// <p> The Amazon S3 URL that points to a manual evidence object. </p>
+    #[doc(hidden)]
     pub s3_resource_path: std::option::Option<std::string::String>,
 }
 impl ManualEvidence {
@@ -9220,11 +9518,10 @@ impl std::fmt::Debug for ManualEvidence {
         formatter.finish()
     }
 }
-/// See [`ManualEvidence`](crate::model::ManualEvidence)
+/// See [`ManualEvidence`](crate::model::ManualEvidence).
 pub mod manual_evidence {
 
-    /// A builder for [`ManualEvidence`](crate::model::ManualEvidence)
-    #[non_exhaustive]
+    /// A builder for [`ManualEvidence`](crate::model::ManualEvidence).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_resource_path: std::option::Option<std::string::String>,
@@ -9243,7 +9540,7 @@ pub mod manual_evidence {
             self.s3_resource_path = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManualEvidence`](crate::model::ManualEvidence)
+        /// Consumes the builder and constructs a [`ManualEvidence`](crate::model::ManualEvidence).
         pub fn build(self) -> crate::model::ManualEvidence {
             crate::model::ManualEvidence {
                 s3_resource_path: self.s3_resource_path,
@@ -9252,7 +9549,7 @@ pub mod manual_evidence {
     }
 }
 impl ManualEvidence {
-    /// Creates a new builder-style object to manufacture [`ManualEvidence`](crate::model::ManualEvidence)
+    /// Creates a new builder-style object to manufacture [`ManualEvidence`](crate::model::ManualEvidence).
     pub fn builder() -> crate::model::manual_evidence::Builder {
         crate::model::manual_evidence::Builder::default()
     }
@@ -9263,10 +9560,13 @@ impl ManualEvidence {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssessmentReportEvidenceError {
     /// <p> The identifier for the evidence. </p>
+    #[doc(hidden)]
     pub evidence_id: std::option::Option<std::string::String>,
     /// <p> The error code that the <code>AssessmentReportEvidence</code> API returned. </p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p> The error message that the <code>AssessmentReportEvidence</code> API returned. </p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl AssessmentReportEvidenceError {
@@ -9292,11 +9592,10 @@ impl std::fmt::Debug for AssessmentReportEvidenceError {
         formatter.finish()
     }
 }
-/// See [`AssessmentReportEvidenceError`](crate::model::AssessmentReportEvidenceError)
+/// See [`AssessmentReportEvidenceError`](crate::model::AssessmentReportEvidenceError).
 pub mod assessment_report_evidence_error {
 
-    /// A builder for [`AssessmentReportEvidenceError`](crate::model::AssessmentReportEvidenceError)
-    #[non_exhaustive]
+    /// A builder for [`AssessmentReportEvidenceError`](crate::model::AssessmentReportEvidenceError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) evidence_id: std::option::Option<std::string::String>,
@@ -9337,7 +9636,7 @@ pub mod assessment_report_evidence_error {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssessmentReportEvidenceError`](crate::model::AssessmentReportEvidenceError)
+        /// Consumes the builder and constructs a [`AssessmentReportEvidenceError`](crate::model::AssessmentReportEvidenceError).
         pub fn build(self) -> crate::model::AssessmentReportEvidenceError {
             crate::model::AssessmentReportEvidenceError {
                 evidence_id: self.evidence_id,
@@ -9348,7 +9647,7 @@ pub mod assessment_report_evidence_error {
     }
 }
 impl AssessmentReportEvidenceError {
-    /// Creates a new builder-style object to manufacture [`AssessmentReportEvidenceError`](crate::model::AssessmentReportEvidenceError)
+    /// Creates a new builder-style object to manufacture [`AssessmentReportEvidenceError`](crate::model::AssessmentReportEvidenceError).
     pub fn builder() -> crate::model::assessment_report_evidence_error::Builder {
         crate::model::assessment_report_evidence_error::Builder::default()
     }
@@ -9359,10 +9658,13 @@ impl AssessmentReportEvidenceError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchDeleteDelegationByAssessmentError {
     /// <p> The identifier for the delegation. </p>
+    #[doc(hidden)]
     pub delegation_id: std::option::Option<std::string::String>,
     /// <p> The error code that the <code>BatchDeleteDelegationByAssessment</code> API returned. </p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p> The error message that the <code>BatchDeleteDelegationByAssessment</code> API returned. </p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl BatchDeleteDelegationByAssessmentError {
@@ -9388,11 +9690,10 @@ impl std::fmt::Debug for BatchDeleteDelegationByAssessmentError {
         formatter.finish()
     }
 }
-/// See [`BatchDeleteDelegationByAssessmentError`](crate::model::BatchDeleteDelegationByAssessmentError)
+/// See [`BatchDeleteDelegationByAssessmentError`](crate::model::BatchDeleteDelegationByAssessmentError).
 pub mod batch_delete_delegation_by_assessment_error {
 
-    /// A builder for [`BatchDeleteDelegationByAssessmentError`](crate::model::BatchDeleteDelegationByAssessmentError)
-    #[non_exhaustive]
+    /// A builder for [`BatchDeleteDelegationByAssessmentError`](crate::model::BatchDeleteDelegationByAssessmentError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delegation_id: std::option::Option<std::string::String>,
@@ -9436,7 +9737,7 @@ pub mod batch_delete_delegation_by_assessment_error {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchDeleteDelegationByAssessmentError`](crate::model::BatchDeleteDelegationByAssessmentError)
+        /// Consumes the builder and constructs a [`BatchDeleteDelegationByAssessmentError`](crate::model::BatchDeleteDelegationByAssessmentError).
         pub fn build(self) -> crate::model::BatchDeleteDelegationByAssessmentError {
             crate::model::BatchDeleteDelegationByAssessmentError {
                 delegation_id: self.delegation_id,
@@ -9447,7 +9748,7 @@ pub mod batch_delete_delegation_by_assessment_error {
     }
 }
 impl BatchDeleteDelegationByAssessmentError {
-    /// Creates a new builder-style object to manufacture [`BatchDeleteDelegationByAssessmentError`](crate::model::BatchDeleteDelegationByAssessmentError)
+    /// Creates a new builder-style object to manufacture [`BatchDeleteDelegationByAssessmentError`](crate::model::BatchDeleteDelegationByAssessmentError).
     pub fn builder() -> crate::model::batch_delete_delegation_by_assessment_error::Builder {
         crate::model::batch_delete_delegation_by_assessment_error::Builder::default()
     }
@@ -9458,10 +9759,13 @@ impl BatchDeleteDelegationByAssessmentError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchCreateDelegationByAssessmentError {
     /// <p> The API request to batch create delegations in Audit Manager. </p>
+    #[doc(hidden)]
     pub create_delegation_request: std::option::Option<crate::model::CreateDelegationRequest>,
     /// <p> The error code that the <code>BatchCreateDelegationByAssessment</code> API returned. </p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p> The error message that the <code>BatchCreateDelegationByAssessment</code> API returned. </p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl BatchCreateDelegationByAssessmentError {
@@ -9489,11 +9793,10 @@ impl std::fmt::Debug for BatchCreateDelegationByAssessmentError {
         formatter.finish()
     }
 }
-/// See [`BatchCreateDelegationByAssessmentError`](crate::model::BatchCreateDelegationByAssessmentError)
+/// See [`BatchCreateDelegationByAssessmentError`](crate::model::BatchCreateDelegationByAssessmentError).
 pub mod batch_create_delegation_by_assessment_error {
 
-    /// A builder for [`BatchCreateDelegationByAssessmentError`](crate::model::BatchCreateDelegationByAssessmentError)
-    #[non_exhaustive]
+    /// A builder for [`BatchCreateDelegationByAssessmentError`](crate::model::BatchCreateDelegationByAssessmentError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) create_delegation_request:
@@ -9541,7 +9844,7 @@ pub mod batch_create_delegation_by_assessment_error {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchCreateDelegationByAssessmentError`](crate::model::BatchCreateDelegationByAssessmentError)
+        /// Consumes the builder and constructs a [`BatchCreateDelegationByAssessmentError`](crate::model::BatchCreateDelegationByAssessmentError).
         pub fn build(self) -> crate::model::BatchCreateDelegationByAssessmentError {
             crate::model::BatchCreateDelegationByAssessmentError {
                 create_delegation_request: self.create_delegation_request,
@@ -9552,7 +9855,7 @@ pub mod batch_create_delegation_by_assessment_error {
     }
 }
 impl BatchCreateDelegationByAssessmentError {
-    /// Creates a new builder-style object to manufacture [`BatchCreateDelegationByAssessmentError`](crate::model::BatchCreateDelegationByAssessmentError)
+    /// Creates a new builder-style object to manufacture [`BatchCreateDelegationByAssessmentError`](crate::model::BatchCreateDelegationByAssessmentError).
     pub fn builder() -> crate::model::batch_create_delegation_by_assessment_error::Builder {
         crate::model::batch_create_delegation_by_assessment_error::Builder::default()
     }
@@ -9563,16 +9866,20 @@ impl BatchCreateDelegationByAssessmentError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDelegationRequest {
     /// <p> A comment that's related to the delegation request. </p>
+    #[doc(hidden)]
     pub comment: std::option::Option<std::string::String>,
     /// <p> The unique identifier for the control set. </p>
+    #[doc(hidden)]
     pub control_set_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the IAM role. </p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p> The type of customer persona. </p> <note>
     /// <p>In <code>CreateAssessment</code>, <code>roleType</code> can only be <code>PROCESS_OWNER</code>. </p>
     /// <p>In <code>UpdateSettings</code>, <code>roleType</code> can only be <code>PROCESS_OWNER</code>.</p>
     /// <p>In <code>BatchCreateDelegationByAssessment</code>, <code>roleType</code> can only be <code>RESOURCE_OWNER</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub role_type: std::option::Option<crate::model::RoleType>,
 }
 impl CreateDelegationRequest {
@@ -9607,11 +9914,10 @@ impl std::fmt::Debug for CreateDelegationRequest {
         formatter.finish()
     }
 }
-/// See [`CreateDelegationRequest`](crate::model::CreateDelegationRequest)
+/// See [`CreateDelegationRequest`](crate::model::CreateDelegationRequest).
 pub mod create_delegation_request {
 
-    /// A builder for [`CreateDelegationRequest`](crate::model::CreateDelegationRequest)
-    #[non_exhaustive]
+    /// A builder for [`CreateDelegationRequest`](crate::model::CreateDelegationRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) comment: std::option::Option<std::string::String>,
@@ -9671,7 +9977,7 @@ pub mod create_delegation_request {
             self.role_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDelegationRequest`](crate::model::CreateDelegationRequest)
+        /// Consumes the builder and constructs a [`CreateDelegationRequest`](crate::model::CreateDelegationRequest).
         pub fn build(self) -> crate::model::CreateDelegationRequest {
             crate::model::CreateDelegationRequest {
                 comment: self.comment,
@@ -9683,7 +9989,7 @@ pub mod create_delegation_request {
     }
 }
 impl CreateDelegationRequest {
-    /// Creates a new builder-style object to manufacture [`CreateDelegationRequest`](crate::model::CreateDelegationRequest)
+    /// Creates a new builder-style object to manufacture [`CreateDelegationRequest`](crate::model::CreateDelegationRequest).
     pub fn builder() -> crate::model::create_delegation_request::Builder {
         crate::model::create_delegation_request::Builder::default()
     }

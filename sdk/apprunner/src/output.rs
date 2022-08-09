@@ -4,8 +4,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateServiceOutput {
     /// <p>A description of the App Runner service updated by this request. All configuration values in the returned <code>Service</code> structure reflect configuration changes that are being applied by this request.</p>
+    #[doc(hidden)]
     pub service: std::option::Option<crate::model::Service>,
     /// <p>The unique ID of the asynchronous operation that this request started. You can use it combined with the <code>ListOperations</code> call to track the operation's progress.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl UpdateServiceOutput {
@@ -26,11 +28,10 @@ impl std::fmt::Debug for UpdateServiceOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateServiceOutput`](crate::output::UpdateServiceOutput)
+/// See [`UpdateServiceOutput`](crate::output::UpdateServiceOutput).
 pub mod update_service_output {
 
-    /// A builder for [`UpdateServiceOutput`](crate::output::UpdateServiceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateServiceOutput`](crate::output::UpdateServiceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service: std::option::Option<crate::model::Service>,
@@ -57,7 +58,7 @@ pub mod update_service_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateServiceOutput`](crate::output::UpdateServiceOutput)
+        /// Consumes the builder and constructs a [`UpdateServiceOutput`](crate::output::UpdateServiceOutput).
         pub fn build(self) -> crate::output::UpdateServiceOutput {
             crate::output::UpdateServiceOutput {
                 service: self.service,
@@ -67,7 +68,7 @@ pub mod update_service_output {
     }
 }
 impl UpdateServiceOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateServiceOutput`](crate::output::UpdateServiceOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateServiceOutput`](crate::output::UpdateServiceOutput).
     pub fn builder() -> crate::output::update_service_output::Builder {
         crate::output::update_service_output::Builder::default()
     }
@@ -83,22 +84,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -114,22 +114,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -140,6 +139,7 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartDeploymentOutput {
     /// <p>The unique ID of the asynchronous operation that this request started. You can use it combined with the <code>ListOperations</code> call to track the operation's progress.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl StartDeploymentOutput {
@@ -155,11 +155,10 @@ impl std::fmt::Debug for StartDeploymentOutput {
         formatter.finish()
     }
 }
-/// See [`StartDeploymentOutput`](crate::output::StartDeploymentOutput)
+/// See [`StartDeploymentOutput`](crate::output::StartDeploymentOutput).
 pub mod start_deployment_output {
 
-    /// A builder for [`StartDeploymentOutput`](crate::output::StartDeploymentOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartDeploymentOutput`](crate::output::StartDeploymentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -175,7 +174,7 @@ pub mod start_deployment_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartDeploymentOutput`](crate::output::StartDeploymentOutput)
+        /// Consumes the builder and constructs a [`StartDeploymentOutput`](crate::output::StartDeploymentOutput).
         pub fn build(self) -> crate::output::StartDeploymentOutput {
             crate::output::StartDeploymentOutput {
                 operation_id: self.operation_id,
@@ -184,7 +183,7 @@ pub mod start_deployment_output {
     }
 }
 impl StartDeploymentOutput {
-    /// Creates a new builder-style object to manufacture [`StartDeploymentOutput`](crate::output::StartDeploymentOutput)
+    /// Creates a new builder-style object to manufacture [`StartDeploymentOutput`](crate::output::StartDeploymentOutput).
     pub fn builder() -> crate::output::start_deployment_output::Builder {
         crate::output::start_deployment_output::Builder::default()
     }
@@ -195,8 +194,10 @@ impl StartDeploymentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResumeServiceOutput {
     /// <p>A description of the App Runner service that this request just resumed.</p>
+    #[doc(hidden)]
     pub service: std::option::Option<crate::model::Service>,
     /// <p>The unique ID of the asynchronous operation that this request started. You can use it combined with the <code>ListOperations</code> call to track the operation's progress.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl ResumeServiceOutput {
@@ -217,11 +218,10 @@ impl std::fmt::Debug for ResumeServiceOutput {
         formatter.finish()
     }
 }
-/// See [`ResumeServiceOutput`](crate::output::ResumeServiceOutput)
+/// See [`ResumeServiceOutput`](crate::output::ResumeServiceOutput).
 pub mod resume_service_output {
 
-    /// A builder for [`ResumeServiceOutput`](crate::output::ResumeServiceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ResumeServiceOutput`](crate::output::ResumeServiceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service: std::option::Option<crate::model::Service>,
@@ -248,7 +248,7 @@ pub mod resume_service_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResumeServiceOutput`](crate::output::ResumeServiceOutput)
+        /// Consumes the builder and constructs a [`ResumeServiceOutput`](crate::output::ResumeServiceOutput).
         pub fn build(self) -> crate::output::ResumeServiceOutput {
             crate::output::ResumeServiceOutput {
                 service: self.service,
@@ -258,7 +258,7 @@ pub mod resume_service_output {
     }
 }
 impl ResumeServiceOutput {
-    /// Creates a new builder-style object to manufacture [`ResumeServiceOutput`](crate::output::ResumeServiceOutput)
+    /// Creates a new builder-style object to manufacture [`ResumeServiceOutput`](crate::output::ResumeServiceOutput).
     pub fn builder() -> crate::output::resume_service_output::Builder {
         crate::output::resume_service_output::Builder::default()
     }
@@ -269,8 +269,10 @@ impl ResumeServiceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PauseServiceOutput {
     /// <p>A description of the App Runner service that this request just paused.</p>
+    #[doc(hidden)]
     pub service: std::option::Option<crate::model::Service>,
     /// <p>The unique ID of the asynchronous operation that this request started. You can use it combined with the <code>ListOperations</code> call to track the operation's progress.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl PauseServiceOutput {
@@ -291,11 +293,10 @@ impl std::fmt::Debug for PauseServiceOutput {
         formatter.finish()
     }
 }
-/// See [`PauseServiceOutput`](crate::output::PauseServiceOutput)
+/// See [`PauseServiceOutput`](crate::output::PauseServiceOutput).
 pub mod pause_service_output {
 
-    /// A builder for [`PauseServiceOutput`](crate::output::PauseServiceOutput)
-    #[non_exhaustive]
+    /// A builder for [`PauseServiceOutput`](crate::output::PauseServiceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service: std::option::Option<crate::model::Service>,
@@ -322,7 +323,7 @@ pub mod pause_service_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PauseServiceOutput`](crate::output::PauseServiceOutput)
+        /// Consumes the builder and constructs a [`PauseServiceOutput`](crate::output::PauseServiceOutput).
         pub fn build(self) -> crate::output::PauseServiceOutput {
             crate::output::PauseServiceOutput {
                 service: self.service,
@@ -332,7 +333,7 @@ pub mod pause_service_output {
     }
 }
 impl PauseServiceOutput {
-    /// Creates a new builder-style object to manufacture [`PauseServiceOutput`](crate::output::PauseServiceOutput)
+    /// Creates a new builder-style object to manufacture [`PauseServiceOutput`](crate::output::PauseServiceOutput).
     pub fn builder() -> crate::output::pause_service_output::Builder {
         crate::output::pause_service_output::Builder::default()
     }
@@ -343,8 +344,10 @@ impl PauseServiceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListVpcConnectorsOutput {
     /// <p>A list of information records for VPC connectors. In a paginated request, the request returns up to <code>MaxResults</code> records for each call.</p>
+    #[doc(hidden)]
     pub vpc_connectors: std::option::Option<std::vec::Vec<crate::model::VpcConnector>>,
     /// <p>The token that you can pass in a subsequent request to get the next result page. It's returned in a paginated request.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListVpcConnectorsOutput {
@@ -365,11 +368,10 @@ impl std::fmt::Debug for ListVpcConnectorsOutput {
         formatter.finish()
     }
 }
-/// See [`ListVpcConnectorsOutput`](crate::output::ListVpcConnectorsOutput)
+/// See [`ListVpcConnectorsOutput`](crate::output::ListVpcConnectorsOutput).
 pub mod list_vpc_connectors_output {
 
-    /// A builder for [`ListVpcConnectorsOutput`](crate::output::ListVpcConnectorsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListVpcConnectorsOutput`](crate::output::ListVpcConnectorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_connectors: std::option::Option<std::vec::Vec<crate::model::VpcConnector>>,
@@ -405,7 +407,7 @@ pub mod list_vpc_connectors_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListVpcConnectorsOutput`](crate::output::ListVpcConnectorsOutput)
+        /// Consumes the builder and constructs a [`ListVpcConnectorsOutput`](crate::output::ListVpcConnectorsOutput).
         pub fn build(self) -> crate::output::ListVpcConnectorsOutput {
             crate::output::ListVpcConnectorsOutput {
                 vpc_connectors: self.vpc_connectors,
@@ -415,7 +417,7 @@ pub mod list_vpc_connectors_output {
     }
 }
 impl ListVpcConnectorsOutput {
-    /// Creates a new builder-style object to manufacture [`ListVpcConnectorsOutput`](crate::output::ListVpcConnectorsOutput)
+    /// Creates a new builder-style object to manufacture [`ListVpcConnectorsOutput`](crate::output::ListVpcConnectorsOutput).
     pub fn builder() -> crate::output::list_vpc_connectors_output::Builder {
         crate::output::list_vpc_connectors_output::Builder::default()
     }
@@ -426,6 +428,7 @@ impl ListVpcConnectorsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>A list of the tag key-value pairs that are associated with the resource.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ListTagsForResourceOutput {
@@ -441,11 +444,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -470,14 +472,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -488,8 +490,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListServicesOutput {
     /// <p>A list of service summary information records. In a paginated request, the request returns up to <code>MaxResults</code> records for each call.</p>
+    #[doc(hidden)]
     pub service_summary_list: std::option::Option<std::vec::Vec<crate::model::ServiceSummary>>,
     /// <p>The token that you can pass in a subsequent request to get the next result page. It's returned in a paginated request.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListServicesOutput {
@@ -510,11 +514,10 @@ impl std::fmt::Debug for ListServicesOutput {
         formatter.finish()
     }
 }
-/// See [`ListServicesOutput`](crate::output::ListServicesOutput)
+/// See [`ListServicesOutput`](crate::output::ListServicesOutput).
 pub mod list_services_output {
 
-    /// A builder for [`ListServicesOutput`](crate::output::ListServicesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListServicesOutput`](crate::output::ListServicesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_summary_list:
@@ -551,7 +554,7 @@ pub mod list_services_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListServicesOutput`](crate::output::ListServicesOutput)
+        /// Consumes the builder and constructs a [`ListServicesOutput`](crate::output::ListServicesOutput).
         pub fn build(self) -> crate::output::ListServicesOutput {
             crate::output::ListServicesOutput {
                 service_summary_list: self.service_summary_list,
@@ -561,7 +564,7 @@ pub mod list_services_output {
     }
 }
 impl ListServicesOutput {
-    /// Creates a new builder-style object to manufacture [`ListServicesOutput`](crate::output::ListServicesOutput)
+    /// Creates a new builder-style object to manufacture [`ListServicesOutput`](crate::output::ListServicesOutput).
     pub fn builder() -> crate::output::list_services_output::Builder {
         crate::output::list_services_output::Builder::default()
     }
@@ -572,8 +575,10 @@ impl ListServicesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListOperationsOutput {
     /// <p>A list of operation summary information records. In a paginated request, the request returns up to <code>MaxResults</code> records for each call.</p>
+    #[doc(hidden)]
     pub operation_summary_list: std::option::Option<std::vec::Vec<crate::model::OperationSummary>>,
     /// <p>The token that you can pass in a subsequent request to get the next result page. It's returned in a paginated request.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListOperationsOutput {
@@ -594,11 +599,10 @@ impl std::fmt::Debug for ListOperationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListOperationsOutput`](crate::output::ListOperationsOutput)
+/// See [`ListOperationsOutput`](crate::output::ListOperationsOutput).
 pub mod list_operations_output {
 
-    /// A builder for [`ListOperationsOutput`](crate::output::ListOperationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListOperationsOutput`](crate::output::ListOperationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_summary_list:
@@ -635,7 +639,7 @@ pub mod list_operations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListOperationsOutput`](crate::output::ListOperationsOutput)
+        /// Consumes the builder and constructs a [`ListOperationsOutput`](crate::output::ListOperationsOutput).
         pub fn build(self) -> crate::output::ListOperationsOutput {
             crate::output::ListOperationsOutput {
                 operation_summary_list: self.operation_summary_list,
@@ -645,7 +649,7 @@ pub mod list_operations_output {
     }
 }
 impl ListOperationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListOperationsOutput`](crate::output::ListOperationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListOperationsOutput`](crate::output::ListOperationsOutput).
     pub fn builder() -> crate::output::list_operations_output::Builder {
         crate::output::list_operations_output::Builder::default()
     }
@@ -656,9 +660,11 @@ impl ListOperationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListObservabilityConfigurationsOutput {
     /// <p>A list of summary information records for observability configurations. In a paginated request, the request returns up to <code>MaxResults</code> records for each call.</p>
+    #[doc(hidden)]
     pub observability_configuration_summary_list:
         std::option::Option<std::vec::Vec<crate::model::ObservabilityConfigurationSummary>>,
     /// <p>The token that you can pass in a subsequent request to get the next result page. It's returned in a paginated request.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListObservabilityConfigurationsOutput {
@@ -684,11 +690,10 @@ impl std::fmt::Debug for ListObservabilityConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListObservabilityConfigurationsOutput`](crate::output::ListObservabilityConfigurationsOutput)
+/// See [`ListObservabilityConfigurationsOutput`](crate::output::ListObservabilityConfigurationsOutput).
 pub mod list_observability_configurations_output {
 
-    /// A builder for [`ListObservabilityConfigurationsOutput`](crate::output::ListObservabilityConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListObservabilityConfigurationsOutput`](crate::output::ListObservabilityConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) observability_configuration_summary_list:
@@ -732,7 +737,7 @@ pub mod list_observability_configurations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListObservabilityConfigurationsOutput`](crate::output::ListObservabilityConfigurationsOutput)
+        /// Consumes the builder and constructs a [`ListObservabilityConfigurationsOutput`](crate::output::ListObservabilityConfigurationsOutput).
         pub fn build(self) -> crate::output::ListObservabilityConfigurationsOutput {
             crate::output::ListObservabilityConfigurationsOutput {
                 observability_configuration_summary_list: self
@@ -743,7 +748,7 @@ pub mod list_observability_configurations_output {
     }
 }
 impl ListObservabilityConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListObservabilityConfigurationsOutput`](crate::output::ListObservabilityConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListObservabilityConfigurationsOutput`](crate::output::ListObservabilityConfigurationsOutput).
     pub fn builder() -> crate::output::list_observability_configurations_output::Builder {
         crate::output::list_observability_configurations_output::Builder::default()
     }
@@ -754,9 +759,11 @@ impl ListObservabilityConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListConnectionsOutput {
     /// <p>A list of summary information records for connections. In a paginated request, the request returns up to <code>MaxResults</code> records for each call.</p>
+    #[doc(hidden)]
     pub connection_summary_list:
         std::option::Option<std::vec::Vec<crate::model::ConnectionSummary>>,
     /// <p>The token that you can pass in a subsequent request to get the next result page. Returned in a paginated request.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListConnectionsOutput {
@@ -779,11 +786,10 @@ impl std::fmt::Debug for ListConnectionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListConnectionsOutput`](crate::output::ListConnectionsOutput)
+/// See [`ListConnectionsOutput`](crate::output::ListConnectionsOutput).
 pub mod list_connections_output {
 
-    /// A builder for [`ListConnectionsOutput`](crate::output::ListConnectionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListConnectionsOutput`](crate::output::ListConnectionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connection_summary_list:
@@ -820,7 +826,7 @@ pub mod list_connections_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListConnectionsOutput`](crate::output::ListConnectionsOutput)
+        /// Consumes the builder and constructs a [`ListConnectionsOutput`](crate::output::ListConnectionsOutput).
         pub fn build(self) -> crate::output::ListConnectionsOutput {
             crate::output::ListConnectionsOutput {
                 connection_summary_list: self.connection_summary_list,
@@ -830,7 +836,7 @@ pub mod list_connections_output {
     }
 }
 impl ListConnectionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListConnectionsOutput`](crate::output::ListConnectionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListConnectionsOutput`](crate::output::ListConnectionsOutput).
     pub fn builder() -> crate::output::list_connections_output::Builder {
         crate::output::list_connections_output::Builder::default()
     }
@@ -841,9 +847,11 @@ impl ListConnectionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAutoScalingConfigurationsOutput {
     /// <p>A list of summary information records for auto scaling configurations. In a paginated request, the request returns up to <code>MaxResults</code> records for each call.</p>
+    #[doc(hidden)]
     pub auto_scaling_configuration_summary_list:
         std::option::Option<std::vec::Vec<crate::model::AutoScalingConfigurationSummary>>,
     /// <p>The token that you can pass in a subsequent request to get the next result page. It's returned in a paginated request.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAutoScalingConfigurationsOutput {
@@ -869,11 +877,10 @@ impl std::fmt::Debug for ListAutoScalingConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAutoScalingConfigurationsOutput`](crate::output::ListAutoScalingConfigurationsOutput)
+/// See [`ListAutoScalingConfigurationsOutput`](crate::output::ListAutoScalingConfigurationsOutput).
 pub mod list_auto_scaling_configurations_output {
 
-    /// A builder for [`ListAutoScalingConfigurationsOutput`](crate::output::ListAutoScalingConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAutoScalingConfigurationsOutput`](crate::output::ListAutoScalingConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_scaling_configuration_summary_list:
@@ -917,7 +924,7 @@ pub mod list_auto_scaling_configurations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAutoScalingConfigurationsOutput`](crate::output::ListAutoScalingConfigurationsOutput)
+        /// Consumes the builder and constructs a [`ListAutoScalingConfigurationsOutput`](crate::output::ListAutoScalingConfigurationsOutput).
         pub fn build(self) -> crate::output::ListAutoScalingConfigurationsOutput {
             crate::output::ListAutoScalingConfigurationsOutput {
                 auto_scaling_configuration_summary_list: self
@@ -928,7 +935,7 @@ pub mod list_auto_scaling_configurations_output {
     }
 }
 impl ListAutoScalingConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAutoScalingConfigurationsOutput`](crate::output::ListAutoScalingConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAutoScalingConfigurationsOutput`](crate::output::ListAutoScalingConfigurationsOutput).
     pub fn builder() -> crate::output::list_auto_scaling_configurations_output::Builder {
         crate::output::list_auto_scaling_configurations_output::Builder::default()
     }
@@ -939,10 +946,13 @@ impl ListAutoScalingConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisassociateCustomDomainOutput {
     /// <p>The App Runner subdomain of the App Runner service. The disassociated custom domain name was mapped to this target name.</p>
+    #[doc(hidden)]
     pub dns_target: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the App Runner service that a custom domain name is disassociated from.</p>
+    #[doc(hidden)]
     pub service_arn: std::option::Option<std::string::String>,
     /// <p>A description of the domain name that's being disassociated.</p>
+    #[doc(hidden)]
     pub custom_domain: std::option::Option<crate::model::CustomDomain>,
 }
 impl DisassociateCustomDomainOutput {
@@ -968,11 +978,10 @@ impl std::fmt::Debug for DisassociateCustomDomainOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateCustomDomainOutput`](crate::output::DisassociateCustomDomainOutput)
+/// See [`DisassociateCustomDomainOutput`](crate::output::DisassociateCustomDomainOutput).
 pub mod disassociate_custom_domain_output {
 
-    /// A builder for [`DisassociateCustomDomainOutput`](crate::output::DisassociateCustomDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateCustomDomainOutput`](crate::output::DisassociateCustomDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dns_target: std::option::Option<std::string::String>,
@@ -1013,7 +1022,7 @@ pub mod disassociate_custom_domain_output {
             self.custom_domain = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociateCustomDomainOutput`](crate::output::DisassociateCustomDomainOutput)
+        /// Consumes the builder and constructs a [`DisassociateCustomDomainOutput`](crate::output::DisassociateCustomDomainOutput).
         pub fn build(self) -> crate::output::DisassociateCustomDomainOutput {
             crate::output::DisassociateCustomDomainOutput {
                 dns_target: self.dns_target,
@@ -1024,7 +1033,7 @@ pub mod disassociate_custom_domain_output {
     }
 }
 impl DisassociateCustomDomainOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateCustomDomainOutput`](crate::output::DisassociateCustomDomainOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateCustomDomainOutput`](crate::output::DisassociateCustomDomainOutput).
     pub fn builder() -> crate::output::disassociate_custom_domain_output::Builder {
         crate::output::disassociate_custom_domain_output::Builder::default()
     }
@@ -1035,6 +1044,7 @@ impl DisassociateCustomDomainOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeVpcConnectorOutput {
     /// <p>A description of the App Runner VPC connector that you specified in this request.</p>
+    #[doc(hidden)]
     pub vpc_connector: std::option::Option<crate::model::VpcConnector>,
 }
 impl DescribeVpcConnectorOutput {
@@ -1050,11 +1060,10 @@ impl std::fmt::Debug for DescribeVpcConnectorOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeVpcConnectorOutput`](crate::output::DescribeVpcConnectorOutput)
+/// See [`DescribeVpcConnectorOutput`](crate::output::DescribeVpcConnectorOutput).
 pub mod describe_vpc_connector_output {
 
-    /// A builder for [`DescribeVpcConnectorOutput`](crate::output::DescribeVpcConnectorOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeVpcConnectorOutput`](crate::output::DescribeVpcConnectorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_connector: std::option::Option<crate::model::VpcConnector>,
@@ -1073,7 +1082,7 @@ pub mod describe_vpc_connector_output {
             self.vpc_connector = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeVpcConnectorOutput`](crate::output::DescribeVpcConnectorOutput)
+        /// Consumes the builder and constructs a [`DescribeVpcConnectorOutput`](crate::output::DescribeVpcConnectorOutput).
         pub fn build(self) -> crate::output::DescribeVpcConnectorOutput {
             crate::output::DescribeVpcConnectorOutput {
                 vpc_connector: self.vpc_connector,
@@ -1082,7 +1091,7 @@ pub mod describe_vpc_connector_output {
     }
 }
 impl DescribeVpcConnectorOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeVpcConnectorOutput`](crate::output::DescribeVpcConnectorOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeVpcConnectorOutput`](crate::output::DescribeVpcConnectorOutput).
     pub fn builder() -> crate::output::describe_vpc_connector_output::Builder {
         crate::output::describe_vpc_connector_output::Builder::default()
     }
@@ -1093,6 +1102,7 @@ impl DescribeVpcConnectorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeServiceOutput {
     /// <p>A full description of the App Runner service that you specified in this request.</p>
+    #[doc(hidden)]
     pub service: std::option::Option<crate::model::Service>,
 }
 impl DescribeServiceOutput {
@@ -1108,11 +1118,10 @@ impl std::fmt::Debug for DescribeServiceOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeServiceOutput`](crate::output::DescribeServiceOutput)
+/// See [`DescribeServiceOutput`](crate::output::DescribeServiceOutput).
 pub mod describe_service_output {
 
-    /// A builder for [`DescribeServiceOutput`](crate::output::DescribeServiceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeServiceOutput`](crate::output::DescribeServiceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service: std::option::Option<crate::model::Service>,
@@ -1128,7 +1137,7 @@ pub mod describe_service_output {
             self.service = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeServiceOutput`](crate::output::DescribeServiceOutput)
+        /// Consumes the builder and constructs a [`DescribeServiceOutput`](crate::output::DescribeServiceOutput).
         pub fn build(self) -> crate::output::DescribeServiceOutput {
             crate::output::DescribeServiceOutput {
                 service: self.service,
@@ -1137,7 +1146,7 @@ pub mod describe_service_output {
     }
 }
 impl DescribeServiceOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeServiceOutput`](crate::output::DescribeServiceOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeServiceOutput`](crate::output::DescribeServiceOutput).
     pub fn builder() -> crate::output::describe_service_output::Builder {
         crate::output::describe_service_output::Builder::default()
     }
@@ -1148,6 +1157,7 @@ impl DescribeServiceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeObservabilityConfigurationOutput {
     /// <p>A full description of the App Runner observability configuration that you specified in this request.</p>
+    #[doc(hidden)]
     pub observability_configuration: std::option::Option<crate::model::ObservabilityConfiguration>,
 }
 impl DescribeObservabilityConfigurationOutput {
@@ -1168,11 +1178,10 @@ impl std::fmt::Debug for DescribeObservabilityConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeObservabilityConfigurationOutput`](crate::output::DescribeObservabilityConfigurationOutput)
+/// See [`DescribeObservabilityConfigurationOutput`](crate::output::DescribeObservabilityConfigurationOutput).
 pub mod describe_observability_configuration_output {
 
-    /// A builder for [`DescribeObservabilityConfigurationOutput`](crate::output::DescribeObservabilityConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeObservabilityConfigurationOutput`](crate::output::DescribeObservabilityConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) observability_configuration:
@@ -1195,7 +1204,7 @@ pub mod describe_observability_configuration_output {
             self.observability_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeObservabilityConfigurationOutput`](crate::output::DescribeObservabilityConfigurationOutput)
+        /// Consumes the builder and constructs a [`DescribeObservabilityConfigurationOutput`](crate::output::DescribeObservabilityConfigurationOutput).
         pub fn build(self) -> crate::output::DescribeObservabilityConfigurationOutput {
             crate::output::DescribeObservabilityConfigurationOutput {
                 observability_configuration: self.observability_configuration,
@@ -1204,7 +1213,7 @@ pub mod describe_observability_configuration_output {
     }
 }
 impl DescribeObservabilityConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeObservabilityConfigurationOutput`](crate::output::DescribeObservabilityConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeObservabilityConfigurationOutput`](crate::output::DescribeObservabilityConfigurationOutput).
     pub fn builder() -> crate::output::describe_observability_configuration_output::Builder {
         crate::output::describe_observability_configuration_output::Builder::default()
     }
@@ -1215,12 +1224,16 @@ impl DescribeObservabilityConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeCustomDomainsOutput {
     /// <p>The App Runner subdomain of the App Runner service. The associated custom domain names are mapped to this target name.</p>
+    #[doc(hidden)]
     pub dns_target: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the App Runner service whose associated custom domain names you want to describe.</p>
+    #[doc(hidden)]
     pub service_arn: std::option::Option<std::string::String>,
     /// <p>A list of descriptions of custom domain names that are associated with the service. In a paginated request, the request returns up to <code>MaxResults</code> records per call.</p>
+    #[doc(hidden)]
     pub custom_domains: std::option::Option<std::vec::Vec<crate::model::CustomDomain>>,
     /// <p>The token that you can pass in a subsequent request to get the next result page. It's returned in a paginated request.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeCustomDomainsOutput {
@@ -1251,11 +1264,10 @@ impl std::fmt::Debug for DescribeCustomDomainsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeCustomDomainsOutput`](crate::output::DescribeCustomDomainsOutput)
+/// See [`DescribeCustomDomainsOutput`](crate::output::DescribeCustomDomainsOutput).
 pub mod describe_custom_domains_output {
 
-    /// A builder for [`DescribeCustomDomainsOutput`](crate::output::DescribeCustomDomainsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeCustomDomainsOutput`](crate::output::DescribeCustomDomainsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dns_target: std::option::Option<std::string::String>,
@@ -1313,7 +1325,7 @@ pub mod describe_custom_domains_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeCustomDomainsOutput`](crate::output::DescribeCustomDomainsOutput)
+        /// Consumes the builder and constructs a [`DescribeCustomDomainsOutput`](crate::output::DescribeCustomDomainsOutput).
         pub fn build(self) -> crate::output::DescribeCustomDomainsOutput {
             crate::output::DescribeCustomDomainsOutput {
                 dns_target: self.dns_target,
@@ -1325,7 +1337,7 @@ pub mod describe_custom_domains_output {
     }
 }
 impl DescribeCustomDomainsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeCustomDomainsOutput`](crate::output::DescribeCustomDomainsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeCustomDomainsOutput`](crate::output::DescribeCustomDomainsOutput).
     pub fn builder() -> crate::output::describe_custom_domains_output::Builder {
         crate::output::describe_custom_domains_output::Builder::default()
     }
@@ -1336,6 +1348,7 @@ impl DescribeCustomDomainsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAutoScalingConfigurationOutput {
     /// <p>A full description of the App Runner auto scaling configuration that you specified in this request.</p>
+    #[doc(hidden)]
     pub auto_scaling_configuration: std::option::Option<crate::model::AutoScalingConfiguration>,
 }
 impl DescribeAutoScalingConfigurationOutput {
@@ -1356,11 +1369,10 @@ impl std::fmt::Debug for DescribeAutoScalingConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAutoScalingConfigurationOutput`](crate::output::DescribeAutoScalingConfigurationOutput)
+/// See [`DescribeAutoScalingConfigurationOutput`](crate::output::DescribeAutoScalingConfigurationOutput).
 pub mod describe_auto_scaling_configuration_output {
 
-    /// A builder for [`DescribeAutoScalingConfigurationOutput`](crate::output::DescribeAutoScalingConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAutoScalingConfigurationOutput`](crate::output::DescribeAutoScalingConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_scaling_configuration:
@@ -1383,7 +1395,7 @@ pub mod describe_auto_scaling_configuration_output {
             self.auto_scaling_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAutoScalingConfigurationOutput`](crate::output::DescribeAutoScalingConfigurationOutput)
+        /// Consumes the builder and constructs a [`DescribeAutoScalingConfigurationOutput`](crate::output::DescribeAutoScalingConfigurationOutput).
         pub fn build(self) -> crate::output::DescribeAutoScalingConfigurationOutput {
             crate::output::DescribeAutoScalingConfigurationOutput {
                 auto_scaling_configuration: self.auto_scaling_configuration,
@@ -1392,7 +1404,7 @@ pub mod describe_auto_scaling_configuration_output {
     }
 }
 impl DescribeAutoScalingConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAutoScalingConfigurationOutput`](crate::output::DescribeAutoScalingConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAutoScalingConfigurationOutput`](crate::output::DescribeAutoScalingConfigurationOutput).
     pub fn builder() -> crate::output::describe_auto_scaling_configuration_output::Builder {
         crate::output::describe_auto_scaling_configuration_output::Builder::default()
     }
@@ -1403,6 +1415,7 @@ impl DescribeAutoScalingConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteVpcConnectorOutput {
     /// <p>A description of the App Runner VPC connector that this request just deleted.</p>
+    #[doc(hidden)]
     pub vpc_connector: std::option::Option<crate::model::VpcConnector>,
 }
 impl DeleteVpcConnectorOutput {
@@ -1418,11 +1431,10 @@ impl std::fmt::Debug for DeleteVpcConnectorOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteVpcConnectorOutput`](crate::output::DeleteVpcConnectorOutput)
+/// See [`DeleteVpcConnectorOutput`](crate::output::DeleteVpcConnectorOutput).
 pub mod delete_vpc_connector_output {
 
-    /// A builder for [`DeleteVpcConnectorOutput`](crate::output::DeleteVpcConnectorOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteVpcConnectorOutput`](crate::output::DeleteVpcConnectorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_connector: std::option::Option<crate::model::VpcConnector>,
@@ -1441,7 +1453,7 @@ pub mod delete_vpc_connector_output {
             self.vpc_connector = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteVpcConnectorOutput`](crate::output::DeleteVpcConnectorOutput)
+        /// Consumes the builder and constructs a [`DeleteVpcConnectorOutput`](crate::output::DeleteVpcConnectorOutput).
         pub fn build(self) -> crate::output::DeleteVpcConnectorOutput {
             crate::output::DeleteVpcConnectorOutput {
                 vpc_connector: self.vpc_connector,
@@ -1450,7 +1462,7 @@ pub mod delete_vpc_connector_output {
     }
 }
 impl DeleteVpcConnectorOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteVpcConnectorOutput`](crate::output::DeleteVpcConnectorOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteVpcConnectorOutput`](crate::output::DeleteVpcConnectorOutput).
     pub fn builder() -> crate::output::delete_vpc_connector_output::Builder {
         crate::output::delete_vpc_connector_output::Builder::default()
     }
@@ -1461,8 +1473,10 @@ impl DeleteVpcConnectorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteServiceOutput {
     /// <p>A description of the App Runner service that this request just deleted.</p>
+    #[doc(hidden)]
     pub service: std::option::Option<crate::model::Service>,
     /// <p>The unique ID of the asynchronous operation that this request started. You can use it combined with the <code>ListOperations</code> call to track the operation's progress.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl DeleteServiceOutput {
@@ -1483,11 +1497,10 @@ impl std::fmt::Debug for DeleteServiceOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteServiceOutput`](crate::output::DeleteServiceOutput)
+/// See [`DeleteServiceOutput`](crate::output::DeleteServiceOutput).
 pub mod delete_service_output {
 
-    /// A builder for [`DeleteServiceOutput`](crate::output::DeleteServiceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteServiceOutput`](crate::output::DeleteServiceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service: std::option::Option<crate::model::Service>,
@@ -1514,7 +1527,7 @@ pub mod delete_service_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteServiceOutput`](crate::output::DeleteServiceOutput)
+        /// Consumes the builder and constructs a [`DeleteServiceOutput`](crate::output::DeleteServiceOutput).
         pub fn build(self) -> crate::output::DeleteServiceOutput {
             crate::output::DeleteServiceOutput {
                 service: self.service,
@@ -1524,7 +1537,7 @@ pub mod delete_service_output {
     }
 }
 impl DeleteServiceOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteServiceOutput`](crate::output::DeleteServiceOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteServiceOutput`](crate::output::DeleteServiceOutput).
     pub fn builder() -> crate::output::delete_service_output::Builder {
         crate::output::delete_service_output::Builder::default()
     }
@@ -1535,6 +1548,7 @@ impl DeleteServiceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteObservabilityConfigurationOutput {
     /// <p>A description of the App Runner observability configuration that this request just deleted.</p>
+    #[doc(hidden)]
     pub observability_configuration: std::option::Option<crate::model::ObservabilityConfiguration>,
 }
 impl DeleteObservabilityConfigurationOutput {
@@ -1555,11 +1569,10 @@ impl std::fmt::Debug for DeleteObservabilityConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteObservabilityConfigurationOutput`](crate::output::DeleteObservabilityConfigurationOutput)
+/// See [`DeleteObservabilityConfigurationOutput`](crate::output::DeleteObservabilityConfigurationOutput).
 pub mod delete_observability_configuration_output {
 
-    /// A builder for [`DeleteObservabilityConfigurationOutput`](crate::output::DeleteObservabilityConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteObservabilityConfigurationOutput`](crate::output::DeleteObservabilityConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) observability_configuration:
@@ -1582,7 +1595,7 @@ pub mod delete_observability_configuration_output {
             self.observability_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteObservabilityConfigurationOutput`](crate::output::DeleteObservabilityConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteObservabilityConfigurationOutput`](crate::output::DeleteObservabilityConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteObservabilityConfigurationOutput {
             crate::output::DeleteObservabilityConfigurationOutput {
                 observability_configuration: self.observability_configuration,
@@ -1591,7 +1604,7 @@ pub mod delete_observability_configuration_output {
     }
 }
 impl DeleteObservabilityConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteObservabilityConfigurationOutput`](crate::output::DeleteObservabilityConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteObservabilityConfigurationOutput`](crate::output::DeleteObservabilityConfigurationOutput).
     pub fn builder() -> crate::output::delete_observability_configuration_output::Builder {
         crate::output::delete_observability_configuration_output::Builder::default()
     }
@@ -1602,6 +1615,7 @@ impl DeleteObservabilityConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteConnectionOutput {
     /// <p>A description of the App Runner connection that this request just deleted.</p>
+    #[doc(hidden)]
     pub connection: std::option::Option<crate::model::Connection>,
 }
 impl DeleteConnectionOutput {
@@ -1617,11 +1631,10 @@ impl std::fmt::Debug for DeleteConnectionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput)
+/// See [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput).
 pub mod delete_connection_output {
 
-    /// A builder for [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connection: std::option::Option<crate::model::Connection>,
@@ -1640,7 +1653,7 @@ pub mod delete_connection_output {
             self.connection = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput)
+        /// Consumes the builder and constructs a [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput).
         pub fn build(self) -> crate::output::DeleteConnectionOutput {
             crate::output::DeleteConnectionOutput {
                 connection: self.connection,
@@ -1649,7 +1662,7 @@ pub mod delete_connection_output {
     }
 }
 impl DeleteConnectionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput).
     pub fn builder() -> crate::output::delete_connection_output::Builder {
         crate::output::delete_connection_output::Builder::default()
     }
@@ -1660,6 +1673,7 @@ impl DeleteConnectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteAutoScalingConfigurationOutput {
     /// <p>A description of the App Runner auto scaling configuration that this request just deleted.</p>
+    #[doc(hidden)]
     pub auto_scaling_configuration: std::option::Option<crate::model::AutoScalingConfiguration>,
 }
 impl DeleteAutoScalingConfigurationOutput {
@@ -1680,11 +1694,10 @@ impl std::fmt::Debug for DeleteAutoScalingConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAutoScalingConfigurationOutput`](crate::output::DeleteAutoScalingConfigurationOutput)
+/// See [`DeleteAutoScalingConfigurationOutput`](crate::output::DeleteAutoScalingConfigurationOutput).
 pub mod delete_auto_scaling_configuration_output {
 
-    /// A builder for [`DeleteAutoScalingConfigurationOutput`](crate::output::DeleteAutoScalingConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAutoScalingConfigurationOutput`](crate::output::DeleteAutoScalingConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_scaling_configuration:
@@ -1707,7 +1720,7 @@ pub mod delete_auto_scaling_configuration_output {
             self.auto_scaling_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteAutoScalingConfigurationOutput`](crate::output::DeleteAutoScalingConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteAutoScalingConfigurationOutput`](crate::output::DeleteAutoScalingConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteAutoScalingConfigurationOutput {
             crate::output::DeleteAutoScalingConfigurationOutput {
                 auto_scaling_configuration: self.auto_scaling_configuration,
@@ -1716,7 +1729,7 @@ pub mod delete_auto_scaling_configuration_output {
     }
 }
 impl DeleteAutoScalingConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAutoScalingConfigurationOutput`](crate::output::DeleteAutoScalingConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAutoScalingConfigurationOutput`](crate::output::DeleteAutoScalingConfigurationOutput).
     pub fn builder() -> crate::output::delete_auto_scaling_configuration_output::Builder {
         crate::output::delete_auto_scaling_configuration_output::Builder::default()
     }
@@ -1727,6 +1740,7 @@ impl DeleteAutoScalingConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateVpcConnectorOutput {
     /// <p>A description of the App Runner VPC connector that's created by this request.</p>
+    #[doc(hidden)]
     pub vpc_connector: std::option::Option<crate::model::VpcConnector>,
 }
 impl CreateVpcConnectorOutput {
@@ -1742,11 +1756,10 @@ impl std::fmt::Debug for CreateVpcConnectorOutput {
         formatter.finish()
     }
 }
-/// See [`CreateVpcConnectorOutput`](crate::output::CreateVpcConnectorOutput)
+/// See [`CreateVpcConnectorOutput`](crate::output::CreateVpcConnectorOutput).
 pub mod create_vpc_connector_output {
 
-    /// A builder for [`CreateVpcConnectorOutput`](crate::output::CreateVpcConnectorOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateVpcConnectorOutput`](crate::output::CreateVpcConnectorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_connector: std::option::Option<crate::model::VpcConnector>,
@@ -1765,7 +1778,7 @@ pub mod create_vpc_connector_output {
             self.vpc_connector = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateVpcConnectorOutput`](crate::output::CreateVpcConnectorOutput)
+        /// Consumes the builder and constructs a [`CreateVpcConnectorOutput`](crate::output::CreateVpcConnectorOutput).
         pub fn build(self) -> crate::output::CreateVpcConnectorOutput {
             crate::output::CreateVpcConnectorOutput {
                 vpc_connector: self.vpc_connector,
@@ -1774,7 +1787,7 @@ pub mod create_vpc_connector_output {
     }
 }
 impl CreateVpcConnectorOutput {
-    /// Creates a new builder-style object to manufacture [`CreateVpcConnectorOutput`](crate::output::CreateVpcConnectorOutput)
+    /// Creates a new builder-style object to manufacture [`CreateVpcConnectorOutput`](crate::output::CreateVpcConnectorOutput).
     pub fn builder() -> crate::output::create_vpc_connector_output::Builder {
         crate::output::create_vpc_connector_output::Builder::default()
     }
@@ -1785,8 +1798,10 @@ impl CreateVpcConnectorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateServiceOutput {
     /// <p>A description of the App Runner service that's created by this request.</p>
+    #[doc(hidden)]
     pub service: std::option::Option<crate::model::Service>,
     /// <p>The unique ID of the asynchronous operation that this request started. You can use it combined with the <a href="https://docs.aws.amazon.com/apprunner/latest/api/API_ListOperations.html">ListOperations</a> call to track the operation's progress.</p>
+    #[doc(hidden)]
     pub operation_id: std::option::Option<std::string::String>,
 }
 impl CreateServiceOutput {
@@ -1807,11 +1822,10 @@ impl std::fmt::Debug for CreateServiceOutput {
         formatter.finish()
     }
 }
-/// See [`CreateServiceOutput`](crate::output::CreateServiceOutput)
+/// See [`CreateServiceOutput`](crate::output::CreateServiceOutput).
 pub mod create_service_output {
 
-    /// A builder for [`CreateServiceOutput`](crate::output::CreateServiceOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateServiceOutput`](crate::output::CreateServiceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service: std::option::Option<crate::model::Service>,
@@ -1838,7 +1852,7 @@ pub mod create_service_output {
             self.operation_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateServiceOutput`](crate::output::CreateServiceOutput)
+        /// Consumes the builder and constructs a [`CreateServiceOutput`](crate::output::CreateServiceOutput).
         pub fn build(self) -> crate::output::CreateServiceOutput {
             crate::output::CreateServiceOutput {
                 service: self.service,
@@ -1848,7 +1862,7 @@ pub mod create_service_output {
     }
 }
 impl CreateServiceOutput {
-    /// Creates a new builder-style object to manufacture [`CreateServiceOutput`](crate::output::CreateServiceOutput)
+    /// Creates a new builder-style object to manufacture [`CreateServiceOutput`](crate::output::CreateServiceOutput).
     pub fn builder() -> crate::output::create_service_output::Builder {
         crate::output::create_service_output::Builder::default()
     }
@@ -1859,6 +1873,7 @@ impl CreateServiceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateObservabilityConfigurationOutput {
     /// <p>A description of the App Runner observability configuration that's created by this request.</p>
+    #[doc(hidden)]
     pub observability_configuration: std::option::Option<crate::model::ObservabilityConfiguration>,
 }
 impl CreateObservabilityConfigurationOutput {
@@ -1879,11 +1894,10 @@ impl std::fmt::Debug for CreateObservabilityConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateObservabilityConfigurationOutput`](crate::output::CreateObservabilityConfigurationOutput)
+/// See [`CreateObservabilityConfigurationOutput`](crate::output::CreateObservabilityConfigurationOutput).
 pub mod create_observability_configuration_output {
 
-    /// A builder for [`CreateObservabilityConfigurationOutput`](crate::output::CreateObservabilityConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateObservabilityConfigurationOutput`](crate::output::CreateObservabilityConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) observability_configuration:
@@ -1906,7 +1920,7 @@ pub mod create_observability_configuration_output {
             self.observability_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateObservabilityConfigurationOutput`](crate::output::CreateObservabilityConfigurationOutput)
+        /// Consumes the builder and constructs a [`CreateObservabilityConfigurationOutput`](crate::output::CreateObservabilityConfigurationOutput).
         pub fn build(self) -> crate::output::CreateObservabilityConfigurationOutput {
             crate::output::CreateObservabilityConfigurationOutput {
                 observability_configuration: self.observability_configuration,
@@ -1915,7 +1929,7 @@ pub mod create_observability_configuration_output {
     }
 }
 impl CreateObservabilityConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateObservabilityConfigurationOutput`](crate::output::CreateObservabilityConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateObservabilityConfigurationOutput`](crate::output::CreateObservabilityConfigurationOutput).
     pub fn builder() -> crate::output::create_observability_configuration_output::Builder {
         crate::output::create_observability_configuration_output::Builder::default()
     }
@@ -1926,6 +1940,7 @@ impl CreateObservabilityConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateConnectionOutput {
     /// <p>A description of the App Runner connection that's created by this request.</p>
+    #[doc(hidden)]
     pub connection: std::option::Option<crate::model::Connection>,
 }
 impl CreateConnectionOutput {
@@ -1941,11 +1956,10 @@ impl std::fmt::Debug for CreateConnectionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateConnectionOutput`](crate::output::CreateConnectionOutput)
+/// See [`CreateConnectionOutput`](crate::output::CreateConnectionOutput).
 pub mod create_connection_output {
 
-    /// A builder for [`CreateConnectionOutput`](crate::output::CreateConnectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateConnectionOutput`](crate::output::CreateConnectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connection: std::option::Option<crate::model::Connection>,
@@ -1964,7 +1978,7 @@ pub mod create_connection_output {
             self.connection = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateConnectionOutput`](crate::output::CreateConnectionOutput)
+        /// Consumes the builder and constructs a [`CreateConnectionOutput`](crate::output::CreateConnectionOutput).
         pub fn build(self) -> crate::output::CreateConnectionOutput {
             crate::output::CreateConnectionOutput {
                 connection: self.connection,
@@ -1973,7 +1987,7 @@ pub mod create_connection_output {
     }
 }
 impl CreateConnectionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateConnectionOutput`](crate::output::CreateConnectionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateConnectionOutput`](crate::output::CreateConnectionOutput).
     pub fn builder() -> crate::output::create_connection_output::Builder {
         crate::output::create_connection_output::Builder::default()
     }
@@ -1984,6 +1998,7 @@ impl CreateConnectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAutoScalingConfigurationOutput {
     /// <p>A description of the App Runner auto scaling configuration that's created by this request.</p>
+    #[doc(hidden)]
     pub auto_scaling_configuration: std::option::Option<crate::model::AutoScalingConfiguration>,
 }
 impl CreateAutoScalingConfigurationOutput {
@@ -2004,11 +2019,10 @@ impl std::fmt::Debug for CreateAutoScalingConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAutoScalingConfigurationOutput`](crate::output::CreateAutoScalingConfigurationOutput)
+/// See [`CreateAutoScalingConfigurationOutput`](crate::output::CreateAutoScalingConfigurationOutput).
 pub mod create_auto_scaling_configuration_output {
 
-    /// A builder for [`CreateAutoScalingConfigurationOutput`](crate::output::CreateAutoScalingConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateAutoScalingConfigurationOutput`](crate::output::CreateAutoScalingConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_scaling_configuration:
@@ -2031,7 +2045,7 @@ pub mod create_auto_scaling_configuration_output {
             self.auto_scaling_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAutoScalingConfigurationOutput`](crate::output::CreateAutoScalingConfigurationOutput)
+        /// Consumes the builder and constructs a [`CreateAutoScalingConfigurationOutput`](crate::output::CreateAutoScalingConfigurationOutput).
         pub fn build(self) -> crate::output::CreateAutoScalingConfigurationOutput {
             crate::output::CreateAutoScalingConfigurationOutput {
                 auto_scaling_configuration: self.auto_scaling_configuration,
@@ -2040,7 +2054,7 @@ pub mod create_auto_scaling_configuration_output {
     }
 }
 impl CreateAutoScalingConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAutoScalingConfigurationOutput`](crate::output::CreateAutoScalingConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAutoScalingConfigurationOutput`](crate::output::CreateAutoScalingConfigurationOutput).
     pub fn builder() -> crate::output::create_auto_scaling_configuration_output::Builder {
         crate::output::create_auto_scaling_configuration_output::Builder::default()
     }
@@ -2051,10 +2065,13 @@ impl CreateAutoScalingConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateCustomDomainOutput {
     /// <p>The App Runner subdomain of the App Runner service. The custom domain name is mapped to this target name.</p>
+    #[doc(hidden)]
     pub dns_target: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the App Runner service with which a custom domain name is associated.</p>
+    #[doc(hidden)]
     pub service_arn: std::option::Option<std::string::String>,
     /// <p>A description of the domain name that's being associated.</p>
+    #[doc(hidden)]
     pub custom_domain: std::option::Option<crate::model::CustomDomain>,
 }
 impl AssociateCustomDomainOutput {
@@ -2080,11 +2097,10 @@ impl std::fmt::Debug for AssociateCustomDomainOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateCustomDomainOutput`](crate::output::AssociateCustomDomainOutput)
+/// See [`AssociateCustomDomainOutput`](crate::output::AssociateCustomDomainOutput).
 pub mod associate_custom_domain_output {
 
-    /// A builder for [`AssociateCustomDomainOutput`](crate::output::AssociateCustomDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateCustomDomainOutput`](crate::output::AssociateCustomDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dns_target: std::option::Option<std::string::String>,
@@ -2125,7 +2141,7 @@ pub mod associate_custom_domain_output {
             self.custom_domain = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateCustomDomainOutput`](crate::output::AssociateCustomDomainOutput)
+        /// Consumes the builder and constructs a [`AssociateCustomDomainOutput`](crate::output::AssociateCustomDomainOutput).
         pub fn build(self) -> crate::output::AssociateCustomDomainOutput {
             crate::output::AssociateCustomDomainOutput {
                 dns_target: self.dns_target,
@@ -2136,7 +2152,7 @@ pub mod associate_custom_domain_output {
     }
 }
 impl AssociateCustomDomainOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateCustomDomainOutput`](crate::output::AssociateCustomDomainOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateCustomDomainOutput`](crate::output::AssociateCustomDomainOutput).
     pub fn builder() -> crate::output::associate_custom_domain_output::Builder {
         crate::output::associate_custom_domain_output::Builder::default()
     }

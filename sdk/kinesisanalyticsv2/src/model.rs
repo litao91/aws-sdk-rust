@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationMaintenanceConfigurationDescription {
     /// <p>The start time for the maintenance window.</p>
+    #[doc(hidden)]
     pub application_maintenance_window_start_time: std::option::Option<std::string::String>,
     /// <p>The end time for the maintenance window.</p>
+    #[doc(hidden)]
     pub application_maintenance_window_end_time: std::option::Option<std::string::String>,
 }
 impl ApplicationMaintenanceConfigurationDescription {
@@ -33,11 +35,10 @@ impl std::fmt::Debug for ApplicationMaintenanceConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`ApplicationMaintenanceConfigurationDescription`](crate::model::ApplicationMaintenanceConfigurationDescription)
+/// See [`ApplicationMaintenanceConfigurationDescription`](crate::model::ApplicationMaintenanceConfigurationDescription).
 pub mod application_maintenance_configuration_description {
 
-    /// A builder for [`ApplicationMaintenanceConfigurationDescription`](crate::model::ApplicationMaintenanceConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationMaintenanceConfigurationDescription`](crate::model::ApplicationMaintenanceConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_maintenance_window_start_time:
@@ -78,7 +79,7 @@ pub mod application_maintenance_configuration_description {
             self.application_maintenance_window_end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationMaintenanceConfigurationDescription`](crate::model::ApplicationMaintenanceConfigurationDescription)
+        /// Consumes the builder and constructs a [`ApplicationMaintenanceConfigurationDescription`](crate::model::ApplicationMaintenanceConfigurationDescription).
         pub fn build(self) -> crate::model::ApplicationMaintenanceConfigurationDescription {
             crate::model::ApplicationMaintenanceConfigurationDescription {
                 application_maintenance_window_start_time: self
@@ -90,7 +91,7 @@ pub mod application_maintenance_configuration_description {
     }
 }
 impl ApplicationMaintenanceConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`ApplicationMaintenanceConfigurationDescription`](crate::model::ApplicationMaintenanceConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`ApplicationMaintenanceConfigurationDescription`](crate::model::ApplicationMaintenanceConfigurationDescription).
     pub fn builder() -> crate::model::application_maintenance_configuration_description::Builder {
         crate::model::application_maintenance_configuration_description::Builder::default()
     }
@@ -101,6 +102,7 @@ impl ApplicationMaintenanceConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationMaintenanceConfigurationUpdate {
     /// <p>The updated start time for the maintenance window.</p>
+    #[doc(hidden)]
     pub application_maintenance_window_start_time_update: std::option::Option<std::string::String>,
 }
 impl ApplicationMaintenanceConfigurationUpdate {
@@ -120,11 +122,10 @@ impl std::fmt::Debug for ApplicationMaintenanceConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`ApplicationMaintenanceConfigurationUpdate`](crate::model::ApplicationMaintenanceConfigurationUpdate)
+/// See [`ApplicationMaintenanceConfigurationUpdate`](crate::model::ApplicationMaintenanceConfigurationUpdate).
 pub mod application_maintenance_configuration_update {
 
-    /// A builder for [`ApplicationMaintenanceConfigurationUpdate`](crate::model::ApplicationMaintenanceConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationMaintenanceConfigurationUpdate`](crate::model::ApplicationMaintenanceConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_maintenance_window_start_time_update:
@@ -147,7 +148,7 @@ pub mod application_maintenance_configuration_update {
             self.application_maintenance_window_start_time_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationMaintenanceConfigurationUpdate`](crate::model::ApplicationMaintenanceConfigurationUpdate)
+        /// Consumes the builder and constructs a [`ApplicationMaintenanceConfigurationUpdate`](crate::model::ApplicationMaintenanceConfigurationUpdate).
         pub fn build(self) -> crate::model::ApplicationMaintenanceConfigurationUpdate {
             crate::model::ApplicationMaintenanceConfigurationUpdate {
                 application_maintenance_window_start_time_update: self
@@ -157,7 +158,7 @@ pub mod application_maintenance_configuration_update {
     }
 }
 impl ApplicationMaintenanceConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`ApplicationMaintenanceConfigurationUpdate`](crate::model::ApplicationMaintenanceConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`ApplicationMaintenanceConfigurationUpdate`](crate::model::ApplicationMaintenanceConfigurationUpdate).
     pub fn builder() -> crate::model::application_maintenance_configuration_update::Builder {
         crate::model::application_maintenance_configuration_update::Builder::default()
     }
@@ -168,41 +169,58 @@ impl ApplicationMaintenanceConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationDetail {
     /// <p>The ARN of the application.</p>
+    #[doc(hidden)]
     pub application_arn: std::option::Option<std::string::String>,
     /// <p>The description of the application.</p>
+    #[doc(hidden)]
     pub application_description: std::option::Option<std::string::String>,
     /// <p>The name of the application.</p>
+    #[doc(hidden)]
     pub application_name: std::option::Option<std::string::String>,
     /// <p>The runtime environment for the application (<code>SQL-1_0</code>, <code>FLINK-1_6</code>, <code>FLINK-1_8</code>, or <code>FLINK-1_11</code>).</p>
+    #[doc(hidden)]
     pub runtime_environment: std::option::Option<crate::model::RuntimeEnvironment>,
     /// <p>Specifies the IAM role that the application uses to access external resources.</p>
+    #[doc(hidden)]
     pub service_execution_role: std::option::Option<std::string::String>,
     /// <p>The status of the application.</p>
+    #[doc(hidden)]
     pub application_status: std::option::Option<crate::model::ApplicationStatus>,
     /// <p>Provides the current application version. Kinesis Data Analytics updates the <code>ApplicationVersionId</code> each time you update the application.</p>
+    #[doc(hidden)]
     pub application_version_id: std::option::Option<i64>,
     /// <p>The current timestamp when the application was created.</p>
+    #[doc(hidden)]
     pub create_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current timestamp when the application was last updated.</p>
+    #[doc(hidden)]
     pub last_update_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Describes details about the application code and starting parameters for a Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub application_configuration_description:
         std::option::Option<crate::model::ApplicationConfigurationDescription>,
     /// <p>Describes the application Amazon CloudWatch logging options.</p>
+    #[doc(hidden)]
     pub cloud_watch_logging_option_descriptions:
         std::option::Option<std::vec::Vec<crate::model::CloudWatchLoggingOptionDescription>>,
     /// <p>The details of the maintenance configuration for the application.</p>
+    #[doc(hidden)]
     pub application_maintenance_configuration_description:
         std::option::Option<crate::model::ApplicationMaintenanceConfigurationDescription>,
     /// <p>The previous application version before the latest application update. <code>RollbackApplication</code> reverts the application to this version.</p>
+    #[doc(hidden)]
     pub application_version_updated_from: std::option::Option<i64>,
     /// <p>If you reverted the application using <code>RollbackApplication</code>, the application version when <code>RollbackApplication</code> was called.</p>
+    #[doc(hidden)]
     pub application_version_rolled_back_from: std::option::Option<i64>,
     /// <p>A value you use to implement strong concurrency for application updates.</p>
+    #[doc(hidden)]
     pub conditional_token: std::option::Option<std::string::String>,
     /// <p>The version to which you want to roll back the application.</p>
+    #[doc(hidden)]
     pub application_version_rolled_back_to: std::option::Option<i64>,
     /// <p>To create a Kinesis Data Analytics Studio notebook, you must set the mode to <code>INTERACTIVE</code>. However, for a Kinesis Data Analytics for Apache Flink application, the mode is optional.</p>
+    #[doc(hidden)]
     pub application_mode: std::option::Option<crate::model::ApplicationMode>,
 }
 impl ApplicationDetail {
@@ -323,11 +341,10 @@ impl std::fmt::Debug for ApplicationDetail {
         formatter.finish()
     }
 }
-/// See [`ApplicationDetail`](crate::model::ApplicationDetail)
+/// See [`ApplicationDetail`](crate::model::ApplicationDetail).
 pub mod application_detail {
 
-    /// A builder for [`ApplicationDetail`](crate::model::ApplicationDetail)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationDetail`](crate::model::ApplicationDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_arn: std::option::Option<std::string::String>,
@@ -591,7 +608,7 @@ pub mod application_detail {
             self.application_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationDetail`](crate::model::ApplicationDetail)
+        /// Consumes the builder and constructs a [`ApplicationDetail`](crate::model::ApplicationDetail).
         pub fn build(self) -> crate::model::ApplicationDetail {
             crate::model::ApplicationDetail {
                 application_arn: self.application_arn,
@@ -618,7 +635,7 @@ pub mod application_detail {
     }
 }
 impl ApplicationDetail {
-    /// Creates a new builder-style object to manufacture [`ApplicationDetail`](crate::model::ApplicationDetail)
+    /// Creates a new builder-style object to manufacture [`ApplicationDetail`](crate::model::ApplicationDetail).
     pub fn builder() -> crate::model::application_detail::Builder {
         crate::model::application_detail::Builder::default()
     }
@@ -684,12 +701,15 @@ impl AsRef<str> for ApplicationMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchLoggingOptionDescription {
     /// <p>The ID of the CloudWatch logging option description.</p>
+    #[doc(hidden)]
     pub cloud_watch_logging_option_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the CloudWatch log to receive application messages.</p>
+    #[doc(hidden)]
     pub log_stream_arn: std::option::Option<std::string::String>,
     /// <p>The IAM ARN of the role to use to send application messages. </p> <note>
     /// <p>Provided for backward compatibility. Applications created with the current API version have an application-level service execution role rather than a resource-level role.</p>
     /// </note>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl CloudWatchLoggingOptionDescription {
@@ -720,11 +740,10 @@ impl std::fmt::Debug for CloudWatchLoggingOptionDescription {
         formatter.finish()
     }
 }
-/// See [`CloudWatchLoggingOptionDescription`](crate::model::CloudWatchLoggingOptionDescription)
+/// See [`CloudWatchLoggingOptionDescription`](crate::model::CloudWatchLoggingOptionDescription).
 pub mod cloud_watch_logging_option_description {
 
-    /// A builder for [`CloudWatchLoggingOptionDescription`](crate::model::CloudWatchLoggingOptionDescription)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchLoggingOptionDescription`](crate::model::CloudWatchLoggingOptionDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloud_watch_logging_option_id: std::option::Option<std::string::String>,
@@ -775,7 +794,7 @@ pub mod cloud_watch_logging_option_description {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchLoggingOptionDescription`](crate::model::CloudWatchLoggingOptionDescription)
+        /// Consumes the builder and constructs a [`CloudWatchLoggingOptionDescription`](crate::model::CloudWatchLoggingOptionDescription).
         pub fn build(self) -> crate::model::CloudWatchLoggingOptionDescription {
             crate::model::CloudWatchLoggingOptionDescription {
                 cloud_watch_logging_option_id: self.cloud_watch_logging_option_id,
@@ -786,7 +805,7 @@ pub mod cloud_watch_logging_option_description {
     }
 }
 impl CloudWatchLoggingOptionDescription {
-    /// Creates a new builder-style object to manufacture [`CloudWatchLoggingOptionDescription`](crate::model::CloudWatchLoggingOptionDescription)
+    /// Creates a new builder-style object to manufacture [`CloudWatchLoggingOptionDescription`](crate::model::CloudWatchLoggingOptionDescription).
     pub fn builder() -> crate::model::cloud_watch_logging_option_description::Builder {
         crate::model::cloud_watch_logging_option_description::Builder::default()
     }
@@ -797,27 +816,35 @@ impl CloudWatchLoggingOptionDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationConfigurationDescription {
     /// <p>The details about inputs, outputs, and reference data sources for a SQL-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub sql_application_configuration_description:
         std::option::Option<crate::model::SqlApplicationConfigurationDescription>,
     /// <p>The details about the application code for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub application_code_configuration_description:
         std::option::Option<crate::model::ApplicationCodeConfigurationDescription>,
     /// <p>The details about the starting properties for a Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub run_configuration_description:
         std::option::Option<crate::model::RunConfigurationDescription>,
     /// <p>The details about a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub flink_application_configuration_description:
         std::option::Option<crate::model::FlinkApplicationConfigurationDescription>,
     /// <p>Describes execution properties for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub environment_property_descriptions:
         std::option::Option<crate::model::EnvironmentPropertyDescriptions>,
     /// <p>Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub application_snapshot_configuration_description:
         std::option::Option<crate::model::ApplicationSnapshotConfigurationDescription>,
     /// <p>The array of descriptions of VPC configurations available to the application.</p>
+    #[doc(hidden)]
     pub vpc_configuration_descriptions:
         std::option::Option<std::vec::Vec<crate::model::VpcConfigurationDescription>>,
     /// <p>The configuration parameters for a Kinesis Data Analytics Studio notebook.</p>
+    #[doc(hidden)]
     pub zeppelin_application_configuration_description:
         std::option::Option<crate::model::ZeppelinApplicationConfigurationDescription>,
 }
@@ -909,11 +936,10 @@ impl std::fmt::Debug for ApplicationConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`ApplicationConfigurationDescription`](crate::model::ApplicationConfigurationDescription)
+/// See [`ApplicationConfigurationDescription`](crate::model::ApplicationConfigurationDescription).
 pub mod application_configuration_description {
 
-    /// A builder for [`ApplicationConfigurationDescription`](crate::model::ApplicationConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationConfigurationDescription`](crate::model::ApplicationConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sql_application_configuration_description:
@@ -1068,7 +1094,7 @@ pub mod application_configuration_description {
             self.zeppelin_application_configuration_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationConfigurationDescription`](crate::model::ApplicationConfigurationDescription)
+        /// Consumes the builder and constructs a [`ApplicationConfigurationDescription`](crate::model::ApplicationConfigurationDescription).
         pub fn build(self) -> crate::model::ApplicationConfigurationDescription {
             crate::model::ApplicationConfigurationDescription {
                 sql_application_configuration_description: self
@@ -1089,7 +1115,7 @@ pub mod application_configuration_description {
     }
 }
 impl ApplicationConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`ApplicationConfigurationDescription`](crate::model::ApplicationConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`ApplicationConfigurationDescription`](crate::model::ApplicationConfigurationDescription).
     pub fn builder() -> crate::model::application_configuration_description::Builder {
         crate::model::application_configuration_description::Builder::default()
     }
@@ -1100,15 +1126,19 @@ impl ApplicationConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ZeppelinApplicationConfigurationDescription {
     /// <p>The monitoring configuration of a Kinesis Data Analytics Studio notebook.</p>
+    #[doc(hidden)]
     pub monitoring_configuration_description:
         std::option::Option<crate::model::ZeppelinMonitoringConfigurationDescription>,
     /// <p>The Amazon Glue Data Catalog that is associated with the Kinesis Data Analytics Studio notebook.</p>
+    #[doc(hidden)]
     pub catalog_configuration_description:
         std::option::Option<crate::model::CatalogConfigurationDescription>,
     /// <p>The parameters required to deploy a Kinesis Data Analytics Studio notebook as an application with durable state.</p>
+    #[doc(hidden)]
     pub deploy_as_application_configuration_description:
         std::option::Option<crate::model::DeployAsApplicationConfigurationDescription>,
     /// <p>Custom artifacts are dependency JARs and user-defined functions (UDF).</p>
+    #[doc(hidden)]
     pub custom_artifacts_configuration_description:
         std::option::Option<std::vec::Vec<crate::model::CustomArtifactConfigurationDescription>>,
 }
@@ -1161,11 +1191,10 @@ impl std::fmt::Debug for ZeppelinApplicationConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`ZeppelinApplicationConfigurationDescription`](crate::model::ZeppelinApplicationConfigurationDescription)
+/// See [`ZeppelinApplicationConfigurationDescription`](crate::model::ZeppelinApplicationConfigurationDescription).
 pub mod zeppelin_application_configuration_description {
 
-    /// A builder for [`ZeppelinApplicationConfigurationDescription`](crate::model::ZeppelinApplicationConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`ZeppelinApplicationConfigurationDescription`](crate::model::ZeppelinApplicationConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) monitoring_configuration_description:
@@ -1253,7 +1282,7 @@ pub mod zeppelin_application_configuration_description {
             self.custom_artifacts_configuration_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`ZeppelinApplicationConfigurationDescription`](crate::model::ZeppelinApplicationConfigurationDescription)
+        /// Consumes the builder and constructs a [`ZeppelinApplicationConfigurationDescription`](crate::model::ZeppelinApplicationConfigurationDescription).
         pub fn build(self) -> crate::model::ZeppelinApplicationConfigurationDescription {
             crate::model::ZeppelinApplicationConfigurationDescription {
                 monitoring_configuration_description: self.monitoring_configuration_description,
@@ -1267,7 +1296,7 @@ pub mod zeppelin_application_configuration_description {
     }
 }
 impl ZeppelinApplicationConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`ZeppelinApplicationConfigurationDescription`](crate::model::ZeppelinApplicationConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`ZeppelinApplicationConfigurationDescription`](crate::model::ZeppelinApplicationConfigurationDescription).
     pub fn builder() -> crate::model::zeppelin_application_configuration_description::Builder {
         crate::model::zeppelin_application_configuration_description::Builder::default()
     }
@@ -1278,10 +1307,13 @@ impl ZeppelinApplicationConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomArtifactConfigurationDescription {
     /// <p> <code>UDF</code> stands for user-defined functions. This type of artifact must be in an S3 bucket. A <code>DEPENDENCY_JAR</code> can be in either Maven or an S3 bucket.</p>
+    #[doc(hidden)]
     pub artifact_type: std::option::Option<crate::model::ArtifactType>,
     /// <p>For a Kinesis Data Analytics application provides a description of an Amazon S3 object, including the Amazon Resource Name (ARN) of the S3 bucket, the name of the Amazon S3 object that contains the data, and the version number of the Amazon S3 object that contains the data. </p>
+    #[doc(hidden)]
     pub s3_content_location_description: std::option::Option<crate::model::S3ContentLocation>,
     /// <p>The parameters that are required to specify a Maven dependency.</p>
+    #[doc(hidden)]
     pub maven_reference_description: std::option::Option<crate::model::MavenReference>,
 }
 impl CustomArtifactConfigurationDescription {
@@ -1317,11 +1349,10 @@ impl std::fmt::Debug for CustomArtifactConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`CustomArtifactConfigurationDescription`](crate::model::CustomArtifactConfigurationDescription)
+/// See [`CustomArtifactConfigurationDescription`](crate::model::CustomArtifactConfigurationDescription).
 pub mod custom_artifact_configuration_description {
 
-    /// A builder for [`CustomArtifactConfigurationDescription`](crate::model::CustomArtifactConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`CustomArtifactConfigurationDescription`](crate::model::CustomArtifactConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) artifact_type: std::option::Option<crate::model::ArtifactType>,
@@ -1372,7 +1403,7 @@ pub mod custom_artifact_configuration_description {
             self.maven_reference_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomArtifactConfigurationDescription`](crate::model::CustomArtifactConfigurationDescription)
+        /// Consumes the builder and constructs a [`CustomArtifactConfigurationDescription`](crate::model::CustomArtifactConfigurationDescription).
         pub fn build(self) -> crate::model::CustomArtifactConfigurationDescription {
             crate::model::CustomArtifactConfigurationDescription {
                 artifact_type: self.artifact_type,
@@ -1383,7 +1414,7 @@ pub mod custom_artifact_configuration_description {
     }
 }
 impl CustomArtifactConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`CustomArtifactConfigurationDescription`](crate::model::CustomArtifactConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`CustomArtifactConfigurationDescription`](crate::model::CustomArtifactConfigurationDescription).
     pub fn builder() -> crate::model::custom_artifact_configuration_description::Builder {
         crate::model::custom_artifact_configuration_description::Builder::default()
     }
@@ -1394,10 +1425,13 @@ impl CustomArtifactConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MavenReference {
     /// <p>The group ID of the Maven reference.</p>
+    #[doc(hidden)]
     pub group_id: std::option::Option<std::string::String>,
     /// <p>The artifact ID of the Maven reference.</p>
+    #[doc(hidden)]
     pub artifact_id: std::option::Option<std::string::String>,
     /// <p>The version of the Maven reference.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl MavenReference {
@@ -1423,11 +1457,10 @@ impl std::fmt::Debug for MavenReference {
         formatter.finish()
     }
 }
-/// See [`MavenReference`](crate::model::MavenReference)
+/// See [`MavenReference`](crate::model::MavenReference).
 pub mod maven_reference {
 
-    /// A builder for [`MavenReference`](crate::model::MavenReference)
-    #[non_exhaustive]
+    /// A builder for [`MavenReference`](crate::model::MavenReference).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_id: std::option::Option<std::string::String>,
@@ -1465,7 +1498,7 @@ pub mod maven_reference {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`MavenReference`](crate::model::MavenReference)
+        /// Consumes the builder and constructs a [`MavenReference`](crate::model::MavenReference).
         pub fn build(self) -> crate::model::MavenReference {
             crate::model::MavenReference {
                 group_id: self.group_id,
@@ -1476,7 +1509,7 @@ pub mod maven_reference {
     }
 }
 impl MavenReference {
-    /// Creates a new builder-style object to manufacture [`MavenReference`](crate::model::MavenReference)
+    /// Creates a new builder-style object to manufacture [`MavenReference`](crate::model::MavenReference).
     pub fn builder() -> crate::model::maven_reference::Builder {
         crate::model::maven_reference::Builder::default()
     }
@@ -1487,10 +1520,13 @@ impl MavenReference {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ContentLocation {
     /// <p>The Amazon Resource Name (ARN) for the S3 bucket containing the application code.</p>
+    #[doc(hidden)]
     pub bucket_arn: std::option::Option<std::string::String>,
     /// <p>The file key for the object containing the application code.</p>
+    #[doc(hidden)]
     pub file_key: std::option::Option<std::string::String>,
     /// <p>The version of the object containing the application code.</p>
+    #[doc(hidden)]
     pub object_version: std::option::Option<std::string::String>,
 }
 impl S3ContentLocation {
@@ -1516,11 +1552,10 @@ impl std::fmt::Debug for S3ContentLocation {
         formatter.finish()
     }
 }
-/// See [`S3ContentLocation`](crate::model::S3ContentLocation)
+/// See [`S3ContentLocation`](crate::model::S3ContentLocation).
 pub mod s3_content_location {
 
-    /// A builder for [`S3ContentLocation`](crate::model::S3ContentLocation)
-    #[non_exhaustive]
+    /// A builder for [`S3ContentLocation`](crate::model::S3ContentLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn: std::option::Option<std::string::String>,
@@ -1561,7 +1596,7 @@ pub mod s3_content_location {
             self.object_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ContentLocation`](crate::model::S3ContentLocation)
+        /// Consumes the builder and constructs a [`S3ContentLocation`](crate::model::S3ContentLocation).
         pub fn build(self) -> crate::model::S3ContentLocation {
             crate::model::S3ContentLocation {
                 bucket_arn: self.bucket_arn,
@@ -1572,7 +1607,7 @@ pub mod s3_content_location {
     }
 }
 impl S3ContentLocation {
-    /// Creates a new builder-style object to manufacture [`S3ContentLocation`](crate::model::S3ContentLocation)
+    /// Creates a new builder-style object to manufacture [`S3ContentLocation`](crate::model::S3ContentLocation).
     pub fn builder() -> crate::model::s3_content_location::Builder {
         crate::model::s3_content_location::Builder::default()
     }
@@ -1638,6 +1673,7 @@ impl AsRef<str> for ArtifactType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeployAsApplicationConfigurationDescription {
     /// <p>The location that holds the data required to specify an Amazon Data Analytics application.</p>
+    #[doc(hidden)]
     pub s3_content_location_description:
         std::option::Option<crate::model::S3ContentBaseLocationDescription>,
 }
@@ -1659,11 +1695,10 @@ impl std::fmt::Debug for DeployAsApplicationConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`DeployAsApplicationConfigurationDescription`](crate::model::DeployAsApplicationConfigurationDescription)
+/// See [`DeployAsApplicationConfigurationDescription`](crate::model::DeployAsApplicationConfigurationDescription).
 pub mod deploy_as_application_configuration_description {
 
-    /// A builder for [`DeployAsApplicationConfigurationDescription`](crate::model::DeployAsApplicationConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`DeployAsApplicationConfigurationDescription`](crate::model::DeployAsApplicationConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_content_location_description:
@@ -1686,7 +1721,7 @@ pub mod deploy_as_application_configuration_description {
             self.s3_content_location_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeployAsApplicationConfigurationDescription`](crate::model::DeployAsApplicationConfigurationDescription)
+        /// Consumes the builder and constructs a [`DeployAsApplicationConfigurationDescription`](crate::model::DeployAsApplicationConfigurationDescription).
         pub fn build(self) -> crate::model::DeployAsApplicationConfigurationDescription {
             crate::model::DeployAsApplicationConfigurationDescription {
                 s3_content_location_description: self.s3_content_location_description,
@@ -1695,7 +1730,7 @@ pub mod deploy_as_application_configuration_description {
     }
 }
 impl DeployAsApplicationConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`DeployAsApplicationConfigurationDescription`](crate::model::DeployAsApplicationConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`DeployAsApplicationConfigurationDescription`](crate::model::DeployAsApplicationConfigurationDescription).
     pub fn builder() -> crate::model::deploy_as_application_configuration_description::Builder {
         crate::model::deploy_as_application_configuration_description::Builder::default()
     }
@@ -1706,8 +1741,10 @@ impl DeployAsApplicationConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ContentBaseLocationDescription {
     /// <p>The Amazon Resource Name (ARN) of the S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_arn: std::option::Option<std::string::String>,
     /// <p>The base path for the S3 bucket.</p>
+    #[doc(hidden)]
     pub base_path: std::option::Option<std::string::String>,
 }
 impl S3ContentBaseLocationDescription {
@@ -1728,11 +1765,10 @@ impl std::fmt::Debug for S3ContentBaseLocationDescription {
         formatter.finish()
     }
 }
-/// See [`S3ContentBaseLocationDescription`](crate::model::S3ContentBaseLocationDescription)
+/// See [`S3ContentBaseLocationDescription`](crate::model::S3ContentBaseLocationDescription).
 pub mod s3_content_base_location_description {
 
-    /// A builder for [`S3ContentBaseLocationDescription`](crate::model::S3ContentBaseLocationDescription)
-    #[non_exhaustive]
+    /// A builder for [`S3ContentBaseLocationDescription`](crate::model::S3ContentBaseLocationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn: std::option::Option<std::string::String>,
@@ -1759,7 +1795,7 @@ pub mod s3_content_base_location_description {
             self.base_path = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ContentBaseLocationDescription`](crate::model::S3ContentBaseLocationDescription)
+        /// Consumes the builder and constructs a [`S3ContentBaseLocationDescription`](crate::model::S3ContentBaseLocationDescription).
         pub fn build(self) -> crate::model::S3ContentBaseLocationDescription {
             crate::model::S3ContentBaseLocationDescription {
                 bucket_arn: self.bucket_arn,
@@ -1769,7 +1805,7 @@ pub mod s3_content_base_location_description {
     }
 }
 impl S3ContentBaseLocationDescription {
-    /// Creates a new builder-style object to manufacture [`S3ContentBaseLocationDescription`](crate::model::S3ContentBaseLocationDescription)
+    /// Creates a new builder-style object to manufacture [`S3ContentBaseLocationDescription`](crate::model::S3ContentBaseLocationDescription).
     pub fn builder() -> crate::model::s3_content_base_location_description::Builder {
         crate::model::s3_content_base_location_description::Builder::default()
     }
@@ -1780,6 +1816,7 @@ impl S3ContentBaseLocationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CatalogConfigurationDescription {
     /// <p>The configuration parameters for the default Amazon Glue database. You use this database for SQL queries that you write in a Kinesis Data Analytics Studio notebook.</p>
+    #[doc(hidden)]
     pub glue_data_catalog_configuration_description:
         std::option::Option<crate::model::GlueDataCatalogConfigurationDescription>,
 }
@@ -1801,11 +1838,10 @@ impl std::fmt::Debug for CatalogConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`CatalogConfigurationDescription`](crate::model::CatalogConfigurationDescription)
+/// See [`CatalogConfigurationDescription`](crate::model::CatalogConfigurationDescription).
 pub mod catalog_configuration_description {
 
-    /// A builder for [`CatalogConfigurationDescription`](crate::model::CatalogConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`CatalogConfigurationDescription`](crate::model::CatalogConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) glue_data_catalog_configuration_description:
@@ -1828,7 +1864,7 @@ pub mod catalog_configuration_description {
             self.glue_data_catalog_configuration_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`CatalogConfigurationDescription`](crate::model::CatalogConfigurationDescription)
+        /// Consumes the builder and constructs a [`CatalogConfigurationDescription`](crate::model::CatalogConfigurationDescription).
         pub fn build(self) -> crate::model::CatalogConfigurationDescription {
             crate::model::CatalogConfigurationDescription {
                 glue_data_catalog_configuration_description: self
@@ -1838,7 +1874,7 @@ pub mod catalog_configuration_description {
     }
 }
 impl CatalogConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`CatalogConfigurationDescription`](crate::model::CatalogConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`CatalogConfigurationDescription`](crate::model::CatalogConfigurationDescription).
     pub fn builder() -> crate::model::catalog_configuration_description::Builder {
         crate::model::catalog_configuration_description::Builder::default()
     }
@@ -1849,6 +1885,7 @@ impl CatalogConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GlueDataCatalogConfigurationDescription {
     /// <p>The Amazon Resource Name (ARN) of the database.</p>
+    #[doc(hidden)]
     pub database_arn: std::option::Option<std::string::String>,
 }
 impl GlueDataCatalogConfigurationDescription {
@@ -1864,11 +1901,10 @@ impl std::fmt::Debug for GlueDataCatalogConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`GlueDataCatalogConfigurationDescription`](crate::model::GlueDataCatalogConfigurationDescription)
+/// See [`GlueDataCatalogConfigurationDescription`](crate::model::GlueDataCatalogConfigurationDescription).
 pub mod glue_data_catalog_configuration_description {
 
-    /// A builder for [`GlueDataCatalogConfigurationDescription`](crate::model::GlueDataCatalogConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`GlueDataCatalogConfigurationDescription`](crate::model::GlueDataCatalogConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) database_arn: std::option::Option<std::string::String>,
@@ -1884,7 +1920,7 @@ pub mod glue_data_catalog_configuration_description {
             self.database_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`GlueDataCatalogConfigurationDescription`](crate::model::GlueDataCatalogConfigurationDescription)
+        /// Consumes the builder and constructs a [`GlueDataCatalogConfigurationDescription`](crate::model::GlueDataCatalogConfigurationDescription).
         pub fn build(self) -> crate::model::GlueDataCatalogConfigurationDescription {
             crate::model::GlueDataCatalogConfigurationDescription {
                 database_arn: self.database_arn,
@@ -1893,7 +1929,7 @@ pub mod glue_data_catalog_configuration_description {
     }
 }
 impl GlueDataCatalogConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`GlueDataCatalogConfigurationDescription`](crate::model::GlueDataCatalogConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`GlueDataCatalogConfigurationDescription`](crate::model::GlueDataCatalogConfigurationDescription).
     pub fn builder() -> crate::model::glue_data_catalog_configuration_description::Builder {
         crate::model::glue_data_catalog_configuration_description::Builder::default()
     }
@@ -1904,6 +1940,7 @@ impl GlueDataCatalogConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ZeppelinMonitoringConfigurationDescription {
     /// <p>Describes the verbosity of the CloudWatch Logs for an application.</p>
+    #[doc(hidden)]
     pub log_level: std::option::Option<crate::model::LogLevel>,
 }
 impl ZeppelinMonitoringConfigurationDescription {
@@ -1919,11 +1956,10 @@ impl std::fmt::Debug for ZeppelinMonitoringConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`ZeppelinMonitoringConfigurationDescription`](crate::model::ZeppelinMonitoringConfigurationDescription)
+/// See [`ZeppelinMonitoringConfigurationDescription`](crate::model::ZeppelinMonitoringConfigurationDescription).
 pub mod zeppelin_monitoring_configuration_description {
 
-    /// A builder for [`ZeppelinMonitoringConfigurationDescription`](crate::model::ZeppelinMonitoringConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`ZeppelinMonitoringConfigurationDescription`](crate::model::ZeppelinMonitoringConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_level: std::option::Option<crate::model::LogLevel>,
@@ -1939,7 +1975,7 @@ pub mod zeppelin_monitoring_configuration_description {
             self.log_level = input;
             self
         }
-        /// Consumes the builder and constructs a [`ZeppelinMonitoringConfigurationDescription`](crate::model::ZeppelinMonitoringConfigurationDescription)
+        /// Consumes the builder and constructs a [`ZeppelinMonitoringConfigurationDescription`](crate::model::ZeppelinMonitoringConfigurationDescription).
         pub fn build(self) -> crate::model::ZeppelinMonitoringConfigurationDescription {
             crate::model::ZeppelinMonitoringConfigurationDescription {
                 log_level: self.log_level,
@@ -1948,7 +1984,7 @@ pub mod zeppelin_monitoring_configuration_description {
     }
 }
 impl ZeppelinMonitoringConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`ZeppelinMonitoringConfigurationDescription`](crate::model::ZeppelinMonitoringConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`ZeppelinMonitoringConfigurationDescription`](crate::model::ZeppelinMonitoringConfigurationDescription).
     pub fn builder() -> crate::model::zeppelin_monitoring_configuration_description::Builder {
         crate::model::zeppelin_monitoring_configuration_description::Builder::default()
     }
@@ -2022,12 +2058,16 @@ impl AsRef<str> for LogLevel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcConfigurationDescription {
     /// <p>The ID of the VPC configuration.</p>
+    #[doc(hidden)]
     pub vpc_configuration_id: std::option::Option<std::string::String>,
     /// <p>The ID of the associated VPC.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>The array of <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html">Subnet</a> IDs used by the VPC configuration.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The array of <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html">SecurityGroup</a> IDs used by the VPC configuration.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VpcConfigurationDescription {
@@ -2058,11 +2098,10 @@ impl std::fmt::Debug for VpcConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`VpcConfigurationDescription`](crate::model::VpcConfigurationDescription)
+/// See [`VpcConfigurationDescription`](crate::model::VpcConfigurationDescription).
 pub mod vpc_configuration_description {
 
-    /// A builder for [`VpcConfigurationDescription`](crate::model::VpcConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`VpcConfigurationDescription`](crate::model::VpcConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_configuration_id: std::option::Option<std::string::String>,
@@ -2132,7 +2171,7 @@ pub mod vpc_configuration_description {
             self.security_group_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcConfigurationDescription`](crate::model::VpcConfigurationDescription)
+        /// Consumes the builder and constructs a [`VpcConfigurationDescription`](crate::model::VpcConfigurationDescription).
         pub fn build(self) -> crate::model::VpcConfigurationDescription {
             crate::model::VpcConfigurationDescription {
                 vpc_configuration_id: self.vpc_configuration_id,
@@ -2144,7 +2183,7 @@ pub mod vpc_configuration_description {
     }
 }
 impl VpcConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`VpcConfigurationDescription`](crate::model::VpcConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`VpcConfigurationDescription`](crate::model::VpcConfigurationDescription).
     pub fn builder() -> crate::model::vpc_configuration_description::Builder {
         crate::model::vpc_configuration_description::Builder::default()
     }
@@ -2155,6 +2194,7 @@ impl VpcConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationSnapshotConfigurationDescription {
     /// <p>Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub snapshots_enabled: std::option::Option<bool>,
 }
 impl ApplicationSnapshotConfigurationDescription {
@@ -2170,11 +2210,10 @@ impl std::fmt::Debug for ApplicationSnapshotConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`ApplicationSnapshotConfigurationDescription`](crate::model::ApplicationSnapshotConfigurationDescription)
+/// See [`ApplicationSnapshotConfigurationDescription`](crate::model::ApplicationSnapshotConfigurationDescription).
 pub mod application_snapshot_configuration_description {
 
-    /// A builder for [`ApplicationSnapshotConfigurationDescription`](crate::model::ApplicationSnapshotConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationSnapshotConfigurationDescription`](crate::model::ApplicationSnapshotConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshots_enabled: std::option::Option<bool>,
@@ -2190,7 +2229,7 @@ pub mod application_snapshot_configuration_description {
             self.snapshots_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationSnapshotConfigurationDescription`](crate::model::ApplicationSnapshotConfigurationDescription)
+        /// Consumes the builder and constructs a [`ApplicationSnapshotConfigurationDescription`](crate::model::ApplicationSnapshotConfigurationDescription).
         pub fn build(self) -> crate::model::ApplicationSnapshotConfigurationDescription {
             crate::model::ApplicationSnapshotConfigurationDescription {
                 snapshots_enabled: self.snapshots_enabled,
@@ -2199,7 +2238,7 @@ pub mod application_snapshot_configuration_description {
     }
 }
 impl ApplicationSnapshotConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`ApplicationSnapshotConfigurationDescription`](crate::model::ApplicationSnapshotConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`ApplicationSnapshotConfigurationDescription`](crate::model::ApplicationSnapshotConfigurationDescription).
     pub fn builder() -> crate::model::application_snapshot_configuration_description::Builder {
         crate::model::application_snapshot_configuration_description::Builder::default()
     }
@@ -2210,6 +2249,7 @@ impl ApplicationSnapshotConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentPropertyDescriptions {
     /// <p>Describes the execution property groups.</p>
+    #[doc(hidden)]
     pub property_group_descriptions:
         std::option::Option<std::vec::Vec<crate::model::PropertyGroup>>,
 }
@@ -2231,11 +2271,10 @@ impl std::fmt::Debug for EnvironmentPropertyDescriptions {
         formatter.finish()
     }
 }
-/// See [`EnvironmentPropertyDescriptions`](crate::model::EnvironmentPropertyDescriptions)
+/// See [`EnvironmentPropertyDescriptions`](crate::model::EnvironmentPropertyDescriptions).
 pub mod environment_property_descriptions {
 
-    /// A builder for [`EnvironmentPropertyDescriptions`](crate::model::EnvironmentPropertyDescriptions)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentPropertyDescriptions`](crate::model::EnvironmentPropertyDescriptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) property_group_descriptions:
@@ -2261,7 +2300,7 @@ pub mod environment_property_descriptions {
             self.property_group_descriptions = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentPropertyDescriptions`](crate::model::EnvironmentPropertyDescriptions)
+        /// Consumes the builder and constructs a [`EnvironmentPropertyDescriptions`](crate::model::EnvironmentPropertyDescriptions).
         pub fn build(self) -> crate::model::EnvironmentPropertyDescriptions {
             crate::model::EnvironmentPropertyDescriptions {
                 property_group_descriptions: self.property_group_descriptions,
@@ -2270,7 +2309,7 @@ pub mod environment_property_descriptions {
     }
 }
 impl EnvironmentPropertyDescriptions {
-    /// Creates a new builder-style object to manufacture [`EnvironmentPropertyDescriptions`](crate::model::EnvironmentPropertyDescriptions)
+    /// Creates a new builder-style object to manufacture [`EnvironmentPropertyDescriptions`](crate::model::EnvironmentPropertyDescriptions).
     pub fn builder() -> crate::model::environment_property_descriptions::Builder {
         crate::model::environment_property_descriptions::Builder::default()
     }
@@ -2281,8 +2320,10 @@ impl EnvironmentPropertyDescriptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PropertyGroup {
     /// <p>Describes the key of an application execution property key-value pair.</p>
+    #[doc(hidden)]
     pub property_group_id: std::option::Option<std::string::String>,
     /// <p>Describes the value of an application execution property key-value pair.</p>
+    #[doc(hidden)]
     pub property_map:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2307,11 +2348,10 @@ impl std::fmt::Debug for PropertyGroup {
         formatter.finish()
     }
 }
-/// See [`PropertyGroup`](crate::model::PropertyGroup)
+/// See [`PropertyGroup`](crate::model::PropertyGroup).
 pub mod property_group {
 
-    /// A builder for [`PropertyGroup`](crate::model::PropertyGroup)
-    #[non_exhaustive]
+    /// A builder for [`PropertyGroup`](crate::model::PropertyGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) property_group_id: std::option::Option<std::string::String>,
@@ -2358,7 +2398,7 @@ pub mod property_group {
             self.property_map = input;
             self
         }
-        /// Consumes the builder and constructs a [`PropertyGroup`](crate::model::PropertyGroup)
+        /// Consumes the builder and constructs a [`PropertyGroup`](crate::model::PropertyGroup).
         pub fn build(self) -> crate::model::PropertyGroup {
             crate::model::PropertyGroup {
                 property_group_id: self.property_group_id,
@@ -2368,7 +2408,7 @@ pub mod property_group {
     }
 }
 impl PropertyGroup {
-    /// Creates a new builder-style object to manufacture [`PropertyGroup`](crate::model::PropertyGroup)
+    /// Creates a new builder-style object to manufacture [`PropertyGroup`](crate::model::PropertyGroup).
     pub fn builder() -> crate::model::property_group::Builder {
         crate::model::property_group::Builder::default()
     }
@@ -2379,15 +2419,19 @@ impl PropertyGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FlinkApplicationConfigurationDescription {
     /// <p>Describes an application's checkpointing configuration. Checkpointing is the process of persisting application state for fault tolerance.</p>
+    #[doc(hidden)]
     pub checkpoint_configuration_description:
         std::option::Option<crate::model::CheckpointConfigurationDescription>,
     /// <p>Describes configuration parameters for Amazon CloudWatch logging for an application.</p>
+    #[doc(hidden)]
     pub monitoring_configuration_description:
         std::option::Option<crate::model::MonitoringConfigurationDescription>,
     /// <p>Describes parameters for how an application executes multiple tasks simultaneously.</p>
+    #[doc(hidden)]
     pub parallelism_configuration_description:
         std::option::Option<crate::model::ParallelismConfigurationDescription>,
     /// <p>The job plan for an application. For more information about the job plan, see <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.8/internals/job_scheduling.html">Jobs and Scheduling</a> in the <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.8/">Apache Flink Documentation</a>. To retrieve the job plan for the application, use the <code>DescribeApplicationRequest$IncludeAdditionalDetails</code> parameter of the <code>DescribeApplication</code> operation.</p>
+    #[doc(hidden)]
     pub job_plan_description: std::option::Option<std::string::String>,
 }
 impl FlinkApplicationConfigurationDescription {
@@ -2433,11 +2477,10 @@ impl std::fmt::Debug for FlinkApplicationConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`FlinkApplicationConfigurationDescription`](crate::model::FlinkApplicationConfigurationDescription)
+/// See [`FlinkApplicationConfigurationDescription`](crate::model::FlinkApplicationConfigurationDescription).
 pub mod flink_application_configuration_description {
 
-    /// A builder for [`FlinkApplicationConfigurationDescription`](crate::model::FlinkApplicationConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`FlinkApplicationConfigurationDescription`](crate::model::FlinkApplicationConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) checkpoint_configuration_description:
@@ -2510,7 +2553,7 @@ pub mod flink_application_configuration_description {
             self.job_plan_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`FlinkApplicationConfigurationDescription`](crate::model::FlinkApplicationConfigurationDescription)
+        /// Consumes the builder and constructs a [`FlinkApplicationConfigurationDescription`](crate::model::FlinkApplicationConfigurationDescription).
         pub fn build(self) -> crate::model::FlinkApplicationConfigurationDescription {
             crate::model::FlinkApplicationConfigurationDescription {
                 checkpoint_configuration_description: self.checkpoint_configuration_description,
@@ -2522,7 +2565,7 @@ pub mod flink_application_configuration_description {
     }
 }
 impl FlinkApplicationConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`FlinkApplicationConfigurationDescription`](crate::model::FlinkApplicationConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`FlinkApplicationConfigurationDescription`](crate::model::FlinkApplicationConfigurationDescription).
     pub fn builder() -> crate::model::flink_application_configuration_description::Builder {
         crate::model::flink_application_configuration_description::Builder::default()
     }
@@ -2533,14 +2576,19 @@ impl FlinkApplicationConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ParallelismConfigurationDescription {
     /// <p>Describes whether the application uses the default parallelism for the Kinesis Data Analytics service. </p>
+    #[doc(hidden)]
     pub configuration_type: std::option::Option<crate::model::ConfigurationType>,
     /// <p>Describes the initial number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform. If <code>AutoScalingEnabled</code> is set to True, then Kinesis Data Analytics can increase the <code>CurrentParallelism</code> value in response to application load. The service can increase <code>CurrentParallelism</code> up to the maximum parallelism, which is <code>ParalellismPerKPU</code> times the maximum KPUs for the application. The maximum KPUs for an application is 32 by default, and can be increased by requesting a limit increase. If application load is reduced, the service can reduce the <code>CurrentParallelism</code> value down to the <code>Parallelism</code> setting.</p>
+    #[doc(hidden)]
     pub parallelism: std::option::Option<i32>,
     /// <p>Describes the number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform per Kinesis Processing Unit (KPU) used by the application.</p>
+    #[doc(hidden)]
     pub parallelism_per_kpu: std::option::Option<i32>,
     /// <p>Describes the current number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform. If <code>AutoScalingEnabled</code> is set to True, Kinesis Data Analytics can increase this value in response to application load. The service can increase this value up to the maximum parallelism, which is <code>ParalellismPerKPU</code> times the maximum KPUs for the application. The maximum KPUs for an application is 32 by default, and can be increased by requesting a limit increase. If application load is reduced, the service can reduce the <code>CurrentParallelism</code> value down to the <code>Parallelism</code> setting.</p>
+    #[doc(hidden)]
     pub current_parallelism: std::option::Option<i32>,
     /// <p>Describes whether the Kinesis Data Analytics service can increase the parallelism of the application in response to increased throughput.</p>
+    #[doc(hidden)]
     pub auto_scaling_enabled: std::option::Option<bool>,
 }
 impl ParallelismConfigurationDescription {
@@ -2576,11 +2624,10 @@ impl std::fmt::Debug for ParallelismConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`ParallelismConfigurationDescription`](crate::model::ParallelismConfigurationDescription)
+/// See [`ParallelismConfigurationDescription`](crate::model::ParallelismConfigurationDescription).
 pub mod parallelism_configuration_description {
 
-    /// A builder for [`ParallelismConfigurationDescription`](crate::model::ParallelismConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`ParallelismConfigurationDescription`](crate::model::ParallelismConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_type: std::option::Option<crate::model::ConfigurationType>,
@@ -2643,7 +2690,7 @@ pub mod parallelism_configuration_description {
             self.auto_scaling_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParallelismConfigurationDescription`](crate::model::ParallelismConfigurationDescription)
+        /// Consumes the builder and constructs a [`ParallelismConfigurationDescription`](crate::model::ParallelismConfigurationDescription).
         pub fn build(self) -> crate::model::ParallelismConfigurationDescription {
             crate::model::ParallelismConfigurationDescription {
                 configuration_type: self.configuration_type,
@@ -2656,7 +2703,7 @@ pub mod parallelism_configuration_description {
     }
 }
 impl ParallelismConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`ParallelismConfigurationDescription`](crate::model::ParallelismConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`ParallelismConfigurationDescription`](crate::model::ParallelismConfigurationDescription).
     pub fn builder() -> crate::model::parallelism_configuration_description::Builder {
         crate::model::parallelism_configuration_description::Builder::default()
     }
@@ -2722,10 +2769,13 @@ impl AsRef<str> for ConfigurationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MonitoringConfigurationDescription {
     /// <p>Describes whether to use the default CloudWatch logging configuration for an application.</p>
+    #[doc(hidden)]
     pub configuration_type: std::option::Option<crate::model::ConfigurationType>,
     /// <p>Describes the granularity of the CloudWatch Logs for an application.</p>
+    #[doc(hidden)]
     pub metrics_level: std::option::Option<crate::model::MetricsLevel>,
     /// <p>Describes the verbosity of the CloudWatch Logs for an application.</p>
+    #[doc(hidden)]
     pub log_level: std::option::Option<crate::model::LogLevel>,
 }
 impl MonitoringConfigurationDescription {
@@ -2751,11 +2801,10 @@ impl std::fmt::Debug for MonitoringConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`MonitoringConfigurationDescription`](crate::model::MonitoringConfigurationDescription)
+/// See [`MonitoringConfigurationDescription`](crate::model::MonitoringConfigurationDescription).
 pub mod monitoring_configuration_description {
 
-    /// A builder for [`MonitoringConfigurationDescription`](crate::model::MonitoringConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`MonitoringConfigurationDescription`](crate::model::MonitoringConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_type: std::option::Option<crate::model::ConfigurationType>,
@@ -2799,7 +2848,7 @@ pub mod monitoring_configuration_description {
             self.log_level = input;
             self
         }
-        /// Consumes the builder and constructs a [`MonitoringConfigurationDescription`](crate::model::MonitoringConfigurationDescription)
+        /// Consumes the builder and constructs a [`MonitoringConfigurationDescription`](crate::model::MonitoringConfigurationDescription).
         pub fn build(self) -> crate::model::MonitoringConfigurationDescription {
             crate::model::MonitoringConfigurationDescription {
                 configuration_type: self.configuration_type,
@@ -2810,7 +2859,7 @@ pub mod monitoring_configuration_description {
     }
 }
 impl MonitoringConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`MonitoringConfigurationDescription`](crate::model::MonitoringConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`MonitoringConfigurationDescription`](crate::model::MonitoringConfigurationDescription).
     pub fn builder() -> crate::model::monitoring_configuration_description::Builder {
         crate::model::monitoring_configuration_description::Builder::default()
     }
@@ -2891,18 +2940,22 @@ pub struct CheckpointConfigurationDescription {
     /// <li> <p> <b>MinPauseBetweenCheckpoints:</b> 5000</p> </li>
     /// </ul>
     /// </note>
+    #[doc(hidden)]
     pub configuration_type: std::option::Option<crate::model::ConfigurationType>,
     /// <p>Describes whether checkpointing is enabled for a Flink-based Kinesis Data Analytics application.</p> <note>
     /// <p>If <code>CheckpointConfiguration.ConfigurationType</code> is <code>DEFAULT</code>, the application will use a <code>CheckpointingEnabled</code> value of <code>true</code>, even if this value is set to another value using this API or in application code.</p>
     /// </note>
+    #[doc(hidden)]
     pub checkpointing_enabled: std::option::Option<bool>,
     /// <p>Describes the interval in milliseconds between checkpoint operations. </p> <note>
     /// <p>If <code>CheckpointConfiguration.ConfigurationType</code> is <code>DEFAULT</code>, the application will use a <code>CheckpointInterval</code> value of 60000, even if this value is set to another value using this API or in application code.</p>
     /// </note>
+    #[doc(hidden)]
     pub checkpoint_interval: std::option::Option<i64>,
     /// <p>Describes the minimum time in milliseconds after a checkpoint operation completes that a new checkpoint operation can start. </p> <note>
     /// <p>If <code>CheckpointConfiguration.ConfigurationType</code> is <code>DEFAULT</code>, the application will use a <code>MinPauseBetweenCheckpoints</code> value of 5000, even if this value is set using this API or in application code.</p>
     /// </note>
+    #[doc(hidden)]
     pub min_pause_between_checkpoints: std::option::Option<i64>,
 }
 impl CheckpointConfigurationDescription {
@@ -2949,11 +3002,10 @@ impl std::fmt::Debug for CheckpointConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`CheckpointConfigurationDescription`](crate::model::CheckpointConfigurationDescription)
+/// See [`CheckpointConfigurationDescription`](crate::model::CheckpointConfigurationDescription).
 pub mod checkpoint_configuration_description {
 
-    /// A builder for [`CheckpointConfigurationDescription`](crate::model::CheckpointConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`CheckpointConfigurationDescription`](crate::model::CheckpointConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_type: std::option::Option<crate::model::ConfigurationType>,
@@ -3034,7 +3086,7 @@ pub mod checkpoint_configuration_description {
             self.min_pause_between_checkpoints = input;
             self
         }
-        /// Consumes the builder and constructs a [`CheckpointConfigurationDescription`](crate::model::CheckpointConfigurationDescription)
+        /// Consumes the builder and constructs a [`CheckpointConfigurationDescription`](crate::model::CheckpointConfigurationDescription).
         pub fn build(self) -> crate::model::CheckpointConfigurationDescription {
             crate::model::CheckpointConfigurationDescription {
                 configuration_type: self.configuration_type,
@@ -3046,7 +3098,7 @@ pub mod checkpoint_configuration_description {
     }
 }
 impl CheckpointConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`CheckpointConfigurationDescription`](crate::model::CheckpointConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`CheckpointConfigurationDescription`](crate::model::CheckpointConfigurationDescription).
     pub fn builder() -> crate::model::checkpoint_configuration_description::Builder {
         crate::model::checkpoint_configuration_description::Builder::default()
     }
@@ -3057,9 +3109,11 @@ impl CheckpointConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RunConfigurationDescription {
     /// <p>Describes the restore behavior of a restarting application.</p>
+    #[doc(hidden)]
     pub application_restore_configuration_description:
         std::option::Option<crate::model::ApplicationRestoreConfiguration>,
     /// <p>Describes the starting parameters for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub flink_run_configuration_description:
         std::option::Option<crate::model::FlinkRunConfiguration>,
 }
@@ -3091,11 +3145,10 @@ impl std::fmt::Debug for RunConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`RunConfigurationDescription`](crate::model::RunConfigurationDescription)
+/// See [`RunConfigurationDescription`](crate::model::RunConfigurationDescription).
 pub mod run_configuration_description {
 
-    /// A builder for [`RunConfigurationDescription`](crate::model::RunConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`RunConfigurationDescription`](crate::model::RunConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_restore_configuration_description:
@@ -3136,7 +3189,7 @@ pub mod run_configuration_description {
             self.flink_run_configuration_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`RunConfigurationDescription`](crate::model::RunConfigurationDescription)
+        /// Consumes the builder and constructs a [`RunConfigurationDescription`](crate::model::RunConfigurationDescription).
         pub fn build(self) -> crate::model::RunConfigurationDescription {
             crate::model::RunConfigurationDescription {
                 application_restore_configuration_description: self
@@ -3147,7 +3200,7 @@ pub mod run_configuration_description {
     }
 }
 impl RunConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`RunConfigurationDescription`](crate::model::RunConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`RunConfigurationDescription`](crate::model::RunConfigurationDescription).
     pub fn builder() -> crate::model::run_configuration_description::Builder {
         crate::model::run_configuration_description::Builder::default()
     }
@@ -3160,6 +3213,7 @@ pub struct FlinkRunConfiguration {
     /// <p>When restoring from a snapshot, specifies whether the runtime is allowed to skip a state that cannot be mapped to the new program. This will happen if the program is updated between snapshots to remove stateful parameters, and state data in the snapshot no longer corresponds to valid application data. For more information, see <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state"> Allowing Non-Restored State</a> in the <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.8/">Apache Flink documentation</a>.</p> <note>
     /// <p>This value defaults to <code>false</code>. If you update your application without specifying this parameter, <code>AllowNonRestoredState</code> will be set to <code>false</code>, even if it was previously set to <code>true</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub allow_non_restored_state: std::option::Option<bool>,
 }
 impl FlinkRunConfiguration {
@@ -3177,11 +3231,10 @@ impl std::fmt::Debug for FlinkRunConfiguration {
         formatter.finish()
     }
 }
-/// See [`FlinkRunConfiguration`](crate::model::FlinkRunConfiguration)
+/// See [`FlinkRunConfiguration`](crate::model::FlinkRunConfiguration).
 pub mod flink_run_configuration {
 
-    /// A builder for [`FlinkRunConfiguration`](crate::model::FlinkRunConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`FlinkRunConfiguration`](crate::model::FlinkRunConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allow_non_restored_state: std::option::Option<bool>,
@@ -3201,7 +3254,7 @@ pub mod flink_run_configuration {
             self.allow_non_restored_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`FlinkRunConfiguration`](crate::model::FlinkRunConfiguration)
+        /// Consumes the builder and constructs a [`FlinkRunConfiguration`](crate::model::FlinkRunConfiguration).
         pub fn build(self) -> crate::model::FlinkRunConfiguration {
             crate::model::FlinkRunConfiguration {
                 allow_non_restored_state: self.allow_non_restored_state,
@@ -3210,7 +3263,7 @@ pub mod flink_run_configuration {
     }
 }
 impl FlinkRunConfiguration {
-    /// Creates a new builder-style object to manufacture [`FlinkRunConfiguration`](crate::model::FlinkRunConfiguration)
+    /// Creates a new builder-style object to manufacture [`FlinkRunConfiguration`](crate::model::FlinkRunConfiguration).
     pub fn builder() -> crate::model::flink_run_configuration::Builder {
         crate::model::flink_run_configuration::Builder::default()
     }
@@ -3221,8 +3274,10 @@ impl FlinkRunConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationRestoreConfiguration {
     /// <p>Specifies how the application should be restored.</p>
+    #[doc(hidden)]
     pub application_restore_type: std::option::Option<crate::model::ApplicationRestoreType>,
     /// <p>The identifier of an existing snapshot of application state to use to restart an application. The application uses this value if <code>RESTORE_FROM_CUSTOM_SNAPSHOT</code> is specified for the <code>ApplicationRestoreType</code>.</p>
+    #[doc(hidden)]
     pub snapshot_name: std::option::Option<std::string::String>,
 }
 impl ApplicationRestoreConfiguration {
@@ -3245,11 +3300,10 @@ impl std::fmt::Debug for ApplicationRestoreConfiguration {
         formatter.finish()
     }
 }
-/// See [`ApplicationRestoreConfiguration`](crate::model::ApplicationRestoreConfiguration)
+/// See [`ApplicationRestoreConfiguration`](crate::model::ApplicationRestoreConfiguration).
 pub mod application_restore_configuration {
 
-    /// A builder for [`ApplicationRestoreConfiguration`](crate::model::ApplicationRestoreConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationRestoreConfiguration`](crate::model::ApplicationRestoreConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_restore_type:
@@ -3286,7 +3340,7 @@ pub mod application_restore_configuration {
             self.snapshot_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationRestoreConfiguration`](crate::model::ApplicationRestoreConfiguration)
+        /// Consumes the builder and constructs a [`ApplicationRestoreConfiguration`](crate::model::ApplicationRestoreConfiguration).
         pub fn build(self) -> crate::model::ApplicationRestoreConfiguration {
             crate::model::ApplicationRestoreConfiguration {
                 application_restore_type: self.application_restore_type,
@@ -3296,7 +3350,7 @@ pub mod application_restore_configuration {
     }
 }
 impl ApplicationRestoreConfiguration {
-    /// Creates a new builder-style object to manufacture [`ApplicationRestoreConfiguration`](crate::model::ApplicationRestoreConfiguration)
+    /// Creates a new builder-style object to manufacture [`ApplicationRestoreConfiguration`](crate::model::ApplicationRestoreConfiguration).
     pub fn builder() -> crate::model::application_restore_configuration::Builder {
         crate::model::application_restore_configuration::Builder::default()
     }
@@ -3370,8 +3424,10 @@ impl AsRef<str> for ApplicationRestoreType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationCodeConfigurationDescription {
     /// <p>Specifies whether the code content is in text or zip format.</p>
+    #[doc(hidden)]
     pub code_content_type: std::option::Option<crate::model::CodeContentType>,
     /// <p>Describes details about the location and format of the application code.</p>
+    #[doc(hidden)]
     pub code_content_description: std::option::Option<crate::model::CodeContentDescription>,
 }
 impl ApplicationCodeConfigurationDescription {
@@ -3394,11 +3450,10 @@ impl std::fmt::Debug for ApplicationCodeConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`ApplicationCodeConfigurationDescription`](crate::model::ApplicationCodeConfigurationDescription)
+/// See [`ApplicationCodeConfigurationDescription`](crate::model::ApplicationCodeConfigurationDescription).
 pub mod application_code_configuration_description {
 
-    /// A builder for [`ApplicationCodeConfigurationDescription`](crate::model::ApplicationCodeConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationCodeConfigurationDescription`](crate::model::ApplicationCodeConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code_content_type: std::option::Option<crate::model::CodeContentType>,
@@ -3435,7 +3490,7 @@ pub mod application_code_configuration_description {
             self.code_content_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationCodeConfigurationDescription`](crate::model::ApplicationCodeConfigurationDescription)
+        /// Consumes the builder and constructs a [`ApplicationCodeConfigurationDescription`](crate::model::ApplicationCodeConfigurationDescription).
         pub fn build(self) -> crate::model::ApplicationCodeConfigurationDescription {
             crate::model::ApplicationCodeConfigurationDescription {
                 code_content_type: self.code_content_type,
@@ -3445,7 +3500,7 @@ pub mod application_code_configuration_description {
     }
 }
 impl ApplicationCodeConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`ApplicationCodeConfigurationDescription`](crate::model::ApplicationCodeConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`ApplicationCodeConfigurationDescription`](crate::model::ApplicationCodeConfigurationDescription).
     pub fn builder() -> crate::model::application_code_configuration_description::Builder {
         crate::model::application_code_configuration_description::Builder::default()
     }
@@ -3456,12 +3511,16 @@ impl ApplicationCodeConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeContentDescription {
     /// <p>The text-format code</p>
+    #[doc(hidden)]
     pub text_content: std::option::Option<std::string::String>,
     /// <p>The checksum that can be used to validate zip-format code.</p>
+    #[doc(hidden)]
     pub code_md5: std::option::Option<std::string::String>,
     /// <p>The size in bytes of the application code. Can be used to validate zip-format code.</p>
+    #[doc(hidden)]
     pub code_size: std::option::Option<i64>,
     /// <p>The S3 bucket Amazon Resource Name (ARN), file key, and object version of the application code stored in Amazon S3.</p>
+    #[doc(hidden)]
     pub s3_application_code_location_description:
         std::option::Option<crate::model::S3ApplicationCodeLocationDescription>,
 }
@@ -3498,11 +3557,10 @@ impl std::fmt::Debug for CodeContentDescription {
         formatter.finish()
     }
 }
-/// See [`CodeContentDescription`](crate::model::CodeContentDescription)
+/// See [`CodeContentDescription`](crate::model::CodeContentDescription).
 pub mod code_content_description {
 
-    /// A builder for [`CodeContentDescription`](crate::model::CodeContentDescription)
-    #[non_exhaustive]
+    /// A builder for [`CodeContentDescription`](crate::model::CodeContentDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text_content: std::option::Option<std::string::String>,
@@ -3558,7 +3616,7 @@ pub mod code_content_description {
             self.s3_application_code_location_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeContentDescription`](crate::model::CodeContentDescription)
+        /// Consumes the builder and constructs a [`CodeContentDescription`](crate::model::CodeContentDescription).
         pub fn build(self) -> crate::model::CodeContentDescription {
             crate::model::CodeContentDescription {
                 text_content: self.text_content,
@@ -3571,7 +3629,7 @@ pub mod code_content_description {
     }
 }
 impl CodeContentDescription {
-    /// Creates a new builder-style object to manufacture [`CodeContentDescription`](crate::model::CodeContentDescription)
+    /// Creates a new builder-style object to manufacture [`CodeContentDescription`](crate::model::CodeContentDescription).
     pub fn builder() -> crate::model::code_content_description::Builder {
         crate::model::code_content_description::Builder::default()
     }
@@ -3582,10 +3640,13 @@ impl CodeContentDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ApplicationCodeLocationDescription {
     /// <p>The Amazon Resource Name (ARN) for the S3 bucket containing the application code.</p>
+    #[doc(hidden)]
     pub bucket_arn: std::option::Option<std::string::String>,
     /// <p>The file key for the object containing the application code.</p>
+    #[doc(hidden)]
     pub file_key: std::option::Option<std::string::String>,
     /// <p>The version of the object containing the application code.</p>
+    #[doc(hidden)]
     pub object_version: std::option::Option<std::string::String>,
 }
 impl S3ApplicationCodeLocationDescription {
@@ -3611,11 +3672,10 @@ impl std::fmt::Debug for S3ApplicationCodeLocationDescription {
         formatter.finish()
     }
 }
-/// See [`S3ApplicationCodeLocationDescription`](crate::model::S3ApplicationCodeLocationDescription)
+/// See [`S3ApplicationCodeLocationDescription`](crate::model::S3ApplicationCodeLocationDescription).
 pub mod s3_application_code_location_description {
 
-    /// A builder for [`S3ApplicationCodeLocationDescription`](crate::model::S3ApplicationCodeLocationDescription)
-    #[non_exhaustive]
+    /// A builder for [`S3ApplicationCodeLocationDescription`](crate::model::S3ApplicationCodeLocationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn: std::option::Option<std::string::String>,
@@ -3656,7 +3716,7 @@ pub mod s3_application_code_location_description {
             self.object_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ApplicationCodeLocationDescription`](crate::model::S3ApplicationCodeLocationDescription)
+        /// Consumes the builder and constructs a [`S3ApplicationCodeLocationDescription`](crate::model::S3ApplicationCodeLocationDescription).
         pub fn build(self) -> crate::model::S3ApplicationCodeLocationDescription {
             crate::model::S3ApplicationCodeLocationDescription {
                 bucket_arn: self.bucket_arn,
@@ -3667,7 +3727,7 @@ pub mod s3_application_code_location_description {
     }
 }
 impl S3ApplicationCodeLocationDescription {
-    /// Creates a new builder-style object to manufacture [`S3ApplicationCodeLocationDescription`](crate::model::S3ApplicationCodeLocationDescription)
+    /// Creates a new builder-style object to manufacture [`S3ApplicationCodeLocationDescription`](crate::model::S3ApplicationCodeLocationDescription).
     pub fn builder() -> crate::model::s3_application_code_location_description::Builder {
         crate::model::s3_application_code_location_description::Builder::default()
     }
@@ -3733,10 +3793,13 @@ impl AsRef<str> for CodeContentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SqlApplicationConfigurationDescription {
     /// <p>The array of <code>InputDescription</code> objects describing the input streams used by the application.</p>
+    #[doc(hidden)]
     pub input_descriptions: std::option::Option<std::vec::Vec<crate::model::InputDescription>>,
     /// <p>The array of <code>OutputDescription</code> objects describing the destination streams used by the application.</p>
+    #[doc(hidden)]
     pub output_descriptions: std::option::Option<std::vec::Vec<crate::model::OutputDescription>>,
     /// <p>The array of <code>ReferenceDataSourceDescription</code> objects describing the reference data sources used by the application.</p>
+    #[doc(hidden)]
     pub reference_data_source_descriptions:
         std::option::Option<std::vec::Vec<crate::model::ReferenceDataSourceDescription>>,
 }
@@ -3768,11 +3831,10 @@ impl std::fmt::Debug for SqlApplicationConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`SqlApplicationConfigurationDescription`](crate::model::SqlApplicationConfigurationDescription)
+/// See [`SqlApplicationConfigurationDescription`](crate::model::SqlApplicationConfigurationDescription).
 pub mod sql_application_configuration_description {
 
-    /// A builder for [`SqlApplicationConfigurationDescription`](crate::model::SqlApplicationConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`SqlApplicationConfigurationDescription`](crate::model::SqlApplicationConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_descriptions:
@@ -3843,7 +3905,7 @@ pub mod sql_application_configuration_description {
             self.reference_data_source_descriptions = input;
             self
         }
-        /// Consumes the builder and constructs a [`SqlApplicationConfigurationDescription`](crate::model::SqlApplicationConfigurationDescription)
+        /// Consumes the builder and constructs a [`SqlApplicationConfigurationDescription`](crate::model::SqlApplicationConfigurationDescription).
         pub fn build(self) -> crate::model::SqlApplicationConfigurationDescription {
             crate::model::SqlApplicationConfigurationDescription {
                 input_descriptions: self.input_descriptions,
@@ -3854,7 +3916,7 @@ pub mod sql_application_configuration_description {
     }
 }
 impl SqlApplicationConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`SqlApplicationConfigurationDescription`](crate::model::SqlApplicationConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`SqlApplicationConfigurationDescription`](crate::model::SqlApplicationConfigurationDescription).
     pub fn builder() -> crate::model::sql_application_configuration_description::Builder {
         crate::model::sql_application_configuration_description::Builder::default()
     }
@@ -3865,13 +3927,17 @@ impl SqlApplicationConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReferenceDataSourceDescription {
     /// <p>The ID of the reference data source. This is the ID that Kinesis Data Analytics assigns when you add the reference data source to your application using the <code>CreateApplication</code> or <code>UpdateApplication</code> operation.</p>
+    #[doc(hidden)]
     pub reference_id: std::option::Option<std::string::String>,
     /// <p>The in-application table name created by the specific reference data source configuration.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>Provides the Amazon S3 bucket name, the object key name that contains the reference data. </p>
+    #[doc(hidden)]
     pub s3_reference_data_source_description:
         std::option::Option<crate::model::S3ReferenceDataSourceDescription>,
     /// <p>Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.</p>
+    #[doc(hidden)]
     pub reference_schema: std::option::Option<crate::model::SourceSchema>,
 }
 impl ReferenceDataSourceDescription {
@@ -3907,11 +3973,10 @@ impl std::fmt::Debug for ReferenceDataSourceDescription {
         formatter.finish()
     }
 }
-/// See [`ReferenceDataSourceDescription`](crate::model::ReferenceDataSourceDescription)
+/// See [`ReferenceDataSourceDescription`](crate::model::ReferenceDataSourceDescription).
 pub mod reference_data_source_description {
 
-    /// A builder for [`ReferenceDataSourceDescription`](crate::model::ReferenceDataSourceDescription)
-    #[non_exhaustive]
+    /// A builder for [`ReferenceDataSourceDescription`](crate::model::ReferenceDataSourceDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reference_id: std::option::Option<std::string::String>,
@@ -3970,7 +4035,7 @@ pub mod reference_data_source_description {
             self.reference_schema = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReferenceDataSourceDescription`](crate::model::ReferenceDataSourceDescription)
+        /// Consumes the builder and constructs a [`ReferenceDataSourceDescription`](crate::model::ReferenceDataSourceDescription).
         pub fn build(self) -> crate::model::ReferenceDataSourceDescription {
             crate::model::ReferenceDataSourceDescription {
                 reference_id: self.reference_id,
@@ -3982,7 +4047,7 @@ pub mod reference_data_source_description {
     }
 }
 impl ReferenceDataSourceDescription {
-    /// Creates a new builder-style object to manufacture [`ReferenceDataSourceDescription`](crate::model::ReferenceDataSourceDescription)
+    /// Creates a new builder-style object to manufacture [`ReferenceDataSourceDescription`](crate::model::ReferenceDataSourceDescription).
     pub fn builder() -> crate::model::reference_data_source_description::Builder {
         crate::model::reference_data_source_description::Builder::default()
     }
@@ -3993,10 +4058,13 @@ impl ReferenceDataSourceDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceSchema {
     /// <p>Specifies the format of the records on the streaming source.</p>
+    #[doc(hidden)]
     pub record_format: std::option::Option<crate::model::RecordFormat>,
     /// <p>Specifies the encoding of the records in the streaming source. For example, UTF-8.</p>
+    #[doc(hidden)]
     pub record_encoding: std::option::Option<std::string::String>,
     /// <p>A list of <code>RecordColumn</code> objects. </p>
+    #[doc(hidden)]
     pub record_columns: std::option::Option<std::vec::Vec<crate::model::RecordColumn>>,
 }
 impl SourceSchema {
@@ -4022,11 +4090,10 @@ impl std::fmt::Debug for SourceSchema {
         formatter.finish()
     }
 }
-/// See [`SourceSchema`](crate::model::SourceSchema)
+/// See [`SourceSchema`](crate::model::SourceSchema).
 pub mod source_schema {
 
-    /// A builder for [`SourceSchema`](crate::model::SourceSchema)
-    #[non_exhaustive]
+    /// A builder for [`SourceSchema`](crate::model::SourceSchema).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) record_format: std::option::Option<crate::model::RecordFormat>,
@@ -4079,7 +4146,7 @@ pub mod source_schema {
             self.record_columns = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceSchema`](crate::model::SourceSchema)
+        /// Consumes the builder and constructs a [`SourceSchema`](crate::model::SourceSchema).
         pub fn build(self) -> crate::model::SourceSchema {
             crate::model::SourceSchema {
                 record_format: self.record_format,
@@ -4090,7 +4157,7 @@ pub mod source_schema {
     }
 }
 impl SourceSchema {
-    /// Creates a new builder-style object to manufacture [`SourceSchema`](crate::model::SourceSchema)
+    /// Creates a new builder-style object to manufacture [`SourceSchema`](crate::model::SourceSchema).
     pub fn builder() -> crate::model::source_schema::Builder {
         crate::model::source_schema::Builder::default()
     }
@@ -4102,10 +4169,13 @@ impl SourceSchema {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecordColumn {
     /// <p>The name of the column that is created in the in-application input stream or reference table.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A reference to the data element in the streaming input or the reference data source.</p>
+    #[doc(hidden)]
     pub mapping: std::option::Option<std::string::String>,
     /// <p>The type of column created in the in-application input stream or reference table.</p>
+    #[doc(hidden)]
     pub sql_type: std::option::Option<std::string::String>,
 }
 impl RecordColumn {
@@ -4131,11 +4201,10 @@ impl std::fmt::Debug for RecordColumn {
         formatter.finish()
     }
 }
-/// See [`RecordColumn`](crate::model::RecordColumn)
+/// See [`RecordColumn`](crate::model::RecordColumn).
 pub mod record_column {
 
-    /// A builder for [`RecordColumn`](crate::model::RecordColumn)
-    #[non_exhaustive]
+    /// A builder for [`RecordColumn`](crate::model::RecordColumn).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4173,7 +4242,7 @@ pub mod record_column {
             self.sql_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecordColumn`](crate::model::RecordColumn)
+        /// Consumes the builder and constructs a [`RecordColumn`](crate::model::RecordColumn).
         pub fn build(self) -> crate::model::RecordColumn {
             crate::model::RecordColumn {
                 name: self.name,
@@ -4184,7 +4253,7 @@ pub mod record_column {
     }
 }
 impl RecordColumn {
-    /// Creates a new builder-style object to manufacture [`RecordColumn`](crate::model::RecordColumn)
+    /// Creates a new builder-style object to manufacture [`RecordColumn`](crate::model::RecordColumn).
     pub fn builder() -> crate::model::record_column::Builder {
         crate::model::record_column::Builder::default()
     }
@@ -4195,8 +4264,10 @@ impl RecordColumn {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecordFormat {
     /// <p>The type of record format.</p>
+    #[doc(hidden)]
     pub record_format_type: std::option::Option<crate::model::RecordFormatType>,
     /// <p>When you configure application input at the time of creating or updating an application, provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.</p>
+    #[doc(hidden)]
     pub mapping_parameters: std::option::Option<crate::model::MappingParameters>,
 }
 impl RecordFormat {
@@ -4217,11 +4288,10 @@ impl std::fmt::Debug for RecordFormat {
         formatter.finish()
     }
 }
-/// See [`RecordFormat`](crate::model::RecordFormat)
+/// See [`RecordFormat`](crate::model::RecordFormat).
 pub mod record_format {
 
-    /// A builder for [`RecordFormat`](crate::model::RecordFormat)
-    #[non_exhaustive]
+    /// A builder for [`RecordFormat`](crate::model::RecordFormat).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) record_format_type: std::option::Option<crate::model::RecordFormatType>,
@@ -4254,7 +4324,7 @@ pub mod record_format {
             self.mapping_parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecordFormat`](crate::model::RecordFormat)
+        /// Consumes the builder and constructs a [`RecordFormat`](crate::model::RecordFormat).
         pub fn build(self) -> crate::model::RecordFormat {
             crate::model::RecordFormat {
                 record_format_type: self.record_format_type,
@@ -4264,7 +4334,7 @@ pub mod record_format {
     }
 }
 impl RecordFormat {
-    /// Creates a new builder-style object to manufacture [`RecordFormat`](crate::model::RecordFormat)
+    /// Creates a new builder-style object to manufacture [`RecordFormat`](crate::model::RecordFormat).
     pub fn builder() -> crate::model::record_format::Builder {
         crate::model::record_format::Builder::default()
     }
@@ -4275,8 +4345,10 @@ impl RecordFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MappingParameters {
     /// <p>Provides additional mapping information when JSON is the record format on the streaming source.</p>
+    #[doc(hidden)]
     pub json_mapping_parameters: std::option::Option<crate::model::JsonMappingParameters>,
     /// <p>Provides additional mapping information when the record format uses delimiters (for example, CSV).</p>
+    #[doc(hidden)]
     pub csv_mapping_parameters: std::option::Option<crate::model::CsvMappingParameters>,
 }
 impl MappingParameters {
@@ -4301,11 +4373,10 @@ impl std::fmt::Debug for MappingParameters {
         formatter.finish()
     }
 }
-/// See [`MappingParameters`](crate::model::MappingParameters)
+/// See [`MappingParameters`](crate::model::MappingParameters).
 pub mod mapping_parameters {
 
-    /// A builder for [`MappingParameters`](crate::model::MappingParameters)
-    #[non_exhaustive]
+    /// A builder for [`MappingParameters`](crate::model::MappingParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) json_mapping_parameters:
@@ -4342,7 +4413,7 @@ pub mod mapping_parameters {
             self.csv_mapping_parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`MappingParameters`](crate::model::MappingParameters)
+        /// Consumes the builder and constructs a [`MappingParameters`](crate::model::MappingParameters).
         pub fn build(self) -> crate::model::MappingParameters {
             crate::model::MappingParameters {
                 json_mapping_parameters: self.json_mapping_parameters,
@@ -4352,7 +4423,7 @@ pub mod mapping_parameters {
     }
 }
 impl MappingParameters {
-    /// Creates a new builder-style object to manufacture [`MappingParameters`](crate::model::MappingParameters)
+    /// Creates a new builder-style object to manufacture [`MappingParameters`](crate::model::MappingParameters).
     pub fn builder() -> crate::model::mapping_parameters::Builder {
         crate::model::mapping_parameters::Builder::default()
     }
@@ -4365,8 +4436,10 @@ impl MappingParameters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CsvMappingParameters {
     /// <p>The row delimiter. For example, in a CSV format, <i>'\n'</i> is the typical row delimiter.</p>
+    #[doc(hidden)]
     pub record_row_delimiter: std::option::Option<std::string::String>,
     /// <p>The column delimiter. For example, in a CSV format, a comma (",") is the typical column delimiter.</p>
+    #[doc(hidden)]
     pub record_column_delimiter: std::option::Option<std::string::String>,
 }
 impl CsvMappingParameters {
@@ -4387,11 +4460,10 @@ impl std::fmt::Debug for CsvMappingParameters {
         formatter.finish()
     }
 }
-/// See [`CsvMappingParameters`](crate::model::CsvMappingParameters)
+/// See [`CsvMappingParameters`](crate::model::CsvMappingParameters).
 pub mod csv_mapping_parameters {
 
-    /// A builder for [`CsvMappingParameters`](crate::model::CsvMappingParameters)
-    #[non_exhaustive]
+    /// A builder for [`CsvMappingParameters`](crate::model::CsvMappingParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) record_row_delimiter: std::option::Option<std::string::String>,
@@ -4424,7 +4496,7 @@ pub mod csv_mapping_parameters {
             self.record_column_delimiter = input;
             self
         }
-        /// Consumes the builder and constructs a [`CsvMappingParameters`](crate::model::CsvMappingParameters)
+        /// Consumes the builder and constructs a [`CsvMappingParameters`](crate::model::CsvMappingParameters).
         pub fn build(self) -> crate::model::CsvMappingParameters {
             crate::model::CsvMappingParameters {
                 record_row_delimiter: self.record_row_delimiter,
@@ -4434,7 +4506,7 @@ pub mod csv_mapping_parameters {
     }
 }
 impl CsvMappingParameters {
-    /// Creates a new builder-style object to manufacture [`CsvMappingParameters`](crate::model::CsvMappingParameters)
+    /// Creates a new builder-style object to manufacture [`CsvMappingParameters`](crate::model::CsvMappingParameters).
     pub fn builder() -> crate::model::csv_mapping_parameters::Builder {
         crate::model::csv_mapping_parameters::Builder::default()
     }
@@ -4445,6 +4517,7 @@ impl CsvMappingParameters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JsonMappingParameters {
     /// <p>The path to the top-level parent that contains the records.</p>
+    #[doc(hidden)]
     pub record_row_path: std::option::Option<std::string::String>,
 }
 impl JsonMappingParameters {
@@ -4460,11 +4533,10 @@ impl std::fmt::Debug for JsonMappingParameters {
         formatter.finish()
     }
 }
-/// See [`JsonMappingParameters`](crate::model::JsonMappingParameters)
+/// See [`JsonMappingParameters`](crate::model::JsonMappingParameters).
 pub mod json_mapping_parameters {
 
-    /// A builder for [`JsonMappingParameters`](crate::model::JsonMappingParameters)
-    #[non_exhaustive]
+    /// A builder for [`JsonMappingParameters`](crate::model::JsonMappingParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) record_row_path: std::option::Option<std::string::String>,
@@ -4483,7 +4555,7 @@ pub mod json_mapping_parameters {
             self.record_row_path = input;
             self
         }
-        /// Consumes the builder and constructs a [`JsonMappingParameters`](crate::model::JsonMappingParameters)
+        /// Consumes the builder and constructs a [`JsonMappingParameters`](crate::model::JsonMappingParameters).
         pub fn build(self) -> crate::model::JsonMappingParameters {
             crate::model::JsonMappingParameters {
                 record_row_path: self.record_row_path,
@@ -4492,7 +4564,7 @@ pub mod json_mapping_parameters {
     }
 }
 impl JsonMappingParameters {
-    /// Creates a new builder-style object to manufacture [`JsonMappingParameters`](crate::model::JsonMappingParameters)
+    /// Creates a new builder-style object to manufacture [`JsonMappingParameters`](crate::model::JsonMappingParameters).
     pub fn builder() -> crate::model::json_mapping_parameters::Builder {
         crate::model::json_mapping_parameters::Builder::default()
     }
@@ -4558,12 +4630,15 @@ impl AsRef<str> for RecordFormatType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ReferenceDataSourceDescription {
     /// <p>The Amazon Resource Name (ARN) of the S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_arn: std::option::Option<std::string::String>,
     /// <p>Amazon S3 object key name.</p>
+    #[doc(hidden)]
     pub file_key: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM role that Kinesis Data Analytics can assume to read the Amazon S3 object on your behalf to populate the in-application reference table. </p> <note>
     /// <p>Provided for backward compatibility. Applications that are created with the current API version have an application-level service execution role rather than a resource-level role.</p>
     /// </note>
+    #[doc(hidden)]
     pub reference_role_arn: std::option::Option<std::string::String>,
 }
 impl S3ReferenceDataSourceDescription {
@@ -4591,11 +4666,10 @@ impl std::fmt::Debug for S3ReferenceDataSourceDescription {
         formatter.finish()
     }
 }
-/// See [`S3ReferenceDataSourceDescription`](crate::model::S3ReferenceDataSourceDescription)
+/// See [`S3ReferenceDataSourceDescription`](crate::model::S3ReferenceDataSourceDescription).
 pub mod s3_reference_data_source_description {
 
-    /// A builder for [`S3ReferenceDataSourceDescription`](crate::model::S3ReferenceDataSourceDescription)
-    #[non_exhaustive]
+    /// A builder for [`S3ReferenceDataSourceDescription`](crate::model::S3ReferenceDataSourceDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn: std::option::Option<std::string::String>,
@@ -4640,7 +4714,7 @@ pub mod s3_reference_data_source_description {
             self.reference_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ReferenceDataSourceDescription`](crate::model::S3ReferenceDataSourceDescription)
+        /// Consumes the builder and constructs a [`S3ReferenceDataSourceDescription`](crate::model::S3ReferenceDataSourceDescription).
         pub fn build(self) -> crate::model::S3ReferenceDataSourceDescription {
             crate::model::S3ReferenceDataSourceDescription {
                 bucket_arn: self.bucket_arn,
@@ -4651,7 +4725,7 @@ pub mod s3_reference_data_source_description {
     }
 }
 impl S3ReferenceDataSourceDescription {
-    /// Creates a new builder-style object to manufacture [`S3ReferenceDataSourceDescription`](crate::model::S3ReferenceDataSourceDescription)
+    /// Creates a new builder-style object to manufacture [`S3ReferenceDataSourceDescription`](crate::model::S3ReferenceDataSourceDescription).
     pub fn builder() -> crate::model::s3_reference_data_source_description::Builder {
         crate::model::s3_reference_data_source_description::Builder::default()
     }
@@ -4662,18 +4736,24 @@ impl S3ReferenceDataSourceDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputDescription {
     /// <p>A unique identifier for the output configuration.</p>
+    #[doc(hidden)]
     pub output_id: std::option::Option<std::string::String>,
     /// <p>The name of the in-application stream that is configured as output.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Describes the Kinesis data stream that is configured as the destination where output is written.</p>
+    #[doc(hidden)]
     pub kinesis_streams_output_description:
         std::option::Option<crate::model::KinesisStreamsOutputDescription>,
     /// <p>Describes the Kinesis Data Firehose delivery stream that is configured as the destination where output is written.</p>
+    #[doc(hidden)]
     pub kinesis_firehose_output_description:
         std::option::Option<crate::model::KinesisFirehoseOutputDescription>,
     /// <p>Describes the Lambda function that is configured as the destination where output is written.</p>
+    #[doc(hidden)]
     pub lambda_output_description: std::option::Option<crate::model::LambdaOutputDescription>,
     /// <p>The data format used for writing data to the destination.</p>
+    #[doc(hidden)]
     pub destination_schema: std::option::Option<crate::model::DestinationSchema>,
 }
 impl OutputDescription {
@@ -4726,11 +4806,10 @@ impl std::fmt::Debug for OutputDescription {
         formatter.finish()
     }
 }
-/// See [`OutputDescription`](crate::model::OutputDescription)
+/// See [`OutputDescription`](crate::model::OutputDescription).
 pub mod output_description {
 
-    /// A builder for [`OutputDescription`](crate::model::OutputDescription)
-    #[non_exhaustive]
+    /// A builder for [`OutputDescription`](crate::model::OutputDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) output_id: std::option::Option<std::string::String>,
@@ -4825,7 +4904,7 @@ pub mod output_description {
             self.destination_schema = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputDescription`](crate::model::OutputDescription)
+        /// Consumes the builder and constructs a [`OutputDescription`](crate::model::OutputDescription).
         pub fn build(self) -> crate::model::OutputDescription {
             crate::model::OutputDescription {
                 output_id: self.output_id,
@@ -4839,7 +4918,7 @@ pub mod output_description {
     }
 }
 impl OutputDescription {
-    /// Creates a new builder-style object to manufacture [`OutputDescription`](crate::model::OutputDescription)
+    /// Creates a new builder-style object to manufacture [`OutputDescription`](crate::model::OutputDescription).
     pub fn builder() -> crate::model::output_description::Builder {
         crate::model::output_description::Builder::default()
     }
@@ -4850,6 +4929,7 @@ impl OutputDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DestinationSchema {
     /// <p>Specifies the format of the records on the output stream.</p>
+    #[doc(hidden)]
     pub record_format_type: std::option::Option<crate::model::RecordFormatType>,
 }
 impl DestinationSchema {
@@ -4865,11 +4945,10 @@ impl std::fmt::Debug for DestinationSchema {
         formatter.finish()
     }
 }
-/// See [`DestinationSchema`](crate::model::DestinationSchema)
+/// See [`DestinationSchema`](crate::model::DestinationSchema).
 pub mod destination_schema {
 
-    /// A builder for [`DestinationSchema`](crate::model::DestinationSchema)
-    #[non_exhaustive]
+    /// A builder for [`DestinationSchema`](crate::model::DestinationSchema).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) record_format_type: std::option::Option<crate::model::RecordFormatType>,
@@ -4888,7 +4967,7 @@ pub mod destination_schema {
             self.record_format_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`DestinationSchema`](crate::model::DestinationSchema)
+        /// Consumes the builder and constructs a [`DestinationSchema`](crate::model::DestinationSchema).
         pub fn build(self) -> crate::model::DestinationSchema {
             crate::model::DestinationSchema {
                 record_format_type: self.record_format_type,
@@ -4897,7 +4976,7 @@ pub mod destination_schema {
     }
 }
 impl DestinationSchema {
-    /// Creates a new builder-style object to manufacture [`DestinationSchema`](crate::model::DestinationSchema)
+    /// Creates a new builder-style object to manufacture [`DestinationSchema`](crate::model::DestinationSchema).
     pub fn builder() -> crate::model::destination_schema::Builder {
         crate::model::destination_schema::Builder::default()
     }
@@ -4908,10 +4987,12 @@ impl DestinationSchema {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaOutputDescription {
     /// <p>The Amazon Resource Name (ARN) of the destination Lambda function.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM role that Kinesis Data Analytics can assume to write to the destination function.</p> <note>
     /// <p>Provided for backward compatibility. Applications that are created with the current API version have an application-level service execution role rather than a resource-level role.</p>
     /// </note>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl LambdaOutputDescription {
@@ -4934,11 +5015,10 @@ impl std::fmt::Debug for LambdaOutputDescription {
         formatter.finish()
     }
 }
-/// See [`LambdaOutputDescription`](crate::model::LambdaOutputDescription)
+/// See [`LambdaOutputDescription`](crate::model::LambdaOutputDescription).
 pub mod lambda_output_description {
 
-    /// A builder for [`LambdaOutputDescription`](crate::model::LambdaOutputDescription)
-    #[non_exhaustive]
+    /// A builder for [`LambdaOutputDescription`](crate::model::LambdaOutputDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -4969,7 +5049,7 @@ pub mod lambda_output_description {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaOutputDescription`](crate::model::LambdaOutputDescription)
+        /// Consumes the builder and constructs a [`LambdaOutputDescription`](crate::model::LambdaOutputDescription).
         pub fn build(self) -> crate::model::LambdaOutputDescription {
             crate::model::LambdaOutputDescription {
                 resource_arn: self.resource_arn,
@@ -4979,7 +5059,7 @@ pub mod lambda_output_description {
     }
 }
 impl LambdaOutputDescription {
-    /// Creates a new builder-style object to manufacture [`LambdaOutputDescription`](crate::model::LambdaOutputDescription)
+    /// Creates a new builder-style object to manufacture [`LambdaOutputDescription`](crate::model::LambdaOutputDescription).
     pub fn builder() -> crate::model::lambda_output_description::Builder {
         crate::model::lambda_output_description::Builder::default()
     }
@@ -4990,10 +5070,12 @@ impl LambdaOutputDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisFirehoseOutputDescription {
     /// <p>The Amazon Resource Name (ARN) of the delivery stream.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM role that Kinesis Data Analytics can assume to access the stream.</p> <note>
     /// <p>Provided for backward compatibility. Applications that are created with the current API version have an application-level service execution role rather than a resource-level role.</p>
     /// </note>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl KinesisFirehoseOutputDescription {
@@ -5016,11 +5098,10 @@ impl std::fmt::Debug for KinesisFirehoseOutputDescription {
         formatter.finish()
     }
 }
-/// See [`KinesisFirehoseOutputDescription`](crate::model::KinesisFirehoseOutputDescription)
+/// See [`KinesisFirehoseOutputDescription`](crate::model::KinesisFirehoseOutputDescription).
 pub mod kinesis_firehose_output_description {
 
-    /// A builder for [`KinesisFirehoseOutputDescription`](crate::model::KinesisFirehoseOutputDescription)
-    #[non_exhaustive]
+    /// A builder for [`KinesisFirehoseOutputDescription`](crate::model::KinesisFirehoseOutputDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -5051,7 +5132,7 @@ pub mod kinesis_firehose_output_description {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisFirehoseOutputDescription`](crate::model::KinesisFirehoseOutputDescription)
+        /// Consumes the builder and constructs a [`KinesisFirehoseOutputDescription`](crate::model::KinesisFirehoseOutputDescription).
         pub fn build(self) -> crate::model::KinesisFirehoseOutputDescription {
             crate::model::KinesisFirehoseOutputDescription {
                 resource_arn: self.resource_arn,
@@ -5061,7 +5142,7 @@ pub mod kinesis_firehose_output_description {
     }
 }
 impl KinesisFirehoseOutputDescription {
-    /// Creates a new builder-style object to manufacture [`KinesisFirehoseOutputDescription`](crate::model::KinesisFirehoseOutputDescription)
+    /// Creates a new builder-style object to manufacture [`KinesisFirehoseOutputDescription`](crate::model::KinesisFirehoseOutputDescription).
     pub fn builder() -> crate::model::kinesis_firehose_output_description::Builder {
         crate::model::kinesis_firehose_output_description::Builder::default()
     }
@@ -5072,10 +5153,12 @@ impl KinesisFirehoseOutputDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisStreamsOutputDescription {
     /// <p>The Amazon Resource Name (ARN) of the Kinesis data stream.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM role that Kinesis Data Analytics can assume to access the stream.</p> <note>
     /// <p>Provided for backward compatibility. Applications that are created with the current API version have an application-level service execution role rather than a resource-level role.</p>
     /// </note>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl KinesisStreamsOutputDescription {
@@ -5098,11 +5181,10 @@ impl std::fmt::Debug for KinesisStreamsOutputDescription {
         formatter.finish()
     }
 }
-/// See [`KinesisStreamsOutputDescription`](crate::model::KinesisStreamsOutputDescription)
+/// See [`KinesisStreamsOutputDescription`](crate::model::KinesisStreamsOutputDescription).
 pub mod kinesis_streams_output_description {
 
-    /// A builder for [`KinesisStreamsOutputDescription`](crate::model::KinesisStreamsOutputDescription)
-    #[non_exhaustive]
+    /// A builder for [`KinesisStreamsOutputDescription`](crate::model::KinesisStreamsOutputDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -5133,7 +5215,7 @@ pub mod kinesis_streams_output_description {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisStreamsOutputDescription`](crate::model::KinesisStreamsOutputDescription)
+        /// Consumes the builder and constructs a [`KinesisStreamsOutputDescription`](crate::model::KinesisStreamsOutputDescription).
         pub fn build(self) -> crate::model::KinesisStreamsOutputDescription {
             crate::model::KinesisStreamsOutputDescription {
                 resource_arn: self.resource_arn,
@@ -5143,7 +5225,7 @@ pub mod kinesis_streams_output_description {
     }
 }
 impl KinesisStreamsOutputDescription {
-    /// Creates a new builder-style object to manufacture [`KinesisStreamsOutputDescription`](crate::model::KinesisStreamsOutputDescription)
+    /// Creates a new builder-style object to manufacture [`KinesisStreamsOutputDescription`](crate::model::KinesisStreamsOutputDescription).
     pub fn builder() -> crate::model::kinesis_streams_output_description::Builder {
         crate::model::kinesis_streams_output_description::Builder::default()
     }
@@ -5154,25 +5236,34 @@ impl KinesisStreamsOutputDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputDescription {
     /// <p>The input ID that is associated with the application input. This is the ID that Kinesis Data Analytics assigns to each input configuration that you add to your application. </p>
+    #[doc(hidden)]
     pub input_id: std::option::Option<std::string::String>,
     /// <p>The in-application name prefix.</p>
+    #[doc(hidden)]
     pub name_prefix: std::option::Option<std::string::String>,
     /// <p>Returns the in-application stream names that are mapped to the stream source. </p>
+    #[doc(hidden)]
     pub in_app_stream_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The description of the preprocessor that executes on records in this input before the application's code is run. </p>
+    #[doc(hidden)]
     pub input_processing_configuration_description:
         std::option::Option<crate::model::InputProcessingConfigurationDescription>,
     /// <p>If a Kinesis data stream is configured as a streaming source, provides the Kinesis data stream's Amazon Resource Name (ARN). </p>
+    #[doc(hidden)]
     pub kinesis_streams_input_description:
         std::option::Option<crate::model::KinesisStreamsInputDescription>,
     /// <p>If a Kinesis Data Firehose delivery stream is configured as a streaming source, provides the delivery stream's ARN. </p>
+    #[doc(hidden)]
     pub kinesis_firehose_input_description:
         std::option::Option<crate::model::KinesisFirehoseInputDescription>,
     /// <p>Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created. </p>
+    #[doc(hidden)]
     pub input_schema: std::option::Option<crate::model::SourceSchema>,
     /// <p>Describes the configured parallelism (number of in-application streams mapped to the streaming source). </p>
+    #[doc(hidden)]
     pub input_parallelism: std::option::Option<crate::model::InputParallelism>,
     /// <p>The point at which the application is configured to read from the input stream.</p>
+    #[doc(hidden)]
     pub input_starting_position_configuration:
         std::option::Option<crate::model::InputStartingPositionConfiguration>,
 }
@@ -5249,11 +5340,10 @@ impl std::fmt::Debug for InputDescription {
         formatter.finish()
     }
 }
-/// See [`InputDescription`](crate::model::InputDescription)
+/// See [`InputDescription`](crate::model::InputDescription).
 pub mod input_description {
 
-    /// A builder for [`InputDescription`](crate::model::InputDescription)
-    #[non_exhaustive]
+    /// A builder for [`InputDescription`](crate::model::InputDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_id: std::option::Option<std::string::String>,
@@ -5400,7 +5490,7 @@ pub mod input_description {
             self.input_starting_position_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputDescription`](crate::model::InputDescription)
+        /// Consumes the builder and constructs a [`InputDescription`](crate::model::InputDescription).
         pub fn build(self) -> crate::model::InputDescription {
             crate::model::InputDescription {
                 input_id: self.input_id,
@@ -5418,7 +5508,7 @@ pub mod input_description {
     }
 }
 impl InputDescription {
-    /// Creates a new builder-style object to manufacture [`InputDescription`](crate::model::InputDescription)
+    /// Creates a new builder-style object to manufacture [`InputDescription`](crate::model::InputDescription).
     pub fn builder() -> crate::model::input_description::Builder {
         crate::model::input_description::Builder::default()
     }
@@ -5434,6 +5524,7 @@ pub struct InputStartingPositionConfiguration {
     /// <li> <p> <code>TRIM_HORIZON</code> - Start reading at the last untrimmed record in the stream, which is the oldest record available in the stream. This option is not available for an Amazon Kinesis Data Firehose delivery stream.</p> </li>
     /// <li> <p> <code>LAST_STOPPED_POINT</code> - Resume reading from where the application last stopped reading.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub input_starting_position: std::option::Option<crate::model::InputStartingPosition>,
 }
 impl InputStartingPositionConfiguration {
@@ -5456,11 +5547,10 @@ impl std::fmt::Debug for InputStartingPositionConfiguration {
         formatter.finish()
     }
 }
-/// See [`InputStartingPositionConfiguration`](crate::model::InputStartingPositionConfiguration)
+/// See [`InputStartingPositionConfiguration`](crate::model::InputStartingPositionConfiguration).
 pub mod input_starting_position_configuration {
 
-    /// A builder for [`InputStartingPositionConfiguration`](crate::model::InputStartingPositionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`InputStartingPositionConfiguration`](crate::model::InputStartingPositionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_starting_position:
@@ -5493,7 +5583,7 @@ pub mod input_starting_position_configuration {
             self.input_starting_position = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputStartingPositionConfiguration`](crate::model::InputStartingPositionConfiguration)
+        /// Consumes the builder and constructs a [`InputStartingPositionConfiguration`](crate::model::InputStartingPositionConfiguration).
         pub fn build(self) -> crate::model::InputStartingPositionConfiguration {
             crate::model::InputStartingPositionConfiguration {
                 input_starting_position: self.input_starting_position,
@@ -5502,7 +5592,7 @@ pub mod input_starting_position_configuration {
     }
 }
 impl InputStartingPositionConfiguration {
-    /// Creates a new builder-style object to manufacture [`InputStartingPositionConfiguration`](crate::model::InputStartingPositionConfiguration)
+    /// Creates a new builder-style object to manufacture [`InputStartingPositionConfiguration`](crate::model::InputStartingPositionConfiguration).
     pub fn builder() -> crate::model::input_starting_position_configuration::Builder {
         crate::model::input_starting_position_configuration::Builder::default()
     }
@@ -5572,6 +5662,7 @@ impl AsRef<str> for InputStartingPosition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputParallelism {
     /// <p>The number of in-application streams to create.</p>
+    #[doc(hidden)]
     pub count: std::option::Option<i32>,
 }
 impl InputParallelism {
@@ -5587,11 +5678,10 @@ impl std::fmt::Debug for InputParallelism {
         formatter.finish()
     }
 }
-/// See [`InputParallelism`](crate::model::InputParallelism)
+/// See [`InputParallelism`](crate::model::InputParallelism).
 pub mod input_parallelism {
 
-    /// A builder for [`InputParallelism`](crate::model::InputParallelism)
-    #[non_exhaustive]
+    /// A builder for [`InputParallelism`](crate::model::InputParallelism).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) count: std::option::Option<i32>,
@@ -5607,14 +5697,14 @@ pub mod input_parallelism {
             self.count = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputParallelism`](crate::model::InputParallelism)
+        /// Consumes the builder and constructs a [`InputParallelism`](crate::model::InputParallelism).
         pub fn build(self) -> crate::model::InputParallelism {
             crate::model::InputParallelism { count: self.count }
         }
     }
 }
 impl InputParallelism {
-    /// Creates a new builder-style object to manufacture [`InputParallelism`](crate::model::InputParallelism)
+    /// Creates a new builder-style object to manufacture [`InputParallelism`](crate::model::InputParallelism).
     pub fn builder() -> crate::model::input_parallelism::Builder {
         crate::model::input_parallelism::Builder::default()
     }
@@ -5625,10 +5715,12 @@ impl InputParallelism {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisFirehoseInputDescription {
     /// <p>The Amazon Resource Name (ARN) of the delivery stream.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM role that Kinesis Data Analytics assumes to access the stream.</p> <note>
     /// <p>Provided for backward compatibility. Applications that are created with the current API version have an application-level service execution role rather than a resource-level role.</p>
     /// </note>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl KinesisFirehoseInputDescription {
@@ -5651,11 +5743,10 @@ impl std::fmt::Debug for KinesisFirehoseInputDescription {
         formatter.finish()
     }
 }
-/// See [`KinesisFirehoseInputDescription`](crate::model::KinesisFirehoseInputDescription)
+/// See [`KinesisFirehoseInputDescription`](crate::model::KinesisFirehoseInputDescription).
 pub mod kinesis_firehose_input_description {
 
-    /// A builder for [`KinesisFirehoseInputDescription`](crate::model::KinesisFirehoseInputDescription)
-    #[non_exhaustive]
+    /// A builder for [`KinesisFirehoseInputDescription`](crate::model::KinesisFirehoseInputDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -5686,7 +5777,7 @@ pub mod kinesis_firehose_input_description {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisFirehoseInputDescription`](crate::model::KinesisFirehoseInputDescription)
+        /// Consumes the builder and constructs a [`KinesisFirehoseInputDescription`](crate::model::KinesisFirehoseInputDescription).
         pub fn build(self) -> crate::model::KinesisFirehoseInputDescription {
             crate::model::KinesisFirehoseInputDescription {
                 resource_arn: self.resource_arn,
@@ -5696,7 +5787,7 @@ pub mod kinesis_firehose_input_description {
     }
 }
 impl KinesisFirehoseInputDescription {
-    /// Creates a new builder-style object to manufacture [`KinesisFirehoseInputDescription`](crate::model::KinesisFirehoseInputDescription)
+    /// Creates a new builder-style object to manufacture [`KinesisFirehoseInputDescription`](crate::model::KinesisFirehoseInputDescription).
     pub fn builder() -> crate::model::kinesis_firehose_input_description::Builder {
         crate::model::kinesis_firehose_input_description::Builder::default()
     }
@@ -5707,10 +5798,12 @@ impl KinesisFirehoseInputDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisStreamsInputDescription {
     /// <p>The Amazon Resource Name (ARN) of the Kinesis data stream.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM role that Kinesis Data Analytics can assume to access the stream.</p> <note>
     /// <p>Provided for backward compatibility. Applications that are created with the current API version have an application-level service execution role rather than a resource-level role.</p>
     /// </note>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl KinesisStreamsInputDescription {
@@ -5733,11 +5826,10 @@ impl std::fmt::Debug for KinesisStreamsInputDescription {
         formatter.finish()
     }
 }
-/// See [`KinesisStreamsInputDescription`](crate::model::KinesisStreamsInputDescription)
+/// See [`KinesisStreamsInputDescription`](crate::model::KinesisStreamsInputDescription).
 pub mod kinesis_streams_input_description {
 
-    /// A builder for [`KinesisStreamsInputDescription`](crate::model::KinesisStreamsInputDescription)
-    #[non_exhaustive]
+    /// A builder for [`KinesisStreamsInputDescription`](crate::model::KinesisStreamsInputDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -5768,7 +5860,7 @@ pub mod kinesis_streams_input_description {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisStreamsInputDescription`](crate::model::KinesisStreamsInputDescription)
+        /// Consumes the builder and constructs a [`KinesisStreamsInputDescription`](crate::model::KinesisStreamsInputDescription).
         pub fn build(self) -> crate::model::KinesisStreamsInputDescription {
             crate::model::KinesisStreamsInputDescription {
                 resource_arn: self.resource_arn,
@@ -5778,7 +5870,7 @@ pub mod kinesis_streams_input_description {
     }
 }
 impl KinesisStreamsInputDescription {
-    /// Creates a new builder-style object to manufacture [`KinesisStreamsInputDescription`](crate::model::KinesisStreamsInputDescription)
+    /// Creates a new builder-style object to manufacture [`KinesisStreamsInputDescription`](crate::model::KinesisStreamsInputDescription).
     pub fn builder() -> crate::model::kinesis_streams_input_description::Builder {
         crate::model::kinesis_streams_input_description::Builder::default()
     }
@@ -5789,6 +5881,7 @@ impl KinesisStreamsInputDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputProcessingConfigurationDescription {
     /// <p>Provides configuration information about the associated <code>InputLambdaProcessorDescription</code> </p>
+    #[doc(hidden)]
     pub input_lambda_processor_description:
         std::option::Option<crate::model::InputLambdaProcessorDescription>,
 }
@@ -5810,11 +5903,10 @@ impl std::fmt::Debug for InputProcessingConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`InputProcessingConfigurationDescription`](crate::model::InputProcessingConfigurationDescription)
+/// See [`InputProcessingConfigurationDescription`](crate::model::InputProcessingConfigurationDescription).
 pub mod input_processing_configuration_description {
 
-    /// A builder for [`InputProcessingConfigurationDescription`](crate::model::InputProcessingConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`InputProcessingConfigurationDescription`](crate::model::InputProcessingConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_lambda_processor_description:
@@ -5837,7 +5929,7 @@ pub mod input_processing_configuration_description {
             self.input_lambda_processor_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputProcessingConfigurationDescription`](crate::model::InputProcessingConfigurationDescription)
+        /// Consumes the builder and constructs a [`InputProcessingConfigurationDescription`](crate::model::InputProcessingConfigurationDescription).
         pub fn build(self) -> crate::model::InputProcessingConfigurationDescription {
             crate::model::InputProcessingConfigurationDescription {
                 input_lambda_processor_description: self.input_lambda_processor_description,
@@ -5846,7 +5938,7 @@ pub mod input_processing_configuration_description {
     }
 }
 impl InputProcessingConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`InputProcessingConfigurationDescription`](crate::model::InputProcessingConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`InputProcessingConfigurationDescription`](crate::model::InputProcessingConfigurationDescription).
     pub fn builder() -> crate::model::input_processing_configuration_description::Builder {
         crate::model::input_processing_configuration_description::Builder::default()
     }
@@ -5859,10 +5951,12 @@ pub struct InputLambdaProcessorDescription {
     /// <p>The ARN of the Amazon Lambda function that is used to preprocess the records in the stream.</p> <note>
     /// <p>To specify an earlier version of the Lambda function than the latest, include the Lambda function version in the Lambda function ARN. For more information about Lambda ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda">Example ARNs: Amazon Lambda</a> </p>
     /// </note>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM role that is used to access the Amazon Lambda function.</p> <note>
     /// <p>Provided for backward compatibility. Applications that are created with the current API version have an application-level service execution role rather than a resource-level role.</p>
     /// </note>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl InputLambdaProcessorDescription {
@@ -5887,11 +5981,10 @@ impl std::fmt::Debug for InputLambdaProcessorDescription {
         formatter.finish()
     }
 }
-/// See [`InputLambdaProcessorDescription`](crate::model::InputLambdaProcessorDescription)
+/// See [`InputLambdaProcessorDescription`](crate::model::InputLambdaProcessorDescription).
 pub mod input_lambda_processor_description {
 
-    /// A builder for [`InputLambdaProcessorDescription`](crate::model::InputLambdaProcessorDescription)
-    #[non_exhaustive]
+    /// A builder for [`InputLambdaProcessorDescription`](crate::model::InputLambdaProcessorDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -5926,7 +6019,7 @@ pub mod input_lambda_processor_description {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputLambdaProcessorDescription`](crate::model::InputLambdaProcessorDescription)
+        /// Consumes the builder and constructs a [`InputLambdaProcessorDescription`](crate::model::InputLambdaProcessorDescription).
         pub fn build(self) -> crate::model::InputLambdaProcessorDescription {
             crate::model::InputLambdaProcessorDescription {
                 resource_arn: self.resource_arn,
@@ -5936,7 +6029,7 @@ pub mod input_lambda_processor_description {
     }
 }
 impl InputLambdaProcessorDescription {
-    /// Creates a new builder-style object to manufacture [`InputLambdaProcessorDescription`](crate::model::InputLambdaProcessorDescription)
+    /// Creates a new builder-style object to manufacture [`InputLambdaProcessorDescription`](crate::model::InputLambdaProcessorDescription).
     pub fn builder() -> crate::model::input_lambda_processor_description::Builder {
         crate::model::input_lambda_processor_description::Builder::default()
     }
@@ -6133,8 +6226,10 @@ impl AsRef<str> for RuntimeEnvironment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchLoggingOptionUpdate {
     /// <p>The ID of the CloudWatch logging option to update</p>
+    #[doc(hidden)]
     pub cloud_watch_logging_option_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the CloudWatch log to receive application messages.</p>
+    #[doc(hidden)]
     pub log_stream_arn_update: std::option::Option<std::string::String>,
 }
 impl CloudWatchLoggingOptionUpdate {
@@ -6158,11 +6253,10 @@ impl std::fmt::Debug for CloudWatchLoggingOptionUpdate {
         formatter.finish()
     }
 }
-/// See [`CloudWatchLoggingOptionUpdate`](crate::model::CloudWatchLoggingOptionUpdate)
+/// See [`CloudWatchLoggingOptionUpdate`](crate::model::CloudWatchLoggingOptionUpdate).
 pub mod cloud_watch_logging_option_update {
 
-    /// A builder for [`CloudWatchLoggingOptionUpdate`](crate::model::CloudWatchLoggingOptionUpdate)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchLoggingOptionUpdate`](crate::model::CloudWatchLoggingOptionUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloud_watch_logging_option_id: std::option::Option<std::string::String>,
@@ -6198,7 +6292,7 @@ pub mod cloud_watch_logging_option_update {
             self.log_stream_arn_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchLoggingOptionUpdate`](crate::model::CloudWatchLoggingOptionUpdate)
+        /// Consumes the builder and constructs a [`CloudWatchLoggingOptionUpdate`](crate::model::CloudWatchLoggingOptionUpdate).
         pub fn build(self) -> crate::model::CloudWatchLoggingOptionUpdate {
             crate::model::CloudWatchLoggingOptionUpdate {
                 cloud_watch_logging_option_id: self.cloud_watch_logging_option_id,
@@ -6208,7 +6302,7 @@ pub mod cloud_watch_logging_option_update {
     }
 }
 impl CloudWatchLoggingOptionUpdate {
-    /// Creates a new builder-style object to manufacture [`CloudWatchLoggingOptionUpdate`](crate::model::CloudWatchLoggingOptionUpdate)
+    /// Creates a new builder-style object to manufacture [`CloudWatchLoggingOptionUpdate`](crate::model::CloudWatchLoggingOptionUpdate).
     pub fn builder() -> crate::model::cloud_watch_logging_option_update::Builder {
         crate::model::cloud_watch_logging_option_update::Builder::default()
     }
@@ -6219,8 +6313,10 @@ impl CloudWatchLoggingOptionUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RunConfigurationUpdate {
     /// <p>Describes the starting parameters for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub flink_run_configuration: std::option::Option<crate::model::FlinkRunConfiguration>,
     /// <p>Describes updates to the restore behavior of a restarting application.</p>
+    #[doc(hidden)]
     pub application_restore_configuration:
         std::option::Option<crate::model::ApplicationRestoreConfiguration>,
 }
@@ -6249,11 +6345,10 @@ impl std::fmt::Debug for RunConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`RunConfigurationUpdate`](crate::model::RunConfigurationUpdate)
+/// See [`RunConfigurationUpdate`](crate::model::RunConfigurationUpdate).
 pub mod run_configuration_update {
 
-    /// A builder for [`RunConfigurationUpdate`](crate::model::RunConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`RunConfigurationUpdate`](crate::model::RunConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flink_run_configuration:
@@ -6294,7 +6389,7 @@ pub mod run_configuration_update {
             self.application_restore_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`RunConfigurationUpdate`](crate::model::RunConfigurationUpdate)
+        /// Consumes the builder and constructs a [`RunConfigurationUpdate`](crate::model::RunConfigurationUpdate).
         pub fn build(self) -> crate::model::RunConfigurationUpdate {
             crate::model::RunConfigurationUpdate {
                 flink_run_configuration: self.flink_run_configuration,
@@ -6304,7 +6399,7 @@ pub mod run_configuration_update {
     }
 }
 impl RunConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`RunConfigurationUpdate`](crate::model::RunConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`RunConfigurationUpdate`](crate::model::RunConfigurationUpdate).
     pub fn builder() -> crate::model::run_configuration_update::Builder {
         crate::model::run_configuration_update::Builder::default()
     }
@@ -6315,23 +6410,30 @@ impl RunConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationConfigurationUpdate {
     /// <p>Describes updates to a SQL-based Kinesis Data Analytics application's configuration.</p>
+    #[doc(hidden)]
     pub sql_application_configuration_update:
         std::option::Option<crate::model::SqlApplicationConfigurationUpdate>,
     /// <p>Describes updates to an application's code configuration.</p>
+    #[doc(hidden)]
     pub application_code_configuration_update:
         std::option::Option<crate::model::ApplicationCodeConfigurationUpdate>,
     /// <p>Describes updates to a Flink-based Kinesis Data Analytics application's configuration.</p>
+    #[doc(hidden)]
     pub flink_application_configuration_update:
         std::option::Option<crate::model::FlinkApplicationConfigurationUpdate>,
     /// <p>Describes updates to the environment properties for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub environment_property_updates: std::option::Option<crate::model::EnvironmentPropertyUpdates>,
     /// <p>Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub application_snapshot_configuration_update:
         std::option::Option<crate::model::ApplicationSnapshotConfigurationUpdate>,
     /// <p>Updates to the array of descriptions of VPC configurations available to the application.</p>
+    #[doc(hidden)]
     pub vpc_configuration_updates:
         std::option::Option<std::vec::Vec<crate::model::VpcConfigurationUpdate>>,
     /// <p>Updates to the configuration of a Kinesis Data Analytics Studio notebook.</p>
+    #[doc(hidden)]
     pub zeppelin_application_configuration_update:
         std::option::Option<crate::model::ZeppelinApplicationConfigurationUpdate>,
 }
@@ -6410,11 +6512,10 @@ impl std::fmt::Debug for ApplicationConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`ApplicationConfigurationUpdate`](crate::model::ApplicationConfigurationUpdate)
+/// See [`ApplicationConfigurationUpdate`](crate::model::ApplicationConfigurationUpdate).
 pub mod application_configuration_update {
 
-    /// A builder for [`ApplicationConfigurationUpdate`](crate::model::ApplicationConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationConfigurationUpdate`](crate::model::ApplicationConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sql_application_configuration_update:
@@ -6551,7 +6652,7 @@ pub mod application_configuration_update {
             self.zeppelin_application_configuration_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationConfigurationUpdate`](crate::model::ApplicationConfigurationUpdate)
+        /// Consumes the builder and constructs a [`ApplicationConfigurationUpdate`](crate::model::ApplicationConfigurationUpdate).
         pub fn build(self) -> crate::model::ApplicationConfigurationUpdate {
             crate::model::ApplicationConfigurationUpdate {
                 sql_application_configuration_update: self.sql_application_configuration_update,
@@ -6568,7 +6669,7 @@ pub mod application_configuration_update {
     }
 }
 impl ApplicationConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`ApplicationConfigurationUpdate`](crate::model::ApplicationConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`ApplicationConfigurationUpdate`](crate::model::ApplicationConfigurationUpdate).
     pub fn builder() -> crate::model::application_configuration_update::Builder {
         crate::model::application_configuration_update::Builder::default()
     }
@@ -6579,14 +6680,18 @@ impl ApplicationConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ZeppelinApplicationConfigurationUpdate {
     /// <p>Updates to the monitoring configuration of a Kinesis Data Analytics Studio notebook.</p>
+    #[doc(hidden)]
     pub monitoring_configuration_update:
         std::option::Option<crate::model::ZeppelinMonitoringConfigurationUpdate>,
     /// <p>Updates to the configuration of the Amazon Glue Data Catalog that is associated with the Kinesis Data Analytics Studio notebook.</p>
+    #[doc(hidden)]
     pub catalog_configuration_update: std::option::Option<crate::model::CatalogConfigurationUpdate>,
     /// <p>Updates to the configuration information required to deploy an Amazon Data Analytics Studio notebook as an application with durable state.</p>
+    #[doc(hidden)]
     pub deploy_as_application_configuration_update:
         std::option::Option<crate::model::DeployAsApplicationConfigurationUpdate>,
     /// <p>Updates to the customer artifacts. Custom artifacts are dependency JAR files and user-defined functions (UDF).</p>
+    #[doc(hidden)]
     pub custom_artifacts_configuration_update:
         std::option::Option<std::vec::Vec<crate::model::CustomArtifactConfiguration>>,
 }
@@ -6638,11 +6743,10 @@ impl std::fmt::Debug for ZeppelinApplicationConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`ZeppelinApplicationConfigurationUpdate`](crate::model::ZeppelinApplicationConfigurationUpdate)
+/// See [`ZeppelinApplicationConfigurationUpdate`](crate::model::ZeppelinApplicationConfigurationUpdate).
 pub mod zeppelin_application_configuration_update {
 
-    /// A builder for [`ZeppelinApplicationConfigurationUpdate`](crate::model::ZeppelinApplicationConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ZeppelinApplicationConfigurationUpdate`](crate::model::ZeppelinApplicationConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) monitoring_configuration_update:
@@ -6727,7 +6831,7 @@ pub mod zeppelin_application_configuration_update {
             self.custom_artifacts_configuration_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`ZeppelinApplicationConfigurationUpdate`](crate::model::ZeppelinApplicationConfigurationUpdate)
+        /// Consumes the builder and constructs a [`ZeppelinApplicationConfigurationUpdate`](crate::model::ZeppelinApplicationConfigurationUpdate).
         pub fn build(self) -> crate::model::ZeppelinApplicationConfigurationUpdate {
             crate::model::ZeppelinApplicationConfigurationUpdate {
                 monitoring_configuration_update: self.monitoring_configuration_update,
@@ -6740,7 +6844,7 @@ pub mod zeppelin_application_configuration_update {
     }
 }
 impl ZeppelinApplicationConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`ZeppelinApplicationConfigurationUpdate`](crate::model::ZeppelinApplicationConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`ZeppelinApplicationConfigurationUpdate`](crate::model::ZeppelinApplicationConfigurationUpdate).
     pub fn builder() -> crate::model::zeppelin_application_configuration_update::Builder {
         crate::model::zeppelin_application_configuration_update::Builder::default()
     }
@@ -6751,10 +6855,13 @@ impl ZeppelinApplicationConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomArtifactConfiguration {
     /// <p> <code>UDF</code> stands for user-defined functions. This type of artifact must be in an S3 bucket. A <code>DEPENDENCY_JAR</code> can be in either Maven or an S3 bucket.</p>
+    #[doc(hidden)]
     pub artifact_type: std::option::Option<crate::model::ArtifactType>,
     /// <p>For a Kinesis Data Analytics application provides a description of an Amazon S3 object, including the Amazon Resource Name (ARN) of the S3 bucket, the name of the Amazon S3 object that contains the data, and the version number of the Amazon S3 object that contains the data. </p>
+    #[doc(hidden)]
     pub s3_content_location: std::option::Option<crate::model::S3ContentLocation>,
     /// <p>The parameters required to fully specify a Maven reference.</p>
+    #[doc(hidden)]
     pub maven_reference: std::option::Option<crate::model::MavenReference>,
 }
 impl CustomArtifactConfiguration {
@@ -6780,11 +6887,10 @@ impl std::fmt::Debug for CustomArtifactConfiguration {
         formatter.finish()
     }
 }
-/// See [`CustomArtifactConfiguration`](crate::model::CustomArtifactConfiguration)
+/// See [`CustomArtifactConfiguration`](crate::model::CustomArtifactConfiguration).
 pub mod custom_artifact_configuration {
 
-    /// A builder for [`CustomArtifactConfiguration`](crate::model::CustomArtifactConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CustomArtifactConfiguration`](crate::model::CustomArtifactConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) artifact_type: std::option::Option<crate::model::ArtifactType>,
@@ -6831,7 +6937,7 @@ pub mod custom_artifact_configuration {
             self.maven_reference = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomArtifactConfiguration`](crate::model::CustomArtifactConfiguration)
+        /// Consumes the builder and constructs a [`CustomArtifactConfiguration`](crate::model::CustomArtifactConfiguration).
         pub fn build(self) -> crate::model::CustomArtifactConfiguration {
             crate::model::CustomArtifactConfiguration {
                 artifact_type: self.artifact_type,
@@ -6842,7 +6948,7 @@ pub mod custom_artifact_configuration {
     }
 }
 impl CustomArtifactConfiguration {
-    /// Creates a new builder-style object to manufacture [`CustomArtifactConfiguration`](crate::model::CustomArtifactConfiguration)
+    /// Creates a new builder-style object to manufacture [`CustomArtifactConfiguration`](crate::model::CustomArtifactConfiguration).
     pub fn builder() -> crate::model::custom_artifact_configuration::Builder {
         crate::model::custom_artifact_configuration::Builder::default()
     }
@@ -6853,6 +6959,7 @@ impl CustomArtifactConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeployAsApplicationConfigurationUpdate {
     /// <p>Updates to the location that holds the data required to specify an Amazon Data Analytics application.</p>
+    #[doc(hidden)]
     pub s3_content_location_update: std::option::Option<crate::model::S3ContentBaseLocationUpdate>,
 }
 impl DeployAsApplicationConfigurationUpdate {
@@ -6873,11 +6980,10 @@ impl std::fmt::Debug for DeployAsApplicationConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`DeployAsApplicationConfigurationUpdate`](crate::model::DeployAsApplicationConfigurationUpdate)
+/// See [`DeployAsApplicationConfigurationUpdate`](crate::model::DeployAsApplicationConfigurationUpdate).
 pub mod deploy_as_application_configuration_update {
 
-    /// A builder for [`DeployAsApplicationConfigurationUpdate`](crate::model::DeployAsApplicationConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`DeployAsApplicationConfigurationUpdate`](crate::model::DeployAsApplicationConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_content_location_update:
@@ -6900,7 +7006,7 @@ pub mod deploy_as_application_configuration_update {
             self.s3_content_location_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeployAsApplicationConfigurationUpdate`](crate::model::DeployAsApplicationConfigurationUpdate)
+        /// Consumes the builder and constructs a [`DeployAsApplicationConfigurationUpdate`](crate::model::DeployAsApplicationConfigurationUpdate).
         pub fn build(self) -> crate::model::DeployAsApplicationConfigurationUpdate {
             crate::model::DeployAsApplicationConfigurationUpdate {
                 s3_content_location_update: self.s3_content_location_update,
@@ -6909,7 +7015,7 @@ pub mod deploy_as_application_configuration_update {
     }
 }
 impl DeployAsApplicationConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`DeployAsApplicationConfigurationUpdate`](crate::model::DeployAsApplicationConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`DeployAsApplicationConfigurationUpdate`](crate::model::DeployAsApplicationConfigurationUpdate).
     pub fn builder() -> crate::model::deploy_as_application_configuration_update::Builder {
         crate::model::deploy_as_application_configuration_update::Builder::default()
     }
@@ -6920,8 +7026,10 @@ impl DeployAsApplicationConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ContentBaseLocationUpdate {
     /// <p>The updated Amazon Resource Name (ARN) of the S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_arn_update: std::option::Option<std::string::String>,
     /// <p>The updated S3 bucket path.</p>
+    #[doc(hidden)]
     pub base_path_update: std::option::Option<std::string::String>,
 }
 impl S3ContentBaseLocationUpdate {
@@ -6942,11 +7050,10 @@ impl std::fmt::Debug for S3ContentBaseLocationUpdate {
         formatter.finish()
     }
 }
-/// See [`S3ContentBaseLocationUpdate`](crate::model::S3ContentBaseLocationUpdate)
+/// See [`S3ContentBaseLocationUpdate`](crate::model::S3ContentBaseLocationUpdate).
 pub mod s3_content_base_location_update {
 
-    /// A builder for [`S3ContentBaseLocationUpdate`](crate::model::S3ContentBaseLocationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`S3ContentBaseLocationUpdate`](crate::model::S3ContentBaseLocationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn_update: std::option::Option<std::string::String>,
@@ -6979,7 +7086,7 @@ pub mod s3_content_base_location_update {
             self.base_path_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ContentBaseLocationUpdate`](crate::model::S3ContentBaseLocationUpdate)
+        /// Consumes the builder and constructs a [`S3ContentBaseLocationUpdate`](crate::model::S3ContentBaseLocationUpdate).
         pub fn build(self) -> crate::model::S3ContentBaseLocationUpdate {
             crate::model::S3ContentBaseLocationUpdate {
                 bucket_arn_update: self.bucket_arn_update,
@@ -6989,7 +7096,7 @@ pub mod s3_content_base_location_update {
     }
 }
 impl S3ContentBaseLocationUpdate {
-    /// Creates a new builder-style object to manufacture [`S3ContentBaseLocationUpdate`](crate::model::S3ContentBaseLocationUpdate)
+    /// Creates a new builder-style object to manufacture [`S3ContentBaseLocationUpdate`](crate::model::S3ContentBaseLocationUpdate).
     pub fn builder() -> crate::model::s3_content_base_location_update::Builder {
         crate::model::s3_content_base_location_update::Builder::default()
     }
@@ -7000,6 +7107,7 @@ impl S3ContentBaseLocationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CatalogConfigurationUpdate {
     /// <p>Updates to the configuration parameters for the default Amazon Glue database. You use this database for SQL queries that you write in a Kinesis Data Analytics Studio notebook.</p>
+    #[doc(hidden)]
     pub glue_data_catalog_configuration_update:
         std::option::Option<crate::model::GlueDataCatalogConfigurationUpdate>,
 }
@@ -7021,11 +7129,10 @@ impl std::fmt::Debug for CatalogConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`CatalogConfigurationUpdate`](crate::model::CatalogConfigurationUpdate)
+/// See [`CatalogConfigurationUpdate`](crate::model::CatalogConfigurationUpdate).
 pub mod catalog_configuration_update {
 
-    /// A builder for [`CatalogConfigurationUpdate`](crate::model::CatalogConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`CatalogConfigurationUpdate`](crate::model::CatalogConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) glue_data_catalog_configuration_update:
@@ -7048,7 +7155,7 @@ pub mod catalog_configuration_update {
             self.glue_data_catalog_configuration_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`CatalogConfigurationUpdate`](crate::model::CatalogConfigurationUpdate)
+        /// Consumes the builder and constructs a [`CatalogConfigurationUpdate`](crate::model::CatalogConfigurationUpdate).
         pub fn build(self) -> crate::model::CatalogConfigurationUpdate {
             crate::model::CatalogConfigurationUpdate {
                 glue_data_catalog_configuration_update: self.glue_data_catalog_configuration_update,
@@ -7057,7 +7164,7 @@ pub mod catalog_configuration_update {
     }
 }
 impl CatalogConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`CatalogConfigurationUpdate`](crate::model::CatalogConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`CatalogConfigurationUpdate`](crate::model::CatalogConfigurationUpdate).
     pub fn builder() -> crate::model::catalog_configuration_update::Builder {
         crate::model::catalog_configuration_update::Builder::default()
     }
@@ -7068,6 +7175,7 @@ impl CatalogConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GlueDataCatalogConfigurationUpdate {
     /// <p>The updated Amazon Resource Name (ARN) of the database.</p>
+    #[doc(hidden)]
     pub database_arn_update: std::option::Option<std::string::String>,
 }
 impl GlueDataCatalogConfigurationUpdate {
@@ -7083,11 +7191,10 @@ impl std::fmt::Debug for GlueDataCatalogConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`GlueDataCatalogConfigurationUpdate`](crate::model::GlueDataCatalogConfigurationUpdate)
+/// See [`GlueDataCatalogConfigurationUpdate`](crate::model::GlueDataCatalogConfigurationUpdate).
 pub mod glue_data_catalog_configuration_update {
 
-    /// A builder for [`GlueDataCatalogConfigurationUpdate`](crate::model::GlueDataCatalogConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`GlueDataCatalogConfigurationUpdate`](crate::model::GlueDataCatalogConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) database_arn_update: std::option::Option<std::string::String>,
@@ -7106,7 +7213,7 @@ pub mod glue_data_catalog_configuration_update {
             self.database_arn_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`GlueDataCatalogConfigurationUpdate`](crate::model::GlueDataCatalogConfigurationUpdate)
+        /// Consumes the builder and constructs a [`GlueDataCatalogConfigurationUpdate`](crate::model::GlueDataCatalogConfigurationUpdate).
         pub fn build(self) -> crate::model::GlueDataCatalogConfigurationUpdate {
             crate::model::GlueDataCatalogConfigurationUpdate {
                 database_arn_update: self.database_arn_update,
@@ -7115,7 +7222,7 @@ pub mod glue_data_catalog_configuration_update {
     }
 }
 impl GlueDataCatalogConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`GlueDataCatalogConfigurationUpdate`](crate::model::GlueDataCatalogConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`GlueDataCatalogConfigurationUpdate`](crate::model::GlueDataCatalogConfigurationUpdate).
     pub fn builder() -> crate::model::glue_data_catalog_configuration_update::Builder {
         crate::model::glue_data_catalog_configuration_update::Builder::default()
     }
@@ -7126,6 +7233,7 @@ impl GlueDataCatalogConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ZeppelinMonitoringConfigurationUpdate {
     /// <p>Updates to the logging level for Apache Zeppelin within a Kinesis Data Analytics Studio notebook.</p>
+    #[doc(hidden)]
     pub log_level_update: std::option::Option<crate::model::LogLevel>,
 }
 impl ZeppelinMonitoringConfigurationUpdate {
@@ -7141,11 +7249,10 @@ impl std::fmt::Debug for ZeppelinMonitoringConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`ZeppelinMonitoringConfigurationUpdate`](crate::model::ZeppelinMonitoringConfigurationUpdate)
+/// See [`ZeppelinMonitoringConfigurationUpdate`](crate::model::ZeppelinMonitoringConfigurationUpdate).
 pub mod zeppelin_monitoring_configuration_update {
 
-    /// A builder for [`ZeppelinMonitoringConfigurationUpdate`](crate::model::ZeppelinMonitoringConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ZeppelinMonitoringConfigurationUpdate`](crate::model::ZeppelinMonitoringConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_level_update: std::option::Option<crate::model::LogLevel>,
@@ -7164,7 +7271,7 @@ pub mod zeppelin_monitoring_configuration_update {
             self.log_level_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`ZeppelinMonitoringConfigurationUpdate`](crate::model::ZeppelinMonitoringConfigurationUpdate)
+        /// Consumes the builder and constructs a [`ZeppelinMonitoringConfigurationUpdate`](crate::model::ZeppelinMonitoringConfigurationUpdate).
         pub fn build(self) -> crate::model::ZeppelinMonitoringConfigurationUpdate {
             crate::model::ZeppelinMonitoringConfigurationUpdate {
                 log_level_update: self.log_level_update,
@@ -7173,7 +7280,7 @@ pub mod zeppelin_monitoring_configuration_update {
     }
 }
 impl ZeppelinMonitoringConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`ZeppelinMonitoringConfigurationUpdate`](crate::model::ZeppelinMonitoringConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`ZeppelinMonitoringConfigurationUpdate`](crate::model::ZeppelinMonitoringConfigurationUpdate).
     pub fn builder() -> crate::model::zeppelin_monitoring_configuration_update::Builder {
         crate::model::zeppelin_monitoring_configuration_update::Builder::default()
     }
@@ -7184,10 +7291,13 @@ impl ZeppelinMonitoringConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcConfigurationUpdate {
     /// <p>Describes an update to the ID of the VPC configuration.</p>
+    #[doc(hidden)]
     pub vpc_configuration_id: std::option::Option<std::string::String>,
     /// <p>Describes updates to the array of <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html">Subnet</a> IDs used by the VPC configuration.</p>
+    #[doc(hidden)]
     pub subnet_id_updates: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Describes updates to the array of <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html">SecurityGroup</a> IDs used by the VPC configuration.</p>
+    #[doc(hidden)]
     pub security_group_id_updates: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VpcConfigurationUpdate {
@@ -7213,11 +7323,10 @@ impl std::fmt::Debug for VpcConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`VpcConfigurationUpdate`](crate::model::VpcConfigurationUpdate)
+/// See [`VpcConfigurationUpdate`](crate::model::VpcConfigurationUpdate).
 pub mod vpc_configuration_update {
 
-    /// A builder for [`VpcConfigurationUpdate`](crate::model::VpcConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`VpcConfigurationUpdate`](crate::model::VpcConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_configuration_id: std::option::Option<std::string::String>,
@@ -7277,7 +7386,7 @@ pub mod vpc_configuration_update {
             self.security_group_id_updates = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcConfigurationUpdate`](crate::model::VpcConfigurationUpdate)
+        /// Consumes the builder and constructs a [`VpcConfigurationUpdate`](crate::model::VpcConfigurationUpdate).
         pub fn build(self) -> crate::model::VpcConfigurationUpdate {
             crate::model::VpcConfigurationUpdate {
                 vpc_configuration_id: self.vpc_configuration_id,
@@ -7288,7 +7397,7 @@ pub mod vpc_configuration_update {
     }
 }
 impl VpcConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`VpcConfigurationUpdate`](crate::model::VpcConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`VpcConfigurationUpdate`](crate::model::VpcConfigurationUpdate).
     pub fn builder() -> crate::model::vpc_configuration_update::Builder {
         crate::model::vpc_configuration_update::Builder::default()
     }
@@ -7299,6 +7408,7 @@ impl VpcConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationSnapshotConfigurationUpdate {
     /// <p>Describes updates to whether snapshots are enabled for an application.</p>
+    #[doc(hidden)]
     pub snapshots_enabled_update: std::option::Option<bool>,
 }
 impl ApplicationSnapshotConfigurationUpdate {
@@ -7314,11 +7424,10 @@ impl std::fmt::Debug for ApplicationSnapshotConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`ApplicationSnapshotConfigurationUpdate`](crate::model::ApplicationSnapshotConfigurationUpdate)
+/// See [`ApplicationSnapshotConfigurationUpdate`](crate::model::ApplicationSnapshotConfigurationUpdate).
 pub mod application_snapshot_configuration_update {
 
-    /// A builder for [`ApplicationSnapshotConfigurationUpdate`](crate::model::ApplicationSnapshotConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationSnapshotConfigurationUpdate`](crate::model::ApplicationSnapshotConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshots_enabled_update: std::option::Option<bool>,
@@ -7334,7 +7443,7 @@ pub mod application_snapshot_configuration_update {
             self.snapshots_enabled_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationSnapshotConfigurationUpdate`](crate::model::ApplicationSnapshotConfigurationUpdate)
+        /// Consumes the builder and constructs a [`ApplicationSnapshotConfigurationUpdate`](crate::model::ApplicationSnapshotConfigurationUpdate).
         pub fn build(self) -> crate::model::ApplicationSnapshotConfigurationUpdate {
             crate::model::ApplicationSnapshotConfigurationUpdate {
                 snapshots_enabled_update: self.snapshots_enabled_update,
@@ -7343,7 +7452,7 @@ pub mod application_snapshot_configuration_update {
     }
 }
 impl ApplicationSnapshotConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`ApplicationSnapshotConfigurationUpdate`](crate::model::ApplicationSnapshotConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`ApplicationSnapshotConfigurationUpdate`](crate::model::ApplicationSnapshotConfigurationUpdate).
     pub fn builder() -> crate::model::application_snapshot_configuration_update::Builder {
         crate::model::application_snapshot_configuration_update::Builder::default()
     }
@@ -7354,6 +7463,7 @@ impl ApplicationSnapshotConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentPropertyUpdates {
     /// <p>Describes updates to the execution property groups.</p>
+    #[doc(hidden)]
     pub property_groups: std::option::Option<std::vec::Vec<crate::model::PropertyGroup>>,
 }
 impl EnvironmentPropertyUpdates {
@@ -7369,11 +7479,10 @@ impl std::fmt::Debug for EnvironmentPropertyUpdates {
         formatter.finish()
     }
 }
-/// See [`EnvironmentPropertyUpdates`](crate::model::EnvironmentPropertyUpdates)
+/// See [`EnvironmentPropertyUpdates`](crate::model::EnvironmentPropertyUpdates).
 pub mod environment_property_updates {
 
-    /// A builder for [`EnvironmentPropertyUpdates`](crate::model::EnvironmentPropertyUpdates)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentPropertyUpdates`](crate::model::EnvironmentPropertyUpdates).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) property_groups: std::option::Option<std::vec::Vec<crate::model::PropertyGroup>>,
@@ -7398,7 +7507,7 @@ pub mod environment_property_updates {
             self.property_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentPropertyUpdates`](crate::model::EnvironmentPropertyUpdates)
+        /// Consumes the builder and constructs a [`EnvironmentPropertyUpdates`](crate::model::EnvironmentPropertyUpdates).
         pub fn build(self) -> crate::model::EnvironmentPropertyUpdates {
             crate::model::EnvironmentPropertyUpdates {
                 property_groups: self.property_groups,
@@ -7407,7 +7516,7 @@ pub mod environment_property_updates {
     }
 }
 impl EnvironmentPropertyUpdates {
-    /// Creates a new builder-style object to manufacture [`EnvironmentPropertyUpdates`](crate::model::EnvironmentPropertyUpdates)
+    /// Creates a new builder-style object to manufacture [`EnvironmentPropertyUpdates`](crate::model::EnvironmentPropertyUpdates).
     pub fn builder() -> crate::model::environment_property_updates::Builder {
         crate::model::environment_property_updates::Builder::default()
     }
@@ -7418,12 +7527,15 @@ impl EnvironmentPropertyUpdates {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FlinkApplicationConfigurationUpdate {
     /// <p>Describes updates to an application's checkpointing configuration. Checkpointing is the process of persisting application state for fault tolerance.</p>
+    #[doc(hidden)]
     pub checkpoint_configuration_update:
         std::option::Option<crate::model::CheckpointConfigurationUpdate>,
     /// <p>Describes updates to the configuration parameters for Amazon CloudWatch logging for an application.</p>
+    #[doc(hidden)]
     pub monitoring_configuration_update:
         std::option::Option<crate::model::MonitoringConfigurationUpdate>,
     /// <p>Describes updates to the parameters for how an application executes multiple tasks simultaneously.</p>
+    #[doc(hidden)]
     pub parallelism_configuration_update:
         std::option::Option<crate::model::ParallelismConfigurationUpdate>,
 }
@@ -7465,11 +7577,10 @@ impl std::fmt::Debug for FlinkApplicationConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`FlinkApplicationConfigurationUpdate`](crate::model::FlinkApplicationConfigurationUpdate)
+/// See [`FlinkApplicationConfigurationUpdate`](crate::model::FlinkApplicationConfigurationUpdate).
 pub mod flink_application_configuration_update {
 
-    /// A builder for [`FlinkApplicationConfigurationUpdate`](crate::model::FlinkApplicationConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`FlinkApplicationConfigurationUpdate`](crate::model::FlinkApplicationConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) checkpoint_configuration_update:
@@ -7528,7 +7639,7 @@ pub mod flink_application_configuration_update {
             self.parallelism_configuration_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`FlinkApplicationConfigurationUpdate`](crate::model::FlinkApplicationConfigurationUpdate)
+        /// Consumes the builder and constructs a [`FlinkApplicationConfigurationUpdate`](crate::model::FlinkApplicationConfigurationUpdate).
         pub fn build(self) -> crate::model::FlinkApplicationConfigurationUpdate {
             crate::model::FlinkApplicationConfigurationUpdate {
                 checkpoint_configuration_update: self.checkpoint_configuration_update,
@@ -7539,7 +7650,7 @@ pub mod flink_application_configuration_update {
     }
 }
 impl FlinkApplicationConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`FlinkApplicationConfigurationUpdate`](crate::model::FlinkApplicationConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`FlinkApplicationConfigurationUpdate`](crate::model::FlinkApplicationConfigurationUpdate).
     pub fn builder() -> crate::model::flink_application_configuration_update::Builder {
         crate::model::flink_application_configuration_update::Builder::default()
     }
@@ -7550,12 +7661,16 @@ impl FlinkApplicationConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ParallelismConfigurationUpdate {
     /// <p>Describes updates to whether the application uses the default parallelism for the Kinesis Data Analytics service, or if a custom parallelism is used. You must set this property to <code>CUSTOM</code> in order to change your application's <code>AutoScalingEnabled</code>, <code>Parallelism</code>, or <code>ParallelismPerKPU</code> properties.</p>
+    #[doc(hidden)]
     pub configuration_type_update: std::option::Option<crate::model::ConfigurationType>,
     /// <p>Describes updates to the initial number of parallel tasks an application can perform. If <code>AutoScalingEnabled</code> is set to True, then Kinesis Data Analytics can increase the <code>CurrentParallelism</code> value in response to application load. The service can increase <code>CurrentParallelism</code> up to the maximum parallelism, which is <code>ParalellismPerKPU</code> times the maximum KPUs for the application. The maximum KPUs for an application is 32 by default, and can be increased by requesting a limit increase. If application load is reduced, the service will reduce <code>CurrentParallelism</code> down to the <code>Parallelism</code> setting.</p>
+    #[doc(hidden)]
     pub parallelism_update: std::option::Option<i32>,
     /// <p>Describes updates to the number of parallel tasks an application can perform per Kinesis Processing Unit (KPU) used by the application.</p>
+    #[doc(hidden)]
     pub parallelism_per_kpu_update: std::option::Option<i32>,
     /// <p>Describes updates to whether the Kinesis Data Analytics service can increase the parallelism of a Flink-based Kinesis Data Analytics application in response to increased throughput.</p>
+    #[doc(hidden)]
     pub auto_scaling_enabled_update: std::option::Option<bool>,
 }
 impl ParallelismConfigurationUpdate {
@@ -7594,11 +7709,10 @@ impl std::fmt::Debug for ParallelismConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`ParallelismConfigurationUpdate`](crate::model::ParallelismConfigurationUpdate)
+/// See [`ParallelismConfigurationUpdate`](crate::model::ParallelismConfigurationUpdate).
 pub mod parallelism_configuration_update {
 
-    /// A builder for [`ParallelismConfigurationUpdate`](crate::model::ParallelismConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ParallelismConfigurationUpdate`](crate::model::ParallelismConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_type_update: std::option::Option<crate::model::ConfigurationType>,
@@ -7650,7 +7764,7 @@ pub mod parallelism_configuration_update {
             self.auto_scaling_enabled_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParallelismConfigurationUpdate`](crate::model::ParallelismConfigurationUpdate)
+        /// Consumes the builder and constructs a [`ParallelismConfigurationUpdate`](crate::model::ParallelismConfigurationUpdate).
         pub fn build(self) -> crate::model::ParallelismConfigurationUpdate {
             crate::model::ParallelismConfigurationUpdate {
                 configuration_type_update: self.configuration_type_update,
@@ -7662,7 +7776,7 @@ pub mod parallelism_configuration_update {
     }
 }
 impl ParallelismConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`ParallelismConfigurationUpdate`](crate::model::ParallelismConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`ParallelismConfigurationUpdate`](crate::model::ParallelismConfigurationUpdate).
     pub fn builder() -> crate::model::parallelism_configuration_update::Builder {
         crate::model::parallelism_configuration_update::Builder::default()
     }
@@ -7673,10 +7787,13 @@ impl ParallelismConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MonitoringConfigurationUpdate {
     /// <p>Describes updates to whether to use the default CloudWatch logging configuration for an application. You must set this property to <code>CUSTOM</code> in order to set the <code>LogLevel</code> or <code>MetricsLevel</code> parameters.</p>
+    #[doc(hidden)]
     pub configuration_type_update: std::option::Option<crate::model::ConfigurationType>,
     /// <p>Describes updates to the granularity of the CloudWatch Logs for an application. The <code>Parallelism</code> level is not recommended for applications with a Parallelism over 64 due to excessive costs.</p>
+    #[doc(hidden)]
     pub metrics_level_update: std::option::Option<crate::model::MetricsLevel>,
     /// <p>Describes updates to the verbosity of the CloudWatch Logs for an application.</p>
+    #[doc(hidden)]
     pub log_level_update: std::option::Option<crate::model::LogLevel>,
 }
 impl MonitoringConfigurationUpdate {
@@ -7704,11 +7821,10 @@ impl std::fmt::Debug for MonitoringConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`MonitoringConfigurationUpdate`](crate::model::MonitoringConfigurationUpdate)
+/// See [`MonitoringConfigurationUpdate`](crate::model::MonitoringConfigurationUpdate).
 pub mod monitoring_configuration_update {
 
-    /// A builder for [`MonitoringConfigurationUpdate`](crate::model::MonitoringConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`MonitoringConfigurationUpdate`](crate::model::MonitoringConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_type_update: std::option::Option<crate::model::ConfigurationType>,
@@ -7755,7 +7871,7 @@ pub mod monitoring_configuration_update {
             self.log_level_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`MonitoringConfigurationUpdate`](crate::model::MonitoringConfigurationUpdate)
+        /// Consumes the builder and constructs a [`MonitoringConfigurationUpdate`](crate::model::MonitoringConfigurationUpdate).
         pub fn build(self) -> crate::model::MonitoringConfigurationUpdate {
             crate::model::MonitoringConfigurationUpdate {
                 configuration_type_update: self.configuration_type_update,
@@ -7766,7 +7882,7 @@ pub mod monitoring_configuration_update {
     }
 }
 impl MonitoringConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`MonitoringConfigurationUpdate`](crate::model::MonitoringConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`MonitoringConfigurationUpdate`](crate::model::MonitoringConfigurationUpdate).
     pub fn builder() -> crate::model::monitoring_configuration_update::Builder {
         crate::model::monitoring_configuration_update::Builder::default()
     }
@@ -7784,18 +7900,22 @@ pub struct CheckpointConfigurationUpdate {
     /// <li> <p> <b>MinPauseBetweenCheckpoints:</b> 5000</p> </li>
     /// </ul>
     /// </note>
+    #[doc(hidden)]
     pub configuration_type_update: std::option::Option<crate::model::ConfigurationType>,
     /// <p>Describes updates to whether checkpointing is enabled for an application.</p> <note>
     /// <p>If <code>CheckpointConfiguration.ConfigurationType</code> is <code>DEFAULT</code>, the application will use a <code>CheckpointingEnabled</code> value of <code>true</code>, even if this value is set to another value using this API or in application code.</p>
     /// </note>
+    #[doc(hidden)]
     pub checkpointing_enabled_update: std::option::Option<bool>,
     /// <p>Describes updates to the interval in milliseconds between checkpoint operations.</p> <note>
     /// <p>If <code>CheckpointConfiguration.ConfigurationType</code> is <code>DEFAULT</code>, the application will use a <code>CheckpointInterval</code> value of 60000, even if this value is set to another value using this API or in application code.</p>
     /// </note>
+    #[doc(hidden)]
     pub checkpoint_interval_update: std::option::Option<i64>,
     /// <p>Describes updates to the minimum time in milliseconds after a checkpoint operation completes that a new checkpoint operation can start.</p> <note>
     /// <p>If <code>CheckpointConfiguration.ConfigurationType</code> is <code>DEFAULT</code>, the application will use a <code>MinPauseBetweenCheckpoints</code> value of 5000, even if this value is set using this API or in application code.</p>
     /// </note>
+    #[doc(hidden)]
     pub min_pause_between_checkpoints_update: std::option::Option<i64>,
 }
 impl CheckpointConfigurationUpdate {
@@ -7850,11 +7970,10 @@ impl std::fmt::Debug for CheckpointConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`CheckpointConfigurationUpdate`](crate::model::CheckpointConfigurationUpdate)
+/// See [`CheckpointConfigurationUpdate`](crate::model::CheckpointConfigurationUpdate).
 pub mod checkpoint_configuration_update {
 
-    /// A builder for [`CheckpointConfigurationUpdate`](crate::model::CheckpointConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`CheckpointConfigurationUpdate`](crate::model::CheckpointConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_type_update: std::option::Option<crate::model::ConfigurationType>,
@@ -7938,7 +8057,7 @@ pub mod checkpoint_configuration_update {
             self.min_pause_between_checkpoints_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`CheckpointConfigurationUpdate`](crate::model::CheckpointConfigurationUpdate)
+        /// Consumes the builder and constructs a [`CheckpointConfigurationUpdate`](crate::model::CheckpointConfigurationUpdate).
         pub fn build(self) -> crate::model::CheckpointConfigurationUpdate {
             crate::model::CheckpointConfigurationUpdate {
                 configuration_type_update: self.configuration_type_update,
@@ -7950,7 +8069,7 @@ pub mod checkpoint_configuration_update {
     }
 }
 impl CheckpointConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`CheckpointConfigurationUpdate`](crate::model::CheckpointConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`CheckpointConfigurationUpdate`](crate::model::CheckpointConfigurationUpdate).
     pub fn builder() -> crate::model::checkpoint_configuration_update::Builder {
         crate::model::checkpoint_configuration_update::Builder::default()
     }
@@ -7961,8 +8080,10 @@ impl CheckpointConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationCodeConfigurationUpdate {
     /// <p>Describes updates to the code content type.</p>
+    #[doc(hidden)]
     pub code_content_type_update: std::option::Option<crate::model::CodeContentType>,
     /// <p>Describes updates to the code content of an application.</p>
+    #[doc(hidden)]
     pub code_content_update: std::option::Option<crate::model::CodeContentUpdate>,
 }
 impl ApplicationCodeConfigurationUpdate {
@@ -7983,11 +8104,10 @@ impl std::fmt::Debug for ApplicationCodeConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`ApplicationCodeConfigurationUpdate`](crate::model::ApplicationCodeConfigurationUpdate)
+/// See [`ApplicationCodeConfigurationUpdate`](crate::model::ApplicationCodeConfigurationUpdate).
 pub mod application_code_configuration_update {
 
-    /// A builder for [`ApplicationCodeConfigurationUpdate`](crate::model::ApplicationCodeConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationCodeConfigurationUpdate`](crate::model::ApplicationCodeConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code_content_type_update: std::option::Option<crate::model::CodeContentType>,
@@ -8020,7 +8140,7 @@ pub mod application_code_configuration_update {
             self.code_content_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationCodeConfigurationUpdate`](crate::model::ApplicationCodeConfigurationUpdate)
+        /// Consumes the builder and constructs a [`ApplicationCodeConfigurationUpdate`](crate::model::ApplicationCodeConfigurationUpdate).
         pub fn build(self) -> crate::model::ApplicationCodeConfigurationUpdate {
             crate::model::ApplicationCodeConfigurationUpdate {
                 code_content_type_update: self.code_content_type_update,
@@ -8030,7 +8150,7 @@ pub mod application_code_configuration_update {
     }
 }
 impl ApplicationCodeConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`ApplicationCodeConfigurationUpdate`](crate::model::ApplicationCodeConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`ApplicationCodeConfigurationUpdate`](crate::model::ApplicationCodeConfigurationUpdate).
     pub fn builder() -> crate::model::application_code_configuration_update::Builder {
         crate::model::application_code_configuration_update::Builder::default()
     }
@@ -8041,10 +8161,13 @@ impl ApplicationCodeConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeContentUpdate {
     /// <p>Describes an update to the text code for an application.</p>
+    #[doc(hidden)]
     pub text_content_update: std::option::Option<std::string::String>,
     /// <p>Describes an update to the zipped code for an application.</p>
+    #[doc(hidden)]
     pub zip_file_content_update: std::option::Option<aws_smithy_types::Blob>,
     /// <p>Describes an update to the location of code for an application.</p>
+    #[doc(hidden)]
     pub s3_content_location_update: std::option::Option<crate::model::S3ContentLocationUpdate>,
 }
 impl CodeContentUpdate {
@@ -8075,11 +8198,10 @@ impl std::fmt::Debug for CodeContentUpdate {
         formatter.finish()
     }
 }
-/// See [`CodeContentUpdate`](crate::model::CodeContentUpdate)
+/// See [`CodeContentUpdate`](crate::model::CodeContentUpdate).
 pub mod code_content_update {
 
-    /// A builder for [`CodeContentUpdate`](crate::model::CodeContentUpdate)
-    #[non_exhaustive]
+    /// A builder for [`CodeContentUpdate`](crate::model::CodeContentUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text_content_update: std::option::Option<std::string::String>,
@@ -8130,7 +8252,7 @@ pub mod code_content_update {
             self.s3_content_location_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeContentUpdate`](crate::model::CodeContentUpdate)
+        /// Consumes the builder and constructs a [`CodeContentUpdate`](crate::model::CodeContentUpdate).
         pub fn build(self) -> crate::model::CodeContentUpdate {
             crate::model::CodeContentUpdate {
                 text_content_update: self.text_content_update,
@@ -8141,7 +8263,7 @@ pub mod code_content_update {
     }
 }
 impl CodeContentUpdate {
-    /// Creates a new builder-style object to manufacture [`CodeContentUpdate`](crate::model::CodeContentUpdate)
+    /// Creates a new builder-style object to manufacture [`CodeContentUpdate`](crate::model::CodeContentUpdate).
     pub fn builder() -> crate::model::code_content_update::Builder {
         crate::model::code_content_update::Builder::default()
     }
@@ -8152,10 +8274,13 @@ impl CodeContentUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ContentLocationUpdate {
     /// <p>The new Amazon Resource Name (ARN) for the S3 bucket containing the application code.</p>
+    #[doc(hidden)]
     pub bucket_arn_update: std::option::Option<std::string::String>,
     /// <p>The new file key for the object containing the application code.</p>
+    #[doc(hidden)]
     pub file_key_update: std::option::Option<std::string::String>,
     /// <p>The new version of the object containing the application code.</p>
+    #[doc(hidden)]
     pub object_version_update: std::option::Option<std::string::String>,
 }
 impl S3ContentLocationUpdate {
@@ -8181,11 +8306,10 @@ impl std::fmt::Debug for S3ContentLocationUpdate {
         formatter.finish()
     }
 }
-/// See [`S3ContentLocationUpdate`](crate::model::S3ContentLocationUpdate)
+/// See [`S3ContentLocationUpdate`](crate::model::S3ContentLocationUpdate).
 pub mod s3_content_location_update {
 
-    /// A builder for [`S3ContentLocationUpdate`](crate::model::S3ContentLocationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`S3ContentLocationUpdate`](crate::model::S3ContentLocationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn_update: std::option::Option<std::string::String>,
@@ -8232,7 +8356,7 @@ pub mod s3_content_location_update {
             self.object_version_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ContentLocationUpdate`](crate::model::S3ContentLocationUpdate)
+        /// Consumes the builder and constructs a [`S3ContentLocationUpdate`](crate::model::S3ContentLocationUpdate).
         pub fn build(self) -> crate::model::S3ContentLocationUpdate {
             crate::model::S3ContentLocationUpdate {
                 bucket_arn_update: self.bucket_arn_update,
@@ -8243,7 +8367,7 @@ pub mod s3_content_location_update {
     }
 }
 impl S3ContentLocationUpdate {
-    /// Creates a new builder-style object to manufacture [`S3ContentLocationUpdate`](crate::model::S3ContentLocationUpdate)
+    /// Creates a new builder-style object to manufacture [`S3ContentLocationUpdate`](crate::model::S3ContentLocationUpdate).
     pub fn builder() -> crate::model::s3_content_location_update::Builder {
         crate::model::s3_content_location_update::Builder::default()
     }
@@ -8254,10 +8378,13 @@ impl S3ContentLocationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SqlApplicationConfigurationUpdate {
     /// <p>The array of <code>InputUpdate</code> objects describing the new input streams used by the application.</p>
+    #[doc(hidden)]
     pub input_updates: std::option::Option<std::vec::Vec<crate::model::InputUpdate>>,
     /// <p>The array of <code>OutputUpdate</code> objects describing the new destination streams used by the application.</p>
+    #[doc(hidden)]
     pub output_updates: std::option::Option<std::vec::Vec<crate::model::OutputUpdate>>,
     /// <p>The array of <code>ReferenceDataSourceUpdate</code> objects describing the new reference data sources used by the application.</p>
+    #[doc(hidden)]
     pub reference_data_source_updates:
         std::option::Option<std::vec::Vec<crate::model::ReferenceDataSourceUpdate>>,
 }
@@ -8289,11 +8416,10 @@ impl std::fmt::Debug for SqlApplicationConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`SqlApplicationConfigurationUpdate`](crate::model::SqlApplicationConfigurationUpdate)
+/// See [`SqlApplicationConfigurationUpdate`](crate::model::SqlApplicationConfigurationUpdate).
 pub mod sql_application_configuration_update {
 
-    /// A builder for [`SqlApplicationConfigurationUpdate`](crate::model::SqlApplicationConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`SqlApplicationConfigurationUpdate`](crate::model::SqlApplicationConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_updates: std::option::Option<std::vec::Vec<crate::model::InputUpdate>>,
@@ -8362,7 +8488,7 @@ pub mod sql_application_configuration_update {
             self.reference_data_source_updates = input;
             self
         }
-        /// Consumes the builder and constructs a [`SqlApplicationConfigurationUpdate`](crate::model::SqlApplicationConfigurationUpdate)
+        /// Consumes the builder and constructs a [`SqlApplicationConfigurationUpdate`](crate::model::SqlApplicationConfigurationUpdate).
         pub fn build(self) -> crate::model::SqlApplicationConfigurationUpdate {
             crate::model::SqlApplicationConfigurationUpdate {
                 input_updates: self.input_updates,
@@ -8373,7 +8499,7 @@ pub mod sql_application_configuration_update {
     }
 }
 impl SqlApplicationConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`SqlApplicationConfigurationUpdate`](crate::model::SqlApplicationConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`SqlApplicationConfigurationUpdate`](crate::model::SqlApplicationConfigurationUpdate).
     pub fn builder() -> crate::model::sql_application_configuration_update::Builder {
         crate::model::sql_application_configuration_update::Builder::default()
     }
@@ -8384,13 +8510,17 @@ impl SqlApplicationConfigurationUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReferenceDataSourceUpdate {
     /// <p>The ID of the reference data source that is being updated. You can use the <code>DescribeApplication</code> operation to get this value.</p>
+    #[doc(hidden)]
     pub reference_id: std::option::Option<std::string::String>,
     /// <p>The in-application table name that is created by this update.</p>
+    #[doc(hidden)]
     pub table_name_update: std::option::Option<std::string::String>,
     /// <p>Describes the S3 bucket name, object key name, and IAM role that Kinesis Data Analytics can assume to read the Amazon S3 object on your behalf and populate the in-application reference table.</p>
+    #[doc(hidden)]
     pub s3_reference_data_source_update:
         std::option::Option<crate::model::S3ReferenceDataSourceUpdate>,
     /// <p>Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream. </p>
+    #[doc(hidden)]
     pub reference_schema_update: std::option::Option<crate::model::SourceSchema>,
 }
 impl ReferenceDataSourceUpdate {
@@ -8426,11 +8556,10 @@ impl std::fmt::Debug for ReferenceDataSourceUpdate {
         formatter.finish()
     }
 }
-/// See [`ReferenceDataSourceUpdate`](crate::model::ReferenceDataSourceUpdate)
+/// See [`ReferenceDataSourceUpdate`](crate::model::ReferenceDataSourceUpdate).
 pub mod reference_data_source_update {
 
-    /// A builder for [`ReferenceDataSourceUpdate`](crate::model::ReferenceDataSourceUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ReferenceDataSourceUpdate`](crate::model::ReferenceDataSourceUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reference_id: std::option::Option<std::string::String>,
@@ -8492,7 +8621,7 @@ pub mod reference_data_source_update {
             self.reference_schema_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReferenceDataSourceUpdate`](crate::model::ReferenceDataSourceUpdate)
+        /// Consumes the builder and constructs a [`ReferenceDataSourceUpdate`](crate::model::ReferenceDataSourceUpdate).
         pub fn build(self) -> crate::model::ReferenceDataSourceUpdate {
             crate::model::ReferenceDataSourceUpdate {
                 reference_id: self.reference_id,
@@ -8504,7 +8633,7 @@ pub mod reference_data_source_update {
     }
 }
 impl ReferenceDataSourceUpdate {
-    /// Creates a new builder-style object to manufacture [`ReferenceDataSourceUpdate`](crate::model::ReferenceDataSourceUpdate)
+    /// Creates a new builder-style object to manufacture [`ReferenceDataSourceUpdate`](crate::model::ReferenceDataSourceUpdate).
     pub fn builder() -> crate::model::reference_data_source_update::Builder {
         crate::model::reference_data_source_update::Builder::default()
     }
@@ -8515,8 +8644,10 @@ impl ReferenceDataSourceUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ReferenceDataSourceUpdate {
     /// <p>The Amazon Resource Name (ARN) of the S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_arn_update: std::option::Option<std::string::String>,
     /// <p>The object key name.</p>
+    #[doc(hidden)]
     pub file_key_update: std::option::Option<std::string::String>,
 }
 impl S3ReferenceDataSourceUpdate {
@@ -8537,11 +8668,10 @@ impl std::fmt::Debug for S3ReferenceDataSourceUpdate {
         formatter.finish()
     }
 }
-/// See [`S3ReferenceDataSourceUpdate`](crate::model::S3ReferenceDataSourceUpdate)
+/// See [`S3ReferenceDataSourceUpdate`](crate::model::S3ReferenceDataSourceUpdate).
 pub mod s3_reference_data_source_update {
 
-    /// A builder for [`S3ReferenceDataSourceUpdate`](crate::model::S3ReferenceDataSourceUpdate)
-    #[non_exhaustive]
+    /// A builder for [`S3ReferenceDataSourceUpdate`](crate::model::S3ReferenceDataSourceUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn_update: std::option::Option<std::string::String>,
@@ -8574,7 +8704,7 @@ pub mod s3_reference_data_source_update {
             self.file_key_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ReferenceDataSourceUpdate`](crate::model::S3ReferenceDataSourceUpdate)
+        /// Consumes the builder and constructs a [`S3ReferenceDataSourceUpdate`](crate::model::S3ReferenceDataSourceUpdate).
         pub fn build(self) -> crate::model::S3ReferenceDataSourceUpdate {
             crate::model::S3ReferenceDataSourceUpdate {
                 bucket_arn_update: self.bucket_arn_update,
@@ -8584,7 +8714,7 @@ pub mod s3_reference_data_source_update {
     }
 }
 impl S3ReferenceDataSourceUpdate {
-    /// Creates a new builder-style object to manufacture [`S3ReferenceDataSourceUpdate`](crate::model::S3ReferenceDataSourceUpdate)
+    /// Creates a new builder-style object to manufacture [`S3ReferenceDataSourceUpdate`](crate::model::S3ReferenceDataSourceUpdate).
     pub fn builder() -> crate::model::s3_reference_data_source_update::Builder {
         crate::model::s3_reference_data_source_update::Builder::default()
     }
@@ -8595,18 +8725,24 @@ impl S3ReferenceDataSourceUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputUpdate {
     /// <p>Identifies the specific output configuration that you want to update.</p>
+    #[doc(hidden)]
     pub output_id: std::option::Option<std::string::String>,
     /// <p>If you want to specify a different in-application stream for this output configuration, use this field to specify the new in-application stream name.</p>
+    #[doc(hidden)]
     pub name_update: std::option::Option<std::string::String>,
     /// <p>Describes a Kinesis data stream as the destination for the output.</p>
+    #[doc(hidden)]
     pub kinesis_streams_output_update:
         std::option::Option<crate::model::KinesisStreamsOutputUpdate>,
     /// <p>Describes a Kinesis Data Firehose delivery stream as the destination for the output.</p>
+    #[doc(hidden)]
     pub kinesis_firehose_output_update:
         std::option::Option<crate::model::KinesisFirehoseOutputUpdate>,
     /// <p>Describes an Amazon Lambda function as the destination for the output.</p>
+    #[doc(hidden)]
     pub lambda_output_update: std::option::Option<crate::model::LambdaOutputUpdate>,
     /// <p>Describes the data format when records are written to the destination. </p>
+    #[doc(hidden)]
     pub destination_schema_update: std::option::Option<crate::model::DestinationSchema>,
 }
 impl OutputUpdate {
@@ -8659,11 +8795,10 @@ impl std::fmt::Debug for OutputUpdate {
         formatter.finish()
     }
 }
-/// See [`OutputUpdate`](crate::model::OutputUpdate)
+/// See [`OutputUpdate`](crate::model::OutputUpdate).
 pub mod output_update {
 
-    /// A builder for [`OutputUpdate`](crate::model::OutputUpdate)
-    #[non_exhaustive]
+    /// A builder for [`OutputUpdate`](crate::model::OutputUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) output_id: std::option::Option<std::string::String>,
@@ -8754,7 +8889,7 @@ pub mod output_update {
             self.destination_schema_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputUpdate`](crate::model::OutputUpdate)
+        /// Consumes the builder and constructs a [`OutputUpdate`](crate::model::OutputUpdate).
         pub fn build(self) -> crate::model::OutputUpdate {
             crate::model::OutputUpdate {
                 output_id: self.output_id,
@@ -8768,7 +8903,7 @@ pub mod output_update {
     }
 }
 impl OutputUpdate {
-    /// Creates a new builder-style object to manufacture [`OutputUpdate`](crate::model::OutputUpdate)
+    /// Creates a new builder-style object to manufacture [`OutputUpdate`](crate::model::OutputUpdate).
     pub fn builder() -> crate::model::output_update::Builder {
         crate::model::output_update::Builder::default()
     }
@@ -8781,6 +8916,7 @@ pub struct LambdaOutputUpdate {
     /// <p>The Amazon Resource Name (ARN) of the destination Amazon Lambda function.</p> <note>
     /// <p>To specify an earlier version of the Lambda function than the latest, include the Lambda function version in the Lambda function ARN. For more information about Lambda ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda">Example ARNs: Amazon Lambda</a> </p>
     /// </note>
+    #[doc(hidden)]
     pub resource_arn_update: std::option::Option<std::string::String>,
 }
 impl LambdaOutputUpdate {
@@ -8798,11 +8934,10 @@ impl std::fmt::Debug for LambdaOutputUpdate {
         formatter.finish()
     }
 }
-/// See [`LambdaOutputUpdate`](crate::model::LambdaOutputUpdate)
+/// See [`LambdaOutputUpdate`](crate::model::LambdaOutputUpdate).
 pub mod lambda_output_update {
 
-    /// A builder for [`LambdaOutputUpdate`](crate::model::LambdaOutputUpdate)
-    #[non_exhaustive]
+    /// A builder for [`LambdaOutputUpdate`](crate::model::LambdaOutputUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn_update: std::option::Option<std::string::String>,
@@ -8825,7 +8960,7 @@ pub mod lambda_output_update {
             self.resource_arn_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaOutputUpdate`](crate::model::LambdaOutputUpdate)
+        /// Consumes the builder and constructs a [`LambdaOutputUpdate`](crate::model::LambdaOutputUpdate).
         pub fn build(self) -> crate::model::LambdaOutputUpdate {
             crate::model::LambdaOutputUpdate {
                 resource_arn_update: self.resource_arn_update,
@@ -8834,7 +8969,7 @@ pub mod lambda_output_update {
     }
 }
 impl LambdaOutputUpdate {
-    /// Creates a new builder-style object to manufacture [`LambdaOutputUpdate`](crate::model::LambdaOutputUpdate)
+    /// Creates a new builder-style object to manufacture [`LambdaOutputUpdate`](crate::model::LambdaOutputUpdate).
     pub fn builder() -> crate::model::lambda_output_update::Builder {
         crate::model::lambda_output_update::Builder::default()
     }
@@ -8845,6 +8980,7 @@ impl LambdaOutputUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisFirehoseOutputUpdate {
     /// <p>The Amazon Resource Name (ARN) of the delivery stream to write to. </p>
+    #[doc(hidden)]
     pub resource_arn_update: std::option::Option<std::string::String>,
 }
 impl KinesisFirehoseOutputUpdate {
@@ -8860,11 +8996,10 @@ impl std::fmt::Debug for KinesisFirehoseOutputUpdate {
         formatter.finish()
     }
 }
-/// See [`KinesisFirehoseOutputUpdate`](crate::model::KinesisFirehoseOutputUpdate)
+/// See [`KinesisFirehoseOutputUpdate`](crate::model::KinesisFirehoseOutputUpdate).
 pub mod kinesis_firehose_output_update {
 
-    /// A builder for [`KinesisFirehoseOutputUpdate`](crate::model::KinesisFirehoseOutputUpdate)
-    #[non_exhaustive]
+    /// A builder for [`KinesisFirehoseOutputUpdate`](crate::model::KinesisFirehoseOutputUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn_update: std::option::Option<std::string::String>,
@@ -8883,7 +9018,7 @@ pub mod kinesis_firehose_output_update {
             self.resource_arn_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisFirehoseOutputUpdate`](crate::model::KinesisFirehoseOutputUpdate)
+        /// Consumes the builder and constructs a [`KinesisFirehoseOutputUpdate`](crate::model::KinesisFirehoseOutputUpdate).
         pub fn build(self) -> crate::model::KinesisFirehoseOutputUpdate {
             crate::model::KinesisFirehoseOutputUpdate {
                 resource_arn_update: self.resource_arn_update,
@@ -8892,7 +9027,7 @@ pub mod kinesis_firehose_output_update {
     }
 }
 impl KinesisFirehoseOutputUpdate {
-    /// Creates a new builder-style object to manufacture [`KinesisFirehoseOutputUpdate`](crate::model::KinesisFirehoseOutputUpdate)
+    /// Creates a new builder-style object to manufacture [`KinesisFirehoseOutputUpdate`](crate::model::KinesisFirehoseOutputUpdate).
     pub fn builder() -> crate::model::kinesis_firehose_output_update::Builder {
         crate::model::kinesis_firehose_output_update::Builder::default()
     }
@@ -8903,6 +9038,7 @@ impl KinesisFirehoseOutputUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisStreamsOutputUpdate {
     /// <p>The Amazon Resource Name (ARN) of the Kinesis data stream where you want to write the output.</p>
+    #[doc(hidden)]
     pub resource_arn_update: std::option::Option<std::string::String>,
 }
 impl KinesisStreamsOutputUpdate {
@@ -8918,11 +9054,10 @@ impl std::fmt::Debug for KinesisStreamsOutputUpdate {
         formatter.finish()
     }
 }
-/// See [`KinesisStreamsOutputUpdate`](crate::model::KinesisStreamsOutputUpdate)
+/// See [`KinesisStreamsOutputUpdate`](crate::model::KinesisStreamsOutputUpdate).
 pub mod kinesis_streams_output_update {
 
-    /// A builder for [`KinesisStreamsOutputUpdate`](crate::model::KinesisStreamsOutputUpdate)
-    #[non_exhaustive]
+    /// A builder for [`KinesisStreamsOutputUpdate`](crate::model::KinesisStreamsOutputUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn_update: std::option::Option<std::string::String>,
@@ -8941,7 +9076,7 @@ pub mod kinesis_streams_output_update {
             self.resource_arn_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisStreamsOutputUpdate`](crate::model::KinesisStreamsOutputUpdate)
+        /// Consumes the builder and constructs a [`KinesisStreamsOutputUpdate`](crate::model::KinesisStreamsOutputUpdate).
         pub fn build(self) -> crate::model::KinesisStreamsOutputUpdate {
             crate::model::KinesisStreamsOutputUpdate {
                 resource_arn_update: self.resource_arn_update,
@@ -8950,7 +9085,7 @@ pub mod kinesis_streams_output_update {
     }
 }
 impl KinesisStreamsOutputUpdate {
-    /// Creates a new builder-style object to manufacture [`KinesisStreamsOutputUpdate`](crate::model::KinesisStreamsOutputUpdate)
+    /// Creates a new builder-style object to manufacture [`KinesisStreamsOutputUpdate`](crate::model::KinesisStreamsOutputUpdate).
     pub fn builder() -> crate::model::kinesis_streams_output_update::Builder {
         crate::model::kinesis_streams_output_update::Builder::default()
     }
@@ -8961,20 +9096,27 @@ impl KinesisStreamsOutputUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputUpdate {
     /// <p>The input ID of the application input to be updated.</p>
+    #[doc(hidden)]
     pub input_id: std::option::Option<std::string::String>,
     /// <p>The name prefix for in-application streams that Kinesis Data Analytics creates for the specific streaming source.</p>
+    #[doc(hidden)]
     pub name_prefix_update: std::option::Option<std::string::String>,
     /// <p>Describes updates to an <code>InputProcessingConfiguration</code>.</p>
+    #[doc(hidden)]
     pub input_processing_configuration_update:
         std::option::Option<crate::model::InputProcessingConfigurationUpdate>,
     /// <p>If a Kinesis data stream is the streaming source to be updated, provides an updated stream Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub kinesis_streams_input_update: std::option::Option<crate::model::KinesisStreamsInputUpdate>,
     /// <p>If a Kinesis Data Firehose delivery stream is the streaming source to be updated, provides an updated stream ARN.</p>
+    #[doc(hidden)]
     pub kinesis_firehose_input_update:
         std::option::Option<crate::model::KinesisFirehoseInputUpdate>,
     /// <p>Describes the data format on the streaming source, and how record elements on the streaming source map to columns of the in-application stream that is created.</p>
+    #[doc(hidden)]
     pub input_schema_update: std::option::Option<crate::model::InputSchemaUpdate>,
     /// <p>Describes the parallelism updates (the number of in-application streams Kinesis Data Analytics creates for the specific streaming source).</p>
+    #[doc(hidden)]
     pub input_parallelism_update: std::option::Option<crate::model::InputParallelismUpdate>,
 }
 impl InputUpdate {
@@ -9037,11 +9179,10 @@ impl std::fmt::Debug for InputUpdate {
         formatter.finish()
     }
 }
-/// See [`InputUpdate`](crate::model::InputUpdate)
+/// See [`InputUpdate`](crate::model::InputUpdate).
 pub mod input_update {
 
-    /// A builder for [`InputUpdate`](crate::model::InputUpdate)
-    #[non_exhaustive]
+    /// A builder for [`InputUpdate`](crate::model::InputUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_id: std::option::Option<std::string::String>,
@@ -9157,7 +9298,7 @@ pub mod input_update {
             self.input_parallelism_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputUpdate`](crate::model::InputUpdate)
+        /// Consumes the builder and constructs a [`InputUpdate`](crate::model::InputUpdate).
         pub fn build(self) -> crate::model::InputUpdate {
             crate::model::InputUpdate {
                 input_id: self.input_id,
@@ -9172,7 +9313,7 @@ pub mod input_update {
     }
 }
 impl InputUpdate {
-    /// Creates a new builder-style object to manufacture [`InputUpdate`](crate::model::InputUpdate)
+    /// Creates a new builder-style object to manufacture [`InputUpdate`](crate::model::InputUpdate).
     pub fn builder() -> crate::model::input_update::Builder {
         crate::model::input_update::Builder::default()
     }
@@ -9183,6 +9324,7 @@ impl InputUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputParallelismUpdate {
     /// <p>The number of in-application streams to create for the specified streaming source.</p>
+    #[doc(hidden)]
     pub count_update: std::option::Option<i32>,
 }
 impl InputParallelismUpdate {
@@ -9198,11 +9340,10 @@ impl std::fmt::Debug for InputParallelismUpdate {
         formatter.finish()
     }
 }
-/// See [`InputParallelismUpdate`](crate::model::InputParallelismUpdate)
+/// See [`InputParallelismUpdate`](crate::model::InputParallelismUpdate).
 pub mod input_parallelism_update {
 
-    /// A builder for [`InputParallelismUpdate`](crate::model::InputParallelismUpdate)
-    #[non_exhaustive]
+    /// A builder for [`InputParallelismUpdate`](crate::model::InputParallelismUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) count_update: std::option::Option<i32>,
@@ -9218,7 +9359,7 @@ pub mod input_parallelism_update {
             self.count_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputParallelismUpdate`](crate::model::InputParallelismUpdate)
+        /// Consumes the builder and constructs a [`InputParallelismUpdate`](crate::model::InputParallelismUpdate).
         pub fn build(self) -> crate::model::InputParallelismUpdate {
             crate::model::InputParallelismUpdate {
                 count_update: self.count_update,
@@ -9227,7 +9368,7 @@ pub mod input_parallelism_update {
     }
 }
 impl InputParallelismUpdate {
-    /// Creates a new builder-style object to manufacture [`InputParallelismUpdate`](crate::model::InputParallelismUpdate)
+    /// Creates a new builder-style object to manufacture [`InputParallelismUpdate`](crate::model::InputParallelismUpdate).
     pub fn builder() -> crate::model::input_parallelism_update::Builder {
         crate::model::input_parallelism_update::Builder::default()
     }
@@ -9238,10 +9379,13 @@ impl InputParallelismUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputSchemaUpdate {
     /// <p>Specifies the format of the records on the streaming source.</p>
+    #[doc(hidden)]
     pub record_format_update: std::option::Option<crate::model::RecordFormat>,
     /// <p>Specifies the encoding of the records in the streaming source; for example, UTF-8.</p>
+    #[doc(hidden)]
     pub record_encoding_update: std::option::Option<std::string::String>,
     /// <p>A list of <code>RecordColumn</code> objects. Each object describes the mapping of the streaming source element to the corresponding column in the in-application stream.</p>
+    #[doc(hidden)]
     pub record_column_updates: std::option::Option<std::vec::Vec<crate::model::RecordColumn>>,
 }
 impl InputSchemaUpdate {
@@ -9267,11 +9411,10 @@ impl std::fmt::Debug for InputSchemaUpdate {
         formatter.finish()
     }
 }
-/// See [`InputSchemaUpdate`](crate::model::InputSchemaUpdate)
+/// See [`InputSchemaUpdate`](crate::model::InputSchemaUpdate).
 pub mod input_schema_update {
 
-    /// A builder for [`InputSchemaUpdate`](crate::model::InputSchemaUpdate)
-    #[non_exhaustive]
+    /// A builder for [`InputSchemaUpdate`](crate::model::InputSchemaUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) record_format_update: std::option::Option<crate::model::RecordFormat>,
@@ -9325,7 +9468,7 @@ pub mod input_schema_update {
             self.record_column_updates = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputSchemaUpdate`](crate::model::InputSchemaUpdate)
+        /// Consumes the builder and constructs a [`InputSchemaUpdate`](crate::model::InputSchemaUpdate).
         pub fn build(self) -> crate::model::InputSchemaUpdate {
             crate::model::InputSchemaUpdate {
                 record_format_update: self.record_format_update,
@@ -9336,7 +9479,7 @@ pub mod input_schema_update {
     }
 }
 impl InputSchemaUpdate {
-    /// Creates a new builder-style object to manufacture [`InputSchemaUpdate`](crate::model::InputSchemaUpdate)
+    /// Creates a new builder-style object to manufacture [`InputSchemaUpdate`](crate::model::InputSchemaUpdate).
     pub fn builder() -> crate::model::input_schema_update::Builder {
         crate::model::input_schema_update::Builder::default()
     }
@@ -9347,6 +9490,7 @@ impl InputSchemaUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisFirehoseInputUpdate {
     /// <p>The Amazon Resource Name (ARN) of the input delivery stream to read.</p>
+    #[doc(hidden)]
     pub resource_arn_update: std::option::Option<std::string::String>,
 }
 impl KinesisFirehoseInputUpdate {
@@ -9362,11 +9506,10 @@ impl std::fmt::Debug for KinesisFirehoseInputUpdate {
         formatter.finish()
     }
 }
-/// See [`KinesisFirehoseInputUpdate`](crate::model::KinesisFirehoseInputUpdate)
+/// See [`KinesisFirehoseInputUpdate`](crate::model::KinesisFirehoseInputUpdate).
 pub mod kinesis_firehose_input_update {
 
-    /// A builder for [`KinesisFirehoseInputUpdate`](crate::model::KinesisFirehoseInputUpdate)
-    #[non_exhaustive]
+    /// A builder for [`KinesisFirehoseInputUpdate`](crate::model::KinesisFirehoseInputUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn_update: std::option::Option<std::string::String>,
@@ -9385,7 +9528,7 @@ pub mod kinesis_firehose_input_update {
             self.resource_arn_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisFirehoseInputUpdate`](crate::model::KinesisFirehoseInputUpdate)
+        /// Consumes the builder and constructs a [`KinesisFirehoseInputUpdate`](crate::model::KinesisFirehoseInputUpdate).
         pub fn build(self) -> crate::model::KinesisFirehoseInputUpdate {
             crate::model::KinesisFirehoseInputUpdate {
                 resource_arn_update: self.resource_arn_update,
@@ -9394,7 +9537,7 @@ pub mod kinesis_firehose_input_update {
     }
 }
 impl KinesisFirehoseInputUpdate {
-    /// Creates a new builder-style object to manufacture [`KinesisFirehoseInputUpdate`](crate::model::KinesisFirehoseInputUpdate)
+    /// Creates a new builder-style object to manufacture [`KinesisFirehoseInputUpdate`](crate::model::KinesisFirehoseInputUpdate).
     pub fn builder() -> crate::model::kinesis_firehose_input_update::Builder {
         crate::model::kinesis_firehose_input_update::Builder::default()
     }
@@ -9405,6 +9548,7 @@ impl KinesisFirehoseInputUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisStreamsInputUpdate {
     /// <p>The Amazon Resource Name (ARN) of the input Kinesis data stream to read.</p>
+    #[doc(hidden)]
     pub resource_arn_update: std::option::Option<std::string::String>,
 }
 impl KinesisStreamsInputUpdate {
@@ -9420,11 +9564,10 @@ impl std::fmt::Debug for KinesisStreamsInputUpdate {
         formatter.finish()
     }
 }
-/// See [`KinesisStreamsInputUpdate`](crate::model::KinesisStreamsInputUpdate)
+/// See [`KinesisStreamsInputUpdate`](crate::model::KinesisStreamsInputUpdate).
 pub mod kinesis_streams_input_update {
 
-    /// A builder for [`KinesisStreamsInputUpdate`](crate::model::KinesisStreamsInputUpdate)
-    #[non_exhaustive]
+    /// A builder for [`KinesisStreamsInputUpdate`](crate::model::KinesisStreamsInputUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn_update: std::option::Option<std::string::String>,
@@ -9443,7 +9586,7 @@ pub mod kinesis_streams_input_update {
             self.resource_arn_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisStreamsInputUpdate`](crate::model::KinesisStreamsInputUpdate)
+        /// Consumes the builder and constructs a [`KinesisStreamsInputUpdate`](crate::model::KinesisStreamsInputUpdate).
         pub fn build(self) -> crate::model::KinesisStreamsInputUpdate {
             crate::model::KinesisStreamsInputUpdate {
                 resource_arn_update: self.resource_arn_update,
@@ -9452,7 +9595,7 @@ pub mod kinesis_streams_input_update {
     }
 }
 impl KinesisStreamsInputUpdate {
-    /// Creates a new builder-style object to manufacture [`KinesisStreamsInputUpdate`](crate::model::KinesisStreamsInputUpdate)
+    /// Creates a new builder-style object to manufacture [`KinesisStreamsInputUpdate`](crate::model::KinesisStreamsInputUpdate).
     pub fn builder() -> crate::model::kinesis_streams_input_update::Builder {
         crate::model::kinesis_streams_input_update::Builder::default()
     }
@@ -9463,6 +9606,7 @@ impl KinesisStreamsInputUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputProcessingConfigurationUpdate {
     /// <p>Provides update information for an <code>InputLambdaProcessor</code>.</p>
+    #[doc(hidden)]
     pub input_lambda_processor_update:
         std::option::Option<crate::model::InputLambdaProcessorUpdate>,
 }
@@ -9484,11 +9628,10 @@ impl std::fmt::Debug for InputProcessingConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`InputProcessingConfigurationUpdate`](crate::model::InputProcessingConfigurationUpdate)
+/// See [`InputProcessingConfigurationUpdate`](crate::model::InputProcessingConfigurationUpdate).
 pub mod input_processing_configuration_update {
 
-    /// A builder for [`InputProcessingConfigurationUpdate`](crate::model::InputProcessingConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`InputProcessingConfigurationUpdate`](crate::model::InputProcessingConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_lambda_processor_update:
@@ -9511,7 +9654,7 @@ pub mod input_processing_configuration_update {
             self.input_lambda_processor_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputProcessingConfigurationUpdate`](crate::model::InputProcessingConfigurationUpdate)
+        /// Consumes the builder and constructs a [`InputProcessingConfigurationUpdate`](crate::model::InputProcessingConfigurationUpdate).
         pub fn build(self) -> crate::model::InputProcessingConfigurationUpdate {
             crate::model::InputProcessingConfigurationUpdate {
                 input_lambda_processor_update: self.input_lambda_processor_update,
@@ -9520,7 +9663,7 @@ pub mod input_processing_configuration_update {
     }
 }
 impl InputProcessingConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`InputProcessingConfigurationUpdate`](crate::model::InputProcessingConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`InputProcessingConfigurationUpdate`](crate::model::InputProcessingConfigurationUpdate).
     pub fn builder() -> crate::model::input_processing_configuration_update::Builder {
         crate::model::input_processing_configuration_update::Builder::default()
     }
@@ -9533,6 +9676,7 @@ pub struct InputLambdaProcessorUpdate {
     /// <p>The Amazon Resource Name (ARN) of the new Amazon Lambda function that is used to preprocess the records in the stream.</p> <note>
     /// <p>To specify an earlier version of the Lambda function than the latest, include the Lambda function version in the Lambda function ARN. For more information about Lambda ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda">Example ARNs: Amazon Lambda</a> </p>
     /// </note>
+    #[doc(hidden)]
     pub resource_arn_update: std::option::Option<std::string::String>,
 }
 impl InputLambdaProcessorUpdate {
@@ -9550,11 +9694,10 @@ impl std::fmt::Debug for InputLambdaProcessorUpdate {
         formatter.finish()
     }
 }
-/// See [`InputLambdaProcessorUpdate`](crate::model::InputLambdaProcessorUpdate)
+/// See [`InputLambdaProcessorUpdate`](crate::model::InputLambdaProcessorUpdate).
 pub mod input_lambda_processor_update {
 
-    /// A builder for [`InputLambdaProcessorUpdate`](crate::model::InputLambdaProcessorUpdate)
-    #[non_exhaustive]
+    /// A builder for [`InputLambdaProcessorUpdate`](crate::model::InputLambdaProcessorUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn_update: std::option::Option<std::string::String>,
@@ -9577,7 +9720,7 @@ pub mod input_lambda_processor_update {
             self.resource_arn_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputLambdaProcessorUpdate`](crate::model::InputLambdaProcessorUpdate)
+        /// Consumes the builder and constructs a [`InputLambdaProcessorUpdate`](crate::model::InputLambdaProcessorUpdate).
         pub fn build(self) -> crate::model::InputLambdaProcessorUpdate {
             crate::model::InputLambdaProcessorUpdate {
                 resource_arn_update: self.resource_arn_update,
@@ -9586,7 +9729,7 @@ pub mod input_lambda_processor_update {
     }
 }
 impl InputLambdaProcessorUpdate {
-    /// Creates a new builder-style object to manufacture [`InputLambdaProcessorUpdate`](crate::model::InputLambdaProcessorUpdate)
+    /// Creates a new builder-style object to manufacture [`InputLambdaProcessorUpdate`](crate::model::InputLambdaProcessorUpdate).
     pub fn builder() -> crate::model::input_lambda_processor_update::Builder {
         crate::model::input_lambda_processor_update::Builder::default()
     }
@@ -9597,8 +9740,10 @@ impl InputLambdaProcessorUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key of the key-value tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the key-value tag. The value is optional.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -9619,11 +9764,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -9650,7 +9794,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -9660,7 +9804,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -9671,11 +9815,14 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RunConfiguration {
     /// <p>Describes the starting parameters for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub flink_run_configuration: std::option::Option<crate::model::FlinkRunConfiguration>,
     /// <p>Describes the starting parameters for a SQL-based Kinesis Data Analytics application application.</p>
+    #[doc(hidden)]
     pub sql_run_configurations:
         std::option::Option<std::vec::Vec<crate::model::SqlRunConfiguration>>,
     /// <p>Describes the restore behavior of a restarting application.</p>
+    #[doc(hidden)]
     pub application_restore_configuration:
         std::option::Option<crate::model::ApplicationRestoreConfiguration>,
 }
@@ -9711,11 +9858,10 @@ impl std::fmt::Debug for RunConfiguration {
         formatter.finish()
     }
 }
-/// See [`RunConfiguration`](crate::model::RunConfiguration)
+/// See [`RunConfiguration`](crate::model::RunConfiguration).
 pub mod run_configuration {
 
-    /// A builder for [`RunConfiguration`](crate::model::RunConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`RunConfiguration`](crate::model::RunConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flink_run_configuration:
@@ -9777,7 +9923,7 @@ pub mod run_configuration {
             self.application_restore_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`RunConfiguration`](crate::model::RunConfiguration)
+        /// Consumes the builder and constructs a [`RunConfiguration`](crate::model::RunConfiguration).
         pub fn build(self) -> crate::model::RunConfiguration {
             crate::model::RunConfiguration {
                 flink_run_configuration: self.flink_run_configuration,
@@ -9788,7 +9934,7 @@ pub mod run_configuration {
     }
 }
 impl RunConfiguration {
-    /// Creates a new builder-style object to manufacture [`RunConfiguration`](crate::model::RunConfiguration)
+    /// Creates a new builder-style object to manufacture [`RunConfiguration`](crate::model::RunConfiguration).
     pub fn builder() -> crate::model::run_configuration::Builder {
         crate::model::run_configuration::Builder::default()
     }
@@ -9799,8 +9945,10 @@ impl RunConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SqlRunConfiguration {
     /// <p>The input source ID. You can get this ID by calling the <code>DescribeApplication</code> operation. </p>
+    #[doc(hidden)]
     pub input_id: std::option::Option<std::string::String>,
     /// <p>The point at which you want the application to start processing records from the streaming source. </p>
+    #[doc(hidden)]
     pub input_starting_position_configuration:
         std::option::Option<crate::model::InputStartingPositionConfiguration>,
 }
@@ -9827,11 +9975,10 @@ impl std::fmt::Debug for SqlRunConfiguration {
         formatter.finish()
     }
 }
-/// See [`SqlRunConfiguration`](crate::model::SqlRunConfiguration)
+/// See [`SqlRunConfiguration`](crate::model::SqlRunConfiguration).
 pub mod sql_run_configuration {
 
-    /// A builder for [`SqlRunConfiguration`](crate::model::SqlRunConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SqlRunConfiguration`](crate::model::SqlRunConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_id: std::option::Option<std::string::String>,
@@ -9865,7 +10012,7 @@ pub mod sql_run_configuration {
             self.input_starting_position_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`SqlRunConfiguration`](crate::model::SqlRunConfiguration)
+        /// Consumes the builder and constructs a [`SqlRunConfiguration`](crate::model::SqlRunConfiguration).
         pub fn build(self) -> crate::model::SqlRunConfiguration {
             crate::model::SqlRunConfiguration {
                 input_id: self.input_id,
@@ -9875,7 +10022,7 @@ pub mod sql_run_configuration {
     }
 }
 impl SqlRunConfiguration {
-    /// Creates a new builder-style object to manufacture [`SqlRunConfiguration`](crate::model::SqlRunConfiguration)
+    /// Creates a new builder-style object to manufacture [`SqlRunConfiguration`](crate::model::SqlRunConfiguration).
     pub fn builder() -> crate::model::sql_run_configuration::Builder {
         crate::model::sql_run_configuration::Builder::default()
     }
@@ -9886,8 +10033,10 @@ impl SqlRunConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationVersionSummary {
     /// <p>The ID of the application version. Kinesis Data Analytics updates the <code>ApplicationVersionId</code> each time you update the application.</p>
+    #[doc(hidden)]
     pub application_version_id: std::option::Option<i64>,
     /// <p>The status of the application.</p>
+    #[doc(hidden)]
     pub application_status: std::option::Option<crate::model::ApplicationStatus>,
 }
 impl ApplicationVersionSummary {
@@ -9908,11 +10057,10 @@ impl std::fmt::Debug for ApplicationVersionSummary {
         formatter.finish()
     }
 }
-/// See [`ApplicationVersionSummary`](crate::model::ApplicationVersionSummary)
+/// See [`ApplicationVersionSummary`](crate::model::ApplicationVersionSummary).
 pub mod application_version_summary {
 
-    /// A builder for [`ApplicationVersionSummary`](crate::model::ApplicationVersionSummary)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationVersionSummary`](crate::model::ApplicationVersionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_version_id: std::option::Option<i64>,
@@ -9942,7 +10090,7 @@ pub mod application_version_summary {
             self.application_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationVersionSummary`](crate::model::ApplicationVersionSummary)
+        /// Consumes the builder and constructs a [`ApplicationVersionSummary`](crate::model::ApplicationVersionSummary).
         pub fn build(self) -> crate::model::ApplicationVersionSummary {
             crate::model::ApplicationVersionSummary {
                 application_version_id: self.application_version_id,
@@ -9952,7 +10100,7 @@ pub mod application_version_summary {
     }
 }
 impl ApplicationVersionSummary {
-    /// Creates a new builder-style object to manufacture [`ApplicationVersionSummary`](crate::model::ApplicationVersionSummary)
+    /// Creates a new builder-style object to manufacture [`ApplicationVersionSummary`](crate::model::ApplicationVersionSummary).
     pub fn builder() -> crate::model::application_version_summary::Builder {
         crate::model::application_version_summary::Builder::default()
     }
@@ -9963,12 +10111,16 @@ impl ApplicationVersionSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnapshotDetails {
     /// <p>The identifier for the application snapshot.</p>
+    #[doc(hidden)]
     pub snapshot_name: std::option::Option<std::string::String>,
     /// <p>The status of the application snapshot.</p>
+    #[doc(hidden)]
     pub snapshot_status: std::option::Option<crate::model::SnapshotStatus>,
     /// <p>The current application version ID when the snapshot was created.</p>
+    #[doc(hidden)]
     pub application_version_id: std::option::Option<i64>,
     /// <p>The timestamp of the application snapshot.</p>
+    #[doc(hidden)]
     pub snapshot_creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SnapshotDetails {
@@ -10002,11 +10154,10 @@ impl std::fmt::Debug for SnapshotDetails {
         formatter.finish()
     }
 }
-/// See [`SnapshotDetails`](crate::model::SnapshotDetails)
+/// See [`SnapshotDetails`](crate::model::SnapshotDetails).
 pub mod snapshot_details {
 
-    /// A builder for [`SnapshotDetails`](crate::model::SnapshotDetails)
-    #[non_exhaustive]
+    /// A builder for [`SnapshotDetails`](crate::model::SnapshotDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshot_name: std::option::Option<std::string::String>,
@@ -10064,7 +10215,7 @@ pub mod snapshot_details {
             self.snapshot_creation_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnapshotDetails`](crate::model::SnapshotDetails)
+        /// Consumes the builder and constructs a [`SnapshotDetails`](crate::model::SnapshotDetails).
         pub fn build(self) -> crate::model::SnapshotDetails {
             crate::model::SnapshotDetails {
                 snapshot_name: self.snapshot_name,
@@ -10076,7 +10227,7 @@ pub mod snapshot_details {
     }
 }
 impl SnapshotDetails {
-    /// Creates a new builder-style object to manufacture [`SnapshotDetails`](crate::model::SnapshotDetails)
+    /// Creates a new builder-style object to manufacture [`SnapshotDetails`](crate::model::SnapshotDetails).
     pub fn builder() -> crate::model::snapshot_details::Builder {
         crate::model::snapshot_details::Builder::default()
     }
@@ -10150,16 +10301,22 @@ impl AsRef<str> for SnapshotStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationSummary {
     /// <p>The name of the application.</p>
+    #[doc(hidden)]
     pub application_name: std::option::Option<std::string::String>,
     /// <p>The ARN of the application.</p>
+    #[doc(hidden)]
     pub application_arn: std::option::Option<std::string::String>,
     /// <p>The status of the application.</p>
+    #[doc(hidden)]
     pub application_status: std::option::Option<crate::model::ApplicationStatus>,
     /// <p>Provides the current application version.</p>
+    #[doc(hidden)]
     pub application_version_id: std::option::Option<i64>,
     /// <p>The runtime environment for the application.</p>
+    #[doc(hidden)]
     pub runtime_environment: std::option::Option<crate::model::RuntimeEnvironment>,
     /// <p>For a Kinesis Data Analytics for Apache Flink application, the mode is <code>STREAMING</code>. For a Kinesis Data Analytics Studio notebook, it is <code>INTERACTIVE</code>.</p>
+    #[doc(hidden)]
     pub application_mode: std::option::Option<crate::model::ApplicationMode>,
 }
 impl ApplicationSummary {
@@ -10200,11 +10357,10 @@ impl std::fmt::Debug for ApplicationSummary {
         formatter.finish()
     }
 }
-/// See [`ApplicationSummary`](crate::model::ApplicationSummary)
+/// See [`ApplicationSummary`](crate::model::ApplicationSummary).
 pub mod application_summary {
 
-    /// A builder for [`ApplicationSummary`](crate::model::ApplicationSummary)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationSummary`](crate::model::ApplicationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_name: std::option::Option<std::string::String>,
@@ -10290,7 +10446,7 @@ pub mod application_summary {
             self.application_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationSummary`](crate::model::ApplicationSummary)
+        /// Consumes the builder and constructs a [`ApplicationSummary`](crate::model::ApplicationSummary).
         pub fn build(self) -> crate::model::ApplicationSummary {
             crate::model::ApplicationSummary {
                 application_name: self.application_name,
@@ -10304,7 +10460,7 @@ pub mod application_summary {
     }
 }
 impl ApplicationSummary {
-    /// Creates a new builder-style object to manufacture [`ApplicationSummary`](crate::model::ApplicationSummary)
+    /// Creates a new builder-style object to manufacture [`ApplicationSummary`](crate::model::ApplicationSummary).
     pub fn builder() -> crate::model::application_summary::Builder {
         crate::model::application_summary::Builder::default()
     }
@@ -10315,6 +10471,7 @@ impl ApplicationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputProcessingConfiguration {
     /// <p>The <code>InputLambdaProcessor</code> that is used to preprocess the records in the stream before being processed by your application code.</p>
+    #[doc(hidden)]
     pub input_lambda_processor: std::option::Option<crate::model::InputLambdaProcessor>,
 }
 impl InputProcessingConfiguration {
@@ -10332,11 +10489,10 @@ impl std::fmt::Debug for InputProcessingConfiguration {
         formatter.finish()
     }
 }
-/// See [`InputProcessingConfiguration`](crate::model::InputProcessingConfiguration)
+/// See [`InputProcessingConfiguration`](crate::model::InputProcessingConfiguration).
 pub mod input_processing_configuration {
 
-    /// A builder for [`InputProcessingConfiguration`](crate::model::InputProcessingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`InputProcessingConfiguration`](crate::model::InputProcessingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_lambda_processor: std::option::Option<crate::model::InputLambdaProcessor>,
@@ -10355,7 +10511,7 @@ pub mod input_processing_configuration {
             self.input_lambda_processor = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputProcessingConfiguration`](crate::model::InputProcessingConfiguration)
+        /// Consumes the builder and constructs a [`InputProcessingConfiguration`](crate::model::InputProcessingConfiguration).
         pub fn build(self) -> crate::model::InputProcessingConfiguration {
             crate::model::InputProcessingConfiguration {
                 input_lambda_processor: self.input_lambda_processor,
@@ -10364,7 +10520,7 @@ pub mod input_processing_configuration {
     }
 }
 impl InputProcessingConfiguration {
-    /// Creates a new builder-style object to manufacture [`InputProcessingConfiguration`](crate::model::InputProcessingConfiguration)
+    /// Creates a new builder-style object to manufacture [`InputProcessingConfiguration`](crate::model::InputProcessingConfiguration).
     pub fn builder() -> crate::model::input_processing_configuration::Builder {
         crate::model::input_processing_configuration::Builder::default()
     }
@@ -10377,6 +10533,7 @@ pub struct InputLambdaProcessor {
     /// <p>The ARN of the Amazon Lambda function that operates on records in the stream.</p> <note>
     /// <p>To specify an earlier version of the Lambda function than the latest, include the Lambda function version in the Lambda function ARN. For more information about Lambda ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda">Example ARNs: Amazon Lambda</a> </p>
     /// </note>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl InputLambdaProcessor {
@@ -10394,11 +10551,10 @@ impl std::fmt::Debug for InputLambdaProcessor {
         formatter.finish()
     }
 }
-/// See [`InputLambdaProcessor`](crate::model::InputLambdaProcessor)
+/// See [`InputLambdaProcessor`](crate::model::InputLambdaProcessor).
 pub mod input_lambda_processor {
 
-    /// A builder for [`InputLambdaProcessor`](crate::model::InputLambdaProcessor)
-    #[non_exhaustive]
+    /// A builder for [`InputLambdaProcessor`](crate::model::InputLambdaProcessor).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -10418,7 +10574,7 @@ pub mod input_lambda_processor {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputLambdaProcessor`](crate::model::InputLambdaProcessor)
+        /// Consumes the builder and constructs a [`InputLambdaProcessor`](crate::model::InputLambdaProcessor).
         pub fn build(self) -> crate::model::InputLambdaProcessor {
             crate::model::InputLambdaProcessor {
                 resource_arn: self.resource_arn,
@@ -10427,7 +10583,7 @@ pub mod input_lambda_processor {
     }
 }
 impl InputLambdaProcessor {
-    /// Creates a new builder-style object to manufacture [`InputLambdaProcessor`](crate::model::InputLambdaProcessor)
+    /// Creates a new builder-style object to manufacture [`InputLambdaProcessor`](crate::model::InputLambdaProcessor).
     pub fn builder() -> crate::model::input_lambda_processor::Builder {
         crate::model::input_lambda_processor::Builder::default()
     }
@@ -10438,8 +10594,10 @@ impl InputLambdaProcessor {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Configuration {
     /// <p>The ARN of the S3 bucket that contains the data.</p>
+    #[doc(hidden)]
     pub bucket_arn: std::option::Option<std::string::String>,
     /// <p>The name of the object that contains the data.</p>
+    #[doc(hidden)]
     pub file_key: std::option::Option<std::string::String>,
 }
 impl S3Configuration {
@@ -10460,11 +10618,10 @@ impl std::fmt::Debug for S3Configuration {
         formatter.finish()
     }
 }
-/// See [`S3Configuration`](crate::model::S3Configuration)
+/// See [`S3Configuration`](crate::model::S3Configuration).
 pub mod s3_configuration {
 
-    /// A builder for [`S3Configuration`](crate::model::S3Configuration)
-    #[non_exhaustive]
+    /// A builder for [`S3Configuration`](crate::model::S3Configuration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn: std::option::Option<std::string::String>,
@@ -10491,7 +10648,7 @@ pub mod s3_configuration {
             self.file_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Configuration`](crate::model::S3Configuration)
+        /// Consumes the builder and constructs a [`S3Configuration`](crate::model::S3Configuration).
         pub fn build(self) -> crate::model::S3Configuration {
             crate::model::S3Configuration {
                 bucket_arn: self.bucket_arn,
@@ -10501,7 +10658,7 @@ pub mod s3_configuration {
     }
 }
 impl S3Configuration {
-    /// Creates a new builder-style object to manufacture [`S3Configuration`](crate::model::S3Configuration)
+    /// Creates a new builder-style object to manufacture [`S3Configuration`](crate::model::S3Configuration).
     pub fn builder() -> crate::model::s3_configuration::Builder {
         crate::model::s3_configuration::Builder::default()
     }
@@ -10567,6 +10724,7 @@ impl AsRef<str> for UrlType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchLoggingOption {
     /// <p>The ARN of the CloudWatch log to receive application messages.</p>
+    #[doc(hidden)]
     pub log_stream_arn: std::option::Option<std::string::String>,
 }
 impl CloudWatchLoggingOption {
@@ -10582,11 +10740,10 @@ impl std::fmt::Debug for CloudWatchLoggingOption {
         formatter.finish()
     }
 }
-/// See [`CloudWatchLoggingOption`](crate::model::CloudWatchLoggingOption)
+/// See [`CloudWatchLoggingOption`](crate::model::CloudWatchLoggingOption).
 pub mod cloud_watch_logging_option {
 
-    /// A builder for [`CloudWatchLoggingOption`](crate::model::CloudWatchLoggingOption)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchLoggingOption`](crate::model::CloudWatchLoggingOption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_stream_arn: std::option::Option<std::string::String>,
@@ -10605,7 +10762,7 @@ pub mod cloud_watch_logging_option {
             self.log_stream_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchLoggingOption`](crate::model::CloudWatchLoggingOption)
+        /// Consumes the builder and constructs a [`CloudWatchLoggingOption`](crate::model::CloudWatchLoggingOption).
         pub fn build(self) -> crate::model::CloudWatchLoggingOption {
             crate::model::CloudWatchLoggingOption {
                 log_stream_arn: self.log_stream_arn,
@@ -10614,7 +10771,7 @@ pub mod cloud_watch_logging_option {
     }
 }
 impl CloudWatchLoggingOption {
-    /// Creates a new builder-style object to manufacture [`CloudWatchLoggingOption`](crate::model::CloudWatchLoggingOption)
+    /// Creates a new builder-style object to manufacture [`CloudWatchLoggingOption`](crate::model::CloudWatchLoggingOption).
     pub fn builder() -> crate::model::cloud_watch_logging_option::Builder {
         crate::model::cloud_watch_logging_option::Builder::default()
     }
@@ -10625,22 +10782,29 @@ impl CloudWatchLoggingOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationConfiguration {
     /// <p>The creation and update parameters for a SQL-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub sql_application_configuration:
         std::option::Option<crate::model::SqlApplicationConfiguration>,
     /// <p>The creation and update parameters for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub flink_application_configuration:
         std::option::Option<crate::model::FlinkApplicationConfiguration>,
     /// <p>Describes execution properties for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub environment_properties: std::option::Option<crate::model::EnvironmentProperties>,
     /// <p>The code location and type parameters for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub application_code_configuration:
         std::option::Option<crate::model::ApplicationCodeConfiguration>,
     /// <p>Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub application_snapshot_configuration:
         std::option::Option<crate::model::ApplicationSnapshotConfiguration>,
     /// <p>The array of descriptions of VPC configurations available to the application.</p>
+    #[doc(hidden)]
     pub vpc_configurations: std::option::Option<std::vec::Vec<crate::model::VpcConfiguration>>,
     /// <p>The configuration parameters for a Kinesis Data Analytics Studio notebook.</p>
+    #[doc(hidden)]
     pub zeppelin_application_configuration:
         std::option::Option<crate::model::ZeppelinApplicationConfiguration>,
 }
@@ -10714,11 +10878,10 @@ impl std::fmt::Debug for ApplicationConfiguration {
         formatter.finish()
     }
 }
-/// See [`ApplicationConfiguration`](crate::model::ApplicationConfiguration)
+/// See [`ApplicationConfiguration`](crate::model::ApplicationConfiguration).
 pub mod application_configuration {
 
-    /// A builder for [`ApplicationConfiguration`](crate::model::ApplicationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationConfiguration`](crate::model::ApplicationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sql_application_configuration:
@@ -10851,7 +11014,7 @@ pub mod application_configuration {
             self.zeppelin_application_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationConfiguration`](crate::model::ApplicationConfiguration)
+        /// Consumes the builder and constructs a [`ApplicationConfiguration`](crate::model::ApplicationConfiguration).
         pub fn build(self) -> crate::model::ApplicationConfiguration {
             crate::model::ApplicationConfiguration {
                 sql_application_configuration: self.sql_application_configuration,
@@ -10866,7 +11029,7 @@ pub mod application_configuration {
     }
 }
 impl ApplicationConfiguration {
-    /// Creates a new builder-style object to manufacture [`ApplicationConfiguration`](crate::model::ApplicationConfiguration)
+    /// Creates a new builder-style object to manufacture [`ApplicationConfiguration`](crate::model::ApplicationConfiguration).
     pub fn builder() -> crate::model::application_configuration::Builder {
         crate::model::application_configuration::Builder::default()
     }
@@ -10877,14 +11040,18 @@ impl ApplicationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ZeppelinApplicationConfiguration {
     /// <p>The monitoring configuration of a Kinesis Data Analytics Studio notebook.</p>
+    #[doc(hidden)]
     pub monitoring_configuration:
         std::option::Option<crate::model::ZeppelinMonitoringConfiguration>,
     /// <p>The Amazon Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.</p>
+    #[doc(hidden)]
     pub catalog_configuration: std::option::Option<crate::model::CatalogConfiguration>,
     /// <p>The information required to deploy a Kinesis Data Analytics Studio notebook as an application with durable state.</p>
+    #[doc(hidden)]
     pub deploy_as_application_configuration:
         std::option::Option<crate::model::DeployAsApplicationConfiguration>,
     /// <p>Custom artifacts are dependency JARs and user-defined functions (UDF).</p>
+    #[doc(hidden)]
     pub custom_artifacts_configuration:
         std::option::Option<std::vec::Vec<crate::model::CustomArtifactConfiguration>>,
 }
@@ -10930,11 +11097,10 @@ impl std::fmt::Debug for ZeppelinApplicationConfiguration {
         formatter.finish()
     }
 }
-/// See [`ZeppelinApplicationConfiguration`](crate::model::ZeppelinApplicationConfiguration)
+/// See [`ZeppelinApplicationConfiguration`](crate::model::ZeppelinApplicationConfiguration).
 pub mod zeppelin_application_configuration {
 
-    /// A builder for [`ZeppelinApplicationConfiguration`](crate::model::ZeppelinApplicationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ZeppelinApplicationConfiguration`](crate::model::ZeppelinApplicationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) monitoring_configuration:
@@ -11013,7 +11179,7 @@ pub mod zeppelin_application_configuration {
             self.custom_artifacts_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ZeppelinApplicationConfiguration`](crate::model::ZeppelinApplicationConfiguration)
+        /// Consumes the builder and constructs a [`ZeppelinApplicationConfiguration`](crate::model::ZeppelinApplicationConfiguration).
         pub fn build(self) -> crate::model::ZeppelinApplicationConfiguration {
             crate::model::ZeppelinApplicationConfiguration {
                 monitoring_configuration: self.monitoring_configuration,
@@ -11025,7 +11191,7 @@ pub mod zeppelin_application_configuration {
     }
 }
 impl ZeppelinApplicationConfiguration {
-    /// Creates a new builder-style object to manufacture [`ZeppelinApplicationConfiguration`](crate::model::ZeppelinApplicationConfiguration)
+    /// Creates a new builder-style object to manufacture [`ZeppelinApplicationConfiguration`](crate::model::ZeppelinApplicationConfiguration).
     pub fn builder() -> crate::model::zeppelin_application_configuration::Builder {
         crate::model::zeppelin_application_configuration::Builder::default()
     }
@@ -11036,6 +11202,7 @@ impl ZeppelinApplicationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeployAsApplicationConfiguration {
     /// <p>The description of an Amazon S3 object that contains the Amazon Data Analytics application, including the Amazon Resource Name (ARN) of the S3 bucket, the name of the Amazon S3 object that contains the data, and the version number of the Amazon S3 object that contains the data. </p>
+    #[doc(hidden)]
     pub s3_content_location: std::option::Option<crate::model::S3ContentBaseLocation>,
 }
 impl DeployAsApplicationConfiguration {
@@ -11051,11 +11218,10 @@ impl std::fmt::Debug for DeployAsApplicationConfiguration {
         formatter.finish()
     }
 }
-/// See [`DeployAsApplicationConfiguration`](crate::model::DeployAsApplicationConfiguration)
+/// See [`DeployAsApplicationConfiguration`](crate::model::DeployAsApplicationConfiguration).
 pub mod deploy_as_application_configuration {
 
-    /// A builder for [`DeployAsApplicationConfiguration`](crate::model::DeployAsApplicationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DeployAsApplicationConfiguration`](crate::model::DeployAsApplicationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_content_location: std::option::Option<crate::model::S3ContentBaseLocation>,
@@ -11074,7 +11240,7 @@ pub mod deploy_as_application_configuration {
             self.s3_content_location = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeployAsApplicationConfiguration`](crate::model::DeployAsApplicationConfiguration)
+        /// Consumes the builder and constructs a [`DeployAsApplicationConfiguration`](crate::model::DeployAsApplicationConfiguration).
         pub fn build(self) -> crate::model::DeployAsApplicationConfiguration {
             crate::model::DeployAsApplicationConfiguration {
                 s3_content_location: self.s3_content_location,
@@ -11083,7 +11249,7 @@ pub mod deploy_as_application_configuration {
     }
 }
 impl DeployAsApplicationConfiguration {
-    /// Creates a new builder-style object to manufacture [`DeployAsApplicationConfiguration`](crate::model::DeployAsApplicationConfiguration)
+    /// Creates a new builder-style object to manufacture [`DeployAsApplicationConfiguration`](crate::model::DeployAsApplicationConfiguration).
     pub fn builder() -> crate::model::deploy_as_application_configuration::Builder {
         crate::model::deploy_as_application_configuration::Builder::default()
     }
@@ -11094,8 +11260,10 @@ impl DeployAsApplicationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ContentBaseLocation {
     /// <p>The Amazon Resource Name (ARN) of the S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_arn: std::option::Option<std::string::String>,
     /// <p>The base path for the S3 bucket.</p>
+    #[doc(hidden)]
     pub base_path: std::option::Option<std::string::String>,
 }
 impl S3ContentBaseLocation {
@@ -11116,11 +11284,10 @@ impl std::fmt::Debug for S3ContentBaseLocation {
         formatter.finish()
     }
 }
-/// See [`S3ContentBaseLocation`](crate::model::S3ContentBaseLocation)
+/// See [`S3ContentBaseLocation`](crate::model::S3ContentBaseLocation).
 pub mod s3_content_base_location {
 
-    /// A builder for [`S3ContentBaseLocation`](crate::model::S3ContentBaseLocation)
-    #[non_exhaustive]
+    /// A builder for [`S3ContentBaseLocation`](crate::model::S3ContentBaseLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn: std::option::Option<std::string::String>,
@@ -11147,7 +11314,7 @@ pub mod s3_content_base_location {
             self.base_path = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ContentBaseLocation`](crate::model::S3ContentBaseLocation)
+        /// Consumes the builder and constructs a [`S3ContentBaseLocation`](crate::model::S3ContentBaseLocation).
         pub fn build(self) -> crate::model::S3ContentBaseLocation {
             crate::model::S3ContentBaseLocation {
                 bucket_arn: self.bucket_arn,
@@ -11157,7 +11324,7 @@ pub mod s3_content_base_location {
     }
 }
 impl S3ContentBaseLocation {
-    /// Creates a new builder-style object to manufacture [`S3ContentBaseLocation`](crate::model::S3ContentBaseLocation)
+    /// Creates a new builder-style object to manufacture [`S3ContentBaseLocation`](crate::model::S3ContentBaseLocation).
     pub fn builder() -> crate::model::s3_content_base_location::Builder {
         crate::model::s3_content_base_location::Builder::default()
     }
@@ -11168,6 +11335,7 @@ impl S3ContentBaseLocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CatalogConfiguration {
     /// <p>The configuration parameters for the default Amazon Glue database. You use this database for Apache Flink SQL queries and table API transforms that you write in a Kinesis Data Analytics Studio notebook.</p>
+    #[doc(hidden)]
     pub glue_data_catalog_configuration:
         std::option::Option<crate::model::GlueDataCatalogConfiguration>,
 }
@@ -11189,11 +11357,10 @@ impl std::fmt::Debug for CatalogConfiguration {
         formatter.finish()
     }
 }
-/// See [`CatalogConfiguration`](crate::model::CatalogConfiguration)
+/// See [`CatalogConfiguration`](crate::model::CatalogConfiguration).
 pub mod catalog_configuration {
 
-    /// A builder for [`CatalogConfiguration`](crate::model::CatalogConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CatalogConfiguration`](crate::model::CatalogConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) glue_data_catalog_configuration:
@@ -11216,7 +11383,7 @@ pub mod catalog_configuration {
             self.glue_data_catalog_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`CatalogConfiguration`](crate::model::CatalogConfiguration)
+        /// Consumes the builder and constructs a [`CatalogConfiguration`](crate::model::CatalogConfiguration).
         pub fn build(self) -> crate::model::CatalogConfiguration {
             crate::model::CatalogConfiguration {
                 glue_data_catalog_configuration: self.glue_data_catalog_configuration,
@@ -11225,7 +11392,7 @@ pub mod catalog_configuration {
     }
 }
 impl CatalogConfiguration {
-    /// Creates a new builder-style object to manufacture [`CatalogConfiguration`](crate::model::CatalogConfiguration)
+    /// Creates a new builder-style object to manufacture [`CatalogConfiguration`](crate::model::CatalogConfiguration).
     pub fn builder() -> crate::model::catalog_configuration::Builder {
         crate::model::catalog_configuration::Builder::default()
     }
@@ -11236,6 +11403,7 @@ impl CatalogConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GlueDataCatalogConfiguration {
     /// <p>The Amazon Resource Name (ARN) of the database.</p>
+    #[doc(hidden)]
     pub database_arn: std::option::Option<std::string::String>,
 }
 impl GlueDataCatalogConfiguration {
@@ -11251,11 +11419,10 @@ impl std::fmt::Debug for GlueDataCatalogConfiguration {
         formatter.finish()
     }
 }
-/// See [`GlueDataCatalogConfiguration`](crate::model::GlueDataCatalogConfiguration)
+/// See [`GlueDataCatalogConfiguration`](crate::model::GlueDataCatalogConfiguration).
 pub mod glue_data_catalog_configuration {
 
-    /// A builder for [`GlueDataCatalogConfiguration`](crate::model::GlueDataCatalogConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`GlueDataCatalogConfiguration`](crate::model::GlueDataCatalogConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) database_arn: std::option::Option<std::string::String>,
@@ -11271,7 +11438,7 @@ pub mod glue_data_catalog_configuration {
             self.database_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`GlueDataCatalogConfiguration`](crate::model::GlueDataCatalogConfiguration)
+        /// Consumes the builder and constructs a [`GlueDataCatalogConfiguration`](crate::model::GlueDataCatalogConfiguration).
         pub fn build(self) -> crate::model::GlueDataCatalogConfiguration {
             crate::model::GlueDataCatalogConfiguration {
                 database_arn: self.database_arn,
@@ -11280,7 +11447,7 @@ pub mod glue_data_catalog_configuration {
     }
 }
 impl GlueDataCatalogConfiguration {
-    /// Creates a new builder-style object to manufacture [`GlueDataCatalogConfiguration`](crate::model::GlueDataCatalogConfiguration)
+    /// Creates a new builder-style object to manufacture [`GlueDataCatalogConfiguration`](crate::model::GlueDataCatalogConfiguration).
     pub fn builder() -> crate::model::glue_data_catalog_configuration::Builder {
         crate::model::glue_data_catalog_configuration::Builder::default()
     }
@@ -11291,6 +11458,7 @@ impl GlueDataCatalogConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ZeppelinMonitoringConfiguration {
     /// <p>The verbosity of the CloudWatch Logs for an application.</p>
+    #[doc(hidden)]
     pub log_level: std::option::Option<crate::model::LogLevel>,
 }
 impl ZeppelinMonitoringConfiguration {
@@ -11306,11 +11474,10 @@ impl std::fmt::Debug for ZeppelinMonitoringConfiguration {
         formatter.finish()
     }
 }
-/// See [`ZeppelinMonitoringConfiguration`](crate::model::ZeppelinMonitoringConfiguration)
+/// See [`ZeppelinMonitoringConfiguration`](crate::model::ZeppelinMonitoringConfiguration).
 pub mod zeppelin_monitoring_configuration {
 
-    /// A builder for [`ZeppelinMonitoringConfiguration`](crate::model::ZeppelinMonitoringConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ZeppelinMonitoringConfiguration`](crate::model::ZeppelinMonitoringConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_level: std::option::Option<crate::model::LogLevel>,
@@ -11326,7 +11493,7 @@ pub mod zeppelin_monitoring_configuration {
             self.log_level = input;
             self
         }
-        /// Consumes the builder and constructs a [`ZeppelinMonitoringConfiguration`](crate::model::ZeppelinMonitoringConfiguration)
+        /// Consumes the builder and constructs a [`ZeppelinMonitoringConfiguration`](crate::model::ZeppelinMonitoringConfiguration).
         pub fn build(self) -> crate::model::ZeppelinMonitoringConfiguration {
             crate::model::ZeppelinMonitoringConfiguration {
                 log_level: self.log_level,
@@ -11335,7 +11502,7 @@ pub mod zeppelin_monitoring_configuration {
     }
 }
 impl ZeppelinMonitoringConfiguration {
-    /// Creates a new builder-style object to manufacture [`ZeppelinMonitoringConfiguration`](crate::model::ZeppelinMonitoringConfiguration)
+    /// Creates a new builder-style object to manufacture [`ZeppelinMonitoringConfiguration`](crate::model::ZeppelinMonitoringConfiguration).
     pub fn builder() -> crate::model::zeppelin_monitoring_configuration::Builder {
         crate::model::zeppelin_monitoring_configuration::Builder::default()
     }
@@ -11346,8 +11513,10 @@ impl ZeppelinMonitoringConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcConfiguration {
     /// <p>The array of <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Subnet.html">Subnet</a> IDs used by the VPC configuration.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The array of <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html">SecurityGroup</a> IDs used by the VPC configuration.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VpcConfiguration {
@@ -11368,11 +11537,10 @@ impl std::fmt::Debug for VpcConfiguration {
         formatter.finish()
     }
 }
-/// See [`VpcConfiguration`](crate::model::VpcConfiguration)
+/// See [`VpcConfiguration`](crate::model::VpcConfiguration).
 pub mod vpc_configuration {
 
-    /// A builder for [`VpcConfiguration`](crate::model::VpcConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`VpcConfiguration`](crate::model::VpcConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -11417,7 +11585,7 @@ pub mod vpc_configuration {
             self.security_group_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcConfiguration`](crate::model::VpcConfiguration)
+        /// Consumes the builder and constructs a [`VpcConfiguration`](crate::model::VpcConfiguration).
         pub fn build(self) -> crate::model::VpcConfiguration {
             crate::model::VpcConfiguration {
                 subnet_ids: self.subnet_ids,
@@ -11427,7 +11595,7 @@ pub mod vpc_configuration {
     }
 }
 impl VpcConfiguration {
-    /// Creates a new builder-style object to manufacture [`VpcConfiguration`](crate::model::VpcConfiguration)
+    /// Creates a new builder-style object to manufacture [`VpcConfiguration`](crate::model::VpcConfiguration).
     pub fn builder() -> crate::model::vpc_configuration::Builder {
         crate::model::vpc_configuration::Builder::default()
     }
@@ -11438,6 +11606,7 @@ impl VpcConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationSnapshotConfiguration {
     /// <p>Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub snapshots_enabled: std::option::Option<bool>,
 }
 impl ApplicationSnapshotConfiguration {
@@ -11453,11 +11622,10 @@ impl std::fmt::Debug for ApplicationSnapshotConfiguration {
         formatter.finish()
     }
 }
-/// See [`ApplicationSnapshotConfiguration`](crate::model::ApplicationSnapshotConfiguration)
+/// See [`ApplicationSnapshotConfiguration`](crate::model::ApplicationSnapshotConfiguration).
 pub mod application_snapshot_configuration {
 
-    /// A builder for [`ApplicationSnapshotConfiguration`](crate::model::ApplicationSnapshotConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationSnapshotConfiguration`](crate::model::ApplicationSnapshotConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshots_enabled: std::option::Option<bool>,
@@ -11473,7 +11641,7 @@ pub mod application_snapshot_configuration {
             self.snapshots_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationSnapshotConfiguration`](crate::model::ApplicationSnapshotConfiguration)
+        /// Consumes the builder and constructs a [`ApplicationSnapshotConfiguration`](crate::model::ApplicationSnapshotConfiguration).
         pub fn build(self) -> crate::model::ApplicationSnapshotConfiguration {
             crate::model::ApplicationSnapshotConfiguration {
                 snapshots_enabled: self.snapshots_enabled,
@@ -11482,7 +11650,7 @@ pub mod application_snapshot_configuration {
     }
 }
 impl ApplicationSnapshotConfiguration {
-    /// Creates a new builder-style object to manufacture [`ApplicationSnapshotConfiguration`](crate::model::ApplicationSnapshotConfiguration)
+    /// Creates a new builder-style object to manufacture [`ApplicationSnapshotConfiguration`](crate::model::ApplicationSnapshotConfiguration).
     pub fn builder() -> crate::model::application_snapshot_configuration::Builder {
         crate::model::application_snapshot_configuration::Builder::default()
     }
@@ -11493,8 +11661,10 @@ impl ApplicationSnapshotConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationCodeConfiguration {
     /// <p>The location and type of the application code.</p>
+    #[doc(hidden)]
     pub code_content: std::option::Option<crate::model::CodeContent>,
     /// <p>Specifies whether the code content is in text or zip format.</p>
+    #[doc(hidden)]
     pub code_content_type: std::option::Option<crate::model::CodeContentType>,
 }
 impl ApplicationCodeConfiguration {
@@ -11515,11 +11685,10 @@ impl std::fmt::Debug for ApplicationCodeConfiguration {
         formatter.finish()
     }
 }
-/// See [`ApplicationCodeConfiguration`](crate::model::ApplicationCodeConfiguration)
+/// See [`ApplicationCodeConfiguration`](crate::model::ApplicationCodeConfiguration).
 pub mod application_code_configuration {
 
-    /// A builder for [`ApplicationCodeConfiguration`](crate::model::ApplicationCodeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationCodeConfiguration`](crate::model::ApplicationCodeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code_content: std::option::Option<crate::model::CodeContent>,
@@ -11552,7 +11721,7 @@ pub mod application_code_configuration {
             self.code_content_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationCodeConfiguration`](crate::model::ApplicationCodeConfiguration)
+        /// Consumes the builder and constructs a [`ApplicationCodeConfiguration`](crate::model::ApplicationCodeConfiguration).
         pub fn build(self) -> crate::model::ApplicationCodeConfiguration {
             crate::model::ApplicationCodeConfiguration {
                 code_content: self.code_content,
@@ -11562,7 +11731,7 @@ pub mod application_code_configuration {
     }
 }
 impl ApplicationCodeConfiguration {
-    /// Creates a new builder-style object to manufacture [`ApplicationCodeConfiguration`](crate::model::ApplicationCodeConfiguration)
+    /// Creates a new builder-style object to manufacture [`ApplicationCodeConfiguration`](crate::model::ApplicationCodeConfiguration).
     pub fn builder() -> crate::model::application_code_configuration::Builder {
         crate::model::application_code_configuration::Builder::default()
     }
@@ -11573,10 +11742,13 @@ impl ApplicationCodeConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CodeContent {
     /// <p>The text-format code for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub text_content: std::option::Option<std::string::String>,
     /// <p>The zip-format code for a Flink-based Kinesis Data Analytics application.</p>
+    #[doc(hidden)]
     pub zip_file_content: std::option::Option<aws_smithy_types::Blob>,
     /// <p>Information about the Amazon S3 bucket that contains the application code.</p>
+    #[doc(hidden)]
     pub s3_content_location: std::option::Option<crate::model::S3ContentLocation>,
 }
 impl CodeContent {
@@ -11602,11 +11774,10 @@ impl std::fmt::Debug for CodeContent {
         formatter.finish()
     }
 }
-/// See [`CodeContent`](crate::model::CodeContent)
+/// See [`CodeContent`](crate::model::CodeContent).
 pub mod code_content {
 
-    /// A builder for [`CodeContent`](crate::model::CodeContent)
-    #[non_exhaustive]
+    /// A builder for [`CodeContent`](crate::model::CodeContent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text_content: std::option::Option<std::string::String>,
@@ -11650,7 +11821,7 @@ pub mod code_content {
             self.s3_content_location = input;
             self
         }
-        /// Consumes the builder and constructs a [`CodeContent`](crate::model::CodeContent)
+        /// Consumes the builder and constructs a [`CodeContent`](crate::model::CodeContent).
         pub fn build(self) -> crate::model::CodeContent {
             crate::model::CodeContent {
                 text_content: self.text_content,
@@ -11661,7 +11832,7 @@ pub mod code_content {
     }
 }
 impl CodeContent {
-    /// Creates a new builder-style object to manufacture [`CodeContent`](crate::model::CodeContent)
+    /// Creates a new builder-style object to manufacture [`CodeContent`](crate::model::CodeContent).
     pub fn builder() -> crate::model::code_content::Builder {
         crate::model::code_content::Builder::default()
     }
@@ -11672,6 +11843,7 @@ impl CodeContent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnvironmentProperties {
     /// <p>Describes the execution property groups.</p>
+    #[doc(hidden)]
     pub property_groups: std::option::Option<std::vec::Vec<crate::model::PropertyGroup>>,
 }
 impl EnvironmentProperties {
@@ -11687,11 +11859,10 @@ impl std::fmt::Debug for EnvironmentProperties {
         formatter.finish()
     }
 }
-/// See [`EnvironmentProperties`](crate::model::EnvironmentProperties)
+/// See [`EnvironmentProperties`](crate::model::EnvironmentProperties).
 pub mod environment_properties {
 
-    /// A builder for [`EnvironmentProperties`](crate::model::EnvironmentProperties)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentProperties`](crate::model::EnvironmentProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) property_groups: std::option::Option<std::vec::Vec<crate::model::PropertyGroup>>,
@@ -11716,7 +11887,7 @@ pub mod environment_properties {
             self.property_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentProperties`](crate::model::EnvironmentProperties)
+        /// Consumes the builder and constructs a [`EnvironmentProperties`](crate::model::EnvironmentProperties).
         pub fn build(self) -> crate::model::EnvironmentProperties {
             crate::model::EnvironmentProperties {
                 property_groups: self.property_groups,
@@ -11725,7 +11896,7 @@ pub mod environment_properties {
     }
 }
 impl EnvironmentProperties {
-    /// Creates a new builder-style object to manufacture [`EnvironmentProperties`](crate::model::EnvironmentProperties)
+    /// Creates a new builder-style object to manufacture [`EnvironmentProperties`](crate::model::EnvironmentProperties).
     pub fn builder() -> crate::model::environment_properties::Builder {
         crate::model::environment_properties::Builder::default()
     }
@@ -11736,10 +11907,13 @@ impl EnvironmentProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FlinkApplicationConfiguration {
     /// <p>Describes an application's checkpointing configuration. Checkpointing is the process of persisting application state for fault tolerance. For more information, see <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance"> Checkpoints for Fault Tolerance</a> in the <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.8/">Apache Flink Documentation</a>. </p>
+    #[doc(hidden)]
     pub checkpoint_configuration: std::option::Option<crate::model::CheckpointConfiguration>,
     /// <p>Describes configuration parameters for Amazon CloudWatch logging for an application.</p>
+    #[doc(hidden)]
     pub monitoring_configuration: std::option::Option<crate::model::MonitoringConfiguration>,
     /// <p>Describes parameters for how an application executes multiple tasks simultaneously.</p>
+    #[doc(hidden)]
     pub parallelism_configuration: std::option::Option<crate::model::ParallelismConfiguration>,
 }
 impl FlinkApplicationConfiguration {
@@ -11771,11 +11945,10 @@ impl std::fmt::Debug for FlinkApplicationConfiguration {
         formatter.finish()
     }
 }
-/// See [`FlinkApplicationConfiguration`](crate::model::FlinkApplicationConfiguration)
+/// See [`FlinkApplicationConfiguration`](crate::model::FlinkApplicationConfiguration).
 pub mod flink_application_configuration {
 
-    /// A builder for [`FlinkApplicationConfiguration`](crate::model::FlinkApplicationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`FlinkApplicationConfiguration`](crate::model::FlinkApplicationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) checkpoint_configuration:
@@ -11834,7 +12007,7 @@ pub mod flink_application_configuration {
             self.parallelism_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`FlinkApplicationConfiguration`](crate::model::FlinkApplicationConfiguration)
+        /// Consumes the builder and constructs a [`FlinkApplicationConfiguration`](crate::model::FlinkApplicationConfiguration).
         pub fn build(self) -> crate::model::FlinkApplicationConfiguration {
             crate::model::FlinkApplicationConfiguration {
                 checkpoint_configuration: self.checkpoint_configuration,
@@ -11845,7 +12018,7 @@ pub mod flink_application_configuration {
     }
 }
 impl FlinkApplicationConfiguration {
-    /// Creates a new builder-style object to manufacture [`FlinkApplicationConfiguration`](crate::model::FlinkApplicationConfiguration)
+    /// Creates a new builder-style object to manufacture [`FlinkApplicationConfiguration`](crate::model::FlinkApplicationConfiguration).
     pub fn builder() -> crate::model::flink_application_configuration::Builder {
         crate::model::flink_application_configuration::Builder::default()
     }
@@ -11856,12 +12029,16 @@ impl FlinkApplicationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ParallelismConfiguration {
     /// <p>Describes whether the application uses the default parallelism for the Kinesis Data Analytics service. You must set this property to <code>CUSTOM</code> in order to change your application's <code>AutoScalingEnabled</code>, <code>Parallelism</code>, or <code>ParallelismPerKPU</code> properties.</p>
+    #[doc(hidden)]
     pub configuration_type: std::option::Option<crate::model::ConfigurationType>,
     /// <p>Describes the initial number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform. If <code>AutoScalingEnabled</code> is set to True, Kinesis Data Analytics increases the <code>CurrentParallelism</code> value in response to application load. The service can increase the <code>CurrentParallelism</code> value up to the maximum parallelism, which is <code>ParalellismPerKPU</code> times the maximum KPUs for the application. The maximum KPUs for an application is 32 by default, and can be increased by requesting a limit increase. If application load is reduced, the service can reduce the <code>CurrentParallelism</code> value down to the <code>Parallelism</code> setting.</p>
+    #[doc(hidden)]
     pub parallelism: std::option::Option<i32>,
     /// <p>Describes the number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform per Kinesis Processing Unit (KPU) used by the application. For more information about KPUs, see <a href="http://aws.amazon.com/kinesis/data-analytics/pricing/">Amazon Kinesis Data Analytics Pricing</a>.</p>
+    #[doc(hidden)]
     pub parallelism_per_kpu: std::option::Option<i32>,
     /// <p>Describes whether the Kinesis Data Analytics service can increase the parallelism of the application in response to increased throughput.</p>
+    #[doc(hidden)]
     pub auto_scaling_enabled: std::option::Option<bool>,
 }
 impl ParallelismConfiguration {
@@ -11892,11 +12069,10 @@ impl std::fmt::Debug for ParallelismConfiguration {
         formatter.finish()
     }
 }
-/// See [`ParallelismConfiguration`](crate::model::ParallelismConfiguration)
+/// See [`ParallelismConfiguration`](crate::model::ParallelismConfiguration).
 pub mod parallelism_configuration {
 
-    /// A builder for [`ParallelismConfiguration`](crate::model::ParallelismConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ParallelismConfiguration`](crate::model::ParallelismConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_type: std::option::Option<crate::model::ConfigurationType>,
@@ -11948,7 +12124,7 @@ pub mod parallelism_configuration {
             self.auto_scaling_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParallelismConfiguration`](crate::model::ParallelismConfiguration)
+        /// Consumes the builder and constructs a [`ParallelismConfiguration`](crate::model::ParallelismConfiguration).
         pub fn build(self) -> crate::model::ParallelismConfiguration {
             crate::model::ParallelismConfiguration {
                 configuration_type: self.configuration_type,
@@ -11960,7 +12136,7 @@ pub mod parallelism_configuration {
     }
 }
 impl ParallelismConfiguration {
-    /// Creates a new builder-style object to manufacture [`ParallelismConfiguration`](crate::model::ParallelismConfiguration)
+    /// Creates a new builder-style object to manufacture [`ParallelismConfiguration`](crate::model::ParallelismConfiguration).
     pub fn builder() -> crate::model::parallelism_configuration::Builder {
         crate::model::parallelism_configuration::Builder::default()
     }
@@ -11971,10 +12147,13 @@ impl ParallelismConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MonitoringConfiguration {
     /// <p>Describes whether to use the default CloudWatch logging configuration for an application. You must set this property to <code>CUSTOM</code> in order to set the <code>LogLevel</code> or <code>MetricsLevel</code> parameters.</p>
+    #[doc(hidden)]
     pub configuration_type: std::option::Option<crate::model::ConfigurationType>,
     /// <p>Describes the granularity of the CloudWatch Logs for an application. The <code>Parallelism</code> level is not recommended for applications with a Parallelism over 64 due to excessive costs.</p>
+    #[doc(hidden)]
     pub metrics_level: std::option::Option<crate::model::MetricsLevel>,
     /// <p>Describes the verbosity of the CloudWatch Logs for an application.</p>
+    #[doc(hidden)]
     pub log_level: std::option::Option<crate::model::LogLevel>,
 }
 impl MonitoringConfiguration {
@@ -12000,11 +12179,10 @@ impl std::fmt::Debug for MonitoringConfiguration {
         formatter.finish()
     }
 }
-/// See [`MonitoringConfiguration`](crate::model::MonitoringConfiguration)
+/// See [`MonitoringConfiguration`](crate::model::MonitoringConfiguration).
 pub mod monitoring_configuration {
 
-    /// A builder for [`MonitoringConfiguration`](crate::model::MonitoringConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MonitoringConfiguration`](crate::model::MonitoringConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_type: std::option::Option<crate::model::ConfigurationType>,
@@ -12048,7 +12226,7 @@ pub mod monitoring_configuration {
             self.log_level = input;
             self
         }
-        /// Consumes the builder and constructs a [`MonitoringConfiguration`](crate::model::MonitoringConfiguration)
+        /// Consumes the builder and constructs a [`MonitoringConfiguration`](crate::model::MonitoringConfiguration).
         pub fn build(self) -> crate::model::MonitoringConfiguration {
             crate::model::MonitoringConfiguration {
                 configuration_type: self.configuration_type,
@@ -12059,7 +12237,7 @@ pub mod monitoring_configuration {
     }
 }
 impl MonitoringConfiguration {
-    /// Creates a new builder-style object to manufacture [`MonitoringConfiguration`](crate::model::MonitoringConfiguration)
+    /// Creates a new builder-style object to manufacture [`MonitoringConfiguration`](crate::model::MonitoringConfiguration).
     pub fn builder() -> crate::model::monitoring_configuration::Builder {
         crate::model::monitoring_configuration::Builder::default()
     }
@@ -12077,18 +12255,22 @@ pub struct CheckpointConfiguration {
     /// <li> <p> <b>MinPauseBetweenCheckpoints:</b> 5000</p> </li>
     /// </ul>
     /// </note>
+    #[doc(hidden)]
     pub configuration_type: std::option::Option<crate::model::ConfigurationType>,
     /// <p>Describes whether checkpointing is enabled for a Flink-based Kinesis Data Analytics application.</p> <note>
     /// <p>If <code>CheckpointConfiguration.ConfigurationType</code> is <code>DEFAULT</code>, the application will use a <code>CheckpointingEnabled</code> value of <code>true</code>, even if this value is set to another value using this API or in application code.</p>
     /// </note>
+    #[doc(hidden)]
     pub checkpointing_enabled: std::option::Option<bool>,
     /// <p>Describes the interval in milliseconds between checkpoint operations. </p> <note>
     /// <p>If <code>CheckpointConfiguration.ConfigurationType</code> is <code>DEFAULT</code>, the application will use a <code>CheckpointInterval</code> value of 60000, even if this value is set to another value using this API or in application code.</p>
     /// </note>
+    #[doc(hidden)]
     pub checkpoint_interval: std::option::Option<i64>,
     /// <p>Describes the minimum time in milliseconds after a checkpoint operation completes that a new checkpoint operation can start. If a checkpoint operation takes longer than the <code>CheckpointInterval</code>, the application otherwise performs continual checkpoint operations. For more information, see <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/large_state_tuning.html#tuning-checkpointing"> Tuning Checkpointing</a> in the <a href="https://ci.apache.org/projects/flink/flink-docs-release-1.8/">Apache Flink Documentation</a>.</p> <note>
     /// <p>If <code>CheckpointConfiguration.ConfigurationType</code> is <code>DEFAULT</code>, the application will use a <code>MinPauseBetweenCheckpoints</code> value of 5000, even if this value is set using this API or in application code.</p>
     /// </note>
+    #[doc(hidden)]
     pub min_pause_between_checkpoints: std::option::Option<i64>,
 }
 impl CheckpointConfiguration {
@@ -12135,11 +12317,10 @@ impl std::fmt::Debug for CheckpointConfiguration {
         formatter.finish()
     }
 }
-/// See [`CheckpointConfiguration`](crate::model::CheckpointConfiguration)
+/// See [`CheckpointConfiguration`](crate::model::CheckpointConfiguration).
 pub mod checkpoint_configuration {
 
-    /// A builder for [`CheckpointConfiguration`](crate::model::CheckpointConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CheckpointConfiguration`](crate::model::CheckpointConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_type: std::option::Option<crate::model::ConfigurationType>,
@@ -12220,7 +12401,7 @@ pub mod checkpoint_configuration {
             self.min_pause_between_checkpoints = input;
             self
         }
-        /// Consumes the builder and constructs a [`CheckpointConfiguration`](crate::model::CheckpointConfiguration)
+        /// Consumes the builder and constructs a [`CheckpointConfiguration`](crate::model::CheckpointConfiguration).
         pub fn build(self) -> crate::model::CheckpointConfiguration {
             crate::model::CheckpointConfiguration {
                 configuration_type: self.configuration_type,
@@ -12232,7 +12413,7 @@ pub mod checkpoint_configuration {
     }
 }
 impl CheckpointConfiguration {
-    /// Creates a new builder-style object to manufacture [`CheckpointConfiguration`](crate::model::CheckpointConfiguration)
+    /// Creates a new builder-style object to manufacture [`CheckpointConfiguration`](crate::model::CheckpointConfiguration).
     pub fn builder() -> crate::model::checkpoint_configuration::Builder {
         crate::model::checkpoint_configuration::Builder::default()
     }
@@ -12243,10 +12424,13 @@ impl CheckpointConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SqlApplicationConfiguration {
     /// <p>The array of <code>Input</code> objects describing the input streams used by the application.</p>
+    #[doc(hidden)]
     pub inputs: std::option::Option<std::vec::Vec<crate::model::Input>>,
     /// <p>The array of <code>Output</code> objects describing the destination streams used by the application.</p>
+    #[doc(hidden)]
     pub outputs: std::option::Option<std::vec::Vec<crate::model::Output>>,
     /// <p>The array of <code>ReferenceDataSource</code> objects describing the reference data sources used by the application.</p>
+    #[doc(hidden)]
     pub reference_data_sources:
         std::option::Option<std::vec::Vec<crate::model::ReferenceDataSource>>,
 }
@@ -12275,11 +12459,10 @@ impl std::fmt::Debug for SqlApplicationConfiguration {
         formatter.finish()
     }
 }
-/// See [`SqlApplicationConfiguration`](crate::model::SqlApplicationConfiguration)
+/// See [`SqlApplicationConfiguration`](crate::model::SqlApplicationConfiguration).
 pub mod sql_application_configuration {
 
-    /// A builder for [`SqlApplicationConfiguration`](crate::model::SqlApplicationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SqlApplicationConfiguration`](crate::model::SqlApplicationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) inputs: std::option::Option<std::vec::Vec<crate::model::Input>>,
@@ -12345,7 +12528,7 @@ pub mod sql_application_configuration {
             self.reference_data_sources = input;
             self
         }
-        /// Consumes the builder and constructs a [`SqlApplicationConfiguration`](crate::model::SqlApplicationConfiguration)
+        /// Consumes the builder and constructs a [`SqlApplicationConfiguration`](crate::model::SqlApplicationConfiguration).
         pub fn build(self) -> crate::model::SqlApplicationConfiguration {
             crate::model::SqlApplicationConfiguration {
                 inputs: self.inputs,
@@ -12356,7 +12539,7 @@ pub mod sql_application_configuration {
     }
 }
 impl SqlApplicationConfiguration {
-    /// Creates a new builder-style object to manufacture [`SqlApplicationConfiguration`](crate::model::SqlApplicationConfiguration)
+    /// Creates a new builder-style object to manufacture [`SqlApplicationConfiguration`](crate::model::SqlApplicationConfiguration).
     pub fn builder() -> crate::model::sql_application_configuration::Builder {
         crate::model::sql_application_configuration::Builder::default()
     }
@@ -12367,10 +12550,13 @@ impl SqlApplicationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReferenceDataSource {
     /// <p>The name of the in-application table to create.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>Identifies the S3 bucket and object that contains the reference data. A Kinesis Data Analytics application loads reference data only once. If the data changes, you call the <code>UpdateApplication</code> operation to trigger reloading of data into your application. </p>
+    #[doc(hidden)]
     pub s3_reference_data_source: std::option::Option<crate::model::S3ReferenceDataSource>,
     /// <p>Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.</p>
+    #[doc(hidden)]
     pub reference_schema: std::option::Option<crate::model::SourceSchema>,
 }
 impl ReferenceDataSource {
@@ -12398,11 +12584,10 @@ impl std::fmt::Debug for ReferenceDataSource {
         formatter.finish()
     }
 }
-/// See [`ReferenceDataSource`](crate::model::ReferenceDataSource)
+/// See [`ReferenceDataSource`](crate::model::ReferenceDataSource).
 pub mod reference_data_source {
 
-    /// A builder for [`ReferenceDataSource`](crate::model::ReferenceDataSource)
-    #[non_exhaustive]
+    /// A builder for [`ReferenceDataSource`](crate::model::ReferenceDataSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_name: std::option::Option<std::string::String>,
@@ -12450,7 +12635,7 @@ pub mod reference_data_source {
             self.reference_schema = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReferenceDataSource`](crate::model::ReferenceDataSource)
+        /// Consumes the builder and constructs a [`ReferenceDataSource`](crate::model::ReferenceDataSource).
         pub fn build(self) -> crate::model::ReferenceDataSource {
             crate::model::ReferenceDataSource {
                 table_name: self.table_name,
@@ -12461,7 +12646,7 @@ pub mod reference_data_source {
     }
 }
 impl ReferenceDataSource {
-    /// Creates a new builder-style object to manufacture [`ReferenceDataSource`](crate::model::ReferenceDataSource)
+    /// Creates a new builder-style object to manufacture [`ReferenceDataSource`](crate::model::ReferenceDataSource).
     pub fn builder() -> crate::model::reference_data_source::Builder {
         crate::model::reference_data_source::Builder::default()
     }
@@ -12473,8 +12658,10 @@ impl ReferenceDataSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ReferenceDataSource {
     /// <p>The Amazon Resource Name (ARN) of the S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_arn: std::option::Option<std::string::String>,
     /// <p>The object key name containing the reference data.</p>
+    #[doc(hidden)]
     pub file_key: std::option::Option<std::string::String>,
 }
 impl S3ReferenceDataSource {
@@ -12495,11 +12682,10 @@ impl std::fmt::Debug for S3ReferenceDataSource {
         formatter.finish()
     }
 }
-/// See [`S3ReferenceDataSource`](crate::model::S3ReferenceDataSource)
+/// See [`S3ReferenceDataSource`](crate::model::S3ReferenceDataSource).
 pub mod s3_reference_data_source {
 
-    /// A builder for [`S3ReferenceDataSource`](crate::model::S3ReferenceDataSource)
-    #[non_exhaustive]
+    /// A builder for [`S3ReferenceDataSource`](crate::model::S3ReferenceDataSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn: std::option::Option<std::string::String>,
@@ -12526,7 +12712,7 @@ pub mod s3_reference_data_source {
             self.file_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ReferenceDataSource`](crate::model::S3ReferenceDataSource)
+        /// Consumes the builder and constructs a [`S3ReferenceDataSource`](crate::model::S3ReferenceDataSource).
         pub fn build(self) -> crate::model::S3ReferenceDataSource {
             crate::model::S3ReferenceDataSource {
                 bucket_arn: self.bucket_arn,
@@ -12536,7 +12722,7 @@ pub mod s3_reference_data_source {
     }
 }
 impl S3ReferenceDataSource {
-    /// Creates a new builder-style object to manufacture [`S3ReferenceDataSource`](crate::model::S3ReferenceDataSource)
+    /// Creates a new builder-style object to manufacture [`S3ReferenceDataSource`](crate::model::S3ReferenceDataSource).
     pub fn builder() -> crate::model::s3_reference_data_source::Builder {
         crate::model::s3_reference_data_source::Builder::default()
     }
@@ -12548,14 +12734,19 @@ impl S3ReferenceDataSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Output {
     /// <p>The name of the in-application stream.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Identifies a Kinesis data stream as the destination.</p>
+    #[doc(hidden)]
     pub kinesis_streams_output: std::option::Option<crate::model::KinesisStreamsOutput>,
     /// <p>Identifies a Kinesis Data Firehose delivery stream as the destination.</p>
+    #[doc(hidden)]
     pub kinesis_firehose_output: std::option::Option<crate::model::KinesisFirehoseOutput>,
     /// <p>Identifies an Amazon Lambda function as the destination.</p>
+    #[doc(hidden)]
     pub lambda_output: std::option::Option<crate::model::LambdaOutput>,
     /// <p>Describes the data format when records are written to the destination. </p>
+    #[doc(hidden)]
     pub destination_schema: std::option::Option<crate::model::DestinationSchema>,
 }
 impl Output {
@@ -12595,11 +12786,10 @@ impl std::fmt::Debug for Output {
         formatter.finish()
     }
 }
-/// See [`Output`](crate::model::Output)
+/// See [`Output`](crate::model::Output).
 pub mod output {
 
-    /// A builder for [`Output`](crate::model::Output)
-    #[non_exhaustive]
+    /// A builder for [`Output`](crate::model::Output).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -12675,7 +12865,7 @@ pub mod output {
             self.destination_schema = input;
             self
         }
-        /// Consumes the builder and constructs a [`Output`](crate::model::Output)
+        /// Consumes the builder and constructs a [`Output`](crate::model::Output).
         pub fn build(self) -> crate::model::Output {
             crate::model::Output {
                 name: self.name,
@@ -12688,7 +12878,7 @@ pub mod output {
     }
 }
 impl Output {
-    /// Creates a new builder-style object to manufacture [`Output`](crate::model::Output)
+    /// Creates a new builder-style object to manufacture [`Output`](crate::model::Output).
     pub fn builder() -> crate::model::output::Builder {
         crate::model::output::Builder::default()
     }
@@ -12701,6 +12891,7 @@ pub struct LambdaOutput {
     /// <p>The Amazon Resource Name (ARN) of the destination Lambda function to write to.</p> <note>
     /// <p>To specify an earlier version of the Lambda function than the latest, include the Lambda function version in the Lambda function ARN. For more information about Lambda ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda">Example ARNs: Amazon Lambda</a> </p>
     /// </note>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl LambdaOutput {
@@ -12718,11 +12909,10 @@ impl std::fmt::Debug for LambdaOutput {
         formatter.finish()
     }
 }
-/// See [`LambdaOutput`](crate::model::LambdaOutput)
+/// See [`LambdaOutput`](crate::model::LambdaOutput).
 pub mod lambda_output {
 
-    /// A builder for [`LambdaOutput`](crate::model::LambdaOutput)
-    #[non_exhaustive]
+    /// A builder for [`LambdaOutput`](crate::model::LambdaOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -12742,7 +12932,7 @@ pub mod lambda_output {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaOutput`](crate::model::LambdaOutput)
+        /// Consumes the builder and constructs a [`LambdaOutput`](crate::model::LambdaOutput).
         pub fn build(self) -> crate::model::LambdaOutput {
             crate::model::LambdaOutput {
                 resource_arn: self.resource_arn,
@@ -12751,7 +12941,7 @@ pub mod lambda_output {
     }
 }
 impl LambdaOutput {
-    /// Creates a new builder-style object to manufacture [`LambdaOutput`](crate::model::LambdaOutput)
+    /// Creates a new builder-style object to manufacture [`LambdaOutput`](crate::model::LambdaOutput).
     pub fn builder() -> crate::model::lambda_output::Builder {
         crate::model::lambda_output::Builder::default()
     }
@@ -12762,6 +12952,7 @@ impl LambdaOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisFirehoseOutput {
     /// <p>The ARN of the destination delivery stream to write to.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl KinesisFirehoseOutput {
@@ -12777,11 +12968,10 @@ impl std::fmt::Debug for KinesisFirehoseOutput {
         formatter.finish()
     }
 }
-/// See [`KinesisFirehoseOutput`](crate::model::KinesisFirehoseOutput)
+/// See [`KinesisFirehoseOutput`](crate::model::KinesisFirehoseOutput).
 pub mod kinesis_firehose_output {
 
-    /// A builder for [`KinesisFirehoseOutput`](crate::model::KinesisFirehoseOutput)
-    #[non_exhaustive]
+    /// A builder for [`KinesisFirehoseOutput`](crate::model::KinesisFirehoseOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -12797,7 +12987,7 @@ pub mod kinesis_firehose_output {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisFirehoseOutput`](crate::model::KinesisFirehoseOutput)
+        /// Consumes the builder and constructs a [`KinesisFirehoseOutput`](crate::model::KinesisFirehoseOutput).
         pub fn build(self) -> crate::model::KinesisFirehoseOutput {
             crate::model::KinesisFirehoseOutput {
                 resource_arn: self.resource_arn,
@@ -12806,7 +12996,7 @@ pub mod kinesis_firehose_output {
     }
 }
 impl KinesisFirehoseOutput {
-    /// Creates a new builder-style object to manufacture [`KinesisFirehoseOutput`](crate::model::KinesisFirehoseOutput)
+    /// Creates a new builder-style object to manufacture [`KinesisFirehoseOutput`](crate::model::KinesisFirehoseOutput).
     pub fn builder() -> crate::model::kinesis_firehose_output::Builder {
         crate::model::kinesis_firehose_output::Builder::default()
     }
@@ -12817,6 +13007,7 @@ impl KinesisFirehoseOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisStreamsOutput {
     /// <p>The ARN of the destination Kinesis data stream to write to.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl KinesisStreamsOutput {
@@ -12832,11 +13023,10 @@ impl std::fmt::Debug for KinesisStreamsOutput {
         formatter.finish()
     }
 }
-/// See [`KinesisStreamsOutput`](crate::model::KinesisStreamsOutput)
+/// See [`KinesisStreamsOutput`](crate::model::KinesisStreamsOutput).
 pub mod kinesis_streams_output {
 
-    /// A builder for [`KinesisStreamsOutput`](crate::model::KinesisStreamsOutput)
-    #[non_exhaustive]
+    /// A builder for [`KinesisStreamsOutput`](crate::model::KinesisStreamsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -12852,7 +13042,7 @@ pub mod kinesis_streams_output {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisStreamsOutput`](crate::model::KinesisStreamsOutput)
+        /// Consumes the builder and constructs a [`KinesisStreamsOutput`](crate::model::KinesisStreamsOutput).
         pub fn build(self) -> crate::model::KinesisStreamsOutput {
             crate::model::KinesisStreamsOutput {
                 resource_arn: self.resource_arn,
@@ -12861,7 +13051,7 @@ pub mod kinesis_streams_output {
     }
 }
 impl KinesisStreamsOutput {
-    /// Creates a new builder-style object to manufacture [`KinesisStreamsOutput`](crate::model::KinesisStreamsOutput)
+    /// Creates a new builder-style object to manufacture [`KinesisStreamsOutput`](crate::model::KinesisStreamsOutput).
     pub fn builder() -> crate::model::kinesis_streams_output::Builder {
         crate::model::kinesis_streams_output::Builder::default()
     }
@@ -12872,18 +13062,24 @@ impl KinesisStreamsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Input {
     /// <p>The name prefix to use when creating an in-application stream. Suppose that you specify a prefix "<code>MyInApplicationStream</code>." Kinesis Data Analytics then creates one or more (as per the <code>InputParallelism</code> count you specified) in-application streams with the names "<code>MyInApplicationStream_001</code>," "<code>MyInApplicationStream_002</code>," and so on. </p>
+    #[doc(hidden)]
     pub name_prefix: std::option::Option<std::string::String>,
     /// <p>The <code>InputProcessingConfiguration</code> for the input. An input processor transforms records as they are received from the stream, before the application's SQL code executes. Currently, the only input processing configuration available is <code>InputLambdaProcessor</code>. </p>
+    #[doc(hidden)]
     pub input_processing_configuration:
         std::option::Option<crate::model::InputProcessingConfiguration>,
     /// <p>If the streaming source is an Amazon Kinesis data stream, identifies the stream's Amazon Resource Name (ARN). </p>
+    #[doc(hidden)]
     pub kinesis_streams_input: std::option::Option<crate::model::KinesisStreamsInput>,
     /// <p>If the streaming source is an Amazon Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.</p>
+    #[doc(hidden)]
     pub kinesis_firehose_input: std::option::Option<crate::model::KinesisFirehoseInput>,
     /// <p>Describes the number of in-application streams to create. </p>
+    #[doc(hidden)]
     pub input_parallelism: std::option::Option<crate::model::InputParallelism>,
     /// <p>Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.</p>
     /// <p>Also used to describe the format of the reference data source.</p>
+    #[doc(hidden)]
     pub input_schema: std::option::Option<crate::model::SourceSchema>,
 }
 impl Input {
@@ -12932,11 +13128,10 @@ impl std::fmt::Debug for Input {
         formatter.finish()
     }
 }
-/// See [`Input`](crate::model::Input)
+/// See [`Input`](crate::model::Input).
 pub mod input {
 
-    /// A builder for [`Input`](crate::model::Input)
-    #[non_exhaustive]
+    /// A builder for [`Input`](crate::model::Input).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name_prefix: std::option::Option<std::string::String>,
@@ -13028,7 +13223,7 @@ pub mod input {
             self.input_schema = input;
             self
         }
-        /// Consumes the builder and constructs a [`Input`](crate::model::Input)
+        /// Consumes the builder and constructs a [`Input`](crate::model::Input).
         pub fn build(self) -> crate::model::Input {
             crate::model::Input {
                 name_prefix: self.name_prefix,
@@ -13042,7 +13237,7 @@ pub mod input {
     }
 }
 impl Input {
-    /// Creates a new builder-style object to manufacture [`Input`](crate::model::Input)
+    /// Creates a new builder-style object to manufacture [`Input`](crate::model::Input).
     pub fn builder() -> crate::model::input::Builder {
         crate::model::input::Builder::default()
     }
@@ -13053,6 +13248,7 @@ impl Input {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisFirehoseInput {
     /// <p>The Amazon Resource Name (ARN) of the delivery stream.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl KinesisFirehoseInput {
@@ -13068,11 +13264,10 @@ impl std::fmt::Debug for KinesisFirehoseInput {
         formatter.finish()
     }
 }
-/// See [`KinesisFirehoseInput`](crate::model::KinesisFirehoseInput)
+/// See [`KinesisFirehoseInput`](crate::model::KinesisFirehoseInput).
 pub mod kinesis_firehose_input {
 
-    /// A builder for [`KinesisFirehoseInput`](crate::model::KinesisFirehoseInput)
-    #[non_exhaustive]
+    /// A builder for [`KinesisFirehoseInput`](crate::model::KinesisFirehoseInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -13088,7 +13283,7 @@ pub mod kinesis_firehose_input {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisFirehoseInput`](crate::model::KinesisFirehoseInput)
+        /// Consumes the builder and constructs a [`KinesisFirehoseInput`](crate::model::KinesisFirehoseInput).
         pub fn build(self) -> crate::model::KinesisFirehoseInput {
             crate::model::KinesisFirehoseInput {
                 resource_arn: self.resource_arn,
@@ -13097,7 +13292,7 @@ pub mod kinesis_firehose_input {
     }
 }
 impl KinesisFirehoseInput {
-    /// Creates a new builder-style object to manufacture [`KinesisFirehoseInput`](crate::model::KinesisFirehoseInput)
+    /// Creates a new builder-style object to manufacture [`KinesisFirehoseInput`](crate::model::KinesisFirehoseInput).
     pub fn builder() -> crate::model::kinesis_firehose_input::Builder {
         crate::model::kinesis_firehose_input::Builder::default()
     }
@@ -13108,6 +13303,7 @@ impl KinesisFirehoseInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisStreamsInput {
     /// <p>The ARN of the input Kinesis data stream to read.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl KinesisStreamsInput {
@@ -13123,11 +13319,10 @@ impl std::fmt::Debug for KinesisStreamsInput {
         formatter.finish()
     }
 }
-/// See [`KinesisStreamsInput`](crate::model::KinesisStreamsInput)
+/// See [`KinesisStreamsInput`](crate::model::KinesisStreamsInput).
 pub mod kinesis_streams_input {
 
-    /// A builder for [`KinesisStreamsInput`](crate::model::KinesisStreamsInput)
-    #[non_exhaustive]
+    /// A builder for [`KinesisStreamsInput`](crate::model::KinesisStreamsInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -13143,7 +13338,7 @@ pub mod kinesis_streams_input {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisStreamsInput`](crate::model::KinesisStreamsInput)
+        /// Consumes the builder and constructs a [`KinesisStreamsInput`](crate::model::KinesisStreamsInput).
         pub fn build(self) -> crate::model::KinesisStreamsInput {
             crate::model::KinesisStreamsInput {
                 resource_arn: self.resource_arn,
@@ -13152,7 +13347,7 @@ pub mod kinesis_streams_input {
     }
 }
 impl KinesisStreamsInput {
-    /// Creates a new builder-style object to manufacture [`KinesisStreamsInput`](crate::model::KinesisStreamsInput)
+    /// Creates a new builder-style object to manufacture [`KinesisStreamsInput`](crate::model::KinesisStreamsInput).
     pub fn builder() -> crate::model::kinesis_streams_input::Builder {
         crate::model::kinesis_streams_input::Builder::default()
     }

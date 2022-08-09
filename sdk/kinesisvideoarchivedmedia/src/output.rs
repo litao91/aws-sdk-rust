@@ -4,8 +4,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListFragmentsOutput {
     /// <p>A list of archived <code>Fragment</code> objects from the stream that meet the selector criteria. Results are in no specific order, even across pages.</p>
+    #[doc(hidden)]
     pub fragments: std::option::Option<std::vec::Vec<crate::model::Fragment>>,
     /// <p>If the returned list is truncated, the operation returns this token to use to retrieve the next page of results. This value is <code>null</code> when there are no more results to return.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListFragmentsOutput {
@@ -26,11 +28,10 @@ impl std::fmt::Debug for ListFragmentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListFragmentsOutput`](crate::output::ListFragmentsOutput)
+/// See [`ListFragmentsOutput`](crate::output::ListFragmentsOutput).
 pub mod list_fragments_output {
 
-    /// A builder for [`ListFragmentsOutput`](crate::output::ListFragmentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListFragmentsOutput`](crate::output::ListFragmentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fragments: std::option::Option<std::vec::Vec<crate::model::Fragment>>,
@@ -66,7 +67,7 @@ pub mod list_fragments_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFragmentsOutput`](crate::output::ListFragmentsOutput)
+        /// Consumes the builder and constructs a [`ListFragmentsOutput`](crate::output::ListFragmentsOutput).
         pub fn build(self) -> crate::output::ListFragmentsOutput {
             crate::output::ListFragmentsOutput {
                 fragments: self.fragments,
@@ -76,7 +77,7 @@ pub mod list_fragments_output {
     }
 }
 impl ListFragmentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListFragmentsOutput`](crate::output::ListFragmentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListFragmentsOutput`](crate::output::ListFragmentsOutput).
     pub fn builder() -> crate::output::list_fragments_output::Builder {
         crate::output::list_fragments_output::Builder::default()
     }
@@ -86,6 +87,7 @@ impl ListFragmentsOutput {
 #[non_exhaustive]
 pub struct GetMediaForFragmentListOutput {
     /// <p>The content type of the requested media.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The payload that Kinesis Video Streams returns is a sequence of chunks from the specified stream. For information about the chunks, see <a href="http://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_dataplane_PutMedia.html">PutMedia</a>. The chunks that Kinesis Video Streams returns in the <code>GetMediaForFragmentList</code> call also include the following additional Matroska (MKV) tags: </p>
     /// <ul>
@@ -130,11 +132,10 @@ impl std::fmt::Debug for GetMediaForFragmentListOutput {
         formatter.finish()
     }
 }
-/// See [`GetMediaForFragmentListOutput`](crate::output::GetMediaForFragmentListOutput)
+/// See [`GetMediaForFragmentListOutput`](crate::output::GetMediaForFragmentListOutput).
 pub mod get_media_for_fragment_list_output {
 
-    /// A builder for [`GetMediaForFragmentListOutput`](crate::output::GetMediaForFragmentListOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetMediaForFragmentListOutput`](crate::output::GetMediaForFragmentListOutput).
     #[derive(std::default::Default, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_type: std::option::Option<std::string::String>,
@@ -186,7 +187,7 @@ pub mod get_media_for_fragment_list_output {
             self.payload = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetMediaForFragmentListOutput`](crate::output::GetMediaForFragmentListOutput)
+        /// Consumes the builder and constructs a [`GetMediaForFragmentListOutput`](crate::output::GetMediaForFragmentListOutput).
         pub fn build(self) -> crate::output::GetMediaForFragmentListOutput {
             crate::output::GetMediaForFragmentListOutput {
                 content_type: self.content_type,
@@ -196,7 +197,7 @@ pub mod get_media_for_fragment_list_output {
     }
 }
 impl GetMediaForFragmentListOutput {
-    /// Creates a new builder-style object to manufacture [`GetMediaForFragmentListOutput`](crate::output::GetMediaForFragmentListOutput)
+    /// Creates a new builder-style object to manufacture [`GetMediaForFragmentListOutput`](crate::output::GetMediaForFragmentListOutput).
     pub fn builder() -> crate::output::get_media_for_fragment_list_output::Builder {
         crate::output::get_media_for_fragment_list_output::Builder::default()
     }
@@ -207,8 +208,10 @@ impl GetMediaForFragmentListOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetImagesOutput {
     /// <p>The list of images generated from the video stream. If there is no media available for the given timestamp, the <code>NO_MEDIA</code> error will be listed in the output. If an error occurs while the image is being generated, the <code>MEDIA_ERROR</code> will be listed in the output as the cause of the missing image. </p>
+    #[doc(hidden)]
     pub images: std::option::Option<std::vec::Vec<crate::model::Image>>,
     /// <p>The encrypted token that was used in the request to get more images.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetImagesOutput {
@@ -229,11 +232,10 @@ impl std::fmt::Debug for GetImagesOutput {
         formatter.finish()
     }
 }
-/// See [`GetImagesOutput`](crate::output::GetImagesOutput)
+/// See [`GetImagesOutput`](crate::output::GetImagesOutput).
 pub mod get_images_output {
 
-    /// A builder for [`GetImagesOutput`](crate::output::GetImagesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetImagesOutput`](crate::output::GetImagesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) images: std::option::Option<std::vec::Vec<crate::model::Image>>,
@@ -269,7 +271,7 @@ pub mod get_images_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetImagesOutput`](crate::output::GetImagesOutput)
+        /// Consumes the builder and constructs a [`GetImagesOutput`](crate::output::GetImagesOutput).
         pub fn build(self) -> crate::output::GetImagesOutput {
             crate::output::GetImagesOutput {
                 images: self.images,
@@ -279,7 +281,7 @@ pub mod get_images_output {
     }
 }
 impl GetImagesOutput {
-    /// Creates a new builder-style object to manufacture [`GetImagesOutput`](crate::output::GetImagesOutput)
+    /// Creates a new builder-style object to manufacture [`GetImagesOutput`](crate::output::GetImagesOutput).
     pub fn builder() -> crate::output::get_images_output::Builder {
         crate::output::get_images_output::Builder::default()
     }
@@ -290,6 +292,7 @@ impl GetImagesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetHlsStreamingSessionUrlOutput {
     /// <p>The URL (containing the session token) that a media player can use to retrieve the HLS master playlist.</p>
+    #[doc(hidden)]
     pub hls_streaming_session_url: std::option::Option<std::string::String>,
 }
 impl GetHlsStreamingSessionUrlOutput {
@@ -305,11 +308,10 @@ impl std::fmt::Debug for GetHlsStreamingSessionUrlOutput {
         formatter.finish()
     }
 }
-/// See [`GetHlsStreamingSessionUrlOutput`](crate::output::GetHlsStreamingSessionUrlOutput)
+/// See [`GetHlsStreamingSessionUrlOutput`](crate::output::GetHlsStreamingSessionUrlOutput).
 pub mod get_hls_streaming_session_url_output {
 
-    /// A builder for [`GetHlsStreamingSessionUrlOutput`](crate::output::GetHlsStreamingSessionUrlOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetHlsStreamingSessionUrlOutput`](crate::output::GetHlsStreamingSessionUrlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hls_streaming_session_url: std::option::Option<std::string::String>,
@@ -328,7 +330,7 @@ pub mod get_hls_streaming_session_url_output {
             self.hls_streaming_session_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetHlsStreamingSessionUrlOutput`](crate::output::GetHlsStreamingSessionUrlOutput)
+        /// Consumes the builder and constructs a [`GetHlsStreamingSessionUrlOutput`](crate::output::GetHlsStreamingSessionUrlOutput).
         pub fn build(self) -> crate::output::GetHlsStreamingSessionUrlOutput {
             crate::output::GetHlsStreamingSessionUrlOutput {
                 hls_streaming_session_url: self.hls_streaming_session_url,
@@ -337,7 +339,7 @@ pub mod get_hls_streaming_session_url_output {
     }
 }
 impl GetHlsStreamingSessionUrlOutput {
-    /// Creates a new builder-style object to manufacture [`GetHlsStreamingSessionUrlOutput`](crate::output::GetHlsStreamingSessionUrlOutput)
+    /// Creates a new builder-style object to manufacture [`GetHlsStreamingSessionUrlOutput`](crate::output::GetHlsStreamingSessionUrlOutput).
     pub fn builder() -> crate::output::get_hls_streaming_session_url_output::Builder {
         crate::output::get_hls_streaming_session_url_output::Builder::default()
     }
@@ -348,6 +350,7 @@ impl GetHlsStreamingSessionUrlOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDashStreamingSessionUrlOutput {
     /// <p>The URL (containing the session token) that a media player can use to retrieve the MPEG-DASH manifest.</p>
+    #[doc(hidden)]
     pub dash_streaming_session_url: std::option::Option<std::string::String>,
 }
 impl GetDashStreamingSessionUrlOutput {
@@ -366,11 +369,10 @@ impl std::fmt::Debug for GetDashStreamingSessionUrlOutput {
         formatter.finish()
     }
 }
-/// See [`GetDashStreamingSessionUrlOutput`](crate::output::GetDashStreamingSessionUrlOutput)
+/// See [`GetDashStreamingSessionUrlOutput`](crate::output::GetDashStreamingSessionUrlOutput).
 pub mod get_dash_streaming_session_url_output {
 
-    /// A builder for [`GetDashStreamingSessionUrlOutput`](crate::output::GetDashStreamingSessionUrlOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDashStreamingSessionUrlOutput`](crate::output::GetDashStreamingSessionUrlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dash_streaming_session_url: std::option::Option<std::string::String>,
@@ -389,7 +391,7 @@ pub mod get_dash_streaming_session_url_output {
             self.dash_streaming_session_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDashStreamingSessionUrlOutput`](crate::output::GetDashStreamingSessionUrlOutput)
+        /// Consumes the builder and constructs a [`GetDashStreamingSessionUrlOutput`](crate::output::GetDashStreamingSessionUrlOutput).
         pub fn build(self) -> crate::output::GetDashStreamingSessionUrlOutput {
             crate::output::GetDashStreamingSessionUrlOutput {
                 dash_streaming_session_url: self.dash_streaming_session_url,
@@ -398,7 +400,7 @@ pub mod get_dash_streaming_session_url_output {
     }
 }
 impl GetDashStreamingSessionUrlOutput {
-    /// Creates a new builder-style object to manufacture [`GetDashStreamingSessionUrlOutput`](crate::output::GetDashStreamingSessionUrlOutput)
+    /// Creates a new builder-style object to manufacture [`GetDashStreamingSessionUrlOutput`](crate::output::GetDashStreamingSessionUrlOutput).
     pub fn builder() -> crate::output::get_dash_streaming_session_url_output::Builder {
         crate::output::get_dash_streaming_session_url_output::Builder::default()
     }
@@ -408,6 +410,7 @@ impl GetDashStreamingSessionUrlOutput {
 #[non_exhaustive]
 pub struct GetClipOutput {
     /// <p>The content type of the media in the requested clip.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>Traditional MP4 file that contains the media clip from the specified video stream. The output will contain the first 100 MB or the first 200 fragments from the specified start timestamp. For more information, see <a href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/limits.html">Kinesis Video Streams Limits</a>. </p>
     pub payload: aws_smithy_http::byte_stream::ByteStream,
@@ -430,11 +433,10 @@ impl std::fmt::Debug for GetClipOutput {
         formatter.finish()
     }
 }
-/// See [`GetClipOutput`](crate::output::GetClipOutput)
+/// See [`GetClipOutput`](crate::output::GetClipOutput).
 pub mod get_clip_output {
 
-    /// A builder for [`GetClipOutput`](crate::output::GetClipOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetClipOutput`](crate::output::GetClipOutput).
     #[derive(std::default::Default, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_type: std::option::Option<std::string::String>,
@@ -464,7 +466,7 @@ pub mod get_clip_output {
             self.payload = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetClipOutput`](crate::output::GetClipOutput)
+        /// Consumes the builder and constructs a [`GetClipOutput`](crate::output::GetClipOutput).
         pub fn build(self) -> crate::output::GetClipOutput {
             crate::output::GetClipOutput {
                 content_type: self.content_type,
@@ -474,7 +476,7 @@ pub mod get_clip_output {
     }
 }
 impl GetClipOutput {
-    /// Creates a new builder-style object to manufacture [`GetClipOutput`](crate::output::GetClipOutput)
+    /// Creates a new builder-style object to manufacture [`GetClipOutput`](crate::output::GetClipOutput).
     pub fn builder() -> crate::output::get_clip_output::Builder {
         crate::output::get_clip_output::Builder::default()
     }

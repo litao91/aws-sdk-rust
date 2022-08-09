@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Location {
     /// <p>Name of the S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>Prefix for the location to write to.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl S3Location {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for S3Location {
         formatter.finish()
     }
 }
-/// See [`S3Location`](crate::model::S3Location)
+/// See [`S3Location`](crate::model::S3Location).
 pub mod s3_location {
 
-    /// A builder for [`S3Location`](crate::model::S3Location)
-    #[non_exhaustive]
+    /// A builder for [`S3Location`](crate::model::S3Location).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod s3_location {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location)
+        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location).
         pub fn build(self) -> crate::model::S3Location {
             crate::model::S3Location {
                 bucket: self.bucket,
@@ -68,7 +69,7 @@ pub mod s3_location {
     }
 }
 impl S3Location {
-    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location)
+    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location).
     pub fn builder() -> crate::model::s3_location::Builder {
         crate::model::s3_location::Builder::default()
     }
@@ -193,18 +194,25 @@ impl AsRef<str> for ReportFrequency {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReportDefinition {
     /// <p>The ID of the report.</p>
+    #[doc(hidden)]
     pub report_id: std::option::Option<std::string::String>,
     /// <p>Description of the report</p>
+    #[doc(hidden)]
     pub report_description: std::option::Option<std::string::String>,
     /// <p>The cadence at which the report is generated.</p>
+    #[doc(hidden)]
     pub report_frequency: std::option::Option<crate::model::ReportFrequency>,
     /// <p>The format used for the generated reports.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::Format>,
     /// <p>The location in Amazon Simple Storage Service (Amazon S3) the reports should be saved to.</p>
+    #[doc(hidden)]
     pub destination_s3_location: std::option::Option<crate::model::S3Location>,
     /// <p>Timestamp (milliseconds) when this report definition was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Timestamp (milliseconds) when this report definition was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ReportDefinition {
@@ -250,11 +258,10 @@ impl std::fmt::Debug for ReportDefinition {
         formatter.finish()
     }
 }
-/// See [`ReportDefinition`](crate::model::ReportDefinition)
+/// See [`ReportDefinition`](crate::model::ReportDefinition).
 pub mod report_definition {
 
-    /// A builder for [`ReportDefinition`](crate::model::ReportDefinition)
-    #[non_exhaustive]
+    /// A builder for [`ReportDefinition`](crate::model::ReportDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) report_id: std::option::Option<std::string::String>,
@@ -351,7 +358,7 @@ pub mod report_definition {
             self.last_updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReportDefinition`](crate::model::ReportDefinition)
+        /// Consumes the builder and constructs a [`ReportDefinition`](crate::model::ReportDefinition).
         pub fn build(self) -> crate::model::ReportDefinition {
             crate::model::ReportDefinition {
                 report_id: self.report_id,
@@ -366,7 +373,7 @@ pub mod report_definition {
     }
 }
 impl ReportDefinition {
-    /// Creates a new builder-style object to manufacture [`ReportDefinition`](crate::model::ReportDefinition)
+    /// Creates a new builder-style object to manufacture [`ReportDefinition`](crate::model::ReportDefinition).
     pub fn builder() -> crate::model::report_definition::Builder {
         crate::model::report_definition::Builder::default()
     }
@@ -377,10 +384,13 @@ impl ReportDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceS3Location {
     /// <p>Name of the bucket.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>Key of the object.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Region of the bucket. Only required for Regions that are disabled by default. For more infomration about Regions that are disabled by default, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html#rande-manage-enable"> Enabling a Region</a> in the <i>AWS General Reference guide</i>.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<crate::model::S3BucketRegion>,
 }
 impl SourceS3Location {
@@ -406,11 +416,10 @@ impl std::fmt::Debug for SourceS3Location {
         formatter.finish()
     }
 }
-/// See [`SourceS3Location`](crate::model::SourceS3Location)
+/// See [`SourceS3Location`](crate::model::SourceS3Location).
 pub mod source_s3_location {
 
-    /// A builder for [`SourceS3Location`](crate::model::SourceS3Location)
-    #[non_exhaustive]
+    /// A builder for [`SourceS3Location`](crate::model::SourceS3Location).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -451,7 +460,7 @@ pub mod source_s3_location {
             self.region = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceS3Location`](crate::model::SourceS3Location)
+        /// Consumes the builder and constructs a [`SourceS3Location`](crate::model::SourceS3Location).
         pub fn build(self) -> crate::model::SourceS3Location {
             crate::model::SourceS3Location {
                 bucket: self.bucket,
@@ -462,7 +471,7 @@ pub mod source_s3_location {
     }
 }
 impl SourceS3Location {
-    /// Creates a new builder-style object to manufacture [`SourceS3Location`](crate::model::SourceS3Location)
+    /// Creates a new builder-style object to manufacture [`SourceS3Location`](crate::model::SourceS3Location).
     pub fn builder() -> crate::model::source_s3_location::Builder {
         crate::model::source_s3_location::Builder::default()
     }

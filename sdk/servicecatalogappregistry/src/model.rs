@@ -5,18 +5,25 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttributeGroup {
     /// <p>The globally unique attribute group identifier of the attribute group.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon resource name (ARN) that specifies the attribute group across services.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the attribute group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the attribute group that the user provides.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The ISO-8601 formatted timestamp of the moment the attribute group was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The ISO-8601 formatted timestamp of the moment the attribute group was last updated. This time is the same as the creationTime for a newly created attribute group.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Key-value pairs you can use to associate with the attribute group.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -66,11 +73,10 @@ impl std::fmt::Debug for AttributeGroup {
         formatter.finish()
     }
 }
-/// See [`AttributeGroup`](crate::model::AttributeGroup)
+/// See [`AttributeGroup`](crate::model::AttributeGroup).
 pub mod attribute_group {
 
-    /// A builder for [`AttributeGroup`](crate::model::AttributeGroup)
-    #[non_exhaustive]
+    /// A builder for [`AttributeGroup`](crate::model::AttributeGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -175,7 +181,7 @@ pub mod attribute_group {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttributeGroup`](crate::model::AttributeGroup)
+        /// Consumes the builder and constructs a [`AttributeGroup`](crate::model::AttributeGroup).
         pub fn build(self) -> crate::model::AttributeGroup {
             crate::model::AttributeGroup {
                 id: self.id,
@@ -190,7 +196,7 @@ pub mod attribute_group {
     }
 }
 impl AttributeGroup {
-    /// Creates a new builder-style object to manufacture [`AttributeGroup`](crate::model::AttributeGroup)
+    /// Creates a new builder-style object to manufacture [`AttributeGroup`](crate::model::AttributeGroup).
     pub fn builder() -> crate::model::attribute_group::Builder {
         crate::model::attribute_group::Builder::default()
     }
@@ -201,18 +207,25 @@ impl AttributeGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Application {
     /// <p>The identifier of the application.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon resource name (ARN) that specifies the application across services.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the application. The name must be unique in the region in which you are creating the application.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the application.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The ISO-8601 formatted timestamp of the moment when the application was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The ISO-8601 formatted timestamp of the moment when the application was last updated.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Key-value pairs you can use to associate with the application.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -262,11 +275,10 @@ impl std::fmt::Debug for Application {
         formatter.finish()
     }
 }
-/// See [`Application`](crate::model::Application)
+/// See [`Application`](crate::model::Application).
 pub mod application {
 
-    /// A builder for [`Application`](crate::model::Application)
-    #[non_exhaustive]
+    /// A builder for [`Application`](crate::model::Application).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -371,7 +383,7 @@ pub mod application {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Application`](crate::model::Application)
+        /// Consumes the builder and constructs a [`Application`](crate::model::Application).
         pub fn build(self) -> crate::model::Application {
             crate::model::Application {
                 id: self.id,
@@ -386,7 +398,7 @@ pub mod application {
     }
 }
 impl Application {
-    /// Creates a new builder-style object to manufacture [`Application`](crate::model::Application)
+    /// Creates a new builder-style object to manufacture [`Application`](crate::model::Application).
     pub fn builder() -> crate::model::application::Builder {
         crate::model::application::Builder::default()
     }
@@ -503,10 +515,13 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttributeGroupDetails {
     /// <p>The unique identifier of the attribute group.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon resource name (ARN) that specifies the attribute group.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the attribute group. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl AttributeGroupDetails {
@@ -532,11 +547,10 @@ impl std::fmt::Debug for AttributeGroupDetails {
         formatter.finish()
     }
 }
-/// See [`AttributeGroupDetails`](crate::model::AttributeGroupDetails)
+/// See [`AttributeGroupDetails`](crate::model::AttributeGroupDetails).
 pub mod attribute_group_details {
 
-    /// A builder for [`AttributeGroupDetails`](crate::model::AttributeGroupDetails)
-    #[non_exhaustive]
+    /// A builder for [`AttributeGroupDetails`](crate::model::AttributeGroupDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -574,7 +588,7 @@ pub mod attribute_group_details {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttributeGroupDetails`](crate::model::AttributeGroupDetails)
+        /// Consumes the builder and constructs a [`AttributeGroupDetails`](crate::model::AttributeGroupDetails).
         pub fn build(self) -> crate::model::AttributeGroupDetails {
             crate::model::AttributeGroupDetails {
                 id: self.id,
@@ -585,7 +599,7 @@ pub mod attribute_group_details {
     }
 }
 impl AttributeGroupDetails {
-    /// Creates a new builder-style object to manufacture [`AttributeGroupDetails`](crate::model::AttributeGroupDetails)
+    /// Creates a new builder-style object to manufacture [`AttributeGroupDetails`](crate::model::AttributeGroupDetails).
     pub fn builder() -> crate::model::attribute_group_details::Builder {
         crate::model::attribute_group_details::Builder::default()
     }
@@ -596,16 +610,22 @@ impl AttributeGroupDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttributeGroupSummary {
     /// <p>The globally unique attribute group identifier of the attribute group.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon resource name (ARN) that specifies the attribute group across services.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the attribute group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the attribute group that the user provides.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The ISO-8601 formatted timestamp of the moment the attribute group was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The ISO-8601 formatted timestamp of the moment the attribute group was last updated. This time is the same as the creationTime for a newly created attribute group.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AttributeGroupSummary {
@@ -646,11 +666,10 @@ impl std::fmt::Debug for AttributeGroupSummary {
         formatter.finish()
     }
 }
-/// See [`AttributeGroupSummary`](crate::model::AttributeGroupSummary)
+/// See [`AttributeGroupSummary`](crate::model::AttributeGroupSummary).
 pub mod attribute_group_summary {
 
-    /// A builder for [`AttributeGroupSummary`](crate::model::AttributeGroupSummary)
-    #[non_exhaustive]
+    /// A builder for [`AttributeGroupSummary`](crate::model::AttributeGroupSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -727,7 +746,7 @@ pub mod attribute_group_summary {
             self.last_update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttributeGroupSummary`](crate::model::AttributeGroupSummary)
+        /// Consumes the builder and constructs a [`AttributeGroupSummary`](crate::model::AttributeGroupSummary).
         pub fn build(self) -> crate::model::AttributeGroupSummary {
             crate::model::AttributeGroupSummary {
                 id: self.id,
@@ -741,7 +760,7 @@ pub mod attribute_group_summary {
     }
 }
 impl AttributeGroupSummary {
-    /// Creates a new builder-style object to manufacture [`AttributeGroupSummary`](crate::model::AttributeGroupSummary)
+    /// Creates a new builder-style object to manufacture [`AttributeGroupSummary`](crate::model::AttributeGroupSummary).
     pub fn builder() -> crate::model::attribute_group_summary::Builder {
         crate::model::attribute_group_summary::Builder::default()
     }
@@ -752,8 +771,10 @@ impl AttributeGroupSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceInfo {
     /// <p>The name of the resource.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon resource name (ARN) that specifies the resource across services.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl ResourceInfo {
@@ -774,11 +795,10 @@ impl std::fmt::Debug for ResourceInfo {
         formatter.finish()
     }
 }
-/// See [`ResourceInfo`](crate::model::ResourceInfo)
+/// See [`ResourceInfo`](crate::model::ResourceInfo).
 pub mod resource_info {
 
-    /// A builder for [`ResourceInfo`](crate::model::ResourceInfo)
-    #[non_exhaustive]
+    /// A builder for [`ResourceInfo`](crate::model::ResourceInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -805,7 +825,7 @@ pub mod resource_info {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceInfo`](crate::model::ResourceInfo)
+        /// Consumes the builder and constructs a [`ResourceInfo`](crate::model::ResourceInfo).
         pub fn build(self) -> crate::model::ResourceInfo {
             crate::model::ResourceInfo {
                 name: self.name,
@@ -815,7 +835,7 @@ pub mod resource_info {
     }
 }
 impl ResourceInfo {
-    /// Creates a new builder-style object to manufacture [`ResourceInfo`](crate::model::ResourceInfo)
+    /// Creates a new builder-style object to manufacture [`ResourceInfo`](crate::model::ResourceInfo).
     pub fn builder() -> crate::model::resource_info::Builder {
         crate::model::resource_info::Builder::default()
     }
@@ -826,16 +846,22 @@ impl ResourceInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationSummary {
     /// <p>The identifier of the application.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon resource name (ARN) that specifies the application across services.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the application. The name must be unique in the region in which you are creating the application.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the application.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The ISO-8601 formatted timestamp of the moment when the application was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The ISO-8601 formatted timestamp of the moment when the application was last updated.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ApplicationSummary {
@@ -876,11 +902,10 @@ impl std::fmt::Debug for ApplicationSummary {
         formatter.finish()
     }
 }
-/// See [`ApplicationSummary`](crate::model::ApplicationSummary)
+/// See [`ApplicationSummary`](crate::model::ApplicationSummary).
 pub mod application_summary {
 
-    /// A builder for [`ApplicationSummary`](crate::model::ApplicationSummary)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationSummary`](crate::model::ApplicationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -957,7 +982,7 @@ pub mod application_summary {
             self.last_update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationSummary`](crate::model::ApplicationSummary)
+        /// Consumes the builder and constructs a [`ApplicationSummary`](crate::model::ApplicationSummary).
         pub fn build(self) -> crate::model::ApplicationSummary {
             crate::model::ApplicationSummary {
                 id: self.id,
@@ -971,7 +996,7 @@ pub mod application_summary {
     }
 }
 impl ApplicationSummary {
-    /// Creates a new builder-style object to manufacture [`ApplicationSummary`](crate::model::ApplicationSummary)
+    /// Creates a new builder-style object to manufacture [`ApplicationSummary`](crate::model::ApplicationSummary).
     pub fn builder() -> crate::model::application_summary::Builder {
         crate::model::application_summary::Builder::default()
     }
@@ -982,12 +1007,16 @@ impl ApplicationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Resource {
     /// <p>The name of the resource.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon resource name (ARN) of the resource.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The time the resource was associated with the application.</p>
+    #[doc(hidden)]
     pub association_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The service integration information about the resource. </p>
+    #[doc(hidden)]
     pub integrations: std::option::Option<crate::model::ResourceIntegrations>,
 }
 impl Resource {
@@ -1018,11 +1047,10 @@ impl std::fmt::Debug for Resource {
         formatter.finish()
     }
 }
-/// See [`Resource`](crate::model::Resource)
+/// See [`Resource`](crate::model::Resource).
 pub mod resource {
 
-    /// A builder for [`Resource`](crate::model::Resource)
-    #[non_exhaustive]
+    /// A builder for [`Resource`](crate::model::Resource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1077,7 +1105,7 @@ pub mod resource {
             self.integrations = input;
             self
         }
-        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource)
+        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource).
         pub fn build(self) -> crate::model::Resource {
             crate::model::Resource {
                 name: self.name,
@@ -1089,7 +1117,7 @@ pub mod resource {
     }
 }
 impl Resource {
-    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource)
+    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource).
     pub fn builder() -> crate::model::resource::Builder {
         crate::model::resource::Builder::default()
     }
@@ -1100,6 +1128,7 @@ impl Resource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceIntegrations {
     /// <p>The information about the integration of Resource Groups.</p>
+    #[doc(hidden)]
     pub resource_group: std::option::Option<crate::model::ResourceGroup>,
 }
 impl ResourceIntegrations {
@@ -1115,11 +1144,10 @@ impl std::fmt::Debug for ResourceIntegrations {
         formatter.finish()
     }
 }
-/// See [`ResourceIntegrations`](crate::model::ResourceIntegrations)
+/// See [`ResourceIntegrations`](crate::model::ResourceIntegrations).
 pub mod resource_integrations {
 
-    /// A builder for [`ResourceIntegrations`](crate::model::ResourceIntegrations)
-    #[non_exhaustive]
+    /// A builder for [`ResourceIntegrations`](crate::model::ResourceIntegrations).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_group: std::option::Option<crate::model::ResourceGroup>,
@@ -1138,7 +1166,7 @@ pub mod resource_integrations {
             self.resource_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceIntegrations`](crate::model::ResourceIntegrations)
+        /// Consumes the builder and constructs a [`ResourceIntegrations`](crate::model::ResourceIntegrations).
         pub fn build(self) -> crate::model::ResourceIntegrations {
             crate::model::ResourceIntegrations {
                 resource_group: self.resource_group,
@@ -1147,7 +1175,7 @@ pub mod resource_integrations {
     }
 }
 impl ResourceIntegrations {
-    /// Creates a new builder-style object to manufacture [`ResourceIntegrations`](crate::model::ResourceIntegrations)
+    /// Creates a new builder-style object to manufacture [`ResourceIntegrations`](crate::model::ResourceIntegrations).
     pub fn builder() -> crate::model::resource_integrations::Builder {
         crate::model::resource_integrations::Builder::default()
     }
@@ -1164,10 +1192,13 @@ pub struct ResourceGroup {
     /// <p> <code>UPDATING</code> if the resource group is in the process of being updated.</p>
     /// <p> <code>UPDATE_COMPLETE</code> if the resource group updated successfully.</p>
     /// <p> <code>UPDATE_FAILED</code> if the resource group could not update successfully.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ResourceGroupState>,
     /// <p>The Amazon resource name (ARN) of the resource group.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The error message that generates when the propagation process for the resource group fails.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl ResourceGroup {
@@ -1199,11 +1230,10 @@ impl std::fmt::Debug for ResourceGroup {
         formatter.finish()
     }
 }
-/// See [`ResourceGroup`](crate::model::ResourceGroup)
+/// See [`ResourceGroup`](crate::model::ResourceGroup).
 pub mod resource_group {
 
-    /// A builder for [`ResourceGroup`](crate::model::ResourceGroup)
-    #[non_exhaustive]
+    /// A builder for [`ResourceGroup`](crate::model::ResourceGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::ResourceGroupState>,
@@ -1259,7 +1289,7 @@ pub mod resource_group {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceGroup`](crate::model::ResourceGroup)
+        /// Consumes the builder and constructs a [`ResourceGroup`](crate::model::ResourceGroup).
         pub fn build(self) -> crate::model::ResourceGroup {
             crate::model::ResourceGroup {
                 state: self.state,
@@ -1270,7 +1300,7 @@ pub mod resource_group {
     }
 }
 impl ResourceGroup {
-    /// Creates a new builder-style object to manufacture [`ResourceGroup`](crate::model::ResourceGroup)
+    /// Creates a new builder-style object to manufacture [`ResourceGroup`](crate::model::ResourceGroup).
     pub fn builder() -> crate::model::resource_group::Builder {
         crate::model::resource_group::Builder::default()
     }
@@ -1359,6 +1389,7 @@ impl AsRef<str> for ResourceGroupState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Integrations {
     /// <p> The information about the resource group integration.</p>
+    #[doc(hidden)]
     pub resource_group: std::option::Option<crate::model::ResourceGroup>,
 }
 impl Integrations {
@@ -1374,11 +1405,10 @@ impl std::fmt::Debug for Integrations {
         formatter.finish()
     }
 }
-/// See [`Integrations`](crate::model::Integrations)
+/// See [`Integrations`](crate::model::Integrations).
 pub mod integrations {
 
-    /// A builder for [`Integrations`](crate::model::Integrations)
-    #[non_exhaustive]
+    /// A builder for [`Integrations`](crate::model::Integrations).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_group: std::option::Option<crate::model::ResourceGroup>,
@@ -1397,7 +1427,7 @@ pub mod integrations {
             self.resource_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`Integrations`](crate::model::Integrations)
+        /// Consumes the builder and constructs a [`Integrations`](crate::model::Integrations).
         pub fn build(self) -> crate::model::Integrations {
             crate::model::Integrations {
                 resource_group: self.resource_group,
@@ -1406,7 +1436,7 @@ pub mod integrations {
     }
 }
 impl Integrations {
-    /// Creates a new builder-style object to manufacture [`Integrations`](crate::model::Integrations)
+    /// Creates a new builder-style object to manufacture [`Integrations`](crate::model::Integrations).
     pub fn builder() -> crate::model::integrations::Builder {
         crate::model::integrations::Builder::default()
     }

@@ -5,13 +5,16 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FairsharePolicy {
     /// <p>The time period to use to calculate a fair share percentage for each fair share identifier in use, in seconds. A value of zero (0) indicates that only current usage should be measured. The decay allows for more recently run jobs to have more weight than jobs that ran earlier. The maximum supported value is 604800 (1 week).</p>
+    #[doc(hidden)]
     pub share_decay_seconds: std::option::Option<i32>,
     /// <p>A value used to reserve some of the available maximum vCPU for fair share identifiers that have not yet been used.</p>
     /// <p>The reserved ratio is <code>(<i>computeReservation</i>/100)^<i>ActiveFairShares</i> </code> where <code> <i>ActiveFairShares</i> </code> is the number of active fair share identifiers.</p>
     /// <p>For example, a <code>computeReservation</code> value of 50 indicates that Batch should reserve 50% of the maximum available vCPU if there is only one fair share identifier, 25% if there are two fair share identifiers, and 12.5% if there are three fair share identifiers. A <code>computeReservation</code> value of 25 indicates that Batch should reserve 25% of the maximum available vCPU if there is only one fair share identifier, 6.25% if there are two fair share identifiers, and 1.56% if there are three fair share identifiers.</p>
     /// <p>The minimum value is 0 and the maximum value is 99.</p>
+    #[doc(hidden)]
     pub compute_reservation: std::option::Option<i32>,
     /// <p>An array of <code>SharedIdentifier</code> objects that contain the weights for the fair share identifiers for the fair share policy. Fair share identifiers that aren't included have a default weight of <code>1.0</code>.</p>
+    #[doc(hidden)]
     pub share_distribution: std::option::Option<std::vec::Vec<crate::model::ShareAttributes>>,
 }
 impl FairsharePolicy {
@@ -40,11 +43,10 @@ impl std::fmt::Debug for FairsharePolicy {
         formatter.finish()
     }
 }
-/// See [`FairsharePolicy`](crate::model::FairsharePolicy)
+/// See [`FairsharePolicy`](crate::model::FairsharePolicy).
 pub mod fairshare_policy {
 
-    /// A builder for [`FairsharePolicy`](crate::model::FairsharePolicy)
-    #[non_exhaustive]
+    /// A builder for [`FairsharePolicy`](crate::model::FairsharePolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) share_decay_seconds: std::option::Option<i32>,
@@ -98,7 +100,7 @@ pub mod fairshare_policy {
             self.share_distribution = input;
             self
         }
-        /// Consumes the builder and constructs a [`FairsharePolicy`](crate::model::FairsharePolicy)
+        /// Consumes the builder and constructs a [`FairsharePolicy`](crate::model::FairsharePolicy).
         pub fn build(self) -> crate::model::FairsharePolicy {
             crate::model::FairsharePolicy {
                 share_decay_seconds: self.share_decay_seconds,
@@ -109,7 +111,7 @@ pub mod fairshare_policy {
     }
 }
 impl FairsharePolicy {
-    /// Creates a new builder-style object to manufacture [`FairsharePolicy`](crate::model::FairsharePolicy)
+    /// Creates a new builder-style object to manufacture [`FairsharePolicy`](crate::model::FairsharePolicy).
     pub fn builder() -> crate::model::fairshare_policy::Builder {
         crate::model::fairshare_policy::Builder::default()
     }
@@ -122,9 +124,11 @@ pub struct ShareAttributes {
     /// <p>A fair share identifier or fair share identifier prefix. If the string ends with an asterisk (*), this entry specifies the weight factor to use for fair share identifiers that start with that prefix. The list of fair share identifiers in a fair share policy cannot overlap. For example, you can't have one that specifies a <code>shareIdentifier</code> of <code>UserA*</code> and another that specifies a <code>shareIdentifier</code> of <code>UserA-1</code>.</p>
     /// <p>There can be no more than 500 fair share identifiers active in a job queue.</p>
     /// <p>The string is limited to 255 alphanumeric characters, optionally followed by an asterisk (*).</p>
+    #[doc(hidden)]
     pub share_identifier: std::option::Option<std::string::String>,
     /// <p>The weight factor for the fair share identifier. The default value is 1.0. A lower value has a higher priority for compute resources. For example, jobs that use a share identifier with a weight factor of 0.125 (1/8) get 8 times the compute resources of jobs that use a share identifier with a weight factor of 1.</p>
     /// <p>The smallest supported value is 0.0001, and the largest supported value is 999.9999.</p>
+    #[doc(hidden)]
     pub weight_factor: std::option::Option<f32>,
 }
 impl ShareAttributes {
@@ -148,11 +152,10 @@ impl std::fmt::Debug for ShareAttributes {
         formatter.finish()
     }
 }
-/// See [`ShareAttributes`](crate::model::ShareAttributes)
+/// See [`ShareAttributes`](crate::model::ShareAttributes).
 pub mod share_attributes {
 
-    /// A builder for [`ShareAttributes`](crate::model::ShareAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ShareAttributes`](crate::model::ShareAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) share_identifier: std::option::Option<std::string::String>,
@@ -188,7 +191,7 @@ pub mod share_attributes {
             self.weight_factor = input;
             self
         }
-        /// Consumes the builder and constructs a [`ShareAttributes`](crate::model::ShareAttributes)
+        /// Consumes the builder and constructs a [`ShareAttributes`](crate::model::ShareAttributes).
         pub fn build(self) -> crate::model::ShareAttributes {
             crate::model::ShareAttributes {
                 share_identifier: self.share_identifier,
@@ -198,7 +201,7 @@ pub mod share_attributes {
     }
 }
 impl ShareAttributes {
-    /// Creates a new builder-style object to manufacture [`ShareAttributes`](crate::model::ShareAttributes)
+    /// Creates a new builder-style object to manufacture [`ShareAttributes`](crate::model::ShareAttributes).
     pub fn builder() -> crate::model::share_attributes::Builder {
         crate::model::share_attributes::Builder::default()
     }
@@ -211,8 +214,10 @@ impl ShareAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComputeEnvironmentOrder {
     /// <p>The order of the compute environment. Compute environments are tried in ascending order. For example, if two compute environments are associated with a job queue, the compute environment with a lower <code>order</code> integer value is tried for job placement first.</p>
+    #[doc(hidden)]
     pub order: std::option::Option<i32>,
     /// <p>The Amazon Resource Name (ARN) of the compute environment.</p>
+    #[doc(hidden)]
     pub compute_environment: std::option::Option<std::string::String>,
 }
 impl ComputeEnvironmentOrder {
@@ -233,11 +238,10 @@ impl std::fmt::Debug for ComputeEnvironmentOrder {
         formatter.finish()
     }
 }
-/// See [`ComputeEnvironmentOrder`](crate::model::ComputeEnvironmentOrder)
+/// See [`ComputeEnvironmentOrder`](crate::model::ComputeEnvironmentOrder).
 pub mod compute_environment_order {
 
-    /// A builder for [`ComputeEnvironmentOrder`](crate::model::ComputeEnvironmentOrder)
-    #[non_exhaustive]
+    /// A builder for [`ComputeEnvironmentOrder`](crate::model::ComputeEnvironmentOrder).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) order: std::option::Option<i32>,
@@ -267,7 +271,7 @@ pub mod compute_environment_order {
             self.compute_environment = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComputeEnvironmentOrder`](crate::model::ComputeEnvironmentOrder)
+        /// Consumes the builder and constructs a [`ComputeEnvironmentOrder`](crate::model::ComputeEnvironmentOrder).
         pub fn build(self) -> crate::model::ComputeEnvironmentOrder {
             crate::model::ComputeEnvironmentOrder {
                 order: self.order,
@@ -277,7 +281,7 @@ pub mod compute_environment_order {
     }
 }
 impl ComputeEnvironmentOrder {
-    /// Creates a new builder-style object to manufacture [`ComputeEnvironmentOrder`](crate::model::ComputeEnvironmentOrder)
+    /// Creates a new builder-style object to manufacture [`ComputeEnvironmentOrder`](crate::model::ComputeEnvironmentOrder).
     pub fn builder() -> crate::model::compute_environment_order::Builder {
         crate::model::compute_environment_order::Builder::default()
     }
@@ -343,8 +347,10 @@ impl AsRef<str> for JqState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdatePolicy {
     /// <p>Specifies whether jobs are automatically terminated when the computer environment infrastructure is updated. The default value is <code>false</code>.</p>
+    #[doc(hidden)]
     pub terminate_jobs_on_update: std::option::Option<bool>,
     /// <p>Specifies the job timeout, in minutes, when the compute environment infrastructure is updated. The default value is 30.</p>
+    #[doc(hidden)]
     pub job_execution_timeout_minutes: i64,
 }
 impl UpdatePolicy {
@@ -368,11 +374,10 @@ impl std::fmt::Debug for UpdatePolicy {
         formatter.finish()
     }
 }
-/// See [`UpdatePolicy`](crate::model::UpdatePolicy)
+/// See [`UpdatePolicy`](crate::model::UpdatePolicy).
 pub mod update_policy {
 
-    /// A builder for [`UpdatePolicy`](crate::model::UpdatePolicy)
-    #[non_exhaustive]
+    /// A builder for [`UpdatePolicy`](crate::model::UpdatePolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) terminate_jobs_on_update: std::option::Option<bool>,
@@ -402,7 +407,7 @@ pub mod update_policy {
             self.job_execution_timeout_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdatePolicy`](crate::model::UpdatePolicy)
+        /// Consumes the builder and constructs a [`UpdatePolicy`](crate::model::UpdatePolicy).
         pub fn build(self) -> crate::model::UpdatePolicy {
             crate::model::UpdatePolicy {
                 terminate_jobs_on_update: self.terminate_jobs_on_update,
@@ -414,7 +419,7 @@ pub mod update_policy {
     }
 }
 impl UpdatePolicy {
-    /// Creates a new builder-style object to manufacture [`UpdatePolicy`](crate::model::UpdatePolicy)
+    /// Creates a new builder-style object to manufacture [`UpdatePolicy`](crate::model::UpdatePolicy).
     pub fn builder() -> crate::model::update_policy::Builder {
         crate::model::update_policy::Builder::default()
     }
@@ -427,20 +432,25 @@ pub struct ComputeResourceUpdate {
     /// <p>The minimum number of Amazon EC2 vCPUs that an environment should maintain (even if the compute environment is <code>DISABLED</code>).</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub minv_cpus: std::option::Option<i32>,
     /// <p>The maximum number of Amazon EC2 vCPUs that an environment can reach.</p> <note>
     /// <p>With both <code>BEST_FIT_PROGRESSIVE</code> and <code>SPOT_CAPACITY_OPTIMIZED</code> allocation strategies, Batch might need to exceed <code>maxvCpus</code> to meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single instance. That is, no more than a single instance from among those specified in your compute environment.</p>
     /// </note>
+    #[doc(hidden)]
     pub maxv_cpus: std::option::Option<i32>,
     /// <p>The desired number of Amazon EC2 vCPUS in the compute environment. Batch modifies this value between the minimum and maximum values based on job queue demand.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub desiredv_cpus: std::option::Option<i32>,
     /// <p>The VPC subnets where the compute resources are launched. Fargate compute resources can contain up to 16 subnets. For Fargate compute resources, providing an empty list will be handled as if this parameter wasn't specified and no change is made. For EC2 compute resources, providing an empty list removes the VPC subnets from the compute resource. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the <i>Amazon VPC User Guide</i>.</p>
     /// <p>When updating a compute environment, changing the VPC subnets requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub subnets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon EC2 security groups associated with instances launched in the compute environment. This parameter is required for Fargate compute resources, where it can contain up to 5 security groups. For Fargate compute resources, providing an empty list is handled as if this parameter wasn't specified and no change is made. For EC2 compute resources, providing an empty list removes the security groups from the compute resource.</p>
     /// <p>When updating a compute environment, changing the EC2 security groups requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The allocation strategy to use for the compute resource if not enough instances of the best fitting instance type can be allocated. This might be because of availability of the instance type in the Region or <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service limits</a>. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation strategies</a> in the <i>Batch User Guide</i>.</p>
     /// <p>When updating a compute environment, changing the allocation strategy requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>. <code>BEST_FIT</code> isn't supported when updating a compute environment.</p> <note>
@@ -461,6 +471,7 @@ pub struct ComputeResourceUpdate {
     /// </dd>
     /// </dl>
     /// <p>With both <code>BEST_FIT_PROGRESSIVE</code> and <code>SPOT_CAPACITY_OPTIMIZED</code> strategies, Batch might need to go above <code>maxvCpus</code> to meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single instance.</p>
+    #[doc(hidden)]
     pub allocation_strategy: std::option::Option<crate::model::CrUpdateAllocationStrategy>,
     /// <p>The instances types that can be launched. You can specify instance families to launch any instance type within those families (for example, <code>c5</code> or <code>p3</code>), or you can specify specific sizes within a family (such as <code>c5.8xlarge</code>). You can also choose <code>optimal</code> to select instance types (from the C4, M4, and R4 instance families) that match the demand of your job queues.</p>
     /// <p>When updating a compute environment, changing this setting requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p> <note>
@@ -470,53 +481,63 @@ pub struct ComputeResourceUpdate {
     /// </note> <note>
     /// <p>Currently, <code>optimal</code> uses instance types from the C4, M4, and R4 instance families. In Regions that don't have instance types from those instance families, instance types from the C5, M5. and R5 instance families are used.</p>
     /// </note>
+    #[doc(hidden)]
     pub instance_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon EC2 key pair that's used for instances launched in the compute environment. You can use this key pair to log in to your instances with SSH. To remove the Amazon EC2 key pair, set this value to an empty string.</p>
     /// <p>When updating a compute environment, changing the EC2 key pair requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub ec2_key_pair: std::option::Option<std::string::String>,
     /// <p>The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. You can specify the short name or full Amazon Resource Name (ARN) of an instance profile. For example, <code> <i>ecsInstanceRole</i> </code> or <code>arn:aws:iam::<i>
     /// <aws_account_id></aws_account_id></i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS instance role</a> in the <i>Batch User Guide</i>.</p>
     /// <p>When updating a compute environment, changing this setting requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub instance_role: std::option::Option<std::string::String>,
     /// <p>Key-value pair tags to be applied to EC2 resources that are launched in the compute environment. For Batch, these take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value−for example, <code>{ "Name": "Batch Instance - C4OnDemand" }</code>. This is helpful for recognizing your Batch instances in the Amazon EC2 console. These tags aren't seen when using the Batch <code>ListTagsForResource</code> API operation.</p>
     /// <p>When updating a compute environment, changing this setting requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Amazon EC2 placement group to associate with your compute resources. If you intend to submit multi-node parallel jobs to your compute environment, you should consider creating a cluster placement group and associate it with your compute resources. This keeps your multi-node parallel job on a logical grouping of instances within a single Availability Zone with high network flow potential. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
     /// <p>When updating a compute environment, changing the placement group requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub placement_group: std::option::Option<std::string::String>,
     /// <p>The maximum percentage that a Spot Instance price can be when compared with the On-Demand price for that instance type before instances are launched. For example, if your maximum percentage is 20%, then the Spot price must be less than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay the lowest (market) price and never more than your maximum percentage.</p>
     /// <p>When updating a compute environment, changing the bid percentage requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub bid_percentage: std::option::Option<i32>,
     /// <p>The updated launch template to use for your compute resources. You must specify either the launch template ID or launch template name in the request, but not both. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch template support</a> in the <i>Batch User Guide</i>. To remove the custom launch template and use the default launch template, set <code>launchTemplateId</code> or <code>launchTemplateName</code> member of the launch template specification to an empty string. Removing the launch template from a compute environment will not remove the AMI specified in the launch template. In order to update the AMI specified in a launch template, the <code>updateToLatestImageVersion</code> parameter must be set to <code>true</code>.</p>
     /// <p>When updating a compute environment, changing the launch template requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub launch_template: std::option::Option<crate::model::LaunchTemplateSpecification>,
     /// <p>Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute environment. If <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL2</code>.</p>
     /// <p>When updating a compute environment, changing this setting requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>. To remove the EC2 configuration and any custom AMI ID specified in <code>imageIdOverride</code>, set this value to an empty string.</p>
     /// <p>One or two values can be provided.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub ec2_configuration: std::option::Option<std::vec::Vec<crate::model::Ec2Configuration>>,
     /// <p>Specifies whether the AMI ID is updated to the latest one that's supported by Batch when the compute environment has an infrastructure update. The default value is <code>false</code>.</p> <note>
     /// <p>If an AMI ID is specified in the <code>imageId</code> or <code>imageIdOverride</code> parameters or by the launch template specified in the <code>launchTemplate</code> parameter, this parameter is ignored. For more information on updating AMI IDs during an infrastructure update, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html#updating-compute-environments-ami">Updating the AMI ID</a> in the <i>Batch User Guide</i>.</p>
     /// </note>
     /// <p>When updating a compute environment, changing this setting requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub update_to_latest_image_version: std::option::Option<bool>,
     /// <p>The type of compute environment: <code>EC2</code>, <code>SPOT</code>, <code>FARGATE</code>, or <code>FARGATE_SPOT</code>. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in the <i>Batch User Guide</i>.</p>
     /// <p> If you choose <code>SPOT</code>, you must also specify an Amazon EC2 Spot Fleet role with the <code>spotIamFleetRole</code> parameter. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet role</a> in the <i>Batch User Guide</i>.</p>
     /// <p>When updating a compute environment, changing the type of a compute environment requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::CrType>,
     /// <p>The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter is overridden by the <code>imageIdOverride</code> member of the <code>Ec2Configuration</code> structure. To remove the custom AMI ID and use the default AMI ID, set this value to an empty string.</p>
     /// <p>When updating a compute environment, changing the AMI ID requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p> <note>
@@ -524,6 +545,7 @@ pub struct ComputeResourceUpdate {
     /// </note> <note>
     /// <p>The AMI that you choose for a compute environment must match the architecture of the instance types that you intend to use for that compute environment. For example, if your compute environment uses A1 instance types, the compute resource AMI that you choose must support ARM instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized Amazon Linux 2 AMI. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html">Amazon ECS-optimized Amazon Linux 2 AMI</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub image_id: std::option::Option<std::string::String>,
 }
 impl ComputeResourceUpdate {
@@ -695,11 +717,10 @@ impl std::fmt::Debug for ComputeResourceUpdate {
         formatter.finish()
     }
 }
-/// See [`ComputeResourceUpdate`](crate::model::ComputeResourceUpdate)
+/// See [`ComputeResourceUpdate`](crate::model::ComputeResourceUpdate).
 pub mod compute_resource_update {
 
-    /// A builder for [`ComputeResourceUpdate`](crate::model::ComputeResourceUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ComputeResourceUpdate`](crate::model::ComputeResourceUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) minv_cpus: std::option::Option<i32>,
@@ -1096,7 +1117,7 @@ pub mod compute_resource_update {
             self.image_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComputeResourceUpdate`](crate::model::ComputeResourceUpdate)
+        /// Consumes the builder and constructs a [`ComputeResourceUpdate`](crate::model::ComputeResourceUpdate).
         pub fn build(self) -> crate::model::ComputeResourceUpdate {
             crate::model::ComputeResourceUpdate {
                 minv_cpus: self.minv_cpus,
@@ -1121,7 +1142,7 @@ pub mod compute_resource_update {
     }
 }
 impl ComputeResourceUpdate {
-    /// Creates a new builder-style object to manufacture [`ComputeResourceUpdate`](crate::model::ComputeResourceUpdate)
+    /// Creates a new builder-style object to manufacture [`ComputeResourceUpdate`](crate::model::ComputeResourceUpdate).
     pub fn builder() -> crate::model::compute_resource_update::Builder {
         crate::model::compute_resource_update::Builder::default()
     }
@@ -1217,10 +1238,12 @@ pub struct Ec2Configuration {
     /// <p> <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#alami">Amazon Linux</a>. Amazon Linux is reaching the end-of-life of standard support. For more information, see <a href="http://aws.amazon.com/amazon-linux-ami/">Amazon Linux AMI</a>.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub image_type: std::option::Option<std::string::String>,
     /// <p>The AMI ID used for instances launched in the compute environment that match the image type. This setting overrides the <code>imageId</code> set in the <code>computeResource</code> object.</p> <note>
     /// <p>The AMI that you choose for a compute environment must match the architecture of the instance types that you intend to use for that compute environment. For example, if your compute environment uses A1 instance types, the compute resource AMI that you choose must support ARM instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized Amazon Linux 2 AMI. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html">Amazon ECS-optimized Amazon Linux 2 AMI</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub image_id_override: std::option::Option<std::string::String>,
 }
 impl Ec2Configuration {
@@ -1263,11 +1286,10 @@ impl std::fmt::Debug for Ec2Configuration {
         formatter.finish()
     }
 }
-/// See [`Ec2Configuration`](crate::model::Ec2Configuration)
+/// See [`Ec2Configuration`](crate::model::Ec2Configuration).
 pub mod ec2_configuration {
 
-    /// A builder for [`Ec2Configuration`](crate::model::Ec2Configuration)
-    #[non_exhaustive]
+    /// A builder for [`Ec2Configuration`](crate::model::Ec2Configuration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) image_type: std::option::Option<std::string::String>,
@@ -1341,7 +1363,7 @@ pub mod ec2_configuration {
             self.image_id_override = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2Configuration`](crate::model::Ec2Configuration)
+        /// Consumes the builder and constructs a [`Ec2Configuration`](crate::model::Ec2Configuration).
         pub fn build(self) -> crate::model::Ec2Configuration {
             crate::model::Ec2Configuration {
                 image_type: self.image_type,
@@ -1351,7 +1373,7 @@ pub mod ec2_configuration {
     }
 }
 impl Ec2Configuration {
-    /// Creates a new builder-style object to manufacture [`Ec2Configuration`](crate::model::Ec2Configuration)
+    /// Creates a new builder-style object to manufacture [`Ec2Configuration`](crate::model::Ec2Configuration).
     pub fn builder() -> crate::model::ec2_configuration::Builder {
         crate::model::ec2_configuration::Builder::default()
     }
@@ -1365,14 +1387,17 @@ impl Ec2Configuration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchTemplateSpecification {
     /// <p>The ID of the launch template.</p>
+    #[doc(hidden)]
     pub launch_template_id: std::option::Option<std::string::String>,
     /// <p>The name of the launch template.</p>
+    #[doc(hidden)]
     pub launch_template_name: std::option::Option<std::string::String>,
     /// <p>The version number of the launch template, <code>$Latest</code>, or <code>$Default</code>.</p>
     /// <p>If the value is <code>$Latest</code>, the latest version of the launch template is used. If the value is <code>$Default</code>, the default version of the launch template is used.</p> <important>
     /// <p>If the AMI ID that's used in a compute environment is from the launch template, the AMI isn't changed when the compute environment is updated. It's only changed if the <code>updateToLatestImageVersion</code> parameter for the compute environment is set to <code>true</code>. During an infrastructure update, if either <code>$Latest</code> or <code>$Default</code> is specified, Batch re-evaluates the launch template version, and it might use a different version of the launch template. This is the case even if the launch template isn't specified in the update. When updating a compute environment, changing the launch template requires an infrastructure update of the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p>
     /// </important>
     /// <p>Default: <code>$Default</code>.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl LaunchTemplateSpecification {
@@ -1402,11 +1427,10 @@ impl std::fmt::Debug for LaunchTemplateSpecification {
         formatter.finish()
     }
 }
-/// See [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
+/// See [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
 pub mod launch_template_specification {
 
-    /// A builder for [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
-    #[non_exhaustive]
+    /// A builder for [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) launch_template_id: std::option::Option<std::string::String>,
@@ -1458,7 +1482,7 @@ pub mod launch_template_specification {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
+        /// Consumes the builder and constructs a [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
         pub fn build(self) -> crate::model::LaunchTemplateSpecification {
             crate::model::LaunchTemplateSpecification {
                 launch_template_id: self.launch_template_id,
@@ -1469,7 +1493,7 @@ pub mod launch_template_specification {
     }
 }
 impl LaunchTemplateSpecification {
-    /// Creates a new builder-style object to manufacture [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
+    /// Creates a new builder-style object to manufacture [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
     pub fn builder() -> crate::model::launch_template_specification::Builder {
         crate::model::launch_template_specification::Builder::default()
     }
@@ -1590,6 +1614,7 @@ impl AsRef<str> for CeState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobTimeout {
     /// <p>The time duration in seconds (measured from the job attempt's <code>startedAt</code> timestamp) after which Batch terminates your jobs if they have not finished. The minimum value for the timeout is 60 seconds.</p>
+    #[doc(hidden)]
     pub attempt_duration_seconds: std::option::Option<i32>,
 }
 impl JobTimeout {
@@ -1605,11 +1630,10 @@ impl std::fmt::Debug for JobTimeout {
         formatter.finish()
     }
 }
-/// See [`JobTimeout`](crate::model::JobTimeout)
+/// See [`JobTimeout`](crate::model::JobTimeout).
 pub mod job_timeout {
 
-    /// A builder for [`JobTimeout`](crate::model::JobTimeout)
-    #[non_exhaustive]
+    /// A builder for [`JobTimeout`](crate::model::JobTimeout).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attempt_duration_seconds: std::option::Option<i32>,
@@ -1625,7 +1649,7 @@ pub mod job_timeout {
             self.attempt_duration_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobTimeout`](crate::model::JobTimeout)
+        /// Consumes the builder and constructs a [`JobTimeout`](crate::model::JobTimeout).
         pub fn build(self) -> crate::model::JobTimeout {
             crate::model::JobTimeout {
                 attempt_duration_seconds: self.attempt_duration_seconds,
@@ -1634,7 +1658,7 @@ pub mod job_timeout {
     }
 }
 impl JobTimeout {
-    /// Creates a new builder-style object to manufacture [`JobTimeout`](crate::model::JobTimeout)
+    /// Creates a new builder-style object to manufacture [`JobTimeout`](crate::model::JobTimeout).
     pub fn builder() -> crate::model::job_timeout::Builder {
         crate::model::job_timeout::Builder::default()
     }
@@ -1645,8 +1669,10 @@ impl JobTimeout {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RetryStrategy {
     /// <p>The number of times to move a job to the <code>RUNNABLE</code> status. You can specify between 1 and 10 attempts. If the value of <code>attempts</code> is greater than one, the job is retried on failure the same number of attempts as the value.</p>
+    #[doc(hidden)]
     pub attempts: std::option::Option<i32>,
     /// <p>Array of up to 5 objects that specify conditions under which the job should be retried or failed. If this parameter is specified, then the <code>attempts</code> parameter must also be specified.</p>
+    #[doc(hidden)]
     pub evaluate_on_exit: std::option::Option<std::vec::Vec<crate::model::EvaluateOnExit>>,
 }
 impl RetryStrategy {
@@ -1667,11 +1693,10 @@ impl std::fmt::Debug for RetryStrategy {
         formatter.finish()
     }
 }
-/// See [`RetryStrategy`](crate::model::RetryStrategy)
+/// See [`RetryStrategy`](crate::model::RetryStrategy).
 pub mod retry_strategy {
 
-    /// A builder for [`RetryStrategy`](crate::model::RetryStrategy)
-    #[non_exhaustive]
+    /// A builder for [`RetryStrategy`](crate::model::RetryStrategy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attempts: std::option::Option<i32>,
@@ -1708,7 +1733,7 @@ pub mod retry_strategy {
             self.evaluate_on_exit = input;
             self
         }
-        /// Consumes the builder and constructs a [`RetryStrategy`](crate::model::RetryStrategy)
+        /// Consumes the builder and constructs a [`RetryStrategy`](crate::model::RetryStrategy).
         pub fn build(self) -> crate::model::RetryStrategy {
             crate::model::RetryStrategy {
                 attempts: self.attempts,
@@ -1718,7 +1743,7 @@ pub mod retry_strategy {
     }
 }
 impl RetryStrategy {
-    /// Creates a new builder-style object to manufacture [`RetryStrategy`](crate::model::RetryStrategy)
+    /// Creates a new builder-style object to manufacture [`RetryStrategy`](crate::model::RetryStrategy).
     pub fn builder() -> crate::model::retry_strategy::Builder {
         crate::model::retry_strategy::Builder::default()
     }
@@ -1730,14 +1755,18 @@ impl RetryStrategy {
 pub struct EvaluateOnExit {
     /// <p>Contains a glob pattern to match against the <code>StatusReason</code> returned for a job. The pattern can be up to 512 characters in length. It can contain letters, numbers, periods (.), colons (:), and white space (including spaces or tabs). It can optionally end with an asterisk (*) so that only the start of the string needs to be an exact match.</p>
     /// <p>The string can be between 1 and 512 characters in length.</p>
+    #[doc(hidden)]
     pub on_status_reason: std::option::Option<std::string::String>,
     /// <p>Contains a glob pattern to match against the <code>Reason</code> returned for a job. The pattern can be up to 512 characters in length. It can contain letters, numbers, periods (.), colons (:), and white space (including spaces and tabs). It can optionally end with an asterisk (*) so that only the start of the string needs to be an exact match.</p>
     /// <p>The string can be between 1 and 512 characters in length.</p>
+    #[doc(hidden)]
     pub on_reason: std::option::Option<std::string::String>,
     /// <p>Contains a glob pattern to match against the decimal representation of the <code>ExitCode</code> returned for a job. The pattern can be up to 512 characters in length. It can contain only numbers, and can optionally end with an asterisk (*) so that only the start of the string needs to be an exact match.</p>
     /// <p>The string can be between 1 and 512 characters in length.</p>
+    #[doc(hidden)]
     pub on_exit_code: std::option::Option<std::string::String>,
     /// <p>Specifies the action to take if all of the specified conditions (<code>onStatusReason</code>, <code>onReason</code>, and <code>onExitCode</code>) are met. The values aren't case sensitive.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::RetryAction>,
 }
 impl EvaluateOnExit {
@@ -1771,11 +1800,10 @@ impl std::fmt::Debug for EvaluateOnExit {
         formatter.finish()
     }
 }
-/// See [`EvaluateOnExit`](crate::model::EvaluateOnExit)
+/// See [`EvaluateOnExit`](crate::model::EvaluateOnExit).
 pub mod evaluate_on_exit {
 
-    /// A builder for [`EvaluateOnExit`](crate::model::EvaluateOnExit)
-    #[non_exhaustive]
+    /// A builder for [`EvaluateOnExit`](crate::model::EvaluateOnExit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) on_status_reason: std::option::Option<std::string::String>,
@@ -1833,7 +1861,7 @@ pub mod evaluate_on_exit {
             self.action = input;
             self
         }
-        /// Consumes the builder and constructs a [`EvaluateOnExit`](crate::model::EvaluateOnExit)
+        /// Consumes the builder and constructs a [`EvaluateOnExit`](crate::model::EvaluateOnExit).
         pub fn build(self) -> crate::model::EvaluateOnExit {
             crate::model::EvaluateOnExit {
                 on_status_reason: self.on_status_reason,
@@ -1845,7 +1873,7 @@ pub mod evaluate_on_exit {
     }
 }
 impl EvaluateOnExit {
-    /// Creates a new builder-style object to manufacture [`EvaluateOnExit`](crate::model::EvaluateOnExit)
+    /// Creates a new builder-style object to manufacture [`EvaluateOnExit`](crate::model::EvaluateOnExit).
     pub fn builder() -> crate::model::evaluate_on_exit::Builder {
         crate::model::evaluate_on_exit::Builder::default()
     }
@@ -1918,8 +1946,10 @@ pub struct NodeOverrides {
     /// <li> <p>The lower boundary of the node range specified in the job definition must be fewer than the number of nodes specified in the override.</p> </li>
     /// <li> <p>The main node index specified in the job definition must be fewer than the number of nodes specified in the override.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub num_nodes: std::option::Option<i32>,
     /// <p>The node property overrides for the job.</p>
+    #[doc(hidden)]
     pub node_property_overrides:
         std::option::Option<std::vec::Vec<crate::model::NodePropertyOverride>>,
 }
@@ -1948,11 +1978,10 @@ impl std::fmt::Debug for NodeOverrides {
         formatter.finish()
     }
 }
-/// See [`NodeOverrides`](crate::model::NodeOverrides)
+/// See [`NodeOverrides`](crate::model::NodeOverrides).
 pub mod node_overrides {
 
-    /// A builder for [`NodeOverrides`](crate::model::NodeOverrides)
-    #[non_exhaustive]
+    /// A builder for [`NodeOverrides`](crate::model::NodeOverrides).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) num_nodes: std::option::Option<i32>,
@@ -2002,7 +2031,7 @@ pub mod node_overrides {
             self.node_property_overrides = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeOverrides`](crate::model::NodeOverrides)
+        /// Consumes the builder and constructs a [`NodeOverrides`](crate::model::NodeOverrides).
         pub fn build(self) -> crate::model::NodeOverrides {
             crate::model::NodeOverrides {
                 num_nodes: self.num_nodes,
@@ -2012,7 +2041,7 @@ pub mod node_overrides {
     }
 }
 impl NodeOverrides {
-    /// Creates a new builder-style object to manufacture [`NodeOverrides`](crate::model::NodeOverrides)
+    /// Creates a new builder-style object to manufacture [`NodeOverrides`](crate::model::NodeOverrides).
     pub fn builder() -> crate::model::node_overrides::Builder {
         crate::model::node_overrides::Builder::default()
     }
@@ -2023,8 +2052,10 @@ impl NodeOverrides {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodePropertyOverride {
     /// <p>The range of nodes, using node index values, that's used to override. A range of <code>0:3</code> indicates nodes with index values of <code>0</code> through <code>3</code>. If the starting range value is omitted (<code>:n</code>), then <code>0</code> is used to start the range. If the ending range value is omitted (<code>n:</code>), then the highest possible node index is used to end the range.</p>
+    #[doc(hidden)]
     pub target_nodes: std::option::Option<std::string::String>,
     /// <p>The overrides that should be sent to a node range.</p>
+    #[doc(hidden)]
     pub container_overrides: std::option::Option<crate::model::ContainerOverrides>,
 }
 impl NodePropertyOverride {
@@ -2045,11 +2076,10 @@ impl std::fmt::Debug for NodePropertyOverride {
         formatter.finish()
     }
 }
-/// See [`NodePropertyOverride`](crate::model::NodePropertyOverride)
+/// See [`NodePropertyOverride`](crate::model::NodePropertyOverride).
 pub mod node_property_override {
 
-    /// A builder for [`NodePropertyOverride`](crate::model::NodePropertyOverride)
-    #[non_exhaustive]
+    /// A builder for [`NodePropertyOverride`](crate::model::NodePropertyOverride).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_nodes: std::option::Option<std::string::String>,
@@ -2079,7 +2109,7 @@ pub mod node_property_override {
             self.container_overrides = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodePropertyOverride`](crate::model::NodePropertyOverride)
+        /// Consumes the builder and constructs a [`NodePropertyOverride`](crate::model::NodePropertyOverride).
         pub fn build(self) -> crate::model::NodePropertyOverride {
             crate::model::NodePropertyOverride {
                 target_nodes: self.target_nodes,
@@ -2089,7 +2119,7 @@ pub mod node_property_override {
     }
 }
 impl NodePropertyOverride {
-    /// Creates a new builder-style object to manufacture [`NodePropertyOverride`](crate::model::NodePropertyOverride)
+    /// Creates a new builder-style object to manufacture [`NodePropertyOverride`](crate::model::NodePropertyOverride).
     pub fn builder() -> crate::model::node_property_override::Builder {
         crate::model::node_property_override::Builder::default()
     }
@@ -2100,29 +2130,39 @@ impl NodePropertyOverride {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerOverrides {
     /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to override the <code>vcpus</code> parameter that's set in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition, but doesn't override any vCPU requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override vCPU requirements that are specified in the <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code> set to <code>VCPU</code> and <code>value</code> set to the new value. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements">Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.</p>
+    #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
+    #[doc(hidden)]
     pub vcpus: std::option::Option<i32>,
     /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to override the memory requirements specified in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it overrides the <code>memory</code> parameter set in the job definition, but doesn't override any memory requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override memory requirements that are specified in the <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code> set to <code>MEMORY</code> and <code>value</code> set to the new value. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements">Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.</p>
+    #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
+    #[doc(hidden)]
     pub memory: std::option::Option<i32>,
     /// <p>The command to send to the container that overrides the default command from the Docker image or the job definition.</p>
+    #[doc(hidden)]
     pub command: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The instance type to use for a multi-node parallel job.</p> <note>
     /// <p>This parameter isn't applicable to single-node container jobs or jobs that run on Fargate resources, and shouldn't be provided.</p>
     /// </note>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The environment variables to send to the container. You can add new environment variables, which are added to the container at launch, or you can override the existing environment variables from the Docker image or the job definition.</p> <note>
     /// <p>Environment variables must not start with <code>AWS_BATCH</code>; this naming convention is reserved for variables that are set by the Batch service.</p>
     /// </note>
+    #[doc(hidden)]
     pub environment: std::option::Option<std::vec::Vec<crate::model::KeyValuePair>>,
     /// <p>The type and amount of resources to assign to a container. This overrides the settings in the job definition. The supported resources include <code>GPU</code>, <code>MEMORY</code>, and <code>VCPU</code>.</p>
+    #[doc(hidden)]
     pub resource_requirements:
         std::option::Option<std::vec::Vec<crate::model::ResourceRequirement>>,
 }
 impl ContainerOverrides {
     /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to override the <code>vcpus</code> parameter that's set in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition, but doesn't override any vCPU requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override vCPU requirements that are specified in the <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code> set to <code>VCPU</code> and <code>value</code> set to the new value. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements">Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.</p>
+    #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
     pub fn vcpus(&self) -> std::option::Option<i32> {
         self.vcpus
     }
     /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to override the memory requirements specified in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it overrides the <code>memory</code> parameter set in the job definition, but doesn't override any memory requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override memory requirements that are specified in the <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code> set to <code>MEMORY</code> and <code>value</code> set to the new value. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements">Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.</p>
+    #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
     pub fn memory(&self) -> std::option::Option<i32> {
         self.memory
     }
@@ -2161,11 +2201,10 @@ impl std::fmt::Debug for ContainerOverrides {
         formatter.finish()
     }
 }
-/// See [`ContainerOverrides`](crate::model::ContainerOverrides)
+/// See [`ContainerOverrides`](crate::model::ContainerOverrides).
 pub mod container_overrides {
 
-    /// A builder for [`ContainerOverrides`](crate::model::ContainerOverrides)
-    #[non_exhaustive]
+    /// A builder for [`ContainerOverrides`](crate::model::ContainerOverrides).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vcpus: std::option::Option<i32>,
@@ -2178,21 +2217,25 @@ pub mod container_overrides {
     }
     impl Builder {
         /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to override the <code>vcpus</code> parameter that's set in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition, but doesn't override any vCPU requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override vCPU requirements that are specified in the <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code> set to <code>VCPU</code> and <code>value</code> set to the new value. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements">Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.</p>
+        #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
         pub fn vcpus(mut self, input: i32) -> Self {
             self.vcpus = Some(input);
             self
         }
         /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to override the <code>vcpus</code> parameter that's set in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition, but doesn't override any vCPU requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override vCPU requirements that are specified in the <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code> set to <code>VCPU</code> and <code>value</code> set to the new value. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements">Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.</p>
+        #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
         pub fn set_vcpus(mut self, input: std::option::Option<i32>) -> Self {
             self.vcpus = input;
             self
         }
         /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to override the memory requirements specified in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it overrides the <code>memory</code> parameter set in the job definition, but doesn't override any memory requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override memory requirements that are specified in the <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code> set to <code>MEMORY</code> and <code>value</code> set to the new value. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements">Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.</p>
+        #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
         pub fn memory(mut self, input: i32) -> Self {
             self.memory = Some(input);
             self
         }
         /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to override the memory requirements specified in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it overrides the <code>memory</code> parameter set in the job definition, but doesn't override any memory requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override memory requirements that are specified in the <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code> set to <code>MEMORY</code> and <code>value</code> set to the new value. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements">Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.</p>
+        #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
         pub fn set_memory(mut self, input: std::option::Option<i32>) -> Self {
             self.memory = input;
             self
@@ -2275,7 +2318,7 @@ pub mod container_overrides {
             self.resource_requirements = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerOverrides`](crate::model::ContainerOverrides)
+        /// Consumes the builder and constructs a [`ContainerOverrides`](crate::model::ContainerOverrides).
         pub fn build(self) -> crate::model::ContainerOverrides {
             crate::model::ContainerOverrides {
                 vcpus: self.vcpus,
@@ -2289,7 +2332,7 @@ pub mod container_overrides {
     }
 }
 impl ContainerOverrides {
-    /// Creates a new builder-style object to manufacture [`ContainerOverrides`](crate::model::ContainerOverrides)
+    /// Creates a new builder-style object to manufacture [`ContainerOverrides`](crate::model::ContainerOverrides).
     pub fn builder() -> crate::model::container_overrides::Builder {
         crate::model::container_overrides::Builder::default()
     }
@@ -2414,8 +2457,10 @@ pub struct ResourceRequirement {
     /// </dl>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The type of resource to assign to a container. The supported resources include <code>GPU</code>, <code>MEMORY</code>, and <code>VCPU</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ResourceType>,
 }
 impl ResourceRequirement {
@@ -2550,11 +2595,10 @@ impl std::fmt::Debug for ResourceRequirement {
         formatter.finish()
     }
 }
-/// See [`ResourceRequirement`](crate::model::ResourceRequirement)
+/// See [`ResourceRequirement`](crate::model::ResourceRequirement).
 pub mod resource_requirement {
 
-    /// A builder for [`ResourceRequirement`](crate::model::ResourceRequirement)
-    #[non_exhaustive]
+    /// A builder for [`ResourceRequirement`](crate::model::ResourceRequirement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<std::string::String>,
@@ -2809,7 +2853,7 @@ pub mod resource_requirement {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceRequirement`](crate::model::ResourceRequirement)
+        /// Consumes the builder and constructs a [`ResourceRequirement`](crate::model::ResourceRequirement).
         pub fn build(self) -> crate::model::ResourceRequirement {
             crate::model::ResourceRequirement {
                 value: self.value,
@@ -2819,7 +2863,7 @@ pub mod resource_requirement {
     }
 }
 impl ResourceRequirement {
-    /// Creates a new builder-style object to manufacture [`ResourceRequirement`](crate::model::ResourceRequirement)
+    /// Creates a new builder-style object to manufacture [`ResourceRequirement`](crate::model::ResourceRequirement).
     pub fn builder() -> crate::model::resource_requirement::Builder {
         crate::model::resource_requirement::Builder::default()
     }
@@ -2889,8 +2933,10 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyValuePair {
     /// <p>The name of the key-value pair. For environment variables, this is the name of the environment variable.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value of the key-value pair. For environment variables, this is the value of the environment variable.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl KeyValuePair {
@@ -2911,11 +2957,10 @@ impl std::fmt::Debug for KeyValuePair {
         formatter.finish()
     }
 }
-/// See [`KeyValuePair`](crate::model::KeyValuePair)
+/// See [`KeyValuePair`](crate::model::KeyValuePair).
 pub mod key_value_pair {
 
-    /// A builder for [`KeyValuePair`](crate::model::KeyValuePair)
-    #[non_exhaustive]
+    /// A builder for [`KeyValuePair`](crate::model::KeyValuePair).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2942,7 +2987,7 @@ pub mod key_value_pair {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyValuePair`](crate::model::KeyValuePair)
+        /// Consumes the builder and constructs a [`KeyValuePair`](crate::model::KeyValuePair).
         pub fn build(self) -> crate::model::KeyValuePair {
             crate::model::KeyValuePair {
                 name: self.name,
@@ -2952,7 +2997,7 @@ pub mod key_value_pair {
     }
 }
 impl KeyValuePair {
-    /// Creates a new builder-style object to manufacture [`KeyValuePair`](crate::model::KeyValuePair)
+    /// Creates a new builder-style object to manufacture [`KeyValuePair`](crate::model::KeyValuePair).
     pub fn builder() -> crate::model::key_value_pair::Builder {
         crate::model::key_value_pair::Builder::default()
     }
@@ -2963,8 +3008,10 @@ impl KeyValuePair {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobDependency {
     /// <p>The job ID of the Batch job associated with this dependency.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The type of the job dependency.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ArrayJobDependency>,
 }
 impl JobDependency {
@@ -2985,11 +3032,10 @@ impl std::fmt::Debug for JobDependency {
         formatter.finish()
     }
 }
-/// See [`JobDependency`](crate::model::JobDependency)
+/// See [`JobDependency`](crate::model::JobDependency).
 pub mod job_dependency {
 
-    /// A builder for [`JobDependency`](crate::model::JobDependency)
-    #[non_exhaustive]
+    /// A builder for [`JobDependency`](crate::model::JobDependency).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -3019,7 +3065,7 @@ pub mod job_dependency {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobDependency`](crate::model::JobDependency)
+        /// Consumes the builder and constructs a [`JobDependency`](crate::model::JobDependency).
         pub fn build(self) -> crate::model::JobDependency {
             crate::model::JobDependency {
                 job_id: self.job_id,
@@ -3029,7 +3075,7 @@ pub mod job_dependency {
     }
 }
 impl JobDependency {
-    /// Creates a new builder-style object to manufacture [`JobDependency`](crate::model::JobDependency)
+    /// Creates a new builder-style object to manufacture [`JobDependency`](crate::model::JobDependency).
     pub fn builder() -> crate::model::job_dependency::Builder {
         crate::model::job_dependency::Builder::default()
     }
@@ -3095,6 +3141,7 @@ impl AsRef<str> for ArrayJobDependency {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ArrayProperties {
     /// <p>The size of the array job.</p>
+    #[doc(hidden)]
     pub size: std::option::Option<i32>,
 }
 impl ArrayProperties {
@@ -3110,11 +3157,10 @@ impl std::fmt::Debug for ArrayProperties {
         formatter.finish()
     }
 }
-/// See [`ArrayProperties`](crate::model::ArrayProperties)
+/// See [`ArrayProperties`](crate::model::ArrayProperties).
 pub mod array_properties {
 
-    /// A builder for [`ArrayProperties`](crate::model::ArrayProperties)
-    #[non_exhaustive]
+    /// A builder for [`ArrayProperties`](crate::model::ArrayProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) size: std::option::Option<i32>,
@@ -3130,14 +3176,14 @@ pub mod array_properties {
             self.size = input;
             self
         }
-        /// Consumes the builder and constructs a [`ArrayProperties`](crate::model::ArrayProperties)
+        /// Consumes the builder and constructs a [`ArrayProperties`](crate::model::ArrayProperties).
         pub fn build(self) -> crate::model::ArrayProperties {
             crate::model::ArrayProperties { size: self.size }
         }
     }
 }
 impl ArrayProperties {
-    /// Creates a new builder-style object to manufacture [`ArrayProperties`](crate::model::ArrayProperties)
+    /// Creates a new builder-style object to manufacture [`ArrayProperties`](crate::model::ArrayProperties).
     pub fn builder() -> crate::model::array_properties::Builder {
         crate::model::array_properties::Builder::default()
     }
@@ -3203,10 +3249,13 @@ impl AsRef<str> for PlatformCapability {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeProperties {
     /// <p>The number of nodes associated with a multi-node parallel job.</p>
+    #[doc(hidden)]
     pub num_nodes: std::option::Option<i32>,
     /// <p>Specifies the node index for the main node of a multi-node parallel job. This node index value must be fewer than the number of nodes.</p>
+    #[doc(hidden)]
     pub main_node: std::option::Option<i32>,
     /// <p>A list of node ranges and their properties associated with a multi-node parallel job.</p>
+    #[doc(hidden)]
     pub node_range_properties: std::option::Option<std::vec::Vec<crate::model::NodeRangeProperty>>,
 }
 impl NodeProperties {
@@ -3232,11 +3281,10 @@ impl std::fmt::Debug for NodeProperties {
         formatter.finish()
     }
 }
-/// See [`NodeProperties`](crate::model::NodeProperties)
+/// See [`NodeProperties`](crate::model::NodeProperties).
 pub mod node_properties {
 
-    /// A builder for [`NodeProperties`](crate::model::NodeProperties)
-    #[non_exhaustive]
+    /// A builder for [`NodeProperties`](crate::model::NodeProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) num_nodes: std::option::Option<i32>,
@@ -3284,7 +3332,7 @@ pub mod node_properties {
             self.node_range_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeProperties`](crate::model::NodeProperties)
+        /// Consumes the builder and constructs a [`NodeProperties`](crate::model::NodeProperties).
         pub fn build(self) -> crate::model::NodeProperties {
             crate::model::NodeProperties {
                 num_nodes: self.num_nodes,
@@ -3295,7 +3343,7 @@ pub mod node_properties {
     }
 }
 impl NodeProperties {
-    /// Creates a new builder-style object to manufacture [`NodeProperties`](crate::model::NodeProperties)
+    /// Creates a new builder-style object to manufacture [`NodeProperties`](crate::model::NodeProperties).
     pub fn builder() -> crate::model::node_properties::Builder {
         crate::model::node_properties::Builder::default()
     }
@@ -3306,8 +3354,10 @@ impl NodeProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeRangeProperty {
     /// <p>The range of nodes, using node index values. A range of <code>0:3</code> indicates nodes with index values of <code>0</code> through <code>3</code>. If the starting range value is omitted (<code>:n</code>), then <code>0</code> is used to start the range. If the ending range value is omitted (<code>n:</code>), then the highest possible node index is used to end the range. Your accumulative node ranges must account for all nodes (<code>0:n</code>). You can nest node ranges, for example <code>0:10</code> and <code>4:5</code>, in which case the <code>4:5</code> range properties override the <code>0:10</code> properties.</p>
+    #[doc(hidden)]
     pub target_nodes: std::option::Option<std::string::String>,
     /// <p>The container details for the node range.</p>
+    #[doc(hidden)]
     pub container: std::option::Option<crate::model::ContainerProperties>,
 }
 impl NodeRangeProperty {
@@ -3328,11 +3378,10 @@ impl std::fmt::Debug for NodeRangeProperty {
         formatter.finish()
     }
 }
-/// See [`NodeRangeProperty`](crate::model::NodeRangeProperty)
+/// See [`NodeRangeProperty`](crate::model::NodeRangeProperty).
 pub mod node_range_property {
 
-    /// A builder for [`NodeRangeProperty`](crate::model::NodeRangeProperty)
-    #[non_exhaustive]
+    /// A builder for [`NodeRangeProperty`](crate::model::NodeRangeProperty).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_nodes: std::option::Option<std::string::String>,
@@ -3362,7 +3411,7 @@ pub mod node_range_property {
             self.container = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeRangeProperty`](crate::model::NodeRangeProperty)
+        /// Consumes the builder and constructs a [`NodeRangeProperty`](crate::model::NodeRangeProperty).
         pub fn build(self) -> crate::model::NodeRangeProperty {
             crate::model::NodeRangeProperty {
                 target_nodes: self.target_nodes,
@@ -3372,7 +3421,7 @@ pub mod node_range_property {
     }
 }
 impl NodeRangeProperty {
-    /// Creates a new builder-style object to manufacture [`NodeRangeProperty`](crate::model::NodeRangeProperty)
+    /// Creates a new builder-style object to manufacture [`NodeRangeProperty`](crate::model::NodeRangeProperty).
     pub fn builder() -> crate::model::node_range_property::Builder {
         crate::model::node_range_property::Builder::default()
     }
@@ -3396,48 +3445,66 @@ pub struct ContainerProperties {
     /// <li> <p>Images in other repositories on Docker Hub are qualified with an organization name (for example, <code>amazon/amazon-ecs-agent</code>).</p> </li>
     /// <li> <p>Images in other online repositories are qualified further by a domain name (for example, <code>quay.io/assemblyline/ubuntu</code>).</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub image: std::option::Option<std::string::String>,
     /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it specifies the number of vCPUs reserved for the job.</p>
     /// <p>Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. The number of vCPUs must be specified but can be specified in several places. You must specify it at least once for each node.</p>
+    #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
+    #[doc(hidden)]
     pub vcpus: std::option::Option<i32>,
     /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it specifies the memory hard limit (in MiB) for a container. If your container attempts to exceed the specified number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The memory hard limit can be specified in several places. It must be specified for each node at least once.</p>
+    #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
+    #[doc(hidden)]
     pub memory: std::option::Option<i32>,
     /// <p>The command that's passed to the container. This parameter maps to <code>Cmd</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>COMMAND</code> parameter to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. For more information, see <a href="https://docs.docker.com/engine/reference/builder/#cmd">https://docs.docker.com/engine/reference/builder/#cmd</a>.</p>
+    #[doc(hidden)]
     pub command: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the IAM role that the container can assume for Amazon Web Services permissions. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM roles for tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub job_role_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the execution role that Batch can assume. For jobs that run on Fargate resources, you must provide an execution role. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/execution-IAM-role.html">Batch execution IAM role</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub execution_role_arn: std::option::Option<std::string::String>,
     /// <p>A list of data volumes used in a job.</p>
+    #[doc(hidden)]
     pub volumes: std::option::Option<std::vec::Vec<crate::model::Volume>>,
     /// <p>The environment variables to pass to a container. This parameter maps to <code>Env</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--env</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>.</p> <important>
     /// <p>We don't recommend using plaintext environment variables for sensitive information, such as credential data.</p>
     /// </important> <note>
     /// <p>Environment variables must not start with <code>AWS_BATCH</code>; this naming convention is reserved for variables that are set by the Batch service.</p>
     /// </note>
+    #[doc(hidden)]
     pub environment: std::option::Option<std::vec::Vec<crate::model::KeyValuePair>>,
     /// <p>The mount points for data volumes in your container. This parameter maps to <code>Volumes</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--volume</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>.</p>
+    #[doc(hidden)]
     pub mount_points: std::option::Option<std::vec::Vec<crate::model::MountPoint>>,
     /// <p>When this parameter is true, the container is given read-only access to its root file system. This parameter maps to <code>ReadonlyRootfs</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--read-only</code> option to <code>docker run</code>.</p>
+    #[doc(hidden)]
     pub readonly_root_filesystem: std::option::Option<bool>,
     /// <p>When this parameter is true, the container is given elevated permissions on the host container instance (similar to the <code>root</code> user). This parameter maps to <code>Privileged</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--privileged</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. The default value is false.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided, or specified as false.</p>
     /// </note>
+    #[doc(hidden)]
     pub privileged: std::option::Option<bool>,
     /// <p>A list of <code>ulimits</code> to set in the container. This parameter maps to <code>Ulimits</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--ulimit</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided.</p>
     /// </note>
+    #[doc(hidden)]
     pub ulimits: std::option::Option<std::vec::Vec<crate::model::Ulimit>>,
     /// <p>The user name to use inside the container. This parameter maps to <code>User</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--user</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>.</p>
+    #[doc(hidden)]
     pub user: std::option::Option<std::string::String>,
     /// <p>The instance type to use for a multi-node parallel job. All node groups in a multi-node parallel job must use the same instance type.</p> <note>
     /// <p>This parameter isn't applicable to single-node container jobs or jobs that run on Fargate resources, and shouldn't be provided.</p>
     /// </note>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The type and amount of resources to assign to a container. The supported resources include <code>GPU</code>, <code>MEMORY</code>, and <code>VCPU</code>.</p>
+    #[doc(hidden)]
     pub resource_requirements:
         std::option::Option<std::vec::Vec<crate::model::ResourceRequirement>>,
     /// <p>Linux-specific modifications that are applied to the container, such as details for device mappings.</p>
+    #[doc(hidden)]
     pub linux_parameters: std::option::Option<crate::model::LinuxParameters>,
     /// <p>The log configuration specification for the container.</p>
     /// <p>This parameter maps to <code>LogConfig</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--log-driver</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. By default, containers use the same logging driver that the Docker daemon uses. However the container might use a different logging driver than the Docker daemon by specifying a log driver with this parameter in the container definition. To use a different logging driver for a container, the log system must be configured properly on the container instance (or on a different log server for remote logging options). For more information on the options for different supported log drivers, see <a href="https://docs.docker.com/engine/admin/logging/overview/">Configure logging drivers</a> in the Docker documentation.</p> <note>
@@ -3446,12 +3513,16 @@ pub struct ContainerProperties {
     /// <p>This parameter requires version 1.18 of the Docker Remote API or greater on your container instance. To check the Docker Remote API version on your container instance, log into your container instance and run the following command: <code>sudo docker version | grep "Server API version"</code> </p> <note>
     /// <p>The Amazon ECS container agent running on a container instance must register the logging drivers available on that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before containers placed on that instance can use these log configuration options. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS container agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub log_configuration: std::option::Option<crate::model::LogConfiguration>,
     /// <p>The secrets for the container. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/specifying-sensitive-data.html">Specifying sensitive data</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub secrets: std::option::Option<std::vec::Vec<crate::model::Secret>>,
     /// <p>The network configuration for jobs that are running on Fargate resources. Jobs that are running on EC2 resources must not specify this parameter.</p>
+    #[doc(hidden)]
     pub network_configuration: std::option::Option<crate::model::NetworkConfiguration>,
     /// <p>The platform configuration for jobs that are running on Fargate resources. Jobs that are running on EC2 resources must not specify this parameter.</p>
+    #[doc(hidden)]
     pub fargate_platform_configuration:
         std::option::Option<crate::model::FargatePlatformConfiguration>,
 }
@@ -3475,10 +3546,12 @@ impl ContainerProperties {
     }
     /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it specifies the number of vCPUs reserved for the job.</p>
     /// <p>Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. The number of vCPUs must be specified but can be specified in several places. You must specify it at least once for each node.</p>
+    #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
     pub fn vcpus(&self) -> std::option::Option<i32> {
         self.vcpus
     }
     /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it specifies the memory hard limit (in MiB) for a container. If your container attempts to exceed the specified number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The memory hard limit can be specified in several places. It must be specified for each node at least once.</p>
+    #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
     pub fn memory(&self) -> std::option::Option<i32> {
         self.memory
     }
@@ -3602,11 +3675,10 @@ impl std::fmt::Debug for ContainerProperties {
         formatter.finish()
     }
 }
-/// See [`ContainerProperties`](crate::model::ContainerProperties)
+/// See [`ContainerProperties`](crate::model::ContainerProperties).
 pub mod container_properties {
 
-    /// A builder for [`ContainerProperties`](crate::model::ContainerProperties)
-    #[non_exhaustive]
+    /// A builder for [`ContainerProperties`](crate::model::ContainerProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) image: std::option::Option<std::string::String>,
@@ -3671,22 +3743,26 @@ pub mod container_properties {
         }
         /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it specifies the number of vCPUs reserved for the job.</p>
         /// <p>Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. The number of vCPUs must be specified but can be specified in several places. You must specify it at least once for each node.</p>
+        #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
         pub fn vcpus(mut self, input: i32) -> Self {
             self.vcpus = Some(input);
             self
         }
         /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it specifies the number of vCPUs reserved for the job.</p>
         /// <p>Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. The number of vCPUs must be specified but can be specified in several places. You must specify it at least once for each node.</p>
+        #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
         pub fn set_vcpus(mut self, input: std::option::Option<i32>) -> Self {
             self.vcpus = input;
             self
         }
         /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it specifies the memory hard limit (in MiB) for a container. If your container attempts to exceed the specified number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The memory hard limit can be specified in several places. It must be specified for each node at least once.</p>
+        #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
         pub fn memory(mut self, input: i32) -> Self {
             self.memory = Some(input);
             self
         }
         /// <p>This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it specifies the memory hard limit (in MiB) for a container. If your container attempts to exceed the specified number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The memory hard limit can be specified in several places. It must be specified for each node at least once.</p>
+        #[deprecated(note = "This field is deprecated, use resourceRequirements instead.")]
         pub fn set_memory(mut self, input: std::option::Option<i32>) -> Self {
             self.memory = input;
             self
@@ -3977,7 +4053,7 @@ pub mod container_properties {
             self.fargate_platform_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerProperties`](crate::model::ContainerProperties)
+        /// Consumes the builder and constructs a [`ContainerProperties`](crate::model::ContainerProperties).
         pub fn build(self) -> crate::model::ContainerProperties {
             crate::model::ContainerProperties {
                 image: self.image,
@@ -4005,7 +4081,7 @@ pub mod container_properties {
     }
 }
 impl ContainerProperties {
-    /// Creates a new builder-style object to manufacture [`ContainerProperties`](crate::model::ContainerProperties)
+    /// Creates a new builder-style object to manufacture [`ContainerProperties`](crate::model::ContainerProperties).
     pub fn builder() -> crate::model::container_properties::Builder {
         crate::model::container_properties::Builder::default()
     }
@@ -4016,6 +4092,7 @@ impl ContainerProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FargatePlatformConfiguration {
     /// <p>The Fargate platform version where the jobs are running. A platform version is specified only for jobs that are running on Fargate resources. If one isn't specified, the <code>LATEST</code> platform version is used by default. This uses a recent, approved version of the Fargate platform for compute resources. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub platform_version: std::option::Option<std::string::String>,
 }
 impl FargatePlatformConfiguration {
@@ -4031,11 +4108,10 @@ impl std::fmt::Debug for FargatePlatformConfiguration {
         formatter.finish()
     }
 }
-/// See [`FargatePlatformConfiguration`](crate::model::FargatePlatformConfiguration)
+/// See [`FargatePlatformConfiguration`](crate::model::FargatePlatformConfiguration).
 pub mod fargate_platform_configuration {
 
-    /// A builder for [`FargatePlatformConfiguration`](crate::model::FargatePlatformConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`FargatePlatformConfiguration`](crate::model::FargatePlatformConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) platform_version: std::option::Option<std::string::String>,
@@ -4054,7 +4130,7 @@ pub mod fargate_platform_configuration {
             self.platform_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`FargatePlatformConfiguration`](crate::model::FargatePlatformConfiguration)
+        /// Consumes the builder and constructs a [`FargatePlatformConfiguration`](crate::model::FargatePlatformConfiguration).
         pub fn build(self) -> crate::model::FargatePlatformConfiguration {
             crate::model::FargatePlatformConfiguration {
                 platform_version: self.platform_version,
@@ -4063,7 +4139,7 @@ pub mod fargate_platform_configuration {
     }
 }
 impl FargatePlatformConfiguration {
-    /// Creates a new builder-style object to manufacture [`FargatePlatformConfiguration`](crate::model::FargatePlatformConfiguration)
+    /// Creates a new builder-style object to manufacture [`FargatePlatformConfiguration`](crate::model::FargatePlatformConfiguration).
     pub fn builder() -> crate::model::fargate_platform_configuration::Builder {
         crate::model::fargate_platform_configuration::Builder::default()
     }
@@ -4074,6 +4150,7 @@ impl FargatePlatformConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkConfiguration {
     /// <p>Indicates whether the job should have a public IP address. For a job that is running on Fargate resources in a private subnet to send outbound traffic to the internet (for example, to pull container images), the private subnet requires a NAT gateway be attached to route requests to the internet. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Amazon ECS task networking</a>. The default value is "DISABLED".</p>
+    #[doc(hidden)]
     pub assign_public_ip: std::option::Option<crate::model::AssignPublicIp>,
 }
 impl NetworkConfiguration {
@@ -4089,11 +4166,10 @@ impl std::fmt::Debug for NetworkConfiguration {
         formatter.finish()
     }
 }
-/// See [`NetworkConfiguration`](crate::model::NetworkConfiguration)
+/// See [`NetworkConfiguration`](crate::model::NetworkConfiguration).
 pub mod network_configuration {
 
-    /// A builder for [`NetworkConfiguration`](crate::model::NetworkConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NetworkConfiguration`](crate::model::NetworkConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assign_public_ip: std::option::Option<crate::model::AssignPublicIp>,
@@ -4112,7 +4188,7 @@ pub mod network_configuration {
             self.assign_public_ip = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkConfiguration`](crate::model::NetworkConfiguration)
+        /// Consumes the builder and constructs a [`NetworkConfiguration`](crate::model::NetworkConfiguration).
         pub fn build(self) -> crate::model::NetworkConfiguration {
             crate::model::NetworkConfiguration {
                 assign_public_ip: self.assign_public_ip,
@@ -4121,7 +4197,7 @@ pub mod network_configuration {
     }
 }
 impl NetworkConfiguration {
-    /// Creates a new builder-style object to manufacture [`NetworkConfiguration`](crate::model::NetworkConfiguration)
+    /// Creates a new builder-style object to manufacture [`NetworkConfiguration`](crate::model::NetworkConfiguration).
     pub fn builder() -> crate::model::network_configuration::Builder {
         crate::model::network_configuration::Builder::default()
     }
@@ -4192,10 +4268,12 @@ impl AsRef<str> for AssignPublicIp {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Secret {
     /// <p>The name of the secret.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The secret to expose to the container. The supported values are either the full ARN of the Secrets Manager secret or the full ARN of the parameter in the Amazon Web Services Systems Manager Parameter Store.</p> <note>
     /// <p>If the Amazon Web Services Systems Manager Parameter Store parameter exists in the same Region as the job you're launching, then you can use either the full ARN or name of the parameter. If the parameter exists in a different Region, then the full ARN must be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub value_from: std::option::Option<std::string::String>,
 }
 impl Secret {
@@ -4218,11 +4296,10 @@ impl std::fmt::Debug for Secret {
         formatter.finish()
     }
 }
-/// See [`Secret`](crate::model::Secret)
+/// See [`Secret`](crate::model::Secret).
 pub mod secret {
 
-    /// A builder for [`Secret`](crate::model::Secret)
-    #[non_exhaustive]
+    /// A builder for [`Secret`](crate::model::Secret).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4253,7 +4330,7 @@ pub mod secret {
             self.value_from = input;
             self
         }
-        /// Consumes the builder and constructs a [`Secret`](crate::model::Secret)
+        /// Consumes the builder and constructs a [`Secret`](crate::model::Secret).
         pub fn build(self) -> crate::model::Secret {
             crate::model::Secret {
                 name: self.name,
@@ -4263,7 +4340,7 @@ pub mod secret {
     }
 }
 impl Secret {
-    /// Creates a new builder-style object to manufacture [`Secret`](crate::model::Secret)
+    /// Creates a new builder-style object to manufacture [`Secret`](crate::model::Secret).
     pub fn builder() -> crate::model::secret::Builder {
         crate::model::secret::Builder::default()
     }
@@ -4324,11 +4401,14 @@ pub struct LogConfiguration {
     /// <p>If you have a custom driver that's not listed earlier that you want to work with the Amazon ECS container agent, you can fork the Amazon ECS container agent project that's <a href="https://github.com/aws/amazon-ecs-agent">available on GitHub</a> and customize it to work with that driver. We encourage you to submit pull requests for changes that you want to have included. However, Amazon Web Services doesn't currently support running modified copies of this software.</p>
     /// </note>
     /// <p>This parameter requires version 1.18 of the Docker Remote API or greater on your container instance. To check the Docker Remote API version on your container instance, log into your container instance and run the following command: <code>sudo docker version | grep "Server API version"</code> </p>
+    #[doc(hidden)]
     pub log_driver: std::option::Option<crate::model::LogDriver>,
     /// <p>The configuration options to send to the log driver. This parameter requires version 1.19 of the Docker Remote API or greater on your container instance. To check the Docker Remote API version on your container instance, log into your container instance and run the following command: <code>sudo docker version | grep "Server API version"</code> </p>
+    #[doc(hidden)]
     pub options:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The secrets to pass to the log configuration. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/specifying-sensitive-data.html">Specifying sensitive data</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub secret_options: std::option::Option<std::vec::Vec<crate::model::Secret>>,
 }
 impl LogConfiguration {
@@ -4407,11 +4487,10 @@ impl std::fmt::Debug for LogConfiguration {
         formatter.finish()
     }
 }
-/// See [`LogConfiguration`](crate::model::LogConfiguration)
+/// See [`LogConfiguration`](crate::model::LogConfiguration).
 pub mod log_configuration {
 
-    /// A builder for [`LogConfiguration`](crate::model::LogConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LogConfiguration`](crate::model::LogConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_driver: std::option::Option<crate::model::LogDriver>,
@@ -4578,7 +4657,7 @@ pub mod log_configuration {
             self.secret_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogConfiguration`](crate::model::LogConfiguration)
+        /// Consumes the builder and constructs a [`LogConfiguration`](crate::model::LogConfiguration).
         pub fn build(self) -> crate::model::LogConfiguration {
             crate::model::LogConfiguration {
                 log_driver: self.log_driver,
@@ -4589,7 +4668,7 @@ pub mod log_configuration {
     }
 }
 impl LogConfiguration {
-    /// Creates a new builder-style object to manufacture [`LogConfiguration`](crate::model::LogConfiguration)
+    /// Creates a new builder-style object to manufacture [`LogConfiguration`](crate::model::LogConfiguration).
     pub fn builder() -> crate::model::log_configuration::Builder {
         crate::model::log_configuration::Builder::default()
     }
@@ -4685,21 +4764,26 @@ pub struct LinuxParameters {
     /// <p>Any host devices to expose to the container. This parameter maps to <code>Devices</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--device</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided.</p>
     /// </note>
+    #[doc(hidden)]
     pub devices: std::option::Option<std::vec::Vec<crate::model::Device>>,
     /// <p>If true, run an <code>init</code> process inside the container that forwards signals and reaps processes. This parameter maps to the <code>--init</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. This parameter requires version 1.25 of the Docker Remote API or greater on your container instance. To check the Docker Remote API version on your container instance, log into your container instance and run the following command: <code>sudo docker version | grep "Server API version"</code> </p>
+    #[doc(hidden)]
     pub init_process_enabled: std::option::Option<bool>,
     /// <p>The value for the size (in MiB) of the <code>/dev/shm</code> volume. This parameter maps to the <code>--shm-size</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided.</p>
     /// </note>
+    #[doc(hidden)]
     pub shared_memory_size: std::option::Option<i32>,
     /// <p>The container path, mount options, and size (in MiB) of the tmpfs mount. This parameter maps to the <code>--tmpfs</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided.</p>
     /// </note>
+    #[doc(hidden)]
     pub tmpfs: std::option::Option<std::vec::Vec<crate::model::Tmpfs>>,
     /// <p>The total amount of swap memory (in MiB) a container can use. This parameter is translated to the <code>--memory-swap</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a> where the value is the sum of the container memory plus the <code>maxSwap</code> value. For more information, see <a href="https://docs.docker.com/config/containers/resource_constraints/#--memory-swap-details"> <code>--memory-swap</code> details</a> in the Docker documentation.</p>
     /// <p>If a <code>maxSwap</code> value of <code>0</code> is specified, the container doesn't use swap. Accepted values are <code>0</code> or any positive integer. If the <code>maxSwap</code> parameter is omitted, the container doesn't use the swap configuration for the container instance it is running on. A <code>maxSwap</code> value must be set for the <code>swappiness</code> parameter to be used.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided.</p>
     /// </note>
+    #[doc(hidden)]
     pub max_swap: std::option::Option<i32>,
     /// <p>This allows you to tune a container's memory swappiness behavior. A <code>swappiness</code> value of <code>0</code> causes swapping not to happen unless absolutely necessary. A <code>swappiness</code> value of <code>100</code> causes pages to be swapped very aggressively. Accepted values are whole numbers between <code>0</code> and <code>100</code>. If the <code>swappiness</code> parameter isn't specified, a default value of <code>60</code> is used. If a value isn't specified for <code>maxSwap</code>, then this parameter is ignored. If <code>maxSwap</code> is set to 0, the container doesn't use swap. This parameter maps to the <code>--memory-swappiness</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>.</p>
     /// <p>Consider the following when you use a per-container swap configuration.</p>
@@ -4712,6 +4796,7 @@ pub struct LinuxParameters {
     /// </ul> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided.</p>
     /// </note>
+    #[doc(hidden)]
     pub swappiness: std::option::Option<i32>,
 }
 impl LinuxParameters {
@@ -4771,11 +4856,10 @@ impl std::fmt::Debug for LinuxParameters {
         formatter.finish()
     }
 }
-/// See [`LinuxParameters`](crate::model::LinuxParameters)
+/// See [`LinuxParameters`](crate::model::LinuxParameters).
 pub mod linux_parameters {
 
-    /// A builder for [`LinuxParameters`](crate::model::LinuxParameters)
-    #[non_exhaustive]
+    /// A builder for [`LinuxParameters`](crate::model::LinuxParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) devices: std::option::Option<std::vec::Vec<crate::model::Device>>,
@@ -4902,7 +4986,7 @@ pub mod linux_parameters {
             self.swappiness = input;
             self
         }
-        /// Consumes the builder and constructs a [`LinuxParameters`](crate::model::LinuxParameters)
+        /// Consumes the builder and constructs a [`LinuxParameters`](crate::model::LinuxParameters).
         pub fn build(self) -> crate::model::LinuxParameters {
             crate::model::LinuxParameters {
                 devices: self.devices,
@@ -4916,7 +5000,7 @@ pub mod linux_parameters {
     }
 }
 impl LinuxParameters {
-    /// Creates a new builder-style object to manufacture [`LinuxParameters`](crate::model::LinuxParameters)
+    /// Creates a new builder-style object to manufacture [`LinuxParameters`](crate::model::LinuxParameters).
     pub fn builder() -> crate::model::linux_parameters::Builder {
         crate::model::linux_parameters::Builder::default()
     }
@@ -4929,11 +5013,14 @@ impl LinuxParameters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tmpfs {
     /// <p>The absolute file path in the container where the tmpfs volume is mounted.</p>
+    #[doc(hidden)]
     pub container_path: std::option::Option<std::string::String>,
     /// <p>The size (in MiB) of the tmpfs volume.</p>
+    #[doc(hidden)]
     pub size: std::option::Option<i32>,
     /// <p>The list of tmpfs volume mount options.</p>
     /// <p>Valid values: "<code>defaults</code>" | "<code>ro</code>" | "<code>rw</code>" | "<code>suid</code>" | "<code>nosuid</code>" | "<code>dev</code>" | "<code>nodev</code>" | "<code>exec</code>" | "<code>noexec</code>" | "<code>sync</code>" | "<code>async</code>" | "<code>dirsync</code>" | "<code>remount</code>" | "<code>mand</code>" | "<code>nomand</code>" | "<code>atime</code>" | "<code>noatime</code>" | "<code>diratime</code>" | "<code>nodiratime</code>" | "<code>bind</code>" | "<code>rbind" | "unbindable" | "runbindable" | "private" | "rprivate" | "shared" | "rshared" | "slave" | "rslave" | "relatime</code>" | "<code>norelatime</code>" | "<code>strictatime</code>" | "<code>nostrictatime</code>" | "<code>mode</code>" | "<code>uid</code>" | "<code>gid</code>" | "<code>nr_inodes</code>" | "<code>nr_blocks</code>" | "<code>mpol</code>"</p>
+    #[doc(hidden)]
     pub mount_options: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Tmpfs {
@@ -4960,11 +5047,10 @@ impl std::fmt::Debug for Tmpfs {
         formatter.finish()
     }
 }
-/// See [`Tmpfs`](crate::model::Tmpfs)
+/// See [`Tmpfs`](crate::model::Tmpfs).
 pub mod tmpfs {
 
-    /// A builder for [`Tmpfs`](crate::model::Tmpfs)
-    #[non_exhaustive]
+    /// A builder for [`Tmpfs`](crate::model::Tmpfs).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) container_path: std::option::Option<std::string::String>,
@@ -5016,7 +5102,7 @@ pub mod tmpfs {
             self.mount_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tmpfs`](crate::model::Tmpfs)
+        /// Consumes the builder and constructs a [`Tmpfs`](crate::model::Tmpfs).
         pub fn build(self) -> crate::model::Tmpfs {
             crate::model::Tmpfs {
                 container_path: self.container_path,
@@ -5027,7 +5113,7 @@ pub mod tmpfs {
     }
 }
 impl Tmpfs {
-    /// Creates a new builder-style object to manufacture [`Tmpfs`](crate::model::Tmpfs)
+    /// Creates a new builder-style object to manufacture [`Tmpfs`](crate::model::Tmpfs).
     pub fn builder() -> crate::model::tmpfs::Builder {
         crate::model::tmpfs::Builder::default()
     }
@@ -5040,10 +5126,13 @@ impl Tmpfs {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Device {
     /// <p>The path for the device on the host container instance.</p>
+    #[doc(hidden)]
     pub host_path: std::option::Option<std::string::String>,
     /// <p>The path inside the container that's used to expose the host device. By default, the <code>hostPath</code> value is used.</p>
+    #[doc(hidden)]
     pub container_path: std::option::Option<std::string::String>,
     /// <p>The explicit permissions to provide to the container for the device. By default, the container has permissions for <code>read</code>, <code>write</code>, and <code>mknod</code> for the device.</p>
+    #[doc(hidden)]
     pub permissions: std::option::Option<std::vec::Vec<crate::model::DeviceCgroupPermission>>,
 }
 impl Device {
@@ -5069,11 +5158,10 @@ impl std::fmt::Debug for Device {
         formatter.finish()
     }
 }
-/// See [`Device`](crate::model::Device)
+/// See [`Device`](crate::model::Device).
 pub mod device {
 
-    /// A builder for [`Device`](crate::model::Device)
-    #[non_exhaustive]
+    /// A builder for [`Device`](crate::model::Device).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) host_path: std::option::Option<std::string::String>,
@@ -5124,7 +5212,7 @@ pub mod device {
             self.permissions = input;
             self
         }
-        /// Consumes the builder and constructs a [`Device`](crate::model::Device)
+        /// Consumes the builder and constructs a [`Device`](crate::model::Device).
         pub fn build(self) -> crate::model::Device {
             crate::model::Device {
                 host_path: self.host_path,
@@ -5135,7 +5223,7 @@ pub mod device {
     }
 }
 impl Device {
-    /// Creates a new builder-style object to manufacture [`Device`](crate::model::Device)
+    /// Creates a new builder-style object to manufacture [`Device`](crate::model::Device).
     pub fn builder() -> crate::model::device::Builder {
         crate::model::device::Builder::default()
     }
@@ -5207,10 +5295,13 @@ impl AsRef<str> for DeviceCgroupPermission {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ulimit {
     /// <p>The hard limit for the <code>ulimit</code> type.</p>
+    #[doc(hidden)]
     pub hard_limit: std::option::Option<i32>,
     /// <p>The <code>type</code> of the <code>ulimit</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The soft limit for the <code>ulimit</code> type.</p>
+    #[doc(hidden)]
     pub soft_limit: std::option::Option<i32>,
 }
 impl Ulimit {
@@ -5236,11 +5327,10 @@ impl std::fmt::Debug for Ulimit {
         formatter.finish()
     }
 }
-/// See [`Ulimit`](crate::model::Ulimit)
+/// See [`Ulimit`](crate::model::Ulimit).
 pub mod ulimit {
 
-    /// A builder for [`Ulimit`](crate::model::Ulimit)
-    #[non_exhaustive]
+    /// A builder for [`Ulimit`](crate::model::Ulimit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hard_limit: std::option::Option<i32>,
@@ -5278,7 +5368,7 @@ pub mod ulimit {
             self.soft_limit = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ulimit`](crate::model::Ulimit)
+        /// Consumes the builder and constructs a [`Ulimit`](crate::model::Ulimit).
         pub fn build(self) -> crate::model::Ulimit {
             crate::model::Ulimit {
                 hard_limit: self.hard_limit,
@@ -5289,7 +5379,7 @@ pub mod ulimit {
     }
 }
 impl Ulimit {
-    /// Creates a new builder-style object to manufacture [`Ulimit`](crate::model::Ulimit)
+    /// Creates a new builder-style object to manufacture [`Ulimit`](crate::model::Ulimit).
     pub fn builder() -> crate::model::ulimit::Builder {
         crate::model::ulimit::Builder::default()
     }
@@ -5300,10 +5390,13 @@ impl Ulimit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MountPoint {
     /// <p>The path on the container where the host volume is mounted.</p>
+    #[doc(hidden)]
     pub container_path: std::option::Option<std::string::String>,
     /// <p>If this value is <code>true</code>, the container has read-only access to the volume. Otherwise, the container can write to the volume. The default value is <code>false</code>.</p>
+    #[doc(hidden)]
     pub read_only: std::option::Option<bool>,
     /// <p>The name of the volume to mount.</p>
+    #[doc(hidden)]
     pub source_volume: std::option::Option<std::string::String>,
 }
 impl MountPoint {
@@ -5329,11 +5422,10 @@ impl std::fmt::Debug for MountPoint {
         formatter.finish()
     }
 }
-/// See [`MountPoint`](crate::model::MountPoint)
+/// See [`MountPoint`](crate::model::MountPoint).
 pub mod mount_point {
 
-    /// A builder for [`MountPoint`](crate::model::MountPoint)
-    #[non_exhaustive]
+    /// A builder for [`MountPoint`](crate::model::MountPoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) container_path: std::option::Option<std::string::String>,
@@ -5377,7 +5469,7 @@ pub mod mount_point {
             self.source_volume = input;
             self
         }
-        /// Consumes the builder and constructs a [`MountPoint`](crate::model::MountPoint)
+        /// Consumes the builder and constructs a [`MountPoint`](crate::model::MountPoint).
         pub fn build(self) -> crate::model::MountPoint {
             crate::model::MountPoint {
                 container_path: self.container_path,
@@ -5388,7 +5480,7 @@ pub mod mount_point {
     }
 }
 impl MountPoint {
-    /// Creates a new builder-style object to manufacture [`MountPoint`](crate::model::MountPoint)
+    /// Creates a new builder-style object to manufacture [`MountPoint`](crate::model::MountPoint).
     pub fn builder() -> crate::model::mount_point::Builder {
         crate::model::mount_point::Builder::default()
     }
@@ -5401,10 +5493,13 @@ pub struct Volume {
     /// <p>The contents of the <code>host</code> parameter determine whether your data volume persists on the host container instance and where it is stored. If the host parameter is empty, then the Docker daemon assigns a host path for your data volume. However, the data isn't guaranteed to persist after the containers associated with it stop running.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided.</p>
     /// </note>
+    #[doc(hidden)]
     pub host: std::option::Option<crate::model::Host>,
     /// <p>The name of the volume. It can be up to 255 letters long. It can contain uppercase and lowercase letters, numbers, hyphens (-), and underscores (_). This name is referenced in the <code>sourceVolume</code> parameter of container definition <code>mountPoints</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>This parameter is specified when you are using an Amazon Elastic File System file system for job storage. Jobs that are running on Fargate resources must specify a <code>platformVersion</code> of at least <code>1.4.0</code>.</p>
+    #[doc(hidden)]
     pub efs_volume_configuration: std::option::Option<crate::model::EfsVolumeConfiguration>,
 }
 impl Volume {
@@ -5434,11 +5529,10 @@ impl std::fmt::Debug for Volume {
         formatter.finish()
     }
 }
-/// See [`Volume`](crate::model::Volume)
+/// See [`Volume`](crate::model::Volume).
 pub mod volume {
 
-    /// A builder for [`Volume`](crate::model::Volume)
-    #[non_exhaustive]
+    /// A builder for [`Volume`](crate::model::Volume).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) host: std::option::Option<crate::model::Host>,
@@ -5487,7 +5581,7 @@ pub mod volume {
             self.efs_volume_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`Volume`](crate::model::Volume)
+        /// Consumes the builder and constructs a [`Volume`](crate::model::Volume).
         pub fn build(self) -> crate::model::Volume {
             crate::model::Volume {
                 host: self.host,
@@ -5498,7 +5592,7 @@ pub mod volume {
     }
 }
 impl Volume {
-    /// Creates a new builder-style object to manufacture [`Volume`](crate::model::Volume)
+    /// Creates a new builder-style object to manufacture [`Volume`](crate::model::Volume).
     pub fn builder() -> crate::model::volume::Builder {
         crate::model::volume::Builder::default()
     }
@@ -5509,16 +5603,21 @@ impl Volume {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EfsVolumeConfiguration {
     /// <p>The Amazon EFS file system ID to use.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>The directory within the Amazon EFS file system to mount as the root directory inside the host. If this parameter is omitted, the root of the Amazon EFS volume is used instead. Specifying <code>/</code> has the same effect as omitting this parameter. The maximum length is 4,096 characters.</p> <important>
     /// <p>If an EFS access point is specified in the <code>authorizationConfig</code>, the root directory parameter must either be omitted or set to <code>/</code>, which enforces the path set on the Amazon EFS access point.</p>
     /// </important>
+    #[doc(hidden)]
     pub root_directory: std::option::Option<std::string::String>,
     /// <p>Determines whether to enable encryption for Amazon EFS data in transit between the Amazon ECS host and the Amazon EFS server. Transit encryption must be enabled if Amazon EFS IAM authorization is used. If this parameter is omitted, the default value of <code>DISABLED</code> is used. For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html">Encrypting data in transit</a> in the <i>Amazon Elastic File System User Guide</i>.</p>
+    #[doc(hidden)]
     pub transit_encryption: std::option::Option<crate::model::EfsTransitEncryption>,
     /// <p>The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS server. If you don't specify a transit encryption port, it uses the port selection strategy that the Amazon EFS mount helper uses. The value must be between 0 and 65,535. For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS mount helper</a> in the <i>Amazon Elastic File System User Guide</i>.</p>
+    #[doc(hidden)]
     pub transit_encryption_port: std::option::Option<i32>,
     /// <p>The authorization configuration details for the Amazon EFS file system.</p>
+    #[doc(hidden)]
     pub authorization_config: std::option::Option<crate::model::EfsAuthorizationConfig>,
 }
 impl EfsVolumeConfiguration {
@@ -5558,11 +5657,10 @@ impl std::fmt::Debug for EfsVolumeConfiguration {
         formatter.finish()
     }
 }
-/// See [`EfsVolumeConfiguration`](crate::model::EfsVolumeConfiguration)
+/// See [`EfsVolumeConfiguration`](crate::model::EfsVolumeConfiguration).
 pub mod efs_volume_configuration {
 
-    /// A builder for [`EfsVolumeConfiguration`](crate::model::EfsVolumeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`EfsVolumeConfiguration`](crate::model::EfsVolumeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_system_id: std::option::Option<std::string::String>,
@@ -5638,7 +5736,7 @@ pub mod efs_volume_configuration {
             self.authorization_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`EfsVolumeConfiguration`](crate::model::EfsVolumeConfiguration)
+        /// Consumes the builder and constructs a [`EfsVolumeConfiguration`](crate::model::EfsVolumeConfiguration).
         pub fn build(self) -> crate::model::EfsVolumeConfiguration {
             crate::model::EfsVolumeConfiguration {
                 file_system_id: self.file_system_id,
@@ -5651,7 +5749,7 @@ pub mod efs_volume_configuration {
     }
 }
 impl EfsVolumeConfiguration {
-    /// Creates a new builder-style object to manufacture [`EfsVolumeConfiguration`](crate::model::EfsVolumeConfiguration)
+    /// Creates a new builder-style object to manufacture [`EfsVolumeConfiguration`](crate::model::EfsVolumeConfiguration).
     pub fn builder() -> crate::model::efs_volume_configuration::Builder {
         crate::model::efs_volume_configuration::Builder::default()
     }
@@ -5662,8 +5760,10 @@ impl EfsVolumeConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EfsAuthorizationConfig {
     /// <p>The Amazon EFS access point ID to use. If an access point is specified, the root directory value specified in the <code>EFSVolumeConfiguration</code> must either be omitted or set to <code>/</code> which will enforce the path set on the EFS access point. If an access point is used, transit encryption must be enabled in the <code>EFSVolumeConfiguration</code>. For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html">Working with Amazon EFS access points</a> in the <i>Amazon Elastic File System User Guide</i>.</p>
+    #[doc(hidden)]
     pub access_point_id: std::option::Option<std::string::String>,
     /// <p>Whether or not to use the Batch job IAM role defined in a job definition when mounting the Amazon EFS file system. If enabled, transit encryption must be enabled in the <code>EFSVolumeConfiguration</code>. If this parameter is omitted, the default value of <code>DISABLED</code> is used. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html#efs-volume-accesspoints">Using Amazon EFS access points</a> in the <i>Batch User Guide</i>. EFS IAM authorization requires that <code>TransitEncryption</code> be <code>ENABLED</code> and that a <code>JobRoleArn</code> is specified.</p>
+    #[doc(hidden)]
     pub iam: std::option::Option<crate::model::EfsAuthorizationConfigIam>,
 }
 impl EfsAuthorizationConfig {
@@ -5684,11 +5784,10 @@ impl std::fmt::Debug for EfsAuthorizationConfig {
         formatter.finish()
     }
 }
-/// See [`EfsAuthorizationConfig`](crate::model::EfsAuthorizationConfig)
+/// See [`EfsAuthorizationConfig`](crate::model::EfsAuthorizationConfig).
 pub mod efs_authorization_config {
 
-    /// A builder for [`EfsAuthorizationConfig`](crate::model::EfsAuthorizationConfig)
-    #[non_exhaustive]
+    /// A builder for [`EfsAuthorizationConfig`](crate::model::EfsAuthorizationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_point_id: std::option::Option<std::string::String>,
@@ -5721,7 +5820,7 @@ pub mod efs_authorization_config {
             self.iam = input;
             self
         }
-        /// Consumes the builder and constructs a [`EfsAuthorizationConfig`](crate::model::EfsAuthorizationConfig)
+        /// Consumes the builder and constructs a [`EfsAuthorizationConfig`](crate::model::EfsAuthorizationConfig).
         pub fn build(self) -> crate::model::EfsAuthorizationConfig {
             crate::model::EfsAuthorizationConfig {
                 access_point_id: self.access_point_id,
@@ -5731,7 +5830,7 @@ pub mod efs_authorization_config {
     }
 }
 impl EfsAuthorizationConfig {
-    /// Creates a new builder-style object to manufacture [`EfsAuthorizationConfig`](crate::model::EfsAuthorizationConfig)
+    /// Creates a new builder-style object to manufacture [`EfsAuthorizationConfig`](crate::model::EfsAuthorizationConfig).
     pub fn builder() -> crate::model::efs_authorization_config::Builder {
         crate::model::efs_authorization_config::Builder::default()
     }
@@ -5854,6 +5953,7 @@ pub struct Host {
     /// <p>The path on the host container instance that's presented to the container. If this parameter is empty, then the Docker daemon has assigned a host path for you. If this parameter contains a file location, then the data volume persists at the specified location on the host container instance until you delete it manually. If the source path location doesn't exist on the host container instance, the Docker daemon creates it. If the location does exist, the contents of the source path folder are exported.</p> <note>
     /// <p>This parameter isn't applicable to jobs that run on Fargate resources and shouldn't be provided.</p>
     /// </note>
+    #[doc(hidden)]
     pub source_path: std::option::Option<std::string::String>,
 }
 impl Host {
@@ -5871,11 +5971,10 @@ impl std::fmt::Debug for Host {
         formatter.finish()
     }
 }
-/// See [`Host`](crate::model::Host)
+/// See [`Host`](crate::model::Host).
 pub mod host {
 
-    /// A builder for [`Host`](crate::model::Host)
-    #[non_exhaustive]
+    /// A builder for [`Host`](crate::model::Host).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_path: std::option::Option<std::string::String>,
@@ -5895,7 +5994,7 @@ pub mod host {
             self.source_path = input;
             self
         }
-        /// Consumes the builder and constructs a [`Host`](crate::model::Host)
+        /// Consumes the builder and constructs a [`Host`](crate::model::Host).
         pub fn build(self) -> crate::model::Host {
             crate::model::Host {
                 source_path: self.source_path,
@@ -5904,7 +6003,7 @@ pub mod host {
     }
 }
 impl Host {
-    /// Creates a new builder-style object to manufacture [`Host`](crate::model::Host)
+    /// Creates a new builder-style object to manufacture [`Host`](crate::model::Host).
     pub fn builder() -> crate::model::host::Builder {
         crate::model::host::Builder::default()
     }
@@ -5970,6 +6069,7 @@ impl AsRef<str> for JobDefinitionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SchedulingPolicyListingDetail {
     /// <p>Amazon Resource Name (ARN) of the scheduling policy.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl SchedulingPolicyListingDetail {
@@ -5985,11 +6085,10 @@ impl std::fmt::Debug for SchedulingPolicyListingDetail {
         formatter.finish()
     }
 }
-/// See [`SchedulingPolicyListingDetail`](crate::model::SchedulingPolicyListingDetail)
+/// See [`SchedulingPolicyListingDetail`](crate::model::SchedulingPolicyListingDetail).
 pub mod scheduling_policy_listing_detail {
 
-    /// A builder for [`SchedulingPolicyListingDetail`](crate::model::SchedulingPolicyListingDetail)
-    #[non_exhaustive]
+    /// A builder for [`SchedulingPolicyListingDetail`](crate::model::SchedulingPolicyListingDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -6005,14 +6104,14 @@ pub mod scheduling_policy_listing_detail {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`SchedulingPolicyListingDetail`](crate::model::SchedulingPolicyListingDetail)
+        /// Consumes the builder and constructs a [`SchedulingPolicyListingDetail`](crate::model::SchedulingPolicyListingDetail).
         pub fn build(self) -> crate::model::SchedulingPolicyListingDetail {
             crate::model::SchedulingPolicyListingDetail { arn: self.arn }
         }
     }
 }
 impl SchedulingPolicyListingDetail {
-    /// Creates a new builder-style object to manufacture [`SchedulingPolicyListingDetail`](crate::model::SchedulingPolicyListingDetail)
+    /// Creates a new builder-style object to manufacture [`SchedulingPolicyListingDetail`](crate::model::SchedulingPolicyListingDetail).
     pub fn builder() -> crate::model::scheduling_policy_listing_detail::Builder {
         crate::model::scheduling_policy_listing_detail::Builder::default()
     }
@@ -6023,30 +6122,42 @@ impl SchedulingPolicyListingDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobSummary {
     /// <p>The Amazon Resource Name (ARN) of the job.</p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The name of the job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The Unix timestamp (in milliseconds) for when the job was created. For non-array jobs and parent array jobs, this is when the job entered the <code>SUBMITTED</code> state (at the time <code>SubmitJob</code> was called). For array child jobs, this is when the child job was spawned by its parent and entered the <code>PENDING</code> state.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<i64>,
     /// <p>The current status for the job.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobStatus>,
     /// <p>A short, human-readable string to provide additional details about the current status of the job.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>The Unix timestamp for when the job was started (when the job transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state).</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<i64>,
     /// <p>The Unix timestamp for when the job was stopped (when the job transitioned from the <code>RUNNING</code> state to a terminal state, such as <code>SUCCEEDED</code> or <code>FAILED</code>).</p>
+    #[doc(hidden)]
     pub stopped_at: std::option::Option<i64>,
     /// <p>An object representing the details of the container that's associated with the job.</p>
+    #[doc(hidden)]
     pub container: std::option::Option<crate::model::ContainerSummary>,
     /// <p>The array properties of the job, if it is an array job.</p>
+    #[doc(hidden)]
     pub array_properties: std::option::Option<crate::model::ArrayPropertiesSummary>,
     /// <p>The node properties for a single node in a job summary list.</p> <note>
     /// <p>This isn't applicable to jobs that are running on Fargate resources.</p>
     /// </note>
+    #[doc(hidden)]
     pub node_properties: std::option::Option<crate::model::NodePropertiesSummary>,
     /// <p>The Amazon Resource Name (ARN) of the job definition.</p>
+    #[doc(hidden)]
     pub job_definition: std::option::Option<std::string::String>,
 }
 impl JobSummary {
@@ -6119,11 +6230,10 @@ impl std::fmt::Debug for JobSummary {
         formatter.finish()
     }
 }
-/// See [`JobSummary`](crate::model::JobSummary)
+/// See [`JobSummary`](crate::model::JobSummary).
 pub mod job_summary {
 
-    /// A builder for [`JobSummary`](crate::model::JobSummary)
-    #[non_exhaustive]
+    /// A builder for [`JobSummary`](crate::model::JobSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_arn: std::option::Option<std::string::String>,
@@ -6279,7 +6389,7 @@ pub mod job_summary {
             self.job_definition = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobSummary`](crate::model::JobSummary)
+        /// Consumes the builder and constructs a [`JobSummary`](crate::model::JobSummary).
         pub fn build(self) -> crate::model::JobSummary {
             crate::model::JobSummary {
                 job_arn: self.job_arn,
@@ -6299,7 +6409,7 @@ pub mod job_summary {
     }
 }
 impl JobSummary {
-    /// Creates a new builder-style object to manufacture [`JobSummary`](crate::model::JobSummary)
+    /// Creates a new builder-style object to manufacture [`JobSummary`](crate::model::JobSummary).
     pub fn builder() -> crate::model::job_summary::Builder {
         crate::model::job_summary::Builder::default()
     }
@@ -6310,10 +6420,13 @@ impl JobSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodePropertiesSummary {
     /// <p>Specifies whether the current node is the main node for a multi-node parallel job.</p>
+    #[doc(hidden)]
     pub is_main_node: std::option::Option<bool>,
     /// <p>The number of nodes associated with a multi-node parallel job.</p>
+    #[doc(hidden)]
     pub num_nodes: std::option::Option<i32>,
     /// <p>The node index for the node. Node index numbering begins at zero. This index is also available on the node with the <code>AWS_BATCH_JOB_NODE_INDEX</code> environment variable.</p>
+    #[doc(hidden)]
     pub node_index: std::option::Option<i32>,
 }
 impl NodePropertiesSummary {
@@ -6339,11 +6452,10 @@ impl std::fmt::Debug for NodePropertiesSummary {
         formatter.finish()
     }
 }
-/// See [`NodePropertiesSummary`](crate::model::NodePropertiesSummary)
+/// See [`NodePropertiesSummary`](crate::model::NodePropertiesSummary).
 pub mod node_properties_summary {
 
-    /// A builder for [`NodePropertiesSummary`](crate::model::NodePropertiesSummary)
-    #[non_exhaustive]
+    /// A builder for [`NodePropertiesSummary`](crate::model::NodePropertiesSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_main_node: std::option::Option<bool>,
@@ -6381,7 +6493,7 @@ pub mod node_properties_summary {
             self.node_index = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodePropertiesSummary`](crate::model::NodePropertiesSummary)
+        /// Consumes the builder and constructs a [`NodePropertiesSummary`](crate::model::NodePropertiesSummary).
         pub fn build(self) -> crate::model::NodePropertiesSummary {
             crate::model::NodePropertiesSummary {
                 is_main_node: self.is_main_node,
@@ -6392,7 +6504,7 @@ pub mod node_properties_summary {
     }
 }
 impl NodePropertiesSummary {
-    /// Creates a new builder-style object to manufacture [`NodePropertiesSummary`](crate::model::NodePropertiesSummary)
+    /// Creates a new builder-style object to manufacture [`NodePropertiesSummary`](crate::model::NodePropertiesSummary).
     pub fn builder() -> crate::model::node_properties_summary::Builder {
         crate::model::node_properties_summary::Builder::default()
     }
@@ -6403,8 +6515,10 @@ impl NodePropertiesSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ArrayPropertiesSummary {
     /// <p>The size of the array job. This parameter is returned for parent array jobs.</p>
+    #[doc(hidden)]
     pub size: std::option::Option<i32>,
     /// <p>The job index within the array that's associated with this job. This parameter is returned for children of array jobs.</p>
+    #[doc(hidden)]
     pub index: std::option::Option<i32>,
 }
 impl ArrayPropertiesSummary {
@@ -6425,11 +6539,10 @@ impl std::fmt::Debug for ArrayPropertiesSummary {
         formatter.finish()
     }
 }
-/// See [`ArrayPropertiesSummary`](crate::model::ArrayPropertiesSummary)
+/// See [`ArrayPropertiesSummary`](crate::model::ArrayPropertiesSummary).
 pub mod array_properties_summary {
 
-    /// A builder for [`ArrayPropertiesSummary`](crate::model::ArrayPropertiesSummary)
-    #[non_exhaustive]
+    /// A builder for [`ArrayPropertiesSummary`](crate::model::ArrayPropertiesSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) size: std::option::Option<i32>,
@@ -6456,7 +6569,7 @@ pub mod array_properties_summary {
             self.index = input;
             self
         }
-        /// Consumes the builder and constructs a [`ArrayPropertiesSummary`](crate::model::ArrayPropertiesSummary)
+        /// Consumes the builder and constructs a [`ArrayPropertiesSummary`](crate::model::ArrayPropertiesSummary).
         pub fn build(self) -> crate::model::ArrayPropertiesSummary {
             crate::model::ArrayPropertiesSummary {
                 size: self.size,
@@ -6466,7 +6579,7 @@ pub mod array_properties_summary {
     }
 }
 impl ArrayPropertiesSummary {
-    /// Creates a new builder-style object to manufacture [`ArrayPropertiesSummary`](crate::model::ArrayPropertiesSummary)
+    /// Creates a new builder-style object to manufacture [`ArrayPropertiesSummary`](crate::model::ArrayPropertiesSummary).
     pub fn builder() -> crate::model::array_properties_summary::Builder {
         crate::model::array_properties_summary::Builder::default()
     }
@@ -6477,8 +6590,10 @@ impl ArrayPropertiesSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerSummary {
     /// <p>The exit code to return upon completion.</p>
+    #[doc(hidden)]
     pub exit_code: std::option::Option<i32>,
     /// <p>A short (255 max characters) human-readable string to provide additional details about a running or stopped container.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
 }
 impl ContainerSummary {
@@ -6499,11 +6614,10 @@ impl std::fmt::Debug for ContainerSummary {
         formatter.finish()
     }
 }
-/// See [`ContainerSummary`](crate::model::ContainerSummary)
+/// See [`ContainerSummary`](crate::model::ContainerSummary).
 pub mod container_summary {
 
-    /// A builder for [`ContainerSummary`](crate::model::ContainerSummary)
-    #[non_exhaustive]
+    /// A builder for [`ContainerSummary`](crate::model::ContainerSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) exit_code: std::option::Option<i32>,
@@ -6530,7 +6644,7 @@ pub mod container_summary {
             self.reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerSummary`](crate::model::ContainerSummary)
+        /// Consumes the builder and constructs a [`ContainerSummary`](crate::model::ContainerSummary).
         pub fn build(self) -> crate::model::ContainerSummary {
             crate::model::ContainerSummary {
                 exit_code: self.exit_code,
@@ -6540,7 +6654,7 @@ pub mod container_summary {
     }
 }
 impl ContainerSummary {
-    /// Creates a new builder-style object to manufacture [`ContainerSummary`](crate::model::ContainerSummary)
+    /// Creates a new builder-style object to manufacture [`ContainerSummary`](crate::model::ContainerSummary).
     pub fn builder() -> crate::model::container_summary::Builder {
         crate::model::container_summary::Builder::default()
     }
@@ -6634,8 +6748,10 @@ impl AsRef<str> for JobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyValuesPair {
     /// <p>The name of the filter. Filter names are case sensitive.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The filter values.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl KeyValuesPair {
@@ -6656,11 +6772,10 @@ impl std::fmt::Debug for KeyValuesPair {
         formatter.finish()
     }
 }
-/// See [`KeyValuesPair`](crate::model::KeyValuesPair)
+/// See [`KeyValuesPair`](crate::model::KeyValuesPair).
 pub mod key_values_pair {
 
-    /// A builder for [`KeyValuesPair`](crate::model::KeyValuesPair)
-    #[non_exhaustive]
+    /// A builder for [`KeyValuesPair`](crate::model::KeyValuesPair).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -6696,7 +6811,7 @@ pub mod key_values_pair {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyValuesPair`](crate::model::KeyValuesPair)
+        /// Consumes the builder and constructs a [`KeyValuesPair`](crate::model::KeyValuesPair).
         pub fn build(self) -> crate::model::KeyValuesPair {
             crate::model::KeyValuesPair {
                 name: self.name,
@@ -6706,7 +6821,7 @@ pub mod key_values_pair {
     }
 }
 impl KeyValuesPair {
-    /// Creates a new builder-style object to manufacture [`KeyValuesPair`](crate::model::KeyValuesPair)
+    /// Creates a new builder-style object to manufacture [`KeyValuesPair`](crate::model::KeyValuesPair).
     pub fn builder() -> crate::model::key_values_pair::Builder {
         crate::model::key_values_pair::Builder::default()
     }
@@ -6717,12 +6832,16 @@ impl KeyValuesPair {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SchedulingPolicyDetail {
     /// <p>The name of the scheduling policy.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the scheduling policy. An example is <code>arn:<i>aws</i>:batch:<i>us-east-1</i>:<i>123456789012</i>:scheduling-policy/<i>HighPriority</i> </code>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The fair share policy for the scheduling policy.</p>
+    #[doc(hidden)]
     pub fairshare_policy: std::option::Option<crate::model::FairsharePolicy>,
     /// <p>The tags that you apply to the scheduling policy to categorize and organize your resources. Each tag consists of a key and an optional value. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a> in <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -6757,11 +6876,10 @@ impl std::fmt::Debug for SchedulingPolicyDetail {
         formatter.finish()
     }
 }
-/// See [`SchedulingPolicyDetail`](crate::model::SchedulingPolicyDetail)
+/// See [`SchedulingPolicyDetail`](crate::model::SchedulingPolicyDetail).
 pub mod scheduling_policy_detail {
 
-    /// A builder for [`SchedulingPolicyDetail`](crate::model::SchedulingPolicyDetail)
-    #[non_exhaustive]
+    /// A builder for [`SchedulingPolicyDetail`](crate::model::SchedulingPolicyDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -6830,7 +6948,7 @@ pub mod scheduling_policy_detail {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`SchedulingPolicyDetail`](crate::model::SchedulingPolicyDetail)
+        /// Consumes the builder and constructs a [`SchedulingPolicyDetail`](crate::model::SchedulingPolicyDetail).
         pub fn build(self) -> crate::model::SchedulingPolicyDetail {
             crate::model::SchedulingPolicyDetail {
                 name: self.name,
@@ -6842,7 +6960,7 @@ pub mod scheduling_policy_detail {
     }
 }
 impl SchedulingPolicyDetail {
-    /// Creates a new builder-style object to manufacture [`SchedulingPolicyDetail`](crate::model::SchedulingPolicyDetail)
+    /// Creates a new builder-style object to manufacture [`SchedulingPolicyDetail`](crate::model::SchedulingPolicyDetail).
     pub fn builder() -> crate::model::scheduling_policy_detail::Builder {
         crate::model::scheduling_policy_detail::Builder::default()
     }
@@ -6853,58 +6971,82 @@ impl SchedulingPolicyDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobDetail {
     /// <p>The Amazon Resource Name (ARN) of the job.</p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The name of the job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The ID for the job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the job queue that the job is associated with.</p>
+    #[doc(hidden)]
     pub job_queue: std::option::Option<std::string::String>,
     /// <p>The current status for the job.</p> <note>
     /// <p>If your jobs don't progress to <code>STARTING</code>, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#job_stuck_in_runnable">Jobs stuck in RUNNABLE status</a> in the troubleshooting section of the <i>Batch User Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobStatus>,
     /// <p>The share identifier for the job.</p>
+    #[doc(hidden)]
     pub share_identifier: std::option::Option<std::string::String>,
     /// <p>The scheduling policy of the job definition. This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling priority are scheduled before jobs with a lower scheduling priority.</p>
+    #[doc(hidden)]
     pub scheduling_priority: std::option::Option<i32>,
     /// <p>A list of job attempts associated with this job.</p>
+    #[doc(hidden)]
     pub attempts: std::option::Option<std::vec::Vec<crate::model::AttemptDetail>>,
     /// <p>A short, human-readable string to provide additional details about the current status of the job.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>The Unix timestamp (in milliseconds) for when the job was created. For non-array jobs and parent array jobs, this is when the job entered the <code>SUBMITTED</code> state (at the time <code>SubmitJob</code> was called). For array child jobs, this is when the child job was spawned by its parent and entered the <code>PENDING</code> state.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<i64>,
     /// <p>The retry strategy to use for this job if an attempt fails.</p>
+    #[doc(hidden)]
     pub retry_strategy: std::option::Option<crate::model::RetryStrategy>,
     /// <p>The Unix timestamp (in milliseconds) for when the job was started (when the job transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state). This parameter isn't provided for child jobs of array jobs or multi-node parallel jobs.</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<i64>,
     /// <p>The Unix timestamp (in milliseconds) for when the job was stopped (when the job transitioned from the <code>RUNNING</code> state to a terminal state, such as <code>SUCCEEDED</code> or <code>FAILED</code>).</p>
+    #[doc(hidden)]
     pub stopped_at: std::option::Option<i64>,
     /// <p>A list of job IDs that this job depends on.</p>
+    #[doc(hidden)]
     pub depends_on: std::option::Option<std::vec::Vec<crate::model::JobDependency>>,
     /// <p>The Amazon Resource Name (ARN) of the job definition that's used by this job.</p>
+    #[doc(hidden)]
     pub job_definition: std::option::Option<std::string::String>,
     /// <p>Additional parameters passed to the job that replace parameter substitution placeholders or override any corresponding parameter defaults from the job definition.</p>
+    #[doc(hidden)]
     pub parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>An object representing the details of the container that's associated with the job.</p>
+    #[doc(hidden)]
     pub container: std::option::Option<crate::model::ContainerDetail>,
     /// <p>An object representing the details of a node that's associated with a multi-node parallel job.</p>
+    #[doc(hidden)]
     pub node_details: std::option::Option<crate::model::NodeDetails>,
     /// <p>An object representing the node properties of a multi-node parallel job.</p> <note>
     /// <p>This isn't applicable to jobs that are running on Fargate resources.</p>
     /// </note>
+    #[doc(hidden)]
     pub node_properties: std::option::Option<crate::model::NodeProperties>,
     /// <p>The array properties of the job, if it is an array job.</p>
+    #[doc(hidden)]
     pub array_properties: std::option::Option<crate::model::ArrayPropertiesDetail>,
     /// <p>The timeout configuration for the job.</p>
+    #[doc(hidden)]
     pub timeout: std::option::Option<crate::model::JobTimeout>,
     /// <p>The tags applied to the job.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Specifies whether to propagate the tags from the job or job definition to the corresponding Amazon ECS task. If no value is specified, the tags aren't propagated. Tags can only be propagated to the tasks during task creation. For tags with the same name, job tags are given priority over job definitions tags. If the total number of combined tags from the job and job definition is over 50, the job is moved to the <code>FAILED</code> state.</p>
+    #[doc(hidden)]
     pub propagate_tags: std::option::Option<bool>,
     /// <p>The platform capabilities required by the job definition. If no value is specified, it defaults to <code>EC2</code>. Jobs run on Fargate resources specify <code>FARGATE</code>.</p>
+    #[doc(hidden)]
     pub platform_capabilities: std::option::Option<std::vec::Vec<crate::model::PlatformCapability>>,
 }
 impl JobDetail {
@@ -7047,11 +7189,10 @@ impl std::fmt::Debug for JobDetail {
         formatter.finish()
     }
 }
-/// See [`JobDetail`](crate::model::JobDetail)
+/// See [`JobDetail`](crate::model::JobDetail).
 pub mod job_detail {
 
-    /// A builder for [`JobDetail`](crate::model::JobDetail)
-    #[non_exhaustive]
+    /// A builder for [`JobDetail`](crate::model::JobDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_arn: std::option::Option<std::string::String>,
@@ -7414,7 +7555,7 @@ pub mod job_detail {
             self.platform_capabilities = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobDetail`](crate::model::JobDetail)
+        /// Consumes the builder and constructs a [`JobDetail`](crate::model::JobDetail).
         pub fn build(self) -> crate::model::JobDetail {
             crate::model::JobDetail {
                 job_arn: self.job_arn,
@@ -7446,7 +7587,7 @@ pub mod job_detail {
     }
 }
 impl JobDetail {
-    /// Creates a new builder-style object to manufacture [`JobDetail`](crate::model::JobDetail)
+    /// Creates a new builder-style object to manufacture [`JobDetail`](crate::model::JobDetail).
     pub fn builder() -> crate::model::job_detail::Builder {
         crate::model::job_detail::Builder::default()
     }
@@ -7457,10 +7598,13 @@ impl JobDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ArrayPropertiesDetail {
     /// <p>A summary of the number of array job children in each available job status. This parameter is returned for parent array jobs.</p>
+    #[doc(hidden)]
     pub status_summary: std::option::Option<std::collections::HashMap<std::string::String, i32>>,
     /// <p>The size of the array job. This parameter is returned for parent array jobs.</p>
+    #[doc(hidden)]
     pub size: std::option::Option<i32>,
     /// <p>The job index within the array that's associated with this job. This parameter is returned for array job children.</p>
+    #[doc(hidden)]
     pub index: std::option::Option<i32>,
 }
 impl ArrayPropertiesDetail {
@@ -7488,11 +7632,10 @@ impl std::fmt::Debug for ArrayPropertiesDetail {
         formatter.finish()
     }
 }
-/// See [`ArrayPropertiesDetail`](crate::model::ArrayPropertiesDetail)
+/// See [`ArrayPropertiesDetail`](crate::model::ArrayPropertiesDetail).
 pub mod array_properties_detail {
 
-    /// A builder for [`ArrayPropertiesDetail`](crate::model::ArrayPropertiesDetail)
-    #[non_exhaustive]
+    /// A builder for [`ArrayPropertiesDetail`](crate::model::ArrayPropertiesDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status_summary:
@@ -7540,7 +7683,7 @@ pub mod array_properties_detail {
             self.index = input;
             self
         }
-        /// Consumes the builder and constructs a [`ArrayPropertiesDetail`](crate::model::ArrayPropertiesDetail)
+        /// Consumes the builder and constructs a [`ArrayPropertiesDetail`](crate::model::ArrayPropertiesDetail).
         pub fn build(self) -> crate::model::ArrayPropertiesDetail {
             crate::model::ArrayPropertiesDetail {
                 status_summary: self.status_summary,
@@ -7551,7 +7694,7 @@ pub mod array_properties_detail {
     }
 }
 impl ArrayPropertiesDetail {
-    /// Creates a new builder-style object to manufacture [`ArrayPropertiesDetail`](crate::model::ArrayPropertiesDetail)
+    /// Creates a new builder-style object to manufacture [`ArrayPropertiesDetail`](crate::model::ArrayPropertiesDetail).
     pub fn builder() -> crate::model::array_properties_detail::Builder {
         crate::model::array_properties_detail::Builder::default()
     }
@@ -7562,8 +7705,10 @@ impl ArrayPropertiesDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeDetails {
     /// <p>The node index for the node. Node index numbering begins at zero. This index is also available on the node with the <code>AWS_BATCH_JOB_NODE_INDEX</code> environment variable.</p>
+    #[doc(hidden)]
     pub node_index: std::option::Option<i32>,
     /// <p>Specifies whether the current node is the main node for a multi-node parallel job.</p>
+    #[doc(hidden)]
     pub is_main_node: std::option::Option<bool>,
 }
 impl NodeDetails {
@@ -7584,11 +7729,10 @@ impl std::fmt::Debug for NodeDetails {
         formatter.finish()
     }
 }
-/// See [`NodeDetails`](crate::model::NodeDetails)
+/// See [`NodeDetails`](crate::model::NodeDetails).
 pub mod node_details {
 
-    /// A builder for [`NodeDetails`](crate::model::NodeDetails)
-    #[non_exhaustive]
+    /// A builder for [`NodeDetails`](crate::model::NodeDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) node_index: std::option::Option<i32>,
@@ -7615,7 +7759,7 @@ pub mod node_details {
             self.is_main_node = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeDetails`](crate::model::NodeDetails)
+        /// Consumes the builder and constructs a [`NodeDetails`](crate::model::NodeDetails).
         pub fn build(self) -> crate::model::NodeDetails {
             crate::model::NodeDetails {
                 node_index: self.node_index,
@@ -7625,7 +7769,7 @@ pub mod node_details {
     }
 }
 impl NodeDetails {
-    /// Creates a new builder-style object to manufacture [`NodeDetails`](crate::model::NodeDetails)
+    /// Creates a new builder-style object to manufacture [`NodeDetails`](crate::model::NodeDetails).
     pub fn builder() -> crate::model::node_details::Builder {
         crate::model::node_details::Builder::default()
     }
@@ -7636,59 +7780,81 @@ impl NodeDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerDetail {
     /// <p>The image used to start the container.</p>
+    #[doc(hidden)]
     pub image: std::option::Option<std::string::String>,
     /// <p>The number of vCPUs reserved for the container. For jobs that run on EC2 resources, you can specify the vCPU requirement for the job using <code>resourceRequirements</code>, but you can't specify the vCPU requirements in both the <code>vcpus</code> and <code>resourceRequirements</code> object. This parameter maps to <code>CpuShares</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. Each vCPU is equivalent to 1,024 CPU shares. You must specify at least one vCPU. This is required but can be specified in several places. It must be specified for each node at least once.</p> <note>
     /// <p>This parameter isn't applicable to jobs that run on Fargate resources. For jobs that run on Fargate resources, you must specify the vCPU requirement for the job using <code>resourceRequirements</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub vcpus: std::option::Option<i32>,
     /// <p>For jobs running on EC2 resources that didn't specify memory requirements using <code>resourceRequirements</code>, the number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see <code>resourceRequirements</code>.</p>
+    #[doc(hidden)]
     pub memory: std::option::Option<i32>,
     /// <p>The command that's passed to the container.</p>
+    #[doc(hidden)]
     pub command: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) associated with the job upon execution.</p>
+    #[doc(hidden)]
     pub job_role_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the execution role that Batch can assume. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/execution-IAM-role.html">Batch execution IAM role</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub execution_role_arn: std::option::Option<std::string::String>,
     /// <p>A list of volumes associated with the job.</p>
+    #[doc(hidden)]
     pub volumes: std::option::Option<std::vec::Vec<crate::model::Volume>>,
     /// <p>The environment variables to pass to a container.</p> <note>
     /// <p>Environment variables must not start with <code>AWS_BATCH</code>; this naming convention is reserved for variables that are set by the Batch service.</p>
     /// </note>
+    #[doc(hidden)]
     pub environment: std::option::Option<std::vec::Vec<crate::model::KeyValuePair>>,
     /// <p>The mount points for data volumes in your container.</p>
+    #[doc(hidden)]
     pub mount_points: std::option::Option<std::vec::Vec<crate::model::MountPoint>>,
     /// <p>When this parameter is true, the container is given read-only access to its root file system. This parameter maps to <code>ReadonlyRootfs</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--read-only</code> option to <a href="https://docs.docker.com/engine/reference/commandline/run/"> <code>docker run</code> </a>.</p>
+    #[doc(hidden)]
     pub readonly_root_filesystem: std::option::Option<bool>,
     /// <p>A list of <code>ulimit</code> values to set in the container. This parameter maps to <code>Ulimits</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--ulimit</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources.</p>
     /// </note>
+    #[doc(hidden)]
     pub ulimits: std::option::Option<std::vec::Vec<crate::model::Ulimit>>,
     /// <p>When this parameter is true, the container is given elevated permissions on the host container instance (similar to the <code>root</code> user). The default value is false.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided, or specified as false.</p>
     /// </note>
+    #[doc(hidden)]
     pub privileged: std::option::Option<bool>,
     /// <p>The user name to use inside the container. This parameter maps to <code>User</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--user</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>.</p>
+    #[doc(hidden)]
     pub user: std::option::Option<std::string::String>,
     /// <p>The exit code to return upon completion.</p>
+    #[doc(hidden)]
     pub exit_code: std::option::Option<i32>,
     /// <p>A short (255 max characters) human-readable string to provide additional details about a running or stopped container.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the container instance that the container is running on.</p>
+    #[doc(hidden)]
     pub container_instance_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon ECS task that's associated with the container job. Each container attempt receives a task ARN when they reach the <code>STARTING</code> status.</p>
+    #[doc(hidden)]
     pub task_arn: std::option::Option<std::string::String>,
     /// <p>The name of the CloudWatch Logs log stream associated with the container. The log group for Batch jobs is <code>/aws/batch/job</code>. Each container attempt receives a log stream name when they reach the <code>RUNNING</code> status.</p>
+    #[doc(hidden)]
     pub log_stream_name: std::option::Option<std::string::String>,
     /// <p>The instance type of the underlying host infrastructure of a multi-node parallel job.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources.</p>
     /// </note>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The network interfaces associated with the job.</p>
+    #[doc(hidden)]
     pub network_interfaces: std::option::Option<std::vec::Vec<crate::model::NetworkInterface>>,
     /// <p>The type and amount of resources to assign to a container. The supported resources include <code>GPU</code>, <code>MEMORY</code>, and <code>VCPU</code>.</p>
+    #[doc(hidden)]
     pub resource_requirements:
         std::option::Option<std::vec::Vec<crate::model::ResourceRequirement>>,
     /// <p>Linux-specific modifications that are applied to the container, such as details for device mappings.</p>
+    #[doc(hidden)]
     pub linux_parameters: std::option::Option<crate::model::LinuxParameters>,
     /// <p>The log configuration specification for the container.</p>
     /// <p>This parameter maps to <code>LogConfig</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--log-driver</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. By default, containers use the same logging driver that the Docker daemon uses. However, the container might use a different logging driver than the Docker daemon by specifying a log driver with this parameter in the container definition. To use a different logging driver for a container, the log system must be configured properly on the container instance. Or, alternatively, it must be configured on a different log server for remote logging options. For more information on the options for different supported log drivers, see <a href="https://docs.docker.com/engine/admin/logging/overview/">Configure logging drivers</a> in the Docker documentation.</p> <note>
@@ -7697,12 +7863,16 @@ pub struct ContainerDetail {
     /// <p>This parameter requires version 1.18 of the Docker Remote API or greater on your container instance. To check the Docker Remote API version on your container instance, log into your container instance and run the following command: <code>sudo docker version | grep "Server API version"</code> </p> <note>
     /// <p>The Amazon ECS container agent running on a container instance must register the logging drivers available on that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before containers placed on that instance can use these log configuration options. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS container agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub log_configuration: std::option::Option<crate::model::LogConfiguration>,
     /// <p>The secrets to pass to the container. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/specifying-sensitive-data.html">Specifying sensitive data</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub secrets: std::option::Option<std::vec::Vec<crate::model::Secret>>,
     /// <p>The network configuration for jobs that are running on Fargate resources. Jobs that are running on EC2 resources must not specify this parameter.</p>
+    #[doc(hidden)]
     pub network_configuration: std::option::Option<crate::model::NetworkConfiguration>,
     /// <p>The platform configuration for jobs that are running on Fargate resources. Jobs that are running on EC2 resources must not specify this parameter.</p>
+    #[doc(hidden)]
     pub fargate_platform_configuration:
         std::option::Option<crate::model::FargatePlatformConfiguration>,
 }
@@ -7869,11 +8039,10 @@ impl std::fmt::Debug for ContainerDetail {
         formatter.finish()
     }
 }
-/// See [`ContainerDetail`](crate::model::ContainerDetail)
+/// See [`ContainerDetail`](crate::model::ContainerDetail).
 pub mod container_detail {
 
-    /// A builder for [`ContainerDetail`](crate::model::ContainerDetail)
-    #[non_exhaustive]
+    /// A builder for [`ContainerDetail`](crate::model::ContainerDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) image: std::option::Option<std::string::String>,
@@ -8298,7 +8467,7 @@ pub mod container_detail {
             self.fargate_platform_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerDetail`](crate::model::ContainerDetail)
+        /// Consumes the builder and constructs a [`ContainerDetail`](crate::model::ContainerDetail).
         pub fn build(self) -> crate::model::ContainerDetail {
             crate::model::ContainerDetail {
                 image: self.image,
@@ -8332,7 +8501,7 @@ pub mod container_detail {
     }
 }
 impl ContainerDetail {
-    /// Creates a new builder-style object to manufacture [`ContainerDetail`](crate::model::ContainerDetail)
+    /// Creates a new builder-style object to manufacture [`ContainerDetail`](crate::model::ContainerDetail).
     pub fn builder() -> crate::model::container_detail::Builder {
         crate::model::container_detail::Builder::default()
     }
@@ -8343,10 +8512,13 @@ impl ContainerDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkInterface {
     /// <p>The attachment ID for the network interface.</p>
+    #[doc(hidden)]
     pub attachment_id: std::option::Option<std::string::String>,
     /// <p>The private IPv6 address for the network interface.</p>
+    #[doc(hidden)]
     pub ipv6_address: std::option::Option<std::string::String>,
     /// <p>The private IPv4 address for the network interface.</p>
+    #[doc(hidden)]
     pub private_ipv4_address: std::option::Option<std::string::String>,
 }
 impl NetworkInterface {
@@ -8372,11 +8544,10 @@ impl std::fmt::Debug for NetworkInterface {
         formatter.finish()
     }
 }
-/// See [`NetworkInterface`](crate::model::NetworkInterface)
+/// See [`NetworkInterface`](crate::model::NetworkInterface).
 pub mod network_interface {
 
-    /// A builder for [`NetworkInterface`](crate::model::NetworkInterface)
-    #[non_exhaustive]
+    /// A builder for [`NetworkInterface`](crate::model::NetworkInterface).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attachment_id: std::option::Option<std::string::String>,
@@ -8420,7 +8591,7 @@ pub mod network_interface {
             self.private_ipv4_address = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkInterface`](crate::model::NetworkInterface)
+        /// Consumes the builder and constructs a [`NetworkInterface`](crate::model::NetworkInterface).
         pub fn build(self) -> crate::model::NetworkInterface {
             crate::model::NetworkInterface {
                 attachment_id: self.attachment_id,
@@ -8431,7 +8602,7 @@ pub mod network_interface {
     }
 }
 impl NetworkInterface {
-    /// Creates a new builder-style object to manufacture [`NetworkInterface`](crate::model::NetworkInterface)
+    /// Creates a new builder-style object to manufacture [`NetworkInterface`](crate::model::NetworkInterface).
     pub fn builder() -> crate::model::network_interface::Builder {
         crate::model::network_interface::Builder::default()
     }
@@ -8442,12 +8613,16 @@ impl NetworkInterface {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttemptDetail {
     /// <p>Details about the container in this job attempt.</p>
+    #[doc(hidden)]
     pub container: std::option::Option<crate::model::AttemptContainerDetail>,
     /// <p>The Unix timestamp (in milliseconds) for when the attempt was started (when the attempt transitioned from the <code>STARTING</code> state to the <code>RUNNING</code> state).</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<i64>,
     /// <p>The Unix timestamp (in milliseconds) for when the attempt was stopped (when the attempt transitioned from the <code>RUNNING</code> state to a terminal state, such as <code>SUCCEEDED</code> or <code>FAILED</code>).</p>
+    #[doc(hidden)]
     pub stopped_at: std::option::Option<i64>,
     /// <p>A short, human-readable string to provide additional details about the current status of the job attempt.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
 }
 impl AttemptDetail {
@@ -8478,11 +8653,10 @@ impl std::fmt::Debug for AttemptDetail {
         formatter.finish()
     }
 }
-/// See [`AttemptDetail`](crate::model::AttemptDetail)
+/// See [`AttemptDetail`](crate::model::AttemptDetail).
 pub mod attempt_detail {
 
-    /// A builder for [`AttemptDetail`](crate::model::AttemptDetail)
-    #[non_exhaustive]
+    /// A builder for [`AttemptDetail`](crate::model::AttemptDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) container: std::option::Option<crate::model::AttemptContainerDetail>,
@@ -8537,7 +8711,7 @@ pub mod attempt_detail {
             self.status_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttemptDetail`](crate::model::AttemptDetail)
+        /// Consumes the builder and constructs a [`AttemptDetail`](crate::model::AttemptDetail).
         pub fn build(self) -> crate::model::AttemptDetail {
             crate::model::AttemptDetail {
                 container: self.container,
@@ -8549,7 +8723,7 @@ pub mod attempt_detail {
     }
 }
 impl AttemptDetail {
-    /// Creates a new builder-style object to manufacture [`AttemptDetail`](crate::model::AttemptDetail)
+    /// Creates a new builder-style object to manufacture [`AttemptDetail`](crate::model::AttemptDetail).
     pub fn builder() -> crate::model::attempt_detail::Builder {
         crate::model::attempt_detail::Builder::default()
     }
@@ -8560,16 +8734,22 @@ impl AttemptDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttemptContainerDetail {
     /// <p>The Amazon Resource Name (ARN) of the Amazon ECS container instance that hosts the job attempt.</p>
+    #[doc(hidden)]
     pub container_instance_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon ECS task that's associated with the job attempt. Each container attempt receives a task ARN when they reach the <code>STARTING</code> status.</p>
+    #[doc(hidden)]
     pub task_arn: std::option::Option<std::string::String>,
     /// <p>The exit code for the job attempt. A non-zero exit code is considered a failure.</p>
+    #[doc(hidden)]
     pub exit_code: std::option::Option<i32>,
     /// <p>A short (255 max characters) human-readable string to provide additional details about a running or stopped container.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p>The name of the CloudWatch Logs log stream associated with the container. The log group for Batch jobs is <code>/aws/batch/job</code>. Each container attempt receives a log stream name when they reach the <code>RUNNING</code> status.</p>
+    #[doc(hidden)]
     pub log_stream_name: std::option::Option<std::string::String>,
     /// <p>The network interfaces associated with the job attempt.</p>
+    #[doc(hidden)]
     pub network_interfaces: std::option::Option<std::vec::Vec<crate::model::NetworkInterface>>,
 }
 impl AttemptContainerDetail {
@@ -8610,11 +8790,10 @@ impl std::fmt::Debug for AttemptContainerDetail {
         formatter.finish()
     }
 }
-/// See [`AttemptContainerDetail`](crate::model::AttemptContainerDetail)
+/// See [`AttemptContainerDetail`](crate::model::AttemptContainerDetail).
 pub mod attempt_container_detail {
 
-    /// A builder for [`AttemptContainerDetail`](crate::model::AttemptContainerDetail)
-    #[non_exhaustive]
+    /// A builder for [`AttemptContainerDetail`](crate::model::AttemptContainerDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) container_instance_arn: std::option::Option<std::string::String>,
@@ -8701,7 +8880,7 @@ pub mod attempt_container_detail {
             self.network_interfaces = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttemptContainerDetail`](crate::model::AttemptContainerDetail)
+        /// Consumes the builder and constructs a [`AttemptContainerDetail`](crate::model::AttemptContainerDetail).
         pub fn build(self) -> crate::model::AttemptContainerDetail {
             crate::model::AttemptContainerDetail {
                 container_instance_arn: self.container_instance_arn,
@@ -8715,7 +8894,7 @@ pub mod attempt_container_detail {
     }
 }
 impl AttemptContainerDetail {
-    /// Creates a new builder-style object to manufacture [`AttemptContainerDetail`](crate::model::AttemptContainerDetail)
+    /// Creates a new builder-style object to manufacture [`AttemptContainerDetail`](crate::model::AttemptContainerDetail).
     pub fn builder() -> crate::model::attempt_container_detail::Builder {
         crate::model::attempt_container_detail::Builder::default()
     }
@@ -8726,23 +8905,32 @@ impl AttemptContainerDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobQueueDetail {
     /// <p>The name of the job queue.</p>
+    #[doc(hidden)]
     pub job_queue_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the job queue.</p>
+    #[doc(hidden)]
     pub job_queue_arn: std::option::Option<std::string::String>,
     /// <p>Describes the ability of the queue to accept new jobs. If the job queue state is <code>ENABLED</code>, it's able to accept jobs. If the job queue state is <code>DISABLED</code>, new jobs can't be added to the queue, but jobs already in the queue can finish.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::JqState>,
     /// <p>The Amazon Resource Name (ARN) of the scheduling policy. The format is <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For example, <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.</p>
+    #[doc(hidden)]
     pub scheduling_policy_arn: std::option::Option<std::string::String>,
     /// <p>The status of the job queue (for example, <code>CREATING</code> or <code>VALID</code>).</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JqStatus>,
     /// <p>A short, human-readable string to provide additional details about the current status of the job queue.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>The priority of the job queue. Job queues with a higher priority (or a higher integer value for the <code>priority</code> parameter) are evaluated first when associated with the same compute environment. Priority is determined in descending order, for example, a job queue with a priority value of <code>10</code> is given scheduling preference over a job queue with a priority value of <code>1</code>. All of the compute environments must be either EC2 (<code>EC2</code> or <code>SPOT</code>) or Fargate (<code>FARGATE</code> or <code>FARGATE_SPOT</code>); EC2 and Fargate compute environments can't be mixed.</p>
+    #[doc(hidden)]
     pub priority: std::option::Option<i32>,
     /// <p>The compute environments that are attached to the job queue and the order that job placement is preferred. Compute environments are selected for job placement in ascending order.</p>
+    #[doc(hidden)]
     pub compute_environment_order:
         std::option::Option<std::vec::Vec<crate::model::ComputeEnvironmentOrder>>,
     /// <p>The tags applied to the job queue. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/using-tags.html">Tagging your Batch resources</a> in <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -8804,11 +8992,10 @@ impl std::fmt::Debug for JobQueueDetail {
         formatter.finish()
     }
 }
-/// See [`JobQueueDetail`](crate::model::JobQueueDetail)
+/// See [`JobQueueDetail`](crate::model::JobQueueDetail).
 pub mod job_queue_detail {
 
-    /// A builder for [`JobQueueDetail`](crate::model::JobQueueDetail)
-    #[non_exhaustive]
+    /// A builder for [`JobQueueDetail`](crate::model::JobQueueDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_queue_name: std::option::Option<std::string::String>,
@@ -8954,7 +9141,7 @@ pub mod job_queue_detail {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobQueueDetail`](crate::model::JobQueueDetail)
+        /// Consumes the builder and constructs a [`JobQueueDetail`](crate::model::JobQueueDetail).
         pub fn build(self) -> crate::model::JobQueueDetail {
             crate::model::JobQueueDetail {
                 job_queue_name: self.job_queue_name,
@@ -8971,7 +9158,7 @@ pub mod job_queue_detail {
     }
 }
 impl JobQueueDetail {
-    /// Creates a new builder-style object to manufacture [`JobQueueDetail`](crate::model::JobQueueDetail)
+    /// Creates a new builder-style object to manufacture [`JobQueueDetail`](crate::model::JobQueueDetail).
     pub fn builder() -> crate::model::job_queue_detail::Builder {
         crate::model::job_queue_detail::Builder::default()
     }
@@ -9055,36 +9242,50 @@ impl AsRef<str> for JqStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobDefinition {
     /// <p>The name of the job definition.</p>
+    #[doc(hidden)]
     pub job_definition_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the job definition.</p>
+    #[doc(hidden)]
     pub job_definition_arn: std::option::Option<std::string::String>,
     /// <p>The revision of the job definition.</p>
+    #[doc(hidden)]
     pub revision: std::option::Option<i32>,
     /// <p>The status of the job definition.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The type of job definition, either <code>container</code> or <code>multinode</code>. If the job is run on Fargate resources, then <code>multinode</code> isn't supported. For more information about multi-node parallel jobs, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html">Creating a multi-node parallel job definition</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The scheduling priority of the job definition. This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling priority are scheduled before jobs with a lower scheduling priority.</p>
+    #[doc(hidden)]
     pub scheduling_priority: std::option::Option<i32>,
     /// <p>Default parameters or parameter substitution placeholders that are set in the job definition. Parameters are specified as a key-value pair mapping. Parameters in a <code>SubmitJob</code> request override any corresponding parameter defaults from the job definition. For more information about specifying parameters, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job definition parameters</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The retry strategy to use for failed jobs that are submitted with this job definition.</p>
+    #[doc(hidden)]
     pub retry_strategy: std::option::Option<crate::model::RetryStrategy>,
     /// <p>An object with various properties specific to container-based jobs.</p>
+    #[doc(hidden)]
     pub container_properties: std::option::Option<crate::model::ContainerProperties>,
     /// <p>The timeout configuration for jobs that are submitted with this job definition. You can specify a timeout duration after which Batch terminates your jobs if they haven't finished.</p>
+    #[doc(hidden)]
     pub timeout: std::option::Option<crate::model::JobTimeout>,
     /// <p>An object with various properties specific to multi-node parallel jobs.</p> <note>
     /// <p>If the job runs on Fargate resources, then you must not specify <code>nodeProperties</code>; use <code>containerProperties</code> instead.</p>
     /// </note>
+    #[doc(hidden)]
     pub node_properties: std::option::Option<crate::model::NodeProperties>,
     /// <p>The tags applied to the job definition.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Specifies whether to propagate the tags from the job or job definition to the corresponding Amazon ECS task. If no value is specified, the tags aren't propagated. Tags can only be propagated to the tasks during task creation. For tags with the same name, job tags are given priority over job definitions tags. If the total number of combined tags from the job and job definition is over 50, the job is moved to the <code>FAILED</code> state.</p>
+    #[doc(hidden)]
     pub propagate_tags: std::option::Option<bool>,
     /// <p>The platform capabilities required by the job definition. If no value is specified, it defaults to <code>EC2</code>. Jobs run on Fargate resources specify <code>FARGATE</code>.</p>
+    #[doc(hidden)]
     pub platform_capabilities: std::option::Option<std::vec::Vec<crate::model::PlatformCapability>>,
 }
 impl JobDefinition {
@@ -9175,11 +9376,10 @@ impl std::fmt::Debug for JobDefinition {
         formatter.finish()
     }
 }
-/// See [`JobDefinition`](crate::model::JobDefinition)
+/// See [`JobDefinition`](crate::model::JobDefinition).
 pub mod job_definition {
 
-    /// A builder for [`JobDefinition`](crate::model::JobDefinition)
-    #[non_exhaustive]
+    /// A builder for [`JobDefinition`](crate::model::JobDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_definition_name: std::option::Option<std::string::String>,
@@ -9401,7 +9601,7 @@ pub mod job_definition {
             self.platform_capabilities = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobDefinition`](crate::model::JobDefinition)
+        /// Consumes the builder and constructs a [`JobDefinition`](crate::model::JobDefinition).
         pub fn build(self) -> crate::model::JobDefinition {
             crate::model::JobDefinition {
                 job_definition_name: self.job_definition_name,
@@ -9423,7 +9623,7 @@ pub mod job_definition {
     }
 }
 impl JobDefinition {
-    /// Creates a new builder-style object to manufacture [`JobDefinition`](crate::model::JobDefinition)
+    /// Creates a new builder-style object to manufacture [`JobDefinition`](crate::model::JobDefinition).
     pub fn builder() -> crate::model::job_definition::Builder {
         crate::model::job_definition::Builder::default()
     }
@@ -9434,31 +9634,43 @@ impl JobDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComputeEnvironmentDetail {
     /// <p>The name of the compute environment. It can be up to 128 letters long. It can contain uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).</p>
+    #[doc(hidden)]
     pub compute_environment_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the compute environment.</p>
+    #[doc(hidden)]
     pub compute_environment_arn: std::option::Option<std::string::String>,
     /// <p>The maximum number of VCPUs expected to be used for an unmanaged compute environment.</p>
+    #[doc(hidden)]
     pub unmanagedv_cpus: std::option::Option<i32>,
     /// <p>The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.</p>
+    #[doc(hidden)]
     pub ecs_cluster_arn: std::option::Option<std::string::String>,
     /// <p>The tags applied to the compute environment.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The type of the compute environment: <code>MANAGED</code> or <code>UNMANAGED</code>. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::CeType>,
     /// <p>The state of the compute environment. The valid values are <code>ENABLED</code> or <code>DISABLED</code>.</p>
     /// <p>If the state is <code>ENABLED</code>, then the Batch scheduler can attempt to place jobs from an associated job queue on the compute resources within the environment. If the compute environment is managed, then it can scale its instances out or in automatically, based on the job queue demand.</p>
     /// <p>If the state is <code>DISABLED</code>, then the Batch scheduler doesn't attempt to place jobs within the environment. Jobs in a <code>STARTING</code> or <code>RUNNING</code> state continue to progress normally. Managed compute environments in the <code>DISABLED</code> state don't scale out. However, they scale in to <code>minvCpus</code> value after instances become idle.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::CeState>,
     /// <p>The current status of the compute environment (for example, <code>CREATING</code> or <code>VALID</code>).</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CeStatus>,
     /// <p>A short, human-readable string to provide additional details about the current status of the compute environment.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>The compute resources defined for the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub compute_resources: std::option::Option<crate::model::ComputeResource>,
     /// <p>The service role associated with the compute environment that allows Batch to make calls to Amazon Web Services API operations on your behalf. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/service_IAM_role.html">Batch service IAM role</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub service_role: std::option::Option<std::string::String>,
     /// <p>Specifies the infrastructure update policy for the compute environment. For more information about infrastructure updates, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub update_policy: std::option::Option<crate::model::UpdatePolicy>,
 }
 impl ComputeEnvironmentDetail {
@@ -9534,11 +9746,10 @@ impl std::fmt::Debug for ComputeEnvironmentDetail {
         formatter.finish()
     }
 }
-/// See [`ComputeEnvironmentDetail`](crate::model::ComputeEnvironmentDetail)
+/// See [`ComputeEnvironmentDetail`](crate::model::ComputeEnvironmentDetail).
 pub mod compute_environment_detail {
 
-    /// A builder for [`ComputeEnvironmentDetail`](crate::model::ComputeEnvironmentDetail)
-    #[non_exhaustive]
+    /// A builder for [`ComputeEnvironmentDetail`](crate::model::ComputeEnvironmentDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compute_environment_name: std::option::Option<std::string::String>,
@@ -9714,7 +9925,7 @@ pub mod compute_environment_detail {
             self.update_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComputeEnvironmentDetail`](crate::model::ComputeEnvironmentDetail)
+        /// Consumes the builder and constructs a [`ComputeEnvironmentDetail`](crate::model::ComputeEnvironmentDetail).
         pub fn build(self) -> crate::model::ComputeEnvironmentDetail {
             crate::model::ComputeEnvironmentDetail {
                 compute_environment_name: self.compute_environment_name,
@@ -9734,7 +9945,7 @@ pub mod compute_environment_detail {
     }
 }
 impl ComputeEnvironmentDetail {
-    /// Creates a new builder-style object to manufacture [`ComputeEnvironmentDetail`](crate::model::ComputeEnvironmentDetail)
+    /// Creates a new builder-style object to manufacture [`ComputeEnvironmentDetail`](crate::model::ComputeEnvironmentDetail).
     pub fn builder() -> crate::model::compute_environment_detail::Builder {
         crate::model::compute_environment_detail::Builder::default()
     }
@@ -9746,6 +9957,7 @@ impl ComputeEnvironmentDetail {
 pub struct ComputeResource {
     /// <p>The type of compute environment: <code>EC2</code>, <code>SPOT</code>, <code>FARGATE</code>, or <code>FARGATE_SPOT</code>. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in the <i>Batch User Guide</i>.</p>
     /// <p> If you choose <code>SPOT</code>, you must also specify an Amazon EC2 Spot Fleet role with the <code>spotIamFleetRole</code> parameter. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet role</a> in the <i>Batch User Guide</i>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::CrType>,
     /// <p>The allocation strategy to use for the compute resource if not enough instances of the best fitting instance type can be allocated. This might be because of availability of the instance type in the Region or <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service limits</a>. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation strategies</a> in the <i>Batch User Guide</i>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
@@ -9771,18 +9983,22 @@ pub struct ComputeResource {
     /// </dd>
     /// </dl>
     /// <p>With both <code>BEST_FIT_PROGRESSIVE</code> and <code>SPOT_CAPACITY_OPTIMIZED</code> strategies, Batch might need to go above <code>maxvCpus</code> to meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single instance.</p>
+    #[doc(hidden)]
     pub allocation_strategy: std::option::Option<crate::model::CrAllocationStrategy>,
     /// <p>The minimum number of Amazon EC2 vCPUs that an environment should maintain (even if the compute environment is <code>DISABLED</code>).</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub minv_cpus: std::option::Option<i32>,
     /// <p>The maximum number of Amazon EC2 vCPUs that a compute environment can reach.</p> <note>
     /// <p>With both <code>BEST_FIT_PROGRESSIVE</code> and <code>SPOT_CAPACITY_OPTIMIZED</code> allocation strategies, Batch might need to exceed <code>maxvCpus</code> to meet your capacity requirements. In this event, Batch never exceeds <code>maxvCpus</code> by more than a single instance. For example, no more than a single instance from among those specified in your compute environment is allocated.</p>
     /// </note>
+    #[doc(hidden)]
     pub maxv_cpus: std::option::Option<i32>,
     /// <p>The desired number of Amazon EC2 vCPUS in the compute environment. Batch modifies this value between the minimum and maximum values, based on job queue demand.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub desiredv_cpus: std::option::Option<i32>,
     /// <p>The instances types that can be launched. You can specify instance families to launch any instance type within those families (for example, <code>c5</code> or <code>p3</code>), or you can specify specific sizes within a family (such as <code>c5.8xlarge</code>). You can also choose <code>optimal</code> to select instance types (from the C4, M4, and R4 instance families) that match the demand of your job queues.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
@@ -9791,53 +10007,68 @@ pub struct ComputeResource {
     /// </note> <note>
     /// <p>Currently, <code>optimal</code> uses instance types from the C4, M4, and R4 instance families. In Regions that don't have instance types from those instance families, instance types from the C5, M5. and R5 instance families are used.</p>
     /// </note>
+    #[doc(hidden)]
     pub instance_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter is overridden by the <code>imageIdOverride</code> member of the <code>Ec2Configuration</code> structure.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note> <note>
     /// <p>The AMI that you choose for a compute environment must match the architecture of the instance types that you intend to use for that compute environment. For example, if your compute environment uses A1 instance types, the compute resource AMI that you choose must support ARM instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized Amazon Linux 2 AMI. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html">Amazon ECS-optimized Amazon Linux 2 AMI</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
     /// </note>
+    #[deprecated(
+        note = "This field is deprecated, use ec2Configuration[].imageIdOverride instead."
+    )]
+    #[doc(hidden)]
     pub image_id: std::option::Option<std::string::String>,
     /// <p>The VPC subnets where the compute resources are launched. These subnets must be within the same VPC. Fargate compute resources can contain up to 16 subnets. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the <i>Amazon VPC User Guide</i>.</p>
+    #[doc(hidden)]
     pub subnets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon EC2 security groups associated with instances launched in the compute environment. One or more security groups must be specified, either in <code>securityGroupIds</code> or using a launch template referenced in <code>launchTemplate</code>. This parameter is required for jobs that are running on Fargate resources and must contain at least one security group. Fargate doesn't support launch templates. If security groups are specified using both <code>securityGroupIds</code> and <code>launchTemplate</code>, the values in <code>securityGroupIds</code> are used.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon EC2 key pair that's used for instances launched in the compute environment. You can use this key pair to log in to your instances with SSH.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub ec2_key_pair: std::option::Option<std::string::String>,
     /// <p>The Amazon ECS instance profile applied to Amazon EC2 instances in a compute environment. You can specify the short name or full Amazon Resource Name (ARN) of an instance profile. For example, <code> <i>ecsInstanceRole</i> </code> or <code>arn:aws:iam::<i>
     /// <aws_account_id></aws_account_id></i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS instance role</a> in the <i>Batch User Guide</i>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub instance_role: std::option::Option<std::string::String>,
     /// <p>Key-value pair tags to be applied to EC2 resources that are launched in the compute environment. For Batch, these take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value−for example, <code>{ "Name": "Batch Instance - C4OnDemand" }</code>. This is helpful for recognizing your Batch instances in the Amazon EC2 console. Updating these tags requires an infrastructure update to the compute environment. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute environments</a> in the <i>Batch User Guide</i>. These tags aren't seen when using the Batch <code>ListTagsForResource</code> API operation.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Amazon EC2 placement group to associate with your compute resources. If you intend to submit multi-node parallel jobs to your compute environment, you should consider creating a cluster placement group and associate it with your compute resources. This keeps your multi-node parallel job on a logical grouping of instances within a single Availability Zone with high network flow potential. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub placement_group: std::option::Option<std::string::String>,
     /// <p>The maximum percentage that a Spot Instance price can be when compared with the On-Demand price for that instance type before instances are launched. For example, if your maximum percentage is 20%, then the Spot price must be less than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay the lowest (market) price and never more than your maximum percentage. If you leave this field empty, the default value is 100% of the On-Demand price.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub bid_percentage: std::option::Option<i32>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a <code>SPOT</code> compute environment. This role is required if the allocation strategy set to <code>BEST_FIT</code> or if the allocation strategy isn't specified. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet role</a> in the <i>Batch User Guide</i>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note> <important>
     /// <p>To tag your Spot Instances on creation, the Spot Fleet IAM role specified here must use the newer <b>AmazonEC2SpotFleetTaggingRole</b> managed policy. The previously recommended <b>AmazonEC2SpotFleetRole</b> managed policy doesn't have the required permissions to tag Spot Instances. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#spot-instance-no-tag">Spot instances not tagged on creation</a> in the <i>Batch User Guide</i>.</p>
     /// </important>
+    #[doc(hidden)]
     pub spot_iam_fleet_role: std::option::Option<std::string::String>,
     /// <p>The launch template to use for your compute resources. Any other compute resource parameters that you specify in a <code>CreateComputeEnvironment</code> API operation override the same parameters in the launch template. You must specify either the launch template ID or launch template name in the request, but not both. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch template support</a> in the <i>Batch User Guide</i>.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub launch_template: std::option::Option<crate::model::LaunchTemplateSpecification>,
     /// <p>Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute environment. If <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL2</code>.</p>
     /// <p>One or two values can be provided.</p> <note>
     /// <p>This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.</p>
     /// </note>
+    #[doc(hidden)]
     pub ec2_configuration: std::option::Option<std::vec::Vec<crate::model::Ec2Configuration>>,
 }
 impl ComputeResource {
@@ -9906,6 +10137,9 @@ impl ComputeResource {
     /// </note> <note>
     /// <p>The AMI that you choose for a compute environment must match the architecture of the instance types that you intend to use for that compute environment. For example, if your compute environment uses A1 instance types, the compute resource AMI that you choose must support ARM instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized Amazon Linux 2 AMI. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html">Amazon ECS-optimized Amazon Linux 2 AMI</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
     /// </note>
+    #[deprecated(
+        note = "This field is deprecated, use ec2Configuration[].imageIdOverride instead."
+    )]
     pub fn image_id(&self) -> std::option::Option<&str> {
         self.image_id.as_deref()
     }
@@ -9998,11 +10232,10 @@ impl std::fmt::Debug for ComputeResource {
         formatter.finish()
     }
 }
-/// See [`ComputeResource`](crate::model::ComputeResource)
+/// See [`ComputeResource`](crate::model::ComputeResource).
 pub mod compute_resource {
 
-    /// A builder for [`ComputeResource`](crate::model::ComputeResource)
-    #[non_exhaustive]
+    /// A builder for [`ComputeResource`](crate::model::ComputeResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::CrType>,
@@ -10176,6 +10409,9 @@ pub mod compute_resource {
         /// </note> <note>
         /// <p>The AMI that you choose for a compute environment must match the architecture of the instance types that you intend to use for that compute environment. For example, if your compute environment uses A1 instance types, the compute resource AMI that you choose must support ARM instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized Amazon Linux 2 AMI. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html">Amazon ECS-optimized Amazon Linux 2 AMI</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
         /// </note>
+        #[deprecated(
+            note = "This field is deprecated, use ec2Configuration[].imageIdOverride instead."
+        )]
         pub fn image_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.image_id = Some(input.into());
             self
@@ -10185,6 +10421,9 @@ pub mod compute_resource {
         /// </note> <note>
         /// <p>The AMI that you choose for a compute environment must match the architecture of the instance types that you intend to use for that compute environment. For example, if your compute environment uses A1 instance types, the compute resource AMI that you choose must support ARM instances. Amazon ECS vends both x86 and ARM versions of the Amazon ECS-optimized Amazon Linux 2 AMI. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html">Amazon ECS-optimized Amazon Linux 2 AMI</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
         /// </note>
+        #[deprecated(
+            note = "This field is deprecated, use ec2Configuration[].imageIdOverride instead."
+        )]
         pub fn set_image_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.image_id = input;
             self
@@ -10383,7 +10622,7 @@ pub mod compute_resource {
             self.ec2_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComputeResource`](crate::model::ComputeResource)
+        /// Consumes the builder and constructs a [`ComputeResource`](crate::model::ComputeResource).
         pub fn build(self) -> crate::model::ComputeResource {
             crate::model::ComputeResource {
                 r#type: self.r#type,
@@ -10408,7 +10647,7 @@ pub mod compute_resource {
     }
 }
 impl ComputeResource {
-    /// Creates a new builder-style object to manufacture [`ComputeResource`](crate::model::ComputeResource)
+    /// Creates a new builder-style object to manufacture [`ComputeResource`](crate::model::ComputeResource).
     pub fn builder() -> crate::model::compute_resource::Builder {
         crate::model::compute_resource::Builder::default()
     }

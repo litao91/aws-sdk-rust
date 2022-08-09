@@ -5,38 +5,55 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFileSystemOutput {
     /// <p>The Amazon Web Services account that created the file system. If the file system was created by an IAM user, the parent account to which the user belongs is the owner.</p>
+    #[doc(hidden)]
     pub owner_id: std::option::Option<std::string::String>,
     /// <p>The opaque string specified in the request.</p>
+    #[doc(hidden)]
     pub creation_token: std::option::Option<std::string::String>,
     /// <p>The ID of the file system, assigned by Amazon EFS.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the EFS file system, in the format <code>arn:aws:elasticfilesystem:<i>region</i>:<i>account-id</i>:file-system/<i>file-system-id</i> </code>. Example with sample data: <code>arn:aws:elasticfilesystem:us-west-2:1111333322228888:file-system/fs-01234567</code> </p>
+    #[doc(hidden)]
     pub file_system_arn: std::option::Option<std::string::String>,
     /// <p>The time that the file system was created, in seconds (since 1970-01-01T00:00:00Z).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The lifecycle phase of the file system.</p>
+    #[doc(hidden)]
     pub life_cycle_state: std::option::Option<crate::model::LifeCycleState>,
     /// <p>You can add tags to a file system, including a <code>Name</code> tag. For more information, see <code>CreateFileSystem</code>. If the file system has a <code>Name</code> tag, Amazon EFS returns the value in this field. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The current number of mount targets that the file system has. For more information, see <code>CreateMountTarget</code>.</p>
+    #[doc(hidden)]
     pub number_of_mount_targets: i32,
     /// <p>The latest known metered size (in bytes) of data stored in the file system, in its <code>Value</code> field, and the time at which that size was determined in its <code>Timestamp</code> field. The <code>Timestamp</code> value is the integer number of seconds since 1970-01-01T00:00:00Z. The <code>SizeInBytes</code> value doesn't represent the size of a consistent snapshot of the file system, but it is eventually consistent when there are no writes to the file system. That is, <code>SizeInBytes</code> represents actual size only if the file system is not modified for a period longer than a couple of hours. Otherwise, the value is not the exact size that the file system was at any point in time. </p>
+    #[doc(hidden)]
     pub size_in_bytes: std::option::Option<crate::model::FileSystemSize>,
     /// <p>The performance mode of the file system.</p>
+    #[doc(hidden)]
     pub performance_mode: std::option::Option<crate::model::PerformanceMode>,
     /// <p>A Boolean value that, if true, indicates that the file system is encrypted.</p>
+    #[doc(hidden)]
     pub encrypted: std::option::Option<bool>,
     /// <p>The ID of an KMS key used to protect the encrypted file system.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>Displays the file system's throughput mode. For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/performance.html#throughput-modes">Throughput modes</a> in the <i>Amazon EFS User Guide</i>. </p>
+    #[doc(hidden)]
     pub throughput_mode: std::option::Option<crate::model::ThroughputMode>,
     /// <p>The amount of provisioned throughput, measured in MiB/s, for the file system. Valid for file systems using <code>ThroughputMode</code> set to <code>provisioned</code>.</p>
+    #[doc(hidden)]
     pub provisioned_throughput_in_mibps: std::option::Option<f64>,
     /// <p>Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only for file systems using One Zone storage classes. For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the <i>Amazon EFS User Guide</i>.</p>
+    #[doc(hidden)]
     pub availability_zone_name: std::option::Option<std::string::String>,
     /// <p>The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage classes exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web Services Region, and it has the same location in every Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub availability_zone_id: std::option::Option<std::string::String>,
     /// <p>The tags associated with the file system, presented as an array of <code>Tag</code> objects.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl UpdateFileSystemOutput {
@@ -135,11 +152,10 @@ impl std::fmt::Debug for UpdateFileSystemOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput)
+/// See [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput).
 pub mod update_file_system_output {
 
-    /// A builder for [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner_id: std::option::Option<std::string::String>,
@@ -373,7 +389,7 @@ pub mod update_file_system_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput)
+        /// Consumes the builder and constructs a [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput).
         pub fn build(self) -> crate::output::UpdateFileSystemOutput {
             crate::output::UpdateFileSystemOutput {
                 owner_id: self.owner_id,
@@ -398,7 +414,7 @@ pub mod update_file_system_output {
     }
 }
 impl UpdateFileSystemOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput).
     pub fn builder() -> crate::output::update_file_system_output::Builder {
         crate::output::update_file_system_output::Builder::default()
     }
@@ -414,22 +430,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -445,22 +460,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -471,6 +485,7 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutLifecycleConfigurationOutput {
     /// <p>An array of lifecycle management policies. EFS supports a maximum of one policy per file system.</p>
+    #[doc(hidden)]
     pub lifecycle_policies: std::option::Option<std::vec::Vec<crate::model::LifecyclePolicy>>,
 }
 impl PutLifecycleConfigurationOutput {
@@ -486,11 +501,10 @@ impl std::fmt::Debug for PutLifecycleConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutLifecycleConfigurationOutput`](crate::output::PutLifecycleConfigurationOutput)
+/// See [`PutLifecycleConfigurationOutput`](crate::output::PutLifecycleConfigurationOutput).
 pub mod put_lifecycle_configuration_output {
 
-    /// A builder for [`PutLifecycleConfigurationOutput`](crate::output::PutLifecycleConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutLifecycleConfigurationOutput`](crate::output::PutLifecycleConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lifecycle_policies:
@@ -516,7 +530,7 @@ pub mod put_lifecycle_configuration_output {
             self.lifecycle_policies = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutLifecycleConfigurationOutput`](crate::output::PutLifecycleConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutLifecycleConfigurationOutput`](crate::output::PutLifecycleConfigurationOutput).
         pub fn build(self) -> crate::output::PutLifecycleConfigurationOutput {
             crate::output::PutLifecycleConfigurationOutput {
                 lifecycle_policies: self.lifecycle_policies,
@@ -525,7 +539,7 @@ pub mod put_lifecycle_configuration_output {
     }
 }
 impl PutLifecycleConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutLifecycleConfigurationOutput`](crate::output::PutLifecycleConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutLifecycleConfigurationOutput`](crate::output::PutLifecycleConfigurationOutput).
     pub fn builder() -> crate::output::put_lifecycle_configuration_output::Builder {
         crate::output::put_lifecycle_configuration_output::Builder::default()
     }
@@ -536,8 +550,10 @@ impl PutLifecycleConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutFileSystemPolicyOutput {
     /// <p>Specifies the EFS file system to which the <code>FileSystemPolicy</code> applies.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>The JSON formatted <code>FileSystemPolicy</code> for the EFS file system.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl PutFileSystemPolicyOutput {
@@ -558,11 +574,10 @@ impl std::fmt::Debug for PutFileSystemPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutFileSystemPolicyOutput`](crate::output::PutFileSystemPolicyOutput)
+/// See [`PutFileSystemPolicyOutput`](crate::output::PutFileSystemPolicyOutput).
 pub mod put_file_system_policy_output {
 
-    /// A builder for [`PutFileSystemPolicyOutput`](crate::output::PutFileSystemPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutFileSystemPolicyOutput`](crate::output::PutFileSystemPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_system_id: std::option::Option<std::string::String>,
@@ -592,7 +607,7 @@ pub mod put_file_system_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutFileSystemPolicyOutput`](crate::output::PutFileSystemPolicyOutput)
+        /// Consumes the builder and constructs a [`PutFileSystemPolicyOutput`](crate::output::PutFileSystemPolicyOutput).
         pub fn build(self) -> crate::output::PutFileSystemPolicyOutput {
             crate::output::PutFileSystemPolicyOutput {
                 file_system_id: self.file_system_id,
@@ -602,7 +617,7 @@ pub mod put_file_system_policy_output {
     }
 }
 impl PutFileSystemPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutFileSystemPolicyOutput`](crate::output::PutFileSystemPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutFileSystemPolicyOutput`](crate::output::PutFileSystemPolicyOutput).
     pub fn builder() -> crate::output::put_file_system_policy_output::Builder {
         crate::output::put_file_system_policy_output::Builder::default()
     }
@@ -613,6 +628,7 @@ impl PutFileSystemPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutBackupPolicyOutput {
     /// <p>Describes the file system's backup policy, indicating whether automatic backups are turned on or off.</p>
+    #[doc(hidden)]
     pub backup_policy: std::option::Option<crate::model::BackupPolicy>,
 }
 impl PutBackupPolicyOutput {
@@ -628,11 +644,10 @@ impl std::fmt::Debug for PutBackupPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutBackupPolicyOutput`](crate::output::PutBackupPolicyOutput)
+/// See [`PutBackupPolicyOutput`](crate::output::PutBackupPolicyOutput).
 pub mod put_backup_policy_output {
 
-    /// A builder for [`PutBackupPolicyOutput`](crate::output::PutBackupPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBackupPolicyOutput`](crate::output::PutBackupPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_policy: std::option::Option<crate::model::BackupPolicy>,
@@ -651,7 +666,7 @@ pub mod put_backup_policy_output {
             self.backup_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutBackupPolicyOutput`](crate::output::PutBackupPolicyOutput)
+        /// Consumes the builder and constructs a [`PutBackupPolicyOutput`](crate::output::PutBackupPolicyOutput).
         pub fn build(self) -> crate::output::PutBackupPolicyOutput {
             crate::output::PutBackupPolicyOutput {
                 backup_policy: self.backup_policy,
@@ -660,7 +675,7 @@ pub mod put_backup_policy_output {
     }
 }
 impl PutBackupPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutBackupPolicyOutput`](crate::output::PutBackupPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutBackupPolicyOutput`](crate::output::PutBackupPolicyOutput).
     pub fn builder() -> crate::output::put_backup_policy_output::Builder {
         crate::output::put_backup_policy_output::Builder::default()
     }
@@ -671,6 +686,7 @@ impl PutBackupPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutAccountPreferencesOutput {
     /// <p>Describes the resource type and its ID preference for the user's Amazon Web Services account, in the current Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub resource_id_preference: std::option::Option<crate::model::ResourceIdPreference>,
 }
 impl PutAccountPreferencesOutput {
@@ -688,11 +704,10 @@ impl std::fmt::Debug for PutAccountPreferencesOutput {
         formatter.finish()
     }
 }
-/// See [`PutAccountPreferencesOutput`](crate::output::PutAccountPreferencesOutput)
+/// See [`PutAccountPreferencesOutput`](crate::output::PutAccountPreferencesOutput).
 pub mod put_account_preferences_output {
 
-    /// A builder for [`PutAccountPreferencesOutput`](crate::output::PutAccountPreferencesOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutAccountPreferencesOutput`](crate::output::PutAccountPreferencesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_id_preference: std::option::Option<crate::model::ResourceIdPreference>,
@@ -711,7 +726,7 @@ pub mod put_account_preferences_output {
             self.resource_id_preference = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutAccountPreferencesOutput`](crate::output::PutAccountPreferencesOutput)
+        /// Consumes the builder and constructs a [`PutAccountPreferencesOutput`](crate::output::PutAccountPreferencesOutput).
         pub fn build(self) -> crate::output::PutAccountPreferencesOutput {
             crate::output::PutAccountPreferencesOutput {
                 resource_id_preference: self.resource_id_preference,
@@ -720,7 +735,7 @@ pub mod put_account_preferences_output {
     }
 }
 impl PutAccountPreferencesOutput {
-    /// Creates a new builder-style object to manufacture [`PutAccountPreferencesOutput`](crate::output::PutAccountPreferencesOutput)
+    /// Creates a new builder-style object to manufacture [`PutAccountPreferencesOutput`](crate::output::PutAccountPreferencesOutput).
     pub fn builder() -> crate::output::put_account_preferences_output::Builder {
         crate::output::put_account_preferences_output::Builder::default()
     }
@@ -736,22 +751,21 @@ impl std::fmt::Debug for ModifyMountTargetSecurityGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyMountTargetSecurityGroupsOutput`](crate::output::ModifyMountTargetSecurityGroupsOutput)
+/// See [`ModifyMountTargetSecurityGroupsOutput`](crate::output::ModifyMountTargetSecurityGroupsOutput).
 pub mod modify_mount_target_security_groups_output {
 
-    /// A builder for [`ModifyMountTargetSecurityGroupsOutput`](crate::output::ModifyMountTargetSecurityGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyMountTargetSecurityGroupsOutput`](crate::output::ModifyMountTargetSecurityGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`ModifyMountTargetSecurityGroupsOutput`](crate::output::ModifyMountTargetSecurityGroupsOutput)
+        /// Consumes the builder and constructs a [`ModifyMountTargetSecurityGroupsOutput`](crate::output::ModifyMountTargetSecurityGroupsOutput).
         pub fn build(self) -> crate::output::ModifyMountTargetSecurityGroupsOutput {
             crate::output::ModifyMountTargetSecurityGroupsOutput {}
         }
     }
 }
 impl ModifyMountTargetSecurityGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyMountTargetSecurityGroupsOutput`](crate::output::ModifyMountTargetSecurityGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyMountTargetSecurityGroupsOutput`](crate::output::ModifyMountTargetSecurityGroupsOutput).
     pub fn builder() -> crate::output::modify_mount_target_security_groups_output::Builder {
         crate::output::modify_mount_target_security_groups_output::Builder::default()
     }
@@ -762,8 +776,10 @@ impl ModifyMountTargetSecurityGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>An array of the tags for the specified EFS resource.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p> <code>NextToken</code> is present if the response payload is paginated. You can use <code>NextToken</code> in a subsequent request to fetch the next page of access point descriptions.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListTagsForResourceOutput {
@@ -784,11 +800,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -824,7 +839,7 @@ pub mod list_tags_for_resource_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 tags: self.tags,
@@ -834,7 +849,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -845,10 +860,13 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeTagsOutput {
     /// <p>If the request included a <code>Marker</code>, the response returns that value in this field.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>Returns tags associated with the file system as an array of <code>Tag</code> objects. </p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>If a value is present, there are more tags to return. In a subsequent request, you can provide the value of <code>NextMarker</code> as the value of the <code>Marker</code> parameter in your next request to retrieve the next set of tags.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
 }
 impl DescribeTagsOutput {
@@ -874,11 +892,10 @@ impl std::fmt::Debug for DescribeTagsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeTagsOutput`](crate::output::DescribeTagsOutput)
+/// See [`DescribeTagsOutput`](crate::output::DescribeTagsOutput).
 pub mod describe_tags_output {
 
-    /// A builder for [`DescribeTagsOutput`](crate::output::DescribeTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeTagsOutput`](crate::output::DescribeTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -925,7 +942,7 @@ pub mod describe_tags_output {
             self.next_marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeTagsOutput`](crate::output::DescribeTagsOutput)
+        /// Consumes the builder and constructs a [`DescribeTagsOutput`](crate::output::DescribeTagsOutput).
         pub fn build(self) -> crate::output::DescribeTagsOutput {
             crate::output::DescribeTagsOutput {
                 marker: self.marker,
@@ -936,7 +953,7 @@ pub mod describe_tags_output {
     }
 }
 impl DescribeTagsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeTagsOutput`](crate::output::DescribeTagsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeTagsOutput`](crate::output::DescribeTagsOutput).
     pub fn builder() -> crate::output::describe_tags_output::Builder {
         crate::output::describe_tags_output::Builder::default()
     }
@@ -947,9 +964,11 @@ impl DescribeTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeReplicationConfigurationsOutput {
     /// <p>The collection of replication configurations that is returned.</p>
+    #[doc(hidden)]
     pub replications:
         std::option::Option<std::vec::Vec<crate::model::ReplicationConfigurationDescription>>,
     /// <p>You can use the <code>NextToken</code> from the previous response in a subsequent request to fetch the additional descriptions.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeReplicationConfigurationsOutput {
@@ -972,11 +991,10 @@ impl std::fmt::Debug for DescribeReplicationConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeReplicationConfigurationsOutput`](crate::output::DescribeReplicationConfigurationsOutput)
+/// See [`DescribeReplicationConfigurationsOutput`](crate::output::DescribeReplicationConfigurationsOutput).
 pub mod describe_replication_configurations_output {
 
-    /// A builder for [`DescribeReplicationConfigurationsOutput`](crate::output::DescribeReplicationConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeReplicationConfigurationsOutput`](crate::output::DescribeReplicationConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replications:
@@ -1018,7 +1036,7 @@ pub mod describe_replication_configurations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeReplicationConfigurationsOutput`](crate::output::DescribeReplicationConfigurationsOutput)
+        /// Consumes the builder and constructs a [`DescribeReplicationConfigurationsOutput`](crate::output::DescribeReplicationConfigurationsOutput).
         pub fn build(self) -> crate::output::DescribeReplicationConfigurationsOutput {
             crate::output::DescribeReplicationConfigurationsOutput {
                 replications: self.replications,
@@ -1028,7 +1046,7 @@ pub mod describe_replication_configurations_output {
     }
 }
 impl DescribeReplicationConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeReplicationConfigurationsOutput`](crate::output::DescribeReplicationConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeReplicationConfigurationsOutput`](crate::output::DescribeReplicationConfigurationsOutput).
     pub fn builder() -> crate::output::describe_replication_configurations_output::Builder {
         crate::output::describe_replication_configurations_output::Builder::default()
     }
@@ -1039,6 +1057,7 @@ impl DescribeReplicationConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeMountTargetSecurityGroupsOutput {
     /// <p>An array of security groups.</p>
+    #[doc(hidden)]
     pub security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DescribeMountTargetSecurityGroupsOutput {
@@ -1054,11 +1073,10 @@ impl std::fmt::Debug for DescribeMountTargetSecurityGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeMountTargetSecurityGroupsOutput`](crate::output::DescribeMountTargetSecurityGroupsOutput)
+/// See [`DescribeMountTargetSecurityGroupsOutput`](crate::output::DescribeMountTargetSecurityGroupsOutput).
 pub mod describe_mount_target_security_groups_output {
 
-    /// A builder for [`DescribeMountTargetSecurityGroupsOutput`](crate::output::DescribeMountTargetSecurityGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeMountTargetSecurityGroupsOutput`](crate::output::DescribeMountTargetSecurityGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1083,7 +1101,7 @@ pub mod describe_mount_target_security_groups_output {
             self.security_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeMountTargetSecurityGroupsOutput`](crate::output::DescribeMountTargetSecurityGroupsOutput)
+        /// Consumes the builder and constructs a [`DescribeMountTargetSecurityGroupsOutput`](crate::output::DescribeMountTargetSecurityGroupsOutput).
         pub fn build(self) -> crate::output::DescribeMountTargetSecurityGroupsOutput {
             crate::output::DescribeMountTargetSecurityGroupsOutput {
                 security_groups: self.security_groups,
@@ -1092,7 +1110,7 @@ pub mod describe_mount_target_security_groups_output {
     }
 }
 impl DescribeMountTargetSecurityGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeMountTargetSecurityGroupsOutput`](crate::output::DescribeMountTargetSecurityGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeMountTargetSecurityGroupsOutput`](crate::output::DescribeMountTargetSecurityGroupsOutput).
     pub fn builder() -> crate::output::describe_mount_target_security_groups_output::Builder {
         crate::output::describe_mount_target_security_groups_output::Builder::default()
     }
@@ -1103,10 +1121,13 @@ impl DescribeMountTargetSecurityGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeMountTargetsOutput {
     /// <p>If the request included the <code>Marker</code>, the response returns that value in this field.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>Returns the file system's mount targets as an array of <code>MountTargetDescription</code> objects.</p>
+    #[doc(hidden)]
     pub mount_targets: std::option::Option<std::vec::Vec<crate::model::MountTargetDescription>>,
     /// <p>If a value is present, there are more mount targets to return. In a subsequent request, you can provide <code>Marker</code> in your request with this value to retrieve the next set of mount targets.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
 }
 impl DescribeMountTargetsOutput {
@@ -1132,11 +1153,10 @@ impl std::fmt::Debug for DescribeMountTargetsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeMountTargetsOutput`](crate::output::DescribeMountTargetsOutput)
+/// See [`DescribeMountTargetsOutput`](crate::output::DescribeMountTargetsOutput).
 pub mod describe_mount_targets_output {
 
-    /// A builder for [`DescribeMountTargetsOutput`](crate::output::DescribeMountTargetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeMountTargetsOutput`](crate::output::DescribeMountTargetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -1184,7 +1204,7 @@ pub mod describe_mount_targets_output {
             self.next_marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeMountTargetsOutput`](crate::output::DescribeMountTargetsOutput)
+        /// Consumes the builder and constructs a [`DescribeMountTargetsOutput`](crate::output::DescribeMountTargetsOutput).
         pub fn build(self) -> crate::output::DescribeMountTargetsOutput {
             crate::output::DescribeMountTargetsOutput {
                 marker: self.marker,
@@ -1195,7 +1215,7 @@ pub mod describe_mount_targets_output {
     }
 }
 impl DescribeMountTargetsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeMountTargetsOutput`](crate::output::DescribeMountTargetsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeMountTargetsOutput`](crate::output::DescribeMountTargetsOutput).
     pub fn builder() -> crate::output::describe_mount_targets_output::Builder {
         crate::output::describe_mount_targets_output::Builder::default()
     }
@@ -1206,6 +1226,7 @@ impl DescribeMountTargetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeLifecycleConfigurationOutput {
     /// <p>An array of lifecycle management policies. EFS supports a maximum of one policy per file system.</p>
+    #[doc(hidden)]
     pub lifecycle_policies: std::option::Option<std::vec::Vec<crate::model::LifecyclePolicy>>,
 }
 impl DescribeLifecycleConfigurationOutput {
@@ -1221,11 +1242,10 @@ impl std::fmt::Debug for DescribeLifecycleConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeLifecycleConfigurationOutput`](crate::output::DescribeLifecycleConfigurationOutput)
+/// See [`DescribeLifecycleConfigurationOutput`](crate::output::DescribeLifecycleConfigurationOutput).
 pub mod describe_lifecycle_configuration_output {
 
-    /// A builder for [`DescribeLifecycleConfigurationOutput`](crate::output::DescribeLifecycleConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeLifecycleConfigurationOutput`](crate::output::DescribeLifecycleConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lifecycle_policies:
@@ -1251,7 +1271,7 @@ pub mod describe_lifecycle_configuration_output {
             self.lifecycle_policies = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeLifecycleConfigurationOutput`](crate::output::DescribeLifecycleConfigurationOutput)
+        /// Consumes the builder and constructs a [`DescribeLifecycleConfigurationOutput`](crate::output::DescribeLifecycleConfigurationOutput).
         pub fn build(self) -> crate::output::DescribeLifecycleConfigurationOutput {
             crate::output::DescribeLifecycleConfigurationOutput {
                 lifecycle_policies: self.lifecycle_policies,
@@ -1260,7 +1280,7 @@ pub mod describe_lifecycle_configuration_output {
     }
 }
 impl DescribeLifecycleConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeLifecycleConfigurationOutput`](crate::output::DescribeLifecycleConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeLifecycleConfigurationOutput`](crate::output::DescribeLifecycleConfigurationOutput).
     pub fn builder() -> crate::output::describe_lifecycle_configuration_output::Builder {
         crate::output::describe_lifecycle_configuration_output::Builder::default()
     }
@@ -1271,10 +1291,13 @@ impl DescribeLifecycleConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeFileSystemsOutput {
     /// <p>Present if provided by caller in the request (String).</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>An array of file system descriptions.</p>
+    #[doc(hidden)]
     pub file_systems: std::option::Option<std::vec::Vec<crate::model::FileSystemDescription>>,
     /// <p>Present if there are more file systems than returned in the response (String). You can use the <code>NextMarker</code> in the subsequent request to fetch the descriptions.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
 }
 impl DescribeFileSystemsOutput {
@@ -1300,11 +1323,10 @@ impl std::fmt::Debug for DescribeFileSystemsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput)
+/// See [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput).
 pub mod describe_file_systems_output {
 
-    /// A builder for [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -1352,7 +1374,7 @@ pub mod describe_file_systems_output {
             self.next_marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput)
+        /// Consumes the builder and constructs a [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput).
         pub fn build(self) -> crate::output::DescribeFileSystemsOutput {
             crate::output::DescribeFileSystemsOutput {
                 marker: self.marker,
@@ -1363,7 +1385,7 @@ pub mod describe_file_systems_output {
     }
 }
 impl DescribeFileSystemsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput).
     pub fn builder() -> crate::output::describe_file_systems_output::Builder {
         crate::output::describe_file_systems_output::Builder::default()
     }
@@ -1374,8 +1396,10 @@ impl DescribeFileSystemsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeFileSystemPolicyOutput {
     /// <p>Specifies the EFS file system to which the <code>FileSystemPolicy</code> applies.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>The JSON formatted <code>FileSystemPolicy</code> for the EFS file system.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl DescribeFileSystemPolicyOutput {
@@ -1396,11 +1420,10 @@ impl std::fmt::Debug for DescribeFileSystemPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFileSystemPolicyOutput`](crate::output::DescribeFileSystemPolicyOutput)
+/// See [`DescribeFileSystemPolicyOutput`](crate::output::DescribeFileSystemPolicyOutput).
 pub mod describe_file_system_policy_output {
 
-    /// A builder for [`DescribeFileSystemPolicyOutput`](crate::output::DescribeFileSystemPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeFileSystemPolicyOutput`](crate::output::DescribeFileSystemPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_system_id: std::option::Option<std::string::String>,
@@ -1430,7 +1453,7 @@ pub mod describe_file_system_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFileSystemPolicyOutput`](crate::output::DescribeFileSystemPolicyOutput)
+        /// Consumes the builder and constructs a [`DescribeFileSystemPolicyOutput`](crate::output::DescribeFileSystemPolicyOutput).
         pub fn build(self) -> crate::output::DescribeFileSystemPolicyOutput {
             crate::output::DescribeFileSystemPolicyOutput {
                 file_system_id: self.file_system_id,
@@ -1440,7 +1463,7 @@ pub mod describe_file_system_policy_output {
     }
 }
 impl DescribeFileSystemPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFileSystemPolicyOutput`](crate::output::DescribeFileSystemPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFileSystemPolicyOutput`](crate::output::DescribeFileSystemPolicyOutput).
     pub fn builder() -> crate::output::describe_file_system_policy_output::Builder {
         crate::output::describe_file_system_policy_output::Builder::default()
     }
@@ -1451,6 +1474,7 @@ impl DescribeFileSystemPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBackupPolicyOutput {
     /// <p>Describes the file system's backup policy, indicating whether automatic backups are turned on or off.</p>
+    #[doc(hidden)]
     pub backup_policy: std::option::Option<crate::model::BackupPolicy>,
 }
 impl DescribeBackupPolicyOutput {
@@ -1466,11 +1490,10 @@ impl std::fmt::Debug for DescribeBackupPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeBackupPolicyOutput`](crate::output::DescribeBackupPolicyOutput)
+/// See [`DescribeBackupPolicyOutput`](crate::output::DescribeBackupPolicyOutput).
 pub mod describe_backup_policy_output {
 
-    /// A builder for [`DescribeBackupPolicyOutput`](crate::output::DescribeBackupPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeBackupPolicyOutput`](crate::output::DescribeBackupPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_policy: std::option::Option<crate::model::BackupPolicy>,
@@ -1489,7 +1512,7 @@ pub mod describe_backup_policy_output {
             self.backup_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeBackupPolicyOutput`](crate::output::DescribeBackupPolicyOutput)
+        /// Consumes the builder and constructs a [`DescribeBackupPolicyOutput`](crate::output::DescribeBackupPolicyOutput).
         pub fn build(self) -> crate::output::DescribeBackupPolicyOutput {
             crate::output::DescribeBackupPolicyOutput {
                 backup_policy: self.backup_policy,
@@ -1498,7 +1521,7 @@ pub mod describe_backup_policy_output {
     }
 }
 impl DescribeBackupPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeBackupPolicyOutput`](crate::output::DescribeBackupPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeBackupPolicyOutput`](crate::output::DescribeBackupPolicyOutput).
     pub fn builder() -> crate::output::describe_backup_policy_output::Builder {
         crate::output::describe_backup_policy_output::Builder::default()
     }
@@ -1509,8 +1532,10 @@ impl DescribeBackupPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAccountPreferencesOutput {
     /// <p>Describes the resource ID preference setting for the Amazon Web Services account associated with the user making the request, in the current Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub resource_id_preference: std::option::Option<crate::model::ResourceIdPreference>,
     /// <p>Present if there are more records than returned in the response. You can use the <code>NextToken</code> in the subsequent request to fetch the additional descriptions.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeAccountPreferencesOutput {
@@ -1533,11 +1558,10 @@ impl std::fmt::Debug for DescribeAccountPreferencesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAccountPreferencesOutput`](crate::output::DescribeAccountPreferencesOutput)
+/// See [`DescribeAccountPreferencesOutput`](crate::output::DescribeAccountPreferencesOutput).
 pub mod describe_account_preferences_output {
 
-    /// A builder for [`DescribeAccountPreferencesOutput`](crate::output::DescribeAccountPreferencesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAccountPreferencesOutput`](crate::output::DescribeAccountPreferencesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_id_preference: std::option::Option<crate::model::ResourceIdPreference>,
@@ -1567,7 +1591,7 @@ pub mod describe_account_preferences_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAccountPreferencesOutput`](crate::output::DescribeAccountPreferencesOutput)
+        /// Consumes the builder and constructs a [`DescribeAccountPreferencesOutput`](crate::output::DescribeAccountPreferencesOutput).
         pub fn build(self) -> crate::output::DescribeAccountPreferencesOutput {
             crate::output::DescribeAccountPreferencesOutput {
                 resource_id_preference: self.resource_id_preference,
@@ -1577,7 +1601,7 @@ pub mod describe_account_preferences_output {
     }
 }
 impl DescribeAccountPreferencesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAccountPreferencesOutput`](crate::output::DescribeAccountPreferencesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAccountPreferencesOutput`](crate::output::DescribeAccountPreferencesOutput).
     pub fn builder() -> crate::output::describe_account_preferences_output::Builder {
         crate::output::describe_account_preferences_output::Builder::default()
     }
@@ -1588,8 +1612,10 @@ impl DescribeAccountPreferencesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAccessPointsOutput {
     /// <p>An array of access point descriptions.</p>
+    #[doc(hidden)]
     pub access_points: std::option::Option<std::vec::Vec<crate::model::AccessPointDescription>>,
     /// <p>Present if there are more access points than returned in the response. You can use the NextMarker in the subsequent request to fetch the additional descriptions.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeAccessPointsOutput {
@@ -1610,11 +1636,10 @@ impl std::fmt::Debug for DescribeAccessPointsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAccessPointsOutput`](crate::output::DescribeAccessPointsOutput)
+/// See [`DescribeAccessPointsOutput`](crate::output::DescribeAccessPointsOutput).
 pub mod describe_access_points_output {
 
-    /// A builder for [`DescribeAccessPointsOutput`](crate::output::DescribeAccessPointsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAccessPointsOutput`](crate::output::DescribeAccessPointsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_points:
@@ -1651,7 +1676,7 @@ pub mod describe_access_points_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAccessPointsOutput`](crate::output::DescribeAccessPointsOutput)
+        /// Consumes the builder and constructs a [`DescribeAccessPointsOutput`](crate::output::DescribeAccessPointsOutput).
         pub fn build(self) -> crate::output::DescribeAccessPointsOutput {
             crate::output::DescribeAccessPointsOutput {
                 access_points: self.access_points,
@@ -1661,7 +1686,7 @@ pub mod describe_access_points_output {
     }
 }
 impl DescribeAccessPointsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAccessPointsOutput`](crate::output::DescribeAccessPointsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAccessPointsOutput`](crate::output::DescribeAccessPointsOutput).
     pub fn builder() -> crate::output::describe_access_points_output::Builder {
         crate::output::describe_access_points_output::Builder::default()
     }
@@ -1677,22 +1702,21 @@ impl std::fmt::Debug for DeleteTagsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteTagsOutput`](crate::output::DeleteTagsOutput)
+/// See [`DeleteTagsOutput`](crate::output::DeleteTagsOutput).
 pub mod delete_tags_output {
 
-    /// A builder for [`DeleteTagsOutput`](crate::output::DeleteTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteTagsOutput`](crate::output::DeleteTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteTagsOutput`](crate::output::DeleteTagsOutput)
+        /// Consumes the builder and constructs a [`DeleteTagsOutput`](crate::output::DeleteTagsOutput).
         pub fn build(self) -> crate::output::DeleteTagsOutput {
             crate::output::DeleteTagsOutput {}
         }
     }
 }
 impl DeleteTagsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteTagsOutput`](crate::output::DeleteTagsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteTagsOutput`](crate::output::DeleteTagsOutput).
     pub fn builder() -> crate::output::delete_tags_output::Builder {
         crate::output::delete_tags_output::Builder::default()
     }
@@ -1708,22 +1732,21 @@ impl std::fmt::Debug for DeleteReplicationConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteReplicationConfigurationOutput`](crate::output::DeleteReplicationConfigurationOutput)
+/// See [`DeleteReplicationConfigurationOutput`](crate::output::DeleteReplicationConfigurationOutput).
 pub mod delete_replication_configuration_output {
 
-    /// A builder for [`DeleteReplicationConfigurationOutput`](crate::output::DeleteReplicationConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteReplicationConfigurationOutput`](crate::output::DeleteReplicationConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteReplicationConfigurationOutput`](crate::output::DeleteReplicationConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteReplicationConfigurationOutput`](crate::output::DeleteReplicationConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteReplicationConfigurationOutput {
             crate::output::DeleteReplicationConfigurationOutput {}
         }
     }
 }
 impl DeleteReplicationConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteReplicationConfigurationOutput`](crate::output::DeleteReplicationConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteReplicationConfigurationOutput`](crate::output::DeleteReplicationConfigurationOutput).
     pub fn builder() -> crate::output::delete_replication_configuration_output::Builder {
         crate::output::delete_replication_configuration_output::Builder::default()
     }
@@ -1739,22 +1762,21 @@ impl std::fmt::Debug for DeleteMountTargetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteMountTargetOutput`](crate::output::DeleteMountTargetOutput)
+/// See [`DeleteMountTargetOutput`](crate::output::DeleteMountTargetOutput).
 pub mod delete_mount_target_output {
 
-    /// A builder for [`DeleteMountTargetOutput`](crate::output::DeleteMountTargetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteMountTargetOutput`](crate::output::DeleteMountTargetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteMountTargetOutput`](crate::output::DeleteMountTargetOutput)
+        /// Consumes the builder and constructs a [`DeleteMountTargetOutput`](crate::output::DeleteMountTargetOutput).
         pub fn build(self) -> crate::output::DeleteMountTargetOutput {
             crate::output::DeleteMountTargetOutput {}
         }
     }
 }
 impl DeleteMountTargetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteMountTargetOutput`](crate::output::DeleteMountTargetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteMountTargetOutput`](crate::output::DeleteMountTargetOutput).
     pub fn builder() -> crate::output::delete_mount_target_output::Builder {
         crate::output::delete_mount_target_output::Builder::default()
     }
@@ -1770,22 +1792,21 @@ impl std::fmt::Debug for DeleteFileSystemPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFileSystemPolicyOutput`](crate::output::DeleteFileSystemPolicyOutput)
+/// See [`DeleteFileSystemPolicyOutput`](crate::output::DeleteFileSystemPolicyOutput).
 pub mod delete_file_system_policy_output {
 
-    /// A builder for [`DeleteFileSystemPolicyOutput`](crate::output::DeleteFileSystemPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFileSystemPolicyOutput`](crate::output::DeleteFileSystemPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteFileSystemPolicyOutput`](crate::output::DeleteFileSystemPolicyOutput)
+        /// Consumes the builder and constructs a [`DeleteFileSystemPolicyOutput`](crate::output::DeleteFileSystemPolicyOutput).
         pub fn build(self) -> crate::output::DeleteFileSystemPolicyOutput {
             crate::output::DeleteFileSystemPolicyOutput {}
         }
     }
 }
 impl DeleteFileSystemPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFileSystemPolicyOutput`](crate::output::DeleteFileSystemPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFileSystemPolicyOutput`](crate::output::DeleteFileSystemPolicyOutput).
     pub fn builder() -> crate::output::delete_file_system_policy_output::Builder {
         crate::output::delete_file_system_policy_output::Builder::default()
     }
@@ -1801,22 +1822,21 @@ impl std::fmt::Debug for DeleteFileSystemOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput)
+/// See [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput).
 pub mod delete_file_system_output {
 
-    /// A builder for [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput)
+        /// Consumes the builder and constructs a [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput).
         pub fn build(self) -> crate::output::DeleteFileSystemOutput {
             crate::output::DeleteFileSystemOutput {}
         }
     }
 }
 impl DeleteFileSystemOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput).
     pub fn builder() -> crate::output::delete_file_system_output::Builder {
         crate::output::delete_file_system_output::Builder::default()
     }
@@ -1832,22 +1852,21 @@ impl std::fmt::Debug for DeleteAccessPointOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAccessPointOutput`](crate::output::DeleteAccessPointOutput)
+/// See [`DeleteAccessPointOutput`](crate::output::DeleteAccessPointOutput).
 pub mod delete_access_point_output {
 
-    /// A builder for [`DeleteAccessPointOutput`](crate::output::DeleteAccessPointOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAccessPointOutput`](crate::output::DeleteAccessPointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteAccessPointOutput`](crate::output::DeleteAccessPointOutput)
+        /// Consumes the builder and constructs a [`DeleteAccessPointOutput`](crate::output::DeleteAccessPointOutput).
         pub fn build(self) -> crate::output::DeleteAccessPointOutput {
             crate::output::DeleteAccessPointOutput {}
         }
     }
 }
 impl DeleteAccessPointOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAccessPointOutput`](crate::output::DeleteAccessPointOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAccessPointOutput`](crate::output::DeleteAccessPointOutput).
     pub fn builder() -> crate::output::delete_access_point_output::Builder {
         crate::output::delete_access_point_output::Builder::default()
     }
@@ -1863,22 +1882,21 @@ impl std::fmt::Debug for CreateTagsOutput {
         formatter.finish()
     }
 }
-/// See [`CreateTagsOutput`](crate::output::CreateTagsOutput)
+/// See [`CreateTagsOutput`](crate::output::CreateTagsOutput).
 pub mod create_tags_output {
 
-    /// A builder for [`CreateTagsOutput`](crate::output::CreateTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateTagsOutput`](crate::output::CreateTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`CreateTagsOutput`](crate::output::CreateTagsOutput)
+        /// Consumes the builder and constructs a [`CreateTagsOutput`](crate::output::CreateTagsOutput).
         pub fn build(self) -> crate::output::CreateTagsOutput {
             crate::output::CreateTagsOutput {}
         }
     }
 }
 impl CreateTagsOutput {
-    /// Creates a new builder-style object to manufacture [`CreateTagsOutput`](crate::output::CreateTagsOutput)
+    /// Creates a new builder-style object to manufacture [`CreateTagsOutput`](crate::output::CreateTagsOutput).
     pub fn builder() -> crate::output::create_tags_output::Builder {
         crate::output::create_tags_output::Builder::default()
     }
@@ -1889,16 +1907,22 @@ impl CreateTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateReplicationConfigurationOutput {
     /// <p>The ID of the source Amazon EFS file system that is being replicated.</p>
+    #[doc(hidden)]
     pub source_file_system_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region in which the source Amazon EFS file system is located.</p>
+    #[doc(hidden)]
     pub source_file_system_region: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the current source file system in the replication configuration.</p>
+    #[doc(hidden)]
     pub source_file_system_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the original source Amazon EFS file system in the replication configuration.</p>
+    #[doc(hidden)]
     pub original_source_file_system_arn: std::option::Option<std::string::String>,
     /// <p>Describes when the replication configuration was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An array of destination objects. Only one destination object is supported.</p>
+    #[doc(hidden)]
     pub destinations: std::option::Option<std::vec::Vec<crate::model::Destination>>,
 }
 impl CreateReplicationConfigurationOutput {
@@ -1942,11 +1966,10 @@ impl std::fmt::Debug for CreateReplicationConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateReplicationConfigurationOutput`](crate::output::CreateReplicationConfigurationOutput)
+/// See [`CreateReplicationConfigurationOutput`](crate::output::CreateReplicationConfigurationOutput).
 pub mod create_replication_configuration_output {
 
-    /// A builder for [`CreateReplicationConfigurationOutput`](crate::output::CreateReplicationConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateReplicationConfigurationOutput`](crate::output::CreateReplicationConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_file_system_id: std::option::Option<std::string::String>,
@@ -2044,7 +2067,7 @@ pub mod create_replication_configuration_output {
             self.destinations = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateReplicationConfigurationOutput`](crate::output::CreateReplicationConfigurationOutput)
+        /// Consumes the builder and constructs a [`CreateReplicationConfigurationOutput`](crate::output::CreateReplicationConfigurationOutput).
         pub fn build(self) -> crate::output::CreateReplicationConfigurationOutput {
             crate::output::CreateReplicationConfigurationOutput {
                 source_file_system_id: self.source_file_system_id,
@@ -2058,7 +2081,7 @@ pub mod create_replication_configuration_output {
     }
 }
 impl CreateReplicationConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateReplicationConfigurationOutput`](crate::output::CreateReplicationConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateReplicationConfigurationOutput`](crate::output::CreateReplicationConfigurationOutput).
     pub fn builder() -> crate::output::create_replication_configuration_output::Builder {
         crate::output::create_replication_configuration_output::Builder::default()
     }
@@ -2069,24 +2092,34 @@ impl CreateReplicationConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateMountTargetOutput {
     /// <p>Amazon Web Services account ID that owns the resource.</p>
+    #[doc(hidden)]
     pub owner_id: std::option::Option<std::string::String>,
     /// <p>System-assigned mount target ID.</p>
+    #[doc(hidden)]
     pub mount_target_id: std::option::Option<std::string::String>,
     /// <p>The ID of the file system for which the mount target is intended.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>The ID of the mount target's subnet.</p>
+    #[doc(hidden)]
     pub subnet_id: std::option::Option<std::string::String>,
     /// <p>Lifecycle state of the mount target.</p>
+    #[doc(hidden)]
     pub life_cycle_state: std::option::Option<crate::model::LifeCycleState>,
     /// <p>Address at which the file system can be mounted by using the mount target.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The ID of the network interface that Amazon EFS created when it created the mount target.</p>
+    #[doc(hidden)]
     pub network_interface_id: std::option::Option<std::string::String>,
     /// <p>The unique and consistent identifier of the Availability Zone that the mount target resides in. For example, <code>use1-az1</code> is an AZ ID for the us-east-1 Region and it has the same location in every Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub availability_zone_id: std::option::Option<std::string::String>,
     /// <p>The name of the Availability Zone in which the mount target is located. Availability Zones are independently mapped to names for each Amazon Web Services account. For example, the Availability Zone <code>us-east-1a</code> for your Amazon Web Services account might not be the same location as <code>us-east-1a</code> for another Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub availability_zone_name: std::option::Option<std::string::String>,
     /// <p>The virtual private cloud (VPC) ID that the mount target is configured in.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
 }
 impl CreateMountTargetOutput {
@@ -2147,11 +2180,10 @@ impl std::fmt::Debug for CreateMountTargetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateMountTargetOutput`](crate::output::CreateMountTargetOutput)
+/// See [`CreateMountTargetOutput`](crate::output::CreateMountTargetOutput).
 pub mod create_mount_target_output {
 
-    /// A builder for [`CreateMountTargetOutput`](crate::output::CreateMountTargetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateMountTargetOutput`](crate::output::CreateMountTargetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner_id: std::option::Option<std::string::String>,
@@ -2284,7 +2316,7 @@ pub mod create_mount_target_output {
             self.vpc_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateMountTargetOutput`](crate::output::CreateMountTargetOutput)
+        /// Consumes the builder and constructs a [`CreateMountTargetOutput`](crate::output::CreateMountTargetOutput).
         pub fn build(self) -> crate::output::CreateMountTargetOutput {
             crate::output::CreateMountTargetOutput {
                 owner_id: self.owner_id,
@@ -2302,7 +2334,7 @@ pub mod create_mount_target_output {
     }
 }
 impl CreateMountTargetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateMountTargetOutput`](crate::output::CreateMountTargetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateMountTargetOutput`](crate::output::CreateMountTargetOutput).
     pub fn builder() -> crate::output::create_mount_target_output::Builder {
         crate::output::create_mount_target_output::Builder::default()
     }
@@ -2313,38 +2345,55 @@ impl CreateMountTargetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateFileSystemOutput {
     /// <p>The Amazon Web Services account that created the file system. If the file system was created by an IAM user, the parent account to which the user belongs is the owner.</p>
+    #[doc(hidden)]
     pub owner_id: std::option::Option<std::string::String>,
     /// <p>The opaque string specified in the request.</p>
+    #[doc(hidden)]
     pub creation_token: std::option::Option<std::string::String>,
     /// <p>The ID of the file system, assigned by Amazon EFS.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the EFS file system, in the format <code>arn:aws:elasticfilesystem:<i>region</i>:<i>account-id</i>:file-system/<i>file-system-id</i> </code>. Example with sample data: <code>arn:aws:elasticfilesystem:us-west-2:1111333322228888:file-system/fs-01234567</code> </p>
+    #[doc(hidden)]
     pub file_system_arn: std::option::Option<std::string::String>,
     /// <p>The time that the file system was created, in seconds (since 1970-01-01T00:00:00Z).</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The lifecycle phase of the file system.</p>
+    #[doc(hidden)]
     pub life_cycle_state: std::option::Option<crate::model::LifeCycleState>,
     /// <p>You can add tags to a file system, including a <code>Name</code> tag. For more information, see <code>CreateFileSystem</code>. If the file system has a <code>Name</code> tag, Amazon EFS returns the value in this field. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The current number of mount targets that the file system has. For more information, see <code>CreateMountTarget</code>.</p>
+    #[doc(hidden)]
     pub number_of_mount_targets: i32,
     /// <p>The latest known metered size (in bytes) of data stored in the file system, in its <code>Value</code> field, and the time at which that size was determined in its <code>Timestamp</code> field. The <code>Timestamp</code> value is the integer number of seconds since 1970-01-01T00:00:00Z. The <code>SizeInBytes</code> value doesn't represent the size of a consistent snapshot of the file system, but it is eventually consistent when there are no writes to the file system. That is, <code>SizeInBytes</code> represents actual size only if the file system is not modified for a period longer than a couple of hours. Otherwise, the value is not the exact size that the file system was at any point in time. </p>
+    #[doc(hidden)]
     pub size_in_bytes: std::option::Option<crate::model::FileSystemSize>,
     /// <p>The performance mode of the file system.</p>
+    #[doc(hidden)]
     pub performance_mode: std::option::Option<crate::model::PerformanceMode>,
     /// <p>A Boolean value that, if true, indicates that the file system is encrypted.</p>
+    #[doc(hidden)]
     pub encrypted: std::option::Option<bool>,
     /// <p>The ID of an KMS key used to protect the encrypted file system.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>Displays the file system's throughput mode. For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/performance.html#throughput-modes">Throughput modes</a> in the <i>Amazon EFS User Guide</i>. </p>
+    #[doc(hidden)]
     pub throughput_mode: std::option::Option<crate::model::ThroughputMode>,
     /// <p>The amount of provisioned throughput, measured in MiB/s, for the file system. Valid for file systems using <code>ThroughputMode</code> set to <code>provisioned</code>.</p>
+    #[doc(hidden)]
     pub provisioned_throughput_in_mibps: std::option::Option<f64>,
     /// <p>Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only for file systems using One Zone storage classes. For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the <i>Amazon EFS User Guide</i>.</p>
+    #[doc(hidden)]
     pub availability_zone_name: std::option::Option<std::string::String>,
     /// <p>The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage classes exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web Services Region, and it has the same location in every Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub availability_zone_id: std::option::Option<std::string::String>,
     /// <p>The tags associated with the file system, presented as an array of <code>Tag</code> objects.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl CreateFileSystemOutput {
@@ -2443,11 +2492,10 @@ impl std::fmt::Debug for CreateFileSystemOutput {
         formatter.finish()
     }
 }
-/// See [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput)
+/// See [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput).
 pub mod create_file_system_output {
 
-    /// A builder for [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner_id: std::option::Option<std::string::String>,
@@ -2681,7 +2729,7 @@ pub mod create_file_system_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput)
+        /// Consumes the builder and constructs a [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput).
         pub fn build(self) -> crate::output::CreateFileSystemOutput {
             crate::output::CreateFileSystemOutput {
                 owner_id: self.owner_id,
@@ -2706,7 +2754,7 @@ pub mod create_file_system_output {
     }
 }
 impl CreateFileSystemOutput {
-    /// Creates a new builder-style object to manufacture [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput)
+    /// Creates a new builder-style object to manufacture [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput).
     pub fn builder() -> crate::output::create_file_system_output::Builder {
         crate::output::create_file_system_output::Builder::default()
     }
@@ -2717,24 +2765,34 @@ impl CreateFileSystemOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAccessPointOutput {
     /// <p>The opaque string specified in the request to ensure idempotent creation.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p>The name of the access point. This is the value of the <code>Name</code> tag.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The tags associated with the access point, presented as an array of Tag objects.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The ID of the access point, assigned by Amazon EFS.</p>
+    #[doc(hidden)]
     pub access_point_id: std::option::Option<std::string::String>,
     /// <p>The unique Amazon Resource Name (ARN) associated with the access point.</p>
+    #[doc(hidden)]
     pub access_point_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the EFS file system that the access point applies to.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>The full POSIX identity, including the user ID, group ID, and secondary group IDs on the access point that is used for all file operations by NFS clients using the access point.</p>
+    #[doc(hidden)]
     pub posix_user: std::option::Option<crate::model::PosixUser>,
     /// <p>The directory on the Amazon EFS file system that the access point exposes as the root directory to NFS clients using the access point.</p>
+    #[doc(hidden)]
     pub root_directory: std::option::Option<crate::model::RootDirectory>,
     /// <p>Identified the Amazon Web Services account that owns the access point resource.</p>
+    #[doc(hidden)]
     pub owner_id: std::option::Option<std::string::String>,
     /// <p>Identifies the lifecycle phase of the access point.</p>
+    #[doc(hidden)]
     pub life_cycle_state: std::option::Option<crate::model::LifeCycleState>,
 }
 impl CreateAccessPointOutput {
@@ -2795,11 +2853,10 @@ impl std::fmt::Debug for CreateAccessPointOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAccessPointOutput`](crate::output::CreateAccessPointOutput)
+/// See [`CreateAccessPointOutput`](crate::output::CreateAccessPointOutput).
 pub mod create_access_point_output {
 
-    /// A builder for [`CreateAccessPointOutput`](crate::output::CreateAccessPointOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateAccessPointOutput`](crate::output::CreateAccessPointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_token: std::option::Option<std::string::String>,
@@ -2941,7 +2998,7 @@ pub mod create_access_point_output {
             self.life_cycle_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAccessPointOutput`](crate::output::CreateAccessPointOutput)
+        /// Consumes the builder and constructs a [`CreateAccessPointOutput`](crate::output::CreateAccessPointOutput).
         pub fn build(self) -> crate::output::CreateAccessPointOutput {
             crate::output::CreateAccessPointOutput {
                 client_token: self.client_token,
@@ -2959,7 +3016,7 @@ pub mod create_access_point_output {
     }
 }
 impl CreateAccessPointOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAccessPointOutput`](crate::output::CreateAccessPointOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAccessPointOutput`](crate::output::CreateAccessPointOutput).
     pub fn builder() -> crate::output::create_access_point_output::Builder {
         crate::output::create_access_point_output::Builder::default()
     }

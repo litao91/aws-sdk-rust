@@ -231,32 +231,46 @@ impl ArrayValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ColumnMetadata {
     /// <p>The name of the column.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of the column.</p>
+    #[doc(hidden)]
     pub r#type: i32,
     /// <p>The database-specific data type of the column.</p>
+    #[doc(hidden)]
     pub type_name: std::option::Option<std::string::String>,
     /// <p>The label for the column.</p>
+    #[doc(hidden)]
     pub label: std::option::Option<std::string::String>,
     /// <p>The name of the schema that owns the table that includes the column.</p>
+    #[doc(hidden)]
     pub schema_name: std::option::Option<std::string::String>,
     /// <p>The name of the table that includes the column.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>A value that indicates whether the column increments automatically.</p>
+    #[doc(hidden)]
     pub is_auto_increment: bool,
     /// <p>A value that indicates whether an integer column is signed.</p>
+    #[doc(hidden)]
     pub is_signed: bool,
     /// <p>A value that indicates whether the column contains currency values.</p>
+    #[doc(hidden)]
     pub is_currency: bool,
     /// <p>A value that indicates whether the column is case-sensitive.</p>
+    #[doc(hidden)]
     pub is_case_sensitive: bool,
     /// <p>A value that indicates whether the column is nullable.</p>
+    #[doc(hidden)]
     pub nullable: i32,
     /// <p>The precision value of a decimal number column.</p>
+    #[doc(hidden)]
     pub precision: i32,
     /// <p>The scale value of a decimal number column.</p>
+    #[doc(hidden)]
     pub scale: i32,
     /// <p>The type of the column.</p>
+    #[doc(hidden)]
     pub array_base_column_type: i32,
 }
 impl ColumnMetadata {
@@ -337,11 +351,10 @@ impl std::fmt::Debug for ColumnMetadata {
         formatter.finish()
     }
 }
-/// See [`ColumnMetadata`](crate::model::ColumnMetadata)
+/// See [`ColumnMetadata`](crate::model::ColumnMetadata).
 pub mod column_metadata {
 
-    /// A builder for [`ColumnMetadata`](crate::model::ColumnMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ColumnMetadata`](crate::model::ColumnMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -500,7 +513,7 @@ pub mod column_metadata {
             self.array_base_column_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ColumnMetadata`](crate::model::ColumnMetadata)
+        /// Consumes the builder and constructs a [`ColumnMetadata`](crate::model::ColumnMetadata).
         pub fn build(self) -> crate::model::ColumnMetadata {
             crate::model::ColumnMetadata {
                 name: self.name,
@@ -522,7 +535,7 @@ pub mod column_metadata {
     }
 }
 impl ColumnMetadata {
-    /// Creates a new builder-style object to manufacture [`ColumnMetadata`](crate::model::ColumnMetadata)
+    /// Creates a new builder-style object to manufacture [`ColumnMetadata`](crate::model::ColumnMetadata).
     pub fn builder() -> crate::model::column_metadata::Builder {
         crate::model::column_metadata::Builder::default()
     }
@@ -590,8 +603,10 @@ pub struct ResultSetOptions {
     /// <p>A value that indicates how a field of <code>DECIMAL</code> type is represented in the response. The value of <code>STRING</code>, the default, specifies that it is converted to a String value. The value of <code>DOUBLE_OR_LONG</code> specifies that it is converted to a Long value if its scale is 0, or to a Double value otherwise.</p> <important>
     /// <p>Conversion to Double or Long can result in roundoff errors due to precision loss. We recommend converting to String, especially when working with currency values.</p>
     /// </important>
+    #[doc(hidden)]
     pub decimal_return_type: std::option::Option<crate::model::DecimalReturnType>,
     /// <p>A value that indicates how a field of <code>LONG</code> type is represented. Allowed values are <code>LONG</code> and <code>STRING</code>. The default is <code>LONG</code>. Specify <code>STRING</code> if the length or precision of numeric values might cause truncation or rounding errors. </p>
+    #[doc(hidden)]
     pub long_return_type: std::option::Option<crate::model::LongReturnType>,
 }
 impl ResultSetOptions {
@@ -614,11 +629,10 @@ impl std::fmt::Debug for ResultSetOptions {
         formatter.finish()
     }
 }
-/// See [`ResultSetOptions`](crate::model::ResultSetOptions)
+/// See [`ResultSetOptions`](crate::model::ResultSetOptions).
 pub mod result_set_options {
 
-    /// A builder for [`ResultSetOptions`](crate::model::ResultSetOptions)
-    #[non_exhaustive]
+    /// A builder for [`ResultSetOptions`](crate::model::ResultSetOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) decimal_return_type: std::option::Option<crate::model::DecimalReturnType>,
@@ -655,7 +669,7 @@ pub mod result_set_options {
             self.long_return_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultSetOptions`](crate::model::ResultSetOptions)
+        /// Consumes the builder and constructs a [`ResultSetOptions`](crate::model::ResultSetOptions).
         pub fn build(self) -> crate::model::ResultSetOptions {
             crate::model::ResultSetOptions {
                 decimal_return_type: self.decimal_return_type,
@@ -665,7 +679,7 @@ pub mod result_set_options {
     }
 }
 impl ResultSetOptions {
-    /// Creates a new builder-style object to manufacture [`ResultSetOptions`](crate::model::ResultSetOptions)
+    /// Creates a new builder-style object to manufacture [`ResultSetOptions`](crate::model::ResultSetOptions).
     pub fn builder() -> crate::model::result_set_options::Builder {
         crate::model::result_set_options::Builder::default()
     }
@@ -786,8 +800,10 @@ impl AsRef<str> for DecimalReturnType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SqlParameter {
     /// <p>The name of the parameter.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value of the parameter.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<crate::model::Field>,
     /// <p>A hint that specifies the correct object type for data type mapping. Possible values are as follows:</p>
     /// <ul>
@@ -798,6 +814,7 @@ pub struct SqlParameter {
     /// <li> <p> <code>TIMESTAMP</code> - The corresponding <code>String</code> parameter value is sent as an object of <code>TIMESTAMP</code> type to the database. The accepted format is <code>YYYY-MM-DD HH:MM:SS[.FFF]</code>.</p> </li>
     /// <li> <p> <code>UUID</code> - The corresponding <code>String</code> parameter value is sent as an object of <code>UUID</code> type to the database. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub type_hint: std::option::Option<crate::model::TypeHint>,
 }
 impl SqlParameter {
@@ -831,11 +848,10 @@ impl std::fmt::Debug for SqlParameter {
         formatter.finish()
     }
 }
-/// See [`SqlParameter`](crate::model::SqlParameter)
+/// See [`SqlParameter`](crate::model::SqlParameter).
 pub mod sql_parameter {
 
-    /// A builder for [`SqlParameter`](crate::model::SqlParameter)
-    #[non_exhaustive]
+    /// A builder for [`SqlParameter`](crate::model::SqlParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -889,7 +905,7 @@ pub mod sql_parameter {
             self.type_hint = input;
             self
         }
-        /// Consumes the builder and constructs a [`SqlParameter`](crate::model::SqlParameter)
+        /// Consumes the builder and constructs a [`SqlParameter`](crate::model::SqlParameter).
         pub fn build(self) -> crate::model::SqlParameter {
             crate::model::SqlParameter {
                 name: self.name,
@@ -900,7 +916,7 @@ pub mod sql_parameter {
     }
 }
 impl SqlParameter {
-    /// Creates a new builder-style object to manufacture [`SqlParameter`](crate::model::SqlParameter)
+    /// Creates a new builder-style object to manufacture [`SqlParameter`](crate::model::SqlParameter).
     pub fn builder() -> crate::model::sql_parameter::Builder {
         crate::model::sql_parameter::Builder::default()
     }
@@ -984,8 +1000,10 @@ impl AsRef<str> for TypeHint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SqlStatementResult {
     /// <p>The result set of the SQL statement.</p>
+    #[doc(hidden)]
     pub result_frame: std::option::Option<crate::model::ResultFrame>,
     /// <p>The number of records updated by a SQL statement.</p>
+    #[doc(hidden)]
     pub number_of_records_updated: i64,
 }
 impl SqlStatementResult {
@@ -1006,11 +1024,10 @@ impl std::fmt::Debug for SqlStatementResult {
         formatter.finish()
     }
 }
-/// See [`SqlStatementResult`](crate::model::SqlStatementResult)
+/// See [`SqlStatementResult`](crate::model::SqlStatementResult).
 pub mod sql_statement_result {
 
-    /// A builder for [`SqlStatementResult`](crate::model::SqlStatementResult)
-    #[non_exhaustive]
+    /// A builder for [`SqlStatementResult`](crate::model::SqlStatementResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) result_frame: std::option::Option<crate::model::ResultFrame>,
@@ -1040,7 +1057,7 @@ pub mod sql_statement_result {
             self.number_of_records_updated = input;
             self
         }
-        /// Consumes the builder and constructs a [`SqlStatementResult`](crate::model::SqlStatementResult)
+        /// Consumes the builder and constructs a [`SqlStatementResult`](crate::model::SqlStatementResult).
         pub fn build(self) -> crate::model::SqlStatementResult {
             crate::model::SqlStatementResult {
                 result_frame: self.result_frame,
@@ -1050,7 +1067,7 @@ pub mod sql_statement_result {
     }
 }
 impl SqlStatementResult {
-    /// Creates a new builder-style object to manufacture [`SqlStatementResult`](crate::model::SqlStatementResult)
+    /// Creates a new builder-style object to manufacture [`SqlStatementResult`](crate::model::SqlStatementResult).
     pub fn builder() -> crate::model::sql_statement_result::Builder {
         crate::model::sql_statement_result::Builder::default()
     }
@@ -1063,8 +1080,10 @@ impl SqlStatementResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResultFrame {
     /// <p>The result-set metadata in the result set.</p>
+    #[doc(hidden)]
     pub result_set_metadata: std::option::Option<crate::model::ResultSetMetadata>,
     /// <p>The records in the result set.</p>
+    #[doc(hidden)]
     pub records: std::option::Option<std::vec::Vec<crate::model::Record>>,
 }
 impl ResultFrame {
@@ -1085,11 +1104,10 @@ impl std::fmt::Debug for ResultFrame {
         formatter.finish()
     }
 }
-/// See [`ResultFrame`](crate::model::ResultFrame)
+/// See [`ResultFrame`](crate::model::ResultFrame).
 pub mod result_frame {
 
-    /// A builder for [`ResultFrame`](crate::model::ResultFrame)
-    #[non_exhaustive]
+    /// A builder for [`ResultFrame`](crate::model::ResultFrame).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) result_set_metadata: std::option::Option<crate::model::ResultSetMetadata>,
@@ -1128,7 +1146,7 @@ pub mod result_frame {
             self.records = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultFrame`](crate::model::ResultFrame)
+        /// Consumes the builder and constructs a [`ResultFrame`](crate::model::ResultFrame).
         pub fn build(self) -> crate::model::ResultFrame {
             crate::model::ResultFrame {
                 result_set_metadata: self.result_set_metadata,
@@ -1138,7 +1156,7 @@ pub mod result_frame {
     }
 }
 impl ResultFrame {
-    /// Creates a new builder-style object to manufacture [`ResultFrame`](crate::model::ResultFrame)
+    /// Creates a new builder-style object to manufacture [`ResultFrame`](crate::model::ResultFrame).
     pub fn builder() -> crate::model::result_frame::Builder {
         crate::model::result_frame::Builder::default()
     }
@@ -1151,6 +1169,7 @@ impl ResultFrame {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Record {
     /// <p>The values returned in the record.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<crate::model::Value>>,
 }
 impl Record {
@@ -1166,11 +1185,10 @@ impl std::fmt::Debug for Record {
         formatter.finish()
     }
 }
-/// See [`Record`](crate::model::Record)
+/// See [`Record`](crate::model::Record).
 pub mod record {
 
-    /// A builder for [`Record`](crate::model::Record)
-    #[non_exhaustive]
+    /// A builder for [`Record`](crate::model::Record).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) values: std::option::Option<std::vec::Vec<crate::model::Value>>,
@@ -1195,7 +1213,7 @@ pub mod record {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`Record`](crate::model::Record)
+        /// Consumes the builder and constructs a [`Record`](crate::model::Record).
         pub fn build(self) -> crate::model::Record {
             crate::model::Record {
                 values: self.values,
@@ -1204,7 +1222,7 @@ pub mod record {
     }
 }
 impl Record {
-    /// Creates a new builder-style object to manufacture [`Record`](crate::model::Record)
+    /// Creates a new builder-style object to manufacture [`Record`](crate::model::Record).
     pub fn builder() -> crate::model::record::Builder {
         crate::model::record::Builder::default()
     }
@@ -1392,6 +1410,7 @@ impl Value {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StructValue {
     /// <p>The attributes returned in the record.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<std::vec::Vec<crate::model::Value>>,
 }
 impl StructValue {
@@ -1407,11 +1426,10 @@ impl std::fmt::Debug for StructValue {
         formatter.finish()
     }
 }
-/// See [`StructValue`](crate::model::StructValue)
+/// See [`StructValue`](crate::model::StructValue).
 pub mod struct_value {
 
-    /// A builder for [`StructValue`](crate::model::StructValue)
-    #[non_exhaustive]
+    /// A builder for [`StructValue`](crate::model::StructValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<std::vec::Vec<crate::model::Value>>,
@@ -1436,7 +1454,7 @@ pub mod struct_value {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`StructValue`](crate::model::StructValue)
+        /// Consumes the builder and constructs a [`StructValue`](crate::model::StructValue).
         pub fn build(self) -> crate::model::StructValue {
             crate::model::StructValue {
                 attributes: self.attributes,
@@ -1445,7 +1463,7 @@ pub mod struct_value {
     }
 }
 impl StructValue {
-    /// Creates a new builder-style object to manufacture [`StructValue`](crate::model::StructValue)
+    /// Creates a new builder-style object to manufacture [`StructValue`](crate::model::StructValue).
     pub fn builder() -> crate::model::struct_value::Builder {
         crate::model::struct_value::Builder::default()
     }
@@ -1456,8 +1474,10 @@ impl StructValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResultSetMetadata {
     /// <p>The number of columns in the result set.</p>
+    #[doc(hidden)]
     pub column_count: i64,
     /// <p>The metadata of the columns in the result set.</p>
+    #[doc(hidden)]
     pub column_metadata: std::option::Option<std::vec::Vec<crate::model::ColumnMetadata>>,
 }
 impl ResultSetMetadata {
@@ -1478,11 +1498,10 @@ impl std::fmt::Debug for ResultSetMetadata {
         formatter.finish()
     }
 }
-/// See [`ResultSetMetadata`](crate::model::ResultSetMetadata)
+/// See [`ResultSetMetadata`](crate::model::ResultSetMetadata).
 pub mod result_set_metadata {
 
-    /// A builder for [`ResultSetMetadata`](crate::model::ResultSetMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ResultSetMetadata`](crate::model::ResultSetMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) column_count: std::option::Option<i64>,
@@ -1519,7 +1538,7 @@ pub mod result_set_metadata {
             self.column_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultSetMetadata`](crate::model::ResultSetMetadata)
+        /// Consumes the builder and constructs a [`ResultSetMetadata`](crate::model::ResultSetMetadata).
         pub fn build(self) -> crate::model::ResultSetMetadata {
             crate::model::ResultSetMetadata {
                 column_count: self.column_count.unwrap_or_default(),
@@ -1529,7 +1548,7 @@ pub mod result_set_metadata {
     }
 }
 impl ResultSetMetadata {
-    /// Creates a new builder-style object to manufacture [`ResultSetMetadata`](crate::model::ResultSetMetadata)
+    /// Creates a new builder-style object to manufacture [`ResultSetMetadata`](crate::model::ResultSetMetadata).
     pub fn builder() -> crate::model::result_set_metadata::Builder {
         crate::model::result_set_metadata::Builder::default()
     }
@@ -1540,6 +1559,7 @@ impl ResultSetMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateResult {
     /// <p>Values for fields generated during the request.</p>
+    #[doc(hidden)]
     pub generated_fields: std::option::Option<std::vec::Vec<crate::model::Field>>,
 }
 impl UpdateResult {
@@ -1555,11 +1575,10 @@ impl std::fmt::Debug for UpdateResult {
         formatter.finish()
     }
 }
-/// See [`UpdateResult`](crate::model::UpdateResult)
+/// See [`UpdateResult`](crate::model::UpdateResult).
 pub mod update_result {
 
-    /// A builder for [`UpdateResult`](crate::model::UpdateResult)
-    #[non_exhaustive]
+    /// A builder for [`UpdateResult`](crate::model::UpdateResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) generated_fields: std::option::Option<std::vec::Vec<crate::model::Field>>,
@@ -1584,7 +1603,7 @@ pub mod update_result {
             self.generated_fields = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateResult`](crate::model::UpdateResult)
+        /// Consumes the builder and constructs a [`UpdateResult`](crate::model::UpdateResult).
         pub fn build(self) -> crate::model::UpdateResult {
             crate::model::UpdateResult {
                 generated_fields: self.generated_fields,
@@ -1593,7 +1612,7 @@ pub mod update_result {
     }
 }
 impl UpdateResult {
-    /// Creates a new builder-style object to manufacture [`UpdateResult`](crate::model::UpdateResult)
+    /// Creates a new builder-style object to manufacture [`UpdateResult`](crate::model::UpdateResult).
     pub fn builder() -> crate::model::update_result::Builder {
         crate::model::update_result::Builder::default()
     }

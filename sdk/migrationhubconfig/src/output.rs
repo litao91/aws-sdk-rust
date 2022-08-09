@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetHomeRegionOutput {
     /// <p>The name of the home region of the calling account.</p>
+    #[doc(hidden)]
     pub home_region: std::option::Option<std::string::String>,
 }
 impl GetHomeRegionOutput {
@@ -19,11 +20,10 @@ impl std::fmt::Debug for GetHomeRegionOutput {
         formatter.finish()
     }
 }
-/// See [`GetHomeRegionOutput`](crate::output::GetHomeRegionOutput)
+/// See [`GetHomeRegionOutput`](crate::output::GetHomeRegionOutput).
 pub mod get_home_region_output {
 
-    /// A builder for [`GetHomeRegionOutput`](crate::output::GetHomeRegionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetHomeRegionOutput`](crate::output::GetHomeRegionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) home_region: std::option::Option<std::string::String>,
@@ -39,7 +39,7 @@ pub mod get_home_region_output {
             self.home_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetHomeRegionOutput`](crate::output::GetHomeRegionOutput)
+        /// Consumes the builder and constructs a [`GetHomeRegionOutput`](crate::output::GetHomeRegionOutput).
         pub fn build(self) -> crate::output::GetHomeRegionOutput {
             crate::output::GetHomeRegionOutput {
                 home_region: self.home_region,
@@ -48,7 +48,7 @@ pub mod get_home_region_output {
     }
 }
 impl GetHomeRegionOutput {
-    /// Creates a new builder-style object to manufacture [`GetHomeRegionOutput`](crate::output::GetHomeRegionOutput)
+    /// Creates a new builder-style object to manufacture [`GetHomeRegionOutput`](crate::output::GetHomeRegionOutput).
     pub fn builder() -> crate::output::get_home_region_output::Builder {
         crate::output::get_home_region_output::Builder::default()
     }
@@ -59,8 +59,10 @@ impl GetHomeRegionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeHomeRegionControlsOutput {
     /// <p>An array that contains your <code>HomeRegionControl</code> objects.</p>
+    #[doc(hidden)]
     pub home_region_controls: std::option::Option<std::vec::Vec<crate::model::HomeRegionControl>>,
     /// <p>If a <code>NextToken</code> was returned by a previous call, more results are available. To retrieve the next page of results, make the call again using the returned token in <code>NextToken</code>.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeHomeRegionControlsOutput {
@@ -81,11 +83,10 @@ impl std::fmt::Debug for DescribeHomeRegionControlsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeHomeRegionControlsOutput`](crate::output::DescribeHomeRegionControlsOutput)
+/// See [`DescribeHomeRegionControlsOutput`](crate::output::DescribeHomeRegionControlsOutput).
 pub mod describe_home_region_controls_output {
 
-    /// A builder for [`DescribeHomeRegionControlsOutput`](crate::output::DescribeHomeRegionControlsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeHomeRegionControlsOutput`](crate::output::DescribeHomeRegionControlsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) home_region_controls:
@@ -122,7 +123,7 @@ pub mod describe_home_region_controls_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeHomeRegionControlsOutput`](crate::output::DescribeHomeRegionControlsOutput)
+        /// Consumes the builder and constructs a [`DescribeHomeRegionControlsOutput`](crate::output::DescribeHomeRegionControlsOutput).
         pub fn build(self) -> crate::output::DescribeHomeRegionControlsOutput {
             crate::output::DescribeHomeRegionControlsOutput {
                 home_region_controls: self.home_region_controls,
@@ -132,7 +133,7 @@ pub mod describe_home_region_controls_output {
     }
 }
 impl DescribeHomeRegionControlsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeHomeRegionControlsOutput`](crate::output::DescribeHomeRegionControlsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeHomeRegionControlsOutput`](crate::output::DescribeHomeRegionControlsOutput).
     pub fn builder() -> crate::output::describe_home_region_controls_output::Builder {
         crate::output::describe_home_region_controls_output::Builder::default()
     }
@@ -143,6 +144,7 @@ impl DescribeHomeRegionControlsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateHomeRegionControlOutput {
     /// <p>This object is the <code>HomeRegionControl</code> object that's returned by a successful call to <code>CreateHomeRegionControl</code>.</p>
+    #[doc(hidden)]
     pub home_region_control: std::option::Option<crate::model::HomeRegionControl>,
 }
 impl CreateHomeRegionControlOutput {
@@ -158,11 +160,10 @@ impl std::fmt::Debug for CreateHomeRegionControlOutput {
         formatter.finish()
     }
 }
-/// See [`CreateHomeRegionControlOutput`](crate::output::CreateHomeRegionControlOutput)
+/// See [`CreateHomeRegionControlOutput`](crate::output::CreateHomeRegionControlOutput).
 pub mod create_home_region_control_output {
 
-    /// A builder for [`CreateHomeRegionControlOutput`](crate::output::CreateHomeRegionControlOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateHomeRegionControlOutput`](crate::output::CreateHomeRegionControlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) home_region_control: std::option::Option<crate::model::HomeRegionControl>,
@@ -181,7 +182,7 @@ pub mod create_home_region_control_output {
             self.home_region_control = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateHomeRegionControlOutput`](crate::output::CreateHomeRegionControlOutput)
+        /// Consumes the builder and constructs a [`CreateHomeRegionControlOutput`](crate::output::CreateHomeRegionControlOutput).
         pub fn build(self) -> crate::output::CreateHomeRegionControlOutput {
             crate::output::CreateHomeRegionControlOutput {
                 home_region_control: self.home_region_control,
@@ -190,7 +191,7 @@ pub mod create_home_region_control_output {
     }
 }
 impl CreateHomeRegionControlOutput {
-    /// Creates a new builder-style object to manufacture [`CreateHomeRegionControlOutput`](crate::output::CreateHomeRegionControlOutput)
+    /// Creates a new builder-style object to manufacture [`CreateHomeRegionControlOutput`](crate::output::CreateHomeRegionControlOutput).
     pub fn builder() -> crate::output::create_home_region_control_output::Builder {
         crate::output::create_home_region_control_output::Builder::default()
     }

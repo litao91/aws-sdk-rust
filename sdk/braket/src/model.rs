@@ -5,22 +5,31 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QuantumTaskSummary {
     /// <p>The ARN of the task.</p>
+    #[doc(hidden)]
     pub quantum_task_arn: std::option::Option<std::string::String>,
     /// <p>The status of the task.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::QuantumTaskStatus>,
     /// <p>The ARN of the device the task ran on.</p>
+    #[doc(hidden)]
     pub device_arn: std::option::Option<std::string::String>,
     /// <p>The shots used for the task.</p>
+    #[doc(hidden)]
     pub shots: std::option::Option<i64>,
     /// <p>The S3 bucket where the task result file is stored..</p>
+    #[doc(hidden)]
     pub output_s3_bucket: std::option::Option<std::string::String>,
     /// <p>The folder in the S3 bucket where the task result file is stored.</p>
+    #[doc(hidden)]
     pub output_s3_directory: std::option::Option<std::string::String>,
     /// <p>The time at which the task was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the task finished.</p>
+    #[doc(hidden)]
     pub ended_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Displays the key, value pairs of tags associated with this quantum task.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -80,11 +89,10 @@ impl std::fmt::Debug for QuantumTaskSummary {
         formatter.finish()
     }
 }
-/// See [`QuantumTaskSummary`](crate::model::QuantumTaskSummary)
+/// See [`QuantumTaskSummary`](crate::model::QuantumTaskSummary).
 pub mod quantum_task_summary {
 
-    /// A builder for [`QuantumTaskSummary`](crate::model::QuantumTaskSummary)
-    #[non_exhaustive]
+    /// A builder for [`QuantumTaskSummary`](crate::model::QuantumTaskSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) quantum_task_arn: std::option::Option<std::string::String>,
@@ -223,7 +231,7 @@ pub mod quantum_task_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`QuantumTaskSummary`](crate::model::QuantumTaskSummary)
+        /// Consumes the builder and constructs a [`QuantumTaskSummary`](crate::model::QuantumTaskSummary).
         pub fn build(self) -> crate::model::QuantumTaskSummary {
             crate::model::QuantumTaskSummary {
                 quantum_task_arn: self.quantum_task_arn,
@@ -240,7 +248,7 @@ pub mod quantum_task_summary {
     }
 }
 impl QuantumTaskSummary {
-    /// Creates a new builder-style object to manufacture [`QuantumTaskSummary`](crate::model::QuantumTaskSummary)
+    /// Creates a new builder-style object to manufacture [`QuantumTaskSummary`](crate::model::QuantumTaskSummary).
     pub fn builder() -> crate::model::quantum_task_summary::Builder {
         crate::model::quantum_task_summary::Builder::default()
     }
@@ -334,10 +342,13 @@ impl AsRef<str> for QuantumTaskStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchQuantumTasksFilter {
     /// <p>The name of the device used for the task.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The values to use for the filter.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An operator to use in the filter.</p>
+    #[doc(hidden)]
     pub operator: std::option::Option<crate::model::SearchQuantumTasksFilterOperator>,
 }
 impl SearchQuantumTasksFilter {
@@ -363,11 +374,10 @@ impl std::fmt::Debug for SearchQuantumTasksFilter {
         formatter.finish()
     }
 }
-/// See [`SearchQuantumTasksFilter`](crate::model::SearchQuantumTasksFilter)
+/// See [`SearchQuantumTasksFilter`](crate::model::SearchQuantumTasksFilter).
 pub mod search_quantum_tasks_filter {
 
-    /// A builder for [`SearchQuantumTasksFilter`](crate::model::SearchQuantumTasksFilter)
-    #[non_exhaustive]
+    /// A builder for [`SearchQuantumTasksFilter`](crate::model::SearchQuantumTasksFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -417,7 +427,7 @@ pub mod search_quantum_tasks_filter {
             self.operator = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchQuantumTasksFilter`](crate::model::SearchQuantumTasksFilter)
+        /// Consumes the builder and constructs a [`SearchQuantumTasksFilter`](crate::model::SearchQuantumTasksFilter).
         pub fn build(self) -> crate::model::SearchQuantumTasksFilter {
             crate::model::SearchQuantumTasksFilter {
                 name: self.name,
@@ -428,7 +438,7 @@ pub mod search_quantum_tasks_filter {
     }
 }
 impl SearchQuantumTasksFilter {
-    /// Creates a new builder-style object to manufacture [`SearchQuantumTasksFilter`](crate::model::SearchQuantumTasksFilter)
+    /// Creates a new builder-style object to manufacture [`SearchQuantumTasksFilter`](crate::model::SearchQuantumTasksFilter).
     pub fn builder() -> crate::model::search_quantum_tasks_filter::Builder {
         crate::model::search_quantum_tasks_filter::Builder::default()
     }
@@ -565,20 +575,28 @@ impl AsRef<str> for CancellationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobSummary {
     /// <p>The status of the Amazon Braket job.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobPrimaryStatus>,
     /// <p>The ARN of the Amazon Braket job.</p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon Braket job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>Provides summary information about the primary device used by an Amazon Braket job.</p>
+    #[doc(hidden)]
     pub device: std::option::Option<std::string::String>,
     /// <p>The date and time that the Amazon Braket job was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the Amazon Braket job was started.</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the Amazon Braket job ended.</p>
+    #[doc(hidden)]
     pub ended_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A tag object that consists of a key and an optional value, used to manage metadata for Amazon Braket resources.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -633,11 +651,10 @@ impl std::fmt::Debug for JobSummary {
         formatter.finish()
     }
 }
-/// See [`JobSummary`](crate::model::JobSummary)
+/// See [`JobSummary`](crate::model::JobSummary).
 pub mod job_summary {
 
-    /// A builder for [`JobSummary`](crate::model::JobSummary)
-    #[non_exhaustive]
+    /// A builder for [`JobSummary`](crate::model::JobSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::JobPrimaryStatus>,
@@ -759,7 +776,7 @@ pub mod job_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobSummary`](crate::model::JobSummary)
+        /// Consumes the builder and constructs a [`JobSummary`](crate::model::JobSummary).
         pub fn build(self) -> crate::model::JobSummary {
             crate::model::JobSummary {
                 status: self.status,
@@ -775,7 +792,7 @@ pub mod job_summary {
     }
 }
 impl JobSummary {
-    /// Creates a new builder-style object to manufacture [`JobSummary`](crate::model::JobSummary)
+    /// Creates a new builder-style object to manufacture [`JobSummary`](crate::model::JobSummary).
     pub fn builder() -> crate::model::job_summary::Builder {
         crate::model::job_summary::Builder::default()
     }
@@ -864,10 +881,13 @@ impl AsRef<str> for JobPrimaryStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchJobsFilter {
     /// <p>The name to use for the jobs filter.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The values to use for the jobs filter.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An operator to use for the jobs filter.</p>
+    #[doc(hidden)]
     pub operator: std::option::Option<crate::model::SearchJobsFilterOperator>,
 }
 impl SearchJobsFilter {
@@ -893,11 +913,10 @@ impl std::fmt::Debug for SearchJobsFilter {
         formatter.finish()
     }
 }
-/// See [`SearchJobsFilter`](crate::model::SearchJobsFilter)
+/// See [`SearchJobsFilter`](crate::model::SearchJobsFilter).
 pub mod search_jobs_filter {
 
-    /// A builder for [`SearchJobsFilter`](crate::model::SearchJobsFilter)
-    #[non_exhaustive]
+    /// A builder for [`SearchJobsFilter`](crate::model::SearchJobsFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -947,7 +966,7 @@ pub mod search_jobs_filter {
             self.operator = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchJobsFilter`](crate::model::SearchJobsFilter)
+        /// Consumes the builder and constructs a [`SearchJobsFilter`](crate::model::SearchJobsFilter).
         pub fn build(self) -> crate::model::SearchJobsFilter {
             crate::model::SearchJobsFilter {
                 name: self.name,
@@ -958,7 +977,7 @@ pub mod search_jobs_filter {
     }
 }
 impl SearchJobsFilter {
-    /// Creates a new builder-style object to manufacture [`SearchJobsFilter`](crate::model::SearchJobsFilter)
+    /// Creates a new builder-style object to manufacture [`SearchJobsFilter`](crate::model::SearchJobsFilter).
     pub fn builder() -> crate::model::search_jobs_filter::Builder {
         crate::model::search_jobs_filter::Builder::default()
     }
@@ -1044,6 +1063,7 @@ impl AsRef<str> for SearchJobsFilterOperator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeviceConfig {
     /// <p>The primary quantum processing unit (QPU) or simulator used to create and run an Amazon Braket job.</p>
+    #[doc(hidden)]
     pub device: std::option::Option<std::string::String>,
 }
 impl DeviceConfig {
@@ -1059,11 +1079,10 @@ impl std::fmt::Debug for DeviceConfig {
         formatter.finish()
     }
 }
-/// See [`DeviceConfig`](crate::model::DeviceConfig)
+/// See [`DeviceConfig`](crate::model::DeviceConfig).
 pub mod device_config {
 
-    /// A builder for [`DeviceConfig`](crate::model::DeviceConfig)
-    #[non_exhaustive]
+    /// A builder for [`DeviceConfig`](crate::model::DeviceConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device: std::option::Option<std::string::String>,
@@ -1079,7 +1098,7 @@ pub mod device_config {
             self.device = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeviceConfig`](crate::model::DeviceConfig)
+        /// Consumes the builder and constructs a [`DeviceConfig`](crate::model::DeviceConfig).
         pub fn build(self) -> crate::model::DeviceConfig {
             crate::model::DeviceConfig {
                 device: self.device,
@@ -1088,7 +1107,7 @@ pub mod device_config {
     }
 }
 impl DeviceConfig {
-    /// Creates a new builder-style object to manufacture [`DeviceConfig`](crate::model::DeviceConfig)
+    /// Creates a new builder-style object to manufacture [`DeviceConfig`](crate::model::DeviceConfig).
     pub fn builder() -> crate::model::device_config::Builder {
         crate::model::device_config::Builder::default()
     }
@@ -1099,10 +1118,13 @@ impl DeviceConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceConfig {
     /// <p>Configures the type resource instances to use while running an Amazon Braket hybrid job.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<crate::model::InstanceType>,
     /// <p>The size of the storage volume, in GB, that user wants to provision.</p>
+    #[doc(hidden)]
     pub volume_size_in_gb: std::option::Option<i32>,
     /// <p>Configures the number of resource instances to use while running an Amazon Braket job on Amazon Braket. The default value is 1.</p>
+    #[doc(hidden)]
     pub instance_count: std::option::Option<i32>,
 }
 impl InstanceConfig {
@@ -1128,11 +1150,10 @@ impl std::fmt::Debug for InstanceConfig {
         formatter.finish()
     }
 }
-/// See [`InstanceConfig`](crate::model::InstanceConfig)
+/// See [`InstanceConfig`](crate::model::InstanceConfig).
 pub mod instance_config {
 
-    /// A builder for [`InstanceConfig`](crate::model::InstanceConfig)
-    #[non_exhaustive]
+    /// A builder for [`InstanceConfig`](crate::model::InstanceConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_type: std::option::Option<crate::model::InstanceType>,
@@ -1173,7 +1194,7 @@ pub mod instance_config {
             self.instance_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceConfig`](crate::model::InstanceConfig)
+        /// Consumes the builder and constructs a [`InstanceConfig`](crate::model::InstanceConfig).
         pub fn build(self) -> crate::model::InstanceConfig {
             crate::model::InstanceConfig {
                 instance_type: self.instance_type,
@@ -1184,7 +1205,7 @@ pub mod instance_config {
     }
 }
 impl InstanceConfig {
-    /// Creates a new builder-style object to manufacture [`InstanceConfig`](crate::model::InstanceConfig)
+    /// Creates a new builder-style object to manufacture [`InstanceConfig`](crate::model::InstanceConfig).
     pub fn builder() -> crate::model::instance_config::Builder {
         crate::model::instance_config::Builder::default()
     }
@@ -1438,6 +1459,7 @@ impl AsRef<str> for InstanceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobStoppingCondition {
     /// <p>The maximum length of time, in seconds, that an Amazon Braket job can run.</p>
+    #[doc(hidden)]
     pub max_runtime_in_seconds: std::option::Option<i32>,
 }
 impl JobStoppingCondition {
@@ -1453,11 +1475,10 @@ impl std::fmt::Debug for JobStoppingCondition {
         formatter.finish()
     }
 }
-/// See [`JobStoppingCondition`](crate::model::JobStoppingCondition)
+/// See [`JobStoppingCondition`](crate::model::JobStoppingCondition).
 pub mod job_stopping_condition {
 
-    /// A builder for [`JobStoppingCondition`](crate::model::JobStoppingCondition)
-    #[non_exhaustive]
+    /// A builder for [`JobStoppingCondition`](crate::model::JobStoppingCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_runtime_in_seconds: std::option::Option<i32>,
@@ -1473,7 +1494,7 @@ pub mod job_stopping_condition {
             self.max_runtime_in_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobStoppingCondition`](crate::model::JobStoppingCondition)
+        /// Consumes the builder and constructs a [`JobStoppingCondition`](crate::model::JobStoppingCondition).
         pub fn build(self) -> crate::model::JobStoppingCondition {
             crate::model::JobStoppingCondition {
                 max_runtime_in_seconds: self.max_runtime_in_seconds,
@@ -1482,7 +1503,7 @@ pub mod job_stopping_condition {
     }
 }
 impl JobStoppingCondition {
-    /// Creates a new builder-style object to manufacture [`JobStoppingCondition`](crate::model::JobStoppingCondition)
+    /// Creates a new builder-style object to manufacture [`JobStoppingCondition`](crate::model::JobStoppingCondition).
     pub fn builder() -> crate::model::job_stopping_condition::Builder {
         crate::model::job_stopping_condition::Builder::default()
     }
@@ -1493,8 +1514,10 @@ impl JobStoppingCondition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobCheckpointConfig {
     /// <p>(Optional) The local directory where checkpoints are written. The default directory is <code>/opt/braket/checkpoints/</code>.</p>
+    #[doc(hidden)]
     pub local_path: std::option::Option<std::string::String>,
     /// <p>Identifies the S3 path where you want Amazon Braket to store checkpoints. For example, <code>s3://bucket-name/key-name-prefix</code>.</p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
 }
 impl JobCheckpointConfig {
@@ -1515,11 +1538,10 @@ impl std::fmt::Debug for JobCheckpointConfig {
         formatter.finish()
     }
 }
-/// See [`JobCheckpointConfig`](crate::model::JobCheckpointConfig)
+/// See [`JobCheckpointConfig`](crate::model::JobCheckpointConfig).
 pub mod job_checkpoint_config {
 
-    /// A builder for [`JobCheckpointConfig`](crate::model::JobCheckpointConfig)
-    #[non_exhaustive]
+    /// A builder for [`JobCheckpointConfig`](crate::model::JobCheckpointConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) local_path: std::option::Option<std::string::String>,
@@ -1546,7 +1568,7 @@ pub mod job_checkpoint_config {
             self.s3_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobCheckpointConfig`](crate::model::JobCheckpointConfig)
+        /// Consumes the builder and constructs a [`JobCheckpointConfig`](crate::model::JobCheckpointConfig).
         pub fn build(self) -> crate::model::JobCheckpointConfig {
             crate::model::JobCheckpointConfig {
                 local_path: self.local_path,
@@ -1556,7 +1578,7 @@ pub mod job_checkpoint_config {
     }
 }
 impl JobCheckpointConfig {
-    /// Creates a new builder-style object to manufacture [`JobCheckpointConfig`](crate::model::JobCheckpointConfig)
+    /// Creates a new builder-style object to manufacture [`JobCheckpointConfig`](crate::model::JobCheckpointConfig).
     pub fn builder() -> crate::model::job_checkpoint_config::Builder {
         crate::model::job_checkpoint_config::Builder::default()
     }
@@ -1567,8 +1589,10 @@ impl JobCheckpointConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobOutputDataConfig {
     /// <p>The AWS Key Management Service (AWS KMS) key that Amazon Braket uses to encrypt the job training artifacts at rest using Amazon S3 server-side encryption.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>Identifies the S3 path where you want Amazon Braket to store the job training artifacts. For example, <code>s3://bucket-name/key-name-prefix</code>.</p>
+    #[doc(hidden)]
     pub s3_path: std::option::Option<std::string::String>,
 }
 impl JobOutputDataConfig {
@@ -1589,11 +1613,10 @@ impl std::fmt::Debug for JobOutputDataConfig {
         formatter.finish()
     }
 }
-/// See [`JobOutputDataConfig`](crate::model::JobOutputDataConfig)
+/// See [`JobOutputDataConfig`](crate::model::JobOutputDataConfig).
 pub mod job_output_data_config {
 
-    /// A builder for [`JobOutputDataConfig`](crate::model::JobOutputDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`JobOutputDataConfig`](crate::model::JobOutputDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) kms_key_id: std::option::Option<std::string::String>,
@@ -1620,7 +1643,7 @@ pub mod job_output_data_config {
             self.s3_path = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobOutputDataConfig`](crate::model::JobOutputDataConfig)
+        /// Consumes the builder and constructs a [`JobOutputDataConfig`](crate::model::JobOutputDataConfig).
         pub fn build(self) -> crate::model::JobOutputDataConfig {
             crate::model::JobOutputDataConfig {
                 kms_key_id: self.kms_key_id,
@@ -1630,7 +1653,7 @@ pub mod job_output_data_config {
     }
 }
 impl JobOutputDataConfig {
-    /// Creates a new builder-style object to manufacture [`JobOutputDataConfig`](crate::model::JobOutputDataConfig)
+    /// Creates a new builder-style object to manufacture [`JobOutputDataConfig`](crate::model::JobOutputDataConfig).
     pub fn builder() -> crate::model::job_output_data_config::Builder {
         crate::model::job_output_data_config::Builder::default()
     }
@@ -1641,10 +1664,13 @@ impl JobOutputDataConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputFileConfig {
     /// <p>A named input source that an Amazon Braket job can consume.</p>
+    #[doc(hidden)]
     pub channel_name: std::option::Option<std::string::String>,
     /// <p>The MIME type of the data.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The location of the channel data.</p>
+    #[doc(hidden)]
     pub data_source: std::option::Option<crate::model::DataSource>,
 }
 impl InputFileConfig {
@@ -1670,11 +1696,10 @@ impl std::fmt::Debug for InputFileConfig {
         formatter.finish()
     }
 }
-/// See [`InputFileConfig`](crate::model::InputFileConfig)
+/// See [`InputFileConfig`](crate::model::InputFileConfig).
 pub mod input_file_config {
 
-    /// A builder for [`InputFileConfig`](crate::model::InputFileConfig)
-    #[non_exhaustive]
+    /// A builder for [`InputFileConfig`](crate::model::InputFileConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_name: std::option::Option<std::string::String>,
@@ -1715,7 +1740,7 @@ pub mod input_file_config {
             self.data_source = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputFileConfig`](crate::model::InputFileConfig)
+        /// Consumes the builder and constructs a [`InputFileConfig`](crate::model::InputFileConfig).
         pub fn build(self) -> crate::model::InputFileConfig {
             crate::model::InputFileConfig {
                 channel_name: self.channel_name,
@@ -1726,7 +1751,7 @@ pub mod input_file_config {
     }
 }
 impl InputFileConfig {
-    /// Creates a new builder-style object to manufacture [`InputFileConfig`](crate::model::InputFileConfig)
+    /// Creates a new builder-style object to manufacture [`InputFileConfig`](crate::model::InputFileConfig).
     pub fn builder() -> crate::model::input_file_config::Builder {
         crate::model::input_file_config::Builder::default()
     }
@@ -1737,6 +1762,7 @@ impl InputFileConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataSource {
     /// <p>Information about the data stored in Amazon S3 used by the Amazon Braket job.</p>
+    #[doc(hidden)]
     pub s3_data_source: std::option::Option<crate::model::S3DataSource>,
 }
 impl DataSource {
@@ -1752,11 +1778,10 @@ impl std::fmt::Debug for DataSource {
         formatter.finish()
     }
 }
-/// See [`DataSource`](crate::model::DataSource)
+/// See [`DataSource`](crate::model::DataSource).
 pub mod data_source {
 
-    /// A builder for [`DataSource`](crate::model::DataSource)
-    #[non_exhaustive]
+    /// A builder for [`DataSource`](crate::model::DataSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_data_source: std::option::Option<crate::model::S3DataSource>,
@@ -1775,7 +1800,7 @@ pub mod data_source {
             self.s3_data_source = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataSource`](crate::model::DataSource)
+        /// Consumes the builder and constructs a [`DataSource`](crate::model::DataSource).
         pub fn build(self) -> crate::model::DataSource {
             crate::model::DataSource {
                 s3_data_source: self.s3_data_source,
@@ -1784,7 +1809,7 @@ pub mod data_source {
     }
 }
 impl DataSource {
-    /// Creates a new builder-style object to manufacture [`DataSource`](crate::model::DataSource)
+    /// Creates a new builder-style object to manufacture [`DataSource`](crate::model::DataSource).
     pub fn builder() -> crate::model::data_source::Builder {
         crate::model::data_source::Builder::default()
     }
@@ -1795,6 +1820,7 @@ impl DataSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3DataSource {
     /// <p>Depending on the value specified for the <code>S3DataType</code>, identifies either a key name prefix or a manifest that locates the S3 data source.</p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
 }
 impl S3DataSource {
@@ -1810,11 +1836,10 @@ impl std::fmt::Debug for S3DataSource {
         formatter.finish()
     }
 }
-/// See [`S3DataSource`](crate::model::S3DataSource)
+/// See [`S3DataSource`](crate::model::S3DataSource).
 pub mod s3_data_source {
 
-    /// A builder for [`S3DataSource`](crate::model::S3DataSource)
-    #[non_exhaustive]
+    /// A builder for [`S3DataSource`](crate::model::S3DataSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -1830,7 +1855,7 @@ pub mod s3_data_source {
             self.s3_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3DataSource`](crate::model::S3DataSource)
+        /// Consumes the builder and constructs a [`S3DataSource`](crate::model::S3DataSource).
         pub fn build(self) -> crate::model::S3DataSource {
             crate::model::S3DataSource {
                 s3_uri: self.s3_uri,
@@ -1839,7 +1864,7 @@ pub mod s3_data_source {
     }
 }
 impl S3DataSource {
-    /// Creates a new builder-style object to manufacture [`S3DataSource`](crate::model::S3DataSource)
+    /// Creates a new builder-style object to manufacture [`S3DataSource`](crate::model::S3DataSource).
     pub fn builder() -> crate::model::s3_data_source::Builder {
         crate::model::s3_data_source::Builder::default()
     }
@@ -1850,8 +1875,10 @@ impl S3DataSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AlgorithmSpecification {
     /// <p>Configures the paths to the Python scripts used for entry and training.</p>
+    #[doc(hidden)]
     pub script_mode_config: std::option::Option<crate::model::ScriptModeConfig>,
     /// <p>The container image used to create an Amazon Braket job.</p>
+    #[doc(hidden)]
     pub container_image: std::option::Option<crate::model::ContainerImage>,
 }
 impl AlgorithmSpecification {
@@ -1872,11 +1899,10 @@ impl std::fmt::Debug for AlgorithmSpecification {
         formatter.finish()
     }
 }
-/// See [`AlgorithmSpecification`](crate::model::AlgorithmSpecification)
+/// See [`AlgorithmSpecification`](crate::model::AlgorithmSpecification).
 pub mod algorithm_specification {
 
-    /// A builder for [`AlgorithmSpecification`](crate::model::AlgorithmSpecification)
-    #[non_exhaustive]
+    /// A builder for [`AlgorithmSpecification`](crate::model::AlgorithmSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) script_mode_config: std::option::Option<crate::model::ScriptModeConfig>,
@@ -1909,7 +1935,7 @@ pub mod algorithm_specification {
             self.container_image = input;
             self
         }
-        /// Consumes the builder and constructs a [`AlgorithmSpecification`](crate::model::AlgorithmSpecification)
+        /// Consumes the builder and constructs a [`AlgorithmSpecification`](crate::model::AlgorithmSpecification).
         pub fn build(self) -> crate::model::AlgorithmSpecification {
             crate::model::AlgorithmSpecification {
                 script_mode_config: self.script_mode_config,
@@ -1919,7 +1945,7 @@ pub mod algorithm_specification {
     }
 }
 impl AlgorithmSpecification {
-    /// Creates a new builder-style object to manufacture [`AlgorithmSpecification`](crate::model::AlgorithmSpecification)
+    /// Creates a new builder-style object to manufacture [`AlgorithmSpecification`](crate::model::AlgorithmSpecification).
     pub fn builder() -> crate::model::algorithm_specification::Builder {
         crate::model::algorithm_specification::Builder::default()
     }
@@ -1930,6 +1956,7 @@ impl AlgorithmSpecification {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerImage {
     /// <p>The URI locating the container image.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
 }
 impl ContainerImage {
@@ -1945,11 +1972,10 @@ impl std::fmt::Debug for ContainerImage {
         formatter.finish()
     }
 }
-/// See [`ContainerImage`](crate::model::ContainerImage)
+/// See [`ContainerImage`](crate::model::ContainerImage).
 pub mod container_image {
 
-    /// A builder for [`ContainerImage`](crate::model::ContainerImage)
-    #[non_exhaustive]
+    /// A builder for [`ContainerImage`](crate::model::ContainerImage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) uri: std::option::Option<std::string::String>,
@@ -1965,14 +1991,14 @@ pub mod container_image {
             self.uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerImage`](crate::model::ContainerImage)
+        /// Consumes the builder and constructs a [`ContainerImage`](crate::model::ContainerImage).
         pub fn build(self) -> crate::model::ContainerImage {
             crate::model::ContainerImage { uri: self.uri }
         }
     }
 }
 impl ContainerImage {
-    /// Creates a new builder-style object to manufacture [`ContainerImage`](crate::model::ContainerImage)
+    /// Creates a new builder-style object to manufacture [`ContainerImage`](crate::model::ContainerImage).
     pub fn builder() -> crate::model::container_image::Builder {
         crate::model::container_image::Builder::default()
     }
@@ -1983,10 +2009,13 @@ impl ContainerImage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScriptModeConfig {
     /// <p>The path to the Python script that serves as the entry point for an Amazon Braket job.</p>
+    #[doc(hidden)]
     pub entry_point: std::option::Option<std::string::String>,
     /// <p>The URI that specifies the S3 path to the Python script module that contains the training script used by an Amazon Braket job.</p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p>The type of compression used by the Python scripts for an Amazon Braket job.</p>
+    #[doc(hidden)]
     pub compression_type: std::option::Option<crate::model::CompressionType>,
 }
 impl ScriptModeConfig {
@@ -2012,11 +2041,10 @@ impl std::fmt::Debug for ScriptModeConfig {
         formatter.finish()
     }
 }
-/// See [`ScriptModeConfig`](crate::model::ScriptModeConfig)
+/// See [`ScriptModeConfig`](crate::model::ScriptModeConfig).
 pub mod script_mode_config {
 
-    /// A builder for [`ScriptModeConfig`](crate::model::ScriptModeConfig)
-    #[non_exhaustive]
+    /// A builder for [`ScriptModeConfig`](crate::model::ScriptModeConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entry_point: std::option::Option<std::string::String>,
@@ -2057,7 +2085,7 @@ pub mod script_mode_config {
             self.compression_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScriptModeConfig`](crate::model::ScriptModeConfig)
+        /// Consumes the builder and constructs a [`ScriptModeConfig`](crate::model::ScriptModeConfig).
         pub fn build(self) -> crate::model::ScriptModeConfig {
             crate::model::ScriptModeConfig {
                 entry_point: self.entry_point,
@@ -2068,7 +2096,7 @@ pub mod script_mode_config {
     }
 }
 impl ScriptModeConfig {
-    /// Creates a new builder-style object to manufacture [`ScriptModeConfig`](crate::model::ScriptModeConfig)
+    /// Creates a new builder-style object to manufacture [`ScriptModeConfig`](crate::model::ScriptModeConfig).
     pub fn builder() -> crate::model::script_mode_config::Builder {
         crate::model::script_mode_config::Builder::default()
     }
@@ -2134,10 +2162,13 @@ impl AsRef<str> for CompressionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobEventDetails {
     /// <p>The type of event that occurred related to the Amazon Braket job.</p>
+    #[doc(hidden)]
     pub event_type: std::option::Option<crate::model::JobEventType>,
     /// <p>TThe type of event that occurred related to the Amazon Braket job.</p>
+    #[doc(hidden)]
     pub time_of_event: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A message describing the event that occurred related to the Amazon Braket job.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl JobEventDetails {
@@ -2163,11 +2194,10 @@ impl std::fmt::Debug for JobEventDetails {
         formatter.finish()
     }
 }
-/// See [`JobEventDetails`](crate::model::JobEventDetails)
+/// See [`JobEventDetails`](crate::model::JobEventDetails).
 pub mod job_event_details {
 
-    /// A builder for [`JobEventDetails`](crate::model::JobEventDetails)
-    #[non_exhaustive]
+    /// A builder for [`JobEventDetails`](crate::model::JobEventDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_type: std::option::Option<crate::model::JobEventType>,
@@ -2211,7 +2241,7 @@ pub mod job_event_details {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobEventDetails`](crate::model::JobEventDetails)
+        /// Consumes the builder and constructs a [`JobEventDetails`](crate::model::JobEventDetails).
         pub fn build(self) -> crate::model::JobEventDetails {
             crate::model::JobEventDetails {
                 event_type: self.event_type,
@@ -2222,7 +2252,7 @@ pub mod job_event_details {
     }
 }
 impl JobEventDetails {
-    /// Creates a new builder-style object to manufacture [`JobEventDetails`](crate::model::JobEventDetails)
+    /// Creates a new builder-style object to manufacture [`JobEventDetails`](crate::model::JobEventDetails).
     pub fn builder() -> crate::model::job_event_details::Builder {
         crate::model::job_event_details::Builder::default()
     }
@@ -2336,14 +2366,19 @@ impl AsRef<str> for JobEventType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeviceSummary {
     /// <p>The ARN of the device.</p>
+    #[doc(hidden)]
     pub device_arn: std::option::Option<std::string::String>,
     /// <p>The name of the device.</p>
+    #[doc(hidden)]
     pub device_name: std::option::Option<std::string::String>,
     /// <p>The provider of the device.</p>
+    #[doc(hidden)]
     pub provider_name: std::option::Option<std::string::String>,
     /// <p>The type of the device.</p>
+    #[doc(hidden)]
     pub device_type: std::option::Option<crate::model::DeviceType>,
     /// <p>The status of the device.</p>
+    #[doc(hidden)]
     pub device_status: std::option::Option<crate::model::DeviceStatus>,
 }
 impl DeviceSummary {
@@ -2379,11 +2414,10 @@ impl std::fmt::Debug for DeviceSummary {
         formatter.finish()
     }
 }
-/// See [`DeviceSummary`](crate::model::DeviceSummary)
+/// See [`DeviceSummary`](crate::model::DeviceSummary).
 pub mod device_summary {
 
-    /// A builder for [`DeviceSummary`](crate::model::DeviceSummary)
-    #[non_exhaustive]
+    /// A builder for [`DeviceSummary`](crate::model::DeviceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_arn: std::option::Option<std::string::String>,
@@ -2452,7 +2486,7 @@ pub mod device_summary {
             self.device_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeviceSummary`](crate::model::DeviceSummary)
+        /// Consumes the builder and constructs a [`DeviceSummary`](crate::model::DeviceSummary).
         pub fn build(self) -> crate::model::DeviceSummary {
             crate::model::DeviceSummary {
                 device_arn: self.device_arn,
@@ -2465,7 +2499,7 @@ pub mod device_summary {
     }
 }
 impl DeviceSummary {
-    /// Creates a new builder-style object to manufacture [`DeviceSummary`](crate::model::DeviceSummary)
+    /// Creates a new builder-style object to manufacture [`DeviceSummary`](crate::model::DeviceSummary).
     pub fn builder() -> crate::model::device_summary::Builder {
         crate::model::device_summary::Builder::default()
     }
@@ -2590,8 +2624,10 @@ impl AsRef<str> for DeviceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchDevicesFilter {
     /// <p>The name to use to filter results.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The values to use to filter results.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SearchDevicesFilter {
@@ -2612,11 +2648,10 @@ impl std::fmt::Debug for SearchDevicesFilter {
         formatter.finish()
     }
 }
-/// See [`SearchDevicesFilter`](crate::model::SearchDevicesFilter)
+/// See [`SearchDevicesFilter`](crate::model::SearchDevicesFilter).
 pub mod search_devices_filter {
 
-    /// A builder for [`SearchDevicesFilter`](crate::model::SearchDevicesFilter)
-    #[non_exhaustive]
+    /// A builder for [`SearchDevicesFilter`](crate::model::SearchDevicesFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2652,7 +2687,7 @@ pub mod search_devices_filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchDevicesFilter`](crate::model::SearchDevicesFilter)
+        /// Consumes the builder and constructs a [`SearchDevicesFilter`](crate::model::SearchDevicesFilter).
         pub fn build(self) -> crate::model::SearchDevicesFilter {
             crate::model::SearchDevicesFilter {
                 name: self.name,
@@ -2662,7 +2697,7 @@ pub mod search_devices_filter {
     }
 }
 impl SearchDevicesFilter {
-    /// Creates a new builder-style object to manufacture [`SearchDevicesFilter`](crate::model::SearchDevicesFilter)
+    /// Creates a new builder-style object to manufacture [`SearchDevicesFilter`](crate::model::SearchDevicesFilter).
     pub fn builder() -> crate::model::search_devices_filter::Builder {
         crate::model::search_devices_filter::Builder::default()
     }

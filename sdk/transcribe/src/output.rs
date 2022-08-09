@@ -4,11 +4,14 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateVocabularyFilterOutput {
     /// <p>The name of the updated custom vocabulary filter.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_name: std::option::Option<std::string::String>,
     /// <p>The language code you selected for your vocabulary filter.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The date and time the specified vocabulary filter was last updated.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl UpdateVocabularyFilterOutput {
@@ -35,11 +38,10 @@ impl std::fmt::Debug for UpdateVocabularyFilterOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateVocabularyFilterOutput`](crate::output::UpdateVocabularyFilterOutput)
+/// See [`UpdateVocabularyFilterOutput`](crate::output::UpdateVocabularyFilterOutput).
 pub mod update_vocabulary_filter_output {
 
-    /// A builder for [`UpdateVocabularyFilterOutput`](crate::output::UpdateVocabularyFilterOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateVocabularyFilterOutput`](crate::output::UpdateVocabularyFilterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_filter_name: std::option::Option<std::string::String>,
@@ -88,7 +90,7 @@ pub mod update_vocabulary_filter_output {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateVocabularyFilterOutput`](crate::output::UpdateVocabularyFilterOutput)
+        /// Consumes the builder and constructs a [`UpdateVocabularyFilterOutput`](crate::output::UpdateVocabularyFilterOutput).
         pub fn build(self) -> crate::output::UpdateVocabularyFilterOutput {
             crate::output::UpdateVocabularyFilterOutput {
                 vocabulary_filter_name: self.vocabulary_filter_name,
@@ -99,7 +101,7 @@ pub mod update_vocabulary_filter_output {
     }
 }
 impl UpdateVocabularyFilterOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateVocabularyFilterOutput`](crate::output::UpdateVocabularyFilterOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateVocabularyFilterOutput`](crate::output::UpdateVocabularyFilterOutput).
     pub fn builder() -> crate::output::update_vocabulary_filter_output::Builder {
         crate::output::update_vocabulary_filter_output::Builder::default()
     }
@@ -110,13 +112,17 @@ impl UpdateVocabularyFilterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateVocabularyOutput {
     /// <p>The name of the updated custom vocabulary.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
     /// <p>The language code you selected for your custom vocabulary.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The date and time the specified vocabulary was last updated.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The processing state of your custom vocabulary. If the state is <code>READY</code>, you can use the vocabulary in a <code>StartTranscriptionJob</code> request.</p>
+    #[doc(hidden)]
     pub vocabulary_state: std::option::Option<crate::model::VocabularyState>,
 }
 impl UpdateVocabularyOutput {
@@ -148,11 +154,10 @@ impl std::fmt::Debug for UpdateVocabularyOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateVocabularyOutput`](crate::output::UpdateVocabularyOutput)
+/// See [`UpdateVocabularyOutput`](crate::output::UpdateVocabularyOutput).
 pub mod update_vocabulary_output {
 
-    /// A builder for [`UpdateVocabularyOutput`](crate::output::UpdateVocabularyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateVocabularyOutput`](crate::output::UpdateVocabularyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_name: std::option::Option<std::string::String>,
@@ -215,7 +220,7 @@ pub mod update_vocabulary_output {
             self.vocabulary_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateVocabularyOutput`](crate::output::UpdateVocabularyOutput)
+        /// Consumes the builder and constructs a [`UpdateVocabularyOutput`](crate::output::UpdateVocabularyOutput).
         pub fn build(self) -> crate::output::UpdateVocabularyOutput {
             crate::output::UpdateVocabularyOutput {
                 vocabulary_name: self.vocabulary_name,
@@ -227,7 +232,7 @@ pub mod update_vocabulary_output {
     }
 }
 impl UpdateVocabularyOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateVocabularyOutput`](crate::output::UpdateVocabularyOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateVocabularyOutput`](crate::output::UpdateVocabularyOutput).
     pub fn builder() -> crate::output::update_vocabulary_output::Builder {
         crate::output::update_vocabulary_output::Builder::default()
     }
@@ -238,13 +243,17 @@ impl UpdateVocabularyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateMedicalVocabularyOutput {
     /// <p>The name of the updated custom medical vocabulary.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
     /// <p>The language code you selected for your medical vocabulary. US English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The date and time the specified custom medical vocabulary was last updated.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The processing state of your custom medical vocabulary. If the state is <code>READY</code>, you can use the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.</p>
+    #[doc(hidden)]
     pub vocabulary_state: std::option::Option<crate::model::VocabularyState>,
 }
 impl UpdateMedicalVocabularyOutput {
@@ -276,11 +285,10 @@ impl std::fmt::Debug for UpdateMedicalVocabularyOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateMedicalVocabularyOutput`](crate::output::UpdateMedicalVocabularyOutput)
+/// See [`UpdateMedicalVocabularyOutput`](crate::output::UpdateMedicalVocabularyOutput).
 pub mod update_medical_vocabulary_output {
 
-    /// A builder for [`UpdateMedicalVocabularyOutput`](crate::output::UpdateMedicalVocabularyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateMedicalVocabularyOutput`](crate::output::UpdateMedicalVocabularyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_name: std::option::Option<std::string::String>,
@@ -343,7 +351,7 @@ pub mod update_medical_vocabulary_output {
             self.vocabulary_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateMedicalVocabularyOutput`](crate::output::UpdateMedicalVocabularyOutput)
+        /// Consumes the builder and constructs a [`UpdateMedicalVocabularyOutput`](crate::output::UpdateMedicalVocabularyOutput).
         pub fn build(self) -> crate::output::UpdateMedicalVocabularyOutput {
             crate::output::UpdateMedicalVocabularyOutput {
                 vocabulary_name: self.vocabulary_name,
@@ -355,7 +363,7 @@ pub mod update_medical_vocabulary_output {
     }
 }
 impl UpdateMedicalVocabularyOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateMedicalVocabularyOutput`](crate::output::UpdateMedicalVocabularyOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateMedicalVocabularyOutput`](crate::output::UpdateMedicalVocabularyOutput).
     pub fn builder() -> crate::output::update_medical_vocabulary_output::Builder {
         crate::output::update_medical_vocabulary_output::Builder::default()
     }
@@ -366,6 +374,7 @@ impl UpdateMedicalVocabularyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateCallAnalyticsCategoryOutput {
     /// <p>Provides you with the properties of the Call Analytics category you specified in your <code>UpdateCallAnalyticsCategory</code> request.</p>
+    #[doc(hidden)]
     pub category_properties: std::option::Option<crate::model::CategoryProperties>,
 }
 impl UpdateCallAnalyticsCategoryOutput {
@@ -381,11 +390,10 @@ impl std::fmt::Debug for UpdateCallAnalyticsCategoryOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateCallAnalyticsCategoryOutput`](crate::output::UpdateCallAnalyticsCategoryOutput)
+/// See [`UpdateCallAnalyticsCategoryOutput`](crate::output::UpdateCallAnalyticsCategoryOutput).
 pub mod update_call_analytics_category_output {
 
-    /// A builder for [`UpdateCallAnalyticsCategoryOutput`](crate::output::UpdateCallAnalyticsCategoryOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateCallAnalyticsCategoryOutput`](crate::output::UpdateCallAnalyticsCategoryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) category_properties: std::option::Option<crate::model::CategoryProperties>,
@@ -404,7 +412,7 @@ pub mod update_call_analytics_category_output {
             self.category_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateCallAnalyticsCategoryOutput`](crate::output::UpdateCallAnalyticsCategoryOutput)
+        /// Consumes the builder and constructs a [`UpdateCallAnalyticsCategoryOutput`](crate::output::UpdateCallAnalyticsCategoryOutput).
         pub fn build(self) -> crate::output::UpdateCallAnalyticsCategoryOutput {
             crate::output::UpdateCallAnalyticsCategoryOutput {
                 category_properties: self.category_properties,
@@ -413,7 +421,7 @@ pub mod update_call_analytics_category_output {
     }
 }
 impl UpdateCallAnalyticsCategoryOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateCallAnalyticsCategoryOutput`](crate::output::UpdateCallAnalyticsCategoryOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateCallAnalyticsCategoryOutput`](crate::output::UpdateCallAnalyticsCategoryOutput).
     pub fn builder() -> crate::output::update_call_analytics_category_output::Builder {
         crate::output::update_call_analytics_category_output::Builder::default()
     }
@@ -429,22 +437,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -460,22 +467,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -486,6 +492,7 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartTranscriptionJobOutput {
     /// <p>Provides detailed information about the current transcription job, including job status and, if applicable, failure reason.</p>
+    #[doc(hidden)]
     pub transcription_job: std::option::Option<crate::model::TranscriptionJob>,
 }
 impl StartTranscriptionJobOutput {
@@ -501,11 +508,10 @@ impl std::fmt::Debug for StartTranscriptionJobOutput {
         formatter.finish()
     }
 }
-/// See [`StartTranscriptionJobOutput`](crate::output::StartTranscriptionJobOutput)
+/// See [`StartTranscriptionJobOutput`](crate::output::StartTranscriptionJobOutput).
 pub mod start_transcription_job_output {
 
-    /// A builder for [`StartTranscriptionJobOutput`](crate::output::StartTranscriptionJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartTranscriptionJobOutput`](crate::output::StartTranscriptionJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transcription_job: std::option::Option<crate::model::TranscriptionJob>,
@@ -524,7 +530,7 @@ pub mod start_transcription_job_output {
             self.transcription_job = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartTranscriptionJobOutput`](crate::output::StartTranscriptionJobOutput)
+        /// Consumes the builder and constructs a [`StartTranscriptionJobOutput`](crate::output::StartTranscriptionJobOutput).
         pub fn build(self) -> crate::output::StartTranscriptionJobOutput {
             crate::output::StartTranscriptionJobOutput {
                 transcription_job: self.transcription_job,
@@ -533,7 +539,7 @@ pub mod start_transcription_job_output {
     }
 }
 impl StartTranscriptionJobOutput {
-    /// Creates a new builder-style object to manufacture [`StartTranscriptionJobOutput`](crate::output::StartTranscriptionJobOutput)
+    /// Creates a new builder-style object to manufacture [`StartTranscriptionJobOutput`](crate::output::StartTranscriptionJobOutput).
     pub fn builder() -> crate::output::start_transcription_job_output::Builder {
         crate::output::start_transcription_job_output::Builder::default()
     }
@@ -544,6 +550,7 @@ impl StartTranscriptionJobOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartMedicalTranscriptionJobOutput {
     /// <p>Provides detailed information about the current medical transcription job, including job status and, if applicable, failure reason.</p>
+    #[doc(hidden)]
     pub medical_transcription_job: std::option::Option<crate::model::MedicalTranscriptionJob>,
 }
 impl StartMedicalTranscriptionJobOutput {
@@ -561,11 +568,10 @@ impl std::fmt::Debug for StartMedicalTranscriptionJobOutput {
         formatter.finish()
     }
 }
-/// See [`StartMedicalTranscriptionJobOutput`](crate::output::StartMedicalTranscriptionJobOutput)
+/// See [`StartMedicalTranscriptionJobOutput`](crate::output::StartMedicalTranscriptionJobOutput).
 pub mod start_medical_transcription_job_output {
 
-    /// A builder for [`StartMedicalTranscriptionJobOutput`](crate::output::StartMedicalTranscriptionJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartMedicalTranscriptionJobOutput`](crate::output::StartMedicalTranscriptionJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) medical_transcription_job:
@@ -588,7 +594,7 @@ pub mod start_medical_transcription_job_output {
             self.medical_transcription_job = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartMedicalTranscriptionJobOutput`](crate::output::StartMedicalTranscriptionJobOutput)
+        /// Consumes the builder and constructs a [`StartMedicalTranscriptionJobOutput`](crate::output::StartMedicalTranscriptionJobOutput).
         pub fn build(self) -> crate::output::StartMedicalTranscriptionJobOutput {
             crate::output::StartMedicalTranscriptionJobOutput {
                 medical_transcription_job: self.medical_transcription_job,
@@ -597,7 +603,7 @@ pub mod start_medical_transcription_job_output {
     }
 }
 impl StartMedicalTranscriptionJobOutput {
-    /// Creates a new builder-style object to manufacture [`StartMedicalTranscriptionJobOutput`](crate::output::StartMedicalTranscriptionJobOutput)
+    /// Creates a new builder-style object to manufacture [`StartMedicalTranscriptionJobOutput`](crate::output::StartMedicalTranscriptionJobOutput).
     pub fn builder() -> crate::output::start_medical_transcription_job_output::Builder {
         crate::output::start_medical_transcription_job_output::Builder::default()
     }
@@ -608,6 +614,7 @@ impl StartMedicalTranscriptionJobOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartCallAnalyticsJobOutput {
     /// <p>Provides detailed information about the current Call Analytics job, including job status and, if applicable, failure reason.</p>
+    #[doc(hidden)]
     pub call_analytics_job: std::option::Option<crate::model::CallAnalyticsJob>,
 }
 impl StartCallAnalyticsJobOutput {
@@ -623,11 +630,10 @@ impl std::fmt::Debug for StartCallAnalyticsJobOutput {
         formatter.finish()
     }
 }
-/// See [`StartCallAnalyticsJobOutput`](crate::output::StartCallAnalyticsJobOutput)
+/// See [`StartCallAnalyticsJobOutput`](crate::output::StartCallAnalyticsJobOutput).
 pub mod start_call_analytics_job_output {
 
-    /// A builder for [`StartCallAnalyticsJobOutput`](crate::output::StartCallAnalyticsJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartCallAnalyticsJobOutput`](crate::output::StartCallAnalyticsJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) call_analytics_job: std::option::Option<crate::model::CallAnalyticsJob>,
@@ -646,7 +652,7 @@ pub mod start_call_analytics_job_output {
             self.call_analytics_job = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartCallAnalyticsJobOutput`](crate::output::StartCallAnalyticsJobOutput)
+        /// Consumes the builder and constructs a [`StartCallAnalyticsJobOutput`](crate::output::StartCallAnalyticsJobOutput).
         pub fn build(self) -> crate::output::StartCallAnalyticsJobOutput {
             crate::output::StartCallAnalyticsJobOutput {
                 call_analytics_job: self.call_analytics_job,
@@ -655,7 +661,7 @@ pub mod start_call_analytics_job_output {
     }
 }
 impl StartCallAnalyticsJobOutput {
-    /// Creates a new builder-style object to manufacture [`StartCallAnalyticsJobOutput`](crate::output::StartCallAnalyticsJobOutput)
+    /// Creates a new builder-style object to manufacture [`StartCallAnalyticsJobOutput`](crate::output::StartCallAnalyticsJobOutput).
     pub fn builder() -> crate::output::start_call_analytics_job_output::Builder {
         crate::output::start_call_analytics_job_output::Builder::default()
     }
@@ -666,8 +672,10 @@ impl StartCallAnalyticsJobOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListVocabularyFiltersOutput {
     /// <p>If <code>NextToken</code> is present in your response, it indicates that not all results are displayed. To view the next set of results, copy the string associated with the <code>NextToken</code> parameter in your results output, then run your request again including <code>NextToken</code> with the value of the copied string. Repeat as needed to view all your results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Provides information about the custom vocabulary filters that match the criteria specified in your request.</p>
+    #[doc(hidden)]
     pub vocabulary_filters: std::option::Option<std::vec::Vec<crate::model::VocabularyFilterInfo>>,
 }
 impl ListVocabularyFiltersOutput {
@@ -688,11 +696,10 @@ impl std::fmt::Debug for ListVocabularyFiltersOutput {
         formatter.finish()
     }
 }
-/// See [`ListVocabularyFiltersOutput`](crate::output::ListVocabularyFiltersOutput)
+/// See [`ListVocabularyFiltersOutput`](crate::output::ListVocabularyFiltersOutput).
 pub mod list_vocabulary_filters_output {
 
-    /// A builder for [`ListVocabularyFiltersOutput`](crate::output::ListVocabularyFiltersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListVocabularyFiltersOutput`](crate::output::ListVocabularyFiltersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -729,7 +736,7 @@ pub mod list_vocabulary_filters_output {
             self.vocabulary_filters = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListVocabularyFiltersOutput`](crate::output::ListVocabularyFiltersOutput)
+        /// Consumes the builder and constructs a [`ListVocabularyFiltersOutput`](crate::output::ListVocabularyFiltersOutput).
         pub fn build(self) -> crate::output::ListVocabularyFiltersOutput {
             crate::output::ListVocabularyFiltersOutput {
                 next_token: self.next_token,
@@ -739,7 +746,7 @@ pub mod list_vocabulary_filters_output {
     }
 }
 impl ListVocabularyFiltersOutput {
-    /// Creates a new builder-style object to manufacture [`ListVocabularyFiltersOutput`](crate::output::ListVocabularyFiltersOutput)
+    /// Creates a new builder-style object to manufacture [`ListVocabularyFiltersOutput`](crate::output::ListVocabularyFiltersOutput).
     pub fn builder() -> crate::output::list_vocabulary_filters_output::Builder {
         crate::output::list_vocabulary_filters_output::Builder::default()
     }
@@ -750,10 +757,13 @@ impl ListVocabularyFiltersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListVocabulariesOutput {
     /// <p>Lists all custom vocabularies that have the status specified in your request. Vocabularies are ordered by creation date, with the newest vocabulary first.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::VocabularyState>,
     /// <p>If <code>NextToken</code> is present in your response, it indicates that not all results are displayed. To view the next set of results, copy the string associated with the <code>NextToken</code> parameter in your results output, then run your request again including <code>NextToken</code> with the value of the copied string. Repeat as needed to view all your results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Provides information about the custom vocabularies that match the criteria specified in your request.</p>
+    #[doc(hidden)]
     pub vocabularies: std::option::Option<std::vec::Vec<crate::model::VocabularyInfo>>,
 }
 impl ListVocabulariesOutput {
@@ -779,11 +789,10 @@ impl std::fmt::Debug for ListVocabulariesOutput {
         formatter.finish()
     }
 }
-/// See [`ListVocabulariesOutput`](crate::output::ListVocabulariesOutput)
+/// See [`ListVocabulariesOutput`](crate::output::ListVocabulariesOutput).
 pub mod list_vocabularies_output {
 
-    /// A builder for [`ListVocabulariesOutput`](crate::output::ListVocabulariesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListVocabulariesOutput`](crate::output::ListVocabulariesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::VocabularyState>,
@@ -833,7 +842,7 @@ pub mod list_vocabularies_output {
             self.vocabularies = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListVocabulariesOutput`](crate::output::ListVocabulariesOutput)
+        /// Consumes the builder and constructs a [`ListVocabulariesOutput`](crate::output::ListVocabulariesOutput).
         pub fn build(self) -> crate::output::ListVocabulariesOutput {
             crate::output::ListVocabulariesOutput {
                 status: self.status,
@@ -844,7 +853,7 @@ pub mod list_vocabularies_output {
     }
 }
 impl ListVocabulariesOutput {
-    /// Creates a new builder-style object to manufacture [`ListVocabulariesOutput`](crate::output::ListVocabulariesOutput)
+    /// Creates a new builder-style object to manufacture [`ListVocabulariesOutput`](crate::output::ListVocabulariesOutput).
     pub fn builder() -> crate::output::list_vocabularies_output::Builder {
         crate::output::list_vocabularies_output::Builder::default()
     }
@@ -855,10 +864,13 @@ impl ListVocabulariesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTranscriptionJobsOutput {
     /// <p>Lists all transcription jobs that have the status specified in your request. Jobs are ordered by creation date, with the newest job first.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TranscriptionJobStatus>,
     /// <p>If <code>NextToken</code> is present in your response, it indicates that not all results are displayed. To view the next set of results, copy the string associated with the <code>NextToken</code> parameter in your results output, then run your request again including <code>NextToken</code> with the value of the copied string. Repeat as needed to view all your results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Provides a summary of information about each result.</p>
+    #[doc(hidden)]
     pub transcription_job_summaries:
         std::option::Option<std::vec::Vec<crate::model::TranscriptionJobSummary>>,
 }
@@ -890,11 +902,10 @@ impl std::fmt::Debug for ListTranscriptionJobsOutput {
         formatter.finish()
     }
 }
-/// See [`ListTranscriptionJobsOutput`](crate::output::ListTranscriptionJobsOutput)
+/// See [`ListTranscriptionJobsOutput`](crate::output::ListTranscriptionJobsOutput).
 pub mod list_transcription_jobs_output {
 
-    /// A builder for [`ListTranscriptionJobsOutput`](crate::output::ListTranscriptionJobsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTranscriptionJobsOutput`](crate::output::ListTranscriptionJobsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::TranscriptionJobStatus>,
@@ -948,7 +959,7 @@ pub mod list_transcription_jobs_output {
             self.transcription_job_summaries = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTranscriptionJobsOutput`](crate::output::ListTranscriptionJobsOutput)
+        /// Consumes the builder and constructs a [`ListTranscriptionJobsOutput`](crate::output::ListTranscriptionJobsOutput).
         pub fn build(self) -> crate::output::ListTranscriptionJobsOutput {
             crate::output::ListTranscriptionJobsOutput {
                 status: self.status,
@@ -959,7 +970,7 @@ pub mod list_transcription_jobs_output {
     }
 }
 impl ListTranscriptionJobsOutput {
-    /// Creates a new builder-style object to manufacture [`ListTranscriptionJobsOutput`](crate::output::ListTranscriptionJobsOutput)
+    /// Creates a new builder-style object to manufacture [`ListTranscriptionJobsOutput`](crate::output::ListTranscriptionJobsOutput).
     pub fn builder() -> crate::output::list_transcription_jobs_output::Builder {
         crate::output::list_transcription_jobs_output::Builder::default()
     }
@@ -970,8 +981,10 @@ impl ListTranscriptionJobsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The Amazon Resource Name (ARN) specified in your request.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>Lists all tags associated with the given transcription job, vocabulary, model, or resource.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ListTagsForResourceOutput {
@@ -992,11 +1005,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -1032,7 +1044,7 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 resource_arn: self.resource_arn,
@@ -1042,7 +1054,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -1053,10 +1065,13 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListMedicalVocabulariesOutput {
     /// <p>Lists all custom medical vocabularies that have the status specified in your request. Vocabularies are ordered by creation date, with the newest vocabulary first.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::VocabularyState>,
     /// <p>If <code>NextToken</code> is present in your response, it indicates that not all results are displayed. To view the next set of results, copy the string associated with the <code>NextToken</code> parameter in your results output, then run your request again including <code>NextToken</code> with the value of the copied string. Repeat as needed to view all your results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Provides information about the custom medical vocabularies that match the criteria specified in your request.</p>
+    #[doc(hidden)]
     pub vocabularies: std::option::Option<std::vec::Vec<crate::model::VocabularyInfo>>,
 }
 impl ListMedicalVocabulariesOutput {
@@ -1082,11 +1097,10 @@ impl std::fmt::Debug for ListMedicalVocabulariesOutput {
         formatter.finish()
     }
 }
-/// See [`ListMedicalVocabulariesOutput`](crate::output::ListMedicalVocabulariesOutput)
+/// See [`ListMedicalVocabulariesOutput`](crate::output::ListMedicalVocabulariesOutput).
 pub mod list_medical_vocabularies_output {
 
-    /// A builder for [`ListMedicalVocabulariesOutput`](crate::output::ListMedicalVocabulariesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListMedicalVocabulariesOutput`](crate::output::ListMedicalVocabulariesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::VocabularyState>,
@@ -1136,7 +1150,7 @@ pub mod list_medical_vocabularies_output {
             self.vocabularies = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListMedicalVocabulariesOutput`](crate::output::ListMedicalVocabulariesOutput)
+        /// Consumes the builder and constructs a [`ListMedicalVocabulariesOutput`](crate::output::ListMedicalVocabulariesOutput).
         pub fn build(self) -> crate::output::ListMedicalVocabulariesOutput {
             crate::output::ListMedicalVocabulariesOutput {
                 status: self.status,
@@ -1147,7 +1161,7 @@ pub mod list_medical_vocabularies_output {
     }
 }
 impl ListMedicalVocabulariesOutput {
-    /// Creates a new builder-style object to manufacture [`ListMedicalVocabulariesOutput`](crate::output::ListMedicalVocabulariesOutput)
+    /// Creates a new builder-style object to manufacture [`ListMedicalVocabulariesOutput`](crate::output::ListMedicalVocabulariesOutput).
     pub fn builder() -> crate::output::list_medical_vocabularies_output::Builder {
         crate::output::list_medical_vocabularies_output::Builder::default()
     }
@@ -1158,10 +1172,13 @@ impl ListMedicalVocabulariesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListMedicalTranscriptionJobsOutput {
     /// <p>Lists all medical transcription jobs that have the status specified in your request. Jobs are ordered by creation date, with the newest job first.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::TranscriptionJobStatus>,
     /// <p>If <code>NextToken</code> is present in your response, it indicates that not all results are displayed. To view the next set of results, copy the string associated with the <code>NextToken</code> parameter in your results output, then run your request again including <code>NextToken</code> with the value of the copied string. Repeat as needed to view all your results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Provides a summary of information about each result.</p>
+    #[doc(hidden)]
     pub medical_transcription_job_summaries:
         std::option::Option<std::vec::Vec<crate::model::MedicalTranscriptionJobSummary>>,
 }
@@ -1193,11 +1210,10 @@ impl std::fmt::Debug for ListMedicalTranscriptionJobsOutput {
         formatter.finish()
     }
 }
-/// See [`ListMedicalTranscriptionJobsOutput`](crate::output::ListMedicalTranscriptionJobsOutput)
+/// See [`ListMedicalTranscriptionJobsOutput`](crate::output::ListMedicalTranscriptionJobsOutput).
 pub mod list_medical_transcription_jobs_output {
 
-    /// A builder for [`ListMedicalTranscriptionJobsOutput`](crate::output::ListMedicalTranscriptionJobsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListMedicalTranscriptionJobsOutput`](crate::output::ListMedicalTranscriptionJobsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::TranscriptionJobStatus>,
@@ -1251,7 +1267,7 @@ pub mod list_medical_transcription_jobs_output {
             self.medical_transcription_job_summaries = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListMedicalTranscriptionJobsOutput`](crate::output::ListMedicalTranscriptionJobsOutput)
+        /// Consumes the builder and constructs a [`ListMedicalTranscriptionJobsOutput`](crate::output::ListMedicalTranscriptionJobsOutput).
         pub fn build(self) -> crate::output::ListMedicalTranscriptionJobsOutput {
             crate::output::ListMedicalTranscriptionJobsOutput {
                 status: self.status,
@@ -1262,7 +1278,7 @@ pub mod list_medical_transcription_jobs_output {
     }
 }
 impl ListMedicalTranscriptionJobsOutput {
-    /// Creates a new builder-style object to manufacture [`ListMedicalTranscriptionJobsOutput`](crate::output::ListMedicalTranscriptionJobsOutput)
+    /// Creates a new builder-style object to manufacture [`ListMedicalTranscriptionJobsOutput`](crate::output::ListMedicalTranscriptionJobsOutput).
     pub fn builder() -> crate::output::list_medical_transcription_jobs_output::Builder {
         crate::output::list_medical_transcription_jobs_output::Builder::default()
     }
@@ -1273,8 +1289,10 @@ impl ListMedicalTranscriptionJobsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListLanguageModelsOutput {
     /// <p>If <code>NextToken</code> is present in your response, it indicates that not all results are displayed. To view the next set of results, copy the string associated with the <code>NextToken</code> parameter in your results output, then run your request again including <code>NextToken</code> with the value of the copied string. Repeat as needed to view all your results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Provides information about the custom language models that match the criteria specified in your request.</p>
+    #[doc(hidden)]
     pub models: std::option::Option<std::vec::Vec<crate::model::LanguageModel>>,
 }
 impl ListLanguageModelsOutput {
@@ -1295,11 +1313,10 @@ impl std::fmt::Debug for ListLanguageModelsOutput {
         formatter.finish()
     }
 }
-/// See [`ListLanguageModelsOutput`](crate::output::ListLanguageModelsOutput)
+/// See [`ListLanguageModelsOutput`](crate::output::ListLanguageModelsOutput).
 pub mod list_language_models_output {
 
-    /// A builder for [`ListLanguageModelsOutput`](crate::output::ListLanguageModelsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListLanguageModelsOutput`](crate::output::ListLanguageModelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1335,7 +1352,7 @@ pub mod list_language_models_output {
             self.models = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListLanguageModelsOutput`](crate::output::ListLanguageModelsOutput)
+        /// Consumes the builder and constructs a [`ListLanguageModelsOutput`](crate::output::ListLanguageModelsOutput).
         pub fn build(self) -> crate::output::ListLanguageModelsOutput {
             crate::output::ListLanguageModelsOutput {
                 next_token: self.next_token,
@@ -1345,7 +1362,7 @@ pub mod list_language_models_output {
     }
 }
 impl ListLanguageModelsOutput {
-    /// Creates a new builder-style object to manufacture [`ListLanguageModelsOutput`](crate::output::ListLanguageModelsOutput)
+    /// Creates a new builder-style object to manufacture [`ListLanguageModelsOutput`](crate::output::ListLanguageModelsOutput).
     pub fn builder() -> crate::output::list_language_models_output::Builder {
         crate::output::list_language_models_output::Builder::default()
     }
@@ -1356,10 +1373,13 @@ impl ListLanguageModelsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListCallAnalyticsJobsOutput {
     /// <p>Lists all Call Analytics jobs that have the status specified in your request. Jobs are ordered by creation date, with the newest job first.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CallAnalyticsJobStatus>,
     /// <p>If <code>NextToken</code> is present in your response, it indicates that not all results are displayed. To view the next set of results, copy the string associated with the <code>NextToken</code> parameter in your results output, then run your request again including <code>NextToken</code> with the value of the copied string. Repeat as needed to view all your results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Provides a summary of information about each result.</p>
+    #[doc(hidden)]
     pub call_analytics_job_summaries:
         std::option::Option<std::vec::Vec<crate::model::CallAnalyticsJobSummary>>,
 }
@@ -1391,11 +1411,10 @@ impl std::fmt::Debug for ListCallAnalyticsJobsOutput {
         formatter.finish()
     }
 }
-/// See [`ListCallAnalyticsJobsOutput`](crate::output::ListCallAnalyticsJobsOutput)
+/// See [`ListCallAnalyticsJobsOutput`](crate::output::ListCallAnalyticsJobsOutput).
 pub mod list_call_analytics_jobs_output {
 
-    /// A builder for [`ListCallAnalyticsJobsOutput`](crate::output::ListCallAnalyticsJobsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListCallAnalyticsJobsOutput`](crate::output::ListCallAnalyticsJobsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::CallAnalyticsJobStatus>,
@@ -1449,7 +1468,7 @@ pub mod list_call_analytics_jobs_output {
             self.call_analytics_job_summaries = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListCallAnalyticsJobsOutput`](crate::output::ListCallAnalyticsJobsOutput)
+        /// Consumes the builder and constructs a [`ListCallAnalyticsJobsOutput`](crate::output::ListCallAnalyticsJobsOutput).
         pub fn build(self) -> crate::output::ListCallAnalyticsJobsOutput {
             crate::output::ListCallAnalyticsJobsOutput {
                 status: self.status,
@@ -1460,7 +1479,7 @@ pub mod list_call_analytics_jobs_output {
     }
 }
 impl ListCallAnalyticsJobsOutput {
-    /// Creates a new builder-style object to manufacture [`ListCallAnalyticsJobsOutput`](crate::output::ListCallAnalyticsJobsOutput)
+    /// Creates a new builder-style object to manufacture [`ListCallAnalyticsJobsOutput`](crate::output::ListCallAnalyticsJobsOutput).
     pub fn builder() -> crate::output::list_call_analytics_jobs_output::Builder {
         crate::output::list_call_analytics_jobs_output::Builder::default()
     }
@@ -1471,8 +1490,10 @@ impl ListCallAnalyticsJobsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListCallAnalyticsCategoriesOutput {
     /// <p>If <code>NextToken</code> is present in your response, it indicates that not all results are displayed. To view the next set of results, copy the string associated with the <code>NextToken</code> parameter in your results output, then run your request again including <code>NextToken</code> with the value of the copied string. Repeat as needed to view all your results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Provides detailed information about your Call Analytics categories, including all the rules associated with each category.</p>
+    #[doc(hidden)]
     pub categories: std::option::Option<std::vec::Vec<crate::model::CategoryProperties>>,
 }
 impl ListCallAnalyticsCategoriesOutput {
@@ -1493,11 +1514,10 @@ impl std::fmt::Debug for ListCallAnalyticsCategoriesOutput {
         formatter.finish()
     }
 }
-/// See [`ListCallAnalyticsCategoriesOutput`](crate::output::ListCallAnalyticsCategoriesOutput)
+/// See [`ListCallAnalyticsCategoriesOutput`](crate::output::ListCallAnalyticsCategoriesOutput).
 pub mod list_call_analytics_categories_output {
 
-    /// A builder for [`ListCallAnalyticsCategoriesOutput`](crate::output::ListCallAnalyticsCategoriesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListCallAnalyticsCategoriesOutput`](crate::output::ListCallAnalyticsCategoriesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1533,7 +1553,7 @@ pub mod list_call_analytics_categories_output {
             self.categories = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListCallAnalyticsCategoriesOutput`](crate::output::ListCallAnalyticsCategoriesOutput)
+        /// Consumes the builder and constructs a [`ListCallAnalyticsCategoriesOutput`](crate::output::ListCallAnalyticsCategoriesOutput).
         pub fn build(self) -> crate::output::ListCallAnalyticsCategoriesOutput {
             crate::output::ListCallAnalyticsCategoriesOutput {
                 next_token: self.next_token,
@@ -1543,7 +1563,7 @@ pub mod list_call_analytics_categories_output {
     }
 }
 impl ListCallAnalyticsCategoriesOutput {
-    /// Creates a new builder-style object to manufacture [`ListCallAnalyticsCategoriesOutput`](crate::output::ListCallAnalyticsCategoriesOutput)
+    /// Creates a new builder-style object to manufacture [`ListCallAnalyticsCategoriesOutput`](crate::output::ListCallAnalyticsCategoriesOutput).
     pub fn builder() -> crate::output::list_call_analytics_categories_output::Builder {
         crate::output::list_call_analytics_categories_output::Builder::default()
     }
@@ -1554,13 +1574,17 @@ impl ListCallAnalyticsCategoriesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetVocabularyFilterOutput {
     /// <p>The name of the custom vocabulary filter you requested information about.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_name: std::option::Option<std::string::String>,
     /// <p>The language code you selected for your vocabulary filter.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The date and time the specified vocabulary filter was last modified.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon S3 location where the vocabulary filter is stored; use this URI to view or download the vocabulary filter.</p>
+    #[doc(hidden)]
     pub download_uri: std::option::Option<std::string::String>,
 }
 impl GetVocabularyFilterOutput {
@@ -1592,11 +1616,10 @@ impl std::fmt::Debug for GetVocabularyFilterOutput {
         formatter.finish()
     }
 }
-/// See [`GetVocabularyFilterOutput`](crate::output::GetVocabularyFilterOutput)
+/// See [`GetVocabularyFilterOutput`](crate::output::GetVocabularyFilterOutput).
 pub mod get_vocabulary_filter_output {
 
-    /// A builder for [`GetVocabularyFilterOutput`](crate::output::GetVocabularyFilterOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetVocabularyFilterOutput`](crate::output::GetVocabularyFilterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_filter_name: std::option::Option<std::string::String>,
@@ -1656,7 +1679,7 @@ pub mod get_vocabulary_filter_output {
             self.download_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetVocabularyFilterOutput`](crate::output::GetVocabularyFilterOutput)
+        /// Consumes the builder and constructs a [`GetVocabularyFilterOutput`](crate::output::GetVocabularyFilterOutput).
         pub fn build(self) -> crate::output::GetVocabularyFilterOutput {
             crate::output::GetVocabularyFilterOutput {
                 vocabulary_filter_name: self.vocabulary_filter_name,
@@ -1668,7 +1691,7 @@ pub mod get_vocabulary_filter_output {
     }
 }
 impl GetVocabularyFilterOutput {
-    /// Creates a new builder-style object to manufacture [`GetVocabularyFilterOutput`](crate::output::GetVocabularyFilterOutput)
+    /// Creates a new builder-style object to manufacture [`GetVocabularyFilterOutput`](crate::output::GetVocabularyFilterOutput).
     pub fn builder() -> crate::output::get_vocabulary_filter_output::Builder {
         crate::output::get_vocabulary_filter_output::Builder::default()
     }
@@ -1679,17 +1702,23 @@ impl GetVocabularyFilterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetVocabularyOutput {
     /// <p>The name of the custom vocabulary you requested information about.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
     /// <p>The language code you selected for your custom vocabulary.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The processing state of your custom vocabulary. If the state is <code>READY</code>, you can use the vocabulary in a <code>StartTranscriptionJob</code> request.</p>
+    #[doc(hidden)]
     pub vocabulary_state: std::option::Option<crate::model::VocabularyState>,
     /// <p>The date and time the specified vocabulary was last modified.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If <code>VocabularyState</code> is <code>FAILED</code>, <code>FailureReason</code> contains information about why the vocabulary request failed. See also: <a href="https://docs.aws.amazon.com/transcribe/latest/APIReference/CommonErrors.html">Common Errors</a>.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
     /// <p>The S3 location where the vocabulary is stored; use this URI to view or download the vocabulary.</p>
+    #[doc(hidden)]
     pub download_uri: std::option::Option<std::string::String>,
 }
 impl GetVocabularyOutput {
@@ -1731,11 +1760,10 @@ impl std::fmt::Debug for GetVocabularyOutput {
         formatter.finish()
     }
 }
-/// See [`GetVocabularyOutput`](crate::output::GetVocabularyOutput)
+/// See [`GetVocabularyOutput`](crate::output::GetVocabularyOutput).
 pub mod get_vocabulary_output {
 
-    /// A builder for [`GetVocabularyOutput`](crate::output::GetVocabularyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetVocabularyOutput`](crate::output::GetVocabularyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_name: std::option::Option<std::string::String>,
@@ -1823,7 +1851,7 @@ pub mod get_vocabulary_output {
             self.download_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetVocabularyOutput`](crate::output::GetVocabularyOutput)
+        /// Consumes the builder and constructs a [`GetVocabularyOutput`](crate::output::GetVocabularyOutput).
         pub fn build(self) -> crate::output::GetVocabularyOutput {
             crate::output::GetVocabularyOutput {
                 vocabulary_name: self.vocabulary_name,
@@ -1837,7 +1865,7 @@ pub mod get_vocabulary_output {
     }
 }
 impl GetVocabularyOutput {
-    /// Creates a new builder-style object to manufacture [`GetVocabularyOutput`](crate::output::GetVocabularyOutput)
+    /// Creates a new builder-style object to manufacture [`GetVocabularyOutput`](crate::output::GetVocabularyOutput).
     pub fn builder() -> crate::output::get_vocabulary_output::Builder {
         crate::output::get_vocabulary_output::Builder::default()
     }
@@ -1848,6 +1876,7 @@ impl GetVocabularyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetTranscriptionJobOutput {
     /// <p>Provides detailed information about the specified transcription job, including job status and, if applicable, failure reason.</p>
+    #[doc(hidden)]
     pub transcription_job: std::option::Option<crate::model::TranscriptionJob>,
 }
 impl GetTranscriptionJobOutput {
@@ -1863,11 +1892,10 @@ impl std::fmt::Debug for GetTranscriptionJobOutput {
         formatter.finish()
     }
 }
-/// See [`GetTranscriptionJobOutput`](crate::output::GetTranscriptionJobOutput)
+/// See [`GetTranscriptionJobOutput`](crate::output::GetTranscriptionJobOutput).
 pub mod get_transcription_job_output {
 
-    /// A builder for [`GetTranscriptionJobOutput`](crate::output::GetTranscriptionJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetTranscriptionJobOutput`](crate::output::GetTranscriptionJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transcription_job: std::option::Option<crate::model::TranscriptionJob>,
@@ -1886,7 +1914,7 @@ pub mod get_transcription_job_output {
             self.transcription_job = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetTranscriptionJobOutput`](crate::output::GetTranscriptionJobOutput)
+        /// Consumes the builder and constructs a [`GetTranscriptionJobOutput`](crate::output::GetTranscriptionJobOutput).
         pub fn build(self) -> crate::output::GetTranscriptionJobOutput {
             crate::output::GetTranscriptionJobOutput {
                 transcription_job: self.transcription_job,
@@ -1895,7 +1923,7 @@ pub mod get_transcription_job_output {
     }
 }
 impl GetTranscriptionJobOutput {
-    /// Creates a new builder-style object to manufacture [`GetTranscriptionJobOutput`](crate::output::GetTranscriptionJobOutput)
+    /// Creates a new builder-style object to manufacture [`GetTranscriptionJobOutput`](crate::output::GetTranscriptionJobOutput).
     pub fn builder() -> crate::output::get_transcription_job_output::Builder {
         crate::output::get_transcription_job_output::Builder::default()
     }
@@ -1906,17 +1934,23 @@ impl GetTranscriptionJobOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetMedicalVocabularyOutput {
     /// <p>The name of the custom medical vocabulary you requested information about.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
     /// <p>The language code you selected for your medical vocabulary. US English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The processing state of your custom medical vocabulary. If the state is <code>READY</code>, you can use the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.</p>
+    #[doc(hidden)]
     pub vocabulary_state: std::option::Option<crate::model::VocabularyState>,
     /// <p>The date and time the specified custom medical vocabulary was last modified.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If <code>VocabularyState</code> is <code>FAILED</code>, <code>FailureReason</code> contains information about why the medical vocabulary request failed. See also: <a href="https://docs.aws.amazon.com/transcribe/latest/APIReference/CommonErrors.html">Common Errors</a>.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
     /// <p>The S3 location where the specified medical vocabulary is stored; use this URI to view or download the vocabulary.</p>
+    #[doc(hidden)]
     pub download_uri: std::option::Option<std::string::String>,
 }
 impl GetMedicalVocabularyOutput {
@@ -1958,11 +1992,10 @@ impl std::fmt::Debug for GetMedicalVocabularyOutput {
         formatter.finish()
     }
 }
-/// See [`GetMedicalVocabularyOutput`](crate::output::GetMedicalVocabularyOutput)
+/// See [`GetMedicalVocabularyOutput`](crate::output::GetMedicalVocabularyOutput).
 pub mod get_medical_vocabulary_output {
 
-    /// A builder for [`GetMedicalVocabularyOutput`](crate::output::GetMedicalVocabularyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetMedicalVocabularyOutput`](crate::output::GetMedicalVocabularyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_name: std::option::Option<std::string::String>,
@@ -2050,7 +2083,7 @@ pub mod get_medical_vocabulary_output {
             self.download_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetMedicalVocabularyOutput`](crate::output::GetMedicalVocabularyOutput)
+        /// Consumes the builder and constructs a [`GetMedicalVocabularyOutput`](crate::output::GetMedicalVocabularyOutput).
         pub fn build(self) -> crate::output::GetMedicalVocabularyOutput {
             crate::output::GetMedicalVocabularyOutput {
                 vocabulary_name: self.vocabulary_name,
@@ -2064,7 +2097,7 @@ pub mod get_medical_vocabulary_output {
     }
 }
 impl GetMedicalVocabularyOutput {
-    /// Creates a new builder-style object to manufacture [`GetMedicalVocabularyOutput`](crate::output::GetMedicalVocabularyOutput)
+    /// Creates a new builder-style object to manufacture [`GetMedicalVocabularyOutput`](crate::output::GetMedicalVocabularyOutput).
     pub fn builder() -> crate::output::get_medical_vocabulary_output::Builder {
         crate::output::get_medical_vocabulary_output::Builder::default()
     }
@@ -2075,6 +2108,7 @@ impl GetMedicalVocabularyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetMedicalTranscriptionJobOutput {
     /// <p>Provides detailed information about the specified medical transcription job, including job status and, if applicable, failure reason.</p>
+    #[doc(hidden)]
     pub medical_transcription_job: std::option::Option<crate::model::MedicalTranscriptionJob>,
 }
 impl GetMedicalTranscriptionJobOutput {
@@ -2092,11 +2126,10 @@ impl std::fmt::Debug for GetMedicalTranscriptionJobOutput {
         formatter.finish()
     }
 }
-/// See [`GetMedicalTranscriptionJobOutput`](crate::output::GetMedicalTranscriptionJobOutput)
+/// See [`GetMedicalTranscriptionJobOutput`](crate::output::GetMedicalTranscriptionJobOutput).
 pub mod get_medical_transcription_job_output {
 
-    /// A builder for [`GetMedicalTranscriptionJobOutput`](crate::output::GetMedicalTranscriptionJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetMedicalTranscriptionJobOutput`](crate::output::GetMedicalTranscriptionJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) medical_transcription_job:
@@ -2119,7 +2152,7 @@ pub mod get_medical_transcription_job_output {
             self.medical_transcription_job = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetMedicalTranscriptionJobOutput`](crate::output::GetMedicalTranscriptionJobOutput)
+        /// Consumes the builder and constructs a [`GetMedicalTranscriptionJobOutput`](crate::output::GetMedicalTranscriptionJobOutput).
         pub fn build(self) -> crate::output::GetMedicalTranscriptionJobOutput {
             crate::output::GetMedicalTranscriptionJobOutput {
                 medical_transcription_job: self.medical_transcription_job,
@@ -2128,7 +2161,7 @@ pub mod get_medical_transcription_job_output {
     }
 }
 impl GetMedicalTranscriptionJobOutput {
-    /// Creates a new builder-style object to manufacture [`GetMedicalTranscriptionJobOutput`](crate::output::GetMedicalTranscriptionJobOutput)
+    /// Creates a new builder-style object to manufacture [`GetMedicalTranscriptionJobOutput`](crate::output::GetMedicalTranscriptionJobOutput).
     pub fn builder() -> crate::output::get_medical_transcription_job_output::Builder {
         crate::output::get_medical_transcription_job_output::Builder::default()
     }
@@ -2139,6 +2172,7 @@ impl GetMedicalTranscriptionJobOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCallAnalyticsJobOutput {
     /// <p>Provides detailed information about the specified Call Analytics job, including job status and, if applicable, failure reason.</p>
+    #[doc(hidden)]
     pub call_analytics_job: std::option::Option<crate::model::CallAnalyticsJob>,
 }
 impl GetCallAnalyticsJobOutput {
@@ -2154,11 +2188,10 @@ impl std::fmt::Debug for GetCallAnalyticsJobOutput {
         formatter.finish()
     }
 }
-/// See [`GetCallAnalyticsJobOutput`](crate::output::GetCallAnalyticsJobOutput)
+/// See [`GetCallAnalyticsJobOutput`](crate::output::GetCallAnalyticsJobOutput).
 pub mod get_call_analytics_job_output {
 
-    /// A builder for [`GetCallAnalyticsJobOutput`](crate::output::GetCallAnalyticsJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCallAnalyticsJobOutput`](crate::output::GetCallAnalyticsJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) call_analytics_job: std::option::Option<crate::model::CallAnalyticsJob>,
@@ -2177,7 +2210,7 @@ pub mod get_call_analytics_job_output {
             self.call_analytics_job = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCallAnalyticsJobOutput`](crate::output::GetCallAnalyticsJobOutput)
+        /// Consumes the builder and constructs a [`GetCallAnalyticsJobOutput`](crate::output::GetCallAnalyticsJobOutput).
         pub fn build(self) -> crate::output::GetCallAnalyticsJobOutput {
             crate::output::GetCallAnalyticsJobOutput {
                 call_analytics_job: self.call_analytics_job,
@@ -2186,7 +2219,7 @@ pub mod get_call_analytics_job_output {
     }
 }
 impl GetCallAnalyticsJobOutput {
-    /// Creates a new builder-style object to manufacture [`GetCallAnalyticsJobOutput`](crate::output::GetCallAnalyticsJobOutput)
+    /// Creates a new builder-style object to manufacture [`GetCallAnalyticsJobOutput`](crate::output::GetCallAnalyticsJobOutput).
     pub fn builder() -> crate::output::get_call_analytics_job_output::Builder {
         crate::output::get_call_analytics_job_output::Builder::default()
     }
@@ -2197,6 +2230,7 @@ impl GetCallAnalyticsJobOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCallAnalyticsCategoryOutput {
     /// <p>Provides you with the properties of the Call Analytics category you specified in your <code>GetCallAnalyticsCategory</code> request.</p>
+    #[doc(hidden)]
     pub category_properties: std::option::Option<crate::model::CategoryProperties>,
 }
 impl GetCallAnalyticsCategoryOutput {
@@ -2212,11 +2246,10 @@ impl std::fmt::Debug for GetCallAnalyticsCategoryOutput {
         formatter.finish()
     }
 }
-/// See [`GetCallAnalyticsCategoryOutput`](crate::output::GetCallAnalyticsCategoryOutput)
+/// See [`GetCallAnalyticsCategoryOutput`](crate::output::GetCallAnalyticsCategoryOutput).
 pub mod get_call_analytics_category_output {
 
-    /// A builder for [`GetCallAnalyticsCategoryOutput`](crate::output::GetCallAnalyticsCategoryOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCallAnalyticsCategoryOutput`](crate::output::GetCallAnalyticsCategoryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) category_properties: std::option::Option<crate::model::CategoryProperties>,
@@ -2235,7 +2268,7 @@ pub mod get_call_analytics_category_output {
             self.category_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCallAnalyticsCategoryOutput`](crate::output::GetCallAnalyticsCategoryOutput)
+        /// Consumes the builder and constructs a [`GetCallAnalyticsCategoryOutput`](crate::output::GetCallAnalyticsCategoryOutput).
         pub fn build(self) -> crate::output::GetCallAnalyticsCategoryOutput {
             crate::output::GetCallAnalyticsCategoryOutput {
                 category_properties: self.category_properties,
@@ -2244,7 +2277,7 @@ pub mod get_call_analytics_category_output {
     }
 }
 impl GetCallAnalyticsCategoryOutput {
-    /// Creates a new builder-style object to manufacture [`GetCallAnalyticsCategoryOutput`](crate::output::GetCallAnalyticsCategoryOutput)
+    /// Creates a new builder-style object to manufacture [`GetCallAnalyticsCategoryOutput`](crate::output::GetCallAnalyticsCategoryOutput).
     pub fn builder() -> crate::output::get_call_analytics_category_output::Builder {
         crate::output::get_call_analytics_category_output::Builder::default()
     }
@@ -2257,6 +2290,7 @@ pub struct DescribeLanguageModelOutput {
     /// <p>Provides information about the specified custom language model.</p>
     /// <p>This parameter also shows if the base language model you used to create your custom language model has been updated. If Amazon Transcribe has updated the base model, you can create a new custom language model using the updated base model.</p>
     /// <p>If you tried to create a new custom language model and the request wasn't successful, you can use this <code>DescribeLanguageModel</code> to help identify the reason for this failure.</p>
+    #[doc(hidden)]
     pub language_model: std::option::Option<crate::model::LanguageModel>,
 }
 impl DescribeLanguageModelOutput {
@@ -2274,11 +2308,10 @@ impl std::fmt::Debug for DescribeLanguageModelOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeLanguageModelOutput`](crate::output::DescribeLanguageModelOutput)
+/// See [`DescribeLanguageModelOutput`](crate::output::DescribeLanguageModelOutput).
 pub mod describe_language_model_output {
 
-    /// A builder for [`DescribeLanguageModelOutput`](crate::output::DescribeLanguageModelOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeLanguageModelOutput`](crate::output::DescribeLanguageModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) language_model: std::option::Option<crate::model::LanguageModel>,
@@ -2301,7 +2334,7 @@ pub mod describe_language_model_output {
             self.language_model = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeLanguageModelOutput`](crate::output::DescribeLanguageModelOutput)
+        /// Consumes the builder and constructs a [`DescribeLanguageModelOutput`](crate::output::DescribeLanguageModelOutput).
         pub fn build(self) -> crate::output::DescribeLanguageModelOutput {
             crate::output::DescribeLanguageModelOutput {
                 language_model: self.language_model,
@@ -2310,7 +2343,7 @@ pub mod describe_language_model_output {
     }
 }
 impl DescribeLanguageModelOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeLanguageModelOutput`](crate::output::DescribeLanguageModelOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeLanguageModelOutput`](crate::output::DescribeLanguageModelOutput).
     pub fn builder() -> crate::output::describe_language_model_output::Builder {
         crate::output::describe_language_model_output::Builder::default()
     }
@@ -2326,22 +2359,21 @@ impl std::fmt::Debug for DeleteVocabularyFilterOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteVocabularyFilterOutput`](crate::output::DeleteVocabularyFilterOutput)
+/// See [`DeleteVocabularyFilterOutput`](crate::output::DeleteVocabularyFilterOutput).
 pub mod delete_vocabulary_filter_output {
 
-    /// A builder for [`DeleteVocabularyFilterOutput`](crate::output::DeleteVocabularyFilterOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteVocabularyFilterOutput`](crate::output::DeleteVocabularyFilterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteVocabularyFilterOutput`](crate::output::DeleteVocabularyFilterOutput)
+        /// Consumes the builder and constructs a [`DeleteVocabularyFilterOutput`](crate::output::DeleteVocabularyFilterOutput).
         pub fn build(self) -> crate::output::DeleteVocabularyFilterOutput {
             crate::output::DeleteVocabularyFilterOutput {}
         }
     }
 }
 impl DeleteVocabularyFilterOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteVocabularyFilterOutput`](crate::output::DeleteVocabularyFilterOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteVocabularyFilterOutput`](crate::output::DeleteVocabularyFilterOutput).
     pub fn builder() -> crate::output::delete_vocabulary_filter_output::Builder {
         crate::output::delete_vocabulary_filter_output::Builder::default()
     }
@@ -2357,22 +2389,21 @@ impl std::fmt::Debug for DeleteVocabularyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteVocabularyOutput`](crate::output::DeleteVocabularyOutput)
+/// See [`DeleteVocabularyOutput`](crate::output::DeleteVocabularyOutput).
 pub mod delete_vocabulary_output {
 
-    /// A builder for [`DeleteVocabularyOutput`](crate::output::DeleteVocabularyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteVocabularyOutput`](crate::output::DeleteVocabularyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteVocabularyOutput`](crate::output::DeleteVocabularyOutput)
+        /// Consumes the builder and constructs a [`DeleteVocabularyOutput`](crate::output::DeleteVocabularyOutput).
         pub fn build(self) -> crate::output::DeleteVocabularyOutput {
             crate::output::DeleteVocabularyOutput {}
         }
     }
 }
 impl DeleteVocabularyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteVocabularyOutput`](crate::output::DeleteVocabularyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteVocabularyOutput`](crate::output::DeleteVocabularyOutput).
     pub fn builder() -> crate::output::delete_vocabulary_output::Builder {
         crate::output::delete_vocabulary_output::Builder::default()
     }
@@ -2388,22 +2419,21 @@ impl std::fmt::Debug for DeleteTranscriptionJobOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteTranscriptionJobOutput`](crate::output::DeleteTranscriptionJobOutput)
+/// See [`DeleteTranscriptionJobOutput`](crate::output::DeleteTranscriptionJobOutput).
 pub mod delete_transcription_job_output {
 
-    /// A builder for [`DeleteTranscriptionJobOutput`](crate::output::DeleteTranscriptionJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteTranscriptionJobOutput`](crate::output::DeleteTranscriptionJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteTranscriptionJobOutput`](crate::output::DeleteTranscriptionJobOutput)
+        /// Consumes the builder and constructs a [`DeleteTranscriptionJobOutput`](crate::output::DeleteTranscriptionJobOutput).
         pub fn build(self) -> crate::output::DeleteTranscriptionJobOutput {
             crate::output::DeleteTranscriptionJobOutput {}
         }
     }
 }
 impl DeleteTranscriptionJobOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteTranscriptionJobOutput`](crate::output::DeleteTranscriptionJobOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteTranscriptionJobOutput`](crate::output::DeleteTranscriptionJobOutput).
     pub fn builder() -> crate::output::delete_transcription_job_output::Builder {
         crate::output::delete_transcription_job_output::Builder::default()
     }
@@ -2419,22 +2449,21 @@ impl std::fmt::Debug for DeleteMedicalVocabularyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteMedicalVocabularyOutput`](crate::output::DeleteMedicalVocabularyOutput)
+/// See [`DeleteMedicalVocabularyOutput`](crate::output::DeleteMedicalVocabularyOutput).
 pub mod delete_medical_vocabulary_output {
 
-    /// A builder for [`DeleteMedicalVocabularyOutput`](crate::output::DeleteMedicalVocabularyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteMedicalVocabularyOutput`](crate::output::DeleteMedicalVocabularyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteMedicalVocabularyOutput`](crate::output::DeleteMedicalVocabularyOutput)
+        /// Consumes the builder and constructs a [`DeleteMedicalVocabularyOutput`](crate::output::DeleteMedicalVocabularyOutput).
         pub fn build(self) -> crate::output::DeleteMedicalVocabularyOutput {
             crate::output::DeleteMedicalVocabularyOutput {}
         }
     }
 }
 impl DeleteMedicalVocabularyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteMedicalVocabularyOutput`](crate::output::DeleteMedicalVocabularyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteMedicalVocabularyOutput`](crate::output::DeleteMedicalVocabularyOutput).
     pub fn builder() -> crate::output::delete_medical_vocabulary_output::Builder {
         crate::output::delete_medical_vocabulary_output::Builder::default()
     }
@@ -2450,22 +2479,21 @@ impl std::fmt::Debug for DeleteMedicalTranscriptionJobOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteMedicalTranscriptionJobOutput`](crate::output::DeleteMedicalTranscriptionJobOutput)
+/// See [`DeleteMedicalTranscriptionJobOutput`](crate::output::DeleteMedicalTranscriptionJobOutput).
 pub mod delete_medical_transcription_job_output {
 
-    /// A builder for [`DeleteMedicalTranscriptionJobOutput`](crate::output::DeleteMedicalTranscriptionJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteMedicalTranscriptionJobOutput`](crate::output::DeleteMedicalTranscriptionJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteMedicalTranscriptionJobOutput`](crate::output::DeleteMedicalTranscriptionJobOutput)
+        /// Consumes the builder and constructs a [`DeleteMedicalTranscriptionJobOutput`](crate::output::DeleteMedicalTranscriptionJobOutput).
         pub fn build(self) -> crate::output::DeleteMedicalTranscriptionJobOutput {
             crate::output::DeleteMedicalTranscriptionJobOutput {}
         }
     }
 }
 impl DeleteMedicalTranscriptionJobOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteMedicalTranscriptionJobOutput`](crate::output::DeleteMedicalTranscriptionJobOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteMedicalTranscriptionJobOutput`](crate::output::DeleteMedicalTranscriptionJobOutput).
     pub fn builder() -> crate::output::delete_medical_transcription_job_output::Builder {
         crate::output::delete_medical_transcription_job_output::Builder::default()
     }
@@ -2481,22 +2509,21 @@ impl std::fmt::Debug for DeleteLanguageModelOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteLanguageModelOutput`](crate::output::DeleteLanguageModelOutput)
+/// See [`DeleteLanguageModelOutput`](crate::output::DeleteLanguageModelOutput).
 pub mod delete_language_model_output {
 
-    /// A builder for [`DeleteLanguageModelOutput`](crate::output::DeleteLanguageModelOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteLanguageModelOutput`](crate::output::DeleteLanguageModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteLanguageModelOutput`](crate::output::DeleteLanguageModelOutput)
+        /// Consumes the builder and constructs a [`DeleteLanguageModelOutput`](crate::output::DeleteLanguageModelOutput).
         pub fn build(self) -> crate::output::DeleteLanguageModelOutput {
             crate::output::DeleteLanguageModelOutput {}
         }
     }
 }
 impl DeleteLanguageModelOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteLanguageModelOutput`](crate::output::DeleteLanguageModelOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteLanguageModelOutput`](crate::output::DeleteLanguageModelOutput).
     pub fn builder() -> crate::output::delete_language_model_output::Builder {
         crate::output::delete_language_model_output::Builder::default()
     }
@@ -2512,22 +2539,21 @@ impl std::fmt::Debug for DeleteCallAnalyticsJobOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteCallAnalyticsJobOutput`](crate::output::DeleteCallAnalyticsJobOutput)
+/// See [`DeleteCallAnalyticsJobOutput`](crate::output::DeleteCallAnalyticsJobOutput).
 pub mod delete_call_analytics_job_output {
 
-    /// A builder for [`DeleteCallAnalyticsJobOutput`](crate::output::DeleteCallAnalyticsJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteCallAnalyticsJobOutput`](crate::output::DeleteCallAnalyticsJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteCallAnalyticsJobOutput`](crate::output::DeleteCallAnalyticsJobOutput)
+        /// Consumes the builder and constructs a [`DeleteCallAnalyticsJobOutput`](crate::output::DeleteCallAnalyticsJobOutput).
         pub fn build(self) -> crate::output::DeleteCallAnalyticsJobOutput {
             crate::output::DeleteCallAnalyticsJobOutput {}
         }
     }
 }
 impl DeleteCallAnalyticsJobOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteCallAnalyticsJobOutput`](crate::output::DeleteCallAnalyticsJobOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteCallAnalyticsJobOutput`](crate::output::DeleteCallAnalyticsJobOutput).
     pub fn builder() -> crate::output::delete_call_analytics_job_output::Builder {
         crate::output::delete_call_analytics_job_output::Builder::default()
     }
@@ -2543,22 +2569,21 @@ impl std::fmt::Debug for DeleteCallAnalyticsCategoryOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteCallAnalyticsCategoryOutput`](crate::output::DeleteCallAnalyticsCategoryOutput)
+/// See [`DeleteCallAnalyticsCategoryOutput`](crate::output::DeleteCallAnalyticsCategoryOutput).
 pub mod delete_call_analytics_category_output {
 
-    /// A builder for [`DeleteCallAnalyticsCategoryOutput`](crate::output::DeleteCallAnalyticsCategoryOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteCallAnalyticsCategoryOutput`](crate::output::DeleteCallAnalyticsCategoryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteCallAnalyticsCategoryOutput`](crate::output::DeleteCallAnalyticsCategoryOutput)
+        /// Consumes the builder and constructs a [`DeleteCallAnalyticsCategoryOutput`](crate::output::DeleteCallAnalyticsCategoryOutput).
         pub fn build(self) -> crate::output::DeleteCallAnalyticsCategoryOutput {
             crate::output::DeleteCallAnalyticsCategoryOutput {}
         }
     }
 }
 impl DeleteCallAnalyticsCategoryOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteCallAnalyticsCategoryOutput`](crate::output::DeleteCallAnalyticsCategoryOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteCallAnalyticsCategoryOutput`](crate::output::DeleteCallAnalyticsCategoryOutput).
     pub fn builder() -> crate::output::delete_call_analytics_category_output::Builder {
         crate::output::delete_call_analytics_category_output::Builder::default()
     }
@@ -2569,11 +2594,14 @@ impl DeleteCallAnalyticsCategoryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateVocabularyFilterOutput {
     /// <p>The name you chose for your custom vocabulary filter.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_name: std::option::Option<std::string::String>,
     /// <p>The language code you selected for your vocabulary filter.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The date and time you created your vocabulary filter.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CreateVocabularyFilterOutput {
@@ -2600,11 +2628,10 @@ impl std::fmt::Debug for CreateVocabularyFilterOutput {
         formatter.finish()
     }
 }
-/// See [`CreateVocabularyFilterOutput`](crate::output::CreateVocabularyFilterOutput)
+/// See [`CreateVocabularyFilterOutput`](crate::output::CreateVocabularyFilterOutput).
 pub mod create_vocabulary_filter_output {
 
-    /// A builder for [`CreateVocabularyFilterOutput`](crate::output::CreateVocabularyFilterOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateVocabularyFilterOutput`](crate::output::CreateVocabularyFilterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_filter_name: std::option::Option<std::string::String>,
@@ -2653,7 +2680,7 @@ pub mod create_vocabulary_filter_output {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateVocabularyFilterOutput`](crate::output::CreateVocabularyFilterOutput)
+        /// Consumes the builder and constructs a [`CreateVocabularyFilterOutput`](crate::output::CreateVocabularyFilterOutput).
         pub fn build(self) -> crate::output::CreateVocabularyFilterOutput {
             crate::output::CreateVocabularyFilterOutput {
                 vocabulary_filter_name: self.vocabulary_filter_name,
@@ -2664,7 +2691,7 @@ pub mod create_vocabulary_filter_output {
     }
 }
 impl CreateVocabularyFilterOutput {
-    /// Creates a new builder-style object to manufacture [`CreateVocabularyFilterOutput`](crate::output::CreateVocabularyFilterOutput)
+    /// Creates a new builder-style object to manufacture [`CreateVocabularyFilterOutput`](crate::output::CreateVocabularyFilterOutput).
     pub fn builder() -> crate::output::create_vocabulary_filter_output::Builder {
         crate::output::create_vocabulary_filter_output::Builder::default()
     }
@@ -2675,15 +2702,20 @@ impl CreateVocabularyFilterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateVocabularyOutput {
     /// <p>The name you chose for your custom vocabulary.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
     /// <p>The language code you selected for your custom vocabulary.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The processing state of your custom vocabulary. If the state is <code>READY</code>, you can use the vocabulary in a <code>StartTranscriptionJob</code> request.</p>
+    #[doc(hidden)]
     pub vocabulary_state: std::option::Option<crate::model::VocabularyState>,
     /// <p>The date and time you created your custom vocabulary.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If <code>VocabularyState</code> is <code>FAILED</code>, <code>FailureReason</code> contains information about why the vocabulary request failed. See also: <a href="https://docs.aws.amazon.com/transcribe/latest/APIReference/CommonErrors.html">Common Errors</a>.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
 }
 impl CreateVocabularyOutput {
@@ -2720,11 +2752,10 @@ impl std::fmt::Debug for CreateVocabularyOutput {
         formatter.finish()
     }
 }
-/// See [`CreateVocabularyOutput`](crate::output::CreateVocabularyOutput)
+/// See [`CreateVocabularyOutput`](crate::output::CreateVocabularyOutput).
 pub mod create_vocabulary_output {
 
-    /// A builder for [`CreateVocabularyOutput`](crate::output::CreateVocabularyOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateVocabularyOutput`](crate::output::CreateVocabularyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_name: std::option::Option<std::string::String>,
@@ -2801,7 +2832,7 @@ pub mod create_vocabulary_output {
             self.failure_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateVocabularyOutput`](crate::output::CreateVocabularyOutput)
+        /// Consumes the builder and constructs a [`CreateVocabularyOutput`](crate::output::CreateVocabularyOutput).
         pub fn build(self) -> crate::output::CreateVocabularyOutput {
             crate::output::CreateVocabularyOutput {
                 vocabulary_name: self.vocabulary_name,
@@ -2814,7 +2845,7 @@ pub mod create_vocabulary_output {
     }
 }
 impl CreateVocabularyOutput {
-    /// Creates a new builder-style object to manufacture [`CreateVocabularyOutput`](crate::output::CreateVocabularyOutput)
+    /// Creates a new builder-style object to manufacture [`CreateVocabularyOutput`](crate::output::CreateVocabularyOutput).
     pub fn builder() -> crate::output::create_vocabulary_output::Builder {
         crate::output::create_vocabulary_output::Builder::default()
     }
@@ -2825,15 +2856,20 @@ impl CreateVocabularyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateMedicalVocabularyOutput {
     /// <p>The name you chose for your custom medical vocabulary.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
     /// <p>The language code you selected for your medical vocabulary. US English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The processing state of your custom medical vocabulary. If the state is <code>READY</code>, you can use the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.</p>
+    #[doc(hidden)]
     pub vocabulary_state: std::option::Option<crate::model::VocabularyState>,
     /// <p>The date and time you created your custom medical vocabulary.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If <code>VocabularyState</code> is <code>FAILED</code>, <code>FailureReason</code> contains information about why the medical transcription job request failed. See also: <a href="https://docs.aws.amazon.com/transcribe/latest/APIReference/CommonErrors.html">Common Errors</a>.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
 }
 impl CreateMedicalVocabularyOutput {
@@ -2870,11 +2906,10 @@ impl std::fmt::Debug for CreateMedicalVocabularyOutput {
         formatter.finish()
     }
 }
-/// See [`CreateMedicalVocabularyOutput`](crate::output::CreateMedicalVocabularyOutput)
+/// See [`CreateMedicalVocabularyOutput`](crate::output::CreateMedicalVocabularyOutput).
 pub mod create_medical_vocabulary_output {
 
-    /// A builder for [`CreateMedicalVocabularyOutput`](crate::output::CreateMedicalVocabularyOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateMedicalVocabularyOutput`](crate::output::CreateMedicalVocabularyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_name: std::option::Option<std::string::String>,
@@ -2951,7 +2986,7 @@ pub mod create_medical_vocabulary_output {
             self.failure_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateMedicalVocabularyOutput`](crate::output::CreateMedicalVocabularyOutput)
+        /// Consumes the builder and constructs a [`CreateMedicalVocabularyOutput`](crate::output::CreateMedicalVocabularyOutput).
         pub fn build(self) -> crate::output::CreateMedicalVocabularyOutput {
             crate::output::CreateMedicalVocabularyOutput {
                 vocabulary_name: self.vocabulary_name,
@@ -2964,7 +2999,7 @@ pub mod create_medical_vocabulary_output {
     }
 }
 impl CreateMedicalVocabularyOutput {
-    /// Creates a new builder-style object to manufacture [`CreateMedicalVocabularyOutput`](crate::output::CreateMedicalVocabularyOutput)
+    /// Creates a new builder-style object to manufacture [`CreateMedicalVocabularyOutput`](crate::output::CreateMedicalVocabularyOutput).
     pub fn builder() -> crate::output::create_medical_vocabulary_output::Builder {
         crate::output::create_medical_vocabulary_output::Builder::default()
     }
@@ -2975,14 +3010,19 @@ impl CreateMedicalVocabularyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateLanguageModelOutput {
     /// <p>The language code you selected for your custom language model.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::ClmLanguageCode>,
     /// <p>The Amazon Transcribe standard language model, or base model, you specified when creating your custom language model.</p>
+    #[doc(hidden)]
     pub base_model_name: std::option::Option<crate::model::BaseModelName>,
     /// <p>The name of your custom language model.</p>
+    #[doc(hidden)]
     pub model_name: std::option::Option<std::string::String>,
     /// <p>Lists your data access role ARN (Amazon Resource Name) and the Amazon S3 locations you provided for your training (<code>S3Uri</code>) and tuning (<code>TuningDataS3Uri</code>) data.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
     /// <p>The status of your custom language model. When the status displays as <code>COMPLETED</code>, your model is ready to use.</p>
+    #[doc(hidden)]
     pub model_status: std::option::Option<crate::model::ModelStatus>,
 }
 impl CreateLanguageModelOutput {
@@ -3018,11 +3058,10 @@ impl std::fmt::Debug for CreateLanguageModelOutput {
         formatter.finish()
     }
 }
-/// See [`CreateLanguageModelOutput`](crate::output::CreateLanguageModelOutput)
+/// See [`CreateLanguageModelOutput`](crate::output::CreateLanguageModelOutput).
 pub mod create_language_model_output {
 
-    /// A builder for [`CreateLanguageModelOutput`](crate::output::CreateLanguageModelOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateLanguageModelOutput`](crate::output::CreateLanguageModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) language_code: std::option::Option<crate::model::ClmLanguageCode>,
@@ -3094,7 +3133,7 @@ pub mod create_language_model_output {
             self.model_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateLanguageModelOutput`](crate::output::CreateLanguageModelOutput)
+        /// Consumes the builder and constructs a [`CreateLanguageModelOutput`](crate::output::CreateLanguageModelOutput).
         pub fn build(self) -> crate::output::CreateLanguageModelOutput {
             crate::output::CreateLanguageModelOutput {
                 language_code: self.language_code,
@@ -3107,7 +3146,7 @@ pub mod create_language_model_output {
     }
 }
 impl CreateLanguageModelOutput {
-    /// Creates a new builder-style object to manufacture [`CreateLanguageModelOutput`](crate::output::CreateLanguageModelOutput)
+    /// Creates a new builder-style object to manufacture [`CreateLanguageModelOutput`](crate::output::CreateLanguageModelOutput).
     pub fn builder() -> crate::output::create_language_model_output::Builder {
         crate::output::create_language_model_output::Builder::default()
     }
@@ -3118,6 +3157,7 @@ impl CreateLanguageModelOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateCallAnalyticsCategoryOutput {
     /// <p>Provides you with the properties of your new category, including its associated rules.</p>
+    #[doc(hidden)]
     pub category_properties: std::option::Option<crate::model::CategoryProperties>,
 }
 impl CreateCallAnalyticsCategoryOutput {
@@ -3133,11 +3173,10 @@ impl std::fmt::Debug for CreateCallAnalyticsCategoryOutput {
         formatter.finish()
     }
 }
-/// See [`CreateCallAnalyticsCategoryOutput`](crate::output::CreateCallAnalyticsCategoryOutput)
+/// See [`CreateCallAnalyticsCategoryOutput`](crate::output::CreateCallAnalyticsCategoryOutput).
 pub mod create_call_analytics_category_output {
 
-    /// A builder for [`CreateCallAnalyticsCategoryOutput`](crate::output::CreateCallAnalyticsCategoryOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateCallAnalyticsCategoryOutput`](crate::output::CreateCallAnalyticsCategoryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) category_properties: std::option::Option<crate::model::CategoryProperties>,
@@ -3156,7 +3195,7 @@ pub mod create_call_analytics_category_output {
             self.category_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateCallAnalyticsCategoryOutput`](crate::output::CreateCallAnalyticsCategoryOutput)
+        /// Consumes the builder and constructs a [`CreateCallAnalyticsCategoryOutput`](crate::output::CreateCallAnalyticsCategoryOutput).
         pub fn build(self) -> crate::output::CreateCallAnalyticsCategoryOutput {
             crate::output::CreateCallAnalyticsCategoryOutput {
                 category_properties: self.category_properties,
@@ -3165,7 +3204,7 @@ pub mod create_call_analytics_category_output {
     }
 }
 impl CreateCallAnalyticsCategoryOutput {
-    /// Creates a new builder-style object to manufacture [`CreateCallAnalyticsCategoryOutput`](crate::output::CreateCallAnalyticsCategoryOutput)
+    /// Creates a new builder-style object to manufacture [`CreateCallAnalyticsCategoryOutput`](crate::output::CreateCallAnalyticsCategoryOutput).
     pub fn builder() -> crate::output::create_call_analytics_category_output::Builder {
         crate::output::create_call_analytics_category_output::Builder::default()
     }

@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>A string that you can use to assign a value. The combination of tag keys and values can help you organize and categorize your resources.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value for the specified tag key.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -68,7 +69,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -139,11 +140,13 @@ impl AsRef<str> for StateValue {
 pub struct MetricStreamStatisticsConfiguration {
     /// <p>An array of metric name and namespace pairs that stream the additional statistics listed in the value of the <code>AdditionalStatistics</code> parameter. There can be as many as 100 pairs in the array.</p>
     /// <p>All metrics that match the combination of metric name and namespace will be streamed with the additional statistics, no matter their dimensions.</p>
+    #[doc(hidden)]
     pub include_metrics:
         std::option::Option<std::vec::Vec<crate::model::MetricStreamStatisticsMetric>>,
     /// <p>The list of additional statistics that are to be streamed for the metrics listed in the <code>IncludeMetrics</code> array in this structure. This list can include as many as 20 statistics.</p>
     /// <p>If the <code>OutputFormat</code> for the stream is <code>opentelemetry0.7</code>, the only valid values are <code>p<i>??</i> </code> percentile statistics such as <code>p90</code>, <code>p99</code> and so on.</p>
     /// <p>If the <code>OutputFormat</code> for the stream is <code>json</code>, the valid values include the abbreviations for all of the statistics listed in <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html"> CloudWatch statistics definitions</a>. For example, this includes <code>tm98, </code> <code>wm90</code>, <code>PR(:300)</code>, and so on.</p>
+    #[doc(hidden)]
     pub additional_statistics: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl MetricStreamStatisticsConfiguration {
@@ -169,11 +172,10 @@ impl std::fmt::Debug for MetricStreamStatisticsConfiguration {
         formatter.finish()
     }
 }
-/// See [`MetricStreamStatisticsConfiguration`](crate::model::MetricStreamStatisticsConfiguration)
+/// See [`MetricStreamStatisticsConfiguration`](crate::model::MetricStreamStatisticsConfiguration).
 pub mod metric_stream_statistics_configuration {
 
-    /// A builder for [`MetricStreamStatisticsConfiguration`](crate::model::MetricStreamStatisticsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MetricStreamStatisticsConfiguration`](crate::model::MetricStreamStatisticsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) include_metrics:
@@ -228,7 +230,7 @@ pub mod metric_stream_statistics_configuration {
             self.additional_statistics = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricStreamStatisticsConfiguration`](crate::model::MetricStreamStatisticsConfiguration)
+        /// Consumes the builder and constructs a [`MetricStreamStatisticsConfiguration`](crate::model::MetricStreamStatisticsConfiguration).
         pub fn build(self) -> crate::model::MetricStreamStatisticsConfiguration {
             crate::model::MetricStreamStatisticsConfiguration {
                 include_metrics: self.include_metrics,
@@ -238,7 +240,7 @@ pub mod metric_stream_statistics_configuration {
     }
 }
 impl MetricStreamStatisticsConfiguration {
-    /// Creates a new builder-style object to manufacture [`MetricStreamStatisticsConfiguration`](crate::model::MetricStreamStatisticsConfiguration)
+    /// Creates a new builder-style object to manufacture [`MetricStreamStatisticsConfiguration`](crate::model::MetricStreamStatisticsConfiguration).
     pub fn builder() -> crate::model::metric_stream_statistics_configuration::Builder {
         crate::model::metric_stream_statistics_configuration::Builder::default()
     }
@@ -249,8 +251,10 @@ impl MetricStreamStatisticsConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricStreamStatisticsMetric {
     /// <p>The namespace of the metric.</p>
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
     /// <p>The name of the metric.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
 }
 impl MetricStreamStatisticsMetric {
@@ -271,11 +275,10 @@ impl std::fmt::Debug for MetricStreamStatisticsMetric {
         formatter.finish()
     }
 }
-/// See [`MetricStreamStatisticsMetric`](crate::model::MetricStreamStatisticsMetric)
+/// See [`MetricStreamStatisticsMetric`](crate::model::MetricStreamStatisticsMetric).
 pub mod metric_stream_statistics_metric {
 
-    /// A builder for [`MetricStreamStatisticsMetric`](crate::model::MetricStreamStatisticsMetric)
-    #[non_exhaustive]
+    /// A builder for [`MetricStreamStatisticsMetric`](crate::model::MetricStreamStatisticsMetric).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace: std::option::Option<std::string::String>,
@@ -302,7 +305,7 @@ pub mod metric_stream_statistics_metric {
             self.metric_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricStreamStatisticsMetric`](crate::model::MetricStreamStatisticsMetric)
+        /// Consumes the builder and constructs a [`MetricStreamStatisticsMetric`](crate::model::MetricStreamStatisticsMetric).
         pub fn build(self) -> crate::model::MetricStreamStatisticsMetric {
             crate::model::MetricStreamStatisticsMetric {
                 namespace: self.namespace,
@@ -312,7 +315,7 @@ pub mod metric_stream_statistics_metric {
     }
 }
 impl MetricStreamStatisticsMetric {
-    /// Creates a new builder-style object to manufacture [`MetricStreamStatisticsMetric`](crate::model::MetricStreamStatisticsMetric)
+    /// Creates a new builder-style object to manufacture [`MetricStreamStatisticsMetric`](crate::model::MetricStreamStatisticsMetric).
     pub fn builder() -> crate::model::metric_stream_statistics_metric::Builder {
         crate::model::metric_stream_statistics_metric::Builder::default()
     }
@@ -378,6 +381,7 @@ impl AsRef<str> for MetricStreamOutputFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricStreamFilter {
     /// <p>The name of the metric namespace in the filter.</p>
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
 }
 impl MetricStreamFilter {
@@ -393,11 +397,10 @@ impl std::fmt::Debug for MetricStreamFilter {
         formatter.finish()
     }
 }
-/// See [`MetricStreamFilter`](crate::model::MetricStreamFilter)
+/// See [`MetricStreamFilter`](crate::model::MetricStreamFilter).
 pub mod metric_stream_filter {
 
-    /// A builder for [`MetricStreamFilter`](crate::model::MetricStreamFilter)
-    #[non_exhaustive]
+    /// A builder for [`MetricStreamFilter`](crate::model::MetricStreamFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace: std::option::Option<std::string::String>,
@@ -413,7 +416,7 @@ pub mod metric_stream_filter {
             self.namespace = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricStreamFilter`](crate::model::MetricStreamFilter)
+        /// Consumes the builder and constructs a [`MetricStreamFilter`](crate::model::MetricStreamFilter).
         pub fn build(self) -> crate::model::MetricStreamFilter {
             crate::model::MetricStreamFilter {
                 namespace: self.namespace,
@@ -422,7 +425,7 @@ pub mod metric_stream_filter {
     }
 }
 impl MetricStreamFilter {
-    /// Creates a new builder-style object to manufacture [`MetricStreamFilter`](crate::model::MetricStreamFilter)
+    /// Creates a new builder-style object to manufacture [`MetricStreamFilter`](crate::model::MetricStreamFilter).
     pub fn builder() -> crate::model::metric_stream_filter::Builder {
         crate::model::metric_stream_filter::Builder::default()
     }
@@ -433,27 +436,36 @@ impl MetricStreamFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDatum {
     /// <p>The name of the metric.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The dimensions associated with the metric.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::Dimension>>,
     /// <p>The time the metric data was received, expressed as the number of milliseconds since Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The value for the metric.</p>
     /// <p>Although the parameter accepts numbers of type Double, CloudWatch rejects values that are either too small or too large. Values must be in the range of -2^360 to 2^360. In addition, special values (for example, NaN, +Infinity, -Infinity) are not supported.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<f64>,
     /// <p>The statistical values for the metric.</p>
+    #[doc(hidden)]
     pub statistic_values: std::option::Option<crate::model::StatisticSet>,
     /// <p>Array of numbers representing the values for the metric during the period. Each unique value is listed just once in this array, and the corresponding number in the <code>Counts</code> array specifies the number of times that value occurred during the period. You can include up to 150 unique values in each <code>PutMetricData</code> action that specifies a <code>Values</code> array.</p>
     /// <p>Although the <code>Values</code> array accepts numbers of type <code>Double</code>, CloudWatch rejects values that are either too small or too large. Values must be in the range of -2^360 to 2^360. In addition, special values (for example, NaN, +Infinity, -Infinity) are not supported.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<f64>>,
     /// <p>Array of numbers that is used along with the <code>Values</code> array. Each number in the <code>Count</code> array is the number of times the corresponding value in the <code>Values</code> array occurred during the period. </p>
     /// <p>If you omit the <code>Counts</code> array, the default of 1 is used as the value for each count. If you include a <code>Counts</code> array, it must include the same amount of values as the <code>Values</code> array.</p>
+    #[doc(hidden)]
     pub counts: std::option::Option<std::vec::Vec<f64>>,
     /// <p>When you are using a <code>Put</code> operation, this defines what unit you want to use when storing the metric.</p>
     /// <p>In a <code>Get</code> operation, this displays the unit that is used for the metric.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<crate::model::StandardUnit>,
     /// <p>Valid values are 1 and 60. Setting this to 1 specifies this metric as a high-resolution metric, so that CloudWatch stores the metric with sub-minute resolution down to one second. Setting this to 60 specifies this metric as a regular-resolution metric, which CloudWatch stores at 1-minute resolution. Currently, high resolution is available only for custom metrics. For more information about high-resolution metrics, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html#high-resolution-metrics">High-Resolution Metrics</a> in the <i>Amazon CloudWatch User Guide</i>. </p>
     /// <p>This field is optional, if you do not specify it the default of 60 is used.</p>
+    #[doc(hidden)]
     pub storage_resolution: std::option::Option<i32>,
 }
 impl MetricDatum {
@@ -514,11 +526,10 @@ impl std::fmt::Debug for MetricDatum {
         formatter.finish()
     }
 }
-/// See [`MetricDatum`](crate::model::MetricDatum)
+/// See [`MetricDatum`](crate::model::MetricDatum).
 pub mod metric_datum {
 
-    /// A builder for [`MetricDatum`](crate::model::MetricDatum)
-    #[non_exhaustive]
+    /// A builder for [`MetricDatum`](crate::model::MetricDatum).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_name: std::option::Option<std::string::String>,
@@ -659,7 +670,7 @@ pub mod metric_datum {
             self.storage_resolution = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDatum`](crate::model::MetricDatum)
+        /// Consumes the builder and constructs a [`MetricDatum`](crate::model::MetricDatum).
         pub fn build(self) -> crate::model::MetricDatum {
             crate::model::MetricDatum {
                 metric_name: self.metric_name,
@@ -676,7 +687,7 @@ pub mod metric_datum {
     }
 }
 impl MetricDatum {
-    /// Creates a new builder-style object to manufacture [`MetricDatum`](crate::model::MetricDatum)
+    /// Creates a new builder-style object to manufacture [`MetricDatum`](crate::model::MetricDatum).
     pub fn builder() -> crate::model::metric_datum::Builder {
         crate::model::metric_datum::Builder::default()
     }
@@ -870,12 +881,16 @@ impl AsRef<str> for StandardUnit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatisticSet {
     /// <p>The number of samples used for the statistic set.</p>
+    #[doc(hidden)]
     pub sample_count: std::option::Option<f64>,
     /// <p>The sum of values for the sample set.</p>
+    #[doc(hidden)]
     pub sum: std::option::Option<f64>,
     /// <p>The minimum value of the sample set.</p>
+    #[doc(hidden)]
     pub minimum: std::option::Option<f64>,
     /// <p>The maximum value of the sample set.</p>
+    #[doc(hidden)]
     pub maximum: std::option::Option<f64>,
 }
 impl StatisticSet {
@@ -906,11 +921,10 @@ impl std::fmt::Debug for StatisticSet {
         formatter.finish()
     }
 }
-/// See [`StatisticSet`](crate::model::StatisticSet)
+/// See [`StatisticSet`](crate::model::StatisticSet).
 pub mod statistic_set {
 
-    /// A builder for [`StatisticSet`](crate::model::StatisticSet)
-    #[non_exhaustive]
+    /// A builder for [`StatisticSet`](crate::model::StatisticSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sample_count: std::option::Option<f64>,
@@ -959,7 +973,7 @@ pub mod statistic_set {
             self.maximum = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatisticSet`](crate::model::StatisticSet)
+        /// Consumes the builder and constructs a [`StatisticSet`](crate::model::StatisticSet).
         pub fn build(self) -> crate::model::StatisticSet {
             crate::model::StatisticSet {
                 sample_count: self.sample_count,
@@ -971,7 +985,7 @@ pub mod statistic_set {
     }
 }
 impl StatisticSet {
-    /// Creates a new builder-style object to manufacture [`StatisticSet`](crate::model::StatisticSet)
+    /// Creates a new builder-style object to manufacture [`StatisticSet`](crate::model::StatisticSet).
     pub fn builder() -> crate::model::statistic_set::Builder {
         crate::model::statistic_set::Builder::default()
     }
@@ -983,8 +997,10 @@ impl StatisticSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Dimension {
     /// <p>The name of the dimension. Dimension names must contain only ASCII characters, must include at least one non-whitespace character, and cannot start with a colon (<code>:</code>).</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value of the dimension. Dimension values must contain only ASCII characters and must include at least one non-whitespace character.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Dimension {
@@ -1005,11 +1021,10 @@ impl std::fmt::Debug for Dimension {
         formatter.finish()
     }
 }
-/// See [`Dimension`](crate::model::Dimension)
+/// See [`Dimension`](crate::model::Dimension).
 pub mod dimension {
 
-    /// A builder for [`Dimension`](crate::model::Dimension)
-    #[non_exhaustive]
+    /// A builder for [`Dimension`](crate::model::Dimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1036,7 +1051,7 @@ pub mod dimension {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Dimension`](crate::model::Dimension)
+        /// Consumes the builder and constructs a [`Dimension`](crate::model::Dimension).
         pub fn build(self) -> crate::model::Dimension {
             crate::model::Dimension {
                 name: self.name,
@@ -1046,7 +1061,7 @@ pub mod dimension {
     }
 }
 impl Dimension {
-    /// Creates a new builder-style object to manufacture [`Dimension`](crate::model::Dimension)
+    /// Creates a new builder-style object to manufacture [`Dimension`](crate::model::Dimension).
     pub fn builder() -> crate::model::dimension::Builder {
         crate::model::dimension::Builder::default()
     }
@@ -1061,24 +1076,31 @@ impl Dimension {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDataQuery {
     /// <p>A short name used to tie this object to the results in the response. This name must be unique within a single call to <code>GetMetricData</code>. If you are performing math expressions on this set of data, this name represents that data and can serve as a variable in the mathematical expression. The valid characters are letters, numbers, and underscore. The first character must be a lowercase letter.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The metric to be returned, along with statistics, period, and units. Use this parameter only if this object is retrieving a metric and not performing a math expression on returned data.</p>
     /// <p>Within one MetricDataQuery object, you must specify either <code>Expression</code> or <code>MetricStat</code> but not both.</p>
+    #[doc(hidden)]
     pub metric_stat: std::option::Option<crate::model::MetricStat>,
     /// <p>This field can contain either a Metrics Insights query, or a metric math expression to be performed on the returned data. For more information about Metrics Insights queries, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-metrics-insights-querylanguage">Metrics Insights query components and syntax</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
     /// <p>A math expression can use the <code>Id</code> of the other metrics or queries to refer to those metrics, and can also use the <code>Id</code> of other expressions to use the result of those expressions. For more information about metric math expressions, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax">Metric Math Syntax and Functions</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
     /// <p>Within each MetricDataQuery object, you must specify either <code>Expression</code> or <code>MetricStat</code> but not both.</p>
+    #[doc(hidden)]
     pub expression: std::option::Option<std::string::String>,
     /// <p>A human-readable label for this metric or expression. This is especially useful if this is an expression, so that you know what the value represents. If the metric or expression is shown in a CloudWatch dashboard widget, the label is shown. If Label is omitted, CloudWatch generates a default.</p>
     /// <p>You can put dynamic expressions into a label, so that it is more descriptive. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/graph-dynamic-labels.html">Using Dynamic Labels</a>.</p>
+    #[doc(hidden)]
     pub label: std::option::Option<std::string::String>,
     /// <p>When used in <code>GetMetricData</code>, this option indicates whether to return the timestamps and raw data values of this metric. If you are performing this call just to do math expressions and do not also need the raw data returned, you can specify <code>False</code>. If you omit this, the default of <code>True</code> is used.</p>
     /// <p>When used in <code>PutMetricAlarm</code>, specify <code>True</code> for the one expression result to use as the alarm. For all other metrics and expressions in the same <code>PutMetricAlarm</code> operation, specify <code>ReturnData</code> as False.</p>
+    #[doc(hidden)]
     pub return_data: std::option::Option<bool>,
     /// <p>The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period can be as short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that are collected at intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code> operation that includes a <code>StorageResolution of 1 second</code>.</p>
+    #[doc(hidden)]
     pub period: std::option::Option<i32>,
     /// <p>The ID of the account where the metrics are located, if this is a cross-account alarm.</p>
     /// <p>Use this field only for <code>PutMetricAlarm</code> operations. It is not used in <code>GetMetricData</code> operations.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
 }
 impl MetricDataQuery {
@@ -1130,11 +1152,10 @@ impl std::fmt::Debug for MetricDataQuery {
         formatter.finish()
     }
 }
-/// See [`MetricDataQuery`](crate::model::MetricDataQuery)
+/// See [`MetricDataQuery`](crate::model::MetricDataQuery).
 pub mod metric_data_query {
 
-    /// A builder for [`MetricDataQuery`](crate::model::MetricDataQuery)
-    #[non_exhaustive]
+    /// A builder for [`MetricDataQuery`](crate::model::MetricDataQuery).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1231,7 +1252,7 @@ pub mod metric_data_query {
             self.account_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDataQuery`](crate::model::MetricDataQuery)
+        /// Consumes the builder and constructs a [`MetricDataQuery`](crate::model::MetricDataQuery).
         pub fn build(self) -> crate::model::MetricDataQuery {
             crate::model::MetricDataQuery {
                 id: self.id,
@@ -1246,7 +1267,7 @@ pub mod metric_data_query {
     }
 }
 impl MetricDataQuery {
-    /// Creates a new builder-style object to manufacture [`MetricDataQuery`](crate::model::MetricDataQuery)
+    /// Creates a new builder-style object to manufacture [`MetricDataQuery`](crate::model::MetricDataQuery).
     pub fn builder() -> crate::model::metric_data_query::Builder {
         crate::model::metric_data_query::Builder::default()
     }
@@ -1257,6 +1278,7 @@ impl MetricDataQuery {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricStat {
     /// <p>The metric to return, including the metric name, namespace, and dimensions.</p>
+    #[doc(hidden)]
     pub metric: std::option::Option<crate::model::Metric>,
     /// <p>The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period can be as short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that are collected at intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code> call that includes a <code>StorageResolution</code> of 1 second.</p>
     /// <p>If the <code>StartTime</code> parameter specifies a time stamp that is greater than 3 hours ago, you must specify the period as follows or no data points in that time range is returned:</p>
@@ -1265,11 +1287,14 @@ pub struct MetricStat {
     /// <li> <p>Start time between 15 and 63 days ago - Use a multiple of 300 seconds (5 minutes).</p> </li>
     /// <li> <p>Start time greater than 63 days ago - Use a multiple of 3600 seconds (1 hour).</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub period: std::option::Option<i32>,
     /// <p>The statistic to return. It can include any CloudWatch statistic or extended statistic.</p>
+    #[doc(hidden)]
     pub stat: std::option::Option<std::string::String>,
     /// <p>When you are using a <code>Put</code> operation, this defines what unit you want to use when storing the metric.</p>
     /// <p>In a <code>Get</code> operation, if you omit <code>Unit</code> then all data that was collected with any unit is returned, along with the corresponding units that were specified when the data was reported to CloudWatch. If you specify a unit, the operation returns only data that was collected with that unit specified. If you specify a unit that does not match the data collected, the results of the operation are null. CloudWatch does not perform unit conversions.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<crate::model::StandardUnit>,
 }
 impl MetricStat {
@@ -1307,11 +1332,10 @@ impl std::fmt::Debug for MetricStat {
         formatter.finish()
     }
 }
-/// See [`MetricStat`](crate::model::MetricStat)
+/// See [`MetricStat`](crate::model::MetricStat).
 pub mod metric_stat {
 
-    /// A builder for [`MetricStat`](crate::model::MetricStat)
-    #[non_exhaustive]
+    /// A builder for [`MetricStat`](crate::model::MetricStat).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric: std::option::Option<crate::model::Metric>,
@@ -1374,7 +1398,7 @@ pub mod metric_stat {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricStat`](crate::model::MetricStat)
+        /// Consumes the builder and constructs a [`MetricStat`](crate::model::MetricStat).
         pub fn build(self) -> crate::model::MetricStat {
             crate::model::MetricStat {
                 metric: self.metric,
@@ -1386,7 +1410,7 @@ pub mod metric_stat {
     }
 }
 impl MetricStat {
-    /// Creates a new builder-style object to manufacture [`MetricStat`](crate::model::MetricStat)
+    /// Creates a new builder-style object to manufacture [`MetricStat`](crate::model::MetricStat).
     pub fn builder() -> crate::model::metric_stat::Builder {
         crate::model::metric_stat::Builder::default()
     }
@@ -1397,10 +1421,13 @@ impl MetricStat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Metric {
     /// <p>The namespace of the metric.</p>
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
     /// <p>The name of the metric. This is a required field.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The dimensions for the metric.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::Dimension>>,
 }
 impl Metric {
@@ -1426,11 +1453,10 @@ impl std::fmt::Debug for Metric {
         formatter.finish()
     }
 }
-/// See [`Metric`](crate::model::Metric)
+/// See [`Metric`](crate::model::Metric).
 pub mod metric {
 
-    /// A builder for [`Metric`](crate::model::Metric)
-    #[non_exhaustive]
+    /// A builder for [`Metric`](crate::model::Metric).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace: std::option::Option<std::string::String>,
@@ -1477,7 +1503,7 @@ pub mod metric {
             self.dimensions = input;
             self
         }
-        /// Consumes the builder and constructs a [`Metric`](crate::model::Metric)
+        /// Consumes the builder and constructs a [`Metric`](crate::model::Metric).
         pub fn build(self) -> crate::model::Metric {
             crate::model::Metric {
                 namespace: self.namespace,
@@ -1488,7 +1514,7 @@ pub mod metric {
     }
 }
 impl Metric {
-    /// Creates a new builder-style object to manufacture [`Metric`](crate::model::Metric)
+    /// Creates a new builder-style object to manufacture [`Metric`](crate::model::Metric).
     pub fn builder() -> crate::model::metric::Builder {
         crate::model::metric::Builder::default()
     }
@@ -1653,8 +1679,10 @@ impl AsRef<str> for Statistic {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DashboardValidationMessage {
     /// <p>The data path related to the message.</p>
+    #[doc(hidden)]
     pub data_path: std::option::Option<std::string::String>,
     /// <p>A message describing the error or warning.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DashboardValidationMessage {
@@ -1675,11 +1703,10 @@ impl std::fmt::Debug for DashboardValidationMessage {
         formatter.finish()
     }
 }
-/// See [`DashboardValidationMessage`](crate::model::DashboardValidationMessage)
+/// See [`DashboardValidationMessage`](crate::model::DashboardValidationMessage).
 pub mod dashboard_validation_message {
 
-    /// A builder for [`DashboardValidationMessage`](crate::model::DashboardValidationMessage)
-    #[non_exhaustive]
+    /// A builder for [`DashboardValidationMessage`](crate::model::DashboardValidationMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_path: std::option::Option<std::string::String>,
@@ -1706,7 +1733,7 @@ pub mod dashboard_validation_message {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DashboardValidationMessage`](crate::model::DashboardValidationMessage)
+        /// Consumes the builder and constructs a [`DashboardValidationMessage`](crate::model::DashboardValidationMessage).
         pub fn build(self) -> crate::model::DashboardValidationMessage {
             crate::model::DashboardValidationMessage {
                 data_path: self.data_path,
@@ -1716,7 +1743,7 @@ pub mod dashboard_validation_message {
     }
 }
 impl DashboardValidationMessage {
-    /// Creates a new builder-style object to manufacture [`DashboardValidationMessage`](crate::model::DashboardValidationMessage)
+    /// Creates a new builder-style object to manufacture [`DashboardValidationMessage`](crate::model::DashboardValidationMessage).
     pub fn builder() -> crate::model::dashboard_validation_message::Builder {
         crate::model::dashboard_validation_message::Builder::default()
     }
@@ -1727,6 +1754,7 @@ impl DashboardValidationMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricMathAnomalyDetector {
     /// <p>An array of metric data query structures that enables you to create an anomaly detector based on the result of a metric math expression. Each item in <code>MetricDataQueries</code> gets a metric or performs a math expression. One item in <code>MetricDataQueries</code> is the expression that provides the time series that the anomaly detector uses as input. Designate the expression by setting <code>ReturnData</code> to <code>True</code> for this object in the array. For all other expressions and metrics, set <code>ReturnData</code> to <code>False</code>. The designated expression must return a single time series.</p>
+    #[doc(hidden)]
     pub metric_data_queries: std::option::Option<std::vec::Vec<crate::model::MetricDataQuery>>,
 }
 impl MetricMathAnomalyDetector {
@@ -1742,11 +1770,10 @@ impl std::fmt::Debug for MetricMathAnomalyDetector {
         formatter.finish()
     }
 }
-/// See [`MetricMathAnomalyDetector`](crate::model::MetricMathAnomalyDetector)
+/// See [`MetricMathAnomalyDetector`](crate::model::MetricMathAnomalyDetector).
 pub mod metric_math_anomaly_detector {
 
-    /// A builder for [`MetricMathAnomalyDetector`](crate::model::MetricMathAnomalyDetector)
-    #[non_exhaustive]
+    /// A builder for [`MetricMathAnomalyDetector`](crate::model::MetricMathAnomalyDetector).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_data_queries:
@@ -1772,7 +1799,7 @@ pub mod metric_math_anomaly_detector {
             self.metric_data_queries = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricMathAnomalyDetector`](crate::model::MetricMathAnomalyDetector)
+        /// Consumes the builder and constructs a [`MetricMathAnomalyDetector`](crate::model::MetricMathAnomalyDetector).
         pub fn build(self) -> crate::model::MetricMathAnomalyDetector {
             crate::model::MetricMathAnomalyDetector {
                 metric_data_queries: self.metric_data_queries,
@@ -1781,7 +1808,7 @@ pub mod metric_math_anomaly_detector {
     }
 }
 impl MetricMathAnomalyDetector {
-    /// Creates a new builder-style object to manufacture [`MetricMathAnomalyDetector`](crate::model::MetricMathAnomalyDetector)
+    /// Creates a new builder-style object to manufacture [`MetricMathAnomalyDetector`](crate::model::MetricMathAnomalyDetector).
     pub fn builder() -> crate::model::metric_math_anomaly_detector::Builder {
         crate::model::metric_math_anomaly_detector::Builder::default()
     }
@@ -1792,12 +1819,16 @@ impl MetricMathAnomalyDetector {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SingleMetricAnomalyDetector {
     /// <p>The namespace of the metric to create the anomaly detection model for.</p>
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
     /// <p>The name of the metric to create the anomaly detection model for.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The metric dimensions to create the anomaly detection model for.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::Dimension>>,
     /// <p>The statistic to use for the metric and anomaly detection model.</p>
+    #[doc(hidden)]
     pub stat: std::option::Option<std::string::String>,
 }
 impl SingleMetricAnomalyDetector {
@@ -1828,11 +1859,10 @@ impl std::fmt::Debug for SingleMetricAnomalyDetector {
         formatter.finish()
     }
 }
-/// See [`SingleMetricAnomalyDetector`](crate::model::SingleMetricAnomalyDetector)
+/// See [`SingleMetricAnomalyDetector`](crate::model::SingleMetricAnomalyDetector).
 pub mod single_metric_anomaly_detector {
 
-    /// A builder for [`SingleMetricAnomalyDetector`](crate::model::SingleMetricAnomalyDetector)
-    #[non_exhaustive]
+    /// A builder for [`SingleMetricAnomalyDetector`](crate::model::SingleMetricAnomalyDetector).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace: std::option::Option<std::string::String>,
@@ -1890,7 +1920,7 @@ pub mod single_metric_anomaly_detector {
             self.stat = input;
             self
         }
-        /// Consumes the builder and constructs a [`SingleMetricAnomalyDetector`](crate::model::SingleMetricAnomalyDetector)
+        /// Consumes the builder and constructs a [`SingleMetricAnomalyDetector`](crate::model::SingleMetricAnomalyDetector).
         pub fn build(self) -> crate::model::SingleMetricAnomalyDetector {
             crate::model::SingleMetricAnomalyDetector {
                 namespace: self.namespace,
@@ -1902,7 +1932,7 @@ pub mod single_metric_anomaly_detector {
     }
 }
 impl SingleMetricAnomalyDetector {
-    /// Creates a new builder-style object to manufacture [`SingleMetricAnomalyDetector`](crate::model::SingleMetricAnomalyDetector)
+    /// Creates a new builder-style object to manufacture [`SingleMetricAnomalyDetector`](crate::model::SingleMetricAnomalyDetector).
     pub fn builder() -> crate::model::single_metric_anomaly_detector::Builder {
         crate::model::single_metric_anomaly_detector::Builder::default()
     }
@@ -1913,9 +1943,11 @@ impl SingleMetricAnomalyDetector {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnomalyDetectorConfiguration {
     /// <p>An array of time ranges to exclude from use when the anomaly detection model is trained. Use this to make sure that events that could cause unusual values for the metric, such as deployments, aren't used when CloudWatch creates the model.</p>
+    #[doc(hidden)]
     pub excluded_time_ranges: std::option::Option<std::vec::Vec<crate::model::Range>>,
     /// <p>The time zone to use for the metric. This is useful to enable the model to automatically account for daylight savings time changes if the metric is sensitive to such time changes.</p>
     /// <p>To specify a time zone, use the name of the time zone as specified in the standard tz database. For more information, see <a href="https://en.wikipedia.org/wiki/Tz_database">tz database</a>.</p>
+    #[doc(hidden)]
     pub metric_timezone: std::option::Option<std::string::String>,
 }
 impl AnomalyDetectorConfiguration {
@@ -1937,11 +1969,10 @@ impl std::fmt::Debug for AnomalyDetectorConfiguration {
         formatter.finish()
     }
 }
-/// See [`AnomalyDetectorConfiguration`](crate::model::AnomalyDetectorConfiguration)
+/// See [`AnomalyDetectorConfiguration`](crate::model::AnomalyDetectorConfiguration).
 pub mod anomaly_detector_configuration {
 
-    /// A builder for [`AnomalyDetectorConfiguration`](crate::model::AnomalyDetectorConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AnomalyDetectorConfiguration`](crate::model::AnomalyDetectorConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) excluded_time_ranges: std::option::Option<std::vec::Vec<crate::model::Range>>,
@@ -1982,7 +2013,7 @@ pub mod anomaly_detector_configuration {
             self.metric_timezone = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnomalyDetectorConfiguration`](crate::model::AnomalyDetectorConfiguration)
+        /// Consumes the builder and constructs a [`AnomalyDetectorConfiguration`](crate::model::AnomalyDetectorConfiguration).
         pub fn build(self) -> crate::model::AnomalyDetectorConfiguration {
             crate::model::AnomalyDetectorConfiguration {
                 excluded_time_ranges: self.excluded_time_ranges,
@@ -1992,7 +2023,7 @@ pub mod anomaly_detector_configuration {
     }
 }
 impl AnomalyDetectorConfiguration {
-    /// Creates a new builder-style object to manufacture [`AnomalyDetectorConfiguration`](crate::model::AnomalyDetectorConfiguration)
+    /// Creates a new builder-style object to manufacture [`AnomalyDetectorConfiguration`](crate::model::AnomalyDetectorConfiguration).
     pub fn builder() -> crate::model::anomaly_detector_configuration::Builder {
         crate::model::anomaly_detector_configuration::Builder::default()
     }
@@ -2003,8 +2034,10 @@ impl AnomalyDetectorConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Range {
     /// <p>The start time of the range to exclude. The format is <code>yyyy-MM-dd'T'HH:mm:ss</code>. For example, <code>2019-07-01T23:59:59</code>.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end time of the range to exclude. The format is <code>yyyy-MM-dd'T'HH:mm:ss</code>. For example, <code>2019-07-01T23:59:59</code>.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Range {
@@ -2025,11 +2058,10 @@ impl std::fmt::Debug for Range {
         formatter.finish()
     }
 }
-/// See [`Range`](crate::model::Range)
+/// See [`Range`](crate::model::Range).
 pub mod range {
 
-    /// A builder for [`Range`](crate::model::Range)
-    #[non_exhaustive]
+    /// A builder for [`Range`](crate::model::Range).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -2062,7 +2094,7 @@ pub mod range {
             self.end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`Range`](crate::model::Range)
+        /// Consumes the builder and constructs a [`Range`](crate::model::Range).
         pub fn build(self) -> crate::model::Range {
             crate::model::Range {
                 start_time: self.start_time,
@@ -2072,7 +2104,7 @@ pub mod range {
     }
 }
 impl Range {
-    /// Creates a new builder-style object to manufacture [`Range`](crate::model::Range)
+    /// Creates a new builder-style object to manufacture [`Range`](crate::model::Range).
     pub fn builder() -> crate::model::range::Builder {
         crate::model::range::Builder::default()
     }
@@ -2083,18 +2115,25 @@ impl Range {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricStreamEntry {
     /// <p>The ARN of the metric stream.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date that the metric stream was originally created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date that the configuration of this metric stream was most recently updated.</p>
+    #[doc(hidden)]
     pub last_update_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the metric stream.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The ARN of the Kinesis Firehose devlivery stream that is used for this metric stream.</p>
+    #[doc(hidden)]
     pub firehose_arn: std::option::Option<std::string::String>,
     /// <p>The current state of this stream. Valid values are <code>running</code> and <code>stopped</code>.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>The output format of this metric stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>.</p>
+    #[doc(hidden)]
     pub output_format: std::option::Option<crate::model::MetricStreamOutputFormat>,
 }
 impl MetricStreamEntry {
@@ -2140,11 +2179,10 @@ impl std::fmt::Debug for MetricStreamEntry {
         formatter.finish()
     }
 }
-/// See [`MetricStreamEntry`](crate::model::MetricStreamEntry)
+/// See [`MetricStreamEntry`](crate::model::MetricStreamEntry).
 pub mod metric_stream_entry {
 
-    /// A builder for [`MetricStreamEntry`](crate::model::MetricStreamEntry)
-    #[non_exhaustive]
+    /// A builder for [`MetricStreamEntry`](crate::model::MetricStreamEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2235,7 +2273,7 @@ pub mod metric_stream_entry {
             self.output_format = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricStreamEntry`](crate::model::MetricStreamEntry)
+        /// Consumes the builder and constructs a [`MetricStreamEntry`](crate::model::MetricStreamEntry).
         pub fn build(self) -> crate::model::MetricStreamEntry {
             crate::model::MetricStreamEntry {
                 arn: self.arn,
@@ -2250,7 +2288,7 @@ pub mod metric_stream_entry {
     }
 }
 impl MetricStreamEntry {
-    /// Creates a new builder-style object to manufacture [`MetricStreamEntry`](crate::model::MetricStreamEntry)
+    /// Creates a new builder-style object to manufacture [`MetricStreamEntry`](crate::model::MetricStreamEntry).
     pub fn builder() -> crate::model::metric_stream_entry::Builder {
         crate::model::metric_stream_entry::Builder::default()
     }
@@ -2312,8 +2350,10 @@ impl AsRef<str> for RecentlyActive {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DimensionFilter {
     /// <p>The dimension name to be matched.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value of the dimension to be matched.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl DimensionFilter {
@@ -2334,11 +2374,10 @@ impl std::fmt::Debug for DimensionFilter {
         formatter.finish()
     }
 }
-/// See [`DimensionFilter`](crate::model::DimensionFilter)
+/// See [`DimensionFilter`](crate::model::DimensionFilter).
 pub mod dimension_filter {
 
-    /// A builder for [`DimensionFilter`](crate::model::DimensionFilter)
-    #[non_exhaustive]
+    /// A builder for [`DimensionFilter`](crate::model::DimensionFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2365,7 +2404,7 @@ pub mod dimension_filter {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`DimensionFilter`](crate::model::DimensionFilter)
+        /// Consumes the builder and constructs a [`DimensionFilter`](crate::model::DimensionFilter).
         pub fn build(self) -> crate::model::DimensionFilter {
             crate::model::DimensionFilter {
                 name: self.name,
@@ -2375,7 +2414,7 @@ pub mod dimension_filter {
     }
 }
 impl DimensionFilter {
-    /// Creates a new builder-style object to manufacture [`DimensionFilter`](crate::model::DimensionFilter)
+    /// Creates a new builder-style object to manufacture [`DimensionFilter`](crate::model::DimensionFilter).
     pub fn builder() -> crate::model::dimension_filter::Builder {
         crate::model::dimension_filter::Builder::default()
     }
@@ -2386,12 +2425,16 @@ impl DimensionFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DashboardEntry {
     /// <p>The name of the dashboard.</p>
+    #[doc(hidden)]
     pub dashboard_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the dashboard.</p>
+    #[doc(hidden)]
     pub dashboard_arn: std::option::Option<std::string::String>,
     /// <p>The time stamp of when the dashboard was last modified, either by an API call or through the console. This number is expressed as the number of milliseconds since Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The size of the dashboard, in bytes.</p>
+    #[doc(hidden)]
     pub size: i64,
 }
 impl DashboardEntry {
@@ -2422,11 +2465,10 @@ impl std::fmt::Debug for DashboardEntry {
         formatter.finish()
     }
 }
-/// See [`DashboardEntry`](crate::model::DashboardEntry)
+/// See [`DashboardEntry`](crate::model::DashboardEntry).
 pub mod dashboard_entry {
 
-    /// A builder for [`DashboardEntry`](crate::model::DashboardEntry)
-    #[non_exhaustive]
+    /// A builder for [`DashboardEntry`](crate::model::DashboardEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dashboard_name: std::option::Option<std::string::String>,
@@ -2484,7 +2526,7 @@ pub mod dashboard_entry {
             self.size = input;
             self
         }
-        /// Consumes the builder and constructs a [`DashboardEntry`](crate::model::DashboardEntry)
+        /// Consumes the builder and constructs a [`DashboardEntry`](crate::model::DashboardEntry).
         pub fn build(self) -> crate::model::DashboardEntry {
             crate::model::DashboardEntry {
                 dashboard_name: self.dashboard_name,
@@ -2496,7 +2538,7 @@ pub mod dashboard_entry {
     }
 }
 impl DashboardEntry {
-    /// Creates a new builder-style object to manufacture [`DashboardEntry`](crate::model::DashboardEntry)
+    /// Creates a new builder-style object to manufacture [`DashboardEntry`](crate::model::DashboardEntry).
     pub fn builder() -> crate::model::dashboard_entry::Builder {
         crate::model::dashboard_entry::Builder::default()
     }
@@ -2507,20 +2549,28 @@ impl DashboardEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Datapoint {
     /// <p>The time stamp used for the data point.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The number of metric values that contributed to the aggregate value of this data point.</p>
+    #[doc(hidden)]
     pub sample_count: std::option::Option<f64>,
     /// <p>The average of the metric values that correspond to the data point.</p>
+    #[doc(hidden)]
     pub average: std::option::Option<f64>,
     /// <p>The sum of the metric values for the data point.</p>
+    #[doc(hidden)]
     pub sum: std::option::Option<f64>,
     /// <p>The minimum metric value for the data point.</p>
+    #[doc(hidden)]
     pub minimum: std::option::Option<f64>,
     /// <p>The maximum metric value for the data point.</p>
+    #[doc(hidden)]
     pub maximum: std::option::Option<f64>,
     /// <p>The standard unit for the data point.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<crate::model::StandardUnit>,
     /// <p>The percentile statistic for the data point.</p>
+    #[doc(hidden)]
     pub extended_statistics:
         std::option::Option<std::collections::HashMap<std::string::String, f64>>,
 }
@@ -2574,11 +2624,10 @@ impl std::fmt::Debug for Datapoint {
         formatter.finish()
     }
 }
-/// See [`Datapoint`](crate::model::Datapoint)
+/// See [`Datapoint`](crate::model::Datapoint).
 pub mod datapoint {
 
-    /// A builder for [`Datapoint`](crate::model::Datapoint)
-    #[non_exhaustive]
+    /// A builder for [`Datapoint`](crate::model::Datapoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timestamp: std::option::Option<aws_smithy_types::DateTime>,
@@ -2684,7 +2733,7 @@ pub mod datapoint {
             self.extended_statistics = input;
             self
         }
-        /// Consumes the builder and constructs a [`Datapoint`](crate::model::Datapoint)
+        /// Consumes the builder and constructs a [`Datapoint`](crate::model::Datapoint).
         pub fn build(self) -> crate::model::Datapoint {
             crate::model::Datapoint {
                 timestamp: self.timestamp,
@@ -2700,7 +2749,7 @@ pub mod datapoint {
     }
 }
 impl Datapoint {
-    /// Creates a new builder-style object to manufacture [`Datapoint`](crate::model::Datapoint)
+    /// Creates a new builder-style object to manufacture [`Datapoint`](crate::model::Datapoint).
     pub fn builder() -> crate::model::datapoint::Builder {
         crate::model::datapoint::Builder::default()
     }
@@ -2712,8 +2761,10 @@ impl Datapoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MessageData {
     /// <p>The error code or status code associated with the message.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>The message text.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl MessageData {
@@ -2734,11 +2785,10 @@ impl std::fmt::Debug for MessageData {
         formatter.finish()
     }
 }
-/// See [`MessageData`](crate::model::MessageData)
+/// See [`MessageData`](crate::model::MessageData).
 pub mod message_data {
 
-    /// A builder for [`MessageData`](crate::model::MessageData)
-    #[non_exhaustive]
+    /// A builder for [`MessageData`](crate::model::MessageData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<std::string::String>,
@@ -2765,7 +2815,7 @@ pub mod message_data {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`MessageData`](crate::model::MessageData)
+        /// Consumes the builder and constructs a [`MessageData`](crate::model::MessageData).
         pub fn build(self) -> crate::model::MessageData {
             crate::model::MessageData {
                 code: self.code,
@@ -2775,7 +2825,7 @@ pub mod message_data {
     }
 }
 impl MessageData {
-    /// Creates a new builder-style object to manufacture [`MessageData`](crate::model::MessageData)
+    /// Creates a new builder-style object to manufacture [`MessageData`](crate::model::MessageData).
     pub fn builder() -> crate::model::message_data::Builder {
         crate::model::message_data::Builder::default()
     }
@@ -2786,16 +2836,22 @@ impl MessageData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDataResult {
     /// <p>The short name you specified to represent this metric.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The human-readable label associated with the data.</p>
+    #[doc(hidden)]
     pub label: std::option::Option<std::string::String>,
     /// <p>The timestamps for the data points, formatted in Unix timestamp format. The number of timestamps always matches the number of values and the value for Timestamps[x] is Values[x].</p>
+    #[doc(hidden)]
     pub timestamps: std::option::Option<std::vec::Vec<aws_smithy_types::DateTime>>,
     /// <p>The data points for the metric corresponding to <code>Timestamps</code>. The number of values always matches the number of timestamps and the timestamp for Values[x] is Timestamps[x].</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<f64>>,
     /// <p>The status of the returned data. <code>Complete</code> indicates that all data points in the requested time range were returned. <code>PartialData</code> means that an incomplete set of data points were returned. You can use the <code>NextToken</code> value that was returned and repeat your request to get more data points. <code>NextToken</code> is not returned if you are performing a math expression. <code>InternalError</code> indicates that an error occurred. Retry your request using <code>NextToken</code>, if present.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::StatusCode>,
     /// <p>A list of messages with additional information about the data returned.</p>
+    #[doc(hidden)]
     pub messages: std::option::Option<std::vec::Vec<crate::model::MessageData>>,
 }
 impl MetricDataResult {
@@ -2836,11 +2892,10 @@ impl std::fmt::Debug for MetricDataResult {
         formatter.finish()
     }
 }
-/// See [`MetricDataResult`](crate::model::MetricDataResult)
+/// See [`MetricDataResult`](crate::model::MetricDataResult).
 pub mod metric_data_result {
 
-    /// A builder for [`MetricDataResult`](crate::model::MetricDataResult)
-    #[non_exhaustive]
+    /// A builder for [`MetricDataResult`](crate::model::MetricDataResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2938,7 +2993,7 @@ pub mod metric_data_result {
             self.messages = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDataResult`](crate::model::MetricDataResult)
+        /// Consumes the builder and constructs a [`MetricDataResult`](crate::model::MetricDataResult).
         pub fn build(self) -> crate::model::MetricDataResult {
             crate::model::MetricDataResult {
                 id: self.id,
@@ -2952,7 +3007,7 @@ pub mod metric_data_result {
     }
 }
 impl MetricDataResult {
-    /// Creates a new builder-style object to manufacture [`MetricDataResult`](crate::model::MetricDataResult)
+    /// Creates a new builder-style object to manufacture [`MetricDataResult`](crate::model::MetricDataResult).
     pub fn builder() -> crate::model::metric_data_result::Builder {
         crate::model::metric_data_result::Builder::default()
     }
@@ -3023,6 +3078,7 @@ impl AsRef<str> for StatusCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LabelOptions {
     /// <p>The time zone to use for metric data return in this operation. The format is <code>+</code> or <code>-</code> followed by four digits. The first two digits indicate the number of hours ahead or behind of UTC, and the final two digits are the number of minutes. For example, +0130 indicates a time zone that is 1 hour and 30 minutes ahead of UTC. The default is +0000. </p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
 }
 impl LabelOptions {
@@ -3038,11 +3094,10 @@ impl std::fmt::Debug for LabelOptions {
         formatter.finish()
     }
 }
-/// See [`LabelOptions`](crate::model::LabelOptions)
+/// See [`LabelOptions`](crate::model::LabelOptions).
 pub mod label_options {
 
-    /// A builder for [`LabelOptions`](crate::model::LabelOptions)
-    #[non_exhaustive]
+    /// A builder for [`LabelOptions`](crate::model::LabelOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timezone: std::option::Option<std::string::String>,
@@ -3058,7 +3113,7 @@ pub mod label_options {
             self.timezone = input;
             self
         }
-        /// Consumes the builder and constructs a [`LabelOptions`](crate::model::LabelOptions)
+        /// Consumes the builder and constructs a [`LabelOptions`](crate::model::LabelOptions).
         pub fn build(self) -> crate::model::LabelOptions {
             crate::model::LabelOptions {
                 timezone: self.timezone,
@@ -3067,7 +3122,7 @@ pub mod label_options {
     }
 }
 impl LabelOptions {
-    /// Creates a new builder-style object to manufacture [`LabelOptions`](crate::model::LabelOptions)
+    /// Creates a new builder-style object to manufacture [`LabelOptions`](crate::model::LabelOptions).
     pub fn builder() -> crate::model::label_options::Builder {
         crate::model::label_options::Builder::default()
     }
@@ -3134,27 +3189,35 @@ impl AsRef<str> for ScanBy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InsightRuleMetricDatapoint {
     /// <p>The timestamp of the data point.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The number of unique contributors who published data during this timestamp.</p>
     /// <p>This statistic is returned only if you included it in the <code>Metrics</code> array in your request.</p>
+    #[doc(hidden)]
     pub unique_contributors: std::option::Option<f64>,
     /// <p>The maximum value provided by one contributor during this timestamp. Each timestamp is evaluated separately, so the identity of the max contributor could be different for each timestamp.</p>
     /// <p>This statistic is returned only if you included it in the <code>Metrics</code> array in your request.</p>
+    #[doc(hidden)]
     pub max_contributor_value: std::option::Option<f64>,
     /// <p>The number of occurrences that matched the rule during this data point.</p>
     /// <p>This statistic is returned only if you included it in the <code>Metrics</code> array in your request.</p>
+    #[doc(hidden)]
     pub sample_count: std::option::Option<f64>,
     /// <p>The average value from all contributors during the time period represented by that data point.</p>
     /// <p>This statistic is returned only if you included it in the <code>Metrics</code> array in your request.</p>
+    #[doc(hidden)]
     pub average: std::option::Option<f64>,
     /// <p>The sum of the values from all contributors during the time period represented by that data point.</p>
     /// <p>This statistic is returned only if you included it in the <code>Metrics</code> array in your request.</p>
+    #[doc(hidden)]
     pub sum: std::option::Option<f64>,
     /// <p>The minimum value from a single contributor during the time period represented by that data point.</p>
     /// <p>This statistic is returned only if you included it in the <code>Metrics</code> array in your request.</p>
+    #[doc(hidden)]
     pub minimum: std::option::Option<f64>,
     /// <p>The maximum value from a single occurence from a single contributor during the time period represented by that data point.</p>
     /// <p>This statistic is returned only if you included it in the <code>Metrics</code> array in your request.</p>
+    #[doc(hidden)]
     pub maximum: std::option::Option<f64>,
 }
 impl InsightRuleMetricDatapoint {
@@ -3212,11 +3275,10 @@ impl std::fmt::Debug for InsightRuleMetricDatapoint {
         formatter.finish()
     }
 }
-/// See [`InsightRuleMetricDatapoint`](crate::model::InsightRuleMetricDatapoint)
+/// See [`InsightRuleMetricDatapoint`](crate::model::InsightRuleMetricDatapoint).
 pub mod insight_rule_metric_datapoint {
 
-    /// A builder for [`InsightRuleMetricDatapoint`](crate::model::InsightRuleMetricDatapoint)
-    #[non_exhaustive]
+    /// A builder for [`InsightRuleMetricDatapoint`](crate::model::InsightRuleMetricDatapoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timestamp: std::option::Option<aws_smithy_types::DateTime>,
@@ -3326,7 +3388,7 @@ pub mod insight_rule_metric_datapoint {
             self.maximum = input;
             self
         }
-        /// Consumes the builder and constructs a [`InsightRuleMetricDatapoint`](crate::model::InsightRuleMetricDatapoint)
+        /// Consumes the builder and constructs a [`InsightRuleMetricDatapoint`](crate::model::InsightRuleMetricDatapoint).
         pub fn build(self) -> crate::model::InsightRuleMetricDatapoint {
             crate::model::InsightRuleMetricDatapoint {
                 timestamp: self.timestamp,
@@ -3342,7 +3404,7 @@ pub mod insight_rule_metric_datapoint {
     }
 }
 impl InsightRuleMetricDatapoint {
-    /// Creates a new builder-style object to manufacture [`InsightRuleMetricDatapoint`](crate::model::InsightRuleMetricDatapoint)
+    /// Creates a new builder-style object to manufacture [`InsightRuleMetricDatapoint`](crate::model::InsightRuleMetricDatapoint).
     pub fn builder() -> crate::model::insight_rule_metric_datapoint::Builder {
         crate::model::insight_rule_metric_datapoint::Builder::default()
     }
@@ -3355,10 +3417,13 @@ impl InsightRuleMetricDatapoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InsightRuleContributor {
     /// <p>One of the log entry field keywords that is used to define contributors for this rule.</p>
+    #[doc(hidden)]
     pub keys: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An approximation of the aggregate value that comes from this contributor.</p>
+    #[doc(hidden)]
     pub approximate_aggregate_value: std::option::Option<f64>,
     /// <p>An array of the data points where this contributor is present. Only the data points when this contributor appeared are included in the array.</p>
+    #[doc(hidden)]
     pub datapoints:
         std::option::Option<std::vec::Vec<crate::model::InsightRuleContributorDatapoint>>,
 }
@@ -3390,11 +3455,10 @@ impl std::fmt::Debug for InsightRuleContributor {
         formatter.finish()
     }
 }
-/// See [`InsightRuleContributor`](crate::model::InsightRuleContributor)
+/// See [`InsightRuleContributor`](crate::model::InsightRuleContributor).
 pub mod insight_rule_contributor {
 
-    /// A builder for [`InsightRuleContributor`](crate::model::InsightRuleContributor)
-    #[non_exhaustive]
+    /// A builder for [`InsightRuleContributor`](crate::model::InsightRuleContributor).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) keys: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3453,7 +3517,7 @@ pub mod insight_rule_contributor {
             self.datapoints = input;
             self
         }
-        /// Consumes the builder and constructs a [`InsightRuleContributor`](crate::model::InsightRuleContributor)
+        /// Consumes the builder and constructs a [`InsightRuleContributor`](crate::model::InsightRuleContributor).
         pub fn build(self) -> crate::model::InsightRuleContributor {
             crate::model::InsightRuleContributor {
                 keys: self.keys,
@@ -3464,7 +3528,7 @@ pub mod insight_rule_contributor {
     }
 }
 impl InsightRuleContributor {
-    /// Creates a new builder-style object to manufacture [`InsightRuleContributor`](crate::model::InsightRuleContributor)
+    /// Creates a new builder-style object to manufacture [`InsightRuleContributor`](crate::model::InsightRuleContributor).
     pub fn builder() -> crate::model::insight_rule_contributor::Builder {
         crate::model::insight_rule_contributor::Builder::default()
     }
@@ -3476,8 +3540,10 @@ impl InsightRuleContributor {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InsightRuleContributorDatapoint {
     /// <p>The timestamp of the data point.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The approximate value that this contributor added during this timestamp.</p>
+    #[doc(hidden)]
     pub approximate_value: std::option::Option<f64>,
 }
 impl InsightRuleContributorDatapoint {
@@ -3498,11 +3564,10 @@ impl std::fmt::Debug for InsightRuleContributorDatapoint {
         formatter.finish()
     }
 }
-/// See [`InsightRuleContributorDatapoint`](crate::model::InsightRuleContributorDatapoint)
+/// See [`InsightRuleContributorDatapoint`](crate::model::InsightRuleContributorDatapoint).
 pub mod insight_rule_contributor_datapoint {
 
-    /// A builder for [`InsightRuleContributorDatapoint`](crate::model::InsightRuleContributorDatapoint)
-    #[non_exhaustive]
+    /// A builder for [`InsightRuleContributorDatapoint`](crate::model::InsightRuleContributorDatapoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timestamp: std::option::Option<aws_smithy_types::DateTime>,
@@ -3532,7 +3597,7 @@ pub mod insight_rule_contributor_datapoint {
             self.approximate_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`InsightRuleContributorDatapoint`](crate::model::InsightRuleContributorDatapoint)
+        /// Consumes the builder and constructs a [`InsightRuleContributorDatapoint`](crate::model::InsightRuleContributorDatapoint).
         pub fn build(self) -> crate::model::InsightRuleContributorDatapoint {
             crate::model::InsightRuleContributorDatapoint {
                 timestamp: self.timestamp,
@@ -3542,7 +3607,7 @@ pub mod insight_rule_contributor_datapoint {
     }
 }
 impl InsightRuleContributorDatapoint {
-    /// Creates a new builder-style object to manufacture [`InsightRuleContributorDatapoint`](crate::model::InsightRuleContributorDatapoint)
+    /// Creates a new builder-style object to manufacture [`InsightRuleContributorDatapoint`](crate::model::InsightRuleContributorDatapoint).
     pub fn builder() -> crate::model::insight_rule_contributor_datapoint::Builder {
         crate::model::insight_rule_contributor_datapoint::Builder::default()
     }
@@ -3553,12 +3618,16 @@ impl InsightRuleContributorDatapoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PartialFailure {
     /// <p>The specified rule that could not be deleted.</p>
+    #[doc(hidden)]
     pub failure_resource: std::option::Option<std::string::String>,
     /// <p>The type of error.</p>
+    #[doc(hidden)]
     pub exception_type: std::option::Option<std::string::String>,
     /// <p>The code of the error.</p>
+    #[doc(hidden)]
     pub failure_code: std::option::Option<std::string::String>,
     /// <p>A description of the error.</p>
+    #[doc(hidden)]
     pub failure_description: std::option::Option<std::string::String>,
 }
 impl PartialFailure {
@@ -3589,11 +3658,10 @@ impl std::fmt::Debug for PartialFailure {
         formatter.finish()
     }
 }
-/// See [`PartialFailure`](crate::model::PartialFailure)
+/// See [`PartialFailure`](crate::model::PartialFailure).
 pub mod partial_failure {
 
-    /// A builder for [`PartialFailure`](crate::model::PartialFailure)
-    #[non_exhaustive]
+    /// A builder for [`PartialFailure`](crate::model::PartialFailure).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failure_resource: std::option::Option<std::string::String>,
@@ -3651,7 +3719,7 @@ pub mod partial_failure {
             self.failure_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`PartialFailure`](crate::model::PartialFailure)
+        /// Consumes the builder and constructs a [`PartialFailure`](crate::model::PartialFailure).
         pub fn build(self) -> crate::model::PartialFailure {
             crate::model::PartialFailure {
                 failure_resource: self.failure_resource,
@@ -3663,7 +3731,7 @@ pub mod partial_failure {
     }
 }
 impl PartialFailure {
-    /// Creates a new builder-style object to manufacture [`PartialFailure`](crate::model::PartialFailure)
+    /// Creates a new builder-style object to manufacture [`PartialFailure`](crate::model::PartialFailure).
     pub fn builder() -> crate::model::partial_failure::Builder {
         crate::model::partial_failure::Builder::default()
     }
@@ -3674,12 +3742,16 @@ impl PartialFailure {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InsightRule {
     /// <p>The name of the rule.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Indicates whether the rule is enabled or disabled.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>For rules that you create, this is always <code>{"Name": "CloudWatchLogRule", "Version": 1}</code>. For managed rules, this is <code>{"Name": "ServiceLogRule", "Version": 1}</code> </p>
+    #[doc(hidden)]
     pub schema: std::option::Option<std::string::String>,
     /// <p>The definition of the rule, as a JSON object. The definition contains the keywords used to define contributors, the value to aggregate on if this rule returns a sum instead of a count, and the filters. For details on the valid syntax, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContributorInsights-RuleSyntax.html">Contributor Insights Rule Syntax</a>.</p>
+    #[doc(hidden)]
     pub definition: std::option::Option<std::string::String>,
 }
 impl InsightRule {
@@ -3710,11 +3782,10 @@ impl std::fmt::Debug for InsightRule {
         formatter.finish()
     }
 }
-/// See [`InsightRule`](crate::model::InsightRule)
+/// See [`InsightRule`](crate::model::InsightRule).
 pub mod insight_rule {
 
-    /// A builder for [`InsightRule`](crate::model::InsightRule)
-    #[non_exhaustive]
+    /// A builder for [`InsightRule`](crate::model::InsightRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3763,7 +3834,7 @@ pub mod insight_rule {
             self.definition = input;
             self
         }
-        /// Consumes the builder and constructs a [`InsightRule`](crate::model::InsightRule)
+        /// Consumes the builder and constructs a [`InsightRule`](crate::model::InsightRule).
         pub fn build(self) -> crate::model::InsightRule {
             crate::model::InsightRule {
                 name: self.name,
@@ -3775,7 +3846,7 @@ pub mod insight_rule {
     }
 }
 impl InsightRule {
-    /// Creates a new builder-style object to manufacture [`InsightRule`](crate::model::InsightRule)
+    /// Creates a new builder-style object to manufacture [`InsightRule`](crate::model::InsightRule).
     pub fn builder() -> crate::model::insight_rule::Builder {
         crate::model::insight_rule::Builder::default()
     }
@@ -3786,37 +3857,53 @@ impl InsightRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnomalyDetector {
     /// <p>The namespace of the metric associated with the anomaly detection model.</p>
+    #[deprecated(note = "Use SingleMetricAnomalyDetector.Namespace property.")]
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
     /// <p>The name of the metric associated with the anomaly detection model.</p>
+    #[deprecated(note = "Use SingleMetricAnomalyDetector.MetricName property.")]
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The metric dimensions associated with the anomaly detection model.</p>
+    #[deprecated(note = "Use SingleMetricAnomalyDetector.Dimensions property.")]
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::Dimension>>,
     /// <p>The statistic associated with the anomaly detection model.</p>
+    #[deprecated(note = "Use SingleMetricAnomalyDetector.Stat property.")]
+    #[doc(hidden)]
     pub stat: std::option::Option<std::string::String>,
     /// <p>The configuration specifies details about how the anomaly detection model is to be trained, including time ranges to exclude from use for training the model, and the time zone to use for the metric.</p>
+    #[doc(hidden)]
     pub configuration: std::option::Option<crate::model::AnomalyDetectorConfiguration>,
     /// <p>The current status of the anomaly detector's training. The possible values are <code>TRAINED | PENDING_TRAINING | TRAINED_INSUFFICIENT_DATA</code> </p>
+    #[doc(hidden)]
     pub state_value: std::option::Option<crate::model::AnomalyDetectorStateValue>,
     /// <p>The CloudWatch metric and statistic for this anomaly detector.</p>
+    #[doc(hidden)]
     pub single_metric_anomaly_detector:
         std::option::Option<crate::model::SingleMetricAnomalyDetector>,
     /// <p>The CloudWatch metric math expression for this anomaly detector.</p>
+    #[doc(hidden)]
     pub metric_math_anomaly_detector: std::option::Option<crate::model::MetricMathAnomalyDetector>,
 }
 impl AnomalyDetector {
     /// <p>The namespace of the metric associated with the anomaly detection model.</p>
+    #[deprecated(note = "Use SingleMetricAnomalyDetector.Namespace property.")]
     pub fn namespace(&self) -> std::option::Option<&str> {
         self.namespace.as_deref()
     }
     /// <p>The name of the metric associated with the anomaly detection model.</p>
+    #[deprecated(note = "Use SingleMetricAnomalyDetector.MetricName property.")]
     pub fn metric_name(&self) -> std::option::Option<&str> {
         self.metric_name.as_deref()
     }
     /// <p>The metric dimensions associated with the anomaly detection model.</p>
+    #[deprecated(note = "Use SingleMetricAnomalyDetector.Dimensions property.")]
     pub fn dimensions(&self) -> std::option::Option<&[crate::model::Dimension]> {
         self.dimensions.as_deref()
     }
     /// <p>The statistic associated with the anomaly detection model.</p>
+    #[deprecated(note = "Use SingleMetricAnomalyDetector.Stat property.")]
     pub fn stat(&self) -> std::option::Option<&str> {
         self.stat.as_deref()
     }
@@ -3863,11 +3950,10 @@ impl std::fmt::Debug for AnomalyDetector {
         formatter.finish()
     }
 }
-/// See [`AnomalyDetector`](crate::model::AnomalyDetector)
+/// See [`AnomalyDetector`](crate::model::AnomalyDetector).
 pub mod anomaly_detector {
 
-    /// A builder for [`AnomalyDetector`](crate::model::AnomalyDetector)
-    #[non_exhaustive]
+    /// A builder for [`AnomalyDetector`](crate::model::AnomalyDetector).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace: std::option::Option<std::string::String>,
@@ -3883,21 +3969,25 @@ pub mod anomaly_detector {
     }
     impl Builder {
         /// <p>The namespace of the metric associated with the anomaly detection model.</p>
+        #[deprecated(note = "Use SingleMetricAnomalyDetector.Namespace property.")]
         pub fn namespace(mut self, input: impl Into<std::string::String>) -> Self {
             self.namespace = Some(input.into());
             self
         }
         /// <p>The namespace of the metric associated with the anomaly detection model.</p>
+        #[deprecated(note = "Use SingleMetricAnomalyDetector.Namespace property.")]
         pub fn set_namespace(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.namespace = input;
             self
         }
         /// <p>The name of the metric associated with the anomaly detection model.</p>
+        #[deprecated(note = "Use SingleMetricAnomalyDetector.MetricName property.")]
         pub fn metric_name(mut self, input: impl Into<std::string::String>) -> Self {
             self.metric_name = Some(input.into());
             self
         }
         /// <p>The name of the metric associated with the anomaly detection model.</p>
+        #[deprecated(note = "Use SingleMetricAnomalyDetector.MetricName property.")]
         pub fn set_metric_name(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.metric_name = input;
             self
@@ -3907,6 +3997,7 @@ pub mod anomaly_detector {
         /// To override the contents of this collection use [`set_dimensions`](Self::set_dimensions).
         ///
         /// <p>The metric dimensions associated with the anomaly detection model.</p>
+        #[deprecated(note = "Use SingleMetricAnomalyDetector.Dimensions property.")]
         pub fn dimensions(mut self, input: crate::model::Dimension) -> Self {
             let mut v = self.dimensions.unwrap_or_default();
             v.push(input);
@@ -3914,6 +4005,7 @@ pub mod anomaly_detector {
             self
         }
         /// <p>The metric dimensions associated with the anomaly detection model.</p>
+        #[deprecated(note = "Use SingleMetricAnomalyDetector.Dimensions property.")]
         pub fn set_dimensions(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::Dimension>>,
@@ -3922,11 +4014,13 @@ pub mod anomaly_detector {
             self
         }
         /// <p>The statistic associated with the anomaly detection model.</p>
+        #[deprecated(note = "Use SingleMetricAnomalyDetector.Stat property.")]
         pub fn stat(mut self, input: impl Into<std::string::String>) -> Self {
             self.stat = Some(input.into());
             self
         }
         /// <p>The statistic associated with the anomaly detection model.</p>
+        #[deprecated(note = "Use SingleMetricAnomalyDetector.Stat property.")]
         pub fn set_stat(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.stat = input;
             self
@@ -3989,7 +4083,7 @@ pub mod anomaly_detector {
             self.metric_math_anomaly_detector = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnomalyDetector`](crate::model::AnomalyDetector)
+        /// Consumes the builder and constructs a [`AnomalyDetector`](crate::model::AnomalyDetector).
         pub fn build(self) -> crate::model::AnomalyDetector {
             crate::model::AnomalyDetector {
                 namespace: self.namespace,
@@ -4005,7 +4099,7 @@ pub mod anomaly_detector {
     }
 }
 impl AnomalyDetector {
-    /// Creates a new builder-style object to manufacture [`AnomalyDetector`](crate::model::AnomalyDetector)
+    /// Creates a new builder-style object to manufacture [`AnomalyDetector`](crate::model::AnomalyDetector).
     pub fn builder() -> crate::model::anomaly_detector::Builder {
         crate::model::anomaly_detector::Builder::default()
     }
@@ -4130,59 +4224,86 @@ impl AsRef<str> for AnomalyDetectorType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricAlarm {
     /// <p>The name of the alarm.</p>
+    #[doc(hidden)]
     pub alarm_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the alarm.</p>
+    #[doc(hidden)]
     pub alarm_arn: std::option::Option<std::string::String>,
     /// <p>The description of the alarm.</p>
+    #[doc(hidden)]
     pub alarm_description: std::option::Option<std::string::String>,
     /// <p>The time stamp of the last update to the alarm configuration.</p>
+    #[doc(hidden)]
     pub alarm_configuration_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates whether actions should be executed during any changes to the alarm state.</p>
+    #[doc(hidden)]
     pub actions_enabled: std::option::Option<bool>,
     /// <p>The actions to execute when this alarm transitions to the <code>OK</code> state from any other state. Each action is specified as an Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub ok_actions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The actions to execute when this alarm transitions to the <code>ALARM</code> state from any other state. Each action is specified as an Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub alarm_actions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The actions to execute when this alarm transitions to the <code>INSUFFICIENT_DATA</code> state from any other state. Each action is specified as an Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub insufficient_data_actions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The state value for the alarm.</p>
+    #[doc(hidden)]
     pub state_value: std::option::Option<crate::model::StateValue>,
     /// <p>An explanation for the alarm state, in text format.</p>
+    #[doc(hidden)]
     pub state_reason: std::option::Option<std::string::String>,
     /// <p>An explanation for the alarm state, in JSON format.</p>
+    #[doc(hidden)]
     pub state_reason_data: std::option::Option<std::string::String>,
     /// <p>The time stamp of the last update to the alarm state.</p>
+    #[doc(hidden)]
     pub state_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the metric associated with the alarm, if this is an alarm based on a single metric.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The namespace of the metric associated with the alarm.</p>
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
     /// <p>The statistic for the metric associated with the alarm, other than percentile. For percentile statistics, use <code>ExtendedStatistic</code>.</p>
+    #[doc(hidden)]
     pub statistic: std::option::Option<crate::model::Statistic>,
     /// <p>The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100.</p>
+    #[doc(hidden)]
     pub extended_statistic: std::option::Option<std::string::String>,
     /// <p>The dimensions for the metric associated with the alarm.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::Dimension>>,
     /// <p>The period, in seconds, over which the statistic is applied.</p>
+    #[doc(hidden)]
     pub period: std::option::Option<i32>,
     /// <p>The unit of the metric associated with the alarm.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<crate::model::StandardUnit>,
     /// <p>The number of periods over which data is compared to the specified threshold.</p>
+    #[doc(hidden)]
     pub evaluation_periods: std::option::Option<i32>,
     /// <p>The number of data points that must be breaching to trigger the alarm.</p>
+    #[doc(hidden)]
     pub datapoints_to_alarm: std::option::Option<i32>,
     /// <p>The value to compare with the specified statistic.</p>
+    #[doc(hidden)]
     pub threshold: std::option::Option<f64>,
     /// <p>The arithmetic operation to use when comparing the specified statistic and threshold. The specified statistic value is used as the first operand.</p>
+    #[doc(hidden)]
     pub comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
     /// <p>Sets how this alarm is to handle missing data points. The valid values are <code>breaching</code>, <code>notBreaching</code>, <code>ignore</code>, and <code>missing</code>. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data">Configuring how CloudWatch alarms treat missing data</a>.</p>
     /// <p>If this parameter is omitted, the default behavior of <code>missing</code> is used.</p>
+    #[doc(hidden)]
     pub treat_missing_data: std::option::Option<std::string::String>,
     /// <p>Used only for alarms based on percentiles. If <code>ignore</code>, the alarm state does not change during periods with too few data points to be statistically significant. If <code>evaluate</code> or this parameter is not used, the alarm is always evaluated and possibly changes state no matter how many data points are available.</p>
+    #[doc(hidden)]
     pub evaluate_low_sample_count_percentile: std::option::Option<std::string::String>,
     /// <p>An array of MetricDataQuery structures, used in an alarm based on a metric math expression. Each structure either retrieves a metric or performs a math expression. One item in the Metrics array is the math expression that the alarm watches. This expression by designated by having <code>ReturnData</code> set to true.</p>
+    #[doc(hidden)]
     pub metrics: std::option::Option<std::vec::Vec<crate::model::MetricDataQuery>>,
     /// <p>In an alarm based on an anomaly detection model, this is the ID of the <code>ANOMALY_DETECTION_BAND</code> function used as the threshold for the alarm.</p>
+    #[doc(hidden)]
     pub threshold_metric_id: std::option::Option<std::string::String>,
 }
 impl MetricAlarm {
@@ -4337,11 +4458,10 @@ impl std::fmt::Debug for MetricAlarm {
         formatter.finish()
     }
 }
-/// See [`MetricAlarm`](crate::model::MetricAlarm)
+/// See [`MetricAlarm`](crate::model::MetricAlarm).
 pub mod metric_alarm {
 
-    /// A builder for [`MetricAlarm`](crate::model::MetricAlarm)
-    #[non_exhaustive]
+    /// A builder for [`MetricAlarm`](crate::model::MetricAlarm).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alarm_name: std::option::Option<std::string::String>,
@@ -4731,7 +4851,7 @@ pub mod metric_alarm {
             self.threshold_metric_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricAlarm`](crate::model::MetricAlarm)
+        /// Consumes the builder and constructs a [`MetricAlarm`](crate::model::MetricAlarm).
         pub fn build(self) -> crate::model::MetricAlarm {
             crate::model::MetricAlarm {
                 alarm_name: self.alarm_name,
@@ -4766,7 +4886,7 @@ pub mod metric_alarm {
     }
 }
 impl MetricAlarm {
-    /// Creates a new builder-style object to manufacture [`MetricAlarm`](crate::model::MetricAlarm)
+    /// Creates a new builder-style object to manufacture [`MetricAlarm`](crate::model::MetricAlarm).
     pub fn builder() -> crate::model::metric_alarm::Builder {
         crate::model::metric_alarm::Builder::default()
     }
@@ -4777,31 +4897,66 @@ impl MetricAlarm {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CompositeAlarm {
     /// <p>Indicates whether actions should be executed during any changes to the alarm state.</p>
+    #[doc(hidden)]
     pub actions_enabled: std::option::Option<bool>,
     /// <p>The actions to execute when this alarm transitions to the ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub alarm_actions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the alarm.</p>
+    #[doc(hidden)]
     pub alarm_arn: std::option::Option<std::string::String>,
     /// <p>The time stamp of the last update to the alarm configuration.</p>
+    #[doc(hidden)]
     pub alarm_configuration_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the alarm.</p>
+    #[doc(hidden)]
     pub alarm_description: std::option::Option<std::string::String>,
     /// <p>The name of the alarm.</p>
+    #[doc(hidden)]
     pub alarm_name: std::option::Option<std::string::String>,
     /// <p>The rule that this alarm uses to evaluate its alarm state.</p>
+    #[doc(hidden)]
     pub alarm_rule: std::option::Option<std::string::String>,
     /// <p>The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub insufficient_data_actions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The actions to execute when this alarm transitions to the OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub ok_actions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An explanation for the alarm state, in text format.</p>
+    #[doc(hidden)]
     pub state_reason: std::option::Option<std::string::String>,
     /// <p>An explanation for the alarm state, in JSON format.</p>
+    #[doc(hidden)]
     pub state_reason_data: std::option::Option<std::string::String>,
-    /// <p>The time stamp of the last update to the alarm state.</p>
+    /// <p>Tracks the timestamp of any state update, even if <code>StateValue</code> doesn't change.</p>
+    #[doc(hidden)]
     pub state_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The state value for the alarm.</p>
+    #[doc(hidden)]
     pub state_value: std::option::Option<crate::model::StateValue>,
+    /// <p> The timestamp of the last change to the alarm's <code>StateValue</code>. </p>
+    #[doc(hidden)]
+    pub state_transitioned_timestamp: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p> When the value is <code>ALARM</code>, it means that the actions are suppressed because the suppressor alarm is in <code>ALARM</code> When the value is <code>WaitPeriod</code>, it means that the actions are suppressed because the composite alarm is waiting for the suppressor alarm to go into into the <code>ALARM</code> state. The maximum waiting time is as specified in <code>ActionsSuppressorWaitPeriod</code>. After this time, the composite alarm performs its actions. When the value is <code>ExtensionPeriod</code>, it means that the actions are suppressed because the composite alarm is waiting after the suppressor alarm went out of the <code>ALARM</code> state. The maximum waiting time is as specified in <code>ActionsSuppressorExtensionPeriod</code>. After this time, the composite alarm performs its actions. </p>
+    #[doc(hidden)]
+    pub actions_suppressed_by: std::option::Option<crate::model::ActionsSuppressedBy>,
+    /// <p> Captures the reason for action suppression. </p>
+    #[doc(hidden)]
+    pub actions_suppressed_reason: std::option::Option<std::string::String>,
+    /// <p> Actions will be suppressed if the suppressor alarm is in the <code>ALARM</code> state. <code>ActionsSuppressor</code> can be an AlarmName or an Amazon Resource Name (ARN) from an existing alarm. </p>
+    #[doc(hidden)]
+    pub actions_suppressor: std::option::Option<std::string::String>,
+    /// <p> The maximum time in seconds that the composite alarm waits for the suppressor alarm to go into the <code>ALARM</code> state. After this time, the composite alarm performs its actions. </p> <important>
+    /// <p> <code>WaitPeriod</code> is required only when <code>ActionsSuppressor</code> is specified. </p>
+    /// </important>
+    #[doc(hidden)]
+    pub actions_suppressor_wait_period: std::option::Option<i32>,
+    /// <p> The maximum time in seconds that the composite alarm waits after suppressor alarm goes out of the <code>ALARM</code> state. After this time, the composite alarm performs its actions. </p> <important>
+    /// <p> <code>ExtensionPeriod</code> is required only when <code>ActionsSuppressor</code> is specified. </p>
+    /// </important>
+    #[doc(hidden)]
+    pub actions_suppressor_extension_period: std::option::Option<i32>,
 }
 impl CompositeAlarm {
     /// <p>Indicates whether actions should be executed during any changes to the alarm state.</p>
@@ -4850,13 +5005,41 @@ impl CompositeAlarm {
     pub fn state_reason_data(&self) -> std::option::Option<&str> {
         self.state_reason_data.as_deref()
     }
-    /// <p>The time stamp of the last update to the alarm state.</p>
+    /// <p>Tracks the timestamp of any state update, even if <code>StateValue</code> doesn't change.</p>
     pub fn state_updated_timestamp(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.state_updated_timestamp.as_ref()
     }
     /// <p>The state value for the alarm.</p>
     pub fn state_value(&self) -> std::option::Option<&crate::model::StateValue> {
         self.state_value.as_ref()
+    }
+    /// <p> The timestamp of the last change to the alarm's <code>StateValue</code>. </p>
+    pub fn state_transitioned_timestamp(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.state_transitioned_timestamp.as_ref()
+    }
+    /// <p> When the value is <code>ALARM</code>, it means that the actions are suppressed because the suppressor alarm is in <code>ALARM</code> When the value is <code>WaitPeriod</code>, it means that the actions are suppressed because the composite alarm is waiting for the suppressor alarm to go into into the <code>ALARM</code> state. The maximum waiting time is as specified in <code>ActionsSuppressorWaitPeriod</code>. After this time, the composite alarm performs its actions. When the value is <code>ExtensionPeriod</code>, it means that the actions are suppressed because the composite alarm is waiting after the suppressor alarm went out of the <code>ALARM</code> state. The maximum waiting time is as specified in <code>ActionsSuppressorExtensionPeriod</code>. After this time, the composite alarm performs its actions. </p>
+    pub fn actions_suppressed_by(&self) -> std::option::Option<&crate::model::ActionsSuppressedBy> {
+        self.actions_suppressed_by.as_ref()
+    }
+    /// <p> Captures the reason for action suppression. </p>
+    pub fn actions_suppressed_reason(&self) -> std::option::Option<&str> {
+        self.actions_suppressed_reason.as_deref()
+    }
+    /// <p> Actions will be suppressed if the suppressor alarm is in the <code>ALARM</code> state. <code>ActionsSuppressor</code> can be an AlarmName or an Amazon Resource Name (ARN) from an existing alarm. </p>
+    pub fn actions_suppressor(&self) -> std::option::Option<&str> {
+        self.actions_suppressor.as_deref()
+    }
+    /// <p> The maximum time in seconds that the composite alarm waits for the suppressor alarm to go into the <code>ALARM</code> state. After this time, the composite alarm performs its actions. </p> <important>
+    /// <p> <code>WaitPeriod</code> is required only when <code>ActionsSuppressor</code> is specified. </p>
+    /// </important>
+    pub fn actions_suppressor_wait_period(&self) -> std::option::Option<i32> {
+        self.actions_suppressor_wait_period
+    }
+    /// <p> The maximum time in seconds that the composite alarm waits after suppressor alarm goes out of the <code>ALARM</code> state. After this time, the composite alarm performs its actions. </p> <important>
+    /// <p> <code>ExtensionPeriod</code> is required only when <code>ActionsSuppressor</code> is specified. </p>
+    /// </important>
+    pub fn actions_suppressor_extension_period(&self) -> std::option::Option<i32> {
+        self.actions_suppressor_extension_period
     }
 }
 impl std::fmt::Debug for CompositeAlarm {
@@ -4878,14 +5061,28 @@ impl std::fmt::Debug for CompositeAlarm {
         formatter.field("state_reason_data", &self.state_reason_data);
         formatter.field("state_updated_timestamp", &self.state_updated_timestamp);
         formatter.field("state_value", &self.state_value);
+        formatter.field(
+            "state_transitioned_timestamp",
+            &self.state_transitioned_timestamp,
+        );
+        formatter.field("actions_suppressed_by", &self.actions_suppressed_by);
+        formatter.field("actions_suppressed_reason", &self.actions_suppressed_reason);
+        formatter.field("actions_suppressor", &self.actions_suppressor);
+        formatter.field(
+            "actions_suppressor_wait_period",
+            &self.actions_suppressor_wait_period,
+        );
+        formatter.field(
+            "actions_suppressor_extension_period",
+            &self.actions_suppressor_extension_period,
+        );
         formatter.finish()
     }
 }
-/// See [`CompositeAlarm`](crate::model::CompositeAlarm)
+/// See [`CompositeAlarm`](crate::model::CompositeAlarm).
 pub mod composite_alarm {
 
-    /// A builder for [`CompositeAlarm`](crate::model::CompositeAlarm)
-    #[non_exhaustive]
+    /// A builder for [`CompositeAlarm`](crate::model::CompositeAlarm).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) actions_enabled: std::option::Option<bool>,
@@ -4903,6 +5100,12 @@ pub mod composite_alarm {
         pub(crate) state_reason_data: std::option::Option<std::string::String>,
         pub(crate) state_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) state_value: std::option::Option<crate::model::StateValue>,
+        pub(crate) state_transitioned_timestamp: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) actions_suppressed_by: std::option::Option<crate::model::ActionsSuppressedBy>,
+        pub(crate) actions_suppressed_reason: std::option::Option<std::string::String>,
+        pub(crate) actions_suppressor: std::option::Option<std::string::String>,
+        pub(crate) actions_suppressor_wait_period: std::option::Option<i32>,
+        pub(crate) actions_suppressor_extension_period: std::option::Option<i32>,
     }
     impl Builder {
         /// <p>Indicates whether actions should be executed during any changes to the alarm state.</p>
@@ -5054,12 +5257,12 @@ pub mod composite_alarm {
             self.state_reason_data = input;
             self
         }
-        /// <p>The time stamp of the last update to the alarm state.</p>
+        /// <p>Tracks the timestamp of any state update, even if <code>StateValue</code> doesn't change.</p>
         pub fn state_updated_timestamp(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.state_updated_timestamp = Some(input);
             self
         }
-        /// <p>The time stamp of the last update to the alarm state.</p>
+        /// <p>Tracks the timestamp of any state update, even if <code>StateValue</code> doesn't change.</p>
         pub fn set_state_updated_timestamp(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -5080,7 +5283,93 @@ pub mod composite_alarm {
             self.state_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompositeAlarm`](crate::model::CompositeAlarm)
+        /// <p> The timestamp of the last change to the alarm's <code>StateValue</code>. </p>
+        pub fn state_transitioned_timestamp(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.state_transitioned_timestamp = Some(input);
+            self
+        }
+        /// <p> The timestamp of the last change to the alarm's <code>StateValue</code>. </p>
+        pub fn set_state_transitioned_timestamp(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.state_transitioned_timestamp = input;
+            self
+        }
+        /// <p> When the value is <code>ALARM</code>, it means that the actions are suppressed because the suppressor alarm is in <code>ALARM</code> When the value is <code>WaitPeriod</code>, it means that the actions are suppressed because the composite alarm is waiting for the suppressor alarm to go into into the <code>ALARM</code> state. The maximum waiting time is as specified in <code>ActionsSuppressorWaitPeriod</code>. After this time, the composite alarm performs its actions. When the value is <code>ExtensionPeriod</code>, it means that the actions are suppressed because the composite alarm is waiting after the suppressor alarm went out of the <code>ALARM</code> state. The maximum waiting time is as specified in <code>ActionsSuppressorExtensionPeriod</code>. After this time, the composite alarm performs its actions. </p>
+        pub fn actions_suppressed_by(mut self, input: crate::model::ActionsSuppressedBy) -> Self {
+            self.actions_suppressed_by = Some(input);
+            self
+        }
+        /// <p> When the value is <code>ALARM</code>, it means that the actions are suppressed because the suppressor alarm is in <code>ALARM</code> When the value is <code>WaitPeriod</code>, it means that the actions are suppressed because the composite alarm is waiting for the suppressor alarm to go into into the <code>ALARM</code> state. The maximum waiting time is as specified in <code>ActionsSuppressorWaitPeriod</code>. After this time, the composite alarm performs its actions. When the value is <code>ExtensionPeriod</code>, it means that the actions are suppressed because the composite alarm is waiting after the suppressor alarm went out of the <code>ALARM</code> state. The maximum waiting time is as specified in <code>ActionsSuppressorExtensionPeriod</code>. After this time, the composite alarm performs its actions. </p>
+        pub fn set_actions_suppressed_by(
+            mut self,
+            input: std::option::Option<crate::model::ActionsSuppressedBy>,
+        ) -> Self {
+            self.actions_suppressed_by = input;
+            self
+        }
+        /// <p> Captures the reason for action suppression. </p>
+        pub fn actions_suppressed_reason(mut self, input: impl Into<std::string::String>) -> Self {
+            self.actions_suppressed_reason = Some(input.into());
+            self
+        }
+        /// <p> Captures the reason for action suppression. </p>
+        pub fn set_actions_suppressed_reason(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.actions_suppressed_reason = input;
+            self
+        }
+        /// <p> Actions will be suppressed if the suppressor alarm is in the <code>ALARM</code> state. <code>ActionsSuppressor</code> can be an AlarmName or an Amazon Resource Name (ARN) from an existing alarm. </p>
+        pub fn actions_suppressor(mut self, input: impl Into<std::string::String>) -> Self {
+            self.actions_suppressor = Some(input.into());
+            self
+        }
+        /// <p> Actions will be suppressed if the suppressor alarm is in the <code>ALARM</code> state. <code>ActionsSuppressor</code> can be an AlarmName or an Amazon Resource Name (ARN) from an existing alarm. </p>
+        pub fn set_actions_suppressor(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.actions_suppressor = input;
+            self
+        }
+        /// <p> The maximum time in seconds that the composite alarm waits for the suppressor alarm to go into the <code>ALARM</code> state. After this time, the composite alarm performs its actions. </p> <important>
+        /// <p> <code>WaitPeriod</code> is required only when <code>ActionsSuppressor</code> is specified. </p>
+        /// </important>
+        pub fn actions_suppressor_wait_period(mut self, input: i32) -> Self {
+            self.actions_suppressor_wait_period = Some(input);
+            self
+        }
+        /// <p> The maximum time in seconds that the composite alarm waits for the suppressor alarm to go into the <code>ALARM</code> state. After this time, the composite alarm performs its actions. </p> <important>
+        /// <p> <code>WaitPeriod</code> is required only when <code>ActionsSuppressor</code> is specified. </p>
+        /// </important>
+        pub fn set_actions_suppressor_wait_period(
+            mut self,
+            input: std::option::Option<i32>,
+        ) -> Self {
+            self.actions_suppressor_wait_period = input;
+            self
+        }
+        /// <p> The maximum time in seconds that the composite alarm waits after suppressor alarm goes out of the <code>ALARM</code> state. After this time, the composite alarm performs its actions. </p> <important>
+        /// <p> <code>ExtensionPeriod</code> is required only when <code>ActionsSuppressor</code> is specified. </p>
+        /// </important>
+        pub fn actions_suppressor_extension_period(mut self, input: i32) -> Self {
+            self.actions_suppressor_extension_period = Some(input);
+            self
+        }
+        /// <p> The maximum time in seconds that the composite alarm waits after suppressor alarm goes out of the <code>ALARM</code> state. After this time, the composite alarm performs its actions. </p> <important>
+        /// <p> <code>ExtensionPeriod</code> is required only when <code>ActionsSuppressor</code> is specified. </p>
+        /// </important>
+        pub fn set_actions_suppressor_extension_period(
+            mut self,
+            input: std::option::Option<i32>,
+        ) -> Self {
+            self.actions_suppressor_extension_period = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CompositeAlarm`](crate::model::CompositeAlarm).
         pub fn build(self) -> crate::model::CompositeAlarm {
             crate::model::CompositeAlarm {
                 actions_enabled: self.actions_enabled,
@@ -5096,14 +5385,79 @@ pub mod composite_alarm {
                 state_reason_data: self.state_reason_data,
                 state_updated_timestamp: self.state_updated_timestamp,
                 state_value: self.state_value,
+                state_transitioned_timestamp: self.state_transitioned_timestamp,
+                actions_suppressed_by: self.actions_suppressed_by,
+                actions_suppressed_reason: self.actions_suppressed_reason,
+                actions_suppressor: self.actions_suppressor,
+                actions_suppressor_wait_period: self.actions_suppressor_wait_period,
+                actions_suppressor_extension_period: self.actions_suppressor_extension_period,
             }
         }
     }
 }
 impl CompositeAlarm {
-    /// Creates a new builder-style object to manufacture [`CompositeAlarm`](crate::model::CompositeAlarm)
+    /// Creates a new builder-style object to manufacture [`CompositeAlarm`](crate::model::CompositeAlarm).
     pub fn builder() -> crate::model::composite_alarm::Builder {
         crate::model::composite_alarm::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum ActionsSuppressedBy {
+    #[allow(missing_docs)] // documentation missing in model
+    Alarm,
+    #[allow(missing_docs)] // documentation missing in model
+    ExtensionPeriod,
+    #[allow(missing_docs)] // documentation missing in model
+    WaitPeriod,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for ActionsSuppressedBy {
+    fn from(s: &str) -> Self {
+        match s {
+            "Alarm" => ActionsSuppressedBy::Alarm,
+            "ExtensionPeriod" => ActionsSuppressedBy::ExtensionPeriod,
+            "WaitPeriod" => ActionsSuppressedBy::WaitPeriod,
+            other => ActionsSuppressedBy::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for ActionsSuppressedBy {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(ActionsSuppressedBy::from(s))
+    }
+}
+impl ActionsSuppressedBy {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            ActionsSuppressedBy::Alarm => "Alarm",
+            ActionsSuppressedBy::ExtensionPeriod => "ExtensionPeriod",
+            ActionsSuppressedBy::WaitPeriod => "WaitPeriod",
+            ActionsSuppressedBy::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["Alarm", "ExtensionPeriod", "WaitPeriod"]
+    }
+}
+impl AsRef<str> for ActionsSuppressedBy {
+    fn as_ref(&self) -> &str {
+        self.as_str()
     }
 }
 
@@ -5167,16 +5521,22 @@ impl AsRef<str> for AlarmType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AlarmHistoryItem {
     /// <p>The descriptive name for the alarm.</p>
+    #[doc(hidden)]
     pub alarm_name: std::option::Option<std::string::String>,
     /// <p>The type of alarm, either metric alarm or composite alarm.</p>
+    #[doc(hidden)]
     pub alarm_type: std::option::Option<crate::model::AlarmType>,
     /// <p>The time stamp for the alarm history item.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The type of alarm history item.</p>
+    #[doc(hidden)]
     pub history_item_type: std::option::Option<crate::model::HistoryItemType>,
     /// <p>A summary of the alarm history, in text format.</p>
+    #[doc(hidden)]
     pub history_summary: std::option::Option<std::string::String>,
     /// <p>Data about the alarm, in JSON format.</p>
+    #[doc(hidden)]
     pub history_data: std::option::Option<std::string::String>,
 }
 impl AlarmHistoryItem {
@@ -5217,11 +5577,10 @@ impl std::fmt::Debug for AlarmHistoryItem {
         formatter.finish()
     }
 }
-/// See [`AlarmHistoryItem`](crate::model::AlarmHistoryItem)
+/// See [`AlarmHistoryItem`](crate::model::AlarmHistoryItem).
 pub mod alarm_history_item {
 
-    /// A builder for [`AlarmHistoryItem`](crate::model::AlarmHistoryItem)
-    #[non_exhaustive]
+    /// A builder for [`AlarmHistoryItem`](crate::model::AlarmHistoryItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alarm_name: std::option::Option<std::string::String>,
@@ -5304,7 +5663,7 @@ pub mod alarm_history_item {
             self.history_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`AlarmHistoryItem`](crate::model::AlarmHistoryItem)
+        /// Consumes the builder and constructs a [`AlarmHistoryItem`](crate::model::AlarmHistoryItem).
         pub fn build(self) -> crate::model::AlarmHistoryItem {
             crate::model::AlarmHistoryItem {
                 alarm_name: self.alarm_name,
@@ -5318,7 +5677,7 @@ pub mod alarm_history_item {
     }
 }
 impl AlarmHistoryItem {
-    /// Creates a new builder-style object to manufacture [`AlarmHistoryItem`](crate::model::AlarmHistoryItem)
+    /// Creates a new builder-style object to manufacture [`AlarmHistoryItem`](crate::model::AlarmHistoryItem).
     pub fn builder() -> crate::model::alarm_history_item::Builder {
         crate::model::alarm_history_item::Builder::default()
     }

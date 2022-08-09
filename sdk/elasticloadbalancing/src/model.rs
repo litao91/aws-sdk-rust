@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TagKeyOnly {
     /// <p>The name of the key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
 }
 impl TagKeyOnly {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for TagKeyOnly {
         formatter.finish()
     }
 }
-/// See [`TagKeyOnly`](crate::model::TagKeyOnly)
+/// See [`TagKeyOnly`](crate::model::TagKeyOnly).
 pub mod tag_key_only {
 
-    /// A builder for [`TagKeyOnly`](crate::model::TagKeyOnly)
-    #[non_exhaustive]
+    /// A builder for [`TagKeyOnly`](crate::model::TagKeyOnly).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -40,14 +40,14 @@ pub mod tag_key_only {
             self.key = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagKeyOnly`](crate::model::TagKeyOnly)
+        /// Consumes the builder and constructs a [`TagKeyOnly`](crate::model::TagKeyOnly).
         pub fn build(self) -> crate::model::TagKeyOnly {
             crate::model::TagKeyOnly { key: self.key }
         }
     }
 }
 impl TagKeyOnly {
-    /// Creates a new builder-style object to manufacture [`TagKeyOnly`](crate::model::TagKeyOnly)
+    /// Creates a new builder-style object to manufacture [`TagKeyOnly`](crate::model::TagKeyOnly).
     pub fn builder() -> crate::model::tag_key_only::Builder {
         crate::model::tag_key_only::Builder::default()
     }
@@ -58,6 +58,7 @@ impl TagKeyOnly {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Instance {
     /// <p>The instance ID.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
 }
 impl Instance {
@@ -73,11 +74,10 @@ impl std::fmt::Debug for Instance {
         formatter.finish()
     }
 }
-/// See [`Instance`](crate::model::Instance)
+/// See [`Instance`](crate::model::Instance).
 pub mod instance {
 
-    /// A builder for [`Instance`](crate::model::Instance)
-    #[non_exhaustive]
+    /// A builder for [`Instance`](crate::model::Instance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_id: std::option::Option<std::string::String>,
@@ -93,7 +93,7 @@ pub mod instance {
             self.instance_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance)
+        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance).
         pub fn build(self) -> crate::model::Instance {
             crate::model::Instance {
                 instance_id: self.instance_id,
@@ -102,7 +102,7 @@ pub mod instance {
     }
 }
 impl Instance {
-    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance)
+    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance).
     pub fn builder() -> crate::model::instance::Builder {
         crate::model::instance::Builder::default()
     }
@@ -114,17 +114,22 @@ impl Instance {
 pub struct LoadBalancerAttributes {
     /// <p>If enabled, the load balancer routes the request traffic evenly across all instances regardless of the Availability Zones.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-crosszone-lb.html">Configure Cross-Zone Load Balancing</a> in the <i>Classic Load Balancers Guide</i>.</p>
+    #[doc(hidden)]
     pub cross_zone_load_balancing: std::option::Option<crate::model::CrossZoneLoadBalancing>,
     /// <p>If enabled, the load balancer captures detailed information of all requests and delivers the information to the Amazon S3 bucket that you specify.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html">Enable Access Logs</a> in the <i>Classic Load Balancers Guide</i>.</p>
+    #[doc(hidden)]
     pub access_log: std::option::Option<crate::model::AccessLog>,
     /// <p>If enabled, the load balancer allows existing requests to complete before the load balancer shifts traffic away from a deregistered or unhealthy instance.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-conn-drain.html">Configure Connection Draining</a> in the <i>Classic Load Balancers Guide</i>.</p>
+    #[doc(hidden)]
     pub connection_draining: std::option::Option<crate::model::ConnectionDraining>,
     /// <p>If enabled, the load balancer allows the connections to remain idle (no data is sent over the connection) for the specified duration.</p>
     /// <p>By default, Elastic Load Balancing maintains a 60-second idle connection timeout for both front-end and back-end connections of your load balancer. For more information, see <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-idle-timeout.html">Configure Idle Connection Timeout</a> in the <i>Classic Load Balancers Guide</i>.</p>
+    #[doc(hidden)]
     pub connection_settings: std::option::Option<crate::model::ConnectionSettings>,
     /// <p>Any additional attributes.</p>
+    #[doc(hidden)]
     pub additional_attributes:
         std::option::Option<std::vec::Vec<crate::model::AdditionalAttribute>>,
 }
@@ -169,11 +174,10 @@ impl std::fmt::Debug for LoadBalancerAttributes {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerAttributes`](crate::model::LoadBalancerAttributes)
+/// See [`LoadBalancerAttributes`](crate::model::LoadBalancerAttributes).
 pub mod load_balancer_attributes {
 
-    /// A builder for [`LoadBalancerAttributes`](crate::model::LoadBalancerAttributes)
-    #[non_exhaustive]
+    /// A builder for [`LoadBalancerAttributes`](crate::model::LoadBalancerAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cross_zone_load_balancing:
@@ -267,7 +271,7 @@ pub mod load_balancer_attributes {
             self.additional_attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerAttributes`](crate::model::LoadBalancerAttributes)
+        /// Consumes the builder and constructs a [`LoadBalancerAttributes`](crate::model::LoadBalancerAttributes).
         pub fn build(self) -> crate::model::LoadBalancerAttributes {
             crate::model::LoadBalancerAttributes {
                 cross_zone_load_balancing: self.cross_zone_load_balancing,
@@ -280,7 +284,7 @@ pub mod load_balancer_attributes {
     }
 }
 impl LoadBalancerAttributes {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerAttributes`](crate::model::LoadBalancerAttributes)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerAttributes`](crate::model::LoadBalancerAttributes).
     pub fn builder() -> crate::model::load_balancer_attributes::Builder {
         crate::model::load_balancer_attributes::Builder::default()
     }
@@ -295,8 +299,10 @@ pub struct AdditionalAttribute {
     /// <ul>
     /// <li> <p> <code>elb.http.desyncmitigationmode</code> - Determines how the load balancer handles requests that might pose a security risk to your application. The possible values are <code>monitor</code>, <code>defensive</code>, and <code>strictest</code>. The default is <code>defensive</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>This value of the attribute.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl AdditionalAttribute {
@@ -321,11 +327,10 @@ impl std::fmt::Debug for AdditionalAttribute {
         formatter.finish()
     }
 }
-/// See [`AdditionalAttribute`](crate::model::AdditionalAttribute)
+/// See [`AdditionalAttribute`](crate::model::AdditionalAttribute).
 pub mod additional_attribute {
 
-    /// A builder for [`AdditionalAttribute`](crate::model::AdditionalAttribute)
-    #[non_exhaustive]
+    /// A builder for [`AdditionalAttribute`](crate::model::AdditionalAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -360,7 +365,7 @@ pub mod additional_attribute {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdditionalAttribute`](crate::model::AdditionalAttribute)
+        /// Consumes the builder and constructs a [`AdditionalAttribute`](crate::model::AdditionalAttribute).
         pub fn build(self) -> crate::model::AdditionalAttribute {
             crate::model::AdditionalAttribute {
                 key: self.key,
@@ -370,7 +375,7 @@ pub mod additional_attribute {
     }
 }
 impl AdditionalAttribute {
-    /// Creates a new builder-style object to manufacture [`AdditionalAttribute`](crate::model::AdditionalAttribute)
+    /// Creates a new builder-style object to manufacture [`AdditionalAttribute`](crate::model::AdditionalAttribute).
     pub fn builder() -> crate::model::additional_attribute::Builder {
         crate::model::additional_attribute::Builder::default()
     }
@@ -381,6 +386,7 @@ impl AdditionalAttribute {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectionSettings {
     /// <p>The time, in seconds, that the connection is allowed to be idle (no data has been sent over the connection) before it is closed by the load balancer.</p>
+    #[doc(hidden)]
     pub idle_timeout: std::option::Option<i32>,
 }
 impl ConnectionSettings {
@@ -396,11 +402,10 @@ impl std::fmt::Debug for ConnectionSettings {
         formatter.finish()
     }
 }
-/// See [`ConnectionSettings`](crate::model::ConnectionSettings)
+/// See [`ConnectionSettings`](crate::model::ConnectionSettings).
 pub mod connection_settings {
 
-    /// A builder for [`ConnectionSettings`](crate::model::ConnectionSettings)
-    #[non_exhaustive]
+    /// A builder for [`ConnectionSettings`](crate::model::ConnectionSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) idle_timeout: std::option::Option<i32>,
@@ -416,7 +421,7 @@ pub mod connection_settings {
             self.idle_timeout = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectionSettings`](crate::model::ConnectionSettings)
+        /// Consumes the builder and constructs a [`ConnectionSettings`](crate::model::ConnectionSettings).
         pub fn build(self) -> crate::model::ConnectionSettings {
             crate::model::ConnectionSettings {
                 idle_timeout: self.idle_timeout,
@@ -425,7 +430,7 @@ pub mod connection_settings {
     }
 }
 impl ConnectionSettings {
-    /// Creates a new builder-style object to manufacture [`ConnectionSettings`](crate::model::ConnectionSettings)
+    /// Creates a new builder-style object to manufacture [`ConnectionSettings`](crate::model::ConnectionSettings).
     pub fn builder() -> crate::model::connection_settings::Builder {
         crate::model::connection_settings::Builder::default()
     }
@@ -436,8 +441,10 @@ impl ConnectionSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectionDraining {
     /// <p>Specifies whether connection draining is enabled for the load balancer.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The maximum time, in seconds, to keep the existing connections open before deregistering the instances.</p>
+    #[doc(hidden)]
     pub timeout: std::option::Option<i32>,
 }
 impl ConnectionDraining {
@@ -458,11 +465,10 @@ impl std::fmt::Debug for ConnectionDraining {
         formatter.finish()
     }
 }
-/// See [`ConnectionDraining`](crate::model::ConnectionDraining)
+/// See [`ConnectionDraining`](crate::model::ConnectionDraining).
 pub mod connection_draining {
 
-    /// A builder for [`ConnectionDraining`](crate::model::ConnectionDraining)
-    #[non_exhaustive]
+    /// A builder for [`ConnectionDraining`](crate::model::ConnectionDraining).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -489,7 +495,7 @@ pub mod connection_draining {
             self.timeout = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectionDraining`](crate::model::ConnectionDraining)
+        /// Consumes the builder and constructs a [`ConnectionDraining`](crate::model::ConnectionDraining).
         pub fn build(self) -> crate::model::ConnectionDraining {
             crate::model::ConnectionDraining {
                 enabled: self.enabled.unwrap_or_default(),
@@ -499,7 +505,7 @@ pub mod connection_draining {
     }
 }
 impl ConnectionDraining {
-    /// Creates a new builder-style object to manufacture [`ConnectionDraining`](crate::model::ConnectionDraining)
+    /// Creates a new builder-style object to manufacture [`ConnectionDraining`](crate::model::ConnectionDraining).
     pub fn builder() -> crate::model::connection_draining::Builder {
         crate::model::connection_draining::Builder::default()
     }
@@ -510,13 +516,17 @@ impl ConnectionDraining {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessLog {
     /// <p>Specifies whether access logs are enabled for the load balancer.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The name of the Amazon S3 bucket where the access logs are stored.</p>
+    #[doc(hidden)]
     pub s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>The interval for publishing the access logs. You can specify an interval of either 5 minutes or 60 minutes.</p>
     /// <p>Default: 60 minutes</p>
+    #[doc(hidden)]
     pub emit_interval: std::option::Option<i32>,
     /// <p>The logical hierarchy you created for your Amazon S3 bucket, for example <code>my-bucket-prefix/prod</code>. If the prefix is not provided, the log is placed at the root level of the bucket.</p>
+    #[doc(hidden)]
     pub s3_bucket_prefix: std::option::Option<std::string::String>,
 }
 impl AccessLog {
@@ -548,11 +558,10 @@ impl std::fmt::Debug for AccessLog {
         formatter.finish()
     }
 }
-/// See [`AccessLog`](crate::model::AccessLog)
+/// See [`AccessLog`](crate::model::AccessLog).
 pub mod access_log {
 
-    /// A builder for [`AccessLog`](crate::model::AccessLog)
-    #[non_exhaustive]
+    /// A builder for [`AccessLog`](crate::model::AccessLog).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -609,7 +618,7 @@ pub mod access_log {
             self.s3_bucket_prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessLog`](crate::model::AccessLog)
+        /// Consumes the builder and constructs a [`AccessLog`](crate::model::AccessLog).
         pub fn build(self) -> crate::model::AccessLog {
             crate::model::AccessLog {
                 enabled: self.enabled.unwrap_or_default(),
@@ -621,7 +630,7 @@ pub mod access_log {
     }
 }
 impl AccessLog {
-    /// Creates a new builder-style object to manufacture [`AccessLog`](crate::model::AccessLog)
+    /// Creates a new builder-style object to manufacture [`AccessLog`](crate::model::AccessLog).
     pub fn builder() -> crate::model::access_log::Builder {
         crate::model::access_log::Builder::default()
     }
@@ -632,6 +641,7 @@ impl AccessLog {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CrossZoneLoadBalancing {
     /// <p>Specifies whether cross-zone load balancing is enabled for the load balancer.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl CrossZoneLoadBalancing {
@@ -647,11 +657,10 @@ impl std::fmt::Debug for CrossZoneLoadBalancing {
         formatter.finish()
     }
 }
-/// See [`CrossZoneLoadBalancing`](crate::model::CrossZoneLoadBalancing)
+/// See [`CrossZoneLoadBalancing`](crate::model::CrossZoneLoadBalancing).
 pub mod cross_zone_load_balancing {
 
-    /// A builder for [`CrossZoneLoadBalancing`](crate::model::CrossZoneLoadBalancing)
-    #[non_exhaustive]
+    /// A builder for [`CrossZoneLoadBalancing`](crate::model::CrossZoneLoadBalancing).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -667,7 +676,7 @@ pub mod cross_zone_load_balancing {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`CrossZoneLoadBalancing`](crate::model::CrossZoneLoadBalancing)
+        /// Consumes the builder and constructs a [`CrossZoneLoadBalancing`](crate::model::CrossZoneLoadBalancing).
         pub fn build(self) -> crate::model::CrossZoneLoadBalancing {
             crate::model::CrossZoneLoadBalancing {
                 enabled: self.enabled.unwrap_or_default(),
@@ -676,7 +685,7 @@ pub mod cross_zone_load_balancing {
     }
 }
 impl CrossZoneLoadBalancing {
-    /// Creates a new builder-style object to manufacture [`CrossZoneLoadBalancing`](crate::model::CrossZoneLoadBalancing)
+    /// Creates a new builder-style object to manufacture [`CrossZoneLoadBalancing`](crate::model::CrossZoneLoadBalancing).
     pub fn builder() -> crate::model::cross_zone_load_balancing::Builder {
         crate::model::cross_zone_load_balancing::Builder::default()
     }
@@ -687,8 +696,10 @@ impl CrossZoneLoadBalancing {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TagDescription {
     /// <p>The name of the load balancer.</p>
+    #[doc(hidden)]
     pub load_balancer_name: std::option::Option<std::string::String>,
     /// <p>The tags.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl TagDescription {
@@ -709,11 +720,10 @@ impl std::fmt::Debug for TagDescription {
         formatter.finish()
     }
 }
-/// See [`TagDescription`](crate::model::TagDescription)
+/// See [`TagDescription`](crate::model::TagDescription).
 pub mod tag_description {
 
-    /// A builder for [`TagDescription`](crate::model::TagDescription)
-    #[non_exhaustive]
+    /// A builder for [`TagDescription`](crate::model::TagDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) load_balancer_name: std::option::Option<std::string::String>,
@@ -752,7 +762,7 @@ pub mod tag_description {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagDescription`](crate::model::TagDescription)
+        /// Consumes the builder and constructs a [`TagDescription`](crate::model::TagDescription).
         pub fn build(self) -> crate::model::TagDescription {
             crate::model::TagDescription {
                 load_balancer_name: self.load_balancer_name,
@@ -762,7 +772,7 @@ pub mod tag_description {
     }
 }
 impl TagDescription {
-    /// Creates a new builder-style object to manufacture [`TagDescription`](crate::model::TagDescription)
+    /// Creates a new builder-style object to manufacture [`TagDescription`](crate::model::TagDescription).
     pub fn builder() -> crate::model::tag_description::Builder {
         crate::model::tag_description::Builder::default()
     }
@@ -773,8 +783,10 @@ impl TagDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key of the tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -795,11 +807,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -826,7 +837,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -836,7 +847,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -847,41 +858,57 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoadBalancerDescription {
     /// <p>The name of the load balancer.</p>
+    #[doc(hidden)]
     pub load_balancer_name: std::option::Option<std::string::String>,
     /// <p>The DNS name of the load balancer.</p>
+    #[doc(hidden)]
     pub dns_name: std::option::Option<std::string::String>,
     /// <p>The DNS name of the load balancer.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/using-domain-names-with-elb.html">Configure a Custom Domain Name</a> in the <i>Classic Load Balancers Guide</i>.</p>
+    #[doc(hidden)]
     pub canonical_hosted_zone_name: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Route 53 hosted zone for the load balancer.</p>
+    #[doc(hidden)]
     pub canonical_hosted_zone_name_id: std::option::Option<std::string::String>,
     /// <p>The listeners for the load balancer.</p>
+    #[doc(hidden)]
     pub listener_descriptions:
         std::option::Option<std::vec::Vec<crate::model::ListenerDescription>>,
     /// <p>The policies defined for the load balancer.</p>
+    #[doc(hidden)]
     pub policies: std::option::Option<crate::model::Policies>,
     /// <p>Information about your EC2 instances.</p>
+    #[doc(hidden)]
     pub backend_server_descriptions:
         std::option::Option<std::vec::Vec<crate::model::BackendServerDescription>>,
     /// <p>The Availability Zones for the load balancer.</p>
+    #[doc(hidden)]
     pub availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The IDs of the subnets for the load balancer.</p>
+    #[doc(hidden)]
     pub subnets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ID of the VPC for the load balancer.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>The IDs of the instances for the load balancer.</p>
+    #[doc(hidden)]
     pub instances: std::option::Option<std::vec::Vec<crate::model::Instance>>,
     /// <p>Information about the health checks conducted on the load balancer.</p>
+    #[doc(hidden)]
     pub health_check: std::option::Option<crate::model::HealthCheck>,
     /// <p>The security group for the load balancer, which you can use as part of your inbound rules for your registered instances. To only allow traffic from load balancers, add a security group rule that specifies this source security group as the inbound source.</p>
+    #[doc(hidden)]
     pub source_security_group: std::option::Option<crate::model::SourceSecurityGroup>,
     /// <p>The security groups for the load balancer. Valid only for load balancers in a VPC.</p>
+    #[doc(hidden)]
     pub security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The date and time the load balancer was created.</p>
+    #[doc(hidden)]
     pub created_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The type of load balancer. Valid only for load balancers in a VPC.</p>
     /// <p>If <code>Scheme</code> is <code>internet-facing</code>, the load balancer has a public DNS name that resolves to a public IP address.</p>
     /// <p>If <code>Scheme</code> is <code>internal</code>, the load balancer has a public DNS name that resolves to a private IP address.</p>
+    #[doc(hidden)]
     pub scheme: std::option::Option<std::string::String>,
 }
 impl LoadBalancerDescription {
@@ -988,11 +1015,10 @@ impl std::fmt::Debug for LoadBalancerDescription {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerDescription`](crate::model::LoadBalancerDescription)
+/// See [`LoadBalancerDescription`](crate::model::LoadBalancerDescription).
 pub mod load_balancer_description {
 
-    /// A builder for [`LoadBalancerDescription`](crate::model::LoadBalancerDescription)
-    #[non_exhaustive]
+    /// A builder for [`LoadBalancerDescription`](crate::model::LoadBalancerDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) load_balancer_name: std::option::Option<std::string::String>,
@@ -1259,7 +1285,7 @@ pub mod load_balancer_description {
             self.scheme = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerDescription`](crate::model::LoadBalancerDescription)
+        /// Consumes the builder and constructs a [`LoadBalancerDescription`](crate::model::LoadBalancerDescription).
         pub fn build(self) -> crate::model::LoadBalancerDescription {
             crate::model::LoadBalancerDescription {
                 load_balancer_name: self.load_balancer_name,
@@ -1283,7 +1309,7 @@ pub mod load_balancer_description {
     }
 }
 impl LoadBalancerDescription {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerDescription`](crate::model::LoadBalancerDescription)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerDescription`](crate::model::LoadBalancerDescription).
     pub fn builder() -> crate::model::load_balancer_description::Builder {
         crate::model::load_balancer_description::Builder::default()
     }
@@ -1294,8 +1320,10 @@ impl LoadBalancerDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceSecurityGroup {
     /// <p>The owner of the security group.</p>
+    #[doc(hidden)]
     pub owner_alias: std::option::Option<std::string::String>,
     /// <p>The name of the security group.</p>
+    #[doc(hidden)]
     pub group_name: std::option::Option<std::string::String>,
 }
 impl SourceSecurityGroup {
@@ -1316,11 +1344,10 @@ impl std::fmt::Debug for SourceSecurityGroup {
         formatter.finish()
     }
 }
-/// See [`SourceSecurityGroup`](crate::model::SourceSecurityGroup)
+/// See [`SourceSecurityGroup`](crate::model::SourceSecurityGroup).
 pub mod source_security_group {
 
-    /// A builder for [`SourceSecurityGroup`](crate::model::SourceSecurityGroup)
-    #[non_exhaustive]
+    /// A builder for [`SourceSecurityGroup`](crate::model::SourceSecurityGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner_alias: std::option::Option<std::string::String>,
@@ -1347,7 +1374,7 @@ pub mod source_security_group {
             self.group_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceSecurityGroup`](crate::model::SourceSecurityGroup)
+        /// Consumes the builder and constructs a [`SourceSecurityGroup`](crate::model::SourceSecurityGroup).
         pub fn build(self) -> crate::model::SourceSecurityGroup {
             crate::model::SourceSecurityGroup {
                 owner_alias: self.owner_alias,
@@ -1357,7 +1384,7 @@ pub mod source_security_group {
     }
 }
 impl SourceSecurityGroup {
-    /// Creates a new builder-style object to manufacture [`SourceSecurityGroup`](crate::model::SourceSecurityGroup)
+    /// Creates a new builder-style object to manufacture [`SourceSecurityGroup`](crate::model::SourceSecurityGroup).
     pub fn builder() -> crate::model::source_security_group::Builder {
         crate::model::source_security_group::Builder::default()
     }
@@ -1372,15 +1399,20 @@ pub struct HealthCheck {
     /// <p>SSL is also specified as SSL: port pair, for example, SSL:5000.</p>
     /// <p>For HTTP/HTTPS, you must include a ping path in the string. HTTP is specified as a HTTP:port;/;PathToPing; grouping, for example "HTTP:80/weather/us/wa/seattle". In this case, a HTTP GET request is issued to the instance on the given port and path. Any answer other than "200 OK" within the timeout period is considered unhealthy.</p>
     /// <p>The total length of the HTTP ping target must be 1024 16-bit Unicode characters or less.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<std::string::String>,
     /// <p>The approximate interval, in seconds, between health checks of an individual instance.</p>
+    #[doc(hidden)]
     pub interval: i32,
     /// <p>The amount of time, in seconds, during which no response means a failed health check.</p>
     /// <p>This value must be less than the <code>Interval</code> value.</p>
+    #[doc(hidden)]
     pub timeout: i32,
     /// <p>The number of consecutive health check failures required before moving the instance to the <code>Unhealthy</code> state.</p>
+    #[doc(hidden)]
     pub unhealthy_threshold: i32,
     /// <p>The number of consecutive health checks successes required before moving the instance to the <code>Healthy</code> state.</p>
+    #[doc(hidden)]
     pub healthy_threshold: i32,
 }
 impl HealthCheck {
@@ -1421,11 +1453,10 @@ impl std::fmt::Debug for HealthCheck {
         formatter.finish()
     }
 }
-/// See [`HealthCheck`](crate::model::HealthCheck)
+/// See [`HealthCheck`](crate::model::HealthCheck).
 pub mod health_check {
 
-    /// A builder for [`HealthCheck`](crate::model::HealthCheck)
-    #[non_exhaustive]
+    /// A builder for [`HealthCheck`](crate::model::HealthCheck).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target: std::option::Option<std::string::String>,
@@ -1495,7 +1526,7 @@ pub mod health_check {
             self.healthy_threshold = input;
             self
         }
-        /// Consumes the builder and constructs a [`HealthCheck`](crate::model::HealthCheck)
+        /// Consumes the builder and constructs a [`HealthCheck`](crate::model::HealthCheck).
         pub fn build(self) -> crate::model::HealthCheck {
             crate::model::HealthCheck {
                 target: self.target,
@@ -1508,7 +1539,7 @@ pub mod health_check {
     }
 }
 impl HealthCheck {
-    /// Creates a new builder-style object to manufacture [`HealthCheck`](crate::model::HealthCheck)
+    /// Creates a new builder-style object to manufacture [`HealthCheck`](crate::model::HealthCheck).
     pub fn builder() -> crate::model::health_check::Builder {
         crate::model::health_check::Builder::default()
     }
@@ -1519,8 +1550,10 @@ impl HealthCheck {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackendServerDescription {
     /// <p>The port on which the EC2 instance is listening.</p>
+    #[doc(hidden)]
     pub instance_port: i32,
     /// <p>The names of the policies enabled for the EC2 instance.</p>
+    #[doc(hidden)]
     pub policy_names: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl BackendServerDescription {
@@ -1541,11 +1574,10 @@ impl std::fmt::Debug for BackendServerDescription {
         formatter.finish()
     }
 }
-/// See [`BackendServerDescription`](crate::model::BackendServerDescription)
+/// See [`BackendServerDescription`](crate::model::BackendServerDescription).
 pub mod backend_server_description {
 
-    /// A builder for [`BackendServerDescription`](crate::model::BackendServerDescription)
-    #[non_exhaustive]
+    /// A builder for [`BackendServerDescription`](crate::model::BackendServerDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_port: std::option::Option<i32>,
@@ -1581,7 +1613,7 @@ pub mod backend_server_description {
             self.policy_names = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackendServerDescription`](crate::model::BackendServerDescription)
+        /// Consumes the builder and constructs a [`BackendServerDescription`](crate::model::BackendServerDescription).
         pub fn build(self) -> crate::model::BackendServerDescription {
             crate::model::BackendServerDescription {
                 instance_port: self.instance_port.unwrap_or_default(),
@@ -1591,7 +1623,7 @@ pub mod backend_server_description {
     }
 }
 impl BackendServerDescription {
-    /// Creates a new builder-style object to manufacture [`BackendServerDescription`](crate::model::BackendServerDescription)
+    /// Creates a new builder-style object to manufacture [`BackendServerDescription`](crate::model::BackendServerDescription).
     pub fn builder() -> crate::model::backend_server_description::Builder {
         crate::model::backend_server_description::Builder::default()
     }
@@ -1602,12 +1634,15 @@ impl BackendServerDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Policies {
     /// <p>The stickiness policies created using <code>CreateAppCookieStickinessPolicy</code>.</p>
+    #[doc(hidden)]
     pub app_cookie_stickiness_policies:
         std::option::Option<std::vec::Vec<crate::model::AppCookieStickinessPolicy>>,
     /// <p>The stickiness policies created using <code>CreateLBCookieStickinessPolicy</code>.</p>
+    #[doc(hidden)]
     pub lb_cookie_stickiness_policies:
         std::option::Option<std::vec::Vec<crate::model::LbCookieStickinessPolicy>>,
     /// <p>The policies other than the stickiness policies.</p>
+    #[doc(hidden)]
     pub other_policies: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Policies {
@@ -1643,11 +1678,10 @@ impl std::fmt::Debug for Policies {
         formatter.finish()
     }
 }
-/// See [`Policies`](crate::model::Policies)
+/// See [`Policies`](crate::model::Policies).
 pub mod policies {
 
-    /// A builder for [`Policies`](crate::model::Policies)
-    #[non_exhaustive]
+    /// A builder for [`Policies`](crate::model::Policies).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_cookie_stickiness_policies:
@@ -1720,7 +1754,7 @@ pub mod policies {
             self.other_policies = input;
             self
         }
-        /// Consumes the builder and constructs a [`Policies`](crate::model::Policies)
+        /// Consumes the builder and constructs a [`Policies`](crate::model::Policies).
         pub fn build(self) -> crate::model::Policies {
             crate::model::Policies {
                 app_cookie_stickiness_policies: self.app_cookie_stickiness_policies,
@@ -1731,7 +1765,7 @@ pub mod policies {
     }
 }
 impl Policies {
-    /// Creates a new builder-style object to manufacture [`Policies`](crate::model::Policies)
+    /// Creates a new builder-style object to manufacture [`Policies`](crate::model::Policies).
     pub fn builder() -> crate::model::policies::Builder {
         crate::model::policies::Builder::default()
     }
@@ -1742,8 +1776,10 @@ impl Policies {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LbCookieStickinessPolicy {
     /// <p>The name of the policy. This name must be unique within the set of policies for this load balancer.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The time period, in seconds, after which the cookie should be considered stale. If this parameter is not specified, the stickiness session lasts for the duration of the browser session.</p>
+    #[doc(hidden)]
     pub cookie_expiration_period: std::option::Option<i64>,
 }
 impl LbCookieStickinessPolicy {
@@ -1764,11 +1800,10 @@ impl std::fmt::Debug for LbCookieStickinessPolicy {
         formatter.finish()
     }
 }
-/// See [`LbCookieStickinessPolicy`](crate::model::LbCookieStickinessPolicy)
+/// See [`LbCookieStickinessPolicy`](crate::model::LbCookieStickinessPolicy).
 pub mod lb_cookie_stickiness_policy {
 
-    /// A builder for [`LbCookieStickinessPolicy`](crate::model::LbCookieStickinessPolicy)
-    #[non_exhaustive]
+    /// A builder for [`LbCookieStickinessPolicy`](crate::model::LbCookieStickinessPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_name: std::option::Option<std::string::String>,
@@ -1795,7 +1830,7 @@ pub mod lb_cookie_stickiness_policy {
             self.cookie_expiration_period = input;
             self
         }
-        /// Consumes the builder and constructs a [`LbCookieStickinessPolicy`](crate::model::LbCookieStickinessPolicy)
+        /// Consumes the builder and constructs a [`LbCookieStickinessPolicy`](crate::model::LbCookieStickinessPolicy).
         pub fn build(self) -> crate::model::LbCookieStickinessPolicy {
             crate::model::LbCookieStickinessPolicy {
                 policy_name: self.policy_name,
@@ -1805,7 +1840,7 @@ pub mod lb_cookie_stickiness_policy {
     }
 }
 impl LbCookieStickinessPolicy {
-    /// Creates a new builder-style object to manufacture [`LbCookieStickinessPolicy`](crate::model::LbCookieStickinessPolicy)
+    /// Creates a new builder-style object to manufacture [`LbCookieStickinessPolicy`](crate::model::LbCookieStickinessPolicy).
     pub fn builder() -> crate::model::lb_cookie_stickiness_policy::Builder {
         crate::model::lb_cookie_stickiness_policy::Builder::default()
     }
@@ -1816,8 +1851,10 @@ impl LbCookieStickinessPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppCookieStickinessPolicy {
     /// <p>The mnemonic name for the policy being created. The name must be unique within a set of policies for this load balancer.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The name of the application cookie used for stickiness.</p>
+    #[doc(hidden)]
     pub cookie_name: std::option::Option<std::string::String>,
 }
 impl AppCookieStickinessPolicy {
@@ -1838,11 +1875,10 @@ impl std::fmt::Debug for AppCookieStickinessPolicy {
         formatter.finish()
     }
 }
-/// See [`AppCookieStickinessPolicy`](crate::model::AppCookieStickinessPolicy)
+/// See [`AppCookieStickinessPolicy`](crate::model::AppCookieStickinessPolicy).
 pub mod app_cookie_stickiness_policy {
 
-    /// A builder for [`AppCookieStickinessPolicy`](crate::model::AppCookieStickinessPolicy)
-    #[non_exhaustive]
+    /// A builder for [`AppCookieStickinessPolicy`](crate::model::AppCookieStickinessPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_name: std::option::Option<std::string::String>,
@@ -1869,7 +1905,7 @@ pub mod app_cookie_stickiness_policy {
             self.cookie_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppCookieStickinessPolicy`](crate::model::AppCookieStickinessPolicy)
+        /// Consumes the builder and constructs a [`AppCookieStickinessPolicy`](crate::model::AppCookieStickinessPolicy).
         pub fn build(self) -> crate::model::AppCookieStickinessPolicy {
             crate::model::AppCookieStickinessPolicy {
                 policy_name: self.policy_name,
@@ -1879,7 +1915,7 @@ pub mod app_cookie_stickiness_policy {
     }
 }
 impl AppCookieStickinessPolicy {
-    /// Creates a new builder-style object to manufacture [`AppCookieStickinessPolicy`](crate::model::AppCookieStickinessPolicy)
+    /// Creates a new builder-style object to manufacture [`AppCookieStickinessPolicy`](crate::model::AppCookieStickinessPolicy).
     pub fn builder() -> crate::model::app_cookie_stickiness_policy::Builder {
         crate::model::app_cookie_stickiness_policy::Builder::default()
     }
@@ -1890,8 +1926,10 @@ impl AppCookieStickinessPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListenerDescription {
     /// <p>The listener.</p>
+    #[doc(hidden)]
     pub listener: std::option::Option<crate::model::Listener>,
     /// <p>The policies. If there are no policies enabled, the list is empty.</p>
+    #[doc(hidden)]
     pub policy_names: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ListenerDescription {
@@ -1912,11 +1950,10 @@ impl std::fmt::Debug for ListenerDescription {
         formatter.finish()
     }
 }
-/// See [`ListenerDescription`](crate::model::ListenerDescription)
+/// See [`ListenerDescription`](crate::model::ListenerDescription).
 pub mod listener_description {
 
-    /// A builder for [`ListenerDescription`](crate::model::ListenerDescription)
-    #[non_exhaustive]
+    /// A builder for [`ListenerDescription`](crate::model::ListenerDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) listener: std::option::Option<crate::model::Listener>,
@@ -1952,7 +1989,7 @@ pub mod listener_description {
             self.policy_names = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListenerDescription`](crate::model::ListenerDescription)
+        /// Consumes the builder and constructs a [`ListenerDescription`](crate::model::ListenerDescription).
         pub fn build(self) -> crate::model::ListenerDescription {
             crate::model::ListenerDescription {
                 listener: self.listener,
@@ -1962,7 +1999,7 @@ pub mod listener_description {
     }
 }
 impl ListenerDescription {
-    /// Creates a new builder-style object to manufacture [`ListenerDescription`](crate::model::ListenerDescription)
+    /// Creates a new builder-style object to manufacture [`ListenerDescription`](crate::model::ListenerDescription).
     pub fn builder() -> crate::model::listener_description::Builder {
         crate::model::listener_description::Builder::default()
     }
@@ -1974,17 +2011,22 @@ impl ListenerDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Listener {
     /// <p>The load balancer transport protocol to use for routing: HTTP, HTTPS, TCP, or SSL.</p>
+    #[doc(hidden)]
     pub protocol: std::option::Option<std::string::String>,
     /// <p>The port on which the load balancer is listening. On EC2-VPC, you can specify any port from the range 1-65535. On EC2-Classic, you can specify any port from the following list: 25, 80, 443, 465, 587, 1024-65535.</p>
+    #[doc(hidden)]
     pub load_balancer_port: i32,
     /// <p>The protocol to use for routing traffic to instances: HTTP, HTTPS, TCP, or SSL.</p>
     /// <p>If the front-end protocol is TCP or SSL, the back-end protocol must be TCP or SSL. If the front-end protocol is HTTP or HTTPS, the back-end protocol must be HTTP or HTTPS.</p>
     /// <p>If there is another listener with the same <code>InstancePort</code> whose <code>InstanceProtocol</code> is secure, (HTTPS or SSL), the listener's <code>InstanceProtocol</code> must also be secure.</p>
     /// <p>If there is another listener with the same <code>InstancePort</code> whose <code>InstanceProtocol</code> is HTTP or TCP, the listener's <code>InstanceProtocol</code> must be HTTP or TCP.</p>
+    #[doc(hidden)]
     pub instance_protocol: std::option::Option<std::string::String>,
     /// <p>The port on which the instance is listening.</p>
+    #[doc(hidden)]
     pub instance_port: i32,
     /// <p>The Amazon Resource Name (ARN) of the server certificate.</p>
+    #[doc(hidden)]
     pub ssl_certificate_id: std::option::Option<std::string::String>,
 }
 impl Listener {
@@ -2023,11 +2065,10 @@ impl std::fmt::Debug for Listener {
         formatter.finish()
     }
 }
-/// See [`Listener`](crate::model::Listener)
+/// See [`Listener`](crate::model::Listener).
 pub mod listener {
 
-    /// A builder for [`Listener`](crate::model::Listener)
-    #[non_exhaustive]
+    /// A builder for [`Listener`](crate::model::Listener).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) protocol: std::option::Option<std::string::String>,
@@ -2099,7 +2140,7 @@ pub mod listener {
             self.ssl_certificate_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Listener`](crate::model::Listener)
+        /// Consumes the builder and constructs a [`Listener`](crate::model::Listener).
         pub fn build(self) -> crate::model::Listener {
             crate::model::Listener {
                 protocol: self.protocol,
@@ -2112,7 +2153,7 @@ pub mod listener {
     }
 }
 impl Listener {
-    /// Creates a new builder-style object to manufacture [`Listener`](crate::model::Listener)
+    /// Creates a new builder-style object to manufacture [`Listener`](crate::model::Listener).
     pub fn builder() -> crate::model::listener::Builder {
         crate::model::listener::Builder::default()
     }
@@ -2123,10 +2164,13 @@ impl Listener {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyTypeDescription {
     /// <p>The name of the policy type.</p>
+    #[doc(hidden)]
     pub policy_type_name: std::option::Option<std::string::String>,
     /// <p>A description of the policy type.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The description of the policy attributes associated with the policies defined by Elastic Load Balancing.</p>
+    #[doc(hidden)]
     pub policy_attribute_type_descriptions:
         std::option::Option<std::vec::Vec<crate::model::PolicyAttributeTypeDescription>>,
 }
@@ -2158,11 +2202,10 @@ impl std::fmt::Debug for PolicyTypeDescription {
         formatter.finish()
     }
 }
-/// See [`PolicyTypeDescription`](crate::model::PolicyTypeDescription)
+/// See [`PolicyTypeDescription`](crate::model::PolicyTypeDescription).
 pub mod policy_type_description {
 
-    /// A builder for [`PolicyTypeDescription`](crate::model::PolicyTypeDescription)
-    #[non_exhaustive]
+    /// A builder for [`PolicyTypeDescription`](crate::model::PolicyTypeDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_type_name: std::option::Option<std::string::String>,
@@ -2216,7 +2259,7 @@ pub mod policy_type_description {
             self.policy_attribute_type_descriptions = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyTypeDescription`](crate::model::PolicyTypeDescription)
+        /// Consumes the builder and constructs a [`PolicyTypeDescription`](crate::model::PolicyTypeDescription).
         pub fn build(self) -> crate::model::PolicyTypeDescription {
             crate::model::PolicyTypeDescription {
                 policy_type_name: self.policy_type_name,
@@ -2227,7 +2270,7 @@ pub mod policy_type_description {
     }
 }
 impl PolicyTypeDescription {
-    /// Creates a new builder-style object to manufacture [`PolicyTypeDescription`](crate::model::PolicyTypeDescription)
+    /// Creates a new builder-style object to manufacture [`PolicyTypeDescription`](crate::model::PolicyTypeDescription).
     pub fn builder() -> crate::model::policy_type_description::Builder {
         crate::model::policy_type_description::Builder::default()
     }
@@ -2238,12 +2281,16 @@ impl PolicyTypeDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyAttributeTypeDescription {
     /// <p>The name of the attribute.</p>
+    #[doc(hidden)]
     pub attribute_name: std::option::Option<std::string::String>,
     /// <p>The type of the attribute. For example, <code>Boolean</code> or <code>Integer</code>.</p>
+    #[doc(hidden)]
     pub attribute_type: std::option::Option<std::string::String>,
     /// <p>A description of the attribute.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The default value of the attribute, if applicable.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
     /// <p>The cardinality of the attribute.</p>
     /// <p>Valid values:</p>
@@ -2253,6 +2300,7 @@ pub struct PolicyAttributeTypeDescription {
     /// <li> <p>ZERO_OR_MORE(0..*) : Optional. Multiple values are allowed</p> </li>
     /// <li> <p>ONE_OR_MORE(1..*0) : Required. Multiple values are allowed</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub cardinality: std::option::Option<std::string::String>,
 }
 impl PolicyAttributeTypeDescription {
@@ -2295,11 +2343,10 @@ impl std::fmt::Debug for PolicyAttributeTypeDescription {
         formatter.finish()
     }
 }
-/// See [`PolicyAttributeTypeDescription`](crate::model::PolicyAttributeTypeDescription)
+/// See [`PolicyAttributeTypeDescription`](crate::model::PolicyAttributeTypeDescription).
 pub mod policy_attribute_type_description {
 
-    /// A builder for [`PolicyAttributeTypeDescription`](crate::model::PolicyAttributeTypeDescription)
-    #[non_exhaustive]
+    /// A builder for [`PolicyAttributeTypeDescription`](crate::model::PolicyAttributeTypeDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_name: std::option::Option<std::string::String>,
@@ -2382,7 +2429,7 @@ pub mod policy_attribute_type_description {
             self.cardinality = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyAttributeTypeDescription`](crate::model::PolicyAttributeTypeDescription)
+        /// Consumes the builder and constructs a [`PolicyAttributeTypeDescription`](crate::model::PolicyAttributeTypeDescription).
         pub fn build(self) -> crate::model::PolicyAttributeTypeDescription {
             crate::model::PolicyAttributeTypeDescription {
                 attribute_name: self.attribute_name,
@@ -2395,7 +2442,7 @@ pub mod policy_attribute_type_description {
     }
 }
 impl PolicyAttributeTypeDescription {
-    /// Creates a new builder-style object to manufacture [`PolicyAttributeTypeDescription`](crate::model::PolicyAttributeTypeDescription)
+    /// Creates a new builder-style object to manufacture [`PolicyAttributeTypeDescription`](crate::model::PolicyAttributeTypeDescription).
     pub fn builder() -> crate::model::policy_attribute_type_description::Builder {
         crate::model::policy_attribute_type_description::Builder::default()
     }
@@ -2406,10 +2453,13 @@ impl PolicyAttributeTypeDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyDescription {
     /// <p>The name of the policy.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The name of the policy type.</p>
+    #[doc(hidden)]
     pub policy_type_name: std::option::Option<std::string::String>,
     /// <p>The policy attributes.</p>
+    #[doc(hidden)]
     pub policy_attribute_descriptions:
         std::option::Option<std::vec::Vec<crate::model::PolicyAttributeDescription>>,
 }
@@ -2441,11 +2491,10 @@ impl std::fmt::Debug for PolicyDescription {
         formatter.finish()
     }
 }
-/// See [`PolicyDescription`](crate::model::PolicyDescription)
+/// See [`PolicyDescription`](crate::model::PolicyDescription).
 pub mod policy_description {
 
-    /// A builder for [`PolicyDescription`](crate::model::PolicyDescription)
-    #[non_exhaustive]
+    /// A builder for [`PolicyDescription`](crate::model::PolicyDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_name: std::option::Option<std::string::String>,
@@ -2499,7 +2548,7 @@ pub mod policy_description {
             self.policy_attribute_descriptions = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyDescription`](crate::model::PolicyDescription)
+        /// Consumes the builder and constructs a [`PolicyDescription`](crate::model::PolicyDescription).
         pub fn build(self) -> crate::model::PolicyDescription {
             crate::model::PolicyDescription {
                 policy_name: self.policy_name,
@@ -2510,7 +2559,7 @@ pub mod policy_description {
     }
 }
 impl PolicyDescription {
-    /// Creates a new builder-style object to manufacture [`PolicyDescription`](crate::model::PolicyDescription)
+    /// Creates a new builder-style object to manufacture [`PolicyDescription`](crate::model::PolicyDescription).
     pub fn builder() -> crate::model::policy_description::Builder {
         crate::model::policy_description::Builder::default()
     }
@@ -2521,8 +2570,10 @@ impl PolicyDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyAttributeDescription {
     /// <p>The name of the attribute.</p>
+    #[doc(hidden)]
     pub attribute_name: std::option::Option<std::string::String>,
     /// <p>The value of the attribute.</p>
+    #[doc(hidden)]
     pub attribute_value: std::option::Option<std::string::String>,
 }
 impl PolicyAttributeDescription {
@@ -2543,11 +2594,10 @@ impl std::fmt::Debug for PolicyAttributeDescription {
         formatter.finish()
     }
 }
-/// See [`PolicyAttributeDescription`](crate::model::PolicyAttributeDescription)
+/// See [`PolicyAttributeDescription`](crate::model::PolicyAttributeDescription).
 pub mod policy_attribute_description {
 
-    /// A builder for [`PolicyAttributeDescription`](crate::model::PolicyAttributeDescription)
-    #[non_exhaustive]
+    /// A builder for [`PolicyAttributeDescription`](crate::model::PolicyAttributeDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_name: std::option::Option<std::string::String>,
@@ -2580,7 +2630,7 @@ pub mod policy_attribute_description {
             self.attribute_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyAttributeDescription`](crate::model::PolicyAttributeDescription)
+        /// Consumes the builder and constructs a [`PolicyAttributeDescription`](crate::model::PolicyAttributeDescription).
         pub fn build(self) -> crate::model::PolicyAttributeDescription {
             crate::model::PolicyAttributeDescription {
                 attribute_name: self.attribute_name,
@@ -2590,7 +2640,7 @@ pub mod policy_attribute_description {
     }
 }
 impl PolicyAttributeDescription {
-    /// Creates a new builder-style object to manufacture [`PolicyAttributeDescription`](crate::model::PolicyAttributeDescription)
+    /// Creates a new builder-style object to manufacture [`PolicyAttributeDescription`](crate::model::PolicyAttributeDescription).
     pub fn builder() -> crate::model::policy_attribute_description::Builder {
         crate::model::policy_attribute_description::Builder::default()
     }
@@ -2601,12 +2651,15 @@ impl PolicyAttributeDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceState {
     /// <p>The ID of the instance.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p>The current state of the instance.</p>
     /// <p>Valid values: <code>InService</code> | <code>OutOfService</code> | <code>Unknown</code> </p>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
     /// <p>Information about the cause of <code>OutOfService</code> instances. Specifically, whether the cause is Elastic Load Balancing or the instance.</p>
     /// <p>Valid values: <code>ELB</code> | <code>Instance</code> | <code>N/A</code> </p>
+    #[doc(hidden)]
     pub reason_code: std::option::Option<std::string::String>,
     /// <p>A description of the instance state. This string can contain one or more of the following messages.</p>
     /// <ul>
@@ -2623,6 +2676,7 @@ pub struct InstanceState {
     /// <li> <p> <code>Instance is in stopped state.</code> </p> </li>
     /// <li> <p> <code>Instance is in terminated state.</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl InstanceState {
@@ -2669,11 +2723,10 @@ impl std::fmt::Debug for InstanceState {
         formatter.finish()
     }
 }
-/// See [`InstanceState`](crate::model::InstanceState)
+/// See [`InstanceState`](crate::model::InstanceState).
 pub mod instance_state {
 
-    /// A builder for [`InstanceState`](crate::model::InstanceState)
-    #[non_exhaustive]
+    /// A builder for [`InstanceState`](crate::model::InstanceState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_id: std::option::Option<std::string::String>,
@@ -2754,7 +2807,7 @@ pub mod instance_state {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceState`](crate::model::InstanceState)
+        /// Consumes the builder and constructs a [`InstanceState`](crate::model::InstanceState).
         pub fn build(self) -> crate::model::InstanceState {
             crate::model::InstanceState {
                 instance_id: self.instance_id,
@@ -2766,7 +2819,7 @@ pub mod instance_state {
     }
 }
 impl InstanceState {
-    /// Creates a new builder-style object to manufacture [`InstanceState`](crate::model::InstanceState)
+    /// Creates a new builder-style object to manufacture [`InstanceState`](crate::model::InstanceState).
     pub fn builder() -> crate::model::instance_state::Builder {
         crate::model::instance_state::Builder::default()
     }
@@ -2782,8 +2835,10 @@ pub struct Limit {
     /// <li> <p>classic-load-balancers</p> </li>
     /// <li> <p>classic-registered-instances</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The maximum value of the limit.</p>
+    #[doc(hidden)]
     pub max: std::option::Option<std::string::String>,
 }
 impl Limit {
@@ -2809,11 +2864,10 @@ impl std::fmt::Debug for Limit {
         formatter.finish()
     }
 }
-/// See [`Limit`](crate::model::Limit)
+/// See [`Limit`](crate::model::Limit).
 pub mod limit {
 
-    /// A builder for [`Limit`](crate::model::Limit)
-    #[non_exhaustive]
+    /// A builder for [`Limit`](crate::model::Limit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2850,7 +2904,7 @@ pub mod limit {
             self.max = input;
             self
         }
-        /// Consumes the builder and constructs a [`Limit`](crate::model::Limit)
+        /// Consumes the builder and constructs a [`Limit`](crate::model::Limit).
         pub fn build(self) -> crate::model::Limit {
             crate::model::Limit {
                 name: self.name,
@@ -2860,7 +2914,7 @@ pub mod limit {
     }
 }
 impl Limit {
-    /// Creates a new builder-style object to manufacture [`Limit`](crate::model::Limit)
+    /// Creates a new builder-style object to manufacture [`Limit`](crate::model::Limit).
     pub fn builder() -> crate::model::limit::Builder {
         crate::model::limit::Builder::default()
     }
@@ -2871,8 +2925,10 @@ impl Limit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyAttribute {
     /// <p>The name of the attribute.</p>
+    #[doc(hidden)]
     pub attribute_name: std::option::Option<std::string::String>,
     /// <p>The value of the attribute.</p>
+    #[doc(hidden)]
     pub attribute_value: std::option::Option<std::string::String>,
 }
 impl PolicyAttribute {
@@ -2893,11 +2949,10 @@ impl std::fmt::Debug for PolicyAttribute {
         formatter.finish()
     }
 }
-/// See [`PolicyAttribute`](crate::model::PolicyAttribute)
+/// See [`PolicyAttribute`](crate::model::PolicyAttribute).
 pub mod policy_attribute {
 
-    /// A builder for [`PolicyAttribute`](crate::model::PolicyAttribute)
-    #[non_exhaustive]
+    /// A builder for [`PolicyAttribute`](crate::model::PolicyAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_name: std::option::Option<std::string::String>,
@@ -2930,7 +2985,7 @@ pub mod policy_attribute {
             self.attribute_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyAttribute`](crate::model::PolicyAttribute)
+        /// Consumes the builder and constructs a [`PolicyAttribute`](crate::model::PolicyAttribute).
         pub fn build(self) -> crate::model::PolicyAttribute {
             crate::model::PolicyAttribute {
                 attribute_name: self.attribute_name,
@@ -2940,7 +2995,7 @@ pub mod policy_attribute {
     }
 }
 impl PolicyAttribute {
-    /// Creates a new builder-style object to manufacture [`PolicyAttribute`](crate::model::PolicyAttribute)
+    /// Creates a new builder-style object to manufacture [`PolicyAttribute`](crate::model::PolicyAttribute).
     pub fn builder() -> crate::model::policy_attribute::Builder {
         crate::model::policy_attribute::Builder::default()
     }

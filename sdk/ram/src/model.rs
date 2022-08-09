@@ -5,22 +5,31 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceShare {
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource share</p>
+    #[doc(hidden)]
     pub resource_share_arn: std::option::Option<std::string::String>,
     /// <p>The name of the resource share.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services account that owns the resource share.</p>
+    #[doc(hidden)]
     pub owning_account_id: std::option::Option<std::string::String>,
     /// <p>Indicates whether principals outside your organization in Organizations can be associated with a resource share.</p>
+    #[doc(hidden)]
     pub allow_external_principals: std::option::Option<bool>,
     /// <p>The current status of the resource share.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ResourceShareStatus>,
     /// <p>A message about the status of the resource share.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The tag key and value pairs attached to the resource share.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The date and time when the resource share was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the resource share was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates how the resource share was created. Possible values include:</p>
     /// <ul>
@@ -28,6 +37,7 @@ pub struct ResourceShare {
     /// <li> <p> <code>PROMOTING_TO_STANDARD</code> - The resource share is in the process of being promoted. For more information, see <code>PromoteResourceShareCreatedFromPolicy</code>.</p> </li>
     /// <li> <p> <code>STANDARD</code> - Indicates that the resource share was created in RAM using the console or APIs. These resource shares are visible to all principals you share the resource share with. You can modify these resource shares in RAM using the console or APIs.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub feature_set: std::option::Option<crate::model::ResourceShareFeatureSet>,
 }
 impl ResourceShare {
@@ -93,11 +103,10 @@ impl std::fmt::Debug for ResourceShare {
         formatter.finish()
     }
 }
-/// See [`ResourceShare`](crate::model::ResourceShare)
+/// See [`ResourceShare`](crate::model::ResourceShare).
 pub mod resource_share {
 
-    /// A builder for [`ResourceShare`](crate::model::ResourceShare)
-    #[non_exhaustive]
+    /// A builder for [`ResourceShare`](crate::model::ResourceShare).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_share_arn: std::option::Option<std::string::String>,
@@ -252,7 +261,7 @@ pub mod resource_share {
             self.feature_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceShare`](crate::model::ResourceShare)
+        /// Consumes the builder and constructs a [`ResourceShare`](crate::model::ResourceShare).
         pub fn build(self) -> crate::model::ResourceShare {
             crate::model::ResourceShare {
                 resource_share_arn: self.resource_share_arn,
@@ -270,7 +279,7 @@ pub mod resource_share {
     }
 }
 impl ResourceShare {
-    /// Creates a new builder-style object to manufacture [`ResourceShare`](crate::model::ResourceShare)
+    /// Creates a new builder-style object to manufacture [`ResourceShare`](crate::model::ResourceShare).
     pub fn builder() -> crate::model::resource_share::Builder {
         crate::model::resource_share::Builder::default()
     }
@@ -341,8 +350,10 @@ impl AsRef<str> for ResourceShareFeatureSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key, or name, attached to the tag. Every tag must have a key. Key names are case sensitive.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The string value attached to the tag. The value can be an empty string. Key values are case sensitive.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -363,11 +374,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -394,7 +404,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -404,7 +414,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -482,23 +492,33 @@ impl AsRef<str> for ResourceShareStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceShareInvitation {
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the invitation.</p>
+    #[doc(hidden)]
     pub resource_share_invitation_arn: std::option::Option<std::string::String>,
     /// <p>The name of the resource share.</p>
+    #[doc(hidden)]
     pub resource_share_name: std::option::Option<std::string::String>,
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource share</p>
+    #[doc(hidden)]
     pub resource_share_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services account that sent the invitation.</p>
+    #[doc(hidden)]
     pub sender_account_id: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services account that received the invitation.</p>
+    #[doc(hidden)]
     pub receiver_account_id: std::option::Option<std::string::String>,
     /// <p>The date and time when the invitation was sent.</p>
+    #[doc(hidden)]
     pub invitation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current status of the invitation.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ResourceShareInvitationStatus>,
     /// <p>To view the resources associated with a pending resource share invitation, use <code>ListPendingInvitationResources</code>.</p>
+    #[deprecated(note = "This member has been deprecated. Use ListPendingInvitationResources.")]
+    #[doc(hidden)]
     pub resource_share_associations:
         std::option::Option<std::vec::Vec<crate::model::ResourceShareAssociation>>,
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the IAM user or role that received the invitation.</p>
+    #[doc(hidden)]
     pub receiver_arn: std::option::Option<std::string::String>,
 }
 impl ResourceShareInvitation {
@@ -531,6 +551,7 @@ impl ResourceShareInvitation {
         self.status.as_ref()
     }
     /// <p>To view the resources associated with a pending resource share invitation, use <code>ListPendingInvitationResources</code>.</p>
+    #[deprecated(note = "This member has been deprecated. Use ListPendingInvitationResources.")]
     pub fn resource_share_associations(
         &self,
     ) -> std::option::Option<&[crate::model::ResourceShareAssociation]> {
@@ -562,11 +583,10 @@ impl std::fmt::Debug for ResourceShareInvitation {
         formatter.finish()
     }
 }
-/// See [`ResourceShareInvitation`](crate::model::ResourceShareInvitation)
+/// See [`ResourceShareInvitation`](crate::model::ResourceShareInvitation).
 pub mod resource_share_invitation {
 
-    /// A builder for [`ResourceShareInvitation`](crate::model::ResourceShareInvitation)
-    #[non_exhaustive]
+    /// A builder for [`ResourceShareInvitation`](crate::model::ResourceShareInvitation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_share_invitation_arn: std::option::Option<std::string::String>,
@@ -680,6 +700,7 @@ pub mod resource_share_invitation {
         /// To override the contents of this collection use [`set_resource_share_associations`](Self::set_resource_share_associations).
         ///
         /// <p>To view the resources associated with a pending resource share invitation, use <code>ListPendingInvitationResources</code>.</p>
+        #[deprecated(note = "This member has been deprecated. Use ListPendingInvitationResources.")]
         pub fn resource_share_associations(
             mut self,
             input: crate::model::ResourceShareAssociation,
@@ -690,6 +711,7 @@ pub mod resource_share_invitation {
             self
         }
         /// <p>To view the resources associated with a pending resource share invitation, use <code>ListPendingInvitationResources</code>.</p>
+        #[deprecated(note = "This member has been deprecated. Use ListPendingInvitationResources.")]
         pub fn set_resource_share_associations(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::ResourceShareAssociation>>,
@@ -707,7 +729,7 @@ pub mod resource_share_invitation {
             self.receiver_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceShareInvitation`](crate::model::ResourceShareInvitation)
+        /// Consumes the builder and constructs a [`ResourceShareInvitation`](crate::model::ResourceShareInvitation).
         pub fn build(self) -> crate::model::ResourceShareInvitation {
             crate::model::ResourceShareInvitation {
                 resource_share_invitation_arn: self.resource_share_invitation_arn,
@@ -724,7 +746,7 @@ pub mod resource_share_invitation {
     }
 }
 impl ResourceShareInvitation {
-    /// Creates a new builder-style object to manufacture [`ResourceShareInvitation`](crate::model::ResourceShareInvitation)
+    /// Creates a new builder-style object to manufacture [`ResourceShareInvitation`](crate::model::ResourceShareInvitation).
     pub fn builder() -> crate::model::resource_share_invitation::Builder {
         crate::model::resource_share_invitation::Builder::default()
     }
@@ -735,8 +757,10 @@ impl ResourceShareInvitation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceShareAssociation {
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource share.</p>
+    #[doc(hidden)]
     pub resource_share_arn: std::option::Option<std::string::String>,
     /// <p>The name of the resource share.</p>
+    #[doc(hidden)]
     pub resource_share_name: std::option::Option<std::string::String>,
     /// <p>The associated entity. This can be either of the following:</p>
     /// <ul>
@@ -750,18 +774,25 @@ pub struct ResourceShareAssociation {
     /// <li> <p>The ARN of an IAM user</p> </li>
     /// </ul> </li>
     /// </ul>
+    #[doc(hidden)]
     pub associated_entity: std::option::Option<std::string::String>,
     /// <p>The type of entity included in this association.</p>
+    #[doc(hidden)]
     pub association_type: std::option::Option<crate::model::ResourceShareAssociationType>,
     /// <p>The current status of the association.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ResourceShareAssociationStatus>,
     /// <p>A message about the status of the association.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The date and time when the association was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the association was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web Services account that owns the resource share.</p>
+    #[doc(hidden)]
     pub external: std::option::Option<bool>,
 }
 impl ResourceShareAssociation {
@@ -830,11 +861,10 @@ impl std::fmt::Debug for ResourceShareAssociation {
         formatter.finish()
     }
 }
-/// See [`ResourceShareAssociation`](crate::model::ResourceShareAssociation)
+/// See [`ResourceShareAssociation`](crate::model::ResourceShareAssociation).
 pub mod resource_share_association {
 
-    /// A builder for [`ResourceShareAssociation`](crate::model::ResourceShareAssociation)
-    #[non_exhaustive]
+    /// A builder for [`ResourceShareAssociation`](crate::model::ResourceShareAssociation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_share_arn: std::option::Option<std::string::String>,
@@ -988,7 +1018,7 @@ pub mod resource_share_association {
             self.external = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceShareAssociation`](crate::model::ResourceShareAssociation)
+        /// Consumes the builder and constructs a [`ResourceShareAssociation`](crate::model::ResourceShareAssociation).
         pub fn build(self) -> crate::model::ResourceShareAssociation {
             crate::model::ResourceShareAssociation {
                 resource_share_arn: self.resource_share_arn,
@@ -1005,7 +1035,7 @@ pub mod resource_share_association {
     }
 }
 impl ResourceShareAssociation {
-    /// Creates a new builder-style object to manufacture [`ResourceShareAssociation`](crate::model::ResourceShareAssociation)
+    /// Creates a new builder-style object to manufacture [`ResourceShareAssociation`](crate::model::ResourceShareAssociation).
     pub fn builder() -> crate::model::resource_share_association::Builder {
         crate::model::resource_share_association::Builder::default()
     }
@@ -1207,14 +1237,17 @@ impl AsRef<str> for ResourceShareInvitationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceNameAndResourceType {
     /// <p>The type of the resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon Web Services service to which resources of this type belong.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
     /// <p>Specifies the scope of visibility of resources of this type:</p>
     /// <ul>
     /// <li> <p> <b>REGIONAL</b> – The resource can be accessed only by using requests that target the Amazon Web Services Region in which the resource exists.</p> </li>
     /// <li> <p> <b>GLOBAL</b> – The resource can be accessed from any Amazon Web Services Region.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub resource_region_scope: std::option::Option<crate::model::ResourceRegionScope>,
 }
 impl ServiceNameAndResourceType {
@@ -1244,11 +1277,10 @@ impl std::fmt::Debug for ServiceNameAndResourceType {
         formatter.finish()
     }
 }
-/// See [`ServiceNameAndResourceType`](crate::model::ServiceNameAndResourceType)
+/// See [`ServiceNameAndResourceType`](crate::model::ServiceNameAndResourceType).
 pub mod service_name_and_resource_type {
 
-    /// A builder for [`ServiceNameAndResourceType`](crate::model::ServiceNameAndResourceType)
-    #[non_exhaustive]
+    /// A builder for [`ServiceNameAndResourceType`](crate::model::ServiceNameAndResourceType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -1300,7 +1332,7 @@ pub mod service_name_and_resource_type {
             self.resource_region_scope = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceNameAndResourceType`](crate::model::ServiceNameAndResourceType)
+        /// Consumes the builder and constructs a [`ServiceNameAndResourceType`](crate::model::ServiceNameAndResourceType).
         pub fn build(self) -> crate::model::ServiceNameAndResourceType {
             crate::model::ServiceNameAndResourceType {
                 resource_type: self.resource_type,
@@ -1311,7 +1343,7 @@ pub mod service_name_and_resource_type {
     }
 }
 impl ServiceNameAndResourceType {
-    /// Creates a new builder-style object to manufacture [`ServiceNameAndResourceType`](crate::model::ServiceNameAndResourceType)
+    /// Creates a new builder-style object to manufacture [`ServiceNameAndResourceType`](crate::model::ServiceNameAndResourceType).
     pub fn builder() -> crate::model::service_name_and_resource_type::Builder {
         crate::model::service_name_and_resource_type::Builder::default()
     }
@@ -1436,22 +1468,31 @@ impl AsRef<str> for ResourceRegionScopeFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceSharePermissionSummary {
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the permission you want information about.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The version of the permission represented in this structure.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>Specifies whether the version of the permission represented in this structure is the default version for this permission.</p>
+    #[doc(hidden)]
     pub default_version: std::option::Option<bool>,
     /// <p>The name of this permission.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of resource to which this permission applies.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The current status of the permission.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The date and time when the permission was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the permission was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies whether the version of the permission represented in this structure is the default version for all resources of this resource type.</p>
+    #[doc(hidden)]
     pub is_resource_type_default: std::option::Option<bool>,
 }
 impl ResourceSharePermissionSummary {
@@ -1507,11 +1548,10 @@ impl std::fmt::Debug for ResourceSharePermissionSummary {
         formatter.finish()
     }
 }
-/// See [`ResourceSharePermissionSummary`](crate::model::ResourceSharePermissionSummary)
+/// See [`ResourceSharePermissionSummary`](crate::model::ResourceSharePermissionSummary).
 pub mod resource_share_permission_summary {
 
-    /// A builder for [`ResourceSharePermissionSummary`](crate::model::ResourceSharePermissionSummary)
-    #[non_exhaustive]
+    /// A builder for [`ResourceSharePermissionSummary`](crate::model::ResourceSharePermissionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1624,7 +1664,7 @@ pub mod resource_share_permission_summary {
             self.is_resource_type_default = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceSharePermissionSummary`](crate::model::ResourceSharePermissionSummary)
+        /// Consumes the builder and constructs a [`ResourceSharePermissionSummary`](crate::model::ResourceSharePermissionSummary).
         pub fn build(self) -> crate::model::ResourceSharePermissionSummary {
             crate::model::ResourceSharePermissionSummary {
                 arn: self.arn,
@@ -1641,7 +1681,7 @@ pub mod resource_share_permission_summary {
     }
 }
 impl ResourceSharePermissionSummary {
-    /// Creates a new builder-style object to manufacture [`ResourceSharePermissionSummary`](crate::model::ResourceSharePermissionSummary)
+    /// Creates a new builder-style object to manufacture [`ResourceSharePermissionSummary`](crate::model::ResourceSharePermissionSummary).
     pub fn builder() -> crate::model::resource_share_permission_summary::Builder {
         crate::model::resource_share_permission_summary::Builder::default()
     }
@@ -1652,26 +1692,35 @@ impl ResourceSharePermissionSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Resource {
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The resource type. This takes the form of: <code>service-code</code>:<code>resource-code</code> </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource share this resource is associated with.</p>
+    #[doc(hidden)]
     pub resource_share_arn: std::option::Option<std::string::String>,
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource group. This value is available only if the resource is part of a resource group.</p>
+    #[doc(hidden)]
     pub resource_group_arn: std::option::Option<std::string::String>,
     /// <p>The current status of the resource.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ResourceStatus>,
     /// <p>A message about the status of the resource.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The date and time when the resource was associated with the resource share.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date an time when the association was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the scope of visibility of this resource:</p>
     /// <ul>
     /// <li> <p> <b>REGIONAL</b> – The resource can be accessed only by using requests that target the Amazon Web Services Region in which the resource exists.</p> </li>
     /// <li> <p> <b>GLOBAL</b> – The resource can be accessed from any Amazon Web Services Region.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub resource_region_scope: std::option::Option<crate::model::ResourceRegionScope>,
 }
 impl Resource {
@@ -1731,11 +1780,10 @@ impl std::fmt::Debug for Resource {
         formatter.finish()
     }
 }
-/// See [`Resource`](crate::model::Resource)
+/// See [`Resource`](crate::model::Resource).
 pub mod resource {
 
-    /// A builder for [`Resource`](crate::model::Resource)
-    #[non_exhaustive]
+    /// A builder for [`Resource`](crate::model::Resource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1868,7 +1916,7 @@ pub mod resource {
             self.resource_region_scope = input;
             self
         }
-        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource)
+        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource).
         pub fn build(self) -> crate::model::Resource {
             crate::model::Resource {
                 arn: self.arn,
@@ -1885,7 +1933,7 @@ pub mod resource {
     }
 }
 impl Resource {
-    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource)
+    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource).
     pub fn builder() -> crate::model::resource::Builder {
         crate::model::resource::Builder::default()
     }
@@ -2024,14 +2072,19 @@ impl AsRef<str> for ResourceOwner {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Principal {
     /// <p>The ID of the principal.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of a resource share the principal is associated with.</p>
+    #[doc(hidden)]
     pub resource_share_arn: std::option::Option<std::string::String>,
     /// <p>The date and time when the principal was associated with the resource share.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the association was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web Services account that owns the resource share.</p>
+    #[doc(hidden)]
     pub external: std::option::Option<bool>,
 }
 impl Principal {
@@ -2067,11 +2120,10 @@ impl std::fmt::Debug for Principal {
         formatter.finish()
     }
 }
-/// See [`Principal`](crate::model::Principal)
+/// See [`Principal`](crate::model::Principal).
 pub mod principal {
 
-    /// A builder for [`Principal`](crate::model::Principal)
-    #[non_exhaustive]
+    /// A builder for [`Principal`](crate::model::Principal).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2140,7 +2192,7 @@ pub mod principal {
             self.external = input;
             self
         }
-        /// Consumes the builder and constructs a [`Principal`](crate::model::Principal)
+        /// Consumes the builder and constructs a [`Principal`](crate::model::Principal).
         pub fn build(self) -> crate::model::Principal {
             crate::model::Principal {
                 id: self.id,
@@ -2153,7 +2205,7 @@ pub mod principal {
     }
 }
 impl Principal {
-    /// Creates a new builder-style object to manufacture [`Principal`](crate::model::Principal)
+    /// Creates a new builder-style object to manufacture [`Principal`](crate::model::Principal).
     pub fn builder() -> crate::model::principal::Builder {
         crate::model::principal::Builder::default()
     }
@@ -2164,8 +2216,10 @@ impl Principal {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TagFilter {
     /// <p>The tag key. This must have a valid string value and can't be empty.</p>
+    #[doc(hidden)]
     pub tag_key: std::option::Option<std::string::String>,
     /// <p>A list of zero or more tag values. If no values are provided, then the filter matches any tag with the specified key, regardless of its value.</p>
+    #[doc(hidden)]
     pub tag_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl TagFilter {
@@ -2186,11 +2240,10 @@ impl std::fmt::Debug for TagFilter {
         formatter.finish()
     }
 }
-/// See [`TagFilter`](crate::model::TagFilter)
+/// See [`TagFilter`](crate::model::TagFilter).
 pub mod tag_filter {
 
-    /// A builder for [`TagFilter`](crate::model::TagFilter)
-    #[non_exhaustive]
+    /// A builder for [`TagFilter`](crate::model::TagFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_key: std::option::Option<std::string::String>,
@@ -2226,7 +2279,7 @@ pub mod tag_filter {
             self.tag_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagFilter`](crate::model::TagFilter)
+        /// Consumes the builder and constructs a [`TagFilter`](crate::model::TagFilter).
         pub fn build(self) -> crate::model::TagFilter {
             crate::model::TagFilter {
                 tag_key: self.tag_key,
@@ -2236,7 +2289,7 @@ pub mod tag_filter {
     }
 }
 impl TagFilter {
-    /// Creates a new builder-style object to manufacture [`TagFilter`](crate::model::TagFilter)
+    /// Creates a new builder-style object to manufacture [`TagFilter`](crate::model::TagFilter).
     pub fn builder() -> crate::model::tag_filter::Builder {
         crate::model::tag_filter::Builder::default()
     }
@@ -2247,22 +2300,31 @@ impl TagFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceSharePermissionDetail {
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of this RAM permission.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The version of the permission represented in this structure.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>Specifies whether the version of the permission represented in this structure is the default version for this permission.</p>
+    #[doc(hidden)]
     pub default_version: std::option::Option<bool>,
     /// <p>The name of this permission.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The resource type to which this permission applies.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The permission's effect and actions in JSON format. The <code>effect</code> indicates whether the specified actions are allowed or denied. The <code>actions</code> list the operations to which the principal is granted or denied access.</p>
+    #[doc(hidden)]
     pub permission: std::option::Option<std::string::String>,
     /// <p>The date and time when the permission was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the permission was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies whether the version of the permission represented in this structure is the default version for all resources of this resource type.</p>
+    #[doc(hidden)]
     pub is_resource_type_default: std::option::Option<bool>,
 }
 impl ResourceSharePermissionDetail {
@@ -2318,11 +2380,10 @@ impl std::fmt::Debug for ResourceSharePermissionDetail {
         formatter.finish()
     }
 }
-/// See [`ResourceSharePermissionDetail`](crate::model::ResourceSharePermissionDetail)
+/// See [`ResourceSharePermissionDetail`](crate::model::ResourceSharePermissionDetail).
 pub mod resource_share_permission_detail {
 
-    /// A builder for [`ResourceSharePermissionDetail`](crate::model::ResourceSharePermissionDetail)
-    #[non_exhaustive]
+    /// A builder for [`ResourceSharePermissionDetail`](crate::model::ResourceSharePermissionDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2435,7 +2496,7 @@ pub mod resource_share_permission_detail {
             self.is_resource_type_default = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceSharePermissionDetail`](crate::model::ResourceSharePermissionDetail)
+        /// Consumes the builder and constructs a [`ResourceSharePermissionDetail`](crate::model::ResourceSharePermissionDetail).
         pub fn build(self) -> crate::model::ResourceSharePermissionDetail {
             crate::model::ResourceSharePermissionDetail {
                 arn: self.arn,
@@ -2452,7 +2513,7 @@ pub mod resource_share_permission_detail {
     }
 }
 impl ResourceSharePermissionDetail {
-    /// Creates a new builder-style object to manufacture [`ResourceSharePermissionDetail`](crate::model::ResourceSharePermissionDetail)
+    /// Creates a new builder-style object to manufacture [`ResourceSharePermissionDetail`](crate::model::ResourceSharePermissionDetail).
     pub fn builder() -> crate::model::resource_share_permission_detail::Builder {
         crate::model::resource_share_permission_detail::Builder::default()
     }

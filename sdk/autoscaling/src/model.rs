@@ -4,17 +4,19 @@
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MixedInstancesPolicy {
-    /// <p>Specifies the launch template to use and the instance types (overrides) that are used to launch EC2 instances to fulfill On-Demand and Spot capacities. Required when creating a mixed instances policy.</p>
+    /// <p>One or more launch templates and the instance types (overrides) that are used to launch EC2 instances to fulfill On-Demand and Spot capacities.</p>
+    #[doc(hidden)]
     pub launch_template: std::option::Option<crate::model::LaunchTemplate>,
-    /// <p>Specifies the instances distribution.</p>
+    /// <p>The instances distribution.</p>
+    #[doc(hidden)]
     pub instances_distribution: std::option::Option<crate::model::InstancesDistribution>,
 }
 impl MixedInstancesPolicy {
-    /// <p>Specifies the launch template to use and the instance types (overrides) that are used to launch EC2 instances to fulfill On-Demand and Spot capacities. Required when creating a mixed instances policy.</p>
+    /// <p>One or more launch templates and the instance types (overrides) that are used to launch EC2 instances to fulfill On-Demand and Spot capacities.</p>
     pub fn launch_template(&self) -> std::option::Option<&crate::model::LaunchTemplate> {
         self.launch_template.as_ref()
     }
-    /// <p>Specifies the instances distribution.</p>
+    /// <p>The instances distribution.</p>
     pub fn instances_distribution(
         &self,
     ) -> std::option::Option<&crate::model::InstancesDistribution> {
@@ -29,23 +31,22 @@ impl std::fmt::Debug for MixedInstancesPolicy {
         formatter.finish()
     }
 }
-/// See [`MixedInstancesPolicy`](crate::model::MixedInstancesPolicy)
+/// See [`MixedInstancesPolicy`](crate::model::MixedInstancesPolicy).
 pub mod mixed_instances_policy {
 
-    /// A builder for [`MixedInstancesPolicy`](crate::model::MixedInstancesPolicy)
-    #[non_exhaustive]
+    /// A builder for [`MixedInstancesPolicy`](crate::model::MixedInstancesPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) launch_template: std::option::Option<crate::model::LaunchTemplate>,
         pub(crate) instances_distribution: std::option::Option<crate::model::InstancesDistribution>,
     }
     impl Builder {
-        /// <p>Specifies the launch template to use and the instance types (overrides) that are used to launch EC2 instances to fulfill On-Demand and Spot capacities. Required when creating a mixed instances policy.</p>
+        /// <p>One or more launch templates and the instance types (overrides) that are used to launch EC2 instances to fulfill On-Demand and Spot capacities.</p>
         pub fn launch_template(mut self, input: crate::model::LaunchTemplate) -> Self {
             self.launch_template = Some(input);
             self
         }
-        /// <p>Specifies the launch template to use and the instance types (overrides) that are used to launch EC2 instances to fulfill On-Demand and Spot capacities. Required when creating a mixed instances policy.</p>
+        /// <p>One or more launch templates and the instance types (overrides) that are used to launch EC2 instances to fulfill On-Demand and Spot capacities.</p>
         pub fn set_launch_template(
             mut self,
             input: std::option::Option<crate::model::LaunchTemplate>,
@@ -53,7 +54,7 @@ pub mod mixed_instances_policy {
             self.launch_template = input;
             self
         }
-        /// <p>Specifies the instances distribution.</p>
+        /// <p>The instances distribution.</p>
         pub fn instances_distribution(
             mut self,
             input: crate::model::InstancesDistribution,
@@ -61,7 +62,7 @@ pub mod mixed_instances_policy {
             self.instances_distribution = Some(input);
             self
         }
-        /// <p>Specifies the instances distribution.</p>
+        /// <p>The instances distribution.</p>
         pub fn set_instances_distribution(
             mut self,
             input: std::option::Option<crate::model::InstancesDistribution>,
@@ -69,7 +70,7 @@ pub mod mixed_instances_policy {
             self.instances_distribution = input;
             self
         }
-        /// Consumes the builder and constructs a [`MixedInstancesPolicy`](crate::model::MixedInstancesPolicy)
+        /// Consumes the builder and constructs a [`MixedInstancesPolicy`](crate::model::MixedInstancesPolicy).
         pub fn build(self) -> crate::model::MixedInstancesPolicy {
             crate::model::MixedInstancesPolicy {
                 launch_template: self.launch_template,
@@ -79,7 +80,7 @@ pub mod mixed_instances_policy {
     }
 }
 impl MixedInstancesPolicy {
-    /// Creates a new builder-style object to manufacture [`MixedInstancesPolicy`](crate::model::MixedInstancesPolicy)
+    /// Creates a new builder-style object to manufacture [`MixedInstancesPolicy`](crate::model::MixedInstancesPolicy).
     pub fn builder() -> crate::model::mixed_instances_policy::Builder {
         crate::model::mixed_instances_policy::Builder::default()
     }
@@ -93,23 +94,34 @@ pub struct InstancesDistribution {
     /// <p>If you specify <code>lowest-price</code>, Amazon EC2 Auto Scaling uses price to determine the order, launching the lowest price first. </p>
     /// <p>If you specify <code>prioritized</code>, Amazon EC2 Auto Scaling uses the priority that you assigned to each launch template override, launching the highest priority first. If all your On-Demand capacity cannot be fulfilled using your highest priority instance, then Amazon EC2 Auto Scaling launches the remaining capacity using the second priority instance type, and so on.</p>
     /// <p>Default: <code>lowest-price</code> for Auto Scaling groups that specify <code>InstanceRequirements</code> in the overrides and <code>prioritized</code> for Auto Scaling groups that don't.</p>
+    /// <p>Valid values: <code>lowest-price</code> | <code>prioritized</code> </p>
+    #[doc(hidden)]
     pub on_demand_allocation_strategy: std::option::Option<std::string::String>,
     /// <p>The minimum amount of the Auto Scaling group's capacity that must be fulfilled by On-Demand Instances. This base portion is launched first as your group scales.</p>
     /// <p>If you specify weights for the instance types in the overrides, the base capacity is measured in the same unit of measurement as the instance types. If you specify <code>InstanceRequirements</code> in the overrides, the base capacity is measured in the same unit of measurement as your group's desired capacity.</p>
     /// <p>Default: <code>0</code> </p>
+    #[doc(hidden)]
     pub on_demand_base_capacity: std::option::Option<i32>,
     /// <p>Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond <code>OnDemandBaseCapacity</code>. Expressed as a number (for example, 20 specifies 20% On-Demand Instances, 80% Spot Instances). If set to 100, only On-Demand Instances are used.</p>
     /// <p>Default: <code>100</code> </p>
+    #[doc(hidden)]
     pub on_demand_percentage_above_base_capacity: std::option::Option<i32>,
     /// <p>Indicates how to allocate instances across Spot Instance pools. </p>
     /// <p>If the allocation strategy is <code>lowest-price</code>, the Auto Scaling group launches instances using the Spot pools with the lowest price, and evenly allocates your instances across the number of Spot pools that you specify. </p>
     /// <p>If the allocation strategy is <code>capacity-optimized</code> (recommended), the Auto Scaling group launches instances using Spot pools that are optimally chosen based on the available Spot capacity. Alternatively, you can use <code>capacity-optimized-prioritized</code> and set the order of instance types in the list of launch template overrides from highest to lowest priority (from first to last in the list). Amazon EC2 Auto Scaling honors the instance type priorities on a best-effort basis but optimizes for capacity first. </p>
     /// <p>Default: <code>lowest-price</code> </p>
+    /// <p>Valid values: <code>lowest-price</code> | <code>capacity-optimized</code> | <code>capacity-optimized-prioritized</code> </p>
+    #[doc(hidden)]
     pub spot_allocation_strategy: std::option::Option<std::string::String>,
     /// <p>The number of Spot Instance pools across which to allocate your Spot Instances. The Spot pools are determined from the different instance types in the overrides. Valid only when the Spot allocation strategy is <code>lowest-price</code>. Value must be in the range of 1–20.</p>
     /// <p>Default: <code>2</code> </p>
+    #[doc(hidden)]
     pub spot_instance_pools: std::option::Option<i32>,
-    /// <p>The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at its default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To remove a value that you previously set, include the property but specify an empty string ("") for the value.</p>
+    /// <p>The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at its default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To remove a value that you previously set, include the property but specify an empty string ("") for the value.</p> <important>
+    /// <p>If your maximum price is lower than the Spot price for the instance types that you selected, your Spot Instances are not launched.</p>
+    /// </important>
+    /// <p>Valid Range: Minimum value of 0.001</p>
+    #[doc(hidden)]
     pub spot_max_price: std::option::Option<std::string::String>,
 }
 impl InstancesDistribution {
@@ -117,6 +129,7 @@ impl InstancesDistribution {
     /// <p>If you specify <code>lowest-price</code>, Amazon EC2 Auto Scaling uses price to determine the order, launching the lowest price first. </p>
     /// <p>If you specify <code>prioritized</code>, Amazon EC2 Auto Scaling uses the priority that you assigned to each launch template override, launching the highest priority first. If all your On-Demand capacity cannot be fulfilled using your highest priority instance, then Amazon EC2 Auto Scaling launches the remaining capacity using the second priority instance type, and so on.</p>
     /// <p>Default: <code>lowest-price</code> for Auto Scaling groups that specify <code>InstanceRequirements</code> in the overrides and <code>prioritized</code> for Auto Scaling groups that don't.</p>
+    /// <p>Valid values: <code>lowest-price</code> | <code>prioritized</code> </p>
     pub fn on_demand_allocation_strategy(&self) -> std::option::Option<&str> {
         self.on_demand_allocation_strategy.as_deref()
     }
@@ -135,6 +148,7 @@ impl InstancesDistribution {
     /// <p>If the allocation strategy is <code>lowest-price</code>, the Auto Scaling group launches instances using the Spot pools with the lowest price, and evenly allocates your instances across the number of Spot pools that you specify. </p>
     /// <p>If the allocation strategy is <code>capacity-optimized</code> (recommended), the Auto Scaling group launches instances using Spot pools that are optimally chosen based on the available Spot capacity. Alternatively, you can use <code>capacity-optimized-prioritized</code> and set the order of instance types in the list of launch template overrides from highest to lowest priority (from first to last in the list). Amazon EC2 Auto Scaling honors the instance type priorities on a best-effort basis but optimizes for capacity first. </p>
     /// <p>Default: <code>lowest-price</code> </p>
+    /// <p>Valid values: <code>lowest-price</code> | <code>capacity-optimized</code> | <code>capacity-optimized-prioritized</code> </p>
     pub fn spot_allocation_strategy(&self) -> std::option::Option<&str> {
         self.spot_allocation_strategy.as_deref()
     }
@@ -143,7 +157,10 @@ impl InstancesDistribution {
     pub fn spot_instance_pools(&self) -> std::option::Option<i32> {
         self.spot_instance_pools
     }
-    /// <p>The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at its default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To remove a value that you previously set, include the property but specify an empty string ("") for the value.</p>
+    /// <p>The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at its default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To remove a value that you previously set, include the property but specify an empty string ("") for the value.</p> <important>
+    /// <p>If your maximum price is lower than the Spot price for the instance types that you selected, your Spot Instances are not launched.</p>
+    /// </important>
+    /// <p>Valid Range: Minimum value of 0.001</p>
     pub fn spot_max_price(&self) -> std::option::Option<&str> {
         self.spot_max_price.as_deref()
     }
@@ -166,11 +183,10 @@ impl std::fmt::Debug for InstancesDistribution {
         formatter.finish()
     }
 }
-/// See [`InstancesDistribution`](crate::model::InstancesDistribution)
+/// See [`InstancesDistribution`](crate::model::InstancesDistribution).
 pub mod instances_distribution {
 
-    /// A builder for [`InstancesDistribution`](crate::model::InstancesDistribution)
-    #[non_exhaustive]
+    /// A builder for [`InstancesDistribution`](crate::model::InstancesDistribution).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) on_demand_allocation_strategy: std::option::Option<std::string::String>,
@@ -185,6 +201,7 @@ pub mod instances_distribution {
         /// <p>If you specify <code>lowest-price</code>, Amazon EC2 Auto Scaling uses price to determine the order, launching the lowest price first. </p>
         /// <p>If you specify <code>prioritized</code>, Amazon EC2 Auto Scaling uses the priority that you assigned to each launch template override, launching the highest priority first. If all your On-Demand capacity cannot be fulfilled using your highest priority instance, then Amazon EC2 Auto Scaling launches the remaining capacity using the second priority instance type, and so on.</p>
         /// <p>Default: <code>lowest-price</code> for Auto Scaling groups that specify <code>InstanceRequirements</code> in the overrides and <code>prioritized</code> for Auto Scaling groups that don't.</p>
+        /// <p>Valid values: <code>lowest-price</code> | <code>prioritized</code> </p>
         pub fn on_demand_allocation_strategy(
             mut self,
             input: impl Into<std::string::String>,
@@ -196,6 +213,7 @@ pub mod instances_distribution {
         /// <p>If you specify <code>lowest-price</code>, Amazon EC2 Auto Scaling uses price to determine the order, launching the lowest price first. </p>
         /// <p>If you specify <code>prioritized</code>, Amazon EC2 Auto Scaling uses the priority that you assigned to each launch template override, launching the highest priority first. If all your On-Demand capacity cannot be fulfilled using your highest priority instance, then Amazon EC2 Auto Scaling launches the remaining capacity using the second priority instance type, and so on.</p>
         /// <p>Default: <code>lowest-price</code> for Auto Scaling groups that specify <code>InstanceRequirements</code> in the overrides and <code>prioritized</code> for Auto Scaling groups that don't.</p>
+        /// <p>Valid values: <code>lowest-price</code> | <code>prioritized</code> </p>
         pub fn set_on_demand_allocation_strategy(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -236,6 +254,7 @@ pub mod instances_distribution {
         /// <p>If the allocation strategy is <code>lowest-price</code>, the Auto Scaling group launches instances using the Spot pools with the lowest price, and evenly allocates your instances across the number of Spot pools that you specify. </p>
         /// <p>If the allocation strategy is <code>capacity-optimized</code> (recommended), the Auto Scaling group launches instances using Spot pools that are optimally chosen based on the available Spot capacity. Alternatively, you can use <code>capacity-optimized-prioritized</code> and set the order of instance types in the list of launch template overrides from highest to lowest priority (from first to last in the list). Amazon EC2 Auto Scaling honors the instance type priorities on a best-effort basis but optimizes for capacity first. </p>
         /// <p>Default: <code>lowest-price</code> </p>
+        /// <p>Valid values: <code>lowest-price</code> | <code>capacity-optimized</code> | <code>capacity-optimized-prioritized</code> </p>
         pub fn spot_allocation_strategy(mut self, input: impl Into<std::string::String>) -> Self {
             self.spot_allocation_strategy = Some(input.into());
             self
@@ -244,6 +263,7 @@ pub mod instances_distribution {
         /// <p>If the allocation strategy is <code>lowest-price</code>, the Auto Scaling group launches instances using the Spot pools with the lowest price, and evenly allocates your instances across the number of Spot pools that you specify. </p>
         /// <p>If the allocation strategy is <code>capacity-optimized</code> (recommended), the Auto Scaling group launches instances using Spot pools that are optimally chosen based on the available Spot capacity. Alternatively, you can use <code>capacity-optimized-prioritized</code> and set the order of instance types in the list of launch template overrides from highest to lowest priority (from first to last in the list). Amazon EC2 Auto Scaling honors the instance type priorities on a best-effort basis but optimizes for capacity first. </p>
         /// <p>Default: <code>lowest-price</code> </p>
+        /// <p>Valid values: <code>lowest-price</code> | <code>capacity-optimized</code> | <code>capacity-optimized-prioritized</code> </p>
         pub fn set_spot_allocation_strategy(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -263,12 +283,18 @@ pub mod instances_distribution {
             self.spot_instance_pools = input;
             self
         }
-        /// <p>The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at its default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To remove a value that you previously set, include the property but specify an empty string ("") for the value.</p>
+        /// <p>The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at its default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To remove a value that you previously set, include the property but specify an empty string ("") for the value.</p> <important>
+        /// <p>If your maximum price is lower than the Spot price for the instance types that you selected, your Spot Instances are not launched.</p>
+        /// </important>
+        /// <p>Valid Range: Minimum value of 0.001</p>
         pub fn spot_max_price(mut self, input: impl Into<std::string::String>) -> Self {
             self.spot_max_price = Some(input.into());
             self
         }
-        /// <p>The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at its default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To remove a value that you previously set, include the property but specify an empty string ("") for the value.</p>
+        /// <p>The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at its default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To remove a value that you previously set, include the property but specify an empty string ("") for the value.</p> <important>
+        /// <p>If your maximum price is lower than the Spot price for the instance types that you selected, your Spot Instances are not launched.</p>
+        /// </important>
+        /// <p>Valid Range: Minimum value of 0.001</p>
         pub fn set_spot_max_price(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -276,7 +302,7 @@ pub mod instances_distribution {
             self.spot_max_price = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstancesDistribution`](crate::model::InstancesDistribution)
+        /// Consumes the builder and constructs a [`InstancesDistribution`](crate::model::InstancesDistribution).
         pub fn build(self) -> crate::model::InstancesDistribution {
             crate::model::InstancesDistribution {
                 on_demand_allocation_strategy: self.on_demand_allocation_strategy,
@@ -291,7 +317,7 @@ pub mod instances_distribution {
     }
 }
 impl InstancesDistribution {
-    /// Creates a new builder-style object to manufacture [`InstancesDistribution`](crate::model::InstancesDistribution)
+    /// Creates a new builder-style object to manufacture [`InstancesDistribution`](crate::model::InstancesDistribution).
     pub fn builder() -> crate::model::instances_distribution::Builder {
         crate::model::instances_distribution::Builder::default()
     }
@@ -302,10 +328,12 @@ impl InstancesDistribution {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchTemplate {
     /// <p>The launch template to use.</p>
+    #[doc(hidden)]
     pub launch_template_specification:
         std::option::Option<crate::model::LaunchTemplateSpecification>,
     /// <p>Any properties that you specify override the same properties in the launch template. If not provided, Amazon EC2 Auto Scaling uses the instance type or instance type requirements specified in the launch template when it launches an instance.</p>
     /// <p>The overrides can include either one or more instance types or a set of instance requirements, but not both.</p>
+    #[doc(hidden)]
     pub overrides: std::option::Option<std::vec::Vec<crate::model::LaunchTemplateOverrides>>,
 }
 impl LaunchTemplate {
@@ -332,11 +360,10 @@ impl std::fmt::Debug for LaunchTemplate {
         formatter.finish()
     }
 }
-/// See [`LaunchTemplate`](crate::model::LaunchTemplate)
+/// See [`LaunchTemplate`](crate::model::LaunchTemplate).
 pub mod launch_template {
 
-    /// A builder for [`LaunchTemplate`](crate::model::LaunchTemplate)
-    #[non_exhaustive]
+    /// A builder for [`LaunchTemplate`](crate::model::LaunchTemplate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) launch_template_specification:
@@ -382,7 +409,7 @@ pub mod launch_template {
             self.overrides = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchTemplate`](crate::model::LaunchTemplate)
+        /// Consumes the builder and constructs a [`LaunchTemplate`](crate::model::LaunchTemplate).
         pub fn build(self) -> crate::model::LaunchTemplate {
             crate::model::LaunchTemplate {
                 launch_template_specification: self.launch_template_specification,
@@ -392,7 +419,7 @@ pub mod launch_template {
     }
 }
 impl LaunchTemplate {
-    /// Creates a new builder-style object to manufacture [`LaunchTemplate`](crate::model::LaunchTemplate)
+    /// Creates a new builder-style object to manufacture [`LaunchTemplate`](crate::model::LaunchTemplate).
     pub fn builder() -> crate::model::launch_template::Builder {
         crate::model::launch_template::Builder::default()
     }
@@ -403,13 +430,17 @@ impl LaunchTemplate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchTemplateOverrides {
     /// <p>The instance type, such as <code>m3.xlarge</code>. You must use an instance type that is supported in your requested Region and Availability Zones. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The number of capacity units provided by the instance type specified in <code>InstanceType</code> in terms of virtual CPUs, memory, storage, throughput, or other relative performance characteristic. When a Spot or On-Demand Instance is launched, the capacity units count toward the desired capacity. Amazon EC2 Auto Scaling launches instances until the desired capacity is totally fulfilled, even if this results in an overage. For example, if there are two units remaining to fulfill capacity, and Amazon EC2 Auto Scaling can only launch an instance with a <code>WeightedCapacity</code> of five units, the instance is launched, and the desired capacity is exceeded by three units. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html">Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. Value must be in the range of 1–999.</p>
+    #[doc(hidden)]
     pub weighted_capacity: std::option::Option<std::string::String>,
     /// <p>Provides a launch template for the specified instance type or instance requirements. For example, some instance types might require a launch template with a different AMI. If not provided, Amazon EC2 Auto Scaling uses the launch template that's defined for your mixed instances policy. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html">Specifying a different launch template for an instance type</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. </p>
+    #[doc(hidden)]
     pub launch_template_specification:
         std::option::Option<crate::model::LaunchTemplateSpecification>,
     /// <p>The instance requirements. When you specify instance requirements, Amazon EC2 Auto Scaling finds instance types that satisfy your requirements, and then uses your On-Demand and Spot allocation strategies to launch instances from these instance types, in the same way as when you specify a list of specific instance types. </p>
+    #[doc(hidden)]
     pub instance_requirements: std::option::Option<crate::model::InstanceRequirements>,
 }
 impl LaunchTemplateOverrides {
@@ -447,11 +478,10 @@ impl std::fmt::Debug for LaunchTemplateOverrides {
         formatter.finish()
     }
 }
-/// See [`LaunchTemplateOverrides`](crate::model::LaunchTemplateOverrides)
+/// See [`LaunchTemplateOverrides`](crate::model::LaunchTemplateOverrides).
 pub mod launch_template_overrides {
 
-    /// A builder for [`LaunchTemplateOverrides`](crate::model::LaunchTemplateOverrides)
-    #[non_exhaustive]
+    /// A builder for [`LaunchTemplateOverrides`](crate::model::LaunchTemplateOverrides).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_type: std::option::Option<std::string::String>,
@@ -516,7 +546,7 @@ pub mod launch_template_overrides {
             self.instance_requirements = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchTemplateOverrides`](crate::model::LaunchTemplateOverrides)
+        /// Consumes the builder and constructs a [`LaunchTemplateOverrides`](crate::model::LaunchTemplateOverrides).
         pub fn build(self) -> crate::model::LaunchTemplateOverrides {
             crate::model::LaunchTemplateOverrides {
                 instance_type: self.instance_type,
@@ -528,7 +558,7 @@ pub mod launch_template_overrides {
     }
 }
 impl LaunchTemplateOverrides {
-    /// Creates a new builder-style object to manufacture [`LaunchTemplateOverrides`](crate::model::LaunchTemplateOverrides)
+    /// Creates a new builder-style object to manufacture [`LaunchTemplateOverrides`](crate::model::LaunchTemplateOverrides).
     pub fn builder() -> crate::model::launch_template_overrides::Builder {
         crate::model::launch_template_overrides::Builder::default()
     }
@@ -540,8 +570,10 @@ impl LaunchTemplateOverrides {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceRequirements {
     /// <p>The minimum and maximum number of vCPUs for an instance type.</p>
+    #[doc(hidden)]
     pub v_cpu_count: std::option::Option<crate::model::VCpuCountRequest>,
     /// <p>The minimum and maximum instance memory size for an instance type, in MiB.</p>
+    #[doc(hidden)]
     pub memory_mi_b: std::option::Option<crate::model::MemoryMiBRequest>,
     /// <p>Lists which specific CPU manufacturers to include.</p>
     /// <ul>
@@ -552,13 +584,16 @@ pub struct InstanceRequirements {
     /// <p>Don't confuse the CPU hardware manufacturer with the CPU hardware architecture. Instances will be launched with a compatible CPU architecture based on the Amazon Machine Image (AMI) that you specify in your launch template. </p>
     /// </note>
     /// <p>Default: Any manufacturer</p>
+    #[doc(hidden)]
     pub cpu_manufacturers: std::option::Option<std::vec::Vec<crate::model::CpuManufacturer>>,
     /// <p>The minimum and maximum amount of memory per vCPU for an instance type, in GiB.</p>
     /// <p>Default: No minimum or maximum</p>
+    #[doc(hidden)]
     pub memory_gi_b_per_v_cpu: std::option::Option<crate::model::MemoryGiBPerVCpuRequest>,
     /// <p>Lists which instance types to exclude. You can use strings with one or more wild cards, represented by an asterisk (<code>*</code>). The following are examples: <code>c5*</code>, <code>m5a.*</code>, <code>r*</code>, <code>*3*</code>. </p>
     /// <p>For example, if you specify <code>c5*</code>, you are excluding the entire C5 instance family, which includes all C5a and C5n instance types. If you specify <code>m5a.*</code>, you are excluding all the M5a instance types, but not the M5n instance types.</p>
     /// <p>Default: No excluded instance types</p>
+    #[doc(hidden)]
     pub excluded_instance_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Indicates whether current or previous generation instance types are included.</p>
     /// <ul>
@@ -566,42 +601,53 @@ pub struct InstanceRequirements {
     /// <li> <p>For previous generation instance types, specify <code>previous</code>.</p> </li>
     /// </ul>
     /// <p>Default: Any current or previous generation</p>
+    #[doc(hidden)]
     pub instance_generations: std::option::Option<std::vec::Vec<crate::model::InstanceGeneration>>,
-    /// <p>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
+    /// <p>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the least expensive current generation M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
     /// <p>If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price protection threshold is applied based on the per vCPU or per memory price instead of the per instance price. </p>
     /// <p>Default: <code>100</code> </p>
+    #[doc(hidden)]
     pub spot_max_price_percentage_over_lowest_price: std::option::Option<i32>,
-    /// <p>The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
+    /// <p>The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance, expressed as a percentage higher than the least expensive current generation M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
     /// <p>If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price protection threshold is applied based on the per vCPU or per memory price instead of the per instance price. </p>
     /// <p>Default: <code>20</code> </p>
+    #[doc(hidden)]
     pub on_demand_max_price_percentage_over_lowest_price: std::option::Option<i32>,
     /// <p>Indicates whether bare metal instance types are included, excluded, or required.</p>
     /// <p>Default: <code>excluded</code> </p>
+    #[doc(hidden)]
     pub bare_metal: std::option::Option<crate::model::BareMetal>,
     /// <p>Indicates whether burstable performance instance types are included, excluded, or required. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">Burstable performance instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
     /// <p>Default: <code>excluded</code> </p>
+    #[doc(hidden)]
     pub burstable_performance: std::option::Option<crate::model::BurstablePerformance>,
     /// <p>Indicates whether instance types must provide On-Demand Instance hibernation support.</p>
     /// <p>Default: <code>false</code> </p>
+    #[doc(hidden)]
     pub require_hibernate_support: std::option::Option<bool>,
     /// <p>The minimum and maximum number of network interfaces for an instance type.</p>
     /// <p>Default: No minimum or maximum</p>
+    #[doc(hidden)]
     pub network_interface_count: std::option::Option<crate::model::NetworkInterfaceCountRequest>,
     /// <p>Indicates whether instance types with instance store volumes are included, excluded, or required. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html">Amazon EC2 instance store</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
     /// <p>Default: <code>included</code> </p>
+    #[doc(hidden)]
     pub local_storage: std::option::Option<crate::model::LocalStorage>,
     /// <p>Indicates the type of local storage that is required.</p>
     /// <ul>
     /// <li> <p>For instance types with hard disk drive (HDD) storage, specify <code>hdd</code>.</p> </li>
-    /// <li> <p>For instance types with solid state drive (SSD) storage, specify <code>sdd</code>.</p> </li>
+    /// <li> <p>For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.</p> </li>
     /// </ul>
     /// <p>Default: Any local storage type</p>
+    #[doc(hidden)]
     pub local_storage_types: std::option::Option<std::vec::Vec<crate::model::LocalStorageType>>,
     /// <p>The minimum and maximum total local storage size for an instance type, in GB.</p>
     /// <p>Default: No minimum or maximum</p>
+    #[doc(hidden)]
     pub total_local_storage_gb: std::option::Option<crate::model::TotalLocalStorageGbRequest>,
     /// <p>The minimum and maximum baseline bandwidth performance for an instance type, in Mbps. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html">Amazon EBS–optimized instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
     /// <p>Default: No minimum or maximum</p>
+    #[doc(hidden)]
     pub baseline_ebs_bandwidth_mbps:
         std::option::Option<crate::model::BaselineEbsBandwidthMbpsRequest>,
     /// <p>Lists the accelerator types that must be on an instance type.</p>
@@ -611,10 +657,12 @@ pub struct InstanceRequirements {
     /// <li> <p>For instance types with inference accelerators, specify <code>inference</code>.</p> </li>
     /// </ul>
     /// <p>Default: Any accelerator type</p>
+    #[doc(hidden)]
     pub accelerator_types: std::option::Option<std::vec::Vec<crate::model::AcceleratorType>>,
     /// <p>The minimum and maximum number of accelerators (GPUs, FPGAs, or Amazon Web Services Inferentia chips) for an instance type.</p>
     /// <p>To exclude accelerator-enabled instance types, set <code>Max</code> to <code>0</code>.</p>
     /// <p>Default: No minimum or maximum</p>
+    #[doc(hidden)]
     pub accelerator_count: std::option::Option<crate::model::AcceleratorCountRequest>,
     /// <p>Indicates whether instance types must have accelerators by specific manufacturers.</p>
     /// <ul>
@@ -624,6 +672,7 @@ pub struct InstanceRequirements {
     /// <li> <p>For instance types with Xilinx devices, specify <code>xilinx</code>.</p> </li>
     /// </ul>
     /// <p>Default: Any manufacturer</p>
+    #[doc(hidden)]
     pub accelerator_manufacturers:
         std::option::Option<std::vec::Vec<crate::model::AcceleratorManufacturer>>,
     /// <p>Lists the accelerators that must be on an instance type.</p>
@@ -637,9 +686,11 @@ pub struct InstanceRequirements {
     /// <li> <p>For instance types with Xilinx VU9P FPGAs, specify <code>vu9p</code>.</p> </li>
     /// </ul>
     /// <p>Default: Any accelerator</p>
+    #[doc(hidden)]
     pub accelerator_names: std::option::Option<std::vec::Vec<crate::model::AcceleratorName>>,
     /// <p>The minimum and maximum total memory size for the accelerators on an instance type, in MiB.</p>
     /// <p>Default: No minimum or maximum</p>
+    #[doc(hidden)]
     pub accelerator_total_memory_mi_b:
         std::option::Option<crate::model::AcceleratorTotalMemoryMiBRequest>,
 }
@@ -686,13 +737,13 @@ impl InstanceRequirements {
     pub fn instance_generations(&self) -> std::option::Option<&[crate::model::InstanceGeneration]> {
         self.instance_generations.as_deref()
     }
-    /// <p>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
+    /// <p>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the least expensive current generation M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
     /// <p>If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price protection threshold is applied based on the per vCPU or per memory price instead of the per instance price. </p>
     /// <p>Default: <code>100</code> </p>
     pub fn spot_max_price_percentage_over_lowest_price(&self) -> std::option::Option<i32> {
         self.spot_max_price_percentage_over_lowest_price
     }
-    /// <p>The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
+    /// <p>The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance, expressed as a percentage higher than the least expensive current generation M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
     /// <p>If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price protection threshold is applied based on the per vCPU or per memory price instead of the per instance price. </p>
     /// <p>Default: <code>20</code> </p>
     pub fn on_demand_max_price_percentage_over_lowest_price(&self) -> std::option::Option<i32> {
@@ -730,7 +781,7 @@ impl InstanceRequirements {
     /// <p>Indicates the type of local storage that is required.</p>
     /// <ul>
     /// <li> <p>For instance types with hard disk drive (HDD) storage, specify <code>hdd</code>.</p> </li>
-    /// <li> <p>For instance types with solid state drive (SSD) storage, specify <code>sdd</code>.</p> </li>
+    /// <li> <p>For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.</p> </li>
     /// </ul>
     /// <p>Default: Any local storage type</p>
     pub fn local_storage_types(&self) -> std::option::Option<&[crate::model::LocalStorageType]> {
@@ -840,11 +891,10 @@ impl std::fmt::Debug for InstanceRequirements {
         formatter.finish()
     }
 }
-/// See [`InstanceRequirements`](crate::model::InstanceRequirements)
+/// See [`InstanceRequirements`](crate::model::InstanceRequirements).
 pub mod instance_requirements {
 
-    /// A builder for [`InstanceRequirements`](crate::model::InstanceRequirements)
-    #[non_exhaustive]
+    /// A builder for [`InstanceRequirements`](crate::model::InstanceRequirements).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) v_cpu_count: std::option::Option<crate::model::VCpuCountRequest>,
@@ -1012,14 +1062,14 @@ pub mod instance_requirements {
             self.instance_generations = input;
             self
         }
-        /// <p>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
+        /// <p>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the least expensive current generation M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
         /// <p>If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price protection threshold is applied based on the per vCPU or per memory price instead of the per instance price. </p>
         /// <p>Default: <code>100</code> </p>
         pub fn spot_max_price_percentage_over_lowest_price(mut self, input: i32) -> Self {
             self.spot_max_price_percentage_over_lowest_price = Some(input);
             self
         }
-        /// <p>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
+        /// <p>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the least expensive current generation M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
         /// <p>If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price protection threshold is applied based on the per vCPU or per memory price instead of the per instance price. </p>
         /// <p>Default: <code>100</code> </p>
         pub fn set_spot_max_price_percentage_over_lowest_price(
@@ -1029,14 +1079,14 @@ pub mod instance_requirements {
             self.spot_max_price_percentage_over_lowest_price = input;
             self
         }
-        /// <p>The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
+        /// <p>The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance, expressed as a percentage higher than the least expensive current generation M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
         /// <p>If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price protection threshold is applied based on the per vCPU or per memory price instead of the per instance price. </p>
         /// <p>Default: <code>20</code> </p>
         pub fn on_demand_max_price_percentage_over_lowest_price(mut self, input: i32) -> Self {
             self.on_demand_max_price_percentage_over_lowest_price = Some(input);
             self
         }
-        /// <p>The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
+        /// <p>The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance, expressed as a percentage higher than the least expensive current generation M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as <code>999999</code>. </p>
         /// <p>If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price protection threshold is applied based on the per vCPU or per memory price instead of the per instance price. </p>
         /// <p>Default: <code>20</code> </p>
         pub fn set_on_demand_max_price_percentage_over_lowest_price(
@@ -1128,7 +1178,7 @@ pub mod instance_requirements {
         /// <p>Indicates the type of local storage that is required.</p>
         /// <ul>
         /// <li> <p>For instance types with hard disk drive (HDD) storage, specify <code>hdd</code>.</p> </li>
-        /// <li> <p>For instance types with solid state drive (SSD) storage, specify <code>sdd</code>.</p> </li>
+        /// <li> <p>For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.</p> </li>
         /// </ul>
         /// <p>Default: Any local storage type</p>
         pub fn local_storage_types(mut self, input: crate::model::LocalStorageType) -> Self {
@@ -1140,7 +1190,7 @@ pub mod instance_requirements {
         /// <p>Indicates the type of local storage that is required.</p>
         /// <ul>
         /// <li> <p>For instance types with hard disk drive (HDD) storage, specify <code>hdd</code>.</p> </li>
-        /// <li> <p>For instance types with solid state drive (SSD) storage, specify <code>sdd</code>.</p> </li>
+        /// <li> <p>For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.</p> </li>
         /// </ul>
         /// <p>Default: Any local storage type</p>
         pub fn set_local_storage_types(
@@ -1327,7 +1377,7 @@ pub mod instance_requirements {
             self.accelerator_total_memory_mi_b = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceRequirements`](crate::model::InstanceRequirements)
+        /// Consumes the builder and constructs a [`InstanceRequirements`](crate::model::InstanceRequirements).
         pub fn build(self) -> crate::model::InstanceRequirements {
             crate::model::InstanceRequirements {
                 v_cpu_count: self.v_cpu_count,
@@ -1358,7 +1408,7 @@ pub mod instance_requirements {
     }
 }
 impl InstanceRequirements {
-    /// Creates a new builder-style object to manufacture [`InstanceRequirements`](crate::model::InstanceRequirements)
+    /// Creates a new builder-style object to manufacture [`InstanceRequirements`](crate::model::InstanceRequirements).
     pub fn builder() -> crate::model::instance_requirements::Builder {
         crate::model::instance_requirements::Builder::default()
     }
@@ -1369,8 +1419,10 @@ impl InstanceRequirements {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AcceleratorTotalMemoryMiBRequest {
     /// <p>The memory minimum in MiB.</p>
+    #[doc(hidden)]
     pub min: std::option::Option<i32>,
     /// <p>The memory maximum in MiB.</p>
+    #[doc(hidden)]
     pub max: std::option::Option<i32>,
 }
 impl AcceleratorTotalMemoryMiBRequest {
@@ -1391,11 +1443,10 @@ impl std::fmt::Debug for AcceleratorTotalMemoryMiBRequest {
         formatter.finish()
     }
 }
-/// See [`AcceleratorTotalMemoryMiBRequest`](crate::model::AcceleratorTotalMemoryMiBRequest)
+/// See [`AcceleratorTotalMemoryMiBRequest`](crate::model::AcceleratorTotalMemoryMiBRequest).
 pub mod accelerator_total_memory_mi_b_request {
 
-    /// A builder for [`AcceleratorTotalMemoryMiBRequest`](crate::model::AcceleratorTotalMemoryMiBRequest)
-    #[non_exhaustive]
+    /// A builder for [`AcceleratorTotalMemoryMiBRequest`](crate::model::AcceleratorTotalMemoryMiBRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min: std::option::Option<i32>,
@@ -1422,7 +1473,7 @@ pub mod accelerator_total_memory_mi_b_request {
             self.max = input;
             self
         }
-        /// Consumes the builder and constructs a [`AcceleratorTotalMemoryMiBRequest`](crate::model::AcceleratorTotalMemoryMiBRequest)
+        /// Consumes the builder and constructs a [`AcceleratorTotalMemoryMiBRequest`](crate::model::AcceleratorTotalMemoryMiBRequest).
         pub fn build(self) -> crate::model::AcceleratorTotalMemoryMiBRequest {
             crate::model::AcceleratorTotalMemoryMiBRequest {
                 min: self.min,
@@ -1432,7 +1483,7 @@ pub mod accelerator_total_memory_mi_b_request {
     }
 }
 impl AcceleratorTotalMemoryMiBRequest {
-    /// Creates a new builder-style object to manufacture [`AcceleratorTotalMemoryMiBRequest`](crate::model::AcceleratorTotalMemoryMiBRequest)
+    /// Creates a new builder-style object to manufacture [`AcceleratorTotalMemoryMiBRequest`](crate::model::AcceleratorTotalMemoryMiBRequest).
     pub fn builder() -> crate::model::accelerator_total_memory_mi_b_request::Builder {
         crate::model::accelerator_total_memory_mi_b_request::Builder::default()
     }
@@ -1589,8 +1640,10 @@ impl AsRef<str> for AcceleratorManufacturer {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AcceleratorCountRequest {
     /// <p>The minimum value.</p>
+    #[doc(hidden)]
     pub min: std::option::Option<i32>,
     /// <p>The maximum value.</p>
+    #[doc(hidden)]
     pub max: std::option::Option<i32>,
 }
 impl AcceleratorCountRequest {
@@ -1611,11 +1664,10 @@ impl std::fmt::Debug for AcceleratorCountRequest {
         formatter.finish()
     }
 }
-/// See [`AcceleratorCountRequest`](crate::model::AcceleratorCountRequest)
+/// See [`AcceleratorCountRequest`](crate::model::AcceleratorCountRequest).
 pub mod accelerator_count_request {
 
-    /// A builder for [`AcceleratorCountRequest`](crate::model::AcceleratorCountRequest)
-    #[non_exhaustive]
+    /// A builder for [`AcceleratorCountRequest`](crate::model::AcceleratorCountRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min: std::option::Option<i32>,
@@ -1642,7 +1694,7 @@ pub mod accelerator_count_request {
             self.max = input;
             self
         }
-        /// Consumes the builder and constructs a [`AcceleratorCountRequest`](crate::model::AcceleratorCountRequest)
+        /// Consumes the builder and constructs a [`AcceleratorCountRequest`](crate::model::AcceleratorCountRequest).
         pub fn build(self) -> crate::model::AcceleratorCountRequest {
             crate::model::AcceleratorCountRequest {
                 min: self.min,
@@ -1652,7 +1704,7 @@ pub mod accelerator_count_request {
     }
 }
 impl AcceleratorCountRequest {
-    /// Creates a new builder-style object to manufacture [`AcceleratorCountRequest`](crate::model::AcceleratorCountRequest)
+    /// Creates a new builder-style object to manufacture [`AcceleratorCountRequest`](crate::model::AcceleratorCountRequest).
     pub fn builder() -> crate::model::accelerator_count_request::Builder {
         crate::model::accelerator_count_request::Builder::default()
     }
@@ -1722,8 +1774,10 @@ impl AsRef<str> for AcceleratorType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BaselineEbsBandwidthMbpsRequest {
     /// <p>The minimum value in Mbps.</p>
+    #[doc(hidden)]
     pub min: std::option::Option<i32>,
     /// <p>The maximum value in Mbps.</p>
+    #[doc(hidden)]
     pub max: std::option::Option<i32>,
 }
 impl BaselineEbsBandwidthMbpsRequest {
@@ -1744,11 +1798,10 @@ impl std::fmt::Debug for BaselineEbsBandwidthMbpsRequest {
         formatter.finish()
     }
 }
-/// See [`BaselineEbsBandwidthMbpsRequest`](crate::model::BaselineEbsBandwidthMbpsRequest)
+/// See [`BaselineEbsBandwidthMbpsRequest`](crate::model::BaselineEbsBandwidthMbpsRequest).
 pub mod baseline_ebs_bandwidth_mbps_request {
 
-    /// A builder for [`BaselineEbsBandwidthMbpsRequest`](crate::model::BaselineEbsBandwidthMbpsRequest)
-    #[non_exhaustive]
+    /// A builder for [`BaselineEbsBandwidthMbpsRequest`](crate::model::BaselineEbsBandwidthMbpsRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min: std::option::Option<i32>,
@@ -1775,7 +1828,7 @@ pub mod baseline_ebs_bandwidth_mbps_request {
             self.max = input;
             self
         }
-        /// Consumes the builder and constructs a [`BaselineEbsBandwidthMbpsRequest`](crate::model::BaselineEbsBandwidthMbpsRequest)
+        /// Consumes the builder and constructs a [`BaselineEbsBandwidthMbpsRequest`](crate::model::BaselineEbsBandwidthMbpsRequest).
         pub fn build(self) -> crate::model::BaselineEbsBandwidthMbpsRequest {
             crate::model::BaselineEbsBandwidthMbpsRequest {
                 min: self.min,
@@ -1785,7 +1838,7 @@ pub mod baseline_ebs_bandwidth_mbps_request {
     }
 }
 impl BaselineEbsBandwidthMbpsRequest {
-    /// Creates a new builder-style object to manufacture [`BaselineEbsBandwidthMbpsRequest`](crate::model::BaselineEbsBandwidthMbpsRequest)
+    /// Creates a new builder-style object to manufacture [`BaselineEbsBandwidthMbpsRequest`](crate::model::BaselineEbsBandwidthMbpsRequest).
     pub fn builder() -> crate::model::baseline_ebs_bandwidth_mbps_request::Builder {
         crate::model::baseline_ebs_bandwidth_mbps_request::Builder::default()
     }
@@ -1796,8 +1849,10 @@ impl BaselineEbsBandwidthMbpsRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TotalLocalStorageGbRequest {
     /// <p>The storage minimum in GB.</p>
+    #[doc(hidden)]
     pub min: std::option::Option<f64>,
     /// <p>The storage maximum in GB.</p>
+    #[doc(hidden)]
     pub max: std::option::Option<f64>,
 }
 impl TotalLocalStorageGbRequest {
@@ -1818,11 +1873,10 @@ impl std::fmt::Debug for TotalLocalStorageGbRequest {
         formatter.finish()
     }
 }
-/// See [`TotalLocalStorageGbRequest`](crate::model::TotalLocalStorageGbRequest)
+/// See [`TotalLocalStorageGbRequest`](crate::model::TotalLocalStorageGbRequest).
 pub mod total_local_storage_gb_request {
 
-    /// A builder for [`TotalLocalStorageGbRequest`](crate::model::TotalLocalStorageGbRequest)
-    #[non_exhaustive]
+    /// A builder for [`TotalLocalStorageGbRequest`](crate::model::TotalLocalStorageGbRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min: std::option::Option<f64>,
@@ -1849,7 +1903,7 @@ pub mod total_local_storage_gb_request {
             self.max = input;
             self
         }
-        /// Consumes the builder and constructs a [`TotalLocalStorageGbRequest`](crate::model::TotalLocalStorageGbRequest)
+        /// Consumes the builder and constructs a [`TotalLocalStorageGbRequest`](crate::model::TotalLocalStorageGbRequest).
         pub fn build(self) -> crate::model::TotalLocalStorageGbRequest {
             crate::model::TotalLocalStorageGbRequest {
                 min: self.min,
@@ -1859,7 +1913,7 @@ pub mod total_local_storage_gb_request {
     }
 }
 impl TotalLocalStorageGbRequest {
-    /// Creates a new builder-style object to manufacture [`TotalLocalStorageGbRequest`](crate::model::TotalLocalStorageGbRequest)
+    /// Creates a new builder-style object to manufacture [`TotalLocalStorageGbRequest`](crate::model::TotalLocalStorageGbRequest).
     pub fn builder() -> crate::model::total_local_storage_gb_request::Builder {
         crate::model::total_local_storage_gb_request::Builder::default()
     }
@@ -1984,8 +2038,10 @@ impl AsRef<str> for LocalStorage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkInterfaceCountRequest {
     /// <p>The minimum number of network interfaces.</p>
+    #[doc(hidden)]
     pub min: std::option::Option<i32>,
     /// <p>The maximum number of network interfaces.</p>
+    #[doc(hidden)]
     pub max: std::option::Option<i32>,
 }
 impl NetworkInterfaceCountRequest {
@@ -2006,11 +2062,10 @@ impl std::fmt::Debug for NetworkInterfaceCountRequest {
         formatter.finish()
     }
 }
-/// See [`NetworkInterfaceCountRequest`](crate::model::NetworkInterfaceCountRequest)
+/// See [`NetworkInterfaceCountRequest`](crate::model::NetworkInterfaceCountRequest).
 pub mod network_interface_count_request {
 
-    /// A builder for [`NetworkInterfaceCountRequest`](crate::model::NetworkInterfaceCountRequest)
-    #[non_exhaustive]
+    /// A builder for [`NetworkInterfaceCountRequest`](crate::model::NetworkInterfaceCountRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min: std::option::Option<i32>,
@@ -2037,7 +2092,7 @@ pub mod network_interface_count_request {
             self.max = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkInterfaceCountRequest`](crate::model::NetworkInterfaceCountRequest)
+        /// Consumes the builder and constructs a [`NetworkInterfaceCountRequest`](crate::model::NetworkInterfaceCountRequest).
         pub fn build(self) -> crate::model::NetworkInterfaceCountRequest {
             crate::model::NetworkInterfaceCountRequest {
                 min: self.min,
@@ -2047,7 +2102,7 @@ pub mod network_interface_count_request {
     }
 }
 impl NetworkInterfaceCountRequest {
-    /// Creates a new builder-style object to manufacture [`NetworkInterfaceCountRequest`](crate::model::NetworkInterfaceCountRequest)
+    /// Creates a new builder-style object to manufacture [`NetworkInterfaceCountRequest`](crate::model::NetworkInterfaceCountRequest).
     pub fn builder() -> crate::model::network_interface_count_request::Builder {
         crate::model::network_interface_count_request::Builder::default()
     }
@@ -2231,8 +2286,10 @@ impl AsRef<str> for InstanceGeneration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MemoryGiBPerVCpuRequest {
     /// <p>The memory minimum in GiB.</p>
+    #[doc(hidden)]
     pub min: std::option::Option<f64>,
     /// <p>The memory maximum in GiB.</p>
+    #[doc(hidden)]
     pub max: std::option::Option<f64>,
 }
 impl MemoryGiBPerVCpuRequest {
@@ -2253,11 +2310,10 @@ impl std::fmt::Debug for MemoryGiBPerVCpuRequest {
         formatter.finish()
     }
 }
-/// See [`MemoryGiBPerVCpuRequest`](crate::model::MemoryGiBPerVCpuRequest)
+/// See [`MemoryGiBPerVCpuRequest`](crate::model::MemoryGiBPerVCpuRequest).
 pub mod memory_gi_b_per_v_cpu_request {
 
-    /// A builder for [`MemoryGiBPerVCpuRequest`](crate::model::MemoryGiBPerVCpuRequest)
-    #[non_exhaustive]
+    /// A builder for [`MemoryGiBPerVCpuRequest`](crate::model::MemoryGiBPerVCpuRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min: std::option::Option<f64>,
@@ -2284,7 +2340,7 @@ pub mod memory_gi_b_per_v_cpu_request {
             self.max = input;
             self
         }
-        /// Consumes the builder and constructs a [`MemoryGiBPerVCpuRequest`](crate::model::MemoryGiBPerVCpuRequest)
+        /// Consumes the builder and constructs a [`MemoryGiBPerVCpuRequest`](crate::model::MemoryGiBPerVCpuRequest).
         pub fn build(self) -> crate::model::MemoryGiBPerVCpuRequest {
             crate::model::MemoryGiBPerVCpuRequest {
                 min: self.min,
@@ -2294,7 +2350,7 @@ pub mod memory_gi_b_per_v_cpu_request {
     }
 }
 impl MemoryGiBPerVCpuRequest {
-    /// Creates a new builder-style object to manufacture [`MemoryGiBPerVCpuRequest`](crate::model::MemoryGiBPerVCpuRequest)
+    /// Creates a new builder-style object to manufacture [`MemoryGiBPerVCpuRequest`](crate::model::MemoryGiBPerVCpuRequest).
     pub fn builder() -> crate::model::memory_gi_b_per_v_cpu_request::Builder {
         crate::model::memory_gi_b_per_v_cpu_request::Builder::default()
     }
@@ -2364,8 +2420,10 @@ impl AsRef<str> for CpuManufacturer {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MemoryMiBRequest {
     /// <p>The memory minimum in MiB.</p>
+    #[doc(hidden)]
     pub min: std::option::Option<i32>,
     /// <p>The memory maximum in MiB.</p>
+    #[doc(hidden)]
     pub max: std::option::Option<i32>,
 }
 impl MemoryMiBRequest {
@@ -2386,11 +2444,10 @@ impl std::fmt::Debug for MemoryMiBRequest {
         formatter.finish()
     }
 }
-/// See [`MemoryMiBRequest`](crate::model::MemoryMiBRequest)
+/// See [`MemoryMiBRequest`](crate::model::MemoryMiBRequest).
 pub mod memory_mi_b_request {
 
-    /// A builder for [`MemoryMiBRequest`](crate::model::MemoryMiBRequest)
-    #[non_exhaustive]
+    /// A builder for [`MemoryMiBRequest`](crate::model::MemoryMiBRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min: std::option::Option<i32>,
@@ -2417,7 +2474,7 @@ pub mod memory_mi_b_request {
             self.max = input;
             self
         }
-        /// Consumes the builder and constructs a [`MemoryMiBRequest`](crate::model::MemoryMiBRequest)
+        /// Consumes the builder and constructs a [`MemoryMiBRequest`](crate::model::MemoryMiBRequest).
         pub fn build(self) -> crate::model::MemoryMiBRequest {
             crate::model::MemoryMiBRequest {
                 min: self.min,
@@ -2427,7 +2484,7 @@ pub mod memory_mi_b_request {
     }
 }
 impl MemoryMiBRequest {
-    /// Creates a new builder-style object to manufacture [`MemoryMiBRequest`](crate::model::MemoryMiBRequest)
+    /// Creates a new builder-style object to manufacture [`MemoryMiBRequest`](crate::model::MemoryMiBRequest).
     pub fn builder() -> crate::model::memory_mi_b_request::Builder {
         crate::model::memory_mi_b_request::Builder::default()
     }
@@ -2438,8 +2495,10 @@ impl MemoryMiBRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VCpuCountRequest {
     /// <p>The minimum number of vCPUs.</p>
+    #[doc(hidden)]
     pub min: std::option::Option<i32>,
     /// <p>The maximum number of vCPUs.</p>
+    #[doc(hidden)]
     pub max: std::option::Option<i32>,
 }
 impl VCpuCountRequest {
@@ -2460,11 +2519,10 @@ impl std::fmt::Debug for VCpuCountRequest {
         formatter.finish()
     }
 }
-/// See [`VCpuCountRequest`](crate::model::VCpuCountRequest)
+/// See [`VCpuCountRequest`](crate::model::VCpuCountRequest).
 pub mod v_cpu_count_request {
 
-    /// A builder for [`VCpuCountRequest`](crate::model::VCpuCountRequest)
-    #[non_exhaustive]
+    /// A builder for [`VCpuCountRequest`](crate::model::VCpuCountRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min: std::option::Option<i32>,
@@ -2491,7 +2549,7 @@ pub mod v_cpu_count_request {
             self.max = input;
             self
         }
-        /// Consumes the builder and constructs a [`VCpuCountRequest`](crate::model::VCpuCountRequest)
+        /// Consumes the builder and constructs a [`VCpuCountRequest`](crate::model::VCpuCountRequest).
         pub fn build(self) -> crate::model::VCpuCountRequest {
             crate::model::VCpuCountRequest {
                 min: self.min,
@@ -2501,7 +2559,7 @@ pub mod v_cpu_count_request {
     }
 }
 impl VCpuCountRequest {
-    /// Creates a new builder-style object to manufacture [`VCpuCountRequest`](crate::model::VCpuCountRequest)
+    /// Creates a new builder-style object to manufacture [`VCpuCountRequest`](crate::model::VCpuCountRequest).
     pub fn builder() -> crate::model::v_cpu_count_request::Builder {
         crate::model::v_cpu_count_request::Builder::default()
     }
@@ -2513,11 +2571,14 @@ impl VCpuCountRequest {
 pub struct LaunchTemplateSpecification {
     /// <p>The ID of the launch template. To get the template ID, use the Amazon EC2 <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html">DescribeLaunchTemplates</a> API operation. New launch templates can be created using the Amazon EC2 <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html">CreateLaunchTemplate</a> API. </p>
     /// <p>Conditional: You must specify either a <code>LaunchTemplateId</code> or a <code>LaunchTemplateName</code>.</p>
+    #[doc(hidden)]
     pub launch_template_id: std::option::Option<std::string::String>,
     /// <p>The name of the launch template. To get the template name, use the Amazon EC2 <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html">DescribeLaunchTemplates</a> API operation. New launch templates can be created using the Amazon EC2 <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html">CreateLaunchTemplate</a> API. </p>
     /// <p>Conditional: You must specify either a <code>LaunchTemplateId</code> or a <code>LaunchTemplateName</code>.</p>
+    #[doc(hidden)]
     pub launch_template_name: std::option::Option<std::string::String>,
     /// <p>The version number, <code>$Latest</code>, or <code>$Default</code>. To get the version number, use the Amazon EC2 <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplateVersions.html">DescribeLaunchTemplateVersions</a> API operation. New launch template versions can be created using the Amazon EC2 <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplateVersion.html">CreateLaunchTemplateVersion</a> API. If the value is <code>$Latest</code>, Amazon EC2 Auto Scaling selects the latest version of the launch template when launching instances. If the value is <code>$Default</code>, Amazon EC2 Auto Scaling selects the default version of the launch template when launching instances. The default value is <code>$Default</code>.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl LaunchTemplateSpecification {
@@ -2545,11 +2606,10 @@ impl std::fmt::Debug for LaunchTemplateSpecification {
         formatter.finish()
     }
 }
-/// See [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
+/// See [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
 pub mod launch_template_specification {
 
-    /// A builder for [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
-    #[non_exhaustive]
+    /// A builder for [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) launch_template_id: std::option::Option<std::string::String>,
@@ -2597,7 +2657,7 @@ pub mod launch_template_specification {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
+        /// Consumes the builder and constructs a [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
         pub fn build(self) -> crate::model::LaunchTemplateSpecification {
             crate::model::LaunchTemplateSpecification {
                 launch_template_id: self.launch_template_id,
@@ -2608,7 +2668,7 @@ pub mod launch_template_specification {
     }
 }
 impl LaunchTemplateSpecification {
-    /// Creates a new builder-style object to manufacture [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
+    /// Creates a new builder-style object to manufacture [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
     pub fn builder() -> crate::model::launch_template_specification::Builder {
         crate::model::launch_template_specification::Builder::default()
     }
@@ -2619,28 +2679,40 @@ impl LaunchTemplateSpecification {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Activity {
     /// <p>The ID of the activity.</p>
+    #[doc(hidden)]
     pub activity_id: std::option::Option<std::string::String>,
     /// <p>The name of the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub auto_scaling_group_name: std::option::Option<std::string::String>,
     /// <p>A friendly, more verbose description of the activity.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The reason the activity began.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<std::string::String>,
     /// <p>The start time of the activity.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end time of the activity.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current status of the activity.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::ScalingActivityStatusCode>,
     /// <p>A friendly, more verbose description of the activity status.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>A value between 0 and 100 that indicates the progress of the activity.</p>
+    #[doc(hidden)]
     pub progress: i32,
     /// <p>The details about the activity.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
     /// <p>The state of the Auto Scaling group, which is either <code>InService</code> or <code>Deleted</code>.</p>
+    #[doc(hidden)]
     pub auto_scaling_group_state: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub auto_scaling_group_arn: std::option::Option<std::string::String>,
 }
 impl Activity {
@@ -2711,11 +2783,10 @@ impl std::fmt::Debug for Activity {
         formatter.finish()
     }
 }
-/// See [`Activity`](crate::model::Activity)
+/// See [`Activity`](crate::model::Activity).
 pub mod activity {
 
-    /// A builder for [`Activity`](crate::model::Activity)
-    #[non_exhaustive]
+    /// A builder for [`Activity`](crate::model::Activity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activity_id: std::option::Option<std::string::String>,
@@ -2873,7 +2944,7 @@ pub mod activity {
             self.auto_scaling_group_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Activity`](crate::model::Activity)
+        /// Consumes the builder and constructs a [`Activity`](crate::model::Activity).
         pub fn build(self) -> crate::model::Activity {
             crate::model::Activity {
                 activity_id: self.activity_id,
@@ -2893,7 +2964,7 @@ pub mod activity {
     }
 }
 impl Activity {
-    /// Creates a new builder-style object to manufacture [`Activity`](crate::model::Activity)
+    /// Creates a new builder-style object to manufacture [`Activity`](crate::model::Activity).
     pub fn builder() -> crate::model::activity::Builder {
         crate::model::activity::Builder::default()
     }
@@ -3021,18 +3092,23 @@ impl AsRef<str> for ScalingActivityStatusCode {
 pub struct RefreshPreferences {
     /// <p>The amount of capacity in the Auto Scaling group that must pass your group's health checks to allow the operation to continue. The value is expressed as a percentage of the desired capacity of the Auto Scaling group (rounded up to the nearest integer). The default is <code>90</code>.</p>
     /// <p>Setting the minimum healthy percentage to 100 percent limits the rate of replacement to one instance at a time. In contrast, setting it to 0 percent has the effect of replacing all instances at the same time. </p>
+    #[doc(hidden)]
     pub min_healthy_percentage: std::option::Option<i32>,
     /// <p> <i>Not needed if the default instance warmup is defined for the group.</i> </p>
     /// <p>The duration of the instance warmup, in seconds.</p> <note>
     /// <p>The default is to use the value for the default instance warmup defined for the group. If default instance warmup is null, then <code>InstanceWarmup</code> falls back to the value of the health check grace period.</p>
     /// </note>
+    #[doc(hidden)]
     pub instance_warmup: std::option::Option<i32>,
     /// <p>Threshold values for each checkpoint in ascending order. Each number must be unique. To replace all instances in the Auto Scaling group, the last number in the array must be <code>100</code>.</p>
     /// <p>For usage examples, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-adding-checkpoints-instance-refresh.html">Adding checkpoints to an instance refresh</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    #[doc(hidden)]
     pub checkpoint_percentages: std::option::Option<std::vec::Vec<i32>>,
     /// <p>The amount of time, in seconds, to wait after a checkpoint before continuing. This property is optional, but if you specify a value for it, you must also specify a value for <code>CheckpointPercentages</code>. If you specify a value for <code>CheckpointPercentages</code> and not for <code>CheckpointDelay</code>, the <code>CheckpointDelay</code> defaults to <code>3600</code> (1 hour). </p>
+    #[doc(hidden)]
     pub checkpoint_delay: std::option::Option<i32>,
     /// <p>A boolean value that indicates whether skip matching is enabled. If true, then Amazon EC2 Auto Scaling skips replacing instances that match the desired configuration. If no desired configuration is specified, then it skips replacing instances that have the same configuration that is already set on the group. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub skip_matching: std::option::Option<bool>,
 }
 impl RefreshPreferences {
@@ -3073,11 +3149,10 @@ impl std::fmt::Debug for RefreshPreferences {
         formatter.finish()
     }
 }
-/// See [`RefreshPreferences`](crate::model::RefreshPreferences)
+/// See [`RefreshPreferences`](crate::model::RefreshPreferences).
 pub mod refresh_preferences {
 
-    /// A builder for [`RefreshPreferences`](crate::model::RefreshPreferences)
-    #[non_exhaustive]
+    /// A builder for [`RefreshPreferences`](crate::model::RefreshPreferences).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min_healthy_percentage: std::option::Option<i32>,
@@ -3156,7 +3231,7 @@ pub mod refresh_preferences {
             self.skip_matching = input;
             self
         }
-        /// Consumes the builder and constructs a [`RefreshPreferences`](crate::model::RefreshPreferences)
+        /// Consumes the builder and constructs a [`RefreshPreferences`](crate::model::RefreshPreferences).
         pub fn build(self) -> crate::model::RefreshPreferences {
             crate::model::RefreshPreferences {
                 min_healthy_percentage: self.min_healthy_percentage,
@@ -3169,7 +3244,7 @@ pub mod refresh_preferences {
     }
 }
 impl RefreshPreferences {
-    /// Creates a new builder-style object to manufacture [`RefreshPreferences`](crate::model::RefreshPreferences)
+    /// Creates a new builder-style object to manufacture [`RefreshPreferences`](crate::model::RefreshPreferences).
     pub fn builder() -> crate::model::refresh_preferences::Builder {
         crate::model::refresh_preferences::Builder::default()
     }
@@ -3181,8 +3256,10 @@ impl RefreshPreferences {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DesiredConfiguration {
     /// <p>Describes the launch template and the version of the launch template that Amazon EC2 Auto Scaling uses to launch Amazon EC2 instances. For more information about launch templates, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchTemplates.html">Launch templates</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    #[doc(hidden)]
     pub launch_template: std::option::Option<crate::model::LaunchTemplateSpecification>,
     /// <p>Describes a mixed instances policy. A mixed instances policy contains the instance types that Amazon EC2 Auto Scaling can launch and other information that Amazon EC2 Auto Scaling can use to launch instances and help optimize your costs. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    #[doc(hidden)]
     pub mixed_instances_policy: std::option::Option<crate::model::MixedInstancesPolicy>,
 }
 impl DesiredConfiguration {
@@ -3207,11 +3284,10 @@ impl std::fmt::Debug for DesiredConfiguration {
         formatter.finish()
     }
 }
-/// See [`DesiredConfiguration`](crate::model::DesiredConfiguration)
+/// See [`DesiredConfiguration`](crate::model::DesiredConfiguration).
 pub mod desired_configuration {
 
-    /// A builder for [`DesiredConfiguration`](crate::model::DesiredConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DesiredConfiguration`](crate::model::DesiredConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) launch_template: std::option::Option<crate::model::LaunchTemplateSpecification>,
@@ -3244,7 +3320,7 @@ pub mod desired_configuration {
             self.mixed_instances_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`DesiredConfiguration`](crate::model::DesiredConfiguration)
+        /// Consumes the builder and constructs a [`DesiredConfiguration`](crate::model::DesiredConfiguration).
         pub fn build(self) -> crate::model::DesiredConfiguration {
             crate::model::DesiredConfiguration {
                 launch_template: self.launch_template,
@@ -3254,7 +3330,7 @@ pub mod desired_configuration {
     }
 }
 impl DesiredConfiguration {
-    /// Creates a new builder-style object to manufacture [`DesiredConfiguration`](crate::model::DesiredConfiguration)
+    /// Creates a new builder-style object to manufacture [`DesiredConfiguration`](crate::model::DesiredConfiguration).
     pub fn builder() -> crate::model::desired_configuration::Builder {
         crate::model::desired_configuration::Builder::default()
     }
@@ -3317,6 +3393,7 @@ impl AsRef<str> for RefreshStrategy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceReusePolicy {
     /// <p>Specifies whether instances in the Auto Scaling group can be returned to the warm pool on scale in. </p>
+    #[doc(hidden)]
     pub reuse_on_scale_in: std::option::Option<bool>,
 }
 impl InstanceReusePolicy {
@@ -3332,11 +3409,10 @@ impl std::fmt::Debug for InstanceReusePolicy {
         formatter.finish()
     }
 }
-/// See [`InstanceReusePolicy`](crate::model::InstanceReusePolicy)
+/// See [`InstanceReusePolicy`](crate::model::InstanceReusePolicy).
 pub mod instance_reuse_policy {
 
-    /// A builder for [`InstanceReusePolicy`](crate::model::InstanceReusePolicy)
-    #[non_exhaustive]
+    /// A builder for [`InstanceReusePolicy`](crate::model::InstanceReusePolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reuse_on_scale_in: std::option::Option<bool>,
@@ -3352,7 +3428,7 @@ pub mod instance_reuse_policy {
             self.reuse_on_scale_in = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceReusePolicy`](crate::model::InstanceReusePolicy)
+        /// Consumes the builder and constructs a [`InstanceReusePolicy`](crate::model::InstanceReusePolicy).
         pub fn build(self) -> crate::model::InstanceReusePolicy {
             crate::model::InstanceReusePolicy {
                 reuse_on_scale_in: self.reuse_on_scale_in,
@@ -3361,7 +3437,7 @@ pub mod instance_reuse_policy {
     }
 }
 impl InstanceReusePolicy {
-    /// Creates a new builder-style object to manufacture [`InstanceReusePolicy`](crate::model::InstanceReusePolicy)
+    /// Creates a new builder-style object to manufacture [`InstanceReusePolicy`](crate::model::InstanceReusePolicy).
     pub fn builder() -> crate::model::instance_reuse_policy::Builder {
         crate::model::instance_reuse_policy::Builder::default()
     }
@@ -3431,8 +3507,10 @@ impl AsRef<str> for WarmPoolState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Alarm {
     /// <p>The name of the alarm.</p>
+    #[doc(hidden)]
     pub alarm_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the alarm.</p>
+    #[doc(hidden)]
     pub alarm_arn: std::option::Option<std::string::String>,
 }
 impl Alarm {
@@ -3453,11 +3531,10 @@ impl std::fmt::Debug for Alarm {
         formatter.finish()
     }
 }
-/// See [`Alarm`](crate::model::Alarm)
+/// See [`Alarm`](crate::model::Alarm).
 pub mod alarm {
 
-    /// A builder for [`Alarm`](crate::model::Alarm)
-    #[non_exhaustive]
+    /// A builder for [`Alarm`](crate::model::Alarm).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alarm_name: std::option::Option<std::string::String>,
@@ -3484,7 +3561,7 @@ pub mod alarm {
             self.alarm_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Alarm`](crate::model::Alarm)
+        /// Consumes the builder and constructs a [`Alarm`](crate::model::Alarm).
         pub fn build(self) -> crate::model::Alarm {
             crate::model::Alarm {
                 alarm_name: self.alarm_name,
@@ -3494,7 +3571,7 @@ pub mod alarm {
     }
 }
 impl Alarm {
-    /// Creates a new builder-style object to manufacture [`Alarm`](crate::model::Alarm)
+    /// Creates a new builder-style object to manufacture [`Alarm`](crate::model::Alarm).
     pub fn builder() -> crate::model::alarm::Builder {
         crate::model::alarm::Builder::default()
     }
@@ -3506,12 +3583,15 @@ impl Alarm {
 pub struct PredictiveScalingConfiguration {
     /// <p>This structure includes the metrics and target utilization to use for predictive scaling. </p>
     /// <p>This is an array, but we currently only support a single metric specification. That is, you can specify a target value and a single metric pair, or a target value and one scaling metric and one load metric.</p>
+    #[doc(hidden)]
     pub metric_specifications:
         std::option::Option<std::vec::Vec<crate::model::PredictiveScalingMetricSpecification>>,
     /// <p>The predictive scaling mode. Defaults to <code>ForecastOnly</code> if not specified.</p>
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::PredictiveScalingMode>,
     /// <p>The amount of time, in seconds, by which the instance launch time can be advanced. For example, the forecast says to add capacity at 10:00 AM, and you choose to pre-launch instances by 5 minutes. In that case, the instances will be launched at 9:55 AM. The intention is to give resources time to be provisioned. It can take a few minutes to launch an EC2 instance. The actual amount of time required depends on several factors, such as the size of the instance and whether there are startup scripts to complete. </p>
     /// <p>The value must be less than the forecast interval duration of 3600 seconds (60 minutes). Defaults to 300 seconds if not specified. </p>
+    #[doc(hidden)]
     pub scheduling_buffer_time: std::option::Option<i32>,
     /// <p>Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Defaults to <code>HonorMaxCapacity</code> if not specified.</p>
     /// <p>The following are possible values:</p>
@@ -3519,11 +3599,13 @@ pub struct PredictiveScalingConfiguration {
     /// <li> <p> <code>HonorMaxCapacity</code> - Amazon EC2 Auto Scaling cannot scale out capacity higher than the maximum capacity. The maximum capacity is enforced as a hard limit. </p> </li>
     /// <li> <p> <code>IncreaseMaxCapacity</code> - Amazon EC2 Auto Scaling can scale out capacity higher than the maximum capacity when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is determined by the forecasted capacity and the value for <code>MaxCapacityBuffer</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub max_capacity_breach_behavior:
         std::option::Option<crate::model::PredictiveScalingMaxCapacityBreachBehavior>,
     /// <p>The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity. The value is specified as a percentage relative to the forecast capacity. For example, if the buffer is 10, this means a 10 percent buffer, such that if the forecast capacity is 50, and the maximum capacity is 40, then the effective maximum capacity is 55.</p>
     /// <p>If set to 0, Amazon EC2 Auto Scaling may scale capacity higher than the maximum capacity to equal but not exceed forecast capacity. </p>
     /// <p>Required if the <code>MaxCapacityBreachBehavior</code> property is set to <code>IncreaseMaxCapacity</code>, and cannot be used otherwise.</p>
+    #[doc(hidden)]
     pub max_capacity_buffer: std::option::Option<i32>,
 }
 impl PredictiveScalingConfiguration {
@@ -3575,11 +3657,10 @@ impl std::fmt::Debug for PredictiveScalingConfiguration {
         formatter.finish()
     }
 }
-/// See [`PredictiveScalingConfiguration`](crate::model::PredictiveScalingConfiguration)
+/// See [`PredictiveScalingConfiguration`](crate::model::PredictiveScalingConfiguration).
 pub mod predictive_scaling_configuration {
 
-    /// A builder for [`PredictiveScalingConfiguration`](crate::model::PredictiveScalingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`PredictiveScalingConfiguration`](crate::model::PredictiveScalingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_specifications:
@@ -3682,7 +3763,7 @@ pub mod predictive_scaling_configuration {
             self.max_capacity_buffer = input;
             self
         }
-        /// Consumes the builder and constructs a [`PredictiveScalingConfiguration`](crate::model::PredictiveScalingConfiguration)
+        /// Consumes the builder and constructs a [`PredictiveScalingConfiguration`](crate::model::PredictiveScalingConfiguration).
         pub fn build(self) -> crate::model::PredictiveScalingConfiguration {
             crate::model::PredictiveScalingConfiguration {
                 metric_specifications: self.metric_specifications,
@@ -3695,7 +3776,7 @@ pub mod predictive_scaling_configuration {
     }
 }
 impl PredictiveScalingConfiguration {
-    /// Creates a new builder-style object to manufacture [`PredictiveScalingConfiguration`](crate::model::PredictiveScalingConfiguration)
+    /// Creates a new builder-style object to manufacture [`PredictiveScalingConfiguration`](crate::model::PredictiveScalingConfiguration).
     pub fn builder() -> crate::model::predictive_scaling_configuration::Builder {
         crate::model::predictive_scaling_configuration::Builder::default()
     }
@@ -3832,23 +3913,30 @@ pub struct PredictiveScalingMetricSpecification {
     /// <p>Specifies the target utilization.</p> <note>
     /// <p>Some metrics are based on a count instead of a percentage, such as the request count for an Application Load Balancer or the number of messages in an SQS queue. If the scaling policy specifies one of these metrics, specify the target utilization as the optimal average request or message count per instance during any one-minute interval. </p>
     /// </note>
+    #[doc(hidden)]
     pub target_value: std::option::Option<f64>,
     /// <p>The predefined metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and load metric to use.</p>
+    #[doc(hidden)]
     pub predefined_metric_pair_specification:
         std::option::Option<crate::model::PredictiveScalingPredefinedMetricPair>,
     /// <p>The predefined scaling metric specification.</p>
+    #[doc(hidden)]
     pub predefined_scaling_metric_specification:
         std::option::Option<crate::model::PredictiveScalingPredefinedScalingMetric>,
     /// <p>The predefined load metric specification.</p>
+    #[doc(hidden)]
     pub predefined_load_metric_specification:
         std::option::Option<crate::model::PredictiveScalingPredefinedLoadMetric>,
     /// <p>The customized scaling metric specification.</p>
+    #[doc(hidden)]
     pub customized_scaling_metric_specification:
         std::option::Option<crate::model::PredictiveScalingCustomizedScalingMetric>,
     /// <p>The customized load metric specification.</p>
+    #[doc(hidden)]
     pub customized_load_metric_specification:
         std::option::Option<crate::model::PredictiveScalingCustomizedLoadMetric>,
     /// <p>The customized capacity metric specification.</p>
+    #[doc(hidden)]
     pub customized_capacity_metric_specification:
         std::option::Option<crate::model::PredictiveScalingCustomizedCapacityMetric>,
 }
@@ -3927,11 +4015,10 @@ impl std::fmt::Debug for PredictiveScalingMetricSpecification {
         formatter.finish()
     }
 }
-/// See [`PredictiveScalingMetricSpecification`](crate::model::PredictiveScalingMetricSpecification)
+/// See [`PredictiveScalingMetricSpecification`](crate::model::PredictiveScalingMetricSpecification).
 pub mod predictive_scaling_metric_specification {
 
-    /// A builder for [`PredictiveScalingMetricSpecification`](crate::model::PredictiveScalingMetricSpecification)
-    #[non_exhaustive]
+    /// A builder for [`PredictiveScalingMetricSpecification`](crate::model::PredictiveScalingMetricSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_value: std::option::Option<f64>,
@@ -4059,7 +4146,7 @@ pub mod predictive_scaling_metric_specification {
             self.customized_capacity_metric_specification = input;
             self
         }
-        /// Consumes the builder and constructs a [`PredictiveScalingMetricSpecification`](crate::model::PredictiveScalingMetricSpecification)
+        /// Consumes the builder and constructs a [`PredictiveScalingMetricSpecification`](crate::model::PredictiveScalingMetricSpecification).
         pub fn build(self) -> crate::model::PredictiveScalingMetricSpecification {
             crate::model::PredictiveScalingMetricSpecification {
                 target_value: self.target_value,
@@ -4077,7 +4164,7 @@ pub mod predictive_scaling_metric_specification {
     }
 }
 impl PredictiveScalingMetricSpecification {
-    /// Creates a new builder-style object to manufacture [`PredictiveScalingMetricSpecification`](crate::model::PredictiveScalingMetricSpecification)
+    /// Creates a new builder-style object to manufacture [`PredictiveScalingMetricSpecification`](crate::model::PredictiveScalingMetricSpecification).
     pub fn builder() -> crate::model::predictive_scaling_metric_specification::Builder {
         crate::model::predictive_scaling_metric_specification::Builder::default()
     }
@@ -4088,6 +4175,7 @@ impl PredictiveScalingMetricSpecification {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PredictiveScalingCustomizedCapacityMetric {
     /// <p>One or more metric data queries to provide the data points for a capacity metric. Use multiple metric data queries only if you are performing a math expression on returned data. </p>
+    #[doc(hidden)]
     pub metric_data_queries: std::option::Option<std::vec::Vec<crate::model::MetricDataQuery>>,
 }
 impl PredictiveScalingCustomizedCapacityMetric {
@@ -4103,11 +4191,10 @@ impl std::fmt::Debug for PredictiveScalingCustomizedCapacityMetric {
         formatter.finish()
     }
 }
-/// See [`PredictiveScalingCustomizedCapacityMetric`](crate::model::PredictiveScalingCustomizedCapacityMetric)
+/// See [`PredictiveScalingCustomizedCapacityMetric`](crate::model::PredictiveScalingCustomizedCapacityMetric).
 pub mod predictive_scaling_customized_capacity_metric {
 
-    /// A builder for [`PredictiveScalingCustomizedCapacityMetric`](crate::model::PredictiveScalingCustomizedCapacityMetric)
-    #[non_exhaustive]
+    /// A builder for [`PredictiveScalingCustomizedCapacityMetric`](crate::model::PredictiveScalingCustomizedCapacityMetric).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_data_queries:
@@ -4133,7 +4220,7 @@ pub mod predictive_scaling_customized_capacity_metric {
             self.metric_data_queries = input;
             self
         }
-        /// Consumes the builder and constructs a [`PredictiveScalingCustomizedCapacityMetric`](crate::model::PredictiveScalingCustomizedCapacityMetric)
+        /// Consumes the builder and constructs a [`PredictiveScalingCustomizedCapacityMetric`](crate::model::PredictiveScalingCustomizedCapacityMetric).
         pub fn build(self) -> crate::model::PredictiveScalingCustomizedCapacityMetric {
             crate::model::PredictiveScalingCustomizedCapacityMetric {
                 metric_data_queries: self.metric_data_queries,
@@ -4142,7 +4229,7 @@ pub mod predictive_scaling_customized_capacity_metric {
     }
 }
 impl PredictiveScalingCustomizedCapacityMetric {
-    /// Creates a new builder-style object to manufacture [`PredictiveScalingCustomizedCapacityMetric`](crate::model::PredictiveScalingCustomizedCapacityMetric)
+    /// Creates a new builder-style object to manufacture [`PredictiveScalingCustomizedCapacityMetric`](crate::model::PredictiveScalingCustomizedCapacityMetric).
     pub fn builder() -> crate::model::predictive_scaling_customized_capacity_metric::Builder {
         crate::model::predictive_scaling_customized_capacity_metric::Builder::default()
     }
@@ -4154,18 +4241,23 @@ impl PredictiveScalingCustomizedCapacityMetric {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDataQuery {
     /// <p>A short name that identifies the object's results in the response. This name must be unique among all <code>MetricDataQuery</code> objects specified for a single scaling policy. If you are performing math expressions on this set of data, this name represents that data and can serve as a variable in the mathematical expression. The valid characters are letters, numbers, and underscores. The first character must be a lowercase letter. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The math expression to perform on the returned data, if this object is performing a math expression. This expression can use the <code>Id</code> of the other metrics to refer to those metrics, and can also use the <code>Id</code> of other expressions to use the result of those expressions. </p>
     /// <p>Conditional: Within each <code>MetricDataQuery</code> object, you must specify either <code>Expression</code> or <code>MetricStat</code>, but not both.</p>
+    #[doc(hidden)]
     pub expression: std::option::Option<std::string::String>,
     /// <p>Information about the metric data to return.</p>
     /// <p>Conditional: Within each <code>MetricDataQuery</code> object, you must specify either <code>Expression</code> or <code>MetricStat</code>, but not both.</p>
+    #[doc(hidden)]
     pub metric_stat: std::option::Option<crate::model::MetricStat>,
     /// <p>A human-readable label for this metric or expression. This is especially useful if this is a math expression, so that you know what the value represents.</p>
+    #[doc(hidden)]
     pub label: std::option::Option<std::string::String>,
     /// <p>Indicates whether to return the timestamps and raw data values of this metric. </p>
     /// <p>If you use any math expressions, specify <code>true</code> for this value for only the final math expression that the metric specification is based on. You must specify <code>false</code> for <code>ReturnData</code> for all the other metrics and expressions used in the metric specification.</p>
     /// <p>If you are only retrieving metrics and not performing any math expressions, do not specify anything for <code>ReturnData</code>. This sets it to its default (<code>true</code>).</p>
+    #[doc(hidden)]
     pub return_data: std::option::Option<bool>,
 }
 impl MetricDataQuery {
@@ -4205,11 +4297,10 @@ impl std::fmt::Debug for MetricDataQuery {
         formatter.finish()
     }
 }
-/// See [`MetricDataQuery`](crate::model::MetricDataQuery)
+/// See [`MetricDataQuery`](crate::model::MetricDataQuery).
 pub mod metric_data_query {
 
-    /// A builder for [`MetricDataQuery`](crate::model::MetricDataQuery)
-    #[non_exhaustive]
+    /// A builder for [`MetricDataQuery`](crate::model::MetricDataQuery).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4280,7 +4371,7 @@ pub mod metric_data_query {
             self.return_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDataQuery`](crate::model::MetricDataQuery)
+        /// Consumes the builder and constructs a [`MetricDataQuery`](crate::model::MetricDataQuery).
         pub fn build(self) -> crate::model::MetricDataQuery {
             crate::model::MetricDataQuery {
                 id: self.id,
@@ -4293,7 +4384,7 @@ pub mod metric_data_query {
     }
 }
 impl MetricDataQuery {
-    /// Creates a new builder-style object to manufacture [`MetricDataQuery`](crate::model::MetricDataQuery)
+    /// Creates a new builder-style object to manufacture [`MetricDataQuery`](crate::model::MetricDataQuery).
     pub fn builder() -> crate::model::metric_data_query::Builder {
         crate::model::metric_data_query::Builder::default()
     }
@@ -4305,11 +4396,14 @@ impl MetricDataQuery {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricStat {
     /// <p>The CloudWatch metric to return, including the metric name, namespace, and dimensions. To get the exact metric name, namespace, and dimensions, inspect the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that is returned by a call to <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html">ListMetrics</a>.</p>
+    #[doc(hidden)]
     pub metric: std::option::Option<crate::model::Metric>,
     /// <p>The statistic to return. It can include any CloudWatch statistic or extended statistic. For a list of valid values, see the table in <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Statistic">Statistics</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
     /// <p>The most commonly used metrics for predictive scaling are <code>Average</code> and <code>Sum</code>.</p>
+    #[doc(hidden)]
     pub stat: std::option::Option<std::string::String>,
     /// <p>The unit to use for the returned data points. For a complete list of the units that CloudWatch supports, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">MetricDatum</a> data type in the <i>Amazon CloudWatch API Reference</i>.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<std::string::String>,
 }
 impl MetricStat {
@@ -4336,11 +4430,10 @@ impl std::fmt::Debug for MetricStat {
         formatter.finish()
     }
 }
-/// See [`MetricStat`](crate::model::MetricStat)
+/// See [`MetricStat`](crate::model::MetricStat).
 pub mod metric_stat {
 
-    /// A builder for [`MetricStat`](crate::model::MetricStat)
-    #[non_exhaustive]
+    /// A builder for [`MetricStat`](crate::model::MetricStat).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric: std::option::Option<crate::model::Metric>,
@@ -4380,7 +4473,7 @@ pub mod metric_stat {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricStat`](crate::model::MetricStat)
+        /// Consumes the builder and constructs a [`MetricStat`](crate::model::MetricStat).
         pub fn build(self) -> crate::model::MetricStat {
             crate::model::MetricStat {
                 metric: self.metric,
@@ -4391,7 +4484,7 @@ pub mod metric_stat {
     }
 }
 impl MetricStat {
-    /// Creates a new builder-style object to manufacture [`MetricStat`](crate::model::MetricStat)
+    /// Creates a new builder-style object to manufacture [`MetricStat`](crate::model::MetricStat).
     pub fn builder() -> crate::model::metric_stat::Builder {
         crate::model::metric_stat::Builder::default()
     }
@@ -4402,11 +4495,14 @@ impl MetricStat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Metric {
     /// <p>The namespace of the metric. For more information, see the table in <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html">Amazon Web Services services that publish CloudWatch metrics </a> in the <i>Amazon CloudWatch User Guide</i>.</p>
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
     /// <p>The name of the metric.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The dimensions for the metric. For the list of available dimensions, see the Amazon Web Services documentation available from the table in <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html">Amazon Web Services services that publish CloudWatch metrics </a> in the <i>Amazon CloudWatch User Guide</i>. </p>
     /// <p>Conditional: If you published your metric with dimensions, you must specify the same dimensions in your scaling policy.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::MetricDimension>>,
 }
 impl Metric {
@@ -4433,11 +4529,10 @@ impl std::fmt::Debug for Metric {
         formatter.finish()
     }
 }
-/// See [`Metric`](crate::model::Metric)
+/// See [`Metric`](crate::model::Metric).
 pub mod metric {
 
-    /// A builder for [`Metric`](crate::model::Metric)
-    #[non_exhaustive]
+    /// A builder for [`Metric`](crate::model::Metric).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace: std::option::Option<std::string::String>,
@@ -4486,7 +4581,7 @@ pub mod metric {
             self.dimensions = input;
             self
         }
-        /// Consumes the builder and constructs a [`Metric`](crate::model::Metric)
+        /// Consumes the builder and constructs a [`Metric`](crate::model::Metric).
         pub fn build(self) -> crate::model::Metric {
             crate::model::Metric {
                 namespace: self.namespace,
@@ -4497,7 +4592,7 @@ pub mod metric {
     }
 }
 impl Metric {
-    /// Creates a new builder-style object to manufacture [`Metric`](crate::model::Metric)
+    /// Creates a new builder-style object to manufacture [`Metric`](crate::model::Metric).
     pub fn builder() -> crate::model::metric::Builder {
         crate::model::metric::Builder::default()
     }
@@ -4508,8 +4603,10 @@ impl Metric {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDimension {
     /// <p>The name of the dimension.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value of the dimension.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl MetricDimension {
@@ -4530,11 +4627,10 @@ impl std::fmt::Debug for MetricDimension {
         formatter.finish()
     }
 }
-/// See [`MetricDimension`](crate::model::MetricDimension)
+/// See [`MetricDimension`](crate::model::MetricDimension).
 pub mod metric_dimension {
 
-    /// A builder for [`MetricDimension`](crate::model::MetricDimension)
-    #[non_exhaustive]
+    /// A builder for [`MetricDimension`](crate::model::MetricDimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4561,7 +4657,7 @@ pub mod metric_dimension {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDimension`](crate::model::MetricDimension)
+        /// Consumes the builder and constructs a [`MetricDimension`](crate::model::MetricDimension).
         pub fn build(self) -> crate::model::MetricDimension {
             crate::model::MetricDimension {
                 name: self.name,
@@ -4571,7 +4667,7 @@ pub mod metric_dimension {
     }
 }
 impl MetricDimension {
-    /// Creates a new builder-style object to manufacture [`MetricDimension`](crate::model::MetricDimension)
+    /// Creates a new builder-style object to manufacture [`MetricDimension`](crate::model::MetricDimension).
     pub fn builder() -> crate::model::metric_dimension::Builder {
         crate::model::metric_dimension::Builder::default()
     }
@@ -4582,6 +4678,7 @@ impl MetricDimension {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PredictiveScalingCustomizedLoadMetric {
     /// <p>One or more metric data queries to provide the data points for a load metric. Use multiple metric data queries only if you are performing a math expression on returned data. </p>
+    #[doc(hidden)]
     pub metric_data_queries: std::option::Option<std::vec::Vec<crate::model::MetricDataQuery>>,
 }
 impl PredictiveScalingCustomizedLoadMetric {
@@ -4597,11 +4694,10 @@ impl std::fmt::Debug for PredictiveScalingCustomizedLoadMetric {
         formatter.finish()
     }
 }
-/// See [`PredictiveScalingCustomizedLoadMetric`](crate::model::PredictiveScalingCustomizedLoadMetric)
+/// See [`PredictiveScalingCustomizedLoadMetric`](crate::model::PredictiveScalingCustomizedLoadMetric).
 pub mod predictive_scaling_customized_load_metric {
 
-    /// A builder for [`PredictiveScalingCustomizedLoadMetric`](crate::model::PredictiveScalingCustomizedLoadMetric)
-    #[non_exhaustive]
+    /// A builder for [`PredictiveScalingCustomizedLoadMetric`](crate::model::PredictiveScalingCustomizedLoadMetric).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_data_queries:
@@ -4627,7 +4723,7 @@ pub mod predictive_scaling_customized_load_metric {
             self.metric_data_queries = input;
             self
         }
-        /// Consumes the builder and constructs a [`PredictiveScalingCustomizedLoadMetric`](crate::model::PredictiveScalingCustomizedLoadMetric)
+        /// Consumes the builder and constructs a [`PredictiveScalingCustomizedLoadMetric`](crate::model::PredictiveScalingCustomizedLoadMetric).
         pub fn build(self) -> crate::model::PredictiveScalingCustomizedLoadMetric {
             crate::model::PredictiveScalingCustomizedLoadMetric {
                 metric_data_queries: self.metric_data_queries,
@@ -4636,7 +4732,7 @@ pub mod predictive_scaling_customized_load_metric {
     }
 }
 impl PredictiveScalingCustomizedLoadMetric {
-    /// Creates a new builder-style object to manufacture [`PredictiveScalingCustomizedLoadMetric`](crate::model::PredictiveScalingCustomizedLoadMetric)
+    /// Creates a new builder-style object to manufacture [`PredictiveScalingCustomizedLoadMetric`](crate::model::PredictiveScalingCustomizedLoadMetric).
     pub fn builder() -> crate::model::predictive_scaling_customized_load_metric::Builder {
         crate::model::predictive_scaling_customized_load_metric::Builder::default()
     }
@@ -4647,6 +4743,7 @@ impl PredictiveScalingCustomizedLoadMetric {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PredictiveScalingCustomizedScalingMetric {
     /// <p>One or more metric data queries to provide the data points for a scaling metric. Use multiple metric data queries only if you are performing a math expression on returned data. </p>
+    #[doc(hidden)]
     pub metric_data_queries: std::option::Option<std::vec::Vec<crate::model::MetricDataQuery>>,
 }
 impl PredictiveScalingCustomizedScalingMetric {
@@ -4662,11 +4759,10 @@ impl std::fmt::Debug for PredictiveScalingCustomizedScalingMetric {
         formatter.finish()
     }
 }
-/// See [`PredictiveScalingCustomizedScalingMetric`](crate::model::PredictiveScalingCustomizedScalingMetric)
+/// See [`PredictiveScalingCustomizedScalingMetric`](crate::model::PredictiveScalingCustomizedScalingMetric).
 pub mod predictive_scaling_customized_scaling_metric {
 
-    /// A builder for [`PredictiveScalingCustomizedScalingMetric`](crate::model::PredictiveScalingCustomizedScalingMetric)
-    #[non_exhaustive]
+    /// A builder for [`PredictiveScalingCustomizedScalingMetric`](crate::model::PredictiveScalingCustomizedScalingMetric).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_data_queries:
@@ -4692,7 +4788,7 @@ pub mod predictive_scaling_customized_scaling_metric {
             self.metric_data_queries = input;
             self
         }
-        /// Consumes the builder and constructs a [`PredictiveScalingCustomizedScalingMetric`](crate::model::PredictiveScalingCustomizedScalingMetric)
+        /// Consumes the builder and constructs a [`PredictiveScalingCustomizedScalingMetric`](crate::model::PredictiveScalingCustomizedScalingMetric).
         pub fn build(self) -> crate::model::PredictiveScalingCustomizedScalingMetric {
             crate::model::PredictiveScalingCustomizedScalingMetric {
                 metric_data_queries: self.metric_data_queries,
@@ -4701,7 +4797,7 @@ pub mod predictive_scaling_customized_scaling_metric {
     }
 }
 impl PredictiveScalingCustomizedScalingMetric {
-    /// Creates a new builder-style object to manufacture [`PredictiveScalingCustomizedScalingMetric`](crate::model::PredictiveScalingCustomizedScalingMetric)
+    /// Creates a new builder-style object to manufacture [`PredictiveScalingCustomizedScalingMetric`](crate::model::PredictiveScalingCustomizedScalingMetric).
     pub fn builder() -> crate::model::predictive_scaling_customized_scaling_metric::Builder {
         crate::model::predictive_scaling_customized_scaling_metric::Builder::default()
     }
@@ -4713,6 +4809,7 @@ impl PredictiveScalingCustomizedScalingMetric {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PredictiveScalingPredefinedLoadMetric {
     /// <p>The metric type.</p>
+    #[doc(hidden)]
     pub predefined_metric_type: std::option::Option<crate::model::PredefinedLoadMetricType>,
     /// <p>A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group. You can't specify a resource label unless the target group is attached to the Auto Scaling group.</p>
     /// <p>You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). The format of the resource label is:</p>
@@ -4733,6 +4830,7 @@ pub struct PredictiveScalingPredefinedLoadMetric {
     /// </target-group-name></p> </li>
     /// </ul>
     /// <p>To find the ARN for an Application Load Balancer, use the <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html">DescribeLoadBalancers</a> API operation. To find the ARN for the target group, use the <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html">DescribeTargetGroups</a> API operation.</p>
+    #[doc(hidden)]
     pub resource_label: std::option::Option<std::string::String>,
 }
 impl PredictiveScalingPredefinedLoadMetric {
@@ -4773,11 +4871,10 @@ impl std::fmt::Debug for PredictiveScalingPredefinedLoadMetric {
         formatter.finish()
     }
 }
-/// See [`PredictiveScalingPredefinedLoadMetric`](crate::model::PredictiveScalingPredefinedLoadMetric)
+/// See [`PredictiveScalingPredefinedLoadMetric`](crate::model::PredictiveScalingPredefinedLoadMetric).
 pub mod predictive_scaling_predefined_load_metric {
 
-    /// A builder for [`PredictiveScalingPredefinedLoadMetric`](crate::model::PredictiveScalingPredefinedLoadMetric)
-    #[non_exhaustive]
+    /// A builder for [`PredictiveScalingPredefinedLoadMetric`](crate::model::PredictiveScalingPredefinedLoadMetric).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) predefined_metric_type:
@@ -4850,7 +4947,7 @@ pub mod predictive_scaling_predefined_load_metric {
             self.resource_label = input;
             self
         }
-        /// Consumes the builder and constructs a [`PredictiveScalingPredefinedLoadMetric`](crate::model::PredictiveScalingPredefinedLoadMetric)
+        /// Consumes the builder and constructs a [`PredictiveScalingPredefinedLoadMetric`](crate::model::PredictiveScalingPredefinedLoadMetric).
         pub fn build(self) -> crate::model::PredictiveScalingPredefinedLoadMetric {
             crate::model::PredictiveScalingPredefinedLoadMetric {
                 predefined_metric_type: self.predefined_metric_type,
@@ -4860,7 +4957,7 @@ pub mod predictive_scaling_predefined_load_metric {
     }
 }
 impl PredictiveScalingPredefinedLoadMetric {
-    /// Creates a new builder-style object to manufacture [`PredictiveScalingPredefinedLoadMetric`](crate::model::PredictiveScalingPredefinedLoadMetric)
+    /// Creates a new builder-style object to manufacture [`PredictiveScalingPredefinedLoadMetric`](crate::model::PredictiveScalingPredefinedLoadMetric).
     pub fn builder() -> crate::model::predictive_scaling_predefined_load_metric::Builder {
         crate::model::predictive_scaling_predefined_load_metric::Builder::default()
     }
@@ -4940,6 +5037,7 @@ impl AsRef<str> for PredefinedLoadMetricType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PredictiveScalingPredefinedScalingMetric {
     /// <p>The metric type.</p>
+    #[doc(hidden)]
     pub predefined_metric_type: std::option::Option<crate::model::PredefinedScalingMetricType>,
     /// <p>A label that uniquely identifies a specific Application Load Balancer target group from which to determine the average request count served by your Auto Scaling group. You can't specify a resource label unless the target group is attached to the Auto Scaling group.</p>
     /// <p>You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). The format of the resource label is:</p>
@@ -4960,6 +5058,7 @@ pub struct PredictiveScalingPredefinedScalingMetric {
     /// </target-group-name></p> </li>
     /// </ul>
     /// <p>To find the ARN for an Application Load Balancer, use the <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html">DescribeLoadBalancers</a> API operation. To find the ARN for the target group, use the <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html">DescribeTargetGroups</a> API operation.</p>
+    #[doc(hidden)]
     pub resource_label: std::option::Option<std::string::String>,
 }
 impl PredictiveScalingPredefinedScalingMetric {
@@ -5000,11 +5099,10 @@ impl std::fmt::Debug for PredictiveScalingPredefinedScalingMetric {
         formatter.finish()
     }
 }
-/// See [`PredictiveScalingPredefinedScalingMetric`](crate::model::PredictiveScalingPredefinedScalingMetric)
+/// See [`PredictiveScalingPredefinedScalingMetric`](crate::model::PredictiveScalingPredefinedScalingMetric).
 pub mod predictive_scaling_predefined_scaling_metric {
 
-    /// A builder for [`PredictiveScalingPredefinedScalingMetric`](crate::model::PredictiveScalingPredefinedScalingMetric)
-    #[non_exhaustive]
+    /// A builder for [`PredictiveScalingPredefinedScalingMetric`](crate::model::PredictiveScalingPredefinedScalingMetric).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) predefined_metric_type:
@@ -5077,7 +5175,7 @@ pub mod predictive_scaling_predefined_scaling_metric {
             self.resource_label = input;
             self
         }
-        /// Consumes the builder and constructs a [`PredictiveScalingPredefinedScalingMetric`](crate::model::PredictiveScalingPredefinedScalingMetric)
+        /// Consumes the builder and constructs a [`PredictiveScalingPredefinedScalingMetric`](crate::model::PredictiveScalingPredefinedScalingMetric).
         pub fn build(self) -> crate::model::PredictiveScalingPredefinedScalingMetric {
             crate::model::PredictiveScalingPredefinedScalingMetric {
                 predefined_metric_type: self.predefined_metric_type,
@@ -5087,7 +5185,7 @@ pub mod predictive_scaling_predefined_scaling_metric {
     }
 }
 impl PredictiveScalingPredefinedScalingMetric {
-    /// Creates a new builder-style object to manufacture [`PredictiveScalingPredefinedScalingMetric`](crate::model::PredictiveScalingPredefinedScalingMetric)
+    /// Creates a new builder-style object to manufacture [`PredictiveScalingPredefinedScalingMetric`](crate::model::PredictiveScalingPredefinedScalingMetric).
     pub fn builder() -> crate::model::predictive_scaling_predefined_scaling_metric::Builder {
         crate::model::predictive_scaling_predefined_scaling_metric::Builder::default()
     }
@@ -5166,6 +5264,7 @@ impl AsRef<str> for PredefinedScalingMetricType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PredictiveScalingPredefinedMetricPair {
     /// <p>Indicates which metrics to use. There are two different types of metrics for each metric type: one is a load metric and one is a scaling metric. For example, if the metric type is <code>ASGCPUUtilization</code>, the Auto Scaling group's total CPU metric is used as the load metric, and the average CPU metric is used for the scaling metric.</p>
+    #[doc(hidden)]
     pub predefined_metric_type: std::option::Option<crate::model::PredefinedMetricPairType>,
     /// <p>A label that uniquely identifies a specific Application Load Balancer target group from which to determine the total and average request count served by your Auto Scaling group. You can't specify a resource label unless the target group is attached to the Auto Scaling group.</p>
     /// <p>You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). The format of the resource label is:</p>
@@ -5186,6 +5285,7 @@ pub struct PredictiveScalingPredefinedMetricPair {
     /// </target-group-name></p> </li>
     /// </ul>
     /// <p>To find the ARN for an Application Load Balancer, use the <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html">DescribeLoadBalancers</a> API operation. To find the ARN for the target group, use the <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html">DescribeTargetGroups</a> API operation.</p>
+    #[doc(hidden)]
     pub resource_label: std::option::Option<std::string::String>,
 }
 impl PredictiveScalingPredefinedMetricPair {
@@ -5226,11 +5326,10 @@ impl std::fmt::Debug for PredictiveScalingPredefinedMetricPair {
         formatter.finish()
     }
 }
-/// See [`PredictiveScalingPredefinedMetricPair`](crate::model::PredictiveScalingPredefinedMetricPair)
+/// See [`PredictiveScalingPredefinedMetricPair`](crate::model::PredictiveScalingPredefinedMetricPair).
 pub mod predictive_scaling_predefined_metric_pair {
 
-    /// A builder for [`PredictiveScalingPredefinedMetricPair`](crate::model::PredictiveScalingPredefinedMetricPair)
-    #[non_exhaustive]
+    /// A builder for [`PredictiveScalingPredefinedMetricPair`](crate::model::PredictiveScalingPredefinedMetricPair).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) predefined_metric_type:
@@ -5303,7 +5402,7 @@ pub mod predictive_scaling_predefined_metric_pair {
             self.resource_label = input;
             self
         }
-        /// Consumes the builder and constructs a [`PredictiveScalingPredefinedMetricPair`](crate::model::PredictiveScalingPredefinedMetricPair)
+        /// Consumes the builder and constructs a [`PredictiveScalingPredefinedMetricPair`](crate::model::PredictiveScalingPredefinedMetricPair).
         pub fn build(self) -> crate::model::PredictiveScalingPredefinedMetricPair {
             crate::model::PredictiveScalingPredefinedMetricPair {
                 predefined_metric_type: self.predefined_metric_type,
@@ -5313,7 +5412,7 @@ pub mod predictive_scaling_predefined_metric_pair {
     }
 }
 impl PredictiveScalingPredefinedMetricPair {
-    /// Creates a new builder-style object to manufacture [`PredictiveScalingPredefinedMetricPair`](crate::model::PredictiveScalingPredefinedMetricPair)
+    /// Creates a new builder-style object to manufacture [`PredictiveScalingPredefinedMetricPair`](crate::model::PredictiveScalingPredefinedMetricPair).
     pub fn builder() -> crate::model::predictive_scaling_predefined_metric_pair::Builder {
         crate::model::predictive_scaling_predefined_metric_pair::Builder::default()
     }
@@ -5392,16 +5491,20 @@ impl AsRef<str> for PredefinedMetricPairType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetTrackingConfiguration {
     /// <p>A predefined metric. You must specify either a predefined metric or a customized metric.</p>
+    #[doc(hidden)]
     pub predefined_metric_specification:
         std::option::Option<crate::model::PredefinedMetricSpecification>,
     /// <p>A customized metric. You must specify either a predefined metric or a customized metric.</p>
+    #[doc(hidden)]
     pub customized_metric_specification:
         std::option::Option<crate::model::CustomizedMetricSpecification>,
     /// <p>The target value for the metric.</p> <note>
     /// <p>Some metrics are based on a count instead of a percentage, such as the request count for an Application Load Balancer or the number of messages in an SQS queue. If the scaling policy specifies one of these metrics, specify the target utilization as the optimal average request or message count per instance during any one-minute interval. </p>
     /// </note>
+    #[doc(hidden)]
     pub target_value: std::option::Option<f64>,
     /// <p>Indicates whether scaling in by the target tracking scaling policy is disabled. If scaling in is disabled, the target tracking scaling policy doesn't remove instances from the Auto Scaling group. Otherwise, the target tracking scaling policy can remove instances from the Auto Scaling group. The default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub disable_scale_in: std::option::Option<bool>,
 }
 impl TargetTrackingConfiguration {
@@ -5444,11 +5547,10 @@ impl std::fmt::Debug for TargetTrackingConfiguration {
         formatter.finish()
     }
 }
-/// See [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration)
+/// See [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration).
 pub mod target_tracking_configuration {
 
-    /// A builder for [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) predefined_metric_specification:
@@ -5515,7 +5617,7 @@ pub mod target_tracking_configuration {
             self.disable_scale_in = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration)
+        /// Consumes the builder and constructs a [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration).
         pub fn build(self) -> crate::model::TargetTrackingConfiguration {
             crate::model::TargetTrackingConfiguration {
                 predefined_metric_specification: self.predefined_metric_specification,
@@ -5527,7 +5629,7 @@ pub mod target_tracking_configuration {
     }
 }
 impl TargetTrackingConfiguration {
-    /// Creates a new builder-style object to manufacture [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration)
+    /// Creates a new builder-style object to manufacture [`TargetTrackingConfiguration`](crate::model::TargetTrackingConfiguration).
     pub fn builder() -> crate::model::target_tracking_configuration::Builder {
         crate::model::target_tracking_configuration::Builder::default()
     }
@@ -5536,7 +5638,7 @@ impl TargetTrackingConfiguration {
 /// <p>Represents a CloudWatch metric of your choosing for a target tracking scaling policy to use with Amazon EC2 Auto Scaling.</p>
 /// <p>To create your customized metric specification:</p>
 /// <ul>
-/// <li> <p>Add values for each required parameter from CloudWatch. You can use an existing metric, or a new metric that you create. To use your own metric, you must first publish the metric to CloudWatch. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html">Publish custom metrics</a> in the <i>Amazon CloudWatch User Guide</i>.</p> </li>
+/// <li> <p>Add values for each required property from CloudWatch. You can use an existing metric, or a new metric that you create. To use your own metric, you must first publish the metric to CloudWatch. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html">Publish custom metrics</a> in the <i>Amazon CloudWatch User Guide</i>.</p> </li>
 /// <li> <p>Choose a metric that changes proportionally with capacity. The value of the metric should increase or decrease in inverse proportion to the number of capacity units. That is, the value of the metric should decrease when capacity increases.</p> </li>
 /// </ul>
 /// <p>For more information about the CloudWatch terminology below, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html">Amazon CloudWatch concepts</a>.</p> <note>
@@ -5546,15 +5648,20 @@ impl TargetTrackingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomizedMetricSpecification {
     /// <p>The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that is returned by a call to <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html">ListMetrics</a>.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The namespace of the metric.</p>
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
     /// <p>The dimensions of the metric.</p>
     /// <p>Conditional: If you published your metric with dimensions, you must specify the same dimensions in your scaling policy.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::MetricDimension>>,
     /// <p>The statistic of the metric.</p>
+    #[doc(hidden)]
     pub statistic: std::option::Option<crate::model::MetricStatistic>,
     /// <p>The unit of the metric. For a complete list of the units that CloudWatch supports, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">MetricDatum</a> data type in the <i>Amazon CloudWatch API Reference</i>.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<std::string::String>,
 }
 impl CustomizedMetricSpecification {
@@ -5591,11 +5698,10 @@ impl std::fmt::Debug for CustomizedMetricSpecification {
         formatter.finish()
     }
 }
-/// See [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification)
+/// See [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification).
 pub mod customized_metric_specification {
 
-    /// A builder for [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification)
-    #[non_exhaustive]
+    /// A builder for [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_name: std::option::Option<std::string::String>,
@@ -5669,7 +5775,7 @@ pub mod customized_metric_specification {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification)
+        /// Consumes the builder and constructs a [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification).
         pub fn build(self) -> crate::model::CustomizedMetricSpecification {
             crate::model::CustomizedMetricSpecification {
                 metric_name: self.metric_name,
@@ -5682,7 +5788,7 @@ pub mod customized_metric_specification {
     }
 }
 impl CustomizedMetricSpecification {
-    /// Creates a new builder-style object to manufacture [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification)
+    /// Creates a new builder-style object to manufacture [`CustomizedMetricSpecification`](crate::model::CustomizedMetricSpecification).
     pub fn builder() -> crate::model::customized_metric_specification::Builder {
         crate::model::customized_metric_specification::Builder::default()
     }
@@ -5766,6 +5872,7 @@ pub struct PredefinedMetricSpecification {
     /// <li> <p> <code>ASGAverageNetworkOut</code> - Average number of bytes sent out on all network interfaces by the Auto Scaling group.</p> </li>
     /// <li> <p> <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count per target for your Auto Scaling group.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub predefined_metric_type: std::option::Option<crate::model::MetricType>,
     /// <p>A label that uniquely identifies a specific Application Load Balancer target group from which to determine the average request count served by your Auto Scaling group. You can't specify a resource label unless the target group is attached to the Auto Scaling group.</p>
     /// <p>You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). The format of the resource label is:</p>
@@ -5786,6 +5893,7 @@ pub struct PredefinedMetricSpecification {
     /// </target-group-name></p> </li>
     /// </ul>
     /// <p>To find the ARN for an Application Load Balancer, use the <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html">DescribeLoadBalancers</a> API operation. To find the ARN for the target group, use the <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html">DescribeTargetGroups</a> API operation.</p>
+    #[doc(hidden)]
     pub resource_label: std::option::Option<std::string::String>,
 }
 impl PredefinedMetricSpecification {
@@ -5830,11 +5938,10 @@ impl std::fmt::Debug for PredefinedMetricSpecification {
         formatter.finish()
     }
 }
-/// See [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification)
+/// See [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification).
 pub mod predefined_metric_specification {
 
-    /// A builder for [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification)
-    #[non_exhaustive]
+    /// A builder for [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) predefined_metric_type: std::option::Option<crate::model::MetricType>,
@@ -5915,7 +6022,7 @@ pub mod predefined_metric_specification {
             self.resource_label = input;
             self
         }
-        /// Consumes the builder and constructs a [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification)
+        /// Consumes the builder and constructs a [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification).
         pub fn build(self) -> crate::model::PredefinedMetricSpecification {
             crate::model::PredefinedMetricSpecification {
                 predefined_metric_type: self.predefined_metric_type,
@@ -5925,7 +6032,7 @@ pub mod predefined_metric_specification {
     }
 }
 impl PredefinedMetricSpecification {
-    /// Creates a new builder-style object to manufacture [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification)
+    /// Creates a new builder-style object to manufacture [`PredefinedMetricSpecification`](crate::model::PredefinedMetricSpecification).
     pub fn builder() -> crate::model::predefined_metric_specification::Builder {
         crate::model::predefined_metric_specification::Builder::default()
     }
@@ -6017,11 +6124,15 @@ impl AsRef<str> for MetricType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StepAdjustment {
     /// <p>The lower bound for the difference between the alarm threshold and the CloudWatch metric. If the metric value is above the breach threshold, the lower bound is inclusive (the metric must be greater than or equal to the threshold plus the lower bound). Otherwise, it is exclusive (the metric must be greater than the threshold plus the lower bound). A null value indicates negative infinity.</p>
+    #[doc(hidden)]
     pub metric_interval_lower_bound: std::option::Option<f64>,
     /// <p>The upper bound for the difference between the alarm threshold and the CloudWatch metric. If the metric value is above the breach threshold, the upper bound is exclusive (the metric must be less than the threshold plus the upper bound). Otherwise, it is inclusive (the metric must be less than or equal to the threshold plus the upper bound). A null value indicates positive infinity.</p>
     /// <p>The upper bound must be greater than the lower bound.</p>
+    #[doc(hidden)]
     pub metric_interval_upper_bound: std::option::Option<f64>,
     /// <p>The amount by which to scale, based on the specified adjustment type. A positive value adds to the current capacity while a negative number removes from the current capacity.</p>
+    /// <p>The amount by which to scale. The adjustment is based on the value that you specified in the <code>AdjustmentType</code> property (either an absolute number or a percentage). A positive value adds to the current capacity and a negative number subtracts from the current capacity. </p>
+    #[doc(hidden)]
     pub scaling_adjustment: std::option::Option<i32>,
 }
 impl StepAdjustment {
@@ -6035,6 +6146,7 @@ impl StepAdjustment {
         self.metric_interval_upper_bound
     }
     /// <p>The amount by which to scale, based on the specified adjustment type. A positive value adds to the current capacity while a negative number removes from the current capacity.</p>
+    /// <p>The amount by which to scale. The adjustment is based on the value that you specified in the <code>AdjustmentType</code> property (either an absolute number or a percentage). A positive value adds to the current capacity and a negative number subtracts from the current capacity. </p>
     pub fn scaling_adjustment(&self) -> std::option::Option<i32> {
         self.scaling_adjustment
     }
@@ -6054,11 +6166,10 @@ impl std::fmt::Debug for StepAdjustment {
         formatter.finish()
     }
 }
-/// See [`StepAdjustment`](crate::model::StepAdjustment)
+/// See [`StepAdjustment`](crate::model::StepAdjustment).
 pub mod step_adjustment {
 
-    /// A builder for [`StepAdjustment`](crate::model::StepAdjustment)
-    #[non_exhaustive]
+    /// A builder for [`StepAdjustment`](crate::model::StepAdjustment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_interval_lower_bound: std::option::Option<f64>,
@@ -6089,16 +6200,18 @@ pub mod step_adjustment {
             self
         }
         /// <p>The amount by which to scale, based on the specified adjustment type. A positive value adds to the current capacity while a negative number removes from the current capacity.</p>
+        /// <p>The amount by which to scale. The adjustment is based on the value that you specified in the <code>AdjustmentType</code> property (either an absolute number or a percentage). A positive value adds to the current capacity and a negative number subtracts from the current capacity. </p>
         pub fn scaling_adjustment(mut self, input: i32) -> Self {
             self.scaling_adjustment = Some(input);
             self
         }
         /// <p>The amount by which to scale, based on the specified adjustment type. A positive value adds to the current capacity while a negative number removes from the current capacity.</p>
+        /// <p>The amount by which to scale. The adjustment is based on the value that you specified in the <code>AdjustmentType</code> property (either an absolute number or a percentage). A positive value adds to the current capacity and a negative number subtracts from the current capacity. </p>
         pub fn set_scaling_adjustment(mut self, input: std::option::Option<i32>) -> Self {
             self.scaling_adjustment = input;
             self
         }
-        /// Consumes the builder and constructs a [`StepAdjustment`](crate::model::StepAdjustment)
+        /// Consumes the builder and constructs a [`StepAdjustment`](crate::model::StepAdjustment).
         pub fn build(self) -> crate::model::StepAdjustment {
             crate::model::StepAdjustment {
                 metric_interval_lower_bound: self.metric_interval_lower_bound,
@@ -6109,7 +6222,7 @@ pub mod step_adjustment {
     }
 }
 impl StepAdjustment {
-    /// Creates a new builder-style object to manufacture [`StepAdjustment`](crate::model::StepAdjustment)
+    /// Creates a new builder-style object to manufacture [`StepAdjustment`](crate::model::StepAdjustment).
     pub fn builder() -> crate::model::step_adjustment::Builder {
         crate::model::step_adjustment::Builder::default()
     }
@@ -6120,8 +6233,10 @@ impl StepAdjustment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CapacityForecast {
     /// <p>The timestamps for the data points, in UTC format.</p>
+    #[doc(hidden)]
     pub timestamps: std::option::Option<std::vec::Vec<aws_smithy_types::DateTime>>,
     /// <p>The values of the data points.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<f64>>,
 }
 impl CapacityForecast {
@@ -6142,11 +6257,10 @@ impl std::fmt::Debug for CapacityForecast {
         formatter.finish()
     }
 }
-/// See [`CapacityForecast`](crate::model::CapacityForecast)
+/// See [`CapacityForecast`](crate::model::CapacityForecast).
 pub mod capacity_forecast {
 
-    /// A builder for [`CapacityForecast`](crate::model::CapacityForecast)
-    #[non_exhaustive]
+    /// A builder for [`CapacityForecast`](crate::model::CapacityForecast).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timestamps: std::option::Option<std::vec::Vec<aws_smithy_types::DateTime>>,
@@ -6188,7 +6302,7 @@ pub mod capacity_forecast {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`CapacityForecast`](crate::model::CapacityForecast)
+        /// Consumes the builder and constructs a [`CapacityForecast`](crate::model::CapacityForecast).
         pub fn build(self) -> crate::model::CapacityForecast {
             crate::model::CapacityForecast {
                 timestamps: self.timestamps,
@@ -6198,7 +6312,7 @@ pub mod capacity_forecast {
     }
 }
 impl CapacityForecast {
-    /// Creates a new builder-style object to manufacture [`CapacityForecast`](crate::model::CapacityForecast)
+    /// Creates a new builder-style object to manufacture [`CapacityForecast`](crate::model::CapacityForecast).
     pub fn builder() -> crate::model::capacity_forecast::Builder {
         crate::model::capacity_forecast::Builder::default()
     }
@@ -6209,10 +6323,13 @@ impl CapacityForecast {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoadForecast {
     /// <p>The timestamps for the data points, in UTC format.</p>
+    #[doc(hidden)]
     pub timestamps: std::option::Option<std::vec::Vec<aws_smithy_types::DateTime>>,
     /// <p>The values of the data points.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<f64>>,
     /// <p>The metric specification for the load forecast.</p>
+    #[doc(hidden)]
     pub metric_specification:
         std::option::Option<crate::model::PredictiveScalingMetricSpecification>,
 }
@@ -6241,11 +6358,10 @@ impl std::fmt::Debug for LoadForecast {
         formatter.finish()
     }
 }
-/// See [`LoadForecast`](crate::model::LoadForecast)
+/// See [`LoadForecast`](crate::model::LoadForecast).
 pub mod load_forecast {
 
-    /// A builder for [`LoadForecast`](crate::model::LoadForecast)
-    #[non_exhaustive]
+    /// A builder for [`LoadForecast`](crate::model::LoadForecast).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timestamps: std::option::Option<std::vec::Vec<aws_smithy_types::DateTime>>,
@@ -6305,7 +6421,7 @@ pub mod load_forecast {
             self.metric_specification = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadForecast`](crate::model::LoadForecast)
+        /// Consumes the builder and constructs a [`LoadForecast`](crate::model::LoadForecast).
         pub fn build(self) -> crate::model::LoadForecast {
             crate::model::LoadForecast {
                 timestamps: self.timestamps,
@@ -6316,7 +6432,7 @@ pub mod load_forecast {
     }
 }
 impl LoadForecast {
-    /// Creates a new builder-style object to manufacture [`LoadForecast`](crate::model::LoadForecast)
+    /// Creates a new builder-style object to manufacture [`LoadForecast`](crate::model::LoadForecast).
     pub fn builder() -> crate::model::load_forecast::Builder {
         crate::model::load_forecast::Builder::default()
     }
@@ -6327,23 +6443,32 @@ impl LoadForecast {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Instance {
     /// <p>The ID of the instance.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p>The instance type of the EC2 instance.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The Availability Zone in which the instance is running.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>A description of the current lifecycle state. The <code>Quarantined</code> state is not used. For information about lifecycle states, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. </p>
+    #[doc(hidden)]
     pub lifecycle_state: std::option::Option<crate::model::LifecycleState>,
     /// <p>The last reported health status of the instance. "Healthy" means that the instance is healthy and should remain in service. "Unhealthy" means that the instance is unhealthy and that Amazon EC2 Auto Scaling should terminate and replace it.</p>
+    #[doc(hidden)]
     pub health_status: std::option::Option<std::string::String>,
     /// <p>The launch configuration associated with the instance.</p>
+    #[doc(hidden)]
     pub launch_configuration_name: std::option::Option<std::string::String>,
     /// <p>The launch template for the instance.</p>
+    #[doc(hidden)]
     pub launch_template: std::option::Option<crate::model::LaunchTemplateSpecification>,
     /// <p>Indicates whether the instance is protected from termination by Amazon EC2 Auto Scaling when scaling in.</p>
+    #[doc(hidden)]
     pub protected_from_scale_in: std::option::Option<bool>,
     /// <p>The number of capacity units contributed by the instance based on its instance type.</p>
     /// <p>Valid Range: Minimum value of 1. Maximum value of 999.</p>
+    #[doc(hidden)]
     pub weighted_capacity: std::option::Option<std::string::String>,
 }
 impl Instance {
@@ -6402,11 +6527,10 @@ impl std::fmt::Debug for Instance {
         formatter.finish()
     }
 }
-/// See [`Instance`](crate::model::Instance)
+/// See [`Instance`](crate::model::Instance).
 pub mod instance {
 
-    /// A builder for [`Instance`](crate::model::Instance)
-    #[non_exhaustive]
+    /// A builder for [`Instance`](crate::model::Instance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_id: std::option::Option<std::string::String>,
@@ -6533,7 +6657,7 @@ pub mod instance {
             self.weighted_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance)
+        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance).
         pub fn build(self) -> crate::model::Instance {
             crate::model::Instance {
                 instance_id: self.instance_id,
@@ -6550,7 +6674,7 @@ pub mod instance {
     }
 }
 impl Instance {
-    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance)
+    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance).
     pub fn builder() -> crate::model::instance::Builder {
         crate::model::instance::Builder::default()
     }
@@ -6724,14 +6848,19 @@ impl AsRef<str> for LifecycleState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WarmPoolConfiguration {
     /// <p>The maximum number of instances that are allowed to be in the warm pool or in any state except <code>Terminated</code> for the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub max_group_prepared_capacity: std::option::Option<i32>,
     /// <p>The minimum number of instances to maintain in the warm pool.</p>
+    #[doc(hidden)]
     pub min_size: std::option::Option<i32>,
     /// <p>The instance state to transition to after the lifecycle actions are complete.</p>
+    #[doc(hidden)]
     pub pool_state: std::option::Option<crate::model::WarmPoolState>,
     /// <p>The status of a warm pool that is marked for deletion.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::WarmPoolStatus>,
     /// <p>The instance reuse policy.</p>
+    #[doc(hidden)]
     pub instance_reuse_policy: std::option::Option<crate::model::InstanceReusePolicy>,
 }
 impl WarmPoolConfiguration {
@@ -6770,11 +6899,10 @@ impl std::fmt::Debug for WarmPoolConfiguration {
         formatter.finish()
     }
 }
-/// See [`WarmPoolConfiguration`](crate::model::WarmPoolConfiguration)
+/// See [`WarmPoolConfiguration`](crate::model::WarmPoolConfiguration).
 pub mod warm_pool_configuration {
 
-    /// A builder for [`WarmPoolConfiguration`](crate::model::WarmPoolConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`WarmPoolConfiguration`](crate::model::WarmPoolConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_group_prepared_capacity: std::option::Option<i32>,
@@ -6843,7 +6971,7 @@ pub mod warm_pool_configuration {
             self.instance_reuse_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`WarmPoolConfiguration`](crate::model::WarmPoolConfiguration)
+        /// Consumes the builder and constructs a [`WarmPoolConfiguration`](crate::model::WarmPoolConfiguration).
         pub fn build(self) -> crate::model::WarmPoolConfiguration {
             crate::model::WarmPoolConfiguration {
                 max_group_prepared_capacity: self.max_group_prepared_capacity,
@@ -6856,7 +6984,7 @@ pub mod warm_pool_configuration {
     }
 }
 impl WarmPoolConfiguration {
-    /// Creates a new builder-style object to manufacture [`WarmPoolConfiguration`](crate::model::WarmPoolConfiguration)
+    /// Creates a new builder-style object to manufacture [`WarmPoolConfiguration`](crate::model::WarmPoolConfiguration).
     pub fn builder() -> crate::model::warm_pool_configuration::Builder {
         crate::model::warm_pool_configuration::Builder::default()
     }
@@ -6918,14 +7046,19 @@ impl AsRef<str> for WarmPoolStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TagDescription {
     /// <p>The name of the group.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The type of resource. The only supported value is <code>auto-scaling-group</code>.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The tag key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The tag value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>Determines whether the tag is added to new instances as they are launched in the group.</p>
+    #[doc(hidden)]
     pub propagate_at_launch: std::option::Option<bool>,
 }
 impl TagDescription {
@@ -6961,11 +7094,10 @@ impl std::fmt::Debug for TagDescription {
         formatter.finish()
     }
 }
-/// See [`TagDescription`](crate::model::TagDescription)
+/// See [`TagDescription`](crate::model::TagDescription).
 pub mod tag_description {
 
-    /// A builder for [`TagDescription`](crate::model::TagDescription)
-    #[non_exhaustive]
+    /// A builder for [`TagDescription`](crate::model::TagDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_id: std::option::Option<std::string::String>,
@@ -7028,7 +7160,7 @@ pub mod tag_description {
             self.propagate_at_launch = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagDescription`](crate::model::TagDescription)
+        /// Consumes the builder and constructs a [`TagDescription`](crate::model::TagDescription).
         pub fn build(self) -> crate::model::TagDescription {
             crate::model::TagDescription {
                 resource_id: self.resource_id,
@@ -7041,7 +7173,7 @@ pub mod tag_description {
     }
 }
 impl TagDescription {
-    /// Creates a new builder-style object to manufacture [`TagDescription`](crate::model::TagDescription)
+    /// Creates a new builder-style object to manufacture [`TagDescription`](crate::model::TagDescription).
     pub fn builder() -> crate::model::tag_description::Builder {
         crate::model::tag_description::Builder::default()
     }
@@ -7049,7 +7181,7 @@ impl TagDescription {
 
 /// <p>Describes a filter that is used to return a more specific list of results from a describe operation.</p>
 /// <p>If you specify multiple filters, the filters are automatically logically joined with an <code>AND</code>, and the request returns only the results that match all of the specified filters. </p>
-/// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html">Tagging Auto Scaling groups and instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+/// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-tagging.html">Tag Auto Scaling groups and instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
@@ -7071,9 +7203,11 @@ pub struct Filter {
     /// <li> <p> <code>value</code> - Accepts tag values. The results only include information about the tags associated with these tag values. </p> </li>
     /// <li> <p> <code>propagate-at-launch</code> - Accepts a Boolean value, which specifies whether tags propagate to instances at launch. The results only include information about the tags associated with the specified Boolean value. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>One or more filter values. Filter values are case-sensitive. </p>
     /// <p>If you specify multiple values for a filter, the values are automatically logically joined with an <code>OR</code>, and the request returns all results that match any of the specified values. For example, specify "tag:environment" for the filter name and "production,development" for the filter values to find Auto Scaling groups with the tag "environment=production" or "environment=development".</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Filter {
@@ -7112,11 +7246,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -7188,7 +7321,7 @@ pub mod filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 name: self.name,
@@ -7198,7 +7331,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -7209,27 +7342,38 @@ impl Filter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduledUpdateGroupAction {
     /// <p>The name of the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub auto_scaling_group_name: std::option::Option<std::string::String>,
     /// <p>The name of the scheduled action.</p>
+    #[doc(hidden)]
     pub scheduled_action_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the scheduled action.</p>
+    #[doc(hidden)]
     pub scheduled_action_arn: std::option::Option<std::string::String>,
-    /// <p>This parameter is no longer used.</p>
+    /// <p>This property is no longer used.</p>
+    #[doc(hidden)]
     pub time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time in UTC for this action to start. For example, <code>"2019-06-01T00:00:00Z"</code>. </p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time in UTC for the recurring schedule to end. For example, <code>"2019-06-01T00:00:00Z"</code>. </p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The recurring schedule for the action, in Unix cron syntax format.</p>
     /// <p>When <code>StartTime</code> and <code>EndTime</code> are specified with <code>Recurrence</code>, they form the boundaries of when the recurring action starts and stops.</p>
+    #[doc(hidden)]
     pub recurrence: std::option::Option<std::string::String>,
     /// <p>The minimum size of the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub min_size: std::option::Option<i32>,
     /// <p>The maximum size of the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub max_size: std::option::Option<i32>,
     /// <p>The desired capacity is the initial capacity of the Auto Scaling group after the scheduled action runs and the capacity it attempts to maintain.</p>
+    #[doc(hidden)]
     pub desired_capacity: std::option::Option<i32>,
     /// <p>The time zone for the cron expression.</p>
+    #[doc(hidden)]
     pub time_zone: std::option::Option<std::string::String>,
 }
 impl ScheduledUpdateGroupAction {
@@ -7245,7 +7389,7 @@ impl ScheduledUpdateGroupAction {
     pub fn scheduled_action_arn(&self) -> std::option::Option<&str> {
         self.scheduled_action_arn.as_deref()
     }
-    /// <p>This parameter is no longer used.</p>
+    /// <p>This property is no longer used.</p>
     pub fn time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.time.as_ref()
     }
@@ -7296,11 +7440,10 @@ impl std::fmt::Debug for ScheduledUpdateGroupAction {
         formatter.finish()
     }
 }
-/// See [`ScheduledUpdateGroupAction`](crate::model::ScheduledUpdateGroupAction)
+/// See [`ScheduledUpdateGroupAction`](crate::model::ScheduledUpdateGroupAction).
 pub mod scheduled_update_group_action {
 
-    /// A builder for [`ScheduledUpdateGroupAction`](crate::model::ScheduledUpdateGroupAction)
-    #[non_exhaustive]
+    /// A builder for [`ScheduledUpdateGroupAction`](crate::model::ScheduledUpdateGroupAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_scaling_group_name: std::option::Option<std::string::String>,
@@ -7355,12 +7498,12 @@ pub mod scheduled_update_group_action {
             self.scheduled_action_arn = input;
             self
         }
-        /// <p>This parameter is no longer used.</p>
+        /// <p>This property is no longer used.</p>
         pub fn time(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.time = Some(input);
             self
         }
-        /// <p>This parameter is no longer used.</p>
+        /// <p>This property is no longer used.</p>
         pub fn set_time(mut self, input: std::option::Option<aws_smithy_types::DateTime>) -> Self {
             self.time = input;
             self
@@ -7443,7 +7586,7 @@ pub mod scheduled_update_group_action {
             self.time_zone = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduledUpdateGroupAction`](crate::model::ScheduledUpdateGroupAction)
+        /// Consumes the builder and constructs a [`ScheduledUpdateGroupAction`](crate::model::ScheduledUpdateGroupAction).
         pub fn build(self) -> crate::model::ScheduledUpdateGroupAction {
             crate::model::ScheduledUpdateGroupAction {
                 auto_scaling_group_name: self.auto_scaling_group_name,
@@ -7462,7 +7605,7 @@ pub mod scheduled_update_group_action {
     }
 }
 impl ScheduledUpdateGroupAction {
-    /// Creates a new builder-style object to manufacture [`ScheduledUpdateGroupAction`](crate::model::ScheduledUpdateGroupAction)
+    /// Creates a new builder-style object to manufacture [`ScheduledUpdateGroupAction`](crate::model::ScheduledUpdateGroupAction).
     pub fn builder() -> crate::model::scheduled_update_group_action::Builder {
         crate::model::scheduled_update_group_action::Builder::default()
     }
@@ -7485,6 +7628,7 @@ pub struct ProcessType {
     /// <li> <p> <code>ReplaceUnhealthy</code> </p> </li>
     /// <li> <p> <code>ScheduledActions</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub process_name: std::option::Option<std::string::String>,
 }
 impl ProcessType {
@@ -7511,11 +7655,10 @@ impl std::fmt::Debug for ProcessType {
         formatter.finish()
     }
 }
-/// See [`ProcessType`](crate::model::ProcessType)
+/// See [`ProcessType`](crate::model::ProcessType).
 pub mod process_type {
 
-    /// A builder for [`ProcessType`](crate::model::ProcessType)
-    #[non_exhaustive]
+    /// A builder for [`ProcessType`](crate::model::ProcessType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) process_name: std::option::Option<std::string::String>,
@@ -7553,7 +7696,7 @@ pub mod process_type {
             self.process_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProcessType`](crate::model::ProcessType)
+        /// Consumes the builder and constructs a [`ProcessType`](crate::model::ProcessType).
         pub fn build(self) -> crate::model::ProcessType {
             crate::model::ProcessType {
                 process_name: self.process_name,
@@ -7562,7 +7705,7 @@ pub mod process_type {
     }
 }
 impl ProcessType {
-    /// Creates a new builder-style object to manufacture [`ProcessType`](crate::model::ProcessType)
+    /// Creates a new builder-style object to manufacture [`ProcessType`](crate::model::ProcessType).
     pub fn builder() -> crate::model::process_type::Builder {
         crate::model::process_type::Builder::default()
     }
@@ -7573,10 +7716,13 @@ impl ProcessType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScalingPolicy {
     /// <p>The name of the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub auto_scaling_group_name: std::option::Option<std::string::String>,
     /// <p>The name of the scaling policy.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the policy.</p>
+    #[doc(hidden)]
     pub policy_arn: std::option::Option<std::string::String>,
     /// <p>One of the following policy types: </p>
     /// <ul>
@@ -7586,31 +7732,44 @@ pub struct ScalingPolicy {
     /// <li> <p> <code>PredictiveScaling</code> </p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html">Target tracking scaling policies</a> and <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html">Step and simple scaling policies</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    #[doc(hidden)]
     pub policy_type: std::option::Option<std::string::String>,
     /// <p>Specifies how the scaling adjustment is interpreted (for example, an absolute number or a percentage). The valid values are <code>ChangeInCapacity</code>, <code>ExactCapacity</code>, and <code>PercentChangeInCapacity</code>.</p>
+    #[doc(hidden)]
     pub adjustment_type: std::option::Option<std::string::String>,
     /// <p>Available for backward compatibility. Use <code>MinAdjustmentMagnitude</code> instead.</p>
+    #[doc(hidden)]
     pub min_adjustment_step: std::option::Option<i32>,
     /// <p>The minimum value to scale by when the adjustment type is <code>PercentChangeInCapacity</code>. </p>
+    #[doc(hidden)]
     pub min_adjustment_magnitude: std::option::Option<i32>,
     /// <p>The amount by which to scale, based on the specified adjustment type. A positive value adds to the current capacity while a negative number removes from the current capacity.</p>
+    #[doc(hidden)]
     pub scaling_adjustment: std::option::Option<i32>,
     /// <p>The duration of the policy's cooldown period, in seconds.</p>
+    #[doc(hidden)]
     pub cooldown: std::option::Option<i32>,
     /// <p>A set of adjustments that enable you to scale based on the size of the alarm breach.</p>
+    #[doc(hidden)]
     pub step_adjustments: std::option::Option<std::vec::Vec<crate::model::StepAdjustment>>,
     /// <p>The aggregation type for the CloudWatch metrics. The valid values are <code>Minimum</code>, <code>Maximum</code>, and <code>Average</code>.</p>
+    #[doc(hidden)]
     pub metric_aggregation_type: std::option::Option<std::string::String>,
     /// <p>The estimated time, in seconds, until a newly launched instance can contribute to the CloudWatch metrics.</p>
+    #[doc(hidden)]
     pub estimated_instance_warmup: std::option::Option<i32>,
     /// <p>The CloudWatch alarms related to the policy.</p>
+    #[doc(hidden)]
     pub alarms: std::option::Option<std::vec::Vec<crate::model::Alarm>>,
     /// <p>A target tracking scaling policy.</p>
+    #[doc(hidden)]
     pub target_tracking_configuration:
         std::option::Option<crate::model::TargetTrackingConfiguration>,
     /// <p>Indicates whether the policy is enabled (<code>true</code>) or disabled (<code>false</code>).</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>A predictive scaling policy.</p>
+    #[doc(hidden)]
     pub predictive_scaling_configuration:
         std::option::Option<crate::model::PredictiveScalingConfiguration>,
 }
@@ -7719,11 +7878,10 @@ impl std::fmt::Debug for ScalingPolicy {
         formatter.finish()
     }
 }
-/// See [`ScalingPolicy`](crate::model::ScalingPolicy)
+/// See [`ScalingPolicy`](crate::model::ScalingPolicy).
 pub mod scaling_policy {
 
-    /// A builder for [`ScalingPolicy`](crate::model::ScalingPolicy)
-    #[non_exhaustive]
+    /// A builder for [`ScalingPolicy`](crate::model::ScalingPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_scaling_group_name: std::option::Option<std::string::String>,
@@ -7960,7 +8118,7 @@ pub mod scaling_policy {
             self.predictive_scaling_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalingPolicy`](crate::model::ScalingPolicy)
+        /// Consumes the builder and constructs a [`ScalingPolicy`](crate::model::ScalingPolicy).
         pub fn build(self) -> crate::model::ScalingPolicy {
             crate::model::ScalingPolicy {
                 auto_scaling_group_name: self.auto_scaling_group_name,
@@ -7984,7 +8142,7 @@ pub mod scaling_policy {
     }
 }
 impl ScalingPolicy {
-    /// Creates a new builder-style object to manufacture [`ScalingPolicy`](crate::model::ScalingPolicy)
+    /// Creates a new builder-style object to manufacture [`ScalingPolicy`](crate::model::ScalingPolicy).
     pub fn builder() -> crate::model::scaling_policy::Builder {
         crate::model::scaling_policy::Builder::default()
     }
@@ -7995,8 +8153,10 @@ impl ScalingPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotificationConfiguration {
     /// <p>The name of the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub auto_scaling_group_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon SNS topic.</p>
+    #[doc(hidden)]
     pub topic_arn: std::option::Option<std::string::String>,
     /// <p>One of the following event notification types:</p>
     /// <ul>
@@ -8006,6 +8166,7 @@ pub struct NotificationConfiguration {
     /// <li> <p> <code>autoscaling:EC2_INSTANCE_TERMINATE_ERROR</code> </p> </li>
     /// <li> <p> <code>autoscaling:TEST_NOTIFICATION</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub notification_type: std::option::Option<std::string::String>,
 }
 impl NotificationConfiguration {
@@ -8038,11 +8199,10 @@ impl std::fmt::Debug for NotificationConfiguration {
         formatter.finish()
     }
 }
-/// See [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+/// See [`NotificationConfiguration`](crate::model::NotificationConfiguration).
 pub mod notification_configuration {
 
-    /// A builder for [`NotificationConfiguration`](crate::model::NotificationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NotificationConfiguration`](crate::model::NotificationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_scaling_group_name: std::option::Option<std::string::String>,
@@ -8100,7 +8260,7 @@ pub mod notification_configuration {
             self.notification_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+        /// Consumes the builder and constructs a [`NotificationConfiguration`](crate::model::NotificationConfiguration).
         pub fn build(self) -> crate::model::NotificationConfiguration {
             crate::model::NotificationConfiguration {
                 auto_scaling_group_name: self.auto_scaling_group_name,
@@ -8111,7 +8271,7 @@ pub mod notification_configuration {
     }
 }
 impl NotificationConfiguration {
-    /// Creates a new builder-style object to manufacture [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+    /// Creates a new builder-style object to manufacture [`NotificationConfiguration`](crate::model::NotificationConfiguration).
     pub fn builder() -> crate::model::notification_configuration::Builder {
         crate::model::notification_configuration::Builder::default()
     }
@@ -8122,6 +8282,7 @@ impl NotificationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricGranularityType {
     /// <p>The granularity. The only valid value is <code>1Minute</code>.</p>
+    #[doc(hidden)]
     pub granularity: std::option::Option<std::string::String>,
 }
 impl MetricGranularityType {
@@ -8137,11 +8298,10 @@ impl std::fmt::Debug for MetricGranularityType {
         formatter.finish()
     }
 }
-/// See [`MetricGranularityType`](crate::model::MetricGranularityType)
+/// See [`MetricGranularityType`](crate::model::MetricGranularityType).
 pub mod metric_granularity_type {
 
-    /// A builder for [`MetricGranularityType`](crate::model::MetricGranularityType)
-    #[non_exhaustive]
+    /// A builder for [`MetricGranularityType`](crate::model::MetricGranularityType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) granularity: std::option::Option<std::string::String>,
@@ -8157,7 +8317,7 @@ pub mod metric_granularity_type {
             self.granularity = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricGranularityType`](crate::model::MetricGranularityType)
+        /// Consumes the builder and constructs a [`MetricGranularityType`](crate::model::MetricGranularityType).
         pub fn build(self) -> crate::model::MetricGranularityType {
             crate::model::MetricGranularityType {
                 granularity: self.granularity,
@@ -8166,7 +8326,7 @@ pub mod metric_granularity_type {
     }
 }
 impl MetricGranularityType {
-    /// Creates a new builder-style object to manufacture [`MetricGranularityType`](crate::model::MetricGranularityType)
+    /// Creates a new builder-style object to manufacture [`MetricGranularityType`](crate::model::MetricGranularityType).
     pub fn builder() -> crate::model::metric_granularity_type::Builder {
         crate::model::metric_granularity_type::Builder::default()
     }
@@ -8199,6 +8359,7 @@ pub struct MetricCollectionType {
     /// <li> <p> <code>GroupAndWarmPoolDesiredCapacity</code> </p> </li>
     /// <li> <p> <code>GroupAndWarmPoolTotalCapacity</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub metric: std::option::Option<std::string::String>,
 }
 impl MetricCollectionType {
@@ -8236,11 +8397,10 @@ impl std::fmt::Debug for MetricCollectionType {
         formatter.finish()
     }
 }
-/// See [`MetricCollectionType`](crate::model::MetricCollectionType)
+/// See [`MetricCollectionType`](crate::model::MetricCollectionType).
 pub mod metric_collection_type {
 
-    /// A builder for [`MetricCollectionType`](crate::model::MetricCollectionType)
-    #[non_exhaustive]
+    /// A builder for [`MetricCollectionType`](crate::model::MetricCollectionType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric: std::option::Option<std::string::String>,
@@ -8300,7 +8460,7 @@ pub mod metric_collection_type {
             self.metric = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricCollectionType`](crate::model::MetricCollectionType)
+        /// Consumes the builder and constructs a [`MetricCollectionType`](crate::model::MetricCollectionType).
         pub fn build(self) -> crate::model::MetricCollectionType {
             crate::model::MetricCollectionType {
                 metric: self.metric,
@@ -8309,7 +8469,7 @@ pub mod metric_collection_type {
     }
 }
 impl MetricCollectionType {
-    /// Creates a new builder-style object to manufacture [`MetricCollectionType`](crate::model::MetricCollectionType)
+    /// Creates a new builder-style object to manufacture [`MetricCollectionType`](crate::model::MetricCollectionType).
     pub fn builder() -> crate::model::metric_collection_type::Builder {
         crate::model::metric_collection_type::Builder::default()
     }
@@ -8320,6 +8480,7 @@ impl MetricCollectionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoadBalancerTargetGroupState {
     /// <p>The Amazon Resource Name (ARN) of the target group.</p>
+    #[doc(hidden)]
     pub load_balancer_target_group_arn: std::option::Option<std::string::String>,
     /// <p>The state of the target group.</p>
     /// <ul>
@@ -8329,6 +8490,7 @@ pub struct LoadBalancerTargetGroupState {
     /// <li> <p> <code>Removing</code> - The Auto Scaling instances are being deregistered from the target group. If connection draining is enabled, Elastic Load Balancing waits for in-flight requests to complete before deregistering the instances.</p> </li>
     /// <li> <p> <code>Removed</code> - All Auto Scaling instances are deregistered from the target group.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
 }
 impl LoadBalancerTargetGroupState {
@@ -8359,11 +8521,10 @@ impl std::fmt::Debug for LoadBalancerTargetGroupState {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerTargetGroupState`](crate::model::LoadBalancerTargetGroupState)
+/// See [`LoadBalancerTargetGroupState`](crate::model::LoadBalancerTargetGroupState).
 pub mod load_balancer_target_group_state {
 
-    /// A builder for [`LoadBalancerTargetGroupState`](crate::model::LoadBalancerTargetGroupState)
-    #[non_exhaustive]
+    /// A builder for [`LoadBalancerTargetGroupState`](crate::model::LoadBalancerTargetGroupState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) load_balancer_target_group_arn: std::option::Option<std::string::String>,
@@ -8410,7 +8571,7 @@ pub mod load_balancer_target_group_state {
             self.state = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerTargetGroupState`](crate::model::LoadBalancerTargetGroupState)
+        /// Consumes the builder and constructs a [`LoadBalancerTargetGroupState`](crate::model::LoadBalancerTargetGroupState).
         pub fn build(self) -> crate::model::LoadBalancerTargetGroupState {
             crate::model::LoadBalancerTargetGroupState {
                 load_balancer_target_group_arn: self.load_balancer_target_group_arn,
@@ -8420,7 +8581,7 @@ pub mod load_balancer_target_group_state {
     }
 }
 impl LoadBalancerTargetGroupState {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerTargetGroupState`](crate::model::LoadBalancerTargetGroupState)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerTargetGroupState`](crate::model::LoadBalancerTargetGroupState).
     pub fn builder() -> crate::model::load_balancer_target_group_state::Builder {
         crate::model::load_balancer_target_group_state::Builder::default()
     }
@@ -8431,6 +8592,7 @@ impl LoadBalancerTargetGroupState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoadBalancerState {
     /// <p>The name of the load balancer.</p>
+    #[doc(hidden)]
     pub load_balancer_name: std::option::Option<std::string::String>,
     /// <p>One of the following load balancer states:</p>
     /// <ul>
@@ -8440,6 +8602,7 @@ pub struct LoadBalancerState {
     /// <li> <p> <code>Removing</code> - The Auto Scaling instances are being deregistered from the load balancer. If connection draining is enabled, Elastic Load Balancing waits for in-flight requests to complete before deregistering the instances.</p> </li>
     /// <li> <p> <code>Removed</code> - All Auto Scaling instances are deregistered from the load balancer.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<std::string::String>,
 }
 impl LoadBalancerState {
@@ -8467,11 +8630,10 @@ impl std::fmt::Debug for LoadBalancerState {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerState`](crate::model::LoadBalancerState)
+/// See [`LoadBalancerState`](crate::model::LoadBalancerState).
 pub mod load_balancer_state {
 
-    /// A builder for [`LoadBalancerState`](crate::model::LoadBalancerState)
-    #[non_exhaustive]
+    /// A builder for [`LoadBalancerState`](crate::model::LoadBalancerState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) load_balancer_name: std::option::Option<std::string::String>,
@@ -8515,7 +8677,7 @@ pub mod load_balancer_state {
             self.state = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerState`](crate::model::LoadBalancerState)
+        /// Consumes the builder and constructs a [`LoadBalancerState`](crate::model::LoadBalancerState).
         pub fn build(self) -> crate::model::LoadBalancerState {
             crate::model::LoadBalancerState {
                 load_balancer_name: self.load_balancer_name,
@@ -8525,7 +8687,7 @@ pub mod load_balancer_state {
     }
 }
 impl LoadBalancerState {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerState`](crate::model::LoadBalancerState)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerState`](crate::model::LoadBalancerState).
     pub fn builder() -> crate::model::load_balancer_state::Builder {
         crate::model::load_balancer_state::Builder::default()
     }
@@ -8536,26 +8698,33 @@ impl LoadBalancerState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecycleHook {
     /// <p>The name of the lifecycle hook.</p>
+    #[doc(hidden)]
     pub lifecycle_hook_name: std::option::Option<std::string::String>,
     /// <p>The name of the Auto Scaling group for the lifecycle hook.</p>
+    #[doc(hidden)]
     pub auto_scaling_group_name: std::option::Option<std::string::String>,
-    /// <p>The state of the EC2 instance to which to attach the lifecycle hook. The following are possible values:</p>
-    /// <ul>
-    /// <li> <p>autoscaling:EC2_INSTANCE_LAUNCHING</p> </li>
-    /// <li> <p>autoscaling:EC2_INSTANCE_TERMINATING</p> </li>
-    /// </ul>
+    /// <p>The lifecycle transition.</p>
+    /// <p>Valid values: <code>autoscaling:EC2_INSTANCE_LAUNCHING</code> | <code>autoscaling:EC2_INSTANCE_TERMINATING</code> </p>
+    #[doc(hidden)]
     pub lifecycle_transition: std::option::Option<std::string::String>,
-    /// <p>The ARN of the target that Amazon EC2 Auto Scaling sends notifications to when an instance is in the transition state for the lifecycle hook. The notification target can be either an SQS queue or an SNS topic.</p>
+    /// <p>The ARN of the target that Amazon EC2 Auto Scaling sends notifications to when an instance is in a wait state for the lifecycle hook.</p>
+    #[doc(hidden)]
     pub notification_target_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target (an Amazon SNS topic or an Amazon SQS queue).</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>Additional information that is included any time Amazon EC2 Auto Scaling sends a message to the notification target.</p>
+    #[doc(hidden)]
     pub notification_metadata: std::option::Option<std::string::String>,
-    /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out. If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the <code>DefaultResult</code> parameter.</p>
+    /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out. If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the <code>DefaultResult</code> property.</p>
+    #[doc(hidden)]
     pub heartbeat_timeout: std::option::Option<i32>,
     /// <p>The maximum time, in seconds, that an instance can remain in a wait state. The maximum is 172800 seconds (48 hours) or 100 times <code>HeartbeatTimeout</code>, whichever is smaller.</p>
+    #[doc(hidden)]
     pub global_timeout: std::option::Option<i32>,
-    /// <p>Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The possible values are <code>CONTINUE</code> and <code>ABANDON</code>.</p>
+    /// <p>The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs.</p>
+    /// <p>Valid values: <code>CONTINUE</code> | <code>ABANDON</code> </p>
+    #[doc(hidden)]
     pub default_result: std::option::Option<std::string::String>,
 }
 impl LifecycleHook {
@@ -8567,15 +8736,12 @@ impl LifecycleHook {
     pub fn auto_scaling_group_name(&self) -> std::option::Option<&str> {
         self.auto_scaling_group_name.as_deref()
     }
-    /// <p>The state of the EC2 instance to which to attach the lifecycle hook. The following are possible values:</p>
-    /// <ul>
-    /// <li> <p>autoscaling:EC2_INSTANCE_LAUNCHING</p> </li>
-    /// <li> <p>autoscaling:EC2_INSTANCE_TERMINATING</p> </li>
-    /// </ul>
+    /// <p>The lifecycle transition.</p>
+    /// <p>Valid values: <code>autoscaling:EC2_INSTANCE_LAUNCHING</code> | <code>autoscaling:EC2_INSTANCE_TERMINATING</code> </p>
     pub fn lifecycle_transition(&self) -> std::option::Option<&str> {
         self.lifecycle_transition.as_deref()
     }
-    /// <p>The ARN of the target that Amazon EC2 Auto Scaling sends notifications to when an instance is in the transition state for the lifecycle hook. The notification target can be either an SQS queue or an SNS topic.</p>
+    /// <p>The ARN of the target that Amazon EC2 Auto Scaling sends notifications to when an instance is in a wait state for the lifecycle hook.</p>
     pub fn notification_target_arn(&self) -> std::option::Option<&str> {
         self.notification_target_arn.as_deref()
     }
@@ -8587,7 +8753,7 @@ impl LifecycleHook {
     pub fn notification_metadata(&self) -> std::option::Option<&str> {
         self.notification_metadata.as_deref()
     }
-    /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out. If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the <code>DefaultResult</code> parameter.</p>
+    /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out. If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the <code>DefaultResult</code> property.</p>
     pub fn heartbeat_timeout(&self) -> std::option::Option<i32> {
         self.heartbeat_timeout
     }
@@ -8595,7 +8761,8 @@ impl LifecycleHook {
     pub fn global_timeout(&self) -> std::option::Option<i32> {
         self.global_timeout
     }
-    /// <p>Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The possible values are <code>CONTINUE</code> and <code>ABANDON</code>.</p>
+    /// <p>The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs.</p>
+    /// <p>Valid values: <code>CONTINUE</code> | <code>ABANDON</code> </p>
     pub fn default_result(&self) -> std::option::Option<&str> {
         self.default_result.as_deref()
     }
@@ -8615,11 +8782,10 @@ impl std::fmt::Debug for LifecycleHook {
         formatter.finish()
     }
 }
-/// See [`LifecycleHook`](crate::model::LifecycleHook)
+/// See [`LifecycleHook`](crate::model::LifecycleHook).
 pub mod lifecycle_hook {
 
-    /// A builder for [`LifecycleHook`](crate::model::LifecycleHook)
-    #[non_exhaustive]
+    /// A builder for [`LifecycleHook`](crate::model::LifecycleHook).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lifecycle_hook_name: std::option::Option<std::string::String>,
@@ -8659,20 +8825,14 @@ pub mod lifecycle_hook {
             self.auto_scaling_group_name = input;
             self
         }
-        /// <p>The state of the EC2 instance to which to attach the lifecycle hook. The following are possible values:</p>
-        /// <ul>
-        /// <li> <p>autoscaling:EC2_INSTANCE_LAUNCHING</p> </li>
-        /// <li> <p>autoscaling:EC2_INSTANCE_TERMINATING</p> </li>
-        /// </ul>
+        /// <p>The lifecycle transition.</p>
+        /// <p>Valid values: <code>autoscaling:EC2_INSTANCE_LAUNCHING</code> | <code>autoscaling:EC2_INSTANCE_TERMINATING</code> </p>
         pub fn lifecycle_transition(mut self, input: impl Into<std::string::String>) -> Self {
             self.lifecycle_transition = Some(input.into());
             self
         }
-        /// <p>The state of the EC2 instance to which to attach the lifecycle hook. The following are possible values:</p>
-        /// <ul>
-        /// <li> <p>autoscaling:EC2_INSTANCE_LAUNCHING</p> </li>
-        /// <li> <p>autoscaling:EC2_INSTANCE_TERMINATING</p> </li>
-        /// </ul>
+        /// <p>The lifecycle transition.</p>
+        /// <p>Valid values: <code>autoscaling:EC2_INSTANCE_LAUNCHING</code> | <code>autoscaling:EC2_INSTANCE_TERMINATING</code> </p>
         pub fn set_lifecycle_transition(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -8680,12 +8840,12 @@ pub mod lifecycle_hook {
             self.lifecycle_transition = input;
             self
         }
-        /// <p>The ARN of the target that Amazon EC2 Auto Scaling sends notifications to when an instance is in the transition state for the lifecycle hook. The notification target can be either an SQS queue or an SNS topic.</p>
+        /// <p>The ARN of the target that Amazon EC2 Auto Scaling sends notifications to when an instance is in a wait state for the lifecycle hook.</p>
         pub fn notification_target_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.notification_target_arn = Some(input.into());
             self
         }
-        /// <p>The ARN of the target that Amazon EC2 Auto Scaling sends notifications to when an instance is in the transition state for the lifecycle hook. The notification target can be either an SQS queue or an SNS topic.</p>
+        /// <p>The ARN of the target that Amazon EC2 Auto Scaling sends notifications to when an instance is in a wait state for the lifecycle hook.</p>
         pub fn set_notification_target_arn(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -8716,12 +8876,12 @@ pub mod lifecycle_hook {
             self.notification_metadata = input;
             self
         }
-        /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out. If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the <code>DefaultResult</code> parameter.</p>
+        /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out. If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the <code>DefaultResult</code> property.</p>
         pub fn heartbeat_timeout(mut self, input: i32) -> Self {
             self.heartbeat_timeout = Some(input);
             self
         }
-        /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out. If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the <code>DefaultResult</code> parameter.</p>
+        /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out. If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the <code>DefaultResult</code> property.</p>
         pub fn set_heartbeat_timeout(mut self, input: std::option::Option<i32>) -> Self {
             self.heartbeat_timeout = input;
             self
@@ -8736,12 +8896,14 @@ pub mod lifecycle_hook {
             self.global_timeout = input;
             self
         }
-        /// <p>Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The possible values are <code>CONTINUE</code> and <code>ABANDON</code>.</p>
+        /// <p>The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs.</p>
+        /// <p>Valid values: <code>CONTINUE</code> | <code>ABANDON</code> </p>
         pub fn default_result(mut self, input: impl Into<std::string::String>) -> Self {
             self.default_result = Some(input.into());
             self
         }
-        /// <p>Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The possible values are <code>CONTINUE</code> and <code>ABANDON</code>.</p>
+        /// <p>The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs.</p>
+        /// <p>Valid values: <code>CONTINUE</code> | <code>ABANDON</code> </p>
         pub fn set_default_result(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -8749,7 +8911,7 @@ pub mod lifecycle_hook {
             self.default_result = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecycleHook`](crate::model::LifecycleHook)
+        /// Consumes the builder and constructs a [`LifecycleHook`](crate::model::LifecycleHook).
         pub fn build(self) -> crate::model::LifecycleHook {
             crate::model::LifecycleHook {
                 lifecycle_hook_name: self.lifecycle_hook_name,
@@ -8766,7 +8928,7 @@ pub mod lifecycle_hook {
     }
 }
 impl LifecycleHook {
-    /// Creates a new builder-style object to manufacture [`LifecycleHook`](crate::model::LifecycleHook)
+    /// Creates a new builder-style object to manufacture [`LifecycleHook`](crate::model::LifecycleHook).
     pub fn builder() -> crate::model::lifecycle_hook::Builder {
         crate::model::lifecycle_hook::Builder::default()
     }
@@ -8777,50 +8939,69 @@ impl LifecycleHook {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchConfiguration {
     /// <p>The name of the launch configuration.</p>
+    #[doc(hidden)]
     pub launch_configuration_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the launch configuration.</p>
+    #[doc(hidden)]
     pub launch_configuration_arn: std::option::Option<std::string::String>,
-    /// <p>The ID of the Amazon Machine Image (AMI) to use to launch your EC2 instances. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html">Finding an AMI</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+    /// <p>The ID of the Amazon Machine Image (AMI) to use to launch your EC2 instances. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html">Find a Linux AMI</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+    #[doc(hidden)]
     pub image_id: std::option::Option<std::string::String>,
     /// <p>The name of the key pair.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2 Key Pairs</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+    #[doc(hidden)]
     pub key_name: std::option::Option<std::string::String>,
     /// <p>A list that contains the security groups to assign to the instances in the Auto Scaling group. For more information, see <a href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for Your VPC</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.</p>
+    #[doc(hidden)]
     pub security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
-    /// <p> <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+    /// <p> <i>EC2-Classic retires on August 15, 2022. This property is not supported after that date.</i> </p>
     /// <p>The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to.</p>
+    #[doc(hidden)]
     pub classic_link_vpc_id: std::option::Option<std::string::String>,
-    /// <p> <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+    /// <p> <i>EC2-Classic retires on August 15, 2022. This property is not supported after that date.</i> </p>
     /// <p>The IDs of one or more security groups for the VPC specified in <code>ClassicLinkVPCId</code>.</p>
+    #[doc(hidden)]
     pub classic_link_vpc_security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The user data to make available to the launched EC2 instances. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata and user data</a> (Linux) and <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html">Instance metadata and user data</a> (Windows). If you are using a command line tool, base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User data is limited to 16 KB.</p>
+    #[doc(hidden)]
     pub user_data: std::option::Option<std::string::String>,
-    /// <p>The instance type for the instances.</p>
-    /// <p>For information about available instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes">Available Instance Types</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+    /// <p>The instance type for the instances. For information about available instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes">Available instance types</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The ID of the kernel associated with the AMI.</p>
+    #[doc(hidden)]
     pub kernel_id: std::option::Option<std::string::String>,
     /// <p>The ID of the RAM disk associated with the AMI.</p>
+    #[doc(hidden)]
     pub ramdisk_id: std::option::Option<std::string::String>,
-    /// <p>A block device mapping, which specifies the block devices for the instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+    /// <p>The block device mapping entries that define the block devices to attach to the instances at launch. By default, the block devices specified in the block device mapping for the AMI are used. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+    #[doc(hidden)]
     pub block_device_mappings: std::option::Option<std::vec::Vec<crate::model::BlockDeviceMapping>>,
     /// <p>Controls whether instances in this group are launched with detailed (<code>true</code>) or basic (<code>false</code>) monitoring.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html">Configure Monitoring for Auto Scaling Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    #[doc(hidden)]
     pub instance_monitoring: std::option::Option<crate::model::InstanceMonitoring>,
     /// <p>The maximum hourly price to be paid for any Spot Instance launched to fulfill the request. Spot Instances are launched when the price you specify exceeds the current Spot price. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html">Requesting Spot Instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    #[doc(hidden)]
     pub spot_price: std::option::Option<std::string::String>,
     /// <p>The name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instance. The instance profile contains the IAM role. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/us-iam-role.html">IAM role for applications that run on Amazon EC2 instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    #[doc(hidden)]
     pub iam_instance_profile: std::option::Option<std::string::String>,
     /// <p>The creation date and time for the launch configuration.</p>
+    #[doc(hidden)]
     pub created_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies whether the launch configuration is optimized for EBS I/O (<code>true</code>) or not (<code>false</code>). For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">Amazon EBS-Optimized Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+    #[doc(hidden)]
     pub ebs_optimized: std::option::Option<bool>,
-    /// <p>For Auto Scaling groups that are running in a VPC, specifies whether to assign a public IP address to the group's instances. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto Scaling instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    /// <p>Specifies whether to assign a public IPv4 address to the group's instances. If the instance is launched into a default subnet, the default is to assign a public IPv4 address, unless you disabled the option to assign a public IPv4 address on the subnet. If the instance is launched into a nondefault subnet, the default is not to assign a public IPv4 address, unless you enabled the option to assign a public IPv4 address on the subnet. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto Scaling instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    #[doc(hidden)]
     pub associate_public_ip_address: std::option::Option<bool>,
     /// <p>The tenancy of the instance, either <code>default</code> or <code>dedicated</code>. An instance with <code>dedicated</code> tenancy runs on isolated, single-tenant hardware and can only be launched into a VPC.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html">Configuring instance tenancy with Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    #[doc(hidden)]
     pub placement_tenancy: std::option::Option<std::string::String>,
     /// <p>The metadata options for the instances. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds">Configuring the Instance Metadata Options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    #[doc(hidden)]
     pub metadata_options: std::option::Option<crate::model::InstanceMetadataOptions>,
 }
 impl LaunchConfiguration {
@@ -8832,7 +9013,7 @@ impl LaunchConfiguration {
     pub fn launch_configuration_arn(&self) -> std::option::Option<&str> {
         self.launch_configuration_arn.as_deref()
     }
-    /// <p>The ID of the Amazon Machine Image (AMI) to use to launch your EC2 instances. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html">Finding an AMI</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+    /// <p>The ID of the Amazon Machine Image (AMI) to use to launch your EC2 instances. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html">Find a Linux AMI</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
     pub fn image_id(&self) -> std::option::Option<&str> {
         self.image_id.as_deref()
     }
@@ -8845,12 +9026,12 @@ impl LaunchConfiguration {
     pub fn security_groups(&self) -> std::option::Option<&[std::string::String]> {
         self.security_groups.as_deref()
     }
-    /// <p> <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+    /// <p> <i>EC2-Classic retires on August 15, 2022. This property is not supported after that date.</i> </p>
     /// <p>The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to.</p>
     pub fn classic_link_vpc_id(&self) -> std::option::Option<&str> {
         self.classic_link_vpc_id.as_deref()
     }
-    /// <p> <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+    /// <p> <i>EC2-Classic retires on August 15, 2022. This property is not supported after that date.</i> </p>
     /// <p>The IDs of one or more security groups for the VPC specified in <code>ClassicLinkVPCId</code>.</p>
     pub fn classic_link_vpc_security_groups(&self) -> std::option::Option<&[std::string::String]> {
         self.classic_link_vpc_security_groups.as_deref()
@@ -8859,8 +9040,7 @@ impl LaunchConfiguration {
     pub fn user_data(&self) -> std::option::Option<&str> {
         self.user_data.as_deref()
     }
-    /// <p>The instance type for the instances.</p>
-    /// <p>For information about available instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes">Available Instance Types</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+    /// <p>The instance type for the instances. For information about available instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes">Available instance types</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
     pub fn instance_type(&self) -> std::option::Option<&str> {
         self.instance_type.as_deref()
     }
@@ -8872,7 +9052,7 @@ impl LaunchConfiguration {
     pub fn ramdisk_id(&self) -> std::option::Option<&str> {
         self.ramdisk_id.as_deref()
     }
-    /// <p>A block device mapping, which specifies the block devices for the instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+    /// <p>The block device mapping entries that define the block devices to attach to the instances at launch. By default, the block devices specified in the block device mapping for the AMI are used. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
     pub fn block_device_mappings(
         &self,
     ) -> std::option::Option<&[crate::model::BlockDeviceMapping]> {
@@ -8899,7 +9079,7 @@ impl LaunchConfiguration {
     pub fn ebs_optimized(&self) -> std::option::Option<bool> {
         self.ebs_optimized
     }
-    /// <p>For Auto Scaling groups that are running in a VPC, specifies whether to assign a public IP address to the group's instances. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto Scaling instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    /// <p>Specifies whether to assign a public IPv4 address to the group's instances. If the instance is launched into a default subnet, the default is to assign a public IPv4 address, unless you disabled the option to assign a public IPv4 address on the subnet. If the instance is launched into a nondefault subnet, the default is not to assign a public IPv4 address, unless you enabled the option to assign a public IPv4 address on the subnet. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto Scaling instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
     pub fn associate_public_ip_address(&self) -> std::option::Option<bool> {
         self.associate_public_ip_address
     }
@@ -8945,11 +9125,10 @@ impl std::fmt::Debug for LaunchConfiguration {
         formatter.finish()
     }
 }
-/// See [`LaunchConfiguration`](crate::model::LaunchConfiguration)
+/// See [`LaunchConfiguration`](crate::model::LaunchConfiguration).
 pub mod launch_configuration {
 
-    /// A builder for [`LaunchConfiguration`](crate::model::LaunchConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LaunchConfiguration`](crate::model::LaunchConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) launch_configuration_name: std::option::Option<std::string::String>,
@@ -9002,12 +9181,12 @@ pub mod launch_configuration {
             self.launch_configuration_arn = input;
             self
         }
-        /// <p>The ID of the Amazon Machine Image (AMI) to use to launch your EC2 instances. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html">Finding an AMI</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+        /// <p>The ID of the Amazon Machine Image (AMI) to use to launch your EC2 instances. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html">Find a Linux AMI</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
         pub fn image_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.image_id = Some(input.into());
             self
         }
-        /// <p>The ID of the Amazon Machine Image (AMI) to use to launch your EC2 instances. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html">Finding an AMI</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+        /// <p>The ID of the Amazon Machine Image (AMI) to use to launch your EC2 instances. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html">Find a Linux AMI</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
         pub fn set_image_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.image_id = input;
             self
@@ -9043,13 +9222,13 @@ pub mod launch_configuration {
             self.security_groups = input;
             self
         }
-        /// <p> <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+        /// <p> <i>EC2-Classic retires on August 15, 2022. This property is not supported after that date.</i> </p>
         /// <p>The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to.</p>
         pub fn classic_link_vpc_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.classic_link_vpc_id = Some(input.into());
             self
         }
-        /// <p> <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+        /// <p> <i>EC2-Classic retires on August 15, 2022. This property is not supported after that date.</i> </p>
         /// <p>The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to.</p>
         pub fn set_classic_link_vpc_id(
             mut self,
@@ -9062,7 +9241,7 @@ pub mod launch_configuration {
         ///
         /// To override the contents of this collection use [`set_classic_link_vpc_security_groups`](Self::set_classic_link_vpc_security_groups).
         ///
-        /// <p> <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+        /// <p> <i>EC2-Classic retires on August 15, 2022. This property is not supported after that date.</i> </p>
         /// <p>The IDs of one or more security groups for the VPC specified in <code>ClassicLinkVPCId</code>.</p>
         pub fn classic_link_vpc_security_groups(
             mut self,
@@ -9073,7 +9252,7 @@ pub mod launch_configuration {
             self.classic_link_vpc_security_groups = Some(v);
             self
         }
-        /// <p> <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+        /// <p> <i>EC2-Classic retires on August 15, 2022. This property is not supported after that date.</i> </p>
         /// <p>The IDs of one or more security groups for the VPC specified in <code>ClassicLinkVPCId</code>.</p>
         pub fn set_classic_link_vpc_security_groups(
             mut self,
@@ -9092,14 +9271,12 @@ pub mod launch_configuration {
             self.user_data = input;
             self
         }
-        /// <p>The instance type for the instances.</p>
-        /// <p>For information about available instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes">Available Instance Types</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+        /// <p>The instance type for the instances. For information about available instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes">Available instance types</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
         pub fn instance_type(mut self, input: impl Into<std::string::String>) -> Self {
             self.instance_type = Some(input.into());
             self
         }
-        /// <p>The instance type for the instances.</p>
-        /// <p>For information about available instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes">Available Instance Types</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+        /// <p>The instance type for the instances. For information about available instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes">Available instance types</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
         pub fn set_instance_type(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -9131,14 +9308,14 @@ pub mod launch_configuration {
         ///
         /// To override the contents of this collection use [`set_block_device_mappings`](Self::set_block_device_mappings).
         ///
-        /// <p>A block device mapping, which specifies the block devices for the instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+        /// <p>The block device mapping entries that define the block devices to attach to the instances at launch. By default, the block devices specified in the block device mapping for the AMI are used. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
         pub fn block_device_mappings(mut self, input: crate::model::BlockDeviceMapping) -> Self {
             let mut v = self.block_device_mappings.unwrap_or_default();
             v.push(input);
             self.block_device_mappings = Some(v);
             self
         }
-        /// <p>A block device mapping, which specifies the block devices for the instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+        /// <p>The block device mapping entries that define the block devices to attach to the instances at launch. By default, the block devices specified in the block device mapping for the AMI are used. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">Block Device Mapping</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
         pub fn set_block_device_mappings(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::BlockDeviceMapping>>,
@@ -9207,12 +9384,12 @@ pub mod launch_configuration {
             self.ebs_optimized = input;
             self
         }
-        /// <p>For Auto Scaling groups that are running in a VPC, specifies whether to assign a public IP address to the group's instances. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto Scaling instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+        /// <p>Specifies whether to assign a public IPv4 address to the group's instances. If the instance is launched into a default subnet, the default is to assign a public IPv4 address, unless you disabled the option to assign a public IPv4 address on the subnet. If the instance is launched into a nondefault subnet, the default is not to assign a public IPv4 address, unless you enabled the option to assign a public IPv4 address on the subnet. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto Scaling instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
         pub fn associate_public_ip_address(mut self, input: bool) -> Self {
             self.associate_public_ip_address = Some(input);
             self
         }
-        /// <p>For Auto Scaling groups that are running in a VPC, specifies whether to assign a public IP address to the group's instances. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto Scaling instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+        /// <p>Specifies whether to assign a public IPv4 address to the group's instances. If the instance is launched into a default subnet, the default is to assign a public IPv4 address, unless you disabled the option to assign a public IPv4 address on the subnet. If the instance is launched into a nondefault subnet, the default is not to assign a public IPv4 address, unless you enabled the option to assign a public IPv4 address on the subnet. For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html">Launching Auto Scaling instances in a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
         pub fn set_associate_public_ip_address(mut self, input: std::option::Option<bool>) -> Self {
             self.associate_public_ip_address = input;
             self
@@ -9245,7 +9422,7 @@ pub mod launch_configuration {
             self.metadata_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchConfiguration`](crate::model::LaunchConfiguration)
+        /// Consumes the builder and constructs a [`LaunchConfiguration`](crate::model::LaunchConfiguration).
         pub fn build(self) -> crate::model::LaunchConfiguration {
             crate::model::LaunchConfiguration {
                 launch_configuration_name: self.launch_configuration_name,
@@ -9273,7 +9450,7 @@ pub mod launch_configuration {
     }
 }
 impl LaunchConfiguration {
-    /// Creates a new builder-style object to manufacture [`LaunchConfiguration`](crate::model::LaunchConfiguration)
+    /// Creates a new builder-style object to manufacture [`LaunchConfiguration`](crate::model::LaunchConfiguration).
     pub fn builder() -> crate::model::launch_configuration::Builder {
         crate::model::launch_configuration::Builder::default()
     }
@@ -9286,13 +9463,16 @@ pub struct InstanceMetadataOptions {
     /// <p>The state of token usage for your instance metadata requests. If the parameter is not specified in the request, the default state is <code>optional</code>.</p>
     /// <p>If the state is <code>optional</code>, you can choose to retrieve instance metadata with or without a signed token header on your request. If you retrieve the IAM role credentials without a token, the version 1.0 role credentials are returned. If you retrieve the IAM role credentials using a valid signed token, the version 2.0 role credentials are returned.</p>
     /// <p>If the state is <code>required</code>, you must send a signed token header with any instance metadata retrieval requests. In this state, retrieving the IAM role credentials always returns the version 2.0 credentials; the version 1.0 credentials are not available.</p>
+    #[doc(hidden)]
     pub http_tokens: std::option::Option<crate::model::InstanceMetadataHttpTokensState>,
     /// <p>The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel.</p>
     /// <p>Default: 1</p>
+    #[doc(hidden)]
     pub http_put_response_hop_limit: std::option::Option<i32>,
     /// <p>This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default state is <code>enabled</code>.</p> <note>
     /// <p>If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata. </p>
     /// </note>
+    #[doc(hidden)]
     pub http_endpoint: std::option::Option<crate::model::InstanceMetadataEndpointState>,
 }
 impl InstanceMetadataOptions {
@@ -9330,11 +9510,10 @@ impl std::fmt::Debug for InstanceMetadataOptions {
         formatter.finish()
     }
 }
-/// See [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions)
+/// See [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions).
 pub mod instance_metadata_options {
 
-    /// A builder for [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions)
-    #[non_exhaustive]
+    /// A builder for [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) http_tokens: std::option::Option<crate::model::InstanceMetadataHttpTokensState>,
@@ -9388,7 +9567,7 @@ pub mod instance_metadata_options {
             self.http_endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions)
+        /// Consumes the builder and constructs a [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions).
         pub fn build(self) -> crate::model::InstanceMetadataOptions {
             crate::model::InstanceMetadataOptions {
                 http_tokens: self.http_tokens,
@@ -9399,7 +9578,7 @@ pub mod instance_metadata_options {
     }
 }
 impl InstanceMetadataOptions {
-    /// Creates a new builder-style object to manufacture [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions)
+    /// Creates a new builder-style object to manufacture [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions).
     pub fn builder() -> crate::model::instance_metadata_options::Builder {
         crate::model::instance_metadata_options::Builder::default()
     }
@@ -9520,6 +9699,7 @@ impl AsRef<str> for InstanceMetadataHttpTokensState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceMonitoring {
     /// <p>If <code>true</code>, detailed monitoring is enabled. Otherwise, basic monitoring is enabled.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
 }
 impl InstanceMonitoring {
@@ -9535,11 +9715,10 @@ impl std::fmt::Debug for InstanceMonitoring {
         formatter.finish()
     }
 }
-/// See [`InstanceMonitoring`](crate::model::InstanceMonitoring)
+/// See [`InstanceMonitoring`](crate::model::InstanceMonitoring).
 pub mod instance_monitoring {
 
-    /// A builder for [`InstanceMonitoring`](crate::model::InstanceMonitoring)
-    #[non_exhaustive]
+    /// A builder for [`InstanceMonitoring`](crate::model::InstanceMonitoring).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -9555,7 +9734,7 @@ pub mod instance_monitoring {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceMonitoring`](crate::model::InstanceMonitoring)
+        /// Consumes the builder and constructs a [`InstanceMonitoring`](crate::model::InstanceMonitoring).
         pub fn build(self) -> crate::model::InstanceMonitoring {
             crate::model::InstanceMonitoring {
                 enabled: self.enabled,
@@ -9564,7 +9743,7 @@ pub mod instance_monitoring {
     }
 }
 impl InstanceMonitoring {
-    /// Creates a new builder-style object to manufacture [`InstanceMonitoring`](crate::model::InstanceMonitoring)
+    /// Creates a new builder-style object to manufacture [`InstanceMonitoring`](crate::model::InstanceMonitoring).
     pub fn builder() -> crate::model::instance_monitoring::Builder {
         crate::model::instance_monitoring::Builder::default()
     }
@@ -9574,37 +9753,39 @@ impl InstanceMonitoring {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BlockDeviceMapping {
-    /// <p>The name of the virtual device (for example, <code>ephemeral0</code>).</p>
-    /// <p>You can specify either <code>VirtualName</code> or <code>Ebs</code>, but not both.</p>
+    /// <p>The name of the instance store volume (virtual device) to attach to an instance at launch. The name must be in the form ephemeral<i>X</i> where <i>X</i> is a number starting from zero (0), for example, <code>ephemeral0</code>.</p>
+    #[doc(hidden)]
     pub virtual_name: std::option::Option<std::string::String>,
-    /// <p>The device name exposed to the EC2 instance (for example, <code>/dev/sdh</code> or <code>xvdh</code>). For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html">Device Naming on Linux Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+    /// <p>The device name assigned to the volume (for example, <code>/dev/sdh</code> or <code>xvdh</code>). For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html">Device naming on Linux instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
+    /// <p>To define a block device mapping, set the device name and exactly one of the following properties: <code>Ebs</code>, <code>NoDevice</code>, or <code>VirtualName</code>.</p>
+    /// </note>
+    #[doc(hidden)]
     pub device_name: std::option::Option<std::string::String>,
-    /// <p>Parameters used to automatically set up EBS volumes when an instance is launched.</p>
-    /// <p>You can specify either <code>VirtualName</code> or <code>Ebs</code>, but not both.</p>
+    /// <p>Information to attach an EBS volume to an instance at launch.</p>
+    #[doc(hidden)]
     pub ebs: std::option::Option<crate::model::Ebs>,
-    /// <p>Setting this value to <code>true</code> suppresses the specified device included in the block device mapping of the AMI.</p>
+    /// <p>Setting this value to <code>true</code> prevents a volume that is included in the block device mapping of the AMI from being mapped to the specified device name at launch.</p>
     /// <p>If <code>NoDevice</code> is <code>true</code> for the root device, instances might fail the EC2 health check. In that case, Amazon EC2 Auto Scaling launches replacement instances.</p>
-    /// <p>If you specify <code>NoDevice</code>, you cannot specify <code>Ebs</code>.</p>
+    #[doc(hidden)]
     pub no_device: std::option::Option<bool>,
 }
 impl BlockDeviceMapping {
-    /// <p>The name of the virtual device (for example, <code>ephemeral0</code>).</p>
-    /// <p>You can specify either <code>VirtualName</code> or <code>Ebs</code>, but not both.</p>
+    /// <p>The name of the instance store volume (virtual device) to attach to an instance at launch. The name must be in the form ephemeral<i>X</i> where <i>X</i> is a number starting from zero (0), for example, <code>ephemeral0</code>.</p>
     pub fn virtual_name(&self) -> std::option::Option<&str> {
         self.virtual_name.as_deref()
     }
-    /// <p>The device name exposed to the EC2 instance (for example, <code>/dev/sdh</code> or <code>xvdh</code>). For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html">Device Naming on Linux Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+    /// <p>The device name assigned to the volume (for example, <code>/dev/sdh</code> or <code>xvdh</code>). For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html">Device naming on Linux instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
+    /// <p>To define a block device mapping, set the device name and exactly one of the following properties: <code>Ebs</code>, <code>NoDevice</code>, or <code>VirtualName</code>.</p>
+    /// </note>
     pub fn device_name(&self) -> std::option::Option<&str> {
         self.device_name.as_deref()
     }
-    /// <p>Parameters used to automatically set up EBS volumes when an instance is launched.</p>
-    /// <p>You can specify either <code>VirtualName</code> or <code>Ebs</code>, but not both.</p>
+    /// <p>Information to attach an EBS volume to an instance at launch.</p>
     pub fn ebs(&self) -> std::option::Option<&crate::model::Ebs> {
         self.ebs.as_ref()
     }
-    /// <p>Setting this value to <code>true</code> suppresses the specified device included in the block device mapping of the AMI.</p>
+    /// <p>Setting this value to <code>true</code> prevents a volume that is included in the block device mapping of the AMI from being mapped to the specified device name at launch.</p>
     /// <p>If <code>NoDevice</code> is <code>true</code> for the root device, instances might fail the EC2 health check. In that case, Amazon EC2 Auto Scaling launches replacement instances.</p>
-    /// <p>If you specify <code>NoDevice</code>, you cannot specify <code>Ebs</code>.</p>
     pub fn no_device(&self) -> std::option::Option<bool> {
         self.no_device
     }
@@ -9619,11 +9800,10 @@ impl std::fmt::Debug for BlockDeviceMapping {
         formatter.finish()
     }
 }
-/// See [`BlockDeviceMapping`](crate::model::BlockDeviceMapping)
+/// See [`BlockDeviceMapping`](crate::model::BlockDeviceMapping).
 pub mod block_device_mapping {
 
-    /// A builder for [`BlockDeviceMapping`](crate::model::BlockDeviceMapping)
-    #[non_exhaustive]
+    /// A builder for [`BlockDeviceMapping`](crate::model::BlockDeviceMapping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) virtual_name: std::option::Option<std::string::String>,
@@ -9632,55 +9812,53 @@ pub mod block_device_mapping {
         pub(crate) no_device: std::option::Option<bool>,
     }
     impl Builder {
-        /// <p>The name of the virtual device (for example, <code>ephemeral0</code>).</p>
-        /// <p>You can specify either <code>VirtualName</code> or <code>Ebs</code>, but not both.</p>
+        /// <p>The name of the instance store volume (virtual device) to attach to an instance at launch. The name must be in the form ephemeral<i>X</i> where <i>X</i> is a number starting from zero (0), for example, <code>ephemeral0</code>.</p>
         pub fn virtual_name(mut self, input: impl Into<std::string::String>) -> Self {
             self.virtual_name = Some(input.into());
             self
         }
-        /// <p>The name of the virtual device (for example, <code>ephemeral0</code>).</p>
-        /// <p>You can specify either <code>VirtualName</code> or <code>Ebs</code>, but not both.</p>
+        /// <p>The name of the instance store volume (virtual device) to attach to an instance at launch. The name must be in the form ephemeral<i>X</i> where <i>X</i> is a number starting from zero (0), for example, <code>ephemeral0</code>.</p>
         pub fn set_virtual_name(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.virtual_name = input;
             self
         }
-        /// <p>The device name exposed to the EC2 instance (for example, <code>/dev/sdh</code> or <code>xvdh</code>). For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html">Device Naming on Linux Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+        /// <p>The device name assigned to the volume (for example, <code>/dev/sdh</code> or <code>xvdh</code>). For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html">Device naming on Linux instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
+        /// <p>To define a block device mapping, set the device name and exactly one of the following properties: <code>Ebs</code>, <code>NoDevice</code>, or <code>VirtualName</code>.</p>
+        /// </note>
         pub fn device_name(mut self, input: impl Into<std::string::String>) -> Self {
             self.device_name = Some(input.into());
             self
         }
-        /// <p>The device name exposed to the EC2 instance (for example, <code>/dev/sdh</code> or <code>xvdh</code>). For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html">Device Naming on Linux Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
+        /// <p>The device name assigned to the volume (for example, <code>/dev/sdh</code> or <code>xvdh</code>). For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html">Device naming on Linux instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
+        /// <p>To define a block device mapping, set the device name and exactly one of the following properties: <code>Ebs</code>, <code>NoDevice</code>, or <code>VirtualName</code>.</p>
+        /// </note>
         pub fn set_device_name(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.device_name = input;
             self
         }
-        /// <p>Parameters used to automatically set up EBS volumes when an instance is launched.</p>
-        /// <p>You can specify either <code>VirtualName</code> or <code>Ebs</code>, but not both.</p>
+        /// <p>Information to attach an EBS volume to an instance at launch.</p>
         pub fn ebs(mut self, input: crate::model::Ebs) -> Self {
             self.ebs = Some(input);
             self
         }
-        /// <p>Parameters used to automatically set up EBS volumes when an instance is launched.</p>
-        /// <p>You can specify either <code>VirtualName</code> or <code>Ebs</code>, but not both.</p>
+        /// <p>Information to attach an EBS volume to an instance at launch.</p>
         pub fn set_ebs(mut self, input: std::option::Option<crate::model::Ebs>) -> Self {
             self.ebs = input;
             self
         }
-        /// <p>Setting this value to <code>true</code> suppresses the specified device included in the block device mapping of the AMI.</p>
+        /// <p>Setting this value to <code>true</code> prevents a volume that is included in the block device mapping of the AMI from being mapped to the specified device name at launch.</p>
         /// <p>If <code>NoDevice</code> is <code>true</code> for the root device, instances might fail the EC2 health check. In that case, Amazon EC2 Auto Scaling launches replacement instances.</p>
-        /// <p>If you specify <code>NoDevice</code>, you cannot specify <code>Ebs</code>.</p>
         pub fn no_device(mut self, input: bool) -> Self {
             self.no_device = Some(input);
             self
         }
-        /// <p>Setting this value to <code>true</code> suppresses the specified device included in the block device mapping of the AMI.</p>
+        /// <p>Setting this value to <code>true</code> prevents a volume that is included in the block device mapping of the AMI from being mapped to the specified device name at launch.</p>
         /// <p>If <code>NoDevice</code> is <code>true</code> for the root device, instances might fail the EC2 health check. In that case, Amazon EC2 Auto Scaling launches replacement instances.</p>
-        /// <p>If you specify <code>NoDevice</code>, you cannot specify <code>Ebs</code>.</p>
         pub fn set_no_device(mut self, input: std::option::Option<bool>) -> Self {
             self.no_device = input;
             self
         }
-        /// Consumes the builder and constructs a [`BlockDeviceMapping`](crate::model::BlockDeviceMapping)
+        /// Consumes the builder and constructs a [`BlockDeviceMapping`](crate::model::BlockDeviceMapping).
         pub fn build(self) -> crate::model::BlockDeviceMapping {
             crate::model::BlockDeviceMapping {
                 virtual_name: self.virtual_name,
@@ -9692,7 +9870,7 @@ pub mod block_device_mapping {
     }
 }
 impl BlockDeviceMapping {
-    /// Creates a new builder-style object to manufacture [`BlockDeviceMapping`](crate::model::BlockDeviceMapping)
+    /// Creates a new builder-style object to manufacture [`BlockDeviceMapping`](crate::model::BlockDeviceMapping).
     pub fn builder() -> crate::model::block_device_mapping::Builder {
         crate::model::block_device_mapping::Builder::default()
     }
@@ -9704,6 +9882,7 @@ impl BlockDeviceMapping {
 pub struct Ebs {
     /// <p>The snapshot ID of the volume to use.</p>
     /// <p>You must specify either a <code>VolumeSize</code> or a <code>SnapshotId</code>.</p>
+    #[doc(hidden)]
     pub snapshot_id: std::option::Option<std::string::String>,
     /// <p>The volume size, in GiBs. The following are the supported volumes sizes for each volume type: </p>
     /// <ul>
@@ -9713,11 +9892,14 @@ pub struct Ebs {
     /// <li> <p> <code>standard</code>: 1-1,024</p> </li>
     /// </ul>
     /// <p>You must specify either a <code>SnapshotId</code> or a <code>VolumeSize</code>. If you specify both <code>SnapshotId</code> and <code>VolumeSize</code>, the volume size must be equal or greater than the size of the snapshot.</p>
+    #[doc(hidden)]
     pub volume_size: std::option::Option<i32>,
     /// <p>The volume type. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
-    /// <p>Valid Values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> | <code>sc1</code> | <code>gp3</code> </p>
+    /// <p>Valid values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> | <code>sc1</code> | <code>gp3</code> </p>
+    #[doc(hidden)]
     pub volume_type: std::option::Option<std::string::String>,
     /// <p>Indicates whether the volume is deleted on instance termination. For Amazon EC2 Auto Scaling, the default value is <code>true</code>.</p>
+    #[doc(hidden)]
     pub delete_on_termination: std::option::Option<bool>,
     /// <p>The number of input/output (I/O) operations per second (IOPS) to provision for the volume. For <code>gp3</code> and <code>io1</code> volumes, this represents the number of IOPS that are provisioned for the volume. For <code>gp2</code> volumes, this represents the baseline performance of the volume and the rate at which the volume accumulates I/O credits for bursting. </p>
     /// <p>The following are the supported values for each volume type: </p>
@@ -9727,14 +9909,17 @@ pub struct Ebs {
     /// </ul>
     /// <p>For <code>io1</code> volumes, we guarantee 64,000 IOPS only for <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances built on the Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS. </p>
     /// <p> <code>Iops</code> is supported when the volume type is <code>gp3</code> or <code>io1</code> and required only when the volume type is <code>io1</code>. (Not used with <code>standard</code>, <code>gp2</code>, <code>st1</code>, or <code>sc1</code> volumes.) </p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
     /// <p>Specifies whether the volume should be encrypted. Encrypted EBS volumes can only be attached to instances that support Amazon EBS encryption. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances">Supported instance types</a>. If your AMI uses encrypted volumes, you can also only launch it on supported instance types.</p> <note>
     /// <p>If you are creating a volume from a snapshot, you cannot create an unencrypted volume from an encrypted snapshot. Also, you cannot specify a KMS key ID when using a launch configuration.</p>
     /// <p>If you enable encryption by default, the EBS volumes that you create are always encrypted, either using the Amazon Web Services managed KMS key or a customer-managed KMS key, regardless of whether the snapshot was encrypted. </p>
-    /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-data-protection.html#encryption">Using Amazon Web Services KMS keys to encrypt Amazon EBS volumes</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-data-protection.html#encryption">Use Amazon Web Services KMS keys to encrypt Amazon EBS volumes</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub encrypted: std::option::Option<bool>,
     /// <p>The throughput (MiBps) to provision for a <code>gp3</code> volume.</p>
+    #[doc(hidden)]
     pub throughput: std::option::Option<i32>,
 }
 impl Ebs {
@@ -9755,7 +9940,7 @@ impl Ebs {
         self.volume_size
     }
     /// <p>The volume type. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
-    /// <p>Valid Values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> | <code>sc1</code> | <code>gp3</code> </p>
+    /// <p>Valid values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> | <code>sc1</code> | <code>gp3</code> </p>
     pub fn volume_type(&self) -> std::option::Option<&str> {
         self.volume_type.as_deref()
     }
@@ -9777,7 +9962,7 @@ impl Ebs {
     /// <p>Specifies whether the volume should be encrypted. Encrypted EBS volumes can only be attached to instances that support Amazon EBS encryption. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances">Supported instance types</a>. If your AMI uses encrypted volumes, you can also only launch it on supported instance types.</p> <note>
     /// <p>If you are creating a volume from a snapshot, you cannot create an unencrypted volume from an encrypted snapshot. Also, you cannot specify a KMS key ID when using a launch configuration.</p>
     /// <p>If you enable encryption by default, the EBS volumes that you create are always encrypted, either using the Amazon Web Services managed KMS key or a customer-managed KMS key, regardless of whether the snapshot was encrypted. </p>
-    /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-data-protection.html#encryption">Using Amazon Web Services KMS keys to encrypt Amazon EBS volumes</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-data-protection.html#encryption">Use Amazon Web Services KMS keys to encrypt Amazon EBS volumes</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
     /// </note>
     pub fn encrypted(&self) -> std::option::Option<bool> {
         self.encrypted
@@ -9800,11 +9985,10 @@ impl std::fmt::Debug for Ebs {
         formatter.finish()
     }
 }
-/// See [`Ebs`](crate::model::Ebs)
+/// See [`Ebs`](crate::model::Ebs).
 pub mod ebs {
 
-    /// A builder for [`Ebs`](crate::model::Ebs)
-    #[non_exhaustive]
+    /// A builder for [`Ebs`](crate::model::Ebs).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshot_id: std::option::Option<std::string::String>,
@@ -9853,13 +10037,13 @@ pub mod ebs {
             self
         }
         /// <p>The volume type. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
-        /// <p>Valid Values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> | <code>sc1</code> | <code>gp3</code> </p>
+        /// <p>Valid values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> | <code>sc1</code> | <code>gp3</code> </p>
         pub fn volume_type(mut self, input: impl Into<std::string::String>) -> Self {
             self.volume_type = Some(input.into());
             self
         }
         /// <p>The volume type. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p>
-        /// <p>Valid Values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> | <code>sc1</code> | <code>gp3</code> </p>
+        /// <p>Valid values: <code>standard</code> | <code>io1</code> | <code>gp2</code> | <code>st1</code> | <code>sc1</code> | <code>gp3</code> </p>
         pub fn set_volume_type(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.volume_type = input;
             self
@@ -9901,7 +10085,7 @@ pub mod ebs {
         /// <p>Specifies whether the volume should be encrypted. Encrypted EBS volumes can only be attached to instances that support Amazon EBS encryption. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances">Supported instance types</a>. If your AMI uses encrypted volumes, you can also only launch it on supported instance types.</p> <note>
         /// <p>If you are creating a volume from a snapshot, you cannot create an unencrypted volume from an encrypted snapshot. Also, you cannot specify a KMS key ID when using a launch configuration.</p>
         /// <p>If you enable encryption by default, the EBS volumes that you create are always encrypted, either using the Amazon Web Services managed KMS key or a customer-managed KMS key, regardless of whether the snapshot was encrypted. </p>
-        /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-data-protection.html#encryption">Using Amazon Web Services KMS keys to encrypt Amazon EBS volumes</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-data-protection.html#encryption">Use Amazon Web Services KMS keys to encrypt Amazon EBS volumes</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
         /// </note>
         pub fn encrypted(mut self, input: bool) -> Self {
             self.encrypted = Some(input);
@@ -9910,7 +10094,7 @@ pub mod ebs {
         /// <p>Specifies whether the volume should be encrypted. Encrypted EBS volumes can only be attached to instances that support Amazon EBS encryption. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances">Supported instance types</a>. If your AMI uses encrypted volumes, you can also only launch it on supported instance types.</p> <note>
         /// <p>If you are creating a volume from a snapshot, you cannot create an unencrypted volume from an encrypted snapshot. Also, you cannot specify a KMS key ID when using a launch configuration.</p>
         /// <p>If you enable encryption by default, the EBS volumes that you create are always encrypted, either using the Amazon Web Services managed KMS key or a customer-managed KMS key, regardless of whether the snapshot was encrypted. </p>
-        /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-data-protection.html#encryption">Using Amazon Web Services KMS keys to encrypt Amazon EBS volumes</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-data-protection.html#encryption">Use Amazon Web Services KMS keys to encrypt Amazon EBS volumes</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
         /// </note>
         pub fn set_encrypted(mut self, input: std::option::Option<bool>) -> Self {
             self.encrypted = input;
@@ -9926,7 +10110,7 @@ pub mod ebs {
             self.throughput = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ebs`](crate::model::Ebs)
+        /// Consumes the builder and constructs a [`Ebs`](crate::model::Ebs).
         pub fn build(self) -> crate::model::Ebs {
             crate::model::Ebs {
                 snapshot_id: self.snapshot_id,
@@ -9941,7 +10125,7 @@ pub mod ebs {
     }
 }
 impl Ebs {
-    /// Creates a new builder-style object to manufacture [`Ebs`](crate::model::Ebs)
+    /// Creates a new builder-style object to manufacture [`Ebs`](crate::model::Ebs).
     pub fn builder() -> crate::model::ebs::Builder {
         crate::model::ebs::Builder::default()
     }
@@ -9952,8 +10136,10 @@ impl Ebs {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceRefresh {
     /// <p>The instance refresh ID.</p>
+    #[doc(hidden)]
     pub instance_refresh_id: std::option::Option<std::string::String>,
     /// <p>The name of the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub auto_scaling_group_name: std::option::Option<std::string::String>,
     /// <p>The current status for the instance refresh operation:</p>
     /// <ul>
@@ -9964,22 +10150,31 @@ pub struct InstanceRefresh {
     /// <li> <p> <code>Cancelling</code> - An ongoing operation is being cancelled. Cancellation does not roll back any replacements that have already been completed, but it prevents new replacements from being started. </p> </li>
     /// <li> <p> <code>Cancelled</code> - The operation is cancelled. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::InstanceRefreshStatus>,
     /// <p>Provides more details about the current status of the instance refresh. </p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>The date and time at which the instance refresh began.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time at which the instance refresh ended.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The percentage of the instance refresh that is complete. For each instance replacement, Amazon EC2 Auto Scaling tracks the instance's health status and warm-up time. When the instance's health status changes to healthy and the specified warm-up time passes, the instance is considered updated and is added to the percentage complete.</p>
+    #[doc(hidden)]
     pub percentage_complete: std::option::Option<i32>,
     /// <p>The number of instances remaining to update before the instance refresh is complete.</p>
+    #[doc(hidden)]
     pub instances_to_update: std::option::Option<i32>,
     /// <p>Additional progress details for an Auto Scaling group that has a warm pool.</p>
+    #[doc(hidden)]
     pub progress_details: std::option::Option<crate::model::InstanceRefreshProgressDetails>,
     /// <p>Describes the preferences for an instance refresh.</p>
+    #[doc(hidden)]
     pub preferences: std::option::Option<crate::model::RefreshPreferences>,
     /// <p>Describes the specific update you want to deploy.</p>
+    #[doc(hidden)]
     pub desired_configuration: std::option::Option<crate::model::DesiredConfiguration>,
 }
 impl InstanceRefresh {
@@ -10057,11 +10252,10 @@ impl std::fmt::Debug for InstanceRefresh {
         formatter.finish()
     }
 }
-/// See [`InstanceRefresh`](crate::model::InstanceRefresh)
+/// See [`InstanceRefresh`](crate::model::InstanceRefresh).
 pub mod instance_refresh {
 
-    /// A builder for [`InstanceRefresh`](crate::model::InstanceRefresh)
-    #[non_exhaustive]
+    /// A builder for [`InstanceRefresh`](crate::model::InstanceRefresh).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_refresh_id: std::option::Option<std::string::String>,
@@ -10234,7 +10428,7 @@ pub mod instance_refresh {
             self.desired_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceRefresh`](crate::model::InstanceRefresh)
+        /// Consumes the builder and constructs a [`InstanceRefresh`](crate::model::InstanceRefresh).
         pub fn build(self) -> crate::model::InstanceRefresh {
             crate::model::InstanceRefresh {
                 instance_refresh_id: self.instance_refresh_id,
@@ -10253,7 +10447,7 @@ pub mod instance_refresh {
     }
 }
 impl InstanceRefresh {
-    /// Creates a new builder-style object to manufacture [`InstanceRefresh`](crate::model::InstanceRefresh)
+    /// Creates a new builder-style object to manufacture [`InstanceRefresh`](crate::model::InstanceRefresh).
     pub fn builder() -> crate::model::instance_refresh::Builder {
         crate::model::instance_refresh::Builder::default()
     }
@@ -10264,8 +10458,10 @@ impl InstanceRefresh {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceRefreshProgressDetails {
     /// <p>Indicates the progress of an instance refresh on instances that are in the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub live_pool_progress: std::option::Option<crate::model::InstanceRefreshLivePoolProgress>,
     /// <p>Indicates the progress of an instance refresh on instances that are in the warm pool.</p>
+    #[doc(hidden)]
     pub warm_pool_progress: std::option::Option<crate::model::InstanceRefreshWarmPoolProgress>,
 }
 impl InstanceRefreshProgressDetails {
@@ -10290,11 +10486,10 @@ impl std::fmt::Debug for InstanceRefreshProgressDetails {
         formatter.finish()
     }
 }
-/// See [`InstanceRefreshProgressDetails`](crate::model::InstanceRefreshProgressDetails)
+/// See [`InstanceRefreshProgressDetails`](crate::model::InstanceRefreshProgressDetails).
 pub mod instance_refresh_progress_details {
 
-    /// A builder for [`InstanceRefreshProgressDetails`](crate::model::InstanceRefreshProgressDetails)
-    #[non_exhaustive]
+    /// A builder for [`InstanceRefreshProgressDetails`](crate::model::InstanceRefreshProgressDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) live_pool_progress:
@@ -10335,7 +10530,7 @@ pub mod instance_refresh_progress_details {
             self.warm_pool_progress = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceRefreshProgressDetails`](crate::model::InstanceRefreshProgressDetails)
+        /// Consumes the builder and constructs a [`InstanceRefreshProgressDetails`](crate::model::InstanceRefreshProgressDetails).
         pub fn build(self) -> crate::model::InstanceRefreshProgressDetails {
             crate::model::InstanceRefreshProgressDetails {
                 live_pool_progress: self.live_pool_progress,
@@ -10345,7 +10540,7 @@ pub mod instance_refresh_progress_details {
     }
 }
 impl InstanceRefreshProgressDetails {
-    /// Creates a new builder-style object to manufacture [`InstanceRefreshProgressDetails`](crate::model::InstanceRefreshProgressDetails)
+    /// Creates a new builder-style object to manufacture [`InstanceRefreshProgressDetails`](crate::model::InstanceRefreshProgressDetails).
     pub fn builder() -> crate::model::instance_refresh_progress_details::Builder {
         crate::model::instance_refresh_progress_details::Builder::default()
     }
@@ -10356,8 +10551,10 @@ impl InstanceRefreshProgressDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceRefreshWarmPoolProgress {
     /// <p>The percentage of instances in the warm pool that have been replaced. For each instance replacement, Amazon EC2 Auto Scaling tracks the instance's health status and warm-up time. When the instance's health status changes to healthy and the specified warm-up time passes, the instance is considered updated and is added to the percentage complete.</p>
+    #[doc(hidden)]
     pub percentage_complete: std::option::Option<i32>,
     /// <p>The number of instances remaining to update.</p>
+    #[doc(hidden)]
     pub instances_to_update: std::option::Option<i32>,
 }
 impl InstanceRefreshWarmPoolProgress {
@@ -10378,11 +10575,10 @@ impl std::fmt::Debug for InstanceRefreshWarmPoolProgress {
         formatter.finish()
     }
 }
-/// See [`InstanceRefreshWarmPoolProgress`](crate::model::InstanceRefreshWarmPoolProgress)
+/// See [`InstanceRefreshWarmPoolProgress`](crate::model::InstanceRefreshWarmPoolProgress).
 pub mod instance_refresh_warm_pool_progress {
 
-    /// A builder for [`InstanceRefreshWarmPoolProgress`](crate::model::InstanceRefreshWarmPoolProgress)
-    #[non_exhaustive]
+    /// A builder for [`InstanceRefreshWarmPoolProgress`](crate::model::InstanceRefreshWarmPoolProgress).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) percentage_complete: std::option::Option<i32>,
@@ -10409,7 +10605,7 @@ pub mod instance_refresh_warm_pool_progress {
             self.instances_to_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceRefreshWarmPoolProgress`](crate::model::InstanceRefreshWarmPoolProgress)
+        /// Consumes the builder and constructs a [`InstanceRefreshWarmPoolProgress`](crate::model::InstanceRefreshWarmPoolProgress).
         pub fn build(self) -> crate::model::InstanceRefreshWarmPoolProgress {
             crate::model::InstanceRefreshWarmPoolProgress {
                 percentage_complete: self.percentage_complete,
@@ -10419,7 +10615,7 @@ pub mod instance_refresh_warm_pool_progress {
     }
 }
 impl InstanceRefreshWarmPoolProgress {
-    /// Creates a new builder-style object to manufacture [`InstanceRefreshWarmPoolProgress`](crate::model::InstanceRefreshWarmPoolProgress)
+    /// Creates a new builder-style object to manufacture [`InstanceRefreshWarmPoolProgress`](crate::model::InstanceRefreshWarmPoolProgress).
     pub fn builder() -> crate::model::instance_refresh_warm_pool_progress::Builder {
         crate::model::instance_refresh_warm_pool_progress::Builder::default()
     }
@@ -10430,8 +10626,10 @@ impl InstanceRefreshWarmPoolProgress {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceRefreshLivePoolProgress {
     /// <p>The percentage of instances in the Auto Scaling group that have been replaced. For each instance replacement, Amazon EC2 Auto Scaling tracks the instance's health status and warm-up time. When the instance's health status changes to healthy and the specified warm-up time passes, the instance is considered updated and is added to the percentage complete.</p>
+    #[doc(hidden)]
     pub percentage_complete: std::option::Option<i32>,
     /// <p>The number of instances remaining to update.</p>
+    #[doc(hidden)]
     pub instances_to_update: std::option::Option<i32>,
 }
 impl InstanceRefreshLivePoolProgress {
@@ -10452,11 +10650,10 @@ impl std::fmt::Debug for InstanceRefreshLivePoolProgress {
         formatter.finish()
     }
 }
-/// See [`InstanceRefreshLivePoolProgress`](crate::model::InstanceRefreshLivePoolProgress)
+/// See [`InstanceRefreshLivePoolProgress`](crate::model::InstanceRefreshLivePoolProgress).
 pub mod instance_refresh_live_pool_progress {
 
-    /// A builder for [`InstanceRefreshLivePoolProgress`](crate::model::InstanceRefreshLivePoolProgress)
-    #[non_exhaustive]
+    /// A builder for [`InstanceRefreshLivePoolProgress`](crate::model::InstanceRefreshLivePoolProgress).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) percentage_complete: std::option::Option<i32>,
@@ -10483,7 +10680,7 @@ pub mod instance_refresh_live_pool_progress {
             self.instances_to_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceRefreshLivePoolProgress`](crate::model::InstanceRefreshLivePoolProgress)
+        /// Consumes the builder and constructs a [`InstanceRefreshLivePoolProgress`](crate::model::InstanceRefreshLivePoolProgress).
         pub fn build(self) -> crate::model::InstanceRefreshLivePoolProgress {
             crate::model::InstanceRefreshLivePoolProgress {
                 percentage_complete: self.percentage_complete,
@@ -10493,7 +10690,7 @@ pub mod instance_refresh_live_pool_progress {
     }
 }
 impl InstanceRefreshLivePoolProgress {
-    /// Creates a new builder-style object to manufacture [`InstanceRefreshLivePoolProgress`](crate::model::InstanceRefreshLivePoolProgress)
+    /// Creates a new builder-style object to manufacture [`InstanceRefreshLivePoolProgress`](crate::model::InstanceRefreshLivePoolProgress).
     pub fn builder() -> crate::model::instance_refresh_live_pool_progress::Builder {
         crate::model::instance_refresh_live_pool_progress::Builder::default()
     }
@@ -10582,26 +10779,36 @@ impl AsRef<str> for InstanceRefreshStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoScalingInstanceDetails {
     /// <p>The ID of the instance.</p>
+    #[doc(hidden)]
     pub instance_id: std::option::Option<std::string::String>,
     /// <p>The instance type of the EC2 instance.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The name of the Auto Scaling group for the instance.</p>
+    #[doc(hidden)]
     pub auto_scaling_group_name: std::option::Option<std::string::String>,
     /// <p>The Availability Zone for the instance.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For information about lifecycle states, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. </p>
-    /// <p>Valid Values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> | <code>Quarantined</code> | <code>InService</code> | <code>Terminating</code> | <code>Terminating:Wait</code> | <code>Terminating:Proceed</code> | <code>Terminated</code> | <code>Detaching</code> | <code>Detached</code> | <code>EnteringStandby</code> | <code>Standby</code> | <code>Warmed:Pending</code> | <code>Warmed:Pending:Wait</code> | <code>Warmed:Pending:Proceed</code> | <code>Warmed:Terminating</code> | <code>Warmed:Terminating:Wait</code> | <code>Warmed:Terminating:Proceed</code> | <code>Warmed:Terminated</code> | <code>Warmed:Stopped</code> | <code>Warmed:Running</code> </p>
+    /// <p>Valid values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> | <code>Quarantined</code> | <code>InService</code> | <code>Terminating</code> | <code>Terminating:Wait</code> | <code>Terminating:Proceed</code> | <code>Terminated</code> | <code>Detaching</code> | <code>Detached</code> | <code>EnteringStandby</code> | <code>Standby</code> | <code>Warmed:Pending</code> | <code>Warmed:Pending:Wait</code> | <code>Warmed:Pending:Proceed</code> | <code>Warmed:Terminating</code> | <code>Warmed:Terminating:Wait</code> | <code>Warmed:Terminating:Proceed</code> | <code>Warmed:Terminated</code> | <code>Warmed:Stopped</code> | <code>Warmed:Running</code> </p>
+    #[doc(hidden)]
     pub lifecycle_state: std::option::Option<std::string::String>,
     /// <p>The last reported health status of this instance. "Healthy" means that the instance is healthy and should remain in service. "Unhealthy" means that the instance is unhealthy and Amazon EC2 Auto Scaling should terminate and replace it.</p>
+    #[doc(hidden)]
     pub health_status: std::option::Option<std::string::String>,
     /// <p>The launch configuration used to launch the instance. This value is not available if you attached the instance to the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub launch_configuration_name: std::option::Option<std::string::String>,
     /// <p>The launch template for the instance.</p>
+    #[doc(hidden)]
     pub launch_template: std::option::Option<crate::model::LaunchTemplateSpecification>,
     /// <p>Indicates whether the instance is protected from termination by Amazon EC2 Auto Scaling when scaling in.</p>
+    #[doc(hidden)]
     pub protected_from_scale_in: std::option::Option<bool>,
     /// <p>The number of capacity units contributed by the instance based on its instance type.</p>
     /// <p>Valid Range: Minimum value of 1. Maximum value of 999.</p>
+    #[doc(hidden)]
     pub weighted_capacity: std::option::Option<std::string::String>,
 }
 impl AutoScalingInstanceDetails {
@@ -10622,7 +10829,7 @@ impl AutoScalingInstanceDetails {
         self.availability_zone.as_deref()
     }
     /// <p>The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For information about lifecycle states, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. </p>
-    /// <p>Valid Values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> | <code>Quarantined</code> | <code>InService</code> | <code>Terminating</code> | <code>Terminating:Wait</code> | <code>Terminating:Proceed</code> | <code>Terminated</code> | <code>Detaching</code> | <code>Detached</code> | <code>EnteringStandby</code> | <code>Standby</code> | <code>Warmed:Pending</code> | <code>Warmed:Pending:Wait</code> | <code>Warmed:Pending:Proceed</code> | <code>Warmed:Terminating</code> | <code>Warmed:Terminating:Wait</code> | <code>Warmed:Terminating:Proceed</code> | <code>Warmed:Terminated</code> | <code>Warmed:Stopped</code> | <code>Warmed:Running</code> </p>
+    /// <p>Valid values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> | <code>Quarantined</code> | <code>InService</code> | <code>Terminating</code> | <code>Terminating:Wait</code> | <code>Terminating:Proceed</code> | <code>Terminated</code> | <code>Detaching</code> | <code>Detached</code> | <code>EnteringStandby</code> | <code>Standby</code> | <code>Warmed:Pending</code> | <code>Warmed:Pending:Wait</code> | <code>Warmed:Pending:Proceed</code> | <code>Warmed:Terminating</code> | <code>Warmed:Terminating:Wait</code> | <code>Warmed:Terminating:Proceed</code> | <code>Warmed:Terminated</code> | <code>Warmed:Stopped</code> | <code>Warmed:Running</code> </p>
     pub fn lifecycle_state(&self) -> std::option::Option<&str> {
         self.lifecycle_state.as_deref()
     }
@@ -10666,11 +10873,10 @@ impl std::fmt::Debug for AutoScalingInstanceDetails {
         formatter.finish()
     }
 }
-/// See [`AutoScalingInstanceDetails`](crate::model::AutoScalingInstanceDetails)
+/// See [`AutoScalingInstanceDetails`](crate::model::AutoScalingInstanceDetails).
 pub mod auto_scaling_instance_details {
 
-    /// A builder for [`AutoScalingInstanceDetails`](crate::model::AutoScalingInstanceDetails)
-    #[non_exhaustive]
+    /// A builder for [`AutoScalingInstanceDetails`](crate::model::AutoScalingInstanceDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_id: std::option::Option<std::string::String>,
@@ -10735,13 +10941,13 @@ pub mod auto_scaling_instance_details {
             self
         }
         /// <p>The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For information about lifecycle states, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. </p>
-        /// <p>Valid Values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> | <code>Quarantined</code> | <code>InService</code> | <code>Terminating</code> | <code>Terminating:Wait</code> | <code>Terminating:Proceed</code> | <code>Terminated</code> | <code>Detaching</code> | <code>Detached</code> | <code>EnteringStandby</code> | <code>Standby</code> | <code>Warmed:Pending</code> | <code>Warmed:Pending:Wait</code> | <code>Warmed:Pending:Proceed</code> | <code>Warmed:Terminating</code> | <code>Warmed:Terminating:Wait</code> | <code>Warmed:Terminating:Proceed</code> | <code>Warmed:Terminated</code> | <code>Warmed:Stopped</code> | <code>Warmed:Running</code> </p>
+        /// <p>Valid values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> | <code>Quarantined</code> | <code>InService</code> | <code>Terminating</code> | <code>Terminating:Wait</code> | <code>Terminating:Proceed</code> | <code>Terminated</code> | <code>Detaching</code> | <code>Detached</code> | <code>EnteringStandby</code> | <code>Standby</code> | <code>Warmed:Pending</code> | <code>Warmed:Pending:Wait</code> | <code>Warmed:Pending:Proceed</code> | <code>Warmed:Terminating</code> | <code>Warmed:Terminating:Wait</code> | <code>Warmed:Terminating:Proceed</code> | <code>Warmed:Terminated</code> | <code>Warmed:Stopped</code> | <code>Warmed:Running</code> </p>
         pub fn lifecycle_state(mut self, input: impl Into<std::string::String>) -> Self {
             self.lifecycle_state = Some(input.into());
             self
         }
         /// <p>The lifecycle state for the instance. The <code>Quarantined</code> state is not used. For information about lifecycle states, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Instance lifecycle</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. </p>
-        /// <p>Valid Values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> | <code>Quarantined</code> | <code>InService</code> | <code>Terminating</code> | <code>Terminating:Wait</code> | <code>Terminating:Proceed</code> | <code>Terminated</code> | <code>Detaching</code> | <code>Detached</code> | <code>EnteringStandby</code> | <code>Standby</code> | <code>Warmed:Pending</code> | <code>Warmed:Pending:Wait</code> | <code>Warmed:Pending:Proceed</code> | <code>Warmed:Terminating</code> | <code>Warmed:Terminating:Wait</code> | <code>Warmed:Terminating:Proceed</code> | <code>Warmed:Terminated</code> | <code>Warmed:Stopped</code> | <code>Warmed:Running</code> </p>
+        /// <p>Valid values: <code>Pending</code> | <code>Pending:Wait</code> | <code>Pending:Proceed</code> | <code>Quarantined</code> | <code>InService</code> | <code>Terminating</code> | <code>Terminating:Wait</code> | <code>Terminating:Proceed</code> | <code>Terminated</code> | <code>Detaching</code> | <code>Detached</code> | <code>EnteringStandby</code> | <code>Standby</code> | <code>Warmed:Pending</code> | <code>Warmed:Pending:Wait</code> | <code>Warmed:Pending:Proceed</code> | <code>Warmed:Terminating</code> | <code>Warmed:Terminating:Wait</code> | <code>Warmed:Terminating:Proceed</code> | <code>Warmed:Terminated</code> | <code>Warmed:Stopped</code> | <code>Warmed:Running</code> </p>
         pub fn set_lifecycle_state(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -10813,7 +11019,7 @@ pub mod auto_scaling_instance_details {
             self.weighted_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoScalingInstanceDetails`](crate::model::AutoScalingInstanceDetails)
+        /// Consumes the builder and constructs a [`AutoScalingInstanceDetails`](crate::model::AutoScalingInstanceDetails).
         pub fn build(self) -> crate::model::AutoScalingInstanceDetails {
             crate::model::AutoScalingInstanceDetails {
                 instance_id: self.instance_id,
@@ -10831,7 +11037,7 @@ pub mod auto_scaling_instance_details {
     }
 }
 impl AutoScalingInstanceDetails {
-    /// Creates a new builder-style object to manufacture [`AutoScalingInstanceDetails`](crate::model::AutoScalingInstanceDetails)
+    /// Creates a new builder-style object to manufacture [`AutoScalingInstanceDetails`](crate::model::AutoScalingInstanceDetails).
     pub fn builder() -> crate::model::auto_scaling_instance_details::Builder {
         crate::model::auto_scaling_instance_details::Builder::default()
     }
@@ -10842,71 +11048,104 @@ impl AutoScalingInstanceDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoScalingGroup {
     /// <p>The name of the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub auto_scaling_group_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub auto_scaling_group_arn: std::option::Option<std::string::String>,
     /// <p>The name of the associated launch configuration.</p>
+    #[doc(hidden)]
     pub launch_configuration_name: std::option::Option<std::string::String>,
     /// <p>The launch template for the group.</p>
+    #[doc(hidden)]
     pub launch_template: std::option::Option<crate::model::LaunchTemplateSpecification>,
     /// <p>The mixed instances policy for the group.</p>
+    #[doc(hidden)]
     pub mixed_instances_policy: std::option::Option<crate::model::MixedInstancesPolicy>,
     /// <p>The minimum size of the group.</p>
+    #[doc(hidden)]
     pub min_size: std::option::Option<i32>,
     /// <p>The maximum size of the group.</p>
+    #[doc(hidden)]
     pub max_size: std::option::Option<i32>,
     /// <p>The desired size of the group.</p>
+    #[doc(hidden)]
     pub desired_capacity: std::option::Option<i32>,
     /// <p>The predicted capacity of the group when it has a predictive scaling policy.</p>
+    #[doc(hidden)]
     pub predicted_capacity: std::option::Option<i32>,
     /// <p>The duration of the default cooldown period, in seconds.</p>
+    #[doc(hidden)]
     pub default_cooldown: std::option::Option<i32>,
     /// <p>One or more Availability Zones for the group.</p>
+    #[doc(hidden)]
     pub availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>One or more load balancers associated with the group.</p>
+    #[doc(hidden)]
     pub load_balancer_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon Resource Names (ARN) of the target groups for your load balancer.</p>
+    #[doc(hidden)]
     pub target_group_ar_ns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The service to use for the health checks. The valid values are <code>EC2</code> and <code>ELB</code>. If you configure an Auto Scaling group to use <code>ELB</code> health checks, it considers the instance unhealthy if it fails either the EC2 status checks or the load balancer health checks.</p>
+    #[doc(hidden)]
     pub health_check_type: std::option::Option<std::string::String>,
     /// <p>The duration of the health check grace period, in seconds.</p>
+    #[doc(hidden)]
     pub health_check_grace_period: std::option::Option<i32>,
     /// <p>The EC2 instances associated with the group.</p>
+    #[doc(hidden)]
     pub instances: std::option::Option<std::vec::Vec<crate::model::Instance>>,
     /// <p>The date and time the group was created.</p>
+    #[doc(hidden)]
     pub created_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The suspended processes associated with the group.</p>
+    #[doc(hidden)]
     pub suspended_processes: std::option::Option<std::vec::Vec<crate::model::SuspendedProcess>>,
     /// <p>The name of the placement group into which to launch your instances, if any.</p>
+    #[doc(hidden)]
     pub placement_group: std::option::Option<std::string::String>,
     /// <p>One or more subnet IDs, if applicable, separated by commas.</p>
+    #[doc(hidden)]
     pub vpc_zone_identifier: std::option::Option<std::string::String>,
     /// <p>The metrics enabled for the group.</p>
+    #[doc(hidden)]
     pub enabled_metrics: std::option::Option<std::vec::Vec<crate::model::EnabledMetric>>,
     /// <p>The current state of the group when the <code>DeleteAutoScalingGroup</code> operation is in progress.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The tags for the group.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::TagDescription>>,
     /// <p>The termination policies for the group.</p>
+    #[doc(hidden)]
     pub termination_policies: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when scaling in.</p>
+    #[doc(hidden)]
     pub new_instances_protected_from_scale_in: std::option::Option<bool>,
     /// <p>The Amazon Resource Name (ARN) of the service-linked role that the Auto Scaling group uses to call other Amazon Web Services on your behalf.</p>
+    #[doc(hidden)]
     pub service_linked_role_arn: std::option::Option<std::string::String>,
     /// <p>The maximum amount of time, in seconds, that an instance can be in service.</p>
     /// <p>Valid Range: Minimum value of 0.</p>
+    #[doc(hidden)]
     pub max_instance_lifetime: std::option::Option<i32>,
     /// <p>Indicates whether Capacity Rebalancing is enabled.</p>
+    #[doc(hidden)]
     pub capacity_rebalance: std::option::Option<bool>,
     /// <p>The warm pool for the group.</p>
+    #[doc(hidden)]
     pub warm_pool_configuration: std::option::Option<crate::model::WarmPoolConfiguration>,
     /// <p>The current size of the warm pool.</p>
+    #[doc(hidden)]
     pub warm_pool_size: std::option::Option<i32>,
     /// <p>Reserved.</p>
+    #[doc(hidden)]
     pub context: std::option::Option<std::string::String>,
     /// <p>The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports <code>DesiredCapacityType</code> for attribute-based instance type selection only.</p>
+    #[doc(hidden)]
     pub desired_capacity_type: std::option::Option<std::string::String>,
     /// <p>The duration of the default instance warmup, in seconds.</p>
+    #[doc(hidden)]
     pub default_instance_warmup: std::option::Option<i32>,
 }
 impl AutoScalingGroup {
@@ -11092,11 +11331,10 @@ impl std::fmt::Debug for AutoScalingGroup {
         formatter.finish()
     }
 }
-/// See [`AutoScalingGroup`](crate::model::AutoScalingGroup)
+/// See [`AutoScalingGroup`](crate::model::AutoScalingGroup).
 pub mod auto_scaling_group {
 
-    /// A builder for [`AutoScalingGroup`](crate::model::AutoScalingGroup)
-    #[non_exhaustive]
+    /// A builder for [`AutoScalingGroup`](crate::model::AutoScalingGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_scaling_group_name: std::option::Option<std::string::String>,
@@ -11582,7 +11820,7 @@ pub mod auto_scaling_group {
             self.default_instance_warmup = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoScalingGroup`](crate::model::AutoScalingGroup)
+        /// Consumes the builder and constructs a [`AutoScalingGroup`](crate::model::AutoScalingGroup).
         pub fn build(self) -> crate::model::AutoScalingGroup {
             crate::model::AutoScalingGroup {
                 auto_scaling_group_name: self.auto_scaling_group_name,
@@ -11623,13 +11861,13 @@ pub mod auto_scaling_group {
     }
 }
 impl AutoScalingGroup {
-    /// Creates a new builder-style object to manufacture [`AutoScalingGroup`](crate::model::AutoScalingGroup)
+    /// Creates a new builder-style object to manufacture [`AutoScalingGroup`](crate::model::AutoScalingGroup).
     pub fn builder() -> crate::model::auto_scaling_group::Builder {
         crate::model::auto_scaling_group::Builder::default()
     }
 }
 
-/// <p>Describes an enabled metric.</p>
+/// <p>Describes an enabled Auto Scaling group metric.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnabledMetric {
@@ -11656,8 +11894,11 @@ pub struct EnabledMetric {
     /// <li> <p> <code>GroupAndWarmPoolDesiredCapacity</code> </p> </li>
     /// <li> <p> <code>GroupAndWarmPoolTotalCapacity</code> </p> </li>
     /// </ul>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics">Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    #[doc(hidden)]
     pub metric: std::option::Option<std::string::String>,
     /// <p>The granularity of the metric. The only valid value is <code>1Minute</code>.</p>
+    #[doc(hidden)]
     pub granularity: std::option::Option<std::string::String>,
 }
 impl EnabledMetric {
@@ -11684,6 +11925,7 @@ impl EnabledMetric {
     /// <li> <p> <code>GroupAndWarmPoolDesiredCapacity</code> </p> </li>
     /// <li> <p> <code>GroupAndWarmPoolTotalCapacity</code> </p> </li>
     /// </ul>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics">Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
     pub fn metric(&self) -> std::option::Option<&str> {
         self.metric.as_deref()
     }
@@ -11700,11 +11942,10 @@ impl std::fmt::Debug for EnabledMetric {
         formatter.finish()
     }
 }
-/// See [`EnabledMetric`](crate::model::EnabledMetric)
+/// See [`EnabledMetric`](crate::model::EnabledMetric).
 pub mod enabled_metric {
 
-    /// A builder for [`EnabledMetric`](crate::model::EnabledMetric)
-    #[non_exhaustive]
+    /// A builder for [`EnabledMetric`](crate::model::EnabledMetric).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric: std::option::Option<std::string::String>,
@@ -11734,6 +11975,7 @@ pub mod enabled_metric {
         /// <li> <p> <code>GroupAndWarmPoolDesiredCapacity</code> </p> </li>
         /// <li> <p> <code>GroupAndWarmPoolTotalCapacity</code> </p> </li>
         /// </ul>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics">Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
         pub fn metric(mut self, input: impl Into<std::string::String>) -> Self {
             self.metric = Some(input.into());
             self
@@ -11761,6 +12003,7 @@ pub mod enabled_metric {
         /// <li> <p> <code>GroupAndWarmPoolDesiredCapacity</code> </p> </li>
         /// <li> <p> <code>GroupAndWarmPoolTotalCapacity</code> </p> </li>
         /// </ul>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics">Auto Scaling group metrics</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
         pub fn set_metric(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.metric = input;
             self
@@ -11775,7 +12018,7 @@ pub mod enabled_metric {
             self.granularity = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnabledMetric`](crate::model::EnabledMetric)
+        /// Consumes the builder and constructs a [`EnabledMetric`](crate::model::EnabledMetric).
         pub fn build(self) -> crate::model::EnabledMetric {
             crate::model::EnabledMetric {
                 metric: self.metric,
@@ -11785,7 +12028,7 @@ pub mod enabled_metric {
     }
 }
 impl EnabledMetric {
-    /// Creates a new builder-style object to manufacture [`EnabledMetric`](crate::model::EnabledMetric)
+    /// Creates a new builder-style object to manufacture [`EnabledMetric`](crate::model::EnabledMetric).
     pub fn builder() -> crate::model::enabled_metric::Builder {
         crate::model::enabled_metric::Builder::default()
     }
@@ -11797,8 +12040,10 @@ impl EnabledMetric {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SuspendedProcess {
     /// <p>The name of the suspended process.</p>
+    #[doc(hidden)]
     pub process_name: std::option::Option<std::string::String>,
     /// <p>The reason that the process was suspended.</p>
+    #[doc(hidden)]
     pub suspension_reason: std::option::Option<std::string::String>,
 }
 impl SuspendedProcess {
@@ -11819,11 +12064,10 @@ impl std::fmt::Debug for SuspendedProcess {
         formatter.finish()
     }
 }
-/// See [`SuspendedProcess`](crate::model::SuspendedProcess)
+/// See [`SuspendedProcess`](crate::model::SuspendedProcess).
 pub mod suspended_process {
 
-    /// A builder for [`SuspendedProcess`](crate::model::SuspendedProcess)
-    #[non_exhaustive]
+    /// A builder for [`SuspendedProcess`](crate::model::SuspendedProcess).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) process_name: std::option::Option<std::string::String>,
@@ -11853,7 +12097,7 @@ pub mod suspended_process {
             self.suspension_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`SuspendedProcess`](crate::model::SuspendedProcess)
+        /// Consumes the builder and constructs a [`SuspendedProcess`](crate::model::SuspendedProcess).
         pub fn build(self) -> crate::model::SuspendedProcess {
             crate::model::SuspendedProcess {
                 process_name: self.process_name,
@@ -11863,7 +12107,7 @@ pub mod suspended_process {
     }
 }
 impl SuspendedProcess {
-    /// Creates a new builder-style object to manufacture [`SuspendedProcess`](crate::model::SuspendedProcess)
+    /// Creates a new builder-style object to manufacture [`SuspendedProcess`](crate::model::SuspendedProcess).
     pub fn builder() -> crate::model::suspended_process::Builder {
         crate::model::suspended_process::Builder::default()
     }
@@ -11874,6 +12118,7 @@ impl SuspendedProcess {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AdjustmentType {
     /// <p>The policy adjustment type. The valid values are <code>ChangeInCapacity</code>, <code>ExactCapacity</code>, and <code>PercentChangeInCapacity</code>.</p>
+    #[doc(hidden)]
     pub adjustment_type: std::option::Option<std::string::String>,
 }
 impl AdjustmentType {
@@ -11889,11 +12134,10 @@ impl std::fmt::Debug for AdjustmentType {
         formatter.finish()
     }
 }
-/// See [`AdjustmentType`](crate::model::AdjustmentType)
+/// See [`AdjustmentType`](crate::model::AdjustmentType).
 pub mod adjustment_type {
 
-    /// A builder for [`AdjustmentType`](crate::model::AdjustmentType)
-    #[non_exhaustive]
+    /// A builder for [`AdjustmentType`](crate::model::AdjustmentType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) adjustment_type: std::option::Option<std::string::String>,
@@ -11912,7 +12156,7 @@ pub mod adjustment_type {
             self.adjustment_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdjustmentType`](crate::model::AdjustmentType)
+        /// Consumes the builder and constructs a [`AdjustmentType`](crate::model::AdjustmentType).
         pub fn build(self) -> crate::model::AdjustmentType {
             crate::model::AdjustmentType {
                 adjustment_type: self.adjustment_type,
@@ -11921,7 +12165,7 @@ pub mod adjustment_type {
     }
 }
 impl AdjustmentType {
-    /// Creates a new builder-style object to manufacture [`AdjustmentType`](crate::model::AdjustmentType)
+    /// Creates a new builder-style object to manufacture [`AdjustmentType`](crate::model::AdjustmentType).
     pub fn builder() -> crate::model::adjustment_type::Builder {
         crate::model::adjustment_type::Builder::default()
     }
@@ -11932,14 +12176,19 @@ impl AdjustmentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The name of the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The type of resource. The only supported value is <code>auto-scaling-group</code>.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The tag key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The tag value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>Determines whether the tag is added to new instances as they are launched in the group.</p>
+    #[doc(hidden)]
     pub propagate_at_launch: std::option::Option<bool>,
 }
 impl Tag {
@@ -11975,11 +12224,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_id: std::option::Option<std::string::String>,
@@ -12042,7 +12290,7 @@ pub mod tag {
             self.propagate_at_launch = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 resource_id: self.resource_id,
@@ -12055,7 +12303,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -12067,24 +12315,31 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecycleHookSpecification {
     /// <p>The name of the lifecycle hook.</p>
+    #[doc(hidden)]
     pub lifecycle_hook_name: std::option::Option<std::string::String>,
-    /// <p>The state of the EC2 instance to which you want to attach the lifecycle hook. The valid values are:</p>
+    /// <p>The lifecycle transition. For Auto Scaling groups, there are two major lifecycle transitions.</p>
     /// <ul>
-    /// <li> <p>autoscaling:EC2_INSTANCE_LAUNCHING</p> </li>
-    /// <li> <p>autoscaling:EC2_INSTANCE_TERMINATING</p> </li>
+    /// <li> <p>To create a lifecycle hook for scale-out events, specify <code>autoscaling:EC2_INSTANCE_LAUNCHING</code>.</p> </li>
+    /// <li> <p>To create a lifecycle hook for scale-in events, specify <code>autoscaling:EC2_INSTANCE_TERMINATING</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub lifecycle_transition: std::option::Option<std::string::String>,
     /// <p>Additional information that you want to include any time Amazon EC2 Auto Scaling sends a message to the notification target.</p>
+    #[doc(hidden)]
     pub notification_metadata: std::option::Option<std::string::String>,
-    /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out.</p>
-    /// <p>If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the <code>DefaultResult</code> parameter. You can prevent the lifecycle hook from timing out by calling <code>RecordLifecycleActionHeartbeat</code>.</p>
+    /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out. The range is from <code>30</code> to <code>7200</code> seconds. The default value is <code>3600</code> seconds (1 hour).</p>
+    #[doc(hidden)]
     pub heartbeat_timeout: std::option::Option<i32>,
-    /// <p>Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The valid values are <code>CONTINUE</code> and <code>ABANDON</code>. The default value is <code>ABANDON</code>.</p>
+    /// <p>The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs. The default value is <code>ABANDON</code>.</p>
+    /// <p>Valid values: <code>CONTINUE</code> | <code>ABANDON</code> </p>
+    #[doc(hidden)]
     pub default_result: std::option::Option<std::string::String>,
-    /// <p>The ARN of the target that Amazon EC2 Auto Scaling sends notifications to when an instance is in the transition state for the lifecycle hook. The notification target can be either an SQS queue or an SNS topic.</p>
+    /// <p>The Amazon Resource Name (ARN) of the notification target that Amazon EC2 Auto Scaling sends notifications to when an instance is in a wait state for the lifecycle hook. You can specify an Amazon SNS topic or an Amazon SQS queue.</p>
+    #[doc(hidden)]
     pub notification_target_arn: std::option::Option<std::string::String>,
-    /// <p>The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.</p>
-    /// <p>Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue. Required for new lifecycle hooks, but optional when updating existing hooks.</p>
+    /// <p>The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target. For information about creating this role, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html#lifecycle-hook-notification-target">Configure a notification target for a lifecycle hook</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    /// <p>Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl LifecycleHookSpecification {
@@ -12092,10 +12347,10 @@ impl LifecycleHookSpecification {
     pub fn lifecycle_hook_name(&self) -> std::option::Option<&str> {
         self.lifecycle_hook_name.as_deref()
     }
-    /// <p>The state of the EC2 instance to which you want to attach the lifecycle hook. The valid values are:</p>
+    /// <p>The lifecycle transition. For Auto Scaling groups, there are two major lifecycle transitions.</p>
     /// <ul>
-    /// <li> <p>autoscaling:EC2_INSTANCE_LAUNCHING</p> </li>
-    /// <li> <p>autoscaling:EC2_INSTANCE_TERMINATING</p> </li>
+    /// <li> <p>To create a lifecycle hook for scale-out events, specify <code>autoscaling:EC2_INSTANCE_LAUNCHING</code>.</p> </li>
+    /// <li> <p>To create a lifecycle hook for scale-in events, specify <code>autoscaling:EC2_INSTANCE_TERMINATING</code>.</p> </li>
     /// </ul>
     pub fn lifecycle_transition(&self) -> std::option::Option<&str> {
         self.lifecycle_transition.as_deref()
@@ -12104,21 +12359,21 @@ impl LifecycleHookSpecification {
     pub fn notification_metadata(&self) -> std::option::Option<&str> {
         self.notification_metadata.as_deref()
     }
-    /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out.</p>
-    /// <p>If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the <code>DefaultResult</code> parameter. You can prevent the lifecycle hook from timing out by calling <code>RecordLifecycleActionHeartbeat</code>.</p>
+    /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out. The range is from <code>30</code> to <code>7200</code> seconds. The default value is <code>3600</code> seconds (1 hour).</p>
     pub fn heartbeat_timeout(&self) -> std::option::Option<i32> {
         self.heartbeat_timeout
     }
-    /// <p>Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The valid values are <code>CONTINUE</code> and <code>ABANDON</code>. The default value is <code>ABANDON</code>.</p>
+    /// <p>The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs. The default value is <code>ABANDON</code>.</p>
+    /// <p>Valid values: <code>CONTINUE</code> | <code>ABANDON</code> </p>
     pub fn default_result(&self) -> std::option::Option<&str> {
         self.default_result.as_deref()
     }
-    /// <p>The ARN of the target that Amazon EC2 Auto Scaling sends notifications to when an instance is in the transition state for the lifecycle hook. The notification target can be either an SQS queue or an SNS topic.</p>
+    /// <p>The Amazon Resource Name (ARN) of the notification target that Amazon EC2 Auto Scaling sends notifications to when an instance is in a wait state for the lifecycle hook. You can specify an Amazon SNS topic or an Amazon SQS queue.</p>
     pub fn notification_target_arn(&self) -> std::option::Option<&str> {
         self.notification_target_arn.as_deref()
     }
-    /// <p>The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.</p>
-    /// <p>Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue. Required for new lifecycle hooks, but optional when updating existing hooks.</p>
+    /// <p>The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target. For information about creating this role, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html#lifecycle-hook-notification-target">Configure a notification target for a lifecycle hook</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+    /// <p>Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue.</p>
     pub fn role_arn(&self) -> std::option::Option<&str> {
         self.role_arn.as_deref()
     }
@@ -12136,11 +12391,10 @@ impl std::fmt::Debug for LifecycleHookSpecification {
         formatter.finish()
     }
 }
-/// See [`LifecycleHookSpecification`](crate::model::LifecycleHookSpecification)
+/// See [`LifecycleHookSpecification`](crate::model::LifecycleHookSpecification).
 pub mod lifecycle_hook_specification {
 
-    /// A builder for [`LifecycleHookSpecification`](crate::model::LifecycleHookSpecification)
-    #[non_exhaustive]
+    /// A builder for [`LifecycleHookSpecification`](crate::model::LifecycleHookSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lifecycle_hook_name: std::option::Option<std::string::String>,
@@ -12165,19 +12419,19 @@ pub mod lifecycle_hook_specification {
             self.lifecycle_hook_name = input;
             self
         }
-        /// <p>The state of the EC2 instance to which you want to attach the lifecycle hook. The valid values are:</p>
+        /// <p>The lifecycle transition. For Auto Scaling groups, there are two major lifecycle transitions.</p>
         /// <ul>
-        /// <li> <p>autoscaling:EC2_INSTANCE_LAUNCHING</p> </li>
-        /// <li> <p>autoscaling:EC2_INSTANCE_TERMINATING</p> </li>
+        /// <li> <p>To create a lifecycle hook for scale-out events, specify <code>autoscaling:EC2_INSTANCE_LAUNCHING</code>.</p> </li>
+        /// <li> <p>To create a lifecycle hook for scale-in events, specify <code>autoscaling:EC2_INSTANCE_TERMINATING</code>.</p> </li>
         /// </ul>
         pub fn lifecycle_transition(mut self, input: impl Into<std::string::String>) -> Self {
             self.lifecycle_transition = Some(input.into());
             self
         }
-        /// <p>The state of the EC2 instance to which you want to attach the lifecycle hook. The valid values are:</p>
+        /// <p>The lifecycle transition. For Auto Scaling groups, there are two major lifecycle transitions.</p>
         /// <ul>
-        /// <li> <p>autoscaling:EC2_INSTANCE_LAUNCHING</p> </li>
-        /// <li> <p>autoscaling:EC2_INSTANCE_TERMINATING</p> </li>
+        /// <li> <p>To create a lifecycle hook for scale-out events, specify <code>autoscaling:EC2_INSTANCE_LAUNCHING</code>.</p> </li>
+        /// <li> <p>To create a lifecycle hook for scale-in events, specify <code>autoscaling:EC2_INSTANCE_TERMINATING</code>.</p> </li>
         /// </ul>
         pub fn set_lifecycle_transition(
             mut self,
@@ -12199,24 +12453,24 @@ pub mod lifecycle_hook_specification {
             self.notification_metadata = input;
             self
         }
-        /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out.</p>
-        /// <p>If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the <code>DefaultResult</code> parameter. You can prevent the lifecycle hook from timing out by calling <code>RecordLifecycleActionHeartbeat</code>.</p>
+        /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out. The range is from <code>30</code> to <code>7200</code> seconds. The default value is <code>3600</code> seconds (1 hour).</p>
         pub fn heartbeat_timeout(mut self, input: i32) -> Self {
             self.heartbeat_timeout = Some(input);
             self
         }
-        /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out.</p>
-        /// <p>If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the <code>DefaultResult</code> parameter. You can prevent the lifecycle hook from timing out by calling <code>RecordLifecycleActionHeartbeat</code>.</p>
+        /// <p>The maximum time, in seconds, that can elapse before the lifecycle hook times out. The range is from <code>30</code> to <code>7200</code> seconds. The default value is <code>3600</code> seconds (1 hour).</p>
         pub fn set_heartbeat_timeout(mut self, input: std::option::Option<i32>) -> Self {
             self.heartbeat_timeout = input;
             self
         }
-        /// <p>Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The valid values are <code>CONTINUE</code> and <code>ABANDON</code>. The default value is <code>ABANDON</code>.</p>
+        /// <p>The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs. The default value is <code>ABANDON</code>.</p>
+        /// <p>Valid values: <code>CONTINUE</code> | <code>ABANDON</code> </p>
         pub fn default_result(mut self, input: impl Into<std::string::String>) -> Self {
             self.default_result = Some(input.into());
             self
         }
-        /// <p>Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The valid values are <code>CONTINUE</code> and <code>ABANDON</code>. The default value is <code>ABANDON</code>.</p>
+        /// <p>The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs. The default value is <code>ABANDON</code>.</p>
+        /// <p>Valid values: <code>CONTINUE</code> | <code>ABANDON</code> </p>
         pub fn set_default_result(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -12224,12 +12478,12 @@ pub mod lifecycle_hook_specification {
             self.default_result = input;
             self
         }
-        /// <p>The ARN of the target that Amazon EC2 Auto Scaling sends notifications to when an instance is in the transition state for the lifecycle hook. The notification target can be either an SQS queue or an SNS topic.</p>
+        /// <p>The Amazon Resource Name (ARN) of the notification target that Amazon EC2 Auto Scaling sends notifications to when an instance is in a wait state for the lifecycle hook. You can specify an Amazon SNS topic or an Amazon SQS queue.</p>
         pub fn notification_target_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.notification_target_arn = Some(input.into());
             self
         }
-        /// <p>The ARN of the target that Amazon EC2 Auto Scaling sends notifications to when an instance is in the transition state for the lifecycle hook. The notification target can be either an SQS queue or an SNS topic.</p>
+        /// <p>The Amazon Resource Name (ARN) of the notification target that Amazon EC2 Auto Scaling sends notifications to when an instance is in a wait state for the lifecycle hook. You can specify an Amazon SNS topic or an Amazon SQS queue.</p>
         pub fn set_notification_target_arn(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -12237,19 +12491,19 @@ pub mod lifecycle_hook_specification {
             self.notification_target_arn = input;
             self
         }
-        /// <p>The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.</p>
-        /// <p>Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue. Required for new lifecycle hooks, but optional when updating existing hooks.</p>
+        /// <p>The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target. For information about creating this role, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html#lifecycle-hook-notification-target">Configure a notification target for a lifecycle hook</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+        /// <p>Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue.</p>
         pub fn role_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.role_arn = Some(input.into());
             self
         }
-        /// <p>The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.</p>
-        /// <p>Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue. Required for new lifecycle hooks, but optional when updating existing hooks.</p>
+        /// <p>The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target. For information about creating this role, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html#lifecycle-hook-notification-target">Configure a notification target for a lifecycle hook</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+        /// <p>Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue.</p>
         pub fn set_role_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecycleHookSpecification`](crate::model::LifecycleHookSpecification)
+        /// Consumes the builder and constructs a [`LifecycleHookSpecification`](crate::model::LifecycleHookSpecification).
         pub fn build(self) -> crate::model::LifecycleHookSpecification {
             crate::model::LifecycleHookSpecification {
                 lifecycle_hook_name: self.lifecycle_hook_name,
@@ -12264,7 +12518,7 @@ pub mod lifecycle_hook_specification {
     }
 }
 impl LifecycleHookSpecification {
-    /// Creates a new builder-style object to manufacture [`LifecycleHookSpecification`](crate::model::LifecycleHookSpecification)
+    /// Creates a new builder-style object to manufacture [`LifecycleHookSpecification`](crate::model::LifecycleHookSpecification).
     pub fn builder() -> crate::model::lifecycle_hook_specification::Builder {
         crate::model::lifecycle_hook_specification::Builder::default()
     }
@@ -12275,10 +12529,13 @@ impl LifecycleHookSpecification {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailedScheduledUpdateGroupActionRequest {
     /// <p>The name of the scheduled action.</p>
+    #[doc(hidden)]
     pub scheduled_action_name: std::option::Option<std::string::String>,
     /// <p>The error code.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The error message accompanying the error code.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl FailedScheduledUpdateGroupActionRequest {
@@ -12304,11 +12561,10 @@ impl std::fmt::Debug for FailedScheduledUpdateGroupActionRequest {
         formatter.finish()
     }
 }
-/// See [`FailedScheduledUpdateGroupActionRequest`](crate::model::FailedScheduledUpdateGroupActionRequest)
+/// See [`FailedScheduledUpdateGroupActionRequest`](crate::model::FailedScheduledUpdateGroupActionRequest).
 pub mod failed_scheduled_update_group_action_request {
 
-    /// A builder for [`FailedScheduledUpdateGroupActionRequest`](crate::model::FailedScheduledUpdateGroupActionRequest)
-    #[non_exhaustive]
+    /// A builder for [`FailedScheduledUpdateGroupActionRequest`](crate::model::FailedScheduledUpdateGroupActionRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scheduled_action_name: std::option::Option<std::string::String>,
@@ -12352,7 +12608,7 @@ pub mod failed_scheduled_update_group_action_request {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailedScheduledUpdateGroupActionRequest`](crate::model::FailedScheduledUpdateGroupActionRequest)
+        /// Consumes the builder and constructs a [`FailedScheduledUpdateGroupActionRequest`](crate::model::FailedScheduledUpdateGroupActionRequest).
         pub fn build(self) -> crate::model::FailedScheduledUpdateGroupActionRequest {
             crate::model::FailedScheduledUpdateGroupActionRequest {
                 scheduled_action_name: self.scheduled_action_name,
@@ -12363,7 +12619,7 @@ pub mod failed_scheduled_update_group_action_request {
     }
 }
 impl FailedScheduledUpdateGroupActionRequest {
-    /// Creates a new builder-style object to manufacture [`FailedScheduledUpdateGroupActionRequest`](crate::model::FailedScheduledUpdateGroupActionRequest)
+    /// Creates a new builder-style object to manufacture [`FailedScheduledUpdateGroupActionRequest`](crate::model::FailedScheduledUpdateGroupActionRequest).
     pub fn builder() -> crate::model::failed_scheduled_update_group_action_request::Builder {
         crate::model::failed_scheduled_update_group_action_request::Builder::default()
     }
@@ -12374,25 +12630,33 @@ impl FailedScheduledUpdateGroupActionRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduledUpdateGroupActionRequest {
     /// <p>The name of the scaling action.</p>
+    #[doc(hidden)]
     pub scheduled_action_name: std::option::Option<std::string::String>,
     /// <p>The date and time for the action to start, in YYYY-MM-DDThh:mm:ssZ format in UTC/GMT only and in quotes (for example, <code>"2019-06-01T00:00:00Z"</code>).</p>
     /// <p>If you specify <code>Recurrence</code> and <code>StartTime</code>, Amazon EC2 Auto Scaling performs the action at this time, and then performs the action based on the specified recurrence.</p>
     /// <p>If you try to schedule the action in the past, Amazon EC2 Auto Scaling returns an error message.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time for the recurring schedule to end, in UTC.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The recurring schedule for the action, in Unix cron syntax format. This format consists of five fields separated by white spaces: [Minute] [Hour] [Day_of_Month] [Month_of_Year] [Day_of_Week]. The value must be in quotes (for example, <code>"30 0 1 1,6,12 *"</code>). For more information about this format, see <a href="http://crontab.org">Crontab</a>.</p>
     /// <p>When <code>StartTime</code> and <code>EndTime</code> are specified with <code>Recurrence</code>, they form the boundaries of when the recurring action starts and stops.</p>
     /// <p>Cron expressions use Universal Coordinated Time (UTC) by default.</p>
+    #[doc(hidden)]
     pub recurrence: std::option::Option<std::string::String>,
     /// <p>The minimum size of the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub min_size: std::option::Option<i32>,
     /// <p>The maximum size of the Auto Scaling group.</p>
+    #[doc(hidden)]
     pub max_size: std::option::Option<i32>,
     /// <p>The desired capacity is the initial capacity of the Auto Scaling group after the scheduled action runs and the capacity it attempts to maintain.</p>
+    #[doc(hidden)]
     pub desired_capacity: std::option::Option<i32>,
     /// <p>Specifies the time zone for a cron expression. If a time zone is not provided, UTC is used by default. </p>
     /// <p>Valid values are the canonical names of the IANA time zones, derived from the IANA Time Zone Database (such as <code>Etc/GMT+9</code> or <code>Pacific/Tahiti</code>). For more information, see <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">https://en.wikipedia.org/wiki/List_of_tz_database_time_zones</a>.</p>
+    #[doc(hidden)]
     pub time_zone: std::option::Option<std::string::String>,
 }
 impl ScheduledUpdateGroupActionRequest {
@@ -12448,11 +12712,10 @@ impl std::fmt::Debug for ScheduledUpdateGroupActionRequest {
         formatter.finish()
     }
 }
-/// See [`ScheduledUpdateGroupActionRequest`](crate::model::ScheduledUpdateGroupActionRequest)
+/// See [`ScheduledUpdateGroupActionRequest`](crate::model::ScheduledUpdateGroupActionRequest).
 pub mod scheduled_update_group_action_request {
 
-    /// A builder for [`ScheduledUpdateGroupActionRequest`](crate::model::ScheduledUpdateGroupActionRequest)
-    #[non_exhaustive]
+    /// A builder for [`ScheduledUpdateGroupActionRequest`](crate::model::ScheduledUpdateGroupActionRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scheduled_action_name: std::option::Option<std::string::String>,
@@ -12564,7 +12827,7 @@ pub mod scheduled_update_group_action_request {
             self.time_zone = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduledUpdateGroupActionRequest`](crate::model::ScheduledUpdateGroupActionRequest)
+        /// Consumes the builder and constructs a [`ScheduledUpdateGroupActionRequest`](crate::model::ScheduledUpdateGroupActionRequest).
         pub fn build(self) -> crate::model::ScheduledUpdateGroupActionRequest {
             crate::model::ScheduledUpdateGroupActionRequest {
                 scheduled_action_name: self.scheduled_action_name,
@@ -12580,7 +12843,7 @@ pub mod scheduled_update_group_action_request {
     }
 }
 impl ScheduledUpdateGroupActionRequest {
-    /// Creates a new builder-style object to manufacture [`ScheduledUpdateGroupActionRequest`](crate::model::ScheduledUpdateGroupActionRequest)
+    /// Creates a new builder-style object to manufacture [`ScheduledUpdateGroupActionRequest`](crate::model::ScheduledUpdateGroupActionRequest).
     pub fn builder() -> crate::model::scheduled_update_group_action_request::Builder {
         crate::model::scheduled_update_group_action_request::Builder::default()
     }

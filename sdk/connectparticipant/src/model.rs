@@ -5,10 +5,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UploadMetadata {
     /// <p>This is the pre-signed URL that can be used for uploading the file to Amazon S3 when used in response to <a href="https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_StartAttachmentUpload.html">StartAttachmentUpload</a>.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// <p>The expiration time of the URL in ISO timestamp. It's specified in ISO 8601 format: yyyy-MM-ddThh:mm:ss.SSSZ. For example, 2019-11-08T02:41:28.172Z.</p>
+    #[doc(hidden)]
     pub url_expiry: std::option::Option<std::string::String>,
     /// <p>The headers to be provided while uploading the file to the URL.</p>
+    #[doc(hidden)]
     pub headers_to_include:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -38,11 +41,10 @@ impl std::fmt::Debug for UploadMetadata {
         formatter.finish()
     }
 }
-/// See [`UploadMetadata`](crate::model::UploadMetadata)
+/// See [`UploadMetadata`](crate::model::UploadMetadata).
 pub mod upload_metadata {
 
-    /// A builder for [`UploadMetadata`](crate::model::UploadMetadata)
-    #[non_exhaustive]
+    /// A builder for [`UploadMetadata`](crate::model::UploadMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) url: std::option::Option<std::string::String>,
@@ -97,7 +99,7 @@ pub mod upload_metadata {
             self.headers_to_include = input;
             self
         }
-        /// Consumes the builder and constructs a [`UploadMetadata`](crate::model::UploadMetadata)
+        /// Consumes the builder and constructs a [`UploadMetadata`](crate::model::UploadMetadata).
         pub fn build(self) -> crate::model::UploadMetadata {
             crate::model::UploadMetadata {
                 url: self.url,
@@ -108,7 +110,7 @@ pub mod upload_metadata {
     }
 }
 impl UploadMetadata {
-    /// Creates a new builder-style object to manufacture [`UploadMetadata`](crate::model::UploadMetadata)
+    /// Creates a new builder-style object to manufacture [`UploadMetadata`](crate::model::UploadMetadata).
     pub fn builder() -> crate::model::upload_metadata::Builder {
         crate::model::upload_metadata::Builder::default()
     }
@@ -120,22 +122,31 @@ impl UploadMetadata {
 pub struct Item {
     /// <p>The time when the message or event was sent.</p>
     /// <p>It's specified in ISO 8601 format: yyyy-MM-ddThh:mm:ss.SSSZ. For example, 2019-11-08T02:41:28.172Z.</p>
+    #[doc(hidden)]
     pub absolute_time: std::option::Option<std::string::String>,
     /// <p>The content of the message or event.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
     /// <p>The type of content of the item.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The ID of the item.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Type of the item: message or event. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ChatItemType>,
     /// <p>The ID of the sender in the session.</p>
+    #[doc(hidden)]
     pub participant_id: std::option::Option<std::string::String>,
     /// <p>The chat display name of the sender.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>The role of the sender. For example, is it a customer, agent, or system.</p>
+    #[doc(hidden)]
     pub participant_role: std::option::Option<crate::model::ParticipantRole>,
     /// <p>Provides information about the attachments.</p>
+    #[doc(hidden)]
     pub attachments: std::option::Option<std::vec::Vec<crate::model::AttachmentItem>>,
 }
 impl Item {
@@ -192,11 +203,10 @@ impl std::fmt::Debug for Item {
         formatter.finish()
     }
 }
-/// See [`Item`](crate::model::Item)
+/// See [`Item`](crate::model::Item).
 pub mod item {
 
-    /// A builder for [`Item`](crate::model::Item)
-    #[non_exhaustive]
+    /// A builder for [`Item`](crate::model::Item).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) absolute_time: std::option::Option<std::string::String>,
@@ -320,7 +330,7 @@ pub mod item {
             self.attachments = input;
             self
         }
-        /// Consumes the builder and constructs a [`Item`](crate::model::Item)
+        /// Consumes the builder and constructs a [`Item`](crate::model::Item).
         pub fn build(self) -> crate::model::Item {
             crate::model::Item {
                 absolute_time: self.absolute_time,
@@ -337,7 +347,7 @@ pub mod item {
     }
 }
 impl Item {
-    /// Creates a new builder-style object to manufacture [`Item`](crate::model::Item)
+    /// Creates a new builder-style object to manufacture [`Item`](crate::model::Item).
     pub fn builder() -> crate::model::item::Builder {
         crate::model::item::Builder::default()
     }
@@ -348,12 +358,16 @@ impl Item {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttachmentItem {
     /// <p>Describes the MIME file type of the attachment. For a list of supported file types, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html#feature-limits">Feature specifications</a> in the <i>Amazon Connect Administrator Guide</i>.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the attachment.</p>
+    #[doc(hidden)]
     pub attachment_id: std::option::Option<std::string::String>,
     /// <p>A case-sensitive name of the attachment being uploaded.</p>
+    #[doc(hidden)]
     pub attachment_name: std::option::Option<std::string::String>,
     /// <p>Status of the attachment.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ArtifactStatus>,
 }
 impl AttachmentItem {
@@ -384,11 +398,10 @@ impl std::fmt::Debug for AttachmentItem {
         formatter.finish()
     }
 }
-/// See [`AttachmentItem`](crate::model::AttachmentItem)
+/// See [`AttachmentItem`](crate::model::AttachmentItem).
 pub mod attachment_item {
 
-    /// A builder for [`AttachmentItem`](crate::model::AttachmentItem)
-    #[non_exhaustive]
+    /// A builder for [`AttachmentItem`](crate::model::AttachmentItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_type: std::option::Option<std::string::String>,
@@ -446,7 +459,7 @@ pub mod attachment_item {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttachmentItem`](crate::model::AttachmentItem)
+        /// Consumes the builder and constructs a [`AttachmentItem`](crate::model::AttachmentItem).
         pub fn build(self) -> crate::model::AttachmentItem {
             crate::model::AttachmentItem {
                 content_type: self.content_type,
@@ -458,7 +471,7 @@ pub mod attachment_item {
     }
 }
 impl AttachmentItem {
-    /// Creates a new builder-style object to manufacture [`AttachmentItem`](crate::model::AttachmentItem)
+    /// Creates a new builder-style object to manufacture [`AttachmentItem`](crate::model::AttachmentItem).
     pub fn builder() -> crate::model::attachment_item::Builder {
         crate::model::attachment_item::Builder::default()
     }
@@ -685,11 +698,14 @@ impl AsRef<str> for ChatItemType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartPosition {
     /// <p>The ID of the message or event where to start. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The time in ISO format where to start.</p>
     /// <p>It's specified in ISO 8601 format: yyyy-MM-ddThh:mm:ss.SSSZ. For example, 2019-11-08T02:41:28.172Z.</p>
+    #[doc(hidden)]
     pub absolute_time: std::option::Option<std::string::String>,
     /// <p>The start position of the most recent message where you want to start. </p>
+    #[doc(hidden)]
     pub most_recent: i32,
 }
 impl StartPosition {
@@ -716,11 +732,10 @@ impl std::fmt::Debug for StartPosition {
         formatter.finish()
     }
 }
-/// See [`StartPosition`](crate::model::StartPosition)
+/// See [`StartPosition`](crate::model::StartPosition).
 pub mod start_position {
 
-    /// A builder for [`StartPosition`](crate::model::StartPosition)
-    #[non_exhaustive]
+    /// A builder for [`StartPosition`](crate::model::StartPosition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -763,7 +778,7 @@ pub mod start_position {
             self.most_recent = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartPosition`](crate::model::StartPosition)
+        /// Consumes the builder and constructs a [`StartPosition`](crate::model::StartPosition).
         pub fn build(self) -> crate::model::StartPosition {
             crate::model::StartPosition {
                 id: self.id,
@@ -774,7 +789,7 @@ pub mod start_position {
     }
 }
 impl StartPosition {
-    /// Creates a new builder-style object to manufacture [`StartPosition`](crate::model::StartPosition)
+    /// Creates a new builder-style object to manufacture [`StartPosition`](crate::model::StartPosition).
     pub fn builder() -> crate::model::start_position::Builder {
         crate::model::start_position::Builder::default()
     }
@@ -895,9 +910,11 @@ impl AsRef<str> for ScanDirection {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectionCredentials {
     /// <p>The connection token.</p>
+    #[doc(hidden)]
     pub connection_token: std::option::Option<std::string::String>,
     /// <p>The expiration of the token.</p>
     /// <p>It's specified in ISO 8601 format: yyyy-MM-ddThh:mm:ss.SSSZ. For example, 2019-11-08T02:41:28.172Z.</p>
+    #[doc(hidden)]
     pub expiry: std::option::Option<std::string::String>,
 }
 impl ConnectionCredentials {
@@ -919,11 +936,10 @@ impl std::fmt::Debug for ConnectionCredentials {
         formatter.finish()
     }
 }
-/// See [`ConnectionCredentials`](crate::model::ConnectionCredentials)
+/// See [`ConnectionCredentials`](crate::model::ConnectionCredentials).
 pub mod connection_credentials {
 
-    /// A builder for [`ConnectionCredentials`](crate::model::ConnectionCredentials)
-    #[non_exhaustive]
+    /// A builder for [`ConnectionCredentials`](crate::model::ConnectionCredentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connection_token: std::option::Option<std::string::String>,
@@ -955,7 +971,7 @@ pub mod connection_credentials {
             self.expiry = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectionCredentials`](crate::model::ConnectionCredentials)
+        /// Consumes the builder and constructs a [`ConnectionCredentials`](crate::model::ConnectionCredentials).
         pub fn build(self) -> crate::model::ConnectionCredentials {
             crate::model::ConnectionCredentials {
                 connection_token: self.connection_token,
@@ -965,7 +981,7 @@ pub mod connection_credentials {
     }
 }
 impl ConnectionCredentials {
-    /// Creates a new builder-style object to manufacture [`ConnectionCredentials`](crate::model::ConnectionCredentials)
+    /// Creates a new builder-style object to manufacture [`ConnectionCredentials`](crate::model::ConnectionCredentials).
     pub fn builder() -> crate::model::connection_credentials::Builder {
         crate::model::connection_credentials::Builder::default()
     }
@@ -976,9 +992,11 @@ impl ConnectionCredentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Websocket {
     /// <p>The URL of the websocket.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// <p>The URL expiration timestamp in ISO date format.</p>
     /// <p>It's specified in ISO 8601 format: yyyy-MM-ddThh:mm:ss.SSSZ. For example, 2019-11-08T02:41:28.172Z.</p>
+    #[doc(hidden)]
     pub connection_expiry: std::option::Option<std::string::String>,
 }
 impl Websocket {
@@ -1000,11 +1018,10 @@ impl std::fmt::Debug for Websocket {
         formatter.finish()
     }
 }
-/// See [`Websocket`](crate::model::Websocket)
+/// See [`Websocket`](crate::model::Websocket).
 pub mod websocket {
 
-    /// A builder for [`Websocket`](crate::model::Websocket)
-    #[non_exhaustive]
+    /// A builder for [`Websocket`](crate::model::Websocket).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) url: std::option::Option<std::string::String>,
@@ -1036,7 +1053,7 @@ pub mod websocket {
             self.connection_expiry = input;
             self
         }
-        /// Consumes the builder and constructs a [`Websocket`](crate::model::Websocket)
+        /// Consumes the builder and constructs a [`Websocket`](crate::model::Websocket).
         pub fn build(self) -> crate::model::Websocket {
             crate::model::Websocket {
                 url: self.url,
@@ -1046,7 +1063,7 @@ pub mod websocket {
     }
 }
 impl Websocket {
-    /// Creates a new builder-style object to manufacture [`Websocket`](crate::model::Websocket)
+    /// Creates a new builder-style object to manufacture [`Websocket`](crate::model::Websocket).
     pub fn builder() -> crate::model::websocket::Builder {
         crate::model::websocket::Builder::default()
     }

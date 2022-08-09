@@ -4,10 +4,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutObjectOutput {
     /// <p>The SHA256 digest of the object that is persisted.</p>
+    #[doc(hidden)]
     pub content_sha256: std::option::Option<std::string::String>,
     /// <p>Unique identifier of the object in the container.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
     /// <p>The storage class where the object was persisted. The class should be “Temporal”.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::StorageClass>,
 }
 impl PutObjectOutput {
@@ -33,11 +36,10 @@ impl std::fmt::Debug for PutObjectOutput {
         formatter.finish()
     }
 }
-/// See [`PutObjectOutput`](crate::output::PutObjectOutput)
+/// See [`PutObjectOutput`](crate::output::PutObjectOutput).
 pub mod put_object_output {
 
-    /// A builder for [`PutObjectOutput`](crate::output::PutObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutObjectOutput`](crate::output::PutObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_sha256: std::option::Option<std::string::String>,
@@ -81,7 +83,7 @@ pub mod put_object_output {
             self.storage_class = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutObjectOutput`](crate::output::PutObjectOutput)
+        /// Consumes the builder and constructs a [`PutObjectOutput`](crate::output::PutObjectOutput).
         pub fn build(self) -> crate::output::PutObjectOutput {
             crate::output::PutObjectOutput {
                 content_sha256: self.content_sha256,
@@ -92,7 +94,7 @@ pub mod put_object_output {
     }
 }
 impl PutObjectOutput {
-    /// Creates a new builder-style object to manufacture [`PutObjectOutput`](crate::output::PutObjectOutput)
+    /// Creates a new builder-style object to manufacture [`PutObjectOutput`](crate::output::PutObjectOutput).
     pub fn builder() -> crate::output::put_object_output::Builder {
         crate::output::put_object_output::Builder::default()
     }
@@ -103,8 +105,10 @@ impl PutObjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListItemsOutput {
     /// <p>The metadata entries for the folders and objects at the requested path.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::Item>>,
     /// <p>The token that can be used in a request to view the next set of results. For example, you submit a <code>ListItems</code> request that matches 2,000 items with <code>MaxResults</code> set at 500. The service returns the first batch of results (up to 500) and a <code>NextToken</code> value that can be used to fetch the next batch of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListItemsOutput {
@@ -125,11 +129,10 @@ impl std::fmt::Debug for ListItemsOutput {
         formatter.finish()
     }
 }
-/// See [`ListItemsOutput`](crate::output::ListItemsOutput)
+/// See [`ListItemsOutput`](crate::output::ListItemsOutput).
 pub mod list_items_output {
 
-    /// A builder for [`ListItemsOutput`](crate::output::ListItemsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListItemsOutput`](crate::output::ListItemsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::Item>>,
@@ -165,7 +168,7 @@ pub mod list_items_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListItemsOutput`](crate::output::ListItemsOutput)
+        /// Consumes the builder and constructs a [`ListItemsOutput`](crate::output::ListItemsOutput).
         pub fn build(self) -> crate::output::ListItemsOutput {
             crate::output::ListItemsOutput {
                 items: self.items,
@@ -175,7 +178,7 @@ pub mod list_items_output {
     }
 }
 impl ListItemsOutput {
-    /// Creates a new builder-style object to manufacture [`ListItemsOutput`](crate::output::ListItemsOutput)
+    /// Creates a new builder-style object to manufacture [`ListItemsOutput`](crate::output::ListItemsOutput).
     pub fn builder() -> crate::output::list_items_output::Builder {
         crate::output::list_items_output::Builder::default()
     }
@@ -188,18 +191,25 @@ pub struct GetObjectOutput {
     pub body: aws_smithy_http::byte_stream::ByteStream,
     /// <p>An optional <code>CacheControl</code> header that allows the caller to control the object's cache behavior. Headers can be passed in as specified in the HTTP spec at <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9</a>.</p>
     /// <p>Headers with a custom user-defined value are also accepted.</p>
+    #[doc(hidden)]
     pub cache_control: std::option::Option<std::string::String>,
     /// <p>The range of bytes to retrieve.</p>
+    #[doc(hidden)]
     pub content_range: std::option::Option<std::string::String>,
     /// <p>The length of the object in bytes.</p>
+    #[doc(hidden)]
     pub content_length: std::option::Option<i64>,
     /// <p>The content type of the object.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The ETag that represents a unique instance of the object.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
     /// <p>The date and time that the object was last modified.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The HTML status code of the request. Status codes ranging from 200 to 299 indicate success. All other status codes indicate the type of error that occurred.</p>
+    #[doc(hidden)]
     pub status_code: i32,
 }
 impl GetObjectOutput {
@@ -251,11 +261,10 @@ impl std::fmt::Debug for GetObjectOutput {
         formatter.finish()
     }
 }
-/// See [`GetObjectOutput`](crate::output::GetObjectOutput)
+/// See [`GetObjectOutput`](crate::output::GetObjectOutput).
 pub mod get_object_output {
 
-    /// A builder for [`GetObjectOutput`](crate::output::GetObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetObjectOutput`](crate::output::GetObjectOutput).
     #[derive(std::default::Default, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body: std::option::Option<aws_smithy_http::byte_stream::ByteStream>,
@@ -362,7 +371,7 @@ pub mod get_object_output {
             self.status_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetObjectOutput`](crate::output::GetObjectOutput)
+        /// Consumes the builder and constructs a [`GetObjectOutput`](crate::output::GetObjectOutput).
         pub fn build(self) -> crate::output::GetObjectOutput {
             crate::output::GetObjectOutput {
                 body: self.body.unwrap_or_default(),
@@ -378,7 +387,7 @@ pub mod get_object_output {
     }
 }
 impl GetObjectOutput {
-    /// Creates a new builder-style object to manufacture [`GetObjectOutput`](crate::output::GetObjectOutput)
+    /// Creates a new builder-style object to manufacture [`GetObjectOutput`](crate::output::GetObjectOutput).
     pub fn builder() -> crate::output::get_object_output::Builder {
         crate::output::get_object_output::Builder::default()
     }
@@ -389,15 +398,20 @@ impl GetObjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeObjectOutput {
     /// <p>The ETag that represents a unique instance of the object.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
     /// <p>The content type of the object.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The length of the object in bytes.</p>
+    #[doc(hidden)]
     pub content_length: std::option::Option<i64>,
     /// <p>An optional <code>CacheControl</code> header that allows the caller to control the object's cache behavior. Headers can be passed in as specified in the HTTP at <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9</a>.</p>
     /// <p>Headers with a custom user-defined value are also accepted.</p>
+    #[doc(hidden)]
     pub cache_control: std::option::Option<std::string::String>,
     /// <p>The date and time that the object was last modified.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeObjectOutput {
@@ -434,11 +448,10 @@ impl std::fmt::Debug for DescribeObjectOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeObjectOutput`](crate::output::DescribeObjectOutput)
+/// See [`DescribeObjectOutput`](crate::output::DescribeObjectOutput).
 pub mod describe_object_output {
 
-    /// A builder for [`DescribeObjectOutput`](crate::output::DescribeObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeObjectOutput`](crate::output::DescribeObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) e_tag: std::option::Option<std::string::String>,
@@ -506,7 +519,7 @@ pub mod describe_object_output {
             self.last_modified = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeObjectOutput`](crate::output::DescribeObjectOutput)
+        /// Consumes the builder and constructs a [`DescribeObjectOutput`](crate::output::DescribeObjectOutput).
         pub fn build(self) -> crate::output::DescribeObjectOutput {
             crate::output::DescribeObjectOutput {
                 e_tag: self.e_tag,
@@ -519,7 +532,7 @@ pub mod describe_object_output {
     }
 }
 impl DescribeObjectOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeObjectOutput`](crate::output::DescribeObjectOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeObjectOutput`](crate::output::DescribeObjectOutput).
     pub fn builder() -> crate::output::describe_object_output::Builder {
         crate::output::describe_object_output::Builder::default()
     }
@@ -535,22 +548,21 @@ impl std::fmt::Debug for DeleteObjectOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteObjectOutput`](crate::output::DeleteObjectOutput)
+/// See [`DeleteObjectOutput`](crate::output::DeleteObjectOutput).
 pub mod delete_object_output {
 
-    /// A builder for [`DeleteObjectOutput`](crate::output::DeleteObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteObjectOutput`](crate::output::DeleteObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteObjectOutput`](crate::output::DeleteObjectOutput)
+        /// Consumes the builder and constructs a [`DeleteObjectOutput`](crate::output::DeleteObjectOutput).
         pub fn build(self) -> crate::output::DeleteObjectOutput {
             crate::output::DeleteObjectOutput {}
         }
     }
 }
 impl DeleteObjectOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteObjectOutput`](crate::output::DeleteObjectOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteObjectOutput`](crate::output::DeleteObjectOutput).
     pub fn builder() -> crate::output::delete_object_output::Builder {
         crate::output::delete_object_output::Builder::default()
     }

@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateProfileOutput {
     /// <p>The unique identifier of a customer profile.</p>
+    #[doc(hidden)]
     pub profile_id: std::option::Option<std::string::String>,
 }
 impl UpdateProfileOutput {
@@ -19,11 +20,10 @@ impl std::fmt::Debug for UpdateProfileOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateProfileOutput`](crate::output::UpdateProfileOutput)
+/// See [`UpdateProfileOutput`](crate::output::UpdateProfileOutput).
 pub mod update_profile_output {
 
-    /// A builder for [`UpdateProfileOutput`](crate::output::UpdateProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateProfileOutput`](crate::output::UpdateProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) profile_id: std::option::Option<std::string::String>,
@@ -39,7 +39,7 @@ pub mod update_profile_output {
             self.profile_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateProfileOutput`](crate::output::UpdateProfileOutput)
+        /// Consumes the builder and constructs a [`UpdateProfileOutput`](crate::output::UpdateProfileOutput).
         pub fn build(self) -> crate::output::UpdateProfileOutput {
             crate::output::UpdateProfileOutput {
                 profile_id: self.profile_id,
@@ -48,7 +48,7 @@ pub mod update_profile_output {
     }
 }
 impl UpdateProfileOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateProfileOutput`](crate::output::UpdateProfileOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateProfileOutput`](crate::output::UpdateProfileOutput).
     pub fn builder() -> crate::output::update_profile_output::Builder {
         crate::output::update_profile_output::Builder::default()
     }
@@ -59,21 +59,29 @@ impl UpdateProfileOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDomainOutput {
     /// <p>The unique name of the domain.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The default number of days until the data within the domain expires.</p>
+    #[doc(hidden)]
     pub default_expiration_days: std::option::Option<i32>,
     /// <p>The default encryption key, which is an AWS managed key, is used when no specific type of encryption key is specified. It is used to encrypt all data before it is placed in permanent or semi-permanent storage.</p>
+    #[doc(hidden)]
     pub default_encryption_key: std::option::Option<std::string::String>,
     /// <p>The URL of the SQS dead letter queue, which is used for reporting errors associated with ingesting data from third party applications.</p>
+    #[doc(hidden)]
     pub dead_letter_queue_url: std::option::Option<std::string::String>,
     /// <p>The process of matching duplicate profiles. If <code>Matching</code> = <code>true</code>, Amazon Connect Customer Profiles starts a weekly batch process called Identity Resolution Job. If you do not specify a date and time for Identity Resolution Job to run, by default it runs every Saturday at 12AM UTC to detect duplicate profiles in your domains. </p>
     /// <p>After the Identity Resolution Job completes, use the <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">GetMatches</a> API to return and review the results. Or, if you have configured <code>ExportingConfig</code> in the <code>MatchingRequest</code>, you can download the results from S3.</p>
+    #[doc(hidden)]
     pub matching: std::option::Option<crate::model::MatchingResponse>,
     /// <p>The timestamp of when the domain was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of when the domain was most recently edited.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -129,11 +137,10 @@ impl std::fmt::Debug for UpdateDomainOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDomainOutput`](crate::output::UpdateDomainOutput)
+/// See [`UpdateDomainOutput`](crate::output::UpdateDomainOutput).
 pub mod update_domain_output {
 
-    /// A builder for [`UpdateDomainOutput`](crate::output::UpdateDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateDomainOutput`](crate::output::UpdateDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -260,7 +267,7 @@ pub mod update_domain_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateDomainOutput`](crate::output::UpdateDomainOutput)
+        /// Consumes the builder and constructs a [`UpdateDomainOutput`](crate::output::UpdateDomainOutput).
         pub fn build(self) -> crate::output::UpdateDomainOutput {
             crate::output::UpdateDomainOutput {
                 domain_name: self.domain_name,
@@ -276,7 +283,7 @@ pub mod update_domain_output {
     }
 }
 impl UpdateDomainOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDomainOutput`](crate::output::UpdateDomainOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDomainOutput`](crate::output::UpdateDomainOutput).
     pub fn builder() -> crate::output::update_domain_output::Builder {
         crate::output::update_domain_output::Builder::default()
     }
@@ -292,22 +299,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -323,22 +329,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -349,8 +354,10 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchProfilesOutput {
     /// <p>The list of SearchProfiles instances.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::Profile>>,
     /// <p>The pagination token from the previous SearchProfiles API call.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl SearchProfilesOutput {
@@ -371,11 +378,10 @@ impl std::fmt::Debug for SearchProfilesOutput {
         formatter.finish()
     }
 }
-/// See [`SearchProfilesOutput`](crate::output::SearchProfilesOutput)
+/// See [`SearchProfilesOutput`](crate::output::SearchProfilesOutput).
 pub mod search_profiles_output {
 
-    /// A builder for [`SearchProfilesOutput`](crate::output::SearchProfilesOutput)
-    #[non_exhaustive]
+    /// A builder for [`SearchProfilesOutput`](crate::output::SearchProfilesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::Profile>>,
@@ -411,7 +417,7 @@ pub mod search_profiles_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchProfilesOutput`](crate::output::SearchProfilesOutput)
+        /// Consumes the builder and constructs a [`SearchProfilesOutput`](crate::output::SearchProfilesOutput).
         pub fn build(self) -> crate::output::SearchProfilesOutput {
             crate::output::SearchProfilesOutput {
                 items: self.items,
@@ -421,7 +427,7 @@ pub mod search_profiles_output {
     }
 }
 impl SearchProfilesOutput {
-    /// Creates a new builder-style object to manufacture [`SearchProfilesOutput`](crate::output::SearchProfilesOutput)
+    /// Creates a new builder-style object to manufacture [`SearchProfilesOutput`](crate::output::SearchProfilesOutput).
     pub fn builder() -> crate::output::search_profiles_output::Builder {
         crate::output::search_profiles_output::Builder::default()
     }
@@ -432,32 +438,44 @@ impl SearchProfilesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutProfileObjectTypeOutput {
     /// <p>The name of the profile object type.</p>
+    #[doc(hidden)]
     pub object_type_name: std::option::Option<std::string::String>,
     /// <p>Description of the profile object type.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the object template.</p>
+    #[doc(hidden)]
     pub template_id: std::option::Option<std::string::String>,
     /// <p>The number of days until the data in the object expires.</p>
+    #[doc(hidden)]
     pub expiration_days: std::option::Option<i32>,
     /// <p>The customer-provided key to encrypt the profile object that will be created in this profile object type.</p>
+    #[doc(hidden)]
     pub encryption_key: std::option::Option<std::string::String>,
     /// <p>Indicates whether a profile should be created when data is received if one doesn’t exist for an object of this type. The default is <code>FALSE</code>. If the AllowProfileCreation flag is set to <code>FALSE</code>, then the service tries to fetch a standard profile and associate this object with the profile. If it is set to <code>TRUE</code>, and if no match is found, then the service creates a new standard profile.</p>
+    #[doc(hidden)]
     pub allow_profile_creation: bool,
     /// <p>The format of your <code>sourceLastUpdatedTimestamp</code> that was previously set up in fields that were parsed using <a href="https://docs.oracle.com/javase/10/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a>. If you have <code>sourceLastUpdatedTimestamp</code> in your field, you must set up <code>sourceLastUpdatedTimestampFormat</code>.</p>
+    #[doc(hidden)]
     pub source_last_updated_timestamp_format: std::option::Option<std::string::String>,
     /// <p>A map of the name and ObjectType field.</p>
+    #[doc(hidden)]
     pub fields: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ObjectTypeField>,
     >,
     /// <p>A list of unique keys that can be used to map data to the profile.</p>
+    #[doc(hidden)]
     pub keys: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<crate::model::ObjectTypeKey>>,
     >,
     /// <p>The timestamp of when the domain was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of when the domain was most recently edited.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -543,11 +561,10 @@ impl std::fmt::Debug for PutProfileObjectTypeOutput {
         formatter.finish()
     }
 }
-/// See [`PutProfileObjectTypeOutput`](crate::output::PutProfileObjectTypeOutput)
+/// See [`PutProfileObjectTypeOutput`](crate::output::PutProfileObjectTypeOutput).
 pub mod put_profile_object_type_output {
 
-    /// A builder for [`PutProfileObjectTypeOutput`](crate::output::PutProfileObjectTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutProfileObjectTypeOutput`](crate::output::PutProfileObjectTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_type_name: std::option::Option<std::string::String>,
@@ -759,7 +776,7 @@ pub mod put_profile_object_type_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutProfileObjectTypeOutput`](crate::output::PutProfileObjectTypeOutput)
+        /// Consumes the builder and constructs a [`PutProfileObjectTypeOutput`](crate::output::PutProfileObjectTypeOutput).
         pub fn build(self) -> crate::output::PutProfileObjectTypeOutput {
             crate::output::PutProfileObjectTypeOutput {
                 object_type_name: self.object_type_name,
@@ -779,7 +796,7 @@ pub mod put_profile_object_type_output {
     }
 }
 impl PutProfileObjectTypeOutput {
-    /// Creates a new builder-style object to manufacture [`PutProfileObjectTypeOutput`](crate::output::PutProfileObjectTypeOutput)
+    /// Creates a new builder-style object to manufacture [`PutProfileObjectTypeOutput`](crate::output::PutProfileObjectTypeOutput).
     pub fn builder() -> crate::output::put_profile_object_type_output::Builder {
         crate::output::put_profile_object_type_output::Builder::default()
     }
@@ -790,6 +807,7 @@ impl PutProfileObjectTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutProfileObjectOutput {
     /// <p>The unique identifier of the profile object generated by the service.</p>
+    #[doc(hidden)]
     pub profile_object_unique_key: std::option::Option<std::string::String>,
 }
 impl PutProfileObjectOutput {
@@ -805,11 +823,10 @@ impl std::fmt::Debug for PutProfileObjectOutput {
         formatter.finish()
     }
 }
-/// See [`PutProfileObjectOutput`](crate::output::PutProfileObjectOutput)
+/// See [`PutProfileObjectOutput`](crate::output::PutProfileObjectOutput).
 pub mod put_profile_object_output {
 
-    /// A builder for [`PutProfileObjectOutput`](crate::output::PutProfileObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutProfileObjectOutput`](crate::output::PutProfileObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) profile_object_unique_key: std::option::Option<std::string::String>,
@@ -828,7 +845,7 @@ pub mod put_profile_object_output {
             self.profile_object_unique_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutProfileObjectOutput`](crate::output::PutProfileObjectOutput)
+        /// Consumes the builder and constructs a [`PutProfileObjectOutput`](crate::output::PutProfileObjectOutput).
         pub fn build(self) -> crate::output::PutProfileObjectOutput {
             crate::output::PutProfileObjectOutput {
                 profile_object_unique_key: self.profile_object_unique_key,
@@ -837,7 +854,7 @@ pub mod put_profile_object_output {
     }
 }
 impl PutProfileObjectOutput {
-    /// Creates a new builder-style object to manufacture [`PutProfileObjectOutput`](crate::output::PutProfileObjectOutput)
+    /// Creates a new builder-style object to manufacture [`PutProfileObjectOutput`](crate::output::PutProfileObjectOutput).
     pub fn builder() -> crate::output::put_profile_object_output::Builder {
         crate::output::put_profile_object_output::Builder::default()
     }
@@ -848,22 +865,30 @@ impl PutProfileObjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutIntegrationOutput {
     /// <p>The unique name of the domain.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The URI of the S3 bucket or any other type of data source.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
     /// <p>The name of the profile object type.</p>
+    #[doc(hidden)]
     pub object_type_name: std::option::Option<std::string::String>,
     /// <p>The timestamp of when the domain was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of when the domain was most recently edited.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A map in which each key is an event type from an external application such as Segment or Shopify, and each value is an <code>ObjectTypeName</code> (template) used to ingest the event. It supports the following event types: <code>SegmentIdentify</code>, <code>ShopifyCreateCustomers</code>, <code>ShopifyUpdateCustomers</code>, <code>ShopifyCreateDraftOrders</code>, <code>ShopifyUpdateDraftOrders</code>, <code>ShopifyCreateOrders</code>, and <code>ShopifyUpdatedOrders</code>.</p>
+    #[doc(hidden)]
     pub object_type_names:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Unique identifier for the workflow.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
 }
 impl PutIntegrationOutput {
@@ -920,11 +945,10 @@ impl std::fmt::Debug for PutIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`PutIntegrationOutput`](crate::output::PutIntegrationOutput)
+/// See [`PutIntegrationOutput`](crate::output::PutIntegrationOutput).
 pub mod put_integration_output {
 
-    /// A builder for [`PutIntegrationOutput`](crate::output::PutIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutIntegrationOutput`](crate::output::PutIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -1060,7 +1084,7 @@ pub mod put_integration_output {
             self.workflow_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutIntegrationOutput`](crate::output::PutIntegrationOutput)
+        /// Consumes the builder and constructs a [`PutIntegrationOutput`](crate::output::PutIntegrationOutput).
         pub fn build(self) -> crate::output::PutIntegrationOutput {
             crate::output::PutIntegrationOutput {
                 domain_name: self.domain_name,
@@ -1076,7 +1100,7 @@ pub mod put_integration_output {
     }
 }
 impl PutIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`PutIntegrationOutput`](crate::output::PutIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`PutIntegrationOutput`](crate::output::PutIntegrationOutput).
     pub fn builder() -> crate::output::put_integration_output::Builder {
         crate::output::put_integration_output::Builder::default()
     }
@@ -1087,6 +1111,7 @@ impl PutIntegrationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MergeProfilesOutput {
     /// <p>A message that indicates the merge request is complete.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl MergeProfilesOutput {
@@ -1102,11 +1127,10 @@ impl std::fmt::Debug for MergeProfilesOutput {
         formatter.finish()
     }
 }
-/// See [`MergeProfilesOutput`](crate::output::MergeProfilesOutput)
+/// See [`MergeProfilesOutput`](crate::output::MergeProfilesOutput).
 pub mod merge_profiles_output {
 
-    /// A builder for [`MergeProfilesOutput`](crate::output::MergeProfilesOutput)
-    #[non_exhaustive]
+    /// A builder for [`MergeProfilesOutput`](crate::output::MergeProfilesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -1122,7 +1146,7 @@ pub mod merge_profiles_output {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`MergeProfilesOutput`](crate::output::MergeProfilesOutput)
+        /// Consumes the builder and constructs a [`MergeProfilesOutput`](crate::output::MergeProfilesOutput).
         pub fn build(self) -> crate::output::MergeProfilesOutput {
             crate::output::MergeProfilesOutput {
                 message: self.message,
@@ -1131,7 +1155,7 @@ pub mod merge_profiles_output {
     }
 }
 impl MergeProfilesOutput {
-    /// Creates a new builder-style object to manufacture [`MergeProfilesOutput`](crate::output::MergeProfilesOutput)
+    /// Creates a new builder-style object to manufacture [`MergeProfilesOutput`](crate::output::MergeProfilesOutput).
     pub fn builder() -> crate::output::merge_profiles_output::Builder {
         crate::output::merge_profiles_output::Builder::default()
     }
@@ -1142,8 +1166,10 @@ impl MergeProfilesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListWorkflowsOutput {
     /// <p>List containing workflow details.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::ListWorkflowsItem>>,
     /// <p>If there are additional results, this is the token for the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListWorkflowsOutput {
@@ -1164,11 +1190,10 @@ impl std::fmt::Debug for ListWorkflowsOutput {
         formatter.finish()
     }
 }
-/// See [`ListWorkflowsOutput`](crate::output::ListWorkflowsOutput)
+/// See [`ListWorkflowsOutput`](crate::output::ListWorkflowsOutput).
 pub mod list_workflows_output {
 
-    /// A builder for [`ListWorkflowsOutput`](crate::output::ListWorkflowsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListWorkflowsOutput`](crate::output::ListWorkflowsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::ListWorkflowsItem>>,
@@ -1204,7 +1229,7 @@ pub mod list_workflows_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListWorkflowsOutput`](crate::output::ListWorkflowsOutput)
+        /// Consumes the builder and constructs a [`ListWorkflowsOutput`](crate::output::ListWorkflowsOutput).
         pub fn build(self) -> crate::output::ListWorkflowsOutput {
             crate::output::ListWorkflowsOutput {
                 items: self.items,
@@ -1214,7 +1239,7 @@ pub mod list_workflows_output {
     }
 }
 impl ListWorkflowsOutput {
-    /// Creates a new builder-style object to manufacture [`ListWorkflowsOutput`](crate::output::ListWorkflowsOutput)
+    /// Creates a new builder-style object to manufacture [`ListWorkflowsOutput`](crate::output::ListWorkflowsOutput).
     pub fn builder() -> crate::output::list_workflows_output::Builder {
         crate::output::list_workflows_output::Builder::default()
     }
@@ -1225,6 +1250,7 @@ impl ListWorkflowsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1244,11 +1270,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -1281,14 +1306,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -1299,8 +1324,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListProfileObjectTypeTemplatesOutput {
     /// <p>The list of ListProfileObjectType template instances.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::ListProfileObjectTypeTemplateItem>>,
     /// <p>The pagination token from the previous ListObjectTypeTemplates API call. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListProfileObjectTypeTemplatesOutput {
@@ -1321,11 +1348,10 @@ impl std::fmt::Debug for ListProfileObjectTypeTemplatesOutput {
         formatter.finish()
     }
 }
-/// See [`ListProfileObjectTypeTemplatesOutput`](crate::output::ListProfileObjectTypeTemplatesOutput)
+/// See [`ListProfileObjectTypeTemplatesOutput`](crate::output::ListProfileObjectTypeTemplatesOutput).
 pub mod list_profile_object_type_templates_output {
 
-    /// A builder for [`ListProfileObjectTypeTemplatesOutput`](crate::output::ListProfileObjectTypeTemplatesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListProfileObjectTypeTemplatesOutput`](crate::output::ListProfileObjectTypeTemplatesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items:
@@ -1364,7 +1390,7 @@ pub mod list_profile_object_type_templates_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListProfileObjectTypeTemplatesOutput`](crate::output::ListProfileObjectTypeTemplatesOutput)
+        /// Consumes the builder and constructs a [`ListProfileObjectTypeTemplatesOutput`](crate::output::ListProfileObjectTypeTemplatesOutput).
         pub fn build(self) -> crate::output::ListProfileObjectTypeTemplatesOutput {
             crate::output::ListProfileObjectTypeTemplatesOutput {
                 items: self.items,
@@ -1374,7 +1400,7 @@ pub mod list_profile_object_type_templates_output {
     }
 }
 impl ListProfileObjectTypeTemplatesOutput {
-    /// Creates a new builder-style object to manufacture [`ListProfileObjectTypeTemplatesOutput`](crate::output::ListProfileObjectTypeTemplatesOutput)
+    /// Creates a new builder-style object to manufacture [`ListProfileObjectTypeTemplatesOutput`](crate::output::ListProfileObjectTypeTemplatesOutput).
     pub fn builder() -> crate::output::list_profile_object_type_templates_output::Builder {
         crate::output::list_profile_object_type_templates_output::Builder::default()
     }
@@ -1385,8 +1411,10 @@ impl ListProfileObjectTypeTemplatesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListProfileObjectTypesOutput {
     /// <p>The list of ListProfileObjectTypes instances.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::ListProfileObjectTypeItem>>,
     /// <p>Identifies the next page of results to return.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListProfileObjectTypesOutput {
@@ -1407,11 +1435,10 @@ impl std::fmt::Debug for ListProfileObjectTypesOutput {
         formatter.finish()
     }
 }
-/// See [`ListProfileObjectTypesOutput`](crate::output::ListProfileObjectTypesOutput)
+/// See [`ListProfileObjectTypesOutput`](crate::output::ListProfileObjectTypesOutput).
 pub mod list_profile_object_types_output {
 
-    /// A builder for [`ListProfileObjectTypesOutput`](crate::output::ListProfileObjectTypesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListProfileObjectTypesOutput`](crate::output::ListProfileObjectTypesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items:
@@ -1448,7 +1475,7 @@ pub mod list_profile_object_types_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListProfileObjectTypesOutput`](crate::output::ListProfileObjectTypesOutput)
+        /// Consumes the builder and constructs a [`ListProfileObjectTypesOutput`](crate::output::ListProfileObjectTypesOutput).
         pub fn build(self) -> crate::output::ListProfileObjectTypesOutput {
             crate::output::ListProfileObjectTypesOutput {
                 items: self.items,
@@ -1458,7 +1485,7 @@ pub mod list_profile_object_types_output {
     }
 }
 impl ListProfileObjectTypesOutput {
-    /// Creates a new builder-style object to manufacture [`ListProfileObjectTypesOutput`](crate::output::ListProfileObjectTypesOutput)
+    /// Creates a new builder-style object to manufacture [`ListProfileObjectTypesOutput`](crate::output::ListProfileObjectTypesOutput).
     pub fn builder() -> crate::output::list_profile_object_types_output::Builder {
         crate::output::list_profile_object_types_output::Builder::default()
     }
@@ -1469,8 +1496,10 @@ impl ListProfileObjectTypesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListProfileObjectsOutput {
     /// <p>The list of ListProfileObject instances.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::ListProfileObjectsItem>>,
     /// <p>The pagination token from the previous call to ListProfileObjects.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListProfileObjectsOutput {
@@ -1491,11 +1520,10 @@ impl std::fmt::Debug for ListProfileObjectsOutput {
         formatter.finish()
     }
 }
-/// See [`ListProfileObjectsOutput`](crate::output::ListProfileObjectsOutput)
+/// See [`ListProfileObjectsOutput`](crate::output::ListProfileObjectsOutput).
 pub mod list_profile_objects_output {
 
-    /// A builder for [`ListProfileObjectsOutput`](crate::output::ListProfileObjectsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListProfileObjectsOutput`](crate::output::ListProfileObjectsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::ListProfileObjectsItem>>,
@@ -1531,7 +1559,7 @@ pub mod list_profile_objects_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListProfileObjectsOutput`](crate::output::ListProfileObjectsOutput)
+        /// Consumes the builder and constructs a [`ListProfileObjectsOutput`](crate::output::ListProfileObjectsOutput).
         pub fn build(self) -> crate::output::ListProfileObjectsOutput {
             crate::output::ListProfileObjectsOutput {
                 items: self.items,
@@ -1541,7 +1569,7 @@ pub mod list_profile_objects_output {
     }
 }
 impl ListProfileObjectsOutput {
-    /// Creates a new builder-style object to manufacture [`ListProfileObjectsOutput`](crate::output::ListProfileObjectsOutput)
+    /// Creates a new builder-style object to manufacture [`ListProfileObjectsOutput`](crate::output::ListProfileObjectsOutput).
     pub fn builder() -> crate::output::list_profile_objects_output::Builder {
         crate::output::list_profile_objects_output::Builder::default()
     }
@@ -1552,8 +1580,10 @@ impl ListProfileObjectsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListIntegrationsOutput {
     /// <p>The list of ListIntegrations instances.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::ListIntegrationItem>>,
     /// <p>The pagination token from the previous ListIntegrations API call.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListIntegrationsOutput {
@@ -1574,11 +1604,10 @@ impl std::fmt::Debug for ListIntegrationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListIntegrationsOutput`](crate::output::ListIntegrationsOutput)
+/// See [`ListIntegrationsOutput`](crate::output::ListIntegrationsOutput).
 pub mod list_integrations_output {
 
-    /// A builder for [`ListIntegrationsOutput`](crate::output::ListIntegrationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListIntegrationsOutput`](crate::output::ListIntegrationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::ListIntegrationItem>>,
@@ -1614,7 +1643,7 @@ pub mod list_integrations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListIntegrationsOutput`](crate::output::ListIntegrationsOutput)
+        /// Consumes the builder and constructs a [`ListIntegrationsOutput`](crate::output::ListIntegrationsOutput).
         pub fn build(self) -> crate::output::ListIntegrationsOutput {
             crate::output::ListIntegrationsOutput {
                 items: self.items,
@@ -1624,7 +1653,7 @@ pub mod list_integrations_output {
     }
 }
 impl ListIntegrationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListIntegrationsOutput`](crate::output::ListIntegrationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListIntegrationsOutput`](crate::output::ListIntegrationsOutput).
     pub fn builder() -> crate::output::list_integrations_output::Builder {
         crate::output::list_integrations_output::Builder::default()
     }
@@ -1635,9 +1664,11 @@ impl ListIntegrationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListIdentityResolutionJobsOutput {
     /// <p>A list of Identity Resolution Jobs.</p>
+    #[doc(hidden)]
     pub identity_resolution_jobs_list:
         std::option::Option<std::vec::Vec<crate::model::IdentityResolutionJob>>,
     /// <p>If there are additional results, this is the token for the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListIdentityResolutionJobsOutput {
@@ -1663,11 +1694,10 @@ impl std::fmt::Debug for ListIdentityResolutionJobsOutput {
         formatter.finish()
     }
 }
-/// See [`ListIdentityResolutionJobsOutput`](crate::output::ListIdentityResolutionJobsOutput)
+/// See [`ListIdentityResolutionJobsOutput`](crate::output::ListIdentityResolutionJobsOutput).
 pub mod list_identity_resolution_jobs_output {
 
-    /// A builder for [`ListIdentityResolutionJobsOutput`](crate::output::ListIdentityResolutionJobsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListIdentityResolutionJobsOutput`](crate::output::ListIdentityResolutionJobsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_resolution_jobs_list:
@@ -1707,7 +1737,7 @@ pub mod list_identity_resolution_jobs_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListIdentityResolutionJobsOutput`](crate::output::ListIdentityResolutionJobsOutput)
+        /// Consumes the builder and constructs a [`ListIdentityResolutionJobsOutput`](crate::output::ListIdentityResolutionJobsOutput).
         pub fn build(self) -> crate::output::ListIdentityResolutionJobsOutput {
             crate::output::ListIdentityResolutionJobsOutput {
                 identity_resolution_jobs_list: self.identity_resolution_jobs_list,
@@ -1717,7 +1747,7 @@ pub mod list_identity_resolution_jobs_output {
     }
 }
 impl ListIdentityResolutionJobsOutput {
-    /// Creates a new builder-style object to manufacture [`ListIdentityResolutionJobsOutput`](crate::output::ListIdentityResolutionJobsOutput)
+    /// Creates a new builder-style object to manufacture [`ListIdentityResolutionJobsOutput`](crate::output::ListIdentityResolutionJobsOutput).
     pub fn builder() -> crate::output::list_identity_resolution_jobs_output::Builder {
         crate::output::list_identity_resolution_jobs_output::Builder::default()
     }
@@ -1728,8 +1758,10 @@ impl ListIdentityResolutionJobsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDomainsOutput {
     /// <p>The list of ListDomains instances.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::ListDomainItem>>,
     /// <p>The pagination token from the previous ListDomains API call.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListDomainsOutput {
@@ -1750,11 +1782,10 @@ impl std::fmt::Debug for ListDomainsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDomainsOutput`](crate::output::ListDomainsOutput)
+/// See [`ListDomainsOutput`](crate::output::ListDomainsOutput).
 pub mod list_domains_output {
 
-    /// A builder for [`ListDomainsOutput`](crate::output::ListDomainsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListDomainsOutput`](crate::output::ListDomainsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::ListDomainItem>>,
@@ -1790,7 +1821,7 @@ pub mod list_domains_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDomainsOutput`](crate::output::ListDomainsOutput)
+        /// Consumes the builder and constructs a [`ListDomainsOutput`](crate::output::ListDomainsOutput).
         pub fn build(self) -> crate::output::ListDomainsOutput {
             crate::output::ListDomainsOutput {
                 items: self.items,
@@ -1800,7 +1831,7 @@ pub mod list_domains_output {
     }
 }
 impl ListDomainsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDomainsOutput`](crate::output::ListDomainsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDomainsOutput`](crate::output::ListDomainsOutput).
     pub fn builder() -> crate::output::list_domains_output::Builder {
         crate::output::list_domains_output::Builder::default()
     }
@@ -1811,8 +1842,10 @@ impl ListDomainsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAccountIntegrationsOutput {
     /// <p>The list of ListAccountIntegration instances.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::ListIntegrationItem>>,
     /// <p>The pagination token from the previous ListAccountIntegrations API call.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAccountIntegrationsOutput {
@@ -1833,11 +1866,10 @@ impl std::fmt::Debug for ListAccountIntegrationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAccountIntegrationsOutput`](crate::output::ListAccountIntegrationsOutput)
+/// See [`ListAccountIntegrationsOutput`](crate::output::ListAccountIntegrationsOutput).
 pub mod list_account_integrations_output {
 
-    /// A builder for [`ListAccountIntegrationsOutput`](crate::output::ListAccountIntegrationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAccountIntegrationsOutput`](crate::output::ListAccountIntegrationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::ListIntegrationItem>>,
@@ -1873,7 +1905,7 @@ pub mod list_account_integrations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAccountIntegrationsOutput`](crate::output::ListAccountIntegrationsOutput)
+        /// Consumes the builder and constructs a [`ListAccountIntegrationsOutput`](crate::output::ListAccountIntegrationsOutput).
         pub fn build(self) -> crate::output::ListAccountIntegrationsOutput {
             crate::output::ListAccountIntegrationsOutput {
                 items: self.items,
@@ -1883,7 +1915,7 @@ pub mod list_account_integrations_output {
     }
 }
 impl ListAccountIntegrationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAccountIntegrationsOutput`](crate::output::ListAccountIntegrationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAccountIntegrationsOutput`](crate::output::ListAccountIntegrationsOutput).
     pub fn builder() -> crate::output::list_account_integrations_output::Builder {
         crate::output::list_account_integrations_output::Builder::default()
     }
@@ -1894,12 +1926,16 @@ impl ListAccountIntegrationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetWorkflowStepsOutput {
     /// <p>Unique identifier for the workflow.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
     /// <p>The type of workflow. The only supported value is APPFLOW_INTEGRATION.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>List containing workflow step details.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::WorkflowStepItem>>,
     /// <p>If there are additional results, this is the token for the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetWorkflowStepsOutput {
@@ -1930,11 +1966,10 @@ impl std::fmt::Debug for GetWorkflowStepsOutput {
         formatter.finish()
     }
 }
-/// See [`GetWorkflowStepsOutput`](crate::output::GetWorkflowStepsOutput)
+/// See [`GetWorkflowStepsOutput`](crate::output::GetWorkflowStepsOutput).
 pub mod get_workflow_steps_output {
 
-    /// A builder for [`GetWorkflowStepsOutput`](crate::output::GetWorkflowStepsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetWorkflowStepsOutput`](crate::output::GetWorkflowStepsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_id: std::option::Option<std::string::String>,
@@ -1995,7 +2030,7 @@ pub mod get_workflow_steps_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetWorkflowStepsOutput`](crate::output::GetWorkflowStepsOutput)
+        /// Consumes the builder and constructs a [`GetWorkflowStepsOutput`](crate::output::GetWorkflowStepsOutput).
         pub fn build(self) -> crate::output::GetWorkflowStepsOutput {
             crate::output::GetWorkflowStepsOutput {
                 workflow_id: self.workflow_id,
@@ -2007,7 +2042,7 @@ pub mod get_workflow_steps_output {
     }
 }
 impl GetWorkflowStepsOutput {
-    /// Creates a new builder-style object to manufacture [`GetWorkflowStepsOutput`](crate::output::GetWorkflowStepsOutput)
+    /// Creates a new builder-style object to manufacture [`GetWorkflowStepsOutput`](crate::output::GetWorkflowStepsOutput).
     pub fn builder() -> crate::output::get_workflow_steps_output::Builder {
         crate::output::get_workflow_steps_output::Builder::default()
     }
@@ -2018,20 +2053,28 @@ impl GetWorkflowStepsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetWorkflowOutput {
     /// <p>Unique identifier for the workflow.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
     /// <p>The type of workflow. The only supported value is APPFLOW_INTEGRATION.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>Status of workflow execution.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
     /// <p>Workflow error messages during execution (if any).</p>
+    #[doc(hidden)]
     pub error_description: std::option::Option<std::string::String>,
     /// <p>The timestamp that represents when workflow execution started.</p>
+    #[doc(hidden)]
     pub start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp that represents when workflow execution last updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Attributes provided for workflow execution.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<crate::model::WorkflowAttributes>,
     /// <p>Workflow specific execution metrics.</p>
+    #[doc(hidden)]
     pub metrics: std::option::Option<crate::model::WorkflowMetrics>,
 }
 impl GetWorkflowOutput {
@@ -2082,11 +2125,10 @@ impl std::fmt::Debug for GetWorkflowOutput {
         formatter.finish()
     }
 }
-/// See [`GetWorkflowOutput`](crate::output::GetWorkflowOutput)
+/// See [`GetWorkflowOutput`](crate::output::GetWorkflowOutput).
 pub mod get_workflow_output {
 
-    /// A builder for [`GetWorkflowOutput`](crate::output::GetWorkflowOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetWorkflowOutput`](crate::output::GetWorkflowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_id: std::option::Option<std::string::String>,
@@ -2197,7 +2239,7 @@ pub mod get_workflow_output {
             self.metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetWorkflowOutput`](crate::output::GetWorkflowOutput)
+        /// Consumes the builder and constructs a [`GetWorkflowOutput`](crate::output::GetWorkflowOutput).
         pub fn build(self) -> crate::output::GetWorkflowOutput {
             crate::output::GetWorkflowOutput {
                 workflow_id: self.workflow_id,
@@ -2213,7 +2255,7 @@ pub mod get_workflow_output {
     }
 }
 impl GetWorkflowOutput {
-    /// Creates a new builder-style object to manufacture [`GetWorkflowOutput`](crate::output::GetWorkflowOutput)
+    /// Creates a new builder-style object to manufacture [`GetWorkflowOutput`](crate::output::GetWorkflowOutput).
     pub fn builder() -> crate::output::get_workflow_output::Builder {
         crate::output::get_workflow_output::Builder::default()
     }
@@ -2224,20 +2266,27 @@ impl GetWorkflowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetProfileObjectTypeTemplateOutput {
     /// <p>A unique identifier for the object template.</p>
+    #[doc(hidden)]
     pub template_id: std::option::Option<std::string::String>,
     /// <p>The name of the source of the object template.</p>
+    #[doc(hidden)]
     pub source_name: std::option::Option<std::string::String>,
     /// <p>The source of the object template.</p>
+    #[doc(hidden)]
     pub source_object: std::option::Option<std::string::String>,
     /// <p>Indicates whether a profile should be created when data is received if one doesn’t exist for an object of this type. The default is <code>FALSE</code>. If the AllowProfileCreation flag is set to <code>FALSE</code>, then the service tries to fetch a standard profile and associate this object with the profile. If it is set to <code>TRUE</code>, and if no match is found, then the service creates a new standard profile.</p>
+    #[doc(hidden)]
     pub allow_profile_creation: bool,
     /// <p>The format of your <code>sourceLastUpdatedTimestamp</code> that was previously set up.</p>
+    #[doc(hidden)]
     pub source_last_updated_timestamp_format: std::option::Option<std::string::String>,
     /// <p>A map of the name and ObjectType field.</p>
+    #[doc(hidden)]
     pub fields: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ObjectTypeField>,
     >,
     /// <p>A list of unique keys that can be used to map data to the profile.</p>
+    #[doc(hidden)]
     pub keys: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<crate::model::ObjectTypeKey>>,
     >,
@@ -2296,11 +2345,10 @@ impl std::fmt::Debug for GetProfileObjectTypeTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`GetProfileObjectTypeTemplateOutput`](crate::output::GetProfileObjectTypeTemplateOutput)
+/// See [`GetProfileObjectTypeTemplateOutput`](crate::output::GetProfileObjectTypeTemplateOutput).
 pub mod get_profile_object_type_template_output {
 
-    /// A builder for [`GetProfileObjectTypeTemplateOutput`](crate::output::GetProfileObjectTypeTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetProfileObjectTypeTemplateOutput`](crate::output::GetProfileObjectTypeTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_id: std::option::Option<std::string::String>,
@@ -2431,7 +2479,7 @@ pub mod get_profile_object_type_template_output {
             self.keys = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetProfileObjectTypeTemplateOutput`](crate::output::GetProfileObjectTypeTemplateOutput)
+        /// Consumes the builder and constructs a [`GetProfileObjectTypeTemplateOutput`](crate::output::GetProfileObjectTypeTemplateOutput).
         pub fn build(self) -> crate::output::GetProfileObjectTypeTemplateOutput {
             crate::output::GetProfileObjectTypeTemplateOutput {
                 template_id: self.template_id,
@@ -2446,7 +2494,7 @@ pub mod get_profile_object_type_template_output {
     }
 }
 impl GetProfileObjectTypeTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`GetProfileObjectTypeTemplateOutput`](crate::output::GetProfileObjectTypeTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`GetProfileObjectTypeTemplateOutput`](crate::output::GetProfileObjectTypeTemplateOutput).
     pub fn builder() -> crate::output::get_profile_object_type_template_output::Builder {
         crate::output::get_profile_object_type_template_output::Builder::default()
     }
@@ -2457,32 +2505,44 @@ impl GetProfileObjectTypeTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetProfileObjectTypeOutput {
     /// <p>The name of the profile object type.</p>
+    #[doc(hidden)]
     pub object_type_name: std::option::Option<std::string::String>,
     /// <p>The description of the profile object type.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A unique identifier for the object template.</p>
+    #[doc(hidden)]
     pub template_id: std::option::Option<std::string::String>,
     /// <p>The number of days until the data in the object expires.</p>
+    #[doc(hidden)]
     pub expiration_days: std::option::Option<i32>,
     /// <p>The customer-provided key to encrypt the profile object that will be created in this profile object type.</p>
+    #[doc(hidden)]
     pub encryption_key: std::option::Option<std::string::String>,
     /// <p>Indicates whether a profile should be created when data is received if one doesn’t exist for an object of this type. The default is <code>FALSE</code>. If the AllowProfileCreation flag is set to <code>FALSE</code>, then the service tries to fetch a standard profile and associate this object with the profile. If it is set to <code>TRUE</code>, and if no match is found, then the service creates a new standard profile.</p>
+    #[doc(hidden)]
     pub allow_profile_creation: bool,
     /// <p>The format of your <code>sourceLastUpdatedTimestamp</code> that was previously set up.</p>
+    #[doc(hidden)]
     pub source_last_updated_timestamp_format: std::option::Option<std::string::String>,
     /// <p>A map of the name and ObjectType field.</p>
+    #[doc(hidden)]
     pub fields: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::ObjectTypeField>,
     >,
     /// <p>A list of unique keys that can be used to map data to the profile.</p>
+    #[doc(hidden)]
     pub keys: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<crate::model::ObjectTypeKey>>,
     >,
     /// <p>The timestamp of when the domain was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of when the domain was most recently edited.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2568,11 +2628,10 @@ impl std::fmt::Debug for GetProfileObjectTypeOutput {
         formatter.finish()
     }
 }
-/// See [`GetProfileObjectTypeOutput`](crate::output::GetProfileObjectTypeOutput)
+/// See [`GetProfileObjectTypeOutput`](crate::output::GetProfileObjectTypeOutput).
 pub mod get_profile_object_type_output {
 
-    /// A builder for [`GetProfileObjectTypeOutput`](crate::output::GetProfileObjectTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetProfileObjectTypeOutput`](crate::output::GetProfileObjectTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_type_name: std::option::Option<std::string::String>,
@@ -2784,7 +2843,7 @@ pub mod get_profile_object_type_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetProfileObjectTypeOutput`](crate::output::GetProfileObjectTypeOutput)
+        /// Consumes the builder and constructs a [`GetProfileObjectTypeOutput`](crate::output::GetProfileObjectTypeOutput).
         pub fn build(self) -> crate::output::GetProfileObjectTypeOutput {
             crate::output::GetProfileObjectTypeOutput {
                 object_type_name: self.object_type_name,
@@ -2804,7 +2863,7 @@ pub mod get_profile_object_type_output {
     }
 }
 impl GetProfileObjectTypeOutput {
-    /// Creates a new builder-style object to manufacture [`GetProfileObjectTypeOutput`](crate::output::GetProfileObjectTypeOutput)
+    /// Creates a new builder-style object to manufacture [`GetProfileObjectTypeOutput`](crate::output::GetProfileObjectTypeOutput).
     pub fn builder() -> crate::output::get_profile_object_type_output::Builder {
         crate::output::get_profile_object_type_output::Builder::default()
     }
@@ -2815,12 +2874,16 @@ impl GetProfileObjectTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetMatchesOutput {
     /// <p>If there are additional results, this is the token for the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The timestamp this version of Match Result generated.</p>
+    #[doc(hidden)]
     pub match_generation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The number of potential matches found.</p>
+    #[doc(hidden)]
     pub potential_matches: std::option::Option<i32>,
     /// <p>The list of matched profiles for this instance.</p>
+    #[doc(hidden)]
     pub matches: std::option::Option<std::vec::Vec<crate::model::MatchItem>>,
 }
 impl GetMatchesOutput {
@@ -2851,11 +2914,10 @@ impl std::fmt::Debug for GetMatchesOutput {
         formatter.finish()
     }
 }
-/// See [`GetMatchesOutput`](crate::output::GetMatchesOutput)
+/// See [`GetMatchesOutput`](crate::output::GetMatchesOutput).
 pub mod get_matches_output {
 
-    /// A builder for [`GetMatchesOutput`](crate::output::GetMatchesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetMatchesOutput`](crate::output::GetMatchesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -2916,7 +2978,7 @@ pub mod get_matches_output {
             self.matches = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetMatchesOutput`](crate::output::GetMatchesOutput)
+        /// Consumes the builder and constructs a [`GetMatchesOutput`](crate::output::GetMatchesOutput).
         pub fn build(self) -> crate::output::GetMatchesOutput {
             crate::output::GetMatchesOutput {
                 next_token: self.next_token,
@@ -2928,7 +2990,7 @@ pub mod get_matches_output {
     }
 }
 impl GetMatchesOutput {
-    /// Creates a new builder-style object to manufacture [`GetMatchesOutput`](crate::output::GetMatchesOutput)
+    /// Creates a new builder-style object to manufacture [`GetMatchesOutput`](crate::output::GetMatchesOutput).
     pub fn builder() -> crate::output::get_matches_output::Builder {
         crate::output::get_matches_output::Builder::default()
     }
@@ -2939,22 +3001,30 @@ impl GetMatchesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetIntegrationOutput {
     /// <p>The unique name of the domain.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The URI of the S3 bucket or any other type of data source.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
     /// <p>The name of the profile object type.</p>
+    #[doc(hidden)]
     pub object_type_name: std::option::Option<std::string::String>,
     /// <p>The timestamp of when the domain was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of when the domain was most recently edited.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A map in which each key is an event type from an external application such as Segment or Shopify, and each value is an <code>ObjectTypeName</code> (template) used to ingest the event. It supports the following event types: <code>SegmentIdentify</code>, <code>ShopifyCreateCustomers</code>, <code>ShopifyUpdateCustomers</code>, <code>ShopifyCreateDraftOrders</code>, <code>ShopifyUpdateDraftOrders</code>, <code>ShopifyCreateOrders</code>, and <code>ShopifyUpdatedOrders</code>.</p>
+    #[doc(hidden)]
     pub object_type_names:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Unique identifier for the workflow.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
 }
 impl GetIntegrationOutput {
@@ -3011,11 +3081,10 @@ impl std::fmt::Debug for GetIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`GetIntegrationOutput`](crate::output::GetIntegrationOutput)
+/// See [`GetIntegrationOutput`](crate::output::GetIntegrationOutput).
 pub mod get_integration_output {
 
-    /// A builder for [`GetIntegrationOutput`](crate::output::GetIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetIntegrationOutput`](crate::output::GetIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -3151,7 +3220,7 @@ pub mod get_integration_output {
             self.workflow_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetIntegrationOutput`](crate::output::GetIntegrationOutput)
+        /// Consumes the builder and constructs a [`GetIntegrationOutput`](crate::output::GetIntegrationOutput).
         pub fn build(self) -> crate::output::GetIntegrationOutput {
             crate::output::GetIntegrationOutput {
                 domain_name: self.domain_name,
@@ -3167,7 +3236,7 @@ pub mod get_integration_output {
     }
 }
 impl GetIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`GetIntegrationOutput`](crate::output::GetIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`GetIntegrationOutput`](crate::output::GetIntegrationOutput).
     pub fn builder() -> crate::output::get_integration_output::Builder {
         crate::output::get_integration_output::Builder::default()
     }
@@ -3178,8 +3247,10 @@ impl GetIntegrationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetIdentityResolutionJobOutput {
     /// <p>The unique name of the domain.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the Identity Resolution Job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The status of the Identity Resolution Job.</p>
     /// <ul>
@@ -3191,22 +3262,31 @@ pub struct GetIdentityResolutionJobOutput {
     /// <li> <p> <code>PARTIAL_SUCCESS</code>: There's a system error and not all of the data is merged. The Identity Resolution Job writes a message indicating the source of the problem.</p> </li>
     /// <li> <p> <code>FAILED</code>: The Identity Resolution Job did not merge any data. It writes a message indicating the source of the problem.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::IdentityResolutionJobStatus>,
     /// <p>The error messages that are generated when the Identity Resolution Job runs.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The timestamp of when the Identity Resolution Job was started or will be started.</p>
+    #[doc(hidden)]
     pub job_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of when the Identity Resolution Job was completed.</p>
+    #[doc(hidden)]
     pub job_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of when the Identity Resolution Job was most recently edited.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of when the Identity Resolution Job will expire.</p>
+    #[doc(hidden)]
     pub job_expiration_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Configuration settings for how to perform the auto-merging of profiles.</p>
+    #[doc(hidden)]
     pub auto_merging: std::option::Option<crate::model::AutoMerging>,
     /// <p>The S3 location where the Identity Resolution Job writes result files.</p>
+    #[doc(hidden)]
     pub exporting_location: std::option::Option<crate::model::ExportingLocation>,
     /// <p>Statistics about the Identity Resolution Job.</p>
+    #[doc(hidden)]
     pub job_stats: std::option::Option<crate::model::JobStats>,
 }
 impl GetIdentityResolutionJobOutput {
@@ -3281,11 +3361,10 @@ impl std::fmt::Debug for GetIdentityResolutionJobOutput {
         formatter.finish()
     }
 }
-/// See [`GetIdentityResolutionJobOutput`](crate::output::GetIdentityResolutionJobOutput)
+/// See [`GetIdentityResolutionJobOutput`](crate::output::GetIdentityResolutionJobOutput).
 pub mod get_identity_resolution_job_output {
 
-    /// A builder for [`GetIdentityResolutionJobOutput`](crate::output::GetIdentityResolutionJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetIdentityResolutionJobOutput`](crate::output::GetIdentityResolutionJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -3450,7 +3529,7 @@ pub mod get_identity_resolution_job_output {
             self.job_stats = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetIdentityResolutionJobOutput`](crate::output::GetIdentityResolutionJobOutput)
+        /// Consumes the builder and constructs a [`GetIdentityResolutionJobOutput`](crate::output::GetIdentityResolutionJobOutput).
         pub fn build(self) -> crate::output::GetIdentityResolutionJobOutput {
             crate::output::GetIdentityResolutionJobOutput {
                 domain_name: self.domain_name,
@@ -3469,7 +3548,7 @@ pub mod get_identity_resolution_job_output {
     }
 }
 impl GetIdentityResolutionJobOutput {
-    /// Creates a new builder-style object to manufacture [`GetIdentityResolutionJobOutput`](crate::output::GetIdentityResolutionJobOutput)
+    /// Creates a new builder-style object to manufacture [`GetIdentityResolutionJobOutput`](crate::output::GetIdentityResolutionJobOutput).
     pub fn builder() -> crate::output::get_identity_resolution_job_output::Builder {
         crate::output::get_identity_resolution_job_output::Builder::default()
     }
@@ -3480,23 +3559,32 @@ impl GetIdentityResolutionJobOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDomainOutput {
     /// <p>The unique name of the domain.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The default number of days until the data within the domain expires.</p>
+    #[doc(hidden)]
     pub default_expiration_days: std::option::Option<i32>,
     /// <p>The default encryption key, which is an AWS managed key, is used when no specific type of encryption key is specified. It is used to encrypt all data before it is placed in permanent or semi-permanent storage.</p>
+    #[doc(hidden)]
     pub default_encryption_key: std::option::Option<std::string::String>,
     /// <p>The URL of the SQS dead letter queue, which is used for reporting errors associated with ingesting data from third party applications.</p>
+    #[doc(hidden)]
     pub dead_letter_queue_url: std::option::Option<std::string::String>,
     /// <p>Usage-specific statistics about the domain.</p>
+    #[doc(hidden)]
     pub stats: std::option::Option<crate::model::DomainStats>,
     /// <p>The process of matching duplicate profiles. If <code>Matching</code> = <code>true</code>, Amazon Connect Customer Profiles starts a weekly batch process called Identity Resolution Job. If you do not specify a date and time for Identity Resolution Job to run, by default it runs every Saturday at 12AM UTC to detect duplicate profiles in your domains. </p>
     /// <p>After the Identity Resolution Job completes, use the <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">GetMatches</a> API to return and review the results. Or, if you have configured <code>ExportingConfig</code> in the <code>MatchingRequest</code>, you can download the results from S3.</p>
+    #[doc(hidden)]
     pub matching: std::option::Option<crate::model::MatchingResponse>,
     /// <p>The timestamp of when the domain was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of when the domain was most recently edited.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -3557,11 +3645,10 @@ impl std::fmt::Debug for GetDomainOutput {
         formatter.finish()
     }
 }
-/// See [`GetDomainOutput`](crate::output::GetDomainOutput)
+/// See [`GetDomainOutput`](crate::output::GetDomainOutput).
 pub mod get_domain_output {
 
-    /// A builder for [`GetDomainOutput`](crate::output::GetDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDomainOutput`](crate::output::GetDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -3699,7 +3786,7 @@ pub mod get_domain_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDomainOutput`](crate::output::GetDomainOutput)
+        /// Consumes the builder and constructs a [`GetDomainOutput`](crate::output::GetDomainOutput).
         pub fn build(self) -> crate::output::GetDomainOutput {
             crate::output::GetDomainOutput {
                 domain_name: self.domain_name,
@@ -3716,7 +3803,7 @@ pub mod get_domain_output {
     }
 }
 impl GetDomainOutput {
-    /// Creates a new builder-style object to manufacture [`GetDomainOutput`](crate::output::GetDomainOutput)
+    /// Creates a new builder-style object to manufacture [`GetDomainOutput`](crate::output::GetDomainOutput).
     pub fn builder() -> crate::output::get_domain_output::Builder {
         crate::output::get_domain_output::Builder::default()
     }
@@ -3727,12 +3814,16 @@ impl GetDomainOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAutoMergingPreviewOutput {
     /// <p>The unique name of the domain.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The number of match groups in the domain that have been reviewed in this preview dry run.</p>
+    #[doc(hidden)]
     pub number_of_matches_in_sample: i64,
     /// <p>The number of profiles found in this preview dry run.</p>
+    #[doc(hidden)]
     pub number_of_profiles_in_sample: i64,
     /// <p>The number of profiles that would be merged if this wasn't a preview dry run.</p>
+    #[doc(hidden)]
     pub number_of_profiles_will_be_merged: i64,
 }
 impl GetAutoMergingPreviewOutput {
@@ -3772,11 +3863,10 @@ impl std::fmt::Debug for GetAutoMergingPreviewOutput {
         formatter.finish()
     }
 }
-/// See [`GetAutoMergingPreviewOutput`](crate::output::GetAutoMergingPreviewOutput)
+/// See [`GetAutoMergingPreviewOutput`](crate::output::GetAutoMergingPreviewOutput).
 pub mod get_auto_merging_preview_output {
 
-    /// A builder for [`GetAutoMergingPreviewOutput`](crate::output::GetAutoMergingPreviewOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAutoMergingPreviewOutput`](crate::output::GetAutoMergingPreviewOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -3828,7 +3918,7 @@ pub mod get_auto_merging_preview_output {
             self.number_of_profiles_will_be_merged = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAutoMergingPreviewOutput`](crate::output::GetAutoMergingPreviewOutput)
+        /// Consumes the builder and constructs a [`GetAutoMergingPreviewOutput`](crate::output::GetAutoMergingPreviewOutput).
         pub fn build(self) -> crate::output::GetAutoMergingPreviewOutput {
             crate::output::GetAutoMergingPreviewOutput {
                 domain_name: self.domain_name,
@@ -3842,7 +3932,7 @@ pub mod get_auto_merging_preview_output {
     }
 }
 impl GetAutoMergingPreviewOutput {
-    /// Creates a new builder-style object to manufacture [`GetAutoMergingPreviewOutput`](crate::output::GetAutoMergingPreviewOutput)
+    /// Creates a new builder-style object to manufacture [`GetAutoMergingPreviewOutput`](crate::output::GetAutoMergingPreviewOutput).
     pub fn builder() -> crate::output::get_auto_merging_preview_output::Builder {
         crate::output::get_auto_merging_preview_output::Builder::default()
     }
@@ -3858,22 +3948,21 @@ impl std::fmt::Debug for DeleteWorkflowOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteWorkflowOutput`](crate::output::DeleteWorkflowOutput)
+/// See [`DeleteWorkflowOutput`](crate::output::DeleteWorkflowOutput).
 pub mod delete_workflow_output {
 
-    /// A builder for [`DeleteWorkflowOutput`](crate::output::DeleteWorkflowOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteWorkflowOutput`](crate::output::DeleteWorkflowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteWorkflowOutput`](crate::output::DeleteWorkflowOutput)
+        /// Consumes the builder and constructs a [`DeleteWorkflowOutput`](crate::output::DeleteWorkflowOutput).
         pub fn build(self) -> crate::output::DeleteWorkflowOutput {
             crate::output::DeleteWorkflowOutput {}
         }
     }
 }
 impl DeleteWorkflowOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteWorkflowOutput`](crate::output::DeleteWorkflowOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteWorkflowOutput`](crate::output::DeleteWorkflowOutput).
     pub fn builder() -> crate::output::delete_workflow_output::Builder {
         crate::output::delete_workflow_output::Builder::default()
     }
@@ -3884,6 +3973,7 @@ impl DeleteWorkflowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteProfileObjectTypeOutput {
     /// <p>A message that indicates the delete request is done.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DeleteProfileObjectTypeOutput {
@@ -3899,11 +3989,10 @@ impl std::fmt::Debug for DeleteProfileObjectTypeOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteProfileObjectTypeOutput`](crate::output::DeleteProfileObjectTypeOutput)
+/// See [`DeleteProfileObjectTypeOutput`](crate::output::DeleteProfileObjectTypeOutput).
 pub mod delete_profile_object_type_output {
 
-    /// A builder for [`DeleteProfileObjectTypeOutput`](crate::output::DeleteProfileObjectTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteProfileObjectTypeOutput`](crate::output::DeleteProfileObjectTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3919,7 +4008,7 @@ pub mod delete_profile_object_type_output {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteProfileObjectTypeOutput`](crate::output::DeleteProfileObjectTypeOutput)
+        /// Consumes the builder and constructs a [`DeleteProfileObjectTypeOutput`](crate::output::DeleteProfileObjectTypeOutput).
         pub fn build(self) -> crate::output::DeleteProfileObjectTypeOutput {
             crate::output::DeleteProfileObjectTypeOutput {
                 message: self.message,
@@ -3928,7 +4017,7 @@ pub mod delete_profile_object_type_output {
     }
 }
 impl DeleteProfileObjectTypeOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteProfileObjectTypeOutput`](crate::output::DeleteProfileObjectTypeOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteProfileObjectTypeOutput`](crate::output::DeleteProfileObjectTypeOutput).
     pub fn builder() -> crate::output::delete_profile_object_type_output::Builder {
         crate::output::delete_profile_object_type_output::Builder::default()
     }
@@ -3939,6 +4028,7 @@ impl DeleteProfileObjectTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteProfileObjectOutput {
     /// <p>A message that indicates the delete request is done.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DeleteProfileObjectOutput {
@@ -3954,11 +4044,10 @@ impl std::fmt::Debug for DeleteProfileObjectOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteProfileObjectOutput`](crate::output::DeleteProfileObjectOutput)
+/// See [`DeleteProfileObjectOutput`](crate::output::DeleteProfileObjectOutput).
 pub mod delete_profile_object_output {
 
-    /// A builder for [`DeleteProfileObjectOutput`](crate::output::DeleteProfileObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteProfileObjectOutput`](crate::output::DeleteProfileObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3974,7 +4063,7 @@ pub mod delete_profile_object_output {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteProfileObjectOutput`](crate::output::DeleteProfileObjectOutput)
+        /// Consumes the builder and constructs a [`DeleteProfileObjectOutput`](crate::output::DeleteProfileObjectOutput).
         pub fn build(self) -> crate::output::DeleteProfileObjectOutput {
             crate::output::DeleteProfileObjectOutput {
                 message: self.message,
@@ -3983,7 +4072,7 @@ pub mod delete_profile_object_output {
     }
 }
 impl DeleteProfileObjectOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteProfileObjectOutput`](crate::output::DeleteProfileObjectOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteProfileObjectOutput`](crate::output::DeleteProfileObjectOutput).
     pub fn builder() -> crate::output::delete_profile_object_output::Builder {
         crate::output::delete_profile_object_output::Builder::default()
     }
@@ -3994,6 +4083,7 @@ impl DeleteProfileObjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteProfileKeyOutput {
     /// <p>A message that indicates the delete request is done.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DeleteProfileKeyOutput {
@@ -4009,11 +4099,10 @@ impl std::fmt::Debug for DeleteProfileKeyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteProfileKeyOutput`](crate::output::DeleteProfileKeyOutput)
+/// See [`DeleteProfileKeyOutput`](crate::output::DeleteProfileKeyOutput).
 pub mod delete_profile_key_output {
 
-    /// A builder for [`DeleteProfileKeyOutput`](crate::output::DeleteProfileKeyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteProfileKeyOutput`](crate::output::DeleteProfileKeyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4029,7 +4118,7 @@ pub mod delete_profile_key_output {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteProfileKeyOutput`](crate::output::DeleteProfileKeyOutput)
+        /// Consumes the builder and constructs a [`DeleteProfileKeyOutput`](crate::output::DeleteProfileKeyOutput).
         pub fn build(self) -> crate::output::DeleteProfileKeyOutput {
             crate::output::DeleteProfileKeyOutput {
                 message: self.message,
@@ -4038,7 +4127,7 @@ pub mod delete_profile_key_output {
     }
 }
 impl DeleteProfileKeyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteProfileKeyOutput`](crate::output::DeleteProfileKeyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteProfileKeyOutput`](crate::output::DeleteProfileKeyOutput).
     pub fn builder() -> crate::output::delete_profile_key_output::Builder {
         crate::output::delete_profile_key_output::Builder::default()
     }
@@ -4049,6 +4138,7 @@ impl DeleteProfileKeyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteProfileOutput {
     /// <p>A message that indicates the delete request is done.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DeleteProfileOutput {
@@ -4064,11 +4154,10 @@ impl std::fmt::Debug for DeleteProfileOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteProfileOutput`](crate::output::DeleteProfileOutput)
+/// See [`DeleteProfileOutput`](crate::output::DeleteProfileOutput).
 pub mod delete_profile_output {
 
-    /// A builder for [`DeleteProfileOutput`](crate::output::DeleteProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteProfileOutput`](crate::output::DeleteProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4084,7 +4173,7 @@ pub mod delete_profile_output {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteProfileOutput`](crate::output::DeleteProfileOutput)
+        /// Consumes the builder and constructs a [`DeleteProfileOutput`](crate::output::DeleteProfileOutput).
         pub fn build(self) -> crate::output::DeleteProfileOutput {
             crate::output::DeleteProfileOutput {
                 message: self.message,
@@ -4093,7 +4182,7 @@ pub mod delete_profile_output {
     }
 }
 impl DeleteProfileOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteProfileOutput`](crate::output::DeleteProfileOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteProfileOutput`](crate::output::DeleteProfileOutput).
     pub fn builder() -> crate::output::delete_profile_output::Builder {
         crate::output::delete_profile_output::Builder::default()
     }
@@ -4104,6 +4193,7 @@ impl DeleteProfileOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteIntegrationOutput {
     /// <p>A message that indicates the delete request is done.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DeleteIntegrationOutput {
@@ -4119,11 +4209,10 @@ impl std::fmt::Debug for DeleteIntegrationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput)
+/// See [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput).
 pub mod delete_integration_output {
 
-    /// A builder for [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4139,7 +4228,7 @@ pub mod delete_integration_output {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput)
+        /// Consumes the builder and constructs a [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput).
         pub fn build(self) -> crate::output::DeleteIntegrationOutput {
             crate::output::DeleteIntegrationOutput {
                 message: self.message,
@@ -4148,7 +4237,7 @@ pub mod delete_integration_output {
     }
 }
 impl DeleteIntegrationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteIntegrationOutput`](crate::output::DeleteIntegrationOutput).
     pub fn builder() -> crate::output::delete_integration_output::Builder {
         crate::output::delete_integration_output::Builder::default()
     }
@@ -4159,6 +4248,7 @@ impl DeleteIntegrationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteDomainOutput {
     /// <p>A message that indicates the delete request is done.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DeleteDomainOutput {
@@ -4174,11 +4264,10 @@ impl std::fmt::Debug for DeleteDomainOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDomainOutput`](crate::output::DeleteDomainOutput)
+/// See [`DeleteDomainOutput`](crate::output::DeleteDomainOutput).
 pub mod delete_domain_output {
 
-    /// A builder for [`DeleteDomainOutput`](crate::output::DeleteDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDomainOutput`](crate::output::DeleteDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4194,7 +4283,7 @@ pub mod delete_domain_output {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDomainOutput`](crate::output::DeleteDomainOutput)
+        /// Consumes the builder and constructs a [`DeleteDomainOutput`](crate::output::DeleteDomainOutput).
         pub fn build(self) -> crate::output::DeleteDomainOutput {
             crate::output::DeleteDomainOutput {
                 message: self.message,
@@ -4203,7 +4292,7 @@ pub mod delete_domain_output {
     }
 }
 impl DeleteDomainOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDomainOutput`](crate::output::DeleteDomainOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDomainOutput`](crate::output::DeleteDomainOutput).
     pub fn builder() -> crate::output::delete_domain_output::Builder {
         crate::output::delete_domain_output::Builder::default()
     }
@@ -4214,6 +4303,7 @@ impl DeleteDomainOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateProfileOutput {
     /// <p>The unique identifier of a customer profile.</p>
+    #[doc(hidden)]
     pub profile_id: std::option::Option<std::string::String>,
 }
 impl CreateProfileOutput {
@@ -4229,11 +4319,10 @@ impl std::fmt::Debug for CreateProfileOutput {
         formatter.finish()
     }
 }
-/// See [`CreateProfileOutput`](crate::output::CreateProfileOutput)
+/// See [`CreateProfileOutput`](crate::output::CreateProfileOutput).
 pub mod create_profile_output {
 
-    /// A builder for [`CreateProfileOutput`](crate::output::CreateProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateProfileOutput`](crate::output::CreateProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) profile_id: std::option::Option<std::string::String>,
@@ -4249,7 +4338,7 @@ pub mod create_profile_output {
             self.profile_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateProfileOutput`](crate::output::CreateProfileOutput)
+        /// Consumes the builder and constructs a [`CreateProfileOutput`](crate::output::CreateProfileOutput).
         pub fn build(self) -> crate::output::CreateProfileOutput {
             crate::output::CreateProfileOutput {
                 profile_id: self.profile_id,
@@ -4258,7 +4347,7 @@ pub mod create_profile_output {
     }
 }
 impl CreateProfileOutput {
-    /// Creates a new builder-style object to manufacture [`CreateProfileOutput`](crate::output::CreateProfileOutput)
+    /// Creates a new builder-style object to manufacture [`CreateProfileOutput`](crate::output::CreateProfileOutput).
     pub fn builder() -> crate::output::create_profile_output::Builder {
         crate::output::create_profile_output::Builder::default()
     }
@@ -4269,8 +4358,10 @@ impl CreateProfileOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateIntegrationWorkflowOutput {
     /// <p>Unique identifier for the workflow.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
     /// <p>A message indicating create request was received.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl CreateIntegrationWorkflowOutput {
@@ -4291,11 +4382,10 @@ impl std::fmt::Debug for CreateIntegrationWorkflowOutput {
         formatter.finish()
     }
 }
-/// See [`CreateIntegrationWorkflowOutput`](crate::output::CreateIntegrationWorkflowOutput)
+/// See [`CreateIntegrationWorkflowOutput`](crate::output::CreateIntegrationWorkflowOutput).
 pub mod create_integration_workflow_output {
 
-    /// A builder for [`CreateIntegrationWorkflowOutput`](crate::output::CreateIntegrationWorkflowOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateIntegrationWorkflowOutput`](crate::output::CreateIntegrationWorkflowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_id: std::option::Option<std::string::String>,
@@ -4322,7 +4412,7 @@ pub mod create_integration_workflow_output {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateIntegrationWorkflowOutput`](crate::output::CreateIntegrationWorkflowOutput)
+        /// Consumes the builder and constructs a [`CreateIntegrationWorkflowOutput`](crate::output::CreateIntegrationWorkflowOutput).
         pub fn build(self) -> crate::output::CreateIntegrationWorkflowOutput {
             crate::output::CreateIntegrationWorkflowOutput {
                 workflow_id: self.workflow_id,
@@ -4332,7 +4422,7 @@ pub mod create_integration_workflow_output {
     }
 }
 impl CreateIntegrationWorkflowOutput {
-    /// Creates a new builder-style object to manufacture [`CreateIntegrationWorkflowOutput`](crate::output::CreateIntegrationWorkflowOutput)
+    /// Creates a new builder-style object to manufacture [`CreateIntegrationWorkflowOutput`](crate::output::CreateIntegrationWorkflowOutput).
     pub fn builder() -> crate::output::create_integration_workflow_output::Builder {
         crate::output::create_integration_workflow_output::Builder::default()
     }
@@ -4343,21 +4433,29 @@ impl CreateIntegrationWorkflowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDomainOutput {
     /// <p>The unique name of the domain.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>The default number of days until the data within the domain expires.</p>
+    #[doc(hidden)]
     pub default_expiration_days: std::option::Option<i32>,
     /// <p>The default encryption key, which is an AWS managed key, is used when no specific type of encryption key is specified. It is used to encrypt all data before it is placed in permanent or semi-permanent storage.</p>
+    #[doc(hidden)]
     pub default_encryption_key: std::option::Option<std::string::String>,
     /// <p>The URL of the SQS dead letter queue, which is used for reporting errors associated with ingesting data from third party applications.</p>
+    #[doc(hidden)]
     pub dead_letter_queue_url: std::option::Option<std::string::String>,
     /// <p>The process of matching duplicate profiles. If <code>Matching</code> = <code>true</code>, Amazon Connect Customer Profiles starts a weekly batch process called Identity Resolution Job. If you do not specify a date and time for Identity Resolution Job to run, by default it runs every Saturday at 12AM UTC to detect duplicate profiles in your domains. </p>
     /// <p>After the Identity Resolution Job completes, use the <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">GetMatches</a> API to return and review the results. Or, if you have configured <code>ExportingConfig</code> in the <code>MatchingRequest</code>, you can download the results from S3.</p>
+    #[doc(hidden)]
     pub matching: std::option::Option<crate::model::MatchingResponse>,
     /// <p>The timestamp of when the domain was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of when the domain was most recently edited.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The tags used to organize, track, or control access for this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -4413,11 +4511,10 @@ impl std::fmt::Debug for CreateDomainOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDomainOutput`](crate::output::CreateDomainOutput)
+/// See [`CreateDomainOutput`](crate::output::CreateDomainOutput).
 pub mod create_domain_output {
 
-    /// A builder for [`CreateDomainOutput`](crate::output::CreateDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDomainOutput`](crate::output::CreateDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_name: std::option::Option<std::string::String>,
@@ -4544,7 +4641,7 @@ pub mod create_domain_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDomainOutput`](crate::output::CreateDomainOutput)
+        /// Consumes the builder and constructs a [`CreateDomainOutput`](crate::output::CreateDomainOutput).
         pub fn build(self) -> crate::output::CreateDomainOutput {
             crate::output::CreateDomainOutput {
                 domain_name: self.domain_name,
@@ -4560,7 +4657,7 @@ pub mod create_domain_output {
     }
 }
 impl CreateDomainOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDomainOutput`](crate::output::CreateDomainOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDomainOutput`](crate::output::CreateDomainOutput).
     pub fn builder() -> crate::output::create_domain_output::Builder {
         crate::output::create_domain_output::Builder::default()
     }
@@ -4571,8 +4668,10 @@ impl CreateDomainOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddProfileKeyOutput {
     /// <p>A searchable identifier of a customer profile.</p>
+    #[doc(hidden)]
     pub key_name: std::option::Option<std::string::String>,
     /// <p>A list of key values.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AddProfileKeyOutput {
@@ -4593,11 +4692,10 @@ impl std::fmt::Debug for AddProfileKeyOutput {
         formatter.finish()
     }
 }
-/// See [`AddProfileKeyOutput`](crate::output::AddProfileKeyOutput)
+/// See [`AddProfileKeyOutput`](crate::output::AddProfileKeyOutput).
 pub mod add_profile_key_output {
 
-    /// A builder for [`AddProfileKeyOutput`](crate::output::AddProfileKeyOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddProfileKeyOutput`](crate::output::AddProfileKeyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_name: std::option::Option<std::string::String>,
@@ -4633,7 +4731,7 @@ pub mod add_profile_key_output {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddProfileKeyOutput`](crate::output::AddProfileKeyOutput)
+        /// Consumes the builder and constructs a [`AddProfileKeyOutput`](crate::output::AddProfileKeyOutput).
         pub fn build(self) -> crate::output::AddProfileKeyOutput {
             crate::output::AddProfileKeyOutput {
                 key_name: self.key_name,
@@ -4643,7 +4741,7 @@ pub mod add_profile_key_output {
     }
 }
 impl AddProfileKeyOutput {
-    /// Creates a new builder-style object to manufacture [`AddProfileKeyOutput`](crate::output::AddProfileKeyOutput)
+    /// Creates a new builder-style object to manufacture [`AddProfileKeyOutput`](crate::output::AddProfileKeyOutput).
     pub fn builder() -> crate::output::add_profile_key_output::Builder {
         crate::output::add_profile_key_output::Builder::default()
     }

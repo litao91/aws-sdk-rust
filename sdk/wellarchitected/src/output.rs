@@ -9,22 +9,21 @@ impl std::fmt::Debug for UpgradeLensReviewOutput {
         formatter.finish()
     }
 }
-/// See [`UpgradeLensReviewOutput`](crate::output::UpgradeLensReviewOutput)
+/// See [`UpgradeLensReviewOutput`](crate::output::UpgradeLensReviewOutput).
 pub mod upgrade_lens_review_output {
 
-    /// A builder for [`UpgradeLensReviewOutput`](crate::output::UpgradeLensReviewOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpgradeLensReviewOutput`](crate::output::UpgradeLensReviewOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpgradeLensReviewOutput`](crate::output::UpgradeLensReviewOutput)
+        /// Consumes the builder and constructs a [`UpgradeLensReviewOutput`](crate::output::UpgradeLensReviewOutput).
         pub fn build(self) -> crate::output::UpgradeLensReviewOutput {
             crate::output::UpgradeLensReviewOutput {}
         }
     }
 }
 impl UpgradeLensReviewOutput {
-    /// Creates a new builder-style object to manufacture [`UpgradeLensReviewOutput`](crate::output::UpgradeLensReviewOutput)
+    /// Creates a new builder-style object to manufacture [`UpgradeLensReviewOutput`](crate::output::UpgradeLensReviewOutput).
     pub fn builder() -> crate::output::upgrade_lens_review_output::Builder {
         crate::output::upgrade_lens_review_output::Builder::default()
     }
@@ -35,8 +34,10 @@ impl UpgradeLensReviewOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateWorkloadShareOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>A workload share return object.</p>
+    #[doc(hidden)]
     pub workload_share: std::option::Option<crate::model::WorkloadShare>,
 }
 impl UpdateWorkloadShareOutput {
@@ -57,11 +58,10 @@ impl std::fmt::Debug for UpdateWorkloadShareOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateWorkloadShareOutput`](crate::output::UpdateWorkloadShareOutput)
+/// See [`UpdateWorkloadShareOutput`](crate::output::UpdateWorkloadShareOutput).
 pub mod update_workload_share_output {
 
-    /// A builder for [`UpdateWorkloadShareOutput`](crate::output::UpdateWorkloadShareOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateWorkloadShareOutput`](crate::output::UpdateWorkloadShareOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -91,7 +91,7 @@ pub mod update_workload_share_output {
             self.workload_share = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateWorkloadShareOutput`](crate::output::UpdateWorkloadShareOutput)
+        /// Consumes the builder and constructs a [`UpdateWorkloadShareOutput`](crate::output::UpdateWorkloadShareOutput).
         pub fn build(self) -> crate::output::UpdateWorkloadShareOutput {
             crate::output::UpdateWorkloadShareOutput {
                 workload_id: self.workload_id,
@@ -101,7 +101,7 @@ pub mod update_workload_share_output {
     }
 }
 impl UpdateWorkloadShareOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateWorkloadShareOutput`](crate::output::UpdateWorkloadShareOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateWorkloadShareOutput`](crate::output::UpdateWorkloadShareOutput).
     pub fn builder() -> crate::output::update_workload_share_output::Builder {
         crate::output::update_workload_share_output::Builder::default()
     }
@@ -112,6 +112,7 @@ impl UpdateWorkloadShareOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateWorkloadOutput {
     /// <p>A workload return object.</p>
+    #[doc(hidden)]
     pub workload: std::option::Option<crate::model::Workload>,
 }
 impl UpdateWorkloadOutput {
@@ -127,11 +128,10 @@ impl std::fmt::Debug for UpdateWorkloadOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateWorkloadOutput`](crate::output::UpdateWorkloadOutput)
+/// See [`UpdateWorkloadOutput`](crate::output::UpdateWorkloadOutput).
 pub mod update_workload_output {
 
-    /// A builder for [`UpdateWorkloadOutput`](crate::output::UpdateWorkloadOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateWorkloadOutput`](crate::output::UpdateWorkloadOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload: std::option::Option<crate::model::Workload>,
@@ -147,7 +147,7 @@ pub mod update_workload_output {
             self.workload = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateWorkloadOutput`](crate::output::UpdateWorkloadOutput)
+        /// Consumes the builder and constructs a [`UpdateWorkloadOutput`](crate::output::UpdateWorkloadOutput).
         pub fn build(self) -> crate::output::UpdateWorkloadOutput {
             crate::output::UpdateWorkloadOutput {
                 workload: self.workload,
@@ -156,7 +156,7 @@ pub mod update_workload_output {
     }
 }
 impl UpdateWorkloadOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateWorkloadOutput`](crate::output::UpdateWorkloadOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateWorkloadOutput`](crate::output::UpdateWorkloadOutput).
     pub fn builder() -> crate::output::update_workload_output::Builder {
         crate::output::update_workload_output::Builder::default()
     }
@@ -167,6 +167,7 @@ impl UpdateWorkloadOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateShareInvitationOutput {
     /// <p>The updated workload share invitation.</p>
+    #[doc(hidden)]
     pub share_invitation: std::option::Option<crate::model::ShareInvitation>,
 }
 impl UpdateShareInvitationOutput {
@@ -182,11 +183,10 @@ impl std::fmt::Debug for UpdateShareInvitationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateShareInvitationOutput`](crate::output::UpdateShareInvitationOutput)
+/// See [`UpdateShareInvitationOutput`](crate::output::UpdateShareInvitationOutput).
 pub mod update_share_invitation_output {
 
-    /// A builder for [`UpdateShareInvitationOutput`](crate::output::UpdateShareInvitationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateShareInvitationOutput`](crate::output::UpdateShareInvitationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) share_invitation: std::option::Option<crate::model::ShareInvitation>,
@@ -205,7 +205,7 @@ pub mod update_share_invitation_output {
             self.share_invitation = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateShareInvitationOutput`](crate::output::UpdateShareInvitationOutput)
+        /// Consumes the builder and constructs a [`UpdateShareInvitationOutput`](crate::output::UpdateShareInvitationOutput).
         pub fn build(self) -> crate::output::UpdateShareInvitationOutput {
             crate::output::UpdateShareInvitationOutput {
                 share_invitation: self.share_invitation,
@@ -214,7 +214,7 @@ pub mod update_share_invitation_output {
     }
 }
 impl UpdateShareInvitationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateShareInvitationOutput`](crate::output::UpdateShareInvitationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateShareInvitationOutput`](crate::output::UpdateShareInvitationOutput).
     pub fn builder() -> crate::output::update_share_invitation_output::Builder {
         crate::output::update_share_invitation_output::Builder::default()
     }
@@ -225,8 +225,10 @@ impl UpdateShareInvitationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateLensReviewOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>A lens review of a question.</p>
+    #[doc(hidden)]
     pub lens_review: std::option::Option<crate::model::LensReview>,
 }
 impl UpdateLensReviewOutput {
@@ -247,11 +249,10 @@ impl std::fmt::Debug for UpdateLensReviewOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateLensReviewOutput`](crate::output::UpdateLensReviewOutput)
+/// See [`UpdateLensReviewOutput`](crate::output::UpdateLensReviewOutput).
 pub mod update_lens_review_output {
 
-    /// A builder for [`UpdateLensReviewOutput`](crate::output::UpdateLensReviewOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateLensReviewOutput`](crate::output::UpdateLensReviewOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -281,7 +282,7 @@ pub mod update_lens_review_output {
             self.lens_review = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateLensReviewOutput`](crate::output::UpdateLensReviewOutput)
+        /// Consumes the builder and constructs a [`UpdateLensReviewOutput`](crate::output::UpdateLensReviewOutput).
         pub fn build(self) -> crate::output::UpdateLensReviewOutput {
             crate::output::UpdateLensReviewOutput {
                 workload_id: self.workload_id,
@@ -291,9 +292,39 @@ pub mod update_lens_review_output {
     }
 }
 impl UpdateLensReviewOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateLensReviewOutput`](crate::output::UpdateLensReviewOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateLensReviewOutput`](crate::output::UpdateLensReviewOutput).
     pub fn builder() -> crate::output::update_lens_review_output::Builder {
         crate::output::update_lens_review_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateGlobalSettingsOutput {}
+impl std::fmt::Debug for UpdateGlobalSettingsOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateGlobalSettingsOutput");
+        formatter.finish()
+    }
+}
+/// See [`UpdateGlobalSettingsOutput`](crate::output::UpdateGlobalSettingsOutput).
+pub mod update_global_settings_output {
+
+    /// A builder for [`UpdateGlobalSettingsOutput`](crate::output::UpdateGlobalSettingsOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`UpdateGlobalSettingsOutput`](crate::output::UpdateGlobalSettingsOutput).
+        pub fn build(self) -> crate::output::UpdateGlobalSettingsOutput {
+            crate::output::UpdateGlobalSettingsOutput {}
+        }
+    }
+}
+impl UpdateGlobalSettingsOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateGlobalSettingsOutput`](crate::output::UpdateGlobalSettingsOutput).
+    pub fn builder() -> crate::output::update_global_settings_output::Builder {
+        crate::output::update_global_settings_output::Builder::default()
     }
 }
 
@@ -302,15 +333,19 @@ impl UpdateLensReviewOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAnswerOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>The alias of the lens.</p>
     /// <p>For Amazon Web Services official lenses, this is either the lens alias, such as <code>serverless</code>, or the lens ARN, such as <code>arn:aws:wellarchitected:us-west-2::lens/serverless</code>.</p>
     /// <p>For custom lenses, this is the lens ARN, such as <code>arn:aws:wellarchitected:us-east-1:123456789012:lens/my-lens</code>. </p>
     /// <p>Each lens is identified by its <code>LensSummary$LensAlias</code>.</p>
+    #[doc(hidden)]
     pub lens_alias: std::option::Option<std::string::String>,
     /// <p>The ARN for the lens.</p>
+    #[doc(hidden)]
     pub lens_arn: std::option::Option<std::string::String>,
     /// <p>An answer of the question.</p>
+    #[doc(hidden)]
     pub answer: std::option::Option<crate::model::Answer>,
 }
 impl UpdateAnswerOutput {
@@ -344,11 +379,10 @@ impl std::fmt::Debug for UpdateAnswerOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAnswerOutput`](crate::output::UpdateAnswerOutput)
+/// See [`UpdateAnswerOutput`](crate::output::UpdateAnswerOutput).
 pub mod update_answer_output {
 
-    /// A builder for [`UpdateAnswerOutput`](crate::output::UpdateAnswerOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAnswerOutput`](crate::output::UpdateAnswerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -403,7 +437,7 @@ pub mod update_answer_output {
             self.answer = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAnswerOutput`](crate::output::UpdateAnswerOutput)
+        /// Consumes the builder and constructs a [`UpdateAnswerOutput`](crate::output::UpdateAnswerOutput).
         pub fn build(self) -> crate::output::UpdateAnswerOutput {
             crate::output::UpdateAnswerOutput {
                 workload_id: self.workload_id,
@@ -415,7 +449,7 @@ pub mod update_answer_output {
     }
 }
 impl UpdateAnswerOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAnswerOutput`](crate::output::UpdateAnswerOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAnswerOutput`](crate::output::UpdateAnswerOutput).
     pub fn builder() -> crate::output::update_answer_output::Builder {
         crate::output::update_answer_output::Builder::default()
     }
@@ -431,22 +465,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -462,22 +495,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -488,11 +520,14 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListWorkloadSharesOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>A list of workload share summaries.</p>
+    #[doc(hidden)]
     pub workload_share_summaries:
         std::option::Option<std::vec::Vec<crate::model::WorkloadShareSummary>>,
     /// <p>The token to use to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListWorkloadSharesOutput {
@@ -520,11 +555,10 @@ impl std::fmt::Debug for ListWorkloadSharesOutput {
         formatter.finish()
     }
 }
-/// See [`ListWorkloadSharesOutput`](crate::output::ListWorkloadSharesOutput)
+/// See [`ListWorkloadSharesOutput`](crate::output::ListWorkloadSharesOutput).
 pub mod list_workload_shares_output {
 
-    /// A builder for [`ListWorkloadSharesOutput`](crate::output::ListWorkloadSharesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListWorkloadSharesOutput`](crate::output::ListWorkloadSharesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -575,7 +609,7 @@ pub mod list_workload_shares_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListWorkloadSharesOutput`](crate::output::ListWorkloadSharesOutput)
+        /// Consumes the builder and constructs a [`ListWorkloadSharesOutput`](crate::output::ListWorkloadSharesOutput).
         pub fn build(self) -> crate::output::ListWorkloadSharesOutput {
             crate::output::ListWorkloadSharesOutput {
                 workload_id: self.workload_id,
@@ -586,7 +620,7 @@ pub mod list_workload_shares_output {
     }
 }
 impl ListWorkloadSharesOutput {
-    /// Creates a new builder-style object to manufacture [`ListWorkloadSharesOutput`](crate::output::ListWorkloadSharesOutput)
+    /// Creates a new builder-style object to manufacture [`ListWorkloadSharesOutput`](crate::output::ListWorkloadSharesOutput).
     pub fn builder() -> crate::output::list_workload_shares_output::Builder {
         crate::output::list_workload_shares_output::Builder::default()
     }
@@ -597,8 +631,10 @@ impl ListWorkloadSharesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListWorkloadsOutput {
     /// <p>A list of workload summaries.</p>
+    #[doc(hidden)]
     pub workload_summaries: std::option::Option<std::vec::Vec<crate::model::WorkloadSummary>>,
     /// <p>The token to use to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListWorkloadsOutput {
@@ -619,11 +655,10 @@ impl std::fmt::Debug for ListWorkloadsOutput {
         formatter.finish()
     }
 }
-/// See [`ListWorkloadsOutput`](crate::output::ListWorkloadsOutput)
+/// See [`ListWorkloadsOutput`](crate::output::ListWorkloadsOutput).
 pub mod list_workloads_output {
 
-    /// A builder for [`ListWorkloadsOutput`](crate::output::ListWorkloadsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListWorkloadsOutput`](crate::output::ListWorkloadsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_summaries:
@@ -660,7 +695,7 @@ pub mod list_workloads_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListWorkloadsOutput`](crate::output::ListWorkloadsOutput)
+        /// Consumes the builder and constructs a [`ListWorkloadsOutput`](crate::output::ListWorkloadsOutput).
         pub fn build(self) -> crate::output::ListWorkloadsOutput {
             crate::output::ListWorkloadsOutput {
                 workload_summaries: self.workload_summaries,
@@ -670,7 +705,7 @@ pub mod list_workloads_output {
     }
 }
 impl ListWorkloadsOutput {
-    /// Creates a new builder-style object to manufacture [`ListWorkloadsOutput`](crate::output::ListWorkloadsOutput)
+    /// Creates a new builder-style object to manufacture [`ListWorkloadsOutput`](crate::output::ListWorkloadsOutput).
     pub fn builder() -> crate::output::list_workloads_output::Builder {
         crate::output::list_workloads_output::Builder::default()
     }
@@ -681,6 +716,7 @@ impl ListWorkloadsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tags for the resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -700,11 +736,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -737,14 +772,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -755,9 +790,11 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListShareInvitationsOutput {
     /// <p>List of share invitation summaries in a workload.</p>
+    #[doc(hidden)]
     pub share_invitation_summaries:
         std::option::Option<std::vec::Vec<crate::model::ShareInvitationSummary>>,
     /// <p>The token to use to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListShareInvitationsOutput {
@@ -783,11 +820,10 @@ impl std::fmt::Debug for ListShareInvitationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListShareInvitationsOutput`](crate::output::ListShareInvitationsOutput)
+/// See [`ListShareInvitationsOutput`](crate::output::ListShareInvitationsOutput).
 pub mod list_share_invitations_output {
 
-    /// A builder for [`ListShareInvitationsOutput`](crate::output::ListShareInvitationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListShareInvitationsOutput`](crate::output::ListShareInvitationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) share_invitation_summaries:
@@ -827,7 +863,7 @@ pub mod list_share_invitations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListShareInvitationsOutput`](crate::output::ListShareInvitationsOutput)
+        /// Consumes the builder and constructs a [`ListShareInvitationsOutput`](crate::output::ListShareInvitationsOutput).
         pub fn build(self) -> crate::output::ListShareInvitationsOutput {
             crate::output::ListShareInvitationsOutput {
                 share_invitation_summaries: self.share_invitation_summaries,
@@ -837,7 +873,7 @@ pub mod list_share_invitations_output {
     }
 }
 impl ListShareInvitationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListShareInvitationsOutput`](crate::output::ListShareInvitationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListShareInvitationsOutput`](crate::output::ListShareInvitationsOutput).
     pub fn builder() -> crate::output::list_share_invitations_output::Builder {
         crate::output::list_share_invitations_output::Builder::default()
     }
@@ -848,9 +884,11 @@ impl ListShareInvitationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListNotificationsOutput {
     /// <p>List of lens notification summaries in a workload.</p>
+    #[doc(hidden)]
     pub notification_summaries:
         std::option::Option<std::vec::Vec<crate::model::NotificationSummary>>,
     /// <p>The token to use to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListNotificationsOutput {
@@ -873,11 +911,10 @@ impl std::fmt::Debug for ListNotificationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListNotificationsOutput`](crate::output::ListNotificationsOutput)
+/// See [`ListNotificationsOutput`](crate::output::ListNotificationsOutput).
 pub mod list_notifications_output {
 
-    /// A builder for [`ListNotificationsOutput`](crate::output::ListNotificationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListNotificationsOutput`](crate::output::ListNotificationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) notification_summaries:
@@ -914,7 +951,7 @@ pub mod list_notifications_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListNotificationsOutput`](crate::output::ListNotificationsOutput)
+        /// Consumes the builder and constructs a [`ListNotificationsOutput`](crate::output::ListNotificationsOutput).
         pub fn build(self) -> crate::output::ListNotificationsOutput {
             crate::output::ListNotificationsOutput {
                 notification_summaries: self.notification_summaries,
@@ -924,7 +961,7 @@ pub mod list_notifications_output {
     }
 }
 impl ListNotificationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListNotificationsOutput`](crate::output::ListNotificationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListNotificationsOutput`](crate::output::ListNotificationsOutput).
     pub fn builder() -> crate::output::list_notifications_output::Builder {
         crate::output::list_notifications_output::Builder::default()
     }
@@ -935,10 +972,13 @@ impl ListNotificationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListMilestonesOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>A list of milestone summaries.</p>
+    #[doc(hidden)]
     pub milestone_summaries: std::option::Option<std::vec::Vec<crate::model::MilestoneSummary>>,
     /// <p>The token to use to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListMilestonesOutput {
@@ -964,11 +1004,10 @@ impl std::fmt::Debug for ListMilestonesOutput {
         formatter.finish()
     }
 }
-/// See [`ListMilestonesOutput`](crate::output::ListMilestonesOutput)
+/// See [`ListMilestonesOutput`](crate::output::ListMilestonesOutput).
 pub mod list_milestones_output {
 
-    /// A builder for [`ListMilestonesOutput`](crate::output::ListMilestonesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListMilestonesOutput`](crate::output::ListMilestonesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -1016,7 +1055,7 @@ pub mod list_milestones_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListMilestonesOutput`](crate::output::ListMilestonesOutput)
+        /// Consumes the builder and constructs a [`ListMilestonesOutput`](crate::output::ListMilestonesOutput).
         pub fn build(self) -> crate::output::ListMilestonesOutput {
             crate::output::ListMilestonesOutput {
                 workload_id: self.workload_id,
@@ -1027,7 +1066,7 @@ pub mod list_milestones_output {
     }
 }
 impl ListMilestonesOutput {
-    /// Creates a new builder-style object to manufacture [`ListMilestonesOutput`](crate::output::ListMilestonesOutput)
+    /// Creates a new builder-style object to manufacture [`ListMilestonesOutput`](crate::output::ListMilestonesOutput).
     pub fn builder() -> crate::output::list_milestones_output::Builder {
         crate::output::list_milestones_output::Builder::default()
     }
@@ -1038,8 +1077,10 @@ impl ListMilestonesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListLensSharesOutput {
     /// <p>A list of lens share summaries.</p>
+    #[doc(hidden)]
     pub lens_share_summaries: std::option::Option<std::vec::Vec<crate::model::LensShareSummary>>,
     /// <p>The token to use to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListLensSharesOutput {
@@ -1060,11 +1101,10 @@ impl std::fmt::Debug for ListLensSharesOutput {
         formatter.finish()
     }
 }
-/// See [`ListLensSharesOutput`](crate::output::ListLensSharesOutput)
+/// See [`ListLensSharesOutput`](crate::output::ListLensSharesOutput).
 pub mod list_lens_shares_output {
 
-    /// A builder for [`ListLensSharesOutput`](crate::output::ListLensSharesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListLensSharesOutput`](crate::output::ListLensSharesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lens_share_summaries:
@@ -1101,7 +1141,7 @@ pub mod list_lens_shares_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListLensSharesOutput`](crate::output::ListLensSharesOutput)
+        /// Consumes the builder and constructs a [`ListLensSharesOutput`](crate::output::ListLensSharesOutput).
         pub fn build(self) -> crate::output::ListLensSharesOutput {
             crate::output::ListLensSharesOutput {
                 lens_share_summaries: self.lens_share_summaries,
@@ -1111,7 +1151,7 @@ pub mod list_lens_shares_output {
     }
 }
 impl ListLensSharesOutput {
-    /// Creates a new builder-style object to manufacture [`ListLensSharesOutput`](crate::output::ListLensSharesOutput)
+    /// Creates a new builder-style object to manufacture [`ListLensSharesOutput`](crate::output::ListLensSharesOutput).
     pub fn builder() -> crate::output::list_lens_shares_output::Builder {
         crate::output::list_lens_shares_output::Builder::default()
     }
@@ -1122,13 +1162,17 @@ impl ListLensSharesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListLensReviewsOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>The milestone number.</p>
     /// <p>A workload can have a maximum of 100 milestones.</p>
+    #[doc(hidden)]
     pub milestone_number: i32,
     /// <p>List of lens summaries of lens reviews of a workload.</p>
+    #[doc(hidden)]
     pub lens_review_summaries: std::option::Option<std::vec::Vec<crate::model::LensReviewSummary>>,
     /// <p>The token to use to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListLensReviewsOutput {
@@ -1160,11 +1204,10 @@ impl std::fmt::Debug for ListLensReviewsOutput {
         formatter.finish()
     }
 }
-/// See [`ListLensReviewsOutput`](crate::output::ListLensReviewsOutput)
+/// See [`ListLensReviewsOutput`](crate::output::ListLensReviewsOutput).
 pub mod list_lens_reviews_output {
 
-    /// A builder for [`ListLensReviewsOutput`](crate::output::ListLensReviewsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListLensReviewsOutput`](crate::output::ListLensReviewsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -1225,7 +1268,7 @@ pub mod list_lens_reviews_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListLensReviewsOutput`](crate::output::ListLensReviewsOutput)
+        /// Consumes the builder and constructs a [`ListLensReviewsOutput`](crate::output::ListLensReviewsOutput).
         pub fn build(self) -> crate::output::ListLensReviewsOutput {
             crate::output::ListLensReviewsOutput {
                 workload_id: self.workload_id,
@@ -1237,7 +1280,7 @@ pub mod list_lens_reviews_output {
     }
 }
 impl ListLensReviewsOutput {
-    /// Creates a new builder-style object to manufacture [`ListLensReviewsOutput`](crate::output::ListLensReviewsOutput)
+    /// Creates a new builder-style object to manufacture [`ListLensReviewsOutput`](crate::output::ListLensReviewsOutput).
     pub fn builder() -> crate::output::list_lens_reviews_output::Builder {
         crate::output::list_lens_reviews_output::Builder::default()
     }
@@ -1248,20 +1291,26 @@ impl ListLensReviewsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListLensReviewImprovementsOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>The milestone number.</p>
     /// <p>A workload can have a maximum of 100 milestones.</p>
+    #[doc(hidden)]
     pub milestone_number: i32,
     /// <p>The alias of the lens.</p>
     /// <p>For Amazon Web Services official lenses, this is either the lens alias, such as <code>serverless</code>, or the lens ARN, such as <code>arn:aws:wellarchitected:us-west-2::lens/serverless</code>.</p>
     /// <p>For custom lenses, this is the lens ARN, such as <code>arn:aws:wellarchitected:us-east-1:123456789012:lens/my-lens</code>. </p>
     /// <p>Each lens is identified by its <code>LensSummary$LensAlias</code>.</p>
+    #[doc(hidden)]
     pub lens_alias: std::option::Option<std::string::String>,
     /// <p>The ARN for the lens.</p>
+    #[doc(hidden)]
     pub lens_arn: std::option::Option<std::string::String>,
     /// <p>List of improvement summaries of lens review in a workload.</p>
+    #[doc(hidden)]
     pub improvement_summaries: std::option::Option<std::vec::Vec<crate::model::ImprovementSummary>>,
     /// <p>The token to use to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListLensReviewImprovementsOutput {
@@ -1308,11 +1357,10 @@ impl std::fmt::Debug for ListLensReviewImprovementsOutput {
         formatter.finish()
     }
 }
-/// See [`ListLensReviewImprovementsOutput`](crate::output::ListLensReviewImprovementsOutput)
+/// See [`ListLensReviewImprovementsOutput`](crate::output::ListLensReviewImprovementsOutput).
 pub mod list_lens_review_improvements_output {
 
-    /// A builder for [`ListLensReviewImprovementsOutput`](crate::output::ListLensReviewImprovementsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListLensReviewImprovementsOutput`](crate::output::ListLensReviewImprovementsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -1401,7 +1449,7 @@ pub mod list_lens_review_improvements_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListLensReviewImprovementsOutput`](crate::output::ListLensReviewImprovementsOutput)
+        /// Consumes the builder and constructs a [`ListLensReviewImprovementsOutput`](crate::output::ListLensReviewImprovementsOutput).
         pub fn build(self) -> crate::output::ListLensReviewImprovementsOutput {
             crate::output::ListLensReviewImprovementsOutput {
                 workload_id: self.workload_id,
@@ -1415,7 +1463,7 @@ pub mod list_lens_review_improvements_output {
     }
 }
 impl ListLensReviewImprovementsOutput {
-    /// Creates a new builder-style object to manufacture [`ListLensReviewImprovementsOutput`](crate::output::ListLensReviewImprovementsOutput)
+    /// Creates a new builder-style object to manufacture [`ListLensReviewImprovementsOutput`](crate::output::ListLensReviewImprovementsOutput).
     pub fn builder() -> crate::output::list_lens_review_improvements_output::Builder {
         crate::output::list_lens_review_improvements_output::Builder::default()
     }
@@ -1426,8 +1474,10 @@ impl ListLensReviewImprovementsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListLensesOutput {
     /// <p>List of lens summaries of available lenses.</p>
+    #[doc(hidden)]
     pub lens_summaries: std::option::Option<std::vec::Vec<crate::model::LensSummary>>,
     /// <p>The token to use to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListLensesOutput {
@@ -1448,11 +1498,10 @@ impl std::fmt::Debug for ListLensesOutput {
         formatter.finish()
     }
 }
-/// See [`ListLensesOutput`](crate::output::ListLensesOutput)
+/// See [`ListLensesOutput`](crate::output::ListLensesOutput).
 pub mod list_lenses_output {
 
-    /// A builder for [`ListLensesOutput`](crate::output::ListLensesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListLensesOutput`](crate::output::ListLensesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lens_summaries: std::option::Option<std::vec::Vec<crate::model::LensSummary>>,
@@ -1488,7 +1537,7 @@ pub mod list_lenses_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListLensesOutput`](crate::output::ListLensesOutput)
+        /// Consumes the builder and constructs a [`ListLensesOutput`](crate::output::ListLensesOutput).
         pub fn build(self) -> crate::output::ListLensesOutput {
             crate::output::ListLensesOutput {
                 lens_summaries: self.lens_summaries,
@@ -1498,7 +1547,7 @@ pub mod list_lenses_output {
     }
 }
 impl ListLensesOutput {
-    /// Creates a new builder-style object to manufacture [`ListLensesOutput`](crate::output::ListLensesOutput)
+    /// Creates a new builder-style object to manufacture [`ListLensesOutput`](crate::output::ListLensesOutput).
     pub fn builder() -> crate::output::list_lenses_output::Builder {
         crate::output::list_lenses_output::Builder::default()
     }
@@ -1509,20 +1558,26 @@ impl ListLensesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAnswersOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>The milestone number.</p>
     /// <p>A workload can have a maximum of 100 milestones.</p>
+    #[doc(hidden)]
     pub milestone_number: i32,
     /// <p>The alias of the lens.</p>
     /// <p>For Amazon Web Services official lenses, this is either the lens alias, such as <code>serverless</code>, or the lens ARN, such as <code>arn:aws:wellarchitected:us-west-2::lens/serverless</code>.</p>
     /// <p>For custom lenses, this is the lens ARN, such as <code>arn:aws:wellarchitected:us-east-1:123456789012:lens/my-lens</code>. </p>
     /// <p>Each lens is identified by its <code>LensSummary$LensAlias</code>.</p>
+    #[doc(hidden)]
     pub lens_alias: std::option::Option<std::string::String>,
     /// <p>The ARN for the lens.</p>
+    #[doc(hidden)]
     pub lens_arn: std::option::Option<std::string::String>,
     /// <p>List of answer summaries of lens review in a workload.</p>
+    #[doc(hidden)]
     pub answer_summaries: std::option::Option<std::vec::Vec<crate::model::AnswerSummary>>,
     /// <p>The token to use to retrieve the next set of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAnswersOutput {
@@ -1567,11 +1622,10 @@ impl std::fmt::Debug for ListAnswersOutput {
         formatter.finish()
     }
 }
-/// See [`ListAnswersOutput`](crate::output::ListAnswersOutput)
+/// See [`ListAnswersOutput`](crate::output::ListAnswersOutput).
 pub mod list_answers_output {
 
-    /// A builder for [`ListAnswersOutput`](crate::output::ListAnswersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAnswersOutput`](crate::output::ListAnswersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -1660,7 +1714,7 @@ pub mod list_answers_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAnswersOutput`](crate::output::ListAnswersOutput)
+        /// Consumes the builder and constructs a [`ListAnswersOutput`](crate::output::ListAnswersOutput).
         pub fn build(self) -> crate::output::ListAnswersOutput {
             crate::output::ListAnswersOutput {
                 workload_id: self.workload_id,
@@ -1674,7 +1728,7 @@ pub mod list_answers_output {
     }
 }
 impl ListAnswersOutput {
-    /// Creates a new builder-style object to manufacture [`ListAnswersOutput`](crate::output::ListAnswersOutput)
+    /// Creates a new builder-style object to manufacture [`ListAnswersOutput`](crate::output::ListAnswersOutput).
     pub fn builder() -> crate::output::list_answers_output::Builder {
         crate::output::list_answers_output::Builder::default()
     }
@@ -1685,8 +1739,10 @@ impl ListAnswersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportLensOutput {
     /// <p>The ARN for the lens.</p>
+    #[doc(hidden)]
     pub lens_arn: std::option::Option<std::string::String>,
     /// <p>The status of the imported lens.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ImportLensStatus>,
 }
 impl ImportLensOutput {
@@ -1707,11 +1763,10 @@ impl std::fmt::Debug for ImportLensOutput {
         formatter.finish()
     }
 }
-/// See [`ImportLensOutput`](crate::output::ImportLensOutput)
+/// See [`ImportLensOutput`](crate::output::ImportLensOutput).
 pub mod import_lens_output {
 
-    /// A builder for [`ImportLensOutput`](crate::output::ImportLensOutput)
-    #[non_exhaustive]
+    /// A builder for [`ImportLensOutput`](crate::output::ImportLensOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lens_arn: std::option::Option<std::string::String>,
@@ -1741,7 +1796,7 @@ pub mod import_lens_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportLensOutput`](crate::output::ImportLensOutput)
+        /// Consumes the builder and constructs a [`ImportLensOutput`](crate::output::ImportLensOutput).
         pub fn build(self) -> crate::output::ImportLensOutput {
             crate::output::ImportLensOutput {
                 lens_arn: self.lens_arn,
@@ -1751,7 +1806,7 @@ pub mod import_lens_output {
     }
 }
 impl ImportLensOutput {
-    /// Creates a new builder-style object to manufacture [`ImportLensOutput`](crate::output::ImportLensOutput)
+    /// Creates a new builder-style object to manufacture [`ImportLensOutput`](crate::output::ImportLensOutput).
     pub fn builder() -> crate::output::import_lens_output::Builder {
         crate::output::import_lens_output::Builder::default()
     }
@@ -1762,6 +1817,7 @@ impl ImportLensOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetWorkloadOutput {
     /// <p>A workload return object.</p>
+    #[doc(hidden)]
     pub workload: std::option::Option<crate::model::Workload>,
 }
 impl GetWorkloadOutput {
@@ -1777,11 +1833,10 @@ impl std::fmt::Debug for GetWorkloadOutput {
         formatter.finish()
     }
 }
-/// See [`GetWorkloadOutput`](crate::output::GetWorkloadOutput)
+/// See [`GetWorkloadOutput`](crate::output::GetWorkloadOutput).
 pub mod get_workload_output {
 
-    /// A builder for [`GetWorkloadOutput`](crate::output::GetWorkloadOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetWorkloadOutput`](crate::output::GetWorkloadOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload: std::option::Option<crate::model::Workload>,
@@ -1797,7 +1852,7 @@ pub mod get_workload_output {
             self.workload = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetWorkloadOutput`](crate::output::GetWorkloadOutput)
+        /// Consumes the builder and constructs a [`GetWorkloadOutput`](crate::output::GetWorkloadOutput).
         pub fn build(self) -> crate::output::GetWorkloadOutput {
             crate::output::GetWorkloadOutput {
                 workload: self.workload,
@@ -1806,7 +1861,7 @@ pub mod get_workload_output {
     }
 }
 impl GetWorkloadOutput {
-    /// Creates a new builder-style object to manufacture [`GetWorkloadOutput`](crate::output::GetWorkloadOutput)
+    /// Creates a new builder-style object to manufacture [`GetWorkloadOutput`](crate::output::GetWorkloadOutput).
     pub fn builder() -> crate::output::get_workload_output::Builder {
         crate::output::get_workload_output::Builder::default()
     }
@@ -1817,8 +1872,10 @@ impl GetWorkloadOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetMilestoneOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>A milestone return object.</p>
+    #[doc(hidden)]
     pub milestone: std::option::Option<crate::model::Milestone>,
 }
 impl GetMilestoneOutput {
@@ -1839,11 +1896,10 @@ impl std::fmt::Debug for GetMilestoneOutput {
         formatter.finish()
     }
 }
-/// See [`GetMilestoneOutput`](crate::output::GetMilestoneOutput)
+/// See [`GetMilestoneOutput`](crate::output::GetMilestoneOutput).
 pub mod get_milestone_output {
 
-    /// A builder for [`GetMilestoneOutput`](crate::output::GetMilestoneOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetMilestoneOutput`](crate::output::GetMilestoneOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -1873,7 +1929,7 @@ pub mod get_milestone_output {
             self.milestone = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetMilestoneOutput`](crate::output::GetMilestoneOutput)
+        /// Consumes the builder and constructs a [`GetMilestoneOutput`](crate::output::GetMilestoneOutput).
         pub fn build(self) -> crate::output::GetMilestoneOutput {
             crate::output::GetMilestoneOutput {
                 workload_id: self.workload_id,
@@ -1883,7 +1939,7 @@ pub mod get_milestone_output {
     }
 }
 impl GetMilestoneOutput {
-    /// Creates a new builder-style object to manufacture [`GetMilestoneOutput`](crate::output::GetMilestoneOutput)
+    /// Creates a new builder-style object to manufacture [`GetMilestoneOutput`](crate::output::GetMilestoneOutput).
     pub fn builder() -> crate::output::get_milestone_output::Builder {
         crate::output::get_milestone_output::Builder::default()
     }
@@ -1897,16 +1953,22 @@ pub struct GetLensVersionDifferenceOutput {
     /// <p>For Amazon Web Services official lenses, this is either the lens alias, such as <code>serverless</code>, or the lens ARN, such as <code>arn:aws:wellarchitected:us-west-2::lens/serverless</code>.</p>
     /// <p>For custom lenses, this is the lens ARN, such as <code>arn:aws:wellarchitected:us-east-1:123456789012:lens/my-lens</code>. </p>
     /// <p>Each lens is identified by its <code>LensSummary$LensAlias</code>.</p>
+    #[doc(hidden)]
     pub lens_alias: std::option::Option<std::string::String>,
     /// <p>The ARN for the lens.</p>
+    #[doc(hidden)]
     pub lens_arn: std::option::Option<std::string::String>,
     /// <p>The base version of the lens.</p>
+    #[doc(hidden)]
     pub base_lens_version: std::option::Option<std::string::String>,
     /// <p>The target lens version for the lens.</p>
+    #[doc(hidden)]
     pub target_lens_version: std::option::Option<std::string::String>,
     /// <p>The latest version of the lens.</p>
+    #[doc(hidden)]
     pub latest_lens_version: std::option::Option<std::string::String>,
     /// <p>The differences between the base and latest versions of the lens.</p>
+    #[doc(hidden)]
     pub version_differences: std::option::Option<crate::model::VersionDifferences>,
 }
 impl GetLensVersionDifferenceOutput {
@@ -1950,11 +2012,10 @@ impl std::fmt::Debug for GetLensVersionDifferenceOutput {
         formatter.finish()
     }
 }
-/// See [`GetLensVersionDifferenceOutput`](crate::output::GetLensVersionDifferenceOutput)
+/// See [`GetLensVersionDifferenceOutput`](crate::output::GetLensVersionDifferenceOutput).
 pub mod get_lens_version_difference_output {
 
-    /// A builder for [`GetLensVersionDifferenceOutput`](crate::output::GetLensVersionDifferenceOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetLensVersionDifferenceOutput`](crate::output::GetLensVersionDifferenceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lens_alias: std::option::Option<std::string::String>,
@@ -2043,7 +2104,7 @@ pub mod get_lens_version_difference_output {
             self.version_differences = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetLensVersionDifferenceOutput`](crate::output::GetLensVersionDifferenceOutput)
+        /// Consumes the builder and constructs a [`GetLensVersionDifferenceOutput`](crate::output::GetLensVersionDifferenceOutput).
         pub fn build(self) -> crate::output::GetLensVersionDifferenceOutput {
             crate::output::GetLensVersionDifferenceOutput {
                 lens_alias: self.lens_alias,
@@ -2057,7 +2118,7 @@ pub mod get_lens_version_difference_output {
     }
 }
 impl GetLensVersionDifferenceOutput {
-    /// Creates a new builder-style object to manufacture [`GetLensVersionDifferenceOutput`](crate::output::GetLensVersionDifferenceOutput)
+    /// Creates a new builder-style object to manufacture [`GetLensVersionDifferenceOutput`](crate::output::GetLensVersionDifferenceOutput).
     pub fn builder() -> crate::output::get_lens_version_difference_output::Builder {
         crate::output::get_lens_version_difference_output::Builder::default()
     }
@@ -2068,11 +2129,14 @@ impl GetLensVersionDifferenceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetLensReviewReportOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>The milestone number.</p>
     /// <p>A workload can have a maximum of 100 milestones.</p>
+    #[doc(hidden)]
     pub milestone_number: i32,
     /// <p>A report of a lens review.</p>
+    #[doc(hidden)]
     pub lens_review_report: std::option::Option<crate::model::LensReviewReport>,
 }
 impl GetLensReviewReportOutput {
@@ -2099,11 +2163,10 @@ impl std::fmt::Debug for GetLensReviewReportOutput {
         formatter.finish()
     }
 }
-/// See [`GetLensReviewReportOutput`](crate::output::GetLensReviewReportOutput)
+/// See [`GetLensReviewReportOutput`](crate::output::GetLensReviewReportOutput).
 pub mod get_lens_review_report_output {
 
-    /// A builder for [`GetLensReviewReportOutput`](crate::output::GetLensReviewReportOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetLensReviewReportOutput`](crate::output::GetLensReviewReportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -2146,7 +2209,7 @@ pub mod get_lens_review_report_output {
             self.lens_review_report = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetLensReviewReportOutput`](crate::output::GetLensReviewReportOutput)
+        /// Consumes the builder and constructs a [`GetLensReviewReportOutput`](crate::output::GetLensReviewReportOutput).
         pub fn build(self) -> crate::output::GetLensReviewReportOutput {
             crate::output::GetLensReviewReportOutput {
                 workload_id: self.workload_id,
@@ -2157,7 +2220,7 @@ pub mod get_lens_review_report_output {
     }
 }
 impl GetLensReviewReportOutput {
-    /// Creates a new builder-style object to manufacture [`GetLensReviewReportOutput`](crate::output::GetLensReviewReportOutput)
+    /// Creates a new builder-style object to manufacture [`GetLensReviewReportOutput`](crate::output::GetLensReviewReportOutput).
     pub fn builder() -> crate::output::get_lens_review_report_output::Builder {
         crate::output::get_lens_review_report_output::Builder::default()
     }
@@ -2168,11 +2231,14 @@ impl GetLensReviewReportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetLensReviewOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>The milestone number.</p>
     /// <p>A workload can have a maximum of 100 milestones.</p>
+    #[doc(hidden)]
     pub milestone_number: i32,
     /// <p>A lens review of a question.</p>
+    #[doc(hidden)]
     pub lens_review: std::option::Option<crate::model::LensReview>,
 }
 impl GetLensReviewOutput {
@@ -2199,11 +2265,10 @@ impl std::fmt::Debug for GetLensReviewOutput {
         formatter.finish()
     }
 }
-/// See [`GetLensReviewOutput`](crate::output::GetLensReviewOutput)
+/// See [`GetLensReviewOutput`](crate::output::GetLensReviewOutput).
 pub mod get_lens_review_output {
 
-    /// A builder for [`GetLensReviewOutput`](crate::output::GetLensReviewOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetLensReviewOutput`](crate::output::GetLensReviewOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -2246,7 +2311,7 @@ pub mod get_lens_review_output {
             self.lens_review = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetLensReviewOutput`](crate::output::GetLensReviewOutput)
+        /// Consumes the builder and constructs a [`GetLensReviewOutput`](crate::output::GetLensReviewOutput).
         pub fn build(self) -> crate::output::GetLensReviewOutput {
             crate::output::GetLensReviewOutput {
                 workload_id: self.workload_id,
@@ -2257,7 +2322,7 @@ pub mod get_lens_review_output {
     }
 }
 impl GetLensReviewOutput {
-    /// Creates a new builder-style object to manufacture [`GetLensReviewOutput`](crate::output::GetLensReviewOutput)
+    /// Creates a new builder-style object to manufacture [`GetLensReviewOutput`](crate::output::GetLensReviewOutput).
     pub fn builder() -> crate::output::get_lens_review_output::Builder {
         crate::output::get_lens_review_output::Builder::default()
     }
@@ -2268,6 +2333,7 @@ impl GetLensReviewOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetLensOutput {
     /// <p>A lens return object.</p>
+    #[doc(hidden)]
     pub lens: std::option::Option<crate::model::Lens>,
 }
 impl GetLensOutput {
@@ -2283,11 +2349,10 @@ impl std::fmt::Debug for GetLensOutput {
         formatter.finish()
     }
 }
-/// See [`GetLensOutput`](crate::output::GetLensOutput)
+/// See [`GetLensOutput`](crate::output::GetLensOutput).
 pub mod get_lens_output {
 
-    /// A builder for [`GetLensOutput`](crate::output::GetLensOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetLensOutput`](crate::output::GetLensOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lens: std::option::Option<crate::model::Lens>,
@@ -2303,14 +2368,14 @@ pub mod get_lens_output {
             self.lens = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetLensOutput`](crate::output::GetLensOutput)
+        /// Consumes the builder and constructs a [`GetLensOutput`](crate::output::GetLensOutput).
         pub fn build(self) -> crate::output::GetLensOutput {
             crate::output::GetLensOutput { lens: self.lens }
         }
     }
 }
 impl GetLensOutput {
-    /// Creates a new builder-style object to manufacture [`GetLensOutput`](crate::output::GetLensOutput)
+    /// Creates a new builder-style object to manufacture [`GetLensOutput`](crate::output::GetLensOutput).
     pub fn builder() -> crate::output::get_lens_output::Builder {
         crate::output::get_lens_output::Builder::default()
     }
@@ -2321,18 +2386,23 @@ impl GetLensOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAnswerOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>The milestone number.</p>
     /// <p>A workload can have a maximum of 100 milestones.</p>
+    #[doc(hidden)]
     pub milestone_number: i32,
     /// <p>The alias of the lens.</p>
     /// <p>For Amazon Web Services official lenses, this is either the lens alias, such as <code>serverless</code>, or the lens ARN, such as <code>arn:aws:wellarchitected:us-west-2::lens/serverless</code>.</p>
     /// <p>For custom lenses, this is the lens ARN, such as <code>arn:aws:wellarchitected:us-east-1:123456789012:lens/my-lens</code>. </p>
     /// <p>Each lens is identified by its <code>LensSummary$LensAlias</code>.</p>
+    #[doc(hidden)]
     pub lens_alias: std::option::Option<std::string::String>,
     /// <p>The ARN for the lens.</p>
+    #[doc(hidden)]
     pub lens_arn: std::option::Option<std::string::String>,
     /// <p>An answer of the question.</p>
+    #[doc(hidden)]
     pub answer: std::option::Option<crate::model::Answer>,
 }
 impl GetAnswerOutput {
@@ -2372,11 +2442,10 @@ impl std::fmt::Debug for GetAnswerOutput {
         formatter.finish()
     }
 }
-/// See [`GetAnswerOutput`](crate::output::GetAnswerOutput)
+/// See [`GetAnswerOutput`](crate::output::GetAnswerOutput).
 pub mod get_answer_output {
 
-    /// A builder for [`GetAnswerOutput`](crate::output::GetAnswerOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAnswerOutput`](crate::output::GetAnswerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -2444,7 +2513,7 @@ pub mod get_answer_output {
             self.answer = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAnswerOutput`](crate::output::GetAnswerOutput)
+        /// Consumes the builder and constructs a [`GetAnswerOutput`](crate::output::GetAnswerOutput).
         pub fn build(self) -> crate::output::GetAnswerOutput {
             crate::output::GetAnswerOutput {
                 workload_id: self.workload_id,
@@ -2457,7 +2526,7 @@ pub mod get_answer_output {
     }
 }
 impl GetAnswerOutput {
-    /// Creates a new builder-style object to manufacture [`GetAnswerOutput`](crate::output::GetAnswerOutput)
+    /// Creates a new builder-style object to manufacture [`GetAnswerOutput`](crate::output::GetAnswerOutput).
     pub fn builder() -> crate::output::get_answer_output::Builder {
         crate::output::get_answer_output::Builder::default()
     }
@@ -2468,6 +2537,7 @@ impl GetAnswerOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportLensOutput {
     /// <p>The JSON for the lens.</p>
+    #[doc(hidden)]
     pub lens_json: std::option::Option<std::string::String>,
 }
 impl ExportLensOutput {
@@ -2483,11 +2553,10 @@ impl std::fmt::Debug for ExportLensOutput {
         formatter.finish()
     }
 }
-/// See [`ExportLensOutput`](crate::output::ExportLensOutput)
+/// See [`ExportLensOutput`](crate::output::ExportLensOutput).
 pub mod export_lens_output {
 
-    /// A builder for [`ExportLensOutput`](crate::output::ExportLensOutput)
-    #[non_exhaustive]
+    /// A builder for [`ExportLensOutput`](crate::output::ExportLensOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lens_json: std::option::Option<std::string::String>,
@@ -2503,7 +2572,7 @@ pub mod export_lens_output {
             self.lens_json = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportLensOutput`](crate::output::ExportLensOutput)
+        /// Consumes the builder and constructs a [`ExportLensOutput`](crate::output::ExportLensOutput).
         pub fn build(self) -> crate::output::ExportLensOutput {
             crate::output::ExportLensOutput {
                 lens_json: self.lens_json,
@@ -2512,7 +2581,7 @@ pub mod export_lens_output {
     }
 }
 impl ExportLensOutput {
-    /// Creates a new builder-style object to manufacture [`ExportLensOutput`](crate::output::ExportLensOutput)
+    /// Creates a new builder-style object to manufacture [`ExportLensOutput`](crate::output::ExportLensOutput).
     pub fn builder() -> crate::output::export_lens_output::Builder {
         crate::output::export_lens_output::Builder::default()
     }
@@ -2528,22 +2597,21 @@ impl std::fmt::Debug for DisassociateLensesOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateLensesOutput`](crate::output::DisassociateLensesOutput)
+/// See [`DisassociateLensesOutput`](crate::output::DisassociateLensesOutput).
 pub mod disassociate_lenses_output {
 
-    /// A builder for [`DisassociateLensesOutput`](crate::output::DisassociateLensesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateLensesOutput`](crate::output::DisassociateLensesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisassociateLensesOutput`](crate::output::DisassociateLensesOutput)
+        /// Consumes the builder and constructs a [`DisassociateLensesOutput`](crate::output::DisassociateLensesOutput).
         pub fn build(self) -> crate::output::DisassociateLensesOutput {
             crate::output::DisassociateLensesOutput {}
         }
     }
 }
 impl DisassociateLensesOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateLensesOutput`](crate::output::DisassociateLensesOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateLensesOutput`](crate::output::DisassociateLensesOutput).
     pub fn builder() -> crate::output::disassociate_lenses_output::Builder {
         crate::output::disassociate_lenses_output::Builder::default()
     }
@@ -2559,22 +2627,21 @@ impl std::fmt::Debug for DeleteWorkloadShareOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteWorkloadShareOutput`](crate::output::DeleteWorkloadShareOutput)
+/// See [`DeleteWorkloadShareOutput`](crate::output::DeleteWorkloadShareOutput).
 pub mod delete_workload_share_output {
 
-    /// A builder for [`DeleteWorkloadShareOutput`](crate::output::DeleteWorkloadShareOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteWorkloadShareOutput`](crate::output::DeleteWorkloadShareOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteWorkloadShareOutput`](crate::output::DeleteWorkloadShareOutput)
+        /// Consumes the builder and constructs a [`DeleteWorkloadShareOutput`](crate::output::DeleteWorkloadShareOutput).
         pub fn build(self) -> crate::output::DeleteWorkloadShareOutput {
             crate::output::DeleteWorkloadShareOutput {}
         }
     }
 }
 impl DeleteWorkloadShareOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteWorkloadShareOutput`](crate::output::DeleteWorkloadShareOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteWorkloadShareOutput`](crate::output::DeleteWorkloadShareOutput).
     pub fn builder() -> crate::output::delete_workload_share_output::Builder {
         crate::output::delete_workload_share_output::Builder::default()
     }
@@ -2590,22 +2657,21 @@ impl std::fmt::Debug for DeleteWorkloadOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteWorkloadOutput`](crate::output::DeleteWorkloadOutput)
+/// See [`DeleteWorkloadOutput`](crate::output::DeleteWorkloadOutput).
 pub mod delete_workload_output {
 
-    /// A builder for [`DeleteWorkloadOutput`](crate::output::DeleteWorkloadOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteWorkloadOutput`](crate::output::DeleteWorkloadOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteWorkloadOutput`](crate::output::DeleteWorkloadOutput)
+        /// Consumes the builder and constructs a [`DeleteWorkloadOutput`](crate::output::DeleteWorkloadOutput).
         pub fn build(self) -> crate::output::DeleteWorkloadOutput {
             crate::output::DeleteWorkloadOutput {}
         }
     }
 }
 impl DeleteWorkloadOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteWorkloadOutput`](crate::output::DeleteWorkloadOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteWorkloadOutput`](crate::output::DeleteWorkloadOutput).
     pub fn builder() -> crate::output::delete_workload_output::Builder {
         crate::output::delete_workload_output::Builder::default()
     }
@@ -2621,22 +2687,21 @@ impl std::fmt::Debug for DeleteLensShareOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteLensShareOutput`](crate::output::DeleteLensShareOutput)
+/// See [`DeleteLensShareOutput`](crate::output::DeleteLensShareOutput).
 pub mod delete_lens_share_output {
 
-    /// A builder for [`DeleteLensShareOutput`](crate::output::DeleteLensShareOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteLensShareOutput`](crate::output::DeleteLensShareOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteLensShareOutput`](crate::output::DeleteLensShareOutput)
+        /// Consumes the builder and constructs a [`DeleteLensShareOutput`](crate::output::DeleteLensShareOutput).
         pub fn build(self) -> crate::output::DeleteLensShareOutput {
             crate::output::DeleteLensShareOutput {}
         }
     }
 }
 impl DeleteLensShareOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteLensShareOutput`](crate::output::DeleteLensShareOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteLensShareOutput`](crate::output::DeleteLensShareOutput).
     pub fn builder() -> crate::output::delete_lens_share_output::Builder {
         crate::output::delete_lens_share_output::Builder::default()
     }
@@ -2652,22 +2717,21 @@ impl std::fmt::Debug for DeleteLensOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteLensOutput`](crate::output::DeleteLensOutput)
+/// See [`DeleteLensOutput`](crate::output::DeleteLensOutput).
 pub mod delete_lens_output {
 
-    /// A builder for [`DeleteLensOutput`](crate::output::DeleteLensOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteLensOutput`](crate::output::DeleteLensOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteLensOutput`](crate::output::DeleteLensOutput)
+        /// Consumes the builder and constructs a [`DeleteLensOutput`](crate::output::DeleteLensOutput).
         pub fn build(self) -> crate::output::DeleteLensOutput {
             crate::output::DeleteLensOutput {}
         }
     }
 }
 impl DeleteLensOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteLensOutput`](crate::output::DeleteLensOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteLensOutput`](crate::output::DeleteLensOutput).
     pub fn builder() -> crate::output::delete_lens_output::Builder {
         crate::output::delete_lens_output::Builder::default()
     }
@@ -2678,8 +2742,10 @@ impl DeleteLensOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateWorkloadShareOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>The ID associated with the workload share.</p>
+    #[doc(hidden)]
     pub share_id: std::option::Option<std::string::String>,
 }
 impl CreateWorkloadShareOutput {
@@ -2700,11 +2766,10 @@ impl std::fmt::Debug for CreateWorkloadShareOutput {
         formatter.finish()
     }
 }
-/// See [`CreateWorkloadShareOutput`](crate::output::CreateWorkloadShareOutput)
+/// See [`CreateWorkloadShareOutput`](crate::output::CreateWorkloadShareOutput).
 pub mod create_workload_share_output {
 
-    /// A builder for [`CreateWorkloadShareOutput`](crate::output::CreateWorkloadShareOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateWorkloadShareOutput`](crate::output::CreateWorkloadShareOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -2731,7 +2796,7 @@ pub mod create_workload_share_output {
             self.share_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateWorkloadShareOutput`](crate::output::CreateWorkloadShareOutput)
+        /// Consumes the builder and constructs a [`CreateWorkloadShareOutput`](crate::output::CreateWorkloadShareOutput).
         pub fn build(self) -> crate::output::CreateWorkloadShareOutput {
             crate::output::CreateWorkloadShareOutput {
                 workload_id: self.workload_id,
@@ -2741,7 +2806,7 @@ pub mod create_workload_share_output {
     }
 }
 impl CreateWorkloadShareOutput {
-    /// Creates a new builder-style object to manufacture [`CreateWorkloadShareOutput`](crate::output::CreateWorkloadShareOutput)
+    /// Creates a new builder-style object to manufacture [`CreateWorkloadShareOutput`](crate::output::CreateWorkloadShareOutput).
     pub fn builder() -> crate::output::create_workload_share_output::Builder {
         crate::output::create_workload_share_output::Builder::default()
     }
@@ -2752,8 +2817,10 @@ impl CreateWorkloadShareOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateWorkloadOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>The ARN for the workload.</p>
+    #[doc(hidden)]
     pub workload_arn: std::option::Option<std::string::String>,
 }
 impl CreateWorkloadOutput {
@@ -2774,11 +2841,10 @@ impl std::fmt::Debug for CreateWorkloadOutput {
         formatter.finish()
     }
 }
-/// See [`CreateWorkloadOutput`](crate::output::CreateWorkloadOutput)
+/// See [`CreateWorkloadOutput`](crate::output::CreateWorkloadOutput).
 pub mod create_workload_output {
 
-    /// A builder for [`CreateWorkloadOutput`](crate::output::CreateWorkloadOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateWorkloadOutput`](crate::output::CreateWorkloadOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -2805,7 +2871,7 @@ pub mod create_workload_output {
             self.workload_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateWorkloadOutput`](crate::output::CreateWorkloadOutput)
+        /// Consumes the builder and constructs a [`CreateWorkloadOutput`](crate::output::CreateWorkloadOutput).
         pub fn build(self) -> crate::output::CreateWorkloadOutput {
             crate::output::CreateWorkloadOutput {
                 workload_id: self.workload_id,
@@ -2815,7 +2881,7 @@ pub mod create_workload_output {
     }
 }
 impl CreateWorkloadOutput {
-    /// Creates a new builder-style object to manufacture [`CreateWorkloadOutput`](crate::output::CreateWorkloadOutput)
+    /// Creates a new builder-style object to manufacture [`CreateWorkloadOutput`](crate::output::CreateWorkloadOutput).
     pub fn builder() -> crate::output::create_workload_output::Builder {
         crate::output::create_workload_output::Builder::default()
     }
@@ -2826,9 +2892,11 @@ impl CreateWorkloadOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateMilestoneOutput {
     /// <p>The ID assigned to the workload. This ID is unique within an Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub workload_id: std::option::Option<std::string::String>,
     /// <p>The milestone number.</p>
     /// <p>A workload can have a maximum of 100 milestones.</p>
+    #[doc(hidden)]
     pub milestone_number: i32,
 }
 impl CreateMilestoneOutput {
@@ -2850,11 +2918,10 @@ impl std::fmt::Debug for CreateMilestoneOutput {
         formatter.finish()
     }
 }
-/// See [`CreateMilestoneOutput`](crate::output::CreateMilestoneOutput)
+/// See [`CreateMilestoneOutput`](crate::output::CreateMilestoneOutput).
 pub mod create_milestone_output {
 
-    /// A builder for [`CreateMilestoneOutput`](crate::output::CreateMilestoneOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateMilestoneOutput`](crate::output::CreateMilestoneOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workload_id: std::option::Option<std::string::String>,
@@ -2883,7 +2950,7 @@ pub mod create_milestone_output {
             self.milestone_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateMilestoneOutput`](crate::output::CreateMilestoneOutput)
+        /// Consumes the builder and constructs a [`CreateMilestoneOutput`](crate::output::CreateMilestoneOutput).
         pub fn build(self) -> crate::output::CreateMilestoneOutput {
             crate::output::CreateMilestoneOutput {
                 workload_id: self.workload_id,
@@ -2893,7 +2960,7 @@ pub mod create_milestone_output {
     }
 }
 impl CreateMilestoneOutput {
-    /// Creates a new builder-style object to manufacture [`CreateMilestoneOutput`](crate::output::CreateMilestoneOutput)
+    /// Creates a new builder-style object to manufacture [`CreateMilestoneOutput`](crate::output::CreateMilestoneOutput).
     pub fn builder() -> crate::output::create_milestone_output::Builder {
         crate::output::create_milestone_output::Builder::default()
     }
@@ -2904,8 +2971,10 @@ impl CreateMilestoneOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateLensVersionOutput {
     /// <p>The ARN for the lens.</p>
+    #[doc(hidden)]
     pub lens_arn: std::option::Option<std::string::String>,
     /// <p>The version of the lens.</p>
+    #[doc(hidden)]
     pub lens_version: std::option::Option<std::string::String>,
 }
 impl CreateLensVersionOutput {
@@ -2926,11 +2995,10 @@ impl std::fmt::Debug for CreateLensVersionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateLensVersionOutput`](crate::output::CreateLensVersionOutput)
+/// See [`CreateLensVersionOutput`](crate::output::CreateLensVersionOutput).
 pub mod create_lens_version_output {
 
-    /// A builder for [`CreateLensVersionOutput`](crate::output::CreateLensVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateLensVersionOutput`](crate::output::CreateLensVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lens_arn: std::option::Option<std::string::String>,
@@ -2957,7 +3025,7 @@ pub mod create_lens_version_output {
             self.lens_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateLensVersionOutput`](crate::output::CreateLensVersionOutput)
+        /// Consumes the builder and constructs a [`CreateLensVersionOutput`](crate::output::CreateLensVersionOutput).
         pub fn build(self) -> crate::output::CreateLensVersionOutput {
             crate::output::CreateLensVersionOutput {
                 lens_arn: self.lens_arn,
@@ -2967,7 +3035,7 @@ pub mod create_lens_version_output {
     }
 }
 impl CreateLensVersionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateLensVersionOutput`](crate::output::CreateLensVersionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateLensVersionOutput`](crate::output::CreateLensVersionOutput).
     pub fn builder() -> crate::output::create_lens_version_output::Builder {
         crate::output::create_lens_version_output::Builder::default()
     }
@@ -2978,6 +3046,7 @@ impl CreateLensVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateLensShareOutput {
     /// <p>The ID associated with the workload share.</p>
+    #[doc(hidden)]
     pub share_id: std::option::Option<std::string::String>,
 }
 impl CreateLensShareOutput {
@@ -2993,11 +3062,10 @@ impl std::fmt::Debug for CreateLensShareOutput {
         formatter.finish()
     }
 }
-/// See [`CreateLensShareOutput`](crate::output::CreateLensShareOutput)
+/// See [`CreateLensShareOutput`](crate::output::CreateLensShareOutput).
 pub mod create_lens_share_output {
 
-    /// A builder for [`CreateLensShareOutput`](crate::output::CreateLensShareOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateLensShareOutput`](crate::output::CreateLensShareOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) share_id: std::option::Option<std::string::String>,
@@ -3013,7 +3081,7 @@ pub mod create_lens_share_output {
             self.share_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateLensShareOutput`](crate::output::CreateLensShareOutput)
+        /// Consumes the builder and constructs a [`CreateLensShareOutput`](crate::output::CreateLensShareOutput).
         pub fn build(self) -> crate::output::CreateLensShareOutput {
             crate::output::CreateLensShareOutput {
                 share_id: self.share_id,
@@ -3022,7 +3090,7 @@ pub mod create_lens_share_output {
     }
 }
 impl CreateLensShareOutput {
-    /// Creates a new builder-style object to manufacture [`CreateLensShareOutput`](crate::output::CreateLensShareOutput)
+    /// Creates a new builder-style object to manufacture [`CreateLensShareOutput`](crate::output::CreateLensShareOutput).
     pub fn builder() -> crate::output::create_lens_share_output::Builder {
         crate::output::create_lens_share_output::Builder::default()
     }
@@ -3038,22 +3106,21 @@ impl std::fmt::Debug for AssociateLensesOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateLensesOutput`](crate::output::AssociateLensesOutput)
+/// See [`AssociateLensesOutput`](crate::output::AssociateLensesOutput).
 pub mod associate_lenses_output {
 
-    /// A builder for [`AssociateLensesOutput`](crate::output::AssociateLensesOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateLensesOutput`](crate::output::AssociateLensesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AssociateLensesOutput`](crate::output::AssociateLensesOutput)
+        /// Consumes the builder and constructs a [`AssociateLensesOutput`](crate::output::AssociateLensesOutput).
         pub fn build(self) -> crate::output::AssociateLensesOutput {
             crate::output::AssociateLensesOutput {}
         }
     }
 }
 impl AssociateLensesOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateLensesOutput`](crate::output::AssociateLensesOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateLensesOutput`](crate::output::AssociateLensesOutput).
     pub fn builder() -> crate::output::associate_lenses_output::Builder {
         crate::output::associate_lenses_output::Builder::default()
     }

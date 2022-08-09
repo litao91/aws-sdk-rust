@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationExceptionField {
     /// <p>The field that had the validation exception.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Information about the validation exception.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ValidationExceptionField {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ValidationExceptionField {
         formatter.finish()
     }
 }
-/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField).
 pub mod validation_exception_field {
 
-    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField)
-    #[non_exhaustive]
+    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod validation_exception_field {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField).
         pub fn build(self) -> crate::model::ValidationExceptionField {
             crate::model::ValidationExceptionField {
                 name: self.name,
@@ -68,7 +69,7 @@ pub mod validation_exception_field {
     }
 }
 impl ValidationExceptionField {
-    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     pub fn builder() -> crate::model::validation_exception_field::Builder {
         crate::model::validation_exception_field::Builder::default()
     }
@@ -147,8 +148,10 @@ impl AsRef<str> for ValidationExceptionReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateRoutingControlStateEntry {
     /// <p>The Amazon Resource Name (ARN) for a routing control state entry.</p>
+    #[doc(hidden)]
     pub routing_control_arn: std::option::Option<std::string::String>,
     /// <p>The routing control state in a set of routing control state entries.</p>
+    #[doc(hidden)]
     pub routing_control_state: std::option::Option<crate::model::RoutingControlState>,
 }
 impl UpdateRoutingControlStateEntry {
@@ -169,11 +172,10 @@ impl std::fmt::Debug for UpdateRoutingControlStateEntry {
         formatter.finish()
     }
 }
-/// See [`UpdateRoutingControlStateEntry`](crate::model::UpdateRoutingControlStateEntry)
+/// See [`UpdateRoutingControlStateEntry`](crate::model::UpdateRoutingControlStateEntry).
 pub mod update_routing_control_state_entry {
 
-    /// A builder for [`UpdateRoutingControlStateEntry`](crate::model::UpdateRoutingControlStateEntry)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRoutingControlStateEntry`](crate::model::UpdateRoutingControlStateEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) routing_control_arn: std::option::Option<std::string::String>,
@@ -206,7 +208,7 @@ pub mod update_routing_control_state_entry {
             self.routing_control_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRoutingControlStateEntry`](crate::model::UpdateRoutingControlStateEntry)
+        /// Consumes the builder and constructs a [`UpdateRoutingControlStateEntry`](crate::model::UpdateRoutingControlStateEntry).
         pub fn build(self) -> crate::model::UpdateRoutingControlStateEntry {
             crate::model::UpdateRoutingControlStateEntry {
                 routing_control_arn: self.routing_control_arn,
@@ -216,7 +218,7 @@ pub mod update_routing_control_state_entry {
     }
 }
 impl UpdateRoutingControlStateEntry {
-    /// Creates a new builder-style object to manufacture [`UpdateRoutingControlStateEntry`](crate::model::UpdateRoutingControlStateEntry)
+    /// Creates a new builder-style object to manufacture [`UpdateRoutingControlStateEntry`](crate::model::UpdateRoutingControlStateEntry).
     pub fn builder() -> crate::model::update_routing_control_state_entry::Builder {
         crate::model::update_routing_control_state_entry::Builder::default()
     }
@@ -282,14 +284,19 @@ impl AsRef<str> for RoutingControlState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RoutingControl {
     /// <p>The Amazon Resource Name (ARN) of the control panel where the routing control is located.</p>
+    #[doc(hidden)]
     pub control_panel_arn: std::option::Option<std::string::String>,
     /// <p>The name of the control panel where the routing control is located.</p>
+    #[doc(hidden)]
     pub control_panel_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the routing control.</p>
+    #[doc(hidden)]
     pub routing_control_arn: std::option::Option<std::string::String>,
     /// <p>The name of the routing control.</p>
+    #[doc(hidden)]
     pub routing_control_name: std::option::Option<std::string::String>,
     /// <p>The current state of the routing control. When a routing control state is On, traffic flows to a cell. When the state is Off, traffic does not flow. </p>
+    #[doc(hidden)]
     pub routing_control_state: std::option::Option<crate::model::RoutingControlState>,
 }
 impl RoutingControl {
@@ -325,11 +332,10 @@ impl std::fmt::Debug for RoutingControl {
         formatter.finish()
     }
 }
-/// See [`RoutingControl`](crate::model::RoutingControl)
+/// See [`RoutingControl`](crate::model::RoutingControl).
 pub mod routing_control {
 
-    /// A builder for [`RoutingControl`](crate::model::RoutingControl)
-    #[non_exhaustive]
+    /// A builder for [`RoutingControl`](crate::model::RoutingControl).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) control_panel_arn: std::option::Option<std::string::String>,
@@ -404,7 +410,7 @@ pub mod routing_control {
             self.routing_control_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`RoutingControl`](crate::model::RoutingControl)
+        /// Consumes the builder and constructs a [`RoutingControl`](crate::model::RoutingControl).
         pub fn build(self) -> crate::model::RoutingControl {
             crate::model::RoutingControl {
                 control_panel_arn: self.control_panel_arn,
@@ -417,7 +423,7 @@ pub mod routing_control {
     }
 }
 impl RoutingControl {
-    /// Creates a new builder-style object to manufacture [`RoutingControl`](crate::model::RoutingControl)
+    /// Creates a new builder-style object to manufacture [`RoutingControl`](crate::model::RoutingControl).
     pub fn builder() -> crate::model::routing_control::Builder {
         crate::model::routing_control::Builder::default()
     }

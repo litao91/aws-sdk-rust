@@ -1,3 +1,4 @@
+#![allow(deprecated)]
 #![allow(clippy::module_inception)]
 #![allow(clippy::upper_case_acronyms)]
 #![allow(clippy::large_enum_variant)]
@@ -21,10 +22,12 @@
 //! <p>Detective is also integrated with Organizations. The organization
 //! management account designates the Detective administrator account for the
 //! organization. That account becomes the administrator account for the organization behavior
-//! graph. The Detective administrator account can enable any organization account as
-//! a member account in the organization behavior graph. The organization accounts do not
-//! receive invitations. The Detective administrator account can also invite other
-//! accounts to the organization behavior graph.</p>
+//! graph. The Detective administrator account is also the delegated administrator
+//! account for Detective in Organizations.</p>
+//! <p>The Detective administrator account can enable any organization account as a
+//! member account in the organization behavior graph. The organization accounts do not receive
+//! invitations. The Detective administrator account can also invite other accounts to
+//! the organization behavior graph.</p>
 //! <p>Every behavior graph is specific to a Region. You can only use the API to manage
 //! behavior graphs that belong to the Region that is associated with the currently selected
 //! endpoint.</p>

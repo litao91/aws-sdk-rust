@@ -6,10 +6,13 @@
 pub struct ReportSetting {
     /// <p>Identifies the report template for the report. Reports are built using a report template. The report templates are:</p>
     /// <p> <code>RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT</code> </p>
+    #[doc(hidden)]
     pub report_template: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Names (ARNs) of the frameworks a report covers.</p>
+    #[doc(hidden)]
     pub framework_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The number of frameworks a report covers.</p>
+    #[doc(hidden)]
     pub number_of_frameworks: i32,
 }
 impl ReportSetting {
@@ -36,11 +39,10 @@ impl std::fmt::Debug for ReportSetting {
         formatter.finish()
     }
 }
-/// See [`ReportSetting`](crate::model::ReportSetting)
+/// See [`ReportSetting`](crate::model::ReportSetting).
 pub mod report_setting {
 
-    /// A builder for [`ReportSetting`](crate::model::ReportSetting)
-    #[non_exhaustive]
+    /// A builder for [`ReportSetting`](crate::model::ReportSetting).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) report_template: std::option::Option<std::string::String>,
@@ -92,7 +94,7 @@ pub mod report_setting {
             self.number_of_frameworks = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReportSetting`](crate::model::ReportSetting)
+        /// Consumes the builder and constructs a [`ReportSetting`](crate::model::ReportSetting).
         pub fn build(self) -> crate::model::ReportSetting {
             crate::model::ReportSetting {
                 report_template: self.report_template,
@@ -103,7 +105,7 @@ pub mod report_setting {
     }
 }
 impl ReportSetting {
-    /// Creates a new builder-style object to manufacture [`ReportSetting`](crate::model::ReportSetting)
+    /// Creates a new builder-style object to manufacture [`ReportSetting`](crate::model::ReportSetting).
     pub fn builder() -> crate::model::report_setting::Builder {
         crate::model::report_setting::Builder::default()
     }
@@ -114,10 +116,13 @@ impl ReportSetting {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReportDeliveryChannel {
     /// <p>The unique name of the S3 bucket that receives your reports.</p>
+    #[doc(hidden)]
     pub s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>The prefix for where Backup Audit Manager delivers your reports to Amazon S3. The prefix is this part of the following path: s3://your-bucket-name/<code>prefix</code>/Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.</p>
+    #[doc(hidden)]
     pub s3_key_prefix: std::option::Option<std::string::String>,
     /// <p>A list of the format of your reports: <code>CSV</code>, <code>JSON</code>, or both. If not specified, the default format is <code>CSV</code>.</p>
+    #[doc(hidden)]
     pub formats: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ReportDeliveryChannel {
@@ -143,11 +148,10 @@ impl std::fmt::Debug for ReportDeliveryChannel {
         formatter.finish()
     }
 }
-/// See [`ReportDeliveryChannel`](crate::model::ReportDeliveryChannel)
+/// See [`ReportDeliveryChannel`](crate::model::ReportDeliveryChannel).
 pub mod report_delivery_channel {
 
-    /// A builder for [`ReportDeliveryChannel`](crate::model::ReportDeliveryChannel)
-    #[non_exhaustive]
+    /// A builder for [`ReportDeliveryChannel`](crate::model::ReportDeliveryChannel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_bucket_name: std::option::Option<std::string::String>,
@@ -200,7 +204,7 @@ pub mod report_delivery_channel {
             self.formats = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReportDeliveryChannel`](crate::model::ReportDeliveryChannel)
+        /// Consumes the builder and constructs a [`ReportDeliveryChannel`](crate::model::ReportDeliveryChannel).
         pub fn build(self) -> crate::model::ReportDeliveryChannel {
             crate::model::ReportDeliveryChannel {
                 s3_bucket_name: self.s3_bucket_name,
@@ -211,7 +215,7 @@ pub mod report_delivery_channel {
     }
 }
 impl ReportDeliveryChannel {
-    /// Creates a new builder-style object to manufacture [`ReportDeliveryChannel`](crate::model::ReportDeliveryChannel)
+    /// Creates a new builder-style object to manufacture [`ReportDeliveryChannel`](crate::model::ReportDeliveryChannel).
     pub fn builder() -> crate::model::report_delivery_channel::Builder {
         crate::model::report_delivery_channel::Builder::default()
     }
@@ -220,13 +224,15 @@ impl ReportDeliveryChannel {
 /// <p>Contains <code>DeleteAt</code> and <code>MoveToColdStorageAt</code> timestamps, which are used to specify a lifecycle for a recovery point.</p>
 /// <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup transitions and expires backups automatically according to the lifecycle that you define.</p>
 /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.</p>
-/// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+/// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CalculatedLifecycle {
     /// <p>A timestamp that specifies when to transition a recovery point to cold storage.</p>
+    #[doc(hidden)]
     pub move_to_cold_storage_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp that specifies when to delete a recovery point.</p>
+    #[doc(hidden)]
     pub delete_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CalculatedLifecycle {
@@ -247,11 +253,10 @@ impl std::fmt::Debug for CalculatedLifecycle {
         formatter.finish()
     }
 }
-/// See [`CalculatedLifecycle`](crate::model::CalculatedLifecycle)
+/// See [`CalculatedLifecycle`](crate::model::CalculatedLifecycle).
 pub mod calculated_lifecycle {
 
-    /// A builder for [`CalculatedLifecycle`](crate::model::CalculatedLifecycle)
-    #[non_exhaustive]
+    /// A builder for [`CalculatedLifecycle`](crate::model::CalculatedLifecycle).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) move_to_cold_storage_at: std::option::Option<aws_smithy_types::DateTime>,
@@ -284,7 +289,7 @@ pub mod calculated_lifecycle {
             self.delete_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`CalculatedLifecycle`](crate::model::CalculatedLifecycle)
+        /// Consumes the builder and constructs a [`CalculatedLifecycle`](crate::model::CalculatedLifecycle).
         pub fn build(self) -> crate::model::CalculatedLifecycle {
             crate::model::CalculatedLifecycle {
                 move_to_cold_storage_at: self.move_to_cold_storage_at,
@@ -294,7 +299,7 @@ pub mod calculated_lifecycle {
     }
 }
 impl CalculatedLifecycle {
-    /// Creates a new builder-style object to manufacture [`CalculatedLifecycle`](crate::model::CalculatedLifecycle)
+    /// Creates a new builder-style object to manufacture [`CalculatedLifecycle`](crate::model::CalculatedLifecycle).
     pub fn builder() -> crate::model::calculated_lifecycle::Builder {
         crate::model::calculated_lifecycle::Builder::default()
     }
@@ -302,13 +307,15 @@ impl CalculatedLifecycle {
 
 /// <p>Contains an array of <code>Transition</code> objects specifying how long in days before a recovery point transitions to cold storage or is deleted.</p>
 /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, on the console, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.</p>
-/// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+/// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Lifecycle {
     /// <p>Specifies the number of days after creation that a recovery point is moved to cold storage.</p>
+    #[doc(hidden)]
     pub move_to_cold_storage_after_days: std::option::Option<i64>,
     /// <p>Specifies the number of days after creation that a recovery point is deleted. Must be greater than 90 days plus <code>MoveToColdStorageAfterDays</code>.</p>
+    #[doc(hidden)]
     pub delete_after_days: std::option::Option<i64>,
 }
 impl Lifecycle {
@@ -332,11 +339,10 @@ impl std::fmt::Debug for Lifecycle {
         formatter.finish()
     }
 }
-/// See [`Lifecycle`](crate::model::Lifecycle)
+/// See [`Lifecycle`](crate::model::Lifecycle).
 pub mod lifecycle {
 
-    /// A builder for [`Lifecycle`](crate::model::Lifecycle)
-    #[non_exhaustive]
+    /// A builder for [`Lifecycle`](crate::model::Lifecycle).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) move_to_cold_storage_after_days: std::option::Option<i64>,
@@ -366,7 +372,7 @@ pub mod lifecycle {
             self.delete_after_days = input;
             self
         }
-        /// Consumes the builder and constructs a [`Lifecycle`](crate::model::Lifecycle)
+        /// Consumes the builder and constructs a [`Lifecycle`](crate::model::Lifecycle).
         pub fn build(self) -> crate::model::Lifecycle {
             crate::model::Lifecycle {
                 move_to_cold_storage_after_days: self.move_to_cold_storage_after_days,
@@ -376,7 +382,7 @@ pub mod lifecycle {
     }
 }
 impl Lifecycle {
-    /// Creates a new builder-style object to manufacture [`Lifecycle`](crate::model::Lifecycle)
+    /// Creates a new builder-style object to manufacture [`Lifecycle`](crate::model::Lifecycle).
     pub fn builder() -> crate::model::lifecycle::Builder {
         crate::model::lifecycle::Builder::default()
     }
@@ -387,11 +393,14 @@ impl Lifecycle {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FrameworkControl {
     /// <p>The name of a control. This name is between 1 and 256 characters.</p>
+    #[doc(hidden)]
     pub control_name: std::option::Option<std::string::String>,
     /// <p>A list of <code>ParameterName</code> and <code>ParameterValue</code> pairs.</p>
+    #[doc(hidden)]
     pub control_input_parameters:
         std::option::Option<std::vec::Vec<crate::model::ControlInputParameter>>,
     /// <p>The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans. For more information, see <a href="aws-backup/latest/devguide/API_ControlScope.html"> <code>ControlScope</code>.</a> </p>
+    #[doc(hidden)]
     pub control_scope: std::option::Option<crate::model::ControlScope>,
 }
 impl FrameworkControl {
@@ -419,11 +428,10 @@ impl std::fmt::Debug for FrameworkControl {
         formatter.finish()
     }
 }
-/// See [`FrameworkControl`](crate::model::FrameworkControl)
+/// See [`FrameworkControl`](crate::model::FrameworkControl).
 pub mod framework_control {
 
-    /// A builder for [`FrameworkControl`](crate::model::FrameworkControl)
-    #[non_exhaustive]
+    /// A builder for [`FrameworkControl`](crate::model::FrameworkControl).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) control_name: std::option::Option<std::string::String>,
@@ -477,7 +485,7 @@ pub mod framework_control {
             self.control_scope = input;
             self
         }
-        /// Consumes the builder and constructs a [`FrameworkControl`](crate::model::FrameworkControl)
+        /// Consumes the builder and constructs a [`FrameworkControl`](crate::model::FrameworkControl).
         pub fn build(self) -> crate::model::FrameworkControl {
             crate::model::FrameworkControl {
                 control_name: self.control_name,
@@ -488,7 +496,7 @@ pub mod framework_control {
     }
 }
 impl FrameworkControl {
-    /// Creates a new builder-style object to manufacture [`FrameworkControl`](crate::model::FrameworkControl)
+    /// Creates a new builder-style object to manufacture [`FrameworkControl`](crate::model::FrameworkControl).
     pub fn builder() -> crate::model::framework_control::Builder {
         crate::model::framework_control::Builder::default()
     }
@@ -501,10 +509,13 @@ impl FrameworkControl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ControlScope {
     /// <p>The ID of the only Amazon Web Services resource that you want your control scope to contain.</p>
+    #[doc(hidden)]
     pub compliance_resource_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Describes whether the control scope includes one or more types of resources, such as <code>EFS</code> or <code>RDS</code>.</p>
+    #[doc(hidden)]
     pub compliance_resource_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The tag key-value pair applied to those Amazon Web Services resources that you want to trigger an evaluation for a rule. A maximum of one key-value pair can be provided. The tag value is optional, but it cannot be an empty string. The structure to assign a tag is: <code>[{"Key":"string","Value":"string"}]</code>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -534,11 +545,10 @@ impl std::fmt::Debug for ControlScope {
         formatter.finish()
     }
 }
-/// See [`ControlScope`](crate::model::ControlScope)
+/// See [`ControlScope`](crate::model::ControlScope).
 pub mod control_scope {
 
-    /// A builder for [`ControlScope`](crate::model::ControlScope)
-    #[non_exhaustive]
+    /// A builder for [`ControlScope`](crate::model::ControlScope).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliance_resource_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -612,7 +622,7 @@ pub mod control_scope {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ControlScope`](crate::model::ControlScope)
+        /// Consumes the builder and constructs a [`ControlScope`](crate::model::ControlScope).
         pub fn build(self) -> crate::model::ControlScope {
             crate::model::ControlScope {
                 compliance_resource_ids: self.compliance_resource_ids,
@@ -623,7 +633,7 @@ pub mod control_scope {
     }
 }
 impl ControlScope {
-    /// Creates a new builder-style object to manufacture [`ControlScope`](crate::model::ControlScope)
+    /// Creates a new builder-style object to manufacture [`ControlScope`](crate::model::ControlScope).
     pub fn builder() -> crate::model::control_scope::Builder {
         crate::model::control_scope::Builder::default()
     }
@@ -634,8 +644,10 @@ impl ControlScope {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ControlInputParameter {
     /// <p>The name of a parameter, for example, <code>BackupPlanFrequency</code>.</p>
+    #[doc(hidden)]
     pub parameter_name: std::option::Option<std::string::String>,
     /// <p>The value of parameter, for example, <code>hourly</code>.</p>
+    #[doc(hidden)]
     pub parameter_value: std::option::Option<std::string::String>,
 }
 impl ControlInputParameter {
@@ -656,11 +668,10 @@ impl std::fmt::Debug for ControlInputParameter {
         formatter.finish()
     }
 }
-/// See [`ControlInputParameter`](crate::model::ControlInputParameter)
+/// See [`ControlInputParameter`](crate::model::ControlInputParameter).
 pub mod control_input_parameter {
 
-    /// A builder for [`ControlInputParameter`](crate::model::ControlInputParameter)
-    #[non_exhaustive]
+    /// A builder for [`ControlInputParameter`](crate::model::ControlInputParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_name: std::option::Option<std::string::String>,
@@ -693,7 +704,7 @@ pub mod control_input_parameter {
             self.parameter_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ControlInputParameter`](crate::model::ControlInputParameter)
+        /// Consumes the builder and constructs a [`ControlInputParameter`](crate::model::ControlInputParameter).
         pub fn build(self) -> crate::model::ControlInputParameter {
             crate::model::ControlInputParameter {
                 parameter_name: self.parameter_name,
@@ -703,7 +714,7 @@ pub mod control_input_parameter {
     }
 }
 impl ControlInputParameter {
-    /// Creates a new builder-style object to manufacture [`ControlInputParameter`](crate::model::ControlInputParameter)
+    /// Creates a new builder-style object to manufacture [`ControlInputParameter`](crate::model::ControlInputParameter).
     pub fn builder() -> crate::model::control_input_parameter::Builder {
         crate::model::control_input_parameter::Builder::default()
     }
@@ -715,6 +726,7 @@ impl ControlInputParameter {
 pub struct AdvancedBackupSetting {
     /// <p>Specifies an object containing resource type and backup options. The only supported resource type is Amazon EC2 instances with Windows Volume Shadow Copy Service (VSS). For a CloudFormation example, see the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/integrate-cloudformation-with-aws-backup.html">sample CloudFormation template to enable Windows VSS</a> in the <i>Backup User Guide</i>.</p>
     /// <p>Valid values: <code>EC2</code>.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs.</p>
     /// <p>Valid values: </p>
@@ -722,6 +734,7 @@ pub struct AdvancedBackupSetting {
     /// <p>Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The <code>WindowsVSS</code> option is not enabled by default.</p>
     /// <p>If you specify an invalid option, you get an <code>InvalidParameterValueException</code> exception.</p>
     /// <p>For more information about Windows VSS backups, see <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/windows-backups.html">Creating a VSS-Enabled Windows Backup</a>.</p>
+    #[doc(hidden)]
     pub backup_options:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -752,11 +765,10 @@ impl std::fmt::Debug for AdvancedBackupSetting {
         formatter.finish()
     }
 }
-/// See [`AdvancedBackupSetting`](crate::model::AdvancedBackupSetting)
+/// See [`AdvancedBackupSetting`](crate::model::AdvancedBackupSetting).
 pub mod advanced_backup_setting {
 
-    /// A builder for [`AdvancedBackupSetting`](crate::model::AdvancedBackupSetting)
-    #[non_exhaustive]
+    /// A builder for [`AdvancedBackupSetting`](crate::model::AdvancedBackupSetting).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -815,7 +827,7 @@ pub mod advanced_backup_setting {
             self.backup_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdvancedBackupSetting`](crate::model::AdvancedBackupSetting)
+        /// Consumes the builder and constructs a [`AdvancedBackupSetting`](crate::model::AdvancedBackupSetting).
         pub fn build(self) -> crate::model::AdvancedBackupSetting {
             crate::model::AdvancedBackupSetting {
                 resource_type: self.resource_type,
@@ -825,7 +837,7 @@ pub mod advanced_backup_setting {
     }
 }
 impl AdvancedBackupSetting {
-    /// Creates a new builder-style object to manufacture [`AdvancedBackupSetting`](crate::model::AdvancedBackupSetting)
+    /// Creates a new builder-style object to manufacture [`AdvancedBackupSetting`](crate::model::AdvancedBackupSetting).
     pub fn builder() -> crate::model::advanced_backup_setting::Builder {
         crate::model::advanced_backup_setting::Builder::default()
     }
@@ -836,10 +848,13 @@ impl AdvancedBackupSetting {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackupPlanInput {
     /// <p>The display name of a backup plan. Must contain 1 to 50 alphanumeric or '-_.' characters.</p>
+    #[doc(hidden)]
     pub backup_plan_name: std::option::Option<std::string::String>,
     /// <p>An array of <code>BackupRule</code> objects, each of which specifies a scheduled task that is used to back up a selection of resources.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::BackupRuleInput>>,
     /// <p>Specifies a list of <code>BackupOptions</code> for each resource type. These settings are only available for Windows Volume Shadow Copy Service (VSS) backup jobs.</p>
+    #[doc(hidden)]
     pub advanced_backup_settings:
         std::option::Option<std::vec::Vec<crate::model::AdvancedBackupSetting>>,
 }
@@ -868,11 +883,10 @@ impl std::fmt::Debug for BackupPlanInput {
         formatter.finish()
     }
 }
-/// See [`BackupPlanInput`](crate::model::BackupPlanInput)
+/// See [`BackupPlanInput`](crate::model::BackupPlanInput).
 pub mod backup_plan_input {
 
-    /// A builder for [`BackupPlanInput`](crate::model::BackupPlanInput)
-    #[non_exhaustive]
+    /// A builder for [`BackupPlanInput`](crate::model::BackupPlanInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_plan_name: std::option::Option<std::string::String>,
@@ -935,7 +949,7 @@ pub mod backup_plan_input {
             self.advanced_backup_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackupPlanInput`](crate::model::BackupPlanInput)
+        /// Consumes the builder and constructs a [`BackupPlanInput`](crate::model::BackupPlanInput).
         pub fn build(self) -> crate::model::BackupPlanInput {
             crate::model::BackupPlanInput {
                 backup_plan_name: self.backup_plan_name,
@@ -946,7 +960,7 @@ pub mod backup_plan_input {
     }
 }
 impl BackupPlanInput {
-    /// Creates a new builder-style object to manufacture [`BackupPlanInput`](crate::model::BackupPlanInput)
+    /// Creates a new builder-style object to manufacture [`BackupPlanInput`](crate::model::BackupPlanInput).
     pub fn builder() -> crate::model::backup_plan_input::Builder {
         crate::model::backup_plan_input::Builder::default()
     }
@@ -957,25 +971,34 @@ impl BackupPlanInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackupRuleInput {
     /// <p>A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.</p>
+    #[doc(hidden)]
     pub rule_name: std::option::Option<std::string::String>,
     /// <p>The name of a logical container where backups are stored. Backup vaults are identified by names that are unique to the account used to create them and the Amazon Web Services Region where they are created. They consist of lowercase letters, numbers, and hyphens.</p>
+    #[doc(hidden)]
     pub target_backup_vault_name: std::option::Option<std::string::String>,
     /// <p>A CRON expression in UTC specifying when Backup initiates a backup job.</p>
+    #[doc(hidden)]
     pub schedule_expression: std::option::Option<std::string::String>,
     /// <p>A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start successfully. This value is optional.</p>
+    #[doc(hidden)]
     pub start_window_minutes: std::option::Option<i64>,
     /// <p>A value in minutes after a backup job is successfully started before it must be completed or it will be canceled by Backup. This value is optional.</p>
+    #[doc(hidden)]
     pub completion_window_minutes: std::option::Option<i64>,
     /// <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup will transition and expire backups automatically according to the lifecycle that you define. </p>
     /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.</p>
-    /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+    /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::Lifecycle>,
     /// <p>To help organize your resources, you can assign your own metadata to the resources that you create. Each tag is a key-value pair.</p>
+    #[doc(hidden)]
     pub recovery_point_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>An array of <code>CopyAction</code> objects, which contains the details of the copy operation.</p>
+    #[doc(hidden)]
     pub copy_actions: std::option::Option<std::vec::Vec<crate::model::CopyAction>>,
     /// <p>Specifies whether Backup creates continuous backups. True causes Backup to create continuous backups capable of point-in-time restore (PITR). False (or not specified) causes Backup to create snapshot backups.</p>
+    #[doc(hidden)]
     pub enable_continuous_backup: std::option::Option<bool>,
 }
 impl BackupRuleInput {
@@ -1001,7 +1024,7 @@ impl BackupRuleInput {
     }
     /// <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup will transition and expire backups automatically according to the lifecycle that you define. </p>
     /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.</p>
-    /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+    /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
     pub fn lifecycle(&self) -> std::option::Option<&crate::model::Lifecycle> {
         self.lifecycle.as_ref()
     }
@@ -1036,11 +1059,10 @@ impl std::fmt::Debug for BackupRuleInput {
         formatter.finish()
     }
 }
-/// See [`BackupRuleInput`](crate::model::BackupRuleInput)
+/// See [`BackupRuleInput`](crate::model::BackupRuleInput).
 pub mod backup_rule_input {
 
-    /// A builder for [`BackupRuleInput`](crate::model::BackupRuleInput)
-    #[non_exhaustive]
+    /// A builder for [`BackupRuleInput`](crate::model::BackupRuleInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_name: std::option::Option<std::string::String>,
@@ -1114,14 +1136,14 @@ pub mod backup_rule_input {
         }
         /// <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup will transition and expire backups automatically according to the lifecycle that you define. </p>
         /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.</p>
-        /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+        /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
         pub fn lifecycle(mut self, input: crate::model::Lifecycle) -> Self {
             self.lifecycle = Some(input);
             self
         }
         /// <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup will transition and expire backups automatically according to the lifecycle that you define. </p>
         /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.</p>
-        /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+        /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
         pub fn set_lifecycle(
             mut self,
             input: std::option::Option<crate::model::Lifecycle>,
@@ -1183,7 +1205,7 @@ pub mod backup_rule_input {
             self.enable_continuous_backup = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackupRuleInput`](crate::model::BackupRuleInput)
+        /// Consumes the builder and constructs a [`BackupRuleInput`](crate::model::BackupRuleInput).
         pub fn build(self) -> crate::model::BackupRuleInput {
             crate::model::BackupRuleInput {
                 rule_name: self.rule_name,
@@ -1200,7 +1222,7 @@ pub mod backup_rule_input {
     }
 }
 impl BackupRuleInput {
-    /// Creates a new builder-style object to manufacture [`BackupRuleInput`](crate::model::BackupRuleInput)
+    /// Creates a new builder-style object to manufacture [`BackupRuleInput`](crate::model::BackupRuleInput).
     pub fn builder() -> crate::model::backup_rule_input::Builder {
         crate::model::backup_rule_input::Builder::default()
     }
@@ -1212,15 +1234,17 @@ impl BackupRuleInput {
 pub struct CopyAction {
     /// <p>Contains an array of <code>Transition</code> objects specifying how long in days before a recovery point transitions to cold storage or is deleted.</p>
     /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, on the console, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.</p>
-    /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+    /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::Lifecycle>,
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup. For example, <code>arn:aws:backup:us-east-1:123456789012:vault:aBackupVault</code>.</p>
+    #[doc(hidden)]
     pub destination_backup_vault_arn: std::option::Option<std::string::String>,
 }
 impl CopyAction {
     /// <p>Contains an array of <code>Transition</code> objects specifying how long in days before a recovery point transitions to cold storage or is deleted.</p>
     /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, on the console, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.</p>
-    /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+    /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
     pub fn lifecycle(&self) -> std::option::Option<&crate::model::Lifecycle> {
         self.lifecycle.as_ref()
     }
@@ -1240,11 +1264,10 @@ impl std::fmt::Debug for CopyAction {
         formatter.finish()
     }
 }
-/// See [`CopyAction`](crate::model::CopyAction)
+/// See [`CopyAction`](crate::model::CopyAction).
 pub mod copy_action {
 
-    /// A builder for [`CopyAction`](crate::model::CopyAction)
-    #[non_exhaustive]
+    /// A builder for [`CopyAction`](crate::model::CopyAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lifecycle: std::option::Option<crate::model::Lifecycle>,
@@ -1253,14 +1276,14 @@ pub mod copy_action {
     impl Builder {
         /// <p>Contains an array of <code>Transition</code> objects specifying how long in days before a recovery point transitions to cold storage or is deleted.</p>
         /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, on the console, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.</p>
-        /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+        /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
         pub fn lifecycle(mut self, input: crate::model::Lifecycle) -> Self {
             self.lifecycle = Some(input);
             self
         }
         /// <p>Contains an array of <code>Transition</code> objects specifying how long in days before a recovery point transitions to cold storage or is deleted.</p>
         /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, on the console, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.</p>
-        /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+        /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
         pub fn set_lifecycle(
             mut self,
             input: std::option::Option<crate::model::Lifecycle>,
@@ -1284,7 +1307,7 @@ pub mod copy_action {
             self.destination_backup_vault_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CopyAction`](crate::model::CopyAction)
+        /// Consumes the builder and constructs a [`CopyAction`](crate::model::CopyAction).
         pub fn build(self) -> crate::model::CopyAction {
             crate::model::CopyAction {
                 lifecycle: self.lifecycle,
@@ -1294,7 +1317,7 @@ pub mod copy_action {
     }
 }
 impl CopyAction {
-    /// Creates a new builder-style object to manufacture [`CopyAction`](crate::model::CopyAction)
+    /// Creates a new builder-style object to manufacture [`CopyAction`](crate::model::CopyAction).
     pub fn builder() -> crate::model::copy_action::Builder {
         crate::model::copy_action::Builder::default()
     }
@@ -1438,30 +1461,43 @@ impl AsRef<str> for BackupVaultEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RestoreJobsListMember {
     /// <p>The account ID that owns the restore job.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>Uniquely identifies the job that restores a recovery point.</p>
+    #[doc(hidden)]
     pub restore_job_id: std::option::Option<std::string::String>,
     /// <p>An ARN that uniquely identifies a recovery point; for example, <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.</p>
+    #[doc(hidden)]
     pub recovery_point_arn: std::option::Option<std::string::String>,
     /// <p>The date and time a restore job is created, in Unix format and Coordinated Universal Time (UTC). The value of <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time a job to restore a recovery point is completed, in Unix format and Coordinated Universal Time (UTC). The value of <code>CompletionDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub completion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A status code specifying the state of the job initiated by Backup to restore a recovery point.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::RestoreJobStatus>,
     /// <p>A detailed message explaining the status of the job to restore a recovery point.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Contains an estimated percentage complete of a job at the time the job status was queried.</p>
+    #[doc(hidden)]
     pub percent_done: std::option::Option<std::string::String>,
     /// <p>The size, in bytes, of the restored resource.</p>
+    #[doc(hidden)]
     pub backup_size_in_bytes: std::option::Option<i64>,
     /// <p>Specifies the IAM role ARN used to create the target recovery point; for example, <code>arn:aws:iam::123456789012:role/S3Access</code>.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
     /// <p>The amount of time in minutes that a job restoring a recovery point is expected to take.</p>
+    #[doc(hidden)]
     pub expected_completion_time_minutes: std::option::Option<i64>,
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.</p>
+    #[doc(hidden)]
     pub created_resource_arn: std::option::Option<std::string::String>,
     /// <p>The resource type of the listed restore jobs; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy Service (VSS) backups, the only supported resource type is Amazon EC2.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
 }
 impl RestoreJobsListMember {
@@ -1540,11 +1576,10 @@ impl std::fmt::Debug for RestoreJobsListMember {
         formatter.finish()
     }
 }
-/// See [`RestoreJobsListMember`](crate::model::RestoreJobsListMember)
+/// See [`RestoreJobsListMember`](crate::model::RestoreJobsListMember).
 pub mod restore_jobs_list_member {
 
-    /// A builder for [`RestoreJobsListMember`](crate::model::RestoreJobsListMember)
-    #[non_exhaustive]
+    /// A builder for [`RestoreJobsListMember`](crate::model::RestoreJobsListMember).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -1719,7 +1754,7 @@ pub mod restore_jobs_list_member {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreJobsListMember`](crate::model::RestoreJobsListMember)
+        /// Consumes the builder and constructs a [`RestoreJobsListMember`](crate::model::RestoreJobsListMember).
         pub fn build(self) -> crate::model::RestoreJobsListMember {
             crate::model::RestoreJobsListMember {
                 account_id: self.account_id,
@@ -1740,7 +1775,7 @@ pub mod restore_jobs_list_member {
     }
 }
 impl RestoreJobsListMember {
-    /// Creates a new builder-style object to manufacture [`RestoreJobsListMember`](crate::model::RestoreJobsListMember)
+    /// Creates a new builder-style object to manufacture [`RestoreJobsListMember`](crate::model::RestoreJobsListMember).
     pub fn builder() -> crate::model::restore_jobs_list_member::Builder {
         crate::model::restore_jobs_list_member::Builder::default()
     }
@@ -1818,25 +1853,34 @@ impl AsRef<str> for RestoreJobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReportPlan {
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.</p>
+    #[doc(hidden)]
     pub report_plan_arn: std::option::Option<std::string::String>,
     /// <p>The unique name of the report plan. This name is between 1 and 256 characters starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).</p>
+    #[doc(hidden)]
     pub report_plan_name: std::option::Option<std::string::String>,
     /// <p>An optional description of the report plan with a maximum 1,024 characters.</p>
+    #[doc(hidden)]
     pub report_plan_description: std::option::Option<std::string::String>,
     /// <p>Identifies the report template for the report. Reports are built using a report template. The report templates are:</p>
     /// <p> <code>RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT</code> </p>
     /// <p>If the report template is <code>RESOURCE_COMPLIANCE_REPORT</code> or <code>CONTROL_COMPLIANCE_REPORT</code>, this API resource also describes the report coverage by Amazon Web Services Regions and frameworks.</p>
+    #[doc(hidden)]
     pub report_setting: std::option::Option<crate::model::ReportSetting>,
     /// <p>Contains information about where and how to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports.</p>
+    #[doc(hidden)]
     pub report_delivery_channel: std::option::Option<crate::model::ReportDeliveryChannel>,
     /// <p>The deployment status of a report plan. The statuses are:</p>
     /// <p> <code>CREATE_IN_PROGRESS | UPDATE_IN_PROGRESS | DELETE_IN_PROGRESS | COMPLETED</code> </p>
+    #[doc(hidden)]
     pub deployment_status: std::option::Option<std::string::String>,
     /// <p>The date and time that a report plan is created, in Unix format and Coordinated Universal Time (UTC). The value of <code>CreationTime</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that a report job associated with this report plan last attempted to run, in Unix format and Coordinated Universal Time (UTC). The value of <code>LastAttemptedExecutionTime</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub last_attempted_execution_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that a report job associated with this report plan last successfully ran, in Unix format and Coordinated Universal Time (UTC). The value of <code>LastSuccessfulExecutionTime</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub last_successful_execution_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ReportPlan {
@@ -1907,11 +1951,10 @@ impl std::fmt::Debug for ReportPlan {
         formatter.finish()
     }
 }
-/// See [`ReportPlan`](crate::model::ReportPlan)
+/// See [`ReportPlan`](crate::model::ReportPlan).
 pub mod report_plan {
 
-    /// A builder for [`ReportPlan`](crate::model::ReportPlan)
-    #[non_exhaustive]
+    /// A builder for [`ReportPlan`](crate::model::ReportPlan).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) report_plan_arn: std::option::Option<std::string::String>,
@@ -2052,7 +2095,7 @@ pub mod report_plan {
             self.last_successful_execution_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReportPlan`](crate::model::ReportPlan)
+        /// Consumes the builder and constructs a [`ReportPlan`](crate::model::ReportPlan).
         pub fn build(self) -> crate::model::ReportPlan {
             crate::model::ReportPlan {
                 report_plan_arn: self.report_plan_arn,
@@ -2069,7 +2112,7 @@ pub mod report_plan {
     }
 }
 impl ReportPlan {
-    /// Creates a new builder-style object to manufacture [`ReportPlan`](crate::model::ReportPlan)
+    /// Creates a new builder-style object to manufacture [`ReportPlan`](crate::model::ReportPlan).
     pub fn builder() -> crate::model::report_plan::Builder {
         crate::model::report_plan::Builder::default()
     }
@@ -2080,23 +2123,31 @@ impl ReportPlan {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReportJob {
     /// <p>The identifier for a report job. A unique, randomly generated, Unicode, UTF-8 encoded string that is at most 1,024 bytes long. Report job IDs cannot be edited.</p>
+    #[doc(hidden)]
     pub report_job_id: std::option::Option<std::string::String>,
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.</p>
+    #[doc(hidden)]
     pub report_plan_arn: std::option::Option<std::string::String>,
     /// <p>Identifies the report template for the report. Reports are built using a report template. The report templates are: </p>
     /// <p> <code>RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT</code> </p>
+    #[doc(hidden)]
     pub report_template: std::option::Option<std::string::String>,
     /// <p>The date and time that a report job is created, in Unix format and Coordinated Universal Time (UTC). The value of <code>CreationTime</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that a report job is completed, in Unix format and Coordinated Universal Time (UTC). The value of <code>CompletionTime</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub completion_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of a report job. The statuses are:</p>
     /// <p> <code>CREATED | RUNNING | COMPLETED | FAILED</code> </p>
     /// <p> <code>COMPLETED</code> means that the report is available for your review at your designated destination. If the status is <code>FAILED</code>, review the <code>StatusMessage</code> for the reason.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>A message explaining the status of the report job.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The S3 bucket name and S3 keys for the destination where the report job publishes the report.</p>
+    #[doc(hidden)]
     pub report_destination: std::option::Option<crate::model::ReportDestination>,
 }
 impl ReportJob {
@@ -2150,11 +2201,10 @@ impl std::fmt::Debug for ReportJob {
         formatter.finish()
     }
 }
-/// See [`ReportJob`](crate::model::ReportJob)
+/// See [`ReportJob`](crate::model::ReportJob).
 pub mod report_job {
 
-    /// A builder for [`ReportJob`](crate::model::ReportJob)
-    #[non_exhaustive]
+    /// A builder for [`ReportJob`](crate::model::ReportJob).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) report_job_id: std::option::Option<std::string::String>,
@@ -2274,7 +2324,7 @@ pub mod report_job {
             self.report_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReportJob`](crate::model::ReportJob)
+        /// Consumes the builder and constructs a [`ReportJob`](crate::model::ReportJob).
         pub fn build(self) -> crate::model::ReportJob {
             crate::model::ReportJob {
                 report_job_id: self.report_job_id,
@@ -2290,7 +2340,7 @@ pub mod report_job {
     }
 }
 impl ReportJob {
-    /// Creates a new builder-style object to manufacture [`ReportJob`](crate::model::ReportJob)
+    /// Creates a new builder-style object to manufacture [`ReportJob`](crate::model::ReportJob).
     pub fn builder() -> crate::model::report_job::Builder {
         crate::model::report_job::Builder::default()
     }
@@ -2301,8 +2351,10 @@ impl ReportJob {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReportDestination {
     /// <p>The unique name of the Amazon S3 bucket that receives your reports.</p>
+    #[doc(hidden)]
     pub s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>The object key that uniquely identifies your reports in your S3 bucket.</p>
+    #[doc(hidden)]
     pub s3_keys: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ReportDestination {
@@ -2323,11 +2375,10 @@ impl std::fmt::Debug for ReportDestination {
         formatter.finish()
     }
 }
-/// See [`ReportDestination`](crate::model::ReportDestination)
+/// See [`ReportDestination`](crate::model::ReportDestination).
 pub mod report_destination {
 
-    /// A builder for [`ReportDestination`](crate::model::ReportDestination)
-    #[non_exhaustive]
+    /// A builder for [`ReportDestination`](crate::model::ReportDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_bucket_name: std::option::Option<std::string::String>,
@@ -2366,7 +2417,7 @@ pub mod report_destination {
             self.s3_keys = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReportDestination`](crate::model::ReportDestination)
+        /// Consumes the builder and constructs a [`ReportDestination`](crate::model::ReportDestination).
         pub fn build(self) -> crate::model::ReportDestination {
             crate::model::ReportDestination {
                 s3_bucket_name: self.s3_bucket_name,
@@ -2376,7 +2427,7 @@ pub mod report_destination {
     }
 }
 impl ReportDestination {
-    /// Creates a new builder-style object to manufacture [`ReportDestination`](crate::model::ReportDestination)
+    /// Creates a new builder-style object to manufacture [`ReportDestination`](crate::model::ReportDestination).
     pub fn builder() -> crate::model::report_destination::Builder {
         crate::model::report_destination::Builder::default()
     }
@@ -2387,18 +2438,25 @@ impl ReportDestination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryPointByResource {
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies a recovery point; for example, <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.</p>
+    #[doc(hidden)]
     pub recovery_point_arn: std::option::Option<std::string::String>,
     /// <p>The date and time a recovery point is created, in Unix format and Coordinated Universal Time (UTC). The value of <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A status code specifying the state of the recovery point.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::RecoveryPointStatus>,
     /// <p>A message explaining the reason of the recovery point deletion failure.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The server-side encryption key that is used to protect your backups; for example, <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.</p>
+    #[doc(hidden)]
     pub encryption_key_arn: std::option::Option<std::string::String>,
     /// <p>The size, in bytes, of a backup.</p>
+    #[doc(hidden)]
     pub backup_size_bytes: std::option::Option<i64>,
     /// <p>The name of a logical container where backups are stored. Backup vaults are identified by names that are unique to the account used to create them and the Amazon Web Services Region where they are created. They consist of lowercase letters, numbers, and hyphens.</p>
+    #[doc(hidden)]
     pub backup_vault_name: std::option::Option<std::string::String>,
 }
 impl RecoveryPointByResource {
@@ -2444,11 +2502,10 @@ impl std::fmt::Debug for RecoveryPointByResource {
         formatter.finish()
     }
 }
-/// See [`RecoveryPointByResource`](crate::model::RecoveryPointByResource)
+/// See [`RecoveryPointByResource`](crate::model::RecoveryPointByResource).
 pub mod recovery_point_by_resource {
 
-    /// A builder for [`RecoveryPointByResource`](crate::model::RecoveryPointByResource)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryPointByResource`](crate::model::RecoveryPointByResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recovery_point_arn: std::option::Option<std::string::String>,
@@ -2548,7 +2605,7 @@ pub mod recovery_point_by_resource {
             self.backup_vault_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryPointByResource`](crate::model::RecoveryPointByResource)
+        /// Consumes the builder and constructs a [`RecoveryPointByResource`](crate::model::RecoveryPointByResource).
         pub fn build(self) -> crate::model::RecoveryPointByResource {
             crate::model::RecoveryPointByResource {
                 recovery_point_arn: self.recovery_point_arn,
@@ -2563,7 +2620,7 @@ pub mod recovery_point_by_resource {
     }
 }
 impl RecoveryPointByResource {
-    /// Creates a new builder-style object to manufacture [`RecoveryPointByResource`](crate::model::RecoveryPointByResource)
+    /// Creates a new builder-style object to manufacture [`RecoveryPointByResource`](crate::model::RecoveryPointByResource).
     pub fn builder() -> crate::model::recovery_point_by_resource::Builder {
         crate::model::recovery_point_by_resource::Builder::default()
     }
@@ -2637,42 +2694,60 @@ impl AsRef<str> for RecoveryPointStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryPointByBackupVault {
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies a recovery point; for example, <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.</p>
+    #[doc(hidden)]
     pub recovery_point_arn: std::option::Option<std::string::String>,
     /// <p>The name of a logical container where backups are stored. Backup vaults are identified by names that are unique to the account used to create them and the Amazon Web Services Region where they are created. They consist of lowercase letters, numbers, and hyphens.</p>
+    #[doc(hidden)]
     pub backup_vault_name: std::option::Option<std::string::String>,
     /// <p>An ARN that uniquely identifies a backup vault; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:aBackupVault</code>.</p>
+    #[doc(hidden)]
     pub backup_vault_arn: std::option::Option<std::string::String>,
     /// <p>The backup vault where the recovery point was originally copied from. If the recovery point is restored to the same account this value will be <code>null</code>.</p>
+    #[doc(hidden)]
     pub source_backup_vault_arn: std::option::Option<std::string::String>,
     /// <p>An ARN that uniquely identifies a resource. The format of the ARN depends on the resource type.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy Service (VSS) backups, the only supported resource type is Amazon EC2.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>Contains identifying information about the creation of a recovery point, including the <code>BackupPlanArn</code>, <code>BackupPlanId</code>, <code>BackupPlanVersion</code>, and <code>BackupRuleId</code> of the backup plan that is used to create it.</p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<crate::model::RecoveryPointCreator>,
     /// <p>Specifies the IAM role ARN used to create the target recovery point; for example, <code>arn:aws:iam::123456789012:role/S3Access</code>.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
     /// <p>A status code specifying the state of the recovery point.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::RecoveryPointStatus>,
     /// <p>A message explaining the reason of the recovery point deletion failure.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The date and time a recovery point is created, in Unix format and Coordinated Universal Time (UTC). The value of <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time a job to restore a recovery point is completed, in Unix format and Coordinated Universal Time (UTC). The value of <code>CompletionDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub completion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The size, in bytes, of a backup.</p>
+    #[doc(hidden)]
     pub backup_size_in_bytes: std::option::Option<i64>,
     /// <p>A <code>CalculatedLifecycle</code> object containing <code>DeleteAt</code> and <code>MoveToColdStorageAt</code> timestamps.</p>
+    #[doc(hidden)]
     pub calculated_lifecycle: std::option::Option<crate::model::CalculatedLifecycle>,
     /// <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
     /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold. </p>
-    /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+    /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::Lifecycle>,
     /// <p>The server-side encryption key that is used to protect your backups; for example, <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.</p>
+    #[doc(hidden)]
     pub encryption_key_arn: std::option::Option<std::string::String>,
     /// <p>A Boolean value that is returned as <code>TRUE</code> if the specified recovery point is encrypted, or <code>FALSE</code> if the recovery point is not encrypted.</p>
+    #[doc(hidden)]
     pub is_encrypted: bool,
     /// <p>The date and time a recovery point was last restored, in Unix format and Coordinated Universal Time (UTC). The value of <code>LastRestoreTime</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub last_restore_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RecoveryPointByBackupVault {
@@ -2734,7 +2809,7 @@ impl RecoveryPointByBackupVault {
     }
     /// <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
     /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold. </p>
-    /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+    /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
     pub fn lifecycle(&self) -> std::option::Option<&crate::model::Lifecycle> {
         self.lifecycle.as_ref()
     }
@@ -2775,11 +2850,10 @@ impl std::fmt::Debug for RecoveryPointByBackupVault {
         formatter.finish()
     }
 }
-/// See [`RecoveryPointByBackupVault`](crate::model::RecoveryPointByBackupVault)
+/// See [`RecoveryPointByBackupVault`](crate::model::RecoveryPointByBackupVault).
 pub mod recovery_point_by_backup_vault {
 
-    /// A builder for [`RecoveryPointByBackupVault`](crate::model::RecoveryPointByBackupVault)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryPointByBackupVault`](crate::model::RecoveryPointByBackupVault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recovery_point_arn: std::option::Option<std::string::String>,
@@ -2977,14 +3051,14 @@ pub mod recovery_point_by_backup_vault {
         }
         /// <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
         /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold. </p>
-        /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+        /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
         pub fn lifecycle(mut self, input: crate::model::Lifecycle) -> Self {
             self.lifecycle = Some(input);
             self
         }
         /// <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
         /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold. </p>
-        /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+        /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
         pub fn set_lifecycle(
             mut self,
             input: std::option::Option<crate::model::Lifecycle>,
@@ -3028,7 +3102,7 @@ pub mod recovery_point_by_backup_vault {
             self.last_restore_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryPointByBackupVault`](crate::model::RecoveryPointByBackupVault)
+        /// Consumes the builder and constructs a [`RecoveryPointByBackupVault`](crate::model::RecoveryPointByBackupVault).
         pub fn build(self) -> crate::model::RecoveryPointByBackupVault {
             crate::model::RecoveryPointByBackupVault {
                 recovery_point_arn: self.recovery_point_arn,
@@ -3054,7 +3128,7 @@ pub mod recovery_point_by_backup_vault {
     }
 }
 impl RecoveryPointByBackupVault {
-    /// Creates a new builder-style object to manufacture [`RecoveryPointByBackupVault`](crate::model::RecoveryPointByBackupVault)
+    /// Creates a new builder-style object to manufacture [`RecoveryPointByBackupVault`](crate::model::RecoveryPointByBackupVault).
     pub fn builder() -> crate::model::recovery_point_by_backup_vault::Builder {
         crate::model::recovery_point_by_backup_vault::Builder::default()
     }
@@ -3065,12 +3139,16 @@ impl RecoveryPointByBackupVault {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryPointCreator {
     /// <p>Uniquely identifies a backup plan.</p>
+    #[doc(hidden)]
     pub backup_plan_id: std::option::Option<std::string::String>,
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies a backup plan; for example, <code>arn:aws:backup:us-east-1:123456789012:plan:8F81F553-3A74-4A3F-B93D-B3360DC80C50</code>.</p>
+    #[doc(hidden)]
     pub backup_plan_arn: std::option::Option<std::string::String>,
     /// <p>Version IDs are unique, randomly generated, Unicode, UTF-8 encoded strings that are at most 1,024 bytes long. They cannot be edited.</p>
+    #[doc(hidden)]
     pub backup_plan_version: std::option::Option<std::string::String>,
     /// <p>Uniquely identifies a rule used to schedule the backup of a selection of resources.</p>
+    #[doc(hidden)]
     pub backup_rule_id: std::option::Option<std::string::String>,
 }
 impl RecoveryPointCreator {
@@ -3101,11 +3179,10 @@ impl std::fmt::Debug for RecoveryPointCreator {
         formatter.finish()
     }
 }
-/// See [`RecoveryPointCreator`](crate::model::RecoveryPointCreator)
+/// See [`RecoveryPointCreator`](crate::model::RecoveryPointCreator).
 pub mod recovery_point_creator {
 
-    /// A builder for [`RecoveryPointCreator`](crate::model::RecoveryPointCreator)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryPointCreator`](crate::model::RecoveryPointCreator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_plan_id: std::option::Option<std::string::String>,
@@ -3166,7 +3243,7 @@ pub mod recovery_point_creator {
             self.backup_rule_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryPointCreator`](crate::model::RecoveryPointCreator)
+        /// Consumes the builder and constructs a [`RecoveryPointCreator`](crate::model::RecoveryPointCreator).
         pub fn build(self) -> crate::model::RecoveryPointCreator {
             crate::model::RecoveryPointCreator {
                 backup_plan_id: self.backup_plan_id,
@@ -3178,7 +3255,7 @@ pub mod recovery_point_creator {
     }
 }
 impl RecoveryPointCreator {
-    /// Creates a new builder-style object to manufacture [`RecoveryPointCreator`](crate::model::RecoveryPointCreator)
+    /// Creates a new builder-style object to manufacture [`RecoveryPointCreator`](crate::model::RecoveryPointCreator).
     pub fn builder() -> crate::model::recovery_point_creator::Builder {
         crate::model::recovery_point_creator::Builder::default()
     }
@@ -3189,10 +3266,13 @@ impl RecoveryPointCreator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProtectedResource {
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The type of Amazon Web Services resource; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy Service (VSS) backups, the only supported resource type is Amazon EC2.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The date and time a resource was last backed up, in Unix format and Coordinated Universal Time (UTC). The value of <code>LastBackupTime</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub last_backup_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ProtectedResource {
@@ -3218,11 +3298,10 @@ impl std::fmt::Debug for ProtectedResource {
         formatter.finish()
     }
 }
-/// See [`ProtectedResource`](crate::model::ProtectedResource)
+/// See [`ProtectedResource`](crate::model::ProtectedResource).
 pub mod protected_resource {
 
-    /// A builder for [`ProtectedResource`](crate::model::ProtectedResource)
-    #[non_exhaustive]
+    /// A builder for [`ProtectedResource`](crate::model::ProtectedResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -3266,7 +3345,7 @@ pub mod protected_resource {
             self.last_backup_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProtectedResource`](crate::model::ProtectedResource)
+        /// Consumes the builder and constructs a [`ProtectedResource`](crate::model::ProtectedResource).
         pub fn build(self) -> crate::model::ProtectedResource {
             crate::model::ProtectedResource {
                 resource_arn: self.resource_arn,
@@ -3277,7 +3356,7 @@ pub mod protected_resource {
     }
 }
 impl ProtectedResource {
-    /// Creates a new builder-style object to manufacture [`ProtectedResource`](crate::model::ProtectedResource)
+    /// Creates a new builder-style object to manufacture [`ProtectedResource`](crate::model::ProtectedResource).
     pub fn builder() -> crate::model::protected_resource::Builder {
         crate::model::protected_resource::Builder::default()
     }
@@ -3288,17 +3367,23 @@ impl ProtectedResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Framework {
     /// <p>The unique name of a framework. This name is between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).</p>
+    #[doc(hidden)]
     pub framework_name: std::option::Option<std::string::String>,
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.</p>
+    #[doc(hidden)]
     pub framework_arn: std::option::Option<std::string::String>,
     /// <p>An optional description of the framework with a maximum 1,024 characters.</p>
+    #[doc(hidden)]
     pub framework_description: std::option::Option<std::string::String>,
     /// <p>The number of controls contained by the framework.</p>
+    #[doc(hidden)]
     pub number_of_controls: i32,
     /// <p>The date and time that a framework is created, in Unix format and Coordinated Universal Time (UTC). The value of <code>CreationTime</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The deployment status of a framework. The statuses are:</p>
     /// <p> <code>CREATE_IN_PROGRESS | UPDATE_IN_PROGRESS | DELETE_IN_PROGRESS | COMPLETED | FAILED</code> </p>
+    #[doc(hidden)]
     pub deployment_status: std::option::Option<std::string::String>,
 }
 impl Framework {
@@ -3340,11 +3425,10 @@ impl std::fmt::Debug for Framework {
         formatter.finish()
     }
 }
-/// See [`Framework`](crate::model::Framework)
+/// See [`Framework`](crate::model::Framework).
 pub mod framework {
 
-    /// A builder for [`Framework`](crate::model::Framework)
-    #[non_exhaustive]
+    /// A builder for [`Framework`](crate::model::Framework).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) framework_name: std::option::Option<std::string::String>,
@@ -3432,7 +3516,7 @@ pub mod framework {
             self.deployment_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`Framework`](crate::model::Framework)
+        /// Consumes the builder and constructs a [`Framework`](crate::model::Framework).
         pub fn build(self) -> crate::model::Framework {
             crate::model::Framework {
                 framework_name: self.framework_name,
@@ -3446,7 +3530,7 @@ pub mod framework {
     }
 }
 impl Framework {
-    /// Creates a new builder-style object to manufacture [`Framework`](crate::model::Framework)
+    /// Creates a new builder-style object to manufacture [`Framework`](crate::model::Framework).
     pub fn builder() -> crate::model::framework::Builder {
         crate::model::framework::Builder::default()
     }
@@ -3457,34 +3541,49 @@ impl Framework {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CopyJob {
     /// <p>The account ID that owns the copy job.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>Uniquely identifies a copy job.</p>
+    #[doc(hidden)]
     pub copy_job_id: std::option::Option<std::string::String>,
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies a source copy vault; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:aBackupVault</code>. </p>
+    #[doc(hidden)]
     pub source_backup_vault_arn: std::option::Option<std::string::String>,
     /// <p>An ARN that uniquely identifies a source recovery point; for example, <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.</p>
+    #[doc(hidden)]
     pub source_recovery_point_arn: std::option::Option<std::string::String>,
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies a destination copy vault; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:aBackupVault</code>.</p>
+    #[doc(hidden)]
     pub destination_backup_vault_arn: std::option::Option<std::string::String>,
     /// <p>An ARN that uniquely identifies a destination recovery point; for example, <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.</p>
+    #[doc(hidden)]
     pub destination_recovery_point_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The date and time a copy job is created, in Unix format and Coordinated Universal Time (UTC). The value of <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time a copy job is completed, in Unix format and Coordinated Universal Time (UTC). The value of <code>CompletionDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub completion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current state of a copy job.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::CopyJobState>,
     /// <p>A detailed message explaining the status of the job to copy a resource.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The size, in bytes, of a copy job.</p>
+    #[doc(hidden)]
     pub backup_size_in_bytes: std::option::Option<i64>,
     /// <p>Specifies the IAM role ARN used to copy the target recovery point; for example, <code>arn:aws:iam::123456789012:role/S3Access</code>.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
     /// <p>Contains information about the backup plan and rule that Backup used to initiate the recovery point backup.</p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<crate::model::RecoveryPointCreator>,
     /// <p>The type of Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
 }
 impl CopyJob {
@@ -3576,11 +3675,10 @@ impl std::fmt::Debug for CopyJob {
         formatter.finish()
     }
 }
-/// See [`CopyJob`](crate::model::CopyJob)
+/// See [`CopyJob`](crate::model::CopyJob).
 pub mod copy_job {
 
-    /// A builder for [`CopyJob`](crate::model::CopyJob)
-    #[non_exhaustive]
+    /// A builder for [`CopyJob`](crate::model::CopyJob).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -3783,7 +3881,7 @@ pub mod copy_job {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`CopyJob`](crate::model::CopyJob)
+        /// Consumes the builder and constructs a [`CopyJob`](crate::model::CopyJob).
         pub fn build(self) -> crate::model::CopyJob {
             crate::model::CopyJob {
                 account_id: self.account_id,
@@ -3806,7 +3904,7 @@ pub mod copy_job {
     }
 }
 impl CopyJob {
-    /// Creates a new builder-style object to manufacture [`CopyJob`](crate::model::CopyJob)
+    /// Creates a new builder-style object to manufacture [`CopyJob`](crate::model::CopyJob).
     pub fn builder() -> crate::model::copy_job::Builder {
         crate::model::copy_job::Builder::default()
     }
@@ -3880,30 +3978,40 @@ impl AsRef<str> for CopyJobState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackupVaultListMember {
     /// <p>The name of a logical container where backups are stored. Backup vaults are identified by names that are unique to the account used to create them and the Amazon Web Services Region where they are created. They consist of lowercase letters, numbers, and hyphens.</p>
+    #[doc(hidden)]
     pub backup_vault_name: std::option::Option<std::string::String>,
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies a backup vault; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:aBackupVault</code>.</p>
+    #[doc(hidden)]
     pub backup_vault_arn: std::option::Option<std::string::String>,
     /// <p>The date and time a resource backup is created, in Unix format and Coordinated Universal Time (UTC). The value of <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A server-side encryption key you can specify to encrypt your backups from services that support full Backup management; for example, <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>. If you specify a key, you must specify its ARN, not its alias. If you do not specify a key, Backup creates a KMS key for you by default.</p>
     /// <p>To learn which Backup services support full Backup management and how Backup handles encryption for backups from services that do not yet support full Backup, see <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/encryption.html"> Encryption for backups in Backup</a> </p>
+    #[doc(hidden)]
     pub encryption_key_arn: std::option::Option<std::string::String>,
     /// <p>A unique string that identifies the request and allows failed requests to be retried without the risk of running the operation twice. This parameter is optional.</p>
     /// <p>If used, this parameter must contain 1 to 50 alphanumeric or '-_.' characters.</p>
+    #[doc(hidden)]
     pub creator_request_id: std::option::Option<std::string::String>,
     /// <p>The number of recovery points that are stored in a backup vault.</p>
+    #[doc(hidden)]
     pub number_of_recovery_points: i64,
     /// <p>A Boolean value that indicates whether Backup Vault Lock applies to the selected backup vault. If <code>true</code>, Vault Lock prevents delete and update operations on the recovery points in the selected vault.</p>
+    #[doc(hidden)]
     pub locked: std::option::Option<bool>,
     /// <p>The Backup Vault Lock setting that specifies the minimum retention period that the vault retains its recovery points. If this parameter is not specified, Vault Lock does not enforce a minimum retention period.</p>
     /// <p>If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period equal to or longer than the minimum retention period. If the job's retention period is shorter than that minimum retention period, then the vault fails the backup or copy job, and you should either modify your lifecycle settings or use a different vault. Recovery points already stored in the vault prior to Vault Lock are not affected.</p>
+    #[doc(hidden)]
     pub min_retention_days: std::option::Option<i64>,
     /// <p>The Backup Vault Lock setting that specifies the maximum retention period that the vault retains its recovery points. If this parameter is not specified, Vault Lock does not enforce a maximum retention period on the recovery points in the vault (allowing indefinite storage).</p>
     /// <p>If specified, any backup or copy job to the vault must have a lifecycle policy with a retention period equal to or shorter than the maximum retention period. If the job's retention period is longer than that maximum retention period, then the vault fails the backup or copy job, and you should either modify your lifecycle settings or use a different vault. Recovery points already stored in the vault prior to Vault Lock are not affected.</p>
+    #[doc(hidden)]
     pub max_retention_days: std::option::Option<i64>,
     /// <p>The date and time when Backup Vault Lock configuration becomes immutable, meaning it cannot be changed or deleted.</p>
     /// <p>If you applied Vault Lock to your vault without specifying a lock date, you can change your Vault Lock settings, or delete Vault Lock from the vault entirely, at any time.</p>
     /// <p>This value is in Unix format, Coordinated Universal Time (UTC), and accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub lock_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl BackupVaultListMember {
@@ -3970,11 +4078,10 @@ impl std::fmt::Debug for BackupVaultListMember {
         formatter.finish()
     }
 }
-/// See [`BackupVaultListMember`](crate::model::BackupVaultListMember)
+/// See [`BackupVaultListMember`](crate::model::BackupVaultListMember).
 pub mod backup_vault_list_member {
 
-    /// A builder for [`BackupVaultListMember`](crate::model::BackupVaultListMember)
-    #[non_exhaustive]
+    /// A builder for [`BackupVaultListMember`](crate::model::BackupVaultListMember).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_vault_name: std::option::Option<std::string::String>,
@@ -4119,7 +4226,7 @@ pub mod backup_vault_list_member {
             self.lock_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackupVaultListMember`](crate::model::BackupVaultListMember)
+        /// Consumes the builder and constructs a [`BackupVaultListMember`](crate::model::BackupVaultListMember).
         pub fn build(self) -> crate::model::BackupVaultListMember {
             crate::model::BackupVaultListMember {
                 backup_vault_name: self.backup_vault_name,
@@ -4137,7 +4244,7 @@ pub mod backup_vault_list_member {
     }
 }
 impl BackupVaultListMember {
-    /// Creates a new builder-style object to manufacture [`BackupVaultListMember`](crate::model::BackupVaultListMember)
+    /// Creates a new builder-style object to manufacture [`BackupVaultListMember`](crate::model::BackupVaultListMember).
     pub fn builder() -> crate::model::backup_vault_list_member::Builder {
         crate::model::backup_vault_list_member::Builder::default()
     }
@@ -4148,17 +4255,23 @@ impl BackupVaultListMember {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackupSelectionsListMember {
     /// <p>Uniquely identifies a request to assign a set of resources to a backup plan.</p>
+    #[doc(hidden)]
     pub selection_id: std::option::Option<std::string::String>,
     /// <p>The display name of a resource selection document.</p>
+    #[doc(hidden)]
     pub selection_name: std::option::Option<std::string::String>,
     /// <p>Uniquely identifies a backup plan.</p>
+    #[doc(hidden)]
     pub backup_plan_id: std::option::Option<std::string::String>,
     /// <p>The date and time a backup plan is created, in Unix format and Coordinated Universal Time (UTC). The value of <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A unique string that identifies the request and allows failed requests to be retried without the risk of running the operation twice. This parameter is optional.</p>
     /// <p>If used, this parameter must contain 1 to 50 alphanumeric or '-_.' characters.</p>
+    #[doc(hidden)]
     pub creator_request_id: std::option::Option<std::string::String>,
     /// <p>Specifies the IAM role Amazon Resource Name (ARN) to create the target recovery point; for example, <code>arn:aws:iam::123456789012:role/S3Access</code>.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
 }
 impl BackupSelectionsListMember {
@@ -4200,11 +4313,10 @@ impl std::fmt::Debug for BackupSelectionsListMember {
         formatter.finish()
     }
 }
-/// See [`BackupSelectionsListMember`](crate::model::BackupSelectionsListMember)
+/// See [`BackupSelectionsListMember`](crate::model::BackupSelectionsListMember).
 pub mod backup_selections_list_member {
 
-    /// A builder for [`BackupSelectionsListMember`](crate::model::BackupSelectionsListMember)
-    #[non_exhaustive]
+    /// A builder for [`BackupSelectionsListMember`](crate::model::BackupSelectionsListMember).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) selection_id: std::option::Option<std::string::String>,
@@ -4289,7 +4401,7 @@ pub mod backup_selections_list_member {
             self.iam_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackupSelectionsListMember`](crate::model::BackupSelectionsListMember)
+        /// Consumes the builder and constructs a [`BackupSelectionsListMember`](crate::model::BackupSelectionsListMember).
         pub fn build(self) -> crate::model::BackupSelectionsListMember {
             crate::model::BackupSelectionsListMember {
                 selection_id: self.selection_id,
@@ -4303,7 +4415,7 @@ pub mod backup_selections_list_member {
     }
 }
 impl BackupSelectionsListMember {
-    /// Creates a new builder-style object to manufacture [`BackupSelectionsListMember`](crate::model::BackupSelectionsListMember)
+    /// Creates a new builder-style object to manufacture [`BackupSelectionsListMember`](crate::model::BackupSelectionsListMember).
     pub fn builder() -> crate::model::backup_selections_list_member::Builder {
         crate::model::backup_selections_list_member::Builder::default()
     }
@@ -4314,23 +4426,32 @@ impl BackupSelectionsListMember {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackupPlansListMember {
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies a backup plan; for example, <code>arn:aws:backup:us-east-1:123456789012:plan:8F81F553-3A74-4A3F-B93D-B3360DC80C50</code>.</p>
+    #[doc(hidden)]
     pub backup_plan_arn: std::option::Option<std::string::String>,
     /// <p>Uniquely identifies a backup plan.</p>
+    #[doc(hidden)]
     pub backup_plan_id: std::option::Option<std::string::String>,
     /// <p>The date and time a resource backup plan is created, in Unix format and Coordinated Universal Time (UTC). The value of <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time a backup plan is deleted, in Unix format and Coordinated Universal Time (UTC). The value of <code>DeletionDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub deletion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Unique, randomly generated, Unicode, UTF-8 encoded strings that are at most 1,024 bytes long. Version IDs cannot be edited.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>The display name of a saved backup plan.</p>
+    #[doc(hidden)]
     pub backup_plan_name: std::option::Option<std::string::String>,
     /// <p>A unique string that identifies the request and allows failed requests to be retried without the risk of running the operation twice. This parameter is optional.</p>
     /// <p>If used, this parameter must contain 1 to 50 alphanumeric or '-_.' characters.</p>
+    #[doc(hidden)]
     pub creator_request_id: std::option::Option<std::string::String>,
     /// <p>The last time a job to back up resources was run with this rule. A date and time, in Unix format and Coordinated Universal Time (UTC). The value of <code>LastExecutionDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub last_execution_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Contains a list of <code>BackupOptions</code> for a resource type.</p>
+    #[doc(hidden)]
     pub advanced_backup_settings:
         std::option::Option<std::vec::Vec<crate::model::AdvancedBackupSetting>>,
 }
@@ -4390,11 +4511,10 @@ impl std::fmt::Debug for BackupPlansListMember {
         formatter.finish()
     }
 }
-/// See [`BackupPlansListMember`](crate::model::BackupPlansListMember)
+/// See [`BackupPlansListMember`](crate::model::BackupPlansListMember).
 pub mod backup_plans_list_member {
 
-    /// A builder for [`BackupPlansListMember`](crate::model::BackupPlansListMember)
-    #[non_exhaustive]
+    /// A builder for [`BackupPlansListMember`](crate::model::BackupPlansListMember).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_plan_arn: std::option::Option<std::string::String>,
@@ -4534,7 +4654,7 @@ pub mod backup_plans_list_member {
             self.advanced_backup_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackupPlansListMember`](crate::model::BackupPlansListMember)
+        /// Consumes the builder and constructs a [`BackupPlansListMember`](crate::model::BackupPlansListMember).
         pub fn build(self) -> crate::model::BackupPlansListMember {
             crate::model::BackupPlansListMember {
                 backup_plan_arn: self.backup_plan_arn,
@@ -4551,7 +4671,7 @@ pub mod backup_plans_list_member {
     }
 }
 impl BackupPlansListMember {
-    /// Creates a new builder-style object to manufacture [`BackupPlansListMember`](crate::model::BackupPlansListMember)
+    /// Creates a new builder-style object to manufacture [`BackupPlansListMember`](crate::model::BackupPlansListMember).
     pub fn builder() -> crate::model::backup_plans_list_member::Builder {
         crate::model::backup_plans_list_member::Builder::default()
     }
@@ -4562,8 +4682,10 @@ impl BackupPlansListMember {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackupPlanTemplatesListMember {
     /// <p>Uniquely identifies a stored backup plan template.</p>
+    #[doc(hidden)]
     pub backup_plan_template_id: std::option::Option<std::string::String>,
     /// <p>The optional display name of a backup plan template.</p>
+    #[doc(hidden)]
     pub backup_plan_template_name: std::option::Option<std::string::String>,
 }
 impl BackupPlanTemplatesListMember {
@@ -4584,11 +4706,10 @@ impl std::fmt::Debug for BackupPlanTemplatesListMember {
         formatter.finish()
     }
 }
-/// See [`BackupPlanTemplatesListMember`](crate::model::BackupPlanTemplatesListMember)
+/// See [`BackupPlanTemplatesListMember`](crate::model::BackupPlanTemplatesListMember).
 pub mod backup_plan_templates_list_member {
 
-    /// A builder for [`BackupPlanTemplatesListMember`](crate::model::BackupPlanTemplatesListMember)
-    #[non_exhaustive]
+    /// A builder for [`BackupPlanTemplatesListMember`](crate::model::BackupPlanTemplatesListMember).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_plan_template_id: std::option::Option<std::string::String>,
@@ -4621,7 +4742,7 @@ pub mod backup_plan_templates_list_member {
             self.backup_plan_template_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackupPlanTemplatesListMember`](crate::model::BackupPlanTemplatesListMember)
+        /// Consumes the builder and constructs a [`BackupPlanTemplatesListMember`](crate::model::BackupPlanTemplatesListMember).
         pub fn build(self) -> crate::model::BackupPlanTemplatesListMember {
             crate::model::BackupPlanTemplatesListMember {
                 backup_plan_template_id: self.backup_plan_template_id,
@@ -4631,7 +4752,7 @@ pub mod backup_plan_templates_list_member {
     }
 }
 impl BackupPlanTemplatesListMember {
-    /// Creates a new builder-style object to manufacture [`BackupPlanTemplatesListMember`](crate::model::BackupPlanTemplatesListMember)
+    /// Creates a new builder-style object to manufacture [`BackupPlanTemplatesListMember`](crate::model::BackupPlanTemplatesListMember).
     pub fn builder() -> crate::model::backup_plan_templates_list_member::Builder {
         crate::model::backup_plan_templates_list_member::Builder::default()
     }
@@ -4642,46 +4763,66 @@ impl BackupPlanTemplatesListMember {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackupJob {
     /// <p>The account ID that owns the backup job.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>Uniquely identifies a request to Backup to back up a resource.</p>
+    #[doc(hidden)]
     pub backup_job_id: std::option::Option<std::string::String>,
     /// <p>The name of a logical container where backups are stored. Backup vaults are identified by names that are unique to the account used to create them and the Amazon Web Services Region where they are created. They consist of lowercase letters, numbers, and hyphens.</p>
+    #[doc(hidden)]
     pub backup_vault_name: std::option::Option<std::string::String>,
     /// <p>An Amazon Resource Name (ARN) that uniquely identifies a backup vault; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:aBackupVault</code>.</p>
+    #[doc(hidden)]
     pub backup_vault_arn: std::option::Option<std::string::String>,
     /// <p>An ARN that uniquely identifies a recovery point; for example, <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.</p>
+    #[doc(hidden)]
     pub recovery_point_arn: std::option::Option<std::string::String>,
     /// <p>An ARN that uniquely identifies a resource. The format of the ARN depends on the resource type.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The date and time a backup job is created, in Unix format and Coordinated Universal Time (UTC). The value of <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time a job to create a backup job is completed, in Unix format and Coordinated Universal Time (UTC). The value of <code>CompletionDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub completion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current state of a resource recovery point.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::BackupJobState>,
     /// <p>A detailed message explaining the status of the job to back up a resource.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Contains an estimated percentage complete of a job at the time the job status was queried.</p>
+    #[doc(hidden)]
     pub percent_done: std::option::Option<std::string::String>,
     /// <p>The size, in bytes, of a backup.</p>
+    #[doc(hidden)]
     pub backup_size_in_bytes: std::option::Option<i64>,
     /// <p>Specifies the IAM role ARN used to create the target recovery point. IAM roles other than the default role must include either <code>AWSBackup</code> or <code>AwsBackup</code> in the role name. For example, <code>arn:aws:iam::123456789012:role/AWSBackupRDSAccess</code>. Role names without those strings lack permissions to perform backup jobs.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
     /// <p>Contains identifying information about the creation of a backup job, including the <code>BackupPlanArn</code>, <code>BackupPlanId</code>, <code>BackupPlanVersion</code>, and <code>BackupRuleId</code> of the backup plan used to create it.</p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<crate::model::RecoveryPointCreator>,
     /// <p>The date and time a job to back up resources is expected to be completed, in Unix format and Coordinated Universal Time (UTC). The value of <code>ExpectedCompletionDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub expected_completion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the time in Unix format and Coordinated Universal Time (UTC) when a backup job must be started before it is canceled. The value is calculated by adding the start window to the scheduled time. So if the scheduled time were 6:00 PM and the start window is 2 hours, the <code>StartBy</code> time would be 8:00 PM on the date specified. The value of <code>StartBy</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.</p>
+    #[doc(hidden)]
     pub start_by: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy Service (VSS) backups, the only supported resource type is Amazon EC2.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The size in bytes transferred to a backup vault at the time that the job status was queried.</p>
+    #[doc(hidden)]
     pub bytes_transferred: std::option::Option<i64>,
     /// <p>Specifies the backup option for a selected resource. This option is only available for Windows Volume Shadow Copy Service (VSS) backup jobs.</p>
     /// <p>Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and create a Windows VSS backup. Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. If you specify an invalid option, you get an <code>InvalidParameterValueException</code> exception.</p>
+    #[doc(hidden)]
     pub backup_options:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Represents the type of backup for a backup job.</p>
+    #[doc(hidden)]
     pub backup_type: std::option::Option<std::string::String>,
 }
 impl BackupJob {
@@ -4796,11 +4937,10 @@ impl std::fmt::Debug for BackupJob {
         formatter.finish()
     }
 }
-/// See [`BackupJob`](crate::model::BackupJob)
+/// See [`BackupJob`](crate::model::BackupJob).
 pub mod backup_job {
 
-    /// A builder for [`BackupJob`](crate::model::BackupJob)
-    #[non_exhaustive]
+    /// A builder for [`BackupJob`](crate::model::BackupJob).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -5080,7 +5220,7 @@ pub mod backup_job {
             self.backup_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackupJob`](crate::model::BackupJob)
+        /// Consumes the builder and constructs a [`BackupJob`](crate::model::BackupJob).
         pub fn build(self) -> crate::model::BackupJob {
             crate::model::BackupJob {
                 account_id: self.account_id,
@@ -5108,7 +5248,7 @@ pub mod backup_job {
     }
 }
 impl BackupJob {
-    /// Creates a new builder-style object to manufacture [`BackupJob`](crate::model::BackupJob)
+    /// Creates a new builder-style object to manufacture [`BackupJob`](crate::model::BackupJob).
     pub fn builder() -> crate::model::backup_job::Builder {
         crate::model::backup_job::Builder::default()
     }
@@ -5203,32 +5343,39 @@ impl AsRef<str> for BackupJobState {
 }
 
 /// <p>Used to specify a set of resources to a backup plan.</p>
+/// <p>Specifying your desired <code>Conditions</code>, <code>ListOfTags</code>, <code>NotResources</code>, and/or <code>Resources</code> is recommended. If none of these are specified, Backup will attempt to select all supported and opted-in storage resources, which could have unintended cost implications.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackupSelection {
     /// <p>The display name of a resource selection document. Must contain 1 to 50 alphanumeric or '-_.' characters.</p>
+    #[doc(hidden)]
     pub selection_name: std::option::Option<std::string::String>,
     /// <p>The ARN of the IAM role that Backup uses to authenticate when backing up the target resource; for example, <code>arn:aws:iam::123456789012:role/S3Access</code>.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
     /// <p>A list of Amazon Resource Names (ARNs) to assign to a backup plan. The maximum number of ARNs is 500 without wildcards, or 30 ARNs with wildcards.</p>
     /// <p>If you need to assign many resources to a backup plan, consider a different resource selection strategy, such as assigning all resources of a resource type or refining your resource selection using tags.</p>
+    #[doc(hidden)]
     pub resources: std::option::Option<std::vec::Vec<std::string::String>>,
-    /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+    /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": { "ConditionKey": "aws:ResourceTag/CreatedByCryo", "ConditionValue": "true" },</code>. Condition operators are case sensitive.</p>
     /// <p> <code>ListOfTags</code> differs from <code>Conditions</code> as follows:</p>
     /// <ul>
     /// <li> <p>When you specify more than one condition, you assign all resources that match AT LEAST ONE condition (using OR logic).</p> </li>
     /// <li> <p> <code>ListOfTags</code> only supports <code>StringEquals</code>. <code>Conditions</code> supports <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>, and <code>StringNotLike</code>. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub list_of_tags: std::option::Option<std::vec::Vec<crate::model::Condition>>,
     /// <p>A list of Amazon Resource Names (ARNs) to exclude from a backup plan. The maximum number of ARNs is 500 without wildcards, or 30 ARNs with wildcards.</p>
     /// <p>If you need to exclude many resources from a backup plan, consider a different resource selection strategy, such as assigning only one or a few resource types or refining your resource selection using tags.</p>
+    #[doc(hidden)]
     pub not_resources: std::option::Option<std::vec::Vec<std::string::String>>,
-    /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+    /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": { "ConditionKey": "aws:ResourceTag/CreatedByCryo", "ConditionValue": "true" },</code>. Condition operators are case sensitive.</p>
     /// <p> <code>Conditions</code> differs from <code>ListOfTags</code> as follows:</p>
     /// <ul>
     /// <li> <p>When you specify more than one condition, you only assign the resources that match ALL conditions (using AND logic).</p> </li>
     /// <li> <p> <code>Conditions</code> supports <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>, and <code>StringNotLike</code>. <code>ListOfTags</code> only supports <code>StringEquals</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub conditions: std::option::Option<crate::model::Conditions>,
 }
 impl BackupSelection {
@@ -5245,7 +5392,7 @@ impl BackupSelection {
     pub fn resources(&self) -> std::option::Option<&[std::string::String]> {
         self.resources.as_deref()
     }
-    /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+    /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": { "ConditionKey": "aws:ResourceTag/CreatedByCryo", "ConditionValue": "true" },</code>. Condition operators are case sensitive.</p>
     /// <p> <code>ListOfTags</code> differs from <code>Conditions</code> as follows:</p>
     /// <ul>
     /// <li> <p>When you specify more than one condition, you assign all resources that match AT LEAST ONE condition (using OR logic).</p> </li>
@@ -5259,7 +5406,7 @@ impl BackupSelection {
     pub fn not_resources(&self) -> std::option::Option<&[std::string::String]> {
         self.not_resources.as_deref()
     }
-    /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+    /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": { "ConditionKey": "aws:ResourceTag/CreatedByCryo", "ConditionValue": "true" },</code>. Condition operators are case sensitive.</p>
     /// <p> <code>Conditions</code> differs from <code>ListOfTags</code> as follows:</p>
     /// <ul>
     /// <li> <p>When you specify more than one condition, you only assign the resources that match ALL conditions (using AND logic).</p> </li>
@@ -5281,11 +5428,10 @@ impl std::fmt::Debug for BackupSelection {
         formatter.finish()
     }
 }
-/// See [`BackupSelection`](crate::model::BackupSelection)
+/// See [`BackupSelection`](crate::model::BackupSelection).
 pub mod backup_selection {
 
-    /// A builder for [`BackupSelection`](crate::model::BackupSelection)
-    #[non_exhaustive]
+    /// A builder for [`BackupSelection`](crate::model::BackupSelection).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) selection_name: std::option::Option<std::string::String>,
@@ -5344,7 +5490,7 @@ pub mod backup_selection {
         ///
         /// To override the contents of this collection use [`set_list_of_tags`](Self::set_list_of_tags).
         ///
-        /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+        /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": { "ConditionKey": "aws:ResourceTag/CreatedByCryo", "ConditionValue": "true" },</code>. Condition operators are case sensitive.</p>
         /// <p> <code>ListOfTags</code> differs from <code>Conditions</code> as follows:</p>
         /// <ul>
         /// <li> <p>When you specify more than one condition, you assign all resources that match AT LEAST ONE condition (using OR logic).</p> </li>
@@ -5356,7 +5502,7 @@ pub mod backup_selection {
             self.list_of_tags = Some(v);
             self
         }
-        /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+        /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": { "ConditionKey": "aws:ResourceTag/CreatedByCryo", "ConditionValue": "true" },</code>. Condition operators are case sensitive.</p>
         /// <p> <code>ListOfTags</code> differs from <code>Conditions</code> as follows:</p>
         /// <ul>
         /// <li> <p>When you specify more than one condition, you assign all resources that match AT LEAST ONE condition (using OR logic).</p> </li>
@@ -5390,7 +5536,7 @@ pub mod backup_selection {
             self.not_resources = input;
             self
         }
-        /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+        /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": { "ConditionKey": "aws:ResourceTag/CreatedByCryo", "ConditionValue": "true" },</code>. Condition operators are case sensitive.</p>
         /// <p> <code>Conditions</code> differs from <code>ListOfTags</code> as follows:</p>
         /// <ul>
         /// <li> <p>When you specify more than one condition, you only assign the resources that match ALL conditions (using AND logic).</p> </li>
@@ -5400,7 +5546,7 @@ pub mod backup_selection {
             self.conditions = Some(input);
             self
         }
-        /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+        /// <p>A list of conditions that you define to assign resources to your backup plans using tags. For example, <code>"StringEquals": { "ConditionKey": "aws:ResourceTag/CreatedByCryo", "ConditionValue": "true" },</code>. Condition operators are case sensitive.</p>
         /// <p> <code>Conditions</code> differs from <code>ListOfTags</code> as follows:</p>
         /// <ul>
         /// <li> <p>When you specify more than one condition, you only assign the resources that match ALL conditions (using AND logic).</p> </li>
@@ -5413,7 +5559,7 @@ pub mod backup_selection {
             self.conditions = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackupSelection`](crate::model::BackupSelection)
+        /// Consumes the builder and constructs a [`BackupSelection`](crate::model::BackupSelection).
         pub fn build(self) -> crate::model::BackupSelection {
             crate::model::BackupSelection {
                 selection_name: self.selection_name,
@@ -5427,7 +5573,7 @@ pub mod backup_selection {
     }
 }
 impl BackupSelection {
-    /// Creates a new builder-style object to manufacture [`BackupSelection`](crate::model::BackupSelection)
+    /// Creates a new builder-style object to manufacture [`BackupSelection`](crate::model::BackupSelection).
     pub fn builder() -> crate::model::backup_selection::Builder {
         crate::model::backup_selection::Builder::default()
     }
@@ -5438,12 +5584,16 @@ impl BackupSelection {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Conditions {
     /// <p>Filters the values of your tagged resources for only those resources that you tagged with the same value. Also called "exact matching."</p>
+    #[doc(hidden)]
     pub string_equals: std::option::Option<std::vec::Vec<crate::model::ConditionParameter>>,
     /// <p>Filters the values of your tagged resources for only those resources that you tagged that do not have the same value. Also called "negated matching."</p>
+    #[doc(hidden)]
     pub string_not_equals: std::option::Option<std::vec::Vec<crate::model::ConditionParameter>>,
     /// <p>Filters the values of your tagged resources for matching tag values with the use of a wildcard character (*) anywhere in the string. For example, "prod*" or "*rod*" matches the tag value "production".</p>
+    #[doc(hidden)]
     pub string_like: std::option::Option<std::vec::Vec<crate::model::ConditionParameter>>,
     /// <p>Filters the values of your tagged resources for non-matching tag values with the use of a wildcard character (*) anywhere in the string.</p>
+    #[doc(hidden)]
     pub string_not_like: std::option::Option<std::vec::Vec<crate::model::ConditionParameter>>,
 }
 impl Conditions {
@@ -5474,11 +5624,10 @@ impl std::fmt::Debug for Conditions {
         formatter.finish()
     }
 }
-/// See [`Conditions`](crate::model::Conditions)
+/// See [`Conditions`](crate::model::Conditions).
 pub mod conditions {
 
-    /// A builder for [`Conditions`](crate::model::Conditions)
-    #[non_exhaustive]
+    /// A builder for [`Conditions`](crate::model::Conditions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) string_equals:
@@ -5567,7 +5716,7 @@ pub mod conditions {
             self.string_not_like = input;
             self
         }
-        /// Consumes the builder and constructs a [`Conditions`](crate::model::Conditions)
+        /// Consumes the builder and constructs a [`Conditions`](crate::model::Conditions).
         pub fn build(self) -> crate::model::Conditions {
             crate::model::Conditions {
                 string_equals: self.string_equals,
@@ -5579,7 +5728,7 @@ pub mod conditions {
     }
 }
 impl Conditions {
-    /// Creates a new builder-style object to manufacture [`Conditions`](crate::model::Conditions)
+    /// Creates a new builder-style object to manufacture [`Conditions`](crate::model::Conditions).
     pub fn builder() -> crate::model::conditions::Builder {
         crate::model::conditions::Builder::default()
     }
@@ -5590,8 +5739,10 @@ impl Conditions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConditionParameter {
     /// <p>The key in a key-value pair. For example, in the tag <code>Department: Accounting</code>, <code>Department</code> is the key.</p>
+    #[doc(hidden)]
     pub condition_key: std::option::Option<std::string::String>,
     /// <p>The value in a key-value pair. For example, in the tag <code>Department: Accounting</code>, <code>Accounting</code> is the value.</p>
+    #[doc(hidden)]
     pub condition_value: std::option::Option<std::string::String>,
 }
 impl ConditionParameter {
@@ -5612,11 +5763,10 @@ impl std::fmt::Debug for ConditionParameter {
         formatter.finish()
     }
 }
-/// See [`ConditionParameter`](crate::model::ConditionParameter)
+/// See [`ConditionParameter`](crate::model::ConditionParameter).
 pub mod condition_parameter {
 
-    /// A builder for [`ConditionParameter`](crate::model::ConditionParameter)
-    #[non_exhaustive]
+    /// A builder for [`ConditionParameter`](crate::model::ConditionParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) condition_key: std::option::Option<std::string::String>,
@@ -5649,7 +5799,7 @@ pub mod condition_parameter {
             self.condition_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConditionParameter`](crate::model::ConditionParameter)
+        /// Consumes the builder and constructs a [`ConditionParameter`](crate::model::ConditionParameter).
         pub fn build(self) -> crate::model::ConditionParameter {
             crate::model::ConditionParameter {
                 condition_key: self.condition_key,
@@ -5659,7 +5809,7 @@ pub mod condition_parameter {
     }
 }
 impl ConditionParameter {
-    /// Creates a new builder-style object to manufacture [`ConditionParameter`](crate::model::ConditionParameter)
+    /// Creates a new builder-style object to manufacture [`ConditionParameter`](crate::model::ConditionParameter).
     pub fn builder() -> crate::model::condition_parameter::Builder {
         crate::model::condition_parameter::Builder::default()
     }
@@ -5670,10 +5820,13 @@ impl ConditionParameter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Condition {
     /// <p>An operation applied to a key-value pair used to assign resources to your backup plan. Condition only supports <code>StringEquals</code>. For more flexible assignment options, including <code>StringLike</code> and the ability to exclude resources from your backup plan, use <code>Conditions</code> (with an "s" on the end) for your <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_BackupSelection.html"> <code>BackupSelection</code> </a>.</p>
+    #[doc(hidden)]
     pub condition_type: std::option::Option<crate::model::ConditionType>,
     /// <p>The key in a key-value pair. For example, in the tag <code>Department: Accounting</code>, <code>Department</code> is the key.</p>
+    #[doc(hidden)]
     pub condition_key: std::option::Option<std::string::String>,
     /// <p>The value in a key-value pair. For example, in the tag <code>Department: Accounting</code>, <code>Accounting</code> is the value.</p>
+    #[doc(hidden)]
     pub condition_value: std::option::Option<std::string::String>,
 }
 impl Condition {
@@ -5699,11 +5852,10 @@ impl std::fmt::Debug for Condition {
         formatter.finish()
     }
 }
-/// See [`Condition`](crate::model::Condition)
+/// See [`Condition`](crate::model::Condition).
 pub mod condition {
 
-    /// A builder for [`Condition`](crate::model::Condition)
-    #[non_exhaustive]
+    /// A builder for [`Condition`](crate::model::Condition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) condition_type: std::option::Option<crate::model::ConditionType>,
@@ -5750,7 +5902,7 @@ pub mod condition {
             self.condition_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Condition`](crate::model::Condition)
+        /// Consumes the builder and constructs a [`Condition`](crate::model::Condition).
         pub fn build(self) -> crate::model::Condition {
             crate::model::Condition {
                 condition_type: self.condition_type,
@@ -5761,7 +5913,7 @@ pub mod condition {
     }
 }
 impl Condition {
-    /// Creates a new builder-style object to manufacture [`Condition`](crate::model::Condition)
+    /// Creates a new builder-style object to manufacture [`Condition`](crate::model::Condition).
     pub fn builder() -> crate::model::condition::Builder {
         crate::model::condition::Builder::default()
     }
@@ -5823,10 +5975,13 @@ impl AsRef<str> for ConditionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackupPlan {
     /// <p>The display name of a backup plan. Must contain 1 to 50 alphanumeric or '-_.' characters.</p>
+    #[doc(hidden)]
     pub backup_plan_name: std::option::Option<std::string::String>,
     /// <p>An array of <code>BackupRule</code> objects, each of which specifies a scheduled task that is used to back up a selection of resources. </p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::BackupRule>>,
     /// <p>Contains a list of <code>BackupOptions</code> for each resource type.</p>
+    #[doc(hidden)]
     pub advanced_backup_settings:
         std::option::Option<std::vec::Vec<crate::model::AdvancedBackupSetting>>,
 }
@@ -5855,11 +6010,10 @@ impl std::fmt::Debug for BackupPlan {
         formatter.finish()
     }
 }
-/// See [`BackupPlan`](crate::model::BackupPlan)
+/// See [`BackupPlan`](crate::model::BackupPlan).
 pub mod backup_plan {
 
-    /// A builder for [`BackupPlan`](crate::model::BackupPlan)
-    #[non_exhaustive]
+    /// A builder for [`BackupPlan`](crate::model::BackupPlan).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_plan_name: std::option::Option<std::string::String>,
@@ -5922,7 +6076,7 @@ pub mod backup_plan {
             self.advanced_backup_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackupPlan`](crate::model::BackupPlan)
+        /// Consumes the builder and constructs a [`BackupPlan`](crate::model::BackupPlan).
         pub fn build(self) -> crate::model::BackupPlan {
             crate::model::BackupPlan {
                 backup_plan_name: self.backup_plan_name,
@@ -5933,7 +6087,7 @@ pub mod backup_plan {
     }
 }
 impl BackupPlan {
-    /// Creates a new builder-style object to manufacture [`BackupPlan`](crate::model::BackupPlan)
+    /// Creates a new builder-style object to manufacture [`BackupPlan`](crate::model::BackupPlan).
     pub fn builder() -> crate::model::backup_plan::Builder {
         crate::model::backup_plan::Builder::default()
     }
@@ -5944,27 +6098,37 @@ impl BackupPlan {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackupRule {
     /// <p>A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.</p>
+    #[doc(hidden)]
     pub rule_name: std::option::Option<std::string::String>,
     /// <p>The name of a logical container where backups are stored. Backup vaults are identified by names that are unique to the account used to create them and the Amazon Web Services Region where they are created. They consist of lowercase letters, numbers, and hyphens.</p>
+    #[doc(hidden)]
     pub target_backup_vault_name: std::option::Option<std::string::String>,
     /// <p>A cron expression in UTC specifying when Backup initiates a backup job. For more information about Amazon Web Services cron expressions, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">Schedule Expressions for Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Two examples of Amazon Web Services cron expressions are <code> 15 * ? * * *</code> (take a backup every hour at 15 minutes past the hour) and <code>0 12 * * ? *</code> (take a backup every day at 12 noon UTC). For a table of examples, click the preceding link and scroll down the page.</p>
+    #[doc(hidden)]
     pub schedule_expression: std::option::Option<std::string::String>,
     /// <p>A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start successfully. This value is optional.</p>
+    #[doc(hidden)]
     pub start_window_minutes: std::option::Option<i64>,
     /// <p>A value in minutes after a backup job is successfully started before it must be completed or it will be canceled by Backup. This value is optional.</p>
+    #[doc(hidden)]
     pub completion_window_minutes: std::option::Option<i64>,
     /// <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
     /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold. </p>
-    /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+    /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::Lifecycle>,
     /// <p>An array of key-value pair strings that are assigned to resources that are associated with this rule when restored from backup.</p>
+    #[doc(hidden)]
     pub recovery_point_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Uniquely identifies a rule that is used to schedule the backup of a selection of resources.</p>
+    #[doc(hidden)]
     pub rule_id: std::option::Option<std::string::String>,
     /// <p>An array of <code>CopyAction</code> objects, which contains the details of the copy operation.</p>
+    #[doc(hidden)]
     pub copy_actions: std::option::Option<std::vec::Vec<crate::model::CopyAction>>,
     /// <p>Specifies whether Backup creates continuous backups. True causes Backup to create continuous backups capable of point-in-time restore (PITR). False (or not specified) causes Backup to create snapshot backups.</p>
+    #[doc(hidden)]
     pub enable_continuous_backup: std::option::Option<bool>,
 }
 impl BackupRule {
@@ -5990,7 +6154,7 @@ impl BackupRule {
     }
     /// <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
     /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold. </p>
-    /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+    /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
     pub fn lifecycle(&self) -> std::option::Option<&crate::model::Lifecycle> {
         self.lifecycle.as_ref()
     }
@@ -6030,11 +6194,10 @@ impl std::fmt::Debug for BackupRule {
         formatter.finish()
     }
 }
-/// See [`BackupRule`](crate::model::BackupRule)
+/// See [`BackupRule`](crate::model::BackupRule).
 pub mod backup_rule {
 
-    /// A builder for [`BackupRule`](crate::model::BackupRule)
-    #[non_exhaustive]
+    /// A builder for [`BackupRule`](crate::model::BackupRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_name: std::option::Option<std::string::String>,
@@ -6109,14 +6272,14 @@ pub mod backup_rule {
         }
         /// <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
         /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold. </p>
-        /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+        /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
         pub fn lifecycle(mut self, input: crate::model::Lifecycle) -> Self {
             self.lifecycle = Some(input);
             self
         }
         /// <p>The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
         /// <p>Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold. </p>
-        /// <p>Only resource types that support full Backup management can transition their backups to cold storage. Those resource types are listed in the "Full Backup management" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
+        /// <p>Resource types that are able to be transitioned to cold storage are listed in the "Lifecycle to cold storage" section of the <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature availability by resource</a> table. Backup ignores this expression for other resource types.</p>
         pub fn set_lifecycle(
             mut self,
             input: std::option::Option<crate::model::Lifecycle>,
@@ -6188,7 +6351,7 @@ pub mod backup_rule {
             self.enable_continuous_backup = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackupRule`](crate::model::BackupRule)
+        /// Consumes the builder and constructs a [`BackupRule`](crate::model::BackupRule).
         pub fn build(self) -> crate::model::BackupRule {
             crate::model::BackupRule {
                 rule_name: self.rule_name,
@@ -6206,7 +6369,7 @@ pub mod backup_rule {
     }
 }
 impl BackupRule {
-    /// Creates a new builder-style object to manufacture [`BackupRule`](crate::model::BackupRule)
+    /// Creates a new builder-style object to manufacture [`BackupRule`](crate::model::BackupRule).
     pub fn builder() -> crate::model::backup_rule::Builder {
         crate::model::backup_rule::Builder::default()
     }

@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateVolumeOutput {
     /// <p>A description of the volume just updated. Returned after a successful <code>UpdateVolume</code> API operation.</p>
+    #[doc(hidden)]
     pub volume: std::option::Option<crate::model::Volume>,
 }
 impl UpdateVolumeOutput {
@@ -19,11 +20,10 @@ impl std::fmt::Debug for UpdateVolumeOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateVolumeOutput`](crate::output::UpdateVolumeOutput)
+/// See [`UpdateVolumeOutput`](crate::output::UpdateVolumeOutput).
 pub mod update_volume_output {
 
-    /// A builder for [`UpdateVolumeOutput`](crate::output::UpdateVolumeOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateVolumeOutput`](crate::output::UpdateVolumeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume: std::option::Option<crate::model::Volume>,
@@ -39,7 +39,7 @@ pub mod update_volume_output {
             self.volume = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateVolumeOutput`](crate::output::UpdateVolumeOutput)
+        /// Consumes the builder and constructs a [`UpdateVolumeOutput`](crate::output::UpdateVolumeOutput).
         pub fn build(self) -> crate::output::UpdateVolumeOutput {
             crate::output::UpdateVolumeOutput {
                 volume: self.volume,
@@ -48,7 +48,7 @@ pub mod update_volume_output {
     }
 }
 impl UpdateVolumeOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateVolumeOutput`](crate::output::UpdateVolumeOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateVolumeOutput`](crate::output::UpdateVolumeOutput).
     pub fn builder() -> crate::output::update_volume_output::Builder {
         crate::output::update_volume_output::Builder::default()
     }
@@ -59,6 +59,7 @@ impl UpdateVolumeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateStorageVirtualMachineOutput {
     /// <p>Describes the Amazon FSx for NetApp ONTAP storage virtual machine (SVM) configuration.</p>
+    #[doc(hidden)]
     pub storage_virtual_machine: std::option::Option<crate::model::StorageVirtualMachine>,
 }
 impl UpdateStorageVirtualMachineOutput {
@@ -76,11 +77,10 @@ impl std::fmt::Debug for UpdateStorageVirtualMachineOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateStorageVirtualMachineOutput`](crate::output::UpdateStorageVirtualMachineOutput)
+/// See [`UpdateStorageVirtualMachineOutput`](crate::output::UpdateStorageVirtualMachineOutput).
 pub mod update_storage_virtual_machine_output {
 
-    /// A builder for [`UpdateStorageVirtualMachineOutput`](crate::output::UpdateStorageVirtualMachineOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateStorageVirtualMachineOutput`](crate::output::UpdateStorageVirtualMachineOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_virtual_machine:
@@ -103,7 +103,7 @@ pub mod update_storage_virtual_machine_output {
             self.storage_virtual_machine = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateStorageVirtualMachineOutput`](crate::output::UpdateStorageVirtualMachineOutput)
+        /// Consumes the builder and constructs a [`UpdateStorageVirtualMachineOutput`](crate::output::UpdateStorageVirtualMachineOutput).
         pub fn build(self) -> crate::output::UpdateStorageVirtualMachineOutput {
             crate::output::UpdateStorageVirtualMachineOutput {
                 storage_virtual_machine: self.storage_virtual_machine,
@@ -112,7 +112,7 @@ pub mod update_storage_virtual_machine_output {
     }
 }
 impl UpdateStorageVirtualMachineOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateStorageVirtualMachineOutput`](crate::output::UpdateStorageVirtualMachineOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateStorageVirtualMachineOutput`](crate::output::UpdateStorageVirtualMachineOutput).
     pub fn builder() -> crate::output::update_storage_virtual_machine_output::Builder {
         crate::output::update_storage_virtual_machine_output::Builder::default()
     }
@@ -123,6 +123,7 @@ impl UpdateStorageVirtualMachineOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSnapshotOutput {
     /// <p>Returned after a successful <code>UpdateSnapshot</code> operation, describing the snapshot that you updated.</p>
+    #[doc(hidden)]
     pub snapshot: std::option::Option<crate::model::Snapshot>,
 }
 impl UpdateSnapshotOutput {
@@ -138,11 +139,10 @@ impl std::fmt::Debug for UpdateSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSnapshotOutput`](crate::output::UpdateSnapshotOutput)
+/// See [`UpdateSnapshotOutput`](crate::output::UpdateSnapshotOutput).
 pub mod update_snapshot_output {
 
-    /// A builder for [`UpdateSnapshotOutput`](crate::output::UpdateSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSnapshotOutput`](crate::output::UpdateSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshot: std::option::Option<crate::model::Snapshot>,
@@ -158,7 +158,7 @@ pub mod update_snapshot_output {
             self.snapshot = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSnapshotOutput`](crate::output::UpdateSnapshotOutput)
+        /// Consumes the builder and constructs a [`UpdateSnapshotOutput`](crate::output::UpdateSnapshotOutput).
         pub fn build(self) -> crate::output::UpdateSnapshotOutput {
             crate::output::UpdateSnapshotOutput {
                 snapshot: self.snapshot,
@@ -167,7 +167,7 @@ pub mod update_snapshot_output {
     }
 }
 impl UpdateSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSnapshotOutput`](crate::output::UpdateSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSnapshotOutput`](crate::output::UpdateSnapshotOutput).
     pub fn builder() -> crate::output::update_snapshot_output::Builder {
         crate::output::update_snapshot_output::Builder::default()
     }
@@ -178,6 +178,7 @@ impl UpdateSnapshotOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFileSystemOutput {
     /// <p>A description of the file system that was updated.</p>
+    #[doc(hidden)]
     pub file_system: std::option::Option<crate::model::FileSystem>,
 }
 impl UpdateFileSystemOutput {
@@ -193,11 +194,10 @@ impl std::fmt::Debug for UpdateFileSystemOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput)
+/// See [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput).
 pub mod update_file_system_output {
 
-    /// A builder for [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_system: std::option::Option<crate::model::FileSystem>,
@@ -216,7 +216,7 @@ pub mod update_file_system_output {
             self.file_system = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput)
+        /// Consumes the builder and constructs a [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput).
         pub fn build(self) -> crate::output::UpdateFileSystemOutput {
             crate::output::UpdateFileSystemOutput {
                 file_system: self.file_system,
@@ -225,7 +225,7 @@ pub mod update_file_system_output {
     }
 }
 impl UpdateFileSystemOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFileSystemOutput`](crate::output::UpdateFileSystemOutput).
     pub fn builder() -> crate::output::update_file_system_output::Builder {
         crate::output::update_file_system_output::Builder::default()
     }
@@ -236,6 +236,7 @@ impl UpdateFileSystemOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDataRepositoryAssociationOutput {
     /// <p>The response object returned after the data repository association is updated.</p>
+    #[doc(hidden)]
     pub association: std::option::Option<crate::model::DataRepositoryAssociation>,
 }
 impl UpdateDataRepositoryAssociationOutput {
@@ -251,11 +252,10 @@ impl std::fmt::Debug for UpdateDataRepositoryAssociationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDataRepositoryAssociationOutput`](crate::output::UpdateDataRepositoryAssociationOutput)
+/// See [`UpdateDataRepositoryAssociationOutput`](crate::output::UpdateDataRepositoryAssociationOutput).
 pub mod update_data_repository_association_output {
 
-    /// A builder for [`UpdateDataRepositoryAssociationOutput`](crate::output::UpdateDataRepositoryAssociationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateDataRepositoryAssociationOutput`](crate::output::UpdateDataRepositoryAssociationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) association: std::option::Option<crate::model::DataRepositoryAssociation>,
@@ -274,7 +274,7 @@ pub mod update_data_repository_association_output {
             self.association = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateDataRepositoryAssociationOutput`](crate::output::UpdateDataRepositoryAssociationOutput)
+        /// Consumes the builder and constructs a [`UpdateDataRepositoryAssociationOutput`](crate::output::UpdateDataRepositoryAssociationOutput).
         pub fn build(self) -> crate::output::UpdateDataRepositoryAssociationOutput {
             crate::output::UpdateDataRepositoryAssociationOutput {
                 association: self.association,
@@ -283,7 +283,7 @@ pub mod update_data_repository_association_output {
     }
 }
 impl UpdateDataRepositoryAssociationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDataRepositoryAssociationOutput`](crate::output::UpdateDataRepositoryAssociationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDataRepositoryAssociationOutput`](crate::output::UpdateDataRepositoryAssociationOutput).
     pub fn builder() -> crate::output::update_data_repository_association_output::Builder {
         crate::output::update_data_repository_association_output::Builder::default()
     }
@@ -299,22 +299,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -330,22 +329,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -356,8 +354,10 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RestoreVolumeFromSnapshotOutput {
     /// <p>The ID of the volume that you restored.</p>
+    #[doc(hidden)]
     pub volume_id: std::option::Option<std::string::String>,
     /// <p>The lifecycle state of the volume being restored.</p>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::VolumeLifecycle>,
 }
 impl RestoreVolumeFromSnapshotOutput {
@@ -378,11 +378,10 @@ impl std::fmt::Debug for RestoreVolumeFromSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`RestoreVolumeFromSnapshotOutput`](crate::output::RestoreVolumeFromSnapshotOutput)
+/// See [`RestoreVolumeFromSnapshotOutput`](crate::output::RestoreVolumeFromSnapshotOutput).
 pub mod restore_volume_from_snapshot_output {
 
-    /// A builder for [`RestoreVolumeFromSnapshotOutput`](crate::output::RestoreVolumeFromSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`RestoreVolumeFromSnapshotOutput`](crate::output::RestoreVolumeFromSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_id: std::option::Option<std::string::String>,
@@ -412,7 +411,7 @@ pub mod restore_volume_from_snapshot_output {
             self.lifecycle = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreVolumeFromSnapshotOutput`](crate::output::RestoreVolumeFromSnapshotOutput)
+        /// Consumes the builder and constructs a [`RestoreVolumeFromSnapshotOutput`](crate::output::RestoreVolumeFromSnapshotOutput).
         pub fn build(self) -> crate::output::RestoreVolumeFromSnapshotOutput {
             crate::output::RestoreVolumeFromSnapshotOutput {
                 volume_id: self.volume_id,
@@ -422,7 +421,7 @@ pub mod restore_volume_from_snapshot_output {
     }
 }
 impl RestoreVolumeFromSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`RestoreVolumeFromSnapshotOutput`](crate::output::RestoreVolumeFromSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`RestoreVolumeFromSnapshotOutput`](crate::output::RestoreVolumeFromSnapshotOutput).
     pub fn builder() -> crate::output::restore_volume_from_snapshot_output::Builder {
         crate::output::restore_volume_from_snapshot_output::Builder::default()
     }
@@ -433,6 +432,7 @@ impl RestoreVolumeFromSnapshotOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReleaseFileSystemNfsV3LocksOutput {
     /// <p>A description of a specific Amazon FSx file system.</p>
+    #[doc(hidden)]
     pub file_system: std::option::Option<crate::model::FileSystem>,
 }
 impl ReleaseFileSystemNfsV3LocksOutput {
@@ -448,11 +448,10 @@ impl std::fmt::Debug for ReleaseFileSystemNfsV3LocksOutput {
         formatter.finish()
     }
 }
-/// See [`ReleaseFileSystemNfsV3LocksOutput`](crate::output::ReleaseFileSystemNfsV3LocksOutput)
+/// See [`ReleaseFileSystemNfsV3LocksOutput`](crate::output::ReleaseFileSystemNfsV3LocksOutput).
 pub mod release_file_system_nfs_v3_locks_output {
 
-    /// A builder for [`ReleaseFileSystemNfsV3LocksOutput`](crate::output::ReleaseFileSystemNfsV3LocksOutput)
-    #[non_exhaustive]
+    /// A builder for [`ReleaseFileSystemNfsV3LocksOutput`](crate::output::ReleaseFileSystemNfsV3LocksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_system: std::option::Option<crate::model::FileSystem>,
@@ -471,7 +470,7 @@ pub mod release_file_system_nfs_v3_locks_output {
             self.file_system = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReleaseFileSystemNfsV3LocksOutput`](crate::output::ReleaseFileSystemNfsV3LocksOutput)
+        /// Consumes the builder and constructs a [`ReleaseFileSystemNfsV3LocksOutput`](crate::output::ReleaseFileSystemNfsV3LocksOutput).
         pub fn build(self) -> crate::output::ReleaseFileSystemNfsV3LocksOutput {
             crate::output::ReleaseFileSystemNfsV3LocksOutput {
                 file_system: self.file_system,
@@ -480,7 +479,7 @@ pub mod release_file_system_nfs_v3_locks_output {
     }
 }
 impl ReleaseFileSystemNfsV3LocksOutput {
-    /// Creates a new builder-style object to manufacture [`ReleaseFileSystemNfsV3LocksOutput`](crate::output::ReleaseFileSystemNfsV3LocksOutput)
+    /// Creates a new builder-style object to manufacture [`ReleaseFileSystemNfsV3LocksOutput`](crate::output::ReleaseFileSystemNfsV3LocksOutput).
     pub fn builder() -> crate::output::release_file_system_nfs_v3_locks_output::Builder {
         crate::output::release_file_system_nfs_v3_locks_output::Builder::default()
     }
@@ -491,8 +490,10 @@ impl ReleaseFileSystemNfsV3LocksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>A list of tags on the resource.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>This is present if there are more tags than returned in the response (String). You can use the <code>NextToken</code> value in the later request to fetch the tags. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListTagsForResourceOutput {
@@ -513,11 +514,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -553,7 +553,7 @@ pub mod list_tags_for_resource_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 tags: self.tags,
@@ -563,7 +563,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -574,6 +574,7 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisassociateFileSystemAliasesOutput {
     /// <p>An array of one or more DNS aliases that Amazon FSx is attempting to disassociate from the file system.</p>
+    #[doc(hidden)]
     pub aliases: std::option::Option<std::vec::Vec<crate::model::Alias>>,
 }
 impl DisassociateFileSystemAliasesOutput {
@@ -589,11 +590,10 @@ impl std::fmt::Debug for DisassociateFileSystemAliasesOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateFileSystemAliasesOutput`](crate::output::DisassociateFileSystemAliasesOutput)
+/// See [`DisassociateFileSystemAliasesOutput`](crate::output::DisassociateFileSystemAliasesOutput).
 pub mod disassociate_file_system_aliases_output {
 
-    /// A builder for [`DisassociateFileSystemAliasesOutput`](crate::output::DisassociateFileSystemAliasesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateFileSystemAliasesOutput`](crate::output::DisassociateFileSystemAliasesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aliases: std::option::Option<std::vec::Vec<crate::model::Alias>>,
@@ -618,7 +618,7 @@ pub mod disassociate_file_system_aliases_output {
             self.aliases = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociateFileSystemAliasesOutput`](crate::output::DisassociateFileSystemAliasesOutput)
+        /// Consumes the builder and constructs a [`DisassociateFileSystemAliasesOutput`](crate::output::DisassociateFileSystemAliasesOutput).
         pub fn build(self) -> crate::output::DisassociateFileSystemAliasesOutput {
             crate::output::DisassociateFileSystemAliasesOutput {
                 aliases: self.aliases,
@@ -627,7 +627,7 @@ pub mod disassociate_file_system_aliases_output {
     }
 }
 impl DisassociateFileSystemAliasesOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateFileSystemAliasesOutput`](crate::output::DisassociateFileSystemAliasesOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateFileSystemAliasesOutput`](crate::output::DisassociateFileSystemAliasesOutput).
     pub fn builder() -> crate::output::disassociate_file_system_aliases_output::Builder {
         crate::output::disassociate_file_system_aliases_output::Builder::default()
     }
@@ -638,8 +638,10 @@ impl DisassociateFileSystemAliasesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeVolumesOutput {
     /// <p>Returned after a successful <code>DescribeVolumes</code> operation, describing each volume.</p>
+    #[doc(hidden)]
     pub volumes: std::option::Option<std::vec::Vec<crate::model::Volume>>,
     /// <p>(Optional) Opaque pagination token returned from a previous operation (String). If present, this token indicates from what point you can continue processing the request, where the previous <code>NextToken</code> value left off.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeVolumesOutput {
@@ -660,11 +662,10 @@ impl std::fmt::Debug for DescribeVolumesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeVolumesOutput`](crate::output::DescribeVolumesOutput)
+/// See [`DescribeVolumesOutput`](crate::output::DescribeVolumesOutput).
 pub mod describe_volumes_output {
 
-    /// A builder for [`DescribeVolumesOutput`](crate::output::DescribeVolumesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeVolumesOutput`](crate::output::DescribeVolumesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volumes: std::option::Option<std::vec::Vec<crate::model::Volume>>,
@@ -700,7 +701,7 @@ pub mod describe_volumes_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeVolumesOutput`](crate::output::DescribeVolumesOutput)
+        /// Consumes the builder and constructs a [`DescribeVolumesOutput`](crate::output::DescribeVolumesOutput).
         pub fn build(self) -> crate::output::DescribeVolumesOutput {
             crate::output::DescribeVolumesOutput {
                 volumes: self.volumes,
@@ -710,7 +711,7 @@ pub mod describe_volumes_output {
     }
 }
 impl DescribeVolumesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeVolumesOutput`](crate::output::DescribeVolumesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeVolumesOutput`](crate::output::DescribeVolumesOutput).
     pub fn builder() -> crate::output::describe_volumes_output::Builder {
         crate::output::describe_volumes_output::Builder::default()
     }
@@ -721,9 +722,11 @@ impl DescribeVolumesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeStorageVirtualMachinesOutput {
     /// <p>Returned after a successful <code>DescribeStorageVirtualMachines</code> operation, describing each SVM.</p>
+    #[doc(hidden)]
     pub storage_virtual_machines:
         std::option::Option<std::vec::Vec<crate::model::StorageVirtualMachine>>,
     /// <p>(Optional) Opaque pagination token returned from a previous operation (String). If present, this token indicates from what point you can continue processing the request, where the previous <code>NextToken</code> value left off.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeStorageVirtualMachinesOutput {
@@ -746,11 +749,10 @@ impl std::fmt::Debug for DescribeStorageVirtualMachinesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeStorageVirtualMachinesOutput`](crate::output::DescribeStorageVirtualMachinesOutput)
+/// See [`DescribeStorageVirtualMachinesOutput`](crate::output::DescribeStorageVirtualMachinesOutput).
 pub mod describe_storage_virtual_machines_output {
 
-    /// A builder for [`DescribeStorageVirtualMachinesOutput`](crate::output::DescribeStorageVirtualMachinesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeStorageVirtualMachinesOutput`](crate::output::DescribeStorageVirtualMachinesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_virtual_machines:
@@ -790,7 +792,7 @@ pub mod describe_storage_virtual_machines_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeStorageVirtualMachinesOutput`](crate::output::DescribeStorageVirtualMachinesOutput)
+        /// Consumes the builder and constructs a [`DescribeStorageVirtualMachinesOutput`](crate::output::DescribeStorageVirtualMachinesOutput).
         pub fn build(self) -> crate::output::DescribeStorageVirtualMachinesOutput {
             crate::output::DescribeStorageVirtualMachinesOutput {
                 storage_virtual_machines: self.storage_virtual_machines,
@@ -800,7 +802,7 @@ pub mod describe_storage_virtual_machines_output {
     }
 }
 impl DescribeStorageVirtualMachinesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeStorageVirtualMachinesOutput`](crate::output::DescribeStorageVirtualMachinesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeStorageVirtualMachinesOutput`](crate::output::DescribeStorageVirtualMachinesOutput).
     pub fn builder() -> crate::output::describe_storage_virtual_machines_output::Builder {
         crate::output::describe_storage_virtual_machines_output::Builder::default()
     }
@@ -811,8 +813,10 @@ impl DescribeStorageVirtualMachinesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSnapshotsOutput {
     /// <p>An array of snapshots.</p>
+    #[doc(hidden)]
     pub snapshots: std::option::Option<std::vec::Vec<crate::model::Snapshot>>,
     /// <p>(Optional) Opaque pagination token returned from a previous operation (String). If present, this token indicates from what point you can continue processing the request, where the previous <code>NextToken</code> value left off.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeSnapshotsOutput {
@@ -833,11 +837,10 @@ impl std::fmt::Debug for DescribeSnapshotsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeSnapshotsOutput`](crate::output::DescribeSnapshotsOutput)
+/// See [`DescribeSnapshotsOutput`](crate::output::DescribeSnapshotsOutput).
 pub mod describe_snapshots_output {
 
-    /// A builder for [`DescribeSnapshotsOutput`](crate::output::DescribeSnapshotsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSnapshotsOutput`](crate::output::DescribeSnapshotsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshots: std::option::Option<std::vec::Vec<crate::model::Snapshot>>,
@@ -873,7 +876,7 @@ pub mod describe_snapshots_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSnapshotsOutput`](crate::output::DescribeSnapshotsOutput)
+        /// Consumes the builder and constructs a [`DescribeSnapshotsOutput`](crate::output::DescribeSnapshotsOutput).
         pub fn build(self) -> crate::output::DescribeSnapshotsOutput {
             crate::output::DescribeSnapshotsOutput {
                 snapshots: self.snapshots,
@@ -883,7 +886,7 @@ pub mod describe_snapshots_output {
     }
 }
 impl DescribeSnapshotsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeSnapshotsOutput`](crate::output::DescribeSnapshotsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeSnapshotsOutput`](crate::output::DescribeSnapshotsOutput).
     pub fn builder() -> crate::output::describe_snapshots_output::Builder {
         crate::output::describe_snapshots_output::Builder::default()
     }
@@ -894,8 +897,10 @@ impl DescribeSnapshotsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeFileSystemsOutput {
     /// <p>An array of file system descriptions.</p>
+    #[doc(hidden)]
     pub file_systems: std::option::Option<std::vec::Vec<crate::model::FileSystem>>,
     /// <p>Present if there are more file systems than returned in the response (String). You can use the <code>NextToken</code> value in the later request to fetch the descriptions. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeFileSystemsOutput {
@@ -916,11 +921,10 @@ impl std::fmt::Debug for DescribeFileSystemsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput)
+/// See [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput).
 pub mod describe_file_systems_output {
 
-    /// A builder for [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_systems: std::option::Option<std::vec::Vec<crate::model::FileSystem>>,
@@ -956,7 +960,7 @@ pub mod describe_file_systems_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput)
+        /// Consumes the builder and constructs a [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput).
         pub fn build(self) -> crate::output::DescribeFileSystemsOutput {
             crate::output::DescribeFileSystemsOutput {
                 file_systems: self.file_systems,
@@ -966,7 +970,7 @@ pub mod describe_file_systems_output {
     }
 }
 impl DescribeFileSystemsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFileSystemsOutput`](crate::output::DescribeFileSystemsOutput).
     pub fn builder() -> crate::output::describe_file_systems_output::Builder {
         crate::output::describe_file_systems_output::Builder::default()
     }
@@ -977,8 +981,10 @@ impl DescribeFileSystemsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeFileSystemAliasesOutput {
     /// <p>An array of one or more DNS aliases currently associated with the specified file system.</p>
+    #[doc(hidden)]
     pub aliases: std::option::Option<std::vec::Vec<crate::model::Alias>>,
     /// <p>Present if there are more DNS aliases than returned in the response (String). You can use the <code>NextToken</code> value in a later request to fetch additional descriptions. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeFileSystemAliasesOutput {
@@ -999,11 +1005,10 @@ impl std::fmt::Debug for DescribeFileSystemAliasesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFileSystemAliasesOutput`](crate::output::DescribeFileSystemAliasesOutput)
+/// See [`DescribeFileSystemAliasesOutput`](crate::output::DescribeFileSystemAliasesOutput).
 pub mod describe_file_system_aliases_output {
 
-    /// A builder for [`DescribeFileSystemAliasesOutput`](crate::output::DescribeFileSystemAliasesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeFileSystemAliasesOutput`](crate::output::DescribeFileSystemAliasesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aliases: std::option::Option<std::vec::Vec<crate::model::Alias>>,
@@ -1039,7 +1044,7 @@ pub mod describe_file_system_aliases_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFileSystemAliasesOutput`](crate::output::DescribeFileSystemAliasesOutput)
+        /// Consumes the builder and constructs a [`DescribeFileSystemAliasesOutput`](crate::output::DescribeFileSystemAliasesOutput).
         pub fn build(self) -> crate::output::DescribeFileSystemAliasesOutput {
             crate::output::DescribeFileSystemAliasesOutput {
                 aliases: self.aliases,
@@ -1049,7 +1054,7 @@ pub mod describe_file_system_aliases_output {
     }
 }
 impl DescribeFileSystemAliasesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFileSystemAliasesOutput`](crate::output::DescribeFileSystemAliasesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFileSystemAliasesOutput`](crate::output::DescribeFileSystemAliasesOutput).
     pub fn builder() -> crate::output::describe_file_system_aliases_output::Builder {
         crate::output::describe_file_system_aliases_output::Builder::default()
     }
@@ -1060,8 +1065,10 @@ impl DescribeFileSystemAliasesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDataRepositoryTasksOutput {
     /// <p>The collection of data repository task descriptions returned.</p>
+    #[doc(hidden)]
     pub data_repository_tasks: std::option::Option<std::vec::Vec<crate::model::DataRepositoryTask>>,
     /// <p>(Optional) Opaque pagination token returned from a previous operation (String). If present, this token indicates from what point you can continue processing the request, where the previous <code>NextToken</code> value left off.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeDataRepositoryTasksOutput {
@@ -1084,11 +1091,10 @@ impl std::fmt::Debug for DescribeDataRepositoryTasksOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDataRepositoryTasksOutput`](crate::output::DescribeDataRepositoryTasksOutput)
+/// See [`DescribeDataRepositoryTasksOutput`](crate::output::DescribeDataRepositoryTasksOutput).
 pub mod describe_data_repository_tasks_output {
 
-    /// A builder for [`DescribeDataRepositoryTasksOutput`](crate::output::DescribeDataRepositoryTasksOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDataRepositoryTasksOutput`](crate::output::DescribeDataRepositoryTasksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_repository_tasks:
@@ -1125,7 +1131,7 @@ pub mod describe_data_repository_tasks_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDataRepositoryTasksOutput`](crate::output::DescribeDataRepositoryTasksOutput)
+        /// Consumes the builder and constructs a [`DescribeDataRepositoryTasksOutput`](crate::output::DescribeDataRepositoryTasksOutput).
         pub fn build(self) -> crate::output::DescribeDataRepositoryTasksOutput {
             crate::output::DescribeDataRepositoryTasksOutput {
                 data_repository_tasks: self.data_repository_tasks,
@@ -1135,7 +1141,7 @@ pub mod describe_data_repository_tasks_output {
     }
 }
 impl DescribeDataRepositoryTasksOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDataRepositoryTasksOutput`](crate::output::DescribeDataRepositoryTasksOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDataRepositoryTasksOutput`](crate::output::DescribeDataRepositoryTasksOutput).
     pub fn builder() -> crate::output::describe_data_repository_tasks_output::Builder {
         crate::output::describe_data_repository_tasks_output::Builder::default()
     }
@@ -1146,8 +1152,10 @@ impl DescribeDataRepositoryTasksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDataRepositoryAssociationsOutput {
     /// <p>An array of one ore more data repository association descriptions.</p>
+    #[doc(hidden)]
     pub associations: std::option::Option<std::vec::Vec<crate::model::DataRepositoryAssociation>>,
     /// <p>(Optional) Opaque pagination token returned from a previous operation (String). If present, this token indicates from what point you can continue processing the request, where the previous <code>NextToken</code> value left off.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeDataRepositoryAssociationsOutput {
@@ -1168,11 +1176,10 @@ impl std::fmt::Debug for DescribeDataRepositoryAssociationsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDataRepositoryAssociationsOutput`](crate::output::DescribeDataRepositoryAssociationsOutput)
+/// See [`DescribeDataRepositoryAssociationsOutput`](crate::output::DescribeDataRepositoryAssociationsOutput).
 pub mod describe_data_repository_associations_output {
 
-    /// A builder for [`DescribeDataRepositoryAssociationsOutput`](crate::output::DescribeDataRepositoryAssociationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDataRepositoryAssociationsOutput`](crate::output::DescribeDataRepositoryAssociationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) associations:
@@ -1209,7 +1216,7 @@ pub mod describe_data_repository_associations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDataRepositoryAssociationsOutput`](crate::output::DescribeDataRepositoryAssociationsOutput)
+        /// Consumes the builder and constructs a [`DescribeDataRepositoryAssociationsOutput`](crate::output::DescribeDataRepositoryAssociationsOutput).
         pub fn build(self) -> crate::output::DescribeDataRepositoryAssociationsOutput {
             crate::output::DescribeDataRepositoryAssociationsOutput {
                 associations: self.associations,
@@ -1219,7 +1226,7 @@ pub mod describe_data_repository_associations_output {
     }
 }
 impl DescribeDataRepositoryAssociationsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDataRepositoryAssociationsOutput`](crate::output::DescribeDataRepositoryAssociationsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDataRepositoryAssociationsOutput`](crate::output::DescribeDataRepositoryAssociationsOutput).
     pub fn builder() -> crate::output::describe_data_repository_associations_output::Builder {
         crate::output::describe_data_repository_associations_output::Builder::default()
     }
@@ -1230,8 +1237,10 @@ impl DescribeDataRepositoryAssociationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBackupsOutput {
     /// <p>An array of backups.</p>
+    #[doc(hidden)]
     pub backups: std::option::Option<std::vec::Vec<crate::model::Backup>>,
     /// <p>A <code>NextToken</code> value is present if there are more backups than returned in the response. You can use the <code>NextToken</code> value in the subsequent request to fetch the backups. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeBackupsOutput {
@@ -1252,11 +1261,10 @@ impl std::fmt::Debug for DescribeBackupsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeBackupsOutput`](crate::output::DescribeBackupsOutput)
+/// See [`DescribeBackupsOutput`](crate::output::DescribeBackupsOutput).
 pub mod describe_backups_output {
 
-    /// A builder for [`DescribeBackupsOutput`](crate::output::DescribeBackupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeBackupsOutput`](crate::output::DescribeBackupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backups: std::option::Option<std::vec::Vec<crate::model::Backup>>,
@@ -1292,7 +1300,7 @@ pub mod describe_backups_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeBackupsOutput`](crate::output::DescribeBackupsOutput)
+        /// Consumes the builder and constructs a [`DescribeBackupsOutput`](crate::output::DescribeBackupsOutput).
         pub fn build(self) -> crate::output::DescribeBackupsOutput {
             crate::output::DescribeBackupsOutput {
                 backups: self.backups,
@@ -1302,7 +1310,7 @@ pub mod describe_backups_output {
     }
 }
 impl DescribeBackupsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeBackupsOutput`](crate::output::DescribeBackupsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeBackupsOutput`](crate::output::DescribeBackupsOutput).
     pub fn builder() -> crate::output::describe_backups_output::Builder {
         crate::output::describe_backups_output::Builder::default()
     }
@@ -1313,10 +1321,13 @@ impl DescribeBackupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteVolumeOutput {
     /// <p>The ID of the volume that's being deleted.</p>
+    #[doc(hidden)]
     pub volume_id: std::option::Option<std::string::String>,
     /// <p>The lifecycle state of the volume being deleted. If the <code>DeleteVolume</code> operation is successful, this value is <code>DELETING</code>.</p>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::VolumeLifecycle>,
     /// <p>Returned after a <code>DeleteVolume</code> request, showing the status of the delete request.</p>
+    #[doc(hidden)]
     pub ontap_response: std::option::Option<crate::model::DeleteVolumeOntapResponse>,
 }
 impl DeleteVolumeOutput {
@@ -1342,11 +1353,10 @@ impl std::fmt::Debug for DeleteVolumeOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput)
+/// See [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput).
 pub mod delete_volume_output {
 
-    /// A builder for [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_id: std::option::Option<std::string::String>,
@@ -1390,7 +1400,7 @@ pub mod delete_volume_output {
             self.ontap_response = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput)
+        /// Consumes the builder and constructs a [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput).
         pub fn build(self) -> crate::output::DeleteVolumeOutput {
             crate::output::DeleteVolumeOutput {
                 volume_id: self.volume_id,
@@ -1401,7 +1411,7 @@ pub mod delete_volume_output {
     }
 }
 impl DeleteVolumeOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput).
     pub fn builder() -> crate::output::delete_volume_output::Builder {
         crate::output::delete_volume_output::Builder::default()
     }
@@ -1412,8 +1422,10 @@ impl DeleteVolumeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteStorageVirtualMachineOutput {
     /// <p>The ID of the SVM Amazon FSx is deleting.</p>
+    #[doc(hidden)]
     pub storage_virtual_machine_id: std::option::Option<std::string::String>,
     /// <p>Describes the lifecycle state of the SVM being deleted.</p>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::StorageVirtualMachineLifecycle>,
 }
 impl DeleteStorageVirtualMachineOutput {
@@ -1437,11 +1449,10 @@ impl std::fmt::Debug for DeleteStorageVirtualMachineOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteStorageVirtualMachineOutput`](crate::output::DeleteStorageVirtualMachineOutput)
+/// See [`DeleteStorageVirtualMachineOutput`](crate::output::DeleteStorageVirtualMachineOutput).
 pub mod delete_storage_virtual_machine_output {
 
-    /// A builder for [`DeleteStorageVirtualMachineOutput`](crate::output::DeleteStorageVirtualMachineOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteStorageVirtualMachineOutput`](crate::output::DeleteStorageVirtualMachineOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_virtual_machine_id: std::option::Option<std::string::String>,
@@ -1474,7 +1485,7 @@ pub mod delete_storage_virtual_machine_output {
             self.lifecycle = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteStorageVirtualMachineOutput`](crate::output::DeleteStorageVirtualMachineOutput)
+        /// Consumes the builder and constructs a [`DeleteStorageVirtualMachineOutput`](crate::output::DeleteStorageVirtualMachineOutput).
         pub fn build(self) -> crate::output::DeleteStorageVirtualMachineOutput {
             crate::output::DeleteStorageVirtualMachineOutput {
                 storage_virtual_machine_id: self.storage_virtual_machine_id,
@@ -1484,7 +1495,7 @@ pub mod delete_storage_virtual_machine_output {
     }
 }
 impl DeleteStorageVirtualMachineOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteStorageVirtualMachineOutput`](crate::output::DeleteStorageVirtualMachineOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteStorageVirtualMachineOutput`](crate::output::DeleteStorageVirtualMachineOutput).
     pub fn builder() -> crate::output::delete_storage_virtual_machine_output::Builder {
         crate::output::delete_storage_virtual_machine_output::Builder::default()
     }
@@ -1495,8 +1506,10 @@ impl DeleteStorageVirtualMachineOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteSnapshotOutput {
     /// <p>The ID of the deleted snapshot.</p>
+    #[doc(hidden)]
     pub snapshot_id: std::option::Option<std::string::String>,
     /// <p>The lifecycle status of the snapshot. If the <code>DeleteSnapshot</code> operation is successful, this status is <code>DELETING</code>.</p>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::SnapshotLifecycle>,
 }
 impl DeleteSnapshotOutput {
@@ -1517,11 +1530,10 @@ impl std::fmt::Debug for DeleteSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSnapshotOutput`](crate::output::DeleteSnapshotOutput)
+/// See [`DeleteSnapshotOutput`](crate::output::DeleteSnapshotOutput).
 pub mod delete_snapshot_output {
 
-    /// A builder for [`DeleteSnapshotOutput`](crate::output::DeleteSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSnapshotOutput`](crate::output::DeleteSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshot_id: std::option::Option<std::string::String>,
@@ -1551,7 +1563,7 @@ pub mod delete_snapshot_output {
             self.lifecycle = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteSnapshotOutput`](crate::output::DeleteSnapshotOutput)
+        /// Consumes the builder and constructs a [`DeleteSnapshotOutput`](crate::output::DeleteSnapshotOutput).
         pub fn build(self) -> crate::output::DeleteSnapshotOutput {
             crate::output::DeleteSnapshotOutput {
                 snapshot_id: self.snapshot_id,
@@ -1561,7 +1573,7 @@ pub mod delete_snapshot_output {
     }
 }
 impl DeleteSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSnapshotOutput`](crate::output::DeleteSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSnapshotOutput`](crate::output::DeleteSnapshotOutput).
     pub fn builder() -> crate::output::delete_snapshot_output::Builder {
         crate::output::delete_snapshot_output::Builder::default()
     }
@@ -1572,14 +1584,19 @@ impl DeleteSnapshotOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteFileSystemOutput {
     /// <p>The ID of the file system that's being deleted.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>The file system lifecycle for the deletion request. If the <code>DeleteFileSystem</code> operation is successful, this status is <code>DELETING</code>.</p>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::FileSystemLifecycle>,
     /// <p>The response object for the Microsoft Windows file system used in the <code>DeleteFileSystem</code> operation.</p>
+    #[doc(hidden)]
     pub windows_response: std::option::Option<crate::model::DeleteFileSystemWindowsResponse>,
     /// <p>The response object for the Amazon FSx for Lustre file system being deleted in the <code>DeleteFileSystem</code> operation.</p>
+    #[doc(hidden)]
     pub lustre_response: std::option::Option<crate::model::DeleteFileSystemLustreResponse>,
     /// <p>The response object for the OpenZFS file system that's being deleted in the <code>DeleteFileSystem</code> operation.</p>
+    #[doc(hidden)]
     pub open_zfs_response: std::option::Option<crate::model::DeleteFileSystemOpenZfsResponse>,
 }
 impl DeleteFileSystemOutput {
@@ -1621,11 +1638,10 @@ impl std::fmt::Debug for DeleteFileSystemOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput)
+/// See [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput).
 pub mod delete_file_system_output {
 
-    /// A builder for [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_system_id: std::option::Option<std::string::String>,
@@ -1712,7 +1728,7 @@ pub mod delete_file_system_output {
             self.open_zfs_response = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput)
+        /// Consumes the builder and constructs a [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput).
         pub fn build(self) -> crate::output::DeleteFileSystemOutput {
             crate::output::DeleteFileSystemOutput {
                 file_system_id: self.file_system_id,
@@ -1725,7 +1741,7 @@ pub mod delete_file_system_output {
     }
 }
 impl DeleteFileSystemOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFileSystemOutput`](crate::output::DeleteFileSystemOutput).
     pub fn builder() -> crate::output::delete_file_system_output::Builder {
         crate::output::delete_file_system_output::Builder::default()
     }
@@ -1736,10 +1752,13 @@ impl DeleteFileSystemOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteDataRepositoryAssociationOutput {
     /// <p>The ID of the data repository association being deleted.</p>
+    #[doc(hidden)]
     pub association_id: std::option::Option<std::string::String>,
     /// <p>Describes the lifecycle state of the data repository association being deleted.</p>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::DataRepositoryLifecycle>,
     /// <p>Indicates whether data in the file system that corresponds to the data repository association is being deleted. Default is <code>false</code>.</p>
+    #[doc(hidden)]
     pub delete_data_in_file_system: std::option::Option<bool>,
 }
 impl DeleteDataRepositoryAssociationOutput {
@@ -1768,11 +1787,10 @@ impl std::fmt::Debug for DeleteDataRepositoryAssociationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDataRepositoryAssociationOutput`](crate::output::DeleteDataRepositoryAssociationOutput)
+/// See [`DeleteDataRepositoryAssociationOutput`](crate::output::DeleteDataRepositoryAssociationOutput).
 pub mod delete_data_repository_association_output {
 
-    /// A builder for [`DeleteDataRepositoryAssociationOutput`](crate::output::DeleteDataRepositoryAssociationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDataRepositoryAssociationOutput`](crate::output::DeleteDataRepositoryAssociationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) association_id: std::option::Option<std::string::String>,
@@ -1816,7 +1834,7 @@ pub mod delete_data_repository_association_output {
             self.delete_data_in_file_system = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDataRepositoryAssociationOutput`](crate::output::DeleteDataRepositoryAssociationOutput)
+        /// Consumes the builder and constructs a [`DeleteDataRepositoryAssociationOutput`](crate::output::DeleteDataRepositoryAssociationOutput).
         pub fn build(self) -> crate::output::DeleteDataRepositoryAssociationOutput {
             crate::output::DeleteDataRepositoryAssociationOutput {
                 association_id: self.association_id,
@@ -1827,7 +1845,7 @@ pub mod delete_data_repository_association_output {
     }
 }
 impl DeleteDataRepositoryAssociationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDataRepositoryAssociationOutput`](crate::output::DeleteDataRepositoryAssociationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDataRepositoryAssociationOutput`](crate::output::DeleteDataRepositoryAssociationOutput).
     pub fn builder() -> crate::output::delete_data_repository_association_output::Builder {
         crate::output::delete_data_repository_association_output::Builder::default()
     }
@@ -1838,8 +1856,10 @@ impl DeleteDataRepositoryAssociationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteBackupOutput {
     /// <p>The ID of the backup that was deleted.</p>
+    #[doc(hidden)]
     pub backup_id: std::option::Option<std::string::String>,
     /// <p>The lifecycle status of the backup. If the <code>DeleteBackup</code> operation is successful, the status is <code>DELETED</code>.</p>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::BackupLifecycle>,
 }
 impl DeleteBackupOutput {
@@ -1860,11 +1880,10 @@ impl std::fmt::Debug for DeleteBackupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBackupOutput`](crate::output::DeleteBackupOutput)
+/// See [`DeleteBackupOutput`](crate::output::DeleteBackupOutput).
 pub mod delete_backup_output {
 
-    /// A builder for [`DeleteBackupOutput`](crate::output::DeleteBackupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBackupOutput`](crate::output::DeleteBackupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup_id: std::option::Option<std::string::String>,
@@ -1894,7 +1913,7 @@ pub mod delete_backup_output {
             self.lifecycle = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteBackupOutput`](crate::output::DeleteBackupOutput)
+        /// Consumes the builder and constructs a [`DeleteBackupOutput`](crate::output::DeleteBackupOutput).
         pub fn build(self) -> crate::output::DeleteBackupOutput {
             crate::output::DeleteBackupOutput {
                 backup_id: self.backup_id,
@@ -1904,7 +1923,7 @@ pub mod delete_backup_output {
     }
 }
 impl DeleteBackupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBackupOutput`](crate::output::DeleteBackupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBackupOutput`](crate::output::DeleteBackupOutput).
     pub fn builder() -> crate::output::delete_backup_output::Builder {
         crate::output::delete_backup_output::Builder::default()
     }
@@ -1915,6 +1934,7 @@ impl DeleteBackupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateVolumeFromBackupOutput {
     /// <p>Returned after a successful <code>CreateVolumeFromBackup</code> API operation, describing the volume just created.</p>
+    #[doc(hidden)]
     pub volume: std::option::Option<crate::model::Volume>,
 }
 impl CreateVolumeFromBackupOutput {
@@ -1930,11 +1950,10 @@ impl std::fmt::Debug for CreateVolumeFromBackupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateVolumeFromBackupOutput`](crate::output::CreateVolumeFromBackupOutput)
+/// See [`CreateVolumeFromBackupOutput`](crate::output::CreateVolumeFromBackupOutput).
 pub mod create_volume_from_backup_output {
 
-    /// A builder for [`CreateVolumeFromBackupOutput`](crate::output::CreateVolumeFromBackupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateVolumeFromBackupOutput`](crate::output::CreateVolumeFromBackupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume: std::option::Option<crate::model::Volume>,
@@ -1950,7 +1969,7 @@ pub mod create_volume_from_backup_output {
             self.volume = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateVolumeFromBackupOutput`](crate::output::CreateVolumeFromBackupOutput)
+        /// Consumes the builder and constructs a [`CreateVolumeFromBackupOutput`](crate::output::CreateVolumeFromBackupOutput).
         pub fn build(self) -> crate::output::CreateVolumeFromBackupOutput {
             crate::output::CreateVolumeFromBackupOutput {
                 volume: self.volume,
@@ -1959,7 +1978,7 @@ pub mod create_volume_from_backup_output {
     }
 }
 impl CreateVolumeFromBackupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateVolumeFromBackupOutput`](crate::output::CreateVolumeFromBackupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateVolumeFromBackupOutput`](crate::output::CreateVolumeFromBackupOutput).
     pub fn builder() -> crate::output::create_volume_from_backup_output::Builder {
         crate::output::create_volume_from_backup_output::Builder::default()
     }
@@ -1970,6 +1989,7 @@ impl CreateVolumeFromBackupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateVolumeOutput {
     /// <p>Returned after a successful <code>CreateVolume</code> API operation, describing the volume just created.</p>
+    #[doc(hidden)]
     pub volume: std::option::Option<crate::model::Volume>,
 }
 impl CreateVolumeOutput {
@@ -1985,11 +2005,10 @@ impl std::fmt::Debug for CreateVolumeOutput {
         formatter.finish()
     }
 }
-/// See [`CreateVolumeOutput`](crate::output::CreateVolumeOutput)
+/// See [`CreateVolumeOutput`](crate::output::CreateVolumeOutput).
 pub mod create_volume_output {
 
-    /// A builder for [`CreateVolumeOutput`](crate::output::CreateVolumeOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateVolumeOutput`](crate::output::CreateVolumeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume: std::option::Option<crate::model::Volume>,
@@ -2005,7 +2024,7 @@ pub mod create_volume_output {
             self.volume = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateVolumeOutput`](crate::output::CreateVolumeOutput)
+        /// Consumes the builder and constructs a [`CreateVolumeOutput`](crate::output::CreateVolumeOutput).
         pub fn build(self) -> crate::output::CreateVolumeOutput {
             crate::output::CreateVolumeOutput {
                 volume: self.volume,
@@ -2014,7 +2033,7 @@ pub mod create_volume_output {
     }
 }
 impl CreateVolumeOutput {
-    /// Creates a new builder-style object to manufacture [`CreateVolumeOutput`](crate::output::CreateVolumeOutput)
+    /// Creates a new builder-style object to manufacture [`CreateVolumeOutput`](crate::output::CreateVolumeOutput).
     pub fn builder() -> crate::output::create_volume_output::Builder {
         crate::output::create_volume_output::Builder::default()
     }
@@ -2025,6 +2044,7 @@ impl CreateVolumeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateStorageVirtualMachineOutput {
     /// <p>Returned after a successful <code>CreateStorageVirtualMachine</code> operation; describes the SVM just created.</p>
+    #[doc(hidden)]
     pub storage_virtual_machine: std::option::Option<crate::model::StorageVirtualMachine>,
 }
 impl CreateStorageVirtualMachineOutput {
@@ -2042,11 +2062,10 @@ impl std::fmt::Debug for CreateStorageVirtualMachineOutput {
         formatter.finish()
     }
 }
-/// See [`CreateStorageVirtualMachineOutput`](crate::output::CreateStorageVirtualMachineOutput)
+/// See [`CreateStorageVirtualMachineOutput`](crate::output::CreateStorageVirtualMachineOutput).
 pub mod create_storage_virtual_machine_output {
 
-    /// A builder for [`CreateStorageVirtualMachineOutput`](crate::output::CreateStorageVirtualMachineOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateStorageVirtualMachineOutput`](crate::output::CreateStorageVirtualMachineOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_virtual_machine:
@@ -2069,7 +2088,7 @@ pub mod create_storage_virtual_machine_output {
             self.storage_virtual_machine = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateStorageVirtualMachineOutput`](crate::output::CreateStorageVirtualMachineOutput)
+        /// Consumes the builder and constructs a [`CreateStorageVirtualMachineOutput`](crate::output::CreateStorageVirtualMachineOutput).
         pub fn build(self) -> crate::output::CreateStorageVirtualMachineOutput {
             crate::output::CreateStorageVirtualMachineOutput {
                 storage_virtual_machine: self.storage_virtual_machine,
@@ -2078,7 +2097,7 @@ pub mod create_storage_virtual_machine_output {
     }
 }
 impl CreateStorageVirtualMachineOutput {
-    /// Creates a new builder-style object to manufacture [`CreateStorageVirtualMachineOutput`](crate::output::CreateStorageVirtualMachineOutput)
+    /// Creates a new builder-style object to manufacture [`CreateStorageVirtualMachineOutput`](crate::output::CreateStorageVirtualMachineOutput).
     pub fn builder() -> crate::output::create_storage_virtual_machine_output::Builder {
         crate::output::create_storage_virtual_machine_output::Builder::default()
     }
@@ -2089,6 +2108,7 @@ impl CreateStorageVirtualMachineOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSnapshotOutput {
     /// <p>A description of the snapshot.</p>
+    #[doc(hidden)]
     pub snapshot: std::option::Option<crate::model::Snapshot>,
 }
 impl CreateSnapshotOutput {
@@ -2104,11 +2124,10 @@ impl std::fmt::Debug for CreateSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput)
+/// See [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput).
 pub mod create_snapshot_output {
 
-    /// A builder for [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshot: std::option::Option<crate::model::Snapshot>,
@@ -2124,7 +2143,7 @@ pub mod create_snapshot_output {
             self.snapshot = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput)
+        /// Consumes the builder and constructs a [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput).
         pub fn build(self) -> crate::output::CreateSnapshotOutput {
             crate::output::CreateSnapshotOutput {
                 snapshot: self.snapshot,
@@ -2133,7 +2152,7 @@ pub mod create_snapshot_output {
     }
 }
 impl CreateSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput).
     pub fn builder() -> crate::output::create_snapshot_output::Builder {
         crate::output::create_snapshot_output::Builder::default()
     }
@@ -2144,6 +2163,7 @@ impl CreateSnapshotOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateFileSystemFromBackupOutput {
     /// <p>A description of the file system.</p>
+    #[doc(hidden)]
     pub file_system: std::option::Option<crate::model::FileSystem>,
 }
 impl CreateFileSystemFromBackupOutput {
@@ -2159,11 +2179,10 @@ impl std::fmt::Debug for CreateFileSystemFromBackupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateFileSystemFromBackupOutput`](crate::output::CreateFileSystemFromBackupOutput)
+/// See [`CreateFileSystemFromBackupOutput`](crate::output::CreateFileSystemFromBackupOutput).
 pub mod create_file_system_from_backup_output {
 
-    /// A builder for [`CreateFileSystemFromBackupOutput`](crate::output::CreateFileSystemFromBackupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateFileSystemFromBackupOutput`](crate::output::CreateFileSystemFromBackupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_system: std::option::Option<crate::model::FileSystem>,
@@ -2182,7 +2201,7 @@ pub mod create_file_system_from_backup_output {
             self.file_system = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFileSystemFromBackupOutput`](crate::output::CreateFileSystemFromBackupOutput)
+        /// Consumes the builder and constructs a [`CreateFileSystemFromBackupOutput`](crate::output::CreateFileSystemFromBackupOutput).
         pub fn build(self) -> crate::output::CreateFileSystemFromBackupOutput {
             crate::output::CreateFileSystemFromBackupOutput {
                 file_system: self.file_system,
@@ -2191,7 +2210,7 @@ pub mod create_file_system_from_backup_output {
     }
 }
 impl CreateFileSystemFromBackupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateFileSystemFromBackupOutput`](crate::output::CreateFileSystemFromBackupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateFileSystemFromBackupOutput`](crate::output::CreateFileSystemFromBackupOutput).
     pub fn builder() -> crate::output::create_file_system_from_backup_output::Builder {
         crate::output::create_file_system_from_backup_output::Builder::default()
     }
@@ -2202,6 +2221,7 @@ impl CreateFileSystemFromBackupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateFileSystemOutput {
     /// <p>The configuration of the file system that was created.</p>
+    #[doc(hidden)]
     pub file_system: std::option::Option<crate::model::FileSystem>,
 }
 impl CreateFileSystemOutput {
@@ -2217,11 +2237,10 @@ impl std::fmt::Debug for CreateFileSystemOutput {
         formatter.finish()
     }
 }
-/// See [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput)
+/// See [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput).
 pub mod create_file_system_output {
 
-    /// A builder for [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_system: std::option::Option<crate::model::FileSystem>,
@@ -2240,7 +2259,7 @@ pub mod create_file_system_output {
             self.file_system = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput)
+        /// Consumes the builder and constructs a [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput).
         pub fn build(self) -> crate::output::CreateFileSystemOutput {
             crate::output::CreateFileSystemOutput {
                 file_system: self.file_system,
@@ -2249,7 +2268,7 @@ pub mod create_file_system_output {
     }
 }
 impl CreateFileSystemOutput {
-    /// Creates a new builder-style object to manufacture [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput)
+    /// Creates a new builder-style object to manufacture [`CreateFileSystemOutput`](crate::output::CreateFileSystemOutput).
     pub fn builder() -> crate::output::create_file_system_output::Builder {
         crate::output::create_file_system_output::Builder::default()
     }
@@ -2260,6 +2279,7 @@ impl CreateFileSystemOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDataRepositoryTaskOutput {
     /// <p>The description of the data repository task that you just created.</p>
+    #[doc(hidden)]
     pub data_repository_task: std::option::Option<crate::model::DataRepositoryTask>,
 }
 impl CreateDataRepositoryTaskOutput {
@@ -2275,11 +2295,10 @@ impl std::fmt::Debug for CreateDataRepositoryTaskOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDataRepositoryTaskOutput`](crate::output::CreateDataRepositoryTaskOutput)
+/// See [`CreateDataRepositoryTaskOutput`](crate::output::CreateDataRepositoryTaskOutput).
 pub mod create_data_repository_task_output {
 
-    /// A builder for [`CreateDataRepositoryTaskOutput`](crate::output::CreateDataRepositoryTaskOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDataRepositoryTaskOutput`](crate::output::CreateDataRepositoryTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_repository_task: std::option::Option<crate::model::DataRepositoryTask>,
@@ -2298,7 +2317,7 @@ pub mod create_data_repository_task_output {
             self.data_repository_task = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDataRepositoryTaskOutput`](crate::output::CreateDataRepositoryTaskOutput)
+        /// Consumes the builder and constructs a [`CreateDataRepositoryTaskOutput`](crate::output::CreateDataRepositoryTaskOutput).
         pub fn build(self) -> crate::output::CreateDataRepositoryTaskOutput {
             crate::output::CreateDataRepositoryTaskOutput {
                 data_repository_task: self.data_repository_task,
@@ -2307,7 +2326,7 @@ pub mod create_data_repository_task_output {
     }
 }
 impl CreateDataRepositoryTaskOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDataRepositoryTaskOutput`](crate::output::CreateDataRepositoryTaskOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDataRepositoryTaskOutput`](crate::output::CreateDataRepositoryTaskOutput).
     pub fn builder() -> crate::output::create_data_repository_task_output::Builder {
         crate::output::create_data_repository_task_output::Builder::default()
     }
@@ -2318,6 +2337,7 @@ impl CreateDataRepositoryTaskOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDataRepositoryAssociationOutput {
     /// <p>The response object returned after the data repository association is created.</p>
+    #[doc(hidden)]
     pub association: std::option::Option<crate::model::DataRepositoryAssociation>,
 }
 impl CreateDataRepositoryAssociationOutput {
@@ -2333,11 +2353,10 @@ impl std::fmt::Debug for CreateDataRepositoryAssociationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDataRepositoryAssociationOutput`](crate::output::CreateDataRepositoryAssociationOutput)
+/// See [`CreateDataRepositoryAssociationOutput`](crate::output::CreateDataRepositoryAssociationOutput).
 pub mod create_data_repository_association_output {
 
-    /// A builder for [`CreateDataRepositoryAssociationOutput`](crate::output::CreateDataRepositoryAssociationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDataRepositoryAssociationOutput`](crate::output::CreateDataRepositoryAssociationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) association: std::option::Option<crate::model::DataRepositoryAssociation>,
@@ -2356,7 +2375,7 @@ pub mod create_data_repository_association_output {
             self.association = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDataRepositoryAssociationOutput`](crate::output::CreateDataRepositoryAssociationOutput)
+        /// Consumes the builder and constructs a [`CreateDataRepositoryAssociationOutput`](crate::output::CreateDataRepositoryAssociationOutput).
         pub fn build(self) -> crate::output::CreateDataRepositoryAssociationOutput {
             crate::output::CreateDataRepositoryAssociationOutput {
                 association: self.association,
@@ -2365,7 +2384,7 @@ pub mod create_data_repository_association_output {
     }
 }
 impl CreateDataRepositoryAssociationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDataRepositoryAssociationOutput`](crate::output::CreateDataRepositoryAssociationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDataRepositoryAssociationOutput`](crate::output::CreateDataRepositoryAssociationOutput).
     pub fn builder() -> crate::output::create_data_repository_association_output::Builder {
         crate::output::create_data_repository_association_output::Builder::default()
     }
@@ -2376,6 +2395,7 @@ impl CreateDataRepositoryAssociationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBackupOutput {
     /// <p>A description of the backup.</p>
+    #[doc(hidden)]
     pub backup: std::option::Option<crate::model::Backup>,
 }
 impl CreateBackupOutput {
@@ -2391,11 +2411,10 @@ impl std::fmt::Debug for CreateBackupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateBackupOutput`](crate::output::CreateBackupOutput)
+/// See [`CreateBackupOutput`](crate::output::CreateBackupOutput).
 pub mod create_backup_output {
 
-    /// A builder for [`CreateBackupOutput`](crate::output::CreateBackupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateBackupOutput`](crate::output::CreateBackupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup: std::option::Option<crate::model::Backup>,
@@ -2411,7 +2430,7 @@ pub mod create_backup_output {
             self.backup = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBackupOutput`](crate::output::CreateBackupOutput)
+        /// Consumes the builder and constructs a [`CreateBackupOutput`](crate::output::CreateBackupOutput).
         pub fn build(self) -> crate::output::CreateBackupOutput {
             crate::output::CreateBackupOutput {
                 backup: self.backup,
@@ -2420,7 +2439,7 @@ pub mod create_backup_output {
     }
 }
 impl CreateBackupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateBackupOutput`](crate::output::CreateBackupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateBackupOutput`](crate::output::CreateBackupOutput).
     pub fn builder() -> crate::output::create_backup_output::Builder {
         crate::output::create_backup_output::Builder::default()
     }
@@ -2431,6 +2450,7 @@ impl CreateBackupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CopyBackupOutput {
     /// <p>A backup of an Amazon FSx for Windows File Server, Amazon FSx for Lustre file system, Amazon FSx for NetApp ONTAP volume, or Amazon FSx for OpenZFS file system.</p>
+    #[doc(hidden)]
     pub backup: std::option::Option<crate::model::Backup>,
 }
 impl CopyBackupOutput {
@@ -2446,11 +2466,10 @@ impl std::fmt::Debug for CopyBackupOutput {
         formatter.finish()
     }
 }
-/// See [`CopyBackupOutput`](crate::output::CopyBackupOutput)
+/// See [`CopyBackupOutput`](crate::output::CopyBackupOutput).
 pub mod copy_backup_output {
 
-    /// A builder for [`CopyBackupOutput`](crate::output::CopyBackupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CopyBackupOutput`](crate::output::CopyBackupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backup: std::option::Option<crate::model::Backup>,
@@ -2466,7 +2485,7 @@ pub mod copy_backup_output {
             self.backup = input;
             self
         }
-        /// Consumes the builder and constructs a [`CopyBackupOutput`](crate::output::CopyBackupOutput)
+        /// Consumes the builder and constructs a [`CopyBackupOutput`](crate::output::CopyBackupOutput).
         pub fn build(self) -> crate::output::CopyBackupOutput {
             crate::output::CopyBackupOutput {
                 backup: self.backup,
@@ -2475,7 +2494,7 @@ pub mod copy_backup_output {
     }
 }
 impl CopyBackupOutput {
-    /// Creates a new builder-style object to manufacture [`CopyBackupOutput`](crate::output::CopyBackupOutput)
+    /// Creates a new builder-style object to manufacture [`CopyBackupOutput`](crate::output::CopyBackupOutput).
     pub fn builder() -> crate::output::copy_backup_output::Builder {
         crate::output::copy_backup_output::Builder::default()
     }
@@ -2494,8 +2513,10 @@ pub struct CancelDataRepositoryTaskOutput {
     /// <li> <p> <code>CANCELED</code> - Amazon FSx canceled the task and it did not complete.</p> </li>
     /// <li> <p> <code>CANCELING</code> - FSx is in process of canceling the task.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::DataRepositoryTaskLifecycle>,
     /// <p>The ID of the task being canceled.</p>
+    #[doc(hidden)]
     pub task_id: std::option::Option<std::string::String>,
 }
 impl CancelDataRepositoryTaskOutput {
@@ -2524,11 +2545,10 @@ impl std::fmt::Debug for CancelDataRepositoryTaskOutput {
         formatter.finish()
     }
 }
-/// See [`CancelDataRepositoryTaskOutput`](crate::output::CancelDataRepositoryTaskOutput)
+/// See [`CancelDataRepositoryTaskOutput`](crate::output::CancelDataRepositoryTaskOutput).
 pub mod cancel_data_repository_task_output {
 
-    /// A builder for [`CancelDataRepositoryTaskOutput`](crate::output::CancelDataRepositoryTaskOutput)
-    #[non_exhaustive]
+    /// A builder for [`CancelDataRepositoryTaskOutput`](crate::output::CancelDataRepositoryTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lifecycle: std::option::Option<crate::model::DataRepositoryTaskLifecycle>,
@@ -2574,7 +2594,7 @@ pub mod cancel_data_repository_task_output {
             self.task_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelDataRepositoryTaskOutput`](crate::output::CancelDataRepositoryTaskOutput)
+        /// Consumes the builder and constructs a [`CancelDataRepositoryTaskOutput`](crate::output::CancelDataRepositoryTaskOutput).
         pub fn build(self) -> crate::output::CancelDataRepositoryTaskOutput {
             crate::output::CancelDataRepositoryTaskOutput {
                 lifecycle: self.lifecycle,
@@ -2584,7 +2604,7 @@ pub mod cancel_data_repository_task_output {
     }
 }
 impl CancelDataRepositoryTaskOutput {
-    /// Creates a new builder-style object to manufacture [`CancelDataRepositoryTaskOutput`](crate::output::CancelDataRepositoryTaskOutput)
+    /// Creates a new builder-style object to manufacture [`CancelDataRepositoryTaskOutput`](crate::output::CancelDataRepositoryTaskOutput).
     pub fn builder() -> crate::output::cancel_data_repository_task_output::Builder {
         crate::output::cancel_data_repository_task_output::Builder::default()
     }
@@ -2595,6 +2615,7 @@ impl CancelDataRepositoryTaskOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateFileSystemAliasesOutput {
     /// <p>An array of the DNS aliases that Amazon FSx is associating with the file system.</p>
+    #[doc(hidden)]
     pub aliases: std::option::Option<std::vec::Vec<crate::model::Alias>>,
 }
 impl AssociateFileSystemAliasesOutput {
@@ -2610,11 +2631,10 @@ impl std::fmt::Debug for AssociateFileSystemAliasesOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateFileSystemAliasesOutput`](crate::output::AssociateFileSystemAliasesOutput)
+/// See [`AssociateFileSystemAliasesOutput`](crate::output::AssociateFileSystemAliasesOutput).
 pub mod associate_file_system_aliases_output {
 
-    /// A builder for [`AssociateFileSystemAliasesOutput`](crate::output::AssociateFileSystemAliasesOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateFileSystemAliasesOutput`](crate::output::AssociateFileSystemAliasesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aliases: std::option::Option<std::vec::Vec<crate::model::Alias>>,
@@ -2639,7 +2659,7 @@ pub mod associate_file_system_aliases_output {
             self.aliases = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateFileSystemAliasesOutput`](crate::output::AssociateFileSystemAliasesOutput)
+        /// Consumes the builder and constructs a [`AssociateFileSystemAliasesOutput`](crate::output::AssociateFileSystemAliasesOutput).
         pub fn build(self) -> crate::output::AssociateFileSystemAliasesOutput {
             crate::output::AssociateFileSystemAliasesOutput {
                 aliases: self.aliases,
@@ -2648,7 +2668,7 @@ pub mod associate_file_system_aliases_output {
     }
 }
 impl AssociateFileSystemAliasesOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateFileSystemAliasesOutput`](crate::output::AssociateFileSystemAliasesOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateFileSystemAliasesOutput`](crate::output::AssociateFileSystemAliasesOutput).
     pub fn builder() -> crate::output::associate_file_system_aliases_output::Builder {
         crate::output::associate_file_system_aliases_output::Builder::default()
     }

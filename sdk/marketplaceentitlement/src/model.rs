@@ -5,14 +5,19 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Entitlement {
     /// <p>The product code for which the given entitlement applies. Product codes are provided by AWS Marketplace when the product listing is created.</p>
+    #[doc(hidden)]
     pub product_code: std::option::Option<std::string::String>,
     /// <p>The dimension for which the given entitlement applies. Dimensions represent categories of capacity in a product and are specified when the product is listed in AWS Marketplace.</p>
+    #[doc(hidden)]
     pub dimension: std::option::Option<std::string::String>,
     /// <p>The customer identifier is a handle to each unique customer in an application. Customer identifiers are obtained through the ResolveCustomer operation in AWS Marketplace Metering Service.</p>
+    #[doc(hidden)]
     pub customer_identifier: std::option::Option<std::string::String>,
     /// <p>The EntitlementValue represents the amount of capacity that the customer is entitled to for the product.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<crate::model::EntitlementValue>,
     /// <p>The expiration date represents the minimum date through which this entitlement is expected to remain valid. For contractual products listed on AWS Marketplace, the expiration date is the date at which the customer will renew or cancel their contract. Customers who are opting to renew their contract will still have entitlements with an expiration date.</p>
+    #[doc(hidden)]
     pub expiration_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Entitlement {
@@ -48,11 +53,10 @@ impl std::fmt::Debug for Entitlement {
         formatter.finish()
     }
 }
-/// See [`Entitlement`](crate::model::Entitlement)
+/// See [`Entitlement`](crate::model::Entitlement).
 pub mod entitlement {
 
-    /// A builder for [`Entitlement`](crate::model::Entitlement)
-    #[non_exhaustive]
+    /// A builder for [`Entitlement`](crate::model::Entitlement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) product_code: std::option::Option<std::string::String>,
@@ -121,7 +125,7 @@ pub mod entitlement {
             self.expiration_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Entitlement`](crate::model::Entitlement)
+        /// Consumes the builder and constructs a [`Entitlement`](crate::model::Entitlement).
         pub fn build(self) -> crate::model::Entitlement {
             crate::model::Entitlement {
                 product_code: self.product_code,
@@ -134,7 +138,7 @@ pub mod entitlement {
     }
 }
 impl Entitlement {
-    /// Creates a new builder-style object to manufacture [`Entitlement`](crate::model::Entitlement)
+    /// Creates a new builder-style object to manufacture [`Entitlement`](crate::model::Entitlement).
     pub fn builder() -> crate::model::entitlement::Builder {
         crate::model::entitlement::Builder::default()
     }

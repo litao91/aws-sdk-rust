@@ -5,34 +5,49 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct User {
     /// <p>The ID of the user.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The login name of the user.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>The email address of the user.</p>
+    #[doc(hidden)]
     pub email_address: std::option::Option<std::string::String>,
     /// <p>The given name of the user.</p>
+    #[doc(hidden)]
     pub given_name: std::option::Option<std::string::String>,
     /// <p>The surname of the user.</p>
+    #[doc(hidden)]
     pub surname: std::option::Option<std::string::String>,
     /// <p>The ID of the organization.</p>
+    #[doc(hidden)]
     pub organization_id: std::option::Option<std::string::String>,
     /// <p>The ID of the root folder.</p>
+    #[doc(hidden)]
     pub root_folder_id: std::option::Option<std::string::String>,
     /// <p>The ID of the recycle bin folder.</p>
+    #[doc(hidden)]
     pub recycle_bin_folder_id: std::option::Option<std::string::String>,
     /// <p>The status of the user.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::UserStatusType>,
     /// <p>The type of user.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::UserType>,
     /// <p>The time when the user was created.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the user was modified.</p>
+    #[doc(hidden)]
     pub modified_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time zone ID of the user.</p>
+    #[doc(hidden)]
     pub time_zone_id: std::option::Option<std::string::String>,
     /// <p>The locale of the user.</p>
+    #[doc(hidden)]
     pub locale: std::option::Option<crate::model::LocaleType>,
     /// <p>The storage for the user.</p>
+    #[doc(hidden)]
     pub storage: std::option::Option<crate::model::UserStorageMetadata>,
 }
 impl User {
@@ -118,11 +133,10 @@ impl std::fmt::Debug for User {
         formatter.finish()
     }
 }
-/// See [`User`](crate::model::User)
+/// See [`User`](crate::model::User).
 pub mod user {
 
-    /// A builder for [`User`](crate::model::User)
-    #[non_exhaustive]
+    /// A builder for [`User`](crate::model::User).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -316,7 +330,7 @@ pub mod user {
             self.storage = input;
             self
         }
-        /// Consumes the builder and constructs a [`User`](crate::model::User)
+        /// Consumes the builder and constructs a [`User`](crate::model::User).
         pub fn build(self) -> crate::model::User {
             crate::model::User {
                 id: self.id,
@@ -339,7 +353,7 @@ pub mod user {
     }
 }
 impl User {
-    /// Creates a new builder-style object to manufacture [`User`](crate::model::User)
+    /// Creates a new builder-style object to manufacture [`User`](crate::model::User).
     pub fn builder() -> crate::model::user::Builder {
         crate::model::user::Builder::default()
     }
@@ -350,8 +364,10 @@ impl User {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserStorageMetadata {
     /// <p>The amount of storage used, in bytes.</p>
+    #[doc(hidden)]
     pub storage_utilized_in_bytes: std::option::Option<i64>,
     /// <p>The storage for a user.</p>
+    #[doc(hidden)]
     pub storage_rule: std::option::Option<crate::model::StorageRuleType>,
 }
 impl UserStorageMetadata {
@@ -372,11 +388,10 @@ impl std::fmt::Debug for UserStorageMetadata {
         formatter.finish()
     }
 }
-/// See [`UserStorageMetadata`](crate::model::UserStorageMetadata)
+/// See [`UserStorageMetadata`](crate::model::UserStorageMetadata).
 pub mod user_storage_metadata {
 
-    /// A builder for [`UserStorageMetadata`](crate::model::UserStorageMetadata)
-    #[non_exhaustive]
+    /// A builder for [`UserStorageMetadata`](crate::model::UserStorageMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_utilized_in_bytes: std::option::Option<i64>,
@@ -406,7 +421,7 @@ pub mod user_storage_metadata {
             self.storage_rule = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserStorageMetadata`](crate::model::UserStorageMetadata)
+        /// Consumes the builder and constructs a [`UserStorageMetadata`](crate::model::UserStorageMetadata).
         pub fn build(self) -> crate::model::UserStorageMetadata {
             crate::model::UserStorageMetadata {
                 storage_utilized_in_bytes: self.storage_utilized_in_bytes,
@@ -416,7 +431,7 @@ pub mod user_storage_metadata {
     }
 }
 impl UserStorageMetadata {
-    /// Creates a new builder-style object to manufacture [`UserStorageMetadata`](crate::model::UserStorageMetadata)
+    /// Creates a new builder-style object to manufacture [`UserStorageMetadata`](crate::model::UserStorageMetadata).
     pub fn builder() -> crate::model::user_storage_metadata::Builder {
         crate::model::user_storage_metadata::Builder::default()
     }
@@ -427,8 +442,10 @@ impl UserStorageMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StorageRuleType {
     /// <p>The amount of storage allocated, in bytes.</p>
+    #[doc(hidden)]
     pub storage_allocated_in_bytes: std::option::Option<i64>,
     /// <p>The type of storage.</p>
+    #[doc(hidden)]
     pub storage_type: std::option::Option<crate::model::StorageType>,
 }
 impl StorageRuleType {
@@ -452,11 +469,10 @@ impl std::fmt::Debug for StorageRuleType {
         formatter.finish()
     }
 }
-/// See [`StorageRuleType`](crate::model::StorageRuleType)
+/// See [`StorageRuleType`](crate::model::StorageRuleType).
 pub mod storage_rule_type {
 
-    /// A builder for [`StorageRuleType`](crate::model::StorageRuleType)
-    #[non_exhaustive]
+    /// A builder for [`StorageRuleType`](crate::model::StorageRuleType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_allocated_in_bytes: std::option::Option<i64>,
@@ -486,7 +502,7 @@ pub mod storage_rule_type {
             self.storage_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageRuleType`](crate::model::StorageRuleType)
+        /// Consumes the builder and constructs a [`StorageRuleType`](crate::model::StorageRuleType).
         pub fn build(self) -> crate::model::StorageRuleType {
             crate::model::StorageRuleType {
                 storage_allocated_in_bytes: self.storage_allocated_in_bytes,
@@ -496,7 +512,7 @@ pub mod storage_rule_type {
     }
 }
 impl StorageRuleType {
-    /// Creates a new builder-style object to manufacture [`StorageRuleType`](crate::model::StorageRuleType)
+    /// Creates a new builder-style object to manufacture [`StorageRuleType`](crate::model::StorageRuleType).
     pub fn builder() -> crate::model::storage_rule_type::Builder {
         crate::model::storage_rule_type::Builder::default()
     }
@@ -1023,8 +1039,10 @@ impl AsRef<str> for PrincipalType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UploadMetadata {
     /// <p>The URL of the upload.</p>
+    #[doc(hidden)]
     pub upload_url: std::option::Option<std::string::String>,
     /// <p>The signed headers.</p>
+    #[doc(hidden)]
     pub signed_headers:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1049,11 +1067,10 @@ impl std::fmt::Debug for UploadMetadata {
         formatter.finish()
     }
 }
-/// See [`UploadMetadata`](crate::model::UploadMetadata)
+/// See [`UploadMetadata`](crate::model::UploadMetadata).
 pub mod upload_metadata {
 
-    /// A builder for [`UploadMetadata`](crate::model::UploadMetadata)
-    #[non_exhaustive]
+    /// A builder for [`UploadMetadata`](crate::model::UploadMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) upload_url: std::option::Option<std::string::String>,
@@ -1097,7 +1114,7 @@ pub mod upload_metadata {
             self.signed_headers = input;
             self
         }
-        /// Consumes the builder and constructs a [`UploadMetadata`](crate::model::UploadMetadata)
+        /// Consumes the builder and constructs a [`UploadMetadata`](crate::model::UploadMetadata).
         pub fn build(self) -> crate::model::UploadMetadata {
             crate::model::UploadMetadata {
                 upload_url: self.upload_url,
@@ -1107,7 +1124,7 @@ pub mod upload_metadata {
     }
 }
 impl UploadMetadata {
-    /// Creates a new builder-style object to manufacture [`UploadMetadata`](crate::model::UploadMetadata)
+    /// Creates a new builder-style object to manufacture [`UploadMetadata`](crate::model::UploadMetadata).
     pub fn builder() -> crate::model::upload_metadata::Builder {
         crate::model::upload_metadata::Builder::default()
     }
@@ -1118,20 +1135,28 @@ impl UploadMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentMetadata {
     /// <p>The ID of the document.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The ID of the creator.</p>
+    #[doc(hidden)]
     pub creator_id: std::option::Option<std::string::String>,
     /// <p>The ID of the parent folder.</p>
+    #[doc(hidden)]
     pub parent_folder_id: std::option::Option<std::string::String>,
     /// <p>The time when the document was created.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the document was updated.</p>
+    #[doc(hidden)]
     pub modified_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The latest version of the document.</p>
+    #[doc(hidden)]
     pub latest_version_metadata: std::option::Option<crate::model::DocumentVersionMetadata>,
     /// <p>The resource state.</p>
+    #[doc(hidden)]
     pub resource_state: std::option::Option<crate::model::ResourceStateType>,
     /// <p>List of labels on the document.</p>
+    #[doc(hidden)]
     pub labels: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DocumentMetadata {
@@ -1184,11 +1209,10 @@ impl std::fmt::Debug for DocumentMetadata {
         formatter.finish()
     }
 }
-/// See [`DocumentMetadata`](crate::model::DocumentMetadata)
+/// See [`DocumentMetadata`](crate::model::DocumentMetadata).
 pub mod document_metadata {
 
-    /// A builder for [`DocumentMetadata`](crate::model::DocumentMetadata)
-    #[non_exhaustive]
+    /// A builder for [`DocumentMetadata`](crate::model::DocumentMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1309,7 +1333,7 @@ pub mod document_metadata {
             self.labels = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentMetadata`](crate::model::DocumentMetadata)
+        /// Consumes the builder and constructs a [`DocumentMetadata`](crate::model::DocumentMetadata).
         pub fn build(self) -> crate::model::DocumentMetadata {
             crate::model::DocumentMetadata {
                 id: self.id,
@@ -1325,7 +1349,7 @@ pub mod document_metadata {
     }
 }
 impl DocumentMetadata {
-    /// Creates a new builder-style object to manufacture [`DocumentMetadata`](crate::model::DocumentMetadata)
+    /// Creates a new builder-style object to manufacture [`DocumentMetadata`](crate::model::DocumentMetadata).
     pub fn builder() -> crate::model::document_metadata::Builder {
         crate::model::document_metadata::Builder::default()
     }
@@ -1336,32 +1360,45 @@ impl DocumentMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentVersionMetadata {
     /// <p>The ID of the version.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the version.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The content type of the document.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The size of the document, in bytes.</p>
+    #[doc(hidden)]
     pub size: std::option::Option<i64>,
     /// <p>The signature of the document.</p>
+    #[doc(hidden)]
     pub signature: std::option::Option<std::string::String>,
     /// <p>The status of the document.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DocumentStatusType>,
     /// <p>The timestamp when the document was first uploaded.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp when the document was last uploaded.</p>
+    #[doc(hidden)]
     pub modified_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp when the content of the document was originally created.</p>
+    #[doc(hidden)]
     pub content_created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp when the content of the document was modified.</p>
+    #[doc(hidden)]
     pub content_modified_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The ID of the creator.</p>
+    #[doc(hidden)]
     pub creator_id: std::option::Option<std::string::String>,
     /// <p>The thumbnail of the document.</p>
+    #[doc(hidden)]
     pub thumbnail: std::option::Option<
         std::collections::HashMap<crate::model::DocumentThumbnailType, std::string::String>,
     >,
     /// <p>The source of the document.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<
         std::collections::HashMap<crate::model::DocumentSourceType, std::string::String>,
     >,
@@ -1450,11 +1487,10 @@ impl std::fmt::Debug for DocumentVersionMetadata {
         formatter.finish()
     }
 }
-/// See [`DocumentVersionMetadata`](crate::model::DocumentVersionMetadata)
+/// See [`DocumentVersionMetadata`](crate::model::DocumentVersionMetadata).
 pub mod document_version_metadata {
 
-    /// A builder for [`DocumentVersionMetadata`](crate::model::DocumentVersionMetadata)
-    #[non_exhaustive]
+    /// A builder for [`DocumentVersionMetadata`](crate::model::DocumentVersionMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1651,7 +1687,7 @@ pub mod document_version_metadata {
             self.source = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentVersionMetadata`](crate::model::DocumentVersionMetadata)
+        /// Consumes the builder and constructs a [`DocumentVersionMetadata`](crate::model::DocumentVersionMetadata).
         pub fn build(self) -> crate::model::DocumentVersionMetadata {
             crate::model::DocumentVersionMetadata {
                 id: self.id,
@@ -1672,7 +1708,7 @@ pub mod document_version_metadata {
     }
 }
 impl DocumentVersionMetadata {
-    /// Creates a new builder-style object to manufacture [`DocumentVersionMetadata`](crate::model::DocumentVersionMetadata)
+    /// Creates a new builder-style object to manufacture [`DocumentVersionMetadata`](crate::model::DocumentVersionMetadata).
     pub fn builder() -> crate::model::document_version_metadata::Builder {
         crate::model::document_version_metadata::Builder::default()
     }
@@ -1852,26 +1888,37 @@ impl AsRef<str> for DocumentStatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FolderMetadata {
     /// <p>The ID of the folder.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the folder.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The ID of the creator.</p>
+    #[doc(hidden)]
     pub creator_id: std::option::Option<std::string::String>,
     /// <p>The ID of the parent folder.</p>
+    #[doc(hidden)]
     pub parent_folder_id: std::option::Option<std::string::String>,
     /// <p>The time when the folder was created.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the folder was updated.</p>
+    #[doc(hidden)]
     pub modified_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The resource state of the folder.</p>
+    #[doc(hidden)]
     pub resource_state: std::option::Option<crate::model::ResourceStateType>,
     /// <p>The unique identifier created from the subfolders and documents of the folder.</p>
+    #[doc(hidden)]
     pub signature: std::option::Option<std::string::String>,
     /// <p>List of labels on the folder.</p>
+    #[doc(hidden)]
     pub labels: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The size of the folder metadata.</p>
+    #[doc(hidden)]
     pub size: std::option::Option<i64>,
     /// <p>The size of the latest version of the folder metadata.</p>
+    #[doc(hidden)]
     pub latest_version_size: std::option::Option<i64>,
 }
 impl FolderMetadata {
@@ -1937,11 +1984,10 @@ impl std::fmt::Debug for FolderMetadata {
         formatter.finish()
     }
 }
-/// See [`FolderMetadata`](crate::model::FolderMetadata)
+/// See [`FolderMetadata`](crate::model::FolderMetadata).
 pub mod folder_metadata {
 
-    /// A builder for [`FolderMetadata`](crate::model::FolderMetadata)
-    #[non_exhaustive]
+    /// A builder for [`FolderMetadata`](crate::model::FolderMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2088,7 +2134,7 @@ pub mod folder_metadata {
             self.latest_version_size = input;
             self
         }
-        /// Consumes the builder and constructs a [`FolderMetadata`](crate::model::FolderMetadata)
+        /// Consumes the builder and constructs a [`FolderMetadata`](crate::model::FolderMetadata).
         pub fn build(self) -> crate::model::FolderMetadata {
             crate::model::FolderMetadata {
                 id: self.id,
@@ -2107,7 +2153,7 @@ pub mod folder_metadata {
     }
 }
 impl FolderMetadata {
-    /// Creates a new builder-style object to manufacture [`FolderMetadata`](crate::model::FolderMetadata)
+    /// Creates a new builder-style object to manufacture [`FolderMetadata`](crate::model::FolderMetadata).
     pub fn builder() -> crate::model::folder_metadata::Builder {
         crate::model::folder_metadata::Builder::default()
     }
@@ -2169,6 +2215,7 @@ impl AsRef<str> for ResourceCollectionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourcePath {
     /// <p>The components of the resource path.</p>
+    #[doc(hidden)]
     pub components: std::option::Option<std::vec::Vec<crate::model::ResourcePathComponent>>,
 }
 impl ResourcePath {
@@ -2184,11 +2231,10 @@ impl std::fmt::Debug for ResourcePath {
         formatter.finish()
     }
 }
-/// See [`ResourcePath`](crate::model::ResourcePath)
+/// See [`ResourcePath`](crate::model::ResourcePath).
 pub mod resource_path {
 
-    /// A builder for [`ResourcePath`](crate::model::ResourcePath)
-    #[non_exhaustive]
+    /// A builder for [`ResourcePath`](crate::model::ResourcePath).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) components:
@@ -2214,7 +2260,7 @@ pub mod resource_path {
             self.components = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourcePath`](crate::model::ResourcePath)
+        /// Consumes the builder and constructs a [`ResourcePath`](crate::model::ResourcePath).
         pub fn build(self) -> crate::model::ResourcePath {
             crate::model::ResourcePath {
                 components: self.components,
@@ -2223,7 +2269,7 @@ pub mod resource_path {
     }
 }
 impl ResourcePath {
-    /// Creates a new builder-style object to manufacture [`ResourcePath`](crate::model::ResourcePath)
+    /// Creates a new builder-style object to manufacture [`ResourcePath`](crate::model::ResourcePath).
     pub fn builder() -> crate::model::resource_path::Builder {
         crate::model::resource_path::Builder::default()
     }
@@ -2234,8 +2280,10 @@ impl ResourcePath {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourcePathComponent {
     /// <p>The ID of the resource path.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the resource path.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl ResourcePathComponent {
@@ -2256,11 +2304,10 @@ impl std::fmt::Debug for ResourcePathComponent {
         formatter.finish()
     }
 }
-/// See [`ResourcePathComponent`](crate::model::ResourcePathComponent)
+/// See [`ResourcePathComponent`](crate::model::ResourcePathComponent).
 pub mod resource_path_component {
 
-    /// A builder for [`ResourcePathComponent`](crate::model::ResourcePathComponent)
-    #[non_exhaustive]
+    /// A builder for [`ResourcePathComponent`](crate::model::ResourcePathComponent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2287,7 +2334,7 @@ pub mod resource_path_component {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourcePathComponent`](crate::model::ResourcePathComponent)
+        /// Consumes the builder and constructs a [`ResourcePathComponent`](crate::model::ResourcePathComponent).
         pub fn build(self) -> crate::model::ResourcePathComponent {
             crate::model::ResourcePathComponent {
                 id: self.id,
@@ -2297,7 +2344,7 @@ pub mod resource_path_component {
     }
 }
 impl ResourcePathComponent {
-    /// Creates a new builder-style object to manufacture [`ResourcePathComponent`](crate::model::ResourcePathComponent)
+    /// Creates a new builder-style object to manufacture [`ResourcePathComponent`](crate::model::ResourcePathComponent).
     pub fn builder() -> crate::model::resource_path_component::Builder {
         crate::model::resource_path_component::Builder::default()
     }
@@ -2491,10 +2538,13 @@ impl AsRef<str> for UserFilterType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Principal {
     /// <p>The ID of the resource.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The type of resource.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::PrincipalType>,
     /// <p>The permission information for the resource.</p>
+    #[doc(hidden)]
     pub roles: std::option::Option<std::vec::Vec<crate::model::PermissionInfo>>,
 }
 impl Principal {
@@ -2520,11 +2570,10 @@ impl std::fmt::Debug for Principal {
         formatter.finish()
     }
 }
-/// See [`Principal`](crate::model::Principal)
+/// See [`Principal`](crate::model::Principal).
 pub mod principal {
 
-    /// A builder for [`Principal`](crate::model::Principal)
-    #[non_exhaustive]
+    /// A builder for [`Principal`](crate::model::Principal).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2571,7 +2620,7 @@ pub mod principal {
             self.roles = input;
             self
         }
-        /// Consumes the builder and constructs a [`Principal`](crate::model::Principal)
+        /// Consumes the builder and constructs a [`Principal`](crate::model::Principal).
         pub fn build(self) -> crate::model::Principal {
             crate::model::Principal {
                 id: self.id,
@@ -2582,7 +2631,7 @@ pub mod principal {
     }
 }
 impl Principal {
-    /// Creates a new builder-style object to manufacture [`Principal`](crate::model::Principal)
+    /// Creates a new builder-style object to manufacture [`Principal`](crate::model::Principal).
     pub fn builder() -> crate::model::principal::Builder {
         crate::model::principal::Builder::default()
     }
@@ -2593,8 +2642,10 @@ impl Principal {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PermissionInfo {
     /// <p>The role of the user.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<crate::model::RoleType>,
     /// <p>The type of permissions.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RolePermissionType>,
 }
 impl PermissionInfo {
@@ -2615,11 +2666,10 @@ impl std::fmt::Debug for PermissionInfo {
         formatter.finish()
     }
 }
-/// See [`PermissionInfo`](crate::model::PermissionInfo)
+/// See [`PermissionInfo`](crate::model::PermissionInfo).
 pub mod permission_info {
 
-    /// A builder for [`PermissionInfo`](crate::model::PermissionInfo)
-    #[non_exhaustive]
+    /// A builder for [`PermissionInfo`](crate::model::PermissionInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role: std::option::Option<crate::model::RoleType>,
@@ -2649,7 +2699,7 @@ pub mod permission_info {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`PermissionInfo`](crate::model::PermissionInfo)
+        /// Consumes the builder and constructs a [`PermissionInfo`](crate::model::PermissionInfo).
         pub fn build(self) -> crate::model::PermissionInfo {
             crate::model::PermissionInfo {
                 role: self.role,
@@ -2659,7 +2709,7 @@ pub mod permission_info {
     }
 }
 impl PermissionInfo {
-    /// Creates a new builder-style object to manufacture [`PermissionInfo`](crate::model::PermissionInfo)
+    /// Creates a new builder-style object to manufacture [`PermissionInfo`](crate::model::PermissionInfo).
     pub fn builder() -> crate::model::permission_info::Builder {
         crate::model::permission_info::Builder::default()
     }
@@ -2788,10 +2838,13 @@ impl AsRef<str> for RoleType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Subscription {
     /// <p>The ID of the subscription.</p>
+    #[doc(hidden)]
     pub subscription_id: std::option::Option<std::string::String>,
     /// <p>The endpoint of the subscription.</p>
+    #[doc(hidden)]
     pub end_point: std::option::Option<std::string::String>,
     /// <p>The protocol of the subscription.</p>
+    #[doc(hidden)]
     pub protocol: std::option::Option<crate::model::SubscriptionProtocolType>,
 }
 impl Subscription {
@@ -2817,11 +2870,10 @@ impl std::fmt::Debug for Subscription {
         formatter.finish()
     }
 }
-/// See [`Subscription`](crate::model::Subscription)
+/// See [`Subscription`](crate::model::Subscription).
 pub mod subscription {
 
-    /// A builder for [`Subscription`](crate::model::Subscription)
-    #[non_exhaustive]
+    /// A builder for [`Subscription`](crate::model::Subscription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subscription_id: std::option::Option<std::string::String>,
@@ -2865,7 +2917,7 @@ pub mod subscription {
             self.protocol = input;
             self
         }
-        /// Consumes the builder and constructs a [`Subscription`](crate::model::Subscription)
+        /// Consumes the builder and constructs a [`Subscription`](crate::model::Subscription).
         pub fn build(self) -> crate::model::Subscription {
             crate::model::Subscription {
                 subscription_id: self.subscription_id,
@@ -2876,7 +2928,7 @@ pub mod subscription {
     }
 }
 impl Subscription {
-    /// Creates a new builder-style object to manufacture [`Subscription`](crate::model::Subscription)
+    /// Creates a new builder-style object to manufacture [`Subscription`](crate::model::Subscription).
     pub fn builder() -> crate::model::subscription::Builder {
         crate::model::subscription::Builder::default()
     }
@@ -2938,8 +2990,10 @@ impl AsRef<str> for SubscriptionProtocolType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GroupMetadata {
     /// <p>The ID of the user group.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl GroupMetadata {
@@ -2960,11 +3014,10 @@ impl std::fmt::Debug for GroupMetadata {
         formatter.finish()
     }
 }
-/// See [`GroupMetadata`](crate::model::GroupMetadata)
+/// See [`GroupMetadata`](crate::model::GroupMetadata).
 pub mod group_metadata {
 
-    /// A builder for [`GroupMetadata`](crate::model::GroupMetadata)
-    #[non_exhaustive]
+    /// A builder for [`GroupMetadata`](crate::model::GroupMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2991,7 +3044,7 @@ pub mod group_metadata {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`GroupMetadata`](crate::model::GroupMetadata)
+        /// Consumes the builder and constructs a [`GroupMetadata`](crate::model::GroupMetadata).
         pub fn build(self) -> crate::model::GroupMetadata {
             crate::model::GroupMetadata {
                 id: self.id,
@@ -3001,7 +3054,7 @@ pub mod group_metadata {
     }
 }
 impl GroupMetadata {
-    /// Creates a new builder-style object to manufacture [`GroupMetadata`](crate::model::GroupMetadata)
+    /// Creates a new builder-style object to manufacture [`GroupMetadata`](crate::model::GroupMetadata).
     pub fn builder() -> crate::model::group_metadata::Builder {
         crate::model::group_metadata::Builder::default()
     }
@@ -3126,22 +3179,31 @@ impl AsRef<str> for ResourceSortType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Comment {
     /// <p>The ID of the comment.</p>
+    #[doc(hidden)]
     pub comment_id: std::option::Option<std::string::String>,
     /// <p>The ID of the parent comment.</p>
+    #[doc(hidden)]
     pub parent_id: std::option::Option<std::string::String>,
     /// <p>The ID of the root comment in the thread.</p>
+    #[doc(hidden)]
     pub thread_id: std::option::Option<std::string::String>,
     /// <p>The text of the comment.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>The details of the user who made the comment.</p>
+    #[doc(hidden)]
     pub contributor: std::option::Option<crate::model::User>,
     /// <p>The time that the comment was created.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the comment.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CommentStatusType>,
     /// <p>The visibility of the comment. Options are either PRIVATE, where the comment is visible only to the comment author and document owner and co-owners, or PUBLIC, where the comment is visible to document owners, co-owners, and contributors.</p>
+    #[doc(hidden)]
     pub visibility: std::option::Option<crate::model::CommentVisibilityType>,
     /// <p>If the comment is a reply to another user's comment, this field contains the user ID of the user being replied to.</p>
+    #[doc(hidden)]
     pub recipient_id: std::option::Option<std::string::String>,
 }
 impl Comment {
@@ -3197,11 +3259,10 @@ impl std::fmt::Debug for Comment {
         formatter.finish()
     }
 }
-/// See [`Comment`](crate::model::Comment)
+/// See [`Comment`](crate::model::Comment).
 pub mod comment {
 
-    /// A builder for [`Comment`](crate::model::Comment)
-    #[non_exhaustive]
+    /// A builder for [`Comment`](crate::model::Comment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) comment_id: std::option::Option<std::string::String>,
@@ -3314,7 +3375,7 @@ pub mod comment {
             self.recipient_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Comment`](crate::model::Comment)
+        /// Consumes the builder and constructs a [`Comment`](crate::model::Comment).
         pub fn build(self) -> crate::model::Comment {
             crate::model::Comment {
                 comment_id: self.comment_id,
@@ -3331,7 +3392,7 @@ pub mod comment {
     }
 }
 impl Comment {
-    /// Creates a new builder-style object to manufacture [`Comment`](crate::model::Comment)
+    /// Creates a new builder-style object to manufacture [`Comment`](crate::model::Comment).
     pub fn builder() -> crate::model::comment::Builder {
         crate::model::comment::Builder::default()
     }
@@ -3456,22 +3517,31 @@ impl AsRef<str> for CommentStatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Activity {
     /// <p>The activity type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ActivityType>,
     /// <p>The timestamp when the action was performed.</p>
+    #[doc(hidden)]
     pub time_stamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates whether an activity is indirect or direct. An indirect activity results from a direct activity performed on a parent resource. For example, sharing a parent folder (the direct activity) shares all of the subfolders and documents within the parent folder (the indirect activity).</p>
+    #[doc(hidden)]
     pub is_indirect_activity: bool,
     /// <p>The ID of the organization.</p>
+    #[doc(hidden)]
     pub organization_id: std::option::Option<std::string::String>,
     /// <p>The user who performed the action.</p>
+    #[doc(hidden)]
     pub initiator: std::option::Option<crate::model::UserMetadata>,
     /// <p>The list of users or groups impacted by this action. This is an optional field and is filled for the following sharing activities: DOCUMENT_SHARED, DOCUMENT_SHARED, DOCUMENT_UNSHARED, FOLDER_SHARED, FOLDER_UNSHARED.</p>
+    #[doc(hidden)]
     pub participants: std::option::Option<crate::model::Participants>,
     /// <p>The metadata of the resource involved in the user action.</p>
+    #[doc(hidden)]
     pub resource_metadata: std::option::Option<crate::model::ResourceMetadata>,
     /// <p>The original parent of the resource. This is an optional field and is filled for move activities.</p>
+    #[doc(hidden)]
     pub original_parent: std::option::Option<crate::model::ResourceMetadata>,
     /// <p>Metadata of the commenting activity. This is an optional field and is filled for commenting activities.</p>
+    #[doc(hidden)]
     pub comment_metadata: std::option::Option<crate::model::CommentMetadata>,
 }
 impl Activity {
@@ -3527,11 +3597,10 @@ impl std::fmt::Debug for Activity {
         formatter.finish()
     }
 }
-/// See [`Activity`](crate::model::Activity)
+/// See [`Activity`](crate::model::Activity).
 pub mod activity {
 
-    /// A builder for [`Activity`](crate::model::Activity)
-    #[non_exhaustive]
+    /// A builder for [`Activity`](crate::model::Activity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::ActivityType>,
@@ -3656,7 +3725,7 @@ pub mod activity {
             self.comment_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`Activity`](crate::model::Activity)
+        /// Consumes the builder and constructs a [`Activity`](crate::model::Activity).
         pub fn build(self) -> crate::model::Activity {
             crate::model::Activity {
                 r#type: self.r#type,
@@ -3673,7 +3742,7 @@ pub mod activity {
     }
 }
 impl Activity {
-    /// Creates a new builder-style object to manufacture [`Activity`](crate::model::Activity)
+    /// Creates a new builder-style object to manufacture [`Activity`](crate::model::Activity).
     pub fn builder() -> crate::model::activity::Builder {
         crate::model::activity::Builder::default()
     }
@@ -3684,14 +3753,19 @@ impl Activity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CommentMetadata {
     /// <p>The ID of the comment.</p>
+    #[doc(hidden)]
     pub comment_id: std::option::Option<std::string::String>,
     /// <p>The user who made the comment.</p>
+    #[doc(hidden)]
     pub contributor: std::option::Option<crate::model::User>,
     /// <p>The timestamp that the comment was created.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the comment.</p>
+    #[doc(hidden)]
     pub comment_status: std::option::Option<crate::model::CommentStatusType>,
     /// <p>The ID of the user being replied to.</p>
+    #[doc(hidden)]
     pub recipient_id: std::option::Option<std::string::String>,
 }
 impl CommentMetadata {
@@ -3727,11 +3801,10 @@ impl std::fmt::Debug for CommentMetadata {
         formatter.finish()
     }
 }
-/// See [`CommentMetadata`](crate::model::CommentMetadata)
+/// See [`CommentMetadata`](crate::model::CommentMetadata).
 pub mod comment_metadata {
 
-    /// A builder for [`CommentMetadata`](crate::model::CommentMetadata)
-    #[non_exhaustive]
+    /// A builder for [`CommentMetadata`](crate::model::CommentMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) comment_id: std::option::Option<std::string::String>,
@@ -3797,7 +3870,7 @@ pub mod comment_metadata {
             self.recipient_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CommentMetadata`](crate::model::CommentMetadata)
+        /// Consumes the builder and constructs a [`CommentMetadata`](crate::model::CommentMetadata).
         pub fn build(self) -> crate::model::CommentMetadata {
             crate::model::CommentMetadata {
                 comment_id: self.comment_id,
@@ -3810,7 +3883,7 @@ pub mod comment_metadata {
     }
 }
 impl CommentMetadata {
-    /// Creates a new builder-style object to manufacture [`CommentMetadata`](crate::model::CommentMetadata)
+    /// Creates a new builder-style object to manufacture [`CommentMetadata`](crate::model::CommentMetadata).
     pub fn builder() -> crate::model::comment_metadata::Builder {
         crate::model::comment_metadata::Builder::default()
     }
@@ -3821,18 +3894,25 @@ impl CommentMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceMetadata {
     /// <p>The type of resource.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ResourceType>,
     /// <p>The name of the resource.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The original name of the resource before a rename operation.</p>
+    #[doc(hidden)]
     pub original_name: std::option::Option<std::string::String>,
     /// <p>The ID of the resource.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The version ID of the resource. This is an optional field and is filled for action on document version.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>The owner of the resource.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::UserMetadata>,
     /// <p>The parent ID of the resource before a rename operation.</p>
+    #[doc(hidden)]
     pub parent_id: std::option::Option<std::string::String>,
 }
 impl ResourceMetadata {
@@ -3878,11 +3958,10 @@ impl std::fmt::Debug for ResourceMetadata {
         formatter.finish()
     }
 }
-/// See [`ResourceMetadata`](crate::model::ResourceMetadata)
+/// See [`ResourceMetadata`](crate::model::ResourceMetadata).
 pub mod resource_metadata {
 
-    /// A builder for [`ResourceMetadata`](crate::model::ResourceMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ResourceMetadata`](crate::model::ResourceMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::ResourceType>,
@@ -3967,7 +4046,7 @@ pub mod resource_metadata {
             self.parent_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceMetadata`](crate::model::ResourceMetadata)
+        /// Consumes the builder and constructs a [`ResourceMetadata`](crate::model::ResourceMetadata).
         pub fn build(self) -> crate::model::ResourceMetadata {
             crate::model::ResourceMetadata {
                 r#type: self.r#type,
@@ -3982,7 +4061,7 @@ pub mod resource_metadata {
     }
 }
 impl ResourceMetadata {
-    /// Creates a new builder-style object to manufacture [`ResourceMetadata`](crate::model::ResourceMetadata)
+    /// Creates a new builder-style object to manufacture [`ResourceMetadata`](crate::model::ResourceMetadata).
     pub fn builder() -> crate::model::resource_metadata::Builder {
         crate::model::resource_metadata::Builder::default()
     }
@@ -3993,14 +4072,19 @@ impl ResourceMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserMetadata {
     /// <p>The ID of the user.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the user.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>The given name of the user before a rename operation.</p>
+    #[doc(hidden)]
     pub given_name: std::option::Option<std::string::String>,
     /// <p>The surname of the user.</p>
+    #[doc(hidden)]
     pub surname: std::option::Option<std::string::String>,
     /// <p>The email address of the user.</p>
+    #[doc(hidden)]
     pub email_address: std::option::Option<std::string::String>,
 }
 impl UserMetadata {
@@ -4036,11 +4120,10 @@ impl std::fmt::Debug for UserMetadata {
         formatter.finish()
     }
 }
-/// See [`UserMetadata`](crate::model::UserMetadata)
+/// See [`UserMetadata`](crate::model::UserMetadata).
 pub mod user_metadata {
 
-    /// A builder for [`UserMetadata`](crate::model::UserMetadata)
-    #[non_exhaustive]
+    /// A builder for [`UserMetadata`](crate::model::UserMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4103,7 +4186,7 @@ pub mod user_metadata {
             self.email_address = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserMetadata`](crate::model::UserMetadata)
+        /// Consumes the builder and constructs a [`UserMetadata`](crate::model::UserMetadata).
         pub fn build(self) -> crate::model::UserMetadata {
             crate::model::UserMetadata {
                 id: self.id,
@@ -4116,7 +4199,7 @@ pub mod user_metadata {
     }
 }
 impl UserMetadata {
-    /// Creates a new builder-style object to manufacture [`UserMetadata`](crate::model::UserMetadata)
+    /// Creates a new builder-style object to manufacture [`UserMetadata`](crate::model::UserMetadata).
     pub fn builder() -> crate::model::user_metadata::Builder {
         crate::model::user_metadata::Builder::default()
     }
@@ -4182,8 +4265,10 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Participants {
     /// <p>The list of users.</p>
+    #[doc(hidden)]
     pub users: std::option::Option<std::vec::Vec<crate::model::UserMetadata>>,
     /// <p>The list of user groups.</p>
+    #[doc(hidden)]
     pub groups: std::option::Option<std::vec::Vec<crate::model::GroupMetadata>>,
 }
 impl Participants {
@@ -4204,11 +4289,10 @@ impl std::fmt::Debug for Participants {
         formatter.finish()
     }
 }
-/// See [`Participants`](crate::model::Participants)
+/// See [`Participants`](crate::model::Participants).
 pub mod participants {
 
-    /// A builder for [`Participants`](crate::model::Participants)
-    #[non_exhaustive]
+    /// A builder for [`Participants`](crate::model::Participants).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) users: std::option::Option<std::vec::Vec<crate::model::UserMetadata>>,
@@ -4253,7 +4337,7 @@ pub mod participants {
             self.groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`Participants`](crate::model::Participants)
+        /// Consumes the builder and constructs a [`Participants`](crate::model::Participants).
         pub fn build(self) -> crate::model::Participants {
             crate::model::Participants {
                 users: self.users,
@@ -4263,7 +4347,7 @@ pub mod participants {
     }
 }
 impl Participants {
-    /// Creates a new builder-style object to manufacture [`Participants`](crate::model::Participants)
+    /// Creates a new builder-style object to manufacture [`Participants`](crate::model::Participants).
     pub fn builder() -> crate::model::participants::Builder {
         crate::model::participants::Builder::default()
     }
@@ -4546,16 +4630,22 @@ impl AsRef<str> for SubscriptionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ShareResult {
     /// <p>The ID of the principal.</p>
+    #[doc(hidden)]
     pub principal_id: std::option::Option<std::string::String>,
     /// <p>The ID of the invited user.</p>
+    #[doc(hidden)]
     pub invitee_principal_id: std::option::Option<std::string::String>,
     /// <p>The role.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<crate::model::RoleType>,
     /// <p>The status.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ShareStatusType>,
     /// <p>The ID of the resource that was shared.</p>
+    #[doc(hidden)]
     pub share_id: std::option::Option<std::string::String>,
     /// <p>The status message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
 }
 impl ShareResult {
@@ -4596,11 +4686,10 @@ impl std::fmt::Debug for ShareResult {
         formatter.finish()
     }
 }
-/// See [`ShareResult`](crate::model::ShareResult)
+/// See [`ShareResult`](crate::model::ShareResult).
 pub mod share_result {
 
-    /// A builder for [`ShareResult`](crate::model::ShareResult)
-    #[non_exhaustive]
+    /// A builder for [`ShareResult`](crate::model::ShareResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) principal_id: std::option::Option<std::string::String>,
@@ -4680,7 +4769,7 @@ pub mod share_result {
             self.status_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ShareResult`](crate::model::ShareResult)
+        /// Consumes the builder and constructs a [`ShareResult`](crate::model::ShareResult).
         pub fn build(self) -> crate::model::ShareResult {
             crate::model::ShareResult {
                 principal_id: self.principal_id,
@@ -4694,7 +4783,7 @@ pub mod share_result {
     }
 }
 impl ShareResult {
-    /// Creates a new builder-style object to manufacture [`ShareResult`](crate::model::ShareResult)
+    /// Creates a new builder-style object to manufacture [`ShareResult`](crate::model::ShareResult).
     pub fn builder() -> crate::model::share_result::Builder {
         crate::model::share_result::Builder::default()
     }
@@ -4760,8 +4849,10 @@ impl AsRef<str> for ShareStatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotificationOptions {
     /// <p>Boolean value to indicate an email notification should be sent to the receipients.</p>
+    #[doc(hidden)]
     pub send_email: bool,
     /// <p>Text value to be included in the email body.</p>
+    #[doc(hidden)]
     pub email_message: std::option::Option<std::string::String>,
 }
 impl NotificationOptions {
@@ -4782,11 +4873,10 @@ impl std::fmt::Debug for NotificationOptions {
         formatter.finish()
     }
 }
-/// See [`NotificationOptions`](crate::model::NotificationOptions)
+/// See [`NotificationOptions`](crate::model::NotificationOptions).
 pub mod notification_options {
 
-    /// A builder for [`NotificationOptions`](crate::model::NotificationOptions)
-    #[non_exhaustive]
+    /// A builder for [`NotificationOptions`](crate::model::NotificationOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) send_email: std::option::Option<bool>,
@@ -4816,7 +4906,7 @@ pub mod notification_options {
             self.email_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotificationOptions`](crate::model::NotificationOptions)
+        /// Consumes the builder and constructs a [`NotificationOptions`](crate::model::NotificationOptions).
         pub fn build(self) -> crate::model::NotificationOptions {
             crate::model::NotificationOptions {
                 send_email: self.send_email.unwrap_or_default(),
@@ -4826,7 +4916,7 @@ pub mod notification_options {
     }
 }
 impl NotificationOptions {
-    /// Creates a new builder-style object to manufacture [`NotificationOptions`](crate::model::NotificationOptions)
+    /// Creates a new builder-style object to manufacture [`NotificationOptions`](crate::model::NotificationOptions).
     pub fn builder() -> crate::model::notification_options::Builder {
         crate::model::notification_options::Builder::default()
     }
@@ -4837,10 +4927,13 @@ impl NotificationOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SharePrincipal {
     /// <p>The ID of the recipient.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The type of the recipient.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::PrincipalType>,
     /// <p>The role of the recipient.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<crate::model::RoleType>,
 }
 impl SharePrincipal {
@@ -4866,11 +4959,10 @@ impl std::fmt::Debug for SharePrincipal {
         formatter.finish()
     }
 }
-/// See [`SharePrincipal`](crate::model::SharePrincipal)
+/// See [`SharePrincipal`](crate::model::SharePrincipal).
 pub mod share_principal {
 
-    /// A builder for [`SharePrincipal`](crate::model::SharePrincipal)
-    #[non_exhaustive]
+    /// A builder for [`SharePrincipal`](crate::model::SharePrincipal).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4908,7 +5000,7 @@ pub mod share_principal {
             self.role = input;
             self
         }
-        /// Consumes the builder and constructs a [`SharePrincipal`](crate::model::SharePrincipal)
+        /// Consumes the builder and constructs a [`SharePrincipal`](crate::model::SharePrincipal).
         pub fn build(self) -> crate::model::SharePrincipal {
             crate::model::SharePrincipal {
                 id: self.id,
@@ -4919,7 +5011,7 @@ pub mod share_principal {
     }
 }
 impl SharePrincipal {
-    /// Creates a new builder-style object to manufacture [`SharePrincipal`](crate::model::SharePrincipal)
+    /// Creates a new builder-style object to manufacture [`SharePrincipal`](crate::model::SharePrincipal).
     pub fn builder() -> crate::model::share_principal::Builder {
         crate::model::share_principal::Builder::default()
     }

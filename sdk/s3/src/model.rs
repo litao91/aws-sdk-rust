@@ -377,9 +377,23 @@ impl AsRef<str> for ObjectLockMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CopyPartResult {
     /// <p>Entity tag of the object.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
     /// <p>Date and time at which the object was uploaded.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32_c: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha1: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha256: std::option::Option<std::string::String>,
 }
 impl CopyPartResult {
     /// <p>Entity tag of the object.</p>
@@ -390,24 +404,47 @@ impl CopyPartResult {
     pub fn last_modified(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.last_modified.as_ref()
     }
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32(&self) -> std::option::Option<&str> {
+        self.checksum_crc32.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32_c(&self) -> std::option::Option<&str> {
+        self.checksum_crc32_c.as_deref()
+    }
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha1(&self) -> std::option::Option<&str> {
+        self.checksum_sha1.as_deref()
+    }
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha256(&self) -> std::option::Option<&str> {
+        self.checksum_sha256.as_deref()
+    }
 }
 impl std::fmt::Debug for CopyPartResult {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("CopyPartResult");
         formatter.field("e_tag", &self.e_tag);
         formatter.field("last_modified", &self.last_modified);
+        formatter.field("checksum_crc32", &self.checksum_crc32);
+        formatter.field("checksum_crc32_c", &self.checksum_crc32_c);
+        formatter.field("checksum_sha1", &self.checksum_sha1);
+        formatter.field("checksum_sha256", &self.checksum_sha256);
         formatter.finish()
     }
 }
-/// See [`CopyPartResult`](crate::model::CopyPartResult)
+/// See [`CopyPartResult`](crate::model::CopyPartResult).
 pub mod copy_part_result {
 
-    /// A builder for [`CopyPartResult`](crate::model::CopyPartResult)
-    #[non_exhaustive]
+    /// A builder for [`CopyPartResult`](crate::model::CopyPartResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) e_tag: std::option::Option<std::string::String>,
         pub(crate) last_modified: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) checksum_crc32: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32_c: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha1: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha256: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>Entity tag of the object.</p>
@@ -433,17 +470,73 @@ pub mod copy_part_result {
             self.last_modified = input;
             self
         }
-        /// Consumes the builder and constructs a [`CopyPartResult`](crate::model::CopyPartResult)
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32 = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32_c(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32_c = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32_c(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32_c = input;
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha1(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha1 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha1(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha1 = input;
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha256(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha256 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha256(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha256 = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CopyPartResult`](crate::model::CopyPartResult).
         pub fn build(self) -> crate::model::CopyPartResult {
             crate::model::CopyPartResult {
                 e_tag: self.e_tag,
                 last_modified: self.last_modified,
+                checksum_crc32: self.checksum_crc32,
+                checksum_crc32_c: self.checksum_crc32_c,
+                checksum_sha1: self.checksum_sha1,
+                checksum_sha256: self.checksum_sha256,
             }
         }
     }
 }
 impl CopyPartResult {
-    /// Creates a new builder-style object to manufacture [`CopyPartResult`](crate::model::CopyPartResult)
+    /// Creates a new builder-style object to manufacture [`CopyPartResult`](crate::model::CopyPartResult).
     pub fn builder() -> crate::model::copy_part_result::Builder {
         crate::model::copy_part_result::Builder::default()
     }
@@ -451,8 +544,8 @@ impl CopyPartResult {
 
 /// <p>Confirms that the requester knows that they will be charged for the request. Bucket
 /// owners need not specify this parameter in their requests. For information about downloading
-/// objects from requester pays buckets, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectsinRequesterPaysBuckets.html">Downloading Objects in
-/// Requestor Pays Buckets</a> in the <i>Amazon S3 User Guide</i>.</p>
+/// objects from Requester Pays buckets, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectsinRequesterPaysBuckets.html">Downloading Objects in
+/// Requester Pays Buckets</a> in the <i>Amazon S3 User Guide</i>.</p>
 #[non_exhaustive]
 #[derive(
     std::clone::Clone,
@@ -498,6 +591,69 @@ impl RequestPayer {
     }
 }
 impl AsRef<str> for RequestPayer {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum ChecksumAlgorithm {
+    #[allow(missing_docs)] // documentation missing in model
+    Crc32,
+    #[allow(missing_docs)] // documentation missing in model
+    Crc32C,
+    #[allow(missing_docs)] // documentation missing in model
+    Sha1,
+    #[allow(missing_docs)] // documentation missing in model
+    Sha256,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for ChecksumAlgorithm {
+    fn from(s: &str) -> Self {
+        match s {
+            "CRC32" => ChecksumAlgorithm::Crc32,
+            "CRC32C" => ChecksumAlgorithm::Crc32C,
+            "SHA1" => ChecksumAlgorithm::Sha1,
+            "SHA256" => ChecksumAlgorithm::Sha256,
+            other => ChecksumAlgorithm::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for ChecksumAlgorithm {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(ChecksumAlgorithm::from(s))
+    }
+}
+impl ChecksumAlgorithm {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            ChecksumAlgorithm::Crc32 => "CRC32",
+            ChecksumAlgorithm::Crc32C => "CRC32C",
+            ChecksumAlgorithm::Sha1 => "SHA1",
+            ChecksumAlgorithm::Sha256 => "SHA256",
+            ChecksumAlgorithm::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["CRC32", "CRC32C", "SHA1", "SHA256"]
+    }
+}
+impl AsRef<str> for ChecksumAlgorithm {
     fn as_ref(&self) -> &str {
         self.as_str()
     }
@@ -609,22 +765,21 @@ impl std::fmt::Debug for EndEvent {
         formatter.finish()
     }
 }
-/// See [`EndEvent`](crate::model::EndEvent)
+/// See [`EndEvent`](crate::model::EndEvent).
 pub mod end_event {
 
-    /// A builder for [`EndEvent`](crate::model::EndEvent)
-    #[non_exhaustive]
+    /// A builder for [`EndEvent`](crate::model::EndEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`EndEvent`](crate::model::EndEvent)
+        /// Consumes the builder and constructs a [`EndEvent`](crate::model::EndEvent).
         pub fn build(self) -> crate::model::EndEvent {
             crate::model::EndEvent {}
         }
     }
 }
 impl EndEvent {
-    /// Creates a new builder-style object to manufacture [`EndEvent`](crate::model::EndEvent)
+    /// Creates a new builder-style object to manufacture [`EndEvent`](crate::model::EndEvent).
     pub fn builder() -> crate::model::end_event::Builder {
         crate::model::end_event::Builder::default()
     }
@@ -640,22 +795,21 @@ impl std::fmt::Debug for ContinuationEvent {
         formatter.finish()
     }
 }
-/// See [`ContinuationEvent`](crate::model::ContinuationEvent)
+/// See [`ContinuationEvent`](crate::model::ContinuationEvent).
 pub mod continuation_event {
 
-    /// A builder for [`ContinuationEvent`](crate::model::ContinuationEvent)
-    #[non_exhaustive]
+    /// A builder for [`ContinuationEvent`](crate::model::ContinuationEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`ContinuationEvent`](crate::model::ContinuationEvent)
+        /// Consumes the builder and constructs a [`ContinuationEvent`](crate::model::ContinuationEvent).
         pub fn build(self) -> crate::model::ContinuationEvent {
             crate::model::ContinuationEvent {}
         }
     }
 }
 impl ContinuationEvent {
-    /// Creates a new builder-style object to manufacture [`ContinuationEvent`](crate::model::ContinuationEvent)
+    /// Creates a new builder-style object to manufacture [`ContinuationEvent`](crate::model::ContinuationEvent).
     pub fn builder() -> crate::model::continuation_event::Builder {
         crate::model::continuation_event::Builder::default()
     }
@@ -666,6 +820,7 @@ impl ContinuationEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProgressEvent {
     /// <p>The Progress event details.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<crate::model::Progress>,
 }
 impl ProgressEvent {
@@ -681,11 +836,10 @@ impl std::fmt::Debug for ProgressEvent {
         formatter.finish()
     }
 }
-/// See [`ProgressEvent`](crate::model::ProgressEvent)
+/// See [`ProgressEvent`](crate::model::ProgressEvent).
 pub mod progress_event {
 
-    /// A builder for [`ProgressEvent`](crate::model::ProgressEvent)
-    #[non_exhaustive]
+    /// A builder for [`ProgressEvent`](crate::model::ProgressEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) details: std::option::Option<crate::model::Progress>,
@@ -701,7 +855,7 @@ pub mod progress_event {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProgressEvent`](crate::model::ProgressEvent)
+        /// Consumes the builder and constructs a [`ProgressEvent`](crate::model::ProgressEvent).
         pub fn build(self) -> crate::model::ProgressEvent {
             crate::model::ProgressEvent {
                 details: self.details,
@@ -710,7 +864,7 @@ pub mod progress_event {
     }
 }
 impl ProgressEvent {
-    /// Creates a new builder-style object to manufacture [`ProgressEvent`](crate::model::ProgressEvent)
+    /// Creates a new builder-style object to manufacture [`ProgressEvent`](crate::model::ProgressEvent).
     pub fn builder() -> crate::model::progress_event::Builder {
         crate::model::progress_event::Builder::default()
     }
@@ -721,10 +875,13 @@ impl ProgressEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Progress {
     /// <p>The current number of object bytes scanned.</p>
+    #[doc(hidden)]
     pub bytes_scanned: i64,
     /// <p>The current number of uncompressed object bytes processed.</p>
+    #[doc(hidden)]
     pub bytes_processed: i64,
     /// <p>The current number of bytes of records payload data returned.</p>
+    #[doc(hidden)]
     pub bytes_returned: i64,
 }
 impl Progress {
@@ -750,11 +907,10 @@ impl std::fmt::Debug for Progress {
         formatter.finish()
     }
 }
-/// See [`Progress`](crate::model::Progress)
+/// See [`Progress`](crate::model::Progress).
 pub mod progress {
 
-    /// A builder for [`Progress`](crate::model::Progress)
-    #[non_exhaustive]
+    /// A builder for [`Progress`](crate::model::Progress).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bytes_scanned: std::option::Option<i64>,
@@ -792,7 +948,7 @@ pub mod progress {
             self.bytes_returned = input;
             self
         }
-        /// Consumes the builder and constructs a [`Progress`](crate::model::Progress)
+        /// Consumes the builder and constructs a [`Progress`](crate::model::Progress).
         pub fn build(self) -> crate::model::Progress {
             crate::model::Progress {
                 bytes_scanned: self.bytes_scanned.unwrap_or_default(),
@@ -803,7 +959,7 @@ pub mod progress {
     }
 }
 impl Progress {
-    /// Creates a new builder-style object to manufacture [`Progress`](crate::model::Progress)
+    /// Creates a new builder-style object to manufacture [`Progress`](crate::model::Progress).
     pub fn builder() -> crate::model::progress::Builder {
         crate::model::progress::Builder::default()
     }
@@ -814,6 +970,7 @@ impl Progress {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatsEvent {
     /// <p>The Stats event details.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<crate::model::Stats>,
 }
 impl StatsEvent {
@@ -829,11 +986,10 @@ impl std::fmt::Debug for StatsEvent {
         formatter.finish()
     }
 }
-/// See [`StatsEvent`](crate::model::StatsEvent)
+/// See [`StatsEvent`](crate::model::StatsEvent).
 pub mod stats_event {
 
-    /// A builder for [`StatsEvent`](crate::model::StatsEvent)
-    #[non_exhaustive]
+    /// A builder for [`StatsEvent`](crate::model::StatsEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) details: std::option::Option<crate::model::Stats>,
@@ -849,7 +1005,7 @@ pub mod stats_event {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatsEvent`](crate::model::StatsEvent)
+        /// Consumes the builder and constructs a [`StatsEvent`](crate::model::StatsEvent).
         pub fn build(self) -> crate::model::StatsEvent {
             crate::model::StatsEvent {
                 details: self.details,
@@ -858,7 +1014,7 @@ pub mod stats_event {
     }
 }
 impl StatsEvent {
-    /// Creates a new builder-style object to manufacture [`StatsEvent`](crate::model::StatsEvent)
+    /// Creates a new builder-style object to manufacture [`StatsEvent`](crate::model::StatsEvent).
     pub fn builder() -> crate::model::stats_event::Builder {
         crate::model::stats_event::Builder::default()
     }
@@ -869,10 +1025,13 @@ impl StatsEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Stats {
     /// <p>The total number of object bytes scanned.</p>
+    #[doc(hidden)]
     pub bytes_scanned: i64,
     /// <p>The total number of uncompressed object bytes processed.</p>
+    #[doc(hidden)]
     pub bytes_processed: i64,
     /// <p>The total number of bytes of records payload data returned.</p>
+    #[doc(hidden)]
     pub bytes_returned: i64,
 }
 impl Stats {
@@ -898,11 +1057,10 @@ impl std::fmt::Debug for Stats {
         formatter.finish()
     }
 }
-/// See [`Stats`](crate::model::Stats)
+/// See [`Stats`](crate::model::Stats).
 pub mod stats {
 
-    /// A builder for [`Stats`](crate::model::Stats)
-    #[non_exhaustive]
+    /// A builder for [`Stats`](crate::model::Stats).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bytes_scanned: std::option::Option<i64>,
@@ -940,7 +1098,7 @@ pub mod stats {
             self.bytes_returned = input;
             self
         }
-        /// Consumes the builder and constructs a [`Stats`](crate::model::Stats)
+        /// Consumes the builder and constructs a [`Stats`](crate::model::Stats).
         pub fn build(self) -> crate::model::Stats {
             crate::model::Stats {
                 bytes_scanned: self.bytes_scanned.unwrap_or_default(),
@@ -951,7 +1109,7 @@ pub mod stats {
     }
 }
 impl Stats {
-    /// Creates a new builder-style object to manufacture [`Stats`](crate::model::Stats)
+    /// Creates a new builder-style object to manufacture [`Stats`](crate::model::Stats).
     pub fn builder() -> crate::model::stats::Builder {
         crate::model::stats::Builder::default()
     }
@@ -962,6 +1120,7 @@ impl Stats {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecordsEvent {
     /// <p>The byte array of partial, one or more result records.</p>
+    #[doc(hidden)]
     pub payload: std::option::Option<aws_smithy_types::Blob>,
 }
 impl RecordsEvent {
@@ -977,11 +1136,10 @@ impl std::fmt::Debug for RecordsEvent {
         formatter.finish()
     }
 }
-/// See [`RecordsEvent`](crate::model::RecordsEvent)
+/// See [`RecordsEvent`](crate::model::RecordsEvent).
 pub mod records_event {
 
-    /// A builder for [`RecordsEvent`](crate::model::RecordsEvent)
-    #[non_exhaustive]
+    /// A builder for [`RecordsEvent`](crate::model::RecordsEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) payload: std::option::Option<aws_smithy_types::Blob>,
@@ -997,7 +1155,7 @@ pub mod records_event {
             self.payload = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecordsEvent`](crate::model::RecordsEvent)
+        /// Consumes the builder and constructs a [`RecordsEvent`](crate::model::RecordsEvent).
         pub fn build(self) -> crate::model::RecordsEvent {
             crate::model::RecordsEvent {
                 payload: self.payload,
@@ -1006,7 +1164,7 @@ pub mod records_event {
     }
 }
 impl RecordsEvent {
-    /// Creates a new builder-style object to manufacture [`RecordsEvent`](crate::model::RecordsEvent)
+    /// Creates a new builder-style object to manufacture [`RecordsEvent`](crate::model::RecordsEvent).
     pub fn builder() -> crate::model::records_event::Builder {
         crate::model::records_event::Builder::default()
     }
@@ -1016,12 +1174,13 @@ impl RecordsEvent {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScanRange {
-    /// <p>Specifies the start of the byte range. This parameter is optional. Valid values: non-negative integers. The default value is 0. If only start is supplied, it means scan from that point to the end of the file.For example; <code>
+    /// <p>Specifies the start of the byte range. This parameter is optional. Valid values: non-negative integers. The default value is 0. If only <code>start</code> is supplied, it means scan from that point to the end of the file. For example, <code>
     /// <scanrange>
     /// <start>
     /// 50
     /// </start>
     /// </scanrange></code> means scan from byte 50 until the end of the file.</p>
+    #[doc(hidden)]
     pub start: i64,
     /// <p>Specifies the end of the byte range. This parameter is optional. Valid values: non-negative integers. The default value is one less than the size of the object being queried. If only the End parameter is supplied, it is interpreted to mean scan the last N bytes of the file. For example, <code>
     /// <scanrange>
@@ -1029,10 +1188,11 @@ pub struct ScanRange {
     /// 50
     /// </end>
     /// </scanrange></code> means scan the last 50 bytes.</p>
+    #[doc(hidden)]
     pub end: i64,
 }
 impl ScanRange {
-    /// <p>Specifies the start of the byte range. This parameter is optional. Valid values: non-negative integers. The default value is 0. If only start is supplied, it means scan from that point to the end of the file.For example; <code>
+    /// <p>Specifies the start of the byte range. This parameter is optional. Valid values: non-negative integers. The default value is 0. If only <code>start</code> is supplied, it means scan from that point to the end of the file. For example, <code>
     /// <scanrange>
     /// <start>
     /// 50
@@ -1059,18 +1219,17 @@ impl std::fmt::Debug for ScanRange {
         formatter.finish()
     }
 }
-/// See [`ScanRange`](crate::model::ScanRange)
+/// See [`ScanRange`](crate::model::ScanRange).
 pub mod scan_range {
 
-    /// A builder for [`ScanRange`](crate::model::ScanRange)
-    #[non_exhaustive]
+    /// A builder for [`ScanRange`](crate::model::ScanRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start: std::option::Option<i64>,
         pub(crate) end: std::option::Option<i64>,
     }
     impl Builder {
-        /// <p>Specifies the start of the byte range. This parameter is optional. Valid values: non-negative integers. The default value is 0. If only start is supplied, it means scan from that point to the end of the file.For example; <code>
+        /// <p>Specifies the start of the byte range. This parameter is optional. Valid values: non-negative integers. The default value is 0. If only <code>start</code> is supplied, it means scan from that point to the end of the file. For example, <code>
         /// <scanrange>
         /// <start>
         /// 50
@@ -1080,7 +1239,7 @@ pub mod scan_range {
             self.start = Some(input);
             self
         }
-        /// <p>Specifies the start of the byte range. This parameter is optional. Valid values: non-negative integers. The default value is 0. If only start is supplied, it means scan from that point to the end of the file.For example; <code>
+        /// <p>Specifies the start of the byte range. This parameter is optional. Valid values: non-negative integers. The default value is 0. If only <code>start</code> is supplied, it means scan from that point to the end of the file. For example, <code>
         /// <scanrange>
         /// <start>
         /// 50
@@ -1110,7 +1269,7 @@ pub mod scan_range {
             self.end = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScanRange`](crate::model::ScanRange)
+        /// Consumes the builder and constructs a [`ScanRange`](crate::model::ScanRange).
         pub fn build(self) -> crate::model::ScanRange {
             crate::model::ScanRange {
                 start: self.start.unwrap_or_default(),
@@ -1120,7 +1279,7 @@ pub mod scan_range {
     }
 }
 impl ScanRange {
-    /// Creates a new builder-style object to manufacture [`ScanRange`](crate::model::ScanRange)
+    /// Creates a new builder-style object to manufacture [`ScanRange`](crate::model::ScanRange).
     pub fn builder() -> crate::model::scan_range::Builder {
         crate::model::scan_range::Builder::default()
     }
@@ -1131,8 +1290,10 @@ impl ScanRange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputSerialization {
     /// <p>Describes the serialization of CSV-encoded Select results.</p>
+    #[doc(hidden)]
     pub csv: std::option::Option<crate::model::CsvOutput>,
     /// <p>Specifies JSON as request's output serialization format.</p>
+    #[doc(hidden)]
     pub json: std::option::Option<crate::model::JsonOutput>,
 }
 impl OutputSerialization {
@@ -1153,11 +1314,10 @@ impl std::fmt::Debug for OutputSerialization {
         formatter.finish()
     }
 }
-/// See [`OutputSerialization`](crate::model::OutputSerialization)
+/// See [`OutputSerialization`](crate::model::OutputSerialization).
 pub mod output_serialization {
 
-    /// A builder for [`OutputSerialization`](crate::model::OutputSerialization)
-    #[non_exhaustive]
+    /// A builder for [`OutputSerialization`](crate::model::OutputSerialization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) csv: std::option::Option<crate::model::CsvOutput>,
@@ -1184,7 +1344,7 @@ pub mod output_serialization {
             self.json = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputSerialization`](crate::model::OutputSerialization)
+        /// Consumes the builder and constructs a [`OutputSerialization`](crate::model::OutputSerialization).
         pub fn build(self) -> crate::model::OutputSerialization {
             crate::model::OutputSerialization {
                 csv: self.csv,
@@ -1194,7 +1354,7 @@ pub mod output_serialization {
     }
 }
 impl OutputSerialization {
-    /// Creates a new builder-style object to manufacture [`OutputSerialization`](crate::model::OutputSerialization)
+    /// Creates a new builder-style object to manufacture [`OutputSerialization`](crate::model::OutputSerialization).
     pub fn builder() -> crate::model::output_serialization::Builder {
         crate::model::output_serialization::Builder::default()
     }
@@ -1205,6 +1365,7 @@ impl OutputSerialization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JsonOutput {
     /// <p>The value used to separate individual records in the output. If no value is specified, Amazon S3 uses a newline character ('\n').</p>
+    #[doc(hidden)]
     pub record_delimiter: std::option::Option<std::string::String>,
 }
 impl JsonOutput {
@@ -1220,11 +1381,10 @@ impl std::fmt::Debug for JsonOutput {
         formatter.finish()
     }
 }
-/// See [`JsonOutput`](crate::model::JsonOutput)
+/// See [`JsonOutput`](crate::model::JsonOutput).
 pub mod json_output {
 
-    /// A builder for [`JsonOutput`](crate::model::JsonOutput)
-    #[non_exhaustive]
+    /// A builder for [`JsonOutput`](crate::model::JsonOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) record_delimiter: std::option::Option<std::string::String>,
@@ -1243,7 +1403,7 @@ pub mod json_output {
             self.record_delimiter = input;
             self
         }
-        /// Consumes the builder and constructs a [`JsonOutput`](crate::model::JsonOutput)
+        /// Consumes the builder and constructs a [`JsonOutput`](crate::model::JsonOutput).
         pub fn build(self) -> crate::model::JsonOutput {
             crate::model::JsonOutput {
                 record_delimiter: self.record_delimiter,
@@ -1252,7 +1412,7 @@ pub mod json_output {
     }
 }
 impl JsonOutput {
-    /// Creates a new builder-style object to manufacture [`JsonOutput`](crate::model::JsonOutput)
+    /// Creates a new builder-style object to manufacture [`JsonOutput`](crate::model::JsonOutput).
     pub fn builder() -> crate::model::json_output::Builder {
         crate::model::json_output::Builder::default()
     }
@@ -1267,14 +1427,19 @@ pub struct CsvOutput {
     /// <li> <p> <code>ALWAYS</code>: Always use quotation marks for output fields.</p> </li>
     /// <li> <p> <code>ASNEEDED</code>: Use quotation marks for output fields when needed.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub quote_fields: std::option::Option<crate::model::QuoteFields>,
     /// <p>The single character used for escaping the quote character inside an already escaped value.</p>
+    #[doc(hidden)]
     pub quote_escape_character: std::option::Option<std::string::String>,
     /// <p>A single character used to separate individual records in the output. Instead of the default value, you can specify an arbitrary delimiter.</p>
+    #[doc(hidden)]
     pub record_delimiter: std::option::Option<std::string::String>,
     /// <p>The value used to separate individual fields in a record. You can specify an arbitrary delimiter.</p>
+    #[doc(hidden)]
     pub field_delimiter: std::option::Option<std::string::String>,
     /// <p>A single character used for escaping when the field delimiter is part of the value. For example, if the value is <code>a, b</code>, Amazon S3 wraps this field value in quotation marks, as follows: <code>" a , b "</code>.</p>
+    #[doc(hidden)]
     pub quote_character: std::option::Option<std::string::String>,
 }
 impl CsvOutput {
@@ -1314,11 +1479,10 @@ impl std::fmt::Debug for CsvOutput {
         formatter.finish()
     }
 }
-/// See [`CsvOutput`](crate::model::CsvOutput)
+/// See [`CsvOutput`](crate::model::CsvOutput).
 pub mod csv_output {
 
-    /// A builder for [`CsvOutput`](crate::model::CsvOutput)
-    #[non_exhaustive]
+    /// A builder for [`CsvOutput`](crate::model::CsvOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) quote_fields: std::option::Option<crate::model::QuoteFields>,
@@ -1401,7 +1565,7 @@ pub mod csv_output {
             self.quote_character = input;
             self
         }
-        /// Consumes the builder and constructs a [`CsvOutput`](crate::model::CsvOutput)
+        /// Consumes the builder and constructs a [`CsvOutput`](crate::model::CsvOutput).
         pub fn build(self) -> crate::model::CsvOutput {
             crate::model::CsvOutput {
                 quote_fields: self.quote_fields,
@@ -1414,7 +1578,7 @@ pub mod csv_output {
     }
 }
 impl CsvOutput {
-    /// Creates a new builder-style object to manufacture [`CsvOutput`](crate::model::CsvOutput)
+    /// Creates a new builder-style object to manufacture [`CsvOutput`](crate::model::CsvOutput).
     pub fn builder() -> crate::model::csv_output::Builder {
         crate::model::csv_output::Builder::default()
     }
@@ -1480,12 +1644,16 @@ impl AsRef<str> for QuoteFields {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputSerialization {
     /// <p>Describes the serialization of a CSV-encoded object.</p>
+    #[doc(hidden)]
     pub csv: std::option::Option<crate::model::CsvInput>,
     /// <p>Specifies object's compression format. Valid values: NONE, GZIP, BZIP2. Default Value: NONE.</p>
+    #[doc(hidden)]
     pub compression_type: std::option::Option<crate::model::CompressionType>,
     /// <p>Specifies JSON as object's input serialization format.</p>
+    #[doc(hidden)]
     pub json: std::option::Option<crate::model::JsonInput>,
     /// <p>Specifies Parquet as object's input serialization format.</p>
+    #[doc(hidden)]
     pub parquet: std::option::Option<crate::model::ParquetInput>,
 }
 impl InputSerialization {
@@ -1516,11 +1684,10 @@ impl std::fmt::Debug for InputSerialization {
         formatter.finish()
     }
 }
-/// See [`InputSerialization`](crate::model::InputSerialization)
+/// See [`InputSerialization`](crate::model::InputSerialization).
 pub mod input_serialization {
 
-    /// A builder for [`InputSerialization`](crate::model::InputSerialization)
-    #[non_exhaustive]
+    /// A builder for [`InputSerialization`](crate::model::InputSerialization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) csv: std::option::Option<crate::model::CsvInput>,
@@ -1575,7 +1742,7 @@ pub mod input_serialization {
             self.parquet = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputSerialization`](crate::model::InputSerialization)
+        /// Consumes the builder and constructs a [`InputSerialization`](crate::model::InputSerialization).
         pub fn build(self) -> crate::model::InputSerialization {
             crate::model::InputSerialization {
                 csv: self.csv,
@@ -1587,7 +1754,7 @@ pub mod input_serialization {
     }
 }
 impl InputSerialization {
-    /// Creates a new builder-style object to manufacture [`InputSerialization`](crate::model::InputSerialization)
+    /// Creates a new builder-style object to manufacture [`InputSerialization`](crate::model::InputSerialization).
     pub fn builder() -> crate::model::input_serialization::Builder {
         crate::model::input_serialization::Builder::default()
     }
@@ -1603,22 +1770,21 @@ impl std::fmt::Debug for ParquetInput {
         formatter.finish()
     }
 }
-/// See [`ParquetInput`](crate::model::ParquetInput)
+/// See [`ParquetInput`](crate::model::ParquetInput).
 pub mod parquet_input {
 
-    /// A builder for [`ParquetInput`](crate::model::ParquetInput)
-    #[non_exhaustive]
+    /// A builder for [`ParquetInput`](crate::model::ParquetInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`ParquetInput`](crate::model::ParquetInput)
+        /// Consumes the builder and constructs a [`ParquetInput`](crate::model::ParquetInput).
         pub fn build(self) -> crate::model::ParquetInput {
             crate::model::ParquetInput {}
         }
     }
 }
 impl ParquetInput {
-    /// Creates a new builder-style object to manufacture [`ParquetInput`](crate::model::ParquetInput)
+    /// Creates a new builder-style object to manufacture [`ParquetInput`](crate::model::ParquetInput).
     pub fn builder() -> crate::model::parquet_input::Builder {
         crate::model::parquet_input::Builder::default()
     }
@@ -1629,6 +1795,7 @@ impl ParquetInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JsonInput {
     /// <p>The type of JSON. Valid values: Document, Lines.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::JsonType>,
 }
 impl JsonInput {
@@ -1644,11 +1811,10 @@ impl std::fmt::Debug for JsonInput {
         formatter.finish()
     }
 }
-/// See [`JsonInput`](crate::model::JsonInput)
+/// See [`JsonInput`](crate::model::JsonInput).
 pub mod json_input {
 
-    /// A builder for [`JsonInput`](crate::model::JsonInput)
-    #[non_exhaustive]
+    /// A builder for [`JsonInput`](crate::model::JsonInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::JsonType>,
@@ -1664,7 +1830,7 @@ pub mod json_input {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`JsonInput`](crate::model::JsonInput)
+        /// Consumes the builder and constructs a [`JsonInput`](crate::model::JsonInput).
         pub fn build(self) -> crate::model::JsonInput {
             crate::model::JsonInput {
                 r#type: self.r#type,
@@ -1673,7 +1839,7 @@ pub mod json_input {
     }
 }
 impl JsonInput {
-    /// Creates a new builder-style object to manufacture [`JsonInput`](crate::model::JsonInput)
+    /// Creates a new builder-style object to manufacture [`JsonInput`](crate::model::JsonInput).
     pub fn builder() -> crate::model::json_input::Builder {
         crate::model::json_input::Builder::default()
     }
@@ -1803,21 +1969,28 @@ pub struct CsvInput {
     /// <li> <p> <code>IGNORE</code>: First line is a header, but you can't use the header values to indicate the column in an expression. You can use column position (such as _1, _2, …) to indicate the column (<code>SELECT s._1 FROM OBJECT s</code>).</p> </li>
     /// <li> <p> <code>Use</code>: First line is a header, and you can use the header value to identify a column in an expression (<code>SELECT "name" FROM OBJECT</code>). </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub file_header_info: std::option::Option<crate::model::FileHeaderInfo>,
     /// <p>A single character used to indicate that a row should be ignored when the character is present at the start of that row. You can specify any character to indicate a comment line.</p>
+    #[doc(hidden)]
     pub comments: std::option::Option<std::string::String>,
-    /// <p>A single character used for escaping the quotation mark character inside an already escaped value. For example, the value """ a , b """ is parsed as " a , b ".</p>
+    /// <p>A single character used for escaping the quotation mark character inside an already escaped value. For example, the value <code>""" a , b """</code> is parsed as <code>" a , b "</code>.</p>
+    #[doc(hidden)]
     pub quote_escape_character: std::option::Option<std::string::String>,
     /// <p>A single character used to separate individual records in the input. Instead of the default value, you can specify an arbitrary delimiter.</p>
+    #[doc(hidden)]
     pub record_delimiter: std::option::Option<std::string::String>,
     /// <p>A single character used to separate individual fields in a record. You can specify an arbitrary delimiter.</p>
+    #[doc(hidden)]
     pub field_delimiter: std::option::Option<std::string::String>,
     /// <p>A single character used for escaping when the field delimiter is part of the value. For example, if the value is <code>a, b</code>, Amazon S3 wraps this field value in quotation marks, as follows: <code>" a , b "</code>.</p>
     /// <p>Type: String</p>
     /// <p>Default: <code>"</code> </p>
     /// <p>Ancestors: <code>CSV</code> </p>
+    #[doc(hidden)]
     pub quote_character: std::option::Option<std::string::String>,
     /// <p>Specifies that CSV field values may contain quoted record delimiters and such records should be allowed. Default value is FALSE. Setting this value to TRUE may lower performance.</p>
+    #[doc(hidden)]
     pub allow_quoted_record_delimiter: bool,
 }
 impl CsvInput {
@@ -1834,7 +2007,7 @@ impl CsvInput {
     pub fn comments(&self) -> std::option::Option<&str> {
         self.comments.as_deref()
     }
-    /// <p>A single character used for escaping the quotation mark character inside an already escaped value. For example, the value """ a , b """ is parsed as " a , b ".</p>
+    /// <p>A single character used for escaping the quotation mark character inside an already escaped value. For example, the value <code>""" a , b """</code> is parsed as <code>" a , b "</code>.</p>
     pub fn quote_escape_character(&self) -> std::option::Option<&str> {
         self.quote_escape_character.as_deref()
     }
@@ -1874,11 +2047,10 @@ impl std::fmt::Debug for CsvInput {
         formatter.finish()
     }
 }
-/// See [`CsvInput`](crate::model::CsvInput)
+/// See [`CsvInput`](crate::model::CsvInput).
 pub mod csv_input {
 
-    /// A builder for [`CsvInput`](crate::model::CsvInput)
-    #[non_exhaustive]
+    /// A builder for [`CsvInput`](crate::model::CsvInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_header_info: std::option::Option<crate::model::FileHeaderInfo>,
@@ -1923,12 +2095,12 @@ pub mod csv_input {
             self.comments = input;
             self
         }
-        /// <p>A single character used for escaping the quotation mark character inside an already escaped value. For example, the value """ a , b """ is parsed as " a , b ".</p>
+        /// <p>A single character used for escaping the quotation mark character inside an already escaped value. For example, the value <code>""" a , b """</code> is parsed as <code>" a , b "</code>.</p>
         pub fn quote_escape_character(mut self, input: impl Into<std::string::String>) -> Self {
             self.quote_escape_character = Some(input.into());
             self
         }
-        /// <p>A single character used for escaping the quotation mark character inside an already escaped value. For example, the value """ a , b """ is parsed as " a , b ".</p>
+        /// <p>A single character used for escaping the quotation mark character inside an already escaped value. For example, the value <code>""" a , b """</code> is parsed as <code>" a , b "</code>.</p>
         pub fn set_quote_escape_character(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -1994,7 +2166,7 @@ pub mod csv_input {
             self.allow_quoted_record_delimiter = input;
             self
         }
-        /// Consumes the builder and constructs a [`CsvInput`](crate::model::CsvInput)
+        /// Consumes the builder and constructs a [`CsvInput`](crate::model::CsvInput).
         pub fn build(self) -> crate::model::CsvInput {
             crate::model::CsvInput {
                 file_header_info: self.file_header_info,
@@ -2011,7 +2183,7 @@ pub mod csv_input {
     }
 }
 impl CsvInput {
-    /// Creates a new builder-style object to manufacture [`CsvInput`](crate::model::CsvInput)
+    /// Creates a new builder-style object to manufacture [`CsvInput`](crate::model::CsvInput).
     pub fn builder() -> crate::model::csv_input::Builder {
         crate::model::csv_input::Builder::default()
     }
@@ -2081,6 +2253,7 @@ impl AsRef<str> for FileHeaderInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RequestProgress {
     /// <p>Specifies whether periodic QueryProgress frames should be sent. Valid values: TRUE, FALSE. Default value: FALSE.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl RequestProgress {
@@ -2096,11 +2269,10 @@ impl std::fmt::Debug for RequestProgress {
         formatter.finish()
     }
 }
-/// See [`RequestProgress`](crate::model::RequestProgress)
+/// See [`RequestProgress`](crate::model::RequestProgress).
 pub mod request_progress {
 
-    /// A builder for [`RequestProgress`](crate::model::RequestProgress)
-    #[non_exhaustive]
+    /// A builder for [`RequestProgress`](crate::model::RequestProgress).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -2116,7 +2288,7 @@ pub mod request_progress {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`RequestProgress`](crate::model::RequestProgress)
+        /// Consumes the builder and constructs a [`RequestProgress`](crate::model::RequestProgress).
         pub fn build(self) -> crate::model::RequestProgress {
             crate::model::RequestProgress {
                 enabled: self.enabled.unwrap_or_default(),
@@ -2125,7 +2297,7 @@ pub mod request_progress {
     }
 }
 impl RequestProgress {
-    /// Creates a new builder-style object to manufacture [`RequestProgress`](crate::model::RequestProgress)
+    /// Creates a new builder-style object to manufacture [`RequestProgress`](crate::model::RequestProgress).
     pub fn builder() -> crate::model::request_progress::Builder {
         crate::model::request_progress::Builder::default()
     }
@@ -2188,18 +2360,25 @@ impl AsRef<str> for ExpressionType {
 pub struct RestoreRequest {
     /// <p>Lifetime of the active copy in days. Do not use with restores that specify <code>OutputLocation</code>.</p>
     /// <p>The Days element is required for regular restores, and must not be provided for select requests.</p>
+    #[doc(hidden)]
     pub days: i32,
     /// <p>S3 Glacier related parameters pertaining to this job. Do not use with restores that specify <code>OutputLocation</code>.</p>
+    #[doc(hidden)]
     pub glacier_job_parameters: std::option::Option<crate::model::GlacierJobParameters>,
     /// <p>Type of restore request.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RestoreRequestType>,
     /// <p>Retrieval tier at which the restore will be processed.</p>
+    #[doc(hidden)]
     pub tier: std::option::Option<crate::model::Tier>,
     /// <p>The optional description for the job.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Describes the parameters for Select job types.</p>
+    #[doc(hidden)]
     pub select_parameters: std::option::Option<crate::model::SelectParameters>,
     /// <p>Describes the location where the restore job's output is stored.</p>
+    #[doc(hidden)]
     pub output_location: std::option::Option<crate::model::OutputLocation>,
 }
 impl RestoreRequest {
@@ -2248,11 +2427,10 @@ impl std::fmt::Debug for RestoreRequest {
         formatter.finish()
     }
 }
-/// See [`RestoreRequest`](crate::model::RestoreRequest)
+/// See [`RestoreRequest`](crate::model::RestoreRequest).
 pub mod restore_request {
 
-    /// A builder for [`RestoreRequest`](crate::model::RestoreRequest)
-    #[non_exhaustive]
+    /// A builder for [`RestoreRequest`](crate::model::RestoreRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) days: std::option::Option<i32>,
@@ -2348,7 +2526,7 @@ pub mod restore_request {
             self.output_location = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreRequest`](crate::model::RestoreRequest)
+        /// Consumes the builder and constructs a [`RestoreRequest`](crate::model::RestoreRequest).
         pub fn build(self) -> crate::model::RestoreRequest {
             crate::model::RestoreRequest {
                 days: self.days.unwrap_or_default(),
@@ -2363,7 +2541,7 @@ pub mod restore_request {
     }
 }
 impl RestoreRequest {
-    /// Creates a new builder-style object to manufacture [`RestoreRequest`](crate::model::RestoreRequest)
+    /// Creates a new builder-style object to manufacture [`RestoreRequest`](crate::model::RestoreRequest).
     pub fn builder() -> crate::model::restore_request::Builder {
         crate::model::restore_request::Builder::default()
     }
@@ -2374,6 +2552,7 @@ impl RestoreRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputLocation {
     /// <p>Describes an S3 location that will receive the results of the restore request.</p>
+    #[doc(hidden)]
     pub s3: std::option::Option<crate::model::S3Location>,
 }
 impl OutputLocation {
@@ -2389,11 +2568,10 @@ impl std::fmt::Debug for OutputLocation {
         formatter.finish()
     }
 }
-/// See [`OutputLocation`](crate::model::OutputLocation)
+/// See [`OutputLocation`](crate::model::OutputLocation).
 pub mod output_location {
 
-    /// A builder for [`OutputLocation`](crate::model::OutputLocation)
-    #[non_exhaustive]
+    /// A builder for [`OutputLocation`](crate::model::OutputLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3: std::option::Option<crate::model::S3Location>,
@@ -2409,14 +2587,14 @@ pub mod output_location {
             self.s3 = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputLocation`](crate::model::OutputLocation)
+        /// Consumes the builder and constructs a [`OutputLocation`](crate::model::OutputLocation).
         pub fn build(self) -> crate::model::OutputLocation {
             crate::model::OutputLocation { s3: self.s3 }
         }
     }
 }
 impl OutputLocation {
-    /// Creates a new builder-style object to manufacture [`OutputLocation`](crate::model::OutputLocation)
+    /// Creates a new builder-style object to manufacture [`OutputLocation`](crate::model::OutputLocation).
     pub fn builder() -> crate::model::output_location::Builder {
         crate::model::output_location::Builder::default()
     }
@@ -2427,20 +2605,28 @@ impl OutputLocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Location {
     /// <p>The name of the bucket where the restore results will be placed.</p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p>The prefix that is prepended to the restore results for this request.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>Contains the type of server-side encryption used.</p>
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::Encryption>,
     /// <p>The canned ACL to apply to the restore results.</p>
+    #[doc(hidden)]
     pub canned_acl: std::option::Option<crate::model::ObjectCannedAcl>,
     /// <p>A list of grants that control access to the staged results.</p>
+    #[doc(hidden)]
     pub access_control_list: std::option::Option<std::vec::Vec<crate::model::Grant>>,
     /// <p>The tag-set that is applied to the restore results.</p>
+    #[doc(hidden)]
     pub tagging: std::option::Option<crate::model::Tagging>,
     /// <p>A list of metadata to store with the restore results in S3.</p>
+    #[doc(hidden)]
     pub user_metadata: std::option::Option<std::vec::Vec<crate::model::MetadataEntry>>,
     /// <p>The class of storage used to store the restore results.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::StorageClass>,
 }
 impl S3Location {
@@ -2491,11 +2677,10 @@ impl std::fmt::Debug for S3Location {
         formatter.finish()
     }
 }
-/// See [`S3Location`](crate::model::S3Location)
+/// See [`S3Location`](crate::model::S3Location).
 pub mod s3_location {
 
-    /// A builder for [`S3Location`](crate::model::S3Location)
-    #[non_exhaustive]
+    /// A builder for [`S3Location`](crate::model::S3Location).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_name: std::option::Option<std::string::String>,
@@ -2615,7 +2800,7 @@ pub mod s3_location {
             self.storage_class = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location)
+        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location).
         pub fn build(self) -> crate::model::S3Location {
             crate::model::S3Location {
                 bucket_name: self.bucket_name,
@@ -2631,7 +2816,7 @@ pub mod s3_location {
     }
 }
 impl S3Location {
-    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location)
+    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location).
     pub fn builder() -> crate::model::s3_location::Builder {
         crate::model::s3_location::Builder::default()
     }
@@ -2642,8 +2827,10 @@ impl S3Location {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetadataEntry {
     /// <p>Name of the Object.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Value of the Object.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl MetadataEntry {
@@ -2664,11 +2851,10 @@ impl std::fmt::Debug for MetadataEntry {
         formatter.finish()
     }
 }
-/// See [`MetadataEntry`](crate::model::MetadataEntry)
+/// See [`MetadataEntry`](crate::model::MetadataEntry).
 pub mod metadata_entry {
 
-    /// A builder for [`MetadataEntry`](crate::model::MetadataEntry)
-    #[non_exhaustive]
+    /// A builder for [`MetadataEntry`](crate::model::MetadataEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2695,7 +2881,7 @@ pub mod metadata_entry {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetadataEntry`](crate::model::MetadataEntry)
+        /// Consumes the builder and constructs a [`MetadataEntry`](crate::model::MetadataEntry).
         pub fn build(self) -> crate::model::MetadataEntry {
             crate::model::MetadataEntry {
                 name: self.name,
@@ -2705,7 +2891,7 @@ pub mod metadata_entry {
     }
 }
 impl MetadataEntry {
-    /// Creates a new builder-style object to manufacture [`MetadataEntry`](crate::model::MetadataEntry)
+    /// Creates a new builder-style object to manufacture [`MetadataEntry`](crate::model::MetadataEntry).
     pub fn builder() -> crate::model::metadata_entry::Builder {
         crate::model::metadata_entry::Builder::default()
     }
@@ -2716,6 +2902,7 @@ impl MetadataEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tagging {
     /// <p>A collection for a set of tags</p>
+    #[doc(hidden)]
     pub tag_set: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl Tagging {
@@ -2731,11 +2918,10 @@ impl std::fmt::Debug for Tagging {
         formatter.finish()
     }
 }
-/// See [`Tagging`](crate::model::Tagging)
+/// See [`Tagging`](crate::model::Tagging).
 pub mod tagging {
 
-    /// A builder for [`Tagging`](crate::model::Tagging)
-    #[non_exhaustive]
+    /// A builder for [`Tagging`](crate::model::Tagging).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_set: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -2760,7 +2946,7 @@ pub mod tagging {
             self.tag_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tagging`](crate::model::Tagging)
+        /// Consumes the builder and constructs a [`Tagging`](crate::model::Tagging).
         pub fn build(self) -> crate::model::Tagging {
             crate::model::Tagging {
                 tag_set: self.tag_set,
@@ -2769,7 +2955,7 @@ pub mod tagging {
     }
 }
 impl Tagging {
-    /// Creates a new builder-style object to manufacture [`Tagging`](crate::model::Tagging)
+    /// Creates a new builder-style object to manufacture [`Tagging`](crate::model::Tagging).
     pub fn builder() -> crate::model::tagging::Builder {
         crate::model::tagging::Builder::default()
     }
@@ -2780,8 +2966,10 @@ impl Tagging {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>Name of the object key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Value of the tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -2802,11 +2990,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -2833,7 +3020,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -2843,7 +3030,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -2854,8 +3041,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Grant {
     /// <p>The person being granted permissions.</p>
+    #[doc(hidden)]
     pub grantee: std::option::Option<crate::model::Grantee>,
     /// <p>Specifies the permission given to the grantee.</p>
+    #[doc(hidden)]
     pub permission: std::option::Option<crate::model::Permission>,
 }
 impl Grant {
@@ -2876,11 +3065,10 @@ impl std::fmt::Debug for Grant {
         formatter.finish()
     }
 }
-/// See [`Grant`](crate::model::Grant)
+/// See [`Grant`](crate::model::Grant).
 pub mod grant {
 
-    /// A builder for [`Grant`](crate::model::Grant)
-    #[non_exhaustive]
+    /// A builder for [`Grant`](crate::model::Grant).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) grantee: std::option::Option<crate::model::Grantee>,
@@ -2910,7 +3098,7 @@ pub mod grant {
             self.permission = input;
             self
         }
-        /// Consumes the builder and constructs a [`Grant`](crate::model::Grant)
+        /// Consumes the builder and constructs a [`Grant`](crate::model::Grant).
         pub fn build(self) -> crate::model::Grant {
             crate::model::Grant {
                 grantee: self.grantee,
@@ -2920,7 +3108,7 @@ pub mod grant {
     }
 }
 impl Grant {
-    /// Creates a new builder-style object to manufacture [`Grant`](crate::model::Grant)
+    /// Creates a new builder-style object to manufacture [`Grant`](crate::model::Grant).
     pub fn builder() -> crate::model::grant::Builder {
         crate::model::grant::Builder::default()
     }
@@ -2998,6 +3186,7 @@ impl AsRef<str> for Permission {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Grantee {
     /// <p>Screen name of the grantee.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>Email address of the grantee.</p> <note>
     /// <p>Using email addresses to specify a grantee is only supported in the following Amazon Web Services Regions: </p>
@@ -3013,12 +3202,16 @@ pub struct Grantee {
     /// </ul>
     /// <p>For a list of all the Amazon S3 supported Regions and endpoints, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">Regions and Endpoints</a> in the Amazon Web Services General Reference.</p>
     /// </note>
+    #[doc(hidden)]
     pub email_address: std::option::Option<std::string::String>,
     /// <p>The canonical user ID of the grantee.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>URI of the grantee group.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
     /// <p>Type of grantee</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
 }
 impl Grantee {
@@ -3067,11 +3260,10 @@ impl std::fmt::Debug for Grantee {
         formatter.finish()
     }
 }
-/// See [`Grantee`](crate::model::Grantee)
+/// See [`Grantee`](crate::model::Grantee).
 pub mod grantee {
 
-    /// A builder for [`Grantee`](crate::model::Grantee)
-    #[non_exhaustive]
+    /// A builder for [`Grantee`](crate::model::Grantee).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) display_name: std::option::Option<std::string::String>,
@@ -3160,7 +3352,7 @@ pub mod grantee {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Grantee`](crate::model::Grantee)
+        /// Consumes the builder and constructs a [`Grantee`](crate::model::Grantee).
         pub fn build(self) -> crate::model::Grantee {
             crate::model::Grantee {
                 display_name: self.display_name,
@@ -3173,7 +3365,7 @@ pub mod grantee {
     }
 }
 impl Grantee {
-    /// Creates a new builder-style object to manufacture [`Grantee`](crate::model::Grantee)
+    /// Creates a new builder-style object to manufacture [`Grantee`](crate::model::Grantee).
     pub fn builder() -> crate::model::grantee::Builder {
         crate::model::grantee::Builder::default()
     }
@@ -3326,10 +3518,13 @@ impl AsRef<str> for ObjectCannedAcl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Encryption {
     /// <p>The server-side encryption algorithm used when storing job results in Amazon S3 (for example, AES256, aws:kms).</p>
+    #[doc(hidden)]
     pub encryption_type: std::option::Option<crate::model::ServerSideEncryption>,
     /// <p>If the encryption type is <code>aws:kms</code>, this optional value specifies the ID of the symmetric customer managed key to use for encryption of job results. Amazon S3 only supports symmetric keys. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using symmetric and asymmetric keys</a> in the <i>Amazon Web Services Key Management Service Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>If the encryption type is <code>aws:kms</code>, this optional value can be used to specify the encryption context for the restore results.</p>
+    #[doc(hidden)]
     pub kms_context: std::option::Option<std::string::String>,
 }
 impl Encryption {
@@ -3355,11 +3550,10 @@ impl std::fmt::Debug for Encryption {
         formatter.finish()
     }
 }
-/// See [`Encryption`](crate::model::Encryption)
+/// See [`Encryption`](crate::model::Encryption).
 pub mod encryption {
 
-    /// A builder for [`Encryption`](crate::model::Encryption)
-    #[non_exhaustive]
+    /// A builder for [`Encryption`](crate::model::Encryption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encryption_type: std::option::Option<crate::model::ServerSideEncryption>,
@@ -3400,7 +3594,7 @@ pub mod encryption {
             self.kms_context = input;
             self
         }
-        /// Consumes the builder and constructs a [`Encryption`](crate::model::Encryption)
+        /// Consumes the builder and constructs a [`Encryption`](crate::model::Encryption).
         pub fn build(self) -> crate::model::Encryption {
             crate::model::Encryption {
                 encryption_type: self.encryption_type,
@@ -3411,7 +3605,7 @@ pub mod encryption {
     }
 }
 impl Encryption {
-    /// Creates a new builder-style object to manufacture [`Encryption`](crate::model::Encryption)
+    /// Creates a new builder-style object to manufacture [`Encryption`](crate::model::Encryption).
     pub fn builder() -> crate::model::encryption::Builder {
         crate::model::encryption::Builder::default()
     }
@@ -3422,12 +3616,16 @@ impl Encryption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SelectParameters {
     /// <p>Describes the serialization format of the object.</p>
+    #[doc(hidden)]
     pub input_serialization: std::option::Option<crate::model::InputSerialization>,
     /// <p>The type of the provided expression (for example, SQL).</p>
+    #[doc(hidden)]
     pub expression_type: std::option::Option<crate::model::ExpressionType>,
     /// <p>The expression that is used to query the object.</p>
+    #[doc(hidden)]
     pub expression: std::option::Option<std::string::String>,
     /// <p>Describes how the results of the Select job are serialized.</p>
+    #[doc(hidden)]
     pub output_serialization: std::option::Option<crate::model::OutputSerialization>,
 }
 impl SelectParameters {
@@ -3458,11 +3656,10 @@ impl std::fmt::Debug for SelectParameters {
         formatter.finish()
     }
 }
-/// See [`SelectParameters`](crate::model::SelectParameters)
+/// See [`SelectParameters`](crate::model::SelectParameters).
 pub mod select_parameters {
 
-    /// A builder for [`SelectParameters`](crate::model::SelectParameters)
-    #[non_exhaustive]
+    /// A builder for [`SelectParameters`](crate::model::SelectParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_serialization: std::option::Option<crate::model::InputSerialization>,
@@ -3520,7 +3717,7 @@ pub mod select_parameters {
             self.output_serialization = input;
             self
         }
-        /// Consumes the builder and constructs a [`SelectParameters`](crate::model::SelectParameters)
+        /// Consumes the builder and constructs a [`SelectParameters`](crate::model::SelectParameters).
         pub fn build(self) -> crate::model::SelectParameters {
             crate::model::SelectParameters {
                 input_serialization: self.input_serialization,
@@ -3532,7 +3729,7 @@ pub mod select_parameters {
     }
 }
 impl SelectParameters {
-    /// Creates a new builder-style object to manufacture [`SelectParameters`](crate::model::SelectParameters)
+    /// Creates a new builder-style object to manufacture [`SelectParameters`](crate::model::SelectParameters).
     pub fn builder() -> crate::model::select_parameters::Builder {
         crate::model::select_parameters::Builder::default()
     }
@@ -3653,6 +3850,7 @@ impl AsRef<str> for RestoreRequestType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GlacierJobParameters {
     /// <p>Retrieval tier at which the restore will be processed.</p>
+    #[doc(hidden)]
     pub tier: std::option::Option<crate::model::Tier>,
 }
 impl GlacierJobParameters {
@@ -3668,11 +3866,10 @@ impl std::fmt::Debug for GlacierJobParameters {
         formatter.finish()
     }
 }
-/// See [`GlacierJobParameters`](crate::model::GlacierJobParameters)
+/// See [`GlacierJobParameters`](crate::model::GlacierJobParameters).
 pub mod glacier_job_parameters {
 
-    /// A builder for [`GlacierJobParameters`](crate::model::GlacierJobParameters)
-    #[non_exhaustive]
+    /// A builder for [`GlacierJobParameters`](crate::model::GlacierJobParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tier: std::option::Option<crate::model::Tier>,
@@ -3688,14 +3885,14 @@ pub mod glacier_job_parameters {
             self.tier = input;
             self
         }
-        /// Consumes the builder and constructs a [`GlacierJobParameters`](crate::model::GlacierJobParameters)
+        /// Consumes the builder and constructs a [`GlacierJobParameters`](crate::model::GlacierJobParameters).
         pub fn build(self) -> crate::model::GlacierJobParameters {
             crate::model::GlacierJobParameters { tier: self.tier }
         }
     }
 }
 impl GlacierJobParameters {
-    /// Creates a new builder-style object to manufacture [`GlacierJobParameters`](crate::model::GlacierJobParameters)
+    /// Creates a new builder-style object to manufacture [`GlacierJobParameters`](crate::model::GlacierJobParameters).
     pub fn builder() -> crate::model::glacier_job_parameters::Builder {
         crate::model::glacier_job_parameters::Builder::default()
     }
@@ -3707,26 +3904,30 @@ impl GlacierJobParameters {
 pub struct PublicAccessBlockConfiguration {
     /// <p>Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket and objects in this bucket. Setting this element to <code>TRUE</code> causes the following behavior:</p>
     /// <ul>
-    /// <li> <p>PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.</p> </li>
+    /// <li> <p>PUT Bucket ACL and PUT Object ACL calls fail if the specified ACL is public.</p> </li>
     /// <li> <p>PUT Object calls fail if the request includes a public ACL.</p> </li>
     /// <li> <p>PUT Bucket calls fail if the request includes a public ACL.</p> </li>
     /// </ul>
     /// <p>Enabling this setting doesn't affect existing policies or ACLs.</p>
+    #[doc(hidden)]
     pub block_public_acls: bool,
     /// <p>Specifies whether Amazon S3 should ignore public ACLs for this bucket and objects in this bucket. Setting this element to <code>TRUE</code> causes Amazon S3 to ignore all public ACLs on this bucket and objects in this bucket.</p>
     /// <p>Enabling this setting doesn't affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set.</p>
+    #[doc(hidden)]
     pub ignore_public_acls: bool,
     /// <p>Specifies whether Amazon S3 should block public bucket policies for this bucket. Setting this element to <code>TRUE</code> causes Amazon S3 to reject calls to PUT Bucket policy if the specified bucket policy allows public access. </p>
     /// <p>Enabling this setting doesn't affect existing bucket policies.</p>
+    #[doc(hidden)]
     pub block_public_policy: bool,
     /// <p>Specifies whether Amazon S3 should restrict public bucket policies for this bucket. Setting this element to <code>TRUE</code> restricts access to this bucket to only Amazon Web Service principals and authorized users within this account if the bucket has a public policy.</p>
     /// <p>Enabling this setting doesn't affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.</p>
+    #[doc(hidden)]
     pub restrict_public_buckets: bool,
 }
 impl PublicAccessBlockConfiguration {
     /// <p>Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket and objects in this bucket. Setting this element to <code>TRUE</code> causes the following behavior:</p>
     /// <ul>
-    /// <li> <p>PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.</p> </li>
+    /// <li> <p>PUT Bucket ACL and PUT Object ACL calls fail if the specified ACL is public.</p> </li>
     /// <li> <p>PUT Object calls fail if the request includes a public ACL.</p> </li>
     /// <li> <p>PUT Bucket calls fail if the request includes a public ACL.</p> </li>
     /// </ul>
@@ -3760,11 +3961,10 @@ impl std::fmt::Debug for PublicAccessBlockConfiguration {
         formatter.finish()
     }
 }
-/// See [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration)
+/// See [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration).
 pub mod public_access_block_configuration {
 
-    /// A builder for [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) block_public_acls: std::option::Option<bool>,
@@ -3775,7 +3975,7 @@ pub mod public_access_block_configuration {
     impl Builder {
         /// <p>Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket and objects in this bucket. Setting this element to <code>TRUE</code> causes the following behavior:</p>
         /// <ul>
-        /// <li> <p>PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.</p> </li>
+        /// <li> <p>PUT Bucket ACL and PUT Object ACL calls fail if the specified ACL is public.</p> </li>
         /// <li> <p>PUT Object calls fail if the request includes a public ACL.</p> </li>
         /// <li> <p>PUT Bucket calls fail if the request includes a public ACL.</p> </li>
         /// </ul>
@@ -3786,7 +3986,7 @@ pub mod public_access_block_configuration {
         }
         /// <p>Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket and objects in this bucket. Setting this element to <code>TRUE</code> causes the following behavior:</p>
         /// <ul>
-        /// <li> <p>PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.</p> </li>
+        /// <li> <p>PUT Bucket ACL and PUT Object ACL calls fail if the specified ACL is public.</p> </li>
         /// <li> <p>PUT Object calls fail if the request includes a public ACL.</p> </li>
         /// <li> <p>PUT Bucket calls fail if the request includes a public ACL.</p> </li>
         /// </ul>
@@ -3831,7 +4031,7 @@ pub mod public_access_block_configuration {
             self.restrict_public_buckets = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration)
+        /// Consumes the builder and constructs a [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration).
         pub fn build(self) -> crate::model::PublicAccessBlockConfiguration {
             crate::model::PublicAccessBlockConfiguration {
                 block_public_acls: self.block_public_acls.unwrap_or_default(),
@@ -3843,7 +4043,7 @@ pub mod public_access_block_configuration {
     }
 }
 impl PublicAccessBlockConfiguration {
-    /// Creates a new builder-style object to manufacture [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration)
+    /// Creates a new builder-style object to manufacture [`PublicAccessBlockConfiguration`](crate::model::PublicAccessBlockConfiguration).
     pub fn builder() -> crate::model::public_access_block_configuration::Builder {
         crate::model::public_access_block_configuration::Builder::default()
     }
@@ -3854,8 +4054,10 @@ impl PublicAccessBlockConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ObjectLockRetention {
     /// <p>Indicates the Retention mode for the specified object.</p>
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::ObjectLockRetentionMode>,
     /// <p>The date on which this Object Lock Retention will expire.</p>
+    #[doc(hidden)]
     pub retain_until_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ObjectLockRetention {
@@ -3876,11 +4078,10 @@ impl std::fmt::Debug for ObjectLockRetention {
         formatter.finish()
     }
 }
-/// See [`ObjectLockRetention`](crate::model::ObjectLockRetention)
+/// See [`ObjectLockRetention`](crate::model::ObjectLockRetention).
 pub mod object_lock_retention {
 
-    /// A builder for [`ObjectLockRetention`](crate::model::ObjectLockRetention)
-    #[non_exhaustive]
+    /// A builder for [`ObjectLockRetention`](crate::model::ObjectLockRetention).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mode: std::option::Option<crate::model::ObjectLockRetentionMode>,
@@ -3913,7 +4114,7 @@ pub mod object_lock_retention {
             self.retain_until_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ObjectLockRetention`](crate::model::ObjectLockRetention)
+        /// Consumes the builder and constructs a [`ObjectLockRetention`](crate::model::ObjectLockRetention).
         pub fn build(self) -> crate::model::ObjectLockRetention {
             crate::model::ObjectLockRetention {
                 mode: self.mode,
@@ -3923,7 +4124,7 @@ pub mod object_lock_retention {
     }
 }
 impl ObjectLockRetention {
-    /// Creates a new builder-style object to manufacture [`ObjectLockRetention`](crate::model::ObjectLockRetention)
+    /// Creates a new builder-style object to manufacture [`ObjectLockRetention`](crate::model::ObjectLockRetention).
     pub fn builder() -> crate::model::object_lock_retention::Builder {
         crate::model::object_lock_retention::Builder::default()
     }
@@ -3989,8 +4190,10 @@ impl AsRef<str> for ObjectLockRetentionMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ObjectLockConfiguration {
     /// <p>Indicates whether this bucket has an Object Lock configuration enabled. Enable <code>ObjectLockEnabled</code> when you apply <code>ObjectLockConfiguration</code> to a bucket. </p>
+    #[doc(hidden)]
     pub object_lock_enabled: std::option::Option<crate::model::ObjectLockEnabled>,
     /// <p>Specifies the Object Lock rule for the specified object. Enable the this rule when you apply <code>ObjectLockConfiguration</code> to a bucket. Bucket settings require both a mode and a period. The period can be either <code>Days</code> or <code>Years</code> but you must select one. You cannot specify <code>Days</code> and <code>Years</code> at the same time.</p>
+    #[doc(hidden)]
     pub rule: std::option::Option<crate::model::ObjectLockRule>,
 }
 impl ObjectLockConfiguration {
@@ -4011,11 +4214,10 @@ impl std::fmt::Debug for ObjectLockConfiguration {
         formatter.finish()
     }
 }
-/// See [`ObjectLockConfiguration`](crate::model::ObjectLockConfiguration)
+/// See [`ObjectLockConfiguration`](crate::model::ObjectLockConfiguration).
 pub mod object_lock_configuration {
 
-    /// A builder for [`ObjectLockConfiguration`](crate::model::ObjectLockConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ObjectLockConfiguration`](crate::model::ObjectLockConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_lock_enabled: std::option::Option<crate::model::ObjectLockEnabled>,
@@ -4048,7 +4250,7 @@ pub mod object_lock_configuration {
             self.rule = input;
             self
         }
-        /// Consumes the builder and constructs a [`ObjectLockConfiguration`](crate::model::ObjectLockConfiguration)
+        /// Consumes the builder and constructs a [`ObjectLockConfiguration`](crate::model::ObjectLockConfiguration).
         pub fn build(self) -> crate::model::ObjectLockConfiguration {
             crate::model::ObjectLockConfiguration {
                 object_lock_enabled: self.object_lock_enabled,
@@ -4058,7 +4260,7 @@ pub mod object_lock_configuration {
     }
 }
 impl ObjectLockConfiguration {
-    /// Creates a new builder-style object to manufacture [`ObjectLockConfiguration`](crate::model::ObjectLockConfiguration)
+    /// Creates a new builder-style object to manufacture [`ObjectLockConfiguration`](crate::model::ObjectLockConfiguration).
     pub fn builder() -> crate::model::object_lock_configuration::Builder {
         crate::model::object_lock_configuration::Builder::default()
     }
@@ -4069,6 +4271,7 @@ impl ObjectLockConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ObjectLockRule {
     /// <p>The default Object Lock retention mode and period that you want to apply to new objects placed in the specified bucket. Bucket settings require both a mode and a period. The period can be either <code>Days</code> or <code>Years</code> but you must select one. You cannot specify <code>Days</code> and <code>Years</code> at the same time.</p>
+    #[doc(hidden)]
     pub default_retention: std::option::Option<crate::model::DefaultRetention>,
 }
 impl ObjectLockRule {
@@ -4084,11 +4287,10 @@ impl std::fmt::Debug for ObjectLockRule {
         formatter.finish()
     }
 }
-/// See [`ObjectLockRule`](crate::model::ObjectLockRule)
+/// See [`ObjectLockRule`](crate::model::ObjectLockRule).
 pub mod object_lock_rule {
 
-    /// A builder for [`ObjectLockRule`](crate::model::ObjectLockRule)
-    #[non_exhaustive]
+    /// A builder for [`ObjectLockRule`](crate::model::ObjectLockRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_retention: std::option::Option<crate::model::DefaultRetention>,
@@ -4107,7 +4309,7 @@ pub mod object_lock_rule {
             self.default_retention = input;
             self
         }
-        /// Consumes the builder and constructs a [`ObjectLockRule`](crate::model::ObjectLockRule)
+        /// Consumes the builder and constructs a [`ObjectLockRule`](crate::model::ObjectLockRule).
         pub fn build(self) -> crate::model::ObjectLockRule {
             crate::model::ObjectLockRule {
                 default_retention: self.default_retention,
@@ -4116,7 +4318,7 @@ pub mod object_lock_rule {
     }
 }
 impl ObjectLockRule {
-    /// Creates a new builder-style object to manufacture [`ObjectLockRule`](crate::model::ObjectLockRule)
+    /// Creates a new builder-style object to manufacture [`ObjectLockRule`](crate::model::ObjectLockRule).
     pub fn builder() -> crate::model::object_lock_rule::Builder {
         crate::model::object_lock_rule::Builder::default()
     }
@@ -4132,10 +4334,13 @@ impl ObjectLockRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DefaultRetention {
     /// <p>The default Object Lock retention mode you want to apply to new objects placed in the specified bucket. Must be used with either <code>Days</code> or <code>Years</code>.</p>
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::ObjectLockRetentionMode>,
     /// <p>The number of days that you want to specify for the default retention period. Must be used with <code>Mode</code>.</p>
+    #[doc(hidden)]
     pub days: i32,
     /// <p>The number of years that you want to specify for the default retention period. Must be used with <code>Mode</code>.</p>
+    #[doc(hidden)]
     pub years: i32,
 }
 impl DefaultRetention {
@@ -4161,11 +4366,10 @@ impl std::fmt::Debug for DefaultRetention {
         formatter.finish()
     }
 }
-/// See [`DefaultRetention`](crate::model::DefaultRetention)
+/// See [`DefaultRetention`](crate::model::DefaultRetention).
 pub mod default_retention {
 
-    /// A builder for [`DefaultRetention`](crate::model::DefaultRetention)
-    #[non_exhaustive]
+    /// A builder for [`DefaultRetention`](crate::model::DefaultRetention).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mode: std::option::Option<crate::model::ObjectLockRetentionMode>,
@@ -4206,7 +4410,7 @@ pub mod default_retention {
             self.years = input;
             self
         }
-        /// Consumes the builder and constructs a [`DefaultRetention`](crate::model::DefaultRetention)
+        /// Consumes the builder and constructs a [`DefaultRetention`](crate::model::DefaultRetention).
         pub fn build(self) -> crate::model::DefaultRetention {
             crate::model::DefaultRetention {
                 mode: self.mode,
@@ -4217,7 +4421,7 @@ pub mod default_retention {
     }
 }
 impl DefaultRetention {
-    /// Creates a new builder-style object to manufacture [`DefaultRetention`](crate::model::DefaultRetention)
+    /// Creates a new builder-style object to manufacture [`DefaultRetention`](crate::model::DefaultRetention).
     pub fn builder() -> crate::model::default_retention::Builder {
         crate::model::default_retention::Builder::default()
     }
@@ -4274,15 +4478,16 @@ impl AsRef<str> for ObjectLockEnabled {
     }
 }
 
-/// <p>A Legal Hold configuration for an object.</p>
+/// <p>A legal hold configuration for an object.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ObjectLockLegalHold {
-    /// <p>Indicates whether the specified object has a Legal Hold in place.</p>
+    /// <p>Indicates whether the specified object has a legal hold in place.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ObjectLockLegalHoldStatus>,
 }
 impl ObjectLockLegalHold {
-    /// <p>Indicates whether the specified object has a Legal Hold in place.</p>
+    /// <p>Indicates whether the specified object has a legal hold in place.</p>
     pub fn status(&self) -> std::option::Option<&crate::model::ObjectLockLegalHoldStatus> {
         self.status.as_ref()
     }
@@ -4294,22 +4499,21 @@ impl std::fmt::Debug for ObjectLockLegalHold {
         formatter.finish()
     }
 }
-/// See [`ObjectLockLegalHold`](crate::model::ObjectLockLegalHold)
+/// See [`ObjectLockLegalHold`](crate::model::ObjectLockLegalHold).
 pub mod object_lock_legal_hold {
 
-    /// A builder for [`ObjectLockLegalHold`](crate::model::ObjectLockLegalHold)
-    #[non_exhaustive]
+    /// A builder for [`ObjectLockLegalHold`](crate::model::ObjectLockLegalHold).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ObjectLockLegalHoldStatus>,
     }
     impl Builder {
-        /// <p>Indicates whether the specified object has a Legal Hold in place.</p>
+        /// <p>Indicates whether the specified object has a legal hold in place.</p>
         pub fn status(mut self, input: crate::model::ObjectLockLegalHoldStatus) -> Self {
             self.status = Some(input);
             self
         }
-        /// <p>Indicates whether the specified object has a Legal Hold in place.</p>
+        /// <p>Indicates whether the specified object has a legal hold in place.</p>
         pub fn set_status(
             mut self,
             input: std::option::Option<crate::model::ObjectLockLegalHoldStatus>,
@@ -4317,7 +4521,7 @@ pub mod object_lock_legal_hold {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ObjectLockLegalHold`](crate::model::ObjectLockLegalHold)
+        /// Consumes the builder and constructs a [`ObjectLockLegalHold`](crate::model::ObjectLockLegalHold).
         pub fn build(self) -> crate::model::ObjectLockLegalHold {
             crate::model::ObjectLockLegalHold {
                 status: self.status,
@@ -4326,7 +4530,7 @@ pub mod object_lock_legal_hold {
     }
 }
 impl ObjectLockLegalHold {
-    /// Creates a new builder-style object to manufacture [`ObjectLockLegalHold`](crate::model::ObjectLockLegalHold)
+    /// Creates a new builder-style object to manufacture [`ObjectLockLegalHold`](crate::model::ObjectLockLegalHold).
     pub fn builder() -> crate::model::object_lock_legal_hold::Builder {
         crate::model::object_lock_legal_hold::Builder::default()
     }
@@ -4337,8 +4541,10 @@ impl ObjectLockLegalHold {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessControlPolicy {
     /// <p>A list of grants.</p>
+    #[doc(hidden)]
     pub grants: std::option::Option<std::vec::Vec<crate::model::Grant>>,
     /// <p>Container for the bucket owner's display name and ID.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::Owner>,
 }
 impl AccessControlPolicy {
@@ -4359,11 +4565,10 @@ impl std::fmt::Debug for AccessControlPolicy {
         formatter.finish()
     }
 }
-/// See [`AccessControlPolicy`](crate::model::AccessControlPolicy)
+/// See [`AccessControlPolicy`](crate::model::AccessControlPolicy).
 pub mod access_control_policy {
 
-    /// A builder for [`AccessControlPolicy`](crate::model::AccessControlPolicy)
-    #[non_exhaustive]
+    /// A builder for [`AccessControlPolicy`](crate::model::AccessControlPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) grants: std::option::Option<std::vec::Vec<crate::model::Grant>>,
@@ -4399,7 +4604,7 @@ pub mod access_control_policy {
             self.owner = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessControlPolicy`](crate::model::AccessControlPolicy)
+        /// Consumes the builder and constructs a [`AccessControlPolicy`](crate::model::AccessControlPolicy).
         pub fn build(self) -> crate::model::AccessControlPolicy {
             crate::model::AccessControlPolicy {
                 grants: self.grants,
@@ -4409,7 +4614,7 @@ pub mod access_control_policy {
     }
 }
 impl AccessControlPolicy {
-    /// Creates a new builder-style object to manufacture [`AccessControlPolicy`](crate::model::AccessControlPolicy)
+    /// Creates a new builder-style object to manufacture [`AccessControlPolicy`](crate::model::AccessControlPolicy).
     pub fn builder() -> crate::model::access_control_policy::Builder {
         crate::model::access_control_policy::Builder::default()
     }
@@ -4420,8 +4625,10 @@ impl AccessControlPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Owner {
     /// <p>Container for the display name of the owner.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>Container for the ID of the owner.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
 }
 impl Owner {
@@ -4442,11 +4649,10 @@ impl std::fmt::Debug for Owner {
         formatter.finish()
     }
 }
-/// See [`Owner`](crate::model::Owner)
+/// See [`Owner`](crate::model::Owner).
 pub mod owner {
 
-    /// A builder for [`Owner`](crate::model::Owner)
-    #[non_exhaustive]
+    /// A builder for [`Owner`](crate::model::Owner).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) display_name: std::option::Option<std::string::String>,
@@ -4473,7 +4679,7 @@ pub mod owner {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Owner`](crate::model::Owner)
+        /// Consumes the builder and constructs a [`Owner`](crate::model::Owner).
         pub fn build(self) -> crate::model::Owner {
             crate::model::Owner {
                 display_name: self.display_name,
@@ -4483,7 +4689,7 @@ pub mod owner {
     }
 }
 impl Owner {
-    /// Creates a new builder-style object to manufacture [`Owner`](crate::model::Owner)
+    /// Creates a new builder-style object to manufacture [`Owner`](crate::model::Owner).
     pub fn builder() -> crate::model::owner::Builder {
         crate::model::owner::Builder::default()
     }
@@ -4494,14 +4700,18 @@ impl Owner {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WebsiteConfiguration {
     /// <p>The name of the error document for the website.</p>
+    #[doc(hidden)]
     pub error_document: std::option::Option<crate::model::ErrorDocument>,
     /// <p>The name of the index document for the website.</p>
+    #[doc(hidden)]
     pub index_document: std::option::Option<crate::model::IndexDocument>,
     /// <p>The redirect behavior for every request to this bucket's website endpoint.</p> <important>
     /// <p>If you specify this property, you can't specify any other property.</p>
     /// </important>
+    #[doc(hidden)]
     pub redirect_all_requests_to: std::option::Option<crate::model::RedirectAllRequestsTo>,
     /// <p>Rules that define when a redirect is applied and the redirect behavior.</p>
+    #[doc(hidden)]
     pub routing_rules: std::option::Option<std::vec::Vec<crate::model::RoutingRule>>,
 }
 impl WebsiteConfiguration {
@@ -4536,11 +4746,10 @@ impl std::fmt::Debug for WebsiteConfiguration {
         formatter.finish()
     }
 }
-/// See [`WebsiteConfiguration`](crate::model::WebsiteConfiguration)
+/// See [`WebsiteConfiguration`](crate::model::WebsiteConfiguration).
 pub mod website_configuration {
 
-    /// A builder for [`WebsiteConfiguration`](crate::model::WebsiteConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`WebsiteConfiguration`](crate::model::WebsiteConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_document: std::option::Option<crate::model::ErrorDocument>,
@@ -4615,7 +4824,7 @@ pub mod website_configuration {
             self.routing_rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`WebsiteConfiguration`](crate::model::WebsiteConfiguration)
+        /// Consumes the builder and constructs a [`WebsiteConfiguration`](crate::model::WebsiteConfiguration).
         pub fn build(self) -> crate::model::WebsiteConfiguration {
             crate::model::WebsiteConfiguration {
                 error_document: self.error_document,
@@ -4627,7 +4836,7 @@ pub mod website_configuration {
     }
 }
 impl WebsiteConfiguration {
-    /// Creates a new builder-style object to manufacture [`WebsiteConfiguration`](crate::model::WebsiteConfiguration)
+    /// Creates a new builder-style object to manufacture [`WebsiteConfiguration`](crate::model::WebsiteConfiguration).
     pub fn builder() -> crate::model::website_configuration::Builder {
         crate::model::website_configuration::Builder::default()
     }
@@ -4638,8 +4847,10 @@ impl WebsiteConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RoutingRule {
     /// <p>A container for describing a condition that must be met for the specified redirect to apply. For example, 1. If request is for pages in the <code>/docs</code> folder, redirect to the <code>/documents</code> folder. 2. If request results in HTTP error 4xx, redirect request to another host where you might process the error.</p>
+    #[doc(hidden)]
     pub condition: std::option::Option<crate::model::Condition>,
     /// <p>Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.</p>
+    #[doc(hidden)]
     pub redirect: std::option::Option<crate::model::Redirect>,
 }
 impl RoutingRule {
@@ -4660,11 +4871,10 @@ impl std::fmt::Debug for RoutingRule {
         formatter.finish()
     }
 }
-/// See [`RoutingRule`](crate::model::RoutingRule)
+/// See [`RoutingRule`](crate::model::RoutingRule).
 pub mod routing_rule {
 
-    /// A builder for [`RoutingRule`](crate::model::RoutingRule)
-    #[non_exhaustive]
+    /// A builder for [`RoutingRule`](crate::model::RoutingRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) condition: std::option::Option<crate::model::Condition>,
@@ -4694,7 +4904,7 @@ pub mod routing_rule {
             self.redirect = input;
             self
         }
-        /// Consumes the builder and constructs a [`RoutingRule`](crate::model::RoutingRule)
+        /// Consumes the builder and constructs a [`RoutingRule`](crate::model::RoutingRule).
         pub fn build(self) -> crate::model::RoutingRule {
             crate::model::RoutingRule {
                 condition: self.condition,
@@ -4704,7 +4914,7 @@ pub mod routing_rule {
     }
 }
 impl RoutingRule {
-    /// Creates a new builder-style object to manufacture [`RoutingRule`](crate::model::RoutingRule)
+    /// Creates a new builder-style object to manufacture [`RoutingRule`](crate::model::RoutingRule).
     pub fn builder() -> crate::model::routing_rule::Builder {
         crate::model::routing_rule::Builder::default()
     }
@@ -4715,18 +4925,23 @@ impl RoutingRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Redirect {
     /// <p>The host name to use in the redirect request.</p>
+    #[doc(hidden)]
     pub host_name: std::option::Option<std::string::String>,
     /// <p>The HTTP redirect code to use on the response. Not required if one of the siblings is present.</p>
+    #[doc(hidden)]
     pub http_redirect_code: std::option::Option<std::string::String>,
     /// <p>Protocol to use when redirecting requests. The default is the protocol that is used in the original request.</p>
+    #[doc(hidden)]
     pub protocol: std::option::Option<crate::model::Protocol>,
     /// <p>The object key prefix to use in the redirect request. For example, to redirect requests for all pages with prefix <code>docs/</code> (objects in the <code>docs/</code> folder) to <code>documents/</code>, you can set a condition block with <code>KeyPrefixEquals</code> set to <code>docs/</code> and in the Redirect set <code>ReplaceKeyPrefixWith</code> to <code>/documents</code>. Not required if one of the siblings is present. Can be present only if <code>ReplaceKeyWith</code> is not provided.</p> <important>
     /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
     /// </important>
+    #[doc(hidden)]
     pub replace_key_prefix_with: std::option::Option<std::string::String>,
     /// <p>The specific object key to use in the redirect request. For example, redirect request to <code>error.html</code>. Not required if one of the siblings is present. Can be present only if <code>ReplaceKeyPrefixWith</code> is not provided.</p> <important>
     /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
     /// </important>
+    #[doc(hidden)]
     pub replace_key_with: std::option::Option<std::string::String>,
 }
 impl Redirect {
@@ -4766,11 +4981,10 @@ impl std::fmt::Debug for Redirect {
         formatter.finish()
     }
 }
-/// See [`Redirect`](crate::model::Redirect)
+/// See [`Redirect`](crate::model::Redirect).
 pub mod redirect {
 
-    /// A builder for [`Redirect`](crate::model::Redirect)
-    #[non_exhaustive]
+    /// A builder for [`Redirect`](crate::model::Redirect).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) host_name: std::option::Option<std::string::String>,
@@ -4847,7 +5061,7 @@ pub mod redirect {
             self.replace_key_with = input;
             self
         }
-        /// Consumes the builder and constructs a [`Redirect`](crate::model::Redirect)
+        /// Consumes the builder and constructs a [`Redirect`](crate::model::Redirect).
         pub fn build(self) -> crate::model::Redirect {
             crate::model::Redirect {
                 host_name: self.host_name,
@@ -4860,7 +5074,7 @@ pub mod redirect {
     }
 }
 impl Redirect {
-    /// Creates a new builder-style object to manufacture [`Redirect`](crate::model::Redirect)
+    /// Creates a new builder-style object to manufacture [`Redirect`](crate::model::Redirect).
     pub fn builder() -> crate::model::redirect::Builder {
         crate::model::redirect::Builder::default()
     }
@@ -4926,10 +5140,12 @@ impl AsRef<str> for Protocol {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Condition {
     /// <p>The HTTP error code when the redirect is applied. In the event of an error, if the error code equals this value, then the specified redirect is applied. Required when parent element <code>Condition</code> is specified and sibling <code>KeyPrefixEquals</code> is not specified. If both are specified, then both must be true for the redirect to be applied.</p>
+    #[doc(hidden)]
     pub http_error_code_returned_equals: std::option::Option<std::string::String>,
     /// <p>The object key name prefix when the redirect is applied. For example, to redirect requests for <code>ExamplePage.html</code>, the key prefix will be <code>ExamplePage.html</code>. To redirect request for all pages with the prefix <code>docs/</code>, the key prefix will be <code>/docs</code>, which identifies all objects in the <code>docs/</code> folder. Required when the parent element <code>Condition</code> is specified and sibling <code>HttpErrorCodeReturnedEquals</code> is not specified. If both conditions are specified, both must be true for the redirect to be applied.</p> <important>
     /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
     /// </important>
+    #[doc(hidden)]
     pub key_prefix_equals: std::option::Option<std::string::String>,
 }
 impl Condition {
@@ -4955,11 +5171,10 @@ impl std::fmt::Debug for Condition {
         formatter.finish()
     }
 }
-/// See [`Condition`](crate::model::Condition)
+/// See [`Condition`](crate::model::Condition).
 pub mod condition {
 
-    /// A builder for [`Condition`](crate::model::Condition)
-    #[non_exhaustive]
+    /// A builder for [`Condition`](crate::model::Condition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) http_error_code_returned_equals: std::option::Option<std::string::String>,
@@ -4999,7 +5214,7 @@ pub mod condition {
             self.key_prefix_equals = input;
             self
         }
-        /// Consumes the builder and constructs a [`Condition`](crate::model::Condition)
+        /// Consumes the builder and constructs a [`Condition`](crate::model::Condition).
         pub fn build(self) -> crate::model::Condition {
             crate::model::Condition {
                 http_error_code_returned_equals: self.http_error_code_returned_equals,
@@ -5009,7 +5224,7 @@ pub mod condition {
     }
 }
 impl Condition {
-    /// Creates a new builder-style object to manufacture [`Condition`](crate::model::Condition)
+    /// Creates a new builder-style object to manufacture [`Condition`](crate::model::Condition).
     pub fn builder() -> crate::model::condition::Builder {
         crate::model::condition::Builder::default()
     }
@@ -5020,8 +5235,10 @@ impl Condition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RedirectAllRequestsTo {
     /// <p>Name of the host where requests are redirected.</p>
+    #[doc(hidden)]
     pub host_name: std::option::Option<std::string::String>,
     /// <p>Protocol to use when redirecting requests. The default is the protocol that is used in the original request.</p>
+    #[doc(hidden)]
     pub protocol: std::option::Option<crate::model::Protocol>,
 }
 impl RedirectAllRequestsTo {
@@ -5042,11 +5259,10 @@ impl std::fmt::Debug for RedirectAllRequestsTo {
         formatter.finish()
     }
 }
-/// See [`RedirectAllRequestsTo`](crate::model::RedirectAllRequestsTo)
+/// See [`RedirectAllRequestsTo`](crate::model::RedirectAllRequestsTo).
 pub mod redirect_all_requests_to {
 
-    /// A builder for [`RedirectAllRequestsTo`](crate::model::RedirectAllRequestsTo)
-    #[non_exhaustive]
+    /// A builder for [`RedirectAllRequestsTo`](crate::model::RedirectAllRequestsTo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) host_name: std::option::Option<std::string::String>,
@@ -5073,7 +5289,7 @@ pub mod redirect_all_requests_to {
             self.protocol = input;
             self
         }
-        /// Consumes the builder and constructs a [`RedirectAllRequestsTo`](crate::model::RedirectAllRequestsTo)
+        /// Consumes the builder and constructs a [`RedirectAllRequestsTo`](crate::model::RedirectAllRequestsTo).
         pub fn build(self) -> crate::model::RedirectAllRequestsTo {
             crate::model::RedirectAllRequestsTo {
                 host_name: self.host_name,
@@ -5083,7 +5299,7 @@ pub mod redirect_all_requests_to {
     }
 }
 impl RedirectAllRequestsTo {
-    /// Creates a new builder-style object to manufacture [`RedirectAllRequestsTo`](crate::model::RedirectAllRequestsTo)
+    /// Creates a new builder-style object to manufacture [`RedirectAllRequestsTo`](crate::model::RedirectAllRequestsTo).
     pub fn builder() -> crate::model::redirect_all_requests_to::Builder {
         crate::model::redirect_all_requests_to::Builder::default()
     }
@@ -5096,6 +5312,7 @@ pub struct IndexDocument {
     /// <p>A suffix that is appended to a request that is for a directory on the website endpoint (for example,if the suffix is index.html and you make a request to samplebucket/images/ the data that is returned will be for the object with the key name images/index.html) The suffix must not be empty and must not include a slash character.</p> <important>
     /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
     /// </important>
+    #[doc(hidden)]
     pub suffix: std::option::Option<std::string::String>,
 }
 impl IndexDocument {
@@ -5113,11 +5330,10 @@ impl std::fmt::Debug for IndexDocument {
         formatter.finish()
     }
 }
-/// See [`IndexDocument`](crate::model::IndexDocument)
+/// See [`IndexDocument`](crate::model::IndexDocument).
 pub mod index_document {
 
-    /// A builder for [`IndexDocument`](crate::model::IndexDocument)
-    #[non_exhaustive]
+    /// A builder for [`IndexDocument`](crate::model::IndexDocument).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suffix: std::option::Option<std::string::String>,
@@ -5137,7 +5353,7 @@ pub mod index_document {
             self.suffix = input;
             self
         }
-        /// Consumes the builder and constructs a [`IndexDocument`](crate::model::IndexDocument)
+        /// Consumes the builder and constructs a [`IndexDocument`](crate::model::IndexDocument).
         pub fn build(self) -> crate::model::IndexDocument {
             crate::model::IndexDocument {
                 suffix: self.suffix,
@@ -5146,7 +5362,7 @@ pub mod index_document {
     }
 }
 impl IndexDocument {
-    /// Creates a new builder-style object to manufacture [`IndexDocument`](crate::model::IndexDocument)
+    /// Creates a new builder-style object to manufacture [`IndexDocument`](crate::model::IndexDocument).
     pub fn builder() -> crate::model::index_document::Builder {
         crate::model::index_document::Builder::default()
     }
@@ -5159,6 +5375,7 @@ pub struct ErrorDocument {
     /// <p>The object key name to use when a 4XX class error occurs.</p> <important>
     /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
     /// </important>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
 }
 impl ErrorDocument {
@@ -5176,11 +5393,10 @@ impl std::fmt::Debug for ErrorDocument {
         formatter.finish()
     }
 }
-/// See [`ErrorDocument`](crate::model::ErrorDocument)
+/// See [`ErrorDocument`](crate::model::ErrorDocument).
 pub mod error_document {
 
-    /// A builder for [`ErrorDocument`](crate::model::ErrorDocument)
-    #[non_exhaustive]
+    /// A builder for [`ErrorDocument`](crate::model::ErrorDocument).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -5200,14 +5416,14 @@ pub mod error_document {
             self.key = input;
             self
         }
-        /// Consumes the builder and constructs a [`ErrorDocument`](crate::model::ErrorDocument)
+        /// Consumes the builder and constructs a [`ErrorDocument`](crate::model::ErrorDocument).
         pub fn build(self) -> crate::model::ErrorDocument {
             crate::model::ErrorDocument { key: self.key }
         }
     }
 }
 impl ErrorDocument {
-    /// Creates a new builder-style object to manufacture [`ErrorDocument`](crate::model::ErrorDocument)
+    /// Creates a new builder-style object to manufacture [`ErrorDocument`](crate::model::ErrorDocument).
     pub fn builder() -> crate::model::error_document::Builder {
         crate::model::error_document::Builder::default()
     }
@@ -5218,8 +5434,10 @@ impl ErrorDocument {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VersioningConfiguration {
     /// <p>Specifies whether MFA delete is enabled in the bucket versioning configuration. This element is only returned if the bucket has been configured with MFA delete. If the bucket has never been so configured, this element is not returned.</p>
+    #[doc(hidden)]
     pub mfa_delete: std::option::Option<crate::model::MfaDelete>,
     /// <p>The versioning state of the bucket.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::BucketVersioningStatus>,
 }
 impl VersioningConfiguration {
@@ -5240,11 +5458,10 @@ impl std::fmt::Debug for VersioningConfiguration {
         formatter.finish()
     }
 }
-/// See [`VersioningConfiguration`](crate::model::VersioningConfiguration)
+/// See [`VersioningConfiguration`](crate::model::VersioningConfiguration).
 pub mod versioning_configuration {
 
-    /// A builder for [`VersioningConfiguration`](crate::model::VersioningConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`VersioningConfiguration`](crate::model::VersioningConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mfa_delete: std::option::Option<crate::model::MfaDelete>,
@@ -5277,7 +5494,7 @@ pub mod versioning_configuration {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`VersioningConfiguration`](crate::model::VersioningConfiguration)
+        /// Consumes the builder and constructs a [`VersioningConfiguration`](crate::model::VersioningConfiguration).
         pub fn build(self) -> crate::model::VersioningConfiguration {
             crate::model::VersioningConfiguration {
                 mfa_delete: self.mfa_delete,
@@ -5287,7 +5504,7 @@ pub mod versioning_configuration {
     }
 }
 impl VersioningConfiguration {
-    /// Creates a new builder-style object to manufacture [`VersioningConfiguration`](crate::model::VersioningConfiguration)
+    /// Creates a new builder-style object to manufacture [`VersioningConfiguration`](crate::model::VersioningConfiguration).
     pub fn builder() -> crate::model::versioning_configuration::Builder {
         crate::model::versioning_configuration::Builder::default()
     }
@@ -5408,6 +5625,7 @@ impl AsRef<str> for MfaDelete {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RequestPaymentConfiguration {
     /// <p>Specifies who pays for the download and request fees.</p>
+    #[doc(hidden)]
     pub payer: std::option::Option<crate::model::Payer>,
 }
 impl RequestPaymentConfiguration {
@@ -5423,11 +5641,10 @@ impl std::fmt::Debug for RequestPaymentConfiguration {
         formatter.finish()
     }
 }
-/// See [`RequestPaymentConfiguration`](crate::model::RequestPaymentConfiguration)
+/// See [`RequestPaymentConfiguration`](crate::model::RequestPaymentConfiguration).
 pub mod request_payment_configuration {
 
-    /// A builder for [`RequestPaymentConfiguration`](crate::model::RequestPaymentConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`RequestPaymentConfiguration`](crate::model::RequestPaymentConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) payer: std::option::Option<crate::model::Payer>,
@@ -5443,14 +5660,14 @@ pub mod request_payment_configuration {
             self.payer = input;
             self
         }
-        /// Consumes the builder and constructs a [`RequestPaymentConfiguration`](crate::model::RequestPaymentConfiguration)
+        /// Consumes the builder and constructs a [`RequestPaymentConfiguration`](crate::model::RequestPaymentConfiguration).
         pub fn build(self) -> crate::model::RequestPaymentConfiguration {
             crate::model::RequestPaymentConfiguration { payer: self.payer }
         }
     }
 }
 impl RequestPaymentConfiguration {
-    /// Creates a new builder-style object to manufacture [`RequestPaymentConfiguration`](crate::model::RequestPaymentConfiguration)
+    /// Creates a new builder-style object to manufacture [`RequestPaymentConfiguration`](crate::model::RequestPaymentConfiguration).
     pub fn builder() -> crate::model::request_payment_configuration::Builder {
         crate::model::request_payment_configuration::Builder::default()
     }
@@ -5516,8 +5733,10 @@ impl AsRef<str> for Payer {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationConfiguration {
     /// <p>The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-how-setup.html">How to Set Up Replication</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<std::string::String>,
     /// <p>A container for one or more replication rules. A replication configuration must have at least one rule and can contain a maximum of 1,000 rules. </p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::ReplicationRule>>,
 }
 impl ReplicationConfiguration {
@@ -5538,11 +5757,10 @@ impl std::fmt::Debug for ReplicationConfiguration {
         formatter.finish()
     }
 }
-/// See [`ReplicationConfiguration`](crate::model::ReplicationConfiguration)
+/// See [`ReplicationConfiguration`](crate::model::ReplicationConfiguration).
 pub mod replication_configuration {
 
-    /// A builder for [`ReplicationConfiguration`](crate::model::ReplicationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationConfiguration`](crate::model::ReplicationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role: std::option::Option<std::string::String>,
@@ -5578,7 +5796,7 @@ pub mod replication_configuration {
             self.rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationConfiguration`](crate::model::ReplicationConfiguration)
+        /// Consumes the builder and constructs a [`ReplicationConfiguration`](crate::model::ReplicationConfiguration).
         pub fn build(self) -> crate::model::ReplicationConfiguration {
             crate::model::ReplicationConfiguration {
                 role: self.role,
@@ -5588,7 +5806,7 @@ pub mod replication_configuration {
     }
 }
 impl ReplicationConfiguration {
-    /// Creates a new builder-style object to manufacture [`ReplicationConfiguration`](crate::model::ReplicationConfiguration)
+    /// Creates a new builder-style object to manufacture [`ReplicationConfiguration`](crate::model::ReplicationConfiguration).
     pub fn builder() -> crate::model::replication_configuration::Builder {
         crate::model::replication_configuration::Builder::default()
     }
@@ -5599,28 +5817,38 @@ impl ReplicationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationRule {
     /// <p>A unique identifier for the rule. The maximum value is 255 characters.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The priority indicates which rule has precedence whenever two or more replication rules conflict. Amazon S3 will attempt to replicate objects according to all replication rules. However, if there are two or more rules with the same destination bucket, then objects will be replicated according to the rule with the highest priority. The higher the number, the higher the priority. </p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html">Replication</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub priority: i32,
     /// <p>An object key name prefix that identifies the object or objects to which the rule applies. The maximum prefix length is 1,024 characters. To include all objects in a bucket, specify an empty string. </p> <important>
     /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
     /// </important>
+    #[deprecated]
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>A filter that identifies the subset of objects to which the replication rule applies. A <code>Filter</code> must specify exactly one <code>Prefix</code>, <code>Tag</code>, or an <code>And</code> child element.</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<crate::model::ReplicationRuleFilter>,
     /// <p>Specifies whether the rule is enabled.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ReplicationRuleStatus>,
     /// <p>A container that describes additional filters for identifying the source objects that you want to replicate. You can choose to enable or disable the replication of these objects. Currently, Amazon S3 supports only the filter that you can specify for objects created with server-side encryption using a customer managed key stored in Amazon Web Services Key Management Service (SSE-KMS).</p>
+    #[doc(hidden)]
     pub source_selection_criteria: std::option::Option<crate::model::SourceSelectionCriteria>,
     /// <p></p>
+    #[doc(hidden)]
     pub existing_object_replication: std::option::Option<crate::model::ExistingObjectReplication>,
     /// <p>A container for information about the replication destination and its configurations including enabling the S3 Replication Time Control (S3 RTC).</p>
+    #[doc(hidden)]
     pub destination: std::option::Option<crate::model::Destination>,
     /// <p>Specifies whether Amazon S3 replicates delete markers. If you specify a <code>Filter</code> in your replication configuration, you must also include a <code>DeleteMarkerReplication</code> element. If your <code>Filter</code> includes a <code>Tag</code> element, the <code>DeleteMarkerReplication</code> <code>Status</code> must be set to Disabled, because Amazon S3 does not support replicating delete markers for tag-based rules. For an example configuration, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-config-min-rule-config">Basic Rule Configuration</a>. </p>
     /// <p>For more information about delete marker replication, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/delete-marker-replication.html">Basic Rule Configuration</a>. </p> <note>
     /// <p>If you are using an earlier version of the replication configuration, Amazon S3 handles replication of delete markers differently. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-backward-compat-considerations">Backward Compatibility</a>.</p>
     /// </note>
+    #[doc(hidden)]
     pub delete_marker_replication: std::option::Option<crate::model::DeleteMarkerReplication>,
 }
 impl ReplicationRule {
@@ -5636,6 +5864,7 @@ impl ReplicationRule {
     /// <p>An object key name prefix that identifies the object or objects to which the rule applies. The maximum prefix length is 1,024 characters. To include all objects in a bucket, specify an empty string. </p> <important>
     /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
     /// </important>
+    #[deprecated]
     pub fn prefix(&self) -> std::option::Option<&str> {
         self.prefix.as_deref()
     }
@@ -5691,11 +5920,10 @@ impl std::fmt::Debug for ReplicationRule {
         formatter.finish()
     }
 }
-/// See [`ReplicationRule`](crate::model::ReplicationRule)
+/// See [`ReplicationRule`](crate::model::ReplicationRule).
 pub mod replication_rule {
 
-    /// A builder for [`ReplicationRule`](crate::model::ReplicationRule)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationRule`](crate::model::ReplicationRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -5737,6 +5965,7 @@ pub mod replication_rule {
         /// <p>An object key name prefix that identifies the object or objects to which the rule applies. The maximum prefix length is 1,024 characters. To include all objects in a bucket, specify an empty string. </p> <important>
         /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
         /// </important>
+        #[deprecated]
         pub fn prefix(mut self, input: impl Into<std::string::String>) -> Self {
             self.prefix = Some(input.into());
             self
@@ -5744,6 +5973,7 @@ pub mod replication_rule {
         /// <p>An object key name prefix that identifies the object or objects to which the rule applies. The maximum prefix length is 1,024 characters. To include all objects in a bucket, specify an empty string. </p> <important>
         /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
         /// </important>
+        #[deprecated]
         pub fn set_prefix(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.prefix = input;
             self
@@ -5841,7 +6071,7 @@ pub mod replication_rule {
             self.delete_marker_replication = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationRule`](crate::model::ReplicationRule)
+        /// Consumes the builder and constructs a [`ReplicationRule`](crate::model::ReplicationRule).
         pub fn build(self) -> crate::model::ReplicationRule {
             crate::model::ReplicationRule {
                 id: self.id,
@@ -5858,7 +6088,7 @@ pub mod replication_rule {
     }
 }
 impl ReplicationRule {
-    /// Creates a new builder-style object to manufacture [`ReplicationRule`](crate::model::ReplicationRule)
+    /// Creates a new builder-style object to manufacture [`ReplicationRule`](crate::model::ReplicationRule).
     pub fn builder() -> crate::model::replication_rule::Builder {
         crate::model::replication_rule::Builder::default()
     }
@@ -5874,6 +6104,7 @@ pub struct DeleteMarkerReplication {
     /// <p>Indicates whether to replicate delete markers.</p> <note>
     /// <p>Indicates whether to replicate delete markers.</p>
     /// </note>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DeleteMarkerReplicationStatus>,
 }
 impl DeleteMarkerReplication {
@@ -5891,11 +6122,10 @@ impl std::fmt::Debug for DeleteMarkerReplication {
         formatter.finish()
     }
 }
-/// See [`DeleteMarkerReplication`](crate::model::DeleteMarkerReplication)
+/// See [`DeleteMarkerReplication`](crate::model::DeleteMarkerReplication).
 pub mod delete_marker_replication {
 
-    /// A builder for [`DeleteMarkerReplication`](crate::model::DeleteMarkerReplication)
-    #[non_exhaustive]
+    /// A builder for [`DeleteMarkerReplication`](crate::model::DeleteMarkerReplication).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::DeleteMarkerReplicationStatus>,
@@ -5918,7 +6148,7 @@ pub mod delete_marker_replication {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteMarkerReplication`](crate::model::DeleteMarkerReplication)
+        /// Consumes the builder and constructs a [`DeleteMarkerReplication`](crate::model::DeleteMarkerReplication).
         pub fn build(self) -> crate::model::DeleteMarkerReplication {
             crate::model::DeleteMarkerReplication {
                 status: self.status,
@@ -5927,7 +6157,7 @@ pub mod delete_marker_replication {
     }
 }
 impl DeleteMarkerReplication {
-    /// Creates a new builder-style object to manufacture [`DeleteMarkerReplication`](crate::model::DeleteMarkerReplication)
+    /// Creates a new builder-style object to manufacture [`DeleteMarkerReplication`](crate::model::DeleteMarkerReplication).
     pub fn builder() -> crate::model::delete_marker_replication::Builder {
         crate::model::delete_marker_replication::Builder::default()
     }
@@ -5993,19 +6223,26 @@ impl AsRef<str> for DeleteMarkerReplicationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Destination {
     /// <p> The Amazon Resource Name (ARN) of the bucket where you want Amazon S3 to store the results.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>Destination bucket owner account ID. In a cross-account scenario, if you direct Amazon S3 to change replica ownership to the Amazon Web Services account that owns the destination bucket by specifying the <code>AccessControlTranslation</code> property, this is the account ID of the destination bucket owner. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-change-owner.html">Replication Additional Configuration: Changing the Replica Owner</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub account: std::option::Option<std::string::String>,
     /// <p> The storage class to use when replicating objects, such as S3 Standard or reduced redundancy. By default, Amazon S3 uses the storage class of the source object to create the object replica. </p>
     /// <p>For valid values, see the <code>StorageClass</code> element of the <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html">PUT Bucket replication</a> action in the <i>Amazon S3 API Reference</i>.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::StorageClass>,
     /// <p>Specify this only in a cross-account scenario (where source and destination bucket owners are not the same), and you want to change replica ownership to the Amazon Web Services account that owns the destination bucket. If this is not specified in the replication configuration, the replicas are owned by same Amazon Web Services account that owns the source object.</p>
+    #[doc(hidden)]
     pub access_control_translation: std::option::Option<crate::model::AccessControlTranslation>,
     /// <p>A container that provides information about encryption. If <code>SourceSelectionCriteria</code> is specified, you must specify this element.</p>
+    #[doc(hidden)]
     pub encryption_configuration: std::option::Option<crate::model::EncryptionConfiguration>,
     /// <p> A container specifying S3 Replication Time Control (S3 RTC), including whether S3 RTC is enabled and the time when all objects and operations on objects must be replicated. Must be specified together with a <code>Metrics</code> block. </p>
+    #[doc(hidden)]
     pub replication_time: std::option::Option<crate::model::ReplicationTime>,
     /// <p> A container specifying replication metrics-related settings enabling replication metrics and events. </p>
+    #[doc(hidden)]
     pub metrics: std::option::Option<crate::model::Metrics>,
 }
 impl Destination {
@@ -6059,11 +6296,10 @@ impl std::fmt::Debug for Destination {
         formatter.finish()
     }
 }
-/// See [`Destination`](crate::model::Destination)
+/// See [`Destination`](crate::model::Destination).
 pub mod destination {
 
-    /// A builder for [`Destination`](crate::model::Destination)
-    #[non_exhaustive]
+    /// A builder for [`Destination`](crate::model::Destination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -6167,7 +6403,7 @@ pub mod destination {
             self.metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`Destination`](crate::model::Destination)
+        /// Consumes the builder and constructs a [`Destination`](crate::model::Destination).
         pub fn build(self) -> crate::model::Destination {
             crate::model::Destination {
                 bucket: self.bucket,
@@ -6182,7 +6418,7 @@ pub mod destination {
     }
 }
 impl Destination {
-    /// Creates a new builder-style object to manufacture [`Destination`](crate::model::Destination)
+    /// Creates a new builder-style object to manufacture [`Destination`](crate::model::Destination).
     pub fn builder() -> crate::model::destination::Builder {
         crate::model::destination::Builder::default()
     }
@@ -6193,8 +6429,10 @@ impl Destination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Metrics {
     /// <p> Specifies whether the replication metrics are enabled. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::MetricsStatus>,
     /// <p> A container specifying the time threshold for emitting the <code>s3:Replication:OperationMissedThreshold</code> event. </p>
+    #[doc(hidden)]
     pub event_threshold: std::option::Option<crate::model::ReplicationTimeValue>,
 }
 impl Metrics {
@@ -6215,11 +6453,10 @@ impl std::fmt::Debug for Metrics {
         formatter.finish()
     }
 }
-/// See [`Metrics`](crate::model::Metrics)
+/// See [`Metrics`](crate::model::Metrics).
 pub mod metrics {
 
-    /// A builder for [`Metrics`](crate::model::Metrics)
-    #[non_exhaustive]
+    /// A builder for [`Metrics`](crate::model::Metrics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::MetricsStatus>,
@@ -6252,7 +6489,7 @@ pub mod metrics {
             self.event_threshold = input;
             self
         }
-        /// Consumes the builder and constructs a [`Metrics`](crate::model::Metrics)
+        /// Consumes the builder and constructs a [`Metrics`](crate::model::Metrics).
         pub fn build(self) -> crate::model::Metrics {
             crate::model::Metrics {
                 status: self.status,
@@ -6262,7 +6499,7 @@ pub mod metrics {
     }
 }
 impl Metrics {
-    /// Creates a new builder-style object to manufacture [`Metrics`](crate::model::Metrics)
+    /// Creates a new builder-style object to manufacture [`Metrics`](crate::model::Metrics).
     pub fn builder() -> crate::model::metrics::Builder {
         crate::model::metrics::Builder::default()
     }
@@ -6274,6 +6511,7 @@ impl Metrics {
 pub struct ReplicationTimeValue {
     /// <p> Contains an integer specifying time in minutes. </p>
     /// <p> Valid value: 15</p>
+    #[doc(hidden)]
     pub minutes: i32,
 }
 impl ReplicationTimeValue {
@@ -6290,11 +6528,10 @@ impl std::fmt::Debug for ReplicationTimeValue {
         formatter.finish()
     }
 }
-/// See [`ReplicationTimeValue`](crate::model::ReplicationTimeValue)
+/// See [`ReplicationTimeValue`](crate::model::ReplicationTimeValue).
 pub mod replication_time_value {
 
-    /// A builder for [`ReplicationTimeValue`](crate::model::ReplicationTimeValue)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationTimeValue`](crate::model::ReplicationTimeValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) minutes: std::option::Option<i32>,
@@ -6312,7 +6549,7 @@ pub mod replication_time_value {
             self.minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationTimeValue`](crate::model::ReplicationTimeValue)
+        /// Consumes the builder and constructs a [`ReplicationTimeValue`](crate::model::ReplicationTimeValue).
         pub fn build(self) -> crate::model::ReplicationTimeValue {
             crate::model::ReplicationTimeValue {
                 minutes: self.minutes.unwrap_or_default(),
@@ -6321,7 +6558,7 @@ pub mod replication_time_value {
     }
 }
 impl ReplicationTimeValue {
-    /// Creates a new builder-style object to manufacture [`ReplicationTimeValue`](crate::model::ReplicationTimeValue)
+    /// Creates a new builder-style object to manufacture [`ReplicationTimeValue`](crate::model::ReplicationTimeValue).
     pub fn builder() -> crate::model::replication_time_value::Builder {
         crate::model::replication_time_value::Builder::default()
     }
@@ -6387,8 +6624,10 @@ impl AsRef<str> for MetricsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationTime {
     /// <p> Specifies whether the replication time is enabled. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ReplicationTimeStatus>,
     /// <p> A container specifying the time by which replication should be complete for all objects and operations on objects. </p>
+    #[doc(hidden)]
     pub time: std::option::Option<crate::model::ReplicationTimeValue>,
 }
 impl ReplicationTime {
@@ -6409,11 +6648,10 @@ impl std::fmt::Debug for ReplicationTime {
         formatter.finish()
     }
 }
-/// See [`ReplicationTime`](crate::model::ReplicationTime)
+/// See [`ReplicationTime`](crate::model::ReplicationTime).
 pub mod replication_time {
 
-    /// A builder for [`ReplicationTime`](crate::model::ReplicationTime)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationTime`](crate::model::ReplicationTime).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ReplicationTimeStatus>,
@@ -6446,7 +6684,7 @@ pub mod replication_time {
             self.time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationTime`](crate::model::ReplicationTime)
+        /// Consumes the builder and constructs a [`ReplicationTime`](crate::model::ReplicationTime).
         pub fn build(self) -> crate::model::ReplicationTime {
             crate::model::ReplicationTime {
                 status: self.status,
@@ -6456,7 +6694,7 @@ pub mod replication_time {
     }
 }
 impl ReplicationTime {
-    /// Creates a new builder-style object to manufacture [`ReplicationTime`](crate::model::ReplicationTime)
+    /// Creates a new builder-style object to manufacture [`ReplicationTime`](crate::model::ReplicationTime).
     pub fn builder() -> crate::model::replication_time::Builder {
         crate::model::replication_time::Builder::default()
     }
@@ -6522,6 +6760,7 @@ impl AsRef<str> for ReplicationTimeStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EncryptionConfiguration {
     /// <p>Specifies the ID (Key ARN or Alias ARN) of the customer managed Amazon Web Services KMS key stored in Amazon Web Services Key Management Service (KMS) for the destination bucket. Amazon S3 uses this key to encrypt replica objects. Amazon S3 only supports symmetric, customer managed KMS keys. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using symmetric and asymmetric keys</a> in the <i>Amazon Web Services Key Management Service Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub replica_kms_key_id: std::option::Option<std::string::String>,
 }
 impl EncryptionConfiguration {
@@ -6537,11 +6776,10 @@ impl std::fmt::Debug for EncryptionConfiguration {
         formatter.finish()
     }
 }
-/// See [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
+/// See [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
 pub mod encryption_configuration {
 
-    /// A builder for [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replica_kms_key_id: std::option::Option<std::string::String>,
@@ -6560,7 +6798,7 @@ pub mod encryption_configuration {
             self.replica_kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
+        /// Consumes the builder and constructs a [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
         pub fn build(self) -> crate::model::EncryptionConfiguration {
             crate::model::EncryptionConfiguration {
                 replica_kms_key_id: self.replica_kms_key_id,
@@ -6569,7 +6807,7 @@ pub mod encryption_configuration {
     }
 }
 impl EncryptionConfiguration {
-    /// Creates a new builder-style object to manufacture [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
+    /// Creates a new builder-style object to manufacture [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
     pub fn builder() -> crate::model::encryption_configuration::Builder {
         crate::model::encryption_configuration::Builder::default()
     }
@@ -6580,6 +6818,7 @@ impl EncryptionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccessControlTranslation {
     /// <p>Specifies the replica ownership. For default and valid values, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html">PUT bucket replication</a> in the <i>Amazon S3 API Reference</i>.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::OwnerOverride>,
 }
 impl AccessControlTranslation {
@@ -6595,11 +6834,10 @@ impl std::fmt::Debug for AccessControlTranslation {
         formatter.finish()
     }
 }
-/// See [`AccessControlTranslation`](crate::model::AccessControlTranslation)
+/// See [`AccessControlTranslation`](crate::model::AccessControlTranslation).
 pub mod access_control_translation {
 
-    /// A builder for [`AccessControlTranslation`](crate::model::AccessControlTranslation)
-    #[non_exhaustive]
+    /// A builder for [`AccessControlTranslation`](crate::model::AccessControlTranslation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner: std::option::Option<crate::model::OwnerOverride>,
@@ -6618,14 +6856,14 @@ pub mod access_control_translation {
             self.owner = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessControlTranslation`](crate::model::AccessControlTranslation)
+        /// Consumes the builder and constructs a [`AccessControlTranslation`](crate::model::AccessControlTranslation).
         pub fn build(self) -> crate::model::AccessControlTranslation {
             crate::model::AccessControlTranslation { owner: self.owner }
         }
     }
 }
 impl AccessControlTranslation {
-    /// Creates a new builder-style object to manufacture [`AccessControlTranslation`](crate::model::AccessControlTranslation)
+    /// Creates a new builder-style object to manufacture [`AccessControlTranslation`](crate::model::AccessControlTranslation).
     pub fn builder() -> crate::model::access_control_translation::Builder {
         crate::model::access_control_translation::Builder::default()
     }
@@ -6687,6 +6925,7 @@ impl AsRef<str> for OwnerOverride {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExistingObjectReplication {
     /// <p></p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ExistingObjectReplicationStatus>,
 }
 impl ExistingObjectReplication {
@@ -6702,11 +6941,10 @@ impl std::fmt::Debug for ExistingObjectReplication {
         formatter.finish()
     }
 }
-/// See [`ExistingObjectReplication`](crate::model::ExistingObjectReplication)
+/// See [`ExistingObjectReplication`](crate::model::ExistingObjectReplication).
 pub mod existing_object_replication {
 
-    /// A builder for [`ExistingObjectReplication`](crate::model::ExistingObjectReplication)
-    #[non_exhaustive]
+    /// A builder for [`ExistingObjectReplication`](crate::model::ExistingObjectReplication).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ExistingObjectReplicationStatus>,
@@ -6725,7 +6963,7 @@ pub mod existing_object_replication {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExistingObjectReplication`](crate::model::ExistingObjectReplication)
+        /// Consumes the builder and constructs a [`ExistingObjectReplication`](crate::model::ExistingObjectReplication).
         pub fn build(self) -> crate::model::ExistingObjectReplication {
             crate::model::ExistingObjectReplication {
                 status: self.status,
@@ -6734,7 +6972,7 @@ pub mod existing_object_replication {
     }
 }
 impl ExistingObjectReplication {
-    /// Creates a new builder-style object to manufacture [`ExistingObjectReplication`](crate::model::ExistingObjectReplication)
+    /// Creates a new builder-style object to manufacture [`ExistingObjectReplication`](crate::model::ExistingObjectReplication).
     pub fn builder() -> crate::model::existing_object_replication::Builder {
         crate::model::existing_object_replication::Builder::default()
     }
@@ -6800,10 +7038,12 @@ impl AsRef<str> for ExistingObjectReplicationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceSelectionCriteria {
     /// <p> A container for filter information for the selection of Amazon S3 objects encrypted with Amazon Web Services KMS. If you include <code>SourceSelectionCriteria</code> in the replication configuration, this element is required. </p>
+    #[doc(hidden)]
     pub sse_kms_encrypted_objects: std::option::Option<crate::model::SseKmsEncryptedObjects>,
     /// <p>A filter that you can specify for selections for modifications on replicas. Amazon S3 doesn't replicate replica modifications by default. In the latest version of replication configuration (when <code>Filter</code> is specified), you can specify this element and set the status to <code>Enabled</code> to replicate modifications on replicas. </p> <note>
     /// <p> If you don't specify the <code>Filter</code> element, Amazon S3 assumes that the replication configuration is the earlier version, V1. In the earlier version, this element is not allowed</p>
     /// </note>
+    #[doc(hidden)]
     pub replica_modifications: std::option::Option<crate::model::ReplicaModifications>,
 }
 impl SourceSelectionCriteria {
@@ -6830,11 +7070,10 @@ impl std::fmt::Debug for SourceSelectionCriteria {
         formatter.finish()
     }
 }
-/// See [`SourceSelectionCriteria`](crate::model::SourceSelectionCriteria)
+/// See [`SourceSelectionCriteria`](crate::model::SourceSelectionCriteria).
 pub mod source_selection_criteria {
 
-    /// A builder for [`SourceSelectionCriteria`](crate::model::SourceSelectionCriteria)
-    #[non_exhaustive]
+    /// A builder for [`SourceSelectionCriteria`](crate::model::SourceSelectionCriteria).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sse_kms_encrypted_objects:
@@ -6875,7 +7114,7 @@ pub mod source_selection_criteria {
             self.replica_modifications = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceSelectionCriteria`](crate::model::SourceSelectionCriteria)
+        /// Consumes the builder and constructs a [`SourceSelectionCriteria`](crate::model::SourceSelectionCriteria).
         pub fn build(self) -> crate::model::SourceSelectionCriteria {
             crate::model::SourceSelectionCriteria {
                 sse_kms_encrypted_objects: self.sse_kms_encrypted_objects,
@@ -6885,7 +7124,7 @@ pub mod source_selection_criteria {
     }
 }
 impl SourceSelectionCriteria {
-    /// Creates a new builder-style object to manufacture [`SourceSelectionCriteria`](crate::model::SourceSelectionCriteria)
+    /// Creates a new builder-style object to manufacture [`SourceSelectionCriteria`](crate::model::SourceSelectionCriteria).
     pub fn builder() -> crate::model::source_selection_criteria::Builder {
         crate::model::source_selection_criteria::Builder::default()
     }
@@ -6898,6 +7137,7 @@ impl SourceSelectionCriteria {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicaModifications {
     /// <p>Specifies whether Amazon S3 replicates modifications on replicas.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ReplicaModificationsStatus>,
 }
 impl ReplicaModifications {
@@ -6913,11 +7153,10 @@ impl std::fmt::Debug for ReplicaModifications {
         formatter.finish()
     }
 }
-/// See [`ReplicaModifications`](crate::model::ReplicaModifications)
+/// See [`ReplicaModifications`](crate::model::ReplicaModifications).
 pub mod replica_modifications {
 
-    /// A builder for [`ReplicaModifications`](crate::model::ReplicaModifications)
-    #[non_exhaustive]
+    /// A builder for [`ReplicaModifications`](crate::model::ReplicaModifications).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ReplicaModificationsStatus>,
@@ -6936,7 +7175,7 @@ pub mod replica_modifications {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicaModifications`](crate::model::ReplicaModifications)
+        /// Consumes the builder and constructs a [`ReplicaModifications`](crate::model::ReplicaModifications).
         pub fn build(self) -> crate::model::ReplicaModifications {
             crate::model::ReplicaModifications {
                 status: self.status,
@@ -6945,7 +7184,7 @@ pub mod replica_modifications {
     }
 }
 impl ReplicaModifications {
-    /// Creates a new builder-style object to manufacture [`ReplicaModifications`](crate::model::ReplicaModifications)
+    /// Creates a new builder-style object to manufacture [`ReplicaModifications`](crate::model::ReplicaModifications).
     pub fn builder() -> crate::model::replica_modifications::Builder {
         crate::model::replica_modifications::Builder::default()
     }
@@ -7011,6 +7250,7 @@ impl AsRef<str> for ReplicaModificationsStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SseKmsEncryptedObjects {
     /// <p>Specifies whether Amazon S3 replicates objects created with server-side encryption using an Amazon Web Services KMS key stored in Amazon Web Services Key Management Service.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::SseKmsEncryptedObjectsStatus>,
 }
 impl SseKmsEncryptedObjects {
@@ -7026,11 +7266,10 @@ impl std::fmt::Debug for SseKmsEncryptedObjects {
         formatter.finish()
     }
 }
-/// See [`SseKmsEncryptedObjects`](crate::model::SseKmsEncryptedObjects)
+/// See [`SseKmsEncryptedObjects`](crate::model::SseKmsEncryptedObjects).
 pub mod sse_kms_encrypted_objects {
 
-    /// A builder for [`SseKmsEncryptedObjects`](crate::model::SseKmsEncryptedObjects)
-    #[non_exhaustive]
+    /// A builder for [`SseKmsEncryptedObjects`](crate::model::SseKmsEncryptedObjects).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::SseKmsEncryptedObjectsStatus>,
@@ -7049,7 +7288,7 @@ pub mod sse_kms_encrypted_objects {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`SseKmsEncryptedObjects`](crate::model::SseKmsEncryptedObjects)
+        /// Consumes the builder and constructs a [`SseKmsEncryptedObjects`](crate::model::SseKmsEncryptedObjects).
         pub fn build(self) -> crate::model::SseKmsEncryptedObjects {
             crate::model::SseKmsEncryptedObjects {
                 status: self.status,
@@ -7058,7 +7297,7 @@ pub mod sse_kms_encrypted_objects {
     }
 }
 impl SseKmsEncryptedObjects {
-    /// Creates a new builder-style object to manufacture [`SseKmsEncryptedObjects`](crate::model::SseKmsEncryptedObjects)
+    /// Creates a new builder-style object to manufacture [`SseKmsEncryptedObjects`](crate::model::SseKmsEncryptedObjects).
     pub fn builder() -> crate::model::sse_kms_encrypted_objects::Builder {
         crate::model::sse_kms_encrypted_objects::Builder::default()
     }
@@ -7257,8 +7496,10 @@ impl ReplicationRuleFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationRuleAndOperator {
     /// <p>An object key name prefix that identifies the subset of objects to which the rule applies.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>An array of tags containing key and value pairs.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ReplicationRuleAndOperator {
@@ -7279,11 +7520,10 @@ impl std::fmt::Debug for ReplicationRuleAndOperator {
         formatter.finish()
     }
 }
-/// See [`ReplicationRuleAndOperator`](crate::model::ReplicationRuleAndOperator)
+/// See [`ReplicationRuleAndOperator`](crate::model::ReplicationRuleAndOperator).
 pub mod replication_rule_and_operator {
 
-    /// A builder for [`ReplicationRuleAndOperator`](crate::model::ReplicationRuleAndOperator)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationRuleAndOperator`](crate::model::ReplicationRuleAndOperator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prefix: std::option::Option<std::string::String>,
@@ -7319,7 +7559,7 @@ pub mod replication_rule_and_operator {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationRuleAndOperator`](crate::model::ReplicationRuleAndOperator)
+        /// Consumes the builder and constructs a [`ReplicationRuleAndOperator`](crate::model::ReplicationRuleAndOperator).
         pub fn build(self) -> crate::model::ReplicationRuleAndOperator {
             crate::model::ReplicationRuleAndOperator {
                 prefix: self.prefix,
@@ -7329,7 +7569,7 @@ pub mod replication_rule_and_operator {
     }
 }
 impl ReplicationRuleAndOperator {
-    /// Creates a new builder-style object to manufacture [`ReplicationRuleAndOperator`](crate::model::ReplicationRuleAndOperator)
+    /// Creates a new builder-style object to manufacture [`ReplicationRuleAndOperator`](crate::model::ReplicationRuleAndOperator).
     pub fn builder() -> crate::model::replication_rule_and_operator::Builder {
         crate::model::replication_rule_and_operator::Builder::default()
     }
@@ -7340,6 +7580,7 @@ impl ReplicationRuleAndOperator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OwnershipControls {
     /// <p>The container element for an ownership control rule.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::OwnershipControlsRule>>,
 }
 impl OwnershipControls {
@@ -7355,11 +7596,10 @@ impl std::fmt::Debug for OwnershipControls {
         formatter.finish()
     }
 }
-/// See [`OwnershipControls`](crate::model::OwnershipControls)
+/// See [`OwnershipControls`](crate::model::OwnershipControls).
 pub mod ownership_controls {
 
-    /// A builder for [`OwnershipControls`](crate::model::OwnershipControls)
-    #[non_exhaustive]
+    /// A builder for [`OwnershipControls`](crate::model::OwnershipControls).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rules: std::option::Option<std::vec::Vec<crate::model::OwnershipControlsRule>>,
@@ -7384,14 +7624,14 @@ pub mod ownership_controls {
             self.rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`OwnershipControls`](crate::model::OwnershipControls)
+        /// Consumes the builder and constructs a [`OwnershipControls`](crate::model::OwnershipControls).
         pub fn build(self) -> crate::model::OwnershipControls {
             crate::model::OwnershipControls { rules: self.rules }
         }
     }
 }
 impl OwnershipControls {
-    /// Creates a new builder-style object to manufacture [`OwnershipControls`](crate::model::OwnershipControls)
+    /// Creates a new builder-style object to manufacture [`OwnershipControls`](crate::model::OwnershipControls).
     pub fn builder() -> crate::model::ownership_controls::Builder {
         crate::model::ownership_controls::Builder::default()
     }
@@ -7405,6 +7645,7 @@ pub struct OwnershipControlsRule {
     /// <p>BucketOwnerPreferred - Objects uploaded to the bucket change ownership to the bucket owner if the objects are uploaded with the <code>bucket-owner-full-control</code> canned ACL.</p>
     /// <p>ObjectWriter - The uploading account will own the object if the object is uploaded with the <code>bucket-owner-full-control</code> canned ACL.</p>
     /// <p>BucketOwnerEnforced - Access control lists (ACLs) are disabled and no longer affect permissions. The bucket owner automatically owns and has full control over every object in the bucket. The bucket only accepts PUT requests that don't specify an ACL or bucket owner full control ACLs, such as the <code>bucket-owner-full-control</code> canned ACL or an equivalent form of this ACL expressed in the XML format.</p>
+    #[doc(hidden)]
     pub object_ownership: std::option::Option<crate::model::ObjectOwnership>,
 }
 impl OwnershipControlsRule {
@@ -7423,11 +7664,10 @@ impl std::fmt::Debug for OwnershipControlsRule {
         formatter.finish()
     }
 }
-/// See [`OwnershipControlsRule`](crate::model::OwnershipControlsRule)
+/// See [`OwnershipControlsRule`](crate::model::OwnershipControlsRule).
 pub mod ownership_controls_rule {
 
-    /// A builder for [`OwnershipControlsRule`](crate::model::OwnershipControlsRule)
-    #[non_exhaustive]
+    /// A builder for [`OwnershipControlsRule`](crate::model::OwnershipControlsRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_ownership: std::option::Option<crate::model::ObjectOwnership>,
@@ -7452,7 +7692,7 @@ pub mod ownership_controls_rule {
             self.object_ownership = input;
             self
         }
-        /// Consumes the builder and constructs a [`OwnershipControlsRule`](crate::model::OwnershipControlsRule)
+        /// Consumes the builder and constructs a [`OwnershipControlsRule`](crate::model::OwnershipControlsRule).
         pub fn build(self) -> crate::model::OwnershipControlsRule {
             crate::model::OwnershipControlsRule {
                 object_ownership: self.object_ownership,
@@ -7461,7 +7701,7 @@ pub mod ownership_controls_rule {
     }
 }
 impl OwnershipControlsRule {
-    /// Creates a new builder-style object to manufacture [`OwnershipControlsRule`](crate::model::OwnershipControlsRule)
+    /// Creates a new builder-style object to manufacture [`OwnershipControlsRule`](crate::model::OwnershipControlsRule).
     pub fn builder() -> crate::model::ownership_controls_rule::Builder {
         crate::model::ownership_controls_rule::Builder::default()
     }
@@ -7545,13 +7785,17 @@ impl AsRef<str> for ObjectOwnership {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotificationConfiguration {
     /// <p>The topic to which notifications are sent and the events for which notifications are generated.</p>
+    #[doc(hidden)]
     pub topic_configurations: std::option::Option<std::vec::Vec<crate::model::TopicConfiguration>>,
     /// <p>The Amazon Simple Queue Service queues to publish messages to and the events for which to publish messages.</p>
+    #[doc(hidden)]
     pub queue_configurations: std::option::Option<std::vec::Vec<crate::model::QueueConfiguration>>,
     /// <p>Describes the Lambda functions to invoke and the events for which to invoke them.</p>
+    #[doc(hidden)]
     pub lambda_function_configurations:
         std::option::Option<std::vec::Vec<crate::model::LambdaFunctionConfiguration>>,
     /// <p>Enables delivery of events to Amazon EventBridge.</p>
+    #[doc(hidden)]
     pub event_bridge_configuration: std::option::Option<crate::model::EventBridgeConfiguration>,
 }
 impl NotificationConfiguration {
@@ -7592,11 +7836,10 @@ impl std::fmt::Debug for NotificationConfiguration {
         formatter.finish()
     }
 }
-/// See [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+/// See [`NotificationConfiguration`](crate::model::NotificationConfiguration).
 pub mod notification_configuration {
 
-    /// A builder for [`NotificationConfiguration`](crate::model::NotificationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NotificationConfiguration`](crate::model::NotificationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) topic_configurations:
@@ -7685,7 +7928,7 @@ pub mod notification_configuration {
             self.event_bridge_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+        /// Consumes the builder and constructs a [`NotificationConfiguration`](crate::model::NotificationConfiguration).
         pub fn build(self) -> crate::model::NotificationConfiguration {
             crate::model::NotificationConfiguration {
                 topic_configurations: self.topic_configurations,
@@ -7697,7 +7940,7 @@ pub mod notification_configuration {
     }
 }
 impl NotificationConfiguration {
-    /// Creates a new builder-style object to manufacture [`NotificationConfiguration`](crate::model::NotificationConfiguration)
+    /// Creates a new builder-style object to manufacture [`NotificationConfiguration`](crate::model::NotificationConfiguration).
     pub fn builder() -> crate::model::notification_configuration::Builder {
         crate::model::notification_configuration::Builder::default()
     }
@@ -7713,22 +7956,21 @@ impl std::fmt::Debug for EventBridgeConfiguration {
         formatter.finish()
     }
 }
-/// See [`EventBridgeConfiguration`](crate::model::EventBridgeConfiguration)
+/// See [`EventBridgeConfiguration`](crate::model::EventBridgeConfiguration).
 pub mod event_bridge_configuration {
 
-    /// A builder for [`EventBridgeConfiguration`](crate::model::EventBridgeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`EventBridgeConfiguration`](crate::model::EventBridgeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`EventBridgeConfiguration`](crate::model::EventBridgeConfiguration)
+        /// Consumes the builder and constructs a [`EventBridgeConfiguration`](crate::model::EventBridgeConfiguration).
         pub fn build(self) -> crate::model::EventBridgeConfiguration {
             crate::model::EventBridgeConfiguration {}
         }
     }
 }
 impl EventBridgeConfiguration {
-    /// Creates a new builder-style object to manufacture [`EventBridgeConfiguration`](crate::model::EventBridgeConfiguration)
+    /// Creates a new builder-style object to manufacture [`EventBridgeConfiguration`](crate::model::EventBridgeConfiguration).
     pub fn builder() -> crate::model::event_bridge_configuration::Builder {
         crate::model::event_bridge_configuration::Builder::default()
     }
@@ -7739,12 +7981,16 @@ impl EventBridgeConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionConfiguration {
     /// <p>An optional unique identifier for configurations in a notification configuration. If you don't provide one, Amazon S3 will assign an ID.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Lambda function that Amazon S3 invokes when the specified event type occurs.</p>
+    #[doc(hidden)]
     pub lambda_function_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 bucket event for which to invoke the Lambda function. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Supported Event Types</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<std::vec::Vec<crate::model::Event>>,
     /// <p>Specifies object key name filtering rules. For information about key name filtering, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Configuring Event Notifications</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<crate::model::NotificationConfigurationFilter>,
 }
 impl LambdaFunctionConfiguration {
@@ -7775,11 +8021,10 @@ impl std::fmt::Debug for LambdaFunctionConfiguration {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionConfiguration`](crate::model::LambdaFunctionConfiguration)
+/// See [`LambdaFunctionConfiguration`](crate::model::LambdaFunctionConfiguration).
 pub mod lambda_function_configuration {
 
-    /// A builder for [`LambdaFunctionConfiguration`](crate::model::LambdaFunctionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionConfiguration`](crate::model::LambdaFunctionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -7843,7 +8088,7 @@ pub mod lambda_function_configuration {
             self.filter = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionConfiguration`](crate::model::LambdaFunctionConfiguration)
+        /// Consumes the builder and constructs a [`LambdaFunctionConfiguration`](crate::model::LambdaFunctionConfiguration).
         pub fn build(self) -> crate::model::LambdaFunctionConfiguration {
             crate::model::LambdaFunctionConfiguration {
                 id: self.id,
@@ -7855,7 +8100,7 @@ pub mod lambda_function_configuration {
     }
 }
 impl LambdaFunctionConfiguration {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionConfiguration`](crate::model::LambdaFunctionConfiguration)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionConfiguration`](crate::model::LambdaFunctionConfiguration).
     pub fn builder() -> crate::model::lambda_function_configuration::Builder {
         crate::model::lambda_function_configuration::Builder::default()
     }
@@ -7866,6 +8111,7 @@ impl LambdaFunctionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotificationConfigurationFilter {
     /// <p>A container for object key name prefix and suffix filtering rules.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<crate::model::S3KeyFilter>,
 }
 impl NotificationConfigurationFilter {
@@ -7881,11 +8127,10 @@ impl std::fmt::Debug for NotificationConfigurationFilter {
         formatter.finish()
     }
 }
-/// See [`NotificationConfigurationFilter`](crate::model::NotificationConfigurationFilter)
+/// See [`NotificationConfigurationFilter`](crate::model::NotificationConfigurationFilter).
 pub mod notification_configuration_filter {
 
-    /// A builder for [`NotificationConfigurationFilter`](crate::model::NotificationConfigurationFilter)
-    #[non_exhaustive]
+    /// A builder for [`NotificationConfigurationFilter`](crate::model::NotificationConfigurationFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<crate::model::S3KeyFilter>,
@@ -7901,14 +8146,14 @@ pub mod notification_configuration_filter {
             self.key = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotificationConfigurationFilter`](crate::model::NotificationConfigurationFilter)
+        /// Consumes the builder and constructs a [`NotificationConfigurationFilter`](crate::model::NotificationConfigurationFilter).
         pub fn build(self) -> crate::model::NotificationConfigurationFilter {
             crate::model::NotificationConfigurationFilter { key: self.key }
         }
     }
 }
 impl NotificationConfigurationFilter {
-    /// Creates a new builder-style object to manufacture [`NotificationConfigurationFilter`](crate::model::NotificationConfigurationFilter)
+    /// Creates a new builder-style object to manufacture [`NotificationConfigurationFilter`](crate::model::NotificationConfigurationFilter).
     pub fn builder() -> crate::model::notification_configuration_filter::Builder {
         crate::model::notification_configuration_filter::Builder::default()
     }
@@ -7919,6 +8164,7 @@ impl NotificationConfigurationFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3KeyFilter {
     /// <p>A list of containers for the key-value pair that defines the criteria for the filter rule.</p>
+    #[doc(hidden)]
     pub filter_rules: std::option::Option<std::vec::Vec<crate::model::FilterRule>>,
 }
 impl S3KeyFilter {
@@ -7934,11 +8180,10 @@ impl std::fmt::Debug for S3KeyFilter {
         formatter.finish()
     }
 }
-/// See [`S3KeyFilter`](crate::model::S3KeyFilter)
+/// See [`S3KeyFilter`](crate::model::S3KeyFilter).
 pub mod s3_key_filter {
 
-    /// A builder for [`S3KeyFilter`](crate::model::S3KeyFilter)
-    #[non_exhaustive]
+    /// A builder for [`S3KeyFilter`](crate::model::S3KeyFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) filter_rules: std::option::Option<std::vec::Vec<crate::model::FilterRule>>,
@@ -7963,7 +8208,7 @@ pub mod s3_key_filter {
             self.filter_rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3KeyFilter`](crate::model::S3KeyFilter)
+        /// Consumes the builder and constructs a [`S3KeyFilter`](crate::model::S3KeyFilter).
         pub fn build(self) -> crate::model::S3KeyFilter {
             crate::model::S3KeyFilter {
                 filter_rules: self.filter_rules,
@@ -7972,7 +8217,7 @@ pub mod s3_key_filter {
     }
 }
 impl S3KeyFilter {
-    /// Creates a new builder-style object to manufacture [`S3KeyFilter`](crate::model::S3KeyFilter)
+    /// Creates a new builder-style object to manufacture [`S3KeyFilter`](crate::model::S3KeyFilter).
     pub fn builder() -> crate::model::s3_key_filter::Builder {
         crate::model::s3_key_filter::Builder::default()
     }
@@ -7983,8 +8228,10 @@ impl S3KeyFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FilterRule {
     /// <p>The object key name prefix or suffix identifying one or more objects to which the filtering rule applies. The maximum length is 1,024 characters. Overlapping prefixes and suffixes are not supported. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Configuring Event Notifications</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::FilterRuleName>,
     /// <p>The value that the filter searches for in object key names.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl FilterRule {
@@ -8005,11 +8252,10 @@ impl std::fmt::Debug for FilterRule {
         formatter.finish()
     }
 }
-/// See [`FilterRule`](crate::model::FilterRule)
+/// See [`FilterRule`](crate::model::FilterRule).
 pub mod filter_rule {
 
-    /// A builder for [`FilterRule`](crate::model::FilterRule)
-    #[non_exhaustive]
+    /// A builder for [`FilterRule`](crate::model::FilterRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::FilterRuleName>,
@@ -8039,7 +8285,7 @@ pub mod filter_rule {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`FilterRule`](crate::model::FilterRule)
+        /// Consumes the builder and constructs a [`FilterRule`](crate::model::FilterRule).
         pub fn build(self) -> crate::model::FilterRule {
             crate::model::FilterRule {
                 name: self.name,
@@ -8049,7 +8295,7 @@ pub mod filter_rule {
     }
 }
 impl FilterRule {
-    /// Creates a new builder-style object to manufacture [`FilterRule`](crate::model::FilterRule)
+    /// Creates a new builder-style object to manufacture [`FilterRule`](crate::model::FilterRule).
     pub fn builder() -> crate::model::filter_rule::Builder {
         crate::model::filter_rule::Builder::default()
     }
@@ -8174,12 +8420,16 @@ where
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueueConfiguration {
     /// <p>An optional unique identifier for configurations in a notification configuration. If you don't provide one, Amazon S3 will assign an ID.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.</p>
+    #[doc(hidden)]
     pub queue_arn: std::option::Option<std::string::String>,
     /// <p>A collection of bucket events for which to send notifications</p>
+    #[doc(hidden)]
     pub events: std::option::Option<std::vec::Vec<crate::model::Event>>,
     /// <p>Specifies object key name filtering rules. For information about key name filtering, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Configuring Event Notifications</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<crate::model::NotificationConfigurationFilter>,
 }
 impl QueueConfiguration {
@@ -8210,11 +8460,10 @@ impl std::fmt::Debug for QueueConfiguration {
         formatter.finish()
     }
 }
-/// See [`QueueConfiguration`](crate::model::QueueConfiguration)
+/// See [`QueueConfiguration`](crate::model::QueueConfiguration).
 pub mod queue_configuration {
 
-    /// A builder for [`QueueConfiguration`](crate::model::QueueConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`QueueConfiguration`](crate::model::QueueConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -8275,7 +8524,7 @@ pub mod queue_configuration {
             self.filter = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueueConfiguration`](crate::model::QueueConfiguration)
+        /// Consumes the builder and constructs a [`QueueConfiguration`](crate::model::QueueConfiguration).
         pub fn build(self) -> crate::model::QueueConfiguration {
             crate::model::QueueConfiguration {
                 id: self.id,
@@ -8287,7 +8536,7 @@ pub mod queue_configuration {
     }
 }
 impl QueueConfiguration {
-    /// Creates a new builder-style object to manufacture [`QueueConfiguration`](crate::model::QueueConfiguration)
+    /// Creates a new builder-style object to manufacture [`QueueConfiguration`](crate::model::QueueConfiguration).
     pub fn builder() -> crate::model::queue_configuration::Builder {
         crate::model::queue_configuration::Builder::default()
     }
@@ -8298,12 +8547,16 @@ impl QueueConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TopicConfiguration {
     /// <p>An optional unique identifier for configurations in a notification configuration. If you don't provide one, Amazon S3 will assign an ID.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.</p>
+    #[doc(hidden)]
     pub topic_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 bucket event about which to send notifications. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Supported Event Types</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<std::vec::Vec<crate::model::Event>>,
     /// <p>Specifies object key name filtering rules. For information about key name filtering, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Configuring Event Notifications</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<crate::model::NotificationConfigurationFilter>,
 }
 impl TopicConfiguration {
@@ -8334,11 +8587,10 @@ impl std::fmt::Debug for TopicConfiguration {
         formatter.finish()
     }
 }
-/// See [`TopicConfiguration`](crate::model::TopicConfiguration)
+/// See [`TopicConfiguration`](crate::model::TopicConfiguration).
 pub mod topic_configuration {
 
-    /// A builder for [`TopicConfiguration`](crate::model::TopicConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`TopicConfiguration`](crate::model::TopicConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -8399,7 +8651,7 @@ pub mod topic_configuration {
             self.filter = input;
             self
         }
-        /// Consumes the builder and constructs a [`TopicConfiguration`](crate::model::TopicConfiguration)
+        /// Consumes the builder and constructs a [`TopicConfiguration`](crate::model::TopicConfiguration).
         pub fn build(self) -> crate::model::TopicConfiguration {
             crate::model::TopicConfiguration {
                 id: self.id,
@@ -8411,7 +8663,7 @@ pub mod topic_configuration {
     }
 }
 impl TopicConfiguration {
-    /// Creates a new builder-style object to manufacture [`TopicConfiguration`](crate::model::TopicConfiguration)
+    /// Creates a new builder-style object to manufacture [`TopicConfiguration`](crate::model::TopicConfiguration).
     pub fn builder() -> crate::model::topic_configuration::Builder {
         crate::model::topic_configuration::Builder::default()
     }
@@ -8422,8 +8674,10 @@ impl TopicConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricsConfiguration {
     /// <p>The ID used to identify the metrics configuration.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies a metrics configuration filter. The metrics configuration will only include objects that meet the filter's criteria. A filter must be a prefix, an object tag, an access point ARN, or a conjunction (MetricsAndOperator).</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<crate::model::MetricsFilter>,
 }
 impl MetricsConfiguration {
@@ -8444,11 +8698,10 @@ impl std::fmt::Debug for MetricsConfiguration {
         formatter.finish()
     }
 }
-/// See [`MetricsConfiguration`](crate::model::MetricsConfiguration)
+/// See [`MetricsConfiguration`](crate::model::MetricsConfiguration).
 pub mod metrics_configuration {
 
-    /// A builder for [`MetricsConfiguration`](crate::model::MetricsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MetricsConfiguration`](crate::model::MetricsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -8478,7 +8731,7 @@ pub mod metrics_configuration {
             self.filter = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricsConfiguration`](crate::model::MetricsConfiguration)
+        /// Consumes the builder and constructs a [`MetricsConfiguration`](crate::model::MetricsConfiguration).
         pub fn build(self) -> crate::model::MetricsConfiguration {
             crate::model::MetricsConfiguration {
                 id: self.id,
@@ -8488,7 +8741,7 @@ pub mod metrics_configuration {
     }
 }
 impl MetricsConfiguration {
-    /// Creates a new builder-style object to manufacture [`MetricsConfiguration`](crate::model::MetricsConfiguration)
+    /// Creates a new builder-style object to manufacture [`MetricsConfiguration`](crate::model::MetricsConfiguration).
     pub fn builder() -> crate::model::metrics_configuration::Builder {
         crate::model::metrics_configuration::Builder::default()
     }
@@ -8580,10 +8833,13 @@ impl MetricsFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricsAndOperator {
     /// <p>The prefix used when evaluating an AND predicate.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>The list of tags used when evaluating an AND predicate.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
-    /// <p>The access point ARN used when evaluating an AND predicate.</p>
+    /// <p>The access point ARN used when evaluating an <code>AND</code> predicate.</p>
+    #[doc(hidden)]
     pub access_point_arn: std::option::Option<std::string::String>,
 }
 impl MetricsAndOperator {
@@ -8595,7 +8851,7 @@ impl MetricsAndOperator {
     pub fn tags(&self) -> std::option::Option<&[crate::model::Tag]> {
         self.tags.as_deref()
     }
-    /// <p>The access point ARN used when evaluating an AND predicate.</p>
+    /// <p>The access point ARN used when evaluating an <code>AND</code> predicate.</p>
     pub fn access_point_arn(&self) -> std::option::Option<&str> {
         self.access_point_arn.as_deref()
     }
@@ -8609,11 +8865,10 @@ impl std::fmt::Debug for MetricsAndOperator {
         formatter.finish()
     }
 }
-/// See [`MetricsAndOperator`](crate::model::MetricsAndOperator)
+/// See [`MetricsAndOperator`](crate::model::MetricsAndOperator).
 pub mod metrics_and_operator {
 
-    /// A builder for [`MetricsAndOperator`](crate::model::MetricsAndOperator)
-    #[non_exhaustive]
+    /// A builder for [`MetricsAndOperator`](crate::model::MetricsAndOperator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prefix: std::option::Option<std::string::String>,
@@ -8650,12 +8905,12 @@ pub mod metrics_and_operator {
             self.tags = input;
             self
         }
-        /// <p>The access point ARN used when evaluating an AND predicate.</p>
+        /// <p>The access point ARN used when evaluating an <code>AND</code> predicate.</p>
         pub fn access_point_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.access_point_arn = Some(input.into());
             self
         }
-        /// <p>The access point ARN used when evaluating an AND predicate.</p>
+        /// <p>The access point ARN used when evaluating an <code>AND</code> predicate.</p>
         pub fn set_access_point_arn(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -8663,7 +8918,7 @@ pub mod metrics_and_operator {
             self.access_point_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricsAndOperator`](crate::model::MetricsAndOperator)
+        /// Consumes the builder and constructs a [`MetricsAndOperator`](crate::model::MetricsAndOperator).
         pub fn build(self) -> crate::model::MetricsAndOperator {
             crate::model::MetricsAndOperator {
                 prefix: self.prefix,
@@ -8674,7 +8929,7 @@ pub mod metrics_and_operator {
     }
 }
 impl MetricsAndOperator {
-    /// Creates a new builder-style object to manufacture [`MetricsAndOperator`](crate::model::MetricsAndOperator)
+    /// Creates a new builder-style object to manufacture [`MetricsAndOperator`](crate::model::MetricsAndOperator).
     pub fn builder() -> crate::model::metrics_and_operator::Builder {
         crate::model::metrics_and_operator::Builder::default()
     }
@@ -8685,6 +8940,7 @@ impl MetricsAndOperator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BucketLoggingStatus {
     /// <p>Describes where logs are stored and the prefix that Amazon S3 assigns to all log object keys for a bucket. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlogging.html">PUT Bucket logging</a> in the <i>Amazon S3 API Reference</i>.</p>
+    #[doc(hidden)]
     pub logging_enabled: std::option::Option<crate::model::LoggingEnabled>,
 }
 impl BucketLoggingStatus {
@@ -8700,11 +8956,10 @@ impl std::fmt::Debug for BucketLoggingStatus {
         formatter.finish()
     }
 }
-/// See [`BucketLoggingStatus`](crate::model::BucketLoggingStatus)
+/// See [`BucketLoggingStatus`](crate::model::BucketLoggingStatus).
 pub mod bucket_logging_status {
 
-    /// A builder for [`BucketLoggingStatus`](crate::model::BucketLoggingStatus)
-    #[non_exhaustive]
+    /// A builder for [`BucketLoggingStatus`](crate::model::BucketLoggingStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logging_enabled: std::option::Option<crate::model::LoggingEnabled>,
@@ -8723,7 +8978,7 @@ pub mod bucket_logging_status {
             self.logging_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`BucketLoggingStatus`](crate::model::BucketLoggingStatus)
+        /// Consumes the builder and constructs a [`BucketLoggingStatus`](crate::model::BucketLoggingStatus).
         pub fn build(self) -> crate::model::BucketLoggingStatus {
             crate::model::BucketLoggingStatus {
                 logging_enabled: self.logging_enabled,
@@ -8732,7 +8987,7 @@ pub mod bucket_logging_status {
     }
 }
 impl BucketLoggingStatus {
-    /// Creates a new builder-style object to manufacture [`BucketLoggingStatus`](crate::model::BucketLoggingStatus)
+    /// Creates a new builder-style object to manufacture [`BucketLoggingStatus`](crate::model::BucketLoggingStatus).
     pub fn builder() -> crate::model::bucket_logging_status::Builder {
         crate::model::bucket_logging_status::Builder::default()
     }
@@ -8743,11 +8998,14 @@ impl BucketLoggingStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoggingEnabled {
     /// <p>Specifies the bucket where you want Amazon S3 to store server access logs. You can have your logs delivered to any bucket that you own, including the same bucket that is being logged. You can also configure multiple buckets to deliver their logs to the same target bucket. In this case, you should choose a different <code>TargetPrefix</code> for each source bucket so that the delivered log files can be distinguished by key.</p>
+    #[doc(hidden)]
     pub target_bucket: std::option::Option<std::string::String>,
     /// <p>Container for granting information.</p>
     /// <p>Buckets that use the bucket owner enforced setting for Object Ownership don't support target grants. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/enable-server-access-logging.html#grant-log-delivery-permissions-general">Permissions for server access log delivery</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub target_grants: std::option::Option<std::vec::Vec<crate::model::TargetGrant>>,
     /// <p>A prefix for all log object keys. If you store log files from multiple Amazon S3 buckets in a single bucket, you can use a prefix to distinguish which log files came from which bucket.</p>
+    #[doc(hidden)]
     pub target_prefix: std::option::Option<std::string::String>,
 }
 impl LoggingEnabled {
@@ -8774,11 +9032,10 @@ impl std::fmt::Debug for LoggingEnabled {
         formatter.finish()
     }
 }
-/// See [`LoggingEnabled`](crate::model::LoggingEnabled)
+/// See [`LoggingEnabled`](crate::model::LoggingEnabled).
 pub mod logging_enabled {
 
-    /// A builder for [`LoggingEnabled`](crate::model::LoggingEnabled)
-    #[non_exhaustive]
+    /// A builder for [`LoggingEnabled`](crate::model::LoggingEnabled).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_bucket: std::option::Option<std::string::String>,
@@ -8833,7 +9090,7 @@ pub mod logging_enabled {
             self.target_prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoggingEnabled`](crate::model::LoggingEnabled)
+        /// Consumes the builder and constructs a [`LoggingEnabled`](crate::model::LoggingEnabled).
         pub fn build(self) -> crate::model::LoggingEnabled {
             crate::model::LoggingEnabled {
                 target_bucket: self.target_bucket,
@@ -8844,7 +9101,7 @@ pub mod logging_enabled {
     }
 }
 impl LoggingEnabled {
-    /// Creates a new builder-style object to manufacture [`LoggingEnabled`](crate::model::LoggingEnabled)
+    /// Creates a new builder-style object to manufacture [`LoggingEnabled`](crate::model::LoggingEnabled).
     pub fn builder() -> crate::model::logging_enabled::Builder {
         crate::model::logging_enabled::Builder::default()
     }
@@ -8856,8 +9113,10 @@ impl LoggingEnabled {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetGrant {
     /// <p>Container for the person being granted permissions.</p>
+    #[doc(hidden)]
     pub grantee: std::option::Option<crate::model::Grantee>,
     /// <p>Logging permissions assigned to the grantee for the bucket.</p>
+    #[doc(hidden)]
     pub permission: std::option::Option<crate::model::BucketLogsPermission>,
 }
 impl TargetGrant {
@@ -8878,11 +9137,10 @@ impl std::fmt::Debug for TargetGrant {
         formatter.finish()
     }
 }
-/// See [`TargetGrant`](crate::model::TargetGrant)
+/// See [`TargetGrant`](crate::model::TargetGrant).
 pub mod target_grant {
 
-    /// A builder for [`TargetGrant`](crate::model::TargetGrant)
-    #[non_exhaustive]
+    /// A builder for [`TargetGrant`](crate::model::TargetGrant).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) grantee: std::option::Option<crate::model::Grantee>,
@@ -8912,7 +9170,7 @@ pub mod target_grant {
             self.permission = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetGrant`](crate::model::TargetGrant)
+        /// Consumes the builder and constructs a [`TargetGrant`](crate::model::TargetGrant).
         pub fn build(self) -> crate::model::TargetGrant {
             crate::model::TargetGrant {
                 grantee: self.grantee,
@@ -8922,7 +9180,7 @@ pub mod target_grant {
     }
 }
 impl TargetGrant {
-    /// Creates a new builder-style object to manufacture [`TargetGrant`](crate::model::TargetGrant)
+    /// Creates a new builder-style object to manufacture [`TargetGrant`](crate::model::TargetGrant).
     pub fn builder() -> crate::model::target_grant::Builder {
         crate::model::target_grant::Builder::default()
     }
@@ -8992,6 +9250,7 @@ impl AsRef<str> for BucketLogsPermission {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BucketLifecycleConfiguration {
     /// <p>A lifecycle rule for individual objects in an Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::LifecycleRule>>,
 }
 impl BucketLifecycleConfiguration {
@@ -9007,11 +9266,10 @@ impl std::fmt::Debug for BucketLifecycleConfiguration {
         formatter.finish()
     }
 }
-/// See [`BucketLifecycleConfiguration`](crate::model::BucketLifecycleConfiguration)
+/// See [`BucketLifecycleConfiguration`](crate::model::BucketLifecycleConfiguration).
 pub mod bucket_lifecycle_configuration {
 
-    /// A builder for [`BucketLifecycleConfiguration`](crate::model::BucketLifecycleConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`BucketLifecycleConfiguration`](crate::model::BucketLifecycleConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rules: std::option::Option<std::vec::Vec<crate::model::LifecycleRule>>,
@@ -9036,14 +9294,14 @@ pub mod bucket_lifecycle_configuration {
             self.rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`BucketLifecycleConfiguration`](crate::model::BucketLifecycleConfiguration)
+        /// Consumes the builder and constructs a [`BucketLifecycleConfiguration`](crate::model::BucketLifecycleConfiguration).
         pub fn build(self) -> crate::model::BucketLifecycleConfiguration {
             crate::model::BucketLifecycleConfiguration { rules: self.rules }
         }
     }
 }
 impl BucketLifecycleConfiguration {
-    /// Creates a new builder-style object to manufacture [`BucketLifecycleConfiguration`](crate::model::BucketLifecycleConfiguration)
+    /// Creates a new builder-style object to manufacture [`BucketLifecycleConfiguration`](crate::model::BucketLifecycleConfiguration).
     pub fn builder() -> crate::model::bucket_lifecycle_configuration::Builder {
         crate::model::bucket_lifecycle_configuration::Builder::default()
     }
@@ -9054,26 +9312,36 @@ impl BucketLifecycleConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecycleRule {
     /// <p>Specifies the expiration for the lifecycle of the object in the form of date, days and, whether the object has a delete marker.</p>
+    #[doc(hidden)]
     pub expiration: std::option::Option<crate::model::LifecycleExpiration>,
     /// <p>Unique identifier for the rule. The value cannot be longer than 255 characters.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Prefix identifying one or more objects to which the rule applies. This is no longer used; use <code>Filter</code> instead.</p> <important>
     /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
     /// </important>
+    #[deprecated]
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
-    /// <p>The <code>Filter</code> is used to identify objects that a Lifecycle Rule applies to. A <code>Filter</code> must have exactly one of <code>Prefix</code>, <code>Tag</code>, or <code>And</code> specified. <code>Filter</code> is required if the <code>LifecycleRule</code> does not containt a <code>Prefix</code> element.</p>
+    /// <p>The <code>Filter</code> is used to identify objects that a Lifecycle Rule applies to. A <code>Filter</code> must have exactly one of <code>Prefix</code>, <code>Tag</code>, or <code>And</code> specified. <code>Filter</code> is required if the <code>LifecycleRule</code> does not contain a <code>Prefix</code> element.</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<crate::model::LifecycleRuleFilter>,
     /// <p>If 'Enabled', the rule is currently being applied. If 'Disabled', the rule is not currently being applied.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ExpirationStatus>,
     /// <p>Specifies when an Amazon S3 object transitions to a specified storage class.</p>
+    #[doc(hidden)]
     pub transitions: std::option::Option<std::vec::Vec<crate::model::Transition>>,
     /// <p> Specifies the transition rule for the lifecycle rule that describes when noncurrent objects transition to a specific storage class. If your bucket is versioning-enabled (or versioning is suspended), you can set this action to request that Amazon S3 transition noncurrent object versions to a specific storage class at a set period in the object's lifetime. </p>
+    #[doc(hidden)]
     pub noncurrent_version_transitions:
         std::option::Option<std::vec::Vec<crate::model::NoncurrentVersionTransition>>,
     /// <p>Specifies when noncurrent object versions expire. Upon expiration, Amazon S3 permanently deletes the noncurrent object versions. You set this lifecycle configuration action on a bucket that has versioning enabled (or suspended) to request that Amazon S3 delete noncurrent object versions at a specific period in the object's lifetime.</p>
+    #[doc(hidden)]
     pub noncurrent_version_expiration:
         std::option::Option<crate::model::NoncurrentVersionExpiration>,
     /// <p>Specifies the days since the initiation of an incomplete multipart upload that Amazon S3 will wait before permanently removing all parts of the upload. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config"> Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub abort_incomplete_multipart_upload:
         std::option::Option<crate::model::AbortIncompleteMultipartUpload>,
 }
@@ -9089,10 +9357,11 @@ impl LifecycleRule {
     /// <p>Prefix identifying one or more objects to which the rule applies. This is no longer used; use <code>Filter</code> instead.</p> <important>
     /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
     /// </important>
+    #[deprecated]
     pub fn prefix(&self) -> std::option::Option<&str> {
         self.prefix.as_deref()
     }
-    /// <p>The <code>Filter</code> is used to identify objects that a Lifecycle Rule applies to. A <code>Filter</code> must have exactly one of <code>Prefix</code>, <code>Tag</code>, or <code>And</code> specified. <code>Filter</code> is required if the <code>LifecycleRule</code> does not containt a <code>Prefix</code> element.</p>
+    /// <p>The <code>Filter</code> is used to identify objects that a Lifecycle Rule applies to. A <code>Filter</code> must have exactly one of <code>Prefix</code>, <code>Tag</code>, or <code>And</code> specified. <code>Filter</code> is required if the <code>LifecycleRule</code> does not contain a <code>Prefix</code> element.</p>
     pub fn filter(&self) -> std::option::Option<&crate::model::LifecycleRuleFilter> {
         self.filter.as_ref()
     }
@@ -9147,11 +9416,10 @@ impl std::fmt::Debug for LifecycleRule {
         formatter.finish()
     }
 }
-/// See [`LifecycleRule`](crate::model::LifecycleRule)
+/// See [`LifecycleRule`](crate::model::LifecycleRule).
 pub mod lifecycle_rule {
 
-    /// A builder for [`LifecycleRule`](crate::model::LifecycleRule)
-    #[non_exhaustive]
+    /// A builder for [`LifecycleRule`](crate::model::LifecycleRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) expiration: std::option::Option<crate::model::LifecycleExpiration>,
@@ -9194,6 +9462,7 @@ pub mod lifecycle_rule {
         /// <p>Prefix identifying one or more objects to which the rule applies. This is no longer used; use <code>Filter</code> instead.</p> <important>
         /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
         /// </important>
+        #[deprecated]
         pub fn prefix(mut self, input: impl Into<std::string::String>) -> Self {
             self.prefix = Some(input.into());
             self
@@ -9201,16 +9470,17 @@ pub mod lifecycle_rule {
         /// <p>Prefix identifying one or more objects to which the rule applies. This is no longer used; use <code>Filter</code> instead.</p> <important>
         /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
         /// </important>
+        #[deprecated]
         pub fn set_prefix(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.prefix = input;
             self
         }
-        /// <p>The <code>Filter</code> is used to identify objects that a Lifecycle Rule applies to. A <code>Filter</code> must have exactly one of <code>Prefix</code>, <code>Tag</code>, or <code>And</code> specified. <code>Filter</code> is required if the <code>LifecycleRule</code> does not containt a <code>Prefix</code> element.</p>
+        /// <p>The <code>Filter</code> is used to identify objects that a Lifecycle Rule applies to. A <code>Filter</code> must have exactly one of <code>Prefix</code>, <code>Tag</code>, or <code>And</code> specified. <code>Filter</code> is required if the <code>LifecycleRule</code> does not contain a <code>Prefix</code> element.</p>
         pub fn filter(mut self, input: crate::model::LifecycleRuleFilter) -> Self {
             self.filter = Some(input);
             self
         }
-        /// <p>The <code>Filter</code> is used to identify objects that a Lifecycle Rule applies to. A <code>Filter</code> must have exactly one of <code>Prefix</code>, <code>Tag</code>, or <code>And</code> specified. <code>Filter</code> is required if the <code>LifecycleRule</code> does not containt a <code>Prefix</code> element.</p>
+        /// <p>The <code>Filter</code> is used to identify objects that a Lifecycle Rule applies to. A <code>Filter</code> must have exactly one of <code>Prefix</code>, <code>Tag</code>, or <code>And</code> specified. <code>Filter</code> is required if the <code>LifecycleRule</code> does not contain a <code>Prefix</code> element.</p>
         pub fn set_filter(
             mut self,
             input: std::option::Option<crate::model::LifecycleRuleFilter>,
@@ -9304,7 +9574,7 @@ pub mod lifecycle_rule {
             self.abort_incomplete_multipart_upload = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecycleRule`](crate::model::LifecycleRule)
+        /// Consumes the builder and constructs a [`LifecycleRule`](crate::model::LifecycleRule).
         pub fn build(self) -> crate::model::LifecycleRule {
             crate::model::LifecycleRule {
                 expiration: self.expiration,
@@ -9321,7 +9591,7 @@ pub mod lifecycle_rule {
     }
 }
 impl LifecycleRule {
-    /// Creates a new builder-style object to manufacture [`LifecycleRule`](crate::model::LifecycleRule)
+    /// Creates a new builder-style object to manufacture [`LifecycleRule`](crate::model::LifecycleRule).
     pub fn builder() -> crate::model::lifecycle_rule::Builder {
         crate::model::lifecycle_rule::Builder::default()
     }
@@ -9332,6 +9602,7 @@ impl LifecycleRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AbortIncompleteMultipartUpload {
     /// <p>Specifies the number of days after which Amazon S3 aborts an incomplete multipart upload.</p>
+    #[doc(hidden)]
     pub days_after_initiation: i32,
 }
 impl AbortIncompleteMultipartUpload {
@@ -9347,11 +9618,10 @@ impl std::fmt::Debug for AbortIncompleteMultipartUpload {
         formatter.finish()
     }
 }
-/// See [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload)
+/// See [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload).
 pub mod abort_incomplete_multipart_upload {
 
-    /// A builder for [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload)
-    #[non_exhaustive]
+    /// A builder for [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) days_after_initiation: std::option::Option<i32>,
@@ -9367,7 +9637,7 @@ pub mod abort_incomplete_multipart_upload {
             self.days_after_initiation = input;
             self
         }
-        /// Consumes the builder and constructs a [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload)
+        /// Consumes the builder and constructs a [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload).
         pub fn build(self) -> crate::model::AbortIncompleteMultipartUpload {
             crate::model::AbortIncompleteMultipartUpload {
                 days_after_initiation: self.days_after_initiation.unwrap_or_default(),
@@ -9376,7 +9646,7 @@ pub mod abort_incomplete_multipart_upload {
     }
 }
 impl AbortIncompleteMultipartUpload {
-    /// Creates a new builder-style object to manufacture [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload)
+    /// Creates a new builder-style object to manufacture [`AbortIncompleteMultipartUpload`](crate::model::AbortIncompleteMultipartUpload).
     pub fn builder() -> crate::model::abort_incomplete_multipart_upload::Builder {
         crate::model::abort_incomplete_multipart_upload::Builder::default()
     }
@@ -9386,13 +9656,15 @@ impl AbortIncompleteMultipartUpload {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NoncurrentVersionExpiration {
-    /// <p>Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action. For information about the noncurrent days calculations, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#non-current-days-calculations">How Amazon S3 Calculates When an Object Became Noncurrent</a> in the <i>Amazon S3 User Guide</i>.</p>
+    /// <p>Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action. The value must be a non-zero positive integer. For information about the noncurrent days calculations, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#non-current-days-calculations">How Amazon S3 Calculates When an Object Became Noncurrent</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub noncurrent_days: i32,
     /// <p>Specifies how many noncurrent versions Amazon S3 will retain. If there are this many more recent noncurrent versions, Amazon S3 will take the associated action. For more information about noncurrent versions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/intro-lifecycle-rules.html">Lifecycle configuration elements</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub newer_noncurrent_versions: i32,
 }
 impl NoncurrentVersionExpiration {
-    /// <p>Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action. For information about the noncurrent days calculations, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#non-current-days-calculations">How Amazon S3 Calculates When an Object Became Noncurrent</a> in the <i>Amazon S3 User Guide</i>.</p>
+    /// <p>Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action. The value must be a non-zero positive integer. For information about the noncurrent days calculations, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#non-current-days-calculations">How Amazon S3 Calculates When an Object Became Noncurrent</a> in the <i>Amazon S3 User Guide</i>.</p>
     pub fn noncurrent_days(&self) -> i32 {
         self.noncurrent_days
     }
@@ -9409,23 +9681,22 @@ impl std::fmt::Debug for NoncurrentVersionExpiration {
         formatter.finish()
     }
 }
-/// See [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration)
+/// See [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration).
 pub mod noncurrent_version_expiration {
 
-    /// A builder for [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration)
-    #[non_exhaustive]
+    /// A builder for [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) noncurrent_days: std::option::Option<i32>,
         pub(crate) newer_noncurrent_versions: std::option::Option<i32>,
     }
     impl Builder {
-        /// <p>Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action. For information about the noncurrent days calculations, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#non-current-days-calculations">How Amazon S3 Calculates When an Object Became Noncurrent</a> in the <i>Amazon S3 User Guide</i>.</p>
+        /// <p>Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action. The value must be a non-zero positive integer. For information about the noncurrent days calculations, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#non-current-days-calculations">How Amazon S3 Calculates When an Object Became Noncurrent</a> in the <i>Amazon S3 User Guide</i>.</p>
         pub fn noncurrent_days(mut self, input: i32) -> Self {
             self.noncurrent_days = Some(input);
             self
         }
-        /// <p>Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action. For information about the noncurrent days calculations, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#non-current-days-calculations">How Amazon S3 Calculates When an Object Became Noncurrent</a> in the <i>Amazon S3 User Guide</i>.</p>
+        /// <p>Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action. The value must be a non-zero positive integer. For information about the noncurrent days calculations, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#non-current-days-calculations">How Amazon S3 Calculates When an Object Became Noncurrent</a> in the <i>Amazon S3 User Guide</i>.</p>
         pub fn set_noncurrent_days(mut self, input: std::option::Option<i32>) -> Self {
             self.noncurrent_days = input;
             self
@@ -9440,7 +9711,7 @@ pub mod noncurrent_version_expiration {
             self.newer_noncurrent_versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration)
+        /// Consumes the builder and constructs a [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration).
         pub fn build(self) -> crate::model::NoncurrentVersionExpiration {
             crate::model::NoncurrentVersionExpiration {
                 noncurrent_days: self.noncurrent_days.unwrap_or_default(),
@@ -9450,7 +9721,7 @@ pub mod noncurrent_version_expiration {
     }
 }
 impl NoncurrentVersionExpiration {
-    /// Creates a new builder-style object to manufacture [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration)
+    /// Creates a new builder-style object to manufacture [`NoncurrentVersionExpiration`](crate::model::NoncurrentVersionExpiration).
     pub fn builder() -> crate::model::noncurrent_version_expiration::Builder {
         crate::model::noncurrent_version_expiration::Builder::default()
     }
@@ -9461,10 +9732,13 @@ impl NoncurrentVersionExpiration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NoncurrentVersionTransition {
     /// <p>Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action. For information about the noncurrent days calculations, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#non-current-days-calculations">How Amazon S3 Calculates How Long an Object Has Been Noncurrent</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub noncurrent_days: i32,
     /// <p>The class of storage used to store the object.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::TransitionStorageClass>,
     /// <p>Specifies how many noncurrent versions Amazon S3 will retain. If there are this many more recent noncurrent versions, Amazon S3 will take the associated action. For more information about noncurrent versions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/intro-lifecycle-rules.html">Lifecycle configuration elements</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub newer_noncurrent_versions: i32,
 }
 impl NoncurrentVersionTransition {
@@ -9490,11 +9764,10 @@ impl std::fmt::Debug for NoncurrentVersionTransition {
         formatter.finish()
     }
 }
-/// See [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition)
+/// See [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition).
 pub mod noncurrent_version_transition {
 
-    /// A builder for [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition)
-    #[non_exhaustive]
+    /// A builder for [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) noncurrent_days: std::option::Option<i32>,
@@ -9535,7 +9808,7 @@ pub mod noncurrent_version_transition {
             self.newer_noncurrent_versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition)
+        /// Consumes the builder and constructs a [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition).
         pub fn build(self) -> crate::model::NoncurrentVersionTransition {
             crate::model::NoncurrentVersionTransition {
                 noncurrent_days: self.noncurrent_days.unwrap_or_default(),
@@ -9546,7 +9819,7 @@ pub mod noncurrent_version_transition {
     }
 }
 impl NoncurrentVersionTransition {
-    /// Creates a new builder-style object to manufacture [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition)
+    /// Creates a new builder-style object to manufacture [`NoncurrentVersionTransition`](crate::model::NoncurrentVersionTransition).
     pub fn builder() -> crate::model::noncurrent_version_transition::Builder {
         crate::model::noncurrent_version_transition::Builder::default()
     }
@@ -9635,10 +9908,13 @@ impl AsRef<str> for TransitionStorageClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Transition {
     /// <p>Indicates when objects are transitioned to the specified storage class. The date value must be in ISO 8601 format. The time is always midnight UTC.</p>
+    #[doc(hidden)]
     pub date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates the number of days after creation when objects are transitioned to the specified storage class. The value must be a positive integer.</p>
+    #[doc(hidden)]
     pub days: i32,
     /// <p>The storage class to which you want the object to transition.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::TransitionStorageClass>,
 }
 impl Transition {
@@ -9664,11 +9940,10 @@ impl std::fmt::Debug for Transition {
         formatter.finish()
     }
 }
-/// See [`Transition`](crate::model::Transition)
+/// See [`Transition`](crate::model::Transition).
 pub mod transition {
 
-    /// A builder for [`Transition`](crate::model::Transition)
-    #[non_exhaustive]
+    /// A builder for [`Transition`](crate::model::Transition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) date: std::option::Option<aws_smithy_types::DateTime>,
@@ -9709,7 +9984,7 @@ pub mod transition {
             self.storage_class = input;
             self
         }
-        /// Consumes the builder and constructs a [`Transition`](crate::model::Transition)
+        /// Consumes the builder and constructs a [`Transition`](crate::model::Transition).
         pub fn build(self) -> crate::model::Transition {
             crate::model::Transition {
                 date: self.date,
@@ -9720,7 +9995,7 @@ pub mod transition {
     }
 }
 impl Transition {
-    /// Creates a new builder-style object to manufacture [`Transition`](crate::model::Transition)
+    /// Creates a new builder-style object to manufacture [`Transition`](crate::model::Transition).
     pub fn builder() -> crate::model::transition::Builder {
         crate::model::transition::Builder::default()
     }
@@ -9884,12 +10159,16 @@ impl LifecycleRuleFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecycleRuleAndOperator {
     /// <p>Prefix identifying one or more objects to which the rule applies.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>All of these tags must exist in the object's tag set in order for the rule to apply.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Minimum object size to which the rule applies.</p>
+    #[doc(hidden)]
     pub object_size_greater_than: i64,
     /// <p>Maximum object size to which the rule applies.</p>
+    #[doc(hidden)]
     pub object_size_less_than: i64,
 }
 impl LifecycleRuleAndOperator {
@@ -9920,11 +10199,10 @@ impl std::fmt::Debug for LifecycleRuleAndOperator {
         formatter.finish()
     }
 }
-/// See [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator)
+/// See [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator).
 pub mod lifecycle_rule_and_operator {
 
-    /// A builder for [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator)
-    #[non_exhaustive]
+    /// A builder for [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prefix: std::option::Option<std::string::String>,
@@ -9982,7 +10260,7 @@ pub mod lifecycle_rule_and_operator {
             self.object_size_less_than = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator)
+        /// Consumes the builder and constructs a [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator).
         pub fn build(self) -> crate::model::LifecycleRuleAndOperator {
             crate::model::LifecycleRuleAndOperator {
                 prefix: self.prefix,
@@ -9994,7 +10272,7 @@ pub mod lifecycle_rule_and_operator {
     }
 }
 impl LifecycleRuleAndOperator {
-    /// Creates a new builder-style object to manufacture [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator)
+    /// Creates a new builder-style object to manufacture [`LifecycleRuleAndOperator`](crate::model::LifecycleRuleAndOperator).
     pub fn builder() -> crate::model::lifecycle_rule_and_operator::Builder {
         crate::model::lifecycle_rule_and_operator::Builder::default()
     }
@@ -10005,10 +10283,13 @@ impl LifecycleRuleAndOperator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecycleExpiration {
     /// <p>Indicates at what date the object is to be moved or deleted. Should be in GMT ISO 8601 Format.</p>
+    #[doc(hidden)]
     pub date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates the lifetime, in days, of the objects that are subject to the rule. The value must be a non-zero positive integer.</p>
+    #[doc(hidden)]
     pub days: i32,
     /// <p>Indicates whether Amazon S3 will remove a delete marker with no noncurrent versions. If set to true, the delete marker will be expired; if set to false the policy takes no action. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.</p>
+    #[doc(hidden)]
     pub expired_object_delete_marker: bool,
 }
 impl LifecycleExpiration {
@@ -10037,11 +10318,10 @@ impl std::fmt::Debug for LifecycleExpiration {
         formatter.finish()
     }
 }
-/// See [`LifecycleExpiration`](crate::model::LifecycleExpiration)
+/// See [`LifecycleExpiration`](crate::model::LifecycleExpiration).
 pub mod lifecycle_expiration {
 
-    /// A builder for [`LifecycleExpiration`](crate::model::LifecycleExpiration)
-    #[non_exhaustive]
+    /// A builder for [`LifecycleExpiration`](crate::model::LifecycleExpiration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) date: std::option::Option<aws_smithy_types::DateTime>,
@@ -10082,7 +10362,7 @@ pub mod lifecycle_expiration {
             self.expired_object_delete_marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecycleExpiration`](crate::model::LifecycleExpiration)
+        /// Consumes the builder and constructs a [`LifecycleExpiration`](crate::model::LifecycleExpiration).
         pub fn build(self) -> crate::model::LifecycleExpiration {
             crate::model::LifecycleExpiration {
                 date: self.date,
@@ -10093,7 +10373,7 @@ pub mod lifecycle_expiration {
     }
 }
 impl LifecycleExpiration {
-    /// Creates a new builder-style object to manufacture [`LifecycleExpiration`](crate::model::LifecycleExpiration)
+    /// Creates a new builder-style object to manufacture [`LifecycleExpiration`](crate::model::LifecycleExpiration).
     pub fn builder() -> crate::model::lifecycle_expiration::Builder {
         crate::model::lifecycle_expiration::Builder::default()
     }
@@ -10104,19 +10384,26 @@ impl LifecycleExpiration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InventoryConfiguration {
     /// <p>Contains information about where to publish the inventory results.</p>
+    #[doc(hidden)]
     pub destination: std::option::Option<crate::model::InventoryDestination>,
     /// <p>Specifies whether the inventory is enabled or disabled. If set to <code>True</code>, an inventory list is generated. If set to <code>False</code>, no inventory list is generated.</p>
+    #[doc(hidden)]
     pub is_enabled: bool,
     /// <p>Specifies an inventory filter. The inventory only includes objects that meet the filter's criteria.</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<crate::model::InventoryFilter>,
     /// <p>The ID used to identify the inventory configuration.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Object versions to include in the inventory list. If set to <code>All</code>, the list includes all the object versions, which adds the version-related fields <code>VersionId</code>, <code>IsLatest</code>, and <code>DeleteMarker</code> to the list. If set to <code>Current</code>, the list does not contain these version-related fields.</p>
+    #[doc(hidden)]
     pub included_object_versions:
         std::option::Option<crate::model::InventoryIncludedObjectVersions>,
     /// <p>Contains the optional fields that are included in the inventory results.</p>
+    #[doc(hidden)]
     pub optional_fields: std::option::Option<std::vec::Vec<crate::model::InventoryOptionalField>>,
     /// <p>Specifies the schedule for generating inventory results.</p>
+    #[doc(hidden)]
     pub schedule: std::option::Option<crate::model::InventorySchedule>,
 }
 impl InventoryConfiguration {
@@ -10164,11 +10451,10 @@ impl std::fmt::Debug for InventoryConfiguration {
         formatter.finish()
     }
 }
-/// See [`InventoryConfiguration`](crate::model::InventoryConfiguration)
+/// See [`InventoryConfiguration`](crate::model::InventoryConfiguration).
 pub mod inventory_configuration {
 
-    /// A builder for [`InventoryConfiguration`](crate::model::InventoryConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`InventoryConfiguration`](crate::model::InventoryConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination: std::option::Option<crate::model::InventoryDestination>,
@@ -10276,7 +10562,7 @@ pub mod inventory_configuration {
             self.schedule = input;
             self
         }
-        /// Consumes the builder and constructs a [`InventoryConfiguration`](crate::model::InventoryConfiguration)
+        /// Consumes the builder and constructs a [`InventoryConfiguration`](crate::model::InventoryConfiguration).
         pub fn build(self) -> crate::model::InventoryConfiguration {
             crate::model::InventoryConfiguration {
                 destination: self.destination,
@@ -10291,7 +10577,7 @@ pub mod inventory_configuration {
     }
 }
 impl InventoryConfiguration {
-    /// Creates a new builder-style object to manufacture [`InventoryConfiguration`](crate::model::InventoryConfiguration)
+    /// Creates a new builder-style object to manufacture [`InventoryConfiguration`](crate::model::InventoryConfiguration).
     pub fn builder() -> crate::model::inventory_configuration::Builder {
         crate::model::inventory_configuration::Builder::default()
     }
@@ -10302,6 +10588,7 @@ impl InventoryConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InventorySchedule {
     /// <p>Specifies how frequently inventory results are produced.</p>
+    #[doc(hidden)]
     pub frequency: std::option::Option<crate::model::InventoryFrequency>,
 }
 impl InventorySchedule {
@@ -10317,11 +10604,10 @@ impl std::fmt::Debug for InventorySchedule {
         formatter.finish()
     }
 }
-/// See [`InventorySchedule`](crate::model::InventorySchedule)
+/// See [`InventorySchedule`](crate::model::InventorySchedule).
 pub mod inventory_schedule {
 
-    /// A builder for [`InventorySchedule`](crate::model::InventorySchedule)
-    #[non_exhaustive]
+    /// A builder for [`InventorySchedule`](crate::model::InventorySchedule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) frequency: std::option::Option<crate::model::InventoryFrequency>,
@@ -10340,7 +10626,7 @@ pub mod inventory_schedule {
             self.frequency = input;
             self
         }
-        /// Consumes the builder and constructs a [`InventorySchedule`](crate::model::InventorySchedule)
+        /// Consumes the builder and constructs a [`InventorySchedule`](crate::model::InventorySchedule).
         pub fn build(self) -> crate::model::InventorySchedule {
             crate::model::InventorySchedule {
                 frequency: self.frequency,
@@ -10349,7 +10635,7 @@ pub mod inventory_schedule {
     }
 }
 impl InventorySchedule {
-    /// Creates a new builder-style object to manufacture [`InventorySchedule`](crate::model::InventorySchedule)
+    /// Creates a new builder-style object to manufacture [`InventorySchedule`](crate::model::InventorySchedule).
     pub fn builder() -> crate::model::inventory_schedule::Builder {
         crate::model::inventory_schedule::Builder::default()
     }
@@ -10425,6 +10711,8 @@ pub enum InventoryOptionalField {
     #[allow(missing_docs)] // documentation missing in model
     BucketKeyStatus,
     #[allow(missing_docs)] // documentation missing in model
+    ChecksumAlgorithm,
+    #[allow(missing_docs)] // documentation missing in model
     ETag,
     #[allow(missing_docs)] // documentation missing in model
     EncryptionStatus,
@@ -10453,6 +10741,7 @@ impl std::convert::From<&str> for InventoryOptionalField {
     fn from(s: &str) -> Self {
         match s {
             "BucketKeyStatus" => InventoryOptionalField::BucketKeyStatus,
+            "ChecksumAlgorithm" => InventoryOptionalField::ChecksumAlgorithm,
             "ETag" => InventoryOptionalField::ETag,
             "EncryptionStatus" => InventoryOptionalField::EncryptionStatus,
             "IntelligentTieringAccessTier" => InventoryOptionalField::IntelligentTieringAccessTier,
@@ -10480,6 +10769,7 @@ impl InventoryOptionalField {
     pub fn as_str(&self) -> &str {
         match self {
             InventoryOptionalField::BucketKeyStatus => "BucketKeyStatus",
+            InventoryOptionalField::ChecksumAlgorithm => "ChecksumAlgorithm",
             InventoryOptionalField::ETag => "ETag",
             InventoryOptionalField::EncryptionStatus => "EncryptionStatus",
             InventoryOptionalField::IntelligentTieringAccessTier => "IntelligentTieringAccessTier",
@@ -10498,6 +10788,7 @@ impl InventoryOptionalField {
     pub fn values() -> &'static [&'static str] {
         &[
             "BucketKeyStatus",
+            "ChecksumAlgorithm",
             "ETag",
             "EncryptionStatus",
             "IntelligentTieringAccessTier",
@@ -10578,6 +10869,7 @@ impl AsRef<str> for InventoryIncludedObjectVersions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InventoryFilter {
     /// <p>The prefix that an object must have to be included in the inventory results.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl InventoryFilter {
@@ -10593,11 +10885,10 @@ impl std::fmt::Debug for InventoryFilter {
         formatter.finish()
     }
 }
-/// See [`InventoryFilter`](crate::model::InventoryFilter)
+/// See [`InventoryFilter`](crate::model::InventoryFilter).
 pub mod inventory_filter {
 
-    /// A builder for [`InventoryFilter`](crate::model::InventoryFilter)
-    #[non_exhaustive]
+    /// A builder for [`InventoryFilter`](crate::model::InventoryFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prefix: std::option::Option<std::string::String>,
@@ -10613,7 +10904,7 @@ pub mod inventory_filter {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`InventoryFilter`](crate::model::InventoryFilter)
+        /// Consumes the builder and constructs a [`InventoryFilter`](crate::model::InventoryFilter).
         pub fn build(self) -> crate::model::InventoryFilter {
             crate::model::InventoryFilter {
                 prefix: self.prefix,
@@ -10622,7 +10913,7 @@ pub mod inventory_filter {
     }
 }
 impl InventoryFilter {
-    /// Creates a new builder-style object to manufacture [`InventoryFilter`](crate::model::InventoryFilter)
+    /// Creates a new builder-style object to manufacture [`InventoryFilter`](crate::model::InventoryFilter).
     pub fn builder() -> crate::model::inventory_filter::Builder {
         crate::model::inventory_filter::Builder::default()
     }
@@ -10633,6 +10924,7 @@ impl InventoryFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InventoryDestination {
     /// <p>Contains the bucket name, file format, bucket owner (optional), and prefix (optional) where inventory results are published.</p>
+    #[doc(hidden)]
     pub s3_bucket_destination: std::option::Option<crate::model::InventoryS3BucketDestination>,
 }
 impl InventoryDestination {
@@ -10650,11 +10942,10 @@ impl std::fmt::Debug for InventoryDestination {
         formatter.finish()
     }
 }
-/// See [`InventoryDestination`](crate::model::InventoryDestination)
+/// See [`InventoryDestination`](crate::model::InventoryDestination).
 pub mod inventory_destination {
 
-    /// A builder for [`InventoryDestination`](crate::model::InventoryDestination)
-    #[non_exhaustive]
+    /// A builder for [`InventoryDestination`](crate::model::InventoryDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_bucket_destination:
@@ -10677,7 +10968,7 @@ pub mod inventory_destination {
             self.s3_bucket_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`InventoryDestination`](crate::model::InventoryDestination)
+        /// Consumes the builder and constructs a [`InventoryDestination`](crate::model::InventoryDestination).
         pub fn build(self) -> crate::model::InventoryDestination {
             crate::model::InventoryDestination {
                 s3_bucket_destination: self.s3_bucket_destination,
@@ -10686,7 +10977,7 @@ pub mod inventory_destination {
     }
 }
 impl InventoryDestination {
-    /// Creates a new builder-style object to manufacture [`InventoryDestination`](crate::model::InventoryDestination)
+    /// Creates a new builder-style object to manufacture [`InventoryDestination`](crate::model::InventoryDestination).
     pub fn builder() -> crate::model::inventory_destination::Builder {
         crate::model::inventory_destination::Builder::default()
     }
@@ -10699,14 +10990,19 @@ pub struct InventoryS3BucketDestination {
     /// <p>The account ID that owns the destination S3 bucket. If no account ID is provided, the owner is not validated before exporting data. </p> <note>
     /// <p> Although this value is optional, we strongly recommend that you set it to help prevent problems if the destination bucket ownership changes. </p>
     /// </note>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the bucket where inventory results will be published.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>Specifies the output format of the inventory results.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::InventoryFormat>,
     /// <p>The prefix that is prepended to all inventory results.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>Contains the type of server-side encryption used to encrypt the inventory results.</p>
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::InventoryEncryption>,
 }
 impl InventoryS3BucketDestination {
@@ -10744,11 +11040,10 @@ impl std::fmt::Debug for InventoryS3BucketDestination {
         formatter.finish()
     }
 }
-/// See [`InventoryS3BucketDestination`](crate::model::InventoryS3BucketDestination)
+/// See [`InventoryS3BucketDestination`](crate::model::InventoryS3BucketDestination).
 pub mod inventory_s3_bucket_destination {
 
-    /// A builder for [`InventoryS3BucketDestination`](crate::model::InventoryS3BucketDestination)
-    #[non_exhaustive]
+    /// A builder for [`InventoryS3BucketDestination`](crate::model::InventoryS3BucketDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -10818,7 +11113,7 @@ pub mod inventory_s3_bucket_destination {
             self.encryption = input;
             self
         }
-        /// Consumes the builder and constructs a [`InventoryS3BucketDestination`](crate::model::InventoryS3BucketDestination)
+        /// Consumes the builder and constructs a [`InventoryS3BucketDestination`](crate::model::InventoryS3BucketDestination).
         pub fn build(self) -> crate::model::InventoryS3BucketDestination {
             crate::model::InventoryS3BucketDestination {
                 account_id: self.account_id,
@@ -10831,7 +11126,7 @@ pub mod inventory_s3_bucket_destination {
     }
 }
 impl InventoryS3BucketDestination {
-    /// Creates a new builder-style object to manufacture [`InventoryS3BucketDestination`](crate::model::InventoryS3BucketDestination)
+    /// Creates a new builder-style object to manufacture [`InventoryS3BucketDestination`](crate::model::InventoryS3BucketDestination).
     pub fn builder() -> crate::model::inventory_s3_bucket_destination::Builder {
         crate::model::inventory_s3_bucket_destination::Builder::default()
     }
@@ -10842,8 +11137,10 @@ impl InventoryS3BucketDestination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InventoryEncryption {
     /// <p>Specifies the use of SSE-S3 to encrypt delivered inventory reports.</p>
+    #[doc(hidden)]
     pub sses3: std::option::Option<crate::model::Sses3>,
     /// <p>Specifies the use of SSE-KMS to encrypt delivered inventory reports.</p>
+    #[doc(hidden)]
     pub ssekms: std::option::Option<crate::model::Ssekms>,
 }
 impl InventoryEncryption {
@@ -10864,11 +11161,10 @@ impl std::fmt::Debug for InventoryEncryption {
         formatter.finish()
     }
 }
-/// See [`InventoryEncryption`](crate::model::InventoryEncryption)
+/// See [`InventoryEncryption`](crate::model::InventoryEncryption).
 pub mod inventory_encryption {
 
-    /// A builder for [`InventoryEncryption`](crate::model::InventoryEncryption)
-    #[non_exhaustive]
+    /// A builder for [`InventoryEncryption`](crate::model::InventoryEncryption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sses3: std::option::Option<crate::model::Sses3>,
@@ -10895,7 +11191,7 @@ pub mod inventory_encryption {
             self.ssekms = input;
             self
         }
-        /// Consumes the builder and constructs a [`InventoryEncryption`](crate::model::InventoryEncryption)
+        /// Consumes the builder and constructs a [`InventoryEncryption`](crate::model::InventoryEncryption).
         pub fn build(self) -> crate::model::InventoryEncryption {
             crate::model::InventoryEncryption {
                 sses3: self.sses3,
@@ -10905,7 +11201,7 @@ pub mod inventory_encryption {
     }
 }
 impl InventoryEncryption {
-    /// Creates a new builder-style object to manufacture [`InventoryEncryption`](crate::model::InventoryEncryption)
+    /// Creates a new builder-style object to manufacture [`InventoryEncryption`](crate::model::InventoryEncryption).
     pub fn builder() -> crate::model::inventory_encryption::Builder {
         crate::model::inventory_encryption::Builder::default()
     }
@@ -10916,6 +11212,7 @@ impl InventoryEncryption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ssekms {
     /// <p>Specifies the ID of the Amazon Web Services Key Management Service (Amazon Web Services KMS) symmetric customer managed key to use for encrypting inventory reports.</p>
+    #[doc(hidden)]
     pub key_id: std::option::Option<std::string::String>,
 }
 impl Ssekms {
@@ -10931,11 +11228,10 @@ impl std::fmt::Debug for Ssekms {
         formatter.finish()
     }
 }
-/// See [`Ssekms`](crate::model::Ssekms)
+/// See [`Ssekms`](crate::model::Ssekms).
 pub mod ssekms {
 
-    /// A builder for [`Ssekms`](crate::model::Ssekms)
-    #[non_exhaustive]
+    /// A builder for [`Ssekms`](crate::model::Ssekms).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_id: std::option::Option<std::string::String>,
@@ -10951,7 +11247,7 @@ pub mod ssekms {
             self.key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ssekms`](crate::model::Ssekms)
+        /// Consumes the builder and constructs a [`Ssekms`](crate::model::Ssekms).
         pub fn build(self) -> crate::model::Ssekms {
             crate::model::Ssekms {
                 key_id: self.key_id,
@@ -10960,7 +11256,7 @@ pub mod ssekms {
     }
 }
 impl Ssekms {
-    /// Creates a new builder-style object to manufacture [`Ssekms`](crate::model::Ssekms)
+    /// Creates a new builder-style object to manufacture [`Ssekms`](crate::model::Ssekms).
     pub fn builder() -> crate::model::ssekms::Builder {
         crate::model::ssekms::Builder::default()
     }
@@ -10976,22 +11272,21 @@ impl std::fmt::Debug for Sses3 {
         formatter.finish()
     }
 }
-/// See [`Sses3`](crate::model::Sses3)
+/// See [`Sses3`](crate::model::Sses3).
 pub mod sses3 {
 
-    /// A builder for [`Sses3`](crate::model::Sses3)
-    #[non_exhaustive]
+    /// A builder for [`Sses3`](crate::model::Sses3).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`Sses3`](crate::model::Sses3)
+        /// Consumes the builder and constructs a [`Sses3`](crate::model::Sses3).
         pub fn build(self) -> crate::model::Sses3 {
             crate::model::Sses3 {}
         }
     }
 }
 impl Sses3 {
-    /// Creates a new builder-style object to manufacture [`Sses3`](crate::model::Sses3)
+    /// Creates a new builder-style object to manufacture [`Sses3`](crate::model::Sses3).
     pub fn builder() -> crate::model::sses3::Builder {
         crate::model::sses3::Builder::default()
     }
@@ -11062,12 +11357,16 @@ impl AsRef<str> for InventoryFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IntelligentTieringConfiguration {
     /// <p>The ID used to identify the S3 Intelligent-Tiering configuration.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies a bucket filter. The configuration only includes objects that meet the filter's criteria.</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<crate::model::IntelligentTieringFilter>,
     /// <p>Specifies the status of the configuration.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::IntelligentTieringStatus>,
     /// <p>Specifies the S3 Intelligent-Tiering storage class tier of the configuration.</p>
+    #[doc(hidden)]
     pub tierings: std::option::Option<std::vec::Vec<crate::model::Tiering>>,
 }
 impl IntelligentTieringConfiguration {
@@ -11098,11 +11397,10 @@ impl std::fmt::Debug for IntelligentTieringConfiguration {
         formatter.finish()
     }
 }
-/// See [`IntelligentTieringConfiguration`](crate::model::IntelligentTieringConfiguration)
+/// See [`IntelligentTieringConfiguration`](crate::model::IntelligentTieringConfiguration).
 pub mod intelligent_tiering_configuration {
 
-    /// A builder for [`IntelligentTieringConfiguration`](crate::model::IntelligentTieringConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`IntelligentTieringConfiguration`](crate::model::IntelligentTieringConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -11166,7 +11464,7 @@ pub mod intelligent_tiering_configuration {
             self.tierings = input;
             self
         }
-        /// Consumes the builder and constructs a [`IntelligentTieringConfiguration`](crate::model::IntelligentTieringConfiguration)
+        /// Consumes the builder and constructs a [`IntelligentTieringConfiguration`](crate::model::IntelligentTieringConfiguration).
         pub fn build(self) -> crate::model::IntelligentTieringConfiguration {
             crate::model::IntelligentTieringConfiguration {
                 id: self.id,
@@ -11178,7 +11476,7 @@ pub mod intelligent_tiering_configuration {
     }
 }
 impl IntelligentTieringConfiguration {
-    /// Creates a new builder-style object to manufacture [`IntelligentTieringConfiguration`](crate::model::IntelligentTieringConfiguration)
+    /// Creates a new builder-style object to manufacture [`IntelligentTieringConfiguration`](crate::model::IntelligentTieringConfiguration).
     pub fn builder() -> crate::model::intelligent_tiering_configuration::Builder {
         crate::model::intelligent_tiering_configuration::Builder::default()
     }
@@ -11189,8 +11487,10 @@ impl IntelligentTieringConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tiering {
     /// <p>The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier. The minimum number of days specified for Archive Access tier must be at least 90 days and Deep Archive Access tier must be at least 180 days. The maximum can be up to 2 years (730 days).</p>
+    #[doc(hidden)]
     pub days: i32,
     /// <p>S3 Intelligent-Tiering access tier. See <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html#sc-dynamic-data-access">Storage class for automatically optimizing frequently and infrequently accessed objects</a> for a list of access tiers in the S3 Intelligent-Tiering storage class.</p>
+    #[doc(hidden)]
     pub access_tier: std::option::Option<crate::model::IntelligentTieringAccessTier>,
 }
 impl Tiering {
@@ -11211,11 +11511,10 @@ impl std::fmt::Debug for Tiering {
         formatter.finish()
     }
 }
-/// See [`Tiering`](crate::model::Tiering)
+/// See [`Tiering`](crate::model::Tiering).
 pub mod tiering {
 
-    /// A builder for [`Tiering`](crate::model::Tiering)
-    #[non_exhaustive]
+    /// A builder for [`Tiering`](crate::model::Tiering).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) days: std::option::Option<i32>,
@@ -11245,7 +11544,7 @@ pub mod tiering {
             self.access_tier = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tiering`](crate::model::Tiering)
+        /// Consumes the builder and constructs a [`Tiering`](crate::model::Tiering).
         pub fn build(self) -> crate::model::Tiering {
             crate::model::Tiering {
                 days: self.days.unwrap_or_default(),
@@ -11255,7 +11554,7 @@ pub mod tiering {
     }
 }
 impl Tiering {
-    /// Creates a new builder-style object to manufacture [`Tiering`](crate::model::Tiering)
+    /// Creates a new builder-style object to manufacture [`Tiering`](crate::model::Tiering).
     pub fn builder() -> crate::model::tiering::Builder {
         crate::model::tiering::Builder::default()
     }
@@ -11378,10 +11677,13 @@ pub struct IntelligentTieringFilter {
     /// <p>An object key name prefix that identifies the subset of objects to which the rule applies.</p> <important>
     /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
     /// </important>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>A container of a key value name pair.</p>
+    #[doc(hidden)]
     pub tag: std::option::Option<crate::model::Tag>,
     /// <p>A conjunction (logical AND) of predicates, which is used in evaluating a metrics filter. The operator must have at least two predicates, and an object must match all of the predicates in order for the filter to apply.</p>
+    #[doc(hidden)]
     pub and: std::option::Option<crate::model::IntelligentTieringAndOperator>,
 }
 impl IntelligentTieringFilter {
@@ -11409,11 +11711,10 @@ impl std::fmt::Debug for IntelligentTieringFilter {
         formatter.finish()
     }
 }
-/// See [`IntelligentTieringFilter`](crate::model::IntelligentTieringFilter)
+/// See [`IntelligentTieringFilter`](crate::model::IntelligentTieringFilter).
 pub mod intelligent_tiering_filter {
 
-    /// A builder for [`IntelligentTieringFilter`](crate::model::IntelligentTieringFilter)
-    #[non_exhaustive]
+    /// A builder for [`IntelligentTieringFilter`](crate::model::IntelligentTieringFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prefix: std::option::Option<std::string::String>,
@@ -11458,7 +11759,7 @@ pub mod intelligent_tiering_filter {
             self.and = input;
             self
         }
-        /// Consumes the builder and constructs a [`IntelligentTieringFilter`](crate::model::IntelligentTieringFilter)
+        /// Consumes the builder and constructs a [`IntelligentTieringFilter`](crate::model::IntelligentTieringFilter).
         pub fn build(self) -> crate::model::IntelligentTieringFilter {
             crate::model::IntelligentTieringFilter {
                 prefix: self.prefix,
@@ -11469,7 +11770,7 @@ pub mod intelligent_tiering_filter {
     }
 }
 impl IntelligentTieringFilter {
-    /// Creates a new builder-style object to manufacture [`IntelligentTieringFilter`](crate::model::IntelligentTieringFilter)
+    /// Creates a new builder-style object to manufacture [`IntelligentTieringFilter`](crate::model::IntelligentTieringFilter).
     pub fn builder() -> crate::model::intelligent_tiering_filter::Builder {
         crate::model::intelligent_tiering_filter::Builder::default()
     }
@@ -11480,8 +11781,10 @@ impl IntelligentTieringFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IntelligentTieringAndOperator {
     /// <p>An object key name prefix that identifies the subset of objects to which the configuration applies.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>All of these tags must exist in the object's tag set in order for the configuration to apply.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl IntelligentTieringAndOperator {
@@ -11502,11 +11805,10 @@ impl std::fmt::Debug for IntelligentTieringAndOperator {
         formatter.finish()
     }
 }
-/// See [`IntelligentTieringAndOperator`](crate::model::IntelligentTieringAndOperator)
+/// See [`IntelligentTieringAndOperator`](crate::model::IntelligentTieringAndOperator).
 pub mod intelligent_tiering_and_operator {
 
-    /// A builder for [`IntelligentTieringAndOperator`](crate::model::IntelligentTieringAndOperator)
-    #[non_exhaustive]
+    /// A builder for [`IntelligentTieringAndOperator`](crate::model::IntelligentTieringAndOperator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prefix: std::option::Option<std::string::String>,
@@ -11542,7 +11844,7 @@ pub mod intelligent_tiering_and_operator {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`IntelligentTieringAndOperator`](crate::model::IntelligentTieringAndOperator)
+        /// Consumes the builder and constructs a [`IntelligentTieringAndOperator`](crate::model::IntelligentTieringAndOperator).
         pub fn build(self) -> crate::model::IntelligentTieringAndOperator {
             crate::model::IntelligentTieringAndOperator {
                 prefix: self.prefix,
@@ -11552,7 +11854,7 @@ pub mod intelligent_tiering_and_operator {
     }
 }
 impl IntelligentTieringAndOperator {
-    /// Creates a new builder-style object to manufacture [`IntelligentTieringAndOperator`](crate::model::IntelligentTieringAndOperator)
+    /// Creates a new builder-style object to manufacture [`IntelligentTieringAndOperator`](crate::model::IntelligentTieringAndOperator).
     pub fn builder() -> crate::model::intelligent_tiering_and_operator::Builder {
         crate::model::intelligent_tiering_and_operator::Builder::default()
     }
@@ -11563,6 +11865,7 @@ impl IntelligentTieringAndOperator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerSideEncryptionConfiguration {
     /// <p>Container for information about a particular server-side encryption configuration rule.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::ServerSideEncryptionRule>>,
 }
 impl ServerSideEncryptionConfiguration {
@@ -11578,11 +11881,10 @@ impl std::fmt::Debug for ServerSideEncryptionConfiguration {
         formatter.finish()
     }
 }
-/// See [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration)
+/// See [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration).
 pub mod server_side_encryption_configuration {
 
-    /// A builder for [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rules:
@@ -11608,14 +11910,14 @@ pub mod server_side_encryption_configuration {
             self.rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration)
+        /// Consumes the builder and constructs a [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration).
         pub fn build(self) -> crate::model::ServerSideEncryptionConfiguration {
             crate::model::ServerSideEncryptionConfiguration { rules: self.rules }
         }
     }
 }
 impl ServerSideEncryptionConfiguration {
-    /// Creates a new builder-style object to manufacture [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration)
+    /// Creates a new builder-style object to manufacture [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration).
     pub fn builder() -> crate::model::server_side_encryption_configuration::Builder {
         crate::model::server_side_encryption_configuration::Builder::default()
     }
@@ -11626,10 +11928,12 @@ impl ServerSideEncryptionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerSideEncryptionRule {
     /// <p>Specifies the default server-side encryption to apply to new objects in the bucket. If a PUT Object request doesn't specify any server-side encryption, this default encryption will be applied.</p>
+    #[doc(hidden)]
     pub apply_server_side_encryption_by_default:
         std::option::Option<crate::model::ServerSideEncryptionByDefault>,
     /// <p>Specifies whether Amazon S3 should use an S3 Bucket Key with server-side encryption using KMS (SSE-KMS) for new objects in the bucket. Existing objects are not affected. Setting the <code>BucketKeyEnabled</code> element to <code>true</code> causes Amazon S3 to use an S3 Bucket Key. By default, S3 Bucket Key is not enabled.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html">Amazon S3 Bucket Keys</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub bucket_key_enabled: bool,
 }
 impl ServerSideEncryptionRule {
@@ -11656,11 +11960,10 @@ impl std::fmt::Debug for ServerSideEncryptionRule {
         formatter.finish()
     }
 }
-/// See [`ServerSideEncryptionRule`](crate::model::ServerSideEncryptionRule)
+/// See [`ServerSideEncryptionRule`](crate::model::ServerSideEncryptionRule).
 pub mod server_side_encryption_rule {
 
-    /// A builder for [`ServerSideEncryptionRule`](crate::model::ServerSideEncryptionRule)
-    #[non_exhaustive]
+    /// A builder for [`ServerSideEncryptionRule`](crate::model::ServerSideEncryptionRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) apply_server_side_encryption_by_default:
@@ -11696,7 +11999,7 @@ pub mod server_side_encryption_rule {
             self.bucket_key_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerSideEncryptionRule`](crate::model::ServerSideEncryptionRule)
+        /// Consumes the builder and constructs a [`ServerSideEncryptionRule`](crate::model::ServerSideEncryptionRule).
         pub fn build(self) -> crate::model::ServerSideEncryptionRule {
             crate::model::ServerSideEncryptionRule {
                 apply_server_side_encryption_by_default: self
@@ -11707,7 +12010,7 @@ pub mod server_side_encryption_rule {
     }
 }
 impl ServerSideEncryptionRule {
-    /// Creates a new builder-style object to manufacture [`ServerSideEncryptionRule`](crate::model::ServerSideEncryptionRule)
+    /// Creates a new builder-style object to manufacture [`ServerSideEncryptionRule`](crate::model::ServerSideEncryptionRule).
     pub fn builder() -> crate::model::server_side_encryption_rule::Builder {
         crate::model::server_side_encryption_rule::Builder::default()
     }
@@ -11718,6 +12021,7 @@ impl ServerSideEncryptionRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerSideEncryptionByDefault {
     /// <p>Server-side encryption algorithm to use for the default encryption.</p>
+    #[doc(hidden)]
     pub sse_algorithm: std::option::Option<crate::model::ServerSideEncryption>,
     /// <p>Amazon Web Services Key Management Service (KMS) customer Amazon Web Services KMS key ID to use for the default encryption. This parameter is allowed if and only if <code>SSEAlgorithm</code> is set to <code>aws:kms</code>.</p>
     /// <p>You can specify the key ID or the Amazon Resource Name (ARN) of the KMS key. However, if you are using encryption with cross-account or Amazon Web Services service operations you must use a fully qualified KMS key ARN. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html#bucket-encryption-update-bucket-policy">Using encryption for cross-account operations</a>. </p>
@@ -11728,6 +12032,7 @@ pub struct ServerSideEncryptionByDefault {
     /// </ul> <important>
     /// <p>Amazon S3 only supports symmetric KMS keys and not asymmetric KMS keys. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using symmetric and asymmetric keys</a> in the <i>Amazon Web Services Key Management Service Developer Guide</i>.</p>
     /// </important>
+    #[doc(hidden)]
     pub kms_master_key_id: std::option::Option<std::string::String>,
 }
 impl ServerSideEncryptionByDefault {
@@ -11756,11 +12061,10 @@ impl std::fmt::Debug for ServerSideEncryptionByDefault {
         formatter.finish()
     }
 }
-/// See [`ServerSideEncryptionByDefault`](crate::model::ServerSideEncryptionByDefault)
+/// See [`ServerSideEncryptionByDefault`](crate::model::ServerSideEncryptionByDefault).
 pub mod server_side_encryption_by_default {
 
-    /// A builder for [`ServerSideEncryptionByDefault`](crate::model::ServerSideEncryptionByDefault)
-    #[non_exhaustive]
+    /// A builder for [`ServerSideEncryptionByDefault`](crate::model::ServerSideEncryptionByDefault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sse_algorithm: std::option::Option<crate::model::ServerSideEncryption>,
@@ -11809,7 +12113,7 @@ pub mod server_side_encryption_by_default {
             self.kms_master_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerSideEncryptionByDefault`](crate::model::ServerSideEncryptionByDefault)
+        /// Consumes the builder and constructs a [`ServerSideEncryptionByDefault`](crate::model::ServerSideEncryptionByDefault).
         pub fn build(self) -> crate::model::ServerSideEncryptionByDefault {
             crate::model::ServerSideEncryptionByDefault {
                 sse_algorithm: self.sse_algorithm,
@@ -11819,7 +12123,7 @@ pub mod server_side_encryption_by_default {
     }
 }
 impl ServerSideEncryptionByDefault {
-    /// Creates a new builder-style object to manufacture [`ServerSideEncryptionByDefault`](crate::model::ServerSideEncryptionByDefault)
+    /// Creates a new builder-style object to manufacture [`ServerSideEncryptionByDefault`](crate::model::ServerSideEncryptionByDefault).
     pub fn builder() -> crate::model::server_side_encryption_by_default::Builder {
         crate::model::server_side_encryption_by_default::Builder::default()
     }
@@ -11830,6 +12134,7 @@ impl ServerSideEncryptionByDefault {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CorsConfiguration {
     /// <p>A set of origins and methods (cross-origin access that you want to allow). You can add up to 100 rules to the configuration.</p>
+    #[doc(hidden)]
     pub cors_rules: std::option::Option<std::vec::Vec<crate::model::CorsRule>>,
 }
 impl CorsConfiguration {
@@ -11845,11 +12150,10 @@ impl std::fmt::Debug for CorsConfiguration {
         formatter.finish()
     }
 }
-/// See [`CorsConfiguration`](crate::model::CorsConfiguration)
+/// See [`CorsConfiguration`](crate::model::CorsConfiguration).
 pub mod cors_configuration {
 
-    /// A builder for [`CorsConfiguration`](crate::model::CorsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CorsConfiguration`](crate::model::CorsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cors_rules: std::option::Option<std::vec::Vec<crate::model::CorsRule>>,
@@ -11874,7 +12178,7 @@ pub mod cors_configuration {
             self.cors_rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`CorsConfiguration`](crate::model::CorsConfiguration)
+        /// Consumes the builder and constructs a [`CorsConfiguration`](crate::model::CorsConfiguration).
         pub fn build(self) -> crate::model::CorsConfiguration {
             crate::model::CorsConfiguration {
                 cors_rules: self.cors_rules,
@@ -11883,7 +12187,7 @@ pub mod cors_configuration {
     }
 }
 impl CorsConfiguration {
-    /// Creates a new builder-style object to manufacture [`CorsConfiguration`](crate::model::CorsConfiguration)
+    /// Creates a new builder-style object to manufacture [`CorsConfiguration`](crate::model::CorsConfiguration).
     pub fn builder() -> crate::model::cors_configuration::Builder {
         crate::model::cors_configuration::Builder::default()
     }
@@ -11894,16 +12198,22 @@ impl CorsConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CorsRule {
     /// <p>Unique identifier for the rule. The value cannot be longer than 255 characters.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Headers that are specified in the <code>Access-Control-Request-Headers</code> header. These headers are allowed in a preflight OPTIONS request. In response to any preflight OPTIONS request, Amazon S3 returns any requested headers that are allowed.</p>
+    #[doc(hidden)]
     pub allowed_headers: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An HTTP method that you allow the origin to execute. Valid values are <code>GET</code>, <code>PUT</code>, <code>HEAD</code>, <code>POST</code>, and <code>DELETE</code>.</p>
+    #[doc(hidden)]
     pub allowed_methods: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>One or more origins you want customers to be able to access the bucket from.</p>
+    #[doc(hidden)]
     pub allowed_origins: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript <code>XMLHttpRequest</code> object).</p>
+    #[doc(hidden)]
     pub expose_headers: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The time in seconds that your browser is to cache the preflight response for the specified resource.</p>
+    #[doc(hidden)]
     pub max_age_seconds: i32,
 }
 impl CorsRule {
@@ -11944,11 +12254,10 @@ impl std::fmt::Debug for CorsRule {
         formatter.finish()
     }
 }
-/// See [`CorsRule`](crate::model::CorsRule)
+/// See [`CorsRule`](crate::model::CorsRule).
 pub mod cors_rule {
 
-    /// A builder for [`CorsRule`](crate::model::CorsRule)
-    #[non_exhaustive]
+    /// A builder for [`CorsRule`](crate::model::CorsRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -12055,7 +12364,7 @@ pub mod cors_rule {
             self.max_age_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`CorsRule`](crate::model::CorsRule)
+        /// Consumes the builder and constructs a [`CorsRule`](crate::model::CorsRule).
         pub fn build(self) -> crate::model::CorsRule {
             crate::model::CorsRule {
                 id: self.id,
@@ -12069,7 +12378,7 @@ pub mod cors_rule {
     }
 }
 impl CorsRule {
-    /// Creates a new builder-style object to manufacture [`CorsRule`](crate::model::CorsRule)
+    /// Creates a new builder-style object to manufacture [`CorsRule`](crate::model::CorsRule).
     pub fn builder() -> crate::model::cors_rule::Builder {
         crate::model::cors_rule::Builder::default()
     }
@@ -12080,10 +12389,13 @@ impl CorsRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnalyticsConfiguration {
     /// <p>The ID that identifies the analytics configuration.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The filter used to describe a set of objects for analyses. A filter must have exactly one prefix, one tag, or one conjunction (AnalyticsAndOperator). If no filter is provided, all objects will be considered in any analysis.</p>
+    #[doc(hidden)]
     pub filter: std::option::Option<crate::model::AnalyticsFilter>,
     /// <p> Contains data related to access patterns to be collected and made available to analyze the tradeoffs between different storage classes. </p>
+    #[doc(hidden)]
     pub storage_class_analysis: std::option::Option<crate::model::StorageClassAnalysis>,
 }
 impl AnalyticsConfiguration {
@@ -12111,11 +12423,10 @@ impl std::fmt::Debug for AnalyticsConfiguration {
         formatter.finish()
     }
 }
-/// See [`AnalyticsConfiguration`](crate::model::AnalyticsConfiguration)
+/// See [`AnalyticsConfiguration`](crate::model::AnalyticsConfiguration).
 pub mod analytics_configuration {
 
-    /// A builder for [`AnalyticsConfiguration`](crate::model::AnalyticsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AnalyticsConfiguration`](crate::model::AnalyticsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -12159,7 +12470,7 @@ pub mod analytics_configuration {
             self.storage_class_analysis = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnalyticsConfiguration`](crate::model::AnalyticsConfiguration)
+        /// Consumes the builder and constructs a [`AnalyticsConfiguration`](crate::model::AnalyticsConfiguration).
         pub fn build(self) -> crate::model::AnalyticsConfiguration {
             crate::model::AnalyticsConfiguration {
                 id: self.id,
@@ -12170,7 +12481,7 @@ pub mod analytics_configuration {
     }
 }
 impl AnalyticsConfiguration {
-    /// Creates a new builder-style object to manufacture [`AnalyticsConfiguration`](crate::model::AnalyticsConfiguration)
+    /// Creates a new builder-style object to manufacture [`AnalyticsConfiguration`](crate::model::AnalyticsConfiguration).
     pub fn builder() -> crate::model::analytics_configuration::Builder {
         crate::model::analytics_configuration::Builder::default()
     }
@@ -12181,6 +12492,7 @@ impl AnalyticsConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StorageClassAnalysis {
     /// <p>Specifies how data related to the storage class analysis for an Amazon S3 bucket should be exported.</p>
+    #[doc(hidden)]
     pub data_export: std::option::Option<crate::model::StorageClassAnalysisDataExport>,
 }
 impl StorageClassAnalysis {
@@ -12198,11 +12510,10 @@ impl std::fmt::Debug for StorageClassAnalysis {
         formatter.finish()
     }
 }
-/// See [`StorageClassAnalysis`](crate::model::StorageClassAnalysis)
+/// See [`StorageClassAnalysis`](crate::model::StorageClassAnalysis).
 pub mod storage_class_analysis {
 
-    /// A builder for [`StorageClassAnalysis`](crate::model::StorageClassAnalysis)
-    #[non_exhaustive]
+    /// A builder for [`StorageClassAnalysis`](crate::model::StorageClassAnalysis).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_export: std::option::Option<crate::model::StorageClassAnalysisDataExport>,
@@ -12221,7 +12532,7 @@ pub mod storage_class_analysis {
             self.data_export = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageClassAnalysis`](crate::model::StorageClassAnalysis)
+        /// Consumes the builder and constructs a [`StorageClassAnalysis`](crate::model::StorageClassAnalysis).
         pub fn build(self) -> crate::model::StorageClassAnalysis {
             crate::model::StorageClassAnalysis {
                 data_export: self.data_export,
@@ -12230,7 +12541,7 @@ pub mod storage_class_analysis {
     }
 }
 impl StorageClassAnalysis {
-    /// Creates a new builder-style object to manufacture [`StorageClassAnalysis`](crate::model::StorageClassAnalysis)
+    /// Creates a new builder-style object to manufacture [`StorageClassAnalysis`](crate::model::StorageClassAnalysis).
     pub fn builder() -> crate::model::storage_class_analysis::Builder {
         crate::model::storage_class_analysis::Builder::default()
     }
@@ -12241,8 +12552,10 @@ impl StorageClassAnalysis {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StorageClassAnalysisDataExport {
     /// <p>The version of the output schema to use when exporting data. Must be <code>V_1</code>.</p>
+    #[doc(hidden)]
     pub output_schema_version: std::option::Option<crate::model::StorageClassAnalysisSchemaVersion>,
     /// <p>The place to store the data for an analysis.</p>
+    #[doc(hidden)]
     pub destination: std::option::Option<crate::model::AnalyticsExportDestination>,
 }
 impl StorageClassAnalysisDataExport {
@@ -12265,11 +12578,10 @@ impl std::fmt::Debug for StorageClassAnalysisDataExport {
         formatter.finish()
     }
 }
-/// See [`StorageClassAnalysisDataExport`](crate::model::StorageClassAnalysisDataExport)
+/// See [`StorageClassAnalysisDataExport`](crate::model::StorageClassAnalysisDataExport).
 pub mod storage_class_analysis_data_export {
 
-    /// A builder for [`StorageClassAnalysisDataExport`](crate::model::StorageClassAnalysisDataExport)
-    #[non_exhaustive]
+    /// A builder for [`StorageClassAnalysisDataExport`](crate::model::StorageClassAnalysisDataExport).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) output_schema_version:
@@ -12306,7 +12618,7 @@ pub mod storage_class_analysis_data_export {
             self.destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageClassAnalysisDataExport`](crate::model::StorageClassAnalysisDataExport)
+        /// Consumes the builder and constructs a [`StorageClassAnalysisDataExport`](crate::model::StorageClassAnalysisDataExport).
         pub fn build(self) -> crate::model::StorageClassAnalysisDataExport {
             crate::model::StorageClassAnalysisDataExport {
                 output_schema_version: self.output_schema_version,
@@ -12316,7 +12628,7 @@ pub mod storage_class_analysis_data_export {
     }
 }
 impl StorageClassAnalysisDataExport {
-    /// Creates a new builder-style object to manufacture [`StorageClassAnalysisDataExport`](crate::model::StorageClassAnalysisDataExport)
+    /// Creates a new builder-style object to manufacture [`StorageClassAnalysisDataExport`](crate::model::StorageClassAnalysisDataExport).
     pub fn builder() -> crate::model::storage_class_analysis_data_export::Builder {
         crate::model::storage_class_analysis_data_export::Builder::default()
     }
@@ -12327,6 +12639,7 @@ impl StorageClassAnalysisDataExport {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnalyticsExportDestination {
     /// <p>A destination signifying output to an S3 bucket.</p>
+    #[doc(hidden)]
     pub s3_bucket_destination: std::option::Option<crate::model::AnalyticsS3BucketDestination>,
 }
 impl AnalyticsExportDestination {
@@ -12344,11 +12657,10 @@ impl std::fmt::Debug for AnalyticsExportDestination {
         formatter.finish()
     }
 }
-/// See [`AnalyticsExportDestination`](crate::model::AnalyticsExportDestination)
+/// See [`AnalyticsExportDestination`](crate::model::AnalyticsExportDestination).
 pub mod analytics_export_destination {
 
-    /// A builder for [`AnalyticsExportDestination`](crate::model::AnalyticsExportDestination)
-    #[non_exhaustive]
+    /// A builder for [`AnalyticsExportDestination`](crate::model::AnalyticsExportDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_bucket_destination:
@@ -12371,7 +12683,7 @@ pub mod analytics_export_destination {
             self.s3_bucket_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnalyticsExportDestination`](crate::model::AnalyticsExportDestination)
+        /// Consumes the builder and constructs a [`AnalyticsExportDestination`](crate::model::AnalyticsExportDestination).
         pub fn build(self) -> crate::model::AnalyticsExportDestination {
             crate::model::AnalyticsExportDestination {
                 s3_bucket_destination: self.s3_bucket_destination,
@@ -12380,7 +12692,7 @@ pub mod analytics_export_destination {
     }
 }
 impl AnalyticsExportDestination {
-    /// Creates a new builder-style object to manufacture [`AnalyticsExportDestination`](crate::model::AnalyticsExportDestination)
+    /// Creates a new builder-style object to manufacture [`AnalyticsExportDestination`](crate::model::AnalyticsExportDestination).
     pub fn builder() -> crate::model::analytics_export_destination::Builder {
         crate::model::analytics_export_destination::Builder::default()
     }
@@ -12391,14 +12703,18 @@ impl AnalyticsExportDestination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnalyticsS3BucketDestination {
     /// <p>Specifies the file format used when exporting data to Amazon S3.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::AnalyticsS3ExportFileFormat>,
     /// <p>The account ID that owns the destination S3 bucket. If no account ID is provided, the owner is not validated before exporting data.</p> <note>
     /// <p> Although this value is optional, we strongly recommend that you set it to help prevent problems if the destination bucket ownership changes. </p>
     /// </note>
+    #[doc(hidden)]
     pub bucket_account_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the bucket to which data is exported.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The prefix to use when exporting data. The prefix is prepended to all results.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl AnalyticsS3BucketDestination {
@@ -12431,11 +12747,10 @@ impl std::fmt::Debug for AnalyticsS3BucketDestination {
         formatter.finish()
     }
 }
-/// See [`AnalyticsS3BucketDestination`](crate::model::AnalyticsS3BucketDestination)
+/// See [`AnalyticsS3BucketDestination`](crate::model::AnalyticsS3BucketDestination).
 pub mod analytics_s3_bucket_destination {
 
-    /// A builder for [`AnalyticsS3BucketDestination`](crate::model::AnalyticsS3BucketDestination)
-    #[non_exhaustive]
+    /// A builder for [`AnalyticsS3BucketDestination`](crate::model::AnalyticsS3BucketDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) format: std::option::Option<crate::model::AnalyticsS3ExportFileFormat>,
@@ -12494,7 +12809,7 @@ pub mod analytics_s3_bucket_destination {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnalyticsS3BucketDestination`](crate::model::AnalyticsS3BucketDestination)
+        /// Consumes the builder and constructs a [`AnalyticsS3BucketDestination`](crate::model::AnalyticsS3BucketDestination).
         pub fn build(self) -> crate::model::AnalyticsS3BucketDestination {
             crate::model::AnalyticsS3BucketDestination {
                 format: self.format,
@@ -12506,7 +12821,7 @@ pub mod analytics_s3_bucket_destination {
     }
 }
 impl AnalyticsS3BucketDestination {
-    /// Creates a new builder-style object to manufacture [`AnalyticsS3BucketDestination`](crate::model::AnalyticsS3BucketDestination)
+    /// Creates a new builder-style object to manufacture [`AnalyticsS3BucketDestination`](crate::model::AnalyticsS3BucketDestination).
     pub fn builder() -> crate::model::analytics_s3_bucket_destination::Builder {
         crate::model::analytics_s3_bucket_destination::Builder::default()
     }
@@ -12685,8 +13000,10 @@ impl AnalyticsFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnalyticsAndOperator {
     /// <p>The prefix to use when evaluating an AND predicate: The prefix that an object must have to be included in the metrics results.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>The list of tags to use when evaluating an AND predicate.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl AnalyticsAndOperator {
@@ -12707,11 +13024,10 @@ impl std::fmt::Debug for AnalyticsAndOperator {
         formatter.finish()
     }
 }
-/// See [`AnalyticsAndOperator`](crate::model::AnalyticsAndOperator)
+/// See [`AnalyticsAndOperator`](crate::model::AnalyticsAndOperator).
 pub mod analytics_and_operator {
 
-    /// A builder for [`AnalyticsAndOperator`](crate::model::AnalyticsAndOperator)
-    #[non_exhaustive]
+    /// A builder for [`AnalyticsAndOperator`](crate::model::AnalyticsAndOperator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prefix: std::option::Option<std::string::String>,
@@ -12747,7 +13063,7 @@ pub mod analytics_and_operator {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnalyticsAndOperator`](crate::model::AnalyticsAndOperator)
+        /// Consumes the builder and constructs a [`AnalyticsAndOperator`](crate::model::AnalyticsAndOperator).
         pub fn build(self) -> crate::model::AnalyticsAndOperator {
             crate::model::AnalyticsAndOperator {
                 prefix: self.prefix,
@@ -12757,7 +13073,7 @@ pub mod analytics_and_operator {
     }
 }
 impl AnalyticsAndOperator {
-    /// Creates a new builder-style object to manufacture [`AnalyticsAndOperator`](crate::model::AnalyticsAndOperator)
+    /// Creates a new builder-style object to manufacture [`AnalyticsAndOperator`](crate::model::AnalyticsAndOperator).
     pub fn builder() -> crate::model::analytics_and_operator::Builder {
         crate::model::analytics_and_operator::Builder::default()
     }
@@ -12836,6 +13152,7 @@ impl AsRef<str> for BucketCannedAcl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccelerateConfiguration {
     /// <p>Specifies the transfer acceleration status of the bucket.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::BucketAccelerateStatus>,
 }
 impl AccelerateConfiguration {
@@ -12851,11 +13168,10 @@ impl std::fmt::Debug for AccelerateConfiguration {
         formatter.finish()
     }
 }
-/// See [`AccelerateConfiguration`](crate::model::AccelerateConfiguration)
+/// See [`AccelerateConfiguration`](crate::model::AccelerateConfiguration).
 pub mod accelerate_configuration {
 
-    /// A builder for [`AccelerateConfiguration`](crate::model::AccelerateConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AccelerateConfiguration`](crate::model::AccelerateConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::BucketAccelerateStatus>,
@@ -12874,7 +13190,7 @@ pub mod accelerate_configuration {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccelerateConfiguration`](crate::model::AccelerateConfiguration)
+        /// Consumes the builder and constructs a [`AccelerateConfiguration`](crate::model::AccelerateConfiguration).
         pub fn build(self) -> crate::model::AccelerateConfiguration {
             crate::model::AccelerateConfiguration {
                 status: self.status,
@@ -12883,7 +13199,7 @@ pub mod accelerate_configuration {
     }
 }
 impl AccelerateConfiguration {
-    /// Creates a new builder-style object to manufacture [`AccelerateConfiguration`](crate::model::AccelerateConfiguration)
+    /// Creates a new builder-style object to manufacture [`AccelerateConfiguration`](crate::model::AccelerateConfiguration).
     pub fn builder() -> crate::model::accelerate_configuration::Builder {
         crate::model::accelerate_configuration::Builder::default()
     }
@@ -12949,8 +13265,10 @@ impl AsRef<str> for BucketAccelerateStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Initiator {
     /// <p>If the principal is an Amazon Web Services account, it provides the Canonical User ID. If the principal is an IAM User, it provides a user ARN value.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Name of the Principal.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
 }
 impl Initiator {
@@ -12971,11 +13289,10 @@ impl std::fmt::Debug for Initiator {
         formatter.finish()
     }
 }
-/// See [`Initiator`](crate::model::Initiator)
+/// See [`Initiator`](crate::model::Initiator).
 pub mod initiator {
 
-    /// A builder for [`Initiator`](crate::model::Initiator)
-    #[non_exhaustive]
+    /// A builder for [`Initiator`](crate::model::Initiator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -13002,7 +13319,7 @@ pub mod initiator {
             self.display_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Initiator`](crate::model::Initiator)
+        /// Consumes the builder and constructs a [`Initiator`](crate::model::Initiator).
         pub fn build(self) -> crate::model::Initiator {
             crate::model::Initiator {
                 id: self.id,
@@ -13012,7 +13329,7 @@ pub mod initiator {
     }
 }
 impl Initiator {
-    /// Creates a new builder-style object to manufacture [`Initiator`](crate::model::Initiator)
+    /// Creates a new builder-style object to manufacture [`Initiator`](crate::model::Initiator).
     pub fn builder() -> crate::model::initiator::Builder {
         crate::model::initiator::Builder::default()
     }
@@ -13023,13 +13340,29 @@ impl Initiator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Part {
     /// <p>Part number identifying the part. This is a positive integer between 1 and 10,000.</p>
+    #[doc(hidden)]
     pub part_number: i32,
     /// <p>Date and time at which the part was uploaded.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Entity tag returned when the part was uploaded.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
     /// <p>Size in bytes of the uploaded part data.</p>
+    #[doc(hidden)]
     pub size: i64,
+    /// <p>This header can be used as a data integrity check to verify that the data received is the same data that was originally sent. This header specifies the base64-encoded, 32-bit CRC32 checksum of the object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32_c: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha1: std::option::Option<std::string::String>,
+    /// <p>This header can be used as a data integrity check to verify that the data received is the same data that was originally sent. This header specifies the base64-encoded, 256-bit SHA-256 digest of the object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha256: std::option::Option<std::string::String>,
 }
 impl Part {
     /// <p>Part number identifying the part. This is a positive integer between 1 and 10,000.</p>
@@ -13048,6 +13381,22 @@ impl Part {
     pub fn size(&self) -> i64 {
         self.size
     }
+    /// <p>This header can be used as a data integrity check to verify that the data received is the same data that was originally sent. This header specifies the base64-encoded, 32-bit CRC32 checksum of the object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32(&self) -> std::option::Option<&str> {
+        self.checksum_crc32.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32_c(&self) -> std::option::Option<&str> {
+        self.checksum_crc32_c.as_deref()
+    }
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha1(&self) -> std::option::Option<&str> {
+        self.checksum_sha1.as_deref()
+    }
+    /// <p>This header can be used as a data integrity check to verify that the data received is the same data that was originally sent. This header specifies the base64-encoded, 256-bit SHA-256 digest of the object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha256(&self) -> std::option::Option<&str> {
+        self.checksum_sha256.as_deref()
+    }
 }
 impl std::fmt::Debug for Part {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -13056,20 +13405,27 @@ impl std::fmt::Debug for Part {
         formatter.field("last_modified", &self.last_modified);
         formatter.field("e_tag", &self.e_tag);
         formatter.field("size", &self.size);
+        formatter.field("checksum_crc32", &self.checksum_crc32);
+        formatter.field("checksum_crc32_c", &self.checksum_crc32_c);
+        formatter.field("checksum_sha1", &self.checksum_sha1);
+        formatter.field("checksum_sha256", &self.checksum_sha256);
         formatter.finish()
     }
 }
-/// See [`Part`](crate::model::Part)
+/// See [`Part`](crate::model::Part).
 pub mod part {
 
-    /// A builder for [`Part`](crate::model::Part)
-    #[non_exhaustive]
+    /// A builder for [`Part`](crate::model::Part).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) part_number: std::option::Option<i32>,
         pub(crate) last_modified: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) e_tag: std::option::Option<std::string::String>,
         pub(crate) size: std::option::Option<i64>,
+        pub(crate) checksum_crc32: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32_c: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha1: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha256: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>Part number identifying the part. This is a positive integer between 1 and 10,000.</p>
@@ -13115,19 +13471,75 @@ pub mod part {
             self.size = input;
             self
         }
-        /// Consumes the builder and constructs a [`Part`](crate::model::Part)
+        /// <p>This header can be used as a data integrity check to verify that the data received is the same data that was originally sent. This header specifies the base64-encoded, 32-bit CRC32 checksum of the object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32 = Some(input.into());
+            self
+        }
+        /// <p>This header can be used as a data integrity check to verify that the data received is the same data that was originally sent. This header specifies the base64-encoded, 32-bit CRC32 checksum of the object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32 = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32_c(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32_c = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32_c(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32_c = input;
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha1(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha1 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha1(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha1 = input;
+            self
+        }
+        /// <p>This header can be used as a data integrity check to verify that the data received is the same data that was originally sent. This header specifies the base64-encoded, 256-bit SHA-256 digest of the object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha256(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha256 = Some(input.into());
+            self
+        }
+        /// <p>This header can be used as a data integrity check to verify that the data received is the same data that was originally sent. This header specifies the base64-encoded, 256-bit SHA-256 digest of the object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha256(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha256 = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`Part`](crate::model::Part).
         pub fn build(self) -> crate::model::Part {
             crate::model::Part {
                 part_number: self.part_number.unwrap_or_default(),
                 last_modified: self.last_modified,
                 e_tag: self.e_tag,
                 size: self.size.unwrap_or_default(),
+                checksum_crc32: self.checksum_crc32,
+                checksum_crc32_c: self.checksum_crc32_c,
+                checksum_sha1: self.checksum_sha1,
+                checksum_sha256: self.checksum_sha256,
             }
         }
     }
 }
 impl Part {
-    /// Creates a new builder-style object to manufacture [`Part`](crate::model::Part)
+    /// Creates a new builder-style object to manufacture [`Part`](crate::model::Part).
     pub fn builder() -> crate::model::part::Builder {
         crate::model::part::Builder::default()
     }
@@ -13193,6 +13605,7 @@ impl AsRef<str> for EncodingType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CommonPrefix {
     /// <p>Container for the specified common prefix.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl CommonPrefix {
@@ -13208,11 +13621,10 @@ impl std::fmt::Debug for CommonPrefix {
         formatter.finish()
     }
 }
-/// See [`CommonPrefix`](crate::model::CommonPrefix)
+/// See [`CommonPrefix`](crate::model::CommonPrefix).
 pub mod common_prefix {
 
-    /// A builder for [`CommonPrefix`](crate::model::CommonPrefix)
-    #[non_exhaustive]
+    /// A builder for [`CommonPrefix`](crate::model::CommonPrefix).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prefix: std::option::Option<std::string::String>,
@@ -13228,7 +13640,7 @@ pub mod common_prefix {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`CommonPrefix`](crate::model::CommonPrefix)
+        /// Consumes the builder and constructs a [`CommonPrefix`](crate::model::CommonPrefix).
         pub fn build(self) -> crate::model::CommonPrefix {
             crate::model::CommonPrefix {
                 prefix: self.prefix,
@@ -13237,7 +13649,7 @@ pub mod common_prefix {
     }
 }
 impl CommonPrefix {
-    /// Creates a new builder-style object to manufacture [`CommonPrefix`](crate::model::CommonPrefix)
+    /// Creates a new builder-style object to manufacture [`CommonPrefix`](crate::model::CommonPrefix).
     pub fn builder() -> crate::model::common_prefix::Builder {
         crate::model::common_prefix::Builder::default()
     }
@@ -13248,14 +13660,19 @@ impl CommonPrefix {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteMarkerEntry {
     /// <p>The account that created the delete marker.&gt;</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::Owner>,
     /// <p>The object key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Version ID of an object.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the object is (true) or is not (false) the latest version of an object.</p>
+    #[doc(hidden)]
     pub is_latest: bool,
     /// <p>Date and time the object was last modified.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DeleteMarkerEntry {
@@ -13291,11 +13708,10 @@ impl std::fmt::Debug for DeleteMarkerEntry {
         formatter.finish()
     }
 }
-/// See [`DeleteMarkerEntry`](crate::model::DeleteMarkerEntry)
+/// See [`DeleteMarkerEntry`](crate::model::DeleteMarkerEntry).
 pub mod delete_marker_entry {
 
-    /// A builder for [`DeleteMarkerEntry`](crate::model::DeleteMarkerEntry)
-    #[non_exhaustive]
+    /// A builder for [`DeleteMarkerEntry`](crate::model::DeleteMarkerEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner: std::option::Option<crate::model::Owner>,
@@ -13358,7 +13774,7 @@ pub mod delete_marker_entry {
             self.last_modified = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteMarkerEntry`](crate::model::DeleteMarkerEntry)
+        /// Consumes the builder and constructs a [`DeleteMarkerEntry`](crate::model::DeleteMarkerEntry).
         pub fn build(self) -> crate::model::DeleteMarkerEntry {
             crate::model::DeleteMarkerEntry {
                 owner: self.owner,
@@ -13371,7 +13787,7 @@ pub mod delete_marker_entry {
     }
 }
 impl DeleteMarkerEntry {
-    /// Creates a new builder-style object to manufacture [`DeleteMarkerEntry`](crate::model::DeleteMarkerEntry)
+    /// Creates a new builder-style object to manufacture [`DeleteMarkerEntry`](crate::model::DeleteMarkerEntry).
     pub fn builder() -> crate::model::delete_marker_entry::Builder {
         crate::model::delete_marker_entry::Builder::default()
     }
@@ -13382,26 +13798,41 @@ impl DeleteMarkerEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ObjectVersion {
     /// <p>The entity tag is an MD5 hash of that version of the object.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
+    /// <p>The algorithm that was used to create a checksum of the object.</p>
+    #[doc(hidden)]
+    pub checksum_algorithm: std::option::Option<std::vec::Vec<crate::model::ChecksumAlgorithm>>,
     /// <p>Size in bytes of the object.</p>
+    #[doc(hidden)]
     pub size: i64,
     /// <p>The class of storage used to store the object.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::ObjectVersionStorageClass>,
     /// <p>The object key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Version ID of an object.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the object is (true) or is not (false) the latest version of an object.</p>
+    #[doc(hidden)]
     pub is_latest: bool,
     /// <p>Date and time the object was last modified.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the owner of the object.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::Owner>,
 }
 impl ObjectVersion {
     /// <p>The entity tag is an MD5 hash of that version of the object.</p>
     pub fn e_tag(&self) -> std::option::Option<&str> {
         self.e_tag.as_deref()
+    }
+    /// <p>The algorithm that was used to create a checksum of the object.</p>
+    pub fn checksum_algorithm(&self) -> std::option::Option<&[crate::model::ChecksumAlgorithm]> {
+        self.checksum_algorithm.as_deref()
     }
     /// <p>Size in bytes of the object.</p>
     pub fn size(&self) -> i64 {
@@ -13436,6 +13867,7 @@ impl std::fmt::Debug for ObjectVersion {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("ObjectVersion");
         formatter.field("e_tag", &self.e_tag);
+        formatter.field("checksum_algorithm", &self.checksum_algorithm);
         formatter.field("size", &self.size);
         formatter.field("storage_class", &self.storage_class);
         formatter.field("key", &self.key);
@@ -13446,14 +13878,15 @@ impl std::fmt::Debug for ObjectVersion {
         formatter.finish()
     }
 }
-/// See [`ObjectVersion`](crate::model::ObjectVersion)
+/// See [`ObjectVersion`](crate::model::ObjectVersion).
 pub mod object_version {
 
-    /// A builder for [`ObjectVersion`](crate::model::ObjectVersion)
-    #[non_exhaustive]
+    /// A builder for [`ObjectVersion`](crate::model::ObjectVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) e_tag: std::option::Option<std::string::String>,
+        pub(crate) checksum_algorithm:
+            std::option::Option<std::vec::Vec<crate::model::ChecksumAlgorithm>>,
         pub(crate) size: std::option::Option<i64>,
         pub(crate) storage_class: std::option::Option<crate::model::ObjectVersionStorageClass>,
         pub(crate) key: std::option::Option<std::string::String>,
@@ -13471,6 +13904,25 @@ pub mod object_version {
         /// <p>The entity tag is an MD5 hash of that version of the object.</p>
         pub fn set_e_tag(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.e_tag = input;
+            self
+        }
+        /// Appends an item to `checksum_algorithm`.
+        ///
+        /// To override the contents of this collection use [`set_checksum_algorithm`](Self::set_checksum_algorithm).
+        ///
+        /// <p>The algorithm that was used to create a checksum of the object.</p>
+        pub fn checksum_algorithm(mut self, input: crate::model::ChecksumAlgorithm) -> Self {
+            let mut v = self.checksum_algorithm.unwrap_or_default();
+            v.push(input);
+            self.checksum_algorithm = Some(v);
+            self
+        }
+        /// <p>The algorithm that was used to create a checksum of the object.</p>
+        pub fn set_checksum_algorithm(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ChecksumAlgorithm>>,
+        ) -> Self {
+            self.checksum_algorithm = input;
             self
         }
         /// <p>Size in bytes of the object.</p>
@@ -13549,10 +14001,11 @@ pub mod object_version {
             self.owner = input;
             self
         }
-        /// Consumes the builder and constructs a [`ObjectVersion`](crate::model::ObjectVersion)
+        /// Consumes the builder and constructs a [`ObjectVersion`](crate::model::ObjectVersion).
         pub fn build(self) -> crate::model::ObjectVersion {
             crate::model::ObjectVersion {
                 e_tag: self.e_tag,
+                checksum_algorithm: self.checksum_algorithm,
                 size: self.size.unwrap_or_default(),
                 storage_class: self.storage_class,
                 key: self.key,
@@ -13565,7 +14018,7 @@ pub mod object_version {
     }
 }
 impl ObjectVersion {
-    /// Creates a new builder-style object to manufacture [`ObjectVersion`](crate::model::ObjectVersion)
+    /// Creates a new builder-style object to manufacture [`ObjectVersion`](crate::model::ObjectVersion).
     pub fn builder() -> crate::model::object_version::Builder {
         crate::model::object_version::Builder::default()
     }
@@ -13627,21 +14080,30 @@ impl AsRef<str> for ObjectVersionStorageClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Object {
     /// <p>The name that you assign to an object. You use the object key to retrieve the object.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Creation date of the object.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The entity tag is a hash of the object. The ETag reflects changes only to the contents of an object, not its metadata. The ETag may or may not be an MD5 digest of the object data. Whether or not it is depends on how the object was created and how it is encrypted as described below:</p>
     /// <ul>
     /// <li> <p>Objects created by the PUT Object, POST Object, or Copy operation, or through the Amazon Web Services Management Console, and are encrypted by SSE-S3 or plaintext, have ETags that are an MD5 digest of their object data.</p> </li>
     /// <li> <p>Objects created by the PUT Object, POST Object, or Copy operation, or through the Amazon Web Services Management Console, and are encrypted by SSE-C or SSE-KMS, have ETags that are not an MD5 digest of their object data.</p> </li>
-    /// <li> <p>If an object is created by either the Multipart Upload or Part Copy operation, the ETag is not an MD5 digest, regardless of the method of encryption.</p> </li>
+    /// <li> <p>If an object is created by either the Multipart Upload or Part Copy operation, the ETag is not an MD5 digest, regardless of the method of encryption. If an object is larger than 16 MB, the Amazon Web Services Management Console will upload or copy that object as a Multipart Upload, and therefore the ETag will not be an MD5 digest.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
+    /// <p>The algorithm that was used to create a checksum of the object.</p>
+    #[doc(hidden)]
+    pub checksum_algorithm: std::option::Option<std::vec::Vec<crate::model::ChecksumAlgorithm>>,
     /// <p>Size in bytes of the object</p>
+    #[doc(hidden)]
     pub size: i64,
     /// <p>The class of storage used to store the object.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::ObjectStorageClass>,
     /// <p>The owner of the object</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::Owner>,
 }
 impl Object {
@@ -13657,10 +14119,14 @@ impl Object {
     /// <ul>
     /// <li> <p>Objects created by the PUT Object, POST Object, or Copy operation, or through the Amazon Web Services Management Console, and are encrypted by SSE-S3 or plaintext, have ETags that are an MD5 digest of their object data.</p> </li>
     /// <li> <p>Objects created by the PUT Object, POST Object, or Copy operation, or through the Amazon Web Services Management Console, and are encrypted by SSE-C or SSE-KMS, have ETags that are not an MD5 digest of their object data.</p> </li>
-    /// <li> <p>If an object is created by either the Multipart Upload or Part Copy operation, the ETag is not an MD5 digest, regardless of the method of encryption.</p> </li>
+    /// <li> <p>If an object is created by either the Multipart Upload or Part Copy operation, the ETag is not an MD5 digest, regardless of the method of encryption. If an object is larger than 16 MB, the Amazon Web Services Management Console will upload or copy that object as a Multipart Upload, and therefore the ETag will not be an MD5 digest.</p> </li>
     /// </ul>
     pub fn e_tag(&self) -> std::option::Option<&str> {
         self.e_tag.as_deref()
+    }
+    /// <p>The algorithm that was used to create a checksum of the object.</p>
+    pub fn checksum_algorithm(&self) -> std::option::Option<&[crate::model::ChecksumAlgorithm]> {
+        self.checksum_algorithm.as_deref()
     }
     /// <p>Size in bytes of the object</p>
     pub fn size(&self) -> i64 {
@@ -13681,22 +14147,24 @@ impl std::fmt::Debug for Object {
         formatter.field("key", &self.key);
         formatter.field("last_modified", &self.last_modified);
         formatter.field("e_tag", &self.e_tag);
+        formatter.field("checksum_algorithm", &self.checksum_algorithm);
         formatter.field("size", &self.size);
         formatter.field("storage_class", &self.storage_class);
         formatter.field("owner", &self.owner);
         formatter.finish()
     }
 }
-/// See [`Object`](crate::model::Object)
+/// See [`Object`](crate::model::Object).
 pub mod object {
 
-    /// A builder for [`Object`](crate::model::Object)
-    #[non_exhaustive]
+    /// A builder for [`Object`](crate::model::Object).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
         pub(crate) last_modified: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) e_tag: std::option::Option<std::string::String>,
+        pub(crate) checksum_algorithm:
+            std::option::Option<std::vec::Vec<crate::model::ChecksumAlgorithm>>,
         pub(crate) size: std::option::Option<i64>,
         pub(crate) storage_class: std::option::Option<crate::model::ObjectStorageClass>,
         pub(crate) owner: std::option::Option<crate::model::Owner>,
@@ -13729,7 +14197,7 @@ pub mod object {
         /// <ul>
         /// <li> <p>Objects created by the PUT Object, POST Object, or Copy operation, or through the Amazon Web Services Management Console, and are encrypted by SSE-S3 or plaintext, have ETags that are an MD5 digest of their object data.</p> </li>
         /// <li> <p>Objects created by the PUT Object, POST Object, or Copy operation, or through the Amazon Web Services Management Console, and are encrypted by SSE-C or SSE-KMS, have ETags that are not an MD5 digest of their object data.</p> </li>
-        /// <li> <p>If an object is created by either the Multipart Upload or Part Copy operation, the ETag is not an MD5 digest, regardless of the method of encryption.</p> </li>
+        /// <li> <p>If an object is created by either the Multipart Upload or Part Copy operation, the ETag is not an MD5 digest, regardless of the method of encryption. If an object is larger than 16 MB, the Amazon Web Services Management Console will upload or copy that object as a Multipart Upload, and therefore the ETag will not be an MD5 digest.</p> </li>
         /// </ul>
         pub fn e_tag(mut self, input: impl Into<std::string::String>) -> Self {
             self.e_tag = Some(input.into());
@@ -13739,10 +14207,29 @@ pub mod object {
         /// <ul>
         /// <li> <p>Objects created by the PUT Object, POST Object, or Copy operation, or through the Amazon Web Services Management Console, and are encrypted by SSE-S3 or plaintext, have ETags that are an MD5 digest of their object data.</p> </li>
         /// <li> <p>Objects created by the PUT Object, POST Object, or Copy operation, or through the Amazon Web Services Management Console, and are encrypted by SSE-C or SSE-KMS, have ETags that are not an MD5 digest of their object data.</p> </li>
-        /// <li> <p>If an object is created by either the Multipart Upload or Part Copy operation, the ETag is not an MD5 digest, regardless of the method of encryption.</p> </li>
+        /// <li> <p>If an object is created by either the Multipart Upload or Part Copy operation, the ETag is not an MD5 digest, regardless of the method of encryption. If an object is larger than 16 MB, the Amazon Web Services Management Console will upload or copy that object as a Multipart Upload, and therefore the ETag will not be an MD5 digest.</p> </li>
         /// </ul>
         pub fn set_e_tag(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.e_tag = input;
+            self
+        }
+        /// Appends an item to `checksum_algorithm`.
+        ///
+        /// To override the contents of this collection use [`set_checksum_algorithm`](Self::set_checksum_algorithm).
+        ///
+        /// <p>The algorithm that was used to create a checksum of the object.</p>
+        pub fn checksum_algorithm(mut self, input: crate::model::ChecksumAlgorithm) -> Self {
+            let mut v = self.checksum_algorithm.unwrap_or_default();
+            v.push(input);
+            self.checksum_algorithm = Some(v);
+            self
+        }
+        /// <p>The algorithm that was used to create a checksum of the object.</p>
+        pub fn set_checksum_algorithm(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ChecksumAlgorithm>>,
+        ) -> Self {
+            self.checksum_algorithm = input;
             self
         }
         /// <p>Size in bytes of the object</p>
@@ -13778,12 +14265,13 @@ pub mod object {
             self.owner = input;
             self
         }
-        /// Consumes the builder and constructs a [`Object`](crate::model::Object)
+        /// Consumes the builder and constructs a [`Object`](crate::model::Object).
         pub fn build(self) -> crate::model::Object {
             crate::model::Object {
                 key: self.key,
                 last_modified: self.last_modified,
                 e_tag: self.e_tag,
+                checksum_algorithm: self.checksum_algorithm,
                 size: self.size.unwrap_or_default(),
                 storage_class: self.storage_class,
                 owner: self.owner,
@@ -13792,7 +14280,7 @@ pub mod object {
     }
 }
 impl Object {
-    /// Creates a new builder-style object to manufacture [`Object`](crate::model::Object)
+    /// Creates a new builder-style object to manufacture [`Object`](crate::model::Object).
     pub fn builder() -> crate::model::object::Builder {
         crate::model::object::Builder::default()
     }
@@ -13896,17 +14384,26 @@ impl AsRef<str> for ObjectStorageClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MultipartUpload {
     /// <p>Upload ID that identifies the multipart upload.</p>
+    #[doc(hidden)]
     pub upload_id: std::option::Option<std::string::String>,
     /// <p>Key of the object for which the multipart upload was initiated.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Date and time at which the multipart upload was initiated.</p>
+    #[doc(hidden)]
     pub initiated: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The class of storage used to store the object.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::StorageClass>,
     /// <p>Specifies the owner of the object that is part of the multipart upload. </p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::Owner>,
     /// <p>Identifies who initiated the multipart upload.</p>
+    #[doc(hidden)]
     pub initiator: std::option::Option<crate::model::Initiator>,
+    /// <p>The algorithm that was used to create a checksum of the object.</p>
+    #[doc(hidden)]
+    pub checksum_algorithm: std::option::Option<crate::model::ChecksumAlgorithm>,
 }
 impl MultipartUpload {
     /// <p>Upload ID that identifies the multipart upload.</p>
@@ -13933,6 +14430,10 @@ impl MultipartUpload {
     pub fn initiator(&self) -> std::option::Option<&crate::model::Initiator> {
         self.initiator.as_ref()
     }
+    /// <p>The algorithm that was used to create a checksum of the object.</p>
+    pub fn checksum_algorithm(&self) -> std::option::Option<&crate::model::ChecksumAlgorithm> {
+        self.checksum_algorithm.as_ref()
+    }
 }
 impl std::fmt::Debug for MultipartUpload {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -13943,14 +14444,14 @@ impl std::fmt::Debug for MultipartUpload {
         formatter.field("storage_class", &self.storage_class);
         formatter.field("owner", &self.owner);
         formatter.field("initiator", &self.initiator);
+        formatter.field("checksum_algorithm", &self.checksum_algorithm);
         formatter.finish()
     }
 }
-/// See [`MultipartUpload`](crate::model::MultipartUpload)
+/// See [`MultipartUpload`](crate::model::MultipartUpload).
 pub mod multipart_upload {
 
-    /// A builder for [`MultipartUpload`](crate::model::MultipartUpload)
-    #[non_exhaustive]
+    /// A builder for [`MultipartUpload`](crate::model::MultipartUpload).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) upload_id: std::option::Option<std::string::String>,
@@ -13959,6 +14460,7 @@ pub mod multipart_upload {
         pub(crate) storage_class: std::option::Option<crate::model::StorageClass>,
         pub(crate) owner: std::option::Option<crate::model::Owner>,
         pub(crate) initiator: std::option::Option<crate::model::Initiator>,
+        pub(crate) checksum_algorithm: std::option::Option<crate::model::ChecksumAlgorithm>,
     }
     impl Builder {
         /// <p>Upload ID that identifies the multipart upload.</p>
@@ -14030,7 +14532,20 @@ pub mod multipart_upload {
             self.initiator = input;
             self
         }
-        /// Consumes the builder and constructs a [`MultipartUpload`](crate::model::MultipartUpload)
+        /// <p>The algorithm that was used to create a checksum of the object.</p>
+        pub fn checksum_algorithm(mut self, input: crate::model::ChecksumAlgorithm) -> Self {
+            self.checksum_algorithm = Some(input);
+            self
+        }
+        /// <p>The algorithm that was used to create a checksum of the object.</p>
+        pub fn set_checksum_algorithm(
+            mut self,
+            input: std::option::Option<crate::model::ChecksumAlgorithm>,
+        ) -> Self {
+            self.checksum_algorithm = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`MultipartUpload`](crate::model::MultipartUpload).
         pub fn build(self) -> crate::model::MultipartUpload {
             crate::model::MultipartUpload {
                 upload_id: self.upload_id,
@@ -14039,12 +14554,13 @@ pub mod multipart_upload {
                 storage_class: self.storage_class,
                 owner: self.owner,
                 initiator: self.initiator,
+                checksum_algorithm: self.checksum_algorithm,
             }
         }
     }
 }
 impl MultipartUpload {
-    /// Creates a new builder-style object to manufacture [`MultipartUpload`](crate::model::MultipartUpload)
+    /// Creates a new builder-style object to manufacture [`MultipartUpload`](crate::model::MultipartUpload).
     pub fn builder() -> crate::model::multipart_upload::Builder {
         crate::model::multipart_upload::Builder::default()
     }
@@ -14055,8 +14571,10 @@ impl MultipartUpload {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Bucket {
     /// <p>The name of the bucket.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Date the bucket was created. This date can change when making changes to your bucket, such as editing its bucket policy.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Bucket {
@@ -14077,11 +14595,10 @@ impl std::fmt::Debug for Bucket {
         formatter.finish()
     }
 }
-/// See [`Bucket`](crate::model::Bucket)
+/// See [`Bucket`](crate::model::Bucket).
 pub mod bucket {
 
-    /// A builder for [`Bucket`](crate::model::Bucket)
-    #[non_exhaustive]
+    /// A builder for [`Bucket`](crate::model::Bucket).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -14111,7 +14628,7 @@ pub mod bucket {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Bucket`](crate::model::Bucket)
+        /// Consumes the builder and constructs a [`Bucket`](crate::model::Bucket).
         pub fn build(self) -> crate::model::Bucket {
             crate::model::Bucket {
                 name: self.name,
@@ -14121,7 +14638,7 @@ pub mod bucket {
     }
 }
 impl Bucket {
-    /// Creates a new builder-style object to manufacture [`Bucket`](crate::model::Bucket)
+    /// Creates a new builder-style object to manufacture [`Bucket`](crate::model::Bucket).
     pub fn builder() -> crate::model::bucket::Builder {
         crate::model::bucket::Builder::default()
     }
@@ -14193,6 +14710,594 @@ impl AsRef<str> for ArchiveStatus {
     std::fmt::Debug,
     std::hash::Hash,
 )]
+pub enum ChecksumMode {
+    #[allow(missing_docs)] // documentation missing in model
+    Enabled,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for ChecksumMode {
+    fn from(s: &str) -> Self {
+        match s {
+            "ENABLED" => ChecksumMode::Enabled,
+            other => ChecksumMode::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for ChecksumMode {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(ChecksumMode::from(s))
+    }
+}
+impl ChecksumMode {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            ChecksumMode::Enabled => "ENABLED",
+            ChecksumMode::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["ENABLED"]
+    }
+}
+impl AsRef<str> for ChecksumMode {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+/// <p>A collection of parts associated with a multipart upload.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetObjectAttributesParts {
+    /// <p>The total number of parts.</p>
+    #[doc(hidden)]
+    pub total_parts_count: i32,
+    /// <p>The marker for the current part.</p>
+    #[doc(hidden)]
+    pub part_number_marker: std::option::Option<std::string::String>,
+    /// <p>When a list is truncated, this element specifies the last part in the list, as well as the value to use for the <code>PartNumberMarker</code> request parameter in a subsequent request.</p>
+    #[doc(hidden)]
+    pub next_part_number_marker: std::option::Option<std::string::String>,
+    /// <p>The maximum number of parts allowed in the response.</p>
+    #[doc(hidden)]
+    pub max_parts: i32,
+    /// <p>Indicates whether the returned list of parts is truncated. A value of <code>true</code> indicates that the list was truncated. A list can be truncated if the number of parts exceeds the limit returned in the <code>MaxParts</code> element.</p>
+    #[doc(hidden)]
+    pub is_truncated: bool,
+    /// <p>A container for elements related to a particular part. A response can contain zero or more <code>Parts</code> elements.</p>
+    #[doc(hidden)]
+    pub parts: std::option::Option<std::vec::Vec<crate::model::ObjectPart>>,
+}
+impl GetObjectAttributesParts {
+    /// <p>The total number of parts.</p>
+    pub fn total_parts_count(&self) -> i32 {
+        self.total_parts_count
+    }
+    /// <p>The marker for the current part.</p>
+    pub fn part_number_marker(&self) -> std::option::Option<&str> {
+        self.part_number_marker.as_deref()
+    }
+    /// <p>When a list is truncated, this element specifies the last part in the list, as well as the value to use for the <code>PartNumberMarker</code> request parameter in a subsequent request.</p>
+    pub fn next_part_number_marker(&self) -> std::option::Option<&str> {
+        self.next_part_number_marker.as_deref()
+    }
+    /// <p>The maximum number of parts allowed in the response.</p>
+    pub fn max_parts(&self) -> i32 {
+        self.max_parts
+    }
+    /// <p>Indicates whether the returned list of parts is truncated. A value of <code>true</code> indicates that the list was truncated. A list can be truncated if the number of parts exceeds the limit returned in the <code>MaxParts</code> element.</p>
+    pub fn is_truncated(&self) -> bool {
+        self.is_truncated
+    }
+    /// <p>A container for elements related to a particular part. A response can contain zero or more <code>Parts</code> elements.</p>
+    pub fn parts(&self) -> std::option::Option<&[crate::model::ObjectPart]> {
+        self.parts.as_deref()
+    }
+}
+impl std::fmt::Debug for GetObjectAttributesParts {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetObjectAttributesParts");
+        formatter.field("total_parts_count", &self.total_parts_count);
+        formatter.field("part_number_marker", &self.part_number_marker);
+        formatter.field("next_part_number_marker", &self.next_part_number_marker);
+        formatter.field("max_parts", &self.max_parts);
+        formatter.field("is_truncated", &self.is_truncated);
+        formatter.field("parts", &self.parts);
+        formatter.finish()
+    }
+}
+/// See [`GetObjectAttributesParts`](crate::model::GetObjectAttributesParts).
+pub mod get_object_attributes_parts {
+
+    /// A builder for [`GetObjectAttributesParts`](crate::model::GetObjectAttributesParts).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) total_parts_count: std::option::Option<i32>,
+        pub(crate) part_number_marker: std::option::Option<std::string::String>,
+        pub(crate) next_part_number_marker: std::option::Option<std::string::String>,
+        pub(crate) max_parts: std::option::Option<i32>,
+        pub(crate) is_truncated: std::option::Option<bool>,
+        pub(crate) parts: std::option::Option<std::vec::Vec<crate::model::ObjectPart>>,
+    }
+    impl Builder {
+        /// <p>The total number of parts.</p>
+        pub fn total_parts_count(mut self, input: i32) -> Self {
+            self.total_parts_count = Some(input);
+            self
+        }
+        /// <p>The total number of parts.</p>
+        pub fn set_total_parts_count(mut self, input: std::option::Option<i32>) -> Self {
+            self.total_parts_count = input;
+            self
+        }
+        /// <p>The marker for the current part.</p>
+        pub fn part_number_marker(mut self, input: impl Into<std::string::String>) -> Self {
+            self.part_number_marker = Some(input.into());
+            self
+        }
+        /// <p>The marker for the current part.</p>
+        pub fn set_part_number_marker(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.part_number_marker = input;
+            self
+        }
+        /// <p>When a list is truncated, this element specifies the last part in the list, as well as the value to use for the <code>PartNumberMarker</code> request parameter in a subsequent request.</p>
+        pub fn next_part_number_marker(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_part_number_marker = Some(input.into());
+            self
+        }
+        /// <p>When a list is truncated, this element specifies the last part in the list, as well as the value to use for the <code>PartNumberMarker</code> request parameter in a subsequent request.</p>
+        pub fn set_next_part_number_marker(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.next_part_number_marker = input;
+            self
+        }
+        /// <p>The maximum number of parts allowed in the response.</p>
+        pub fn max_parts(mut self, input: i32) -> Self {
+            self.max_parts = Some(input);
+            self
+        }
+        /// <p>The maximum number of parts allowed in the response.</p>
+        pub fn set_max_parts(mut self, input: std::option::Option<i32>) -> Self {
+            self.max_parts = input;
+            self
+        }
+        /// <p>Indicates whether the returned list of parts is truncated. A value of <code>true</code> indicates that the list was truncated. A list can be truncated if the number of parts exceeds the limit returned in the <code>MaxParts</code> element.</p>
+        pub fn is_truncated(mut self, input: bool) -> Self {
+            self.is_truncated = Some(input);
+            self
+        }
+        /// <p>Indicates whether the returned list of parts is truncated. A value of <code>true</code> indicates that the list was truncated. A list can be truncated if the number of parts exceeds the limit returned in the <code>MaxParts</code> element.</p>
+        pub fn set_is_truncated(mut self, input: std::option::Option<bool>) -> Self {
+            self.is_truncated = input;
+            self
+        }
+        /// Appends an item to `parts`.
+        ///
+        /// To override the contents of this collection use [`set_parts`](Self::set_parts).
+        ///
+        /// <p>A container for elements related to a particular part. A response can contain zero or more <code>Parts</code> elements.</p>
+        pub fn parts(mut self, input: crate::model::ObjectPart) -> Self {
+            let mut v = self.parts.unwrap_or_default();
+            v.push(input);
+            self.parts = Some(v);
+            self
+        }
+        /// <p>A container for elements related to a particular part. A response can contain zero or more <code>Parts</code> elements.</p>
+        pub fn set_parts(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ObjectPart>>,
+        ) -> Self {
+            self.parts = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetObjectAttributesParts`](crate::model::GetObjectAttributesParts).
+        pub fn build(self) -> crate::model::GetObjectAttributesParts {
+            crate::model::GetObjectAttributesParts {
+                total_parts_count: self.total_parts_count.unwrap_or_default(),
+                part_number_marker: self.part_number_marker,
+                next_part_number_marker: self.next_part_number_marker,
+                max_parts: self.max_parts.unwrap_or_default(),
+                is_truncated: self.is_truncated.unwrap_or_default(),
+                parts: self.parts,
+            }
+        }
+    }
+}
+impl GetObjectAttributesParts {
+    /// Creates a new builder-style object to manufacture [`GetObjectAttributesParts`](crate::model::GetObjectAttributesParts).
+    pub fn builder() -> crate::model::get_object_attributes_parts::Builder {
+        crate::model::get_object_attributes_parts::Builder::default()
+    }
+}
+
+/// <p>A container for elements related to an individual part.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ObjectPart {
+    /// <p>The part number identifying the part. This value is a positive integer between 1 and 10,000.</p>
+    #[doc(hidden)]
+    pub part_number: i32,
+    /// <p>The size of the uploaded part in bytes.</p>
+    #[doc(hidden)]
+    pub size: i64,
+    /// <p>This header can be used as a data integrity check to verify that the data received is the same data that was originally sent. This header specifies the base64-encoded, 32-bit CRC32 checksum of the object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32_c: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha1: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha256: std::option::Option<std::string::String>,
+}
+impl ObjectPart {
+    /// <p>The part number identifying the part. This value is a positive integer between 1 and 10,000.</p>
+    pub fn part_number(&self) -> i32 {
+        self.part_number
+    }
+    /// <p>The size of the uploaded part in bytes.</p>
+    pub fn size(&self) -> i64 {
+        self.size
+    }
+    /// <p>This header can be used as a data integrity check to verify that the data received is the same data that was originally sent. This header specifies the base64-encoded, 32-bit CRC32 checksum of the object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32(&self) -> std::option::Option<&str> {
+        self.checksum_crc32.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32_c(&self) -> std::option::Option<&str> {
+        self.checksum_crc32_c.as_deref()
+    }
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha1(&self) -> std::option::Option<&str> {
+        self.checksum_sha1.as_deref()
+    }
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha256(&self) -> std::option::Option<&str> {
+        self.checksum_sha256.as_deref()
+    }
+}
+impl std::fmt::Debug for ObjectPart {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ObjectPart");
+        formatter.field("part_number", &self.part_number);
+        formatter.field("size", &self.size);
+        formatter.field("checksum_crc32", &self.checksum_crc32);
+        formatter.field("checksum_crc32_c", &self.checksum_crc32_c);
+        formatter.field("checksum_sha1", &self.checksum_sha1);
+        formatter.field("checksum_sha256", &self.checksum_sha256);
+        formatter.finish()
+    }
+}
+/// See [`ObjectPart`](crate::model::ObjectPart).
+pub mod object_part {
+
+    /// A builder for [`ObjectPart`](crate::model::ObjectPart).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) part_number: std::option::Option<i32>,
+        pub(crate) size: std::option::Option<i64>,
+        pub(crate) checksum_crc32: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32_c: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha1: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha256: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The part number identifying the part. This value is a positive integer between 1 and 10,000.</p>
+        pub fn part_number(mut self, input: i32) -> Self {
+            self.part_number = Some(input);
+            self
+        }
+        /// <p>The part number identifying the part. This value is a positive integer between 1 and 10,000.</p>
+        pub fn set_part_number(mut self, input: std::option::Option<i32>) -> Self {
+            self.part_number = input;
+            self
+        }
+        /// <p>The size of the uploaded part in bytes.</p>
+        pub fn size(mut self, input: i64) -> Self {
+            self.size = Some(input);
+            self
+        }
+        /// <p>The size of the uploaded part in bytes.</p>
+        pub fn set_size(mut self, input: std::option::Option<i64>) -> Self {
+            self.size = input;
+            self
+        }
+        /// <p>This header can be used as a data integrity check to verify that the data received is the same data that was originally sent. This header specifies the base64-encoded, 32-bit CRC32 checksum of the object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32 = Some(input.into());
+            self
+        }
+        /// <p>This header can be used as a data integrity check to verify that the data received is the same data that was originally sent. This header specifies the base64-encoded, 32-bit CRC32 checksum of the object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32 = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32_c(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32_c = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32_c(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32_c = input;
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha1(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha1 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha1(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha1 = input;
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha256(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha256 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha256(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha256 = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ObjectPart`](crate::model::ObjectPart).
+        pub fn build(self) -> crate::model::ObjectPart {
+            crate::model::ObjectPart {
+                part_number: self.part_number.unwrap_or_default(),
+                size: self.size.unwrap_or_default(),
+                checksum_crc32: self.checksum_crc32,
+                checksum_crc32_c: self.checksum_crc32_c,
+                checksum_sha1: self.checksum_sha1,
+                checksum_sha256: self.checksum_sha256,
+            }
+        }
+    }
+}
+impl ObjectPart {
+    /// Creates a new builder-style object to manufacture [`ObjectPart`](crate::model::ObjectPart).
+    pub fn builder() -> crate::model::object_part::Builder {
+        crate::model::object_part::Builder::default()
+    }
+}
+
+/// <p>Contains all the possible checksum or digest values for an object.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct Checksum {
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32_c: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha1: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha256: std::option::Option<std::string::String>,
+}
+impl Checksum {
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32(&self) -> std::option::Option<&str> {
+        self.checksum_crc32.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32_c(&self) -> std::option::Option<&str> {
+        self.checksum_crc32_c.as_deref()
+    }
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha1(&self) -> std::option::Option<&str> {
+        self.checksum_sha1.as_deref()
+    }
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha256(&self) -> std::option::Option<&str> {
+        self.checksum_sha256.as_deref()
+    }
+}
+impl std::fmt::Debug for Checksum {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("Checksum");
+        formatter.field("checksum_crc32", &self.checksum_crc32);
+        formatter.field("checksum_crc32_c", &self.checksum_crc32_c);
+        formatter.field("checksum_sha1", &self.checksum_sha1);
+        formatter.field("checksum_sha256", &self.checksum_sha256);
+        formatter.finish()
+    }
+}
+/// See [`Checksum`](crate::model::Checksum).
+pub mod checksum {
+
+    /// A builder for [`Checksum`](crate::model::Checksum).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) checksum_crc32: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32_c: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha1: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha256: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32 = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32_c(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32_c = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32_c(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32_c = input;
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha1(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha1 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha1(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha1 = input;
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha256(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha256 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha256(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha256 = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`Checksum`](crate::model::Checksum).
+        pub fn build(self) -> crate::model::Checksum {
+            crate::model::Checksum {
+                checksum_crc32: self.checksum_crc32,
+                checksum_crc32_c: self.checksum_crc32_c,
+                checksum_sha1: self.checksum_sha1,
+                checksum_sha256: self.checksum_sha256,
+            }
+        }
+    }
+}
+impl Checksum {
+    /// Creates a new builder-style object to manufacture [`Checksum`](crate::model::Checksum).
+    pub fn builder() -> crate::model::checksum::Builder {
+        crate::model::checksum::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum ObjectAttributes {
+    #[allow(missing_docs)] // documentation missing in model
+    Checksum,
+    #[allow(missing_docs)] // documentation missing in model
+    Etag,
+    #[allow(missing_docs)] // documentation missing in model
+    ObjectParts,
+    #[allow(missing_docs)] // documentation missing in model
+    ObjectSize,
+    #[allow(missing_docs)] // documentation missing in model
+    StorageClass,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for ObjectAttributes {
+    fn from(s: &str) -> Self {
+        match s {
+            "Checksum" => ObjectAttributes::Checksum,
+            "ETag" => ObjectAttributes::Etag,
+            "ObjectParts" => ObjectAttributes::ObjectParts,
+            "ObjectSize" => ObjectAttributes::ObjectSize,
+            "StorageClass" => ObjectAttributes::StorageClass,
+            other => ObjectAttributes::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for ObjectAttributes {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(ObjectAttributes::from(s))
+    }
+}
+impl ObjectAttributes {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            ObjectAttributes::Checksum => "Checksum",
+            ObjectAttributes::Etag => "ETag",
+            ObjectAttributes::ObjectParts => "ObjectParts",
+            ObjectAttributes::ObjectSize => "ObjectSize",
+            ObjectAttributes::StorageClass => "StorageClass",
+            ObjectAttributes::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &[
+            "Checksum",
+            "ETag",
+            "ObjectParts",
+            "ObjectSize",
+            "StorageClass",
+        ]
+    }
+}
+impl AsRef<str> for ObjectAttributes {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
 pub enum MfaDeleteStatus {
     #[allow(missing_docs)] // documentation missing in model
     Disabled,
@@ -14242,6 +15347,7 @@ impl AsRef<str> for MfaDeleteStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyStatus {
     /// <p>The policy status for this bucket. <code>TRUE</code> indicates that this bucket is public. <code>FALSE</code> indicates that the bucket is not public.</p>
+    #[doc(hidden)]
     pub is_public: bool,
 }
 impl PolicyStatus {
@@ -14257,11 +15363,10 @@ impl std::fmt::Debug for PolicyStatus {
         formatter.finish()
     }
 }
-/// See [`PolicyStatus`](crate::model::PolicyStatus)
+/// See [`PolicyStatus`](crate::model::PolicyStatus).
 pub mod policy_status {
 
-    /// A builder for [`PolicyStatus`](crate::model::PolicyStatus)
-    #[non_exhaustive]
+    /// A builder for [`PolicyStatus`](crate::model::PolicyStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_public: std::option::Option<bool>,
@@ -14277,7 +15382,7 @@ pub mod policy_status {
             self.is_public = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyStatus`](crate::model::PolicyStatus)
+        /// Consumes the builder and constructs a [`PolicyStatus`](crate::model::PolicyStatus).
         pub fn build(self) -> crate::model::PolicyStatus {
             crate::model::PolicyStatus {
                 is_public: self.is_public.unwrap_or_default(),
@@ -14286,7 +15391,7 @@ pub mod policy_status {
     }
 }
 impl PolicyStatus {
-    /// Creates a new builder-style object to manufacture [`PolicyStatus`](crate::model::PolicyStatus)
+    /// Creates a new builder-style object to manufacture [`PolicyStatus`](crate::model::PolicyStatus).
     pub fn builder() -> crate::model::policy_status::Builder {
         crate::model::policy_status::Builder::default()
     }
@@ -14470,8 +15575,10 @@ impl AsRef<str> for BucketLocationConstraint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Error {
     /// <p>The error key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The version ID of the error.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>The error code is a string that uniquely identifies an error condition. It is meant to be read and understood by programs that detect and handle errors by type. </p>
     /// <p class="title"> <b>Amazon S3 error codes</b> </p>
@@ -15094,8 +16201,10 @@ pub struct Error {
     /// </ul> </li>
     /// </ul>
     /// <p></p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>The error message contains a generic description of the error condition in English. It is intended for a human audience. Simple programs display the message directly to the end user if they encounter an error condition they don't know how or don't care to handle. Sophisticated programs with more exhaustive error handling and proper internationalization are more likely to ignore the error message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl Error {
@@ -15746,11 +16855,10 @@ impl std::fmt::Debug for Error {
         formatter.finish()
     }
 }
-/// See [`Error`](crate::model::Error)
+/// See [`Error`](crate::model::Error).
 pub mod error {
 
-    /// A builder for [`Error`](crate::model::Error)
-    #[non_exhaustive]
+    /// A builder for [`Error`](crate::model::Error).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -17039,7 +18147,7 @@ pub mod error {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`Error`](crate::model::Error)
+        /// Consumes the builder and constructs a [`Error`](crate::model::Error).
         pub fn build(self) -> crate::model::Error {
             crate::model::Error {
                 key: self.key,
@@ -17051,7 +18159,7 @@ pub mod error {
     }
 }
 impl Error {
-    /// Creates a new builder-style object to manufacture [`Error`](crate::model::Error)
+    /// Creates a new builder-style object to manufacture [`Error`](crate::model::Error).
     pub fn builder() -> crate::model::error::Builder {
         crate::model::error::Builder::default()
     }
@@ -17062,12 +18170,16 @@ impl Error {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeletedObject {
     /// <p>The name of the deleted object.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The version ID of the deleted object.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the versioned object that was permanently deleted was (true) or was not (false) a delete marker. In a simple DELETE, this header indicates whether (true) or not (false) a delete marker was created.</p>
+    #[doc(hidden)]
     pub delete_marker: bool,
     /// <p>The version ID of the delete marker created as a result of the DELETE operation. If you delete a specific object version, the value returned by this header is the version ID of the object version deleted.</p>
+    #[doc(hidden)]
     pub delete_marker_version_id: std::option::Option<std::string::String>,
 }
 impl DeletedObject {
@@ -17098,11 +18210,10 @@ impl std::fmt::Debug for DeletedObject {
         formatter.finish()
     }
 }
-/// See [`DeletedObject`](crate::model::DeletedObject)
+/// See [`DeletedObject`](crate::model::DeletedObject).
 pub mod deleted_object {
 
-    /// A builder for [`DeletedObject`](crate::model::DeletedObject)
-    #[non_exhaustive]
+    /// A builder for [`DeletedObject`](crate::model::DeletedObject).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -17154,7 +18265,7 @@ pub mod deleted_object {
             self.delete_marker_version_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeletedObject`](crate::model::DeletedObject)
+        /// Consumes the builder and constructs a [`DeletedObject`](crate::model::DeletedObject).
         pub fn build(self) -> crate::model::DeletedObject {
             crate::model::DeletedObject {
                 key: self.key,
@@ -17166,7 +18277,7 @@ pub mod deleted_object {
     }
 }
 impl DeletedObject {
-    /// Creates a new builder-style object to manufacture [`DeletedObject`](crate::model::DeletedObject)
+    /// Creates a new builder-style object to manufacture [`DeletedObject`](crate::model::DeletedObject).
     pub fn builder() -> crate::model::deleted_object::Builder {
         crate::model::deleted_object::Builder::default()
     }
@@ -17177,8 +18288,10 @@ impl DeletedObject {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Delete {
     /// <p>The objects to delete.</p>
+    #[doc(hidden)]
     pub objects: std::option::Option<std::vec::Vec<crate::model::ObjectIdentifier>>,
     /// <p>Element to enable quiet mode for the request. When you add this element, you must set its value to true.</p>
+    #[doc(hidden)]
     pub quiet: bool,
 }
 impl Delete {
@@ -17199,11 +18312,10 @@ impl std::fmt::Debug for Delete {
         formatter.finish()
     }
 }
-/// See [`Delete`](crate::model::Delete)
+/// See [`Delete`](crate::model::Delete).
 pub mod delete {
 
-    /// A builder for [`Delete`](crate::model::Delete)
-    #[non_exhaustive]
+    /// A builder for [`Delete`](crate::model::Delete).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) objects: std::option::Option<std::vec::Vec<crate::model::ObjectIdentifier>>,
@@ -17239,7 +18351,7 @@ pub mod delete {
             self.quiet = input;
             self
         }
-        /// Consumes the builder and constructs a [`Delete`](crate::model::Delete)
+        /// Consumes the builder and constructs a [`Delete`](crate::model::Delete).
         pub fn build(self) -> crate::model::Delete {
             crate::model::Delete {
                 objects: self.objects,
@@ -17249,7 +18361,7 @@ pub mod delete {
     }
 }
 impl Delete {
-    /// Creates a new builder-style object to manufacture [`Delete`](crate::model::Delete)
+    /// Creates a new builder-style object to manufacture [`Delete`](crate::model::Delete).
     pub fn builder() -> crate::model::delete::Builder {
         crate::model::delete::Builder::default()
     }
@@ -17262,8 +18374,10 @@ pub struct ObjectIdentifier {
     /// <p>Key name of the object.</p> <important>
     /// <p>Replacement must be made for object keys containing special characters (such as carriage returns) when using XML requests. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints"> XML related object key constraints</a>.</p>
     /// </important>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>VersionId for the specific version of the object to delete.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
 }
 impl ObjectIdentifier {
@@ -17286,11 +18400,10 @@ impl std::fmt::Debug for ObjectIdentifier {
         formatter.finish()
     }
 }
-/// See [`ObjectIdentifier`](crate::model::ObjectIdentifier)
+/// See [`ObjectIdentifier`](crate::model::ObjectIdentifier).
 pub mod object_identifier {
 
-    /// A builder for [`ObjectIdentifier`](crate::model::ObjectIdentifier)
-    #[non_exhaustive]
+    /// A builder for [`ObjectIdentifier`](crate::model::ObjectIdentifier).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -17321,7 +18434,7 @@ pub mod object_identifier {
             self.version_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ObjectIdentifier`](crate::model::ObjectIdentifier)
+        /// Consumes the builder and constructs a [`ObjectIdentifier`](crate::model::ObjectIdentifier).
         pub fn build(self) -> crate::model::ObjectIdentifier {
             crate::model::ObjectIdentifier {
                 key: self.key,
@@ -17331,7 +18444,7 @@ pub mod object_identifier {
     }
 }
 impl ObjectIdentifier {
-    /// Creates a new builder-style object to manufacture [`ObjectIdentifier`](crate::model::ObjectIdentifier)
+    /// Creates a new builder-style object to manufacture [`ObjectIdentifier`](crate::model::ObjectIdentifier).
     pub fn builder() -> crate::model::object_identifier::Builder {
         crate::model::object_identifier::Builder::default()
     }
@@ -17342,6 +18455,7 @@ impl ObjectIdentifier {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBucketConfiguration {
     /// <p>Specifies the Region where the bucket will be created. If you don't specify a Region, the bucket is created in the US East (N. Virginia) Region (us-east-1).</p>
+    #[doc(hidden)]
     pub location_constraint: std::option::Option<crate::model::BucketLocationConstraint>,
 }
 impl CreateBucketConfiguration {
@@ -17359,11 +18473,10 @@ impl std::fmt::Debug for CreateBucketConfiguration {
         formatter.finish()
     }
 }
-/// See [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration)
+/// See [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration).
 pub mod create_bucket_configuration {
 
-    /// A builder for [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_constraint: std::option::Option<crate::model::BucketLocationConstraint>,
@@ -17385,7 +18498,7 @@ pub mod create_bucket_configuration {
             self.location_constraint = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration)
+        /// Consumes the builder and constructs a [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration).
         pub fn build(self) -> crate::model::CreateBucketConfiguration {
             crate::model::CreateBucketConfiguration {
                 location_constraint: self.location_constraint,
@@ -17394,7 +18507,7 @@ pub mod create_bucket_configuration {
     }
 }
 impl CreateBucketConfiguration {
-    /// Creates a new builder-style object to manufacture [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration)
+    /// Creates a new builder-style object to manufacture [`CreateBucketConfiguration`](crate::model::CreateBucketConfiguration).
     pub fn builder() -> crate::model::create_bucket_configuration::Builder {
         crate::model::create_bucket_configuration::Builder::default()
     }
@@ -17405,9 +18518,23 @@ impl CreateBucketConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CopyObjectResult {
     /// <p>Returns the ETag of the new object. The ETag reflects only changes to the contents of an object, not its metadata.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
     /// <p>Creation date of the object.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32_c: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha1: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha256: std::option::Option<std::string::String>,
 }
 impl CopyObjectResult {
     /// <p>Returns the ETag of the new object. The ETag reflects only changes to the contents of an object, not its metadata.</p>
@@ -17418,24 +18545,47 @@ impl CopyObjectResult {
     pub fn last_modified(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.last_modified.as_ref()
     }
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32(&self) -> std::option::Option<&str> {
+        self.checksum_crc32.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32_c(&self) -> std::option::Option<&str> {
+        self.checksum_crc32_c.as_deref()
+    }
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha1(&self) -> std::option::Option<&str> {
+        self.checksum_sha1.as_deref()
+    }
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha256(&self) -> std::option::Option<&str> {
+        self.checksum_sha256.as_deref()
+    }
 }
 impl std::fmt::Debug for CopyObjectResult {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("CopyObjectResult");
         formatter.field("e_tag", &self.e_tag);
         formatter.field("last_modified", &self.last_modified);
+        formatter.field("checksum_crc32", &self.checksum_crc32);
+        formatter.field("checksum_crc32_c", &self.checksum_crc32_c);
+        formatter.field("checksum_sha1", &self.checksum_sha1);
+        formatter.field("checksum_sha256", &self.checksum_sha256);
         formatter.finish()
     }
 }
-/// See [`CopyObjectResult`](crate::model::CopyObjectResult)
+/// See [`CopyObjectResult`](crate::model::CopyObjectResult).
 pub mod copy_object_result {
 
-    /// A builder for [`CopyObjectResult`](crate::model::CopyObjectResult)
-    #[non_exhaustive]
+    /// A builder for [`CopyObjectResult`](crate::model::CopyObjectResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) e_tag: std::option::Option<std::string::String>,
         pub(crate) last_modified: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) checksum_crc32: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32_c: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha1: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha256: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>Returns the ETag of the new object. The ETag reflects only changes to the contents of an object, not its metadata.</p>
@@ -17461,17 +18611,73 @@ pub mod copy_object_result {
             self.last_modified = input;
             self
         }
-        /// Consumes the builder and constructs a [`CopyObjectResult`](crate::model::CopyObjectResult)
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32 = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32_c(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32_c = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32_c(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32_c = input;
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha1(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha1 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha1(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha1 = input;
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha256(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha256 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha256(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha256 = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CopyObjectResult`](crate::model::CopyObjectResult).
         pub fn build(self) -> crate::model::CopyObjectResult {
             crate::model::CopyObjectResult {
                 e_tag: self.e_tag,
                 last_modified: self.last_modified,
+                checksum_crc32: self.checksum_crc32,
+                checksum_crc32_c: self.checksum_crc32_c,
+                checksum_sha1: self.checksum_sha1,
+                checksum_sha256: self.checksum_sha256,
             }
         }
     }
 }
 impl CopyObjectResult {
-    /// Creates a new builder-style object to manufacture [`CopyObjectResult`](crate::model::CopyObjectResult)
+    /// Creates a new builder-style object to manufacture [`CopyObjectResult`](crate::model::CopyObjectResult).
     pub fn builder() -> crate::model::copy_object_result::Builder {
         crate::model::copy_object_result::Builder::default()
     }
@@ -17593,6 +18799,7 @@ impl AsRef<str> for MetadataDirective {
 pub struct CompletedMultipartUpload {
     /// <p>Array of CompletedPart data types.</p>
     /// <p>If you do not supply a valid <code>Part</code> with your request, the service sends back an HTTP 400 response.</p>
+    #[doc(hidden)]
     pub parts: std::option::Option<std::vec::Vec<crate::model::CompletedPart>>,
 }
 impl CompletedMultipartUpload {
@@ -17609,11 +18816,10 @@ impl std::fmt::Debug for CompletedMultipartUpload {
         formatter.finish()
     }
 }
-/// See [`CompletedMultipartUpload`](crate::model::CompletedMultipartUpload)
+/// See [`CompletedMultipartUpload`](crate::model::CompletedMultipartUpload).
 pub mod completed_multipart_upload {
 
-    /// A builder for [`CompletedMultipartUpload`](crate::model::CompletedMultipartUpload)
-    #[non_exhaustive]
+    /// A builder for [`CompletedMultipartUpload`](crate::model::CompletedMultipartUpload).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parts: std::option::Option<std::vec::Vec<crate::model::CompletedPart>>,
@@ -17640,14 +18846,14 @@ pub mod completed_multipart_upload {
             self.parts = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompletedMultipartUpload`](crate::model::CompletedMultipartUpload)
+        /// Consumes the builder and constructs a [`CompletedMultipartUpload`](crate::model::CompletedMultipartUpload).
         pub fn build(self) -> crate::model::CompletedMultipartUpload {
             crate::model::CompletedMultipartUpload { parts: self.parts }
         }
     }
 }
 impl CompletedMultipartUpload {
-    /// Creates a new builder-style object to manufacture [`CompletedMultipartUpload`](crate::model::CompletedMultipartUpload)
+    /// Creates a new builder-style object to manufacture [`CompletedMultipartUpload`](crate::model::CompletedMultipartUpload).
     pub fn builder() -> crate::model::completed_multipart_upload::Builder {
         crate::model::completed_multipart_upload::Builder::default()
     }
@@ -17658,14 +18864,44 @@ impl CompletedMultipartUpload {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CompletedPart {
     /// <p>Entity tag returned when the part was uploaded.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32_c: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha1: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha256: std::option::Option<std::string::String>,
     /// <p>Part number that identifies the part. This is a positive integer between 1 and 10,000.</p>
+    #[doc(hidden)]
     pub part_number: i32,
 }
 impl CompletedPart {
     /// <p>Entity tag returned when the part was uploaded.</p>
     pub fn e_tag(&self) -> std::option::Option<&str> {
         self.e_tag.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32(&self) -> std::option::Option<&str> {
+        self.checksum_crc32.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32_c(&self) -> std::option::Option<&str> {
+        self.checksum_crc32_c.as_deref()
+    }
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha1(&self) -> std::option::Option<&str> {
+        self.checksum_sha1.as_deref()
+    }
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha256(&self) -> std::option::Option<&str> {
+        self.checksum_sha256.as_deref()
     }
     /// <p>Part number that identifies the part. This is a positive integer between 1 and 10,000.</p>
     pub fn part_number(&self) -> i32 {
@@ -17676,18 +18912,25 @@ impl std::fmt::Debug for CompletedPart {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("CompletedPart");
         formatter.field("e_tag", &self.e_tag);
+        formatter.field("checksum_crc32", &self.checksum_crc32);
+        formatter.field("checksum_crc32_c", &self.checksum_crc32_c);
+        formatter.field("checksum_sha1", &self.checksum_sha1);
+        formatter.field("checksum_sha256", &self.checksum_sha256);
         formatter.field("part_number", &self.part_number);
         formatter.finish()
     }
 }
-/// See [`CompletedPart`](crate::model::CompletedPart)
+/// See [`CompletedPart`](crate::model::CompletedPart).
 pub mod completed_part {
 
-    /// A builder for [`CompletedPart`](crate::model::CompletedPart)
-    #[non_exhaustive]
+    /// A builder for [`CompletedPart`](crate::model::CompletedPart).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) e_tag: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32_c: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha1: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha256: std::option::Option<std::string::String>,
         pub(crate) part_number: std::option::Option<i32>,
     }
     impl Builder {
@@ -17701,6 +18944,58 @@ pub mod completed_part {
             self.e_tag = input;
             self
         }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32 = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32_c(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32_c = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32_c(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32_c = input;
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha1(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha1 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha1(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha1 = input;
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha256(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha256 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha256(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha256 = input;
+            self
+        }
         /// <p>Part number that identifies the part. This is a positive integer between 1 and 10,000.</p>
         pub fn part_number(mut self, input: i32) -> Self {
             self.part_number = Some(input);
@@ -17711,17 +19006,21 @@ pub mod completed_part {
             self.part_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompletedPart`](crate::model::CompletedPart)
+        /// Consumes the builder and constructs a [`CompletedPart`](crate::model::CompletedPart).
         pub fn build(self) -> crate::model::CompletedPart {
             crate::model::CompletedPart {
                 e_tag: self.e_tag,
+                checksum_crc32: self.checksum_crc32,
+                checksum_crc32_c: self.checksum_crc32_c,
+                checksum_sha1: self.checksum_sha1,
+                checksum_sha256: self.checksum_sha256,
                 part_number: self.part_number.unwrap_or_default(),
             }
         }
     }
 }
 impl CompletedPart {
-    /// Creates a new builder-style object to manufacture [`CompletedPart`](crate::model::CompletedPart)
+    /// Creates a new builder-style object to manufacture [`CompletedPart`](crate::model::CompletedPart).
     pub fn builder() -> crate::model::completed_part::Builder {
         crate::model::completed_part::Builder::default()
     }

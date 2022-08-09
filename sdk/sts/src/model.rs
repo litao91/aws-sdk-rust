@@ -5,12 +5,16 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Credentials {
     /// <p>The access key ID that identifies the temporary security credentials.</p>
+    #[doc(hidden)]
     pub access_key_id: std::option::Option<std::string::String>,
     /// <p>The secret access key that can be used to sign requests.</p>
+    #[doc(hidden)]
     pub secret_access_key: std::option::Option<std::string::String>,
     /// <p>The token that users must pass to the service API to use the temporary credentials.</p>
+    #[doc(hidden)]
     pub session_token: std::option::Option<std::string::String>,
     /// <p>The date on which the current credentials expire.</p>
+    #[doc(hidden)]
     pub expiration: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Credentials {
@@ -41,11 +45,10 @@ impl std::fmt::Debug for Credentials {
         formatter.finish()
     }
 }
-/// See [`Credentials`](crate::model::Credentials)
+/// See [`Credentials`](crate::model::Credentials).
 pub mod credentials {
 
-    /// A builder for [`Credentials`](crate::model::Credentials)
-    #[non_exhaustive]
+    /// A builder for [`Credentials`](crate::model::Credentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_key_id: std::option::Option<std::string::String>,
@@ -106,7 +109,7 @@ pub mod credentials {
             self.expiration = input;
             self
         }
-        /// Consumes the builder and constructs a [`Credentials`](crate::model::Credentials)
+        /// Consumes the builder and constructs a [`Credentials`](crate::model::Credentials).
         pub fn build(self) -> crate::model::Credentials {
             crate::model::Credentials {
                 access_key_id: self.access_key_id,
@@ -118,7 +121,7 @@ pub mod credentials {
     }
 }
 impl Credentials {
-    /// Creates a new builder-style object to manufacture [`Credentials`](crate::model::Credentials)
+    /// Creates a new builder-style object to manufacture [`Credentials`](crate::model::Credentials).
     pub fn builder() -> crate::model::credentials::Builder {
         crate::model::credentials::Builder::default()
     }
@@ -129,8 +132,10 @@ impl Credentials {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FederatedUser {
     /// <p>The string that identifies the federated user associated with the credentials, similar to the unique ID of an IAM user.</p>
+    #[doc(hidden)]
     pub federated_user_id: std::option::Option<std::string::String>,
     /// <p>The ARN that specifies the federated user that is associated with the credentials. For more information about ARNs and how to use them in policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM Identifiers</a> in the <i>IAM User Guide</i>. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl FederatedUser {
@@ -151,11 +156,10 @@ impl std::fmt::Debug for FederatedUser {
         formatter.finish()
     }
 }
-/// See [`FederatedUser`](crate::model::FederatedUser)
+/// See [`FederatedUser`](crate::model::FederatedUser).
 pub mod federated_user {
 
-    /// A builder for [`FederatedUser`](crate::model::FederatedUser)
-    #[non_exhaustive]
+    /// A builder for [`FederatedUser`](crate::model::FederatedUser).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) federated_user_id: std::option::Option<std::string::String>,
@@ -185,7 +189,7 @@ pub mod federated_user {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`FederatedUser`](crate::model::FederatedUser)
+        /// Consumes the builder and constructs a [`FederatedUser`](crate::model::FederatedUser).
         pub fn build(self) -> crate::model::FederatedUser {
             crate::model::FederatedUser {
                 federated_user_id: self.federated_user_id,
@@ -195,7 +199,7 @@ pub mod federated_user {
     }
 }
 impl FederatedUser {
-    /// Creates a new builder-style object to manufacture [`FederatedUser`](crate::model::FederatedUser)
+    /// Creates a new builder-style object to manufacture [`FederatedUser`](crate::model::FederatedUser).
     pub fn builder() -> crate::model::federated_user::Builder {
         crate::model::federated_user::Builder::default()
     }
@@ -207,9 +211,11 @@ impl FederatedUser {
 pub struct Tag {
     /// <p>The key for a session tag.</p>
     /// <p>You can pass up to 50 session tags. The plain text session tag keys can’t exceed 128 characters. For these and additional limits, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-limits.html#reference_iam-limits-entity-length">IAM and STS Character Limits</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value for a session tag.</p>
     /// <p>You can pass up to 50 session tags. The plain text session tag values can’t exceed 256 characters. For these and additional limits, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-limits.html#reference_iam-limits-entity-length">IAM and STS Character Limits</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -232,11 +238,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -267,7 +272,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -277,7 +282,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -288,6 +293,7 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyDescriptorType {
     /// <p>The Amazon Resource Name (ARN) of the IAM managed policy to use as a session policy for the role. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl PolicyDescriptorType {
@@ -303,11 +309,10 @@ impl std::fmt::Debug for PolicyDescriptorType {
         formatter.finish()
     }
 }
-/// See [`PolicyDescriptorType`](crate::model::PolicyDescriptorType)
+/// See [`PolicyDescriptorType`](crate::model::PolicyDescriptorType).
 pub mod policy_descriptor_type {
 
-    /// A builder for [`PolicyDescriptorType`](crate::model::PolicyDescriptorType)
-    #[non_exhaustive]
+    /// A builder for [`PolicyDescriptorType`](crate::model::PolicyDescriptorType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -323,14 +328,14 @@ pub mod policy_descriptor_type {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyDescriptorType`](crate::model::PolicyDescriptorType)
+        /// Consumes the builder and constructs a [`PolicyDescriptorType`](crate::model::PolicyDescriptorType).
         pub fn build(self) -> crate::model::PolicyDescriptorType {
             crate::model::PolicyDescriptorType { arn: self.arn }
         }
     }
 }
 impl PolicyDescriptorType {
-    /// Creates a new builder-style object to manufacture [`PolicyDescriptorType`](crate::model::PolicyDescriptorType)
+    /// Creates a new builder-style object to manufacture [`PolicyDescriptorType`](crate::model::PolicyDescriptorType).
     pub fn builder() -> crate::model::policy_descriptor_type::Builder {
         crate::model::policy_descriptor_type::Builder::default()
     }
@@ -341,8 +346,10 @@ impl PolicyDescriptorType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssumedRoleUser {
     /// <p>A unique identifier that contains the role ID and the role session name of the role that is being assumed. The role ID is generated by Amazon Web Services when the role is created.</p>
+    #[doc(hidden)]
     pub assumed_role_id: std::option::Option<std::string::String>,
     /// <p>The ARN of the temporary security credentials that are returned from the <code>AssumeRole</code> action. For more information about ARNs and how to use them in policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM Identifiers</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl AssumedRoleUser {
@@ -363,11 +370,10 @@ impl std::fmt::Debug for AssumedRoleUser {
         formatter.finish()
     }
 }
-/// See [`AssumedRoleUser`](crate::model::AssumedRoleUser)
+/// See [`AssumedRoleUser`](crate::model::AssumedRoleUser).
 pub mod assumed_role_user {
 
-    /// A builder for [`AssumedRoleUser`](crate::model::AssumedRoleUser)
-    #[non_exhaustive]
+    /// A builder for [`AssumedRoleUser`](crate::model::AssumedRoleUser).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assumed_role_id: std::option::Option<std::string::String>,
@@ -397,7 +403,7 @@ pub mod assumed_role_user {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssumedRoleUser`](crate::model::AssumedRoleUser)
+        /// Consumes the builder and constructs a [`AssumedRoleUser`](crate::model::AssumedRoleUser).
         pub fn build(self) -> crate::model::AssumedRoleUser {
             crate::model::AssumedRoleUser {
                 assumed_role_id: self.assumed_role_id,
@@ -407,7 +413,7 @@ pub mod assumed_role_user {
     }
 }
 impl AssumedRoleUser {
-    /// Creates a new builder-style object to manufacture [`AssumedRoleUser`](crate::model::AssumedRoleUser)
+    /// Creates a new builder-style object to manufacture [`AssumedRoleUser`](crate::model::AssumedRoleUser).
     pub fn builder() -> crate::model::assumed_role_user::Builder {
         crate::model::assumed_role_user::Builder::default()
     }

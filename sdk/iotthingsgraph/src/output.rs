@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UploadEntityDefinitionsOutput {
     /// <p>The ID that specifies the upload action. You can use this to track the status of the upload.</p>
+    #[doc(hidden)]
     pub upload_id: std::option::Option<std::string::String>,
 }
 impl UploadEntityDefinitionsOutput {
@@ -19,11 +20,10 @@ impl std::fmt::Debug for UploadEntityDefinitionsOutput {
         formatter.finish()
     }
 }
-/// See [`UploadEntityDefinitionsOutput`](crate::output::UploadEntityDefinitionsOutput)
+/// See [`UploadEntityDefinitionsOutput`](crate::output::UploadEntityDefinitionsOutput).
 pub mod upload_entity_definitions_output {
 
-    /// A builder for [`UploadEntityDefinitionsOutput`](crate::output::UploadEntityDefinitionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`UploadEntityDefinitionsOutput`](crate::output::UploadEntityDefinitionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) upload_id: std::option::Option<std::string::String>,
@@ -39,7 +39,7 @@ pub mod upload_entity_definitions_output {
             self.upload_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UploadEntityDefinitionsOutput`](crate::output::UploadEntityDefinitionsOutput)
+        /// Consumes the builder and constructs a [`UploadEntityDefinitionsOutput`](crate::output::UploadEntityDefinitionsOutput).
         pub fn build(self) -> crate::output::UploadEntityDefinitionsOutput {
             crate::output::UploadEntityDefinitionsOutput {
                 upload_id: self.upload_id,
@@ -48,7 +48,7 @@ pub mod upload_entity_definitions_output {
     }
 }
 impl UploadEntityDefinitionsOutput {
-    /// Creates a new builder-style object to manufacture [`UploadEntityDefinitionsOutput`](crate::output::UploadEntityDefinitionsOutput)
+    /// Creates a new builder-style object to manufacture [`UploadEntityDefinitionsOutput`](crate::output::UploadEntityDefinitionsOutput).
     pub fn builder() -> crate::output::upload_entity_definitions_output::Builder {
         crate::output::upload_entity_definitions_output::Builder::default()
     }
@@ -59,6 +59,7 @@ impl UploadEntityDefinitionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSystemTemplateOutput {
     /// <p>An object containing summary information about the updated system.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::SystemTemplateSummary>,
 }
 impl UpdateSystemTemplateOutput {
@@ -74,11 +75,10 @@ impl std::fmt::Debug for UpdateSystemTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSystemTemplateOutput`](crate::output::UpdateSystemTemplateOutput)
+/// See [`UpdateSystemTemplateOutput`](crate::output::UpdateSystemTemplateOutput).
 pub mod update_system_template_output {
 
-    /// A builder for [`UpdateSystemTemplateOutput`](crate::output::UpdateSystemTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSystemTemplateOutput`](crate::output::UpdateSystemTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::SystemTemplateSummary>,
@@ -97,7 +97,7 @@ pub mod update_system_template_output {
             self.summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSystemTemplateOutput`](crate::output::UpdateSystemTemplateOutput)
+        /// Consumes the builder and constructs a [`UpdateSystemTemplateOutput`](crate::output::UpdateSystemTemplateOutput).
         pub fn build(self) -> crate::output::UpdateSystemTemplateOutput {
             crate::output::UpdateSystemTemplateOutput {
                 summary: self.summary,
@@ -106,7 +106,7 @@ pub mod update_system_template_output {
     }
 }
 impl UpdateSystemTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSystemTemplateOutput`](crate::output::UpdateSystemTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSystemTemplateOutput`](crate::output::UpdateSystemTemplateOutput).
     pub fn builder() -> crate::output::update_system_template_output::Builder {
         crate::output::update_system_template_output::Builder::default()
     }
@@ -117,6 +117,7 @@ impl UpdateSystemTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFlowTemplateOutput {
     /// <p>An object containing summary information about the updated workflow.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::FlowTemplateSummary>,
 }
 impl UpdateFlowTemplateOutput {
@@ -132,11 +133,10 @@ impl std::fmt::Debug for UpdateFlowTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFlowTemplateOutput`](crate::output::UpdateFlowTemplateOutput)
+/// See [`UpdateFlowTemplateOutput`](crate::output::UpdateFlowTemplateOutput).
 pub mod update_flow_template_output {
 
-    /// A builder for [`UpdateFlowTemplateOutput`](crate::output::UpdateFlowTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFlowTemplateOutput`](crate::output::UpdateFlowTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::FlowTemplateSummary>,
@@ -155,7 +155,7 @@ pub mod update_flow_template_output {
             self.summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFlowTemplateOutput`](crate::output::UpdateFlowTemplateOutput)
+        /// Consumes the builder and constructs a [`UpdateFlowTemplateOutput`](crate::output::UpdateFlowTemplateOutput).
         pub fn build(self) -> crate::output::UpdateFlowTemplateOutput {
             crate::output::UpdateFlowTemplateOutput {
                 summary: self.summary,
@@ -164,7 +164,7 @@ pub mod update_flow_template_output {
     }
 }
 impl UpdateFlowTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFlowTemplateOutput`](crate::output::UpdateFlowTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFlowTemplateOutput`](crate::output::UpdateFlowTemplateOutput).
     pub fn builder() -> crate::output::update_flow_template_output::Builder {
         crate::output::update_flow_template_output::Builder::default()
     }
@@ -180,22 +180,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -206,6 +205,7 @@ impl UntagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UndeploySystemInstanceOutput {
     /// <p>An object that contains summary information about the system instance that was removed from its target.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::SystemInstanceSummary>,
 }
 impl UndeploySystemInstanceOutput {
@@ -221,11 +221,10 @@ impl std::fmt::Debug for UndeploySystemInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`UndeploySystemInstanceOutput`](crate::output::UndeploySystemInstanceOutput)
+/// See [`UndeploySystemInstanceOutput`](crate::output::UndeploySystemInstanceOutput).
 pub mod undeploy_system_instance_output {
 
-    /// A builder for [`UndeploySystemInstanceOutput`](crate::output::UndeploySystemInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UndeploySystemInstanceOutput`](crate::output::UndeploySystemInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::SystemInstanceSummary>,
@@ -244,7 +243,7 @@ pub mod undeploy_system_instance_output {
             self.summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`UndeploySystemInstanceOutput`](crate::output::UndeploySystemInstanceOutput)
+        /// Consumes the builder and constructs a [`UndeploySystemInstanceOutput`](crate::output::UndeploySystemInstanceOutput).
         pub fn build(self) -> crate::output::UndeploySystemInstanceOutput {
             crate::output::UndeploySystemInstanceOutput {
                 summary: self.summary,
@@ -253,7 +252,7 @@ pub mod undeploy_system_instance_output {
     }
 }
 impl UndeploySystemInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`UndeploySystemInstanceOutput`](crate::output::UndeploySystemInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`UndeploySystemInstanceOutput`](crate::output::UndeploySystemInstanceOutput).
     pub fn builder() -> crate::output::undeploy_system_instance_output::Builder {
         crate::output::undeploy_system_instance_output::Builder::default()
     }
@@ -269,22 +268,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -295,8 +293,10 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchThingsOutput {
     /// <p>An array of things in the result set.</p>
+    #[doc(hidden)]
     pub things: std::option::Option<std::vec::Vec<crate::model::Thing>>,
     /// <p>The string to specify as <code>nextToken</code> when you request the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl SearchThingsOutput {
@@ -317,11 +317,10 @@ impl std::fmt::Debug for SearchThingsOutput {
         formatter.finish()
     }
 }
-/// See [`SearchThingsOutput`](crate::output::SearchThingsOutput)
+/// See [`SearchThingsOutput`](crate::output::SearchThingsOutput).
 pub mod search_things_output {
 
-    /// A builder for [`SearchThingsOutput`](crate::output::SearchThingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`SearchThingsOutput`](crate::output::SearchThingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) things: std::option::Option<std::vec::Vec<crate::model::Thing>>,
@@ -357,7 +356,7 @@ pub mod search_things_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchThingsOutput`](crate::output::SearchThingsOutput)
+        /// Consumes the builder and constructs a [`SearchThingsOutput`](crate::output::SearchThingsOutput).
         pub fn build(self) -> crate::output::SearchThingsOutput {
             crate::output::SearchThingsOutput {
                 things: self.things,
@@ -367,7 +366,7 @@ pub mod search_things_output {
     }
 }
 impl SearchThingsOutput {
-    /// Creates a new builder-style object to manufacture [`SearchThingsOutput`](crate::output::SearchThingsOutput)
+    /// Creates a new builder-style object to manufacture [`SearchThingsOutput`](crate::output::SearchThingsOutput).
     pub fn builder() -> crate::output::search_things_output::Builder {
         crate::output::search_things_output::Builder::default()
     }
@@ -378,8 +377,10 @@ impl SearchThingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchSystemTemplatesOutput {
     /// <p>An array of objects that contain summary information about each system deployment in the result set.</p>
+    #[doc(hidden)]
     pub summaries: std::option::Option<std::vec::Vec<crate::model::SystemTemplateSummary>>,
     /// <p>The string to specify as <code>nextToken</code> when you request the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl SearchSystemTemplatesOutput {
@@ -400,11 +401,10 @@ impl std::fmt::Debug for SearchSystemTemplatesOutput {
         formatter.finish()
     }
 }
-/// See [`SearchSystemTemplatesOutput`](crate::output::SearchSystemTemplatesOutput)
+/// See [`SearchSystemTemplatesOutput`](crate::output::SearchSystemTemplatesOutput).
 pub mod search_system_templates_output {
 
-    /// A builder for [`SearchSystemTemplatesOutput`](crate::output::SearchSystemTemplatesOutput)
-    #[non_exhaustive]
+    /// A builder for [`SearchSystemTemplatesOutput`](crate::output::SearchSystemTemplatesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summaries:
@@ -441,7 +441,7 @@ pub mod search_system_templates_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchSystemTemplatesOutput`](crate::output::SearchSystemTemplatesOutput)
+        /// Consumes the builder and constructs a [`SearchSystemTemplatesOutput`](crate::output::SearchSystemTemplatesOutput).
         pub fn build(self) -> crate::output::SearchSystemTemplatesOutput {
             crate::output::SearchSystemTemplatesOutput {
                 summaries: self.summaries,
@@ -451,7 +451,7 @@ pub mod search_system_templates_output {
     }
 }
 impl SearchSystemTemplatesOutput {
-    /// Creates a new builder-style object to manufacture [`SearchSystemTemplatesOutput`](crate::output::SearchSystemTemplatesOutput)
+    /// Creates a new builder-style object to manufacture [`SearchSystemTemplatesOutput`](crate::output::SearchSystemTemplatesOutput).
     pub fn builder() -> crate::output::search_system_templates_output::Builder {
         crate::output::search_system_templates_output::Builder::default()
     }
@@ -462,8 +462,10 @@ impl SearchSystemTemplatesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchSystemInstancesOutput {
     /// <p>An array of objects that contain summary data abour the system instances in the result set.</p>
+    #[doc(hidden)]
     pub summaries: std::option::Option<std::vec::Vec<crate::model::SystemInstanceSummary>>,
     /// <p>The string to specify as <code>nextToken</code> when you request the next page of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl SearchSystemInstancesOutput {
@@ -484,11 +486,10 @@ impl std::fmt::Debug for SearchSystemInstancesOutput {
         formatter.finish()
     }
 }
-/// See [`SearchSystemInstancesOutput`](crate::output::SearchSystemInstancesOutput)
+/// See [`SearchSystemInstancesOutput`](crate::output::SearchSystemInstancesOutput).
 pub mod search_system_instances_output {
 
-    /// A builder for [`SearchSystemInstancesOutput`](crate::output::SearchSystemInstancesOutput)
-    #[non_exhaustive]
+    /// A builder for [`SearchSystemInstancesOutput`](crate::output::SearchSystemInstancesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summaries:
@@ -525,7 +526,7 @@ pub mod search_system_instances_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchSystemInstancesOutput`](crate::output::SearchSystemInstancesOutput)
+        /// Consumes the builder and constructs a [`SearchSystemInstancesOutput`](crate::output::SearchSystemInstancesOutput).
         pub fn build(self) -> crate::output::SearchSystemInstancesOutput {
             crate::output::SearchSystemInstancesOutput {
                 summaries: self.summaries,
@@ -535,7 +536,7 @@ pub mod search_system_instances_output {
     }
 }
 impl SearchSystemInstancesOutput {
-    /// Creates a new builder-style object to manufacture [`SearchSystemInstancesOutput`](crate::output::SearchSystemInstancesOutput)
+    /// Creates a new builder-style object to manufacture [`SearchSystemInstancesOutput`](crate::output::SearchSystemInstancesOutput).
     pub fn builder() -> crate::output::search_system_instances_output::Builder {
         crate::output::search_system_instances_output::Builder::default()
     }
@@ -546,8 +547,10 @@ impl SearchSystemInstancesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchFlowTemplatesOutput {
     /// <p>An array of objects that contain summary information about each workflow in the result set.</p>
+    #[doc(hidden)]
     pub summaries: std::option::Option<std::vec::Vec<crate::model::FlowTemplateSummary>>,
     /// <p>The string to specify as <code>nextToken</code> when you request the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl SearchFlowTemplatesOutput {
@@ -568,11 +571,10 @@ impl std::fmt::Debug for SearchFlowTemplatesOutput {
         formatter.finish()
     }
 }
-/// See [`SearchFlowTemplatesOutput`](crate::output::SearchFlowTemplatesOutput)
+/// See [`SearchFlowTemplatesOutput`](crate::output::SearchFlowTemplatesOutput).
 pub mod search_flow_templates_output {
 
-    /// A builder for [`SearchFlowTemplatesOutput`](crate::output::SearchFlowTemplatesOutput)
-    #[non_exhaustive]
+    /// A builder for [`SearchFlowTemplatesOutput`](crate::output::SearchFlowTemplatesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summaries: std::option::Option<std::vec::Vec<crate::model::FlowTemplateSummary>>,
@@ -608,7 +610,7 @@ pub mod search_flow_templates_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchFlowTemplatesOutput`](crate::output::SearchFlowTemplatesOutput)
+        /// Consumes the builder and constructs a [`SearchFlowTemplatesOutput`](crate::output::SearchFlowTemplatesOutput).
         pub fn build(self) -> crate::output::SearchFlowTemplatesOutput {
             crate::output::SearchFlowTemplatesOutput {
                 summaries: self.summaries,
@@ -618,7 +620,7 @@ pub mod search_flow_templates_output {
     }
 }
 impl SearchFlowTemplatesOutput {
-    /// Creates a new builder-style object to manufacture [`SearchFlowTemplatesOutput`](crate::output::SearchFlowTemplatesOutput)
+    /// Creates a new builder-style object to manufacture [`SearchFlowTemplatesOutput`](crate::output::SearchFlowTemplatesOutput).
     pub fn builder() -> crate::output::search_flow_templates_output::Builder {
         crate::output::search_flow_templates_output::Builder::default()
     }
@@ -629,8 +631,10 @@ impl SearchFlowTemplatesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchFlowExecutionsOutput {
     /// <p>An array of objects that contain summary information about each workflow execution in the result set.</p>
+    #[doc(hidden)]
     pub summaries: std::option::Option<std::vec::Vec<crate::model::FlowExecutionSummary>>,
     /// <p>The string to specify as <code>nextToken</code> when you request the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl SearchFlowExecutionsOutput {
@@ -651,11 +655,10 @@ impl std::fmt::Debug for SearchFlowExecutionsOutput {
         formatter.finish()
     }
 }
-/// See [`SearchFlowExecutionsOutput`](crate::output::SearchFlowExecutionsOutput)
+/// See [`SearchFlowExecutionsOutput`](crate::output::SearchFlowExecutionsOutput).
 pub mod search_flow_executions_output {
 
-    /// A builder for [`SearchFlowExecutionsOutput`](crate::output::SearchFlowExecutionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`SearchFlowExecutionsOutput`](crate::output::SearchFlowExecutionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summaries:
@@ -692,7 +695,7 @@ pub mod search_flow_executions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchFlowExecutionsOutput`](crate::output::SearchFlowExecutionsOutput)
+        /// Consumes the builder and constructs a [`SearchFlowExecutionsOutput`](crate::output::SearchFlowExecutionsOutput).
         pub fn build(self) -> crate::output::SearchFlowExecutionsOutput {
             crate::output::SearchFlowExecutionsOutput {
                 summaries: self.summaries,
@@ -702,7 +705,7 @@ pub mod search_flow_executions_output {
     }
 }
 impl SearchFlowExecutionsOutput {
-    /// Creates a new builder-style object to manufacture [`SearchFlowExecutionsOutput`](crate::output::SearchFlowExecutionsOutput)
+    /// Creates a new builder-style object to manufacture [`SearchFlowExecutionsOutput`](crate::output::SearchFlowExecutionsOutput).
     pub fn builder() -> crate::output::search_flow_executions_output::Builder {
         crate::output::search_flow_executions_output::Builder::default()
     }
@@ -713,8 +716,10 @@ impl SearchFlowExecutionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchEntitiesOutput {
     /// <p>An array of descriptions for each entity returned in the search result.</p>
+    #[doc(hidden)]
     pub descriptions: std::option::Option<std::vec::Vec<crate::model::EntityDescription>>,
     /// <p>The string to specify as <code>nextToken</code> when you request the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl SearchEntitiesOutput {
@@ -735,11 +740,10 @@ impl std::fmt::Debug for SearchEntitiesOutput {
         formatter.finish()
     }
 }
-/// See [`SearchEntitiesOutput`](crate::output::SearchEntitiesOutput)
+/// See [`SearchEntitiesOutput`](crate::output::SearchEntitiesOutput).
 pub mod search_entities_output {
 
-    /// A builder for [`SearchEntitiesOutput`](crate::output::SearchEntitiesOutput)
-    #[non_exhaustive]
+    /// A builder for [`SearchEntitiesOutput`](crate::output::SearchEntitiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) descriptions:
@@ -776,7 +780,7 @@ pub mod search_entities_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchEntitiesOutput`](crate::output::SearchEntitiesOutput)
+        /// Consumes the builder and constructs a [`SearchEntitiesOutput`](crate::output::SearchEntitiesOutput).
         pub fn build(self) -> crate::output::SearchEntitiesOutput {
             crate::output::SearchEntitiesOutput {
                 descriptions: self.descriptions,
@@ -786,7 +790,7 @@ pub mod search_entities_output {
     }
 }
 impl SearchEntitiesOutput {
-    /// Creates a new builder-style object to manufacture [`SearchEntitiesOutput`](crate::output::SearchEntitiesOutput)
+    /// Creates a new builder-style object to manufacture [`SearchEntitiesOutput`](crate::output::SearchEntitiesOutput).
     pub fn builder() -> crate::output::search_entities_output::Builder {
         crate::output::search_entities_output::Builder::default()
     }
@@ -797,8 +801,10 @@ impl SearchEntitiesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>List of tags returned by the <code>ListTagsForResource</code> operation.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The token that specifies the next page of results to return.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListTagsForResourceOutput {
@@ -819,11 +825,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -859,7 +864,7 @@ pub mod list_tags_for_resource_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 tags: self.tags,
@@ -869,7 +874,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -880,8 +885,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListFlowExecutionMessagesOutput {
     /// <p>A list of objects that contain information about events in the specified flow execution.</p>
+    #[doc(hidden)]
     pub messages: std::option::Option<std::vec::Vec<crate::model::FlowExecutionMessage>>,
     /// <p>The string to specify as <code>nextToken</code> when you request the next page of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListFlowExecutionMessagesOutput {
@@ -902,11 +909,10 @@ impl std::fmt::Debug for ListFlowExecutionMessagesOutput {
         formatter.finish()
     }
 }
-/// See [`ListFlowExecutionMessagesOutput`](crate::output::ListFlowExecutionMessagesOutput)
+/// See [`ListFlowExecutionMessagesOutput`](crate::output::ListFlowExecutionMessagesOutput).
 pub mod list_flow_execution_messages_output {
 
-    /// A builder for [`ListFlowExecutionMessagesOutput`](crate::output::ListFlowExecutionMessagesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListFlowExecutionMessagesOutput`](crate::output::ListFlowExecutionMessagesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) messages: std::option::Option<std::vec::Vec<crate::model::FlowExecutionMessage>>,
@@ -942,7 +948,7 @@ pub mod list_flow_execution_messages_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFlowExecutionMessagesOutput`](crate::output::ListFlowExecutionMessagesOutput)
+        /// Consumes the builder and constructs a [`ListFlowExecutionMessagesOutput`](crate::output::ListFlowExecutionMessagesOutput).
         pub fn build(self) -> crate::output::ListFlowExecutionMessagesOutput {
             crate::output::ListFlowExecutionMessagesOutput {
                 messages: self.messages,
@@ -952,7 +958,7 @@ pub mod list_flow_execution_messages_output {
     }
 }
 impl ListFlowExecutionMessagesOutput {
-    /// Creates a new builder-style object to manufacture [`ListFlowExecutionMessagesOutput`](crate::output::ListFlowExecutionMessagesOutput)
+    /// Creates a new builder-style object to manufacture [`ListFlowExecutionMessagesOutput`](crate::output::ListFlowExecutionMessagesOutput).
     pub fn builder() -> crate::output::list_flow_execution_messages_output::Builder {
         crate::output::list_flow_execution_messages_output::Builder::default()
     }
@@ -963,18 +969,25 @@ impl ListFlowExecutionMessagesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetUploadStatusOutput {
     /// <p>The ID of the upload.</p>
+    #[doc(hidden)]
     pub upload_id: std::option::Option<std::string::String>,
     /// <p>The status of the upload. The initial status is <code>IN_PROGRESS</code>. The response show all validation failures if the upload fails.</p>
+    #[doc(hidden)]
     pub upload_status: std::option::Option<crate::model::UploadStatus>,
     /// <p>The ARN of the upload.</p>
+    #[doc(hidden)]
     pub namespace_arn: std::option::Option<std::string::String>,
     /// <p>The name of the upload's namespace.</p>
+    #[doc(hidden)]
     pub namespace_name: std::option::Option<std::string::String>,
     /// <p>The version of the user's namespace. Defaults to the latest version of the user's namespace.</p>
+    #[doc(hidden)]
     pub namespace_version: std::option::Option<i64>,
     /// <p>The reason for an upload failure.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The date at which the upload was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GetUploadStatusOutput {
@@ -1020,11 +1033,10 @@ impl std::fmt::Debug for GetUploadStatusOutput {
         formatter.finish()
     }
 }
-/// See [`GetUploadStatusOutput`](crate::output::GetUploadStatusOutput)
+/// See [`GetUploadStatusOutput`](crate::output::GetUploadStatusOutput).
 pub mod get_upload_status_output {
 
-    /// A builder for [`GetUploadStatusOutput`](crate::output::GetUploadStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetUploadStatusOutput`](crate::output::GetUploadStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) upload_id: std::option::Option<std::string::String>,
@@ -1127,7 +1139,7 @@ pub mod get_upload_status_output {
             self.created_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetUploadStatusOutput`](crate::output::GetUploadStatusOutput)
+        /// Consumes the builder and constructs a [`GetUploadStatusOutput`](crate::output::GetUploadStatusOutput).
         pub fn build(self) -> crate::output::GetUploadStatusOutput {
             crate::output::GetUploadStatusOutput {
                 upload_id: self.upload_id,
@@ -1142,7 +1154,7 @@ pub mod get_upload_status_output {
     }
 }
 impl GetUploadStatusOutput {
-    /// Creates a new builder-style object to manufacture [`GetUploadStatusOutput`](crate::output::GetUploadStatusOutput)
+    /// Creates a new builder-style object to manufacture [`GetUploadStatusOutput`](crate::output::GetUploadStatusOutput).
     pub fn builder() -> crate::output::get_upload_status_output::Builder {
         crate::output::get_upload_status_output::Builder::default()
     }
@@ -1153,8 +1165,10 @@ impl GetUploadStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSystemTemplateRevisionsOutput {
     /// <p>An array of objects that contain summary data about the system template revisions.</p>
+    #[doc(hidden)]
     pub summaries: std::option::Option<std::vec::Vec<crate::model::SystemTemplateSummary>>,
     /// <p>The string to specify as <code>nextToken</code> when you request the next page of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetSystemTemplateRevisionsOutput {
@@ -1175,11 +1189,10 @@ impl std::fmt::Debug for GetSystemTemplateRevisionsOutput {
         formatter.finish()
     }
 }
-/// See [`GetSystemTemplateRevisionsOutput`](crate::output::GetSystemTemplateRevisionsOutput)
+/// See [`GetSystemTemplateRevisionsOutput`](crate::output::GetSystemTemplateRevisionsOutput).
 pub mod get_system_template_revisions_output {
 
-    /// A builder for [`GetSystemTemplateRevisionsOutput`](crate::output::GetSystemTemplateRevisionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSystemTemplateRevisionsOutput`](crate::output::GetSystemTemplateRevisionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summaries:
@@ -1216,7 +1229,7 @@ pub mod get_system_template_revisions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSystemTemplateRevisionsOutput`](crate::output::GetSystemTemplateRevisionsOutput)
+        /// Consumes the builder and constructs a [`GetSystemTemplateRevisionsOutput`](crate::output::GetSystemTemplateRevisionsOutput).
         pub fn build(self) -> crate::output::GetSystemTemplateRevisionsOutput {
             crate::output::GetSystemTemplateRevisionsOutput {
                 summaries: self.summaries,
@@ -1226,7 +1239,7 @@ pub mod get_system_template_revisions_output {
     }
 }
 impl GetSystemTemplateRevisionsOutput {
-    /// Creates a new builder-style object to manufacture [`GetSystemTemplateRevisionsOutput`](crate::output::GetSystemTemplateRevisionsOutput)
+    /// Creates a new builder-style object to manufacture [`GetSystemTemplateRevisionsOutput`](crate::output::GetSystemTemplateRevisionsOutput).
     pub fn builder() -> crate::output::get_system_template_revisions_output::Builder {
         crate::output::get_system_template_revisions_output::Builder::default()
     }
@@ -1237,6 +1250,7 @@ impl GetSystemTemplateRevisionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSystemTemplateOutput {
     /// <p>An object that contains summary data about the system.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<crate::model::SystemTemplateDescription>,
 }
 impl GetSystemTemplateOutput {
@@ -1252,11 +1266,10 @@ impl std::fmt::Debug for GetSystemTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`GetSystemTemplateOutput`](crate::output::GetSystemTemplateOutput)
+/// See [`GetSystemTemplateOutput`](crate::output::GetSystemTemplateOutput).
 pub mod get_system_template_output {
 
-    /// A builder for [`GetSystemTemplateOutput`](crate::output::GetSystemTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSystemTemplateOutput`](crate::output::GetSystemTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<crate::model::SystemTemplateDescription>,
@@ -1275,7 +1288,7 @@ pub mod get_system_template_output {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSystemTemplateOutput`](crate::output::GetSystemTemplateOutput)
+        /// Consumes the builder and constructs a [`GetSystemTemplateOutput`](crate::output::GetSystemTemplateOutput).
         pub fn build(self) -> crate::output::GetSystemTemplateOutput {
             crate::output::GetSystemTemplateOutput {
                 description: self.description,
@@ -1284,7 +1297,7 @@ pub mod get_system_template_output {
     }
 }
 impl GetSystemTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`GetSystemTemplateOutput`](crate::output::GetSystemTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`GetSystemTemplateOutput`](crate::output::GetSystemTemplateOutput).
     pub fn builder() -> crate::output::get_system_template_output::Builder {
         crate::output::get_system_template_output::Builder::default()
     }
@@ -1295,6 +1308,7 @@ impl GetSystemTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSystemInstanceOutput {
     /// <p>An object that describes the system instance.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<crate::model::SystemInstanceDescription>,
 }
 impl GetSystemInstanceOutput {
@@ -1310,11 +1324,10 @@ impl std::fmt::Debug for GetSystemInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`GetSystemInstanceOutput`](crate::output::GetSystemInstanceOutput)
+/// See [`GetSystemInstanceOutput`](crate::output::GetSystemInstanceOutput).
 pub mod get_system_instance_output {
 
-    /// A builder for [`GetSystemInstanceOutput`](crate::output::GetSystemInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSystemInstanceOutput`](crate::output::GetSystemInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<crate::model::SystemInstanceDescription>,
@@ -1333,7 +1346,7 @@ pub mod get_system_instance_output {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSystemInstanceOutput`](crate::output::GetSystemInstanceOutput)
+        /// Consumes the builder and constructs a [`GetSystemInstanceOutput`](crate::output::GetSystemInstanceOutput).
         pub fn build(self) -> crate::output::GetSystemInstanceOutput {
             crate::output::GetSystemInstanceOutput {
                 description: self.description,
@@ -1342,7 +1355,7 @@ pub mod get_system_instance_output {
     }
 }
 impl GetSystemInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`GetSystemInstanceOutput`](crate::output::GetSystemInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`GetSystemInstanceOutput`](crate::output::GetSystemInstanceOutput).
     pub fn builder() -> crate::output::get_system_instance_output::Builder {
         crate::output::get_system_instance_output::Builder::default()
     }
@@ -1353,14 +1366,19 @@ impl GetSystemInstanceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetNamespaceDeletionStatusOutput {
     /// <p>The ARN of the namespace that is being deleted.</p>
+    #[doc(hidden)]
     pub namespace_arn: std::option::Option<std::string::String>,
     /// <p>The name of the namespace that is being deleted.</p>
+    #[doc(hidden)]
     pub namespace_name: std::option::Option<std::string::String>,
     /// <p>The status of the deletion request.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::NamespaceDeletionStatus>,
     /// <p>An error code returned by the namespace deletion task.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<crate::model::NamespaceDeletionStatusErrorCodes>,
     /// <p>An error code returned by the namespace deletion task.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl GetNamespaceDeletionStatusOutput {
@@ -1398,11 +1416,10 @@ impl std::fmt::Debug for GetNamespaceDeletionStatusOutput {
         formatter.finish()
     }
 }
-/// See [`GetNamespaceDeletionStatusOutput`](crate::output::GetNamespaceDeletionStatusOutput)
+/// See [`GetNamespaceDeletionStatusOutput`](crate::output::GetNamespaceDeletionStatusOutput).
 pub mod get_namespace_deletion_status_output {
 
-    /// A builder for [`GetNamespaceDeletionStatusOutput`](crate::output::GetNamespaceDeletionStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetNamespaceDeletionStatusOutput`](crate::output::GetNamespaceDeletionStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace_arn: std::option::Option<std::string::String>,
@@ -1480,7 +1497,7 @@ pub mod get_namespace_deletion_status_output {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetNamespaceDeletionStatusOutput`](crate::output::GetNamespaceDeletionStatusOutput)
+        /// Consumes the builder and constructs a [`GetNamespaceDeletionStatusOutput`](crate::output::GetNamespaceDeletionStatusOutput).
         pub fn build(self) -> crate::output::GetNamespaceDeletionStatusOutput {
             crate::output::GetNamespaceDeletionStatusOutput {
                 namespace_arn: self.namespace_arn,
@@ -1493,7 +1510,7 @@ pub mod get_namespace_deletion_status_output {
     }
 }
 impl GetNamespaceDeletionStatusOutput {
-    /// Creates a new builder-style object to manufacture [`GetNamespaceDeletionStatusOutput`](crate::output::GetNamespaceDeletionStatusOutput)
+    /// Creates a new builder-style object to manufacture [`GetNamespaceDeletionStatusOutput`](crate::output::GetNamespaceDeletionStatusOutput).
     pub fn builder() -> crate::output::get_namespace_deletion_status_output::Builder {
         crate::output::get_namespace_deletion_status_output::Builder::default()
     }
@@ -1504,8 +1521,10 @@ impl GetNamespaceDeletionStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetFlowTemplateRevisionsOutput {
     /// <p>An array of objects that provide summary data about each revision.</p>
+    #[doc(hidden)]
     pub summaries: std::option::Option<std::vec::Vec<crate::model::FlowTemplateSummary>>,
     /// <p>The string to specify as <code>nextToken</code> when you request the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetFlowTemplateRevisionsOutput {
@@ -1526,11 +1545,10 @@ impl std::fmt::Debug for GetFlowTemplateRevisionsOutput {
         formatter.finish()
     }
 }
-/// See [`GetFlowTemplateRevisionsOutput`](crate::output::GetFlowTemplateRevisionsOutput)
+/// See [`GetFlowTemplateRevisionsOutput`](crate::output::GetFlowTemplateRevisionsOutput).
 pub mod get_flow_template_revisions_output {
 
-    /// A builder for [`GetFlowTemplateRevisionsOutput`](crate::output::GetFlowTemplateRevisionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetFlowTemplateRevisionsOutput`](crate::output::GetFlowTemplateRevisionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summaries: std::option::Option<std::vec::Vec<crate::model::FlowTemplateSummary>>,
@@ -1566,7 +1584,7 @@ pub mod get_flow_template_revisions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetFlowTemplateRevisionsOutput`](crate::output::GetFlowTemplateRevisionsOutput)
+        /// Consumes the builder and constructs a [`GetFlowTemplateRevisionsOutput`](crate::output::GetFlowTemplateRevisionsOutput).
         pub fn build(self) -> crate::output::GetFlowTemplateRevisionsOutput {
             crate::output::GetFlowTemplateRevisionsOutput {
                 summaries: self.summaries,
@@ -1576,7 +1594,7 @@ pub mod get_flow_template_revisions_output {
     }
 }
 impl GetFlowTemplateRevisionsOutput {
-    /// Creates a new builder-style object to manufacture [`GetFlowTemplateRevisionsOutput`](crate::output::GetFlowTemplateRevisionsOutput)
+    /// Creates a new builder-style object to manufacture [`GetFlowTemplateRevisionsOutput`](crate::output::GetFlowTemplateRevisionsOutput).
     pub fn builder() -> crate::output::get_flow_template_revisions_output::Builder {
         crate::output::get_flow_template_revisions_output::Builder::default()
     }
@@ -1587,6 +1605,7 @@ impl GetFlowTemplateRevisionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetFlowTemplateOutput {
     /// <p>The object that describes the specified workflow.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<crate::model::FlowTemplateDescription>,
 }
 impl GetFlowTemplateOutput {
@@ -1602,11 +1621,10 @@ impl std::fmt::Debug for GetFlowTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`GetFlowTemplateOutput`](crate::output::GetFlowTemplateOutput)
+/// See [`GetFlowTemplateOutput`](crate::output::GetFlowTemplateOutput).
 pub mod get_flow_template_output {
 
-    /// A builder for [`GetFlowTemplateOutput`](crate::output::GetFlowTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetFlowTemplateOutput`](crate::output::GetFlowTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<crate::model::FlowTemplateDescription>,
@@ -1625,7 +1643,7 @@ pub mod get_flow_template_output {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetFlowTemplateOutput`](crate::output::GetFlowTemplateOutput)
+        /// Consumes the builder and constructs a [`GetFlowTemplateOutput`](crate::output::GetFlowTemplateOutput).
         pub fn build(self) -> crate::output::GetFlowTemplateOutput {
             crate::output::GetFlowTemplateOutput {
                 description: self.description,
@@ -1634,7 +1652,7 @@ pub mod get_flow_template_output {
     }
 }
 impl GetFlowTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`GetFlowTemplateOutput`](crate::output::GetFlowTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`GetFlowTemplateOutput`](crate::output::GetFlowTemplateOutput).
     pub fn builder() -> crate::output::get_flow_template_output::Builder {
         crate::output::get_flow_template_output::Builder::default()
     }
@@ -1645,6 +1663,7 @@ impl GetFlowTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetEntitiesOutput {
     /// <p>An array of descriptions for the specified entities.</p>
+    #[doc(hidden)]
     pub descriptions: std::option::Option<std::vec::Vec<crate::model::EntityDescription>>,
 }
 impl GetEntitiesOutput {
@@ -1660,11 +1679,10 @@ impl std::fmt::Debug for GetEntitiesOutput {
         formatter.finish()
     }
 }
-/// See [`GetEntitiesOutput`](crate::output::GetEntitiesOutput)
+/// See [`GetEntitiesOutput`](crate::output::GetEntitiesOutput).
 pub mod get_entities_output {
 
-    /// A builder for [`GetEntitiesOutput`](crate::output::GetEntitiesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetEntitiesOutput`](crate::output::GetEntitiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) descriptions:
@@ -1690,7 +1708,7 @@ pub mod get_entities_output {
             self.descriptions = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetEntitiesOutput`](crate::output::GetEntitiesOutput)
+        /// Consumes the builder and constructs a [`GetEntitiesOutput`](crate::output::GetEntitiesOutput).
         pub fn build(self) -> crate::output::GetEntitiesOutput {
             crate::output::GetEntitiesOutput {
                 descriptions: self.descriptions,
@@ -1699,7 +1717,7 @@ pub mod get_entities_output {
     }
 }
 impl GetEntitiesOutput {
-    /// Creates a new builder-style object to manufacture [`GetEntitiesOutput`](crate::output::GetEntitiesOutput)
+    /// Creates a new builder-style object to manufacture [`GetEntitiesOutput`](crate::output::GetEntitiesOutput).
     pub fn builder() -> crate::output::get_entities_output::Builder {
         crate::output::get_entities_output::Builder::default()
     }
@@ -1715,22 +1733,21 @@ impl std::fmt::Debug for DissociateEntityFromThingOutput {
         formatter.finish()
     }
 }
-/// See [`DissociateEntityFromThingOutput`](crate::output::DissociateEntityFromThingOutput)
+/// See [`DissociateEntityFromThingOutput`](crate::output::DissociateEntityFromThingOutput).
 pub mod dissociate_entity_from_thing_output {
 
-    /// A builder for [`DissociateEntityFromThingOutput`](crate::output::DissociateEntityFromThingOutput)
-    #[non_exhaustive]
+    /// A builder for [`DissociateEntityFromThingOutput`](crate::output::DissociateEntityFromThingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DissociateEntityFromThingOutput`](crate::output::DissociateEntityFromThingOutput)
+        /// Consumes the builder and constructs a [`DissociateEntityFromThingOutput`](crate::output::DissociateEntityFromThingOutput).
         pub fn build(self) -> crate::output::DissociateEntityFromThingOutput {
             crate::output::DissociateEntityFromThingOutput {}
         }
     }
 }
 impl DissociateEntityFromThingOutput {
-    /// Creates a new builder-style object to manufacture [`DissociateEntityFromThingOutput`](crate::output::DissociateEntityFromThingOutput)
+    /// Creates a new builder-style object to manufacture [`DissociateEntityFromThingOutput`](crate::output::DissociateEntityFromThingOutput).
     pub fn builder() -> crate::output::dissociate_entity_from_thing_output::Builder {
         crate::output::dissociate_entity_from_thing_output::Builder::default()
     }
@@ -1741,14 +1758,19 @@ impl DissociateEntityFromThingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeNamespaceOutput {
     /// <p>The ARN of the namespace.</p>
+    #[doc(hidden)]
     pub namespace_arn: std::option::Option<std::string::String>,
     /// <p>The name of the namespace.</p>
+    #[doc(hidden)]
     pub namespace_name: std::option::Option<std::string::String>,
     /// <p>The name of the public namespace that the latest namespace version is tracking.</p>
+    #[doc(hidden)]
     pub tracking_namespace_name: std::option::Option<std::string::String>,
     /// <p>The version of the public namespace that the latest version is tracking.</p>
+    #[doc(hidden)]
     pub tracking_namespace_version: std::option::Option<i64>,
     /// <p>The version of the user's namespace to describe.</p>
+    #[doc(hidden)]
     pub namespace_version: std::option::Option<i64>,
 }
 impl DescribeNamespaceOutput {
@@ -1787,11 +1809,10 @@ impl std::fmt::Debug for DescribeNamespaceOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeNamespaceOutput`](crate::output::DescribeNamespaceOutput)
+/// See [`DescribeNamespaceOutput`](crate::output::DescribeNamespaceOutput).
 pub mod describe_namespace_output {
 
-    /// A builder for [`DescribeNamespaceOutput`](crate::output::DescribeNamespaceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeNamespaceOutput`](crate::output::DescribeNamespaceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace_arn: std::option::Option<std::string::String>,
@@ -1860,7 +1881,7 @@ pub mod describe_namespace_output {
             self.namespace_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeNamespaceOutput`](crate::output::DescribeNamespaceOutput)
+        /// Consumes the builder and constructs a [`DescribeNamespaceOutput`](crate::output::DescribeNamespaceOutput).
         pub fn build(self) -> crate::output::DescribeNamespaceOutput {
             crate::output::DescribeNamespaceOutput {
                 namespace_arn: self.namespace_arn,
@@ -1873,7 +1894,7 @@ pub mod describe_namespace_output {
     }
 }
 impl DescribeNamespaceOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeNamespaceOutput`](crate::output::DescribeNamespaceOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeNamespaceOutput`](crate::output::DescribeNamespaceOutput).
     pub fn builder() -> crate::output::describe_namespace_output::Builder {
         crate::output::describe_namespace_output::Builder::default()
     }
@@ -1889,22 +1910,21 @@ impl std::fmt::Debug for DeprecateSystemTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`DeprecateSystemTemplateOutput`](crate::output::DeprecateSystemTemplateOutput)
+/// See [`DeprecateSystemTemplateOutput`](crate::output::DeprecateSystemTemplateOutput).
 pub mod deprecate_system_template_output {
 
-    /// A builder for [`DeprecateSystemTemplateOutput`](crate::output::DeprecateSystemTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeprecateSystemTemplateOutput`](crate::output::DeprecateSystemTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeprecateSystemTemplateOutput`](crate::output::DeprecateSystemTemplateOutput)
+        /// Consumes the builder and constructs a [`DeprecateSystemTemplateOutput`](crate::output::DeprecateSystemTemplateOutput).
         pub fn build(self) -> crate::output::DeprecateSystemTemplateOutput {
             crate::output::DeprecateSystemTemplateOutput {}
         }
     }
 }
 impl DeprecateSystemTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`DeprecateSystemTemplateOutput`](crate::output::DeprecateSystemTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`DeprecateSystemTemplateOutput`](crate::output::DeprecateSystemTemplateOutput).
     pub fn builder() -> crate::output::deprecate_system_template_output::Builder {
         crate::output::deprecate_system_template_output::Builder::default()
     }
@@ -1920,22 +1940,21 @@ impl std::fmt::Debug for DeprecateFlowTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`DeprecateFlowTemplateOutput`](crate::output::DeprecateFlowTemplateOutput)
+/// See [`DeprecateFlowTemplateOutput`](crate::output::DeprecateFlowTemplateOutput).
 pub mod deprecate_flow_template_output {
 
-    /// A builder for [`DeprecateFlowTemplateOutput`](crate::output::DeprecateFlowTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeprecateFlowTemplateOutput`](crate::output::DeprecateFlowTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeprecateFlowTemplateOutput`](crate::output::DeprecateFlowTemplateOutput)
+        /// Consumes the builder and constructs a [`DeprecateFlowTemplateOutput`](crate::output::DeprecateFlowTemplateOutput).
         pub fn build(self) -> crate::output::DeprecateFlowTemplateOutput {
             crate::output::DeprecateFlowTemplateOutput {}
         }
     }
 }
 impl DeprecateFlowTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`DeprecateFlowTemplateOutput`](crate::output::DeprecateFlowTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`DeprecateFlowTemplateOutput`](crate::output::DeprecateFlowTemplateOutput).
     pub fn builder() -> crate::output::deprecate_flow_template_output::Builder {
         crate::output::deprecate_flow_template_output::Builder::default()
     }
@@ -1946,8 +1965,10 @@ impl DeprecateFlowTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeploySystemInstanceOutput {
     /// <p>An object that contains summary information about a system instance that was deployed. </p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::SystemInstanceSummary>,
     /// <p>The ID of the Greengrass deployment used to deploy the system instance.</p>
+    #[doc(hidden)]
     pub greengrass_deployment_id: std::option::Option<std::string::String>,
 }
 impl DeploySystemInstanceOutput {
@@ -1968,11 +1989,10 @@ impl std::fmt::Debug for DeploySystemInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`DeploySystemInstanceOutput`](crate::output::DeploySystemInstanceOutput)
+/// See [`DeploySystemInstanceOutput`](crate::output::DeploySystemInstanceOutput).
 pub mod deploy_system_instance_output {
 
-    /// A builder for [`DeploySystemInstanceOutput`](crate::output::DeploySystemInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeploySystemInstanceOutput`](crate::output::DeploySystemInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::SystemInstanceSummary>,
@@ -2005,7 +2025,7 @@ pub mod deploy_system_instance_output {
             self.greengrass_deployment_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploySystemInstanceOutput`](crate::output::DeploySystemInstanceOutput)
+        /// Consumes the builder and constructs a [`DeploySystemInstanceOutput`](crate::output::DeploySystemInstanceOutput).
         pub fn build(self) -> crate::output::DeploySystemInstanceOutput {
             crate::output::DeploySystemInstanceOutput {
                 summary: self.summary,
@@ -2015,7 +2035,7 @@ pub mod deploy_system_instance_output {
     }
 }
 impl DeploySystemInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`DeploySystemInstanceOutput`](crate::output::DeploySystemInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`DeploySystemInstanceOutput`](crate::output::DeploySystemInstanceOutput).
     pub fn builder() -> crate::output::deploy_system_instance_output::Builder {
         crate::output::deploy_system_instance_output::Builder::default()
     }
@@ -2031,22 +2051,21 @@ impl std::fmt::Debug for DeleteSystemTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSystemTemplateOutput`](crate::output::DeleteSystemTemplateOutput)
+/// See [`DeleteSystemTemplateOutput`](crate::output::DeleteSystemTemplateOutput).
 pub mod delete_system_template_output {
 
-    /// A builder for [`DeleteSystemTemplateOutput`](crate::output::DeleteSystemTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSystemTemplateOutput`](crate::output::DeleteSystemTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteSystemTemplateOutput`](crate::output::DeleteSystemTemplateOutput)
+        /// Consumes the builder and constructs a [`DeleteSystemTemplateOutput`](crate::output::DeleteSystemTemplateOutput).
         pub fn build(self) -> crate::output::DeleteSystemTemplateOutput {
             crate::output::DeleteSystemTemplateOutput {}
         }
     }
 }
 impl DeleteSystemTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSystemTemplateOutput`](crate::output::DeleteSystemTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSystemTemplateOutput`](crate::output::DeleteSystemTemplateOutput).
     pub fn builder() -> crate::output::delete_system_template_output::Builder {
         crate::output::delete_system_template_output::Builder::default()
     }
@@ -2062,22 +2081,21 @@ impl std::fmt::Debug for DeleteSystemInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSystemInstanceOutput`](crate::output::DeleteSystemInstanceOutput)
+/// See [`DeleteSystemInstanceOutput`](crate::output::DeleteSystemInstanceOutput).
 pub mod delete_system_instance_output {
 
-    /// A builder for [`DeleteSystemInstanceOutput`](crate::output::DeleteSystemInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSystemInstanceOutput`](crate::output::DeleteSystemInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteSystemInstanceOutput`](crate::output::DeleteSystemInstanceOutput)
+        /// Consumes the builder and constructs a [`DeleteSystemInstanceOutput`](crate::output::DeleteSystemInstanceOutput).
         pub fn build(self) -> crate::output::DeleteSystemInstanceOutput {
             crate::output::DeleteSystemInstanceOutput {}
         }
     }
 }
 impl DeleteSystemInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSystemInstanceOutput`](crate::output::DeleteSystemInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSystemInstanceOutput`](crate::output::DeleteSystemInstanceOutput).
     pub fn builder() -> crate::output::delete_system_instance_output::Builder {
         crate::output::delete_system_instance_output::Builder::default()
     }
@@ -2088,8 +2106,10 @@ impl DeleteSystemInstanceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteNamespaceOutput {
     /// <p>The ARN of the namespace to be deleted.</p>
+    #[doc(hidden)]
     pub namespace_arn: std::option::Option<std::string::String>,
     /// <p>The name of the namespace to be deleted.</p>
+    #[doc(hidden)]
     pub namespace_name: std::option::Option<std::string::String>,
 }
 impl DeleteNamespaceOutput {
@@ -2110,11 +2130,10 @@ impl std::fmt::Debug for DeleteNamespaceOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteNamespaceOutput`](crate::output::DeleteNamespaceOutput)
+/// See [`DeleteNamespaceOutput`](crate::output::DeleteNamespaceOutput).
 pub mod delete_namespace_output {
 
-    /// A builder for [`DeleteNamespaceOutput`](crate::output::DeleteNamespaceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteNamespaceOutput`](crate::output::DeleteNamespaceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace_arn: std::option::Option<std::string::String>,
@@ -2147,7 +2166,7 @@ pub mod delete_namespace_output {
             self.namespace_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteNamespaceOutput`](crate::output::DeleteNamespaceOutput)
+        /// Consumes the builder and constructs a [`DeleteNamespaceOutput`](crate::output::DeleteNamespaceOutput).
         pub fn build(self) -> crate::output::DeleteNamespaceOutput {
             crate::output::DeleteNamespaceOutput {
                 namespace_arn: self.namespace_arn,
@@ -2157,7 +2176,7 @@ pub mod delete_namespace_output {
     }
 }
 impl DeleteNamespaceOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteNamespaceOutput`](crate::output::DeleteNamespaceOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteNamespaceOutput`](crate::output::DeleteNamespaceOutput).
     pub fn builder() -> crate::output::delete_namespace_output::Builder {
         crate::output::delete_namespace_output::Builder::default()
     }
@@ -2173,22 +2192,21 @@ impl std::fmt::Debug for DeleteFlowTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFlowTemplateOutput`](crate::output::DeleteFlowTemplateOutput)
+/// See [`DeleteFlowTemplateOutput`](crate::output::DeleteFlowTemplateOutput).
 pub mod delete_flow_template_output {
 
-    /// A builder for [`DeleteFlowTemplateOutput`](crate::output::DeleteFlowTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFlowTemplateOutput`](crate::output::DeleteFlowTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteFlowTemplateOutput`](crate::output::DeleteFlowTemplateOutput)
+        /// Consumes the builder and constructs a [`DeleteFlowTemplateOutput`](crate::output::DeleteFlowTemplateOutput).
         pub fn build(self) -> crate::output::DeleteFlowTemplateOutput {
             crate::output::DeleteFlowTemplateOutput {}
         }
     }
 }
 impl DeleteFlowTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFlowTemplateOutput`](crate::output::DeleteFlowTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFlowTemplateOutput`](crate::output::DeleteFlowTemplateOutput).
     pub fn builder() -> crate::output::delete_flow_template_output::Builder {
         crate::output::delete_flow_template_output::Builder::default()
     }
@@ -2199,6 +2217,7 @@ impl DeleteFlowTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSystemTemplateOutput {
     /// <p>The summary object that describes the created system.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::SystemTemplateSummary>,
 }
 impl CreateSystemTemplateOutput {
@@ -2214,11 +2233,10 @@ impl std::fmt::Debug for CreateSystemTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSystemTemplateOutput`](crate::output::CreateSystemTemplateOutput)
+/// See [`CreateSystemTemplateOutput`](crate::output::CreateSystemTemplateOutput).
 pub mod create_system_template_output {
 
-    /// A builder for [`CreateSystemTemplateOutput`](crate::output::CreateSystemTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSystemTemplateOutput`](crate::output::CreateSystemTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::SystemTemplateSummary>,
@@ -2237,7 +2255,7 @@ pub mod create_system_template_output {
             self.summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSystemTemplateOutput`](crate::output::CreateSystemTemplateOutput)
+        /// Consumes the builder and constructs a [`CreateSystemTemplateOutput`](crate::output::CreateSystemTemplateOutput).
         pub fn build(self) -> crate::output::CreateSystemTemplateOutput {
             crate::output::CreateSystemTemplateOutput {
                 summary: self.summary,
@@ -2246,7 +2264,7 @@ pub mod create_system_template_output {
     }
 }
 impl CreateSystemTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSystemTemplateOutput`](crate::output::CreateSystemTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSystemTemplateOutput`](crate::output::CreateSystemTemplateOutput).
     pub fn builder() -> crate::output::create_system_template_output::Builder {
         crate::output::create_system_template_output::Builder::default()
     }
@@ -2257,6 +2275,7 @@ impl CreateSystemTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSystemInstanceOutput {
     /// <p>The summary object that describes the new system instance.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::SystemInstanceSummary>,
 }
 impl CreateSystemInstanceOutput {
@@ -2272,11 +2291,10 @@ impl std::fmt::Debug for CreateSystemInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSystemInstanceOutput`](crate::output::CreateSystemInstanceOutput)
+/// See [`CreateSystemInstanceOutput`](crate::output::CreateSystemInstanceOutput).
 pub mod create_system_instance_output {
 
-    /// A builder for [`CreateSystemInstanceOutput`](crate::output::CreateSystemInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSystemInstanceOutput`](crate::output::CreateSystemInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::SystemInstanceSummary>,
@@ -2295,7 +2313,7 @@ pub mod create_system_instance_output {
             self.summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSystemInstanceOutput`](crate::output::CreateSystemInstanceOutput)
+        /// Consumes the builder and constructs a [`CreateSystemInstanceOutput`](crate::output::CreateSystemInstanceOutput).
         pub fn build(self) -> crate::output::CreateSystemInstanceOutput {
             crate::output::CreateSystemInstanceOutput {
                 summary: self.summary,
@@ -2304,7 +2322,7 @@ pub mod create_system_instance_output {
     }
 }
 impl CreateSystemInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSystemInstanceOutput`](crate::output::CreateSystemInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSystemInstanceOutput`](crate::output::CreateSystemInstanceOutput).
     pub fn builder() -> crate::output::create_system_instance_output::Builder {
         crate::output::create_system_instance_output::Builder::default()
     }
@@ -2315,6 +2333,7 @@ impl CreateSystemInstanceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateFlowTemplateOutput {
     /// <p>The summary object that describes the created workflow.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::FlowTemplateSummary>,
 }
 impl CreateFlowTemplateOutput {
@@ -2330,11 +2349,10 @@ impl std::fmt::Debug for CreateFlowTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`CreateFlowTemplateOutput`](crate::output::CreateFlowTemplateOutput)
+/// See [`CreateFlowTemplateOutput`](crate::output::CreateFlowTemplateOutput).
 pub mod create_flow_template_output {
 
-    /// A builder for [`CreateFlowTemplateOutput`](crate::output::CreateFlowTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateFlowTemplateOutput`](crate::output::CreateFlowTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::FlowTemplateSummary>,
@@ -2353,7 +2371,7 @@ pub mod create_flow_template_output {
             self.summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFlowTemplateOutput`](crate::output::CreateFlowTemplateOutput)
+        /// Consumes the builder and constructs a [`CreateFlowTemplateOutput`](crate::output::CreateFlowTemplateOutput).
         pub fn build(self) -> crate::output::CreateFlowTemplateOutput {
             crate::output::CreateFlowTemplateOutput {
                 summary: self.summary,
@@ -2362,7 +2380,7 @@ pub mod create_flow_template_output {
     }
 }
 impl CreateFlowTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`CreateFlowTemplateOutput`](crate::output::CreateFlowTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`CreateFlowTemplateOutput`](crate::output::CreateFlowTemplateOutput).
     pub fn builder() -> crate::output::create_flow_template_output::Builder {
         crate::output::create_flow_template_output::Builder::default()
     }
@@ -2378,22 +2396,21 @@ impl std::fmt::Debug for AssociateEntityToThingOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateEntityToThingOutput`](crate::output::AssociateEntityToThingOutput)
+/// See [`AssociateEntityToThingOutput`](crate::output::AssociateEntityToThingOutput).
 pub mod associate_entity_to_thing_output {
 
-    /// A builder for [`AssociateEntityToThingOutput`](crate::output::AssociateEntityToThingOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateEntityToThingOutput`](crate::output::AssociateEntityToThingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AssociateEntityToThingOutput`](crate::output::AssociateEntityToThingOutput)
+        /// Consumes the builder and constructs a [`AssociateEntityToThingOutput`](crate::output::AssociateEntityToThingOutput).
         pub fn build(self) -> crate::output::AssociateEntityToThingOutput {
             crate::output::AssociateEntityToThingOutput {}
         }
     }
 }
 impl AssociateEntityToThingOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateEntityToThingOutput`](crate::output::AssociateEntityToThingOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateEntityToThingOutput`](crate::output::AssociateEntityToThingOutput).
     pub fn builder() -> crate::output::associate_entity_to_thing_output::Builder {
         crate::output::associate_entity_to_thing_output::Builder::default()
     }

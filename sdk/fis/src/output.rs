@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateExperimentTemplateOutput {
     /// <p>Information about the experiment template.</p>
+    #[doc(hidden)]
     pub experiment_template: std::option::Option<crate::model::ExperimentTemplate>,
 }
 impl UpdateExperimentTemplateOutput {
@@ -19,11 +20,10 @@ impl std::fmt::Debug for UpdateExperimentTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateExperimentTemplateOutput`](crate::output::UpdateExperimentTemplateOutput)
+/// See [`UpdateExperimentTemplateOutput`](crate::output::UpdateExperimentTemplateOutput).
 pub mod update_experiment_template_output {
 
-    /// A builder for [`UpdateExperimentTemplateOutput`](crate::output::UpdateExperimentTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateExperimentTemplateOutput`](crate::output::UpdateExperimentTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) experiment_template: std::option::Option<crate::model::ExperimentTemplate>,
@@ -42,7 +42,7 @@ pub mod update_experiment_template_output {
             self.experiment_template = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateExperimentTemplateOutput`](crate::output::UpdateExperimentTemplateOutput)
+        /// Consumes the builder and constructs a [`UpdateExperimentTemplateOutput`](crate::output::UpdateExperimentTemplateOutput).
         pub fn build(self) -> crate::output::UpdateExperimentTemplateOutput {
             crate::output::UpdateExperimentTemplateOutput {
                 experiment_template: self.experiment_template,
@@ -51,7 +51,7 @@ pub mod update_experiment_template_output {
     }
 }
 impl UpdateExperimentTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateExperimentTemplateOutput`](crate::output::UpdateExperimentTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateExperimentTemplateOutput`](crate::output::UpdateExperimentTemplateOutput).
     pub fn builder() -> crate::output::update_experiment_template_output::Builder {
         crate::output::update_experiment_template_output::Builder::default()
     }
@@ -67,22 +67,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -98,22 +97,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -124,6 +122,7 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StopExperimentOutput {
     /// <p>Information about the experiment.</p>
+    #[doc(hidden)]
     pub experiment: std::option::Option<crate::model::Experiment>,
 }
 impl StopExperimentOutput {
@@ -139,11 +138,10 @@ impl std::fmt::Debug for StopExperimentOutput {
         formatter.finish()
     }
 }
-/// See [`StopExperimentOutput`](crate::output::StopExperimentOutput)
+/// See [`StopExperimentOutput`](crate::output::StopExperimentOutput).
 pub mod stop_experiment_output {
 
-    /// A builder for [`StopExperimentOutput`](crate::output::StopExperimentOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopExperimentOutput`](crate::output::StopExperimentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) experiment: std::option::Option<crate::model::Experiment>,
@@ -162,7 +160,7 @@ pub mod stop_experiment_output {
             self.experiment = input;
             self
         }
-        /// Consumes the builder and constructs a [`StopExperimentOutput`](crate::output::StopExperimentOutput)
+        /// Consumes the builder and constructs a [`StopExperimentOutput`](crate::output::StopExperimentOutput).
         pub fn build(self) -> crate::output::StopExperimentOutput {
             crate::output::StopExperimentOutput {
                 experiment: self.experiment,
@@ -171,7 +169,7 @@ pub mod stop_experiment_output {
     }
 }
 impl StopExperimentOutput {
-    /// Creates a new builder-style object to manufacture [`StopExperimentOutput`](crate::output::StopExperimentOutput)
+    /// Creates a new builder-style object to manufacture [`StopExperimentOutput`](crate::output::StopExperimentOutput).
     pub fn builder() -> crate::output::stop_experiment_output::Builder {
         crate::output::stop_experiment_output::Builder::default()
     }
@@ -182,6 +180,7 @@ impl StopExperimentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartExperimentOutput {
     /// <p>Information about the experiment.</p>
+    #[doc(hidden)]
     pub experiment: std::option::Option<crate::model::Experiment>,
 }
 impl StartExperimentOutput {
@@ -197,11 +196,10 @@ impl std::fmt::Debug for StartExperimentOutput {
         formatter.finish()
     }
 }
-/// See [`StartExperimentOutput`](crate::output::StartExperimentOutput)
+/// See [`StartExperimentOutput`](crate::output::StartExperimentOutput).
 pub mod start_experiment_output {
 
-    /// A builder for [`StartExperimentOutput`](crate::output::StartExperimentOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartExperimentOutput`](crate::output::StartExperimentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) experiment: std::option::Option<crate::model::Experiment>,
@@ -220,7 +218,7 @@ pub mod start_experiment_output {
             self.experiment = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartExperimentOutput`](crate::output::StartExperimentOutput)
+        /// Consumes the builder and constructs a [`StartExperimentOutput`](crate::output::StartExperimentOutput).
         pub fn build(self) -> crate::output::StartExperimentOutput {
             crate::output::StartExperimentOutput {
                 experiment: self.experiment,
@@ -229,7 +227,7 @@ pub mod start_experiment_output {
     }
 }
 impl StartExperimentOutput {
-    /// Creates a new builder-style object to manufacture [`StartExperimentOutput`](crate::output::StartExperimentOutput)
+    /// Creates a new builder-style object to manufacture [`StartExperimentOutput`](crate::output::StartExperimentOutput).
     pub fn builder() -> crate::output::start_experiment_output::Builder {
         crate::output::start_experiment_output::Builder::default()
     }
@@ -240,9 +238,11 @@ impl StartExperimentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTargetResourceTypesOutput {
     /// <p>The target resource types.</p>
+    #[doc(hidden)]
     pub target_resource_types:
         std::option::Option<std::vec::Vec<crate::model::TargetResourceTypeSummary>>,
     /// <p>The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more results to return.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListTargetResourceTypesOutput {
@@ -265,11 +265,10 @@ impl std::fmt::Debug for ListTargetResourceTypesOutput {
         formatter.finish()
     }
 }
-/// See [`ListTargetResourceTypesOutput`](crate::output::ListTargetResourceTypesOutput)
+/// See [`ListTargetResourceTypesOutput`](crate::output::ListTargetResourceTypesOutput).
 pub mod list_target_resource_types_output {
 
-    /// A builder for [`ListTargetResourceTypesOutput`](crate::output::ListTargetResourceTypesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTargetResourceTypesOutput`](crate::output::ListTargetResourceTypesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_resource_types:
@@ -309,7 +308,7 @@ pub mod list_target_resource_types_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTargetResourceTypesOutput`](crate::output::ListTargetResourceTypesOutput)
+        /// Consumes the builder and constructs a [`ListTargetResourceTypesOutput`](crate::output::ListTargetResourceTypesOutput).
         pub fn build(self) -> crate::output::ListTargetResourceTypesOutput {
             crate::output::ListTargetResourceTypesOutput {
                 target_resource_types: self.target_resource_types,
@@ -319,7 +318,7 @@ pub mod list_target_resource_types_output {
     }
 }
 impl ListTargetResourceTypesOutput {
-    /// Creates a new builder-style object to manufacture [`ListTargetResourceTypesOutput`](crate::output::ListTargetResourceTypesOutput)
+    /// Creates a new builder-style object to manufacture [`ListTargetResourceTypesOutput`](crate::output::ListTargetResourceTypesOutput).
     pub fn builder() -> crate::output::list_target_resource_types_output::Builder {
         crate::output::list_target_resource_types_output::Builder::default()
     }
@@ -330,6 +329,7 @@ impl ListTargetResourceTypesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tags for the resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -349,11 +349,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -386,14 +385,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -404,9 +403,11 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListExperimentTemplatesOutput {
     /// <p>The experiment templates.</p>
+    #[doc(hidden)]
     pub experiment_templates:
         std::option::Option<std::vec::Vec<crate::model::ExperimentTemplateSummary>>,
     /// <p>The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more results to return.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListExperimentTemplatesOutput {
@@ -429,11 +430,10 @@ impl std::fmt::Debug for ListExperimentTemplatesOutput {
         formatter.finish()
     }
 }
-/// See [`ListExperimentTemplatesOutput`](crate::output::ListExperimentTemplatesOutput)
+/// See [`ListExperimentTemplatesOutput`](crate::output::ListExperimentTemplatesOutput).
 pub mod list_experiment_templates_output {
 
-    /// A builder for [`ListExperimentTemplatesOutput`](crate::output::ListExperimentTemplatesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListExperimentTemplatesOutput`](crate::output::ListExperimentTemplatesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) experiment_templates:
@@ -473,7 +473,7 @@ pub mod list_experiment_templates_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListExperimentTemplatesOutput`](crate::output::ListExperimentTemplatesOutput)
+        /// Consumes the builder and constructs a [`ListExperimentTemplatesOutput`](crate::output::ListExperimentTemplatesOutput).
         pub fn build(self) -> crate::output::ListExperimentTemplatesOutput {
             crate::output::ListExperimentTemplatesOutput {
                 experiment_templates: self.experiment_templates,
@@ -483,7 +483,7 @@ pub mod list_experiment_templates_output {
     }
 }
 impl ListExperimentTemplatesOutput {
-    /// Creates a new builder-style object to manufacture [`ListExperimentTemplatesOutput`](crate::output::ListExperimentTemplatesOutput)
+    /// Creates a new builder-style object to manufacture [`ListExperimentTemplatesOutput`](crate::output::ListExperimentTemplatesOutput).
     pub fn builder() -> crate::output::list_experiment_templates_output::Builder {
         crate::output::list_experiment_templates_output::Builder::default()
     }
@@ -494,8 +494,10 @@ impl ListExperimentTemplatesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListExperimentsOutput {
     /// <p>The experiments.</p>
+    #[doc(hidden)]
     pub experiments: std::option::Option<std::vec::Vec<crate::model::ExperimentSummary>>,
     /// <p>The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more results to return.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListExperimentsOutput {
@@ -516,11 +518,10 @@ impl std::fmt::Debug for ListExperimentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListExperimentsOutput`](crate::output::ListExperimentsOutput)
+/// See [`ListExperimentsOutput`](crate::output::ListExperimentsOutput).
 pub mod list_experiments_output {
 
-    /// A builder for [`ListExperimentsOutput`](crate::output::ListExperimentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListExperimentsOutput`](crate::output::ListExperimentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) experiments: std::option::Option<std::vec::Vec<crate::model::ExperimentSummary>>,
@@ -556,7 +557,7 @@ pub mod list_experiments_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListExperimentsOutput`](crate::output::ListExperimentsOutput)
+        /// Consumes the builder and constructs a [`ListExperimentsOutput`](crate::output::ListExperimentsOutput).
         pub fn build(self) -> crate::output::ListExperimentsOutput {
             crate::output::ListExperimentsOutput {
                 experiments: self.experiments,
@@ -566,7 +567,7 @@ pub mod list_experiments_output {
     }
 }
 impl ListExperimentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListExperimentsOutput`](crate::output::ListExperimentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListExperimentsOutput`](crate::output::ListExperimentsOutput).
     pub fn builder() -> crate::output::list_experiments_output::Builder {
         crate::output::list_experiments_output::Builder::default()
     }
@@ -577,8 +578,10 @@ impl ListExperimentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListActionsOutput {
     /// <p>The actions.</p>
+    #[doc(hidden)]
     pub actions: std::option::Option<std::vec::Vec<crate::model::ActionSummary>>,
     /// <p>The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more results to return.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListActionsOutput {
@@ -599,11 +602,10 @@ impl std::fmt::Debug for ListActionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListActionsOutput`](crate::output::ListActionsOutput)
+/// See [`ListActionsOutput`](crate::output::ListActionsOutput).
 pub mod list_actions_output {
 
-    /// A builder for [`ListActionsOutput`](crate::output::ListActionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListActionsOutput`](crate::output::ListActionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) actions: std::option::Option<std::vec::Vec<crate::model::ActionSummary>>,
@@ -639,7 +641,7 @@ pub mod list_actions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListActionsOutput`](crate::output::ListActionsOutput)
+        /// Consumes the builder and constructs a [`ListActionsOutput`](crate::output::ListActionsOutput).
         pub fn build(self) -> crate::output::ListActionsOutput {
             crate::output::ListActionsOutput {
                 actions: self.actions,
@@ -649,7 +651,7 @@ pub mod list_actions_output {
     }
 }
 impl ListActionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListActionsOutput`](crate::output::ListActionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListActionsOutput`](crate::output::ListActionsOutput).
     pub fn builder() -> crate::output::list_actions_output::Builder {
         crate::output::list_actions_output::Builder::default()
     }
@@ -660,6 +662,7 @@ impl ListActionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetTargetResourceTypeOutput {
     /// <p>Information about the resource type.</p>
+    #[doc(hidden)]
     pub target_resource_type: std::option::Option<crate::model::TargetResourceType>,
 }
 impl GetTargetResourceTypeOutput {
@@ -675,11 +678,10 @@ impl std::fmt::Debug for GetTargetResourceTypeOutput {
         formatter.finish()
     }
 }
-/// See [`GetTargetResourceTypeOutput`](crate::output::GetTargetResourceTypeOutput)
+/// See [`GetTargetResourceTypeOutput`](crate::output::GetTargetResourceTypeOutput).
 pub mod get_target_resource_type_output {
 
-    /// A builder for [`GetTargetResourceTypeOutput`](crate::output::GetTargetResourceTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetTargetResourceTypeOutput`](crate::output::GetTargetResourceTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_resource_type: std::option::Option<crate::model::TargetResourceType>,
@@ -698,7 +700,7 @@ pub mod get_target_resource_type_output {
             self.target_resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetTargetResourceTypeOutput`](crate::output::GetTargetResourceTypeOutput)
+        /// Consumes the builder and constructs a [`GetTargetResourceTypeOutput`](crate::output::GetTargetResourceTypeOutput).
         pub fn build(self) -> crate::output::GetTargetResourceTypeOutput {
             crate::output::GetTargetResourceTypeOutput {
                 target_resource_type: self.target_resource_type,
@@ -707,7 +709,7 @@ pub mod get_target_resource_type_output {
     }
 }
 impl GetTargetResourceTypeOutput {
-    /// Creates a new builder-style object to manufacture [`GetTargetResourceTypeOutput`](crate::output::GetTargetResourceTypeOutput)
+    /// Creates a new builder-style object to manufacture [`GetTargetResourceTypeOutput`](crate::output::GetTargetResourceTypeOutput).
     pub fn builder() -> crate::output::get_target_resource_type_output::Builder {
         crate::output::get_target_resource_type_output::Builder::default()
     }
@@ -718,6 +720,7 @@ impl GetTargetResourceTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetExperimentTemplateOutput {
     /// <p>Information about the experiment template.</p>
+    #[doc(hidden)]
     pub experiment_template: std::option::Option<crate::model::ExperimentTemplate>,
 }
 impl GetExperimentTemplateOutput {
@@ -733,11 +736,10 @@ impl std::fmt::Debug for GetExperimentTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`GetExperimentTemplateOutput`](crate::output::GetExperimentTemplateOutput)
+/// See [`GetExperimentTemplateOutput`](crate::output::GetExperimentTemplateOutput).
 pub mod get_experiment_template_output {
 
-    /// A builder for [`GetExperimentTemplateOutput`](crate::output::GetExperimentTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetExperimentTemplateOutput`](crate::output::GetExperimentTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) experiment_template: std::option::Option<crate::model::ExperimentTemplate>,
@@ -756,7 +758,7 @@ pub mod get_experiment_template_output {
             self.experiment_template = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetExperimentTemplateOutput`](crate::output::GetExperimentTemplateOutput)
+        /// Consumes the builder and constructs a [`GetExperimentTemplateOutput`](crate::output::GetExperimentTemplateOutput).
         pub fn build(self) -> crate::output::GetExperimentTemplateOutput {
             crate::output::GetExperimentTemplateOutput {
                 experiment_template: self.experiment_template,
@@ -765,7 +767,7 @@ pub mod get_experiment_template_output {
     }
 }
 impl GetExperimentTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`GetExperimentTemplateOutput`](crate::output::GetExperimentTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`GetExperimentTemplateOutput`](crate::output::GetExperimentTemplateOutput).
     pub fn builder() -> crate::output::get_experiment_template_output::Builder {
         crate::output::get_experiment_template_output::Builder::default()
     }
@@ -776,6 +778,7 @@ impl GetExperimentTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetExperimentOutput {
     /// <p>Information about the experiment.</p>
+    #[doc(hidden)]
     pub experiment: std::option::Option<crate::model::Experiment>,
 }
 impl GetExperimentOutput {
@@ -791,11 +794,10 @@ impl std::fmt::Debug for GetExperimentOutput {
         formatter.finish()
     }
 }
-/// See [`GetExperimentOutput`](crate::output::GetExperimentOutput)
+/// See [`GetExperimentOutput`](crate::output::GetExperimentOutput).
 pub mod get_experiment_output {
 
-    /// A builder for [`GetExperimentOutput`](crate::output::GetExperimentOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetExperimentOutput`](crate::output::GetExperimentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) experiment: std::option::Option<crate::model::Experiment>,
@@ -814,7 +816,7 @@ pub mod get_experiment_output {
             self.experiment = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetExperimentOutput`](crate::output::GetExperimentOutput)
+        /// Consumes the builder and constructs a [`GetExperimentOutput`](crate::output::GetExperimentOutput).
         pub fn build(self) -> crate::output::GetExperimentOutput {
             crate::output::GetExperimentOutput {
                 experiment: self.experiment,
@@ -823,7 +825,7 @@ pub mod get_experiment_output {
     }
 }
 impl GetExperimentOutput {
-    /// Creates a new builder-style object to manufacture [`GetExperimentOutput`](crate::output::GetExperimentOutput)
+    /// Creates a new builder-style object to manufacture [`GetExperimentOutput`](crate::output::GetExperimentOutput).
     pub fn builder() -> crate::output::get_experiment_output::Builder {
         crate::output::get_experiment_output::Builder::default()
     }
@@ -834,6 +836,7 @@ impl GetExperimentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetActionOutput {
     /// <p>Information about the action.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::Action>,
 }
 impl GetActionOutput {
@@ -849,11 +852,10 @@ impl std::fmt::Debug for GetActionOutput {
         formatter.finish()
     }
 }
-/// See [`GetActionOutput`](crate::output::GetActionOutput)
+/// See [`GetActionOutput`](crate::output::GetActionOutput).
 pub mod get_action_output {
 
-    /// A builder for [`GetActionOutput`](crate::output::GetActionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetActionOutput`](crate::output::GetActionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::Action>,
@@ -869,7 +871,7 @@ pub mod get_action_output {
             self.action = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetActionOutput`](crate::output::GetActionOutput)
+        /// Consumes the builder and constructs a [`GetActionOutput`](crate::output::GetActionOutput).
         pub fn build(self) -> crate::output::GetActionOutput {
             crate::output::GetActionOutput {
                 action: self.action,
@@ -878,7 +880,7 @@ pub mod get_action_output {
     }
 }
 impl GetActionOutput {
-    /// Creates a new builder-style object to manufacture [`GetActionOutput`](crate::output::GetActionOutput)
+    /// Creates a new builder-style object to manufacture [`GetActionOutput`](crate::output::GetActionOutput).
     pub fn builder() -> crate::output::get_action_output::Builder {
         crate::output::get_action_output::Builder::default()
     }
@@ -889,6 +891,7 @@ impl GetActionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteExperimentTemplateOutput {
     /// <p>Information about the experiment template.</p>
+    #[doc(hidden)]
     pub experiment_template: std::option::Option<crate::model::ExperimentTemplate>,
 }
 impl DeleteExperimentTemplateOutput {
@@ -904,11 +907,10 @@ impl std::fmt::Debug for DeleteExperimentTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteExperimentTemplateOutput`](crate::output::DeleteExperimentTemplateOutput)
+/// See [`DeleteExperimentTemplateOutput`](crate::output::DeleteExperimentTemplateOutput).
 pub mod delete_experiment_template_output {
 
-    /// A builder for [`DeleteExperimentTemplateOutput`](crate::output::DeleteExperimentTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteExperimentTemplateOutput`](crate::output::DeleteExperimentTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) experiment_template: std::option::Option<crate::model::ExperimentTemplate>,
@@ -927,7 +929,7 @@ pub mod delete_experiment_template_output {
             self.experiment_template = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteExperimentTemplateOutput`](crate::output::DeleteExperimentTemplateOutput)
+        /// Consumes the builder and constructs a [`DeleteExperimentTemplateOutput`](crate::output::DeleteExperimentTemplateOutput).
         pub fn build(self) -> crate::output::DeleteExperimentTemplateOutput {
             crate::output::DeleteExperimentTemplateOutput {
                 experiment_template: self.experiment_template,
@@ -936,7 +938,7 @@ pub mod delete_experiment_template_output {
     }
 }
 impl DeleteExperimentTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteExperimentTemplateOutput`](crate::output::DeleteExperimentTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteExperimentTemplateOutput`](crate::output::DeleteExperimentTemplateOutput).
     pub fn builder() -> crate::output::delete_experiment_template_output::Builder {
         crate::output::delete_experiment_template_output::Builder::default()
     }
@@ -947,6 +949,7 @@ impl DeleteExperimentTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateExperimentTemplateOutput {
     /// <p>Information about the experiment template.</p>
+    #[doc(hidden)]
     pub experiment_template: std::option::Option<crate::model::ExperimentTemplate>,
 }
 impl CreateExperimentTemplateOutput {
@@ -962,11 +965,10 @@ impl std::fmt::Debug for CreateExperimentTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`CreateExperimentTemplateOutput`](crate::output::CreateExperimentTemplateOutput)
+/// See [`CreateExperimentTemplateOutput`](crate::output::CreateExperimentTemplateOutput).
 pub mod create_experiment_template_output {
 
-    /// A builder for [`CreateExperimentTemplateOutput`](crate::output::CreateExperimentTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateExperimentTemplateOutput`](crate::output::CreateExperimentTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) experiment_template: std::option::Option<crate::model::ExperimentTemplate>,
@@ -985,7 +987,7 @@ pub mod create_experiment_template_output {
             self.experiment_template = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateExperimentTemplateOutput`](crate::output::CreateExperimentTemplateOutput)
+        /// Consumes the builder and constructs a [`CreateExperimentTemplateOutput`](crate::output::CreateExperimentTemplateOutput).
         pub fn build(self) -> crate::output::CreateExperimentTemplateOutput {
             crate::output::CreateExperimentTemplateOutput {
                 experiment_template: self.experiment_template,
@@ -994,7 +996,7 @@ pub mod create_experiment_template_output {
     }
 }
 impl CreateExperimentTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`CreateExperimentTemplateOutput`](crate::output::CreateExperimentTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`CreateExperimentTemplateOutput`](crate::output::CreateExperimentTemplateOutput).
     pub fn builder() -> crate::output::create_experiment_template_output::Builder {
         crate::output::create_experiment_template_output::Builder::default()
     }

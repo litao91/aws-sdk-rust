@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationExceptionField {
     /// <p>The name of the field that caused the exception.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Information about what caused the field to cause an exception.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ValidationExceptionField {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ValidationExceptionField {
         formatter.finish()
     }
 }
-/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField).
 pub mod validation_exception_field {
 
-    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField)
-    #[non_exhaustive]
+    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod validation_exception_field {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField).
         pub fn build(self) -> crate::model::ValidationExceptionField {
             crate::model::ValidationExceptionField {
                 name: self.name,
@@ -68,7 +69,7 @@ pub mod validation_exception_field {
     }
 }
 impl ValidationExceptionField {
-    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     pub fn builder() -> crate::model::validation_exception_field::Builder {
         crate::model::validation_exception_field::Builder::default()
     }
@@ -152,6 +153,7 @@ pub struct ContactChannelAddress {
     /// <li> <p>VOICE - '+' followed by the country code and phone number</p> </li>
     /// <li> <p>EMAIL - any standard email format</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub simple_address: std::option::Option<std::string::String>,
 }
 impl ContactChannelAddress {
@@ -172,11 +174,10 @@ impl std::fmt::Debug for ContactChannelAddress {
         formatter.finish()
     }
 }
-/// See [`ContactChannelAddress`](crate::model::ContactChannelAddress)
+/// See [`ContactChannelAddress`](crate::model::ContactChannelAddress).
 pub mod contact_channel_address {
 
-    /// A builder for [`ContactChannelAddress`](crate::model::ContactChannelAddress)
-    #[non_exhaustive]
+    /// A builder for [`ContactChannelAddress`](crate::model::ContactChannelAddress).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) simple_address: std::option::Option<std::string::String>,
@@ -205,7 +206,7 @@ pub mod contact_channel_address {
             self.simple_address = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContactChannelAddress`](crate::model::ContactChannelAddress)
+        /// Consumes the builder and constructs a [`ContactChannelAddress`](crate::model::ContactChannelAddress).
         pub fn build(self) -> crate::model::ContactChannelAddress {
             crate::model::ContactChannelAddress {
                 simple_address: self.simple_address,
@@ -214,7 +215,7 @@ pub mod contact_channel_address {
     }
 }
 impl ContactChannelAddress {
-    /// Creates a new builder-style object to manufacture [`ContactChannelAddress`](crate::model::ContactChannelAddress)
+    /// Creates a new builder-style object to manufacture [`ContactChannelAddress`](crate::model::ContactChannelAddress).
     pub fn builder() -> crate::model::contact_channel_address::Builder {
         crate::model::contact_channel_address::Builder::default()
     }
@@ -225,6 +226,7 @@ impl ContactChannelAddress {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Plan {
     /// <p>A list of stages that the escalation plan or engagement plan uses to engage contacts and contact methods.</p>
+    #[doc(hidden)]
     pub stages: std::option::Option<std::vec::Vec<crate::model::Stage>>,
 }
 impl Plan {
@@ -240,11 +242,10 @@ impl std::fmt::Debug for Plan {
         formatter.finish()
     }
 }
-/// See [`Plan`](crate::model::Plan)
+/// See [`Plan`](crate::model::Plan).
 pub mod plan {
 
-    /// A builder for [`Plan`](crate::model::Plan)
-    #[non_exhaustive]
+    /// A builder for [`Plan`](crate::model::Plan).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stages: std::option::Option<std::vec::Vec<crate::model::Stage>>,
@@ -269,7 +270,7 @@ pub mod plan {
             self.stages = input;
             self
         }
-        /// Consumes the builder and constructs a [`Plan`](crate::model::Plan)
+        /// Consumes the builder and constructs a [`Plan`](crate::model::Plan).
         pub fn build(self) -> crate::model::Plan {
             crate::model::Plan {
                 stages: self.stages,
@@ -278,7 +279,7 @@ pub mod plan {
     }
 }
 impl Plan {
-    /// Creates a new builder-style object to manufacture [`Plan`](crate::model::Plan)
+    /// Creates a new builder-style object to manufacture [`Plan`](crate::model::Plan).
     pub fn builder() -> crate::model::plan::Builder {
         crate::model::plan::Builder::default()
     }
@@ -289,8 +290,10 @@ impl Plan {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Stage {
     /// <p>The time to wait until beginning the next stage. The duration can only be set to 0 if a target is specified.</p>
+    #[doc(hidden)]
     pub duration_in_minutes: std::option::Option<i32>,
     /// <p>The contacts or contact methods that the escalation plan or engagement plan is engaging.</p>
+    #[doc(hidden)]
     pub targets: std::option::Option<std::vec::Vec<crate::model::Target>>,
 }
 impl Stage {
@@ -311,11 +314,10 @@ impl std::fmt::Debug for Stage {
         formatter.finish()
     }
 }
-/// See [`Stage`](crate::model::Stage)
+/// See [`Stage`](crate::model::Stage).
 pub mod stage {
 
-    /// A builder for [`Stage`](crate::model::Stage)
-    #[non_exhaustive]
+    /// A builder for [`Stage`](crate::model::Stage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) duration_in_minutes: std::option::Option<i32>,
@@ -351,7 +353,7 @@ pub mod stage {
             self.targets = input;
             self
         }
-        /// Consumes the builder and constructs a [`Stage`](crate::model::Stage)
+        /// Consumes the builder and constructs a [`Stage`](crate::model::Stage).
         pub fn build(self) -> crate::model::Stage {
             crate::model::Stage {
                 duration_in_minutes: self.duration_in_minutes,
@@ -361,7 +363,7 @@ pub mod stage {
     }
 }
 impl Stage {
-    /// Creates a new builder-style object to manufacture [`Stage`](crate::model::Stage)
+    /// Creates a new builder-style object to manufacture [`Stage`](crate::model::Stage).
     pub fn builder() -> crate::model::stage::Builder {
         crate::model::stage::Builder::default()
     }
@@ -372,8 +374,10 @@ impl Stage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Target {
     /// <p>Information about the contact channel Incident Manager is engaging.</p>
+    #[doc(hidden)]
     pub channel_target_info: std::option::Option<crate::model::ChannelTargetInfo>,
     /// <p>Information about the contact that Incident Manager is engaging.</p>
+    #[doc(hidden)]
     pub contact_target_info: std::option::Option<crate::model::ContactTargetInfo>,
 }
 impl Target {
@@ -394,11 +398,10 @@ impl std::fmt::Debug for Target {
         formatter.finish()
     }
 }
-/// See [`Target`](crate::model::Target)
+/// See [`Target`](crate::model::Target).
 pub mod target {
 
-    /// A builder for [`Target`](crate::model::Target)
-    #[non_exhaustive]
+    /// A builder for [`Target`](crate::model::Target).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_target_info: std::option::Option<crate::model::ChannelTargetInfo>,
@@ -431,7 +434,7 @@ pub mod target {
             self.contact_target_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`Target`](crate::model::Target)
+        /// Consumes the builder and constructs a [`Target`](crate::model::Target).
         pub fn build(self) -> crate::model::Target {
             crate::model::Target {
                 channel_target_info: self.channel_target_info,
@@ -441,7 +444,7 @@ pub mod target {
     }
 }
 impl Target {
-    /// Creates a new builder-style object to manufacture [`Target`](crate::model::Target)
+    /// Creates a new builder-style object to manufacture [`Target`](crate::model::Target).
     pub fn builder() -> crate::model::target::Builder {
         crate::model::target::Builder::default()
     }
@@ -452,8 +455,10 @@ impl Target {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContactTargetInfo {
     /// <p>The Amazon Resource Name (ARN) of the contact.</p>
+    #[doc(hidden)]
     pub contact_id: std::option::Option<std::string::String>,
     /// <p>A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.</p>
+    #[doc(hidden)]
     pub is_essential: std::option::Option<bool>,
 }
 impl ContactTargetInfo {
@@ -474,11 +479,10 @@ impl std::fmt::Debug for ContactTargetInfo {
         formatter.finish()
     }
 }
-/// See [`ContactTargetInfo`](crate::model::ContactTargetInfo)
+/// See [`ContactTargetInfo`](crate::model::ContactTargetInfo).
 pub mod contact_target_info {
 
-    /// A builder for [`ContactTargetInfo`](crate::model::ContactTargetInfo)
-    #[non_exhaustive]
+    /// A builder for [`ContactTargetInfo`](crate::model::ContactTargetInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) contact_id: std::option::Option<std::string::String>,
@@ -505,7 +509,7 @@ pub mod contact_target_info {
             self.is_essential = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContactTargetInfo`](crate::model::ContactTargetInfo)
+        /// Consumes the builder and constructs a [`ContactTargetInfo`](crate::model::ContactTargetInfo).
         pub fn build(self) -> crate::model::ContactTargetInfo {
             crate::model::ContactTargetInfo {
                 contact_id: self.contact_id,
@@ -515,7 +519,7 @@ pub mod contact_target_info {
     }
 }
 impl ContactTargetInfo {
-    /// Creates a new builder-style object to manufacture [`ContactTargetInfo`](crate::model::ContactTargetInfo)
+    /// Creates a new builder-style object to manufacture [`ContactTargetInfo`](crate::model::ContactTargetInfo).
     pub fn builder() -> crate::model::contact_target_info::Builder {
         crate::model::contact_target_info::Builder::default()
     }
@@ -526,8 +530,10 @@ impl ContactTargetInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChannelTargetInfo {
     /// <p>The Amazon Resource Name (ARN) of the contact channel.</p>
+    #[doc(hidden)]
     pub contact_channel_id: std::option::Option<std::string::String>,
     /// <p>The number of minutes to wait to retry sending engagement in the case the engagement initially fails.</p>
+    #[doc(hidden)]
     pub retry_interval_in_minutes: std::option::Option<i32>,
 }
 impl ChannelTargetInfo {
@@ -548,11 +554,10 @@ impl std::fmt::Debug for ChannelTargetInfo {
         formatter.finish()
     }
 }
-/// See [`ChannelTargetInfo`](crate::model::ChannelTargetInfo)
+/// See [`ChannelTargetInfo`](crate::model::ChannelTargetInfo).
 pub mod channel_target_info {
 
-    /// A builder for [`ChannelTargetInfo`](crate::model::ChannelTargetInfo)
-    #[non_exhaustive]
+    /// A builder for [`ChannelTargetInfo`](crate::model::ChannelTargetInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) contact_channel_id: std::option::Option<std::string::String>,
@@ -582,7 +587,7 @@ pub mod channel_target_info {
             self.retry_interval_in_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChannelTargetInfo`](crate::model::ChannelTargetInfo)
+        /// Consumes the builder and constructs a [`ChannelTargetInfo`](crate::model::ChannelTargetInfo).
         pub fn build(self) -> crate::model::ChannelTargetInfo {
             crate::model::ChannelTargetInfo {
                 contact_channel_id: self.contact_channel_id,
@@ -592,7 +597,7 @@ pub mod channel_target_info {
     }
 }
 impl ChannelTargetInfo {
-    /// Creates a new builder-style object to manufacture [`ChannelTargetInfo`](crate::model::ChannelTargetInfo)
+    /// Creates a new builder-style object to manufacture [`ChannelTargetInfo`](crate::model::ChannelTargetInfo).
     pub fn builder() -> crate::model::channel_target_info::Builder {
         crate::model::channel_target_info::Builder::default()
     }
@@ -603,8 +608,10 @@ impl ChannelTargetInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>Name of the object key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Value of the tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -625,11 +632,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -656,7 +662,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -666,7 +672,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -677,20 +683,28 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Page {
     /// <p>The Amazon Resource Name (ARN) of the page to the contact channel.</p>
+    #[doc(hidden)]
     pub page_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the engagement that this page is part of.</p>
+    #[doc(hidden)]
     pub engagement_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the contact that Incident Manager is engaging.</p>
+    #[doc(hidden)]
     pub contact_arn: std::option::Option<std::string::String>,
     /// <p>The user that started the engagement.</p>
+    #[doc(hidden)]
     pub sender: std::option::Option<std::string::String>,
     /// <p>The ARN of the incident that's engaging the contact channel.</p>
+    #[doc(hidden)]
     pub incident_id: std::option::Option<std::string::String>,
     /// <p>The time that Incident Manager engaged the contact channel.</p>
+    #[doc(hidden)]
     pub sent_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time the message was delivered to the contact channel.</p>
+    #[doc(hidden)]
     pub delivery_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the contact channel acknowledged engagement.</p>
+    #[doc(hidden)]
     pub read_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Page {
@@ -741,11 +755,10 @@ impl std::fmt::Debug for Page {
         formatter.finish()
     }
 }
-/// See [`Page`](crate::model::Page)
+/// See [`Page`](crate::model::Page).
 pub mod page {
 
-    /// A builder for [`Page`](crate::model::Page)
-    #[non_exhaustive]
+    /// A builder for [`Page`](crate::model::Page).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) page_arn: std::option::Option<std::string::String>,
@@ -850,7 +863,7 @@ pub mod page {
             self.read_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`Page`](crate::model::Page)
+        /// Consumes the builder and constructs a [`Page`](crate::model::Page).
         pub fn build(self) -> crate::model::Page {
             crate::model::Page {
                 page_arn: self.page_arn,
@@ -866,7 +879,7 @@ pub mod page {
     }
 }
 impl Page {
-    /// Creates a new builder-style object to manufacture [`Page`](crate::model::Page)
+    /// Creates a new builder-style object to manufacture [`Page`](crate::model::Page).
     pub fn builder() -> crate::model::page::Builder {
         crate::model::page::Builder::default()
     }
@@ -877,12 +890,16 @@ impl Page {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Receipt {
     /// <p>The Amazon Resource Name (ARN) of the contact channel Incident Manager engaged.</p>
+    #[doc(hidden)]
     pub contact_channel_arn: std::option::Option<std::string::String>,
     /// <p>The type follows the engagement cycle, <code>SENT</code>, <code>DELIVERED</code>, and <code>READ</code>.</p>
+    #[doc(hidden)]
     pub receipt_type: std::option::Option<crate::model::ReceiptType>,
     /// <p>Information provided during the page acknowledgement.</p>
+    #[doc(hidden)]
     pub receipt_info: std::option::Option<std::string::String>,
     /// <p>The time receipt was <code>SENT</code>, <code>DELIVERED</code>, or <code>READ</code>.</p>
+    #[doc(hidden)]
     pub receipt_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Receipt {
@@ -913,11 +930,10 @@ impl std::fmt::Debug for Receipt {
         formatter.finish()
     }
 }
-/// See [`Receipt`](crate::model::Receipt)
+/// See [`Receipt`](crate::model::Receipt).
 pub mod receipt {
 
-    /// A builder for [`Receipt`](crate::model::Receipt)
-    #[non_exhaustive]
+    /// A builder for [`Receipt`](crate::model::Receipt).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) contact_channel_arn: std::option::Option<std::string::String>,
@@ -975,7 +991,7 @@ pub mod receipt {
             self.receipt_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`Receipt`](crate::model::Receipt)
+        /// Consumes the builder and constructs a [`Receipt`](crate::model::Receipt).
         pub fn build(self) -> crate::model::Receipt {
             crate::model::Receipt {
                 contact_channel_arn: self.contact_channel_arn,
@@ -987,7 +1003,7 @@ pub mod receipt {
     }
 }
 impl Receipt {
-    /// Creates a new builder-style object to manufacture [`Receipt`](crate::model::Receipt)
+    /// Creates a new builder-style object to manufacture [`Receipt`](crate::model::Receipt).
     pub fn builder() -> crate::model::receipt::Builder {
         crate::model::receipt::Builder::default()
     }
@@ -1065,16 +1081,22 @@ impl AsRef<str> for ReceiptType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Engagement {
     /// <p>The Amazon Resource Name (ARN) of the engagement.</p>
+    #[doc(hidden)]
     pub engagement_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the escalation plan or contact that Incident Manager is engaging.</p>
+    #[doc(hidden)]
     pub contact_arn: std::option::Option<std::string::String>,
     /// <p>The user that started the engagement.</p>
+    #[doc(hidden)]
     pub sender: std::option::Option<std::string::String>,
     /// <p>The ARN of the incident that's engaging the contact.</p>
+    #[doc(hidden)]
     pub incident_id: std::option::Option<std::string::String>,
     /// <p>The time that the engagement began.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the engagement ended.</p>
+    #[doc(hidden)]
     pub stop_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Engagement {
@@ -1115,11 +1137,10 @@ impl std::fmt::Debug for Engagement {
         formatter.finish()
     }
 }
-/// See [`Engagement`](crate::model::Engagement)
+/// See [`Engagement`](crate::model::Engagement).
 pub mod engagement {
 
-    /// A builder for [`Engagement`](crate::model::Engagement)
-    #[non_exhaustive]
+    /// A builder for [`Engagement`](crate::model::Engagement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engagement_arn: std::option::Option<std::string::String>,
@@ -1199,7 +1220,7 @@ pub mod engagement {
             self.stop_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`Engagement`](crate::model::Engagement)
+        /// Consumes the builder and constructs a [`Engagement`](crate::model::Engagement).
         pub fn build(self) -> crate::model::Engagement {
             crate::model::Engagement {
                 engagement_arn: self.engagement_arn,
@@ -1213,7 +1234,7 @@ pub mod engagement {
     }
 }
 impl Engagement {
-    /// Creates a new builder-style object to manufacture [`Engagement`](crate::model::Engagement)
+    /// Creates a new builder-style object to manufacture [`Engagement`](crate::model::Engagement).
     pub fn builder() -> crate::model::engagement::Builder {
         crate::model::engagement::Builder::default()
     }
@@ -1224,8 +1245,10 @@ impl Engagement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimeRange {
     /// <p>The start of the time range.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end of the time range.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TimeRange {
@@ -1246,11 +1269,10 @@ impl std::fmt::Debug for TimeRange {
         formatter.finish()
     }
 }
-/// See [`TimeRange`](crate::model::TimeRange)
+/// See [`TimeRange`](crate::model::TimeRange).
 pub mod time_range {
 
-    /// A builder for [`TimeRange`](crate::model::TimeRange)
-    #[non_exhaustive]
+    /// A builder for [`TimeRange`](crate::model::TimeRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -1283,7 +1305,7 @@ pub mod time_range {
             self.end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimeRange`](crate::model::TimeRange)
+        /// Consumes the builder and constructs a [`TimeRange`](crate::model::TimeRange).
         pub fn build(self) -> crate::model::TimeRange {
             crate::model::TimeRange {
                 start_time: self.start_time,
@@ -1293,7 +1315,7 @@ pub mod time_range {
     }
 }
 impl TimeRange {
-    /// Creates a new builder-style object to manufacture [`TimeRange`](crate::model::TimeRange)
+    /// Creates a new builder-style object to manufacture [`TimeRange`](crate::model::TimeRange).
     pub fn builder() -> crate::model::time_range::Builder {
         crate::model::time_range::Builder::default()
     }
@@ -1304,12 +1326,16 @@ impl TimeRange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Contact {
     /// <p>The Amazon Resource Name (ARN) of the contact or escalation plan.</p>
+    #[doc(hidden)]
     pub contact_arn: std::option::Option<std::string::String>,
     /// <p>The unique and identifiable alias of the contact or escalation plan.</p>
+    #[doc(hidden)]
     pub alias: std::option::Option<std::string::String>,
     /// <p>The full name of the contact or escalation plan.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>Refers to the type of contact. A single contact is type <code>PERSONAL</code> and an escalation plan is type <code>ESCALATION</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ContactType>,
 }
 impl Contact {
@@ -1340,11 +1366,10 @@ impl std::fmt::Debug for Contact {
         formatter.finish()
     }
 }
-/// See [`Contact`](crate::model::Contact)
+/// See [`Contact`](crate::model::Contact).
 pub mod contact {
 
-    /// A builder for [`Contact`](crate::model::Contact)
-    #[non_exhaustive]
+    /// A builder for [`Contact`](crate::model::Contact).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) contact_arn: std::option::Option<std::string::String>,
@@ -1393,7 +1418,7 @@ pub mod contact {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Contact`](crate::model::Contact)
+        /// Consumes the builder and constructs a [`Contact`](crate::model::Contact).
         pub fn build(self) -> crate::model::Contact {
             crate::model::Contact {
                 contact_arn: self.contact_arn,
@@ -1405,7 +1430,7 @@ pub mod contact {
     }
 }
 impl Contact {
-    /// Creates a new builder-style object to manufacture [`Contact`](crate::model::Contact)
+    /// Creates a new builder-style object to manufacture [`Contact`](crate::model::Contact).
     pub fn builder() -> crate::model::contact::Builder {
         crate::model::contact::Builder::default()
     }
@@ -1471,10 +1496,13 @@ impl AsRef<str> for ContactType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContactChannel {
     /// <p>The Amazon Resource Name (ARN) of the contact channel.</p>
+    #[doc(hidden)]
     pub contact_channel_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the contact that contains the contact channel.</p>
+    #[doc(hidden)]
     pub contact_arn: std::option::Option<std::string::String>,
     /// <p>The name of the contact channel.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of the contact channel. Incident Manager supports three contact methods:</p>
     /// <ul>
@@ -1482,10 +1510,13 @@ pub struct ContactChannel {
     /// <li> <p>VOICE</p> </li>
     /// <li> <p>EMAIL</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ChannelType>,
     /// <p>The details that Incident Manager uses when trying to engage the contact channel.</p>
+    #[doc(hidden)]
     pub delivery_address: std::option::Option<crate::model::ContactChannelAddress>,
     /// <p>A Boolean value describing if the contact channel has been activated or not. If the contact channel isn't activated, Incident Manager can't engage the contact through it. </p>
+    #[doc(hidden)]
     pub activation_status: std::option::Option<crate::model::ActivationStatus>,
 }
 impl ContactChannel {
@@ -1531,11 +1562,10 @@ impl std::fmt::Debug for ContactChannel {
         formatter.finish()
     }
 }
-/// See [`ContactChannel`](crate::model::ContactChannel)
+/// See [`ContactChannel`](crate::model::ContactChannel).
 pub mod contact_channel {
 
-    /// A builder for [`ContactChannel`](crate::model::ContactChannel)
-    #[non_exhaustive]
+    /// A builder for [`ContactChannel`](crate::model::ContactChannel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) contact_channel_arn: std::option::Option<std::string::String>,
@@ -1625,7 +1655,7 @@ pub mod contact_channel {
             self.activation_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContactChannel`](crate::model::ContactChannel)
+        /// Consumes the builder and constructs a [`ContactChannel`](crate::model::ContactChannel).
         pub fn build(self) -> crate::model::ContactChannel {
             crate::model::ContactChannel {
                 contact_channel_arn: self.contact_channel_arn,
@@ -1639,7 +1669,7 @@ pub mod contact_channel {
     }
 }
 impl ContactChannel {
-    /// Creates a new builder-style object to manufacture [`ContactChannel`](crate::model::ContactChannel)
+    /// Creates a new builder-style object to manufacture [`ContactChannel`](crate::model::ContactChannel).
     pub fn builder() -> crate::model::contact_channel::Builder {
         crate::model::contact_channel::Builder::default()
     }

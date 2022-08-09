@@ -4,8 +4,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTablesOutput {
     /// <p>The tables that match the request pattern. </p>
+    #[doc(hidden)]
     pub tables: std::option::Option<std::vec::Vec<crate::model::TableMember>>,
     /// <p>A value that indicates the starting point for the next set of response records in a subsequent request. If a value is returned in a response, you can retrieve the next set of records by providing this returned NextToken value in the next NextToken parameter and retrying the command. If the NextToken field is empty, all response records have been retrieved for the request. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListTablesOutput {
@@ -26,11 +28,10 @@ impl std::fmt::Debug for ListTablesOutput {
         formatter.finish()
     }
 }
-/// See [`ListTablesOutput`](crate::output::ListTablesOutput)
+/// See [`ListTablesOutput`](crate::output::ListTablesOutput).
 pub mod list_tables_output {
 
-    /// A builder for [`ListTablesOutput`](crate::output::ListTablesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTablesOutput`](crate::output::ListTablesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tables: std::option::Option<std::vec::Vec<crate::model::TableMember>>,
@@ -66,7 +67,7 @@ pub mod list_tables_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTablesOutput`](crate::output::ListTablesOutput)
+        /// Consumes the builder and constructs a [`ListTablesOutput`](crate::output::ListTablesOutput).
         pub fn build(self) -> crate::output::ListTablesOutput {
             crate::output::ListTablesOutput {
                 tables: self.tables,
@@ -76,7 +77,7 @@ pub mod list_tables_output {
     }
 }
 impl ListTablesOutput {
-    /// Creates a new builder-style object to manufacture [`ListTablesOutput`](crate::output::ListTablesOutput)
+    /// Creates a new builder-style object to manufacture [`ListTablesOutput`](crate::output::ListTablesOutput).
     pub fn builder() -> crate::output::list_tables_output::Builder {
         crate::output::list_tables_output::Builder::default()
     }
@@ -87,8 +88,10 @@ impl ListTablesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListStatementsOutput {
     /// <p>The SQL statements. </p>
+    #[doc(hidden)]
     pub statements: std::option::Option<std::vec::Vec<crate::model::StatementData>>,
     /// <p>A value that indicates the starting point for the next set of response records in a subsequent request. If a value is returned in a response, you can retrieve the next set of records by providing this returned NextToken value in the next NextToken parameter and retrying the command. If the NextToken field is empty, all response records have been retrieved for the request. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListStatementsOutput {
@@ -109,11 +112,10 @@ impl std::fmt::Debug for ListStatementsOutput {
         formatter.finish()
     }
 }
-/// See [`ListStatementsOutput`](crate::output::ListStatementsOutput)
+/// See [`ListStatementsOutput`](crate::output::ListStatementsOutput).
 pub mod list_statements_output {
 
-    /// A builder for [`ListStatementsOutput`](crate::output::ListStatementsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListStatementsOutput`](crate::output::ListStatementsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) statements: std::option::Option<std::vec::Vec<crate::model::StatementData>>,
@@ -149,7 +151,7 @@ pub mod list_statements_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListStatementsOutput`](crate::output::ListStatementsOutput)
+        /// Consumes the builder and constructs a [`ListStatementsOutput`](crate::output::ListStatementsOutput).
         pub fn build(self) -> crate::output::ListStatementsOutput {
             crate::output::ListStatementsOutput {
                 statements: self.statements,
@@ -159,7 +161,7 @@ pub mod list_statements_output {
     }
 }
 impl ListStatementsOutput {
-    /// Creates a new builder-style object to manufacture [`ListStatementsOutput`](crate::output::ListStatementsOutput)
+    /// Creates a new builder-style object to manufacture [`ListStatementsOutput`](crate::output::ListStatementsOutput).
     pub fn builder() -> crate::output::list_statements_output::Builder {
         crate::output::list_statements_output::Builder::default()
     }
@@ -170,8 +172,10 @@ impl ListStatementsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSchemasOutput {
     /// <p>The schemas that match the request pattern. </p>
+    #[doc(hidden)]
     pub schemas: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A value that indicates the starting point for the next set of response records in a subsequent request. If a value is returned in a response, you can retrieve the next set of records by providing this returned NextToken value in the next NextToken parameter and retrying the command. If the NextToken field is empty, all response records have been retrieved for the request. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListSchemasOutput {
@@ -192,11 +196,10 @@ impl std::fmt::Debug for ListSchemasOutput {
         formatter.finish()
     }
 }
-/// See [`ListSchemasOutput`](crate::output::ListSchemasOutput)
+/// See [`ListSchemasOutput`](crate::output::ListSchemasOutput).
 pub mod list_schemas_output {
 
-    /// A builder for [`ListSchemasOutput`](crate::output::ListSchemasOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSchemasOutput`](crate::output::ListSchemasOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schemas: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -232,7 +235,7 @@ pub mod list_schemas_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSchemasOutput`](crate::output::ListSchemasOutput)
+        /// Consumes the builder and constructs a [`ListSchemasOutput`](crate::output::ListSchemasOutput).
         pub fn build(self) -> crate::output::ListSchemasOutput {
             crate::output::ListSchemasOutput {
                 schemas: self.schemas,
@@ -242,7 +245,7 @@ pub mod list_schemas_output {
     }
 }
 impl ListSchemasOutput {
-    /// Creates a new builder-style object to manufacture [`ListSchemasOutput`](crate::output::ListSchemasOutput)
+    /// Creates a new builder-style object to manufacture [`ListSchemasOutput`](crate::output::ListSchemasOutput).
     pub fn builder() -> crate::output::list_schemas_output::Builder {
         crate::output::list_schemas_output::Builder::default()
     }
@@ -253,8 +256,10 @@ impl ListSchemasOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDatabasesOutput {
     /// <p>The names of databases. </p>
+    #[doc(hidden)]
     pub databases: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A value that indicates the starting point for the next set of response records in a subsequent request. If a value is returned in a response, you can retrieve the next set of records by providing this returned NextToken value in the next NextToken parameter and retrying the command. If the NextToken field is empty, all response records have been retrieved for the request. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListDatabasesOutput {
@@ -275,11 +280,10 @@ impl std::fmt::Debug for ListDatabasesOutput {
         formatter.finish()
     }
 }
-/// See [`ListDatabasesOutput`](crate::output::ListDatabasesOutput)
+/// See [`ListDatabasesOutput`](crate::output::ListDatabasesOutput).
 pub mod list_databases_output {
 
-    /// A builder for [`ListDatabasesOutput`](crate::output::ListDatabasesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListDatabasesOutput`](crate::output::ListDatabasesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) databases: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -315,7 +319,7 @@ pub mod list_databases_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDatabasesOutput`](crate::output::ListDatabasesOutput)
+        /// Consumes the builder and constructs a [`ListDatabasesOutput`](crate::output::ListDatabasesOutput).
         pub fn build(self) -> crate::output::ListDatabasesOutput {
             crate::output::ListDatabasesOutput {
                 databases: self.databases,
@@ -325,7 +329,7 @@ pub mod list_databases_output {
     }
 }
 impl ListDatabasesOutput {
-    /// Creates a new builder-style object to manufacture [`ListDatabasesOutput`](crate::output::ListDatabasesOutput)
+    /// Creates a new builder-style object to manufacture [`ListDatabasesOutput`](crate::output::ListDatabasesOutput).
     pub fn builder() -> crate::output::list_databases_output::Builder {
         crate::output::list_databases_output::Builder::default()
     }
@@ -336,12 +340,16 @@ impl ListDatabasesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetStatementResultOutput {
     /// <p>The results of the SQL statement.</p>
+    #[doc(hidden)]
     pub records: std::option::Option<std::vec::Vec<std::vec::Vec<crate::model::Field>>>,
     /// <p>The properties (metadata) of a column. </p>
+    #[doc(hidden)]
     pub column_metadata: std::option::Option<std::vec::Vec<crate::model::ColumnMetadata>>,
     /// <p>The total number of rows in the result set returned from a query. You can use this number to estimate the number of calls to the <code>GetStatementResult</code> operation needed to page through the results. </p>
+    #[doc(hidden)]
     pub total_num_rows: i64,
     /// <p>A value that indicates the starting point for the next set of response records in a subsequent request. If a value is returned in a response, you can retrieve the next set of records by providing this returned NextToken value in the next NextToken parameter and retrying the command. If the NextToken field is empty, all response records have been retrieved for the request. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetStatementResultOutput {
@@ -372,11 +380,10 @@ impl std::fmt::Debug for GetStatementResultOutput {
         formatter.finish()
     }
 }
-/// See [`GetStatementResultOutput`](crate::output::GetStatementResultOutput)
+/// See [`GetStatementResultOutput`](crate::output::GetStatementResultOutput).
 pub mod get_statement_result_output {
 
-    /// A builder for [`GetStatementResultOutput`](crate::output::GetStatementResultOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetStatementResultOutput`](crate::output::GetStatementResultOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) records: std::option::Option<std::vec::Vec<std::vec::Vec<crate::model::Field>>>,
@@ -444,7 +451,7 @@ pub mod get_statement_result_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetStatementResultOutput`](crate::output::GetStatementResultOutput)
+        /// Consumes the builder and constructs a [`GetStatementResultOutput`](crate::output::GetStatementResultOutput).
         pub fn build(self) -> crate::output::GetStatementResultOutput {
             crate::output::GetStatementResultOutput {
                 records: self.records,
@@ -456,7 +463,7 @@ pub mod get_statement_result_output {
     }
 }
 impl GetStatementResultOutput {
-    /// Creates a new builder-style object to manufacture [`GetStatementResultOutput`](crate::output::GetStatementResultOutput)
+    /// Creates a new builder-style object to manufacture [`GetStatementResultOutput`](crate::output::GetStatementResultOutput).
     pub fn builder() -> crate::output::get_statement_result_output::Builder {
         crate::output::get_statement_result_output::Builder::default()
     }
@@ -467,18 +474,25 @@ impl GetStatementResultOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecuteStatementOutput {
     /// <p>The identifier of the SQL statement whose results are to be fetched. This value is a universally unique identifier (UUID) generated by Amazon Redshift Data API. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The date and time (UTC) the statement was created. </p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The cluster identifier. This element is not returned when connecting to a serverless workgroup. </p>
+    #[doc(hidden)]
     pub cluster_identifier: std::option::Option<std::string::String>,
     /// <p>The database user name.</p>
+    #[doc(hidden)]
     pub db_user: std::option::Option<std::string::String>,
     /// <p>The name of the database.</p>
+    #[doc(hidden)]
     pub database: std::option::Option<std::string::String>,
     /// <p>The name or ARN of the secret that enables access to the database. </p>
+    #[doc(hidden)]
     pub secret_arn: std::option::Option<std::string::String>,
     /// <p>The serverless workgroup name. This element is not returned when connecting to a provisioned cluster.</p>
+    #[doc(hidden)]
     pub workgroup_name: std::option::Option<std::string::String>,
 }
 impl ExecuteStatementOutput {
@@ -524,11 +538,10 @@ impl std::fmt::Debug for ExecuteStatementOutput {
         formatter.finish()
     }
 }
-/// See [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput)
+/// See [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput).
 pub mod execute_statement_output {
 
-    /// A builder for [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput)
-    #[non_exhaustive]
+    /// A builder for [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -619,7 +632,7 @@ pub mod execute_statement_output {
             self.workgroup_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput)
+        /// Consumes the builder and constructs a [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput).
         pub fn build(self) -> crate::output::ExecuteStatementOutput {
             crate::output::ExecuteStatementOutput {
                 id: self.id,
@@ -634,7 +647,7 @@ pub mod execute_statement_output {
     }
 }
 impl ExecuteStatementOutput {
-    /// Creates a new builder-style object to manufacture [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput)
+    /// Creates a new builder-style object to manufacture [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput).
     pub fn builder() -> crate::output::execute_statement_output::Builder {
         crate::output::execute_statement_output::Builder::default()
     }
@@ -645,10 +658,13 @@ impl ExecuteStatementOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeTableOutput {
     /// <p>The table name. </p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>A list of columns in the table. </p>
+    #[doc(hidden)]
     pub column_list: std::option::Option<std::vec::Vec<crate::model::ColumnMetadata>>,
     /// <p>A value that indicates the starting point for the next set of response records in a subsequent request. If a value is returned in a response, you can retrieve the next set of records by providing this returned NextToken value in the next NextToken parameter and retrying the command. If the NextToken field is empty, all response records have been retrieved for the request. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeTableOutput {
@@ -674,11 +690,10 @@ impl std::fmt::Debug for DescribeTableOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeTableOutput`](crate::output::DescribeTableOutput)
+/// See [`DescribeTableOutput`](crate::output::DescribeTableOutput).
 pub mod describe_table_output {
 
-    /// A builder for [`DescribeTableOutput`](crate::output::DescribeTableOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeTableOutput`](crate::output::DescribeTableOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_name: std::option::Option<std::string::String>,
@@ -725,7 +740,7 @@ pub mod describe_table_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeTableOutput`](crate::output::DescribeTableOutput)
+        /// Consumes the builder and constructs a [`DescribeTableOutput`](crate::output::DescribeTableOutput).
         pub fn build(self) -> crate::output::DescribeTableOutput {
             crate::output::DescribeTableOutput {
                 table_name: self.table_name,
@@ -736,7 +751,7 @@ pub mod describe_table_output {
     }
 }
 impl DescribeTableOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeTableOutput`](crate::output::DescribeTableOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeTableOutput`](crate::output::DescribeTableOutput).
     pub fn builder() -> crate::output::describe_table_output::Builder {
         crate::output::describe_table_output::Builder::default()
     }
@@ -747,18 +762,25 @@ impl DescribeTableOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeStatementOutput {
     /// <p>The identifier of the SQL statement described. This value is a universally unique identifier (UUID) generated by Amazon Redshift Data API. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name or Amazon Resource Name (ARN) of the secret that enables access to the database. </p>
+    #[doc(hidden)]
     pub secret_arn: std::option::Option<std::string::String>,
     /// <p>The database user name. </p>
+    #[doc(hidden)]
     pub db_user: std::option::Option<std::string::String>,
     /// <p>The name of the database. </p>
+    #[doc(hidden)]
     pub database: std::option::Option<std::string::String>,
     /// <p>The cluster identifier. </p>
+    #[doc(hidden)]
     pub cluster_identifier: std::option::Option<std::string::String>,
     /// <p>The amount of time in nanoseconds that the statement ran. </p>
+    #[doc(hidden)]
     pub duration: i64,
     /// <p>The error message from the cluster if the SQL statement encountered an error while running. </p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>The status of the SQL statement being described. Status values are defined as follows: </p>
     /// <ul>
@@ -770,28 +792,40 @@ pub struct DescribeStatementOutput {
     /// <li> <p>STARTED - The query run has started. </p> </li>
     /// <li> <p>SUBMITTED - The query was submitted, but not yet processed. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StatusString>,
     /// <p>The date and time (UTC) when the SQL statement was submitted to run. </p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time (UTC) that the metadata for the SQL statement was last updated. An example is the time the status last changed. </p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The process identifier from Amazon Redshift. </p>
+    #[doc(hidden)]
     pub redshift_pid: i64,
     /// <p>A value that indicates whether the statement has a result set. The result set can be empty. The value is true for an empty result set. The value is true if any substatement returns a result set.</p>
+    #[doc(hidden)]
     pub has_result_set: std::option::Option<bool>,
     /// <p>The SQL statement text. </p>
+    #[doc(hidden)]
     pub query_string: std::option::Option<std::string::String>,
     /// <p>Either the number of rows returned from the SQL statement or the number of rows affected. If result size is greater than zero, the result rows can be the number of rows affected by SQL statements such as INSERT, UPDATE, DELETE, COPY, and others. A <code>-1</code> indicates the value is null.</p>
+    #[doc(hidden)]
     pub result_rows: i64,
     /// <p>The size in bytes of the returned results. A <code>-1</code> indicates the value is null.</p>
+    #[doc(hidden)]
     pub result_size: i64,
     /// <p>The identifier of the query generated by Amazon Redshift. These identifiers are also available in the <code>query</code> column of the <code>STL_QUERY</code> system view. </p>
+    #[doc(hidden)]
     pub redshift_query_id: i64,
     /// <p>The parameters for the SQL statement.</p>
+    #[doc(hidden)]
     pub query_parameters: std::option::Option<std::vec::Vec<crate::model::SqlParameter>>,
     /// <p>The SQL statements from a multiple statement run.</p>
+    #[doc(hidden)]
     pub sub_statements: std::option::Option<std::vec::Vec<crate::model::SubStatementData>>,
     /// <p>The serverless workgroup name.</p>
+    #[doc(hidden)]
     pub workgroup_name: std::option::Option<std::string::String>,
 }
 impl DescribeStatementOutput {
@@ -906,11 +940,10 @@ impl std::fmt::Debug for DescribeStatementOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeStatementOutput`](crate::output::DescribeStatementOutput)
+/// See [`DescribeStatementOutput`](crate::output::DescribeStatementOutput).
 pub mod describe_statement_output {
 
-    /// A builder for [`DescribeStatementOutput`](crate::output::DescribeStatementOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeStatementOutput`](crate::output::DescribeStatementOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1176,7 +1209,7 @@ pub mod describe_statement_output {
             self.workgroup_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeStatementOutput`](crate::output::DescribeStatementOutput)
+        /// Consumes the builder and constructs a [`DescribeStatementOutput`](crate::output::DescribeStatementOutput).
         pub fn build(self) -> crate::output::DescribeStatementOutput {
             crate::output::DescribeStatementOutput {
                 id: self.id,
@@ -1203,7 +1236,7 @@ pub mod describe_statement_output {
     }
 }
 impl DescribeStatementOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeStatementOutput`](crate::output::DescribeStatementOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeStatementOutput`](crate::output::DescribeStatementOutput).
     pub fn builder() -> crate::output::describe_statement_output::Builder {
         crate::output::describe_statement_output::Builder::default()
     }
@@ -1214,6 +1247,7 @@ impl DescribeStatementOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelStatementOutput {
     /// <p>A value that indicates whether the cancel statement succeeded (true). </p>
+    #[doc(hidden)]
     pub status: std::option::Option<bool>,
 }
 impl CancelStatementOutput {
@@ -1229,11 +1263,10 @@ impl std::fmt::Debug for CancelStatementOutput {
         formatter.finish()
     }
 }
-/// See [`CancelStatementOutput`](crate::output::CancelStatementOutput)
+/// See [`CancelStatementOutput`](crate::output::CancelStatementOutput).
 pub mod cancel_statement_output {
 
-    /// A builder for [`CancelStatementOutput`](crate::output::CancelStatementOutput)
-    #[non_exhaustive]
+    /// A builder for [`CancelStatementOutput`](crate::output::CancelStatementOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<bool>,
@@ -1249,7 +1282,7 @@ pub mod cancel_statement_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelStatementOutput`](crate::output::CancelStatementOutput)
+        /// Consumes the builder and constructs a [`CancelStatementOutput`](crate::output::CancelStatementOutput).
         pub fn build(self) -> crate::output::CancelStatementOutput {
             crate::output::CancelStatementOutput {
                 status: self.status,
@@ -1258,7 +1291,7 @@ pub mod cancel_statement_output {
     }
 }
 impl CancelStatementOutput {
-    /// Creates a new builder-style object to manufacture [`CancelStatementOutput`](crate::output::CancelStatementOutput)
+    /// Creates a new builder-style object to manufacture [`CancelStatementOutput`](crate::output::CancelStatementOutput).
     pub fn builder() -> crate::output::cancel_statement_output::Builder {
         crate::output::cancel_statement_output::Builder::default()
     }
@@ -1269,18 +1302,25 @@ impl CancelStatementOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchExecuteStatementOutput {
     /// <p>The identifier of the SQL statement whose results are to be fetched. This value is a universally unique identifier (UUID) generated by Amazon Redshift Data API. This identifier is returned by <code>BatchExecuteStatment</code>. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The date and time (UTC) the statement was created. </p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The cluster identifier. This element is not returned when connecting to a serverless workgroup. </p>
+    #[doc(hidden)]
     pub cluster_identifier: std::option::Option<std::string::String>,
     /// <p>The database user name.</p>
+    #[doc(hidden)]
     pub db_user: std::option::Option<std::string::String>,
     /// <p>The name of the database.</p>
+    #[doc(hidden)]
     pub database: std::option::Option<std::string::String>,
     /// <p>The name or ARN of the secret that enables access to the database. </p>
+    #[doc(hidden)]
     pub secret_arn: std::option::Option<std::string::String>,
     /// <p>The serverless workgroup name. This element is not returned when connecting to a provisioned cluster.</p>
+    #[doc(hidden)]
     pub workgroup_name: std::option::Option<std::string::String>,
 }
 impl BatchExecuteStatementOutput {
@@ -1326,11 +1366,10 @@ impl std::fmt::Debug for BatchExecuteStatementOutput {
         formatter.finish()
     }
 }
-/// See [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput)
+/// See [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput).
 pub mod batch_execute_statement_output {
 
-    /// A builder for [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput)
-    #[non_exhaustive]
+    /// A builder for [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1421,7 +1460,7 @@ pub mod batch_execute_statement_output {
             self.workgroup_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput)
+        /// Consumes the builder and constructs a [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput).
         pub fn build(self) -> crate::output::BatchExecuteStatementOutput {
             crate::output::BatchExecuteStatementOutput {
                 id: self.id,
@@ -1436,7 +1475,7 @@ pub mod batch_execute_statement_output {
     }
 }
 impl BatchExecuteStatementOutput {
-    /// Creates a new builder-style object to manufacture [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput)
+    /// Creates a new builder-style object to manufacture [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput).
     pub fn builder() -> crate::output::batch_execute_statement_output::Builder {
         crate::output::batch_execute_statement_output::Builder::default()
     }

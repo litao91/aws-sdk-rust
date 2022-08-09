@@ -59,18 +59,25 @@ impl AsRef<str> for WorkGroupState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkGroupConfigurationUpdates {
     /// <p>If set to "true", the settings for the workgroup override client-side settings. If set to "false" client-side settings are used. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override Client-Side Settings</a>.</p>
+    #[doc(hidden)]
     pub enforce_work_group_configuration: std::option::Option<bool>,
     /// <p>The result configuration information about the queries in this workgroup that will be updated. Includes the updated results location and an updated option for encrypting query results.</p>
+    #[doc(hidden)]
     pub result_configuration_updates: std::option::Option<crate::model::ResultConfigurationUpdates>,
     /// <p>Indicates whether this workgroup enables publishing metrics to Amazon CloudWatch.</p>
+    #[doc(hidden)]
     pub publish_cloud_watch_metrics_enabled: std::option::Option<bool>,
     /// <p>The upper limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan.</p>
+    #[doc(hidden)]
     pub bytes_scanned_cutoff_per_query: std::option::Option<i64>,
     /// <p>Indicates that the data usage control limit per query is removed. <code>WorkGroupConfiguration$BytesScannedCutoffPerQuery</code> </p>
+    #[doc(hidden)]
     pub remove_bytes_scanned_cutoff_per_query: std::option::Option<bool>,
     /// <p>If set to <code>true</code>, allows members assigned to a workgroup to specify Amazon S3 Requester Pays buckets in queries. If set to <code>false</code>, workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is <code>false</code>. For more information about Requester Pays buckets, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html">Requester Pays Buckets</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub requester_pays_enabled: std::option::Option<bool>,
     /// <p>The engine version requested when a workgroup is updated. After the update, all queries on the workgroup run on the requested engine version. If no value was previously set, the default is Auto. Queries on the <code>AmazonAthenaPreviewFunctionality</code> workgroup run on the preview engine regardless of this setting.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<crate::model::EngineVersion>,
 }
 impl WorkGroupConfigurationUpdates {
@@ -133,11 +140,10 @@ impl std::fmt::Debug for WorkGroupConfigurationUpdates {
         formatter.finish()
     }
 }
-/// See [`WorkGroupConfigurationUpdates`](crate::model::WorkGroupConfigurationUpdates)
+/// See [`WorkGroupConfigurationUpdates`](crate::model::WorkGroupConfigurationUpdates).
 pub mod work_group_configuration_updates {
 
-    /// A builder for [`WorkGroupConfigurationUpdates`](crate::model::WorkGroupConfigurationUpdates)
-    #[non_exhaustive]
+    /// A builder for [`WorkGroupConfigurationUpdates`](crate::model::WorkGroupConfigurationUpdates).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enforce_work_group_configuration: std::option::Option<bool>,
@@ -241,7 +247,7 @@ pub mod work_group_configuration_updates {
             self.engine_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkGroupConfigurationUpdates`](crate::model::WorkGroupConfigurationUpdates)
+        /// Consumes the builder and constructs a [`WorkGroupConfigurationUpdates`](crate::model::WorkGroupConfigurationUpdates).
         pub fn build(self) -> crate::model::WorkGroupConfigurationUpdates {
             crate::model::WorkGroupConfigurationUpdates {
                 enforce_work_group_configuration: self.enforce_work_group_configuration,
@@ -256,7 +262,7 @@ pub mod work_group_configuration_updates {
     }
 }
 impl WorkGroupConfigurationUpdates {
-    /// Creates a new builder-style object to manufacture [`WorkGroupConfigurationUpdates`](crate::model::WorkGroupConfigurationUpdates)
+    /// Creates a new builder-style object to manufacture [`WorkGroupConfigurationUpdates`](crate::model::WorkGroupConfigurationUpdates).
     pub fn builder() -> crate::model::work_group_configuration_updates::Builder {
         crate::model::work_group_configuration_updates::Builder::default()
     }
@@ -267,8 +273,10 @@ impl WorkGroupConfigurationUpdates {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EngineVersion {
     /// <p>The engine version requested by the user. Possible values are determined by the output of <code>ListEngineVersions</code>, including Auto. The default is Auto.</p>
+    #[doc(hidden)]
     pub selected_engine_version: std::option::Option<std::string::String>,
     /// <p>Read only. The engine version on which the query runs. If the user requests a valid engine version other than Auto, the effective engine version is the same as the engine version that the user requested. If the user requests Auto, the effective engine version is chosen by Athena. When a request to update the engine version is made by a <code>CreateWorkGroup</code> or <code>UpdateWorkGroup</code> operation, the <code>EffectiveEngineVersion</code> field is ignored.</p>
+    #[doc(hidden)]
     pub effective_engine_version: std::option::Option<std::string::String>,
 }
 impl EngineVersion {
@@ -289,11 +297,10 @@ impl std::fmt::Debug for EngineVersion {
         formatter.finish()
     }
 }
-/// See [`EngineVersion`](crate::model::EngineVersion)
+/// See [`EngineVersion`](crate::model::EngineVersion).
 pub mod engine_version {
 
-    /// A builder for [`EngineVersion`](crate::model::EngineVersion)
-    #[non_exhaustive]
+    /// A builder for [`EngineVersion`](crate::model::EngineVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) selected_engine_version: std::option::Option<std::string::String>,
@@ -326,7 +333,7 @@ pub mod engine_version {
             self.effective_engine_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`EngineVersion`](crate::model::EngineVersion)
+        /// Consumes the builder and constructs a [`EngineVersion`](crate::model::EngineVersion).
         pub fn build(self) -> crate::model::EngineVersion {
             crate::model::EngineVersion {
                 selected_engine_version: self.selected_engine_version,
@@ -336,7 +343,7 @@ pub mod engine_version {
     }
 }
 impl EngineVersion {
-    /// Creates a new builder-style object to manufacture [`EngineVersion`](crate::model::EngineVersion)
+    /// Creates a new builder-style object to manufacture [`EngineVersion`](crate::model::EngineVersion).
     pub fn builder() -> crate::model::engine_version::Builder {
         crate::model::engine_version::Builder::default()
     }
@@ -347,21 +354,29 @@ impl EngineVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResultConfigurationUpdates {
     /// <p>The location in Amazon S3 where your query results are stored, such as <code>s3://path/to/query/bucket/</code>. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Query Results</a> If workgroup settings override client-side settings, then the query uses the location for the query results and the encryption configuration that are specified for the workgroup. The "workgroup settings override" is specified in <code>EnforceWorkGroupConfiguration</code> (true/false) in the <code>WorkGroupConfiguration</code>. See <code>WorkGroupConfiguration$EnforceWorkGroupConfiguration</code>.</p>
+    #[doc(hidden)]
     pub output_location: std::option::Option<std::string::String>,
     /// <p>If set to "true", indicates that the previously-specified query results location (also known as a client-side setting) for queries in this workgroup should be ignored and set to null. If set to "false" or not set, and a value is present in the <code>OutputLocation</code> in <code>ResultConfigurationUpdates</code> (the client-side setting), the <code>OutputLocation</code> in the workgroup's <code>ResultConfiguration</code> will be updated with the new value. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override Client-Side Settings</a>.</p>
+    #[doc(hidden)]
     pub remove_output_location: std::option::Option<bool>,
     /// <p>The encryption configuration for the query results.</p>
+    #[doc(hidden)]
     pub encryption_configuration: std::option::Option<crate::model::EncryptionConfiguration>,
     /// <p>If set to "true", indicates that the previously-specified encryption configuration (also known as the client-side setting) for queries in this workgroup should be ignored and set to null. If set to "false" or not set, and a value is present in the <code>EncryptionConfiguration</code> in <code>ResultConfigurationUpdates</code> (the client-side setting), the <code>EncryptionConfiguration</code> in the workgroup's <code>ResultConfiguration</code> will be updated with the new value. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override Client-Side Settings</a>.</p>
+    #[doc(hidden)]
     pub remove_encryption_configuration: std::option::Option<bool>,
     /// <p>The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by <code>ResultConfiguration$OutputLocation</code>. If set, Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a permissions error.</p>
     /// <p>If workgroup settings override client-side settings, then the query uses the <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the location for storing query results specified in the workgroup. See <code>WorkGroupConfiguration$EnforceWorkGroupConfiguration</code> and <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override Client-Side Settings</a>.</p>
+    #[doc(hidden)]
     pub expected_bucket_owner: std::option::Option<std::string::String>,
     /// <p>If set to "true", removes the Amazon Web Services account ID previously specified for <code>ResultConfiguration$ExpectedBucketOwner</code>. If set to "false" or not set, and a value is present in the <code>ExpectedBucketOwner</code> in <code>ResultConfigurationUpdates</code> (the client-side setting), the <code>ExpectedBucketOwner</code> in the workgroup's <code>ResultConfiguration</code> is updated with the new value. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override Client-Side Settings</a>.</p>
+    #[doc(hidden)]
     pub remove_expected_bucket_owner: std::option::Option<bool>,
     /// <p>The ACL configuration for the query results.</p>
+    #[doc(hidden)]
     pub acl_configuration: std::option::Option<crate::model::AclConfiguration>,
     /// <p>If set to <code>true</code>, indicates that the previously-specified ACL configuration for queries in this workgroup should be ignored and set to null. If set to <code>false</code> or not set, and a value is present in the <code>AclConfiguration</code> of <code>ResultConfigurationUpdates</code>, the <code>AclConfiguration</code> in the workgroup's <code>ResultConfiguration</code> is updated with the new value. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override Client-Side Settings</a>.</p>
+    #[doc(hidden)]
     pub remove_acl_configuration: std::option::Option<bool>,
 }
 impl ResultConfigurationUpdates {
@@ -421,11 +436,10 @@ impl std::fmt::Debug for ResultConfigurationUpdates {
         formatter.finish()
     }
 }
-/// See [`ResultConfigurationUpdates`](crate::model::ResultConfigurationUpdates)
+/// See [`ResultConfigurationUpdates`](crate::model::ResultConfigurationUpdates).
 pub mod result_configuration_updates {
 
-    /// A builder for [`ResultConfigurationUpdates`](crate::model::ResultConfigurationUpdates)
-    #[non_exhaustive]
+    /// A builder for [`ResultConfigurationUpdates`](crate::model::ResultConfigurationUpdates).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) output_location: std::option::Option<std::string::String>,
@@ -542,7 +556,7 @@ pub mod result_configuration_updates {
             self.remove_acl_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultConfigurationUpdates`](crate::model::ResultConfigurationUpdates)
+        /// Consumes the builder and constructs a [`ResultConfigurationUpdates`](crate::model::ResultConfigurationUpdates).
         pub fn build(self) -> crate::model::ResultConfigurationUpdates {
             crate::model::ResultConfigurationUpdates {
                 output_location: self.output_location,
@@ -558,7 +572,7 @@ pub mod result_configuration_updates {
     }
 }
 impl ResultConfigurationUpdates {
-    /// Creates a new builder-style object to manufacture [`ResultConfigurationUpdates`](crate::model::ResultConfigurationUpdates)
+    /// Creates a new builder-style object to manufacture [`ResultConfigurationUpdates`](crate::model::ResultConfigurationUpdates).
     pub fn builder() -> crate::model::result_configuration_updates::Builder {
         crate::model::result_configuration_updates::Builder::default()
     }
@@ -569,6 +583,7 @@ impl ResultConfigurationUpdates {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AclConfiguration {
     /// <p>The Amazon S3 canned ACL that Athena should specify when storing query results. Currently the only supported canned ACL is <code>BUCKET_OWNER_FULL_CONTROL</code>. If a query runs in a workgroup and the workgroup overrides client-side settings, then the Amazon S3 canned ACL specified in the workgroup's settings is used for all queries that run in the workgroup. For more information about Amazon S3 canned ACLs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl">Canned ACL</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub s3_acl_option: std::option::Option<crate::model::S3AclOption>,
 }
 impl AclConfiguration {
@@ -584,11 +599,10 @@ impl std::fmt::Debug for AclConfiguration {
         formatter.finish()
     }
 }
-/// See [`AclConfiguration`](crate::model::AclConfiguration)
+/// See [`AclConfiguration`](crate::model::AclConfiguration).
 pub mod acl_configuration {
 
-    /// A builder for [`AclConfiguration`](crate::model::AclConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AclConfiguration`](crate::model::AclConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_acl_option: std::option::Option<crate::model::S3AclOption>,
@@ -607,7 +621,7 @@ pub mod acl_configuration {
             self.s3_acl_option = input;
             self
         }
-        /// Consumes the builder and constructs a [`AclConfiguration`](crate::model::AclConfiguration)
+        /// Consumes the builder and constructs a [`AclConfiguration`](crate::model::AclConfiguration).
         pub fn build(self) -> crate::model::AclConfiguration {
             crate::model::AclConfiguration {
                 s3_acl_option: self.s3_acl_option,
@@ -616,7 +630,7 @@ pub mod acl_configuration {
     }
 }
 impl AclConfiguration {
-    /// Creates a new builder-style object to manufacture [`AclConfiguration`](crate::model::AclConfiguration)
+    /// Creates a new builder-style object to manufacture [`AclConfiguration`](crate::model::AclConfiguration).
     pub fn builder() -> crate::model::acl_configuration::Builder {
         crate::model::acl_configuration::Builder::default()
     }
@@ -679,8 +693,10 @@ impl AsRef<str> for S3AclOption {
 pub struct EncryptionConfiguration {
     /// <p>Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys (<code>SSE_S3</code>), server-side encryption with KMS-managed keys (<code>SSE_KMS</code>), or client-side encryption with KMS-managed keys (<code>CSE_KMS</code>) is used.</p>
     /// <p>If a query runs in a workgroup and the workgroup overrides client-side settings, then the workgroup's setting for encryption is used. It specifies whether query results must be encrypted, for all queries that run in this workgroup. </p>
+    #[doc(hidden)]
     pub encryption_option: std::option::Option<crate::model::EncryptionOption>,
     /// <p>For <code>SSE_KMS</code> and <code>CSE_KMS</code>, this is the KMS key ARN or ID.</p>
+    #[doc(hidden)]
     pub kms_key: std::option::Option<std::string::String>,
 }
 impl EncryptionConfiguration {
@@ -702,11 +718,10 @@ impl std::fmt::Debug for EncryptionConfiguration {
         formatter.finish()
     }
 }
-/// See [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
+/// See [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
 pub mod encryption_configuration {
 
-    /// A builder for [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encryption_option: std::option::Option<crate::model::EncryptionOption>,
@@ -738,7 +753,7 @@ pub mod encryption_configuration {
             self.kms_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
+        /// Consumes the builder and constructs a [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
         pub fn build(self) -> crate::model::EncryptionConfiguration {
             crate::model::EncryptionConfiguration {
                 encryption_option: self.encryption_option,
@@ -748,7 +763,7 @@ pub mod encryption_configuration {
     }
 }
 impl EncryptionConfiguration {
-    /// Creates a new builder-style object to manufacture [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
+    /// Creates a new builder-style object to manufacture [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
     pub fn builder() -> crate::model::encryption_configuration::Builder {
         crate::model::encryption_configuration::Builder::default()
     }
@@ -877,8 +892,10 @@ impl AsRef<str> for DataCatalogType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>A tag key. The tag key length is from 1 to 128 Unicode characters in UTF-8. You can use letters and numbers representable in UTF-8, and the following characters: + - = . _ : / @. Tag keys are case-sensitive and must be unique per resource. </p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>A tag value. The tag value length is from 0 to 256 Unicode characters in UTF-8. You can use letters and numbers representable in UTF-8, and the following characters: + - = . _ : / @. Tag values are case-sensitive. </p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -899,11 +916,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -930,7 +946,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -940,7 +956,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -1003,13 +1019,17 @@ impl AsRef<str> for ThrottleReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResultConfiguration {
     /// <p>The location in Amazon S3 where your query results are stored, such as <code>s3://path/to/query/bucket/</code>. To run the query, you must specify the query results location using one of the ways: either for individual queries using either this setting (client-side), or in the workgroup, using <code>WorkGroupConfiguration</code>. If none of them is set, Athena issues an error that no output location is provided. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Query Results</a>. If workgroup settings override client-side settings, then the query uses the settings specified for the workgroup. See <code>WorkGroupConfiguration$EnforceWorkGroupConfiguration</code>.</p>
+    #[doc(hidden)]
     pub output_location: std::option::Option<std::string::String>,
     /// <p>If query results are encrypted in Amazon S3, indicates the encryption option used (for example, <code>SSE_KMS</code> or <code>CSE_KMS</code>) and key information. This is a client-side setting. If workgroup settings override client-side settings, then the query uses the encryption configuration that is specified for the workgroup, and also uses the location for storing query results specified in the workgroup. See <code>WorkGroupConfiguration$EnforceWorkGroupConfiguration</code> and <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override Client-Side Settings</a>.</p>
+    #[doc(hidden)]
     pub encryption_configuration: std::option::Option<crate::model::EncryptionConfiguration>,
     /// <p>The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by <code>ResultConfiguration$OutputLocation</code>. If set, Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a permissions error.</p>
     /// <p>This is a client-side setting. If workgroup settings override client-side settings, then the query uses the <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the location for storing query results specified in the workgroup. See <code>WorkGroupConfiguration$EnforceWorkGroupConfiguration</code> and <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override Client-Side Settings</a>.</p>
+    #[doc(hidden)]
     pub expected_bucket_owner: std::option::Option<std::string::String>,
     /// <p>Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results. Currently the only supported canned ACL is <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side setting. If workgroup settings override client-side settings, then the query uses the ACL configuration that is specified for the workgroup, and also uses the location for storing query results specified in the workgroup. For more information, see <code>WorkGroupConfiguration$EnforceWorkGroupConfiguration</code> and <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override Client-Side Settings</a>.</p>
+    #[doc(hidden)]
     pub acl_configuration: std::option::Option<crate::model::AclConfiguration>,
 }
 impl ResultConfiguration {
@@ -1043,11 +1063,10 @@ impl std::fmt::Debug for ResultConfiguration {
         formatter.finish()
     }
 }
-/// See [`ResultConfiguration`](crate::model::ResultConfiguration)
+/// See [`ResultConfiguration`](crate::model::ResultConfiguration).
 pub mod result_configuration {
 
-    /// A builder for [`ResultConfiguration`](crate::model::ResultConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ResultConfiguration`](crate::model::ResultConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) output_location: std::option::Option<std::string::String>,
@@ -1114,7 +1133,7 @@ pub mod result_configuration {
             self.acl_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultConfiguration`](crate::model::ResultConfiguration)
+        /// Consumes the builder and constructs a [`ResultConfiguration`](crate::model::ResultConfiguration).
         pub fn build(self) -> crate::model::ResultConfiguration {
             crate::model::ResultConfiguration {
                 output_location: self.output_location,
@@ -1126,7 +1145,7 @@ pub mod result_configuration {
     }
 }
 impl ResultConfiguration {
-    /// Creates a new builder-style object to manufacture [`ResultConfiguration`](crate::model::ResultConfiguration)
+    /// Creates a new builder-style object to manufacture [`ResultConfiguration`](crate::model::ResultConfiguration).
     pub fn builder() -> crate::model::result_configuration::Builder {
         crate::model::result_configuration::Builder::default()
     }
@@ -1137,8 +1156,10 @@ impl ResultConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryExecutionContext {
     /// <p>The name of the database used in the query execution. The database must exist in the catalog.</p>
+    #[doc(hidden)]
     pub database: std::option::Option<std::string::String>,
     /// <p>The name of the data catalog used in the query execution.</p>
+    #[doc(hidden)]
     pub catalog: std::option::Option<std::string::String>,
 }
 impl QueryExecutionContext {
@@ -1159,11 +1180,10 @@ impl std::fmt::Debug for QueryExecutionContext {
         formatter.finish()
     }
 }
-/// See [`QueryExecutionContext`](crate::model::QueryExecutionContext)
+/// See [`QueryExecutionContext`](crate::model::QueryExecutionContext).
 pub mod query_execution_context {
 
-    /// A builder for [`QueryExecutionContext`](crate::model::QueryExecutionContext)
-    #[non_exhaustive]
+    /// A builder for [`QueryExecutionContext`](crate::model::QueryExecutionContext).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) database: std::option::Option<std::string::String>,
@@ -1190,7 +1210,7 @@ pub mod query_execution_context {
             self.catalog = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryExecutionContext`](crate::model::QueryExecutionContext)
+        /// Consumes the builder and constructs a [`QueryExecutionContext`](crate::model::QueryExecutionContext).
         pub fn build(self) -> crate::model::QueryExecutionContext {
             crate::model::QueryExecutionContext {
                 database: self.database,
@@ -1200,7 +1220,7 @@ pub mod query_execution_context {
     }
 }
 impl QueryExecutionContext {
-    /// Creates a new builder-style object to manufacture [`QueryExecutionContext`](crate::model::QueryExecutionContext)
+    /// Creates a new builder-style object to manufacture [`QueryExecutionContext`](crate::model::QueryExecutionContext).
     pub fn builder() -> crate::model::query_execution_context::Builder {
         crate::model::query_execution_context::Builder::default()
     }
@@ -1211,14 +1231,19 @@ impl QueryExecutionContext {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkGroupSummary {
     /// <p>The name of the workgroup.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The state of the workgroup.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::WorkGroupState>,
     /// <p>The workgroup description.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The workgroup creation date and time.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The engine version setting for all queries on the workgroup. Queries on the <code>AmazonAthenaPreviewFunctionality</code> workgroup run on the preview engine regardless of this setting.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<crate::model::EngineVersion>,
 }
 impl WorkGroupSummary {
@@ -1254,11 +1279,10 @@ impl std::fmt::Debug for WorkGroupSummary {
         formatter.finish()
     }
 }
-/// See [`WorkGroupSummary`](crate::model::WorkGroupSummary)
+/// See [`WorkGroupSummary`](crate::model::WorkGroupSummary).
 pub mod work_group_summary {
 
-    /// A builder for [`WorkGroupSummary`](crate::model::WorkGroupSummary)
-    #[non_exhaustive]
+    /// A builder for [`WorkGroupSummary`](crate::model::WorkGroupSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1327,7 +1351,7 @@ pub mod work_group_summary {
             self.engine_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkGroupSummary`](crate::model::WorkGroupSummary)
+        /// Consumes the builder and constructs a [`WorkGroupSummary`](crate::model::WorkGroupSummary).
         pub fn build(self) -> crate::model::WorkGroupSummary {
             crate::model::WorkGroupSummary {
                 name: self.name,
@@ -1340,7 +1364,7 @@ pub mod work_group_summary {
     }
 }
 impl WorkGroupSummary {
-    /// Creates a new builder-style object to manufacture [`WorkGroupSummary`](crate::model::WorkGroupSummary)
+    /// Creates a new builder-style object to manufacture [`WorkGroupSummary`](crate::model::WorkGroupSummary).
     pub fn builder() -> crate::model::work_group_summary::Builder {
         crate::model::work_group_summary::Builder::default()
     }
@@ -1351,18 +1375,25 @@ impl WorkGroupSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TableMetadata {
     /// <p>The name of the table.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The time that the table was created.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last time the table was accessed.</p>
+    #[doc(hidden)]
     pub last_access_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The type of table. In Athena, only <code>EXTERNAL_TABLE</code> is supported.</p>
+    #[doc(hidden)]
     pub table_type: std::option::Option<std::string::String>,
     /// <p>A list of the columns in the table.</p>
+    #[doc(hidden)]
     pub columns: std::option::Option<std::vec::Vec<crate::model::Column>>,
     /// <p>A list of the partition keys in the table.</p>
+    #[doc(hidden)]
     pub partition_keys: std::option::Option<std::vec::Vec<crate::model::Column>>,
     /// <p>A set of custom key/value pairs for table properties.</p>
+    #[doc(hidden)]
     pub parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1412,11 +1443,10 @@ impl std::fmt::Debug for TableMetadata {
         formatter.finish()
     }
 }
-/// See [`TableMetadata`](crate::model::TableMetadata)
+/// See [`TableMetadata`](crate::model::TableMetadata).
 pub mod table_metadata {
 
-    /// A builder for [`TableMetadata`](crate::model::TableMetadata)
-    #[non_exhaustive]
+    /// A builder for [`TableMetadata`](crate::model::TableMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1539,7 +1569,7 @@ pub mod table_metadata {
             self.parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`TableMetadata`](crate::model::TableMetadata)
+        /// Consumes the builder and constructs a [`TableMetadata`](crate::model::TableMetadata).
         pub fn build(self) -> crate::model::TableMetadata {
             crate::model::TableMetadata {
                 name: self.name,
@@ -1554,7 +1584,7 @@ pub mod table_metadata {
     }
 }
 impl TableMetadata {
-    /// Creates a new builder-style object to manufacture [`TableMetadata`](crate::model::TableMetadata)
+    /// Creates a new builder-style object to manufacture [`TableMetadata`](crate::model::TableMetadata).
     pub fn builder() -> crate::model::table_metadata::Builder {
         crate::model::table_metadata::Builder::default()
     }
@@ -1565,10 +1595,13 @@ impl TableMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Column {
     /// <p>The name of the column.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The data type of the column.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>Optional information about the column.</p>
+    #[doc(hidden)]
     pub comment: std::option::Option<std::string::String>,
 }
 impl Column {
@@ -1594,11 +1627,10 @@ impl std::fmt::Debug for Column {
         formatter.finish()
     }
 }
-/// See [`Column`](crate::model::Column)
+/// See [`Column`](crate::model::Column).
 pub mod column {
 
-    /// A builder for [`Column`](crate::model::Column)
-    #[non_exhaustive]
+    /// A builder for [`Column`](crate::model::Column).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1636,7 +1668,7 @@ pub mod column {
             self.comment = input;
             self
         }
-        /// Consumes the builder and constructs a [`Column`](crate::model::Column)
+        /// Consumes the builder and constructs a [`Column`](crate::model::Column).
         pub fn build(self) -> crate::model::Column {
             crate::model::Column {
                 name: self.name,
@@ -1647,7 +1679,7 @@ pub mod column {
     }
 }
 impl Column {
-    /// Creates a new builder-style object to manufacture [`Column`](crate::model::Column)
+    /// Creates a new builder-style object to manufacture [`Column`](crate::model::Column).
     pub fn builder() -> crate::model::column::Builder {
         crate::model::column::Builder::default()
     }
@@ -1658,8 +1690,10 @@ impl Column {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PreparedStatementSummary {
     /// <p>The name of the prepared statement.</p>
+    #[doc(hidden)]
     pub statement_name: std::option::Option<std::string::String>,
     /// <p>The last modified time of the prepared statement.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PreparedStatementSummary {
@@ -1680,11 +1714,10 @@ impl std::fmt::Debug for PreparedStatementSummary {
         formatter.finish()
     }
 }
-/// See [`PreparedStatementSummary`](crate::model::PreparedStatementSummary)
+/// See [`PreparedStatementSummary`](crate::model::PreparedStatementSummary).
 pub mod prepared_statement_summary {
 
-    /// A builder for [`PreparedStatementSummary`](crate::model::PreparedStatementSummary)
-    #[non_exhaustive]
+    /// A builder for [`PreparedStatementSummary`](crate::model::PreparedStatementSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) statement_name: std::option::Option<std::string::String>,
@@ -1717,7 +1750,7 @@ pub mod prepared_statement_summary {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`PreparedStatementSummary`](crate::model::PreparedStatementSummary)
+        /// Consumes the builder and constructs a [`PreparedStatementSummary`](crate::model::PreparedStatementSummary).
         pub fn build(self) -> crate::model::PreparedStatementSummary {
             crate::model::PreparedStatementSummary {
                 statement_name: self.statement_name,
@@ -1727,7 +1760,7 @@ pub mod prepared_statement_summary {
     }
 }
 impl PreparedStatementSummary {
-    /// Creates a new builder-style object to manufacture [`PreparedStatementSummary`](crate::model::PreparedStatementSummary)
+    /// Creates a new builder-style object to manufacture [`PreparedStatementSummary`](crate::model::PreparedStatementSummary).
     pub fn builder() -> crate::model::prepared_statement_summary::Builder {
         crate::model::prepared_statement_summary::Builder::default()
     }
@@ -1738,8 +1771,10 @@ impl PreparedStatementSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataCatalogSummary {
     /// <p>The name of the data catalog. The catalog name is unique for the Amazon Web Services account and can use a maximum of 127 alphanumeric, underscore, at sign, or hyphen characters. The remainder of the length constraint of 256 is reserved for use by Athena.</p>
+    #[doc(hidden)]
     pub catalog_name: std::option::Option<std::string::String>,
     /// <p>The data catalog type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::DataCatalogType>,
 }
 impl DataCatalogSummary {
@@ -1760,11 +1795,10 @@ impl std::fmt::Debug for DataCatalogSummary {
         formatter.finish()
     }
 }
-/// See [`DataCatalogSummary`](crate::model::DataCatalogSummary)
+/// See [`DataCatalogSummary`](crate::model::DataCatalogSummary).
 pub mod data_catalog_summary {
 
-    /// A builder for [`DataCatalogSummary`](crate::model::DataCatalogSummary)
-    #[non_exhaustive]
+    /// A builder for [`DataCatalogSummary`](crate::model::DataCatalogSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog_name: std::option::Option<std::string::String>,
@@ -1794,7 +1828,7 @@ pub mod data_catalog_summary {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataCatalogSummary`](crate::model::DataCatalogSummary)
+        /// Consumes the builder and constructs a [`DataCatalogSummary`](crate::model::DataCatalogSummary).
         pub fn build(self) -> crate::model::DataCatalogSummary {
             crate::model::DataCatalogSummary {
                 catalog_name: self.catalog_name,
@@ -1804,7 +1838,7 @@ pub mod data_catalog_summary {
     }
 }
 impl DataCatalogSummary {
-    /// Creates a new builder-style object to manufacture [`DataCatalogSummary`](crate::model::DataCatalogSummary)
+    /// Creates a new builder-style object to manufacture [`DataCatalogSummary`](crate::model::DataCatalogSummary).
     pub fn builder() -> crate::model::data_catalog_summary::Builder {
         crate::model::data_catalog_summary::Builder::default()
     }
@@ -1815,10 +1849,13 @@ impl DataCatalogSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Database {
     /// <p>The name of the database.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>An optional description of the database.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A set of custom key/value pairs.</p>
+    #[doc(hidden)]
     pub parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1848,11 +1885,10 @@ impl std::fmt::Debug for Database {
         formatter.finish()
     }
 }
-/// See [`Database`](crate::model::Database)
+/// See [`Database`](crate::model::Database).
 pub mod database {
 
-    /// A builder for [`Database`](crate::model::Database)
-    #[non_exhaustive]
+    /// A builder for [`Database`](crate::model::Database).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1907,7 +1943,7 @@ pub mod database {
             self.parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`Database`](crate::model::Database)
+        /// Consumes the builder and constructs a [`Database`](crate::model::Database).
         pub fn build(self) -> crate::model::Database {
             crate::model::Database {
                 name: self.name,
@@ -1918,7 +1954,7 @@ pub mod database {
     }
 }
 impl Database {
-    /// Creates a new builder-style object to manufacture [`Database`](crate::model::Database)
+    /// Creates a new builder-style object to manufacture [`Database`](crate::model::Database).
     pub fn builder() -> crate::model::database::Builder {
         crate::model::database::Builder::default()
     }
@@ -1929,14 +1965,19 @@ impl Database {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkGroup {
     /// <p>The workgroup name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The state of the workgroup: ENABLED or DISABLED.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::WorkGroupState>,
     /// <p>The configuration of the workgroup, which includes the location in Amazon S3 where query results are stored, the encryption configuration, if any, used for query results; whether the Amazon CloudWatch Metrics are enabled for the workgroup; whether workgroup settings override client-side settings; and the data usage limits for the amount of data scanned per query or per workgroup. The workgroup settings override is specified in <code>EnforceWorkGroupConfiguration</code> (true/false) in the <code>WorkGroupConfiguration</code>. See <code>WorkGroupConfiguration$EnforceWorkGroupConfiguration</code>.</p>
+    #[doc(hidden)]
     pub configuration: std::option::Option<crate::model::WorkGroupConfiguration>,
     /// <p>The workgroup description.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date and time the workgroup was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl WorkGroup {
@@ -1972,11 +2013,10 @@ impl std::fmt::Debug for WorkGroup {
         formatter.finish()
     }
 }
-/// See [`WorkGroup`](crate::model::WorkGroup)
+/// See [`WorkGroup`](crate::model::WorkGroup).
 pub mod work_group {
 
-    /// A builder for [`WorkGroup`](crate::model::WorkGroup)
-    #[non_exhaustive]
+    /// A builder for [`WorkGroup`](crate::model::WorkGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2045,7 +2085,7 @@ pub mod work_group {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkGroup`](crate::model::WorkGroup)
+        /// Consumes the builder and constructs a [`WorkGroup`](crate::model::WorkGroup).
         pub fn build(self) -> crate::model::WorkGroup {
             crate::model::WorkGroup {
                 name: self.name,
@@ -2058,7 +2098,7 @@ pub mod work_group {
     }
 }
 impl WorkGroup {
-    /// Creates a new builder-style object to manufacture [`WorkGroup`](crate::model::WorkGroup)
+    /// Creates a new builder-style object to manufacture [`WorkGroup`](crate::model::WorkGroup).
     pub fn builder() -> crate::model::work_group::Builder {
         crate::model::work_group::Builder::default()
     }
@@ -2069,16 +2109,22 @@ impl WorkGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkGroupConfiguration {
     /// <p>The configuration for the workgroup, which includes the location in Amazon S3 where query results are stored and the encryption option, if any, used for query results. To run the query, you must specify the query results location using one of the ways: either in the workgroup using this setting, or for individual queries (client-side), using <code>ResultConfiguration$OutputLocation</code>. If none of them is set, Athena issues an error that no output location is provided. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Query Results</a>.</p>
+    #[doc(hidden)]
     pub result_configuration: std::option::Option<crate::model::ResultConfiguration>,
     /// <p>If set to "true", the settings for the workgroup override client-side settings. If set to "false", client-side settings are used. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override Client-Side Settings</a>.</p>
+    #[doc(hidden)]
     pub enforce_work_group_configuration: std::option::Option<bool>,
     /// <p>Indicates that the Amazon CloudWatch metrics are enabled for the workgroup.</p>
+    #[doc(hidden)]
     pub publish_cloud_watch_metrics_enabled: std::option::Option<bool>,
     /// <p>The upper data usage limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan.</p>
+    #[doc(hidden)]
     pub bytes_scanned_cutoff_per_query: std::option::Option<i64>,
     /// <p>If set to <code>true</code>, allows members assigned to a workgroup to reference Amazon S3 Requester Pays buckets in queries. If set to <code>false</code>, workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is <code>false</code>. For more information about Requester Pays buckets, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html">Requester Pays Buckets</a> in the <i>Amazon Simple Storage Service Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub requester_pays_enabled: std::option::Option<bool>,
     /// <p>The engine version that all queries running on the workgroup use. Queries on the <code>AmazonAthenaPreviewFunctionality</code> workgroup run on the preview engine regardless of this setting.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<crate::model::EngineVersion>,
 }
 impl WorkGroupConfiguration {
@@ -2128,11 +2174,10 @@ impl std::fmt::Debug for WorkGroupConfiguration {
         formatter.finish()
     }
 }
-/// See [`WorkGroupConfiguration`](crate::model::WorkGroupConfiguration)
+/// See [`WorkGroupConfiguration`](crate::model::WorkGroupConfiguration).
 pub mod work_group_configuration {
 
-    /// A builder for [`WorkGroupConfiguration`](crate::model::WorkGroupConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`WorkGroupConfiguration`](crate::model::WorkGroupConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) result_configuration: std::option::Option<crate::model::ResultConfiguration>,
@@ -2218,7 +2263,7 @@ pub mod work_group_configuration {
             self.engine_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkGroupConfiguration`](crate::model::WorkGroupConfiguration)
+        /// Consumes the builder and constructs a [`WorkGroupConfiguration`](crate::model::WorkGroupConfiguration).
         pub fn build(self) -> crate::model::WorkGroupConfiguration {
             crate::model::WorkGroupConfiguration {
                 result_configuration: self.result_configuration,
@@ -2232,9 +2277,750 @@ pub mod work_group_configuration {
     }
 }
 impl WorkGroupConfiguration {
-    /// Creates a new builder-style object to manufacture [`WorkGroupConfiguration`](crate::model::WorkGroupConfiguration)
+    /// Creates a new builder-style object to manufacture [`WorkGroupConfiguration`](crate::model::WorkGroupConfiguration).
     pub fn builder() -> crate::model::work_group_configuration::Builder {
         crate::model::work_group_configuration::Builder::default()
+    }
+}
+
+/// <p>The query execution timeline, statistics on input and output rows and bytes, and the different query stages that form the query execution plan.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct QueryRuntimeStatistics {
+    /// <p>Timeline statistics such as query queue time, planning time, execution time, service processing time, and total execution time.</p>
+    #[doc(hidden)]
+    pub timeline: std::option::Option<crate::model::QueryRuntimeStatisticsTimeline>,
+    /// <p>Statistics such as input rows and bytes read by the query, rows and bytes output by the query, and the number of rows written by the query.</p>
+    #[doc(hidden)]
+    pub rows: std::option::Option<crate::model::QueryRuntimeStatisticsRows>,
+    /// <p>Stage statistics such as input and output rows and bytes, execution time, and stage state. This information also includes substages and the query stage plan.</p>
+    #[doc(hidden)]
+    pub output_stage: std::option::Option<crate::model::QueryStage>,
+}
+impl QueryRuntimeStatistics {
+    /// <p>Timeline statistics such as query queue time, planning time, execution time, service processing time, and total execution time.</p>
+    pub fn timeline(&self) -> std::option::Option<&crate::model::QueryRuntimeStatisticsTimeline> {
+        self.timeline.as_ref()
+    }
+    /// <p>Statistics such as input rows and bytes read by the query, rows and bytes output by the query, and the number of rows written by the query.</p>
+    pub fn rows(&self) -> std::option::Option<&crate::model::QueryRuntimeStatisticsRows> {
+        self.rows.as_ref()
+    }
+    /// <p>Stage statistics such as input and output rows and bytes, execution time, and stage state. This information also includes substages and the query stage plan.</p>
+    pub fn output_stage(&self) -> std::option::Option<&crate::model::QueryStage> {
+        self.output_stage.as_ref()
+    }
+}
+impl std::fmt::Debug for QueryRuntimeStatistics {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("QueryRuntimeStatistics");
+        formatter.field("timeline", &self.timeline);
+        formatter.field("rows", &self.rows);
+        formatter.field("output_stage", &self.output_stage);
+        formatter.finish()
+    }
+}
+/// See [`QueryRuntimeStatistics`](crate::model::QueryRuntimeStatistics).
+pub mod query_runtime_statistics {
+
+    /// A builder for [`QueryRuntimeStatistics`](crate::model::QueryRuntimeStatistics).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) timeline: std::option::Option<crate::model::QueryRuntimeStatisticsTimeline>,
+        pub(crate) rows: std::option::Option<crate::model::QueryRuntimeStatisticsRows>,
+        pub(crate) output_stage: std::option::Option<crate::model::QueryStage>,
+    }
+    impl Builder {
+        /// <p>Timeline statistics such as query queue time, planning time, execution time, service processing time, and total execution time.</p>
+        pub fn timeline(mut self, input: crate::model::QueryRuntimeStatisticsTimeline) -> Self {
+            self.timeline = Some(input);
+            self
+        }
+        /// <p>Timeline statistics such as query queue time, planning time, execution time, service processing time, and total execution time.</p>
+        pub fn set_timeline(
+            mut self,
+            input: std::option::Option<crate::model::QueryRuntimeStatisticsTimeline>,
+        ) -> Self {
+            self.timeline = input;
+            self
+        }
+        /// <p>Statistics such as input rows and bytes read by the query, rows and bytes output by the query, and the number of rows written by the query.</p>
+        pub fn rows(mut self, input: crate::model::QueryRuntimeStatisticsRows) -> Self {
+            self.rows = Some(input);
+            self
+        }
+        /// <p>Statistics such as input rows and bytes read by the query, rows and bytes output by the query, and the number of rows written by the query.</p>
+        pub fn set_rows(
+            mut self,
+            input: std::option::Option<crate::model::QueryRuntimeStatisticsRows>,
+        ) -> Self {
+            self.rows = input;
+            self
+        }
+        /// <p>Stage statistics such as input and output rows and bytes, execution time, and stage state. This information also includes substages and the query stage plan.</p>
+        pub fn output_stage(mut self, input: crate::model::QueryStage) -> Self {
+            self.output_stage = Some(input);
+            self
+        }
+        /// <p>Stage statistics such as input and output rows and bytes, execution time, and stage state. This information also includes substages and the query stage plan.</p>
+        pub fn set_output_stage(
+            mut self,
+            input: std::option::Option<crate::model::QueryStage>,
+        ) -> Self {
+            self.output_stage = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`QueryRuntimeStatistics`](crate::model::QueryRuntimeStatistics).
+        pub fn build(self) -> crate::model::QueryRuntimeStatistics {
+            crate::model::QueryRuntimeStatistics {
+                timeline: self.timeline,
+                rows: self.rows,
+                output_stage: self.output_stage,
+            }
+        }
+    }
+}
+impl QueryRuntimeStatistics {
+    /// Creates a new builder-style object to manufacture [`QueryRuntimeStatistics`](crate::model::QueryRuntimeStatistics).
+    pub fn builder() -> crate::model::query_runtime_statistics::Builder {
+        crate::model::query_runtime_statistics::Builder::default()
+    }
+}
+
+/// <p>Stage statistics such as input and output rows and bytes, execution time and stage state. This information also includes substages and the query stage plan.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct QueryStage {
+    /// <p>The identifier for a stage.</p>
+    #[doc(hidden)]
+    pub stage_id: std::option::Option<i64>,
+    /// <p>State of the stage after query execution.</p>
+    #[doc(hidden)]
+    pub state: std::option::Option<std::string::String>,
+    /// <p>The number of bytes output from the stage after execution.</p>
+    #[doc(hidden)]
+    pub output_bytes: std::option::Option<i64>,
+    /// <p>The number of rows output from the stage after execution.</p>
+    #[doc(hidden)]
+    pub output_rows: std::option::Option<i64>,
+    /// <p>The number of bytes input into the stage for execution.</p>
+    #[doc(hidden)]
+    pub input_bytes: std::option::Option<i64>,
+    /// <p>The number of rows input into the stage for execution.</p>
+    #[doc(hidden)]
+    pub input_rows: std::option::Option<i64>,
+    /// <p>Time taken to execute this stage.</p>
+    #[doc(hidden)]
+    pub execution_time: std::option::Option<i64>,
+    /// <p>Stage plan information such as name, identifier, sub plans, and source stages.</p>
+    #[doc(hidden)]
+    pub query_stage_plan: std::option::Option<crate::model::QueryStagePlanNode>,
+    /// <p>List of sub query stages that form this stage execution plan.</p>
+    #[doc(hidden)]
+    pub sub_stages: std::option::Option<std::vec::Vec<crate::model::QueryStage>>,
+}
+impl QueryStage {
+    /// <p>The identifier for a stage.</p>
+    pub fn stage_id(&self) -> std::option::Option<i64> {
+        self.stage_id
+    }
+    /// <p>State of the stage after query execution.</p>
+    pub fn state(&self) -> std::option::Option<&str> {
+        self.state.as_deref()
+    }
+    /// <p>The number of bytes output from the stage after execution.</p>
+    pub fn output_bytes(&self) -> std::option::Option<i64> {
+        self.output_bytes
+    }
+    /// <p>The number of rows output from the stage after execution.</p>
+    pub fn output_rows(&self) -> std::option::Option<i64> {
+        self.output_rows
+    }
+    /// <p>The number of bytes input into the stage for execution.</p>
+    pub fn input_bytes(&self) -> std::option::Option<i64> {
+        self.input_bytes
+    }
+    /// <p>The number of rows input into the stage for execution.</p>
+    pub fn input_rows(&self) -> std::option::Option<i64> {
+        self.input_rows
+    }
+    /// <p>Time taken to execute this stage.</p>
+    pub fn execution_time(&self) -> std::option::Option<i64> {
+        self.execution_time
+    }
+    /// <p>Stage plan information such as name, identifier, sub plans, and source stages.</p>
+    pub fn query_stage_plan(&self) -> std::option::Option<&crate::model::QueryStagePlanNode> {
+        self.query_stage_plan.as_ref()
+    }
+    /// <p>List of sub query stages that form this stage execution plan.</p>
+    pub fn sub_stages(&self) -> std::option::Option<&[crate::model::QueryStage]> {
+        self.sub_stages.as_deref()
+    }
+}
+impl std::fmt::Debug for QueryStage {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("QueryStage");
+        formatter.field("stage_id", &self.stage_id);
+        formatter.field("state", &self.state);
+        formatter.field("output_bytes", &self.output_bytes);
+        formatter.field("output_rows", &self.output_rows);
+        formatter.field("input_bytes", &self.input_bytes);
+        formatter.field("input_rows", &self.input_rows);
+        formatter.field("execution_time", &self.execution_time);
+        formatter.field("query_stage_plan", &self.query_stage_plan);
+        formatter.field("sub_stages", &self.sub_stages);
+        formatter.finish()
+    }
+}
+/// See [`QueryStage`](crate::model::QueryStage).
+pub mod query_stage {
+
+    /// A builder for [`QueryStage`](crate::model::QueryStage).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) stage_id: std::option::Option<i64>,
+        pub(crate) state: std::option::Option<std::string::String>,
+        pub(crate) output_bytes: std::option::Option<i64>,
+        pub(crate) output_rows: std::option::Option<i64>,
+        pub(crate) input_bytes: std::option::Option<i64>,
+        pub(crate) input_rows: std::option::Option<i64>,
+        pub(crate) execution_time: std::option::Option<i64>,
+        pub(crate) query_stage_plan: std::option::Option<crate::model::QueryStagePlanNode>,
+        pub(crate) sub_stages: std::option::Option<std::vec::Vec<crate::model::QueryStage>>,
+    }
+    impl Builder {
+        /// <p>The identifier for a stage.</p>
+        pub fn stage_id(mut self, input: i64) -> Self {
+            self.stage_id = Some(input);
+            self
+        }
+        /// <p>The identifier for a stage.</p>
+        pub fn set_stage_id(mut self, input: std::option::Option<i64>) -> Self {
+            self.stage_id = input;
+            self
+        }
+        /// <p>State of the stage after query execution.</p>
+        pub fn state(mut self, input: impl Into<std::string::String>) -> Self {
+            self.state = Some(input.into());
+            self
+        }
+        /// <p>State of the stage after query execution.</p>
+        pub fn set_state(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.state = input;
+            self
+        }
+        /// <p>The number of bytes output from the stage after execution.</p>
+        pub fn output_bytes(mut self, input: i64) -> Self {
+            self.output_bytes = Some(input);
+            self
+        }
+        /// <p>The number of bytes output from the stage after execution.</p>
+        pub fn set_output_bytes(mut self, input: std::option::Option<i64>) -> Self {
+            self.output_bytes = input;
+            self
+        }
+        /// <p>The number of rows output from the stage after execution.</p>
+        pub fn output_rows(mut self, input: i64) -> Self {
+            self.output_rows = Some(input);
+            self
+        }
+        /// <p>The number of rows output from the stage after execution.</p>
+        pub fn set_output_rows(mut self, input: std::option::Option<i64>) -> Self {
+            self.output_rows = input;
+            self
+        }
+        /// <p>The number of bytes input into the stage for execution.</p>
+        pub fn input_bytes(mut self, input: i64) -> Self {
+            self.input_bytes = Some(input);
+            self
+        }
+        /// <p>The number of bytes input into the stage for execution.</p>
+        pub fn set_input_bytes(mut self, input: std::option::Option<i64>) -> Self {
+            self.input_bytes = input;
+            self
+        }
+        /// <p>The number of rows input into the stage for execution.</p>
+        pub fn input_rows(mut self, input: i64) -> Self {
+            self.input_rows = Some(input);
+            self
+        }
+        /// <p>The number of rows input into the stage for execution.</p>
+        pub fn set_input_rows(mut self, input: std::option::Option<i64>) -> Self {
+            self.input_rows = input;
+            self
+        }
+        /// <p>Time taken to execute this stage.</p>
+        pub fn execution_time(mut self, input: i64) -> Self {
+            self.execution_time = Some(input);
+            self
+        }
+        /// <p>Time taken to execute this stage.</p>
+        pub fn set_execution_time(mut self, input: std::option::Option<i64>) -> Self {
+            self.execution_time = input;
+            self
+        }
+        /// <p>Stage plan information such as name, identifier, sub plans, and source stages.</p>
+        pub fn query_stage_plan(mut self, input: crate::model::QueryStagePlanNode) -> Self {
+            self.query_stage_plan = Some(input);
+            self
+        }
+        /// <p>Stage plan information such as name, identifier, sub plans, and source stages.</p>
+        pub fn set_query_stage_plan(
+            mut self,
+            input: std::option::Option<crate::model::QueryStagePlanNode>,
+        ) -> Self {
+            self.query_stage_plan = input;
+            self
+        }
+        /// Appends an item to `sub_stages`.
+        ///
+        /// To override the contents of this collection use [`set_sub_stages`](Self::set_sub_stages).
+        ///
+        /// <p>List of sub query stages that form this stage execution plan.</p>
+        pub fn sub_stages(mut self, input: crate::model::QueryStage) -> Self {
+            let mut v = self.sub_stages.unwrap_or_default();
+            v.push(input);
+            self.sub_stages = Some(v);
+            self
+        }
+        /// <p>List of sub query stages that form this stage execution plan.</p>
+        pub fn set_sub_stages(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::QueryStage>>,
+        ) -> Self {
+            self.sub_stages = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`QueryStage`](crate::model::QueryStage).
+        pub fn build(self) -> crate::model::QueryStage {
+            crate::model::QueryStage {
+                stage_id: self.stage_id,
+                state: self.state,
+                output_bytes: self.output_bytes,
+                output_rows: self.output_rows,
+                input_bytes: self.input_bytes,
+                input_rows: self.input_rows,
+                execution_time: self.execution_time,
+                query_stage_plan: self.query_stage_plan,
+                sub_stages: self.sub_stages,
+            }
+        }
+    }
+}
+impl QueryStage {
+    /// Creates a new builder-style object to manufacture [`QueryStage`](crate::model::QueryStage).
+    pub fn builder() -> crate::model::query_stage::Builder {
+        crate::model::query_stage::Builder::default()
+    }
+}
+
+/// <p>Stage plan information such as name, identifier, sub plans, and remote sources.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct QueryStagePlanNode {
+    /// <p>Name of the query stage plan that describes the operation this stage is performing as part of query execution.</p>
+    #[doc(hidden)]
+    pub name: std::option::Option<std::string::String>,
+    /// <p>Information about the operation this query stage plan node is performing.</p>
+    #[doc(hidden)]
+    pub identifier: std::option::Option<std::string::String>,
+    /// <p>Stage plan information such as name, identifier, sub plans, and remote sources of child plan nodes/</p>
+    #[doc(hidden)]
+    pub children: std::option::Option<std::vec::Vec<crate::model::QueryStagePlanNode>>,
+    /// <p>Source plan node IDs.</p>
+    #[doc(hidden)]
+    pub remote_sources: std::option::Option<std::vec::Vec<std::string::String>>,
+}
+impl QueryStagePlanNode {
+    /// <p>Name of the query stage plan that describes the operation this stage is performing as part of query execution.</p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+    /// <p>Information about the operation this query stage plan node is performing.</p>
+    pub fn identifier(&self) -> std::option::Option<&str> {
+        self.identifier.as_deref()
+    }
+    /// <p>Stage plan information such as name, identifier, sub plans, and remote sources of child plan nodes/</p>
+    pub fn children(&self) -> std::option::Option<&[crate::model::QueryStagePlanNode]> {
+        self.children.as_deref()
+    }
+    /// <p>Source plan node IDs.</p>
+    pub fn remote_sources(&self) -> std::option::Option<&[std::string::String]> {
+        self.remote_sources.as_deref()
+    }
+}
+impl std::fmt::Debug for QueryStagePlanNode {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("QueryStagePlanNode");
+        formatter.field("name", &self.name);
+        formatter.field("identifier", &self.identifier);
+        formatter.field("children", &self.children);
+        formatter.field("remote_sources", &self.remote_sources);
+        formatter.finish()
+    }
+}
+/// See [`QueryStagePlanNode`](crate::model::QueryStagePlanNode).
+pub mod query_stage_plan_node {
+
+    /// A builder for [`QueryStagePlanNode`](crate::model::QueryStagePlanNode).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) name: std::option::Option<std::string::String>,
+        pub(crate) identifier: std::option::Option<std::string::String>,
+        pub(crate) children: std::option::Option<std::vec::Vec<crate::model::QueryStagePlanNode>>,
+        pub(crate) remote_sources: std::option::Option<std::vec::Vec<std::string::String>>,
+    }
+    impl Builder {
+        /// <p>Name of the query stage plan that describes the operation this stage is performing as part of query execution.</p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>Name of the query stage plan that describes the operation this stage is performing as part of query execution.</p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// <p>Information about the operation this query stage plan node is performing.</p>
+        pub fn identifier(mut self, input: impl Into<std::string::String>) -> Self {
+            self.identifier = Some(input.into());
+            self
+        }
+        /// <p>Information about the operation this query stage plan node is performing.</p>
+        pub fn set_identifier(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.identifier = input;
+            self
+        }
+        /// Appends an item to `children`.
+        ///
+        /// To override the contents of this collection use [`set_children`](Self::set_children).
+        ///
+        /// <p>Stage plan information such as name, identifier, sub plans, and remote sources of child plan nodes/</p>
+        pub fn children(mut self, input: crate::model::QueryStagePlanNode) -> Self {
+            let mut v = self.children.unwrap_or_default();
+            v.push(input);
+            self.children = Some(v);
+            self
+        }
+        /// <p>Stage plan information such as name, identifier, sub plans, and remote sources of child plan nodes/</p>
+        pub fn set_children(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::QueryStagePlanNode>>,
+        ) -> Self {
+            self.children = input;
+            self
+        }
+        /// Appends an item to `remote_sources`.
+        ///
+        /// To override the contents of this collection use [`set_remote_sources`](Self::set_remote_sources).
+        ///
+        /// <p>Source plan node IDs.</p>
+        pub fn remote_sources(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.remote_sources.unwrap_or_default();
+            v.push(input.into());
+            self.remote_sources = Some(v);
+            self
+        }
+        /// <p>Source plan node IDs.</p>
+        pub fn set_remote_sources(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.remote_sources = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`QueryStagePlanNode`](crate::model::QueryStagePlanNode).
+        pub fn build(self) -> crate::model::QueryStagePlanNode {
+            crate::model::QueryStagePlanNode {
+                name: self.name,
+                identifier: self.identifier,
+                children: self.children,
+                remote_sources: self.remote_sources,
+            }
+        }
+    }
+}
+impl QueryStagePlanNode {
+    /// Creates a new builder-style object to manufacture [`QueryStagePlanNode`](crate::model::QueryStagePlanNode).
+    pub fn builder() -> crate::model::query_stage_plan_node::Builder {
+        crate::model::query_stage_plan_node::Builder::default()
+    }
+}
+
+/// <p>Statistics such as input rows and bytes read by the query, rows and bytes output by the query, and the number of rows written by the query.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct QueryRuntimeStatisticsRows {
+    /// <p>The number of rows read to execute the query.</p>
+    #[doc(hidden)]
+    pub input_rows: std::option::Option<i64>,
+    /// <p>The number of bytes read to execute the query.</p>
+    #[doc(hidden)]
+    pub input_bytes: std::option::Option<i64>,
+    /// <p>The number of bytes returned by the query.</p>
+    #[doc(hidden)]
+    pub output_bytes: std::option::Option<i64>,
+    /// <p>The number of rows returned by the query.</p>
+    #[doc(hidden)]
+    pub output_rows: std::option::Option<i64>,
+}
+impl QueryRuntimeStatisticsRows {
+    /// <p>The number of rows read to execute the query.</p>
+    pub fn input_rows(&self) -> std::option::Option<i64> {
+        self.input_rows
+    }
+    /// <p>The number of bytes read to execute the query.</p>
+    pub fn input_bytes(&self) -> std::option::Option<i64> {
+        self.input_bytes
+    }
+    /// <p>The number of bytes returned by the query.</p>
+    pub fn output_bytes(&self) -> std::option::Option<i64> {
+        self.output_bytes
+    }
+    /// <p>The number of rows returned by the query.</p>
+    pub fn output_rows(&self) -> std::option::Option<i64> {
+        self.output_rows
+    }
+}
+impl std::fmt::Debug for QueryRuntimeStatisticsRows {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("QueryRuntimeStatisticsRows");
+        formatter.field("input_rows", &self.input_rows);
+        formatter.field("input_bytes", &self.input_bytes);
+        formatter.field("output_bytes", &self.output_bytes);
+        formatter.field("output_rows", &self.output_rows);
+        formatter.finish()
+    }
+}
+/// See [`QueryRuntimeStatisticsRows`](crate::model::QueryRuntimeStatisticsRows).
+pub mod query_runtime_statistics_rows {
+
+    /// A builder for [`QueryRuntimeStatisticsRows`](crate::model::QueryRuntimeStatisticsRows).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) input_rows: std::option::Option<i64>,
+        pub(crate) input_bytes: std::option::Option<i64>,
+        pub(crate) output_bytes: std::option::Option<i64>,
+        pub(crate) output_rows: std::option::Option<i64>,
+    }
+    impl Builder {
+        /// <p>The number of rows read to execute the query.</p>
+        pub fn input_rows(mut self, input: i64) -> Self {
+            self.input_rows = Some(input);
+            self
+        }
+        /// <p>The number of rows read to execute the query.</p>
+        pub fn set_input_rows(mut self, input: std::option::Option<i64>) -> Self {
+            self.input_rows = input;
+            self
+        }
+        /// <p>The number of bytes read to execute the query.</p>
+        pub fn input_bytes(mut self, input: i64) -> Self {
+            self.input_bytes = Some(input);
+            self
+        }
+        /// <p>The number of bytes read to execute the query.</p>
+        pub fn set_input_bytes(mut self, input: std::option::Option<i64>) -> Self {
+            self.input_bytes = input;
+            self
+        }
+        /// <p>The number of bytes returned by the query.</p>
+        pub fn output_bytes(mut self, input: i64) -> Self {
+            self.output_bytes = Some(input);
+            self
+        }
+        /// <p>The number of bytes returned by the query.</p>
+        pub fn set_output_bytes(mut self, input: std::option::Option<i64>) -> Self {
+            self.output_bytes = input;
+            self
+        }
+        /// <p>The number of rows returned by the query.</p>
+        pub fn output_rows(mut self, input: i64) -> Self {
+            self.output_rows = Some(input);
+            self
+        }
+        /// <p>The number of rows returned by the query.</p>
+        pub fn set_output_rows(mut self, input: std::option::Option<i64>) -> Self {
+            self.output_rows = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`QueryRuntimeStatisticsRows`](crate::model::QueryRuntimeStatisticsRows).
+        pub fn build(self) -> crate::model::QueryRuntimeStatisticsRows {
+            crate::model::QueryRuntimeStatisticsRows {
+                input_rows: self.input_rows,
+                input_bytes: self.input_bytes,
+                output_bytes: self.output_bytes,
+                output_rows: self.output_rows,
+            }
+        }
+    }
+}
+impl QueryRuntimeStatisticsRows {
+    /// Creates a new builder-style object to manufacture [`QueryRuntimeStatisticsRows`](crate::model::QueryRuntimeStatisticsRows).
+    pub fn builder() -> crate::model::query_runtime_statistics_rows::Builder {
+        crate::model::query_runtime_statistics_rows::Builder::default()
+    }
+}
+
+/// <p>Timeline statistics such as query queue time, planning time, execution time, service processing time, and total execution time.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct QueryRuntimeStatisticsTimeline {
+    /// <p>The number of milliseconds that the query was in your query queue waiting for resources. Note that if transient errors occur, Athena might automatically add the query back to the queue.</p>
+    #[doc(hidden)]
+    pub query_queue_time_in_millis: std::option::Option<i64>,
+    /// <p>The number of milliseconds that Athena took to plan the query processing flow. This includes the time spent retrieving table partitions from the data source. Note that because the query engine performs the query planning, query planning time is a subset of engine processing time.</p>
+    #[doc(hidden)]
+    pub query_planning_time_in_millis: std::option::Option<i64>,
+    /// <p>The number of milliseconds that the query took to execute.</p>
+    #[doc(hidden)]
+    pub engine_execution_time_in_millis: std::option::Option<i64>,
+    /// <p>The number of milliseconds that Athena took to finalize and publish the query results after the query engine finished running the query.</p>
+    #[doc(hidden)]
+    pub service_processing_time_in_millis: std::option::Option<i64>,
+    /// <p>The number of milliseconds that Athena took to run the query.</p>
+    #[doc(hidden)]
+    pub total_execution_time_in_millis: std::option::Option<i64>,
+}
+impl QueryRuntimeStatisticsTimeline {
+    /// <p>The number of milliseconds that the query was in your query queue waiting for resources. Note that if transient errors occur, Athena might automatically add the query back to the queue.</p>
+    pub fn query_queue_time_in_millis(&self) -> std::option::Option<i64> {
+        self.query_queue_time_in_millis
+    }
+    /// <p>The number of milliseconds that Athena took to plan the query processing flow. This includes the time spent retrieving table partitions from the data source. Note that because the query engine performs the query planning, query planning time is a subset of engine processing time.</p>
+    pub fn query_planning_time_in_millis(&self) -> std::option::Option<i64> {
+        self.query_planning_time_in_millis
+    }
+    /// <p>The number of milliseconds that the query took to execute.</p>
+    pub fn engine_execution_time_in_millis(&self) -> std::option::Option<i64> {
+        self.engine_execution_time_in_millis
+    }
+    /// <p>The number of milliseconds that Athena took to finalize and publish the query results after the query engine finished running the query.</p>
+    pub fn service_processing_time_in_millis(&self) -> std::option::Option<i64> {
+        self.service_processing_time_in_millis
+    }
+    /// <p>The number of milliseconds that Athena took to run the query.</p>
+    pub fn total_execution_time_in_millis(&self) -> std::option::Option<i64> {
+        self.total_execution_time_in_millis
+    }
+}
+impl std::fmt::Debug for QueryRuntimeStatisticsTimeline {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("QueryRuntimeStatisticsTimeline");
+        formatter.field(
+            "query_queue_time_in_millis",
+            &self.query_queue_time_in_millis,
+        );
+        formatter.field(
+            "query_planning_time_in_millis",
+            &self.query_planning_time_in_millis,
+        );
+        formatter.field(
+            "engine_execution_time_in_millis",
+            &self.engine_execution_time_in_millis,
+        );
+        formatter.field(
+            "service_processing_time_in_millis",
+            &self.service_processing_time_in_millis,
+        );
+        formatter.field(
+            "total_execution_time_in_millis",
+            &self.total_execution_time_in_millis,
+        );
+        formatter.finish()
+    }
+}
+/// See [`QueryRuntimeStatisticsTimeline`](crate::model::QueryRuntimeStatisticsTimeline).
+pub mod query_runtime_statistics_timeline {
+
+    /// A builder for [`QueryRuntimeStatisticsTimeline`](crate::model::QueryRuntimeStatisticsTimeline).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) query_queue_time_in_millis: std::option::Option<i64>,
+        pub(crate) query_planning_time_in_millis: std::option::Option<i64>,
+        pub(crate) engine_execution_time_in_millis: std::option::Option<i64>,
+        pub(crate) service_processing_time_in_millis: std::option::Option<i64>,
+        pub(crate) total_execution_time_in_millis: std::option::Option<i64>,
+    }
+    impl Builder {
+        /// <p>The number of milliseconds that the query was in your query queue waiting for resources. Note that if transient errors occur, Athena might automatically add the query back to the queue.</p>
+        pub fn query_queue_time_in_millis(mut self, input: i64) -> Self {
+            self.query_queue_time_in_millis = Some(input);
+            self
+        }
+        /// <p>The number of milliseconds that the query was in your query queue waiting for resources. Note that if transient errors occur, Athena might automatically add the query back to the queue.</p>
+        pub fn set_query_queue_time_in_millis(mut self, input: std::option::Option<i64>) -> Self {
+            self.query_queue_time_in_millis = input;
+            self
+        }
+        /// <p>The number of milliseconds that Athena took to plan the query processing flow. This includes the time spent retrieving table partitions from the data source. Note that because the query engine performs the query planning, query planning time is a subset of engine processing time.</p>
+        pub fn query_planning_time_in_millis(mut self, input: i64) -> Self {
+            self.query_planning_time_in_millis = Some(input);
+            self
+        }
+        /// <p>The number of milliseconds that Athena took to plan the query processing flow. This includes the time spent retrieving table partitions from the data source. Note that because the query engine performs the query planning, query planning time is a subset of engine processing time.</p>
+        pub fn set_query_planning_time_in_millis(
+            mut self,
+            input: std::option::Option<i64>,
+        ) -> Self {
+            self.query_planning_time_in_millis = input;
+            self
+        }
+        /// <p>The number of milliseconds that the query took to execute.</p>
+        pub fn engine_execution_time_in_millis(mut self, input: i64) -> Self {
+            self.engine_execution_time_in_millis = Some(input);
+            self
+        }
+        /// <p>The number of milliseconds that the query took to execute.</p>
+        pub fn set_engine_execution_time_in_millis(
+            mut self,
+            input: std::option::Option<i64>,
+        ) -> Self {
+            self.engine_execution_time_in_millis = input;
+            self
+        }
+        /// <p>The number of milliseconds that Athena took to finalize and publish the query results after the query engine finished running the query.</p>
+        pub fn service_processing_time_in_millis(mut self, input: i64) -> Self {
+            self.service_processing_time_in_millis = Some(input);
+            self
+        }
+        /// <p>The number of milliseconds that Athena took to finalize and publish the query results after the query engine finished running the query.</p>
+        pub fn set_service_processing_time_in_millis(
+            mut self,
+            input: std::option::Option<i64>,
+        ) -> Self {
+            self.service_processing_time_in_millis = input;
+            self
+        }
+        /// <p>The number of milliseconds that Athena took to run the query.</p>
+        pub fn total_execution_time_in_millis(mut self, input: i64) -> Self {
+            self.total_execution_time_in_millis = Some(input);
+            self
+        }
+        /// <p>The number of milliseconds that Athena took to run the query.</p>
+        pub fn set_total_execution_time_in_millis(
+            mut self,
+            input: std::option::Option<i64>,
+        ) -> Self {
+            self.total_execution_time_in_millis = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`QueryRuntimeStatisticsTimeline`](crate::model::QueryRuntimeStatisticsTimeline).
+        pub fn build(self) -> crate::model::QueryRuntimeStatisticsTimeline {
+            crate::model::QueryRuntimeStatisticsTimeline {
+                query_queue_time_in_millis: self.query_queue_time_in_millis,
+                query_planning_time_in_millis: self.query_planning_time_in_millis,
+                engine_execution_time_in_millis: self.engine_execution_time_in_millis,
+                service_processing_time_in_millis: self.service_processing_time_in_millis,
+                total_execution_time_in_millis: self.total_execution_time_in_millis,
+            }
+        }
+    }
+}
+impl QueryRuntimeStatisticsTimeline {
+    /// Creates a new builder-style object to manufacture [`QueryRuntimeStatisticsTimeline`](crate::model::QueryRuntimeStatisticsTimeline).
+    pub fn builder() -> crate::model::query_runtime_statistics_timeline::Builder {
+        crate::model::query_runtime_statistics_timeline::Builder::default()
     }
 }
 
@@ -2243,8 +3029,10 @@ impl WorkGroupConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResultSet {
     /// <p>The rows in the table.</p>
+    #[doc(hidden)]
     pub rows: std::option::Option<std::vec::Vec<crate::model::Row>>,
     /// <p>The metadata that describes the column structure and data types of a table of query results.</p>
+    #[doc(hidden)]
     pub result_set_metadata: std::option::Option<crate::model::ResultSetMetadata>,
 }
 impl ResultSet {
@@ -2265,11 +3053,10 @@ impl std::fmt::Debug for ResultSet {
         formatter.finish()
     }
 }
-/// See [`ResultSet`](crate::model::ResultSet)
+/// See [`ResultSet`](crate::model::ResultSet).
 pub mod result_set {
 
-    /// A builder for [`ResultSet`](crate::model::ResultSet)
-    #[non_exhaustive]
+    /// A builder for [`ResultSet`](crate::model::ResultSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rows: std::option::Option<std::vec::Vec<crate::model::Row>>,
@@ -2308,7 +3095,7 @@ pub mod result_set {
             self.result_set_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultSet`](crate::model::ResultSet)
+        /// Consumes the builder and constructs a [`ResultSet`](crate::model::ResultSet).
         pub fn build(self) -> crate::model::ResultSet {
             crate::model::ResultSet {
                 rows: self.rows,
@@ -2318,7 +3105,7 @@ pub mod result_set {
     }
 }
 impl ResultSet {
-    /// Creates a new builder-style object to manufacture [`ResultSet`](crate::model::ResultSet)
+    /// Creates a new builder-style object to manufacture [`ResultSet`](crate::model::ResultSet).
     pub fn builder() -> crate::model::result_set::Builder {
         crate::model::result_set::Builder::default()
     }
@@ -2329,6 +3116,7 @@ impl ResultSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResultSetMetadata {
     /// <p>Information about the columns returned in a query result metadata.</p>
+    #[doc(hidden)]
     pub column_info: std::option::Option<std::vec::Vec<crate::model::ColumnInfo>>,
 }
 impl ResultSetMetadata {
@@ -2344,11 +3132,10 @@ impl std::fmt::Debug for ResultSetMetadata {
         formatter.finish()
     }
 }
-/// See [`ResultSetMetadata`](crate::model::ResultSetMetadata)
+/// See [`ResultSetMetadata`](crate::model::ResultSetMetadata).
 pub mod result_set_metadata {
 
-    /// A builder for [`ResultSetMetadata`](crate::model::ResultSetMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ResultSetMetadata`](crate::model::ResultSetMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) column_info: std::option::Option<std::vec::Vec<crate::model::ColumnInfo>>,
@@ -2373,7 +3160,7 @@ pub mod result_set_metadata {
             self.column_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultSetMetadata`](crate::model::ResultSetMetadata)
+        /// Consumes the builder and constructs a [`ResultSetMetadata`](crate::model::ResultSetMetadata).
         pub fn build(self) -> crate::model::ResultSetMetadata {
             crate::model::ResultSetMetadata {
                 column_info: self.column_info,
@@ -2382,7 +3169,7 @@ pub mod result_set_metadata {
     }
 }
 impl ResultSetMetadata {
-    /// Creates a new builder-style object to manufacture [`ResultSetMetadata`](crate::model::ResultSetMetadata)
+    /// Creates a new builder-style object to manufacture [`ResultSetMetadata`](crate::model::ResultSetMetadata).
     pub fn builder() -> crate::model::result_set_metadata::Builder {
         crate::model::result_set_metadata::Builder::default()
     }
@@ -2393,24 +3180,34 @@ impl ResultSetMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ColumnInfo {
     /// <p>The catalog to which the query results belong.</p>
+    #[doc(hidden)]
     pub catalog_name: std::option::Option<std::string::String>,
     /// <p>The schema name (database name) to which the query results belong.</p>
+    #[doc(hidden)]
     pub schema_name: std::option::Option<std::string::String>,
     /// <p>The table name for the query results.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>The name of the column.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A column label.</p>
+    #[doc(hidden)]
     pub label: std::option::Option<std::string::String>,
     /// <p>The data type of the column.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>For <code>DECIMAL</code> data types, specifies the total number of digits, up to 38. For performance reasons, we recommend up to 18 digits.</p>
+    #[doc(hidden)]
     pub precision: i32,
     /// <p>For <code>DECIMAL</code> data types, specifies the total number of digits in the fractional part of the value. Defaults to 0.</p>
+    #[doc(hidden)]
     pub scale: i32,
     /// <p>Indicates the column's nullable status.</p>
+    #[doc(hidden)]
     pub nullable: std::option::Option<crate::model::ColumnNullable>,
     /// <p>Indicates whether values in the column are case-sensitive.</p>
+    #[doc(hidden)]
     pub case_sensitive: bool,
 }
 impl ColumnInfo {
@@ -2471,11 +3268,10 @@ impl std::fmt::Debug for ColumnInfo {
         formatter.finish()
     }
 }
-/// See [`ColumnInfo`](crate::model::ColumnInfo)
+/// See [`ColumnInfo`](crate::model::ColumnInfo).
 pub mod column_info {
 
-    /// A builder for [`ColumnInfo`](crate::model::ColumnInfo)
-    #[non_exhaustive]
+    /// A builder for [`ColumnInfo`](crate::model::ColumnInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog_name: std::option::Option<std::string::String>,
@@ -2593,7 +3389,7 @@ pub mod column_info {
             self.case_sensitive = input;
             self
         }
-        /// Consumes the builder and constructs a [`ColumnInfo`](crate::model::ColumnInfo)
+        /// Consumes the builder and constructs a [`ColumnInfo`](crate::model::ColumnInfo).
         pub fn build(self) -> crate::model::ColumnInfo {
             crate::model::ColumnInfo {
                 catalog_name: self.catalog_name,
@@ -2611,7 +3407,7 @@ pub mod column_info {
     }
 }
 impl ColumnInfo {
-    /// Creates a new builder-style object to manufacture [`ColumnInfo`](crate::model::ColumnInfo)
+    /// Creates a new builder-style object to manufacture [`ColumnInfo`](crate::model::ColumnInfo).
     pub fn builder() -> crate::model::column_info::Builder {
         crate::model::column_info::Builder::default()
     }
@@ -2681,6 +3477,7 @@ impl AsRef<str> for ColumnNullable {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Row {
     /// <p>The data that populates a row in a query result table.</p>
+    #[doc(hidden)]
     pub data: std::option::Option<std::vec::Vec<crate::model::Datum>>,
 }
 impl Row {
@@ -2696,11 +3493,10 @@ impl std::fmt::Debug for Row {
         formatter.finish()
     }
 }
-/// See [`Row`](crate::model::Row)
+/// See [`Row`](crate::model::Row).
 pub mod row {
 
-    /// A builder for [`Row`](crate::model::Row)
-    #[non_exhaustive]
+    /// A builder for [`Row`](crate::model::Row).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data: std::option::Option<std::vec::Vec<crate::model::Datum>>,
@@ -2725,14 +3521,14 @@ pub mod row {
             self.data = input;
             self
         }
-        /// Consumes the builder and constructs a [`Row`](crate::model::Row)
+        /// Consumes the builder and constructs a [`Row`](crate::model::Row).
         pub fn build(self) -> crate::model::Row {
             crate::model::Row { data: self.data }
         }
     }
 }
 impl Row {
-    /// Creates a new builder-style object to manufacture [`Row`](crate::model::Row)
+    /// Creates a new builder-style object to manufacture [`Row`](crate::model::Row).
     pub fn builder() -> crate::model::row::Builder {
         crate::model::row::Builder::default()
     }
@@ -2743,6 +3539,7 @@ impl Row {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Datum {
     /// <p>The value of the datum.</p>
+    #[doc(hidden)]
     pub var_char_value: std::option::Option<std::string::String>,
 }
 impl Datum {
@@ -2758,11 +3555,10 @@ impl std::fmt::Debug for Datum {
         formatter.finish()
     }
 }
-/// See [`Datum`](crate::model::Datum)
+/// See [`Datum`](crate::model::Datum).
 pub mod datum {
 
-    /// A builder for [`Datum`](crate::model::Datum)
-    #[non_exhaustive]
+    /// A builder for [`Datum`](crate::model::Datum).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) var_char_value: std::option::Option<std::string::String>,
@@ -2781,7 +3577,7 @@ pub mod datum {
             self.var_char_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Datum`](crate::model::Datum)
+        /// Consumes the builder and constructs a [`Datum`](crate::model::Datum).
         pub fn build(self) -> crate::model::Datum {
             crate::model::Datum {
                 var_char_value: self.var_char_value,
@@ -2790,7 +3586,7 @@ pub mod datum {
     }
 }
 impl Datum {
-    /// Creates a new builder-style object to manufacture [`Datum`](crate::model::Datum)
+    /// Creates a new builder-style object to manufacture [`Datum`](crate::model::Datum).
     pub fn builder() -> crate::model::datum::Builder {
         crate::model::datum::Builder::default()
     }
@@ -2801,23 +3597,35 @@ impl Datum {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryExecution {
     /// <p>The unique identifier for each query execution.</p>
+    #[doc(hidden)]
     pub query_execution_id: std::option::Option<std::string::String>,
     /// <p>The SQL query statements which the query execution ran.</p>
+    #[doc(hidden)]
     pub query: std::option::Option<std::string::String>,
     /// <p>The type of query statement that was run. <code>DDL</code> indicates DDL query statements. <code>DML</code> indicates DML (Data Manipulation Language) query statements, such as <code>CREATE TABLE AS SELECT</code>. <code>UTILITY</code> indicates query statements other than DDL and DML, such as <code>SHOW CREATE TABLE</code>, or <code>DESCRIBE TABLE</code>.</p>
+    #[doc(hidden)]
     pub statement_type: std::option::Option<crate::model::StatementType>,
     /// <p>The location in Amazon S3 where query results were stored and the encryption option, if any, used for query results. These are known as "client-side settings". If workgroup settings override client-side settings, then the query uses the location for the query results and the encryption configuration that are specified for the workgroup.</p>
+    #[doc(hidden)]
     pub result_configuration: std::option::Option<crate::model::ResultConfiguration>,
     /// <p>The database in which the query execution occurred.</p>
+    #[doc(hidden)]
     pub query_execution_context: std::option::Option<crate::model::QueryExecutionContext>,
     /// <p>The completion date, current state, submission time, and state change reason (if applicable) for the query execution.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::QueryExecutionStatus>,
     /// <p>Query execution statistics, such as the amount of data scanned, the amount of time that the query took to process, and the type of statement that was run.</p>
+    #[doc(hidden)]
     pub statistics: std::option::Option<crate::model::QueryExecutionStatistics>,
     /// <p>The name of the workgroup in which the query ran.</p>
+    #[doc(hidden)]
     pub work_group: std::option::Option<std::string::String>,
     /// <p>The engine version that executed the query.</p>
+    #[doc(hidden)]
     pub engine_version: std::option::Option<crate::model::EngineVersion>,
+    /// <p>A list of values for the parameters in a query. The values are applied sequentially to the parameters in the query in the order in which the parameters occur.</p>
+    #[doc(hidden)]
+    pub execution_parameters: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl QueryExecution {
     /// <p>The unique identifier for each query execution.</p>
@@ -2858,6 +3666,10 @@ impl QueryExecution {
     pub fn engine_version(&self) -> std::option::Option<&crate::model::EngineVersion> {
         self.engine_version.as_ref()
     }
+    /// <p>A list of values for the parameters in a query. The values are applied sequentially to the parameters in the query in the order in which the parameters occur.</p>
+    pub fn execution_parameters(&self) -> std::option::Option<&[std::string::String]> {
+        self.execution_parameters.as_deref()
+    }
 }
 impl std::fmt::Debug for QueryExecution {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -2871,14 +3683,14 @@ impl std::fmt::Debug for QueryExecution {
         formatter.field("statistics", &self.statistics);
         formatter.field("work_group", &self.work_group);
         formatter.field("engine_version", &self.engine_version);
+        formatter.field("execution_parameters", &self.execution_parameters);
         formatter.finish()
     }
 }
-/// See [`QueryExecution`](crate::model::QueryExecution)
+/// See [`QueryExecution`](crate::model::QueryExecution).
 pub mod query_execution {
 
-    /// A builder for [`QueryExecution`](crate::model::QueryExecution)
-    #[non_exhaustive]
+    /// A builder for [`QueryExecution`](crate::model::QueryExecution).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) query_execution_id: std::option::Option<std::string::String>,
@@ -2891,6 +3703,7 @@ pub mod query_execution {
         pub(crate) statistics: std::option::Option<crate::model::QueryExecutionStatistics>,
         pub(crate) work_group: std::option::Option<std::string::String>,
         pub(crate) engine_version: std::option::Option<crate::model::EngineVersion>,
+        pub(crate) execution_parameters: std::option::Option<std::vec::Vec<std::string::String>>,
     }
     impl Builder {
         /// <p>The unique identifier for each query execution.</p>
@@ -3007,7 +3820,26 @@ pub mod query_execution {
             self.engine_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryExecution`](crate::model::QueryExecution)
+        /// Appends an item to `execution_parameters`.
+        ///
+        /// To override the contents of this collection use [`set_execution_parameters`](Self::set_execution_parameters).
+        ///
+        /// <p>A list of values for the parameters in a query. The values are applied sequentially to the parameters in the query in the order in which the parameters occur.</p>
+        pub fn execution_parameters(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.execution_parameters.unwrap_or_default();
+            v.push(input.into());
+            self.execution_parameters = Some(v);
+            self
+        }
+        /// <p>A list of values for the parameters in a query. The values are applied sequentially to the parameters in the query in the order in which the parameters occur.</p>
+        pub fn set_execution_parameters(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.execution_parameters = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`QueryExecution`](crate::model::QueryExecution).
         pub fn build(self) -> crate::model::QueryExecution {
             crate::model::QueryExecution {
                 query_execution_id: self.query_execution_id,
@@ -3019,12 +3851,13 @@ pub mod query_execution {
                 statistics: self.statistics,
                 work_group: self.work_group,
                 engine_version: self.engine_version,
+                execution_parameters: self.execution_parameters,
             }
         }
     }
 }
 impl QueryExecution {
-    /// Creates a new builder-style object to manufacture [`QueryExecution`](crate::model::QueryExecution)
+    /// Creates a new builder-style object to manufacture [`QueryExecution`](crate::model::QueryExecution).
     pub fn builder() -> crate::model::query_execution::Builder {
         crate::model::query_execution::Builder::default()
     }
@@ -3035,18 +3868,25 @@ impl QueryExecution {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryExecutionStatistics {
     /// <p>The number of milliseconds that the query took to execute.</p>
+    #[doc(hidden)]
     pub engine_execution_time_in_millis: std::option::Option<i64>,
     /// <p>The number of bytes in the data that was queried.</p>
+    #[doc(hidden)]
     pub data_scanned_in_bytes: std::option::Option<i64>,
     /// <p>The location and file name of a data manifest file. The manifest file is saved to the Athena query results location in Amazon S3. The manifest file tracks files that the query wrote to Amazon S3. If the query fails, the manifest file also tracks files that the query intended to write. The manifest is useful for identifying orphaned files resulting from a failed query. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with Query Results, Output Files, and Query History</a> in the <i>Amazon Athena User Guide</i>.</p>
+    #[doc(hidden)]
     pub data_manifest_location: std::option::Option<std::string::String>,
     /// <p>The number of milliseconds that Athena took to run the query.</p>
+    #[doc(hidden)]
     pub total_execution_time_in_millis: std::option::Option<i64>,
     /// <p>The number of milliseconds that the query was in your query queue waiting for resources. Note that if transient errors occur, Athena might automatically add the query back to the queue.</p>
+    #[doc(hidden)]
     pub query_queue_time_in_millis: std::option::Option<i64>,
     /// <p>The number of milliseconds that Athena took to plan the query processing flow. This includes the time spent retrieving table partitions from the data source. Note that because the query engine performs the query planning, query planning time is a subset of engine processing time.</p>
+    #[doc(hidden)]
     pub query_planning_time_in_millis: std::option::Option<i64>,
     /// <p>The number of milliseconds that Athena took to finalize and publish the query results after the query engine finished running the query.</p>
+    #[doc(hidden)]
     pub service_processing_time_in_millis: std::option::Option<i64>,
 }
 impl QueryExecutionStatistics {
@@ -3107,11 +3947,10 @@ impl std::fmt::Debug for QueryExecutionStatistics {
         formatter.finish()
     }
 }
-/// See [`QueryExecutionStatistics`](crate::model::QueryExecutionStatistics)
+/// See [`QueryExecutionStatistics`](crate::model::QueryExecutionStatistics).
 pub mod query_execution_statistics {
 
-    /// A builder for [`QueryExecutionStatistics`](crate::model::QueryExecutionStatistics)
-    #[non_exhaustive]
+    /// A builder for [`QueryExecutionStatistics`](crate::model::QueryExecutionStatistics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine_execution_time_in_millis: std::option::Option<i64>,
@@ -3208,7 +4047,7 @@ pub mod query_execution_statistics {
             self.service_processing_time_in_millis = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryExecutionStatistics`](crate::model::QueryExecutionStatistics)
+        /// Consumes the builder and constructs a [`QueryExecutionStatistics`](crate::model::QueryExecutionStatistics).
         pub fn build(self) -> crate::model::QueryExecutionStatistics {
             crate::model::QueryExecutionStatistics {
                 engine_execution_time_in_millis: self.engine_execution_time_in_millis,
@@ -3223,7 +4062,7 @@ pub mod query_execution_statistics {
     }
 }
 impl QueryExecutionStatistics {
-    /// Creates a new builder-style object to manufacture [`QueryExecutionStatistics`](crate::model::QueryExecutionStatistics)
+    /// Creates a new builder-style object to manufacture [`QueryExecutionStatistics`](crate::model::QueryExecutionStatistics).
     pub fn builder() -> crate::model::query_execution_statistics::Builder {
         crate::model::query_execution_statistics::Builder::default()
     }
@@ -3236,14 +4075,19 @@ pub struct QueryExecutionStatus {
     /// <p>The state of query execution. <code>QUEUED</code> indicates that the query has been submitted to the service, and Athena will execute the query as soon as resources are available. <code>RUNNING</code> indicates that the query is in execution phase. <code>SUCCEEDED</code> indicates that the query completed without errors. <code>FAILED</code> indicates that the query experienced an error and did not complete processing. <code>CANCELLED</code> indicates that a user input interrupted query execution.</p> <note>
     /// <p>Athena automatically retries your queries in cases of certain transient errors. As a result, you may see the query state transition from <code>RUNNING</code> or <code>FAILED</code> to <code>QUEUED</code>. </p>
     /// </note>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::QueryExecutionState>,
     /// <p>Further detail about the status of the query.</p>
+    #[doc(hidden)]
     pub state_change_reason: std::option::Option<std::string::String>,
     /// <p>The date and time that the query was submitted.</p>
+    #[doc(hidden)]
     pub submission_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the query completed.</p>
+    #[doc(hidden)]
     pub completion_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Provides information about an Athena query error.</p>
+    #[doc(hidden)]
     pub athena_error: std::option::Option<crate::model::AthenaError>,
 }
 impl QueryExecutionStatus {
@@ -3281,11 +4125,10 @@ impl std::fmt::Debug for QueryExecutionStatus {
         formatter.finish()
     }
 }
-/// See [`QueryExecutionStatus`](crate::model::QueryExecutionStatus)
+/// See [`QueryExecutionStatus`](crate::model::QueryExecutionStatus).
 pub mod query_execution_status {
 
-    /// A builder for [`QueryExecutionStatus`](crate::model::QueryExecutionStatus)
-    #[non_exhaustive]
+    /// A builder for [`QueryExecutionStatus`](crate::model::QueryExecutionStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::QueryExecutionState>,
@@ -3364,7 +4207,7 @@ pub mod query_execution_status {
             self.athena_error = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryExecutionStatus`](crate::model::QueryExecutionStatus)
+        /// Consumes the builder and constructs a [`QueryExecutionStatus`](crate::model::QueryExecutionStatus).
         pub fn build(self) -> crate::model::QueryExecutionStatus {
             crate::model::QueryExecutionStatus {
                 state: self.state,
@@ -3377,7 +4220,7 @@ pub mod query_execution_status {
     }
 }
 impl QueryExecutionStatus {
-    /// Creates a new builder-style object to manufacture [`QueryExecutionStatus`](crate::model::QueryExecutionStatus)
+    /// Creates a new builder-style object to manufacture [`QueryExecutionStatus`](crate::model::QueryExecutionStatus).
     pub fn builder() -> crate::model::query_execution_status::Builder {
         crate::model::query_execution_status::Builder::default()
     }
@@ -3391,12 +4234,16 @@ pub struct AthenaError {
     /// <p> <b>1</b> - System</p>
     /// <p> <b>2</b> - User</p>
     /// <p> <b>3</b> - Other</p>
+    #[doc(hidden)]
     pub error_category: std::option::Option<i32>,
     /// <p>An integer value that provides specific information about an Athena query error. For the meaning of specific values, see the <a href="https://docs.aws.amazon.com/athena/latest/ug/error-reference.html#error-reference-error-type-reference">Error Type Reference</a> in the <i>Amazon Athena User Guide</i>.</p>
+    #[doc(hidden)]
     pub error_type: std::option::Option<i32>,
     /// <p>True if the query might succeed if resubmitted.</p>
+    #[doc(hidden)]
     pub retryable: bool,
     /// <p>Contains a short description of the error that occurred.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl AthenaError {
@@ -3430,11 +4277,10 @@ impl std::fmt::Debug for AthenaError {
         formatter.finish()
     }
 }
-/// See [`AthenaError`](crate::model::AthenaError)
+/// See [`AthenaError`](crate::model::AthenaError).
 pub mod athena_error {
 
-    /// A builder for [`AthenaError`](crate::model::AthenaError)
-    #[non_exhaustive]
+    /// A builder for [`AthenaError`](crate::model::AthenaError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_category: std::option::Option<i32>,
@@ -3492,7 +4338,7 @@ pub mod athena_error {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AthenaError`](crate::model::AthenaError)
+        /// Consumes the builder and constructs a [`AthenaError`](crate::model::AthenaError).
         pub fn build(self) -> crate::model::AthenaError {
             crate::model::AthenaError {
                 error_category: self.error_category,
@@ -3504,7 +4350,7 @@ pub mod athena_error {
     }
 }
 impl AthenaError {
-    /// Creates a new builder-style object to manufacture [`AthenaError`](crate::model::AthenaError)
+    /// Creates a new builder-style object to manufacture [`AthenaError`](crate::model::AthenaError).
     pub fn builder() -> crate::model::athena_error::Builder {
         crate::model::athena_error::Builder::default()
     }
@@ -3641,14 +4487,19 @@ impl AsRef<str> for StatementType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PreparedStatement {
     /// <p>The name of the prepared statement.</p>
+    #[doc(hidden)]
     pub statement_name: std::option::Option<std::string::String>,
     /// <p>The query string for the prepared statement.</p>
+    #[doc(hidden)]
     pub query_statement: std::option::Option<std::string::String>,
     /// <p>The name of the workgroup to which the prepared statement belongs.</p>
+    #[doc(hidden)]
     pub work_group_name: std::option::Option<std::string::String>,
     /// <p>The description of the prepared statement.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The last modified time of the prepared statement.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PreparedStatement {
@@ -3684,11 +4535,10 @@ impl std::fmt::Debug for PreparedStatement {
         formatter.finish()
     }
 }
-/// See [`PreparedStatement`](crate::model::PreparedStatement)
+/// See [`PreparedStatement`](crate::model::PreparedStatement).
 pub mod prepared_statement {
 
-    /// A builder for [`PreparedStatement`](crate::model::PreparedStatement)
-    #[non_exhaustive]
+    /// A builder for [`PreparedStatement`](crate::model::PreparedStatement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) statement_name: std::option::Option<std::string::String>,
@@ -3760,7 +4610,7 @@ pub mod prepared_statement {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`PreparedStatement`](crate::model::PreparedStatement)
+        /// Consumes the builder and constructs a [`PreparedStatement`](crate::model::PreparedStatement).
         pub fn build(self) -> crate::model::PreparedStatement {
             crate::model::PreparedStatement {
                 statement_name: self.statement_name,
@@ -3773,7 +4623,7 @@ pub mod prepared_statement {
     }
 }
 impl PreparedStatement {
-    /// Creates a new builder-style object to manufacture [`PreparedStatement`](crate::model::PreparedStatement)
+    /// Creates a new builder-style object to manufacture [`PreparedStatement`](crate::model::PreparedStatement).
     pub fn builder() -> crate::model::prepared_statement::Builder {
         crate::model::prepared_statement::Builder::default()
     }
@@ -3784,16 +4634,22 @@ impl PreparedStatement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NamedQuery {
     /// <p>The query name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The query description.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The database to which the query belongs.</p>
+    #[doc(hidden)]
     pub database: std::option::Option<std::string::String>,
     /// <p>The SQL statements that make up the query.</p>
+    #[doc(hidden)]
     pub query_string: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the query.</p>
+    #[doc(hidden)]
     pub named_query_id: std::option::Option<std::string::String>,
     /// <p>The name of the workgroup that contains the named query.</p>
+    #[doc(hidden)]
     pub work_group: std::option::Option<std::string::String>,
 }
 impl NamedQuery {
@@ -3834,11 +4690,10 @@ impl std::fmt::Debug for NamedQuery {
         formatter.finish()
     }
 }
-/// See [`NamedQuery`](crate::model::NamedQuery)
+/// See [`NamedQuery`](crate::model::NamedQuery).
 pub mod named_query {
 
-    /// A builder for [`NamedQuery`](crate::model::NamedQuery)
-    #[non_exhaustive]
+    /// A builder for [`NamedQuery`](crate::model::NamedQuery).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3912,7 +4767,7 @@ pub mod named_query {
             self.work_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`NamedQuery`](crate::model::NamedQuery)
+        /// Consumes the builder and constructs a [`NamedQuery`](crate::model::NamedQuery).
         pub fn build(self) -> crate::model::NamedQuery {
             crate::model::NamedQuery {
                 name: self.name,
@@ -3926,7 +4781,7 @@ pub mod named_query {
     }
 }
 impl NamedQuery {
-    /// Creates a new builder-style object to manufacture [`NamedQuery`](crate::model::NamedQuery)
+    /// Creates a new builder-style object to manufacture [`NamedQuery`](crate::model::NamedQuery).
     pub fn builder() -> crate::model::named_query::Builder {
         crate::model::named_query::Builder::default()
     }
@@ -3937,10 +4792,13 @@ impl NamedQuery {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataCatalog {
     /// <p>The name of the data catalog. The catalog name must be unique for the Amazon Web Services account and can use a maximum of 127 alphanumeric, underscore, at sign, or hyphen characters. The remainder of the length constraint of 256 is reserved for use by Athena.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>An optional description of the data catalog.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The type of data catalog to create: <code>LAMBDA</code> for a federated catalog, <code>HIVE</code> for an external hive metastore, or <code>GLUE</code> for an Glue Data Catalog.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::DataCatalogType>,
     /// <p>Specifies the Lambda function or functions to use for the data catalog. This is a mapping whose values depend on the catalog type. </p>
     /// <ul>
@@ -3956,6 +4814,7 @@ pub struct DataCatalog {
     /// <li> <p>Queries that specify a Glue Data Catalog other than the default <code>AwsDataCatalog</code> must be run on Athena engine version 2.</p> </li>
     /// </ul> </li>
     /// </ul>
+    #[doc(hidden)]
     pub parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -4003,11 +4862,10 @@ impl std::fmt::Debug for DataCatalog {
         formatter.finish()
     }
 }
-/// See [`DataCatalog`](crate::model::DataCatalog)
+/// See [`DataCatalog`](crate::model::DataCatalog).
 pub mod data_catalog {
 
-    /// A builder for [`DataCatalog`](crate::model::DataCatalog)
-    #[non_exhaustive]
+    /// A builder for [`DataCatalog`](crate::model::DataCatalog).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4102,7 +4960,7 @@ pub mod data_catalog {
             self.parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataCatalog`](crate::model::DataCatalog)
+        /// Consumes the builder and constructs a [`DataCatalog`](crate::model::DataCatalog).
         pub fn build(self) -> crate::model::DataCatalog {
             crate::model::DataCatalog {
                 name: self.name,
@@ -4114,7 +4972,7 @@ pub mod data_catalog {
     }
 }
 impl DataCatalog {
-    /// Creates a new builder-style object to manufacture [`DataCatalog`](crate::model::DataCatalog)
+    /// Creates a new builder-style object to manufacture [`DataCatalog`](crate::model::DataCatalog).
     pub fn builder() -> crate::model::data_catalog::Builder {
         crate::model::data_catalog::Builder::default()
     }
@@ -4125,10 +4983,13 @@ impl DataCatalog {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UnprocessedQueryExecutionId {
     /// <p>The unique identifier of the query execution.</p>
+    #[doc(hidden)]
     pub query_execution_id: std::option::Option<std::string::String>,
     /// <p>The error code returned when the query execution failed to process, if applicable.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The error message returned when the query execution failed to process, if applicable.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl UnprocessedQueryExecutionId {
@@ -4154,11 +5015,10 @@ impl std::fmt::Debug for UnprocessedQueryExecutionId {
         formatter.finish()
     }
 }
-/// See [`UnprocessedQueryExecutionId`](crate::model::UnprocessedQueryExecutionId)
+/// See [`UnprocessedQueryExecutionId`](crate::model::UnprocessedQueryExecutionId).
 pub mod unprocessed_query_execution_id {
 
-    /// A builder for [`UnprocessedQueryExecutionId`](crate::model::UnprocessedQueryExecutionId)
-    #[non_exhaustive]
+    /// A builder for [`UnprocessedQueryExecutionId`](crate::model::UnprocessedQueryExecutionId).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) query_execution_id: std::option::Option<std::string::String>,
@@ -4202,7 +5062,7 @@ pub mod unprocessed_query_execution_id {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`UnprocessedQueryExecutionId`](crate::model::UnprocessedQueryExecutionId)
+        /// Consumes the builder and constructs a [`UnprocessedQueryExecutionId`](crate::model::UnprocessedQueryExecutionId).
         pub fn build(self) -> crate::model::UnprocessedQueryExecutionId {
             crate::model::UnprocessedQueryExecutionId {
                 query_execution_id: self.query_execution_id,
@@ -4213,9 +5073,130 @@ pub mod unprocessed_query_execution_id {
     }
 }
 impl UnprocessedQueryExecutionId {
-    /// Creates a new builder-style object to manufacture [`UnprocessedQueryExecutionId`](crate::model::UnprocessedQueryExecutionId)
+    /// Creates a new builder-style object to manufacture [`UnprocessedQueryExecutionId`](crate::model::UnprocessedQueryExecutionId).
     pub fn builder() -> crate::model::unprocessed_query_execution_id::Builder {
         crate::model::unprocessed_query_execution_id::Builder::default()
+    }
+}
+
+/// <p>The name of a prepared statement that could not be returned.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UnprocessedPreparedStatementName {
+    /// <p>The name of a prepared statement that could not be returned due to an error.</p>
+    #[doc(hidden)]
+    pub statement_name: std::option::Option<std::string::String>,
+    /// <p>The error code returned when the request for the prepared statement failed.</p>
+    #[doc(hidden)]
+    pub error_code: std::option::Option<std::string::String>,
+    /// <p>The error message containing the reason why the prepared statement could not be returned. The following error messages are possible:</p>
+    /// <ul>
+    /// <li> <p> <code>INVALID_INPUT</code> - The name of the prepared statement that was provided is not valid (for example, the name is too long).</p> </li>
+    /// <li> <p> <code>STATEMENT_NOT_FOUND</code> - A prepared statement with the name provided could not be found.</p> </li>
+    /// <li> <p> <code>UNAUTHORIZED</code> - The requester does not have permission to access the workgroup that contains the prepared statement.</p> </li>
+    /// </ul>
+    #[doc(hidden)]
+    pub error_message: std::option::Option<std::string::String>,
+}
+impl UnprocessedPreparedStatementName {
+    /// <p>The name of a prepared statement that could not be returned due to an error.</p>
+    pub fn statement_name(&self) -> std::option::Option<&str> {
+        self.statement_name.as_deref()
+    }
+    /// <p>The error code returned when the request for the prepared statement failed.</p>
+    pub fn error_code(&self) -> std::option::Option<&str> {
+        self.error_code.as_deref()
+    }
+    /// <p>The error message containing the reason why the prepared statement could not be returned. The following error messages are possible:</p>
+    /// <ul>
+    /// <li> <p> <code>INVALID_INPUT</code> - The name of the prepared statement that was provided is not valid (for example, the name is too long).</p> </li>
+    /// <li> <p> <code>STATEMENT_NOT_FOUND</code> - A prepared statement with the name provided could not be found.</p> </li>
+    /// <li> <p> <code>UNAUTHORIZED</code> - The requester does not have permission to access the workgroup that contains the prepared statement.</p> </li>
+    /// </ul>
+    pub fn error_message(&self) -> std::option::Option<&str> {
+        self.error_message.as_deref()
+    }
+}
+impl std::fmt::Debug for UnprocessedPreparedStatementName {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UnprocessedPreparedStatementName");
+        formatter.field("statement_name", &self.statement_name);
+        formatter.field("error_code", &self.error_code);
+        formatter.field("error_message", &self.error_message);
+        formatter.finish()
+    }
+}
+/// See [`UnprocessedPreparedStatementName`](crate::model::UnprocessedPreparedStatementName).
+pub mod unprocessed_prepared_statement_name {
+
+    /// A builder for [`UnprocessedPreparedStatementName`](crate::model::UnprocessedPreparedStatementName).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) statement_name: std::option::Option<std::string::String>,
+        pub(crate) error_code: std::option::Option<std::string::String>,
+        pub(crate) error_message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The name of a prepared statement that could not be returned due to an error.</p>
+        pub fn statement_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.statement_name = Some(input.into());
+            self
+        }
+        /// <p>The name of a prepared statement that could not be returned due to an error.</p>
+        pub fn set_statement_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.statement_name = input;
+            self
+        }
+        /// <p>The error code returned when the request for the prepared statement failed.</p>
+        pub fn error_code(mut self, input: impl Into<std::string::String>) -> Self {
+            self.error_code = Some(input.into());
+            self
+        }
+        /// <p>The error code returned when the request for the prepared statement failed.</p>
+        pub fn set_error_code(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.error_code = input;
+            self
+        }
+        /// <p>The error message containing the reason why the prepared statement could not be returned. The following error messages are possible:</p>
+        /// <ul>
+        /// <li> <p> <code>INVALID_INPUT</code> - The name of the prepared statement that was provided is not valid (for example, the name is too long).</p> </li>
+        /// <li> <p> <code>STATEMENT_NOT_FOUND</code> - A prepared statement with the name provided could not be found.</p> </li>
+        /// <li> <p> <code>UNAUTHORIZED</code> - The requester does not have permission to access the workgroup that contains the prepared statement.</p> </li>
+        /// </ul>
+        pub fn error_message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.error_message = Some(input.into());
+            self
+        }
+        /// <p>The error message containing the reason why the prepared statement could not be returned. The following error messages are possible:</p>
+        /// <ul>
+        /// <li> <p> <code>INVALID_INPUT</code> - The name of the prepared statement that was provided is not valid (for example, the name is too long).</p> </li>
+        /// <li> <p> <code>STATEMENT_NOT_FOUND</code> - A prepared statement with the name provided could not be found.</p> </li>
+        /// <li> <p> <code>UNAUTHORIZED</code> - The requester does not have permission to access the workgroup that contains the prepared statement.</p> </li>
+        /// </ul>
+        pub fn set_error_message(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.error_message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`UnprocessedPreparedStatementName`](crate::model::UnprocessedPreparedStatementName).
+        pub fn build(self) -> crate::model::UnprocessedPreparedStatementName {
+            crate::model::UnprocessedPreparedStatementName {
+                statement_name: self.statement_name,
+                error_code: self.error_code,
+                error_message: self.error_message,
+            }
+        }
+    }
+}
+impl UnprocessedPreparedStatementName {
+    /// Creates a new builder-style object to manufacture [`UnprocessedPreparedStatementName`](crate::model::UnprocessedPreparedStatementName).
+    pub fn builder() -> crate::model::unprocessed_prepared_statement_name::Builder {
+        crate::model::unprocessed_prepared_statement_name::Builder::default()
     }
 }
 
@@ -4224,10 +5205,13 @@ impl UnprocessedQueryExecutionId {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UnprocessedNamedQueryId {
     /// <p>The unique identifier of the named query.</p>
+    #[doc(hidden)]
     pub named_query_id: std::option::Option<std::string::String>,
     /// <p>The error code returned when the processing request for the named query failed, if applicable.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The error message returned when the processing request for the named query failed, if applicable.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl UnprocessedNamedQueryId {
@@ -4253,11 +5237,10 @@ impl std::fmt::Debug for UnprocessedNamedQueryId {
         formatter.finish()
     }
 }
-/// See [`UnprocessedNamedQueryId`](crate::model::UnprocessedNamedQueryId)
+/// See [`UnprocessedNamedQueryId`](crate::model::UnprocessedNamedQueryId).
 pub mod unprocessed_named_query_id {
 
-    /// A builder for [`UnprocessedNamedQueryId`](crate::model::UnprocessedNamedQueryId)
-    #[non_exhaustive]
+    /// A builder for [`UnprocessedNamedQueryId`](crate::model::UnprocessedNamedQueryId).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) named_query_id: std::option::Option<std::string::String>,
@@ -4301,7 +5284,7 @@ pub mod unprocessed_named_query_id {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`UnprocessedNamedQueryId`](crate::model::UnprocessedNamedQueryId)
+        /// Consumes the builder and constructs a [`UnprocessedNamedQueryId`](crate::model::UnprocessedNamedQueryId).
         pub fn build(self) -> crate::model::UnprocessedNamedQueryId {
             crate::model::UnprocessedNamedQueryId {
                 named_query_id: self.named_query_id,
@@ -4312,7 +5295,7 @@ pub mod unprocessed_named_query_id {
     }
 }
 impl UnprocessedNamedQueryId {
-    /// Creates a new builder-style object to manufacture [`UnprocessedNamedQueryId`](crate::model::UnprocessedNamedQueryId)
+    /// Creates a new builder-style object to manufacture [`UnprocessedNamedQueryId`](crate::model::UnprocessedNamedQueryId).
     pub fn builder() -> crate::model::unprocessed_named_query_id::Builder {
         crate::model::unprocessed_named_query_id::Builder::default()
     }

@@ -4,8 +4,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFlowSourceOutput {
     /// The ARN of the flow that you want to update.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// The settings for the source of the flow.
+    #[doc(hidden)]
     pub source: std::option::Option<crate::model::Source>,
 }
 impl UpdateFlowSourceOutput {
@@ -26,11 +28,10 @@ impl std::fmt::Debug for UpdateFlowSourceOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFlowSourceOutput`](crate::output::UpdateFlowSourceOutput)
+/// See [`UpdateFlowSourceOutput`](crate::output::UpdateFlowSourceOutput).
 pub mod update_flow_source_output {
 
-    /// A builder for [`UpdateFlowSourceOutput`](crate::output::UpdateFlowSourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFlowSourceOutput`](crate::output::UpdateFlowSourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -57,7 +58,7 @@ pub mod update_flow_source_output {
             self.source = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFlowSourceOutput`](crate::output::UpdateFlowSourceOutput)
+        /// Consumes the builder and constructs a [`UpdateFlowSourceOutput`](crate::output::UpdateFlowSourceOutput).
         pub fn build(self) -> crate::output::UpdateFlowSourceOutput {
             crate::output::UpdateFlowSourceOutput {
                 flow_arn: self.flow_arn,
@@ -67,7 +68,7 @@ pub mod update_flow_source_output {
     }
 }
 impl UpdateFlowSourceOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFlowSourceOutput`](crate::output::UpdateFlowSourceOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFlowSourceOutput`](crate::output::UpdateFlowSourceOutput).
     pub fn builder() -> crate::output::update_flow_source_output::Builder {
         crate::output::update_flow_source_output::Builder::default()
     }
@@ -78,8 +79,10 @@ impl UpdateFlowSourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFlowOutputOutput {
     /// The ARN of the flow that is associated with the updated output.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// The new settings of the output that you updated.
+    #[doc(hidden)]
     pub output: std::option::Option<crate::model::Output>,
 }
 impl UpdateFlowOutputOutput {
@@ -100,11 +103,10 @@ impl std::fmt::Debug for UpdateFlowOutputOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFlowOutputOutput`](crate::output::UpdateFlowOutputOutput)
+/// See [`UpdateFlowOutputOutput`](crate::output::UpdateFlowOutputOutput).
 pub mod update_flow_output_output {
 
-    /// A builder for [`UpdateFlowOutputOutput`](crate::output::UpdateFlowOutputOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFlowOutputOutput`](crate::output::UpdateFlowOutputOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -131,7 +133,7 @@ pub mod update_flow_output_output {
             self.output = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFlowOutputOutput`](crate::output::UpdateFlowOutputOutput)
+        /// Consumes the builder and constructs a [`UpdateFlowOutputOutput`](crate::output::UpdateFlowOutputOutput).
         pub fn build(self) -> crate::output::UpdateFlowOutputOutput {
             crate::output::UpdateFlowOutputOutput {
                 flow_arn: self.flow_arn,
@@ -141,7 +143,7 @@ pub mod update_flow_output_output {
     }
 }
 impl UpdateFlowOutputOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFlowOutputOutput`](crate::output::UpdateFlowOutputOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFlowOutputOutput`](crate::output::UpdateFlowOutputOutput).
     pub fn builder() -> crate::output::update_flow_output_output::Builder {
         crate::output::update_flow_output_output::Builder::default()
     }
@@ -152,8 +154,10 @@ impl UpdateFlowOutputOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFlowMediaStreamOutput {
     /// The ARN of the flow that is associated with the media stream that you updated.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// The media stream that you updated.
+    #[doc(hidden)]
     pub media_stream: std::option::Option<crate::model::MediaStream>,
 }
 impl UpdateFlowMediaStreamOutput {
@@ -174,11 +178,10 @@ impl std::fmt::Debug for UpdateFlowMediaStreamOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFlowMediaStreamOutput`](crate::output::UpdateFlowMediaStreamOutput)
+/// See [`UpdateFlowMediaStreamOutput`](crate::output::UpdateFlowMediaStreamOutput).
 pub mod update_flow_media_stream_output {
 
-    /// A builder for [`UpdateFlowMediaStreamOutput`](crate::output::UpdateFlowMediaStreamOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFlowMediaStreamOutput`](crate::output::UpdateFlowMediaStreamOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -208,7 +211,7 @@ pub mod update_flow_media_stream_output {
             self.media_stream = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFlowMediaStreamOutput`](crate::output::UpdateFlowMediaStreamOutput)
+        /// Consumes the builder and constructs a [`UpdateFlowMediaStreamOutput`](crate::output::UpdateFlowMediaStreamOutput).
         pub fn build(self) -> crate::output::UpdateFlowMediaStreamOutput {
             crate::output::UpdateFlowMediaStreamOutput {
                 flow_arn: self.flow_arn,
@@ -218,7 +221,7 @@ pub mod update_flow_media_stream_output {
     }
 }
 impl UpdateFlowMediaStreamOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFlowMediaStreamOutput`](crate::output::UpdateFlowMediaStreamOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFlowMediaStreamOutput`](crate::output::UpdateFlowMediaStreamOutput).
     pub fn builder() -> crate::output::update_flow_media_stream_output::Builder {
         crate::output::update_flow_media_stream_output::Builder::default()
     }
@@ -229,8 +232,10 @@ impl UpdateFlowMediaStreamOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFlowEntitlementOutput {
     /// The new configuration of the entitlement that you updated.
+    #[doc(hidden)]
     pub entitlement: std::option::Option<crate::model::Entitlement>,
     /// The ARN of the flow that this entitlement was granted on.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
 }
 impl UpdateFlowEntitlementOutput {
@@ -251,11 +256,10 @@ impl std::fmt::Debug for UpdateFlowEntitlementOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFlowEntitlementOutput`](crate::output::UpdateFlowEntitlementOutput)
+/// See [`UpdateFlowEntitlementOutput`](crate::output::UpdateFlowEntitlementOutput).
 pub mod update_flow_entitlement_output {
 
-    /// A builder for [`UpdateFlowEntitlementOutput`](crate::output::UpdateFlowEntitlementOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFlowEntitlementOutput`](crate::output::UpdateFlowEntitlementOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entitlement: std::option::Option<crate::model::Entitlement>,
@@ -285,7 +289,7 @@ pub mod update_flow_entitlement_output {
             self.flow_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFlowEntitlementOutput`](crate::output::UpdateFlowEntitlementOutput)
+        /// Consumes the builder and constructs a [`UpdateFlowEntitlementOutput`](crate::output::UpdateFlowEntitlementOutput).
         pub fn build(self) -> crate::output::UpdateFlowEntitlementOutput {
             crate::output::UpdateFlowEntitlementOutput {
                 entitlement: self.entitlement,
@@ -295,7 +299,7 @@ pub mod update_flow_entitlement_output {
     }
 }
 impl UpdateFlowEntitlementOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFlowEntitlementOutput`](crate::output::UpdateFlowEntitlementOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFlowEntitlementOutput`](crate::output::UpdateFlowEntitlementOutput).
     pub fn builder() -> crate::output::update_flow_entitlement_output::Builder {
         crate::output::update_flow_entitlement_output::Builder::default()
     }
@@ -306,6 +310,7 @@ impl UpdateFlowEntitlementOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFlowOutput {
     /// The settings for a flow, including its source, outputs, and entitlements.
+    #[doc(hidden)]
     pub flow: std::option::Option<crate::model::Flow>,
 }
 impl UpdateFlowOutput {
@@ -321,11 +326,10 @@ impl std::fmt::Debug for UpdateFlowOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFlowOutput`](crate::output::UpdateFlowOutput)
+/// See [`UpdateFlowOutput`](crate::output::UpdateFlowOutput).
 pub mod update_flow_output {
 
-    /// A builder for [`UpdateFlowOutput`](crate::output::UpdateFlowOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFlowOutput`](crate::output::UpdateFlowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow: std::option::Option<crate::model::Flow>,
@@ -341,14 +345,14 @@ pub mod update_flow_output {
             self.flow = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFlowOutput`](crate::output::UpdateFlowOutput)
+        /// Consumes the builder and constructs a [`UpdateFlowOutput`](crate::output::UpdateFlowOutput).
         pub fn build(self) -> crate::output::UpdateFlowOutput {
             crate::output::UpdateFlowOutput { flow: self.flow }
         }
     }
 }
 impl UpdateFlowOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFlowOutput`](crate::output::UpdateFlowOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFlowOutput`](crate::output::UpdateFlowOutput).
     pub fn builder() -> crate::output::update_flow_output::Builder {
         crate::output::update_flow_output::Builder::default()
     }
@@ -364,22 +368,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -395,22 +398,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -421,8 +423,10 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StopFlowOutput {
     /// The ARN of the flow that you stopped.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// The status of the flow when the StopFlow process begins.
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
 }
 impl StopFlowOutput {
@@ -443,11 +447,10 @@ impl std::fmt::Debug for StopFlowOutput {
         formatter.finish()
     }
 }
-/// See [`StopFlowOutput`](crate::output::StopFlowOutput)
+/// See [`StopFlowOutput`](crate::output::StopFlowOutput).
 pub mod stop_flow_output {
 
-    /// A builder for [`StopFlowOutput`](crate::output::StopFlowOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopFlowOutput`](crate::output::StopFlowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -474,7 +477,7 @@ pub mod stop_flow_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`StopFlowOutput`](crate::output::StopFlowOutput)
+        /// Consumes the builder and constructs a [`StopFlowOutput`](crate::output::StopFlowOutput).
         pub fn build(self) -> crate::output::StopFlowOutput {
             crate::output::StopFlowOutput {
                 flow_arn: self.flow_arn,
@@ -484,7 +487,7 @@ pub mod stop_flow_output {
     }
 }
 impl StopFlowOutput {
-    /// Creates a new builder-style object to manufacture [`StopFlowOutput`](crate::output::StopFlowOutput)
+    /// Creates a new builder-style object to manufacture [`StopFlowOutput`](crate::output::StopFlowOutput).
     pub fn builder() -> crate::output::stop_flow_output::Builder {
         crate::output::stop_flow_output::Builder::default()
     }
@@ -495,8 +498,10 @@ impl StopFlowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartFlowOutput {
     /// The ARN of the flow that you started.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// The status of the flow when the StartFlow process begins.
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
 }
 impl StartFlowOutput {
@@ -517,11 +522,10 @@ impl std::fmt::Debug for StartFlowOutput {
         formatter.finish()
     }
 }
-/// See [`StartFlowOutput`](crate::output::StartFlowOutput)
+/// See [`StartFlowOutput`](crate::output::StartFlowOutput).
 pub mod start_flow_output {
 
-    /// A builder for [`StartFlowOutput`](crate::output::StartFlowOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartFlowOutput`](crate::output::StartFlowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -548,7 +552,7 @@ pub mod start_flow_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartFlowOutput`](crate::output::StartFlowOutput)
+        /// Consumes the builder and constructs a [`StartFlowOutput`](crate::output::StartFlowOutput).
         pub fn build(self) -> crate::output::StartFlowOutput {
             crate::output::StartFlowOutput {
                 flow_arn: self.flow_arn,
@@ -558,7 +562,7 @@ pub mod start_flow_output {
     }
 }
 impl StartFlowOutput {
-    /// Creates a new builder-style object to manufacture [`StartFlowOutput`](crate::output::StartFlowOutput)
+    /// Creates a new builder-style object to manufacture [`StartFlowOutput`](crate::output::StartFlowOutput).
     pub fn builder() -> crate::output::start_flow_output::Builder {
         crate::output::start_flow_output::Builder::default()
     }
@@ -569,8 +573,10 @@ impl StartFlowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RevokeFlowEntitlementOutput {
     /// The ARN of the entitlement that was revoked.
+    #[doc(hidden)]
     pub entitlement_arn: std::option::Option<std::string::String>,
     /// The ARN of the flow that the entitlement was revoked from.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
 }
 impl RevokeFlowEntitlementOutput {
@@ -591,11 +597,10 @@ impl std::fmt::Debug for RevokeFlowEntitlementOutput {
         formatter.finish()
     }
 }
-/// See [`RevokeFlowEntitlementOutput`](crate::output::RevokeFlowEntitlementOutput)
+/// See [`RevokeFlowEntitlementOutput`](crate::output::RevokeFlowEntitlementOutput).
 pub mod revoke_flow_entitlement_output {
 
-    /// A builder for [`RevokeFlowEntitlementOutput`](crate::output::RevokeFlowEntitlementOutput)
-    #[non_exhaustive]
+    /// A builder for [`RevokeFlowEntitlementOutput`](crate::output::RevokeFlowEntitlementOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entitlement_arn: std::option::Option<std::string::String>,
@@ -625,7 +630,7 @@ pub mod revoke_flow_entitlement_output {
             self.flow_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RevokeFlowEntitlementOutput`](crate::output::RevokeFlowEntitlementOutput)
+        /// Consumes the builder and constructs a [`RevokeFlowEntitlementOutput`](crate::output::RevokeFlowEntitlementOutput).
         pub fn build(self) -> crate::output::RevokeFlowEntitlementOutput {
             crate::output::RevokeFlowEntitlementOutput {
                 entitlement_arn: self.entitlement_arn,
@@ -635,7 +640,7 @@ pub mod revoke_flow_entitlement_output {
     }
 }
 impl RevokeFlowEntitlementOutput {
-    /// Creates a new builder-style object to manufacture [`RevokeFlowEntitlementOutput`](crate::output::RevokeFlowEntitlementOutput)
+    /// Creates a new builder-style object to manufacture [`RevokeFlowEntitlementOutput`](crate::output::RevokeFlowEntitlementOutput).
     pub fn builder() -> crate::output::revoke_flow_entitlement_output::Builder {
         crate::output::revoke_flow_entitlement_output::Builder::default()
     }
@@ -646,10 +651,13 @@ impl RevokeFlowEntitlementOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoveFlowVpcInterfaceOutput {
     /// The ARN of the flow that is associated with the VPC interface you removed.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// IDs of network interfaces associated with the removed VPC interface that Media Connect was unable to remove.
+    #[doc(hidden)]
     pub non_deleted_network_interface_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// The name of the VPC interface that was removed.
+    #[doc(hidden)]
     pub vpc_interface_name: std::option::Option<std::string::String>,
 }
 impl RemoveFlowVpcInterfaceOutput {
@@ -678,11 +686,10 @@ impl std::fmt::Debug for RemoveFlowVpcInterfaceOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveFlowVpcInterfaceOutput`](crate::output::RemoveFlowVpcInterfaceOutput)
+/// See [`RemoveFlowVpcInterfaceOutput`](crate::output::RemoveFlowVpcInterfaceOutput).
 pub mod remove_flow_vpc_interface_output {
 
-    /// A builder for [`RemoveFlowVpcInterfaceOutput`](crate::output::RemoveFlowVpcInterfaceOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveFlowVpcInterfaceOutput`](crate::output::RemoveFlowVpcInterfaceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -736,7 +743,7 @@ pub mod remove_flow_vpc_interface_output {
             self.vpc_interface_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoveFlowVpcInterfaceOutput`](crate::output::RemoveFlowVpcInterfaceOutput)
+        /// Consumes the builder and constructs a [`RemoveFlowVpcInterfaceOutput`](crate::output::RemoveFlowVpcInterfaceOutput).
         pub fn build(self) -> crate::output::RemoveFlowVpcInterfaceOutput {
             crate::output::RemoveFlowVpcInterfaceOutput {
                 flow_arn: self.flow_arn,
@@ -747,7 +754,7 @@ pub mod remove_flow_vpc_interface_output {
     }
 }
 impl RemoveFlowVpcInterfaceOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveFlowVpcInterfaceOutput`](crate::output::RemoveFlowVpcInterfaceOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveFlowVpcInterfaceOutput`](crate::output::RemoveFlowVpcInterfaceOutput).
     pub fn builder() -> crate::output::remove_flow_vpc_interface_output::Builder {
         crate::output::remove_flow_vpc_interface_output::Builder::default()
     }
@@ -758,8 +765,10 @@ impl RemoveFlowVpcInterfaceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoveFlowSourceOutput {
     /// The ARN of the flow that is associated with the source you removed.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// The ARN of the source that was removed.
+    #[doc(hidden)]
     pub source_arn: std::option::Option<std::string::String>,
 }
 impl RemoveFlowSourceOutput {
@@ -780,11 +789,10 @@ impl std::fmt::Debug for RemoveFlowSourceOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveFlowSourceOutput`](crate::output::RemoveFlowSourceOutput)
+/// See [`RemoveFlowSourceOutput`](crate::output::RemoveFlowSourceOutput).
 pub mod remove_flow_source_output {
 
-    /// A builder for [`RemoveFlowSourceOutput`](crate::output::RemoveFlowSourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveFlowSourceOutput`](crate::output::RemoveFlowSourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -811,7 +819,7 @@ pub mod remove_flow_source_output {
             self.source_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoveFlowSourceOutput`](crate::output::RemoveFlowSourceOutput)
+        /// Consumes the builder and constructs a [`RemoveFlowSourceOutput`](crate::output::RemoveFlowSourceOutput).
         pub fn build(self) -> crate::output::RemoveFlowSourceOutput {
             crate::output::RemoveFlowSourceOutput {
                 flow_arn: self.flow_arn,
@@ -821,7 +829,7 @@ pub mod remove_flow_source_output {
     }
 }
 impl RemoveFlowSourceOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveFlowSourceOutput`](crate::output::RemoveFlowSourceOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveFlowSourceOutput`](crate::output::RemoveFlowSourceOutput).
     pub fn builder() -> crate::output::remove_flow_source_output::Builder {
         crate::output::remove_flow_source_output::Builder::default()
     }
@@ -832,8 +840,10 @@ impl RemoveFlowSourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoveFlowOutputOutput {
     /// The ARN of the flow that is associated with the output you removed.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// The ARN of the output that was removed.
+    #[doc(hidden)]
     pub output_arn: std::option::Option<std::string::String>,
 }
 impl RemoveFlowOutputOutput {
@@ -854,11 +864,10 @@ impl std::fmt::Debug for RemoveFlowOutputOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveFlowOutputOutput`](crate::output::RemoveFlowOutputOutput)
+/// See [`RemoveFlowOutputOutput`](crate::output::RemoveFlowOutputOutput).
 pub mod remove_flow_output_output {
 
-    /// A builder for [`RemoveFlowOutputOutput`](crate::output::RemoveFlowOutputOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveFlowOutputOutput`](crate::output::RemoveFlowOutputOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -885,7 +894,7 @@ pub mod remove_flow_output_output {
             self.output_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoveFlowOutputOutput`](crate::output::RemoveFlowOutputOutput)
+        /// Consumes the builder and constructs a [`RemoveFlowOutputOutput`](crate::output::RemoveFlowOutputOutput).
         pub fn build(self) -> crate::output::RemoveFlowOutputOutput {
             crate::output::RemoveFlowOutputOutput {
                 flow_arn: self.flow_arn,
@@ -895,7 +904,7 @@ pub mod remove_flow_output_output {
     }
 }
 impl RemoveFlowOutputOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveFlowOutputOutput`](crate::output::RemoveFlowOutputOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveFlowOutputOutput`](crate::output::RemoveFlowOutputOutput).
     pub fn builder() -> crate::output::remove_flow_output_output::Builder {
         crate::output::remove_flow_output_output::Builder::default()
     }
@@ -906,8 +915,10 @@ impl RemoveFlowOutputOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoveFlowMediaStreamOutput {
     /// The Amazon Resource Name (ARN) of the flow.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// The name of the media stream that was removed.
+    #[doc(hidden)]
     pub media_stream_name: std::option::Option<std::string::String>,
 }
 impl RemoveFlowMediaStreamOutput {
@@ -928,11 +939,10 @@ impl std::fmt::Debug for RemoveFlowMediaStreamOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveFlowMediaStreamOutput`](crate::output::RemoveFlowMediaStreamOutput)
+/// See [`RemoveFlowMediaStreamOutput`](crate::output::RemoveFlowMediaStreamOutput).
 pub mod remove_flow_media_stream_output {
 
-    /// A builder for [`RemoveFlowMediaStreamOutput`](crate::output::RemoveFlowMediaStreamOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveFlowMediaStreamOutput`](crate::output::RemoveFlowMediaStreamOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -962,7 +972,7 @@ pub mod remove_flow_media_stream_output {
             self.media_stream_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoveFlowMediaStreamOutput`](crate::output::RemoveFlowMediaStreamOutput)
+        /// Consumes the builder and constructs a [`RemoveFlowMediaStreamOutput`](crate::output::RemoveFlowMediaStreamOutput).
         pub fn build(self) -> crate::output::RemoveFlowMediaStreamOutput {
             crate::output::RemoveFlowMediaStreamOutput {
                 flow_arn: self.flow_arn,
@@ -972,7 +982,7 @@ pub mod remove_flow_media_stream_output {
     }
 }
 impl RemoveFlowMediaStreamOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveFlowMediaStreamOutput`](crate::output::RemoveFlowMediaStreamOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveFlowMediaStreamOutput`](crate::output::RemoveFlowMediaStreamOutput).
     pub fn builder() -> crate::output::remove_flow_media_stream_output::Builder {
         crate::output::remove_flow_media_stream_output::Builder::default()
     }
@@ -983,6 +993,7 @@ impl RemoveFlowMediaStreamOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PurchaseOfferingOutput {
     /// A pricing agreement for a discounted rate for a specific outbound bandwidth that your MediaConnect account will use each month over a specific time period. The discounted rate in the reservation applies to outbound bandwidth for all flows from your account until your account reaches the amount of bandwidth in your reservation. If you use more outbound bandwidth than the agreed upon amount in a single month, the overage is charged at the on-demand rate.
+    #[doc(hidden)]
     pub reservation: std::option::Option<crate::model::Reservation>,
 }
 impl PurchaseOfferingOutput {
@@ -998,11 +1009,10 @@ impl std::fmt::Debug for PurchaseOfferingOutput {
         formatter.finish()
     }
 }
-/// See [`PurchaseOfferingOutput`](crate::output::PurchaseOfferingOutput)
+/// See [`PurchaseOfferingOutput`](crate::output::PurchaseOfferingOutput).
 pub mod purchase_offering_output {
 
-    /// A builder for [`PurchaseOfferingOutput`](crate::output::PurchaseOfferingOutput)
-    #[non_exhaustive]
+    /// A builder for [`PurchaseOfferingOutput`](crate::output::PurchaseOfferingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reservation: std::option::Option<crate::model::Reservation>,
@@ -1021,7 +1031,7 @@ pub mod purchase_offering_output {
             self.reservation = input;
             self
         }
-        /// Consumes the builder and constructs a [`PurchaseOfferingOutput`](crate::output::PurchaseOfferingOutput)
+        /// Consumes the builder and constructs a [`PurchaseOfferingOutput`](crate::output::PurchaseOfferingOutput).
         pub fn build(self) -> crate::output::PurchaseOfferingOutput {
             crate::output::PurchaseOfferingOutput {
                 reservation: self.reservation,
@@ -1030,7 +1040,7 @@ pub mod purchase_offering_output {
     }
 }
 impl PurchaseOfferingOutput {
-    /// Creates a new builder-style object to manufacture [`PurchaseOfferingOutput`](crate::output::PurchaseOfferingOutput)
+    /// Creates a new builder-style object to manufacture [`PurchaseOfferingOutput`](crate::output::PurchaseOfferingOutput).
     pub fn builder() -> crate::output::purchase_offering_output::Builder {
         crate::output::purchase_offering_output::Builder::default()
     }
@@ -1041,6 +1051,7 @@ impl PurchaseOfferingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// A map from tag keys to values. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters.
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1060,11 +1071,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -1097,14 +1107,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -1115,8 +1125,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListReservationsOutput {
     /// The token that identifies which batch of results that you want to see. For example, you submit a ListReservations request with MaxResults set at 5. The service returns the first batch of results (up to 5) and a NextToken value. To see the next batch of results, you can submit the ListReservations request a second time and specify the NextToken value.
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// A list of all reservations that have been purchased by this account in the current AWS Region.
+    #[doc(hidden)]
     pub reservations: std::option::Option<std::vec::Vec<crate::model::Reservation>>,
 }
 impl ListReservationsOutput {
@@ -1137,11 +1149,10 @@ impl std::fmt::Debug for ListReservationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListReservationsOutput`](crate::output::ListReservationsOutput)
+/// See [`ListReservationsOutput`](crate::output::ListReservationsOutput).
 pub mod list_reservations_output {
 
-    /// A builder for [`ListReservationsOutput`](crate::output::ListReservationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListReservationsOutput`](crate::output::ListReservationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1177,7 +1188,7 @@ pub mod list_reservations_output {
             self.reservations = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListReservationsOutput`](crate::output::ListReservationsOutput)
+        /// Consumes the builder and constructs a [`ListReservationsOutput`](crate::output::ListReservationsOutput).
         pub fn build(self) -> crate::output::ListReservationsOutput {
             crate::output::ListReservationsOutput {
                 next_token: self.next_token,
@@ -1187,7 +1198,7 @@ pub mod list_reservations_output {
     }
 }
 impl ListReservationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListReservationsOutput`](crate::output::ListReservationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListReservationsOutput`](crate::output::ListReservationsOutput).
     pub fn builder() -> crate::output::list_reservations_output::Builder {
         crate::output::list_reservations_output::Builder::default()
     }
@@ -1198,8 +1209,10 @@ impl ListReservationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListOfferingsOutput {
     /// The token that identifies which batch of results that you want to see. For example, you submit a ListOfferings request with MaxResults set at 5. The service returns the first batch of results (up to 5) and a NextToken value. To see the next batch of results, you can submit the ListOfferings request a second time and specify the NextToken value.
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// A list of offerings that are available to this account in the current AWS Region.
+    #[doc(hidden)]
     pub offerings: std::option::Option<std::vec::Vec<crate::model::Offering>>,
 }
 impl ListOfferingsOutput {
@@ -1220,11 +1233,10 @@ impl std::fmt::Debug for ListOfferingsOutput {
         formatter.finish()
     }
 }
-/// See [`ListOfferingsOutput`](crate::output::ListOfferingsOutput)
+/// See [`ListOfferingsOutput`](crate::output::ListOfferingsOutput).
 pub mod list_offerings_output {
 
-    /// A builder for [`ListOfferingsOutput`](crate::output::ListOfferingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListOfferingsOutput`](crate::output::ListOfferingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1260,7 +1272,7 @@ pub mod list_offerings_output {
             self.offerings = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListOfferingsOutput`](crate::output::ListOfferingsOutput)
+        /// Consumes the builder and constructs a [`ListOfferingsOutput`](crate::output::ListOfferingsOutput).
         pub fn build(self) -> crate::output::ListOfferingsOutput {
             crate::output::ListOfferingsOutput {
                 next_token: self.next_token,
@@ -1270,7 +1282,7 @@ pub mod list_offerings_output {
     }
 }
 impl ListOfferingsOutput {
-    /// Creates a new builder-style object to manufacture [`ListOfferingsOutput`](crate::output::ListOfferingsOutput)
+    /// Creates a new builder-style object to manufacture [`ListOfferingsOutput`](crate::output::ListOfferingsOutput).
     pub fn builder() -> crate::output::list_offerings_output::Builder {
         crate::output::list_offerings_output::Builder::default()
     }
@@ -1281,8 +1293,10 @@ impl ListOfferingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListFlowsOutput {
     /// A list of flow summaries.
+    #[doc(hidden)]
     pub flows: std::option::Option<std::vec::Vec<crate::model::ListedFlow>>,
     /// The token that identifies which batch of results that you want to see. For example, you submit a ListFlows request with MaxResults set at 5. The service returns the first batch of results (up to 5) and a NextToken value. To see the next batch of results, you can submit the ListFlows request a second time and specify the NextToken value.
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListFlowsOutput {
@@ -1303,11 +1317,10 @@ impl std::fmt::Debug for ListFlowsOutput {
         formatter.finish()
     }
 }
-/// See [`ListFlowsOutput`](crate::output::ListFlowsOutput)
+/// See [`ListFlowsOutput`](crate::output::ListFlowsOutput).
 pub mod list_flows_output {
 
-    /// A builder for [`ListFlowsOutput`](crate::output::ListFlowsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListFlowsOutput`](crate::output::ListFlowsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flows: std::option::Option<std::vec::Vec<crate::model::ListedFlow>>,
@@ -1343,7 +1356,7 @@ pub mod list_flows_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFlowsOutput`](crate::output::ListFlowsOutput)
+        /// Consumes the builder and constructs a [`ListFlowsOutput`](crate::output::ListFlowsOutput).
         pub fn build(self) -> crate::output::ListFlowsOutput {
             crate::output::ListFlowsOutput {
                 flows: self.flows,
@@ -1353,7 +1366,7 @@ pub mod list_flows_output {
     }
 }
 impl ListFlowsOutput {
-    /// Creates a new builder-style object to manufacture [`ListFlowsOutput`](crate::output::ListFlowsOutput)
+    /// Creates a new builder-style object to manufacture [`ListFlowsOutput`](crate::output::ListFlowsOutput).
     pub fn builder() -> crate::output::list_flows_output::Builder {
         crate::output::list_flows_output::Builder::default()
     }
@@ -1364,8 +1377,10 @@ impl ListFlowsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListEntitlementsOutput {
     /// A list of entitlements that have been granted to you from other AWS accounts.
+    #[doc(hidden)]
     pub entitlements: std::option::Option<std::vec::Vec<crate::model::ListedEntitlement>>,
     /// The token that identifies which batch of results that you want to see. For example, you submit a ListEntitlements request with MaxResults set at 5. The service returns the first batch of results (up to 5) and a NextToken value. To see the next batch of results, you can submit the ListEntitlements request a second time and specify the NextToken value.
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListEntitlementsOutput {
@@ -1386,11 +1401,10 @@ impl std::fmt::Debug for ListEntitlementsOutput {
         formatter.finish()
     }
 }
-/// See [`ListEntitlementsOutput`](crate::output::ListEntitlementsOutput)
+/// See [`ListEntitlementsOutput`](crate::output::ListEntitlementsOutput).
 pub mod list_entitlements_output {
 
-    /// A builder for [`ListEntitlementsOutput`](crate::output::ListEntitlementsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListEntitlementsOutput`](crate::output::ListEntitlementsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entitlements:
@@ -1427,7 +1441,7 @@ pub mod list_entitlements_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListEntitlementsOutput`](crate::output::ListEntitlementsOutput)
+        /// Consumes the builder and constructs a [`ListEntitlementsOutput`](crate::output::ListEntitlementsOutput).
         pub fn build(self) -> crate::output::ListEntitlementsOutput {
             crate::output::ListEntitlementsOutput {
                 entitlements: self.entitlements,
@@ -1437,7 +1451,7 @@ pub mod list_entitlements_output {
     }
 }
 impl ListEntitlementsOutput {
-    /// Creates a new builder-style object to manufacture [`ListEntitlementsOutput`](crate::output::ListEntitlementsOutput)
+    /// Creates a new builder-style object to manufacture [`ListEntitlementsOutput`](crate::output::ListEntitlementsOutput).
     pub fn builder() -> crate::output::list_entitlements_output::Builder {
         crate::output::list_entitlements_output::Builder::default()
     }
@@ -1448,8 +1462,10 @@ impl ListEntitlementsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GrantFlowEntitlementsOutput {
     /// The entitlements that were just granted.
+    #[doc(hidden)]
     pub entitlements: std::option::Option<std::vec::Vec<crate::model::Entitlement>>,
     /// The ARN of the flow that these entitlements were granted to.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
 }
 impl GrantFlowEntitlementsOutput {
@@ -1470,11 +1486,10 @@ impl std::fmt::Debug for GrantFlowEntitlementsOutput {
         formatter.finish()
     }
 }
-/// See [`GrantFlowEntitlementsOutput`](crate::output::GrantFlowEntitlementsOutput)
+/// See [`GrantFlowEntitlementsOutput`](crate::output::GrantFlowEntitlementsOutput).
 pub mod grant_flow_entitlements_output {
 
-    /// A builder for [`GrantFlowEntitlementsOutput`](crate::output::GrantFlowEntitlementsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GrantFlowEntitlementsOutput`](crate::output::GrantFlowEntitlementsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entitlements: std::option::Option<std::vec::Vec<crate::model::Entitlement>>,
@@ -1510,7 +1525,7 @@ pub mod grant_flow_entitlements_output {
             self.flow_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`GrantFlowEntitlementsOutput`](crate::output::GrantFlowEntitlementsOutput)
+        /// Consumes the builder and constructs a [`GrantFlowEntitlementsOutput`](crate::output::GrantFlowEntitlementsOutput).
         pub fn build(self) -> crate::output::GrantFlowEntitlementsOutput {
             crate::output::GrantFlowEntitlementsOutput {
                 entitlements: self.entitlements,
@@ -1520,7 +1535,7 @@ pub mod grant_flow_entitlements_output {
     }
 }
 impl GrantFlowEntitlementsOutput {
-    /// Creates a new builder-style object to manufacture [`GrantFlowEntitlementsOutput`](crate::output::GrantFlowEntitlementsOutput)
+    /// Creates a new builder-style object to manufacture [`GrantFlowEntitlementsOutput`](crate::output::GrantFlowEntitlementsOutput).
     pub fn builder() -> crate::output::grant_flow_entitlements_output::Builder {
         crate::output::grant_flow_entitlements_output::Builder::default()
     }
@@ -1531,6 +1546,7 @@ impl GrantFlowEntitlementsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeReservationOutput {
     /// A pricing agreement for a discounted rate for a specific outbound bandwidth that your MediaConnect account will use each month over a specific time period. The discounted rate in the reservation applies to outbound bandwidth for all flows from your account until your account reaches the amount of bandwidth in your reservation. If you use more outbound bandwidth than the agreed upon amount in a single month, the overage is charged at the on-demand rate.
+    #[doc(hidden)]
     pub reservation: std::option::Option<crate::model::Reservation>,
 }
 impl DescribeReservationOutput {
@@ -1546,11 +1562,10 @@ impl std::fmt::Debug for DescribeReservationOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeReservationOutput`](crate::output::DescribeReservationOutput)
+/// See [`DescribeReservationOutput`](crate::output::DescribeReservationOutput).
 pub mod describe_reservation_output {
 
-    /// A builder for [`DescribeReservationOutput`](crate::output::DescribeReservationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeReservationOutput`](crate::output::DescribeReservationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reservation: std::option::Option<crate::model::Reservation>,
@@ -1569,7 +1584,7 @@ pub mod describe_reservation_output {
             self.reservation = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeReservationOutput`](crate::output::DescribeReservationOutput)
+        /// Consumes the builder and constructs a [`DescribeReservationOutput`](crate::output::DescribeReservationOutput).
         pub fn build(self) -> crate::output::DescribeReservationOutput {
             crate::output::DescribeReservationOutput {
                 reservation: self.reservation,
@@ -1578,7 +1593,7 @@ pub mod describe_reservation_output {
     }
 }
 impl DescribeReservationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeReservationOutput`](crate::output::DescribeReservationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeReservationOutput`](crate::output::DescribeReservationOutput).
     pub fn builder() -> crate::output::describe_reservation_output::Builder {
         crate::output::describe_reservation_output::Builder::default()
     }
@@ -1589,6 +1604,7 @@ impl DescribeReservationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeOfferingOutput {
     /// A savings plan that reserves a certain amount of outbound bandwidth usage at a discounted rate each month over a period of time.
+    #[doc(hidden)]
     pub offering: std::option::Option<crate::model::Offering>,
 }
 impl DescribeOfferingOutput {
@@ -1604,11 +1620,10 @@ impl std::fmt::Debug for DescribeOfferingOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOfferingOutput`](crate::output::DescribeOfferingOutput)
+/// See [`DescribeOfferingOutput`](crate::output::DescribeOfferingOutput).
 pub mod describe_offering_output {
 
-    /// A builder for [`DescribeOfferingOutput`](crate::output::DescribeOfferingOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeOfferingOutput`](crate::output::DescribeOfferingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) offering: std::option::Option<crate::model::Offering>,
@@ -1624,7 +1639,7 @@ pub mod describe_offering_output {
             self.offering = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOfferingOutput`](crate::output::DescribeOfferingOutput)
+        /// Consumes the builder and constructs a [`DescribeOfferingOutput`](crate::output::DescribeOfferingOutput).
         pub fn build(self) -> crate::output::DescribeOfferingOutput {
             crate::output::DescribeOfferingOutput {
                 offering: self.offering,
@@ -1633,7 +1648,7 @@ pub mod describe_offering_output {
     }
 }
 impl DescribeOfferingOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOfferingOutput`](crate::output::DescribeOfferingOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOfferingOutput`](crate::output::DescribeOfferingOutput).
     pub fn builder() -> crate::output::describe_offering_output::Builder {
         crate::output::describe_offering_output::Builder::default()
     }
@@ -1644,8 +1659,10 @@ impl DescribeOfferingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeFlowOutput {
     /// The settings for a flow, including its source, outputs, and entitlements.
+    #[doc(hidden)]
     pub flow: std::option::Option<crate::model::Flow>,
     /// Messages that provide the state of the flow.
+    #[doc(hidden)]
     pub messages: std::option::Option<crate::model::Messages>,
 }
 impl DescribeFlowOutput {
@@ -1666,11 +1683,10 @@ impl std::fmt::Debug for DescribeFlowOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFlowOutput`](crate::output::DescribeFlowOutput)
+/// See [`DescribeFlowOutput`](crate::output::DescribeFlowOutput).
 pub mod describe_flow_output {
 
-    /// A builder for [`DescribeFlowOutput`](crate::output::DescribeFlowOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeFlowOutput`](crate::output::DescribeFlowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow: std::option::Option<crate::model::Flow>,
@@ -1697,7 +1713,7 @@ pub mod describe_flow_output {
             self.messages = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFlowOutput`](crate::output::DescribeFlowOutput)
+        /// Consumes the builder and constructs a [`DescribeFlowOutput`](crate::output::DescribeFlowOutput).
         pub fn build(self) -> crate::output::DescribeFlowOutput {
             crate::output::DescribeFlowOutput {
                 flow: self.flow,
@@ -1707,7 +1723,7 @@ pub mod describe_flow_output {
     }
 }
 impl DescribeFlowOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFlowOutput`](crate::output::DescribeFlowOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFlowOutput`](crate::output::DescribeFlowOutput).
     pub fn builder() -> crate::output::describe_flow_output::Builder {
         crate::output::describe_flow_output::Builder::default()
     }
@@ -1718,8 +1734,10 @@ impl DescribeFlowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteFlowOutput {
     /// The ARN of the flow that was deleted.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// The status of the flow when the DeleteFlow process begins.
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
 }
 impl DeleteFlowOutput {
@@ -1740,11 +1758,10 @@ impl std::fmt::Debug for DeleteFlowOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFlowOutput`](crate::output::DeleteFlowOutput)
+/// See [`DeleteFlowOutput`](crate::output::DeleteFlowOutput).
 pub mod delete_flow_output {
 
-    /// A builder for [`DeleteFlowOutput`](crate::output::DeleteFlowOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFlowOutput`](crate::output::DeleteFlowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -1771,7 +1788,7 @@ pub mod delete_flow_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFlowOutput`](crate::output::DeleteFlowOutput)
+        /// Consumes the builder and constructs a [`DeleteFlowOutput`](crate::output::DeleteFlowOutput).
         pub fn build(self) -> crate::output::DeleteFlowOutput {
             crate::output::DeleteFlowOutput {
                 flow_arn: self.flow_arn,
@@ -1781,7 +1798,7 @@ pub mod delete_flow_output {
     }
 }
 impl DeleteFlowOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFlowOutput`](crate::output::DeleteFlowOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFlowOutput`](crate::output::DeleteFlowOutput).
     pub fn builder() -> crate::output::delete_flow_output::Builder {
         crate::output::delete_flow_output::Builder::default()
     }
@@ -1792,6 +1809,7 @@ impl DeleteFlowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateFlowOutput {
     /// The settings for a flow, including its source, outputs, and entitlements.
+    #[doc(hidden)]
     pub flow: std::option::Option<crate::model::Flow>,
 }
 impl CreateFlowOutput {
@@ -1807,11 +1825,10 @@ impl std::fmt::Debug for CreateFlowOutput {
         formatter.finish()
     }
 }
-/// See [`CreateFlowOutput`](crate::output::CreateFlowOutput)
+/// See [`CreateFlowOutput`](crate::output::CreateFlowOutput).
 pub mod create_flow_output {
 
-    /// A builder for [`CreateFlowOutput`](crate::output::CreateFlowOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateFlowOutput`](crate::output::CreateFlowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow: std::option::Option<crate::model::Flow>,
@@ -1827,14 +1844,14 @@ pub mod create_flow_output {
             self.flow = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFlowOutput`](crate::output::CreateFlowOutput)
+        /// Consumes the builder and constructs a [`CreateFlowOutput`](crate::output::CreateFlowOutput).
         pub fn build(self) -> crate::output::CreateFlowOutput {
             crate::output::CreateFlowOutput { flow: self.flow }
         }
     }
 }
 impl CreateFlowOutput {
-    /// Creates a new builder-style object to manufacture [`CreateFlowOutput`](crate::output::CreateFlowOutput)
+    /// Creates a new builder-style object to manufacture [`CreateFlowOutput`](crate::output::CreateFlowOutput).
     pub fn builder() -> crate::output::create_flow_output::Builder {
         crate::output::create_flow_output::Builder::default()
     }
@@ -1845,8 +1862,10 @@ impl CreateFlowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddFlowVpcInterfacesOutput {
     /// The ARN of the flow that these VPC interfaces were added to.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// The details of the newly added VPC interfaces.
+    #[doc(hidden)]
     pub vpc_interfaces: std::option::Option<std::vec::Vec<crate::model::VpcInterface>>,
 }
 impl AddFlowVpcInterfacesOutput {
@@ -1867,11 +1886,10 @@ impl std::fmt::Debug for AddFlowVpcInterfacesOutput {
         formatter.finish()
     }
 }
-/// See [`AddFlowVpcInterfacesOutput`](crate::output::AddFlowVpcInterfacesOutput)
+/// See [`AddFlowVpcInterfacesOutput`](crate::output::AddFlowVpcInterfacesOutput).
 pub mod add_flow_vpc_interfaces_output {
 
-    /// A builder for [`AddFlowVpcInterfacesOutput`](crate::output::AddFlowVpcInterfacesOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddFlowVpcInterfacesOutput`](crate::output::AddFlowVpcInterfacesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -1907,7 +1925,7 @@ pub mod add_flow_vpc_interfaces_output {
             self.vpc_interfaces = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddFlowVpcInterfacesOutput`](crate::output::AddFlowVpcInterfacesOutput)
+        /// Consumes the builder and constructs a [`AddFlowVpcInterfacesOutput`](crate::output::AddFlowVpcInterfacesOutput).
         pub fn build(self) -> crate::output::AddFlowVpcInterfacesOutput {
             crate::output::AddFlowVpcInterfacesOutput {
                 flow_arn: self.flow_arn,
@@ -1917,7 +1935,7 @@ pub mod add_flow_vpc_interfaces_output {
     }
 }
 impl AddFlowVpcInterfacesOutput {
-    /// Creates a new builder-style object to manufacture [`AddFlowVpcInterfacesOutput`](crate::output::AddFlowVpcInterfacesOutput)
+    /// Creates a new builder-style object to manufacture [`AddFlowVpcInterfacesOutput`](crate::output::AddFlowVpcInterfacesOutput).
     pub fn builder() -> crate::output::add_flow_vpc_interfaces_output::Builder {
         crate::output::add_flow_vpc_interfaces_output::Builder::default()
     }
@@ -1928,8 +1946,10 @@ impl AddFlowVpcInterfacesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddFlowSourcesOutput {
     /// The ARN of the flow that these sources were added to.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// The details of the newly added sources.
+    #[doc(hidden)]
     pub sources: std::option::Option<std::vec::Vec<crate::model::Source>>,
 }
 impl AddFlowSourcesOutput {
@@ -1950,11 +1970,10 @@ impl std::fmt::Debug for AddFlowSourcesOutput {
         formatter.finish()
     }
 }
-/// See [`AddFlowSourcesOutput`](crate::output::AddFlowSourcesOutput)
+/// See [`AddFlowSourcesOutput`](crate::output::AddFlowSourcesOutput).
 pub mod add_flow_sources_output {
 
-    /// A builder for [`AddFlowSourcesOutput`](crate::output::AddFlowSourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddFlowSourcesOutput`](crate::output::AddFlowSourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -1990,7 +2009,7 @@ pub mod add_flow_sources_output {
             self.sources = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddFlowSourcesOutput`](crate::output::AddFlowSourcesOutput)
+        /// Consumes the builder and constructs a [`AddFlowSourcesOutput`](crate::output::AddFlowSourcesOutput).
         pub fn build(self) -> crate::output::AddFlowSourcesOutput {
             crate::output::AddFlowSourcesOutput {
                 flow_arn: self.flow_arn,
@@ -2000,7 +2019,7 @@ pub mod add_flow_sources_output {
     }
 }
 impl AddFlowSourcesOutput {
-    /// Creates a new builder-style object to manufacture [`AddFlowSourcesOutput`](crate::output::AddFlowSourcesOutput)
+    /// Creates a new builder-style object to manufacture [`AddFlowSourcesOutput`](crate::output::AddFlowSourcesOutput).
     pub fn builder() -> crate::output::add_flow_sources_output::Builder {
         crate::output::add_flow_sources_output::Builder::default()
     }
@@ -2011,8 +2030,10 @@ impl AddFlowSourcesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddFlowOutputsOutput {
     /// The ARN of the flow that these outputs were added to.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// The details of the newly added outputs.
+    #[doc(hidden)]
     pub outputs: std::option::Option<std::vec::Vec<crate::model::Output>>,
 }
 impl AddFlowOutputsOutput {
@@ -2033,11 +2054,10 @@ impl std::fmt::Debug for AddFlowOutputsOutput {
         formatter.finish()
     }
 }
-/// See [`AddFlowOutputsOutput`](crate::output::AddFlowOutputsOutput)
+/// See [`AddFlowOutputsOutput`](crate::output::AddFlowOutputsOutput).
 pub mod add_flow_outputs_output {
 
-    /// A builder for [`AddFlowOutputsOutput`](crate::output::AddFlowOutputsOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddFlowOutputsOutput`](crate::output::AddFlowOutputsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -2073,7 +2093,7 @@ pub mod add_flow_outputs_output {
             self.outputs = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddFlowOutputsOutput`](crate::output::AddFlowOutputsOutput)
+        /// Consumes the builder and constructs a [`AddFlowOutputsOutput`](crate::output::AddFlowOutputsOutput).
         pub fn build(self) -> crate::output::AddFlowOutputsOutput {
             crate::output::AddFlowOutputsOutput {
                 flow_arn: self.flow_arn,
@@ -2083,7 +2103,7 @@ pub mod add_flow_outputs_output {
     }
 }
 impl AddFlowOutputsOutput {
-    /// Creates a new builder-style object to manufacture [`AddFlowOutputsOutput`](crate::output::AddFlowOutputsOutput)
+    /// Creates a new builder-style object to manufacture [`AddFlowOutputsOutput`](crate::output::AddFlowOutputsOutput).
     pub fn builder() -> crate::output::add_flow_outputs_output::Builder {
         crate::output::add_flow_outputs_output::Builder::default()
     }
@@ -2094,8 +2114,10 @@ impl AddFlowOutputsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddFlowMediaStreamsOutput {
     /// The ARN of the flow that you added media streams to.
+    #[doc(hidden)]
     pub flow_arn: std::option::Option<std::string::String>,
     /// The media streams that you added to the flow.
+    #[doc(hidden)]
     pub media_streams: std::option::Option<std::vec::Vec<crate::model::MediaStream>>,
 }
 impl AddFlowMediaStreamsOutput {
@@ -2116,11 +2138,10 @@ impl std::fmt::Debug for AddFlowMediaStreamsOutput {
         formatter.finish()
     }
 }
-/// See [`AddFlowMediaStreamsOutput`](crate::output::AddFlowMediaStreamsOutput)
+/// See [`AddFlowMediaStreamsOutput`](crate::output::AddFlowMediaStreamsOutput).
 pub mod add_flow_media_streams_output {
 
-    /// A builder for [`AddFlowMediaStreamsOutput`](crate::output::AddFlowMediaStreamsOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddFlowMediaStreamsOutput`](crate::output::AddFlowMediaStreamsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_arn: std::option::Option<std::string::String>,
@@ -2156,7 +2177,7 @@ pub mod add_flow_media_streams_output {
             self.media_streams = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddFlowMediaStreamsOutput`](crate::output::AddFlowMediaStreamsOutput)
+        /// Consumes the builder and constructs a [`AddFlowMediaStreamsOutput`](crate::output::AddFlowMediaStreamsOutput).
         pub fn build(self) -> crate::output::AddFlowMediaStreamsOutput {
             crate::output::AddFlowMediaStreamsOutput {
                 flow_arn: self.flow_arn,
@@ -2166,7 +2187,7 @@ pub mod add_flow_media_streams_output {
     }
 }
 impl AddFlowMediaStreamsOutput {
-    /// Creates a new builder-style object to manufacture [`AddFlowMediaStreamsOutput`](crate::output::AddFlowMediaStreamsOutput)
+    /// Creates a new builder-style object to manufacture [`AddFlowMediaStreamsOutput`](crate::output::AddFlowMediaStreamsOutput).
     pub fn builder() -> crate::output::add_flow_media_streams_output::Builder {
         crate::output::add_flow_media_streams_output::Builder::default()
     }

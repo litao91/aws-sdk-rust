@@ -5,26 +5,37 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Queue {
     /// An identifier for this resource that is unique within all of AWS.
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// The timestamp in epoch seconds for when you created the queue.
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// An optional description that you create for each queue.
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// The timestamp in epoch seconds for when you most recently updated the queue.
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
     /// A name that you create for each queue. Each name must be unique within your account.
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// Specifies whether the pricing plan for the queue is on-demand or reserved. For on-demand, you pay per minute, billed in increments of .01 minute. For reserved, you pay for the transcoding capacity of the entire queue, regardless of how much or how little you use it. Reserved pricing requires a 12-month commitment.
+    #[doc(hidden)]
     pub pricing_plan: std::option::Option<crate::model::PricingPlan>,
     /// The estimated number of jobs with a PROGRESSING status.
+    #[doc(hidden)]
     pub progressing_jobs_count: i32,
     /// Details about the pricing plan for your reserved queue. Required for reserved queues and not applicable to on-demand queues.
+    #[doc(hidden)]
     pub reservation_plan: std::option::Option<crate::model::ReservationPlan>,
     /// Queues can be ACTIVE or PAUSED. If you pause a queue, the service won't begin processing jobs in that queue. Jobs that are running when you pause the queue continue to run until they finish or result in an error.
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::QueueStatus>,
     /// The estimated number of jobs with a SUBMITTED status.
+    #[doc(hidden)]
     pub submitted_jobs_count: i32,
     /// Specifies whether this on-demand queue is system or custom. System queues are built in. You can't modify or delete system queues. You can create and modify custom queues.
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
 }
 impl Queue {
@@ -90,11 +101,10 @@ impl std::fmt::Debug for Queue {
         formatter.finish()
     }
 }
-/// See [`Queue`](crate::model::Queue)
+/// See [`Queue`](crate::model::Queue).
 pub mod queue {
 
-    /// A builder for [`Queue`](crate::model::Queue)
-    #[non_exhaustive]
+    /// A builder for [`Queue`](crate::model::Queue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -232,7 +242,7 @@ pub mod queue {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Queue`](crate::model::Queue)
+        /// Consumes the builder and constructs a [`Queue`](crate::model::Queue).
         pub fn build(self) -> crate::model::Queue {
             crate::model::Queue {
                 arn: self.arn,
@@ -251,7 +261,7 @@ pub mod queue {
     }
 }
 impl Queue {
-    /// Creates a new builder-style object to manufacture [`Queue`](crate::model::Queue)
+    /// Creates a new builder-style object to manufacture [`Queue`](crate::model::Queue).
     pub fn builder() -> crate::model::queue::Builder {
         crate::model::queue::Builder::default()
     }
@@ -372,16 +382,22 @@ impl AsRef<str> for QueueStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservationPlan {
     /// The length of the term of your reserved queue pricing plan commitment.
+    #[doc(hidden)]
     pub commitment: std::option::Option<crate::model::Commitment>,
     /// The timestamp in epoch seconds for when the current pricing plan term for this reserved queue expires.
+    #[doc(hidden)]
     pub expires_at: std::option::Option<aws_smithy_types::DateTime>,
     /// The timestamp in epoch seconds for when you set up the current pricing plan for this reserved queue.
+    #[doc(hidden)]
     pub purchased_at: std::option::Option<aws_smithy_types::DateTime>,
     /// Specifies whether the term of your reserved queue pricing plan is automatically extended (AUTO_RENEW) or expires (EXPIRE) at the end of the term.
+    #[doc(hidden)]
     pub renewal_type: std::option::Option<crate::model::RenewalType>,
     /// Specifies the number of reserved transcode slots (RTS) for this queue. The number of RTS determines how many jobs the queue can process in parallel; each RTS can process one job at a time. When you increase this number, you extend your existing commitment with a new 12-month commitment for a larger number of RTS. The new commitment begins when you purchase the additional capacity. You can't decrease the number of RTS in your reserved queue.
+    #[doc(hidden)]
     pub reserved_slots: i32,
     /// Specifies whether the pricing plan for your reserved queue is ACTIVE or EXPIRED.
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ReservationPlanStatus>,
 }
 impl ReservationPlan {
@@ -422,11 +438,10 @@ impl std::fmt::Debug for ReservationPlan {
         formatter.finish()
     }
 }
-/// See [`ReservationPlan`](crate::model::ReservationPlan)
+/// See [`ReservationPlan`](crate::model::ReservationPlan).
 pub mod reservation_plan {
 
-    /// A builder for [`ReservationPlan`](crate::model::ReservationPlan)
-    #[non_exhaustive]
+    /// A builder for [`ReservationPlan`](crate::model::ReservationPlan).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) commitment: std::option::Option<crate::model::Commitment>,
@@ -512,7 +527,7 @@ pub mod reservation_plan {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservationPlan`](crate::model::ReservationPlan)
+        /// Consumes the builder and constructs a [`ReservationPlan`](crate::model::ReservationPlan).
         pub fn build(self) -> crate::model::ReservationPlan {
             crate::model::ReservationPlan {
                 commitment: self.commitment,
@@ -526,7 +541,7 @@ pub mod reservation_plan {
     }
 }
 impl ReservationPlan {
-    /// Creates a new builder-style object to manufacture [`ReservationPlan`](crate::model::ReservationPlan)
+    /// Creates a new builder-style object to manufacture [`ReservationPlan`](crate::model::ReservationPlan).
     pub fn builder() -> crate::model::reservation_plan::Builder {
         crate::model::reservation_plan::Builder::default()
     }
@@ -753,10 +768,13 @@ impl AsRef<str> for PricingPlan {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservationPlanSettings {
     /// The length of the term of your reserved queue pricing plan commitment.
+    #[doc(hidden)]
     pub commitment: std::option::Option<crate::model::Commitment>,
     /// Specifies whether the term of your reserved queue pricing plan is automatically extended (AUTO_RENEW) or expires (EXPIRE) at the end of the term. When your term is auto renewed, you extend your commitment by 12 months from the auto renew date. You can cancel this commitment.
+    #[doc(hidden)]
     pub renewal_type: std::option::Option<crate::model::RenewalType>,
     /// Specifies the number of reserved transcode slots (RTS) for this queue. The number of RTS determines how many jobs the queue can process in parallel; each RTS can process one job at a time. You can't decrease the number of RTS in your reserved queue. You can increase the number of RTS by extending your existing commitment with a new 12-month commitment for the larger number. The new commitment begins when you purchase the additional capacity. You can't cancel your commitment or revert to your original commitment after you increase the capacity.
+    #[doc(hidden)]
     pub reserved_slots: i32,
 }
 impl ReservationPlanSettings {
@@ -782,11 +800,10 @@ impl std::fmt::Debug for ReservationPlanSettings {
         formatter.finish()
     }
 }
-/// See [`ReservationPlanSettings`](crate::model::ReservationPlanSettings)
+/// See [`ReservationPlanSettings`](crate::model::ReservationPlanSettings).
 pub mod reservation_plan_settings {
 
-    /// A builder for [`ReservationPlanSettings`](crate::model::ReservationPlanSettings)
-    #[non_exhaustive]
+    /// A builder for [`ReservationPlanSettings`](crate::model::ReservationPlanSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) commitment: std::option::Option<crate::model::Commitment>,
@@ -830,7 +847,7 @@ pub mod reservation_plan_settings {
             self.reserved_slots = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservationPlanSettings`](crate::model::ReservationPlanSettings)
+        /// Consumes the builder and constructs a [`ReservationPlanSettings`](crate::model::ReservationPlanSettings).
         pub fn build(self) -> crate::model::ReservationPlanSettings {
             crate::model::ReservationPlanSettings {
                 commitment: self.commitment,
@@ -841,7 +858,7 @@ pub mod reservation_plan_settings {
     }
 }
 impl ReservationPlanSettings {
-    /// Creates a new builder-style object to manufacture [`ReservationPlanSettings`](crate::model::ReservationPlanSettings)
+    /// Creates a new builder-style object to manufacture [`ReservationPlanSettings`](crate::model::ReservationPlanSettings).
     pub fn builder() -> crate::model::reservation_plan_settings::Builder {
         crate::model::reservation_plan_settings::Builder::default()
     }
@@ -852,20 +869,28 @@ impl ReservationPlanSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Preset {
     /// An identifier for this resource that is unique within all of AWS.
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// An optional category you create to organize your presets.
+    #[doc(hidden)]
     pub category: std::option::Option<std::string::String>,
     /// The timestamp in epoch seconds for preset creation.
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// An optional description you create for each preset.
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// The timestamp in epoch seconds when the preset was last updated.
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
     /// A name you create for each preset. Each name must be unique within your account.
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// Settings for preset
+    #[doc(hidden)]
     pub settings: std::option::Option<crate::model::PresetSettings>,
     /// A preset can be of two types: system or custom. System or built-in preset can't be modified or deleted by the user.
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
 }
 impl Preset {
@@ -916,11 +941,10 @@ impl std::fmt::Debug for Preset {
         formatter.finish()
     }
 }
-/// See [`Preset`](crate::model::Preset)
+/// See [`Preset`](crate::model::Preset).
 pub mod preset {
 
-    /// A builder for [`Preset`](crate::model::Preset)
-    #[non_exhaustive]
+    /// A builder for [`Preset`](crate::model::Preset).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1022,7 +1046,7 @@ pub mod preset {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Preset`](crate::model::Preset)
+        /// Consumes the builder and constructs a [`Preset`](crate::model::Preset).
         pub fn build(self) -> crate::model::Preset {
             crate::model::Preset {
                 arn: self.arn,
@@ -1038,7 +1062,7 @@ pub mod preset {
     }
 }
 impl Preset {
-    /// Creates a new builder-style object to manufacture [`Preset`](crate::model::Preset)
+    /// Creates a new builder-style object to manufacture [`Preset`](crate::model::Preset).
     pub fn builder() -> crate::model::preset::Builder {
         crate::model::preset::Builder::default()
     }
@@ -1049,13 +1073,17 @@ impl Preset {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PresetSettings {
     /// (AudioDescriptions) contains groups of audio encoding settings organized by audio codec. Include one instance of (AudioDescriptions) per output. (AudioDescriptions) can contain multiple groups of encoding settings.
+    #[doc(hidden)]
     pub audio_descriptions: std::option::Option<std::vec::Vec<crate::model::AudioDescription>>,
     /// This object holds groups of settings related to captions for one output. For each output that has captions, include one instance of CaptionDescriptions.
+    #[doc(hidden)]
     pub caption_descriptions:
         std::option::Option<std::vec::Vec<crate::model::CaptionDescriptionPreset>>,
     /// Container specific settings.
+    #[doc(hidden)]
     pub container_settings: std::option::Option<crate::model::ContainerSettings>,
     /// VideoDescription contains a group of video encoding settings. The specific video settings depend on the video codec that you choose for the property codec. Include one instance of VideoDescription per output.
+    #[doc(hidden)]
     pub video_description: std::option::Option<crate::model::VideoDescription>,
 }
 impl PresetSettings {
@@ -1088,11 +1116,10 @@ impl std::fmt::Debug for PresetSettings {
         formatter.finish()
     }
 }
-/// See [`PresetSettings`](crate::model::PresetSettings)
+/// See [`PresetSettings`](crate::model::PresetSettings).
 pub mod preset_settings {
 
-    /// A builder for [`PresetSettings`](crate::model::PresetSettings)
-    #[non_exhaustive]
+    /// A builder for [`PresetSettings`](crate::model::PresetSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_descriptions:
@@ -1170,7 +1197,7 @@ pub mod preset_settings {
             self.video_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`PresetSettings`](crate::model::PresetSettings)
+        /// Consumes the builder and constructs a [`PresetSettings`](crate::model::PresetSettings).
         pub fn build(self) -> crate::model::PresetSettings {
             crate::model::PresetSettings {
                 audio_descriptions: self.audio_descriptions,
@@ -1182,7 +1209,7 @@ pub mod preset_settings {
     }
 }
 impl PresetSettings {
-    /// Creates a new builder-style object to manufacture [`PresetSettings`](crate::model::PresetSettings)
+    /// Creates a new builder-style object to manufacture [`PresetSettings`](crate::model::PresetSettings).
     pub fn builder() -> crate::model::preset_settings::Builder {
         crate::model::preset_settings::Builder::default()
     }
@@ -1193,34 +1220,49 @@ impl PresetSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VideoDescription {
     /// This setting only applies to H.264, H.265, and MPEG2 outputs. Use Insert AFD signaling (AfdSignaling) to specify whether the service includes AFD values in the output video data and what those values are. * Choose None to remove all AFD values from this output. * Choose Fixed to ignore input AFD values and instead encode the value specified in the job. * Choose Auto to calculate output AFD values based on the input AFD scaler data.
+    #[doc(hidden)]
     pub afd_signaling: std::option::Option<crate::model::AfdSignaling>,
     /// The anti-alias filter is automatically applied to all outputs. The service no longer accepts the value DISABLED for AntiAlias. If you specify that in your job, the service will ignore the setting.
+    #[doc(hidden)]
     pub anti_alias: std::option::Option<crate::model::AntiAlias>,
     /// Video codec settings, (CodecSettings) under (VideoDescription), contains the group of settings related to video encoding. The settings in this group vary depending on the value that you choose for Video codec (Codec). For each codec enum that you choose, define the corresponding settings object. The following lists the codec enum, settings object pairs. * AV1, Av1Settings * AVC_INTRA, AvcIntraSettings * FRAME_CAPTURE, FrameCaptureSettings * H_264, H264Settings * H_265, H265Settings * MPEG2, Mpeg2Settings * PRORES, ProresSettings * VC3, Vc3Settings * VP8, Vp8Settings * VP9, Vp9Settings * XAVC, XavcSettings
+    #[doc(hidden)]
     pub codec_settings: std::option::Option<crate::model::VideoCodecSettings>,
     /// Choose Insert (INSERT) for this setting to include color metadata in this output. Choose Ignore (IGNORE) to exclude color metadata from this output. If you don't specify a value, the service sets this to Insert by default.
+    #[doc(hidden)]
     pub color_metadata: std::option::Option<crate::model::ColorMetadata>,
     /// Use Cropping selection (crop) to specify the video area that the service will include in the output video frame.
+    #[doc(hidden)]
     pub crop: std::option::Option<crate::model::Rectangle>,
     /// Applies only to 29.97 fps outputs. When this feature is enabled, the service will use drop-frame timecode on outputs. If it is not possible to use drop-frame timecode, the system will fall back to non-drop-frame. This setting is enabled by default when Timecode insertion (TimecodeInsertion) is enabled.
+    #[doc(hidden)]
     pub drop_frame_timecode: std::option::Option<crate::model::DropFrameTimecode>,
     /// Applies only if you set AFD Signaling(AfdSignaling) to Fixed (FIXED). Use Fixed (FixedAfd) to specify a four-bit AFD value which the service will write on all frames of this video output.
+    #[doc(hidden)]
     pub fixed_afd: i32,
     /// Use the Height (Height) setting to define the video resolution height for this output. Specify in pixels. If you don't provide a value here, the service will use the input height.
+    #[doc(hidden)]
     pub height: i32,
     /// Use Selection placement (position) to define the video area in your output frame. The area outside of the rectangle that you specify here is black.
+    #[doc(hidden)]
     pub position: std::option::Option<crate::model::Rectangle>,
     /// Use Respond to AFD (RespondToAfd) to specify how the service changes the video itself in response to AFD values in the input. * Choose Respond to clip the input video frame according to the AFD value, input display aspect ratio, and output display aspect ratio. * Choose Passthrough to include the input AFD values. Do not choose this when AfdSignaling is set to (NONE). A preferred implementation of this workflow is to set RespondToAfd to (NONE) and set AfdSignaling to (AUTO). * Choose None to remove all input AFD values from this output.
+    #[doc(hidden)]
     pub respond_to_afd: std::option::Option<crate::model::RespondToAfd>,
     /// Specify how the service handles outputs that have a different aspect ratio from the input aspect ratio. Choose Stretch to output (STRETCH_TO_OUTPUT) to have the service stretch your video image to fit. Keep the setting Default (DEFAULT) to have the service letterbox your video instead. This setting overrides any value that you specify for the setting Selection placement (position) in this output.
+    #[doc(hidden)]
     pub scaling_behavior: std::option::Option<crate::model::ScalingBehavior>,
     /// Use Sharpness (Sharpness) setting to specify the strength of anti-aliasing. This setting changes the width of the anti-alias filter kernel used for scaling. Sharpness only applies if your output resolution is different from your input resolution. 0 is the softest setting, 100 the sharpest, and 50 recommended for most content.
+    #[doc(hidden)]
     pub sharpness: i32,
     /// Applies only to H.264, H.265, MPEG2, and ProRes outputs. Only enable Timecode insertion when the input frame rate is identical to the output frame rate. To include timecodes in this output, set Timecode insertion (VideoTimecodeInsertion) to PIC_TIMING_SEI. To leave them out, set it to DISABLED. Default is DISABLED. When the service inserts timecodes in an output, by default, it uses any embedded timecodes from the input. If none are present, the service will set the timecode for the first output frame to zero. To change this default behavior, adjust the settings under Timecode configuration (TimecodeConfig). In the console, these settings are located under Job &gt; Job settings &gt; Timecode configuration. Note - Timecode source under input settings (InputTimecodeSource) does not affect the timecodes that are inserted in the output. Source under Job settings &gt; Timecode configuration (TimecodeSource) does.
+    #[doc(hidden)]
     pub timecode_insertion: std::option::Option<crate::model::VideoTimecodeInsertion>,
     /// Find additional transcoding features under Preprocessors (VideoPreprocessors). Enable the features at each output individually. These features are disabled by default.
+    #[doc(hidden)]
     pub video_preprocessors: std::option::Option<crate::model::VideoPreprocessor>,
     /// Use Width (Width) to define the video resolution width, in pixels, for this output. If you don't provide a value here, the service will use the input width.
+    #[doc(hidden)]
     pub width: i32,
 }
 impl VideoDescription {
@@ -1306,11 +1348,10 @@ impl std::fmt::Debug for VideoDescription {
         formatter.finish()
     }
 }
-/// See [`VideoDescription`](crate::model::VideoDescription)
+/// See [`VideoDescription`](crate::model::VideoDescription).
 pub mod video_description {
 
-    /// A builder for [`VideoDescription`](crate::model::VideoDescription)
-    #[non_exhaustive]
+    /// A builder for [`VideoDescription`](crate::model::VideoDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) afd_signaling: std::option::Option<crate::model::AfdSignaling>,
@@ -1507,7 +1548,7 @@ pub mod video_description {
             self.width = input;
             self
         }
-        /// Consumes the builder and constructs a [`VideoDescription`](crate::model::VideoDescription)
+        /// Consumes the builder and constructs a [`VideoDescription`](crate::model::VideoDescription).
         pub fn build(self) -> crate::model::VideoDescription {
             crate::model::VideoDescription {
                 afd_signaling: self.afd_signaling,
@@ -1530,7 +1571,7 @@ pub mod video_description {
     }
 }
 impl VideoDescription {
-    /// Creates a new builder-style object to manufacture [`VideoDescription`](crate::model::VideoDescription)
+    /// Creates a new builder-style object to manufacture [`VideoDescription`](crate::model::VideoDescription).
     pub fn builder() -> crate::model::video_description::Builder {
         crate::model::video_description::Builder::default()
     }
@@ -1541,20 +1582,28 @@ impl VideoDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VideoPreprocessor {
     /// Use these settings to convert the color space or to modify properties such as hue and contrast for this output. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/converting-the-color-space.html.
+    #[doc(hidden)]
     pub color_corrector: std::option::Option<crate::model::ColorCorrector>,
     /// Use the deinterlacer to produce smoother motion and a clearer picture. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-scan-type.html.
+    #[doc(hidden)]
     pub deinterlacer: std::option::Option<crate::model::Deinterlacer>,
     /// Enable Dolby Vision feature to produce Dolby Vision compatible video output.
+    #[doc(hidden)]
     pub dolby_vision: std::option::Option<crate::model::DolbyVision>,
     /// Enable HDR10+ analyis and metadata injection. Compatible with HEVC only.
+    #[doc(hidden)]
     pub hdr10_plus: std::option::Option<crate::model::Hdr10Plus>,
     /// Enable the Image inserter (ImageInserter) feature to include a graphic overlay on your video. Enable or disable this feature for each output individually. This setting is disabled by default.
+    #[doc(hidden)]
     pub image_inserter: std::option::Option<crate::model::ImageInserter>,
     /// Enable the Noise reducer (NoiseReducer) feature to remove noise from your video output if necessary. Enable or disable this feature for each output individually. This setting is disabled by default.
+    #[doc(hidden)]
     pub noise_reducer: std::option::Option<crate::model::NoiseReducer>,
     /// If you work with a third party video watermarking partner, use the group of settings that correspond with your watermarking partner to include watermarks in your output.
+    #[doc(hidden)]
     pub partner_watermarking: std::option::Option<crate::model::PartnerWatermarking>,
     /// Settings for burning the output timecode and specified prefix into the output.
+    #[doc(hidden)]
     pub timecode_burnin: std::option::Option<crate::model::TimecodeBurnin>,
 }
 impl VideoPreprocessor {
@@ -1605,11 +1654,10 @@ impl std::fmt::Debug for VideoPreprocessor {
         formatter.finish()
     }
 }
-/// See [`VideoPreprocessor`](crate::model::VideoPreprocessor)
+/// See [`VideoPreprocessor`](crate::model::VideoPreprocessor).
 pub mod video_preprocessor {
 
-    /// A builder for [`VideoPreprocessor`](crate::model::VideoPreprocessor)
-    #[non_exhaustive]
+    /// A builder for [`VideoPreprocessor`](crate::model::VideoPreprocessor).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) color_corrector: std::option::Option<crate::model::ColorCorrector>,
@@ -1726,7 +1774,7 @@ pub mod video_preprocessor {
             self.timecode_burnin = input;
             self
         }
-        /// Consumes the builder and constructs a [`VideoPreprocessor`](crate::model::VideoPreprocessor)
+        /// Consumes the builder and constructs a [`VideoPreprocessor`](crate::model::VideoPreprocessor).
         pub fn build(self) -> crate::model::VideoPreprocessor {
             crate::model::VideoPreprocessor {
                 color_corrector: self.color_corrector,
@@ -1742,7 +1790,7 @@ pub mod video_preprocessor {
     }
 }
 impl VideoPreprocessor {
-    /// Creates a new builder-style object to manufacture [`VideoPreprocessor`](crate::model::VideoPreprocessor)
+    /// Creates a new builder-style object to manufacture [`VideoPreprocessor`](crate::model::VideoPreprocessor).
     pub fn builder() -> crate::model::video_preprocessor::Builder {
         crate::model::video_preprocessor::Builder::default()
     }
@@ -1753,10 +1801,13 @@ impl VideoPreprocessor {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimecodeBurnin {
     /// Use Font Size (FontSize) to set the font size of any burned-in timecode. Valid values are 10, 16, 32, 48.
+    #[doc(hidden)]
     pub font_size: i32,
     /// Use Position (Position) under under Timecode burn-in (TimecodeBurnIn) to specify the location the burned-in timecode on output video.
+    #[doc(hidden)]
     pub position: std::option::Option<crate::model::TimecodeBurninPosition>,
     /// Use Prefix (Prefix) to place ASCII characters before any burned-in timecode. For example, a prefix of "EZ-" will result in the timecode "EZ-00:00:00:00". Provide either the characters themselves or the ASCII code equivalents. The supported range of characters is 0x20 through 0x7e. This includes letters, numbers, and all special characters represented on a standard English keyboard.
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl TimecodeBurnin {
@@ -1782,11 +1833,10 @@ impl std::fmt::Debug for TimecodeBurnin {
         formatter.finish()
     }
 }
-/// See [`TimecodeBurnin`](crate::model::TimecodeBurnin)
+/// See [`TimecodeBurnin`](crate::model::TimecodeBurnin).
 pub mod timecode_burnin {
 
-    /// A builder for [`TimecodeBurnin`](crate::model::TimecodeBurnin)
-    #[non_exhaustive]
+    /// A builder for [`TimecodeBurnin`](crate::model::TimecodeBurnin).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) font_size: std::option::Option<i32>,
@@ -1827,7 +1877,7 @@ pub mod timecode_burnin {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimecodeBurnin`](crate::model::TimecodeBurnin)
+        /// Consumes the builder and constructs a [`TimecodeBurnin`](crate::model::TimecodeBurnin).
         pub fn build(self) -> crate::model::TimecodeBurnin {
             crate::model::TimecodeBurnin {
                 font_size: self.font_size.unwrap_or_default(),
@@ -1838,7 +1888,7 @@ pub mod timecode_burnin {
     }
 }
 impl TimecodeBurnin {
-    /// Creates a new builder-style object to manufacture [`TimecodeBurnin`](crate::model::TimecodeBurnin)
+    /// Creates a new builder-style object to manufacture [`TimecodeBurnin`](crate::model::TimecodeBurnin).
     pub fn builder() -> crate::model::timecode_burnin::Builder {
         crate::model::timecode_burnin::Builder::default()
     }
@@ -1942,6 +1992,7 @@ impl AsRef<str> for TimecodeBurninPosition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PartnerWatermarking {
     /// For forensic video watermarking, MediaConvert supports Nagra NexGuard File Marker watermarking. MediaConvert supports both PreRelease Content (NGPR/G2) and OTT Streaming workflows.
+    #[doc(hidden)]
     pub nexguard_file_marker_settings:
         std::option::Option<crate::model::NexGuardFileMarkerSettings>,
 }
@@ -1963,11 +2014,10 @@ impl std::fmt::Debug for PartnerWatermarking {
         formatter.finish()
     }
 }
-/// See [`PartnerWatermarking`](crate::model::PartnerWatermarking)
+/// See [`PartnerWatermarking`](crate::model::PartnerWatermarking).
 pub mod partner_watermarking {
 
-    /// A builder for [`PartnerWatermarking`](crate::model::PartnerWatermarking)
-    #[non_exhaustive]
+    /// A builder for [`PartnerWatermarking`](crate::model::PartnerWatermarking).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) nexguard_file_marker_settings:
@@ -1990,7 +2040,7 @@ pub mod partner_watermarking {
             self.nexguard_file_marker_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`PartnerWatermarking`](crate::model::PartnerWatermarking)
+        /// Consumes the builder and constructs a [`PartnerWatermarking`](crate::model::PartnerWatermarking).
         pub fn build(self) -> crate::model::PartnerWatermarking {
             crate::model::PartnerWatermarking {
                 nexguard_file_marker_settings: self.nexguard_file_marker_settings,
@@ -1999,7 +2049,7 @@ pub mod partner_watermarking {
     }
 }
 impl PartnerWatermarking {
-    /// Creates a new builder-style object to manufacture [`PartnerWatermarking`](crate::model::PartnerWatermarking)
+    /// Creates a new builder-style object to manufacture [`PartnerWatermarking`](crate::model::PartnerWatermarking).
     pub fn builder() -> crate::model::partner_watermarking::Builder {
         crate::model::partner_watermarking::Builder::default()
     }
@@ -2010,12 +2060,16 @@ impl PartnerWatermarking {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NexGuardFileMarkerSettings {
     /// Use the base64 license string that Nagra provides you. Enter it directly in your JSON job specification or in the console. Required when you include Nagra NexGuard File Marker watermarking (NexGuardWatermarkingSettings) in your job.
+    #[doc(hidden)]
     pub license: std::option::Option<std::string::String>,
     /// Specify the payload ID that you want associated with this output. Valid values vary depending on your Nagra NexGuard forensic watermarking workflow. Required when you include Nagra NexGuard File Marker watermarking (NexGuardWatermarkingSettings) in your job. For PreRelease Content (NGPR/G2), specify an integer from 1 through 4,194,303. You must generate a unique ID for each asset you watermark, and keep a record of which ID you have assigned to each asset. Neither Nagra nor MediaConvert keep track of the relationship between output files and your IDs. For OTT Streaming, create two adaptive bitrate (ABR) stacks for each asset. Do this by setting up two output groups. For one output group, set the value of Payload ID (payload) to 0 in every output. For the other output group, set Payload ID (payload) to 1 in every output.
+    #[doc(hidden)]
     pub payload: i32,
     /// Enter one of the watermarking preset strings that Nagra provides you. Required when you include Nagra NexGuard File Marker watermarking (NexGuardWatermarkingSettings) in your job.
+    #[doc(hidden)]
     pub preset: std::option::Option<std::string::String>,
     /// Optional. Ignore this setting unless Nagra support directs you to specify a value. When you don't specify a value here, the Nagra NexGuard library uses its default value.
+    #[doc(hidden)]
     pub strength: std::option::Option<crate::model::WatermarkingStrength>,
 }
 impl NexGuardFileMarkerSettings {
@@ -2046,11 +2100,10 @@ impl std::fmt::Debug for NexGuardFileMarkerSettings {
         formatter.finish()
     }
 }
-/// See [`NexGuardFileMarkerSettings`](crate::model::NexGuardFileMarkerSettings)
+/// See [`NexGuardFileMarkerSettings`](crate::model::NexGuardFileMarkerSettings).
 pub mod nex_guard_file_marker_settings {
 
-    /// A builder for [`NexGuardFileMarkerSettings`](crate::model::NexGuardFileMarkerSettings)
-    #[non_exhaustive]
+    /// A builder for [`NexGuardFileMarkerSettings`](crate::model::NexGuardFileMarkerSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) license: std::option::Option<std::string::String>,
@@ -2102,7 +2155,7 @@ pub mod nex_guard_file_marker_settings {
             self.strength = input;
             self
         }
-        /// Consumes the builder and constructs a [`NexGuardFileMarkerSettings`](crate::model::NexGuardFileMarkerSettings)
+        /// Consumes the builder and constructs a [`NexGuardFileMarkerSettings`](crate::model::NexGuardFileMarkerSettings).
         pub fn build(self) -> crate::model::NexGuardFileMarkerSettings {
             crate::model::NexGuardFileMarkerSettings {
                 license: self.license,
@@ -2114,7 +2167,7 @@ pub mod nex_guard_file_marker_settings {
     }
 }
 impl NexGuardFileMarkerSettings {
-    /// Creates a new builder-style object to manufacture [`NexGuardFileMarkerSettings`](crate::model::NexGuardFileMarkerSettings)
+    /// Creates a new builder-style object to manufacture [`NexGuardFileMarkerSettings`](crate::model::NexGuardFileMarkerSettings).
     pub fn builder() -> crate::model::nex_guard_file_marker_settings::Builder {
         crate::model::nex_guard_file_marker_settings::Builder::default()
     }
@@ -2192,13 +2245,17 @@ impl AsRef<str> for WatermarkingStrength {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NoiseReducer {
     /// Use Noise reducer filter (NoiseReducerFilter) to select one of the following spatial image filtering functions. To use this setting, you must also enable Noise reducer (NoiseReducer). * Bilateral preserves edges while reducing noise. * Mean (softest), Gaussian, Lanczos, and Sharpen (sharpest) do convolution filtering. * Conserve does min/max noise reduction. * Spatial does frequency-domain filtering based on JND principles. * Temporal optimizes video quality for complex motion.
+    #[doc(hidden)]
     pub filter: std::option::Option<crate::model::NoiseReducerFilter>,
     /// Settings for a noise reducer filter
+    #[doc(hidden)]
     pub filter_settings: std::option::Option<crate::model::NoiseReducerFilterSettings>,
     /// Noise reducer filter settings for spatial filter.
+    #[doc(hidden)]
     pub spatial_filter_settings:
         std::option::Option<crate::model::NoiseReducerSpatialFilterSettings>,
     /// Noise reducer filter settings for temporal filter.
+    #[doc(hidden)]
     pub temporal_filter_settings:
         std::option::Option<crate::model::NoiseReducerTemporalFilterSettings>,
 }
@@ -2236,11 +2293,10 @@ impl std::fmt::Debug for NoiseReducer {
         formatter.finish()
     }
 }
-/// See [`NoiseReducer`](crate::model::NoiseReducer)
+/// See [`NoiseReducer`](crate::model::NoiseReducer).
 pub mod noise_reducer {
 
-    /// A builder for [`NoiseReducer`](crate::model::NoiseReducer)
-    #[non_exhaustive]
+    /// A builder for [`NoiseReducer`](crate::model::NoiseReducer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) filter: std::option::Option<crate::model::NoiseReducerFilter>,
@@ -2309,7 +2365,7 @@ pub mod noise_reducer {
             self.temporal_filter_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoiseReducer`](crate::model::NoiseReducer)
+        /// Consumes the builder and constructs a [`NoiseReducer`](crate::model::NoiseReducer).
         pub fn build(self) -> crate::model::NoiseReducer {
             crate::model::NoiseReducer {
                 filter: self.filter,
@@ -2321,7 +2377,7 @@ pub mod noise_reducer {
     }
 }
 impl NoiseReducer {
-    /// Creates a new builder-style object to manufacture [`NoiseReducer`](crate::model::NoiseReducer)
+    /// Creates a new builder-style object to manufacture [`NoiseReducer`](crate::model::NoiseReducer).
     pub fn builder() -> crate::model::noise_reducer::Builder {
         crate::model::noise_reducer::Builder::default()
     }
@@ -2332,16 +2388,21 @@ impl NoiseReducer {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NoiseReducerTemporalFilterSettings {
     /// Use Aggressive mode for content that has complex motion. Higher values produce stronger temporal filtering. This filters highly complex scenes more aggressively and creates better VQ for low bitrate outputs.
+    #[doc(hidden)]
     pub aggressive_mode: i32,
     /// When you set Noise reducer (noiseReducer) to Temporal (TEMPORAL), the bandwidth and sharpness of your output is reduced. You can optionally use Post temporal sharpening (postTemporalSharpening) to apply sharpening to the edges of your output. Note that Post temporal sharpening will also make the bandwidth reduction from the Noise reducer smaller. The default behavior, Auto (AUTO), allows the transcoder to determine whether to apply sharpening, depending on your input type and quality. When you set Post temporal sharpening to Enabled (ENABLED), specify how much sharpening is applied using Post temporal sharpening strength (postTemporalSharpeningStrength). Set Post temporal sharpening to Disabled (DISABLED) to not apply sharpening.
+    #[doc(hidden)]
     pub post_temporal_sharpening:
         std::option::Option<crate::model::NoiseFilterPostTemporalSharpening>,
     /// Use Post temporal sharpening strength (postTemporalSharpeningStrength) to define the amount of sharpening the transcoder applies to your output. Set Post temporal sharpening strength to Low (LOW), Medium (MEDIUM), or High (HIGH) to indicate the amount of sharpening.
+    #[doc(hidden)]
     pub post_temporal_sharpening_strength:
         std::option::Option<crate::model::NoiseFilterPostTemporalSharpeningStrength>,
     /// The speed of the filter (higher number is faster). Low setting reduces bit rate at the cost of transcode time, high setting improves transcode time at the cost of bit rate.
+    #[doc(hidden)]
     pub speed: i32,
     /// Specify the strength of the noise reducing filter on this output. Higher values produce stronger filtering. We recommend the following value ranges, depending on the result that you want: * 0-2 for complexity reduction with minimal sharpness loss * 2-8 for complexity reduction with image preservation * 8-16 for a high level of complexity reduction
+    #[doc(hidden)]
     pub strength: i32,
 }
 impl NoiseReducerTemporalFilterSettings {
@@ -2384,11 +2445,10 @@ impl std::fmt::Debug for NoiseReducerTemporalFilterSettings {
         formatter.finish()
     }
 }
-/// See [`NoiseReducerTemporalFilterSettings`](crate::model::NoiseReducerTemporalFilterSettings)
+/// See [`NoiseReducerTemporalFilterSettings`](crate::model::NoiseReducerTemporalFilterSettings).
 pub mod noise_reducer_temporal_filter_settings {
 
-    /// A builder for [`NoiseReducerTemporalFilterSettings`](crate::model::NoiseReducerTemporalFilterSettings)
-    #[non_exhaustive]
+    /// A builder for [`NoiseReducerTemporalFilterSettings`](crate::model::NoiseReducerTemporalFilterSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aggressive_mode: std::option::Option<i32>,
@@ -2462,7 +2522,7 @@ pub mod noise_reducer_temporal_filter_settings {
             self.strength = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoiseReducerTemporalFilterSettings`](crate::model::NoiseReducerTemporalFilterSettings)
+        /// Consumes the builder and constructs a [`NoiseReducerTemporalFilterSettings`](crate::model::NoiseReducerTemporalFilterSettings).
         pub fn build(self) -> crate::model::NoiseReducerTemporalFilterSettings {
             crate::model::NoiseReducerTemporalFilterSettings {
                 aggressive_mode: self.aggressive_mode.unwrap_or_default(),
@@ -2475,7 +2535,7 @@ pub mod noise_reducer_temporal_filter_settings {
     }
 }
 impl NoiseReducerTemporalFilterSettings {
-    /// Creates a new builder-style object to manufacture [`NoiseReducerTemporalFilterSettings`](crate::model::NoiseReducerTemporalFilterSettings)
+    /// Creates a new builder-style object to manufacture [`NoiseReducerTemporalFilterSettings`](crate::model::NoiseReducerTemporalFilterSettings).
     pub fn builder() -> crate::model::noise_reducer_temporal_filter_settings::Builder {
         crate::model::noise_reducer_temporal_filter_settings::Builder::default()
     }
@@ -2604,10 +2664,13 @@ impl AsRef<str> for NoiseFilterPostTemporalSharpening {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NoiseReducerSpatialFilterSettings {
     /// Specify strength of post noise reduction sharpening filter, with 0 disabling the filter and 3 enabling it at maximum strength.
+    #[doc(hidden)]
     pub post_filter_sharpen_strength: i32,
     /// The speed of the filter, from -2 (lower speed) to 3 (higher speed), with 0 being the nominal value.
+    #[doc(hidden)]
     pub speed: i32,
     /// Relative strength of noise reducing filter. Higher values produce stronger filtering.
+    #[doc(hidden)]
     pub strength: i32,
 }
 impl NoiseReducerSpatialFilterSettings {
@@ -2636,11 +2699,10 @@ impl std::fmt::Debug for NoiseReducerSpatialFilterSettings {
         formatter.finish()
     }
 }
-/// See [`NoiseReducerSpatialFilterSettings`](crate::model::NoiseReducerSpatialFilterSettings)
+/// See [`NoiseReducerSpatialFilterSettings`](crate::model::NoiseReducerSpatialFilterSettings).
 pub mod noise_reducer_spatial_filter_settings {
 
-    /// A builder for [`NoiseReducerSpatialFilterSettings`](crate::model::NoiseReducerSpatialFilterSettings)
-    #[non_exhaustive]
+    /// A builder for [`NoiseReducerSpatialFilterSettings`](crate::model::NoiseReducerSpatialFilterSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) post_filter_sharpen_strength: std::option::Option<i32>,
@@ -2678,7 +2740,7 @@ pub mod noise_reducer_spatial_filter_settings {
             self.strength = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoiseReducerSpatialFilterSettings`](crate::model::NoiseReducerSpatialFilterSettings)
+        /// Consumes the builder and constructs a [`NoiseReducerSpatialFilterSettings`](crate::model::NoiseReducerSpatialFilterSettings).
         pub fn build(self) -> crate::model::NoiseReducerSpatialFilterSettings {
             crate::model::NoiseReducerSpatialFilterSettings {
                 post_filter_sharpen_strength: self.post_filter_sharpen_strength.unwrap_or_default(),
@@ -2689,7 +2751,7 @@ pub mod noise_reducer_spatial_filter_settings {
     }
 }
 impl NoiseReducerSpatialFilterSettings {
-    /// Creates a new builder-style object to manufacture [`NoiseReducerSpatialFilterSettings`](crate::model::NoiseReducerSpatialFilterSettings)
+    /// Creates a new builder-style object to manufacture [`NoiseReducerSpatialFilterSettings`](crate::model::NoiseReducerSpatialFilterSettings).
     pub fn builder() -> crate::model::noise_reducer_spatial_filter_settings::Builder {
         crate::model::noise_reducer_spatial_filter_settings::Builder::default()
     }
@@ -2700,6 +2762,7 @@ impl NoiseReducerSpatialFilterSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NoiseReducerFilterSettings {
     /// Relative strength of noise reducing filter. Higher values produce stronger filtering.
+    #[doc(hidden)]
     pub strength: i32,
 }
 impl NoiseReducerFilterSettings {
@@ -2715,11 +2778,10 @@ impl std::fmt::Debug for NoiseReducerFilterSettings {
         formatter.finish()
     }
 }
-/// See [`NoiseReducerFilterSettings`](crate::model::NoiseReducerFilterSettings)
+/// See [`NoiseReducerFilterSettings`](crate::model::NoiseReducerFilterSettings).
 pub mod noise_reducer_filter_settings {
 
-    /// A builder for [`NoiseReducerFilterSettings`](crate::model::NoiseReducerFilterSettings)
-    #[non_exhaustive]
+    /// A builder for [`NoiseReducerFilterSettings`](crate::model::NoiseReducerFilterSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) strength: std::option::Option<i32>,
@@ -2735,7 +2797,7 @@ pub mod noise_reducer_filter_settings {
             self.strength = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoiseReducerFilterSettings`](crate::model::NoiseReducerFilterSettings)
+        /// Consumes the builder and constructs a [`NoiseReducerFilterSettings`](crate::model::NoiseReducerFilterSettings).
         pub fn build(self) -> crate::model::NoiseReducerFilterSettings {
             crate::model::NoiseReducerFilterSettings {
                 strength: self.strength.unwrap_or_default(),
@@ -2744,7 +2806,7 @@ pub mod noise_reducer_filter_settings {
     }
 }
 impl NoiseReducerFilterSettings {
-    /// Creates a new builder-style object to manufacture [`NoiseReducerFilterSettings`](crate::model::NoiseReducerFilterSettings)
+    /// Creates a new builder-style object to manufacture [`NoiseReducerFilterSettings`](crate::model::NoiseReducerFilterSettings).
     pub fn builder() -> crate::model::noise_reducer_filter_settings::Builder {
         crate::model::noise_reducer_filter_settings::Builder::default()
     }
@@ -2843,6 +2905,7 @@ impl AsRef<str> for NoiseReducerFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageInserter {
     /// Specify the images that you want to overlay on your video. The images must be PNG or TGA files.
+    #[doc(hidden)]
     pub insertable_images: std::option::Option<std::vec::Vec<crate::model::InsertableImage>>,
 }
 impl ImageInserter {
@@ -2858,11 +2921,10 @@ impl std::fmt::Debug for ImageInserter {
         formatter.finish()
     }
 }
-/// See [`ImageInserter`](crate::model::ImageInserter)
+/// See [`ImageInserter`](crate::model::ImageInserter).
 pub mod image_inserter {
 
-    /// A builder for [`ImageInserter`](crate::model::ImageInserter)
-    #[non_exhaustive]
+    /// A builder for [`ImageInserter`](crate::model::ImageInserter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) insertable_images:
@@ -2888,7 +2950,7 @@ pub mod image_inserter {
             self.insertable_images = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageInserter`](crate::model::ImageInserter)
+        /// Consumes the builder and constructs a [`ImageInserter`](crate::model::ImageInserter).
         pub fn build(self) -> crate::model::ImageInserter {
             crate::model::ImageInserter {
                 insertable_images: self.insertable_images,
@@ -2897,7 +2959,7 @@ pub mod image_inserter {
     }
 }
 impl ImageInserter {
-    /// Creates a new builder-style object to manufacture [`ImageInserter`](crate::model::ImageInserter)
+    /// Creates a new builder-style object to manufacture [`ImageInserter`](crate::model::ImageInserter).
     pub fn builder() -> crate::model::image_inserter::Builder {
         crate::model::image_inserter::Builder::default()
     }
@@ -2908,26 +2970,37 @@ impl ImageInserter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InsertableImage {
     /// Specify the time, in milliseconds, for the image to remain on the output video. This duration includes fade-in time but not fade-out time.
+    #[doc(hidden)]
     pub duration: i32,
     /// Specify the length of time, in milliseconds, between the Start time that you specify for the image insertion and the time that the image appears at full opacity. Full opacity is the level that you specify for the opacity setting. If you don't specify a value for Fade-in, the image will appear abruptly at the overlay start time.
+    #[doc(hidden)]
     pub fade_in: i32,
     /// Specify the length of time, in milliseconds, between the end of the time that you have specified for the image overlay Duration and when the overlaid image has faded to total transparency. If you don't specify a value for Fade-out, the image will disappear abruptly at the end of the inserted image duration.
+    #[doc(hidden)]
     pub fade_out: i32,
     /// Specify the height of the inserted image in pixels. If you specify a value that's larger than the video resolution height, the service will crop your overlaid image to fit. To use the native height of the image, keep this setting blank.
+    #[doc(hidden)]
     pub height: i32,
     /// Specify the HTTP, HTTPS, or Amazon S3 location of the image that you want to overlay on the video. Use a PNG or TGA file.
+    #[doc(hidden)]
     pub image_inserter_input: std::option::Option<std::string::String>,
     /// Specify the distance, in pixels, between the inserted image and the left edge of the video frame. Required for any image overlay that you specify.
+    #[doc(hidden)]
     pub image_x: i32,
     /// Specify the distance, in pixels, between the overlaid image and the top edge of the video frame. Required for any image overlay that you specify.
+    #[doc(hidden)]
     pub image_y: i32,
     /// Specify how overlapping inserted images appear. Images with higher values for Layer appear on top of images with lower values for Layer.
+    #[doc(hidden)]
     pub layer: i32,
     /// Use Opacity (Opacity) to specify how much of the underlying video shows through the inserted image. 0 is transparent and 100 is fully opaque. Default is 50.
+    #[doc(hidden)]
     pub opacity: i32,
     /// Specify the timecode of the frame that you want the overlay to first appear on. This must be in timecode (HH:MM:SS:FF or HH:MM:SS;FF) format. Remember to take into account your timecode source settings.
+    #[doc(hidden)]
     pub start_time: std::option::Option<std::string::String>,
     /// Specify the width of the inserted image in pixels. If you specify a value that's larger than the video resolution width, the service will crop your overlaid image to fit. To use the native width of the image, keep this setting blank.
+    #[doc(hidden)]
     pub width: i32,
 }
 impl InsertableImage {
@@ -2993,11 +3066,10 @@ impl std::fmt::Debug for InsertableImage {
         formatter.finish()
     }
 }
-/// See [`InsertableImage`](crate::model::InsertableImage)
+/// See [`InsertableImage`](crate::model::InsertableImage).
 pub mod insertable_image {
 
-    /// A builder for [`InsertableImage`](crate::model::InsertableImage)
-    #[non_exhaustive]
+    /// A builder for [`InsertableImage`](crate::model::InsertableImage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) duration: std::option::Option<i32>,
@@ -3126,7 +3198,7 @@ pub mod insertable_image {
             self.width = input;
             self
         }
-        /// Consumes the builder and constructs a [`InsertableImage`](crate::model::InsertableImage)
+        /// Consumes the builder and constructs a [`InsertableImage`](crate::model::InsertableImage).
         pub fn build(self) -> crate::model::InsertableImage {
             crate::model::InsertableImage {
                 duration: self.duration.unwrap_or_default(),
@@ -3145,7 +3217,7 @@ pub mod insertable_image {
     }
 }
 impl InsertableImage {
-    /// Creates a new builder-style object to manufacture [`InsertableImage`](crate::model::InsertableImage)
+    /// Creates a new builder-style object to manufacture [`InsertableImage`](crate::model::InsertableImage).
     pub fn builder() -> crate::model::insertable_image::Builder {
         crate::model::insertable_image::Builder::default()
     }
@@ -3156,8 +3228,10 @@ impl InsertableImage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Hdr10Plus {
     /// Specify the HDR10+ mastering display normalized peak luminance, in nits. This is the normalized actual peak luminance of the mastering display, as defined by ST 2094-40.
+    #[doc(hidden)]
     pub mastering_monitor_nits: i32,
     /// Specify the HDR10+ target display nominal peak luminance, in nits. This is the nominal maximum luminance of the target display as defined by ST 2094-40.
+    #[doc(hidden)]
     pub target_monitor_nits: i32,
 }
 impl Hdr10Plus {
@@ -3178,11 +3252,10 @@ impl std::fmt::Debug for Hdr10Plus {
         formatter.finish()
     }
 }
-/// See [`Hdr10Plus`](crate::model::Hdr10Plus)
+/// See [`Hdr10Plus`](crate::model::Hdr10Plus).
 pub mod hdr10_plus {
 
-    /// A builder for [`Hdr10Plus`](crate::model::Hdr10Plus)
-    #[non_exhaustive]
+    /// A builder for [`Hdr10Plus`](crate::model::Hdr10Plus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mastering_monitor_nits: std::option::Option<i32>,
@@ -3209,7 +3282,7 @@ pub mod hdr10_plus {
             self.target_monitor_nits = input;
             self
         }
-        /// Consumes the builder and constructs a [`Hdr10Plus`](crate::model::Hdr10Plus)
+        /// Consumes the builder and constructs a [`Hdr10Plus`](crate::model::Hdr10Plus).
         pub fn build(self) -> crate::model::Hdr10Plus {
             crate::model::Hdr10Plus {
                 mastering_monitor_nits: self.mastering_monitor_nits.unwrap_or_default(),
@@ -3219,23 +3292,27 @@ pub mod hdr10_plus {
     }
 }
 impl Hdr10Plus {
-    /// Creates a new builder-style object to manufacture [`Hdr10Plus`](crate::model::Hdr10Plus)
+    /// Creates a new builder-style object to manufacture [`Hdr10Plus`](crate::model::Hdr10Plus).
     pub fn builder() -> crate::model::hdr10_plus::Builder {
         crate::model::hdr10_plus::Builder::default()
     }
 }
 
-/// With AWS Elemental MediaConvert, you can create profile 5 or 8.1 Dolby Vision outputs from MXF and IMF sources.
+/// Create Dolby Vision Profile 5 or Profile 8.1 compatible video output.
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DolbyVision {
     /// Use these settings when you set DolbyVisionLevel6Mode to SPECIFY to override the MaxCLL and MaxFALL values in your input with new values.
+    #[doc(hidden)]
     pub l6_metadata: std::option::Option<crate::model::DolbyVisionLevel6Metadata>,
     /// Use Dolby Vision Mode to choose how the service will handle Dolby Vision MaxCLL and MaxFALL properies.
+    #[doc(hidden)]
     pub l6_mode: std::option::Option<crate::model::DolbyVisionLevel6Mode>,
     /// Required when you set Dolby Vision Profile to Profile 8.1. When you set Content mapping to None, content mapping is not applied to the HDR10-compatible signal. Depending on the source peak nit level, clipping might occur on HDR devices without Dolby Vision. When you set Content mapping to HDR10 1000, the transcoder creates a 1,000 nits peak HDR10-compatible signal by applying static content mapping to the source. This mode is speed-optimized for PQ10 sources with metadata that is created from analysis. For graded Dolby Vision content, be aware that creative intent might not be guaranteed with extreme 1,000 nits trims.
+    #[doc(hidden)]
     pub mapping: std::option::Option<crate::model::DolbyVisionMapping>,
-    /// Required when you use Dolby Vision processing. Set Profile to Profile 5 to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile 8.1 to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your output.
+    /// Required when you enable Dolby Vision. Use Profile 5 to include frame-interleaved Dolby Vision metadata in your output. Your input must include Dolby Vision metadata or an HDR10 YUV color space. Use Profile 8.1 to include frame-interleaved Dolby Vision metadata and HDR10 metadata in your output. Your input must include Dolby Vision metadata.
+    #[doc(hidden)]
     pub profile: std::option::Option<crate::model::DolbyVisionProfile>,
 }
 impl DolbyVision {
@@ -3251,7 +3328,7 @@ impl DolbyVision {
     pub fn mapping(&self) -> std::option::Option<&crate::model::DolbyVisionMapping> {
         self.mapping.as_ref()
     }
-    /// Required when you use Dolby Vision processing. Set Profile to Profile 5 to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile 8.1 to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your output.
+    /// Required when you enable Dolby Vision. Use Profile 5 to include frame-interleaved Dolby Vision metadata in your output. Your input must include Dolby Vision metadata or an HDR10 YUV color space. Use Profile 8.1 to include frame-interleaved Dolby Vision metadata and HDR10 metadata in your output. Your input must include Dolby Vision metadata.
     pub fn profile(&self) -> std::option::Option<&crate::model::DolbyVisionProfile> {
         self.profile.as_ref()
     }
@@ -3266,11 +3343,10 @@ impl std::fmt::Debug for DolbyVision {
         formatter.finish()
     }
 }
-/// See [`DolbyVision`](crate::model::DolbyVision)
+/// See [`DolbyVision`](crate::model::DolbyVision).
 pub mod dolby_vision {
 
-    /// A builder for [`DolbyVision`](crate::model::DolbyVision)
-    #[non_exhaustive]
+    /// A builder for [`DolbyVision`](crate::model::DolbyVision).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) l6_metadata: std::option::Option<crate::model::DolbyVisionLevel6Metadata>,
@@ -3318,12 +3394,12 @@ pub mod dolby_vision {
             self.mapping = input;
             self
         }
-        /// Required when you use Dolby Vision processing. Set Profile to Profile 5 to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile 8.1 to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your output.
+        /// Required when you enable Dolby Vision. Use Profile 5 to include frame-interleaved Dolby Vision metadata in your output. Your input must include Dolby Vision metadata or an HDR10 YUV color space. Use Profile 8.1 to include frame-interleaved Dolby Vision metadata and HDR10 metadata in your output. Your input must include Dolby Vision metadata.
         pub fn profile(mut self, input: crate::model::DolbyVisionProfile) -> Self {
             self.profile = Some(input);
             self
         }
-        /// Required when you use Dolby Vision processing. Set Profile to Profile 5 to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile 8.1 to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your output.
+        /// Required when you enable Dolby Vision. Use Profile 5 to include frame-interleaved Dolby Vision metadata in your output. Your input must include Dolby Vision metadata or an HDR10 YUV color space. Use Profile 8.1 to include frame-interleaved Dolby Vision metadata and HDR10 metadata in your output. Your input must include Dolby Vision metadata.
         pub fn set_profile(
             mut self,
             input: std::option::Option<crate::model::DolbyVisionProfile>,
@@ -3331,7 +3407,7 @@ pub mod dolby_vision {
             self.profile = input;
             self
         }
-        /// Consumes the builder and constructs a [`DolbyVision`](crate::model::DolbyVision)
+        /// Consumes the builder and constructs a [`DolbyVision`](crate::model::DolbyVision).
         pub fn build(self) -> crate::model::DolbyVision {
             crate::model::DolbyVision {
                 l6_metadata: self.l6_metadata,
@@ -3343,13 +3419,13 @@ pub mod dolby_vision {
     }
 }
 impl DolbyVision {
-    /// Creates a new builder-style object to manufacture [`DolbyVision`](crate::model::DolbyVision)
+    /// Creates a new builder-style object to manufacture [`DolbyVision`](crate::model::DolbyVision).
     pub fn builder() -> crate::model::dolby_vision::Builder {
         crate::model::dolby_vision::Builder::default()
     }
 }
 
-/// Required when you use Dolby Vision processing. Set Profile to Profile 5 to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile 8.1 to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your output.
+/// Required when you enable Dolby Vision. Use Profile 5 to include frame-interleaved Dolby Vision metadata in your output. Your input must include Dolby Vision metadata or an HDR10 YUV color space. Use Profile 8.1 to include frame-interleaved Dolby Vision metadata and HDR10 metadata in your output. Your input must include Dolby Vision metadata.
 #[non_exhaustive]
 #[derive(
     std::clone::Clone,
@@ -3523,8 +3599,10 @@ impl AsRef<str> for DolbyVisionLevel6Mode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DolbyVisionLevel6Metadata {
     /// Maximum Content Light Level. Static HDR metadata that corresponds to the brightest pixel in the entire stream. Measured in nits.
+    #[doc(hidden)]
     pub max_cll: i32,
     /// Maximum Frame-Average Light Level. Static HDR metadata that corresponds to the highest frame-average brightness in the entire stream. Measured in nits.
+    #[doc(hidden)]
     pub max_fall: i32,
 }
 impl DolbyVisionLevel6Metadata {
@@ -3545,11 +3623,10 @@ impl std::fmt::Debug for DolbyVisionLevel6Metadata {
         formatter.finish()
     }
 }
-/// See [`DolbyVisionLevel6Metadata`](crate::model::DolbyVisionLevel6Metadata)
+/// See [`DolbyVisionLevel6Metadata`](crate::model::DolbyVisionLevel6Metadata).
 pub mod dolby_vision_level6_metadata {
 
-    /// A builder for [`DolbyVisionLevel6Metadata`](crate::model::DolbyVisionLevel6Metadata)
-    #[non_exhaustive]
+    /// A builder for [`DolbyVisionLevel6Metadata`](crate::model::DolbyVisionLevel6Metadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_cll: std::option::Option<i32>,
@@ -3576,7 +3653,7 @@ pub mod dolby_vision_level6_metadata {
             self.max_fall = input;
             self
         }
-        /// Consumes the builder and constructs a [`DolbyVisionLevel6Metadata`](crate::model::DolbyVisionLevel6Metadata)
+        /// Consumes the builder and constructs a [`DolbyVisionLevel6Metadata`](crate::model::DolbyVisionLevel6Metadata).
         pub fn build(self) -> crate::model::DolbyVisionLevel6Metadata {
             crate::model::DolbyVisionLevel6Metadata {
                 max_cll: self.max_cll.unwrap_or_default(),
@@ -3586,7 +3663,7 @@ pub mod dolby_vision_level6_metadata {
     }
 }
 impl DolbyVisionLevel6Metadata {
-    /// Creates a new builder-style object to manufacture [`DolbyVisionLevel6Metadata`](crate::model::DolbyVisionLevel6Metadata)
+    /// Creates a new builder-style object to manufacture [`DolbyVisionLevel6Metadata`](crate::model::DolbyVisionLevel6Metadata).
     pub fn builder() -> crate::model::dolby_vision_level6_metadata::Builder {
         crate::model::dolby_vision_level6_metadata::Builder::default()
     }
@@ -3597,10 +3674,13 @@ impl DolbyVisionLevel6Metadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Deinterlacer {
     /// Only applies when you set Deinterlacer (DeinterlaceMode) to Deinterlace (DEINTERLACE) or Adaptive (ADAPTIVE). Motion adaptive interpolate (INTERPOLATE) produces sharper pictures, while blend (BLEND) produces smoother motion. Use (INTERPOLATE_TICKER) OR (BLEND_TICKER) if your source file includes a ticker, such as a scrolling headline at the bottom of the frame.
+    #[doc(hidden)]
     pub algorithm: std::option::Option<crate::model::DeinterlaceAlgorithm>,
     /// - When set to NORMAL (default), the deinterlacer does not convert frames that are tagged in metadata as progressive. It will only convert those that are tagged as some other type. - When set to FORCE_ALL_FRAMES, the deinterlacer converts every frame to progressive - even those that are already tagged as progressive. Turn Force mode on only if there is a good chance that the metadata has tagged frames as progressive when they are not progressive. Do not turn on otherwise; processing frames that are already progressive into progressive will probably result in lower quality video.
+    #[doc(hidden)]
     pub control: std::option::Option<crate::model::DeinterlacerControl>,
     /// Use Deinterlacer (DeinterlaceMode) to choose how the service will do deinterlacing. Default is Deinterlace. - Deinterlace converts interlaced to progressive. - Inverse telecine converts Hard Telecine 29.97i to progressive 23.976p. - Adaptive auto-detects and converts to progressive.
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::DeinterlacerMode>,
 }
 impl Deinterlacer {
@@ -3626,11 +3706,10 @@ impl std::fmt::Debug for Deinterlacer {
         formatter.finish()
     }
 }
-/// See [`Deinterlacer`](crate::model::Deinterlacer)
+/// See [`Deinterlacer`](crate::model::Deinterlacer).
 pub mod deinterlacer {
 
-    /// A builder for [`Deinterlacer`](crate::model::Deinterlacer)
-    #[non_exhaustive]
+    /// A builder for [`Deinterlacer`](crate::model::Deinterlacer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) algorithm: std::option::Option<crate::model::DeinterlaceAlgorithm>,
@@ -3677,7 +3756,7 @@ pub mod deinterlacer {
             self.mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`Deinterlacer`](crate::model::Deinterlacer)
+        /// Consumes the builder and constructs a [`Deinterlacer`](crate::model::Deinterlacer).
         pub fn build(self) -> crate::model::Deinterlacer {
             crate::model::Deinterlacer {
                 algorithm: self.algorithm,
@@ -3688,7 +3767,7 @@ pub mod deinterlacer {
     }
 }
 impl Deinterlacer {
-    /// Creates a new builder-style object to manufacture [`Deinterlacer`](crate::model::Deinterlacer)
+    /// Creates a new builder-style object to manufacture [`Deinterlacer`](crate::model::Deinterlacer).
     pub fn builder() -> crate::model::deinterlacer::Builder {
         crate::model::deinterlacer::Builder::default()
     }
@@ -3876,18 +3955,25 @@ impl AsRef<str> for DeinterlaceAlgorithm {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ColorCorrector {
     /// Brightness level.
+    #[doc(hidden)]
     pub brightness: i32,
     /// Specify the color space you want for this output. The service supports conversion between HDR formats, between SDR formats, from SDR to HDR, and from HDR to SDR. SDR to HDR conversion doesn't upgrade the dynamic range. The converted video has an HDR format, but visually appears the same as an unconverted output. HDR to SDR conversion uses Elemental tone mapping technology to approximate the outcome of manually regrading from HDR to SDR.
+    #[doc(hidden)]
     pub color_space_conversion: std::option::Option<crate::model::ColorSpaceConversion>,
     /// Contrast level.
+    #[doc(hidden)]
     pub contrast: i32,
     /// Use these settings when you convert to the HDR 10 color space. Specify the SMPTE ST 2086 Mastering Display Color Volume static metadata that you want signaled in the output. These values don't affect the pixel values that are encoded in the video stream. They are intended to help the downstream video player display content in a way that reflects the intentions of the the content creator. When you set Color space conversion (ColorSpaceConversion) to HDR 10 (FORCE_HDR10), these settings are required. You must set values for Max frame average light level (maxFrameAverageLightLevel) and Max content light level (maxContentLightLevel); these settings don't have a default value. The default values for the other HDR 10 metadata settings are defined by the P3D65 color space. For more information about MediaConvert HDR jobs, see https://docs.aws.amazon.com/console/mediaconvert/hdr.
+    #[doc(hidden)]
     pub hdr10_metadata: std::option::Option<crate::model::Hdr10Metadata>,
     /// Hue in degrees.
+    #[doc(hidden)]
     pub hue: i32,
     /// Specify the video color sample range for this output. To create a full range output, you must start with a full range YUV input and keep the default value, None (NONE). To create a limited range output from a full range input, choose Limited range (LIMITED_RANGE_SQUEEZE). With RGB inputs, your output is always limited range, regardless of your choice here. When you create a limited range output from a full range input, MediaConvert limits the active pixel values in a way that depends on the output's bit depth: 8-bit outputs contain only values from 16 through 235 and 10-bit outputs contain only values from 64 through 940. With this conversion, MediaConvert also changes the output metadata to note the limited range.
+    #[doc(hidden)]
     pub sample_range_conversion: std::option::Option<crate::model::SampleRangeConversion>,
     /// Saturation level.
+    #[doc(hidden)]
     pub saturation: i32,
 }
 impl ColorCorrector {
@@ -3937,11 +4023,10 @@ impl std::fmt::Debug for ColorCorrector {
         formatter.finish()
     }
 }
-/// See [`ColorCorrector`](crate::model::ColorCorrector)
+/// See [`ColorCorrector`](crate::model::ColorCorrector).
 pub mod color_corrector {
 
-    /// A builder for [`ColorCorrector`](crate::model::ColorCorrector)
-    #[non_exhaustive]
+    /// A builder for [`ColorCorrector`](crate::model::ColorCorrector).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) brightness: std::option::Option<i32>,
@@ -4036,7 +4121,7 @@ pub mod color_corrector {
             self.saturation = input;
             self
         }
-        /// Consumes the builder and constructs a [`ColorCorrector`](crate::model::ColorCorrector)
+        /// Consumes the builder and constructs a [`ColorCorrector`](crate::model::ColorCorrector).
         pub fn build(self) -> crate::model::ColorCorrector {
             crate::model::ColorCorrector {
                 brightness: self.brightness.unwrap_or_default(),
@@ -4051,7 +4136,7 @@ pub mod color_corrector {
     }
 }
 impl ColorCorrector {
-    /// Creates a new builder-style object to manufacture [`ColorCorrector`](crate::model::ColorCorrector)
+    /// Creates a new builder-style object to manufacture [`ColorCorrector`](crate::model::ColorCorrector).
     pub fn builder() -> crate::model::color_corrector::Builder {
         crate::model::color_corrector::Builder::default()
     }
@@ -4117,28 +4202,40 @@ impl AsRef<str> for SampleRangeConversion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Hdr10Metadata {
     /// HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction.
+    #[doc(hidden)]
     pub blue_primary_x: i32,
     /// HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction.
+    #[doc(hidden)]
     pub blue_primary_y: i32,
     /// HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction.
+    #[doc(hidden)]
     pub green_primary_x: i32,
     /// HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction.
+    #[doc(hidden)]
     pub green_primary_y: i32,
     /// Maximum light level among all samples in the coded video sequence, in units of candelas per square meter. This setting doesn't have a default value; you must specify a value that is suitable for the content.
+    #[doc(hidden)]
     pub max_content_light_level: i32,
     /// Maximum average light level of any frame in the coded video sequence, in units of candelas per square meter. This setting doesn't have a default value; you must specify a value that is suitable for the content.
+    #[doc(hidden)]
     pub max_frame_average_light_level: i32,
     /// Nominal maximum mastering display luminance in units of of 0.0001 candelas per square meter.
+    #[doc(hidden)]
     pub max_luminance: i32,
     /// Nominal minimum mastering display luminance in units of of 0.0001 candelas per square meter
+    #[doc(hidden)]
     pub min_luminance: i32,
     /// HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction.
+    #[doc(hidden)]
     pub red_primary_x: i32,
     /// HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction.
+    #[doc(hidden)]
     pub red_primary_y: i32,
     /// HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction.
+    #[doc(hidden)]
     pub white_point_x: i32,
     /// HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction.
+    #[doc(hidden)]
     pub white_point_y: i32,
 }
 impl Hdr10Metadata {
@@ -4212,11 +4309,10 @@ impl std::fmt::Debug for Hdr10Metadata {
         formatter.finish()
     }
 }
-/// See [`Hdr10Metadata`](crate::model::Hdr10Metadata)
+/// See [`Hdr10Metadata`](crate::model::Hdr10Metadata).
 pub mod hdr10_metadata {
 
-    /// A builder for [`Hdr10Metadata`](crate::model::Hdr10Metadata)
-    #[non_exhaustive]
+    /// A builder for [`Hdr10Metadata`](crate::model::Hdr10Metadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) blue_primary_x: std::option::Option<i32>,
@@ -4356,7 +4452,7 @@ pub mod hdr10_metadata {
             self.white_point_y = input;
             self
         }
-        /// Consumes the builder and constructs a [`Hdr10Metadata`](crate::model::Hdr10Metadata)
+        /// Consumes the builder and constructs a [`Hdr10Metadata`](crate::model::Hdr10Metadata).
         pub fn build(self) -> crate::model::Hdr10Metadata {
             crate::model::Hdr10Metadata {
                 blue_primary_x: self.blue_primary_x.unwrap_or_default(),
@@ -4378,7 +4474,7 @@ pub mod hdr10_metadata {
     }
 }
 impl Hdr10Metadata {
-    /// Creates a new builder-style object to manufacture [`Hdr10Metadata`](crate::model::Hdr10Metadata)
+    /// Creates a new builder-style object to manufacture [`Hdr10Metadata`](crate::model::Hdr10Metadata).
     pub fn builder() -> crate::model::hdr10_metadata::Builder {
         crate::model::hdr10_metadata::Builder::default()
     }
@@ -4631,12 +4727,16 @@ impl AsRef<str> for RespondToAfd {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Rectangle {
     /// Height of rectangle in pixels. Specify only even numbers.
+    #[doc(hidden)]
     pub height: i32,
     /// Width of rectangle in pixels. Specify only even numbers.
+    #[doc(hidden)]
     pub width: i32,
     /// The distance, in pixels, between the rectangle and the left edge of the video frame. Specify only even numbers.
+    #[doc(hidden)]
     pub x: i32,
     /// The distance, in pixels, between the rectangle and the top edge of the video frame. Specify only even numbers.
+    #[doc(hidden)]
     pub y: i32,
 }
 impl Rectangle {
@@ -4667,11 +4767,10 @@ impl std::fmt::Debug for Rectangle {
         formatter.finish()
     }
 }
-/// See [`Rectangle`](crate::model::Rectangle)
+/// See [`Rectangle`](crate::model::Rectangle).
 pub mod rectangle {
 
-    /// A builder for [`Rectangle`](crate::model::Rectangle)
-    #[non_exhaustive]
+    /// A builder for [`Rectangle`](crate::model::Rectangle).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) height: std::option::Option<i32>,
@@ -4720,7 +4819,7 @@ pub mod rectangle {
             self.y = input;
             self
         }
-        /// Consumes the builder and constructs a [`Rectangle`](crate::model::Rectangle)
+        /// Consumes the builder and constructs a [`Rectangle`](crate::model::Rectangle).
         pub fn build(self) -> crate::model::Rectangle {
             crate::model::Rectangle {
                 height: self.height.unwrap_or_default(),
@@ -4732,7 +4831,7 @@ pub mod rectangle {
     }
 }
 impl Rectangle {
-    /// Creates a new builder-style object to manufacture [`Rectangle`](crate::model::Rectangle)
+    /// Creates a new builder-style object to manufacture [`Rectangle`](crate::model::Rectangle).
     pub fn builder() -> crate::model::rectangle::Builder {
         crate::model::rectangle::Builder::default()
     }
@@ -4853,28 +4952,40 @@ impl AsRef<str> for ColorMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VideoCodecSettings {
     /// Required when you set Codec, under VideoDescription&gt;CodecSettings to the value AV1.
+    #[doc(hidden)]
     pub av1_settings: std::option::Option<crate::model::Av1Settings>,
     /// Required when you choose AVC-Intra for your output video codec. For more information about the AVC-Intra settings, see the relevant specification. For detailed information about SD and HD in AVC-Intra, see https://ieeexplore.ieee.org/document/7290936. For information about 4K/2K in AVC-Intra, see https://pro-av.panasonic.net/en/avc-ultra/AVC-ULTRAoverview.pdf.
+    #[doc(hidden)]
     pub avc_intra_settings: std::option::Option<crate::model::AvcIntraSettings>,
     /// Specifies the video codec. This must be equal to one of the enum values defined by the object VideoCodec.
+    #[doc(hidden)]
     pub codec: std::option::Option<crate::model::VideoCodec>,
     /// Required when you set (Codec) under (VideoDescription)&gt;(CodecSettings) to the value FRAME_CAPTURE.
+    #[doc(hidden)]
     pub frame_capture_settings: std::option::Option<crate::model::FrameCaptureSettings>,
     /// Required when you set (Codec) under (VideoDescription)&gt;(CodecSettings) to the value H_264.
+    #[doc(hidden)]
     pub h264_settings: std::option::Option<crate::model::H264Settings>,
     /// Settings for H265 codec
+    #[doc(hidden)]
     pub h265_settings: std::option::Option<crate::model::H265Settings>,
     /// Required when you set (Codec) under (VideoDescription)&gt;(CodecSettings) to the value MPEG2.
+    #[doc(hidden)]
     pub mpeg2_settings: std::option::Option<crate::model::Mpeg2Settings>,
     /// Required when you set (Codec) under (VideoDescription)&gt;(CodecSettings) to the value PRORES.
+    #[doc(hidden)]
     pub prores_settings: std::option::Option<crate::model::ProresSettings>,
     /// Required when you set (Codec) under (VideoDescription)&gt;(CodecSettings) to the value VC3
+    #[doc(hidden)]
     pub vc3_settings: std::option::Option<crate::model::Vc3Settings>,
     /// Required when you set (Codec) under (VideoDescription)&gt;(CodecSettings) to the value VP8.
+    #[doc(hidden)]
     pub vp8_settings: std::option::Option<crate::model::Vp8Settings>,
     /// Required when you set (Codec) under (VideoDescription)&gt;(CodecSettings) to the value VP9.
+    #[doc(hidden)]
     pub vp9_settings: std::option::Option<crate::model::Vp9Settings>,
     /// Required when you set (Codec) under (VideoDescription)&gt;(CodecSettings) to the value XAVC.
+    #[doc(hidden)]
     pub xavc_settings: std::option::Option<crate::model::XavcSettings>,
 }
 impl VideoCodecSettings {
@@ -4947,11 +5058,10 @@ impl std::fmt::Debug for VideoCodecSettings {
         formatter.finish()
     }
 }
-/// See [`VideoCodecSettings`](crate::model::VideoCodecSettings)
+/// See [`VideoCodecSettings`](crate::model::VideoCodecSettings).
 pub mod video_codec_settings {
 
-    /// A builder for [`VideoCodecSettings`](crate::model::VideoCodecSettings)
-    #[non_exhaustive]
+    /// A builder for [`VideoCodecSettings`](crate::model::VideoCodecSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) av1_settings: std::option::Option<crate::model::Av1Settings>,
@@ -5121,7 +5231,7 @@ pub mod video_codec_settings {
             self.xavc_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`VideoCodecSettings`](crate::model::VideoCodecSettings)
+        /// Consumes the builder and constructs a [`VideoCodecSettings`](crate::model::VideoCodecSettings).
         pub fn build(self) -> crate::model::VideoCodecSettings {
             crate::model::VideoCodecSettings {
                 av1_settings: self.av1_settings,
@@ -5141,7 +5251,7 @@ pub mod video_codec_settings {
     }
 }
 impl VideoCodecSettings {
-    /// Creates a new builder-style object to manufacture [`VideoCodecSettings`](crate::model::VideoCodecSettings)
+    /// Creates a new builder-style object to manufacture [`VideoCodecSettings`](crate::model::VideoCodecSettings).
     pub fn builder() -> crate::model::video_codec_settings::Builder {
         crate::model::video_codec_settings::Builder::default()
     }
@@ -5152,42 +5262,58 @@ impl VideoCodecSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct XavcSettings {
     /// Keep the default value, Auto (AUTO), for this setting to have MediaConvert automatically apply the best types of quantization for your video content. When you want to apply your quantization settings manually, you must set Adaptive quantization (adaptiveQuantization) to a value other than Auto (AUTO). Use this setting to specify the strength of any adaptive quantization filters that you enable. If you don't want MediaConvert to do any adaptive quantization in this transcode, set Adaptive quantization to Off (OFF). Related settings: The value that you choose here applies to the following settings: Flicker adaptive quantization (flickerAdaptiveQuantization), Spatial adaptive quantization (spatialAdaptiveQuantization), and Temporal adaptive quantization (temporalAdaptiveQuantization).
+    #[doc(hidden)]
     pub adaptive_quantization: std::option::Option<crate::model::XavcAdaptiveQuantization>,
     /// Optional. Choose a specific entropy encoding mode only when you want to override XAVC recommendations. If you choose the value auto, MediaConvert uses the mode that the XAVC file format specifies given this output's operating point.
+    #[doc(hidden)]
     pub entropy_encoding: std::option::Option<crate::model::XavcEntropyEncoding>,
     /// If you are using the console, use the Frame rate setting to specify the frame rate for this output. If you want to keep the same frame rate as the input video, choose Follow source. If you want to do frame rate conversion, choose a frame rate from the dropdown list. The framerates shown in the dropdown list are decimal approximations of fractions. If you are creating your transcoding job specification as a JSON file without the console, use FramerateControl to specify which value the service uses for the frame rate for this output. Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate from the input. Choose SPECIFIED if you want the service to use the frame rate that you specify in the settings FramerateNumerator and FramerateDenominator.
+    #[doc(hidden)]
     pub framerate_control: std::option::Option<crate::model::XavcFramerateControl>,
     /// Choose the method that you want MediaConvert to use when increasing or decreasing the frame rate. We recommend using drop duplicate (DUPLICATE_DROP) for numerically simple conversions, such as 60 fps to 30 fps. For numerically complex conversions, you can use interpolate (INTERPOLATE) to avoid stutter. This results in a smooth picture, but might introduce undesirable video artifacts. For complex frame rate conversions, especially if your source video has already been converted from its original cadence, use FrameFormer (FRAMEFORMER) to do motion-compensated interpolation. FrameFormer chooses the best conversion method frame by frame. Note that using FrameFormer increases the transcoding time and incurs a significant add-on cost.
+    #[doc(hidden)]
     pub framerate_conversion_algorithm:
         std::option::Option<crate::model::XavcFramerateConversionAlgorithm>,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateDenominator to specify the denominator of this fraction. In this example, use 1001 for the value of FramerateDenominator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Frame rate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_denominator: i32,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateNumerator to specify the numerator of this fraction. In this example, use 24000 for the value of FramerateNumerator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_numerator: i32,
     /// Specify the XAVC profile for this output. For more information, see the Sony documentation at https://www.xavc-info.org/. Note that MediaConvert doesn't support the interlaced video XAVC operating points for XAVC_HD_INTRA_CBG. To create an interlaced XAVC output, choose the profile XAVC_HD.
+    #[doc(hidden)]
     pub profile: std::option::Option<crate::model::XavcProfile>,
     /// Ignore this setting unless your input frame rate is 23.976 or 24 frames per second (fps). Enable slow PAL to create a 25 fps output by relabeling the video frames and resampling your audio. Note that enabling this setting will slightly reduce the duration of your video. Related settings: You must also set Frame rate to 25. In your JSON job specification, set (framerateControl) to (SPECIFIED), (framerateNumerator) to 25 and (framerateDenominator) to 1.
+    #[doc(hidden)]
     pub slow_pal: std::option::Option<crate::model::XavcSlowPal>,
     /// Ignore this setting unless your downstream workflow requires that you specify it explicitly. Otherwise, we recommend that you adjust the softness of your output by using a lower value for the setting Sharpness (sharpness) or by enabling a noise reducer filter (noiseReducerFilter). The Softness (softness) setting specifies the quantization matrices that the encoder uses. Keep the default value, 0, for flat quantization. Choose the value 1 or 16 to use the default JVT softening quantization matricies from the H.264 specification. Choose a value from 17 to 128 to use planar interpolation. Increasing values from 17 to 128 result in increasing reduction of high-frequency data. The value 128 results in the softest video.
+    #[doc(hidden)]
     pub softness: i32,
     /// The best way to set up adaptive quantization is to keep the default value, Auto (AUTO), for the setting Adaptive quantization (adaptiveQuantization). When you do so, MediaConvert automatically applies the best types of quantization for your video content. Include this setting in your JSON job specification only when you choose to change the default value for Adaptive quantization. For this setting, keep the default value, Enabled (ENABLED), to adjust quantization within each frame based on spatial variation of content complexity. When you enable this feature, the encoder uses fewer bits on areas that can sustain more distortion with no noticeable visual degradation and uses more bits on areas where any small distortion will be noticeable. For example, complex textured blocks are encoded with fewer bits and smooth textured blocks are encoded with more bits. Enabling this feature will almost always improve your video quality. Note, though, that this feature doesn't take into account where the viewer's attention is likely to be. If viewers are likely to be focusing their attention on a part of the screen with a lot of complex texture, you might choose to disable this feature. Related setting: When you enable spatial adaptive quantization, set the value for Adaptive quantization (adaptiveQuantization) depending on your content. For homogeneous content, such as cartoons and video games, set it to Low. For content with a wider variety of textures, set it to High or Higher.
+    #[doc(hidden)]
     pub spatial_adaptive_quantization:
         std::option::Option<crate::model::XavcSpatialAdaptiveQuantization>,
     /// The best way to set up adaptive quantization is to keep the default value, Auto (AUTO), for the setting Adaptive quantization (adaptiveQuantization). When you do so, MediaConvert automatically applies the best types of quantization for your video content. Include this setting in your JSON job specification only when you choose to change the default value for Adaptive quantization. For this setting, keep the default value, Enabled (ENABLED), to adjust quantization within each frame based on temporal variation of content complexity. When you enable this feature, the encoder uses fewer bits on areas of the frame that aren't moving and uses more bits on complex objects with sharp edges that move a lot. For example, this feature improves the readability of text tickers on newscasts and scoreboards on sports matches. Enabling this feature will almost always improve your video quality. Note, though, that this feature doesn't take into account where the viewer's attention is likely to be. If viewers are likely to be focusing their attention on a part of the screen that doesn't have moving objects with sharp edges, such as sports athletes' faces, you might choose to disable this feature. Related setting: When you enable temporal adaptive quantization, adjust the strength of the filter with the setting Adaptive quantization (adaptiveQuantization).
+    #[doc(hidden)]
     pub temporal_adaptive_quantization:
         std::option::Option<crate::model::XavcTemporalAdaptiveQuantization>,
     /// Required when you set (Profile) under (VideoDescription)&gt;(CodecSettings)&gt;(XavcSettings) to the value XAVC_4K_INTRA_CBG.
+    #[doc(hidden)]
     pub xavc4k_intra_cbg_profile_settings:
         std::option::Option<crate::model::Xavc4kIntraCbgProfileSettings>,
     /// Required when you set (Profile) under (VideoDescription)&gt;(CodecSettings)&gt;(XavcSettings) to the value XAVC_4K_INTRA_VBR.
+    #[doc(hidden)]
     pub xavc4k_intra_vbr_profile_settings:
         std::option::Option<crate::model::Xavc4kIntraVbrProfileSettings>,
     /// Required when you set (Profile) under (VideoDescription)&gt;(CodecSettings)&gt;(XavcSettings) to the value XAVC_4K.
+    #[doc(hidden)]
     pub xavc4k_profile_settings: std::option::Option<crate::model::Xavc4kProfileSettings>,
     /// Required when you set (Profile) under (VideoDescription)&gt;(CodecSettings)&gt;(XavcSettings) to the value XAVC_HD_INTRA_CBG.
+    #[doc(hidden)]
     pub xavc_hd_intra_cbg_profile_settings:
         std::option::Option<crate::model::XavcHdIntraCbgProfileSettings>,
     /// Required when you set (Profile) under (VideoDescription)&gt;(CodecSettings)&gt;(XavcSettings) to the value XAVC_HD.
+    #[doc(hidden)]
     pub xavc_hd_profile_settings: std::option::Option<crate::model::XavcHdProfileSettings>,
 }
 impl XavcSettings {
@@ -5314,11 +5440,10 @@ impl std::fmt::Debug for XavcSettings {
         formatter.finish()
     }
 }
-/// See [`XavcSettings`](crate::model::XavcSettings)
+/// See [`XavcSettings`](crate::model::XavcSettings).
 pub mod xavc_settings {
 
-    /// A builder for [`XavcSettings`](crate::model::XavcSettings)
-    #[non_exhaustive]
+    /// A builder for [`XavcSettings`](crate::model::XavcSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) adaptive_quantization:
@@ -5574,7 +5699,7 @@ pub mod xavc_settings {
             self.xavc_hd_profile_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`XavcSettings`](crate::model::XavcSettings)
+        /// Consumes the builder and constructs a [`XavcSettings`](crate::model::XavcSettings).
         pub fn build(self) -> crate::model::XavcSettings {
             crate::model::XavcSettings {
                 adaptive_quantization: self.adaptive_quantization,
@@ -5598,7 +5723,7 @@ pub mod xavc_settings {
     }
 }
 impl XavcSettings {
-    /// Creates a new builder-style object to manufacture [`XavcSettings`](crate::model::XavcSettings)
+    /// Creates a new builder-style object to manufacture [`XavcSettings`](crate::model::XavcSettings).
     pub fn builder() -> crate::model::xavc_settings::Builder {
         crate::model::xavc_settings::Builder::default()
     }
@@ -5609,23 +5734,32 @@ impl XavcSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct XavcHdProfileSettings {
     /// Specify the XAVC HD (Long GOP) Bitrate Class to set the bitrate of your output. Outputs of the same class have similar image quality over the operating points that are valid for that class.
+    #[doc(hidden)]
     pub bitrate_class: std::option::Option<crate::model::XavcHdProfileBitrateClass>,
     /// The best way to set up adaptive quantization is to keep the default value, Auto (AUTO), for the setting Adaptive quantization (XavcAdaptiveQuantization). When you do so, MediaConvert automatically applies the best types of quantization for your video content. Include this setting in your JSON job specification only when you choose to change the default value for Adaptive quantization. Enable this setting to have the encoder reduce I-frame pop. I-frame pop appears as a visual flicker that can arise when the encoder saves bits by copying some macroblocks many times from frame to frame, and then refreshes them at the I-frame. When you enable this setting, the encoder updates these macroblocks slightly more often to smooth out the flicker. This setting is disabled by default. Related setting: In addition to enabling this setting, you must also set Adaptive quantization (adaptiveQuantization) to a value other than Off (OFF) or Auto (AUTO). Use Adaptive quantization to adjust the degree of smoothing that Flicker adaptive quantization provides.
+    #[doc(hidden)]
     pub flicker_adaptive_quantization:
         std::option::Option<crate::model::XavcFlickerAdaptiveQuantization>,
     /// Specify whether the encoder uses B-frames as reference frames for other pictures in the same GOP. Choose Allow (ENABLED) to allow the encoder to use B-frames as reference frames. Choose Don't allow (DISABLED) to prevent the encoder from using B-frames as reference frames.
+    #[doc(hidden)]
     pub gop_b_reference: std::option::Option<crate::model::XavcGopBReference>,
     /// Frequency of closed GOPs. In streaming applications, it is recommended that this be set to 1 so a decoder joining mid-stream will receive an IDR frame as quickly as possible. Setting this value to 0 will break output segmenting.
+    #[doc(hidden)]
     pub gop_closed_cadence: i32,
     /// Specify the size of the buffer that MediaConvert uses in the HRD buffer model for this output. Specify this value in bits; for example, enter five megabits as 5000000. When you don't set this value, or you set it to zero, MediaConvert calculates the default by doubling the bitrate of this output point.
+    #[doc(hidden)]
     pub hrd_buffer_size: i32,
     /// Choose the scan line type for the output. Keep the default value, Progressive (PROGRESSIVE) to create a progressive output, regardless of the scan type of your input. Use Top field first (TOP_FIELD) or Bottom field first (BOTTOM_FIELD) to create an output that's interlaced with the same field polarity throughout. Use Follow, default top (FOLLOW_TOP_FIELD) or Follow, default bottom (FOLLOW_BOTTOM_FIELD) to produce outputs with the same field polarity as the source. For jobs that have multiple inputs, the output field polarity might change over the course of the output. Follow behavior depends on the input scan type. If the source is interlaced, the output will be interlaced with the same polarity as the source. If the source is progressive, the output will be interlaced with top field bottom field first, depending on which of the Follow options you choose.
+    #[doc(hidden)]
     pub interlace_mode: std::option::Option<crate::model::XavcInterlaceMode>,
     /// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you want to trade off encoding speed for output video quality. The default behavior is faster, lower quality, single-pass encoding.
+    #[doc(hidden)]
     pub quality_tuning_level: std::option::Option<crate::model::XavcHdProfileQualityTuningLevel>,
     /// Number of slices per picture. Must be less than or equal to the number of macroblock rows for progressive pictures, and less than or equal to half the number of macroblock rows for interlaced pictures.
+    #[doc(hidden)]
     pub slices: i32,
     /// Ignore this setting unless you set Frame rate (framerateNumerator divided by framerateDenominator) to 29.970. If your input framerate is 23.976, choose Hard (HARD). Otherwise, keep the default value None (NONE). For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-telecine-and-inverse-telecine.html.
+    #[doc(hidden)]
     pub telecine: std::option::Option<crate::model::XavcHdProfileTelecine>,
 }
 impl XavcHdProfileSettings {
@@ -5688,11 +5822,10 @@ impl std::fmt::Debug for XavcHdProfileSettings {
         formatter.finish()
     }
 }
-/// See [`XavcHdProfileSettings`](crate::model::XavcHdProfileSettings)
+/// See [`XavcHdProfileSettings`](crate::model::XavcHdProfileSettings).
 pub mod xavc_hd_profile_settings {
 
-    /// A builder for [`XavcHdProfileSettings`](crate::model::XavcHdProfileSettings)
-    #[non_exhaustive]
+    /// A builder for [`XavcHdProfileSettings`](crate::model::XavcHdProfileSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bitrate_class: std::option::Option<crate::model::XavcHdProfileBitrateClass>,
@@ -5822,7 +5955,7 @@ pub mod xavc_hd_profile_settings {
             self.telecine = input;
             self
         }
-        /// Consumes the builder and constructs a [`XavcHdProfileSettings`](crate::model::XavcHdProfileSettings)
+        /// Consumes the builder and constructs a [`XavcHdProfileSettings`](crate::model::XavcHdProfileSettings).
         pub fn build(self) -> crate::model::XavcHdProfileSettings {
             crate::model::XavcHdProfileSettings {
                 bitrate_class: self.bitrate_class,
@@ -5839,7 +5972,7 @@ pub mod xavc_hd_profile_settings {
     }
 }
 impl XavcHdProfileSettings {
-    /// Creates a new builder-style object to manufacture [`XavcHdProfileSettings`](crate::model::XavcHdProfileSettings)
+    /// Creates a new builder-style object to manufacture [`XavcHdProfileSettings`](crate::model::XavcHdProfileSettings).
     pub fn builder() -> crate::model::xavc_hd_profile_settings::Builder {
         crate::model::xavc_hd_profile_settings::Builder::default()
     }
@@ -6206,6 +6339,7 @@ impl AsRef<str> for XavcHdProfileBitrateClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct XavcHdIntraCbgProfileSettings {
     /// Specify the XAVC Intra HD (CBG) Class to set the bitrate of your output. Outputs of the same class have similar image quality over the operating points that are valid for that class.
+    #[doc(hidden)]
     pub xavc_class: std::option::Option<crate::model::XavcHdIntraCbgProfileClass>,
 }
 impl XavcHdIntraCbgProfileSettings {
@@ -6221,11 +6355,10 @@ impl std::fmt::Debug for XavcHdIntraCbgProfileSettings {
         formatter.finish()
     }
 }
-/// See [`XavcHdIntraCbgProfileSettings`](crate::model::XavcHdIntraCbgProfileSettings)
+/// See [`XavcHdIntraCbgProfileSettings`](crate::model::XavcHdIntraCbgProfileSettings).
 pub mod xavc_hd_intra_cbg_profile_settings {
 
-    /// A builder for [`XavcHdIntraCbgProfileSettings`](crate::model::XavcHdIntraCbgProfileSettings)
-    #[non_exhaustive]
+    /// A builder for [`XavcHdIntraCbgProfileSettings`](crate::model::XavcHdIntraCbgProfileSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) xavc_class: std::option::Option<crate::model::XavcHdIntraCbgProfileClass>,
@@ -6244,7 +6377,7 @@ pub mod xavc_hd_intra_cbg_profile_settings {
             self.xavc_class = input;
             self
         }
-        /// Consumes the builder and constructs a [`XavcHdIntraCbgProfileSettings`](crate::model::XavcHdIntraCbgProfileSettings)
+        /// Consumes the builder and constructs a [`XavcHdIntraCbgProfileSettings`](crate::model::XavcHdIntraCbgProfileSettings).
         pub fn build(self) -> crate::model::XavcHdIntraCbgProfileSettings {
             crate::model::XavcHdIntraCbgProfileSettings {
                 xavc_class: self.xavc_class,
@@ -6253,7 +6386,7 @@ pub mod xavc_hd_intra_cbg_profile_settings {
     }
 }
 impl XavcHdIntraCbgProfileSettings {
-    /// Creates a new builder-style object to manufacture [`XavcHdIntraCbgProfileSettings`](crate::model::XavcHdIntraCbgProfileSettings)
+    /// Creates a new builder-style object to manufacture [`XavcHdIntraCbgProfileSettings`](crate::model::XavcHdIntraCbgProfileSettings).
     pub fn builder() -> crate::model::xavc_hd_intra_cbg_profile_settings::Builder {
         crate::model::xavc_hd_intra_cbg_profile_settings::Builder::default()
     }
@@ -6323,21 +6456,29 @@ impl AsRef<str> for XavcHdIntraCbgProfileClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Xavc4kProfileSettings {
     /// Specify the XAVC 4k (Long GOP) Bitrate Class to set the bitrate of your output. Outputs of the same class have similar image quality over the operating points that are valid for that class.
+    #[doc(hidden)]
     pub bitrate_class: std::option::Option<crate::model::Xavc4kProfileBitrateClass>,
     /// Specify the codec profile for this output. Choose High, 8-bit, 4:2:0 (HIGH) or High, 10-bit, 4:2:2 (HIGH_422). These profiles are specified in ITU-T H.264.
+    #[doc(hidden)]
     pub codec_profile: std::option::Option<crate::model::Xavc4kProfileCodecProfile>,
     /// The best way to set up adaptive quantization is to keep the default value, Auto (AUTO), for the setting Adaptive quantization (XavcAdaptiveQuantization). When you do so, MediaConvert automatically applies the best types of quantization for your video content. Include this setting in your JSON job specification only when you choose to change the default value for Adaptive quantization. Enable this setting to have the encoder reduce I-frame pop. I-frame pop appears as a visual flicker that can arise when the encoder saves bits by copying some macroblocks many times from frame to frame, and then refreshes them at the I-frame. When you enable this setting, the encoder updates these macroblocks slightly more often to smooth out the flicker. This setting is disabled by default. Related setting: In addition to enabling this setting, you must also set Adaptive quantization (adaptiveQuantization) to a value other than Off (OFF) or Auto (AUTO). Use Adaptive quantization to adjust the degree of smoothing that Flicker adaptive quantization provides.
+    #[doc(hidden)]
     pub flicker_adaptive_quantization:
         std::option::Option<crate::model::XavcFlickerAdaptiveQuantization>,
     /// Specify whether the encoder uses B-frames as reference frames for other pictures in the same GOP. Choose Allow (ENABLED) to allow the encoder to use B-frames as reference frames. Choose Don't allow (DISABLED) to prevent the encoder from using B-frames as reference frames.
+    #[doc(hidden)]
     pub gop_b_reference: std::option::Option<crate::model::XavcGopBReference>,
     /// Frequency of closed GOPs. In streaming applications, it is recommended that this be set to 1 so a decoder joining mid-stream will receive an IDR frame as quickly as possible. Setting this value to 0 will break output segmenting.
+    #[doc(hidden)]
     pub gop_closed_cadence: i32,
     /// Specify the size of the buffer that MediaConvert uses in the HRD buffer model for this output. Specify this value in bits; for example, enter five megabits as 5000000. When you don't set this value, or you set it to zero, MediaConvert calculates the default by doubling the bitrate of this output point.
+    #[doc(hidden)]
     pub hrd_buffer_size: i32,
     /// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you want to trade off encoding speed for output video quality. The default behavior is faster, lower quality, single-pass encoding.
+    #[doc(hidden)]
     pub quality_tuning_level: std::option::Option<crate::model::Xavc4kProfileQualityTuningLevel>,
     /// Number of slices per picture. Must be less than or equal to the number of macroblock rows for progressive pictures, and less than or equal to half the number of macroblock rows for interlaced pictures.
+    #[doc(hidden)]
     pub slices: i32,
 }
 impl Xavc4kProfileSettings {
@@ -6395,11 +6536,10 @@ impl std::fmt::Debug for Xavc4kProfileSettings {
         formatter.finish()
     }
 }
-/// See [`Xavc4kProfileSettings`](crate::model::Xavc4kProfileSettings)
+/// See [`Xavc4kProfileSettings`](crate::model::Xavc4kProfileSettings).
 pub mod xavc4k_profile_settings {
 
-    /// A builder for [`Xavc4kProfileSettings`](crate::model::Xavc4kProfileSettings)
-    #[non_exhaustive]
+    /// A builder for [`Xavc4kProfileSettings`](crate::model::Xavc4kProfileSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bitrate_class: std::option::Option<crate::model::Xavc4kProfileBitrateClass>,
@@ -6515,7 +6655,7 @@ pub mod xavc4k_profile_settings {
             self.slices = input;
             self
         }
-        /// Consumes the builder and constructs a [`Xavc4kProfileSettings`](crate::model::Xavc4kProfileSettings)
+        /// Consumes the builder and constructs a [`Xavc4kProfileSettings`](crate::model::Xavc4kProfileSettings).
         pub fn build(self) -> crate::model::Xavc4kProfileSettings {
             crate::model::Xavc4kProfileSettings {
                 bitrate_class: self.bitrate_class,
@@ -6531,7 +6671,7 @@ pub mod xavc4k_profile_settings {
     }
 }
 impl Xavc4kProfileSettings {
-    /// Creates a new builder-style object to manufacture [`Xavc4kProfileSettings`](crate::model::Xavc4kProfileSettings)
+    /// Creates a new builder-style object to manufacture [`Xavc4kProfileSettings`](crate::model::Xavc4kProfileSettings).
     pub fn builder() -> crate::model::xavc4k_profile_settings::Builder {
         crate::model::xavc4k_profile_settings::Builder::default()
     }
@@ -6719,6 +6859,7 @@ impl AsRef<str> for Xavc4kProfileBitrateClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Xavc4kIntraVbrProfileSettings {
     /// Specify the XAVC Intra 4k (VBR) Class to set the bitrate of your output. Outputs of the same class have similar image quality over the operating points that are valid for that class.
+    #[doc(hidden)]
     pub xavc_class: std::option::Option<crate::model::Xavc4kIntraVbrProfileClass>,
 }
 impl Xavc4kIntraVbrProfileSettings {
@@ -6734,11 +6875,10 @@ impl std::fmt::Debug for Xavc4kIntraVbrProfileSettings {
         formatter.finish()
     }
 }
-/// See [`Xavc4kIntraVbrProfileSettings`](crate::model::Xavc4kIntraVbrProfileSettings)
+/// See [`Xavc4kIntraVbrProfileSettings`](crate::model::Xavc4kIntraVbrProfileSettings).
 pub mod xavc4k_intra_vbr_profile_settings {
 
-    /// A builder for [`Xavc4kIntraVbrProfileSettings`](crate::model::Xavc4kIntraVbrProfileSettings)
-    #[non_exhaustive]
+    /// A builder for [`Xavc4kIntraVbrProfileSettings`](crate::model::Xavc4kIntraVbrProfileSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) xavc_class: std::option::Option<crate::model::Xavc4kIntraVbrProfileClass>,
@@ -6757,7 +6897,7 @@ pub mod xavc4k_intra_vbr_profile_settings {
             self.xavc_class = input;
             self
         }
-        /// Consumes the builder and constructs a [`Xavc4kIntraVbrProfileSettings`](crate::model::Xavc4kIntraVbrProfileSettings)
+        /// Consumes the builder and constructs a [`Xavc4kIntraVbrProfileSettings`](crate::model::Xavc4kIntraVbrProfileSettings).
         pub fn build(self) -> crate::model::Xavc4kIntraVbrProfileSettings {
             crate::model::Xavc4kIntraVbrProfileSettings {
                 xavc_class: self.xavc_class,
@@ -6766,7 +6906,7 @@ pub mod xavc4k_intra_vbr_profile_settings {
     }
 }
 impl Xavc4kIntraVbrProfileSettings {
-    /// Creates a new builder-style object to manufacture [`Xavc4kIntraVbrProfileSettings`](crate::model::Xavc4kIntraVbrProfileSettings)
+    /// Creates a new builder-style object to manufacture [`Xavc4kIntraVbrProfileSettings`](crate::model::Xavc4kIntraVbrProfileSettings).
     pub fn builder() -> crate::model::xavc4k_intra_vbr_profile_settings::Builder {
         crate::model::xavc4k_intra_vbr_profile_settings::Builder::default()
     }
@@ -6836,6 +6976,7 @@ impl AsRef<str> for Xavc4kIntraVbrProfileClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Xavc4kIntraCbgProfileSettings {
     /// Specify the XAVC Intra 4k (CBG) Class to set the bitrate of your output. Outputs of the same class have similar image quality over the operating points that are valid for that class.
+    #[doc(hidden)]
     pub xavc_class: std::option::Option<crate::model::Xavc4kIntraCbgProfileClass>,
 }
 impl Xavc4kIntraCbgProfileSettings {
@@ -6851,11 +6992,10 @@ impl std::fmt::Debug for Xavc4kIntraCbgProfileSettings {
         formatter.finish()
     }
 }
-/// See [`Xavc4kIntraCbgProfileSettings`](crate::model::Xavc4kIntraCbgProfileSettings)
+/// See [`Xavc4kIntraCbgProfileSettings`](crate::model::Xavc4kIntraCbgProfileSettings).
 pub mod xavc4k_intra_cbg_profile_settings {
 
-    /// A builder for [`Xavc4kIntraCbgProfileSettings`](crate::model::Xavc4kIntraCbgProfileSettings)
-    #[non_exhaustive]
+    /// A builder for [`Xavc4kIntraCbgProfileSettings`](crate::model::Xavc4kIntraCbgProfileSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) xavc_class: std::option::Option<crate::model::Xavc4kIntraCbgProfileClass>,
@@ -6874,7 +7014,7 @@ pub mod xavc4k_intra_cbg_profile_settings {
             self.xavc_class = input;
             self
         }
-        /// Consumes the builder and constructs a [`Xavc4kIntraCbgProfileSettings`](crate::model::Xavc4kIntraCbgProfileSettings)
+        /// Consumes the builder and constructs a [`Xavc4kIntraCbgProfileSettings`](crate::model::Xavc4kIntraCbgProfileSettings).
         pub fn build(self) -> crate::model::Xavc4kIntraCbgProfileSettings {
             crate::model::Xavc4kIntraCbgProfileSettings {
                 xavc_class: self.xavc_class,
@@ -6883,7 +7023,7 @@ pub mod xavc4k_intra_cbg_profile_settings {
     }
 }
 impl Xavc4kIntraCbgProfileSettings {
-    /// Creates a new builder-style object to manufacture [`Xavc4kIntraCbgProfileSettings`](crate::model::Xavc4kIntraCbgProfileSettings)
+    /// Creates a new builder-style object to manufacture [`Xavc4kIntraCbgProfileSettings`](crate::model::Xavc4kIntraCbgProfileSettings).
     pub fn builder() -> crate::model::xavc4k_intra_cbg_profile_settings::Builder {
         crate::model::xavc4k_intra_cbg_profile_settings::Builder::default()
     }
@@ -7439,31 +7579,44 @@ impl AsRef<str> for XavcAdaptiveQuantization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Vp9Settings {
     /// Target bitrate in bits/second. For example, enter five megabits per second as 5000000.
+    #[doc(hidden)]
     pub bitrate: i32,
     /// If you are using the console, use the Framerate setting to specify the frame rate for this output. If you want to keep the same frame rate as the input video, choose Follow source. If you want to do frame rate conversion, choose a frame rate from the dropdown list or choose Custom. The framerates shown in the dropdown list are decimal approximations of fractions. If you choose Custom, specify your frame rate as a fraction. If you are creating your transcoding job specification as a JSON file without the console, use FramerateControl to specify which value the service uses for the frame rate for this output. Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate from the input. Choose SPECIFIED if you want the service to use the frame rate you specify in the settings FramerateNumerator and FramerateDenominator.
+    #[doc(hidden)]
     pub framerate_control: std::option::Option<crate::model::Vp9FramerateControl>,
     /// Choose the method that you want MediaConvert to use when increasing or decreasing the frame rate. We recommend using drop duplicate (DUPLICATE_DROP) for numerically simple conversions, such as 60 fps to 30 fps. For numerically complex conversions, you can use interpolate (INTERPOLATE) to avoid stutter. This results in a smooth picture, but might introduce undesirable video artifacts. For complex frame rate conversions, especially if your source video has already been converted from its original cadence, use FrameFormer (FRAMEFORMER) to do motion-compensated interpolation. FrameFormer chooses the best conversion method frame by frame. Note that using FrameFormer increases the transcoding time and incurs a significant add-on cost.
+    #[doc(hidden)]
     pub framerate_conversion_algorithm:
         std::option::Option<crate::model::Vp9FramerateConversionAlgorithm>,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateDenominator to specify the denominator of this fraction. In this example, use 1001 for the value of FramerateDenominator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_denominator: i32,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateNumerator to specify the numerator of this fraction. In this example, use 24000 for the value of FramerateNumerator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_numerator: i32,
     /// GOP Length (keyframe interval) in frames. Must be greater than zero.
+    #[doc(hidden)]
     pub gop_size: f64,
     /// Size of buffer (HRD buffer model) in bits. For example, enter five megabits as 5000000.
+    #[doc(hidden)]
     pub hrd_buffer_size: i32,
     /// Ignore this setting unless you set qualityTuningLevel to MULTI_PASS. Optional. Specify the maximum bitrate in bits/second. For example, enter five megabits per second as 5000000. The default behavior uses twice the target bitrate as the maximum bitrate.
+    #[doc(hidden)]
     pub max_bitrate: i32,
     /// Optional. Specify how the service determines the pixel aspect ratio for this output. The default behavior is to use the same pixel aspect ratio as your input video.
+    #[doc(hidden)]
     pub par_control: std::option::Option<crate::model::Vp9ParControl>,
     /// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parDenominator is 33.
+    #[doc(hidden)]
     pub par_denominator: i32,
     /// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parNumerator is 40.
+    #[doc(hidden)]
     pub par_numerator: i32,
     /// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you want to trade off encoding speed for output video quality. The default behavior is faster, lower quality, multi-pass encoding.
+    #[doc(hidden)]
     pub quality_tuning_level: std::option::Option<crate::model::Vp9QualityTuningLevel>,
     /// With the VP9 codec, you can use only the variable bitrate (VBR) rate control mode.
+    #[doc(hidden)]
     pub rate_control_mode: std::option::Option<crate::model::Vp9RateControlMode>,
 }
 impl Vp9Settings {
@@ -7546,11 +7699,10 @@ impl std::fmt::Debug for Vp9Settings {
         formatter.finish()
     }
 }
-/// See [`Vp9Settings`](crate::model::Vp9Settings)
+/// See [`Vp9Settings`](crate::model::Vp9Settings).
 pub mod vp9_settings {
 
-    /// A builder for [`Vp9Settings`](crate::model::Vp9Settings)
-    #[non_exhaustive]
+    /// A builder for [`Vp9Settings`](crate::model::Vp9Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bitrate: std::option::Option<i32>,
@@ -7717,7 +7869,7 @@ pub mod vp9_settings {
             self.rate_control_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`Vp9Settings`](crate::model::Vp9Settings)
+        /// Consumes the builder and constructs a [`Vp9Settings`](crate::model::Vp9Settings).
         pub fn build(self) -> crate::model::Vp9Settings {
             crate::model::Vp9Settings {
                 bitrate: self.bitrate.unwrap_or_default(),
@@ -7738,7 +7890,7 @@ pub mod vp9_settings {
     }
 }
 impl Vp9Settings {
-    /// Creates a new builder-style object to manufacture [`Vp9Settings`](crate::model::Vp9Settings)
+    /// Creates a new builder-style object to manufacture [`Vp9Settings`](crate::model::Vp9Settings).
     pub fn builder() -> crate::model::vp9_settings::Builder {
         crate::model::vp9_settings::Builder::default()
     }
@@ -8024,31 +8176,44 @@ impl AsRef<str> for Vp9FramerateControl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Vp8Settings {
     /// Target bitrate in bits/second. For example, enter five megabits per second as 5000000.
+    #[doc(hidden)]
     pub bitrate: i32,
     /// If you are using the console, use the Framerate setting to specify the frame rate for this output. If you want to keep the same frame rate as the input video, choose Follow source. If you want to do frame rate conversion, choose a frame rate from the dropdown list or choose Custom. The framerates shown in the dropdown list are decimal approximations of fractions. If you choose Custom, specify your frame rate as a fraction. If you are creating your transcoding job specification as a JSON file without the console, use FramerateControl to specify which value the service uses for the frame rate for this output. Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate from the input. Choose SPECIFIED if you want the service to use the frame rate you specify in the settings FramerateNumerator and FramerateDenominator.
+    #[doc(hidden)]
     pub framerate_control: std::option::Option<crate::model::Vp8FramerateControl>,
     /// Choose the method that you want MediaConvert to use when increasing or decreasing the frame rate. We recommend using drop duplicate (DUPLICATE_DROP) for numerically simple conversions, such as 60 fps to 30 fps. For numerically complex conversions, you can use interpolate (INTERPOLATE) to avoid stutter. This results in a smooth picture, but might introduce undesirable video artifacts. For complex frame rate conversions, especially if your source video has already been converted from its original cadence, use FrameFormer (FRAMEFORMER) to do motion-compensated interpolation. FrameFormer chooses the best conversion method frame by frame. Note that using FrameFormer increases the transcoding time and incurs a significant add-on cost.
+    #[doc(hidden)]
     pub framerate_conversion_algorithm:
         std::option::Option<crate::model::Vp8FramerateConversionAlgorithm>,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateDenominator to specify the denominator of this fraction. In this example, use 1001 for the value of FramerateDenominator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_denominator: i32,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateNumerator to specify the numerator of this fraction. In this example, use 24000 for the value of FramerateNumerator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_numerator: i32,
     /// GOP Length (keyframe interval) in frames. Must be greater than zero.
+    #[doc(hidden)]
     pub gop_size: f64,
     /// Optional. Size of buffer (HRD buffer model) in bits. For example, enter five megabits as 5000000.
+    #[doc(hidden)]
     pub hrd_buffer_size: i32,
     /// Ignore this setting unless you set qualityTuningLevel to MULTI_PASS. Optional. Specify the maximum bitrate in bits/second. For example, enter five megabits per second as 5000000. The default behavior uses twice the target bitrate as the maximum bitrate.
+    #[doc(hidden)]
     pub max_bitrate: i32,
     /// Optional. Specify how the service determines the pixel aspect ratio (PAR) for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE), uses the PAR from your input video for your output. To specify a different PAR in the console, choose any value other than Follow source. To specify a different PAR by editing the JSON job specification, choose SPECIFIED. When you choose SPECIFIED for this setting, you must also specify values for the parNumerator and parDenominator settings.
+    #[doc(hidden)]
     pub par_control: std::option::Option<crate::model::Vp8ParControl>,
     /// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parDenominator is 33.
+    #[doc(hidden)]
     pub par_denominator: i32,
     /// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parNumerator is 40.
+    #[doc(hidden)]
     pub par_numerator: i32,
     /// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you want to trade off encoding speed for output video quality. The default behavior is faster, lower quality, multi-pass encoding.
+    #[doc(hidden)]
     pub quality_tuning_level: std::option::Option<crate::model::Vp8QualityTuningLevel>,
     /// With the VP8 codec, you can use only the variable bitrate (VBR) rate control mode.
+    #[doc(hidden)]
     pub rate_control_mode: std::option::Option<crate::model::Vp8RateControlMode>,
 }
 impl Vp8Settings {
@@ -8131,11 +8296,10 @@ impl std::fmt::Debug for Vp8Settings {
         formatter.finish()
     }
 }
-/// See [`Vp8Settings`](crate::model::Vp8Settings)
+/// See [`Vp8Settings`](crate::model::Vp8Settings).
 pub mod vp8_settings {
 
-    /// A builder for [`Vp8Settings`](crate::model::Vp8Settings)
-    #[non_exhaustive]
+    /// A builder for [`Vp8Settings`](crate::model::Vp8Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bitrate: std::option::Option<i32>,
@@ -8302,7 +8466,7 @@ pub mod vp8_settings {
             self.rate_control_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`Vp8Settings`](crate::model::Vp8Settings)
+        /// Consumes the builder and constructs a [`Vp8Settings`](crate::model::Vp8Settings).
         pub fn build(self) -> crate::model::Vp8Settings {
             crate::model::Vp8Settings {
                 bitrate: self.bitrate.unwrap_or_default(),
@@ -8323,7 +8487,7 @@ pub mod vp8_settings {
     }
 }
 impl Vp8Settings {
-    /// Creates a new builder-style object to manufacture [`Vp8Settings`](crate::model::Vp8Settings)
+    /// Creates a new builder-style object to manufacture [`Vp8Settings`](crate::model::Vp8Settings).
     pub fn builder() -> crate::model::vp8_settings::Builder {
         crate::model::vp8_settings::Builder::default()
     }
@@ -8609,23 +8773,32 @@ impl AsRef<str> for Vp8FramerateControl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Vc3Settings {
     /// If you are using the console, use the Framerate setting to specify the frame rate for this output. If you want to keep the same frame rate as the input video, choose Follow source. If you want to do frame rate conversion, choose a frame rate from the dropdown list or choose Custom. The framerates shown in the dropdown list are decimal approximations of fractions. If you choose Custom, specify your frame rate as a fraction. If you are creating your transcoding job specification as a JSON file without the console, use FramerateControl to specify which value the service uses for the frame rate for this output. Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate from the input. Choose SPECIFIED if you want the service to use the frame rate you specify in the settings FramerateNumerator and FramerateDenominator.
+    #[doc(hidden)]
     pub framerate_control: std::option::Option<crate::model::Vc3FramerateControl>,
     /// Choose the method that you want MediaConvert to use when increasing or decreasing the frame rate. We recommend using drop duplicate (DUPLICATE_DROP) for numerically simple conversions, such as 60 fps to 30 fps. For numerically complex conversions, you can use interpolate (INTERPOLATE) to avoid stutter. This results in a smooth picture, but might introduce undesirable video artifacts. For complex frame rate conversions, especially if your source video has already been converted from its original cadence, use FrameFormer (FRAMEFORMER) to do motion-compensated interpolation. FrameFormer chooses the best conversion method frame by frame. Note that using FrameFormer increases the transcoding time and incurs a significant add-on cost.
+    #[doc(hidden)]
     pub framerate_conversion_algorithm:
         std::option::Option<crate::model::Vc3FramerateConversionAlgorithm>,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateDenominator to specify the denominator of this fraction. In this example, use 1001 for the value of FramerateDenominator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_denominator: i32,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateNumerator to specify the numerator of this fraction. In this example, use 24000 for the value of FramerateNumerator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_numerator: i32,
     /// Optional. Choose the scan line type for this output. If you don't specify a value, MediaConvert will create a progressive output.
+    #[doc(hidden)]
     pub interlace_mode: std::option::Option<crate::model::Vc3InterlaceMode>,
     /// Use this setting for interlaced outputs, when your output frame rate is half of your input frame rate. In this situation, choose Optimized interlacing (INTERLACED_OPTIMIZE) to create a better quality interlaced output. In this case, each progressive frame from the input corresponds to an interlaced field in the output. Keep the default value, Basic interlacing (INTERLACED), for all other output frame rates. With basic interlacing, MediaConvert performs any frame rate conversion first and then interlaces the frames. When you choose Optimized interlacing and you set your output frame rate to a value that isn't suitable for optimized interlacing, MediaConvert automatically falls back to basic interlacing. Required settings: To use optimized interlacing, you must set Telecine (telecine) to None (NONE) or Soft (SOFT). You can't use optimized interlacing for hard telecine outputs. You must also set Interlace mode (interlaceMode) to a value other than Progressive (PROGRESSIVE).
+    #[doc(hidden)]
     pub scan_type_conversion_mode: std::option::Option<crate::model::Vc3ScanTypeConversionMode>,
     /// Ignore this setting unless your input frame rate is 23.976 or 24 frames per second (fps). Enable slow PAL to create a 25 fps output by relabeling the video frames and resampling your audio. Note that enabling this setting will slightly reduce the duration of your video. Related settings: You must also set Framerate to 25. In your JSON job specification, set (framerateControl) to (SPECIFIED), (framerateNumerator) to 25 and (framerateDenominator) to 1.
+    #[doc(hidden)]
     pub slow_pal: std::option::Option<crate::model::Vc3SlowPal>,
     /// When you do frame rate conversion from 23.976 frames per second (fps) to 29.97 fps, and your output scan type is interlaced, you can optionally enable hard telecine (HARD) to create a smoother picture. When you keep the default value, None (NONE), MediaConvert does a standard frame rate conversion to 29.97 without doing anything with the field polarity to create a smoother picture.
+    #[doc(hidden)]
     pub telecine: std::option::Option<crate::model::Vc3Telecine>,
     /// Specify the VC3 class to choose the quality characteristics for this output. VC3 class, together with the settings Framerate (framerateNumerator and framerateDenominator) and Resolution (height and width), determine your output bitrate. For example, say that your video resolution is 1920x1080 and your framerate is 29.97. Then Class 145 (CLASS_145) gives you an output with a bitrate of approximately 145 Mbps and Class 220 (CLASS_220) gives you and output with a bitrate of approximately 220 Mbps. VC3 class also specifies the color bit depth of your output.
+    #[doc(hidden)]
     pub vc3_class: std::option::Option<crate::model::Vc3Class>,
 }
 impl Vc3Settings {
@@ -8688,11 +8861,10 @@ impl std::fmt::Debug for Vc3Settings {
         formatter.finish()
     }
 }
-/// See [`Vc3Settings`](crate::model::Vc3Settings)
+/// See [`Vc3Settings`](crate::model::Vc3Settings).
 pub mod vc3_settings {
 
-    /// A builder for [`Vc3Settings`](crate::model::Vc3Settings)
-    #[non_exhaustive]
+    /// A builder for [`Vc3Settings`](crate::model::Vc3Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) framerate_control: std::option::Option<crate::model::Vc3FramerateControl>,
@@ -8822,7 +8994,7 @@ pub mod vc3_settings {
             self.vc3_class = input;
             self
         }
-        /// Consumes the builder and constructs a [`Vc3Settings`](crate::model::Vc3Settings)
+        /// Consumes the builder and constructs a [`Vc3Settings`](crate::model::Vc3Settings).
         pub fn build(self) -> crate::model::Vc3Settings {
             crate::model::Vc3Settings {
                 framerate_control: self.framerate_control,
@@ -8839,7 +9011,7 @@ pub mod vc3_settings {
     }
 }
 impl Vc3Settings {
-    /// Creates a new builder-style object to manufacture [`Vc3Settings`](crate::model::Vc3Settings)
+    /// Creates a new builder-style object to manufacture [`Vc3Settings`](crate::model::Vc3Settings).
     pub fn builder() -> crate::model::vc3_settings::Builder {
         crate::model::vc3_settings::Builder::default()
     }
@@ -9243,31 +9415,44 @@ impl AsRef<str> for Vc3FramerateControl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProresSettings {
     /// This setting applies only to ProRes 4444 and ProRes 4444 XQ outputs that you create from inputs that use 4:4:4 chroma sampling. Set Preserve 4:4:4 sampling (PRESERVE_444_SAMPLING) to allow outputs to also use 4:4:4 chroma sampling. You must specify a value for this setting when your output codec profile supports 4:4:4 chroma sampling. Related Settings: When you set Chroma sampling to Preserve 4:4:4 sampling (PRESERVE_444_SAMPLING), you must choose an output codec profile that supports 4:4:4 chroma sampling. These values for Profile (CodecProfile) support 4:4:4 chroma sampling: Apple ProRes 4444 (APPLE_PRORES_4444) or Apple ProRes 4444 XQ (APPLE_PRORES_4444_XQ). When you set Chroma sampling to Preserve 4:4:4 sampling, you must disable all video preprocessors except for Nexguard file marker (PartnerWatermarking). When you set Chroma sampling to Preserve 4:4:4 sampling and use framerate conversion, you must set Frame rate conversion algorithm (FramerateConversionAlgorithm) to Drop duplicate (DUPLICATE_DROP).
+    #[doc(hidden)]
     pub chroma_sampling: std::option::Option<crate::model::ProresChromaSampling>,
     /// Use Profile (ProResCodecProfile) to specify the type of Apple ProRes codec to use for this output.
+    #[doc(hidden)]
     pub codec_profile: std::option::Option<crate::model::ProresCodecProfile>,
     /// If you are using the console, use the Framerate setting to specify the frame rate for this output. If you want to keep the same frame rate as the input video, choose Follow source. If you want to do frame rate conversion, choose a frame rate from the dropdown list or choose Custom. The framerates shown in the dropdown list are decimal approximations of fractions. If you choose Custom, specify your frame rate as a fraction. If you are creating your transcoding job specification as a JSON file without the console, use FramerateControl to specify which value the service uses for the frame rate for this output. Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate from the input. Choose SPECIFIED if you want the service to use the frame rate you specify in the settings FramerateNumerator and FramerateDenominator.
+    #[doc(hidden)]
     pub framerate_control: std::option::Option<crate::model::ProresFramerateControl>,
     /// Choose the method that you want MediaConvert to use when increasing or decreasing the frame rate. We recommend using drop duplicate (DUPLICATE_DROP) for numerically simple conversions, such as 60 fps to 30 fps. For numerically complex conversions, you can use interpolate (INTERPOLATE) to avoid stutter. This results in a smooth picture, but might introduce undesirable video artifacts. For complex frame rate conversions, especially if your source video has already been converted from its original cadence, use FrameFormer (FRAMEFORMER) to do motion-compensated interpolation. FrameFormer chooses the best conversion method frame by frame. Note that using FrameFormer increases the transcoding time and incurs a significant add-on cost.
+    #[doc(hidden)]
     pub framerate_conversion_algorithm:
         std::option::Option<crate::model::ProresFramerateConversionAlgorithm>,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateDenominator to specify the denominator of this fraction. In this example, use 1001 for the value of FramerateDenominator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_denominator: i32,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateNumerator to specify the numerator of this fraction. In this example, use 24000 for the value of FramerateNumerator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_numerator: i32,
     /// Choose the scan line type for the output. Keep the default value, Progressive (PROGRESSIVE) to create a progressive output, regardless of the scan type of your input. Use Top field first (TOP_FIELD) or Bottom field first (BOTTOM_FIELD) to create an output that's interlaced with the same field polarity throughout. Use Follow, default top (FOLLOW_TOP_FIELD) or Follow, default bottom (FOLLOW_BOTTOM_FIELD) to produce outputs with the same field polarity as the source. For jobs that have multiple inputs, the output field polarity might change over the course of the output. Follow behavior depends on the input scan type. If the source is interlaced, the output will be interlaced with the same polarity as the source. If the source is progressive, the output will be interlaced with top field bottom field first, depending on which of the Follow options you choose.
+    #[doc(hidden)]
     pub interlace_mode: std::option::Option<crate::model::ProresInterlaceMode>,
     /// Optional. Specify how the service determines the pixel aspect ratio (PAR) for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE), uses the PAR from your input video for your output. To specify a different PAR in the console, choose any value other than Follow source. To specify a different PAR by editing the JSON job specification, choose SPECIFIED. When you choose SPECIFIED for this setting, you must also specify values for the parNumerator and parDenominator settings.
+    #[doc(hidden)]
     pub par_control: std::option::Option<crate::model::ProresParControl>,
     /// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parDenominator is 33.
+    #[doc(hidden)]
     pub par_denominator: i32,
     /// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parNumerator is 40.
+    #[doc(hidden)]
     pub par_numerator: i32,
     /// Use this setting for interlaced outputs, when your output frame rate is half of your input frame rate. In this situation, choose Optimized interlacing (INTERLACED_OPTIMIZE) to create a better quality interlaced output. In this case, each progressive frame from the input corresponds to an interlaced field in the output. Keep the default value, Basic interlacing (INTERLACED), for all other output frame rates. With basic interlacing, MediaConvert performs any frame rate conversion first and then interlaces the frames. When you choose Optimized interlacing and you set your output frame rate to a value that isn't suitable for optimized interlacing, MediaConvert automatically falls back to basic interlacing. Required settings: To use optimized interlacing, you must set Telecine (telecine) to None (NONE) or Soft (SOFT). You can't use optimized interlacing for hard telecine outputs. You must also set Interlace mode (interlaceMode) to a value other than Progressive (PROGRESSIVE).
+    #[doc(hidden)]
     pub scan_type_conversion_mode: std::option::Option<crate::model::ProresScanTypeConversionMode>,
     /// Ignore this setting unless your input frame rate is 23.976 or 24 frames per second (fps). Enable slow PAL to create a 25 fps output. When you enable slow PAL, MediaConvert relabels the video frames to 25 fps and resamples your audio to keep it synchronized with the video. Note that enabling this setting will slightly reduce the duration of your video. Required settings: You must also set Framerate to 25. In your JSON job specification, set (framerateControl) to (SPECIFIED), (framerateNumerator) to 25 and (framerateDenominator) to 1.
+    #[doc(hidden)]
     pub slow_pal: std::option::Option<crate::model::ProresSlowPal>,
     /// When you do frame rate conversion from 23.976 frames per second (fps) to 29.97 fps, and your output scan type is interlaced, you can optionally enable hard telecine (HARD) to create a smoother picture. When you keep the default value, None (NONE), MediaConvert does a standard frame rate conversion to 29.97 without doing anything with the field polarity to create a smoother picture.
+    #[doc(hidden)]
     pub telecine: std::option::Option<crate::model::ProresTelecine>,
 }
 impl ProresSettings {
@@ -9350,11 +9535,10 @@ impl std::fmt::Debug for ProresSettings {
         formatter.finish()
     }
 }
-/// See [`ProresSettings`](crate::model::ProresSettings)
+/// See [`ProresSettings`](crate::model::ProresSettings).
 pub mod prores_settings {
 
-    /// A builder for [`ProresSettings`](crate::model::ProresSettings)
-    #[non_exhaustive]
+    /// A builder for [`ProresSettings`](crate::model::ProresSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) chroma_sampling: std::option::Option<crate::model::ProresChromaSampling>,
@@ -9537,7 +9721,7 @@ pub mod prores_settings {
             self.telecine = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProresSettings`](crate::model::ProresSettings)
+        /// Consumes the builder and constructs a [`ProresSettings`](crate::model::ProresSettings).
         pub fn build(self) -> crate::model::ProresSettings {
             crate::model::ProresSettings {
                 chroma_sampling: self.chroma_sampling,
@@ -9558,7 +9742,7 @@ pub mod prores_settings {
     }
 }
 impl ProresSettings {
-    /// Creates a new builder-style object to manufacture [`ProresSettings`](crate::model::ProresSettings)
+    /// Creates a new builder-style object to manufacture [`ProresSettings`](crate::model::ProresSettings).
     pub fn builder() -> crate::model::prores_settings::Builder {
         crate::model::prores_settings::Builder::default()
     }
@@ -10109,70 +10293,102 @@ impl AsRef<str> for ProresChromaSampling {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Mpeg2Settings {
     /// Specify the strength of any adaptive quantization filters that you enable. The value that you choose here applies to the following settings: Spatial adaptive quantization (spatialAdaptiveQuantization), and Temporal adaptive quantization (temporalAdaptiveQuantization).
+    #[doc(hidden)]
     pub adaptive_quantization: std::option::Option<crate::model::Mpeg2AdaptiveQuantization>,
     /// Specify the average bitrate in bits per second. Required for VBR and CBR. For MS Smooth outputs, bitrates must be unique when rounded down to the nearest multiple of 1000.
+    #[doc(hidden)]
     pub bitrate: i32,
     /// Use Level (Mpeg2CodecLevel) to set the MPEG-2 level for the video output.
+    #[doc(hidden)]
     pub codec_level: std::option::Option<crate::model::Mpeg2CodecLevel>,
     /// Use Profile (Mpeg2CodecProfile) to set the MPEG-2 profile for the video output.
+    #[doc(hidden)]
     pub codec_profile: std::option::Option<crate::model::Mpeg2CodecProfile>,
     /// Choose Adaptive to improve subjective video quality for high-motion content. This will cause the service to use fewer B-frames (which infer information based on other frames) for high-motion portions of the video and more B-frames for low-motion portions. The maximum number of B-frames is limited by the value you provide for the setting B frames between reference frames (numberBFramesBetweenReferenceFrames).
+    #[doc(hidden)]
     pub dynamic_sub_gop: std::option::Option<crate::model::Mpeg2DynamicSubGop>,
     /// If you are using the console, use the Framerate setting to specify the frame rate for this output. If you want to keep the same frame rate as the input video, choose Follow source. If you want to do frame rate conversion, choose a frame rate from the dropdown list or choose Custom. The framerates shown in the dropdown list are decimal approximations of fractions. If you choose Custom, specify your frame rate as a fraction. If you are creating your transcoding job specification as a JSON file without the console, use FramerateControl to specify which value the service uses for the frame rate for this output. Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate from the input. Choose SPECIFIED if you want the service to use the frame rate you specify in the settings FramerateNumerator and FramerateDenominator.
+    #[doc(hidden)]
     pub framerate_control: std::option::Option<crate::model::Mpeg2FramerateControl>,
     /// Choose the method that you want MediaConvert to use when increasing or decreasing the frame rate. We recommend using drop duplicate (DUPLICATE_DROP) for numerically simple conversions, such as 60 fps to 30 fps. For numerically complex conversions, you can use interpolate (INTERPOLATE) to avoid stutter. This results in a smooth picture, but might introduce undesirable video artifacts. For complex frame rate conversions, especially if your source video has already been converted from its original cadence, use FrameFormer (FRAMEFORMER) to do motion-compensated interpolation. FrameFormer chooses the best conversion method frame by frame. Note that using FrameFormer increases the transcoding time and incurs a significant add-on cost.
+    #[doc(hidden)]
     pub framerate_conversion_algorithm:
         std::option::Option<crate::model::Mpeg2FramerateConversionAlgorithm>,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateDenominator to specify the denominator of this fraction. In this example, use 1001 for the value of FramerateDenominator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_denominator: i32,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateNumerator to specify the numerator of this fraction. In this example, use 24000 for the value of FramerateNumerator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_numerator: i32,
     /// Specify the relative frequency of open to closed GOPs in this output. For example, if you want to allow four open GOPs and then require a closed GOP, set this value to 5. When you create a streaming output, we recommend that you keep the default value, 1, so that players starting mid-stream receive an IDR frame as quickly as possible. Don't set this value to 0; that would break output segmenting.
+    #[doc(hidden)]
     pub gop_closed_cadence: i32,
     /// Specify the interval between keyframes, in seconds or frames, for this output. Default: 12 Related settings: When you specify the GOP size in seconds, set GOP mode control (GopSizeUnits) to Specified, seconds (SECONDS). The default value for GOP mode control (GopSizeUnits) is Frames (FRAMES).
+    #[doc(hidden)]
     pub gop_size: f64,
     /// Specify the units for GOP size (GopSize). If you don't specify a value here, by default the encoder measures GOP size in frames.
+    #[doc(hidden)]
     pub gop_size_units: std::option::Option<crate::model::Mpeg2GopSizeUnits>,
     /// Percentage of the buffer that should initially be filled (HRD buffer model).
+    #[doc(hidden)]
     pub hrd_buffer_initial_fill_percentage: i32,
     /// Size of buffer (HRD buffer model) in bits. For example, enter five megabits as 5000000.
+    #[doc(hidden)]
     pub hrd_buffer_size: i32,
     /// Choose the scan line type for the output. Keep the default value, Progressive (PROGRESSIVE) to create a progressive output, regardless of the scan type of your input. Use Top field first (TOP_FIELD) or Bottom field first (BOTTOM_FIELD) to create an output that's interlaced with the same field polarity throughout. Use Follow, default top (FOLLOW_TOP_FIELD) or Follow, default bottom (FOLLOW_BOTTOM_FIELD) to produce outputs with the same field polarity as the source. For jobs that have multiple inputs, the output field polarity might change over the course of the output. Follow behavior depends on the input scan type. If the source is interlaced, the output will be interlaced with the same polarity as the source. If the source is progressive, the output will be interlaced with top field bottom field first, depending on which of the Follow options you choose.
+    #[doc(hidden)]
     pub interlace_mode: std::option::Option<crate::model::Mpeg2InterlaceMode>,
     /// Use Intra DC precision (Mpeg2IntraDcPrecision) to set quantization precision for intra-block DC coefficients. If you choose the value auto, the service will automatically select the precision based on the per-frame compression ratio.
+    #[doc(hidden)]
     pub intra_dc_precision: std::option::Option<crate::model::Mpeg2IntraDcPrecision>,
     /// Maximum bitrate in bits/second. For example, enter five megabits per second as 5000000.
+    #[doc(hidden)]
     pub max_bitrate: i32,
     /// Use this setting only when you also enable Scene change detection (SceneChangeDetect). This setting determines how the encoder manages the spacing between I-frames that it inserts as part of the I-frame cadence and the I-frames that it inserts for Scene change detection. When you specify a value for this setting, the encoder determines whether to skip a cadence-driven I-frame by the value you set. For example, if you set Min I interval (minIInterval) to 5 and a cadence-driven I-frame would fall within 5 frames of a scene-change I-frame, then the encoder skips the cadence-driven I-frame. In this way, one GOP is shrunk slightly and one GOP is stretched slightly. When the cadence-driven I-frames are farther from the scene-change I-frame than the value you set, then the encoder leaves all I-frames in place and the GOPs surrounding the scene change are smaller than the usual cadence GOPs.
+    #[doc(hidden)]
     pub min_i_interval: i32,
     /// Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
+    #[doc(hidden)]
     pub number_b_frames_between_reference_frames: i32,
     /// Optional. Specify how the service determines the pixel aspect ratio (PAR) for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE), uses the PAR from your input video for your output. To specify a different PAR in the console, choose any value other than Follow source. To specify a different PAR by editing the JSON job specification, choose SPECIFIED. When you choose SPECIFIED for this setting, you must also specify values for the parNumerator and parDenominator settings.
+    #[doc(hidden)]
     pub par_control: std::option::Option<crate::model::Mpeg2ParControl>,
     /// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parDenominator is 33.
+    #[doc(hidden)]
     pub par_denominator: i32,
     /// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parNumerator is 40.
+    #[doc(hidden)]
     pub par_numerator: i32,
     /// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you want to trade off encoding speed for output video quality. The default behavior is faster, lower quality, single-pass encoding.
+    #[doc(hidden)]
     pub quality_tuning_level: std::option::Option<crate::model::Mpeg2QualityTuningLevel>,
     /// Use Rate control mode (Mpeg2RateControlMode) to specify whether the bitrate is variable (vbr) or constant (cbr).
+    #[doc(hidden)]
     pub rate_control_mode: std::option::Option<crate::model::Mpeg2RateControlMode>,
     /// Use this setting for interlaced outputs, when your output frame rate is half of your input frame rate. In this situation, choose Optimized interlacing (INTERLACED_OPTIMIZE) to create a better quality interlaced output. In this case, each progressive frame from the input corresponds to an interlaced field in the output. Keep the default value, Basic interlacing (INTERLACED), for all other output frame rates. With basic interlacing, MediaConvert performs any frame rate conversion first and then interlaces the frames. When you choose Optimized interlacing and you set your output frame rate to a value that isn't suitable for optimized interlacing, MediaConvert automatically falls back to basic interlacing. Required settings: To use optimized interlacing, you must set Telecine (telecine) to None (NONE) or Soft (SOFT). You can't use optimized interlacing for hard telecine outputs. You must also set Interlace mode (interlaceMode) to a value other than Progressive (PROGRESSIVE).
+    #[doc(hidden)]
     pub scan_type_conversion_mode: std::option::Option<crate::model::Mpeg2ScanTypeConversionMode>,
     /// Enable this setting to insert I-frames at scene changes that the service automatically detects. This improves video quality and is enabled by default.
+    #[doc(hidden)]
     pub scene_change_detect: std::option::Option<crate::model::Mpeg2SceneChangeDetect>,
     /// Ignore this setting unless your input frame rate is 23.976 or 24 frames per second (fps). Enable slow PAL to create a 25 fps output. When you enable slow PAL, MediaConvert relabels the video frames to 25 fps and resamples your audio to keep it synchronized with the video. Note that enabling this setting will slightly reduce the duration of your video. Required settings: You must also set Framerate to 25. In your JSON job specification, set (framerateControl) to (SPECIFIED), (framerateNumerator) to 25 and (framerateDenominator) to 1.
+    #[doc(hidden)]
     pub slow_pal: std::option::Option<crate::model::Mpeg2SlowPal>,
     /// Ignore this setting unless you need to comply with a specification that requires a specific value. If you don't have a specification requirement, we recommend that you adjust the softness of your output by using a lower value for the setting Sharpness (sharpness) or by enabling a noise reducer filter (noiseReducerFilter). The Softness (softness) setting specifies the quantization matrices that the encoder uses. Keep the default value, 0, to use the AWS Elemental default matrices. Choose a value from 17 to 128 to use planar interpolation. Increasing values from 17 to 128 result in increasing reduction of high-frequency data. The value 128 results in the softest video.
+    #[doc(hidden)]
     pub softness: i32,
     /// Keep the default value, Enabled (ENABLED), to adjust quantization within each frame based on spatial variation of content complexity. When you enable this feature, the encoder uses fewer bits on areas that can sustain more distortion with no noticeable visual degradation and uses more bits on areas where any small distortion will be noticeable. For example, complex textured blocks are encoded with fewer bits and smooth textured blocks are encoded with more bits. Enabling this feature will almost always improve your video quality. Note, though, that this feature doesn't take into account where the viewer's attention is likely to be. If viewers are likely to be focusing their attention on a part of the screen with a lot of complex texture, you might choose to disable this feature. Related setting: When you enable spatial adaptive quantization, set the value for Adaptive quantization (adaptiveQuantization) depending on your content. For homogeneous content, such as cartoons and video games, set it to Low. For content with a wider variety of textures, set it to High or Higher.
+    #[doc(hidden)]
     pub spatial_adaptive_quantization:
         std::option::Option<crate::model::Mpeg2SpatialAdaptiveQuantization>,
     /// Specify whether this output's video uses the D10 syntax. Keep the default value to not use the syntax. Related settings: When you choose D10 (D_10) for your MXF profile (profile), you must also set this value to to D10 (D_10).
+    #[doc(hidden)]
     pub syntax: std::option::Option<crate::model::Mpeg2Syntax>,
     /// When you do frame rate conversion from 23.976 frames per second (fps) to 29.97 fps, and your output scan type is interlaced, you can optionally enable hard or soft telecine to create a smoother picture. Hard telecine (HARD) produces a 29.97i output. Soft telecine (SOFT) produces an output with a 23.976 output that signals to the video player device to do the conversion during play back. When you keep the default value, None (NONE), MediaConvert does a standard frame rate conversion to 29.97 without doing anything with the field polarity to create a smoother picture.
+    #[doc(hidden)]
     pub telecine: std::option::Option<crate::model::Mpeg2Telecine>,
     /// Keep the default value, Enabled (ENABLED), to adjust quantization within each frame based on temporal variation of content complexity. When you enable this feature, the encoder uses fewer bits on areas of the frame that aren't moving and uses more bits on complex objects with sharp edges that move a lot. For example, this feature improves the readability of text tickers on newscasts and scoreboards on sports matches. Enabling this feature will almost always improve your video quality. Note, though, that this feature doesn't take into account where the viewer's attention is likely to be. If viewers are likely to be focusing their attention on a part of the screen that doesn't have moving objects with sharp edges, such as sports athletes' faces, you might choose to disable this feature. Related setting: When you enable temporal quantization, adjust the strength of the filter with the setting Adaptive quantization (adaptiveQuantization).
+    #[doc(hidden)]
     pub temporal_adaptive_quantization:
         std::option::Option<crate::model::Mpeg2TemporalAdaptiveQuantization>,
 }
@@ -10373,11 +10589,10 @@ impl std::fmt::Debug for Mpeg2Settings {
         formatter.finish()
     }
 }
-/// See [`Mpeg2Settings`](crate::model::Mpeg2Settings)
+/// See [`Mpeg2Settings`](crate::model::Mpeg2Settings).
 pub mod mpeg2_settings {
 
-    /// A builder for [`Mpeg2Settings`](crate::model::Mpeg2Settings)
-    #[non_exhaustive]
+    /// A builder for [`Mpeg2Settings`](crate::model::Mpeg2Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) adaptive_quantization:
@@ -10817,7 +11032,7 @@ pub mod mpeg2_settings {
             self.temporal_adaptive_quantization = input;
             self
         }
-        /// Consumes the builder and constructs a [`Mpeg2Settings`](crate::model::Mpeg2Settings)
+        /// Consumes the builder and constructs a [`Mpeg2Settings`](crate::model::Mpeg2Settings).
         pub fn build(self) -> crate::model::Mpeg2Settings {
             crate::model::Mpeg2Settings {
                 adaptive_quantization: self.adaptive_quantization,
@@ -10861,7 +11076,7 @@ pub mod mpeg2_settings {
     }
 }
 impl Mpeg2Settings {
-    /// Creates a new builder-style object to manufacture [`Mpeg2Settings`](crate::model::Mpeg2Settings)
+    /// Creates a new builder-style object to manufacture [`Mpeg2Settings`](crate::model::Mpeg2Settings).
     pub fn builder() -> crate::model::mpeg2_settings::Builder {
         crate::model::mpeg2_settings::Builder::default()
     }
@@ -11981,90 +12196,130 @@ impl AsRef<str> for Mpeg2AdaptiveQuantization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct H265Settings {
     /// When you set Adaptive Quantization (H265AdaptiveQuantization) to Auto (AUTO), or leave blank, MediaConvert automatically applies quantization to improve the video quality of your output. Set Adaptive Quantization to Low (LOW), Medium (MEDIUM), High (HIGH), Higher (HIGHER), or Max (MAX) to manually control the strength of the quantization filter. When you do, you can specify a value for Spatial Adaptive Quantization (H265SpatialAdaptiveQuantization), Temporal Adaptive Quantization (H265TemporalAdaptiveQuantization), and Flicker Adaptive Quantization (H265FlickerAdaptiveQuantization), to further control the quantization filter. Set Adaptive Quantization to Off (OFF) to apply no quantization to your output.
+    #[doc(hidden)]
     pub adaptive_quantization: std::option::Option<crate::model::H265AdaptiveQuantization>,
     /// Enables Alternate Transfer Function SEI message for outputs using Hybrid Log Gamma (HLG) Electro-Optical Transfer Function (EOTF).
+    #[doc(hidden)]
     pub alternate_transfer_function_sei:
         std::option::Option<crate::model::H265AlternateTransferFunctionSei>,
     /// Specify the average bitrate in bits per second. Required for VBR and CBR. For MS Smooth outputs, bitrates must be unique when rounded down to the nearest multiple of 1000.
+    #[doc(hidden)]
     pub bitrate: i32,
     /// H.265 Level.
+    #[doc(hidden)]
     pub codec_level: std::option::Option<crate::model::H265CodecLevel>,
     /// Represents the Profile and Tier, per the HEVC (H.265) specification. Selections are grouped as [Profile] / [Tier], so "Main/High" represents Main Profile with High Tier. 4:2:2 profiles are only available with the HEVC 4:2:2 License.
+    #[doc(hidden)]
     pub codec_profile: std::option::Option<crate::model::H265CodecProfile>,
     /// Choose Adaptive to improve subjective video quality for high-motion content. This will cause the service to use fewer B-frames (which infer information based on other frames) for high-motion portions of the video and more B-frames for low-motion portions. The maximum number of B-frames is limited by the value you provide for the setting B frames between reference frames (numberBFramesBetweenReferenceFrames).
+    #[doc(hidden)]
     pub dynamic_sub_gop: std::option::Option<crate::model::H265DynamicSubGop>,
     /// Enable this setting to have the encoder reduce I-frame pop. I-frame pop appears as a visual flicker that can arise when the encoder saves bits by copying some macroblocks many times from frame to frame, and then refreshes them at the I-frame. When you enable this setting, the encoder updates these macroblocks slightly more often to smooth out the flicker. This setting is disabled by default. Related setting: In addition to enabling this setting, you must also set adaptiveQuantization to a value other than Off (OFF).
+    #[doc(hidden)]
     pub flicker_adaptive_quantization:
         std::option::Option<crate::model::H265FlickerAdaptiveQuantization>,
     /// If you are using the console, use the Framerate setting to specify the frame rate for this output. If you want to keep the same frame rate as the input video, choose Follow source. If you want to do frame rate conversion, choose a frame rate from the dropdown list or choose Custom. The framerates shown in the dropdown list are decimal approximations of fractions. If you choose Custom, specify your frame rate as a fraction. If you are creating your transcoding job specification as a JSON file without the console, use FramerateControl to specify which value the service uses for the frame rate for this output. Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate from the input. Choose SPECIFIED if you want the service to use the frame rate you specify in the settings FramerateNumerator and FramerateDenominator.
+    #[doc(hidden)]
     pub framerate_control: std::option::Option<crate::model::H265FramerateControl>,
     /// Choose the method that you want MediaConvert to use when increasing or decreasing the frame rate. We recommend using drop duplicate (DUPLICATE_DROP) for numerically simple conversions, such as 60 fps to 30 fps. For numerically complex conversions, you can use interpolate (INTERPOLATE) to avoid stutter. This results in a smooth picture, but might introduce undesirable video artifacts. For complex frame rate conversions, especially if your source video has already been converted from its original cadence, use FrameFormer (FRAMEFORMER) to do motion-compensated interpolation. FrameFormer chooses the best conversion method frame by frame. Note that using FrameFormer increases the transcoding time and incurs a significant add-on cost.
+    #[doc(hidden)]
     pub framerate_conversion_algorithm:
         std::option::Option<crate::model::H265FramerateConversionAlgorithm>,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateDenominator to specify the denominator of this fraction. In this example, use 1001 for the value of FramerateDenominator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_denominator: i32,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateNumerator to specify the numerator of this fraction. In this example, use 24000 for the value of FramerateNumerator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_numerator: i32,
     /// If enable, use reference B frames for GOP structures that have B frames &gt; 1.
+    #[doc(hidden)]
     pub gop_b_reference: std::option::Option<crate::model::H265GopBReference>,
     /// Specify the relative frequency of open to closed GOPs in this output. For example, if you want to allow four open GOPs and then require a closed GOP, set this value to 5. We recommend that you have the transcoder automatically choose this value for you based on characteristics of your input video. To enable this automatic behavior, keep the default value by leaving this setting out of your JSON job specification. In the console, do this by keeping the default empty value. If you do explicitly specify a value, for segmented outputs, don't set this value to 0.
+    #[doc(hidden)]
     pub gop_closed_cadence: i32,
     /// Use this setting only when you set GOP mode control (GopSizeUnits) to Specified, frames (FRAMES) or Specified, seconds (SECONDS). Specify the GOP length using a whole number of frames or a decimal value of seconds. MediaConvert will interpret this value as frames or seconds depending on the value you choose for GOP mode control (GopSizeUnits). If you want to allow MediaConvert to automatically determine GOP size, leave GOP size blank and set GOP mode control to Auto (AUTO). If your output group specifies HLS, DASH, or CMAF, leave GOP size blank and set GOP mode control to Auto in each output in your output group.
+    #[doc(hidden)]
     pub gop_size: f64,
     /// Specify how the transcoder determines GOP size for this output. We recommend that you have the transcoder automatically choose this value for you based on characteristics of your input video. To enable this automatic behavior, choose Auto (AUTO) and and leave GOP size (GopSize) blank. By default, if you don't specify GOP mode control (GopSizeUnits), MediaConvert will use automatic behavior. If your output group specifies HLS, DASH, or CMAF, set GOP mode control to Auto and leave GOP size blank in each output in your output group. To explicitly specify the GOP length, choose Specified, frames (FRAMES) or Specified, seconds (SECONDS) and then provide the GOP length in the related setting GOP size (GopSize).
+    #[doc(hidden)]
     pub gop_size_units: std::option::Option<crate::model::H265GopSizeUnits>,
     /// Percentage of the buffer that should initially be filled (HRD buffer model).
+    #[doc(hidden)]
     pub hrd_buffer_initial_fill_percentage: i32,
     /// Size of buffer (HRD buffer model) in bits. For example, enter five megabits as 5000000.
+    #[doc(hidden)]
     pub hrd_buffer_size: i32,
     /// Choose the scan line type for the output. Keep the default value, Progressive (PROGRESSIVE) to create a progressive output, regardless of the scan type of your input. Use Top field first (TOP_FIELD) or Bottom field first (BOTTOM_FIELD) to create an output that's interlaced with the same field polarity throughout. Use Follow, default top (FOLLOW_TOP_FIELD) or Follow, default bottom (FOLLOW_BOTTOM_FIELD) to produce outputs with the same field polarity as the source. For jobs that have multiple inputs, the output field polarity might change over the course of the output. Follow behavior depends on the input scan type. If the source is interlaced, the output will be interlaced with the same polarity as the source. If the source is progressive, the output will be interlaced with top field bottom field first, depending on which of the Follow options you choose.
+    #[doc(hidden)]
     pub interlace_mode: std::option::Option<crate::model::H265InterlaceMode>,
     /// Maximum bitrate in bits/second. For example, enter five megabits per second as 5000000. Required when Rate control mode is QVBR.
+    #[doc(hidden)]
     pub max_bitrate: i32,
     /// Use this setting only when you also enable Scene change detection (SceneChangeDetect). This setting determines how the encoder manages the spacing between I-frames that it inserts as part of the I-frame cadence and the I-frames that it inserts for Scene change detection. We recommend that you have the transcoder automatically choose this value for you based on characteristics of your input video. To enable this automatic behavior, keep the default value by leaving this setting out of your JSON job specification. In the console, do this by keeping the default empty value. When you explicitly specify a value for this setting, the encoder determines whether to skip a cadence-driven I-frame by the value you set. For example, if you set Min I interval (minIInterval) to 5 and a cadence-driven I-frame would fall within 5 frames of a scene-change I-frame, then the encoder skips the cadence-driven I-frame. In this way, one GOP is shrunk slightly and one GOP is stretched slightly. When the cadence-driven I-frames are farther from the scene-change I-frame than the value you set, then the encoder leaves all I-frames in place and the GOPs surrounding the scene change are smaller than the usual cadence GOPs.
+    #[doc(hidden)]
     pub min_i_interval: i32,
     /// Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
+    #[doc(hidden)]
     pub number_b_frames_between_reference_frames: i32,
     /// Number of reference frames to use. The encoder may use more than requested if using B-frames and/or interlaced encoding.
+    #[doc(hidden)]
     pub number_reference_frames: i32,
     /// Optional. Specify how the service determines the pixel aspect ratio (PAR) for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE), uses the PAR from your input video for your output. To specify a different PAR in the console, choose any value other than Follow source. To specify a different PAR by editing the JSON job specification, choose SPECIFIED. When you choose SPECIFIED for this setting, you must also specify values for the parNumerator and parDenominator settings.
+    #[doc(hidden)]
     pub par_control: std::option::Option<crate::model::H265ParControl>,
     /// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parDenominator is 33.
+    #[doc(hidden)]
     pub par_denominator: i32,
     /// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parNumerator is 40.
+    #[doc(hidden)]
     pub par_numerator: i32,
     /// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you want to trade off encoding speed for output video quality. The default behavior is faster, lower quality, single-pass encoding.
+    #[doc(hidden)]
     pub quality_tuning_level: std::option::Option<crate::model::H265QualityTuningLevel>,
     /// Settings for quality-defined variable bitrate encoding with the H.265 codec. Use these settings only when you set QVBR for Rate control mode (RateControlMode).
+    #[doc(hidden)]
     pub qvbr_settings: std::option::Option<crate::model::H265QvbrSettings>,
     /// Use this setting to specify whether this output has a variable bitrate (VBR), constant bitrate (CBR) or quality-defined variable bitrate (QVBR).
+    #[doc(hidden)]
     pub rate_control_mode: std::option::Option<crate::model::H265RateControlMode>,
     /// Specify Sample Adaptive Offset (SAO) filter strength. Adaptive mode dynamically selects best strength based on content
+    #[doc(hidden)]
     pub sample_adaptive_offset_filter_mode:
         std::option::Option<crate::model::H265SampleAdaptiveOffsetFilterMode>,
     /// Use this setting for interlaced outputs, when your output frame rate is half of your input frame rate. In this situation, choose Optimized interlacing (INTERLACED_OPTIMIZE) to create a better quality interlaced output. In this case, each progressive frame from the input corresponds to an interlaced field in the output. Keep the default value, Basic interlacing (INTERLACED), for all other output frame rates. With basic interlacing, MediaConvert performs any frame rate conversion first and then interlaces the frames. When you choose Optimized interlacing and you set your output frame rate to a value that isn't suitable for optimized interlacing, MediaConvert automatically falls back to basic interlacing. Required settings: To use optimized interlacing, you must set Telecine (telecine) to None (NONE) or Soft (SOFT). You can't use optimized interlacing for hard telecine outputs. You must also set Interlace mode (interlaceMode) to a value other than Progressive (PROGRESSIVE).
+    #[doc(hidden)]
     pub scan_type_conversion_mode: std::option::Option<crate::model::H265ScanTypeConversionMode>,
     /// Enable this setting to insert I-frames at scene changes that the service automatically detects. This improves video quality and is enabled by default. If this output uses QVBR, choose Transition detection (TRANSITION_DETECTION) for further video quality improvement. For more information about QVBR, see https://docs.aws.amazon.com/console/mediaconvert/cbr-vbr-qvbr.
+    #[doc(hidden)]
     pub scene_change_detect: std::option::Option<crate::model::H265SceneChangeDetect>,
     /// Number of slices per picture. Must be less than or equal to the number of macroblock rows for progressive pictures, and less than or equal to half the number of macroblock rows for interlaced pictures.
+    #[doc(hidden)]
     pub slices: i32,
     /// Ignore this setting unless your input frame rate is 23.976 or 24 frames per second (fps). Enable slow PAL to create a 25 fps output. When you enable slow PAL, MediaConvert relabels the video frames to 25 fps and resamples your audio to keep it synchronized with the video. Note that enabling this setting will slightly reduce the duration of your video. Required settings: You must also set Framerate to 25. In your JSON job specification, set (framerateControl) to (SPECIFIED), (framerateNumerator) to 25 and (framerateDenominator) to 1.
+    #[doc(hidden)]
     pub slow_pal: std::option::Option<crate::model::H265SlowPal>,
     /// Keep the default value, Enabled (ENABLED), to adjust quantization within each frame based on spatial variation of content complexity. When you enable this feature, the encoder uses fewer bits on areas that can sustain more distortion with no noticeable visual degradation and uses more bits on areas where any small distortion will be noticeable. For example, complex textured blocks are encoded with fewer bits and smooth textured blocks are encoded with more bits. Enabling this feature will almost always improve your video quality. Note, though, that this feature doesn't take into account where the viewer's attention is likely to be. If viewers are likely to be focusing their attention on a part of the screen with a lot of complex texture, you might choose to disable this feature. Related setting: When you enable spatial adaptive quantization, set the value for Adaptive quantization (adaptiveQuantization) depending on your content. For homogeneous content, such as cartoons and video games, set it to Low. For content with a wider variety of textures, set it to High or Higher.
+    #[doc(hidden)]
     pub spatial_adaptive_quantization:
         std::option::Option<crate::model::H265SpatialAdaptiveQuantization>,
     /// This field applies only if the Streams &gt; Advanced &gt; Framerate (framerate) field is set to 29.970. This field works with the Streams &gt; Advanced &gt; Preprocessors &gt; Deinterlacer field (deinterlace_mode) and the Streams &gt; Advanced &gt; Interlaced Mode field (interlace_mode) to identify the scan type for the output: Progressive, Interlaced, Hard Telecine or Soft Telecine. - Hard: produces 29.97i output from 23.976 input. - Soft: produces 23.976; the player converts this output to 29.97i.
+    #[doc(hidden)]
     pub telecine: std::option::Option<crate::model::H265Telecine>,
     /// Keep the default value, Enabled (ENABLED), to adjust quantization within each frame based on temporal variation of content complexity. When you enable this feature, the encoder uses fewer bits on areas of the frame that aren't moving and uses more bits on complex objects with sharp edges that move a lot. For example, this feature improves the readability of text tickers on newscasts and scoreboards on sports matches. Enabling this feature will almost always improve your video quality. Note, though, that this feature doesn't take into account where the viewer's attention is likely to be. If viewers are likely to be focusing their attention on a part of the screen that doesn't have moving objects with sharp edges, such as sports athletes' faces, you might choose to disable this feature. Related setting: When you enable temporal quantization, adjust the strength of the filter with the setting Adaptive quantization (adaptiveQuantization).
+    #[doc(hidden)]
     pub temporal_adaptive_quantization:
         std::option::Option<crate::model::H265TemporalAdaptiveQuantization>,
     /// Enables temporal layer identifiers in the encoded bitstream. Up to 3 layers are supported depending on GOP structure: I- and P-frames form one layer, reference B-frames can form a second layer and non-reference b-frames can form a third layer. Decoders can optionally decode only the lower temporal layers to generate a lower frame rate output. For example, given a bitstream with temporal IDs and with b-frames = 1 (i.e. IbPbPb display order), a decoder could decode all the frames for full frame rate output or only the I and P frames (lowest temporal layer) for a half frame rate output.
+    #[doc(hidden)]
     pub temporal_ids: std::option::Option<crate::model::H265TemporalIds>,
     /// Enable use of tiles, allowing horizontal as well as vertical subdivision of the encoded pictures.
+    #[doc(hidden)]
     pub tiles: std::option::Option<crate::model::H265Tiles>,
     /// Inserts timecode for each frame as 4 bytes of an unregistered SEI message.
+    #[doc(hidden)]
     pub unregistered_sei_timecode: std::option::Option<crate::model::H265UnregisteredSeiTimecode>,
     /// If the location of parameter set NAL units doesn't matter in your workflow, ignore this setting. Use this setting only with CMAF or DASH outputs, or with standalone file outputs in an MPEG-4 container (MP4 outputs). Choose HVC1 to mark your output as HVC1. This makes your output compliant with the following specification: ISO IECJTC1 SC29 N13798 Text ISO/IEC FDIS 14496-15 3rd Edition. For these outputs, the service stores parameter set NAL units in the sample headers but not in the samples directly. For MP4 outputs, when you choose HVC1, your output video might not work properly with some downstream systems and video players. The service defaults to marking your output as HEV1. For these outputs, the service writes parameter set NAL units directly into the samples.
+    #[doc(hidden)]
     pub write_mp4_packaging_type: std::option::Option<crate::model::H265WriteMp4PackagingType>,
 }
 impl H265Settings {
@@ -12321,11 +12576,10 @@ impl std::fmt::Debug for H265Settings {
         formatter.finish()
     }
 }
-/// See [`H265Settings`](crate::model::H265Settings)
+/// See [`H265Settings`](crate::model::H265Settings).
 pub mod h265_settings {
 
-    /// A builder for [`H265Settings`](crate::model::H265Settings)
-    #[non_exhaustive]
+    /// A builder for [`H265Settings`](crate::model::H265Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) adaptive_quantization:
@@ -12891,7 +13145,7 @@ pub mod h265_settings {
             self.write_mp4_packaging_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`H265Settings`](crate::model::H265Settings)
+        /// Consumes the builder and constructs a [`H265Settings`](crate::model::H265Settings).
         pub fn build(self) -> crate::model::H265Settings {
             crate::model::H265Settings {
                 adaptive_quantization: self.adaptive_quantization,
@@ -12943,7 +13197,7 @@ pub mod h265_settings {
     }
 }
 impl H265Settings {
-    /// Creates a new builder-style object to manufacture [`H265Settings`](crate::model::H265Settings)
+    /// Creates a new builder-style object to manufacture [`H265Settings`](crate::model::H265Settings).
     pub fn builder() -> crate::model::h265_settings::Builder {
         crate::model::h265_settings::Builder::default()
     }
@@ -13630,10 +13884,13 @@ impl AsRef<str> for H265RateControlMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct H265QvbrSettings {
     /// Use this setting only when Rate control mode is QVBR and Quality tuning level is Multi-pass HQ. For Max average bitrate values suited to the complexity of your input video, the service limits the average bitrate of the video part of this output to the value that you choose. That is, the total size of the video element is less than or equal to the value you set multiplied by the number of seconds of encoded output.
+    #[doc(hidden)]
     pub max_average_bitrate: i32,
     /// Use this setting only when you set Rate control mode (RateControlMode) to QVBR. Specify the target quality level for this output. MediaConvert determines the right number of bits to use for each part of the video to maintain the video quality that you specify. When you keep the default value, AUTO, MediaConvert picks a quality level for you, based on characteristics of your input video. If you prefer to specify a quality level, specify a number from 1 through 10. Use higher numbers for greater quality. Level 10 results in nearly lossless compression. The quality level for most broadcast-quality transcodes is between 6 and 9. Optionally, to specify a value between whole numbers, also provide a value for the setting qvbrQualityLevelFineTune. For example, if you want your QVBR quality level to be 7.33, set qvbrQualityLevel to 7 and set qvbrQualityLevelFineTune to .33.
+    #[doc(hidden)]
     pub qvbr_quality_level: i32,
     /// Optional. Specify a value here to set the QVBR quality to a level that is between whole numbers. For example, if you want your QVBR quality level to be 7.33, set qvbrQualityLevel to 7 and set qvbrQualityLevelFineTune to .33. MediaConvert rounds your QVBR quality level to the nearest third of a whole number. For example, if you set qvbrQualityLevel to 7 and you set qvbrQualityLevelFineTune to .25, your actual QVBR quality level is 7.33.
+    #[doc(hidden)]
     pub qvbr_quality_level_fine_tune: f64,
 }
 impl H265QvbrSettings {
@@ -13662,11 +13919,10 @@ impl std::fmt::Debug for H265QvbrSettings {
         formatter.finish()
     }
 }
-/// See [`H265QvbrSettings`](crate::model::H265QvbrSettings)
+/// See [`H265QvbrSettings`](crate::model::H265QvbrSettings).
 pub mod h265_qvbr_settings {
 
-    /// A builder for [`H265QvbrSettings`](crate::model::H265QvbrSettings)
-    #[non_exhaustive]
+    /// A builder for [`H265QvbrSettings`](crate::model::H265QvbrSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_average_bitrate: std::option::Option<i32>,
@@ -13704,7 +13960,7 @@ pub mod h265_qvbr_settings {
             self.qvbr_quality_level_fine_tune = input;
             self
         }
-        /// Consumes the builder and constructs a [`H265QvbrSettings`](crate::model::H265QvbrSettings)
+        /// Consumes the builder and constructs a [`H265QvbrSettings`](crate::model::H265QvbrSettings).
         pub fn build(self) -> crate::model::H265QvbrSettings {
             crate::model::H265QvbrSettings {
                 max_average_bitrate: self.max_average_bitrate.unwrap_or_default(),
@@ -13715,7 +13971,7 @@ pub mod h265_qvbr_settings {
     }
 }
 impl H265QvbrSettings {
-    /// Creates a new builder-style object to manufacture [`H265QvbrSettings`](crate::model::H265QvbrSettings)
+    /// Creates a new builder-style object to manufacture [`H265QvbrSettings`](crate::model::H265QvbrSettings).
     pub fn builder() -> crate::model::h265_qvbr_settings::Builder {
         crate::model::h265_qvbr_settings::Builder::default()
     }
@@ -14587,88 +14843,128 @@ impl AsRef<str> for H265AdaptiveQuantization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct H264Settings {
     /// Keep the default value, Auto (AUTO), for this setting to have MediaConvert automatically apply the best types of quantization for your video content. When you want to apply your quantization settings manually, you must set H264AdaptiveQuantization to a value other than Auto (AUTO). Use this setting to specify the strength of any adaptive quantization filters that you enable. If you don't want MediaConvert to do any adaptive quantization in this transcode, set Adaptive quantization (H264AdaptiveQuantization) to Off (OFF). Related settings: The value that you choose here applies to the following settings: H264FlickerAdaptiveQuantization, H264SpatialAdaptiveQuantization, and H264TemporalAdaptiveQuantization.
+    #[doc(hidden)]
     pub adaptive_quantization: std::option::Option<crate::model::H264AdaptiveQuantization>,
     /// Specify the average bitrate in bits per second. Required for VBR and CBR. For MS Smooth outputs, bitrates must be unique when rounded down to the nearest multiple of 1000.
+    #[doc(hidden)]
     pub bitrate: i32,
     /// Specify an H.264 level that is consistent with your output video settings. If you aren't sure what level to specify, choose Auto (AUTO).
+    #[doc(hidden)]
     pub codec_level: std::option::Option<crate::model::H264CodecLevel>,
     /// H.264 Profile. High 4:2:2 and 10-bit profiles are only available with the AVC-I License.
+    #[doc(hidden)]
     pub codec_profile: std::option::Option<crate::model::H264CodecProfile>,
     /// Choose Adaptive to improve subjective video quality for high-motion content. This will cause the service to use fewer B-frames (which infer information based on other frames) for high-motion portions of the video and more B-frames for low-motion portions. The maximum number of B-frames is limited by the value you provide for the setting B frames between reference frames (numberBFramesBetweenReferenceFrames).
+    #[doc(hidden)]
     pub dynamic_sub_gop: std::option::Option<crate::model::H264DynamicSubGop>,
     /// Entropy encoding mode. Use CABAC (must be in Main or High profile) or CAVLC.
+    #[doc(hidden)]
     pub entropy_encoding: std::option::Option<crate::model::H264EntropyEncoding>,
     /// The video encoding method for your MPEG-4 AVC output. Keep the default value, PAFF, to have MediaConvert use PAFF encoding for interlaced outputs. Choose Force field (FORCE_FIELD) to disable PAFF encoding and create separate interlaced fields. Choose MBAFF to disable PAFF and have MediaConvert use MBAFF encoding for interlaced outputs.
+    #[doc(hidden)]
     pub field_encoding: std::option::Option<crate::model::H264FieldEncoding>,
     /// Only use this setting when you change the default value, AUTO, for the setting H264AdaptiveQuantization. When you keep all defaults, excluding H264AdaptiveQuantization and all other adaptive quantization from your JSON job specification, MediaConvert automatically applies the best types of quantization for your video content. When you set H264AdaptiveQuantization to a value other than AUTO, the default value for H264FlickerAdaptiveQuantization is Disabled (DISABLED). Change this value to Enabled (ENABLED) to reduce I-frame pop. I-frame pop appears as a visual flicker that can arise when the encoder saves bits by copying some macroblocks many times from frame to frame, and then refreshes them at the I-frame. When you enable this setting, the encoder updates these macroblocks slightly more often to smooth out the flicker. To manually enable or disable H264FlickerAdaptiveQuantization, you must set Adaptive quantization (H264AdaptiveQuantization) to a value other than AUTO.
+    #[doc(hidden)]
     pub flicker_adaptive_quantization:
         std::option::Option<crate::model::H264FlickerAdaptiveQuantization>,
     /// If you are using the console, use the Framerate setting to specify the frame rate for this output. If you want to keep the same frame rate as the input video, choose Follow source. If you want to do frame rate conversion, choose a frame rate from the dropdown list or choose Custom. The framerates shown in the dropdown list are decimal approximations of fractions. If you choose Custom, specify your frame rate as a fraction. If you are creating your transcoding job specification as a JSON file without the console, use FramerateControl to specify which value the service uses for the frame rate for this output. Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate from the input. Choose SPECIFIED if you want the service to use the frame rate you specify in the settings FramerateNumerator and FramerateDenominator.
+    #[doc(hidden)]
     pub framerate_control: std::option::Option<crate::model::H264FramerateControl>,
     /// Choose the method that you want MediaConvert to use when increasing or decreasing the frame rate. We recommend using drop duplicate (DUPLICATE_DROP) for numerically simple conversions, such as 60 fps to 30 fps. For numerically complex conversions, you can use interpolate (INTERPOLATE) to avoid stutter. This results in a smooth picture, but might introduce undesirable video artifacts. For complex frame rate conversions, especially if your source video has already been converted from its original cadence, use FrameFormer (FRAMEFORMER) to do motion-compensated interpolation. FrameFormer chooses the best conversion method frame by frame. Note that using FrameFormer increases the transcoding time and incurs a significant add-on cost.
+    #[doc(hidden)]
     pub framerate_conversion_algorithm:
         std::option::Option<crate::model::H264FramerateConversionAlgorithm>,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateDenominator to specify the denominator of this fraction. In this example, use 1001 for the value of FramerateDenominator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_denominator: i32,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateNumerator to specify the numerator of this fraction. In this example, use 24000 for the value of FramerateNumerator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_numerator: i32,
     /// If enable, use reference B frames for GOP structures that have B frames &gt; 1.
+    #[doc(hidden)]
     pub gop_b_reference: std::option::Option<crate::model::H264GopBReference>,
     /// Specify the relative frequency of open to closed GOPs in this output. For example, if you want to allow four open GOPs and then require a closed GOP, set this value to 5. We recommend that you have the transcoder automatically choose this value for you based on characteristics of your input video. To enable this automatic behavior, keep the default value by leaving this setting out of your JSON job specification. In the console, do this by keeping the default empty value. If you do explicitly specify a value, for segmented outputs, don't set this value to 0.
+    #[doc(hidden)]
     pub gop_closed_cadence: i32,
     /// Use this setting only when you set GOP mode control (GopSizeUnits) to Specified, frames (FRAMES) or Specified, seconds (SECONDS). Specify the GOP length using a whole number of frames or a decimal value of seconds. MediaConvert will interpret this value as frames or seconds depending on the value you choose for GOP mode control (GopSizeUnits). If you want to allow MediaConvert to automatically determine GOP size, leave GOP size blank and set GOP mode control to Auto (AUTO). If your output group specifies HLS, DASH, or CMAF, leave GOP size blank and set GOP mode control to Auto in each output in your output group.
+    #[doc(hidden)]
     pub gop_size: f64,
     /// Specify how the transcoder determines GOP size for this output. We recommend that you have the transcoder automatically choose this value for you based on characteristics of your input video. To enable this automatic behavior, choose Auto (AUTO) and and leave GOP size (GopSize) blank. By default, if you don't specify GOP mode control (GopSizeUnits), MediaConvert will use automatic behavior. If your output group specifies HLS, DASH, or CMAF, set GOP mode control to Auto and leave GOP size blank in each output in your output group. To explicitly specify the GOP length, choose Specified, frames (FRAMES) or Specified, seconds (SECONDS) and then provide the GOP length in the related setting GOP size (GopSize).
+    #[doc(hidden)]
     pub gop_size_units: std::option::Option<crate::model::H264GopSizeUnits>,
     /// Percentage of the buffer that should initially be filled (HRD buffer model).
+    #[doc(hidden)]
     pub hrd_buffer_initial_fill_percentage: i32,
     /// Size of buffer (HRD buffer model) in bits. For example, enter five megabits as 5000000.
+    #[doc(hidden)]
     pub hrd_buffer_size: i32,
     /// Choose the scan line type for the output. Keep the default value, Progressive (PROGRESSIVE) to create a progressive output, regardless of the scan type of your input. Use Top field first (TOP_FIELD) or Bottom field first (BOTTOM_FIELD) to create an output that's interlaced with the same field polarity throughout. Use Follow, default top (FOLLOW_TOP_FIELD) or Follow, default bottom (FOLLOW_BOTTOM_FIELD) to produce outputs with the same field polarity as the source. For jobs that have multiple inputs, the output field polarity might change over the course of the output. Follow behavior depends on the input scan type. If the source is interlaced, the output will be interlaced with the same polarity as the source. If the source is progressive, the output will be interlaced with top field bottom field first, depending on which of the Follow options you choose.
+    #[doc(hidden)]
     pub interlace_mode: std::option::Option<crate::model::H264InterlaceMode>,
     /// Maximum bitrate in bits/second. For example, enter five megabits per second as 5000000. Required when Rate control mode is QVBR.
+    #[doc(hidden)]
     pub max_bitrate: i32,
     /// Use this setting only when you also enable Scene change detection (SceneChangeDetect). This setting determines how the encoder manages the spacing between I-frames that it inserts as part of the I-frame cadence and the I-frames that it inserts for Scene change detection. We recommend that you have the transcoder automatically choose this value for you based on characteristics of your input video. To enable this automatic behavior, keep the default value by leaving this setting out of your JSON job specification. In the console, do this by keeping the default empty value. When you explicitly specify a value for this setting, the encoder determines whether to skip a cadence-driven I-frame by the value you set. For example, if you set Min I interval (minIInterval) to 5 and a cadence-driven I-frame would fall within 5 frames of a scene-change I-frame, then the encoder skips the cadence-driven I-frame. In this way, one GOP is shrunk slightly and one GOP is stretched slightly. When the cadence-driven I-frames are farther from the scene-change I-frame than the value you set, then the encoder leaves all I-frames in place and the GOPs surrounding the scene change are smaller than the usual cadence GOPs.
+    #[doc(hidden)]
     pub min_i_interval: i32,
     /// This setting to determines the number of B-frames that MediaConvert puts between reference frames in this output. We recommend that you use automatic behavior to allow the transcoder to choose the best value based on characteristics of your input video. In the console, choose AUTO to select this automatic behavior. When you manually edit your JSON job specification, leave this setting out to choose automatic behavior. When you want to specify this number explicitly, choose a whole number from 0 through 7.
+    #[doc(hidden)]
     pub number_b_frames_between_reference_frames: i32,
     /// Number of reference frames to use. The encoder may use more than requested if using B-frames and/or interlaced encoding.
+    #[doc(hidden)]
     pub number_reference_frames: i32,
     /// Optional. Specify how the service determines the pixel aspect ratio (PAR) for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE), uses the PAR from your input video for your output. To specify a different PAR in the console, choose any value other than Follow source. To specify a different PAR by editing the JSON job specification, choose SPECIFIED. When you choose SPECIFIED for this setting, you must also specify values for the parNumerator and parDenominator settings.
+    #[doc(hidden)]
     pub par_control: std::option::Option<crate::model::H264ParControl>,
     /// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parDenominator is 33.
+    #[doc(hidden)]
     pub par_denominator: i32,
     /// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parNumerator is 40.
+    #[doc(hidden)]
     pub par_numerator: i32,
     /// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you want to trade off encoding speed for output video quality. The default behavior is faster, lower quality, single-pass encoding.
+    #[doc(hidden)]
     pub quality_tuning_level: std::option::Option<crate::model::H264QualityTuningLevel>,
     /// Settings for quality-defined variable bitrate encoding with the H.265 codec. Use these settings only when you set QVBR for Rate control mode (RateControlMode).
+    #[doc(hidden)]
     pub qvbr_settings: std::option::Option<crate::model::H264QvbrSettings>,
     /// Use this setting to specify whether this output has a variable bitrate (VBR), constant bitrate (CBR) or quality-defined variable bitrate (QVBR).
+    #[doc(hidden)]
     pub rate_control_mode: std::option::Option<crate::model::H264RateControlMode>,
     /// Places a PPS header on each encoded picture, even if repeated.
+    #[doc(hidden)]
     pub repeat_pps: std::option::Option<crate::model::H264RepeatPps>,
     /// Use this setting for interlaced outputs, when your output frame rate is half of your input frame rate. In this situation, choose Optimized interlacing (INTERLACED_OPTIMIZE) to create a better quality interlaced output. In this case, each progressive frame from the input corresponds to an interlaced field in the output. Keep the default value, Basic interlacing (INTERLACED), for all other output frame rates. With basic interlacing, MediaConvert performs any frame rate conversion first and then interlaces the frames. When you choose Optimized interlacing and you set your output frame rate to a value that isn't suitable for optimized interlacing, MediaConvert automatically falls back to basic interlacing. Required settings: To use optimized interlacing, you must set Telecine (telecine) to None (NONE) or Soft (SOFT). You can't use optimized interlacing for hard telecine outputs. You must also set Interlace mode (interlaceMode) to a value other than Progressive (PROGRESSIVE).
+    #[doc(hidden)]
     pub scan_type_conversion_mode: std::option::Option<crate::model::H264ScanTypeConversionMode>,
     /// Enable this setting to insert I-frames at scene changes that the service automatically detects. This improves video quality and is enabled by default. If this output uses QVBR, choose Transition detection (TRANSITION_DETECTION) for further video quality improvement. For more information about QVBR, see https://docs.aws.amazon.com/console/mediaconvert/cbr-vbr-qvbr.
+    #[doc(hidden)]
     pub scene_change_detect: std::option::Option<crate::model::H264SceneChangeDetect>,
     /// Number of slices per picture. Must be less than or equal to the number of macroblock rows for progressive pictures, and less than or equal to half the number of macroblock rows for interlaced pictures.
+    #[doc(hidden)]
     pub slices: i32,
     /// Ignore this setting unless your input frame rate is 23.976 or 24 frames per second (fps). Enable slow PAL to create a 25 fps output. When you enable slow PAL, MediaConvert relabels the video frames to 25 fps and resamples your audio to keep it synchronized with the video. Note that enabling this setting will slightly reduce the duration of your video. Required settings: You must also set Framerate to 25. In your JSON job specification, set (framerateControl) to (SPECIFIED), (framerateNumerator) to 25 and (framerateDenominator) to 1.
+    #[doc(hidden)]
     pub slow_pal: std::option::Option<crate::model::H264SlowPal>,
     /// Ignore this setting unless you need to comply with a specification that requires a specific value. If you don't have a specification requirement, we recommend that you adjust the softness of your output by using a lower value for the setting Sharpness (sharpness) or by enabling a noise reducer filter (noiseReducerFilter). The Softness (softness) setting specifies the quantization matrices that the encoder uses. Keep the default value, 0, for flat quantization. Choose the value 1 or 16 to use the default JVT softening quantization matricies from the H.264 specification. Choose a value from 17 to 128 to use planar interpolation. Increasing values from 17 to 128 result in increasing reduction of high-frequency data. The value 128 results in the softest video.
+    #[doc(hidden)]
     pub softness: i32,
     /// Only use this setting when you change the default value, Auto (AUTO), for the setting H264AdaptiveQuantization. When you keep all defaults, excluding H264AdaptiveQuantization and all other adaptive quantization from your JSON job specification, MediaConvert automatically applies the best types of quantization for your video content. When you set H264AdaptiveQuantization to a value other than AUTO, the default value for H264SpatialAdaptiveQuantization is Enabled (ENABLED). Keep this default value to adjust quantization within each frame based on spatial variation of content complexity. When you enable this feature, the encoder uses fewer bits on areas that can sustain more distortion with no noticeable visual degradation and uses more bits on areas where any small distortion will be noticeable. For example, complex textured blocks are encoded with fewer bits and smooth textured blocks are encoded with more bits. Enabling this feature will almost always improve your video quality. Note, though, that this feature doesn't take into account where the viewer's attention is likely to be. If viewers are likely to be focusing their attention on a part of the screen with a lot of complex texture, you might choose to set H264SpatialAdaptiveQuantization to Disabled (DISABLED). Related setting: When you enable spatial adaptive quantization, set the value for Adaptive quantization (H264AdaptiveQuantization) depending on your content. For homogeneous content, such as cartoons and video games, set it to Low. For content with a wider variety of textures, set it to High or Higher. To manually enable or disable H264SpatialAdaptiveQuantization, you must set Adaptive quantization (H264AdaptiveQuantization) to a value other than AUTO.
+    #[doc(hidden)]
     pub spatial_adaptive_quantization:
         std::option::Option<crate::model::H264SpatialAdaptiveQuantization>,
     /// Produces a bitstream compliant with SMPTE RP-2027.
+    #[doc(hidden)]
     pub syntax: std::option::Option<crate::model::H264Syntax>,
     /// When you do frame rate conversion from 23.976 frames per second (fps) to 29.97 fps, and your output scan type is interlaced, you can optionally enable hard or soft telecine to create a smoother picture. Hard telecine (HARD) produces a 29.97i output. Soft telecine (SOFT) produces an output with a 23.976 output that signals to the video player device to do the conversion during play back. When you keep the default value, None (NONE), MediaConvert does a standard frame rate conversion to 29.97 without doing anything with the field polarity to create a smoother picture.
+    #[doc(hidden)]
     pub telecine: std::option::Option<crate::model::H264Telecine>,
     /// Only use this setting when you change the default value, AUTO, for the setting H264AdaptiveQuantization. When you keep all defaults, excluding H264AdaptiveQuantization and all other adaptive quantization from your JSON job specification, MediaConvert automatically applies the best types of quantization for your video content. When you set H264AdaptiveQuantization to a value other than AUTO, the default value for H264TemporalAdaptiveQuantization is Enabled (ENABLED). Keep this default value to adjust quantization within each frame based on temporal variation of content complexity. When you enable this feature, the encoder uses fewer bits on areas of the frame that aren't moving and uses more bits on complex objects with sharp edges that move a lot. For example, this feature improves the readability of text tickers on newscasts and scoreboards on sports matches. Enabling this feature will almost always improve your video quality. Note, though, that this feature doesn't take into account where the viewer's attention is likely to be. If viewers are likely to be focusing their attention on a part of the screen that doesn't have moving objects with sharp edges, such as sports athletes' faces, you might choose to set H264TemporalAdaptiveQuantization to Disabled (DISABLED). Related setting: When you enable temporal quantization, adjust the strength of the filter with the setting Adaptive quantization (adaptiveQuantization). To manually enable or disable H264TemporalAdaptiveQuantization, you must set Adaptive quantization (H264AdaptiveQuantization) to a value other than AUTO.
+    #[doc(hidden)]
     pub temporal_adaptive_quantization:
         std::option::Option<crate::model::H264TemporalAdaptiveQuantization>,
     /// Inserts timecode for each frame as 4 bytes of an unregistered SEI message.
+    #[doc(hidden)]
     pub unregistered_sei_timecode: std::option::Option<crate::model::H264UnregisteredSeiTimecode>,
 }
 impl H264Settings {
@@ -14913,11 +15209,10 @@ impl std::fmt::Debug for H264Settings {
         formatter.finish()
     }
 }
-/// See [`H264Settings`](crate::model::H264Settings)
+/// See [`H264Settings`](crate::model::H264Settings).
 pub mod h264_settings {
 
-    /// A builder for [`H264Settings`](crate::model::H264Settings)
-    #[non_exhaustive]
+    /// A builder for [`H264Settings`](crate::model::H264Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) adaptive_quantization:
@@ -15468,7 +15763,7 @@ pub mod h264_settings {
             self.unregistered_sei_timecode = input;
             self
         }
-        /// Consumes the builder and constructs a [`H264Settings`](crate::model::H264Settings)
+        /// Consumes the builder and constructs a [`H264Settings`](crate::model::H264Settings).
         pub fn build(self) -> crate::model::H264Settings {
             crate::model::H264Settings {
                 adaptive_quantization: self.adaptive_quantization,
@@ -15520,7 +15815,7 @@ pub mod h264_settings {
     }
 }
 impl H264Settings {
-    /// Creates a new builder-style object to manufacture [`H264Settings`](crate::model::H264Settings)
+    /// Creates a new builder-style object to manufacture [`H264Settings`](crate::model::H264Settings).
     pub fn builder() -> crate::model::h264_settings::Builder {
         crate::model::h264_settings::Builder::default()
     }
@@ -16093,10 +16388,13 @@ impl AsRef<str> for H264RateControlMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct H264QvbrSettings {
     /// Use this setting only when Rate control mode is QVBR and Quality tuning level is Multi-pass HQ. For Max average bitrate values suited to the complexity of your input video, the service limits the average bitrate of the video part of this output to the value that you choose. That is, the total size of the video element is less than or equal to the value you set multiplied by the number of seconds of encoded output.
+    #[doc(hidden)]
     pub max_average_bitrate: i32,
     /// Use this setting only when you set Rate control mode (RateControlMode) to QVBR. Specify the target quality level for this output. MediaConvert determines the right number of bits to use for each part of the video to maintain the video quality that you specify. When you keep the default value, AUTO, MediaConvert picks a quality level for you, based on characteristics of your input video. If you prefer to specify a quality level, specify a number from 1 through 10. Use higher numbers for greater quality. Level 10 results in nearly lossless compression. The quality level for most broadcast-quality transcodes is between 6 and 9. Optionally, to specify a value between whole numbers, also provide a value for the setting qvbrQualityLevelFineTune. For example, if you want your QVBR quality level to be 7.33, set qvbrQualityLevel to 7 and set qvbrQualityLevelFineTune to .33.
+    #[doc(hidden)]
     pub qvbr_quality_level: i32,
     /// Optional. Specify a value here to set the QVBR quality to a level that is between whole numbers. For example, if you want your QVBR quality level to be 7.33, set qvbrQualityLevel to 7 and set qvbrQualityLevelFineTune to .33. MediaConvert rounds your QVBR quality level to the nearest third of a whole number. For example, if you set qvbrQualityLevel to 7 and you set qvbrQualityLevelFineTune to .25, your actual QVBR quality level is 7.33.
+    #[doc(hidden)]
     pub qvbr_quality_level_fine_tune: f64,
 }
 impl H264QvbrSettings {
@@ -16125,11 +16423,10 @@ impl std::fmt::Debug for H264QvbrSettings {
         formatter.finish()
     }
 }
-/// See [`H264QvbrSettings`](crate::model::H264QvbrSettings)
+/// See [`H264QvbrSettings`](crate::model::H264QvbrSettings).
 pub mod h264_qvbr_settings {
 
-    /// A builder for [`H264QvbrSettings`](crate::model::H264QvbrSettings)
-    #[non_exhaustive]
+    /// A builder for [`H264QvbrSettings`](crate::model::H264QvbrSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_average_bitrate: std::option::Option<i32>,
@@ -16167,7 +16464,7 @@ pub mod h264_qvbr_settings {
             self.qvbr_quality_level_fine_tune = input;
             self
         }
-        /// Consumes the builder and constructs a [`H264QvbrSettings`](crate::model::H264QvbrSettings)
+        /// Consumes the builder and constructs a [`H264QvbrSettings`](crate::model::H264QvbrSettings).
         pub fn build(self) -> crate::model::H264QvbrSettings {
             crate::model::H264QvbrSettings {
                 max_average_bitrate: self.max_average_bitrate.unwrap_or_default(),
@@ -16178,7 +16475,7 @@ pub mod h264_qvbr_settings {
     }
 }
 impl H264QvbrSettings {
-    /// Creates a new builder-style object to manufacture [`H264QvbrSettings`](crate::model::H264QvbrSettings)
+    /// Creates a new builder-style object to manufacture [`H264QvbrSettings`](crate::model::H264QvbrSettings).
     pub fn builder() -> crate::model::h264_qvbr_settings::Builder {
         crate::model::h264_qvbr_settings::Builder::default()
     }
@@ -17114,12 +17411,16 @@ impl AsRef<str> for H264AdaptiveQuantization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FrameCaptureSettings {
     /// Frame capture will encode the first frame of the output stream, then one frame every framerateDenominator/framerateNumerator seconds. For example, settings of framerateNumerator = 1 and framerateDenominator = 3 (a rate of 1/3 frame per second) will capture the first frame, then 1 frame every 3s. Files will be named as filename.n.jpg where n is the 0-based sequence number of each Capture.
+    #[doc(hidden)]
     pub framerate_denominator: i32,
     /// Frame capture will encode the first frame of the output stream, then one frame every framerateDenominator/framerateNumerator seconds. For example, settings of framerateNumerator = 1 and framerateDenominator = 3 (a rate of 1/3 frame per second) will capture the first frame, then 1 frame every 3s. Files will be named as filename.NNNNNNN.jpg where N is the 0-based frame sequence number zero padded to 7 decimal places.
+    #[doc(hidden)]
     pub framerate_numerator: i32,
     /// Maximum number of captures (encoded jpg output files).
+    #[doc(hidden)]
     pub max_captures: i32,
     /// JPEG Quality - a higher value equals higher quality.
+    #[doc(hidden)]
     pub quality: i32,
 }
 impl FrameCaptureSettings {
@@ -17150,11 +17451,10 @@ impl std::fmt::Debug for FrameCaptureSettings {
         formatter.finish()
     }
 }
-/// See [`FrameCaptureSettings`](crate::model::FrameCaptureSettings)
+/// See [`FrameCaptureSettings`](crate::model::FrameCaptureSettings).
 pub mod frame_capture_settings {
 
-    /// A builder for [`FrameCaptureSettings`](crate::model::FrameCaptureSettings)
-    #[non_exhaustive]
+    /// A builder for [`FrameCaptureSettings`](crate::model::FrameCaptureSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) framerate_denominator: std::option::Option<i32>,
@@ -17203,7 +17503,7 @@ pub mod frame_capture_settings {
             self.quality = input;
             self
         }
-        /// Consumes the builder and constructs a [`FrameCaptureSettings`](crate::model::FrameCaptureSettings)
+        /// Consumes the builder and constructs a [`FrameCaptureSettings`](crate::model::FrameCaptureSettings).
         pub fn build(self) -> crate::model::FrameCaptureSettings {
             crate::model::FrameCaptureSettings {
                 framerate_denominator: self.framerate_denominator.unwrap_or_default(),
@@ -17215,7 +17515,7 @@ pub mod frame_capture_settings {
     }
 }
 impl FrameCaptureSettings {
-    /// Creates a new builder-style object to manufacture [`FrameCaptureSettings`](crate::model::FrameCaptureSettings)
+    /// Creates a new builder-style object to manufacture [`FrameCaptureSettings`](crate::model::FrameCaptureSettings).
     pub fn builder() -> crate::model::frame_capture_settings::Builder {
         crate::model::frame_capture_settings::Builder::default()
     }
@@ -17329,26 +17629,36 @@ impl AsRef<str> for VideoCodec {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AvcIntraSettings {
     /// Specify the AVC-Intra class of your output. The AVC-Intra class selection determines the output video bit rate depending on the frame rate of the output. Outputs with higher class values have higher bitrates and improved image quality. Note that for Class 4K/2K, MediaConvert supports only 4:2:2 chroma subsampling.
+    #[doc(hidden)]
     pub avc_intra_class: std::option::Option<crate::model::AvcIntraClass>,
     /// Optional when you set AVC-Intra class (avcIntraClass) to Class 4K/2K (CLASS_4K_2K). When you set AVC-Intra class to a different value, this object isn't allowed.
+    #[doc(hidden)]
     pub avc_intra_uhd_settings: std::option::Option<crate::model::AvcIntraUhdSettings>,
     /// If you are using the console, use the Framerate setting to specify the frame rate for this output. If you want to keep the same frame rate as the input video, choose Follow source. If you want to do frame rate conversion, choose a frame rate from the dropdown list or choose Custom. The framerates shown in the dropdown list are decimal approximations of fractions. If you choose Custom, specify your frame rate as a fraction. If you are creating your transcoding job specification as a JSON file without the console, use FramerateControl to specify which value the service uses for the frame rate for this output. Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate from the input. Choose SPECIFIED if you want the service to use the frame rate you specify in the settings FramerateNumerator and FramerateDenominator.
+    #[doc(hidden)]
     pub framerate_control: std::option::Option<crate::model::AvcIntraFramerateControl>,
     /// Choose the method that you want MediaConvert to use when increasing or decreasing the frame rate. We recommend using drop duplicate (DUPLICATE_DROP) for numerically simple conversions, such as 60 fps to 30 fps. For numerically complex conversions, you can use interpolate (INTERPOLATE) to avoid stutter. This results in a smooth picture, but might introduce undesirable video artifacts. For complex frame rate conversions, especially if your source video has already been converted from its original cadence, use FrameFormer (FRAMEFORMER) to do motion-compensated interpolation. FrameFormer chooses the best conversion method frame by frame. Note that using FrameFormer increases the transcoding time and incurs a significant add-on cost.
+    #[doc(hidden)]
     pub framerate_conversion_algorithm:
         std::option::Option<crate::model::AvcIntraFramerateConversionAlgorithm>,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateDenominator to specify the denominator of this fraction. In this example, use 1001 for the value of FramerateDenominator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_denominator: i32,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateNumerator to specify the numerator of this fraction. In this example, use 24000 for the value of FramerateNumerator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_numerator: i32,
     /// Choose the scan line type for the output. Keep the default value, Progressive (PROGRESSIVE) to create a progressive output, regardless of the scan type of your input. Use Top field first (TOP_FIELD) or Bottom field first (BOTTOM_FIELD) to create an output that's interlaced with the same field polarity throughout. Use Follow, default top (FOLLOW_TOP_FIELD) or Follow, default bottom (FOLLOW_BOTTOM_FIELD) to produce outputs with the same field polarity as the source. For jobs that have multiple inputs, the output field polarity might change over the course of the output. Follow behavior depends on the input scan type. If the source is interlaced, the output will be interlaced with the same polarity as the source. If the source is progressive, the output will be interlaced with top field bottom field first, depending on which of the Follow options you choose.
+    #[doc(hidden)]
     pub interlace_mode: std::option::Option<crate::model::AvcIntraInterlaceMode>,
     /// Use this setting for interlaced outputs, when your output frame rate is half of your input frame rate. In this situation, choose Optimized interlacing (INTERLACED_OPTIMIZE) to create a better quality interlaced output. In this case, each progressive frame from the input corresponds to an interlaced field in the output. Keep the default value, Basic interlacing (INTERLACED), for all other output frame rates. With basic interlacing, MediaConvert performs any frame rate conversion first and then interlaces the frames. When you choose Optimized interlacing and you set your output frame rate to a value that isn't suitable for optimized interlacing, MediaConvert automatically falls back to basic interlacing. Required settings: To use optimized interlacing, you must set Telecine (telecine) to None (NONE) or Soft (SOFT). You can't use optimized interlacing for hard telecine outputs. You must also set Interlace mode (interlaceMode) to a value other than Progressive (PROGRESSIVE).
+    #[doc(hidden)]
     pub scan_type_conversion_mode:
         std::option::Option<crate::model::AvcIntraScanTypeConversionMode>,
     /// Ignore this setting unless your input frame rate is 23.976 or 24 frames per second (fps). Enable slow PAL to create a 25 fps output. When you enable slow PAL, MediaConvert relabels the video frames to 25 fps and resamples your audio to keep it synchronized with the video. Note that enabling this setting will slightly reduce the duration of your video. Required settings: You must also set Framerate to 25. In your JSON job specification, set (framerateControl) to (SPECIFIED), (framerateNumerator) to 25 and (framerateDenominator) to 1.
+    #[doc(hidden)]
     pub slow_pal: std::option::Option<crate::model::AvcIntraSlowPal>,
     /// When you do frame rate conversion from 23.976 frames per second (fps) to 29.97 fps, and your output scan type is interlaced, you can optionally enable hard telecine (HARD) to create a smoother picture. When you keep the default value, None (NONE), MediaConvert does a standard frame rate conversion to 29.97 without doing anything with the field polarity to create a smoother picture.
+    #[doc(hidden)]
     pub telecine: std::option::Option<crate::model::AvcIntraTelecine>,
 }
 impl AvcIntraSettings {
@@ -17420,11 +17730,10 @@ impl std::fmt::Debug for AvcIntraSettings {
         formatter.finish()
     }
 }
-/// See [`AvcIntraSettings`](crate::model::AvcIntraSettings)
+/// See [`AvcIntraSettings`](crate::model::AvcIntraSettings).
 pub mod avc_intra_settings {
 
-    /// A builder for [`AvcIntraSettings`](crate::model::AvcIntraSettings)
-    #[non_exhaustive]
+    /// A builder for [`AvcIntraSettings`](crate::model::AvcIntraSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) avc_intra_class: std::option::Option<crate::model::AvcIntraClass>,
@@ -17571,7 +17880,7 @@ pub mod avc_intra_settings {
             self.telecine = input;
             self
         }
-        /// Consumes the builder and constructs a [`AvcIntraSettings`](crate::model::AvcIntraSettings)
+        /// Consumes the builder and constructs a [`AvcIntraSettings`](crate::model::AvcIntraSettings).
         pub fn build(self) -> crate::model::AvcIntraSettings {
             crate::model::AvcIntraSettings {
                 avc_intra_class: self.avc_intra_class,
@@ -17589,7 +17898,7 @@ pub mod avc_intra_settings {
     }
 }
 impl AvcIntraSettings {
-    /// Creates a new builder-style object to manufacture [`AvcIntraSettings`](crate::model::AvcIntraSettings)
+    /// Creates a new builder-style object to manufacture [`AvcIntraSettings`](crate::model::AvcIntraSettings).
     pub fn builder() -> crate::model::avc_intra_settings::Builder {
         crate::model::avc_intra_settings::Builder::default()
     }
@@ -17952,6 +18261,7 @@ impl AsRef<str> for AvcIntraFramerateControl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AvcIntraUhdSettings {
     /// Optional. Use Quality tuning level (qualityTuningLevel) to choose how many transcoding passes MediaConvert does with your video. When you choose Multi-pass (MULTI_PASS), your video quality is better and your output bitrate is more accurate. That is, the actual bitrate of your output is closer to the target bitrate defined in the specification. When you choose Single-pass (SINGLE_PASS), your encoding time is faster. The default behavior is Single-pass (SINGLE_PASS).
+    #[doc(hidden)]
     pub quality_tuning_level: std::option::Option<crate::model::AvcIntraUhdQualityTuningLevel>,
 }
 impl AvcIntraUhdSettings {
@@ -17969,11 +18279,10 @@ impl std::fmt::Debug for AvcIntraUhdSettings {
         formatter.finish()
     }
 }
-/// See [`AvcIntraUhdSettings`](crate::model::AvcIntraUhdSettings)
+/// See [`AvcIntraUhdSettings`](crate::model::AvcIntraUhdSettings).
 pub mod avc_intra_uhd_settings {
 
-    /// A builder for [`AvcIntraUhdSettings`](crate::model::AvcIntraUhdSettings)
-    #[non_exhaustive]
+    /// A builder for [`AvcIntraUhdSettings`](crate::model::AvcIntraUhdSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) quality_tuning_level:
@@ -17996,7 +18305,7 @@ pub mod avc_intra_uhd_settings {
             self.quality_tuning_level = input;
             self
         }
-        /// Consumes the builder and constructs a [`AvcIntraUhdSettings`](crate::model::AvcIntraUhdSettings)
+        /// Consumes the builder and constructs a [`AvcIntraUhdSettings`](crate::model::AvcIntraUhdSettings).
         pub fn build(self) -> crate::model::AvcIntraUhdSettings {
             crate::model::AvcIntraUhdSettings {
                 quality_tuning_level: self.quality_tuning_level,
@@ -18005,7 +18314,7 @@ pub mod avc_intra_uhd_settings {
     }
 }
 impl AvcIntraUhdSettings {
-    /// Creates a new builder-style object to manufacture [`AvcIntraUhdSettings`](crate::model::AvcIntraUhdSettings)
+    /// Creates a new builder-style object to manufacture [`AvcIntraUhdSettings`](crate::model::AvcIntraUhdSettings).
     pub fn builder() -> crate::model::avc_intra_uhd_settings::Builder {
         crate::model::avc_intra_uhd_settings::Builder::default()
     }
@@ -18134,31 +18443,44 @@ impl AsRef<str> for AvcIntraClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Av1Settings {
     /// Specify the strength of any adaptive quantization filters that you enable. The value that you choose here applies to Spatial adaptive quantization (spatialAdaptiveQuantization).
+    #[doc(hidden)]
     pub adaptive_quantization: std::option::Option<crate::model::Av1AdaptiveQuantization>,
     /// Specify the Bit depth (Av1BitDepth). You can choose 8-bit (BIT_8) or 10-bit (BIT_10).
+    #[doc(hidden)]
     pub bit_depth: std::option::Option<crate::model::Av1BitDepth>,
     /// If you are using the console, use the Framerate setting to specify the frame rate for this output. If you want to keep the same frame rate as the input video, choose Follow source. If you want to do frame rate conversion, choose a frame rate from the dropdown list or choose Custom. The framerates shown in the dropdown list are decimal approximations of fractions. If you choose Custom, specify your frame rate as a fraction. If you are creating your transcoding job specification as a JSON file without the console, use FramerateControl to specify which value the service uses for the frame rate for this output. Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate from the input. Choose SPECIFIED if you want the service to use the frame rate you specify in the settings FramerateNumerator and FramerateDenominator.
+    #[doc(hidden)]
     pub framerate_control: std::option::Option<crate::model::Av1FramerateControl>,
     /// Choose the method that you want MediaConvert to use when increasing or decreasing the frame rate. We recommend using drop duplicate (DUPLICATE_DROP) for numerically simple conversions, such as 60 fps to 30 fps. For numerically complex conversions, you can use interpolate (INTERPOLATE) to avoid stutter. This results in a smooth picture, but might introduce undesirable video artifacts. For complex frame rate conversions, especially if your source video has already been converted from its original cadence, use FrameFormer (FRAMEFORMER) to do motion-compensated interpolation. FrameFormer chooses the best conversion method frame by frame. Note that using FrameFormer increases the transcoding time and incurs a significant add-on cost.
+    #[doc(hidden)]
     pub framerate_conversion_algorithm:
         std::option::Option<crate::model::Av1FramerateConversionAlgorithm>,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateDenominator to specify the denominator of this fraction. In this example, use 1001 for the value of FramerateDenominator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_denominator: i32,
     /// When you use the API for transcode jobs that use frame rate conversion, specify the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use FramerateNumerator to specify the numerator of this fraction. In this example, use 24000 for the value of FramerateNumerator. When you use the console for transcode jobs that use frame rate conversion, provide the value as a decimal number for Framerate. In this example, specify 23.976.
+    #[doc(hidden)]
     pub framerate_numerator: i32,
     /// Specify the GOP length (keyframe interval) in frames. With AV1, MediaConvert doesn't support GOP length in seconds. This value must be greater than zero and preferably equal to 1 + ((numberBFrames + 1) * x), where x is an integer value.
+    #[doc(hidden)]
     pub gop_size: f64,
     /// Maximum bitrate in bits/second. For example, enter five megabits per second as 5000000. Required when Rate control mode is QVBR.
+    #[doc(hidden)]
     pub max_bitrate: i32,
     /// Specify from the number of B-frames, in the range of 0-15. For AV1 encoding, we recommend using 7 or 15. Choose a larger number for a lower bitrate and smaller file size; choose a smaller number for better video quality.
+    #[doc(hidden)]
     pub number_b_frames_between_reference_frames: i32,
     /// Settings for quality-defined variable bitrate encoding with the H.265 codec. Use these settings only when you set QVBR for Rate control mode (RateControlMode).
+    #[doc(hidden)]
     pub qvbr_settings: std::option::Option<crate::model::Av1QvbrSettings>,
     /// 'With AV1 outputs, for rate control mode, MediaConvert supports only quality-defined variable bitrate (QVBR). You can''t use CBR or VBR.'
+    #[doc(hidden)]
     pub rate_control_mode: std::option::Option<crate::model::Av1RateControlMode>,
     /// Specify the number of slices per picture. This value must be 1, 2, 4, 8, 16, or 32. For progressive pictures, this value must be less than or equal to the number of macroblock rows. For interlaced pictures, this value must be less than or equal to half the number of macroblock rows.
+    #[doc(hidden)]
     pub slices: i32,
     /// Keep the default value, Enabled (ENABLED), to adjust quantization within each frame based on spatial variation of content complexity. When you enable this feature, the encoder uses fewer bits on areas that can sustain more distortion with no noticeable visual degradation and uses more bits on areas where any small distortion will be noticeable. For example, complex textured blocks are encoded with fewer bits and smooth textured blocks are encoded with more bits. Enabling this feature will almost always improve your video quality. Note, though, that this feature doesn't take into account where the viewer's attention is likely to be. If viewers are likely to be focusing their attention on a part of the screen with a lot of complex texture, you might choose to disable this feature. Related setting: When you enable spatial adaptive quantization, set the value for Adaptive quantization (adaptiveQuantization) depending on your content. For homogeneous content, such as cartoons and video games, set it to Low. For content with a wider variety of textures, set it to High or Higher.
+    #[doc(hidden)]
     pub spatial_adaptive_quantization:
         std::option::Option<crate::model::Av1SpatialAdaptiveQuantization>,
 }
@@ -18250,11 +18572,10 @@ impl std::fmt::Debug for Av1Settings {
         formatter.finish()
     }
 }
-/// See [`Av1Settings`](crate::model::Av1Settings)
+/// See [`Av1Settings`](crate::model::Av1Settings).
 pub mod av1_settings {
 
-    /// A builder for [`Av1Settings`](crate::model::Av1Settings)
-    #[non_exhaustive]
+    /// A builder for [`Av1Settings`](crate::model::Av1Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) adaptive_quantization:
@@ -18438,7 +18759,7 @@ pub mod av1_settings {
             self.spatial_adaptive_quantization = input;
             self
         }
-        /// Consumes the builder and constructs a [`Av1Settings`](crate::model::Av1Settings)
+        /// Consumes the builder and constructs a [`Av1Settings`](crate::model::Av1Settings).
         pub fn build(self) -> crate::model::Av1Settings {
             crate::model::Av1Settings {
                 adaptive_quantization: self.adaptive_quantization,
@@ -18461,7 +18782,7 @@ pub mod av1_settings {
     }
 }
 impl Av1Settings {
-    /// Creates a new builder-style object to manufacture [`Av1Settings`](crate::model::Av1Settings)
+    /// Creates a new builder-style object to manufacture [`Av1Settings`](crate::model::Av1Settings).
     pub fn builder() -> crate::model::av1_settings::Builder {
         crate::model::av1_settings::Builder::default()
     }
@@ -18578,8 +18899,10 @@ impl AsRef<str> for Av1RateControlMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Av1QvbrSettings {
     /// Use this setting only when you set Rate control mode (RateControlMode) to QVBR. Specify the target quality level for this output. MediaConvert determines the right number of bits to use for each part of the video to maintain the video quality that you specify. When you keep the default value, AUTO, MediaConvert picks a quality level for you, based on characteristics of your input video. If you prefer to specify a quality level, specify a number from 1 through 10. Use higher numbers for greater quality. Level 10 results in nearly lossless compression. The quality level for most broadcast-quality transcodes is between 6 and 9. Optionally, to specify a value between whole numbers, also provide a value for the setting qvbrQualityLevelFineTune. For example, if you want your QVBR quality level to be 7.33, set qvbrQualityLevel to 7 and set qvbrQualityLevelFineTune to .33.
+    #[doc(hidden)]
     pub qvbr_quality_level: i32,
     /// Optional. Specify a value here to set the QVBR quality to a level that is between whole numbers. For example, if you want your QVBR quality level to be 7.33, set qvbrQualityLevel to 7 and set qvbrQualityLevelFineTune to .33. MediaConvert rounds your QVBR quality level to the nearest third of a whole number. For example, if you set qvbrQualityLevel to 7 and you set qvbrQualityLevelFineTune to .25, your actual QVBR quality level is 7.33.
+    #[doc(hidden)]
     pub qvbr_quality_level_fine_tune: f64,
 }
 impl Av1QvbrSettings {
@@ -18603,11 +18926,10 @@ impl std::fmt::Debug for Av1QvbrSettings {
         formatter.finish()
     }
 }
-/// See [`Av1QvbrSettings`](crate::model::Av1QvbrSettings)
+/// See [`Av1QvbrSettings`](crate::model::Av1QvbrSettings).
 pub mod av1_qvbr_settings {
 
-    /// A builder for [`Av1QvbrSettings`](crate::model::Av1QvbrSettings)
-    #[non_exhaustive]
+    /// A builder for [`Av1QvbrSettings`](crate::model::Av1QvbrSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) qvbr_quality_level: std::option::Option<i32>,
@@ -18634,7 +18956,7 @@ pub mod av1_qvbr_settings {
             self.qvbr_quality_level_fine_tune = input;
             self
         }
-        /// Consumes the builder and constructs a [`Av1QvbrSettings`](crate::model::Av1QvbrSettings)
+        /// Consumes the builder and constructs a [`Av1QvbrSettings`](crate::model::Av1QvbrSettings).
         pub fn build(self) -> crate::model::Av1QvbrSettings {
             crate::model::Av1QvbrSettings {
                 qvbr_quality_level: self.qvbr_quality_level.unwrap_or_default(),
@@ -18644,7 +18966,7 @@ pub mod av1_qvbr_settings {
     }
 }
 impl Av1QvbrSettings {
-    /// Creates a new builder-style object to manufacture [`Av1QvbrSettings`](crate::model::Av1QvbrSettings)
+    /// Creates a new builder-style object to manufacture [`Av1QvbrSettings`](crate::model::Av1QvbrSettings).
     pub fn builder() -> crate::model::av1_qvbr_settings::Builder {
         crate::model::av1_qvbr_settings::Builder::default()
     }
@@ -19009,22 +19331,31 @@ impl AsRef<str> for AfdSignaling {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerSettings {
     /// These settings relate to the fragmented MP4 container for the segments in your CMAF outputs.
+    #[doc(hidden)]
     pub cmfc_settings: std::option::Option<crate::model::CmfcSettings>,
     /// Container for this output. Some containers require a container settings object. If not specified, the default object will be created.
+    #[doc(hidden)]
     pub container: std::option::Option<crate::model::ContainerType>,
     /// Settings for F4v container
+    #[doc(hidden)]
     pub f4v_settings: std::option::Option<crate::model::F4vSettings>,
     /// MPEG-2 TS container settings. These apply to outputs in a File output group when the output's container (ContainerType) is MPEG-2 Transport Stream (M2TS). In these assets, data is organized by the program map table (PMT). Each transport stream program contains subsets of data, including audio, video, and metadata. Each of these subsets of data has a numerical label called a packet identifier (PID). Each transport stream program corresponds to one MediaConvert output. The PMT lists the types of data in a program along with their PID. Downstream systems and players use the program map table to look up the PID for each type of data it accesses and then uses the PIDs to locate specific data within the asset.
+    #[doc(hidden)]
     pub m2ts_settings: std::option::Option<crate::model::M2tsSettings>,
     /// These settings relate to the MPEG-2 transport stream (MPEG2-TS) container for the MPEG2-TS segments in your HLS outputs.
+    #[doc(hidden)]
     pub m3u8_settings: std::option::Option<crate::model::M3u8Settings>,
     /// These settings relate to your QuickTime MOV output container.
+    #[doc(hidden)]
     pub mov_settings: std::option::Option<crate::model::MovSettings>,
     /// These settings relate to your MP4 output container. You can create audio only outputs with this container. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/supported-codecs-containers-audio-only.html#output-codecs-and-containers-supported-for-audio-only.
+    #[doc(hidden)]
     pub mp4_settings: std::option::Option<crate::model::Mp4Settings>,
     /// These settings relate to the fragmented MP4 container for the segments in your DASH outputs.
+    #[doc(hidden)]
     pub mpd_settings: std::option::Option<crate::model::MpdSettings>,
     /// These settings relate to your MXF output container.
+    #[doc(hidden)]
     pub mxf_settings: std::option::Option<crate::model::MxfSettings>,
 }
 impl ContainerSettings {
@@ -19080,11 +19411,10 @@ impl std::fmt::Debug for ContainerSettings {
         formatter.finish()
     }
 }
-/// See [`ContainerSettings`](crate::model::ContainerSettings)
+/// See [`ContainerSettings`](crate::model::ContainerSettings).
 pub mod container_settings {
 
-    /// A builder for [`ContainerSettings`](crate::model::ContainerSettings)
-    #[non_exhaustive]
+    /// A builder for [`ContainerSettings`](crate::model::ContainerSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cmfc_settings: std::option::Option<crate::model::CmfcSettings>,
@@ -19215,7 +19545,7 @@ pub mod container_settings {
             self.mxf_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerSettings`](crate::model::ContainerSettings)
+        /// Consumes the builder and constructs a [`ContainerSettings`](crate::model::ContainerSettings).
         pub fn build(self) -> crate::model::ContainerSettings {
             crate::model::ContainerSettings {
                 cmfc_settings: self.cmfc_settings,
@@ -19232,7 +19562,7 @@ pub mod container_settings {
     }
 }
 impl ContainerSettings {
-    /// Creates a new builder-style object to manufacture [`ContainerSettings`](crate::model::ContainerSettings)
+    /// Creates a new builder-style object to manufacture [`ContainerSettings`](crate::model::ContainerSettings).
     pub fn builder() -> crate::model::container_settings::Builder {
         crate::model::container_settings::Builder::default()
     }
@@ -19243,10 +19573,13 @@ impl ContainerSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MxfSettings {
     /// Optional. When you have AFD signaling set up in your output video stream, use this setting to choose whether to also include it in the MXF wrapper. Choose Don't copy (NO_COPY) to exclude AFD signaling from the MXF wrapper. Choose Copy from video stream (COPY_FROM_VIDEO) to copy the AFD values from the video stream for this output to the MXF wrapper. Regardless of which option you choose, the AFD values remain in the video stream. Related settings: To set up your output to include or exclude AFD values, see AfdSignaling, under VideoDescription. On the console, find AFD signaling under the output's video encoding settings.
+    #[doc(hidden)]
     pub afd_signaling: std::option::Option<crate::model::MxfAfdSignaling>,
     /// Specify the MXF profile, also called shim, for this output. When you choose Auto, MediaConvert chooses a profile based on the video codec and resolution. For a list of codecs supported with each MXF profile, see https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For more information about the automatic selection behavior, see https://docs.aws.amazon.com/mediaconvert/latest/ug/default-automatic-selection-of-mxf-profiles.html.
+    #[doc(hidden)]
     pub profile: std::option::Option<crate::model::MxfProfile>,
     /// Specify the XAVC profile settings for MXF outputs when you set your MXF profile to XAVC.
+    #[doc(hidden)]
     pub xavc_profile_settings: std::option::Option<crate::model::MxfXavcProfileSettings>,
 }
 impl MxfSettings {
@@ -19274,11 +19607,10 @@ impl std::fmt::Debug for MxfSettings {
         formatter.finish()
     }
 }
-/// See [`MxfSettings`](crate::model::MxfSettings)
+/// See [`MxfSettings`](crate::model::MxfSettings).
 pub mod mxf_settings {
 
-    /// A builder for [`MxfSettings`](crate::model::MxfSettings)
-    #[non_exhaustive]
+    /// A builder for [`MxfSettings`](crate::model::MxfSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) afd_signaling: std::option::Option<crate::model::MxfAfdSignaling>,
@@ -19325,7 +19657,7 @@ pub mod mxf_settings {
             self.xavc_profile_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`MxfSettings`](crate::model::MxfSettings)
+        /// Consumes the builder and constructs a [`MxfSettings`](crate::model::MxfSettings).
         pub fn build(self) -> crate::model::MxfSettings {
             crate::model::MxfSettings {
                 afd_signaling: self.afd_signaling,
@@ -19336,7 +19668,7 @@ pub mod mxf_settings {
     }
 }
 impl MxfSettings {
-    /// Creates a new builder-style object to manufacture [`MxfSettings`](crate::model::MxfSettings)
+    /// Creates a new builder-style object to manufacture [`MxfSettings`](crate::model::MxfSettings).
     pub fn builder() -> crate::model::mxf_settings::Builder {
         crate::model::mxf_settings::Builder::default()
     }
@@ -19347,8 +19679,10 @@ impl MxfSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MxfXavcProfileSettings {
     /// To create an output that complies with the XAVC file format guidelines for interoperability, keep the default value, Drop frames for compliance (DROP_FRAMES_FOR_COMPLIANCE). To include all frames from your input in this output, keep the default setting, Allow any duration (ALLOW_ANY_DURATION). The number of frames that MediaConvert excludes when you set this to Drop frames for compliance depends on the output frame rate and duration.
+    #[doc(hidden)]
     pub duration_mode: std::option::Option<crate::model::MxfXavcDurationMode>,
     /// Specify a value for this setting only for outputs that you set up with one of these two XAVC profiles: XAVC HD Intra CBG (XAVC_HD_INTRA_CBG) or XAVC 4K Intra CBG (XAVC_4K_INTRA_CBG). Specify the amount of space in each frame that the service reserves for ancillary data, such as teletext captions. The default value for this setting is 1492 bytes per frame. This should be sufficient to prevent overflow unless you have multiple pages of teletext captions data. If you have a large amount of teletext data, specify a larger number.
+    #[doc(hidden)]
     pub max_anc_data_size: i32,
 }
 impl MxfXavcProfileSettings {
@@ -19369,11 +19703,10 @@ impl std::fmt::Debug for MxfXavcProfileSettings {
         formatter.finish()
     }
 }
-/// See [`MxfXavcProfileSettings`](crate::model::MxfXavcProfileSettings)
+/// See [`MxfXavcProfileSettings`](crate::model::MxfXavcProfileSettings).
 pub mod mxf_xavc_profile_settings {
 
-    /// A builder for [`MxfXavcProfileSettings`](crate::model::MxfXavcProfileSettings)
-    #[non_exhaustive]
+    /// A builder for [`MxfXavcProfileSettings`](crate::model::MxfXavcProfileSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) duration_mode: std::option::Option<crate::model::MxfXavcDurationMode>,
@@ -19403,7 +19736,7 @@ pub mod mxf_xavc_profile_settings {
             self.max_anc_data_size = input;
             self
         }
-        /// Consumes the builder and constructs a [`MxfXavcProfileSettings`](crate::model::MxfXavcProfileSettings)
+        /// Consumes the builder and constructs a [`MxfXavcProfileSettings`](crate::model::MxfXavcProfileSettings).
         pub fn build(self) -> crate::model::MxfXavcProfileSettings {
             crate::model::MxfXavcProfileSettings {
                 duration_mode: self.duration_mode,
@@ -19413,7 +19746,7 @@ pub mod mxf_xavc_profile_settings {
     }
 }
 impl MxfXavcProfileSettings {
-    /// Creates a new builder-style object to manufacture [`MxfXavcProfileSettings`](crate::model::MxfXavcProfileSettings)
+    /// Creates a new builder-style object to manufacture [`MxfXavcProfileSettings`](crate::model::MxfXavcProfileSettings).
     pub fn builder() -> crate::model::mxf_xavc_profile_settings::Builder {
         crate::model::mxf_xavc_profile_settings::Builder::default()
     }
@@ -19600,19 +19933,26 @@ pub struct MpdSettings {
     /// elements for embedded 608 captions. This markup isn't generally required, but some video players require it to discover and play embedded 608 captions. Keep the default value, Exclude (EXCLUDE), to leave these elements out. When you enable this setting, this is the markup that MediaConvert includes in your manifest:
     /// <accessibility schemeiduri="urn:scte:dash:cc:cea-608:2015" value="CC1=eng" />
     /// </accessibility>
+    #[doc(hidden)]
     pub accessibility_caption_hints:
         std::option::Option<crate::model::MpdAccessibilityCaptionHints>,
     /// Specify this setting only when your output will be consumed by a downstream repackaging workflow that is sensitive to very small duration differences between video and audio. For this situation, choose Match video duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the total duration of each audio stream is at least as long as the total duration of the video stream. After padding or trimming, the audio stream duration is no more than one frame longer than the video stream. MediaConvert applies audio padding or trimming only to the end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the default value, any minor discrepancies between audio and video duration will depend on your output audio codec.
+    #[doc(hidden)]
     pub audio_duration: std::option::Option<crate::model::MpdAudioDuration>,
     /// Use this setting only in DASH output groups that include sidecar TTML or IMSC captions. You specify sidecar captions in a separate output from your audio and video. Choose Raw (RAW) for captions in a single XML file in a raw container. Choose Fragmented MPEG-4 (FRAGMENTED_MP4) for captions in XML format contained within fragmented MP4 files. This set of fragmented MP4 files is separate from your video and audio fragmented MP4 files.
+    #[doc(hidden)]
     pub caption_container_type: std::option::Option<crate::model::MpdCaptionContainerType>,
     /// To include key-length-value metadata in this output: Set KLV metadata insertion to Passthrough. MediaConvert reads KLV metadata present in your input and writes each instance to a separate event message box in the output, according to MISB ST1910.1. To exclude this KLV metadata: Set KLV metadata insertion to None or leave blank.
+    #[doc(hidden)]
     pub klv_metadata: std::option::Option<crate::model::MpdKlvMetadata>,
     /// Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in this output at the insertion points that you specify in an ESAM XML document. Provide the document in the setting SCC XML (sccXml).
+    #[doc(hidden)]
     pub scte35_esam: std::option::Option<crate::model::MpdScte35Esam>,
     /// Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough (PASSTHROUGH) if you want SCTE-35 markers that appear in your input to also appear in this output. Choose None (NONE) if you don't want those SCTE-35 markers in this output.
+    #[doc(hidden)]
     pub scte35_source: std::option::Option<crate::model::MpdScte35Source>,
     /// To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). Specify this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes each instance of ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None (NONE) or leave blank.
+    #[doc(hidden)]
     pub timed_metadata: std::option::Option<crate::model::MpdTimedMetadata>,
 }
 impl MpdSettings {
@@ -19668,11 +20008,10 @@ impl std::fmt::Debug for MpdSettings {
         formatter.finish()
     }
 }
-/// See [`MpdSettings`](crate::model::MpdSettings)
+/// See [`MpdSettings`](crate::model::MpdSettings).
 pub mod mpd_settings {
 
-    /// A builder for [`MpdSettings`](crate::model::MpdSettings)
-    #[non_exhaustive]
+    /// A builder for [`MpdSettings`](crate::model::MpdSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) accessibility_caption_hints:
@@ -19789,7 +20128,7 @@ pub mod mpd_settings {
             self.timed_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`MpdSettings`](crate::model::MpdSettings)
+        /// Consumes the builder and constructs a [`MpdSettings`](crate::model::MpdSettings).
         pub fn build(self) -> crate::model::MpdSettings {
             crate::model::MpdSettings {
                 accessibility_caption_hints: self.accessibility_caption_hints,
@@ -19804,7 +20143,7 @@ pub mod mpd_settings {
     }
 }
 impl MpdSettings {
-    /// Creates a new builder-style object to manufacture [`MpdSettings`](crate::model::MpdSettings)
+    /// Creates a new builder-style object to manufacture [`MpdSettings`](crate::model::MpdSettings).
     pub fn builder() -> crate::model::mpd_settings::Builder {
         crate::model::mpd_settings::Builder::default()
     }
@@ -20200,16 +20539,22 @@ impl AsRef<str> for MpdAccessibilityCaptionHints {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Mp4Settings {
     /// Specify this setting only when your output will be consumed by a downstream repackaging workflow that is sensitive to very small duration differences between video and audio. For this situation, choose Match video duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the total duration of each audio stream is at least as long as the total duration of the video stream. After padding or trimming, the audio stream duration is no more than one frame longer than the video stream. MediaConvert applies audio padding or trimming only to the end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the default value, any minor discrepancies between audio and video duration will depend on your output audio codec.
+    #[doc(hidden)]
     pub audio_duration: std::option::Option<crate::model::CmfcAudioDuration>,
     /// When enabled, file composition times will start at zero, composition times in the 'ctts' (composition time to sample) box for B-frames will be negative, and a 'cslg' (composition shift least greatest) box will be included per 14496-1 amendment 1. This improves compatibility with Apple players and tools.
+    #[doc(hidden)]
     pub cslg_atom: std::option::Option<crate::model::Mp4CslgAtom>,
     /// Ignore this setting unless compliance to the CTTS box version specification matters in your workflow. Specify a value of 1 to set your CTTS box version to 1 and make your output compliant with the specification. When you specify a value of 1, you must also set CSLG atom (cslgAtom) to the value INCLUDE. Keep the default value 0 to set your CTTS box version to 0. This can provide backward compatibility for some players and packagers.
+    #[doc(hidden)]
     pub ctts_version: i32,
     /// Inserts a free-space box immediately after the moov box.
+    #[doc(hidden)]
     pub free_space_box: std::option::Option<crate::model::Mp4FreeSpaceBox>,
     /// If set to PROGRESSIVE_DOWNLOAD, the MOOV atom is relocated to the beginning of the archive as required for progressive downloading. Otherwise it is placed normally at the end.
+    #[doc(hidden)]
     pub moov_placement: std::option::Option<crate::model::Mp4MoovPlacement>,
     /// Overrides the "Major Brand" field in the output file. Usually not necessary to specify.
+    #[doc(hidden)]
     pub mp4_major_brand: std::option::Option<std::string::String>,
 }
 impl Mp4Settings {
@@ -20250,11 +20595,10 @@ impl std::fmt::Debug for Mp4Settings {
         formatter.finish()
     }
 }
-/// See [`Mp4Settings`](crate::model::Mp4Settings)
+/// See [`Mp4Settings`](crate::model::Mp4Settings).
 pub mod mp4_settings {
 
-    /// A builder for [`Mp4Settings`](crate::model::Mp4Settings)
-    #[non_exhaustive]
+    /// A builder for [`Mp4Settings`](crate::model::Mp4Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_duration: std::option::Option<crate::model::CmfcAudioDuration>,
@@ -20340,7 +20684,7 @@ pub mod mp4_settings {
             self.mp4_major_brand = input;
             self
         }
-        /// Consumes the builder and constructs a [`Mp4Settings`](crate::model::Mp4Settings)
+        /// Consumes the builder and constructs a [`Mp4Settings`](crate::model::Mp4Settings).
         pub fn build(self) -> crate::model::Mp4Settings {
             crate::model::Mp4Settings {
                 audio_duration: self.audio_duration,
@@ -20354,7 +20698,7 @@ pub mod mp4_settings {
     }
 }
 impl Mp4Settings {
-    /// Creates a new builder-style object to manufacture [`Mp4Settings`](crate::model::Mp4Settings)
+    /// Creates a new builder-style object to manufacture [`Mp4Settings`](crate::model::Mp4Settings).
     pub fn builder() -> crate::model::mp4_settings::Builder {
         crate::model::mp4_settings::Builder::default()
     }
@@ -20585,14 +20929,19 @@ impl AsRef<str> for CmfcAudioDuration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MovSettings {
     /// When enabled, include 'clap' atom if appropriate for the video output settings.
+    #[doc(hidden)]
     pub clap_atom: std::option::Option<crate::model::MovClapAtom>,
     /// When enabled, file composition times will start at zero, composition times in the 'ctts' (composition time to sample) box for B-frames will be negative, and a 'cslg' (composition shift least greatest) box will be included per 14496-1 amendment 1. This improves compatibility with Apple players and tools.
+    #[doc(hidden)]
     pub cslg_atom: std::option::Option<crate::model::MovCslgAtom>,
     /// When set to XDCAM, writes MPEG2 video streams into the QuickTime file using XDCAM fourcc codes. This increases compatibility with Apple editors and players, but may decrease compatibility with other players. Only applicable when the video codec is MPEG2.
+    #[doc(hidden)]
     pub mpeg2_four_cc_control: std::option::Option<crate::model::MovMpeg2FourCcControl>,
     /// To make this output compatible with Omenon, keep the default value, OMNEON. Unless you need Omneon compatibility, set this value to NONE. When you keep the default value, OMNEON, MediaConvert increases the length of the edit list atom. This might cause file rejections when a recipient of the output file doesn't expct this extra padding.
+    #[doc(hidden)]
     pub padding_control: std::option::Option<crate::model::MovPaddingControl>,
     /// Always keep the default value (SELF_CONTAINED) for this setting.
+    #[doc(hidden)]
     pub reference: std::option::Option<crate::model::MovReference>,
 }
 impl MovSettings {
@@ -20630,11 +20979,10 @@ impl std::fmt::Debug for MovSettings {
         formatter.finish()
     }
 }
-/// See [`MovSettings`](crate::model::MovSettings)
+/// See [`MovSettings`](crate::model::MovSettings).
 pub mod mov_settings {
 
-    /// A builder for [`MovSettings`](crate::model::MovSettings)
-    #[non_exhaustive]
+    /// A builder for [`MovSettings`](crate::model::MovSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) clap_atom: std::option::Option<crate::model::MovClapAtom>,
@@ -20709,7 +21057,7 @@ pub mod mov_settings {
             self.reference = input;
             self
         }
-        /// Consumes the builder and constructs a [`MovSettings`](crate::model::MovSettings)
+        /// Consumes the builder and constructs a [`MovSettings`](crate::model::MovSettings).
         pub fn build(self) -> crate::model::MovSettings {
             crate::model::MovSettings {
                 clap_atom: self.clap_atom,
@@ -20722,7 +21070,7 @@ pub mod mov_settings {
     }
 }
 impl MovSettings {
-    /// Creates a new builder-style object to manufacture [`MovSettings`](crate::model::MovSettings)
+    /// Creates a new builder-style object to manufacture [`MovSettings`](crate::model::MovSettings).
     pub fn builder() -> crate::model::mov_settings::Builder {
         crate::model::mov_settings::Builder::default()
     }
@@ -21008,42 +21356,61 @@ impl AsRef<str> for MovClapAtom {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct M3u8Settings {
     /// Specify this setting only when your output will be consumed by a downstream repackaging workflow that is sensitive to very small duration differences between video and audio. For this situation, choose Match video duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the total duration of each audio stream is at least as long as the total duration of the video stream. After padding or trimming, the audio stream duration is no more than one frame longer than the video stream. MediaConvert applies audio padding or trimming only to the end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the default value, any minor discrepancies between audio and video duration will depend on your output audio codec.
+    #[doc(hidden)]
     pub audio_duration: std::option::Option<crate::model::M3u8AudioDuration>,
     /// The number of audio frames to insert for each PES packet.
+    #[doc(hidden)]
     pub audio_frames_per_pes: i32,
     /// Packet Identifier (PID) of the elementary audio stream(s) in the transport stream. Multiple values are accepted, and can be entered in ranges and/or by comma separation.
+    #[doc(hidden)]
     pub audio_pids: std::option::Option<std::vec::Vec<i32>>,
     /// If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp (PTS) values greater than or equal to the first video packet PTS (MediaConvert drops captions and data packets with lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+    #[doc(hidden)]
     pub data_pts_control: std::option::Option<crate::model::M3u8DataPtsControl>,
     /// Specify the maximum time, in milliseconds, between Program Clock References (PCRs) inserted into the transport stream.
+    #[doc(hidden)]
     pub max_pcr_interval: i32,
     /// If INSERT, Nielsen inaudible tones for media tracking will be detected in the input audio and an equivalent ID3 tag will be inserted in the output.
+    #[doc(hidden)]
     pub nielsen_id3: std::option::Option<crate::model::M3u8NielsenId3>,
     /// The number of milliseconds between instances of this table in the output transport stream.
+    #[doc(hidden)]
     pub pat_interval: i32,
     /// When set to PCR_EVERY_PES_PACKET a Program Clock Reference value is inserted for every Packetized Elementary Stream (PES) header. This parameter is effective only when the PCR PID is the same as the video or audio elementary stream.
+    #[doc(hidden)]
     pub pcr_control: std::option::Option<crate::model::M3u8PcrControl>,
     /// Packet Identifier (PID) of the Program Clock Reference (PCR) in the transport stream. When no value is given, the encoder will assign the same value as the Video PID.
+    #[doc(hidden)]
     pub pcr_pid: i32,
     /// The number of milliseconds between instances of this table in the output transport stream.
+    #[doc(hidden)]
     pub pmt_interval: i32,
     /// Packet Identifier (PID) for the Program Map Table (PMT) in the transport stream.
+    #[doc(hidden)]
     pub pmt_pid: i32,
     /// Packet Identifier (PID) of the private metadata stream in the transport stream.
+    #[doc(hidden)]
     pub private_metadata_pid: i32,
     /// The value of the program number field in the Program Map Table.
+    #[doc(hidden)]
     pub program_number: i32,
     /// Packet Identifier (PID) of the SCTE-35 stream in the transport stream.
+    #[doc(hidden)]
     pub scte35_pid: i32,
     /// For SCTE-35 markers from your input-- Choose Passthrough (PASSTHROUGH) if you want SCTE-35 markers that appear in your input to also appear in this output. Choose None (NONE) if you don't want SCTE-35 markers in this output. For SCTE-35 markers from an ESAM XML document-- Choose None (NONE) if you don't want manifest conditioning. Choose Passthrough (PASSTHROUGH) and choose Ad markers (adMarkers) if you do want manifest conditioning. In both cases, also provide the ESAM XML as a string in the setting Signal processing notification XML (sccXml).
+    #[doc(hidden)]
     pub scte35_source: std::option::Option<crate::model::M3u8Scte35Source>,
     /// Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH) to include ID3 metadata in this output. This includes ID3 metadata from the following features: ID3 timestamp period (timedMetadataId3Period), and Custom ID3 metadata inserter (timedMetadataInsertion). To exclude this ID3 metadata in this output: set ID3 metadata to None (NONE) or leave blank.
+    #[doc(hidden)]
     pub timed_metadata: std::option::Option<crate::model::TimedMetadata>,
     /// Packet Identifier (PID) of the ID3 metadata stream in the transport stream.
+    #[doc(hidden)]
     pub timed_metadata_pid: i32,
     /// The value of the transport stream ID field in the Program Map Table.
+    #[doc(hidden)]
     pub transport_stream_id: i32,
     /// Packet Identifier (PID) of the elementary video stream in the transport stream.
+    #[doc(hidden)]
     pub video_pid: i32,
 }
 impl M3u8Settings {
@@ -21149,11 +21516,10 @@ impl std::fmt::Debug for M3u8Settings {
         formatter.finish()
     }
 }
-/// See [`M3u8Settings`](crate::model::M3u8Settings)
+/// See [`M3u8Settings`](crate::model::M3u8Settings).
 pub mod m3u8_settings {
 
-    /// A builder for [`M3u8Settings`](crate::model::M3u8Settings)
-    #[non_exhaustive]
+    /// A builder for [`M3u8Settings`](crate::model::M3u8Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_duration: std::option::Option<crate::model::M3u8AudioDuration>,
@@ -21391,7 +21757,7 @@ pub mod m3u8_settings {
             self.video_pid = input;
             self
         }
-        /// Consumes the builder and constructs a [`M3u8Settings`](crate::model::M3u8Settings)
+        /// Consumes the builder and constructs a [`M3u8Settings`](crate::model::M3u8Settings).
         pub fn build(self) -> crate::model::M3u8Settings {
             crate::model::M3u8Settings {
                 audio_duration: self.audio_duration,
@@ -21418,7 +21784,7 @@ pub mod m3u8_settings {
     }
 }
 impl M3u8Settings {
-    /// Creates a new builder-style object to manufacture [`M3u8Settings`](crate::model::M3u8Settings)
+    /// Creates a new builder-style object to manufacture [`M3u8Settings`](crate::model::M3u8Settings).
     pub fn builder() -> crate::model::m3u8_settings::Builder {
         crate::model::m3u8_settings::Builder::default()
     }
@@ -21759,82 +22125,121 @@ impl AsRef<str> for M3u8AudioDuration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct M2tsSettings {
     /// Selects between the DVB and ATSC buffer models for Dolby Digital audio.
+    #[doc(hidden)]
     pub audio_buffer_model: std::option::Option<crate::model::M2tsAudioBufferModel>,
     /// Specify this setting only when your output will be consumed by a downstream repackaging workflow that is sensitive to very small duration differences between video and audio. For this situation, choose Match video duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the total duration of each audio stream is at least as long as the total duration of the video stream. After padding or trimming, the audio stream duration is no more than one frame longer than the video stream. MediaConvert applies audio padding or trimming only to the end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the default value, any minor discrepancies between audio and video duration will depend on your output audio codec.
+    #[doc(hidden)]
     pub audio_duration: std::option::Option<crate::model::M2tsAudioDuration>,
     /// The number of audio frames to insert for each PES packet.
+    #[doc(hidden)]
     pub audio_frames_per_pes: i32,
     /// Specify the packet identifiers (PIDs) for any elementary audio streams you include in this output. Specify multiple PIDs as a JSON array. Default is the range 482-492.
+    #[doc(hidden)]
     pub audio_pids: std::option::Option<std::vec::Vec<i32>>,
     /// Specify the output bitrate of the transport stream in bits per second. Setting to 0 lets the muxer automatically determine the appropriate bitrate. Other common values are 3750000, 7500000, and 15000000.
+    #[doc(hidden)]
     pub bitrate: i32,
     /// Controls what buffer model to use for accurate interleaving. If set to MULTIPLEX, use multiplex buffer model. If set to NONE, this can lead to lower latency, but low-memory devices may not be able to play back the stream without interruptions.
+    #[doc(hidden)]
     pub buffer_model: std::option::Option<crate::model::M2tsBufferModel>,
     /// If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp (PTS) values greater than or equal to the first video packet PTS (MediaConvert drops captions and data packets with lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+    #[doc(hidden)]
     pub data_pts_control: std::option::Option<crate::model::M2tsDataPtsControl>,
     /// Use these settings to insert a DVB Network Information Table (NIT) in the transport stream of this output. When you work directly in your JSON job specification, include this object only when your job has a transport stream output and the container settings contain the object M2tsSettings.
+    #[doc(hidden)]
     pub dvb_nit_settings: std::option::Option<crate::model::DvbNitSettings>,
     /// Use these settings to insert a DVB Service Description Table (SDT) in the transport stream of this output. When you work directly in your JSON job specification, include this object only when your job has a transport stream output and the container settings contain the object M2tsSettings.
+    #[doc(hidden)]
     pub dvb_sdt_settings: std::option::Option<crate::model::DvbSdtSettings>,
     /// Specify the packet identifiers (PIDs) for DVB subtitle data included in this output. Specify multiple PIDs as a JSON array. Default is the range 460-479.
+    #[doc(hidden)]
     pub dvb_sub_pids: std::option::Option<std::vec::Vec<i32>>,
     /// Use these settings to insert a DVB Time and Date Table (TDT) in the transport stream of this output. When you work directly in your JSON job specification, include this object only when your job has a transport stream output and the container settings contain the object M2tsSettings.
+    #[doc(hidden)]
     pub dvb_tdt_settings: std::option::Option<crate::model::DvbTdtSettings>,
     /// Specify the packet identifier (PID) for DVB teletext data you include in this output. Default is 499.
+    #[doc(hidden)]
     pub dvb_teletext_pid: i32,
     /// When set to VIDEO_AND_FIXED_INTERVALS, audio EBP markers will be added to partitions 3 and 4. The interval between these additional markers will be fixed, and will be slightly shorter than the video EBP marker interval. When set to VIDEO_INTERVAL, these additional markers will not be inserted. Only applicable when EBP segmentation markers are is selected (segmentationMarkers is EBP or EBP_LEGACY).
+    #[doc(hidden)]
     pub ebp_audio_interval: std::option::Option<crate::model::M2tsEbpAudioInterval>,
     /// Selects which PIDs to place EBP markers on. They can either be placed only on the video PID, or on both the video PID and all audio PIDs. Only applicable when EBP segmentation markers are is selected (segmentationMarkers is EBP or EBP_LEGACY).
+    #[doc(hidden)]
     pub ebp_placement: std::option::Option<crate::model::M2tsEbpPlacement>,
     /// Controls whether to include the ES Rate field in the PES header.
+    #[doc(hidden)]
     pub es_rate_in_pes: std::option::Option<crate::model::M2tsEsRateInPes>,
     /// Keep the default value (DEFAULT) unless you know that your audio EBP markers are incorrectly appearing before your video EBP markers. To correct this problem, set this value to Force (FORCE).
+    #[doc(hidden)]
     pub force_ts_video_ebp_order: std::option::Option<crate::model::M2tsForceTsVideoEbpOrder>,
     /// The length, in seconds, of each fragment. Only used with EBP markers.
+    #[doc(hidden)]
     pub fragment_time: f64,
     /// To include key-length-value metadata in this output: Set KLV metadata insertion to Passthrough. MediaConvert reads KLV metadata present in your input and passes it through to the output transport stream. To exclude this KLV metadata: Set KLV metadata insertion to None or leave blank.
+    #[doc(hidden)]
     pub klv_metadata: std::option::Option<crate::model::M2tsKlvMetadata>,
     /// Specify the maximum time, in milliseconds, between Program Clock References (PCRs) inserted into the transport stream.
+    #[doc(hidden)]
     pub max_pcr_interval: i32,
     /// When set, enforces that Encoder Boundary Points do not come within the specified time interval of each other by looking ahead at input video. If another EBP is going to come in within the specified time interval, the current EBP is not emitted, and the segment is "stretched" to the next marker. The lookahead value does not add latency to the system. The Live Event must be configured elsewhere to create sufficient latency to make the lookahead accurate.
+    #[doc(hidden)]
     pub min_ebp_interval: i32,
     /// If INSERT, Nielsen inaudible tones for media tracking will be detected in the input audio and an equivalent ID3 tag will be inserted in the output.
+    #[doc(hidden)]
     pub nielsen_id3: std::option::Option<crate::model::M2tsNielsenId3>,
     /// Value in bits per second of extra null packets to insert into the transport stream. This can be used if a downstream encryption system requires periodic null packets.
+    #[doc(hidden)]
     pub null_packet_bitrate: f64,
     /// The number of milliseconds between instances of this table in the output transport stream.
+    #[doc(hidden)]
     pub pat_interval: i32,
     /// When set to PCR_EVERY_PES_PACKET, a Program Clock Reference value is inserted for every Packetized Elementary Stream (PES) header. This is effective only when the PCR PID is the same as the video or audio elementary stream.
+    #[doc(hidden)]
     pub pcr_control: std::option::Option<crate::model::M2tsPcrControl>,
     /// Specify the packet identifier (PID) for the program clock reference (PCR) in this output. If you do not specify a value, the service will use the value for Video PID (VideoPid).
+    #[doc(hidden)]
     pub pcr_pid: i32,
     /// Specify the number of milliseconds between instances of the program map table (PMT) in the output transport stream.
+    #[doc(hidden)]
     pub pmt_interval: i32,
     /// Specify the packet identifier (PID) for the program map table (PMT) itself. Default is 480.
+    #[doc(hidden)]
     pub pmt_pid: i32,
     /// Specify the packet identifier (PID) of the private metadata stream. Default is 503.
+    #[doc(hidden)]
     pub private_metadata_pid: i32,
     /// Use Program number (programNumber) to specify the program number used in the program map table (PMT) for this output. Default is 1. Program numbers and program map tables are parts of MPEG-2 transport stream containers, used for organizing data.
+    #[doc(hidden)]
     pub program_number: i32,
     /// When set to CBR, inserts null packets into transport stream to fill specified bitrate. When set to VBR, the bitrate setting acts as the maximum bitrate, but the output will not be padded up to that bitrate.
+    #[doc(hidden)]
     pub rate_mode: std::option::Option<crate::model::M2tsRateMode>,
     /// Include this in your job settings to put SCTE-35 markers in your HLS and transport stream outputs at the insertion points that you specify in an ESAM XML document. Provide the document in the setting SCC XML (sccXml).
+    #[doc(hidden)]
     pub scte35_esam: std::option::Option<crate::model::M2tsScte35Esam>,
     /// Specify the packet identifier (PID) of the SCTE-35 stream in the transport stream.
+    #[doc(hidden)]
     pub scte35_pid: i32,
     /// For SCTE-35 markers from your input-- Choose Passthrough (PASSTHROUGH) if you want SCTE-35 markers that appear in your input to also appear in this output. Choose None (NONE) if you don't want SCTE-35 markers in this output. For SCTE-35 markers from an ESAM XML document-- Choose None (NONE). Also provide the ESAM XML as a string in the setting Signal processing notification XML (sccXml). Also enable ESAM SCTE-35 (include the property scte35Esam).
+    #[doc(hidden)]
     pub scte35_source: std::option::Option<crate::model::M2tsScte35Source>,
     /// Inserts segmentation markers at each segmentation_time period. rai_segstart sets the Random Access Indicator bit in the adaptation field. rai_adapt sets the RAI bit and adds the current timecode in the private data bytes. psi_segstart inserts PAT and PMT tables at the start of segments. ebp adds Encoder Boundary Point information to the adaptation field as per OpenCable specification OC-SP-EBP-I01-130118. ebp_legacy adds Encoder Boundary Point information to the adaptation field using a legacy proprietary format.
+    #[doc(hidden)]
     pub segmentation_markers: std::option::Option<crate::model::M2tsSegmentationMarkers>,
     /// The segmentation style parameter controls how segmentation markers are inserted into the transport stream. With avails, it is possible that segments may be truncated, which can influence where future segmentation markers are inserted. When a segmentation style of "reset_cadence" is selected and a segment is truncated due to an avail, we will reset the segmentation cadence. This means the subsequent segment will have a duration of of $segmentation_time seconds. When a segmentation style of "maintain_cadence" is selected and a segment is truncated due to an avail, we will not reset the segmentation cadence. This means the subsequent segment will likely be truncated as well. However, all segments after that will have a duration of $segmentation_time seconds. Note that EBP lookahead is a slight exception to this rule.
+    #[doc(hidden)]
     pub segmentation_style: std::option::Option<crate::model::M2tsSegmentationStyle>,
     /// Specify the length, in seconds, of each segment. Required unless markers is set to _none_.
+    #[doc(hidden)]
     pub segmentation_time: f64,
     /// Packet Identifier (PID) of the ID3 metadata stream in the transport stream.
+    #[doc(hidden)]
     pub timed_metadata_pid: i32,
     /// Specify the ID for the transport stream itself in the program map table for this output. Transport stream IDs and program map tables are parts of MPEG-2 transport stream containers, used for organizing data.
+    #[doc(hidden)]
     pub transport_stream_id: i32,
     /// Specify the packet identifier (PID) of the elementary video stream in the transport stream.
+    #[doc(hidden)]
     pub video_pid: i32,
 }
 impl M2tsSettings {
@@ -22044,11 +22449,10 @@ impl std::fmt::Debug for M2tsSettings {
         formatter.finish()
     }
 }
-/// See [`M2tsSettings`](crate::model::M2tsSettings)
+/// See [`M2tsSettings`](crate::model::M2tsSettings).
 pub mod m2ts_settings {
 
-    /// A builder for [`M2tsSettings`](crate::model::M2tsSettings)
-    #[non_exhaustive]
+    /// A builder for [`M2tsSettings`](crate::model::M2tsSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_buffer_model: std::option::Option<crate::model::M2tsAudioBufferModel>,
@@ -22558,7 +22962,7 @@ pub mod m2ts_settings {
             self.video_pid = input;
             self
         }
-        /// Consumes the builder and constructs a [`M2tsSettings`](crate::model::M2tsSettings)
+        /// Consumes the builder and constructs a [`M2tsSettings`](crate::model::M2tsSettings).
         pub fn build(self) -> crate::model::M2tsSettings {
             crate::model::M2tsSettings {
                 audio_buffer_model: self.audio_buffer_model,
@@ -22605,7 +23009,7 @@ pub mod m2ts_settings {
     }
 }
 impl M2tsSettings {
-    /// Creates a new builder-style object to manufacture [`M2tsSettings`](crate::model::M2tsSettings)
+    /// Creates a new builder-style object to manufacture [`M2tsSettings`](crate::model::M2tsSettings).
     pub fn builder() -> crate::model::m2ts_settings::Builder {
         crate::model::m2ts_settings::Builder::default()
     }
@@ -22804,6 +23208,7 @@ impl AsRef<str> for M2tsScte35Source {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct M2tsScte35Esam {
     /// Packet Identifier (PID) of the SCTE-35 stream in the transport stream generated by ESAM.
+    #[doc(hidden)]
     pub scte35_esam_pid: i32,
 }
 impl M2tsScte35Esam {
@@ -22819,11 +23224,10 @@ impl std::fmt::Debug for M2tsScte35Esam {
         formatter.finish()
     }
 }
-/// See [`M2tsScte35Esam`](crate::model::M2tsScte35Esam)
+/// See [`M2tsScte35Esam`](crate::model::M2tsScte35Esam).
 pub mod m2ts_scte35_esam {
 
-    /// A builder for [`M2tsScte35Esam`](crate::model::M2tsScte35Esam)
-    #[non_exhaustive]
+    /// A builder for [`M2tsScte35Esam`](crate::model::M2tsScte35Esam).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scte35_esam_pid: std::option::Option<i32>,
@@ -22839,7 +23243,7 @@ pub mod m2ts_scte35_esam {
             self.scte35_esam_pid = input;
             self
         }
-        /// Consumes the builder and constructs a [`M2tsScte35Esam`](crate::model::M2tsScte35Esam)
+        /// Consumes the builder and constructs a [`M2tsScte35Esam`](crate::model::M2tsScte35Esam).
         pub fn build(self) -> crate::model::M2tsScte35Esam {
             crate::model::M2tsScte35Esam {
                 scte35_esam_pid: self.scte35_esam_pid.unwrap_or_default(),
@@ -22848,7 +23252,7 @@ pub mod m2ts_scte35_esam {
     }
 }
 impl M2tsScte35Esam {
-    /// Creates a new builder-style object to manufacture [`M2tsScte35Esam`](crate::model::M2tsScte35Esam)
+    /// Creates a new builder-style object to manufacture [`M2tsScte35Esam`](crate::model::M2tsScte35Esam).
     pub fn builder() -> crate::model::m2ts_scte35_esam::Builder {
         crate::model::m2ts_scte35_esam::Builder::default()
     }
@@ -23299,6 +23703,7 @@ impl AsRef<str> for M2tsEbpAudioInterval {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DvbTdtSettings {
     /// The number of milliseconds between instances of this table in the output transport stream.
+    #[doc(hidden)]
     pub tdt_interval: i32,
 }
 impl DvbTdtSettings {
@@ -23314,11 +23719,10 @@ impl std::fmt::Debug for DvbTdtSettings {
         formatter.finish()
     }
 }
-/// See [`DvbTdtSettings`](crate::model::DvbTdtSettings)
+/// See [`DvbTdtSettings`](crate::model::DvbTdtSettings).
 pub mod dvb_tdt_settings {
 
-    /// A builder for [`DvbTdtSettings`](crate::model::DvbTdtSettings)
-    #[non_exhaustive]
+    /// A builder for [`DvbTdtSettings`](crate::model::DvbTdtSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tdt_interval: std::option::Option<i32>,
@@ -23334,7 +23738,7 @@ pub mod dvb_tdt_settings {
             self.tdt_interval = input;
             self
         }
-        /// Consumes the builder and constructs a [`DvbTdtSettings`](crate::model::DvbTdtSettings)
+        /// Consumes the builder and constructs a [`DvbTdtSettings`](crate::model::DvbTdtSettings).
         pub fn build(self) -> crate::model::DvbTdtSettings {
             crate::model::DvbTdtSettings {
                 tdt_interval: self.tdt_interval.unwrap_or_default(),
@@ -23343,7 +23747,7 @@ pub mod dvb_tdt_settings {
     }
 }
 impl DvbTdtSettings {
-    /// Creates a new builder-style object to manufacture [`DvbTdtSettings`](crate::model::DvbTdtSettings)
+    /// Creates a new builder-style object to manufacture [`DvbTdtSettings`](crate::model::DvbTdtSettings).
     pub fn builder() -> crate::model::dvb_tdt_settings::Builder {
         crate::model::dvb_tdt_settings::Builder::default()
     }
@@ -23354,12 +23758,16 @@ impl DvbTdtSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DvbSdtSettings {
     /// Selects method of inserting SDT information into output stream. "Follow input SDT" copies SDT information from input stream to output stream. "Follow input SDT if present" copies SDT information from input stream to output stream if SDT information is present in the input, otherwise it will fall back on the user-defined values. Enter "SDT Manually" means user will enter the SDT information. "No SDT" means output stream will not contain SDT information.
+    #[doc(hidden)]
     pub output_sdt: std::option::Option<crate::model::OutputSdt>,
     /// The number of milliseconds between instances of this table in the output transport stream.
+    #[doc(hidden)]
     pub sdt_interval: i32,
     /// The service name placed in the service_descriptor in the Service Description Table. Maximum length is 256 characters.
+    #[doc(hidden)]
     pub service_name: std::option::Option<std::string::String>,
     /// The service provider name placed in the service_descriptor in the Service Description Table. Maximum length is 256 characters.
+    #[doc(hidden)]
     pub service_provider_name: std::option::Option<std::string::String>,
 }
 impl DvbSdtSettings {
@@ -23390,11 +23798,10 @@ impl std::fmt::Debug for DvbSdtSettings {
         formatter.finish()
     }
 }
-/// See [`DvbSdtSettings`](crate::model::DvbSdtSettings)
+/// See [`DvbSdtSettings`](crate::model::DvbSdtSettings).
 pub mod dvb_sdt_settings {
 
-    /// A builder for [`DvbSdtSettings`](crate::model::DvbSdtSettings)
-    #[non_exhaustive]
+    /// A builder for [`DvbSdtSettings`](crate::model::DvbSdtSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) output_sdt: std::option::Option<crate::model::OutputSdt>,
@@ -23449,7 +23856,7 @@ pub mod dvb_sdt_settings {
             self.service_provider_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DvbSdtSettings`](crate::model::DvbSdtSettings)
+        /// Consumes the builder and constructs a [`DvbSdtSettings`](crate::model::DvbSdtSettings).
         pub fn build(self) -> crate::model::DvbSdtSettings {
             crate::model::DvbSdtSettings {
                 output_sdt: self.output_sdt,
@@ -23461,7 +23868,7 @@ pub mod dvb_sdt_settings {
     }
 }
 impl DvbSdtSettings {
-    /// Creates a new builder-style object to manufacture [`DvbSdtSettings`](crate::model::DvbSdtSettings)
+    /// Creates a new builder-style object to manufacture [`DvbSdtSettings`](crate::model::DvbSdtSettings).
     pub fn builder() -> crate::model::dvb_sdt_settings::Builder {
         crate::model::dvb_sdt_settings::Builder::default()
     }
@@ -23540,10 +23947,13 @@ impl AsRef<str> for OutputSdt {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DvbNitSettings {
     /// The numeric value placed in the Network Information Table (NIT).
+    #[doc(hidden)]
     pub network_id: i32,
     /// The network name text placed in the network_name_descriptor inside the Network Information Table. Maximum length is 256 characters.
+    #[doc(hidden)]
     pub network_name: std::option::Option<std::string::String>,
     /// The number of milliseconds between instances of this table in the output transport stream.
+    #[doc(hidden)]
     pub nit_interval: i32,
 }
 impl DvbNitSettings {
@@ -23569,11 +23979,10 @@ impl std::fmt::Debug for DvbNitSettings {
         formatter.finish()
     }
 }
-/// See [`DvbNitSettings`](crate::model::DvbNitSettings)
+/// See [`DvbNitSettings`](crate::model::DvbNitSettings).
 pub mod dvb_nit_settings {
 
-    /// A builder for [`DvbNitSettings`](crate::model::DvbNitSettings)
-    #[non_exhaustive]
+    /// A builder for [`DvbNitSettings`](crate::model::DvbNitSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) network_id: std::option::Option<i32>,
@@ -23611,7 +24020,7 @@ pub mod dvb_nit_settings {
             self.nit_interval = input;
             self
         }
-        /// Consumes the builder and constructs a [`DvbNitSettings`](crate::model::DvbNitSettings)
+        /// Consumes the builder and constructs a [`DvbNitSettings`](crate::model::DvbNitSettings).
         pub fn build(self) -> crate::model::DvbNitSettings {
             crate::model::DvbNitSettings {
                 network_id: self.network_id.unwrap_or_default(),
@@ -23622,7 +24031,7 @@ pub mod dvb_nit_settings {
     }
 }
 impl DvbNitSettings {
-    /// Creates a new builder-style object to manufacture [`DvbNitSettings`](crate::model::DvbNitSettings)
+    /// Creates a new builder-style object to manufacture [`DvbNitSettings`](crate::model::DvbNitSettings).
     pub fn builder() -> crate::model::dvb_nit_settings::Builder {
         crate::model::dvb_nit_settings::Builder::default()
     }
@@ -23853,6 +24262,7 @@ impl AsRef<str> for M2tsAudioBufferModel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct F4vSettings {
     /// If set to PROGRESSIVE_DOWNLOAD, the MOOV atom is relocated to the beginning of the archive as required for progressive downloading. Otherwise it is placed normally at the end.
+    #[doc(hidden)]
     pub moov_placement: std::option::Option<crate::model::F4vMoovPlacement>,
 }
 impl F4vSettings {
@@ -23868,11 +24278,10 @@ impl std::fmt::Debug for F4vSettings {
         formatter.finish()
     }
 }
-/// See [`F4vSettings`](crate::model::F4vSettings)
+/// See [`F4vSettings`](crate::model::F4vSettings).
 pub mod f4v_settings {
 
-    /// A builder for [`F4vSettings`](crate::model::F4vSettings)
-    #[non_exhaustive]
+    /// A builder for [`F4vSettings`](crate::model::F4vSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) moov_placement: std::option::Option<crate::model::F4vMoovPlacement>,
@@ -23891,7 +24300,7 @@ pub mod f4v_settings {
             self.moov_placement = input;
             self
         }
-        /// Consumes the builder and constructs a [`F4vSettings`](crate::model::F4vSettings)
+        /// Consumes the builder and constructs a [`F4vSettings`](crate::model::F4vSettings).
         pub fn build(self) -> crate::model::F4vSettings {
             crate::model::F4vSettings {
                 moov_placement: self.moov_placement,
@@ -23900,7 +24309,7 @@ pub mod f4v_settings {
     }
 }
 impl F4vSettings {
-    /// Creates a new builder-style object to manufacture [`F4vSettings`](crate::model::F4vSettings)
+    /// Creates a new builder-style object to manufacture [`F4vSettings`](crate::model::F4vSettings).
     pub fn builder() -> crate::model::f4v_settings::Builder {
         crate::model::f4v_settings::Builder::default()
     }
@@ -24059,25 +24468,35 @@ impl AsRef<str> for ContainerType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CmfcSettings {
     /// Specify this setting only when your output will be consumed by a downstream repackaging workflow that is sensitive to very small duration differences between video and audio. For this situation, choose Match video duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the total duration of each audio stream is at least as long as the total duration of the video stream. After padding or trimming, the audio stream duration is no more than one frame longer than the video stream. MediaConvert applies audio padding or trimming only to the end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the default value, any minor discrepancies between audio and video duration will depend on your output audio codec.
+    #[doc(hidden)]
     pub audio_duration: std::option::Option<crate::model::CmfcAudioDuration>,
     /// Specify the audio rendition group for this audio rendition. Specify up to one value for each audio output in your output group. This value appears in your HLS parent manifest in the EXT-X-MEDIA tag of TYPE=AUDIO, as the value for the GROUP-ID attribute. For example, if you specify "audio_aac_1" for Audio group ID, it appears in your manifest like this: #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio_aac_1". Related setting: To associate the rendition group that this audio track belongs to with a video rendition, include the same value that you provide here for that video output's setting Audio rendition sets (audioRenditionSets).
+    #[doc(hidden)]
     pub audio_group_id: std::option::Option<std::string::String>,
     /// List the audio rendition groups that you want included with this video rendition. Use a comma-separated list. For example, say you want to include the audio rendition groups that have the audio group IDs "audio_aac_1" and "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related setting: The rendition groups that you include in your comma-separated list should all match values that you specify in the setting Audio group ID (AudioGroupId) for audio renditions in the same output group as this video rendition. Default behavior: If you don't specify anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio rendition group and associates it with every video variant. Each value in your list appears in your HLS parent manifest in the EXT-X-STREAM-INF tag as the value for the AUDIO attribute. To continue the previous example, say that the file name for the child manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent manifest, each value will appear on separate lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"... amazing_video_1.m3u8 #EXT-X-STREAM-INF:AUDIO="audio_dolby"... amazing_video_1.m3u8
+    #[doc(hidden)]
     pub audio_rendition_sets: std::option::Option<std::string::String>,
     /// Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how the client player selects which audio track to play. The other options for this setting determine the values that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the audio variant. For more information about these attributes, see the Apple documentation article https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming/adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default (ALTERNATE_AUDIO_AUTO_SELECT_DEFAULT) to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only one variant in your output group. Choose Alternate audio, auto select, not default (ALTERNATE_AUDIO_AUTO_SELECT) to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to Alternate audio, auto select, default. When there is more than one variant in your output group, you must explicitly choose a value for this setting.
+    #[doc(hidden)]
     pub audio_track_type: std::option::Option<crate::model::CmfcAudioTrackType>,
     /// Specify whether to flag this audio track as descriptive video service (DVS) in your HLS parent manifest. When you choose Flag (FLAG), MediaConvert includes the parameter CHARACTERISTICS="public.accessibility.describes-video" in the EXT-X-MEDIA entry for this track. When you keep the default choice, Don't flag (DONT_FLAG), MediaConvert leaves this parameter out. The DVS flag can help with accessibility on Apple devices. For more information, see the Apple documentation.
+    #[doc(hidden)]
     pub descriptive_video_service_flag:
         std::option::Option<crate::model::CmfcDescriptiveVideoServiceFlag>,
     /// Choose Include (INCLUDE) to have MediaConvert generate an HLS child manifest that lists only the I-frames for this rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of a workflow that creates preview functions for your video. MediaConvert adds both the I-frame only child manifest and the regular child manifest to the parent manifest. When you don't need the I-frame only child manifest, keep the default value Exclude (EXCLUDE).
+    #[doc(hidden)]
     pub i_frame_only_manifest: std::option::Option<crate::model::CmfcIFrameOnlyManifest>,
     /// To include key-length-value metadata in this output: Set KLV metadata insertion to Passthrough. MediaConvert reads KLV metadata present in your input and writes each instance to a separate event message box in the output, according to MISB ST1910.1. To exclude this KLV metadata: Set KLV metadata insertion to None or leave blank.
+    #[doc(hidden)]
     pub klv_metadata: std::option::Option<crate::model::CmfcKlvMetadata>,
     /// Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in this output at the insertion points that you specify in an ESAM XML document. Provide the document in the setting SCC XML (sccXml).
+    #[doc(hidden)]
     pub scte35_esam: std::option::Option<crate::model::CmfcScte35Esam>,
     /// Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough (PASSTHROUGH) if you want SCTE-35 markers that appear in your input to also appear in this output. Choose None (NONE) if you don't want those SCTE-35 markers in this output.
+    #[doc(hidden)]
     pub scte35_source: std::option::Option<crate::model::CmfcScte35Source>,
     /// To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). Specify this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes each instance of ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None (NONE) or leave blank.
+    #[doc(hidden)]
     pub timed_metadata: std::option::Option<crate::model::CmfcTimedMetadata>,
 }
 impl CmfcSettings {
@@ -24145,11 +24564,10 @@ impl std::fmt::Debug for CmfcSettings {
         formatter.finish()
     }
 }
-/// See [`CmfcSettings`](crate::model::CmfcSettings)
+/// See [`CmfcSettings`](crate::model::CmfcSettings).
 pub mod cmfc_settings {
 
-    /// A builder for [`CmfcSettings`](crate::model::CmfcSettings)
-    #[non_exhaustive]
+    /// A builder for [`CmfcSettings`](crate::model::CmfcSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_duration: std::option::Option<crate::model::CmfcAudioDuration>,
@@ -24301,7 +24719,7 @@ pub mod cmfc_settings {
             self.timed_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`CmfcSettings`](crate::model::CmfcSettings)
+        /// Consumes the builder and constructs a [`CmfcSettings`](crate::model::CmfcSettings).
         pub fn build(self) -> crate::model::CmfcSettings {
             crate::model::CmfcSettings {
                 audio_duration: self.audio_duration,
@@ -24319,7 +24737,7 @@ pub mod cmfc_settings {
     }
 }
 impl CmfcSettings {
-    /// Creates a new builder-style object to manufacture [`CmfcSettings`](crate::model::CmfcSettings)
+    /// Creates a new builder-style object to manufacture [`CmfcSettings`](crate::model::CmfcSettings).
     pub fn builder() -> crate::model::cmfc_settings::Builder {
         crate::model::cmfc_settings::Builder::default()
     }
@@ -24727,12 +25145,16 @@ impl AsRef<str> for CmfcAudioTrackType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CaptionDescriptionPreset {
     /// Specify the language for this captions output track. For most captions output formats, the encoder puts this language information in the output captions metadata. If your output captions format is DVB-Sub or Burn in, the encoder uses this language information when automatically selecting the font script for rendering the captions text. For all outputs, you can use an ISO 639-2 or ISO 639-3 code. For streaming outputs, you can also use any other code in the full RFC-5646 specification. Streaming outputs are those that are in one of the following output groups: CMAF, DASH ISO, Apple HLS, or Microsoft Smooth Streaming.
+    #[doc(hidden)]
     pub custom_language_code: std::option::Option<std::string::String>,
     /// Settings related to one captions tab on the MediaConvert console. In your job JSON, an instance of captions DestinationSettings is equivalent to one captions tab in the console. Usually, one captions tab corresponds to one output captions track. Depending on your output captions format, one tab might correspond to a set of output captions tracks. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/including-captions.html.
+    #[doc(hidden)]
     pub destination_settings: std::option::Option<crate::model::CaptionDestinationSettings>,
     /// Specify the language of this captions output track. For most captions output formats, the encoder puts this language information in the output captions metadata. If your output captions format is DVB-Sub or Burn in, the encoder uses this language information to choose the font language for rendering the captions text.
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// Specify a label for this set of output captions. For example, "English", "Director commentary", or "track_2". For streaming outputs, MediaConvert passes this information into destination manifests for display on the end-viewer's player device. For outputs in other output groups, the service ignores this setting.
+    #[doc(hidden)]
     pub language_description: std::option::Option<std::string::String>,
 }
 impl CaptionDescriptionPreset {
@@ -24765,11 +25187,10 @@ impl std::fmt::Debug for CaptionDescriptionPreset {
         formatter.finish()
     }
 }
-/// See [`CaptionDescriptionPreset`](crate::model::CaptionDescriptionPreset)
+/// See [`CaptionDescriptionPreset`](crate::model::CaptionDescriptionPreset).
 pub mod caption_description_preset {
 
-    /// A builder for [`CaptionDescriptionPreset`](crate::model::CaptionDescriptionPreset)
-    #[non_exhaustive]
+    /// A builder for [`CaptionDescriptionPreset`](crate::model::CaptionDescriptionPreset).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_language_code: std::option::Option<std::string::String>,
@@ -24834,7 +25255,7 @@ pub mod caption_description_preset {
             self.language_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`CaptionDescriptionPreset`](crate::model::CaptionDescriptionPreset)
+        /// Consumes the builder and constructs a [`CaptionDescriptionPreset`](crate::model::CaptionDescriptionPreset).
         pub fn build(self) -> crate::model::CaptionDescriptionPreset {
             crate::model::CaptionDescriptionPreset {
                 custom_language_code: self.custom_language_code,
@@ -24846,7 +25267,7 @@ pub mod caption_description_preset {
     }
 }
 impl CaptionDescriptionPreset {
-    /// Creates a new builder-style object to manufacture [`CaptionDescriptionPreset`](crate::model::CaptionDescriptionPreset)
+    /// Creates a new builder-style object to manufacture [`CaptionDescriptionPreset`](crate::model::CaptionDescriptionPreset).
     pub fn builder() -> crate::model::caption_description_preset::Builder {
         crate::model::caption_description_preset::Builder::default()
     }
@@ -25689,26 +26110,36 @@ impl AsRef<str> for LanguageCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CaptionDestinationSettings {
     /// Burn-in is a captions delivery method, rather than a captions format. Burn-in writes the captions directly on your video frames, replacing pixels of video content with the captions. Set up burn-in captions in the same output as your video. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/burn-in-output-captions.html. When you work directly in your JSON job specification, include this object and any required children when you set destinationType to BURN_IN.
+    #[doc(hidden)]
     pub burnin_destination_settings: std::option::Option<crate::model::BurninDestinationSettings>,
     /// Specify the format for this set of captions on this output. The default format is embedded without SCTE-20. Note that your choice of video output container constrains your choice of output captions format. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/captions-support-tables.html. If you are using SCTE-20 and you want to create an output that complies with the SCTE-43 spec, choose SCTE-20 plus embedded (SCTE20_PLUS_EMBEDDED). To create a non-compliant output where the embedded captions come first, choose Embedded plus SCTE-20 (EMBEDDED_PLUS_SCTE20).
+    #[doc(hidden)]
     pub destination_type: std::option::Option<crate::model::CaptionDestinationType>,
     /// Settings related to DVB-Sub captions. Set up DVB-Sub captions in the same output as your video. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/dvb-sub-output-captions.html. When you work directly in your JSON job specification, include this object and any required children when you set destinationType to DVB_SUB.
+    #[doc(hidden)]
     pub dvb_sub_destination_settings: std::option::Option<crate::model::DvbSubDestinationSettings>,
     /// Settings related to CEA/EIA-608 and CEA/EIA-708 (also called embedded or ancillary) captions. Set up embedded captions in the same output as your video. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/embedded-output-captions.html. When you work directly in your JSON job specification, include this object and any required children when you set destinationType to EMBEDDED, EMBEDDED_PLUS_SCTE20, or SCTE20_PLUS_EMBEDDED.
+    #[doc(hidden)]
     pub embedded_destination_settings:
         std::option::Option<crate::model::EmbeddedDestinationSettings>,
     /// Settings related to IMSC captions. IMSC is a sidecar format that holds captions in a file that is separate from the video container. Set up sidecar captions in the same output group, but different output from your video. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/ttml-and-webvtt-output-captions.html. When you work directly in your JSON job specification, include this object and any required children when you set destinationType to IMSC.
+    #[doc(hidden)]
     pub imsc_destination_settings: std::option::Option<crate::model::ImscDestinationSettings>,
     /// Settings related to SCC captions. SCC is a sidecar format that holds captions in a file that is separate from the video container. Set up sidecar captions in the same output group, but different output from your video. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/scc-srt-output-captions.html. When you work directly in your JSON job specification, include this object and any required children when you set destinationType to SCC.
+    #[doc(hidden)]
     pub scc_destination_settings: std::option::Option<crate::model::SccDestinationSettings>,
     /// Settings related to SRT captions. SRT is a sidecar format that holds captions in a file that is separate from the video container. Set up sidecar captions in the same output group, but different output from your video. When you work directly in your JSON job specification, include this object and any required children when you set destinationType to SRT.
+    #[doc(hidden)]
     pub srt_destination_settings: std::option::Option<crate::model::SrtDestinationSettings>,
     /// Settings related to teletext captions. Set up teletext captions in the same output as your video. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/teletext-output-captions.html. When you work directly in your JSON job specification, include this object and any required children when you set destinationType to TELETEXT.
+    #[doc(hidden)]
     pub teletext_destination_settings:
         std::option::Option<crate::model::TeletextDestinationSettings>,
     /// Settings related to TTML captions. TTML is a sidecar format that holds captions in a file that is separate from the video container. Set up sidecar captions in the same output group, but different output from your video. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/ttml-and-webvtt-output-captions.html. When you work directly in your JSON job specification, include this object and any required children when you set destinationType to TTML.
+    #[doc(hidden)]
     pub ttml_destination_settings: std::option::Option<crate::model::TtmlDestinationSettings>,
     /// Settings related to WebVTT captions. WebVTT is a sidecar format that holds captions in a file that is separate from the video container. Set up sidecar captions in the same output group, but different output from your video. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/ttml-and-webvtt-output-captions.html. When you work directly in your JSON job specification, include this object and any required children when you set destinationType to WebVTT.
+    #[doc(hidden)]
     pub webvtt_destination_settings: std::option::Option<crate::model::WebvttDestinationSettings>,
 }
 impl CaptionDestinationSettings {
@@ -25802,11 +26233,10 @@ impl std::fmt::Debug for CaptionDestinationSettings {
         formatter.finish()
     }
 }
-/// See [`CaptionDestinationSettings`](crate::model::CaptionDestinationSettings)
+/// See [`CaptionDestinationSettings`](crate::model::CaptionDestinationSettings).
 pub mod caption_destination_settings {
 
-    /// A builder for [`CaptionDestinationSettings`](crate::model::CaptionDestinationSettings)
-    #[non_exhaustive]
+    /// A builder for [`CaptionDestinationSettings`](crate::model::CaptionDestinationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) burnin_destination_settings:
@@ -25987,7 +26417,7 @@ pub mod caption_destination_settings {
             self.webvtt_destination_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`CaptionDestinationSettings`](crate::model::CaptionDestinationSettings)
+        /// Consumes the builder and constructs a [`CaptionDestinationSettings`](crate::model::CaptionDestinationSettings).
         pub fn build(self) -> crate::model::CaptionDestinationSettings {
             crate::model::CaptionDestinationSettings {
                 burnin_destination_settings: self.burnin_destination_settings,
@@ -26005,7 +26435,7 @@ pub mod caption_destination_settings {
     }
 }
 impl CaptionDestinationSettings {
-    /// Creates a new builder-style object to manufacture [`CaptionDestinationSettings`](crate::model::CaptionDestinationSettings)
+    /// Creates a new builder-style object to manufacture [`CaptionDestinationSettings`](crate::model::CaptionDestinationSettings).
     pub fn builder() -> crate::model::caption_destination_settings::Builder {
         crate::model::caption_destination_settings::Builder::default()
     }
@@ -26016,8 +26446,10 @@ impl CaptionDestinationSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WebvttDestinationSettings {
     /// Set Accessibility subtitles to Enabled if the ISMC or WebVTT captions track is intended to provide accessibility for people who are deaf or hard of hearing. When you enable this feature, MediaConvert adds the following attributes under EXT-X-MEDIA in the HLS or CMAF manifest for this track: CHARACTERISTICS="public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and AUTOSELECT="YES". Keep the default value, Disabled, if the captions track is not intended to provide such accessibility. MediaConvert will not add the above attributes.
+    #[doc(hidden)]
     pub accessibility: std::option::Option<crate::model::WebvttAccessibilitySubs>,
     /// To use the available style, color, and position information from your input captions: Set Style passthrough (stylePassthrough) to Enabled (ENABLED). MediaConvert uses default settings when style and position information is missing from your input captions. To recreate the input captions exactly: Set Style passthrough to Strict (STRICT). MediaConvert automatically applies timing adjustments, including adjustments for frame rate conversion, ad avails, and input clipping. Your input captions format must be WebVTT. To ignore the style and position information from your input captions and use simplified output captions: Set Style passthrough to Disabled (DISABLED), or leave blank.
+    #[doc(hidden)]
     pub style_passthrough: std::option::Option<crate::model::WebvttStylePassthrough>,
 }
 impl WebvttDestinationSettings {
@@ -26038,11 +26470,10 @@ impl std::fmt::Debug for WebvttDestinationSettings {
         formatter.finish()
     }
 }
-/// See [`WebvttDestinationSettings`](crate::model::WebvttDestinationSettings)
+/// See [`WebvttDestinationSettings`](crate::model::WebvttDestinationSettings).
 pub mod webvtt_destination_settings {
 
-    /// A builder for [`WebvttDestinationSettings`](crate::model::WebvttDestinationSettings)
-    #[non_exhaustive]
+    /// A builder for [`WebvttDestinationSettings`](crate::model::WebvttDestinationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) accessibility: std::option::Option<crate::model::WebvttAccessibilitySubs>,
@@ -26075,7 +26506,7 @@ pub mod webvtt_destination_settings {
             self.style_passthrough = input;
             self
         }
-        /// Consumes the builder and constructs a [`WebvttDestinationSettings`](crate::model::WebvttDestinationSettings)
+        /// Consumes the builder and constructs a [`WebvttDestinationSettings`](crate::model::WebvttDestinationSettings).
         pub fn build(self) -> crate::model::WebvttDestinationSettings {
             crate::model::WebvttDestinationSettings {
                 accessibility: self.accessibility,
@@ -26085,7 +26516,7 @@ pub mod webvtt_destination_settings {
     }
 }
 impl WebvttDestinationSettings {
-    /// Creates a new builder-style object to manufacture [`WebvttDestinationSettings`](crate::model::WebvttDestinationSettings)
+    /// Creates a new builder-style object to manufacture [`WebvttDestinationSettings`](crate::model::WebvttDestinationSettings).
     pub fn builder() -> crate::model::webvtt_destination_settings::Builder {
         crate::model::webvtt_destination_settings::Builder::default()
     }
@@ -26210,6 +26641,7 @@ impl AsRef<str> for WebvttAccessibilitySubs {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TtmlDestinationSettings {
     /// Pass through style and position information from a TTML-like input source (TTML, IMSC, SMPTE-TT) to the TTML output.
+    #[doc(hidden)]
     pub style_passthrough: std::option::Option<crate::model::TtmlStylePassthrough>,
 }
 impl TtmlDestinationSettings {
@@ -26225,11 +26657,10 @@ impl std::fmt::Debug for TtmlDestinationSettings {
         formatter.finish()
     }
 }
-/// See [`TtmlDestinationSettings`](crate::model::TtmlDestinationSettings)
+/// See [`TtmlDestinationSettings`](crate::model::TtmlDestinationSettings).
 pub mod ttml_destination_settings {
 
-    /// A builder for [`TtmlDestinationSettings`](crate::model::TtmlDestinationSettings)
-    #[non_exhaustive]
+    /// A builder for [`TtmlDestinationSettings`](crate::model::TtmlDestinationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) style_passthrough: std::option::Option<crate::model::TtmlStylePassthrough>,
@@ -26248,7 +26679,7 @@ pub mod ttml_destination_settings {
             self.style_passthrough = input;
             self
         }
-        /// Consumes the builder and constructs a [`TtmlDestinationSettings`](crate::model::TtmlDestinationSettings)
+        /// Consumes the builder and constructs a [`TtmlDestinationSettings`](crate::model::TtmlDestinationSettings).
         pub fn build(self) -> crate::model::TtmlDestinationSettings {
             crate::model::TtmlDestinationSettings {
                 style_passthrough: self.style_passthrough,
@@ -26257,7 +26688,7 @@ pub mod ttml_destination_settings {
     }
 }
 impl TtmlDestinationSettings {
-    /// Creates a new builder-style object to manufacture [`TtmlDestinationSettings`](crate::model::TtmlDestinationSettings)
+    /// Creates a new builder-style object to manufacture [`TtmlDestinationSettings`](crate::model::TtmlDestinationSettings).
     pub fn builder() -> crate::model::ttml_destination_settings::Builder {
         crate::model::ttml_destination_settings::Builder::default()
     }
@@ -26323,8 +26754,10 @@ impl AsRef<str> for TtmlStylePassthrough {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TeletextDestinationSettings {
     /// Set pageNumber to the Teletext page number for the destination captions for this output. This value must be a three-digit hexadecimal string; strings ending in -FF are invalid. If you are passing through the entire set of Teletext data, do not use this field.
+    #[doc(hidden)]
     pub page_number: std::option::Option<std::string::String>,
     /// Specify the page types for this Teletext page. If you don't specify a value here, the service sets the page type to the default value Subtitle (PAGE_TYPE_SUBTITLE). If you pass through the entire set of Teletext data, don't use this field. When you pass through a set of Teletext pages, your output has the same page types as your input.
+    #[doc(hidden)]
     pub page_types: std::option::Option<std::vec::Vec<crate::model::TeletextPageType>>,
 }
 impl TeletextDestinationSettings {
@@ -26345,11 +26778,10 @@ impl std::fmt::Debug for TeletextDestinationSettings {
         formatter.finish()
     }
 }
-/// See [`TeletextDestinationSettings`](crate::model::TeletextDestinationSettings)
+/// See [`TeletextDestinationSettings`](crate::model::TeletextDestinationSettings).
 pub mod teletext_destination_settings {
 
-    /// A builder for [`TeletextDestinationSettings`](crate::model::TeletextDestinationSettings)
-    #[non_exhaustive]
+    /// A builder for [`TeletextDestinationSettings`](crate::model::TeletextDestinationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) page_number: std::option::Option<std::string::String>,
@@ -26385,7 +26817,7 @@ pub mod teletext_destination_settings {
             self.page_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`TeletextDestinationSettings`](crate::model::TeletextDestinationSettings)
+        /// Consumes the builder and constructs a [`TeletextDestinationSettings`](crate::model::TeletextDestinationSettings).
         pub fn build(self) -> crate::model::TeletextDestinationSettings {
             crate::model::TeletextDestinationSettings {
                 page_number: self.page_number,
@@ -26395,7 +26827,7 @@ pub mod teletext_destination_settings {
     }
 }
 impl TeletextDestinationSettings {
-    /// Creates a new builder-style object to manufacture [`TeletextDestinationSettings`](crate::model::TeletextDestinationSettings)
+    /// Creates a new builder-style object to manufacture [`TeletextDestinationSettings`](crate::model::TeletextDestinationSettings).
     pub fn builder() -> crate::model::teletext_destination_settings::Builder {
         crate::model::teletext_destination_settings::Builder::default()
     }
@@ -26483,6 +26915,7 @@ impl AsRef<str> for TeletextPageType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SrtDestinationSettings {
     /// Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position information from your input captions. MediaConvert uses default settings for any missing style and position information in your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position information from your input captions and use simplified output captions.
+    #[doc(hidden)]
     pub style_passthrough: std::option::Option<crate::model::SrtStylePassthrough>,
 }
 impl SrtDestinationSettings {
@@ -26498,11 +26931,10 @@ impl std::fmt::Debug for SrtDestinationSettings {
         formatter.finish()
     }
 }
-/// See [`SrtDestinationSettings`](crate::model::SrtDestinationSettings)
+/// See [`SrtDestinationSettings`](crate::model::SrtDestinationSettings).
 pub mod srt_destination_settings {
 
-    /// A builder for [`SrtDestinationSettings`](crate::model::SrtDestinationSettings)
-    #[non_exhaustive]
+    /// A builder for [`SrtDestinationSettings`](crate::model::SrtDestinationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) style_passthrough: std::option::Option<crate::model::SrtStylePassthrough>,
@@ -26521,7 +26953,7 @@ pub mod srt_destination_settings {
             self.style_passthrough = input;
             self
         }
-        /// Consumes the builder and constructs a [`SrtDestinationSettings`](crate::model::SrtDestinationSettings)
+        /// Consumes the builder and constructs a [`SrtDestinationSettings`](crate::model::SrtDestinationSettings).
         pub fn build(self) -> crate::model::SrtDestinationSettings {
             crate::model::SrtDestinationSettings {
                 style_passthrough: self.style_passthrough,
@@ -26530,7 +26962,7 @@ pub mod srt_destination_settings {
     }
 }
 impl SrtDestinationSettings {
-    /// Creates a new builder-style object to manufacture [`SrtDestinationSettings`](crate::model::SrtDestinationSettings)
+    /// Creates a new builder-style object to manufacture [`SrtDestinationSettings`](crate::model::SrtDestinationSettings).
     pub fn builder() -> crate::model::srt_destination_settings::Builder {
         crate::model::srt_destination_settings::Builder::default()
     }
@@ -26596,6 +27028,7 @@ impl AsRef<str> for SrtStylePassthrough {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SccDestinationSettings {
     /// Set Framerate (SccDestinationFramerate) to make sure that the captions and the video are synchronized in the output. Specify a frame rate that matches the frame rate of the associated video. If the video frame rate is 29.97, choose 29.97 dropframe (FRAMERATE_29_97_DROPFRAME) only if the video has video_insertion=true and drop_frame_timecode=true; otherwise, choose 29.97 non-dropframe (FRAMERATE_29_97_NON_DROPFRAME).
+    #[doc(hidden)]
     pub framerate: std::option::Option<crate::model::SccDestinationFramerate>,
 }
 impl SccDestinationSettings {
@@ -26611,11 +27044,10 @@ impl std::fmt::Debug for SccDestinationSettings {
         formatter.finish()
     }
 }
-/// See [`SccDestinationSettings`](crate::model::SccDestinationSettings)
+/// See [`SccDestinationSettings`](crate::model::SccDestinationSettings).
 pub mod scc_destination_settings {
 
-    /// A builder for [`SccDestinationSettings`](crate::model::SccDestinationSettings)
-    #[non_exhaustive]
+    /// A builder for [`SccDestinationSettings`](crate::model::SccDestinationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) framerate: std::option::Option<crate::model::SccDestinationFramerate>,
@@ -26634,7 +27066,7 @@ pub mod scc_destination_settings {
             self.framerate = input;
             self
         }
-        /// Consumes the builder and constructs a [`SccDestinationSettings`](crate::model::SccDestinationSettings)
+        /// Consumes the builder and constructs a [`SccDestinationSettings`](crate::model::SccDestinationSettings).
         pub fn build(self) -> crate::model::SccDestinationSettings {
             crate::model::SccDestinationSettings {
                 framerate: self.framerate,
@@ -26643,7 +27075,7 @@ pub mod scc_destination_settings {
     }
 }
 impl SccDestinationSettings {
-    /// Creates a new builder-style object to manufacture [`SccDestinationSettings`](crate::model::SccDestinationSettings)
+    /// Creates a new builder-style object to manufacture [`SccDestinationSettings`](crate::model::SccDestinationSettings).
     pub fn builder() -> crate::model::scc_destination_settings::Builder {
         crate::model::scc_destination_settings::Builder::default()
     }
@@ -26727,8 +27159,10 @@ impl AsRef<str> for SccDestinationFramerate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImscDestinationSettings {
     /// Set Accessibility subtitles to Enabled if the ISMC or WebVTT captions track is intended to provide accessibility for people who are deaf or hard of hearing. When you enable this feature, MediaConvert adds the following attributes under EXT-X-MEDIA in the HLS or CMAF manifest for this track: CHARACTERISTICS="public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and AUTOSELECT="YES". Keep the default value, Disabled, if the captions track is not intended to provide such accessibility. MediaConvert will not add the above attributes.
+    #[doc(hidden)]
     pub accessibility: std::option::Option<crate::model::ImscAccessibilitySubs>,
     /// Keep this setting enabled to have MediaConvert use the font style and position information from the captions source in the output. This option is available only when your input captions are IMSC, SMPTE-TT, or TTML. Disable this setting for simplified output captions.
+    #[doc(hidden)]
     pub style_passthrough: std::option::Option<crate::model::ImscStylePassthrough>,
 }
 impl ImscDestinationSettings {
@@ -26749,11 +27183,10 @@ impl std::fmt::Debug for ImscDestinationSettings {
         formatter.finish()
     }
 }
-/// See [`ImscDestinationSettings`](crate::model::ImscDestinationSettings)
+/// See [`ImscDestinationSettings`](crate::model::ImscDestinationSettings).
 pub mod imsc_destination_settings {
 
-    /// A builder for [`ImscDestinationSettings`](crate::model::ImscDestinationSettings)
-    #[non_exhaustive]
+    /// A builder for [`ImscDestinationSettings`](crate::model::ImscDestinationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) accessibility: std::option::Option<crate::model::ImscAccessibilitySubs>,
@@ -26786,7 +27219,7 @@ pub mod imsc_destination_settings {
             self.style_passthrough = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImscDestinationSettings`](crate::model::ImscDestinationSettings)
+        /// Consumes the builder and constructs a [`ImscDestinationSettings`](crate::model::ImscDestinationSettings).
         pub fn build(self) -> crate::model::ImscDestinationSettings {
             crate::model::ImscDestinationSettings {
                 accessibility: self.accessibility,
@@ -26796,7 +27229,7 @@ pub mod imsc_destination_settings {
     }
 }
 impl ImscDestinationSettings {
-    /// Creates a new builder-style object to manufacture [`ImscDestinationSettings`](crate::model::ImscDestinationSettings)
+    /// Creates a new builder-style object to manufacture [`ImscDestinationSettings`](crate::model::ImscDestinationSettings).
     pub fn builder() -> crate::model::imsc_destination_settings::Builder {
         crate::model::imsc_destination_settings::Builder::default()
     }
@@ -26917,8 +27350,10 @@ impl AsRef<str> for ImscAccessibilitySubs {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EmbeddedDestinationSettings {
     /// Ignore this setting unless your input captions are SCC format and your output captions are embedded in the video stream. Specify a CC number for each captions channel in this output. If you have two channels, choose CC numbers that aren't in the same field. For example, choose 1 and 3. For more information, see https://docs.aws.amazon.com/console/mediaconvert/dual-scc-to-embedded.
+    #[doc(hidden)]
     pub destination608_channel_number: i32,
     /// Ignore this setting unless your input captions are SCC format and you want both 608 and 708 captions embedded in your output stream. Optionally, specify the 708 service number for each output captions channel. Choose a different number for each channel. To use this setting, also set Force 608 to 708 upconvert (Convert608To708) to Upconvert (UPCONVERT) in your input captions selector settings. If you choose to upconvert but don't specify a 708 service number, MediaConvert uses the number that you specify for CC channel number (destination608ChannelNumber) for the 708 service number. For more information, see https://docs.aws.amazon.com/console/mediaconvert/dual-scc-to-embedded.
+    #[doc(hidden)]
     pub destination708_service_number: i32,
 }
 impl EmbeddedDestinationSettings {
@@ -26945,11 +27380,10 @@ impl std::fmt::Debug for EmbeddedDestinationSettings {
         formatter.finish()
     }
 }
-/// See [`EmbeddedDestinationSettings`](crate::model::EmbeddedDestinationSettings)
+/// See [`EmbeddedDestinationSettings`](crate::model::EmbeddedDestinationSettings).
 pub mod embedded_destination_settings {
 
-    /// A builder for [`EmbeddedDestinationSettings`](crate::model::EmbeddedDestinationSettings)
-    #[non_exhaustive]
+    /// A builder for [`EmbeddedDestinationSettings`](crate::model::EmbeddedDestinationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination608_channel_number: std::option::Option<i32>,
@@ -26982,7 +27416,7 @@ pub mod embedded_destination_settings {
             self.destination708_service_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`EmbeddedDestinationSettings`](crate::model::EmbeddedDestinationSettings)
+        /// Consumes the builder and constructs a [`EmbeddedDestinationSettings`](crate::model::EmbeddedDestinationSettings).
         pub fn build(self) -> crate::model::EmbeddedDestinationSettings {
             crate::model::EmbeddedDestinationSettings {
                 destination608_channel_number: self
@@ -26996,7 +27430,7 @@ pub mod embedded_destination_settings {
     }
 }
 impl EmbeddedDestinationSettings {
-    /// Creates a new builder-style object to manufacture [`EmbeddedDestinationSettings`](crate::model::EmbeddedDestinationSettings)
+    /// Creates a new builder-style object to manufacture [`EmbeddedDestinationSettings`](crate::model::EmbeddedDestinationSettings).
     pub fn builder() -> crate::model::embedded_destination_settings::Builder {
         crate::model::embedded_destination_settings::Builder::default()
     }
@@ -27007,58 +27441,85 @@ impl EmbeddedDestinationSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DvbSubDestinationSettings {
     /// Specify the alignment of your captions. If no explicit x_position is provided, setting alignment to centered will placethe captions at the bottom center of the output. Similarly, setting a left alignment willalign captions to the bottom left of the output. If x and y positions are given in conjunction with the alignment parameter, the font will be justified (either left or centered) relative to those coordinates. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub alignment: std::option::Option<crate::model::DvbSubtitleAlignment>,
     /// Ignore this setting unless Style Passthrough (StylePassthrough) is set to Enabled and Font color (FontColor) set to Black, Yellow, Red, Green, Blue, or Hex. Use Apply font color (ApplyFontColor) for additional font color controls. When you choose White text only (WHITE_TEXT_ONLY), or leave blank, your font color setting only applies to white text in your input captions. For example, if your font color setting is Yellow, and your input captions have red and white text, your output captions will have red and yellow text. When you choose ALL_TEXT, your font color setting applies to all of your output captions text.
+    #[doc(hidden)]
     pub apply_font_color: std::option::Option<crate::model::DvbSubtitleApplyFontColor>,
     /// Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank and set Style passthrough (StylePassthrough) to enabled to use the background color data from your input captions, if present.
+    #[doc(hidden)]
     pub background_color: std::option::Option<crate::model::DvbSubtitleBackgroundColor>,
     /// Specify the opacity of the background rectangle. Enter a value from 0 to 255, where 0 is transparent and 255 is opaque. If Style passthrough (StylePassthrough) is set to enabled, leave blank to pass through the background style information in your input captions to your output captions. If Style passthrough is set to disabled, leave blank to use a value of 0 and remove all backgrounds from your output captions. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub background_opacity: i32,
     /// Specify how MediaConvert handles the display definition segment (DDS). Keep the default, None (NONE), to exclude the DDS from this set of captions. Choose No display window (NO_DISPLAY_WINDOW) to have MediaConvert include the DDS but not include display window data. In this case, MediaConvert writes that information to the page composition segment (PCS) instead. Choose Specify (SPECIFIED) to have MediaConvert set up the display window based on the values that you specify in related job settings. For video resolutions that are 576 pixels or smaller in height, MediaConvert doesn't include the DDS, regardless of the value you choose for DDS handling (ddsHandling). In this case, it doesn't write the display window data to the PCS either. Related settings: Use the settings DDS x-coordinate (ddsXCoordinate) and DDS y-coordinate (ddsYCoordinate) to specify the offset between the top left corner of the display window and the top left corner of the video frame. All burn-in and DVB-Sub font settings must match.
+    #[doc(hidden)]
     pub dds_handling: std::option::Option<crate::model::DvbddsHandling>,
     /// Use this setting, along with DDS y-coordinate (ddsYCoordinate), to specify the upper left corner of the display definition segment (DDS) display window. With this setting, specify the distance, in pixels, between the left side of the frame and the left side of the DDS display window. Keep the default value, 0, to have MediaConvert automatically choose this offset. Related setting: When you use this setting, you must set DDS handling (ddsHandling) to a value other than None (NONE). MediaConvert uses these values to determine whether to write page position data to the DDS or to the page composition segment (PCS). All burn-in and DVB-Sub font settings must match.
+    #[doc(hidden)]
     pub dds_x_coordinate: i32,
     /// Use this setting, along with DDS x-coordinate (ddsXCoordinate), to specify the upper left corner of the display definition segment (DDS) display window. With this setting, specify the distance, in pixels, between the top of the frame and the top of the DDS display window. Keep the default value, 0, to have MediaConvert automatically choose this offset. Related setting: When you use this setting, you must set DDS handling (ddsHandling) to a value other than None (NONE). MediaConvert uses these values to determine whether to write page position data to the DDS or to the page composition segment (PCS). All burn-in and DVB-Sub font settings must match.
+    #[doc(hidden)]
     pub dds_y_coordinate: i32,
     /// Specify the font that you want the service to use for your burn in captions when your input captions specify a font that MediaConvert doesn't support. When you set Fallback font (FallbackFont) to best match (BEST_MATCH), or leave blank, MediaConvert uses a supported font that most closely matches the font that your input captions specify. When there are multiple unsupported fonts in your input captions, MediaConvert matches each font with the supported font that matches best. When you explicitly choose a replacement font, MediaConvert uses that font to replace all unsupported fonts from your input.
+    #[doc(hidden)]
     pub fallback_font: std::option::Option<crate::model::DvbSubSubtitleFallbackFont>,
     /// Specify the color of the captions text. Leave Font color (FontColor) blank and set Style passthrough (StylePassthrough) to enabled to use the font color data from your input captions, if present. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub font_color: std::option::Option<crate::model::DvbSubtitleFontColor>,
     /// Specify the opacity of the burned-in captions. 255 is opaque; 0 is transparent. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub font_opacity: i32,
     /// Specify the Font resolution (FontResolution) in DPI (dots per inch). Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub font_resolution: i32,
     /// Set Font script (FontScript) to Automatically determined (AUTOMATIC), or leave blank, to automatically determine the font script in your input captions. Otherwise, set to Simplified Chinese (HANS) or Traditional Chinese (HANT) if your input font script uses Simplified or Traditional Chinese. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub font_script: std::option::Option<crate::model::FontScript>,
     /// Specify the Font size (FontSize) in pixels. Must be a positive integer. Set to 0, or leave blank, for automatic font size. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub font_size: i32,
     /// Specify the height, in pixels, of this set of DVB-Sub captions. The default value is 576 pixels. Related setting: When you use this setting, you must set DDS handling (ddsHandling) to a value other than None (NONE). All burn-in and DVB-Sub font settings must match.
+    #[doc(hidden)]
     pub height: i32,
     /// Ignore this setting unless your Font color is set to Hex. Enter either six or eight hexidecimal digits, representing red, green, and blue, with two optional extra digits for alpha. For example a value of 1122AABB is a red value of 0x11, a green value of 0x22, a blue value of 0xAA, and an alpha value of 0xBB.
+    #[doc(hidden)]
     pub hex_font_color: std::option::Option<std::string::String>,
     /// Specify font outline color. Leave Outline color (OutlineColor) blank and set Style passthrough (StylePassthrough) to enabled to use the font outline color data from your input captions, if present. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub outline_color: std::option::Option<crate::model::DvbSubtitleOutlineColor>,
     /// Specify the Outline size (OutlineSize) of the caption text, in pixels. Leave Outline size blank and set Style passthrough (StylePassthrough) to enabled to use the outline size data from your input captions, if present. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub outline_size: i32,
     /// Specify the color of the shadow cast by the captions. Leave Shadow color (ShadowColor) blank and set Style passthrough (StylePassthrough) to enabled to use the shadow color data from your input captions, if present. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub shadow_color: std::option::Option<crate::model::DvbSubtitleShadowColor>,
     /// Specify the opacity of the shadow. Enter a value from 0 to 255, where 0 is transparent and 255 is opaque. If Style passthrough (StylePassthrough) is set to Enabled, leave Shadow opacity (ShadowOpacity) blank to pass through the shadow style information in your input captions to your output captions. If Style passthrough is set to disabled, leave blank to use a value of 0 and remove all shadows from your output captions. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub shadow_opacity: i32,
     /// Specify the horizontal offset of the shadow, relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels to the left. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub shadow_x_offset: i32,
     /// Specify the vertical offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels above the text. Leave Shadow y-offset (ShadowYOffset) blank and set Style passthrough (StylePassthrough) to enabled to use the shadow y-offset data from your input captions, if present. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub shadow_y_offset: i32,
     /// Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position information from your input captions. MediaConvert uses default settings for any missing style and position information in your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position information from your input captions and use default settings: white text with black outlining, bottom-center positioning, and automatic sizing. Whether you set Style passthrough to enabled or not, you can also choose to manually override any of the individual style and position settings.
+    #[doc(hidden)]
     pub style_passthrough: std::option::Option<crate::model::DvbSubtitleStylePassthrough>,
     /// Specify whether your DVB subtitles are standard or for hearing impaired. Choose hearing impaired if your subtitles include audio descriptions and dialogue. Choose standard if your subtitles include only dialogue.
+    #[doc(hidden)]
     pub subtitling_type: std::option::Option<crate::model::DvbSubtitlingType>,
     /// Specify whether the Text spacing (TeletextSpacing) in your captions is set by the captions grid, or varies depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub teletext_spacing: std::option::Option<crate::model::DvbSubtitleTeletextSpacing>,
     /// Specify the width, in pixels, of this set of DVB-Sub captions. The default value is 720 pixels. Related setting: When you use this setting, you must set DDS handling (ddsHandling) to a value other than None (NONE). All burn-in and DVB-Sub font settings must match.
+    #[doc(hidden)]
     pub width: i32,
     /// Specify the horizontal position (XPosition) of the captions, relative to the left side of the outputin pixels. A value of 10 would result in the captions starting 10 pixels from the left ofthe output. If no explicit x_position is provided, the horizontal caption position will bedetermined by the alignment parameter. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub x_position: i32,
     /// Specify the vertical position (YPosition) of the captions, relative to the top of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the top of the output. If no explicit y_position is provided, the caption will be positioned towards the bottom of the output. Within your job settings, all of your DVB-Sub settings must be identical.
+    #[doc(hidden)]
     pub y_position: i32,
 }
 impl DvbSubDestinationSettings {
@@ -27212,11 +27673,10 @@ impl std::fmt::Debug for DvbSubDestinationSettings {
         formatter.finish()
     }
 }
-/// See [`DvbSubDestinationSettings`](crate::model::DvbSubDestinationSettings)
+/// See [`DvbSubDestinationSettings`](crate::model::DvbSubDestinationSettings).
 pub mod dvb_sub_destination_settings {
 
-    /// A builder for [`DvbSubDestinationSettings`](crate::model::DvbSubDestinationSettings)
-    #[non_exhaustive]
+    /// A builder for [`DvbSubDestinationSettings`](crate::model::DvbSubDestinationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alignment: std::option::Option<crate::model::DvbSubtitleAlignment>,
@@ -27561,7 +28021,7 @@ pub mod dvb_sub_destination_settings {
             self.y_position = input;
             self
         }
-        /// Consumes the builder and constructs a [`DvbSubDestinationSettings`](crate::model::DvbSubDestinationSettings)
+        /// Consumes the builder and constructs a [`DvbSubDestinationSettings`](crate::model::DvbSubDestinationSettings).
         pub fn build(self) -> crate::model::DvbSubDestinationSettings {
             crate::model::DvbSubDestinationSettings {
                 alignment: self.alignment,
@@ -27596,7 +28056,7 @@ pub mod dvb_sub_destination_settings {
     }
 }
 impl DvbSubDestinationSettings {
-    /// Creates a new builder-style object to manufacture [`DvbSubDestinationSettings`](crate::model::DvbSubDestinationSettings)
+    /// Creates a new builder-style object to manufacture [`DvbSubDestinationSettings`](crate::model::DvbSubDestinationSettings).
     pub fn builder() -> crate::model::dvb_sub_destination_settings::Builder {
         crate::model::dvb_sub_destination_settings::Builder::default()
     }
@@ -28471,46 +28931,67 @@ impl AsRef<str> for CaptionDestinationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BurninDestinationSettings {
     /// Specify the alignment of your captions. If no explicit x_position is provided, setting alignment to centered will placethe captions at the bottom center of the output. Similarly, setting a left alignment willalign captions to the bottom left of the output. If x and y positions are given in conjunction with the alignment parameter, the font will be justified (either left or centered) relative to those coordinates.
+    #[doc(hidden)]
     pub alignment: std::option::Option<crate::model::BurninSubtitleAlignment>,
     /// Ignore this setting unless Style passthrough (StylePassthrough) is set to Enabled and Font color (FontColor) set to Black, Yellow, Red, Green, Blue, or Hex. Use Apply font color (ApplyFontColor) for additional font color controls. When you choose White text only (WHITE_TEXT_ONLY), or leave blank, your font color setting only applies to white text in your input captions. For example, if your font color setting is Yellow, and your input captions have red and white text, your output captions will have red and yellow text. When you choose ALL_TEXT, your font color setting applies to all of your output captions text.
+    #[doc(hidden)]
     pub apply_font_color: std::option::Option<crate::model::BurninSubtitleApplyFontColor>,
     /// Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank and set Style passthrough (StylePassthrough) to enabled to use the background color data from your input captions, if present.
+    #[doc(hidden)]
     pub background_color: std::option::Option<crate::model::BurninSubtitleBackgroundColor>,
     /// Specify the opacity of the background rectangle. Enter a value from 0 to 255, where 0 is transparent and 255 is opaque. If Style passthrough (StylePassthrough) is set to enabled, leave blank to pass through the background style information in your input captions to your output captions. If Style passthrough is set to disabled, leave blank to use a value of 0 and remove all backgrounds from your output captions.
+    #[doc(hidden)]
     pub background_opacity: i32,
     /// Specify the font that you want the service to use for your burn in captions when your input captions specify a font that MediaConvert doesn't support. When you set Fallback font (FallbackFont) to best match (BEST_MATCH), or leave blank, MediaConvert uses a supported font that most closely matches the font that your input captions specify. When there are multiple unsupported fonts in your input captions, MediaConvert matches each font with the supported font that matches best. When you explicitly choose a replacement font, MediaConvert uses that font to replace all unsupported fonts from your input.
+    #[doc(hidden)]
     pub fallback_font: std::option::Option<crate::model::BurninSubtitleFallbackFont>,
     /// Specify the color of the burned-in captions text. Leave Font color (FontColor) blank and set Style passthrough (StylePassthrough) to enabled to use the font color data from your input captions, if present.
+    #[doc(hidden)]
     pub font_color: std::option::Option<crate::model::BurninSubtitleFontColor>,
     /// Specify the opacity of the burned-in captions. 255 is opaque; 0 is transparent.
+    #[doc(hidden)]
     pub font_opacity: i32,
     /// Specify the Font resolution (FontResolution) in DPI (dots per inch).
+    #[doc(hidden)]
     pub font_resolution: i32,
     /// Set Font script (FontScript) to Automatically determined (AUTOMATIC), or leave blank, to automatically determine the font script in your input captions. Otherwise, set to Simplified Chinese (HANS) or Traditional Chinese (HANT) if your input font script uses Simplified or Traditional Chinese.
+    #[doc(hidden)]
     pub font_script: std::option::Option<crate::model::FontScript>,
     /// Specify the Font size (FontSize) in pixels. Must be a positive integer. Set to 0, or leave blank, for automatic font size.
+    #[doc(hidden)]
     pub font_size: i32,
     /// Ignore this setting unless your Font color is set to Hex. Enter either six or eight hexidecimal digits, representing red, green, and blue, with two optional extra digits for alpha. For example a value of 1122AABB is a red value of 0x11, a green value of 0x22, a blue value of 0xAA, and an alpha value of 0xBB.
+    #[doc(hidden)]
     pub hex_font_color: std::option::Option<std::string::String>,
     /// Specify font outline color. Leave Outline color (OutlineColor) blank and set Style passthrough (StylePassthrough) to enabled to use the font outline color data from your input captions, if present.
+    #[doc(hidden)]
     pub outline_color: std::option::Option<crate::model::BurninSubtitleOutlineColor>,
     /// Specify the Outline size (OutlineSize) of the caption text, in pixels. Leave Outline size blank and set Style passthrough (StylePassthrough) to enabled to use the outline size data from your input captions, if present.
+    #[doc(hidden)]
     pub outline_size: i32,
     /// Specify the color of the shadow cast by the captions. Leave Shadow color (ShadowColor) blank and set Style passthrough (StylePassthrough) to enabled to use the shadow color data from your input captions, if present.
+    #[doc(hidden)]
     pub shadow_color: std::option::Option<crate::model::BurninSubtitleShadowColor>,
     /// Specify the opacity of the shadow. Enter a value from 0 to 255, where 0 is transparent and 255 is opaque. If Style passthrough (StylePassthrough) is set to Enabled, leave Shadow opacity (ShadowOpacity) blank to pass through the shadow style information in your input captions to your output captions. If Style passthrough is set to disabled, leave blank to use a value of 0 and remove all shadows from your output captions.
+    #[doc(hidden)]
     pub shadow_opacity: i32,
     /// Specify the horizontal offset of the shadow, relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels to the left.
+    #[doc(hidden)]
     pub shadow_x_offset: i32,
     /// Specify the vertical offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels above the text. Leave Shadow y-offset (ShadowYOffset) blank and set Style passthrough (StylePassthrough) to enabled to use the shadow y-offset data from your input captions, if present.
+    #[doc(hidden)]
     pub shadow_y_offset: i32,
     /// Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position information from your input captions. MediaConvert uses default settings for any missing style and position information in your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position information from your input captions and use default settings: white text with black outlining, bottom-center positioning, and automatic sizing. Whether you set Style passthrough to enabled or not, you can also choose to manually override any of the individual style and position settings.
+    #[doc(hidden)]
     pub style_passthrough: std::option::Option<crate::model::BurnInSubtitleStylePassthrough>,
     /// Specify whether the text spacing (TeletextSpacing) in your captions is set by the captions grid, or varies depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions.
+    #[doc(hidden)]
     pub teletext_spacing: std::option::Option<crate::model::BurninSubtitleTeletextSpacing>,
     /// Specify the horizontal position (XPosition) of the captions, relative to the left side of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the left of the output. If no explicit x_position is provided, the horizontal caption position will be determined by the alignment parameter.
+    #[doc(hidden)]
     pub x_position: i32,
     /// Specify the vertical position (YPosition) of the captions, relative to the top of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the top of the output. If no explicit y_position is provided, the caption will be positioned towards the bottom of the output.
+    #[doc(hidden)]
     pub y_position: i32,
 }
 impl BurninDestinationSettings {
@@ -28634,11 +29115,10 @@ impl std::fmt::Debug for BurninDestinationSettings {
         formatter.finish()
     }
 }
-/// See [`BurninDestinationSettings`](crate::model::BurninDestinationSettings)
+/// See [`BurninDestinationSettings`](crate::model::BurninDestinationSettings).
 pub mod burnin_destination_settings {
 
-    /// A builder for [`BurninDestinationSettings`](crate::model::BurninDestinationSettings)
-    #[non_exhaustive]
+    /// A builder for [`BurninDestinationSettings`](crate::model::BurninDestinationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alignment: std::option::Option<crate::model::BurninSubtitleAlignment>,
@@ -28923,7 +29403,7 @@ pub mod burnin_destination_settings {
             self.y_position = input;
             self
         }
-        /// Consumes the builder and constructs a [`BurninDestinationSettings`](crate::model::BurninDestinationSettings)
+        /// Consumes the builder and constructs a [`BurninDestinationSettings`](crate::model::BurninDestinationSettings).
         pub fn build(self) -> crate::model::BurninDestinationSettings {
             crate::model::BurninDestinationSettings {
                 alignment: self.alignment,
@@ -28952,7 +29432,7 @@ pub mod burnin_destination_settings {
     }
 }
 impl BurninDestinationSettings {
-    /// Creates a new builder-style object to manufacture [`BurninDestinationSettings`](crate::model::BurninDestinationSettings)
+    /// Creates a new builder-style object to manufacture [`BurninDestinationSettings`](crate::model::BurninDestinationSettings).
     pub fn builder() -> crate::model::burnin_destination_settings::Builder {
         crate::model::burnin_destination_settings::Builder::default()
     }
@@ -29546,27 +30026,38 @@ impl AsRef<str> for BurninSubtitleAlignment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AudioDescription {
     /// When you mimic a multi-channel audio layout with multiple mono-channel tracks, you can tag each channel layout manually. For example, you would tag the tracks that contain your left, right, and center audio with Left (L), Right (R), and Center (C), respectively. When you don't specify a value, MediaConvert labels your track as Center (C) by default. To use audio layout tagging, your output must be in a QuickTime (.mov) container; your audio codec must be AAC, WAV, or AIFF; and you must set up your audio track to have only one channel.
+    #[doc(hidden)]
     pub audio_channel_tagging_settings:
         std::option::Option<crate::model::AudioChannelTaggingSettings>,
     /// Advanced audio normalization settings. Ignore these settings unless you need to comply with a loudness standard.
+    #[doc(hidden)]
     pub audio_normalization_settings: std::option::Option<crate::model::AudioNormalizationSettings>,
     /// Specifies which audio data to use from each input. In the simplest case, specify an "Audio Selector":#inputs-audio_selector by name based on its order within each input. For example if you specify "Audio Selector 3", then the third audio selector will be used from each input. If an input does not have an "Audio Selector 3", then the audio selector marked as "default" in that input will be used. If there is no audio selector marked as "default", silence will be inserted for the duration of that input. Alternatively, an "Audio Selector Group":#inputs-audio_selector_group name may be specified, with similar default/silence behavior. If no audio_source_name is specified, then "Audio Selector 1" will be chosen automatically.
+    #[doc(hidden)]
     pub audio_source_name: std::option::Option<std::string::String>,
     /// Applies only if Follow Input Audio Type is unchecked (false). A number between 0 and 255. The following are defined in ISO-IEC 13818-1: 0 = Undefined, 1 = Clean Effects, 2 = Hearing Impaired, 3 = Visually Impaired Commentary, 4-255 = Reserved.
+    #[doc(hidden)]
     pub audio_type: i32,
     /// When set to FOLLOW_INPUT, if the input contains an ISO 639 audio_type, then that value is passed through to the output. If the input contains no ISO 639 audio_type, the value in Audio Type is included in the output. Otherwise the value in Audio Type is included in the output. Note that this field and audioType are both ignored if audioDescriptionBroadcasterMix is set to BROADCASTER_MIXED_AD.
+    #[doc(hidden)]
     pub audio_type_control: std::option::Option<crate::model::AudioTypeControl>,
     /// Settings related to audio encoding. The settings in this group vary depending on the value that you choose for your audio codec.
+    #[doc(hidden)]
     pub codec_settings: std::option::Option<crate::model::AudioCodecSettings>,
     /// Specify the language for this audio output track. The service puts this language code into your output audio track when you set Language code control (AudioLanguageCodeControl) to Use configured (USE_CONFIGURED). The service also uses your specified custom language code when you set Language code control (AudioLanguageCodeControl) to Follow input (FOLLOW_INPUT), but your input file doesn't specify a language code. For all outputs, you can use an ISO 639-2 or ISO 639-3 code. For streaming outputs, you can also use any other code in the full RFC-5646 specification. Streaming outputs are those that are in one of the following output groups: CMAF, DASH ISO, Apple HLS, or Microsoft Smooth Streaming.
+    #[doc(hidden)]
     pub custom_language_code: std::option::Option<std::string::String>,
     /// Indicates the language of the audio output track. The ISO 639 language specified in the 'Language Code' drop down will be used when 'Follow Input Language Code' is not selected or when 'Follow Input Language Code' is selected but there is no ISO 639 language code specified by the input.
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// Specify which source for language code takes precedence for this audio track. When you choose Follow input (FOLLOW_INPUT), the service uses the language code from the input track if it's present. If there's no languge code on the input track, the service uses the code that you specify in the setting Language code (languageCode or customLanguageCode). When you choose Use configured (USE_CONFIGURED), the service uses the language code that you specify.
+    #[doc(hidden)]
     pub language_code_control: std::option::Option<crate::model::AudioLanguageCodeControl>,
     /// Advanced audio remixing settings.
+    #[doc(hidden)]
     pub remix_settings: std::option::Option<crate::model::RemixSettings>,
     /// Specify a label for this output audio stream. For example, "English", "Director commentary", or "track_2". For streaming outputs, MediaConvert passes this information into destination manifests for display on the end-viewer's player device. For outputs in other output groups, the service ignores this setting.
+    #[doc(hidden)]
     pub stream_name: std::option::Option<std::string::String>,
 }
 impl AudioDescription {
@@ -29644,11 +30135,10 @@ impl std::fmt::Debug for AudioDescription {
         formatter.finish()
     }
 }
-/// See [`AudioDescription`](crate::model::AudioDescription)
+/// See [`AudioDescription`](crate::model::AudioDescription).
 pub mod audio_description {
 
-    /// A builder for [`AudioDescription`](crate::model::AudioDescription)
-    #[non_exhaustive]
+    /// A builder for [`AudioDescription`](crate::model::AudioDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_channel_tagging_settings:
@@ -29813,7 +30303,7 @@ pub mod audio_description {
             self.stream_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AudioDescription`](crate::model::AudioDescription)
+        /// Consumes the builder and constructs a [`AudioDescription`](crate::model::AudioDescription).
         pub fn build(self) -> crate::model::AudioDescription {
             crate::model::AudioDescription {
                 audio_channel_tagging_settings: self.audio_channel_tagging_settings,
@@ -29832,7 +30322,7 @@ pub mod audio_description {
     }
 }
 impl AudioDescription {
-    /// Creates a new builder-style object to manufacture [`AudioDescription`](crate::model::AudioDescription)
+    /// Creates a new builder-style object to manufacture [`AudioDescription`](crate::model::AudioDescription).
     pub fn builder() -> crate::model::audio_description::Builder {
         crate::model::audio_description::Builder::default()
     }
@@ -29843,10 +30333,13 @@ impl AudioDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemixSettings {
     /// Channel mapping (ChannelMapping) contains the group of fields that hold the remixing value for each channel, in dB. Specify remix values to indicate how much of the content from your input audio channel you want in your output audio channels. Each instance of the InputChannels or InputChannelsFineTune array specifies these values for one output channel. Use one instance of this array for each output channel. In the console, each array corresponds to a column in the graphical depiction of the mapping matrix. The rows of the graphical matrix correspond to input channels. Valid values are within the range from -60 (mute) through 6. A setting of 0 passes the input channel unchanged to the output channel (no attenuation or amplification). Use InputChannels or InputChannelsFineTune to specify your remix values. Don't use both.
+    #[doc(hidden)]
     pub channel_mapping: std::option::Option<crate::model::ChannelMapping>,
     /// Specify the number of audio channels from your input that you want to use in your output. With remixing, you might combine or split the data in these channels, so the number of channels in your final output might be different. If you are doing both input channel mapping and output channel mapping, the number of output channels in your input mapping must be the same as the number of input channels in your output mapping.
+    #[doc(hidden)]
     pub channels_in: i32,
     /// Specify the number of channels in this output after remixing. Valid values: 1, 2, 4, 6, 8... 64. (1 and even numbers to 64.) If you are doing both input channel mapping and output channel mapping, the number of output channels in your input mapping must be the same as the number of input channels in your output mapping.
+    #[doc(hidden)]
     pub channels_out: i32,
 }
 impl RemixSettings {
@@ -29872,11 +30365,10 @@ impl std::fmt::Debug for RemixSettings {
         formatter.finish()
     }
 }
-/// See [`RemixSettings`](crate::model::RemixSettings)
+/// See [`RemixSettings`](crate::model::RemixSettings).
 pub mod remix_settings {
 
-    /// A builder for [`RemixSettings`](crate::model::RemixSettings)
-    #[non_exhaustive]
+    /// A builder for [`RemixSettings`](crate::model::RemixSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_mapping: std::option::Option<crate::model::ChannelMapping>,
@@ -29917,7 +30409,7 @@ pub mod remix_settings {
             self.channels_out = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemixSettings`](crate::model::RemixSettings)
+        /// Consumes the builder and constructs a [`RemixSettings`](crate::model::RemixSettings).
         pub fn build(self) -> crate::model::RemixSettings {
             crate::model::RemixSettings {
                 channel_mapping: self.channel_mapping,
@@ -29928,7 +30420,7 @@ pub mod remix_settings {
     }
 }
 impl RemixSettings {
-    /// Creates a new builder-style object to manufacture [`RemixSettings`](crate::model::RemixSettings)
+    /// Creates a new builder-style object to manufacture [`RemixSettings`](crate::model::RemixSettings).
     pub fn builder() -> crate::model::remix_settings::Builder {
         crate::model::remix_settings::Builder::default()
     }
@@ -29939,6 +30431,7 @@ impl RemixSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChannelMapping {
     /// In your JSON job specification, include one child of OutputChannels for each audio channel that you want in your output. Each child should contain one instance of InputChannels or InputChannelsFineTune.
+    #[doc(hidden)]
     pub output_channels: std::option::Option<std::vec::Vec<crate::model::OutputChannelMapping>>,
 }
 impl ChannelMapping {
@@ -29954,11 +30447,10 @@ impl std::fmt::Debug for ChannelMapping {
         formatter.finish()
     }
 }
-/// See [`ChannelMapping`](crate::model::ChannelMapping)
+/// See [`ChannelMapping`](crate::model::ChannelMapping).
 pub mod channel_mapping {
 
-    /// A builder for [`ChannelMapping`](crate::model::ChannelMapping)
-    #[non_exhaustive]
+    /// A builder for [`ChannelMapping`](crate::model::ChannelMapping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) output_channels:
@@ -29984,7 +30476,7 @@ pub mod channel_mapping {
             self.output_channels = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChannelMapping`](crate::model::ChannelMapping)
+        /// Consumes the builder and constructs a [`ChannelMapping`](crate::model::ChannelMapping).
         pub fn build(self) -> crate::model::ChannelMapping {
             crate::model::ChannelMapping {
                 output_channels: self.output_channels,
@@ -29993,7 +30485,7 @@ pub mod channel_mapping {
     }
 }
 impl ChannelMapping {
-    /// Creates a new builder-style object to manufacture [`ChannelMapping`](crate::model::ChannelMapping)
+    /// Creates a new builder-style object to manufacture [`ChannelMapping`](crate::model::ChannelMapping).
     pub fn builder() -> crate::model::channel_mapping::Builder {
         crate::model::channel_mapping::Builder::default()
     }
@@ -30004,8 +30496,10 @@ impl ChannelMapping {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputChannelMapping {
     /// Use this setting to specify your remix values when they are integers, such as -10, 0, or 4.
+    #[doc(hidden)]
     pub input_channels: std::option::Option<std::vec::Vec<i32>>,
     /// Use this setting to specify your remix values when they have a decimal component, such as -10.312, 0.08, or 4.9. MediaConvert rounds your remixing values to the nearest thousandth.
+    #[doc(hidden)]
     pub input_channels_fine_tune: std::option::Option<std::vec::Vec<f64>>,
 }
 impl OutputChannelMapping {
@@ -30026,11 +30520,10 @@ impl std::fmt::Debug for OutputChannelMapping {
         formatter.finish()
     }
 }
-/// See [`OutputChannelMapping`](crate::model::OutputChannelMapping)
+/// See [`OutputChannelMapping`](crate::model::OutputChannelMapping).
 pub mod output_channel_mapping {
 
-    /// A builder for [`OutputChannelMapping`](crate::model::OutputChannelMapping)
-    #[non_exhaustive]
+    /// A builder for [`OutputChannelMapping`](crate::model::OutputChannelMapping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_channels: std::option::Option<std::vec::Vec<i32>>,
@@ -30075,7 +30568,7 @@ pub mod output_channel_mapping {
             self.input_channels_fine_tune = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputChannelMapping`](crate::model::OutputChannelMapping)
+        /// Consumes the builder and constructs a [`OutputChannelMapping`](crate::model::OutputChannelMapping).
         pub fn build(self) -> crate::model::OutputChannelMapping {
             crate::model::OutputChannelMapping {
                 input_channels: self.input_channels,
@@ -30085,7 +30578,7 @@ pub mod output_channel_mapping {
     }
 }
 impl OutputChannelMapping {
-    /// Creates a new builder-style object to manufacture [`OutputChannelMapping`](crate::model::OutputChannelMapping)
+    /// Creates a new builder-style object to manufacture [`OutputChannelMapping`](crate::model::OutputChannelMapping).
     pub fn builder() -> crate::model::output_channel_mapping::Builder {
         crate::model::output_channel_mapping::Builder::default()
     }
@@ -30151,26 +30644,37 @@ impl AsRef<str> for AudioLanguageCodeControl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AudioCodecSettings {
     /// Required when you set (Codec) under (AudioDescriptions)&gt;(CodecSettings) to the value AAC. The service accepts one of two mutually exclusive groups of AAC settings--VBR and CBR. To select one of these modes, set the value of Bitrate control mode (rateControlMode) to "VBR" or "CBR". In VBR mode, you control the audio quality with the setting VBR quality (vbrQuality). In CBR mode, you use the setting Bitrate (bitrate). Defaults and valid values depend on the rate control mode.
+    #[doc(hidden)]
     pub aac_settings: std::option::Option<crate::model::AacSettings>,
     /// Required when you set (Codec) under (AudioDescriptions)&gt;(CodecSettings) to the value AC3.
+    #[doc(hidden)]
     pub ac3_settings: std::option::Option<crate::model::Ac3Settings>,
     /// Required when you set (Codec) under (AudioDescriptions)&gt;(CodecSettings) to the value AIFF.
+    #[doc(hidden)]
     pub aiff_settings: std::option::Option<crate::model::AiffSettings>,
     /// Choose the audio codec for this output. Note that the option Dolby Digital passthrough (PASSTHROUGH) applies only to Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with your output container: https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#reference-codecs-containers-output-audio For audio-only outputs, make sure that both your input audio codec and your output audio codec are supported for audio-only workflows. For more information, see: https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers-input.html#reference-codecs-containers-input-audio-only and https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#audio-only-output
+    #[doc(hidden)]
     pub codec: std::option::Option<crate::model::AudioCodec>,
     /// Required when you set (Codec) under (AudioDescriptions)&gt;(CodecSettings) to the value EAC3_ATMOS.
+    #[doc(hidden)]
     pub eac3_atmos_settings: std::option::Option<crate::model::Eac3AtmosSettings>,
     /// Required when you set (Codec) under (AudioDescriptions)&gt;(CodecSettings) to the value EAC3.
+    #[doc(hidden)]
     pub eac3_settings: std::option::Option<crate::model::Eac3Settings>,
     /// Required when you set (Codec) under (AudioDescriptions)&gt;(CodecSettings) to the value MP2.
+    #[doc(hidden)]
     pub mp2_settings: std::option::Option<crate::model::Mp2Settings>,
     /// Required when you set Codec, under AudioDescriptions&gt;CodecSettings, to the value MP3.
+    #[doc(hidden)]
     pub mp3_settings: std::option::Option<crate::model::Mp3Settings>,
     /// Required when you set Codec, under AudioDescriptions&gt;CodecSettings, to the value OPUS.
+    #[doc(hidden)]
     pub opus_settings: std::option::Option<crate::model::OpusSettings>,
     /// Required when you set Codec, under AudioDescriptions&gt;CodecSettings, to the value Vorbis.
+    #[doc(hidden)]
     pub vorbis_settings: std::option::Option<crate::model::VorbisSettings>,
     /// Required when you set (Codec) under (AudioDescriptions)&gt;(CodecSettings) to the value WAV.
+    #[doc(hidden)]
     pub wav_settings: std::option::Option<crate::model::WavSettings>,
 }
 impl AudioCodecSettings {
@@ -30236,11 +30740,10 @@ impl std::fmt::Debug for AudioCodecSettings {
         formatter.finish()
     }
 }
-/// See [`AudioCodecSettings`](crate::model::AudioCodecSettings)
+/// See [`AudioCodecSettings`](crate::model::AudioCodecSettings).
 pub mod audio_codec_settings {
 
-    /// A builder for [`AudioCodecSettings`](crate::model::AudioCodecSettings)
-    #[non_exhaustive]
+    /// A builder for [`AudioCodecSettings`](crate::model::AudioCodecSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aac_settings: std::option::Option<crate::model::AacSettings>,
@@ -30396,7 +30899,7 @@ pub mod audio_codec_settings {
             self.wav_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`AudioCodecSettings`](crate::model::AudioCodecSettings)
+        /// Consumes the builder and constructs a [`AudioCodecSettings`](crate::model::AudioCodecSettings).
         pub fn build(self) -> crate::model::AudioCodecSettings {
             crate::model::AudioCodecSettings {
                 aac_settings: self.aac_settings,
@@ -30415,7 +30918,7 @@ pub mod audio_codec_settings {
     }
 }
 impl AudioCodecSettings {
-    /// Creates a new builder-style object to manufacture [`AudioCodecSettings`](crate::model::AudioCodecSettings)
+    /// Creates a new builder-style object to manufacture [`AudioCodecSettings`](crate::model::AudioCodecSettings).
     pub fn builder() -> crate::model::audio_codec_settings::Builder {
         crate::model::audio_codec_settings::Builder::default()
     }
@@ -30426,12 +30929,16 @@ impl AudioCodecSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WavSettings {
     /// Specify Bit depth (BitDepth), in bits per sample, to choose the encoding quality for this audio track.
+    #[doc(hidden)]
     pub bit_depth: i32,
     /// Specify the number of channels in this output audio track. Valid values are 1 and even numbers up to 64. For example, 1, 2, 4, 6, and so on, up to 64.
+    #[doc(hidden)]
     pub channels: i32,
     /// The service defaults to using RIFF for WAV outputs. If your output audio is likely to exceed 4 GB in file size, or if you otherwise need the extended support of the RF64 format, set your output WAV file format to RF64.
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::WavFormat>,
     /// Sample rate in Hz.
+    #[doc(hidden)]
     pub sample_rate: i32,
 }
 impl WavSettings {
@@ -30462,11 +30969,10 @@ impl std::fmt::Debug for WavSettings {
         formatter.finish()
     }
 }
-/// See [`WavSettings`](crate::model::WavSettings)
+/// See [`WavSettings`](crate::model::WavSettings).
 pub mod wav_settings {
 
-    /// A builder for [`WavSettings`](crate::model::WavSettings)
-    #[non_exhaustive]
+    /// A builder for [`WavSettings`](crate::model::WavSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bit_depth: std::option::Option<i32>,
@@ -30515,7 +31021,7 @@ pub mod wav_settings {
             self.sample_rate = input;
             self
         }
-        /// Consumes the builder and constructs a [`WavSettings`](crate::model::WavSettings)
+        /// Consumes the builder and constructs a [`WavSettings`](crate::model::WavSettings).
         pub fn build(self) -> crate::model::WavSettings {
             crate::model::WavSettings {
                 bit_depth: self.bit_depth.unwrap_or_default(),
@@ -30527,7 +31033,7 @@ pub mod wav_settings {
     }
 }
 impl WavSettings {
-    /// Creates a new builder-style object to manufacture [`WavSettings`](crate::model::WavSettings)
+    /// Creates a new builder-style object to manufacture [`WavSettings`](crate::model::WavSettings).
     pub fn builder() -> crate::model::wav_settings::Builder {
         crate::model::wav_settings::Builder::default()
     }
@@ -30593,10 +31099,13 @@ impl AsRef<str> for WavFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VorbisSettings {
     /// Optional. Specify the number of channels in this output audio track. Choosing Mono on the console gives you 1 output channel; choosing Stereo gives you 2. In the API, valid values are 1 and 2. The default value is 2.
+    #[doc(hidden)]
     pub channels: i32,
     /// Optional. Specify the audio sample rate in Hz. Valid values are 22050, 32000, 44100, and 48000. The default value is 48000.
+    #[doc(hidden)]
     pub sample_rate: i32,
     /// Optional. Specify the variable audio quality of this Vorbis output from -1 (lowest quality, ~45 kbit/s) to 10 (highest quality, ~500 kbit/s). The default value is 4 (~128 kbit/s). Values 5 and 6 are approximately 160 and 192 kbit/s, respectively.
+    #[doc(hidden)]
     pub vbr_quality: i32,
 }
 impl VorbisSettings {
@@ -30622,11 +31131,10 @@ impl std::fmt::Debug for VorbisSettings {
         formatter.finish()
     }
 }
-/// See [`VorbisSettings`](crate::model::VorbisSettings)
+/// See [`VorbisSettings`](crate::model::VorbisSettings).
 pub mod vorbis_settings {
 
-    /// A builder for [`VorbisSettings`](crate::model::VorbisSettings)
-    #[non_exhaustive]
+    /// A builder for [`VorbisSettings`](crate::model::VorbisSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channels: std::option::Option<i32>,
@@ -30664,7 +31172,7 @@ pub mod vorbis_settings {
             self.vbr_quality = input;
             self
         }
-        /// Consumes the builder and constructs a [`VorbisSettings`](crate::model::VorbisSettings)
+        /// Consumes the builder and constructs a [`VorbisSettings`](crate::model::VorbisSettings).
         pub fn build(self) -> crate::model::VorbisSettings {
             crate::model::VorbisSettings {
                 channels: self.channels.unwrap_or_default(),
@@ -30675,7 +31183,7 @@ pub mod vorbis_settings {
     }
 }
 impl VorbisSettings {
-    /// Creates a new builder-style object to manufacture [`VorbisSettings`](crate::model::VorbisSettings)
+    /// Creates a new builder-style object to manufacture [`VorbisSettings`](crate::model::VorbisSettings).
     pub fn builder() -> crate::model::vorbis_settings::Builder {
         crate::model::vorbis_settings::Builder::default()
     }
@@ -30686,10 +31194,13 @@ impl VorbisSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OpusSettings {
     /// Optional. Specify the average bitrate in bits per second. Valid values are multiples of 8000, from 32000 through 192000. The default value is 96000, which we recommend for quality and bandwidth.
+    #[doc(hidden)]
     pub bitrate: i32,
     /// Specify the number of channels in this output audio track. Choosing Mono on the console gives you 1 output channel; choosing Stereo gives you 2. In the API, valid values are 1 and 2.
+    #[doc(hidden)]
     pub channels: i32,
     /// Optional. Sample rate in hz. Valid values are 16000, 24000, and 48000. The default value is 48000.
+    #[doc(hidden)]
     pub sample_rate: i32,
 }
 impl OpusSettings {
@@ -30715,11 +31226,10 @@ impl std::fmt::Debug for OpusSettings {
         formatter.finish()
     }
 }
-/// See [`OpusSettings`](crate::model::OpusSettings)
+/// See [`OpusSettings`](crate::model::OpusSettings).
 pub mod opus_settings {
 
-    /// A builder for [`OpusSettings`](crate::model::OpusSettings)
-    #[non_exhaustive]
+    /// A builder for [`OpusSettings`](crate::model::OpusSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bitrate: std::option::Option<i32>,
@@ -30757,7 +31267,7 @@ pub mod opus_settings {
             self.sample_rate = input;
             self
         }
-        /// Consumes the builder and constructs a [`OpusSettings`](crate::model::OpusSettings)
+        /// Consumes the builder and constructs a [`OpusSettings`](crate::model::OpusSettings).
         pub fn build(self) -> crate::model::OpusSettings {
             crate::model::OpusSettings {
                 bitrate: self.bitrate.unwrap_or_default(),
@@ -30768,7 +31278,7 @@ pub mod opus_settings {
     }
 }
 impl OpusSettings {
-    /// Creates a new builder-style object to manufacture [`OpusSettings`](crate::model::OpusSettings)
+    /// Creates a new builder-style object to manufacture [`OpusSettings`](crate::model::OpusSettings).
     pub fn builder() -> crate::model::opus_settings::Builder {
         crate::model::opus_settings::Builder::default()
     }
@@ -30779,14 +31289,19 @@ impl OpusSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Mp3Settings {
     /// Specify the average bitrate in bits per second.
+    #[doc(hidden)]
     pub bitrate: i32,
     /// Specify the number of channels in this output audio track. Choosing Mono on the console gives you 1 output channel; choosing Stereo gives you 2. In the API, valid values are 1 and 2.
+    #[doc(hidden)]
     pub channels: i32,
     /// Specify whether the service encodes this MP3 audio output with a constant bitrate (CBR) or a variable bitrate (VBR).
+    #[doc(hidden)]
     pub rate_control_mode: std::option::Option<crate::model::Mp3RateControlMode>,
     /// Sample rate in hz.
+    #[doc(hidden)]
     pub sample_rate: i32,
     /// Required when you set Bitrate control mode (rateControlMode) to VBR. Specify the audio quality of this MP3 output from 0 (highest quality) to 9 (lowest quality).
+    #[doc(hidden)]
     pub vbr_quality: i32,
 }
 impl Mp3Settings {
@@ -30822,11 +31337,10 @@ impl std::fmt::Debug for Mp3Settings {
         formatter.finish()
     }
 }
-/// See [`Mp3Settings`](crate::model::Mp3Settings)
+/// See [`Mp3Settings`](crate::model::Mp3Settings).
 pub mod mp3_settings {
 
-    /// A builder for [`Mp3Settings`](crate::model::Mp3Settings)
-    #[non_exhaustive]
+    /// A builder for [`Mp3Settings`](crate::model::Mp3Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bitrate: std::option::Option<i32>,
@@ -30889,7 +31403,7 @@ pub mod mp3_settings {
             self.vbr_quality = input;
             self
         }
-        /// Consumes the builder and constructs a [`Mp3Settings`](crate::model::Mp3Settings)
+        /// Consumes the builder and constructs a [`Mp3Settings`](crate::model::Mp3Settings).
         pub fn build(self) -> crate::model::Mp3Settings {
             crate::model::Mp3Settings {
                 bitrate: self.bitrate.unwrap_or_default(),
@@ -30902,7 +31416,7 @@ pub mod mp3_settings {
     }
 }
 impl Mp3Settings {
-    /// Creates a new builder-style object to manufacture [`Mp3Settings`](crate::model::Mp3Settings)
+    /// Creates a new builder-style object to manufacture [`Mp3Settings`](crate::model::Mp3Settings).
     pub fn builder() -> crate::model::mp3_settings::Builder {
         crate::model::mp3_settings::Builder::default()
     }
@@ -30968,10 +31482,13 @@ impl AsRef<str> for Mp3RateControlMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Mp2Settings {
     /// Specify the average bitrate in bits per second.
+    #[doc(hidden)]
     pub bitrate: i32,
     /// Set Channels to specify the number of channels in this output audio track. Choosing Mono in the console will give you 1 output channel; choosing Stereo will give you 2. In the API, valid values are 1 and 2.
+    #[doc(hidden)]
     pub channels: i32,
     /// Sample rate in hz.
+    #[doc(hidden)]
     pub sample_rate: i32,
 }
 impl Mp2Settings {
@@ -30997,11 +31514,10 @@ impl std::fmt::Debug for Mp2Settings {
         formatter.finish()
     }
 }
-/// See [`Mp2Settings`](crate::model::Mp2Settings)
+/// See [`Mp2Settings`](crate::model::Mp2Settings).
 pub mod mp2_settings {
 
-    /// A builder for [`Mp2Settings`](crate::model::Mp2Settings)
-    #[non_exhaustive]
+    /// A builder for [`Mp2Settings`](crate::model::Mp2Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bitrate: std::option::Option<i32>,
@@ -31039,7 +31555,7 @@ pub mod mp2_settings {
             self.sample_rate = input;
             self
         }
-        /// Consumes the builder and constructs a [`Mp2Settings`](crate::model::Mp2Settings)
+        /// Consumes the builder and constructs a [`Mp2Settings`](crate::model::Mp2Settings).
         pub fn build(self) -> crate::model::Mp2Settings {
             crate::model::Mp2Settings {
                 bitrate: self.bitrate.unwrap_or_default(),
@@ -31050,7 +31566,7 @@ pub mod mp2_settings {
     }
 }
 impl Mp2Settings {
-    /// Creates a new builder-style object to manufacture [`Mp2Settings`](crate::model::Mp2Settings)
+    /// Creates a new builder-style object to manufacture [`Mp2Settings`](crate::model::Mp2Settings).
     pub fn builder() -> crate::model::mp2_settings::Builder {
         crate::model::mp2_settings::Builder::default()
     }
@@ -31061,48 +31577,69 @@ impl Mp2Settings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Eac3Settings {
     /// If set to ATTENUATE_3_DB, applies a 3 dB attenuation to the surround channels. Only used for 3/2 coding mode.
+    #[doc(hidden)]
     pub attenuation_control: std::option::Option<crate::model::Eac3AttenuationControl>,
     /// Specify the average bitrate in bits per second. Valid bitrates depend on the coding mode.
+    #[doc(hidden)]
     pub bitrate: i32,
     /// Specify the bitstream mode for the E-AC-3 stream that the encoder emits. For more information about the EAC3 bitstream mode, see ATSC A/52-2012 (Annex E).
+    #[doc(hidden)]
     pub bitstream_mode: std::option::Option<crate::model::Eac3BitstreamMode>,
     /// Dolby Digital Plus coding mode. Determines number of channels.
+    #[doc(hidden)]
     pub coding_mode: std::option::Option<crate::model::Eac3CodingMode>,
     /// Activates a DC highpass filter for all input channels.
+    #[doc(hidden)]
     pub dc_filter: std::option::Option<crate::model::Eac3DcFilter>,
     /// Sets the dialnorm for the output. If blank and input audio is Dolby Digital Plus, dialnorm will be passed through.
+    #[doc(hidden)]
     pub dialnorm: i32,
     /// Choose the Dolby Digital dynamic range control (DRC) profile that MediaConvert uses when encoding the metadata in the Dolby Digital stream for the line operating mode. Related setting: When you use this setting, MediaConvert ignores any value you provide for Dynamic range compression profile (DynamicRangeCompressionProfile). For information about the Dolby Digital DRC operating modes and profiles, see the Dynamic Range Control chapter of the Dolby Metadata Guide at https://developer.dolby.com/globalassets/professional/documents/dolby-metadata-guide.pdf.
+    #[doc(hidden)]
     pub dynamic_range_compression_line:
         std::option::Option<crate::model::Eac3DynamicRangeCompressionLine>,
     /// Choose the Dolby Digital dynamic range control (DRC) profile that MediaConvert uses when encoding the metadata in the Dolby Digital stream for the RF operating mode. Related setting: When you use this setting, MediaConvert ignores any value you provide for Dynamic range compression profile (DynamicRangeCompressionProfile). For information about the Dolby Digital DRC operating modes and profiles, see the Dynamic Range Control chapter of the Dolby Metadata Guide at https://developer.dolby.com/globalassets/professional/documents/dolby-metadata-guide.pdf.
+    #[doc(hidden)]
     pub dynamic_range_compression_rf:
         std::option::Option<crate::model::Eac3DynamicRangeCompressionRf>,
     /// When encoding 3/2 audio, controls whether the LFE channel is enabled
+    #[doc(hidden)]
     pub lfe_control: std::option::Option<crate::model::Eac3LfeControl>,
     /// Applies a 120Hz lowpass filter to the LFE channel prior to encoding. Only valid with 3_2_LFE coding mode.
+    #[doc(hidden)]
     pub lfe_filter: std::option::Option<crate::model::Eac3LfeFilter>,
     /// Specify a value for the following Dolby Digital Plus setting: Left only/Right only center mix (Lo/Ro center). MediaConvert uses this value for downmixing. How the service uses this value depends on the value that you choose for Stereo downmix (Eac3StereoDownmix). Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, -6.0, and -60. The value -60 mutes the channel. This setting applies only if you keep the default value of 3/2 - L, R, C, Ls, Rs (CODING_MODE_3_2) for the setting Coding mode (Eac3CodingMode). If you choose a different value for Coding mode, the service ignores Left only/Right only center (loRoCenterMixLevel).
+    #[doc(hidden)]
     pub lo_ro_center_mix_level: f64,
     /// Specify a value for the following Dolby Digital Plus setting: Left only/Right only (Lo/Ro surround). MediaConvert uses this value for downmixing. How the service uses this value depends on the value that you choose for Stereo downmix (Eac3StereoDownmix). Valid values: -1.5, -3.0, -4.5, -6.0, and -60. The value -60 mutes the channel. This setting applies only if you keep the default value of 3/2 - L, R, C, Ls, Rs (CODING_MODE_3_2) for the setting Coding mode (Eac3CodingMode). If you choose a different value for Coding mode, the service ignores Left only/Right only surround (loRoSurroundMixLevel).
+    #[doc(hidden)]
     pub lo_ro_surround_mix_level: f64,
     /// Specify a value for the following Dolby Digital Plus setting: Left total/Right total center mix (Lt/Rt center). MediaConvert uses this value for downmixing. How the service uses this value depends on the value that you choose for Stereo downmix (Eac3StereoDownmix). Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, -6.0, and -60. The value -60 mutes the channel. This setting applies only if you keep the default value of 3/2 - L, R, C, Ls, Rs (CODING_MODE_3_2) for the setting Coding mode (Eac3CodingMode). If you choose a different value for Coding mode, the service ignores Left total/Right total center (ltRtCenterMixLevel).
+    #[doc(hidden)]
     pub lt_rt_center_mix_level: f64,
     /// Specify a value for the following Dolby Digital Plus setting: Left total/Right total surround mix (Lt/Rt surround). MediaConvert uses this value for downmixing. How the service uses this value depends on the value that you choose for Stereo downmix (Eac3StereoDownmix). Valid values: -1.5, -3.0, -4.5, -6.0, and -60. The value -60 mutes the channel. This setting applies only if you keep the default value of 3/2 - L, R, C, Ls, Rs (CODING_MODE_3_2) for the setting Coding mode (Eac3CodingMode). If you choose a different value for Coding mode, the service ignores Left total/Right total surround (ltRtSurroundMixLevel).
+    #[doc(hidden)]
     pub lt_rt_surround_mix_level: f64,
     /// When set to FOLLOW_INPUT, encoder metadata will be sourced from the DD, DD+, or DolbyE decoder that supplied this audio data. If audio was not supplied from one of these streams, then the static metadata settings will be used.
+    #[doc(hidden)]
     pub metadata_control: std::option::Option<crate::model::Eac3MetadataControl>,
     /// When set to WHEN_POSSIBLE, input DD+ audio will be passed through if it is present on the input. this detection is dynamic over the life of the transcode. Inputs that alternate between DD+ and non-DD+ content will have a consistent DD+ output as the system alternates between passthrough and encoding.
+    #[doc(hidden)]
     pub passthrough_control: std::option::Option<crate::model::Eac3PassthroughControl>,
     /// Controls the amount of phase-shift applied to the surround channels. Only used for 3/2 coding mode.
+    #[doc(hidden)]
     pub phase_control: std::option::Option<crate::model::Eac3PhaseControl>,
     /// This value is always 48000. It represents the sample rate in Hz.
+    #[doc(hidden)]
     pub sample_rate: i32,
     /// Choose how the service does stereo downmixing. This setting only applies if you keep the default value of 3/2 - L, R, C, Ls, Rs (CODING_MODE_3_2) for the setting Coding mode (Eac3CodingMode). If you choose a different value for Coding mode, the service ignores Stereo downmix (Eac3StereoDownmix).
+    #[doc(hidden)]
     pub stereo_downmix: std::option::Option<crate::model::Eac3StereoDownmix>,
     /// When encoding 3/2 audio, sets whether an extra center back surround channel is matrix encoded into the left and right surround channels.
+    #[doc(hidden)]
     pub surround_ex_mode: std::option::Option<crate::model::Eac3SurroundExMode>,
     /// When encoding 2/0 audio, sets whether Dolby Surround is matrix encoded into the two channels.
+    #[doc(hidden)]
     pub surround_mode: std::option::Option<crate::model::Eac3SurroundMode>,
 }
 impl Eac3Settings {
@@ -31232,11 +31769,10 @@ impl std::fmt::Debug for Eac3Settings {
         formatter.finish()
     }
 }
-/// See [`Eac3Settings`](crate::model::Eac3Settings)
+/// See [`Eac3Settings`](crate::model::Eac3Settings).
 pub mod eac3_settings {
 
-    /// A builder for [`Eac3Settings`](crate::model::Eac3Settings)
-    #[non_exhaustive]
+    /// A builder for [`Eac3Settings`](crate::model::Eac3Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attenuation_control: std::option::Option<crate::model::Eac3AttenuationControl>,
@@ -31522,7 +32058,7 @@ pub mod eac3_settings {
             self.surround_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`Eac3Settings`](crate::model::Eac3Settings)
+        /// Consumes the builder and constructs a [`Eac3Settings`](crate::model::Eac3Settings).
         pub fn build(self) -> crate::model::Eac3Settings {
             crate::model::Eac3Settings {
                 attenuation_control: self.attenuation_control,
@@ -31551,7 +32087,7 @@ pub mod eac3_settings {
     }
 }
 impl Eac3Settings {
-    /// Creates a new builder-style object to manufacture [`Eac3Settings`](crate::model::Eac3Settings)
+    /// Creates a new builder-style object to manufacture [`Eac3Settings`](crate::model::Eac3Settings).
     pub fn builder() -> crate::model::eac3_settings::Builder {
         crate::model::eac3_settings::Builder::default()
     }
@@ -32416,40 +32952,57 @@ impl AsRef<str> for Eac3AttenuationControl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Eac3AtmosSettings {
     /// Specify the average bitrate for this output in bits per second. Valid values: 384k, 448k, 576k, 640k, 768k, 1024k Default value: 448k Note that MediaConvert supports 384k only with channel-based immersive (CBI) 7.1.4 and 5.1.4 inputs. For CBI 9.1.6 and other input types, MediaConvert automatically increases your output bitrate to 448k.
+    #[doc(hidden)]
     pub bitrate: i32,
     /// Specify the bitstream mode for the E-AC-3 stream that the encoder emits. For more information about the EAC3 bitstream mode, see ATSC A/52-2012 (Annex E).
+    #[doc(hidden)]
     pub bitstream_mode: std::option::Option<crate::model::Eac3AtmosBitstreamMode>,
     /// The coding mode for Dolby Digital Plus JOC (Atmos).
+    #[doc(hidden)]
     pub coding_mode: std::option::Option<crate::model::Eac3AtmosCodingMode>,
     /// Enable Dolby Dialogue Intelligence to adjust loudness based on dialogue analysis.
+    #[doc(hidden)]
     pub dialogue_intelligence: std::option::Option<crate::model::Eac3AtmosDialogueIntelligence>,
     /// Specify whether MediaConvert should use any downmix metadata from your input file. Keep the default value, Custom (SPECIFIED) to provide downmix values in your job settings. Choose Follow source (INITIALIZE_FROM_SOURCE) to use the metadata from your input. Related settings--Use these settings to specify your downmix values: Left only/Right only surround (LoRoSurroundMixLevel), Left total/Right total surround (LtRtSurroundMixLevel), Left total/Right total center (LtRtCenterMixLevel), Left only/Right only center (LoRoCenterMixLevel), and Stereo downmix (StereoDownmix). When you keep Custom (SPECIFIED) for Downmix control (DownmixControl) and you don't specify values for the related settings, MediaConvert uses default values for those settings.
+    #[doc(hidden)]
     pub downmix_control: std::option::Option<crate::model::Eac3AtmosDownmixControl>,
     /// Choose the Dolby dynamic range control (DRC) profile that MediaConvert uses when encoding the metadata in the Dolby stream for the line operating mode. Default value: Film light (ATMOS_STORAGE_DDP_COMPR_FILM_LIGHT) Related setting: To have MediaConvert use the value you specify here, keep the default value, Custom (SPECIFIED) for the setting Dynamic range control (DynamicRangeControl). Otherwise, MediaConvert ignores Dynamic range compression line (DynamicRangeCompressionLine). For information about the Dolby DRC operating modes and profiles, see the Dynamic Range Control chapter of the Dolby Metadata Guide at https://developer.dolby.com/globalassets/professional/documents/dolby-metadata-guide.pdf.
+    #[doc(hidden)]
     pub dynamic_range_compression_line:
         std::option::Option<crate::model::Eac3AtmosDynamicRangeCompressionLine>,
     /// Choose the Dolby dynamic range control (DRC) profile that MediaConvert uses when encoding the metadata in the Dolby stream for the RF operating mode. Default value: Film light (ATMOS_STORAGE_DDP_COMPR_FILM_LIGHT) Related setting: To have MediaConvert use the value you specify here, keep the default value, Custom (SPECIFIED) for the setting Dynamic range control (DynamicRangeControl). Otherwise, MediaConvert ignores Dynamic range compression RF (DynamicRangeCompressionRf). For information about the Dolby DRC operating modes and profiles, see the Dynamic Range Control chapter of the Dolby Metadata Guide at https://developer.dolby.com/globalassets/professional/documents/dolby-metadata-guide.pdf.
+    #[doc(hidden)]
     pub dynamic_range_compression_rf:
         std::option::Option<crate::model::Eac3AtmosDynamicRangeCompressionRf>,
     /// Specify whether MediaConvert should use any dynamic range control metadata from your input file. Keep the default value, Custom (SPECIFIED), to provide dynamic range control values in your job settings. Choose Follow source (INITIALIZE_FROM_SOURCE) to use the metadata from your input. Related settings--Use these settings to specify your dynamic range control values: Dynamic range compression line (DynamicRangeCompressionLine) and Dynamic range compression RF (DynamicRangeCompressionRf). When you keep the value Custom (SPECIFIED) for Dynamic range control (DynamicRangeControl) and you don't specify values for the related settings, MediaConvert uses default values for those settings.
+    #[doc(hidden)]
     pub dynamic_range_control: std::option::Option<crate::model::Eac3AtmosDynamicRangeControl>,
     /// Specify a value for the following Dolby Atmos setting: Left only/Right only center mix (Lo/Ro center). MediaConvert uses this value for downmixing. Default value: -3 dB (ATMOS_STORAGE_DDP_MIXLEV_MINUS_3_DB). Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0. Related setting: How the service uses this value depends on the value that you choose for Stereo downmix (Eac3AtmosStereoDownmix). Related setting: To have MediaConvert use this value, keep the default value, Custom (SPECIFIED) for the setting Downmix control (DownmixControl). Otherwise, MediaConvert ignores Left only/Right only center (LoRoCenterMixLevel).
+    #[doc(hidden)]
     pub lo_ro_center_mix_level: f64,
     /// Specify a value for the following Dolby Atmos setting: Left only/Right only (Lo/Ro surround). MediaConvert uses this value for downmixing. Default value: -3 dB (ATMOS_STORAGE_DDP_MIXLEV_MINUS_3_DB). Valid values: -1.5, -3.0, -4.5, -6.0, and -60. The value -60 mutes the channel. Related setting: How the service uses this value depends on the value that you choose for Stereo downmix (Eac3AtmosStereoDownmix). Related setting: To have MediaConvert use this value, keep the default value, Custom (SPECIFIED) for the setting Downmix control (DownmixControl). Otherwise, MediaConvert ignores Left only/Right only surround (LoRoSurroundMixLevel).
+    #[doc(hidden)]
     pub lo_ro_surround_mix_level: f64,
     /// Specify a value for the following Dolby Atmos setting: Left total/Right total center mix (Lt/Rt center). MediaConvert uses this value for downmixing. Default value: -3 dB (ATMOS_STORAGE_DDP_MIXLEV_MINUS_3_DB) Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0. Related setting: How the service uses this value depends on the value that you choose for Stereo downmix (Eac3AtmosStereoDownmix). Related setting: To have MediaConvert use this value, keep the default value, Custom (SPECIFIED) for the setting Downmix control (DownmixControl). Otherwise, MediaConvert ignores Left total/Right total center (LtRtCenterMixLevel).
+    #[doc(hidden)]
     pub lt_rt_center_mix_level: f64,
     /// Specify a value for the following Dolby Atmos setting: Left total/Right total surround mix (Lt/Rt surround). MediaConvert uses this value for downmixing. Default value: -3 dB (ATMOS_STORAGE_DDP_MIXLEV_MINUS_3_DB) Valid values: -1.5, -3.0, -4.5, -6.0, and -60. The value -60 mutes the channel. Related setting: How the service uses this value depends on the value that you choose for Stereo downmix (Eac3AtmosStereoDownmix). Related setting: To have MediaConvert use this value, keep the default value, Custom (SPECIFIED) for the setting Downmix control (DownmixControl). Otherwise, the service ignores Left total/Right total surround (LtRtSurroundMixLevel).
+    #[doc(hidden)]
     pub lt_rt_surround_mix_level: f64,
     /// Choose how the service meters the loudness of your audio.
+    #[doc(hidden)]
     pub metering_mode: std::option::Option<crate::model::Eac3AtmosMeteringMode>,
     /// This value is always 48000. It represents the sample rate in Hz.
+    #[doc(hidden)]
     pub sample_rate: i32,
     /// Specify the percentage of audio content, from 0% to 100%, that must be speech in order for the encoder to use the measured speech loudness as the overall program loudness. Default value: 15%
+    #[doc(hidden)]
     pub speech_threshold: i32,
     /// Choose how the service does stereo downmixing. Default value: Not indicated (ATMOS_STORAGE_DDP_DMIXMOD_NOT_INDICATED) Related setting: To have MediaConvert use this value, keep the default value, Custom (SPECIFIED) for the setting Downmix control (DownmixControl). Otherwise, MediaConvert ignores Stereo downmix (StereoDownmix).
+    #[doc(hidden)]
     pub stereo_downmix: std::option::Option<crate::model::Eac3AtmosStereoDownmix>,
     /// Specify whether your input audio has an additional center rear surround channel matrix encoded into your left and right surround channels.
+    #[doc(hidden)]
     pub surround_ex_mode: std::option::Option<crate::model::Eac3AtmosSurroundExMode>,
 }
 impl Eac3AtmosSettings {
@@ -32559,11 +33112,10 @@ impl std::fmt::Debug for Eac3AtmosSettings {
         formatter.finish()
     }
 }
-/// See [`Eac3AtmosSettings`](crate::model::Eac3AtmosSettings)
+/// See [`Eac3AtmosSettings`](crate::model::Eac3AtmosSettings).
 pub mod eac3_atmos_settings {
 
-    /// A builder for [`Eac3AtmosSettings`](crate::model::Eac3AtmosSettings)
-    #[non_exhaustive]
+    /// A builder for [`Eac3AtmosSettings`](crate::model::Eac3AtmosSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bitrate: std::option::Option<i32>,
@@ -32801,7 +33353,7 @@ pub mod eac3_atmos_settings {
             self.surround_ex_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`Eac3AtmosSettings`](crate::model::Eac3AtmosSettings)
+        /// Consumes the builder and constructs a [`Eac3AtmosSettings`](crate::model::Eac3AtmosSettings).
         pub fn build(self) -> crate::model::Eac3AtmosSettings {
             crate::model::Eac3AtmosSettings {
                 bitrate: self.bitrate.unwrap_or_default(),
@@ -32826,7 +33378,7 @@ pub mod eac3_atmos_settings {
     }
 }
 impl Eac3AtmosSettings {
-    /// Creates a new builder-style object to manufacture [`Eac3AtmosSettings`](crate::model::Eac3AtmosSettings)
+    /// Creates a new builder-style object to manufacture [`Eac3AtmosSettings`](crate::model::Eac3AtmosSettings).
     pub fn builder() -> crate::model::eac3_atmos_settings::Builder {
         crate::model::eac3_atmos_settings::Builder::default()
     }
@@ -33575,10 +34127,13 @@ impl AsRef<str> for AudioCodec {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AiffSettings {
     /// Specify Bit depth (BitDepth), in bits per sample, to choose the encoding quality for this audio track.
+    #[doc(hidden)]
     pub bit_depth: i32,
     /// Specify the number of channels in this output audio track. Valid values are 1 and even numbers up to 64. For example, 1, 2, 4, 6, and so on, up to 64.
+    #[doc(hidden)]
     pub channels: i32,
     /// Sample rate in hz.
+    #[doc(hidden)]
     pub sample_rate: i32,
 }
 impl AiffSettings {
@@ -33604,11 +34159,10 @@ impl std::fmt::Debug for AiffSettings {
         formatter.finish()
     }
 }
-/// See [`AiffSettings`](crate::model::AiffSettings)
+/// See [`AiffSettings`](crate::model::AiffSettings).
 pub mod aiff_settings {
 
-    /// A builder for [`AiffSettings`](crate::model::AiffSettings)
-    #[non_exhaustive]
+    /// A builder for [`AiffSettings`](crate::model::AiffSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bit_depth: std::option::Option<i32>,
@@ -33646,7 +34200,7 @@ pub mod aiff_settings {
             self.sample_rate = input;
             self
         }
-        /// Consumes the builder and constructs a [`AiffSettings`](crate::model::AiffSettings)
+        /// Consumes the builder and constructs a [`AiffSettings`](crate::model::AiffSettings).
         pub fn build(self) -> crate::model::AiffSettings {
             crate::model::AiffSettings {
                 bit_depth: self.bit_depth.unwrap_or_default(),
@@ -33657,7 +34211,7 @@ pub mod aiff_settings {
     }
 }
 impl AiffSettings {
-    /// Creates a new builder-style object to manufacture [`AiffSettings`](crate::model::AiffSettings)
+    /// Creates a new builder-style object to manufacture [`AiffSettings`](crate::model::AiffSettings).
     pub fn builder() -> crate::model::aiff_settings::Builder {
         crate::model::aiff_settings::Builder::default()
     }
@@ -33668,27 +34222,37 @@ impl AiffSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ac3Settings {
     /// Specify the average bitrate in bits per second. Valid bitrates depend on the coding mode.
+    #[doc(hidden)]
     pub bitrate: i32,
     /// Specify the bitstream mode for the AC-3 stream that the encoder emits. For more information about the AC3 bitstream mode, see ATSC A/52-2012 (Annex E).
+    #[doc(hidden)]
     pub bitstream_mode: std::option::Option<crate::model::Ac3BitstreamMode>,
     /// Dolby Digital coding mode. Determines number of channels.
+    #[doc(hidden)]
     pub coding_mode: std::option::Option<crate::model::Ac3CodingMode>,
     /// Sets the dialnorm for the output. If blank and input audio is Dolby Digital, dialnorm will be passed through.
+    #[doc(hidden)]
     pub dialnorm: i32,
     /// Choose the Dolby Digital dynamic range control (DRC) profile that MediaConvert uses when encoding the metadata in the Dolby Digital stream for the line operating mode. Related setting: When you use this setting, MediaConvert ignores any value you provide for Dynamic range compression profile (DynamicRangeCompressionProfile). For information about the Dolby Digital DRC operating modes and profiles, see the Dynamic Range Control chapter of the Dolby Metadata Guide at https://developer.dolby.com/globalassets/professional/documents/dolby-metadata-guide.pdf.
+    #[doc(hidden)]
     pub dynamic_range_compression_line:
         std::option::Option<crate::model::Ac3DynamicRangeCompressionLine>,
     /// When you want to add Dolby dynamic range compression (DRC) signaling to your output stream, we recommend that you use the mode-specific settings instead of Dynamic range compression profile (DynamicRangeCompressionProfile). The mode-specific settings are Dynamic range compression profile, line mode (dynamicRangeCompressionLine) and Dynamic range compression profile, RF mode (dynamicRangeCompressionRf). Note that when you specify values for all three settings, MediaConvert ignores the value of this setting in favor of the mode-specific settings. If you do use this setting instead of the mode-specific settings, choose None (NONE) to leave out DRC signaling. Keep the default Film standard (FILM_STANDARD) to set the profile to Dolby's film standard profile for all operating modes.
+    #[doc(hidden)]
     pub dynamic_range_compression_profile:
         std::option::Option<crate::model::Ac3DynamicRangeCompressionProfile>,
     /// Choose the Dolby Digital dynamic range control (DRC) profile that MediaConvert uses when encoding the metadata in the Dolby Digital stream for the RF operating mode. Related setting: When you use this setting, MediaConvert ignores any value you provide for Dynamic range compression profile (DynamicRangeCompressionProfile). For information about the Dolby Digital DRC operating modes and profiles, see the Dynamic Range Control chapter of the Dolby Metadata Guide at https://developer.dolby.com/globalassets/professional/documents/dolby-metadata-guide.pdf.
+    #[doc(hidden)]
     pub dynamic_range_compression_rf:
         std::option::Option<crate::model::Ac3DynamicRangeCompressionRf>,
     /// Applies a 120Hz lowpass filter to the LFE channel prior to encoding. Only valid with 3_2_LFE coding mode.
+    #[doc(hidden)]
     pub lfe_filter: std::option::Option<crate::model::Ac3LfeFilter>,
     /// When set to FOLLOW_INPUT, encoder metadata will be sourced from the DD, DD+, or DolbyE decoder that supplied this audio data. If audio was not supplied from one of these streams, then the static metadata settings will be used.
+    #[doc(hidden)]
     pub metadata_control: std::option::Option<crate::model::Ac3MetadataControl>,
     /// This value is always 48000. It represents the sample rate in Hz.
+    #[doc(hidden)]
     pub sample_rate: i32,
 }
 impl Ac3Settings {
@@ -33764,11 +34328,10 @@ impl std::fmt::Debug for Ac3Settings {
         formatter.finish()
     }
 }
-/// See [`Ac3Settings`](crate::model::Ac3Settings)
+/// See [`Ac3Settings`](crate::model::Ac3Settings).
 pub mod ac3_settings {
 
-    /// A builder for [`Ac3Settings`](crate::model::Ac3Settings)
-    #[non_exhaustive]
+    /// A builder for [`Ac3Settings`](crate::model::Ac3Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bitrate: std::option::Option<i32>,
@@ -33916,7 +34479,7 @@ pub mod ac3_settings {
             self.sample_rate = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ac3Settings`](crate::model::Ac3Settings)
+        /// Consumes the builder and constructs a [`Ac3Settings`](crate::model::Ac3Settings).
         pub fn build(self) -> crate::model::Ac3Settings {
             crate::model::Ac3Settings {
                 bitrate: self.bitrate.unwrap_or_default(),
@@ -33934,7 +34497,7 @@ pub mod ac3_settings {
     }
 }
 impl Ac3Settings {
-    /// Creates a new builder-style object to manufacture [`Ac3Settings`](crate::model::Ac3Settings)
+    /// Creates a new builder-style object to manufacture [`Ac3Settings`](crate::model::Ac3Settings).
     pub fn builder() -> crate::model::ac3_settings::Builder {
         crate::model::ac3_settings::Builder::default()
     }
@@ -34422,23 +34985,32 @@ impl AsRef<str> for Ac3BitstreamMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AacSettings {
     /// Choose BROADCASTER_MIXED_AD when the input contains pre-mixed main audio + audio description (AD) as a stereo pair. The value for AudioType will be set to 3, which signals to downstream systems that this stream contains "broadcaster mixed AD". Note that the input received by the encoder must contain pre-mixed audio; the encoder does not perform the mixing. When you choose BROADCASTER_MIXED_AD, the encoder ignores any values you provide in AudioType and FollowInputAudioType. Choose NORMAL when the input does not contain pre-mixed audio + audio description (AD). In this case, the encoder will use any values you provide for AudioType and FollowInputAudioType.
+    #[doc(hidden)]
     pub audio_description_broadcaster_mix:
         std::option::Option<crate::model::AacAudioDescriptionBroadcasterMix>,
     /// Specify the average bitrate in bits per second. The set of valid values for this setting is: 6000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 288000, 320000, 384000, 448000, 512000, 576000, 640000, 768000, 896000, 1024000. The value you set is also constrained by the values that you choose for Profile (codecProfile), Bitrate control mode (codingMode), and Sample rate (sampleRate). Default values depend on Bitrate control mode and Profile.
+    #[doc(hidden)]
     pub bitrate: i32,
     /// AAC Profile.
+    #[doc(hidden)]
     pub codec_profile: std::option::Option<crate::model::AacCodecProfile>,
     /// Mono (Audio Description), Mono, Stereo, or 5.1 channel layout. Valid values depend on rate control mode and profile. "1.0 - Audio Description (Receiver Mix)" setting receives a stereo description plus control track and emits a mono AAC encode of the description track, with control data emitted in the PES header as per ETSI TS 101 154 Annex E.
+    #[doc(hidden)]
     pub coding_mode: std::option::Option<crate::model::AacCodingMode>,
     /// Rate Control Mode.
+    #[doc(hidden)]
     pub rate_control_mode: std::option::Option<crate::model::AacRateControlMode>,
     /// Enables LATM/LOAS AAC output. Note that if you use LATM/LOAS AAC in an output, you must choose "No container" for the output container.
+    #[doc(hidden)]
     pub raw_format: std::option::Option<crate::model::AacRawFormat>,
     /// Sample rate in Hz. Valid values depend on rate control mode and profile.
+    #[doc(hidden)]
     pub sample_rate: i32,
     /// Use MPEG-2 AAC instead of MPEG-4 AAC audio for raw or MPEG-2 Transport Stream containers.
+    #[doc(hidden)]
     pub specification: std::option::Option<crate::model::AacSpecification>,
     /// VBR Quality Level - Only used if rate_control_mode is VBR.
+    #[doc(hidden)]
     pub vbr_quality: std::option::Option<crate::model::AacVbrQuality>,
 }
 impl AacSettings {
@@ -34499,11 +35071,10 @@ impl std::fmt::Debug for AacSettings {
         formatter.finish()
     }
 }
-/// See [`AacSettings`](crate::model::AacSettings)
+/// See [`AacSettings`](crate::model::AacSettings).
 pub mod aac_settings {
 
-    /// A builder for [`AacSettings`](crate::model::AacSettings)
-    #[non_exhaustive]
+    /// A builder for [`AacSettings`](crate::model::AacSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_description_broadcaster_mix:
@@ -34632,7 +35203,7 @@ pub mod aac_settings {
             self.vbr_quality = input;
             self
         }
-        /// Consumes the builder and constructs a [`AacSettings`](crate::model::AacSettings)
+        /// Consumes the builder and constructs a [`AacSettings`](crate::model::AacSettings).
         pub fn build(self) -> crate::model::AacSettings {
             crate::model::AacSettings {
                 audio_description_broadcaster_mix: self.audio_description_broadcaster_mix,
@@ -34649,7 +35220,7 @@ pub mod aac_settings {
     }
 }
 impl AacSettings {
-    /// Creates a new builder-style object to manufacture [`AacSettings`](crate::model::AacSettings)
+    /// Creates a new builder-style object to manufacture [`AacSettings`](crate::model::AacSettings).
     pub fn builder() -> crate::model::aac_settings::Builder {
         crate::model::aac_settings::Builder::default()
     }
@@ -35130,16 +35701,22 @@ impl AsRef<str> for AudioTypeControl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AudioNormalizationSettings {
     /// Choose one of the following audio normalization algorithms: ITU-R BS.1770-1: Ungated loudness. A measurement of ungated average loudness for an entire piece of content, suitable for measurement of short-form content under ATSC recommendation A/85. Supports up to 5.1 audio channels. ITU-R BS.1770-2: Gated loudness. A measurement of gated average loudness compliant with the requirements of EBU-R128. Supports up to 5.1 audio channels. ITU-R BS.1770-3: Modified peak. The same loudness measurement algorithm as 1770-2, with an updated true peak measurement. ITU-R BS.1770-4: Higher channel count. Allows for more audio channels than the other algorithms, including configurations such as 7.1.
+    #[doc(hidden)]
     pub algorithm: std::option::Option<crate::model::AudioNormalizationAlgorithm>,
     /// When enabled the output audio is corrected using the chosen algorithm. If disabled, the audio will be measured but not adjusted.
+    #[doc(hidden)]
     pub algorithm_control: std::option::Option<crate::model::AudioNormalizationAlgorithmControl>,
     /// Content measuring above this level will be corrected to the target level. Content measuring below this level will not be corrected.
+    #[doc(hidden)]
     pub correction_gate_level: i32,
     /// If set to LOG, log each output's audio track loudness to a CSV file.
+    #[doc(hidden)]
     pub loudness_logging: std::option::Option<crate::model::AudioNormalizationLoudnessLogging>,
     /// If set to TRUE_PEAK, calculate and log the TruePeak for each output's audio track loudness.
+    #[doc(hidden)]
     pub peak_calculation: std::option::Option<crate::model::AudioNormalizationPeakCalculation>,
     /// When you use Audio normalization (AudioNormalizationSettings), optionally use this setting to specify a target loudness. If you don't specify a value here, the encoder chooses a value for you, based on the algorithm that you choose for Algorithm (algorithm). If you choose algorithm 1770-1, the encoder will choose -24 LKFS; otherwise, the encoder will choose -23 LKFS.
+    #[doc(hidden)]
     pub target_lkfs: f64,
 }
 impl AudioNormalizationSettings {
@@ -35186,11 +35763,10 @@ impl std::fmt::Debug for AudioNormalizationSettings {
         formatter.finish()
     }
 }
-/// See [`AudioNormalizationSettings`](crate::model::AudioNormalizationSettings)
+/// See [`AudioNormalizationSettings`](crate::model::AudioNormalizationSettings).
 pub mod audio_normalization_settings {
 
-    /// A builder for [`AudioNormalizationSettings`](crate::model::AudioNormalizationSettings)
-    #[non_exhaustive]
+    /// A builder for [`AudioNormalizationSettings`](crate::model::AudioNormalizationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) algorithm: std::option::Option<crate::model::AudioNormalizationAlgorithm>,
@@ -35285,7 +35861,7 @@ pub mod audio_normalization_settings {
             self.target_lkfs = input;
             self
         }
-        /// Consumes the builder and constructs a [`AudioNormalizationSettings`](crate::model::AudioNormalizationSettings)
+        /// Consumes the builder and constructs a [`AudioNormalizationSettings`](crate::model::AudioNormalizationSettings).
         pub fn build(self) -> crate::model::AudioNormalizationSettings {
             crate::model::AudioNormalizationSettings {
                 algorithm: self.algorithm,
@@ -35299,7 +35875,7 @@ pub mod audio_normalization_settings {
     }
 }
 impl AudioNormalizationSettings {
-    /// Creates a new builder-style object to manufacture [`AudioNormalizationSettings`](crate::model::AudioNormalizationSettings)
+    /// Creates a new builder-style object to manufacture [`AudioNormalizationSettings`](crate::model::AudioNormalizationSettings).
     pub fn builder() -> crate::model::audio_normalization_settings::Builder {
         crate::model::audio_normalization_settings::Builder::default()
     }
@@ -35543,6 +36119,7 @@ impl AsRef<str> for AudioNormalizationAlgorithm {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AudioChannelTaggingSettings {
     /// You can add a tag for this mono-channel audio track to mimic its placement in a multi-channel layout. For example, if this track is the left surround channel, choose Left surround (LS).
+    #[doc(hidden)]
     pub channel_tag: std::option::Option<crate::model::AudioChannelTag>,
 }
 impl AudioChannelTaggingSettings {
@@ -35558,11 +36135,10 @@ impl std::fmt::Debug for AudioChannelTaggingSettings {
         formatter.finish()
     }
 }
-/// See [`AudioChannelTaggingSettings`](crate::model::AudioChannelTaggingSettings)
+/// See [`AudioChannelTaggingSettings`](crate::model::AudioChannelTaggingSettings).
 pub mod audio_channel_tagging_settings {
 
-    /// A builder for [`AudioChannelTaggingSettings`](crate::model::AudioChannelTaggingSettings)
-    #[non_exhaustive]
+    /// A builder for [`AudioChannelTaggingSettings`](crate::model::AudioChannelTaggingSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_tag: std::option::Option<crate::model::AudioChannelTag>,
@@ -35581,7 +36157,7 @@ pub mod audio_channel_tagging_settings {
             self.channel_tag = input;
             self
         }
-        /// Consumes the builder and constructs a [`AudioChannelTaggingSettings`](crate::model::AudioChannelTaggingSettings)
+        /// Consumes the builder and constructs a [`AudioChannelTaggingSettings`](crate::model::AudioChannelTaggingSettings).
         pub fn build(self) -> crate::model::AudioChannelTaggingSettings {
             crate::model::AudioChannelTaggingSettings {
                 channel_tag: self.channel_tag,
@@ -35590,7 +36166,7 @@ pub mod audio_channel_tagging_settings {
     }
 }
 impl AudioChannelTaggingSettings {
-    /// Creates a new builder-style object to manufacture [`AudioChannelTaggingSettings`](crate::model::AudioChannelTaggingSettings)
+    /// Creates a new builder-style object to manufacture [`AudioChannelTaggingSettings`](crate::model::AudioChannelTaggingSettings).
     pub fn builder() -> crate::model::audio_channel_tagging_settings::Builder {
         crate::model::audio_channel_tagging_settings::Builder::default()
     }
@@ -35711,30 +36287,43 @@ impl AsRef<str> for AudioChannelTag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobTemplate {
     /// Accelerated transcoding can significantly speed up jobs with long, visually complex content.
+    #[doc(hidden)]
     pub acceleration_settings: std::option::Option<crate::model::AccelerationSettings>,
     /// An identifier for this resource that is unique within all of AWS.
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// An optional category you create to organize your job templates.
+    #[doc(hidden)]
     pub category: std::option::Option<std::string::String>,
     /// The timestamp in epoch seconds for Job template creation.
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// An optional description you create for each job template.
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// Optional list of hop destinations.
+    #[doc(hidden)]
     pub hop_destinations: std::option::Option<std::vec::Vec<crate::model::HopDestination>>,
     /// The timestamp in epoch seconds when the Job template was last updated.
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
     /// A name you create for each job template. Each name must be unique within your account.
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// Relative priority on the job.
+    #[doc(hidden)]
     pub priority: i32,
     /// Optional. The queue that jobs created from this template are assigned to. If you don't specify this, jobs will go to the default queue.
+    #[doc(hidden)]
     pub queue: std::option::Option<std::string::String>,
     /// JobTemplateSettings contains all the transcode settings saved in the template that will be applied to jobs created from it.
+    #[doc(hidden)]
     pub settings: std::option::Option<crate::model::JobTemplateSettings>,
     /// Specify how often MediaConvert sends STATUS_UPDATE events to Amazon CloudWatch Events. Set the interval, in seconds, between status updates. MediaConvert sends an update at this interval from the time the service begins processing your job to the time it completes the transcode or encounters an error.
+    #[doc(hidden)]
     pub status_update_interval: std::option::Option<crate::model::StatusUpdateInterval>,
     /// A job template can be of two types: system or custom. System or built-in job templates can't be modified or deleted by the user.
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
 }
 impl JobTemplate {
@@ -35814,11 +36403,10 @@ impl std::fmt::Debug for JobTemplate {
         formatter.finish()
     }
 }
-/// See [`JobTemplate`](crate::model::JobTemplate)
+/// See [`JobTemplate`](crate::model::JobTemplate).
 pub mod job_template {
 
-    /// A builder for [`JobTemplate`](crate::model::JobTemplate)
-    #[non_exhaustive]
+    /// A builder for [`JobTemplate`](crate::model::JobTemplate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) acceleration_settings: std::option::Option<crate::model::AccelerationSettings>,
@@ -35991,7 +36579,7 @@ pub mod job_template {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobTemplate`](crate::model::JobTemplate)
+        /// Consumes the builder and constructs a [`JobTemplate`](crate::model::JobTemplate).
         pub fn build(self) -> crate::model::JobTemplate {
             crate::model::JobTemplate {
                 acceleration_settings: self.acceleration_settings,
@@ -36012,7 +36600,7 @@ pub mod job_template {
     }
 }
 impl JobTemplate {
-    /// Creates a new builder-style object to manufacture [`JobTemplate`](crate::model::JobTemplate)
+    /// Creates a new builder-style object to manufacture [`JobTemplate`](crate::model::JobTemplate).
     pub fn builder() -> crate::model::job_template::Builder {
         crate::model::job_template::Builder::default()
     }
@@ -36146,29 +36734,41 @@ impl AsRef<str> for StatusUpdateInterval {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobTemplateSettings {
     /// When specified, this offset (in milliseconds) is added to the input Ad Avail PTS time.
+    #[doc(hidden)]
     pub ad_avail_offset: i32,
     /// Settings for ad avail blanking. Video can be blanked or overlaid with an image, and audio muted during SCTE-35 triggered ad avails.
+    #[doc(hidden)]
     pub avail_blanking: std::option::Option<crate::model::AvailBlanking>,
     /// Settings for Event Signaling And Messaging (ESAM). If you don't do ad insertion, you can ignore these settings.
+    #[doc(hidden)]
     pub esam: std::option::Option<crate::model::EsamSettings>,
     /// If your source content has EIA-608 Line 21 Data Services, enable this feature to specify what MediaConvert does with the Extended Data Services (XDS) packets. You can choose to pass through XDS packets, or remove them from the output. For more information about XDS, see EIA-608 Line Data Services, section 9.5.1.5 05h Content Advisory.
+    #[doc(hidden)]
     pub extended_data_services: std::option::Option<crate::model::ExtendedDataServices>,
     /// Use Inputs (inputs) to define the source file used in the transcode job. There can only be one input in a job template. Using the API, you can include multiple inputs when referencing a job template.
+    #[doc(hidden)]
     pub inputs: std::option::Option<std::vec::Vec<crate::model::InputTemplate>>,
     /// Use these settings only when you use Kantar watermarking. Specify the values that MediaConvert uses to generate and place Kantar watermarks in your output audio. These settings apply to every output in your job. In addition to specifying these values, you also need to store your Kantar credentials in AWS Secrets Manager. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/kantar-watermarking.html.
+    #[doc(hidden)]
     pub kantar_watermark: std::option::Option<crate::model::KantarWatermarkSettings>,
     /// Overlay motion graphics on top of your video. The motion graphics that you specify here appear on all outputs in all output groups. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/motion-graphic-overlay.html.
+    #[doc(hidden)]
     pub motion_image_inserter: std::option::Option<crate::model::MotionImageInserter>,
     /// Settings for your Nielsen configuration. If you don't do Nielsen measurement and analytics, ignore these settings. When you enable Nielsen configuration (nielsenConfiguration), MediaConvert enables PCM to ID3 tagging for all outputs in the job. To enable Nielsen configuration programmatically, include an instance of nielsenConfiguration in your JSON job specification. Even if you don't include any children of nielsenConfiguration, you still enable the setting.
+    #[doc(hidden)]
     pub nielsen_configuration: std::option::Option<crate::model::NielsenConfiguration>,
     /// Ignore these settings unless you are using Nielsen non-linear watermarking. Specify the values that MediaConvert uses to generate and place Nielsen watermarks in your output audio. In addition to specifying these values, you also need to set up your cloud TIC server. These settings apply to every output in your job. The MediaConvert implementation is currently with the following Nielsen versions: Nielsen Watermark SDK Version 5.2.1 Nielsen NLM Watermark Engine Version 1.2.7 Nielsen Watermark Authenticator [SID_TIC] Version [5.0.0]
+    #[doc(hidden)]
     pub nielsen_non_linear_watermark:
         std::option::Option<crate::model::NielsenNonLinearWatermarkSettings>,
     /// (OutputGroups) contains one group of settings for each set of outputs that share a common package type. All unpackaged files (MPEG-4, MPEG-2 TS, Quicktime, MXF, and no container) are grouped in a single output group as well. Required in (OutputGroups) is a group of settings that apply to the whole group. This required object depends on the value you set for (Type) under (OutputGroups)&gt;(OutputGroupSettings). Type, settings object pairs are as follows. * FILE_GROUP_SETTINGS, FileGroupSettings * HLS_GROUP_SETTINGS, HlsGroupSettings * DASH_ISO_GROUP_SETTINGS, DashIsoGroupSettings * MS_SMOOTH_GROUP_SETTINGS, MsSmoothGroupSettings * CMAF_GROUP_SETTINGS, CmafGroupSettings
+    #[doc(hidden)]
     pub output_groups: std::option::Option<std::vec::Vec<crate::model::OutputGroup>>,
     /// These settings control how the service handles timecodes throughout the job. These settings don't affect input clipping.
+    #[doc(hidden)]
     pub timecode_config: std::option::Option<crate::model::TimecodeConfig>,
     /// Insert user-defined custom ID3 metadata (id3) at timecodes (timecode) that you specify. In each output that you want to include this metadata, you must set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
+    #[doc(hidden)]
     pub timed_metadata_insertion: std::option::Option<crate::model::TimedMetadataInsertion>,
 }
 impl JobTemplateSettings {
@@ -36250,11 +36850,10 @@ impl std::fmt::Debug for JobTemplateSettings {
         formatter.finish()
     }
 }
-/// See [`JobTemplateSettings`](crate::model::JobTemplateSettings)
+/// See [`JobTemplateSettings`](crate::model::JobTemplateSettings).
 pub mod job_template_settings {
 
-    /// A builder for [`JobTemplateSettings`](crate::model::JobTemplateSettings)
-    #[non_exhaustive]
+    /// A builder for [`JobTemplateSettings`](crate::model::JobTemplateSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ad_avail_offset: std::option::Option<i32>,
@@ -36441,7 +37040,7 @@ pub mod job_template_settings {
             self.timed_metadata_insertion = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobTemplateSettings`](crate::model::JobTemplateSettings)
+        /// Consumes the builder and constructs a [`JobTemplateSettings`](crate::model::JobTemplateSettings).
         pub fn build(self) -> crate::model::JobTemplateSettings {
             crate::model::JobTemplateSettings {
                 ad_avail_offset: self.ad_avail_offset.unwrap_or_default(),
@@ -36461,7 +37060,7 @@ pub mod job_template_settings {
     }
 }
 impl JobTemplateSettings {
-    /// Creates a new builder-style object to manufacture [`JobTemplateSettings`](crate::model::JobTemplateSettings)
+    /// Creates a new builder-style object to manufacture [`JobTemplateSettings`](crate::model::JobTemplateSettings).
     pub fn builder() -> crate::model::job_template_settings::Builder {
         crate::model::job_template_settings::Builder::default()
     }
@@ -36472,6 +37071,7 @@ impl JobTemplateSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimedMetadataInsertion {
     /// Id3Insertions contains the array of Id3Insertion instances.
+    #[doc(hidden)]
     pub id3_insertions: std::option::Option<std::vec::Vec<crate::model::Id3Insertion>>,
 }
 impl TimedMetadataInsertion {
@@ -36487,11 +37087,10 @@ impl std::fmt::Debug for TimedMetadataInsertion {
         formatter.finish()
     }
 }
-/// See [`TimedMetadataInsertion`](crate::model::TimedMetadataInsertion)
+/// See [`TimedMetadataInsertion`](crate::model::TimedMetadataInsertion).
 pub mod timed_metadata_insertion {
 
-    /// A builder for [`TimedMetadataInsertion`](crate::model::TimedMetadataInsertion)
-    #[non_exhaustive]
+    /// A builder for [`TimedMetadataInsertion`](crate::model::TimedMetadataInsertion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id3_insertions: std::option::Option<std::vec::Vec<crate::model::Id3Insertion>>,
@@ -36516,7 +37115,7 @@ pub mod timed_metadata_insertion {
             self.id3_insertions = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimedMetadataInsertion`](crate::model::TimedMetadataInsertion)
+        /// Consumes the builder and constructs a [`TimedMetadataInsertion`](crate::model::TimedMetadataInsertion).
         pub fn build(self) -> crate::model::TimedMetadataInsertion {
             crate::model::TimedMetadataInsertion {
                 id3_insertions: self.id3_insertions,
@@ -36525,7 +37124,7 @@ pub mod timed_metadata_insertion {
     }
 }
 impl TimedMetadataInsertion {
-    /// Creates a new builder-style object to manufacture [`TimedMetadataInsertion`](crate::model::TimedMetadataInsertion)
+    /// Creates a new builder-style object to manufacture [`TimedMetadataInsertion`](crate::model::TimedMetadataInsertion).
     pub fn builder() -> crate::model::timed_metadata_insertion::Builder {
         crate::model::timed_metadata_insertion::Builder::default()
     }
@@ -36536,8 +37135,10 @@ impl TimedMetadataInsertion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Id3Insertion {
     /// Use ID3 tag (Id3) to provide a fully formed ID3 tag in base64-encode format.
+    #[doc(hidden)]
     pub id3: std::option::Option<std::string::String>,
     /// Provide a Timecode (TimeCode) in HH:MM:SS:FF or HH:MM:SS;FF format.
+    #[doc(hidden)]
     pub timecode: std::option::Option<std::string::String>,
 }
 impl Id3Insertion {
@@ -36558,11 +37159,10 @@ impl std::fmt::Debug for Id3Insertion {
         formatter.finish()
     }
 }
-/// See [`Id3Insertion`](crate::model::Id3Insertion)
+/// See [`Id3Insertion`](crate::model::Id3Insertion).
 pub mod id3_insertion {
 
-    /// A builder for [`Id3Insertion`](crate::model::Id3Insertion)
-    #[non_exhaustive]
+    /// A builder for [`Id3Insertion`](crate::model::Id3Insertion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id3: std::option::Option<std::string::String>,
@@ -36589,7 +37189,7 @@ pub mod id3_insertion {
             self.timecode = input;
             self
         }
-        /// Consumes the builder and constructs a [`Id3Insertion`](crate::model::Id3Insertion)
+        /// Consumes the builder and constructs a [`Id3Insertion`](crate::model::Id3Insertion).
         pub fn build(self) -> crate::model::Id3Insertion {
             crate::model::Id3Insertion {
                 id3: self.id3,
@@ -36599,7 +37199,7 @@ pub mod id3_insertion {
     }
 }
 impl Id3Insertion {
-    /// Creates a new builder-style object to manufacture [`Id3Insertion`](crate::model::Id3Insertion)
+    /// Creates a new builder-style object to manufacture [`Id3Insertion`](crate::model::Id3Insertion).
     pub fn builder() -> crate::model::id3_insertion::Builder {
         crate::model::id3_insertion::Builder::default()
     }
@@ -36610,12 +37210,16 @@ impl Id3Insertion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimecodeConfig {
     /// If you use an editing platform that relies on an anchor timecode, use Anchor Timecode (Anchor) to specify a timecode that will match the input video frame to the output video frame. Use 24-hour format with frame number, (HH:MM:SS:FF) or (HH:MM:SS;FF). This setting ignores frame rate conversion. System behavior for Anchor Timecode varies depending on your setting for Source (TimecodeSource). * If Source (TimecodeSource) is set to Specified Start (SPECIFIEDSTART), the first input frame is the specified value in Start Timecode (Start). Anchor Timecode (Anchor) and Start Timecode (Start) are used calculate output timecode. * If Source (TimecodeSource) is set to Start at 0 (ZEROBASED) the first frame is 00:00:00:00. * If Source (TimecodeSource) is set to Embedded (EMBEDDED), the first frame is the timecode value on the first input frame of the input.
+    #[doc(hidden)]
     pub anchor: std::option::Option<std::string::String>,
     /// Use Source (TimecodeSource) to set how timecodes are handled within this job. To make sure that your video, audio, captions, and markers are synchronized and that time-based features, such as image inserter, work correctly, choose the Timecode source option that matches your assets. All timecodes are in a 24-hour format with frame number (HH:MM:SS:FF). * Embedded (EMBEDDED) - Use the timecode that is in the input video. If no embedded timecode is in the source, the service will use Start at 0 (ZEROBASED) instead. * Start at 0 (ZEROBASED) - Set the timecode of the initial frame to 00:00:00:00. * Specified Start (SPECIFIEDSTART) - Set the timecode of the initial frame to a value other than zero. You use Start timecode (Start) to provide this value.
+    #[doc(hidden)]
     pub source: std::option::Option<crate::model::TimecodeSource>,
     /// Only use when you set Source (TimecodeSource) to Specified start (SPECIFIEDSTART). Use Start timecode (Start) to specify the timecode for the initial frame. Use 24-hour format with frame number, (HH:MM:SS:FF) or (HH:MM:SS;FF).
+    #[doc(hidden)]
     pub start: std::option::Option<std::string::String>,
     /// Only applies to outputs that support program-date-time stamp. Use Timestamp offset (TimestampOffset) to overwrite the timecode date without affecting the time and frame number. Provide the new date as a string in the format "yyyy-mm-dd". To use Time stamp offset, you must also enable Insert program-date-time (InsertProgramDateTime) in the output settings. For example, if the date part of your timecodes is 2002-1-25 and you want to change it to one year later, set Timestamp offset (TimestampOffset) to 2003-1-25.
+    #[doc(hidden)]
     pub timestamp_offset: std::option::Option<std::string::String>,
 }
 impl TimecodeConfig {
@@ -36646,11 +37250,10 @@ impl std::fmt::Debug for TimecodeConfig {
         formatter.finish()
     }
 }
-/// See [`TimecodeConfig`](crate::model::TimecodeConfig)
+/// See [`TimecodeConfig`](crate::model::TimecodeConfig).
 pub mod timecode_config {
 
-    /// A builder for [`TimecodeConfig`](crate::model::TimecodeConfig)
-    #[non_exhaustive]
+    /// A builder for [`TimecodeConfig`](crate::model::TimecodeConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) anchor: std::option::Option<std::string::String>,
@@ -36705,7 +37308,7 @@ pub mod timecode_config {
             self.timestamp_offset = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimecodeConfig`](crate::model::TimecodeConfig)
+        /// Consumes the builder and constructs a [`TimecodeConfig`](crate::model::TimecodeConfig).
         pub fn build(self) -> crate::model::TimecodeConfig {
             crate::model::TimecodeConfig {
                 anchor: self.anchor,
@@ -36717,7 +37320,7 @@ pub mod timecode_config {
     }
 }
 impl TimecodeConfig {
-    /// Creates a new builder-style object to manufacture [`TimecodeConfig`](crate::model::TimecodeConfig)
+    /// Creates a new builder-style object to manufacture [`TimecodeConfig`](crate::model::TimecodeConfig).
     pub fn builder() -> crate::model::timecode_config::Builder {
         crate::model::timecode_config::Builder::default()
     }
@@ -36787,14 +37390,19 @@ impl AsRef<str> for TimecodeSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputGroup {
     /// Use automated encoding to have MediaConvert choose your encoding settings for you, based on characteristics of your input video.
+    #[doc(hidden)]
     pub automated_encoding_settings: std::option::Option<crate::model::AutomatedEncodingSettings>,
     /// Use Custom Group Name (CustomName) to specify a name for the output group. This value is displayed on the console and can make your job settings JSON more human-readable. It does not affect your outputs. Use up to twelve characters that are either letters, numbers, spaces, or underscores.
+    #[doc(hidden)]
     pub custom_name: std::option::Option<std::string::String>,
     /// Name of the output group
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// Output Group settings, including type
+    #[doc(hidden)]
     pub output_group_settings: std::option::Option<crate::model::OutputGroupSettings>,
     /// This object holds groups of encoding settings, one group of settings per output.
+    #[doc(hidden)]
     pub outputs: std::option::Option<std::vec::Vec<crate::model::Output>>,
 }
 impl OutputGroup {
@@ -36835,11 +37443,10 @@ impl std::fmt::Debug for OutputGroup {
         formatter.finish()
     }
 }
-/// See [`OutputGroup`](crate::model::OutputGroup)
+/// See [`OutputGroup`](crate::model::OutputGroup).
 pub mod output_group {
 
-    /// A builder for [`OutputGroup`](crate::model::OutputGroup)
-    #[non_exhaustive]
+    /// A builder for [`OutputGroup`](crate::model::OutputGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) automated_encoding_settings:
@@ -36918,7 +37525,7 @@ pub mod output_group {
             self.outputs = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputGroup`](crate::model::OutputGroup)
+        /// Consumes the builder and constructs a [`OutputGroup`](crate::model::OutputGroup).
         pub fn build(self) -> crate::model::OutputGroup {
             crate::model::OutputGroup {
                 automated_encoding_settings: self.automated_encoding_settings,
@@ -36931,7 +37538,7 @@ pub mod output_group {
     }
 }
 impl OutputGroup {
-    /// Creates a new builder-style object to manufacture [`OutputGroup`](crate::model::OutputGroup)
+    /// Creates a new builder-style object to manufacture [`OutputGroup`](crate::model::OutputGroup).
     pub fn builder() -> crate::model::output_group::Builder {
         crate::model::output_group::Builder::default()
     }
@@ -36942,20 +37549,28 @@ impl OutputGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Output {
     /// (AudioDescriptions) contains groups of audio encoding settings organized by audio codec. Include one instance of (AudioDescriptions) per output. (AudioDescriptions) can contain multiple groups of encoding settings.
+    #[doc(hidden)]
     pub audio_descriptions: std::option::Option<std::vec::Vec<crate::model::AudioDescription>>,
     /// (CaptionDescriptions) contains groups of captions settings. For each output that has captions, include one instance of (CaptionDescriptions). (CaptionDescriptions) can contain multiple groups of captions settings.
+    #[doc(hidden)]
     pub caption_descriptions: std::option::Option<std::vec::Vec<crate::model::CaptionDescription>>,
     /// Container specific settings.
+    #[doc(hidden)]
     pub container_settings: std::option::Option<crate::model::ContainerSettings>,
     /// Use Extension (Extension) to specify the file extension for outputs in File output groups. If you do not specify a value, the service will use default extensions by container type as follows * MPEG-2 transport stream, m2ts * Quicktime, mov * MXF container, mxf * MPEG-4 container, mp4 * WebM container, webm * No Container, the service will use codec extensions (e.g. AAC, H265, H265, AC3)
+    #[doc(hidden)]
     pub extension: std::option::Option<std::string::String>,
     /// Use Name modifier (NameModifier) to have the service add a string to the end of each output filename. You specify the base filename as part of your destination URI. When you create multiple outputs in the same output group, Name modifier (NameModifier) is required. Name modifier also accepts format identifiers. For DASH ISO outputs, if you use the format identifiers $Number$ or $Time$ in one output, you must use them in the same way in all outputs of the output group.
+    #[doc(hidden)]
     pub name_modifier: std::option::Option<std::string::String>,
     /// Specific settings for this type of output.
+    #[doc(hidden)]
     pub output_settings: std::option::Option<crate::model::OutputSettings>,
     /// Use Preset (Preset) to specify a preset for your transcoding settings. Provide the system or custom preset name. You can specify either Preset (Preset) or Container settings (ContainerSettings), but not both.
+    #[doc(hidden)]
     pub preset: std::option::Option<std::string::String>,
     /// VideoDescription contains a group of video encoding settings. The specific video settings depend on the video codec that you choose for the property codec. Include one instance of VideoDescription per output.
+    #[doc(hidden)]
     pub video_description: std::option::Option<crate::model::VideoDescription>,
 }
 impl Output {
@@ -37006,11 +37621,10 @@ impl std::fmt::Debug for Output {
         formatter.finish()
     }
 }
-/// See [`Output`](crate::model::Output)
+/// See [`Output`](crate::model::Output).
 pub mod output {
 
-    /// A builder for [`Output`](crate::model::Output)
-    #[non_exhaustive]
+    /// A builder for [`Output`](crate::model::Output).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_descriptions:
@@ -37135,7 +37749,7 @@ pub mod output {
             self.video_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`Output`](crate::model::Output)
+        /// Consumes the builder and constructs a [`Output`](crate::model::Output).
         pub fn build(self) -> crate::model::Output {
             crate::model::Output {
                 audio_descriptions: self.audio_descriptions,
@@ -37151,7 +37765,7 @@ pub mod output {
     }
 }
 impl Output {
-    /// Creates a new builder-style object to manufacture [`Output`](crate::model::Output)
+    /// Creates a new builder-style object to manufacture [`Output`](crate::model::Output).
     pub fn builder() -> crate::model::output::Builder {
         crate::model::output::Builder::default()
     }
@@ -37162,6 +37776,7 @@ impl Output {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputSettings {
     /// Settings for HLS output groups
+    #[doc(hidden)]
     pub hls_settings: std::option::Option<crate::model::HlsSettings>,
 }
 impl OutputSettings {
@@ -37177,11 +37792,10 @@ impl std::fmt::Debug for OutputSettings {
         formatter.finish()
     }
 }
-/// See [`OutputSettings`](crate::model::OutputSettings)
+/// See [`OutputSettings`](crate::model::OutputSettings).
 pub mod output_settings {
 
-    /// A builder for [`OutputSettings`](crate::model::OutputSettings)
-    #[non_exhaustive]
+    /// A builder for [`OutputSettings`](crate::model::OutputSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hls_settings: std::option::Option<crate::model::HlsSettings>,
@@ -37200,7 +37814,7 @@ pub mod output_settings {
             self.hls_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputSettings`](crate::model::OutputSettings)
+        /// Consumes the builder and constructs a [`OutputSettings`](crate::model::OutputSettings).
         pub fn build(self) -> crate::model::OutputSettings {
             crate::model::OutputSettings {
                 hls_settings: self.hls_settings,
@@ -37209,7 +37823,7 @@ pub mod output_settings {
     }
 }
 impl OutputSettings {
-    /// Creates a new builder-style object to manufacture [`OutputSettings`](crate::model::OutputSettings)
+    /// Creates a new builder-style object to manufacture [`OutputSettings`](crate::model::OutputSettings).
     pub fn builder() -> crate::model::output_settings::Builder {
         crate::model::output_settings::Builder::default()
     }
@@ -37220,19 +37834,26 @@ impl OutputSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsSettings {
     /// Specifies the group to which the audio rendition belongs.
+    #[doc(hidden)]
     pub audio_group_id: std::option::Option<std::string::String>,
     /// Use this setting only in audio-only outputs. Choose MPEG-2 Transport Stream (M2TS) to create a file in an MPEG2-TS container. Keep the default value Automatic (AUTOMATIC) to create an audio-only file in a raw container. Regardless of the value that you specify here, if this output has video, the service will place the output into an MPEG2-TS container.
+    #[doc(hidden)]
     pub audio_only_container: std::option::Option<crate::model::HlsAudioOnlyContainer>,
     /// List all the audio groups that are used with the video output stream. Input all the audio GROUP-IDs that are associated to the video, separate by ','.
+    #[doc(hidden)]
     pub audio_rendition_sets: std::option::Option<std::string::String>,
     /// Four types of audio-only tracks are supported: Audio-Only Variant Stream The client can play back this audio-only stream instead of video in low-bandwidth scenarios. Represented as an EXT-X-STREAM-INF in the HLS manifest. Alternate Audio, Auto Select, Default Alternate rendition that the client should try to play back by default. Represented as an EXT-X-MEDIA in the HLS manifest with DEFAULT=YES, AUTOSELECT=YES Alternate Audio, Auto Select, Not Default Alternate rendition that the client may try to play back by default. Represented as an EXT-X-MEDIA in the HLS manifest with DEFAULT=NO, AUTOSELECT=YES Alternate Audio, not Auto Select Alternate rendition that the client will not try to play back by default. Represented as an EXT-X-MEDIA in the HLS manifest with DEFAULT=NO, AUTOSELECT=NO
+    #[doc(hidden)]
     pub audio_track_type: std::option::Option<crate::model::HlsAudioTrackType>,
     /// Specify whether to flag this audio track as descriptive video service (DVS) in your HLS parent manifest. When you choose Flag (FLAG), MediaConvert includes the parameter CHARACTERISTICS="public.accessibility.describes-video" in the EXT-X-MEDIA entry for this track. When you keep the default choice, Don't flag (DONT_FLAG), MediaConvert leaves this parameter out. The DVS flag can help with accessibility on Apple devices. For more information, see the Apple documentation.
+    #[doc(hidden)]
     pub descriptive_video_service_flag:
         std::option::Option<crate::model::HlsDescriptiveVideoServiceFlag>,
     /// Choose Include (INCLUDE) to have MediaConvert generate a child manifest that lists only the I-frames for this rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of a workflow that creates preview functions for your video. MediaConvert adds both the I-frame only child manifest and the regular child manifest to the parent manifest. When you don't need the I-frame only child manifest, keep the default value Exclude (EXCLUDE).
+    #[doc(hidden)]
     pub i_frame_only_manifest: std::option::Option<crate::model::HlsIFrameOnlyManifest>,
     /// Use this setting to add an identifying string to the filename of each segment. The service adds this string between the name modifier and segment index number. You can use format identifiers in the string. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/using-variables-in-your-job-settings.html
+    #[doc(hidden)]
     pub segment_modifier: std::option::Option<std::string::String>,
 }
 impl HlsSettings {
@@ -37287,11 +37908,10 @@ impl std::fmt::Debug for HlsSettings {
         formatter.finish()
     }
 }
-/// See [`HlsSettings`](crate::model::HlsSettings)
+/// See [`HlsSettings`](crate::model::HlsSettings).
 pub mod hls_settings {
 
-    /// A builder for [`HlsSettings`](crate::model::HlsSettings)
-    #[non_exhaustive]
+    /// A builder for [`HlsSettings`](crate::model::HlsSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_group_id: std::option::Option<std::string::String>,
@@ -37398,7 +38018,7 @@ pub mod hls_settings {
             self.segment_modifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsSettings`](crate::model::HlsSettings)
+        /// Consumes the builder and constructs a [`HlsSettings`](crate::model::HlsSettings).
         pub fn build(self) -> crate::model::HlsSettings {
             crate::model::HlsSettings {
                 audio_group_id: self.audio_group_id,
@@ -37413,7 +38033,7 @@ pub mod hls_settings {
     }
 }
 impl HlsSettings {
-    /// Creates a new builder-style object to manufacture [`HlsSettings`](crate::model::HlsSettings)
+    /// Creates a new builder-style object to manufacture [`HlsSettings`](crate::model::HlsSettings).
     pub fn builder() -> crate::model::hls_settings::Builder {
         crate::model::hls_settings::Builder::default()
     }
@@ -37663,14 +38283,19 @@ pub struct CaptionDescription {
     /// Specifies which "Caption Selector":#inputs-caption_selector to use from each input when generating captions. The name should be of the format "Caption Selector <n>
     /// ", which denotes that the Nth Caption Selector will be used from each input.
     /// </n>
+    #[doc(hidden)]
     pub caption_selector_name: std::option::Option<std::string::String>,
     /// Specify the language for this captions output track. For most captions output formats, the encoder puts this language information in the output captions metadata. If your output captions format is DVB-Sub or Burn in, the encoder uses this language information when automatically selecting the font script for rendering the captions text. For all outputs, you can use an ISO 639-2 or ISO 639-3 code. For streaming outputs, you can also use any other code in the full RFC-5646 specification. Streaming outputs are those that are in one of the following output groups: CMAF, DASH ISO, Apple HLS, or Microsoft Smooth Streaming.
+    #[doc(hidden)]
     pub custom_language_code: std::option::Option<std::string::String>,
     /// Settings related to one captions tab on the MediaConvert console. In your job JSON, an instance of captions DestinationSettings is equivalent to one captions tab in the console. Usually, one captions tab corresponds to one output captions track. Depending on your output captions format, one tab might correspond to a set of output captions tracks. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/including-captions.html.
+    #[doc(hidden)]
     pub destination_settings: std::option::Option<crate::model::CaptionDestinationSettings>,
     /// Specify the language of this captions output track. For most captions output formats, the encoder puts this language information in the output captions metadata. If your output captions format is DVB-Sub or Burn in, the encoder uses this language information to choose the font language for rendering the captions text.
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// Specify a label for this set of output captions. For example, "English", "Director commentary", or "track_2". For streaming outputs, MediaConvert passes this information into destination manifests for display on the end-viewer's player device. For outputs in other output groups, the service ignores this setting.
+    #[doc(hidden)]
     pub language_description: std::option::Option<std::string::String>,
 }
 impl CaptionDescription {
@@ -37710,11 +38335,10 @@ impl std::fmt::Debug for CaptionDescription {
         formatter.finish()
     }
 }
-/// See [`CaptionDescription`](crate::model::CaptionDescription)
+/// See [`CaptionDescription`](crate::model::CaptionDescription).
 pub mod caption_description {
 
-    /// A builder for [`CaptionDescription`](crate::model::CaptionDescription)
-    #[non_exhaustive]
+    /// A builder for [`CaptionDescription`](crate::model::CaptionDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) caption_selector_name: std::option::Option<std::string::String>,
@@ -37797,7 +38421,7 @@ pub mod caption_description {
             self.language_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`CaptionDescription`](crate::model::CaptionDescription)
+        /// Consumes the builder and constructs a [`CaptionDescription`](crate::model::CaptionDescription).
         pub fn build(self) -> crate::model::CaptionDescription {
             crate::model::CaptionDescription {
                 caption_selector_name: self.caption_selector_name,
@@ -37810,7 +38434,7 @@ pub mod caption_description {
     }
 }
 impl CaptionDescription {
-    /// Creates a new builder-style object to manufacture [`CaptionDescription`](crate::model::CaptionDescription)
+    /// Creates a new builder-style object to manufacture [`CaptionDescription`](crate::model::CaptionDescription).
     pub fn builder() -> crate::model::caption_description::Builder {
         crate::model::caption_description::Builder::default()
     }
@@ -37821,16 +38445,22 @@ impl CaptionDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputGroupSettings {
     /// Settings related to your CMAF output package. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/outputs-file-ABR.html. When you work directly in your JSON job specification, include this object and any required children when you set Type, under OutputGroupSettings, to CMAF_GROUP_SETTINGS.
+    #[doc(hidden)]
     pub cmaf_group_settings: std::option::Option<crate::model::CmafGroupSettings>,
     /// Settings related to your DASH output package. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/outputs-file-ABR.html. When you work directly in your JSON job specification, include this object and any required children when you set Type, under OutputGroupSettings, to DASH_ISO_GROUP_SETTINGS.
+    #[doc(hidden)]
     pub dash_iso_group_settings: std::option::Option<crate::model::DashIsoGroupSettings>,
     /// Settings related to your File output group. MediaConvert uses this group of settings to generate a single standalone file, rather than a streaming package. When you work directly in your JSON job specification, include this object and any required children when you set Type, under OutputGroupSettings, to FILE_GROUP_SETTINGS.
+    #[doc(hidden)]
     pub file_group_settings: std::option::Option<crate::model::FileGroupSettings>,
     /// Settings related to your HLS output package. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/outputs-file-ABR.html. When you work directly in your JSON job specification, include this object and any required children when you set Type, under OutputGroupSettings, to HLS_GROUP_SETTINGS.
+    #[doc(hidden)]
     pub hls_group_settings: std::option::Option<crate::model::HlsGroupSettings>,
     /// Settings related to your Microsoft Smooth Streaming output package. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/outputs-file-ABR.html. When you work directly in your JSON job specification, include this object and any required children when you set Type, under OutputGroupSettings, to MS_SMOOTH_GROUP_SETTINGS.
+    #[doc(hidden)]
     pub ms_smooth_group_settings: std::option::Option<crate::model::MsSmoothGroupSettings>,
     /// Type of output group (File group, Apple HLS, DASH ISO, Microsoft Smooth Streaming, CMAF)
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::OutputGroupType>,
 }
 impl OutputGroupSettings {
@@ -37875,11 +38505,10 @@ impl std::fmt::Debug for OutputGroupSettings {
         formatter.finish()
     }
 }
-/// See [`OutputGroupSettings`](crate::model::OutputGroupSettings)
+/// See [`OutputGroupSettings`](crate::model::OutputGroupSettings).
 pub mod output_group_settings {
 
-    /// A builder for [`OutputGroupSettings`](crate::model::OutputGroupSettings)
-    #[non_exhaustive]
+    /// A builder for [`OutputGroupSettings`](crate::model::OutputGroupSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cmaf_group_settings: std::option::Option<crate::model::CmafGroupSettings>,
@@ -37975,7 +38604,7 @@ pub mod output_group_settings {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputGroupSettings`](crate::model::OutputGroupSettings)
+        /// Consumes the builder and constructs a [`OutputGroupSettings`](crate::model::OutputGroupSettings).
         pub fn build(self) -> crate::model::OutputGroupSettings {
             crate::model::OutputGroupSettings {
                 cmaf_group_settings: self.cmaf_group_settings,
@@ -37989,7 +38618,7 @@ pub mod output_group_settings {
     }
 }
 impl OutputGroupSettings {
-    /// Creates a new builder-style object to manufacture [`OutputGroupSettings`](crate::model::OutputGroupSettings)
+    /// Creates a new builder-style object to manufacture [`OutputGroupSettings`](crate::model::OutputGroupSettings).
     pub fn builder() -> crate::model::output_group_settings::Builder {
         crate::model::output_group_settings::Builder::default()
     }
@@ -38073,21 +38702,29 @@ impl AsRef<str> for OutputGroupType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MsSmoothGroupSettings {
     /// By default, the service creates one .ism Microsoft Smooth Streaming manifest for each Microsoft Smooth Streaming output group in your job. This default manifest references every output in the output group. To create additional manifests that reference a subset of the outputs in the output group, specify a list of them here.
+    #[doc(hidden)]
     pub additional_manifests:
         std::option::Option<std::vec::Vec<crate::model::MsSmoothAdditionalManifest>>,
     /// COMBINE_DUPLICATE_STREAMS combines identical audio encoding settings across a Microsoft Smooth output group into a single audio stream.
+    #[doc(hidden)]
     pub audio_deduplication: std::option::Option<crate::model::MsSmoothAudioDeduplication>,
     /// Use Destination (Destination) to specify the S3 output location and the output filename base. Destination accepts format identifiers. If you do not specify the base filename in the URI, the service will use the filename of the input file. If your job has multiple inputs, the service uses the filename of the first input file.
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
     /// Settings associated with the destination. Will vary based on the type of destination
+    #[doc(hidden)]
     pub destination_settings: std::option::Option<crate::model::DestinationSettings>,
     /// If you are using DRM, set DRM System (MsSmoothEncryptionSettings) to specify the value SpekeKeyProvider.
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::MsSmoothEncryptionSettings>,
     /// Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the encoder use the exact length that you specify with the setting Fragment length (FragmentLength). This might result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next GOP boundary.
+    #[doc(hidden)]
     pub fragment_length: i32,
     /// Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the encoder use the exact length that you specify with the setting Fragment length (FragmentLength). This might result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next GOP boundary.
+    #[doc(hidden)]
     pub fragment_length_control: std::option::Option<crate::model::MsSmoothFragmentLengthControl>,
     /// Use Manifest encoding (MsSmoothManifestEncoding) to specify the encoding format for the server and client manifest. Valid options are utf8 and utf16.
+    #[doc(hidden)]
     pub manifest_encoding: std::option::Option<crate::model::MsSmoothManifestEncoding>,
 }
 impl MsSmoothGroupSettings {
@@ -38146,11 +38783,10 @@ impl std::fmt::Debug for MsSmoothGroupSettings {
         formatter.finish()
     }
 }
-/// See [`MsSmoothGroupSettings`](crate::model::MsSmoothGroupSettings)
+/// See [`MsSmoothGroupSettings`](crate::model::MsSmoothGroupSettings).
 pub mod ms_smooth_group_settings {
 
-    /// A builder for [`MsSmoothGroupSettings`](crate::model::MsSmoothGroupSettings)
-    #[non_exhaustive]
+    /// A builder for [`MsSmoothGroupSettings`](crate::model::MsSmoothGroupSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) additional_manifests:
@@ -38279,7 +38915,7 @@ pub mod ms_smooth_group_settings {
             self.manifest_encoding = input;
             self
         }
-        /// Consumes the builder and constructs a [`MsSmoothGroupSettings`](crate::model::MsSmoothGroupSettings)
+        /// Consumes the builder and constructs a [`MsSmoothGroupSettings`](crate::model::MsSmoothGroupSettings).
         pub fn build(self) -> crate::model::MsSmoothGroupSettings {
             crate::model::MsSmoothGroupSettings {
                 additional_manifests: self.additional_manifests,
@@ -38295,7 +38931,7 @@ pub mod ms_smooth_group_settings {
     }
 }
 impl MsSmoothGroupSettings {
-    /// Creates a new builder-style object to manufacture [`MsSmoothGroupSettings`](crate::model::MsSmoothGroupSettings)
+    /// Creates a new builder-style object to manufacture [`MsSmoothGroupSettings`](crate::model::MsSmoothGroupSettings).
     pub fn builder() -> crate::model::ms_smooth_group_settings::Builder {
         crate::model::ms_smooth_group_settings::Builder::default()
     }
@@ -38416,6 +39052,7 @@ impl AsRef<str> for MsSmoothFragmentLengthControl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MsSmoothEncryptionSettings {
     /// If your output group type is HLS, DASH, or Microsoft Smooth, use these settings when doing DRM encryption with a SPEKE-compliant key provider. If your output group type is CMAF, use the SpekeKeyProviderCmaf settings instead.
+    #[doc(hidden)]
     pub speke_key_provider: std::option::Option<crate::model::SpekeKeyProvider>,
 }
 impl MsSmoothEncryptionSettings {
@@ -38431,11 +39068,10 @@ impl std::fmt::Debug for MsSmoothEncryptionSettings {
         formatter.finish()
     }
 }
-/// See [`MsSmoothEncryptionSettings`](crate::model::MsSmoothEncryptionSettings)
+/// See [`MsSmoothEncryptionSettings`](crate::model::MsSmoothEncryptionSettings).
 pub mod ms_smooth_encryption_settings {
 
-    /// A builder for [`MsSmoothEncryptionSettings`](crate::model::MsSmoothEncryptionSettings)
-    #[non_exhaustive]
+    /// A builder for [`MsSmoothEncryptionSettings`](crate::model::MsSmoothEncryptionSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) speke_key_provider: std::option::Option<crate::model::SpekeKeyProvider>,
@@ -38454,7 +39090,7 @@ pub mod ms_smooth_encryption_settings {
             self.speke_key_provider = input;
             self
         }
-        /// Consumes the builder and constructs a [`MsSmoothEncryptionSettings`](crate::model::MsSmoothEncryptionSettings)
+        /// Consumes the builder and constructs a [`MsSmoothEncryptionSettings`](crate::model::MsSmoothEncryptionSettings).
         pub fn build(self) -> crate::model::MsSmoothEncryptionSettings {
             crate::model::MsSmoothEncryptionSettings {
                 speke_key_provider: self.speke_key_provider,
@@ -38463,7 +39099,7 @@ pub mod ms_smooth_encryption_settings {
     }
 }
 impl MsSmoothEncryptionSettings {
-    /// Creates a new builder-style object to manufacture [`MsSmoothEncryptionSettings`](crate::model::MsSmoothEncryptionSettings)
+    /// Creates a new builder-style object to manufacture [`MsSmoothEncryptionSettings`](crate::model::MsSmoothEncryptionSettings).
     pub fn builder() -> crate::model::ms_smooth_encryption_settings::Builder {
         crate::model::ms_smooth_encryption_settings::Builder::default()
     }
@@ -38474,12 +39110,16 @@ impl MsSmoothEncryptionSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SpekeKeyProvider {
     /// If you want your key provider to encrypt the content keys that it provides to MediaConvert, set up a certificate with a master key using AWS Certificate Manager. Specify the certificate's Amazon Resource Name (ARN) here.
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// Specify the resource ID that your SPEKE-compliant key provider uses to identify this content.
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// Relates to SPEKE implementation. DRM system identifiers. DASH output groups support a max of two system ids. Other group types support one system id. See https://dashif.org/identifiers/content_protection/ for more details.
+    #[doc(hidden)]
     pub system_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// Specify the URL to the key server that your SPEKE-compliant DRM key provider uses to provide keys for encrypting your content.
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl SpekeKeyProvider {
@@ -38510,11 +39150,10 @@ impl std::fmt::Debug for SpekeKeyProvider {
         formatter.finish()
     }
 }
-/// See [`SpekeKeyProvider`](crate::model::SpekeKeyProvider)
+/// See [`SpekeKeyProvider`](crate::model::SpekeKeyProvider).
 pub mod speke_key_provider {
 
-    /// A builder for [`SpekeKeyProvider`](crate::model::SpekeKeyProvider)
-    #[non_exhaustive]
+    /// A builder for [`SpekeKeyProvider`](crate::model::SpekeKeyProvider).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -38575,7 +39214,7 @@ pub mod speke_key_provider {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`SpekeKeyProvider`](crate::model::SpekeKeyProvider)
+        /// Consumes the builder and constructs a [`SpekeKeyProvider`](crate::model::SpekeKeyProvider).
         pub fn build(self) -> crate::model::SpekeKeyProvider {
             crate::model::SpekeKeyProvider {
                 certificate_arn: self.certificate_arn,
@@ -38587,7 +39226,7 @@ pub mod speke_key_provider {
     }
 }
 impl SpekeKeyProvider {
-    /// Creates a new builder-style object to manufacture [`SpekeKeyProvider`](crate::model::SpekeKeyProvider)
+    /// Creates a new builder-style object to manufacture [`SpekeKeyProvider`](crate::model::SpekeKeyProvider).
     pub fn builder() -> crate::model::speke_key_provider::Builder {
         crate::model::speke_key_provider::Builder::default()
     }
@@ -38598,6 +39237,7 @@ impl SpekeKeyProvider {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DestinationSettings {
     /// Settings associated with S3 destination
+    #[doc(hidden)]
     pub s3_settings: std::option::Option<crate::model::S3DestinationSettings>,
 }
 impl DestinationSettings {
@@ -38613,11 +39253,10 @@ impl std::fmt::Debug for DestinationSettings {
         formatter.finish()
     }
 }
-/// See [`DestinationSettings`](crate::model::DestinationSettings)
+/// See [`DestinationSettings`](crate::model::DestinationSettings).
 pub mod destination_settings {
 
-    /// A builder for [`DestinationSettings`](crate::model::DestinationSettings)
-    #[non_exhaustive]
+    /// A builder for [`DestinationSettings`](crate::model::DestinationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_settings: std::option::Option<crate::model::S3DestinationSettings>,
@@ -38636,7 +39275,7 @@ pub mod destination_settings {
             self.s3_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`DestinationSettings`](crate::model::DestinationSettings)
+        /// Consumes the builder and constructs a [`DestinationSettings`](crate::model::DestinationSettings).
         pub fn build(self) -> crate::model::DestinationSettings {
             crate::model::DestinationSettings {
                 s3_settings: self.s3_settings,
@@ -38645,7 +39284,7 @@ pub mod destination_settings {
     }
 }
 impl DestinationSettings {
-    /// Creates a new builder-style object to manufacture [`DestinationSettings`](crate::model::DestinationSettings)
+    /// Creates a new builder-style object to manufacture [`DestinationSettings`](crate::model::DestinationSettings).
     pub fn builder() -> crate::model::destination_settings::Builder {
         crate::model::destination_settings::Builder::default()
     }
@@ -38656,8 +39295,10 @@ impl DestinationSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3DestinationSettings {
     /// Optional. Have MediaConvert automatically apply Amazon S3 access control for the outputs in this output group. When you don't use this setting, S3 automatically applies the default access control list PRIVATE.
+    #[doc(hidden)]
     pub access_control: std::option::Option<crate::model::S3DestinationAccessControl>,
     /// Settings for how your job outputs are encrypted as they are uploaded to Amazon S3.
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::S3EncryptionSettings>,
 }
 impl S3DestinationSettings {
@@ -38678,11 +39319,10 @@ impl std::fmt::Debug for S3DestinationSettings {
         formatter.finish()
     }
 }
-/// See [`S3DestinationSettings`](crate::model::S3DestinationSettings)
+/// See [`S3DestinationSettings`](crate::model::S3DestinationSettings).
 pub mod s3_destination_settings {
 
-    /// A builder for [`S3DestinationSettings`](crate::model::S3DestinationSettings)
-    #[non_exhaustive]
+    /// A builder for [`S3DestinationSettings`](crate::model::S3DestinationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_control: std::option::Option<crate::model::S3DestinationAccessControl>,
@@ -38715,7 +39355,7 @@ pub mod s3_destination_settings {
             self.encryption = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3DestinationSettings`](crate::model::S3DestinationSettings)
+        /// Consumes the builder and constructs a [`S3DestinationSettings`](crate::model::S3DestinationSettings).
         pub fn build(self) -> crate::model::S3DestinationSettings {
             crate::model::S3DestinationSettings {
                 access_control: self.access_control,
@@ -38725,7 +39365,7 @@ pub mod s3_destination_settings {
     }
 }
 impl S3DestinationSettings {
-    /// Creates a new builder-style object to manufacture [`S3DestinationSettings`](crate::model::S3DestinationSettings)
+    /// Creates a new builder-style object to manufacture [`S3DestinationSettings`](crate::model::S3DestinationSettings).
     pub fn builder() -> crate::model::s3_destination_settings::Builder {
         crate::model::s3_destination_settings::Builder::default()
     }
@@ -38736,10 +39376,13 @@ impl S3DestinationSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3EncryptionSettings {
     /// Specify how you want your data keys managed. AWS uses data keys to encrypt your content. AWS also encrypts the data keys themselves, using a customer master key (CMK), and then stores the encrypted data keys alongside your encrypted content. Use this setting to specify which AWS service manages the CMK. For simplest set up, choose Amazon S3 (SERVER_SIDE_ENCRYPTION_S3). If you want your master key to be managed by AWS Key Management Service (KMS), choose AWS KMS (SERVER_SIDE_ENCRYPTION_KMS). By default, when you choose AWS KMS, KMS uses the AWS managed customer master key (CMK) associated with Amazon S3 to encrypt your data keys. You can optionally choose to specify a different, customer managed CMK. Do so by specifying the Amazon Resource Name (ARN) of the key for the setting KMS ARN (kmsKeyArn).
+    #[doc(hidden)]
     pub encryption_type: std::option::Option<crate::model::S3ServerSideEncryptionType>,
     /// Optionally, specify the encryption context that you want to use alongside your KMS key. AWS KMS uses this encryption context as additional authenticated data (AAD) to support authenticated encryption. This value must be a base64-encoded UTF-8 string holding JSON which represents a string-string map. To use this setting, you must also set Server-side encryption (S3ServerSideEncryptionType) to AWS KMS (SERVER_SIDE_ENCRYPTION_KMS). For more information about encryption context, see: https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context.
+    #[doc(hidden)]
     pub kms_encryption_context: std::option::Option<std::string::String>,
     /// Optionally, specify the customer master key (CMK) that you want to use to encrypt the data key that AWS uses to encrypt your output content. Enter the Amazon Resource Name (ARN) of the CMK. To use this setting, you must also set Server-side encryption (S3ServerSideEncryptionType) to AWS KMS (SERVER_SIDE_ENCRYPTION_KMS). If you set Server-side encryption to AWS KMS but don't specify a CMK here, AWS uses the AWS managed CMK associated with Amazon S3.
+    #[doc(hidden)]
     pub kms_key_arn: std::option::Option<std::string::String>,
 }
 impl S3EncryptionSettings {
@@ -38767,11 +39410,10 @@ impl std::fmt::Debug for S3EncryptionSettings {
         formatter.finish()
     }
 }
-/// See [`S3EncryptionSettings`](crate::model::S3EncryptionSettings)
+/// See [`S3EncryptionSettings`](crate::model::S3EncryptionSettings).
 pub mod s3_encryption_settings {
 
-    /// A builder for [`S3EncryptionSettings`](crate::model::S3EncryptionSettings)
-    #[non_exhaustive]
+    /// A builder for [`S3EncryptionSettings`](crate::model::S3EncryptionSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encryption_type: std::option::Option<crate::model::S3ServerSideEncryptionType>,
@@ -38815,7 +39457,7 @@ pub mod s3_encryption_settings {
             self.kms_key_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3EncryptionSettings`](crate::model::S3EncryptionSettings)
+        /// Consumes the builder and constructs a [`S3EncryptionSettings`](crate::model::S3EncryptionSettings).
         pub fn build(self) -> crate::model::S3EncryptionSettings {
             crate::model::S3EncryptionSettings {
                 encryption_type: self.encryption_type,
@@ -38826,7 +39468,7 @@ pub mod s3_encryption_settings {
     }
 }
 impl S3EncryptionSettings {
-    /// Creates a new builder-style object to manufacture [`S3EncryptionSettings`](crate::model::S3EncryptionSettings)
+    /// Creates a new builder-style object to manufacture [`S3EncryptionSettings`](crate::model::S3EncryptionSettings).
     pub fn builder() -> crate::model::s3_encryption_settings::Builder {
         crate::model::s3_encryption_settings::Builder::default()
     }
@@ -38892,6 +39534,7 @@ impl AsRef<str> for S3ServerSideEncryptionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3DestinationAccessControl {
     /// Choose an Amazon S3 canned ACL for MediaConvert to apply to this output.
+    #[doc(hidden)]
     pub canned_acl: std::option::Option<crate::model::S3ObjectCannedAcl>,
 }
 impl S3DestinationAccessControl {
@@ -38907,11 +39550,10 @@ impl std::fmt::Debug for S3DestinationAccessControl {
         formatter.finish()
     }
 }
-/// See [`S3DestinationAccessControl`](crate::model::S3DestinationAccessControl)
+/// See [`S3DestinationAccessControl`](crate::model::S3DestinationAccessControl).
 pub mod s3_destination_access_control {
 
-    /// A builder for [`S3DestinationAccessControl`](crate::model::S3DestinationAccessControl)
-    #[non_exhaustive]
+    /// A builder for [`S3DestinationAccessControl`](crate::model::S3DestinationAccessControl).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) canned_acl: std::option::Option<crate::model::S3ObjectCannedAcl>,
@@ -38930,7 +39572,7 @@ pub mod s3_destination_access_control {
             self.canned_acl = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3DestinationAccessControl`](crate::model::S3DestinationAccessControl)
+        /// Consumes the builder and constructs a [`S3DestinationAccessControl`](crate::model::S3DestinationAccessControl).
         pub fn build(self) -> crate::model::S3DestinationAccessControl {
             crate::model::S3DestinationAccessControl {
                 canned_acl: self.canned_acl,
@@ -38939,7 +39581,7 @@ pub mod s3_destination_access_control {
     }
 }
 impl S3DestinationAccessControl {
-    /// Creates a new builder-style object to manufacture [`S3DestinationAccessControl`](crate::model::S3DestinationAccessControl)
+    /// Creates a new builder-style object to manufacture [`S3DestinationAccessControl`](crate::model::S3DestinationAccessControl).
     pub fn builder() -> crate::model::s3_destination_access_control::Builder {
         crate::model::s3_destination_access_control::Builder::default()
     }
@@ -39073,8 +39715,10 @@ impl AsRef<str> for MsSmoothAudioDeduplication {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MsSmoothAdditionalManifest {
     /// Specify a name modifier that the service adds to the name of this manifest to make it different from the file names of the other main manifests in the output group. For example, say that the default main manifest for your Microsoft Smooth group is film-name.ismv. If you enter "-no-premium" for this setting, then the file name the service generates for this top-level manifest is film-name-no-premium.ismv.
+    #[doc(hidden)]
     pub manifest_name_modifier: std::option::Option<std::string::String>,
     /// Specify the outputs that you want this additional top-level manifest to reference.
+    #[doc(hidden)]
     pub selected_outputs: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl MsSmoothAdditionalManifest {
@@ -39095,11 +39739,10 @@ impl std::fmt::Debug for MsSmoothAdditionalManifest {
         formatter.finish()
     }
 }
-/// See [`MsSmoothAdditionalManifest`](crate::model::MsSmoothAdditionalManifest)
+/// See [`MsSmoothAdditionalManifest`](crate::model::MsSmoothAdditionalManifest).
 pub mod ms_smooth_additional_manifest {
 
-    /// A builder for [`MsSmoothAdditionalManifest`](crate::model::MsSmoothAdditionalManifest)
-    #[non_exhaustive]
+    /// A builder for [`MsSmoothAdditionalManifest`](crate::model::MsSmoothAdditionalManifest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) manifest_name_modifier: std::option::Option<std::string::String>,
@@ -39138,7 +39781,7 @@ pub mod ms_smooth_additional_manifest {
             self.selected_outputs = input;
             self
         }
-        /// Consumes the builder and constructs a [`MsSmoothAdditionalManifest`](crate::model::MsSmoothAdditionalManifest)
+        /// Consumes the builder and constructs a [`MsSmoothAdditionalManifest`](crate::model::MsSmoothAdditionalManifest).
         pub fn build(self) -> crate::model::MsSmoothAdditionalManifest {
             crate::model::MsSmoothAdditionalManifest {
                 manifest_name_modifier: self.manifest_name_modifier,
@@ -39148,7 +39791,7 @@ pub mod ms_smooth_additional_manifest {
     }
 }
 impl MsSmoothAdditionalManifest {
-    /// Creates a new builder-style object to manufacture [`MsSmoothAdditionalManifest`](crate::model::MsSmoothAdditionalManifest)
+    /// Creates a new builder-style object to manufacture [`MsSmoothAdditionalManifest`](crate::model::MsSmoothAdditionalManifest).
     pub fn builder() -> crate::model::ms_smooth_additional_manifest::Builder {
         crate::model::ms_smooth_additional_manifest::Builder::default()
     }
@@ -39159,71 +39802,102 @@ impl MsSmoothAdditionalManifest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsGroupSettings {
     /// Choose one or more ad marker types to decorate your Apple HLS manifest. This setting does not determine whether SCTE-35 markers appear in the outputs themselves.
+    #[doc(hidden)]
     pub ad_markers: std::option::Option<std::vec::Vec<crate::model::HlsAdMarkers>>,
     /// By default, the service creates one top-level .m3u8 HLS manifest for each HLS output group in your job. This default manifest references every output in the output group. To create additional top-level manifests that reference a subset of the outputs in the output group, specify a list of them here.
+    #[doc(hidden)]
     pub additional_manifests:
         std::option::Option<std::vec::Vec<crate::model::HlsAdditionalManifest>>,
     /// Ignore this setting unless you are using FairPlay DRM with Verimatrix and you encounter playback issues. Keep the default value, Include (INCLUDE), to output audio-only headers. Choose Exclude (EXCLUDE) to remove the audio-only headers from your audio segments.
+    #[doc(hidden)]
     pub audio_only_header: std::option::Option<crate::model::HlsAudioOnlyHeader>,
     /// A partial URI prefix that will be prepended to each output in the media .m3u8 file. Can be used if base manifest is delivered from a different URL than the main .m3u8 file.
+    #[doc(hidden)]
     pub base_url: std::option::Option<std::string::String>,
     /// Language to be used on Caption outputs
+    #[doc(hidden)]
     pub caption_language_mappings:
         std::option::Option<std::vec::Vec<crate::model::HlsCaptionLanguageMapping>>,
     /// Applies only to 608 Embedded output captions. Insert: Include CLOSED-CAPTIONS lines in the manifest. Specify at least one language in the CC1 Language Code field. One CLOSED-CAPTION line is added for each Language Code you specify. Make sure to specify the languages in the order in which they appear in the original source (if the source is embedded format) or the order of the caption selectors (if the source is other than embedded). Otherwise, languages in the manifest will not match up properly with the output captions. None: Include CLOSED-CAPTIONS=NONE line in the manifest. Omit: Omit any CLOSED-CAPTIONS line from the manifest.
+    #[doc(hidden)]
     pub caption_language_setting: std::option::Option<crate::model::HlsCaptionLanguageSetting>,
     /// Set Caption segment length control (CaptionSegmentLengthControl) to Match video (MATCH_VIDEO) to create caption segments that align with the video segments from the first video output in this output group. For example, if the video segments are 2 seconds long, your WebVTT segments will also be 2 seconds long. Keep the default setting, Large segments (LARGE_SEGMENTS) to create caption segments that are 300 seconds long.
+    #[doc(hidden)]
     pub caption_segment_length_control:
         std::option::Option<crate::model::HlsCaptionSegmentLengthControl>,
     /// Disable this setting only when your workflow requires the #EXT-X-ALLOW-CACHE:no tag. Otherwise, keep the default value Enabled (ENABLED) and control caching in your video distribution set up. For example, use the Cache-Control http header.
+    #[doc(hidden)]
     pub client_cache: std::option::Option<crate::model::HlsClientCache>,
     /// Specification to use (RFC-6381 or the default RFC-4281) during m3u8 playlist generation.
+    #[doc(hidden)]
     pub codec_specification: std::option::Option<crate::model::HlsCodecSpecification>,
     /// Use Destination (Destination) to specify the S3 output location and the output filename base. Destination accepts format identifiers. If you do not specify the base filename in the URI, the service will use the filename of the input file. If your job has multiple inputs, the service uses the filename of the first input file.
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
     /// Settings associated with the destination. Will vary based on the type of destination
+    #[doc(hidden)]
     pub destination_settings: std::option::Option<crate::model::DestinationSettings>,
     /// Indicates whether segments should be placed in subdirectories.
+    #[doc(hidden)]
     pub directory_structure: std::option::Option<crate::model::HlsDirectoryStructure>,
     /// DRM settings.
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::HlsEncryptionSettings>,
     /// Specify whether MediaConvert generates images for trick play. Keep the default value, None (NONE), to not generate any images. Choose Thumbnail (THUMBNAIL) to generate tiled thumbnails. Choose Thumbnail and full frame (THUMBNAIL_AND_FULLFRAME) to generate tiled thumbnails and full-resolution images of single frames. MediaConvert creates a child manifest for each set of images that you generate and adds corresponding entries to the parent manifest. A common application for these images is Roku trick mode. The thumbnails and full-frame images that MediaConvert creates with this feature are compatible with this Roku specification: https://developer.roku.com/docs/developer-program/media-playback/trick-mode/hls-and-dash.md
+    #[doc(hidden)]
     pub image_based_trick_play: std::option::Option<crate::model::HlsImageBasedTrickPlay>,
     /// Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+    #[doc(hidden)]
     pub image_based_trick_play_settings:
         std::option::Option<crate::model::HlsImageBasedTrickPlaySettings>,
     /// When set to GZIP, compresses HLS playlist.
+    #[doc(hidden)]
     pub manifest_compression: std::option::Option<crate::model::HlsManifestCompression>,
     /// Indicates whether the output manifest should use floating point values for segment duration.
+    #[doc(hidden)]
     pub manifest_duration_format: std::option::Option<crate::model::HlsManifestDurationFormat>,
     /// Keep this setting at the default value of 0, unless you are troubleshooting a problem with how devices play back the end of your video asset. If you know that player devices are hanging on the final segment of your video because the length of your final segment is too short, use this setting to specify a minimum final segment length, in seconds. Choose a value that is greater than or equal to 1 and less than your segment length. When you specify a value for this setting, the encoder will combine any final segment that is shorter than the length that you specify with the previous segment. For example, your segment length is 3 seconds and your final segment is .5 seconds without a minimum final segment length; when you set the minimum final segment length to 1, your final segment is 3.5 seconds.
+    #[doc(hidden)]
     pub min_final_segment_length: f64,
     /// When set, Minimum Segment Size is enforced by looking ahead and back within the specified range for a nearby avail and extending the segment size if needed.
+    #[doc(hidden)]
     pub min_segment_length: i32,
     /// Indicates whether the .m3u8 manifest file should be generated for this HLS output group.
+    #[doc(hidden)]
     pub output_selection: std::option::Option<crate::model::HlsOutputSelection>,
     /// Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated as follows: either the program date and time are initialized using the input timecode source, or the time is initialized using the input timecode source and the date is initialized using the timestamp_offset.
+    #[doc(hidden)]
     pub program_date_time: std::option::Option<crate::model::HlsProgramDateTime>,
     /// Period of insertion of EXT-X-PROGRAM-DATE-TIME entry, in seconds.
+    #[doc(hidden)]
     pub program_date_time_period: i32,
     /// When set to SINGLE_FILE, emits program as a single media resource (.ts) file, uses #EXT-X-BYTERANGE tags to index segment for playback.
+    #[doc(hidden)]
     pub segment_control: std::option::Option<crate::model::HlsSegmentControl>,
     /// Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces this value strictly. Use Segment control (HlsSegmentControl) to specify whether MediaConvert creates separate segment files or one content file that has metadata to mark the segment boundaries.
+    #[doc(hidden)]
     pub segment_length: i32,
     /// Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next GOP boundary.
+    #[doc(hidden)]
     pub segment_length_control: std::option::Option<crate::model::HlsSegmentLengthControl>,
     /// Number of segments to write to a subdirectory before starting a new one. directoryStructure must be SINGLE_DIRECTORY for this setting to have an effect.
+    #[doc(hidden)]
     pub segments_per_subdirectory: i32,
     /// Include or exclude RESOLUTION attribute for video in EXT-X-STREAM-INF tag of variant manifest.
+    #[doc(hidden)]
     pub stream_inf_resolution: std::option::Option<crate::model::HlsStreamInfResolution>,
     /// When set to LEGACY, the segment target duration is always rounded up to the nearest integer value above its current value in seconds. When set to SPEC\\_COMPLIANT, the segment target duration is rounded up to the nearest integer value if fraction seconds are greater than or equal to 0.5 (&gt;= 0.5) and rounded down if less than 0.5 (&lt; 0.5). You may need to use LEGACY if your client needs to ensure that the target duration is always longer than the actual duration of the segment. Some older players may experience interrupted playback when the actual duration of a track in a segment is longer than the target duration.
+    #[doc(hidden)]
     pub target_duration_compatibility_mode:
         std::option::Option<crate::model::HlsTargetDurationCompatibilityMode>,
     /// Specify the type of the ID3 frame (timedMetadataId3Frame) to use for ID3 timestamps (timedMetadataId3Period) in your output. To include ID3 timestamps: Specify PRIV (PRIV) or TDRL (TDRL) and set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). To exclude ID3 timestamps: Set ID3 timestamp frame type to None (NONE).
+    #[doc(hidden)]
     pub timed_metadata_id3_frame: std::option::Option<crate::model::HlsTimedMetadataId3Frame>,
     /// Specify the interval in seconds to write ID3 timestamps in your output. The first timestamp starts at the output timecode and date, and increases incrementally with each ID3 timestamp. To use the default interval of 10 seconds: Leave blank. To include this metadata in your output: Set ID3 timestamp frame type (timedMetadataId3Frame) to PRIV (PRIV) or TDRL (TDRL), and set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
+    #[doc(hidden)]
     pub timed_metadata_id3_period: i32,
     /// Provides an extra millisecond delta offset to fine tune the timestamps.
+    #[doc(hidden)]
     pub timestamp_delta_milliseconds: i32,
 }
 impl HlsGroupSettings {
@@ -39425,11 +40099,10 @@ impl std::fmt::Debug for HlsGroupSettings {
         formatter.finish()
     }
 }
-/// See [`HlsGroupSettings`](crate::model::HlsGroupSettings)
+/// See [`HlsGroupSettings`](crate::model::HlsGroupSettings).
 pub mod hls_group_settings {
 
-    /// A builder for [`HlsGroupSettings`](crate::model::HlsGroupSettings)
-    #[non_exhaustive]
+    /// A builder for [`HlsGroupSettings`](crate::model::HlsGroupSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ad_markers: std::option::Option<std::vec::Vec<crate::model::HlsAdMarkers>>,
@@ -39899,7 +40572,7 @@ pub mod hls_group_settings {
             self.timestamp_delta_milliseconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsGroupSettings`](crate::model::HlsGroupSettings)
+        /// Consumes the builder and constructs a [`HlsGroupSettings`](crate::model::HlsGroupSettings).
         pub fn build(self) -> crate::model::HlsGroupSettings {
             crate::model::HlsGroupSettings {
                 ad_markers: self.ad_markers,
@@ -39938,7 +40611,7 @@ pub mod hls_group_settings {
     }
 }
 impl HlsGroupSettings {
-    /// Creates a new builder-style object to manufacture [`HlsGroupSettings`](crate::model::HlsGroupSettings)
+    /// Creates a new builder-style object to manufacture [`HlsGroupSettings`](crate::model::HlsGroupSettings).
     pub fn builder() -> crate::model::hls_group_settings::Builder {
         crate::model::hls_group_settings::Builder::default()
     }
@@ -40448,16 +41121,22 @@ impl AsRef<str> for HlsManifestCompression {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsImageBasedTrickPlaySettings {
     /// The cadence MediaConvert follows for generating thumbnails. If set to FOLLOW_IFRAME, MediaConvert generates thumbnails for each IDR frame in the output (matching the GOP cadence). If set to FOLLOW_CUSTOM, MediaConvert generates thumbnails according to the interval you specify in thumbnailInterval.
+    #[doc(hidden)]
     pub interval_cadence: std::option::Option<crate::model::HlsIntervalCadence>,
     /// Height of each thumbnail within each tile image, in pixels. Leave blank to maintain aspect ratio with thumbnail width. If following the aspect ratio would lead to a total tile height greater than 4096, then the job will be rejected. Must be divisible by 2.
+    #[doc(hidden)]
     pub thumbnail_height: i32,
     /// Enter the interval, in seconds, that MediaConvert uses to generate thumbnails. If the interval you enter doesn't align with the output frame rate, MediaConvert automatically rounds the interval to align with the output frame rate. For example, if the output frame rate is 29.97 frames per second and you enter 5, MediaConvert uses a 150 frame interval to generate thumbnails.
+    #[doc(hidden)]
     pub thumbnail_interval: f64,
     /// Width of each thumbnail within each tile image, in pixels. Default is 312. Must be divisible by 8.
+    #[doc(hidden)]
     pub thumbnail_width: i32,
     /// Number of thumbnails in each column of a tile image. Set a value between 2 and 2048. Must be divisible by 2.
+    #[doc(hidden)]
     pub tile_height: i32,
     /// Number of thumbnails in each row of a tile image. Set a value between 1 and 512.
+    #[doc(hidden)]
     pub tile_width: i32,
 }
 impl HlsImageBasedTrickPlaySettings {
@@ -40498,11 +41177,10 @@ impl std::fmt::Debug for HlsImageBasedTrickPlaySettings {
         formatter.finish()
     }
 }
-/// See [`HlsImageBasedTrickPlaySettings`](crate::model::HlsImageBasedTrickPlaySettings)
+/// See [`HlsImageBasedTrickPlaySettings`](crate::model::HlsImageBasedTrickPlaySettings).
 pub mod hls_image_based_trick_play_settings {
 
-    /// A builder for [`HlsImageBasedTrickPlaySettings`](crate::model::HlsImageBasedTrickPlaySettings)
-    #[non_exhaustive]
+    /// A builder for [`HlsImageBasedTrickPlaySettings`](crate::model::HlsImageBasedTrickPlaySettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) interval_cadence: std::option::Option<crate::model::HlsIntervalCadence>,
@@ -40576,7 +41254,7 @@ pub mod hls_image_based_trick_play_settings {
             self.tile_width = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsImageBasedTrickPlaySettings`](crate::model::HlsImageBasedTrickPlaySettings)
+        /// Consumes the builder and constructs a [`HlsImageBasedTrickPlaySettings`](crate::model::HlsImageBasedTrickPlaySettings).
         pub fn build(self) -> crate::model::HlsImageBasedTrickPlaySettings {
             crate::model::HlsImageBasedTrickPlaySettings {
                 interval_cadence: self.interval_cadence,
@@ -40590,7 +41268,7 @@ pub mod hls_image_based_trick_play_settings {
     }
 }
 impl HlsImageBasedTrickPlaySettings {
-    /// Creates a new builder-style object to manufacture [`HlsImageBasedTrickPlaySettings`](crate::model::HlsImageBasedTrickPlaySettings)
+    /// Creates a new builder-style object to manufacture [`HlsImageBasedTrickPlaySettings`](crate::model::HlsImageBasedTrickPlaySettings).
     pub fn builder() -> crate::model::hls_image_based_trick_play_settings::Builder {
         crate::model::hls_image_based_trick_play_settings::Builder::default()
     }
@@ -40719,19 +41397,26 @@ impl AsRef<str> for HlsImageBasedTrickPlay {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsEncryptionSettings {
     /// This is a 128-bit, 16-byte hex value represented by a 32-character text string. If this parameter is not set then the Initialization Vector will follow the segment number by default.
+    #[doc(hidden)]
     pub constant_initialization_vector: std::option::Option<std::string::String>,
     /// Encrypts the segments with the given encryption scheme. Leave blank to disable. Selecting 'Disabled' in the web interface also disables encryption.
+    #[doc(hidden)]
     pub encryption_method: std::option::Option<crate::model::HlsEncryptionType>,
     /// The Initialization Vector is a 128-bit number used in conjunction with the key for encrypting blocks. If set to INCLUDE, Initialization Vector is listed in the manifest. Otherwise Initialization Vector is not in the manifest.
+    #[doc(hidden)]
     pub initialization_vector_in_manifest:
         std::option::Option<crate::model::HlsInitializationVectorInManifest>,
     /// Enable this setting to insert the EXT-X-SESSION-KEY element into the master playlist. This allows for offline Apple HLS FairPlay content protection.
+    #[doc(hidden)]
     pub offline_encrypted: std::option::Option<crate::model::HlsOfflineEncrypted>,
     /// If your output group type is HLS, DASH, or Microsoft Smooth, use these settings when doing DRM encryption with a SPEKE-compliant key provider. If your output group type is CMAF, use the SpekeKeyProviderCmaf settings instead.
+    #[doc(hidden)]
     pub speke_key_provider: std::option::Option<crate::model::SpekeKeyProvider>,
     /// Use these settings to set up encryption with a static key provider.
+    #[doc(hidden)]
     pub static_key_provider: std::option::Option<crate::model::StaticKeyProvider>,
     /// Specify whether your DRM encryption key is static or from a key provider that follows the SPEKE standard. For more information about SPEKE, see https://docs.aws.amazon.com/speke/latest/documentation/what-is-speke.html.
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::HlsKeyProviderType>,
 }
 impl HlsEncryptionSettings {
@@ -40785,11 +41470,10 @@ impl std::fmt::Debug for HlsEncryptionSettings {
         formatter.finish()
     }
 }
-/// See [`HlsEncryptionSettings`](crate::model::HlsEncryptionSettings)
+/// See [`HlsEncryptionSettings`](crate::model::HlsEncryptionSettings).
 pub mod hls_encryption_settings {
 
-    /// A builder for [`HlsEncryptionSettings`](crate::model::HlsEncryptionSettings)
-    #[non_exhaustive]
+    /// A builder for [`HlsEncryptionSettings`](crate::model::HlsEncryptionSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) constant_initialization_vector: std::option::Option<std::string::String>,
@@ -40899,7 +41583,7 @@ pub mod hls_encryption_settings {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsEncryptionSettings`](crate::model::HlsEncryptionSettings)
+        /// Consumes the builder and constructs a [`HlsEncryptionSettings`](crate::model::HlsEncryptionSettings).
         pub fn build(self) -> crate::model::HlsEncryptionSettings {
             crate::model::HlsEncryptionSettings {
                 constant_initialization_vector: self.constant_initialization_vector,
@@ -40914,7 +41598,7 @@ pub mod hls_encryption_settings {
     }
 }
 impl HlsEncryptionSettings {
-    /// Creates a new builder-style object to manufacture [`HlsEncryptionSettings`](crate::model::HlsEncryptionSettings)
+    /// Creates a new builder-style object to manufacture [`HlsEncryptionSettings`](crate::model::HlsEncryptionSettings).
     pub fn builder() -> crate::model::hls_encryption_settings::Builder {
         crate::model::hls_encryption_settings::Builder::default()
     }
@@ -40980,12 +41664,16 @@ impl AsRef<str> for HlsKeyProviderType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StaticKeyProvider {
     /// Relates to DRM implementation. Sets the value of the KEYFORMAT attribute. Must be 'identity' or a reverse DNS string. May be omitted to indicate an implicit value of 'identity'.
+    #[doc(hidden)]
     pub key_format: std::option::Option<std::string::String>,
     /// Relates to DRM implementation. Either a single positive integer version value or a slash delimited list of version values (1/2/3).
+    #[doc(hidden)]
     pub key_format_versions: std::option::Option<std::string::String>,
     /// Relates to DRM implementation. Use a 32-character hexidecimal string to specify Key Value (StaticKeyValue).
+    #[doc(hidden)]
     pub static_key_value: std::option::Option<std::string::String>,
     /// Relates to DRM implementation. The location of the license server used for protecting content.
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl StaticKeyProvider {
@@ -41016,11 +41704,10 @@ impl std::fmt::Debug for StaticKeyProvider {
         formatter.finish()
     }
 }
-/// See [`StaticKeyProvider`](crate::model::StaticKeyProvider)
+/// See [`StaticKeyProvider`](crate::model::StaticKeyProvider).
 pub mod static_key_provider {
 
-    /// A builder for [`StaticKeyProvider`](crate::model::StaticKeyProvider)
-    #[non_exhaustive]
+    /// A builder for [`StaticKeyProvider`](crate::model::StaticKeyProvider).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_format: std::option::Option<std::string::String>,
@@ -41075,7 +41762,7 @@ pub mod static_key_provider {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`StaticKeyProvider`](crate::model::StaticKeyProvider)
+        /// Consumes the builder and constructs a [`StaticKeyProvider`](crate::model::StaticKeyProvider).
         pub fn build(self) -> crate::model::StaticKeyProvider {
             crate::model::StaticKeyProvider {
                 key_format: self.key_format,
@@ -41087,7 +41774,7 @@ pub mod static_key_provider {
     }
 }
 impl StaticKeyProvider {
-    /// Creates a new builder-style object to manufacture [`StaticKeyProvider`](crate::model::StaticKeyProvider)
+    /// Creates a new builder-style object to manufacture [`StaticKeyProvider`](crate::model::StaticKeyProvider).
     pub fn builder() -> crate::model::static_key_provider::Builder {
         crate::model::static_key_provider::Builder::default()
     }
@@ -41542,12 +42229,16 @@ impl AsRef<str> for HlsCaptionLanguageSetting {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsCaptionLanguageMapping {
     /// Caption channel.
+    #[doc(hidden)]
     pub caption_channel: i32,
     /// Specify the language for this captions channel, using the ISO 639-2 or ISO 639-3 three-letter language code
+    #[doc(hidden)]
     pub custom_language_code: std::option::Option<std::string::String>,
     /// Specify the language, using the ISO 639-2 three-letter code listed at https://www.loc.gov/standards/iso639-2/php/code_list.php.
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// Caption language description.
+    #[doc(hidden)]
     pub language_description: std::option::Option<std::string::String>,
 }
 impl HlsCaptionLanguageMapping {
@@ -41578,11 +42269,10 @@ impl std::fmt::Debug for HlsCaptionLanguageMapping {
         formatter.finish()
     }
 }
-/// See [`HlsCaptionLanguageMapping`](crate::model::HlsCaptionLanguageMapping)
+/// See [`HlsCaptionLanguageMapping`](crate::model::HlsCaptionLanguageMapping).
 pub mod hls_caption_language_mapping {
 
-    /// A builder for [`HlsCaptionLanguageMapping`](crate::model::HlsCaptionLanguageMapping)
-    #[non_exhaustive]
+    /// A builder for [`HlsCaptionLanguageMapping`](crate::model::HlsCaptionLanguageMapping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) caption_channel: std::option::Option<i32>,
@@ -41640,7 +42330,7 @@ pub mod hls_caption_language_mapping {
             self.language_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsCaptionLanguageMapping`](crate::model::HlsCaptionLanguageMapping)
+        /// Consumes the builder and constructs a [`HlsCaptionLanguageMapping`](crate::model::HlsCaptionLanguageMapping).
         pub fn build(self) -> crate::model::HlsCaptionLanguageMapping {
             crate::model::HlsCaptionLanguageMapping {
                 caption_channel: self.caption_channel.unwrap_or_default(),
@@ -41652,7 +42342,7 @@ pub mod hls_caption_language_mapping {
     }
 }
 impl HlsCaptionLanguageMapping {
-    /// Creates a new builder-style object to manufacture [`HlsCaptionLanguageMapping`](crate::model::HlsCaptionLanguageMapping)
+    /// Creates a new builder-style object to manufacture [`HlsCaptionLanguageMapping`](crate::model::HlsCaptionLanguageMapping).
     pub fn builder() -> crate::model::hls_caption_language_mapping::Builder {
         crate::model::hls_caption_language_mapping::Builder::default()
     }
@@ -41718,8 +42408,10 @@ impl AsRef<str> for HlsAudioOnlyHeader {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsAdditionalManifest {
     /// Specify a name modifier that the service adds to the name of this manifest to make it different from the file names of the other main manifests in the output group. For example, say that the default main manifest for your HLS group is film-name.m3u8. If you enter "-no-premium" for this setting, then the file name the service generates for this top-level manifest is film-name-no-premium.m3u8. For HLS output groups, specify a manifestNameModifier that is different from the nameModifier of the output. The service uses the output name modifier to create unique names for the individual variant manifests.
+    #[doc(hidden)]
     pub manifest_name_modifier: std::option::Option<std::string::String>,
     /// Specify the outputs that you want this additional top-level manifest to reference.
+    #[doc(hidden)]
     pub selected_outputs: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl HlsAdditionalManifest {
@@ -41740,11 +42432,10 @@ impl std::fmt::Debug for HlsAdditionalManifest {
         formatter.finish()
     }
 }
-/// See [`HlsAdditionalManifest`](crate::model::HlsAdditionalManifest)
+/// See [`HlsAdditionalManifest`](crate::model::HlsAdditionalManifest).
 pub mod hls_additional_manifest {
 
-    /// A builder for [`HlsAdditionalManifest`](crate::model::HlsAdditionalManifest)
-    #[non_exhaustive]
+    /// A builder for [`HlsAdditionalManifest`](crate::model::HlsAdditionalManifest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) manifest_name_modifier: std::option::Option<std::string::String>,
@@ -41783,7 +42474,7 @@ pub mod hls_additional_manifest {
             self.selected_outputs = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsAdditionalManifest`](crate::model::HlsAdditionalManifest)
+        /// Consumes the builder and constructs a [`HlsAdditionalManifest`](crate::model::HlsAdditionalManifest).
         pub fn build(self) -> crate::model::HlsAdditionalManifest {
             crate::model::HlsAdditionalManifest {
                 manifest_name_modifier: self.manifest_name_modifier,
@@ -41793,7 +42484,7 @@ pub mod hls_additional_manifest {
     }
 }
 impl HlsAdditionalManifest {
-    /// Creates a new builder-style object to manufacture [`HlsAdditionalManifest`](crate::model::HlsAdditionalManifest)
+    /// Creates a new builder-style object to manufacture [`HlsAdditionalManifest`](crate::model::HlsAdditionalManifest).
     pub fn builder() -> crate::model::hls_additional_manifest::Builder {
         crate::model::hls_additional_manifest::Builder::default()
     }
@@ -41859,8 +42550,10 @@ impl AsRef<str> for HlsAdMarkers {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FileGroupSettings {
     /// Use Destination (Destination) to specify the S3 output location and the output filename base. Destination accepts format identifiers. If you do not specify the base filename in the URI, the service will use the filename of the input file. If your job has multiple inputs, the service uses the filename of the first input file.
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
     /// Settings associated with the destination. Will vary based on the type of destination
+    #[doc(hidden)]
     pub destination_settings: std::option::Option<crate::model::DestinationSettings>,
 }
 impl FileGroupSettings {
@@ -41881,11 +42574,10 @@ impl std::fmt::Debug for FileGroupSettings {
         formatter.finish()
     }
 }
-/// See [`FileGroupSettings`](crate::model::FileGroupSettings)
+/// See [`FileGroupSettings`](crate::model::FileGroupSettings).
 pub mod file_group_settings {
 
-    /// A builder for [`FileGroupSettings`](crate::model::FileGroupSettings)
-    #[non_exhaustive]
+    /// A builder for [`FileGroupSettings`](crate::model::FileGroupSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination: std::option::Option<std::string::String>,
@@ -41915,7 +42607,7 @@ pub mod file_group_settings {
             self.destination_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`FileGroupSettings`](crate::model::FileGroupSettings)
+        /// Consumes the builder and constructs a [`FileGroupSettings`](crate::model::FileGroupSettings).
         pub fn build(self) -> crate::model::FileGroupSettings {
             crate::model::FileGroupSettings {
                 destination: self.destination,
@@ -41925,7 +42617,7 @@ pub mod file_group_settings {
     }
 }
 impl FileGroupSettings {
-    /// Creates a new builder-style object to manufacture [`FileGroupSettings`](crate::model::FileGroupSettings)
+    /// Creates a new builder-style object to manufacture [`FileGroupSettings`](crate::model::FileGroupSettings).
     pub fn builder() -> crate::model::file_group_settings::Builder {
         crate::model::file_group_settings::Builder::default()
     }
@@ -41936,44 +42628,62 @@ impl FileGroupSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DashIsoGroupSettings {
     /// By default, the service creates one .mpd DASH manifest for each DASH ISO output group in your job. This default manifest references every output in the output group. To create additional DASH manifests that reference a subset of the outputs in the output group, specify a list of them here.
+    #[doc(hidden)]
     pub additional_manifests:
         std::option::Option<std::vec::Vec<crate::model::DashAdditionalManifest>>,
     /// Use this setting only when your audio codec is a Dolby one (AC3, EAC3, or Atmos) and your downstream workflow requires that your DASH manifest use the Dolby channel configuration tag, rather than the MPEG one. For example, you might need to use this to make dynamic ad insertion work. Specify which audio channel configuration scheme ID URI MediaConvert writes in your DASH manifest. Keep the default value, MPEG channel configuration (MPEG_CHANNEL_CONFIGURATION), to have MediaConvert write this: urn:mpeg:mpegB:cicp:ChannelConfiguration. Choose Dolby channel configuration (DOLBY_CHANNEL_CONFIGURATION) to have MediaConvert write this instead: tag:dolby.com,2014:dash:audio_channel_configuration:2011.
+    #[doc(hidden)]
     pub audio_channel_config_scheme_id_uri:
         std::option::Option<crate::model::DashIsoGroupAudioChannelConfigSchemeIdUri>,
     /// A partial URI prefix that will be put in the manifest (.mpd) file at the top level BaseURL element. Can be used if streams are delivered from a different URL than the manifest file.
+    #[doc(hidden)]
     pub base_url: std::option::Option<std::string::String>,
     /// Use Destination (Destination) to specify the S3 output location and the output filename base. Destination accepts format identifiers. If you do not specify the base filename in the URI, the service will use the filename of the input file. If your job has multiple inputs, the service uses the filename of the first input file.
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
     /// Settings associated with the destination. Will vary based on the type of destination
+    #[doc(hidden)]
     pub destination_settings: std::option::Option<crate::model::DestinationSettings>,
     /// DRM settings.
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::DashIsoEncryptionSettings>,
     /// Length of fragments to generate (in seconds). Fragment length must be compatible with GOP size and Framerate. Note that fragments will end on the next keyframe after this number of seconds, so actual fragment length may be longer. When Emit Single File is checked, the fragmentation is internal to a single output file and it does not cause the creation of many output files as in other output types.
+    #[doc(hidden)]
     pub fragment_length: i32,
     /// Supports HbbTV specification as indicated
+    #[doc(hidden)]
     pub hbbtv_compliance: std::option::Option<crate::model::DashIsoHbbtvCompliance>,
     /// Specify whether MediaConvert generates images for trick play. Keep the default value, None (NONE), to not generate any images. Choose Thumbnail (THUMBNAIL) to generate tiled thumbnails. Choose Thumbnail and full frame (THUMBNAIL_AND_FULLFRAME) to generate tiled thumbnails and full-resolution images of single frames. MediaConvert adds an entry in the .mpd manifest for each set of images that you generate. A common application for these images is Roku trick mode. The thumbnails and full-frame images that MediaConvert creates with this feature are compatible with this Roku specification: https://developer.roku.com/docs/developer-program/media-playback/trick-mode/hls-and-dash.md
+    #[doc(hidden)]
     pub image_based_trick_play: std::option::Option<crate::model::DashIsoImageBasedTrickPlay>,
     /// Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+    #[doc(hidden)]
     pub image_based_trick_play_settings:
         std::option::Option<crate::model::DashIsoImageBasedTrickPlaySettings>,
     /// Minimum time of initially buffered media that is needed to ensure smooth playout.
+    #[doc(hidden)]
     pub min_buffer_time: i32,
     /// Keep this setting at the default value of 0, unless you are troubleshooting a problem with how devices play back the end of your video asset. If you know that player devices are hanging on the final segment of your video because the length of your final segment is too short, use this setting to specify a minimum final segment length, in seconds. Choose a value that is greater than or equal to 1 and less than your segment length. When you specify a value for this setting, the encoder will combine any final segment that is shorter than the length that you specify with the previous segment. For example, your segment length is 3 seconds and your final segment is .5 seconds without a minimum final segment length; when you set the minimum final segment length to 1, your final segment is 3.5 seconds.
+    #[doc(hidden)]
     pub min_final_segment_length: f64,
     /// Specify whether your DASH profile is on-demand or main. When you choose Main profile (MAIN_PROFILE), the service signals urn:mpeg:dash:profile:isoff-main:2011 in your .mpd DASH manifest. When you choose On-demand (ON_DEMAND_PROFILE), the service signals urn:mpeg:dash:profile:isoff-on-demand:2011 in your .mpd. When you choose On-demand, you must also set the output group setting Segment control (SegmentControl) to Single file (SINGLE_FILE).
+    #[doc(hidden)]
     pub mpd_profile: std::option::Option<crate::model::DashIsoMpdProfile>,
     /// Use this setting only when your output video stream has B-frames, which causes the initial presentation time stamp (PTS) to be offset from the initial decode time stamp (DTS). Specify how MediaConvert handles PTS when writing time stamps in output DASH manifests. Choose Match initial PTS (MATCH_INITIAL_PTS) when you want MediaConvert to use the initial PTS as the first time stamp in the manifest. Choose Zero-based (ZERO_BASED) to have MediaConvert ignore the initial PTS in the video stream and instead write the initial time stamp as zero in the manifest. For outputs that don't have B-frames, the time stamps in your DASH manifests start at zero regardless of your choice here.
+    #[doc(hidden)]
     pub pts_offset_handling_for_b_frames:
         std::option::Option<crate::model::DashIsoPtsOffsetHandlingForBFrames>,
     /// When set to SINGLE_FILE, a single output file is generated, which is internally segmented using the Fragment Length and Segment Length. When set to SEGMENTED_FILES, separate segment files will be created.
+    #[doc(hidden)]
     pub segment_control: std::option::Option<crate::model::DashIsoSegmentControl>,
     /// Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to 30. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces this value strictly. Use Segment control (DashIsoSegmentControl) to specify whether MediaConvert creates separate segment files or one content file that has metadata to mark the segment boundaries.
+    #[doc(hidden)]
     pub segment_length: i32,
     /// Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next GOP boundary.
+    #[doc(hidden)]
     pub segment_length_control: std::option::Option<crate::model::DashIsoSegmentLengthControl>,
     /// If you get an HTTP error in the 400 range when you play back your DASH output, enable this setting and run your transcoding job again. When you enable this setting, the service writes precise segment durations in the DASH manifest. The segment duration information appears inside the SegmentTimeline element, inside SegmentTemplate at the Representation level. When you don't enable this setting, the service writes approximate segment durations in your DASH manifest.
+    #[doc(hidden)]
     pub write_segment_timeline_in_representation:
         std::option::Option<crate::model::DashIsoWriteSegmentTimelineInRepresentation>,
 }
@@ -42101,11 +42811,10 @@ impl std::fmt::Debug for DashIsoGroupSettings {
         formatter.finish()
     }
 }
-/// See [`DashIsoGroupSettings`](crate::model::DashIsoGroupSettings)
+/// See [`DashIsoGroupSettings`](crate::model::DashIsoGroupSettings).
 pub mod dash_iso_group_settings {
 
-    /// A builder for [`DashIsoGroupSettings`](crate::model::DashIsoGroupSettings)
-    #[non_exhaustive]
+    /// A builder for [`DashIsoGroupSettings`](crate::model::DashIsoGroupSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) additional_manifests:
@@ -42375,7 +43084,7 @@ pub mod dash_iso_group_settings {
             self.write_segment_timeline_in_representation = input;
             self
         }
-        /// Consumes the builder and constructs a [`DashIsoGroupSettings`](crate::model::DashIsoGroupSettings)
+        /// Consumes the builder and constructs a [`DashIsoGroupSettings`](crate::model::DashIsoGroupSettings).
         pub fn build(self) -> crate::model::DashIsoGroupSettings {
             crate::model::DashIsoGroupSettings {
                 additional_manifests: self.additional_manifests,
@@ -42402,7 +43111,7 @@ pub mod dash_iso_group_settings {
     }
 }
 impl DashIsoGroupSettings {
-    /// Creates a new builder-style object to manufacture [`DashIsoGroupSettings`](crate::model::DashIsoGroupSettings)
+    /// Creates a new builder-style object to manufacture [`DashIsoGroupSettings`](crate::model::DashIsoGroupSettings).
     pub fn builder() -> crate::model::dash_iso_group_settings::Builder {
         crate::model::dash_iso_group_settings::Builder::default()
     }
@@ -42688,16 +43397,22 @@ impl AsRef<str> for DashIsoMpdProfile {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DashIsoImageBasedTrickPlaySettings {
     /// The cadence MediaConvert follows for generating thumbnails. If set to FOLLOW_IFRAME, MediaConvert generates thumbnails for each IDR frame in the output (matching the GOP cadence). If set to FOLLOW_CUSTOM, MediaConvert generates thumbnails according to the interval you specify in thumbnailInterval.
+    #[doc(hidden)]
     pub interval_cadence: std::option::Option<crate::model::DashIsoIntervalCadence>,
     /// Height of each thumbnail within each tile image, in pixels. Leave blank to maintain aspect ratio with thumbnail width. If following the aspect ratio would lead to a total tile height greater than 4096, then the job will be rejected. Must be divisible by 2.
+    #[doc(hidden)]
     pub thumbnail_height: i32,
     /// Enter the interval, in seconds, that MediaConvert uses to generate thumbnails. If the interval you enter doesn't align with the output frame rate, MediaConvert automatically rounds the interval to align with the output frame rate. For example, if the output frame rate is 29.97 frames per second and you enter 5, MediaConvert uses a 150 frame interval to generate thumbnails.
+    #[doc(hidden)]
     pub thumbnail_interval: f64,
     /// Width of each thumbnail within each tile image, in pixels. Default is 312. Must be divisible by 8.
+    #[doc(hidden)]
     pub thumbnail_width: i32,
     /// Number of thumbnails in each column of a tile image. Set a value between 2 and 2048. Must be divisible by 2.
+    #[doc(hidden)]
     pub tile_height: i32,
     /// Number of thumbnails in each row of a tile image. Set a value between 1 and 512.
+    #[doc(hidden)]
     pub tile_width: i32,
 }
 impl DashIsoImageBasedTrickPlaySettings {
@@ -42738,11 +43453,10 @@ impl std::fmt::Debug for DashIsoImageBasedTrickPlaySettings {
         formatter.finish()
     }
 }
-/// See [`DashIsoImageBasedTrickPlaySettings`](crate::model::DashIsoImageBasedTrickPlaySettings)
+/// See [`DashIsoImageBasedTrickPlaySettings`](crate::model::DashIsoImageBasedTrickPlaySettings).
 pub mod dash_iso_image_based_trick_play_settings {
 
-    /// A builder for [`DashIsoImageBasedTrickPlaySettings`](crate::model::DashIsoImageBasedTrickPlaySettings)
-    #[non_exhaustive]
+    /// A builder for [`DashIsoImageBasedTrickPlaySettings`](crate::model::DashIsoImageBasedTrickPlaySettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) interval_cadence: std::option::Option<crate::model::DashIsoIntervalCadence>,
@@ -42816,7 +43530,7 @@ pub mod dash_iso_image_based_trick_play_settings {
             self.tile_width = input;
             self
         }
-        /// Consumes the builder and constructs a [`DashIsoImageBasedTrickPlaySettings`](crate::model::DashIsoImageBasedTrickPlaySettings)
+        /// Consumes the builder and constructs a [`DashIsoImageBasedTrickPlaySettings`](crate::model::DashIsoImageBasedTrickPlaySettings).
         pub fn build(self) -> crate::model::DashIsoImageBasedTrickPlaySettings {
             crate::model::DashIsoImageBasedTrickPlaySettings {
                 interval_cadence: self.interval_cadence,
@@ -42830,7 +43544,7 @@ pub mod dash_iso_image_based_trick_play_settings {
     }
 }
 impl DashIsoImageBasedTrickPlaySettings {
-    /// Creates a new builder-style object to manufacture [`DashIsoImageBasedTrickPlaySettings`](crate::model::DashIsoImageBasedTrickPlaySettings)
+    /// Creates a new builder-style object to manufacture [`DashIsoImageBasedTrickPlaySettings`](crate::model::DashIsoImageBasedTrickPlaySettings).
     pub fn builder() -> crate::model::dash_iso_image_based_trick_play_settings::Builder {
         crate::model::dash_iso_image_based_trick_play_settings::Builder::default()
     }
@@ -43014,9 +43728,11 @@ impl AsRef<str> for DashIsoHbbtvCompliance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DashIsoEncryptionSettings {
     /// This setting can improve the compatibility of your output with video players on obsolete devices. It applies only to DASH H.264 outputs with DRM encryption. Choose Unencrypted SEI (UNENCRYPTED_SEI) only to correct problems with playback on older devices. Otherwise, keep the default setting CENC v1 (CENC_V1). If you choose Unencrypted SEI, for that output, the service will exclude the access unit delimiter and will leave the SEI NAL units unencrypted.
+    #[doc(hidden)]
     pub playback_device_compatibility:
         std::option::Option<crate::model::DashIsoPlaybackDeviceCompatibility>,
     /// If your output group type is HLS, DASH, or Microsoft Smooth, use these settings when doing DRM encryption with a SPEKE-compliant key provider. If your output group type is CMAF, use the SpekeKeyProviderCmaf settings instead.
+    #[doc(hidden)]
     pub speke_key_provider: std::option::Option<crate::model::SpekeKeyProvider>,
 }
 impl DashIsoEncryptionSettings {
@@ -43042,11 +43758,10 @@ impl std::fmt::Debug for DashIsoEncryptionSettings {
         formatter.finish()
     }
 }
-/// See [`DashIsoEncryptionSettings`](crate::model::DashIsoEncryptionSettings)
+/// See [`DashIsoEncryptionSettings`](crate::model::DashIsoEncryptionSettings).
 pub mod dash_iso_encryption_settings {
 
-    /// A builder for [`DashIsoEncryptionSettings`](crate::model::DashIsoEncryptionSettings)
-    #[non_exhaustive]
+    /// A builder for [`DashIsoEncryptionSettings`](crate::model::DashIsoEncryptionSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) playback_device_compatibility:
@@ -43083,7 +43798,7 @@ pub mod dash_iso_encryption_settings {
             self.speke_key_provider = input;
             self
         }
-        /// Consumes the builder and constructs a [`DashIsoEncryptionSettings`](crate::model::DashIsoEncryptionSettings)
+        /// Consumes the builder and constructs a [`DashIsoEncryptionSettings`](crate::model::DashIsoEncryptionSettings).
         pub fn build(self) -> crate::model::DashIsoEncryptionSettings {
             crate::model::DashIsoEncryptionSettings {
                 playback_device_compatibility: self.playback_device_compatibility,
@@ -43093,7 +43808,7 @@ pub mod dash_iso_encryption_settings {
     }
 }
 impl DashIsoEncryptionSettings {
-    /// Creates a new builder-style object to manufacture [`DashIsoEncryptionSettings`](crate::model::DashIsoEncryptionSettings)
+    /// Creates a new builder-style object to manufacture [`DashIsoEncryptionSettings`](crate::model::DashIsoEncryptionSettings).
     pub fn builder() -> crate::model::dash_iso_encryption_settings::Builder {
         crate::model::dash_iso_encryption_settings::Builder::default()
     }
@@ -43222,8 +43937,10 @@ impl AsRef<str> for DashIsoGroupAudioChannelConfigSchemeIdUri {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DashAdditionalManifest {
     /// Specify a name modifier that the service adds to the name of this manifest to make it different from the file names of the other main manifests in the output group. For example, say that the default main manifest for your DASH group is film-name.mpd. If you enter "-no-premium" for this setting, then the file name the service generates for this top-level manifest is film-name-no-premium.mpd.
+    #[doc(hidden)]
     pub manifest_name_modifier: std::option::Option<std::string::String>,
     /// Specify the outputs that you want this additional top-level manifest to reference.
+    #[doc(hidden)]
     pub selected_outputs: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DashAdditionalManifest {
@@ -43244,11 +43961,10 @@ impl std::fmt::Debug for DashAdditionalManifest {
         formatter.finish()
     }
 }
-/// See [`DashAdditionalManifest`](crate::model::DashAdditionalManifest)
+/// See [`DashAdditionalManifest`](crate::model::DashAdditionalManifest).
 pub mod dash_additional_manifest {
 
-    /// A builder for [`DashAdditionalManifest`](crate::model::DashAdditionalManifest)
-    #[non_exhaustive]
+    /// A builder for [`DashAdditionalManifest`](crate::model::DashAdditionalManifest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) manifest_name_modifier: std::option::Option<std::string::String>,
@@ -43287,7 +44003,7 @@ pub mod dash_additional_manifest {
             self.selected_outputs = input;
             self
         }
-        /// Consumes the builder and constructs a [`DashAdditionalManifest`](crate::model::DashAdditionalManifest)
+        /// Consumes the builder and constructs a [`DashAdditionalManifest`](crate::model::DashAdditionalManifest).
         pub fn build(self) -> crate::model::DashAdditionalManifest {
             crate::model::DashAdditionalManifest {
                 manifest_name_modifier: self.manifest_name_modifier,
@@ -43297,7 +44013,7 @@ pub mod dash_additional_manifest {
     }
 }
 impl DashAdditionalManifest {
-    /// Creates a new builder-style object to manufacture [`DashAdditionalManifest`](crate::model::DashAdditionalManifest)
+    /// Creates a new builder-style object to manufacture [`DashAdditionalManifest`](crate::model::DashAdditionalManifest).
     pub fn builder() -> crate::model::dash_additional_manifest::Builder {
         crate::model::dash_additional_manifest::Builder::default()
     }
@@ -43308,56 +44024,80 @@ impl DashAdditionalManifest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CmafGroupSettings {
     /// By default, the service creates one top-level .m3u8 HLS manifest and one top -level .mpd DASH manifest for each CMAF output group in your job. These default manifests reference every output in the output group. To create additional top-level manifests that reference a subset of the outputs in the output group, specify a list of them here. For each additional manifest that you specify, the service creates one HLS manifest and one DASH manifest.
+    #[doc(hidden)]
     pub additional_manifests:
         std::option::Option<std::vec::Vec<crate::model::CmafAdditionalManifest>>,
     /// A partial URI prefix that will be put in the manifest file at the top level BaseURL element. Can be used if streams are delivered from a different URL than the manifest file.
+    #[doc(hidden)]
     pub base_url: std::option::Option<std::string::String>,
     /// Disable this setting only when your workflow requires the #EXT-X-ALLOW-CACHE:no tag. Otherwise, keep the default value Enabled (ENABLED) and control caching in your video distribution set up. For example, use the Cache-Control http header.
+    #[doc(hidden)]
     pub client_cache: std::option::Option<crate::model::CmafClientCache>,
     /// Specification to use (RFC-6381 or the default RFC-4281) during m3u8 playlist generation.
+    #[doc(hidden)]
     pub codec_specification: std::option::Option<crate::model::CmafCodecSpecification>,
     /// Use Destination (Destination) to specify the S3 output location and the output filename base. Destination accepts format identifiers. If you do not specify the base filename in the URI, the service will use the filename of the input file. If your job has multiple inputs, the service uses the filename of the first input file.
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
     /// Settings associated with the destination. Will vary based on the type of destination
+    #[doc(hidden)]
     pub destination_settings: std::option::Option<crate::model::DestinationSettings>,
     /// DRM settings.
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::CmafEncryptionSettings>,
     /// Specify the length, in whole seconds, of the mp4 fragments. When you don't specify a value, MediaConvert defaults to 2. Related setting: Use Fragment length control (FragmentLengthControl) to specify whether the encoder enforces this value strictly.
+    #[doc(hidden)]
     pub fragment_length: i32,
     /// Specify whether MediaConvert generates images for trick play. Keep the default value, None (NONE), to not generate any images. Choose Thumbnail (THUMBNAIL) to generate tiled thumbnails. Choose Thumbnail and full frame (THUMBNAIL_AND_FULLFRAME) to generate tiled thumbnails and full-resolution images of single frames. When you enable Write HLS manifest (WriteHlsManifest), MediaConvert creates a child manifest for each set of images that you generate and adds corresponding entries to the parent manifest. When you enable Write DASH manifest (WriteDashManifest), MediaConvert adds an entry in the .mpd manifest for each set of images that you generate. A common application for these images is Roku trick mode. The thumbnails and full-frame images that MediaConvert creates with this feature are compatible with this Roku specification: https://developer.roku.com/docs/developer-program/media-playback/trick-mode/hls-and-dash.md
+    #[doc(hidden)]
     pub image_based_trick_play: std::option::Option<crate::model::CmafImageBasedTrickPlay>,
     /// Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+    #[doc(hidden)]
     pub image_based_trick_play_settings:
         std::option::Option<crate::model::CmafImageBasedTrickPlaySettings>,
     /// When set to GZIP, compresses HLS playlist.
+    #[doc(hidden)]
     pub manifest_compression: std::option::Option<crate::model::CmafManifestCompression>,
     /// Indicates whether the output manifest should use floating point values for segment duration.
+    #[doc(hidden)]
     pub manifest_duration_format: std::option::Option<crate::model::CmafManifestDurationFormat>,
     /// Minimum time of initially buffered media that is needed to ensure smooth playout.
+    #[doc(hidden)]
     pub min_buffer_time: i32,
     /// Keep this setting at the default value of 0, unless you are troubleshooting a problem with how devices play back the end of your video asset. If you know that player devices are hanging on the final segment of your video because the length of your final segment is too short, use this setting to specify a minimum final segment length, in seconds. Choose a value that is greater than or equal to 1 and less than your segment length. When you specify a value for this setting, the encoder will combine any final segment that is shorter than the length that you specify with the previous segment. For example, your segment length is 3 seconds and your final segment is .5 seconds without a minimum final segment length; when you set the minimum final segment length to 1, your final segment is 3.5 seconds.
+    #[doc(hidden)]
     pub min_final_segment_length: f64,
     /// Specify whether your DASH profile is on-demand or main. When you choose Main profile (MAIN_PROFILE), the service signals urn:mpeg:dash:profile:isoff-main:2011 in your .mpd DASH manifest. When you choose On-demand (ON_DEMAND_PROFILE), the service signals urn:mpeg:dash:profile:isoff-on-demand:2011 in your .mpd. When you choose On-demand, you must also set the output group setting Segment control (SegmentControl) to Single file (SINGLE_FILE).
+    #[doc(hidden)]
     pub mpd_profile: std::option::Option<crate::model::CmafMpdProfile>,
     /// Use this setting only when your output video stream has B-frames, which causes the initial presentation time stamp (PTS) to be offset from the initial decode time stamp (DTS). Specify how MediaConvert handles PTS when writing time stamps in output DASH manifests. Choose Match initial PTS (MATCH_INITIAL_PTS) when you want MediaConvert to use the initial PTS as the first time stamp in the manifest. Choose Zero-based (ZERO_BASED) to have MediaConvert ignore the initial PTS in the video stream and instead write the initial time stamp as zero in the manifest. For outputs that don't have B-frames, the time stamps in your DASH manifests start at zero regardless of your choice here.
+    #[doc(hidden)]
     pub pts_offset_handling_for_b_frames:
         std::option::Option<crate::model::CmafPtsOffsetHandlingForBFrames>,
     /// When set to SINGLE_FILE, a single output file is generated, which is internally segmented using the Fragment Length and Segment Length. When set to SEGMENTED_FILES, separate segment files will be created.
+    #[doc(hidden)]
     pub segment_control: std::option::Option<crate::model::CmafSegmentControl>,
     /// Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces this value strictly. Use Segment control (CmafSegmentControl) to specify whether MediaConvert creates separate segment files or one content file that has metadata to mark the segment boundaries.
+    #[doc(hidden)]
     pub segment_length: i32,
     /// Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next GOP boundary.
+    #[doc(hidden)]
     pub segment_length_control: std::option::Option<crate::model::CmafSegmentLengthControl>,
     /// Include or exclude RESOLUTION attribute for video in EXT-X-STREAM-INF tag of variant manifest.
+    #[doc(hidden)]
     pub stream_inf_resolution: std::option::Option<crate::model::CmafStreamInfResolution>,
     /// When set to LEGACY, the segment target duration is always rounded up to the nearest integer value above its current value in seconds. When set to SPEC\\_COMPLIANT, the segment target duration is rounded up to the nearest integer value if fraction seconds are greater than or equal to 0.5 (&gt;= 0.5) and rounded down if less than 0.5 (&lt; 0.5). You may need to use LEGACY if your client needs to ensure that the target duration is always longer than the actual duration of the segment. Some older players may experience interrupted playback when the actual duration of a track in a segment is longer than the target duration.
+    #[doc(hidden)]
     pub target_duration_compatibility_mode:
         std::option::Option<crate::model::CmafTargetDurationCompatibilityMode>,
     /// When set to ENABLED, a DASH MPD manifest will be generated for this output.
+    #[doc(hidden)]
     pub write_dash_manifest: std::option::Option<crate::model::CmafWriteDashManifest>,
     /// When set to ENABLED, an Apple HLS manifest will be generated for this output.
+    #[doc(hidden)]
     pub write_hls_manifest: std::option::Option<crate::model::CmafWriteHlsManifest>,
     /// When you enable Precise segment duration in DASH manifests (writeSegmentTimelineInRepresentation), your DASH manifest shows precise segment durations. The segment duration information appears inside the SegmentTimeline element, inside SegmentTemplate at the Representation level. When this feature isn't enabled, the segment durations in your DASH manifest are approximate. The segment duration information appears in the duration attribute of the SegmentTemplate element.
+    #[doc(hidden)]
     pub write_segment_timeline_in_representation:
         std::option::Option<crate::model::CmafWriteSegmentTimelineInRepresentation>,
 }
@@ -43523,11 +44263,10 @@ impl std::fmt::Debug for CmafGroupSettings {
         formatter.finish()
     }
 }
-/// See [`CmafGroupSettings`](crate::model::CmafGroupSettings)
+/// See [`CmafGroupSettings`](crate::model::CmafGroupSettings).
 pub mod cmaf_group_settings {
 
-    /// A builder for [`CmafGroupSettings`](crate::model::CmafGroupSettings)
-    #[non_exhaustive]
+    /// A builder for [`CmafGroupSettings`](crate::model::CmafGroupSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) additional_manifests:
@@ -43892,7 +44631,7 @@ pub mod cmaf_group_settings {
             self.write_segment_timeline_in_representation = input;
             self
         }
-        /// Consumes the builder and constructs a [`CmafGroupSettings`](crate::model::CmafGroupSettings)
+        /// Consumes the builder and constructs a [`CmafGroupSettings`](crate::model::CmafGroupSettings).
         pub fn build(self) -> crate::model::CmafGroupSettings {
             crate::model::CmafGroupSettings {
                 additional_manifests: self.additional_manifests,
@@ -43925,7 +44664,7 @@ pub mod cmaf_group_settings {
     }
 }
 impl CmafGroupSettings {
-    /// Creates a new builder-style object to manufacture [`CmafGroupSettings`](crate::model::CmafGroupSettings)
+    /// Creates a new builder-style object to manufacture [`CmafGroupSettings`](crate::model::CmafGroupSettings).
     pub fn builder() -> crate::model::cmaf_group_settings::Builder {
         crate::model::cmaf_group_settings::Builder::default()
     }
@@ -44541,16 +45280,22 @@ impl AsRef<str> for CmafManifestCompression {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CmafImageBasedTrickPlaySettings {
     /// The cadence MediaConvert follows for generating thumbnails. If set to FOLLOW_IFRAME, MediaConvert generates thumbnails for each IDR frame in the output (matching the GOP cadence). If set to FOLLOW_CUSTOM, MediaConvert generates thumbnails according to the interval you specify in thumbnailInterval.
+    #[doc(hidden)]
     pub interval_cadence: std::option::Option<crate::model::CmafIntervalCadence>,
     /// Height of each thumbnail within each tile image, in pixels. Leave blank to maintain aspect ratio with thumbnail width. If following the aspect ratio would lead to a total tile height greater than 4096, then the job will be rejected. Must be divisible by 2.
+    #[doc(hidden)]
     pub thumbnail_height: i32,
     /// Enter the interval, in seconds, that MediaConvert uses to generate thumbnails. If the interval you enter doesn't align with the output frame rate, MediaConvert automatically rounds the interval to align with the output frame rate. For example, if the output frame rate is 29.97 frames per second and you enter 5, MediaConvert uses a 150 frame interval to generate thumbnails.
+    #[doc(hidden)]
     pub thumbnail_interval: f64,
     /// Width of each thumbnail within each tile image, in pixels. Default is 312. Must be divisible by 8.
+    #[doc(hidden)]
     pub thumbnail_width: i32,
     /// Number of thumbnails in each column of a tile image. Set a value between 2 and 2048. Must be divisible by 2.
+    #[doc(hidden)]
     pub tile_height: i32,
     /// Number of thumbnails in each row of a tile image. Set a value between 1 and 512.
+    #[doc(hidden)]
     pub tile_width: i32,
 }
 impl CmafImageBasedTrickPlaySettings {
@@ -44591,11 +45336,10 @@ impl std::fmt::Debug for CmafImageBasedTrickPlaySettings {
         formatter.finish()
     }
 }
-/// See [`CmafImageBasedTrickPlaySettings`](crate::model::CmafImageBasedTrickPlaySettings)
+/// See [`CmafImageBasedTrickPlaySettings`](crate::model::CmafImageBasedTrickPlaySettings).
 pub mod cmaf_image_based_trick_play_settings {
 
-    /// A builder for [`CmafImageBasedTrickPlaySettings`](crate::model::CmafImageBasedTrickPlaySettings)
-    #[non_exhaustive]
+    /// A builder for [`CmafImageBasedTrickPlaySettings`](crate::model::CmafImageBasedTrickPlaySettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) interval_cadence: std::option::Option<crate::model::CmafIntervalCadence>,
@@ -44669,7 +45413,7 @@ pub mod cmaf_image_based_trick_play_settings {
             self.tile_width = input;
             self
         }
-        /// Consumes the builder and constructs a [`CmafImageBasedTrickPlaySettings`](crate::model::CmafImageBasedTrickPlaySettings)
+        /// Consumes the builder and constructs a [`CmafImageBasedTrickPlaySettings`](crate::model::CmafImageBasedTrickPlaySettings).
         pub fn build(self) -> crate::model::CmafImageBasedTrickPlaySettings {
             crate::model::CmafImageBasedTrickPlaySettings {
                 interval_cadence: self.interval_cadence,
@@ -44683,7 +45427,7 @@ pub mod cmaf_image_based_trick_play_settings {
     }
 }
 impl CmafImageBasedTrickPlaySettings {
-    /// Creates a new builder-style object to manufacture [`CmafImageBasedTrickPlaySettings`](crate::model::CmafImageBasedTrickPlaySettings)
+    /// Creates a new builder-style object to manufacture [`CmafImageBasedTrickPlaySettings`](crate::model::CmafImageBasedTrickPlaySettings).
     pub fn builder() -> crate::model::cmaf_image_based_trick_play_settings::Builder {
         crate::model::cmaf_image_based_trick_play_settings::Builder::default()
     }
@@ -44812,17 +45556,23 @@ impl AsRef<str> for CmafImageBasedTrickPlay {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CmafEncryptionSettings {
     /// This is a 128-bit, 16-byte hex value represented by a 32-character text string. If this parameter is not set then the Initialization Vector will follow the segment number by default.
+    #[doc(hidden)]
     pub constant_initialization_vector: std::option::Option<std::string::String>,
     /// Specify the encryption scheme that you want the service to use when encrypting your CMAF segments. Choose AES-CBC subsample (SAMPLE-AES) or AES_CTR (AES-CTR).
+    #[doc(hidden)]
     pub encryption_method: std::option::Option<crate::model::CmafEncryptionType>,
     /// When you use DRM with CMAF outputs, choose whether the service writes the 128-bit encryption initialization vector in the HLS and DASH manifests.
+    #[doc(hidden)]
     pub initialization_vector_in_manifest:
         std::option::Option<crate::model::CmafInitializationVectorInManifest>,
     /// If your output group type is CMAF, use these settings when doing DRM encryption with a SPEKE-compliant key provider. If your output group type is HLS, DASH, or Microsoft Smooth, use the SpekeKeyProvider settings instead.
+    #[doc(hidden)]
     pub speke_key_provider: std::option::Option<crate::model::SpekeKeyProviderCmaf>,
     /// Use these settings to set up encryption with a static key provider.
+    #[doc(hidden)]
     pub static_key_provider: std::option::Option<crate::model::StaticKeyProvider>,
     /// Specify whether your DRM encryption key is static or from a key provider that follows the SPEKE standard. For more information about SPEKE, see https://docs.aws.amazon.com/speke/latest/documentation/what-is-speke.html.
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::CmafKeyProviderType>,
 }
 impl CmafEncryptionSettings {
@@ -44871,11 +45621,10 @@ impl std::fmt::Debug for CmafEncryptionSettings {
         formatter.finish()
     }
 }
-/// See [`CmafEncryptionSettings`](crate::model::CmafEncryptionSettings)
+/// See [`CmafEncryptionSettings`](crate::model::CmafEncryptionSettings).
 pub mod cmaf_encryption_settings {
 
-    /// A builder for [`CmafEncryptionSettings`](crate::model::CmafEncryptionSettings)
-    #[non_exhaustive]
+    /// A builder for [`CmafEncryptionSettings`](crate::model::CmafEncryptionSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) constant_initialization_vector: std::option::Option<std::string::String>,
@@ -44971,7 +45720,7 @@ pub mod cmaf_encryption_settings {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`CmafEncryptionSettings`](crate::model::CmafEncryptionSettings)
+        /// Consumes the builder and constructs a [`CmafEncryptionSettings`](crate::model::CmafEncryptionSettings).
         pub fn build(self) -> crate::model::CmafEncryptionSettings {
             crate::model::CmafEncryptionSettings {
                 constant_initialization_vector: self.constant_initialization_vector,
@@ -44985,7 +45734,7 @@ pub mod cmaf_encryption_settings {
     }
 }
 impl CmafEncryptionSettings {
-    /// Creates a new builder-style object to manufacture [`CmafEncryptionSettings`](crate::model::CmafEncryptionSettings)
+    /// Creates a new builder-style object to manufacture [`CmafEncryptionSettings`](crate::model::CmafEncryptionSettings).
     pub fn builder() -> crate::model::cmaf_encryption_settings::Builder {
         crate::model::cmaf_encryption_settings::Builder::default()
     }
@@ -45051,14 +45800,19 @@ impl AsRef<str> for CmafKeyProviderType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SpekeKeyProviderCmaf {
     /// If you want your key provider to encrypt the content keys that it provides to MediaConvert, set up a certificate with a master key using AWS Certificate Manager. Specify the certificate's Amazon Resource Name (ARN) here.
+    #[doc(hidden)]
     pub certificate_arn: std::option::Option<std::string::String>,
     /// Specify the DRM system IDs that you want signaled in the DASH manifest that MediaConvert creates as part of this CMAF package. The DASH manifest can currently signal up to three system IDs. For more information, see https://dashif.org/identifiers/content_protection/.
+    #[doc(hidden)]
     pub dash_signaled_system_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// Specify the DRM system ID that you want signaled in the HLS manifest that MediaConvert creates as part of this CMAF package. The HLS manifest can currently signal only one system ID. For more information, see https://dashif.org/identifiers/content_protection/.
+    #[doc(hidden)]
     pub hls_signaled_system_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// Specify the resource ID that your SPEKE-compliant key provider uses to identify this content.
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// Specify the URL to the key server that your SPEKE-compliant DRM key provider uses to provide keys for encrypting your content.
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl SpekeKeyProviderCmaf {
@@ -45094,11 +45848,10 @@ impl std::fmt::Debug for SpekeKeyProviderCmaf {
         formatter.finish()
     }
 }
-/// See [`SpekeKeyProviderCmaf`](crate::model::SpekeKeyProviderCmaf)
+/// See [`SpekeKeyProviderCmaf`](crate::model::SpekeKeyProviderCmaf).
 pub mod speke_key_provider_cmaf {
 
-    /// A builder for [`SpekeKeyProviderCmaf`](crate::model::SpekeKeyProviderCmaf)
-    #[non_exhaustive]
+    /// A builder for [`SpekeKeyProviderCmaf`](crate::model::SpekeKeyProviderCmaf).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -45180,7 +45933,7 @@ pub mod speke_key_provider_cmaf {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`SpekeKeyProviderCmaf`](crate::model::SpekeKeyProviderCmaf)
+        /// Consumes the builder and constructs a [`SpekeKeyProviderCmaf`](crate::model::SpekeKeyProviderCmaf).
         pub fn build(self) -> crate::model::SpekeKeyProviderCmaf {
             crate::model::SpekeKeyProviderCmaf {
                 certificate_arn: self.certificate_arn,
@@ -45193,7 +45946,7 @@ pub mod speke_key_provider_cmaf {
     }
 }
 impl SpekeKeyProviderCmaf {
-    /// Creates a new builder-style object to manufacture [`SpekeKeyProviderCmaf`](crate::model::SpekeKeyProviderCmaf)
+    /// Creates a new builder-style object to manufacture [`SpekeKeyProviderCmaf`](crate::model::SpekeKeyProviderCmaf).
     pub fn builder() -> crate::model::speke_key_provider_cmaf::Builder {
         crate::model::speke_key_provider_cmaf::Builder::default()
     }
@@ -45424,8 +46177,10 @@ impl AsRef<str> for CmafClientCache {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CmafAdditionalManifest {
     /// Specify a name modifier that the service adds to the name of this manifest to make it different from the file names of the other main manifests in the output group. For example, say that the default main manifest for your HLS group is film-name.m3u8. If you enter "-no-premium" for this setting, then the file name the service generates for this top-level manifest is film-name-no-premium.m3u8. For HLS output groups, specify a manifestNameModifier that is different from the nameModifier of the output. The service uses the output name modifier to create unique names for the individual variant manifests.
+    #[doc(hidden)]
     pub manifest_name_modifier: std::option::Option<std::string::String>,
     /// Specify the outputs that you want this additional top-level manifest to reference.
+    #[doc(hidden)]
     pub selected_outputs: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CmafAdditionalManifest {
@@ -45446,11 +46201,10 @@ impl std::fmt::Debug for CmafAdditionalManifest {
         formatter.finish()
     }
 }
-/// See [`CmafAdditionalManifest`](crate::model::CmafAdditionalManifest)
+/// See [`CmafAdditionalManifest`](crate::model::CmafAdditionalManifest).
 pub mod cmaf_additional_manifest {
 
-    /// A builder for [`CmafAdditionalManifest`](crate::model::CmafAdditionalManifest)
-    #[non_exhaustive]
+    /// A builder for [`CmafAdditionalManifest`](crate::model::CmafAdditionalManifest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) manifest_name_modifier: std::option::Option<std::string::String>,
@@ -45489,7 +46243,7 @@ pub mod cmaf_additional_manifest {
             self.selected_outputs = input;
             self
         }
-        /// Consumes the builder and constructs a [`CmafAdditionalManifest`](crate::model::CmafAdditionalManifest)
+        /// Consumes the builder and constructs a [`CmafAdditionalManifest`](crate::model::CmafAdditionalManifest).
         pub fn build(self) -> crate::model::CmafAdditionalManifest {
             crate::model::CmafAdditionalManifest {
                 manifest_name_modifier: self.manifest_name_modifier,
@@ -45499,7 +46253,7 @@ pub mod cmaf_additional_manifest {
     }
 }
 impl CmafAdditionalManifest {
-    /// Creates a new builder-style object to manufacture [`CmafAdditionalManifest`](crate::model::CmafAdditionalManifest)
+    /// Creates a new builder-style object to manufacture [`CmafAdditionalManifest`](crate::model::CmafAdditionalManifest).
     pub fn builder() -> crate::model::cmaf_additional_manifest::Builder {
         crate::model::cmaf_additional_manifest::Builder::default()
     }
@@ -45510,6 +46264,7 @@ impl CmafAdditionalManifest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutomatedEncodingSettings {
     /// Use automated ABR to have MediaConvert set up the renditions in your ABR package for you automatically, based on characteristics of your input video. This feature optimizes video quality while minimizing the overall size of your ABR package.
+    #[doc(hidden)]
     pub abr_settings: std::option::Option<crate::model::AutomatedAbrSettings>,
 }
 impl AutomatedEncodingSettings {
@@ -45525,11 +46280,10 @@ impl std::fmt::Debug for AutomatedEncodingSettings {
         formatter.finish()
     }
 }
-/// See [`AutomatedEncodingSettings`](crate::model::AutomatedEncodingSettings)
+/// See [`AutomatedEncodingSettings`](crate::model::AutomatedEncodingSettings).
 pub mod automated_encoding_settings {
 
-    /// A builder for [`AutomatedEncodingSettings`](crate::model::AutomatedEncodingSettings)
-    #[non_exhaustive]
+    /// A builder for [`AutomatedEncodingSettings`](crate::model::AutomatedEncodingSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) abr_settings: std::option::Option<crate::model::AutomatedAbrSettings>,
@@ -45548,7 +46302,7 @@ pub mod automated_encoding_settings {
             self.abr_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutomatedEncodingSettings`](crate::model::AutomatedEncodingSettings)
+        /// Consumes the builder and constructs a [`AutomatedEncodingSettings`](crate::model::AutomatedEncodingSettings).
         pub fn build(self) -> crate::model::AutomatedEncodingSettings {
             crate::model::AutomatedEncodingSettings {
                 abr_settings: self.abr_settings,
@@ -45557,7 +46311,7 @@ pub mod automated_encoding_settings {
     }
 }
 impl AutomatedEncodingSettings {
-    /// Creates a new builder-style object to manufacture [`AutomatedEncodingSettings`](crate::model::AutomatedEncodingSettings)
+    /// Creates a new builder-style object to manufacture [`AutomatedEncodingSettings`](crate::model::AutomatedEncodingSettings).
     pub fn builder() -> crate::model::automated_encoding_settings::Builder {
         crate::model::automated_encoding_settings::Builder::default()
     }
@@ -45568,12 +46322,16 @@ impl AutomatedEncodingSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutomatedAbrSettings {
     /// Optional. The maximum target bit rate used in your automated ABR stack. Use this value to set an upper limit on the bandwidth consumed by the highest-quality rendition. This is the rendition that is delivered to viewers with the fastest internet connections. If you don't specify a value, MediaConvert uses 8,000,000 (8 mb/s) by default.
+    #[doc(hidden)]
     pub max_abr_bitrate: i32,
     /// Optional. The maximum number of renditions that MediaConvert will create in your automated ABR stack. The number of renditions is determined automatically, based on analysis of each job, but will never exceed this limit. When you set this to Auto in the console, which is equivalent to excluding it from your JSON job specification, MediaConvert defaults to a limit of 15.
+    #[doc(hidden)]
     pub max_renditions: i32,
     /// Optional. The minimum target bitrate used in your automated ABR stack. Use this value to set a lower limit on the bitrate of video delivered to viewers with slow internet connections. If you don't specify a value, MediaConvert uses 600,000 (600 kb/s) by default.
+    #[doc(hidden)]
     pub min_abr_bitrate: i32,
     /// Optional. Use Automated ABR rules to specify restrictions for the rendition sizes MediaConvert will create in your ABR stack. You can use these rules if your ABR workflow has specific rendition size requirements, but you still want MediaConvert to optimize for video quality and overall file size.
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::AutomatedAbrRule>>,
 }
 impl AutomatedAbrSettings {
@@ -45604,11 +46362,10 @@ impl std::fmt::Debug for AutomatedAbrSettings {
         formatter.finish()
     }
 }
-/// See [`AutomatedAbrSettings`](crate::model::AutomatedAbrSettings)
+/// See [`AutomatedAbrSettings`](crate::model::AutomatedAbrSettings).
 pub mod automated_abr_settings {
 
-    /// A builder for [`AutomatedAbrSettings`](crate::model::AutomatedAbrSettings)
-    #[non_exhaustive]
+    /// A builder for [`AutomatedAbrSettings`](crate::model::AutomatedAbrSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_abr_bitrate: std::option::Option<i32>,
@@ -45666,7 +46423,7 @@ pub mod automated_abr_settings {
             self.rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutomatedAbrSettings`](crate::model::AutomatedAbrSettings)
+        /// Consumes the builder and constructs a [`AutomatedAbrSettings`](crate::model::AutomatedAbrSettings).
         pub fn build(self) -> crate::model::AutomatedAbrSettings {
             crate::model::AutomatedAbrSettings {
                 max_abr_bitrate: self.max_abr_bitrate.unwrap_or_default(),
@@ -45678,7 +46435,7 @@ pub mod automated_abr_settings {
     }
 }
 impl AutomatedAbrSettings {
-    /// Creates a new builder-style object to manufacture [`AutomatedAbrSettings`](crate::model::AutomatedAbrSettings)
+    /// Creates a new builder-style object to manufacture [`AutomatedAbrSettings`](crate::model::AutomatedAbrSettings).
     pub fn builder() -> crate::model::automated_abr_settings::Builder {
         crate::model::automated_abr_settings::Builder::default()
     }
@@ -45689,15 +46446,20 @@ impl AutomatedAbrSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutomatedAbrRule {
     /// When customer adds the allowed renditions rule for auto ABR ladder, they are required to add at leat one rendition to allowedRenditions list
+    #[doc(hidden)]
     pub allowed_renditions: std::option::Option<std::vec::Vec<crate::model::AllowedRenditionSize>>,
     /// When customer adds the force include renditions rule for auto ABR ladder, they are required to add at leat one rendition to forceIncludeRenditions list
+    #[doc(hidden)]
     pub force_include_renditions:
         std::option::Option<std::vec::Vec<crate::model::ForceIncludeRenditionSize>>,
     /// Use Min bottom rendition size to specify a minimum size for the lowest resolution in your ABR stack. * The lowest resolution in your ABR stack will be equal to or greater than the value that you enter. For example: If you specify 640x360 the lowest resolution in your ABR stack will be equal to or greater than to 640x360. * If you specify a Min top rendition size rule, the value that you specify for Min bottom rendition size must be less than, or equal to, Min top rendition size.
+    #[doc(hidden)]
     pub min_bottom_rendition_size: std::option::Option<crate::model::MinBottomRenditionSize>,
     /// Use Min top rendition size to specify a minimum size for the highest resolution in your ABR stack. * The highest resolution in your ABR stack will be equal to or greater than the value that you enter. For example: If you specify 1280x720 the highest resolution in your ABR stack will be equal to or greater than 1280x720. * If you specify a value for Max resolution, the value that you specify for Min top rendition size must be less than, or equal to, Max resolution.
+    #[doc(hidden)]
     pub min_top_rendition_size: std::option::Option<crate::model::MinTopRenditionSize>,
     /// Use Min top rendition size to specify a minimum size for the highest resolution in your ABR stack. * The highest resolution in your ABR stack will be equal to or greater than the value that you enter. For example: If you specify 1280x720 the highest resolution in your ABR stack will be equal to or greater than 1280x720. * If you specify a value for Max resolution, the value that you specify for Min top rendition size must be less than, or equal to, Max resolution. Use Min bottom rendition size to specify a minimum size for the lowest resolution in your ABR stack. * The lowest resolution in your ABR stack will be equal to or greater than the value that you enter. For example: If you specify 640x360 the lowest resolution in your ABR stack will be equal to or greater than to 640x360. * If you specify a Min top rendition size rule, the value that you specify for Min bottom rendition size must be less than, or equal to, Min top rendition size. Use Force include renditions to specify one or more resolutions to include your ABR stack. * (Recommended) To optimize automated ABR, specify as few resolutions as possible. * (Required) The number of resolutions that you specify must be equal to, or less than, the Max renditions setting. * If you specify a Min top rendition size rule, specify at least one resolution that is equal to, or greater than, Min top rendition size. * If you specify a Min bottom rendition size rule, only specify resolutions that are equal to, or greater than, Min bottom rendition size. * If you specify a Force include renditions rule, do not specify a separate rule for Allowed renditions. * Note: The ABR stack may include other resolutions that you do not specify here, depending on the Max renditions setting. Use Allowed renditions to specify a list of possible resolutions in your ABR stack. * (Required) The number of resolutions that you specify must be equal to, or greater than, the Max renditions setting. * MediaConvert will create an ABR stack exclusively from the list of resolutions that you specify. * Some resolutions in the Allowed renditions list may not be included, however you can force a resolution to be included by setting Required to ENABLED. * You must specify at least one resolution that is greater than or equal to any resolutions that you specify in Min top rendition size or Min bottom rendition size. * If you specify Allowed renditions, you must not specify a separate rule for Force include renditions.
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RuleType>,
 }
 impl AutomatedAbrRule {
@@ -45739,11 +46501,10 @@ impl std::fmt::Debug for AutomatedAbrRule {
         formatter.finish()
     }
 }
-/// See [`AutomatedAbrRule`](crate::model::AutomatedAbrRule)
+/// See [`AutomatedAbrRule`](crate::model::AutomatedAbrRule).
 pub mod automated_abr_rule {
 
-    /// A builder for [`AutomatedAbrRule`](crate::model::AutomatedAbrRule)
-    #[non_exhaustive]
+    /// A builder for [`AutomatedAbrRule`](crate::model::AutomatedAbrRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allowed_renditions:
@@ -45836,7 +46597,7 @@ pub mod automated_abr_rule {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutomatedAbrRule`](crate::model::AutomatedAbrRule)
+        /// Consumes the builder and constructs a [`AutomatedAbrRule`](crate::model::AutomatedAbrRule).
         pub fn build(self) -> crate::model::AutomatedAbrRule {
             crate::model::AutomatedAbrRule {
                 allowed_renditions: self.allowed_renditions,
@@ -45849,7 +46610,7 @@ pub mod automated_abr_rule {
     }
 }
 impl AutomatedAbrRule {
-    /// Creates a new builder-style object to manufacture [`AutomatedAbrRule`](crate::model::AutomatedAbrRule)
+    /// Creates a new builder-style object to manufacture [`AutomatedAbrRule`](crate::model::AutomatedAbrRule).
     pub fn builder() -> crate::model::automated_abr_rule::Builder {
         crate::model::automated_abr_rule::Builder::default()
     }
@@ -45928,8 +46689,10 @@ impl AsRef<str> for RuleType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MinTopRenditionSize {
     /// Use Height to define the video resolution height, in pixels, for this rule.
+    #[doc(hidden)]
     pub height: i32,
     /// Use Width to define the video resolution width, in pixels, for this rule.
+    #[doc(hidden)]
     pub width: i32,
 }
 impl MinTopRenditionSize {
@@ -45950,11 +46713,10 @@ impl std::fmt::Debug for MinTopRenditionSize {
         formatter.finish()
     }
 }
-/// See [`MinTopRenditionSize`](crate::model::MinTopRenditionSize)
+/// See [`MinTopRenditionSize`](crate::model::MinTopRenditionSize).
 pub mod min_top_rendition_size {
 
-    /// A builder for [`MinTopRenditionSize`](crate::model::MinTopRenditionSize)
-    #[non_exhaustive]
+    /// A builder for [`MinTopRenditionSize`](crate::model::MinTopRenditionSize).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) height: std::option::Option<i32>,
@@ -45981,7 +46743,7 @@ pub mod min_top_rendition_size {
             self.width = input;
             self
         }
-        /// Consumes the builder and constructs a [`MinTopRenditionSize`](crate::model::MinTopRenditionSize)
+        /// Consumes the builder and constructs a [`MinTopRenditionSize`](crate::model::MinTopRenditionSize).
         pub fn build(self) -> crate::model::MinTopRenditionSize {
             crate::model::MinTopRenditionSize {
                 height: self.height.unwrap_or_default(),
@@ -45991,7 +46753,7 @@ pub mod min_top_rendition_size {
     }
 }
 impl MinTopRenditionSize {
-    /// Creates a new builder-style object to manufacture [`MinTopRenditionSize`](crate::model::MinTopRenditionSize)
+    /// Creates a new builder-style object to manufacture [`MinTopRenditionSize`](crate::model::MinTopRenditionSize).
     pub fn builder() -> crate::model::min_top_rendition_size::Builder {
         crate::model::min_top_rendition_size::Builder::default()
     }
@@ -46002,8 +46764,10 @@ impl MinTopRenditionSize {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MinBottomRenditionSize {
     /// Use Height to define the video resolution height, in pixels, for this rule.
+    #[doc(hidden)]
     pub height: i32,
     /// Use Width to define the video resolution width, in pixels, for this rule.
+    #[doc(hidden)]
     pub width: i32,
 }
 impl MinBottomRenditionSize {
@@ -46024,11 +46788,10 @@ impl std::fmt::Debug for MinBottomRenditionSize {
         formatter.finish()
     }
 }
-/// See [`MinBottomRenditionSize`](crate::model::MinBottomRenditionSize)
+/// See [`MinBottomRenditionSize`](crate::model::MinBottomRenditionSize).
 pub mod min_bottom_rendition_size {
 
-    /// A builder for [`MinBottomRenditionSize`](crate::model::MinBottomRenditionSize)
-    #[non_exhaustive]
+    /// A builder for [`MinBottomRenditionSize`](crate::model::MinBottomRenditionSize).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) height: std::option::Option<i32>,
@@ -46055,7 +46818,7 @@ pub mod min_bottom_rendition_size {
             self.width = input;
             self
         }
-        /// Consumes the builder and constructs a [`MinBottomRenditionSize`](crate::model::MinBottomRenditionSize)
+        /// Consumes the builder and constructs a [`MinBottomRenditionSize`](crate::model::MinBottomRenditionSize).
         pub fn build(self) -> crate::model::MinBottomRenditionSize {
             crate::model::MinBottomRenditionSize {
                 height: self.height.unwrap_or_default(),
@@ -46065,7 +46828,7 @@ pub mod min_bottom_rendition_size {
     }
 }
 impl MinBottomRenditionSize {
-    /// Creates a new builder-style object to manufacture [`MinBottomRenditionSize`](crate::model::MinBottomRenditionSize)
+    /// Creates a new builder-style object to manufacture [`MinBottomRenditionSize`](crate::model::MinBottomRenditionSize).
     pub fn builder() -> crate::model::min_bottom_rendition_size::Builder {
         crate::model::min_bottom_rendition_size::Builder::default()
     }
@@ -46076,8 +46839,10 @@ impl MinBottomRenditionSize {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ForceIncludeRenditionSize {
     /// Use Height to define the video resolution height, in pixels, for this rule.
+    #[doc(hidden)]
     pub height: i32,
     /// Use Width to define the video resolution width, in pixels, for this rule.
+    #[doc(hidden)]
     pub width: i32,
 }
 impl ForceIncludeRenditionSize {
@@ -46098,11 +46863,10 @@ impl std::fmt::Debug for ForceIncludeRenditionSize {
         formatter.finish()
     }
 }
-/// See [`ForceIncludeRenditionSize`](crate::model::ForceIncludeRenditionSize)
+/// See [`ForceIncludeRenditionSize`](crate::model::ForceIncludeRenditionSize).
 pub mod force_include_rendition_size {
 
-    /// A builder for [`ForceIncludeRenditionSize`](crate::model::ForceIncludeRenditionSize)
-    #[non_exhaustive]
+    /// A builder for [`ForceIncludeRenditionSize`](crate::model::ForceIncludeRenditionSize).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) height: std::option::Option<i32>,
@@ -46129,7 +46893,7 @@ pub mod force_include_rendition_size {
             self.width = input;
             self
         }
-        /// Consumes the builder and constructs a [`ForceIncludeRenditionSize`](crate::model::ForceIncludeRenditionSize)
+        /// Consumes the builder and constructs a [`ForceIncludeRenditionSize`](crate::model::ForceIncludeRenditionSize).
         pub fn build(self) -> crate::model::ForceIncludeRenditionSize {
             crate::model::ForceIncludeRenditionSize {
                 height: self.height.unwrap_or_default(),
@@ -46139,7 +46903,7 @@ pub mod force_include_rendition_size {
     }
 }
 impl ForceIncludeRenditionSize {
-    /// Creates a new builder-style object to manufacture [`ForceIncludeRenditionSize`](crate::model::ForceIncludeRenditionSize)
+    /// Creates a new builder-style object to manufacture [`ForceIncludeRenditionSize`](crate::model::ForceIncludeRenditionSize).
     pub fn builder() -> crate::model::force_include_rendition_size::Builder {
         crate::model::force_include_rendition_size::Builder::default()
     }
@@ -46150,10 +46914,13 @@ impl ForceIncludeRenditionSize {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AllowedRenditionSize {
     /// Use Height to define the video resolution height, in pixels, for this rule.
+    #[doc(hidden)]
     pub height: i32,
     /// Set to ENABLED to force a rendition to be included.
+    #[doc(hidden)]
     pub required: std::option::Option<crate::model::RequiredFlag>,
     /// Use Width to define the video resolution width, in pixels, for this rule.
+    #[doc(hidden)]
     pub width: i32,
 }
 impl AllowedRenditionSize {
@@ -46179,11 +46946,10 @@ impl std::fmt::Debug for AllowedRenditionSize {
         formatter.finish()
     }
 }
-/// See [`AllowedRenditionSize`](crate::model::AllowedRenditionSize)
+/// See [`AllowedRenditionSize`](crate::model::AllowedRenditionSize).
 pub mod allowed_rendition_size {
 
-    /// A builder for [`AllowedRenditionSize`](crate::model::AllowedRenditionSize)
-    #[non_exhaustive]
+    /// A builder for [`AllowedRenditionSize`](crate::model::AllowedRenditionSize).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) height: std::option::Option<i32>,
@@ -46224,7 +46990,7 @@ pub mod allowed_rendition_size {
             self.width = input;
             self
         }
-        /// Consumes the builder and constructs a [`AllowedRenditionSize`](crate::model::AllowedRenditionSize)
+        /// Consumes the builder and constructs a [`AllowedRenditionSize`](crate::model::AllowedRenditionSize).
         pub fn build(self) -> crate::model::AllowedRenditionSize {
             crate::model::AllowedRenditionSize {
                 height: self.height.unwrap_or_default(),
@@ -46235,7 +47001,7 @@ pub mod allowed_rendition_size {
     }
 }
 impl AllowedRenditionSize {
-    /// Creates a new builder-style object to manufacture [`AllowedRenditionSize`](crate::model::AllowedRenditionSize)
+    /// Creates a new builder-style object to manufacture [`AllowedRenditionSize`](crate::model::AllowedRenditionSize).
     pub fn builder() -> crate::model::allowed_rendition_size::Builder {
         crate::model::allowed_rendition_size::Builder::default()
     }
@@ -46301,28 +47067,39 @@ impl AsRef<str> for RequiredFlag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NielsenNonLinearWatermarkSettings {
     /// Choose the type of Nielsen watermarks that you want in your outputs. When you choose NAES 2 and NW (NAES2_AND_NW), you must provide a value for the setting SID (sourceId). When you choose CBET (CBET), you must provide a value for the setting CSID (cbetSourceId). When you choose NAES 2, NW, and CBET (NAES2_AND_NW_AND_CBET), you must provide values for both of these settings.
+    #[doc(hidden)]
     pub active_watermark_process:
         std::option::Option<crate::model::NielsenActiveWatermarkProcessType>,
     /// Optional. Use this setting when you want the service to include an ADI file in the Nielsen metadata .zip file. To provide an ADI file, store it in Amazon S3 and provide a URL to it here. The URL should be in the following format: S3://bucket/path/ADI-file. For more information about the metadata .zip file, see the setting Metadata destination (metadataDestination).
+    #[doc(hidden)]
     pub adi_filename: std::option::Option<std::string::String>,
     /// Use the asset ID that you provide to Nielsen to uniquely identify this asset. Required for all Nielsen non-linear watermarking.
+    #[doc(hidden)]
     pub asset_id: std::option::Option<std::string::String>,
     /// Use the asset name that you provide to Nielsen for this asset. Required for all Nielsen non-linear watermarking.
+    #[doc(hidden)]
     pub asset_name: std::option::Option<std::string::String>,
     /// Use the CSID that Nielsen provides to you. This CBET source ID should be unique to your Nielsen account but common to all of your output assets that have CBET watermarking. Required when you choose a value for the setting Watermark types (ActiveWatermarkProcess) that includes CBET.
+    #[doc(hidden)]
     pub cbet_source_id: std::option::Option<std::string::String>,
     /// Optional. If this asset uses an episode ID with Nielsen, provide it here.
+    #[doc(hidden)]
     pub episode_id: std::option::Option<std::string::String>,
     /// Specify the Amazon S3 location where you want MediaConvert to save your Nielsen non-linear metadata .zip file. This Amazon S3 bucket must be in the same Region as the one where you do your MediaConvert transcoding. If you want to include an ADI file in this .zip file, use the setting ADI file (adiFilename) to specify it. MediaConvert delivers the Nielsen metadata .zip files only to your metadata destination Amazon S3 bucket. It doesn't deliver the .zip files to Nielsen. You are responsible for delivering the metadata .zip files to Nielsen.
+    #[doc(hidden)]
     pub metadata_destination: std::option::Option<std::string::String>,
     /// Use the SID that Nielsen provides to you. This source ID should be unique to your Nielsen account but common to all of your output assets. Required for all Nielsen non-linear watermarking. This ID should be unique to your Nielsen account but common to all of your output assets. Required for all Nielsen non-linear watermarking.
+    #[doc(hidden)]
     pub source_id: i32,
     /// Required. Specify whether your source content already contains Nielsen non-linear watermarks. When you set this value to Watermarked (WATERMARKED), the service fails the job. Nielsen requires that you add non-linear watermarking to only clean content that doesn't already have non-linear Nielsen watermarks.
+    #[doc(hidden)]
     pub source_watermark_status:
         std::option::Option<crate::model::NielsenSourceWatermarkStatusType>,
     /// Specify the endpoint for the TIC server that you have deployed and configured in the AWS Cloud. Required for all Nielsen non-linear watermarking. MediaConvert can't connect directly to a TIC server. Instead, you must use API Gateway to provide a RESTful interface between MediaConvert and a TIC server that you deploy in your AWS account. For more information on deploying a TIC server in your AWS account and the required API Gateway, contact Nielsen support.
+    #[doc(hidden)]
     pub tic_server_url: std::option::Option<std::string::String>,
     /// To create assets that have the same TIC values in each audio track, keep the default value Share TICs (SAME_TICS_PER_TRACK). To create assets that have unique TIC values for each audio track, choose Use unique TICs (RESERVE_UNIQUE_TICS_PER_TRACK).
+    #[doc(hidden)]
     pub unique_tic_per_audio_track:
         std::option::Option<crate::model::NielsenUniqueTicPerAudioTrackType>,
 }
@@ -46398,11 +47175,10 @@ impl std::fmt::Debug for NielsenNonLinearWatermarkSettings {
         formatter.finish()
     }
 }
-/// See [`NielsenNonLinearWatermarkSettings`](crate::model::NielsenNonLinearWatermarkSettings)
+/// See [`NielsenNonLinearWatermarkSettings`](crate::model::NielsenNonLinearWatermarkSettings).
 pub mod nielsen_non_linear_watermark_settings {
 
-    /// A builder for [`NielsenNonLinearWatermarkSettings`](crate::model::NielsenNonLinearWatermarkSettings)
-    #[non_exhaustive]
+    /// A builder for [`NielsenNonLinearWatermarkSettings`](crate::model::NielsenNonLinearWatermarkSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) active_watermark_process:
@@ -46558,7 +47334,7 @@ pub mod nielsen_non_linear_watermark_settings {
             self.unique_tic_per_audio_track = input;
             self
         }
-        /// Consumes the builder and constructs a [`NielsenNonLinearWatermarkSettings`](crate::model::NielsenNonLinearWatermarkSettings)
+        /// Consumes the builder and constructs a [`NielsenNonLinearWatermarkSettings`](crate::model::NielsenNonLinearWatermarkSettings).
         pub fn build(self) -> crate::model::NielsenNonLinearWatermarkSettings {
             crate::model::NielsenNonLinearWatermarkSettings {
                 active_watermark_process: self.active_watermark_process,
@@ -46577,7 +47353,7 @@ pub mod nielsen_non_linear_watermark_settings {
     }
 }
 impl NielsenNonLinearWatermarkSettings {
-    /// Creates a new builder-style object to manufacture [`NielsenNonLinearWatermarkSettings`](crate::model::NielsenNonLinearWatermarkSettings)
+    /// Creates a new builder-style object to manufacture [`NielsenNonLinearWatermarkSettings`](crate::model::NielsenNonLinearWatermarkSettings).
     pub fn builder() -> crate::model::nielsen_non_linear_watermark_settings::Builder {
         crate::model::nielsen_non_linear_watermark_settings::Builder::default()
     }
@@ -46761,8 +47537,10 @@ impl AsRef<str> for NielsenActiveWatermarkProcessType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NielsenConfiguration {
     /// Nielsen has discontinued the use of breakout code functionality. If you must include this property, set the value to zero.
+    #[doc(hidden)]
     pub breakout_code: i32,
     /// Use Distributor ID (DistributorID) to specify the distributor ID that is assigned to your organization by Neilsen.
+    #[doc(hidden)]
     pub distributor_id: std::option::Option<std::string::String>,
 }
 impl NielsenConfiguration {
@@ -46783,11 +47561,10 @@ impl std::fmt::Debug for NielsenConfiguration {
         formatter.finish()
     }
 }
-/// See [`NielsenConfiguration`](crate::model::NielsenConfiguration)
+/// See [`NielsenConfiguration`](crate::model::NielsenConfiguration).
 pub mod nielsen_configuration {
 
-    /// A builder for [`NielsenConfiguration`](crate::model::NielsenConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NielsenConfiguration`](crate::model::NielsenConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) breakout_code: std::option::Option<i32>,
@@ -46817,7 +47594,7 @@ pub mod nielsen_configuration {
             self.distributor_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`NielsenConfiguration`](crate::model::NielsenConfiguration)
+        /// Consumes the builder and constructs a [`NielsenConfiguration`](crate::model::NielsenConfiguration).
         pub fn build(self) -> crate::model::NielsenConfiguration {
             crate::model::NielsenConfiguration {
                 breakout_code: self.breakout_code.unwrap_or_default(),
@@ -46827,7 +47604,7 @@ pub mod nielsen_configuration {
     }
 }
 impl NielsenConfiguration {
-    /// Creates a new builder-style object to manufacture [`NielsenConfiguration`](crate::model::NielsenConfiguration)
+    /// Creates a new builder-style object to manufacture [`NielsenConfiguration`](crate::model::NielsenConfiguration).
     pub fn builder() -> crate::model::nielsen_configuration::Builder {
         crate::model::nielsen_configuration::Builder::default()
     }
@@ -46838,16 +47615,22 @@ impl NielsenConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MotionImageInserter {
     /// If your motion graphic asset is a .mov file, keep this setting unspecified. If your motion graphic asset is a series of .png files, specify the frame rate of the overlay in frames per second, as a fraction. For example, specify 24 fps as 24/1. Make sure that the number of images in your series matches the frame rate and your intended overlay duration. For example, if you want a 30-second overlay at 30 fps, you should have 900 .png images. This overlay frame rate doesn't need to match the frame rate of the underlying video.
+    #[doc(hidden)]
     pub framerate: std::option::Option<crate::model::MotionImageInsertionFramerate>,
     /// Specify the .mov file or series of .png files that you want to overlay on your video. For .png files, provide the file name of the first file in the series. Make sure that the names of the .png files end with sequential numbers that specify the order that they are played in. For example, overlay_000.png, overlay_001.png, overlay_002.png, and so on. The sequence must start at zero, and each image file name must have the same number of digits. Pad your initial file names with enough zeros to complete the sequence. For example, if the first image is overlay_0.png, there can be only 10 images in the sequence, with the last image being overlay_9.png. But if the first image is overlay_00.png, there can be 100 images in the sequence.
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// Choose the type of motion graphic asset that you are providing for your overlay. You can choose either a .mov file or a series of .png files.
+    #[doc(hidden)]
     pub insertion_mode: std::option::Option<crate::model::MotionImageInsertionMode>,
     /// Use Offset to specify the placement of your motion graphic overlay on the video frame. Specify in pixels, from the upper-left corner of the frame. If you don't specify an offset, the service scales your overlay to the full size of the frame. Otherwise, the service inserts the overlay at its native resolution and scales the size up or down with any video scaling.
+    #[doc(hidden)]
     pub offset: std::option::Option<crate::model::MotionImageInsertionOffset>,
     /// Specify whether your motion graphic overlay repeats on a loop or plays only once.
+    #[doc(hidden)]
     pub playback: std::option::Option<crate::model::MotionImagePlayback>,
     /// Specify when the motion overlay begins. Use timecode format (HH:MM:SS:FF or HH:MM:SS;FF). Make sure that the timecode you provide here takes into account how you have set up your timecode configuration under both job settings and input settings. The simplest way to do that is to set both to start at 0. If you need to set up your job to follow timecodes embedded in your source that don't start at zero, make sure that you specify a start time that is after the first embedded timecode. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/setting-up-timecode.html Find job-wide and input timecode configuration settings in your JSON job settings specification at settings&gt;timecodeConfig&gt;source and settings&gt;inputs&gt;timecodeSource.
+    #[doc(hidden)]
     pub start_time: std::option::Option<std::string::String>,
 }
 impl MotionImageInserter {
@@ -46888,11 +47671,10 @@ impl std::fmt::Debug for MotionImageInserter {
         formatter.finish()
     }
 }
-/// See [`MotionImageInserter`](crate::model::MotionImageInserter)
+/// See [`MotionImageInserter`](crate::model::MotionImageInserter).
 pub mod motion_image_inserter {
 
-    /// A builder for [`MotionImageInserter`](crate::model::MotionImageInserter)
-    #[non_exhaustive]
+    /// A builder for [`MotionImageInserter`](crate::model::MotionImageInserter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) framerate: std::option::Option<crate::model::MotionImageInsertionFramerate>,
@@ -46975,7 +47757,7 @@ pub mod motion_image_inserter {
             self.start_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`MotionImageInserter`](crate::model::MotionImageInserter)
+        /// Consumes the builder and constructs a [`MotionImageInserter`](crate::model::MotionImageInserter).
         pub fn build(self) -> crate::model::MotionImageInserter {
             crate::model::MotionImageInserter {
                 framerate: self.framerate,
@@ -46989,7 +47771,7 @@ pub mod motion_image_inserter {
     }
 }
 impl MotionImageInserter {
-    /// Creates a new builder-style object to manufacture [`MotionImageInserter`](crate::model::MotionImageInserter)
+    /// Creates a new builder-style object to manufacture [`MotionImageInserter`](crate::model::MotionImageInserter).
     pub fn builder() -> crate::model::motion_image_inserter::Builder {
         crate::model::motion_image_inserter::Builder::default()
     }
@@ -47055,8 +47837,10 @@ impl AsRef<str> for MotionImagePlayback {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MotionImageInsertionOffset {
     /// Set the distance, in pixels, between the overlay and the left edge of the video frame.
+    #[doc(hidden)]
     pub image_x: i32,
     /// Set the distance, in pixels, between the overlay and the top edge of the video frame.
+    #[doc(hidden)]
     pub image_y: i32,
 }
 impl MotionImageInsertionOffset {
@@ -47077,11 +47861,10 @@ impl std::fmt::Debug for MotionImageInsertionOffset {
         formatter.finish()
     }
 }
-/// See [`MotionImageInsertionOffset`](crate::model::MotionImageInsertionOffset)
+/// See [`MotionImageInsertionOffset`](crate::model::MotionImageInsertionOffset).
 pub mod motion_image_insertion_offset {
 
-    /// A builder for [`MotionImageInsertionOffset`](crate::model::MotionImageInsertionOffset)
-    #[non_exhaustive]
+    /// A builder for [`MotionImageInsertionOffset`](crate::model::MotionImageInsertionOffset).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) image_x: std::option::Option<i32>,
@@ -47108,7 +47891,7 @@ pub mod motion_image_insertion_offset {
             self.image_y = input;
             self
         }
-        /// Consumes the builder and constructs a [`MotionImageInsertionOffset`](crate::model::MotionImageInsertionOffset)
+        /// Consumes the builder and constructs a [`MotionImageInsertionOffset`](crate::model::MotionImageInsertionOffset).
         pub fn build(self) -> crate::model::MotionImageInsertionOffset {
             crate::model::MotionImageInsertionOffset {
                 image_x: self.image_x.unwrap_or_default(),
@@ -47118,7 +47901,7 @@ pub mod motion_image_insertion_offset {
     }
 }
 impl MotionImageInsertionOffset {
-    /// Creates a new builder-style object to manufacture [`MotionImageInsertionOffset`](crate::model::MotionImageInsertionOffset)
+    /// Creates a new builder-style object to manufacture [`MotionImageInsertionOffset`](crate::model::MotionImageInsertionOffset).
     pub fn builder() -> crate::model::motion_image_insertion_offset::Builder {
         crate::model::motion_image_insertion_offset::Builder::default()
     }
@@ -47184,8 +47967,10 @@ impl AsRef<str> for MotionImageInsertionMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MotionImageInsertionFramerate {
     /// The bottom of the fraction that expresses your overlay frame rate. For example, if your frame rate is 24 fps, set this value to 1.
+    #[doc(hidden)]
     pub framerate_denominator: i32,
     /// The top of the fraction that expresses your overlay frame rate. For example, if your frame rate is 24 fps, set this value to 24.
+    #[doc(hidden)]
     pub framerate_numerator: i32,
 }
 impl MotionImageInsertionFramerate {
@@ -47206,11 +47991,10 @@ impl std::fmt::Debug for MotionImageInsertionFramerate {
         formatter.finish()
     }
 }
-/// See [`MotionImageInsertionFramerate`](crate::model::MotionImageInsertionFramerate)
+/// See [`MotionImageInsertionFramerate`](crate::model::MotionImageInsertionFramerate).
 pub mod motion_image_insertion_framerate {
 
-    /// A builder for [`MotionImageInsertionFramerate`](crate::model::MotionImageInsertionFramerate)
-    #[non_exhaustive]
+    /// A builder for [`MotionImageInsertionFramerate`](crate::model::MotionImageInsertionFramerate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) framerate_denominator: std::option::Option<i32>,
@@ -47237,7 +48021,7 @@ pub mod motion_image_insertion_framerate {
             self.framerate_numerator = input;
             self
         }
-        /// Consumes the builder and constructs a [`MotionImageInsertionFramerate`](crate::model::MotionImageInsertionFramerate)
+        /// Consumes the builder and constructs a [`MotionImageInsertionFramerate`](crate::model::MotionImageInsertionFramerate).
         pub fn build(self) -> crate::model::MotionImageInsertionFramerate {
             crate::model::MotionImageInsertionFramerate {
                 framerate_denominator: self.framerate_denominator.unwrap_or_default(),
@@ -47247,7 +48031,7 @@ pub mod motion_image_insertion_framerate {
     }
 }
 impl MotionImageInsertionFramerate {
-    /// Creates a new builder-style object to manufacture [`MotionImageInsertionFramerate`](crate::model::MotionImageInsertionFramerate)
+    /// Creates a new builder-style object to manufacture [`MotionImageInsertionFramerate`](crate::model::MotionImageInsertionFramerate).
     pub fn builder() -> crate::model::motion_image_insertion_framerate::Builder {
         crate::model::motion_image_insertion_framerate::Builder::default()
     }
@@ -47258,30 +48042,43 @@ impl MotionImageInsertionFramerate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KantarWatermarkSettings {
     /// Provide an audio channel name from your Kantar audio license.
+    #[doc(hidden)]
     pub channel_name: std::option::Option<std::string::String>,
     /// Specify a unique identifier for Kantar to use for this piece of content.
+    #[doc(hidden)]
     pub content_reference: std::option::Option<std::string::String>,
     /// Provide the name of the AWS Secrets Manager secret where your Kantar credentials are stored. Note that your MediaConvert service role must provide access to this secret. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/granting-permissions-for-mediaconvert-to-access-secrets-manager-secret.html. For instructions on creating a secret, see https://docs.aws.amazon.com/secretsmanager/latest/userguide/tutorials_basic.html, in the AWS Secrets Manager User Guide.
+    #[doc(hidden)]
     pub credentials_secret_name: std::option::Option<std::string::String>,
     /// Optional. Specify an offset, in whole seconds, from the start of your output and the beginning of the watermarking. When you don't specify an offset, Kantar defaults to zero.
+    #[doc(hidden)]
     pub file_offset: f64,
     /// Provide your Kantar license ID number. You should get this number from Kantar.
+    #[doc(hidden)]
     pub kantar_license_id: i32,
     /// Provide the HTTPS endpoint to the Kantar server. You should get this endpoint from Kantar.
+    #[doc(hidden)]
     pub kantar_server_url: std::option::Option<std::string::String>,
     /// Optional. Specify the Amazon S3 bucket where you want MediaConvert to store your Kantar watermark XML logs. When you don't specify a bucket, MediaConvert doesn't save these logs. Note that your MediaConvert service role must provide access to this location. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html
+    #[doc(hidden)]
     pub log_destination: std::option::Option<std::string::String>,
     /// You can optionally use this field to specify the first timestamp that Kantar embeds during watermarking. Kantar suggests that you be very cautious when using this Kantar feature, and that you use it only on channels that are managed specifically for use with this feature by your Audience Measurement Operator. For more information about this feature, contact Kantar technical support.
+    #[doc(hidden)]
     pub metadata3: std::option::Option<std::string::String>,
     /// Additional metadata that MediaConvert sends to Kantar. Maximum length is 50 characters.
+    #[doc(hidden)]
     pub metadata4: std::option::Option<std::string::String>,
     /// Additional metadata that MediaConvert sends to Kantar. Maximum length is 50 characters.
+    #[doc(hidden)]
     pub metadata5: std::option::Option<std::string::String>,
     /// Additional metadata that MediaConvert sends to Kantar. Maximum length is 50 characters.
+    #[doc(hidden)]
     pub metadata6: std::option::Option<std::string::String>,
     /// Additional metadata that MediaConvert sends to Kantar. Maximum length is 50 characters.
+    #[doc(hidden)]
     pub metadata7: std::option::Option<std::string::String>,
     /// Additional metadata that MediaConvert sends to Kantar. Maximum length is 50 characters.
+    #[doc(hidden)]
     pub metadata8: std::option::Option<std::string::String>,
 }
 impl KantarWatermarkSettings {
@@ -47357,11 +48154,10 @@ impl std::fmt::Debug for KantarWatermarkSettings {
         formatter.finish()
     }
 }
-/// See [`KantarWatermarkSettings`](crate::model::KantarWatermarkSettings)
+/// See [`KantarWatermarkSettings`](crate::model::KantarWatermarkSettings).
 pub mod kantar_watermark_settings {
 
-    /// A builder for [`KantarWatermarkSettings`](crate::model::KantarWatermarkSettings)
-    #[non_exhaustive]
+    /// A builder for [`KantarWatermarkSettings`](crate::model::KantarWatermarkSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_name: std::option::Option<std::string::String>,
@@ -47521,7 +48317,7 @@ pub mod kantar_watermark_settings {
             self.metadata8 = input;
             self
         }
-        /// Consumes the builder and constructs a [`KantarWatermarkSettings`](crate::model::KantarWatermarkSettings)
+        /// Consumes the builder and constructs a [`KantarWatermarkSettings`](crate::model::KantarWatermarkSettings).
         pub fn build(self) -> crate::model::KantarWatermarkSettings {
             crate::model::KantarWatermarkSettings {
                 channel_name: self.channel_name,
@@ -47542,7 +48338,7 @@ pub mod kantar_watermark_settings {
     }
 }
 impl KantarWatermarkSettings {
-    /// Creates a new builder-style object to manufacture [`KantarWatermarkSettings`](crate::model::KantarWatermarkSettings)
+    /// Creates a new builder-style object to manufacture [`KantarWatermarkSettings`](crate::model::KantarWatermarkSettings).
     pub fn builder() -> crate::model::kantar_watermark_settings::Builder {
         crate::model::kantar_watermark_settings::Builder::default()
     }
@@ -47553,46 +48349,64 @@ impl KantarWatermarkSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputTemplate {
     /// Use audio selector groups to combine multiple sidecar audio inputs so that you can assign them to a single output audio tab (AudioDescription). Note that, if you're working with embedded audio, it's simpler to assign multiple input tracks into a single audio selector rather than use an audio selector group.
+    #[doc(hidden)]
     pub audio_selector_groups: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AudioSelectorGroup>,
     >,
     /// Use Audio selectors (AudioSelectors) to specify a track or set of tracks from the input that you will use in your outputs. You can use multiple Audio selectors per input.
+    #[doc(hidden)]
     pub audio_selectors: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AudioSelector>,
     >,
     /// Use captions selectors to specify the captions data from your input that you use in your outputs. You can use up to 20 captions selectors per input.
+    #[doc(hidden)]
     pub caption_selectors: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::CaptionSelector>,
     >,
     /// Use Cropping selection (crop) to specify the video area that the service will include in the output video frame. If you specify a value here, it will override any value that you specify in the output setting Cropping selection (crop).
+    #[doc(hidden)]
     pub crop: std::option::Option<crate::model::Rectangle>,
     /// Enable Deblock (InputDeblockFilter) to produce smoother motion in the output. Default is disabled. Only manually controllable for MPEG2 and uncompressed video inputs.
+    #[doc(hidden)]
     pub deblock_filter: std::option::Option<crate::model::InputDeblockFilter>,
     /// Enable Denoise (InputDenoiseFilter) to filter noise from the input. Default is disabled. Only applicable to MPEG2, H.264, H.265, and uncompressed video inputs.
+    #[doc(hidden)]
     pub denoise_filter: std::option::Option<crate::model::InputDenoiseFilter>,
     /// Use this setting only when your video source has Dolby Vision studio mastering metadata that is carried in a separate XML file. Specify the Amazon S3 location for the metadata XML file. MediaConvert uses this file to provide global and frame-level metadata for Dolby Vision preprocessing. When you specify a file here and your input also has interleaved global and frame level metadata, MediaConvert ignores the interleaved metadata and uses only the the metadata from this external XML file. Note that your IAM service role must grant MediaConvert read permissions to this file. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html.
+    #[doc(hidden)]
     pub dolby_vision_metadata_xml: std::option::Option<std::string::String>,
     /// Specify how the transcoding service applies the denoise and deblock filters. You must also enable the filters separately, with Denoise (InputDenoiseFilter) and Deblock (InputDeblockFilter). * Auto - The transcoding service determines whether to apply filtering, depending on input type and quality. * Disable - The input is not filtered. This is true even if you use the API to enable them in (InputDeblockFilter) and (InputDeblockFilter). * Force - The input is filtered regardless of input type.
+    #[doc(hidden)]
     pub filter_enable: std::option::Option<crate::model::InputFilterEnable>,
     /// Use Filter strength (FilterStrength) to adjust the magnitude the input filter settings (Deblock and Denoise). The range is -5 to 5. Default is 0.
+    #[doc(hidden)]
     pub filter_strength: i32,
     /// Enable the image inserter feature to include a graphic overlay on your video. Enable or disable this feature for each input individually. This setting is disabled by default.
+    #[doc(hidden)]
     pub image_inserter: std::option::Option<crate::model::ImageInserter>,
     /// (InputClippings) contains sets of start and end times that together specify a portion of the input to be used in the outputs. If you provide only a start time, the clip will be the entire input from that point to the end. If you provide only an end time, it will be the entire input up to that point. When you specify more than one input clip, the transcoding service creates the job outputs by stringing the clips together in the order you specify them.
+    #[doc(hidden)]
     pub input_clippings: std::option::Option<std::vec::Vec<crate::model::InputClipping>>,
     /// When you have a progressive segmented frame (PsF) input, use this setting to flag the input as PsF. MediaConvert doesn't automatically detect PsF. Therefore, flagging your input as PsF results in better preservation of video quality when you do deinterlacing and frame rate conversion. If you don't specify, the default value is Auto (AUTO). Auto is the correct setting for all inputs that are not PsF. Don't set this value to PsF when your input is interlaced. Doing so creates horizontal interlacing artifacts.
+    #[doc(hidden)]
     pub input_scan_type: std::option::Option<crate::model::InputScanType>,
     /// Use Selection placement (position) to define the video area in your output frame. The area outside of the rectangle that you specify here is black. If you specify a value here, it will override any value that you specify in the output setting Selection placement (position). If you specify a value here, this will override any AFD values in your input, even if you set Respond to AFD (RespondToAfd) to Respond (RESPOND). If you specify a value here, this will ignore anything that you specify for the setting Scaling Behavior (scalingBehavior).
+    #[doc(hidden)]
     pub position: std::option::Option<crate::model::Rectangle>,
     /// Use Program (programNumber) to select a specific program from within a multi-program transport stream. Note that Quad 4K is not currently supported. Default is the first program within the transport stream. If the program you specify doesn't exist, the transcoding service will use this default.
+    #[doc(hidden)]
     pub program_number: i32,
     /// Set PSI control (InputPsiControl) for transport stream inputs to specify which data the demux process to scans. * Ignore PSI - Scan all PIDs for audio and video. * Use PSI - Scan only PSI data.
+    #[doc(hidden)]
     pub psi_control: std::option::Option<crate::model::InputPsiControl>,
     /// Use this Timecode source setting, located under the input settings (InputTimecodeSource), to specify how the service counts input video frames. This input frame count affects only the behavior of features that apply to a single input at a time, such as input clipping and synchronizing some captions formats. Choose Embedded (EMBEDDED) to use the timecodes in your input video. Choose Start at zero (ZEROBASED) to start the first frame at zero. Choose Specified start (SPECIFIEDSTART) to start the first frame at the timecode that you specify in the setting Start timecode (timecodeStart). If you don't specify a value for Timecode source, the service will use Embedded by default. For more information about timecodes, see https://docs.aws.amazon.com/console/mediaconvert/timecode.
+    #[doc(hidden)]
     pub timecode_source: std::option::Option<crate::model::InputTimecodeSource>,
     /// Specify the timecode that you want the service to use for this input's initial frame. To use this setting, you must set the Timecode source setting, located under the input settings (InputTimecodeSource), to Specified start (SPECIFIEDSTART). For more information about timecodes, see https://docs.aws.amazon.com/console/mediaconvert/timecode.
+    #[doc(hidden)]
     pub timecode_start: std::option::Option<std::string::String>,
     /// Input video selectors contain the video settings for the input. Each of your inputs can have up to one video selector.
+    #[doc(hidden)]
     pub video_selector: std::option::Option<crate::model::VideoSelector>,
 }
 impl InputTemplate {
@@ -47705,11 +48519,10 @@ impl std::fmt::Debug for InputTemplate {
         formatter.finish()
     }
 }
-/// See [`InputTemplate`](crate::model::InputTemplate)
+/// See [`InputTemplate`](crate::model::InputTemplate).
 pub mod input_template {
 
-    /// A builder for [`InputTemplate`](crate::model::InputTemplate)
-    #[non_exhaustive]
+    /// A builder for [`InputTemplate`](crate::model::InputTemplate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_selector_groups: std::option::Option<
@@ -48002,7 +48815,7 @@ pub mod input_template {
             self.video_selector = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputTemplate`](crate::model::InputTemplate)
+        /// Consumes the builder and constructs a [`InputTemplate`](crate::model::InputTemplate).
         pub fn build(self) -> crate::model::InputTemplate {
             crate::model::InputTemplate {
                 audio_selector_groups: self.audio_selector_groups,
@@ -48028,7 +48841,7 @@ pub mod input_template {
     }
 }
 impl InputTemplate {
-    /// Creates a new builder-style object to manufacture [`InputTemplate`](crate::model::InputTemplate)
+    /// Creates a new builder-style object to manufacture [`InputTemplate`](crate::model::InputTemplate).
     pub fn builder() -> crate::model::input_template::Builder {
         crate::model::input_template::Builder::default()
     }
@@ -48039,24 +48852,34 @@ impl InputTemplate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VideoSelector {
     /// Ignore this setting unless this input is a QuickTime animation with an alpha channel. Use this setting to create separate Key and Fill outputs. In each output, specify which part of the input MediaConvert uses. Leave this setting at the default value DISCARD to delete the alpha channel and preserve the video. Set it to REMAP_TO_LUMA to delete the video and map the alpha channel to the luma channel of your outputs.
+    #[doc(hidden)]
     pub alpha_behavior: std::option::Option<crate::model::AlphaBehavior>,
     /// If your input video has accurate color space metadata, or if you don't know about color space, leave this set to the default value Follow (FOLLOW). The service will automatically detect your input color space. If your input video has metadata indicating the wrong color space, specify the accurate color space here. If your input video is HDR 10 and the SMPTE ST 2086 Mastering Display Color Volume static metadata isn't present in your video stream, or if that metadata is present but not accurate, choose Force HDR 10 (FORCE_HDR10) here and specify correct values in the input HDR 10 metadata (Hdr10Metadata) settings. For more information about MediaConvert HDR jobs, see https://docs.aws.amazon.com/console/mediaconvert/hdr.
+    #[doc(hidden)]
     pub color_space: std::option::Option<crate::model::ColorSpace>,
     /// There are two sources for color metadata, the input file and the job input settings Color space (ColorSpace) and HDR master display information settings(Hdr10Metadata). The Color space usage setting determines which takes precedence. Choose Force (FORCE) to use color metadata from the input job settings. If you don't specify values for those settings, the service defaults to using metadata from your input. FALLBACK - Choose Fallback (FALLBACK) to use color metadata from the source when it is present. If there's no color metadata in your input file, the service defaults to using values you specify in the input settings.
+    #[doc(hidden)]
     pub color_space_usage: std::option::Option<crate::model::ColorSpaceUsage>,
     /// Set Embedded timecode override (embeddedTimecodeOverride) to Use MDPM (USE_MDPM) when your AVCHD input contains timecode tag data in the Modified Digital Video Pack Metadata (MDPM). When you do, we recommend you also set Timecode source (inputTimecodeSource) to Embedded (EMBEDDED). Leave Embedded timecode override blank, or set to None (NONE), when your input does not contain MDPM timecode.
+    #[doc(hidden)]
     pub embedded_timecode_override: std::option::Option<crate::model::EmbeddedTimecodeOverride>,
     /// Use these settings to provide HDR 10 metadata that is missing or inaccurate in your input video. Appropriate values vary depending on the input video and must be provided by a color grader. The color grader generates these values during the HDR 10 mastering process. The valid range for each of these settings is 0 to 50,000. Each increment represents 0.00002 in CIE1931 color coordinate. Related settings - When you specify these values, you must also set Color space (ColorSpace) to HDR 10 (HDR10). To specify whether the the values you specify here take precedence over the values in the metadata of your input file, set Color space usage (ColorSpaceUsage). To specify whether color metadata is included in an output, set Color metadata (ColorMetadata). For more information about MediaConvert HDR jobs, see https://docs.aws.amazon.com/console/mediaconvert/hdr.
+    #[doc(hidden)]
     pub hdr10_metadata: std::option::Option<crate::model::Hdr10Metadata>,
     /// Use this setting if your input has video and audio durations that don't align, and your output or player has strict alignment requirements. Examples: Input audio track has a delayed start. Input video track ends before audio ends. When you set Pad video (padVideo) to Black (BLACK), MediaConvert generates black video frames so that output video and audio durations match. Black video frames are added at the beginning or end, depending on your input. To keep the default behavior and not generate black video, set Pad video to Disabled (DISABLED) or leave blank.
+    #[doc(hidden)]
     pub pad_video: std::option::Option<crate::model::PadVideo>,
     /// Use PID (Pid) to select specific video data from an input file. Specify this value as an integer; the system automatically converts it to the hexidecimal value. For example, 257 selects PID 0x101. A PID, or packet identifier, is an identifier for a set of data in an MPEG-2 transport stream container.
+    #[doc(hidden)]
     pub pid: i32,
     /// Selects a specific program from within a multi-program transport stream. Note that Quad 4K is not currently supported.
+    #[doc(hidden)]
     pub program_number: i32,
     /// Use Rotate (InputRotate) to specify how the service rotates your video. You can choose automatic rotation or specify a rotation. You can specify a clockwise rotation of 0, 90, 180, or 270 degrees. If your input video container is .mov or .mp4 and your input has rotation metadata, you can choose Automatic to have the service rotate your video according to the rotation specified in the metadata. The rotation must be within one degree of 90, 180, or 270 degrees. If the rotation metadata specifies any other rotation, the service will default to no rotation. By default, the service does no rotation, even if your input video has rotation metadata. The service doesn't pass through rotation metadata.
+    #[doc(hidden)]
     pub rotate: std::option::Option<crate::model::InputRotate>,
     /// If the sample range metadata in your input video is accurate, or if you don't know about sample range, keep the default value, Follow (FOLLOW), for this setting. When you do, the service automatically detects your input sample range. If your input video has metadata indicating the wrong sample range, specify the accurate sample range here. When you do, MediaConvert ignores any sample range information in the input metadata. Regardless of whether MediaConvert uses the input sample range or the sample range that you specify, MediaConvert uses the sample range for transcoding and also writes it to the output metadata.
+    #[doc(hidden)]
     pub sample_range: std::option::Option<crate::model::InputSampleRange>,
 }
 impl VideoSelector {
@@ -48122,11 +48945,10 @@ impl std::fmt::Debug for VideoSelector {
         formatter.finish()
     }
 }
-/// See [`VideoSelector`](crate::model::VideoSelector)
+/// See [`VideoSelector`](crate::model::VideoSelector).
 pub mod video_selector {
 
-    /// A builder for [`VideoSelector`](crate::model::VideoSelector)
-    #[non_exhaustive]
+    /// A builder for [`VideoSelector`](crate::model::VideoSelector).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alpha_behavior: std::option::Option<crate::model::AlphaBehavior>,
@@ -48263,7 +49085,7 @@ pub mod video_selector {
             self.sample_range = input;
             self
         }
-        /// Consumes the builder and constructs a [`VideoSelector`](crate::model::VideoSelector)
+        /// Consumes the builder and constructs a [`VideoSelector`](crate::model::VideoSelector).
         pub fn build(self) -> crate::model::VideoSelector {
             crate::model::VideoSelector {
                 alpha_behavior: self.alpha_behavior,
@@ -48281,7 +49103,7 @@ pub mod video_selector {
     }
 }
 impl VideoSelector {
-    /// Creates a new builder-style object to manufacture [`VideoSelector`](crate::model::VideoSelector)
+    /// Creates a new builder-style object to manufacture [`VideoSelector`](crate::model::VideoSelector).
     pub fn builder() -> crate::model::video_selector::Builder {
         crate::model::video_selector::Builder::default()
     }
@@ -48880,8 +49702,10 @@ impl AsRef<str> for InputScanType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputClipping {
     /// Set End timecode (EndTimecode) to the end of the portion of the input you are clipping. The frame corresponding to the End timecode value is included in the clip. Start timecode or End timecode may be left blank, but not both. Use the format HH:MM:SS:FF or HH:MM:SS;FF, where HH is the hour, MM is the minute, SS is the second, and FF is the frame number. When choosing this value, take into account your setting for timecode source under input settings (InputTimecodeSource). For example, if you have embedded timecodes that start at 01:00:00:00 and you want your clip to end six minutes into the video, use 01:06:00:00.
+    #[doc(hidden)]
     pub end_timecode: std::option::Option<std::string::String>,
     /// Set Start timecode (StartTimecode) to the beginning of the portion of the input you are clipping. The frame corresponding to the Start timecode value is included in the clip. Start timecode or End timecode may be left blank, but not both. Use the format HH:MM:SS:FF or HH:MM:SS;FF, where HH is the hour, MM is the minute, SS is the second, and FF is the frame number. When choosing this value, take into account your setting for Input timecode source. For example, if you have embedded timecodes that start at 01:00:00:00 and you want your clip to begin five minutes into the video, use 01:05:00:00.
+    #[doc(hidden)]
     pub start_timecode: std::option::Option<std::string::String>,
 }
 impl InputClipping {
@@ -48902,11 +49726,10 @@ impl std::fmt::Debug for InputClipping {
         formatter.finish()
     }
 }
-/// See [`InputClipping`](crate::model::InputClipping)
+/// See [`InputClipping`](crate::model::InputClipping).
 pub mod input_clipping {
 
-    /// A builder for [`InputClipping`](crate::model::InputClipping)
-    #[non_exhaustive]
+    /// A builder for [`InputClipping`](crate::model::InputClipping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) end_timecode: std::option::Option<std::string::String>,
@@ -48936,7 +49759,7 @@ pub mod input_clipping {
             self.start_timecode = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputClipping`](crate::model::InputClipping)
+        /// Consumes the builder and constructs a [`InputClipping`](crate::model::InputClipping).
         pub fn build(self) -> crate::model::InputClipping {
             crate::model::InputClipping {
                 end_timecode: self.end_timecode,
@@ -48946,7 +49769,7 @@ pub mod input_clipping {
     }
 }
 impl InputClipping {
-    /// Creates a new builder-style object to manufacture [`InputClipping`](crate::model::InputClipping)
+    /// Creates a new builder-style object to manufacture [`InputClipping`](crate::model::InputClipping).
     pub fn builder() -> crate::model::input_clipping::Builder {
         crate::model::input_clipping::Builder::default()
     }
@@ -49126,10 +49949,13 @@ impl AsRef<str> for InputDeblockFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CaptionSelector {
     /// The specific language to extract from source, using the ISO 639-2 or ISO 639-3 three-letter language code. If input is SCTE-27, complete this field and/or PID to select the caption language to extract. If input is DVB-Sub and output is Burn-in or SMPTE-TT, complete this field and/or PID to select the caption language to extract. If input is DVB-Sub that is being passed through, omit this field (and PID field); there is no way to extract a specific language with pass-through captions.
+    #[doc(hidden)]
     pub custom_language_code: std::option::Option<std::string::String>,
     /// The specific language to extract from source. If input is SCTE-27, complete this field and/or PID to select the caption language to extract. If input is DVB-Sub and output is Burn-in or SMPTE-TT, complete this field and/or PID to select the caption language to extract. If input is DVB-Sub that is being passed through, omit this field (and PID field); there is no way to extract a specific language with pass-through captions.
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// If your input captions are SCC, TTML, STL, SMI, SRT, or IMSC in an xml file, specify the URI of the input captions source file. If your input captions are IMSC in an IMF package, use TrackSourceSettings instead of FileSoureSettings.
+    #[doc(hidden)]
     pub source_settings: std::option::Option<crate::model::CaptionSourceSettings>,
 }
 impl CaptionSelector {
@@ -49155,11 +49981,10 @@ impl std::fmt::Debug for CaptionSelector {
         formatter.finish()
     }
 }
-/// See [`CaptionSelector`](crate::model::CaptionSelector)
+/// See [`CaptionSelector`](crate::model::CaptionSelector).
 pub mod caption_selector {
 
-    /// A builder for [`CaptionSelector`](crate::model::CaptionSelector)
-    #[non_exhaustive]
+    /// A builder for [`CaptionSelector`](crate::model::CaptionSelector).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_language_code: std::option::Option<std::string::String>,
@@ -49206,7 +50031,7 @@ pub mod caption_selector {
             self.source_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`CaptionSelector`](crate::model::CaptionSelector)
+        /// Consumes the builder and constructs a [`CaptionSelector`](crate::model::CaptionSelector).
         pub fn build(self) -> crate::model::CaptionSelector {
             crate::model::CaptionSelector {
                 custom_language_code: self.custom_language_code,
@@ -49217,7 +50042,7 @@ pub mod caption_selector {
     }
 }
 impl CaptionSelector {
-    /// Creates a new builder-style object to manufacture [`CaptionSelector`](crate::model::CaptionSelector)
+    /// Creates a new builder-style object to manufacture [`CaptionSelector`](crate::model::CaptionSelector).
     pub fn builder() -> crate::model::caption_selector::Builder {
         crate::model::caption_selector::Builder::default()
     }
@@ -49228,20 +50053,28 @@ impl CaptionSelector {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CaptionSourceSettings {
     /// Settings for ancillary captions source.
+    #[doc(hidden)]
     pub ancillary_source_settings: std::option::Option<crate::model::AncillarySourceSettings>,
     /// DVB Sub Source Settings
+    #[doc(hidden)]
     pub dvb_sub_source_settings: std::option::Option<crate::model::DvbSubSourceSettings>,
     /// Settings for embedded captions Source
+    #[doc(hidden)]
     pub embedded_source_settings: std::option::Option<crate::model::EmbeddedSourceSettings>,
     /// If your input captions are SCC, SMI, SRT, STL, TTML, WebVTT, or IMSC 1.1 in an xml file, specify the URI of the input caption source file. If your caption source is IMSC in an IMF package, use TrackSourceSettings instead of FileSoureSettings.
+    #[doc(hidden)]
     pub file_source_settings: std::option::Option<crate::model::FileSourceSettings>,
     /// Use Source (SourceType) to identify the format of your input captions. The service cannot auto-detect caption format.
+    #[doc(hidden)]
     pub source_type: std::option::Option<crate::model::CaptionSourceType>,
     /// Settings specific to Teletext caption sources, including Page number.
+    #[doc(hidden)]
     pub teletext_source_settings: std::option::Option<crate::model::TeletextSourceSettings>,
     /// Settings specific to caption sources that are specified by track number. Currently, this is only IMSC captions in an IMF package. If your caption source is IMSC 1.1 in a separate xml file, use FileSourceSettings instead of TrackSourceSettings.
+    #[doc(hidden)]
     pub track_source_settings: std::option::Option<crate::model::TrackSourceSettings>,
     /// Settings specific to WebVTT sources in HLS alternative rendition group. Specify the properties (renditionGroupId, renditionName or renditionLanguageCode) to identify the unique subtitle track among the alternative rendition groups present in the HLS manifest. If no unique track is found, or multiple tracks match the specified properties, the job fails. If there is only one subtitle track in the rendition group, the settings can be left empty and the default subtitle track will be chosen. If your caption source is a sidecar file, use FileSourceSettings instead of WebvttHlsSourceSettings.
+    #[doc(hidden)]
     pub webvtt_hls_source_settings: std::option::Option<crate::model::WebvttHlsSourceSettings>,
 }
 impl CaptionSourceSettings {
@@ -49305,11 +50138,10 @@ impl std::fmt::Debug for CaptionSourceSettings {
         formatter.finish()
     }
 }
-/// See [`CaptionSourceSettings`](crate::model::CaptionSourceSettings)
+/// See [`CaptionSourceSettings`](crate::model::CaptionSourceSettings).
 pub mod caption_source_settings {
 
-    /// A builder for [`CaptionSourceSettings`](crate::model::CaptionSourceSettings)
-    #[non_exhaustive]
+    /// A builder for [`CaptionSourceSettings`](crate::model::CaptionSourceSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ancillary_source_settings:
@@ -49445,7 +50277,7 @@ pub mod caption_source_settings {
             self.webvtt_hls_source_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`CaptionSourceSettings`](crate::model::CaptionSourceSettings)
+        /// Consumes the builder and constructs a [`CaptionSourceSettings`](crate::model::CaptionSourceSettings).
         pub fn build(self) -> crate::model::CaptionSourceSettings {
             crate::model::CaptionSourceSettings {
                 ancillary_source_settings: self.ancillary_source_settings,
@@ -49461,7 +50293,7 @@ pub mod caption_source_settings {
     }
 }
 impl CaptionSourceSettings {
-    /// Creates a new builder-style object to manufacture [`CaptionSourceSettings`](crate::model::CaptionSourceSettings)
+    /// Creates a new builder-style object to manufacture [`CaptionSourceSettings`](crate::model::CaptionSourceSettings).
     pub fn builder() -> crate::model::caption_source_settings::Builder {
         crate::model::caption_source_settings::Builder::default()
     }
@@ -49472,10 +50304,13 @@ impl CaptionSourceSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WebvttHlsSourceSettings {
     /// Optional. Specify alternative group ID
+    #[doc(hidden)]
     pub rendition_group_id: std::option::Option<std::string::String>,
     /// Optional. Specify ISO 639-2 or ISO 639-3 code in the language property
+    #[doc(hidden)]
     pub rendition_language_code: std::option::Option<crate::model::LanguageCode>,
     /// Optional. Specify media name
+    #[doc(hidden)]
     pub rendition_name: std::option::Option<std::string::String>,
 }
 impl WebvttHlsSourceSettings {
@@ -49501,11 +50336,10 @@ impl std::fmt::Debug for WebvttHlsSourceSettings {
         formatter.finish()
     }
 }
-/// See [`WebvttHlsSourceSettings`](crate::model::WebvttHlsSourceSettings)
+/// See [`WebvttHlsSourceSettings`](crate::model::WebvttHlsSourceSettings).
 pub mod webvtt_hls_source_settings {
 
-    /// A builder for [`WebvttHlsSourceSettings`](crate::model::WebvttHlsSourceSettings)
-    #[non_exhaustive]
+    /// A builder for [`WebvttHlsSourceSettings`](crate::model::WebvttHlsSourceSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rendition_group_id: std::option::Option<std::string::String>,
@@ -49552,7 +50386,7 @@ pub mod webvtt_hls_source_settings {
             self.rendition_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`WebvttHlsSourceSettings`](crate::model::WebvttHlsSourceSettings)
+        /// Consumes the builder and constructs a [`WebvttHlsSourceSettings`](crate::model::WebvttHlsSourceSettings).
         pub fn build(self) -> crate::model::WebvttHlsSourceSettings {
             crate::model::WebvttHlsSourceSettings {
                 rendition_group_id: self.rendition_group_id,
@@ -49563,7 +50397,7 @@ pub mod webvtt_hls_source_settings {
     }
 }
 impl WebvttHlsSourceSettings {
-    /// Creates a new builder-style object to manufacture [`WebvttHlsSourceSettings`](crate::model::WebvttHlsSourceSettings)
+    /// Creates a new builder-style object to manufacture [`WebvttHlsSourceSettings`](crate::model::WebvttHlsSourceSettings).
     pub fn builder() -> crate::model::webvtt_hls_source_settings::Builder {
         crate::model::webvtt_hls_source_settings::Builder::default()
     }
@@ -49574,6 +50408,7 @@ impl WebvttHlsSourceSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrackSourceSettings {
     /// Use this setting to select a single captions track from a source. Track numbers correspond to the order in the captions source file. For IMF sources, track numbering is based on the order that the captions appear in the CPL. For example, use 1 to select the captions asset that is listed first in the CPL. To include more than one captions track in your job outputs, create multiple input captions selectors. Specify one track per selector.
+    #[doc(hidden)]
     pub track_number: i32,
 }
 impl TrackSourceSettings {
@@ -49589,11 +50424,10 @@ impl std::fmt::Debug for TrackSourceSettings {
         formatter.finish()
     }
 }
-/// See [`TrackSourceSettings`](crate::model::TrackSourceSettings)
+/// See [`TrackSourceSettings`](crate::model::TrackSourceSettings).
 pub mod track_source_settings {
 
-    /// A builder for [`TrackSourceSettings`](crate::model::TrackSourceSettings)
-    #[non_exhaustive]
+    /// A builder for [`TrackSourceSettings`](crate::model::TrackSourceSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) track_number: std::option::Option<i32>,
@@ -49609,7 +50443,7 @@ pub mod track_source_settings {
             self.track_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrackSourceSettings`](crate::model::TrackSourceSettings)
+        /// Consumes the builder and constructs a [`TrackSourceSettings`](crate::model::TrackSourceSettings).
         pub fn build(self) -> crate::model::TrackSourceSettings {
             crate::model::TrackSourceSettings {
                 track_number: self.track_number.unwrap_or_default(),
@@ -49618,7 +50452,7 @@ pub mod track_source_settings {
     }
 }
 impl TrackSourceSettings {
-    /// Creates a new builder-style object to manufacture [`TrackSourceSettings`](crate::model::TrackSourceSettings)
+    /// Creates a new builder-style object to manufacture [`TrackSourceSettings`](crate::model::TrackSourceSettings).
     pub fn builder() -> crate::model::track_source_settings::Builder {
         crate::model::track_source_settings::Builder::default()
     }
@@ -49629,6 +50463,7 @@ impl TrackSourceSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TeletextSourceSettings {
     /// Use Page Number (PageNumber) to specify the three-digit hexadecimal page number that will be used for Teletext captions. Do not use this setting if you are passing through teletext from the input source to output.
+    #[doc(hidden)]
     pub page_number: std::option::Option<std::string::String>,
 }
 impl TeletextSourceSettings {
@@ -49644,11 +50479,10 @@ impl std::fmt::Debug for TeletextSourceSettings {
         formatter.finish()
     }
 }
-/// See [`TeletextSourceSettings`](crate::model::TeletextSourceSettings)
+/// See [`TeletextSourceSettings`](crate::model::TeletextSourceSettings).
 pub mod teletext_source_settings {
 
-    /// A builder for [`TeletextSourceSettings`](crate::model::TeletextSourceSettings)
-    #[non_exhaustive]
+    /// A builder for [`TeletextSourceSettings`](crate::model::TeletextSourceSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) page_number: std::option::Option<std::string::String>,
@@ -49664,7 +50498,7 @@ pub mod teletext_source_settings {
             self.page_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`TeletextSourceSettings`](crate::model::TeletextSourceSettings)
+        /// Consumes the builder and constructs a [`TeletextSourceSettings`](crate::model::TeletextSourceSettings).
         pub fn build(self) -> crate::model::TeletextSourceSettings {
             crate::model::TeletextSourceSettings {
                 page_number: self.page_number,
@@ -49673,7 +50507,7 @@ pub mod teletext_source_settings {
     }
 }
 impl TeletextSourceSettings {
-    /// Creates a new builder-style object to manufacture [`TeletextSourceSettings`](crate::model::TeletextSourceSettings)
+    /// Creates a new builder-style object to manufacture [`TeletextSourceSettings`](crate::model::TeletextSourceSettings).
     pub fn builder() -> crate::model::teletext_source_settings::Builder {
         crate::model::teletext_source_settings::Builder::default()
     }
@@ -49802,14 +50636,19 @@ impl AsRef<str> for CaptionSourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FileSourceSettings {
     /// Specify whether this set of input captions appears in your outputs in both 608 and 708 format. If you choose Upconvert (UPCONVERT), MediaConvert includes the captions data in two ways: it passes the 608 data through using the 608 compatibility bytes fields of the 708 wrapper, and it also translates the 608 data into 708.
+    #[doc(hidden)]
     pub convert608_to708: std::option::Option<crate::model::FileSourceConvert608To708>,
     /// Ignore this setting unless your input captions format is SCC. To have the service compensate for differing frame rates between your input captions and input video, specify the frame rate of the captions file. Specify this value as a fraction. When you work directly in your JSON job specification, use the settings framerateNumerator and framerateDenominator. For example, you might specify 24 / 1 for 24 fps, 25 / 1 for 25 fps, 24000 / 1001 for 23.976 fps, or 30000 / 1001 for 29.97 fps.
+    #[doc(hidden)]
     pub framerate: std::option::Option<crate::model::CaptionSourceFramerate>,
     /// External caption file used for loading captions. Accepted file extensions are 'scc', 'ttml', 'dfxp', 'stl', 'srt', 'xml', 'smi', 'webvtt', and 'vtt'.
+    #[doc(hidden)]
     pub source_file: std::option::Option<std::string::String>,
     /// Optional. Use this setting when you need to adjust the sync between your sidecar captions and your video. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/time-delta-use-cases.html. Enter a positive or negative number to modify the times in the captions file. For example, type 15 to add 15 seconds to all the times in the captions file. Type -5 to subtract 5 seconds from the times in the captions file. You can optionally specify your time delta in milliseconds instead of seconds. When you do so, set the related setting, Time delta units (TimeDeltaUnits) to Milliseconds (MILLISECONDS). Note that, when you specify a time delta for timecode-based caption sources, such as SCC and STL, and your time delta isn't a multiple of the input frame rate, MediaConvert snaps the captions to the nearest frame. For example, when your input video frame rate is 25 fps and you specify 1010ms for time delta, MediaConvert delays your captions by 1000 ms.
+    #[doc(hidden)]
     pub time_delta: i32,
     /// When you use the setting Time delta (TimeDelta) to adjust the sync between your sidecar captions and your video, use this setting to specify the units for the delta that you specify. When you don't specify a value for Time delta units (TimeDeltaUnits), MediaConvert uses seconds by default.
+    #[doc(hidden)]
     pub time_delta_units: std::option::Option<crate::model::FileSourceTimeDeltaUnits>,
 }
 impl FileSourceSettings {
@@ -49847,11 +50686,10 @@ impl std::fmt::Debug for FileSourceSettings {
         formatter.finish()
     }
 }
-/// See [`FileSourceSettings`](crate::model::FileSourceSettings)
+/// See [`FileSourceSettings`](crate::model::FileSourceSettings).
 pub mod file_source_settings {
 
-    /// A builder for [`FileSourceSettings`](crate::model::FileSourceSettings)
-    #[non_exhaustive]
+    /// A builder for [`FileSourceSettings`](crate::model::FileSourceSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) convert608_to708: std::option::Option<crate::model::FileSourceConvert608To708>,
@@ -49920,7 +50758,7 @@ pub mod file_source_settings {
             self.time_delta_units = input;
             self
         }
-        /// Consumes the builder and constructs a [`FileSourceSettings`](crate::model::FileSourceSettings)
+        /// Consumes the builder and constructs a [`FileSourceSettings`](crate::model::FileSourceSettings).
         pub fn build(self) -> crate::model::FileSourceSettings {
             crate::model::FileSourceSettings {
                 convert608_to708: self.convert608_to708,
@@ -49933,7 +50771,7 @@ pub mod file_source_settings {
     }
 }
 impl FileSourceSettings {
-    /// Creates a new builder-style object to manufacture [`FileSourceSettings`](crate::model::FileSourceSettings)
+    /// Creates a new builder-style object to manufacture [`FileSourceSettings`](crate::model::FileSourceSettings).
     pub fn builder() -> crate::model::file_source_settings::Builder {
         crate::model::file_source_settings::Builder::default()
     }
@@ -49999,8 +50837,10 @@ impl AsRef<str> for FileSourceTimeDeltaUnits {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CaptionSourceFramerate {
     /// Specify the denominator of the fraction that represents the frame rate for the setting Caption source frame rate (CaptionSourceFramerate). Use this setting along with the setting Framerate numerator (framerateNumerator).
+    #[doc(hidden)]
     pub framerate_denominator: i32,
     /// Specify the numerator of the fraction that represents the frame rate for the setting Caption source frame rate (CaptionSourceFramerate). Use this setting along with the setting Framerate denominator (framerateDenominator).
+    #[doc(hidden)]
     pub framerate_numerator: i32,
 }
 impl CaptionSourceFramerate {
@@ -50021,11 +50861,10 @@ impl std::fmt::Debug for CaptionSourceFramerate {
         formatter.finish()
     }
 }
-/// See [`CaptionSourceFramerate`](crate::model::CaptionSourceFramerate)
+/// See [`CaptionSourceFramerate`](crate::model::CaptionSourceFramerate).
 pub mod caption_source_framerate {
 
-    /// A builder for [`CaptionSourceFramerate`](crate::model::CaptionSourceFramerate)
-    #[non_exhaustive]
+    /// A builder for [`CaptionSourceFramerate`](crate::model::CaptionSourceFramerate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) framerate_denominator: std::option::Option<i32>,
@@ -50052,7 +50891,7 @@ pub mod caption_source_framerate {
             self.framerate_numerator = input;
             self
         }
-        /// Consumes the builder and constructs a [`CaptionSourceFramerate`](crate::model::CaptionSourceFramerate)
+        /// Consumes the builder and constructs a [`CaptionSourceFramerate`](crate::model::CaptionSourceFramerate).
         pub fn build(self) -> crate::model::CaptionSourceFramerate {
             crate::model::CaptionSourceFramerate {
                 framerate_denominator: self.framerate_denominator.unwrap_or_default(),
@@ -50062,7 +50901,7 @@ pub mod caption_source_framerate {
     }
 }
 impl CaptionSourceFramerate {
-    /// Creates a new builder-style object to manufacture [`CaptionSourceFramerate`](crate::model::CaptionSourceFramerate)
+    /// Creates a new builder-style object to manufacture [`CaptionSourceFramerate`](crate::model::CaptionSourceFramerate).
     pub fn builder() -> crate::model::caption_source_framerate::Builder {
         crate::model::caption_source_framerate::Builder::default()
     }
@@ -50128,12 +50967,16 @@ impl AsRef<str> for FileSourceConvert608To708 {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EmbeddedSourceSettings {
     /// Specify whether this set of input captions appears in your outputs in both 608 and 708 format. If you choose Upconvert (UPCONVERT), MediaConvert includes the captions data in two ways: it passes the 608 data through using the 608 compatibility bytes fields of the 708 wrapper, and it also translates the 608 data into 708.
+    #[doc(hidden)]
     pub convert608_to708: std::option::Option<crate::model::EmbeddedConvert608To708>,
     /// Specifies the 608/708 channel number within the video track from which to extract captions. Unused for passthrough.
+    #[doc(hidden)]
     pub source608_channel_number: i32,
     /// Specifies the video track index used for extracting captions. The system only supports one input video track, so this should always be set to '1'.
+    #[doc(hidden)]
     pub source608_track_number: i32,
     /// By default, the service terminates any unterminated captions at the end of each input. If you want the caption to continue onto your next input, disable this setting.
+    #[doc(hidden)]
     pub terminate_captions: std::option::Option<crate::model::EmbeddedTerminateCaptions>,
 }
 impl EmbeddedSourceSettings {
@@ -50166,11 +51009,10 @@ impl std::fmt::Debug for EmbeddedSourceSettings {
         formatter.finish()
     }
 }
-/// See [`EmbeddedSourceSettings`](crate::model::EmbeddedSourceSettings)
+/// See [`EmbeddedSourceSettings`](crate::model::EmbeddedSourceSettings).
 pub mod embedded_source_settings {
 
-    /// A builder for [`EmbeddedSourceSettings`](crate::model::EmbeddedSourceSettings)
-    #[non_exhaustive]
+    /// A builder for [`EmbeddedSourceSettings`](crate::model::EmbeddedSourceSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) convert608_to708: std::option::Option<crate::model::EmbeddedConvert608To708>,
@@ -50228,7 +51070,7 @@ pub mod embedded_source_settings {
             self.terminate_captions = input;
             self
         }
-        /// Consumes the builder and constructs a [`EmbeddedSourceSettings`](crate::model::EmbeddedSourceSettings)
+        /// Consumes the builder and constructs a [`EmbeddedSourceSettings`](crate::model::EmbeddedSourceSettings).
         pub fn build(self) -> crate::model::EmbeddedSourceSettings {
             crate::model::EmbeddedSourceSettings {
                 convert608_to708: self.convert608_to708,
@@ -50240,7 +51082,7 @@ pub mod embedded_source_settings {
     }
 }
 impl EmbeddedSourceSettings {
-    /// Creates a new builder-style object to manufacture [`EmbeddedSourceSettings`](crate::model::EmbeddedSourceSettings)
+    /// Creates a new builder-style object to manufacture [`EmbeddedSourceSettings`](crate::model::EmbeddedSourceSettings).
     pub fn builder() -> crate::model::embedded_source_settings::Builder {
         crate::model::embedded_source_settings::Builder::default()
     }
@@ -50361,6 +51203,7 @@ impl AsRef<str> for EmbeddedConvert608To708 {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DvbSubSourceSettings {
     /// When using DVB-Sub with Burn-In or SMPTE-TT, use this PID for the source content. Unused for DVB-Sub passthrough. All DVB-Sub content is passed through, regardless of selectors.
+    #[doc(hidden)]
     pub pid: i32,
 }
 impl DvbSubSourceSettings {
@@ -50376,11 +51219,10 @@ impl std::fmt::Debug for DvbSubSourceSettings {
         formatter.finish()
     }
 }
-/// See [`DvbSubSourceSettings`](crate::model::DvbSubSourceSettings)
+/// See [`DvbSubSourceSettings`](crate::model::DvbSubSourceSettings).
 pub mod dvb_sub_source_settings {
 
-    /// A builder for [`DvbSubSourceSettings`](crate::model::DvbSubSourceSettings)
-    #[non_exhaustive]
+    /// A builder for [`DvbSubSourceSettings`](crate::model::DvbSubSourceSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pid: std::option::Option<i32>,
@@ -50396,7 +51238,7 @@ pub mod dvb_sub_source_settings {
             self.pid = input;
             self
         }
-        /// Consumes the builder and constructs a [`DvbSubSourceSettings`](crate::model::DvbSubSourceSettings)
+        /// Consumes the builder and constructs a [`DvbSubSourceSettings`](crate::model::DvbSubSourceSettings).
         pub fn build(self) -> crate::model::DvbSubSourceSettings {
             crate::model::DvbSubSourceSettings {
                 pid: self.pid.unwrap_or_default(),
@@ -50405,7 +51247,7 @@ pub mod dvb_sub_source_settings {
     }
 }
 impl DvbSubSourceSettings {
-    /// Creates a new builder-style object to manufacture [`DvbSubSourceSettings`](crate::model::DvbSubSourceSettings)
+    /// Creates a new builder-style object to manufacture [`DvbSubSourceSettings`](crate::model::DvbSubSourceSettings).
     pub fn builder() -> crate::model::dvb_sub_source_settings::Builder {
         crate::model::dvb_sub_source_settings::Builder::default()
     }
@@ -50416,10 +51258,13 @@ impl DvbSubSourceSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AncillarySourceSettings {
     /// Specify whether this set of input captions appears in your outputs in both 608 and 708 format. If you choose Upconvert (UPCONVERT), MediaConvert includes the captions data in two ways: it passes the 608 data through using the 608 compatibility bytes fields of the 708 wrapper, and it also translates the 608 data into 708.
+    #[doc(hidden)]
     pub convert608_to708: std::option::Option<crate::model::AncillaryConvert608To708>,
     /// Specifies the 608 channel number in the ancillary data track from which to extract captions. Unused for passthrough.
+    #[doc(hidden)]
     pub source_ancillary_channel_number: i32,
     /// By default, the service terminates any unterminated captions at the end of each input. If you want the caption to continue onto your next input, disable this setting.
+    #[doc(hidden)]
     pub terminate_captions: std::option::Option<crate::model::AncillaryTerminateCaptions>,
 }
 impl AncillarySourceSettings {
@@ -50450,11 +51295,10 @@ impl std::fmt::Debug for AncillarySourceSettings {
         formatter.finish()
     }
 }
-/// See [`AncillarySourceSettings`](crate::model::AncillarySourceSettings)
+/// See [`AncillarySourceSettings`](crate::model::AncillarySourceSettings).
 pub mod ancillary_source_settings {
 
-    /// A builder for [`AncillarySourceSettings`](crate::model::AncillarySourceSettings)
-    #[non_exhaustive]
+    /// A builder for [`AncillarySourceSettings`](crate::model::AncillarySourceSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) convert608_to708: std::option::Option<crate::model::AncillaryConvert608To708>,
@@ -50505,7 +51349,7 @@ pub mod ancillary_source_settings {
             self.terminate_captions = input;
             self
         }
-        /// Consumes the builder and constructs a [`AncillarySourceSettings`](crate::model::AncillarySourceSettings)
+        /// Consumes the builder and constructs a [`AncillarySourceSettings`](crate::model::AncillarySourceSettings).
         pub fn build(self) -> crate::model::AncillarySourceSettings {
             crate::model::AncillarySourceSettings {
                 convert608_to708: self.convert608_to708,
@@ -50518,7 +51362,7 @@ pub mod ancillary_source_settings {
     }
 }
 impl AncillarySourceSettings {
-    /// Creates a new builder-style object to manufacture [`AncillarySourceSettings`](crate::model::AncillarySourceSettings)
+    /// Creates a new builder-style object to manufacture [`AncillarySourceSettings`](crate::model::AncillarySourceSettings).
     pub fn builder() -> crate::model::ancillary_source_settings::Builder {
         crate::model::ancillary_source_settings::Builder::default()
     }
@@ -50639,28 +51483,40 @@ impl AsRef<str> for AncillaryConvert608To708 {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AudioSelector {
     /// Apply audio timing corrections to help synchronize audio and video in your output. To apply timing corrections, your input must meet the following requirements: * Container: MP4, or MOV, with an accurate time-to-sample (STTS) table. * Audio track: AAC. Choose from the following audio timing correction settings: * Disabled (Default): Apply no correction. * Auto: Recommended for most inputs. MediaConvert analyzes the audio timing in your input and determines which correction setting to use, if needed. * Track: Adjust the duration of each audio frame by a constant amount to align the audio track length with STTS duration. Track-level correction does not affect pitch, and is recommended for tonal audio content such as music. * Frame: Adjust the duration of each audio frame by a variable amount to align audio frames with STTS timestamps. No corrections are made to already-aligned frames. Frame-level correction may affect the pitch of corrected frames, and is recommended for atonal audio content such as speech or percussion.
+    #[doc(hidden)]
     pub audio_duration_correction: std::option::Option<crate::model::AudioDurationCorrection>,
     /// Selects a specific language code from within an audio source, using the ISO 639-2 or ISO 639-3 three-letter language code
+    #[doc(hidden)]
     pub custom_language_code: std::option::Option<std::string::String>,
     /// Enable this setting on one audio selector to set it as the default for the job. The service uses this default for outputs where it can't find the specified input audio. If you don't set a default, those outputs have no audio.
+    #[doc(hidden)]
     pub default_selection: std::option::Option<crate::model::AudioDefaultSelection>,
     /// Specifies audio data from an external file source.
+    #[doc(hidden)]
     pub external_audio_file_input: std::option::Option<std::string::String>,
     /// Settings specific to audio sources in an HLS alternate rendition group. Specify the properties (renditionGroupId, renditionName or renditionLanguageCode) to identify the unique audio track among the alternative rendition groups present in the HLS manifest. If no unique track is found, or multiple tracks match the properties provided, the job fails. If no properties in hlsRenditionGroupSettings are specified, the default audio track within the video segment is chosen. If there is no audio within video segment, the alternative audio with DEFAULT=YES is chosen instead.
+    #[doc(hidden)]
     pub hls_rendition_group_settings: std::option::Option<crate::model::HlsRenditionGroupSettings>,
     /// Selects a specific language code from within an audio source.
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// Specifies a time delta in milliseconds to offset the audio from the input video.
+    #[doc(hidden)]
     pub offset: i32,
     /// Selects a specific PID from within an audio source (e.g. 257 selects PID 0x101).
+    #[doc(hidden)]
     pub pids: std::option::Option<std::vec::Vec<i32>>,
     /// Use this setting for input streams that contain Dolby E, to have the service extract specific program data from the track. To select multiple programs, create multiple selectors with the same Track and different Program numbers. In the console, this setting is visible when you set Selector type to Track. Choose the program number from the dropdown list. If you are sending a JSON file, provide the program ID, which is part of the audio metadata. If your input file has incorrect metadata, you can choose All channels instead of a program number to have the service ignore the program IDs and include all the programs in the track.
+    #[doc(hidden)]
     pub program_selection: i32,
     /// Use these settings to reorder the audio channels of one input to match those of another input. This allows you to combine the two files into a single output, one after the other.
+    #[doc(hidden)]
     pub remix_settings: std::option::Option<crate::model::RemixSettings>,
     /// Specifies the type of the audio selector.
+    #[doc(hidden)]
     pub selector_type: std::option::Option<crate::model::AudioSelectorType>,
     /// Identify a track from the input audio to include in this selector by entering the track index number. To include several tracks in a single audio selector, specify multiple tracks as follows. Using the console, enter a comma-separated list. For examle, type "1,2,3" to include tracks 1 through 3. Specifying directly in your JSON job file, provide the track numbers in an array. For example, "tracks": [1,2,3].
+    #[doc(hidden)]
     pub tracks: std::option::Option<std::vec::Vec<i32>>,
 }
 impl AudioSelector {
@@ -50738,11 +51594,10 @@ impl std::fmt::Debug for AudioSelector {
         formatter.finish()
     }
 }
-/// See [`AudioSelector`](crate::model::AudioSelector)
+/// See [`AudioSelector`](crate::model::AudioSelector).
 pub mod audio_selector {
 
-    /// A builder for [`AudioSelector`](crate::model::AudioSelector)
-    #[non_exhaustive]
+    /// A builder for [`AudioSelector`](crate::model::AudioSelector).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_duration_correction:
@@ -50923,7 +51778,7 @@ pub mod audio_selector {
             self.tracks = input;
             self
         }
-        /// Consumes the builder and constructs a [`AudioSelector`](crate::model::AudioSelector)
+        /// Consumes the builder and constructs a [`AudioSelector`](crate::model::AudioSelector).
         pub fn build(self) -> crate::model::AudioSelector {
             crate::model::AudioSelector {
                 audio_duration_correction: self.audio_duration_correction,
@@ -50943,7 +51798,7 @@ pub mod audio_selector {
     }
 }
 impl AudioSelector {
-    /// Creates a new builder-style object to manufacture [`AudioSelector`](crate::model::AudioSelector)
+    /// Creates a new builder-style object to manufacture [`AudioSelector`](crate::model::AudioSelector).
     pub fn builder() -> crate::model::audio_selector::Builder {
         crate::model::audio_selector::Builder::default()
     }
@@ -51017,10 +51872,13 @@ impl AsRef<str> for AudioSelectorType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HlsRenditionGroupSettings {
     /// Optional. Specify alternative group ID
+    #[doc(hidden)]
     pub rendition_group_id: std::option::Option<std::string::String>,
     /// Optional. Specify ISO 639-2 or ISO 639-3 code in the language property
+    #[doc(hidden)]
     pub rendition_language_code: std::option::Option<crate::model::LanguageCode>,
     /// Optional. Specify media name
+    #[doc(hidden)]
     pub rendition_name: std::option::Option<std::string::String>,
 }
 impl HlsRenditionGroupSettings {
@@ -51046,11 +51904,10 @@ impl std::fmt::Debug for HlsRenditionGroupSettings {
         formatter.finish()
     }
 }
-/// See [`HlsRenditionGroupSettings`](crate::model::HlsRenditionGroupSettings)
+/// See [`HlsRenditionGroupSettings`](crate::model::HlsRenditionGroupSettings).
 pub mod hls_rendition_group_settings {
 
-    /// A builder for [`HlsRenditionGroupSettings`](crate::model::HlsRenditionGroupSettings)
-    #[non_exhaustive]
+    /// A builder for [`HlsRenditionGroupSettings`](crate::model::HlsRenditionGroupSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rendition_group_id: std::option::Option<std::string::String>,
@@ -51097,7 +51954,7 @@ pub mod hls_rendition_group_settings {
             self.rendition_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`HlsRenditionGroupSettings`](crate::model::HlsRenditionGroupSettings)
+        /// Consumes the builder and constructs a [`HlsRenditionGroupSettings`](crate::model::HlsRenditionGroupSettings).
         pub fn build(self) -> crate::model::HlsRenditionGroupSettings {
             crate::model::HlsRenditionGroupSettings {
                 rendition_group_id: self.rendition_group_id,
@@ -51108,7 +51965,7 @@ pub mod hls_rendition_group_settings {
     }
 }
 impl HlsRenditionGroupSettings {
-    /// Creates a new builder-style object to manufacture [`HlsRenditionGroupSettings`](crate::model::HlsRenditionGroupSettings)
+    /// Creates a new builder-style object to manufacture [`HlsRenditionGroupSettings`](crate::model::HlsRenditionGroupSettings).
     pub fn builder() -> crate::model::hls_rendition_group_settings::Builder {
         crate::model::hls_rendition_group_settings::Builder::default()
     }
@@ -51237,6 +52094,7 @@ impl AsRef<str> for AudioDurationCorrection {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AudioSelectorGroup {
     /// Name of an Audio Selector within the same input to include in the group. Audio selector names are standardized, based on their order within the input (e.g., "Audio Selector 1"). The audio selector name parameter can be repeated to add any number of audio selectors to the group.
+    #[doc(hidden)]
     pub audio_selector_names: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AudioSelectorGroup {
@@ -51252,11 +52110,10 @@ impl std::fmt::Debug for AudioSelectorGroup {
         formatter.finish()
     }
 }
-/// See [`AudioSelectorGroup`](crate::model::AudioSelectorGroup)
+/// See [`AudioSelectorGroup`](crate::model::AudioSelectorGroup).
 pub mod audio_selector_group {
 
-    /// A builder for [`AudioSelectorGroup`](crate::model::AudioSelectorGroup)
-    #[non_exhaustive]
+    /// A builder for [`AudioSelectorGroup`](crate::model::AudioSelectorGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_selector_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -51281,7 +52138,7 @@ pub mod audio_selector_group {
             self.audio_selector_names = input;
             self
         }
-        /// Consumes the builder and constructs a [`AudioSelectorGroup`](crate::model::AudioSelectorGroup)
+        /// Consumes the builder and constructs a [`AudioSelectorGroup`](crate::model::AudioSelectorGroup).
         pub fn build(self) -> crate::model::AudioSelectorGroup {
             crate::model::AudioSelectorGroup {
                 audio_selector_names: self.audio_selector_names,
@@ -51290,7 +52147,7 @@ pub mod audio_selector_group {
     }
 }
 impl AudioSelectorGroup {
-    /// Creates a new builder-style object to manufacture [`AudioSelectorGroup`](crate::model::AudioSelectorGroup)
+    /// Creates a new builder-style object to manufacture [`AudioSelectorGroup`](crate::model::AudioSelectorGroup).
     pub fn builder() -> crate::model::audio_selector_group::Builder {
         crate::model::audio_selector_group::Builder::default()
     }
@@ -51301,8 +52158,10 @@ impl AudioSelectorGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExtendedDataServices {
     /// The action to take on copy and redistribution control XDS packets. If you select PASSTHROUGH, packets will not be changed. If you select STRIP, any packets will be removed in output captions.
+    #[doc(hidden)]
     pub copy_protection_action: std::option::Option<crate::model::CopyProtectionAction>,
     /// The action to take on content advisory XDS packets. If you select PASSTHROUGH, packets will not be changed. If you select STRIP, any packets will be removed in output captions.
+    #[doc(hidden)]
     pub vchip_action: std::option::Option<crate::model::VchipAction>,
 }
 impl ExtendedDataServices {
@@ -51325,11 +52184,10 @@ impl std::fmt::Debug for ExtendedDataServices {
         formatter.finish()
     }
 }
-/// See [`ExtendedDataServices`](crate::model::ExtendedDataServices)
+/// See [`ExtendedDataServices`](crate::model::ExtendedDataServices).
 pub mod extended_data_services {
 
-    /// A builder for [`ExtendedDataServices`](crate::model::ExtendedDataServices)
-    #[non_exhaustive]
+    /// A builder for [`ExtendedDataServices`](crate::model::ExtendedDataServices).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) copy_protection_action: std::option::Option<crate::model::CopyProtectionAction>,
@@ -51362,7 +52220,7 @@ pub mod extended_data_services {
             self.vchip_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExtendedDataServices`](crate::model::ExtendedDataServices)
+        /// Consumes the builder and constructs a [`ExtendedDataServices`](crate::model::ExtendedDataServices).
         pub fn build(self) -> crate::model::ExtendedDataServices {
             crate::model::ExtendedDataServices {
                 copy_protection_action: self.copy_protection_action,
@@ -51372,7 +52230,7 @@ pub mod extended_data_services {
     }
 }
 impl ExtendedDataServices {
-    /// Creates a new builder-style object to manufacture [`ExtendedDataServices`](crate::model::ExtendedDataServices)
+    /// Creates a new builder-style object to manufacture [`ExtendedDataServices`](crate::model::ExtendedDataServices).
     pub fn builder() -> crate::model::extended_data_services::Builder {
         crate::model::extended_data_services::Builder::default()
     }
@@ -51493,11 +52351,14 @@ impl AsRef<str> for CopyProtectionAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EsamSettings {
     /// Specifies an ESAM ManifestConfirmConditionNotification XML as per OC-SP-ESAM-API-I03-131025. The transcoder uses the manifest conditioning instructions that you provide in the setting MCC XML (mccXml).
+    #[doc(hidden)]
     pub manifest_confirm_condition_notification:
         std::option::Option<crate::model::EsamManifestConfirmConditionNotification>,
     /// Specifies the stream distance, in milliseconds, between the SCTE 35 messages that the transcoder places and the splice points that they refer to. If the time between the start of the asset and the SCTE-35 message is less than this value, then the transcoder places the SCTE-35 marker at the beginning of the stream.
+    #[doc(hidden)]
     pub response_signal_preroll: i32,
     /// Specifies an ESAM SignalProcessingNotification XML as per OC-SP-ESAM-API-I03-131025. The transcoder uses the signal processing instructions that you provide in the setting SCC XML (sccXml).
+    #[doc(hidden)]
     pub signal_processing_notification:
         std::option::Option<crate::model::EsamSignalProcessingNotification>,
 }
@@ -51534,11 +52395,10 @@ impl std::fmt::Debug for EsamSettings {
         formatter.finish()
     }
 }
-/// See [`EsamSettings`](crate::model::EsamSettings)
+/// See [`EsamSettings`](crate::model::EsamSettings).
 pub mod esam_settings {
 
-    /// A builder for [`EsamSettings`](crate::model::EsamSettings)
-    #[non_exhaustive]
+    /// A builder for [`EsamSettings`](crate::model::EsamSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) manifest_confirm_condition_notification:
@@ -51590,7 +52450,7 @@ pub mod esam_settings {
             self.signal_processing_notification = input;
             self
         }
-        /// Consumes the builder and constructs a [`EsamSettings`](crate::model::EsamSettings)
+        /// Consumes the builder and constructs a [`EsamSettings`](crate::model::EsamSettings).
         pub fn build(self) -> crate::model::EsamSettings {
             crate::model::EsamSettings {
                 manifest_confirm_condition_notification: self
@@ -51602,7 +52462,7 @@ pub mod esam_settings {
     }
 }
 impl EsamSettings {
-    /// Creates a new builder-style object to manufacture [`EsamSettings`](crate::model::EsamSettings)
+    /// Creates a new builder-style object to manufacture [`EsamSettings`](crate::model::EsamSettings).
     pub fn builder() -> crate::model::esam_settings::Builder {
         crate::model::esam_settings::Builder::default()
     }
@@ -51613,6 +52473,7 @@ impl EsamSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EsamSignalProcessingNotification {
     /// Provide your ESAM SignalProcessingNotification XML document inside your JSON job settings. Form the XML document as per OC-SP-ESAM-API-I03-131025. The transcoder will use the signal processing instructions in the message that you supply. Provide your ESAM SignalProcessingNotification XML document inside your JSON job settings. For your MPEG2-TS file outputs, if you want the service to place SCTE-35 markers at the insertion points you specify in the XML document, you must also enable SCTE-35 ESAM (scte35Esam). Note that you can either specify an ESAM XML document or enable SCTE-35 passthrough. You can't do both.
+    #[doc(hidden)]
     pub scc_xml: std::option::Option<std::string::String>,
 }
 impl EsamSignalProcessingNotification {
@@ -51628,11 +52489,10 @@ impl std::fmt::Debug for EsamSignalProcessingNotification {
         formatter.finish()
     }
 }
-/// See [`EsamSignalProcessingNotification`](crate::model::EsamSignalProcessingNotification)
+/// See [`EsamSignalProcessingNotification`](crate::model::EsamSignalProcessingNotification).
 pub mod esam_signal_processing_notification {
 
-    /// A builder for [`EsamSignalProcessingNotification`](crate::model::EsamSignalProcessingNotification)
-    #[non_exhaustive]
+    /// A builder for [`EsamSignalProcessingNotification`](crate::model::EsamSignalProcessingNotification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scc_xml: std::option::Option<std::string::String>,
@@ -51648,7 +52508,7 @@ pub mod esam_signal_processing_notification {
             self.scc_xml = input;
             self
         }
-        /// Consumes the builder and constructs a [`EsamSignalProcessingNotification`](crate::model::EsamSignalProcessingNotification)
+        /// Consumes the builder and constructs a [`EsamSignalProcessingNotification`](crate::model::EsamSignalProcessingNotification).
         pub fn build(self) -> crate::model::EsamSignalProcessingNotification {
             crate::model::EsamSignalProcessingNotification {
                 scc_xml: self.scc_xml,
@@ -51657,7 +52517,7 @@ pub mod esam_signal_processing_notification {
     }
 }
 impl EsamSignalProcessingNotification {
-    /// Creates a new builder-style object to manufacture [`EsamSignalProcessingNotification`](crate::model::EsamSignalProcessingNotification)
+    /// Creates a new builder-style object to manufacture [`EsamSignalProcessingNotification`](crate::model::EsamSignalProcessingNotification).
     pub fn builder() -> crate::model::esam_signal_processing_notification::Builder {
         crate::model::esam_signal_processing_notification::Builder::default()
     }
@@ -51668,6 +52528,7 @@ impl EsamSignalProcessingNotification {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EsamManifestConfirmConditionNotification {
     /// Provide your ESAM ManifestConfirmConditionNotification XML document inside your JSON job settings. Form the XML document as per OC-SP-ESAM-API-I03-131025. The transcoder will use the Manifest Conditioning instructions in the message that you supply.
+    #[doc(hidden)]
     pub mcc_xml: std::option::Option<std::string::String>,
 }
 impl EsamManifestConfirmConditionNotification {
@@ -51683,11 +52544,10 @@ impl std::fmt::Debug for EsamManifestConfirmConditionNotification {
         formatter.finish()
     }
 }
-/// See [`EsamManifestConfirmConditionNotification`](crate::model::EsamManifestConfirmConditionNotification)
+/// See [`EsamManifestConfirmConditionNotification`](crate::model::EsamManifestConfirmConditionNotification).
 pub mod esam_manifest_confirm_condition_notification {
 
-    /// A builder for [`EsamManifestConfirmConditionNotification`](crate::model::EsamManifestConfirmConditionNotification)
-    #[non_exhaustive]
+    /// A builder for [`EsamManifestConfirmConditionNotification`](crate::model::EsamManifestConfirmConditionNotification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mcc_xml: std::option::Option<std::string::String>,
@@ -51703,7 +52563,7 @@ pub mod esam_manifest_confirm_condition_notification {
             self.mcc_xml = input;
             self
         }
-        /// Consumes the builder and constructs a [`EsamManifestConfirmConditionNotification`](crate::model::EsamManifestConfirmConditionNotification)
+        /// Consumes the builder and constructs a [`EsamManifestConfirmConditionNotification`](crate::model::EsamManifestConfirmConditionNotification).
         pub fn build(self) -> crate::model::EsamManifestConfirmConditionNotification {
             crate::model::EsamManifestConfirmConditionNotification {
                 mcc_xml: self.mcc_xml,
@@ -51712,7 +52572,7 @@ pub mod esam_manifest_confirm_condition_notification {
     }
 }
 impl EsamManifestConfirmConditionNotification {
-    /// Creates a new builder-style object to manufacture [`EsamManifestConfirmConditionNotification`](crate::model::EsamManifestConfirmConditionNotification)
+    /// Creates a new builder-style object to manufacture [`EsamManifestConfirmConditionNotification`](crate::model::EsamManifestConfirmConditionNotification).
     pub fn builder() -> crate::model::esam_manifest_confirm_condition_notification::Builder {
         crate::model::esam_manifest_confirm_condition_notification::Builder::default()
     }
@@ -51723,6 +52583,7 @@ impl EsamManifestConfirmConditionNotification {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AvailBlanking {
     /// Blanking image to be used. Leave empty for solid black. Only bmp and png images are supported.
+    #[doc(hidden)]
     pub avail_blanking_image: std::option::Option<std::string::String>,
 }
 impl AvailBlanking {
@@ -51738,11 +52599,10 @@ impl std::fmt::Debug for AvailBlanking {
         formatter.finish()
     }
 }
-/// See [`AvailBlanking`](crate::model::AvailBlanking)
+/// See [`AvailBlanking`](crate::model::AvailBlanking).
 pub mod avail_blanking {
 
-    /// A builder for [`AvailBlanking`](crate::model::AvailBlanking)
-    #[non_exhaustive]
+    /// A builder for [`AvailBlanking`](crate::model::AvailBlanking).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) avail_blanking_image: std::option::Option<std::string::String>,
@@ -51761,7 +52621,7 @@ pub mod avail_blanking {
             self.avail_blanking_image = input;
             self
         }
-        /// Consumes the builder and constructs a [`AvailBlanking`](crate::model::AvailBlanking)
+        /// Consumes the builder and constructs a [`AvailBlanking`](crate::model::AvailBlanking).
         pub fn build(self) -> crate::model::AvailBlanking {
             crate::model::AvailBlanking {
                 avail_blanking_image: self.avail_blanking_image,
@@ -51770,7 +52630,7 @@ pub mod avail_blanking {
     }
 }
 impl AvailBlanking {
-    /// Creates a new builder-style object to manufacture [`AvailBlanking`](crate::model::AvailBlanking)
+    /// Creates a new builder-style object to manufacture [`AvailBlanking`](crate::model::AvailBlanking).
     pub fn builder() -> crate::model::avail_blanking::Builder {
         crate::model::avail_blanking::Builder::default()
     }
@@ -51781,10 +52641,13 @@ impl AvailBlanking {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HopDestination {
     /// Optional. When you set up a job to use queue hopping, you can specify a different relative priority for the job in the destination queue. If you don't specify, the relative priority will remain the same as in the previous queue.
+    #[doc(hidden)]
     pub priority: i32,
     /// Optional unless the job is submitted on the default queue. When you set up a job to use queue hopping, you can specify a destination queue. This queue cannot be the original queue to which the job is submitted. If the original queue isn't the default queue and you don't specify the destination queue, the job will move to the default queue.
+    #[doc(hidden)]
     pub queue: std::option::Option<std::string::String>,
     /// Required for setting up a job to use queue hopping. Minimum wait time in minutes until the job can hop to the destination queue. Valid range is 1 to 1440 minutes, inclusive.
+    #[doc(hidden)]
     pub wait_minutes: i32,
 }
 impl HopDestination {
@@ -51810,11 +52673,10 @@ impl std::fmt::Debug for HopDestination {
         formatter.finish()
     }
 }
-/// See [`HopDestination`](crate::model::HopDestination)
+/// See [`HopDestination`](crate::model::HopDestination).
 pub mod hop_destination {
 
-    /// A builder for [`HopDestination`](crate::model::HopDestination)
-    #[non_exhaustive]
+    /// A builder for [`HopDestination`](crate::model::HopDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) priority: std::option::Option<i32>,
@@ -51852,7 +52714,7 @@ pub mod hop_destination {
             self.wait_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`HopDestination`](crate::model::HopDestination)
+        /// Consumes the builder and constructs a [`HopDestination`](crate::model::HopDestination).
         pub fn build(self) -> crate::model::HopDestination {
             crate::model::HopDestination {
                 priority: self.priority.unwrap_or_default(),
@@ -51863,7 +52725,7 @@ pub mod hop_destination {
     }
 }
 impl HopDestination {
-    /// Creates a new builder-style object to manufacture [`HopDestination`](crate::model::HopDestination)
+    /// Creates a new builder-style object to manufacture [`HopDestination`](crate::model::HopDestination).
     pub fn builder() -> crate::model::hop_destination::Builder {
         crate::model::hop_destination::Builder::default()
     }
@@ -51874,6 +52736,7 @@ impl HopDestination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccelerationSettings {
     /// Specify the conditions when the service will run your job with accelerated transcoding.
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::AccelerationMode>,
 }
 impl AccelerationSettings {
@@ -51889,11 +52752,10 @@ impl std::fmt::Debug for AccelerationSettings {
         formatter.finish()
     }
 }
-/// See [`AccelerationSettings`](crate::model::AccelerationSettings)
+/// See [`AccelerationSettings`](crate::model::AccelerationSettings).
 pub mod acceleration_settings {
 
-    /// A builder for [`AccelerationSettings`](crate::model::AccelerationSettings)
-    #[non_exhaustive]
+    /// A builder for [`AccelerationSettings`](crate::model::AccelerationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mode: std::option::Option<crate::model::AccelerationMode>,
@@ -51912,14 +52774,14 @@ pub mod acceleration_settings {
             self.mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccelerationSettings`](crate::model::AccelerationSettings)
+        /// Consumes the builder and constructs a [`AccelerationSettings`](crate::model::AccelerationSettings).
         pub fn build(self) -> crate::model::AccelerationSettings {
             crate::model::AccelerationSettings { mode: self.mode }
         }
     }
 }
 impl AccelerationSettings {
-    /// Creates a new builder-style object to manufacture [`AccelerationSettings`](crate::model::AccelerationSettings)
+    /// Creates a new builder-style object to manufacture [`AccelerationSettings`](crate::model::AccelerationSettings).
     pub fn builder() -> crate::model::acceleration_settings::Builder {
         crate::model::acceleration_settings::Builder::default()
     }
@@ -51989,10 +52851,13 @@ impl AsRef<str> for AccelerationMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Policy {
     /// Allow or disallow jobs that specify HTTP inputs.
+    #[doc(hidden)]
     pub http_inputs: std::option::Option<crate::model::InputPolicy>,
     /// Allow or disallow jobs that specify HTTPS inputs.
+    #[doc(hidden)]
     pub https_inputs: std::option::Option<crate::model::InputPolicy>,
     /// Allow or disallow jobs that specify Amazon S3 inputs.
+    #[doc(hidden)]
     pub s3_inputs: std::option::Option<crate::model::InputPolicy>,
 }
 impl Policy {
@@ -52018,11 +52883,10 @@ impl std::fmt::Debug for Policy {
         formatter.finish()
     }
 }
-/// See [`Policy`](crate::model::Policy)
+/// See [`Policy`](crate::model::Policy).
 pub mod policy {
 
-    /// A builder for [`Policy`](crate::model::Policy)
-    #[non_exhaustive]
+    /// A builder for [`Policy`](crate::model::Policy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) http_inputs: std::option::Option<crate::model::InputPolicy>,
@@ -52069,7 +52933,7 @@ pub mod policy {
             self.s3_inputs = input;
             self
         }
-        /// Consumes the builder and constructs a [`Policy`](crate::model::Policy)
+        /// Consumes the builder and constructs a [`Policy`](crate::model::Policy).
         pub fn build(self) -> crate::model::Policy {
             crate::model::Policy {
                 http_inputs: self.http_inputs,
@@ -52080,7 +52944,7 @@ pub mod policy {
     }
 }
 impl Policy {
-    /// Creates a new builder-style object to manufacture [`Policy`](crate::model::Policy)
+    /// Creates a new builder-style object to manufacture [`Policy`](crate::model::Policy).
     pub fn builder() -> crate::model::policy::Builder {
         crate::model::policy::Builder::default()
     }
@@ -52146,8 +53010,10 @@ impl AsRef<str> for InputPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceTags {
     /// The Amazon Resource Name (ARN) of the resource.
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// The tags for the resource.
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -52172,11 +53038,10 @@ impl std::fmt::Debug for ResourceTags {
         formatter.finish()
     }
 }
-/// See [`ResourceTags`](crate::model::ResourceTags)
+/// See [`ResourceTags`](crate::model::ResourceTags).
 pub mod resource_tags {
 
-    /// A builder for [`ResourceTags`](crate::model::ResourceTags)
-    #[non_exhaustive]
+    /// A builder for [`ResourceTags`](crate::model::ResourceTags).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -52220,7 +53085,7 @@ pub mod resource_tags {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceTags`](crate::model::ResourceTags)
+        /// Consumes the builder and constructs a [`ResourceTags`](crate::model::ResourceTags).
         pub fn build(self) -> crate::model::ResourceTags {
             crate::model::ResourceTags {
                 arn: self.arn,
@@ -52230,7 +53095,7 @@ pub mod resource_tags {
     }
 }
 impl ResourceTags {
-    /// Creates a new builder-style object to manufacture [`ResourceTags`](crate::model::ResourceTags)
+    /// Creates a new builder-style object to manufacture [`ResourceTags`](crate::model::ResourceTags).
     pub fn builder() -> crate::model::resource_tags::Builder {
         crate::model::resource_tags::Builder::default()
     }
@@ -52469,54 +53334,79 @@ impl AsRef<str> for JobTemplateListBy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Job {
     /// Accelerated transcoding can significantly speed up jobs with long, visually complex content.
+    #[doc(hidden)]
     pub acceleration_settings: std::option::Option<crate::model::AccelerationSettings>,
     /// Describes whether the current job is running with accelerated transcoding. For jobs that have Acceleration (AccelerationMode) set to DISABLED, AccelerationStatus is always NOT_APPLICABLE. For jobs that have Acceleration (AccelerationMode) set to ENABLED or PREFERRED, AccelerationStatus is one of the other states. AccelerationStatus is IN_PROGRESS initially, while the service determines whether the input files and job settings are compatible with accelerated transcoding. If they are, AcclerationStatus is ACCELERATED. If your input files and job settings aren't compatible with accelerated transcoding, the service either fails your job or runs it without accelerated transcoding, depending on how you set Acceleration (AccelerationMode). When the service runs your job without accelerated transcoding, AccelerationStatus is NOT_ACCELERATED.
+    #[doc(hidden)]
     pub acceleration_status: std::option::Option<crate::model::AccelerationStatus>,
     /// An identifier for this resource that is unique within all of AWS.
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// The tag type that AWS Billing and Cost Management will use to sort your AWS Elemental MediaConvert costs on any billing report that you set up.
+    #[doc(hidden)]
     pub billing_tags_source: std::option::Option<crate::model::BillingTagsSource>,
     /// The time, in Unix epoch format in seconds, when the job got created.
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// A job's phase can be PROBING, TRANSCODING OR UPLOADING
+    #[doc(hidden)]
     pub current_phase: std::option::Option<crate::model::JobPhase>,
     /// Error code for the job
+    #[doc(hidden)]
     pub error_code: i32,
     /// Error message of Job
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// Optional list of hop destinations.
+    #[doc(hidden)]
     pub hop_destinations: std::option::Option<std::vec::Vec<crate::model::HopDestination>>,
     /// A portion of the job's ARN, unique within your AWS Elemental MediaConvert resources
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// An estimate of how far your job has progressed. This estimate is shown as a percentage of the total time from when your job leaves its queue to when your output files appear in your output Amazon S3 bucket. AWS Elemental MediaConvert provides jobPercentComplete in CloudWatch STATUS_UPDATE events and in the response to GetJob and ListJobs requests. The jobPercentComplete estimate is reliable for the following input containers: Quicktime, Transport Stream, MP4, and MXF. For some jobs, the service can't provide information about job progress. In those cases, jobPercentComplete returns a null value.
+    #[doc(hidden)]
     pub job_percent_complete: i32,
     /// The job template that the job is created from, if it is created from a job template.
+    #[doc(hidden)]
     pub job_template: std::option::Option<std::string::String>,
     /// Provides messages from the service about jobs that you have already successfully submitted.
+    #[doc(hidden)]
     pub messages: std::option::Option<crate::model::JobMessages>,
     /// List of output group details
+    #[doc(hidden)]
     pub output_group_details: std::option::Option<std::vec::Vec<crate::model::OutputGroupDetail>>,
     /// Relative priority on the job.
+    #[doc(hidden)]
     pub priority: i32,
     /// When you create a job, you can specify a queue to send it to. If you don't specify, the job will go to the default queue. For more about queues, see the User Guide topic at https://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+    #[doc(hidden)]
     pub queue: std::option::Option<std::string::String>,
     /// The job's queue hopping history.
+    #[doc(hidden)]
     pub queue_transitions: std::option::Option<std::vec::Vec<crate::model::QueueTransition>>,
     /// The number of times that the service automatically attempted to process your job after encountering an error.
+    #[doc(hidden)]
     pub retry_count: i32,
     /// The IAM role you use for creating this job. For details about permissions, see the User Guide topic at the User Guide at https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html
+    #[doc(hidden)]
     pub role: std::option::Option<std::string::String>,
     /// JobSettings contains all the transcode settings for a job.
+    #[doc(hidden)]
     pub settings: std::option::Option<crate::model::JobSettings>,
     /// Enable this setting when you run a test job to estimate how many reserved transcoding slots (RTS) you need. When this is enabled, MediaConvert runs your job from an on-demand queue with similar performance to what you will see with one RTS in a reserved queue. This setting is disabled by default.
+    #[doc(hidden)]
     pub simulate_reserved_queue: std::option::Option<crate::model::SimulateReservedQueue>,
     /// A job's status can be SUBMITTED, PROGRESSING, COMPLETE, CANCELED, or ERROR.
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobStatus>,
     /// Specify how often MediaConvert sends STATUS_UPDATE events to Amazon CloudWatch Events. Set the interval, in seconds, between status updates. MediaConvert sends an update at this interval from the time the service begins processing your job to the time it completes the transcode or encounters an error.
+    #[doc(hidden)]
     pub status_update_interval: std::option::Option<crate::model::StatusUpdateInterval>,
     /// Information about when jobs are submitted, started, and finished is specified in Unix epoch format in seconds.
+    #[doc(hidden)]
     pub timing: std::option::Option<crate::model::Timing>,
     /// User-defined metadata that you want to associate with an MediaConvert job. You specify metadata in key/value pairs.
+    #[doc(hidden)]
     pub user_metadata:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -52662,11 +53552,10 @@ impl std::fmt::Debug for Job {
         formatter.finish()
     }
 }
-/// See [`Job`](crate::model::Job)
+/// See [`Job`](crate::model::Job).
 pub mod job {
 
-    /// A builder for [`Job`](crate::model::Job)
-    #[non_exhaustive]
+    /// A builder for [`Job`](crate::model::Job).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) acceleration_settings: std::option::Option<crate::model::AccelerationSettings>,
@@ -53027,7 +53916,7 @@ pub mod job {
             self.user_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`Job`](crate::model::Job)
+        /// Consumes the builder and constructs a [`Job`](crate::model::Job).
         pub fn build(self) -> crate::model::Job {
             crate::model::Job {
                 acceleration_settings: self.acceleration_settings,
@@ -53060,7 +53949,7 @@ pub mod job {
     }
 }
 impl Job {
-    /// Creates a new builder-style object to manufacture [`Job`](crate::model::Job)
+    /// Creates a new builder-style object to manufacture [`Job`](crate::model::Job).
     pub fn builder() -> crate::model::job::Builder {
         crate::model::job::Builder::default()
     }
@@ -53071,10 +53960,13 @@ impl Job {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Timing {
     /// The time, in Unix epoch format, that the transcoding job finished
+    #[doc(hidden)]
     pub finish_time: std::option::Option<aws_smithy_types::DateTime>,
     /// The time, in Unix epoch format, that transcoding for the job began.
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// The time, in Unix epoch format, that you submitted the job.
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Timing {
@@ -53100,11 +53992,10 @@ impl std::fmt::Debug for Timing {
         formatter.finish()
     }
 }
-/// See [`Timing`](crate::model::Timing)
+/// See [`Timing`](crate::model::Timing).
 pub mod timing {
 
-    /// A builder for [`Timing`](crate::model::Timing)
-    #[non_exhaustive]
+    /// A builder for [`Timing`](crate::model::Timing).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) finish_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -53151,7 +54042,7 @@ pub mod timing {
             self.submit_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`Timing`](crate::model::Timing)
+        /// Consumes the builder and constructs a [`Timing`](crate::model::Timing).
         pub fn build(self) -> crate::model::Timing {
             crate::model::Timing {
                 finish_time: self.finish_time,
@@ -53162,7 +54053,7 @@ pub mod timing {
     }
 }
 impl Timing {
-    /// Creates a new builder-style object to manufacture [`Timing`](crate::model::Timing)
+    /// Creates a new builder-style object to manufacture [`Timing`](crate::model::Timing).
     pub fn builder() -> crate::model::timing::Builder {
         crate::model::timing::Builder::default()
     }
@@ -53295,29 +54186,41 @@ impl AsRef<str> for SimulateReservedQueue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobSettings {
     /// When specified, this offset (in milliseconds) is added to the input Ad Avail PTS time.
+    #[doc(hidden)]
     pub ad_avail_offset: i32,
     /// Settings for ad avail blanking. Video can be blanked or overlaid with an image, and audio muted during SCTE-35 triggered ad avails.
+    #[doc(hidden)]
     pub avail_blanking: std::option::Option<crate::model::AvailBlanking>,
     /// Settings for Event Signaling And Messaging (ESAM). If you don't do ad insertion, you can ignore these settings.
+    #[doc(hidden)]
     pub esam: std::option::Option<crate::model::EsamSettings>,
     /// If your source content has EIA-608 Line 21 Data Services, enable this feature to specify what MediaConvert does with the Extended Data Services (XDS) packets. You can choose to pass through XDS packets, or remove them from the output. For more information about XDS, see EIA-608 Line Data Services, section 9.5.1.5 05h Content Advisory.
+    #[doc(hidden)]
     pub extended_data_services: std::option::Option<crate::model::ExtendedDataServices>,
     /// Use Inputs (inputs) to define source file used in the transcode job. There can be multiple inputs add in a job. These inputs will be concantenated together to create the output.
+    #[doc(hidden)]
     pub inputs: std::option::Option<std::vec::Vec<crate::model::Input>>,
     /// Use these settings only when you use Kantar watermarking. Specify the values that MediaConvert uses to generate and place Kantar watermarks in your output audio. These settings apply to every output in your job. In addition to specifying these values, you also need to store your Kantar credentials in AWS Secrets Manager. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/kantar-watermarking.html.
+    #[doc(hidden)]
     pub kantar_watermark: std::option::Option<crate::model::KantarWatermarkSettings>,
     /// Overlay motion graphics on top of your video. The motion graphics that you specify here appear on all outputs in all output groups. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/motion-graphic-overlay.html.
+    #[doc(hidden)]
     pub motion_image_inserter: std::option::Option<crate::model::MotionImageInserter>,
     /// Settings for your Nielsen configuration. If you don't do Nielsen measurement and analytics, ignore these settings. When you enable Nielsen configuration (nielsenConfiguration), MediaConvert enables PCM to ID3 tagging for all outputs in the job. To enable Nielsen configuration programmatically, include an instance of nielsenConfiguration in your JSON job specification. Even if you don't include any children of nielsenConfiguration, you still enable the setting.
+    #[doc(hidden)]
     pub nielsen_configuration: std::option::Option<crate::model::NielsenConfiguration>,
     /// Ignore these settings unless you are using Nielsen non-linear watermarking. Specify the values that MediaConvert uses to generate and place Nielsen watermarks in your output audio. In addition to specifying these values, you also need to set up your cloud TIC server. These settings apply to every output in your job. The MediaConvert implementation is currently with the following Nielsen versions: Nielsen Watermark SDK Version 5.2.1 Nielsen NLM Watermark Engine Version 1.2.7 Nielsen Watermark Authenticator [SID_TIC] Version [5.0.0]
+    #[doc(hidden)]
     pub nielsen_non_linear_watermark:
         std::option::Option<crate::model::NielsenNonLinearWatermarkSettings>,
     /// (OutputGroups) contains one group of settings for each set of outputs that share a common package type. All unpackaged files (MPEG-4, MPEG-2 TS, Quicktime, MXF, and no container) are grouped in a single output group as well. Required in (OutputGroups) is a group of settings that apply to the whole group. This required object depends on the value you set for (Type) under (OutputGroups)&gt;(OutputGroupSettings). Type, settings object pairs are as follows. * FILE_GROUP_SETTINGS, FileGroupSettings * HLS_GROUP_SETTINGS, HlsGroupSettings * DASH_ISO_GROUP_SETTINGS, DashIsoGroupSettings * MS_SMOOTH_GROUP_SETTINGS, MsSmoothGroupSettings * CMAF_GROUP_SETTINGS, CmafGroupSettings
+    #[doc(hidden)]
     pub output_groups: std::option::Option<std::vec::Vec<crate::model::OutputGroup>>,
     /// These settings control how the service handles timecodes throughout the job. These settings don't affect input clipping.
+    #[doc(hidden)]
     pub timecode_config: std::option::Option<crate::model::TimecodeConfig>,
     /// Insert user-defined custom ID3 metadata (id3) at timecodes (timecode) that you specify. In each output that you want to include this metadata, you must set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
+    #[doc(hidden)]
     pub timed_metadata_insertion: std::option::Option<crate::model::TimedMetadataInsertion>,
 }
 impl JobSettings {
@@ -53399,11 +54302,10 @@ impl std::fmt::Debug for JobSettings {
         formatter.finish()
     }
 }
-/// See [`JobSettings`](crate::model::JobSettings)
+/// See [`JobSettings`](crate::model::JobSettings).
 pub mod job_settings {
 
-    /// A builder for [`JobSettings`](crate::model::JobSettings)
-    #[non_exhaustive]
+    /// A builder for [`JobSettings`](crate::model::JobSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ad_avail_offset: std::option::Option<i32>,
@@ -53590,7 +54492,7 @@ pub mod job_settings {
             self.timed_metadata_insertion = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobSettings`](crate::model::JobSettings)
+        /// Consumes the builder and constructs a [`JobSettings`](crate::model::JobSettings).
         pub fn build(self) -> crate::model::JobSettings {
             crate::model::JobSettings {
                 ad_avail_offset: self.ad_avail_offset.unwrap_or_default(),
@@ -53610,7 +54512,7 @@ pub mod job_settings {
     }
 }
 impl JobSettings {
-    /// Creates a new builder-style object to manufacture [`JobSettings`](crate::model::JobSettings)
+    /// Creates a new builder-style object to manufacture [`JobSettings`](crate::model::JobSettings).
     pub fn builder() -> crate::model::job_settings::Builder {
         crate::model::job_settings::Builder::default()
     }
@@ -53621,54 +54523,76 @@ impl JobSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Input {
     /// Use audio selector groups to combine multiple sidecar audio inputs so that you can assign them to a single output audio tab (AudioDescription). Note that, if you're working with embedded audio, it's simpler to assign multiple input tracks into a single audio selector rather than use an audio selector group.
+    #[doc(hidden)]
     pub audio_selector_groups: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AudioSelectorGroup>,
     >,
     /// Use Audio selectors (AudioSelectors) to specify a track or set of tracks from the input that you will use in your outputs. You can use multiple Audio selectors per input.
+    #[doc(hidden)]
     pub audio_selectors: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::AudioSelector>,
     >,
     /// Use captions selectors to specify the captions data from your input that you use in your outputs. You can use up to 20 captions selectors per input.
+    #[doc(hidden)]
     pub caption_selectors: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::CaptionSelector>,
     >,
     /// Use Cropping selection (crop) to specify the video area that the service will include in the output video frame. If you specify a value here, it will override any value that you specify in the output setting Cropping selection (crop).
+    #[doc(hidden)]
     pub crop: std::option::Option<crate::model::Rectangle>,
     /// Enable Deblock (InputDeblockFilter) to produce smoother motion in the output. Default is disabled. Only manually controllable for MPEG2 and uncompressed video inputs.
+    #[doc(hidden)]
     pub deblock_filter: std::option::Option<crate::model::InputDeblockFilter>,
     /// Settings for decrypting any input files that you encrypt before you upload them to Amazon S3. MediaConvert can decrypt files only when you use AWS Key Management Service (KMS) to encrypt the data key that you use to encrypt your content.
+    #[doc(hidden)]
     pub decryption_settings: std::option::Option<crate::model::InputDecryptionSettings>,
     /// Enable Denoise (InputDenoiseFilter) to filter noise from the input. Default is disabled. Only applicable to MPEG2, H.264, H.265, and uncompressed video inputs.
+    #[doc(hidden)]
     pub denoise_filter: std::option::Option<crate::model::InputDenoiseFilter>,
     /// Use this setting only when your video source has Dolby Vision studio mastering metadata that is carried in a separate XML file. Specify the Amazon S3 location for the metadata XML file. MediaConvert uses this file to provide global and frame-level metadata for Dolby Vision preprocessing. When you specify a file here and your input also has interleaved global and frame level metadata, MediaConvert ignores the interleaved metadata and uses only the the metadata from this external XML file. Note that your IAM service role must grant MediaConvert read permissions to this file. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html.
+    #[doc(hidden)]
     pub dolby_vision_metadata_xml: std::option::Option<std::string::String>,
     /// Specify the source file for your transcoding job. You can use multiple inputs in a single job. The service concatenates these inputs, in the order that you specify them in the job, to create the outputs. If your input format is IMF, specify your input by providing the path to your CPL. For example, "s3://bucket/vf/cpl.xml". If the CPL is in an incomplete IMP, make sure to use *Supplemental IMPs* (SupplementalImps) to specify any supplemental IMPs that contain assets referenced by the CPL.
+    #[doc(hidden)]
     pub file_input: std::option::Option<std::string::String>,
     /// Specify how the transcoding service applies the denoise and deblock filters. You must also enable the filters separately, with Denoise (InputDenoiseFilter) and Deblock (InputDeblockFilter). * Auto - The transcoding service determines whether to apply filtering, depending on input type and quality. * Disable - The input is not filtered. This is true even if you use the API to enable them in (InputDeblockFilter) and (InputDeblockFilter). * Force - The input is filtered regardless of input type.
+    #[doc(hidden)]
     pub filter_enable: std::option::Option<crate::model::InputFilterEnable>,
     /// Use Filter strength (FilterStrength) to adjust the magnitude the input filter settings (Deblock and Denoise). The range is -5 to 5. Default is 0.
+    #[doc(hidden)]
     pub filter_strength: i32,
     /// Enable the image inserter feature to include a graphic overlay on your video. Enable or disable this feature for each input individually. This setting is disabled by default.
+    #[doc(hidden)]
     pub image_inserter: std::option::Option<crate::model::ImageInserter>,
     /// (InputClippings) contains sets of start and end times that together specify a portion of the input to be used in the outputs. If you provide only a start time, the clip will be the entire input from that point to the end. If you provide only an end time, it will be the entire input up to that point. When you specify more than one input clip, the transcoding service creates the job outputs by stringing the clips together in the order you specify them.
+    #[doc(hidden)]
     pub input_clippings: std::option::Option<std::vec::Vec<crate::model::InputClipping>>,
     /// When you have a progressive segmented frame (PsF) input, use this setting to flag the input as PsF. MediaConvert doesn't automatically detect PsF. Therefore, flagging your input as PsF results in better preservation of video quality when you do deinterlacing and frame rate conversion. If you don't specify, the default value is Auto (AUTO). Auto is the correct setting for all inputs that are not PsF. Don't set this value to PsF when your input is interlaced. Doing so creates horizontal interlacing artifacts.
+    #[doc(hidden)]
     pub input_scan_type: std::option::Option<crate::model::InputScanType>,
     /// Use Selection placement (position) to define the video area in your output frame. The area outside of the rectangle that you specify here is black. If you specify a value here, it will override any value that you specify in the output setting Selection placement (position). If you specify a value here, this will override any AFD values in your input, even if you set Respond to AFD (RespondToAfd) to Respond (RESPOND). If you specify a value here, this will ignore anything that you specify for the setting Scaling Behavior (scalingBehavior).
+    #[doc(hidden)]
     pub position: std::option::Option<crate::model::Rectangle>,
     /// Use Program (programNumber) to select a specific program from within a multi-program transport stream. Note that Quad 4K is not currently supported. Default is the first program within the transport stream. If the program you specify doesn't exist, the transcoding service will use this default.
+    #[doc(hidden)]
     pub program_number: i32,
     /// Set PSI control (InputPsiControl) for transport stream inputs to specify which data the demux process to scans. * Ignore PSI - Scan all PIDs for audio and video. * Use PSI - Scan only PSI data.
+    #[doc(hidden)]
     pub psi_control: std::option::Option<crate::model::InputPsiControl>,
     /// Provide a list of any necessary supplemental IMPs. You need supplemental IMPs if the CPL that you're using for your input is in an incomplete IMP. Specify either the supplemental IMP directories with a trailing slash or the ASSETMAP.xml files. For example ["s3://bucket/ov/", "s3://bucket/vf2/ASSETMAP.xml"]. You don't need to specify the IMP that contains your input CPL, because the service automatically detects it.
+    #[doc(hidden)]
     pub supplemental_imps: std::option::Option<std::vec::Vec<std::string::String>>,
     /// Use this Timecode source setting, located under the input settings (InputTimecodeSource), to specify how the service counts input video frames. This input frame count affects only the behavior of features that apply to a single input at a time, such as input clipping and synchronizing some captions formats. Choose Embedded (EMBEDDED) to use the timecodes in your input video. Choose Start at zero (ZEROBASED) to start the first frame at zero. Choose Specified start (SPECIFIEDSTART) to start the first frame at the timecode that you specify in the setting Start timecode (timecodeStart). If you don't specify a value for Timecode source, the service will use Embedded by default. For more information about timecodes, see https://docs.aws.amazon.com/console/mediaconvert/timecode.
+    #[doc(hidden)]
     pub timecode_source: std::option::Option<crate::model::InputTimecodeSource>,
     /// Specify the timecode that you want the service to use for this input's initial frame. To use this setting, you must set the Timecode source setting, located under the input settings (InputTimecodeSource), to Specified start (SPECIFIEDSTART). For more information about timecodes, see https://docs.aws.amazon.com/console/mediaconvert/timecode.
+    #[doc(hidden)]
     pub timecode_start: std::option::Option<std::string::String>,
     /// When you include Video generator, MediaConvert creates a video input with black frames. Use this setting if you do not have a video input or if you want to add black video frames before, or after, other inputs. You can specify Video generator, or you can specify an Input file, but you cannot specify both. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/video-generator.html
+    #[doc(hidden)]
     pub video_generator: std::option::Option<crate::model::InputVideoGenerator>,
     /// Input video selectors contain the video settings for the input. Each of your inputs can have up to one video selector.
+    #[doc(hidden)]
     pub video_selector: std::option::Option<crate::model::VideoSelector>,
 }
 impl Input {
@@ -53803,11 +54727,10 @@ impl std::fmt::Debug for Input {
         formatter.finish()
     }
 }
-/// See [`Input`](crate::model::Input)
+/// See [`Input`](crate::model::Input).
 pub mod input {
 
-    /// A builder for [`Input`](crate::model::Input)
-    #[non_exhaustive]
+    /// A builder for [`Input`](crate::model::Input).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_selector_groups: std::option::Option<
@@ -54159,7 +55082,7 @@ pub mod input {
             self.video_selector = input;
             self
         }
-        /// Consumes the builder and constructs a [`Input`](crate::model::Input)
+        /// Consumes the builder and constructs a [`Input`](crate::model::Input).
         pub fn build(self) -> crate::model::Input {
             crate::model::Input {
                 audio_selector_groups: self.audio_selector_groups,
@@ -54189,7 +55112,7 @@ pub mod input {
     }
 }
 impl Input {
-    /// Creates a new builder-style object to manufacture [`Input`](crate::model::Input)
+    /// Creates a new builder-style object to manufacture [`Input`](crate::model::Input).
     pub fn builder() -> crate::model::input::Builder {
         crate::model::input::Builder::default()
     }
@@ -54200,6 +55123,7 @@ impl Input {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputVideoGenerator {
     /// Specify an integer value for Black video duration from 50 to 86400000 to generate a black video input for that many milliseconds. Required when you include Video generator.
+    #[doc(hidden)]
     pub duration: i32,
 }
 impl InputVideoGenerator {
@@ -54215,11 +55139,10 @@ impl std::fmt::Debug for InputVideoGenerator {
         formatter.finish()
     }
 }
-/// See [`InputVideoGenerator`](crate::model::InputVideoGenerator)
+/// See [`InputVideoGenerator`](crate::model::InputVideoGenerator).
 pub mod input_video_generator {
 
-    /// A builder for [`InputVideoGenerator`](crate::model::InputVideoGenerator)
-    #[non_exhaustive]
+    /// A builder for [`InputVideoGenerator`](crate::model::InputVideoGenerator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) duration: std::option::Option<i32>,
@@ -54235,7 +55158,7 @@ pub mod input_video_generator {
             self.duration = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputVideoGenerator`](crate::model::InputVideoGenerator)
+        /// Consumes the builder and constructs a [`InputVideoGenerator`](crate::model::InputVideoGenerator).
         pub fn build(self) -> crate::model::InputVideoGenerator {
             crate::model::InputVideoGenerator {
                 duration: self.duration.unwrap_or_default(),
@@ -54244,7 +55167,7 @@ pub mod input_video_generator {
     }
 }
 impl InputVideoGenerator {
-    /// Creates a new builder-style object to manufacture [`InputVideoGenerator`](crate::model::InputVideoGenerator)
+    /// Creates a new builder-style object to manufacture [`InputVideoGenerator`](crate::model::InputVideoGenerator).
     pub fn builder() -> crate::model::input_video_generator::Builder {
         crate::model::input_video_generator::Builder::default()
     }
@@ -54255,12 +55178,16 @@ impl InputVideoGenerator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputDecryptionSettings {
     /// Specify the encryption mode that you used to encrypt your input files.
+    #[doc(hidden)]
     pub decryption_mode: std::option::Option<crate::model::DecryptionMode>,
     /// Warning! Don't provide your encryption key in plaintext. Your job settings could be intercepted, making your encrypted content vulnerable. Specify the encrypted version of the data key that you used to encrypt your content. The data key must be encrypted by AWS Key Management Service (KMS). The key can be 128, 192, or 256 bits.
+    #[doc(hidden)]
     pub encrypted_decryption_key: std::option::Option<std::string::String>,
     /// Specify the initialization vector that you used when you encrypted your content before uploading it to Amazon S3. You can use a 16-byte initialization vector with any encryption mode. Or, you can use a 12-byte initialization vector with GCM or CTR. MediaConvert accepts only initialization vectors that are base64-encoded.
+    #[doc(hidden)]
     pub initialization_vector: std::option::Option<std::string::String>,
     /// Specify the AWS Region for AWS Key Management Service (KMS) that you used to encrypt your data key, if that Region is different from the one you are using for AWS Elemental MediaConvert.
+    #[doc(hidden)]
     pub kms_key_region: std::option::Option<std::string::String>,
 }
 impl InputDecryptionSettings {
@@ -54291,11 +55218,10 @@ impl std::fmt::Debug for InputDecryptionSettings {
         formatter.finish()
     }
 }
-/// See [`InputDecryptionSettings`](crate::model::InputDecryptionSettings)
+/// See [`InputDecryptionSettings`](crate::model::InputDecryptionSettings).
 pub mod input_decryption_settings {
 
-    /// A builder for [`InputDecryptionSettings`](crate::model::InputDecryptionSettings)
-    #[non_exhaustive]
+    /// A builder for [`InputDecryptionSettings`](crate::model::InputDecryptionSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) decryption_mode: std::option::Option<crate::model::DecryptionMode>,
@@ -54356,7 +55282,7 @@ pub mod input_decryption_settings {
             self.kms_key_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputDecryptionSettings`](crate::model::InputDecryptionSettings)
+        /// Consumes the builder and constructs a [`InputDecryptionSettings`](crate::model::InputDecryptionSettings).
         pub fn build(self) -> crate::model::InputDecryptionSettings {
             crate::model::InputDecryptionSettings {
                 decryption_mode: self.decryption_mode,
@@ -54368,7 +55294,7 @@ pub mod input_decryption_settings {
     }
 }
 impl InputDecryptionSettings {
-    /// Creates a new builder-style object to manufacture [`InputDecryptionSettings`](crate::model::InputDecryptionSettings)
+    /// Creates a new builder-style object to manufacture [`InputDecryptionSettings`](crate::model::InputDecryptionSettings).
     pub fn builder() -> crate::model::input_decryption_settings::Builder {
         crate::model::input_decryption_settings::Builder::default()
     }
@@ -54438,10 +55364,13 @@ impl AsRef<str> for DecryptionMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueueTransition {
     /// The queue that the job was on after the transition.
+    #[doc(hidden)]
     pub destination_queue: std::option::Option<std::string::String>,
     /// The queue that the job was on before the transition.
+    #[doc(hidden)]
     pub source_queue: std::option::Option<std::string::String>,
     /// The time, in Unix epoch format, that the job moved from the source queue to the destination queue.
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl QueueTransition {
@@ -54467,11 +55396,10 @@ impl std::fmt::Debug for QueueTransition {
         formatter.finish()
     }
 }
-/// See [`QueueTransition`](crate::model::QueueTransition)
+/// See [`QueueTransition`](crate::model::QueueTransition).
 pub mod queue_transition {
 
-    /// A builder for [`QueueTransition`](crate::model::QueueTransition)
-    #[non_exhaustive]
+    /// A builder for [`QueueTransition`](crate::model::QueueTransition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination_queue: std::option::Option<std::string::String>,
@@ -54515,7 +55443,7 @@ pub mod queue_transition {
             self.timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueueTransition`](crate::model::QueueTransition)
+        /// Consumes the builder and constructs a [`QueueTransition`](crate::model::QueueTransition).
         pub fn build(self) -> crate::model::QueueTransition {
             crate::model::QueueTransition {
                 destination_queue: self.destination_queue,
@@ -54526,7 +55454,7 @@ pub mod queue_transition {
     }
 }
 impl QueueTransition {
-    /// Creates a new builder-style object to manufacture [`QueueTransition`](crate::model::QueueTransition)
+    /// Creates a new builder-style object to manufacture [`QueueTransition`](crate::model::QueueTransition).
     pub fn builder() -> crate::model::queue_transition::Builder {
         crate::model::queue_transition::Builder::default()
     }
@@ -54537,6 +55465,7 @@ impl QueueTransition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputGroupDetail {
     /// Details about the output
+    #[doc(hidden)]
     pub output_details: std::option::Option<std::vec::Vec<crate::model::OutputDetail>>,
 }
 impl OutputGroupDetail {
@@ -54552,11 +55481,10 @@ impl std::fmt::Debug for OutputGroupDetail {
         formatter.finish()
     }
 }
-/// See [`OutputGroupDetail`](crate::model::OutputGroupDetail)
+/// See [`OutputGroupDetail`](crate::model::OutputGroupDetail).
 pub mod output_group_detail {
 
-    /// A builder for [`OutputGroupDetail`](crate::model::OutputGroupDetail)
-    #[non_exhaustive]
+    /// A builder for [`OutputGroupDetail`](crate::model::OutputGroupDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) output_details: std::option::Option<std::vec::Vec<crate::model::OutputDetail>>,
@@ -54581,7 +55509,7 @@ pub mod output_group_detail {
             self.output_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputGroupDetail`](crate::model::OutputGroupDetail)
+        /// Consumes the builder and constructs a [`OutputGroupDetail`](crate::model::OutputGroupDetail).
         pub fn build(self) -> crate::model::OutputGroupDetail {
             crate::model::OutputGroupDetail {
                 output_details: self.output_details,
@@ -54590,7 +55518,7 @@ pub mod output_group_detail {
     }
 }
 impl OutputGroupDetail {
-    /// Creates a new builder-style object to manufacture [`OutputGroupDetail`](crate::model::OutputGroupDetail)
+    /// Creates a new builder-style object to manufacture [`OutputGroupDetail`](crate::model::OutputGroupDetail).
     pub fn builder() -> crate::model::output_group_detail::Builder {
         crate::model::output_group_detail::Builder::default()
     }
@@ -54601,8 +55529,10 @@ impl OutputGroupDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputDetail {
     /// Duration in milliseconds
+    #[doc(hidden)]
     pub duration_in_ms: i32,
     /// Contains details about the output's video stream
+    #[doc(hidden)]
     pub video_details: std::option::Option<crate::model::VideoDetail>,
 }
 impl OutputDetail {
@@ -54623,11 +55553,10 @@ impl std::fmt::Debug for OutputDetail {
         formatter.finish()
     }
 }
-/// See [`OutputDetail`](crate::model::OutputDetail)
+/// See [`OutputDetail`](crate::model::OutputDetail).
 pub mod output_detail {
 
-    /// A builder for [`OutputDetail`](crate::model::OutputDetail)
-    #[non_exhaustive]
+    /// A builder for [`OutputDetail`](crate::model::OutputDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) duration_in_ms: std::option::Option<i32>,
@@ -54657,7 +55586,7 @@ pub mod output_detail {
             self.video_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputDetail`](crate::model::OutputDetail)
+        /// Consumes the builder and constructs a [`OutputDetail`](crate::model::OutputDetail).
         pub fn build(self) -> crate::model::OutputDetail {
             crate::model::OutputDetail {
                 duration_in_ms: self.duration_in_ms.unwrap_or_default(),
@@ -54667,7 +55596,7 @@ pub mod output_detail {
     }
 }
 impl OutputDetail {
-    /// Creates a new builder-style object to manufacture [`OutputDetail`](crate::model::OutputDetail)
+    /// Creates a new builder-style object to manufacture [`OutputDetail`](crate::model::OutputDetail).
     pub fn builder() -> crate::model::output_detail::Builder {
         crate::model::output_detail::Builder::default()
     }
@@ -54678,8 +55607,10 @@ impl OutputDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VideoDetail {
     /// Height in pixels for the output
+    #[doc(hidden)]
     pub height_in_px: i32,
     /// Width in pixels for the output
+    #[doc(hidden)]
     pub width_in_px: i32,
 }
 impl VideoDetail {
@@ -54700,11 +55631,10 @@ impl std::fmt::Debug for VideoDetail {
         formatter.finish()
     }
 }
-/// See [`VideoDetail`](crate::model::VideoDetail)
+/// See [`VideoDetail`](crate::model::VideoDetail).
 pub mod video_detail {
 
-    /// A builder for [`VideoDetail`](crate::model::VideoDetail)
-    #[non_exhaustive]
+    /// A builder for [`VideoDetail`](crate::model::VideoDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) height_in_px: std::option::Option<i32>,
@@ -54731,7 +55661,7 @@ pub mod video_detail {
             self.width_in_px = input;
             self
         }
-        /// Consumes the builder and constructs a [`VideoDetail`](crate::model::VideoDetail)
+        /// Consumes the builder and constructs a [`VideoDetail`](crate::model::VideoDetail).
         pub fn build(self) -> crate::model::VideoDetail {
             crate::model::VideoDetail {
                 height_in_px: self.height_in_px.unwrap_or_default(),
@@ -54741,7 +55671,7 @@ pub mod video_detail {
     }
 }
 impl VideoDetail {
-    /// Creates a new builder-style object to manufacture [`VideoDetail`](crate::model::VideoDetail)
+    /// Creates a new builder-style object to manufacture [`VideoDetail`](crate::model::VideoDetail).
     pub fn builder() -> crate::model::video_detail::Builder {
         crate::model::video_detail::Builder::default()
     }
@@ -54752,8 +55682,10 @@ impl VideoDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobMessages {
     /// List of messages that are informational only and don't indicate a problem with your job.
+    #[doc(hidden)]
     pub info: std::option::Option<std::vec::Vec<std::string::String>>,
     /// List of messages that warn about conditions that might cause your job not to run or to fail.
+    #[doc(hidden)]
     pub warning: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl JobMessages {
@@ -54774,11 +55706,10 @@ impl std::fmt::Debug for JobMessages {
         formatter.finish()
     }
 }
-/// See [`JobMessages`](crate::model::JobMessages)
+/// See [`JobMessages`](crate::model::JobMessages).
 pub mod job_messages {
 
-    /// A builder for [`JobMessages`](crate::model::JobMessages)
-    #[non_exhaustive]
+    /// A builder for [`JobMessages`](crate::model::JobMessages).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) info: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -54823,7 +55754,7 @@ pub mod job_messages {
             self.warning = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobMessages`](crate::model::JobMessages)
+        /// Consumes the builder and constructs a [`JobMessages`](crate::model::JobMessages).
         pub fn build(self) -> crate::model::JobMessages {
             crate::model::JobMessages {
                 info: self.info,
@@ -54833,7 +55764,7 @@ pub mod job_messages {
     }
 }
 impl JobMessages {
-    /// Creates a new builder-style object to manufacture [`JobMessages`](crate::model::JobMessages)
+    /// Creates a new builder-style object to manufacture [`JobMessages`](crate::model::JobMessages).
     pub fn builder() -> crate::model::job_messages::Builder {
         crate::model::job_messages::Builder::default()
     }
@@ -55034,6 +55965,7 @@ impl AsRef<str> for AccelerationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Endpoint {
     /// URL of endpoint
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl Endpoint {
@@ -55049,11 +55981,10 @@ impl std::fmt::Debug for Endpoint {
         formatter.finish()
     }
 }
-/// See [`Endpoint`](crate::model::Endpoint)
+/// See [`Endpoint`](crate::model::Endpoint).
 pub mod endpoint {
 
-    /// A builder for [`Endpoint`](crate::model::Endpoint)
-    #[non_exhaustive]
+    /// A builder for [`Endpoint`](crate::model::Endpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) url: std::option::Option<std::string::String>,
@@ -55069,14 +56000,14 @@ pub mod endpoint {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint)
+        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint).
         pub fn build(self) -> crate::model::Endpoint {
             crate::model::Endpoint { url: self.url }
         }
     }
 }
 impl Endpoint {
-    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint)
+    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint).
     pub fn builder() -> crate::model::endpoint::Builder {
         crate::model::endpoint::Builder::default()
     }

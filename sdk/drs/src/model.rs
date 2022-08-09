@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationExceptionField {
     /// <p>Validate exception field name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Validate exception field message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ValidationExceptionField {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ValidationExceptionField {
         formatter.finish()
     }
 }
-/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField).
 pub mod validation_exception_field {
 
-    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField)
-    #[non_exhaustive]
+    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod validation_exception_field {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField).
         pub fn build(self) -> crate::model::ValidationExceptionField {
             crate::model::ValidationExceptionField {
                 name: self.name,
@@ -68,7 +69,7 @@ pub mod validation_exception_field {
     }
 }
 impl ValidationExceptionField {
-    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     pub fn builder() -> crate::model::validation_exception_field::Builder {
         crate::model::validation_exception_field::Builder::default()
     }
@@ -147,14 +148,19 @@ impl AsRef<str> for ValidationExceptionReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PitPolicyRule {
     /// <p>The ID of the rule.</p>
+    #[doc(hidden)]
     pub rule_id: i64,
     /// <p>The units used to measure the interval and retentionDuration.</p>
+    #[doc(hidden)]
     pub units: std::option::Option<crate::model::PitPolicyRuleUnits>,
     /// <p>How often, in the chosen units, a snapshot should be taken.</p>
+    #[doc(hidden)]
     pub interval: i32,
     /// <p>The duration to retain a snapshot for, in the chosen units.</p>
+    #[doc(hidden)]
     pub retention_duration: i32,
     /// <p>Whether this rule is enabled or not.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
 }
 impl PitPolicyRule {
@@ -190,11 +196,10 @@ impl std::fmt::Debug for PitPolicyRule {
         formatter.finish()
     }
 }
-/// See [`PitPolicyRule`](crate::model::PitPolicyRule)
+/// See [`PitPolicyRule`](crate::model::PitPolicyRule).
 pub mod pit_policy_rule {
 
-    /// A builder for [`PitPolicyRule`](crate::model::PitPolicyRule)
-    #[non_exhaustive]
+    /// A builder for [`PitPolicyRule`](crate::model::PitPolicyRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_id: std::option::Option<i64>,
@@ -257,7 +262,7 @@ pub mod pit_policy_rule {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`PitPolicyRule`](crate::model::PitPolicyRule)
+        /// Consumes the builder and constructs a [`PitPolicyRule`](crate::model::PitPolicyRule).
         pub fn build(self) -> crate::model::PitPolicyRule {
             crate::model::PitPolicyRule {
                 rule_id: self.rule_id.unwrap_or_default(),
@@ -270,7 +275,7 @@ pub mod pit_policy_rule {
     }
 }
 impl PitPolicyRule {
-    /// Creates a new builder-style object to manufacture [`PitPolicyRule`](crate::model::PitPolicyRule)
+    /// Creates a new builder-style object to manufacture [`PitPolicyRule`](crate::model::PitPolicyRule).
     pub fn builder() -> crate::model::pit_policy_rule::Builder {
         crate::model::pit_policy_rule::Builder::default()
     }
@@ -450,16 +455,25 @@ impl AsRef<str> for ReplicationConfigurationEbsEncryption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationConfigurationReplicatedDisk {
     /// <p>The name of the device.</p>
+    #[doc(hidden)]
     pub device_name: std::option::Option<std::string::String>,
     /// <p>Whether to boot from this disk or not.</p>
+    #[doc(hidden)]
     pub is_boot_disk: std::option::Option<bool>,
     /// <p>The Staging Disk EBS volume type to be used during replication.</p>
+    #[doc(hidden)]
     pub staging_disk_type:
         std::option::Option<crate::model::ReplicationConfigurationReplicatedDiskStagingDiskType>,
     /// <p>The requested number of I/O operations per second (IOPS).</p>
+    #[doc(hidden)]
     pub iops: i64,
     /// <p>The throughput to use for the EBS volume in MiB/s. This parameter is valid only for gp3 volumes.</p>
+    #[doc(hidden)]
     pub throughput: i64,
+    /// <p>The Staging Disk EBS volume type to be used during replication when <code>stagingDiskType</code> is set to Auto. This is a read-only field.</p>
+    #[doc(hidden)]
+    pub optimized_staging_disk_type:
+        std::option::Option<crate::model::ReplicationConfigurationReplicatedDiskStagingDiskType>,
 }
 impl ReplicationConfigurationReplicatedDisk {
     /// <p>The name of the device.</p>
@@ -485,6 +499,13 @@ impl ReplicationConfigurationReplicatedDisk {
     pub fn throughput(&self) -> i64 {
         self.throughput
     }
+    /// <p>The Staging Disk EBS volume type to be used during replication when <code>stagingDiskType</code> is set to Auto. This is a read-only field.</p>
+    pub fn optimized_staging_disk_type(
+        &self,
+    ) -> std::option::Option<&crate::model::ReplicationConfigurationReplicatedDiskStagingDiskType>
+    {
+        self.optimized_staging_disk_type.as_ref()
+    }
 }
 impl std::fmt::Debug for ReplicationConfigurationReplicatedDisk {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -494,14 +515,17 @@ impl std::fmt::Debug for ReplicationConfigurationReplicatedDisk {
         formatter.field("staging_disk_type", &self.staging_disk_type);
         formatter.field("iops", &self.iops);
         formatter.field("throughput", &self.throughput);
+        formatter.field(
+            "optimized_staging_disk_type",
+            &self.optimized_staging_disk_type,
+        );
         formatter.finish()
     }
 }
-/// See [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk)
+/// See [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk).
 pub mod replication_configuration_replicated_disk {
 
-    /// A builder for [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_name: std::option::Option<std::string::String>,
@@ -511,6 +535,9 @@ pub mod replication_configuration_replicated_disk {
         >,
         pub(crate) iops: std::option::Option<i64>,
         pub(crate) throughput: std::option::Option<i64>,
+        pub(crate) optimized_staging_disk_type: std::option::Option<
+            crate::model::ReplicationConfigurationReplicatedDiskStagingDiskType,
+        >,
     }
     impl Builder {
         /// <p>The name of the device.</p>
@@ -571,7 +598,25 @@ pub mod replication_configuration_replicated_disk {
             self.throughput = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk)
+        /// <p>The Staging Disk EBS volume type to be used during replication when <code>stagingDiskType</code> is set to Auto. This is a read-only field.</p>
+        pub fn optimized_staging_disk_type(
+            mut self,
+            input: crate::model::ReplicationConfigurationReplicatedDiskStagingDiskType,
+        ) -> Self {
+            self.optimized_staging_disk_type = Some(input);
+            self
+        }
+        /// <p>The Staging Disk EBS volume type to be used during replication when <code>stagingDiskType</code> is set to Auto. This is a read-only field.</p>
+        pub fn set_optimized_staging_disk_type(
+            mut self,
+            input: std::option::Option<
+                crate::model::ReplicationConfigurationReplicatedDiskStagingDiskType,
+            >,
+        ) -> Self {
+            self.optimized_staging_disk_type = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk).
         pub fn build(self) -> crate::model::ReplicationConfigurationReplicatedDisk {
             crate::model::ReplicationConfigurationReplicatedDisk {
                 device_name: self.device_name,
@@ -579,12 +624,13 @@ pub mod replication_configuration_replicated_disk {
                 staging_disk_type: self.staging_disk_type,
                 iops: self.iops.unwrap_or_default(),
                 throughput: self.throughput.unwrap_or_default(),
+                optimized_staging_disk_type: self.optimized_staging_disk_type,
             }
         }
     }
 }
 impl ReplicationConfigurationReplicatedDisk {
-    /// Creates a new builder-style object to manufacture [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk)
+    /// Creates a new builder-style object to manufacture [`ReplicationConfigurationReplicatedDisk`](crate::model::ReplicationConfigurationReplicatedDisk).
     pub fn builder() -> crate::model::replication_configuration_replicated_disk::Builder {
         crate::model::replication_configuration_replicated_disk::Builder::default()
     }
@@ -682,6 +728,8 @@ impl AsRef<str> for ReplicationConfigurationReplicatedDiskStagingDiskType {
 )]
 pub enum ReplicationConfigurationDefaultLargeStagingDiskType {
     #[allow(missing_docs)] // documentation missing in model
+    Auto,
+    #[allow(missing_docs)] // documentation missing in model
     Gp2,
     #[allow(missing_docs)] // documentation missing in model
     Gp3,
@@ -693,6 +741,7 @@ pub enum ReplicationConfigurationDefaultLargeStagingDiskType {
 impl std::convert::From<&str> for ReplicationConfigurationDefaultLargeStagingDiskType {
     fn from(s: &str) -> Self {
         match s {
+            "AUTO" => ReplicationConfigurationDefaultLargeStagingDiskType::Auto,
             "GP2" => ReplicationConfigurationDefaultLargeStagingDiskType::Gp2,
             "GP3" => ReplicationConfigurationDefaultLargeStagingDiskType::Gp3,
             "ST1" => ReplicationConfigurationDefaultLargeStagingDiskType::St1,
@@ -711,6 +760,7 @@ impl ReplicationConfigurationDefaultLargeStagingDiskType {
     /// Returns the `&str` value of the enum member.
     pub fn as_str(&self) -> &str {
         match self {
+            ReplicationConfigurationDefaultLargeStagingDiskType::Auto => "AUTO",
             ReplicationConfigurationDefaultLargeStagingDiskType::Gp2 => "GP2",
             ReplicationConfigurationDefaultLargeStagingDiskType::Gp3 => "GP3",
             ReplicationConfigurationDefaultLargeStagingDiskType::St1 => "ST1",
@@ -719,7 +769,7 @@ impl ReplicationConfigurationDefaultLargeStagingDiskType {
     }
     /// Returns all the `&str` values of the enum members.
     pub fn values() -> &'static [&'static str] {
-        &["GP2", "GP3", "ST1"]
+        &["AUTO", "GP2", "GP3", "ST1"]
     }
 }
 impl AsRef<str> for ReplicationConfigurationDefaultLargeStagingDiskType {
@@ -733,6 +783,7 @@ impl AsRef<str> for ReplicationConfigurationDefaultLargeStagingDiskType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Licensing {
     /// <p>Whether to enable "Bring your own license" or not.</p>
+    #[doc(hidden)]
     pub os_byol: std::option::Option<bool>,
 }
 impl Licensing {
@@ -748,11 +799,10 @@ impl std::fmt::Debug for Licensing {
         formatter.finish()
     }
 }
-/// See [`Licensing`](crate::model::Licensing)
+/// See [`Licensing`](crate::model::Licensing).
 pub mod licensing {
 
-    /// A builder for [`Licensing`](crate::model::Licensing)
-    #[non_exhaustive]
+    /// A builder for [`Licensing`](crate::model::Licensing).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) os_byol: std::option::Option<bool>,
@@ -768,7 +818,7 @@ pub mod licensing {
             self.os_byol = input;
             self
         }
-        /// Consumes the builder and constructs a [`Licensing`](crate::model::Licensing)
+        /// Consumes the builder and constructs a [`Licensing`](crate::model::Licensing).
         pub fn build(self) -> crate::model::Licensing {
             crate::model::Licensing {
                 os_byol: self.os_byol,
@@ -777,7 +827,7 @@ pub mod licensing {
     }
 }
 impl Licensing {
-    /// Creates a new builder-style object to manufacture [`Licensing`](crate::model::Licensing)
+    /// Creates a new builder-style object to manufacture [`Licensing`](crate::model::Licensing).
     pub fn builder() -> crate::model::licensing::Builder {
         crate::model::licensing::Builder::default()
     }
@@ -898,12 +948,16 @@ impl AsRef<str> for LaunchDisposition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StagingArea {
     /// <p>Status of Source server extension. Possible values: (a) NOT_EXTENDED - This is a source server that is replicating in the current account. (b) EXTENDED - Source server is extended from a staging source server. In this case, the value of stagingSourceServerArn is pointing to the Arn of the source server in the staging account. (c) EXTENSION_ERROR - Some issue occurred when accessing staging source server. In this case, errorMessage field will contain an error message that explains what happened.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ExtensionStatus>,
     /// <p>Account ID of the account to which source server belongs. If this source server is extended - shows Account ID of staging source server.</p>
+    #[doc(hidden)]
     pub staging_account_id: std::option::Option<std::string::String>,
     /// <p>Arn of the staging source server if this source server is extended</p>
+    #[doc(hidden)]
     pub staging_source_server_arn: std::option::Option<std::string::String>,
     /// <p>Shows an error message that occurred when DRS tried to access the staging source server. In this case StagingArea$status will have value EXTENSION_ERROR</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl StagingArea {
@@ -934,11 +988,10 @@ impl std::fmt::Debug for StagingArea {
         formatter.finish()
     }
 }
-/// See [`StagingArea`](crate::model::StagingArea)
+/// See [`StagingArea`](crate::model::StagingArea).
 pub mod staging_area {
 
-    /// A builder for [`StagingArea`](crate::model::StagingArea)
-    #[non_exhaustive]
+    /// A builder for [`StagingArea`](crate::model::StagingArea).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ExtensionStatus>,
@@ -999,7 +1052,7 @@ pub mod staging_area {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`StagingArea`](crate::model::StagingArea)
+        /// Consumes the builder and constructs a [`StagingArea`](crate::model::StagingArea).
         pub fn build(self) -> crate::model::StagingArea {
             crate::model::StagingArea {
                 status: self.status,
@@ -1011,7 +1064,7 @@ pub mod staging_area {
     }
 }
 impl StagingArea {
-    /// Creates a new builder-style object to manufacture [`StagingArea`](crate::model::StagingArea)
+    /// Creates a new builder-style object to manufacture [`StagingArea`](crate::model::StagingArea).
     pub fn builder() -> crate::model::staging_area::Builder {
         crate::model::staging_area::Builder::default()
     }
@@ -1081,20 +1134,28 @@ impl AsRef<str> for ExtensionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceProperties {
     /// <p>The date and time the Source Properties were last updated on.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<std::string::String>,
     /// <p>The recommended EC2 instance type that will be used when recovering the Source Server.</p>
+    #[doc(hidden)]
     pub recommended_instance_type: std::option::Option<std::string::String>,
     /// <p>Hints used to uniquely identify a machine.</p>
+    #[doc(hidden)]
     pub identification_hints: std::option::Option<crate::model::IdentificationHints>,
     /// <p>An array of network interfaces.</p>
+    #[doc(hidden)]
     pub network_interfaces: std::option::Option<std::vec::Vec<crate::model::NetworkInterface>>,
     /// <p>An array of disks.</p>
+    #[doc(hidden)]
     pub disks: std::option::Option<std::vec::Vec<crate::model::Disk>>,
     /// <p>An array of CPUs.</p>
+    #[doc(hidden)]
     pub cpus: std::option::Option<std::vec::Vec<crate::model::Cpu>>,
     /// <p>The amount of RAM in bytes.</p>
+    #[doc(hidden)]
     pub ram_bytes: i64,
     /// <p>Operating system.</p>
+    #[doc(hidden)]
     pub os: std::option::Option<crate::model::Os>,
 }
 impl SourceProperties {
@@ -1145,11 +1206,10 @@ impl std::fmt::Debug for SourceProperties {
         formatter.finish()
     }
 }
-/// See [`SourceProperties`](crate::model::SourceProperties)
+/// See [`SourceProperties`](crate::model::SourceProperties).
 pub mod source_properties {
 
-    /// A builder for [`SourceProperties`](crate::model::SourceProperties)
-    #[non_exhaustive]
+    /// A builder for [`SourceProperties`](crate::model::SourceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) last_updated_date_time: std::option::Option<std::string::String>,
@@ -1279,7 +1339,7 @@ pub mod source_properties {
             self.os = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceProperties`](crate::model::SourceProperties)
+        /// Consumes the builder and constructs a [`SourceProperties`](crate::model::SourceProperties).
         pub fn build(self) -> crate::model::SourceProperties {
             crate::model::SourceProperties {
                 last_updated_date_time: self.last_updated_date_time,
@@ -1295,7 +1355,7 @@ pub mod source_properties {
     }
 }
 impl SourceProperties {
-    /// Creates a new builder-style object to manufacture [`SourceProperties`](crate::model::SourceProperties)
+    /// Creates a new builder-style object to manufacture [`SourceProperties`](crate::model::SourceProperties).
     pub fn builder() -> crate::model::source_properties::Builder {
         crate::model::source_properties::Builder::default()
     }
@@ -1306,6 +1366,7 @@ impl SourceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Os {
     /// <p>The long name of the Operating System.</p>
+    #[doc(hidden)]
     pub full_string: std::option::Option<std::string::String>,
 }
 impl Os {
@@ -1321,11 +1382,10 @@ impl std::fmt::Debug for Os {
         formatter.finish()
     }
 }
-/// See [`Os`](crate::model::Os)
+/// See [`Os`](crate::model::Os).
 pub mod os {
 
-    /// A builder for [`Os`](crate::model::Os)
-    #[non_exhaustive]
+    /// A builder for [`Os`](crate::model::Os).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) full_string: std::option::Option<std::string::String>,
@@ -1341,7 +1401,7 @@ pub mod os {
             self.full_string = input;
             self
         }
-        /// Consumes the builder and constructs a [`Os`](crate::model::Os)
+        /// Consumes the builder and constructs a [`Os`](crate::model::Os).
         pub fn build(self) -> crate::model::Os {
             crate::model::Os {
                 full_string: self.full_string,
@@ -1350,7 +1410,7 @@ pub mod os {
     }
 }
 impl Os {
-    /// Creates a new builder-style object to manufacture [`Os`](crate::model::Os)
+    /// Creates a new builder-style object to manufacture [`Os`](crate::model::Os).
     pub fn builder() -> crate::model::os::Builder {
         crate::model::os::Builder::default()
     }
@@ -1361,8 +1421,10 @@ impl Os {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Cpu {
     /// <p>The number of CPU cores.</p>
+    #[doc(hidden)]
     pub cores: i64,
     /// <p>The model name of the CPU.</p>
+    #[doc(hidden)]
     pub model_name: std::option::Option<std::string::String>,
 }
 impl Cpu {
@@ -1383,11 +1445,10 @@ impl std::fmt::Debug for Cpu {
         formatter.finish()
     }
 }
-/// See [`Cpu`](crate::model::Cpu)
+/// See [`Cpu`](crate::model::Cpu).
 pub mod cpu {
 
-    /// A builder for [`Cpu`](crate::model::Cpu)
-    #[non_exhaustive]
+    /// A builder for [`Cpu`](crate::model::Cpu).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cores: std::option::Option<i64>,
@@ -1414,7 +1475,7 @@ pub mod cpu {
             self.model_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Cpu`](crate::model::Cpu)
+        /// Consumes the builder and constructs a [`Cpu`](crate::model::Cpu).
         pub fn build(self) -> crate::model::Cpu {
             crate::model::Cpu {
                 cores: self.cores.unwrap_or_default(),
@@ -1424,7 +1485,7 @@ pub mod cpu {
     }
 }
 impl Cpu {
-    /// Creates a new builder-style object to manufacture [`Cpu`](crate::model::Cpu)
+    /// Creates a new builder-style object to manufacture [`Cpu`](crate::model::Cpu).
     pub fn builder() -> crate::model::cpu::Builder {
         crate::model::cpu::Builder::default()
     }
@@ -1435,8 +1496,10 @@ impl Cpu {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Disk {
     /// <p>The disk or device name.</p>
+    #[doc(hidden)]
     pub device_name: std::option::Option<std::string::String>,
     /// <p>The amount of storage on the disk in bytes.</p>
+    #[doc(hidden)]
     pub bytes: i64,
 }
 impl Disk {
@@ -1457,11 +1520,10 @@ impl std::fmt::Debug for Disk {
         formatter.finish()
     }
 }
-/// See [`Disk`](crate::model::Disk)
+/// See [`Disk`](crate::model::Disk).
 pub mod disk {
 
-    /// A builder for [`Disk`](crate::model::Disk)
-    #[non_exhaustive]
+    /// A builder for [`Disk`](crate::model::Disk).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_name: std::option::Option<std::string::String>,
@@ -1488,7 +1550,7 @@ pub mod disk {
             self.bytes = input;
             self
         }
-        /// Consumes the builder and constructs a [`Disk`](crate::model::Disk)
+        /// Consumes the builder and constructs a [`Disk`](crate::model::Disk).
         pub fn build(self) -> crate::model::Disk {
             crate::model::Disk {
                 device_name: self.device_name,
@@ -1498,7 +1560,7 @@ pub mod disk {
     }
 }
 impl Disk {
-    /// Creates a new builder-style object to manufacture [`Disk`](crate::model::Disk)
+    /// Creates a new builder-style object to manufacture [`Disk`](crate::model::Disk).
     pub fn builder() -> crate::model::disk::Builder {
         crate::model::disk::Builder::default()
     }
@@ -1509,10 +1571,13 @@ impl Disk {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkInterface {
     /// <p>The MAC address of the network interface.</p>
+    #[doc(hidden)]
     pub mac_address: std::option::Option<std::string::String>,
     /// <p>Network interface IPs.</p>
+    #[doc(hidden)]
     pub ips: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Whether this is the primary network interface.</p>
+    #[doc(hidden)]
     pub is_primary: std::option::Option<bool>,
 }
 impl NetworkInterface {
@@ -1538,11 +1603,10 @@ impl std::fmt::Debug for NetworkInterface {
         formatter.finish()
     }
 }
-/// See [`NetworkInterface`](crate::model::NetworkInterface)
+/// See [`NetworkInterface`](crate::model::NetworkInterface).
 pub mod network_interface {
 
-    /// A builder for [`NetworkInterface`](crate::model::NetworkInterface)
-    #[non_exhaustive]
+    /// A builder for [`NetworkInterface`](crate::model::NetworkInterface).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mac_address: std::option::Option<std::string::String>,
@@ -1589,7 +1653,7 @@ pub mod network_interface {
             self.is_primary = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkInterface`](crate::model::NetworkInterface)
+        /// Consumes the builder and constructs a [`NetworkInterface`](crate::model::NetworkInterface).
         pub fn build(self) -> crate::model::NetworkInterface {
             crate::model::NetworkInterface {
                 mac_address: self.mac_address,
@@ -1600,7 +1664,7 @@ pub mod network_interface {
     }
 }
 impl NetworkInterface {
-    /// Creates a new builder-style object to manufacture [`NetworkInterface`](crate::model::NetworkInterface)
+    /// Creates a new builder-style object to manufacture [`NetworkInterface`](crate::model::NetworkInterface).
     pub fn builder() -> crate::model::network_interface::Builder {
         crate::model::network_interface::Builder::default()
     }
@@ -1611,12 +1675,16 @@ impl NetworkInterface {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IdentificationHints {
     /// <p>Fully Qualified Domain Name identification hint.</p>
+    #[doc(hidden)]
     pub fqdn: std::option::Option<std::string::String>,
     /// <p>Hostname identification hint.</p>
+    #[doc(hidden)]
     pub hostname: std::option::Option<std::string::String>,
     /// <p>vCenter VM path identification hint.</p>
+    #[doc(hidden)]
     pub vm_ware_uuid: std::option::Option<std::string::String>,
     /// <p>AWS Instance ID identification hint.</p>
+    #[doc(hidden)]
     pub aws_instance_id: std::option::Option<std::string::String>,
 }
 impl IdentificationHints {
@@ -1647,11 +1715,10 @@ impl std::fmt::Debug for IdentificationHints {
         formatter.finish()
     }
 }
-/// See [`IdentificationHints`](crate::model::IdentificationHints)
+/// See [`IdentificationHints`](crate::model::IdentificationHints).
 pub mod identification_hints {
 
-    /// A builder for [`IdentificationHints`](crate::model::IdentificationHints)
-    #[non_exhaustive]
+    /// A builder for [`IdentificationHints`](crate::model::IdentificationHints).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fqdn: std::option::Option<std::string::String>,
@@ -1703,7 +1770,7 @@ pub mod identification_hints {
             self.aws_instance_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`IdentificationHints`](crate::model::IdentificationHints)
+        /// Consumes the builder and constructs a [`IdentificationHints`](crate::model::IdentificationHints).
         pub fn build(self) -> crate::model::IdentificationHints {
             crate::model::IdentificationHints {
                 fqdn: self.fqdn,
@@ -1715,7 +1782,7 @@ pub mod identification_hints {
     }
 }
 impl IdentificationHints {
-    /// Creates a new builder-style object to manufacture [`IdentificationHints`](crate::model::IdentificationHints)
+    /// Creates a new builder-style object to manufacture [`IdentificationHints`](crate::model::IdentificationHints).
     pub fn builder() -> crate::model::identification_hints::Builder {
         crate::model::identification_hints::Builder::default()
     }
@@ -1726,14 +1793,19 @@ impl IdentificationHints {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifeCycle {
     /// <p>The date and time of when the Source Server was added to the service.</p>
+    #[doc(hidden)]
     pub added_to_service_date_time: std::option::Option<std::string::String>,
     /// <p>The date and time of the first byte that was replicated from the Source Server.</p>
+    #[doc(hidden)]
     pub first_byte_date_time: std::option::Option<std::string::String>,
     /// <p>The amount of time that the Source Server has been replicating for.</p>
+    #[doc(hidden)]
     pub elapsed_replication_duration: std::option::Option<std::string::String>,
     /// <p>The date and time this Source Server was last seen by the service.</p>
+    #[doc(hidden)]
     pub last_seen_by_service_date_time: std::option::Option<std::string::String>,
     /// <p>An object containing information regarding the last launch of the Source Server.</p>
+    #[doc(hidden)]
     pub last_launch: std::option::Option<crate::model::LifeCycleLastLaunch>,
 }
 impl LifeCycle {
@@ -1778,11 +1850,10 @@ impl std::fmt::Debug for LifeCycle {
         formatter.finish()
     }
 }
-/// See [`LifeCycle`](crate::model::LifeCycle)
+/// See [`LifeCycle`](crate::model::LifeCycle).
 pub mod life_cycle {
 
-    /// A builder for [`LifeCycle`](crate::model::LifeCycle)
-    #[non_exhaustive]
+    /// A builder for [`LifeCycle`](crate::model::LifeCycle).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) added_to_service_date_time: std::option::Option<std::string::String>,
@@ -1863,7 +1934,7 @@ pub mod life_cycle {
             self.last_launch = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifeCycle`](crate::model::LifeCycle)
+        /// Consumes the builder and constructs a [`LifeCycle`](crate::model::LifeCycle).
         pub fn build(self) -> crate::model::LifeCycle {
             crate::model::LifeCycle {
                 added_to_service_date_time: self.added_to_service_date_time,
@@ -1876,7 +1947,7 @@ pub mod life_cycle {
     }
 }
 impl LifeCycle {
-    /// Creates a new builder-style object to manufacture [`LifeCycle`](crate::model::LifeCycle)
+    /// Creates a new builder-style object to manufacture [`LifeCycle`](crate::model::LifeCycle).
     pub fn builder() -> crate::model::life_cycle::Builder {
         crate::model::life_cycle::Builder::default()
     }
@@ -1887,6 +1958,7 @@ impl LifeCycle {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifeCycleLastLaunch {
     /// <p>An object containing information regarding the initiation of the last launch of a Source Server.</p>
+    #[doc(hidden)]
     pub initiated: std::option::Option<crate::model::LifeCycleLastLaunchInitiated>,
 }
 impl LifeCycleLastLaunch {
@@ -1902,11 +1974,10 @@ impl std::fmt::Debug for LifeCycleLastLaunch {
         formatter.finish()
     }
 }
-/// See [`LifeCycleLastLaunch`](crate::model::LifeCycleLastLaunch)
+/// See [`LifeCycleLastLaunch`](crate::model::LifeCycleLastLaunch).
 pub mod life_cycle_last_launch {
 
-    /// A builder for [`LifeCycleLastLaunch`](crate::model::LifeCycleLastLaunch)
-    #[non_exhaustive]
+    /// A builder for [`LifeCycleLastLaunch`](crate::model::LifeCycleLastLaunch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) initiated: std::option::Option<crate::model::LifeCycleLastLaunchInitiated>,
@@ -1925,7 +1996,7 @@ pub mod life_cycle_last_launch {
             self.initiated = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifeCycleLastLaunch`](crate::model::LifeCycleLastLaunch)
+        /// Consumes the builder and constructs a [`LifeCycleLastLaunch`](crate::model::LifeCycleLastLaunch).
         pub fn build(self) -> crate::model::LifeCycleLastLaunch {
             crate::model::LifeCycleLastLaunch {
                 initiated: self.initiated,
@@ -1934,7 +2005,7 @@ pub mod life_cycle_last_launch {
     }
 }
 impl LifeCycleLastLaunch {
-    /// Creates a new builder-style object to manufacture [`LifeCycleLastLaunch`](crate::model::LifeCycleLastLaunch)
+    /// Creates a new builder-style object to manufacture [`LifeCycleLastLaunch`](crate::model::LifeCycleLastLaunch).
     pub fn builder() -> crate::model::life_cycle_last_launch::Builder {
         crate::model::life_cycle_last_launch::Builder::default()
     }
@@ -1945,10 +2016,13 @@ impl LifeCycleLastLaunch {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifeCycleLastLaunchInitiated {
     /// <p>The date and time the last Source Server launch was initiated.</p>
+    #[doc(hidden)]
     pub api_call_date_time: std::option::Option<std::string::String>,
     /// <p>The ID of the Job that was used to last launch the Source Server.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The Job type that was used to last launch the Source Server.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::LastLaunchType>,
 }
 impl LifeCycleLastLaunchInitiated {
@@ -1974,11 +2048,10 @@ impl std::fmt::Debug for LifeCycleLastLaunchInitiated {
         formatter.finish()
     }
 }
-/// See [`LifeCycleLastLaunchInitiated`](crate::model::LifeCycleLastLaunchInitiated)
+/// See [`LifeCycleLastLaunchInitiated`](crate::model::LifeCycleLastLaunchInitiated).
 pub mod life_cycle_last_launch_initiated {
 
-    /// A builder for [`LifeCycleLastLaunchInitiated`](crate::model::LifeCycleLastLaunchInitiated)
-    #[non_exhaustive]
+    /// A builder for [`LifeCycleLastLaunchInitiated`](crate::model::LifeCycleLastLaunchInitiated).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) api_call_date_time: std::option::Option<std::string::String>,
@@ -2022,7 +2095,7 @@ pub mod life_cycle_last_launch_initiated {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifeCycleLastLaunchInitiated`](crate::model::LifeCycleLastLaunchInitiated)
+        /// Consumes the builder and constructs a [`LifeCycleLastLaunchInitiated`](crate::model::LifeCycleLastLaunchInitiated).
         pub fn build(self) -> crate::model::LifeCycleLastLaunchInitiated {
             crate::model::LifeCycleLastLaunchInitiated {
                 api_call_date_time: self.api_call_date_time,
@@ -2033,7 +2106,7 @@ pub mod life_cycle_last_launch_initiated {
     }
 }
 impl LifeCycleLastLaunchInitiated {
-    /// Creates a new builder-style object to manufacture [`LifeCycleLastLaunchInitiated`](crate::model::LifeCycleLastLaunchInitiated)
+    /// Creates a new builder-style object to manufacture [`LifeCycleLastLaunchInitiated`](crate::model::LifeCycleLastLaunchInitiated).
     pub fn builder() -> crate::model::life_cycle_last_launch_initiated::Builder {
         crate::model::life_cycle_last_launch_initiated::Builder::default()
     }
@@ -2099,17 +2172,23 @@ impl AsRef<str> for LastLaunchType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataReplicationInfo {
     /// <p>Data replication lag duration.</p>
+    #[doc(hidden)]
     pub lag_duration: std::option::Option<std::string::String>,
     /// <p>An estimate of when the data replication will be completed.</p>
+    #[doc(hidden)]
     pub eta_date_time: std::option::Option<std::string::String>,
     /// <p>The disks that should be replicated.</p>
+    #[doc(hidden)]
     pub replicated_disks:
         std::option::Option<std::vec::Vec<crate::model::DataReplicationInfoReplicatedDisk>>,
     /// <p>The state of the data replication.</p>
+    #[doc(hidden)]
     pub data_replication_state: std::option::Option<crate::model::DataReplicationState>,
     /// <p>Information about whether the data replication has been initiated.</p>
+    #[doc(hidden)]
     pub data_replication_initiation: std::option::Option<crate::model::DataReplicationInitiation>,
     /// <p>Error in data replication.</p>
+    #[doc(hidden)]
     pub data_replication_error: std::option::Option<crate::model::DataReplicationError>,
 }
 impl DataReplicationInfo {
@@ -2161,11 +2240,10 @@ impl std::fmt::Debug for DataReplicationInfo {
         formatter.finish()
     }
 }
-/// See [`DataReplicationInfo`](crate::model::DataReplicationInfo)
+/// See [`DataReplicationInfo`](crate::model::DataReplicationInfo).
 pub mod data_replication_info {
 
-    /// A builder for [`DataReplicationInfo`](crate::model::DataReplicationInfo)
-    #[non_exhaustive]
+    /// A builder for [`DataReplicationInfo`](crate::model::DataReplicationInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lag_duration: std::option::Option<std::string::String>,
@@ -2267,7 +2345,7 @@ pub mod data_replication_info {
             self.data_replication_error = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataReplicationInfo`](crate::model::DataReplicationInfo)
+        /// Consumes the builder and constructs a [`DataReplicationInfo`](crate::model::DataReplicationInfo).
         pub fn build(self) -> crate::model::DataReplicationInfo {
             crate::model::DataReplicationInfo {
                 lag_duration: self.lag_duration,
@@ -2281,7 +2359,7 @@ pub mod data_replication_info {
     }
 }
 impl DataReplicationInfo {
-    /// Creates a new builder-style object to manufacture [`DataReplicationInfo`](crate::model::DataReplicationInfo)
+    /// Creates a new builder-style object to manufacture [`DataReplicationInfo`](crate::model::DataReplicationInfo).
     pub fn builder() -> crate::model::data_replication_info::Builder {
         crate::model::data_replication_info::Builder::default()
     }
@@ -2292,8 +2370,10 @@ impl DataReplicationInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataReplicationError {
     /// <p>Error in data replication.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::DataReplicationErrorString>,
     /// <p>Error in data replication.</p>
+    #[doc(hidden)]
     pub raw_error: std::option::Option<std::string::String>,
 }
 impl DataReplicationError {
@@ -2314,11 +2394,10 @@ impl std::fmt::Debug for DataReplicationError {
         formatter.finish()
     }
 }
-/// See [`DataReplicationError`](crate::model::DataReplicationError)
+/// See [`DataReplicationError`](crate::model::DataReplicationError).
 pub mod data_replication_error {
 
-    /// A builder for [`DataReplicationError`](crate::model::DataReplicationError)
-    #[non_exhaustive]
+    /// A builder for [`DataReplicationError`](crate::model::DataReplicationError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error: std::option::Option<crate::model::DataReplicationErrorString>,
@@ -2348,7 +2427,7 @@ pub mod data_replication_error {
             self.raw_error = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataReplicationError`](crate::model::DataReplicationError)
+        /// Consumes the builder and constructs a [`DataReplicationError`](crate::model::DataReplicationError).
         pub fn build(self) -> crate::model::DataReplicationError {
             crate::model::DataReplicationError {
                 error: self.error,
@@ -2358,7 +2437,7 @@ pub mod data_replication_error {
     }
 }
 impl DataReplicationError {
-    /// Creates a new builder-style object to manufacture [`DataReplicationError`](crate::model::DataReplicationError)
+    /// Creates a new builder-style object to manufacture [`DataReplicationError`](crate::model::DataReplicationError).
     pub fn builder() -> crate::model::data_replication_error::Builder {
         crate::model::data_replication_error::Builder::default()
     }
@@ -2527,10 +2606,13 @@ impl AsRef<str> for DataReplicationErrorString {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataReplicationInitiation {
     /// <p>The date and time of the current attempt to initiate data replication.</p>
+    #[doc(hidden)]
     pub start_date_time: std::option::Option<std::string::String>,
     /// <p>The date and time of the next attempt to initiate data replication.</p>
+    #[doc(hidden)]
     pub next_attempt_date_time: std::option::Option<std::string::String>,
     /// <p>The steps of the current attempt to initiate data replication.</p>
+    #[doc(hidden)]
     pub steps: std::option::Option<std::vec::Vec<crate::model::DataReplicationInitiationStep>>,
 }
 impl DataReplicationInitiation {
@@ -2556,11 +2638,10 @@ impl std::fmt::Debug for DataReplicationInitiation {
         formatter.finish()
     }
 }
-/// See [`DataReplicationInitiation`](crate::model::DataReplicationInitiation)
+/// See [`DataReplicationInitiation`](crate::model::DataReplicationInitiation).
 pub mod data_replication_initiation {
 
-    /// A builder for [`DataReplicationInitiation`](crate::model::DataReplicationInitiation)
-    #[non_exhaustive]
+    /// A builder for [`DataReplicationInitiation`](crate::model::DataReplicationInitiation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_date_time: std::option::Option<std::string::String>,
@@ -2614,7 +2695,7 @@ pub mod data_replication_initiation {
             self.steps = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataReplicationInitiation`](crate::model::DataReplicationInitiation)
+        /// Consumes the builder and constructs a [`DataReplicationInitiation`](crate::model::DataReplicationInitiation).
         pub fn build(self) -> crate::model::DataReplicationInitiation {
             crate::model::DataReplicationInitiation {
                 start_date_time: self.start_date_time,
@@ -2625,7 +2706,7 @@ pub mod data_replication_initiation {
     }
 }
 impl DataReplicationInitiation {
-    /// Creates a new builder-style object to manufacture [`DataReplicationInitiation`](crate::model::DataReplicationInitiation)
+    /// Creates a new builder-style object to manufacture [`DataReplicationInitiation`](crate::model::DataReplicationInitiation).
     pub fn builder() -> crate::model::data_replication_initiation::Builder {
         crate::model::data_replication_initiation::Builder::default()
     }
@@ -2636,8 +2717,10 @@ impl DataReplicationInitiation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataReplicationInitiationStep {
     /// <p>The name of the step.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::DataReplicationInitiationStepName>,
     /// <p>The status of the step.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DataReplicationInitiationStepStatus>,
 }
 impl DataReplicationInitiationStep {
@@ -2660,11 +2743,10 @@ impl std::fmt::Debug for DataReplicationInitiationStep {
         formatter.finish()
     }
 }
-/// See [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep)
+/// See [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep).
 pub mod data_replication_initiation_step {
 
-    /// A builder for [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep)
-    #[non_exhaustive]
+    /// A builder for [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::DataReplicationInitiationStepName>,
@@ -2697,7 +2779,7 @@ pub mod data_replication_initiation_step {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep)
+        /// Consumes the builder and constructs a [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep).
         pub fn build(self) -> crate::model::DataReplicationInitiationStep {
             crate::model::DataReplicationInitiationStep {
                 name: self.name,
@@ -2707,7 +2789,7 @@ pub mod data_replication_initiation_step {
     }
 }
 impl DataReplicationInitiationStep {
-    /// Creates a new builder-style object to manufacture [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep)
+    /// Creates a new builder-style object to manufacture [`DataReplicationInitiationStep`](crate::model::DataReplicationInitiationStep).
     pub fn builder() -> crate::model::data_replication_initiation_step::Builder {
         crate::model::data_replication_initiation_step::Builder::default()
     }
@@ -3012,14 +3094,19 @@ impl AsRef<str> for DataReplicationState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataReplicationInfoReplicatedDisk {
     /// <p>The name of the device.</p>
+    #[doc(hidden)]
     pub device_name: std::option::Option<std::string::String>,
     /// <p>The total amount of data to be replicated in bytes.</p>
+    #[doc(hidden)]
     pub total_storage_bytes: i64,
     /// <p>The amount of data replicated so far in bytes.</p>
+    #[doc(hidden)]
     pub replicated_storage_bytes: i64,
     /// <p>The amount of data to be rescanned in bytes.</p>
+    #[doc(hidden)]
     pub rescanned_storage_bytes: i64,
     /// <p>The size of the replication backlog in bytes.</p>
+    #[doc(hidden)]
     pub backlogged_storage_bytes: i64,
 }
 impl DataReplicationInfoReplicatedDisk {
@@ -3055,11 +3142,10 @@ impl std::fmt::Debug for DataReplicationInfoReplicatedDisk {
         formatter.finish()
     }
 }
-/// See [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk)
+/// See [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk).
 pub mod data_replication_info_replicated_disk {
 
-    /// A builder for [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk)
-    #[non_exhaustive]
+    /// A builder for [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_name: std::option::Option<std::string::String>,
@@ -3119,7 +3205,7 @@ pub mod data_replication_info_replicated_disk {
             self.backlogged_storage_bytes = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk)
+        /// Consumes the builder and constructs a [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk).
         pub fn build(self) -> crate::model::DataReplicationInfoReplicatedDisk {
             crate::model::DataReplicationInfoReplicatedDisk {
                 device_name: self.device_name,
@@ -3132,7 +3218,7 @@ pub mod data_replication_info_replicated_disk {
     }
 }
 impl DataReplicationInfoReplicatedDisk {
-    /// Creates a new builder-style object to manufacture [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk)
+    /// Creates a new builder-style object to manufacture [`DataReplicationInfoReplicatedDisk`](crate::model::DataReplicationInfoReplicatedDisk).
     pub fn builder() -> crate::model::data_replication_info_replicated_disk::Builder {
         crate::model::data_replication_info_replicated_disk::Builder::default()
     }
@@ -3206,14 +3292,19 @@ impl AsRef<str> for LastLaunchResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoverySnapshot {
     /// <p>The ID of the Recovery Snapshot.</p>
+    #[doc(hidden)]
     pub snapshot_id: std::option::Option<std::string::String>,
     /// <p>The ID of the Source Server that the snapshot was taken for.</p>
+    #[doc(hidden)]
     pub source_server_id: std::option::Option<std::string::String>,
     /// <p>The timestamp of when we expect the snapshot to be taken.</p>
+    #[doc(hidden)]
     pub expected_timestamp: std::option::Option<std::string::String>,
     /// <p>The actual timestamp that the snapshot was taken.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<std::string::String>,
     /// <p>A list of EBS snapshots.</p>
+    #[doc(hidden)]
     pub ebs_snapshots: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl RecoverySnapshot {
@@ -3249,11 +3340,10 @@ impl std::fmt::Debug for RecoverySnapshot {
         formatter.finish()
     }
 }
-/// See [`RecoverySnapshot`](crate::model::RecoverySnapshot)
+/// See [`RecoverySnapshot`](crate::model::RecoverySnapshot).
 pub mod recovery_snapshot {
 
-    /// A builder for [`RecoverySnapshot`](crate::model::RecoverySnapshot)
-    #[non_exhaustive]
+    /// A builder for [`RecoverySnapshot`](crate::model::RecoverySnapshot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshot_id: std::option::Option<std::string::String>,
@@ -3328,7 +3418,7 @@ pub mod recovery_snapshot {
             self.ebs_snapshots = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoverySnapshot`](crate::model::RecoverySnapshot)
+        /// Consumes the builder and constructs a [`RecoverySnapshot`](crate::model::RecoverySnapshot).
         pub fn build(self) -> crate::model::RecoverySnapshot {
             crate::model::RecoverySnapshot {
                 snapshot_id: self.snapshot_id,
@@ -3341,7 +3431,7 @@ pub mod recovery_snapshot {
     }
 }
 impl RecoverySnapshot {
-    /// Creates a new builder-style object to manufacture [`RecoverySnapshot`](crate::model::RecoverySnapshot)
+    /// Creates a new builder-style object to manufacture [`RecoverySnapshot`](crate::model::RecoverySnapshot).
     pub fn builder() -> crate::model::recovery_snapshot::Builder {
         crate::model::recovery_snapshot::Builder::default()
     }
@@ -3407,8 +3497,10 @@ impl AsRef<str> for RecoverySnapshotsOrder {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeRecoverySnapshotsRequestFilters {
     /// <p>The start date in a date range query.</p>
+    #[doc(hidden)]
     pub from_date_time: std::option::Option<std::string::String>,
     /// <p>The end date in a date range query.</p>
+    #[doc(hidden)]
     pub to_date_time: std::option::Option<std::string::String>,
 }
 impl DescribeRecoverySnapshotsRequestFilters {
@@ -3429,11 +3521,10 @@ impl std::fmt::Debug for DescribeRecoverySnapshotsRequestFilters {
         formatter.finish()
     }
 }
-/// See [`DescribeRecoverySnapshotsRequestFilters`](crate::model::DescribeRecoverySnapshotsRequestFilters)
+/// See [`DescribeRecoverySnapshotsRequestFilters`](crate::model::DescribeRecoverySnapshotsRequestFilters).
 pub mod describe_recovery_snapshots_request_filters {
 
-    /// A builder for [`DescribeRecoverySnapshotsRequestFilters`](crate::model::DescribeRecoverySnapshotsRequestFilters)
-    #[non_exhaustive]
+    /// A builder for [`DescribeRecoverySnapshotsRequestFilters`](crate::model::DescribeRecoverySnapshotsRequestFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) from_date_time: std::option::Option<std::string::String>,
@@ -3463,7 +3554,7 @@ pub mod describe_recovery_snapshots_request_filters {
             self.to_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeRecoverySnapshotsRequestFilters`](crate::model::DescribeRecoverySnapshotsRequestFilters)
+        /// Consumes the builder and constructs a [`DescribeRecoverySnapshotsRequestFilters`](crate::model::DescribeRecoverySnapshotsRequestFilters).
         pub fn build(self) -> crate::model::DescribeRecoverySnapshotsRequestFilters {
             crate::model::DescribeRecoverySnapshotsRequestFilters {
                 from_date_time: self.from_date_time,
@@ -3473,7 +3564,7 @@ pub mod describe_recovery_snapshots_request_filters {
     }
 }
 impl DescribeRecoverySnapshotsRequestFilters {
-    /// Creates a new builder-style object to manufacture [`DescribeRecoverySnapshotsRequestFilters`](crate::model::DescribeRecoverySnapshotsRequestFilters)
+    /// Creates a new builder-style object to manufacture [`DescribeRecoverySnapshotsRequestFilters`](crate::model::DescribeRecoverySnapshotsRequestFilters).
     pub fn builder() -> crate::model::describe_recovery_snapshots_request_filters::Builder {
         crate::model::describe_recovery_snapshots_request_filters::Builder::default()
     }
@@ -3484,23 +3575,32 @@ impl DescribeRecoverySnapshotsRequestFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Job {
     /// <p>The ID of the Job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The ARN of a Job.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The type of the Job.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::JobType>,
     /// <p>A string representing who initiated the Job.</p>
+    #[doc(hidden)]
     pub initiated_by: std::option::Option<crate::model::InitiatedBy>,
     /// <p>The date and time of when the Job was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<std::string::String>,
     /// <p>The date and time of when the Job ended.</p>
+    #[doc(hidden)]
     pub end_date_time: std::option::Option<std::string::String>,
     /// <p>The status of the Job.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobStatus>,
     /// <p>A list of servers that the Job is acting upon.</p>
+    #[doc(hidden)]
     pub participating_servers:
         std::option::Option<std::vec::Vec<crate::model::ParticipatingServer>>,
     /// <p>A list of tags associated with the Job.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -3562,11 +3662,10 @@ impl std::fmt::Debug for Job {
         formatter.finish()
     }
 }
-/// See [`Job`](crate::model::Job)
+/// See [`Job`](crate::model::Job).
 pub mod job {
 
-    /// A builder for [`Job`](crate::model::Job)
-    #[non_exhaustive]
+    /// A builder for [`Job`](crate::model::Job).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -3706,7 +3805,7 @@ pub mod job {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Job`](crate::model::Job)
+        /// Consumes the builder and constructs a [`Job`](crate::model::Job).
         pub fn build(self) -> crate::model::Job {
             crate::model::Job {
                 job_id: self.job_id,
@@ -3723,7 +3822,7 @@ pub mod job {
     }
 }
 impl Job {
-    /// Creates a new builder-style object to manufacture [`Job`](crate::model::Job)
+    /// Creates a new builder-style object to manufacture [`Job`](crate::model::Job).
     pub fn builder() -> crate::model::job::Builder {
         crate::model::job::Builder::default()
     }
@@ -3734,10 +3833,13 @@ impl Job {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ParticipatingServer {
     /// <p>The Source Server ID of a participating server.</p>
+    #[doc(hidden)]
     pub source_server_id: std::option::Option<std::string::String>,
     /// <p>The Recovery Instance ID of a participating server.</p>
+    #[doc(hidden)]
     pub recovery_instance_id: std::option::Option<std::string::String>,
     /// <p>The launch status of a participating server.</p>
+    #[doc(hidden)]
     pub launch_status: std::option::Option<crate::model::LaunchStatus>,
 }
 impl ParticipatingServer {
@@ -3763,11 +3865,10 @@ impl std::fmt::Debug for ParticipatingServer {
         formatter.finish()
     }
 }
-/// See [`ParticipatingServer`](crate::model::ParticipatingServer)
+/// See [`ParticipatingServer`](crate::model::ParticipatingServer).
 pub mod participating_server {
 
-    /// A builder for [`ParticipatingServer`](crate::model::ParticipatingServer)
-    #[non_exhaustive]
+    /// A builder for [`ParticipatingServer`](crate::model::ParticipatingServer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_server_id: std::option::Option<std::string::String>,
@@ -3814,7 +3915,7 @@ pub mod participating_server {
             self.launch_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParticipatingServer`](crate::model::ParticipatingServer)
+        /// Consumes the builder and constructs a [`ParticipatingServer`](crate::model::ParticipatingServer).
         pub fn build(self) -> crate::model::ParticipatingServer {
             crate::model::ParticipatingServer {
                 source_server_id: self.source_server_id,
@@ -3825,7 +3926,7 @@ pub mod participating_server {
     }
 }
 impl ParticipatingServer {
-    /// Creates a new builder-style object to manufacture [`ParticipatingServer`](crate::model::ParticipatingServer)
+    /// Creates a new builder-style object to manufacture [`ParticipatingServer`](crate::model::ParticipatingServer).
     pub fn builder() -> crate::model::participating_server::Builder {
         crate::model::participating_server::Builder::default()
     }
@@ -4099,8 +4200,10 @@ impl AsRef<str> for JobType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartRecoveryRequestSourceServer {
     /// <p>The ID of the Source Server you want to recover.</p>
+    #[doc(hidden)]
     pub source_server_id: std::option::Option<std::string::String>,
     /// <p>The ID of a Recovery Snapshot we want to recover from. Omit this field to launch from the latest data by taking an on-demand snapshot.</p>
+    #[doc(hidden)]
     pub recovery_snapshot_id: std::option::Option<std::string::String>,
 }
 impl StartRecoveryRequestSourceServer {
@@ -4121,11 +4224,10 @@ impl std::fmt::Debug for StartRecoveryRequestSourceServer {
         formatter.finish()
     }
 }
-/// See [`StartRecoveryRequestSourceServer`](crate::model::StartRecoveryRequestSourceServer)
+/// See [`StartRecoveryRequestSourceServer`](crate::model::StartRecoveryRequestSourceServer).
 pub mod start_recovery_request_source_server {
 
-    /// A builder for [`StartRecoveryRequestSourceServer`](crate::model::StartRecoveryRequestSourceServer)
-    #[non_exhaustive]
+    /// A builder for [`StartRecoveryRequestSourceServer`](crate::model::StartRecoveryRequestSourceServer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_server_id: std::option::Option<std::string::String>,
@@ -4158,7 +4260,7 @@ pub mod start_recovery_request_source_server {
             self.recovery_snapshot_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartRecoveryRequestSourceServer`](crate::model::StartRecoveryRequestSourceServer)
+        /// Consumes the builder and constructs a [`StartRecoveryRequestSourceServer`](crate::model::StartRecoveryRequestSourceServer).
         pub fn build(self) -> crate::model::StartRecoveryRequestSourceServer {
             crate::model::StartRecoveryRequestSourceServer {
                 source_server_id: self.source_server_id,
@@ -4168,7 +4270,7 @@ pub mod start_recovery_request_source_server {
     }
 }
 impl StartRecoveryRequestSourceServer {
-    /// Creates a new builder-style object to manufacture [`StartRecoveryRequestSourceServer`](crate::model::StartRecoveryRequestSourceServer)
+    /// Creates a new builder-style object to manufacture [`StartRecoveryRequestSourceServer`](crate::model::StartRecoveryRequestSourceServer).
     pub fn builder() -> crate::model::start_recovery_request_source_server::Builder {
         crate::model::start_recovery_request_source_server::Builder::default()
     }
@@ -4179,23 +4281,32 @@ impl StartRecoveryRequestSourceServer {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceServer {
     /// <p>The ID of the Source Server.</p>
+    #[doc(hidden)]
     pub source_server_id: std::option::Option<std::string::String>,
     /// <p>The ARN of the Source Server.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The tags associated with the Source Server.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The ID of the Recovery Instance associated with this Source Server.</p>
+    #[doc(hidden)]
     pub recovery_instance_id: std::option::Option<std::string::String>,
     /// <p>The status of the last recovery launch of this Source Server.</p>
+    #[doc(hidden)]
     pub last_launch_result: std::option::Option<crate::model::LastLaunchResult>,
     /// <p>The Data Replication Info of the Source Server.</p>
+    #[doc(hidden)]
     pub data_replication_info: std::option::Option<crate::model::DataReplicationInfo>,
     /// <p>The lifecycle information of this Source Server.</p>
+    #[doc(hidden)]
     pub life_cycle: std::option::Option<crate::model::LifeCycle>,
     /// <p>The source properties of the Source Server.</p>
+    #[doc(hidden)]
     pub source_properties: std::option::Option<crate::model::SourceProperties>,
     /// <p>The staging area of the source server.</p>
+    #[doc(hidden)]
     pub staging_area: std::option::Option<crate::model::StagingArea>,
 }
 impl SourceServer {
@@ -4254,11 +4365,10 @@ impl std::fmt::Debug for SourceServer {
         formatter.finish()
     }
 }
-/// See [`SourceServer`](crate::model::SourceServer)
+/// See [`SourceServer`](crate::model::SourceServer).
 pub mod source_server {
 
-    /// A builder for [`SourceServer`](crate::model::SourceServer)
-    #[non_exhaustive]
+    /// A builder for [`SourceServer`](crate::model::SourceServer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_server_id: std::option::Option<std::string::String>,
@@ -4400,7 +4510,7 @@ pub mod source_server {
             self.staging_area = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceServer`](crate::model::SourceServer)
+        /// Consumes the builder and constructs a [`SourceServer`](crate::model::SourceServer).
         pub fn build(self) -> crate::model::SourceServer {
             crate::model::SourceServer {
                 source_server_id: self.source_server_id,
@@ -4417,7 +4527,7 @@ pub mod source_server {
     }
 }
 impl SourceServer {
-    /// Creates a new builder-style object to manufacture [`SourceServer`](crate::model::SourceServer)
+    /// Creates a new builder-style object to manufacture [`SourceServer`](crate::model::SourceServer).
     pub fn builder() -> crate::model::source_server::Builder {
         crate::model::source_server::Builder::default()
     }
@@ -4428,10 +4538,13 @@ impl SourceServer {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSourceServersRequestFilters {
     /// <p>An array of Source Servers IDs that should be returned. An empty array means all Source Servers.</p>
+    #[doc(hidden)]
     pub source_server_i_ds: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An ID that describes the hardware of the Source Server. This is either an EC2 instance id, a VMware uuid or a mac address.</p>
+    #[doc(hidden)]
     pub hardware_id: std::option::Option<std::string::String>,
     /// <p>An array of staging account IDs that extended source servers belong to. An empty array means all source servers will be shown.</p>
+    #[doc(hidden)]
     pub staging_account_i_ds: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DescribeSourceServersRequestFilters {
@@ -4457,11 +4570,10 @@ impl std::fmt::Debug for DescribeSourceServersRequestFilters {
         formatter.finish()
     }
 }
-/// See [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters)
+/// See [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters).
 pub mod describe_source_servers_request_filters {
 
-    /// A builder for [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_server_i_ds: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -4517,7 +4629,7 @@ pub mod describe_source_servers_request_filters {
             self.staging_account_i_ds = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters)
+        /// Consumes the builder and constructs a [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters).
         pub fn build(self) -> crate::model::DescribeSourceServersRequestFilters {
             crate::model::DescribeSourceServersRequestFilters {
                 source_server_i_ds: self.source_server_i_ds,
@@ -4528,7 +4640,7 @@ pub mod describe_source_servers_request_filters {
     }
 }
 impl DescribeSourceServersRequestFilters {
-    /// Creates a new builder-style object to manufacture [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters)
+    /// Creates a new builder-style object to manufacture [`DescribeSourceServersRequestFilters`](crate::model::DescribeSourceServersRequestFilters).
     pub fn builder() -> crate::model::describe_source_servers_request_filters::Builder {
         crate::model::describe_source_servers_request_filters::Builder::default()
     }
@@ -4539,41 +4651,57 @@ impl DescribeSourceServersRequestFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicationConfigurationTemplate {
     /// <p>The Replication Configuration Template ID.</p>
+    #[doc(hidden)]
     pub replication_configuration_template_id: std::option::Option<std::string::String>,
     /// <p>The Replication Configuration Template ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The subnet to be used by the replication staging area.</p>
+    #[doc(hidden)]
     pub staging_area_subnet_id: std::option::Option<std::string::String>,
     /// <p>Whether to associate the default Elastic Disaster Recovery Security group with the Replication Configuration Template.</p>
+    #[doc(hidden)]
     pub associate_default_security_group: std::option::Option<bool>,
     /// <p>The security group IDs that will be used by the replication server.</p>
+    #[doc(hidden)]
     pub replication_servers_security_groups_i_ds:
         std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The instance type to be used for the replication server.</p>
+    #[doc(hidden)]
     pub replication_server_instance_type: std::option::Option<std::string::String>,
     /// <p>Whether to use a dedicated Replication Server in the replication staging area.</p>
+    #[doc(hidden)]
     pub use_dedicated_replication_server: std::option::Option<bool>,
     /// <p>The Staging Disk EBS volume type to be used during replication.</p>
+    #[doc(hidden)]
     pub default_large_staging_disk_type:
         std::option::Option<crate::model::ReplicationConfigurationDefaultLargeStagingDiskType>,
     /// <p>The type of EBS encryption to be used during replication.</p>
+    #[doc(hidden)]
     pub ebs_encryption: std::option::Option<crate::model::ReplicationConfigurationEbsEncryption>,
     /// <p>The ARN of the EBS encryption key to be used during replication.</p>
+    #[doc(hidden)]
     pub ebs_encryption_key_arn: std::option::Option<std::string::String>,
     /// <p>Configure bandwidth throttling for the outbound data transfer rate of the Source Server in Mbps.</p>
+    #[doc(hidden)]
     pub bandwidth_throttling: i64,
     /// <p>The data plane routing mechanism that will be used for replication.</p>
+    #[doc(hidden)]
     pub data_plane_routing:
         std::option::Option<crate::model::ReplicationConfigurationDataPlaneRouting>,
     /// <p>Whether to create a Public IP for the Recovery Instance by default.</p>
+    #[doc(hidden)]
     pub create_public_ip: std::option::Option<bool>,
     /// <p>A set of tags to be associated with all resources created in the replication staging area: EC2 replication server, EBS volumes, EBS snapshots, etc.</p>
+    #[doc(hidden)]
     pub staging_area_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A set of tags to be associated with the Replication Configuration Template resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Point in time (PIT) policy to manage snapshots taken during replication.</p>
+    #[doc(hidden)]
     pub pit_policy: std::option::Option<std::vec::Vec<crate::model::PitPolicyRule>>,
 }
 impl ReplicationConfigurationTemplate {
@@ -4697,11 +4825,10 @@ impl std::fmt::Debug for ReplicationConfigurationTemplate {
         formatter.finish()
     }
 }
-/// See [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate)
+/// See [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate).
 pub mod replication_configuration_template {
 
-    /// A builder for [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate)
-    #[non_exhaustive]
+    /// A builder for [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_configuration_template_id: std::option::Option<std::string::String>,
@@ -4987,7 +5114,7 @@ pub mod replication_configuration_template {
             self.pit_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate)
+        /// Consumes the builder and constructs a [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate).
         pub fn build(self) -> crate::model::ReplicationConfigurationTemplate {
             crate::model::ReplicationConfigurationTemplate {
                 replication_configuration_template_id: self.replication_configuration_template_id,
@@ -5012,7 +5139,7 @@ pub mod replication_configuration_template {
     }
 }
 impl ReplicationConfigurationTemplate {
-    /// Creates a new builder-style object to manufacture [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate)
+    /// Creates a new builder-style object to manufacture [`ReplicationConfigurationTemplate`](crate::model::ReplicationConfigurationTemplate).
     pub fn builder() -> crate::model::replication_configuration_template::Builder {
         crate::model::replication_configuration_template::Builder::default()
     }
@@ -5023,30 +5150,42 @@ impl ReplicationConfigurationTemplate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryInstance {
     /// <p>The EC2 instance ID of the Recovery Instance.</p>
+    #[doc(hidden)]
     pub ec2_instance_id: std::option::Option<std::string::String>,
     /// <p>The state of the EC2 instance for this Recovery Instance.</p>
+    #[doc(hidden)]
     pub ec2_instance_state: std::option::Option<crate::model::Ec2InstanceState>,
     /// <p>The ID of the Job that created the Recovery Instance.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The ID of the Recovery Instance.</p>
+    #[doc(hidden)]
     pub recovery_instance_id: std::option::Option<std::string::String>,
     /// <p>The Source Server ID that this Recovery Instance is associated with.</p>
+    #[doc(hidden)]
     pub source_server_id: std::option::Option<std::string::String>,
     /// <p>The ARN of the Recovery Instance.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>An array of tags that are associated with the Recovery Instance.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>An object representing failback related information of the Recovery Instance.</p>
+    #[doc(hidden)]
     pub failback: std::option::Option<crate::model::RecoveryInstanceFailback>,
     /// <p>The Data Replication Info of the Recovery Instance.</p>
+    #[doc(hidden)]
     pub data_replication_info:
         std::option::Option<crate::model::RecoveryInstanceDataReplicationInfo>,
     /// <p>Properties of the Recovery Instance machine.</p>
+    #[doc(hidden)]
     pub recovery_instance_properties: std::option::Option<crate::model::RecoveryInstanceProperties>,
     /// <p>The date and time of the Point in Time (PIT) snapshot that this Recovery Instance was launched from.</p>
+    #[doc(hidden)]
     pub point_in_time_snapshot_date_time: std::option::Option<std::string::String>,
     /// <p>Whether this Recovery Instance was created for a drill or for an actual Recovery event.</p>
+    #[doc(hidden)]
     pub is_drill: std::option::Option<bool>,
 }
 impl RecoveryInstance {
@@ -5130,11 +5269,10 @@ impl std::fmt::Debug for RecoveryInstance {
         formatter.finish()
     }
 }
-/// See [`RecoveryInstance`](crate::model::RecoveryInstance)
+/// See [`RecoveryInstance`](crate::model::RecoveryInstance).
 pub mod recovery_instance {
 
-    /// A builder for [`RecoveryInstance`](crate::model::RecoveryInstance)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryInstance`](crate::model::RecoveryInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ec2_instance_id: std::option::Option<std::string::String>,
@@ -5323,7 +5461,7 @@ pub mod recovery_instance {
             self.is_drill = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryInstance`](crate::model::RecoveryInstance)
+        /// Consumes the builder and constructs a [`RecoveryInstance`](crate::model::RecoveryInstance).
         pub fn build(self) -> crate::model::RecoveryInstance {
             crate::model::RecoveryInstance {
                 ec2_instance_id: self.ec2_instance_id,
@@ -5343,7 +5481,7 @@ pub mod recovery_instance {
     }
 }
 impl RecoveryInstance {
-    /// Creates a new builder-style object to manufacture [`RecoveryInstance`](crate::model::RecoveryInstance)
+    /// Creates a new builder-style object to manufacture [`RecoveryInstance`](crate::model::RecoveryInstance).
     pub fn builder() -> crate::model::recovery_instance::Builder {
         crate::model::recovery_instance::Builder::default()
     }
@@ -5354,18 +5492,25 @@ impl RecoveryInstance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryInstanceProperties {
     /// <p>The date and time the Recovery Instance properties were last updated on.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<std::string::String>,
     /// <p>Hints used to uniquely identify a machine.</p>
+    #[doc(hidden)]
     pub identification_hints: std::option::Option<crate::model::IdentificationHints>,
     /// <p>An array of network interfaces.</p>
+    #[doc(hidden)]
     pub network_interfaces: std::option::Option<std::vec::Vec<crate::model::NetworkInterface>>,
     /// <p>An array of disks.</p>
+    #[doc(hidden)]
     pub disks: std::option::Option<std::vec::Vec<crate::model::RecoveryInstanceDisk>>,
     /// <p>An array of CPUs.</p>
+    #[doc(hidden)]
     pub cpus: std::option::Option<std::vec::Vec<crate::model::Cpu>>,
     /// <p>The amount of RAM in bytes.</p>
+    #[doc(hidden)]
     pub ram_bytes: i64,
     /// <p>Operating system.</p>
+    #[doc(hidden)]
     pub os: std::option::Option<crate::model::Os>,
 }
 impl RecoveryInstanceProperties {
@@ -5411,11 +5556,10 @@ impl std::fmt::Debug for RecoveryInstanceProperties {
         formatter.finish()
     }
 }
-/// See [`RecoveryInstanceProperties`](crate::model::RecoveryInstanceProperties)
+/// See [`RecoveryInstanceProperties`](crate::model::RecoveryInstanceProperties).
 pub mod recovery_instance_properties {
 
-    /// A builder for [`RecoveryInstanceProperties`](crate::model::RecoveryInstanceProperties)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryInstanceProperties`](crate::model::RecoveryInstanceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) last_updated_date_time: std::option::Option<std::string::String>,
@@ -5531,7 +5675,7 @@ pub mod recovery_instance_properties {
             self.os = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryInstanceProperties`](crate::model::RecoveryInstanceProperties)
+        /// Consumes the builder and constructs a [`RecoveryInstanceProperties`](crate::model::RecoveryInstanceProperties).
         pub fn build(self) -> crate::model::RecoveryInstanceProperties {
             crate::model::RecoveryInstanceProperties {
                 last_updated_date_time: self.last_updated_date_time,
@@ -5546,7 +5690,7 @@ pub mod recovery_instance_properties {
     }
 }
 impl RecoveryInstanceProperties {
-    /// Creates a new builder-style object to manufacture [`RecoveryInstanceProperties`](crate::model::RecoveryInstanceProperties)
+    /// Creates a new builder-style object to manufacture [`RecoveryInstanceProperties`](crate::model::RecoveryInstanceProperties).
     pub fn builder() -> crate::model::recovery_instance_properties::Builder {
         crate::model::recovery_instance_properties::Builder::default()
     }
@@ -5557,10 +5701,13 @@ impl RecoveryInstanceProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryInstanceDisk {
     /// <p>The internal device name of this disk. This is the name that is visible on the machine itself and not from the EC2 console.</p>
+    #[doc(hidden)]
     pub internal_device_name: std::option::Option<std::string::String>,
     /// <p>The amount of storage on the disk in bytes.</p>
+    #[doc(hidden)]
     pub bytes: i64,
     /// <p>The EBS Volume ID of this disk.</p>
+    #[doc(hidden)]
     pub ebs_volume_id: std::option::Option<std::string::String>,
 }
 impl RecoveryInstanceDisk {
@@ -5586,11 +5733,10 @@ impl std::fmt::Debug for RecoveryInstanceDisk {
         formatter.finish()
     }
 }
-/// See [`RecoveryInstanceDisk`](crate::model::RecoveryInstanceDisk)
+/// See [`RecoveryInstanceDisk`](crate::model::RecoveryInstanceDisk).
 pub mod recovery_instance_disk {
 
-    /// A builder for [`RecoveryInstanceDisk`](crate::model::RecoveryInstanceDisk)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryInstanceDisk`](crate::model::RecoveryInstanceDisk).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) internal_device_name: std::option::Option<std::string::String>,
@@ -5634,7 +5780,7 @@ pub mod recovery_instance_disk {
             self.ebs_volume_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryInstanceDisk`](crate::model::RecoveryInstanceDisk)
+        /// Consumes the builder and constructs a [`RecoveryInstanceDisk`](crate::model::RecoveryInstanceDisk).
         pub fn build(self) -> crate::model::RecoveryInstanceDisk {
             crate::model::RecoveryInstanceDisk {
                 internal_device_name: self.internal_device_name,
@@ -5645,7 +5791,7 @@ pub mod recovery_instance_disk {
     }
 }
 impl RecoveryInstanceDisk {
-    /// Creates a new builder-style object to manufacture [`RecoveryInstanceDisk`](crate::model::RecoveryInstanceDisk)
+    /// Creates a new builder-style object to manufacture [`RecoveryInstanceDisk`](crate::model::RecoveryInstanceDisk).
     pub fn builder() -> crate::model::recovery_instance_disk::Builder {
         crate::model::recovery_instance_disk::Builder::default()
     }
@@ -5656,20 +5802,26 @@ impl RecoveryInstanceDisk {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryInstanceDataReplicationInfo {
     /// <p>Data replication lag duration.</p>
+    #[doc(hidden)]
     pub lag_duration: std::option::Option<std::string::String>,
     /// <p>An estimate of when the data replication will be completed.</p>
+    #[doc(hidden)]
     pub eta_date_time: std::option::Option<std::string::String>,
     /// <p>The disks that should be replicated.</p>
+    #[doc(hidden)]
     pub replicated_disks: std::option::Option<
         std::vec::Vec<crate::model::RecoveryInstanceDataReplicationInfoReplicatedDisk>,
     >,
     /// <p>The state of the data replication.</p>
+    #[doc(hidden)]
     pub data_replication_state:
         std::option::Option<crate::model::RecoveryInstanceDataReplicationState>,
     /// <p>Information about whether the data replication has been initiated.</p>
+    #[doc(hidden)]
     pub data_replication_initiation:
         std::option::Option<crate::model::RecoveryInstanceDataReplicationInitiation>,
     /// <p>Information about Data Replication</p>
+    #[doc(hidden)]
     pub data_replication_error:
         std::option::Option<crate::model::RecoveryInstanceDataReplicationError>,
 }
@@ -5723,11 +5875,10 @@ impl std::fmt::Debug for RecoveryInstanceDataReplicationInfo {
         formatter.finish()
     }
 }
-/// See [`RecoveryInstanceDataReplicationInfo`](crate::model::RecoveryInstanceDataReplicationInfo)
+/// See [`RecoveryInstanceDataReplicationInfo`](crate::model::RecoveryInstanceDataReplicationInfo).
 pub mod recovery_instance_data_replication_info {
 
-    /// A builder for [`RecoveryInstanceDataReplicationInfo`](crate::model::RecoveryInstanceDataReplicationInfo)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryInstanceDataReplicationInfo`](crate::model::RecoveryInstanceDataReplicationInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lag_duration: std::option::Option<std::string::String>,
@@ -5838,7 +5989,7 @@ pub mod recovery_instance_data_replication_info {
             self.data_replication_error = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryInstanceDataReplicationInfo`](crate::model::RecoveryInstanceDataReplicationInfo)
+        /// Consumes the builder and constructs a [`RecoveryInstanceDataReplicationInfo`](crate::model::RecoveryInstanceDataReplicationInfo).
         pub fn build(self) -> crate::model::RecoveryInstanceDataReplicationInfo {
             crate::model::RecoveryInstanceDataReplicationInfo {
                 lag_duration: self.lag_duration,
@@ -5852,7 +6003,7 @@ pub mod recovery_instance_data_replication_info {
     }
 }
 impl RecoveryInstanceDataReplicationInfo {
-    /// Creates a new builder-style object to manufacture [`RecoveryInstanceDataReplicationInfo`](crate::model::RecoveryInstanceDataReplicationInfo)
+    /// Creates a new builder-style object to manufacture [`RecoveryInstanceDataReplicationInfo`](crate::model::RecoveryInstanceDataReplicationInfo).
     pub fn builder() -> crate::model::recovery_instance_data_replication_info::Builder {
         crate::model::recovery_instance_data_replication_info::Builder::default()
     }
@@ -5863,8 +6014,10 @@ impl RecoveryInstanceDataReplicationInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryInstanceDataReplicationError {
     /// <p>Error in data replication.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::FailbackReplicationError>,
     /// <p>Error in data replication.</p>
+    #[doc(hidden)]
     pub raw_error: std::option::Option<std::string::String>,
 }
 impl RecoveryInstanceDataReplicationError {
@@ -5885,11 +6038,10 @@ impl std::fmt::Debug for RecoveryInstanceDataReplicationError {
         formatter.finish()
     }
 }
-/// See [`RecoveryInstanceDataReplicationError`](crate::model::RecoveryInstanceDataReplicationError)
+/// See [`RecoveryInstanceDataReplicationError`](crate::model::RecoveryInstanceDataReplicationError).
 pub mod recovery_instance_data_replication_error {
 
-    /// A builder for [`RecoveryInstanceDataReplicationError`](crate::model::RecoveryInstanceDataReplicationError)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryInstanceDataReplicationError`](crate::model::RecoveryInstanceDataReplicationError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error: std::option::Option<crate::model::FailbackReplicationError>,
@@ -5919,7 +6071,7 @@ pub mod recovery_instance_data_replication_error {
             self.raw_error = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryInstanceDataReplicationError`](crate::model::RecoveryInstanceDataReplicationError)
+        /// Consumes the builder and constructs a [`RecoveryInstanceDataReplicationError`](crate::model::RecoveryInstanceDataReplicationError).
         pub fn build(self) -> crate::model::RecoveryInstanceDataReplicationError {
             crate::model::RecoveryInstanceDataReplicationError {
                 error: self.error,
@@ -5929,7 +6081,7 @@ pub mod recovery_instance_data_replication_error {
     }
 }
 impl RecoveryInstanceDataReplicationError {
-    /// Creates a new builder-style object to manufacture [`RecoveryInstanceDataReplicationError`](crate::model::RecoveryInstanceDataReplicationError)
+    /// Creates a new builder-style object to manufacture [`RecoveryInstanceDataReplicationError`](crate::model::RecoveryInstanceDataReplicationError).
     pub fn builder() -> crate::model::recovery_instance_data_replication_error::Builder {
         crate::model::recovery_instance_data_replication_error::Builder::default()
     }
@@ -6053,8 +6205,10 @@ impl AsRef<str> for FailbackReplicationError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryInstanceDataReplicationInitiation {
     /// <p>The date and time of the current attempt to initiate data replication.</p>
+    #[doc(hidden)]
     pub start_date_time: std::option::Option<std::string::String>,
     /// <p>The steps of the current attempt to initiate data replication.</p>
+    #[doc(hidden)]
     pub steps: std::option::Option<
         std::vec::Vec<crate::model::RecoveryInstanceDataReplicationInitiationStep>,
     >,
@@ -6079,11 +6233,10 @@ impl std::fmt::Debug for RecoveryInstanceDataReplicationInitiation {
         formatter.finish()
     }
 }
-/// See [`RecoveryInstanceDataReplicationInitiation`](crate::model::RecoveryInstanceDataReplicationInitiation)
+/// See [`RecoveryInstanceDataReplicationInitiation`](crate::model::RecoveryInstanceDataReplicationInitiation).
 pub mod recovery_instance_data_replication_initiation {
 
-    /// A builder for [`RecoveryInstanceDataReplicationInitiation`](crate::model::RecoveryInstanceDataReplicationInitiation)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryInstanceDataReplicationInitiation`](crate::model::RecoveryInstanceDataReplicationInitiation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_date_time: std::option::Option<std::string::String>,
@@ -6129,7 +6282,7 @@ pub mod recovery_instance_data_replication_initiation {
             self.steps = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryInstanceDataReplicationInitiation`](crate::model::RecoveryInstanceDataReplicationInitiation)
+        /// Consumes the builder and constructs a [`RecoveryInstanceDataReplicationInitiation`](crate::model::RecoveryInstanceDataReplicationInitiation).
         pub fn build(self) -> crate::model::RecoveryInstanceDataReplicationInitiation {
             crate::model::RecoveryInstanceDataReplicationInitiation {
                 start_date_time: self.start_date_time,
@@ -6139,7 +6292,7 @@ pub mod recovery_instance_data_replication_initiation {
     }
 }
 impl RecoveryInstanceDataReplicationInitiation {
-    /// Creates a new builder-style object to manufacture [`RecoveryInstanceDataReplicationInitiation`](crate::model::RecoveryInstanceDataReplicationInitiation)
+    /// Creates a new builder-style object to manufacture [`RecoveryInstanceDataReplicationInitiation`](crate::model::RecoveryInstanceDataReplicationInitiation).
     pub fn builder() -> crate::model::recovery_instance_data_replication_initiation::Builder {
         crate::model::recovery_instance_data_replication_initiation::Builder::default()
     }
@@ -6150,8 +6303,10 @@ impl RecoveryInstanceDataReplicationInitiation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryInstanceDataReplicationInitiationStep {
     /// <p>The name of the step.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::RecoveryInstanceDataReplicationInitiationStepName>,
     /// <p>The status of the step.</p>
+    #[doc(hidden)]
     pub status:
         std::option::Option<crate::model::RecoveryInstanceDataReplicationInitiationStepStatus>,
 }
@@ -6178,11 +6333,10 @@ impl std::fmt::Debug for RecoveryInstanceDataReplicationInitiationStep {
         formatter.finish()
     }
 }
-/// See [`RecoveryInstanceDataReplicationInitiationStep`](crate::model::RecoveryInstanceDataReplicationInitiationStep)
+/// See [`RecoveryInstanceDataReplicationInitiationStep`](crate::model::RecoveryInstanceDataReplicationInitiationStep).
 pub mod recovery_instance_data_replication_initiation_step {
 
-    /// A builder for [`RecoveryInstanceDataReplicationInitiationStep`](crate::model::RecoveryInstanceDataReplicationInitiationStep)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryInstanceDataReplicationInitiationStep`](crate::model::RecoveryInstanceDataReplicationInitiationStep).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name:
@@ -6227,7 +6381,7 @@ pub mod recovery_instance_data_replication_initiation_step {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryInstanceDataReplicationInitiationStep`](crate::model::RecoveryInstanceDataReplicationInitiationStep)
+        /// Consumes the builder and constructs a [`RecoveryInstanceDataReplicationInitiationStep`](crate::model::RecoveryInstanceDataReplicationInitiationStep).
         pub fn build(self) -> crate::model::RecoveryInstanceDataReplicationInitiationStep {
             crate::model::RecoveryInstanceDataReplicationInitiationStep {
                 name: self.name,
@@ -6237,7 +6391,7 @@ pub mod recovery_instance_data_replication_initiation_step {
     }
 }
 impl RecoveryInstanceDataReplicationInitiationStep {
-    /// Creates a new builder-style object to manufacture [`RecoveryInstanceDataReplicationInitiationStep`](crate::model::RecoveryInstanceDataReplicationInitiationStep)
+    /// Creates a new builder-style object to manufacture [`RecoveryInstanceDataReplicationInitiationStep`](crate::model::RecoveryInstanceDataReplicationInitiationStep).
     pub fn builder() -> crate::model::recovery_instance_data_replication_initiation_step::Builder {
         crate::model::recovery_instance_data_replication_initiation_step::Builder::default()
     }
@@ -6502,14 +6656,19 @@ impl AsRef<str> for RecoveryInstanceDataReplicationState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryInstanceDataReplicationInfoReplicatedDisk {
     /// <p>The name of the device.</p>
+    #[doc(hidden)]
     pub device_name: std::option::Option<std::string::String>,
     /// <p>The total amount of data to be replicated in bytes.</p>
+    #[doc(hidden)]
     pub total_storage_bytes: i64,
     /// <p>The amount of data replicated so far in bytes.</p>
+    #[doc(hidden)]
     pub replicated_storage_bytes: i64,
     /// <p>The amount of data to be rescanned in bytes.</p>
+    #[doc(hidden)]
     pub rescanned_storage_bytes: i64,
     /// <p>The size of the replication backlog in bytes.</p>
+    #[doc(hidden)]
     pub backlogged_storage_bytes: i64,
 }
 impl RecoveryInstanceDataReplicationInfoReplicatedDisk {
@@ -6545,11 +6704,10 @@ impl std::fmt::Debug for RecoveryInstanceDataReplicationInfoReplicatedDisk {
         formatter.finish()
     }
 }
-/// See [`RecoveryInstanceDataReplicationInfoReplicatedDisk`](crate::model::RecoveryInstanceDataReplicationInfoReplicatedDisk)
+/// See [`RecoveryInstanceDataReplicationInfoReplicatedDisk`](crate::model::RecoveryInstanceDataReplicationInfoReplicatedDisk).
 pub mod recovery_instance_data_replication_info_replicated_disk {
 
-    /// A builder for [`RecoveryInstanceDataReplicationInfoReplicatedDisk`](crate::model::RecoveryInstanceDataReplicationInfoReplicatedDisk)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryInstanceDataReplicationInfoReplicatedDisk`](crate::model::RecoveryInstanceDataReplicationInfoReplicatedDisk).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_name: std::option::Option<std::string::String>,
@@ -6609,7 +6767,7 @@ pub mod recovery_instance_data_replication_info_replicated_disk {
             self.backlogged_storage_bytes = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryInstanceDataReplicationInfoReplicatedDisk`](crate::model::RecoveryInstanceDataReplicationInfoReplicatedDisk)
+        /// Consumes the builder and constructs a [`RecoveryInstanceDataReplicationInfoReplicatedDisk`](crate::model::RecoveryInstanceDataReplicationInfoReplicatedDisk).
         pub fn build(self) -> crate::model::RecoveryInstanceDataReplicationInfoReplicatedDisk {
             crate::model::RecoveryInstanceDataReplicationInfoReplicatedDisk {
                 device_name: self.device_name,
@@ -6622,7 +6780,7 @@ pub mod recovery_instance_data_replication_info_replicated_disk {
     }
 }
 impl RecoveryInstanceDataReplicationInfoReplicatedDisk {
-    /// Creates a new builder-style object to manufacture [`RecoveryInstanceDataReplicationInfoReplicatedDisk`](crate::model::RecoveryInstanceDataReplicationInfoReplicatedDisk)
+    /// Creates a new builder-style object to manufacture [`RecoveryInstanceDataReplicationInfoReplicatedDisk`](crate::model::RecoveryInstanceDataReplicationInfoReplicatedDisk).
     pub fn builder(
     ) -> crate::model::recovery_instance_data_replication_info_replicated_disk::Builder {
         crate::model::recovery_instance_data_replication_info_replicated_disk::Builder::default()
@@ -6634,22 +6792,31 @@ impl RecoveryInstanceDataReplicationInfoReplicatedDisk {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryInstanceFailback {
     /// <p>The ID of the failback client that this Recovery Instance is associated with.</p>
+    #[doc(hidden)]
     pub failback_client_id: std::option::Option<std::string::String>,
     /// <p>The Job ID of the last failback log for this Recovery Instance.</p>
+    #[doc(hidden)]
     pub failback_job_id: std::option::Option<std::string::String>,
     /// <p>The date and time that the failback initiation started.</p>
+    #[doc(hidden)]
     pub failback_initiation_time: std::option::Option<std::string::String>,
     /// <p>The state of the failback process that this Recovery Instance is in.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::FailbackState>,
     /// <p>The date and time the agent on the Recovery Instance was last seen by the service.</p>
+    #[doc(hidden)]
     pub agent_last_seen_by_service_date_time: std::option::Option<std::string::String>,
     /// <p>The date and time that the failback client was last seen by the service.</p>
+    #[doc(hidden)]
     pub failback_client_last_seen_by_service_date_time: std::option::Option<std::string::String>,
     /// <p>Whether we are failing back to the original Source Server for this Recovery Instance.</p>
+    #[doc(hidden)]
     pub failback_to_original_server: std::option::Option<bool>,
     /// <p>The date and time of the first byte that was replicated from the Recovery Instance.</p>
+    #[doc(hidden)]
     pub first_byte_date_time: std::option::Option<std::string::String>,
     /// <p>The amount of time that the Recovery Instance has been replicating for.</p>
+    #[doc(hidden)]
     pub elapsed_replication_duration: std::option::Option<std::string::String>,
 }
 impl RecoveryInstanceFailback {
@@ -6718,11 +6885,10 @@ impl std::fmt::Debug for RecoveryInstanceFailback {
         formatter.finish()
     }
 }
-/// See [`RecoveryInstanceFailback`](crate::model::RecoveryInstanceFailback)
+/// See [`RecoveryInstanceFailback`](crate::model::RecoveryInstanceFailback).
 pub mod recovery_instance_failback {
 
-    /// A builder for [`RecoveryInstanceFailback`](crate::model::RecoveryInstanceFailback)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryInstanceFailback`](crate::model::RecoveryInstanceFailback).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failback_client_id: std::option::Option<std::string::String>,
@@ -6860,7 +7026,7 @@ pub mod recovery_instance_failback {
             self.elapsed_replication_duration = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryInstanceFailback`](crate::model::RecoveryInstanceFailback)
+        /// Consumes the builder and constructs a [`RecoveryInstanceFailback`](crate::model::RecoveryInstanceFailback).
         pub fn build(self) -> crate::model::RecoveryInstanceFailback {
             crate::model::RecoveryInstanceFailback {
                 failback_client_id: self.failback_client_id,
@@ -6878,7 +7044,7 @@ pub mod recovery_instance_failback {
     }
 }
 impl RecoveryInstanceFailback {
-    /// Creates a new builder-style object to manufacture [`RecoveryInstanceFailback`](crate::model::RecoveryInstanceFailback)
+    /// Creates a new builder-style object to manufacture [`RecoveryInstanceFailback`](crate::model::RecoveryInstanceFailback).
     pub fn builder() -> crate::model::recovery_instance_failback::Builder {
         crate::model::recovery_instance_failback::Builder::default()
     }
@@ -7045,8 +7211,10 @@ impl AsRef<str> for Ec2InstanceState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeRecoveryInstancesRequestFilters {
     /// <p>An array of Recovery Instance IDs that should be returned. An empty array means all Recovery Instances.</p>
+    #[doc(hidden)]
     pub recovery_instance_i_ds: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array of Source Server IDs for which associated Recovery Instances should be returned.</p>
+    #[doc(hidden)]
     pub source_server_i_ds: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DescribeRecoveryInstancesRequestFilters {
@@ -7067,11 +7235,10 @@ impl std::fmt::Debug for DescribeRecoveryInstancesRequestFilters {
         formatter.finish()
     }
 }
-/// See [`DescribeRecoveryInstancesRequestFilters`](crate::model::DescribeRecoveryInstancesRequestFilters)
+/// See [`DescribeRecoveryInstancesRequestFilters`](crate::model::DescribeRecoveryInstancesRequestFilters).
 pub mod describe_recovery_instances_request_filters {
 
-    /// A builder for [`DescribeRecoveryInstancesRequestFilters`](crate::model::DescribeRecoveryInstancesRequestFilters)
-    #[non_exhaustive]
+    /// A builder for [`DescribeRecoveryInstancesRequestFilters`](crate::model::DescribeRecoveryInstancesRequestFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recovery_instance_i_ds: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -7116,7 +7283,7 @@ pub mod describe_recovery_instances_request_filters {
             self.source_server_i_ds = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeRecoveryInstancesRequestFilters`](crate::model::DescribeRecoveryInstancesRequestFilters)
+        /// Consumes the builder and constructs a [`DescribeRecoveryInstancesRequestFilters`](crate::model::DescribeRecoveryInstancesRequestFilters).
         pub fn build(self) -> crate::model::DescribeRecoveryInstancesRequestFilters {
             crate::model::DescribeRecoveryInstancesRequestFilters {
                 recovery_instance_i_ds: self.recovery_instance_i_ds,
@@ -7126,7 +7293,7 @@ pub mod describe_recovery_instances_request_filters {
     }
 }
 impl DescribeRecoveryInstancesRequestFilters {
-    /// Creates a new builder-style object to manufacture [`DescribeRecoveryInstancesRequestFilters`](crate::model::DescribeRecoveryInstancesRequestFilters)
+    /// Creates a new builder-style object to manufacture [`DescribeRecoveryInstancesRequestFilters`](crate::model::DescribeRecoveryInstancesRequestFilters).
     pub fn builder() -> crate::model::describe_recovery_instances_request_filters::Builder {
         crate::model::describe_recovery_instances_request_filters::Builder::default()
     }
@@ -7137,10 +7304,13 @@ impl DescribeRecoveryInstancesRequestFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobLog {
     /// <p>The date and time the log was taken.</p>
+    #[doc(hidden)]
     pub log_date_time: std::option::Option<std::string::String>,
     /// <p>The event represents the type of a log.</p>
+    #[doc(hidden)]
     pub event: std::option::Option<crate::model::JobLogEvent>,
     /// <p>Metadata associated with a Job log.</p>
+    #[doc(hidden)]
     pub event_data: std::option::Option<crate::model::JobLogEventData>,
 }
 impl JobLog {
@@ -7166,11 +7336,10 @@ impl std::fmt::Debug for JobLog {
         formatter.finish()
     }
 }
-/// See [`JobLog`](crate::model::JobLog)
+/// See [`JobLog`](crate::model::JobLog).
 pub mod job_log {
 
-    /// A builder for [`JobLog`](crate::model::JobLog)
-    #[non_exhaustive]
+    /// A builder for [`JobLog`](crate::model::JobLog).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_date_time: std::option::Option<std::string::String>,
@@ -7214,7 +7383,7 @@ pub mod job_log {
             self.event_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobLog`](crate::model::JobLog)
+        /// Consumes the builder and constructs a [`JobLog`](crate::model::JobLog).
         pub fn build(self) -> crate::model::JobLog {
             crate::model::JobLog {
                 log_date_time: self.log_date_time,
@@ -7225,7 +7394,7 @@ pub mod job_log {
     }
 }
 impl JobLog {
-    /// Creates a new builder-style object to manufacture [`JobLog`](crate::model::JobLog)
+    /// Creates a new builder-style object to manufacture [`JobLog`](crate::model::JobLog).
     pub fn builder() -> crate::model::job_log::Builder {
         crate::model::job_log::Builder::default()
     }
@@ -7236,14 +7405,19 @@ impl JobLog {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobLogEventData {
     /// <p>The ID of a Source Server.</p>
+    #[doc(hidden)]
     pub source_server_id: std::option::Option<std::string::String>,
     /// <p>The ID of a conversion server.</p>
+    #[doc(hidden)]
     pub conversion_server_id: std::option::Option<std::string::String>,
     /// <p>The ID of a Recovery Instance.</p>
+    #[doc(hidden)]
     pub target_instance_id: std::option::Option<std::string::String>,
     /// <p>A string representing a job error.</p>
+    #[doc(hidden)]
     pub raw_error: std::option::Option<std::string::String>,
     /// <p>Properties of a conversion job</p>
+    #[doc(hidden)]
     pub conversion_properties: std::option::Option<crate::model::ConversionProperties>,
 }
 impl JobLogEventData {
@@ -7281,11 +7455,10 @@ impl std::fmt::Debug for JobLogEventData {
         formatter.finish()
     }
 }
-/// See [`JobLogEventData`](crate::model::JobLogEventData)
+/// See [`JobLogEventData`](crate::model::JobLogEventData).
 pub mod job_log_event_data {
 
-    /// A builder for [`JobLogEventData`](crate::model::JobLogEventData)
-    #[non_exhaustive]
+    /// A builder for [`JobLogEventData`](crate::model::JobLogEventData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_server_id: std::option::Option<std::string::String>,
@@ -7357,7 +7530,7 @@ pub mod job_log_event_data {
             self.conversion_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobLogEventData`](crate::model::JobLogEventData)
+        /// Consumes the builder and constructs a [`JobLogEventData`](crate::model::JobLogEventData).
         pub fn build(self) -> crate::model::JobLogEventData {
             crate::model::JobLogEventData {
                 source_server_id: self.source_server_id,
@@ -7370,7 +7543,7 @@ pub mod job_log_event_data {
     }
 }
 impl JobLogEventData {
-    /// Creates a new builder-style object to manufacture [`JobLogEventData`](crate::model::JobLogEventData)
+    /// Creates a new builder-style object to manufacture [`JobLogEventData`](crate::model::JobLogEventData).
     pub fn builder() -> crate::model::job_log_event_data::Builder {
         crate::model::job_log_event_data::Builder::default()
     }
@@ -7381,6 +7554,7 @@ impl JobLogEventData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConversionProperties {
     /// <p>A mapping between the volumes being converted and the converted snapshot ids</p>
+    #[doc(hidden)]
     pub volume_to_conversion_map: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -7388,12 +7562,16 @@ pub struct ConversionProperties {
         >,
     >,
     /// <p>The root volume name of a conversion job</p>
+    #[doc(hidden)]
     pub root_volume_name: std::option::Option<std::string::String>,
     /// <p>Whether the volume being converted uses UEFI or not</p>
+    #[doc(hidden)]
     pub force_uefi: std::option::Option<bool>,
     /// <p>The timestamp of when the snapshot being converted was taken</p>
+    #[doc(hidden)]
     pub data_timestamp: std::option::Option<std::string::String>,
     /// <p>A mapping between the volumes and their sizes</p>
+    #[doc(hidden)]
     pub volume_to_volume_size:
         std::option::Option<std::collections::HashMap<std::string::String, i64>>,
 }
@@ -7439,11 +7617,10 @@ impl std::fmt::Debug for ConversionProperties {
         formatter.finish()
     }
 }
-/// See [`ConversionProperties`](crate::model::ConversionProperties)
+/// See [`ConversionProperties`](crate::model::ConversionProperties).
 pub mod conversion_properties {
 
-    /// A builder for [`ConversionProperties`](crate::model::ConversionProperties)
-    #[non_exhaustive]
+    /// A builder for [`ConversionProperties`](crate::model::ConversionProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_to_conversion_map: std::option::Option<
@@ -7542,7 +7719,7 @@ pub mod conversion_properties {
             self.volume_to_volume_size = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConversionProperties`](crate::model::ConversionProperties)
+        /// Consumes the builder and constructs a [`ConversionProperties`](crate::model::ConversionProperties).
         pub fn build(self) -> crate::model::ConversionProperties {
             crate::model::ConversionProperties {
                 volume_to_conversion_map: self.volume_to_conversion_map,
@@ -7555,7 +7732,7 @@ pub mod conversion_properties {
     }
 }
 impl ConversionProperties {
-    /// Creates a new builder-style object to manufacture [`ConversionProperties`](crate::model::ConversionProperties)
+    /// Creates a new builder-style object to manufacture [`ConversionProperties`](crate::model::ConversionProperties).
     pub fn builder() -> crate::model::conversion_properties::Builder {
         crate::model::conversion_properties::Builder::default()
     }
@@ -7699,10 +7876,13 @@ impl AsRef<str> for JobLogEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeJobsRequestFilters {
     /// <p>An array of Job IDs that should be returned. An empty array means all jobs.</p>
+    #[doc(hidden)]
     pub job_i_ds: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The start date in a date range query.</p>
+    #[doc(hidden)]
     pub from_date: std::option::Option<std::string::String>,
     /// <p>The end date in a date range query.</p>
+    #[doc(hidden)]
     pub to_date: std::option::Option<std::string::String>,
 }
 impl DescribeJobsRequestFilters {
@@ -7728,11 +7908,10 @@ impl std::fmt::Debug for DescribeJobsRequestFilters {
         formatter.finish()
     }
 }
-/// See [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters)
+/// See [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters).
 pub mod describe_jobs_request_filters {
 
-    /// A builder for [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters)
-    #[non_exhaustive]
+    /// A builder for [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_i_ds: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -7779,7 +7958,7 @@ pub mod describe_jobs_request_filters {
             self.to_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters)
+        /// Consumes the builder and constructs a [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters).
         pub fn build(self) -> crate::model::DescribeJobsRequestFilters {
             crate::model::DescribeJobsRequestFilters {
                 job_i_ds: self.job_i_ds,
@@ -7790,7 +7969,7 @@ pub mod describe_jobs_request_filters {
     }
 }
 impl DescribeJobsRequestFilters {
-    /// Creates a new builder-style object to manufacture [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters)
+    /// Creates a new builder-style object to manufacture [`DescribeJobsRequestFilters`](crate::model::DescribeJobsRequestFilters).
     pub fn builder() -> crate::model::describe_jobs_request_filters::Builder {
         crate::model::describe_jobs_request_filters::Builder::default()
     }
@@ -7801,6 +7980,7 @@ impl DescribeJobsRequestFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Account {
     /// <p>Account ID of AWS account.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
 }
 impl Account {
@@ -7816,11 +7996,10 @@ impl std::fmt::Debug for Account {
         formatter.finish()
     }
 }
-/// See [`Account`](crate::model::Account)
+/// See [`Account`](crate::model::Account).
 pub mod account {
 
-    /// A builder for [`Account`](crate::model::Account)
-    #[non_exhaustive]
+    /// A builder for [`Account`](crate::model::Account).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -7836,7 +8015,7 @@ pub mod account {
             self.account_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Account`](crate::model::Account)
+        /// Consumes the builder and constructs a [`Account`](crate::model::Account).
         pub fn build(self) -> crate::model::Account {
             crate::model::Account {
                 account_id: self.account_id,
@@ -7845,7 +8024,7 @@ pub mod account {
     }
 }
 impl Account {
-    /// Creates a new builder-style object to manufacture [`Account`](crate::model::Account)
+    /// Creates a new builder-style object to manufacture [`Account`](crate::model::Account).
     pub fn builder() -> crate::model::account::Builder {
         crate::model::account::Builder::default()
     }
@@ -7856,10 +8035,13 @@ impl Account {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StagingSourceServer {
     /// <p>Hostname of staging source server.</p>
+    #[doc(hidden)]
     pub hostname: std::option::Option<std::string::String>,
     /// <p>The ARN of the source server.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>A list of tags associated with the staging source server.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -7889,11 +8071,10 @@ impl std::fmt::Debug for StagingSourceServer {
         formatter.finish()
     }
 }
-/// See [`StagingSourceServer`](crate::model::StagingSourceServer)
+/// See [`StagingSourceServer`](crate::model::StagingSourceServer).
 pub mod staging_source_server {
 
-    /// A builder for [`StagingSourceServer`](crate::model::StagingSourceServer)
-    #[non_exhaustive]
+    /// A builder for [`StagingSourceServer`](crate::model::StagingSourceServer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hostname: std::option::Option<std::string::String>,
@@ -7948,7 +8129,7 @@ pub mod staging_source_server {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`StagingSourceServer`](crate::model::StagingSourceServer)
+        /// Consumes the builder and constructs a [`StagingSourceServer`](crate::model::StagingSourceServer).
         pub fn build(self) -> crate::model::StagingSourceServer {
             crate::model::StagingSourceServer {
                 hostname: self.hostname,
@@ -7959,7 +8140,7 @@ pub mod staging_source_server {
     }
 }
 impl StagingSourceServer {
-    /// Creates a new builder-style object to manufacture [`StagingSourceServer`](crate::model::StagingSourceServer)
+    /// Creates a new builder-style object to manufacture [`StagingSourceServer`](crate::model::StagingSourceServer).
     pub fn builder() -> crate::model::staging_source_server::Builder {
         crate::model::staging_source_server::Builder::default()
     }

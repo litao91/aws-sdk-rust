@@ -71,8 +71,10 @@ impl AsRef<str> for ParallelDataStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ParallelDataConfig {
     /// <p>The URI of the Amazon S3 folder that contains the parallel data input file. The folder must be in the same Region as the API endpoint you are calling.</p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p>The format of the parallel data input file.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::ParallelDataFormat>,
 }
 impl ParallelDataConfig {
@@ -93,11 +95,10 @@ impl std::fmt::Debug for ParallelDataConfig {
         formatter.finish()
     }
 }
-/// See [`ParallelDataConfig`](crate::model::ParallelDataConfig)
+/// See [`ParallelDataConfig`](crate::model::ParallelDataConfig).
 pub mod parallel_data_config {
 
-    /// A builder for [`ParallelDataConfig`](crate::model::ParallelDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`ParallelDataConfig`](crate::model::ParallelDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -127,7 +128,7 @@ pub mod parallel_data_config {
             self.format = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParallelDataConfig`](crate::model::ParallelDataConfig)
+        /// Consumes the builder and constructs a [`ParallelDataConfig`](crate::model::ParallelDataConfig).
         pub fn build(self) -> crate::model::ParallelDataConfig {
             crate::model::ParallelDataConfig {
                 s3_uri: self.s3_uri,
@@ -137,7 +138,7 @@ pub mod parallel_data_config {
     }
 }
 impl ParallelDataConfig {
-    /// Creates a new builder-style object to manufacture [`ParallelDataConfig`](crate::model::ParallelDataConfig)
+    /// Creates a new builder-style object to manufacture [`ParallelDataConfig`](crate::model::ParallelDataConfig).
     pub fn builder() -> crate::model::parallel_data_config::Builder {
         crate::model::parallel_data_config::Builder::default()
     }
@@ -206,21 +207,27 @@ impl AsRef<str> for ParallelDataFormat {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TranslationSettings {
-    #[allow(missing_docs)] // documentation missing in model
+    /// <p>You can optionally specify the desired level of formality for real-time translations to supported target languages. The formality setting controls the level of formal language usage (also known as <a href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)">register</a>) in the translation output. You can set the value to informal or formal. If you don't specify a value for formality, or if the target language doesn't support formality, the translation will ignore the formality setting.</p>
+    /// <p>Note that asynchronous translation jobs don't support formality. If you provide a value for formality, the <code>StartTextTranslationJob</code> API throws an exception (InvalidRequestException).</p>
+    /// <p>For target languages that support formality, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes in the Amazon Translate Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub formality: std::option::Option<crate::model::Formality>,
     /// <p>Enable the profanity setting if you want Amazon Translate to mask profane words and phrases in your translation output.</p>
     /// <p>To mask profane words and phrases, Amazon Translate replaces them with the grawlix string “?$#@$“. This 5-character sequence is used for each profane word or phrase, regardless of the length or number of words.</p>
-    /// <p>Amazon Translate does not detect profanity in all of its supported languages. For languages that support profanity detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html#what-is-languages">Supported Languages and Language Codes in the Amazon Translate Developer Guide</a>.</p>
+    /// <p>Amazon Translate doesn't detect profanity in all of its supported languages. For languages that support profanity detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes in the Amazon Translate Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub profanity: std::option::Option<crate::model::Profanity>,
 }
 impl TranslationSettings {
-    #[allow(missing_docs)] // documentation missing in model
+    /// <p>You can optionally specify the desired level of formality for real-time translations to supported target languages. The formality setting controls the level of formal language usage (also known as <a href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)">register</a>) in the translation output. You can set the value to informal or formal. If you don't specify a value for formality, or if the target language doesn't support formality, the translation will ignore the formality setting.</p>
+    /// <p>Note that asynchronous translation jobs don't support formality. If you provide a value for formality, the <code>StartTextTranslationJob</code> API throws an exception (InvalidRequestException).</p>
+    /// <p>For target languages that support formality, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes in the Amazon Translate Developer Guide</a>.</p>
     pub fn formality(&self) -> std::option::Option<&crate::model::Formality> {
         self.formality.as_ref()
     }
     /// <p>Enable the profanity setting if you want Amazon Translate to mask profane words and phrases in your translation output.</p>
     /// <p>To mask profane words and phrases, Amazon Translate replaces them with the grawlix string “?$#@$“. This 5-character sequence is used for each profane word or phrase, regardless of the length or number of words.</p>
-    /// <p>Amazon Translate does not detect profanity in all of its supported languages. For languages that support profanity detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html#what-is-languages">Supported Languages and Language Codes in the Amazon Translate Developer Guide</a>.</p>
+    /// <p>Amazon Translate doesn't detect profanity in all of its supported languages. For languages that support profanity detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes in the Amazon Translate Developer Guide</a>.</p>
     pub fn profanity(&self) -> std::option::Option<&crate::model::Profanity> {
         self.profanity.as_ref()
     }
@@ -233,23 +240,26 @@ impl std::fmt::Debug for TranslationSettings {
         formatter.finish()
     }
 }
-/// See [`TranslationSettings`](crate::model::TranslationSettings)
+/// See [`TranslationSettings`](crate::model::TranslationSettings).
 pub mod translation_settings {
 
-    /// A builder for [`TranslationSettings`](crate::model::TranslationSettings)
-    #[non_exhaustive]
+    /// A builder for [`TranslationSettings`](crate::model::TranslationSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) formality: std::option::Option<crate::model::Formality>,
         pub(crate) profanity: std::option::Option<crate::model::Profanity>,
     }
     impl Builder {
-        #[allow(missing_docs)] // documentation missing in model
+        /// <p>You can optionally specify the desired level of formality for real-time translations to supported target languages. The formality setting controls the level of formal language usage (also known as <a href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)">register</a>) in the translation output. You can set the value to informal or formal. If you don't specify a value for formality, or if the target language doesn't support formality, the translation will ignore the formality setting.</p>
+        /// <p>Note that asynchronous translation jobs don't support formality. If you provide a value for formality, the <code>StartTextTranslationJob</code> API throws an exception (InvalidRequestException).</p>
+        /// <p>For target languages that support formality, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes in the Amazon Translate Developer Guide</a>.</p>
         pub fn formality(mut self, input: crate::model::Formality) -> Self {
             self.formality = Some(input);
             self
         }
-        #[allow(missing_docs)] // documentation missing in model
+        /// <p>You can optionally specify the desired level of formality for real-time translations to supported target languages. The formality setting controls the level of formal language usage (also known as <a href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)">register</a>) in the translation output. You can set the value to informal or formal. If you don't specify a value for formality, or if the target language doesn't support formality, the translation will ignore the formality setting.</p>
+        /// <p>Note that asynchronous translation jobs don't support formality. If you provide a value for formality, the <code>StartTextTranslationJob</code> API throws an exception (InvalidRequestException).</p>
+        /// <p>For target languages that support formality, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes in the Amazon Translate Developer Guide</a>.</p>
         pub fn set_formality(
             mut self,
             input: std::option::Option<crate::model::Formality>,
@@ -259,14 +269,14 @@ pub mod translation_settings {
         }
         /// <p>Enable the profanity setting if you want Amazon Translate to mask profane words and phrases in your translation output.</p>
         /// <p>To mask profane words and phrases, Amazon Translate replaces them with the grawlix string “?$#@$“. This 5-character sequence is used for each profane word or phrase, regardless of the length or number of words.</p>
-        /// <p>Amazon Translate does not detect profanity in all of its supported languages. For languages that support profanity detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html#what-is-languages">Supported Languages and Language Codes in the Amazon Translate Developer Guide</a>.</p>
+        /// <p>Amazon Translate doesn't detect profanity in all of its supported languages. For languages that support profanity detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes in the Amazon Translate Developer Guide</a>.</p>
         pub fn profanity(mut self, input: crate::model::Profanity) -> Self {
             self.profanity = Some(input);
             self
         }
         /// <p>Enable the profanity setting if you want Amazon Translate to mask profane words and phrases in your translation output.</p>
         /// <p>To mask profane words and phrases, Amazon Translate replaces them with the grawlix string “?$#@$“. This 5-character sequence is used for each profane word or phrase, regardless of the length or number of words.</p>
-        /// <p>Amazon Translate does not detect profanity in all of its supported languages. For languages that support profanity detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html#what-is-languages">Supported Languages and Language Codes in the Amazon Translate Developer Guide</a>.</p>
+        /// <p>Amazon Translate doesn't detect profanity in all of its supported languages. For languages that support profanity detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes in the Amazon Translate Developer Guide</a>.</p>
         pub fn set_profanity(
             mut self,
             input: std::option::Option<crate::model::Profanity>,
@@ -274,7 +284,7 @@ pub mod translation_settings {
             self.profanity = input;
             self
         }
-        /// Consumes the builder and constructs a [`TranslationSettings`](crate::model::TranslationSettings)
+        /// Consumes the builder and constructs a [`TranslationSettings`](crate::model::TranslationSettings).
         pub fn build(self) -> crate::model::TranslationSettings {
             crate::model::TranslationSettings {
                 formality: self.formality,
@@ -284,7 +294,7 @@ pub mod translation_settings {
     }
 }
 impl TranslationSettings {
-    /// Creates a new builder-style object to manufacture [`TranslationSettings`](crate::model::TranslationSettings)
+    /// Creates a new builder-style object to manufacture [`TranslationSettings`](crate::model::TranslationSettings).
     pub fn builder() -> crate::model::translation_settings::Builder {
         crate::model::translation_settings::Builder::default()
     }
@@ -401,8 +411,10 @@ impl AsRef<str> for Formality {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppliedTerminology {
     /// <p>The name of the custom terminology applied to the input text by Amazon Translate for the translated text response.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The specific terms of the custom terminology applied to the input text by Amazon Translate for the translated text response. A maximum of 250 terms will be returned, and the specific terms applied will be the first 250 terms in the source text. </p>
+    #[doc(hidden)]
     pub terms: std::option::Option<std::vec::Vec<crate::model::Term>>,
 }
 impl AppliedTerminology {
@@ -423,11 +435,10 @@ impl std::fmt::Debug for AppliedTerminology {
         formatter.finish()
     }
 }
-/// See [`AppliedTerminology`](crate::model::AppliedTerminology)
+/// See [`AppliedTerminology`](crate::model::AppliedTerminology).
 pub mod applied_terminology {
 
-    /// A builder for [`AppliedTerminology`](crate::model::AppliedTerminology)
-    #[non_exhaustive]
+    /// A builder for [`AppliedTerminology`](crate::model::AppliedTerminology).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -463,7 +474,7 @@ pub mod applied_terminology {
             self.terms = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppliedTerminology`](crate::model::AppliedTerminology)
+        /// Consumes the builder and constructs a [`AppliedTerminology`](crate::model::AppliedTerminology).
         pub fn build(self) -> crate::model::AppliedTerminology {
             crate::model::AppliedTerminology {
                 name: self.name,
@@ -473,7 +484,7 @@ pub mod applied_terminology {
     }
 }
 impl AppliedTerminology {
-    /// Creates a new builder-style object to manufacture [`AppliedTerminology`](crate::model::AppliedTerminology)
+    /// Creates a new builder-style object to manufacture [`AppliedTerminology`](crate::model::AppliedTerminology).
     pub fn builder() -> crate::model::applied_terminology::Builder {
         crate::model::applied_terminology::Builder::default()
     }
@@ -484,8 +495,10 @@ impl AppliedTerminology {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Term {
     /// <p>The source text of the term being translated by the custom terminology.</p>
+    #[doc(hidden)]
     pub source_text: std::option::Option<std::string::String>,
     /// <p>The target text of the term being translated by the custom terminology.</p>
+    #[doc(hidden)]
     pub target_text: std::option::Option<std::string::String>,
 }
 impl Term {
@@ -506,11 +519,10 @@ impl std::fmt::Debug for Term {
         formatter.finish()
     }
 }
-/// See [`Term`](crate::model::Term)
+/// See [`Term`](crate::model::Term).
 pub mod term {
 
-    /// A builder for [`Term`](crate::model::Term)
-    #[non_exhaustive]
+    /// A builder for [`Term`](crate::model::Term).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_text: std::option::Option<std::string::String>,
@@ -537,7 +549,7 @@ pub mod term {
             self.target_text = input;
             self
         }
-        /// Consumes the builder and constructs a [`Term`](crate::model::Term)
+        /// Consumes the builder and constructs a [`Term`](crate::model::Term).
         pub fn build(self) -> crate::model::Term {
             crate::model::Term {
                 source_text: self.source_text,
@@ -547,7 +559,7 @@ pub mod term {
     }
 }
 impl Term {
-    /// Creates a new builder-style object to manufacture [`Term`](crate::model::Term)
+    /// Creates a new builder-style object to manufacture [`Term`](crate::model::Term).
     pub fn builder() -> crate::model::term::Builder {
         crate::model::term::Builder::default()
     }
@@ -641,8 +653,10 @@ impl AsRef<str> for JobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputDataConfig {
     /// <p>The URI of the S3 folder that contains a translation job's output file. The folder must be in the same Region as the API endpoint that you are calling.</p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p>The encryption key used to encrypt this object.</p>
+    #[doc(hidden)]
     pub encryption_key: std::option::Option<crate::model::EncryptionKey>,
 }
 impl OutputDataConfig {
@@ -663,11 +677,10 @@ impl std::fmt::Debug for OutputDataConfig {
         formatter.finish()
     }
 }
-/// See [`OutputDataConfig`](crate::model::OutputDataConfig)
+/// See [`OutputDataConfig`](crate::model::OutputDataConfig).
 pub mod output_data_config {
 
-    /// A builder for [`OutputDataConfig`](crate::model::OutputDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`OutputDataConfig`](crate::model::OutputDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -697,7 +710,7 @@ pub mod output_data_config {
             self.encryption_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputDataConfig`](crate::model::OutputDataConfig)
+        /// Consumes the builder and constructs a [`OutputDataConfig`](crate::model::OutputDataConfig).
         pub fn build(self) -> crate::model::OutputDataConfig {
             crate::model::OutputDataConfig {
                 s3_uri: self.s3_uri,
@@ -707,7 +720,7 @@ pub mod output_data_config {
     }
 }
 impl OutputDataConfig {
-    /// Creates a new builder-style object to manufacture [`OutputDataConfig`](crate::model::OutputDataConfig)
+    /// Creates a new builder-style object to manufacture [`OutputDataConfig`](crate::model::OutputDataConfig).
     pub fn builder() -> crate::model::output_data_config::Builder {
         crate::model::output_data_config::Builder::default()
     }
@@ -718,8 +731,10 @@ impl OutputDataConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EncryptionKey {
     /// <p>The type of encryption key used by Amazon Translate to encrypt this object.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EncryptionKeyType>,
     /// <p>The Amazon Resource Name (ARN) of the encryption key being used to encrypt this object.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
 }
 impl EncryptionKey {
@@ -740,11 +755,10 @@ impl std::fmt::Debug for EncryptionKey {
         formatter.finish()
     }
 }
-/// See [`EncryptionKey`](crate::model::EncryptionKey)
+/// See [`EncryptionKey`](crate::model::EncryptionKey).
 pub mod encryption_key {
 
-    /// A builder for [`EncryptionKey`](crate::model::EncryptionKey)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionKey`](crate::model::EncryptionKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::EncryptionKeyType>,
@@ -774,7 +788,7 @@ pub mod encryption_key {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionKey`](crate::model::EncryptionKey)
+        /// Consumes the builder and constructs a [`EncryptionKey`](crate::model::EncryptionKey).
         pub fn build(self) -> crate::model::EncryptionKey {
             crate::model::EncryptionKey {
                 r#type: self.r#type,
@@ -784,7 +798,7 @@ pub mod encryption_key {
     }
 }
 impl EncryptionKey {
-    /// Creates a new builder-style object to manufacture [`EncryptionKey`](crate::model::EncryptionKey)
+    /// Creates a new builder-style object to manufacture [`EncryptionKey`](crate::model::EncryptionKey).
     pub fn builder() -> crate::model::encryption_key::Builder {
         crate::model::encryption_key::Builder::default()
     }
@@ -845,7 +859,10 @@ impl AsRef<str> for EncryptionKeyType {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputDataConfig {
-    /// <p>The URI of the AWS S3 folder that contains the input file. The folder must be in the same Region as the API endpoint you are calling.</p>
+    /// <p>The URI of the AWS S3 folder that contains the input files. Amazon Translate translates all the files in the folder. The folder must be in the same Region as the API endpoint you are calling.</p> <note>
+    /// <p>The URI can also point to a single input document, or it can provide the prefix for a collection of input documents. For example. if you use the URI <code>S3://bucketName/prefix</code> and the prefix is a single file, Amazon Translate uses that files as input. If more than one file begins with the prefix, Amazon Translate uses all of them as input.</p>
+    /// </note>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p>Describes the format of the data that you submit to Amazon Translate as input. You can specify one of the following multipurpose internet mail extension (MIME) types:</p>
     /// <ul>
@@ -858,10 +875,13 @@ pub struct InputDataConfig {
     /// </ul> <important>
     /// <p>If you structure your input data as HTML, ensure that you set this parameter to <code>text/html</code>. By doing so, you cut costs by limiting the translation to the contents of the <code>html</code> element in each file. Otherwise, if you set this parameter to <code>text/plain</code>, your costs will cover the translation of every character.</p>
     /// </important>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
 }
 impl InputDataConfig {
-    /// <p>The URI of the AWS S3 folder that contains the input file. The folder must be in the same Region as the API endpoint you are calling.</p>
+    /// <p>The URI of the AWS S3 folder that contains the input files. Amazon Translate translates all the files in the folder. The folder must be in the same Region as the API endpoint you are calling.</p> <note>
+    /// <p>The URI can also point to a single input document, or it can provide the prefix for a collection of input documents. For example. if you use the URI <code>S3://bucketName/prefix</code> and the prefix is a single file, Amazon Translate uses that files as input. If more than one file begins with the prefix, Amazon Translate uses all of them as input.</p>
+    /// </note>
     pub fn s3_uri(&self) -> std::option::Option<&str> {
         self.s3_uri.as_deref()
     }
@@ -888,23 +908,26 @@ impl std::fmt::Debug for InputDataConfig {
         formatter.finish()
     }
 }
-/// See [`InputDataConfig`](crate::model::InputDataConfig)
+/// See [`InputDataConfig`](crate::model::InputDataConfig).
 pub mod input_data_config {
 
-    /// A builder for [`InputDataConfig`](crate::model::InputDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`InputDataConfig`](crate::model::InputDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
         pub(crate) content_type: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The URI of the AWS S3 folder that contains the input file. The folder must be in the same Region as the API endpoint you are calling.</p>
+        /// <p>The URI of the AWS S3 folder that contains the input files. Amazon Translate translates all the files in the folder. The folder must be in the same Region as the API endpoint you are calling.</p> <note>
+        /// <p>The URI can also point to a single input document, or it can provide the prefix for a collection of input documents. For example. if you use the URI <code>S3://bucketName/prefix</code> and the prefix is a single file, Amazon Translate uses that files as input. If more than one file begins with the prefix, Amazon Translate uses all of them as input.</p>
+        /// </note>
         pub fn s3_uri(mut self, input: impl Into<std::string::String>) -> Self {
             self.s3_uri = Some(input.into());
             self
         }
-        /// <p>The URI of the AWS S3 folder that contains the input file. The folder must be in the same Region as the API endpoint you are calling.</p>
+        /// <p>The URI of the AWS S3 folder that contains the input files. Amazon Translate translates all the files in the folder. The folder must be in the same Region as the API endpoint you are calling.</p> <note>
+        /// <p>The URI can also point to a single input document, or it can provide the prefix for a collection of input documents. For example. if you use the URI <code>S3://bucketName/prefix</code> and the prefix is a single file, Amazon Translate uses that files as input. If more than one file begins with the prefix, Amazon Translate uses all of them as input.</p>
+        /// </note>
         pub fn set_s3_uri(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.s3_uri = input;
             self
@@ -939,7 +962,7 @@ pub mod input_data_config {
             self.content_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputDataConfig`](crate::model::InputDataConfig)
+        /// Consumes the builder and constructs a [`InputDataConfig`](crate::model::InputDataConfig).
         pub fn build(self) -> crate::model::InputDataConfig {
             crate::model::InputDataConfig {
                 s3_uri: self.s3_uri,
@@ -949,7 +972,7 @@ pub mod input_data_config {
     }
 }
 impl InputDataConfig {
-    /// Creates a new builder-style object to manufacture [`InputDataConfig`](crate::model::InputDataConfig)
+    /// Creates a new builder-style object to manufacture [`InputDataConfig`](crate::model::InputDataConfig).
     pub fn builder() -> crate::model::input_data_config::Builder {
         crate::model::input_data_config::Builder::default()
     }
@@ -960,34 +983,49 @@ impl InputDataConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TextTranslationJobProperties {
     /// <p>The ID of the translation job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The user-defined name of the translation job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The status of the translation job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>The number of documents successfully and unsuccessfully processed during the translation job.</p>
+    #[doc(hidden)]
     pub job_details: std::option::Option<crate::model::JobDetails>,
     /// <p>The language code of the language of the source text. The language must be a language supported by Amazon Translate.</p>
+    #[doc(hidden)]
     pub source_language_code: std::option::Option<std::string::String>,
     /// <p>The language code of the language of the target text. The language must be a language supported by Amazon Translate.</p>
+    #[doc(hidden)]
     pub target_language_codes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list containing the names of the terminologies applied to a translation job. Only one terminology can be applied per <code>StartTextTranslationJob</code> request at this time.</p>
+    #[doc(hidden)]
     pub terminology_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list containing the names of the parallel data resources applied to the translation job.</p>
+    #[doc(hidden)]
     pub parallel_data_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An explanation of any errors that may have occurred during the translation job.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time at which the translation job was submitted.</p>
+    #[doc(hidden)]
     pub submitted_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the translation job ended.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The input configuration properties that were specified when the job was requested.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
     /// <p>The output configuration properties that were specified when the job was requested.</p>
+    #[doc(hidden)]
     pub output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>The Amazon Resource Name (ARN) of an AWS Identity Access and Management (IAM) role that granted Amazon Translate read access to the job's input data.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>Settings that configure the translation output.</p>
+    #[doc(hidden)]
     pub settings: std::option::Option<crate::model::TranslationSettings>,
 }
 impl TextTranslationJobProperties {
@@ -1073,11 +1111,10 @@ impl std::fmt::Debug for TextTranslationJobProperties {
         formatter.finish()
     }
 }
-/// See [`TextTranslationJobProperties`](crate::model::TextTranslationJobProperties)
+/// See [`TextTranslationJobProperties`](crate::model::TextTranslationJobProperties).
 pub mod text_translation_job_properties {
 
-    /// A builder for [`TextTranslationJobProperties`](crate::model::TextTranslationJobProperties)
-    #[non_exhaustive]
+    /// A builder for [`TextTranslationJobProperties`](crate::model::TextTranslationJobProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -1301,7 +1338,7 @@ pub mod text_translation_job_properties {
             self.settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`TextTranslationJobProperties`](crate::model::TextTranslationJobProperties)
+        /// Consumes the builder and constructs a [`TextTranslationJobProperties`](crate::model::TextTranslationJobProperties).
         pub fn build(self) -> crate::model::TextTranslationJobProperties {
             crate::model::TextTranslationJobProperties {
                 job_id: self.job_id,
@@ -1324,7 +1361,7 @@ pub mod text_translation_job_properties {
     }
 }
 impl TextTranslationJobProperties {
-    /// Creates a new builder-style object to manufacture [`TextTranslationJobProperties`](crate::model::TextTranslationJobProperties)
+    /// Creates a new builder-style object to manufacture [`TextTranslationJobProperties`](crate::model::TextTranslationJobProperties).
     pub fn builder() -> crate::model::text_translation_job_properties::Builder {
         crate::model::text_translation_job_properties::Builder::default()
     }
@@ -1335,10 +1372,13 @@ impl TextTranslationJobProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobDetails {
     /// <p>The number of documents successfully processed during a translation job.</p>
+    #[doc(hidden)]
     pub translated_documents_count: std::option::Option<i32>,
     /// <p>The number of documents that could not be processed during a translation job.</p>
+    #[doc(hidden)]
     pub documents_with_errors_count: std::option::Option<i32>,
     /// <p>The number of documents used as input in a translation job.</p>
+    #[doc(hidden)]
     pub input_documents_count: std::option::Option<i32>,
 }
 impl JobDetails {
@@ -1370,11 +1410,10 @@ impl std::fmt::Debug for JobDetails {
         formatter.finish()
     }
 }
-/// See [`JobDetails`](crate::model::JobDetails)
+/// See [`JobDetails`](crate::model::JobDetails).
 pub mod job_details {
 
-    /// A builder for [`JobDetails`](crate::model::JobDetails)
-    #[non_exhaustive]
+    /// A builder for [`JobDetails`](crate::model::JobDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) translated_documents_count: std::option::Option<i32>,
@@ -1412,7 +1451,7 @@ pub mod job_details {
             self.input_documents_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobDetails`](crate::model::JobDetails)
+        /// Consumes the builder and constructs a [`JobDetails`](crate::model::JobDetails).
         pub fn build(self) -> crate::model::JobDetails {
             crate::model::JobDetails {
                 translated_documents_count: self.translated_documents_count,
@@ -1423,7 +1462,7 @@ pub mod job_details {
     }
 }
 impl JobDetails {
-    /// Creates a new builder-style object to manufacture [`JobDetails`](crate::model::JobDetails)
+    /// Creates a new builder-style object to manufacture [`JobDetails`](crate::model::JobDetails).
     pub fn builder() -> crate::model::job_details::Builder {
         crate::model::job_details::Builder::default()
     }
@@ -1434,12 +1473,16 @@ impl JobDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TextTranslationJobFilter {
     /// <p>Filters the list of jobs by name.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>Filters the list of jobs based by job status.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing and returns only the jobs submitted before the specified time. Jobs are returned in ascending order, oldest to newest.</p>
+    #[doc(hidden)]
     pub submitted_before_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing and returns only the jobs submitted after the specified time. Jobs are returned in descending order, newest to oldest.</p>
+    #[doc(hidden)]
     pub submitted_after_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TextTranslationJobFilter {
@@ -1470,11 +1513,10 @@ impl std::fmt::Debug for TextTranslationJobFilter {
         formatter.finish()
     }
 }
-/// See [`TextTranslationJobFilter`](crate::model::TextTranslationJobFilter)
+/// See [`TextTranslationJobFilter`](crate::model::TextTranslationJobFilter).
 pub mod text_translation_job_filter {
 
-    /// A builder for [`TextTranslationJobFilter`](crate::model::TextTranslationJobFilter)
-    #[non_exhaustive]
+    /// A builder for [`TextTranslationJobFilter`](crate::model::TextTranslationJobFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -1532,7 +1574,7 @@ pub mod text_translation_job_filter {
             self.submitted_after_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`TextTranslationJobFilter`](crate::model::TextTranslationJobFilter)
+        /// Consumes the builder and constructs a [`TextTranslationJobFilter`](crate::model::TextTranslationJobFilter).
         pub fn build(self) -> crate::model::TextTranslationJobFilter {
             crate::model::TextTranslationJobFilter {
                 job_name: self.job_name,
@@ -1544,7 +1586,7 @@ pub mod text_translation_job_filter {
     }
 }
 impl TextTranslationJobFilter {
-    /// Creates a new builder-style object to manufacture [`TextTranslationJobFilter`](crate::model::TextTranslationJobFilter)
+    /// Creates a new builder-style object to manufacture [`TextTranslationJobFilter`](crate::model::TextTranslationJobFilter).
     pub fn builder() -> crate::model::text_translation_job_filter::Builder {
         crate::model::text_translation_job_filter::Builder::default()
     }
@@ -1555,24 +1597,34 @@ impl TextTranslationJobFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TerminologyProperties {
     /// <p>The name of the custom terminology.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the custom terminology properties.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the custom terminology. </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The language code for the source text of the translation request for which the custom terminology is being used.</p>
+    #[doc(hidden)]
     pub source_language_code: std::option::Option<std::string::String>,
     /// <p>The language codes for the target languages available with the custom terminology resource. All possible target languages are returned in array.</p>
+    #[doc(hidden)]
     pub target_language_codes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The encryption key for the custom terminology.</p>
+    #[doc(hidden)]
     pub encryption_key: std::option::Option<crate::model::EncryptionKey>,
     /// <p>The size of the file used when importing a custom terminology.</p>
+    #[doc(hidden)]
     pub size_bytes: std::option::Option<i32>,
     /// <p>The number of terms included in the custom terminology.</p>
+    #[doc(hidden)]
     pub term_count: std::option::Option<i32>,
     /// <p>The time at which the custom terminology was created, based on the timestamp.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the custom terminology was last update, based on the timestamp.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The directionality of your terminology resource indicates whether it has one source language (uni-directional) or multiple (multi-directional). </p>
     /// <dl>
@@ -1589,12 +1641,16 @@ pub struct TerminologyProperties {
     /// <p>Any language in the terminology resource can be the source language.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub directionality: std::option::Option<crate::model::Directionality>,
     /// <p>Additional information from Amazon Translate about the terminology resource.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The number of terms in the input file that Amazon Translate skipped when you created or updated the terminology resource.</p>
+    #[doc(hidden)]
     pub skipped_term_count: std::option::Option<i32>,
     /// <p>The format of the custom terminology input file.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::TerminologyDataFormat>,
 }
 impl TerminologyProperties {
@@ -1689,11 +1745,10 @@ impl std::fmt::Debug for TerminologyProperties {
         formatter.finish()
     }
 }
-/// See [`TerminologyProperties`](crate::model::TerminologyProperties)
+/// See [`TerminologyProperties`](crate::model::TerminologyProperties).
 pub mod terminology_properties {
 
-    /// A builder for [`TerminologyProperties`](crate::model::TerminologyProperties)
-    #[non_exhaustive]
+    /// A builder for [`TerminologyProperties`](crate::model::TerminologyProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1907,7 +1962,7 @@ pub mod terminology_properties {
             self.format = input;
             self
         }
-        /// Consumes the builder and constructs a [`TerminologyProperties`](crate::model::TerminologyProperties)
+        /// Consumes the builder and constructs a [`TerminologyProperties`](crate::model::TerminologyProperties).
         pub fn build(self) -> crate::model::TerminologyProperties {
             crate::model::TerminologyProperties {
                 name: self.name,
@@ -1929,7 +1984,7 @@ pub mod terminology_properties {
     }
 }
 impl TerminologyProperties {
-    /// Creates a new builder-style object to manufacture [`TerminologyProperties`](crate::model::TerminologyProperties)
+    /// Creates a new builder-style object to manufacture [`TerminologyProperties`](crate::model::TerminologyProperties).
     pub fn builder() -> crate::model::terminology_properties::Builder {
         crate::model::terminology_properties::Builder::default()
     }
@@ -2054,38 +2109,55 @@ impl AsRef<str> for Directionality {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ParallelDataProperties {
     /// <p>The custom name assigned to the parallel data resource.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the parallel data resource.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The description assigned to the parallel data resource.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The status of the parallel data resource. When the parallel data is ready for you to use, the status is <code>ACTIVE</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ParallelDataStatus>,
     /// <p>The source language of the translations in the parallel data file.</p>
+    #[doc(hidden)]
     pub source_language_code: std::option::Option<std::string::String>,
     /// <p>The language codes for the target languages available in the parallel data file. All possible target languages are returned as an array.</p>
+    #[doc(hidden)]
     pub target_language_codes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies the format and S3 location of the parallel data input file.</p>
+    #[doc(hidden)]
     pub parallel_data_config: std::option::Option<crate::model::ParallelDataConfig>,
     /// <p>Additional information from Amazon Translate about the parallel data resource. </p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The number of UTF-8 characters that Amazon Translate imported from the parallel data input file. This number includes only the characters in your translation examples. It does not include characters that are used to format your file. For example, if you provided a Translation Memory Exchange (.tmx) file, this number does not include the tags.</p>
+    #[doc(hidden)]
     pub imported_data_size: std::option::Option<i64>,
     /// <p>The number of records successfully imported from the parallel data input file.</p>
+    #[doc(hidden)]
     pub imported_record_count: std::option::Option<i64>,
     /// <p>The number of records unsuccessfully imported from the parallel data input file.</p>
+    #[doc(hidden)]
     pub failed_record_count: std::option::Option<i64>,
     /// <p>The number of items in the input file that Amazon Translate skipped when you created or updated the parallel data resource. For example, Amazon Translate skips empty records, empty target texts, and empty lines.</p>
+    #[doc(hidden)]
     pub skipped_record_count: std::option::Option<i64>,
     /// <p>The encryption key used to encrypt this object.</p>
+    #[doc(hidden)]
     pub encryption_key: std::option::Option<crate::model::EncryptionKey>,
     /// <p>The time at which the parallel data resource was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the parallel data resource was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the most recent update attempt for the parallel data resource.</p>
+    #[doc(hidden)]
     pub latest_update_attempt_status: std::option::Option<crate::model::ParallelDataStatus>,
     /// <p>The time that the most recent update was attempted.</p>
+    #[doc(hidden)]
     pub latest_update_attempt_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ParallelDataProperties {
@@ -2186,11 +2258,10 @@ impl std::fmt::Debug for ParallelDataProperties {
         formatter.finish()
     }
 }
-/// See [`ParallelDataProperties`](crate::model::ParallelDataProperties)
+/// See [`ParallelDataProperties`](crate::model::ParallelDataProperties).
 pub mod parallel_data_properties {
 
-    /// A builder for [`ParallelDataProperties`](crate::model::ParallelDataProperties)
-    #[non_exhaustive]
+    /// A builder for [`ParallelDataProperties`](crate::model::ParallelDataProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2419,7 +2490,7 @@ pub mod parallel_data_properties {
             self.latest_update_attempt_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParallelDataProperties`](crate::model::ParallelDataProperties)
+        /// Consumes the builder and constructs a [`ParallelDataProperties`](crate::model::ParallelDataProperties).
         pub fn build(self) -> crate::model::ParallelDataProperties {
             crate::model::ParallelDataProperties {
                 name: self.name,
@@ -2444,9 +2515,179 @@ pub mod parallel_data_properties {
     }
 }
 impl ParallelDataProperties {
-    /// Creates a new builder-style object to manufacture [`ParallelDataProperties`](crate::model::ParallelDataProperties)
+    /// Creates a new builder-style object to manufacture [`ParallelDataProperties`](crate::model::ParallelDataProperties).
     pub fn builder() -> crate::model::parallel_data_properties::Builder {
         crate::model::parallel_data_properties::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum DisplayLanguageCode {
+    #[allow(missing_docs)] // documentation missing in model
+    De,
+    #[allow(missing_docs)] // documentation missing in model
+    En,
+    #[allow(missing_docs)] // documentation missing in model
+    Es,
+    #[allow(missing_docs)] // documentation missing in model
+    Fr,
+    #[allow(missing_docs)] // documentation missing in model
+    It,
+    #[allow(missing_docs)] // documentation missing in model
+    Ja,
+    #[allow(missing_docs)] // documentation missing in model
+    Ko,
+    #[allow(missing_docs)] // documentation missing in model
+    Pt,
+    #[allow(missing_docs)] // documentation missing in model
+    Zh,
+    #[allow(missing_docs)] // documentation missing in model
+    ZhTw,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for DisplayLanguageCode {
+    fn from(s: &str) -> Self {
+        match s {
+            "de" => DisplayLanguageCode::De,
+            "en" => DisplayLanguageCode::En,
+            "es" => DisplayLanguageCode::Es,
+            "fr" => DisplayLanguageCode::Fr,
+            "it" => DisplayLanguageCode::It,
+            "ja" => DisplayLanguageCode::Ja,
+            "ko" => DisplayLanguageCode::Ko,
+            "pt" => DisplayLanguageCode::Pt,
+            "zh" => DisplayLanguageCode::Zh,
+            "zh-TW" => DisplayLanguageCode::ZhTw,
+            other => DisplayLanguageCode::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for DisplayLanguageCode {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(DisplayLanguageCode::from(s))
+    }
+}
+impl DisplayLanguageCode {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            DisplayLanguageCode::De => "de",
+            DisplayLanguageCode::En => "en",
+            DisplayLanguageCode::Es => "es",
+            DisplayLanguageCode::Fr => "fr",
+            DisplayLanguageCode::It => "it",
+            DisplayLanguageCode::Ja => "ja",
+            DisplayLanguageCode::Ko => "ko",
+            DisplayLanguageCode::Pt => "pt",
+            DisplayLanguageCode::Zh => "zh",
+            DisplayLanguageCode::ZhTw => "zh-TW",
+            DisplayLanguageCode::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &[
+            "de", "en", "es", "fr", "it", "ja", "ko", "pt", "zh", "zh-TW",
+        ]
+    }
+}
+impl AsRef<str> for DisplayLanguageCode {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+/// <p>A supported language.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct Language {
+    /// <p>Language name of the supported language.</p>
+    #[doc(hidden)]
+    pub language_name: std::option::Option<std::string::String>,
+    /// <p>Language code for the supported language.</p>
+    #[doc(hidden)]
+    pub language_code: std::option::Option<std::string::String>,
+}
+impl Language {
+    /// <p>Language name of the supported language.</p>
+    pub fn language_name(&self) -> std::option::Option<&str> {
+        self.language_name.as_deref()
+    }
+    /// <p>Language code for the supported language.</p>
+    pub fn language_code(&self) -> std::option::Option<&str> {
+        self.language_code.as_deref()
+    }
+}
+impl std::fmt::Debug for Language {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("Language");
+        formatter.field("language_name", &self.language_name);
+        formatter.field("language_code", &self.language_code);
+        formatter.finish()
+    }
+}
+/// See [`Language`](crate::model::Language).
+pub mod language {
+
+    /// A builder for [`Language`](crate::model::Language).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) language_name: std::option::Option<std::string::String>,
+        pub(crate) language_code: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>Language name of the supported language.</p>
+        pub fn language_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.language_name = Some(input.into());
+            self
+        }
+        /// <p>Language name of the supported language.</p>
+        pub fn set_language_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.language_name = input;
+            self
+        }
+        /// <p>Language code for the supported language.</p>
+        pub fn language_code(mut self, input: impl Into<std::string::String>) -> Self {
+            self.language_code = Some(input.into());
+            self
+        }
+        /// <p>Language code for the supported language.</p>
+        pub fn set_language_code(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.language_code = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`Language`](crate::model::Language).
+        pub fn build(self) -> crate::model::Language {
+            crate::model::Language {
+                language_name: self.language_name,
+                language_code: self.language_code,
+            }
+        }
+    }
+}
+impl Language {
+    /// Creates a new builder-style object to manufacture [`Language`](crate::model::Language).
+    pub fn builder() -> crate::model::language::Builder {
+        crate::model::language::Builder::default()
     }
 }
 
@@ -2455,12 +2696,14 @@ impl ParallelDataProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TerminologyDataLocation {
     /// <p>The repository type for the custom terminology data.</p>
+    #[doc(hidden)]
     pub repository_type: std::option::Option<std::string::String>,
-    /// <p>The Amazon S3 location of the most recent custom terminology input file that was successfully imported into Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.</p> <important>
+    /// <p>The Amazon S3 location of the most recent custom terminology input file that was successfully imported into Amazon Translate. The location is returned as a presigned URL that has a 30-minute expiration .</p> <important>
     /// <p>Amazon Translate doesn't scan all input files for the risk of CSV injection attacks. </p>
     /// <p>CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the program might interpret the record as a formula and run the code within it.</p>
     /// <p>Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.</p>
     /// </important>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
 }
 impl TerminologyDataLocation {
@@ -2468,7 +2711,7 @@ impl TerminologyDataLocation {
     pub fn repository_type(&self) -> std::option::Option<&str> {
         self.repository_type.as_deref()
     }
-    /// <p>The Amazon S3 location of the most recent custom terminology input file that was successfully imported into Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.</p> <important>
+    /// <p>The Amazon S3 location of the most recent custom terminology input file that was successfully imported into Amazon Translate. The location is returned as a presigned URL that has a 30-minute expiration .</p> <important>
     /// <p>Amazon Translate doesn't scan all input files for the risk of CSV injection attacks. </p>
     /// <p>CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the program might interpret the record as a formula and run the code within it.</p>
     /// <p>Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.</p>
@@ -2485,11 +2728,10 @@ impl std::fmt::Debug for TerminologyDataLocation {
         formatter.finish()
     }
 }
-/// See [`TerminologyDataLocation`](crate::model::TerminologyDataLocation)
+/// See [`TerminologyDataLocation`](crate::model::TerminologyDataLocation).
 pub mod terminology_data_location {
 
-    /// A builder for [`TerminologyDataLocation`](crate::model::TerminologyDataLocation)
-    #[non_exhaustive]
+    /// A builder for [`TerminologyDataLocation`](crate::model::TerminologyDataLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) repository_type: std::option::Option<std::string::String>,
@@ -2509,7 +2751,7 @@ pub mod terminology_data_location {
             self.repository_type = input;
             self
         }
-        /// <p>The Amazon S3 location of the most recent custom terminology input file that was successfully imported into Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.</p> <important>
+        /// <p>The Amazon S3 location of the most recent custom terminology input file that was successfully imported into Amazon Translate. The location is returned as a presigned URL that has a 30-minute expiration .</p> <important>
         /// <p>Amazon Translate doesn't scan all input files for the risk of CSV injection attacks. </p>
         /// <p>CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the program might interpret the record as a formula and run the code within it.</p>
         /// <p>Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.</p>
@@ -2518,7 +2760,7 @@ pub mod terminology_data_location {
             self.location = Some(input.into());
             self
         }
-        /// <p>The Amazon S3 location of the most recent custom terminology input file that was successfully imported into Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.</p> <important>
+        /// <p>The Amazon S3 location of the most recent custom terminology input file that was successfully imported into Amazon Translate. The location is returned as a presigned URL that has a 30-minute expiration .</p> <important>
         /// <p>Amazon Translate doesn't scan all input files for the risk of CSV injection attacks. </p>
         /// <p>CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the program might interpret the record as a formula and run the code within it.</p>
         /// <p>Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.</p>
@@ -2527,7 +2769,7 @@ pub mod terminology_data_location {
             self.location = input;
             self
         }
-        /// Consumes the builder and constructs a [`TerminologyDataLocation`](crate::model::TerminologyDataLocation)
+        /// Consumes the builder and constructs a [`TerminologyDataLocation`](crate::model::TerminologyDataLocation).
         pub fn build(self) -> crate::model::TerminologyDataLocation {
             crate::model::TerminologyDataLocation {
                 repository_type: self.repository_type,
@@ -2537,19 +2779,21 @@ pub mod terminology_data_location {
     }
 }
 impl TerminologyDataLocation {
-    /// Creates a new builder-style object to manufacture [`TerminologyDataLocation`](crate::model::TerminologyDataLocation)
+    /// Creates a new builder-style object to manufacture [`TerminologyDataLocation`](crate::model::TerminologyDataLocation).
     pub fn builder() -> crate::model::terminology_data_location::Builder {
         crate::model::terminology_data_location::Builder::default()
     }
 }
 
-/// <p>The data associated with the custom terminology.</p>
+/// <p>The data associated with the custom terminology. For information about the custom terminology file, see <a href="https://docs.aws.amazon.com/translate/latest/dg/creating-custom-terminology.html"> Creating a Custom Terminology</a>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TerminologyData {
     /// <p>The file containing the custom terminology data. Your version of the AWS SDK performs a Base64-encoding on this field before sending a request to the AWS service. Users of the SDK should not perform Base64-encoding themselves.</p>
+    #[doc(hidden)]
     pub file: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The data format of the custom terminology.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::TerminologyDataFormat>,
     /// <p>The directionality of your terminology resource indicates whether it has one source language (uni-directional) or multiple (multi-directional).</p>
     /// <dl>
@@ -2563,10 +2807,11 @@ pub struct TerminologyData {
     /// MULTI
     /// </dt>
     /// <dd>
-    /// <p>Any language in the terminology resource can be the source language or a target language. A single multi-directional terminology resource can be used for jobs that translate different language pairs. For example, if the terminology contains terms in English and Spanish, then it can be used for jobs that translate English to Spanish and jobs that translate Spanish to English.</p>
+    /// <p>Any language in the terminology resource can be the source language or a target language. A single multi-directional terminology resource can be used for jobs that translate different language pairs. For example, if the terminology contains English and Spanish terms, it can be used for jobs that translate English to Spanish and Spanish to English.</p>
     /// </dd>
     /// </dl>
     /// <p>When you create a custom terminology resource without specifying the directionality, it behaves as uni-directional terminology, although this parameter will have a null value.</p>
+    #[doc(hidden)]
     pub directionality: std::option::Option<crate::model::Directionality>,
 }
 impl TerminologyData {
@@ -2590,7 +2835,7 @@ impl TerminologyData {
     /// MULTI
     /// </dt>
     /// <dd>
-    /// <p>Any language in the terminology resource can be the source language or a target language. A single multi-directional terminology resource can be used for jobs that translate different language pairs. For example, if the terminology contains terms in English and Spanish, then it can be used for jobs that translate English to Spanish and jobs that translate Spanish to English.</p>
+    /// <p>Any language in the terminology resource can be the source language or a target language. A single multi-directional terminology resource can be used for jobs that translate different language pairs. For example, if the terminology contains English and Spanish terms, it can be used for jobs that translate English to Spanish and Spanish to English.</p>
     /// </dd>
     /// </dl>
     /// <p>When you create a custom terminology resource without specifying the directionality, it behaves as uni-directional terminology, although this parameter will have a null value.</p>
@@ -2607,11 +2852,10 @@ impl std::fmt::Debug for TerminologyData {
         formatter.finish()
     }
 }
-/// See [`TerminologyData`](crate::model::TerminologyData)
+/// See [`TerminologyData`](crate::model::TerminologyData).
 pub mod terminology_data {
 
-    /// A builder for [`TerminologyData`](crate::model::TerminologyData)
-    #[non_exhaustive]
+    /// A builder for [`TerminologyData`](crate::model::TerminologyData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file: std::option::Option<aws_smithy_types::Blob>,
@@ -2654,7 +2898,7 @@ pub mod terminology_data {
         /// MULTI
         /// </dt>
         /// <dd>
-        /// <p>Any language in the terminology resource can be the source language or a target language. A single multi-directional terminology resource can be used for jobs that translate different language pairs. For example, if the terminology contains terms in English and Spanish, then it can be used for jobs that translate English to Spanish and jobs that translate Spanish to English.</p>
+        /// <p>Any language in the terminology resource can be the source language or a target language. A single multi-directional terminology resource can be used for jobs that translate different language pairs. For example, if the terminology contains English and Spanish terms, it can be used for jobs that translate English to Spanish and Spanish to English.</p>
         /// </dd>
         /// </dl>
         /// <p>When you create a custom terminology resource without specifying the directionality, it behaves as uni-directional terminology, although this parameter will have a null value.</p>
@@ -2674,7 +2918,7 @@ pub mod terminology_data {
         /// MULTI
         /// </dt>
         /// <dd>
-        /// <p>Any language in the terminology resource can be the source language or a target language. A single multi-directional terminology resource can be used for jobs that translate different language pairs. For example, if the terminology contains terms in English and Spanish, then it can be used for jobs that translate English to Spanish and jobs that translate Spanish to English.</p>
+        /// <p>Any language in the terminology resource can be the source language or a target language. A single multi-directional terminology resource can be used for jobs that translate different language pairs. For example, if the terminology contains English and Spanish terms, it can be used for jobs that translate English to Spanish and Spanish to English.</p>
         /// </dd>
         /// </dl>
         /// <p>When you create a custom terminology resource without specifying the directionality, it behaves as uni-directional terminology, although this parameter will have a null value.</p>
@@ -2685,7 +2929,7 @@ pub mod terminology_data {
             self.directionality = input;
             self
         }
-        /// Consumes the builder and constructs a [`TerminologyData`](crate::model::TerminologyData)
+        /// Consumes the builder and constructs a [`TerminologyData`](crate::model::TerminologyData).
         pub fn build(self) -> crate::model::TerminologyData {
             crate::model::TerminologyData {
                 file: self.file,
@@ -2696,7 +2940,7 @@ pub mod terminology_data {
     }
 }
 impl TerminologyData {
-    /// Creates a new builder-style object to manufacture [`TerminologyData`](crate::model::TerminologyData)
+    /// Creates a new builder-style object to manufacture [`TerminologyData`](crate::model::TerminologyData).
     pub fn builder() -> crate::model::terminology_data::Builder {
         crate::model::terminology_data::Builder::default()
     }
@@ -2758,12 +3002,14 @@ impl AsRef<str> for MergeStrategy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ParallelDataDataLocation {
     /// <p>Describes the repository that contains the parallel data input file.</p>
+    #[doc(hidden)]
     pub repository_type: std::option::Option<std::string::String>,
-    /// <p>The Amazon S3 location of the parallel data input file. The location is returned as a presigned URL to that has a 30 minute expiration.</p> <important>
+    /// <p>The Amazon S3 location of the parallel data input file. The location is returned as a presigned URL to that has a 30-minute expiration.</p> <important>
     /// <p>Amazon Translate doesn't scan all input files for the risk of CSV injection attacks. </p>
     /// <p>CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the program might interpret the record as a formula and run the code within it.</p>
     /// <p>Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.</p>
     /// </important>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
 }
 impl ParallelDataDataLocation {
@@ -2771,7 +3017,7 @@ impl ParallelDataDataLocation {
     pub fn repository_type(&self) -> std::option::Option<&str> {
         self.repository_type.as_deref()
     }
-    /// <p>The Amazon S3 location of the parallel data input file. The location is returned as a presigned URL to that has a 30 minute expiration.</p> <important>
+    /// <p>The Amazon S3 location of the parallel data input file. The location is returned as a presigned URL to that has a 30-minute expiration.</p> <important>
     /// <p>Amazon Translate doesn't scan all input files for the risk of CSV injection attacks. </p>
     /// <p>CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the program might interpret the record as a formula and run the code within it.</p>
     /// <p>Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.</p>
@@ -2788,11 +3034,10 @@ impl std::fmt::Debug for ParallelDataDataLocation {
         formatter.finish()
     }
 }
-/// See [`ParallelDataDataLocation`](crate::model::ParallelDataDataLocation)
+/// See [`ParallelDataDataLocation`](crate::model::ParallelDataDataLocation).
 pub mod parallel_data_data_location {
 
-    /// A builder for [`ParallelDataDataLocation`](crate::model::ParallelDataDataLocation)
-    #[non_exhaustive]
+    /// A builder for [`ParallelDataDataLocation`](crate::model::ParallelDataDataLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) repository_type: std::option::Option<std::string::String>,
@@ -2812,7 +3057,7 @@ pub mod parallel_data_data_location {
             self.repository_type = input;
             self
         }
-        /// <p>The Amazon S3 location of the parallel data input file. The location is returned as a presigned URL to that has a 30 minute expiration.</p> <important>
+        /// <p>The Amazon S3 location of the parallel data input file. The location is returned as a presigned URL to that has a 30-minute expiration.</p> <important>
         /// <p>Amazon Translate doesn't scan all input files for the risk of CSV injection attacks. </p>
         /// <p>CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the program might interpret the record as a formula and run the code within it.</p>
         /// <p>Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.</p>
@@ -2821,7 +3066,7 @@ pub mod parallel_data_data_location {
             self.location = Some(input.into());
             self
         }
-        /// <p>The Amazon S3 location of the parallel data input file. The location is returned as a presigned URL to that has a 30 minute expiration.</p> <important>
+        /// <p>The Amazon S3 location of the parallel data input file. The location is returned as a presigned URL to that has a 30-minute expiration.</p> <important>
         /// <p>Amazon Translate doesn't scan all input files for the risk of CSV injection attacks. </p>
         /// <p>CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the program might interpret the record as a formula and run the code within it.</p>
         /// <p>Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.</p>
@@ -2830,7 +3075,7 @@ pub mod parallel_data_data_location {
             self.location = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParallelDataDataLocation`](crate::model::ParallelDataDataLocation)
+        /// Consumes the builder and constructs a [`ParallelDataDataLocation`](crate::model::ParallelDataDataLocation).
         pub fn build(self) -> crate::model::ParallelDataDataLocation {
             crate::model::ParallelDataDataLocation {
                 repository_type: self.repository_type,
@@ -2840,7 +3085,7 @@ pub mod parallel_data_data_location {
     }
 }
 impl ParallelDataDataLocation {
-    /// Creates a new builder-style object to manufacture [`ParallelDataDataLocation`](crate::model::ParallelDataDataLocation)
+    /// Creates a new builder-style object to manufacture [`ParallelDataDataLocation`](crate::model::ParallelDataDataLocation).
     pub fn builder() -> crate::model::parallel_data_data_location::Builder {
         crate::model::parallel_data_data_location::Builder::default()
     }

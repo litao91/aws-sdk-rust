@@ -9,22 +9,21 @@ impl std::fmt::Debug for WriteGetObjectResponseOutput {
         formatter.finish()
     }
 }
-/// See [`WriteGetObjectResponseOutput`](crate::output::WriteGetObjectResponseOutput)
+/// See [`WriteGetObjectResponseOutput`](crate::output::WriteGetObjectResponseOutput).
 pub mod write_get_object_response_output {
 
-    /// A builder for [`WriteGetObjectResponseOutput`](crate::output::WriteGetObjectResponseOutput)
-    #[non_exhaustive]
+    /// A builder for [`WriteGetObjectResponseOutput`](crate::output::WriteGetObjectResponseOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`WriteGetObjectResponseOutput`](crate::output::WriteGetObjectResponseOutput)
+        /// Consumes the builder and constructs a [`WriteGetObjectResponseOutput`](crate::output::WriteGetObjectResponseOutput).
         pub fn build(self) -> crate::output::WriteGetObjectResponseOutput {
             crate::output::WriteGetObjectResponseOutput {}
         }
     }
 }
 impl WriteGetObjectResponseOutput {
-    /// Creates a new builder-style object to manufacture [`WriteGetObjectResponseOutput`](crate::output::WriteGetObjectResponseOutput)
+    /// Creates a new builder-style object to manufacture [`WriteGetObjectResponseOutput`](crate::output::WriteGetObjectResponseOutput).
     pub fn builder() -> crate::output::write_get_object_response_output::Builder {
         crate::output::write_get_object_response_output::Builder::default()
     }
@@ -35,20 +34,28 @@ impl WriteGetObjectResponseOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UploadPartCopyOutput {
     /// <p>The version of the source object that was copied, if you have enabled versioning on the source bucket.</p>
+    #[doc(hidden)]
     pub copy_source_version_id: std::option::Option<std::string::String>,
     /// <p>Container for all response elements.</p>
+    #[doc(hidden)]
     pub copy_part_result: std::option::Option<crate::model::CopyPartResult>,
     /// <p>The server-side encryption algorithm used when storing this object in Amazon S3 (for example, AES256, aws:kms).</p>
+    #[doc(hidden)]
     pub server_side_encryption: std::option::Option<crate::model::ServerSideEncryption>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header confirming the encryption algorithm used.</p>
+    #[doc(hidden)]
     pub sse_customer_algorithm: std::option::Option<std::string::String>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header to provide round-trip message integrity verification of the customer-provided encryption key.</p>
+    #[doc(hidden)]
     pub sse_customer_key_md5: std::option::Option<std::string::String>,
     /// <p>If present, specifies the ID of the Amazon Web Services Key Management Service (Amazon Web Services KMS) symmetric customer managed key that was used for the object.</p>
+    #[doc(hidden)]
     pub ssekms_key_id: std::option::Option<std::string::String>,
     /// <p>Indicates whether the multipart upload uses an S3 Bucket Key for server-side encryption with Amazon Web Services KMS (SSE-KMS).</p>
+    #[doc(hidden)]
     pub bucket_key_enabled: bool,
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
 }
 impl UploadPartCopyOutput {
@@ -101,11 +108,10 @@ impl std::fmt::Debug for UploadPartCopyOutput {
         formatter.finish()
     }
 }
-/// See [`UploadPartCopyOutput`](crate::output::UploadPartCopyOutput)
+/// See [`UploadPartCopyOutput`](crate::output::UploadPartCopyOutput).
 pub mod upload_part_copy_output {
 
-    /// A builder for [`UploadPartCopyOutput`](crate::output::UploadPartCopyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UploadPartCopyOutput`](crate::output::UploadPartCopyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) copy_source_version_id: std::option::Option<std::string::String>,
@@ -219,7 +225,7 @@ pub mod upload_part_copy_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`UploadPartCopyOutput`](crate::output::UploadPartCopyOutput)
+        /// Consumes the builder and constructs a [`UploadPartCopyOutput`](crate::output::UploadPartCopyOutput).
         pub fn build(self) -> crate::output::UploadPartCopyOutput {
             crate::output::UploadPartCopyOutput {
                 copy_source_version_id: self.copy_source_version_id,
@@ -235,7 +241,7 @@ pub mod upload_part_copy_output {
     }
 }
 impl UploadPartCopyOutput {
-    /// Creates a new builder-style object to manufacture [`UploadPartCopyOutput`](crate::output::UploadPartCopyOutput)
+    /// Creates a new builder-style object to manufacture [`UploadPartCopyOutput`](crate::output::UploadPartCopyOutput).
     pub fn builder() -> crate::output::upload_part_copy_output::Builder {
         crate::output::upload_part_copy_output::Builder::default()
     }
@@ -246,18 +252,37 @@ impl UploadPartCopyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UploadPartOutput {
     /// <p>The server-side encryption algorithm used when storing this object in Amazon S3 (for example, AES256, aws:kms).</p>
+    #[doc(hidden)]
     pub server_side_encryption: std::option::Option<crate::model::ServerSideEncryption>,
     /// <p>Entity tag for the uploaded object.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32_c: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha1: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha256: std::option::Option<std::string::String>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header confirming the encryption algorithm used.</p>
+    #[doc(hidden)]
     pub sse_customer_algorithm: std::option::Option<std::string::String>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header to provide round-trip message integrity verification of the customer-provided encryption key.</p>
+    #[doc(hidden)]
     pub sse_customer_key_md5: std::option::Option<std::string::String>,
     /// <p>If present, specifies the ID of the Amazon Web Services Key Management Service (Amazon Web Services KMS) symmetric customer managed key was used for the object.</p>
+    #[doc(hidden)]
     pub ssekms_key_id: std::option::Option<std::string::String>,
     /// <p>Indicates whether the multipart upload uses an S3 Bucket Key for server-side encryption with Amazon Web Services KMS (SSE-KMS).</p>
+    #[doc(hidden)]
     pub bucket_key_enabled: bool,
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
 }
 impl UploadPartOutput {
@@ -270,6 +295,22 @@ impl UploadPartOutput {
     /// <p>Entity tag for the uploaded object.</p>
     pub fn e_tag(&self) -> std::option::Option<&str> {
         self.e_tag.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32(&self) -> std::option::Option<&str> {
+        self.checksum_crc32.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32_c(&self) -> std::option::Option<&str> {
+        self.checksum_crc32_c.as_deref()
+    }
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha1(&self) -> std::option::Option<&str> {
+        self.checksum_sha1.as_deref()
+    }
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha256(&self) -> std::option::Option<&str> {
+        self.checksum_sha256.as_deref()
     }
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header confirming the encryption algorithm used.</p>
     pub fn sse_customer_algorithm(&self) -> std::option::Option<&str> {
@@ -297,6 +338,10 @@ impl std::fmt::Debug for UploadPartOutput {
         let mut formatter = f.debug_struct("UploadPartOutput");
         formatter.field("server_side_encryption", &self.server_side_encryption);
         formatter.field("e_tag", &self.e_tag);
+        formatter.field("checksum_crc32", &self.checksum_crc32);
+        formatter.field("checksum_crc32_c", &self.checksum_crc32_c);
+        formatter.field("checksum_sha1", &self.checksum_sha1);
+        formatter.field("checksum_sha256", &self.checksum_sha256);
         formatter.field("sse_customer_algorithm", &self.sse_customer_algorithm);
         formatter.field("sse_customer_key_md5", &self.sse_customer_key_md5);
         formatter.field("ssekms_key_id", &"*** Sensitive Data Redacted ***");
@@ -305,15 +350,18 @@ impl std::fmt::Debug for UploadPartOutput {
         formatter.finish()
     }
 }
-/// See [`UploadPartOutput`](crate::output::UploadPartOutput)
+/// See [`UploadPartOutput`](crate::output::UploadPartOutput).
 pub mod upload_part_output {
 
-    /// A builder for [`UploadPartOutput`](crate::output::UploadPartOutput)
-    #[non_exhaustive]
+    /// A builder for [`UploadPartOutput`](crate::output::UploadPartOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) server_side_encryption: std::option::Option<crate::model::ServerSideEncryption>,
         pub(crate) e_tag: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32_c: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha1: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha256: std::option::Option<std::string::String>,
         pub(crate) sse_customer_algorithm: std::option::Option<std::string::String>,
         pub(crate) sse_customer_key_md5: std::option::Option<std::string::String>,
         pub(crate) ssekms_key_id: std::option::Option<std::string::String>,
@@ -342,6 +390,58 @@ pub mod upload_part_output {
         /// <p>Entity tag for the uploaded object.</p>
         pub fn set_e_tag(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.e_tag = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32 = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32_c(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32_c = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32_c(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32_c = input;
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha1(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha1 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha1(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha1 = input;
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha256(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha256 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha256(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha256 = input;
             self
         }
         /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header confirming the encryption algorithm used.</p>
@@ -406,11 +506,15 @@ pub mod upload_part_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`UploadPartOutput`](crate::output::UploadPartOutput)
+        /// Consumes the builder and constructs a [`UploadPartOutput`](crate::output::UploadPartOutput).
         pub fn build(self) -> crate::output::UploadPartOutput {
             crate::output::UploadPartOutput {
                 server_side_encryption: self.server_side_encryption,
                 e_tag: self.e_tag,
+                checksum_crc32: self.checksum_crc32,
+                checksum_crc32_c: self.checksum_crc32_c,
+                checksum_sha1: self.checksum_sha1,
+                checksum_sha256: self.checksum_sha256,
                 sse_customer_algorithm: self.sse_customer_algorithm,
                 sse_customer_key_md5: self.sse_customer_key_md5,
                 ssekms_key_id: self.ssekms_key_id,
@@ -421,7 +525,7 @@ pub mod upload_part_output {
     }
 }
 impl UploadPartOutput {
-    /// Creates a new builder-style object to manufacture [`UploadPartOutput`](crate::output::UploadPartOutput)
+    /// Creates a new builder-style object to manufacture [`UploadPartOutput`](crate::output::UploadPartOutput).
     pub fn builder() -> crate::output::upload_part_output::Builder {
         crate::output::upload_part_output::Builder::default()
     }
@@ -433,7 +537,7 @@ pub struct SelectObjectContentOutput {
     /// <p>The array of results.</p>
     pub payload: aws_smithy_http::event_stream::Receiver<
         crate::model::SelectObjectContentEventStream,
-        crate::error::SelectObjectContentError,
+        crate::error::SelectObjectContentEventStreamError,
     >,
 }
 impl SelectObjectContentOutput {
@@ -442,7 +546,7 @@ impl SelectObjectContentOutput {
         &self,
     ) -> &aws_smithy_http::event_stream::Receiver<
         crate::model::SelectObjectContentEventStream,
-        crate::error::SelectObjectContentError,
+        crate::error::SelectObjectContentEventStreamError,
     > {
         &self.payload
     }
@@ -454,17 +558,16 @@ impl std::fmt::Debug for SelectObjectContentOutput {
         formatter.finish()
     }
 }
-/// See [`SelectObjectContentOutput`](crate::output::SelectObjectContentOutput)
+/// See [`SelectObjectContentOutput`](crate::output::SelectObjectContentOutput).
 pub mod select_object_content_output {
 
-    /// A builder for [`SelectObjectContentOutput`](crate::output::SelectObjectContentOutput)
-    #[non_exhaustive]
+    /// A builder for [`SelectObjectContentOutput`](crate::output::SelectObjectContentOutput).
     #[derive(std::default::Default, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) payload: std::option::Option<
             aws_smithy_http::event_stream::Receiver<
                 crate::model::SelectObjectContentEventStream,
-                crate::error::SelectObjectContentError,
+                crate::error::SelectObjectContentEventStreamError,
             >,
         >,
     }
@@ -474,7 +577,7 @@ pub mod select_object_content_output {
             mut self,
             input: aws_smithy_http::event_stream::Receiver<
                 crate::model::SelectObjectContentEventStream,
-                crate::error::SelectObjectContentError,
+                crate::error::SelectObjectContentEventStreamError,
             >,
         ) -> Self {
             self.payload = Some(input);
@@ -486,25 +589,23 @@ pub mod select_object_content_output {
             input: std::option::Option<
                 aws_smithy_http::event_stream::Receiver<
                     crate::model::SelectObjectContentEventStream,
-                    crate::error::SelectObjectContentError,
+                    crate::error::SelectObjectContentEventStreamError,
                 >,
             >,
         ) -> Self {
             self.payload = input;
             self
         }
-        /// Consumes the builder and constructs a [`SelectObjectContentOutput`](crate::output::SelectObjectContentOutput)
+        /// Consumes the builder and constructs a [`SelectObjectContentOutput`](crate::output::SelectObjectContentOutput).
         pub fn build(
             self,
-        ) -> std::result::Result<
-            crate::output::SelectObjectContentOutput,
-            aws_smithy_http::operation::BuildError,
-        > {
+        ) -> Result<crate::output::SelectObjectContentOutput, aws_smithy_http::operation::BuildError>
+        {
             Ok(
                 crate::output::SelectObjectContentOutput {
                     payload: self.payload
                         .ok_or(
-                            aws_smithy_http::operation::BuildError::MissingField { field: "payload", details: "payload was not specified but it is required when building SelectObjectContentOutput"}
+                            aws_smithy_http::operation::BuildError::MissingField { field: "payload", details: "payload was not specified but it is required when building SelectObjectContentOutput" }
                         )?
                     ,
                 }
@@ -513,7 +614,7 @@ pub mod select_object_content_output {
     }
 }
 impl SelectObjectContentOutput {
-    /// Creates a new builder-style object to manufacture [`SelectObjectContentOutput`](crate::output::SelectObjectContentOutput)
+    /// Creates a new builder-style object to manufacture [`SelectObjectContentOutput`](crate::output::SelectObjectContentOutput).
     pub fn builder() -> crate::output::select_object_content_output::Builder {
         crate::output::select_object_content_output::Builder::default()
     }
@@ -524,8 +625,10 @@ impl SelectObjectContentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RestoreObjectOutput {
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
     /// <p>Indicates the path in the provided S3 output location where Select results will be restored to.</p>
+    #[doc(hidden)]
     pub restore_output_path: std::option::Option<std::string::String>,
 }
 impl RestoreObjectOutput {
@@ -546,11 +649,10 @@ impl std::fmt::Debug for RestoreObjectOutput {
         formatter.finish()
     }
 }
-/// See [`RestoreObjectOutput`](crate::output::RestoreObjectOutput)
+/// See [`RestoreObjectOutput`](crate::output::RestoreObjectOutput).
 pub mod restore_object_output {
 
-    /// A builder for [`RestoreObjectOutput`](crate::output::RestoreObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`RestoreObjectOutput`](crate::output::RestoreObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_charged: std::option::Option<crate::model::RequestCharged>,
@@ -583,7 +685,7 @@ pub mod restore_object_output {
             self.restore_output_path = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreObjectOutput`](crate::output::RestoreObjectOutput)
+        /// Consumes the builder and constructs a [`RestoreObjectOutput`](crate::output::RestoreObjectOutput).
         pub fn build(self) -> crate::output::RestoreObjectOutput {
             crate::output::RestoreObjectOutput {
                 request_charged: self.request_charged,
@@ -593,7 +695,7 @@ pub mod restore_object_output {
     }
 }
 impl RestoreObjectOutput {
-    /// Creates a new builder-style object to manufacture [`RestoreObjectOutput`](crate::output::RestoreObjectOutput)
+    /// Creates a new builder-style object to manufacture [`RestoreObjectOutput`](crate::output::RestoreObjectOutput).
     pub fn builder() -> crate::output::restore_object_output::Builder {
         crate::output::restore_object_output::Builder::default()
     }
@@ -609,22 +711,21 @@ impl std::fmt::Debug for PutPublicAccessBlockOutput {
         formatter.finish()
     }
 }
-/// See [`PutPublicAccessBlockOutput`](crate::output::PutPublicAccessBlockOutput)
+/// See [`PutPublicAccessBlockOutput`](crate::output::PutPublicAccessBlockOutput).
 pub mod put_public_access_block_output {
 
-    /// A builder for [`PutPublicAccessBlockOutput`](crate::output::PutPublicAccessBlockOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutPublicAccessBlockOutput`](crate::output::PutPublicAccessBlockOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutPublicAccessBlockOutput`](crate::output::PutPublicAccessBlockOutput)
+        /// Consumes the builder and constructs a [`PutPublicAccessBlockOutput`](crate::output::PutPublicAccessBlockOutput).
         pub fn build(self) -> crate::output::PutPublicAccessBlockOutput {
             crate::output::PutPublicAccessBlockOutput {}
         }
     }
 }
 impl PutPublicAccessBlockOutput {
-    /// Creates a new builder-style object to manufacture [`PutPublicAccessBlockOutput`](crate::output::PutPublicAccessBlockOutput)
+    /// Creates a new builder-style object to manufacture [`PutPublicAccessBlockOutput`](crate::output::PutPublicAccessBlockOutput).
     pub fn builder() -> crate::output::put_public_access_block_output::Builder {
         crate::output::put_public_access_block_output::Builder::default()
     }
@@ -635,6 +736,7 @@ impl PutPublicAccessBlockOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutObjectTaggingOutput {
     /// <p>The versionId of the object the tag-set was added to.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
 }
 impl PutObjectTaggingOutput {
@@ -650,11 +752,10 @@ impl std::fmt::Debug for PutObjectTaggingOutput {
         formatter.finish()
     }
 }
-/// See [`PutObjectTaggingOutput`](crate::output::PutObjectTaggingOutput)
+/// See [`PutObjectTaggingOutput`](crate::output::PutObjectTaggingOutput).
 pub mod put_object_tagging_output {
 
-    /// A builder for [`PutObjectTaggingOutput`](crate::output::PutObjectTaggingOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutObjectTaggingOutput`](crate::output::PutObjectTaggingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version_id: std::option::Option<std::string::String>,
@@ -670,7 +771,7 @@ pub mod put_object_tagging_output {
             self.version_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutObjectTaggingOutput`](crate::output::PutObjectTaggingOutput)
+        /// Consumes the builder and constructs a [`PutObjectTaggingOutput`](crate::output::PutObjectTaggingOutput).
         pub fn build(self) -> crate::output::PutObjectTaggingOutput {
             crate::output::PutObjectTaggingOutput {
                 version_id: self.version_id,
@@ -679,7 +780,7 @@ pub mod put_object_tagging_output {
     }
 }
 impl PutObjectTaggingOutput {
-    /// Creates a new builder-style object to manufacture [`PutObjectTaggingOutput`](crate::output::PutObjectTaggingOutput)
+    /// Creates a new builder-style object to manufacture [`PutObjectTaggingOutput`](crate::output::PutObjectTaggingOutput).
     pub fn builder() -> crate::output::put_object_tagging_output::Builder {
         crate::output::put_object_tagging_output::Builder::default()
     }
@@ -690,6 +791,7 @@ impl PutObjectTaggingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutObjectRetentionOutput {
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
 }
 impl PutObjectRetentionOutput {
@@ -705,11 +807,10 @@ impl std::fmt::Debug for PutObjectRetentionOutput {
         formatter.finish()
     }
 }
-/// See [`PutObjectRetentionOutput`](crate::output::PutObjectRetentionOutput)
+/// See [`PutObjectRetentionOutput`](crate::output::PutObjectRetentionOutput).
 pub mod put_object_retention_output {
 
-    /// A builder for [`PutObjectRetentionOutput`](crate::output::PutObjectRetentionOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutObjectRetentionOutput`](crate::output::PutObjectRetentionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_charged: std::option::Option<crate::model::RequestCharged>,
@@ -728,7 +829,7 @@ pub mod put_object_retention_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutObjectRetentionOutput`](crate::output::PutObjectRetentionOutput)
+        /// Consumes the builder and constructs a [`PutObjectRetentionOutput`](crate::output::PutObjectRetentionOutput).
         pub fn build(self) -> crate::output::PutObjectRetentionOutput {
             crate::output::PutObjectRetentionOutput {
                 request_charged: self.request_charged,
@@ -737,7 +838,7 @@ pub mod put_object_retention_output {
     }
 }
 impl PutObjectRetentionOutput {
-    /// Creates a new builder-style object to manufacture [`PutObjectRetentionOutput`](crate::output::PutObjectRetentionOutput)
+    /// Creates a new builder-style object to manufacture [`PutObjectRetentionOutput`](crate::output::PutObjectRetentionOutput).
     pub fn builder() -> crate::output::put_object_retention_output::Builder {
         crate::output::put_object_retention_output::Builder::default()
     }
@@ -748,6 +849,7 @@ impl PutObjectRetentionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutObjectLockConfigurationOutput {
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
 }
 impl PutObjectLockConfigurationOutput {
@@ -763,11 +865,10 @@ impl std::fmt::Debug for PutObjectLockConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutObjectLockConfigurationOutput`](crate::output::PutObjectLockConfigurationOutput)
+/// See [`PutObjectLockConfigurationOutput`](crate::output::PutObjectLockConfigurationOutput).
 pub mod put_object_lock_configuration_output {
 
-    /// A builder for [`PutObjectLockConfigurationOutput`](crate::output::PutObjectLockConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutObjectLockConfigurationOutput`](crate::output::PutObjectLockConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_charged: std::option::Option<crate::model::RequestCharged>,
@@ -786,7 +887,7 @@ pub mod put_object_lock_configuration_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutObjectLockConfigurationOutput`](crate::output::PutObjectLockConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutObjectLockConfigurationOutput`](crate::output::PutObjectLockConfigurationOutput).
         pub fn build(self) -> crate::output::PutObjectLockConfigurationOutput {
             crate::output::PutObjectLockConfigurationOutput {
                 request_charged: self.request_charged,
@@ -795,7 +896,7 @@ pub mod put_object_lock_configuration_output {
     }
 }
 impl PutObjectLockConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutObjectLockConfigurationOutput`](crate::output::PutObjectLockConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutObjectLockConfigurationOutput`](crate::output::PutObjectLockConfigurationOutput).
     pub fn builder() -> crate::output::put_object_lock_configuration_output::Builder {
         crate::output::put_object_lock_configuration_output::Builder::default()
     }
@@ -806,6 +907,7 @@ impl PutObjectLockConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutObjectLegalHoldOutput {
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
 }
 impl PutObjectLegalHoldOutput {
@@ -821,11 +923,10 @@ impl std::fmt::Debug for PutObjectLegalHoldOutput {
         formatter.finish()
     }
 }
-/// See [`PutObjectLegalHoldOutput`](crate::output::PutObjectLegalHoldOutput)
+/// See [`PutObjectLegalHoldOutput`](crate::output::PutObjectLegalHoldOutput).
 pub mod put_object_legal_hold_output {
 
-    /// A builder for [`PutObjectLegalHoldOutput`](crate::output::PutObjectLegalHoldOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutObjectLegalHoldOutput`](crate::output::PutObjectLegalHoldOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_charged: std::option::Option<crate::model::RequestCharged>,
@@ -844,7 +945,7 @@ pub mod put_object_legal_hold_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutObjectLegalHoldOutput`](crate::output::PutObjectLegalHoldOutput)
+        /// Consumes the builder and constructs a [`PutObjectLegalHoldOutput`](crate::output::PutObjectLegalHoldOutput).
         pub fn build(self) -> crate::output::PutObjectLegalHoldOutput {
             crate::output::PutObjectLegalHoldOutput {
                 request_charged: self.request_charged,
@@ -853,7 +954,7 @@ pub mod put_object_legal_hold_output {
     }
 }
 impl PutObjectLegalHoldOutput {
-    /// Creates a new builder-style object to manufacture [`PutObjectLegalHoldOutput`](crate::output::PutObjectLegalHoldOutput)
+    /// Creates a new builder-style object to manufacture [`PutObjectLegalHoldOutput`](crate::output::PutObjectLegalHoldOutput).
     pub fn builder() -> crate::output::put_object_legal_hold_output::Builder {
         crate::output::put_object_legal_hold_output::Builder::default()
     }
@@ -864,6 +965,7 @@ impl PutObjectLegalHoldOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutObjectAclOutput {
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
 }
 impl PutObjectAclOutput {
@@ -879,11 +981,10 @@ impl std::fmt::Debug for PutObjectAclOutput {
         formatter.finish()
     }
 }
-/// See [`PutObjectAclOutput`](crate::output::PutObjectAclOutput)
+/// See [`PutObjectAclOutput`](crate::output::PutObjectAclOutput).
 pub mod put_object_acl_output {
 
-    /// A builder for [`PutObjectAclOutput`](crate::output::PutObjectAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutObjectAclOutput`](crate::output::PutObjectAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_charged: std::option::Option<crate::model::RequestCharged>,
@@ -902,7 +1003,7 @@ pub mod put_object_acl_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutObjectAclOutput`](crate::output::PutObjectAclOutput)
+        /// Consumes the builder and constructs a [`PutObjectAclOutput`](crate::output::PutObjectAclOutput).
         pub fn build(self) -> crate::output::PutObjectAclOutput {
             crate::output::PutObjectAclOutput {
                 request_charged: self.request_charged,
@@ -911,7 +1012,7 @@ pub mod put_object_acl_output {
     }
 }
 impl PutObjectAclOutput {
-    /// Creates a new builder-style object to manufacture [`PutObjectAclOutput`](crate::output::PutObjectAclOutput)
+    /// Creates a new builder-style object to manufacture [`PutObjectAclOutput`](crate::output::PutObjectAclOutput).
     pub fn builder() -> crate::output::put_object_acl_output::Builder {
         crate::output::put_object_acl_output::Builder::default()
     }
@@ -921,35 +1022,73 @@ impl PutObjectAclOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutObjectOutput {
-    /// <p> If the expiration is configured for the object (see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>), the response includes this header. It includes the expiry-date and rule-id key-value pairs that provide information about object expiration. The value of the rule-id is URL encoded.</p>
+    /// <p>If the expiration is configured for the object (see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>), the response includes this header. It includes the <code>expiry-date</code> and <code>rule-id</code> key-value pairs that provide information about object expiration. The value of the <code>rule-id</code> is URL-encoded.</p>
+    #[doc(hidden)]
     pub expiration: std::option::Option<std::string::String>,
     /// <p>Entity tag for the uploaded object.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32_c: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha1: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha256: std::option::Option<std::string::String>,
     /// <p>If you specified server-side encryption either with an Amazon Web Services KMS key or Amazon S3-managed encryption key in your PUT request, the response includes this header. It confirms the encryption algorithm that Amazon S3 used to encrypt the object.</p>
+    #[doc(hidden)]
     pub server_side_encryption: std::option::Option<crate::model::ServerSideEncryption>,
     /// <p>Version of the object.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header confirming the encryption algorithm used.</p>
+    #[doc(hidden)]
     pub sse_customer_algorithm: std::option::Option<std::string::String>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header to provide round-trip message integrity verification of the customer-provided encryption key.</p>
+    #[doc(hidden)]
     pub sse_customer_key_md5: std::option::Option<std::string::String>,
     /// <p>If <code>x-amz-server-side-encryption</code> is present and has the value of <code>aws:kms</code>, this header specifies the ID of the Amazon Web Services Key Management Service (Amazon Web Services KMS) symmetric customer managed key that was used for the object. </p>
+    #[doc(hidden)]
     pub ssekms_key_id: std::option::Option<std::string::String>,
     /// <p>If present, specifies the Amazon Web Services KMS Encryption Context to use for object encryption. The value of this header is a base64-encoded UTF-8 string holding JSON with the encryption context key-value pairs.</p>
+    #[doc(hidden)]
     pub ssekms_encryption_context: std::option::Option<std::string::String>,
     /// <p>Indicates whether the uploaded object uses an S3 Bucket Key for server-side encryption with Amazon Web Services KMS (SSE-KMS).</p>
+    #[doc(hidden)]
     pub bucket_key_enabled: bool,
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
 }
 impl PutObjectOutput {
-    /// <p> If the expiration is configured for the object (see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>), the response includes this header. It includes the expiry-date and rule-id key-value pairs that provide information about object expiration. The value of the rule-id is URL encoded.</p>
+    /// <p>If the expiration is configured for the object (see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>), the response includes this header. It includes the <code>expiry-date</code> and <code>rule-id</code> key-value pairs that provide information about object expiration. The value of the <code>rule-id</code> is URL-encoded.</p>
     pub fn expiration(&self) -> std::option::Option<&str> {
         self.expiration.as_deref()
     }
     /// <p>Entity tag for the uploaded object.</p>
     pub fn e_tag(&self) -> std::option::Option<&str> {
         self.e_tag.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32(&self) -> std::option::Option<&str> {
+        self.checksum_crc32.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32_c(&self) -> std::option::Option<&str> {
+        self.checksum_crc32_c.as_deref()
+    }
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha1(&self) -> std::option::Option<&str> {
+        self.checksum_sha1.as_deref()
+    }
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha256(&self) -> std::option::Option<&str> {
+        self.checksum_sha256.as_deref()
     }
     /// <p>If you specified server-side encryption either with an Amazon Web Services KMS key or Amazon S3-managed encryption key in your PUT request, the response includes this header. It confirms the encryption algorithm that Amazon S3 used to encrypt the object.</p>
     pub fn server_side_encryption(
@@ -991,6 +1130,10 @@ impl std::fmt::Debug for PutObjectOutput {
         let mut formatter = f.debug_struct("PutObjectOutput");
         formatter.field("expiration", &self.expiration);
         formatter.field("e_tag", &self.e_tag);
+        formatter.field("checksum_crc32", &self.checksum_crc32);
+        formatter.field("checksum_crc32_c", &self.checksum_crc32_c);
+        formatter.field("checksum_sha1", &self.checksum_sha1);
+        formatter.field("checksum_sha256", &self.checksum_sha256);
         formatter.field("server_side_encryption", &self.server_side_encryption);
         formatter.field("version_id", &self.version_id);
         formatter.field("sse_customer_algorithm", &self.sse_customer_algorithm);
@@ -1005,15 +1148,18 @@ impl std::fmt::Debug for PutObjectOutput {
         formatter.finish()
     }
 }
-/// See [`PutObjectOutput`](crate::output::PutObjectOutput)
+/// See [`PutObjectOutput`](crate::output::PutObjectOutput).
 pub mod put_object_output {
 
-    /// A builder for [`PutObjectOutput`](crate::output::PutObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutObjectOutput`](crate::output::PutObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) expiration: std::option::Option<std::string::String>,
         pub(crate) e_tag: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32_c: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha1: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha256: std::option::Option<std::string::String>,
         pub(crate) server_side_encryption: std::option::Option<crate::model::ServerSideEncryption>,
         pub(crate) version_id: std::option::Option<std::string::String>,
         pub(crate) sse_customer_algorithm: std::option::Option<std::string::String>,
@@ -1024,12 +1170,12 @@ pub mod put_object_output {
         pub(crate) request_charged: std::option::Option<crate::model::RequestCharged>,
     }
     impl Builder {
-        /// <p> If the expiration is configured for the object (see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>), the response includes this header. It includes the expiry-date and rule-id key-value pairs that provide information about object expiration. The value of the rule-id is URL encoded.</p>
+        /// <p>If the expiration is configured for the object (see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>), the response includes this header. It includes the <code>expiry-date</code> and <code>rule-id</code> key-value pairs that provide information about object expiration. The value of the <code>rule-id</code> is URL-encoded.</p>
         pub fn expiration(mut self, input: impl Into<std::string::String>) -> Self {
             self.expiration = Some(input.into());
             self
         }
-        /// <p> If the expiration is configured for the object (see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>), the response includes this header. It includes the expiry-date and rule-id key-value pairs that provide information about object expiration. The value of the rule-id is URL encoded.</p>
+        /// <p>If the expiration is configured for the object (see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>), the response includes this header. It includes the <code>expiry-date</code> and <code>rule-id</code> key-value pairs that provide information about object expiration. The value of the <code>rule-id</code> is URL-encoded.</p>
         pub fn set_expiration(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.expiration = input;
             self
@@ -1042,6 +1188,58 @@ pub mod put_object_output {
         /// <p>Entity tag for the uploaded object.</p>
         pub fn set_e_tag(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.e_tag = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32 = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32_c(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32_c = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32_c(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32_c = input;
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha1(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha1 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha1(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha1 = input;
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha256(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha256 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha256(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha256 = input;
             self
         }
         /// <p>If you specified server-side encryption either with an Amazon Web Services KMS key or Amazon S3-managed encryption key in your PUT request, the response includes this header. It confirms the encryption algorithm that Amazon S3 used to encrypt the object.</p>
@@ -1142,11 +1340,15 @@ pub mod put_object_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutObjectOutput`](crate::output::PutObjectOutput)
+        /// Consumes the builder and constructs a [`PutObjectOutput`](crate::output::PutObjectOutput).
         pub fn build(self) -> crate::output::PutObjectOutput {
             crate::output::PutObjectOutput {
                 expiration: self.expiration,
                 e_tag: self.e_tag,
+                checksum_crc32: self.checksum_crc32,
+                checksum_crc32_c: self.checksum_crc32_c,
+                checksum_sha1: self.checksum_sha1,
+                checksum_sha256: self.checksum_sha256,
                 server_side_encryption: self.server_side_encryption,
                 version_id: self.version_id,
                 sse_customer_algorithm: self.sse_customer_algorithm,
@@ -1160,7 +1362,7 @@ pub mod put_object_output {
     }
 }
 impl PutObjectOutput {
-    /// Creates a new builder-style object to manufacture [`PutObjectOutput`](crate::output::PutObjectOutput)
+    /// Creates a new builder-style object to manufacture [`PutObjectOutput`](crate::output::PutObjectOutput).
     pub fn builder() -> crate::output::put_object_output::Builder {
         crate::output::put_object_output::Builder::default()
     }
@@ -1176,22 +1378,21 @@ impl std::fmt::Debug for PutBucketWebsiteOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketWebsiteOutput`](crate::output::PutBucketWebsiteOutput)
+/// See [`PutBucketWebsiteOutput`](crate::output::PutBucketWebsiteOutput).
 pub mod put_bucket_website_output {
 
-    /// A builder for [`PutBucketWebsiteOutput`](crate::output::PutBucketWebsiteOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketWebsiteOutput`](crate::output::PutBucketWebsiteOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketWebsiteOutput`](crate::output::PutBucketWebsiteOutput)
+        /// Consumes the builder and constructs a [`PutBucketWebsiteOutput`](crate::output::PutBucketWebsiteOutput).
         pub fn build(self) -> crate::output::PutBucketWebsiteOutput {
             crate::output::PutBucketWebsiteOutput {}
         }
     }
 }
 impl PutBucketWebsiteOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketWebsiteOutput`](crate::output::PutBucketWebsiteOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketWebsiteOutput`](crate::output::PutBucketWebsiteOutput).
     pub fn builder() -> crate::output::put_bucket_website_output::Builder {
         crate::output::put_bucket_website_output::Builder::default()
     }
@@ -1207,22 +1408,21 @@ impl std::fmt::Debug for PutBucketVersioningOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketVersioningOutput`](crate::output::PutBucketVersioningOutput)
+/// See [`PutBucketVersioningOutput`](crate::output::PutBucketVersioningOutput).
 pub mod put_bucket_versioning_output {
 
-    /// A builder for [`PutBucketVersioningOutput`](crate::output::PutBucketVersioningOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketVersioningOutput`](crate::output::PutBucketVersioningOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketVersioningOutput`](crate::output::PutBucketVersioningOutput)
+        /// Consumes the builder and constructs a [`PutBucketVersioningOutput`](crate::output::PutBucketVersioningOutput).
         pub fn build(self) -> crate::output::PutBucketVersioningOutput {
             crate::output::PutBucketVersioningOutput {}
         }
     }
 }
 impl PutBucketVersioningOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketVersioningOutput`](crate::output::PutBucketVersioningOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketVersioningOutput`](crate::output::PutBucketVersioningOutput).
     pub fn builder() -> crate::output::put_bucket_versioning_output::Builder {
         crate::output::put_bucket_versioning_output::Builder::default()
     }
@@ -1238,22 +1438,21 @@ impl std::fmt::Debug for PutBucketTaggingOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketTaggingOutput`](crate::output::PutBucketTaggingOutput)
+/// See [`PutBucketTaggingOutput`](crate::output::PutBucketTaggingOutput).
 pub mod put_bucket_tagging_output {
 
-    /// A builder for [`PutBucketTaggingOutput`](crate::output::PutBucketTaggingOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketTaggingOutput`](crate::output::PutBucketTaggingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketTaggingOutput`](crate::output::PutBucketTaggingOutput)
+        /// Consumes the builder and constructs a [`PutBucketTaggingOutput`](crate::output::PutBucketTaggingOutput).
         pub fn build(self) -> crate::output::PutBucketTaggingOutput {
             crate::output::PutBucketTaggingOutput {}
         }
     }
 }
 impl PutBucketTaggingOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketTaggingOutput`](crate::output::PutBucketTaggingOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketTaggingOutput`](crate::output::PutBucketTaggingOutput).
     pub fn builder() -> crate::output::put_bucket_tagging_output::Builder {
         crate::output::put_bucket_tagging_output::Builder::default()
     }
@@ -1269,22 +1468,21 @@ impl std::fmt::Debug for PutBucketRequestPaymentOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketRequestPaymentOutput`](crate::output::PutBucketRequestPaymentOutput)
+/// See [`PutBucketRequestPaymentOutput`](crate::output::PutBucketRequestPaymentOutput).
 pub mod put_bucket_request_payment_output {
 
-    /// A builder for [`PutBucketRequestPaymentOutput`](crate::output::PutBucketRequestPaymentOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketRequestPaymentOutput`](crate::output::PutBucketRequestPaymentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketRequestPaymentOutput`](crate::output::PutBucketRequestPaymentOutput)
+        /// Consumes the builder and constructs a [`PutBucketRequestPaymentOutput`](crate::output::PutBucketRequestPaymentOutput).
         pub fn build(self) -> crate::output::PutBucketRequestPaymentOutput {
             crate::output::PutBucketRequestPaymentOutput {}
         }
     }
 }
 impl PutBucketRequestPaymentOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketRequestPaymentOutput`](crate::output::PutBucketRequestPaymentOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketRequestPaymentOutput`](crate::output::PutBucketRequestPaymentOutput).
     pub fn builder() -> crate::output::put_bucket_request_payment_output::Builder {
         crate::output::put_bucket_request_payment_output::Builder::default()
     }
@@ -1300,22 +1498,21 @@ impl std::fmt::Debug for PutBucketReplicationOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketReplicationOutput`](crate::output::PutBucketReplicationOutput)
+/// See [`PutBucketReplicationOutput`](crate::output::PutBucketReplicationOutput).
 pub mod put_bucket_replication_output {
 
-    /// A builder for [`PutBucketReplicationOutput`](crate::output::PutBucketReplicationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketReplicationOutput`](crate::output::PutBucketReplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketReplicationOutput`](crate::output::PutBucketReplicationOutput)
+        /// Consumes the builder and constructs a [`PutBucketReplicationOutput`](crate::output::PutBucketReplicationOutput).
         pub fn build(self) -> crate::output::PutBucketReplicationOutput {
             crate::output::PutBucketReplicationOutput {}
         }
     }
 }
 impl PutBucketReplicationOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketReplicationOutput`](crate::output::PutBucketReplicationOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketReplicationOutput`](crate::output::PutBucketReplicationOutput).
     pub fn builder() -> crate::output::put_bucket_replication_output::Builder {
         crate::output::put_bucket_replication_output::Builder::default()
     }
@@ -1331,22 +1528,21 @@ impl std::fmt::Debug for PutBucketPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketPolicyOutput`](crate::output::PutBucketPolicyOutput)
+/// See [`PutBucketPolicyOutput`](crate::output::PutBucketPolicyOutput).
 pub mod put_bucket_policy_output {
 
-    /// A builder for [`PutBucketPolicyOutput`](crate::output::PutBucketPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketPolicyOutput`](crate::output::PutBucketPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketPolicyOutput`](crate::output::PutBucketPolicyOutput)
+        /// Consumes the builder and constructs a [`PutBucketPolicyOutput`](crate::output::PutBucketPolicyOutput).
         pub fn build(self) -> crate::output::PutBucketPolicyOutput {
             crate::output::PutBucketPolicyOutput {}
         }
     }
 }
 impl PutBucketPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketPolicyOutput`](crate::output::PutBucketPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketPolicyOutput`](crate::output::PutBucketPolicyOutput).
     pub fn builder() -> crate::output::put_bucket_policy_output::Builder {
         crate::output::put_bucket_policy_output::Builder::default()
     }
@@ -1362,22 +1558,21 @@ impl std::fmt::Debug for PutBucketOwnershipControlsOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketOwnershipControlsOutput`](crate::output::PutBucketOwnershipControlsOutput)
+/// See [`PutBucketOwnershipControlsOutput`](crate::output::PutBucketOwnershipControlsOutput).
 pub mod put_bucket_ownership_controls_output {
 
-    /// A builder for [`PutBucketOwnershipControlsOutput`](crate::output::PutBucketOwnershipControlsOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketOwnershipControlsOutput`](crate::output::PutBucketOwnershipControlsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketOwnershipControlsOutput`](crate::output::PutBucketOwnershipControlsOutput)
+        /// Consumes the builder and constructs a [`PutBucketOwnershipControlsOutput`](crate::output::PutBucketOwnershipControlsOutput).
         pub fn build(self) -> crate::output::PutBucketOwnershipControlsOutput {
             crate::output::PutBucketOwnershipControlsOutput {}
         }
     }
 }
 impl PutBucketOwnershipControlsOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketOwnershipControlsOutput`](crate::output::PutBucketOwnershipControlsOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketOwnershipControlsOutput`](crate::output::PutBucketOwnershipControlsOutput).
     pub fn builder() -> crate::output::put_bucket_ownership_controls_output::Builder {
         crate::output::put_bucket_ownership_controls_output::Builder::default()
     }
@@ -1393,22 +1588,21 @@ impl std::fmt::Debug for PutBucketNotificationConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketNotificationConfigurationOutput`](crate::output::PutBucketNotificationConfigurationOutput)
+/// See [`PutBucketNotificationConfigurationOutput`](crate::output::PutBucketNotificationConfigurationOutput).
 pub mod put_bucket_notification_configuration_output {
 
-    /// A builder for [`PutBucketNotificationConfigurationOutput`](crate::output::PutBucketNotificationConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketNotificationConfigurationOutput`](crate::output::PutBucketNotificationConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketNotificationConfigurationOutput`](crate::output::PutBucketNotificationConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutBucketNotificationConfigurationOutput`](crate::output::PutBucketNotificationConfigurationOutput).
         pub fn build(self) -> crate::output::PutBucketNotificationConfigurationOutput {
             crate::output::PutBucketNotificationConfigurationOutput {}
         }
     }
 }
 impl PutBucketNotificationConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketNotificationConfigurationOutput`](crate::output::PutBucketNotificationConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketNotificationConfigurationOutput`](crate::output::PutBucketNotificationConfigurationOutput).
     pub fn builder() -> crate::output::put_bucket_notification_configuration_output::Builder {
         crate::output::put_bucket_notification_configuration_output::Builder::default()
     }
@@ -1424,22 +1618,21 @@ impl std::fmt::Debug for PutBucketMetricsConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketMetricsConfigurationOutput`](crate::output::PutBucketMetricsConfigurationOutput)
+/// See [`PutBucketMetricsConfigurationOutput`](crate::output::PutBucketMetricsConfigurationOutput).
 pub mod put_bucket_metrics_configuration_output {
 
-    /// A builder for [`PutBucketMetricsConfigurationOutput`](crate::output::PutBucketMetricsConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketMetricsConfigurationOutput`](crate::output::PutBucketMetricsConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketMetricsConfigurationOutput`](crate::output::PutBucketMetricsConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutBucketMetricsConfigurationOutput`](crate::output::PutBucketMetricsConfigurationOutput).
         pub fn build(self) -> crate::output::PutBucketMetricsConfigurationOutput {
             crate::output::PutBucketMetricsConfigurationOutput {}
         }
     }
 }
 impl PutBucketMetricsConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketMetricsConfigurationOutput`](crate::output::PutBucketMetricsConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketMetricsConfigurationOutput`](crate::output::PutBucketMetricsConfigurationOutput).
     pub fn builder() -> crate::output::put_bucket_metrics_configuration_output::Builder {
         crate::output::put_bucket_metrics_configuration_output::Builder::default()
     }
@@ -1455,22 +1648,21 @@ impl std::fmt::Debug for PutBucketLoggingOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketLoggingOutput`](crate::output::PutBucketLoggingOutput)
+/// See [`PutBucketLoggingOutput`](crate::output::PutBucketLoggingOutput).
 pub mod put_bucket_logging_output {
 
-    /// A builder for [`PutBucketLoggingOutput`](crate::output::PutBucketLoggingOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketLoggingOutput`](crate::output::PutBucketLoggingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketLoggingOutput`](crate::output::PutBucketLoggingOutput)
+        /// Consumes the builder and constructs a [`PutBucketLoggingOutput`](crate::output::PutBucketLoggingOutput).
         pub fn build(self) -> crate::output::PutBucketLoggingOutput {
             crate::output::PutBucketLoggingOutput {}
         }
     }
 }
 impl PutBucketLoggingOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketLoggingOutput`](crate::output::PutBucketLoggingOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketLoggingOutput`](crate::output::PutBucketLoggingOutput).
     pub fn builder() -> crate::output::put_bucket_logging_output::Builder {
         crate::output::put_bucket_logging_output::Builder::default()
     }
@@ -1486,22 +1678,21 @@ impl std::fmt::Debug for PutBucketLifecycleConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketLifecycleConfigurationOutput`](crate::output::PutBucketLifecycleConfigurationOutput)
+/// See [`PutBucketLifecycleConfigurationOutput`](crate::output::PutBucketLifecycleConfigurationOutput).
 pub mod put_bucket_lifecycle_configuration_output {
 
-    /// A builder for [`PutBucketLifecycleConfigurationOutput`](crate::output::PutBucketLifecycleConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketLifecycleConfigurationOutput`](crate::output::PutBucketLifecycleConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketLifecycleConfigurationOutput`](crate::output::PutBucketLifecycleConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutBucketLifecycleConfigurationOutput`](crate::output::PutBucketLifecycleConfigurationOutput).
         pub fn build(self) -> crate::output::PutBucketLifecycleConfigurationOutput {
             crate::output::PutBucketLifecycleConfigurationOutput {}
         }
     }
 }
 impl PutBucketLifecycleConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketLifecycleConfigurationOutput`](crate::output::PutBucketLifecycleConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketLifecycleConfigurationOutput`](crate::output::PutBucketLifecycleConfigurationOutput).
     pub fn builder() -> crate::output::put_bucket_lifecycle_configuration_output::Builder {
         crate::output::put_bucket_lifecycle_configuration_output::Builder::default()
     }
@@ -1517,22 +1708,21 @@ impl std::fmt::Debug for PutBucketInventoryConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketInventoryConfigurationOutput`](crate::output::PutBucketInventoryConfigurationOutput)
+/// See [`PutBucketInventoryConfigurationOutput`](crate::output::PutBucketInventoryConfigurationOutput).
 pub mod put_bucket_inventory_configuration_output {
 
-    /// A builder for [`PutBucketInventoryConfigurationOutput`](crate::output::PutBucketInventoryConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketInventoryConfigurationOutput`](crate::output::PutBucketInventoryConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketInventoryConfigurationOutput`](crate::output::PutBucketInventoryConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutBucketInventoryConfigurationOutput`](crate::output::PutBucketInventoryConfigurationOutput).
         pub fn build(self) -> crate::output::PutBucketInventoryConfigurationOutput {
             crate::output::PutBucketInventoryConfigurationOutput {}
         }
     }
 }
 impl PutBucketInventoryConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketInventoryConfigurationOutput`](crate::output::PutBucketInventoryConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketInventoryConfigurationOutput`](crate::output::PutBucketInventoryConfigurationOutput).
     pub fn builder() -> crate::output::put_bucket_inventory_configuration_output::Builder {
         crate::output::put_bucket_inventory_configuration_output::Builder::default()
     }
@@ -1548,22 +1738,21 @@ impl std::fmt::Debug for PutBucketIntelligentTieringConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketIntelligentTieringConfigurationOutput`](crate::output::PutBucketIntelligentTieringConfigurationOutput)
+/// See [`PutBucketIntelligentTieringConfigurationOutput`](crate::output::PutBucketIntelligentTieringConfigurationOutput).
 pub mod put_bucket_intelligent_tiering_configuration_output {
 
-    /// A builder for [`PutBucketIntelligentTieringConfigurationOutput`](crate::output::PutBucketIntelligentTieringConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketIntelligentTieringConfigurationOutput`](crate::output::PutBucketIntelligentTieringConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketIntelligentTieringConfigurationOutput`](crate::output::PutBucketIntelligentTieringConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutBucketIntelligentTieringConfigurationOutput`](crate::output::PutBucketIntelligentTieringConfigurationOutput).
         pub fn build(self) -> crate::output::PutBucketIntelligentTieringConfigurationOutput {
             crate::output::PutBucketIntelligentTieringConfigurationOutput {}
         }
     }
 }
 impl PutBucketIntelligentTieringConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketIntelligentTieringConfigurationOutput`](crate::output::PutBucketIntelligentTieringConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketIntelligentTieringConfigurationOutput`](crate::output::PutBucketIntelligentTieringConfigurationOutput).
     pub fn builder() -> crate::output::put_bucket_intelligent_tiering_configuration_output::Builder
     {
         crate::output::put_bucket_intelligent_tiering_configuration_output::Builder::default()
@@ -1580,22 +1769,21 @@ impl std::fmt::Debug for PutBucketEncryptionOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketEncryptionOutput`](crate::output::PutBucketEncryptionOutput)
+/// See [`PutBucketEncryptionOutput`](crate::output::PutBucketEncryptionOutput).
 pub mod put_bucket_encryption_output {
 
-    /// A builder for [`PutBucketEncryptionOutput`](crate::output::PutBucketEncryptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketEncryptionOutput`](crate::output::PutBucketEncryptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketEncryptionOutput`](crate::output::PutBucketEncryptionOutput)
+        /// Consumes the builder and constructs a [`PutBucketEncryptionOutput`](crate::output::PutBucketEncryptionOutput).
         pub fn build(self) -> crate::output::PutBucketEncryptionOutput {
             crate::output::PutBucketEncryptionOutput {}
         }
     }
 }
 impl PutBucketEncryptionOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketEncryptionOutput`](crate::output::PutBucketEncryptionOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketEncryptionOutput`](crate::output::PutBucketEncryptionOutput).
     pub fn builder() -> crate::output::put_bucket_encryption_output::Builder {
         crate::output::put_bucket_encryption_output::Builder::default()
     }
@@ -1611,22 +1799,21 @@ impl std::fmt::Debug for PutBucketCorsOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketCorsOutput`](crate::output::PutBucketCorsOutput)
+/// See [`PutBucketCorsOutput`](crate::output::PutBucketCorsOutput).
 pub mod put_bucket_cors_output {
 
-    /// A builder for [`PutBucketCorsOutput`](crate::output::PutBucketCorsOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketCorsOutput`](crate::output::PutBucketCorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketCorsOutput`](crate::output::PutBucketCorsOutput)
+        /// Consumes the builder and constructs a [`PutBucketCorsOutput`](crate::output::PutBucketCorsOutput).
         pub fn build(self) -> crate::output::PutBucketCorsOutput {
             crate::output::PutBucketCorsOutput {}
         }
     }
 }
 impl PutBucketCorsOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketCorsOutput`](crate::output::PutBucketCorsOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketCorsOutput`](crate::output::PutBucketCorsOutput).
     pub fn builder() -> crate::output::put_bucket_cors_output::Builder {
         crate::output::put_bucket_cors_output::Builder::default()
     }
@@ -1642,22 +1829,21 @@ impl std::fmt::Debug for PutBucketAnalyticsConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketAnalyticsConfigurationOutput`](crate::output::PutBucketAnalyticsConfigurationOutput)
+/// See [`PutBucketAnalyticsConfigurationOutput`](crate::output::PutBucketAnalyticsConfigurationOutput).
 pub mod put_bucket_analytics_configuration_output {
 
-    /// A builder for [`PutBucketAnalyticsConfigurationOutput`](crate::output::PutBucketAnalyticsConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketAnalyticsConfigurationOutput`](crate::output::PutBucketAnalyticsConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketAnalyticsConfigurationOutput`](crate::output::PutBucketAnalyticsConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutBucketAnalyticsConfigurationOutput`](crate::output::PutBucketAnalyticsConfigurationOutput).
         pub fn build(self) -> crate::output::PutBucketAnalyticsConfigurationOutput {
             crate::output::PutBucketAnalyticsConfigurationOutput {}
         }
     }
 }
 impl PutBucketAnalyticsConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketAnalyticsConfigurationOutput`](crate::output::PutBucketAnalyticsConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketAnalyticsConfigurationOutput`](crate::output::PutBucketAnalyticsConfigurationOutput).
     pub fn builder() -> crate::output::put_bucket_analytics_configuration_output::Builder {
         crate::output::put_bucket_analytics_configuration_output::Builder::default()
     }
@@ -1673,22 +1859,21 @@ impl std::fmt::Debug for PutBucketAclOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketAclOutput`](crate::output::PutBucketAclOutput)
+/// See [`PutBucketAclOutput`](crate::output::PutBucketAclOutput).
 pub mod put_bucket_acl_output {
 
-    /// A builder for [`PutBucketAclOutput`](crate::output::PutBucketAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketAclOutput`](crate::output::PutBucketAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketAclOutput`](crate::output::PutBucketAclOutput)
+        /// Consumes the builder and constructs a [`PutBucketAclOutput`](crate::output::PutBucketAclOutput).
         pub fn build(self) -> crate::output::PutBucketAclOutput {
             crate::output::PutBucketAclOutput {}
         }
     }
 }
 impl PutBucketAclOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketAclOutput`](crate::output::PutBucketAclOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketAclOutput`](crate::output::PutBucketAclOutput).
     pub fn builder() -> crate::output::put_bucket_acl_output::Builder {
         crate::output::put_bucket_acl_output::Builder::default()
     }
@@ -1704,22 +1889,21 @@ impl std::fmt::Debug for PutBucketAccelerateConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutBucketAccelerateConfigurationOutput`](crate::output::PutBucketAccelerateConfigurationOutput)
+/// See [`PutBucketAccelerateConfigurationOutput`](crate::output::PutBucketAccelerateConfigurationOutput).
 pub mod put_bucket_accelerate_configuration_output {
 
-    /// A builder for [`PutBucketAccelerateConfigurationOutput`](crate::output::PutBucketAccelerateConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutBucketAccelerateConfigurationOutput`](crate::output::PutBucketAccelerateConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutBucketAccelerateConfigurationOutput`](crate::output::PutBucketAccelerateConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutBucketAccelerateConfigurationOutput`](crate::output::PutBucketAccelerateConfigurationOutput).
         pub fn build(self) -> crate::output::PutBucketAccelerateConfigurationOutput {
             crate::output::PutBucketAccelerateConfigurationOutput {}
         }
     }
 }
 impl PutBucketAccelerateConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutBucketAccelerateConfigurationOutput`](crate::output::PutBucketAccelerateConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutBucketAccelerateConfigurationOutput`](crate::output::PutBucketAccelerateConfigurationOutput).
     pub fn builder() -> crate::output::put_bucket_accelerate_configuration_output::Builder {
         crate::output::put_bucket_accelerate_configuration_output::Builder::default()
     }
@@ -1731,33 +1915,50 @@ impl PutBucketAccelerateConfigurationOutput {
 pub struct ListPartsOutput {
     /// <p>If the bucket has a lifecycle rule configured with an action to abort incomplete multipart uploads and the prefix in the lifecycle rule matches the object name in the request, then the response includes this header indicating when the initiated multipart upload will become eligible for abort operation. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config">Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy</a>.</p>
     /// <p>The response will also include the <code>x-amz-abort-rule-id</code> header that will provide the ID of the lifecycle configuration rule that defines this action.</p>
+    #[doc(hidden)]
     pub abort_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>This header is returned along with the <code>x-amz-abort-date</code> header. It identifies applicable lifecycle configuration rule that defines the action to abort incomplete multipart uploads.</p>
+    #[doc(hidden)]
     pub abort_rule_id: std::option::Option<std::string::String>,
     /// <p>The name of the bucket to which the multipart upload was initiated. Does not return the access point ARN or access point alias if used.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>Object key for which the multipart upload was initiated.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Upload ID identifying the multipart upload whose parts are being listed.</p>
+    #[doc(hidden)]
     pub upload_id: std::option::Option<std::string::String>,
     /// <p>When a list is truncated, this element specifies the last part in the list, as well as the value to use for the part-number-marker request parameter in a subsequent request.</p>
+    #[doc(hidden)]
     pub part_number_marker: std::option::Option<std::string::String>,
     /// <p>When a list is truncated, this element specifies the last part in the list, as well as the value to use for the part-number-marker request parameter in a subsequent request.</p>
+    #[doc(hidden)]
     pub next_part_number_marker: std::option::Option<std::string::String>,
     /// <p>Maximum number of parts that were allowed in the response.</p>
+    #[doc(hidden)]
     pub max_parts: i32,
     /// <p> Indicates whether the returned list of parts is truncated. A true value indicates that the list was truncated. A list can be truncated if the number of parts exceeds the limit returned in the MaxParts element.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p> Container for elements related to a particular part. A response can contain zero or more <code>Part</code> elements.</p>
+    #[doc(hidden)]
     pub parts: std::option::Option<std::vec::Vec<crate::model::Part>>,
     /// <p>Container element that identifies who initiated the multipart upload. If the initiator is an Amazon Web Services account, this element provides the same information as the <code>Owner</code> element. If the initiator is an IAM User, this element provides the user ARN and display name.</p>
+    #[doc(hidden)]
     pub initiator: std::option::Option<crate::model::Initiator>,
     /// <p> Container element that identifies the object owner, after the object is created. If multipart upload is initiated by an IAM user, this element provides the parent account ID and display name.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::Owner>,
     /// <p>Class of storage (STANDARD or REDUCED_REDUNDANCY) used to store the uploaded object.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::StorageClass>,
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
+    /// <p>The algorithm that was used to create a checksum of the object.</p>
+    #[doc(hidden)]
+    pub checksum_algorithm: std::option::Option<crate::model::ChecksumAlgorithm>,
 }
 impl ListPartsOutput {
     /// <p>If the bucket has a lifecycle rule configured with an action to abort incomplete multipart uploads and the prefix in the lifecycle rule matches the object name in the request, then the response includes this header indicating when the initiated multipart upload will become eligible for abort operation. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config">Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy</a>.</p>
@@ -1817,6 +2018,10 @@ impl ListPartsOutput {
     pub fn request_charged(&self) -> std::option::Option<&crate::model::RequestCharged> {
         self.request_charged.as_ref()
     }
+    /// <p>The algorithm that was used to create a checksum of the object.</p>
+    pub fn checksum_algorithm(&self) -> std::option::Option<&crate::model::ChecksumAlgorithm> {
+        self.checksum_algorithm.as_ref()
+    }
 }
 impl std::fmt::Debug for ListPartsOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -1835,14 +2040,14 @@ impl std::fmt::Debug for ListPartsOutput {
         formatter.field("owner", &self.owner);
         formatter.field("storage_class", &self.storage_class);
         formatter.field("request_charged", &self.request_charged);
+        formatter.field("checksum_algorithm", &self.checksum_algorithm);
         formatter.finish()
     }
 }
-/// See [`ListPartsOutput`](crate::output::ListPartsOutput)
+/// See [`ListPartsOutput`](crate::output::ListPartsOutput).
 pub mod list_parts_output {
 
-    /// A builder for [`ListPartsOutput`](crate::output::ListPartsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListPartsOutput`](crate::output::ListPartsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) abort_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -1859,6 +2064,7 @@ pub mod list_parts_output {
         pub(crate) owner: std::option::Option<crate::model::Owner>,
         pub(crate) storage_class: std::option::Option<crate::model::StorageClass>,
         pub(crate) request_charged: std::option::Option<crate::model::RequestCharged>,
+        pub(crate) checksum_algorithm: std::option::Option<crate::model::ChecksumAlgorithm>,
     }
     impl Builder {
         /// <p>If the bucket has a lifecycle rule configured with an action to abort incomplete multipart uploads and the prefix in the lifecycle rule matches the object name in the request, then the response includes this header indicating when the initiated multipart upload will become eligible for abort operation. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config">Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy</a>.</p>
@@ -2033,7 +2239,20 @@ pub mod list_parts_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPartsOutput`](crate::output::ListPartsOutput)
+        /// <p>The algorithm that was used to create a checksum of the object.</p>
+        pub fn checksum_algorithm(mut self, input: crate::model::ChecksumAlgorithm) -> Self {
+            self.checksum_algorithm = Some(input);
+            self
+        }
+        /// <p>The algorithm that was used to create a checksum of the object.</p>
+        pub fn set_checksum_algorithm(
+            mut self,
+            input: std::option::Option<crate::model::ChecksumAlgorithm>,
+        ) -> Self {
+            self.checksum_algorithm = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListPartsOutput`](crate::output::ListPartsOutput).
         pub fn build(self) -> crate::output::ListPartsOutput {
             crate::output::ListPartsOutput {
                 abort_date: self.abort_date,
@@ -2050,12 +2269,13 @@ pub mod list_parts_output {
                 owner: self.owner,
                 storage_class: self.storage_class,
                 request_charged: self.request_charged,
+                checksum_algorithm: self.checksum_algorithm,
             }
         }
     }
 }
 impl ListPartsOutput {
-    /// Creates a new builder-style object to manufacture [`ListPartsOutput`](crate::output::ListPartsOutput)
+    /// Creates a new builder-style object to manufacture [`ListPartsOutput`](crate::output::ListPartsOutput).
     pub fn builder() -> crate::output::list_parts_output::Builder {
         crate::output::list_parts_output::Builder::default()
     }
@@ -2066,32 +2286,45 @@ impl ListPartsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListObjectVersionsOutput {
     /// <p>A flag that indicates whether Amazon S3 returned all of the results that satisfied the search criteria. If your results were truncated, you can make a follow-up paginated request using the NextKeyMarker and NextVersionIdMarker response parameters as a starting place in another request to return the rest of the results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>Marks the last key returned in a truncated response.</p>
+    #[doc(hidden)]
     pub key_marker: std::option::Option<std::string::String>,
     /// <p>Marks the last version of the key returned in a truncated response.</p>
+    #[doc(hidden)]
     pub version_id_marker: std::option::Option<std::string::String>,
     /// <p>When the number of responses exceeds the value of <code>MaxKeys</code>, <code>NextKeyMarker</code> specifies the first key not returned that satisfies the search criteria. Use this value for the key-marker request parameter in a subsequent request.</p>
+    #[doc(hidden)]
     pub next_key_marker: std::option::Option<std::string::String>,
     /// <p>When the number of responses exceeds the value of <code>MaxKeys</code>, <code>NextVersionIdMarker</code> specifies the first object version not returned that satisfies the search criteria. Use this value for the version-id-marker request parameter in a subsequent request.</p>
+    #[doc(hidden)]
     pub next_version_id_marker: std::option::Option<std::string::String>,
     /// <p>Container for version information.</p>
+    #[doc(hidden)]
     pub versions: std::option::Option<std::vec::Vec<crate::model::ObjectVersion>>,
     /// <p>Container for an object that is a delete marker.</p>
+    #[doc(hidden)]
     pub delete_markers: std::option::Option<std::vec::Vec<crate::model::DeleteMarkerEntry>>,
     /// <p>The bucket name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Selects objects that start with the value supplied by this parameter.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>The delimiter grouping the included keys. A delimiter is a character that you specify to group keys. All keys that contain the same string between the prefix and the first occurrence of the delimiter are grouped under a single result element in <code>CommonPrefixes</code>. These groups are counted as one result against the max-keys limitation. These keys are not returned elsewhere in the response.</p>
+    #[doc(hidden)]
     pub delimiter: std::option::Option<std::string::String>,
     /// <p>Specifies the maximum number of objects to return.</p>
+    #[doc(hidden)]
     pub max_keys: i32,
     /// <p>All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.</p>
+    #[doc(hidden)]
     pub common_prefixes: std::option::Option<std::vec::Vec<crate::model::CommonPrefix>>,
     /// <p> Encoding type used by Amazon S3 to encode object key names in the XML response.</p>
     /// <p>If you specify encoding-type request parameter, Amazon S3 includes this element in the response, and returns encoded key name values in the following response elements:</p>
     /// <p> <code>KeyMarker, NextKeyMarker, Prefix, Key</code>, and <code>Delimiter</code>.</p>
+    #[doc(hidden)]
     pub encoding_type: std::option::Option<crate::model::EncodingType>,
 }
 impl ListObjectVersionsOutput {
@@ -2169,11 +2402,10 @@ impl std::fmt::Debug for ListObjectVersionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListObjectVersionsOutput`](crate::output::ListObjectVersionsOutput)
+/// See [`ListObjectVersionsOutput`](crate::output::ListObjectVersionsOutput).
 pub mod list_object_versions_output {
 
-    /// A builder for [`ListObjectVersionsOutput`](crate::output::ListObjectVersionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListObjectVersionsOutput`](crate::output::ListObjectVersionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_truncated: std::option::Option<bool>,
@@ -2365,7 +2597,7 @@ pub mod list_object_versions_output {
             self.encoding_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListObjectVersionsOutput`](crate::output::ListObjectVersionsOutput)
+        /// Consumes the builder and constructs a [`ListObjectVersionsOutput`](crate::output::ListObjectVersionsOutput).
         pub fn build(self) -> crate::output::ListObjectVersionsOutput {
             crate::output::ListObjectVersionsOutput {
                 is_truncated: self.is_truncated.unwrap_or_default(),
@@ -2386,7 +2618,7 @@ pub mod list_object_versions_output {
     }
 }
 impl ListObjectVersionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListObjectVersionsOutput`](crate::output::ListObjectVersionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListObjectVersionsOutput`](crate::output::ListObjectVersionsOutput).
     pub fn builder() -> crate::output::list_object_versions_output::Builder {
         crate::output::list_object_versions_output::Builder::default()
     }
@@ -2397,36 +2629,48 @@ impl ListObjectVersionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListObjectsV2Output {
     /// <p>Set to false if all of the results were returned. Set to true if more keys are available to return. If the number of results exceeds that specified by MaxKeys, all of the results might not be returned.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>Metadata about each object returned.</p>
+    #[doc(hidden)]
     pub contents: std::option::Option<std::vec::Vec<crate::model::Object>>,
     /// <p>The bucket name.</p>
     /// <p>When using this action with an access point, you must direct requests to the access point hostname. The access point hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.s3-accesspoint.<i>Region</i>.amazonaws.com. When using this action with an access point through the Amazon Web Services SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html">Using access points</a> in the <i>Amazon S3 User Guide</i>.</p>
-    /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com. When using this action using S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+    /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <code> <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com</code>. When using this action with S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> Keys that begin with the indicated prefix.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>Causes keys that contain the same string between the prefix and the first occurrence of the delimiter to be rolled up into a single result element in the CommonPrefixes collection. These rolled-up keys are not returned elsewhere in the response. Each rolled-up result counts as only one return against the <code>MaxKeys</code> value.</p>
+    #[doc(hidden)]
     pub delimiter: std::option::Option<std::string::String>,
     /// <p>Sets the maximum number of keys returned in the response. By default the action returns up to 1,000 key names. The response might contain fewer keys but will never contain more.</p>
+    #[doc(hidden)]
     pub max_keys: i32,
     /// <p>All of the keys (up to 1,000) rolled up into a common prefix count as a single return when calculating the number of returns.</p>
     /// <p>A response can contain <code>CommonPrefixes</code> only if you specify a delimiter.</p>
     /// <p> <code>CommonPrefixes</code> contains all (if there are any) keys between <code>Prefix</code> and the next occurrence of the string specified by a delimiter.</p>
     /// <p> <code>CommonPrefixes</code> lists keys that act like subdirectories in the directory specified by <code>Prefix</code>.</p>
     /// <p>For example, if the prefix is <code>notes/</code> and the delimiter is a slash (<code>/</code>) as in <code>notes/summer/july</code>, the common prefix is <code>notes/summer/</code>. All of the keys that roll up into a common prefix count as a single return when calculating the number of returns. </p>
+    #[doc(hidden)]
     pub common_prefixes: std::option::Option<std::vec::Vec<crate::model::CommonPrefix>>,
     /// <p>Encoding type used by Amazon S3 to encode object key names in the XML response.</p>
     /// <p>If you specify the encoding-type request parameter, Amazon S3 includes this element in the response, and returns encoded key name values in the following response elements:</p>
     /// <p> <code>Delimiter, Prefix, Key,</code> and <code>StartAfter</code>.</p>
+    #[doc(hidden)]
     pub encoding_type: std::option::Option<crate::model::EncodingType>,
     /// <p>KeyCount is the number of keys returned with this request. KeyCount will always be less than or equals to MaxKeys field. Say you ask for 50 keys, your result will include less than equals 50 keys </p>
+    #[doc(hidden)]
     pub key_count: i32,
     /// <p> If ContinuationToken was sent with the request, it is included in the response.</p>
+    #[doc(hidden)]
     pub continuation_token: std::option::Option<std::string::String>,
     /// <p> <code>NextContinuationToken</code> is sent when <code>isTruncated</code> is true, which means there are more keys in the bucket that can be listed. The next list requests to Amazon S3 can be continued with this <code>NextContinuationToken</code>. <code>NextContinuationToken</code> is obfuscated and is not a real key</p>
+    #[doc(hidden)]
     pub next_continuation_token: std::option::Option<std::string::String>,
     /// <p>If StartAfter was sent with the request, it is included in the response.</p>
+    #[doc(hidden)]
     pub start_after: std::option::Option<std::string::String>,
 }
 impl ListObjectsV2Output {
@@ -2440,7 +2684,7 @@ impl ListObjectsV2Output {
     }
     /// <p>The bucket name.</p>
     /// <p>When using this action with an access point, you must direct requests to the access point hostname. The access point hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.s3-accesspoint.<i>Region</i>.amazonaws.com. When using this action with an access point through the Amazon Web Services SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html">Using access points</a> in the <i>Amazon S3 User Guide</i>.</p>
-    /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com. When using this action using S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+    /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <code> <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com</code>. When using this action with S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
     pub fn name(&self) -> std::option::Option<&str> {
         self.name.as_deref()
     }
@@ -2505,11 +2749,10 @@ impl std::fmt::Debug for ListObjectsV2Output {
         formatter.finish()
     }
 }
-/// See [`ListObjectsV2Output`](crate::output::ListObjectsV2Output)
+/// See [`ListObjectsV2Output`](crate::output::ListObjectsV2Output).
 pub mod list_objects_v2_output {
 
-    /// A builder for [`ListObjectsV2Output`](crate::output::ListObjectsV2Output)
-    #[non_exhaustive]
+    /// A builder for [`ListObjectsV2Output`](crate::output::ListObjectsV2Output).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_truncated: std::option::Option<bool>,
@@ -2557,14 +2800,14 @@ pub mod list_objects_v2_output {
         }
         /// <p>The bucket name.</p>
         /// <p>When using this action with an access point, you must direct requests to the access point hostname. The access point hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.s3-accesspoint.<i>Region</i>.amazonaws.com. When using this action with an access point through the Amazon Web Services SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html">Using access points</a> in the <i>Amazon S3 User Guide</i>.</p>
-        /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com. When using this action using S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+        /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <code> <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com</code>. When using this action with S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
         pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
             self.name = Some(input.into());
             self
         }
         /// <p>The bucket name.</p>
         /// <p>When using this action with an access point, you must direct requests to the access point hostname. The access point hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.s3-accesspoint.<i>Region</i>.amazonaws.com. When using this action with an access point through the Amazon Web Services SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html">Using access points</a> in the <i>Amazon S3 User Guide</i>.</p>
-        /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com. When using this action using S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+        /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <code> <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com</code>. When using this action with S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
         pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.name = input;
             self
@@ -2689,7 +2932,7 @@ pub mod list_objects_v2_output {
             self.start_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListObjectsV2Output`](crate::output::ListObjectsV2Output)
+        /// Consumes the builder and constructs a [`ListObjectsV2Output`](crate::output::ListObjectsV2Output).
         pub fn build(self) -> crate::output::ListObjectsV2Output {
             crate::output::ListObjectsV2Output {
                 is_truncated: self.is_truncated.unwrap_or_default(),
@@ -2709,7 +2952,7 @@ pub mod list_objects_v2_output {
     }
 }
 impl ListObjectsV2Output {
-    /// Creates a new builder-style object to manufacture [`ListObjectsV2Output`](crate::output::ListObjectsV2Output)
+    /// Creates a new builder-style object to manufacture [`ListObjectsV2Output`](crate::output::ListObjectsV2Output).
     pub fn builder() -> crate::output::list_objects_v2_output::Builder {
         crate::output::list_objects_v2_output::Builder::default()
     }
@@ -2720,28 +2963,38 @@ impl ListObjectsV2Output {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListObjectsOutput {
     /// <p>A flag that indicates whether Amazon S3 returned all of the results that satisfied the search criteria.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>Indicates where in the bucket listing begins. Marker is included in the response if it was sent with the request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>When response is truncated (the IsTruncated element value in the response is true), you can use the key name in this field as marker in the subsequent request to get next set of objects. Amazon S3 lists objects in alphabetical order Note: This element is returned only if you have delimiter request parameter specified. If response does not include the NextMarker and it is truncated, you can use the value of the last Key in the response as the marker in the subsequent request to get the next set of object keys.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>Metadata about each object returned.</p>
+    #[doc(hidden)]
     pub contents: std::option::Option<std::vec::Vec<crate::model::Object>>,
     /// <p>The bucket name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Keys that begin with the indicated prefix.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>Causes keys that contain the same string between the prefix and the first occurrence of the delimiter to be rolled up into a single result element in the <code>CommonPrefixes</code> collection. These rolled-up keys are not returned elsewhere in the response. Each rolled-up result counts as only one return against the <code>MaxKeys</code> value.</p>
+    #[doc(hidden)]
     pub delimiter: std::option::Option<std::string::String>,
     /// <p>The maximum number of keys returned in the response body.</p>
+    #[doc(hidden)]
     pub max_keys: i32,
     /// <p>All of the keys (up to 1,000) rolled up in a common prefix count as a single return when calculating the number of returns. </p>
     /// <p>A response can contain CommonPrefixes only if you specify a delimiter.</p>
     /// <p>CommonPrefixes contains all (if there are any) keys between Prefix and the next occurrence of the string specified by the delimiter.</p>
     /// <p> CommonPrefixes lists keys that act like subdirectories in the directory specified by Prefix.</p>
     /// <p>For example, if the prefix is notes/ and the delimiter is a slash (/) as in notes/summer/july, the common prefix is notes/summer/. All of the keys that roll up into a common prefix count as a single return when calculating the number of returns.</p>
+    #[doc(hidden)]
     pub common_prefixes: std::option::Option<std::vec::Vec<crate::model::CommonPrefix>>,
     /// <p>Encoding type used by Amazon S3 to encode object keys in the response.</p>
+    #[doc(hidden)]
     pub encoding_type: std::option::Option<crate::model::EncodingType>,
 }
 impl ListObjectsOutput {
@@ -2806,11 +3059,10 @@ impl std::fmt::Debug for ListObjectsOutput {
         formatter.finish()
     }
 }
-/// See [`ListObjectsOutput`](crate::output::ListObjectsOutput)
+/// See [`ListObjectsOutput`](crate::output::ListObjectsOutput).
 pub mod list_objects_output {
 
-    /// A builder for [`ListObjectsOutput`](crate::output::ListObjectsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListObjectsOutput`](crate::output::ListObjectsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_truncated: std::option::Option<bool>,
@@ -2954,7 +3206,7 @@ pub mod list_objects_output {
             self.encoding_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListObjectsOutput`](crate::output::ListObjectsOutput)
+        /// Consumes the builder and constructs a [`ListObjectsOutput`](crate::output::ListObjectsOutput).
         pub fn build(self) -> crate::output::ListObjectsOutput {
             crate::output::ListObjectsOutput {
                 is_truncated: self.is_truncated.unwrap_or_default(),
@@ -2972,7 +3224,7 @@ pub mod list_objects_output {
     }
 }
 impl ListObjectsOutput {
-    /// Creates a new builder-style object to manufacture [`ListObjectsOutput`](crate::output::ListObjectsOutput)
+    /// Creates a new builder-style object to manufacture [`ListObjectsOutput`](crate::output::ListObjectsOutput).
     pub fn builder() -> crate::output::list_objects_output::Builder {
         crate::output::list_objects_output::Builder::default()
     }
@@ -2983,30 +3235,42 @@ impl ListObjectsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListMultipartUploadsOutput {
     /// <p>The name of the bucket to which the multipart upload was initiated. Does not return the access point ARN or access point alias if used.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The key at or after which the listing began.</p>
+    #[doc(hidden)]
     pub key_marker: std::option::Option<std::string::String>,
     /// <p>Upload ID after which listing began.</p>
+    #[doc(hidden)]
     pub upload_id_marker: std::option::Option<std::string::String>,
     /// <p>When a list is truncated, this element specifies the value that should be used for the key-marker request parameter in a subsequent request.</p>
+    #[doc(hidden)]
     pub next_key_marker: std::option::Option<std::string::String>,
     /// <p>When a prefix is provided in the request, this field contains the specified prefix. The result contains only keys starting with the specified prefix.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>Contains the delimiter you specified in the request. If you don't specify a delimiter in your request, this element is absent from the response.</p>
+    #[doc(hidden)]
     pub delimiter: std::option::Option<std::string::String>,
     /// <p>When a list is truncated, this element specifies the value that should be used for the <code>upload-id-marker</code> request parameter in a subsequent request.</p>
+    #[doc(hidden)]
     pub next_upload_id_marker: std::option::Option<std::string::String>,
     /// <p>Maximum number of multipart uploads that could have been included in the response.</p>
+    #[doc(hidden)]
     pub max_uploads: i32,
     /// <p>Indicates whether the returned list of multipart uploads is truncated. A value of true indicates that the list was truncated. The list can be truncated if the number of multipart uploads exceeds the limit allowed or specified by max uploads.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>Container for elements related to a particular multipart upload. A response can contain zero or more <code>Upload</code> elements.</p>
+    #[doc(hidden)]
     pub uploads: std::option::Option<std::vec::Vec<crate::model::MultipartUpload>>,
     /// <p>If you specify a delimiter in the request, then the result returns each distinct key prefix containing the delimiter in a <code>CommonPrefixes</code> element. The distinct key prefixes are returned in the <code>Prefix</code> child element.</p>
+    #[doc(hidden)]
     pub common_prefixes: std::option::Option<std::vec::Vec<crate::model::CommonPrefix>>,
     /// <p>Encoding type used by Amazon S3 to encode object keys in the response.</p>
     /// <p>If you specify <code>encoding-type</code> request parameter, Amazon S3 includes this element in the response, and returns encoded key name values in the following response elements:</p>
     /// <p> <code>Delimiter</code>, <code>KeyMarker</code>, <code>Prefix</code>, <code>NextKeyMarker</code>, <code>Key</code>.</p>
+    #[doc(hidden)]
     pub encoding_type: std::option::Option<crate::model::EncodingType>,
 }
 impl ListMultipartUploadsOutput {
@@ -3079,11 +3343,10 @@ impl std::fmt::Debug for ListMultipartUploadsOutput {
         formatter.finish()
     }
 }
-/// See [`ListMultipartUploadsOutput`](crate::output::ListMultipartUploadsOutput)
+/// See [`ListMultipartUploadsOutput`](crate::output::ListMultipartUploadsOutput).
 pub mod list_multipart_uploads_output {
 
-    /// A builder for [`ListMultipartUploadsOutput`](crate::output::ListMultipartUploadsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListMultipartUploadsOutput`](crate::output::ListMultipartUploadsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -3254,7 +3517,7 @@ pub mod list_multipart_uploads_output {
             self.encoding_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListMultipartUploadsOutput`](crate::output::ListMultipartUploadsOutput)
+        /// Consumes the builder and constructs a [`ListMultipartUploadsOutput`](crate::output::ListMultipartUploadsOutput).
         pub fn build(self) -> crate::output::ListMultipartUploadsOutput {
             crate::output::ListMultipartUploadsOutput {
                 bucket: self.bucket,
@@ -3274,7 +3537,7 @@ pub mod list_multipart_uploads_output {
     }
 }
 impl ListMultipartUploadsOutput {
-    /// Creates a new builder-style object to manufacture [`ListMultipartUploadsOutput`](crate::output::ListMultipartUploadsOutput)
+    /// Creates a new builder-style object to manufacture [`ListMultipartUploadsOutput`](crate::output::ListMultipartUploadsOutput).
     pub fn builder() -> crate::output::list_multipart_uploads_output::Builder {
         crate::output::list_multipart_uploads_output::Builder::default()
     }
@@ -3284,13 +3547,15 @@ impl ListMultipartUploadsOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBucketsOutput {
-    /// <p>The list of buckets owned by the requestor.</p>
+    /// <p>The list of buckets owned by the requester.</p>
+    #[doc(hidden)]
     pub buckets: std::option::Option<std::vec::Vec<crate::model::Bucket>>,
     /// <p>The owner of the buckets listed.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::Owner>,
 }
 impl ListBucketsOutput {
-    /// <p>The list of buckets owned by the requestor.</p>
+    /// <p>The list of buckets owned by the requester.</p>
     pub fn buckets(&self) -> std::option::Option<&[crate::model::Bucket]> {
         self.buckets.as_deref()
     }
@@ -3307,11 +3572,10 @@ impl std::fmt::Debug for ListBucketsOutput {
         formatter.finish()
     }
 }
-/// See [`ListBucketsOutput`](crate::output::ListBucketsOutput)
+/// See [`ListBucketsOutput`](crate::output::ListBucketsOutput).
 pub mod list_buckets_output {
 
-    /// A builder for [`ListBucketsOutput`](crate::output::ListBucketsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBucketsOutput`](crate::output::ListBucketsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) buckets: std::option::Option<std::vec::Vec<crate::model::Bucket>>,
@@ -3322,14 +3586,14 @@ pub mod list_buckets_output {
         ///
         /// To override the contents of this collection use [`set_buckets`](Self::set_buckets).
         ///
-        /// <p>The list of buckets owned by the requestor.</p>
+        /// <p>The list of buckets owned by the requester.</p>
         pub fn buckets(mut self, input: crate::model::Bucket) -> Self {
             let mut v = self.buckets.unwrap_or_default();
             v.push(input);
             self.buckets = Some(v);
             self
         }
-        /// <p>The list of buckets owned by the requestor.</p>
+        /// <p>The list of buckets owned by the requester.</p>
         pub fn set_buckets(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::Bucket>>,
@@ -3347,7 +3611,7 @@ pub mod list_buckets_output {
             self.owner = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBucketsOutput`](crate::output::ListBucketsOutput)
+        /// Consumes the builder and constructs a [`ListBucketsOutput`](crate::output::ListBucketsOutput).
         pub fn build(self) -> crate::output::ListBucketsOutput {
             crate::output::ListBucketsOutput {
                 buckets: self.buckets,
@@ -3357,7 +3621,7 @@ pub mod list_buckets_output {
     }
 }
 impl ListBucketsOutput {
-    /// Creates a new builder-style object to manufacture [`ListBucketsOutput`](crate::output::ListBucketsOutput)
+    /// Creates a new builder-style object to manufacture [`ListBucketsOutput`](crate::output::ListBucketsOutput).
     pub fn builder() -> crate::output::list_buckets_output::Builder {
         crate::output::list_buckets_output::Builder::default()
     }
@@ -3368,12 +3632,16 @@ impl ListBucketsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBucketMetricsConfigurationsOutput {
     /// <p>Indicates whether the returned list of metrics configurations is complete. A value of true indicates that the list is not complete and the NextContinuationToken will be provided for a subsequent request.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>The marker that is used as a starting point for this metrics configuration list response. This value is present if it was sent in the request.</p>
+    #[doc(hidden)]
     pub continuation_token: std::option::Option<std::string::String>,
     /// <p>The marker used to continue a metrics configuration listing that has been truncated. Use the <code>NextContinuationToken</code> from a previously truncated list response to continue the listing. The continuation token is an opaque value that Amazon S3 understands.</p>
+    #[doc(hidden)]
     pub next_continuation_token: std::option::Option<std::string::String>,
     /// <p>The list of metrics configurations for a bucket.</p>
+    #[doc(hidden)]
     pub metrics_configuration_list:
         std::option::Option<std::vec::Vec<crate::model::MetricsConfiguration>>,
 }
@@ -3410,11 +3678,10 @@ impl std::fmt::Debug for ListBucketMetricsConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListBucketMetricsConfigurationsOutput`](crate::output::ListBucketMetricsConfigurationsOutput)
+/// See [`ListBucketMetricsConfigurationsOutput`](crate::output::ListBucketMetricsConfigurationsOutput).
 pub mod list_bucket_metrics_configurations_output {
 
-    /// A builder for [`ListBucketMetricsConfigurationsOutput`](crate::output::ListBucketMetricsConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBucketMetricsConfigurationsOutput`](crate::output::ListBucketMetricsConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_truncated: std::option::Option<bool>,
@@ -3482,7 +3749,7 @@ pub mod list_bucket_metrics_configurations_output {
             self.metrics_configuration_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBucketMetricsConfigurationsOutput`](crate::output::ListBucketMetricsConfigurationsOutput)
+        /// Consumes the builder and constructs a [`ListBucketMetricsConfigurationsOutput`](crate::output::ListBucketMetricsConfigurationsOutput).
         pub fn build(self) -> crate::output::ListBucketMetricsConfigurationsOutput {
             crate::output::ListBucketMetricsConfigurationsOutput {
                 is_truncated: self.is_truncated.unwrap_or_default(),
@@ -3494,7 +3761,7 @@ pub mod list_bucket_metrics_configurations_output {
     }
 }
 impl ListBucketMetricsConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListBucketMetricsConfigurationsOutput`](crate::output::ListBucketMetricsConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListBucketMetricsConfigurationsOutput`](crate::output::ListBucketMetricsConfigurationsOutput).
     pub fn builder() -> crate::output::list_bucket_metrics_configurations_output::Builder {
         crate::output::list_bucket_metrics_configurations_output::Builder::default()
     }
@@ -3505,13 +3772,17 @@ impl ListBucketMetricsConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBucketInventoryConfigurationsOutput {
     /// <p>If sent in the request, the marker that is used as a starting point for this inventory configuration list response.</p>
+    #[doc(hidden)]
     pub continuation_token: std::option::Option<std::string::String>,
     /// <p>The list of inventory configurations for a bucket.</p>
+    #[doc(hidden)]
     pub inventory_configuration_list:
         std::option::Option<std::vec::Vec<crate::model::InventoryConfiguration>>,
     /// <p>Tells whether the returned list of inventory configurations is complete. A value of true indicates that the list is not complete and the NextContinuationToken is provided for a subsequent request.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>The marker used to continue this inventory configuration listing. Use the <code>NextContinuationToken</code> from this response to continue the listing in a subsequent request. The continuation token is an opaque value that Amazon S3 understands.</p>
+    #[doc(hidden)]
     pub next_continuation_token: std::option::Option<std::string::String>,
 }
 impl ListBucketInventoryConfigurationsOutput {
@@ -3547,11 +3818,10 @@ impl std::fmt::Debug for ListBucketInventoryConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListBucketInventoryConfigurationsOutput`](crate::output::ListBucketInventoryConfigurationsOutput)
+/// See [`ListBucketInventoryConfigurationsOutput`](crate::output::ListBucketInventoryConfigurationsOutput).
 pub mod list_bucket_inventory_configurations_output {
 
-    /// A builder for [`ListBucketInventoryConfigurationsOutput`](crate::output::ListBucketInventoryConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBucketInventoryConfigurationsOutput`](crate::output::ListBucketInventoryConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) continuation_token: std::option::Option<std::string::String>,
@@ -3619,7 +3889,7 @@ pub mod list_bucket_inventory_configurations_output {
             self.next_continuation_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBucketInventoryConfigurationsOutput`](crate::output::ListBucketInventoryConfigurationsOutput)
+        /// Consumes the builder and constructs a [`ListBucketInventoryConfigurationsOutput`](crate::output::ListBucketInventoryConfigurationsOutput).
         pub fn build(self) -> crate::output::ListBucketInventoryConfigurationsOutput {
             crate::output::ListBucketInventoryConfigurationsOutput {
                 continuation_token: self.continuation_token,
@@ -3631,7 +3901,7 @@ pub mod list_bucket_inventory_configurations_output {
     }
 }
 impl ListBucketInventoryConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListBucketInventoryConfigurationsOutput`](crate::output::ListBucketInventoryConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListBucketInventoryConfigurationsOutput`](crate::output::ListBucketInventoryConfigurationsOutput).
     pub fn builder() -> crate::output::list_bucket_inventory_configurations_output::Builder {
         crate::output::list_bucket_inventory_configurations_output::Builder::default()
     }
@@ -3641,22 +3911,26 @@ impl ListBucketInventoryConfigurationsOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBucketIntelligentTieringConfigurationsOutput {
-    /// <p>Indicates whether the returned list of analytics configurations is complete. A value of true indicates that the list is not complete and the NextContinuationToken will be provided for a subsequent request.</p>
+    /// <p>Indicates whether the returned list of analytics configurations is complete. A value of <code>true</code> indicates that the list is not complete and the <code>NextContinuationToken</code> will be provided for a subsequent request.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
-    /// <p>The ContinuationToken that represents a placeholder from where this request should begin.</p>
+    /// <p>The <code>ContinuationToken</code> that represents a placeholder from where this request should begin.</p>
+    #[doc(hidden)]
     pub continuation_token: std::option::Option<std::string::String>,
     /// <p>The marker used to continue this inventory configuration listing. Use the <code>NextContinuationToken</code> from this response to continue the listing in a subsequent request. The continuation token is an opaque value that Amazon S3 understands.</p>
+    #[doc(hidden)]
     pub next_continuation_token: std::option::Option<std::string::String>,
     /// <p>The list of S3 Intelligent-Tiering configurations for a bucket.</p>
+    #[doc(hidden)]
     pub intelligent_tiering_configuration_list:
         std::option::Option<std::vec::Vec<crate::model::IntelligentTieringConfiguration>>,
 }
 impl ListBucketIntelligentTieringConfigurationsOutput {
-    /// <p>Indicates whether the returned list of analytics configurations is complete. A value of true indicates that the list is not complete and the NextContinuationToken will be provided for a subsequent request.</p>
+    /// <p>Indicates whether the returned list of analytics configurations is complete. A value of <code>true</code> indicates that the list is not complete and the <code>NextContinuationToken</code> will be provided for a subsequent request.</p>
     pub fn is_truncated(&self) -> bool {
         self.is_truncated
     }
-    /// <p>The ContinuationToken that represents a placeholder from where this request should begin.</p>
+    /// <p>The <code>ContinuationToken</code> that represents a placeholder from where this request should begin.</p>
     pub fn continuation_token(&self) -> std::option::Option<&str> {
         self.continuation_token.as_deref()
     }
@@ -3684,11 +3958,10 @@ impl std::fmt::Debug for ListBucketIntelligentTieringConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListBucketIntelligentTieringConfigurationsOutput`](crate::output::ListBucketIntelligentTieringConfigurationsOutput)
+/// See [`ListBucketIntelligentTieringConfigurationsOutput`](crate::output::ListBucketIntelligentTieringConfigurationsOutput).
 pub mod list_bucket_intelligent_tiering_configurations_output {
 
-    /// A builder for [`ListBucketIntelligentTieringConfigurationsOutput`](crate::output::ListBucketIntelligentTieringConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBucketIntelligentTieringConfigurationsOutput`](crate::output::ListBucketIntelligentTieringConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_truncated: std::option::Option<bool>,
@@ -3698,22 +3971,22 @@ pub mod list_bucket_intelligent_tiering_configurations_output {
             std::option::Option<std::vec::Vec<crate::model::IntelligentTieringConfiguration>>,
     }
     impl Builder {
-        /// <p>Indicates whether the returned list of analytics configurations is complete. A value of true indicates that the list is not complete and the NextContinuationToken will be provided for a subsequent request.</p>
+        /// <p>Indicates whether the returned list of analytics configurations is complete. A value of <code>true</code> indicates that the list is not complete and the <code>NextContinuationToken</code> will be provided for a subsequent request.</p>
         pub fn is_truncated(mut self, input: bool) -> Self {
             self.is_truncated = Some(input);
             self
         }
-        /// <p>Indicates whether the returned list of analytics configurations is complete. A value of true indicates that the list is not complete and the NextContinuationToken will be provided for a subsequent request.</p>
+        /// <p>Indicates whether the returned list of analytics configurations is complete. A value of <code>true</code> indicates that the list is not complete and the <code>NextContinuationToken</code> will be provided for a subsequent request.</p>
         pub fn set_is_truncated(mut self, input: std::option::Option<bool>) -> Self {
             self.is_truncated = input;
             self
         }
-        /// <p>The ContinuationToken that represents a placeholder from where this request should begin.</p>
+        /// <p>The <code>ContinuationToken</code> that represents a placeholder from where this request should begin.</p>
         pub fn continuation_token(mut self, input: impl Into<std::string::String>) -> Self {
             self.continuation_token = Some(input.into());
             self
         }
-        /// <p>The ContinuationToken that represents a placeholder from where this request should begin.</p>
+        /// <p>The <code>ContinuationToken</code> that represents a placeholder from where this request should begin.</p>
         pub fn set_continuation_token(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -3760,7 +4033,7 @@ pub mod list_bucket_intelligent_tiering_configurations_output {
             self.intelligent_tiering_configuration_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBucketIntelligentTieringConfigurationsOutput`](crate::output::ListBucketIntelligentTieringConfigurationsOutput)
+        /// Consumes the builder and constructs a [`ListBucketIntelligentTieringConfigurationsOutput`](crate::output::ListBucketIntelligentTieringConfigurationsOutput).
         pub fn build(self) -> crate::output::ListBucketIntelligentTieringConfigurationsOutput {
             crate::output::ListBucketIntelligentTieringConfigurationsOutput {
                 is_truncated: self.is_truncated.unwrap_or_default(),
@@ -3772,7 +4045,7 @@ pub mod list_bucket_intelligent_tiering_configurations_output {
     }
 }
 impl ListBucketIntelligentTieringConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListBucketIntelligentTieringConfigurationsOutput`](crate::output::ListBucketIntelligentTieringConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListBucketIntelligentTieringConfigurationsOutput`](crate::output::ListBucketIntelligentTieringConfigurationsOutput).
     pub fn builder() -> crate::output::list_bucket_intelligent_tiering_configurations_output::Builder
     {
         crate::output::list_bucket_intelligent_tiering_configurations_output::Builder::default()
@@ -3784,12 +4057,16 @@ impl ListBucketIntelligentTieringConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBucketAnalyticsConfigurationsOutput {
     /// <p>Indicates whether the returned list of analytics configurations is complete. A value of true indicates that the list is not complete and the NextContinuationToken will be provided for a subsequent request.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>The marker that is used as a starting point for this analytics configuration list response. This value is present if it was sent in the request.</p>
+    #[doc(hidden)]
     pub continuation_token: std::option::Option<std::string::String>,
     /// <p> <code>NextContinuationToken</code> is sent when <code>isTruncated</code> is true, which indicates that there are more analytics configurations to list. The next request must include this <code>NextContinuationToken</code>. The token is obfuscated and is not a usable value.</p>
+    #[doc(hidden)]
     pub next_continuation_token: std::option::Option<std::string::String>,
     /// <p>The list of analytics configurations for a bucket.</p>
+    #[doc(hidden)]
     pub analytics_configuration_list:
         std::option::Option<std::vec::Vec<crate::model::AnalyticsConfiguration>>,
 }
@@ -3826,11 +4103,10 @@ impl std::fmt::Debug for ListBucketAnalyticsConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListBucketAnalyticsConfigurationsOutput`](crate::output::ListBucketAnalyticsConfigurationsOutput)
+/// See [`ListBucketAnalyticsConfigurationsOutput`](crate::output::ListBucketAnalyticsConfigurationsOutput).
 pub mod list_bucket_analytics_configurations_output {
 
-    /// A builder for [`ListBucketAnalyticsConfigurationsOutput`](crate::output::ListBucketAnalyticsConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBucketAnalyticsConfigurationsOutput`](crate::output::ListBucketAnalyticsConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) is_truncated: std::option::Option<bool>,
@@ -3898,7 +4174,7 @@ pub mod list_bucket_analytics_configurations_output {
             self.analytics_configuration_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBucketAnalyticsConfigurationsOutput`](crate::output::ListBucketAnalyticsConfigurationsOutput)
+        /// Consumes the builder and constructs a [`ListBucketAnalyticsConfigurationsOutput`](crate::output::ListBucketAnalyticsConfigurationsOutput).
         pub fn build(self) -> crate::output::ListBucketAnalyticsConfigurationsOutput {
             crate::output::ListBucketAnalyticsConfigurationsOutput {
                 is_truncated: self.is_truncated.unwrap_or_default(),
@@ -3910,7 +4186,7 @@ pub mod list_bucket_analytics_configurations_output {
     }
 }
 impl ListBucketAnalyticsConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListBucketAnalyticsConfigurationsOutput`](crate::output::ListBucketAnalyticsConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListBucketAnalyticsConfigurationsOutput`](crate::output::ListBucketAnalyticsConfigurationsOutput).
     pub fn builder() -> crate::output::list_bucket_analytics_configurations_output::Builder {
         crate::output::list_bucket_analytics_configurations_output::Builder::default()
     }
@@ -3921,77 +4197,119 @@ impl ListBucketAnalyticsConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HeadObjectOutput {
     /// <p>Specifies whether the object retrieved was (true) or was not (false) a Delete Marker. If false, this response header does not appear in the response.</p>
+    #[doc(hidden)]
     pub delete_marker: bool,
     /// <p>Indicates that a range of bytes was specified.</p>
+    #[doc(hidden)]
     pub accept_ranges: std::option::Option<std::string::String>,
-    /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the expiry-date and rule-id key-value pairs providing object expiration information. The value of the rule-id is URL encoded.</p>
+    /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the <code>expiry-date</code> and <code>rule-id</code> key-value pairs providing object expiration information. The value of the <code>rule-id</code> is URL-encoded.</p>
+    #[doc(hidden)]
     pub expiration: std::option::Option<std::string::String>,
     /// <p>If the object is an archived object (an object whose storage class is GLACIER), the response includes this header if either the archive restoration is in progress (see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_RestoreObject.html">RestoreObject</a> or an archive copy is already restored.</p>
     /// <p> If an archive copy is already restored, the header value indicates when Amazon S3 is scheduled to delete the object copy. For example:</p>
     /// <p> <code>x-amz-restore: ongoing-request="false", expiry-date="Fri, 21 Dec 2012 00:00:00 GMT"</code> </p>
     /// <p>If the object restoration is in progress, the header returns the value <code>ongoing-request="true"</code>.</p>
     /// <p>For more information about archiving objects, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html#lifecycle-transition-general-considerations">Transitioning Objects: General Considerations</a>.</p>
+    #[doc(hidden)]
     pub restore: std::option::Option<std::string::String>,
     /// <p>The archive state of the head object.</p>
+    #[doc(hidden)]
     pub archive_status: std::option::Option<crate::model::ArchiveStatus>,
     /// <p>Creation date of the object.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Size of the body in bytes.</p>
+    #[doc(hidden)]
     pub content_length: i64,
-    /// <p>An ETag is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32_c: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha1: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha256: std::option::Option<std::string::String>,
+    /// <p>An entity tag (ETag) is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
     /// <p>This is set to the number of metadata entries not returned in <code>x-amz-meta</code> headers. This can happen if you create metadata using an API like SOAP that supports more flexible metadata than the REST API. For example, using SOAP, you can create metadata whose values are not legal HTTP headers.</p>
+    #[doc(hidden)]
     pub missing_meta: i32,
     /// <p>Version of the object.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>Specifies caching behavior along the request/reply chain.</p>
+    #[doc(hidden)]
     pub cache_control: std::option::Option<std::string::String>,
     /// <p>Specifies presentational information for the object.</p>
+    #[doc(hidden)]
     pub content_disposition: std::option::Option<std::string::String>,
     /// <p>Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.</p>
+    #[doc(hidden)]
     pub content_encoding: std::option::Option<std::string::String>,
     /// <p>The language the content is in.</p>
+    #[doc(hidden)]
     pub content_language: std::option::Option<std::string::String>,
     /// <p>A standard MIME type describing the format of the object data.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The date and time at which the object is no longer cacheable.</p>
+    #[doc(hidden)]
     pub expires: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.</p>
+    #[doc(hidden)]
     pub website_redirect_location: std::option::Option<std::string::String>,
     /// <p>If the object is stored using server-side encryption either with an Amazon Web Services KMS key or an Amazon S3-managed encryption key, the response includes this header with the value of the server-side encryption algorithm used when storing this object in Amazon S3 (for example, AES256, aws:kms).</p>
+    #[doc(hidden)]
     pub server_side_encryption: std::option::Option<crate::model::ServerSideEncryption>,
     /// <p>A map of metadata to store with the object in S3.</p>
+    #[doc(hidden)]
     pub metadata:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header confirming the encryption algorithm used.</p>
+    #[doc(hidden)]
     pub sse_customer_algorithm: std::option::Option<std::string::String>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header to provide round-trip message integrity verification of the customer-provided encryption key.</p>
+    #[doc(hidden)]
     pub sse_customer_key_md5: std::option::Option<std::string::String>,
     /// <p>If present, specifies the ID of the Amazon Web Services Key Management Service (Amazon Web Services KMS) symmetric customer managed key that was used for the object.</p>
+    #[doc(hidden)]
     pub ssekms_key_id: std::option::Option<std::string::String>,
     /// <p>Indicates whether the object uses an S3 Bucket Key for server-side encryption with Amazon Web Services KMS (SSE-KMS).</p>
+    #[doc(hidden)]
     pub bucket_key_enabled: bool,
     /// <p>Provides storage class information of the object. Amazon S3 returns this header for all objects except for S3 Standard storage class objects.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html">Storage Classes</a>.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::StorageClass>,
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
     /// <p>Amazon S3 can return this header if your request involves a bucket that is either a source or a destination in a replication rule.</p>
     /// <p>In replication, you have a source bucket on which you configure replication and destination bucket or buckets where Amazon S3 stores object replicas. When you request an object (<code>GetObject</code>) or object metadata (<code>HeadObject</code>) from these buckets, Amazon S3 will return the <code>x-amz-replication-status</code> header in the response as follows:</p>
     /// <ul>
-    /// <li> <p>If requesting an object from the source bucket — Amazon S3 will return the <code>x-amz-replication-status</code> header if the object in your request is eligible for replication.</p> <p> For example, suppose that in your replication configuration, you specify object prefix <code>TaxDocs</code> requesting Amazon S3 to replicate objects with key prefix <code>TaxDocs</code>. Any objects you upload with this key name prefix, for example <code>TaxDocs/document1.pdf</code>, are eligible for replication. For any object request with this key name prefix, Amazon S3 will return the <code>x-amz-replication-status</code> header with value PENDING, COMPLETED or FAILED indicating object replication status.</p> </li>
-    /// <li> <p>If requesting an object from a destination bucket — Amazon S3 will return the <code>x-amz-replication-status</code> header with value REPLICA if the object in your request is a replica that Amazon S3 created and there is no replica modification replication in progress.</p> </li>
-    /// <li> <p>When replicating objects to multiple destination buckets the <code>x-amz-replication-status</code> header acts differently. The header of the source object will only return a value of COMPLETED when replication is successful to all destinations. The header will remain at value PENDING until replication has completed for all destinations. If one or more destinations fails replication the header will return FAILED. </p> </li>
+    /// <li> <p> <b>If requesting an object from the source bucket</b>, Amazon S3 will return the <code>x-amz-replication-status</code> header if the object in your request is eligible for replication.</p> <p> For example, suppose that in your replication configuration, you specify object prefix <code>TaxDocs</code> requesting Amazon S3 to replicate objects with key prefix <code>TaxDocs</code>. Any objects you upload with this key name prefix, for example <code>TaxDocs/document1.pdf</code>, are eligible for replication. For any object request with this key name prefix, Amazon S3 will return the <code>x-amz-replication-status</code> header with value PENDING, COMPLETED or FAILED indicating object replication status.</p> </li>
+    /// <li> <p> <b>If requesting an object from a destination bucket</b>, Amazon S3 will return the <code>x-amz-replication-status</code> header with value REPLICA if the object in your request is a replica that Amazon S3 created and there is no replica modification replication in progress.</p> </li>
+    /// <li> <p> <b>When replicating objects to multiple destination buckets</b>, the <code>x-amz-replication-status</code> header acts differently. The header of the source object will only return a value of COMPLETED when replication is successful to all destinations. The header will remain at value PENDING until replication has completed for all destinations. If one or more destinations fails replication the header will return FAILED. </p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Replication</a>.</p>
+    #[doc(hidden)]
     pub replication_status: std::option::Option<crate::model::ReplicationStatus>,
-    /// <p>The count of parts this object has.</p>
+    /// <p>The count of parts this object has. This value is only returned if you specify <code>partNumber</code> in your request and the object was uploaded as a multipart upload.</p>
+    #[doc(hidden)]
     pub parts_count: i32,
     /// <p>The Object Lock mode, if any, that's in effect for this object. This header is only returned if the requester has the <code>s3:GetObjectRetention</code> permission. For more information about S3 Object Lock, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">Object Lock</a>. </p>
+    #[doc(hidden)]
     pub object_lock_mode: std::option::Option<crate::model::ObjectLockMode>,
     /// <p>The date and time when the Object Lock retention period expires. This header is only returned if the requester has the <code>s3:GetObjectRetention</code> permission.</p>
+    #[doc(hidden)]
     pub object_lock_retain_until_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies whether a legal hold is in effect for this object. This header is only returned if the requester has the <code>s3:GetObjectLegalHold</code> permission. This header is not returned if the specified version of this object has never had a legal hold applied. For more information about S3 Object Lock, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">Object Lock</a>.</p>
+    #[doc(hidden)]
     pub object_lock_legal_hold_status: std::option::Option<crate::model::ObjectLockLegalHoldStatus>,
 }
 impl HeadObjectOutput {
@@ -4003,7 +4321,7 @@ impl HeadObjectOutput {
     pub fn accept_ranges(&self) -> std::option::Option<&str> {
         self.accept_ranges.as_deref()
     }
-    /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the expiry-date and rule-id key-value pairs providing object expiration information. The value of the rule-id is URL encoded.</p>
+    /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the <code>expiry-date</code> and <code>rule-id</code> key-value pairs providing object expiration information. The value of the <code>rule-id</code> is URL-encoded.</p>
     pub fn expiration(&self) -> std::option::Option<&str> {
         self.expiration.as_deref()
     }
@@ -4027,7 +4345,23 @@ impl HeadObjectOutput {
     pub fn content_length(&self) -> i64 {
         self.content_length
     }
-    /// <p>An ETag is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32(&self) -> std::option::Option<&str> {
+        self.checksum_crc32.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32_c(&self) -> std::option::Option<&str> {
+        self.checksum_crc32_c.as_deref()
+    }
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha1(&self) -> std::option::Option<&str> {
+        self.checksum_sha1.as_deref()
+    }
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha256(&self) -> std::option::Option<&str> {
+        self.checksum_sha256.as_deref()
+    }
+    /// <p>An entity tag (ETag) is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
     pub fn e_tag(&self) -> std::option::Option<&str> {
         self.e_tag.as_deref()
     }
@@ -4108,15 +4442,15 @@ impl HeadObjectOutput {
     /// <p>Amazon S3 can return this header if your request involves a bucket that is either a source or a destination in a replication rule.</p>
     /// <p>In replication, you have a source bucket on which you configure replication and destination bucket or buckets where Amazon S3 stores object replicas. When you request an object (<code>GetObject</code>) or object metadata (<code>HeadObject</code>) from these buckets, Amazon S3 will return the <code>x-amz-replication-status</code> header in the response as follows:</p>
     /// <ul>
-    /// <li> <p>If requesting an object from the source bucket — Amazon S3 will return the <code>x-amz-replication-status</code> header if the object in your request is eligible for replication.</p> <p> For example, suppose that in your replication configuration, you specify object prefix <code>TaxDocs</code> requesting Amazon S3 to replicate objects with key prefix <code>TaxDocs</code>. Any objects you upload with this key name prefix, for example <code>TaxDocs/document1.pdf</code>, are eligible for replication. For any object request with this key name prefix, Amazon S3 will return the <code>x-amz-replication-status</code> header with value PENDING, COMPLETED or FAILED indicating object replication status.</p> </li>
-    /// <li> <p>If requesting an object from a destination bucket — Amazon S3 will return the <code>x-amz-replication-status</code> header with value REPLICA if the object in your request is a replica that Amazon S3 created and there is no replica modification replication in progress.</p> </li>
-    /// <li> <p>When replicating objects to multiple destination buckets the <code>x-amz-replication-status</code> header acts differently. The header of the source object will only return a value of COMPLETED when replication is successful to all destinations. The header will remain at value PENDING until replication has completed for all destinations. If one or more destinations fails replication the header will return FAILED. </p> </li>
+    /// <li> <p> <b>If requesting an object from the source bucket</b>, Amazon S3 will return the <code>x-amz-replication-status</code> header if the object in your request is eligible for replication.</p> <p> For example, suppose that in your replication configuration, you specify object prefix <code>TaxDocs</code> requesting Amazon S3 to replicate objects with key prefix <code>TaxDocs</code>. Any objects you upload with this key name prefix, for example <code>TaxDocs/document1.pdf</code>, are eligible for replication. For any object request with this key name prefix, Amazon S3 will return the <code>x-amz-replication-status</code> header with value PENDING, COMPLETED or FAILED indicating object replication status.</p> </li>
+    /// <li> <p> <b>If requesting an object from a destination bucket</b>, Amazon S3 will return the <code>x-amz-replication-status</code> header with value REPLICA if the object in your request is a replica that Amazon S3 created and there is no replica modification replication in progress.</p> </li>
+    /// <li> <p> <b>When replicating objects to multiple destination buckets</b>, the <code>x-amz-replication-status</code> header acts differently. The header of the source object will only return a value of COMPLETED when replication is successful to all destinations. The header will remain at value PENDING until replication has completed for all destinations. If one or more destinations fails replication the header will return FAILED. </p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Replication</a>.</p>
     pub fn replication_status(&self) -> std::option::Option<&crate::model::ReplicationStatus> {
         self.replication_status.as_ref()
     }
-    /// <p>The count of parts this object has.</p>
+    /// <p>The count of parts this object has. This value is only returned if you specify <code>partNumber</code> in your request and the object was uploaded as a multipart upload.</p>
     pub fn parts_count(&self) -> i32 {
         self.parts_count
     }
@@ -4147,6 +4481,10 @@ impl std::fmt::Debug for HeadObjectOutput {
         formatter.field("archive_status", &self.archive_status);
         formatter.field("last_modified", &self.last_modified);
         formatter.field("content_length", &self.content_length);
+        formatter.field("checksum_crc32", &self.checksum_crc32);
+        formatter.field("checksum_crc32_c", &self.checksum_crc32_c);
+        formatter.field("checksum_sha1", &self.checksum_sha1);
+        formatter.field("checksum_sha256", &self.checksum_sha256);
         formatter.field("e_tag", &self.e_tag);
         formatter.field("missing_meta", &self.missing_meta);
         formatter.field("version_id", &self.version_id);
@@ -4179,11 +4517,10 @@ impl std::fmt::Debug for HeadObjectOutput {
         formatter.finish()
     }
 }
-/// See [`HeadObjectOutput`](crate::output::HeadObjectOutput)
+/// See [`HeadObjectOutput`](crate::output::HeadObjectOutput).
 pub mod head_object_output {
 
-    /// A builder for [`HeadObjectOutput`](crate::output::HeadObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`HeadObjectOutput`](crate::output::HeadObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delete_marker: std::option::Option<bool>,
@@ -4193,6 +4530,10 @@ pub mod head_object_output {
         pub(crate) archive_status: std::option::Option<crate::model::ArchiveStatus>,
         pub(crate) last_modified: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) content_length: std::option::Option<i64>,
+        pub(crate) checksum_crc32: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32_c: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha1: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha256: std::option::Option<std::string::String>,
         pub(crate) e_tag: std::option::Option<std::string::String>,
         pub(crate) missing_meta: std::option::Option<i32>,
         pub(crate) version_id: std::option::Option<std::string::String>,
@@ -4244,12 +4585,12 @@ pub mod head_object_output {
             self.accept_ranges = input;
             self
         }
-        /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the expiry-date and rule-id key-value pairs providing object expiration information. The value of the rule-id is URL encoded.</p>
+        /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the <code>expiry-date</code> and <code>rule-id</code> key-value pairs providing object expiration information. The value of the <code>rule-id</code> is URL-encoded.</p>
         pub fn expiration(mut self, input: impl Into<std::string::String>) -> Self {
             self.expiration = Some(input.into());
             self
         }
-        /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the expiry-date and rule-id key-value pairs providing object expiration information. The value of the rule-id is URL encoded.</p>
+        /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the <code>expiry-date</code> and <code>rule-id</code> key-value pairs providing object expiration information. The value of the <code>rule-id</code> is URL-encoded.</p>
         pub fn set_expiration(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.expiration = input;
             self
@@ -4308,12 +4649,64 @@ pub mod head_object_output {
             self.content_length = input;
             self
         }
-        /// <p>An ETag is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32 = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32_c(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32_c = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32_c(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32_c = input;
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha1(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha1 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha1(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha1 = input;
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha256(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha256 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha256(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha256 = input;
+            self
+        }
+        /// <p>An entity tag (ETag) is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
         pub fn e_tag(mut self, input: impl Into<std::string::String>) -> Self {
             self.e_tag = Some(input.into());
             self
         }
-        /// <p>An ETag is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+        /// <p>An entity tag (ETag) is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
         pub fn set_e_tag(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.e_tag = input;
             self
@@ -4544,9 +4937,9 @@ pub mod head_object_output {
         /// <p>Amazon S3 can return this header if your request involves a bucket that is either a source or a destination in a replication rule.</p>
         /// <p>In replication, you have a source bucket on which you configure replication and destination bucket or buckets where Amazon S3 stores object replicas. When you request an object (<code>GetObject</code>) or object metadata (<code>HeadObject</code>) from these buckets, Amazon S3 will return the <code>x-amz-replication-status</code> header in the response as follows:</p>
         /// <ul>
-        /// <li> <p>If requesting an object from the source bucket — Amazon S3 will return the <code>x-amz-replication-status</code> header if the object in your request is eligible for replication.</p> <p> For example, suppose that in your replication configuration, you specify object prefix <code>TaxDocs</code> requesting Amazon S3 to replicate objects with key prefix <code>TaxDocs</code>. Any objects you upload with this key name prefix, for example <code>TaxDocs/document1.pdf</code>, are eligible for replication. For any object request with this key name prefix, Amazon S3 will return the <code>x-amz-replication-status</code> header with value PENDING, COMPLETED or FAILED indicating object replication status.</p> </li>
-        /// <li> <p>If requesting an object from a destination bucket — Amazon S3 will return the <code>x-amz-replication-status</code> header with value REPLICA if the object in your request is a replica that Amazon S3 created and there is no replica modification replication in progress.</p> </li>
-        /// <li> <p>When replicating objects to multiple destination buckets the <code>x-amz-replication-status</code> header acts differently. The header of the source object will only return a value of COMPLETED when replication is successful to all destinations. The header will remain at value PENDING until replication has completed for all destinations. If one or more destinations fails replication the header will return FAILED. </p> </li>
+        /// <li> <p> <b>If requesting an object from the source bucket</b>, Amazon S3 will return the <code>x-amz-replication-status</code> header if the object in your request is eligible for replication.</p> <p> For example, suppose that in your replication configuration, you specify object prefix <code>TaxDocs</code> requesting Amazon S3 to replicate objects with key prefix <code>TaxDocs</code>. Any objects you upload with this key name prefix, for example <code>TaxDocs/document1.pdf</code>, are eligible for replication. For any object request with this key name prefix, Amazon S3 will return the <code>x-amz-replication-status</code> header with value PENDING, COMPLETED or FAILED indicating object replication status.</p> </li>
+        /// <li> <p> <b>If requesting an object from a destination bucket</b>, Amazon S3 will return the <code>x-amz-replication-status</code> header with value REPLICA if the object in your request is a replica that Amazon S3 created and there is no replica modification replication in progress.</p> </li>
+        /// <li> <p> <b>When replicating objects to multiple destination buckets</b>, the <code>x-amz-replication-status</code> header acts differently. The header of the source object will only return a value of COMPLETED when replication is successful to all destinations. The header will remain at value PENDING until replication has completed for all destinations. If one or more destinations fails replication the header will return FAILED. </p> </li>
         /// </ul>
         /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Replication</a>.</p>
         pub fn replication_status(mut self, input: crate::model::ReplicationStatus) -> Self {
@@ -4556,9 +4949,9 @@ pub mod head_object_output {
         /// <p>Amazon S3 can return this header if your request involves a bucket that is either a source or a destination in a replication rule.</p>
         /// <p>In replication, you have a source bucket on which you configure replication and destination bucket or buckets where Amazon S3 stores object replicas. When you request an object (<code>GetObject</code>) or object metadata (<code>HeadObject</code>) from these buckets, Amazon S3 will return the <code>x-amz-replication-status</code> header in the response as follows:</p>
         /// <ul>
-        /// <li> <p>If requesting an object from the source bucket — Amazon S3 will return the <code>x-amz-replication-status</code> header if the object in your request is eligible for replication.</p> <p> For example, suppose that in your replication configuration, you specify object prefix <code>TaxDocs</code> requesting Amazon S3 to replicate objects with key prefix <code>TaxDocs</code>. Any objects you upload with this key name prefix, for example <code>TaxDocs/document1.pdf</code>, are eligible for replication. For any object request with this key name prefix, Amazon S3 will return the <code>x-amz-replication-status</code> header with value PENDING, COMPLETED or FAILED indicating object replication status.</p> </li>
-        /// <li> <p>If requesting an object from a destination bucket — Amazon S3 will return the <code>x-amz-replication-status</code> header with value REPLICA if the object in your request is a replica that Amazon S3 created and there is no replica modification replication in progress.</p> </li>
-        /// <li> <p>When replicating objects to multiple destination buckets the <code>x-amz-replication-status</code> header acts differently. The header of the source object will only return a value of COMPLETED when replication is successful to all destinations. The header will remain at value PENDING until replication has completed for all destinations. If one or more destinations fails replication the header will return FAILED. </p> </li>
+        /// <li> <p> <b>If requesting an object from the source bucket</b>, Amazon S3 will return the <code>x-amz-replication-status</code> header if the object in your request is eligible for replication.</p> <p> For example, suppose that in your replication configuration, you specify object prefix <code>TaxDocs</code> requesting Amazon S3 to replicate objects with key prefix <code>TaxDocs</code>. Any objects you upload with this key name prefix, for example <code>TaxDocs/document1.pdf</code>, are eligible for replication. For any object request with this key name prefix, Amazon S3 will return the <code>x-amz-replication-status</code> header with value PENDING, COMPLETED or FAILED indicating object replication status.</p> </li>
+        /// <li> <p> <b>If requesting an object from a destination bucket</b>, Amazon S3 will return the <code>x-amz-replication-status</code> header with value REPLICA if the object in your request is a replica that Amazon S3 created and there is no replica modification replication in progress.</p> </li>
+        /// <li> <p> <b>When replicating objects to multiple destination buckets</b>, the <code>x-amz-replication-status</code> header acts differently. The header of the source object will only return a value of COMPLETED when replication is successful to all destinations. The header will remain at value PENDING until replication has completed for all destinations. If one or more destinations fails replication the header will return FAILED. </p> </li>
         /// </ul>
         /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Replication</a>.</p>
         pub fn set_replication_status(
@@ -4568,12 +4961,12 @@ pub mod head_object_output {
             self.replication_status = input;
             self
         }
-        /// <p>The count of parts this object has.</p>
+        /// <p>The count of parts this object has. This value is only returned if you specify <code>partNumber</code> in your request and the object was uploaded as a multipart upload.</p>
         pub fn parts_count(mut self, input: i32) -> Self {
             self.parts_count = Some(input);
             self
         }
-        /// <p>The count of parts this object has.</p>
+        /// <p>The count of parts this object has. This value is only returned if you specify <code>partNumber</code> in your request and the object was uploaded as a multipart upload.</p>
         pub fn set_parts_count(mut self, input: std::option::Option<i32>) -> Self {
             self.parts_count = input;
             self
@@ -4620,7 +5013,7 @@ pub mod head_object_output {
             self.object_lock_legal_hold_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`HeadObjectOutput`](crate::output::HeadObjectOutput)
+        /// Consumes the builder and constructs a [`HeadObjectOutput`](crate::output::HeadObjectOutput).
         pub fn build(self) -> crate::output::HeadObjectOutput {
             crate::output::HeadObjectOutput {
                 delete_marker: self.delete_marker.unwrap_or_default(),
@@ -4630,6 +5023,10 @@ pub mod head_object_output {
                 archive_status: self.archive_status,
                 last_modified: self.last_modified,
                 content_length: self.content_length.unwrap_or_default(),
+                checksum_crc32: self.checksum_crc32,
+                checksum_crc32_c: self.checksum_crc32_c,
+                checksum_sha1: self.checksum_sha1,
+                checksum_sha256: self.checksum_sha256,
                 e_tag: self.e_tag,
                 missing_meta: self.missing_meta.unwrap_or_default(),
                 version_id: self.version_id,
@@ -4658,7 +5055,7 @@ pub mod head_object_output {
     }
 }
 impl HeadObjectOutput {
-    /// Creates a new builder-style object to manufacture [`HeadObjectOutput`](crate::output::HeadObjectOutput)
+    /// Creates a new builder-style object to manufacture [`HeadObjectOutput`](crate::output::HeadObjectOutput).
     pub fn builder() -> crate::output::head_object_output::Builder {
         crate::output::head_object_output::Builder::default()
     }
@@ -4674,22 +5071,21 @@ impl std::fmt::Debug for HeadBucketOutput {
         formatter.finish()
     }
 }
-/// See [`HeadBucketOutput`](crate::output::HeadBucketOutput)
+/// See [`HeadBucketOutput`](crate::output::HeadBucketOutput).
 pub mod head_bucket_output {
 
-    /// A builder for [`HeadBucketOutput`](crate::output::HeadBucketOutput)
-    #[non_exhaustive]
+    /// A builder for [`HeadBucketOutput`](crate::output::HeadBucketOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`HeadBucketOutput`](crate::output::HeadBucketOutput)
+        /// Consumes the builder and constructs a [`HeadBucketOutput`](crate::output::HeadBucketOutput).
         pub fn build(self) -> crate::output::HeadBucketOutput {
             crate::output::HeadBucketOutput {}
         }
     }
 }
 impl HeadBucketOutput {
-    /// Creates a new builder-style object to manufacture [`HeadBucketOutput`](crate::output::HeadBucketOutput)
+    /// Creates a new builder-style object to manufacture [`HeadBucketOutput`](crate::output::HeadBucketOutput).
     pub fn builder() -> crate::output::head_bucket_output::Builder {
         crate::output::head_bucket_output::Builder::default()
     }
@@ -4700,6 +5096,7 @@ impl HeadBucketOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetPublicAccessBlockOutput {
     /// <p>The <code>PublicAccessBlock</code> configuration currently in effect for this Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub public_access_block_configuration:
         std::option::Option<crate::model::PublicAccessBlockConfiguration>,
 }
@@ -4721,11 +5118,10 @@ impl std::fmt::Debug for GetPublicAccessBlockOutput {
         formatter.finish()
     }
 }
-/// See [`GetPublicAccessBlockOutput`](crate::output::GetPublicAccessBlockOutput)
+/// See [`GetPublicAccessBlockOutput`](crate::output::GetPublicAccessBlockOutput).
 pub mod get_public_access_block_output {
 
-    /// A builder for [`GetPublicAccessBlockOutput`](crate::output::GetPublicAccessBlockOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetPublicAccessBlockOutput`](crate::output::GetPublicAccessBlockOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) public_access_block_configuration:
@@ -4748,7 +5144,7 @@ pub mod get_public_access_block_output {
             self.public_access_block_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetPublicAccessBlockOutput`](crate::output::GetPublicAccessBlockOutput)
+        /// Consumes the builder and constructs a [`GetPublicAccessBlockOutput`](crate::output::GetPublicAccessBlockOutput).
         pub fn build(self) -> crate::output::GetPublicAccessBlockOutput {
             crate::output::GetPublicAccessBlockOutput {
                 public_access_block_configuration: self.public_access_block_configuration,
@@ -4757,7 +5153,7 @@ pub mod get_public_access_block_output {
     }
 }
 impl GetPublicAccessBlockOutput {
-    /// Creates a new builder-style object to manufacture [`GetPublicAccessBlockOutput`](crate::output::GetPublicAccessBlockOutput)
+    /// Creates a new builder-style object to manufacture [`GetPublicAccessBlockOutput`](crate::output::GetPublicAccessBlockOutput).
     pub fn builder() -> crate::output::get_public_access_block_output::Builder {
         crate::output::get_public_access_block_output::Builder::default()
     }
@@ -4769,6 +5165,7 @@ pub struct GetObjectTorrentOutput {
     /// <p>A Bencoded dictionary as defined by the BitTorrent specification</p>
     pub body: aws_smithy_http::byte_stream::ByteStream,
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
 }
 impl GetObjectTorrentOutput {
@@ -4789,11 +5186,10 @@ impl std::fmt::Debug for GetObjectTorrentOutput {
         formatter.finish()
     }
 }
-/// See [`GetObjectTorrentOutput`](crate::output::GetObjectTorrentOutput)
+/// See [`GetObjectTorrentOutput`](crate::output::GetObjectTorrentOutput).
 pub mod get_object_torrent_output {
 
-    /// A builder for [`GetObjectTorrentOutput`](crate::output::GetObjectTorrentOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetObjectTorrentOutput`](crate::output::GetObjectTorrentOutput).
     #[derive(std::default::Default, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body: std::option::Option<aws_smithy_http::byte_stream::ByteStream>,
@@ -4826,7 +5222,7 @@ pub mod get_object_torrent_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetObjectTorrentOutput`](crate::output::GetObjectTorrentOutput)
+        /// Consumes the builder and constructs a [`GetObjectTorrentOutput`](crate::output::GetObjectTorrentOutput).
         pub fn build(self) -> crate::output::GetObjectTorrentOutput {
             crate::output::GetObjectTorrentOutput {
                 body: self.body.unwrap_or_default(),
@@ -4836,7 +5232,7 @@ pub mod get_object_torrent_output {
     }
 }
 impl GetObjectTorrentOutput {
-    /// Creates a new builder-style object to manufacture [`GetObjectTorrentOutput`](crate::output::GetObjectTorrentOutput)
+    /// Creates a new builder-style object to manufacture [`GetObjectTorrentOutput`](crate::output::GetObjectTorrentOutput).
     pub fn builder() -> crate::output::get_object_torrent_output::Builder {
         crate::output::get_object_torrent_output::Builder::default()
     }
@@ -4847,8 +5243,10 @@ impl GetObjectTorrentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetObjectTaggingOutput {
     /// <p>The versionId of the object for which you got the tagging information.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>Contains the tag set.</p>
+    #[doc(hidden)]
     pub tag_set: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl GetObjectTaggingOutput {
@@ -4869,11 +5267,10 @@ impl std::fmt::Debug for GetObjectTaggingOutput {
         formatter.finish()
     }
 }
-/// See [`GetObjectTaggingOutput`](crate::output::GetObjectTaggingOutput)
+/// See [`GetObjectTaggingOutput`](crate::output::GetObjectTaggingOutput).
 pub mod get_object_tagging_output {
 
-    /// A builder for [`GetObjectTaggingOutput`](crate::output::GetObjectTaggingOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetObjectTaggingOutput`](crate::output::GetObjectTaggingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version_id: std::option::Option<std::string::String>,
@@ -4909,7 +5306,7 @@ pub mod get_object_tagging_output {
             self.tag_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetObjectTaggingOutput`](crate::output::GetObjectTaggingOutput)
+        /// Consumes the builder and constructs a [`GetObjectTaggingOutput`](crate::output::GetObjectTaggingOutput).
         pub fn build(self) -> crate::output::GetObjectTaggingOutput {
             crate::output::GetObjectTaggingOutput {
                 version_id: self.version_id,
@@ -4919,7 +5316,7 @@ pub mod get_object_tagging_output {
     }
 }
 impl GetObjectTaggingOutput {
-    /// Creates a new builder-style object to manufacture [`GetObjectTaggingOutput`](crate::output::GetObjectTaggingOutput)
+    /// Creates a new builder-style object to manufacture [`GetObjectTaggingOutput`](crate::output::GetObjectTaggingOutput).
     pub fn builder() -> crate::output::get_object_tagging_output::Builder {
         crate::output::get_object_tagging_output::Builder::default()
     }
@@ -4930,6 +5327,7 @@ impl GetObjectTaggingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetObjectRetentionOutput {
     /// <p>The container element for an object's retention settings.</p>
+    #[doc(hidden)]
     pub retention: std::option::Option<crate::model::ObjectLockRetention>,
 }
 impl GetObjectRetentionOutput {
@@ -4945,11 +5343,10 @@ impl std::fmt::Debug for GetObjectRetentionOutput {
         formatter.finish()
     }
 }
-/// See [`GetObjectRetentionOutput`](crate::output::GetObjectRetentionOutput)
+/// See [`GetObjectRetentionOutput`](crate::output::GetObjectRetentionOutput).
 pub mod get_object_retention_output {
 
-    /// A builder for [`GetObjectRetentionOutput`](crate::output::GetObjectRetentionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetObjectRetentionOutput`](crate::output::GetObjectRetentionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) retention: std::option::Option<crate::model::ObjectLockRetention>,
@@ -4968,7 +5365,7 @@ pub mod get_object_retention_output {
             self.retention = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetObjectRetentionOutput`](crate::output::GetObjectRetentionOutput)
+        /// Consumes the builder and constructs a [`GetObjectRetentionOutput`](crate::output::GetObjectRetentionOutput).
         pub fn build(self) -> crate::output::GetObjectRetentionOutput {
             crate::output::GetObjectRetentionOutput {
                 retention: self.retention,
@@ -4977,7 +5374,7 @@ pub mod get_object_retention_output {
     }
 }
 impl GetObjectRetentionOutput {
-    /// Creates a new builder-style object to manufacture [`GetObjectRetentionOutput`](crate::output::GetObjectRetentionOutput)
+    /// Creates a new builder-style object to manufacture [`GetObjectRetentionOutput`](crate::output::GetObjectRetentionOutput).
     pub fn builder() -> crate::output::get_object_retention_output::Builder {
         crate::output::get_object_retention_output::Builder::default()
     }
@@ -4988,6 +5385,7 @@ impl GetObjectRetentionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetObjectLockConfigurationOutput {
     /// <p>The specified bucket's Object Lock configuration.</p>
+    #[doc(hidden)]
     pub object_lock_configuration: std::option::Option<crate::model::ObjectLockConfiguration>,
 }
 impl GetObjectLockConfigurationOutput {
@@ -5005,11 +5403,10 @@ impl std::fmt::Debug for GetObjectLockConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetObjectLockConfigurationOutput`](crate::output::GetObjectLockConfigurationOutput)
+/// See [`GetObjectLockConfigurationOutput`](crate::output::GetObjectLockConfigurationOutput).
 pub mod get_object_lock_configuration_output {
 
-    /// A builder for [`GetObjectLockConfigurationOutput`](crate::output::GetObjectLockConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetObjectLockConfigurationOutput`](crate::output::GetObjectLockConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_lock_configuration:
@@ -5032,7 +5429,7 @@ pub mod get_object_lock_configuration_output {
             self.object_lock_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetObjectLockConfigurationOutput`](crate::output::GetObjectLockConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetObjectLockConfigurationOutput`](crate::output::GetObjectLockConfigurationOutput).
         pub fn build(self) -> crate::output::GetObjectLockConfigurationOutput {
             crate::output::GetObjectLockConfigurationOutput {
                 object_lock_configuration: self.object_lock_configuration,
@@ -5041,7 +5438,7 @@ pub mod get_object_lock_configuration_output {
     }
 }
 impl GetObjectLockConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetObjectLockConfigurationOutput`](crate::output::GetObjectLockConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetObjectLockConfigurationOutput`](crate::output::GetObjectLockConfigurationOutput).
     pub fn builder() -> crate::output::get_object_lock_configuration_output::Builder {
         crate::output::get_object_lock_configuration_output::Builder::default()
     }
@@ -5051,11 +5448,12 @@ impl GetObjectLockConfigurationOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetObjectLegalHoldOutput {
-    /// <p>The current Legal Hold status for the specified object.</p>
+    /// <p>The current legal hold status for the specified object.</p>
+    #[doc(hidden)]
     pub legal_hold: std::option::Option<crate::model::ObjectLockLegalHold>,
 }
 impl GetObjectLegalHoldOutput {
-    /// <p>The current Legal Hold status for the specified object.</p>
+    /// <p>The current legal hold status for the specified object.</p>
     pub fn legal_hold(&self) -> std::option::Option<&crate::model::ObjectLockLegalHold> {
         self.legal_hold.as_ref()
     }
@@ -5067,22 +5465,21 @@ impl std::fmt::Debug for GetObjectLegalHoldOutput {
         formatter.finish()
     }
 }
-/// See [`GetObjectLegalHoldOutput`](crate::output::GetObjectLegalHoldOutput)
+/// See [`GetObjectLegalHoldOutput`](crate::output::GetObjectLegalHoldOutput).
 pub mod get_object_legal_hold_output {
 
-    /// A builder for [`GetObjectLegalHoldOutput`](crate::output::GetObjectLegalHoldOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetObjectLegalHoldOutput`](crate::output::GetObjectLegalHoldOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) legal_hold: std::option::Option<crate::model::ObjectLockLegalHold>,
     }
     impl Builder {
-        /// <p>The current Legal Hold status for the specified object.</p>
+        /// <p>The current legal hold status for the specified object.</p>
         pub fn legal_hold(mut self, input: crate::model::ObjectLockLegalHold) -> Self {
             self.legal_hold = Some(input);
             self
         }
-        /// <p>The current Legal Hold status for the specified object.</p>
+        /// <p>The current legal hold status for the specified object.</p>
         pub fn set_legal_hold(
             mut self,
             input: std::option::Option<crate::model::ObjectLockLegalHold>,
@@ -5090,7 +5487,7 @@ pub mod get_object_legal_hold_output {
             self.legal_hold = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetObjectLegalHoldOutput`](crate::output::GetObjectLegalHoldOutput)
+        /// Consumes the builder and constructs a [`GetObjectLegalHoldOutput`](crate::output::GetObjectLegalHoldOutput).
         pub fn build(self) -> crate::output::GetObjectLegalHoldOutput {
             crate::output::GetObjectLegalHoldOutput {
                 legal_hold: self.legal_hold,
@@ -5099,7 +5496,7 @@ pub mod get_object_legal_hold_output {
     }
 }
 impl GetObjectLegalHoldOutput {
-    /// Creates a new builder-style object to manufacture [`GetObjectLegalHoldOutput`](crate::output::GetObjectLegalHoldOutput)
+    /// Creates a new builder-style object to manufacture [`GetObjectLegalHoldOutput`](crate::output::GetObjectLegalHoldOutput).
     pub fn builder() -> crate::output::get_object_legal_hold_output::Builder {
         crate::output::get_object_legal_hold_output::Builder::default()
     }
@@ -5108,12 +5505,246 @@ impl GetObjectLegalHoldOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetObjectAttributesOutput {
+    /// <p>Specifies whether the object retrieved was (<code>true</code>) or was not (<code>false</code>) a delete marker. If <code>false</code>, this response header does not appear in the response.</p>
+    #[doc(hidden)]
+    pub delete_marker: bool,
+    /// <p>The creation date of the object.</p>
+    #[doc(hidden)]
+    pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The version ID of the object.</p>
+    #[doc(hidden)]
+    pub version_id: std::option::Option<std::string::String>,
+    /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
+    pub request_charged: std::option::Option<crate::model::RequestCharged>,
+    /// <p>An ETag is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+    #[doc(hidden)]
+    pub e_tag: std::option::Option<std::string::String>,
+    /// <p>The checksum or digest of the object.</p>
+    #[doc(hidden)]
+    pub checksum: std::option::Option<crate::model::Checksum>,
+    /// <p>A collection of parts associated with a multipart upload.</p>
+    #[doc(hidden)]
+    pub object_parts: std::option::Option<crate::model::GetObjectAttributesParts>,
+    /// <p>Provides the storage class information of the object. Amazon S3 returns this header for all objects except for S3 Standard storage class objects.</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html">Storage Classes</a>.</p>
+    #[doc(hidden)]
+    pub storage_class: std::option::Option<crate::model::StorageClass>,
+    /// <p>The size of the object in bytes.</p>
+    #[doc(hidden)]
+    pub object_size: i64,
+}
+impl GetObjectAttributesOutput {
+    /// <p>Specifies whether the object retrieved was (<code>true</code>) or was not (<code>false</code>) a delete marker. If <code>false</code>, this response header does not appear in the response.</p>
+    pub fn delete_marker(&self) -> bool {
+        self.delete_marker
+    }
+    /// <p>The creation date of the object.</p>
+    pub fn last_modified(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.last_modified.as_ref()
+    }
+    /// <p>The version ID of the object.</p>
+    pub fn version_id(&self) -> std::option::Option<&str> {
+        self.version_id.as_deref()
+    }
+    /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    pub fn request_charged(&self) -> std::option::Option<&crate::model::RequestCharged> {
+        self.request_charged.as_ref()
+    }
+    /// <p>An ETag is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+    pub fn e_tag(&self) -> std::option::Option<&str> {
+        self.e_tag.as_deref()
+    }
+    /// <p>The checksum or digest of the object.</p>
+    pub fn checksum(&self) -> std::option::Option<&crate::model::Checksum> {
+        self.checksum.as_ref()
+    }
+    /// <p>A collection of parts associated with a multipart upload.</p>
+    pub fn object_parts(&self) -> std::option::Option<&crate::model::GetObjectAttributesParts> {
+        self.object_parts.as_ref()
+    }
+    /// <p>Provides the storage class information of the object. Amazon S3 returns this header for all objects except for S3 Standard storage class objects.</p>
+    /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html">Storage Classes</a>.</p>
+    pub fn storage_class(&self) -> std::option::Option<&crate::model::StorageClass> {
+        self.storage_class.as_ref()
+    }
+    /// <p>The size of the object in bytes.</p>
+    pub fn object_size(&self) -> i64 {
+        self.object_size
+    }
+}
+impl std::fmt::Debug for GetObjectAttributesOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetObjectAttributesOutput");
+        formatter.field("delete_marker", &self.delete_marker);
+        formatter.field("last_modified", &self.last_modified);
+        formatter.field("version_id", &self.version_id);
+        formatter.field("request_charged", &self.request_charged);
+        formatter.field("e_tag", &self.e_tag);
+        formatter.field("checksum", &self.checksum);
+        formatter.field("object_parts", &self.object_parts);
+        formatter.field("storage_class", &self.storage_class);
+        formatter.field("object_size", &self.object_size);
+        formatter.finish()
+    }
+}
+/// See [`GetObjectAttributesOutput`](crate::output::GetObjectAttributesOutput).
+pub mod get_object_attributes_output {
+
+    /// A builder for [`GetObjectAttributesOutput`](crate::output::GetObjectAttributesOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) delete_marker: std::option::Option<bool>,
+        pub(crate) last_modified: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) version_id: std::option::Option<std::string::String>,
+        pub(crate) request_charged: std::option::Option<crate::model::RequestCharged>,
+        pub(crate) e_tag: std::option::Option<std::string::String>,
+        pub(crate) checksum: std::option::Option<crate::model::Checksum>,
+        pub(crate) object_parts: std::option::Option<crate::model::GetObjectAttributesParts>,
+        pub(crate) storage_class: std::option::Option<crate::model::StorageClass>,
+        pub(crate) object_size: std::option::Option<i64>,
+    }
+    impl Builder {
+        /// <p>Specifies whether the object retrieved was (<code>true</code>) or was not (<code>false</code>) a delete marker. If <code>false</code>, this response header does not appear in the response.</p>
+        pub fn delete_marker(mut self, input: bool) -> Self {
+            self.delete_marker = Some(input);
+            self
+        }
+        /// <p>Specifies whether the object retrieved was (<code>true</code>) or was not (<code>false</code>) a delete marker. If <code>false</code>, this response header does not appear in the response.</p>
+        pub fn set_delete_marker(mut self, input: std::option::Option<bool>) -> Self {
+            self.delete_marker = input;
+            self
+        }
+        /// <p>The creation date of the object.</p>
+        pub fn last_modified(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.last_modified = Some(input);
+            self
+        }
+        /// <p>The creation date of the object.</p>
+        pub fn set_last_modified(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.last_modified = input;
+            self
+        }
+        /// <p>The version ID of the object.</p>
+        pub fn version_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.version_id = Some(input.into());
+            self
+        }
+        /// <p>The version ID of the object.</p>
+        pub fn set_version_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.version_id = input;
+            self
+        }
+        /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+        pub fn request_charged(mut self, input: crate::model::RequestCharged) -> Self {
+            self.request_charged = Some(input);
+            self
+        }
+        /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+        pub fn set_request_charged(
+            mut self,
+            input: std::option::Option<crate::model::RequestCharged>,
+        ) -> Self {
+            self.request_charged = input;
+            self
+        }
+        /// <p>An ETag is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+        pub fn e_tag(mut self, input: impl Into<std::string::String>) -> Self {
+            self.e_tag = Some(input.into());
+            self
+        }
+        /// <p>An ETag is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+        pub fn set_e_tag(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.e_tag = input;
+            self
+        }
+        /// <p>The checksum or digest of the object.</p>
+        pub fn checksum(mut self, input: crate::model::Checksum) -> Self {
+            self.checksum = Some(input);
+            self
+        }
+        /// <p>The checksum or digest of the object.</p>
+        pub fn set_checksum(mut self, input: std::option::Option<crate::model::Checksum>) -> Self {
+            self.checksum = input;
+            self
+        }
+        /// <p>A collection of parts associated with a multipart upload.</p>
+        pub fn object_parts(mut self, input: crate::model::GetObjectAttributesParts) -> Self {
+            self.object_parts = Some(input);
+            self
+        }
+        /// <p>A collection of parts associated with a multipart upload.</p>
+        pub fn set_object_parts(
+            mut self,
+            input: std::option::Option<crate::model::GetObjectAttributesParts>,
+        ) -> Self {
+            self.object_parts = input;
+            self
+        }
+        /// <p>Provides the storage class information of the object. Amazon S3 returns this header for all objects except for S3 Standard storage class objects.</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html">Storage Classes</a>.</p>
+        pub fn storage_class(mut self, input: crate::model::StorageClass) -> Self {
+            self.storage_class = Some(input);
+            self
+        }
+        /// <p>Provides the storage class information of the object. Amazon S3 returns this header for all objects except for S3 Standard storage class objects.</p>
+        /// <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html">Storage Classes</a>.</p>
+        pub fn set_storage_class(
+            mut self,
+            input: std::option::Option<crate::model::StorageClass>,
+        ) -> Self {
+            self.storage_class = input;
+            self
+        }
+        /// <p>The size of the object in bytes.</p>
+        pub fn object_size(mut self, input: i64) -> Self {
+            self.object_size = Some(input);
+            self
+        }
+        /// <p>The size of the object in bytes.</p>
+        pub fn set_object_size(mut self, input: std::option::Option<i64>) -> Self {
+            self.object_size = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetObjectAttributesOutput`](crate::output::GetObjectAttributesOutput).
+        pub fn build(self) -> crate::output::GetObjectAttributesOutput {
+            crate::output::GetObjectAttributesOutput {
+                delete_marker: self.delete_marker.unwrap_or_default(),
+                last_modified: self.last_modified,
+                version_id: self.version_id,
+                request_charged: self.request_charged,
+                e_tag: self.e_tag,
+                checksum: self.checksum,
+                object_parts: self.object_parts,
+                storage_class: self.storage_class,
+                object_size: self.object_size.unwrap_or_default(),
+            }
+        }
+    }
+}
+impl GetObjectAttributesOutput {
+    /// Creates a new builder-style object to manufacture [`GetObjectAttributesOutput`](crate::output::GetObjectAttributesOutput).
+    pub fn builder() -> crate::output::get_object_attributes_output::Builder {
+        crate::output::get_object_attributes_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetObjectAclOutput {
     /// <p> Container for the bucket owner's display name and ID.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::Owner>,
     /// <p>A list of grants.</p>
+    #[doc(hidden)]
     pub grants: std::option::Option<std::vec::Vec<crate::model::Grant>>,
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
 }
 impl GetObjectAclOutput {
@@ -5139,11 +5770,10 @@ impl std::fmt::Debug for GetObjectAclOutput {
         formatter.finish()
     }
 }
-/// See [`GetObjectAclOutput`](crate::output::GetObjectAclOutput)
+/// See [`GetObjectAclOutput`](crate::output::GetObjectAclOutput).
 pub mod get_object_acl_output {
 
-    /// A builder for [`GetObjectAclOutput`](crate::output::GetObjectAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetObjectAclOutput`](crate::output::GetObjectAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner: std::option::Option<crate::model::Owner>,
@@ -5193,7 +5823,7 @@ pub mod get_object_acl_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetObjectAclOutput`](crate::output::GetObjectAclOutput)
+        /// Consumes the builder and constructs a [`GetObjectAclOutput`](crate::output::GetObjectAclOutput).
         pub fn build(self) -> crate::output::GetObjectAclOutput {
             crate::output::GetObjectAclOutput {
                 owner: self.owner,
@@ -5204,7 +5834,7 @@ pub mod get_object_acl_output {
     }
 }
 impl GetObjectAclOutput {
-    /// Creates a new builder-style object to manufacture [`GetObjectAclOutput`](crate::output::GetObjectAclOutput)
+    /// Creates a new builder-style object to manufacture [`GetObjectAclOutput`](crate::output::GetObjectAclOutput).
     pub fn builder() -> crate::output::get_object_acl_output::Builder {
         crate::output::get_object_acl_output::Builder::default()
     }
@@ -5216,67 +5846,110 @@ pub struct GetObjectOutput {
     /// <p>Object data.</p>
     pub body: aws_smithy_http::byte_stream::ByteStream,
     /// <p>Specifies whether the object retrieved was (true) or was not (false) a Delete Marker. If false, this response header does not appear in the response.</p>
+    #[doc(hidden)]
     pub delete_marker: bool,
     /// <p>Indicates that a range of bytes was specified.</p>
+    #[doc(hidden)]
     pub accept_ranges: std::option::Option<std::string::String>,
-    /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the expiry-date and rule-id key-value pairs providing object expiration information. The value of the rule-id is URL encoded.</p>
+    /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the <code>expiry-date</code> and <code>rule-id</code> key-value pairs providing object expiration information. The value of the <code>rule-id</code> is URL-encoded.</p>
+    #[doc(hidden)]
     pub expiration: std::option::Option<std::string::String>,
     /// <p>Provides information about object restoration action and expiration time of the restored object copy.</p>
+    #[doc(hidden)]
     pub restore: std::option::Option<std::string::String>,
     /// <p>Creation date of the object.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Size of the body in bytes.</p>
+    #[doc(hidden)]
     pub content_length: i64,
-    /// <p>An ETag is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+    /// <p>An entity tag (ETag) is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32_c: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha1: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha256: std::option::Option<std::string::String>,
     /// <p>This is set to the number of metadata entries not returned in <code>x-amz-meta</code> headers. This can happen if you create metadata using an API like SOAP that supports more flexible metadata than the REST API. For example, using SOAP, you can create metadata whose values are not legal HTTP headers.</p>
+    #[doc(hidden)]
     pub missing_meta: i32,
     /// <p>Version of the object.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>Specifies caching behavior along the request/reply chain.</p>
+    #[doc(hidden)]
     pub cache_control: std::option::Option<std::string::String>,
     /// <p>Specifies presentational information for the object.</p>
+    #[doc(hidden)]
     pub content_disposition: std::option::Option<std::string::String>,
     /// <p>Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.</p>
+    #[doc(hidden)]
     pub content_encoding: std::option::Option<std::string::String>,
     /// <p>The language the content is in.</p>
+    #[doc(hidden)]
     pub content_language: std::option::Option<std::string::String>,
     /// <p>The portion of the object returned in the response.</p>
+    #[doc(hidden)]
     pub content_range: std::option::Option<std::string::String>,
     /// <p>A standard MIME type describing the format of the object data.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<std::string::String>,
     /// <p>The date and time at which the object is no longer cacheable.</p>
+    #[doc(hidden)]
     pub expires: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.</p>
+    #[doc(hidden)]
     pub website_redirect_location: std::option::Option<std::string::String>,
     /// <p>The server-side encryption algorithm used when storing this object in Amazon S3 (for example, AES256, aws:kms).</p>
+    #[doc(hidden)]
     pub server_side_encryption: std::option::Option<crate::model::ServerSideEncryption>,
     /// <p>A map of metadata to store with the object in S3.</p>
+    #[doc(hidden)]
     pub metadata:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header confirming the encryption algorithm used.</p>
+    #[doc(hidden)]
     pub sse_customer_algorithm: std::option::Option<std::string::String>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header to provide round-trip message integrity verification of the customer-provided encryption key.</p>
+    #[doc(hidden)]
     pub sse_customer_key_md5: std::option::Option<std::string::String>,
     /// <p>If present, specifies the ID of the Amazon Web Services Key Management Service (Amazon Web Services KMS) symmetric customer managed key that was used for the object.</p>
+    #[doc(hidden)]
     pub ssekms_key_id: std::option::Option<std::string::String>,
     /// <p>Indicates whether the object uses an S3 Bucket Key for server-side encryption with Amazon Web Services KMS (SSE-KMS).</p>
+    #[doc(hidden)]
     pub bucket_key_enabled: bool,
     /// <p>Provides storage class information of the object. Amazon S3 returns this header for all objects except for S3 Standard storage class objects.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::StorageClass>,
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
     /// <p>Amazon S3 can return this if your request involves a bucket that is either a source or destination in a replication rule.</p>
+    #[doc(hidden)]
     pub replication_status: std::option::Option<crate::model::ReplicationStatus>,
-    /// <p>The count of parts this object has.</p>
+    /// <p>The count of parts this object has. This value is only returned if you specify <code>partNumber</code> in your request and the object was uploaded as a multipart upload.</p>
+    #[doc(hidden)]
     pub parts_count: i32,
     /// <p>The number of tags, if any, on the object.</p>
+    #[doc(hidden)]
     pub tag_count: i32,
     /// <p>The Object Lock mode currently in place for this object.</p>
+    #[doc(hidden)]
     pub object_lock_mode: std::option::Option<crate::model::ObjectLockMode>,
     /// <p>The date and time when this object's Object Lock will expire.</p>
+    #[doc(hidden)]
     pub object_lock_retain_until_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates whether this object has an active legal hold. This field is only returned if you have permission to view an object's legal hold status. </p>
+    #[doc(hidden)]
     pub object_lock_legal_hold_status: std::option::Option<crate::model::ObjectLockLegalHoldStatus>,
 }
 impl GetObjectOutput {
@@ -5292,7 +5965,7 @@ impl GetObjectOutput {
     pub fn accept_ranges(&self) -> std::option::Option<&str> {
         self.accept_ranges.as_deref()
     }
-    /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the expiry-date and rule-id key-value pairs providing object expiration information. The value of the rule-id is URL encoded.</p>
+    /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the <code>expiry-date</code> and <code>rule-id</code> key-value pairs providing object expiration information. The value of the <code>rule-id</code> is URL-encoded.</p>
     pub fn expiration(&self) -> std::option::Option<&str> {
         self.expiration.as_deref()
     }
@@ -5308,9 +5981,25 @@ impl GetObjectOutput {
     pub fn content_length(&self) -> i64 {
         self.content_length
     }
-    /// <p>An ETag is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+    /// <p>An entity tag (ETag) is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
     pub fn e_tag(&self) -> std::option::Option<&str> {
         self.e_tag.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32(&self) -> std::option::Option<&str> {
+        self.checksum_crc32.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32_c(&self) -> std::option::Option<&str> {
+        self.checksum_crc32_c.as_deref()
+    }
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha1(&self) -> std::option::Option<&str> {
+        self.checksum_sha1.as_deref()
+    }
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha256(&self) -> std::option::Option<&str> {
+        self.checksum_sha256.as_deref()
     }
     /// <p>This is set to the number of metadata entries not returned in <code>x-amz-meta</code> headers. This can happen if you create metadata using an API like SOAP that supports more flexible metadata than the REST API. For example, using SOAP, you can create metadata whose values are not legal HTTP headers.</p>
     pub fn missing_meta(&self) -> i32 {
@@ -5393,7 +6082,7 @@ impl GetObjectOutput {
     pub fn replication_status(&self) -> std::option::Option<&crate::model::ReplicationStatus> {
         self.replication_status.as_ref()
     }
-    /// <p>The count of parts this object has.</p>
+    /// <p>The count of parts this object has. This value is only returned if you specify <code>partNumber</code> in your request and the object was uploaded as a multipart upload.</p>
     pub fn parts_count(&self) -> i32 {
         self.parts_count
     }
@@ -5429,6 +6118,10 @@ impl std::fmt::Debug for GetObjectOutput {
         formatter.field("last_modified", &self.last_modified);
         formatter.field("content_length", &self.content_length);
         formatter.field("e_tag", &self.e_tag);
+        formatter.field("checksum_crc32", &self.checksum_crc32);
+        formatter.field("checksum_crc32_c", &self.checksum_crc32_c);
+        formatter.field("checksum_sha1", &self.checksum_sha1);
+        formatter.field("checksum_sha256", &self.checksum_sha256);
         formatter.field("missing_meta", &self.missing_meta);
         formatter.field("version_id", &self.version_id);
         formatter.field("cache_control", &self.cache_control);
@@ -5462,11 +6155,10 @@ impl std::fmt::Debug for GetObjectOutput {
         formatter.finish()
     }
 }
-/// See [`GetObjectOutput`](crate::output::GetObjectOutput)
+/// See [`GetObjectOutput`](crate::output::GetObjectOutput).
 pub mod get_object_output {
 
-    /// A builder for [`GetObjectOutput`](crate::output::GetObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetObjectOutput`](crate::output::GetObjectOutput).
     #[derive(std::default::Default, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) body: std::option::Option<aws_smithy_http::byte_stream::ByteStream>,
@@ -5477,6 +6169,10 @@ pub mod get_object_output {
         pub(crate) last_modified: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) content_length: std::option::Option<i64>,
         pub(crate) e_tag: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32_c: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha1: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha256: std::option::Option<std::string::String>,
         pub(crate) missing_meta: std::option::Option<i32>,
         pub(crate) version_id: std::option::Option<std::string::String>,
         pub(crate) cache_control: std::option::Option<std::string::String>,
@@ -5542,12 +6238,12 @@ pub mod get_object_output {
             self.accept_ranges = input;
             self
         }
-        /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the expiry-date and rule-id key-value pairs providing object expiration information. The value of the rule-id is URL encoded.</p>
+        /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the <code>expiry-date</code> and <code>rule-id</code> key-value pairs providing object expiration information. The value of the <code>rule-id</code> is URL-encoded.</p>
         pub fn expiration(mut self, input: impl Into<std::string::String>) -> Self {
             self.expiration = Some(input.into());
             self
         }
-        /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the expiry-date and rule-id key-value pairs providing object expiration information. The value of the rule-id is URL encoded.</p>
+        /// <p>If the object expiration is configured (see PUT Bucket lifecycle), the response includes this header. It includes the <code>expiry-date</code> and <code>rule-id</code> key-value pairs providing object expiration information. The value of the <code>rule-id</code> is URL-encoded.</p>
         pub fn set_expiration(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.expiration = input;
             self
@@ -5585,14 +6281,66 @@ pub mod get_object_output {
             self.content_length = input;
             self
         }
-        /// <p>An ETag is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+        /// <p>An entity tag (ETag) is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
         pub fn e_tag(mut self, input: impl Into<std::string::String>) -> Self {
             self.e_tag = Some(input.into());
             self
         }
-        /// <p>An ETag is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
+        /// <p>An entity tag (ETag) is an opaque identifier assigned by a web server to a specific version of a resource found at a URL.</p>
         pub fn set_e_tag(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.e_tag = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32 = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32_c(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32_c = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32_c(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32_c = input;
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha1(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha1 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha1(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha1 = input;
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha256(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha256 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha256(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha256 = input;
             self
         }
         /// <p>This is set to the number of metadata entries not returned in <code>x-amz-meta</code> headers. This can happen if you create metadata using an API like SOAP that supports more flexible metadata than the REST API. For example, using SOAP, you can create metadata whose values are not legal HTTP headers.</p>
@@ -5842,12 +6590,12 @@ pub mod get_object_output {
             self.replication_status = input;
             self
         }
-        /// <p>The count of parts this object has.</p>
+        /// <p>The count of parts this object has. This value is only returned if you specify <code>partNumber</code> in your request and the object was uploaded as a multipart upload.</p>
         pub fn parts_count(mut self, input: i32) -> Self {
             self.parts_count = Some(input);
             self
         }
-        /// <p>The count of parts this object has.</p>
+        /// <p>The count of parts this object has. This value is only returned if you specify <code>partNumber</code> in your request and the object was uploaded as a multipart upload.</p>
         pub fn set_parts_count(mut self, input: std::option::Option<i32>) -> Self {
             self.parts_count = input;
             self
@@ -5904,7 +6652,7 @@ pub mod get_object_output {
             self.object_lock_legal_hold_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetObjectOutput`](crate::output::GetObjectOutput)
+        /// Consumes the builder and constructs a [`GetObjectOutput`](crate::output::GetObjectOutput).
         pub fn build(self) -> crate::output::GetObjectOutput {
             crate::output::GetObjectOutput {
                 body: self.body.unwrap_or_default(),
@@ -5915,6 +6663,10 @@ pub mod get_object_output {
                 last_modified: self.last_modified,
                 content_length: self.content_length.unwrap_or_default(),
                 e_tag: self.e_tag,
+                checksum_crc32: self.checksum_crc32,
+                checksum_crc32_c: self.checksum_crc32_c,
+                checksum_sha1: self.checksum_sha1,
+                checksum_sha256: self.checksum_sha256,
                 missing_meta: self.missing_meta.unwrap_or_default(),
                 version_id: self.version_id,
                 cache_control: self.cache_control,
@@ -5944,7 +6696,7 @@ pub mod get_object_output {
     }
 }
 impl GetObjectOutput {
-    /// Creates a new builder-style object to manufacture [`GetObjectOutput`](crate::output::GetObjectOutput)
+    /// Creates a new builder-style object to manufacture [`GetObjectOutput`](crate::output::GetObjectOutput).
     pub fn builder() -> crate::output::get_object_output::Builder {
         crate::output::get_object_output::Builder::default()
     }
@@ -5955,12 +6707,16 @@ impl GetObjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketWebsiteOutput {
     /// <p>Specifies the redirect behavior of all requests to a website endpoint of an Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub redirect_all_requests_to: std::option::Option<crate::model::RedirectAllRequestsTo>,
     /// <p>The name of the index document for the website (for example <code>index.html</code>).</p>
+    #[doc(hidden)]
     pub index_document: std::option::Option<crate::model::IndexDocument>,
     /// <p>The object key name of the website error document to use for 4XX class errors.</p>
+    #[doc(hidden)]
     pub error_document: std::option::Option<crate::model::ErrorDocument>,
     /// <p>Rules that define when a redirect is applied and the redirect behavior.</p>
+    #[doc(hidden)]
     pub routing_rules: std::option::Option<std::vec::Vec<crate::model::RoutingRule>>,
 }
 impl GetBucketWebsiteOutput {
@@ -5993,11 +6749,10 @@ impl std::fmt::Debug for GetBucketWebsiteOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketWebsiteOutput`](crate::output::GetBucketWebsiteOutput)
+/// See [`GetBucketWebsiteOutput`](crate::output::GetBucketWebsiteOutput).
 pub mod get_bucket_website_output {
 
-    /// A builder for [`GetBucketWebsiteOutput`](crate::output::GetBucketWebsiteOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketWebsiteOutput`](crate::output::GetBucketWebsiteOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) redirect_all_requests_to:
@@ -6068,7 +6823,7 @@ pub mod get_bucket_website_output {
             self.routing_rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketWebsiteOutput`](crate::output::GetBucketWebsiteOutput)
+        /// Consumes the builder and constructs a [`GetBucketWebsiteOutput`](crate::output::GetBucketWebsiteOutput).
         pub fn build(self) -> crate::output::GetBucketWebsiteOutput {
             crate::output::GetBucketWebsiteOutput {
                 redirect_all_requests_to: self.redirect_all_requests_to,
@@ -6080,7 +6835,7 @@ pub mod get_bucket_website_output {
     }
 }
 impl GetBucketWebsiteOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketWebsiteOutput`](crate::output::GetBucketWebsiteOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketWebsiteOutput`](crate::output::GetBucketWebsiteOutput).
     pub fn builder() -> crate::output::get_bucket_website_output::Builder {
         crate::output::get_bucket_website_output::Builder::default()
     }
@@ -6091,8 +6846,10 @@ impl GetBucketWebsiteOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketVersioningOutput {
     /// <p>The versioning state of the bucket.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::BucketVersioningStatus>,
     /// <p>Specifies whether MFA delete is enabled in the bucket versioning configuration. This element is only returned if the bucket has been configured with MFA delete. If the bucket has never been so configured, this element is not returned.</p>
+    #[doc(hidden)]
     pub mfa_delete: std::option::Option<crate::model::MfaDeleteStatus>,
 }
 impl GetBucketVersioningOutput {
@@ -6113,11 +6870,10 @@ impl std::fmt::Debug for GetBucketVersioningOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketVersioningOutput`](crate::output::GetBucketVersioningOutput)
+/// See [`GetBucketVersioningOutput`](crate::output::GetBucketVersioningOutput).
 pub mod get_bucket_versioning_output {
 
-    /// A builder for [`GetBucketVersioningOutput`](crate::output::GetBucketVersioningOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketVersioningOutput`](crate::output::GetBucketVersioningOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::BucketVersioningStatus>,
@@ -6150,7 +6906,7 @@ pub mod get_bucket_versioning_output {
             self.mfa_delete = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketVersioningOutput`](crate::output::GetBucketVersioningOutput)
+        /// Consumes the builder and constructs a [`GetBucketVersioningOutput`](crate::output::GetBucketVersioningOutput).
         pub fn build(self) -> crate::output::GetBucketVersioningOutput {
             crate::output::GetBucketVersioningOutput {
                 status: self.status,
@@ -6160,7 +6916,7 @@ pub mod get_bucket_versioning_output {
     }
 }
 impl GetBucketVersioningOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketVersioningOutput`](crate::output::GetBucketVersioningOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketVersioningOutput`](crate::output::GetBucketVersioningOutput).
     pub fn builder() -> crate::output::get_bucket_versioning_output::Builder {
         crate::output::get_bucket_versioning_output::Builder::default()
     }
@@ -6171,6 +6927,7 @@ impl GetBucketVersioningOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketTaggingOutput {
     /// <p>Contains the tag set.</p>
+    #[doc(hidden)]
     pub tag_set: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl GetBucketTaggingOutput {
@@ -6186,11 +6943,10 @@ impl std::fmt::Debug for GetBucketTaggingOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketTaggingOutput`](crate::output::GetBucketTaggingOutput)
+/// See [`GetBucketTaggingOutput`](crate::output::GetBucketTaggingOutput).
 pub mod get_bucket_tagging_output {
 
-    /// A builder for [`GetBucketTaggingOutput`](crate::output::GetBucketTaggingOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketTaggingOutput`](crate::output::GetBucketTaggingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_set: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -6215,7 +6971,7 @@ pub mod get_bucket_tagging_output {
             self.tag_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketTaggingOutput`](crate::output::GetBucketTaggingOutput)
+        /// Consumes the builder and constructs a [`GetBucketTaggingOutput`](crate::output::GetBucketTaggingOutput).
         pub fn build(self) -> crate::output::GetBucketTaggingOutput {
             crate::output::GetBucketTaggingOutput {
                 tag_set: self.tag_set,
@@ -6224,7 +6980,7 @@ pub mod get_bucket_tagging_output {
     }
 }
 impl GetBucketTaggingOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketTaggingOutput`](crate::output::GetBucketTaggingOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketTaggingOutput`](crate::output::GetBucketTaggingOutput).
     pub fn builder() -> crate::output::get_bucket_tagging_output::Builder {
         crate::output::get_bucket_tagging_output::Builder::default()
     }
@@ -6235,6 +6991,7 @@ impl GetBucketTaggingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketRequestPaymentOutput {
     /// <p>Specifies who pays for the download and request fees.</p>
+    #[doc(hidden)]
     pub payer: std::option::Option<crate::model::Payer>,
 }
 impl GetBucketRequestPaymentOutput {
@@ -6250,11 +7007,10 @@ impl std::fmt::Debug for GetBucketRequestPaymentOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketRequestPaymentOutput`](crate::output::GetBucketRequestPaymentOutput)
+/// See [`GetBucketRequestPaymentOutput`](crate::output::GetBucketRequestPaymentOutput).
 pub mod get_bucket_request_payment_output {
 
-    /// A builder for [`GetBucketRequestPaymentOutput`](crate::output::GetBucketRequestPaymentOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketRequestPaymentOutput`](crate::output::GetBucketRequestPaymentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) payer: std::option::Option<crate::model::Payer>,
@@ -6270,14 +7026,14 @@ pub mod get_bucket_request_payment_output {
             self.payer = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketRequestPaymentOutput`](crate::output::GetBucketRequestPaymentOutput)
+        /// Consumes the builder and constructs a [`GetBucketRequestPaymentOutput`](crate::output::GetBucketRequestPaymentOutput).
         pub fn build(self) -> crate::output::GetBucketRequestPaymentOutput {
             crate::output::GetBucketRequestPaymentOutput { payer: self.payer }
         }
     }
 }
 impl GetBucketRequestPaymentOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketRequestPaymentOutput`](crate::output::GetBucketRequestPaymentOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketRequestPaymentOutput`](crate::output::GetBucketRequestPaymentOutput).
     pub fn builder() -> crate::output::get_bucket_request_payment_output::Builder {
         crate::output::get_bucket_request_payment_output::Builder::default()
     }
@@ -6288,6 +7044,7 @@ impl GetBucketRequestPaymentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketReplicationOutput {
     /// <p>A container for replication rules. You can add up to 1,000 rules. The maximum size of a replication configuration is 2 MB.</p>
+    #[doc(hidden)]
     pub replication_configuration: std::option::Option<crate::model::ReplicationConfiguration>,
 }
 impl GetBucketReplicationOutput {
@@ -6305,11 +7062,10 @@ impl std::fmt::Debug for GetBucketReplicationOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketReplicationOutput`](crate::output::GetBucketReplicationOutput)
+/// See [`GetBucketReplicationOutput`](crate::output::GetBucketReplicationOutput).
 pub mod get_bucket_replication_output {
 
-    /// A builder for [`GetBucketReplicationOutput`](crate::output::GetBucketReplicationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketReplicationOutput`](crate::output::GetBucketReplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_configuration:
@@ -6332,7 +7088,7 @@ pub mod get_bucket_replication_output {
             self.replication_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketReplicationOutput`](crate::output::GetBucketReplicationOutput)
+        /// Consumes the builder and constructs a [`GetBucketReplicationOutput`](crate::output::GetBucketReplicationOutput).
         pub fn build(self) -> crate::output::GetBucketReplicationOutput {
             crate::output::GetBucketReplicationOutput {
                 replication_configuration: self.replication_configuration,
@@ -6341,7 +7097,7 @@ pub mod get_bucket_replication_output {
     }
 }
 impl GetBucketReplicationOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketReplicationOutput`](crate::output::GetBucketReplicationOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketReplicationOutput`](crate::output::GetBucketReplicationOutput).
     pub fn builder() -> crate::output::get_bucket_replication_output::Builder {
         crate::output::get_bucket_replication_output::Builder::default()
     }
@@ -6352,6 +7108,7 @@ impl GetBucketReplicationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketPolicyStatusOutput {
     /// <p>The policy status for the specified bucket.</p>
+    #[doc(hidden)]
     pub policy_status: std::option::Option<crate::model::PolicyStatus>,
 }
 impl GetBucketPolicyStatusOutput {
@@ -6367,11 +7124,10 @@ impl std::fmt::Debug for GetBucketPolicyStatusOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketPolicyStatusOutput`](crate::output::GetBucketPolicyStatusOutput)
+/// See [`GetBucketPolicyStatusOutput`](crate::output::GetBucketPolicyStatusOutput).
 pub mod get_bucket_policy_status_output {
 
-    /// A builder for [`GetBucketPolicyStatusOutput`](crate::output::GetBucketPolicyStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketPolicyStatusOutput`](crate::output::GetBucketPolicyStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_status: std::option::Option<crate::model::PolicyStatus>,
@@ -6390,7 +7146,7 @@ pub mod get_bucket_policy_status_output {
             self.policy_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketPolicyStatusOutput`](crate::output::GetBucketPolicyStatusOutput)
+        /// Consumes the builder and constructs a [`GetBucketPolicyStatusOutput`](crate::output::GetBucketPolicyStatusOutput).
         pub fn build(self) -> crate::output::GetBucketPolicyStatusOutput {
             crate::output::GetBucketPolicyStatusOutput {
                 policy_status: self.policy_status,
@@ -6399,7 +7155,7 @@ pub mod get_bucket_policy_status_output {
     }
 }
 impl GetBucketPolicyStatusOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketPolicyStatusOutput`](crate::output::GetBucketPolicyStatusOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketPolicyStatusOutput`](crate::output::GetBucketPolicyStatusOutput).
     pub fn builder() -> crate::output::get_bucket_policy_status_output::Builder {
         crate::output::get_bucket_policy_status_output::Builder::default()
     }
@@ -6410,6 +7166,7 @@ impl GetBucketPolicyStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketPolicyOutput {
     /// <p>The bucket policy as a JSON document.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl GetBucketPolicyOutput {
@@ -6425,11 +7182,10 @@ impl std::fmt::Debug for GetBucketPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketPolicyOutput`](crate::output::GetBucketPolicyOutput)
+/// See [`GetBucketPolicyOutput`](crate::output::GetBucketPolicyOutput).
 pub mod get_bucket_policy_output {
 
-    /// A builder for [`GetBucketPolicyOutput`](crate::output::GetBucketPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketPolicyOutput`](crate::output::GetBucketPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<std::string::String>,
@@ -6445,7 +7201,7 @@ pub mod get_bucket_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketPolicyOutput`](crate::output::GetBucketPolicyOutput)
+        /// Consumes the builder and constructs a [`GetBucketPolicyOutput`](crate::output::GetBucketPolicyOutput).
         pub fn build(self) -> crate::output::GetBucketPolicyOutput {
             crate::output::GetBucketPolicyOutput {
                 policy: self.policy,
@@ -6454,7 +7210,7 @@ pub mod get_bucket_policy_output {
     }
 }
 impl GetBucketPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketPolicyOutput`](crate::output::GetBucketPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketPolicyOutput`](crate::output::GetBucketPolicyOutput).
     pub fn builder() -> crate::output::get_bucket_policy_output::Builder {
         crate::output::get_bucket_policy_output::Builder::default()
     }
@@ -6465,6 +7221,7 @@ impl GetBucketPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketOwnershipControlsOutput {
     /// <p>The <code>OwnershipControls</code> (BucketOwnerEnforced, BucketOwnerPreferred, or ObjectWriter) currently in effect for this Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub ownership_controls: std::option::Option<crate::model::OwnershipControls>,
 }
 impl GetBucketOwnershipControlsOutput {
@@ -6480,11 +7237,10 @@ impl std::fmt::Debug for GetBucketOwnershipControlsOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketOwnershipControlsOutput`](crate::output::GetBucketOwnershipControlsOutput)
+/// See [`GetBucketOwnershipControlsOutput`](crate::output::GetBucketOwnershipControlsOutput).
 pub mod get_bucket_ownership_controls_output {
 
-    /// A builder for [`GetBucketOwnershipControlsOutput`](crate::output::GetBucketOwnershipControlsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketOwnershipControlsOutput`](crate::output::GetBucketOwnershipControlsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ownership_controls: std::option::Option<crate::model::OwnershipControls>,
@@ -6503,7 +7259,7 @@ pub mod get_bucket_ownership_controls_output {
             self.ownership_controls = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketOwnershipControlsOutput`](crate::output::GetBucketOwnershipControlsOutput)
+        /// Consumes the builder and constructs a [`GetBucketOwnershipControlsOutput`](crate::output::GetBucketOwnershipControlsOutput).
         pub fn build(self) -> crate::output::GetBucketOwnershipControlsOutput {
             crate::output::GetBucketOwnershipControlsOutput {
                 ownership_controls: self.ownership_controls,
@@ -6512,7 +7268,7 @@ pub mod get_bucket_ownership_controls_output {
     }
 }
 impl GetBucketOwnershipControlsOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketOwnershipControlsOutput`](crate::output::GetBucketOwnershipControlsOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketOwnershipControlsOutput`](crate::output::GetBucketOwnershipControlsOutput).
     pub fn builder() -> crate::output::get_bucket_ownership_controls_output::Builder {
         crate::output::get_bucket_ownership_controls_output::Builder::default()
     }
@@ -6523,13 +7279,17 @@ impl GetBucketOwnershipControlsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketNotificationConfigurationOutput {
     /// <p>The topic to which notifications are sent and the events for which notifications are generated.</p>
+    #[doc(hidden)]
     pub topic_configurations: std::option::Option<std::vec::Vec<crate::model::TopicConfiguration>>,
     /// <p>The Amazon Simple Queue Service queues to publish messages to and the events for which to publish messages.</p>
+    #[doc(hidden)]
     pub queue_configurations: std::option::Option<std::vec::Vec<crate::model::QueueConfiguration>>,
     /// <p>Describes the Lambda functions to invoke and the events for which to invoke them.</p>
+    #[doc(hidden)]
     pub lambda_function_configurations:
         std::option::Option<std::vec::Vec<crate::model::LambdaFunctionConfiguration>>,
     /// <p>Enables delivery of events to Amazon EventBridge.</p>
+    #[doc(hidden)]
     pub event_bridge_configuration: std::option::Option<crate::model::EventBridgeConfiguration>,
 }
 impl GetBucketNotificationConfigurationOutput {
@@ -6570,11 +7330,10 @@ impl std::fmt::Debug for GetBucketNotificationConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketNotificationConfigurationOutput`](crate::output::GetBucketNotificationConfigurationOutput)
+/// See [`GetBucketNotificationConfigurationOutput`](crate::output::GetBucketNotificationConfigurationOutput).
 pub mod get_bucket_notification_configuration_output {
 
-    /// A builder for [`GetBucketNotificationConfigurationOutput`](crate::output::GetBucketNotificationConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketNotificationConfigurationOutput`](crate::output::GetBucketNotificationConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) topic_configurations:
@@ -6663,7 +7422,7 @@ pub mod get_bucket_notification_configuration_output {
             self.event_bridge_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketNotificationConfigurationOutput`](crate::output::GetBucketNotificationConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetBucketNotificationConfigurationOutput`](crate::output::GetBucketNotificationConfigurationOutput).
         pub fn build(self) -> crate::output::GetBucketNotificationConfigurationOutput {
             crate::output::GetBucketNotificationConfigurationOutput {
                 topic_configurations: self.topic_configurations,
@@ -6675,7 +7434,7 @@ pub mod get_bucket_notification_configuration_output {
     }
 }
 impl GetBucketNotificationConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketNotificationConfigurationOutput`](crate::output::GetBucketNotificationConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketNotificationConfigurationOutput`](crate::output::GetBucketNotificationConfigurationOutput).
     pub fn builder() -> crate::output::get_bucket_notification_configuration_output::Builder {
         crate::output::get_bucket_notification_configuration_output::Builder::default()
     }
@@ -6686,6 +7445,7 @@ impl GetBucketNotificationConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketMetricsConfigurationOutput {
     /// <p>Specifies the metrics configuration.</p>
+    #[doc(hidden)]
     pub metrics_configuration: std::option::Option<crate::model::MetricsConfiguration>,
 }
 impl GetBucketMetricsConfigurationOutput {
@@ -6703,11 +7463,10 @@ impl std::fmt::Debug for GetBucketMetricsConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketMetricsConfigurationOutput`](crate::output::GetBucketMetricsConfigurationOutput)
+/// See [`GetBucketMetricsConfigurationOutput`](crate::output::GetBucketMetricsConfigurationOutput).
 pub mod get_bucket_metrics_configuration_output {
 
-    /// A builder for [`GetBucketMetricsConfigurationOutput`](crate::output::GetBucketMetricsConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketMetricsConfigurationOutput`](crate::output::GetBucketMetricsConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metrics_configuration: std::option::Option<crate::model::MetricsConfiguration>,
@@ -6726,7 +7485,7 @@ pub mod get_bucket_metrics_configuration_output {
             self.metrics_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketMetricsConfigurationOutput`](crate::output::GetBucketMetricsConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetBucketMetricsConfigurationOutput`](crate::output::GetBucketMetricsConfigurationOutput).
         pub fn build(self) -> crate::output::GetBucketMetricsConfigurationOutput {
             crate::output::GetBucketMetricsConfigurationOutput {
                 metrics_configuration: self.metrics_configuration,
@@ -6735,7 +7494,7 @@ pub mod get_bucket_metrics_configuration_output {
     }
 }
 impl GetBucketMetricsConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketMetricsConfigurationOutput`](crate::output::GetBucketMetricsConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketMetricsConfigurationOutput`](crate::output::GetBucketMetricsConfigurationOutput).
     pub fn builder() -> crate::output::get_bucket_metrics_configuration_output::Builder {
         crate::output::get_bucket_metrics_configuration_output::Builder::default()
     }
@@ -6746,6 +7505,7 @@ impl GetBucketMetricsConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketLoggingOutput {
     /// <p>Describes where logs are stored and the prefix that Amazon S3 assigns to all log object keys for a bucket. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlogging.html">PUT Bucket logging</a> in the <i>Amazon S3 API Reference</i>.</p>
+    #[doc(hidden)]
     pub logging_enabled: std::option::Option<crate::model::LoggingEnabled>,
 }
 impl GetBucketLoggingOutput {
@@ -6761,11 +7521,10 @@ impl std::fmt::Debug for GetBucketLoggingOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketLoggingOutput`](crate::output::GetBucketLoggingOutput)
+/// See [`GetBucketLoggingOutput`](crate::output::GetBucketLoggingOutput).
 pub mod get_bucket_logging_output {
 
-    /// A builder for [`GetBucketLoggingOutput`](crate::output::GetBucketLoggingOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketLoggingOutput`](crate::output::GetBucketLoggingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logging_enabled: std::option::Option<crate::model::LoggingEnabled>,
@@ -6784,7 +7543,7 @@ pub mod get_bucket_logging_output {
             self.logging_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketLoggingOutput`](crate::output::GetBucketLoggingOutput)
+        /// Consumes the builder and constructs a [`GetBucketLoggingOutput`](crate::output::GetBucketLoggingOutput).
         pub fn build(self) -> crate::output::GetBucketLoggingOutput {
             crate::output::GetBucketLoggingOutput {
                 logging_enabled: self.logging_enabled,
@@ -6793,7 +7552,7 @@ pub mod get_bucket_logging_output {
     }
 }
 impl GetBucketLoggingOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketLoggingOutput`](crate::output::GetBucketLoggingOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketLoggingOutput`](crate::output::GetBucketLoggingOutput).
     pub fn builder() -> crate::output::get_bucket_logging_output::Builder {
         crate::output::get_bucket_logging_output::Builder::default()
     }
@@ -6804,6 +7563,7 @@ impl GetBucketLoggingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketLocationOutput {
     /// <p>Specifies the Region where the bucket resides. For a list of all the Amazon S3 supported location constraints by Region, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">Regions and Endpoints</a>. Buckets in Region <code>us-east-1</code> have a LocationConstraint of <code>null</code>.</p>
+    #[doc(hidden)]
     pub location_constraint: std::option::Option<crate::model::BucketLocationConstraint>,
 }
 impl GetBucketLocationOutput {
@@ -6821,11 +7581,10 @@ impl std::fmt::Debug for GetBucketLocationOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketLocationOutput`](crate::output::GetBucketLocationOutput)
+/// See [`GetBucketLocationOutput`](crate::output::GetBucketLocationOutput).
 pub mod get_bucket_location_output {
 
-    /// A builder for [`GetBucketLocationOutput`](crate::output::GetBucketLocationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketLocationOutput`](crate::output::GetBucketLocationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_constraint: std::option::Option<crate::model::BucketLocationConstraint>,
@@ -6847,7 +7606,7 @@ pub mod get_bucket_location_output {
             self.location_constraint = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketLocationOutput`](crate::output::GetBucketLocationOutput)
+        /// Consumes the builder and constructs a [`GetBucketLocationOutput`](crate::output::GetBucketLocationOutput).
         pub fn build(self) -> crate::output::GetBucketLocationOutput {
             crate::output::GetBucketLocationOutput {
                 location_constraint: self.location_constraint,
@@ -6856,7 +7615,7 @@ pub mod get_bucket_location_output {
     }
 }
 impl GetBucketLocationOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketLocationOutput`](crate::output::GetBucketLocationOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketLocationOutput`](crate::output::GetBucketLocationOutput).
     pub fn builder() -> crate::output::get_bucket_location_output::Builder {
         crate::output::get_bucket_location_output::Builder::default()
     }
@@ -6867,6 +7626,7 @@ impl GetBucketLocationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketLifecycleConfigurationOutput {
     /// <p>Container for a lifecycle rule.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::LifecycleRule>>,
 }
 impl GetBucketLifecycleConfigurationOutput {
@@ -6882,11 +7642,10 @@ impl std::fmt::Debug for GetBucketLifecycleConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketLifecycleConfigurationOutput`](crate::output::GetBucketLifecycleConfigurationOutput)
+/// See [`GetBucketLifecycleConfigurationOutput`](crate::output::GetBucketLifecycleConfigurationOutput).
 pub mod get_bucket_lifecycle_configuration_output {
 
-    /// A builder for [`GetBucketLifecycleConfigurationOutput`](crate::output::GetBucketLifecycleConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketLifecycleConfigurationOutput`](crate::output::GetBucketLifecycleConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rules: std::option::Option<std::vec::Vec<crate::model::LifecycleRule>>,
@@ -6911,14 +7670,14 @@ pub mod get_bucket_lifecycle_configuration_output {
             self.rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketLifecycleConfigurationOutput`](crate::output::GetBucketLifecycleConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetBucketLifecycleConfigurationOutput`](crate::output::GetBucketLifecycleConfigurationOutput).
         pub fn build(self) -> crate::output::GetBucketLifecycleConfigurationOutput {
             crate::output::GetBucketLifecycleConfigurationOutput { rules: self.rules }
         }
     }
 }
 impl GetBucketLifecycleConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketLifecycleConfigurationOutput`](crate::output::GetBucketLifecycleConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketLifecycleConfigurationOutput`](crate::output::GetBucketLifecycleConfigurationOutput).
     pub fn builder() -> crate::output::get_bucket_lifecycle_configuration_output::Builder {
         crate::output::get_bucket_lifecycle_configuration_output::Builder::default()
     }
@@ -6929,6 +7688,7 @@ impl GetBucketLifecycleConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketInventoryConfigurationOutput {
     /// <p>Specifies the inventory configuration.</p>
+    #[doc(hidden)]
     pub inventory_configuration: std::option::Option<crate::model::InventoryConfiguration>,
 }
 impl GetBucketInventoryConfigurationOutput {
@@ -6946,11 +7706,10 @@ impl std::fmt::Debug for GetBucketInventoryConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketInventoryConfigurationOutput`](crate::output::GetBucketInventoryConfigurationOutput)
+/// See [`GetBucketInventoryConfigurationOutput`](crate::output::GetBucketInventoryConfigurationOutput).
 pub mod get_bucket_inventory_configuration_output {
 
-    /// A builder for [`GetBucketInventoryConfigurationOutput`](crate::output::GetBucketInventoryConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketInventoryConfigurationOutput`](crate::output::GetBucketInventoryConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) inventory_configuration:
@@ -6973,7 +7732,7 @@ pub mod get_bucket_inventory_configuration_output {
             self.inventory_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketInventoryConfigurationOutput`](crate::output::GetBucketInventoryConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetBucketInventoryConfigurationOutput`](crate::output::GetBucketInventoryConfigurationOutput).
         pub fn build(self) -> crate::output::GetBucketInventoryConfigurationOutput {
             crate::output::GetBucketInventoryConfigurationOutput {
                 inventory_configuration: self.inventory_configuration,
@@ -6982,7 +7741,7 @@ pub mod get_bucket_inventory_configuration_output {
     }
 }
 impl GetBucketInventoryConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketInventoryConfigurationOutput`](crate::output::GetBucketInventoryConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketInventoryConfigurationOutput`](crate::output::GetBucketInventoryConfigurationOutput).
     pub fn builder() -> crate::output::get_bucket_inventory_configuration_output::Builder {
         crate::output::get_bucket_inventory_configuration_output::Builder::default()
     }
@@ -6993,6 +7752,7 @@ impl GetBucketInventoryConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketIntelligentTieringConfigurationOutput {
     /// <p>Container for S3 Intelligent-Tiering configuration.</p>
+    #[doc(hidden)]
     pub intelligent_tiering_configuration:
         std::option::Option<crate::model::IntelligentTieringConfiguration>,
 }
@@ -7014,11 +7774,10 @@ impl std::fmt::Debug for GetBucketIntelligentTieringConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketIntelligentTieringConfigurationOutput`](crate::output::GetBucketIntelligentTieringConfigurationOutput)
+/// See [`GetBucketIntelligentTieringConfigurationOutput`](crate::output::GetBucketIntelligentTieringConfigurationOutput).
 pub mod get_bucket_intelligent_tiering_configuration_output {
 
-    /// A builder for [`GetBucketIntelligentTieringConfigurationOutput`](crate::output::GetBucketIntelligentTieringConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketIntelligentTieringConfigurationOutput`](crate::output::GetBucketIntelligentTieringConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) intelligent_tiering_configuration:
@@ -7041,7 +7800,7 @@ pub mod get_bucket_intelligent_tiering_configuration_output {
             self.intelligent_tiering_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketIntelligentTieringConfigurationOutput`](crate::output::GetBucketIntelligentTieringConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetBucketIntelligentTieringConfigurationOutput`](crate::output::GetBucketIntelligentTieringConfigurationOutput).
         pub fn build(self) -> crate::output::GetBucketIntelligentTieringConfigurationOutput {
             crate::output::GetBucketIntelligentTieringConfigurationOutput {
                 intelligent_tiering_configuration: self.intelligent_tiering_configuration,
@@ -7050,7 +7809,7 @@ pub mod get_bucket_intelligent_tiering_configuration_output {
     }
 }
 impl GetBucketIntelligentTieringConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketIntelligentTieringConfigurationOutput`](crate::output::GetBucketIntelligentTieringConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketIntelligentTieringConfigurationOutput`](crate::output::GetBucketIntelligentTieringConfigurationOutput).
     pub fn builder() -> crate::output::get_bucket_intelligent_tiering_configuration_output::Builder
     {
         crate::output::get_bucket_intelligent_tiering_configuration_output::Builder::default()
@@ -7062,6 +7821,7 @@ impl GetBucketIntelligentTieringConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketEncryptionOutput {
     /// <p>Specifies the default server-side-encryption configuration.</p>
+    #[doc(hidden)]
     pub server_side_encryption_configuration:
         std::option::Option<crate::model::ServerSideEncryptionConfiguration>,
 }
@@ -7083,11 +7843,10 @@ impl std::fmt::Debug for GetBucketEncryptionOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketEncryptionOutput`](crate::output::GetBucketEncryptionOutput)
+/// See [`GetBucketEncryptionOutput`](crate::output::GetBucketEncryptionOutput).
 pub mod get_bucket_encryption_output {
 
-    /// A builder for [`GetBucketEncryptionOutput`](crate::output::GetBucketEncryptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketEncryptionOutput`](crate::output::GetBucketEncryptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) server_side_encryption_configuration:
@@ -7110,7 +7869,7 @@ pub mod get_bucket_encryption_output {
             self.server_side_encryption_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketEncryptionOutput`](crate::output::GetBucketEncryptionOutput)
+        /// Consumes the builder and constructs a [`GetBucketEncryptionOutput`](crate::output::GetBucketEncryptionOutput).
         pub fn build(self) -> crate::output::GetBucketEncryptionOutput {
             crate::output::GetBucketEncryptionOutput {
                 server_side_encryption_configuration: self.server_side_encryption_configuration,
@@ -7119,7 +7878,7 @@ pub mod get_bucket_encryption_output {
     }
 }
 impl GetBucketEncryptionOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketEncryptionOutput`](crate::output::GetBucketEncryptionOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketEncryptionOutput`](crate::output::GetBucketEncryptionOutput).
     pub fn builder() -> crate::output::get_bucket_encryption_output::Builder {
         crate::output::get_bucket_encryption_output::Builder::default()
     }
@@ -7130,6 +7889,7 @@ impl GetBucketEncryptionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketCorsOutput {
     /// <p>A set of origins and methods (cross-origin access that you want to allow). You can add up to 100 rules to the configuration.</p>
+    #[doc(hidden)]
     pub cors_rules: std::option::Option<std::vec::Vec<crate::model::CorsRule>>,
 }
 impl GetBucketCorsOutput {
@@ -7145,11 +7905,10 @@ impl std::fmt::Debug for GetBucketCorsOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketCorsOutput`](crate::output::GetBucketCorsOutput)
+/// See [`GetBucketCorsOutput`](crate::output::GetBucketCorsOutput).
 pub mod get_bucket_cors_output {
 
-    /// A builder for [`GetBucketCorsOutput`](crate::output::GetBucketCorsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketCorsOutput`](crate::output::GetBucketCorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cors_rules: std::option::Option<std::vec::Vec<crate::model::CorsRule>>,
@@ -7174,7 +7933,7 @@ pub mod get_bucket_cors_output {
             self.cors_rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketCorsOutput`](crate::output::GetBucketCorsOutput)
+        /// Consumes the builder and constructs a [`GetBucketCorsOutput`](crate::output::GetBucketCorsOutput).
         pub fn build(self) -> crate::output::GetBucketCorsOutput {
             crate::output::GetBucketCorsOutput {
                 cors_rules: self.cors_rules,
@@ -7183,7 +7942,7 @@ pub mod get_bucket_cors_output {
     }
 }
 impl GetBucketCorsOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketCorsOutput`](crate::output::GetBucketCorsOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketCorsOutput`](crate::output::GetBucketCorsOutput).
     pub fn builder() -> crate::output::get_bucket_cors_output::Builder {
         crate::output::get_bucket_cors_output::Builder::default()
     }
@@ -7194,6 +7953,7 @@ impl GetBucketCorsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketAnalyticsConfigurationOutput {
     /// <p>The configuration and any analyses for the analytics filter.</p>
+    #[doc(hidden)]
     pub analytics_configuration: std::option::Option<crate::model::AnalyticsConfiguration>,
 }
 impl GetBucketAnalyticsConfigurationOutput {
@@ -7211,11 +7971,10 @@ impl std::fmt::Debug for GetBucketAnalyticsConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketAnalyticsConfigurationOutput`](crate::output::GetBucketAnalyticsConfigurationOutput)
+/// See [`GetBucketAnalyticsConfigurationOutput`](crate::output::GetBucketAnalyticsConfigurationOutput).
 pub mod get_bucket_analytics_configuration_output {
 
-    /// A builder for [`GetBucketAnalyticsConfigurationOutput`](crate::output::GetBucketAnalyticsConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketAnalyticsConfigurationOutput`](crate::output::GetBucketAnalyticsConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) analytics_configuration:
@@ -7238,7 +7997,7 @@ pub mod get_bucket_analytics_configuration_output {
             self.analytics_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketAnalyticsConfigurationOutput`](crate::output::GetBucketAnalyticsConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetBucketAnalyticsConfigurationOutput`](crate::output::GetBucketAnalyticsConfigurationOutput).
         pub fn build(self) -> crate::output::GetBucketAnalyticsConfigurationOutput {
             crate::output::GetBucketAnalyticsConfigurationOutput {
                 analytics_configuration: self.analytics_configuration,
@@ -7247,7 +8006,7 @@ pub mod get_bucket_analytics_configuration_output {
     }
 }
 impl GetBucketAnalyticsConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketAnalyticsConfigurationOutput`](crate::output::GetBucketAnalyticsConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketAnalyticsConfigurationOutput`](crate::output::GetBucketAnalyticsConfigurationOutput).
     pub fn builder() -> crate::output::get_bucket_analytics_configuration_output::Builder {
         crate::output::get_bucket_analytics_configuration_output::Builder::default()
     }
@@ -7258,8 +8017,10 @@ impl GetBucketAnalyticsConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketAclOutput {
     /// <p>Container for the bucket owner's display name and ID.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::Owner>,
     /// <p>A list of grants.</p>
+    #[doc(hidden)]
     pub grants: std::option::Option<std::vec::Vec<crate::model::Grant>>,
 }
 impl GetBucketAclOutput {
@@ -7280,11 +8041,10 @@ impl std::fmt::Debug for GetBucketAclOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketAclOutput`](crate::output::GetBucketAclOutput)
+/// See [`GetBucketAclOutput`](crate::output::GetBucketAclOutput).
 pub mod get_bucket_acl_output {
 
-    /// A builder for [`GetBucketAclOutput`](crate::output::GetBucketAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketAclOutput`](crate::output::GetBucketAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner: std::option::Option<crate::model::Owner>,
@@ -7320,7 +8080,7 @@ pub mod get_bucket_acl_output {
             self.grants = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketAclOutput`](crate::output::GetBucketAclOutput)
+        /// Consumes the builder and constructs a [`GetBucketAclOutput`](crate::output::GetBucketAclOutput).
         pub fn build(self) -> crate::output::GetBucketAclOutput {
             crate::output::GetBucketAclOutput {
                 owner: self.owner,
@@ -7330,7 +8090,7 @@ pub mod get_bucket_acl_output {
     }
 }
 impl GetBucketAclOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketAclOutput`](crate::output::GetBucketAclOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketAclOutput`](crate::output::GetBucketAclOutput).
     pub fn builder() -> crate::output::get_bucket_acl_output::Builder {
         crate::output::get_bucket_acl_output::Builder::default()
     }
@@ -7341,6 +8101,7 @@ impl GetBucketAclOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketAccelerateConfigurationOutput {
     /// <p>The accelerate configuration of the bucket.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::BucketAccelerateStatus>,
 }
 impl GetBucketAccelerateConfigurationOutput {
@@ -7356,11 +8117,10 @@ impl std::fmt::Debug for GetBucketAccelerateConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketAccelerateConfigurationOutput`](crate::output::GetBucketAccelerateConfigurationOutput)
+/// See [`GetBucketAccelerateConfigurationOutput`](crate::output::GetBucketAccelerateConfigurationOutput).
 pub mod get_bucket_accelerate_configuration_output {
 
-    /// A builder for [`GetBucketAccelerateConfigurationOutput`](crate::output::GetBucketAccelerateConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketAccelerateConfigurationOutput`](crate::output::GetBucketAccelerateConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::BucketAccelerateStatus>,
@@ -7379,7 +8139,7 @@ pub mod get_bucket_accelerate_configuration_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketAccelerateConfigurationOutput`](crate::output::GetBucketAccelerateConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetBucketAccelerateConfigurationOutput`](crate::output::GetBucketAccelerateConfigurationOutput).
         pub fn build(self) -> crate::output::GetBucketAccelerateConfigurationOutput {
             crate::output::GetBucketAccelerateConfigurationOutput {
                 status: self.status,
@@ -7388,7 +8148,7 @@ pub mod get_bucket_accelerate_configuration_output {
     }
 }
 impl GetBucketAccelerateConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketAccelerateConfigurationOutput`](crate::output::GetBucketAccelerateConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketAccelerateConfigurationOutput`](crate::output::GetBucketAccelerateConfigurationOutput).
     pub fn builder() -> crate::output::get_bucket_accelerate_configuration_output::Builder {
         crate::output::get_bucket_accelerate_configuration_output::Builder::default()
     }
@@ -7404,22 +8164,21 @@ impl std::fmt::Debug for DeletePublicAccessBlockOutput {
         formatter.finish()
     }
 }
-/// See [`DeletePublicAccessBlockOutput`](crate::output::DeletePublicAccessBlockOutput)
+/// See [`DeletePublicAccessBlockOutput`](crate::output::DeletePublicAccessBlockOutput).
 pub mod delete_public_access_block_output {
 
-    /// A builder for [`DeletePublicAccessBlockOutput`](crate::output::DeletePublicAccessBlockOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeletePublicAccessBlockOutput`](crate::output::DeletePublicAccessBlockOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeletePublicAccessBlockOutput`](crate::output::DeletePublicAccessBlockOutput)
+        /// Consumes the builder and constructs a [`DeletePublicAccessBlockOutput`](crate::output::DeletePublicAccessBlockOutput).
         pub fn build(self) -> crate::output::DeletePublicAccessBlockOutput {
             crate::output::DeletePublicAccessBlockOutput {}
         }
     }
 }
 impl DeletePublicAccessBlockOutput {
-    /// Creates a new builder-style object to manufacture [`DeletePublicAccessBlockOutput`](crate::output::DeletePublicAccessBlockOutput)
+    /// Creates a new builder-style object to manufacture [`DeletePublicAccessBlockOutput`](crate::output::DeletePublicAccessBlockOutput).
     pub fn builder() -> crate::output::delete_public_access_block_output::Builder {
         crate::output::delete_public_access_block_output::Builder::default()
     }
@@ -7430,6 +8189,7 @@ impl DeletePublicAccessBlockOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteObjectTaggingOutput {
     /// <p>The versionId of the object the tag-set was removed from.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
 }
 impl DeleteObjectTaggingOutput {
@@ -7445,11 +8205,10 @@ impl std::fmt::Debug for DeleteObjectTaggingOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteObjectTaggingOutput`](crate::output::DeleteObjectTaggingOutput)
+/// See [`DeleteObjectTaggingOutput`](crate::output::DeleteObjectTaggingOutput).
 pub mod delete_object_tagging_output {
 
-    /// A builder for [`DeleteObjectTaggingOutput`](crate::output::DeleteObjectTaggingOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteObjectTaggingOutput`](crate::output::DeleteObjectTaggingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version_id: std::option::Option<std::string::String>,
@@ -7465,7 +8224,7 @@ pub mod delete_object_tagging_output {
             self.version_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteObjectTaggingOutput`](crate::output::DeleteObjectTaggingOutput)
+        /// Consumes the builder and constructs a [`DeleteObjectTaggingOutput`](crate::output::DeleteObjectTaggingOutput).
         pub fn build(self) -> crate::output::DeleteObjectTaggingOutput {
             crate::output::DeleteObjectTaggingOutput {
                 version_id: self.version_id,
@@ -7474,7 +8233,7 @@ pub mod delete_object_tagging_output {
     }
 }
 impl DeleteObjectTaggingOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteObjectTaggingOutput`](crate::output::DeleteObjectTaggingOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteObjectTaggingOutput`](crate::output::DeleteObjectTaggingOutput).
     pub fn builder() -> crate::output::delete_object_tagging_output::Builder {
         crate::output::delete_object_tagging_output::Builder::default()
     }
@@ -7485,10 +8244,13 @@ impl DeleteObjectTaggingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteObjectsOutput {
     /// <p>Container element for a successful delete. It identifies the object that was successfully deleted.</p>
+    #[doc(hidden)]
     pub deleted: std::option::Option<std::vec::Vec<crate::model::DeletedObject>>,
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
     /// <p>Container for a failed delete action that describes the object that Amazon S3 attempted to delete and the error it encountered.</p>
+    #[doc(hidden)]
     pub errors: std::option::Option<std::vec::Vec<crate::model::Error>>,
 }
 impl DeleteObjectsOutput {
@@ -7514,11 +8276,10 @@ impl std::fmt::Debug for DeleteObjectsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteObjectsOutput`](crate::output::DeleteObjectsOutput)
+/// See [`DeleteObjectsOutput`](crate::output::DeleteObjectsOutput).
 pub mod delete_objects_output {
 
-    /// A builder for [`DeleteObjectsOutput`](crate::output::DeleteObjectsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteObjectsOutput`](crate::output::DeleteObjectsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deleted: std::option::Option<std::vec::Vec<crate::model::DeletedObject>>,
@@ -7577,7 +8338,7 @@ pub mod delete_objects_output {
             self.errors = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteObjectsOutput`](crate::output::DeleteObjectsOutput)
+        /// Consumes the builder and constructs a [`DeleteObjectsOutput`](crate::output::DeleteObjectsOutput).
         pub fn build(self) -> crate::output::DeleteObjectsOutput {
             crate::output::DeleteObjectsOutput {
                 deleted: self.deleted,
@@ -7588,7 +8349,7 @@ pub mod delete_objects_output {
     }
 }
 impl DeleteObjectsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteObjectsOutput`](crate::output::DeleteObjectsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteObjectsOutput`](crate::output::DeleteObjectsOutput).
     pub fn builder() -> crate::output::delete_objects_output::Builder {
         crate::output::delete_objects_output::Builder::default()
     }
@@ -7599,10 +8360,13 @@ impl DeleteObjectsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteObjectOutput {
     /// <p>Specifies whether the versioned object that was permanently deleted was (true) or was not (false) a delete marker.</p>
+    #[doc(hidden)]
     pub delete_marker: bool,
     /// <p>Returns the version ID of the delete marker created as a result of the DELETE operation.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
 }
 impl DeleteObjectOutput {
@@ -7628,11 +8392,10 @@ impl std::fmt::Debug for DeleteObjectOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteObjectOutput`](crate::output::DeleteObjectOutput)
+/// See [`DeleteObjectOutput`](crate::output::DeleteObjectOutput).
 pub mod delete_object_output {
 
-    /// A builder for [`DeleteObjectOutput`](crate::output::DeleteObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteObjectOutput`](crate::output::DeleteObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delete_marker: std::option::Option<bool>,
@@ -7673,7 +8436,7 @@ pub mod delete_object_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteObjectOutput`](crate::output::DeleteObjectOutput)
+        /// Consumes the builder and constructs a [`DeleteObjectOutput`](crate::output::DeleteObjectOutput).
         pub fn build(self) -> crate::output::DeleteObjectOutput {
             crate::output::DeleteObjectOutput {
                 delete_marker: self.delete_marker.unwrap_or_default(),
@@ -7684,7 +8447,7 @@ pub mod delete_object_output {
     }
 }
 impl DeleteObjectOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteObjectOutput`](crate::output::DeleteObjectOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteObjectOutput`](crate::output::DeleteObjectOutput).
     pub fn builder() -> crate::output::delete_object_output::Builder {
         crate::output::delete_object_output::Builder::default()
     }
@@ -7700,22 +8463,21 @@ impl std::fmt::Debug for DeleteBucketWebsiteOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBucketWebsiteOutput`](crate::output::DeleteBucketWebsiteOutput)
+/// See [`DeleteBucketWebsiteOutput`](crate::output::DeleteBucketWebsiteOutput).
 pub mod delete_bucket_website_output {
 
-    /// A builder for [`DeleteBucketWebsiteOutput`](crate::output::DeleteBucketWebsiteOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBucketWebsiteOutput`](crate::output::DeleteBucketWebsiteOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBucketWebsiteOutput`](crate::output::DeleteBucketWebsiteOutput)
+        /// Consumes the builder and constructs a [`DeleteBucketWebsiteOutput`](crate::output::DeleteBucketWebsiteOutput).
         pub fn build(self) -> crate::output::DeleteBucketWebsiteOutput {
             crate::output::DeleteBucketWebsiteOutput {}
         }
     }
 }
 impl DeleteBucketWebsiteOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBucketWebsiteOutput`](crate::output::DeleteBucketWebsiteOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBucketWebsiteOutput`](crate::output::DeleteBucketWebsiteOutput).
     pub fn builder() -> crate::output::delete_bucket_website_output::Builder {
         crate::output::delete_bucket_website_output::Builder::default()
     }
@@ -7731,22 +8493,21 @@ impl std::fmt::Debug for DeleteBucketTaggingOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBucketTaggingOutput`](crate::output::DeleteBucketTaggingOutput)
+/// See [`DeleteBucketTaggingOutput`](crate::output::DeleteBucketTaggingOutput).
 pub mod delete_bucket_tagging_output {
 
-    /// A builder for [`DeleteBucketTaggingOutput`](crate::output::DeleteBucketTaggingOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBucketTaggingOutput`](crate::output::DeleteBucketTaggingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBucketTaggingOutput`](crate::output::DeleteBucketTaggingOutput)
+        /// Consumes the builder and constructs a [`DeleteBucketTaggingOutput`](crate::output::DeleteBucketTaggingOutput).
         pub fn build(self) -> crate::output::DeleteBucketTaggingOutput {
             crate::output::DeleteBucketTaggingOutput {}
         }
     }
 }
 impl DeleteBucketTaggingOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBucketTaggingOutput`](crate::output::DeleteBucketTaggingOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBucketTaggingOutput`](crate::output::DeleteBucketTaggingOutput).
     pub fn builder() -> crate::output::delete_bucket_tagging_output::Builder {
         crate::output::delete_bucket_tagging_output::Builder::default()
     }
@@ -7762,22 +8523,21 @@ impl std::fmt::Debug for DeleteBucketReplicationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBucketReplicationOutput`](crate::output::DeleteBucketReplicationOutput)
+/// See [`DeleteBucketReplicationOutput`](crate::output::DeleteBucketReplicationOutput).
 pub mod delete_bucket_replication_output {
 
-    /// A builder for [`DeleteBucketReplicationOutput`](crate::output::DeleteBucketReplicationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBucketReplicationOutput`](crate::output::DeleteBucketReplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBucketReplicationOutput`](crate::output::DeleteBucketReplicationOutput)
+        /// Consumes the builder and constructs a [`DeleteBucketReplicationOutput`](crate::output::DeleteBucketReplicationOutput).
         pub fn build(self) -> crate::output::DeleteBucketReplicationOutput {
             crate::output::DeleteBucketReplicationOutput {}
         }
     }
 }
 impl DeleteBucketReplicationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBucketReplicationOutput`](crate::output::DeleteBucketReplicationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBucketReplicationOutput`](crate::output::DeleteBucketReplicationOutput).
     pub fn builder() -> crate::output::delete_bucket_replication_output::Builder {
         crate::output::delete_bucket_replication_output::Builder::default()
     }
@@ -7793,22 +8553,21 @@ impl std::fmt::Debug for DeleteBucketPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBucketPolicyOutput`](crate::output::DeleteBucketPolicyOutput)
+/// See [`DeleteBucketPolicyOutput`](crate::output::DeleteBucketPolicyOutput).
 pub mod delete_bucket_policy_output {
 
-    /// A builder for [`DeleteBucketPolicyOutput`](crate::output::DeleteBucketPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBucketPolicyOutput`](crate::output::DeleteBucketPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBucketPolicyOutput`](crate::output::DeleteBucketPolicyOutput)
+        /// Consumes the builder and constructs a [`DeleteBucketPolicyOutput`](crate::output::DeleteBucketPolicyOutput).
         pub fn build(self) -> crate::output::DeleteBucketPolicyOutput {
             crate::output::DeleteBucketPolicyOutput {}
         }
     }
 }
 impl DeleteBucketPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBucketPolicyOutput`](crate::output::DeleteBucketPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBucketPolicyOutput`](crate::output::DeleteBucketPolicyOutput).
     pub fn builder() -> crate::output::delete_bucket_policy_output::Builder {
         crate::output::delete_bucket_policy_output::Builder::default()
     }
@@ -7824,22 +8583,21 @@ impl std::fmt::Debug for DeleteBucketOwnershipControlsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBucketOwnershipControlsOutput`](crate::output::DeleteBucketOwnershipControlsOutput)
+/// See [`DeleteBucketOwnershipControlsOutput`](crate::output::DeleteBucketOwnershipControlsOutput).
 pub mod delete_bucket_ownership_controls_output {
 
-    /// A builder for [`DeleteBucketOwnershipControlsOutput`](crate::output::DeleteBucketOwnershipControlsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBucketOwnershipControlsOutput`](crate::output::DeleteBucketOwnershipControlsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBucketOwnershipControlsOutput`](crate::output::DeleteBucketOwnershipControlsOutput)
+        /// Consumes the builder and constructs a [`DeleteBucketOwnershipControlsOutput`](crate::output::DeleteBucketOwnershipControlsOutput).
         pub fn build(self) -> crate::output::DeleteBucketOwnershipControlsOutput {
             crate::output::DeleteBucketOwnershipControlsOutput {}
         }
     }
 }
 impl DeleteBucketOwnershipControlsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBucketOwnershipControlsOutput`](crate::output::DeleteBucketOwnershipControlsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBucketOwnershipControlsOutput`](crate::output::DeleteBucketOwnershipControlsOutput).
     pub fn builder() -> crate::output::delete_bucket_ownership_controls_output::Builder {
         crate::output::delete_bucket_ownership_controls_output::Builder::default()
     }
@@ -7855,22 +8613,21 @@ impl std::fmt::Debug for DeleteBucketMetricsConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBucketMetricsConfigurationOutput`](crate::output::DeleteBucketMetricsConfigurationOutput)
+/// See [`DeleteBucketMetricsConfigurationOutput`](crate::output::DeleteBucketMetricsConfigurationOutput).
 pub mod delete_bucket_metrics_configuration_output {
 
-    /// A builder for [`DeleteBucketMetricsConfigurationOutput`](crate::output::DeleteBucketMetricsConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBucketMetricsConfigurationOutput`](crate::output::DeleteBucketMetricsConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBucketMetricsConfigurationOutput`](crate::output::DeleteBucketMetricsConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteBucketMetricsConfigurationOutput`](crate::output::DeleteBucketMetricsConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteBucketMetricsConfigurationOutput {
             crate::output::DeleteBucketMetricsConfigurationOutput {}
         }
     }
 }
 impl DeleteBucketMetricsConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBucketMetricsConfigurationOutput`](crate::output::DeleteBucketMetricsConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBucketMetricsConfigurationOutput`](crate::output::DeleteBucketMetricsConfigurationOutput).
     pub fn builder() -> crate::output::delete_bucket_metrics_configuration_output::Builder {
         crate::output::delete_bucket_metrics_configuration_output::Builder::default()
     }
@@ -7886,22 +8643,21 @@ impl std::fmt::Debug for DeleteBucketLifecycleOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBucketLifecycleOutput`](crate::output::DeleteBucketLifecycleOutput)
+/// See [`DeleteBucketLifecycleOutput`](crate::output::DeleteBucketLifecycleOutput).
 pub mod delete_bucket_lifecycle_output {
 
-    /// A builder for [`DeleteBucketLifecycleOutput`](crate::output::DeleteBucketLifecycleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBucketLifecycleOutput`](crate::output::DeleteBucketLifecycleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBucketLifecycleOutput`](crate::output::DeleteBucketLifecycleOutput)
+        /// Consumes the builder and constructs a [`DeleteBucketLifecycleOutput`](crate::output::DeleteBucketLifecycleOutput).
         pub fn build(self) -> crate::output::DeleteBucketLifecycleOutput {
             crate::output::DeleteBucketLifecycleOutput {}
         }
     }
 }
 impl DeleteBucketLifecycleOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBucketLifecycleOutput`](crate::output::DeleteBucketLifecycleOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBucketLifecycleOutput`](crate::output::DeleteBucketLifecycleOutput).
     pub fn builder() -> crate::output::delete_bucket_lifecycle_output::Builder {
         crate::output::delete_bucket_lifecycle_output::Builder::default()
     }
@@ -7917,22 +8673,21 @@ impl std::fmt::Debug for DeleteBucketInventoryConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBucketInventoryConfigurationOutput`](crate::output::DeleteBucketInventoryConfigurationOutput)
+/// See [`DeleteBucketInventoryConfigurationOutput`](crate::output::DeleteBucketInventoryConfigurationOutput).
 pub mod delete_bucket_inventory_configuration_output {
 
-    /// A builder for [`DeleteBucketInventoryConfigurationOutput`](crate::output::DeleteBucketInventoryConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBucketInventoryConfigurationOutput`](crate::output::DeleteBucketInventoryConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBucketInventoryConfigurationOutput`](crate::output::DeleteBucketInventoryConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteBucketInventoryConfigurationOutput`](crate::output::DeleteBucketInventoryConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteBucketInventoryConfigurationOutput {
             crate::output::DeleteBucketInventoryConfigurationOutput {}
         }
     }
 }
 impl DeleteBucketInventoryConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBucketInventoryConfigurationOutput`](crate::output::DeleteBucketInventoryConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBucketInventoryConfigurationOutput`](crate::output::DeleteBucketInventoryConfigurationOutput).
     pub fn builder() -> crate::output::delete_bucket_inventory_configuration_output::Builder {
         crate::output::delete_bucket_inventory_configuration_output::Builder::default()
     }
@@ -7948,22 +8703,21 @@ impl std::fmt::Debug for DeleteBucketIntelligentTieringConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBucketIntelligentTieringConfigurationOutput`](crate::output::DeleteBucketIntelligentTieringConfigurationOutput)
+/// See [`DeleteBucketIntelligentTieringConfigurationOutput`](crate::output::DeleteBucketIntelligentTieringConfigurationOutput).
 pub mod delete_bucket_intelligent_tiering_configuration_output {
 
-    /// A builder for [`DeleteBucketIntelligentTieringConfigurationOutput`](crate::output::DeleteBucketIntelligentTieringConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBucketIntelligentTieringConfigurationOutput`](crate::output::DeleteBucketIntelligentTieringConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBucketIntelligentTieringConfigurationOutput`](crate::output::DeleteBucketIntelligentTieringConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteBucketIntelligentTieringConfigurationOutput`](crate::output::DeleteBucketIntelligentTieringConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteBucketIntelligentTieringConfigurationOutput {
             crate::output::DeleteBucketIntelligentTieringConfigurationOutput {}
         }
     }
 }
 impl DeleteBucketIntelligentTieringConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBucketIntelligentTieringConfigurationOutput`](crate::output::DeleteBucketIntelligentTieringConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBucketIntelligentTieringConfigurationOutput`](crate::output::DeleteBucketIntelligentTieringConfigurationOutput).
     pub fn builder(
     ) -> crate::output::delete_bucket_intelligent_tiering_configuration_output::Builder {
         crate::output::delete_bucket_intelligent_tiering_configuration_output::Builder::default()
@@ -7980,22 +8734,21 @@ impl std::fmt::Debug for DeleteBucketEncryptionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBucketEncryptionOutput`](crate::output::DeleteBucketEncryptionOutput)
+/// See [`DeleteBucketEncryptionOutput`](crate::output::DeleteBucketEncryptionOutput).
 pub mod delete_bucket_encryption_output {
 
-    /// A builder for [`DeleteBucketEncryptionOutput`](crate::output::DeleteBucketEncryptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBucketEncryptionOutput`](crate::output::DeleteBucketEncryptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBucketEncryptionOutput`](crate::output::DeleteBucketEncryptionOutput)
+        /// Consumes the builder and constructs a [`DeleteBucketEncryptionOutput`](crate::output::DeleteBucketEncryptionOutput).
         pub fn build(self) -> crate::output::DeleteBucketEncryptionOutput {
             crate::output::DeleteBucketEncryptionOutput {}
         }
     }
 }
 impl DeleteBucketEncryptionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBucketEncryptionOutput`](crate::output::DeleteBucketEncryptionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBucketEncryptionOutput`](crate::output::DeleteBucketEncryptionOutput).
     pub fn builder() -> crate::output::delete_bucket_encryption_output::Builder {
         crate::output::delete_bucket_encryption_output::Builder::default()
     }
@@ -8011,22 +8764,21 @@ impl std::fmt::Debug for DeleteBucketCorsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBucketCorsOutput`](crate::output::DeleteBucketCorsOutput)
+/// See [`DeleteBucketCorsOutput`](crate::output::DeleteBucketCorsOutput).
 pub mod delete_bucket_cors_output {
 
-    /// A builder for [`DeleteBucketCorsOutput`](crate::output::DeleteBucketCorsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBucketCorsOutput`](crate::output::DeleteBucketCorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBucketCorsOutput`](crate::output::DeleteBucketCorsOutput)
+        /// Consumes the builder and constructs a [`DeleteBucketCorsOutput`](crate::output::DeleteBucketCorsOutput).
         pub fn build(self) -> crate::output::DeleteBucketCorsOutput {
             crate::output::DeleteBucketCorsOutput {}
         }
     }
 }
 impl DeleteBucketCorsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBucketCorsOutput`](crate::output::DeleteBucketCorsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBucketCorsOutput`](crate::output::DeleteBucketCorsOutput).
     pub fn builder() -> crate::output::delete_bucket_cors_output::Builder {
         crate::output::delete_bucket_cors_output::Builder::default()
     }
@@ -8042,22 +8794,21 @@ impl std::fmt::Debug for DeleteBucketAnalyticsConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBucketAnalyticsConfigurationOutput`](crate::output::DeleteBucketAnalyticsConfigurationOutput)
+/// See [`DeleteBucketAnalyticsConfigurationOutput`](crate::output::DeleteBucketAnalyticsConfigurationOutput).
 pub mod delete_bucket_analytics_configuration_output {
 
-    /// A builder for [`DeleteBucketAnalyticsConfigurationOutput`](crate::output::DeleteBucketAnalyticsConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBucketAnalyticsConfigurationOutput`](crate::output::DeleteBucketAnalyticsConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBucketAnalyticsConfigurationOutput`](crate::output::DeleteBucketAnalyticsConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteBucketAnalyticsConfigurationOutput`](crate::output::DeleteBucketAnalyticsConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteBucketAnalyticsConfigurationOutput {
             crate::output::DeleteBucketAnalyticsConfigurationOutput {}
         }
     }
 }
 impl DeleteBucketAnalyticsConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBucketAnalyticsConfigurationOutput`](crate::output::DeleteBucketAnalyticsConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBucketAnalyticsConfigurationOutput`](crate::output::DeleteBucketAnalyticsConfigurationOutput).
     pub fn builder() -> crate::output::delete_bucket_analytics_configuration_output::Builder {
         crate::output::delete_bucket_analytics_configuration_output::Builder::default()
     }
@@ -8073,22 +8824,21 @@ impl std::fmt::Debug for DeleteBucketOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBucketOutput`](crate::output::DeleteBucketOutput)
+/// See [`DeleteBucketOutput`](crate::output::DeleteBucketOutput).
 pub mod delete_bucket_output {
 
-    /// A builder for [`DeleteBucketOutput`](crate::output::DeleteBucketOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBucketOutput`](crate::output::DeleteBucketOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBucketOutput`](crate::output::DeleteBucketOutput)
+        /// Consumes the builder and constructs a [`DeleteBucketOutput`](crate::output::DeleteBucketOutput).
         pub fn build(self) -> crate::output::DeleteBucketOutput {
             crate::output::DeleteBucketOutput {}
         }
     }
 }
 impl DeleteBucketOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBucketOutput`](crate::output::DeleteBucketOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBucketOutput`](crate::output::DeleteBucketOutput).
     pub fn builder() -> crate::output::delete_bucket_output::Builder {
         crate::output::delete_bucket_output::Builder::default()
     }
@@ -8100,31 +8850,46 @@ impl DeleteBucketOutput {
 pub struct CreateMultipartUploadOutput {
     /// <p>If the bucket has a lifecycle rule configured with an action to abort incomplete multipart uploads and the prefix in the lifecycle rule matches the object name in the request, the response includes this header. The header indicates when the initiated multipart upload becomes eligible for an abort operation. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config"> Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy</a>.</p>
     /// <p>The response also includes the <code>x-amz-abort-rule-id</code> header that provides the ID of the lifecycle configuration rule that defines this action.</p>
+    #[doc(hidden)]
     pub abort_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>This header is returned along with the <code>x-amz-abort-date</code> header. It identifies the applicable lifecycle configuration rule that defines the action to abort incomplete multipart uploads.</p>
+    #[doc(hidden)]
     pub abort_rule_id: std::option::Option<std::string::String>,
     /// <p>The name of the bucket to which the multipart upload was initiated. Does not return the access point ARN or access point alias if used.</p>
     /// <p>When using this action with an access point, you must direct requests to the access point hostname. The access point hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.s3-accesspoint.<i>Region</i>.amazonaws.com. When using this action with an access point through the Amazon Web Services SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html">Using access points</a> in the <i>Amazon S3 User Guide</i>.</p>
-    /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com. When using this action using S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+    /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <code> <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com</code>. When using this action with S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>Object key for which the multipart upload was initiated.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>ID for the initiated multipart upload.</p>
+    #[doc(hidden)]
     pub upload_id: std::option::Option<std::string::String>,
     /// <p>The server-side encryption algorithm used when storing this object in Amazon S3 (for example, AES256, aws:kms).</p>
+    #[doc(hidden)]
     pub server_side_encryption: std::option::Option<crate::model::ServerSideEncryption>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header confirming the encryption algorithm used.</p>
+    #[doc(hidden)]
     pub sse_customer_algorithm: std::option::Option<std::string::String>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header to provide round-trip message integrity verification of the customer-provided encryption key.</p>
+    #[doc(hidden)]
     pub sse_customer_key_md5: std::option::Option<std::string::String>,
     /// <p>If present, specifies the ID of the Amazon Web Services Key Management Service (Amazon Web Services KMS) symmetric customer managed key that was used for the object.</p>
+    #[doc(hidden)]
     pub ssekms_key_id: std::option::Option<std::string::String>,
     /// <p>If present, specifies the Amazon Web Services KMS Encryption Context to use for object encryption. The value of this header is a base64-encoded UTF-8 string holding JSON with the encryption context key-value pairs.</p>
+    #[doc(hidden)]
     pub ssekms_encryption_context: std::option::Option<std::string::String>,
     /// <p>Indicates whether the multipart upload uses an S3 Bucket Key for server-side encryption with Amazon Web Services KMS (SSE-KMS).</p>
+    #[doc(hidden)]
     pub bucket_key_enabled: bool,
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
+    /// <p>The algorithm that was used to create a checksum of the object.</p>
+    #[doc(hidden)]
+    pub checksum_algorithm: std::option::Option<crate::model::ChecksumAlgorithm>,
 }
 impl CreateMultipartUploadOutput {
     /// <p>If the bucket has a lifecycle rule configured with an action to abort incomplete multipart uploads and the prefix in the lifecycle rule matches the object name in the request, the response includes this header. The header indicates when the initiated multipart upload becomes eligible for an abort operation. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config"> Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy</a>.</p>
@@ -8138,7 +8903,7 @@ impl CreateMultipartUploadOutput {
     }
     /// <p>The name of the bucket to which the multipart upload was initiated. Does not return the access point ARN or access point alias if used.</p>
     /// <p>When using this action with an access point, you must direct requests to the access point hostname. The access point hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.s3-accesspoint.<i>Region</i>.amazonaws.com. When using this action with an access point through the Amazon Web Services SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html">Using access points</a> in the <i>Amazon S3 User Guide</i>.</p>
-    /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com. When using this action using S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+    /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <code> <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com</code>. When using this action with S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
     pub fn bucket(&self) -> std::option::Option<&str> {
         self.bucket.as_deref()
     }
@@ -8180,6 +8945,10 @@ impl CreateMultipartUploadOutput {
     pub fn request_charged(&self) -> std::option::Option<&crate::model::RequestCharged> {
         self.request_charged.as_ref()
     }
+    /// <p>The algorithm that was used to create a checksum of the object.</p>
+    pub fn checksum_algorithm(&self) -> std::option::Option<&crate::model::ChecksumAlgorithm> {
+        self.checksum_algorithm.as_ref()
+    }
 }
 impl std::fmt::Debug for CreateMultipartUploadOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -8199,14 +8968,14 @@ impl std::fmt::Debug for CreateMultipartUploadOutput {
         );
         formatter.field("bucket_key_enabled", &self.bucket_key_enabled);
         formatter.field("request_charged", &self.request_charged);
+        formatter.field("checksum_algorithm", &self.checksum_algorithm);
         formatter.finish()
     }
 }
-/// See [`CreateMultipartUploadOutput`](crate::output::CreateMultipartUploadOutput)
+/// See [`CreateMultipartUploadOutput`](crate::output::CreateMultipartUploadOutput).
 pub mod create_multipart_upload_output {
 
-    /// A builder for [`CreateMultipartUploadOutput`](crate::output::CreateMultipartUploadOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateMultipartUploadOutput`](crate::output::CreateMultipartUploadOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) abort_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -8221,6 +8990,7 @@ pub mod create_multipart_upload_output {
         pub(crate) ssekms_encryption_context: std::option::Option<std::string::String>,
         pub(crate) bucket_key_enabled: std::option::Option<bool>,
         pub(crate) request_charged: std::option::Option<crate::model::RequestCharged>,
+        pub(crate) checksum_algorithm: std::option::Option<crate::model::ChecksumAlgorithm>,
     }
     impl Builder {
         /// <p>If the bucket has a lifecycle rule configured with an action to abort incomplete multipart uploads and the prefix in the lifecycle rule matches the object name in the request, the response includes this header. The header indicates when the initiated multipart upload becomes eligible for an abort operation. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config"> Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy</a>.</p>
@@ -8253,14 +9023,14 @@ pub mod create_multipart_upload_output {
         }
         /// <p>The name of the bucket to which the multipart upload was initiated. Does not return the access point ARN or access point alias if used.</p>
         /// <p>When using this action with an access point, you must direct requests to the access point hostname. The access point hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.s3-accesspoint.<i>Region</i>.amazonaws.com. When using this action with an access point through the Amazon Web Services SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html">Using access points</a> in the <i>Amazon S3 User Guide</i>.</p>
-        /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com. When using this action using S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+        /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <code> <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com</code>. When using this action with S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
         pub fn bucket(mut self, input: impl Into<std::string::String>) -> Self {
             self.bucket = Some(input.into());
             self
         }
         /// <p>The name of the bucket to which the multipart upload was initiated. Does not return the access point ARN or access point alias if used.</p>
         /// <p>When using this action with an access point, you must direct requests to the access point hostname. The access point hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.s3-accesspoint.<i>Region</i>.amazonaws.com. When using this action with an access point through the Amazon Web Services SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html">Using access points</a> in the <i>Amazon S3 User Guide</i>.</p>
-        /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com. When using this action using S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+        /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <code> <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com</code>. When using this action with S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
         pub fn set_bucket(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.bucket = input;
             self
@@ -8373,7 +9143,20 @@ pub mod create_multipart_upload_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateMultipartUploadOutput`](crate::output::CreateMultipartUploadOutput)
+        /// <p>The algorithm that was used to create a checksum of the object.</p>
+        pub fn checksum_algorithm(mut self, input: crate::model::ChecksumAlgorithm) -> Self {
+            self.checksum_algorithm = Some(input);
+            self
+        }
+        /// <p>The algorithm that was used to create a checksum of the object.</p>
+        pub fn set_checksum_algorithm(
+            mut self,
+            input: std::option::Option<crate::model::ChecksumAlgorithm>,
+        ) -> Self {
+            self.checksum_algorithm = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CreateMultipartUploadOutput`](crate::output::CreateMultipartUploadOutput).
         pub fn build(self) -> crate::output::CreateMultipartUploadOutput {
             crate::output::CreateMultipartUploadOutput {
                 abort_date: self.abort_date,
@@ -8388,12 +9171,13 @@ pub mod create_multipart_upload_output {
                 ssekms_encryption_context: self.ssekms_encryption_context,
                 bucket_key_enabled: self.bucket_key_enabled.unwrap_or_default(),
                 request_charged: self.request_charged,
+                checksum_algorithm: self.checksum_algorithm,
             }
         }
     }
 }
 impl CreateMultipartUploadOutput {
-    /// Creates a new builder-style object to manufacture [`CreateMultipartUploadOutput`](crate::output::CreateMultipartUploadOutput)
+    /// Creates a new builder-style object to manufacture [`CreateMultipartUploadOutput`](crate::output::CreateMultipartUploadOutput).
     pub fn builder() -> crate::output::create_multipart_upload_output::Builder {
         crate::output::create_multipart_upload_output::Builder::default()
     }
@@ -8403,11 +9187,12 @@ impl CreateMultipartUploadOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBucketOutput {
-    /// <p>Specifies the Region where the bucket will be created. If you are creating a bucket on the US East (N. Virginia) Region (us-east-1), you do not need to specify the location.</p>
+    /// <p>A forward slash followed by the name of the bucket.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
 }
 impl CreateBucketOutput {
-    /// <p>Specifies the Region where the bucket will be created. If you are creating a bucket on the US East (N. Virginia) Region (us-east-1), you do not need to specify the location.</p>
+    /// <p>A forward slash followed by the name of the bucket.</p>
     pub fn location(&self) -> std::option::Option<&str> {
         self.location.as_deref()
     }
@@ -8419,27 +9204,26 @@ impl std::fmt::Debug for CreateBucketOutput {
         formatter.finish()
     }
 }
-/// See [`CreateBucketOutput`](crate::output::CreateBucketOutput)
+/// See [`CreateBucketOutput`](crate::output::CreateBucketOutput).
 pub mod create_bucket_output {
 
-    /// A builder for [`CreateBucketOutput`](crate::output::CreateBucketOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateBucketOutput`](crate::output::CreateBucketOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>Specifies the Region where the bucket will be created. If you are creating a bucket on the US East (N. Virginia) Region (us-east-1), you do not need to specify the location.</p>
+        /// <p>A forward slash followed by the name of the bucket.</p>
         pub fn location(mut self, input: impl Into<std::string::String>) -> Self {
             self.location = Some(input.into());
             self
         }
-        /// <p>Specifies the Region where the bucket will be created. If you are creating a bucket on the US East (N. Virginia) Region (us-east-1), you do not need to specify the location.</p>
+        /// <p>A forward slash followed by the name of the bucket.</p>
         pub fn set_location(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.location = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBucketOutput`](crate::output::CreateBucketOutput)
+        /// Consumes the builder and constructs a [`CreateBucketOutput`](crate::output::CreateBucketOutput).
         pub fn build(self) -> crate::output::CreateBucketOutput {
             crate::output::CreateBucketOutput {
                 location: self.location,
@@ -8448,7 +9232,7 @@ pub mod create_bucket_output {
     }
 }
 impl CreateBucketOutput {
-    /// Creates a new builder-style object to manufacture [`CreateBucketOutput`](crate::output::CreateBucketOutput)
+    /// Creates a new builder-style object to manufacture [`CreateBucketOutput`](crate::output::CreateBucketOutput).
     pub fn builder() -> crate::output::create_bucket_output::Builder {
         crate::output::create_bucket_output::Builder::default()
     }
@@ -8459,26 +9243,37 @@ impl CreateBucketOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CopyObjectOutput {
     /// <p>Container for all response elements.</p>
+    #[doc(hidden)]
     pub copy_object_result: std::option::Option<crate::model::CopyObjectResult>,
     /// <p>If the object expiration is configured, the response includes this header.</p>
+    #[doc(hidden)]
     pub expiration: std::option::Option<std::string::String>,
     /// <p>Version of the copied object in the destination bucket.</p>
+    #[doc(hidden)]
     pub copy_source_version_id: std::option::Option<std::string::String>,
     /// <p>Version ID of the newly created copy.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>The server-side encryption algorithm used when storing this object in Amazon S3 (for example, AES256, aws:kms).</p>
+    #[doc(hidden)]
     pub server_side_encryption: std::option::Option<crate::model::ServerSideEncryption>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header confirming the encryption algorithm used.</p>
+    #[doc(hidden)]
     pub sse_customer_algorithm: std::option::Option<std::string::String>,
     /// <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header to provide round-trip message integrity verification of the customer-provided encryption key.</p>
+    #[doc(hidden)]
     pub sse_customer_key_md5: std::option::Option<std::string::String>,
     /// <p>If present, specifies the ID of the Amazon Web Services Key Management Service (Amazon Web Services KMS) symmetric customer managed key that was used for the object.</p>
+    #[doc(hidden)]
     pub ssekms_key_id: std::option::Option<std::string::String>,
     /// <p>If present, specifies the Amazon Web Services KMS Encryption Context to use for object encryption. The value of this header is a base64-encoded UTF-8 string holding JSON with the encryption context key-value pairs.</p>
+    #[doc(hidden)]
     pub ssekms_encryption_context: std::option::Option<std::string::String>,
     /// <p>Indicates whether the copied object uses an S3 Bucket Key for server-side encryption with Amazon Web Services KMS (SSE-KMS).</p>
+    #[doc(hidden)]
     pub bucket_key_enabled: bool,
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
 }
 impl CopyObjectOutput {
@@ -8549,11 +9344,10 @@ impl std::fmt::Debug for CopyObjectOutput {
         formatter.finish()
     }
 }
-/// See [`CopyObjectOutput`](crate::output::CopyObjectOutput)
+/// See [`CopyObjectOutput`](crate::output::CopyObjectOutput).
 pub mod copy_object_output {
 
-    /// A builder for [`CopyObjectOutput`](crate::output::CopyObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`CopyObjectOutput`](crate::output::CopyObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) copy_object_result: std::option::Option<crate::model::CopyObjectResult>,
@@ -8703,7 +9497,7 @@ pub mod copy_object_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`CopyObjectOutput`](crate::output::CopyObjectOutput)
+        /// Consumes the builder and constructs a [`CopyObjectOutput`](crate::output::CopyObjectOutput).
         pub fn build(self) -> crate::output::CopyObjectOutput {
             crate::output::CopyObjectOutput {
                 copy_object_result: self.copy_object_result,
@@ -8722,7 +9516,7 @@ pub mod copy_object_output {
     }
 }
 impl CopyObjectOutput {
-    /// Creates a new builder-style object to manufacture [`CopyObjectOutput`](crate::output::CopyObjectOutput)
+    /// Creates a new builder-style object to manufacture [`CopyObjectOutput`](crate::output::CopyObjectOutput).
     pub fn builder() -> crate::output::copy_object_output::Builder {
         crate::output::copy_object_output::Builder::default()
     }
@@ -8733,26 +9527,48 @@ impl CopyObjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CompleteMultipartUploadOutput {
     /// <p>The URI that identifies the newly created object.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<std::string::String>,
     /// <p>The name of the bucket that contains the newly created object. Does not return the access point ARN or access point alias if used.</p>
     /// <p>When using this action with an access point, you must direct requests to the access point hostname. The access point hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.s3-accesspoint.<i>Region</i>.amazonaws.com. When using this action with an access point through the Amazon Web Services SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html">Using access points</a> in the <i>Amazon S3 User Guide</i>.</p>
-    /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com. When using this action using S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+    /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <code> <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com</code>. When using this action with S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The object key of the newly created object.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
-    /// <p>If the object expiration is configured, this will contain the expiration date (expiry-date) and rule ID (rule-id). The value of rule-id is URL encoded.</p>
+    /// <p>If the object expiration is configured, this will contain the expiration date (<code>expiry-date</code>) and rule ID (<code>rule-id</code>). The value of <code>rule-id</code> is URL-encoded.</p>
+    #[doc(hidden)]
     pub expiration: std::option::Option<std::string::String>,
-    /// <p>Entity tag that identifies the newly created object's data. Objects with different object data will have different entity tags. The entity tag is an opaque string. The entity tag may or may not be an MD5 digest of the object data. If the entity tag is not an MD5 digest of the object data, it will contain one or more nonhexadecimal characters and/or will consist of less than 32 or more than 32 hexadecimal digits.</p>
+    /// <p>Entity tag that identifies the newly created object's data. Objects with different object data will have different entity tags. The entity tag is an opaque string. The entity tag may or may not be an MD5 digest of the object data. If the entity tag is not an MD5 digest of the object data, it will contain one or more nonhexadecimal characters and/or will consist of less than 32 or more than 32 hexadecimal digits. For more information about how the entity tag is calculated, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_crc32_c: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha1: std::option::Option<std::string::String>,
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    #[doc(hidden)]
+    pub checksum_sha256: std::option::Option<std::string::String>,
     /// <p>If you specified server-side encryption either with an Amazon S3-managed encryption key or an Amazon Web Services KMS key in your initiate multipart upload request, the response includes this header. It confirms the encryption algorithm that Amazon S3 used to encrypt the object.</p>
+    #[doc(hidden)]
     pub server_side_encryption: std::option::Option<crate::model::ServerSideEncryption>,
     /// <p>Version ID of the newly created object, in case the bucket has versioning turned on.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>If present, specifies the ID of the Amazon Web Services Key Management Service (Amazon Web Services KMS) symmetric customer managed key that was used for the object.</p>
+    #[doc(hidden)]
     pub ssekms_key_id: std::option::Option<std::string::String>,
     /// <p>Indicates whether the multipart upload uses an S3 Bucket Key for server-side encryption with Amazon Web Services KMS (SSE-KMS).</p>
+    #[doc(hidden)]
     pub bucket_key_enabled: bool,
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
 }
 impl CompleteMultipartUploadOutput {
@@ -8762,7 +9578,7 @@ impl CompleteMultipartUploadOutput {
     }
     /// <p>The name of the bucket that contains the newly created object. Does not return the access point ARN or access point alias if used.</p>
     /// <p>When using this action with an access point, you must direct requests to the access point hostname. The access point hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.s3-accesspoint.<i>Region</i>.amazonaws.com. When using this action with an access point through the Amazon Web Services SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html">Using access points</a> in the <i>Amazon S3 User Guide</i>.</p>
-    /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com. When using this action using S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+    /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <code> <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com</code>. When using this action with S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
     pub fn bucket(&self) -> std::option::Option<&str> {
         self.bucket.as_deref()
     }
@@ -8770,13 +9586,29 @@ impl CompleteMultipartUploadOutput {
     pub fn key(&self) -> std::option::Option<&str> {
         self.key.as_deref()
     }
-    /// <p>If the object expiration is configured, this will contain the expiration date (expiry-date) and rule ID (rule-id). The value of rule-id is URL encoded.</p>
+    /// <p>If the object expiration is configured, this will contain the expiration date (<code>expiry-date</code>) and rule ID (<code>rule-id</code>). The value of <code>rule-id</code> is URL-encoded.</p>
     pub fn expiration(&self) -> std::option::Option<&str> {
         self.expiration.as_deref()
     }
-    /// <p>Entity tag that identifies the newly created object's data. Objects with different object data will have different entity tags. The entity tag is an opaque string. The entity tag may or may not be an MD5 digest of the object data. If the entity tag is not an MD5 digest of the object data, it will contain one or more nonhexadecimal characters and/or will consist of less than 32 or more than 32 hexadecimal digits.</p>
+    /// <p>Entity tag that identifies the newly created object's data. Objects with different object data will have different entity tags. The entity tag is an opaque string. The entity tag may or may not be an MD5 digest of the object data. If the entity tag is not an MD5 digest of the object data, it will contain one or more nonhexadecimal characters and/or will consist of less than 32 or more than 32 hexadecimal digits. For more information about how the entity tag is calculated, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
     pub fn e_tag(&self) -> std::option::Option<&str> {
         self.e_tag.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32(&self) -> std::option::Option<&str> {
+        self.checksum_crc32.as_deref()
+    }
+    /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_crc32_c(&self) -> std::option::Option<&str> {
+        self.checksum_crc32_c.as_deref()
+    }
+    /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha1(&self) -> std::option::Option<&str> {
+        self.checksum_sha1.as_deref()
+    }
+    /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+    pub fn checksum_sha256(&self) -> std::option::Option<&str> {
+        self.checksum_sha256.as_deref()
     }
     /// <p>If you specified server-side encryption either with an Amazon S3-managed encryption key or an Amazon Web Services KMS key in your initiate multipart upload request, the response includes this header. It confirms the encryption algorithm that Amazon S3 used to encrypt the object.</p>
     pub fn server_side_encryption(
@@ -8809,6 +9641,10 @@ impl std::fmt::Debug for CompleteMultipartUploadOutput {
         formatter.field("key", &self.key);
         formatter.field("expiration", &self.expiration);
         formatter.field("e_tag", &self.e_tag);
+        formatter.field("checksum_crc32", &self.checksum_crc32);
+        formatter.field("checksum_crc32_c", &self.checksum_crc32_c);
+        formatter.field("checksum_sha1", &self.checksum_sha1);
+        formatter.field("checksum_sha256", &self.checksum_sha256);
         formatter.field("server_side_encryption", &self.server_side_encryption);
         formatter.field("version_id", &self.version_id);
         formatter.field("ssekms_key_id", &"*** Sensitive Data Redacted ***");
@@ -8817,11 +9653,10 @@ impl std::fmt::Debug for CompleteMultipartUploadOutput {
         formatter.finish()
     }
 }
-/// See [`CompleteMultipartUploadOutput`](crate::output::CompleteMultipartUploadOutput)
+/// See [`CompleteMultipartUploadOutput`](crate::output::CompleteMultipartUploadOutput).
 pub mod complete_multipart_upload_output {
 
-    /// A builder for [`CompleteMultipartUploadOutput`](crate::output::CompleteMultipartUploadOutput)
-    #[non_exhaustive]
+    /// A builder for [`CompleteMultipartUploadOutput`](crate::output::CompleteMultipartUploadOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location: std::option::Option<std::string::String>,
@@ -8829,6 +9664,10 @@ pub mod complete_multipart_upload_output {
         pub(crate) key: std::option::Option<std::string::String>,
         pub(crate) expiration: std::option::Option<std::string::String>,
         pub(crate) e_tag: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32: std::option::Option<std::string::String>,
+        pub(crate) checksum_crc32_c: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha1: std::option::Option<std::string::String>,
+        pub(crate) checksum_sha256: std::option::Option<std::string::String>,
         pub(crate) server_side_encryption: std::option::Option<crate::model::ServerSideEncryption>,
         pub(crate) version_id: std::option::Option<std::string::String>,
         pub(crate) ssekms_key_id: std::option::Option<std::string::String>,
@@ -8848,14 +9687,14 @@ pub mod complete_multipart_upload_output {
         }
         /// <p>The name of the bucket that contains the newly created object. Does not return the access point ARN or access point alias if used.</p>
         /// <p>When using this action with an access point, you must direct requests to the access point hostname. The access point hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.s3-accesspoint.<i>Region</i>.amazonaws.com. When using this action with an access point through the Amazon Web Services SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html">Using access points</a> in the <i>Amazon S3 User Guide</i>.</p>
-        /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com. When using this action using S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+        /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <code> <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com</code>. When using this action with S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
         pub fn bucket(mut self, input: impl Into<std::string::String>) -> Self {
             self.bucket = Some(input.into());
             self
         }
         /// <p>The name of the bucket that contains the newly created object. Does not return the access point ARN or access point alias if used.</p>
         /// <p>When using this action with an access point, you must direct requests to the access point hostname. The access point hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.s3-accesspoint.<i>Region</i>.amazonaws.com. When using this action with an access point through the Amazon Web Services SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html">Using access points</a> in the <i>Amazon S3 User Guide</i>.</p>
-        /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com. When using this action using S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
+        /// <p>When using this action with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form <code> <i>AccessPointName</i>-<i>AccountId</i>.<i>outpostID</i>.s3-outposts.<i>Region</i>.amazonaws.com</code>. When using this action with S3 on Outposts through the Amazon Web Services SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p>
         pub fn set_bucket(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.bucket = input;
             self
@@ -8870,24 +9709,76 @@ pub mod complete_multipart_upload_output {
             self.key = input;
             self
         }
-        /// <p>If the object expiration is configured, this will contain the expiration date (expiry-date) and rule ID (rule-id). The value of rule-id is URL encoded.</p>
+        /// <p>If the object expiration is configured, this will contain the expiration date (<code>expiry-date</code>) and rule ID (<code>rule-id</code>). The value of <code>rule-id</code> is URL-encoded.</p>
         pub fn expiration(mut self, input: impl Into<std::string::String>) -> Self {
             self.expiration = Some(input.into());
             self
         }
-        /// <p>If the object expiration is configured, this will contain the expiration date (expiry-date) and rule ID (rule-id). The value of rule-id is URL encoded.</p>
+        /// <p>If the object expiration is configured, this will contain the expiration date (<code>expiry-date</code>) and rule ID (<code>rule-id</code>). The value of <code>rule-id</code> is URL-encoded.</p>
         pub fn set_expiration(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.expiration = input;
             self
         }
-        /// <p>Entity tag that identifies the newly created object's data. Objects with different object data will have different entity tags. The entity tag is an opaque string. The entity tag may or may not be an MD5 digest of the object data. If the entity tag is not an MD5 digest of the object data, it will contain one or more nonhexadecimal characters and/or will consist of less than 32 or more than 32 hexadecimal digits.</p>
+        /// <p>Entity tag that identifies the newly created object's data. Objects with different object data will have different entity tags. The entity tag is an opaque string. The entity tag may or may not be an MD5 digest of the object data. If the entity tag is not an MD5 digest of the object data, it will contain one or more nonhexadecimal characters and/or will consist of less than 32 or more than 32 hexadecimal digits. For more information about how the entity tag is calculated, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
         pub fn e_tag(mut self, input: impl Into<std::string::String>) -> Self {
             self.e_tag = Some(input.into());
             self
         }
-        /// <p>Entity tag that identifies the newly created object's data. Objects with different object data will have different entity tags. The entity tag is an opaque string. The entity tag may or may not be an MD5 digest of the object data. If the entity tag is not an MD5 digest of the object data, it will contain one or more nonhexadecimal characters and/or will consist of less than 32 or more than 32 hexadecimal digits.</p>
+        /// <p>Entity tag that identifies the newly created object's data. Objects with different object data will have different entity tags. The entity tag is an opaque string. The entity tag may or may not be an MD5 digest of the object data. If the entity tag is not an MD5 digest of the object data, it will contain one or more nonhexadecimal characters and/or will consist of less than 32 or more than 32 hexadecimal digits. For more information about how the entity tag is calculated, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html">Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
         pub fn set_e_tag(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.e_tag = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32 checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32 = input;
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_crc32_c(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_crc32_c = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 32-bit CRC32C checksum of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_crc32_c(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_crc32_c = input;
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha1(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha1 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 160-bit SHA-1 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha1(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha1 = input;
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn checksum_sha256(mut self, input: impl Into<std::string::String>) -> Self {
+            self.checksum_sha256 = Some(input.into());
+            self
+        }
+        /// <p>The base64-encoded, 256-bit SHA-256 digest of the object. This will only be present if it was uploaded with the object. With multipart uploads, this may not be a checksum value of the object. For more information about how checksums are calculated with multipart uploads, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html#large-object-checksums"> Checking object integrity</a> in the <i>Amazon S3 User Guide</i>.</p>
+        pub fn set_checksum_sha256(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.checksum_sha256 = input;
             self
         }
         /// <p>If you specified server-side encryption either with an Amazon S3-managed encryption key or an Amazon Web Services KMS key in your initiate multipart upload request, the response includes this header. It confirms the encryption algorithm that Amazon S3 used to encrypt the object.</p>
@@ -8949,7 +9840,7 @@ pub mod complete_multipart_upload_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompleteMultipartUploadOutput`](crate::output::CompleteMultipartUploadOutput)
+        /// Consumes the builder and constructs a [`CompleteMultipartUploadOutput`](crate::output::CompleteMultipartUploadOutput).
         pub fn build(self) -> crate::output::CompleteMultipartUploadOutput {
             crate::output::CompleteMultipartUploadOutput {
                 location: self.location,
@@ -8957,6 +9848,10 @@ pub mod complete_multipart_upload_output {
                 key: self.key,
                 expiration: self.expiration,
                 e_tag: self.e_tag,
+                checksum_crc32: self.checksum_crc32,
+                checksum_crc32_c: self.checksum_crc32_c,
+                checksum_sha1: self.checksum_sha1,
+                checksum_sha256: self.checksum_sha256,
                 server_side_encryption: self.server_side_encryption,
                 version_id: self.version_id,
                 ssekms_key_id: self.ssekms_key_id,
@@ -8967,7 +9862,7 @@ pub mod complete_multipart_upload_output {
     }
 }
 impl CompleteMultipartUploadOutput {
-    /// Creates a new builder-style object to manufacture [`CompleteMultipartUploadOutput`](crate::output::CompleteMultipartUploadOutput)
+    /// Creates a new builder-style object to manufacture [`CompleteMultipartUploadOutput`](crate::output::CompleteMultipartUploadOutput).
     pub fn builder() -> crate::output::complete_multipart_upload_output::Builder {
         crate::output::complete_multipart_upload_output::Builder::default()
     }
@@ -8978,6 +9873,7 @@ impl CompleteMultipartUploadOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AbortMultipartUploadOutput {
     /// <p>If present, indicates that the requester was successfully charged for the request.</p>
+    #[doc(hidden)]
     pub request_charged: std::option::Option<crate::model::RequestCharged>,
 }
 impl AbortMultipartUploadOutput {
@@ -8993,11 +9889,10 @@ impl std::fmt::Debug for AbortMultipartUploadOutput {
         formatter.finish()
     }
 }
-/// See [`AbortMultipartUploadOutput`](crate::output::AbortMultipartUploadOutput)
+/// See [`AbortMultipartUploadOutput`](crate::output::AbortMultipartUploadOutput).
 pub mod abort_multipart_upload_output {
 
-    /// A builder for [`AbortMultipartUploadOutput`](crate::output::AbortMultipartUploadOutput)
-    #[non_exhaustive]
+    /// A builder for [`AbortMultipartUploadOutput`](crate::output::AbortMultipartUploadOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_charged: std::option::Option<crate::model::RequestCharged>,
@@ -9016,7 +9911,7 @@ pub mod abort_multipart_upload_output {
             self.request_charged = input;
             self
         }
-        /// Consumes the builder and constructs a [`AbortMultipartUploadOutput`](crate::output::AbortMultipartUploadOutput)
+        /// Consumes the builder and constructs a [`AbortMultipartUploadOutput`](crate::output::AbortMultipartUploadOutput).
         pub fn build(self) -> crate::output::AbortMultipartUploadOutput {
             crate::output::AbortMultipartUploadOutput {
                 request_charged: self.request_charged,
@@ -9025,7 +9920,7 @@ pub mod abort_multipart_upload_output {
     }
 }
 impl AbortMultipartUploadOutput {
-    /// Creates a new builder-style object to manufacture [`AbortMultipartUploadOutput`](crate::output::AbortMultipartUploadOutput)
+    /// Creates a new builder-style object to manufacture [`AbortMultipartUploadOutput`](crate::output::AbortMultipartUploadOutput).
     pub fn builder() -> crate::output::abort_multipart_upload_output::Builder {
         crate::output::abort_multipart_upload_output::Builder::default()
     }

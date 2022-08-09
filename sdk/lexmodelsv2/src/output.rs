@@ -4,28 +4,40 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSlotTypeOutput {
     /// <p>The unique identifier of the updated slot type.</p>
+    #[doc(hidden)]
     pub slot_type_id: std::option::Option<std::string::String>,
     /// <p>The updated name of the slot type.</p>
+    #[doc(hidden)]
     pub slot_type_name: std::option::Option<std::string::String>,
     /// <p>The updated description of the slot type.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The updated values that the slot type provides.</p>
+    #[doc(hidden)]
     pub slot_type_values: std::option::Option<std::vec::Vec<crate::model::SlotTypeValue>>,
     /// <p>The updated strategy that Amazon Lex uses to determine which value to select from the slot type.</p>
+    #[doc(hidden)]
     pub value_selection_setting: std::option::Option<crate::model::SlotValueSelectionSetting>,
     /// <p>The updated signature of the built-in slot type that is the parent of this slot type.</p>
+    #[doc(hidden)]
     pub parent_slot_type_signature: std::option::Option<std::string::String>,
     /// <p>The identifier of the bot that contains the slot type.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that contains the slot type. This is always <code>DRAFT</code>.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The language and locale of the updated slot type.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The timestamp of the date and time that the slot type was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp of the date and time that the slot type was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Provides information about the external source of the slot type's definition.</p>
+    #[doc(hidden)]
     pub external_source_setting: std::option::Option<crate::model::ExternalSourceSetting>,
 }
 impl UpdateSlotTypeOutput {
@@ -103,11 +115,10 @@ impl std::fmt::Debug for UpdateSlotTypeOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSlotTypeOutput`](crate::output::UpdateSlotTypeOutput)
+/// See [`UpdateSlotTypeOutput`](crate::output::UpdateSlotTypeOutput).
 pub mod update_slot_type_output {
 
-    /// A builder for [`UpdateSlotTypeOutput`](crate::output::UpdateSlotTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSlotTypeOutput`](crate::output::UpdateSlotTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) slot_type_id: std::option::Option<std::string::String>,
@@ -280,7 +291,7 @@ pub mod update_slot_type_output {
             self.external_source_setting = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSlotTypeOutput`](crate::output::UpdateSlotTypeOutput)
+        /// Consumes the builder and constructs a [`UpdateSlotTypeOutput`](crate::output::UpdateSlotTypeOutput).
         pub fn build(self) -> crate::output::UpdateSlotTypeOutput {
             crate::output::UpdateSlotTypeOutput {
                 slot_type_id: self.slot_type_id,
@@ -300,7 +311,7 @@ pub mod update_slot_type_output {
     }
 }
 impl UpdateSlotTypeOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSlotTypeOutput`](crate::output::UpdateSlotTypeOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSlotTypeOutput`](crate::output::UpdateSlotTypeOutput).
     pub fn builder() -> crate::output::update_slot_type_output::Builder {
         crate::output::update_slot_type_output::Builder::default()
     }
@@ -311,30 +322,43 @@ impl UpdateSlotTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSlotOutput {
     /// <p>The unique identifier of the slot that was updated.</p>
+    #[doc(hidden)]
     pub slot_id: std::option::Option<std::string::String>,
     /// <p>The updated name of the slot.</p>
+    #[doc(hidden)]
     pub slot_name: std::option::Option<std::string::String>,
     /// <p>The updated description of the bot.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The updated identifier of the slot type that provides values for the slot.</p>
+    #[doc(hidden)]
     pub slot_type_id: std::option::Option<std::string::String>,
     /// <p>The updated prompts that Amazon Lex sends to the user to elicit a response that provides a value for the slot.</p>
+    #[doc(hidden)]
     pub value_elicitation_setting: std::option::Option<crate::model::SlotValueElicitationSetting>,
     /// <p>The updated setting that determines whether the slot value is obfuscated in the Amazon CloudWatch logs.</p>
+    #[doc(hidden)]
     pub obfuscation_setting: std::option::Option<crate::model::ObfuscationSetting>,
     /// <p>The identifier of the bot that contains the slot.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the slot version that contains the slot. Will always be <code>DRAFT</code>.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The locale that contains the slot.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The intent that contains the slot.</p>
+    #[doc(hidden)]
     pub intent_id: std::option::Option<std::string::String>,
     /// <p>The timestamp of the date and time that the slot was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of the date and time that the slot was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates whether the slot accepts multiple values in one response.</p>
+    #[doc(hidden)]
     pub multiple_values_setting: std::option::Option<crate::model::MultipleValuesSetting>,
 }
 impl UpdateSlotOutput {
@@ -414,11 +438,10 @@ impl std::fmt::Debug for UpdateSlotOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSlotOutput`](crate::output::UpdateSlotOutput)
+/// See [`UpdateSlotOutput`](crate::output::UpdateSlotOutput).
 pub mod update_slot_output {
 
-    /// A builder for [`UpdateSlotOutput`](crate::output::UpdateSlotOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSlotOutput`](crate::output::UpdateSlotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) slot_id: std::option::Option<std::string::String>,
@@ -589,7 +612,7 @@ pub mod update_slot_output {
             self.multiple_values_setting = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSlotOutput`](crate::output::UpdateSlotOutput)
+        /// Consumes the builder and constructs a [`UpdateSlotOutput`](crate::output::UpdateSlotOutput).
         pub fn build(self) -> crate::output::UpdateSlotOutput {
             crate::output::UpdateSlotOutput {
                 slot_id: self.slot_id,
@@ -610,7 +633,7 @@ pub mod update_slot_output {
     }
 }
 impl UpdateSlotOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSlotOutput`](crate::output::UpdateSlotOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSlotOutput`](crate::output::UpdateSlotOutput).
     pub fn builder() -> crate::output::update_slot_output::Builder {
         crate::output::update_slot_output::Builder::default()
     }
@@ -621,8 +644,10 @@ impl UpdateSlotOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateResourcePolicyOutput {
     /// <p>The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The current revision of the resource policy. Use the revision ID to make sure that you are updating the most current version of a resource policy when you add a policy statement to a resource, delete a resource, or update a resource.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl UpdateResourcePolicyOutput {
@@ -643,11 +668,10 @@ impl std::fmt::Debug for UpdateResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateResourcePolicyOutput`](crate::output::UpdateResourcePolicyOutput)
+/// See [`UpdateResourcePolicyOutput`](crate::output::UpdateResourcePolicyOutput).
 pub mod update_resource_policy_output {
 
-    /// A builder for [`UpdateResourcePolicyOutput`](crate::output::UpdateResourcePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateResourcePolicyOutput`](crate::output::UpdateResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -674,7 +698,7 @@ pub mod update_resource_policy_output {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateResourcePolicyOutput`](crate::output::UpdateResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`UpdateResourcePolicyOutput`](crate::output::UpdateResourcePolicyOutput).
         pub fn build(self) -> crate::output::UpdateResourcePolicyOutput {
             crate::output::UpdateResourcePolicyOutput {
                 resource_arn: self.resource_arn,
@@ -684,7 +708,7 @@ pub mod update_resource_policy_output {
     }
 }
 impl UpdateResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateResourcePolicyOutput`](crate::output::UpdateResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateResourcePolicyOutput`](crate::output::UpdateResourcePolicyOutput).
     pub fn builder() -> crate::output::update_resource_policy_output::Builder {
         crate::output::update_resource_policy_output::Builder::default()
     }
@@ -695,40 +719,58 @@ impl UpdateResourcePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateIntentOutput {
     /// <p>The identifier of the intent that was updated.</p>
+    #[doc(hidden)]
     pub intent_id: std::option::Option<std::string::String>,
     /// <p>The updated name of the intent.</p>
+    #[doc(hidden)]
     pub intent_name: std::option::Option<std::string::String>,
     /// <p>The updated description of the intent.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The updated built-in intent that is the parent of this intent.</p>
+    #[doc(hidden)]
     pub parent_intent_signature: std::option::Option<std::string::String>,
     /// <p>The updated list of sample utterances for the intent.</p>
+    #[doc(hidden)]
     pub sample_utterances: std::option::Option<std::vec::Vec<crate::model::SampleUtterance>>,
     /// <p>The updated Lambda function called during each turn of the conversation with the user.</p>
+    #[doc(hidden)]
     pub dialog_code_hook: std::option::Option<crate::model::DialogCodeHookSettings>,
     /// <p>The updated Lambda function called when the intent is ready for fulfillment.</p>
+    #[doc(hidden)]
     pub fulfillment_code_hook: std::option::Option<crate::model::FulfillmentCodeHookSettings>,
     /// <p>The updated list of slots and their priorities that are elicited from the user for the intent.</p>
+    #[doc(hidden)]
     pub slot_priorities: std::option::Option<std::vec::Vec<crate::model::SlotPriority>>,
     /// <p>The updated prompts that Amazon Lex sends to the user to confirm the completion of an intent.</p>
+    #[doc(hidden)]
     pub intent_confirmation_setting: std::option::Option<crate::model::IntentConfirmationSetting>,
     /// <p>The updated response that Amazon Lex sends the user when the intent is closed.</p>
+    #[doc(hidden)]
     pub intent_closing_setting: std::option::Option<crate::model::IntentClosingSetting>,
     /// <p>The updated list of contexts that must be active for the intent to be considered by Amazon Lex.</p>
+    #[doc(hidden)]
     pub input_contexts: std::option::Option<std::vec::Vec<crate::model::InputContext>>,
     /// <p>The updated list of contexts that Amazon Lex activates when the intent is fulfilled.</p>
+    #[doc(hidden)]
     pub output_contexts: std::option::Option<std::vec::Vec<crate::model::OutputContext>>,
     /// <p>The updated configuration for connecting to an Amazon Kendra index with the <code>AMAZON.KendraSearchIntent</code> intent.</p>
+    #[doc(hidden)]
     pub kendra_configuration: std::option::Option<crate::model::KendraConfiguration>,
     /// <p>The identifier of the bot that contains the intent.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that contains the intent. Will always be <code>DRAFT</code>.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The updated language and locale of the intent.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>A timestamp of when the intent was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp of the last time that the intent was modified.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl UpdateIntentOutput {
@@ -838,11 +880,10 @@ impl std::fmt::Debug for UpdateIntentOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateIntentOutput`](crate::output::UpdateIntentOutput)
+/// See [`UpdateIntentOutput`](crate::output::UpdateIntentOutput).
 pub mod update_intent_output {
 
-    /// A builder for [`UpdateIntentOutput`](crate::output::UpdateIntentOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateIntentOutput`](crate::output::UpdateIntentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) intent_id: std::option::Option<std::string::String>,
@@ -1114,7 +1155,7 @@ pub mod update_intent_output {
             self.last_updated_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateIntentOutput`](crate::output::UpdateIntentOutput)
+        /// Consumes the builder and constructs a [`UpdateIntentOutput`](crate::output::UpdateIntentOutput).
         pub fn build(self) -> crate::output::UpdateIntentOutput {
             crate::output::UpdateIntentOutput {
                 intent_id: self.intent_id,
@@ -1140,7 +1181,7 @@ pub mod update_intent_output {
     }
 }
 impl UpdateIntentOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateIntentOutput`](crate::output::UpdateIntentOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateIntentOutput`](crate::output::UpdateIntentOutput).
     pub fn builder() -> crate::output::update_intent_output::Builder {
         crate::output::update_intent_output::Builder::default()
     }
@@ -1151,16 +1192,22 @@ impl UpdateIntentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateExportOutput {
     /// <p>The unique identifier Amazon Lex assigned to the export.</p>
+    #[doc(hidden)]
     pub export_id: std::option::Option<std::string::String>,
     /// <p>A description of the type of resource that was exported, either a bot or a bot locale.</p>
+    #[doc(hidden)]
     pub resource_specification: std::option::Option<crate::model::ExportResourceSpecification>,
     /// <p>The file format used for the files that define the resource. The <code>TSV</code> format is required to export a custom vocabulary only; otherwise use <code>LexJson</code> format.</p>
+    #[doc(hidden)]
     pub file_format: std::option::Option<crate::model::ImportExportFileFormat>,
     /// <p>The status of the export. When the status is <code>Completed</code> the export archive is available for download.</p>
+    #[doc(hidden)]
     pub export_status: std::option::Option<crate::model::ExportStatus>,
     /// <p>The date and time that the export was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the export was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl UpdateExportOutput {
@@ -1203,11 +1250,10 @@ impl std::fmt::Debug for UpdateExportOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateExportOutput`](crate::output::UpdateExportOutput)
+/// See [`UpdateExportOutput`](crate::output::UpdateExportOutput).
 pub mod update_export_output {
 
-    /// A builder for [`UpdateExportOutput`](crate::output::UpdateExportOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateExportOutput`](crate::output::UpdateExportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_id: std::option::Option<std::string::String>,
@@ -1297,7 +1343,7 @@ pub mod update_export_output {
             self.last_updated_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateExportOutput`](crate::output::UpdateExportOutput)
+        /// Consumes the builder and constructs a [`UpdateExportOutput`](crate::output::UpdateExportOutput).
         pub fn build(self) -> crate::output::UpdateExportOutput {
             crate::output::UpdateExportOutput {
                 export_id: self.export_id,
@@ -1311,7 +1357,7 @@ pub mod update_export_output {
     }
 }
 impl UpdateExportOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateExportOutput`](crate::output::UpdateExportOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateExportOutput`](crate::output::UpdateExportOutput).
     pub fn builder() -> crate::output::update_export_output::Builder {
         crate::output::update_export_output::Builder::default()
     }
@@ -1322,23 +1368,32 @@ impl UpdateExportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBotRecommendationOutput {
     /// <p>The unique identifier of the bot containing the bot recommendation that has been updated.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot containing the bot recommendation that has been updated.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The identifier of the language and locale of the bot recommendation to update. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a> </p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The status of the bot recommendation.</p>
     /// <p>If the status is Failed, then the reasons for the failure are listed in the failureReasons field. </p>
+    #[doc(hidden)]
     pub bot_recommendation_status: std::option::Option<crate::model::BotRecommendationStatus>,
     /// <p>The unique identifier of the bot recommendation to be updated.</p>
+    #[doc(hidden)]
     pub bot_recommendation_id: std::option::Option<std::string::String>,
     /// <p>A timestamp of the date and time that the bot recommendation was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp of the date and time that the bot recommendation was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The object representing the Amazon S3 bucket containing the transcript, as well as the associated metadata.</p>
+    #[doc(hidden)]
     pub transcript_source_setting: std::option::Option<crate::model::TranscriptSourceSetting>,
     /// <p>The object representing the passwords that were used to encrypt the data related to the bot recommendation results, as well as the KMS key ARN used to encrypt the associated metadata.</p>
+    #[doc(hidden)]
     pub encryption_setting: std::option::Option<crate::model::EncryptionSetting>,
 }
 impl UpdateBotRecommendationOutput {
@@ -1399,11 +1454,10 @@ impl std::fmt::Debug for UpdateBotRecommendationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateBotRecommendationOutput`](crate::output::UpdateBotRecommendationOutput)
+/// See [`UpdateBotRecommendationOutput`](crate::output::UpdateBotRecommendationOutput).
 pub mod update_bot_recommendation_output {
 
-    /// A builder for [`UpdateBotRecommendationOutput`](crate::output::UpdateBotRecommendationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBotRecommendationOutput`](crate::output::UpdateBotRecommendationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -1535,7 +1589,7 @@ pub mod update_bot_recommendation_output {
             self.encryption_setting = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBotRecommendationOutput`](crate::output::UpdateBotRecommendationOutput)
+        /// Consumes the builder and constructs a [`UpdateBotRecommendationOutput`](crate::output::UpdateBotRecommendationOutput).
         pub fn build(self) -> crate::output::UpdateBotRecommendationOutput {
             crate::output::UpdateBotRecommendationOutput {
                 bot_id: self.bot_id,
@@ -1552,7 +1606,7 @@ pub mod update_bot_recommendation_output {
     }
 }
 impl UpdateBotRecommendationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateBotRecommendationOutput`](crate::output::UpdateBotRecommendationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateBotRecommendationOutput`](crate::output::UpdateBotRecommendationOutput).
     pub fn builder() -> crate::output::update_bot_recommendation_output::Builder {
         crate::output::update_bot_recommendation_output::Builder::default()
     }
@@ -1563,28 +1617,40 @@ impl UpdateBotRecommendationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBotLocaleOutput {
     /// <p>The identifier of the bot that contains the updated locale.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that contains the updated locale.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The language and locale of the updated bot locale.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The updated locale name for the locale.</p>
+    #[doc(hidden)]
     pub locale_name: std::option::Option<std::string::String>,
     /// <p>The updated description of the locale.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The updated confidence threshold for inserting the <code>AMAZON.FallbackIntent</code> and <code>AMAZON.KendraSearchIntent</code> intents in the list of possible intents for an utterance.</p>
+    #[doc(hidden)]
     pub nlu_intent_confidence_threshold: std::option::Option<f64>,
     /// <p>The updated Amazon Polly voice to use for voice interaction with the user.</p>
+    #[doc(hidden)]
     pub voice_settings: std::option::Option<crate::model::VoiceSettings>,
     /// <p>The current status of the locale. When the bot status is <code>Built</code> the locale is ready for use.</p>
+    #[doc(hidden)]
     pub bot_locale_status: std::option::Option<crate::model::BotLocaleStatus>,
     /// <p>If the <code>botLocaleStatus</code> is <code>Failed</code>, the <code>failureReasons</code> field lists the errors that occurred while building the bot.</p>
+    #[doc(hidden)]
     pub failure_reasons: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A timestamp of the date and time that the locale was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp of the date and time that the locale was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Recommended actions to take to resolve an error in the <code>failureReasons</code> field.</p>
+    #[doc(hidden)]
     pub recommended_actions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl UpdateBotLocaleOutput {
@@ -1658,11 +1724,10 @@ impl std::fmt::Debug for UpdateBotLocaleOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateBotLocaleOutput`](crate::output::UpdateBotLocaleOutput)
+/// See [`UpdateBotLocaleOutput`](crate::output::UpdateBotLocaleOutput).
 pub mod update_bot_locale_output {
 
-    /// A builder for [`UpdateBotLocaleOutput`](crate::output::UpdateBotLocaleOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBotLocaleOutput`](crate::output::UpdateBotLocaleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -1832,7 +1897,7 @@ pub mod update_bot_locale_output {
             self.recommended_actions = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBotLocaleOutput`](crate::output::UpdateBotLocaleOutput)
+        /// Consumes the builder and constructs a [`UpdateBotLocaleOutput`](crate::output::UpdateBotLocaleOutput).
         pub fn build(self) -> crate::output::UpdateBotLocaleOutput {
             crate::output::UpdateBotLocaleOutput {
                 bot_id: self.bot_id,
@@ -1852,7 +1917,7 @@ pub mod update_bot_locale_output {
     }
 }
 impl UpdateBotLocaleOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateBotLocaleOutput`](crate::output::UpdateBotLocaleOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateBotLocaleOutput`](crate::output::UpdateBotLocaleOutput).
     pub fn builder() -> crate::output::update_bot_locale_output::Builder {
         crate::output::update_bot_locale_output::Builder::default()
     }
@@ -1863,28 +1928,39 @@ impl UpdateBotLocaleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBotAliasOutput {
     /// <p>The identifier of the updated bot alias.</p>
+    #[doc(hidden)]
     pub bot_alias_id: std::option::Option<std::string::String>,
     /// <p>The updated name of the bot alias.</p>
+    #[doc(hidden)]
     pub bot_alias_name: std::option::Option<std::string::String>,
     /// <p>The updated description of the bot alias.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The updated version of the bot that the alias points to.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The updated Lambda functions to use in each locale for the bot alias.</p>
+    #[doc(hidden)]
     pub bot_alias_locale_settings: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::BotAliasLocaleSettings>,
     >,
     /// <p>The updated settings for storing conversation logs in Amazon CloudWatch Logs and Amazon S3 buckets.</p>
+    #[doc(hidden)]
     pub conversation_log_settings: std::option::Option<crate::model::ConversationLogSettings>,
     /// <p>Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.</p>
+    #[doc(hidden)]
     pub sentiment_analysis_settings: std::option::Option<crate::model::SentimentAnalysisSettings>,
     /// <p>The current status of the bot alias. When the status is <code>Available</code> the alias is ready for use.</p>
+    #[doc(hidden)]
     pub bot_alias_status: std::option::Option<crate::model::BotAliasStatus>,
     /// <p>The identifier of the bot with the updated alias.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>A timestamp of the date and time that the bot was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp of the date and time that the bot was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl UpdateBotAliasOutput {
@@ -1961,11 +2037,10 @@ impl std::fmt::Debug for UpdateBotAliasOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateBotAliasOutput`](crate::output::UpdateBotAliasOutput)
+/// See [`UpdateBotAliasOutput`](crate::output::UpdateBotAliasOutput).
 pub mod update_bot_alias_output {
 
-    /// A builder for [`UpdateBotAliasOutput`](crate::output::UpdateBotAliasOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBotAliasOutput`](crate::output::UpdateBotAliasOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_alias_id: std::option::Option<std::string::String>,
@@ -2137,7 +2212,7 @@ pub mod update_bot_alias_output {
             self.last_updated_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBotAliasOutput`](crate::output::UpdateBotAliasOutput)
+        /// Consumes the builder and constructs a [`UpdateBotAliasOutput`](crate::output::UpdateBotAliasOutput).
         pub fn build(self) -> crate::output::UpdateBotAliasOutput {
             crate::output::UpdateBotAliasOutput {
                 bot_alias_id: self.bot_alias_id,
@@ -2156,7 +2231,7 @@ pub mod update_bot_alias_output {
     }
 }
 impl UpdateBotAliasOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateBotAliasOutput`](crate::output::UpdateBotAliasOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateBotAliasOutput`](crate::output::UpdateBotAliasOutput).
     pub fn builder() -> crate::output::update_bot_alias_output::Builder {
         crate::output::update_bot_alias_output::Builder::default()
     }
@@ -2167,22 +2242,31 @@ impl UpdateBotAliasOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBotOutput {
     /// <p>The unique identifier of the bot that was updated.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The name of the bot after the update.</p>
+    #[doc(hidden)]
     pub bot_name: std::option::Option<std::string::String>,
     /// <p>The description of the bot after the update.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the IAM role used by the bot after the update.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The data privacy settings for the bot after the update.</p>
+    #[doc(hidden)]
     pub data_privacy: std::option::Option<crate::model::DataPrivacy>,
     /// <p>The session timeout, in seconds, for the bot after the update.</p>
+    #[doc(hidden)]
     pub idle_session_ttl_in_seconds: std::option::Option<i32>,
     /// <p>Shows the current status of the bot. The bot is first in the <code>Creating</code> status. Once the bot is read for use, it changes to the <code>Available</code> status. After the bot is created, you can use the <code>DRAFT</code> version of the bot.</p>
+    #[doc(hidden)]
     pub bot_status: std::option::Option<crate::model::BotStatus>,
     /// <p>A timestamp of the date and time that the bot was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp of the date and time that the bot was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl UpdateBotOutput {
@@ -2241,11 +2325,10 @@ impl std::fmt::Debug for UpdateBotOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateBotOutput`](crate::output::UpdateBotOutput)
+/// See [`UpdateBotOutput`](crate::output::UpdateBotOutput).
 pub mod update_bot_output {
 
-    /// A builder for [`UpdateBotOutput`](crate::output::UpdateBotOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBotOutput`](crate::output::UpdateBotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -2361,7 +2444,7 @@ pub mod update_bot_output {
             self.last_updated_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBotOutput`](crate::output::UpdateBotOutput)
+        /// Consumes the builder and constructs a [`UpdateBotOutput`](crate::output::UpdateBotOutput).
         pub fn build(self) -> crate::output::UpdateBotOutput {
             crate::output::UpdateBotOutput {
                 bot_id: self.bot_id,
@@ -2378,7 +2461,7 @@ pub mod update_bot_output {
     }
 }
 impl UpdateBotOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateBotOutput`](crate::output::UpdateBotOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateBotOutput`](crate::output::UpdateBotOutput).
     pub fn builder() -> crate::output::update_bot_output::Builder {
         crate::output::update_bot_output::Builder::default()
     }
@@ -2394,22 +2477,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -2425,22 +2507,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -2451,14 +2532,19 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartImportOutput {
     /// <p>A unique identifier for the import.</p>
+    #[doc(hidden)]
     pub import_id: std::option::Option<std::string::String>,
     /// <p>The parameters used when importing the resource.</p>
+    #[doc(hidden)]
     pub resource_specification: std::option::Option<crate::model::ImportResourceSpecification>,
     /// <p>The strategy used when there was a name conflict between the imported resource and an existing resource. When the merge strategy is <code>FailOnConflict</code> existing resources are not overwritten and the import fails.</p>
+    #[doc(hidden)]
     pub merge_strategy: std::option::Option<crate::model::MergeStrategy>,
     /// <p>The current status of the import. When the status is <code>Complete</code> the bot, bot alias, or custom vocabulary is ready to use.</p>
+    #[doc(hidden)]
     pub import_status: std::option::Option<crate::model::ImportStatus>,
     /// <p>The date and time that the import request was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl StartImportOutput {
@@ -2496,11 +2582,10 @@ impl std::fmt::Debug for StartImportOutput {
         formatter.finish()
     }
 }
-/// See [`StartImportOutput`](crate::output::StartImportOutput)
+/// See [`StartImportOutput`](crate::output::StartImportOutput).
 pub mod start_import_output {
 
-    /// A builder for [`StartImportOutput`](crate::output::StartImportOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartImportOutput`](crate::output::StartImportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) import_id: std::option::Option<std::string::String>,
@@ -2576,7 +2661,7 @@ pub mod start_import_output {
             self.creation_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartImportOutput`](crate::output::StartImportOutput)
+        /// Consumes the builder and constructs a [`StartImportOutput`](crate::output::StartImportOutput).
         pub fn build(self) -> crate::output::StartImportOutput {
             crate::output::StartImportOutput {
                 import_id: self.import_id,
@@ -2589,7 +2674,7 @@ pub mod start_import_output {
     }
 }
 impl StartImportOutput {
-    /// Creates a new builder-style object to manufacture [`StartImportOutput`](crate::output::StartImportOutput)
+    /// Creates a new builder-style object to manufacture [`StartImportOutput`](crate::output::StartImportOutput).
     pub fn builder() -> crate::output::start_import_output::Builder {
         crate::output::start_import_output::Builder::default()
     }
@@ -2600,21 +2685,29 @@ impl StartImportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartBotRecommendationOutput {
     /// <p>The unique identifier of the bot containing the bot recommendation.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot containing the bot recommendation.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The identifier of the language and locale of the bot recommendation to start. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a> </p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The status of the bot recommendation.</p>
     /// <p>If the status is Failed, then the reasons for the failure are listed in the failureReasons field. </p>
+    #[doc(hidden)]
     pub bot_recommendation_status: std::option::Option<crate::model::BotRecommendationStatus>,
     /// <p>The identifier of the bot recommendation that you have created.</p>
+    #[doc(hidden)]
     pub bot_recommendation_id: std::option::Option<std::string::String>,
     /// <p>A timestamp of the date and time that the bot recommendation was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The object representing the Amazon S3 bucket containing the transcript, as well as the associated metadata.</p>
+    #[doc(hidden)]
     pub transcript_source_setting: std::option::Option<crate::model::TranscriptSourceSetting>,
     /// <p>The object representing the passwords that were used to encrypt the data related to the bot recommendation results, as well as the KMS key ARN used to encrypt the associated metadata.</p>
+    #[doc(hidden)]
     pub encryption_setting: std::option::Option<crate::model::EncryptionSetting>,
 }
 impl StartBotRecommendationOutput {
@@ -2670,11 +2763,10 @@ impl std::fmt::Debug for StartBotRecommendationOutput {
         formatter.finish()
     }
 }
-/// See [`StartBotRecommendationOutput`](crate::output::StartBotRecommendationOutput)
+/// See [`StartBotRecommendationOutput`](crate::output::StartBotRecommendationOutput).
 pub mod start_bot_recommendation_output {
 
-    /// A builder for [`StartBotRecommendationOutput`](crate::output::StartBotRecommendationOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartBotRecommendationOutput`](crate::output::StartBotRecommendationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -2792,7 +2884,7 @@ pub mod start_bot_recommendation_output {
             self.encryption_setting = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartBotRecommendationOutput`](crate::output::StartBotRecommendationOutput)
+        /// Consumes the builder and constructs a [`StartBotRecommendationOutput`](crate::output::StartBotRecommendationOutput).
         pub fn build(self) -> crate::output::StartBotRecommendationOutput {
             crate::output::StartBotRecommendationOutput {
                 bot_id: self.bot_id,
@@ -2808,7 +2900,7 @@ pub mod start_bot_recommendation_output {
     }
 }
 impl StartBotRecommendationOutput {
-    /// Creates a new builder-style object to manufacture [`StartBotRecommendationOutput`](crate::output::StartBotRecommendationOutput)
+    /// Creates a new builder-style object to manufacture [`StartBotRecommendationOutput`](crate::output::StartBotRecommendationOutput).
     pub fn builder() -> crate::output::start_bot_recommendation_output::Builder {
         crate::output::start_bot_recommendation_output::Builder::default()
     }
@@ -2819,19 +2911,26 @@ impl StartBotRecommendationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchAssociatedTranscriptsOutput {
     /// <p>The unique identifier of the bot associated with the transcripts that you are searching.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot containing the transcripts that you are searching.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The identifier of the language and locale of the transcripts to search. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a> </p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p> The unique identifier of the bot recommendation associated with the transcripts to search.</p>
+    #[doc(hidden)]
     pub bot_recommendation_id: std::option::Option<std::string::String>,
     /// <p>A index that indicates whether there are more results to return in a response to the SearchAssociatedTranscripts operation. If the nextIndex field is present, you send the contents as the nextIndex parameter of a SearchAssociatedTranscriptsRequest operation to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_index: std::option::Option<i32>,
     /// <p>The object that contains the associated transcript that meet the criteria you specified.</p>
+    #[doc(hidden)]
     pub associated_transcripts:
         std::option::Option<std::vec::Vec<crate::model::AssociatedTranscript>>,
     /// <p>The total number of transcripts returned by the search.</p>
+    #[doc(hidden)]
     pub total_results: std::option::Option<i32>,
 }
 impl SearchAssociatedTranscriptsOutput {
@@ -2879,11 +2978,10 @@ impl std::fmt::Debug for SearchAssociatedTranscriptsOutput {
         formatter.finish()
     }
 }
-/// See [`SearchAssociatedTranscriptsOutput`](crate::output::SearchAssociatedTranscriptsOutput)
+/// See [`SearchAssociatedTranscriptsOutput`](crate::output::SearchAssociatedTranscriptsOutput).
 pub mod search_associated_transcripts_output {
 
-    /// A builder for [`SearchAssociatedTranscriptsOutput`](crate::output::SearchAssociatedTranscriptsOutput)
-    #[non_exhaustive]
+    /// A builder for [`SearchAssociatedTranscriptsOutput`](crate::output::SearchAssociatedTranscriptsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -2978,7 +3076,7 @@ pub mod search_associated_transcripts_output {
             self.total_results = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchAssociatedTranscriptsOutput`](crate::output::SearchAssociatedTranscriptsOutput)
+        /// Consumes the builder and constructs a [`SearchAssociatedTranscriptsOutput`](crate::output::SearchAssociatedTranscriptsOutput).
         pub fn build(self) -> crate::output::SearchAssociatedTranscriptsOutput {
             crate::output::SearchAssociatedTranscriptsOutput {
                 bot_id: self.bot_id,
@@ -2993,7 +3091,7 @@ pub mod search_associated_transcripts_output {
     }
 }
 impl SearchAssociatedTranscriptsOutput {
-    /// Creates a new builder-style object to manufacture [`SearchAssociatedTranscriptsOutput`](crate::output::SearchAssociatedTranscriptsOutput)
+    /// Creates a new builder-style object to manufacture [`SearchAssociatedTranscriptsOutput`](crate::output::SearchAssociatedTranscriptsOutput).
     pub fn builder() -> crate::output::search_associated_transcripts_output::Builder {
         crate::output::search_associated_transcripts_output::Builder::default()
     }
@@ -3004,6 +3102,7 @@ impl SearchAssociatedTranscriptsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tags associated with a resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -3023,11 +3122,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -3060,14 +3158,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -3078,14 +3176,19 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSlotTypesOutput {
     /// <p>The identifier of the bot that contains the slot types.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that contains the slot types.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The language and local of the slot types in the list.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>Summary information for the slot types that meet the filter criteria specified in the request. The length of the list is specified in the <code>maxResults</code> parameter of the request. If there are more slot types available, the <code>nextToken</code> field contains a token to get the next page of results.</p>
+    #[doc(hidden)]
     pub slot_type_summaries: std::option::Option<std::vec::Vec<crate::model::SlotTypeSummary>>,
     /// <p>A token that indicates whether there are more results to return in a response to the <code>ListSlotTypes</code> operation. If the <code>nextToken</code> field is present, you send the contents as the <code>nextToken</code> parameter of a <code>ListSlotTypes</code> operation request to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListSlotTypesOutput {
@@ -3121,11 +3224,10 @@ impl std::fmt::Debug for ListSlotTypesOutput {
         formatter.finish()
     }
 }
-/// See [`ListSlotTypesOutput`](crate::output::ListSlotTypesOutput)
+/// See [`ListSlotTypesOutput`](crate::output::ListSlotTypesOutput).
 pub mod list_slot_types_output {
 
-    /// A builder for [`ListSlotTypesOutput`](crate::output::ListSlotTypesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSlotTypesOutput`](crate::output::ListSlotTypesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -3195,7 +3297,7 @@ pub mod list_slot_types_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSlotTypesOutput`](crate::output::ListSlotTypesOutput)
+        /// Consumes the builder and constructs a [`ListSlotTypesOutput`](crate::output::ListSlotTypesOutput).
         pub fn build(self) -> crate::output::ListSlotTypesOutput {
             crate::output::ListSlotTypesOutput {
                 bot_id: self.bot_id,
@@ -3208,7 +3310,7 @@ pub mod list_slot_types_output {
     }
 }
 impl ListSlotTypesOutput {
-    /// Creates a new builder-style object to manufacture [`ListSlotTypesOutput`](crate::output::ListSlotTypesOutput)
+    /// Creates a new builder-style object to manufacture [`ListSlotTypesOutput`](crate::output::ListSlotTypesOutput).
     pub fn builder() -> crate::output::list_slot_types_output::Builder {
         crate::output::list_slot_types_output::Builder::default()
     }
@@ -3219,16 +3321,22 @@ impl ListSlotTypesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSlotsOutput {
     /// <p>The identifier of the bot that contains the slots.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that contains the slots.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The language and locale of the slots in the list.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the intent that contains the slots.</p>
+    #[doc(hidden)]
     pub intent_id: std::option::Option<std::string::String>,
     /// <p>Summary information for the slots that meet the filter criteria specified in the request. The length of the list is specified in the <code>maxResults</code> parameter of the request. If there are more slots available, the <code>nextToken</code> field contains a token to get the next page of results.</p>
+    #[doc(hidden)]
     pub slot_summaries: std::option::Option<std::vec::Vec<crate::model::SlotSummary>>,
     /// <p>A token that indicates whether there are more results to return in a response to the <code>ListSlots</code> operation. If the <code>nextToken</code> field is present, you send the contents as the <code>nextToken</code> parameter of a <code>ListSlots</code> operation request to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListSlotsOutput {
@@ -3269,11 +3377,10 @@ impl std::fmt::Debug for ListSlotsOutput {
         formatter.finish()
     }
 }
-/// See [`ListSlotsOutput`](crate::output::ListSlotsOutput)
+/// See [`ListSlotsOutput`](crate::output::ListSlotsOutput).
 pub mod list_slots_output {
 
-    /// A builder for [`ListSlotsOutput`](crate::output::ListSlotsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSlotsOutput`](crate::output::ListSlotsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -3353,7 +3460,7 @@ pub mod list_slots_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSlotsOutput`](crate::output::ListSlotsOutput)
+        /// Consumes the builder and constructs a [`ListSlotsOutput`](crate::output::ListSlotsOutput).
         pub fn build(self) -> crate::output::ListSlotsOutput {
             crate::output::ListSlotsOutput {
                 bot_id: self.bot_id,
@@ -3367,7 +3474,7 @@ pub mod list_slots_output {
     }
 }
 impl ListSlotsOutput {
-    /// Creates a new builder-style object to manufacture [`ListSlotsOutput`](crate::output::ListSlotsOutput)
+    /// Creates a new builder-style object to manufacture [`ListSlotsOutput`](crate::output::ListSlotsOutput).
     pub fn builder() -> crate::output::list_slots_output::Builder {
         crate::output::list_slots_output::Builder::default()
     }
@@ -3378,16 +3485,22 @@ impl ListSlotsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRecommendedIntentsOutput {
     /// <p>The unique identifier of the bot associated with the recommended intent.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that contains the intent.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The identifier of the language and locale of the intents to list. The string must match one of the supported locales. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html">Supported languages</a>.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the bot recommendation that contains the recommended intent.</p>
+    #[doc(hidden)]
     pub bot_recommendation_id: std::option::Option<std::string::String>,
     /// <p>Summary information for the intents that meet the filter criteria specified in the request. The length of the list is specified in the maxResults parameter of the request. If there are more intents available, the nextToken field contains a token to get the next page of results.</p>
+    #[doc(hidden)]
     pub summary_list: std::option::Option<std::vec::Vec<crate::model::RecommendedIntentSummary>>,
     /// <p>A token that indicates whether there are more results to return in a response to the ListRecommendedIntents operation. If the nextToken field is present, you send the contents as the nextToken parameter of a ListRecommendedIntents operation request to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListRecommendedIntentsOutput {
@@ -3428,11 +3541,10 @@ impl std::fmt::Debug for ListRecommendedIntentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListRecommendedIntentsOutput`](crate::output::ListRecommendedIntentsOutput)
+/// See [`ListRecommendedIntentsOutput`](crate::output::ListRecommendedIntentsOutput).
 pub mod list_recommended_intents_output {
 
-    /// A builder for [`ListRecommendedIntentsOutput`](crate::output::ListRecommendedIntentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRecommendedIntentsOutput`](crate::output::ListRecommendedIntentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -3516,7 +3628,7 @@ pub mod list_recommended_intents_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRecommendedIntentsOutput`](crate::output::ListRecommendedIntentsOutput)
+        /// Consumes the builder and constructs a [`ListRecommendedIntentsOutput`](crate::output::ListRecommendedIntentsOutput).
         pub fn build(self) -> crate::output::ListRecommendedIntentsOutput {
             crate::output::ListRecommendedIntentsOutput {
                 bot_id: self.bot_id,
@@ -3530,7 +3642,7 @@ pub mod list_recommended_intents_output {
     }
 }
 impl ListRecommendedIntentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListRecommendedIntentsOutput`](crate::output::ListRecommendedIntentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListRecommendedIntentsOutput`](crate::output::ListRecommendedIntentsOutput).
     pub fn builder() -> crate::output::list_recommended_intents_output::Builder {
         crate::output::list_recommended_intents_output::Builder::default()
     }
@@ -3541,14 +3653,19 @@ impl ListRecommendedIntentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListIntentsOutput {
     /// <p>The identifier of the bot that contains the intent.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that contains the intent.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The language and locale of the intents in the list.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>Summary information for the intents that meet the filter criteria specified in the request. The length of the list is specified in the <code>maxResults</code> parameter of the request. If there are more intents available, the <code>nextToken</code> field contains a token to get the next page of results.</p>
+    #[doc(hidden)]
     pub intent_summaries: std::option::Option<std::vec::Vec<crate::model::IntentSummary>>,
     /// <p>A token that indicates whether there are more results to return in a response to the <code>ListIntents</code> operation. If the <code>nextToken</code> field is present, you send the contents as the <code>nextToken</code> parameter of a <code>ListIntents</code> operation request to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListIntentsOutput {
@@ -3584,11 +3701,10 @@ impl std::fmt::Debug for ListIntentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListIntentsOutput`](crate::output::ListIntentsOutput)
+/// See [`ListIntentsOutput`](crate::output::ListIntentsOutput).
 pub mod list_intents_output {
 
-    /// A builder for [`ListIntentsOutput`](crate::output::ListIntentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListIntentsOutput`](crate::output::ListIntentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -3658,7 +3774,7 @@ pub mod list_intents_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListIntentsOutput`](crate::output::ListIntentsOutput)
+        /// Consumes the builder and constructs a [`ListIntentsOutput`](crate::output::ListIntentsOutput).
         pub fn build(self) -> crate::output::ListIntentsOutput {
             crate::output::ListIntentsOutput {
                 bot_id: self.bot_id,
@@ -3671,7 +3787,7 @@ pub mod list_intents_output {
     }
 }
 impl ListIntentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListIntentsOutput`](crate::output::ListIntentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListIntentsOutput`](crate::output::ListIntentsOutput).
     pub fn builder() -> crate::output::list_intents_output::Builder {
         crate::output::list_intents_output::Builder::default()
     }
@@ -3682,14 +3798,19 @@ impl ListIntentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListImportsOutput {
     /// <p>The unique identifier assigned by Amazon Lex to the bot.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that was imported. It will always be <code>DRAFT</code>.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>Summary information for the imports that meet the filter criteria specified in the request. The length of the list is specified in the <code>maxResults</code> parameter. If there are more imports available, the <code>nextToken</code> field contains a token to get the next page of results.</p>
+    #[doc(hidden)]
     pub import_summaries: std::option::Option<std::vec::Vec<crate::model::ImportSummary>>,
     /// <p>A token that indicates whether there are more results to return in a response to the <code>ListImports</code> operation. If the <code>nextToken</code> field is present, you send the contents as the <code>nextToken</code> parameter of a <code>ListImports</code> operation request to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The locale specified in the request.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
 }
 impl ListImportsOutput {
@@ -3725,11 +3846,10 @@ impl std::fmt::Debug for ListImportsOutput {
         formatter.finish()
     }
 }
-/// See [`ListImportsOutput`](crate::output::ListImportsOutput)
+/// See [`ListImportsOutput`](crate::output::ListImportsOutput).
 pub mod list_imports_output {
 
-    /// A builder for [`ListImportsOutput`](crate::output::ListImportsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListImportsOutput`](crate::output::ListImportsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -3799,7 +3919,7 @@ pub mod list_imports_output {
             self.locale_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListImportsOutput`](crate::output::ListImportsOutput)
+        /// Consumes the builder and constructs a [`ListImportsOutput`](crate::output::ListImportsOutput).
         pub fn build(self) -> crate::output::ListImportsOutput {
             crate::output::ListImportsOutput {
                 bot_id: self.bot_id,
@@ -3812,7 +3932,7 @@ pub mod list_imports_output {
     }
 }
 impl ListImportsOutput {
-    /// Creates a new builder-style object to manufacture [`ListImportsOutput`](crate::output::ListImportsOutput)
+    /// Creates a new builder-style object to manufacture [`ListImportsOutput`](crate::output::ListImportsOutput).
     pub fn builder() -> crate::output::list_imports_output::Builder {
         crate::output::list_imports_output::Builder::default()
     }
@@ -3823,14 +3943,19 @@ impl ListImportsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListExportsOutput {
     /// <p>The unique identifier assigned to the bot by Amazon Lex.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that was exported.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>Summary information for the exports that meet the filter criteria specified in the request. The length of the list is specified in the <code>maxResults</code> parameter. If there are more exports available, the <code>nextToken</code> field contains a token to get the next page of results.</p>
+    #[doc(hidden)]
     pub export_summaries: std::option::Option<std::vec::Vec<crate::model::ExportSummary>>,
     /// <p>A token that indicates whether there are more results to return in a response to the <code>ListExports</code> operation. If the <code>nextToken</code> field is present, you send the contents as the <code>nextToken</code> parameter of a <code>ListExports</code> operation request to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The locale specified in the request.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
 }
 impl ListExportsOutput {
@@ -3866,11 +3991,10 @@ impl std::fmt::Debug for ListExportsOutput {
         formatter.finish()
     }
 }
-/// See [`ListExportsOutput`](crate::output::ListExportsOutput)
+/// See [`ListExportsOutput`](crate::output::ListExportsOutput).
 pub mod list_exports_output {
 
-    /// A builder for [`ListExportsOutput`](crate::output::ListExportsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListExportsOutput`](crate::output::ListExportsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -3940,7 +4064,7 @@ pub mod list_exports_output {
             self.locale_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListExportsOutput`](crate::output::ListExportsOutput)
+        /// Consumes the builder and constructs a [`ListExportsOutput`](crate::output::ListExportsOutput).
         pub fn build(self) -> crate::output::ListExportsOutput {
             crate::output::ListExportsOutput {
                 bot_id: self.bot_id,
@@ -3953,7 +4077,7 @@ pub mod list_exports_output {
     }
 }
 impl ListExportsOutput {
-    /// Creates a new builder-style object to manufacture [`ListExportsOutput`](crate::output::ListExportsOutput)
+    /// Creates a new builder-style object to manufacture [`ListExportsOutput`](crate::output::ListExportsOutput).
     pub fn builder() -> crate::output::list_exports_output::Builder {
         crate::output::list_exports_output::Builder::default()
     }
@@ -3964,11 +4088,14 @@ impl ListExportsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBuiltInSlotTypesOutput {
     /// <p>Summary information for the built-in slot types that meet the filter criteria specified in the request. The length of the list is specified in the <code>maxResults</code> parameter of the request. If there are more slot types available, the <code>nextToken</code> field contains a token to get the next page of results.</p>
+    #[doc(hidden)]
     pub built_in_slot_type_summaries:
         std::option::Option<std::vec::Vec<crate::model::BuiltInSlotTypeSummary>>,
     /// <p>A token that indicates whether there are more results to return in a response to the <code>ListBuiltInSlotTypes</code> operation. If the <code>nextToken</code> field is present, you send the contents as the <code>nextToken</code> parameter of a <code>LIstBuiltInSlotTypes</code> operation request to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The language and locale of the slot types in the list.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
 }
 impl ListBuiltInSlotTypesOutput {
@@ -3999,11 +4126,10 @@ impl std::fmt::Debug for ListBuiltInSlotTypesOutput {
         formatter.finish()
     }
 }
-/// See [`ListBuiltInSlotTypesOutput`](crate::output::ListBuiltInSlotTypesOutput)
+/// See [`ListBuiltInSlotTypesOutput`](crate::output::ListBuiltInSlotTypesOutput).
 pub mod list_built_in_slot_types_output {
 
-    /// A builder for [`ListBuiltInSlotTypesOutput`](crate::output::ListBuiltInSlotTypesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBuiltInSlotTypesOutput`](crate::output::ListBuiltInSlotTypesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) built_in_slot_type_summaries:
@@ -4054,7 +4180,7 @@ pub mod list_built_in_slot_types_output {
             self.locale_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBuiltInSlotTypesOutput`](crate::output::ListBuiltInSlotTypesOutput)
+        /// Consumes the builder and constructs a [`ListBuiltInSlotTypesOutput`](crate::output::ListBuiltInSlotTypesOutput).
         pub fn build(self) -> crate::output::ListBuiltInSlotTypesOutput {
             crate::output::ListBuiltInSlotTypesOutput {
                 built_in_slot_type_summaries: self.built_in_slot_type_summaries,
@@ -4065,7 +4191,7 @@ pub mod list_built_in_slot_types_output {
     }
 }
 impl ListBuiltInSlotTypesOutput {
-    /// Creates a new builder-style object to manufacture [`ListBuiltInSlotTypesOutput`](crate::output::ListBuiltInSlotTypesOutput)
+    /// Creates a new builder-style object to manufacture [`ListBuiltInSlotTypesOutput`](crate::output::ListBuiltInSlotTypesOutput).
     pub fn builder() -> crate::output::list_built_in_slot_types_output::Builder {
         crate::output::list_built_in_slot_types_output::Builder::default()
     }
@@ -4076,11 +4202,14 @@ impl ListBuiltInSlotTypesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBuiltInIntentsOutput {
     /// <p>Summary information for the built-in intents that meet the filter criteria specified in the request. The length of the list is specified in the <code>maxResults</code> parameter of the request. If there are more intents available, the <code>nextToken</code> field contains a token to get the next page of results.</p>
+    #[doc(hidden)]
     pub built_in_intent_summaries:
         std::option::Option<std::vec::Vec<crate::model::BuiltInIntentSummary>>,
     /// <p>A token that indicates whether there are more results to return in a response to the <code>ListBuiltInIntents</code> operation. If the <code>nextToken</code> field is present, you send the contents as the <code>nextToken</code> parameter of a <code>ListBotAliases</code> operation request to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The language and locale of the intents in the list.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
 }
 impl ListBuiltInIntentsOutput {
@@ -4108,11 +4237,10 @@ impl std::fmt::Debug for ListBuiltInIntentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListBuiltInIntentsOutput`](crate::output::ListBuiltInIntentsOutput)
+/// See [`ListBuiltInIntentsOutput`](crate::output::ListBuiltInIntentsOutput).
 pub mod list_built_in_intents_output {
 
-    /// A builder for [`ListBuiltInIntentsOutput`](crate::output::ListBuiltInIntentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBuiltInIntentsOutput`](crate::output::ListBuiltInIntentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) built_in_intent_summaries:
@@ -4163,7 +4291,7 @@ pub mod list_built_in_intents_output {
             self.locale_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBuiltInIntentsOutput`](crate::output::ListBuiltInIntentsOutput)
+        /// Consumes the builder and constructs a [`ListBuiltInIntentsOutput`](crate::output::ListBuiltInIntentsOutput).
         pub fn build(self) -> crate::output::ListBuiltInIntentsOutput {
             crate::output::ListBuiltInIntentsOutput {
                 built_in_intent_summaries: self.built_in_intent_summaries,
@@ -4174,7 +4302,7 @@ pub mod list_built_in_intents_output {
     }
 }
 impl ListBuiltInIntentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListBuiltInIntentsOutput`](crate::output::ListBuiltInIntentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListBuiltInIntentsOutput`](crate::output::ListBuiltInIntentsOutput).
     pub fn builder() -> crate::output::list_built_in_intents_output::Builder {
         crate::output::list_built_in_intents_output::Builder::default()
     }
@@ -4185,10 +4313,13 @@ impl ListBuiltInIntentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBotVersionsOutput {
     /// <p>The identifier of the bot to list versions for.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>Summary information for the bot versions that meet the filter criteria specified in the request. The length of the list is specified in the <code>maxResults</code> parameter of the request. If there are more versions available, the <code>nextToken</code> field contains a token to get the next page of results.</p>
+    #[doc(hidden)]
     pub bot_version_summaries: std::option::Option<std::vec::Vec<crate::model::BotVersionSummary>>,
     /// <p>A token that indicates whether there are more results to return in a response to the <code>ListBotVersions</code> operation. If the <code>nextToken</code> field is present, you send the contents as the <code>nextToken</code> parameter of a <code>ListBotAliases</code> operation request to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListBotVersionsOutput {
@@ -4214,11 +4345,10 @@ impl std::fmt::Debug for ListBotVersionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListBotVersionsOutput`](crate::output::ListBotVersionsOutput)
+/// See [`ListBotVersionsOutput`](crate::output::ListBotVersionsOutput).
 pub mod list_bot_versions_output {
 
-    /// A builder for [`ListBotVersionsOutput`](crate::output::ListBotVersionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBotVersionsOutput`](crate::output::ListBotVersionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -4266,7 +4396,7 @@ pub mod list_bot_versions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBotVersionsOutput`](crate::output::ListBotVersionsOutput)
+        /// Consumes the builder and constructs a [`ListBotVersionsOutput`](crate::output::ListBotVersionsOutput).
         pub fn build(self) -> crate::output::ListBotVersionsOutput {
             crate::output::ListBotVersionsOutput {
                 bot_id: self.bot_id,
@@ -4277,7 +4407,7 @@ pub mod list_bot_versions_output {
     }
 }
 impl ListBotVersionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListBotVersionsOutput`](crate::output::ListBotVersionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListBotVersionsOutput`](crate::output::ListBotVersionsOutput).
     pub fn builder() -> crate::output::list_bot_versions_output::Builder {
         crate::output::list_bot_versions_output::Builder::default()
     }
@@ -4288,8 +4418,10 @@ impl ListBotVersionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBotsOutput {
     /// <p>Summary information for the bots that meet the filter criteria specified in the request. The length of the list is specified in the <code>maxResults</code> parameter of the request. If there are more bots available, the <code>nextToken</code> field contains a token to the next page of results.</p>
+    #[doc(hidden)]
     pub bot_summaries: std::option::Option<std::vec::Vec<crate::model::BotSummary>>,
     /// <p>A token that indicates whether there are more results to return in a response to the <code>ListBots</code> operation. If the <code>nextToken</code> field is present, you send the contents as the <code>nextToken</code> parameter of a <code>ListBots</code> operation request to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListBotsOutput {
@@ -4310,11 +4442,10 @@ impl std::fmt::Debug for ListBotsOutput {
         formatter.finish()
     }
 }
-/// See [`ListBotsOutput`](crate::output::ListBotsOutput)
+/// See [`ListBotsOutput`](crate::output::ListBotsOutput).
 pub mod list_bots_output {
 
-    /// A builder for [`ListBotsOutput`](crate::output::ListBotsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBotsOutput`](crate::output::ListBotsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_summaries: std::option::Option<std::vec::Vec<crate::model::BotSummary>>,
@@ -4350,7 +4481,7 @@ pub mod list_bots_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBotsOutput`](crate::output::ListBotsOutput)
+        /// Consumes the builder and constructs a [`ListBotsOutput`](crate::output::ListBotsOutput).
         pub fn build(self) -> crate::output::ListBotsOutput {
             crate::output::ListBotsOutput {
                 bot_summaries: self.bot_summaries,
@@ -4360,7 +4491,7 @@ pub mod list_bots_output {
     }
 }
 impl ListBotsOutput {
-    /// Creates a new builder-style object to manufacture [`ListBotsOutput`](crate::output::ListBotsOutput)
+    /// Creates a new builder-style object to manufacture [`ListBotsOutput`](crate::output::ListBotsOutput).
     pub fn builder() -> crate::output::list_bots_output::Builder {
         crate::output::list_bots_output::Builder::default()
     }
@@ -4371,15 +4502,20 @@ impl ListBotsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBotRecommendationsOutput {
     /// <p>The unique identifier of the bot that contains the bot recommendation list.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that contains the bot recommendation list.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The identifier of the language and locale of the bot recommendation list.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>Summary information for the bot recommendations that meet the filter specified in this request. The length of the list is specified in the maxResults parameter of the request. If there are more bot recommendations available, the nextToken field contains a token to get the next page of results.</p>
+    #[doc(hidden)]
     pub bot_recommendation_summaries:
         std::option::Option<std::vec::Vec<crate::model::BotRecommendationSummary>>,
     /// <p>A token that indicates whether there are more results to return in a response to the ListBotRecommendations operation. If the nextToken field is present, you send the contents as the nextToken parameter of a ListBotRecommendations operation request to get the next page of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListBotRecommendationsOutput {
@@ -4420,11 +4556,10 @@ impl std::fmt::Debug for ListBotRecommendationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListBotRecommendationsOutput`](crate::output::ListBotRecommendationsOutput)
+/// See [`ListBotRecommendationsOutput`](crate::output::ListBotRecommendationsOutput).
 pub mod list_bot_recommendations_output {
 
-    /// A builder for [`ListBotRecommendationsOutput`](crate::output::ListBotRecommendationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBotRecommendationsOutput`](crate::output::ListBotRecommendationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -4497,7 +4632,7 @@ pub mod list_bot_recommendations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBotRecommendationsOutput`](crate::output::ListBotRecommendationsOutput)
+        /// Consumes the builder and constructs a [`ListBotRecommendationsOutput`](crate::output::ListBotRecommendationsOutput).
         pub fn build(self) -> crate::output::ListBotRecommendationsOutput {
             crate::output::ListBotRecommendationsOutput {
                 bot_id: self.bot_id,
@@ -4510,7 +4645,7 @@ pub mod list_bot_recommendations_output {
     }
 }
 impl ListBotRecommendationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListBotRecommendationsOutput`](crate::output::ListBotRecommendationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListBotRecommendationsOutput`](crate::output::ListBotRecommendationsOutput).
     pub fn builder() -> crate::output::list_bot_recommendations_output::Builder {
         crate::output::list_bot_recommendations_output::Builder::default()
     }
@@ -4521,12 +4656,16 @@ impl ListBotRecommendationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBotLocalesOutput {
     /// <p>The identifier of the bot to list locales for.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>A token that indicates whether there are more results to return in a response to the <code>ListBotLocales</code> operation. If the <code>nextToken</code> field is present, you send the contents as the <code>nextToken</code> parameter of a <code>ListBotLocales</code> operation request to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Summary information for the locales that meet the filter criteria specified in the request. The length of the list is specified in the <code>maxResults</code> parameter of the request. If there are more locales available, the <code>nextToken</code> field contains a token to get the next page of results.</p>
+    #[doc(hidden)]
     pub bot_locale_summaries: std::option::Option<std::vec::Vec<crate::model::BotLocaleSummary>>,
 }
 impl ListBotLocalesOutput {
@@ -4557,11 +4696,10 @@ impl std::fmt::Debug for ListBotLocalesOutput {
         formatter.finish()
     }
 }
-/// See [`ListBotLocalesOutput`](crate::output::ListBotLocalesOutput)
+/// See [`ListBotLocalesOutput`](crate::output::ListBotLocalesOutput).
 pub mod list_bot_locales_output {
 
-    /// A builder for [`ListBotLocalesOutput`](crate::output::ListBotLocalesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBotLocalesOutput`](crate::output::ListBotLocalesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -4620,7 +4758,7 @@ pub mod list_bot_locales_output {
             self.bot_locale_summaries = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBotLocalesOutput`](crate::output::ListBotLocalesOutput)
+        /// Consumes the builder and constructs a [`ListBotLocalesOutput`](crate::output::ListBotLocalesOutput).
         pub fn build(self) -> crate::output::ListBotLocalesOutput {
             crate::output::ListBotLocalesOutput {
                 bot_id: self.bot_id,
@@ -4632,7 +4770,7 @@ pub mod list_bot_locales_output {
     }
 }
 impl ListBotLocalesOutput {
-    /// Creates a new builder-style object to manufacture [`ListBotLocalesOutput`](crate::output::ListBotLocalesOutput)
+    /// Creates a new builder-style object to manufacture [`ListBotLocalesOutput`](crate::output::ListBotLocalesOutput).
     pub fn builder() -> crate::output::list_bot_locales_output::Builder {
         crate::output::list_bot_locales_output::Builder::default()
     }
@@ -4643,10 +4781,13 @@ impl ListBotLocalesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBotAliasesOutput {
     /// <p>Summary information for the bot aliases that meet the filter criteria specified in the request. The length of the list is specified in the <code>maxResults</code> parameter of the request. If there are more aliases available, the <code>nextToken</code> field contains a token to get the next page of results.</p>
+    #[doc(hidden)]
     pub bot_alias_summaries: std::option::Option<std::vec::Vec<crate::model::BotAliasSummary>>,
     /// <p>A token that indicates whether there are more results to return in a response to the <code>ListBotAliases</code> operation. If the <code>nextToken</code> field is present, you send the contents as the <code>nextToken</code> parameter of a <code>ListBotAliases</code> operation request to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The identifier of the bot associated with the aliases.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
 }
 impl ListBotAliasesOutput {
@@ -4672,11 +4813,10 @@ impl std::fmt::Debug for ListBotAliasesOutput {
         formatter.finish()
     }
 }
-/// See [`ListBotAliasesOutput`](crate::output::ListBotAliasesOutput)
+/// See [`ListBotAliasesOutput`](crate::output::ListBotAliasesOutput).
 pub mod list_bot_aliases_output {
 
-    /// A builder for [`ListBotAliasesOutput`](crate::output::ListBotAliasesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBotAliasesOutput`](crate::output::ListBotAliasesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_alias_summaries:
@@ -4724,7 +4864,7 @@ pub mod list_bot_aliases_output {
             self.bot_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBotAliasesOutput`](crate::output::ListBotAliasesOutput)
+        /// Consumes the builder and constructs a [`ListBotAliasesOutput`](crate::output::ListBotAliasesOutput).
         pub fn build(self) -> crate::output::ListBotAliasesOutput {
             crate::output::ListBotAliasesOutput {
                 bot_alias_summaries: self.bot_alias_summaries,
@@ -4735,7 +4875,7 @@ pub mod list_bot_aliases_output {
     }
 }
 impl ListBotAliasesOutput {
-    /// Creates a new builder-style object to manufacture [`ListBotAliasesOutput`](crate::output::ListBotAliasesOutput)
+    /// Creates a new builder-style object to manufacture [`ListBotAliasesOutput`](crate::output::ListBotAliasesOutput).
     pub fn builder() -> crate::output::list_bot_aliases_output::Builder {
         crate::output::list_bot_aliases_output::Builder::default()
     }
@@ -4746,18 +4886,25 @@ impl ListBotAliasesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAggregatedUtterancesOutput {
     /// <p>The identifier of the bot that contains the utterances.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the bot alias that contains the utterances. If you specified the bot version, the bot alias ID isn't returned.</p>
+    #[doc(hidden)]
     pub bot_alias_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the bot version that contains the utterances. If you specified the bot alias, the bot version isn't returned.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The identifier of the language and locale that the utterances are in.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The time period used to aggregate the utterance data.</p>
+    #[doc(hidden)]
     pub aggregation_duration: std::option::Option<crate::model::UtteranceAggregationDuration>,
     /// <p>The date and time that the aggregation window begins. Only data collected after this time is returned in the results.</p>
+    #[doc(hidden)]
     pub aggregation_window_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the aggregation window ends. Only data collected between the start time and the end time are returned in the results. </p>
+    #[doc(hidden)]
     pub aggregation_window_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last date and time that the aggregated data was collected. The time period depends on the length of the aggregation window.</p>
     /// <ul>
@@ -4765,11 +4912,14 @@ pub struct ListAggregatedUtterancesOutput {
     /// <li> <p> <b>Days</b> - every 6 hours</p> </li>
     /// <li> <p> <b>Weeks</b> - for a one week time window, every 12 hours; otherwise, every day</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub aggregation_last_refreshed_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Summaries of the aggregated utterance data. Each response contains information about the number of times that the utterance was seen during the time period, whether it was detected or missed, and when it was seen during the time period.</p>
+    #[doc(hidden)]
     pub aggregated_utterances_summaries:
         std::option::Option<std::vec::Vec<crate::model::AggregatedUtterancesSummary>>,
     /// <p>A token that indicates whether there are more results to return in a response to the <code>ListAggregatedUtterances</code> operation. If the <code>nextToken</code> field is present, you send the contents as the <code>nextToken</code> parameter of a <code>ListAggregatedUtterances</code> operation request to get the next page of results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAggregatedUtterancesOutput {
@@ -4855,11 +5005,10 @@ impl std::fmt::Debug for ListAggregatedUtterancesOutput {
         formatter.finish()
     }
 }
-/// See [`ListAggregatedUtterancesOutput`](crate::output::ListAggregatedUtterancesOutput)
+/// See [`ListAggregatedUtterancesOutput`](crate::output::ListAggregatedUtterancesOutput).
 pub mod list_aggregated_utterances_output {
 
-    /// A builder for [`ListAggregatedUtterancesOutput`](crate::output::ListAggregatedUtterancesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAggregatedUtterancesOutput`](crate::output::ListAggregatedUtterancesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -5017,7 +5166,7 @@ pub mod list_aggregated_utterances_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAggregatedUtterancesOutput`](crate::output::ListAggregatedUtterancesOutput)
+        /// Consumes the builder and constructs a [`ListAggregatedUtterancesOutput`](crate::output::ListAggregatedUtterancesOutput).
         pub fn build(self) -> crate::output::ListAggregatedUtterancesOutput {
             crate::output::ListAggregatedUtterancesOutput {
                 bot_id: self.bot_id,
@@ -5035,7 +5184,7 @@ pub mod list_aggregated_utterances_output {
     }
 }
 impl ListAggregatedUtterancesOutput {
-    /// Creates a new builder-style object to manufacture [`ListAggregatedUtterancesOutput`](crate::output::ListAggregatedUtterancesOutput)
+    /// Creates a new builder-style object to manufacture [`ListAggregatedUtterancesOutput`](crate::output::ListAggregatedUtterancesOutput).
     pub fn builder() -> crate::output::list_aggregated_utterances_output::Builder {
         crate::output::list_aggregated_utterances_output::Builder::default()
     }
@@ -5046,28 +5195,40 @@ impl ListAggregatedUtterancesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSlotTypeOutput {
     /// <p>The unique identifier for the slot type.</p>
+    #[doc(hidden)]
     pub slot_type_id: std::option::Option<std::string::String>,
     /// <p>The name specified for the slot type.</p>
+    #[doc(hidden)]
     pub slot_type_name: std::option::Option<std::string::String>,
     /// <p>The description specified for the slot type.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The values that the slot type can take. Includes any synonyms for the slot type values.</p>
+    #[doc(hidden)]
     pub slot_type_values: std::option::Option<std::vec::Vec<crate::model::SlotTypeValue>>,
     /// <p>The strategy that Amazon Lex uses to choose a value from a list of possible values.</p>
+    #[doc(hidden)]
     pub value_selection_setting: std::option::Option<crate::model::SlotValueSelectionSetting>,
     /// <p>The built in slot type used as a parent to this slot type.</p>
+    #[doc(hidden)]
     pub parent_slot_type_signature: std::option::Option<std::string::String>,
     /// <p>The identifier of the bot associated with the slot type.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot associated with the slot type.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The language and locale specified for the slot type.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>A timestamp of the date and time that the slot type was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp of the date and time that the slot type was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Provides information about the external source of the slot type's definition.</p>
+    #[doc(hidden)]
     pub external_source_setting: std::option::Option<crate::model::ExternalSourceSetting>,
 }
 impl DescribeSlotTypeOutput {
@@ -5145,11 +5306,10 @@ impl std::fmt::Debug for DescribeSlotTypeOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeSlotTypeOutput`](crate::output::DescribeSlotTypeOutput)
+/// See [`DescribeSlotTypeOutput`](crate::output::DescribeSlotTypeOutput).
 pub mod describe_slot_type_output {
 
-    /// A builder for [`DescribeSlotTypeOutput`](crate::output::DescribeSlotTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSlotTypeOutput`](crate::output::DescribeSlotTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) slot_type_id: std::option::Option<std::string::String>,
@@ -5322,7 +5482,7 @@ pub mod describe_slot_type_output {
             self.external_source_setting = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSlotTypeOutput`](crate::output::DescribeSlotTypeOutput)
+        /// Consumes the builder and constructs a [`DescribeSlotTypeOutput`](crate::output::DescribeSlotTypeOutput).
         pub fn build(self) -> crate::output::DescribeSlotTypeOutput {
             crate::output::DescribeSlotTypeOutput {
                 slot_type_id: self.slot_type_id,
@@ -5342,7 +5502,7 @@ pub mod describe_slot_type_output {
     }
 }
 impl DescribeSlotTypeOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeSlotTypeOutput`](crate::output::DescribeSlotTypeOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeSlotTypeOutput`](crate::output::DescribeSlotTypeOutput).
     pub fn builder() -> crate::output::describe_slot_type_output::Builder {
         crate::output::describe_slot_type_output::Builder::default()
     }
@@ -5353,31 +5513,44 @@ impl DescribeSlotTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSlotOutput {
     /// <p>The unique identifier generated for the slot.</p>
+    #[doc(hidden)]
     pub slot_id: std::option::Option<std::string::String>,
     /// <p>The name specified for the slot.</p>
+    #[doc(hidden)]
     pub slot_name: std::option::Option<std::string::String>,
     /// <p>The description specified for the slot.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The identifier of the slot type that determines the values entered into the slot.</p>
+    #[doc(hidden)]
     pub slot_type_id: std::option::Option<std::string::String>,
     /// <p>Prompts that Amazon Lex uses to elicit a value for the slot.</p>
+    #[doc(hidden)]
     pub value_elicitation_setting: std::option::Option<crate::model::SlotValueElicitationSetting>,
     /// <p>Whether slot values are shown in Amazon CloudWatch logs. If the value is <code>None</code>, the actual value of the slot is shown in logs.</p>
+    #[doc(hidden)]
     pub obfuscation_setting: std::option::Option<crate::model::ObfuscationSetting>,
     /// <p>The identifier of the bot associated with the slot.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot associated with the slot.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The language and locale specified for the slot.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the intent associated with the slot.</p>
+    #[doc(hidden)]
     pub intent_id: std::option::Option<std::string::String>,
     /// <p>A timestamp of the date and time that the slot was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp of the date and time that the slot was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates whether the slot accepts multiple values in a single utterance.</p>
     /// <p>If the <code>multipleValuesSetting</code> is not set, the default value is <code>false</code>.</p>
+    #[doc(hidden)]
     pub multiple_values_setting: std::option::Option<crate::model::MultipleValuesSetting>,
 }
 impl DescribeSlotOutput {
@@ -5458,11 +5631,10 @@ impl std::fmt::Debug for DescribeSlotOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeSlotOutput`](crate::output::DescribeSlotOutput)
+/// See [`DescribeSlotOutput`](crate::output::DescribeSlotOutput).
 pub mod describe_slot_output {
 
-    /// A builder for [`DescribeSlotOutput`](crate::output::DescribeSlotOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSlotOutput`](crate::output::DescribeSlotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) slot_id: std::option::Option<std::string::String>,
@@ -5635,7 +5807,7 @@ pub mod describe_slot_output {
             self.multiple_values_setting = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSlotOutput`](crate::output::DescribeSlotOutput)
+        /// Consumes the builder and constructs a [`DescribeSlotOutput`](crate::output::DescribeSlotOutput).
         pub fn build(self) -> crate::output::DescribeSlotOutput {
             crate::output::DescribeSlotOutput {
                 slot_id: self.slot_id,
@@ -5656,7 +5828,7 @@ pub mod describe_slot_output {
     }
 }
 impl DescribeSlotOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeSlotOutput`](crate::output::DescribeSlotOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeSlotOutput`](crate::output::DescribeSlotOutput).
     pub fn builder() -> crate::output::describe_slot_output::Builder {
         crate::output::describe_slot_output::Builder::default()
     }
@@ -5667,10 +5839,13 @@ impl DescribeSlotOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeResourcePolicyOutput {
     /// <p>The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The JSON structure that contains the resource policy. For more information about the contents of a JSON policy document, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html"> IAM JSON policy reference </a>.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
     /// <p>The current revision of the resource policy. Use the revision ID to make sure that you are updating the most current version of a resource policy when you add a policy statement to a resource, delete a resource, or update a resource.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl DescribeResourcePolicyOutput {
@@ -5696,11 +5871,10 @@ impl std::fmt::Debug for DescribeResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput)
+/// See [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput).
 pub mod describe_resource_policy_output {
 
-    /// A builder for [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -5738,7 +5912,7 @@ pub mod describe_resource_policy_output {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput).
         pub fn build(self) -> crate::output::DescribeResourcePolicyOutput {
             crate::output::DescribeResourcePolicyOutput {
                 resource_arn: self.resource_arn,
@@ -5749,7 +5923,7 @@ pub mod describe_resource_policy_output {
     }
 }
 impl DescribeResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput).
     pub fn builder() -> crate::output::describe_resource_policy_output::Builder {
         crate::output::describe_resource_policy_output::Builder::default()
     }
@@ -5760,40 +5934,58 @@ impl DescribeResourcePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeIntentOutput {
     /// <p>The unique identifier assigned to the intent when it was created.</p>
+    #[doc(hidden)]
     pub intent_id: std::option::Option<std::string::String>,
     /// <p>The name specified for the intent.</p>
+    #[doc(hidden)]
     pub intent_name: std::option::Option<std::string::String>,
     /// <p>The description of the intent.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The identifier of the built-in intent that this intent is derived from, if any.</p>
+    #[doc(hidden)]
     pub parent_intent_signature: std::option::Option<std::string::String>,
     /// <p>User utterances that trigger this intent.</p>
+    #[doc(hidden)]
     pub sample_utterances: std::option::Option<std::vec::Vec<crate::model::SampleUtterance>>,
     /// <p>The Lambda function called during each turn of a conversation with the intent.</p>
+    #[doc(hidden)]
     pub dialog_code_hook: std::option::Option<crate::model::DialogCodeHookSettings>,
     /// <p>The Lambda function called when the intent is complete and ready for fulfillment.</p>
+    #[doc(hidden)]
     pub fulfillment_code_hook: std::option::Option<crate::model::FulfillmentCodeHookSettings>,
     /// <p>The list that determines the priority that slots should be elicited from the user.</p>
+    #[doc(hidden)]
     pub slot_priorities: std::option::Option<std::vec::Vec<crate::model::SlotPriority>>,
     /// <p>Prompts that Amazon Lex sends to the user to confirm completion of an intent.</p>
+    #[doc(hidden)]
     pub intent_confirmation_setting: std::option::Option<crate::model::IntentConfirmationSetting>,
     /// <p>The response that Amazon Lex sends to when the intent is closed.</p>
+    #[doc(hidden)]
     pub intent_closing_setting: std::option::Option<crate::model::IntentClosingSetting>,
     /// <p>A list of contexts that must be active for the intent to be considered for sending to the user.</p>
+    #[doc(hidden)]
     pub input_contexts: std::option::Option<std::vec::Vec<crate::model::InputContext>>,
     /// <p>A list of contexts that are activated when the intent is fulfilled.</p>
+    #[doc(hidden)]
     pub output_contexts: std::option::Option<std::vec::Vec<crate::model::OutputContext>>,
     /// <p>Configuration information required to use the <code>AMAZON.KendraSearchIntent</code> intent.</p>
+    #[doc(hidden)]
     pub kendra_configuration: std::option::Option<crate::model::KendraConfiguration>,
     /// <p>The identifier of the bot associated with the intent.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot associated with the intent.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The language and locale specified for the intent.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>A timestamp of the date and time that the intent was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp of the date and time that the intent was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeIntentOutput {
@@ -5903,11 +6095,10 @@ impl std::fmt::Debug for DescribeIntentOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeIntentOutput`](crate::output::DescribeIntentOutput)
+/// See [`DescribeIntentOutput`](crate::output::DescribeIntentOutput).
 pub mod describe_intent_output {
 
-    /// A builder for [`DescribeIntentOutput`](crate::output::DescribeIntentOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeIntentOutput`](crate::output::DescribeIntentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) intent_id: std::option::Option<std::string::String>,
@@ -6179,7 +6370,7 @@ pub mod describe_intent_output {
             self.last_updated_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeIntentOutput`](crate::output::DescribeIntentOutput)
+        /// Consumes the builder and constructs a [`DescribeIntentOutput`](crate::output::DescribeIntentOutput).
         pub fn build(self) -> crate::output::DescribeIntentOutput {
             crate::output::DescribeIntentOutput {
                 intent_id: self.intent_id,
@@ -6205,7 +6396,7 @@ pub mod describe_intent_output {
     }
 }
 impl DescribeIntentOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeIntentOutput`](crate::output::DescribeIntentOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeIntentOutput`](crate::output::DescribeIntentOutput).
     pub fn builder() -> crate::output::describe_intent_output::Builder {
         crate::output::describe_intent_output::Builder::default()
     }
@@ -6216,22 +6407,31 @@ impl DescribeIntentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeImportOutput {
     /// <p>The unique identifier of the described import.</p>
+    #[doc(hidden)]
     pub import_id: std::option::Option<std::string::String>,
     /// <p>The specifications of the imported bot, bot locale, or custom vocabulary.</p>
+    #[doc(hidden)]
     pub resource_specification: std::option::Option<crate::model::ImportResourceSpecification>,
     /// <p>The unique identifier that Amazon Lex assigned to the resource created by the import.</p>
+    #[doc(hidden)]
     pub imported_resource_id: std::option::Option<std::string::String>,
     /// <p>The name of the imported resource.</p>
+    #[doc(hidden)]
     pub imported_resource_name: std::option::Option<std::string::String>,
     /// <p>The strategy used when there was a name conflict between the imported resource and an existing resource. When the merge strategy is <code>FailOnConflict</code> existing resources are not overwritten and the import fails.</p>
+    #[doc(hidden)]
     pub merge_strategy: std::option::Option<crate::model::MergeStrategy>,
     /// <p>The status of the import process. When the status is <code>Completed</code> the resource is imported and ready for use.</p>
+    #[doc(hidden)]
     pub import_status: std::option::Option<crate::model::ImportStatus>,
     /// <p>If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the failure.</p>
+    #[doc(hidden)]
     pub failure_reasons: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The date and time that the import was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the import was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeImportOutput {
@@ -6289,11 +6489,10 @@ impl std::fmt::Debug for DescribeImportOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeImportOutput`](crate::output::DescribeImportOutput)
+/// See [`DescribeImportOutput`](crate::output::DescribeImportOutput).
 pub mod describe_import_output {
 
-    /// A builder for [`DescribeImportOutput`](crate::output::DescribeImportOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeImportOutput`](crate::output::DescribeImportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) import_id: std::option::Option<std::string::String>,
@@ -6431,7 +6630,7 @@ pub mod describe_import_output {
             self.last_updated_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeImportOutput`](crate::output::DescribeImportOutput)
+        /// Consumes the builder and constructs a [`DescribeImportOutput`](crate::output::DescribeImportOutput).
         pub fn build(self) -> crate::output::DescribeImportOutput {
             crate::output::DescribeImportOutput {
                 import_id: self.import_id,
@@ -6448,7 +6647,7 @@ pub mod describe_import_output {
     }
 }
 impl DescribeImportOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeImportOutput`](crate::output::DescribeImportOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeImportOutput`](crate::output::DescribeImportOutput).
     pub fn builder() -> crate::output::describe_import_output::Builder {
         crate::output::describe_import_output::Builder::default()
     }
@@ -6459,20 +6658,28 @@ impl DescribeImportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeExportOutput {
     /// <p>The unique identifier of the described export.</p>
+    #[doc(hidden)]
     pub export_id: std::option::Option<std::string::String>,
     /// <p>The bot, bot ID, and optional locale ID of the exported bot or bot locale.</p>
+    #[doc(hidden)]
     pub resource_specification: std::option::Option<crate::model::ExportResourceSpecification>,
     /// <p>The file format used in the files that describe the resource. </p>
+    #[doc(hidden)]
     pub file_format: std::option::Option<crate::model::ImportExportFileFormat>,
     /// <p>The status of the export. When the status is <code>Complete</code> the export archive file is available for download.</p>
+    #[doc(hidden)]
     pub export_status: std::option::Option<crate::model::ExportStatus>,
     /// <p>If the <code>exportStatus</code> is failed, contains one or more reasons why the export could not be completed.</p>
+    #[doc(hidden)]
     pub failure_reasons: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A pre-signed S3 URL that points to the bot or bot locale archive. The URL is only available for 5 minutes after calling the <code>DescribeExport</code> operation.</p>
+    #[doc(hidden)]
     pub download_url: std::option::Option<std::string::String>,
     /// <p>The date and time that the export was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last date and time that the export was updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeExportOutput {
@@ -6525,11 +6732,10 @@ impl std::fmt::Debug for DescribeExportOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeExportOutput`](crate::output::DescribeExportOutput)
+/// See [`DescribeExportOutput`](crate::output::DescribeExportOutput).
 pub mod describe_export_output {
 
-    /// A builder for [`DescribeExportOutput`](crate::output::DescribeExportOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeExportOutput`](crate::output::DescribeExportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_id: std::option::Option<std::string::String>,
@@ -6650,7 +6856,7 @@ pub mod describe_export_output {
             self.last_updated_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeExportOutput`](crate::output::DescribeExportOutput)
+        /// Consumes the builder and constructs a [`DescribeExportOutput`](crate::output::DescribeExportOutput).
         pub fn build(self) -> crate::output::DescribeExportOutput {
             crate::output::DescribeExportOutput {
                 export_id: self.export_id,
@@ -6666,7 +6872,7 @@ pub mod describe_export_output {
     }
 }
 impl DescribeExportOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeExportOutput`](crate::output::DescribeExportOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeExportOutput`](crate::output::DescribeExportOutput).
     pub fn builder() -> crate::output::describe_export_output::Builder {
         crate::output::describe_export_output::Builder::default()
     }
@@ -6677,16 +6883,22 @@ impl DescribeExportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeCustomVocabularyMetadataOutput {
     /// <p>The identifier of the bot that contains the custom vocabulary.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that contains the custom vocabulary to describe.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The locale that contains the custom vocabulary to describe.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The status of the custom vocabulary. If the status is <code>Ready</code> the custom vocabulary is ready to use.</p>
+    #[doc(hidden)]
     pub custom_vocabulary_status: std::option::Option<crate::model::CustomVocabularyStatus>,
     /// <p>The date and time that the custom vocabulary was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the custom vocabulary was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeCustomVocabularyMetadataOutput {
@@ -6729,11 +6941,10 @@ impl std::fmt::Debug for DescribeCustomVocabularyMetadataOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeCustomVocabularyMetadataOutput`](crate::output::DescribeCustomVocabularyMetadataOutput)
+/// See [`DescribeCustomVocabularyMetadataOutput`](crate::output::DescribeCustomVocabularyMetadataOutput).
 pub mod describe_custom_vocabulary_metadata_output {
 
-    /// A builder for [`DescribeCustomVocabularyMetadataOutput`](crate::output::DescribeCustomVocabularyMetadataOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeCustomVocabularyMetadataOutput`](crate::output::DescribeCustomVocabularyMetadataOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -6817,7 +7028,7 @@ pub mod describe_custom_vocabulary_metadata_output {
             self.last_updated_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeCustomVocabularyMetadataOutput`](crate::output::DescribeCustomVocabularyMetadataOutput)
+        /// Consumes the builder and constructs a [`DescribeCustomVocabularyMetadataOutput`](crate::output::DescribeCustomVocabularyMetadataOutput).
         pub fn build(self) -> crate::output::DescribeCustomVocabularyMetadataOutput {
             crate::output::DescribeCustomVocabularyMetadataOutput {
                 bot_id: self.bot_id,
@@ -6831,7 +7042,7 @@ pub mod describe_custom_vocabulary_metadata_output {
     }
 }
 impl DescribeCustomVocabularyMetadataOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeCustomVocabularyMetadataOutput`](crate::output::DescribeCustomVocabularyMetadataOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeCustomVocabularyMetadataOutput`](crate::output::DescribeCustomVocabularyMetadataOutput).
     pub fn builder() -> crate::output::describe_custom_vocabulary_metadata_output::Builder {
         crate::output::describe_custom_vocabulary_metadata_output::Builder::default()
     }
@@ -6842,24 +7053,34 @@ impl DescribeCustomVocabularyMetadataOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBotVersionOutput {
     /// <p>The identifier of the bot that contains the version.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The name of the bot that contains the version.</p>
+    #[doc(hidden)]
     pub bot_name: std::option::Option<std::string::String>,
     /// <p>The version of the bot to describe.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The description specified for the bot.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of an IAM role that has permission to access the bot version.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>Data privacy settings for the bot version.</p>
+    #[doc(hidden)]
     pub data_privacy: std::option::Option<crate::model::DataPrivacy>,
     /// <p>The number of seconds that a session with the bot remains active before it is discarded by Amazon Lex.</p>
+    #[doc(hidden)]
     pub idle_session_ttl_in_seconds: std::option::Option<i32>,
     /// <p>The current status of the bot. When the status is <code>Available</code>, the bot version is ready for use.</p>
+    #[doc(hidden)]
     pub bot_status: std::option::Option<crate::model::BotStatus>,
     /// <p>If the <code>botStatus</code> is <code>Failed</code>, this contains a list of reasons that the version couldn't be built.</p>
+    #[doc(hidden)]
     pub failure_reasons: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A timestamp of the date and time that the bot version was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeBotVersionOutput {
@@ -6923,11 +7144,10 @@ impl std::fmt::Debug for DescribeBotVersionOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeBotVersionOutput`](crate::output::DescribeBotVersionOutput)
+/// See [`DescribeBotVersionOutput`](crate::output::DescribeBotVersionOutput).
 pub mod describe_bot_version_output {
 
-    /// A builder for [`DescribeBotVersionOutput`](crate::output::DescribeBotVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeBotVersionOutput`](crate::output::DescribeBotVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -7060,7 +7280,7 @@ pub mod describe_bot_version_output {
             self.creation_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeBotVersionOutput`](crate::output::DescribeBotVersionOutput)
+        /// Consumes the builder and constructs a [`DescribeBotVersionOutput`](crate::output::DescribeBotVersionOutput).
         pub fn build(self) -> crate::output::DescribeBotVersionOutput {
             crate::output::DescribeBotVersionOutput {
                 bot_id: self.bot_id,
@@ -7078,7 +7298,7 @@ pub mod describe_bot_version_output {
     }
 }
 impl DescribeBotVersionOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeBotVersionOutput`](crate::output::DescribeBotVersionOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeBotVersionOutput`](crate::output::DescribeBotVersionOutput).
     pub fn builder() -> crate::output::describe_bot_version_output::Builder {
         crate::output::describe_bot_version_output::Builder::default()
     }
@@ -7089,26 +7309,37 @@ impl DescribeBotVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBotRecommendationOutput {
     /// <p>The identifier of the bot associated with the bot recommendation.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot associated with the bot recommendation.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The identifier of the language and locale of the bot recommendation to describe.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The status of the bot recommendation. If the status is Failed, then the reasons for the failure are listed in the failureReasons field. </p>
+    #[doc(hidden)]
     pub bot_recommendation_status: std::option::Option<crate::model::BotRecommendationStatus>,
     /// <p>The identifier of the bot recommendation being described.</p>
+    #[doc(hidden)]
     pub bot_recommendation_id: std::option::Option<std::string::String>,
     /// <p>If botRecommendationStatus is Failed, Amazon Lex explains why.</p>
+    #[doc(hidden)]
     pub failure_reasons: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The date and time that the bot recommendation was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the bot recommendation was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The object representing the Amazon S3 bucket containing the transcript, as well as the associated metadata.</p>
+    #[doc(hidden)]
     pub transcript_source_setting: std::option::Option<crate::model::TranscriptSourceSetting>,
     /// <p>The object representing the passwords that were used to encrypt the data related to the bot recommendation results, as well as the KMS key ARN used to encrypt the associated metadata.</p>
+    #[doc(hidden)]
     pub encryption_setting: std::option::Option<crate::model::EncryptionSetting>,
     /// <p>The object representing the URL of the bot definition, the URL of the associated transcript and a statistical summary of the bot recommendation results.</p>
+    #[doc(hidden)]
     pub bot_recommendation_results: std::option::Option<crate::model::BotRecommendationResults>,
 }
 impl DescribeBotRecommendationOutput {
@@ -7183,11 +7414,10 @@ impl std::fmt::Debug for DescribeBotRecommendationOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeBotRecommendationOutput`](crate::output::DescribeBotRecommendationOutput)
+/// See [`DescribeBotRecommendationOutput`](crate::output::DescribeBotRecommendationOutput).
 pub mod describe_bot_recommendation_output {
 
-    /// A builder for [`DescribeBotRecommendationOutput`](crate::output::DescribeBotRecommendationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeBotRecommendationOutput`](crate::output::DescribeBotRecommendationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -7355,7 +7585,7 @@ pub mod describe_bot_recommendation_output {
             self.bot_recommendation_results = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeBotRecommendationOutput`](crate::output::DescribeBotRecommendationOutput)
+        /// Consumes the builder and constructs a [`DescribeBotRecommendationOutput`](crate::output::DescribeBotRecommendationOutput).
         pub fn build(self) -> crate::output::DescribeBotRecommendationOutput {
             crate::output::DescribeBotRecommendationOutput {
                 bot_id: self.bot_id,
@@ -7374,7 +7604,7 @@ pub mod describe_bot_recommendation_output {
     }
 }
 impl DescribeBotRecommendationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeBotRecommendationOutput`](crate::output::DescribeBotRecommendationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeBotRecommendationOutput`](crate::output::DescribeBotRecommendationOutput).
     pub fn builder() -> crate::output::describe_bot_recommendation_output::Builder {
         crate::output::describe_bot_recommendation_output::Builder::default()
     }
@@ -7385,37 +7615,53 @@ impl DescribeBotRecommendationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBotLocaleOutput {
     /// <p>The identifier of the bot associated with the locale.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the version of the bot associated with the locale.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the described locale.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The name of the locale.</p>
+    #[doc(hidden)]
     pub locale_name: std::option::Option<std::string::String>,
     /// <p>The description of the locale.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The confidence threshold where Amazon Lex inserts the <code>AMAZON.FallbackIntent</code> and <code>AMAZON.KendraSearchIntent</code> intents in the list of possible intents for an utterance.</p>
+    #[doc(hidden)]
     pub nlu_intent_confidence_threshold: std::option::Option<f64>,
     /// <p>The Amazon Polly voice Amazon Lex uses for voice interaction with the user.</p>
+    #[doc(hidden)]
     pub voice_settings: std::option::Option<crate::model::VoiceSettings>,
     /// <p>The number of intents defined for the locale.</p>
+    #[doc(hidden)]
     pub intents_count: std::option::Option<i32>,
     /// <p>The number of slot types defined for the locale.</p>
+    #[doc(hidden)]
     pub slot_types_count: std::option::Option<i32>,
     /// <p>The status of the bot. If the status is <code>Failed</code>, the reasons for the failure are listed in the <code>failureReasons</code> field.</p>
+    #[doc(hidden)]
     pub bot_locale_status: std::option::Option<crate::model::BotLocaleStatus>,
     /// <p>if <code>botLocaleStatus</code> is <code>Failed</code>, Amazon Lex explains why it failed to build the bot.</p>
+    #[doc(hidden)]
     pub failure_reasons: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The date and time that the locale was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the locale was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the locale was last submitted for building.</p>
+    #[doc(hidden)]
     pub last_build_submitted_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>History of changes, such as when a locale is used in an alias, that have taken place for the locale.</p>
+    #[doc(hidden)]
     pub bot_locale_history_events:
         std::option::Option<std::vec::Vec<crate::model::BotLocaleHistoryEvent>>,
     /// <p>Recommended actions to take to resolve an error in the <code>failureReasons</code> field.</p>
+    #[doc(hidden)]
     pub recommended_actions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DescribeBotLocaleOutput {
@@ -7516,11 +7762,10 @@ impl std::fmt::Debug for DescribeBotLocaleOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeBotLocaleOutput`](crate::output::DescribeBotLocaleOutput)
+/// See [`DescribeBotLocaleOutput`](crate::output::DescribeBotLocaleOutput).
 pub mod describe_bot_locale_output {
 
-    /// A builder for [`DescribeBotLocaleOutput`](crate::output::DescribeBotLocaleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeBotLocaleOutput`](crate::output::DescribeBotLocaleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -7750,7 +7995,7 @@ pub mod describe_bot_locale_output {
             self.recommended_actions = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeBotLocaleOutput`](crate::output::DescribeBotLocaleOutput)
+        /// Consumes the builder and constructs a [`DescribeBotLocaleOutput`](crate::output::DescribeBotLocaleOutput).
         pub fn build(self) -> crate::output::DescribeBotLocaleOutput {
             crate::output::DescribeBotLocaleOutput {
                 bot_id: self.bot_id,
@@ -7774,7 +8019,7 @@ pub mod describe_bot_locale_output {
     }
 }
 impl DescribeBotLocaleOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeBotLocaleOutput`](crate::output::DescribeBotLocaleOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeBotLocaleOutput`](crate::output::DescribeBotLocaleOutput).
     pub fn builder() -> crate::output::describe_bot_locale_output::Builder {
         crate::output::describe_bot_locale_output::Builder::default()
     }
@@ -7785,31 +8030,43 @@ impl DescribeBotLocaleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBotAliasOutput {
     /// <p>The identifier of the bot alias.</p>
+    #[doc(hidden)]
     pub bot_alias_id: std::option::Option<std::string::String>,
     /// <p>The name of the bot alias.</p>
+    #[doc(hidden)]
     pub bot_alias_name: std::option::Option<std::string::String>,
     /// <p>The description of the bot alias.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The version of the bot associated with the bot alias.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The locale settings that are unique to the alias.</p>
+    #[doc(hidden)]
     pub bot_alias_locale_settings: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::BotAliasLocaleSettings>,
     >,
     /// <p>Specifics of how Amazon Lex logs text and audio conversations with the bot associated with the alias.</p>
+    #[doc(hidden)]
     pub conversation_log_settings: std::option::Option<crate::model::ConversationLogSettings>,
     /// <p>Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.</p>
+    #[doc(hidden)]
     pub sentiment_analysis_settings: std::option::Option<crate::model::SentimentAnalysisSettings>,
     /// <p>A list of events that affect a bot alias. For example, an event is recorded when the version that the alias points to changes.</p>
+    #[doc(hidden)]
     pub bot_alias_history_events:
         std::option::Option<std::vec::Vec<crate::model::BotAliasHistoryEvent>>,
     /// <p>The current status of the alias. When the alias is <code>Available</code>, the alias is ready for use with your bot.</p>
+    #[doc(hidden)]
     pub bot_alias_status: std::option::Option<crate::model::BotAliasStatus>,
     /// <p>The identifier of the bot associated with the bot alias.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>A timestamp of the date and time that the alias was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp of the date and time that the alias was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeBotAliasOutput {
@@ -7893,11 +8150,10 @@ impl std::fmt::Debug for DescribeBotAliasOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeBotAliasOutput`](crate::output::DescribeBotAliasOutput)
+/// See [`DescribeBotAliasOutput`](crate::output::DescribeBotAliasOutput).
 pub mod describe_bot_alias_output {
 
-    /// A builder for [`DescribeBotAliasOutput`](crate::output::DescribeBotAliasOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeBotAliasOutput`](crate::output::DescribeBotAliasOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_alias_id: std::option::Option<std::string::String>,
@@ -8093,7 +8349,7 @@ pub mod describe_bot_alias_output {
             self.last_updated_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeBotAliasOutput`](crate::output::DescribeBotAliasOutput)
+        /// Consumes the builder and constructs a [`DescribeBotAliasOutput`](crate::output::DescribeBotAliasOutput).
         pub fn build(self) -> crate::output::DescribeBotAliasOutput {
             crate::output::DescribeBotAliasOutput {
                 bot_alias_id: self.bot_alias_id,
@@ -8113,7 +8369,7 @@ pub mod describe_bot_alias_output {
     }
 }
 impl DescribeBotAliasOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeBotAliasOutput`](crate::output::DescribeBotAliasOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeBotAliasOutput`](crate::output::DescribeBotAliasOutput).
     pub fn builder() -> crate::output::describe_bot_alias_output::Builder {
         crate::output::describe_bot_alias_output::Builder::default()
     }
@@ -8124,22 +8380,31 @@ impl DescribeBotAliasOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBotOutput {
     /// <p>The unique identifier of the bot.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The name of the bot.</p>
+    #[doc(hidden)]
     pub bot_name: std::option::Option<std::string::String>,
     /// <p>The description of the bot. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of an IAM role that has permission to access the bot.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>Settings for managing data privacy of the bot and its conversations with users.</p>
+    #[doc(hidden)]
     pub data_privacy: std::option::Option<crate::model::DataPrivacy>,
     /// <p>The maximum time in seconds that Amazon Lex retains the data gathered in a conversation.</p>
+    #[doc(hidden)]
     pub idle_session_ttl_in_seconds: std::option::Option<i32>,
     /// <p>The current status of the bot. When the status is <code>Available</code> the bot is ready to be used in conversations with users.</p>
+    #[doc(hidden)]
     pub bot_status: std::option::Option<crate::model::BotStatus>,
     /// <p>A timestamp of the date and time that the bot was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp of the date and time that the bot was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeBotOutput {
@@ -8198,11 +8463,10 @@ impl std::fmt::Debug for DescribeBotOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeBotOutput`](crate::output::DescribeBotOutput)
+/// See [`DescribeBotOutput`](crate::output::DescribeBotOutput).
 pub mod describe_bot_output {
 
-    /// A builder for [`DescribeBotOutput`](crate::output::DescribeBotOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeBotOutput`](crate::output::DescribeBotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -8318,7 +8582,7 @@ pub mod describe_bot_output {
             self.last_updated_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeBotOutput`](crate::output::DescribeBotOutput)
+        /// Consumes the builder and constructs a [`DescribeBotOutput`](crate::output::DescribeBotOutput).
         pub fn build(self) -> crate::output::DescribeBotOutput {
             crate::output::DescribeBotOutput {
                 bot_id: self.bot_id,
@@ -8335,7 +8599,7 @@ pub mod describe_bot_output {
     }
 }
 impl DescribeBotOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeBotOutput`](crate::output::DescribeBotOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeBotOutput`](crate::output::DescribeBotOutput).
     pub fn builder() -> crate::output::describe_bot_output::Builder {
         crate::output::describe_bot_output::Builder::default()
     }
@@ -8351,22 +8615,21 @@ impl std::fmt::Debug for DeleteUtterancesOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteUtterancesOutput`](crate::output::DeleteUtterancesOutput)
+/// See [`DeleteUtterancesOutput`](crate::output::DeleteUtterancesOutput).
 pub mod delete_utterances_output {
 
-    /// A builder for [`DeleteUtterancesOutput`](crate::output::DeleteUtterancesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteUtterancesOutput`](crate::output::DeleteUtterancesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteUtterancesOutput`](crate::output::DeleteUtterancesOutput)
+        /// Consumes the builder and constructs a [`DeleteUtterancesOutput`](crate::output::DeleteUtterancesOutput).
         pub fn build(self) -> crate::output::DeleteUtterancesOutput {
             crate::output::DeleteUtterancesOutput {}
         }
     }
 }
 impl DeleteUtterancesOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteUtterancesOutput`](crate::output::DeleteUtterancesOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteUtterancesOutput`](crate::output::DeleteUtterancesOutput).
     pub fn builder() -> crate::output::delete_utterances_output::Builder {
         crate::output::delete_utterances_output::Builder::default()
     }
@@ -8382,22 +8645,21 @@ impl std::fmt::Debug for DeleteSlotTypeOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSlotTypeOutput`](crate::output::DeleteSlotTypeOutput)
+/// See [`DeleteSlotTypeOutput`](crate::output::DeleteSlotTypeOutput).
 pub mod delete_slot_type_output {
 
-    /// A builder for [`DeleteSlotTypeOutput`](crate::output::DeleteSlotTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSlotTypeOutput`](crate::output::DeleteSlotTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteSlotTypeOutput`](crate::output::DeleteSlotTypeOutput)
+        /// Consumes the builder and constructs a [`DeleteSlotTypeOutput`](crate::output::DeleteSlotTypeOutput).
         pub fn build(self) -> crate::output::DeleteSlotTypeOutput {
             crate::output::DeleteSlotTypeOutput {}
         }
     }
 }
 impl DeleteSlotTypeOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSlotTypeOutput`](crate::output::DeleteSlotTypeOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSlotTypeOutput`](crate::output::DeleteSlotTypeOutput).
     pub fn builder() -> crate::output::delete_slot_type_output::Builder {
         crate::output::delete_slot_type_output::Builder::default()
     }
@@ -8413,22 +8675,21 @@ impl std::fmt::Debug for DeleteSlotOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSlotOutput`](crate::output::DeleteSlotOutput)
+/// See [`DeleteSlotOutput`](crate::output::DeleteSlotOutput).
 pub mod delete_slot_output {
 
-    /// A builder for [`DeleteSlotOutput`](crate::output::DeleteSlotOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSlotOutput`](crate::output::DeleteSlotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteSlotOutput`](crate::output::DeleteSlotOutput)
+        /// Consumes the builder and constructs a [`DeleteSlotOutput`](crate::output::DeleteSlotOutput).
         pub fn build(self) -> crate::output::DeleteSlotOutput {
             crate::output::DeleteSlotOutput {}
         }
     }
 }
 impl DeleteSlotOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSlotOutput`](crate::output::DeleteSlotOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSlotOutput`](crate::output::DeleteSlotOutput).
     pub fn builder() -> crate::output::delete_slot_output::Builder {
         crate::output::delete_slot_output::Builder::default()
     }
@@ -8439,8 +8700,10 @@ impl DeleteSlotOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteResourcePolicyStatementOutput {
     /// <p>The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy statement was removed from.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The current revision of the resource policy. Use the revision ID to make sure that you are updating the most current version of a resource policy when you add a policy statement to a resource, delete a resource, or update a resource.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl DeleteResourcePolicyStatementOutput {
@@ -8461,11 +8724,10 @@ impl std::fmt::Debug for DeleteResourcePolicyStatementOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteResourcePolicyStatementOutput`](crate::output::DeleteResourcePolicyStatementOutput)
+/// See [`DeleteResourcePolicyStatementOutput`](crate::output::DeleteResourcePolicyStatementOutput).
 pub mod delete_resource_policy_statement_output {
 
-    /// A builder for [`DeleteResourcePolicyStatementOutput`](crate::output::DeleteResourcePolicyStatementOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteResourcePolicyStatementOutput`](crate::output::DeleteResourcePolicyStatementOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -8492,7 +8754,7 @@ pub mod delete_resource_policy_statement_output {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteResourcePolicyStatementOutput`](crate::output::DeleteResourcePolicyStatementOutput)
+        /// Consumes the builder and constructs a [`DeleteResourcePolicyStatementOutput`](crate::output::DeleteResourcePolicyStatementOutput).
         pub fn build(self) -> crate::output::DeleteResourcePolicyStatementOutput {
             crate::output::DeleteResourcePolicyStatementOutput {
                 resource_arn: self.resource_arn,
@@ -8502,7 +8764,7 @@ pub mod delete_resource_policy_statement_output {
     }
 }
 impl DeleteResourcePolicyStatementOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteResourcePolicyStatementOutput`](crate::output::DeleteResourcePolicyStatementOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteResourcePolicyStatementOutput`](crate::output::DeleteResourcePolicyStatementOutput).
     pub fn builder() -> crate::output::delete_resource_policy_statement_output::Builder {
         crate::output::delete_resource_policy_statement_output::Builder::default()
     }
@@ -8513,8 +8775,10 @@ impl DeleteResourcePolicyStatementOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteResourcePolicyOutput {
     /// <p>The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy was deleted from.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The current revision of the resource policy. Use the revision ID to make sure that you are updating the most current version of a resource policy when you add a policy statement to a resource, delete a resource, or update a resource.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl DeleteResourcePolicyOutput {
@@ -8535,11 +8799,10 @@ impl std::fmt::Debug for DeleteResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
+/// See [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
 pub mod delete_resource_policy_output {
 
-    /// A builder for [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -8566,7 +8829,7 @@ pub mod delete_resource_policy_output {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
         pub fn build(self) -> crate::output::DeleteResourcePolicyOutput {
             crate::output::DeleteResourcePolicyOutput {
                 resource_arn: self.resource_arn,
@@ -8576,7 +8839,7 @@ pub mod delete_resource_policy_output {
     }
 }
 impl DeleteResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
     pub fn builder() -> crate::output::delete_resource_policy_output::Builder {
         crate::output::delete_resource_policy_output::Builder::default()
     }
@@ -8592,22 +8855,21 @@ impl std::fmt::Debug for DeleteIntentOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteIntentOutput`](crate::output::DeleteIntentOutput)
+/// See [`DeleteIntentOutput`](crate::output::DeleteIntentOutput).
 pub mod delete_intent_output {
 
-    /// A builder for [`DeleteIntentOutput`](crate::output::DeleteIntentOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteIntentOutput`](crate::output::DeleteIntentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteIntentOutput`](crate::output::DeleteIntentOutput)
+        /// Consumes the builder and constructs a [`DeleteIntentOutput`](crate::output::DeleteIntentOutput).
         pub fn build(self) -> crate::output::DeleteIntentOutput {
             crate::output::DeleteIntentOutput {}
         }
     }
 }
 impl DeleteIntentOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteIntentOutput`](crate::output::DeleteIntentOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteIntentOutput`](crate::output::DeleteIntentOutput).
     pub fn builder() -> crate::output::delete_intent_output::Builder {
         crate::output::delete_intent_output::Builder::default()
     }
@@ -8618,8 +8880,10 @@ impl DeleteIntentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteImportOutput {
     /// <p>The unique identifier of the deleted import.</p>
+    #[doc(hidden)]
     pub import_id: std::option::Option<std::string::String>,
     /// <p>The current status of the deletion. When the deletion is complete, the import will no longer be returned by the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListImports.html">ListImports</a> operation and calls to the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeImport.html">DescribeImport</a> operation with the import identifier will fail.</p>
+    #[doc(hidden)]
     pub import_status: std::option::Option<crate::model::ImportStatus>,
 }
 impl DeleteImportOutput {
@@ -8640,11 +8904,10 @@ impl std::fmt::Debug for DeleteImportOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteImportOutput`](crate::output::DeleteImportOutput)
+/// See [`DeleteImportOutput`](crate::output::DeleteImportOutput).
 pub mod delete_import_output {
 
-    /// A builder for [`DeleteImportOutput`](crate::output::DeleteImportOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteImportOutput`](crate::output::DeleteImportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) import_id: std::option::Option<std::string::String>,
@@ -8674,7 +8937,7 @@ pub mod delete_import_output {
             self.import_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteImportOutput`](crate::output::DeleteImportOutput)
+        /// Consumes the builder and constructs a [`DeleteImportOutput`](crate::output::DeleteImportOutput).
         pub fn build(self) -> crate::output::DeleteImportOutput {
             crate::output::DeleteImportOutput {
                 import_id: self.import_id,
@@ -8684,7 +8947,7 @@ pub mod delete_import_output {
     }
 }
 impl DeleteImportOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteImportOutput`](crate::output::DeleteImportOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteImportOutput`](crate::output::DeleteImportOutput).
     pub fn builder() -> crate::output::delete_import_output::Builder {
         crate::output::delete_import_output::Builder::default()
     }
@@ -8695,8 +8958,10 @@ impl DeleteImportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteExportOutput {
     /// <p>The unique identifier of the deleted export.</p>
+    #[doc(hidden)]
     pub export_id: std::option::Option<std::string::String>,
     /// <p>The current status of the deletion. When the deletion is complete, the export will no longer be returned by the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListExports.html">ListExports</a> operation and calls to the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html"> DescribeExport</a> operation with the export identifier will fail.</p>
+    #[doc(hidden)]
     pub export_status: std::option::Option<crate::model::ExportStatus>,
 }
 impl DeleteExportOutput {
@@ -8717,11 +8982,10 @@ impl std::fmt::Debug for DeleteExportOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteExportOutput`](crate::output::DeleteExportOutput)
+/// See [`DeleteExportOutput`](crate::output::DeleteExportOutput).
 pub mod delete_export_output {
 
-    /// A builder for [`DeleteExportOutput`](crate::output::DeleteExportOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteExportOutput`](crate::output::DeleteExportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_id: std::option::Option<std::string::String>,
@@ -8751,7 +9015,7 @@ pub mod delete_export_output {
             self.export_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteExportOutput`](crate::output::DeleteExportOutput)
+        /// Consumes the builder and constructs a [`DeleteExportOutput`](crate::output::DeleteExportOutput).
         pub fn build(self) -> crate::output::DeleteExportOutput {
             crate::output::DeleteExportOutput {
                 export_id: self.export_id,
@@ -8761,7 +9025,7 @@ pub mod delete_export_output {
     }
 }
 impl DeleteExportOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteExportOutput`](crate::output::DeleteExportOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteExportOutput`](crate::output::DeleteExportOutput).
     pub fn builder() -> crate::output::delete_export_output::Builder {
         crate::output::delete_export_output::Builder::default()
     }
@@ -8772,12 +9036,16 @@ impl DeleteExportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteCustomVocabularyOutput {
     /// <p>The identifier of the bot that the custom vocabulary was removed from.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that the custom vocabulary was removed from.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The locale identifier for the locale that the custom vocabulary was removed from.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The status of removing the custom vocabulary.</p>
+    #[doc(hidden)]
     pub custom_vocabulary_status: std::option::Option<crate::model::CustomVocabularyStatus>,
 }
 impl DeleteCustomVocabularyOutput {
@@ -8810,11 +9078,10 @@ impl std::fmt::Debug for DeleteCustomVocabularyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteCustomVocabularyOutput`](crate::output::DeleteCustomVocabularyOutput)
+/// See [`DeleteCustomVocabularyOutput`](crate::output::DeleteCustomVocabularyOutput).
 pub mod delete_custom_vocabulary_output {
 
-    /// A builder for [`DeleteCustomVocabularyOutput`](crate::output::DeleteCustomVocabularyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteCustomVocabularyOutput`](crate::output::DeleteCustomVocabularyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -8870,7 +9137,7 @@ pub mod delete_custom_vocabulary_output {
             self.custom_vocabulary_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteCustomVocabularyOutput`](crate::output::DeleteCustomVocabularyOutput)
+        /// Consumes the builder and constructs a [`DeleteCustomVocabularyOutput`](crate::output::DeleteCustomVocabularyOutput).
         pub fn build(self) -> crate::output::DeleteCustomVocabularyOutput {
             crate::output::DeleteCustomVocabularyOutput {
                 bot_id: self.bot_id,
@@ -8882,7 +9149,7 @@ pub mod delete_custom_vocabulary_output {
     }
 }
 impl DeleteCustomVocabularyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteCustomVocabularyOutput`](crate::output::DeleteCustomVocabularyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteCustomVocabularyOutput`](crate::output::DeleteCustomVocabularyOutput).
     pub fn builder() -> crate::output::delete_custom_vocabulary_output::Builder {
         crate::output::delete_custom_vocabulary_output::Builder::default()
     }
@@ -8893,10 +9160,13 @@ impl DeleteCustomVocabularyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteBotVersionOutput {
     /// <p>The identifier of the bot that is being deleted.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that is being deleted.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The current status of the bot. </p>
+    #[doc(hidden)]
     pub bot_status: std::option::Option<crate::model::BotStatus>,
 }
 impl DeleteBotVersionOutput {
@@ -8922,11 +9192,10 @@ impl std::fmt::Debug for DeleteBotVersionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBotVersionOutput`](crate::output::DeleteBotVersionOutput)
+/// See [`DeleteBotVersionOutput`](crate::output::DeleteBotVersionOutput).
 pub mod delete_bot_version_output {
 
-    /// A builder for [`DeleteBotVersionOutput`](crate::output::DeleteBotVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBotVersionOutput`](crate::output::DeleteBotVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -8967,7 +9236,7 @@ pub mod delete_bot_version_output {
             self.bot_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteBotVersionOutput`](crate::output::DeleteBotVersionOutput)
+        /// Consumes the builder and constructs a [`DeleteBotVersionOutput`](crate::output::DeleteBotVersionOutput).
         pub fn build(self) -> crate::output::DeleteBotVersionOutput {
             crate::output::DeleteBotVersionOutput {
                 bot_id: self.bot_id,
@@ -8978,7 +9247,7 @@ pub mod delete_bot_version_output {
     }
 }
 impl DeleteBotVersionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBotVersionOutput`](crate::output::DeleteBotVersionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBotVersionOutput`](crate::output::DeleteBotVersionOutput).
     pub fn builder() -> crate::output::delete_bot_version_output::Builder {
         crate::output::delete_bot_version_output::Builder::default()
     }
@@ -8989,12 +9258,16 @@ impl DeleteBotVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteBotLocaleOutput {
     /// <p>The identifier of the bot that contained the deleted locale.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that contained the deleted locale.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The language and locale of the deleted locale.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The status of deleting the bot locale. The locale first enters the <code>Deleting</code> status. Once the locale is deleted it no longer appears in the list of locales for the bot.</p>
+    #[doc(hidden)]
     pub bot_locale_status: std::option::Option<crate::model::BotLocaleStatus>,
 }
 impl DeleteBotLocaleOutput {
@@ -9025,11 +9298,10 @@ impl std::fmt::Debug for DeleteBotLocaleOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBotLocaleOutput`](crate::output::DeleteBotLocaleOutput)
+/// See [`DeleteBotLocaleOutput`](crate::output::DeleteBotLocaleOutput).
 pub mod delete_bot_locale_output {
 
-    /// A builder for [`DeleteBotLocaleOutput`](crate::output::DeleteBotLocaleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBotLocaleOutput`](crate::output::DeleteBotLocaleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -9081,7 +9353,7 @@ pub mod delete_bot_locale_output {
             self.bot_locale_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteBotLocaleOutput`](crate::output::DeleteBotLocaleOutput)
+        /// Consumes the builder and constructs a [`DeleteBotLocaleOutput`](crate::output::DeleteBotLocaleOutput).
         pub fn build(self) -> crate::output::DeleteBotLocaleOutput {
             crate::output::DeleteBotLocaleOutput {
                 bot_id: self.bot_id,
@@ -9093,7 +9365,7 @@ pub mod delete_bot_locale_output {
     }
 }
 impl DeleteBotLocaleOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBotLocaleOutput`](crate::output::DeleteBotLocaleOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBotLocaleOutput`](crate::output::DeleteBotLocaleOutput).
     pub fn builder() -> crate::output::delete_bot_locale_output::Builder {
         crate::output::delete_bot_locale_output::Builder::default()
     }
@@ -9104,10 +9376,13 @@ impl DeleteBotLocaleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteBotAliasOutput {
     /// <p>The unique identifier of the bot alias to delete.</p>
+    #[doc(hidden)]
     pub bot_alias_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the bot that contains the alias to delete.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The current status of the alias. The status is <code>Deleting</code> while the alias is in the process of being deleted. Once the alias is deleted, it will no longer appear in the list of aliases returned by the <code>ListBotAliases</code> operation.</p>
+    #[doc(hidden)]
     pub bot_alias_status: std::option::Option<crate::model::BotAliasStatus>,
 }
 impl DeleteBotAliasOutput {
@@ -9133,11 +9408,10 @@ impl std::fmt::Debug for DeleteBotAliasOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBotAliasOutput`](crate::output::DeleteBotAliasOutput)
+/// See [`DeleteBotAliasOutput`](crate::output::DeleteBotAliasOutput).
 pub mod delete_bot_alias_output {
 
-    /// A builder for [`DeleteBotAliasOutput`](crate::output::DeleteBotAliasOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBotAliasOutput`](crate::output::DeleteBotAliasOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_alias_id: std::option::Option<std::string::String>,
@@ -9178,7 +9452,7 @@ pub mod delete_bot_alias_output {
             self.bot_alias_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteBotAliasOutput`](crate::output::DeleteBotAliasOutput)
+        /// Consumes the builder and constructs a [`DeleteBotAliasOutput`](crate::output::DeleteBotAliasOutput).
         pub fn build(self) -> crate::output::DeleteBotAliasOutput {
             crate::output::DeleteBotAliasOutput {
                 bot_alias_id: self.bot_alias_id,
@@ -9189,7 +9463,7 @@ pub mod delete_bot_alias_output {
     }
 }
 impl DeleteBotAliasOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBotAliasOutput`](crate::output::DeleteBotAliasOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBotAliasOutput`](crate::output::DeleteBotAliasOutput).
     pub fn builder() -> crate::output::delete_bot_alias_output::Builder {
         crate::output::delete_bot_alias_output::Builder::default()
     }
@@ -9200,8 +9474,10 @@ impl DeleteBotAliasOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteBotOutput {
     /// <p>The unique identifier of the bot that Amazon Lex is deleting.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The current status of the bot. The status is <code>Deleting</code> while the bot and its associated resources are being deleted.</p>
+    #[doc(hidden)]
     pub bot_status: std::option::Option<crate::model::BotStatus>,
 }
 impl DeleteBotOutput {
@@ -9222,11 +9498,10 @@ impl std::fmt::Debug for DeleteBotOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBotOutput`](crate::output::DeleteBotOutput)
+/// See [`DeleteBotOutput`](crate::output::DeleteBotOutput).
 pub mod delete_bot_output {
 
-    /// A builder for [`DeleteBotOutput`](crate::output::DeleteBotOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBotOutput`](crate::output::DeleteBotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -9256,7 +9531,7 @@ pub mod delete_bot_output {
             self.bot_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteBotOutput`](crate::output::DeleteBotOutput)
+        /// Consumes the builder and constructs a [`DeleteBotOutput`](crate::output::DeleteBotOutput).
         pub fn build(self) -> crate::output::DeleteBotOutput {
             crate::output::DeleteBotOutput {
                 bot_id: self.bot_id,
@@ -9266,7 +9541,7 @@ pub mod delete_bot_output {
     }
 }
 impl DeleteBotOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBotOutput`](crate::output::DeleteBotOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBotOutput`](crate::output::DeleteBotOutput).
     pub fn builder() -> crate::output::delete_bot_output::Builder {
         crate::output::delete_bot_output::Builder::default()
     }
@@ -9277,8 +9552,10 @@ impl DeleteBotOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateUploadUrlOutput {
     /// <p>An identifier for a unique import job. Use it when you call the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_StartImport.html">StartImport</a> operation.</p>
+    #[doc(hidden)]
     pub import_id: std::option::Option<std::string::String>,
     /// <p>A pre-signed S3 write URL. Upload the zip archive file that contains the definition of your bot or bot locale.</p>
+    #[doc(hidden)]
     pub upload_url: std::option::Option<std::string::String>,
 }
 impl CreateUploadUrlOutput {
@@ -9299,11 +9576,10 @@ impl std::fmt::Debug for CreateUploadUrlOutput {
         formatter.finish()
     }
 }
-/// See [`CreateUploadUrlOutput`](crate::output::CreateUploadUrlOutput)
+/// See [`CreateUploadUrlOutput`](crate::output::CreateUploadUrlOutput).
 pub mod create_upload_url_output {
 
-    /// A builder for [`CreateUploadUrlOutput`](crate::output::CreateUploadUrlOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateUploadUrlOutput`](crate::output::CreateUploadUrlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) import_id: std::option::Option<std::string::String>,
@@ -9330,7 +9606,7 @@ pub mod create_upload_url_output {
             self.upload_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateUploadUrlOutput`](crate::output::CreateUploadUrlOutput)
+        /// Consumes the builder and constructs a [`CreateUploadUrlOutput`](crate::output::CreateUploadUrlOutput).
         pub fn build(self) -> crate::output::CreateUploadUrlOutput {
             crate::output::CreateUploadUrlOutput {
                 import_id: self.import_id,
@@ -9340,7 +9616,7 @@ pub mod create_upload_url_output {
     }
 }
 impl CreateUploadUrlOutput {
-    /// Creates a new builder-style object to manufacture [`CreateUploadUrlOutput`](crate::output::CreateUploadUrlOutput)
+    /// Creates a new builder-style object to manufacture [`CreateUploadUrlOutput`](crate::output::CreateUploadUrlOutput).
     pub fn builder() -> crate::output::create_upload_url_output::Builder {
         crate::output::create_upload_url_output::Builder::default()
     }
@@ -9351,26 +9627,37 @@ impl CreateUploadUrlOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSlotTypeOutput {
     /// <p>The unique identifier assigned to the slot type. Use this to identify the slot type in the <code>UpdateSlotType</code> and <code>DeleteSlotType</code> operations.</p>
+    #[doc(hidden)]
     pub slot_type_id: std::option::Option<std::string::String>,
     /// <p>The name specified for the slot type.</p>
+    #[doc(hidden)]
     pub slot_type_name: std::option::Option<std::string::String>,
     /// <p>The description specified for the slot type.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The list of values that the slot type can assume.</p>
+    #[doc(hidden)]
     pub slot_type_values: std::option::Option<std::vec::Vec<crate::model::SlotTypeValue>>,
     /// <p>The strategy that Amazon Lex uses to select a value from the list of possible values.</p>
+    #[doc(hidden)]
     pub value_selection_setting: std::option::Option<crate::model::SlotValueSelectionSetting>,
     /// <p>The signature of the base slot type specified for the slot type.</p>
+    #[doc(hidden)]
     pub parent_slot_type_signature: std::option::Option<std::string::String>,
     /// <p>The identifier for the bot associated with the slot type.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot associated with the slot type.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The specified language and local specified for the slot type.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>A timestamp of the date and time that the slot type was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The type of external information used to create the slot type.</p>
+    #[doc(hidden)]
     pub external_source_setting: std::option::Option<crate::model::ExternalSourceSetting>,
 }
 impl CreateSlotTypeOutput {
@@ -9443,11 +9730,10 @@ impl std::fmt::Debug for CreateSlotTypeOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSlotTypeOutput`](crate::output::CreateSlotTypeOutput)
+/// See [`CreateSlotTypeOutput`](crate::output::CreateSlotTypeOutput).
 pub mod create_slot_type_output {
 
-    /// A builder for [`CreateSlotTypeOutput`](crate::output::CreateSlotTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSlotTypeOutput`](crate::output::CreateSlotTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) slot_type_id: std::option::Option<std::string::String>,
@@ -9606,7 +9892,7 @@ pub mod create_slot_type_output {
             self.external_source_setting = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSlotTypeOutput`](crate::output::CreateSlotTypeOutput)
+        /// Consumes the builder and constructs a [`CreateSlotTypeOutput`](crate::output::CreateSlotTypeOutput).
         pub fn build(self) -> crate::output::CreateSlotTypeOutput {
             crate::output::CreateSlotTypeOutput {
                 slot_type_id: self.slot_type_id,
@@ -9625,7 +9911,7 @@ pub mod create_slot_type_output {
     }
 }
 impl CreateSlotTypeOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSlotTypeOutput`](crate::output::CreateSlotTypeOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSlotTypeOutput`](crate::output::CreateSlotTypeOutput).
     pub fn builder() -> crate::output::create_slot_type_output::Builder {
         crate::output::create_slot_type_output::Builder::default()
     }
@@ -9636,28 +9922,40 @@ impl CreateSlotTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSlotOutput {
     /// <p>The unique identifier associated with the slot. Use this to identify the slot when you update or delete it.</p>
+    #[doc(hidden)]
     pub slot_id: std::option::Option<std::string::String>,
     /// <p>The name specified for the slot.</p>
+    #[doc(hidden)]
     pub slot_name: std::option::Option<std::string::String>,
     /// <p>The description associated with the slot.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the slot type associated with this slot.</p>
+    #[doc(hidden)]
     pub slot_type_id: std::option::Option<std::string::String>,
     /// <p>The value elicitation settings specified for the slot.</p>
+    #[doc(hidden)]
     pub value_elicitation_setting: std::option::Option<crate::model::SlotValueElicitationSetting>,
     /// <p>Indicates whether the slot is configured to obfuscate values in Amazon CloudWatch logs.</p>
+    #[doc(hidden)]
     pub obfuscation_setting: std::option::Option<crate::model::ObfuscationSetting>,
     /// <p>The unique identifier of the bot associated with the slot.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot associated with the slot.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The language and local specified for the slot.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the intent associated with the slot.</p>
+    #[doc(hidden)]
     pub intent_id: std::option::Option<std::string::String>,
     /// <p>The timestamp of the date and time that the slot was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates whether the slot returns multiple values in one response.</p>
+    #[doc(hidden)]
     pub multiple_values_setting: std::option::Option<crate::model::MultipleValuesSetting>,
 }
 impl CreateSlotOutput {
@@ -9732,11 +10030,10 @@ impl std::fmt::Debug for CreateSlotOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSlotOutput`](crate::output::CreateSlotOutput)
+/// See [`CreateSlotOutput`](crate::output::CreateSlotOutput).
 pub mod create_slot_output {
 
-    /// A builder for [`CreateSlotOutput`](crate::output::CreateSlotOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSlotOutput`](crate::output::CreateSlotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) slot_id: std::option::Option<std::string::String>,
@@ -9893,7 +10190,7 @@ pub mod create_slot_output {
             self.multiple_values_setting = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSlotOutput`](crate::output::CreateSlotOutput)
+        /// Consumes the builder and constructs a [`CreateSlotOutput`](crate::output::CreateSlotOutput).
         pub fn build(self) -> crate::output::CreateSlotOutput {
             crate::output::CreateSlotOutput {
                 slot_id: self.slot_id,
@@ -9913,7 +10210,7 @@ pub mod create_slot_output {
     }
 }
 impl CreateSlotOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSlotOutput`](crate::output::CreateSlotOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSlotOutput`](crate::output::CreateSlotOutput).
     pub fn builder() -> crate::output::create_slot_output::Builder {
         crate::output::create_slot_output::Builder::default()
     }
@@ -9924,8 +10221,10 @@ impl CreateSlotOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateResourcePolicyStatementOutput {
     /// <p>The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The current revision of the resource policy. Use the revision ID to make sure that you are updating the most current version of a resource policy when you add a policy statement to a resource, delete a resource, or update a resource.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl CreateResourcePolicyStatementOutput {
@@ -9946,11 +10245,10 @@ impl std::fmt::Debug for CreateResourcePolicyStatementOutput {
         formatter.finish()
     }
 }
-/// See [`CreateResourcePolicyStatementOutput`](crate::output::CreateResourcePolicyStatementOutput)
+/// See [`CreateResourcePolicyStatementOutput`](crate::output::CreateResourcePolicyStatementOutput).
 pub mod create_resource_policy_statement_output {
 
-    /// A builder for [`CreateResourcePolicyStatementOutput`](crate::output::CreateResourcePolicyStatementOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateResourcePolicyStatementOutput`](crate::output::CreateResourcePolicyStatementOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -9977,7 +10275,7 @@ pub mod create_resource_policy_statement_output {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateResourcePolicyStatementOutput`](crate::output::CreateResourcePolicyStatementOutput)
+        /// Consumes the builder and constructs a [`CreateResourcePolicyStatementOutput`](crate::output::CreateResourcePolicyStatementOutput).
         pub fn build(self) -> crate::output::CreateResourcePolicyStatementOutput {
             crate::output::CreateResourcePolicyStatementOutput {
                 resource_arn: self.resource_arn,
@@ -9987,7 +10285,7 @@ pub mod create_resource_policy_statement_output {
     }
 }
 impl CreateResourcePolicyStatementOutput {
-    /// Creates a new builder-style object to manufacture [`CreateResourcePolicyStatementOutput`](crate::output::CreateResourcePolicyStatementOutput)
+    /// Creates a new builder-style object to manufacture [`CreateResourcePolicyStatementOutput`](crate::output::CreateResourcePolicyStatementOutput).
     pub fn builder() -> crate::output::create_resource_policy_statement_output::Builder {
         crate::output::create_resource_policy_statement_output::Builder::default()
     }
@@ -9998,8 +10296,10 @@ impl CreateResourcePolicyStatementOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateResourcePolicyOutput {
     /// <p>The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy was attached to.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The current revision of the resource policy. Use the revision ID to make sure that you are updating the most current version of a resource policy when you add a policy statement to a resource, delete a resource, or update a resource.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl CreateResourcePolicyOutput {
@@ -10020,11 +10320,10 @@ impl std::fmt::Debug for CreateResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`CreateResourcePolicyOutput`](crate::output::CreateResourcePolicyOutput)
+/// See [`CreateResourcePolicyOutput`](crate::output::CreateResourcePolicyOutput).
 pub mod create_resource_policy_output {
 
-    /// A builder for [`CreateResourcePolicyOutput`](crate::output::CreateResourcePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateResourcePolicyOutput`](crate::output::CreateResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -10051,7 +10350,7 @@ pub mod create_resource_policy_output {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateResourcePolicyOutput`](crate::output::CreateResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`CreateResourcePolicyOutput`](crate::output::CreateResourcePolicyOutput).
         pub fn build(self) -> crate::output::CreateResourcePolicyOutput {
             crate::output::CreateResourcePolicyOutput {
                 resource_arn: self.resource_arn,
@@ -10061,7 +10360,7 @@ pub mod create_resource_policy_output {
     }
 }
 impl CreateResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`CreateResourcePolicyOutput`](crate::output::CreateResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`CreateResourcePolicyOutput`](crate::output::CreateResourcePolicyOutput).
     pub fn builder() -> crate::output::create_resource_policy_output::Builder {
         crate::output::create_resource_policy_output::Builder::default()
     }
@@ -10072,36 +10371,52 @@ impl CreateResourcePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateIntentOutput {
     /// <p>A unique identifier for the intent.</p>
+    #[doc(hidden)]
     pub intent_id: std::option::Option<std::string::String>,
     /// <p>The name specified for the intent.</p>
+    #[doc(hidden)]
     pub intent_name: std::option::Option<std::string::String>,
     /// <p>The description specified for the intent.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The signature of the parent intent specified for the intent.</p>
+    #[doc(hidden)]
     pub parent_intent_signature: std::option::Option<std::string::String>,
     /// <p>The sample utterances specified for the intent.</p>
+    #[doc(hidden)]
     pub sample_utterances: std::option::Option<std::vec::Vec<crate::model::SampleUtterance>>,
     /// <p>The dialog Lambda function specified for the intent.</p>
+    #[doc(hidden)]
     pub dialog_code_hook: std::option::Option<crate::model::DialogCodeHookSettings>,
     /// <p>The fulfillment Lambda function specified for the intent.</p>
+    #[doc(hidden)]
     pub fulfillment_code_hook: std::option::Option<crate::model::FulfillmentCodeHookSettings>,
     /// <p>The confirmation setting specified for the intent.</p>
+    #[doc(hidden)]
     pub intent_confirmation_setting: std::option::Option<crate::model::IntentConfirmationSetting>,
     /// <p>The closing setting specified for the intent.</p>
+    #[doc(hidden)]
     pub intent_closing_setting: std::option::Option<crate::model::IntentClosingSetting>,
     /// <p>The list of input contexts specified for the intent.</p>
+    #[doc(hidden)]
     pub input_contexts: std::option::Option<std::vec::Vec<crate::model::InputContext>>,
     /// <p>The list of output contexts specified for the intent.</p>
+    #[doc(hidden)]
     pub output_contexts: std::option::Option<std::vec::Vec<crate::model::OutputContext>>,
     /// <p>Configuration for searching a Amazon Kendra index specified for the intent.</p>
+    #[doc(hidden)]
     pub kendra_configuration: std::option::Option<crate::model::KendraConfiguration>,
     /// <p>The identifier of the bot associated with the intent.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the version of the bot associated with the intent.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The locale that the intent is specified to use.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>A timestamp of the date and time that the intent was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CreateIntentOutput {
@@ -10201,11 +10516,10 @@ impl std::fmt::Debug for CreateIntentOutput {
         formatter.finish()
     }
 }
-/// See [`CreateIntentOutput`](crate::output::CreateIntentOutput)
+/// See [`CreateIntentOutput`](crate::output::CreateIntentOutput).
 pub mod create_intent_output {
 
-    /// A builder for [`CreateIntentOutput`](crate::output::CreateIntentOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateIntentOutput`](crate::output::CreateIntentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) intent_id: std::option::Option<std::string::String>,
@@ -10443,7 +10757,7 @@ pub mod create_intent_output {
             self.creation_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateIntentOutput`](crate::output::CreateIntentOutput)
+        /// Consumes the builder and constructs a [`CreateIntentOutput`](crate::output::CreateIntentOutput).
         pub fn build(self) -> crate::output::CreateIntentOutput {
             crate::output::CreateIntentOutput {
                 intent_id: self.intent_id,
@@ -10467,7 +10781,7 @@ pub mod create_intent_output {
     }
 }
 impl CreateIntentOutput {
-    /// Creates a new builder-style object to manufacture [`CreateIntentOutput`](crate::output::CreateIntentOutput)
+    /// Creates a new builder-style object to manufacture [`CreateIntentOutput`](crate::output::CreateIntentOutput).
     pub fn builder() -> crate::output::create_intent_output::Builder {
         crate::output::create_intent_output::Builder::default()
     }
@@ -10478,14 +10792,19 @@ impl CreateIntentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateExportOutput {
     /// <p>An identifier for a specific request to create an export.</p>
+    #[doc(hidden)]
     pub export_id: std::option::Option<std::string::String>,
     /// <p>A description of the type of resource that was exported, either a bot or a bot locale.</p>
+    #[doc(hidden)]
     pub resource_specification: std::option::Option<crate::model::ExportResourceSpecification>,
     /// <p>The file format used for the bot or bot locale definition files.</p>
+    #[doc(hidden)]
     pub file_format: std::option::Option<crate::model::ImportExportFileFormat>,
-    /// <p>The status of the export. When the status is <code>Completed</code>, you can use the <a href="https://docs.aws.amazon.com/latest/dg/API_DescribeExport.html">DescribeExport</a> operation to get the pre-signed S3 URL link to your exported bot or bot locale.</p>
+    /// <p>The status of the export. When the status is <code>Completed</code>, you can use the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html">DescribeExport</a> operation to get the pre-signed S3 URL link to your exported bot or bot locale.</p>
+    #[doc(hidden)]
     pub export_status: std::option::Option<crate::model::ExportStatus>,
     /// <p>The date and time that the request to export a bot was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CreateExportOutput {
@@ -10503,7 +10822,7 @@ impl CreateExportOutput {
     pub fn file_format(&self) -> std::option::Option<&crate::model::ImportExportFileFormat> {
         self.file_format.as_ref()
     }
-    /// <p>The status of the export. When the status is <code>Completed</code>, you can use the <a href="https://docs.aws.amazon.com/latest/dg/API_DescribeExport.html">DescribeExport</a> operation to get the pre-signed S3 URL link to your exported bot or bot locale.</p>
+    /// <p>The status of the export. When the status is <code>Completed</code>, you can use the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html">DescribeExport</a> operation to get the pre-signed S3 URL link to your exported bot or bot locale.</p>
     pub fn export_status(&self) -> std::option::Option<&crate::model::ExportStatus> {
         self.export_status.as_ref()
     }
@@ -10523,11 +10842,10 @@ impl std::fmt::Debug for CreateExportOutput {
         formatter.finish()
     }
 }
-/// See [`CreateExportOutput`](crate::output::CreateExportOutput)
+/// See [`CreateExportOutput`](crate::output::CreateExportOutput).
 pub mod create_export_output {
 
-    /// A builder for [`CreateExportOutput`](crate::output::CreateExportOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateExportOutput`](crate::output::CreateExportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_id: std::option::Option<std::string::String>,
@@ -10577,12 +10895,12 @@ pub mod create_export_output {
             self.file_format = input;
             self
         }
-        /// <p>The status of the export. When the status is <code>Completed</code>, you can use the <a href="https://docs.aws.amazon.com/latest/dg/API_DescribeExport.html">DescribeExport</a> operation to get the pre-signed S3 URL link to your exported bot or bot locale.</p>
+        /// <p>The status of the export. When the status is <code>Completed</code>, you can use the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html">DescribeExport</a> operation to get the pre-signed S3 URL link to your exported bot or bot locale.</p>
         pub fn export_status(mut self, input: crate::model::ExportStatus) -> Self {
             self.export_status = Some(input);
             self
         }
-        /// <p>The status of the export. When the status is <code>Completed</code>, you can use the <a href="https://docs.aws.amazon.com/latest/dg/API_DescribeExport.html">DescribeExport</a> operation to get the pre-signed S3 URL link to your exported bot or bot locale.</p>
+        /// <p>The status of the export. When the status is <code>Completed</code>, you can use the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html">DescribeExport</a> operation to get the pre-signed S3 URL link to your exported bot or bot locale.</p>
         pub fn set_export_status(
             mut self,
             input: std::option::Option<crate::model::ExportStatus>,
@@ -10603,7 +10921,7 @@ pub mod create_export_output {
             self.creation_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateExportOutput`](crate::output::CreateExportOutput)
+        /// Consumes the builder and constructs a [`CreateExportOutput`](crate::output::CreateExportOutput).
         pub fn build(self) -> crate::output::CreateExportOutput {
             crate::output::CreateExportOutput {
                 export_id: self.export_id,
@@ -10616,7 +10934,7 @@ pub mod create_export_output {
     }
 }
 impl CreateExportOutput {
-    /// Creates a new builder-style object to manufacture [`CreateExportOutput`](crate::output::CreateExportOutput)
+    /// Creates a new builder-style object to manufacture [`CreateExportOutput`](crate::output::CreateExportOutput).
     pub fn builder() -> crate::output::create_export_output::Builder {
         crate::output::create_export_output::Builder::default()
     }
@@ -10627,18 +10945,24 @@ impl CreateExportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBotVersionOutput {
     /// <p>The bot identifier specified in the request.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The description of the version specified in the request.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The version number assigned to the version.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The source versions used for each locale in the new version.</p>
+    #[doc(hidden)]
     pub bot_version_locale_specification: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::BotVersionLocaleDetails>,
     >,
     /// <p>When you send a request to create or update a bot, Amazon Lex sets the status response element to <code>Creating</code>. After Amazon Lex builds the bot, it sets status to <code>Available</code>. If Amazon Lex can't build the bot, it sets status to <code>Failed</code>.</p>
+    #[doc(hidden)]
     pub bot_status: std::option::Option<crate::model::BotStatus>,
     /// <p>A timestamp of the date and time that the version was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CreateBotVersionOutput {
@@ -10686,11 +11010,10 @@ impl std::fmt::Debug for CreateBotVersionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateBotVersionOutput`](crate::output::CreateBotVersionOutput)
+/// See [`CreateBotVersionOutput`](crate::output::CreateBotVersionOutput).
 pub mod create_bot_version_output {
 
-    /// A builder for [`CreateBotVersionOutput`](crate::output::CreateBotVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateBotVersionOutput`](crate::output::CreateBotVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -10787,7 +11110,7 @@ pub mod create_bot_version_output {
             self.creation_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBotVersionOutput`](crate::output::CreateBotVersionOutput)
+        /// Consumes the builder and constructs a [`CreateBotVersionOutput`](crate::output::CreateBotVersionOutput).
         pub fn build(self) -> crate::output::CreateBotVersionOutput {
             crate::output::CreateBotVersionOutput {
                 bot_id: self.bot_id,
@@ -10801,7 +11124,7 @@ pub mod create_bot_version_output {
     }
 }
 impl CreateBotVersionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateBotVersionOutput`](crate::output::CreateBotVersionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateBotVersionOutput`](crate::output::CreateBotVersionOutput).
     pub fn builder() -> crate::output::create_bot_version_output::Builder {
         crate::output::create_bot_version_output::Builder::default()
     }
@@ -10812,25 +11135,34 @@ impl CreateBotVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBotLocaleOutput {
     /// <p>The specified bot identifier.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The specified bot version.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The specified locale name.</p>
+    #[doc(hidden)]
     pub locale_name: std::option::Option<std::string::String>,
     /// <p>The specified locale identifier.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The specified description of the bot locale.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The specified confidence threshold for inserting the <code>AMAZON.FallbackIntent</code> and <code>AMAZON.KendraSearchIntent</code> intents.</p>
+    #[doc(hidden)]
     pub nlu_intent_confidence_threshold: std::option::Option<f64>,
     /// <p>The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.</p>
+    #[doc(hidden)]
     pub voice_settings: std::option::Option<crate::model::VoiceSettings>,
     /// <p>The status of the bot.</p>
     /// <p>When the status is <code>Creating</code> the bot locale is being configured. When the status is <code>Building</code> Amazon Lex is building the bot for testing and use.</p>
     /// <p>If the status of the bot is <code>ReadyExpressTesting</code>, you can test the bot using the exact utterances specified in the bots' intents. When the bot is ready for full testing or to run, the status is <code>Built</code>.</p>
     /// <p>If there was a problem with building the bot, the status is <code>Failed</code>. If the bot was saved but not built, the status is <code>NotBuilt</code>.</p>
+    #[doc(hidden)]
     pub bot_locale_status: std::option::Option<crate::model::BotLocaleStatus>,
     /// <p>A timestamp specifying the date and time that the bot locale was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CreateBotLocaleOutput {
@@ -10892,11 +11224,10 @@ impl std::fmt::Debug for CreateBotLocaleOutput {
         formatter.finish()
     }
 }
-/// See [`CreateBotLocaleOutput`](crate::output::CreateBotLocaleOutput)
+/// See [`CreateBotLocaleOutput`](crate::output::CreateBotLocaleOutput).
 pub mod create_bot_locale_output {
 
-    /// A builder for [`CreateBotLocaleOutput`](crate::output::CreateBotLocaleOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateBotLocaleOutput`](crate::output::CreateBotLocaleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -11018,7 +11349,7 @@ pub mod create_bot_locale_output {
             self.creation_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBotLocaleOutput`](crate::output::CreateBotLocaleOutput)
+        /// Consumes the builder and constructs a [`CreateBotLocaleOutput`](crate::output::CreateBotLocaleOutput).
         pub fn build(self) -> crate::output::CreateBotLocaleOutput {
             crate::output::CreateBotLocaleOutput {
                 bot_id: self.bot_id,
@@ -11035,7 +11366,7 @@ pub mod create_bot_locale_output {
     }
 }
 impl CreateBotLocaleOutput {
-    /// Creates a new builder-style object to manufacture [`CreateBotLocaleOutput`](crate::output::CreateBotLocaleOutput)
+    /// Creates a new builder-style object to manufacture [`CreateBotLocaleOutput`](crate::output::CreateBotLocaleOutput).
     pub fn builder() -> crate::output::create_bot_locale_output::Builder {
         crate::output::create_bot_locale_output::Builder::default()
     }
@@ -11046,28 +11377,39 @@ impl CreateBotLocaleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBotAliasOutput {
     /// <p>The unique identifier of the bot alias.</p>
+    #[doc(hidden)]
     pub bot_alias_id: std::option::Option<std::string::String>,
     /// <p>The name specified for the bot alias.</p>
+    #[doc(hidden)]
     pub bot_alias_name: std::option::Option<std::string::String>,
     /// <p>The description specified for the bot alias.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The version of the bot associated with this alias.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>Configuration information for a specific locale.</p>
+    #[doc(hidden)]
     pub bot_alias_locale_settings: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::BotAliasLocaleSettings>,
     >,
     /// <p>The conversation log settings specified for the alias.</p>
+    #[doc(hidden)]
     pub conversation_log_settings: std::option::Option<crate::model::ConversationLogSettings>,
     /// <p>Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.</p>
+    #[doc(hidden)]
     pub sentiment_analysis_settings: std::option::Option<crate::model::SentimentAnalysisSettings>,
     /// <p>The current status of the alias. The alias is first put into the <code>Creating</code> state. When the alias is ready to be used, it is put into the <code>Available</code> state. You can use the <code>DescribeBotAlias</code> operation to get the current state of an alias.</p>
+    #[doc(hidden)]
     pub bot_alias_status: std::option::Option<crate::model::BotAliasStatus>,
     /// <p>The unique identifier of the bot that this alias applies to.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>A Unix timestamp indicating the date and time that the bot alias was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of tags associated with the bot alias.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -11148,11 +11490,10 @@ impl std::fmt::Debug for CreateBotAliasOutput {
         formatter.finish()
     }
 }
-/// See [`CreateBotAliasOutput`](crate::output::CreateBotAliasOutput)
+/// See [`CreateBotAliasOutput`](crate::output::CreateBotAliasOutput).
 pub mod create_bot_alias_output {
 
-    /// A builder for [`CreateBotAliasOutput`](crate::output::CreateBotAliasOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateBotAliasOutput`](crate::output::CreateBotAliasOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_alias_id: std::option::Option<std::string::String>,
@@ -11338,7 +11679,7 @@ pub mod create_bot_alias_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBotAliasOutput`](crate::output::CreateBotAliasOutput)
+        /// Consumes the builder and constructs a [`CreateBotAliasOutput`](crate::output::CreateBotAliasOutput).
         pub fn build(self) -> crate::output::CreateBotAliasOutput {
             crate::output::CreateBotAliasOutput {
                 bot_alias_id: self.bot_alias_id,
@@ -11357,7 +11698,7 @@ pub mod create_bot_alias_output {
     }
 }
 impl CreateBotAliasOutput {
-    /// Creates a new builder-style object to manufacture [`CreateBotAliasOutput`](crate::output::CreateBotAliasOutput)
+    /// Creates a new builder-style object to manufacture [`CreateBotAliasOutput`](crate::output::CreateBotAliasOutput).
     pub fn builder() -> crate::output::create_bot_alias_output::Builder {
         crate::output::create_bot_alias_output::Builder::default()
     }
@@ -11368,25 +11709,35 @@ impl CreateBotAliasOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBotOutput {
     /// <p>A unique identifier for a particular bot. You use this to identify the bot when you call other Amazon Lex API operations.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The name specified for the bot.</p>
+    #[doc(hidden)]
     pub bot_name: std::option::Option<std::string::String>,
     /// <p>The description specified for the bot.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The IAM role specified for the bot.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The data privacy settings specified for the bot.</p>
+    #[doc(hidden)]
     pub data_privacy: std::option::Option<crate::model::DataPrivacy>,
     /// <p>The session idle time specified for the bot.</p>
+    #[doc(hidden)]
     pub idle_session_ttl_in_seconds: std::option::Option<i32>,
     /// <p>Shows the current status of the bot. The bot is first in the <code>Creating</code> status. Once the bot is read for use, it changes to the <code>Available</code> status. After the bot is created, you can use the <code>Draft</code> version of the bot.</p>
+    #[doc(hidden)]
     pub bot_status: std::option::Option<crate::model::BotStatus>,
     /// <p>A timestamp indicating the date and time that the bot was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of tags associated with the bot.</p>
+    #[doc(hidden)]
     pub bot_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A list of tags associated with the test alias for the bot.</p>
+    #[doc(hidden)]
     pub test_bot_alias_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -11457,11 +11808,10 @@ impl std::fmt::Debug for CreateBotOutput {
         formatter.finish()
     }
 }
-/// See [`CreateBotOutput`](crate::output::CreateBotOutput)
+/// See [`CreateBotOutput`](crate::output::CreateBotOutput).
 pub mod create_bot_output {
 
-    /// A builder for [`CreateBotOutput`](crate::output::CreateBotOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateBotOutput`](crate::output::CreateBotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -11619,7 +11969,7 @@ pub mod create_bot_output {
             self.test_bot_alias_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBotOutput`](crate::output::CreateBotOutput)
+        /// Consumes the builder and constructs a [`CreateBotOutput`](crate::output::CreateBotOutput).
         pub fn build(self) -> crate::output::CreateBotOutput {
             crate::output::CreateBotOutput {
                 bot_id: self.bot_id,
@@ -11637,7 +11987,7 @@ pub mod create_bot_output {
     }
 }
 impl CreateBotOutput {
-    /// Creates a new builder-style object to manufacture [`CreateBotOutput`](crate::output::CreateBotOutput)
+    /// Creates a new builder-style object to manufacture [`CreateBotOutput`](crate::output::CreateBotOutput).
     pub fn builder() -> crate::output::create_bot_output::Builder {
         crate::output::create_bot_output::Builder::default()
     }
@@ -11648,14 +11998,19 @@ impl CreateBotOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BuildBotLocaleOutput {
     /// <p>The identifier of the specified bot.</p>
+    #[doc(hidden)]
     pub bot_id: std::option::Option<std::string::String>,
     /// <p>The version of the bot that was built. This is only the draft version of the bot.</p>
+    #[doc(hidden)]
     pub bot_version: std::option::Option<std::string::String>,
     /// <p>The language and locale specified of where the bot can be used.</p>
+    #[doc(hidden)]
     pub locale_id: std::option::Option<std::string::String>,
     /// <p>The bot's build status. When the status is <code>ReadyExpressTesting</code> you can test the bot using the utterances defined for the intents and slot types. When the status is <code>Built</code>, the bot is ready for use and can be tested using any utterance.</p>
+    #[doc(hidden)]
     pub bot_locale_status: std::option::Option<crate::model::BotLocaleStatus>,
     /// <p>A timestamp indicating the date and time that the bot was last built for this locale.</p>
+    #[doc(hidden)]
     pub last_build_submitted_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl BuildBotLocaleOutput {
@@ -11696,11 +12051,10 @@ impl std::fmt::Debug for BuildBotLocaleOutput {
         formatter.finish()
     }
 }
-/// See [`BuildBotLocaleOutput`](crate::output::BuildBotLocaleOutput)
+/// See [`BuildBotLocaleOutput`](crate::output::BuildBotLocaleOutput).
 pub mod build_bot_locale_output {
 
-    /// A builder for [`BuildBotLocaleOutput`](crate::output::BuildBotLocaleOutput)
-    #[non_exhaustive]
+    /// A builder for [`BuildBotLocaleOutput`](crate::output::BuildBotLocaleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bot_id: std::option::Option<std::string::String>,
@@ -11766,7 +12120,7 @@ pub mod build_bot_locale_output {
             self.last_build_submitted_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`BuildBotLocaleOutput`](crate::output::BuildBotLocaleOutput)
+        /// Consumes the builder and constructs a [`BuildBotLocaleOutput`](crate::output::BuildBotLocaleOutput).
         pub fn build(self) -> crate::output::BuildBotLocaleOutput {
             crate::output::BuildBotLocaleOutput {
                 bot_id: self.bot_id,
@@ -11779,7 +12133,7 @@ pub mod build_bot_locale_output {
     }
 }
 impl BuildBotLocaleOutput {
-    /// Creates a new builder-style object to manufacture [`BuildBotLocaleOutput`](crate::output::BuildBotLocaleOutput)
+    /// Creates a new builder-style object to manufacture [`BuildBotLocaleOutput`](crate::output::BuildBotLocaleOutput).
     pub fn builder() -> crate::output::build_bot_locale_output::Builder {
         crate::output::build_bot_locale_output::Builder::default()
     }

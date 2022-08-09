@@ -63,8 +63,10 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct User {
     /// <p>Contains the user’s user name value. The length limit is 128 characters. This value can consist of letters, accented characters, symbols, numbers, and punctuation. The characters <code>&lt;&gt;;:%</code> are excluded. This value is specified at the time the user is created and stored as an attribute of the user object in the identity store.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The identifier for a user in the identity store.</p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
 }
 impl User {
@@ -85,11 +87,10 @@ impl std::fmt::Debug for User {
         formatter.finish()
     }
 }
-/// See [`User`](crate::model::User)
+/// See [`User`](crate::model::User).
 pub mod user {
 
-    /// A builder for [`User`](crate::model::User)
-    #[non_exhaustive]
+    /// A builder for [`User`](crate::model::User).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -116,7 +117,7 @@ pub mod user {
             self.user_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`User`](crate::model::User)
+        /// Consumes the builder and constructs a [`User`](crate::model::User).
         pub fn build(self) -> crate::model::User {
             crate::model::User {
                 user_name: self.user_name,
@@ -126,19 +127,21 @@ pub mod user {
     }
 }
 impl User {
-    /// Creates a new builder-style object to manufacture [`User`](crate::model::User)
+    /// Creates a new builder-style object to manufacture [`User`](crate::model::User).
     pub fn builder() -> crate::model::user::Builder {
         crate::model::user::Builder::default()
     }
 }
 
-/// <p>A query filter used by <code>ListUsers</code> and <code>ListGroup</code>. This filter object provides the attribute name and attribute value to search users or groups.</p>
+/// <p>A query filter used by <code>ListUsers</code> and <code>ListGroups</code>. This filter object provides the attribute name and attribute value to search users or groups.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
     /// <p>The attribute path that is used to specify which attribute name to search. Length limit is 255 characters. For example, <code>UserName</code> is a valid attribute path for the <code>ListUsers</code> API, and <code>DisplayName</code> is a valid attribute path for the <code>ListGroups</code> API.</p>
+    #[doc(hidden)]
     pub attribute_path: std::option::Option<std::string::String>,
     /// <p>Represents the data for an attribute. Each attribute value is described as a name-value pair. </p>
+    #[doc(hidden)]
     pub attribute_value: std::option::Option<std::string::String>,
 }
 impl Filter {
@@ -159,11 +162,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_path: std::option::Option<std::string::String>,
@@ -196,7 +198,7 @@ pub mod filter {
             self.attribute_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 attribute_path: self.attribute_path,
@@ -206,7 +208,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -217,8 +219,10 @@ impl Filter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Group {
     /// <p>The identifier for a group in the identity store.</p>
+    #[doc(hidden)]
     pub group_id: std::option::Option<std::string::String>,
     /// <p>Contains the group’s display name value. The length limit is 1,024 characters. This value can consist of letters, accented characters, symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in this attribute. The characters <code>&lt;&gt;;:%</code> are excluded. This value is specified at the time the group is created and stored as an attribute of the group object in the identity store.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
 }
 impl Group {
@@ -239,11 +243,10 @@ impl std::fmt::Debug for Group {
         formatter.finish()
     }
 }
-/// See [`Group`](crate::model::Group)
+/// See [`Group`](crate::model::Group).
 pub mod group {
 
-    /// A builder for [`Group`](crate::model::Group)
-    #[non_exhaustive]
+    /// A builder for [`Group`](crate::model::Group).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_id: std::option::Option<std::string::String>,
@@ -270,7 +273,7 @@ pub mod group {
             self.display_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Group`](crate::model::Group)
+        /// Consumes the builder and constructs a [`Group`](crate::model::Group).
         pub fn build(self) -> crate::model::Group {
             crate::model::Group {
                 group_id: self.group_id,
@@ -280,7 +283,7 @@ pub mod group {
     }
 }
 impl Group {
-    /// Creates a new builder-style object to manufacture [`Group`](crate::model::Group)
+    /// Creates a new builder-style object to manufacture [`Group`](crate::model::Group).
     pub fn builder() -> crate::model::group::Builder {
         crate::model::group::Builder::default()
     }

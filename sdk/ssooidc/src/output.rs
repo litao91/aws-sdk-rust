@@ -4,16 +4,22 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartDeviceAuthorizationOutput {
     /// <p>The short-lived code that is used by the device when polling for a session token.</p>
+    #[doc(hidden)]
     pub device_code: std::option::Option<std::string::String>,
     /// <p>A one-time user verification code. This is needed to authorize an in-use device.</p>
+    #[doc(hidden)]
     pub user_code: std::option::Option<std::string::String>,
     /// <p>The URI of the verification page that takes the <code>userCode</code> to authorize the device.</p>
+    #[doc(hidden)]
     pub verification_uri: std::option::Option<std::string::String>,
     /// <p>An alternate URL that the client can use to automatically launch a browser. This process skips the manual step in which the user visits the verification page and enters their code.</p>
+    #[doc(hidden)]
     pub verification_uri_complete: std::option::Option<std::string::String>,
     /// <p>Indicates the number of seconds in which the verification code will become invalid.</p>
+    #[doc(hidden)]
     pub expires_in: i32,
     /// <p>Indicates the number of seconds the client must wait between attempts when polling for a session.</p>
+    #[doc(hidden)]
     pub interval: i32,
 }
 impl StartDeviceAuthorizationOutput {
@@ -54,11 +60,10 @@ impl std::fmt::Debug for StartDeviceAuthorizationOutput {
         formatter.finish()
     }
 }
-/// See [`StartDeviceAuthorizationOutput`](crate::output::StartDeviceAuthorizationOutput)
+/// See [`StartDeviceAuthorizationOutput`](crate::output::StartDeviceAuthorizationOutput).
 pub mod start_device_authorization_output {
 
-    /// A builder for [`StartDeviceAuthorizationOutput`](crate::output::StartDeviceAuthorizationOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartDeviceAuthorizationOutput`](crate::output::StartDeviceAuthorizationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_code: std::option::Option<std::string::String>,
@@ -135,7 +140,7 @@ pub mod start_device_authorization_output {
             self.interval = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartDeviceAuthorizationOutput`](crate::output::StartDeviceAuthorizationOutput)
+        /// Consumes the builder and constructs a [`StartDeviceAuthorizationOutput`](crate::output::StartDeviceAuthorizationOutput).
         pub fn build(self) -> crate::output::StartDeviceAuthorizationOutput {
             crate::output::StartDeviceAuthorizationOutput {
                 device_code: self.device_code,
@@ -149,7 +154,7 @@ pub mod start_device_authorization_output {
     }
 }
 impl StartDeviceAuthorizationOutput {
-    /// Creates a new builder-style object to manufacture [`StartDeviceAuthorizationOutput`](crate::output::StartDeviceAuthorizationOutput)
+    /// Creates a new builder-style object to manufacture [`StartDeviceAuthorizationOutput`](crate::output::StartDeviceAuthorizationOutput).
     pub fn builder() -> crate::output::start_device_authorization_output::Builder {
         crate::output::start_device_authorization_output::Builder::default()
     }
@@ -160,16 +165,22 @@ impl StartDeviceAuthorizationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegisterClientOutput {
     /// <p>The unique identifier string for each client. This client uses this identifier to get authenticated by the service in subsequent calls.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>A secret string generated for the client. The client will use this string to get authenticated by the service in subsequent calls.</p>
+    #[doc(hidden)]
     pub client_secret: std::option::Option<std::string::String>,
     /// <p>Indicates the time at which the <code>clientId</code> and <code>clientSecret</code> were issued.</p>
+    #[doc(hidden)]
     pub client_id_issued_at: i64,
     /// <p>Indicates the time at which the <code>clientId</code> and <code>clientSecret</code> will become invalid.</p>
+    #[doc(hidden)]
     pub client_secret_expires_at: i64,
     /// <p>The endpoint where the client can request authorization.</p>
+    #[doc(hidden)]
     pub authorization_endpoint: std::option::Option<std::string::String>,
     /// <p>The endpoint where the client can get an access token.</p>
+    #[doc(hidden)]
     pub token_endpoint: std::option::Option<std::string::String>,
 }
 impl RegisterClientOutput {
@@ -210,11 +221,10 @@ impl std::fmt::Debug for RegisterClientOutput {
         formatter.finish()
     }
 }
-/// See [`RegisterClientOutput`](crate::output::RegisterClientOutput)
+/// See [`RegisterClientOutput`](crate::output::RegisterClientOutput).
 pub mod register_client_output {
 
-    /// A builder for [`RegisterClientOutput`](crate::output::RegisterClientOutput)
-    #[non_exhaustive]
+    /// A builder for [`RegisterClientOutput`](crate::output::RegisterClientOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_id: std::option::Option<std::string::String>,
@@ -294,7 +304,7 @@ pub mod register_client_output {
             self.token_endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegisterClientOutput`](crate::output::RegisterClientOutput)
+        /// Consumes the builder and constructs a [`RegisterClientOutput`](crate::output::RegisterClientOutput).
         pub fn build(self) -> crate::output::RegisterClientOutput {
             crate::output::RegisterClientOutput {
                 client_id: self.client_id,
@@ -308,7 +318,7 @@ pub mod register_client_output {
     }
 }
 impl RegisterClientOutput {
-    /// Creates a new builder-style object to manufacture [`RegisterClientOutput`](crate::output::RegisterClientOutput)
+    /// Creates a new builder-style object to manufacture [`RegisterClientOutput`](crate::output::RegisterClientOutput).
     pub fn builder() -> crate::output::register_client_output::Builder {
         crate::output::register_client_output::Builder::default()
     }
@@ -318,19 +328,26 @@ impl RegisterClientOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateTokenOutput {
-    /// <p>An opaque token to access AWS SSO resources assigned to a user.</p>
+    /// <p>An opaque token to access Amazon Web Services SSO resources assigned to a user.</p>
+    #[doc(hidden)]
     pub access_token: std::option::Option<std::string::String>,
     /// <p>Used to notify the client that the returned token is an access token. The supported type is <code>BearerToken</code>.</p>
+    #[doc(hidden)]
     pub token_type: std::option::Option<std::string::String>,
     /// <p>Indicates the time in seconds when an access token will expire.</p>
+    #[doc(hidden)]
     pub expires_in: i32,
+    /// <p>Currently, <code>refreshToken</code> is not yet implemented and is not supported. For more information about the features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for Using this Guide</i> in the <a href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC API Reference</a>.</p>
     /// <p>A token that, if present, can be used to refresh a previously issued access token that might have expired.</p>
+    #[doc(hidden)]
     pub refresh_token: std::option::Option<std::string::String>,
+    /// <p>Currently, <code>idToken</code> is not yet implemented and is not supported. For more information about the features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for Using this Guide</i> in the <a href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC API Reference</a>.</p>
     /// <p>The identifier of the user that associated with the access token, if present.</p>
+    #[doc(hidden)]
     pub id_token: std::option::Option<std::string::String>,
 }
 impl CreateTokenOutput {
-    /// <p>An opaque token to access AWS SSO resources assigned to a user.</p>
+    /// <p>An opaque token to access Amazon Web Services SSO resources assigned to a user.</p>
     pub fn access_token(&self) -> std::option::Option<&str> {
         self.access_token.as_deref()
     }
@@ -342,10 +359,12 @@ impl CreateTokenOutput {
     pub fn expires_in(&self) -> i32 {
         self.expires_in
     }
+    /// <p>Currently, <code>refreshToken</code> is not yet implemented and is not supported. For more information about the features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for Using this Guide</i> in the <a href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC API Reference</a>.</p>
     /// <p>A token that, if present, can be used to refresh a previously issued access token that might have expired.</p>
     pub fn refresh_token(&self) -> std::option::Option<&str> {
         self.refresh_token.as_deref()
     }
+    /// <p>Currently, <code>idToken</code> is not yet implemented and is not supported. For more information about the features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for Using this Guide</i> in the <a href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC API Reference</a>.</p>
     /// <p>The identifier of the user that associated with the access token, if present.</p>
     pub fn id_token(&self) -> std::option::Option<&str> {
         self.id_token.as_deref()
@@ -362,11 +381,10 @@ impl std::fmt::Debug for CreateTokenOutput {
         formatter.finish()
     }
 }
-/// See [`CreateTokenOutput`](crate::output::CreateTokenOutput)
+/// See [`CreateTokenOutput`](crate::output::CreateTokenOutput).
 pub mod create_token_output {
 
-    /// A builder for [`CreateTokenOutput`](crate::output::CreateTokenOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateTokenOutput`](crate::output::CreateTokenOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_token: std::option::Option<std::string::String>,
@@ -376,12 +394,12 @@ pub mod create_token_output {
         pub(crate) id_token: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>An opaque token to access AWS SSO resources assigned to a user.</p>
+        /// <p>An opaque token to access Amazon Web Services SSO resources assigned to a user.</p>
         pub fn access_token(mut self, input: impl Into<std::string::String>) -> Self {
             self.access_token = Some(input.into());
             self
         }
-        /// <p>An opaque token to access AWS SSO resources assigned to a user.</p>
+        /// <p>An opaque token to access Amazon Web Services SSO resources assigned to a user.</p>
         pub fn set_access_token(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.access_token = input;
             self
@@ -406,11 +424,13 @@ pub mod create_token_output {
             self.expires_in = input;
             self
         }
+        /// <p>Currently, <code>refreshToken</code> is not yet implemented and is not supported. For more information about the features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for Using this Guide</i> in the <a href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC API Reference</a>.</p>
         /// <p>A token that, if present, can be used to refresh a previously issued access token that might have expired.</p>
         pub fn refresh_token(mut self, input: impl Into<std::string::String>) -> Self {
             self.refresh_token = Some(input.into());
             self
         }
+        /// <p>Currently, <code>refreshToken</code> is not yet implemented and is not supported. For more information about the features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for Using this Guide</i> in the <a href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC API Reference</a>.</p>
         /// <p>A token that, if present, can be used to refresh a previously issued access token that might have expired.</p>
         pub fn set_refresh_token(
             mut self,
@@ -419,17 +439,19 @@ pub mod create_token_output {
             self.refresh_token = input;
             self
         }
+        /// <p>Currently, <code>idToken</code> is not yet implemented and is not supported. For more information about the features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for Using this Guide</i> in the <a href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC API Reference</a>.</p>
         /// <p>The identifier of the user that associated with the access token, if present.</p>
         pub fn id_token(mut self, input: impl Into<std::string::String>) -> Self {
             self.id_token = Some(input.into());
             self
         }
+        /// <p>Currently, <code>idToken</code> is not yet implemented and is not supported. For more information about the features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for Using this Guide</i> in the <a href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC API Reference</a>.</p>
         /// <p>The identifier of the user that associated with the access token, if present.</p>
         pub fn set_id_token(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.id_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateTokenOutput`](crate::output::CreateTokenOutput)
+        /// Consumes the builder and constructs a [`CreateTokenOutput`](crate::output::CreateTokenOutput).
         pub fn build(self) -> crate::output::CreateTokenOutput {
             crate::output::CreateTokenOutput {
                 access_token: self.access_token,
@@ -442,7 +464,7 @@ pub mod create_token_output {
     }
 }
 impl CreateTokenOutput {
-    /// Creates a new builder-style object to manufacture [`CreateTokenOutput`](crate::output::CreateTokenOutput)
+    /// Creates a new builder-style object to manufacture [`CreateTokenOutput`](crate::output::CreateTokenOutput).
     pub fn builder() -> crate::output::create_token_output::Builder {
         crate::output::create_token_output::Builder::default()
     }

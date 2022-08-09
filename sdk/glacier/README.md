@@ -26,10 +26,29 @@ your project, add the following to your **Cargo.toml** file:
 
 ```toml
 [dependencies]
-aws-config = "0.14.0"
-aws-sdk-glacier = "0.14.0"
+aws-config = "0.47.0"
+aws-sdk-glacier = "0.17.0"
 tokio = { version = "1", features = ["full"] }
 ```
+
+Then in code, a client can be created with the following:
+
+```rust
+use aws_sdk_glacier as glacier;
+
+#[tokio::main]
+async fn main() -> Result<(), glacier::Error> {
+    let config = aws_config::load_from_env().await;
+    let client = glacier::Client::new(&config);
+
+    // ... make some calls with the client
+
+    Ok(())
+}
+```
+
+See the [client documentation](https://docs.rs/aws-sdk-glacier/latest/aws_sdk_glacier/client/struct.Client.html)
+for information on what calls can be made, and the inputs and outputs for each of those calls.
 
 ## Using the SDK
 

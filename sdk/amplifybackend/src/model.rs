@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBackendStorageResourceConfig {
     /// <p>The authorization configuration for the storage S3 bucket.</p>
+    #[doc(hidden)]
     pub permissions: std::option::Option<crate::model::BackendStoragePermissions>,
     /// <p>The name of the storage service.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<crate::model::ServiceName>,
 }
 impl UpdateBackendStorageResourceConfig {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for UpdateBackendStorageResourceConfig {
         formatter.finish()
     }
 }
-/// See [`UpdateBackendStorageResourceConfig`](crate::model::UpdateBackendStorageResourceConfig)
+/// See [`UpdateBackendStorageResourceConfig`](crate::model::UpdateBackendStorageResourceConfig).
 pub mod update_backend_storage_resource_config {
 
-    /// A builder for [`UpdateBackendStorageResourceConfig`](crate::model::UpdateBackendStorageResourceConfig)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBackendStorageResourceConfig`](crate::model::UpdateBackendStorageResourceConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permissions: std::option::Option<crate::model::BackendStoragePermissions>,
@@ -64,7 +65,7 @@ pub mod update_backend_storage_resource_config {
             self.service_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBackendStorageResourceConfig`](crate::model::UpdateBackendStorageResourceConfig)
+        /// Consumes the builder and constructs a [`UpdateBackendStorageResourceConfig`](crate::model::UpdateBackendStorageResourceConfig).
         pub fn build(self) -> crate::model::UpdateBackendStorageResourceConfig {
             crate::model::UpdateBackendStorageResourceConfig {
                 permissions: self.permissions,
@@ -74,7 +75,7 @@ pub mod update_backend_storage_resource_config {
     }
 }
 impl UpdateBackendStorageResourceConfig {
-    /// Creates a new builder-style object to manufacture [`UpdateBackendStorageResourceConfig`](crate::model::UpdateBackendStorageResourceConfig)
+    /// Creates a new builder-style object to manufacture [`UpdateBackendStorageResourceConfig`](crate::model::UpdateBackendStorageResourceConfig).
     pub fn builder() -> crate::model::update_backend_storage_resource_config::Builder {
         crate::model::update_backend_storage_resource_config::Builder::default()
     }
@@ -136,8 +137,10 @@ impl AsRef<str> for ServiceName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackendStoragePermissions {
     /// <p>Lists all authenticated user read, write, and delete permissions for your S3 bucket.</p>
+    #[doc(hidden)]
     pub authenticated: std::option::Option<std::vec::Vec<crate::model::AuthenticatedElement>>,
     /// <p>Lists all unauthenticated user read, write, and delete permissions for your S3 bucket.</p>
+    #[doc(hidden)]
     pub un_authenticated: std::option::Option<std::vec::Vec<crate::model::UnAuthenticatedElement>>,
 }
 impl BackendStoragePermissions {
@@ -158,11 +161,10 @@ impl std::fmt::Debug for BackendStoragePermissions {
         formatter.finish()
     }
 }
-/// See [`BackendStoragePermissions`](crate::model::BackendStoragePermissions)
+/// See [`BackendStoragePermissions`](crate::model::BackendStoragePermissions).
 pub mod backend_storage_permissions {
 
-    /// A builder for [`BackendStoragePermissions`](crate::model::BackendStoragePermissions)
-    #[non_exhaustive]
+    /// A builder for [`BackendStoragePermissions`](crate::model::BackendStoragePermissions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) authenticated:
@@ -209,7 +211,7 @@ pub mod backend_storage_permissions {
             self.un_authenticated = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackendStoragePermissions`](crate::model::BackendStoragePermissions)
+        /// Consumes the builder and constructs a [`BackendStoragePermissions`](crate::model::BackendStoragePermissions).
         pub fn build(self) -> crate::model::BackendStoragePermissions {
             crate::model::BackendStoragePermissions {
                 authenticated: self.authenticated,
@@ -219,7 +221,7 @@ pub mod backend_storage_permissions {
     }
 }
 impl BackendStoragePermissions {
-    /// Creates a new builder-style object to manufacture [`BackendStoragePermissions`](crate::model::BackendStoragePermissions)
+    /// Creates a new builder-style object to manufacture [`BackendStoragePermissions`](crate::model::BackendStoragePermissions).
     pub fn builder() -> crate::model::backend_storage_permissions::Builder {
         crate::model::backend_storage_permissions::Builder::default()
     }
@@ -348,12 +350,16 @@ impl AsRef<str> for AuthenticatedElement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoginAuthConfigReqObj {
     /// <p>The Amazon Cognito identity pool ID used for the Amplify Admin UI login authorization.</p>
+    #[doc(hidden)]
     pub aws_cognito_identity_pool_id: std::option::Option<std::string::String>,
     /// <p>The AWS Region for the Amplify Admin UI login.</p>
+    #[doc(hidden)]
     pub aws_cognito_region: std::option::Option<std::string::String>,
     /// <p>The Amazon Cognito user pool ID used for Amplify Admin UI login authentication.</p>
+    #[doc(hidden)]
     pub aws_user_pools_id: std::option::Option<std::string::String>,
     /// <p>The web client ID for the Amazon Cognito user pools.</p>
+    #[doc(hidden)]
     pub aws_user_pools_web_client_id: std::option::Option<std::string::String>,
 }
 impl LoginAuthConfigReqObj {
@@ -390,11 +396,10 @@ impl std::fmt::Debug for LoginAuthConfigReqObj {
         formatter.finish()
     }
 }
-/// See [`LoginAuthConfigReqObj`](crate::model::LoginAuthConfigReqObj)
+/// See [`LoginAuthConfigReqObj`](crate::model::LoginAuthConfigReqObj).
 pub mod login_auth_config_req_obj {
 
-    /// A builder for [`LoginAuthConfigReqObj`](crate::model::LoginAuthConfigReqObj)
-    #[non_exhaustive]
+    /// A builder for [`LoginAuthConfigReqObj`](crate::model::LoginAuthConfigReqObj).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aws_cognito_identity_pool_id: std::option::Option<std::string::String>,
@@ -461,7 +466,7 @@ pub mod login_auth_config_req_obj {
             self.aws_user_pools_web_client_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoginAuthConfigReqObj`](crate::model::LoginAuthConfigReqObj)
+        /// Consumes the builder and constructs a [`LoginAuthConfigReqObj`](crate::model::LoginAuthConfigReqObj).
         pub fn build(self) -> crate::model::LoginAuthConfigReqObj {
             crate::model::LoginAuthConfigReqObj {
                 aws_cognito_identity_pool_id: self.aws_cognito_identity_pool_id,
@@ -473,7 +478,7 @@ pub mod login_auth_config_req_obj {
     }
 }
 impl LoginAuthConfigReqObj {
-    /// Creates a new builder-style object to manufacture [`LoginAuthConfigReqObj`](crate::model::LoginAuthConfigReqObj)
+    /// Creates a new builder-style object to manufacture [`LoginAuthConfigReqObj`](crate::model::LoginAuthConfigReqObj).
     pub fn builder() -> crate::model::login_auth_config_req_obj::Builder {
         crate::model::login_auth_config_req_obj::Builder::default()
     }
@@ -484,13 +489,17 @@ impl LoginAuthConfigReqObj {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBackendAuthResourceConfig {
     /// <p>Defines the service name to use when configuring an authentication resource in your Amplify project.</p>
+    #[doc(hidden)]
     pub auth_resources: std::option::Option<crate::model::AuthResources>,
     /// <p>Describes the authorization configuration for the Amazon Cognito identity pool, provisioned as a part of your auth resource in the Amplify project.</p>
+    #[doc(hidden)]
     pub identity_pool_configs:
         std::option::Option<crate::model::UpdateBackendAuthIdentityPoolConfig>,
     /// <p>Defines the service name to use when configuring an authentication resource in your Amplify project.</p>
+    #[doc(hidden)]
     pub service: std::option::Option<crate::model::Service>,
     /// <p>Describes the authentication configuration for the Amazon Cognito user pool, provisioned as a part of your auth resource in the Amplify project.</p>
+    #[doc(hidden)]
     pub user_pool_configs: std::option::Option<crate::model::UpdateBackendAuthUserPoolConfig>,
 }
 impl UpdateBackendAuthResourceConfig {
@@ -525,11 +534,10 @@ impl std::fmt::Debug for UpdateBackendAuthResourceConfig {
         formatter.finish()
     }
 }
-/// See [`UpdateBackendAuthResourceConfig`](crate::model::UpdateBackendAuthResourceConfig)
+/// See [`UpdateBackendAuthResourceConfig`](crate::model::UpdateBackendAuthResourceConfig).
 pub mod update_backend_auth_resource_config {
 
-    /// A builder for [`UpdateBackendAuthResourceConfig`](crate::model::UpdateBackendAuthResourceConfig)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBackendAuthResourceConfig`](crate::model::UpdateBackendAuthResourceConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auth_resources: std::option::Option<crate::model::AuthResources>,
@@ -595,7 +603,7 @@ pub mod update_backend_auth_resource_config {
             self.user_pool_configs = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBackendAuthResourceConfig`](crate::model::UpdateBackendAuthResourceConfig)
+        /// Consumes the builder and constructs a [`UpdateBackendAuthResourceConfig`](crate::model::UpdateBackendAuthResourceConfig).
         pub fn build(self) -> crate::model::UpdateBackendAuthResourceConfig {
             crate::model::UpdateBackendAuthResourceConfig {
                 auth_resources: self.auth_resources,
@@ -607,7 +615,7 @@ pub mod update_backend_auth_resource_config {
     }
 }
 impl UpdateBackendAuthResourceConfig {
-    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthResourceConfig`](crate::model::UpdateBackendAuthResourceConfig)
+    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthResourceConfig`](crate::model::UpdateBackendAuthResourceConfig).
     pub fn builder() -> crate::model::update_backend_auth_resource_config::Builder {
         crate::model::update_backend_auth_resource_config::Builder::default()
     }
@@ -618,14 +626,19 @@ impl UpdateBackendAuthResourceConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBackendAuthUserPoolConfig {
     /// <p><b>(DEPRECATED)</b> Describes the forgot password policy for your Amazon Cognito user pool, configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub forgot_password: std::option::Option<crate::model::UpdateBackendAuthForgotPasswordConfig>,
     /// <p>Describes whether to apply multi-factor authentication policies for your Amazon Cognito user pool configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub mfa: std::option::Option<crate::model::UpdateBackendAuthMfaConfig>,
     /// <p>Describes the OAuth policy and rules for your Amazon Cognito user pool, configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub o_auth: std::option::Option<crate::model::UpdateBackendAuthOAuthConfig>,
     /// <p>Describes the password policy for your Amazon Cognito user pool, configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub password_policy: std::option::Option<crate::model::UpdateBackendAuthPasswordPolicyConfig>,
     /// <p>Describes the email or SMS verification message for your Amazon Cognito user pool, configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub verification_message:
         std::option::Option<crate::model::UpdateBackendAuthVerificationMessageConfig>,
 }
@@ -668,11 +681,10 @@ impl std::fmt::Debug for UpdateBackendAuthUserPoolConfig {
         formatter.finish()
     }
 }
-/// See [`UpdateBackendAuthUserPoolConfig`](crate::model::UpdateBackendAuthUserPoolConfig)
+/// See [`UpdateBackendAuthUserPoolConfig`](crate::model::UpdateBackendAuthUserPoolConfig).
 pub mod update_backend_auth_user_pool_config {
 
-    /// A builder for [`UpdateBackendAuthUserPoolConfig`](crate::model::UpdateBackendAuthUserPoolConfig)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBackendAuthUserPoolConfig`](crate::model::UpdateBackendAuthUserPoolConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) forgot_password:
@@ -759,7 +771,7 @@ pub mod update_backend_auth_user_pool_config {
             self.verification_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBackendAuthUserPoolConfig`](crate::model::UpdateBackendAuthUserPoolConfig)
+        /// Consumes the builder and constructs a [`UpdateBackendAuthUserPoolConfig`](crate::model::UpdateBackendAuthUserPoolConfig).
         pub fn build(self) -> crate::model::UpdateBackendAuthUserPoolConfig {
             crate::model::UpdateBackendAuthUserPoolConfig {
                 forgot_password: self.forgot_password,
@@ -772,7 +784,7 @@ pub mod update_backend_auth_user_pool_config {
     }
 }
 impl UpdateBackendAuthUserPoolConfig {
-    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthUserPoolConfig`](crate::model::UpdateBackendAuthUserPoolConfig)
+    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthUserPoolConfig`](crate::model::UpdateBackendAuthUserPoolConfig).
     pub fn builder() -> crate::model::update_backend_auth_user_pool_config::Builder {
         crate::model::update_backend_auth_user_pool_config::Builder::default()
     }
@@ -783,10 +795,13 @@ impl UpdateBackendAuthUserPoolConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBackendAuthVerificationMessageConfig {
     /// <p>The type of verification message to send.</p>
+    #[doc(hidden)]
     pub delivery_method: std::option::Option<crate::model::DeliveryMethod>,
     /// <p>The settings for the email message.</p>
+    #[doc(hidden)]
     pub email_settings: std::option::Option<crate::model::EmailSettings>,
     /// <p>The settings for the SMS message.</p>
+    #[doc(hidden)]
     pub sms_settings: std::option::Option<crate::model::SmsSettings>,
 }
 impl UpdateBackendAuthVerificationMessageConfig {
@@ -812,11 +827,10 @@ impl std::fmt::Debug for UpdateBackendAuthVerificationMessageConfig {
         formatter.finish()
     }
 }
-/// See [`UpdateBackendAuthVerificationMessageConfig`](crate::model::UpdateBackendAuthVerificationMessageConfig)
+/// See [`UpdateBackendAuthVerificationMessageConfig`](crate::model::UpdateBackendAuthVerificationMessageConfig).
 pub mod update_backend_auth_verification_message_config {
 
-    /// A builder for [`UpdateBackendAuthVerificationMessageConfig`](crate::model::UpdateBackendAuthVerificationMessageConfig)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBackendAuthVerificationMessageConfig`](crate::model::UpdateBackendAuthVerificationMessageConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_method: std::option::Option<crate::model::DeliveryMethod>,
@@ -863,7 +877,7 @@ pub mod update_backend_auth_verification_message_config {
             self.sms_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBackendAuthVerificationMessageConfig`](crate::model::UpdateBackendAuthVerificationMessageConfig)
+        /// Consumes the builder and constructs a [`UpdateBackendAuthVerificationMessageConfig`](crate::model::UpdateBackendAuthVerificationMessageConfig).
         pub fn build(self) -> crate::model::UpdateBackendAuthVerificationMessageConfig {
             crate::model::UpdateBackendAuthVerificationMessageConfig {
                 delivery_method: self.delivery_method,
@@ -874,7 +888,7 @@ pub mod update_backend_auth_verification_message_config {
     }
 }
 impl UpdateBackendAuthVerificationMessageConfig {
-    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthVerificationMessageConfig`](crate::model::UpdateBackendAuthVerificationMessageConfig)
+    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthVerificationMessageConfig`](crate::model::UpdateBackendAuthVerificationMessageConfig).
     pub fn builder() -> crate::model::update_backend_auth_verification_message_config::Builder {
         crate::model::update_backend_auth_verification_message_config::Builder::default()
     }
@@ -885,6 +899,7 @@ impl UpdateBackendAuthVerificationMessageConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SmsSettings {
     /// <p>The contents of the SMS message.</p>
+    #[doc(hidden)]
     pub sms_message: std::option::Option<std::string::String>,
 }
 impl SmsSettings {
@@ -900,11 +915,10 @@ impl std::fmt::Debug for SmsSettings {
         formatter.finish()
     }
 }
-/// See [`SmsSettings`](crate::model::SmsSettings)
+/// See [`SmsSettings`](crate::model::SmsSettings).
 pub mod sms_settings {
 
-    /// A builder for [`SmsSettings`](crate::model::SmsSettings)
-    #[non_exhaustive]
+    /// A builder for [`SmsSettings`](crate::model::SmsSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sms_message: std::option::Option<std::string::String>,
@@ -920,7 +934,7 @@ pub mod sms_settings {
             self.sms_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`SmsSettings`](crate::model::SmsSettings)
+        /// Consumes the builder and constructs a [`SmsSettings`](crate::model::SmsSettings).
         pub fn build(self) -> crate::model::SmsSettings {
             crate::model::SmsSettings {
                 sms_message: self.sms_message,
@@ -929,7 +943,7 @@ pub mod sms_settings {
     }
 }
 impl SmsSettings {
-    /// Creates a new builder-style object to manufacture [`SmsSettings`](crate::model::SmsSettings)
+    /// Creates a new builder-style object to manufacture [`SmsSettings`](crate::model::SmsSettings).
     pub fn builder() -> crate::model::sms_settings::Builder {
         crate::model::sms_settings::Builder::default()
     }
@@ -940,8 +954,10 @@ impl SmsSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EmailSettings {
     /// <p>The contents of the email message.</p>
+    #[doc(hidden)]
     pub email_message: std::option::Option<std::string::String>,
     /// <p>The contents of the subject line of the email message.</p>
+    #[doc(hidden)]
     pub email_subject: std::option::Option<std::string::String>,
 }
 impl EmailSettings {
@@ -962,11 +978,10 @@ impl std::fmt::Debug for EmailSettings {
         formatter.finish()
     }
 }
-/// See [`EmailSettings`](crate::model::EmailSettings)
+/// See [`EmailSettings`](crate::model::EmailSettings).
 pub mod email_settings {
 
-    /// A builder for [`EmailSettings`](crate::model::EmailSettings)
-    #[non_exhaustive]
+    /// A builder for [`EmailSettings`](crate::model::EmailSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) email_message: std::option::Option<std::string::String>,
@@ -999,7 +1014,7 @@ pub mod email_settings {
             self.email_subject = input;
             self
         }
-        /// Consumes the builder and constructs a [`EmailSettings`](crate::model::EmailSettings)
+        /// Consumes the builder and constructs a [`EmailSettings`](crate::model::EmailSettings).
         pub fn build(self) -> crate::model::EmailSettings {
             crate::model::EmailSettings {
                 email_message: self.email_message,
@@ -1009,7 +1024,7 @@ pub mod email_settings {
     }
 }
 impl EmailSettings {
-    /// Creates a new builder-style object to manufacture [`EmailSettings`](crate::model::EmailSettings)
+    /// Creates a new builder-style object to manufacture [`EmailSettings`](crate::model::EmailSettings).
     pub fn builder() -> crate::model::email_settings::Builder {
         crate::model::email_settings::Builder::default()
     }
@@ -1075,9 +1090,11 @@ impl AsRef<str> for DeliveryMethod {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBackendAuthPasswordPolicyConfig {
     /// <p>Describes additional constraints on password requirements to sign in to the auth resource, configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub additional_constraints:
         std::option::Option<std::vec::Vec<crate::model::AdditionalConstraintsElement>>,
     /// <p>Describes the minimum length of the password required to sign in to the auth resource, configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub minimum_length: f64,
 }
 impl UpdateBackendAuthPasswordPolicyConfig {
@@ -1100,11 +1117,10 @@ impl std::fmt::Debug for UpdateBackendAuthPasswordPolicyConfig {
         formatter.finish()
     }
 }
-/// See [`UpdateBackendAuthPasswordPolicyConfig`](crate::model::UpdateBackendAuthPasswordPolicyConfig)
+/// See [`UpdateBackendAuthPasswordPolicyConfig`](crate::model::UpdateBackendAuthPasswordPolicyConfig).
 pub mod update_backend_auth_password_policy_config {
 
-    /// A builder for [`UpdateBackendAuthPasswordPolicyConfig`](crate::model::UpdateBackendAuthPasswordPolicyConfig)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBackendAuthPasswordPolicyConfig`](crate::model::UpdateBackendAuthPasswordPolicyConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) additional_constraints:
@@ -1144,7 +1160,7 @@ pub mod update_backend_auth_password_policy_config {
             self.minimum_length = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBackendAuthPasswordPolicyConfig`](crate::model::UpdateBackendAuthPasswordPolicyConfig)
+        /// Consumes the builder and constructs a [`UpdateBackendAuthPasswordPolicyConfig`](crate::model::UpdateBackendAuthPasswordPolicyConfig).
         pub fn build(self) -> crate::model::UpdateBackendAuthPasswordPolicyConfig {
             crate::model::UpdateBackendAuthPasswordPolicyConfig {
                 additional_constraints: self.additional_constraints,
@@ -1154,7 +1170,7 @@ pub mod update_backend_auth_password_policy_config {
     }
 }
 impl UpdateBackendAuthPasswordPolicyConfig {
-    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthPasswordPolicyConfig`](crate::model::UpdateBackendAuthPasswordPolicyConfig)
+    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthPasswordPolicyConfig`](crate::model::UpdateBackendAuthPasswordPolicyConfig).
     pub fn builder() -> crate::model::update_backend_auth_password_policy_config::Builder {
         crate::model::update_backend_auth_password_policy_config::Builder::default()
     }
@@ -1233,16 +1249,22 @@ impl AsRef<str> for AdditionalConstraintsElement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBackendAuthOAuthConfig {
     /// <p>The Amazon Cognito domain prefix used to create a hosted UI for authentication.</p>
+    #[doc(hidden)]
     pub domain_prefix: std::option::Option<std::string::String>,
     /// <p>The OAuth grant type to allow app users to authenticate from your Amplify app.</p>
+    #[doc(hidden)]
     pub o_auth_grant_type: std::option::Option<crate::model::OAuthGrantType>,
     /// <p>The list of OAuth-related flows that can allow users to authenticate from your Amplify app.</p>
+    #[doc(hidden)]
     pub o_auth_scopes: std::option::Option<std::vec::Vec<crate::model::OAuthScopesElement>>,
     /// <p>Redirect URLs that OAuth uses when a user signs in to an Amplify app.</p>
+    #[doc(hidden)]
     pub redirect_sign_in_ur_is: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Redirect URLs that OAuth uses when a user signs out of an Amplify app.</p>
+    #[doc(hidden)]
     pub redirect_sign_out_ur_is: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Describes third-party social federation configurations for allowing your users to sign in with OAuth.</p>
+    #[doc(hidden)]
     pub social_provider_settings: std::option::Option<crate::model::SocialProviderSettings>,
 }
 impl UpdateBackendAuthOAuthConfig {
@@ -1285,11 +1307,10 @@ impl std::fmt::Debug for UpdateBackendAuthOAuthConfig {
         formatter.finish()
     }
 }
-/// See [`UpdateBackendAuthOAuthConfig`](crate::model::UpdateBackendAuthOAuthConfig)
+/// See [`UpdateBackendAuthOAuthConfig`](crate::model::UpdateBackendAuthOAuthConfig).
 pub mod update_backend_auth_o_auth_config {
 
-    /// A builder for [`UpdateBackendAuthOAuthConfig`](crate::model::UpdateBackendAuthOAuthConfig)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBackendAuthOAuthConfig`](crate::model::UpdateBackendAuthOAuthConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_prefix: std::option::Option<std::string::String>,
@@ -1401,7 +1422,7 @@ pub mod update_backend_auth_o_auth_config {
             self.social_provider_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBackendAuthOAuthConfig`](crate::model::UpdateBackendAuthOAuthConfig)
+        /// Consumes the builder and constructs a [`UpdateBackendAuthOAuthConfig`](crate::model::UpdateBackendAuthOAuthConfig).
         pub fn build(self) -> crate::model::UpdateBackendAuthOAuthConfig {
             crate::model::UpdateBackendAuthOAuthConfig {
                 domain_prefix: self.domain_prefix,
@@ -1415,7 +1436,7 @@ pub mod update_backend_auth_o_auth_config {
     }
 }
 impl UpdateBackendAuthOAuthConfig {
-    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthOAuthConfig`](crate::model::UpdateBackendAuthOAuthConfig)
+    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthOAuthConfig`](crate::model::UpdateBackendAuthOAuthConfig).
     pub fn builder() -> crate::model::update_backend_auth_o_auth_config::Builder {
         crate::model::update_backend_auth_o_auth_config::Builder::default()
     }
@@ -1426,12 +1447,16 @@ impl UpdateBackendAuthOAuthConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SocialProviderSettings {
     /// <p>Describes third-party social federation configurations for allowing your app users to sign in using OAuth.</p>
+    #[doc(hidden)]
     pub facebook: std::option::Option<crate::model::BackendAuthSocialProviderConfig>,
     /// <p>Describes third-party social federation configurations for allowing your app users to sign in using OAuth.</p>
+    #[doc(hidden)]
     pub google: std::option::Option<crate::model::BackendAuthSocialProviderConfig>,
     /// <p>Describes third-party social federation configurations for allowing your app users to sign in using OAuth.</p>
+    #[doc(hidden)]
     pub login_with_amazon: std::option::Option<crate::model::BackendAuthSocialProviderConfig>,
     /// <p>Describes Apple social federation configurations for allowing your app users to sign in using OAuth.</p>
+    #[doc(hidden)]
     pub sign_in_with_apple: std::option::Option<crate::model::BackendAuthAppleProviderConfig>,
 }
 impl SocialProviderSettings {
@@ -1466,11 +1491,10 @@ impl std::fmt::Debug for SocialProviderSettings {
         formatter.finish()
     }
 }
-/// See [`SocialProviderSettings`](crate::model::SocialProviderSettings)
+/// See [`SocialProviderSettings`](crate::model::SocialProviderSettings).
 pub mod social_provider_settings {
 
-    /// A builder for [`SocialProviderSettings`](crate::model::SocialProviderSettings)
-    #[non_exhaustive]
+    /// A builder for [`SocialProviderSettings`](crate::model::SocialProviderSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) facebook: std::option::Option<crate::model::BackendAuthSocialProviderConfig>,
@@ -1539,7 +1563,7 @@ pub mod social_provider_settings {
             self.sign_in_with_apple = input;
             self
         }
-        /// Consumes the builder and constructs a [`SocialProviderSettings`](crate::model::SocialProviderSettings)
+        /// Consumes the builder and constructs a [`SocialProviderSettings`](crate::model::SocialProviderSettings).
         pub fn build(self) -> crate::model::SocialProviderSettings {
             crate::model::SocialProviderSettings {
                 facebook: self.facebook,
@@ -1551,7 +1575,7 @@ pub mod social_provider_settings {
     }
 }
 impl SocialProviderSettings {
-    /// Creates a new builder-style object to manufacture [`SocialProviderSettings`](crate::model::SocialProviderSettings)
+    /// Creates a new builder-style object to manufacture [`SocialProviderSettings`](crate::model::SocialProviderSettings).
     pub fn builder() -> crate::model::social_provider_settings::Builder {
         crate::model::social_provider_settings::Builder::default()
     }
@@ -1562,12 +1586,16 @@ impl SocialProviderSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackendAuthAppleProviderConfig {
     /// <p>Describes the client_id (also called Services ID) that comes from Apple.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>Describes the key_id that comes from Apple.</p>
+    #[doc(hidden)]
     pub key_id: std::option::Option<std::string::String>,
     /// <p>Describes the private_key that comes from Apple.</p>
+    #[doc(hidden)]
     pub private_key: std::option::Option<std::string::String>,
     /// <p>Describes the team_id that comes from Apple.</p>
+    #[doc(hidden)]
     pub team_id: std::option::Option<std::string::String>,
 }
 impl BackendAuthAppleProviderConfig {
@@ -1598,11 +1626,10 @@ impl std::fmt::Debug for BackendAuthAppleProviderConfig {
         formatter.finish()
     }
 }
-/// See [`BackendAuthAppleProviderConfig`](crate::model::BackendAuthAppleProviderConfig)
+/// See [`BackendAuthAppleProviderConfig`](crate::model::BackendAuthAppleProviderConfig).
 pub mod backend_auth_apple_provider_config {
 
-    /// A builder for [`BackendAuthAppleProviderConfig`](crate::model::BackendAuthAppleProviderConfig)
-    #[non_exhaustive]
+    /// A builder for [`BackendAuthAppleProviderConfig`](crate::model::BackendAuthAppleProviderConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_id: std::option::Option<std::string::String>,
@@ -1651,7 +1678,7 @@ pub mod backend_auth_apple_provider_config {
             self.team_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackendAuthAppleProviderConfig`](crate::model::BackendAuthAppleProviderConfig)
+        /// Consumes the builder and constructs a [`BackendAuthAppleProviderConfig`](crate::model::BackendAuthAppleProviderConfig).
         pub fn build(self) -> crate::model::BackendAuthAppleProviderConfig {
             crate::model::BackendAuthAppleProviderConfig {
                 client_id: self.client_id,
@@ -1663,7 +1690,7 @@ pub mod backend_auth_apple_provider_config {
     }
 }
 impl BackendAuthAppleProviderConfig {
-    /// Creates a new builder-style object to manufacture [`BackendAuthAppleProviderConfig`](crate::model::BackendAuthAppleProviderConfig)
+    /// Creates a new builder-style object to manufacture [`BackendAuthAppleProviderConfig`](crate::model::BackendAuthAppleProviderConfig).
     pub fn builder() -> crate::model::backend_auth_apple_provider_config::Builder {
         crate::model::backend_auth_apple_provider_config::Builder::default()
     }
@@ -1674,8 +1701,10 @@ impl BackendAuthAppleProviderConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackendAuthSocialProviderConfig {
     /// <p>Describes the client_id, which can be obtained from the third-party social federation provider.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>Describes the client_secret, which can be obtained from third-party social federation providers.</p>
+    #[doc(hidden)]
     pub client_secret: std::option::Option<std::string::String>,
 }
 impl BackendAuthSocialProviderConfig {
@@ -1696,11 +1725,10 @@ impl std::fmt::Debug for BackendAuthSocialProviderConfig {
         formatter.finish()
     }
 }
-/// See [`BackendAuthSocialProviderConfig`](crate::model::BackendAuthSocialProviderConfig)
+/// See [`BackendAuthSocialProviderConfig`](crate::model::BackendAuthSocialProviderConfig).
 pub mod backend_auth_social_provider_config {
 
-    /// A builder for [`BackendAuthSocialProviderConfig`](crate::model::BackendAuthSocialProviderConfig)
-    #[non_exhaustive]
+    /// A builder for [`BackendAuthSocialProviderConfig`](crate::model::BackendAuthSocialProviderConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_id: std::option::Option<std::string::String>,
@@ -1730,7 +1758,7 @@ pub mod backend_auth_social_provider_config {
             self.client_secret = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackendAuthSocialProviderConfig`](crate::model::BackendAuthSocialProviderConfig)
+        /// Consumes the builder and constructs a [`BackendAuthSocialProviderConfig`](crate::model::BackendAuthSocialProviderConfig).
         pub fn build(self) -> crate::model::BackendAuthSocialProviderConfig {
             crate::model::BackendAuthSocialProviderConfig {
                 client_id: self.client_id,
@@ -1740,7 +1768,7 @@ pub mod backend_auth_social_provider_config {
     }
 }
 impl BackendAuthSocialProviderConfig {
-    /// Creates a new builder-style object to manufacture [`BackendAuthSocialProviderConfig`](crate::model::BackendAuthSocialProviderConfig)
+    /// Creates a new builder-style object to manufacture [`BackendAuthSocialProviderConfig`](crate::model::BackendAuthSocialProviderConfig).
     pub fn builder() -> crate::model::backend_auth_social_provider_config::Builder {
         crate::model::backend_auth_social_provider_config::Builder::default()
     }
@@ -1879,8 +1907,10 @@ impl AsRef<str> for OAuthGrantType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBackendAuthMfaConfig {
     /// <p>The MFA mode for the backend of your Amplify project.</p>
+    #[doc(hidden)]
     pub mfa_mode: std::option::Option<crate::model::MfaMode>,
     /// <p>The settings of your MFA configuration for the backend of your Amplify project.</p>
+    #[doc(hidden)]
     pub settings: std::option::Option<crate::model::Settings>,
 }
 impl UpdateBackendAuthMfaConfig {
@@ -1901,11 +1931,10 @@ impl std::fmt::Debug for UpdateBackendAuthMfaConfig {
         formatter.finish()
     }
 }
-/// See [`UpdateBackendAuthMfaConfig`](crate::model::UpdateBackendAuthMfaConfig)
+/// See [`UpdateBackendAuthMfaConfig`](crate::model::UpdateBackendAuthMfaConfig).
 pub mod update_backend_auth_mfa_config {
 
-    /// A builder for [`UpdateBackendAuthMfaConfig`](crate::model::UpdateBackendAuthMfaConfig)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBackendAuthMfaConfig`](crate::model::UpdateBackendAuthMfaConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mfa_mode: std::option::Option<crate::model::MfaMode>,
@@ -1932,7 +1961,7 @@ pub mod update_backend_auth_mfa_config {
             self.settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBackendAuthMfaConfig`](crate::model::UpdateBackendAuthMfaConfig)
+        /// Consumes the builder and constructs a [`UpdateBackendAuthMfaConfig`](crate::model::UpdateBackendAuthMfaConfig).
         pub fn build(self) -> crate::model::UpdateBackendAuthMfaConfig {
             crate::model::UpdateBackendAuthMfaConfig {
                 mfa_mode: self.mfa_mode,
@@ -1942,7 +1971,7 @@ pub mod update_backend_auth_mfa_config {
     }
 }
 impl UpdateBackendAuthMfaConfig {
-    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthMfaConfig`](crate::model::UpdateBackendAuthMfaConfig)
+    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthMfaConfig`](crate::model::UpdateBackendAuthMfaConfig).
     pub fn builder() -> crate::model::update_backend_auth_mfa_config::Builder {
         crate::model::update_backend_auth_mfa_config::Builder::default()
     }
@@ -1953,8 +1982,10 @@ impl UpdateBackendAuthMfaConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Settings {
     /// <p>The supported MFA types.</p>
+    #[doc(hidden)]
     pub mfa_types: std::option::Option<std::vec::Vec<crate::model::MfaTypesElement>>,
     /// <p>The body of the SMS message.</p>
+    #[doc(hidden)]
     pub sms_message: std::option::Option<std::string::String>,
 }
 impl Settings {
@@ -1975,11 +2006,10 @@ impl std::fmt::Debug for Settings {
         formatter.finish()
     }
 }
-/// See [`Settings`](crate::model::Settings)
+/// See [`Settings`](crate::model::Settings).
 pub mod settings {
 
-    /// A builder for [`Settings`](crate::model::Settings)
-    #[non_exhaustive]
+    /// A builder for [`Settings`](crate::model::Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mfa_types: std::option::Option<std::vec::Vec<crate::model::MfaTypesElement>>,
@@ -2015,7 +2045,7 @@ pub mod settings {
             self.sms_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`Settings`](crate::model::Settings)
+        /// Consumes the builder and constructs a [`Settings`](crate::model::Settings).
         pub fn build(self) -> crate::model::Settings {
             crate::model::Settings {
                 mfa_types: self.mfa_types,
@@ -2025,7 +2055,7 @@ pub mod settings {
     }
 }
 impl Settings {
-    /// Creates a new builder-style object to manufacture [`Settings`](crate::model::Settings)
+    /// Creates a new builder-style object to manufacture [`Settings`](crate::model::Settings).
     pub fn builder() -> crate::model::settings::Builder {
         crate::model::settings::Builder::default()
     }
@@ -2150,10 +2180,13 @@ impl AsRef<str> for MfaMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBackendAuthForgotPasswordConfig {
     /// <p><b>(DEPRECATED)</b> Describes which mode to use (either SMS or email) to deliver messages to app users that want to recover their password.</p>
+    #[doc(hidden)]
     pub delivery_method: std::option::Option<crate::model::DeliveryMethod>,
     /// <p><b>(DEPRECATED)</b> The configuration for the email sent when an app user forgets their password.</p>
+    #[doc(hidden)]
     pub email_settings: std::option::Option<crate::model::EmailSettings>,
     /// <p><b>(DEPRECATED)</b> The configuration for the SMS message sent when an Amplify app user forgets their password.</p>
+    #[doc(hidden)]
     pub sms_settings: std::option::Option<crate::model::SmsSettings>,
 }
 impl UpdateBackendAuthForgotPasswordConfig {
@@ -2179,11 +2212,10 @@ impl std::fmt::Debug for UpdateBackendAuthForgotPasswordConfig {
         formatter.finish()
     }
 }
-/// See [`UpdateBackendAuthForgotPasswordConfig`](crate::model::UpdateBackendAuthForgotPasswordConfig)
+/// See [`UpdateBackendAuthForgotPasswordConfig`](crate::model::UpdateBackendAuthForgotPasswordConfig).
 pub mod update_backend_auth_forgot_password_config {
 
-    /// A builder for [`UpdateBackendAuthForgotPasswordConfig`](crate::model::UpdateBackendAuthForgotPasswordConfig)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBackendAuthForgotPasswordConfig`](crate::model::UpdateBackendAuthForgotPasswordConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_method: std::option::Option<crate::model::DeliveryMethod>,
@@ -2230,7 +2262,7 @@ pub mod update_backend_auth_forgot_password_config {
             self.sms_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBackendAuthForgotPasswordConfig`](crate::model::UpdateBackendAuthForgotPasswordConfig)
+        /// Consumes the builder and constructs a [`UpdateBackendAuthForgotPasswordConfig`](crate::model::UpdateBackendAuthForgotPasswordConfig).
         pub fn build(self) -> crate::model::UpdateBackendAuthForgotPasswordConfig {
             crate::model::UpdateBackendAuthForgotPasswordConfig {
                 delivery_method: self.delivery_method,
@@ -2241,7 +2273,7 @@ pub mod update_backend_auth_forgot_password_config {
     }
 }
 impl UpdateBackendAuthForgotPasswordConfig {
-    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthForgotPasswordConfig`](crate::model::UpdateBackendAuthForgotPasswordConfig)
+    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthForgotPasswordConfig`](crate::model::UpdateBackendAuthForgotPasswordConfig).
     pub fn builder() -> crate::model::update_backend_auth_forgot_password_config::Builder {
         crate::model::update_backend_auth_forgot_password_config::Builder::default()
     }
@@ -2303,6 +2335,7 @@ impl AsRef<str> for Service {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBackendAuthIdentityPoolConfig {
     /// <p>A boolean value that can be set to allow or disallow guest-level authorization into your Amplify app.</p>
+    #[doc(hidden)]
     pub unauthenticated_login: bool,
 }
 impl UpdateBackendAuthIdentityPoolConfig {
@@ -2318,11 +2351,10 @@ impl std::fmt::Debug for UpdateBackendAuthIdentityPoolConfig {
         formatter.finish()
     }
 }
-/// See [`UpdateBackendAuthIdentityPoolConfig`](crate::model::UpdateBackendAuthIdentityPoolConfig)
+/// See [`UpdateBackendAuthIdentityPoolConfig`](crate::model::UpdateBackendAuthIdentityPoolConfig).
 pub mod update_backend_auth_identity_pool_config {
 
-    /// A builder for [`UpdateBackendAuthIdentityPoolConfig`](crate::model::UpdateBackendAuthIdentityPoolConfig)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBackendAuthIdentityPoolConfig`](crate::model::UpdateBackendAuthIdentityPoolConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) unauthenticated_login: std::option::Option<bool>,
@@ -2338,7 +2370,7 @@ pub mod update_backend_auth_identity_pool_config {
             self.unauthenticated_login = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBackendAuthIdentityPoolConfig`](crate::model::UpdateBackendAuthIdentityPoolConfig)
+        /// Consumes the builder and constructs a [`UpdateBackendAuthIdentityPoolConfig`](crate::model::UpdateBackendAuthIdentityPoolConfig).
         pub fn build(self) -> crate::model::UpdateBackendAuthIdentityPoolConfig {
             crate::model::UpdateBackendAuthIdentityPoolConfig {
                 unauthenticated_login: self.unauthenticated_login.unwrap_or_default(),
@@ -2347,7 +2379,7 @@ pub mod update_backend_auth_identity_pool_config {
     }
 }
 impl UpdateBackendAuthIdentityPoolConfig {
-    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthIdentityPoolConfig`](crate::model::UpdateBackendAuthIdentityPoolConfig)
+    /// Creates a new builder-style object to manufacture [`UpdateBackendAuthIdentityPoolConfig`](crate::model::UpdateBackendAuthIdentityPoolConfig).
     pub fn builder() -> crate::model::update_backend_auth_identity_pool_config::Builder {
         crate::model::update_backend_auth_identity_pool_config::Builder::default()
     }
@@ -2413,16 +2445,22 @@ impl AsRef<str> for AuthResources {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackendApiResourceConfig {
     /// <p>Additional authentication methods used to interact with your data models.</p>
+    #[doc(hidden)]
     pub additional_auth_types: std::option::Option<std::vec::Vec<crate::model::BackendApiAuthType>>,
     /// <p>The API name used to interact with the data model, configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub api_name: std::option::Option<std::string::String>,
     /// <p>The conflict resolution strategy for your data stored in the data models.</p>
+    #[doc(hidden)]
     pub conflict_resolution: std::option::Option<crate::model::BackendApiConflictResolution>,
     /// <p>The default authentication type for interacting with the configured data models in your Amplify project.</p>
+    #[doc(hidden)]
     pub default_auth_type: std::option::Option<crate::model::BackendApiAuthType>,
     /// <p>The service used to provision and interact with the data model.</p>
+    #[doc(hidden)]
     pub service: std::option::Option<std::string::String>,
     /// <p>The definition of the data model in the annotated transform of the GraphQL schema.</p>
+    #[doc(hidden)]
     pub transform_schema: std::option::Option<std::string::String>,
 }
 impl BackendApiResourceConfig {
@@ -2467,11 +2505,10 @@ impl std::fmt::Debug for BackendApiResourceConfig {
         formatter.finish()
     }
 }
-/// See [`BackendApiResourceConfig`](crate::model::BackendApiResourceConfig)
+/// See [`BackendApiResourceConfig`](crate::model::BackendApiResourceConfig).
 pub mod backend_api_resource_config {
 
-    /// A builder for [`BackendApiResourceConfig`](crate::model::BackendApiResourceConfig)
-    #[non_exhaustive]
+    /// A builder for [`BackendApiResourceConfig`](crate::model::BackendApiResourceConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) additional_auth_types:
@@ -2565,7 +2602,7 @@ pub mod backend_api_resource_config {
             self.transform_schema = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackendApiResourceConfig`](crate::model::BackendApiResourceConfig)
+        /// Consumes the builder and constructs a [`BackendApiResourceConfig`](crate::model::BackendApiResourceConfig).
         pub fn build(self) -> crate::model::BackendApiResourceConfig {
             crate::model::BackendApiResourceConfig {
                 additional_auth_types: self.additional_auth_types,
@@ -2579,7 +2616,7 @@ pub mod backend_api_resource_config {
     }
 }
 impl BackendApiResourceConfig {
-    /// Creates a new builder-style object to manufacture [`BackendApiResourceConfig`](crate::model::BackendApiResourceConfig)
+    /// Creates a new builder-style object to manufacture [`BackendApiResourceConfig`](crate::model::BackendApiResourceConfig).
     pub fn builder() -> crate::model::backend_api_resource_config::Builder {
         crate::model::backend_api_resource_config::Builder::default()
     }
@@ -2590,8 +2627,10 @@ impl BackendApiResourceConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackendApiAuthType {
     /// <p>Describes the authentication mode.</p>
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::Mode>,
     /// <p>Describes settings for the authentication mode.</p>
+    #[doc(hidden)]
     pub settings: std::option::Option<crate::model::BackendApiAppSyncAuthSettings>,
 }
 impl BackendApiAuthType {
@@ -2612,11 +2651,10 @@ impl std::fmt::Debug for BackendApiAuthType {
         formatter.finish()
     }
 }
-/// See [`BackendApiAuthType`](crate::model::BackendApiAuthType)
+/// See [`BackendApiAuthType`](crate::model::BackendApiAuthType).
 pub mod backend_api_auth_type {
 
-    /// A builder for [`BackendApiAuthType`](crate::model::BackendApiAuthType)
-    #[non_exhaustive]
+    /// A builder for [`BackendApiAuthType`](crate::model::BackendApiAuthType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mode: std::option::Option<crate::model::Mode>,
@@ -2646,7 +2684,7 @@ pub mod backend_api_auth_type {
             self.settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackendApiAuthType`](crate::model::BackendApiAuthType)
+        /// Consumes the builder and constructs a [`BackendApiAuthType`](crate::model::BackendApiAuthType).
         pub fn build(self) -> crate::model::BackendApiAuthType {
             crate::model::BackendApiAuthType {
                 mode: self.mode,
@@ -2656,7 +2694,7 @@ pub mod backend_api_auth_type {
     }
 }
 impl BackendApiAuthType {
-    /// Creates a new builder-style object to manufacture [`BackendApiAuthType`](crate::model::BackendApiAuthType)
+    /// Creates a new builder-style object to manufacture [`BackendApiAuthType`](crate::model::BackendApiAuthType).
     pub fn builder() -> crate::model::backend_api_auth_type::Builder {
         crate::model::backend_api_auth_type::Builder::default()
     }
@@ -2667,20 +2705,28 @@ impl BackendApiAuthType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackendApiAppSyncAuthSettings {
     /// <p>The Amazon Cognito user pool ID, if Amazon Cognito was used as an authentication setting to access your data models.</p>
+    #[doc(hidden)]
     pub cognito_user_pool_id: std::option::Option<std::string::String>,
     /// <p>The API key description for API_KEY, if it was used as an authentication mechanism to access your data models.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The API key expiration time for API_KEY, if it was used as an authentication mechanism to access your data models.</p>
+    #[doc(hidden)]
     pub expiration_time: f64,
     /// <p>The expiry time for the OpenID authentication mechanism.</p>
+    #[doc(hidden)]
     pub open_id_auth_ttl: std::option::Option<std::string::String>,
     /// <p>The clientID for openID, if openID was used as an authentication setting to access your data models.</p>
+    #[doc(hidden)]
     pub open_id_client_id: std::option::Option<std::string::String>,
     /// <p>The expiry time for the OpenID authentication mechanism.</p>
+    #[doc(hidden)]
     pub open_id_iat_ttl: std::option::Option<std::string::String>,
     /// <p>The openID issuer URL, if openID was used as an authentication setting to access your data models.</p>
+    #[doc(hidden)]
     pub open_id_issue_url: std::option::Option<std::string::String>,
     /// <p>The OpenID provider name, if OpenID was used as an authentication mechanism to access your data models.</p>
+    #[doc(hidden)]
     pub open_id_provider_name: std::option::Option<std::string::String>,
 }
 impl BackendApiAppSyncAuthSettings {
@@ -2731,11 +2777,10 @@ impl std::fmt::Debug for BackendApiAppSyncAuthSettings {
         formatter.finish()
     }
 }
-/// See [`BackendApiAppSyncAuthSettings`](crate::model::BackendApiAppSyncAuthSettings)
+/// See [`BackendApiAppSyncAuthSettings`](crate::model::BackendApiAppSyncAuthSettings).
 pub mod backend_api_app_sync_auth_settings {
 
-    /// A builder for [`BackendApiAppSyncAuthSettings`](crate::model::BackendApiAppSyncAuthSettings)
-    #[non_exhaustive]
+    /// A builder for [`BackendApiAppSyncAuthSettings`](crate::model::BackendApiAppSyncAuthSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cognito_user_pool_id: std::option::Option<std::string::String>,
@@ -2846,7 +2891,7 @@ pub mod backend_api_app_sync_auth_settings {
             self.open_id_provider_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackendApiAppSyncAuthSettings`](crate::model::BackendApiAppSyncAuthSettings)
+        /// Consumes the builder and constructs a [`BackendApiAppSyncAuthSettings`](crate::model::BackendApiAppSyncAuthSettings).
         pub fn build(self) -> crate::model::BackendApiAppSyncAuthSettings {
             crate::model::BackendApiAppSyncAuthSettings {
                 cognito_user_pool_id: self.cognito_user_pool_id,
@@ -2862,7 +2907,7 @@ pub mod backend_api_app_sync_auth_settings {
     }
 }
 impl BackendApiAppSyncAuthSettings {
-    /// Creates a new builder-style object to manufacture [`BackendApiAppSyncAuthSettings`](crate::model::BackendApiAppSyncAuthSettings)
+    /// Creates a new builder-style object to manufacture [`BackendApiAppSyncAuthSettings`](crate::model::BackendApiAppSyncAuthSettings).
     pub fn builder() -> crate::model::backend_api_app_sync_auth_settings::Builder {
         crate::model::backend_api_app_sync_auth_settings::Builder::default()
     }
@@ -2941,6 +2986,7 @@ impl AsRef<str> for Mode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackendApiConflictResolution {
     /// <p>The strategy for conflict resolution.</p>
+    #[doc(hidden)]
     pub resolution_strategy: std::option::Option<crate::model::ResolutionStrategy>,
 }
 impl BackendApiConflictResolution {
@@ -2956,11 +3002,10 @@ impl std::fmt::Debug for BackendApiConflictResolution {
         formatter.finish()
     }
 }
-/// See [`BackendApiConflictResolution`](crate::model::BackendApiConflictResolution)
+/// See [`BackendApiConflictResolution`](crate::model::BackendApiConflictResolution).
 pub mod backend_api_conflict_resolution {
 
-    /// A builder for [`BackendApiConflictResolution`](crate::model::BackendApiConflictResolution)
-    #[non_exhaustive]
+    /// A builder for [`BackendApiConflictResolution`](crate::model::BackendApiConflictResolution).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resolution_strategy: std::option::Option<crate::model::ResolutionStrategy>,
@@ -2979,7 +3024,7 @@ pub mod backend_api_conflict_resolution {
             self.resolution_strategy = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackendApiConflictResolution`](crate::model::BackendApiConflictResolution)
+        /// Consumes the builder and constructs a [`BackendApiConflictResolution`](crate::model::BackendApiConflictResolution).
         pub fn build(self) -> crate::model::BackendApiConflictResolution {
             crate::model::BackendApiConflictResolution {
                 resolution_strategy: self.resolution_strategy,
@@ -2988,7 +3033,7 @@ pub mod backend_api_conflict_resolution {
     }
 }
 impl BackendApiConflictResolution {
-    /// Creates a new builder-style object to manufacture [`BackendApiConflictResolution`](crate::model::BackendApiConflictResolution)
+    /// Creates a new builder-style object to manufacture [`BackendApiConflictResolution`](crate::model::BackendApiConflictResolution).
     pub fn builder() -> crate::model::backend_api_conflict_resolution::Builder {
         crate::model::backend_api_conflict_resolution::Builder::default()
     }
@@ -3062,8 +3107,10 @@ impl AsRef<str> for ResolutionStrategy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3BucketInfo {
     /// <p>The creation date of the S3 bucket.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The name of the S3 bucket.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl S3BucketInfo {
@@ -3084,11 +3131,10 @@ impl std::fmt::Debug for S3BucketInfo {
         formatter.finish()
     }
 }
-/// See [`S3BucketInfo`](crate::model::S3BucketInfo)
+/// See [`S3BucketInfo`](crate::model::S3BucketInfo).
 pub mod s3_bucket_info {
 
-    /// A builder for [`S3BucketInfo`](crate::model::S3BucketInfo)
-    #[non_exhaustive]
+    /// A builder for [`S3BucketInfo`](crate::model::S3BucketInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_date: std::option::Option<std::string::String>,
@@ -3118,7 +3164,7 @@ pub mod s3_bucket_info {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3BucketInfo`](crate::model::S3BucketInfo)
+        /// Consumes the builder and constructs a [`S3BucketInfo`](crate::model::S3BucketInfo).
         pub fn build(self) -> crate::model::S3BucketInfo {
             crate::model::S3BucketInfo {
                 creation_date: self.creation_date,
@@ -3128,7 +3174,7 @@ pub mod s3_bucket_info {
     }
 }
 impl S3BucketInfo {
-    /// Creates a new builder-style object to manufacture [`S3BucketInfo`](crate::model::S3BucketInfo)
+    /// Creates a new builder-style object to manufacture [`S3BucketInfo`](crate::model::S3BucketInfo).
     pub fn builder() -> crate::model::s3_bucket_info::Builder {
         crate::model::s3_bucket_info::Builder::default()
     }
@@ -3139,20 +3185,28 @@ impl S3BucketInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackendJobRespObj {
     /// <p>The app ID.</p>
+    #[doc(hidden)]
     pub app_id: std::option::Option<std::string::String>,
     /// <p>The name of the backend environment.</p>
+    #[doc(hidden)]
     pub backend_environment_name: std::option::Option<std::string::String>,
     /// <p>The time when the job was created.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<std::string::String>,
     /// <p>If the request fails, this error is returned.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>The ID for the job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The name of the operation.</p>
+    #[doc(hidden)]
     pub operation: std::option::Option<std::string::String>,
     /// <p>The current status of the request.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The time when the job was last updated.</p>
+    #[doc(hidden)]
     pub update_time: std::option::Option<std::string::String>,
 }
 impl BackendJobRespObj {
@@ -3203,11 +3257,10 @@ impl std::fmt::Debug for BackendJobRespObj {
         formatter.finish()
     }
 }
-/// See [`BackendJobRespObj`](crate::model::BackendJobRespObj)
+/// See [`BackendJobRespObj`](crate::model::BackendJobRespObj).
 pub mod backend_job_resp_obj {
 
-    /// A builder for [`BackendJobRespObj`](crate::model::BackendJobRespObj)
-    #[non_exhaustive]
+    /// A builder for [`BackendJobRespObj`](crate::model::BackendJobRespObj).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_id: std::option::Option<std::string::String>,
@@ -3303,7 +3356,7 @@ pub mod backend_job_resp_obj {
             self.update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackendJobRespObj`](crate::model::BackendJobRespObj)
+        /// Consumes the builder and constructs a [`BackendJobRespObj`](crate::model::BackendJobRespObj).
         pub fn build(self) -> crate::model::BackendJobRespObj {
             crate::model::BackendJobRespObj {
                 app_id: self.app_id,
@@ -3319,7 +3372,7 @@ pub mod backend_job_resp_obj {
     }
 }
 impl BackendJobRespObj {
-    /// Creates a new builder-style object to manufacture [`BackendJobRespObj`](crate::model::BackendJobRespObj)
+    /// Creates a new builder-style object to manufacture [`BackendJobRespObj`](crate::model::BackendJobRespObj).
     pub fn builder() -> crate::model::backend_job_resp_obj::Builder {
         crate::model::backend_job_resp_obj::Builder::default()
     }
@@ -3330,12 +3383,16 @@ impl BackendJobRespObj {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBackendStorageResourceConfig {
     /// <p>The name of the S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p>Returns True if the storage resource has been imported.</p>
+    #[doc(hidden)]
     pub imported: bool,
     /// <p>The authorization configuration for the storage S3 bucket.</p>
+    #[doc(hidden)]
     pub permissions: std::option::Option<crate::model::BackendStoragePermissions>,
     /// <p>The name of the storage service.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<crate::model::ServiceName>,
 }
 impl GetBackendStorageResourceConfig {
@@ -3366,11 +3423,10 @@ impl std::fmt::Debug for GetBackendStorageResourceConfig {
         formatter.finish()
     }
 }
-/// See [`GetBackendStorageResourceConfig`](crate::model::GetBackendStorageResourceConfig)
+/// See [`GetBackendStorageResourceConfig`](crate::model::GetBackendStorageResourceConfig).
 pub mod get_backend_storage_resource_config {
 
-    /// A builder for [`GetBackendStorageResourceConfig`](crate::model::GetBackendStorageResourceConfig)
-    #[non_exhaustive]
+    /// A builder for [`GetBackendStorageResourceConfig`](crate::model::GetBackendStorageResourceConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_name: std::option::Option<std::string::String>,
@@ -3425,7 +3481,7 @@ pub mod get_backend_storage_resource_config {
             self.service_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBackendStorageResourceConfig`](crate::model::GetBackendStorageResourceConfig)
+        /// Consumes the builder and constructs a [`GetBackendStorageResourceConfig`](crate::model::GetBackendStorageResourceConfig).
         pub fn build(self) -> crate::model::GetBackendStorageResourceConfig {
             crate::model::GetBackendStorageResourceConfig {
                 bucket_name: self.bucket_name,
@@ -3437,7 +3493,7 @@ pub mod get_backend_storage_resource_config {
     }
 }
 impl GetBackendStorageResourceConfig {
-    /// Creates a new builder-style object to manufacture [`GetBackendStorageResourceConfig`](crate::model::GetBackendStorageResourceConfig)
+    /// Creates a new builder-style object to manufacture [`GetBackendStorageResourceConfig`](crate::model::GetBackendStorageResourceConfig).
     pub fn builder() -> crate::model::get_backend_storage_resource_config::Builder {
         crate::model::get_backend_storage_resource_config::Builder::default()
     }
@@ -3448,13 +3504,17 @@ impl GetBackendStorageResourceConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBackendAuthResourceConfig {
     /// <p>Defines whether you want to configure only authentication or both authentication and authorization settings.</p>
+    #[doc(hidden)]
     pub auth_resources: std::option::Option<crate::model::AuthResources>,
     /// <p>Describes the authorization configuration for the Amazon Cognito identity pool, provisioned as a part of your auth resource in the Amplify project.</p>
+    #[doc(hidden)]
     pub identity_pool_configs:
         std::option::Option<crate::model::CreateBackendAuthIdentityPoolConfig>,
     /// <p>Defines the service name to use when configuring an authentication resource in your Amplify project.</p>
+    #[doc(hidden)]
     pub service: std::option::Option<crate::model::Service>,
     /// <p>Describes authentication configuration for the Amazon Cognito user pool, provisioned as a part of your auth resource in the Amplify project.</p>
+    #[doc(hidden)]
     pub user_pool_configs: std::option::Option<crate::model::CreateBackendAuthUserPoolConfig>,
 }
 impl CreateBackendAuthResourceConfig {
@@ -3489,11 +3549,10 @@ impl std::fmt::Debug for CreateBackendAuthResourceConfig {
         formatter.finish()
     }
 }
-/// See [`CreateBackendAuthResourceConfig`](crate::model::CreateBackendAuthResourceConfig)
+/// See [`CreateBackendAuthResourceConfig`](crate::model::CreateBackendAuthResourceConfig).
 pub mod create_backend_auth_resource_config {
 
-    /// A builder for [`CreateBackendAuthResourceConfig`](crate::model::CreateBackendAuthResourceConfig)
-    #[non_exhaustive]
+    /// A builder for [`CreateBackendAuthResourceConfig`](crate::model::CreateBackendAuthResourceConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auth_resources: std::option::Option<crate::model::AuthResources>,
@@ -3559,7 +3618,7 @@ pub mod create_backend_auth_resource_config {
             self.user_pool_configs = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBackendAuthResourceConfig`](crate::model::CreateBackendAuthResourceConfig)
+        /// Consumes the builder and constructs a [`CreateBackendAuthResourceConfig`](crate::model::CreateBackendAuthResourceConfig).
         pub fn build(self) -> crate::model::CreateBackendAuthResourceConfig {
             crate::model::CreateBackendAuthResourceConfig {
                 auth_resources: self.auth_resources,
@@ -3571,7 +3630,7 @@ pub mod create_backend_auth_resource_config {
     }
 }
 impl CreateBackendAuthResourceConfig {
-    /// Creates a new builder-style object to manufacture [`CreateBackendAuthResourceConfig`](crate::model::CreateBackendAuthResourceConfig)
+    /// Creates a new builder-style object to manufacture [`CreateBackendAuthResourceConfig`](crate::model::CreateBackendAuthResourceConfig).
     pub fn builder() -> crate::model::create_backend_auth_resource_config::Builder {
         crate::model::create_backend_auth_resource_config::Builder::default()
     }
@@ -3582,21 +3641,29 @@ impl CreateBackendAuthResourceConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBackendAuthUserPoolConfig {
     /// <p><b>(DEPRECATED)</b> Describes the forgotten password policy for your Amazon Cognito user pool, configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub forgot_password: std::option::Option<crate::model::CreateBackendAuthForgotPasswordConfig>,
     /// <p>Describes whether to apply multi-factor authentication policies for your Amazon Cognito user pool configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub mfa: std::option::Option<crate::model::CreateBackendAuthMfaConfig>,
     /// <p>Describes the OAuth policy and rules for your Amazon Cognito user pool, configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub o_auth: std::option::Option<crate::model::CreateBackendAuthOAuthConfig>,
     /// <p>Describes the password policy for your Amazon Cognito user pool, configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub password_policy: std::option::Option<crate::model::CreateBackendAuthPasswordPolicyConfig>,
     /// <p>The required attributes to sign up new users in the user pool.</p>
+    #[doc(hidden)]
     pub required_sign_up_attributes:
         std::option::Option<std::vec::Vec<crate::model::RequiredSignUpAttributesElement>>,
     /// <p>Describes the sign-in methods that your Amplify app users use to log in using the Amazon Cognito user pool, configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub sign_in_method: std::option::Option<crate::model::SignInMethod>,
     /// <p>The Amazon Cognito user pool name.</p>
+    #[doc(hidden)]
     pub user_pool_name: std::option::Option<std::string::String>,
     /// <p>Describes the email or SMS verification message for your Amazon Cognito user pool, configured as a part of your Amplify project.</p>
+    #[doc(hidden)]
     pub verification_message:
         std::option::Option<crate::model::CreateBackendAuthVerificationMessageConfig>,
 }
@@ -3659,11 +3726,10 @@ impl std::fmt::Debug for CreateBackendAuthUserPoolConfig {
         formatter.finish()
     }
 }
-/// See [`CreateBackendAuthUserPoolConfig`](crate::model::CreateBackendAuthUserPoolConfig)
+/// See [`CreateBackendAuthUserPoolConfig`](crate::model::CreateBackendAuthUserPoolConfig).
 pub mod create_backend_auth_user_pool_config {
 
-    /// A builder for [`CreateBackendAuthUserPoolConfig`](crate::model::CreateBackendAuthUserPoolConfig)
-    #[non_exhaustive]
+    /// A builder for [`CreateBackendAuthUserPoolConfig`](crate::model::CreateBackendAuthUserPoolConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) forgot_password:
@@ -3804,7 +3870,7 @@ pub mod create_backend_auth_user_pool_config {
             self.verification_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBackendAuthUserPoolConfig`](crate::model::CreateBackendAuthUserPoolConfig)
+        /// Consumes the builder and constructs a [`CreateBackendAuthUserPoolConfig`](crate::model::CreateBackendAuthUserPoolConfig).
         pub fn build(self) -> crate::model::CreateBackendAuthUserPoolConfig {
             crate::model::CreateBackendAuthUserPoolConfig {
                 forgot_password: self.forgot_password,
@@ -3820,7 +3886,7 @@ pub mod create_backend_auth_user_pool_config {
     }
 }
 impl CreateBackendAuthUserPoolConfig {
-    /// Creates a new builder-style object to manufacture [`CreateBackendAuthUserPoolConfig`](crate::model::CreateBackendAuthUserPoolConfig)
+    /// Creates a new builder-style object to manufacture [`CreateBackendAuthUserPoolConfig`](crate::model::CreateBackendAuthUserPoolConfig).
     pub fn builder() -> crate::model::create_backend_auth_user_pool_config::Builder {
         crate::model::create_backend_auth_user_pool_config::Builder::default()
     }
@@ -3831,10 +3897,13 @@ impl CreateBackendAuthUserPoolConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBackendAuthVerificationMessageConfig {
     /// <p>The type of verification message to send.</p>
+    #[doc(hidden)]
     pub delivery_method: std::option::Option<crate::model::DeliveryMethod>,
     /// <p>The settings for the email message.</p>
+    #[doc(hidden)]
     pub email_settings: std::option::Option<crate::model::EmailSettings>,
     /// <p>The settings for the SMS message.</p>
+    #[doc(hidden)]
     pub sms_settings: std::option::Option<crate::model::SmsSettings>,
 }
 impl CreateBackendAuthVerificationMessageConfig {
@@ -3860,11 +3929,10 @@ impl std::fmt::Debug for CreateBackendAuthVerificationMessageConfig {
         formatter.finish()
     }
 }
-/// See [`CreateBackendAuthVerificationMessageConfig`](crate::model::CreateBackendAuthVerificationMessageConfig)
+/// See [`CreateBackendAuthVerificationMessageConfig`](crate::model::CreateBackendAuthVerificationMessageConfig).
 pub mod create_backend_auth_verification_message_config {
 
-    /// A builder for [`CreateBackendAuthVerificationMessageConfig`](crate::model::CreateBackendAuthVerificationMessageConfig)
-    #[non_exhaustive]
+    /// A builder for [`CreateBackendAuthVerificationMessageConfig`](crate::model::CreateBackendAuthVerificationMessageConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_method: std::option::Option<crate::model::DeliveryMethod>,
@@ -3911,7 +3979,7 @@ pub mod create_backend_auth_verification_message_config {
             self.sms_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBackendAuthVerificationMessageConfig`](crate::model::CreateBackendAuthVerificationMessageConfig)
+        /// Consumes the builder and constructs a [`CreateBackendAuthVerificationMessageConfig`](crate::model::CreateBackendAuthVerificationMessageConfig).
         pub fn build(self) -> crate::model::CreateBackendAuthVerificationMessageConfig {
             crate::model::CreateBackendAuthVerificationMessageConfig {
                 delivery_method: self.delivery_method,
@@ -3922,7 +3990,7 @@ pub mod create_backend_auth_verification_message_config {
     }
 }
 impl CreateBackendAuthVerificationMessageConfig {
-    /// Creates a new builder-style object to manufacture [`CreateBackendAuthVerificationMessageConfig`](crate::model::CreateBackendAuthVerificationMessageConfig)
+    /// Creates a new builder-style object to manufacture [`CreateBackendAuthVerificationMessageConfig`](crate::model::CreateBackendAuthVerificationMessageConfig).
     pub fn builder() -> crate::model::create_backend_auth_verification_message_config::Builder {
         crate::model::create_backend_auth_verification_message_config::Builder::default()
     }
@@ -4134,9 +4202,11 @@ impl AsRef<str> for RequiredSignUpAttributesElement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBackendAuthPasswordPolicyConfig {
     /// <p>Additional constraints for the password used to access the backend of your Amplify project.</p>
+    #[doc(hidden)]
     pub additional_constraints:
         std::option::Option<std::vec::Vec<crate::model::AdditionalConstraintsElement>>,
     /// <p>The minimum length of the password used to access the backend of your Amplify project.</p>
+    #[doc(hidden)]
     pub minimum_length: f64,
 }
 impl CreateBackendAuthPasswordPolicyConfig {
@@ -4159,11 +4229,10 @@ impl std::fmt::Debug for CreateBackendAuthPasswordPolicyConfig {
         formatter.finish()
     }
 }
-/// See [`CreateBackendAuthPasswordPolicyConfig`](crate::model::CreateBackendAuthPasswordPolicyConfig)
+/// See [`CreateBackendAuthPasswordPolicyConfig`](crate::model::CreateBackendAuthPasswordPolicyConfig).
 pub mod create_backend_auth_password_policy_config {
 
-    /// A builder for [`CreateBackendAuthPasswordPolicyConfig`](crate::model::CreateBackendAuthPasswordPolicyConfig)
-    #[non_exhaustive]
+    /// A builder for [`CreateBackendAuthPasswordPolicyConfig`](crate::model::CreateBackendAuthPasswordPolicyConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) additional_constraints:
@@ -4203,7 +4272,7 @@ pub mod create_backend_auth_password_policy_config {
             self.minimum_length = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBackendAuthPasswordPolicyConfig`](crate::model::CreateBackendAuthPasswordPolicyConfig)
+        /// Consumes the builder and constructs a [`CreateBackendAuthPasswordPolicyConfig`](crate::model::CreateBackendAuthPasswordPolicyConfig).
         pub fn build(self) -> crate::model::CreateBackendAuthPasswordPolicyConfig {
             crate::model::CreateBackendAuthPasswordPolicyConfig {
                 additional_constraints: self.additional_constraints,
@@ -4213,7 +4282,7 @@ pub mod create_backend_auth_password_policy_config {
     }
 }
 impl CreateBackendAuthPasswordPolicyConfig {
-    /// Creates a new builder-style object to manufacture [`CreateBackendAuthPasswordPolicyConfig`](crate::model::CreateBackendAuthPasswordPolicyConfig)
+    /// Creates a new builder-style object to manufacture [`CreateBackendAuthPasswordPolicyConfig`](crate::model::CreateBackendAuthPasswordPolicyConfig).
     pub fn builder() -> crate::model::create_backend_auth_password_policy_config::Builder {
         crate::model::create_backend_auth_password_policy_config::Builder::default()
     }
@@ -4224,16 +4293,22 @@ impl CreateBackendAuthPasswordPolicyConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBackendAuthOAuthConfig {
     /// <p>The domain prefix for your Amplify app.</p>
+    #[doc(hidden)]
     pub domain_prefix: std::option::Option<std::string::String>,
     /// <p>The OAuth grant type that you use to allow app users to authenticate from your Amplify app.</p>
+    #[doc(hidden)]
     pub o_auth_grant_type: std::option::Option<crate::model::OAuthGrantType>,
     /// <p>List of OAuth-related flows used to allow your app users to authenticate from your Amplify app.</p>
+    #[doc(hidden)]
     pub o_auth_scopes: std::option::Option<std::vec::Vec<crate::model::OAuthScopesElement>>,
     /// <p>The redirected URI for signing in to your Amplify app.</p>
+    #[doc(hidden)]
     pub redirect_sign_in_ur_is: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Redirect URLs that OAuth uses when a user signs out of an Amplify app.</p>
+    #[doc(hidden)]
     pub redirect_sign_out_ur_is: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The settings for using social providers to access your Amplify app.</p>
+    #[doc(hidden)]
     pub social_provider_settings: std::option::Option<crate::model::SocialProviderSettings>,
 }
 impl CreateBackendAuthOAuthConfig {
@@ -4276,11 +4351,10 @@ impl std::fmt::Debug for CreateBackendAuthOAuthConfig {
         formatter.finish()
     }
 }
-/// See [`CreateBackendAuthOAuthConfig`](crate::model::CreateBackendAuthOAuthConfig)
+/// See [`CreateBackendAuthOAuthConfig`](crate::model::CreateBackendAuthOAuthConfig).
 pub mod create_backend_auth_o_auth_config {
 
-    /// A builder for [`CreateBackendAuthOAuthConfig`](crate::model::CreateBackendAuthOAuthConfig)
-    #[non_exhaustive]
+    /// A builder for [`CreateBackendAuthOAuthConfig`](crate::model::CreateBackendAuthOAuthConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_prefix: std::option::Option<std::string::String>,
@@ -4392,7 +4466,7 @@ pub mod create_backend_auth_o_auth_config {
             self.social_provider_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBackendAuthOAuthConfig`](crate::model::CreateBackendAuthOAuthConfig)
+        /// Consumes the builder and constructs a [`CreateBackendAuthOAuthConfig`](crate::model::CreateBackendAuthOAuthConfig).
         pub fn build(self) -> crate::model::CreateBackendAuthOAuthConfig {
             crate::model::CreateBackendAuthOAuthConfig {
                 domain_prefix: self.domain_prefix,
@@ -4406,7 +4480,7 @@ pub mod create_backend_auth_o_auth_config {
     }
 }
 impl CreateBackendAuthOAuthConfig {
-    /// Creates a new builder-style object to manufacture [`CreateBackendAuthOAuthConfig`](crate::model::CreateBackendAuthOAuthConfig)
+    /// Creates a new builder-style object to manufacture [`CreateBackendAuthOAuthConfig`](crate::model::CreateBackendAuthOAuthConfig).
     pub fn builder() -> crate::model::create_backend_auth_o_auth_config::Builder {
         crate::model::create_backend_auth_o_auth_config::Builder::default()
     }
@@ -4417,8 +4491,10 @@ impl CreateBackendAuthOAuthConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBackendAuthMfaConfig {
     /// <p>Describes whether MFA should be [ON, OFF, or OPTIONAL] for authentication in your Amplify project.</p>
+    #[doc(hidden)]
     pub mfa_mode: std::option::Option<crate::model::MfaMode>,
     /// <p>Describes the configuration settings and methods for your Amplify app users to use MFA.</p>
+    #[doc(hidden)]
     pub settings: std::option::Option<crate::model::Settings>,
 }
 impl CreateBackendAuthMfaConfig {
@@ -4439,11 +4515,10 @@ impl std::fmt::Debug for CreateBackendAuthMfaConfig {
         formatter.finish()
     }
 }
-/// See [`CreateBackendAuthMfaConfig`](crate::model::CreateBackendAuthMfaConfig)
+/// See [`CreateBackendAuthMfaConfig`](crate::model::CreateBackendAuthMfaConfig).
 pub mod create_backend_auth_mfa_config {
 
-    /// A builder for [`CreateBackendAuthMfaConfig`](crate::model::CreateBackendAuthMfaConfig)
-    #[non_exhaustive]
+    /// A builder for [`CreateBackendAuthMfaConfig`](crate::model::CreateBackendAuthMfaConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mfa_mode: std::option::Option<crate::model::MfaMode>,
@@ -4470,7 +4545,7 @@ pub mod create_backend_auth_mfa_config {
             self.settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBackendAuthMfaConfig`](crate::model::CreateBackendAuthMfaConfig)
+        /// Consumes the builder and constructs a [`CreateBackendAuthMfaConfig`](crate::model::CreateBackendAuthMfaConfig).
         pub fn build(self) -> crate::model::CreateBackendAuthMfaConfig {
             crate::model::CreateBackendAuthMfaConfig {
                 mfa_mode: self.mfa_mode,
@@ -4480,7 +4555,7 @@ pub mod create_backend_auth_mfa_config {
     }
 }
 impl CreateBackendAuthMfaConfig {
-    /// Creates a new builder-style object to manufacture [`CreateBackendAuthMfaConfig`](crate::model::CreateBackendAuthMfaConfig)
+    /// Creates a new builder-style object to manufacture [`CreateBackendAuthMfaConfig`](crate::model::CreateBackendAuthMfaConfig).
     pub fn builder() -> crate::model::create_backend_auth_mfa_config::Builder {
         crate::model::create_backend_auth_mfa_config::Builder::default()
     }
@@ -4491,10 +4566,13 @@ impl CreateBackendAuthMfaConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBackendAuthForgotPasswordConfig {
     /// <p><b>(DEPRECATED)</b> Describes which mode to use (either SMS or email) to deliver messages to app users who want to recover their password.</p>
+    #[doc(hidden)]
     pub delivery_method: std::option::Option<crate::model::DeliveryMethod>,
     /// <p><b>(DEPRECATED)</b> The configuration for the email sent when an app user forgets their password.</p>
+    #[doc(hidden)]
     pub email_settings: std::option::Option<crate::model::EmailSettings>,
     /// <p><b>(DEPRECATED)</b> The configuration for the SMS message sent when an app user forgets their password.</p>
+    #[doc(hidden)]
     pub sms_settings: std::option::Option<crate::model::SmsSettings>,
 }
 impl CreateBackendAuthForgotPasswordConfig {
@@ -4520,11 +4598,10 @@ impl std::fmt::Debug for CreateBackendAuthForgotPasswordConfig {
         formatter.finish()
     }
 }
-/// See [`CreateBackendAuthForgotPasswordConfig`](crate::model::CreateBackendAuthForgotPasswordConfig)
+/// See [`CreateBackendAuthForgotPasswordConfig`](crate::model::CreateBackendAuthForgotPasswordConfig).
 pub mod create_backend_auth_forgot_password_config {
 
-    /// A builder for [`CreateBackendAuthForgotPasswordConfig`](crate::model::CreateBackendAuthForgotPasswordConfig)
-    #[non_exhaustive]
+    /// A builder for [`CreateBackendAuthForgotPasswordConfig`](crate::model::CreateBackendAuthForgotPasswordConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_method: std::option::Option<crate::model::DeliveryMethod>,
@@ -4571,7 +4648,7 @@ pub mod create_backend_auth_forgot_password_config {
             self.sms_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBackendAuthForgotPasswordConfig`](crate::model::CreateBackendAuthForgotPasswordConfig)
+        /// Consumes the builder and constructs a [`CreateBackendAuthForgotPasswordConfig`](crate::model::CreateBackendAuthForgotPasswordConfig).
         pub fn build(self) -> crate::model::CreateBackendAuthForgotPasswordConfig {
             crate::model::CreateBackendAuthForgotPasswordConfig {
                 delivery_method: self.delivery_method,
@@ -4582,7 +4659,7 @@ pub mod create_backend_auth_forgot_password_config {
     }
 }
 impl CreateBackendAuthForgotPasswordConfig {
-    /// Creates a new builder-style object to manufacture [`CreateBackendAuthForgotPasswordConfig`](crate::model::CreateBackendAuthForgotPasswordConfig)
+    /// Creates a new builder-style object to manufacture [`CreateBackendAuthForgotPasswordConfig`](crate::model::CreateBackendAuthForgotPasswordConfig).
     pub fn builder() -> crate::model::create_backend_auth_forgot_password_config::Builder {
         crate::model::create_backend_auth_forgot_password_config::Builder::default()
     }
@@ -4593,8 +4670,10 @@ impl CreateBackendAuthForgotPasswordConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBackendAuthIdentityPoolConfig {
     /// <p>Name of the Amazon Cognito identity pool used for authorization.</p>
+    #[doc(hidden)]
     pub identity_pool_name: std::option::Option<std::string::String>,
     /// <p>Set to true or false based on whether you want to enable guest authorization to your Amplify app.</p>
+    #[doc(hidden)]
     pub unauthenticated_login: bool,
 }
 impl CreateBackendAuthIdentityPoolConfig {
@@ -4615,11 +4694,10 @@ impl std::fmt::Debug for CreateBackendAuthIdentityPoolConfig {
         formatter.finish()
     }
 }
-/// See [`CreateBackendAuthIdentityPoolConfig`](crate::model::CreateBackendAuthIdentityPoolConfig)
+/// See [`CreateBackendAuthIdentityPoolConfig`](crate::model::CreateBackendAuthIdentityPoolConfig).
 pub mod create_backend_auth_identity_pool_config {
 
-    /// A builder for [`CreateBackendAuthIdentityPoolConfig`](crate::model::CreateBackendAuthIdentityPoolConfig)
-    #[non_exhaustive]
+    /// A builder for [`CreateBackendAuthIdentityPoolConfig`](crate::model::CreateBackendAuthIdentityPoolConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_pool_name: std::option::Option<std::string::String>,
@@ -4649,7 +4727,7 @@ pub mod create_backend_auth_identity_pool_config {
             self.unauthenticated_login = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBackendAuthIdentityPoolConfig`](crate::model::CreateBackendAuthIdentityPoolConfig)
+        /// Consumes the builder and constructs a [`CreateBackendAuthIdentityPoolConfig`](crate::model::CreateBackendAuthIdentityPoolConfig).
         pub fn build(self) -> crate::model::CreateBackendAuthIdentityPoolConfig {
             crate::model::CreateBackendAuthIdentityPoolConfig {
                 identity_pool_name: self.identity_pool_name,
@@ -4659,7 +4737,7 @@ pub mod create_backend_auth_identity_pool_config {
     }
 }
 impl CreateBackendAuthIdentityPoolConfig {
-    /// Creates a new builder-style object to manufacture [`CreateBackendAuthIdentityPoolConfig`](crate::model::CreateBackendAuthIdentityPoolConfig)
+    /// Creates a new builder-style object to manufacture [`CreateBackendAuthIdentityPoolConfig`](crate::model::CreateBackendAuthIdentityPoolConfig).
     pub fn builder() -> crate::model::create_backend_auth_identity_pool_config::Builder {
         crate::model::create_backend_auth_identity_pool_config::Builder::default()
     }
@@ -4725,10 +4803,13 @@ impl AsRef<str> for Status {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBackendStorageResourceConfig {
     /// <p>The name of the S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p>The authorization configuration for the storage S3 bucket.</p>
+    #[doc(hidden)]
     pub permissions: std::option::Option<crate::model::BackendStoragePermissions>,
     /// <p>The name of the storage service.</p>
+    #[doc(hidden)]
     pub service_name: std::option::Option<crate::model::ServiceName>,
 }
 impl CreateBackendStorageResourceConfig {
@@ -4754,11 +4835,10 @@ impl std::fmt::Debug for CreateBackendStorageResourceConfig {
         formatter.finish()
     }
 }
-/// See [`CreateBackendStorageResourceConfig`](crate::model::CreateBackendStorageResourceConfig)
+/// See [`CreateBackendStorageResourceConfig`](crate::model::CreateBackendStorageResourceConfig).
 pub mod create_backend_storage_resource_config {
 
-    /// A builder for [`CreateBackendStorageResourceConfig`](crate::model::CreateBackendStorageResourceConfig)
-    #[non_exhaustive]
+    /// A builder for [`CreateBackendStorageResourceConfig`](crate::model::CreateBackendStorageResourceConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_name: std::option::Option<std::string::String>,
@@ -4802,7 +4882,7 @@ pub mod create_backend_storage_resource_config {
             self.service_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBackendStorageResourceConfig`](crate::model::CreateBackendStorageResourceConfig)
+        /// Consumes the builder and constructs a [`CreateBackendStorageResourceConfig`](crate::model::CreateBackendStorageResourceConfig).
         pub fn build(self) -> crate::model::CreateBackendStorageResourceConfig {
             crate::model::CreateBackendStorageResourceConfig {
                 bucket_name: self.bucket_name,
@@ -4813,7 +4893,7 @@ pub mod create_backend_storage_resource_config {
     }
 }
 impl CreateBackendStorageResourceConfig {
-    /// Creates a new builder-style object to manufacture [`CreateBackendStorageResourceConfig`](crate::model::CreateBackendStorageResourceConfig)
+    /// Creates a new builder-style object to manufacture [`CreateBackendStorageResourceConfig`](crate::model::CreateBackendStorageResourceConfig).
     pub fn builder() -> crate::model::create_backend_storage_resource_config::Builder {
         crate::model::create_backend_storage_resource_config::Builder::default()
     }
@@ -4829,22 +4909,21 @@ impl std::fmt::Debug for ResourceConfig {
         formatter.finish()
     }
 }
-/// See [`ResourceConfig`](crate::model::ResourceConfig)
+/// See [`ResourceConfig`](crate::model::ResourceConfig).
 pub mod resource_config {
 
-    /// A builder for [`ResourceConfig`](crate::model::ResourceConfig)
-    #[non_exhaustive]
+    /// A builder for [`ResourceConfig`](crate::model::ResourceConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`ResourceConfig`](crate::model::ResourceConfig)
+        /// Consumes the builder and constructs a [`ResourceConfig`](crate::model::ResourceConfig).
         pub fn build(self) -> crate::model::ResourceConfig {
             crate::model::ResourceConfig {}
         }
     }
 }
 impl ResourceConfig {
-    /// Creates a new builder-style object to manufacture [`ResourceConfig`](crate::model::ResourceConfig)
+    /// Creates a new builder-style object to manufacture [`ResourceConfig`](crate::model::ResourceConfig).
     pub fn builder() -> crate::model::resource_config::Builder {
         crate::model::resource_config::Builder::default()
     }

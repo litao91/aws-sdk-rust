@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RollbackTransactionOutput {
     /// <p>The status of the rollback operation.</p>
+    #[doc(hidden)]
     pub transaction_status: std::option::Option<std::string::String>,
 }
 impl RollbackTransactionOutput {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for RollbackTransactionOutput {
         formatter.finish()
     }
 }
-/// See [`RollbackTransactionOutput`](crate::output::RollbackTransactionOutput)
+/// See [`RollbackTransactionOutput`](crate::output::RollbackTransactionOutput).
 pub mod rollback_transaction_output {
 
-    /// A builder for [`RollbackTransactionOutput`](crate::output::RollbackTransactionOutput)
-    #[non_exhaustive]
+    /// A builder for [`RollbackTransactionOutput`](crate::output::RollbackTransactionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transaction_status: std::option::Option<std::string::String>,
@@ -43,7 +43,7 @@ pub mod rollback_transaction_output {
             self.transaction_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`RollbackTransactionOutput`](crate::output::RollbackTransactionOutput)
+        /// Consumes the builder and constructs a [`RollbackTransactionOutput`](crate::output::RollbackTransactionOutput).
         pub fn build(self) -> crate::output::RollbackTransactionOutput {
             crate::output::RollbackTransactionOutput {
                 transaction_status: self.transaction_status,
@@ -52,7 +52,7 @@ pub mod rollback_transaction_output {
     }
 }
 impl RollbackTransactionOutput {
-    /// Creates a new builder-style object to manufacture [`RollbackTransactionOutput`](crate::output::RollbackTransactionOutput)
+    /// Creates a new builder-style object to manufacture [`RollbackTransactionOutput`](crate::output::RollbackTransactionOutput).
     pub fn builder() -> crate::output::rollback_transaction_output::Builder {
         crate::output::rollback_transaction_output::Builder::default()
     }
@@ -63,17 +63,22 @@ impl RollbackTransactionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecuteStatementOutput {
     /// <p>The records returned by the SQL statement. This field is blank if the <code>formatRecordsAs</code> parameter is set to <code>JSON</code>.</p>
+    #[doc(hidden)]
     pub records: std::option::Option<std::vec::Vec<std::vec::Vec<crate::model::Field>>>,
     /// <p>Metadata for the columns included in the results. This field is blank if the <code>formatRecordsAs</code> parameter is set to <code>JSON</code>.</p>
+    #[doc(hidden)]
     pub column_metadata: std::option::Option<std::vec::Vec<crate::model::ColumnMetadata>>,
     /// <p>The number of records updated by the request.</p>
+    #[doc(hidden)]
     pub number_of_records_updated: i64,
     /// <p>Values for fields generated during a DML request.</p> <note>
     /// <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href="https://www.postgresql.org/docs/10/dml-returning.html">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p>
     /// </note>
+    #[doc(hidden)]
     pub generated_fields: std::option::Option<std::vec::Vec<crate::model::Field>>,
     /// <p>A string value that represents the result set of a <code>SELECT</code> statement in JSON format. This value is only present when the <code>formatRecordsAs</code> parameter is set to <code>JSON</code>.</p>
     /// <p>The size limit for this field is currently 10 MB. If the JSON-formatted string representing the result set requires more than 10 MB, the call returns an error.</p>
+    #[doc(hidden)]
     pub formatted_records: std::option::Option<std::string::String>,
 }
 impl ExecuteStatementOutput {
@@ -112,11 +117,10 @@ impl std::fmt::Debug for ExecuteStatementOutput {
         formatter.finish()
     }
 }
-/// See [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput)
+/// See [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput).
 pub mod execute_statement_output {
 
-    /// A builder for [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput)
-    #[non_exhaustive]
+    /// A builder for [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) records: std::option::Option<std::vec::Vec<std::vec::Vec<crate::model::Field>>>,
@@ -213,7 +217,7 @@ pub mod execute_statement_output {
             self.formatted_records = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput)
+        /// Consumes the builder and constructs a [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput).
         pub fn build(self) -> crate::output::ExecuteStatementOutput {
             crate::output::ExecuteStatementOutput {
                 records: self.records,
@@ -226,7 +230,7 @@ pub mod execute_statement_output {
     }
 }
 impl ExecuteStatementOutput {
-    /// Creates a new builder-style object to manufacture [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput)
+    /// Creates a new builder-style object to manufacture [`ExecuteStatementOutput`](crate::output::ExecuteStatementOutput).
     pub fn builder() -> crate::output::execute_statement_output::Builder {
         crate::output::execute_statement_output::Builder::default()
     }
@@ -237,6 +241,7 @@ impl ExecuteStatementOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecuteSqlOutput {
     /// <p>The results of the SQL statement or statements.</p>
+    #[doc(hidden)]
     pub sql_statement_results: std::option::Option<std::vec::Vec<crate::model::SqlStatementResult>>,
 }
 impl ExecuteSqlOutput {
@@ -254,11 +259,10 @@ impl std::fmt::Debug for ExecuteSqlOutput {
         formatter.finish()
     }
 }
-/// See [`ExecuteSqlOutput`](crate::output::ExecuteSqlOutput)
+/// See [`ExecuteSqlOutput`](crate::output::ExecuteSqlOutput).
 pub mod execute_sql_output {
 
-    /// A builder for [`ExecuteSqlOutput`](crate::output::ExecuteSqlOutput)
-    #[non_exhaustive]
+    /// A builder for [`ExecuteSqlOutput`](crate::output::ExecuteSqlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sql_statement_results:
@@ -284,7 +288,7 @@ pub mod execute_sql_output {
             self.sql_statement_results = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecuteSqlOutput`](crate::output::ExecuteSqlOutput)
+        /// Consumes the builder and constructs a [`ExecuteSqlOutput`](crate::output::ExecuteSqlOutput).
         pub fn build(self) -> crate::output::ExecuteSqlOutput {
             crate::output::ExecuteSqlOutput {
                 sql_statement_results: self.sql_statement_results,
@@ -293,7 +297,7 @@ pub mod execute_sql_output {
     }
 }
 impl ExecuteSqlOutput {
-    /// Creates a new builder-style object to manufacture [`ExecuteSqlOutput`](crate::output::ExecuteSqlOutput)
+    /// Creates a new builder-style object to manufacture [`ExecuteSqlOutput`](crate::output::ExecuteSqlOutput).
     pub fn builder() -> crate::output::execute_sql_output::Builder {
         crate::output::execute_sql_output::Builder::default()
     }
@@ -304,6 +308,7 @@ impl ExecuteSqlOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CommitTransactionOutput {
     /// <p>The status of the commit operation.</p>
+    #[doc(hidden)]
     pub transaction_status: std::option::Option<std::string::String>,
 }
 impl CommitTransactionOutput {
@@ -319,11 +324,10 @@ impl std::fmt::Debug for CommitTransactionOutput {
         formatter.finish()
     }
 }
-/// See [`CommitTransactionOutput`](crate::output::CommitTransactionOutput)
+/// See [`CommitTransactionOutput`](crate::output::CommitTransactionOutput).
 pub mod commit_transaction_output {
 
-    /// A builder for [`CommitTransactionOutput`](crate::output::CommitTransactionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CommitTransactionOutput`](crate::output::CommitTransactionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transaction_status: std::option::Option<std::string::String>,
@@ -342,7 +346,7 @@ pub mod commit_transaction_output {
             self.transaction_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CommitTransactionOutput`](crate::output::CommitTransactionOutput)
+        /// Consumes the builder and constructs a [`CommitTransactionOutput`](crate::output::CommitTransactionOutput).
         pub fn build(self) -> crate::output::CommitTransactionOutput {
             crate::output::CommitTransactionOutput {
                 transaction_status: self.transaction_status,
@@ -351,7 +355,7 @@ pub mod commit_transaction_output {
     }
 }
 impl CommitTransactionOutput {
-    /// Creates a new builder-style object to manufacture [`CommitTransactionOutput`](crate::output::CommitTransactionOutput)
+    /// Creates a new builder-style object to manufacture [`CommitTransactionOutput`](crate::output::CommitTransactionOutput).
     pub fn builder() -> crate::output::commit_transaction_output::Builder {
         crate::output::commit_transaction_output::Builder::default()
     }
@@ -362,6 +366,7 @@ impl CommitTransactionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BeginTransactionOutput {
     /// <p>The transaction ID of the transaction started by the call.</p>
+    #[doc(hidden)]
     pub transaction_id: std::option::Option<std::string::String>,
 }
 impl BeginTransactionOutput {
@@ -377,11 +382,10 @@ impl std::fmt::Debug for BeginTransactionOutput {
         formatter.finish()
     }
 }
-/// See [`BeginTransactionOutput`](crate::output::BeginTransactionOutput)
+/// See [`BeginTransactionOutput`](crate::output::BeginTransactionOutput).
 pub mod begin_transaction_output {
 
-    /// A builder for [`BeginTransactionOutput`](crate::output::BeginTransactionOutput)
-    #[non_exhaustive]
+    /// A builder for [`BeginTransactionOutput`](crate::output::BeginTransactionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transaction_id: std::option::Option<std::string::String>,
@@ -400,7 +404,7 @@ pub mod begin_transaction_output {
             self.transaction_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`BeginTransactionOutput`](crate::output::BeginTransactionOutput)
+        /// Consumes the builder and constructs a [`BeginTransactionOutput`](crate::output::BeginTransactionOutput).
         pub fn build(self) -> crate::output::BeginTransactionOutput {
             crate::output::BeginTransactionOutput {
                 transaction_id: self.transaction_id,
@@ -409,7 +413,7 @@ pub mod begin_transaction_output {
     }
 }
 impl BeginTransactionOutput {
-    /// Creates a new builder-style object to manufacture [`BeginTransactionOutput`](crate::output::BeginTransactionOutput)
+    /// Creates a new builder-style object to manufacture [`BeginTransactionOutput`](crate::output::BeginTransactionOutput).
     pub fn builder() -> crate::output::begin_transaction_output::Builder {
         crate::output::begin_transaction_output::Builder::default()
     }
@@ -420,6 +424,7 @@ impl BeginTransactionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchExecuteStatementOutput {
     /// <p>The execution results of each batch entry.</p>
+    #[doc(hidden)]
     pub update_results: std::option::Option<std::vec::Vec<crate::model::UpdateResult>>,
 }
 impl BatchExecuteStatementOutput {
@@ -435,11 +440,10 @@ impl std::fmt::Debug for BatchExecuteStatementOutput {
         formatter.finish()
     }
 }
-/// See [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput)
+/// See [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput).
 pub mod batch_execute_statement_output {
 
-    /// A builder for [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput)
-    #[non_exhaustive]
+    /// A builder for [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) update_results: std::option::Option<std::vec::Vec<crate::model::UpdateResult>>,
@@ -464,7 +468,7 @@ pub mod batch_execute_statement_output {
             self.update_results = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput)
+        /// Consumes the builder and constructs a [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput).
         pub fn build(self) -> crate::output::BatchExecuteStatementOutput {
             crate::output::BatchExecuteStatementOutput {
                 update_results: self.update_results,
@@ -473,7 +477,7 @@ pub mod batch_execute_statement_output {
     }
 }
 impl BatchExecuteStatementOutput {
-    /// Creates a new builder-style object to manufacture [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput)
+    /// Creates a new builder-style object to manufacture [`BatchExecuteStatementOutput`](crate::output::BatchExecuteStatementOutput).
     pub fn builder() -> crate::output::batch_execute_statement_output::Builder {
         crate::output::batch_execute_statement_output::Builder::default()
     }

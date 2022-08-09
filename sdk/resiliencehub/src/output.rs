@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateResiliencyPolicyOutput {
     /// <p>The type of resiliency policy that was updated, including the recovery time objective (RTO) and recovery point objective (RPO) in seconds.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<crate::model::ResiliencyPolicy>,
 }
 impl UpdateResiliencyPolicyOutput {
@@ -19,11 +20,10 @@ impl std::fmt::Debug for UpdateResiliencyPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateResiliencyPolicyOutput`](crate::output::UpdateResiliencyPolicyOutput)
+/// See [`UpdateResiliencyPolicyOutput`](crate::output::UpdateResiliencyPolicyOutput).
 pub mod update_resiliency_policy_output {
 
-    /// A builder for [`UpdateResiliencyPolicyOutput`](crate::output::UpdateResiliencyPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateResiliencyPolicyOutput`](crate::output::UpdateResiliencyPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<crate::model::ResiliencyPolicy>,
@@ -42,7 +42,7 @@ pub mod update_resiliency_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateResiliencyPolicyOutput`](crate::output::UpdateResiliencyPolicyOutput)
+        /// Consumes the builder and constructs a [`UpdateResiliencyPolicyOutput`](crate::output::UpdateResiliencyPolicyOutput).
         pub fn build(self) -> crate::output::UpdateResiliencyPolicyOutput {
             crate::output::UpdateResiliencyPolicyOutput {
                 policy: self.policy,
@@ -51,7 +51,7 @@ pub mod update_resiliency_policy_output {
     }
 }
 impl UpdateResiliencyPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateResiliencyPolicyOutput`](crate::output::UpdateResiliencyPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateResiliencyPolicyOutput`](crate::output::UpdateResiliencyPolicyOutput).
     pub fn builder() -> crate::output::update_resiliency_policy_output::Builder {
         crate::output::update_resiliency_policy_output::Builder::default()
     }
@@ -62,6 +62,7 @@ impl UpdateResiliencyPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAppOutput {
     /// <p>The specified application, returned as an object with details including compliance status, creation time, description, resiliency score, and more.</p>
+    #[doc(hidden)]
     pub app: std::option::Option<crate::model::App>,
 }
 impl UpdateAppOutput {
@@ -77,11 +78,10 @@ impl std::fmt::Debug for UpdateAppOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAppOutput`](crate::output::UpdateAppOutput)
+/// See [`UpdateAppOutput`](crate::output::UpdateAppOutput).
 pub mod update_app_output {
 
-    /// A builder for [`UpdateAppOutput`](crate::output::UpdateAppOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAppOutput`](crate::output::UpdateAppOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app: std::option::Option<crate::model::App>,
@@ -97,14 +97,14 @@ pub mod update_app_output {
             self.app = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAppOutput`](crate::output::UpdateAppOutput)
+        /// Consumes the builder and constructs a [`UpdateAppOutput`](crate::output::UpdateAppOutput).
         pub fn build(self) -> crate::output::UpdateAppOutput {
             crate::output::UpdateAppOutput { app: self.app }
         }
     }
 }
 impl UpdateAppOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAppOutput`](crate::output::UpdateAppOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAppOutput`](crate::output::UpdateAppOutput).
     pub fn builder() -> crate::output::update_app_output::Builder {
         crate::output::update_app_output::Builder::default()
     }
@@ -120,22 +120,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -151,22 +150,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -177,6 +175,7 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartAppAssessmentOutput {
     /// <p>The assessment created.</p>
+    #[doc(hidden)]
     pub assessment: std::option::Option<crate::model::AppAssessment>,
 }
 impl StartAppAssessmentOutput {
@@ -192,11 +191,10 @@ impl std::fmt::Debug for StartAppAssessmentOutput {
         formatter.finish()
     }
 }
-/// See [`StartAppAssessmentOutput`](crate::output::StartAppAssessmentOutput)
+/// See [`StartAppAssessmentOutput`](crate::output::StartAppAssessmentOutput).
 pub mod start_app_assessment_output {
 
-    /// A builder for [`StartAppAssessmentOutput`](crate::output::StartAppAssessmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartAppAssessmentOutput`](crate::output::StartAppAssessmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assessment: std::option::Option<crate::model::AppAssessment>,
@@ -215,7 +213,7 @@ pub mod start_app_assessment_output {
             self.assessment = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartAppAssessmentOutput`](crate::output::StartAppAssessmentOutput)
+        /// Consumes the builder and constructs a [`StartAppAssessmentOutput`](crate::output::StartAppAssessmentOutput).
         pub fn build(self) -> crate::output::StartAppAssessmentOutput {
             crate::output::StartAppAssessmentOutput {
                 assessment: self.assessment,
@@ -224,7 +222,7 @@ pub mod start_app_assessment_output {
     }
 }
 impl StartAppAssessmentOutput {
-    /// Creates a new builder-style object to manufacture [`StartAppAssessmentOutput`](crate::output::StartAppAssessmentOutput)
+    /// Creates a new builder-style object to manufacture [`StartAppAssessmentOutput`](crate::output::StartAppAssessmentOutput).
     pub fn builder() -> crate::output::start_app_assessment_output::Builder {
         crate::output::start_app_assessment_output::Builder::default()
     }
@@ -235,12 +233,16 @@ impl StartAppAssessmentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResolveAppVersionResourcesOutput {
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<std::string::String>,
     /// <p>The identifier for a specific resolution.</p>
+    #[doc(hidden)]
     pub resolution_id: std::option::Option<std::string::String>,
     /// <p>The status of the action.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ResourceResolutionStatusType>,
 }
 impl ResolveAppVersionResourcesOutput {
@@ -271,11 +273,10 @@ impl std::fmt::Debug for ResolveAppVersionResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`ResolveAppVersionResourcesOutput`](crate::output::ResolveAppVersionResourcesOutput)
+/// See [`ResolveAppVersionResourcesOutput`](crate::output::ResolveAppVersionResourcesOutput).
 pub mod resolve_app_version_resources_output {
 
-    /// A builder for [`ResolveAppVersionResourcesOutput`](crate::output::ResolveAppVersionResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ResolveAppVersionResourcesOutput`](crate::output::ResolveAppVersionResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -330,7 +331,7 @@ pub mod resolve_app_version_resources_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResolveAppVersionResourcesOutput`](crate::output::ResolveAppVersionResourcesOutput)
+        /// Consumes the builder and constructs a [`ResolveAppVersionResourcesOutput`](crate::output::ResolveAppVersionResourcesOutput).
         pub fn build(self) -> crate::output::ResolveAppVersionResourcesOutput {
             crate::output::ResolveAppVersionResourcesOutput {
                 app_arn: self.app_arn,
@@ -342,7 +343,7 @@ pub mod resolve_app_version_resources_output {
     }
 }
 impl ResolveAppVersionResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`ResolveAppVersionResourcesOutput`](crate::output::ResolveAppVersionResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`ResolveAppVersionResourcesOutput`](crate::output::ResolveAppVersionResourcesOutput).
     pub fn builder() -> crate::output::resolve_app_version_resources_output::Builder {
         crate::output::resolve_app_version_resources_output::Builder::default()
     }
@@ -353,8 +354,10 @@ impl ResolveAppVersionResourcesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoveDraftAppVersionResourceMappingsOutput {
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<std::string::String>,
 }
 impl RemoveDraftAppVersionResourceMappingsOutput {
@@ -375,11 +378,10 @@ impl std::fmt::Debug for RemoveDraftAppVersionResourceMappingsOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveDraftAppVersionResourceMappingsOutput`](crate::output::RemoveDraftAppVersionResourceMappingsOutput)
+/// See [`RemoveDraftAppVersionResourceMappingsOutput`](crate::output::RemoveDraftAppVersionResourceMappingsOutput).
 pub mod remove_draft_app_version_resource_mappings_output {
 
-    /// A builder for [`RemoveDraftAppVersionResourceMappingsOutput`](crate::output::RemoveDraftAppVersionResourceMappingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveDraftAppVersionResourceMappingsOutput`](crate::output::RemoveDraftAppVersionResourceMappingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -406,7 +408,7 @@ pub mod remove_draft_app_version_resource_mappings_output {
             self.app_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoveDraftAppVersionResourceMappingsOutput`](crate::output::RemoveDraftAppVersionResourceMappingsOutput)
+        /// Consumes the builder and constructs a [`RemoveDraftAppVersionResourceMappingsOutput`](crate::output::RemoveDraftAppVersionResourceMappingsOutput).
         pub fn build(self) -> crate::output::RemoveDraftAppVersionResourceMappingsOutput {
             crate::output::RemoveDraftAppVersionResourceMappingsOutput {
                 app_arn: self.app_arn,
@@ -416,7 +418,7 @@ pub mod remove_draft_app_version_resource_mappings_output {
     }
 }
 impl RemoveDraftAppVersionResourceMappingsOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveDraftAppVersionResourceMappingsOutput`](crate::output::RemoveDraftAppVersionResourceMappingsOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveDraftAppVersionResourceMappingsOutput`](crate::output::RemoveDraftAppVersionResourceMappingsOutput).
     pub fn builder() -> crate::output::remove_draft_app_version_resource_mappings_output::Builder {
         crate::output::remove_draft_app_version_resource_mappings_output::Builder::default()
     }
@@ -427,8 +429,10 @@ impl RemoveDraftAppVersionResourceMappingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutDraftAppVersionTemplateOutput {
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<std::string::String>,
 }
 impl PutDraftAppVersionTemplateOutput {
@@ -449,11 +453,10 @@ impl std::fmt::Debug for PutDraftAppVersionTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`PutDraftAppVersionTemplateOutput`](crate::output::PutDraftAppVersionTemplateOutput)
+/// See [`PutDraftAppVersionTemplateOutput`](crate::output::PutDraftAppVersionTemplateOutput).
 pub mod put_draft_app_version_template_output {
 
-    /// A builder for [`PutDraftAppVersionTemplateOutput`](crate::output::PutDraftAppVersionTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutDraftAppVersionTemplateOutput`](crate::output::PutDraftAppVersionTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -480,7 +483,7 @@ pub mod put_draft_app_version_template_output {
             self.app_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutDraftAppVersionTemplateOutput`](crate::output::PutDraftAppVersionTemplateOutput)
+        /// Consumes the builder and constructs a [`PutDraftAppVersionTemplateOutput`](crate::output::PutDraftAppVersionTemplateOutput).
         pub fn build(self) -> crate::output::PutDraftAppVersionTemplateOutput {
             crate::output::PutDraftAppVersionTemplateOutput {
                 app_arn: self.app_arn,
@@ -490,7 +493,7 @@ pub mod put_draft_app_version_template_output {
     }
 }
 impl PutDraftAppVersionTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`PutDraftAppVersionTemplateOutput`](crate::output::PutDraftAppVersionTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`PutDraftAppVersionTemplateOutput`](crate::output::PutDraftAppVersionTemplateOutput).
     pub fn builder() -> crate::output::put_draft_app_version_template_output::Builder {
         crate::output::put_draft_app_version_template_output::Builder::default()
     }
@@ -501,8 +504,10 @@ impl PutDraftAppVersionTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublishAppVersionOutput {
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<std::string::String>,
 }
 impl PublishAppVersionOutput {
@@ -523,11 +528,10 @@ impl std::fmt::Debug for PublishAppVersionOutput {
         formatter.finish()
     }
 }
-/// See [`PublishAppVersionOutput`](crate::output::PublishAppVersionOutput)
+/// See [`PublishAppVersionOutput`](crate::output::PublishAppVersionOutput).
 pub mod publish_app_version_output {
 
-    /// A builder for [`PublishAppVersionOutput`](crate::output::PublishAppVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`PublishAppVersionOutput`](crate::output::PublishAppVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -554,7 +558,7 @@ pub mod publish_app_version_output {
             self.app_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublishAppVersionOutput`](crate::output::PublishAppVersionOutput)
+        /// Consumes the builder and constructs a [`PublishAppVersionOutput`](crate::output::PublishAppVersionOutput).
         pub fn build(self) -> crate::output::PublishAppVersionOutput {
             crate::output::PublishAppVersionOutput {
                 app_arn: self.app_arn,
@@ -564,7 +568,7 @@ pub mod publish_app_version_output {
     }
 }
 impl PublishAppVersionOutput {
-    /// Creates a new builder-style object to manufacture [`PublishAppVersionOutput`](crate::output::PublishAppVersionOutput)
+    /// Creates a new builder-style object to manufacture [`PublishAppVersionOutput`](crate::output::PublishAppVersionOutput).
     pub fn builder() -> crate::output::publish_app_version_output::Builder {
         crate::output::publish_app_version_output::Builder::default()
     }
@@ -575,11 +579,14 @@ impl PublishAppVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListUnsupportedAppVersionResourcesOutput {
     /// <p>The unsupported resources for the application.</p>
+    #[doc(hidden)]
     pub unsupported_resources:
         std::option::Option<std::vec::Vec<crate::model::UnsupportedResource>>,
     /// <p>The identifier for a specific resolution.</p>
+    #[doc(hidden)]
     pub resolution_id: std::option::Option<std::string::String>,
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListUnsupportedAppVersionResourcesOutput {
@@ -607,11 +614,10 @@ impl std::fmt::Debug for ListUnsupportedAppVersionResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`ListUnsupportedAppVersionResourcesOutput`](crate::output::ListUnsupportedAppVersionResourcesOutput)
+/// See [`ListUnsupportedAppVersionResourcesOutput`](crate::output::ListUnsupportedAppVersionResourcesOutput).
 pub mod list_unsupported_app_version_resources_output {
 
-    /// A builder for [`ListUnsupportedAppVersionResourcesOutput`](crate::output::ListUnsupportedAppVersionResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListUnsupportedAppVersionResourcesOutput`](crate::output::ListUnsupportedAppVersionResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) unsupported_resources:
@@ -662,7 +668,7 @@ pub mod list_unsupported_app_version_resources_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListUnsupportedAppVersionResourcesOutput`](crate::output::ListUnsupportedAppVersionResourcesOutput)
+        /// Consumes the builder and constructs a [`ListUnsupportedAppVersionResourcesOutput`](crate::output::ListUnsupportedAppVersionResourcesOutput).
         pub fn build(self) -> crate::output::ListUnsupportedAppVersionResourcesOutput {
             crate::output::ListUnsupportedAppVersionResourcesOutput {
                 unsupported_resources: self.unsupported_resources,
@@ -673,7 +679,7 @@ pub mod list_unsupported_app_version_resources_output {
     }
 }
 impl ListUnsupportedAppVersionResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`ListUnsupportedAppVersionResourcesOutput`](crate::output::ListUnsupportedAppVersionResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`ListUnsupportedAppVersionResourcesOutput`](crate::output::ListUnsupportedAppVersionResourcesOutput).
     pub fn builder() -> crate::output::list_unsupported_app_version_resources_output::Builder {
         crate::output::list_unsupported_app_version_resources_output::Builder::default()
     }
@@ -684,8 +690,10 @@ impl ListUnsupportedAppVersionResourcesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTestRecommendationsOutput {
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The test recommendations for the Resilience Hub application.</p>
+    #[doc(hidden)]
     pub test_recommendations: std::option::Option<std::vec::Vec<crate::model::TestRecommendation>>,
 }
 impl ListTestRecommendationsOutput {
@@ -706,11 +714,10 @@ impl std::fmt::Debug for ListTestRecommendationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListTestRecommendationsOutput`](crate::output::ListTestRecommendationsOutput)
+/// See [`ListTestRecommendationsOutput`](crate::output::ListTestRecommendationsOutput).
 pub mod list_test_recommendations_output {
 
-    /// A builder for [`ListTestRecommendationsOutput`](crate::output::ListTestRecommendationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTestRecommendationsOutput`](crate::output::ListTestRecommendationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -747,7 +754,7 @@ pub mod list_test_recommendations_output {
             self.test_recommendations = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTestRecommendationsOutput`](crate::output::ListTestRecommendationsOutput)
+        /// Consumes the builder and constructs a [`ListTestRecommendationsOutput`](crate::output::ListTestRecommendationsOutput).
         pub fn build(self) -> crate::output::ListTestRecommendationsOutput {
             crate::output::ListTestRecommendationsOutput {
                 next_token: self.next_token,
@@ -757,7 +764,7 @@ pub mod list_test_recommendations_output {
     }
 }
 impl ListTestRecommendationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListTestRecommendationsOutput`](crate::output::ListTestRecommendationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListTestRecommendationsOutput`](crate::output::ListTestRecommendationsOutput).
     pub fn builder() -> crate::output::list_test_recommendations_output::Builder {
         crate::output::list_test_recommendations_output::Builder::default()
     }
@@ -768,6 +775,7 @@ impl ListTestRecommendationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key/value pair.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -787,11 +795,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -824,14 +831,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -842,8 +849,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSuggestedResiliencyPoliciesOutput {
     /// <p>The suggested resiliency policies for the Resilience Hub applications.</p>
+    #[doc(hidden)]
     pub resiliency_policies: std::option::Option<std::vec::Vec<crate::model::ResiliencyPolicy>>,
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListSuggestedResiliencyPoliciesOutput {
@@ -864,11 +873,10 @@ impl std::fmt::Debug for ListSuggestedResiliencyPoliciesOutput {
         formatter.finish()
     }
 }
-/// See [`ListSuggestedResiliencyPoliciesOutput`](crate::output::ListSuggestedResiliencyPoliciesOutput)
+/// See [`ListSuggestedResiliencyPoliciesOutput`](crate::output::ListSuggestedResiliencyPoliciesOutput).
 pub mod list_suggested_resiliency_policies_output {
 
-    /// A builder for [`ListSuggestedResiliencyPoliciesOutput`](crate::output::ListSuggestedResiliencyPoliciesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSuggestedResiliencyPoliciesOutput`](crate::output::ListSuggestedResiliencyPoliciesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resiliency_policies:
@@ -905,7 +913,7 @@ pub mod list_suggested_resiliency_policies_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSuggestedResiliencyPoliciesOutput`](crate::output::ListSuggestedResiliencyPoliciesOutput)
+        /// Consumes the builder and constructs a [`ListSuggestedResiliencyPoliciesOutput`](crate::output::ListSuggestedResiliencyPoliciesOutput).
         pub fn build(self) -> crate::output::ListSuggestedResiliencyPoliciesOutput {
             crate::output::ListSuggestedResiliencyPoliciesOutput {
                 resiliency_policies: self.resiliency_policies,
@@ -915,7 +923,7 @@ pub mod list_suggested_resiliency_policies_output {
     }
 }
 impl ListSuggestedResiliencyPoliciesOutput {
-    /// Creates a new builder-style object to manufacture [`ListSuggestedResiliencyPoliciesOutput`](crate::output::ListSuggestedResiliencyPoliciesOutput)
+    /// Creates a new builder-style object to manufacture [`ListSuggestedResiliencyPoliciesOutput`](crate::output::ListSuggestedResiliencyPoliciesOutput).
     pub fn builder() -> crate::output::list_suggested_resiliency_policies_output::Builder {
         crate::output::list_suggested_resiliency_policies_output::Builder::default()
     }
@@ -926,8 +934,10 @@ impl ListSuggestedResiliencyPoliciesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSopRecommendationsOutput {
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The standard operating procedure (SOP) recommendations for the Resilience Hub applications.</p>
+    #[doc(hidden)]
     pub sop_recommendations: std::option::Option<std::vec::Vec<crate::model::SopRecommendation>>,
 }
 impl ListSopRecommendationsOutput {
@@ -948,11 +958,10 @@ impl std::fmt::Debug for ListSopRecommendationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListSopRecommendationsOutput`](crate::output::ListSopRecommendationsOutput)
+/// See [`ListSopRecommendationsOutput`](crate::output::ListSopRecommendationsOutput).
 pub mod list_sop_recommendations_output {
 
-    /// A builder for [`ListSopRecommendationsOutput`](crate::output::ListSopRecommendationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSopRecommendationsOutput`](crate::output::ListSopRecommendationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -989,7 +998,7 @@ pub mod list_sop_recommendations_output {
             self.sop_recommendations = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSopRecommendationsOutput`](crate::output::ListSopRecommendationsOutput)
+        /// Consumes the builder and constructs a [`ListSopRecommendationsOutput`](crate::output::ListSopRecommendationsOutput).
         pub fn build(self) -> crate::output::ListSopRecommendationsOutput {
             crate::output::ListSopRecommendationsOutput {
                 next_token: self.next_token,
@@ -999,7 +1008,7 @@ pub mod list_sop_recommendations_output {
     }
 }
 impl ListSopRecommendationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListSopRecommendationsOutput`](crate::output::ListSopRecommendationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListSopRecommendationsOutput`](crate::output::ListSopRecommendationsOutput).
     pub fn builder() -> crate::output::list_sop_recommendations_output::Builder {
         crate::output::list_sop_recommendations_output::Builder::default()
     }
@@ -1010,8 +1019,10 @@ impl ListSopRecommendationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListResiliencyPoliciesOutput {
     /// <p>The resiliency policies for the Resilience Hub applications.</p>
+    #[doc(hidden)]
     pub resiliency_policies: std::option::Option<std::vec::Vec<crate::model::ResiliencyPolicy>>,
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListResiliencyPoliciesOutput {
@@ -1032,11 +1043,10 @@ impl std::fmt::Debug for ListResiliencyPoliciesOutput {
         formatter.finish()
     }
 }
-/// See [`ListResiliencyPoliciesOutput`](crate::output::ListResiliencyPoliciesOutput)
+/// See [`ListResiliencyPoliciesOutput`](crate::output::ListResiliencyPoliciesOutput).
 pub mod list_resiliency_policies_output {
 
-    /// A builder for [`ListResiliencyPoliciesOutput`](crate::output::ListResiliencyPoliciesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListResiliencyPoliciesOutput`](crate::output::ListResiliencyPoliciesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resiliency_policies:
@@ -1073,7 +1083,7 @@ pub mod list_resiliency_policies_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListResiliencyPoliciesOutput`](crate::output::ListResiliencyPoliciesOutput)
+        /// Consumes the builder and constructs a [`ListResiliencyPoliciesOutput`](crate::output::ListResiliencyPoliciesOutput).
         pub fn build(self) -> crate::output::ListResiliencyPoliciesOutput {
             crate::output::ListResiliencyPoliciesOutput {
                 resiliency_policies: self.resiliency_policies,
@@ -1083,7 +1093,7 @@ pub mod list_resiliency_policies_output {
     }
 }
 impl ListResiliencyPoliciesOutput {
-    /// Creates a new builder-style object to manufacture [`ListResiliencyPoliciesOutput`](crate::output::ListResiliencyPoliciesOutput)
+    /// Creates a new builder-style object to manufacture [`ListResiliencyPoliciesOutput`](crate::output::ListResiliencyPoliciesOutput).
     pub fn builder() -> crate::output::list_resiliency_policies_output::Builder {
         crate::output::list_resiliency_policies_output::Builder::default()
     }
@@ -1094,8 +1104,10 @@ impl ListResiliencyPoliciesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRecommendationTemplatesOutput {
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The recommendation templates for the Resilience Hub applications.</p>
+    #[doc(hidden)]
     pub recommendation_templates:
         std::option::Option<std::vec::Vec<crate::model::RecommendationTemplate>>,
 }
@@ -1119,11 +1131,10 @@ impl std::fmt::Debug for ListRecommendationTemplatesOutput {
         formatter.finish()
     }
 }
-/// See [`ListRecommendationTemplatesOutput`](crate::output::ListRecommendationTemplatesOutput)
+/// See [`ListRecommendationTemplatesOutput`](crate::output::ListRecommendationTemplatesOutput).
 pub mod list_recommendation_templates_output {
 
-    /// A builder for [`ListRecommendationTemplatesOutput`](crate::output::ListRecommendationTemplatesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRecommendationTemplatesOutput`](crate::output::ListRecommendationTemplatesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1163,7 +1174,7 @@ pub mod list_recommendation_templates_output {
             self.recommendation_templates = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRecommendationTemplatesOutput`](crate::output::ListRecommendationTemplatesOutput)
+        /// Consumes the builder and constructs a [`ListRecommendationTemplatesOutput`](crate::output::ListRecommendationTemplatesOutput).
         pub fn build(self) -> crate::output::ListRecommendationTemplatesOutput {
             crate::output::ListRecommendationTemplatesOutput {
                 next_token: self.next_token,
@@ -1173,7 +1184,7 @@ pub mod list_recommendation_templates_output {
     }
 }
 impl ListRecommendationTemplatesOutput {
-    /// Creates a new builder-style object to manufacture [`ListRecommendationTemplatesOutput`](crate::output::ListRecommendationTemplatesOutput)
+    /// Creates a new builder-style object to manufacture [`ListRecommendationTemplatesOutput`](crate::output::ListRecommendationTemplatesOutput).
     pub fn builder() -> crate::output::list_recommendation_templates_output::Builder {
         crate::output::list_recommendation_templates_output::Builder::default()
     }
@@ -1184,8 +1195,10 @@ impl ListRecommendationTemplatesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAppVersionsOutput {
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub app_versions: std::option::Option<std::vec::Vec<crate::model::AppVersionSummary>>,
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAppVersionsOutput {
@@ -1206,11 +1219,10 @@ impl std::fmt::Debug for ListAppVersionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAppVersionsOutput`](crate::output::ListAppVersionsOutput)
+/// See [`ListAppVersionsOutput`](crate::output::ListAppVersionsOutput).
 pub mod list_app_versions_output {
 
-    /// A builder for [`ListAppVersionsOutput`](crate::output::ListAppVersionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAppVersionsOutput`](crate::output::ListAppVersionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_versions:
@@ -1247,7 +1259,7 @@ pub mod list_app_versions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAppVersionsOutput`](crate::output::ListAppVersionsOutput)
+        /// Consumes the builder and constructs a [`ListAppVersionsOutput`](crate::output::ListAppVersionsOutput).
         pub fn build(self) -> crate::output::ListAppVersionsOutput {
             crate::output::ListAppVersionsOutput {
                 app_versions: self.app_versions,
@@ -1257,7 +1269,7 @@ pub mod list_app_versions_output {
     }
 }
 impl ListAppVersionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAppVersionsOutput`](crate::output::ListAppVersionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAppVersionsOutput`](crate::output::ListAppVersionsOutput).
     pub fn builder() -> crate::output::list_app_versions_output::Builder {
         crate::output::list_app_versions_output::Builder::default()
     }
@@ -1268,10 +1280,13 @@ impl ListAppVersionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAppVersionResourcesOutput {
     /// <p>The physical resources in the application version.</p>
+    #[doc(hidden)]
     pub physical_resources: std::option::Option<std::vec::Vec<crate::model::PhysicalResource>>,
     /// <p>The identifier for a specific resolution.</p>
+    #[doc(hidden)]
     pub resolution_id: std::option::Option<std::string::String>,
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAppVersionResourcesOutput {
@@ -1297,11 +1312,10 @@ impl std::fmt::Debug for ListAppVersionResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`ListAppVersionResourcesOutput`](crate::output::ListAppVersionResourcesOutput)
+/// See [`ListAppVersionResourcesOutput`](crate::output::ListAppVersionResourcesOutput).
 pub mod list_app_version_resources_output {
 
-    /// A builder for [`ListAppVersionResourcesOutput`](crate::output::ListAppVersionResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAppVersionResourcesOutput`](crate::output::ListAppVersionResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) physical_resources:
@@ -1352,7 +1366,7 @@ pub mod list_app_version_resources_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAppVersionResourcesOutput`](crate::output::ListAppVersionResourcesOutput)
+        /// Consumes the builder and constructs a [`ListAppVersionResourcesOutput`](crate::output::ListAppVersionResourcesOutput).
         pub fn build(self) -> crate::output::ListAppVersionResourcesOutput {
             crate::output::ListAppVersionResourcesOutput {
                 physical_resources: self.physical_resources,
@@ -1363,7 +1377,7 @@ pub mod list_app_version_resources_output {
     }
 }
 impl ListAppVersionResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`ListAppVersionResourcesOutput`](crate::output::ListAppVersionResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`ListAppVersionResourcesOutput`](crate::output::ListAppVersionResourcesOutput).
     pub fn builder() -> crate::output::list_app_version_resources_output::Builder {
         crate::output::list_app_version_resources_output::Builder::default()
     }
@@ -1374,8 +1388,10 @@ impl ListAppVersionResourcesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAppVersionResourceMappingsOutput {
     /// <p>Mappings used to map logical resources from the template to physical resources. You can use the mapping type <code>CFN_STACK</code> if the application template uses a logical stack name. Or you can map individual resources by using the mapping type <code>RESOURCE</code>. We recommend using the mapping type <code>CFN_STACK</code> if the application is backed by a CloudFormation stack.</p>
+    #[doc(hidden)]
     pub resource_mappings: std::option::Option<std::vec::Vec<crate::model::ResourceMapping>>,
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAppVersionResourceMappingsOutput {
@@ -1396,11 +1412,10 @@ impl std::fmt::Debug for ListAppVersionResourceMappingsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAppVersionResourceMappingsOutput`](crate::output::ListAppVersionResourceMappingsOutput)
+/// See [`ListAppVersionResourceMappingsOutput`](crate::output::ListAppVersionResourceMappingsOutput).
 pub mod list_app_version_resource_mappings_output {
 
-    /// A builder for [`ListAppVersionResourceMappingsOutput`](crate::output::ListAppVersionResourceMappingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAppVersionResourceMappingsOutput`](crate::output::ListAppVersionResourceMappingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_mappings:
@@ -1437,7 +1452,7 @@ pub mod list_app_version_resource_mappings_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAppVersionResourceMappingsOutput`](crate::output::ListAppVersionResourceMappingsOutput)
+        /// Consumes the builder and constructs a [`ListAppVersionResourceMappingsOutput`](crate::output::ListAppVersionResourceMappingsOutput).
         pub fn build(self) -> crate::output::ListAppVersionResourceMappingsOutput {
             crate::output::ListAppVersionResourceMappingsOutput {
                 resource_mappings: self.resource_mappings,
@@ -1447,7 +1462,7 @@ pub mod list_app_version_resource_mappings_output {
     }
 }
 impl ListAppVersionResourceMappingsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAppVersionResourceMappingsOutput`](crate::output::ListAppVersionResourceMappingsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAppVersionResourceMappingsOutput`](crate::output::ListAppVersionResourceMappingsOutput).
     pub fn builder() -> crate::output::list_app_version_resource_mappings_output::Builder {
         crate::output::list_app_version_resource_mappings_output::Builder::default()
     }
@@ -1458,8 +1473,10 @@ impl ListAppVersionResourceMappingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAppsOutput {
     /// <p>Summaries for the Resilience Hub application.</p>
+    #[doc(hidden)]
     pub app_summaries: std::option::Option<std::vec::Vec<crate::model::AppSummary>>,
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAppsOutput {
@@ -1480,11 +1497,10 @@ impl std::fmt::Debug for ListAppsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAppsOutput`](crate::output::ListAppsOutput)
+/// See [`ListAppsOutput`](crate::output::ListAppsOutput).
 pub mod list_apps_output {
 
-    /// A builder for [`ListAppsOutput`](crate::output::ListAppsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAppsOutput`](crate::output::ListAppsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_summaries: std::option::Option<std::vec::Vec<crate::model::AppSummary>>,
@@ -1520,7 +1536,7 @@ pub mod list_apps_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAppsOutput`](crate::output::ListAppsOutput)
+        /// Consumes the builder and constructs a [`ListAppsOutput`](crate::output::ListAppsOutput).
         pub fn build(self) -> crate::output::ListAppsOutput {
             crate::output::ListAppsOutput {
                 app_summaries: self.app_summaries,
@@ -1530,7 +1546,7 @@ pub mod list_apps_output {
     }
 }
 impl ListAppsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAppsOutput`](crate::output::ListAppsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAppsOutput`](crate::output::ListAppsOutput).
     pub fn builder() -> crate::output::list_apps_output::Builder {
         crate::output::list_apps_output::Builder::default()
     }
@@ -1541,9 +1557,11 @@ impl ListAppsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAppComponentRecommendationsOutput {
     /// <p>The recommendations for an Resilience Hub application component, returned as an object. This object contains component names, configuration recommendations, and recommendation statuses.</p>
+    #[doc(hidden)]
     pub component_recommendations:
         std::option::Option<std::vec::Vec<crate::model::ComponentRecommendation>>,
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAppComponentRecommendationsOutput {
@@ -1566,11 +1584,10 @@ impl std::fmt::Debug for ListAppComponentRecommendationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAppComponentRecommendationsOutput`](crate::output::ListAppComponentRecommendationsOutput)
+/// See [`ListAppComponentRecommendationsOutput`](crate::output::ListAppComponentRecommendationsOutput).
 pub mod list_app_component_recommendations_output {
 
-    /// A builder for [`ListAppComponentRecommendationsOutput`](crate::output::ListAppComponentRecommendationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAppComponentRecommendationsOutput`](crate::output::ListAppComponentRecommendationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) component_recommendations:
@@ -1610,7 +1627,7 @@ pub mod list_app_component_recommendations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAppComponentRecommendationsOutput`](crate::output::ListAppComponentRecommendationsOutput)
+        /// Consumes the builder and constructs a [`ListAppComponentRecommendationsOutput`](crate::output::ListAppComponentRecommendationsOutput).
         pub fn build(self) -> crate::output::ListAppComponentRecommendationsOutput {
             crate::output::ListAppComponentRecommendationsOutput {
                 component_recommendations: self.component_recommendations,
@@ -1620,7 +1637,7 @@ pub mod list_app_component_recommendations_output {
     }
 }
 impl ListAppComponentRecommendationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAppComponentRecommendationsOutput`](crate::output::ListAppComponentRecommendationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAppComponentRecommendationsOutput`](crate::output::ListAppComponentRecommendationsOutput).
     pub fn builder() -> crate::output::list_app_component_recommendations_output::Builder {
         crate::output::list_app_component_recommendations_output::Builder::default()
     }
@@ -1631,9 +1648,11 @@ impl ListAppComponentRecommendationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAppComponentCompliancesOutput {
     /// <p>The compliances for an AWS Resilience Hub application component, returned as an object. This object contains component names, compliances, costs, resiliency scores, outage scores, and more.</p>
+    #[doc(hidden)]
     pub component_compliances:
         std::option::Option<std::vec::Vec<crate::model::AppComponentCompliance>>,
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAppComponentCompliancesOutput {
@@ -1656,11 +1675,10 @@ impl std::fmt::Debug for ListAppComponentCompliancesOutput {
         formatter.finish()
     }
 }
-/// See [`ListAppComponentCompliancesOutput`](crate::output::ListAppComponentCompliancesOutput)
+/// See [`ListAppComponentCompliancesOutput`](crate::output::ListAppComponentCompliancesOutput).
 pub mod list_app_component_compliances_output {
 
-    /// A builder for [`ListAppComponentCompliancesOutput`](crate::output::ListAppComponentCompliancesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAppComponentCompliancesOutput`](crate::output::ListAppComponentCompliancesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) component_compliances:
@@ -1700,7 +1718,7 @@ pub mod list_app_component_compliances_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAppComponentCompliancesOutput`](crate::output::ListAppComponentCompliancesOutput)
+        /// Consumes the builder and constructs a [`ListAppComponentCompliancesOutput`](crate::output::ListAppComponentCompliancesOutput).
         pub fn build(self) -> crate::output::ListAppComponentCompliancesOutput {
             crate::output::ListAppComponentCompliancesOutput {
                 component_compliances: self.component_compliances,
@@ -1710,7 +1728,7 @@ pub mod list_app_component_compliances_output {
     }
 }
 impl ListAppComponentCompliancesOutput {
-    /// Creates a new builder-style object to manufacture [`ListAppComponentCompliancesOutput`](crate::output::ListAppComponentCompliancesOutput)
+    /// Creates a new builder-style object to manufacture [`ListAppComponentCompliancesOutput`](crate::output::ListAppComponentCompliancesOutput).
     pub fn builder() -> crate::output::list_app_component_compliances_output::Builder {
         crate::output::list_app_component_compliances_output::Builder::default()
     }
@@ -1721,8 +1739,10 @@ impl ListAppComponentCompliancesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAppAssessmentsOutput {
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The summaries for the specified assessments, returned as an object. This object includes application versions, associated Amazon Resource Numbers (ARNs), cost, messages, resiliency scores, and more.</p>
+    #[doc(hidden)]
     pub assessment_summaries:
         std::option::Option<std::vec::Vec<crate::model::AppAssessmentSummary>>,
 }
@@ -1746,11 +1766,10 @@ impl std::fmt::Debug for ListAppAssessmentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAppAssessmentsOutput`](crate::output::ListAppAssessmentsOutput)
+/// See [`ListAppAssessmentsOutput`](crate::output::ListAppAssessmentsOutput).
 pub mod list_app_assessments_output {
 
-    /// A builder for [`ListAppAssessmentsOutput`](crate::output::ListAppAssessmentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAppAssessmentsOutput`](crate::output::ListAppAssessmentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1787,7 +1806,7 @@ pub mod list_app_assessments_output {
             self.assessment_summaries = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAppAssessmentsOutput`](crate::output::ListAppAssessmentsOutput)
+        /// Consumes the builder and constructs a [`ListAppAssessmentsOutput`](crate::output::ListAppAssessmentsOutput).
         pub fn build(self) -> crate::output::ListAppAssessmentsOutput {
             crate::output::ListAppAssessmentsOutput {
                 next_token: self.next_token,
@@ -1797,7 +1816,7 @@ pub mod list_app_assessments_output {
     }
 }
 impl ListAppAssessmentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAppAssessmentsOutput`](crate::output::ListAppAssessmentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAppAssessmentsOutput`](crate::output::ListAppAssessmentsOutput).
     pub fn builder() -> crate::output::list_app_assessments_output::Builder {
         crate::output::list_app_assessments_output::Builder::default()
     }
@@ -1808,9 +1827,11 @@ impl ListAppAssessmentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAlarmRecommendationsOutput {
     /// <p>The alarm recommendations for an AWS Resilience Hub application, returned as an object. This object includes application component names, descriptions, information about whether a recommendation has already been implemented or not, prerequisites, and more.</p>
+    #[doc(hidden)]
     pub alarm_recommendations:
         std::option::Option<std::vec::Vec<crate::model::AlarmRecommendation>>,
     /// <p>The token for the next set of results, or null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAlarmRecommendationsOutput {
@@ -1833,11 +1854,10 @@ impl std::fmt::Debug for ListAlarmRecommendationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAlarmRecommendationsOutput`](crate::output::ListAlarmRecommendationsOutput)
+/// See [`ListAlarmRecommendationsOutput`](crate::output::ListAlarmRecommendationsOutput).
 pub mod list_alarm_recommendations_output {
 
-    /// A builder for [`ListAlarmRecommendationsOutput`](crate::output::ListAlarmRecommendationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAlarmRecommendationsOutput`](crate::output::ListAlarmRecommendationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alarm_recommendations:
@@ -1874,7 +1894,7 @@ pub mod list_alarm_recommendations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAlarmRecommendationsOutput`](crate::output::ListAlarmRecommendationsOutput)
+        /// Consumes the builder and constructs a [`ListAlarmRecommendationsOutput`](crate::output::ListAlarmRecommendationsOutput).
         pub fn build(self) -> crate::output::ListAlarmRecommendationsOutput {
             crate::output::ListAlarmRecommendationsOutput {
                 alarm_recommendations: self.alarm_recommendations,
@@ -1884,7 +1904,7 @@ pub mod list_alarm_recommendations_output {
     }
 }
 impl ListAlarmRecommendationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAlarmRecommendationsOutput`](crate::output::ListAlarmRecommendationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAlarmRecommendationsOutput`](crate::output::ListAlarmRecommendationsOutput).
     pub fn builder() -> crate::output::list_alarm_recommendations_output::Builder {
         crate::output::list_alarm_recommendations_output::Builder::default()
     }
@@ -1895,14 +1915,19 @@ impl ListAlarmRecommendationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportResourcesToDraftAppVersionOutput {
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Names (ARNs) for the resources that you imported.</p>
+    #[doc(hidden)]
     pub source_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The status of the action.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ResourceImportStatusType>,
     /// <p> A list of terraform file s3 URLs you need to import. </p>
+    #[doc(hidden)]
     pub terraform_sources: std::option::Option<std::vec::Vec<crate::model::TerraformSource>>,
 }
 impl ImportResourcesToDraftAppVersionOutput {
@@ -1938,11 +1963,10 @@ impl std::fmt::Debug for ImportResourcesToDraftAppVersionOutput {
         formatter.finish()
     }
 }
-/// See [`ImportResourcesToDraftAppVersionOutput`](crate::output::ImportResourcesToDraftAppVersionOutput)
+/// See [`ImportResourcesToDraftAppVersionOutput`](crate::output::ImportResourcesToDraftAppVersionOutput).
 pub mod import_resources_to_draft_app_version_output {
 
-    /// A builder for [`ImportResourcesToDraftAppVersionOutput`](crate::output::ImportResourcesToDraftAppVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`ImportResourcesToDraftAppVersionOutput`](crate::output::ImportResourcesToDraftAppVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -2024,7 +2048,7 @@ pub mod import_resources_to_draft_app_version_output {
             self.terraform_sources = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportResourcesToDraftAppVersionOutput`](crate::output::ImportResourcesToDraftAppVersionOutput)
+        /// Consumes the builder and constructs a [`ImportResourcesToDraftAppVersionOutput`](crate::output::ImportResourcesToDraftAppVersionOutput).
         pub fn build(self) -> crate::output::ImportResourcesToDraftAppVersionOutput {
             crate::output::ImportResourcesToDraftAppVersionOutput {
                 app_arn: self.app_arn,
@@ -2037,7 +2061,7 @@ pub mod import_resources_to_draft_app_version_output {
     }
 }
 impl ImportResourcesToDraftAppVersionOutput {
-    /// Creates a new builder-style object to manufacture [`ImportResourcesToDraftAppVersionOutput`](crate::output::ImportResourcesToDraftAppVersionOutput)
+    /// Creates a new builder-style object to manufacture [`ImportResourcesToDraftAppVersionOutput`](crate::output::ImportResourcesToDraftAppVersionOutput).
     pub fn builder() -> crate::output::import_resources_to_draft_app_version_output::Builder {
         crate::output::import_resources_to_draft_app_version_output::Builder::default()
     }
@@ -2048,6 +2072,7 @@ impl ImportResourcesToDraftAppVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeResiliencyPolicyOutput {
     /// <p>Information about the specific resiliency policy, returned as an object. This object includes creation time, data location constraints, its name, description, tags, the recovery time objective (RTO) and recovery point objective (RPO) in seconds, and more.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<crate::model::ResiliencyPolicy>,
 }
 impl DescribeResiliencyPolicyOutput {
@@ -2063,11 +2088,10 @@ impl std::fmt::Debug for DescribeResiliencyPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeResiliencyPolicyOutput`](crate::output::DescribeResiliencyPolicyOutput)
+/// See [`DescribeResiliencyPolicyOutput`](crate::output::DescribeResiliencyPolicyOutput).
 pub mod describe_resiliency_policy_output {
 
-    /// A builder for [`DescribeResiliencyPolicyOutput`](crate::output::DescribeResiliencyPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeResiliencyPolicyOutput`](crate::output::DescribeResiliencyPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<crate::model::ResiliencyPolicy>,
@@ -2086,7 +2110,7 @@ pub mod describe_resiliency_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeResiliencyPolicyOutput`](crate::output::DescribeResiliencyPolicyOutput)
+        /// Consumes the builder and constructs a [`DescribeResiliencyPolicyOutput`](crate::output::DescribeResiliencyPolicyOutput).
         pub fn build(self) -> crate::output::DescribeResiliencyPolicyOutput {
             crate::output::DescribeResiliencyPolicyOutput {
                 policy: self.policy,
@@ -2095,7 +2119,7 @@ pub mod describe_resiliency_policy_output {
     }
 }
 impl DescribeResiliencyPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeResiliencyPolicyOutput`](crate::output::DescribeResiliencyPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeResiliencyPolicyOutput`](crate::output::DescribeResiliencyPolicyOutput).
     pub fn builder() -> crate::output::describe_resiliency_policy_output::Builder {
         crate::output::describe_resiliency_policy_output::Builder::default()
     }
@@ -2106,14 +2130,19 @@ impl DescribeResiliencyPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDraftAppVersionResourcesImportStatusOutput {
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<std::string::String>,
     /// <p>The status of the action.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ResourceImportStatusType>,
     /// <p>The timestamp for when the status last changed.</p>
+    #[doc(hidden)]
     pub status_change_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The returned error message for the request.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl DescribeDraftAppVersionResourcesImportStatusOutput {
@@ -2149,11 +2178,10 @@ impl std::fmt::Debug for DescribeDraftAppVersionResourcesImportStatusOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDraftAppVersionResourcesImportStatusOutput`](crate::output::DescribeDraftAppVersionResourcesImportStatusOutput)
+/// See [`DescribeDraftAppVersionResourcesImportStatusOutput`](crate::output::DescribeDraftAppVersionResourcesImportStatusOutput).
 pub mod describe_draft_app_version_resources_import_status_output {
 
-    /// A builder for [`DescribeDraftAppVersionResourcesImportStatusOutput`](crate::output::DescribeDraftAppVersionResourcesImportStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDraftAppVersionResourcesImportStatusOutput`](crate::output::DescribeDraftAppVersionResourcesImportStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -2222,7 +2250,7 @@ pub mod describe_draft_app_version_resources_import_status_output {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDraftAppVersionResourcesImportStatusOutput`](crate::output::DescribeDraftAppVersionResourcesImportStatusOutput)
+        /// Consumes the builder and constructs a [`DescribeDraftAppVersionResourcesImportStatusOutput`](crate::output::DescribeDraftAppVersionResourcesImportStatusOutput).
         pub fn build(self) -> crate::output::DescribeDraftAppVersionResourcesImportStatusOutput {
             crate::output::DescribeDraftAppVersionResourcesImportStatusOutput {
                 app_arn: self.app_arn,
@@ -2235,7 +2263,7 @@ pub mod describe_draft_app_version_resources_import_status_output {
     }
 }
 impl DescribeDraftAppVersionResourcesImportStatusOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDraftAppVersionResourcesImportStatusOutput`](crate::output::DescribeDraftAppVersionResourcesImportStatusOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDraftAppVersionResourcesImportStatusOutput`](crate::output::DescribeDraftAppVersionResourcesImportStatusOutput).
     pub fn builder(
     ) -> crate::output::describe_draft_app_version_resources_import_status_output::Builder {
         crate::output::describe_draft_app_version_resources_import_status_output::Builder::default()
@@ -2247,10 +2275,13 @@ impl DescribeDraftAppVersionResourcesImportStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAppVersionTemplateOutput {
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<std::string::String>,
     /// <p>The body of the template.</p>
+    #[doc(hidden)]
     pub app_template_body: std::option::Option<std::string::String>,
 }
 impl DescribeAppVersionTemplateOutput {
@@ -2276,11 +2307,10 @@ impl std::fmt::Debug for DescribeAppVersionTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAppVersionTemplateOutput`](crate::output::DescribeAppVersionTemplateOutput)
+/// See [`DescribeAppVersionTemplateOutput`](crate::output::DescribeAppVersionTemplateOutput).
 pub mod describe_app_version_template_output {
 
-    /// A builder for [`DescribeAppVersionTemplateOutput`](crate::output::DescribeAppVersionTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAppVersionTemplateOutput`](crate::output::DescribeAppVersionTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -2321,7 +2351,7 @@ pub mod describe_app_version_template_output {
             self.app_template_body = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAppVersionTemplateOutput`](crate::output::DescribeAppVersionTemplateOutput)
+        /// Consumes the builder and constructs a [`DescribeAppVersionTemplateOutput`](crate::output::DescribeAppVersionTemplateOutput).
         pub fn build(self) -> crate::output::DescribeAppVersionTemplateOutput {
             crate::output::DescribeAppVersionTemplateOutput {
                 app_arn: self.app_arn,
@@ -2332,7 +2362,7 @@ pub mod describe_app_version_template_output {
     }
 }
 impl DescribeAppVersionTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAppVersionTemplateOutput`](crate::output::DescribeAppVersionTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAppVersionTemplateOutput`](crate::output::DescribeAppVersionTemplateOutput).
     pub fn builder() -> crate::output::describe_app_version_template_output::Builder {
         crate::output::describe_app_version_template_output::Builder::default()
     }
@@ -2343,14 +2373,19 @@ impl DescribeAppVersionTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAppVersionResourcesResolutionStatusOutput {
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<std::string::String>,
     /// <p>The identifier for a specific resolution.</p>
+    #[doc(hidden)]
     pub resolution_id: std::option::Option<std::string::String>,
     /// <p>The status of the action.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ResourceResolutionStatusType>,
     /// <p>The returned error message for the request.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl DescribeAppVersionResourcesResolutionStatusOutput {
@@ -2386,11 +2421,10 @@ impl std::fmt::Debug for DescribeAppVersionResourcesResolutionStatusOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAppVersionResourcesResolutionStatusOutput`](crate::output::DescribeAppVersionResourcesResolutionStatusOutput)
+/// See [`DescribeAppVersionResourcesResolutionStatusOutput`](crate::output::DescribeAppVersionResourcesResolutionStatusOutput).
 pub mod describe_app_version_resources_resolution_status_output {
 
-    /// A builder for [`DescribeAppVersionResourcesResolutionStatusOutput`](crate::output::DescribeAppVersionResourcesResolutionStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAppVersionResourcesResolutionStatusOutput`](crate::output::DescribeAppVersionResourcesResolutionStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -2459,7 +2493,7 @@ pub mod describe_app_version_resources_resolution_status_output {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAppVersionResourcesResolutionStatusOutput`](crate::output::DescribeAppVersionResourcesResolutionStatusOutput)
+        /// Consumes the builder and constructs a [`DescribeAppVersionResourcesResolutionStatusOutput`](crate::output::DescribeAppVersionResourcesResolutionStatusOutput).
         pub fn build(self) -> crate::output::DescribeAppVersionResourcesResolutionStatusOutput {
             crate::output::DescribeAppVersionResourcesResolutionStatusOutput {
                 app_arn: self.app_arn,
@@ -2472,7 +2506,7 @@ pub mod describe_app_version_resources_resolution_status_output {
     }
 }
 impl DescribeAppVersionResourcesResolutionStatusOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAppVersionResourcesResolutionStatusOutput`](crate::output::DescribeAppVersionResourcesResolutionStatusOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAppVersionResourcesResolutionStatusOutput`](crate::output::DescribeAppVersionResourcesResolutionStatusOutput).
     pub fn builder(
     ) -> crate::output::describe_app_version_resources_resolution_status_output::Builder {
         crate::output::describe_app_version_resources_resolution_status_output::Builder::default()
@@ -2484,6 +2518,7 @@ impl DescribeAppVersionResourcesResolutionStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAppAssessmentOutput {
     /// <p>The assessment for an AWS Resilience Hub application, returned as an object. This object includes Amazon Resource Names (ARNs), compliance information, compliance status, cost, messages, resiliency scores, and more.</p>
+    #[doc(hidden)]
     pub assessment: std::option::Option<crate::model::AppAssessment>,
 }
 impl DescribeAppAssessmentOutput {
@@ -2499,11 +2534,10 @@ impl std::fmt::Debug for DescribeAppAssessmentOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAppAssessmentOutput`](crate::output::DescribeAppAssessmentOutput)
+/// See [`DescribeAppAssessmentOutput`](crate::output::DescribeAppAssessmentOutput).
 pub mod describe_app_assessment_output {
 
-    /// A builder for [`DescribeAppAssessmentOutput`](crate::output::DescribeAppAssessmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAppAssessmentOutput`](crate::output::DescribeAppAssessmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assessment: std::option::Option<crate::model::AppAssessment>,
@@ -2522,7 +2556,7 @@ pub mod describe_app_assessment_output {
             self.assessment = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAppAssessmentOutput`](crate::output::DescribeAppAssessmentOutput)
+        /// Consumes the builder and constructs a [`DescribeAppAssessmentOutput`](crate::output::DescribeAppAssessmentOutput).
         pub fn build(self) -> crate::output::DescribeAppAssessmentOutput {
             crate::output::DescribeAppAssessmentOutput {
                 assessment: self.assessment,
@@ -2531,7 +2565,7 @@ pub mod describe_app_assessment_output {
     }
 }
 impl DescribeAppAssessmentOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAppAssessmentOutput`](crate::output::DescribeAppAssessmentOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAppAssessmentOutput`](crate::output::DescribeAppAssessmentOutput).
     pub fn builder() -> crate::output::describe_app_assessment_output::Builder {
         crate::output::describe_app_assessment_output::Builder::default()
     }
@@ -2542,6 +2576,7 @@ impl DescribeAppAssessmentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAppOutput {
     /// <p>The specified application, returned as an object with details including compliance status, creation time, description, resiliency score, and more.</p>
+    #[doc(hidden)]
     pub app: std::option::Option<crate::model::App>,
 }
 impl DescribeAppOutput {
@@ -2557,11 +2592,10 @@ impl std::fmt::Debug for DescribeAppOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAppOutput`](crate::output::DescribeAppOutput)
+/// See [`DescribeAppOutput`](crate::output::DescribeAppOutput).
 pub mod describe_app_output {
 
-    /// A builder for [`DescribeAppOutput`](crate::output::DescribeAppOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAppOutput`](crate::output::DescribeAppOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app: std::option::Option<crate::model::App>,
@@ -2577,14 +2611,14 @@ pub mod describe_app_output {
             self.app = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAppOutput`](crate::output::DescribeAppOutput)
+        /// Consumes the builder and constructs a [`DescribeAppOutput`](crate::output::DescribeAppOutput).
         pub fn build(self) -> crate::output::DescribeAppOutput {
             crate::output::DescribeAppOutput { app: self.app }
         }
     }
 }
 impl DescribeAppOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAppOutput`](crate::output::DescribeAppOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAppOutput`](crate::output::DescribeAppOutput).
     pub fn builder() -> crate::output::describe_app_output::Builder {
         crate::output::describe_app_output::Builder::default()
     }
@@ -2595,6 +2629,7 @@ impl DescribeAppOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteResiliencyPolicyOutput {
     /// <p>The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub policy_arn: std::option::Option<std::string::String>,
 }
 impl DeleteResiliencyPolicyOutput {
@@ -2610,11 +2645,10 @@ impl std::fmt::Debug for DeleteResiliencyPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteResiliencyPolicyOutput`](crate::output::DeleteResiliencyPolicyOutput)
+/// See [`DeleteResiliencyPolicyOutput`](crate::output::DeleteResiliencyPolicyOutput).
 pub mod delete_resiliency_policy_output {
 
-    /// A builder for [`DeleteResiliencyPolicyOutput`](crate::output::DeleteResiliencyPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteResiliencyPolicyOutput`](crate::output::DeleteResiliencyPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_arn: std::option::Option<std::string::String>,
@@ -2630,7 +2664,7 @@ pub mod delete_resiliency_policy_output {
             self.policy_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteResiliencyPolicyOutput`](crate::output::DeleteResiliencyPolicyOutput)
+        /// Consumes the builder and constructs a [`DeleteResiliencyPolicyOutput`](crate::output::DeleteResiliencyPolicyOutput).
         pub fn build(self) -> crate::output::DeleteResiliencyPolicyOutput {
             crate::output::DeleteResiliencyPolicyOutput {
                 policy_arn: self.policy_arn,
@@ -2639,7 +2673,7 @@ pub mod delete_resiliency_policy_output {
     }
 }
 impl DeleteResiliencyPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteResiliencyPolicyOutput`](crate::output::DeleteResiliencyPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteResiliencyPolicyOutput`](crate::output::DeleteResiliencyPolicyOutput).
     pub fn builder() -> crate::output::delete_resiliency_policy_output::Builder {
         crate::output::delete_resiliency_policy_output::Builder::default()
     }
@@ -2650,8 +2684,10 @@ impl DeleteResiliencyPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteRecommendationTemplateOutput {
     /// <p>The Amazon Resource Name (ARN) for a recommendation template.</p>
+    #[doc(hidden)]
     pub recommendation_template_arn: std::option::Option<std::string::String>,
     /// <p>The status of the action.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::RecommendationTemplateStatus>,
 }
 impl DeleteRecommendationTemplateOutput {
@@ -2675,11 +2711,10 @@ impl std::fmt::Debug for DeleteRecommendationTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRecommendationTemplateOutput`](crate::output::DeleteRecommendationTemplateOutput)
+/// See [`DeleteRecommendationTemplateOutput`](crate::output::DeleteRecommendationTemplateOutput).
 pub mod delete_recommendation_template_output {
 
-    /// A builder for [`DeleteRecommendationTemplateOutput`](crate::output::DeleteRecommendationTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRecommendationTemplateOutput`](crate::output::DeleteRecommendationTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_template_arn: std::option::Option<std::string::String>,
@@ -2715,7 +2750,7 @@ pub mod delete_recommendation_template_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteRecommendationTemplateOutput`](crate::output::DeleteRecommendationTemplateOutput)
+        /// Consumes the builder and constructs a [`DeleteRecommendationTemplateOutput`](crate::output::DeleteRecommendationTemplateOutput).
         pub fn build(self) -> crate::output::DeleteRecommendationTemplateOutput {
             crate::output::DeleteRecommendationTemplateOutput {
                 recommendation_template_arn: self.recommendation_template_arn,
@@ -2725,7 +2760,7 @@ pub mod delete_recommendation_template_output {
     }
 }
 impl DeleteRecommendationTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRecommendationTemplateOutput`](crate::output::DeleteRecommendationTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRecommendationTemplateOutput`](crate::output::DeleteRecommendationTemplateOutput).
     pub fn builder() -> crate::output::delete_recommendation_template_output::Builder {
         crate::output::delete_recommendation_template_output::Builder::default()
     }
@@ -2736,8 +2771,10 @@ impl DeleteRecommendationTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteAppAssessmentOutput {
     /// <p>The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub assessment_arn: std::option::Option<std::string::String>,
     /// <p>The current status of the assessment for the resiliency policy.</p>
+    #[doc(hidden)]
     pub assessment_status: std::option::Option<crate::model::AssessmentStatus>,
 }
 impl DeleteAppAssessmentOutput {
@@ -2758,11 +2795,10 @@ impl std::fmt::Debug for DeleteAppAssessmentOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAppAssessmentOutput`](crate::output::DeleteAppAssessmentOutput)
+/// See [`DeleteAppAssessmentOutput`](crate::output::DeleteAppAssessmentOutput).
 pub mod delete_app_assessment_output {
 
-    /// A builder for [`DeleteAppAssessmentOutput`](crate::output::DeleteAppAssessmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAppAssessmentOutput`](crate::output::DeleteAppAssessmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assessment_arn: std::option::Option<std::string::String>,
@@ -2795,7 +2831,7 @@ pub mod delete_app_assessment_output {
             self.assessment_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteAppAssessmentOutput`](crate::output::DeleteAppAssessmentOutput)
+        /// Consumes the builder and constructs a [`DeleteAppAssessmentOutput`](crate::output::DeleteAppAssessmentOutput).
         pub fn build(self) -> crate::output::DeleteAppAssessmentOutput {
             crate::output::DeleteAppAssessmentOutput {
                 assessment_arn: self.assessment_arn,
@@ -2805,7 +2841,7 @@ pub mod delete_app_assessment_output {
     }
 }
 impl DeleteAppAssessmentOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAppAssessmentOutput`](crate::output::DeleteAppAssessmentOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAppAssessmentOutput`](crate::output::DeleteAppAssessmentOutput).
     pub fn builder() -> crate::output::delete_app_assessment_output::Builder {
         crate::output::delete_app_assessment_output::Builder::default()
     }
@@ -2816,6 +2852,7 @@ impl DeleteAppAssessmentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteAppOutput {
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
 }
 impl DeleteAppOutput {
@@ -2831,11 +2868,10 @@ impl std::fmt::Debug for DeleteAppOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAppOutput`](crate::output::DeleteAppOutput)
+/// See [`DeleteAppOutput`](crate::output::DeleteAppOutput).
 pub mod delete_app_output {
 
-    /// A builder for [`DeleteAppOutput`](crate::output::DeleteAppOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAppOutput`](crate::output::DeleteAppOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -2851,7 +2887,7 @@ pub mod delete_app_output {
             self.app_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteAppOutput`](crate::output::DeleteAppOutput)
+        /// Consumes the builder and constructs a [`DeleteAppOutput`](crate::output::DeleteAppOutput).
         pub fn build(self) -> crate::output::DeleteAppOutput {
             crate::output::DeleteAppOutput {
                 app_arn: self.app_arn,
@@ -2860,7 +2896,7 @@ pub mod delete_app_output {
     }
 }
 impl DeleteAppOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAppOutput`](crate::output::DeleteAppOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAppOutput`](crate::output::DeleteAppOutput).
     pub fn builder() -> crate::output::delete_app_output::Builder {
         crate::output::delete_app_output::Builder::default()
     }
@@ -2871,6 +2907,7 @@ impl DeleteAppOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateResiliencyPolicyOutput {
     /// <p>The type of resiliency policy that was created, including the recovery time objective (RTO) and recovery point objective (RPO) in seconds.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<crate::model::ResiliencyPolicy>,
 }
 impl CreateResiliencyPolicyOutput {
@@ -2886,11 +2923,10 @@ impl std::fmt::Debug for CreateResiliencyPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`CreateResiliencyPolicyOutput`](crate::output::CreateResiliencyPolicyOutput)
+/// See [`CreateResiliencyPolicyOutput`](crate::output::CreateResiliencyPolicyOutput).
 pub mod create_resiliency_policy_output {
 
-    /// A builder for [`CreateResiliencyPolicyOutput`](crate::output::CreateResiliencyPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateResiliencyPolicyOutput`](crate::output::CreateResiliencyPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<crate::model::ResiliencyPolicy>,
@@ -2909,7 +2945,7 @@ pub mod create_resiliency_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateResiliencyPolicyOutput`](crate::output::CreateResiliencyPolicyOutput)
+        /// Consumes the builder and constructs a [`CreateResiliencyPolicyOutput`](crate::output::CreateResiliencyPolicyOutput).
         pub fn build(self) -> crate::output::CreateResiliencyPolicyOutput {
             crate::output::CreateResiliencyPolicyOutput {
                 policy: self.policy,
@@ -2918,7 +2954,7 @@ pub mod create_resiliency_policy_output {
     }
 }
 impl CreateResiliencyPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`CreateResiliencyPolicyOutput`](crate::output::CreateResiliencyPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`CreateResiliencyPolicyOutput`](crate::output::CreateResiliencyPolicyOutput).
     pub fn builder() -> crate::output::create_resiliency_policy_output::Builder {
         crate::output::create_resiliency_policy_output::Builder::default()
     }
@@ -2929,6 +2965,7 @@ impl CreateResiliencyPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRecommendationTemplateOutput {
     /// <p>The newly created recommendation template, returned as an object. This object includes the template's name, format, status, tags, Amazon S3 bucket location, and more.</p>
+    #[doc(hidden)]
     pub recommendation_template: std::option::Option<crate::model::RecommendationTemplate>,
 }
 impl CreateRecommendationTemplateOutput {
@@ -2946,11 +2983,10 @@ impl std::fmt::Debug for CreateRecommendationTemplateOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRecommendationTemplateOutput`](crate::output::CreateRecommendationTemplateOutput)
+/// See [`CreateRecommendationTemplateOutput`](crate::output::CreateRecommendationTemplateOutput).
 pub mod create_recommendation_template_output {
 
-    /// A builder for [`CreateRecommendationTemplateOutput`](crate::output::CreateRecommendationTemplateOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRecommendationTemplateOutput`](crate::output::CreateRecommendationTemplateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_template:
@@ -2973,7 +3009,7 @@ pub mod create_recommendation_template_output {
             self.recommendation_template = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRecommendationTemplateOutput`](crate::output::CreateRecommendationTemplateOutput)
+        /// Consumes the builder and constructs a [`CreateRecommendationTemplateOutput`](crate::output::CreateRecommendationTemplateOutput).
         pub fn build(self) -> crate::output::CreateRecommendationTemplateOutput {
             crate::output::CreateRecommendationTemplateOutput {
                 recommendation_template: self.recommendation_template,
@@ -2982,7 +3018,7 @@ pub mod create_recommendation_template_output {
     }
 }
 impl CreateRecommendationTemplateOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRecommendationTemplateOutput`](crate::output::CreateRecommendationTemplateOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRecommendationTemplateOutput`](crate::output::CreateRecommendationTemplateOutput).
     pub fn builder() -> crate::output::create_recommendation_template_output::Builder {
         crate::output::create_recommendation_template_output::Builder::default()
     }
@@ -2993,6 +3029,7 @@ impl CreateRecommendationTemplateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAppOutput {
     /// <p>The created application returned as an object with details including compliance status, creation time, description, resiliency score, and more.</p>
+    #[doc(hidden)]
     pub app: std::option::Option<crate::model::App>,
 }
 impl CreateAppOutput {
@@ -3008,11 +3045,10 @@ impl std::fmt::Debug for CreateAppOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAppOutput`](crate::output::CreateAppOutput)
+/// See [`CreateAppOutput`](crate::output::CreateAppOutput).
 pub mod create_app_output {
 
-    /// A builder for [`CreateAppOutput`](crate::output::CreateAppOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateAppOutput`](crate::output::CreateAppOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app: std::option::Option<crate::model::App>,
@@ -3028,14 +3064,14 @@ pub mod create_app_output {
             self.app = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAppOutput`](crate::output::CreateAppOutput)
+        /// Consumes the builder and constructs a [`CreateAppOutput`](crate::output::CreateAppOutput).
         pub fn build(self) -> crate::output::CreateAppOutput {
             crate::output::CreateAppOutput { app: self.app }
         }
     }
 }
 impl CreateAppOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAppOutput`](crate::output::CreateAppOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAppOutput`](crate::output::CreateAppOutput).
     pub fn builder() -> crate::output::create_app_output::Builder {
         crate::output::create_app_output::Builder::default()
     }
@@ -3046,10 +3082,13 @@ impl CreateAppOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddDraftAppVersionResourceMappingsOutput {
     /// <p> The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<std::string::String>,
     /// <p>Mappings used to map logical resources from the template to physical resources. You can use the mapping type <code>CFN_STACK</code> if the application template uses a logical stack name. Or you can map individual resources by using the mapping type <code>RESOURCE</code>. We recommend using the mapping type <code>CFN_STACK</code> if the application is backed by a CloudFormation stack.</p>
+    #[doc(hidden)]
     pub resource_mappings: std::option::Option<std::vec::Vec<crate::model::ResourceMapping>>,
 }
 impl AddDraftAppVersionResourceMappingsOutput {
@@ -3075,11 +3114,10 @@ impl std::fmt::Debug for AddDraftAppVersionResourceMappingsOutput {
         formatter.finish()
     }
 }
-/// See [`AddDraftAppVersionResourceMappingsOutput`](crate::output::AddDraftAppVersionResourceMappingsOutput)
+/// See [`AddDraftAppVersionResourceMappingsOutput`](crate::output::AddDraftAppVersionResourceMappingsOutput).
 pub mod add_draft_app_version_resource_mappings_output {
 
-    /// A builder for [`AddDraftAppVersionResourceMappingsOutput`](crate::output::AddDraftAppVersionResourceMappingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddDraftAppVersionResourceMappingsOutput`](crate::output::AddDraftAppVersionResourceMappingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -3127,7 +3165,7 @@ pub mod add_draft_app_version_resource_mappings_output {
             self.resource_mappings = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddDraftAppVersionResourceMappingsOutput`](crate::output::AddDraftAppVersionResourceMappingsOutput)
+        /// Consumes the builder and constructs a [`AddDraftAppVersionResourceMappingsOutput`](crate::output::AddDraftAppVersionResourceMappingsOutput).
         pub fn build(self) -> crate::output::AddDraftAppVersionResourceMappingsOutput {
             crate::output::AddDraftAppVersionResourceMappingsOutput {
                 app_arn: self.app_arn,
@@ -3138,7 +3176,7 @@ pub mod add_draft_app_version_resource_mappings_output {
     }
 }
 impl AddDraftAppVersionResourceMappingsOutput {
-    /// Creates a new builder-style object to manufacture [`AddDraftAppVersionResourceMappingsOutput`](crate::output::AddDraftAppVersionResourceMappingsOutput)
+    /// Creates a new builder-style object to manufacture [`AddDraftAppVersionResourceMappingsOutput`](crate::output::AddDraftAppVersionResourceMappingsOutput).
     pub fn builder() -> crate::output::add_draft_app_version_resource_mappings_output::Builder {
         crate::output::add_draft_app_version_resource_mappings_output::Builder::default()
     }

@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationExceptionField {
     /// <p>The name of the exception field.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The message of the exception field.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ValidationExceptionField {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ValidationExceptionField {
         formatter.finish()
     }
 }
-/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField).
 pub mod validation_exception_field {
 
-    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField)
-    #[non_exhaustive]
+    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod validation_exception_field {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField).
         pub fn build(self) -> crate::model::ValidationExceptionField {
             crate::model::ValidationExceptionField {
                 name: self.name,
@@ -68,7 +69,7 @@ pub mod validation_exception_field {
     }
 }
 impl ValidationExceptionField {
-    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     pub fn builder() -> crate::model::validation_exception_field::Builder {
         crate::model::validation_exception_field::Builder::default()
     }
@@ -147,12 +148,16 @@ impl AsRef<str> for ValidationExceptionReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectivityInfo {
     /// <p>An ID for the connectivity information.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The IP address or DNS address where client devices can connect to an MQTT broker on the Greengrass core device.</p>
+    #[doc(hidden)]
     pub host_address: std::option::Option<std::string::String>,
     /// <p>The port where the MQTT broker operates on the core device. This port is typically 8883, which is the default port for the MQTT broker component that runs on core devices.</p>
+    #[doc(hidden)]
     pub port_number: i32,
     /// <p>Additional metadata to provide to client devices that connect to this core device.</p>
+    #[doc(hidden)]
     pub metadata: std::option::Option<std::string::String>,
 }
 impl ConnectivityInfo {
@@ -183,11 +188,10 @@ impl std::fmt::Debug for ConnectivityInfo {
         formatter.finish()
     }
 }
-/// See [`ConnectivityInfo`](crate::model::ConnectivityInfo)
+/// See [`ConnectivityInfo`](crate::model::ConnectivityInfo).
 pub mod connectivity_info {
 
-    /// A builder for [`ConnectivityInfo`](crate::model::ConnectivityInfo)
-    #[non_exhaustive]
+    /// A builder for [`ConnectivityInfo`](crate::model::ConnectivityInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -236,7 +240,7 @@ pub mod connectivity_info {
             self.metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectivityInfo`](crate::model::ConnectivityInfo)
+        /// Consumes the builder and constructs a [`ConnectivityInfo`](crate::model::ConnectivityInfo).
         pub fn build(self) -> crate::model::ConnectivityInfo {
             crate::model::ConnectivityInfo {
                 id: self.id,
@@ -248,7 +252,7 @@ pub mod connectivity_info {
     }
 }
 impl ConnectivityInfo {
-    /// Creates a new builder-style object to manufacture [`ConnectivityInfo`](crate::model::ConnectivityInfo)
+    /// Creates a new builder-style object to manufacture [`ConnectivityInfo`](crate::model::ConnectivityInfo).
     pub fn builder() -> crate::model::connectivity_info::Builder {
         crate::model::connectivity_info::Builder::default()
     }
@@ -259,12 +263,16 @@ impl ConnectivityInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResolvedComponentVersion {
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the component version.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the component.</p>
+    #[doc(hidden)]
     pub component_name: std::option::Option<std::string::String>,
     /// <p>The version of the component.</p>
+    #[doc(hidden)]
     pub component_version: std::option::Option<std::string::String>,
     /// <p>The recipe of the component version.</p>
+    #[doc(hidden)]
     pub recipe: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The vendor guidance state for the component version. This state indicates whether the component version has any issues that you should consider before you deploy it. The vendor guidance state can be:</p>
     /// <ul>
@@ -272,8 +280,10 @@ pub struct ResolvedComponentVersion {
     /// <li> <p> <code>DISCONTINUED</code> – This component version has been discontinued by its publisher. You can deploy this component version, but we recommend that you use a different version of this component.</p> </li>
     /// <li> <p> <code>DELETED</code> – This component version has been deleted by its publisher, so you can't deploy it. If you have any existing deployments that specify this component version, those deployments will fail.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub vendor_guidance: std::option::Option<crate::model::VendorGuidance>,
     /// <p>A message that communicates details about the vendor guidance state of the component version. This message communicates why a component version is discontinued or deleted.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ResolvedComponentVersion {
@@ -319,11 +329,10 @@ impl std::fmt::Debug for ResolvedComponentVersion {
         formatter.finish()
     }
 }
-/// See [`ResolvedComponentVersion`](crate::model::ResolvedComponentVersion)
+/// See [`ResolvedComponentVersion`](crate::model::ResolvedComponentVersion).
 pub mod resolved_component_version {
 
-    /// A builder for [`ResolvedComponentVersion`](crate::model::ResolvedComponentVersion)
-    #[non_exhaustive]
+    /// A builder for [`ResolvedComponentVersion`](crate::model::ResolvedComponentVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -413,7 +422,7 @@ pub mod resolved_component_version {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResolvedComponentVersion`](crate::model::ResolvedComponentVersion)
+        /// Consumes the builder and constructs a [`ResolvedComponentVersion`](crate::model::ResolvedComponentVersion).
         pub fn build(self) -> crate::model::ResolvedComponentVersion {
             crate::model::ResolvedComponentVersion {
                 arn: self.arn,
@@ -427,7 +436,7 @@ pub mod resolved_component_version {
     }
 }
 impl ResolvedComponentVersion {
-    /// Creates a new builder-style object to manufacture [`ResolvedComponentVersion`](crate::model::ResolvedComponentVersion)
+    /// Creates a new builder-style object to manufacture [`ResolvedComponentVersion`](crate::model::ResolvedComponentVersion).
     pub fn builder() -> crate::model::resolved_component_version::Builder {
         crate::model::resolved_component_version::Builder::default()
     }
@@ -497,11 +506,14 @@ impl AsRef<str> for VendorGuidance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentCandidate {
     /// <p>The name of the component.</p>
+    #[doc(hidden)]
     pub component_name: std::option::Option<std::string::String>,
     /// <p>The version of the component.</p>
+    #[doc(hidden)]
     pub component_version: std::option::Option<std::string::String>,
     /// <p>The version requirements for the component's dependencies. Greengrass core devices get the version requirements from component recipes.</p>
     /// <p>IoT Greengrass V2 uses semantic version constraints. For more information, see <a href="https://semver.org/">Semantic Versioning</a>.</p>
+    #[doc(hidden)]
     pub version_requirements:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -532,11 +544,10 @@ impl std::fmt::Debug for ComponentCandidate {
         formatter.finish()
     }
 }
-/// See [`ComponentCandidate`](crate::model::ComponentCandidate)
+/// See [`ComponentCandidate`](crate::model::ComponentCandidate).
 pub mod component_candidate {
 
-    /// A builder for [`ComponentCandidate`](crate::model::ComponentCandidate)
-    #[non_exhaustive]
+    /// A builder for [`ComponentCandidate`](crate::model::ComponentCandidate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) component_name: std::option::Option<std::string::String>,
@@ -599,7 +610,7 @@ pub mod component_candidate {
             self.version_requirements = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentCandidate`](crate::model::ComponentCandidate)
+        /// Consumes the builder and constructs a [`ComponentCandidate`](crate::model::ComponentCandidate).
         pub fn build(self) -> crate::model::ComponentCandidate {
             crate::model::ComponentCandidate {
                 component_name: self.component_name,
@@ -610,7 +621,7 @@ pub mod component_candidate {
     }
 }
 impl ComponentCandidate {
-    /// Creates a new builder-style object to manufacture [`ComponentCandidate`](crate::model::ComponentCandidate)
+    /// Creates a new builder-style object to manufacture [`ComponentCandidate`](crate::model::ComponentCandidate).
     pub fn builder() -> crate::model::component_candidate::Builder {
         crate::model::component_candidate::Builder::default()
     }
@@ -622,8 +633,10 @@ impl ComponentCandidate {
 pub struct ComponentPlatform {
     /// <p>The friendly name of the platform. This name helps you identify the platform.</p>
     /// <p>If you omit this parameter, IoT Greengrass creates a friendly name from the <code>os</code> and <code>architecture</code> of the platform.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A dictionary of attributes for the platform. The IoT Greengrass Core software defines the <code>os</code> and <code>platform</code> by default. You can specify additional platform attributes for a core device when you deploy the Greengrass nucleus component. For more information, see the <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">Greengrass nucleus component</a> in the <i>IoT Greengrass V2 Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -649,11 +662,10 @@ impl std::fmt::Debug for ComponentPlatform {
         formatter.finish()
     }
 }
-/// See [`ComponentPlatform`](crate::model::ComponentPlatform)
+/// See [`ComponentPlatform`](crate::model::ComponentPlatform).
 pub mod component_platform {
 
-    /// A builder for [`ComponentPlatform`](crate::model::ComponentPlatform)
-    #[non_exhaustive]
+    /// A builder for [`ComponentPlatform`](crate::model::ComponentPlatform).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -699,7 +711,7 @@ pub mod component_platform {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentPlatform`](crate::model::ComponentPlatform)
+        /// Consumes the builder and constructs a [`ComponentPlatform`](crate::model::ComponentPlatform).
         pub fn build(self) -> crate::model::ComponentPlatform {
             crate::model::ComponentPlatform {
                 name: self.name,
@@ -709,7 +721,7 @@ pub mod component_platform {
     }
 }
 impl ComponentPlatform {
-    /// Creates a new builder-style object to manufacture [`ComponentPlatform`](crate::model::ComponentPlatform)
+    /// Creates a new builder-style object to manufacture [`ComponentPlatform`](crate::model::ComponentPlatform).
     pub fn builder() -> crate::model::component_platform::Builder {
         crate::model::component_platform::Builder::default()
     }
@@ -720,14 +732,19 @@ impl ComponentPlatform {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstalledComponent {
     /// <p>The name of the component.</p>
+    #[doc(hidden)]
     pub component_name: std::option::Option<std::string::String>,
     /// <p>The version of the component.</p>
+    #[doc(hidden)]
     pub component_version: std::option::Option<std::string::String>,
     /// <p>The lifecycle state of the component.</p>
+    #[doc(hidden)]
     pub lifecycle_state: std::option::Option<crate::model::InstalledComponentLifecycleState>,
     /// <p>The details about the lifecycle state of the component.</p>
+    #[doc(hidden)]
     pub lifecycle_state_details: std::option::Option<std::string::String>,
     /// <p>Whether or not the component is a root component.</p>
+    #[doc(hidden)]
     pub is_root: bool,
 }
 impl InstalledComponent {
@@ -765,11 +782,10 @@ impl std::fmt::Debug for InstalledComponent {
         formatter.finish()
     }
 }
-/// See [`InstalledComponent`](crate::model::InstalledComponent)
+/// See [`InstalledComponent`](crate::model::InstalledComponent).
 pub mod installed_component {
 
-    /// A builder for [`InstalledComponent`](crate::model::InstalledComponent)
-    #[non_exhaustive]
+    /// A builder for [`InstalledComponent`](crate::model::InstalledComponent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) component_name: std::option::Option<std::string::String>,
@@ -845,7 +861,7 @@ pub mod installed_component {
             self.is_root = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstalledComponent`](crate::model::InstalledComponent)
+        /// Consumes the builder and constructs a [`InstalledComponent`](crate::model::InstalledComponent).
         pub fn build(self) -> crate::model::InstalledComponent {
             crate::model::InstalledComponent {
                 component_name: self.component_name,
@@ -858,7 +874,7 @@ pub mod installed_component {
     }
 }
 impl InstalledComponent {
-    /// Creates a new builder-style object to manufacture [`InstalledComponent`](crate::model::InstalledComponent)
+    /// Creates a new builder-style object to manufacture [`InstalledComponent`](crate::model::InstalledComponent).
     pub fn builder() -> crate::model::installed_component::Builder {
         crate::model::installed_component::Builder::default()
     }
@@ -957,25 +973,35 @@ impl AsRef<str> for InstalledComponentLifecycleState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EffectiveDeployment {
     /// <p>The ID of the deployment.</p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>The name of the deployment.</p>
+    #[doc(hidden)]
     pub deployment_name: std::option::Option<std::string::String>,
     /// <p>The ID of the IoT job that applies the deployment to target devices.</p>
+    #[doc(hidden)]
     pub iot_job_id: std::option::Option<std::string::String>,
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT job that applies the deployment to target devices.</p>
+    #[doc(hidden)]
     pub iot_job_arn: std::option::Option<std::string::String>,
     /// <p>The description of the deployment job.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target IoT thing or thing group.</p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
     /// <p>The status of the deployment job on the Greengrass core device.</p>
+    #[doc(hidden)]
     pub core_device_execution_status:
         std::option::Option<crate::model::EffectiveDeploymentExecutionStatus>,
     /// <p>The reason code for the update, if the job was updated.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p>The time at which the deployment was created, expressed in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the deployment job was last modified, expressed in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub modified_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EffectiveDeployment {
@@ -1041,11 +1067,10 @@ impl std::fmt::Debug for EffectiveDeployment {
         formatter.finish()
     }
 }
-/// See [`EffectiveDeployment`](crate::model::EffectiveDeployment)
+/// See [`EffectiveDeployment`](crate::model::EffectiveDeployment).
 pub mod effective_deployment {
 
-    /// A builder for [`EffectiveDeployment`](crate::model::EffectiveDeployment)
-    #[non_exhaustive]
+    /// A builder for [`EffectiveDeployment`](crate::model::EffectiveDeployment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_id: std::option::Option<std::string::String>,
@@ -1179,7 +1204,7 @@ pub mod effective_deployment {
             self.modified_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`EffectiveDeployment`](crate::model::EffectiveDeployment)
+        /// Consumes the builder and constructs a [`EffectiveDeployment`](crate::model::EffectiveDeployment).
         pub fn build(self) -> crate::model::EffectiveDeployment {
             crate::model::EffectiveDeployment {
                 deployment_id: self.deployment_id,
@@ -1197,7 +1222,7 @@ pub mod effective_deployment {
     }
 }
 impl EffectiveDeployment {
-    /// Creates a new builder-style object to manufacture [`EffectiveDeployment`](crate::model::EffectiveDeployment)
+    /// Creates a new builder-style object to manufacture [`EffectiveDeployment`](crate::model::EffectiveDeployment).
     pub fn builder() -> crate::model::effective_deployment::Builder {
         crate::model::effective_deployment::Builder::default()
     }
@@ -1291,18 +1316,25 @@ impl AsRef<str> for EffectiveDeploymentExecutionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Deployment {
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target IoT thing or thing group.</p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
     /// <p>The revision number of the deployment.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
     /// <p>The ID of the deployment.</p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>The name of the deployment.</p>
+    #[doc(hidden)]
     pub deployment_name: std::option::Option<std::string::String>,
     /// <p>The time at which the deployment was created, expressed in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the deployment.</p>
+    #[doc(hidden)]
     pub deployment_status: std::option::Option<crate::model::DeploymentStatus>,
     /// <p>Whether or not the deployment is the latest revision for its target.</p>
+    #[doc(hidden)]
     pub is_latest_for_target: bool,
 }
 impl Deployment {
@@ -1348,11 +1380,10 @@ impl std::fmt::Debug for Deployment {
         formatter.finish()
     }
 }
-/// See [`Deployment`](crate::model::Deployment)
+/// See [`Deployment`](crate::model::Deployment).
 pub mod deployment {
 
-    /// A builder for [`Deployment`](crate::model::Deployment)
-    #[non_exhaustive]
+    /// A builder for [`Deployment`](crate::model::Deployment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_arn: std::option::Option<std::string::String>,
@@ -1446,7 +1477,7 @@ pub mod deployment {
             self.is_latest_for_target = input;
             self
         }
-        /// Consumes the builder and constructs a [`Deployment`](crate::model::Deployment)
+        /// Consumes the builder and constructs a [`Deployment`](crate::model::Deployment).
         pub fn build(self) -> crate::model::Deployment {
             crate::model::Deployment {
                 target_arn: self.target_arn,
@@ -1461,7 +1492,7 @@ pub mod deployment {
     }
 }
 impl Deployment {
-    /// Creates a new builder-style object to manufacture [`Deployment`](crate::model::Deployment)
+    /// Creates a new builder-style object to manufacture [`Deployment`](crate::model::Deployment).
     pub fn builder() -> crate::model::deployment::Builder {
         crate::model::deployment::Builder::default()
     }
@@ -1594,14 +1625,17 @@ impl AsRef<str> for DeploymentHistoryFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CoreDevice {
     /// <p>The name of the core device. This is also the name of the IoT thing.</p>
+    #[doc(hidden)]
     pub core_device_thing_name: std::option::Option<std::string::String>,
     /// <p>The status of the core device. Core devices can have the following statuses:</p>
     /// <ul>
     /// <li> <p> <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.</p> </li>
     /// <li> <p> <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CoreDeviceStatus>,
     /// <p>The time at which the core device's status last updated, expressed in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub last_status_update_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CoreDevice {
@@ -1634,11 +1668,10 @@ impl std::fmt::Debug for CoreDevice {
         formatter.finish()
     }
 }
-/// See [`CoreDevice`](crate::model::CoreDevice)
+/// See [`CoreDevice`](crate::model::CoreDevice).
 pub mod core_device {
 
-    /// A builder for [`CoreDevice`](crate::model::CoreDevice)
-    #[non_exhaustive]
+    /// A builder for [`CoreDevice`](crate::model::CoreDevice).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) core_device_thing_name: std::option::Option<std::string::String>,
@@ -1693,7 +1726,7 @@ pub mod core_device {
             self.last_status_update_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`CoreDevice`](crate::model::CoreDevice)
+        /// Consumes the builder and constructs a [`CoreDevice`](crate::model::CoreDevice).
         pub fn build(self) -> crate::model::CoreDevice {
             crate::model::CoreDevice {
                 core_device_thing_name: self.core_device_thing_name,
@@ -1704,7 +1737,7 @@ pub mod core_device {
     }
 }
 impl CoreDevice {
-    /// Creates a new builder-style object to manufacture [`CoreDevice`](crate::model::CoreDevice)
+    /// Creates a new builder-style object to manufacture [`CoreDevice`](crate::model::CoreDevice).
     pub fn builder() -> crate::model::core_device::Builder {
         crate::model::core_device::Builder::default()
     }
@@ -1770,10 +1803,13 @@ impl AsRef<str> for CoreDeviceStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentVersionListItem {
     /// <p>The name of the component.</p>
+    #[doc(hidden)]
     pub component_name: std::option::Option<std::string::String>,
     /// <p>The version of the component.</p>
+    #[doc(hidden)]
     pub component_version: std::option::Option<std::string::String>,
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the component version.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl ComponentVersionListItem {
@@ -1799,11 +1835,10 @@ impl std::fmt::Debug for ComponentVersionListItem {
         formatter.finish()
     }
 }
-/// See [`ComponentVersionListItem`](crate::model::ComponentVersionListItem)
+/// See [`ComponentVersionListItem`](crate::model::ComponentVersionListItem).
 pub mod component_version_list_item {
 
-    /// A builder for [`ComponentVersionListItem`](crate::model::ComponentVersionListItem)
-    #[non_exhaustive]
+    /// A builder for [`ComponentVersionListItem`](crate::model::ComponentVersionListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) component_name: std::option::Option<std::string::String>,
@@ -1847,7 +1882,7 @@ pub mod component_version_list_item {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentVersionListItem`](crate::model::ComponentVersionListItem)
+        /// Consumes the builder and constructs a [`ComponentVersionListItem`](crate::model::ComponentVersionListItem).
         pub fn build(self) -> crate::model::ComponentVersionListItem {
             crate::model::ComponentVersionListItem {
                 component_name: self.component_name,
@@ -1858,7 +1893,7 @@ pub mod component_version_list_item {
     }
 }
 impl ComponentVersionListItem {
-    /// Creates a new builder-style object to manufacture [`ComponentVersionListItem`](crate::model::ComponentVersionListItem)
+    /// Creates a new builder-style object to manufacture [`ComponentVersionListItem`](crate::model::ComponentVersionListItem).
     pub fn builder() -> crate::model::component_version_list_item::Builder {
         crate::model::component_version_list_item::Builder::default()
     }
@@ -1869,10 +1904,13 @@ impl ComponentVersionListItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Component {
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the component version.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the component.</p>
+    #[doc(hidden)]
     pub component_name: std::option::Option<std::string::String>,
     /// <p>The latest version of the component and its details.</p>
+    #[doc(hidden)]
     pub latest_version: std::option::Option<crate::model::ComponentLatestVersion>,
 }
 impl Component {
@@ -1898,11 +1936,10 @@ impl std::fmt::Debug for Component {
         formatter.finish()
     }
 }
-/// See [`Component`](crate::model::Component)
+/// See [`Component`](crate::model::Component).
 pub mod component {
 
-    /// A builder for [`Component`](crate::model::Component)
-    #[non_exhaustive]
+    /// A builder for [`Component`](crate::model::Component).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1946,7 +1983,7 @@ pub mod component {
             self.latest_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`Component`](crate::model::Component)
+        /// Consumes the builder and constructs a [`Component`](crate::model::Component).
         pub fn build(self) -> crate::model::Component {
             crate::model::Component {
                 arn: self.arn,
@@ -1957,7 +1994,7 @@ pub mod component {
     }
 }
 impl Component {
-    /// Creates a new builder-style object to manufacture [`Component`](crate::model::Component)
+    /// Creates a new builder-style object to manufacture [`Component`](crate::model::Component).
     pub fn builder() -> crate::model::component::Builder {
         crate::model::component::Builder::default()
     }
@@ -1968,16 +2005,22 @@ impl Component {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentLatestVersion {
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the component version.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The version of the component.</p>
+    #[doc(hidden)]
     pub component_version: std::option::Option<std::string::String>,
     /// <p>The time at which the component was created, expressed in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the component version.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The publisher of the component version.</p>
+    #[doc(hidden)]
     pub publisher: std::option::Option<std::string::String>,
     /// <p>The platforms that the component version supports.</p>
+    #[doc(hidden)]
     pub platforms: std::option::Option<std::vec::Vec<crate::model::ComponentPlatform>>,
 }
 impl ComponentLatestVersion {
@@ -2018,11 +2061,10 @@ impl std::fmt::Debug for ComponentLatestVersion {
         formatter.finish()
     }
 }
-/// See [`ComponentLatestVersion`](crate::model::ComponentLatestVersion)
+/// See [`ComponentLatestVersion`](crate::model::ComponentLatestVersion).
 pub mod component_latest_version {
 
-    /// A builder for [`ComponentLatestVersion`](crate::model::ComponentLatestVersion)
-    #[non_exhaustive]
+    /// A builder for [`ComponentLatestVersion`](crate::model::ComponentLatestVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2108,7 +2150,7 @@ pub mod component_latest_version {
             self.platforms = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentLatestVersion`](crate::model::ComponentLatestVersion)
+        /// Consumes the builder and constructs a [`ComponentLatestVersion`](crate::model::ComponentLatestVersion).
         pub fn build(self) -> crate::model::ComponentLatestVersion {
             crate::model::ComponentLatestVersion {
                 arn: self.arn,
@@ -2122,7 +2164,7 @@ pub mod component_latest_version {
     }
 }
 impl ComponentLatestVersion {
-    /// Creates a new builder-style object to manufacture [`ComponentLatestVersion`](crate::model::ComponentLatestVersion)
+    /// Creates a new builder-style object to manufacture [`ComponentLatestVersion`](crate::model::ComponentLatestVersion).
     pub fn builder() -> crate::model::component_latest_version::Builder {
         crate::model::component_latest_version::Builder::default()
     }
@@ -2188,8 +2230,10 @@ impl AsRef<str> for ComponentVisibilityScope {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociatedClientDevice {
     /// <p>The name of the IoT thing that represents the associated client device.</p>
+    #[doc(hidden)]
     pub thing_name: std::option::Option<std::string::String>,
     /// <p>The time that the client device was associated, expressed in ISO 8601 format.</p>
+    #[doc(hidden)]
     pub association_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AssociatedClientDevice {
@@ -2210,11 +2254,10 @@ impl std::fmt::Debug for AssociatedClientDevice {
         formatter.finish()
     }
 }
-/// See [`AssociatedClientDevice`](crate::model::AssociatedClientDevice)
+/// See [`AssociatedClientDevice`](crate::model::AssociatedClientDevice).
 pub mod associated_client_device {
 
-    /// A builder for [`AssociatedClientDevice`](crate::model::AssociatedClientDevice)
-    #[non_exhaustive]
+    /// A builder for [`AssociatedClientDevice`](crate::model::AssociatedClientDevice).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_name: std::option::Option<std::string::String>,
@@ -2244,7 +2287,7 @@ pub mod associated_client_device {
             self.association_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociatedClientDevice`](crate::model::AssociatedClientDevice)
+        /// Consumes the builder and constructs a [`AssociatedClientDevice`](crate::model::AssociatedClientDevice).
         pub fn build(self) -> crate::model::AssociatedClientDevice {
             crate::model::AssociatedClientDevice {
                 thing_name: self.thing_name,
@@ -2254,7 +2297,7 @@ pub mod associated_client_device {
     }
 }
 impl AssociatedClientDevice {
-    /// Creates a new builder-style object to manufacture [`AssociatedClientDevice`](crate::model::AssociatedClientDevice)
+    /// Creates a new builder-style object to manufacture [`AssociatedClientDevice`](crate::model::AssociatedClientDevice).
     pub fn builder() -> crate::model::associated_client_device::Builder {
         crate::model::associated_client_device::Builder::default()
     }
@@ -2265,11 +2308,14 @@ impl AssociatedClientDevice {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeploymentIoTJobConfiguration {
     /// <p>The rollout configuration for the job. This configuration defines the rate at which the job rolls out to the fleet of target devices.</p>
+    #[doc(hidden)]
     pub job_executions_rollout_config:
         std::option::Option<crate::model::IoTJobExecutionsRolloutConfig>,
     /// <p>The stop configuration for the job. This configuration defines when and how to stop a job rollout.</p>
+    #[doc(hidden)]
     pub abort_config: std::option::Option<crate::model::IoTJobAbortConfig>,
     /// <p>The timeout configuration for the job. This configuration defines the amount of time each device has to complete the job.</p>
+    #[doc(hidden)]
     pub timeout_config: std::option::Option<crate::model::IoTJobTimeoutConfig>,
 }
 impl DeploymentIoTJobConfiguration {
@@ -2300,11 +2346,10 @@ impl std::fmt::Debug for DeploymentIoTJobConfiguration {
         formatter.finish()
     }
 }
-/// See [`DeploymentIoTJobConfiguration`](crate::model::DeploymentIoTJobConfiguration)
+/// See [`DeploymentIoTJobConfiguration`](crate::model::DeploymentIoTJobConfiguration).
 pub mod deployment_io_t_job_configuration {
 
-    /// A builder for [`DeploymentIoTJobConfiguration`](crate::model::DeploymentIoTJobConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentIoTJobConfiguration`](crate::model::DeploymentIoTJobConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_executions_rollout_config:
@@ -2355,7 +2400,7 @@ pub mod deployment_io_t_job_configuration {
             self.timeout_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentIoTJobConfiguration`](crate::model::DeploymentIoTJobConfiguration)
+        /// Consumes the builder and constructs a [`DeploymentIoTJobConfiguration`](crate::model::DeploymentIoTJobConfiguration).
         pub fn build(self) -> crate::model::DeploymentIoTJobConfiguration {
             crate::model::DeploymentIoTJobConfiguration {
                 job_executions_rollout_config: self.job_executions_rollout_config,
@@ -2366,7 +2411,7 @@ pub mod deployment_io_t_job_configuration {
     }
 }
 impl DeploymentIoTJobConfiguration {
-    /// Creates a new builder-style object to manufacture [`DeploymentIoTJobConfiguration`](crate::model::DeploymentIoTJobConfiguration)
+    /// Creates a new builder-style object to manufacture [`DeploymentIoTJobConfiguration`](crate::model::DeploymentIoTJobConfiguration).
     pub fn builder() -> crate::model::deployment_io_t_job_configuration::Builder {
         crate::model::deployment_io_t_job_configuration::Builder::default()
     }
@@ -2378,6 +2423,7 @@ impl DeploymentIoTJobConfiguration {
 pub struct IoTJobTimeoutConfig {
     /// <p>The amount of time, in minutes, that devices have to complete the job. The timer starts when the job status is set to <code>IN_PROGRESS</code>. If the job status doesn't change to a terminal state before the time expires, then the job status is set to <code>TIMED_OUT</code>.</p>
     /// <p>The timeout interval must be between 1 minute and 7 days (10080 minutes).</p>
+    #[doc(hidden)]
     pub in_progress_timeout_in_minutes: std::option::Option<i64>,
 }
 impl IoTJobTimeoutConfig {
@@ -2397,11 +2443,10 @@ impl std::fmt::Debug for IoTJobTimeoutConfig {
         formatter.finish()
     }
 }
-/// See [`IoTJobTimeoutConfig`](crate::model::IoTJobTimeoutConfig)
+/// See [`IoTJobTimeoutConfig`](crate::model::IoTJobTimeoutConfig).
 pub mod io_t_job_timeout_config {
 
-    /// A builder for [`IoTJobTimeoutConfig`](crate::model::IoTJobTimeoutConfig)
-    #[non_exhaustive]
+    /// A builder for [`IoTJobTimeoutConfig`](crate::model::IoTJobTimeoutConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) in_progress_timeout_in_minutes: std::option::Option<i64>,
@@ -2422,7 +2467,7 @@ pub mod io_t_job_timeout_config {
             self.in_progress_timeout_in_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`IoTJobTimeoutConfig`](crate::model::IoTJobTimeoutConfig)
+        /// Consumes the builder and constructs a [`IoTJobTimeoutConfig`](crate::model::IoTJobTimeoutConfig).
         pub fn build(self) -> crate::model::IoTJobTimeoutConfig {
             crate::model::IoTJobTimeoutConfig {
                 in_progress_timeout_in_minutes: self.in_progress_timeout_in_minutes,
@@ -2431,7 +2476,7 @@ pub mod io_t_job_timeout_config {
     }
 }
 impl IoTJobTimeoutConfig {
-    /// Creates a new builder-style object to manufacture [`IoTJobTimeoutConfig`](crate::model::IoTJobTimeoutConfig)
+    /// Creates a new builder-style object to manufacture [`IoTJobTimeoutConfig`](crate::model::IoTJobTimeoutConfig).
     pub fn builder() -> crate::model::io_t_job_timeout_config::Builder {
         crate::model::io_t_job_timeout_config::Builder::default()
     }
@@ -2442,6 +2487,7 @@ impl IoTJobTimeoutConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IoTJobAbortConfig {
     /// <p>The list of criteria that define when and how to cancel the configuration deployment.</p>
+    #[doc(hidden)]
     pub criteria_list: std::option::Option<std::vec::Vec<crate::model::IoTJobAbortCriteria>>,
 }
 impl IoTJobAbortConfig {
@@ -2457,11 +2503,10 @@ impl std::fmt::Debug for IoTJobAbortConfig {
         formatter.finish()
     }
 }
-/// See [`IoTJobAbortConfig`](crate::model::IoTJobAbortConfig)
+/// See [`IoTJobAbortConfig`](crate::model::IoTJobAbortConfig).
 pub mod io_t_job_abort_config {
 
-    /// A builder for [`IoTJobAbortConfig`](crate::model::IoTJobAbortConfig)
-    #[non_exhaustive]
+    /// A builder for [`IoTJobAbortConfig`](crate::model::IoTJobAbortConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) criteria_list:
@@ -2487,7 +2532,7 @@ pub mod io_t_job_abort_config {
             self.criteria_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`IoTJobAbortConfig`](crate::model::IoTJobAbortConfig)
+        /// Consumes the builder and constructs a [`IoTJobAbortConfig`](crate::model::IoTJobAbortConfig).
         pub fn build(self) -> crate::model::IoTJobAbortConfig {
             crate::model::IoTJobAbortConfig {
                 criteria_list: self.criteria_list,
@@ -2496,7 +2541,7 @@ pub mod io_t_job_abort_config {
     }
 }
 impl IoTJobAbortConfig {
-    /// Creates a new builder-style object to manufacture [`IoTJobAbortConfig`](crate::model::IoTJobAbortConfig)
+    /// Creates a new builder-style object to manufacture [`IoTJobAbortConfig`](crate::model::IoTJobAbortConfig).
     pub fn builder() -> crate::model::io_t_job_abort_config::Builder {
         crate::model::io_t_job_abort_config::Builder::default()
     }
@@ -2512,13 +2557,17 @@ impl IoTJobAbortConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IoTJobAbortCriteria {
     /// <p>The type of job deployment failure that can cancel a job.</p>
+    #[doc(hidden)]
     pub failure_type: std::option::Option<crate::model::IoTJobExecutionFailureType>,
     /// <p>The action to perform when the criteria are met.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::IoTJobAbortAction>,
     /// <p>The minimum percentage of <code>failureType</code> failures that occur before the job can cancel.</p>
     /// <p>This parameter supports up to two digits after the decimal (for example, you can specify <code>10.9</code> or <code>10.99</code>, but not <code>10.999</code>).</p>
+    #[doc(hidden)]
     pub threshold_percentage: f64,
     /// <p>The minimum number of things that receive the configuration before the job can cancel.</p>
+    #[doc(hidden)]
     pub min_number_of_executed_things: i32,
 }
 impl IoTJobAbortCriteria {
@@ -2553,11 +2602,10 @@ impl std::fmt::Debug for IoTJobAbortCriteria {
         formatter.finish()
     }
 }
-/// See [`IoTJobAbortCriteria`](crate::model::IoTJobAbortCriteria)
+/// See [`IoTJobAbortCriteria`](crate::model::IoTJobAbortCriteria).
 pub mod io_t_job_abort_criteria {
 
-    /// A builder for [`IoTJobAbortCriteria`](crate::model::IoTJobAbortCriteria)
-    #[non_exhaustive]
+    /// A builder for [`IoTJobAbortCriteria`](crate::model::IoTJobAbortCriteria).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failure_type: std::option::Option<crate::model::IoTJobExecutionFailureType>,
@@ -2617,7 +2665,7 @@ pub mod io_t_job_abort_criteria {
             self.min_number_of_executed_things = input;
             self
         }
-        /// Consumes the builder and constructs a [`IoTJobAbortCriteria`](crate::model::IoTJobAbortCriteria)
+        /// Consumes the builder and constructs a [`IoTJobAbortCriteria`](crate::model::IoTJobAbortCriteria).
         pub fn build(self) -> crate::model::IoTJobAbortCriteria {
             crate::model::IoTJobAbortCriteria {
                 failure_type: self.failure_type,
@@ -2631,7 +2679,7 @@ pub mod io_t_job_abort_criteria {
     }
 }
 impl IoTJobAbortCriteria {
-    /// Creates a new builder-style object to manufacture [`IoTJobAbortCriteria`](crate::model::IoTJobAbortCriteria)
+    /// Creates a new builder-style object to manufacture [`IoTJobAbortCriteria`](crate::model::IoTJobAbortCriteria).
     pub fn builder() -> crate::model::io_t_job_abort_criteria::Builder {
         crate::model::io_t_job_abort_criteria::Builder::default()
     }
@@ -2756,8 +2804,10 @@ impl AsRef<str> for IoTJobExecutionFailureType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IoTJobExecutionsRolloutConfig {
     /// <p>The exponential rate to increase the job rollout rate.</p>
+    #[doc(hidden)]
     pub exponential_rate: std::option::Option<crate::model::IoTJobExponentialRolloutRate>,
     /// <p>The maximum number of devices that receive a pending job notification, per minute.</p>
+    #[doc(hidden)]
     pub maximum_per_minute: std::option::Option<i32>,
 }
 impl IoTJobExecutionsRolloutConfig {
@@ -2780,11 +2830,10 @@ impl std::fmt::Debug for IoTJobExecutionsRolloutConfig {
         formatter.finish()
     }
 }
-/// See [`IoTJobExecutionsRolloutConfig`](crate::model::IoTJobExecutionsRolloutConfig)
+/// See [`IoTJobExecutionsRolloutConfig`](crate::model::IoTJobExecutionsRolloutConfig).
 pub mod io_t_job_executions_rollout_config {
 
-    /// A builder for [`IoTJobExecutionsRolloutConfig`](crate::model::IoTJobExecutionsRolloutConfig)
-    #[non_exhaustive]
+    /// A builder for [`IoTJobExecutionsRolloutConfig`](crate::model::IoTJobExecutionsRolloutConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) exponential_rate:
@@ -2818,7 +2867,7 @@ pub mod io_t_job_executions_rollout_config {
             self.maximum_per_minute = input;
             self
         }
-        /// Consumes the builder and constructs a [`IoTJobExecutionsRolloutConfig`](crate::model::IoTJobExecutionsRolloutConfig)
+        /// Consumes the builder and constructs a [`IoTJobExecutionsRolloutConfig`](crate::model::IoTJobExecutionsRolloutConfig).
         pub fn build(self) -> crate::model::IoTJobExecutionsRolloutConfig {
             crate::model::IoTJobExecutionsRolloutConfig {
                 exponential_rate: self.exponential_rate,
@@ -2828,7 +2877,7 @@ pub mod io_t_job_executions_rollout_config {
     }
 }
 impl IoTJobExecutionsRolloutConfig {
-    /// Creates a new builder-style object to manufacture [`IoTJobExecutionsRolloutConfig`](crate::model::IoTJobExecutionsRolloutConfig)
+    /// Creates a new builder-style object to manufacture [`IoTJobExecutionsRolloutConfig`](crate::model::IoTJobExecutionsRolloutConfig).
     pub fn builder() -> crate::model::io_t_job_executions_rollout_config::Builder {
         crate::model::io_t_job_executions_rollout_config::Builder::default()
     }
@@ -2839,11 +2888,14 @@ impl IoTJobExecutionsRolloutConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IoTJobExponentialRolloutRate {
     /// <p>The minimum number of devices that receive a pending job notification, per minute, when the job starts. This parameter defines the initial rollout rate of the job.</p>
+    #[doc(hidden)]
     pub base_rate_per_minute: i32,
     /// <p>The exponential factor to increase the rollout rate for the job.</p>
     /// <p>This parameter supports up to one digit after the decimal (for example, you can specify <code>1.5</code>, but not <code>1.55</code>).</p>
+    #[doc(hidden)]
     pub increment_factor: f64,
     /// <p>The criteria to increase the rollout rate for the job.</p>
+    #[doc(hidden)]
     pub rate_increase_criteria: std::option::Option<crate::model::IoTJobRateIncreaseCriteria>,
 }
 impl IoTJobExponentialRolloutRate {
@@ -2872,11 +2924,10 @@ impl std::fmt::Debug for IoTJobExponentialRolloutRate {
         formatter.finish()
     }
 }
-/// See [`IoTJobExponentialRolloutRate`](crate::model::IoTJobExponentialRolloutRate)
+/// See [`IoTJobExponentialRolloutRate`](crate::model::IoTJobExponentialRolloutRate).
 pub mod io_t_job_exponential_rollout_rate {
 
-    /// A builder for [`IoTJobExponentialRolloutRate`](crate::model::IoTJobExponentialRolloutRate)
-    #[non_exhaustive]
+    /// A builder for [`IoTJobExponentialRolloutRate`](crate::model::IoTJobExponentialRolloutRate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) base_rate_per_minute: std::option::Option<i32>,
@@ -2923,7 +2974,7 @@ pub mod io_t_job_exponential_rollout_rate {
             self.rate_increase_criteria = input;
             self
         }
-        /// Consumes the builder and constructs a [`IoTJobExponentialRolloutRate`](crate::model::IoTJobExponentialRolloutRate)
+        /// Consumes the builder and constructs a [`IoTJobExponentialRolloutRate`](crate::model::IoTJobExponentialRolloutRate).
         pub fn build(self) -> crate::model::IoTJobExponentialRolloutRate {
             crate::model::IoTJobExponentialRolloutRate {
                 base_rate_per_minute: self.base_rate_per_minute.unwrap_or_default(),
@@ -2934,7 +2985,7 @@ pub mod io_t_job_exponential_rollout_rate {
     }
 }
 impl IoTJobExponentialRolloutRate {
-    /// Creates a new builder-style object to manufacture [`IoTJobExponentialRolloutRate`](crate::model::IoTJobExponentialRolloutRate)
+    /// Creates a new builder-style object to manufacture [`IoTJobExponentialRolloutRate`](crate::model::IoTJobExponentialRolloutRate).
     pub fn builder() -> crate::model::io_t_job_exponential_rollout_rate::Builder {
         crate::model::io_t_job_exponential_rollout_rate::Builder::default()
     }
@@ -2945,8 +2996,10 @@ impl IoTJobExponentialRolloutRate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IoTJobRateIncreaseCriteria {
     /// <p>The number of devices to receive the job notification before the rollout rate increases.</p>
+    #[doc(hidden)]
     pub number_of_notified_things: std::option::Option<i32>,
     /// <p>The number of devices to successfully run the configuration job before the rollout rate increases.</p>
+    #[doc(hidden)]
     pub number_of_succeeded_things: std::option::Option<i32>,
 }
 impl IoTJobRateIncreaseCriteria {
@@ -2970,11 +3023,10 @@ impl std::fmt::Debug for IoTJobRateIncreaseCriteria {
         formatter.finish()
     }
 }
-/// See [`IoTJobRateIncreaseCriteria`](crate::model::IoTJobRateIncreaseCriteria)
+/// See [`IoTJobRateIncreaseCriteria`](crate::model::IoTJobRateIncreaseCriteria).
 pub mod io_t_job_rate_increase_criteria {
 
-    /// A builder for [`IoTJobRateIncreaseCriteria`](crate::model::IoTJobRateIncreaseCriteria)
-    #[non_exhaustive]
+    /// A builder for [`IoTJobRateIncreaseCriteria`](crate::model::IoTJobRateIncreaseCriteria).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) number_of_notified_things: std::option::Option<i32>,
@@ -3001,7 +3053,7 @@ pub mod io_t_job_rate_increase_criteria {
             self.number_of_succeeded_things = input;
             self
         }
-        /// Consumes the builder and constructs a [`IoTJobRateIncreaseCriteria`](crate::model::IoTJobRateIncreaseCriteria)
+        /// Consumes the builder and constructs a [`IoTJobRateIncreaseCriteria`](crate::model::IoTJobRateIncreaseCriteria).
         pub fn build(self) -> crate::model::IoTJobRateIncreaseCriteria {
             crate::model::IoTJobRateIncreaseCriteria {
                 number_of_notified_things: self.number_of_notified_things,
@@ -3011,7 +3063,7 @@ pub mod io_t_job_rate_increase_criteria {
     }
 }
 impl IoTJobRateIncreaseCriteria {
-    /// Creates a new builder-style object to manufacture [`IoTJobRateIncreaseCriteria`](crate::model::IoTJobRateIncreaseCriteria)
+    /// Creates a new builder-style object to manufacture [`IoTJobRateIncreaseCriteria`](crate::model::IoTJobRateIncreaseCriteria).
     pub fn builder() -> crate::model::io_t_job_rate_increase_criteria::Builder {
         crate::model::io_t_job_rate_increase_criteria::Builder::default()
     }
@@ -3023,10 +3075,13 @@ impl IoTJobRateIncreaseCriteria {
 pub struct DeploymentPolicies {
     /// <p>The failure handling policy for the configuration deployment. This policy defines what to do if the deployment fails.</p>
     /// <p>Default: <code>ROLLBACK</code> </p>
+    #[doc(hidden)]
     pub failure_handling_policy: std::option::Option<crate::model::DeploymentFailureHandlingPolicy>,
     /// <p>The component update policy for the configuration deployment. This policy defines when it's safe to deploy the configuration to devices.</p>
+    #[doc(hidden)]
     pub component_update_policy: std::option::Option<crate::model::DeploymentComponentUpdatePolicy>,
     /// <p>The configuration validation policy for the configuration deployment. This policy defines how long each component has to validate its configure updates.</p>
+    #[doc(hidden)]
     pub configuration_validation_policy:
         std::option::Option<crate::model::DeploymentConfigurationValidationPolicy>,
 }
@@ -3063,11 +3118,10 @@ impl std::fmt::Debug for DeploymentPolicies {
         formatter.finish()
     }
 }
-/// See [`DeploymentPolicies`](crate::model::DeploymentPolicies)
+/// See [`DeploymentPolicies`](crate::model::DeploymentPolicies).
 pub mod deployment_policies {
 
-    /// A builder for [`DeploymentPolicies`](crate::model::DeploymentPolicies)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentPolicies`](crate::model::DeploymentPolicies).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failure_handling_policy:
@@ -3128,7 +3182,7 @@ pub mod deployment_policies {
             self.configuration_validation_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentPolicies`](crate::model::DeploymentPolicies)
+        /// Consumes the builder and constructs a [`DeploymentPolicies`](crate::model::DeploymentPolicies).
         pub fn build(self) -> crate::model::DeploymentPolicies {
             crate::model::DeploymentPolicies {
                 failure_handling_policy: self.failure_handling_policy,
@@ -3139,7 +3193,7 @@ pub mod deployment_policies {
     }
 }
 impl DeploymentPolicies {
-    /// Creates a new builder-style object to manufacture [`DeploymentPolicies`](crate::model::DeploymentPolicies)
+    /// Creates a new builder-style object to manufacture [`DeploymentPolicies`](crate::model::DeploymentPolicies).
     pub fn builder() -> crate::model::deployment_policies::Builder {
         crate::model::deployment_policies::Builder::default()
     }
@@ -3151,6 +3205,7 @@ impl DeploymentPolicies {
 pub struct DeploymentConfigurationValidationPolicy {
     /// <p>The amount of time in seconds that a component can validate its configuration updates. If the validation time exceeds this timeout, then the deployment proceeds for the device.</p>
     /// <p>Default: <code>30</code> </p>
+    #[doc(hidden)]
     pub timeout_in_seconds: std::option::Option<i32>,
 }
 impl DeploymentConfigurationValidationPolicy {
@@ -3167,11 +3222,10 @@ impl std::fmt::Debug for DeploymentConfigurationValidationPolicy {
         formatter.finish()
     }
 }
-/// See [`DeploymentConfigurationValidationPolicy`](crate::model::DeploymentConfigurationValidationPolicy)
+/// See [`DeploymentConfigurationValidationPolicy`](crate::model::DeploymentConfigurationValidationPolicy).
 pub mod deployment_configuration_validation_policy {
 
-    /// A builder for [`DeploymentConfigurationValidationPolicy`](crate::model::DeploymentConfigurationValidationPolicy)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentConfigurationValidationPolicy`](crate::model::DeploymentConfigurationValidationPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timeout_in_seconds: std::option::Option<i32>,
@@ -3189,7 +3243,7 @@ pub mod deployment_configuration_validation_policy {
             self.timeout_in_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentConfigurationValidationPolicy`](crate::model::DeploymentConfigurationValidationPolicy)
+        /// Consumes the builder and constructs a [`DeploymentConfigurationValidationPolicy`](crate::model::DeploymentConfigurationValidationPolicy).
         pub fn build(self) -> crate::model::DeploymentConfigurationValidationPolicy {
             crate::model::DeploymentConfigurationValidationPolicy {
                 timeout_in_seconds: self.timeout_in_seconds,
@@ -3198,7 +3252,7 @@ pub mod deployment_configuration_validation_policy {
     }
 }
 impl DeploymentConfigurationValidationPolicy {
-    /// Creates a new builder-style object to manufacture [`DeploymentConfigurationValidationPolicy`](crate::model::DeploymentConfigurationValidationPolicy)
+    /// Creates a new builder-style object to manufacture [`DeploymentConfigurationValidationPolicy`](crate::model::DeploymentConfigurationValidationPolicy).
     pub fn builder() -> crate::model::deployment_configuration_validation_policy::Builder {
         crate::model::deployment_configuration_validation_policy::Builder::default()
     }
@@ -3211,6 +3265,7 @@ impl DeploymentConfigurationValidationPolicy {
 pub struct DeploymentComponentUpdatePolicy {
     /// <p>The amount of time in seconds that each component on a device has to report that it's safe to update. If the component waits for longer than this timeout, then the deployment proceeds on the device.</p>
     /// <p>Default: <code>60</code> </p>
+    #[doc(hidden)]
     pub timeout_in_seconds: std::option::Option<i32>,
     /// <p>Whether or not to notify components and wait for components to become safe to update. Choose from the following options:</p>
     /// <ul>
@@ -3218,6 +3273,7 @@ pub struct DeploymentComponentUpdatePolicy {
     /// <li> <p> <code>SKIP_NOTIFY_COMPONENTS</code> – The deployment doesn't notify components or wait for them to be safe to update.</p> </li>
     /// </ul>
     /// <p>Default: <code>NOTIFY_COMPONENTS</code> </p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::DeploymentComponentUpdatePolicyAction>,
 }
 impl DeploymentComponentUpdatePolicy {
@@ -3246,11 +3302,10 @@ impl std::fmt::Debug for DeploymentComponentUpdatePolicy {
         formatter.finish()
     }
 }
-/// See [`DeploymentComponentUpdatePolicy`](crate::model::DeploymentComponentUpdatePolicy)
+/// See [`DeploymentComponentUpdatePolicy`](crate::model::DeploymentComponentUpdatePolicy).
 pub mod deployment_component_update_policy {
 
-    /// A builder for [`DeploymentComponentUpdatePolicy`](crate::model::DeploymentComponentUpdatePolicy)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentComponentUpdatePolicy`](crate::model::DeploymentComponentUpdatePolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timeout_in_seconds: std::option::Option<i32>,
@@ -3295,7 +3350,7 @@ pub mod deployment_component_update_policy {
             self.action = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentComponentUpdatePolicy`](crate::model::DeploymentComponentUpdatePolicy)
+        /// Consumes the builder and constructs a [`DeploymentComponentUpdatePolicy`](crate::model::DeploymentComponentUpdatePolicy).
         pub fn build(self) -> crate::model::DeploymentComponentUpdatePolicy {
             crate::model::DeploymentComponentUpdatePolicy {
                 timeout_in_seconds: self.timeout_in_seconds,
@@ -3305,7 +3360,7 @@ pub mod deployment_component_update_policy {
     }
 }
 impl DeploymentComponentUpdatePolicy {
-    /// Creates a new builder-style object to manufacture [`DeploymentComponentUpdatePolicy`](crate::model::DeploymentComponentUpdatePolicy)
+    /// Creates a new builder-style object to manufacture [`DeploymentComponentUpdatePolicy`](crate::model::DeploymentComponentUpdatePolicy).
     pub fn builder() -> crate::model::deployment_component_update_policy::Builder {
         crate::model::deployment_component_update_policy::Builder::default()
     }
@@ -3426,10 +3481,13 @@ impl AsRef<str> for DeploymentFailureHandlingPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentDeploymentSpecification {
     /// <p>The version of the component.</p>
+    #[doc(hidden)]
     pub component_version: std::option::Option<std::string::String>,
     /// <p>The configuration updates to deploy for the component. You can define <i>reset</i> updates and <i>merge</i> updates. A reset updates the keys that you specify to the default configuration for the component. A merge updates the core device's component configuration with the keys and values that you specify. The IoT Greengrass Core software applies reset updates before it applies merge updates. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html">Update component configurations</a> in the <i>IoT Greengrass V2 Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub configuration_update: std::option::Option<crate::model::ComponentConfigurationUpdate>,
     /// <p>The system user and group that the IoT Greengrass Core software uses to run component processes on the core device. If you omit this parameter, the IoT Greengrass Core software uses the system user and group that you configure for the core device. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user">Configure the user and group that run components</a> in the <i>IoT Greengrass V2 Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub run_with: std::option::Option<crate::model::ComponentRunWith>,
 }
 impl ComponentDeploymentSpecification {
@@ -3457,11 +3515,10 @@ impl std::fmt::Debug for ComponentDeploymentSpecification {
         formatter.finish()
     }
 }
-/// See [`ComponentDeploymentSpecification`](crate::model::ComponentDeploymentSpecification)
+/// See [`ComponentDeploymentSpecification`](crate::model::ComponentDeploymentSpecification).
 pub mod component_deployment_specification {
 
-    /// A builder for [`ComponentDeploymentSpecification`](crate::model::ComponentDeploymentSpecification)
-    #[non_exhaustive]
+    /// A builder for [`ComponentDeploymentSpecification`](crate::model::ComponentDeploymentSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) component_version: std::option::Option<std::string::String>,
@@ -3512,7 +3569,7 @@ pub mod component_deployment_specification {
             self.run_with = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentDeploymentSpecification`](crate::model::ComponentDeploymentSpecification)
+        /// Consumes the builder and constructs a [`ComponentDeploymentSpecification`](crate::model::ComponentDeploymentSpecification).
         pub fn build(self) -> crate::model::ComponentDeploymentSpecification {
             crate::model::ComponentDeploymentSpecification {
                 component_version: self.component_version,
@@ -3523,7 +3580,7 @@ pub mod component_deployment_specification {
     }
 }
 impl ComponentDeploymentSpecification {
-    /// Creates a new builder-style object to manufacture [`ComponentDeploymentSpecification`](crate::model::ComponentDeploymentSpecification)
+    /// Creates a new builder-style object to manufacture [`ComponentDeploymentSpecification`](crate::model::ComponentDeploymentSpecification).
     pub fn builder() -> crate::model::component_deployment_specification::Builder {
         crate::model::component_deployment_specification::Builder::default()
     }
@@ -3535,12 +3592,15 @@ impl ComponentDeploymentSpecification {
 pub struct ComponentRunWith {
     /// <p>The POSIX system user and, optionally, group to use to run this component on Linux core devices. The user, and group if specified, must exist on each Linux core device. Specify the user and group separated by a colon (<code>:</code>) in the following format: <code>user:group</code>. The group is optional. If you don't specify a group, the IoT Greengrass Core software uses the primary user for the group.</p>
     /// <p>If you omit this parameter, the IoT Greengrass Core software uses the default system user and group that you configure on the Greengrass nucleus component. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user">Configure the user and group that run components</a>.</p>
+    #[doc(hidden)]
     pub posix_user: std::option::Option<std::string::String>,
     /// <p>The system resource limits to apply to this component's process on the core device. IoT Greengrass currently supports this feature on only Linux core devices.</p>
     /// <p>If you omit this parameter, the IoT Greengrass Core software uses the default system resource limits that you configure on the Greengrass nucleus component. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-system-resource-limits">Configure system resource limits for components</a>.</p>
+    #[doc(hidden)]
     pub system_resource_limits: std::option::Option<crate::model::SystemResourceLimits>,
     /// <p>The Windows user to use to run this component on Windows core devices. The user must exist on each Windows core device, and its name and password must be in the LocalSystem account's Credentials Manager instance.</p>
     /// <p>If you omit this parameter, the IoT Greengrass Core software uses the default Windows user that you configure on the Greengrass nucleus component. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user">Configure the user and group that run components</a>.</p>
+    #[doc(hidden)]
     pub windows_user: std::option::Option<std::string::String>,
 }
 impl ComponentRunWith {
@@ -3571,11 +3631,10 @@ impl std::fmt::Debug for ComponentRunWith {
         formatter.finish()
     }
 }
-/// See [`ComponentRunWith`](crate::model::ComponentRunWith)
+/// See [`ComponentRunWith`](crate::model::ComponentRunWith).
 pub mod component_run_with {
 
-    /// A builder for [`ComponentRunWith`](crate::model::ComponentRunWith)
-    #[non_exhaustive]
+    /// A builder for [`ComponentRunWith`](crate::model::ComponentRunWith).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) posix_user: std::option::Option<std::string::String>,
@@ -3622,7 +3681,7 @@ pub mod component_run_with {
             self.windows_user = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentRunWith`](crate::model::ComponentRunWith)
+        /// Consumes the builder and constructs a [`ComponentRunWith`](crate::model::ComponentRunWith).
         pub fn build(self) -> crate::model::ComponentRunWith {
             crate::model::ComponentRunWith {
                 posix_user: self.posix_user,
@@ -3633,7 +3692,7 @@ pub mod component_run_with {
     }
 }
 impl ComponentRunWith {
-    /// Creates a new builder-style object to manufacture [`ComponentRunWith`](crate::model::ComponentRunWith)
+    /// Creates a new builder-style object to manufacture [`ComponentRunWith`](crate::model::ComponentRunWith).
     pub fn builder() -> crate::model::component_run_with::Builder {
         crate::model::component_run_with::Builder::default()
     }
@@ -3644,8 +3703,10 @@ impl ComponentRunWith {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SystemResourceLimits {
     /// <p>The maximum amount of RAM, expressed in kilobytes, that a component's processes can use on the core device.</p>
+    #[doc(hidden)]
     pub memory: i64,
     /// <p>The maximum amount of CPU time that a component's processes can use on the core device. A core device's total CPU time is equivalent to the device's number of CPU cores. For example, on a core device with 4 CPU cores, you can set this value to <code>2</code> to limit the component's processes to 50 percent usage of each CPU core. On a device with 1 CPU core, you can set this value to <code>0.25</code> to limit the component's processes to 25 percent usage of the CPU. If you set this value to a number greater than the number of CPU cores, the IoT Greengrass Core software doesn't limit the component's CPU usage.</p>
+    #[doc(hidden)]
     pub cpus: f64,
 }
 impl SystemResourceLimits {
@@ -3666,11 +3727,10 @@ impl std::fmt::Debug for SystemResourceLimits {
         formatter.finish()
     }
 }
-/// See [`SystemResourceLimits`](crate::model::SystemResourceLimits)
+/// See [`SystemResourceLimits`](crate::model::SystemResourceLimits).
 pub mod system_resource_limits {
 
-    /// A builder for [`SystemResourceLimits`](crate::model::SystemResourceLimits)
-    #[non_exhaustive]
+    /// A builder for [`SystemResourceLimits`](crate::model::SystemResourceLimits).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) memory: std::option::Option<i64>,
@@ -3697,7 +3757,7 @@ pub mod system_resource_limits {
             self.cpus = input;
             self
         }
-        /// Consumes the builder and constructs a [`SystemResourceLimits`](crate::model::SystemResourceLimits)
+        /// Consumes the builder and constructs a [`SystemResourceLimits`](crate::model::SystemResourceLimits).
         pub fn build(self) -> crate::model::SystemResourceLimits {
             crate::model::SystemResourceLimits {
                 memory: self.memory.unwrap_or_default(),
@@ -3707,7 +3767,7 @@ pub mod system_resource_limits {
     }
 }
 impl SystemResourceLimits {
-    /// Creates a new builder-style object to manufacture [`SystemResourceLimits`](crate::model::SystemResourceLimits)
+    /// Creates a new builder-style object to manufacture [`SystemResourceLimits`](crate::model::SystemResourceLimits).
     pub fn builder() -> crate::model::system_resource_limits::Builder {
         crate::model::system_resource_limits::Builder::default()
     }
@@ -3718,8 +3778,10 @@ impl SystemResourceLimits {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentConfigurationUpdate {
     /// <p>A serialized JSON string that contains the configuration object to merge to target devices. The core device merges this configuration with the component's existing configuration. If this is the first time a component deploys on a device, the core device merges this configuration with the component's default configuration. This means that the core device keeps it's existing configuration for keys and values that you don't specify in this object. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update">Merge configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub merge: std::option::Option<std::string::String>,
     /// <p>The list of configuration nodes to reset to default values on target devices. Use JSON pointers to specify each node to reset. JSON pointers start with a forward slash (<code>/</code>) and use forward slashes to separate the key for each level in the object. For more information, see the <a href="https://tools.ietf.org/html/rfc6901">JSON pointer specification</a> and <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update">Reset configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub reset: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ComponentConfigurationUpdate {
@@ -3740,11 +3802,10 @@ impl std::fmt::Debug for ComponentConfigurationUpdate {
         formatter.finish()
     }
 }
-/// See [`ComponentConfigurationUpdate`](crate::model::ComponentConfigurationUpdate)
+/// See [`ComponentConfigurationUpdate`](crate::model::ComponentConfigurationUpdate).
 pub mod component_configuration_update {
 
-    /// A builder for [`ComponentConfigurationUpdate`](crate::model::ComponentConfigurationUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ComponentConfigurationUpdate`](crate::model::ComponentConfigurationUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) merge: std::option::Option<std::string::String>,
@@ -3780,7 +3841,7 @@ pub mod component_configuration_update {
             self.reset = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentConfigurationUpdate`](crate::model::ComponentConfigurationUpdate)
+        /// Consumes the builder and constructs a [`ComponentConfigurationUpdate`](crate::model::ComponentConfigurationUpdate).
         pub fn build(self) -> crate::model::ComponentConfigurationUpdate {
             crate::model::ComponentConfigurationUpdate {
                 merge: self.merge,
@@ -3790,7 +3851,7 @@ pub mod component_configuration_update {
     }
 }
 impl ComponentConfigurationUpdate {
-    /// Creates a new builder-style object to manufacture [`ComponentConfigurationUpdate`](crate::model::ComponentConfigurationUpdate)
+    /// Creates a new builder-style object to manufacture [`ComponentConfigurationUpdate`](crate::model::ComponentConfigurationUpdate).
     pub fn builder() -> crate::model::component_configuration_update::Builder {
         crate::model::component_configuration_update::Builder::default()
     }
@@ -3856,10 +3917,13 @@ impl AsRef<str> for RecipeOutputFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudComponentStatus {
     /// <p>The state of the component version.</p>
+    #[doc(hidden)]
     pub component_state: std::option::Option<crate::model::CloudComponentState>,
     /// <p>A message that communicates details, such as errors, about the status of the component version.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>A dictionary of errors that communicate why the component version is in an error state. For example, if IoT Greengrass can't access an artifact for the component version, then <code>errors</code> contains the artifact's URI as a key, and the error message as the value for that key.</p>
+    #[doc(hidden)]
     pub errors:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The vendor guidance state for the component version. This state indicates whether the component version has any issues that you should consider before you deploy it. The vendor guidance state can be:</p>
@@ -3868,8 +3932,10 @@ pub struct CloudComponentStatus {
     /// <li> <p> <code>DISCONTINUED</code> – This component version has been discontinued by its publisher. You can deploy this component version, but we recommend that you use a different version of this component.</p> </li>
     /// <li> <p> <code>DELETED</code> – This component version has been deleted by its publisher, so you can't deploy it. If you have any existing deployments that specify this component version, those deployments will fail.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub vendor_guidance: std::option::Option<crate::model::VendorGuidance>,
     /// <p>A message that communicates details about the vendor guidance state of the component version. This message communicates why a component version is discontinued or deleted.</p>
+    #[doc(hidden)]
     pub vendor_guidance_message: std::option::Option<std::string::String>,
 }
 impl CloudComponentStatus {
@@ -3913,11 +3979,10 @@ impl std::fmt::Debug for CloudComponentStatus {
         formatter.finish()
     }
 }
-/// See [`CloudComponentStatus`](crate::model::CloudComponentStatus)
+/// See [`CloudComponentStatus`](crate::model::CloudComponentStatus).
 pub mod cloud_component_status {
 
-    /// A builder for [`CloudComponentStatus`](crate::model::CloudComponentStatus)
-    #[non_exhaustive]
+    /// A builder for [`CloudComponentStatus`](crate::model::CloudComponentStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) component_state: std::option::Option<crate::model::CloudComponentState>,
@@ -4013,7 +4078,7 @@ pub mod cloud_component_status {
             self.vendor_guidance_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudComponentStatus`](crate::model::CloudComponentStatus)
+        /// Consumes the builder and constructs a [`CloudComponentStatus`](crate::model::CloudComponentStatus).
         pub fn build(self) -> crate::model::CloudComponentStatus {
             crate::model::CloudComponentStatus {
                 component_state: self.component_state,
@@ -4026,7 +4091,7 @@ pub mod cloud_component_status {
     }
 }
 impl CloudComponentStatus {
-    /// Creates a new builder-style object to manufacture [`CloudComponentStatus`](crate::model::CloudComponentStatus)
+    /// Creates a new builder-style object to manufacture [`CloudComponentStatus`](crate::model::CloudComponentStatus).
     pub fn builder() -> crate::model::cloud_component_status::Builder {
         crate::model::cloud_component_status::Builder::default()
     }
@@ -4110,16 +4175,21 @@ impl AsRef<str> for CloudComponentState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionRecipeSource {
     /// <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the Lambda function. The ARN must include the version of the function to import. You can't use version aliases like <code>$LATEST</code>.</p>
+    #[doc(hidden)]
     pub lambda_arn: std::option::Option<std::string::String>,
     /// <p>The name of the component.</p>
     /// <p>Defaults to the name of the Lambda function.</p>
+    #[doc(hidden)]
     pub component_name: std::option::Option<std::string::String>,
     /// <p>The version of the component.</p>
     /// <p>Defaults to the version of the Lambda function as a semantic version. For example, if your function version is <code>3</code>, the component version becomes <code>3.0.0</code>.</p>
+    #[doc(hidden)]
     pub component_version: std::option::Option<std::string::String>,
     /// <p>The platforms that the component version supports.</p>
+    #[doc(hidden)]
     pub component_platforms: std::option::Option<std::vec::Vec<crate::model::ComponentPlatform>>,
     /// <p>The component versions on which this Lambda function component depends.</p>
+    #[doc(hidden)]
     pub component_dependencies: std::option::Option<
         std::collections::HashMap<
             std::string::String,
@@ -4127,6 +4197,7 @@ pub struct LambdaFunctionRecipeSource {
         >,
     >,
     /// <p>The system and runtime parameters for the Lambda function as it runs on the Greengrass core device.</p>
+    #[doc(hidden)]
     pub component_lambda_parameters: std::option::Option<crate::model::LambdaExecutionParameters>,
 }
 impl LambdaFunctionRecipeSource {
@@ -4181,11 +4252,10 @@ impl std::fmt::Debug for LambdaFunctionRecipeSource {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionRecipeSource`](crate::model::LambdaFunctionRecipeSource)
+/// See [`LambdaFunctionRecipeSource`](crate::model::LambdaFunctionRecipeSource).
 pub mod lambda_function_recipe_source {
 
-    /// A builder for [`LambdaFunctionRecipeSource`](crate::model::LambdaFunctionRecipeSource)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionRecipeSource`](crate::model::LambdaFunctionRecipeSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lambda_arn: std::option::Option<std::string::String>,
@@ -4306,7 +4376,7 @@ pub mod lambda_function_recipe_source {
             self.component_lambda_parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionRecipeSource`](crate::model::LambdaFunctionRecipeSource)
+        /// Consumes the builder and constructs a [`LambdaFunctionRecipeSource`](crate::model::LambdaFunctionRecipeSource).
         pub fn build(self) -> crate::model::LambdaFunctionRecipeSource {
             crate::model::LambdaFunctionRecipeSource {
                 lambda_arn: self.lambda_arn,
@@ -4320,7 +4390,7 @@ pub mod lambda_function_recipe_source {
     }
 }
 impl LambdaFunctionRecipeSource {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionRecipeSource`](crate::model::LambdaFunctionRecipeSource)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionRecipeSource`](crate::model::LambdaFunctionRecipeSource).
     pub fn builder() -> crate::model::lambda_function_recipe_source::Builder {
         crate::model::lambda_function_recipe_source::Builder::default()
     }
@@ -4331,16 +4401,22 @@ impl LambdaFunctionRecipeSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaExecutionParameters {
     /// <p>The list of event sources to which to subscribe to receive work messages. The Lambda function runs when it receives a message from an event source. You can subscribe this function to local publish/subscribe messages and Amazon Web Services IoT Core MQTT messages.</p>
+    #[doc(hidden)]
     pub event_sources: std::option::Option<std::vec::Vec<crate::model::LambdaEventSource>>,
     /// <p>The maximum size of the message queue for the Lambda function component. The IoT Greengrass core stores messages in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each message.</p>
+    #[doc(hidden)]
     pub max_queue_size: std::option::Option<i32>,
     /// <p>The maximum number of instances that a non-pinned Lambda function can run at the same time.</p>
+    #[doc(hidden)]
     pub max_instances_count: std::option::Option<i32>,
     /// <p>The maximum amount of time in seconds that a non-pinned Lambda function can idle before the IoT Greengrass Core software stops its process.</p>
+    #[doc(hidden)]
     pub max_idle_time_in_seconds: std::option::Option<i32>,
     /// <p>The maximum amount of time in seconds that the Lambda function can process a work item.</p>
+    #[doc(hidden)]
     pub timeout_in_seconds: std::option::Option<i32>,
     /// <p>The interval in seconds at which a pinned (also known as long-lived) Lambda function component sends status updates to the Lambda manager component.</p>
+    #[doc(hidden)]
     pub status_timeout_in_seconds: std::option::Option<i32>,
     /// <p>Whether or not the Lambda function is pinned, or long-lived.</p>
     /// <ul>
@@ -4348,17 +4424,22 @@ pub struct LambdaExecutionParameters {
     /// <li> <p>A non-pinned Lambda function starts only when it receives a work item and exists after it idles for <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the IoT Greengrass Core software creates multiple instances of the function.</p> </li>
     /// </ul>
     /// <p>Default: <code>true</code> </p>
+    #[doc(hidden)]
     pub pinned: std::option::Option<bool>,
     /// <p>The encoding type that the Lambda function supports.</p>
     /// <p>Default: <code>json</code> </p>
+    #[doc(hidden)]
     pub input_payload_encoding_type:
         std::option::Option<crate::model::LambdaInputPayloadEncodingType>,
     /// <p>The list of arguments to pass to the Lambda function when it runs.</p>
+    #[doc(hidden)]
     pub exec_args: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The map of environment variables that are available to the Lambda function when it runs.</p>
+    #[doc(hidden)]
     pub environment_variables:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The parameters for the Linux process that contains the Lambda function.</p>
+    #[doc(hidden)]
     pub linux_process_params: std::option::Option<crate::model::LambdaLinuxProcessParams>,
 }
 impl LambdaExecutionParameters {
@@ -4440,11 +4521,10 @@ impl std::fmt::Debug for LambdaExecutionParameters {
         formatter.finish()
     }
 }
-/// See [`LambdaExecutionParameters`](crate::model::LambdaExecutionParameters)
+/// See [`LambdaExecutionParameters`](crate::model::LambdaExecutionParameters).
 pub mod lambda_execution_parameters {
 
-    /// A builder for [`LambdaExecutionParameters`](crate::model::LambdaExecutionParameters)
-    #[non_exhaustive]
+    /// A builder for [`LambdaExecutionParameters`](crate::model::LambdaExecutionParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_sources:
@@ -4632,7 +4712,7 @@ pub mod lambda_execution_parameters {
             self.linux_process_params = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaExecutionParameters`](crate::model::LambdaExecutionParameters)
+        /// Consumes the builder and constructs a [`LambdaExecutionParameters`](crate::model::LambdaExecutionParameters).
         pub fn build(self) -> crate::model::LambdaExecutionParameters {
             crate::model::LambdaExecutionParameters {
                 event_sources: self.event_sources,
@@ -4651,7 +4731,7 @@ pub mod lambda_execution_parameters {
     }
 }
 impl LambdaExecutionParameters {
-    /// Creates a new builder-style object to manufacture [`LambdaExecutionParameters`](crate::model::LambdaExecutionParameters)
+    /// Creates a new builder-style object to manufacture [`LambdaExecutionParameters`](crate::model::LambdaExecutionParameters).
     pub fn builder() -> crate::model::lambda_execution_parameters::Builder {
         crate::model::lambda_execution_parameters::Builder::default()
     }
@@ -4663,8 +4743,10 @@ impl LambdaExecutionParameters {
 pub struct LambdaLinuxProcessParams {
     /// <p>The isolation mode for the process that contains the Lambda function. The process can run in an isolated runtime environment inside the IoT Greengrass container, or as a regular process outside any container.</p>
     /// <p>Default: <code>GreengrassContainer</code> </p>
+    #[doc(hidden)]
     pub isolation_mode: std::option::Option<crate::model::LambdaIsolationMode>,
     /// <p>The parameters for the container in which the Lambda function runs.</p>
+    #[doc(hidden)]
     pub container_params: std::option::Option<crate::model::LambdaContainerParams>,
 }
 impl LambdaLinuxProcessParams {
@@ -4686,11 +4768,10 @@ impl std::fmt::Debug for LambdaLinuxProcessParams {
         formatter.finish()
     }
 }
-/// See [`LambdaLinuxProcessParams`](crate::model::LambdaLinuxProcessParams)
+/// See [`LambdaLinuxProcessParams`](crate::model::LambdaLinuxProcessParams).
 pub mod lambda_linux_process_params {
 
-    /// A builder for [`LambdaLinuxProcessParams`](crate::model::LambdaLinuxProcessParams)
-    #[non_exhaustive]
+    /// A builder for [`LambdaLinuxProcessParams`](crate::model::LambdaLinuxProcessParams).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) isolation_mode: std::option::Option<crate::model::LambdaIsolationMode>,
@@ -4725,7 +4806,7 @@ pub mod lambda_linux_process_params {
             self.container_params = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaLinuxProcessParams`](crate::model::LambdaLinuxProcessParams)
+        /// Consumes the builder and constructs a [`LambdaLinuxProcessParams`](crate::model::LambdaLinuxProcessParams).
         pub fn build(self) -> crate::model::LambdaLinuxProcessParams {
             crate::model::LambdaLinuxProcessParams {
                 isolation_mode: self.isolation_mode,
@@ -4735,7 +4816,7 @@ pub mod lambda_linux_process_params {
     }
 }
 impl LambdaLinuxProcessParams {
-    /// Creates a new builder-style object to manufacture [`LambdaLinuxProcessParams`](crate::model::LambdaLinuxProcessParams)
+    /// Creates a new builder-style object to manufacture [`LambdaLinuxProcessParams`](crate::model::LambdaLinuxProcessParams).
     pub fn builder() -> crate::model::lambda_linux_process_params::Builder {
         crate::model::lambda_linux_process_params::Builder::default()
     }
@@ -4747,13 +4828,17 @@ impl LambdaLinuxProcessParams {
 pub struct LambdaContainerParams {
     /// <p>The memory size of the container, expressed in kilobytes.</p>
     /// <p>Default: <code>16384</code> (16 MB)</p>
+    #[doc(hidden)]
     pub memory_size_in_kb: std::option::Option<i32>,
     /// <p>Whether or not the container can read information from the device's <code>/sys</code> folder.</p>
     /// <p>Default: <code>false</code> </p>
+    #[doc(hidden)]
     pub mount_ro_sysfs: std::option::Option<bool>,
     /// <p>The list of volumes that the container can access.</p>
+    #[doc(hidden)]
     pub volumes: std::option::Option<std::vec::Vec<crate::model::LambdaVolumeMount>>,
     /// <p>The list of system devices that the container can access.</p>
+    #[doc(hidden)]
     pub devices: std::option::Option<std::vec::Vec<crate::model::LambdaDeviceMount>>,
 }
 impl LambdaContainerParams {
@@ -4786,11 +4871,10 @@ impl std::fmt::Debug for LambdaContainerParams {
         formatter.finish()
     }
 }
-/// See [`LambdaContainerParams`](crate::model::LambdaContainerParams)
+/// See [`LambdaContainerParams`](crate::model::LambdaContainerParams).
 pub mod lambda_container_params {
 
-    /// A builder for [`LambdaContainerParams`](crate::model::LambdaContainerParams)
-    #[non_exhaustive]
+    /// A builder for [`LambdaContainerParams`](crate::model::LambdaContainerParams).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) memory_size_in_kb: std::option::Option<i32>,
@@ -4861,7 +4945,7 @@ pub mod lambda_container_params {
             self.devices = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaContainerParams`](crate::model::LambdaContainerParams)
+        /// Consumes the builder and constructs a [`LambdaContainerParams`](crate::model::LambdaContainerParams).
         pub fn build(self) -> crate::model::LambdaContainerParams {
             crate::model::LambdaContainerParams {
                 memory_size_in_kb: self.memory_size_in_kb,
@@ -4873,7 +4957,7 @@ pub mod lambda_container_params {
     }
 }
 impl LambdaContainerParams {
-    /// Creates a new builder-style object to manufacture [`LambdaContainerParams`](crate::model::LambdaContainerParams)
+    /// Creates a new builder-style object to manufacture [`LambdaContainerParams`](crate::model::LambdaContainerParams).
     pub fn builder() -> crate::model::lambda_container_params::Builder {
         crate::model::lambda_container_params::Builder::default()
     }
@@ -4884,12 +4968,15 @@ impl LambdaContainerParams {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaDeviceMount {
     /// <p>The mount path for the device in the file system.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The permission to access the device: read/only (<code>ro</code>) or read/write (<code>rw</code>).</p>
     /// <p>Default: <code>ro</code> </p>
+    #[doc(hidden)]
     pub permission: std::option::Option<crate::model::LambdaFilesystemPermission>,
     /// <p>Whether or not to add the component's system user as an owner of the device.</p>
     /// <p>Default: <code>false</code> </p>
+    #[doc(hidden)]
     pub add_group_owner: std::option::Option<bool>,
 }
 impl LambdaDeviceMount {
@@ -4917,11 +5004,10 @@ impl std::fmt::Debug for LambdaDeviceMount {
         formatter.finish()
     }
 }
-/// See [`LambdaDeviceMount`](crate::model::LambdaDeviceMount)
+/// See [`LambdaDeviceMount`](crate::model::LambdaDeviceMount).
 pub mod lambda_device_mount {
 
-    /// A builder for [`LambdaDeviceMount`](crate::model::LambdaDeviceMount)
-    #[non_exhaustive]
+    /// A builder for [`LambdaDeviceMount`](crate::model::LambdaDeviceMount).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::string::String>,
@@ -4966,7 +5052,7 @@ pub mod lambda_device_mount {
             self.add_group_owner = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaDeviceMount`](crate::model::LambdaDeviceMount)
+        /// Consumes the builder and constructs a [`LambdaDeviceMount`](crate::model::LambdaDeviceMount).
         pub fn build(self) -> crate::model::LambdaDeviceMount {
             crate::model::LambdaDeviceMount {
                 path: self.path,
@@ -4977,7 +5063,7 @@ pub mod lambda_device_mount {
     }
 }
 impl LambdaDeviceMount {
-    /// Creates a new builder-style object to manufacture [`LambdaDeviceMount`](crate::model::LambdaDeviceMount)
+    /// Creates a new builder-style object to manufacture [`LambdaDeviceMount`](crate::model::LambdaDeviceMount).
     pub fn builder() -> crate::model::lambda_device_mount::Builder {
         crate::model::lambda_device_mount::Builder::default()
     }
@@ -5043,14 +5129,18 @@ impl AsRef<str> for LambdaFilesystemPermission {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaVolumeMount {
     /// <p>The path to the physical volume in the file system.</p>
+    #[doc(hidden)]
     pub source_path: std::option::Option<std::string::String>,
     /// <p>The path to the logical volume in the file system.</p>
+    #[doc(hidden)]
     pub destination_path: std::option::Option<std::string::String>,
     /// <p>The permission to access the volume: read/only (<code>ro</code>) or read/write (<code>rw</code>).</p>
     /// <p>Default: <code>ro</code> </p>
+    #[doc(hidden)]
     pub permission: std::option::Option<crate::model::LambdaFilesystemPermission>,
     /// <p>Whether or not to add the IoT Greengrass user group as an owner of the volume.</p>
     /// <p>Default: <code>false</code> </p>
+    #[doc(hidden)]
     pub add_group_owner: std::option::Option<bool>,
 }
 impl LambdaVolumeMount {
@@ -5083,11 +5173,10 @@ impl std::fmt::Debug for LambdaVolumeMount {
         formatter.finish()
     }
 }
-/// See [`LambdaVolumeMount`](crate::model::LambdaVolumeMount)
+/// See [`LambdaVolumeMount`](crate::model::LambdaVolumeMount).
 pub mod lambda_volume_mount {
 
-    /// A builder for [`LambdaVolumeMount`](crate::model::LambdaVolumeMount)
-    #[non_exhaustive]
+    /// A builder for [`LambdaVolumeMount`](crate::model::LambdaVolumeMount).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_path: std::option::Option<std::string::String>,
@@ -5146,7 +5235,7 @@ pub mod lambda_volume_mount {
             self.add_group_owner = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaVolumeMount`](crate::model::LambdaVolumeMount)
+        /// Consumes the builder and constructs a [`LambdaVolumeMount`](crate::model::LambdaVolumeMount).
         pub fn build(self) -> crate::model::LambdaVolumeMount {
             crate::model::LambdaVolumeMount {
                 source_path: self.source_path,
@@ -5158,7 +5247,7 @@ pub mod lambda_volume_mount {
     }
 }
 impl LambdaVolumeMount {
-    /// Creates a new builder-style object to manufacture [`LambdaVolumeMount`](crate::model::LambdaVolumeMount)
+    /// Creates a new builder-style object to manufacture [`LambdaVolumeMount`](crate::model::LambdaVolumeMount).
     pub fn builder() -> crate::model::lambda_volume_mount::Builder {
         crate::model::lambda_volume_mount::Builder::default()
     }
@@ -5279,12 +5368,14 @@ impl AsRef<str> for LambdaInputPayloadEncodingType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaEventSource {
     /// <p>The topic to which to subscribe to receive event messages.</p>
+    #[doc(hidden)]
     pub topic: std::option::Option<std::string::String>,
     /// <p>The type of event source. Choose from the following options:</p>
     /// <ul>
     /// <li> <p> <code>PUB_SUB</code> – Subscribe to local publish/subscribe messages. This event source type doesn't support MQTT wildcards (<code>+</code> and <code>#</code>) in the event source topic.</p> </li>
     /// <li> <p> <code>IOT_CORE</code> – Subscribe to Amazon Web Services IoT Core MQTT messages. This event source type supports MQTT wildcards (<code>+</code> and <code>#</code>) in the event source topic.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::LambdaEventSourceType>,
 }
 impl LambdaEventSource {
@@ -5309,11 +5400,10 @@ impl std::fmt::Debug for LambdaEventSource {
         formatter.finish()
     }
 }
-/// See [`LambdaEventSource`](crate::model::LambdaEventSource)
+/// See [`LambdaEventSource`](crate::model::LambdaEventSource).
 pub mod lambda_event_source {
 
-    /// A builder for [`LambdaEventSource`](crate::model::LambdaEventSource)
-    #[non_exhaustive]
+    /// A builder for [`LambdaEventSource`](crate::model::LambdaEventSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) topic: std::option::Option<std::string::String>,
@@ -5351,7 +5441,7 @@ pub mod lambda_event_source {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaEventSource`](crate::model::LambdaEventSource)
+        /// Consumes the builder and constructs a [`LambdaEventSource`](crate::model::LambdaEventSource).
         pub fn build(self) -> crate::model::LambdaEventSource {
             crate::model::LambdaEventSource {
                 topic: self.topic,
@@ -5361,7 +5451,7 @@ pub mod lambda_event_source {
     }
 }
 impl LambdaEventSource {
-    /// Creates a new builder-style object to manufacture [`LambdaEventSource`](crate::model::LambdaEventSource)
+    /// Creates a new builder-style object to manufacture [`LambdaEventSource`](crate::model::LambdaEventSource).
     pub fn builder() -> crate::model::lambda_event_source::Builder {
         crate::model::lambda_event_source::Builder::default()
     }
@@ -5428,6 +5518,7 @@ impl AsRef<str> for LambdaEventSourceType {
 pub struct ComponentDependencyRequirement {
     /// <p>The component version requirement for the component dependency.</p>
     /// <p>IoT Greengrass V2 uses semantic version constraints. For more information, see <a href="https://semver.org/">Semantic Versioning</a>.</p>
+    #[doc(hidden)]
     pub version_requirement: std::option::Option<std::string::String>,
     /// <p>The type of this dependency. Choose from the following options:</p>
     /// <ul>
@@ -5435,6 +5526,7 @@ pub struct ComponentDependencyRequirement {
     /// <li> <p> <code>HARD</code> – The component restarts if the dependency changes state.</p> </li>
     /// </ul>
     /// <p>Default: <code>HARD</code> </p>
+    #[doc(hidden)]
     pub dependency_type: std::option::Option<crate::model::ComponentDependencyType>,
 }
 impl ComponentDependencyRequirement {
@@ -5461,11 +5553,10 @@ impl std::fmt::Debug for ComponentDependencyRequirement {
         formatter.finish()
     }
 }
-/// See [`ComponentDependencyRequirement`](crate::model::ComponentDependencyRequirement)
+/// See [`ComponentDependencyRequirement`](crate::model::ComponentDependencyRequirement).
 pub mod component_dependency_requirement {
 
-    /// A builder for [`ComponentDependencyRequirement`](crate::model::ComponentDependencyRequirement)
-    #[non_exhaustive]
+    /// A builder for [`ComponentDependencyRequirement`](crate::model::ComponentDependencyRequirement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version_requirement: std::option::Option<std::string::String>,
@@ -5510,7 +5601,7 @@ pub mod component_dependency_requirement {
             self.dependency_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentDependencyRequirement`](crate::model::ComponentDependencyRequirement)
+        /// Consumes the builder and constructs a [`ComponentDependencyRequirement`](crate::model::ComponentDependencyRequirement).
         pub fn build(self) -> crate::model::ComponentDependencyRequirement {
             crate::model::ComponentDependencyRequirement {
                 version_requirement: self.version_requirement,
@@ -5520,7 +5611,7 @@ pub mod component_dependency_requirement {
     }
 }
 impl ComponentDependencyRequirement {
-    /// Creates a new builder-style object to manufacture [`ComponentDependencyRequirement`](crate::model::ComponentDependencyRequirement)
+    /// Creates a new builder-style object to manufacture [`ComponentDependencyRequirement`](crate::model::ComponentDependencyRequirement).
     pub fn builder() -> crate::model::component_dependency_requirement::Builder {
         crate::model::component_dependency_requirement::Builder::default()
     }
@@ -5586,10 +5677,13 @@ impl AsRef<str> for ComponentDependencyType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisassociateClientDeviceFromCoreDeviceErrorEntry {
     /// <p>The name of the IoT thing whose disassociate request failed.</p>
+    #[doc(hidden)]
     pub thing_name: std::option::Option<std::string::String>,
     /// <p>The error code for the request.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>A message that provides additional information about the error.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DisassociateClientDeviceFromCoreDeviceErrorEntry {
@@ -5615,11 +5709,10 @@ impl std::fmt::Debug for DisassociateClientDeviceFromCoreDeviceErrorEntry {
         formatter.finish()
     }
 }
-/// See [`DisassociateClientDeviceFromCoreDeviceErrorEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceErrorEntry)
+/// See [`DisassociateClientDeviceFromCoreDeviceErrorEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceErrorEntry).
 pub mod disassociate_client_device_from_core_device_error_entry {
 
-    /// A builder for [`DisassociateClientDeviceFromCoreDeviceErrorEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceErrorEntry)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateClientDeviceFromCoreDeviceErrorEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceErrorEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_name: std::option::Option<std::string::String>,
@@ -5657,7 +5750,7 @@ pub mod disassociate_client_device_from_core_device_error_entry {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociateClientDeviceFromCoreDeviceErrorEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceErrorEntry)
+        /// Consumes the builder and constructs a [`DisassociateClientDeviceFromCoreDeviceErrorEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceErrorEntry).
         pub fn build(self) -> crate::model::DisassociateClientDeviceFromCoreDeviceErrorEntry {
             crate::model::DisassociateClientDeviceFromCoreDeviceErrorEntry {
                 thing_name: self.thing_name,
@@ -5668,7 +5761,7 @@ pub mod disassociate_client_device_from_core_device_error_entry {
     }
 }
 impl DisassociateClientDeviceFromCoreDeviceErrorEntry {
-    /// Creates a new builder-style object to manufacture [`DisassociateClientDeviceFromCoreDeviceErrorEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceErrorEntry)
+    /// Creates a new builder-style object to manufacture [`DisassociateClientDeviceFromCoreDeviceErrorEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceErrorEntry).
     pub fn builder(
     ) -> crate::model::disassociate_client_device_from_core_device_error_entry::Builder {
         crate::model::disassociate_client_device_from_core_device_error_entry::Builder::default()
@@ -5680,6 +5773,7 @@ impl DisassociateClientDeviceFromCoreDeviceErrorEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisassociateClientDeviceFromCoreDeviceEntry {
     /// <p>The name of the IoT thing that represents the client device to disassociate.</p>
+    #[doc(hidden)]
     pub thing_name: std::option::Option<std::string::String>,
 }
 impl DisassociateClientDeviceFromCoreDeviceEntry {
@@ -5695,11 +5789,10 @@ impl std::fmt::Debug for DisassociateClientDeviceFromCoreDeviceEntry {
         formatter.finish()
     }
 }
-/// See [`DisassociateClientDeviceFromCoreDeviceEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceEntry)
+/// See [`DisassociateClientDeviceFromCoreDeviceEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceEntry).
 pub mod disassociate_client_device_from_core_device_entry {
 
-    /// A builder for [`DisassociateClientDeviceFromCoreDeviceEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceEntry)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateClientDeviceFromCoreDeviceEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_name: std::option::Option<std::string::String>,
@@ -5715,7 +5808,7 @@ pub mod disassociate_client_device_from_core_device_entry {
             self.thing_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociateClientDeviceFromCoreDeviceEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceEntry)
+        /// Consumes the builder and constructs a [`DisassociateClientDeviceFromCoreDeviceEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceEntry).
         pub fn build(self) -> crate::model::DisassociateClientDeviceFromCoreDeviceEntry {
             crate::model::DisassociateClientDeviceFromCoreDeviceEntry {
                 thing_name: self.thing_name,
@@ -5724,7 +5817,7 @@ pub mod disassociate_client_device_from_core_device_entry {
     }
 }
 impl DisassociateClientDeviceFromCoreDeviceEntry {
-    /// Creates a new builder-style object to manufacture [`DisassociateClientDeviceFromCoreDeviceEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceEntry)
+    /// Creates a new builder-style object to manufacture [`DisassociateClientDeviceFromCoreDeviceEntry`](crate::model::DisassociateClientDeviceFromCoreDeviceEntry).
     pub fn builder() -> crate::model::disassociate_client_device_from_core_device_entry::Builder {
         crate::model::disassociate_client_device_from_core_device_entry::Builder::default()
     }
@@ -5735,10 +5828,13 @@ impl DisassociateClientDeviceFromCoreDeviceEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateClientDeviceWithCoreDeviceErrorEntry {
     /// <p>The name of the IoT thing whose associate request failed.</p>
+    #[doc(hidden)]
     pub thing_name: std::option::Option<std::string::String>,
     /// <p>The error code for the request.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>A message that provides additional information about the error.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl AssociateClientDeviceWithCoreDeviceErrorEntry {
@@ -5764,11 +5860,10 @@ impl std::fmt::Debug for AssociateClientDeviceWithCoreDeviceErrorEntry {
         formatter.finish()
     }
 }
-/// See [`AssociateClientDeviceWithCoreDeviceErrorEntry`](crate::model::AssociateClientDeviceWithCoreDeviceErrorEntry)
+/// See [`AssociateClientDeviceWithCoreDeviceErrorEntry`](crate::model::AssociateClientDeviceWithCoreDeviceErrorEntry).
 pub mod associate_client_device_with_core_device_error_entry {
 
-    /// A builder for [`AssociateClientDeviceWithCoreDeviceErrorEntry`](crate::model::AssociateClientDeviceWithCoreDeviceErrorEntry)
-    #[non_exhaustive]
+    /// A builder for [`AssociateClientDeviceWithCoreDeviceErrorEntry`](crate::model::AssociateClientDeviceWithCoreDeviceErrorEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_name: std::option::Option<std::string::String>,
@@ -5806,7 +5901,7 @@ pub mod associate_client_device_with_core_device_error_entry {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateClientDeviceWithCoreDeviceErrorEntry`](crate::model::AssociateClientDeviceWithCoreDeviceErrorEntry)
+        /// Consumes the builder and constructs a [`AssociateClientDeviceWithCoreDeviceErrorEntry`](crate::model::AssociateClientDeviceWithCoreDeviceErrorEntry).
         pub fn build(self) -> crate::model::AssociateClientDeviceWithCoreDeviceErrorEntry {
             crate::model::AssociateClientDeviceWithCoreDeviceErrorEntry {
                 thing_name: self.thing_name,
@@ -5817,7 +5912,7 @@ pub mod associate_client_device_with_core_device_error_entry {
     }
 }
 impl AssociateClientDeviceWithCoreDeviceErrorEntry {
-    /// Creates a new builder-style object to manufacture [`AssociateClientDeviceWithCoreDeviceErrorEntry`](crate::model::AssociateClientDeviceWithCoreDeviceErrorEntry)
+    /// Creates a new builder-style object to manufacture [`AssociateClientDeviceWithCoreDeviceErrorEntry`](crate::model::AssociateClientDeviceWithCoreDeviceErrorEntry).
     pub fn builder() -> crate::model::associate_client_device_with_core_device_error_entry::Builder
     {
         crate::model::associate_client_device_with_core_device_error_entry::Builder::default()
@@ -5829,6 +5924,7 @@ impl AssociateClientDeviceWithCoreDeviceErrorEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateClientDeviceWithCoreDeviceEntry {
     /// <p>The name of the IoT thing that represents the client device to associate.</p>
+    #[doc(hidden)]
     pub thing_name: std::option::Option<std::string::String>,
 }
 impl AssociateClientDeviceWithCoreDeviceEntry {
@@ -5844,11 +5940,10 @@ impl std::fmt::Debug for AssociateClientDeviceWithCoreDeviceEntry {
         formatter.finish()
     }
 }
-/// See [`AssociateClientDeviceWithCoreDeviceEntry`](crate::model::AssociateClientDeviceWithCoreDeviceEntry)
+/// See [`AssociateClientDeviceWithCoreDeviceEntry`](crate::model::AssociateClientDeviceWithCoreDeviceEntry).
 pub mod associate_client_device_with_core_device_entry {
 
-    /// A builder for [`AssociateClientDeviceWithCoreDeviceEntry`](crate::model::AssociateClientDeviceWithCoreDeviceEntry)
-    #[non_exhaustive]
+    /// A builder for [`AssociateClientDeviceWithCoreDeviceEntry`](crate::model::AssociateClientDeviceWithCoreDeviceEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_name: std::option::Option<std::string::String>,
@@ -5864,7 +5959,7 @@ pub mod associate_client_device_with_core_device_entry {
             self.thing_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateClientDeviceWithCoreDeviceEntry`](crate::model::AssociateClientDeviceWithCoreDeviceEntry)
+        /// Consumes the builder and constructs a [`AssociateClientDeviceWithCoreDeviceEntry`](crate::model::AssociateClientDeviceWithCoreDeviceEntry).
         pub fn build(self) -> crate::model::AssociateClientDeviceWithCoreDeviceEntry {
             crate::model::AssociateClientDeviceWithCoreDeviceEntry {
                 thing_name: self.thing_name,
@@ -5873,7 +5968,7 @@ pub mod associate_client_device_with_core_device_entry {
     }
 }
 impl AssociateClientDeviceWithCoreDeviceEntry {
-    /// Creates a new builder-style object to manufacture [`AssociateClientDeviceWithCoreDeviceEntry`](crate::model::AssociateClientDeviceWithCoreDeviceEntry)
+    /// Creates a new builder-style object to manufacture [`AssociateClientDeviceWithCoreDeviceEntry`](crate::model::AssociateClientDeviceWithCoreDeviceEntry).
     pub fn builder() -> crate::model::associate_client_device_with_core_device_entry::Builder {
         crate::model::associate_client_device_with_core_device_entry::Builder::default()
     }

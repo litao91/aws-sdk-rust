@@ -10,8 +10,10 @@ pub struct InstanceMetadataOptions {
     /// <li> <p> <b>optional</b> – You can include a signed token header in your request to retrieve instance metadata, or you can leave it out. If you include it, version 2.0 credentials are returned for the IAM role. Otherwise, version 1.0 credentials are returned.</p> </li>
     /// </ul>
     /// <p>The default setting is <b>optional</b>.</p>
+    #[doc(hidden)]
     pub http_tokens: std::option::Option<std::string::String>,
     /// <p>Limit the number of hops that an instance metadata request can traverse to reach its destination.</p>
+    #[doc(hidden)]
     pub http_put_response_hop_limit: std::option::Option<i32>,
 }
 impl InstanceMetadataOptions {
@@ -40,11 +42,10 @@ impl std::fmt::Debug for InstanceMetadataOptions {
         formatter.finish()
     }
 }
-/// See [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions)
+/// See [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions).
 pub mod instance_metadata_options {
 
-    /// A builder for [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions)
-    #[non_exhaustive]
+    /// A builder for [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) http_tokens: std::option::Option<std::string::String>,
@@ -81,7 +82,7 @@ pub mod instance_metadata_options {
             self.http_put_response_hop_limit = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions)
+        /// Consumes the builder and constructs a [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions).
         pub fn build(self) -> crate::model::InstanceMetadataOptions {
             crate::model::InstanceMetadataOptions {
                 http_tokens: self.http_tokens,
@@ -91,7 +92,7 @@ pub mod instance_metadata_options {
     }
 }
 impl InstanceMetadataOptions {
-    /// Creates a new builder-style object to manufacture [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions)
+    /// Creates a new builder-style object to manufacture [`InstanceMetadataOptions`](crate::model::InstanceMetadataOptions).
     pub fn builder() -> crate::model::instance_metadata_options::Builder {
         crate::model::instance_metadata_options::Builder::default()
     }
@@ -102,6 +103,7 @@ impl InstanceMetadataOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Logging {
     /// <p>The Amazon S3 logging configuration.</p>
+    #[doc(hidden)]
     pub s3_logs: std::option::Option<crate::model::S3Logs>,
 }
 impl Logging {
@@ -117,11 +119,10 @@ impl std::fmt::Debug for Logging {
         formatter.finish()
     }
 }
-/// See [`Logging`](crate::model::Logging)
+/// See [`Logging`](crate::model::Logging).
 pub mod logging {
 
-    /// A builder for [`Logging`](crate::model::Logging)
-    #[non_exhaustive]
+    /// A builder for [`Logging`](crate::model::Logging).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_logs: std::option::Option<crate::model::S3Logs>,
@@ -137,7 +138,7 @@ pub mod logging {
             self.s3_logs = input;
             self
         }
-        /// Consumes the builder and constructs a [`Logging`](crate::model::Logging)
+        /// Consumes the builder and constructs a [`Logging`](crate::model::Logging).
         pub fn build(self) -> crate::model::Logging {
             crate::model::Logging {
                 s3_logs: self.s3_logs,
@@ -146,7 +147,7 @@ pub mod logging {
     }
 }
 impl Logging {
-    /// Creates a new builder-style object to manufacture [`Logging`](crate::model::Logging)
+    /// Creates a new builder-style object to manufacture [`Logging`](crate::model::Logging).
     pub fn builder() -> crate::model::logging::Builder {
         crate::model::logging::Builder::default()
     }
@@ -157,8 +158,10 @@ impl Logging {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Logs {
     /// <p>The S3 bucket in which to store the logs.</p>
+    #[doc(hidden)]
     pub s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 path to the bucket where the logs are stored.</p>
+    #[doc(hidden)]
     pub s3_key_prefix: std::option::Option<std::string::String>,
 }
 impl S3Logs {
@@ -179,11 +182,10 @@ impl std::fmt::Debug for S3Logs {
         formatter.finish()
     }
 }
-/// See [`S3Logs`](crate::model::S3Logs)
+/// See [`S3Logs`](crate::model::S3Logs).
 pub mod s3_logs {
 
-    /// A builder for [`S3Logs`](crate::model::S3Logs)
-    #[non_exhaustive]
+    /// A builder for [`S3Logs`](crate::model::S3Logs).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_bucket_name: std::option::Option<std::string::String>,
@@ -216,7 +218,7 @@ pub mod s3_logs {
             self.s3_key_prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Logs`](crate::model::S3Logs)
+        /// Consumes the builder and constructs a [`S3Logs`](crate::model::S3Logs).
         pub fn build(self) -> crate::model::S3Logs {
             crate::model::S3Logs {
                 s3_bucket_name: self.s3_bucket_name,
@@ -226,7 +228,7 @@ pub mod s3_logs {
     }
 }
 impl S3Logs {
-    /// Creates a new builder-style object to manufacture [`S3Logs`](crate::model::S3Logs)
+    /// Creates a new builder-style object to manufacture [`S3Logs`](crate::model::S3Logs).
     pub fn builder() -> crate::model::s3_logs::Builder {
         crate::model::s3_logs::Builder::default()
     }
@@ -293,10 +295,13 @@ impl AsRef<str> for PipelineStatus {
 pub struct Schedule {
     /// <p>The cron expression determines how often EC2 Image Builder evaluates your <code>pipelineExecutionStartCondition</code>.</p>
     /// <p>For information on how to format a cron expression in Image Builder, see <a href="https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-cron.html">Use cron expressions in EC2 Image Builder</a>.</p>
+    #[doc(hidden)]
     pub schedule_expression: std::option::Option<std::string::String>,
     /// <p>The timezone that applies to the scheduling expression. For example, "Etc/UTC", "America/Los_Angeles" in the <a href="https://www.joda.org/joda-time/timezones.html">IANA timezone format</a>. If not specified this defaults to UTC.</p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
     /// <p>The condition configures when the pipeline should trigger a new image build. When the <code>pipelineExecutionStartCondition</code> is set to <code>EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE</code>, and you use semantic version filters on the base image or components in your image recipe, EC2 Image Builder will build a new image only when there are new versions of the image or components in your recipe that match the semantic version filter. When it is set to <code>EXPRESSION_MATCH_ONLY</code>, it will build a new image every time the CRON expression matches the current time. For semantic version syntax, see <a href="https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_CreateComponent.html">CreateComponent</a> in the <i> EC2 Image Builder API Reference</i>.</p>
+    #[doc(hidden)]
     pub pipeline_execution_start_condition:
         std::option::Option<crate::model::PipelineExecutionStartCondition>,
 }
@@ -329,11 +334,10 @@ impl std::fmt::Debug for Schedule {
         formatter.finish()
     }
 }
-/// See [`Schedule`](crate::model::Schedule)
+/// See [`Schedule`](crate::model::Schedule).
 pub mod schedule {
 
-    /// A builder for [`Schedule`](crate::model::Schedule)
-    #[non_exhaustive]
+    /// A builder for [`Schedule`](crate::model::Schedule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schedule_expression: std::option::Option<std::string::String>,
@@ -383,7 +387,7 @@ pub mod schedule {
             self.pipeline_execution_start_condition = input;
             self
         }
-        /// Consumes the builder and constructs a [`Schedule`](crate::model::Schedule)
+        /// Consumes the builder and constructs a [`Schedule`](crate::model::Schedule).
         pub fn build(self) -> crate::model::Schedule {
             crate::model::Schedule {
                 schedule_expression: self.schedule_expression,
@@ -394,7 +398,7 @@ pub mod schedule {
     }
 }
 impl Schedule {
-    /// Creates a new builder-style object to manufacture [`Schedule`](crate::model::Schedule)
+    /// Creates a new builder-style object to manufacture [`Schedule`](crate::model::Schedule).
     pub fn builder() -> crate::model::schedule::Builder {
         crate::model::schedule::Builder::default()
     }
@@ -467,8 +471,10 @@ impl AsRef<str> for PipelineExecutionStartCondition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageTestsConfiguration {
     /// <p>Determines if tests should run after building the image. Image Builder defaults to enable tests to run following the image build, before image distribution.</p>
+    #[doc(hidden)]
     pub image_tests_enabled: std::option::Option<bool>,
     /// <p>The maximum time in minutes that tests are permitted to run.</p>
+    #[doc(hidden)]
     pub timeout_minutes: std::option::Option<i32>,
 }
 impl ImageTestsConfiguration {
@@ -489,11 +495,10 @@ impl std::fmt::Debug for ImageTestsConfiguration {
         formatter.finish()
     }
 }
-/// See [`ImageTestsConfiguration`](crate::model::ImageTestsConfiguration)
+/// See [`ImageTestsConfiguration`](crate::model::ImageTestsConfiguration).
 pub mod image_tests_configuration {
 
-    /// A builder for [`ImageTestsConfiguration`](crate::model::ImageTestsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ImageTestsConfiguration`](crate::model::ImageTestsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) image_tests_enabled: std::option::Option<bool>,
@@ -520,7 +525,7 @@ pub mod image_tests_configuration {
             self.timeout_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageTestsConfiguration`](crate::model::ImageTestsConfiguration)
+        /// Consumes the builder and constructs a [`ImageTestsConfiguration`](crate::model::ImageTestsConfiguration).
         pub fn build(self) -> crate::model::ImageTestsConfiguration {
             crate::model::ImageTestsConfiguration {
                 image_tests_enabled: self.image_tests_enabled,
@@ -530,7 +535,7 @@ pub mod image_tests_configuration {
     }
 }
 impl ImageTestsConfiguration {
-    /// Creates a new builder-style object to manufacture [`ImageTestsConfiguration`](crate::model::ImageTestsConfiguration)
+    /// Creates a new builder-style object to manufacture [`ImageTestsConfiguration`](crate::model::ImageTestsConfiguration).
     pub fn builder() -> crate::model::image_tests_configuration::Builder {
         crate::model::image_tests_configuration::Builder::default()
     }
@@ -541,21 +546,28 @@ impl ImageTestsConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Distribution {
     /// <p>The target Region.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The specific AMI settings; for example, launch permissions or AMI tags.</p>
+    #[doc(hidden)]
     pub ami_distribution_configuration:
         std::option::Option<crate::model::AmiDistributionConfiguration>,
     /// <p>Container distribution settings for encryption, licensing, and sharing in a specific Region.</p>
+    #[doc(hidden)]
     pub container_distribution_configuration:
         std::option::Option<crate::model::ContainerDistributionConfiguration>,
     /// <p>The License Manager Configuration to associate with the AMI in the specified Region.</p>
+    #[doc(hidden)]
     pub license_configuration_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A group of launchTemplateConfiguration settings that apply to image distribution for specified accounts.</p>
+    #[doc(hidden)]
     pub launch_template_configurations:
         std::option::Option<std::vec::Vec<crate::model::LaunchTemplateConfiguration>>,
     /// <p>Configure export settings to deliver disk images created from your image build, using a file format that is compatible with your VMs in that Region.</p>
+    #[doc(hidden)]
     pub s3_export_configuration: std::option::Option<crate::model::S3ExportConfiguration>,
     /// <p>The Windows faster-launching configurations to use for AMI distribution.</p>
+    #[doc(hidden)]
     pub fast_launch_configurations:
         std::option::Option<std::vec::Vec<crate::model::FastLaunchConfiguration>>,
 }
@@ -627,11 +639,10 @@ impl std::fmt::Debug for Distribution {
         formatter.finish()
     }
 }
-/// See [`Distribution`](crate::model::Distribution)
+/// See [`Distribution`](crate::model::Distribution).
 pub mod distribution {
 
-    /// A builder for [`Distribution`](crate::model::Distribution)
-    #[non_exhaustive]
+    /// A builder for [`Distribution`](crate::model::Distribution).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) region: std::option::Option<std::string::String>,
@@ -770,7 +781,7 @@ pub mod distribution {
             self.fast_launch_configurations = input;
             self
         }
-        /// Consumes the builder and constructs a [`Distribution`](crate::model::Distribution)
+        /// Consumes the builder and constructs a [`Distribution`](crate::model::Distribution).
         pub fn build(self) -> crate::model::Distribution {
             crate::model::Distribution {
                 region: self.region,
@@ -785,7 +796,7 @@ pub mod distribution {
     }
 }
 impl Distribution {
-    /// Creates a new builder-style object to manufacture [`Distribution`](crate::model::Distribution)
+    /// Creates a new builder-style object to manufacture [`Distribution`](crate::model::Distribution).
     pub fn builder() -> crate::model::distribution::Builder {
         crate::model::distribution::Builder::default()
     }
@@ -796,14 +807,19 @@ impl Distribution {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FastLaunchConfiguration {
     /// <p>A Boolean that represents the current state of faster launching for the Windows AMI. Set to <code>true</code> to start using Windows faster launching, or <code>false</code> to stop using it.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>Configuration settings for managing the number of snapshots that are created from pre-provisioned instances for the Windows AMI when faster launching is enabled.</p>
+    #[doc(hidden)]
     pub snapshot_configuration: std::option::Option<crate::model::FastLaunchSnapshotConfiguration>,
     /// <p>The maximum number of parallel instances that are launched for creating resources.</p>
+    #[doc(hidden)]
     pub max_parallel_launches: std::option::Option<i32>,
     /// <p>The launch template that the fast-launch enabled Windows AMI uses when it launches Windows instances to create pre-provisioned snapshots.</p>
+    #[doc(hidden)]
     pub launch_template: std::option::Option<crate::model::FastLaunchLaunchTemplateSpecification>,
     /// <p>The owner account ID for the fast-launch enabled Windows AMI.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
 }
 impl FastLaunchConfiguration {
@@ -843,11 +859,10 @@ impl std::fmt::Debug for FastLaunchConfiguration {
         formatter.finish()
     }
 }
-/// See [`FastLaunchConfiguration`](crate::model::FastLaunchConfiguration)
+/// See [`FastLaunchConfiguration`](crate::model::FastLaunchConfiguration).
 pub mod fast_launch_configuration {
 
-    /// A builder for [`FastLaunchConfiguration`](crate::model::FastLaunchConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`FastLaunchConfiguration`](crate::model::FastLaunchConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -921,7 +936,7 @@ pub mod fast_launch_configuration {
             self.account_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`FastLaunchConfiguration`](crate::model::FastLaunchConfiguration)
+        /// Consumes the builder and constructs a [`FastLaunchConfiguration`](crate::model::FastLaunchConfiguration).
         pub fn build(self) -> crate::model::FastLaunchConfiguration {
             crate::model::FastLaunchConfiguration {
                 enabled: self.enabled.unwrap_or_default(),
@@ -934,7 +949,7 @@ pub mod fast_launch_configuration {
     }
 }
 impl FastLaunchConfiguration {
-    /// Creates a new builder-style object to manufacture [`FastLaunchConfiguration`](crate::model::FastLaunchConfiguration)
+    /// Creates a new builder-style object to manufacture [`FastLaunchConfiguration`](crate::model::FastLaunchConfiguration).
     pub fn builder() -> crate::model::fast_launch_configuration::Builder {
         crate::model::fast_launch_configuration::Builder::default()
     }
@@ -947,10 +962,13 @@ impl FastLaunchConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FastLaunchLaunchTemplateSpecification {
     /// <p>The ID of the launch template to use for faster launching for a Windows AMI.</p>
+    #[doc(hidden)]
     pub launch_template_id: std::option::Option<std::string::String>,
     /// <p>The name of the launch template to use for faster launching for a Windows AMI.</p>
+    #[doc(hidden)]
     pub launch_template_name: std::option::Option<std::string::String>,
     /// <p>The version of the launch template to use for faster launching for a Windows AMI.</p>
+    #[doc(hidden)]
     pub launch_template_version: std::option::Option<std::string::String>,
 }
 impl FastLaunchLaunchTemplateSpecification {
@@ -976,11 +994,10 @@ impl std::fmt::Debug for FastLaunchLaunchTemplateSpecification {
         formatter.finish()
     }
 }
-/// See [`FastLaunchLaunchTemplateSpecification`](crate::model::FastLaunchLaunchTemplateSpecification)
+/// See [`FastLaunchLaunchTemplateSpecification`](crate::model::FastLaunchLaunchTemplateSpecification).
 pub mod fast_launch_launch_template_specification {
 
-    /// A builder for [`FastLaunchLaunchTemplateSpecification`](crate::model::FastLaunchLaunchTemplateSpecification)
-    #[non_exhaustive]
+    /// A builder for [`FastLaunchLaunchTemplateSpecification`](crate::model::FastLaunchLaunchTemplateSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) launch_template_id: std::option::Option<std::string::String>,
@@ -1027,7 +1044,7 @@ pub mod fast_launch_launch_template_specification {
             self.launch_template_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`FastLaunchLaunchTemplateSpecification`](crate::model::FastLaunchLaunchTemplateSpecification)
+        /// Consumes the builder and constructs a [`FastLaunchLaunchTemplateSpecification`](crate::model::FastLaunchLaunchTemplateSpecification).
         pub fn build(self) -> crate::model::FastLaunchLaunchTemplateSpecification {
             crate::model::FastLaunchLaunchTemplateSpecification {
                 launch_template_id: self.launch_template_id,
@@ -1038,7 +1055,7 @@ pub mod fast_launch_launch_template_specification {
     }
 }
 impl FastLaunchLaunchTemplateSpecification {
-    /// Creates a new builder-style object to manufacture [`FastLaunchLaunchTemplateSpecification`](crate::model::FastLaunchLaunchTemplateSpecification)
+    /// Creates a new builder-style object to manufacture [`FastLaunchLaunchTemplateSpecification`](crate::model::FastLaunchLaunchTemplateSpecification).
     pub fn builder() -> crate::model::fast_launch_launch_template_specification::Builder {
         crate::model::fast_launch_launch_template_specification::Builder::default()
     }
@@ -1049,6 +1066,7 @@ impl FastLaunchLaunchTemplateSpecification {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FastLaunchSnapshotConfiguration {
     /// <p>The number of pre-provisioned snapshots to keep on hand for a fast-launch enabled Windows AMI.</p>
+    #[doc(hidden)]
     pub target_resource_count: std::option::Option<i32>,
 }
 impl FastLaunchSnapshotConfiguration {
@@ -1064,11 +1082,10 @@ impl std::fmt::Debug for FastLaunchSnapshotConfiguration {
         formatter.finish()
     }
 }
-/// See [`FastLaunchSnapshotConfiguration`](crate::model::FastLaunchSnapshotConfiguration)
+/// See [`FastLaunchSnapshotConfiguration`](crate::model::FastLaunchSnapshotConfiguration).
 pub mod fast_launch_snapshot_configuration {
 
-    /// A builder for [`FastLaunchSnapshotConfiguration`](crate::model::FastLaunchSnapshotConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`FastLaunchSnapshotConfiguration`](crate::model::FastLaunchSnapshotConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_resource_count: std::option::Option<i32>,
@@ -1084,7 +1101,7 @@ pub mod fast_launch_snapshot_configuration {
             self.target_resource_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`FastLaunchSnapshotConfiguration`](crate::model::FastLaunchSnapshotConfiguration)
+        /// Consumes the builder and constructs a [`FastLaunchSnapshotConfiguration`](crate::model::FastLaunchSnapshotConfiguration).
         pub fn build(self) -> crate::model::FastLaunchSnapshotConfiguration {
             crate::model::FastLaunchSnapshotConfiguration {
                 target_resource_count: self.target_resource_count,
@@ -1093,7 +1110,7 @@ pub mod fast_launch_snapshot_configuration {
     }
 }
 impl FastLaunchSnapshotConfiguration {
-    /// Creates a new builder-style object to manufacture [`FastLaunchSnapshotConfiguration`](crate::model::FastLaunchSnapshotConfiguration)
+    /// Creates a new builder-style object to manufacture [`FastLaunchSnapshotConfiguration`](crate::model::FastLaunchSnapshotConfiguration).
     pub fn builder() -> crate::model::fast_launch_snapshot_configuration::Builder {
         crate::model::fast_launch_snapshot_configuration::Builder::default()
     }
@@ -1104,6 +1121,7 @@ impl FastLaunchSnapshotConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3ExportConfiguration {
     /// <p>The name of the role that grants VM Import/Export permission to export images to your S3 bucket.</p>
+    #[doc(hidden)]
     pub role_name: std::option::Option<std::string::String>,
     /// <p>Export the updated image to one of the following supported disk image formats:</p>
     /// <ul>
@@ -1111,10 +1129,13 @@ pub struct S3ExportConfiguration {
     /// <li> <p> <b>Stream-optimized ESX Virtual Machine Disk (VMDK)</b> – Compatible with VMware ESX and VMware vSphere versions 4, 5, and 6.</p> </li>
     /// <li> <p> <b>Raw</b> – Raw format.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub disk_image_format: std::option::Option<crate::model::DiskImageFormat>,
     /// <p>The S3 bucket in which to store the output disk images for your VM.</p>
+    #[doc(hidden)]
     pub s3_bucket: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 path for the bucket where the output disk images for your VM are stored.</p>
+    #[doc(hidden)]
     pub s3_prefix: std::option::Option<std::string::String>,
 }
 impl S3ExportConfiguration {
@@ -1150,11 +1171,10 @@ impl std::fmt::Debug for S3ExportConfiguration {
         formatter.finish()
     }
 }
-/// See [`S3ExportConfiguration`](crate::model::S3ExportConfiguration)
+/// See [`S3ExportConfiguration`](crate::model::S3ExportConfiguration).
 pub mod s3_export_configuration {
 
-    /// A builder for [`S3ExportConfiguration`](crate::model::S3ExportConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`S3ExportConfiguration`](crate::model::S3ExportConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_name: std::option::Option<std::string::String>,
@@ -1216,7 +1236,7 @@ pub mod s3_export_configuration {
             self.s3_prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ExportConfiguration`](crate::model::S3ExportConfiguration)
+        /// Consumes the builder and constructs a [`S3ExportConfiguration`](crate::model::S3ExportConfiguration).
         pub fn build(self) -> crate::model::S3ExportConfiguration {
             crate::model::S3ExportConfiguration {
                 role_name: self.role_name,
@@ -1228,7 +1248,7 @@ pub mod s3_export_configuration {
     }
 }
 impl S3ExportConfiguration {
-    /// Creates a new builder-style object to manufacture [`S3ExportConfiguration`](crate::model::S3ExportConfiguration)
+    /// Creates a new builder-style object to manufacture [`S3ExportConfiguration`](crate::model::S3ExportConfiguration).
     pub fn builder() -> crate::model::s3_export_configuration::Builder {
         crate::model::s3_export_configuration::Builder::default()
     }
@@ -1298,10 +1318,13 @@ impl AsRef<str> for DiskImageFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchTemplateConfiguration {
     /// <p>Identifies the Amazon EC2 launch template to use.</p>
+    #[doc(hidden)]
     pub launch_template_id: std::option::Option<std::string::String>,
     /// <p>The account ID that this configuration applies to.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>Set the specified Amazon EC2 launch template as the default launch template for the specified account.</p>
+    #[doc(hidden)]
     pub set_default_version: bool,
 }
 impl LaunchTemplateConfiguration {
@@ -1327,11 +1350,10 @@ impl std::fmt::Debug for LaunchTemplateConfiguration {
         formatter.finish()
     }
 }
-/// See [`LaunchTemplateConfiguration`](crate::model::LaunchTemplateConfiguration)
+/// See [`LaunchTemplateConfiguration`](crate::model::LaunchTemplateConfiguration).
 pub mod launch_template_configuration {
 
-    /// A builder for [`LaunchTemplateConfiguration`](crate::model::LaunchTemplateConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LaunchTemplateConfiguration`](crate::model::LaunchTemplateConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) launch_template_id: std::option::Option<std::string::String>,
@@ -1372,7 +1394,7 @@ pub mod launch_template_configuration {
             self.set_default_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchTemplateConfiguration`](crate::model::LaunchTemplateConfiguration)
+        /// Consumes the builder and constructs a [`LaunchTemplateConfiguration`](crate::model::LaunchTemplateConfiguration).
         pub fn build(self) -> crate::model::LaunchTemplateConfiguration {
             crate::model::LaunchTemplateConfiguration {
                 launch_template_id: self.launch_template_id,
@@ -1383,7 +1405,7 @@ pub mod launch_template_configuration {
     }
 }
 impl LaunchTemplateConfiguration {
-    /// Creates a new builder-style object to manufacture [`LaunchTemplateConfiguration`](crate::model::LaunchTemplateConfiguration)
+    /// Creates a new builder-style object to manufacture [`LaunchTemplateConfiguration`](crate::model::LaunchTemplateConfiguration).
     pub fn builder() -> crate::model::launch_template_configuration::Builder {
         crate::model::launch_template_configuration::Builder::default()
     }
@@ -1394,10 +1416,13 @@ impl LaunchTemplateConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerDistributionConfiguration {
     /// <p>The description of the container distribution configuration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Tags that are attached to the container distribution configuration.</p>
+    #[doc(hidden)]
     pub container_tags: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The destination repository for the container distribution configuration.</p>
+    #[doc(hidden)]
     pub target_repository: std::option::Option<crate::model::TargetContainerRepository>,
 }
 impl ContainerDistributionConfiguration {
@@ -1425,11 +1450,10 @@ impl std::fmt::Debug for ContainerDistributionConfiguration {
         formatter.finish()
     }
 }
-/// See [`ContainerDistributionConfiguration`](crate::model::ContainerDistributionConfiguration)
+/// See [`ContainerDistributionConfiguration`](crate::model::ContainerDistributionConfiguration).
 pub mod container_distribution_configuration {
 
-    /// A builder for [`ContainerDistributionConfiguration`](crate::model::ContainerDistributionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ContainerDistributionConfiguration`](crate::model::ContainerDistributionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -1479,7 +1503,7 @@ pub mod container_distribution_configuration {
             self.target_repository = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerDistributionConfiguration`](crate::model::ContainerDistributionConfiguration)
+        /// Consumes the builder and constructs a [`ContainerDistributionConfiguration`](crate::model::ContainerDistributionConfiguration).
         pub fn build(self) -> crate::model::ContainerDistributionConfiguration {
             crate::model::ContainerDistributionConfiguration {
                 description: self.description,
@@ -1490,7 +1514,7 @@ pub mod container_distribution_configuration {
     }
 }
 impl ContainerDistributionConfiguration {
-    /// Creates a new builder-style object to manufacture [`ContainerDistributionConfiguration`](crate::model::ContainerDistributionConfiguration)
+    /// Creates a new builder-style object to manufacture [`ContainerDistributionConfiguration`](crate::model::ContainerDistributionConfiguration).
     pub fn builder() -> crate::model::container_distribution_configuration::Builder {
         crate::model::container_distribution_configuration::Builder::default()
     }
@@ -1501,8 +1525,10 @@ impl ContainerDistributionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetContainerRepository {
     /// <p>Specifies the service in which this image was registered.</p>
+    #[doc(hidden)]
     pub service: std::option::Option<crate::model::ContainerRepositoryService>,
     /// <p>The name of the container repository where the output container image is stored. This name is prefixed by the repository location.</p>
+    #[doc(hidden)]
     pub repository_name: std::option::Option<std::string::String>,
 }
 impl TargetContainerRepository {
@@ -1523,11 +1549,10 @@ impl std::fmt::Debug for TargetContainerRepository {
         formatter.finish()
     }
 }
-/// See [`TargetContainerRepository`](crate::model::TargetContainerRepository)
+/// See [`TargetContainerRepository`](crate::model::TargetContainerRepository).
 pub mod target_container_repository {
 
-    /// A builder for [`TargetContainerRepository`](crate::model::TargetContainerRepository)
-    #[non_exhaustive]
+    /// A builder for [`TargetContainerRepository`](crate::model::TargetContainerRepository).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service: std::option::Option<crate::model::ContainerRepositoryService>,
@@ -1560,7 +1585,7 @@ pub mod target_container_repository {
             self.repository_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetContainerRepository`](crate::model::TargetContainerRepository)
+        /// Consumes the builder and constructs a [`TargetContainerRepository`](crate::model::TargetContainerRepository).
         pub fn build(self) -> crate::model::TargetContainerRepository {
             crate::model::TargetContainerRepository {
                 service: self.service,
@@ -1570,7 +1595,7 @@ pub mod target_container_repository {
     }
 }
 impl TargetContainerRepository {
-    /// Creates a new builder-style object to manufacture [`TargetContainerRepository`](crate::model::TargetContainerRepository)
+    /// Creates a new builder-style object to manufacture [`TargetContainerRepository`](crate::model::TargetContainerRepository).
     pub fn builder() -> crate::model::target_container_repository::Builder {
         crate::model::target_container_repository::Builder::default()
     }
@@ -1632,17 +1657,23 @@ impl AsRef<str> for ContainerRepositoryService {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AmiDistributionConfiguration {
     /// <p>The name of the output AMI.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the AMI distribution configuration. Minimum and maximum length are in characters.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The ID of an account to which you want to distribute an image.</p>
+    #[doc(hidden)]
     pub target_account_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The tags to apply to AMIs distributed to this Region.</p>
+    #[doc(hidden)]
     pub ami_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The KMS key identifier used to encrypt the distributed image.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p> Launch permissions can be used to configure which Amazon Web Services accounts can use the AMI to launch instances.</p>
+    #[doc(hidden)]
     pub launch_permission: std::option::Option<crate::model::LaunchPermissionConfiguration>,
 }
 impl AmiDistributionConfiguration {
@@ -1688,11 +1719,10 @@ impl std::fmt::Debug for AmiDistributionConfiguration {
         formatter.finish()
     }
 }
-/// See [`AmiDistributionConfiguration`](crate::model::AmiDistributionConfiguration)
+/// See [`AmiDistributionConfiguration`](crate::model::AmiDistributionConfiguration).
 pub mod ami_distribution_configuration {
 
-    /// A builder for [`AmiDistributionConfiguration`](crate::model::AmiDistributionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AmiDistributionConfiguration`](crate::model::AmiDistributionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1796,7 +1826,7 @@ pub mod ami_distribution_configuration {
             self.launch_permission = input;
             self
         }
-        /// Consumes the builder and constructs a [`AmiDistributionConfiguration`](crate::model::AmiDistributionConfiguration)
+        /// Consumes the builder and constructs a [`AmiDistributionConfiguration`](crate::model::AmiDistributionConfiguration).
         pub fn build(self) -> crate::model::AmiDistributionConfiguration {
             crate::model::AmiDistributionConfiguration {
                 name: self.name,
@@ -1810,7 +1840,7 @@ pub mod ami_distribution_configuration {
     }
 }
 impl AmiDistributionConfiguration {
-    /// Creates a new builder-style object to manufacture [`AmiDistributionConfiguration`](crate::model::AmiDistributionConfiguration)
+    /// Creates a new builder-style object to manufacture [`AmiDistributionConfiguration`](crate::model::AmiDistributionConfiguration).
     pub fn builder() -> crate::model::ami_distribution_configuration::Builder {
         crate::model::ami_distribution_configuration::Builder::default()
     }
@@ -1821,12 +1851,16 @@ impl AmiDistributionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchPermissionConfiguration {
     /// <p>The Amazon Web Services account ID.</p>
+    #[doc(hidden)]
     pub user_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The name of the group.</p>
+    #[doc(hidden)]
     pub user_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ARN for an Amazon Web Services Organization that you want to share your AMI with. For more information, see <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">What is Organizations?</a>.</p>
+    #[doc(hidden)]
     pub organization_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ARN for an Organizations organizational unit (OU) that you want to share your AMI with. For more information about key concepts for Organizations, see <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html">Organizations terminology and concepts</a>.</p>
+    #[doc(hidden)]
     pub organizational_unit_arns: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl LaunchPermissionConfiguration {
@@ -1857,11 +1891,10 @@ impl std::fmt::Debug for LaunchPermissionConfiguration {
         formatter.finish()
     }
 }
-/// See [`LaunchPermissionConfiguration`](crate::model::LaunchPermissionConfiguration)
+/// See [`LaunchPermissionConfiguration`](crate::model::LaunchPermissionConfiguration).
 pub mod launch_permission_configuration {
 
-    /// A builder for [`LaunchPermissionConfiguration`](crate::model::LaunchPermissionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LaunchPermissionConfiguration`](crate::model::LaunchPermissionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1947,7 +1980,7 @@ pub mod launch_permission_configuration {
             self.organizational_unit_arns = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchPermissionConfiguration`](crate::model::LaunchPermissionConfiguration)
+        /// Consumes the builder and constructs a [`LaunchPermissionConfiguration`](crate::model::LaunchPermissionConfiguration).
         pub fn build(self) -> crate::model::LaunchPermissionConfiguration {
             crate::model::LaunchPermissionConfiguration {
                 user_ids: self.user_ids,
@@ -1959,7 +1992,7 @@ pub mod launch_permission_configuration {
     }
 }
 impl LaunchPermissionConfiguration {
-    /// Creates a new builder-style object to manufacture [`LaunchPermissionConfiguration`](crate::model::LaunchPermissionConfiguration)
+    /// Creates a new builder-style object to manufacture [`LaunchPermissionConfiguration`](crate::model::LaunchPermissionConfiguration).
     pub fn builder() -> crate::model::launch_permission_configuration::Builder {
         crate::model::launch_permission_configuration::Builder::default()
     }
@@ -1970,24 +2003,33 @@ impl LaunchPermissionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InfrastructureConfigurationSummary {
     /// <p>The Amazon Resource Name (ARN) of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date on which the infrastructure configuration was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>The date on which the infrastructure configuration was last updated.</p>
+    #[doc(hidden)]
     pub date_updated: std::option::Option<std::string::String>,
     /// <p>The tags attached to the image created by Image Builder.</p>
+    #[doc(hidden)]
     pub resource_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The tags of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The instance types of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub instance_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The instance profile of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub instance_profile_name: std::option::Option<std::string::String>,
 }
 impl InfrastructureConfigurationSummary {
@@ -2049,11 +2091,10 @@ impl std::fmt::Debug for InfrastructureConfigurationSummary {
         formatter.finish()
     }
 }
-/// See [`InfrastructureConfigurationSummary`](crate::model::InfrastructureConfigurationSummary)
+/// See [`InfrastructureConfigurationSummary`](crate::model::InfrastructureConfigurationSummary).
 pub mod infrastructure_configuration_summary {
 
-    /// A builder for [`InfrastructureConfigurationSummary`](crate::model::InfrastructureConfigurationSummary)
-    #[non_exhaustive]
+    /// A builder for [`InfrastructureConfigurationSummary`](crate::model::InfrastructureConfigurationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2203,7 +2244,7 @@ pub mod infrastructure_configuration_summary {
             self.instance_profile_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`InfrastructureConfigurationSummary`](crate::model::InfrastructureConfigurationSummary)
+        /// Consumes the builder and constructs a [`InfrastructureConfigurationSummary`](crate::model::InfrastructureConfigurationSummary).
         pub fn build(self) -> crate::model::InfrastructureConfigurationSummary {
             crate::model::InfrastructureConfigurationSummary {
                 arn: self.arn,
@@ -2220,7 +2261,7 @@ pub mod infrastructure_configuration_summary {
     }
 }
 impl InfrastructureConfigurationSummary {
-    /// Creates a new builder-style object to manufacture [`InfrastructureConfigurationSummary`](crate::model::InfrastructureConfigurationSummary)
+    /// Creates a new builder-style object to manufacture [`InfrastructureConfigurationSummary`](crate::model::InfrastructureConfigurationSummary).
     pub fn builder() -> crate::model::infrastructure_configuration_summary::Builder {
         crate::model::infrastructure_configuration_summary::Builder::default()
     }
@@ -2231,8 +2272,10 @@ impl InfrastructureConfigurationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
     /// <p>The name of the filter. Filter names are case-sensitive.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The filter values. Filter values are case-sensitive.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Filter {
@@ -2253,11 +2296,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2293,7 +2335,7 @@ pub mod filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 name: self.name,
@@ -2303,7 +2345,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -2327,10 +2369,13 @@ pub struct ImageVersion {
     /// <li> <p>Build version ARNs have all four nodes, and point to a specific build for a specific version of an object.</p> </li>
     /// </ol>
     /// </note>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of this specific version of an Image Builder image.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Specifies whether this image is an AMI or a container image.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ImageType>,
     /// <p>Details for a specific version of an Image Builder image. This version follows the semantic version syntax.</p> <note>
     /// <p>The semantic version has four nodes: <major>
@@ -2349,14 +2394,19 @@ pub struct ImageVersion {
     /// <p> <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date, such as 2021.01.01.</p>
     /// <p> <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.</p>
     /// </note>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The platform of the image version, for example "Windows" or "Linux".</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::Platform>,
     /// <p>The operating system version of the Amazon EC2 build instance. For example, Amazon Linux 2, Ubuntu 18, or Microsoft Windows Server 2019.</p>
+    #[doc(hidden)]
     pub os_version: std::option::Option<std::string::String>,
     /// <p>The owner of the image version.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The date on which this specific version of the Image Builder image was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>Indicates the type of build that created this image. The build can be initiated in the following ways:</p>
     /// <ul>
@@ -2364,6 +2414,7 @@ pub struct ImageVersion {
     /// <li> <p> <b>SCHEDULED</b> – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from EventBridge.</p> </li>
     /// <li> <p> <b>IMPORT</b> – A VM import created the image to use as the base image for the recipe.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub build_type: std::option::Option<crate::model::BuildType>,
 }
 impl ImageVersion {
@@ -2453,11 +2504,10 @@ impl std::fmt::Debug for ImageVersion {
         formatter.finish()
     }
 }
-/// See [`ImageVersion`](crate::model::ImageVersion)
+/// See [`ImageVersion`](crate::model::ImageVersion).
 pub mod image_version {
 
-    /// A builder for [`ImageVersion`](crate::model::ImageVersion)
-    #[non_exhaustive]
+    /// A builder for [`ImageVersion`](crate::model::ImageVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2632,7 +2682,7 @@ pub mod image_version {
             self.build_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageVersion`](crate::model::ImageVersion)
+        /// Consumes the builder and constructs a [`ImageVersion`](crate::model::ImageVersion).
         pub fn build(self) -> crate::model::ImageVersion {
             crate::model::ImageVersion {
                 arn: self.arn,
@@ -2649,7 +2699,7 @@ pub mod image_version {
     }
 }
 impl ImageVersion {
-    /// Creates a new builder-style object to manufacture [`ImageVersion`](crate::model::ImageVersion)
+    /// Creates a new builder-style object to manufacture [`ImageVersion`](crate::model::ImageVersion).
     pub fn builder() -> crate::model::image_version::Builder {
         crate::model::image_version::Builder::default()
     }
@@ -2888,18 +2938,25 @@ impl AsRef<str> for Ownership {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageRecipeSummary {
     /// <p>The Amazon Resource Name (ARN) of the image recipe.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the image recipe.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The platform of the image recipe.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::Platform>,
     /// <p>The owner of the image recipe.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The base image of the image recipe.</p>
+    #[doc(hidden)]
     pub parent_image: std::option::Option<std::string::String>,
     /// <p>The date on which this image recipe was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>The tags of the image recipe.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2949,11 +3006,10 @@ impl std::fmt::Debug for ImageRecipeSummary {
         formatter.finish()
     }
 }
-/// See [`ImageRecipeSummary`](crate::model::ImageRecipeSummary)
+/// See [`ImageRecipeSummary`](crate::model::ImageRecipeSummary).
 pub mod image_recipe_summary {
 
-    /// A builder for [`ImageRecipeSummary`](crate::model::ImageRecipeSummary)
-    #[non_exhaustive]
+    /// A builder for [`ImageRecipeSummary`](crate::model::ImageRecipeSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3052,7 +3108,7 @@ pub mod image_recipe_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageRecipeSummary`](crate::model::ImageRecipeSummary)
+        /// Consumes the builder and constructs a [`ImageRecipeSummary`](crate::model::ImageRecipeSummary).
         pub fn build(self) -> crate::model::ImageRecipeSummary {
             crate::model::ImageRecipeSummary {
                 arn: self.arn,
@@ -3067,7 +3123,7 @@ pub mod image_recipe_summary {
     }
 }
 impl ImageRecipeSummary {
-    /// Creates a new builder-style object to manufacture [`ImageRecipeSummary`](crate::model::ImageRecipeSummary)
+    /// Creates a new builder-style object to manufacture [`ImageRecipeSummary`](crate::model::ImageRecipeSummary).
     pub fn builder() -> crate::model::image_recipe_summary::Builder {
         crate::model::image_recipe_summary::Builder::default()
     }
@@ -3078,38 +3134,55 @@ impl ImageRecipeSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImagePipeline {
     /// <p>The Amazon Resource Name (ARN) of the image pipeline.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the image pipeline.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the image pipeline.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The platform of the image pipeline.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::Platform>,
     /// <p> Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.</p>
+    #[doc(hidden)]
     pub enhanced_image_metadata_enabled: std::option::Option<bool>,
     /// <p>The Amazon Resource Name (ARN) of the image recipe associated with this image pipeline.</p>
+    #[doc(hidden)]
     pub image_recipe_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the container recipe that is used for this pipeline.</p>
+    #[doc(hidden)]
     pub container_recipe_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the infrastructure configuration associated with this image pipeline.</p>
+    #[doc(hidden)]
     pub infrastructure_configuration_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the distribution configuration associated with this image pipeline.</p>
+    #[doc(hidden)]
     pub distribution_configuration_arn: std::option::Option<std::string::String>,
     /// <p>The image tests configuration of the image pipeline.</p>
+    #[doc(hidden)]
     pub image_tests_configuration: std::option::Option<crate::model::ImageTestsConfiguration>,
     /// <p>The schedule of the image pipeline.</p>
+    #[doc(hidden)]
     pub schedule: std::option::Option<crate::model::Schedule>,
     /// <p>The status of the image pipeline.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::PipelineStatus>,
     /// <p>The date on which this image pipeline was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>The date on which this image pipeline was last updated.</p>
+    #[doc(hidden)]
     pub date_updated: std::option::Option<std::string::String>,
     /// <p>The date on which this image pipeline was last run.</p>
+    #[doc(hidden)]
     pub date_last_run: std::option::Option<std::string::String>,
     /// <p>The date on which this image pipeline will next be run.</p>
+    #[doc(hidden)]
     pub date_next_run: std::option::Option<std::string::String>,
     /// <p>The tags of this image pipeline.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -3220,11 +3293,10 @@ impl std::fmt::Debug for ImagePipeline {
         formatter.finish()
     }
 }
-/// See [`ImagePipeline`](crate::model::ImagePipeline)
+/// See [`ImagePipeline`](crate::model::ImagePipeline).
 pub mod image_pipeline {
 
-    /// A builder for [`ImagePipeline`](crate::model::ImagePipeline)
-    #[non_exhaustive]
+    /// A builder for [`ImagePipeline`](crate::model::ImagePipeline).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3470,7 +3542,7 @@ pub mod image_pipeline {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImagePipeline`](crate::model::ImagePipeline)
+        /// Consumes the builder and constructs a [`ImagePipeline`](crate::model::ImagePipeline).
         pub fn build(self) -> crate::model::ImagePipeline {
             crate::model::ImagePipeline {
                 arn: self.arn,
@@ -3495,7 +3567,7 @@ pub mod image_pipeline {
     }
 }
 impl ImagePipeline {
-    /// Creates a new builder-style object to manufacture [`ImagePipeline`](crate::model::ImagePipeline)
+    /// Creates a new builder-style object to manufacture [`ImagePipeline`](crate::model::ImagePipeline).
     pub fn builder() -> crate::model::image_pipeline::Builder {
         crate::model::image_pipeline::Builder::default()
     }
@@ -3506,26 +3578,37 @@ impl ImagePipeline {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageSummary {
     /// <p>The Amazon Resource Name (ARN) of the image.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the image.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Specifies whether this is an AMI or container image.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ImageType>,
     /// <p>The version of the image.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The platform of the image.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::Platform>,
     /// <p>The operating system version of the instance. For example, Amazon Linux 2, Ubuntu 18, or Microsoft Windows Server 2019.</p>
+    #[doc(hidden)]
     pub os_version: std::option::Option<std::string::String>,
     /// <p>The state of the image.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ImageState>,
     /// <p>The owner of the image.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The date on which this image was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>The output resources produced when creating this image.</p>
+    #[doc(hidden)]
     pub output_resources: std::option::Option<crate::model::OutputResources>,
     /// <p>The tags of the image.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Indicates the type of build that created this image. The build can be initiated in the following ways:</p>
@@ -3534,6 +3617,7 @@ pub struct ImageSummary {
     /// <li> <p> <b>SCHEDULED</b> – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from EventBridge.</p> </li>
     /// <li> <p> <b>IMPORT</b> – A VM import created the image to use as the base image for the recipe.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub build_type: std::option::Option<crate::model::BuildType>,
 }
 impl ImageSummary {
@@ -3612,11 +3696,10 @@ impl std::fmt::Debug for ImageSummary {
         formatter.finish()
     }
 }
-/// See [`ImageSummary`](crate::model::ImageSummary)
+/// See [`ImageSummary`](crate::model::ImageSummary).
 pub mod image_summary {
 
-    /// A builder for [`ImageSummary`](crate::model::ImageSummary)
-    #[non_exhaustive]
+    /// A builder for [`ImageSummary`](crate::model::ImageSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3786,7 +3869,7 @@ pub mod image_summary {
             self.build_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageSummary`](crate::model::ImageSummary)
+        /// Consumes the builder and constructs a [`ImageSummary`](crate::model::ImageSummary).
         pub fn build(self) -> crate::model::ImageSummary {
             crate::model::ImageSummary {
                 arn: self.arn,
@@ -3806,7 +3889,7 @@ pub mod image_summary {
     }
 }
 impl ImageSummary {
-    /// Creates a new builder-style object to manufacture [`ImageSummary`](crate::model::ImageSummary)
+    /// Creates a new builder-style object to manufacture [`ImageSummary`](crate::model::ImageSummary).
     pub fn builder() -> crate::model::image_summary::Builder {
         crate::model::image_summary::Builder::default()
     }
@@ -3817,8 +3900,10 @@ impl ImageSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputResources {
     /// <p>The Amazon EC2 AMIs created by this image.</p>
+    #[doc(hidden)]
     pub amis: std::option::Option<std::vec::Vec<crate::model::Ami>>,
     /// <p>Container images that the pipeline has generated and stored in the output repository.</p>
+    #[doc(hidden)]
     pub containers: std::option::Option<std::vec::Vec<crate::model::Container>>,
 }
 impl OutputResources {
@@ -3839,11 +3924,10 @@ impl std::fmt::Debug for OutputResources {
         formatter.finish()
     }
 }
-/// See [`OutputResources`](crate::model::OutputResources)
+/// See [`OutputResources`](crate::model::OutputResources).
 pub mod output_resources {
 
-    /// A builder for [`OutputResources`](crate::model::OutputResources)
-    #[non_exhaustive]
+    /// A builder for [`OutputResources`](crate::model::OutputResources).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) amis: std::option::Option<std::vec::Vec<crate::model::Ami>>,
@@ -3888,7 +3972,7 @@ pub mod output_resources {
             self.containers = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputResources`](crate::model::OutputResources)
+        /// Consumes the builder and constructs a [`OutputResources`](crate::model::OutputResources).
         pub fn build(self) -> crate::model::OutputResources {
             crate::model::OutputResources {
                 amis: self.amis,
@@ -3898,7 +3982,7 @@ pub mod output_resources {
     }
 }
 impl OutputResources {
-    /// Creates a new builder-style object to manufacture [`OutputResources`](crate::model::OutputResources)
+    /// Creates a new builder-style object to manufacture [`OutputResources`](crate::model::OutputResources).
     pub fn builder() -> crate::model::output_resources::Builder {
         crate::model::output_resources::Builder::default()
     }
@@ -3909,8 +3993,10 @@ impl OutputResources {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Container {
     /// <p>Containers and container images are Region-specific. This is the Region context for the container.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>A list of URIs for containers created in the context Region.</p>
+    #[doc(hidden)]
     pub image_uris: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Container {
@@ -3931,11 +4017,10 @@ impl std::fmt::Debug for Container {
         formatter.finish()
     }
 }
-/// See [`Container`](crate::model::Container)
+/// See [`Container`](crate::model::Container).
 pub mod container {
 
-    /// A builder for [`Container`](crate::model::Container)
-    #[non_exhaustive]
+    /// A builder for [`Container`](crate::model::Container).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) region: std::option::Option<std::string::String>,
@@ -3971,7 +4056,7 @@ pub mod container {
             self.image_uris = input;
             self
         }
-        /// Consumes the builder and constructs a [`Container`](crate::model::Container)
+        /// Consumes the builder and constructs a [`Container`](crate::model::Container).
         pub fn build(self) -> crate::model::Container {
             crate::model::Container {
                 region: self.region,
@@ -3981,7 +4066,7 @@ pub mod container {
     }
 }
 impl Container {
-    /// Creates a new builder-style object to manufacture [`Container`](crate::model::Container)
+    /// Creates a new builder-style object to manufacture [`Container`](crate::model::Container).
     pub fn builder() -> crate::model::container::Builder {
         crate::model::container::Builder::default()
     }
@@ -3992,16 +4077,22 @@ impl Container {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ami {
     /// <p>The Amazon Web Services Region of the Amazon EC2 AMI.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The AMI ID of the Amazon EC2 AMI.</p>
+    #[doc(hidden)]
     pub image: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon EC2 AMI.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the Amazon EC2 AMI. Minimum and maximum length are in characters.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> Image state shows the image status and the reason for that status.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ImageState>,
     /// <p>The account ID of the owner of the AMI.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
 }
 impl Ami {
@@ -4042,11 +4133,10 @@ impl std::fmt::Debug for Ami {
         formatter.finish()
     }
 }
-/// See [`Ami`](crate::model::Ami)
+/// See [`Ami`](crate::model::Ami).
 pub mod ami {
 
-    /// A builder for [`Ami`](crate::model::Ami)
-    #[non_exhaustive]
+    /// A builder for [`Ami`](crate::model::Ami).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) region: std::option::Option<std::string::String>,
@@ -4117,7 +4207,7 @@ pub mod ami {
             self.account_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ami`](crate::model::Ami)
+        /// Consumes the builder and constructs a [`Ami`](crate::model::Ami).
         pub fn build(self) -> crate::model::Ami {
             crate::model::Ami {
                 region: self.region,
@@ -4131,7 +4221,7 @@ pub mod ami {
     }
 }
 impl Ami {
-    /// Creates a new builder-style object to manufacture [`Ami`](crate::model::Ami)
+    /// Creates a new builder-style object to manufacture [`Ami`](crate::model::Ami).
     pub fn builder() -> crate::model::ami::Builder {
         crate::model::ami::Builder::default()
     }
@@ -4142,8 +4232,10 @@ impl Ami {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageState {
     /// <p>The status of the image.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ImageStatus>,
     /// <p>The reason for the image's status.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
 }
 impl ImageState {
@@ -4164,11 +4256,10 @@ impl std::fmt::Debug for ImageState {
         formatter.finish()
     }
 }
-/// See [`ImageState`](crate::model::ImageState)
+/// See [`ImageState`](crate::model::ImageState).
 pub mod image_state {
 
-    /// A builder for [`ImageState`](crate::model::ImageState)
-    #[non_exhaustive]
+    /// A builder for [`ImageState`](crate::model::ImageState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ImageStatus>,
@@ -4195,7 +4286,7 @@ pub mod image_state {
             self.reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageState`](crate::model::ImageState)
+        /// Consumes the builder and constructs a [`ImageState`](crate::model::ImageState).
         pub fn build(self) -> crate::model::ImageState {
             crate::model::ImageState {
                 status: self.status,
@@ -4205,7 +4296,7 @@ pub mod image_state {
     }
 }
 impl ImageState {
-    /// Creates a new builder-style object to manufacture [`ImageState`](crate::model::ImageState)
+    /// Creates a new builder-style object to manufacture [`ImageState`](crate::model::ImageState).
     pub fn builder() -> crate::model::image_state::Builder {
         crate::model::image_state::Builder::default()
     }
@@ -4319,8 +4410,10 @@ impl AsRef<str> for ImageStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImagePackage {
     /// <p>The name of the package as reported to the operating system package manager.</p>
+    #[doc(hidden)]
     pub package_name: std::option::Option<std::string::String>,
     /// <p>The version of the package as reported to the operating system package manager.</p>
+    #[doc(hidden)]
     pub package_version: std::option::Option<std::string::String>,
 }
 impl ImagePackage {
@@ -4341,11 +4434,10 @@ impl std::fmt::Debug for ImagePackage {
         formatter.finish()
     }
 }
-/// See [`ImagePackage`](crate::model::ImagePackage)
+/// See [`ImagePackage`](crate::model::ImagePackage).
 pub mod image_package {
 
-    /// A builder for [`ImagePackage`](crate::model::ImagePackage)
-    #[non_exhaustive]
+    /// A builder for [`ImagePackage`](crate::model::ImagePackage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) package_name: std::option::Option<std::string::String>,
@@ -4375,7 +4467,7 @@ pub mod image_package {
             self.package_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImagePackage`](crate::model::ImagePackage)
+        /// Consumes the builder and constructs a [`ImagePackage`](crate::model::ImagePackage).
         pub fn build(self) -> crate::model::ImagePackage {
             crate::model::ImagePackage {
                 package_name: self.package_name,
@@ -4385,7 +4477,7 @@ pub mod image_package {
     }
 }
 impl ImagePackage {
-    /// Creates a new builder-style object to manufacture [`ImagePackage`](crate::model::ImagePackage)
+    /// Creates a new builder-style object to manufacture [`ImagePackage`](crate::model::ImagePackage).
     pub fn builder() -> crate::model::image_package::Builder {
         crate::model::image_package::Builder::default()
     }
@@ -4396,19 +4488,26 @@ impl ImagePackage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DistributionConfigurationSummary {
     /// <p>The Amazon Resource Name (ARN) of the distribution configuration.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the distribution configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the distribution configuration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date on which the distribution configuration was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>The date on which the distribution configuration was updated.</p>
+    #[doc(hidden)]
     pub date_updated: std::option::Option<std::string::String>,
     /// <p>The tags associated with the distribution configuration.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A list of Regions where the container image is distributed to.</p>
+    #[doc(hidden)]
     pub regions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DistributionConfigurationSummary {
@@ -4457,11 +4556,10 @@ impl std::fmt::Debug for DistributionConfigurationSummary {
         formatter.finish()
     }
 }
-/// See [`DistributionConfigurationSummary`](crate::model::DistributionConfigurationSummary)
+/// See [`DistributionConfigurationSummary`](crate::model::DistributionConfigurationSummary).
 pub mod distribution_configuration_summary {
 
-    /// A builder for [`DistributionConfigurationSummary`](crate::model::DistributionConfigurationSummary)
-    #[non_exhaustive]
+    /// A builder for [`DistributionConfigurationSummary`](crate::model::DistributionConfigurationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4569,7 +4667,7 @@ pub mod distribution_configuration_summary {
             self.regions = input;
             self
         }
-        /// Consumes the builder and constructs a [`DistributionConfigurationSummary`](crate::model::DistributionConfigurationSummary)
+        /// Consumes the builder and constructs a [`DistributionConfigurationSummary`](crate::model::DistributionConfigurationSummary).
         pub fn build(self) -> crate::model::DistributionConfigurationSummary {
             crate::model::DistributionConfigurationSummary {
                 arn: self.arn,
@@ -4584,7 +4682,7 @@ pub mod distribution_configuration_summary {
     }
 }
 impl DistributionConfigurationSummary {
-    /// Creates a new builder-style object to manufacture [`DistributionConfigurationSummary`](crate::model::DistributionConfigurationSummary)
+    /// Creates a new builder-style object to manufacture [`DistributionConfigurationSummary`](crate::model::DistributionConfigurationSummary).
     pub fn builder() -> crate::model::distribution_configuration_summary::Builder {
         crate::model::distribution_configuration_summary::Builder::default()
     }
@@ -4595,20 +4693,28 @@ impl DistributionConfigurationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContainerRecipeSummary {
     /// <p>The Amazon Resource Name (ARN) of the container recipe.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Specifies the type of container, such as "Docker".</p>
+    #[doc(hidden)]
     pub container_type: std::option::Option<crate::model::ContainerType>,
     /// <p>The name of the container recipe.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The system platform for the container, such as Windows or Linux.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::Platform>,
     /// <p>The owner of the container recipe.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The base image for the container recipe.</p>
+    #[doc(hidden)]
     pub parent_image: std::option::Option<std::string::String>,
     /// <p>The date when this container recipe was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>Tags that are attached to the container recipe.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -4663,11 +4769,10 @@ impl std::fmt::Debug for ContainerRecipeSummary {
         formatter.finish()
     }
 }
-/// See [`ContainerRecipeSummary`](crate::model::ContainerRecipeSummary)
+/// See [`ContainerRecipeSummary`](crate::model::ContainerRecipeSummary).
 pub mod container_recipe_summary {
 
-    /// A builder for [`ContainerRecipeSummary`](crate::model::ContainerRecipeSummary)
-    #[non_exhaustive]
+    /// A builder for [`ContainerRecipeSummary`](crate::model::ContainerRecipeSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4780,7 +4885,7 @@ pub mod container_recipe_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerRecipeSummary`](crate::model::ContainerRecipeSummary)
+        /// Consumes the builder and constructs a [`ContainerRecipeSummary`](crate::model::ContainerRecipeSummary).
         pub fn build(self) -> crate::model::ContainerRecipeSummary {
             crate::model::ContainerRecipeSummary {
                 arn: self.arn,
@@ -4796,7 +4901,7 @@ pub mod container_recipe_summary {
     }
 }
 impl ContainerRecipeSummary {
-    /// Creates a new builder-style object to manufacture [`ContainerRecipeSummary`](crate::model::ContainerRecipeSummary)
+    /// Creates a new builder-style object to manufacture [`ContainerRecipeSummary`](crate::model::ContainerRecipeSummary).
     pub fn builder() -> crate::model::container_recipe_summary::Builder {
         crate::model::container_recipe_summary::Builder::default()
     }
@@ -4871,8 +4976,10 @@ pub struct ComponentVersion {
     /// <li> <p>Build version ARNs have all four nodes, and point to a specific build for a specific version of an object.</p> </li>
     /// </ol>
     /// </note>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the component.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The semantic version of the component.</p> <note>
     /// <p>The semantic version has four nodes: <major>
@@ -4891,18 +4998,25 @@ pub struct ComponentVersion {
     /// <p> <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date, such as 2021.01.01.</p>
     /// <p> <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.</p>
     /// </note>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The description of the component.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The platform of the component.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::Platform>,
     /// <p>he operating system (OS) version supported by the component. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation.</p>
+    #[doc(hidden)]
     pub supported_os_versions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The type of the component denotes whether the component is used to build the image or only to test it.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ComponentType>,
     /// <p>The owner of the component.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The date that the component was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
 }
 impl ComponentVersion {
@@ -4987,11 +5101,10 @@ impl std::fmt::Debug for ComponentVersion {
         formatter.finish()
     }
 }
-/// See [`ComponentVersion`](crate::model::ComponentVersion)
+/// See [`ComponentVersion`](crate::model::ComponentVersion).
 pub mod component_version {
 
-    /// A builder for [`ComponentVersion`](crate::model::ComponentVersion)
-    #[non_exhaustive]
+    /// A builder for [`ComponentVersion`](crate::model::ComponentVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -5162,7 +5275,7 @@ pub mod component_version {
             self.date_created = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentVersion`](crate::model::ComponentVersion)
+        /// Consumes the builder and constructs a [`ComponentVersion`](crate::model::ComponentVersion).
         pub fn build(self) -> crate::model::ComponentVersion {
             crate::model::ComponentVersion {
                 arn: self.arn,
@@ -5179,7 +5292,7 @@ pub mod component_version {
     }
 }
 impl ComponentVersion {
-    /// Creates a new builder-style object to manufacture [`ComponentVersion`](crate::model::ComponentVersion)
+    /// Creates a new builder-style object to manufacture [`ComponentVersion`](crate::model::ComponentVersion).
     pub fn builder() -> crate::model::component_version::Builder {
         crate::model::component_version::Builder::default()
     }
@@ -5245,28 +5358,40 @@ impl AsRef<str> for ComponentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentSummary {
     /// <p>The Amazon Resource Name (ARN) of the component.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the component.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The version of the component.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The platform of the component.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::Platform>,
     /// <p>The operating system (OS) version supported by the component. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation.</p>
+    #[doc(hidden)]
     pub supported_os_versions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Describes the current status of the component.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ComponentState>,
     /// <p>The type of the component denotes whether the component is used to build the image or only to test it.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ComponentType>,
     /// <p>The owner of the component.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The description of the component.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The change description of the component.</p>
+    #[doc(hidden)]
     pub change_description: std::option::Option<std::string::String>,
     /// <p>The date that the component was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>The tags associated with the component.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -5341,11 +5466,10 @@ impl std::fmt::Debug for ComponentSummary {
         formatter.finish()
     }
 }
-/// See [`ComponentSummary`](crate::model::ComponentSummary)
+/// See [`ComponentSummary`](crate::model::ComponentSummary).
 pub mod component_summary {
 
-    /// A builder for [`ComponentSummary`](crate::model::ComponentSummary)
-    #[non_exhaustive]
+    /// A builder for [`ComponentSummary`](crate::model::ComponentSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -5514,7 +5638,7 @@ pub mod component_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentSummary`](crate::model::ComponentSummary)
+        /// Consumes the builder and constructs a [`ComponentSummary`](crate::model::ComponentSummary).
         pub fn build(self) -> crate::model::ComponentSummary {
             crate::model::ComponentSummary {
                 arn: self.arn,
@@ -5534,7 +5658,7 @@ pub mod component_summary {
     }
 }
 impl ComponentSummary {
-    /// Creates a new builder-style object to manufacture [`ComponentSummary`](crate::model::ComponentSummary)
+    /// Creates a new builder-style object to manufacture [`ComponentSummary`](crate::model::ComponentSummary).
     pub fn builder() -> crate::model::component_summary::Builder {
         crate::model::component_summary::Builder::default()
     }
@@ -5545,8 +5669,10 @@ impl ComponentSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentState {
     /// <p>The current state of the component.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ComponentStatus>,
     /// <p>Describes how or why the component changed state.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
 }
 impl ComponentState {
@@ -5567,11 +5693,10 @@ impl std::fmt::Debug for ComponentState {
         formatter.finish()
     }
 }
-/// See [`ComponentState`](crate::model::ComponentState)
+/// See [`ComponentState`](crate::model::ComponentState).
 pub mod component_state {
 
-    /// A builder for [`ComponentState`](crate::model::ComponentState)
-    #[non_exhaustive]
+    /// A builder for [`ComponentState`](crate::model::ComponentState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ComponentStatus>,
@@ -5601,7 +5726,7 @@ pub mod component_state {
             self.reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentState`](crate::model::ComponentState)
+        /// Consumes the builder and constructs a [`ComponentState`](crate::model::ComponentState).
         pub fn build(self) -> crate::model::ComponentState {
             crate::model::ComponentState {
                 status: self.status,
@@ -5611,7 +5736,7 @@ pub mod component_state {
     }
 }
 impl ComponentState {
-    /// Creates a new builder-style object to manufacture [`ComponentState`](crate::model::ComponentState)
+    /// Creates a new builder-style object to manufacture [`ComponentState`](crate::model::ComponentState).
     pub fn builder() -> crate::model::component_state::Builder {
         crate::model::component_state::Builder::default()
     }
@@ -5724,39 +5849,55 @@ impl AsRef<str> for ComponentFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InfrastructureConfiguration {
     /// <p>The Amazon Resource Name (ARN) of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The instance types of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub instance_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The instance profile of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub instance_profile_name: std::option::Option<std::string::String>,
     /// <p>The security group IDs of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The subnet ID of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub subnet_id: std::option::Option<std::string::String>,
     /// <p>The logging configuration of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub logging: std::option::Option<crate::model::Logging>,
     /// <p>The Amazon EC2 key pair of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub key_pair: std::option::Option<std::string::String>,
     /// <p>The terminate instance on failure configuration of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub terminate_instance_on_failure: std::option::Option<bool>,
     /// <p>The Amazon Resource Name (ARN) for the SNS topic to which we send image build event notifications.</p> <note>
     /// <p>EC2 Image Builder is unable to send notifications to SNS topics that are encrypted using keys from other accounts. The key that is used to encrypt the SNS topic must reside in the account that the Image Builder service runs under.</p>
     /// </note>
+    #[doc(hidden)]
     pub sns_topic_arn: std::option::Option<std::string::String>,
     /// <p>The date on which the infrastructure configuration was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>The date on which the infrastructure configuration was last updated.</p>
+    #[doc(hidden)]
     pub date_updated: std::option::Option<std::string::String>,
     /// <p>The tags attached to the resource created by Image Builder.</p>
+    #[doc(hidden)]
     pub resource_tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The instance metadata option settings for the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub instance_metadata_options: std::option::Option<crate::model::InstanceMetadataOptions>,
     /// <p>The tags of the infrastructure configuration.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -5861,11 +6002,10 @@ impl std::fmt::Debug for InfrastructureConfiguration {
         formatter.finish()
     }
 }
-/// See [`InfrastructureConfiguration`](crate::model::InfrastructureConfiguration)
+/// See [`InfrastructureConfiguration`](crate::model::InfrastructureConfiguration).
 pub mod infrastructure_configuration {
 
-    /// A builder for [`InfrastructureConfiguration`](crate::model::InfrastructureConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`InfrastructureConfiguration`](crate::model::InfrastructureConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -6118,7 +6258,7 @@ pub mod infrastructure_configuration {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`InfrastructureConfiguration`](crate::model::InfrastructureConfiguration)
+        /// Consumes the builder and constructs a [`InfrastructureConfiguration`](crate::model::InfrastructureConfiguration).
         pub fn build(self) -> crate::model::InfrastructureConfiguration {
             crate::model::InfrastructureConfiguration {
                 arn: self.arn,
@@ -6142,7 +6282,7 @@ pub mod infrastructure_configuration {
     }
 }
 impl InfrastructureConfiguration {
-    /// Creates a new builder-style object to manufacture [`InfrastructureConfiguration`](crate::model::InfrastructureConfiguration)
+    /// Creates a new builder-style object to manufacture [`InfrastructureConfiguration`](crate::model::InfrastructureConfiguration).
     pub fn builder() -> crate::model::infrastructure_configuration::Builder {
         crate::model::infrastructure_configuration::Builder::default()
     }
@@ -6153,34 +6293,48 @@ impl InfrastructureConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageRecipe {
     /// <p>The Amazon Resource Name (ARN) of the image recipe.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Specifies which type of image is created by the recipe - an AMI or a container image.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ImageType>,
     /// <p>The name of the image recipe.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the image recipe.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The platform of the image recipe.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::Platform>,
     /// <p>The owner of the image recipe.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The version of the image recipe.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The components of the image recipe.</p>
+    #[doc(hidden)]
     pub components: std::option::Option<std::vec::Vec<crate::model::ComponentConfiguration>>,
     /// <p>The base image of the image recipe.</p>
+    #[doc(hidden)]
     pub parent_image: std::option::Option<std::string::String>,
     /// <p>The block device mappings to apply when creating images from this recipe.</p>
+    #[doc(hidden)]
     pub block_device_mappings:
         std::option::Option<std::vec::Vec<crate::model::InstanceBlockDeviceMapping>>,
     /// <p>The date on which this image recipe was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>The tags of the image recipe.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The working directory to be used during build and test workflows.</p>
+    #[doc(hidden)]
     pub working_directory: std::option::Option<std::string::String>,
     /// <p>Before you create a new AMI, Image Builder launches temporary Amazon EC2 instances to build and test your image configuration. Instance configuration adds a layer of control over those instances. You can define settings and add scripts to run when an instance is launched from your AMI.</p>
+    #[doc(hidden)]
     pub additional_instance_configuration:
         std::option::Option<crate::model::AdditionalInstanceConfiguration>,
 }
@@ -6272,11 +6426,10 @@ impl std::fmt::Debug for ImageRecipe {
         formatter.finish()
     }
 }
-/// See [`ImageRecipe`](crate::model::ImageRecipe)
+/// See [`ImageRecipe`](crate::model::ImageRecipe).
 pub mod image_recipe {
 
-    /// A builder for [`ImageRecipe`](crate::model::ImageRecipe)
-    #[non_exhaustive]
+    /// A builder for [`ImageRecipe`](crate::model::ImageRecipe).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -6485,7 +6638,7 @@ pub mod image_recipe {
             self.additional_instance_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageRecipe`](crate::model::ImageRecipe)
+        /// Consumes the builder and constructs a [`ImageRecipe`](crate::model::ImageRecipe).
         pub fn build(self) -> crate::model::ImageRecipe {
             crate::model::ImageRecipe {
                 arn: self.arn,
@@ -6507,7 +6660,7 @@ pub mod image_recipe {
     }
 }
 impl ImageRecipe {
-    /// Creates a new builder-style object to manufacture [`ImageRecipe`](crate::model::ImageRecipe)
+    /// Creates a new builder-style object to manufacture [`ImageRecipe`](crate::model::ImageRecipe).
     pub fn builder() -> crate::model::image_recipe::Builder {
         crate::model::image_recipe::Builder::default()
     }
@@ -6518,6 +6671,7 @@ impl ImageRecipe {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AdditionalInstanceConfiguration {
     /// <p>Contains settings for the Systems Manager agent on your build instance.</p>
+    #[doc(hidden)]
     pub systems_manager_agent: std::option::Option<crate::model::SystemsManagerAgent>,
     /// <p>Use this property to provide commands or a command script to run when you launch your build instance.</p>
     /// <p>The userDataOverride property replaces any commands that Image Builder might have added to ensure that Systems Manager is installed on your Linux build instance. If you override the user data, make sure that you add commands to install Systems Manager, if it is not pre-installed on your base image.</p> <note>
@@ -6526,6 +6680,7 @@ pub struct AdditionalInstanceConfiguration {
     /// <p>mkdir -p /var/bb/</p>
     /// <p>touch /var</p>
     /// </note>
+    #[doc(hidden)]
     pub user_data_override: std::option::Option<std::string::String>,
 }
 impl AdditionalInstanceConfiguration {
@@ -6552,11 +6707,10 @@ impl std::fmt::Debug for AdditionalInstanceConfiguration {
         formatter.finish()
     }
 }
-/// See [`AdditionalInstanceConfiguration`](crate::model::AdditionalInstanceConfiguration)
+/// See [`AdditionalInstanceConfiguration`](crate::model::AdditionalInstanceConfiguration).
 pub mod additional_instance_configuration {
 
-    /// A builder for [`AdditionalInstanceConfiguration`](crate::model::AdditionalInstanceConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`AdditionalInstanceConfiguration`](crate::model::AdditionalInstanceConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) systems_manager_agent: std::option::Option<crate::model::SystemsManagerAgent>,
@@ -6601,7 +6755,7 @@ pub mod additional_instance_configuration {
             self.user_data_override = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdditionalInstanceConfiguration`](crate::model::AdditionalInstanceConfiguration)
+        /// Consumes the builder and constructs a [`AdditionalInstanceConfiguration`](crate::model::AdditionalInstanceConfiguration).
         pub fn build(self) -> crate::model::AdditionalInstanceConfiguration {
             crate::model::AdditionalInstanceConfiguration {
                 systems_manager_agent: self.systems_manager_agent,
@@ -6611,7 +6765,7 @@ pub mod additional_instance_configuration {
     }
 }
 impl AdditionalInstanceConfiguration {
-    /// Creates a new builder-style object to manufacture [`AdditionalInstanceConfiguration`](crate::model::AdditionalInstanceConfiguration)
+    /// Creates a new builder-style object to manufacture [`AdditionalInstanceConfiguration`](crate::model::AdditionalInstanceConfiguration).
     pub fn builder() -> crate::model::additional_instance_configuration::Builder {
         crate::model::additional_instance_configuration::Builder::default()
     }
@@ -6622,6 +6776,7 @@ impl AdditionalInstanceConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SystemsManagerAgent {
     /// <p>Controls whether the Systems Manager agent is removed from your final build image, prior to creating the new AMI. If this is set to true, then the agent is removed from the final image. If it's set to false, then the agent is left in, so that it is included in the new AMI. The default value is false.</p>
+    #[doc(hidden)]
     pub uninstall_after_build: std::option::Option<bool>,
 }
 impl SystemsManagerAgent {
@@ -6637,11 +6792,10 @@ impl std::fmt::Debug for SystemsManagerAgent {
         formatter.finish()
     }
 }
-/// See [`SystemsManagerAgent`](crate::model::SystemsManagerAgent)
+/// See [`SystemsManagerAgent`](crate::model::SystemsManagerAgent).
 pub mod systems_manager_agent {
 
-    /// A builder for [`SystemsManagerAgent`](crate::model::SystemsManagerAgent)
-    #[non_exhaustive]
+    /// A builder for [`SystemsManagerAgent`](crate::model::SystemsManagerAgent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) uninstall_after_build: std::option::Option<bool>,
@@ -6657,7 +6811,7 @@ pub mod systems_manager_agent {
             self.uninstall_after_build = input;
             self
         }
-        /// Consumes the builder and constructs a [`SystemsManagerAgent`](crate::model::SystemsManagerAgent)
+        /// Consumes the builder and constructs a [`SystemsManagerAgent`](crate::model::SystemsManagerAgent).
         pub fn build(self) -> crate::model::SystemsManagerAgent {
             crate::model::SystemsManagerAgent {
                 uninstall_after_build: self.uninstall_after_build,
@@ -6666,7 +6820,7 @@ pub mod systems_manager_agent {
     }
 }
 impl SystemsManagerAgent {
-    /// Creates a new builder-style object to manufacture [`SystemsManagerAgent`](crate::model::SystemsManagerAgent)
+    /// Creates a new builder-style object to manufacture [`SystemsManagerAgent`](crate::model::SystemsManagerAgent).
     pub fn builder() -> crate::model::systems_manager_agent::Builder {
         crate::model::systems_manager_agent::Builder::default()
     }
@@ -6677,12 +6831,16 @@ impl SystemsManagerAgent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceBlockDeviceMapping {
     /// <p>The device to which these mappings apply.</p>
+    #[doc(hidden)]
     pub device_name: std::option::Option<std::string::String>,
     /// <p>Use to manage Amazon EBS-specific configuration for this mapping.</p>
+    #[doc(hidden)]
     pub ebs: std::option::Option<crate::model::EbsInstanceBlockDeviceSpecification>,
     /// <p>Use to manage instance ephemeral devices.</p>
+    #[doc(hidden)]
     pub virtual_name: std::option::Option<std::string::String>,
     /// <p>Use to remove a mapping from the base image.</p>
+    #[doc(hidden)]
     pub no_device: std::option::Option<std::string::String>,
 }
 impl InstanceBlockDeviceMapping {
@@ -6713,11 +6871,10 @@ impl std::fmt::Debug for InstanceBlockDeviceMapping {
         formatter.finish()
     }
 }
-/// See [`InstanceBlockDeviceMapping`](crate::model::InstanceBlockDeviceMapping)
+/// See [`InstanceBlockDeviceMapping`](crate::model::InstanceBlockDeviceMapping).
 pub mod instance_block_device_mapping {
 
-    /// A builder for [`InstanceBlockDeviceMapping`](crate::model::InstanceBlockDeviceMapping)
-    #[non_exhaustive]
+    /// A builder for [`InstanceBlockDeviceMapping`](crate::model::InstanceBlockDeviceMapping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_name: std::option::Option<std::string::String>,
@@ -6769,7 +6926,7 @@ pub mod instance_block_device_mapping {
             self.no_device = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceBlockDeviceMapping`](crate::model::InstanceBlockDeviceMapping)
+        /// Consumes the builder and constructs a [`InstanceBlockDeviceMapping`](crate::model::InstanceBlockDeviceMapping).
         pub fn build(self) -> crate::model::InstanceBlockDeviceMapping {
             crate::model::InstanceBlockDeviceMapping {
                 device_name: self.device_name,
@@ -6781,7 +6938,7 @@ pub mod instance_block_device_mapping {
     }
 }
 impl InstanceBlockDeviceMapping {
-    /// Creates a new builder-style object to manufacture [`InstanceBlockDeviceMapping`](crate::model::InstanceBlockDeviceMapping)
+    /// Creates a new builder-style object to manufacture [`InstanceBlockDeviceMapping`](crate::model::InstanceBlockDeviceMapping).
     pub fn builder() -> crate::model::instance_block_device_mapping::Builder {
         crate::model::instance_block_device_mapping::Builder::default()
     }
@@ -6792,20 +6949,28 @@ impl InstanceBlockDeviceMapping {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EbsInstanceBlockDeviceSpecification {
     /// <p>Use to configure device encryption.</p>
+    #[doc(hidden)]
     pub encrypted: std::option::Option<bool>,
     /// <p>Use to configure delete on termination of the associated device.</p>
+    #[doc(hidden)]
     pub delete_on_termination: std::option::Option<bool>,
     /// <p>Use to configure device IOPS.</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
     /// <p>Use to configure the KMS key to use when encrypting the device.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The snapshot that defines the device contents.</p>
+    #[doc(hidden)]
     pub snapshot_id: std::option::Option<std::string::String>,
     /// <p>Use to override the device's volume size.</p>
+    #[doc(hidden)]
     pub volume_size: std::option::Option<i32>,
     /// <p>Use to override the device's volume type.</p>
+    #[doc(hidden)]
     pub volume_type: std::option::Option<crate::model::EbsVolumeType>,
     /// <p> <b>For GP3 volumes only</b> – The throughput in MiB/s that the volume supports. </p>
+    #[doc(hidden)]
     pub throughput: std::option::Option<i32>,
 }
 impl EbsInstanceBlockDeviceSpecification {
@@ -6856,11 +7021,10 @@ impl std::fmt::Debug for EbsInstanceBlockDeviceSpecification {
         formatter.finish()
     }
 }
-/// See [`EbsInstanceBlockDeviceSpecification`](crate::model::EbsInstanceBlockDeviceSpecification)
+/// See [`EbsInstanceBlockDeviceSpecification`](crate::model::EbsInstanceBlockDeviceSpecification).
 pub mod ebs_instance_block_device_specification {
 
-    /// A builder for [`EbsInstanceBlockDeviceSpecification`](crate::model::EbsInstanceBlockDeviceSpecification)
-    #[non_exhaustive]
+    /// A builder for [`EbsInstanceBlockDeviceSpecification`](crate::model::EbsInstanceBlockDeviceSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encrypted: std::option::Option<bool>,
@@ -6956,7 +7120,7 @@ pub mod ebs_instance_block_device_specification {
             self.throughput = input;
             self
         }
-        /// Consumes the builder and constructs a [`EbsInstanceBlockDeviceSpecification`](crate::model::EbsInstanceBlockDeviceSpecification)
+        /// Consumes the builder and constructs a [`EbsInstanceBlockDeviceSpecification`](crate::model::EbsInstanceBlockDeviceSpecification).
         pub fn build(self) -> crate::model::EbsInstanceBlockDeviceSpecification {
             crate::model::EbsInstanceBlockDeviceSpecification {
                 encrypted: self.encrypted,
@@ -6972,7 +7136,7 @@ pub mod ebs_instance_block_device_specification {
     }
 }
 impl EbsInstanceBlockDeviceSpecification {
-    /// Creates a new builder-style object to manufacture [`EbsInstanceBlockDeviceSpecification`](crate::model::EbsInstanceBlockDeviceSpecification)
+    /// Creates a new builder-style object to manufacture [`EbsInstanceBlockDeviceSpecification`](crate::model::EbsInstanceBlockDeviceSpecification).
     pub fn builder() -> crate::model::ebs_instance_block_device_specification::Builder {
         crate::model::ebs_instance_block_device_specification::Builder::default()
     }
@@ -7058,8 +7222,10 @@ impl AsRef<str> for EbsVolumeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentConfiguration {
     /// <p>The Amazon Resource Name (ARN) of the component.</p>
+    #[doc(hidden)]
     pub component_arn: std::option::Option<std::string::String>,
     /// <p>A group of parameter settings that are used to configure the component for a specific recipe.</p>
+    #[doc(hidden)]
     pub parameters: std::option::Option<std::vec::Vec<crate::model::ComponentParameter>>,
 }
 impl ComponentConfiguration {
@@ -7080,11 +7246,10 @@ impl std::fmt::Debug for ComponentConfiguration {
         formatter.finish()
     }
 }
-/// See [`ComponentConfiguration`](crate::model::ComponentConfiguration)
+/// See [`ComponentConfiguration`](crate::model::ComponentConfiguration).
 pub mod component_configuration {
 
-    /// A builder for [`ComponentConfiguration`](crate::model::ComponentConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ComponentConfiguration`](crate::model::ComponentConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) component_arn: std::option::Option<std::string::String>,
@@ -7123,7 +7288,7 @@ pub mod component_configuration {
             self.parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentConfiguration`](crate::model::ComponentConfiguration)
+        /// Consumes the builder and constructs a [`ComponentConfiguration`](crate::model::ComponentConfiguration).
         pub fn build(self) -> crate::model::ComponentConfiguration {
             crate::model::ComponentConfiguration {
                 component_arn: self.component_arn,
@@ -7133,7 +7298,7 @@ pub mod component_configuration {
     }
 }
 impl ComponentConfiguration {
-    /// Creates a new builder-style object to manufacture [`ComponentConfiguration`](crate::model::ComponentConfiguration)
+    /// Creates a new builder-style object to manufacture [`ComponentConfiguration`](crate::model::ComponentConfiguration).
     pub fn builder() -> crate::model::component_configuration::Builder {
         crate::model::component_configuration::Builder::default()
     }
@@ -7144,8 +7309,10 @@ impl ComponentConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentParameter {
     /// <p>The name of the component parameter to set.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Sets the value for the named component parameter.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ComponentParameter {
@@ -7166,11 +7333,10 @@ impl std::fmt::Debug for ComponentParameter {
         formatter.finish()
     }
 }
-/// See [`ComponentParameter`](crate::model::ComponentParameter)
+/// See [`ComponentParameter`](crate::model::ComponentParameter).
 pub mod component_parameter {
 
-    /// A builder for [`ComponentParameter`](crate::model::ComponentParameter)
-    #[non_exhaustive]
+    /// A builder for [`ComponentParameter`](crate::model::ComponentParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -7206,7 +7372,7 @@ pub mod component_parameter {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentParameter`](crate::model::ComponentParameter)
+        /// Consumes the builder and constructs a [`ComponentParameter`](crate::model::ComponentParameter).
         pub fn build(self) -> crate::model::ComponentParameter {
             crate::model::ComponentParameter {
                 name: self.name,
@@ -7216,7 +7382,7 @@ pub mod component_parameter {
     }
 }
 impl ComponentParameter {
-    /// Creates a new builder-style object to manufacture [`ComponentParameter`](crate::model::ComponentParameter)
+    /// Creates a new builder-style object to manufacture [`ComponentParameter`](crate::model::ComponentParameter).
     pub fn builder() -> crate::model::component_parameter::Builder {
         crate::model::component_parameter::Builder::default()
     }
@@ -7240,10 +7406,13 @@ pub struct Image {
     /// <li> <p>Build version ARNs have all four nodes, and point to a specific build for a specific version of an object.</p> </li>
     /// </ol>
     /// </note>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Specifies whether this is an AMI or container image.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ImageType>,
     /// <p>The name of the image.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The semantic version of the image.</p> <note>
     /// <p>The semantic version has four nodes: <major>
@@ -7262,35 +7431,50 @@ pub struct Image {
     /// <p> <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date, such as 2021.01.01.</p>
     /// <p> <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.</p>
     /// </note>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The platform of the image.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::Platform>,
     /// <p> Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.</p>
+    #[doc(hidden)]
     pub enhanced_image_metadata_enabled: std::option::Option<bool>,
     /// <p>The operating system version of the instance. For example, Amazon Linux 2, Ubuntu 18, or Microsoft Windows Server 2019.</p>
+    #[doc(hidden)]
     pub os_version: std::option::Option<std::string::String>,
     /// <p>The state of the image.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ImageState>,
     /// <p>The image recipe used when creating the image.</p>
+    #[doc(hidden)]
     pub image_recipe: std::option::Option<crate::model::ImageRecipe>,
     /// <p>The recipe that is used to create an Image Builder container image.</p>
+    #[doc(hidden)]
     pub container_recipe: std::option::Option<crate::model::ContainerRecipe>,
     /// <p>The name of the image pipeline that created this image.</p>
+    #[doc(hidden)]
     pub source_pipeline_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the image pipeline that created this image.</p>
+    #[doc(hidden)]
     pub source_pipeline_arn: std::option::Option<std::string::String>,
     /// <p>The infrastructure used when creating this image.</p>
+    #[doc(hidden)]
     pub infrastructure_configuration:
         std::option::Option<crate::model::InfrastructureConfiguration>,
     /// <p>The distribution configuration used when creating this image.</p>
+    #[doc(hidden)]
     pub distribution_configuration: std::option::Option<crate::model::DistributionConfiguration>,
     /// <p>The image tests configuration used when creating this image.</p>
+    #[doc(hidden)]
     pub image_tests_configuration: std::option::Option<crate::model::ImageTestsConfiguration>,
     /// <p>The date on which this image was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>The output resources produced when creating this image.</p>
+    #[doc(hidden)]
     pub output_resources: std::option::Option<crate::model::OutputResources>,
     /// <p>The tags of the image.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Indicates the type of build that created this image. The build can be initiated in the following ways:</p>
@@ -7299,6 +7483,7 @@ pub struct Image {
     /// <li> <p> <b>SCHEDULED</b> – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from EventBridge.</p> </li>
     /// <li> <p> <b>IMPORT</b> – A VM import created the image to use as the base image for the recipe.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub build_type: std::option::Option<crate::model::BuildType>,
 }
 impl Image {
@@ -7456,11 +7641,10 @@ impl std::fmt::Debug for Image {
         formatter.finish()
     }
 }
-/// See [`Image`](crate::model::Image)
+/// See [`Image`](crate::model::Image).
 pub mod image {
 
-    /// A builder for [`Image`](crate::model::Image)
-    #[non_exhaustive]
+    /// A builder for [`Image`](crate::model::Image).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -7801,7 +7985,7 @@ pub mod image {
             self.build_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Image`](crate::model::Image)
+        /// Consumes the builder and constructs a [`Image`](crate::model::Image).
         pub fn build(self) -> crate::model::Image {
             crate::model::Image {
                 arn: self.arn,
@@ -7828,7 +8012,7 @@ pub mod image {
     }
 }
 impl Image {
-    /// Creates a new builder-style object to manufacture [`Image`](crate::model::Image)
+    /// Creates a new builder-style object to manufacture [`Image`](crate::model::Image).
     pub fn builder() -> crate::model::image::Builder {
         crate::model::image::Builder::default()
     }
@@ -7839,20 +8023,28 @@ impl Image {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DistributionConfiguration {
     /// <p>The Amazon Resource Name (ARN) of the distribution configuration.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the distribution configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the distribution configuration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The distribution objects that apply Region-specific settings for the deployment of the image to targeted Regions.</p>
+    #[doc(hidden)]
     pub distributions: std::option::Option<std::vec::Vec<crate::model::Distribution>>,
     /// <p>The maximum duration in minutes for this distribution configuration.</p>
+    #[doc(hidden)]
     pub timeout_minutes: std::option::Option<i32>,
     /// <p>The date on which this distribution configuration was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>The date on which this distribution configuration was last updated.</p>
+    #[doc(hidden)]
     pub date_updated: std::option::Option<std::string::String>,
     /// <p>The tags of the distribution configuration.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -7907,11 +8099,10 @@ impl std::fmt::Debug for DistributionConfiguration {
         formatter.finish()
     }
 }
-/// See [`DistributionConfiguration`](crate::model::DistributionConfiguration)
+/// See [`DistributionConfiguration`](crate::model::DistributionConfiguration).
 pub mod distribution_configuration {
 
-    /// A builder for [`DistributionConfiguration`](crate::model::DistributionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DistributionConfiguration`](crate::model::DistributionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -8030,7 +8221,7 @@ pub mod distribution_configuration {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DistributionConfiguration`](crate::model::DistributionConfiguration)
+        /// Consumes the builder and constructs a [`DistributionConfiguration`](crate::model::DistributionConfiguration).
         pub fn build(self) -> crate::model::DistributionConfiguration {
             crate::model::DistributionConfiguration {
                 arn: self.arn,
@@ -8046,7 +8237,7 @@ pub mod distribution_configuration {
     }
 }
 impl DistributionConfiguration {
-    /// Creates a new builder-style object to manufacture [`DistributionConfiguration`](crate::model::DistributionConfiguration)
+    /// Creates a new builder-style object to manufacture [`DistributionConfiguration`](crate::model::DistributionConfiguration).
     pub fn builder() -> crate::model::distribution_configuration::Builder {
         crate::model::distribution_configuration::Builder::default()
     }
@@ -8070,16 +8261,22 @@ pub struct ContainerRecipe {
     /// <li> <p>Build version ARNs have all four nodes, and point to a specific build for a specific version of an object.</p> </li>
     /// </ol>
     /// </note>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Specifies the type of container, such as Docker.</p>
+    #[doc(hidden)]
     pub container_type: std::option::Option<crate::model::ContainerType>,
     /// <p>The name of the container recipe.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the container recipe.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The system platform for the container, such as Windows or Linux.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::Platform>,
     /// <p>The owner of the container recipe.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The semantic version of the container recipe.</p> <note>
     /// <p>The semantic version has four nodes: <major>
@@ -8098,27 +8295,38 @@ pub struct ContainerRecipe {
     /// <p> <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date, such as 2021.01.01.</p>
     /// <p> <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.</p>
     /// </note>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>Components for build and test that are included in the container recipe.</p>
+    #[doc(hidden)]
     pub components: std::option::Option<std::vec::Vec<crate::model::ComponentConfiguration>>,
     /// <p>A group of options that can be used to configure an instance for building and testing container images.</p>
+    #[doc(hidden)]
     pub instance_configuration: std::option::Option<crate::model::InstanceConfiguration>,
     /// <p>Dockerfiles are text documents that are used to build Docker containers, and ensure that they contain all of the elements required by the application running inside. The template data consists of contextual variables where Image Builder places build information or scripts, based on your container image recipe.</p>
+    #[doc(hidden)]
     pub dockerfile_template_data: std::option::Option<std::string::String>,
     /// <p>Identifies which KMS key is used to encrypt the container image for distribution to the target Region.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>A flag that indicates if the target container is encrypted.</p>
+    #[doc(hidden)]
     pub encrypted: std::option::Option<bool>,
     /// <p>The base image for the container recipe.</p>
+    #[doc(hidden)]
     pub parent_image: std::option::Option<std::string::String>,
     /// <p>The date when this container recipe was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>Tags that are attached to the container recipe.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The working directory for use during build and test workflows.</p>
+    #[doc(hidden)]
     pub working_directory: std::option::Option<std::string::String>,
     /// <p>The destination repository for the container image.</p>
+    #[doc(hidden)]
     pub target_repository: std::option::Option<crate::model::TargetContainerRepository>,
 }
 impl ContainerRecipe {
@@ -8250,11 +8458,10 @@ impl std::fmt::Debug for ContainerRecipe {
         formatter.finish()
     }
 }
-/// See [`ContainerRecipe`](crate::model::ContainerRecipe)
+/// See [`ContainerRecipe`](crate::model::ContainerRecipe).
 pub mod container_recipe {
 
-    /// A builder for [`ContainerRecipe`](crate::model::ContainerRecipe)
-    #[non_exhaustive]
+    /// A builder for [`ContainerRecipe`](crate::model::ContainerRecipe).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -8549,7 +8756,7 @@ pub mod container_recipe {
             self.target_repository = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContainerRecipe`](crate::model::ContainerRecipe)
+        /// Consumes the builder and constructs a [`ContainerRecipe`](crate::model::ContainerRecipe).
         pub fn build(self) -> crate::model::ContainerRecipe {
             crate::model::ContainerRecipe {
                 arn: self.arn,
@@ -8574,7 +8781,7 @@ pub mod container_recipe {
     }
 }
 impl ContainerRecipe {
-    /// Creates a new builder-style object to manufacture [`ContainerRecipe`](crate::model::ContainerRecipe)
+    /// Creates a new builder-style object to manufacture [`ContainerRecipe`](crate::model::ContainerRecipe).
     pub fn builder() -> crate::model::container_recipe::Builder {
         crate::model::container_recipe::Builder::default()
     }
@@ -8585,8 +8792,10 @@ impl ContainerRecipe {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceConfiguration {
     /// <p>The AMI ID to use as the base image for a container build and test instance. If not specified, Image Builder will use the appropriate ECS-optimized AMI as a base image.</p>
+    #[doc(hidden)]
     pub image: std::option::Option<std::string::String>,
     /// <p>Defines the block devices to attach for building an instance from this Image Builder AMI.</p>
+    #[doc(hidden)]
     pub block_device_mappings:
         std::option::Option<std::vec::Vec<crate::model::InstanceBlockDeviceMapping>>,
 }
@@ -8610,11 +8819,10 @@ impl std::fmt::Debug for InstanceConfiguration {
         formatter.finish()
     }
 }
-/// See [`InstanceConfiguration`](crate::model::InstanceConfiguration)
+/// See [`InstanceConfiguration`](crate::model::InstanceConfiguration).
 pub mod instance_configuration {
 
-    /// A builder for [`InstanceConfiguration`](crate::model::InstanceConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`InstanceConfiguration`](crate::model::InstanceConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) image: std::option::Option<std::string::String>,
@@ -8654,7 +8862,7 @@ pub mod instance_configuration {
             self.block_device_mappings = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceConfiguration`](crate::model::InstanceConfiguration)
+        /// Consumes the builder and constructs a [`InstanceConfiguration`](crate::model::InstanceConfiguration).
         pub fn build(self) -> crate::model::InstanceConfiguration {
             crate::model::InstanceConfiguration {
                 image: self.image,
@@ -8664,7 +8872,7 @@ pub mod instance_configuration {
     }
 }
 impl InstanceConfiguration {
-    /// Creates a new builder-style object to manufacture [`InstanceConfiguration`](crate::model::InstanceConfiguration)
+    /// Creates a new builder-style object to manufacture [`InstanceConfiguration`](crate::model::InstanceConfiguration).
     pub fn builder() -> crate::model::instance_configuration::Builder {
         crate::model::instance_configuration::Builder::default()
     }
@@ -8675,36 +8883,52 @@ impl InstanceConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Component {
     /// <p>The Amazon Resource Name (ARN) of the component.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the component.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The version of the component.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The description of the component.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The change description of the component.</p>
+    #[doc(hidden)]
     pub change_description: std::option::Option<std::string::String>,
     /// <p>The type of the component denotes whether the component is used to build the image or only to test it.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ComponentType>,
     /// <p>The platform of the component.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::Platform>,
     /// <p>The operating system (OS) version supported by the component. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation.</p>
+    #[doc(hidden)]
     pub supported_os_versions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Describes the current status of the component. This is used for components that are no longer active.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ComponentState>,
     /// <p>Contains parameter details for each of the parameters that are defined for the component.</p>
+    #[doc(hidden)]
     pub parameters: std::option::Option<std::vec::Vec<crate::model::ComponentParameterDetail>>,
     /// <p>The owner of the component.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>Component data contains the YAML document content for the component.</p>
+    #[doc(hidden)]
     pub data: std::option::Option<std::string::String>,
     /// <p>The KMS key identifier used to encrypt the component.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The encryption status of the component.</p>
+    #[doc(hidden)]
     pub encrypted: std::option::Option<bool>,
     /// <p>The date that the component was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<std::string::String>,
     /// <p>The tags associated with the component.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -8799,11 +9023,10 @@ impl std::fmt::Debug for Component {
         formatter.finish()
     }
 }
-/// See [`Component`](crate::model::Component)
+/// See [`Component`](crate::model::Component).
 pub mod component {
 
-    /// A builder for [`Component`](crate::model::Component)
-    #[non_exhaustive]
+    /// A builder for [`Component`](crate::model::Component).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -9026,7 +9249,7 @@ pub mod component {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Component`](crate::model::Component)
+        /// Consumes the builder and constructs a [`Component`](crate::model::Component).
         pub fn build(self) -> crate::model::Component {
             crate::model::Component {
                 arn: self.arn,
@@ -9050,7 +9273,7 @@ pub mod component {
     }
 }
 impl Component {
-    /// Creates a new builder-style object to manufacture [`Component`](crate::model::Component)
+    /// Creates a new builder-style object to manufacture [`Component`](crate::model::Component).
     pub fn builder() -> crate::model::component::Builder {
         crate::model::component::Builder::default()
     }
@@ -9061,12 +9284,16 @@ impl Component {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentParameterDetail {
     /// <p>The name of this input parameter.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of input this parameter provides. The currently supported value is "string".</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The default value of this parameter if no input is provided.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Describes this parameter.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl ComponentParameterDetail {
@@ -9097,11 +9324,10 @@ impl std::fmt::Debug for ComponentParameterDetail {
         formatter.finish()
     }
 }
-/// See [`ComponentParameterDetail`](crate::model::ComponentParameterDetail)
+/// See [`ComponentParameterDetail`](crate::model::ComponentParameterDetail).
 pub mod component_parameter_detail {
 
-    /// A builder for [`ComponentParameterDetail`](crate::model::ComponentParameterDetail)
-    #[non_exhaustive]
+    /// A builder for [`ComponentParameterDetail`](crate::model::ComponentParameterDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -9159,7 +9385,7 @@ pub mod component_parameter_detail {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentParameterDetail`](crate::model::ComponentParameterDetail)
+        /// Consumes the builder and constructs a [`ComponentParameterDetail`](crate::model::ComponentParameterDetail).
         pub fn build(self) -> crate::model::ComponentParameterDetail {
             crate::model::ComponentParameterDetail {
                 name: self.name,
@@ -9171,7 +9397,7 @@ pub mod component_parameter_detail {
     }
 }
 impl ComponentParameterDetail {
-    /// Creates a new builder-style object to manufacture [`ComponentParameterDetail`](crate::model::ComponentParameterDetail)
+    /// Creates a new builder-style object to manufacture [`ComponentParameterDetail`](crate::model::ComponentParameterDetail).
     pub fn builder() -> crate::model::component_parameter_detail::Builder {
         crate::model::component_parameter_detail::Builder::default()
     }

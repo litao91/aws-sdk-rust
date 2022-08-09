@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateWebAclOutput {
     /// <p>A token used for optimistic locking. WAF returns this token to your <code>update</code> requests. You use <code>NextLockToken</code> in the same manner as you use <code>LockToken</code>. </p>
+    #[doc(hidden)]
     pub next_lock_token: std::option::Option<std::string::String>,
 }
 impl UpdateWebAclOutput {
@@ -19,11 +20,10 @@ impl std::fmt::Debug for UpdateWebAclOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput)
+/// See [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput).
 pub mod update_web_acl_output {
 
-    /// A builder for [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_lock_token: std::option::Option<std::string::String>,
@@ -42,7 +42,7 @@ pub mod update_web_acl_output {
             self.next_lock_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput)
+        /// Consumes the builder and constructs a [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput).
         pub fn build(self) -> crate::output::UpdateWebAclOutput {
             crate::output::UpdateWebAclOutput {
                 next_lock_token: self.next_lock_token,
@@ -51,7 +51,7 @@ pub mod update_web_acl_output {
     }
 }
 impl UpdateWebAclOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateWebAclOutput`](crate::output::UpdateWebAclOutput).
     pub fn builder() -> crate::output::update_web_acl_output::Builder {
         crate::output::update_web_acl_output::Builder::default()
     }
@@ -62,6 +62,7 @@ impl UpdateWebAclOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateRuleGroupOutput {
     /// <p>A token used for optimistic locking. WAF returns this token to your <code>update</code> requests. You use <code>NextLockToken</code> in the same manner as you use <code>LockToken</code>. </p>
+    #[doc(hidden)]
     pub next_lock_token: std::option::Option<std::string::String>,
 }
 impl UpdateRuleGroupOutput {
@@ -77,11 +78,10 @@ impl std::fmt::Debug for UpdateRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
+/// See [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput).
 pub mod update_rule_group_output {
 
-    /// A builder for [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_lock_token: std::option::Option<std::string::String>,
@@ -100,7 +100,7 @@ pub mod update_rule_group_output {
             self.next_lock_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
+        /// Consumes the builder and constructs a [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput).
         pub fn build(self) -> crate::output::UpdateRuleGroupOutput {
             crate::output::UpdateRuleGroupOutput {
                 next_lock_token: self.next_lock_token,
@@ -109,7 +109,7 @@ pub mod update_rule_group_output {
     }
 }
 impl UpdateRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput).
     pub fn builder() -> crate::output::update_rule_group_output::Builder {
         crate::output::update_rule_group_output::Builder::default()
     }
@@ -120,6 +120,7 @@ impl UpdateRuleGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateRegexPatternSetOutput {
     /// <p>A token used for optimistic locking. WAF returns this token to your <code>update</code> requests. You use <code>NextLockToken</code> in the same manner as you use <code>LockToken</code>. </p>
+    #[doc(hidden)]
     pub next_lock_token: std::option::Option<std::string::String>,
 }
 impl UpdateRegexPatternSetOutput {
@@ -135,11 +136,10 @@ impl std::fmt::Debug for UpdateRegexPatternSetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput)
+/// See [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput).
 pub mod update_regex_pattern_set_output {
 
-    /// A builder for [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_lock_token: std::option::Option<std::string::String>,
@@ -158,7 +158,7 @@ pub mod update_regex_pattern_set_output {
             self.next_lock_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput)
+        /// Consumes the builder and constructs a [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput).
         pub fn build(self) -> crate::output::UpdateRegexPatternSetOutput {
             crate::output::UpdateRegexPatternSetOutput {
                 next_lock_token: self.next_lock_token,
@@ -167,7 +167,7 @@ pub mod update_regex_pattern_set_output {
     }
 }
 impl UpdateRegexPatternSetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRegexPatternSetOutput`](crate::output::UpdateRegexPatternSetOutput).
     pub fn builder() -> crate::output::update_regex_pattern_set_output::Builder {
         crate::output::update_regex_pattern_set_output::Builder::default()
     }
@@ -178,11 +178,14 @@ impl UpdateRegexPatternSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateManagedRuleSetVersionExpiryDateOutput {
     /// <p>The version that is set to expire. </p>
+    #[doc(hidden)]
     pub expiring_version: std::option::Option<std::string::String>,
     /// <p>The time that the version will expire. </p>
     /// <p>Times are in Coordinated Universal Time (UTC) format. UTC format includes the special designator, Z. For example, "2016-09-27T14:50Z". </p>
+    #[doc(hidden)]
     pub expiry_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A token used for optimistic locking. WAF returns a token to your <code>get</code> and <code>list</code> requests, to mark the state of the entity at the time of the request. To make changes to the entity associated with the token, you provide the token to operations like <code>update</code> and <code>delete</code>. WAF uses the token to ensure that no changes have been made to the entity since you last retrieved it. If a change has been made, the update fails with a <code>WAFOptimisticLockException</code>. If this happens, perform another <code>get</code>, and use the new token returned by that operation. </p>
+    #[doc(hidden)]
     pub next_lock_token: std::option::Option<std::string::String>,
 }
 impl UpdateManagedRuleSetVersionExpiryDateOutput {
@@ -209,11 +212,10 @@ impl std::fmt::Debug for UpdateManagedRuleSetVersionExpiryDateOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateManagedRuleSetVersionExpiryDateOutput`](crate::output::UpdateManagedRuleSetVersionExpiryDateOutput)
+/// See [`UpdateManagedRuleSetVersionExpiryDateOutput`](crate::output::UpdateManagedRuleSetVersionExpiryDateOutput).
 pub mod update_managed_rule_set_version_expiry_date_output {
 
-    /// A builder for [`UpdateManagedRuleSetVersionExpiryDateOutput`](crate::output::UpdateManagedRuleSetVersionExpiryDateOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateManagedRuleSetVersionExpiryDateOutput`](crate::output::UpdateManagedRuleSetVersionExpiryDateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) expiring_version: std::option::Option<std::string::String>,
@@ -262,7 +264,7 @@ pub mod update_managed_rule_set_version_expiry_date_output {
             self.next_lock_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateManagedRuleSetVersionExpiryDateOutput`](crate::output::UpdateManagedRuleSetVersionExpiryDateOutput)
+        /// Consumes the builder and constructs a [`UpdateManagedRuleSetVersionExpiryDateOutput`](crate::output::UpdateManagedRuleSetVersionExpiryDateOutput).
         pub fn build(self) -> crate::output::UpdateManagedRuleSetVersionExpiryDateOutput {
             crate::output::UpdateManagedRuleSetVersionExpiryDateOutput {
                 expiring_version: self.expiring_version,
@@ -273,7 +275,7 @@ pub mod update_managed_rule_set_version_expiry_date_output {
     }
 }
 impl UpdateManagedRuleSetVersionExpiryDateOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateManagedRuleSetVersionExpiryDateOutput`](crate::output::UpdateManagedRuleSetVersionExpiryDateOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateManagedRuleSetVersionExpiryDateOutput`](crate::output::UpdateManagedRuleSetVersionExpiryDateOutput).
     pub fn builder() -> crate::output::update_managed_rule_set_version_expiry_date_output::Builder {
         crate::output::update_managed_rule_set_version_expiry_date_output::Builder::default()
     }
@@ -284,6 +286,7 @@ impl UpdateManagedRuleSetVersionExpiryDateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateIpSetOutput {
     /// <p>A token used for optimistic locking. WAF returns this token to your <code>update</code> requests. You use <code>NextLockToken</code> in the same manner as you use <code>LockToken</code>. </p>
+    #[doc(hidden)]
     pub next_lock_token: std::option::Option<std::string::String>,
 }
 impl UpdateIpSetOutput {
@@ -299,11 +302,10 @@ impl std::fmt::Debug for UpdateIpSetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput)
+/// See [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput).
 pub mod update_ip_set_output {
 
-    /// A builder for [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_lock_token: std::option::Option<std::string::String>,
@@ -322,7 +324,7 @@ pub mod update_ip_set_output {
             self.next_lock_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput)
+        /// Consumes the builder and constructs a [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput).
         pub fn build(self) -> crate::output::UpdateIpSetOutput {
             crate::output::UpdateIpSetOutput {
                 next_lock_token: self.next_lock_token,
@@ -331,7 +333,7 @@ pub mod update_ip_set_output {
     }
 }
 impl UpdateIpSetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateIpSetOutput`](crate::output::UpdateIpSetOutput).
     pub fn builder() -> crate::output::update_ip_set_output::Builder {
         crate::output::update_ip_set_output::Builder::default()
     }
@@ -347,22 +349,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -378,22 +379,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -409,22 +409,21 @@ impl std::fmt::Debug for PutPermissionPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput)
+/// See [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput).
 pub mod put_permission_policy_output {
 
-    /// A builder for [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput)
+        /// Consumes the builder and constructs a [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput).
         pub fn build(self) -> crate::output::PutPermissionPolicyOutput {
             crate::output::PutPermissionPolicyOutput {}
         }
     }
 }
 impl PutPermissionPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutPermissionPolicyOutput`](crate::output::PutPermissionPolicyOutput).
     pub fn builder() -> crate::output::put_permission_policy_output::Builder {
         crate::output::put_permission_policy_output::Builder::default()
     }
@@ -435,6 +434,7 @@ impl PutPermissionPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutManagedRuleSetVersionsOutput {
     /// <p>A token used for optimistic locking. WAF returns a token to your <code>get</code> and <code>list</code> requests, to mark the state of the entity at the time of the request. To make changes to the entity associated with the token, you provide the token to operations like <code>update</code> and <code>delete</code>. WAF uses the token to ensure that no changes have been made to the entity since you last retrieved it. If a change has been made, the update fails with a <code>WAFOptimisticLockException</code>. If this happens, perform another <code>get</code>, and use the new token returned by that operation. </p>
+    #[doc(hidden)]
     pub next_lock_token: std::option::Option<std::string::String>,
 }
 impl PutManagedRuleSetVersionsOutput {
@@ -450,11 +450,10 @@ impl std::fmt::Debug for PutManagedRuleSetVersionsOutput {
         formatter.finish()
     }
 }
-/// See [`PutManagedRuleSetVersionsOutput`](crate::output::PutManagedRuleSetVersionsOutput)
+/// See [`PutManagedRuleSetVersionsOutput`](crate::output::PutManagedRuleSetVersionsOutput).
 pub mod put_managed_rule_set_versions_output {
 
-    /// A builder for [`PutManagedRuleSetVersionsOutput`](crate::output::PutManagedRuleSetVersionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutManagedRuleSetVersionsOutput`](crate::output::PutManagedRuleSetVersionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_lock_token: std::option::Option<std::string::String>,
@@ -473,7 +472,7 @@ pub mod put_managed_rule_set_versions_output {
             self.next_lock_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutManagedRuleSetVersionsOutput`](crate::output::PutManagedRuleSetVersionsOutput)
+        /// Consumes the builder and constructs a [`PutManagedRuleSetVersionsOutput`](crate::output::PutManagedRuleSetVersionsOutput).
         pub fn build(self) -> crate::output::PutManagedRuleSetVersionsOutput {
             crate::output::PutManagedRuleSetVersionsOutput {
                 next_lock_token: self.next_lock_token,
@@ -482,7 +481,7 @@ pub mod put_managed_rule_set_versions_output {
     }
 }
 impl PutManagedRuleSetVersionsOutput {
-    /// Creates a new builder-style object to manufacture [`PutManagedRuleSetVersionsOutput`](crate::output::PutManagedRuleSetVersionsOutput)
+    /// Creates a new builder-style object to manufacture [`PutManagedRuleSetVersionsOutput`](crate::output::PutManagedRuleSetVersionsOutput).
     pub fn builder() -> crate::output::put_managed_rule_set_versions_output::Builder {
         crate::output::put_managed_rule_set_versions_output::Builder::default()
     }
@@ -493,6 +492,7 @@ impl PutManagedRuleSetVersionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutLoggingConfigurationOutput {
     /// <p></p>
+    #[doc(hidden)]
     pub logging_configuration: std::option::Option<crate::model::LoggingConfiguration>,
 }
 impl PutLoggingConfigurationOutput {
@@ -510,11 +510,10 @@ impl std::fmt::Debug for PutLoggingConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput)
+/// See [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput).
 pub mod put_logging_configuration_output {
 
-    /// A builder for [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logging_configuration: std::option::Option<crate::model::LoggingConfiguration>,
@@ -533,7 +532,7 @@ pub mod put_logging_configuration_output {
             self.logging_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput).
         pub fn build(self) -> crate::output::PutLoggingConfigurationOutput {
             crate::output::PutLoggingConfigurationOutput {
                 logging_configuration: self.logging_configuration,
@@ -542,7 +541,7 @@ pub mod put_logging_configuration_output {
     }
 }
 impl PutLoggingConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutLoggingConfigurationOutput`](crate::output::PutLoggingConfigurationOutput).
     pub fn builder() -> crate::output::put_logging_configuration_output::Builder {
         crate::output::put_logging_configuration_output::Builder::default()
     }
@@ -553,8 +552,10 @@ impl PutLoggingConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListWebAcLsOutput {
     /// <p>When you request a list of objects with a <code>Limit</code> setting, if the number of objects that are still available for retrieval exceeds the limit, WAF returns a <code>NextMarker</code> value in the response. To retrieve the next batch of objects, provide the marker from the prior call in your next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub web_ac_ls: std::option::Option<std::vec::Vec<crate::model::WebAclSummary>>,
 }
 impl ListWebAcLsOutput {
@@ -575,11 +576,10 @@ impl std::fmt::Debug for ListWebAcLsOutput {
         formatter.finish()
     }
 }
-/// See [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput)
+/// See [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput).
 pub mod list_web_ac_ls_output {
 
-    /// A builder for [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -615,7 +615,7 @@ pub mod list_web_ac_ls_output {
             self.web_ac_ls = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput)
+        /// Consumes the builder and constructs a [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput).
         pub fn build(self) -> crate::output::ListWebAcLsOutput {
             crate::output::ListWebAcLsOutput {
                 next_marker: self.next_marker,
@@ -625,7 +625,7 @@ pub mod list_web_ac_ls_output {
     }
 }
 impl ListWebAcLsOutput {
-    /// Creates a new builder-style object to manufacture [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput)
+    /// Creates a new builder-style object to manufacture [`ListWebAcLsOutput`](crate::output::ListWebAcLsOutput).
     pub fn builder() -> crate::output::list_web_ac_ls_output::Builder {
         crate::output::list_web_ac_ls_output::Builder::default()
     }
@@ -636,8 +636,10 @@ impl ListWebAcLsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>When you request a list of objects with a <code>Limit</code> setting, if the number of objects that are still available for retrieval exceeds the limit, WAF returns a <code>NextMarker</code> value in the response. To retrieve the next batch of objects, provide the marker from the prior call in your next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>The collection of tagging definitions for the resource. </p>
+    #[doc(hidden)]
     pub tag_info_for_resource: std::option::Option<crate::model::TagInfoForResource>,
 }
 impl ListTagsForResourceOutput {
@@ -658,11 +660,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -692,7 +693,7 @@ pub mod list_tags_for_resource_output {
             self.tag_info_for_resource = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 next_marker: self.next_marker,
@@ -702,7 +703,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -713,8 +714,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRuleGroupsOutput {
     /// <p>When you request a list of objects with a <code>Limit</code> setting, if the number of objects that are still available for retrieval exceeds the limit, WAF returns a <code>NextMarker</code> value in the response. To retrieve the next batch of objects, provide the marker from the prior call in your next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub rule_groups: std::option::Option<std::vec::Vec<crate::model::RuleGroupSummary>>,
 }
 impl ListRuleGroupsOutput {
@@ -735,11 +738,10 @@ impl std::fmt::Debug for ListRuleGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
+/// See [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput).
 pub mod list_rule_groups_output {
 
-    /// A builder for [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -775,7 +777,7 @@ pub mod list_rule_groups_output {
             self.rule_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
+        /// Consumes the builder and constructs a [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput).
         pub fn build(self) -> crate::output::ListRuleGroupsOutput {
             crate::output::ListRuleGroupsOutput {
                 next_marker: self.next_marker,
@@ -785,7 +787,7 @@ pub mod list_rule_groups_output {
     }
 }
 impl ListRuleGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput).
     pub fn builder() -> crate::output::list_rule_groups_output::Builder {
         crate::output::list_rule_groups_output::Builder::default()
     }
@@ -796,6 +798,7 @@ impl ListRuleGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListResourcesForWebAclOutput {
     /// <p>The array of Amazon Resource Names (ARNs) of the associated resources.</p>
+    #[doc(hidden)]
     pub resource_arns: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ListResourcesForWebAclOutput {
@@ -811,11 +814,10 @@ impl std::fmt::Debug for ListResourcesForWebAclOutput {
         formatter.finish()
     }
 }
-/// See [`ListResourcesForWebAclOutput`](crate::output::ListResourcesForWebAclOutput)
+/// See [`ListResourcesForWebAclOutput`](crate::output::ListResourcesForWebAclOutput).
 pub mod list_resources_for_web_acl_output {
 
-    /// A builder for [`ListResourcesForWebAclOutput`](crate::output::ListResourcesForWebAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListResourcesForWebAclOutput`](crate::output::ListResourcesForWebAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arns: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -840,7 +842,7 @@ pub mod list_resources_for_web_acl_output {
             self.resource_arns = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListResourcesForWebAclOutput`](crate::output::ListResourcesForWebAclOutput)
+        /// Consumes the builder and constructs a [`ListResourcesForWebAclOutput`](crate::output::ListResourcesForWebAclOutput).
         pub fn build(self) -> crate::output::ListResourcesForWebAclOutput {
             crate::output::ListResourcesForWebAclOutput {
                 resource_arns: self.resource_arns,
@@ -849,7 +851,7 @@ pub mod list_resources_for_web_acl_output {
     }
 }
 impl ListResourcesForWebAclOutput {
-    /// Creates a new builder-style object to manufacture [`ListResourcesForWebAclOutput`](crate::output::ListResourcesForWebAclOutput)
+    /// Creates a new builder-style object to manufacture [`ListResourcesForWebAclOutput`](crate::output::ListResourcesForWebAclOutput).
     pub fn builder() -> crate::output::list_resources_for_web_acl_output::Builder {
         crate::output::list_resources_for_web_acl_output::Builder::default()
     }
@@ -860,8 +862,10 @@ impl ListResourcesForWebAclOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRegexPatternSetsOutput {
     /// <p>When you request a list of objects with a <code>Limit</code> setting, if the number of objects that are still available for retrieval exceeds the limit, WAF returns a <code>NextMarker</code> value in the response. To retrieve the next batch of objects, provide the marker from the prior call in your next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub regex_pattern_sets:
         std::option::Option<std::vec::Vec<crate::model::RegexPatternSetSummary>>,
 }
@@ -885,11 +889,10 @@ impl std::fmt::Debug for ListRegexPatternSetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput)
+/// See [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput).
 pub mod list_regex_pattern_sets_output {
 
-    /// A builder for [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -926,7 +929,7 @@ pub mod list_regex_pattern_sets_output {
             self.regex_pattern_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput)
+        /// Consumes the builder and constructs a [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput).
         pub fn build(self) -> crate::output::ListRegexPatternSetsOutput {
             crate::output::ListRegexPatternSetsOutput {
                 next_marker: self.next_marker,
@@ -936,7 +939,7 @@ pub mod list_regex_pattern_sets_output {
     }
 }
 impl ListRegexPatternSetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListRegexPatternSetsOutput`](crate::output::ListRegexPatternSetsOutput).
     pub fn builder() -> crate::output::list_regex_pattern_sets_output::Builder {
         crate::output::list_regex_pattern_sets_output::Builder::default()
     }
@@ -947,8 +950,10 @@ impl ListRegexPatternSetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListMobileSdkReleasesOutput {
     /// <p>High level information for the available SDK releases. </p>
+    #[doc(hidden)]
     pub release_summaries: std::option::Option<std::vec::Vec<crate::model::ReleaseSummary>>,
     /// <p>When you request a list of objects with a <code>Limit</code> setting, if the number of objects that are still available for retrieval exceeds the limit, WAF returns a <code>NextMarker</code> value in the response. To retrieve the next batch of objects, provide the marker from the prior call in your next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
 }
 impl ListMobileSdkReleasesOutput {
@@ -969,11 +974,10 @@ impl std::fmt::Debug for ListMobileSdkReleasesOutput {
         formatter.finish()
     }
 }
-/// See [`ListMobileSdkReleasesOutput`](crate::output::ListMobileSdkReleasesOutput)
+/// See [`ListMobileSdkReleasesOutput`](crate::output::ListMobileSdkReleasesOutput).
 pub mod list_mobile_sdk_releases_output {
 
-    /// A builder for [`ListMobileSdkReleasesOutput`](crate::output::ListMobileSdkReleasesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListMobileSdkReleasesOutput`](crate::output::ListMobileSdkReleasesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) release_summaries:
@@ -1010,7 +1014,7 @@ pub mod list_mobile_sdk_releases_output {
             self.next_marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListMobileSdkReleasesOutput`](crate::output::ListMobileSdkReleasesOutput)
+        /// Consumes the builder and constructs a [`ListMobileSdkReleasesOutput`](crate::output::ListMobileSdkReleasesOutput).
         pub fn build(self) -> crate::output::ListMobileSdkReleasesOutput {
             crate::output::ListMobileSdkReleasesOutput {
                 release_summaries: self.release_summaries,
@@ -1020,7 +1024,7 @@ pub mod list_mobile_sdk_releases_output {
     }
 }
 impl ListMobileSdkReleasesOutput {
-    /// Creates a new builder-style object to manufacture [`ListMobileSdkReleasesOutput`](crate::output::ListMobileSdkReleasesOutput)
+    /// Creates a new builder-style object to manufacture [`ListMobileSdkReleasesOutput`](crate::output::ListMobileSdkReleasesOutput).
     pub fn builder() -> crate::output::list_mobile_sdk_releases_output::Builder {
         crate::output::list_mobile_sdk_releases_output::Builder::default()
     }
@@ -1031,8 +1035,10 @@ impl ListMobileSdkReleasesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListManagedRuleSetsOutput {
     /// <p>When you request a list of objects with a <code>Limit</code> setting, if the number of objects that are still available for retrieval exceeds the limit, WAF returns a <code>NextMarker</code> value in the response. To retrieve the next batch of objects, provide the marker from the prior call in your next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>Your managed rule sets. </p>
+    #[doc(hidden)]
     pub managed_rule_sets: std::option::Option<std::vec::Vec<crate::model::ManagedRuleSetSummary>>,
 }
 impl ListManagedRuleSetsOutput {
@@ -1053,11 +1059,10 @@ impl std::fmt::Debug for ListManagedRuleSetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListManagedRuleSetsOutput`](crate::output::ListManagedRuleSetsOutput)
+/// See [`ListManagedRuleSetsOutput`](crate::output::ListManagedRuleSetsOutput).
 pub mod list_managed_rule_sets_output {
 
-    /// A builder for [`ListManagedRuleSetsOutput`](crate::output::ListManagedRuleSetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListManagedRuleSetsOutput`](crate::output::ListManagedRuleSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1094,7 +1099,7 @@ pub mod list_managed_rule_sets_output {
             self.managed_rule_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListManagedRuleSetsOutput`](crate::output::ListManagedRuleSetsOutput)
+        /// Consumes the builder and constructs a [`ListManagedRuleSetsOutput`](crate::output::ListManagedRuleSetsOutput).
         pub fn build(self) -> crate::output::ListManagedRuleSetsOutput {
             crate::output::ListManagedRuleSetsOutput {
                 next_marker: self.next_marker,
@@ -1104,7 +1109,7 @@ pub mod list_managed_rule_sets_output {
     }
 }
 impl ListManagedRuleSetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListManagedRuleSetsOutput`](crate::output::ListManagedRuleSetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListManagedRuleSetsOutput`](crate::output::ListManagedRuleSetsOutput).
     pub fn builder() -> crate::output::list_managed_rule_sets_output::Builder {
         crate::output::list_managed_rule_sets_output::Builder::default()
     }
@@ -1115,9 +1120,11 @@ impl ListManagedRuleSetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListLoggingConfigurationsOutput {
     /// <p></p>
+    #[doc(hidden)]
     pub logging_configurations:
         std::option::Option<std::vec::Vec<crate::model::LoggingConfiguration>>,
     /// <p>When you request a list of objects with a <code>Limit</code> setting, if the number of objects that are still available for retrieval exceeds the limit, WAF returns a <code>NextMarker</code> value in the response. To retrieve the next batch of objects, provide the marker from the prior call in your next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
 }
 impl ListLoggingConfigurationsOutput {
@@ -1140,11 +1147,10 @@ impl std::fmt::Debug for ListLoggingConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput)
+/// See [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput).
 pub mod list_logging_configurations_output {
 
-    /// A builder for [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logging_configurations:
@@ -1181,7 +1187,7 @@ pub mod list_logging_configurations_output {
             self.next_marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput)
+        /// Consumes the builder and constructs a [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput).
         pub fn build(self) -> crate::output::ListLoggingConfigurationsOutput {
             crate::output::ListLoggingConfigurationsOutput {
                 logging_configurations: self.logging_configurations,
@@ -1191,7 +1197,7 @@ pub mod list_logging_configurations_output {
     }
 }
 impl ListLoggingConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListLoggingConfigurationsOutput`](crate::output::ListLoggingConfigurationsOutput).
     pub fn builder() -> crate::output::list_logging_configurations_output::Builder {
         crate::output::list_logging_configurations_output::Builder::default()
     }
@@ -1202,8 +1208,10 @@ impl ListLoggingConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListIpSetsOutput {
     /// <p>When you request a list of objects with a <code>Limit</code> setting, if the number of objects that are still available for retrieval exceeds the limit, WAF returns a <code>NextMarker</code> value in the response. To retrieve the next batch of objects, provide the marker from the prior call in your next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>Array of IPSets. This may not be the full list of IPSets that you have defined. See the <code>Limit</code> specification for this request.</p>
+    #[doc(hidden)]
     pub ip_sets: std::option::Option<std::vec::Vec<crate::model::IpSetSummary>>,
 }
 impl ListIpSetsOutput {
@@ -1224,11 +1232,10 @@ impl std::fmt::Debug for ListIpSetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListIpSetsOutput`](crate::output::ListIpSetsOutput)
+/// See [`ListIpSetsOutput`](crate::output::ListIpSetsOutput).
 pub mod list_ip_sets_output {
 
-    /// A builder for [`ListIpSetsOutput`](crate::output::ListIpSetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListIpSetsOutput`](crate::output::ListIpSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1264,7 +1271,7 @@ pub mod list_ip_sets_output {
             self.ip_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListIpSetsOutput`](crate::output::ListIpSetsOutput)
+        /// Consumes the builder and constructs a [`ListIpSetsOutput`](crate::output::ListIpSetsOutput).
         pub fn build(self) -> crate::output::ListIpSetsOutput {
             crate::output::ListIpSetsOutput {
                 next_marker: self.next_marker,
@@ -1274,7 +1281,7 @@ pub mod list_ip_sets_output {
     }
 }
 impl ListIpSetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListIpSetsOutput`](crate::output::ListIpSetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListIpSetsOutput`](crate::output::ListIpSetsOutput).
     pub fn builder() -> crate::output::list_ip_sets_output::Builder {
         crate::output::list_ip_sets_output::Builder::default()
     }
@@ -1285,10 +1292,13 @@ impl ListIpSetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAvailableManagedRuleGroupVersionsOutput {
     /// <p>When you request a list of objects with a <code>Limit</code> setting, if the number of objects that are still available for retrieval exceeds the limit, WAF returns a <code>NextMarker</code> value in the response. To retrieve the next batch of objects, provide the marker from the prior call in your next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>The versions that are currently available for the specified managed rule group. </p>
+    #[doc(hidden)]
     pub versions: std::option::Option<std::vec::Vec<crate::model::ManagedRuleGroupVersion>>,
     /// <p>The name of the version that's currently set as the default. </p>
+    #[doc(hidden)]
     pub current_default_version: std::option::Option<std::string::String>,
 }
 impl ListAvailableManagedRuleGroupVersionsOutput {
@@ -1314,11 +1324,10 @@ impl std::fmt::Debug for ListAvailableManagedRuleGroupVersionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAvailableManagedRuleGroupVersionsOutput`](crate::output::ListAvailableManagedRuleGroupVersionsOutput)
+/// See [`ListAvailableManagedRuleGroupVersionsOutput`](crate::output::ListAvailableManagedRuleGroupVersionsOutput).
 pub mod list_available_managed_rule_group_versions_output {
 
-    /// A builder for [`ListAvailableManagedRuleGroupVersionsOutput`](crate::output::ListAvailableManagedRuleGroupVersionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAvailableManagedRuleGroupVersionsOutput`](crate::output::ListAvailableManagedRuleGroupVersionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1369,7 +1378,7 @@ pub mod list_available_managed_rule_group_versions_output {
             self.current_default_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAvailableManagedRuleGroupVersionsOutput`](crate::output::ListAvailableManagedRuleGroupVersionsOutput)
+        /// Consumes the builder and constructs a [`ListAvailableManagedRuleGroupVersionsOutput`](crate::output::ListAvailableManagedRuleGroupVersionsOutput).
         pub fn build(self) -> crate::output::ListAvailableManagedRuleGroupVersionsOutput {
             crate::output::ListAvailableManagedRuleGroupVersionsOutput {
                 next_marker: self.next_marker,
@@ -1380,7 +1389,7 @@ pub mod list_available_managed_rule_group_versions_output {
     }
 }
 impl ListAvailableManagedRuleGroupVersionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAvailableManagedRuleGroupVersionsOutput`](crate::output::ListAvailableManagedRuleGroupVersionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAvailableManagedRuleGroupVersionsOutput`](crate::output::ListAvailableManagedRuleGroupVersionsOutput).
     pub fn builder() -> crate::output::list_available_managed_rule_group_versions_output::Builder {
         crate::output::list_available_managed_rule_group_versions_output::Builder::default()
     }
@@ -1391,8 +1400,10 @@ impl ListAvailableManagedRuleGroupVersionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAvailableManagedRuleGroupsOutput {
     /// <p>When you request a list of objects with a <code>Limit</code> setting, if the number of objects that are still available for retrieval exceeds the limit, WAF returns a <code>NextMarker</code> value in the response. To retrieve the next batch of objects, provide the marker from the prior call in your next request.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub managed_rule_groups:
         std::option::Option<std::vec::Vec<crate::model::ManagedRuleGroupSummary>>,
 }
@@ -1416,11 +1427,10 @@ impl std::fmt::Debug for ListAvailableManagedRuleGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAvailableManagedRuleGroupsOutput`](crate::output::ListAvailableManagedRuleGroupsOutput)
+/// See [`ListAvailableManagedRuleGroupsOutput`](crate::output::ListAvailableManagedRuleGroupsOutput).
 pub mod list_available_managed_rule_groups_output {
 
-    /// A builder for [`ListAvailableManagedRuleGroupsOutput`](crate::output::ListAvailableManagedRuleGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAvailableManagedRuleGroupsOutput`](crate::output::ListAvailableManagedRuleGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_marker: std::option::Option<std::string::String>,
@@ -1457,7 +1467,7 @@ pub mod list_available_managed_rule_groups_output {
             self.managed_rule_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAvailableManagedRuleGroupsOutput`](crate::output::ListAvailableManagedRuleGroupsOutput)
+        /// Consumes the builder and constructs a [`ListAvailableManagedRuleGroupsOutput`](crate::output::ListAvailableManagedRuleGroupsOutput).
         pub fn build(self) -> crate::output::ListAvailableManagedRuleGroupsOutput {
             crate::output::ListAvailableManagedRuleGroupsOutput {
                 next_marker: self.next_marker,
@@ -1467,7 +1477,7 @@ pub mod list_available_managed_rule_groups_output {
     }
 }
 impl ListAvailableManagedRuleGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAvailableManagedRuleGroupsOutput`](crate::output::ListAvailableManagedRuleGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAvailableManagedRuleGroupsOutput`](crate::output::ListAvailableManagedRuleGroupsOutput).
     pub fn builder() -> crate::output::list_available_managed_rule_groups_output::Builder {
         crate::output::list_available_managed_rule_groups_output::Builder::default()
     }
@@ -1478,6 +1488,7 @@ impl ListAvailableManagedRuleGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetWebAclForResourceOutput {
     /// <p>The web ACL that is associated with the resource. If there is no associated resource, WAF returns a null web ACL.</p>
+    #[doc(hidden)]
     pub web_acl: std::option::Option<crate::model::WebAcl>,
 }
 impl GetWebAclForResourceOutput {
@@ -1493,11 +1504,10 @@ impl std::fmt::Debug for GetWebAclForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`GetWebAclForResourceOutput`](crate::output::GetWebAclForResourceOutput)
+/// See [`GetWebAclForResourceOutput`](crate::output::GetWebAclForResourceOutput).
 pub mod get_web_acl_for_resource_output {
 
-    /// A builder for [`GetWebAclForResourceOutput`](crate::output::GetWebAclForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetWebAclForResourceOutput`](crate::output::GetWebAclForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) web_acl: std::option::Option<crate::model::WebAcl>,
@@ -1513,7 +1523,7 @@ pub mod get_web_acl_for_resource_output {
             self.web_acl = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetWebAclForResourceOutput`](crate::output::GetWebAclForResourceOutput)
+        /// Consumes the builder and constructs a [`GetWebAclForResourceOutput`](crate::output::GetWebAclForResourceOutput).
         pub fn build(self) -> crate::output::GetWebAclForResourceOutput {
             crate::output::GetWebAclForResourceOutput {
                 web_acl: self.web_acl,
@@ -1522,7 +1532,7 @@ pub mod get_web_acl_for_resource_output {
     }
 }
 impl GetWebAclForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`GetWebAclForResourceOutput`](crate::output::GetWebAclForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`GetWebAclForResourceOutput`](crate::output::GetWebAclForResourceOutput).
     pub fn builder() -> crate::output::get_web_acl_for_resource_output::Builder {
         crate::output::get_web_acl_for_resource_output::Builder::default()
     }
@@ -1533,10 +1543,13 @@ impl GetWebAclForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetWebAclOutput {
     /// <p>The web ACL specification. You can modify the settings in this web ACL and use it to update this web ACL or create a new one.</p>
+    #[doc(hidden)]
     pub web_acl: std::option::Option<crate::model::WebAcl>,
     /// <p>A token used for optimistic locking. WAF returns a token to your <code>get</code> and <code>list</code> requests, to mark the state of the entity at the time of the request. To make changes to the entity associated with the token, you provide the token to operations like <code>update</code> and <code>delete</code>. WAF uses the token to ensure that no changes have been made to the entity since you last retrieved it. If a change has been made, the update fails with a <code>WAFOptimisticLockException</code>. If this happens, perform another <code>get</code>, and use the new token returned by that operation. </p>
+    #[doc(hidden)]
     pub lock_token: std::option::Option<std::string::String>,
     /// <p>The URL to use in SDK integrations with Amazon Web Services managed rule groups. For example, you can use the integration SDKs with the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>. This is only populated if you are using a rule group in your web ACL that integrates with your applications in this way. For more information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF client application integration</a> in the <i>WAF Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub application_integration_url: std::option::Option<std::string::String>,
 }
 impl GetWebAclOutput {
@@ -1565,11 +1578,10 @@ impl std::fmt::Debug for GetWebAclOutput {
         formatter.finish()
     }
 }
-/// See [`GetWebAclOutput`](crate::output::GetWebAclOutput)
+/// See [`GetWebAclOutput`](crate::output::GetWebAclOutput).
 pub mod get_web_acl_output {
 
-    /// A builder for [`GetWebAclOutput`](crate::output::GetWebAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetWebAclOutput`](crate::output::GetWebAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) web_acl: std::option::Option<crate::model::WebAcl>,
@@ -1613,7 +1625,7 @@ pub mod get_web_acl_output {
             self.application_integration_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetWebAclOutput`](crate::output::GetWebAclOutput)
+        /// Consumes the builder and constructs a [`GetWebAclOutput`](crate::output::GetWebAclOutput).
         pub fn build(self) -> crate::output::GetWebAclOutput {
             crate::output::GetWebAclOutput {
                 web_acl: self.web_acl,
@@ -1624,7 +1636,7 @@ pub mod get_web_acl_output {
     }
 }
 impl GetWebAclOutput {
-    /// Creates a new builder-style object to manufacture [`GetWebAclOutput`](crate::output::GetWebAclOutput)
+    /// Creates a new builder-style object to manufacture [`GetWebAclOutput`](crate::output::GetWebAclOutput).
     pub fn builder() -> crate::output::get_web_acl_output::Builder {
         crate::output::get_web_acl_output::Builder::default()
     }
@@ -1635,10 +1647,13 @@ impl GetWebAclOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSampledRequestsOutput {
     /// <p>A complex type that contains detailed information about each of the requests in the sample.</p>
+    #[doc(hidden)]
     pub sampled_requests: std::option::Option<std::vec::Vec<crate::model::SampledHttpRequest>>,
     /// <p>The total number of requests from which <code>GetSampledRequests</code> got a sample of <code>MaxItems</code> requests. If <code>PopulationSize</code> is less than <code>MaxItems</code>, the sample includes every request that your Amazon Web Services resource received during the specified time range.</p>
+    #[doc(hidden)]
     pub population_size: i64,
     /// <p>Usually, <code>TimeWindow</code> is the time range that you specified in the <code>GetSampledRequests</code> request. However, if your Amazon Web Services resource received more than 5,000 requests during the time range that you specified in the request, <code>GetSampledRequests</code> returns the time range for the first 5,000 requests. Times are in Coordinated Universal Time (UTC) format.</p>
+    #[doc(hidden)]
     pub time_window: std::option::Option<crate::model::TimeWindow>,
 }
 impl GetSampledRequestsOutput {
@@ -1664,11 +1679,10 @@ impl std::fmt::Debug for GetSampledRequestsOutput {
         formatter.finish()
     }
 }
-/// See [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput)
+/// See [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput).
 pub mod get_sampled_requests_output {
 
-    /// A builder for [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sampled_requests:
@@ -1719,7 +1733,7 @@ pub mod get_sampled_requests_output {
             self.time_window = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput)
+        /// Consumes the builder and constructs a [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput).
         pub fn build(self) -> crate::output::GetSampledRequestsOutput {
             crate::output::GetSampledRequestsOutput {
                 sampled_requests: self.sampled_requests,
@@ -1730,7 +1744,7 @@ pub mod get_sampled_requests_output {
     }
 }
 impl GetSampledRequestsOutput {
-    /// Creates a new builder-style object to manufacture [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput)
+    /// Creates a new builder-style object to manufacture [`GetSampledRequestsOutput`](crate::output::GetSampledRequestsOutput).
     pub fn builder() -> crate::output::get_sampled_requests_output::Builder {
         crate::output::get_sampled_requests_output::Builder::default()
     }
@@ -1741,8 +1755,10 @@ impl GetSampledRequestsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRuleGroupOutput {
     /// <p></p>
+    #[doc(hidden)]
     pub rule_group: std::option::Option<crate::model::RuleGroup>,
     /// <p>A token used for optimistic locking. WAF returns a token to your <code>get</code> and <code>list</code> requests, to mark the state of the entity at the time of the request. To make changes to the entity associated with the token, you provide the token to operations like <code>update</code> and <code>delete</code>. WAF uses the token to ensure that no changes have been made to the entity since you last retrieved it. If a change has been made, the update fails with a <code>WAFOptimisticLockException</code>. If this happens, perform another <code>get</code>, and use the new token returned by that operation. </p>
+    #[doc(hidden)]
     pub lock_token: std::option::Option<std::string::String>,
 }
 impl GetRuleGroupOutput {
@@ -1763,11 +1779,10 @@ impl std::fmt::Debug for GetRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput)
+/// See [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput).
 pub mod get_rule_group_output {
 
-    /// A builder for [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_group: std::option::Option<crate::model::RuleGroup>,
@@ -1797,7 +1812,7 @@ pub mod get_rule_group_output {
             self.lock_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput)
+        /// Consumes the builder and constructs a [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput).
         pub fn build(self) -> crate::output::GetRuleGroupOutput {
             crate::output::GetRuleGroupOutput {
                 rule_group: self.rule_group,
@@ -1807,7 +1822,7 @@ pub mod get_rule_group_output {
     }
 }
 impl GetRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`GetRuleGroupOutput`](crate::output::GetRuleGroupOutput).
     pub fn builder() -> crate::output::get_rule_group_output::Builder {
         crate::output::get_rule_group_output::Builder::default()
     }
@@ -1818,8 +1833,10 @@ impl GetRuleGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRegexPatternSetOutput {
     /// <p></p>
+    #[doc(hidden)]
     pub regex_pattern_set: std::option::Option<crate::model::RegexPatternSet>,
     /// <p>A token used for optimistic locking. WAF returns a token to your <code>get</code> and <code>list</code> requests, to mark the state of the entity at the time of the request. To make changes to the entity associated with the token, you provide the token to operations like <code>update</code> and <code>delete</code>. WAF uses the token to ensure that no changes have been made to the entity since you last retrieved it. If a change has been made, the update fails with a <code>WAFOptimisticLockException</code>. If this happens, perform another <code>get</code>, and use the new token returned by that operation. </p>
+    #[doc(hidden)]
     pub lock_token: std::option::Option<std::string::String>,
 }
 impl GetRegexPatternSetOutput {
@@ -1840,11 +1857,10 @@ impl std::fmt::Debug for GetRegexPatternSetOutput {
         formatter.finish()
     }
 }
-/// See [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput)
+/// See [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput).
 pub mod get_regex_pattern_set_output {
 
-    /// A builder for [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) regex_pattern_set: std::option::Option<crate::model::RegexPatternSet>,
@@ -1874,7 +1890,7 @@ pub mod get_regex_pattern_set_output {
             self.lock_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput)
+        /// Consumes the builder and constructs a [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput).
         pub fn build(self) -> crate::output::GetRegexPatternSetOutput {
             crate::output::GetRegexPatternSetOutput {
                 regex_pattern_set: self.regex_pattern_set,
@@ -1884,7 +1900,7 @@ pub mod get_regex_pattern_set_output {
     }
 }
 impl GetRegexPatternSetOutput {
-    /// Creates a new builder-style object to manufacture [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput)
+    /// Creates a new builder-style object to manufacture [`GetRegexPatternSetOutput`](crate::output::GetRegexPatternSetOutput).
     pub fn builder() -> crate::output::get_regex_pattern_set_output::Builder {
         crate::output::get_regex_pattern_set_output::Builder::default()
     }
@@ -1895,8 +1911,10 @@ impl GetRegexPatternSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRateBasedStatementManagedKeysOutput {
     /// <p>The keys that are of Internet Protocol version 4 (IPv4). </p>
+    #[doc(hidden)]
     pub managed_keys_ipv4: std::option::Option<crate::model::RateBasedStatementManagedKeysIpSet>,
     /// <p>The keys that are of Internet Protocol version 6 (IPv6). </p>
+    #[doc(hidden)]
     pub managed_keys_ipv6: std::option::Option<crate::model::RateBasedStatementManagedKeysIpSet>,
 }
 impl GetRateBasedStatementManagedKeysOutput {
@@ -1921,11 +1939,10 @@ impl std::fmt::Debug for GetRateBasedStatementManagedKeysOutput {
         formatter.finish()
     }
 }
-/// See [`GetRateBasedStatementManagedKeysOutput`](crate::output::GetRateBasedStatementManagedKeysOutput)
+/// See [`GetRateBasedStatementManagedKeysOutput`](crate::output::GetRateBasedStatementManagedKeysOutput).
 pub mod get_rate_based_statement_managed_keys_output {
 
-    /// A builder for [`GetRateBasedStatementManagedKeysOutput`](crate::output::GetRateBasedStatementManagedKeysOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRateBasedStatementManagedKeysOutput`](crate::output::GetRateBasedStatementManagedKeysOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) managed_keys_ipv4:
@@ -1966,7 +1983,7 @@ pub mod get_rate_based_statement_managed_keys_output {
             self.managed_keys_ipv6 = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRateBasedStatementManagedKeysOutput`](crate::output::GetRateBasedStatementManagedKeysOutput)
+        /// Consumes the builder and constructs a [`GetRateBasedStatementManagedKeysOutput`](crate::output::GetRateBasedStatementManagedKeysOutput).
         pub fn build(self) -> crate::output::GetRateBasedStatementManagedKeysOutput {
             crate::output::GetRateBasedStatementManagedKeysOutput {
                 managed_keys_ipv4: self.managed_keys_ipv4,
@@ -1976,7 +1993,7 @@ pub mod get_rate_based_statement_managed_keys_output {
     }
 }
 impl GetRateBasedStatementManagedKeysOutput {
-    /// Creates a new builder-style object to manufacture [`GetRateBasedStatementManagedKeysOutput`](crate::output::GetRateBasedStatementManagedKeysOutput)
+    /// Creates a new builder-style object to manufacture [`GetRateBasedStatementManagedKeysOutput`](crate::output::GetRateBasedStatementManagedKeysOutput).
     pub fn builder() -> crate::output::get_rate_based_statement_managed_keys_output::Builder {
         crate::output::get_rate_based_statement_managed_keys_output::Builder::default()
     }
@@ -1987,6 +2004,7 @@ impl GetRateBasedStatementManagedKeysOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetPermissionPolicyOutput {
     /// <p>The IAM policy that is attached to the specified rule group.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl GetPermissionPolicyOutput {
@@ -2002,11 +2020,10 @@ impl std::fmt::Debug for GetPermissionPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput)
+/// See [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput).
 pub mod get_permission_policy_output {
 
-    /// A builder for [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<std::string::String>,
@@ -2022,7 +2039,7 @@ pub mod get_permission_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput)
+        /// Consumes the builder and constructs a [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput).
         pub fn build(self) -> crate::output::GetPermissionPolicyOutput {
             crate::output::GetPermissionPolicyOutput {
                 policy: self.policy,
@@ -2031,7 +2048,7 @@ pub mod get_permission_policy_output {
     }
 }
 impl GetPermissionPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetPermissionPolicyOutput`](crate::output::GetPermissionPolicyOutput).
     pub fn builder() -> crate::output::get_permission_policy_output::Builder {
         crate::output::get_permission_policy_output::Builder::default()
     }
@@ -2042,6 +2059,7 @@ impl GetPermissionPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetMobileSdkReleaseOutput {
     /// <p>Information for a specified SDK release, including release notes and tags.</p>
+    #[doc(hidden)]
     pub mobile_sdk_release: std::option::Option<crate::model::MobileSdkRelease>,
 }
 impl GetMobileSdkReleaseOutput {
@@ -2057,11 +2075,10 @@ impl std::fmt::Debug for GetMobileSdkReleaseOutput {
         formatter.finish()
     }
 }
-/// See [`GetMobileSdkReleaseOutput`](crate::output::GetMobileSdkReleaseOutput)
+/// See [`GetMobileSdkReleaseOutput`](crate::output::GetMobileSdkReleaseOutput).
 pub mod get_mobile_sdk_release_output {
 
-    /// A builder for [`GetMobileSdkReleaseOutput`](crate::output::GetMobileSdkReleaseOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetMobileSdkReleaseOutput`](crate::output::GetMobileSdkReleaseOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mobile_sdk_release: std::option::Option<crate::model::MobileSdkRelease>,
@@ -2080,7 +2097,7 @@ pub mod get_mobile_sdk_release_output {
             self.mobile_sdk_release = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetMobileSdkReleaseOutput`](crate::output::GetMobileSdkReleaseOutput)
+        /// Consumes the builder and constructs a [`GetMobileSdkReleaseOutput`](crate::output::GetMobileSdkReleaseOutput).
         pub fn build(self) -> crate::output::GetMobileSdkReleaseOutput {
             crate::output::GetMobileSdkReleaseOutput {
                 mobile_sdk_release: self.mobile_sdk_release,
@@ -2089,7 +2106,7 @@ pub mod get_mobile_sdk_release_output {
     }
 }
 impl GetMobileSdkReleaseOutput {
-    /// Creates a new builder-style object to manufacture [`GetMobileSdkReleaseOutput`](crate::output::GetMobileSdkReleaseOutput)
+    /// Creates a new builder-style object to manufacture [`GetMobileSdkReleaseOutput`](crate::output::GetMobileSdkReleaseOutput).
     pub fn builder() -> crate::output::get_mobile_sdk_release_output::Builder {
         crate::output::get_mobile_sdk_release_output::Builder::default()
     }
@@ -2100,8 +2117,10 @@ impl GetMobileSdkReleaseOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetManagedRuleSetOutput {
     /// <p>The managed rule set that you requested. </p>
+    #[doc(hidden)]
     pub managed_rule_set: std::option::Option<crate::model::ManagedRuleSet>,
     /// <p>A token used for optimistic locking. WAF returns a token to your <code>get</code> and <code>list</code> requests, to mark the state of the entity at the time of the request. To make changes to the entity associated with the token, you provide the token to operations like <code>update</code> and <code>delete</code>. WAF uses the token to ensure that no changes have been made to the entity since you last retrieved it. If a change has been made, the update fails with a <code>WAFOptimisticLockException</code>. If this happens, perform another <code>get</code>, and use the new token returned by that operation. </p>
+    #[doc(hidden)]
     pub lock_token: std::option::Option<std::string::String>,
 }
 impl GetManagedRuleSetOutput {
@@ -2122,11 +2141,10 @@ impl std::fmt::Debug for GetManagedRuleSetOutput {
         formatter.finish()
     }
 }
-/// See [`GetManagedRuleSetOutput`](crate::output::GetManagedRuleSetOutput)
+/// See [`GetManagedRuleSetOutput`](crate::output::GetManagedRuleSetOutput).
 pub mod get_managed_rule_set_output {
 
-    /// A builder for [`GetManagedRuleSetOutput`](crate::output::GetManagedRuleSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetManagedRuleSetOutput`](crate::output::GetManagedRuleSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) managed_rule_set: std::option::Option<crate::model::ManagedRuleSet>,
@@ -2156,7 +2174,7 @@ pub mod get_managed_rule_set_output {
             self.lock_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetManagedRuleSetOutput`](crate::output::GetManagedRuleSetOutput)
+        /// Consumes the builder and constructs a [`GetManagedRuleSetOutput`](crate::output::GetManagedRuleSetOutput).
         pub fn build(self) -> crate::output::GetManagedRuleSetOutput {
             crate::output::GetManagedRuleSetOutput {
                 managed_rule_set: self.managed_rule_set,
@@ -2166,7 +2184,7 @@ pub mod get_managed_rule_set_output {
     }
 }
 impl GetManagedRuleSetOutput {
-    /// Creates a new builder-style object to manufacture [`GetManagedRuleSetOutput`](crate::output::GetManagedRuleSetOutput)
+    /// Creates a new builder-style object to manufacture [`GetManagedRuleSetOutput`](crate::output::GetManagedRuleSetOutput).
     pub fn builder() -> crate::output::get_managed_rule_set_output::Builder {
         crate::output::get_managed_rule_set_output::Builder::default()
     }
@@ -2177,6 +2195,7 @@ impl GetManagedRuleSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetLoggingConfigurationOutput {
     /// <p>The <code>LoggingConfiguration</code> for the specified web ACL.</p>
+    #[doc(hidden)]
     pub logging_configuration: std::option::Option<crate::model::LoggingConfiguration>,
 }
 impl GetLoggingConfigurationOutput {
@@ -2194,11 +2213,10 @@ impl std::fmt::Debug for GetLoggingConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput)
+/// See [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput).
 pub mod get_logging_configuration_output {
 
-    /// A builder for [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logging_configuration: std::option::Option<crate::model::LoggingConfiguration>,
@@ -2217,7 +2235,7 @@ pub mod get_logging_configuration_output {
             self.logging_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput).
         pub fn build(self) -> crate::output::GetLoggingConfigurationOutput {
             crate::output::GetLoggingConfigurationOutput {
                 logging_configuration: self.logging_configuration,
@@ -2226,7 +2244,7 @@ pub mod get_logging_configuration_output {
     }
 }
 impl GetLoggingConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetLoggingConfigurationOutput`](crate::output::GetLoggingConfigurationOutput).
     pub fn builder() -> crate::output::get_logging_configuration_output::Builder {
         crate::output::get_logging_configuration_output::Builder::default()
     }
@@ -2237,8 +2255,10 @@ impl GetLoggingConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetIpSetOutput {
     /// <p></p>
+    #[doc(hidden)]
     pub ip_set: std::option::Option<crate::model::IpSet>,
     /// <p>A token used for optimistic locking. WAF returns a token to your <code>get</code> and <code>list</code> requests, to mark the state of the entity at the time of the request. To make changes to the entity associated with the token, you provide the token to operations like <code>update</code> and <code>delete</code>. WAF uses the token to ensure that no changes have been made to the entity since you last retrieved it. If a change has been made, the update fails with a <code>WAFOptimisticLockException</code>. If this happens, perform another <code>get</code>, and use the new token returned by that operation. </p>
+    #[doc(hidden)]
     pub lock_token: std::option::Option<std::string::String>,
 }
 impl GetIpSetOutput {
@@ -2259,11 +2279,10 @@ impl std::fmt::Debug for GetIpSetOutput {
         formatter.finish()
     }
 }
-/// See [`GetIpSetOutput`](crate::output::GetIpSetOutput)
+/// See [`GetIpSetOutput`](crate::output::GetIpSetOutput).
 pub mod get_ip_set_output {
 
-    /// A builder for [`GetIpSetOutput`](crate::output::GetIpSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetIpSetOutput`](crate::output::GetIpSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_set: std::option::Option<crate::model::IpSet>,
@@ -2290,7 +2309,7 @@ pub mod get_ip_set_output {
             self.lock_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetIpSetOutput`](crate::output::GetIpSetOutput)
+        /// Consumes the builder and constructs a [`GetIpSetOutput`](crate::output::GetIpSetOutput).
         pub fn build(self) -> crate::output::GetIpSetOutput {
             crate::output::GetIpSetOutput {
                 ip_set: self.ip_set,
@@ -2300,7 +2319,7 @@ pub mod get_ip_set_output {
     }
 }
 impl GetIpSetOutput {
-    /// Creates a new builder-style object to manufacture [`GetIpSetOutput`](crate::output::GetIpSetOutput)
+    /// Creates a new builder-style object to manufacture [`GetIpSetOutput`](crate::output::GetIpSetOutput).
     pub fn builder() -> crate::output::get_ip_set_output::Builder {
         crate::output::get_ip_set_output::Builder::default()
     }
@@ -2311,6 +2330,7 @@ impl GetIpSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GenerateMobileSdkReleaseUrlOutput {
     /// <p>The presigned download URL for the specified SDK release.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl GenerateMobileSdkReleaseUrlOutput {
@@ -2326,11 +2346,10 @@ impl std::fmt::Debug for GenerateMobileSdkReleaseUrlOutput {
         formatter.finish()
     }
 }
-/// See [`GenerateMobileSdkReleaseUrlOutput`](crate::output::GenerateMobileSdkReleaseUrlOutput)
+/// See [`GenerateMobileSdkReleaseUrlOutput`](crate::output::GenerateMobileSdkReleaseUrlOutput).
 pub mod generate_mobile_sdk_release_url_output {
 
-    /// A builder for [`GenerateMobileSdkReleaseUrlOutput`](crate::output::GenerateMobileSdkReleaseUrlOutput)
-    #[non_exhaustive]
+    /// A builder for [`GenerateMobileSdkReleaseUrlOutput`](crate::output::GenerateMobileSdkReleaseUrlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) url: std::option::Option<std::string::String>,
@@ -2346,14 +2365,14 @@ pub mod generate_mobile_sdk_release_url_output {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`GenerateMobileSdkReleaseUrlOutput`](crate::output::GenerateMobileSdkReleaseUrlOutput)
+        /// Consumes the builder and constructs a [`GenerateMobileSdkReleaseUrlOutput`](crate::output::GenerateMobileSdkReleaseUrlOutput).
         pub fn build(self) -> crate::output::GenerateMobileSdkReleaseUrlOutput {
             crate::output::GenerateMobileSdkReleaseUrlOutput { url: self.url }
         }
     }
 }
 impl GenerateMobileSdkReleaseUrlOutput {
-    /// Creates a new builder-style object to manufacture [`GenerateMobileSdkReleaseUrlOutput`](crate::output::GenerateMobileSdkReleaseUrlOutput)
+    /// Creates a new builder-style object to manufacture [`GenerateMobileSdkReleaseUrlOutput`](crate::output::GenerateMobileSdkReleaseUrlOutput).
     pub fn builder() -> crate::output::generate_mobile_sdk_release_url_output::Builder {
         crate::output::generate_mobile_sdk_release_url_output::Builder::default()
     }
@@ -2369,22 +2388,21 @@ impl std::fmt::Debug for DisassociateWebAclOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateWebAclOutput`](crate::output::DisassociateWebAclOutput)
+/// See [`DisassociateWebAclOutput`](crate::output::DisassociateWebAclOutput).
 pub mod disassociate_web_acl_output {
 
-    /// A builder for [`DisassociateWebAclOutput`](crate::output::DisassociateWebAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateWebAclOutput`](crate::output::DisassociateWebAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisassociateWebAclOutput`](crate::output::DisassociateWebAclOutput)
+        /// Consumes the builder and constructs a [`DisassociateWebAclOutput`](crate::output::DisassociateWebAclOutput).
         pub fn build(self) -> crate::output::DisassociateWebAclOutput {
             crate::output::DisassociateWebAclOutput {}
         }
     }
 }
 impl DisassociateWebAclOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateWebAclOutput`](crate::output::DisassociateWebAclOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateWebAclOutput`](crate::output::DisassociateWebAclOutput).
     pub fn builder() -> crate::output::disassociate_web_acl_output::Builder {
         crate::output::disassociate_web_acl_output::Builder::default()
     }
@@ -2395,12 +2413,16 @@ impl DisassociateWebAclOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeManagedRuleGroupOutput {
     /// <p>The managed rule group's version. </p>
+    #[doc(hidden)]
     pub version_name: std::option::Option<std::string::String>,
     /// <p>The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record changes to the managed rule group. You can subscribe to the SNS topic to receive notifications when the managed rule group is modified, such as for new versions and for version expiration. For more information, see the <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification Service Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub sns_topic_arn: std::option::Option<std::string::String>,
     /// <p>The web ACL capacity units (WCUs) required for this rule group. WAF uses web ACL capacity units (WCU) to calculate and control the operating resources that are used to run your rules, rule groups, and web ACLs. WAF calculates capacity differently for each rule type, to reflect each rule's relative cost. Rule group capacity is fixed at creation, so users can plan their web ACL WCU usage when they use a rule group. The WCU limit for web ACLs is 1,500. </p>
+    #[doc(hidden)]
     pub capacity: i64,
     /// <p></p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::RuleSummary>>,
     /// <p>The label namespace prefix for this rule group. All labels added by rules in this rule group have this prefix. </p>
     /// <ul>
@@ -2411,10 +2433,13 @@ pub struct DescribeManagedRuleGroupOutput {
     /// </vendor></code>:</p> </li>
     /// <li> <p>When a rule with a label matches a web request, WAF adds the fully qualified label to the request. A fully qualified label is made up of the label namespace from the rule group or web ACL where the rule is defined and the label from the rule, separated by a colon: </p> <p> <code><label namespace>:<label from rule></label></label></code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub label_namespace: std::option::Option<std::string::String>,
     /// <p>The labels that one or more rules in this rule group add to matching web requests. These labels are defined in the <code>RuleLabels</code> for a <code>Rule</code>.</p>
+    #[doc(hidden)]
     pub available_labels: std::option::Option<std::vec::Vec<crate::model::LabelSummary>>,
     /// <p>The labels that one or more rules in this rule group match against in label match statements. These labels are defined in a <code>LabelMatchStatement</code> specification, in the <code>Statement</code> definition of a rule. </p>
+    #[doc(hidden)]
     pub consumed_labels: std::option::Option<std::vec::Vec<crate::model::LabelSummary>>,
 }
 impl DescribeManagedRuleGroupOutput {
@@ -2468,11 +2493,10 @@ impl std::fmt::Debug for DescribeManagedRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeManagedRuleGroupOutput`](crate::output::DescribeManagedRuleGroupOutput)
+/// See [`DescribeManagedRuleGroupOutput`](crate::output::DescribeManagedRuleGroupOutput).
 pub mod describe_managed_rule_group_output {
 
-    /// A builder for [`DescribeManagedRuleGroupOutput`](crate::output::DescribeManagedRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeManagedRuleGroupOutput`](crate::output::DescribeManagedRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version_name: std::option::Option<std::string::String>,
@@ -2603,7 +2627,7 @@ pub mod describe_managed_rule_group_output {
             self.consumed_labels = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeManagedRuleGroupOutput`](crate::output::DescribeManagedRuleGroupOutput)
+        /// Consumes the builder and constructs a [`DescribeManagedRuleGroupOutput`](crate::output::DescribeManagedRuleGroupOutput).
         pub fn build(self) -> crate::output::DescribeManagedRuleGroupOutput {
             crate::output::DescribeManagedRuleGroupOutput {
                 version_name: self.version_name,
@@ -2618,7 +2642,7 @@ pub mod describe_managed_rule_group_output {
     }
 }
 impl DescribeManagedRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeManagedRuleGroupOutput`](crate::output::DescribeManagedRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeManagedRuleGroupOutput`](crate::output::DescribeManagedRuleGroupOutput).
     pub fn builder() -> crate::output::describe_managed_rule_group_output::Builder {
         crate::output::describe_managed_rule_group_output::Builder::default()
     }
@@ -2634,22 +2658,21 @@ impl std::fmt::Debug for DeleteWebAclOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput)
+/// See [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput).
 pub mod delete_web_acl_output {
 
-    /// A builder for [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput)
+        /// Consumes the builder and constructs a [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput).
         pub fn build(self) -> crate::output::DeleteWebAclOutput {
             crate::output::DeleteWebAclOutput {}
         }
     }
 }
 impl DeleteWebAclOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteWebAclOutput`](crate::output::DeleteWebAclOutput).
     pub fn builder() -> crate::output::delete_web_acl_output::Builder {
         crate::output::delete_web_acl_output::Builder::default()
     }
@@ -2665,22 +2688,21 @@ impl std::fmt::Debug for DeleteRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
+/// See [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput).
 pub mod delete_rule_group_output {
 
-    /// A builder for [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
+        /// Consumes the builder and constructs a [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput).
         pub fn build(self) -> crate::output::DeleteRuleGroupOutput {
             crate::output::DeleteRuleGroupOutput {}
         }
     }
 }
 impl DeleteRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput).
     pub fn builder() -> crate::output::delete_rule_group_output::Builder {
         crate::output::delete_rule_group_output::Builder::default()
     }
@@ -2696,22 +2718,21 @@ impl std::fmt::Debug for DeleteRegexPatternSetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput)
+/// See [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput).
 pub mod delete_regex_pattern_set_output {
 
-    /// A builder for [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput)
+        /// Consumes the builder and constructs a [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput).
         pub fn build(self) -> crate::output::DeleteRegexPatternSetOutput {
             crate::output::DeleteRegexPatternSetOutput {}
         }
     }
 }
 impl DeleteRegexPatternSetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRegexPatternSetOutput`](crate::output::DeleteRegexPatternSetOutput).
     pub fn builder() -> crate::output::delete_regex_pattern_set_output::Builder {
         crate::output::delete_regex_pattern_set_output::Builder::default()
     }
@@ -2727,22 +2748,21 @@ impl std::fmt::Debug for DeletePermissionPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput)
+/// See [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput).
 pub mod delete_permission_policy_output {
 
-    /// A builder for [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput)
+        /// Consumes the builder and constructs a [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput).
         pub fn build(self) -> crate::output::DeletePermissionPolicyOutput {
             crate::output::DeletePermissionPolicyOutput {}
         }
     }
 }
 impl DeletePermissionPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeletePermissionPolicyOutput`](crate::output::DeletePermissionPolicyOutput).
     pub fn builder() -> crate::output::delete_permission_policy_output::Builder {
         crate::output::delete_permission_policy_output::Builder::default()
     }
@@ -2758,22 +2778,21 @@ impl std::fmt::Debug for DeleteLoggingConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput)
+/// See [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput).
 pub mod delete_logging_configuration_output {
 
-    /// A builder for [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteLoggingConfigurationOutput {
             crate::output::DeleteLoggingConfigurationOutput {}
         }
     }
 }
 impl DeleteLoggingConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteLoggingConfigurationOutput`](crate::output::DeleteLoggingConfigurationOutput).
     pub fn builder() -> crate::output::delete_logging_configuration_output::Builder {
         crate::output::delete_logging_configuration_output::Builder::default()
     }
@@ -2789,22 +2808,21 @@ impl std::fmt::Debug for DeleteIpSetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput)
+/// See [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput).
 pub mod delete_ip_set_output {
 
-    /// A builder for [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput)
+        /// Consumes the builder and constructs a [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput).
         pub fn build(self) -> crate::output::DeleteIpSetOutput {
             crate::output::DeleteIpSetOutput {}
         }
     }
 }
 impl DeleteIpSetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteIpSetOutput`](crate::output::DeleteIpSetOutput).
     pub fn builder() -> crate::output::delete_ip_set_output::Builder {
         crate::output::delete_ip_set_output::Builder::default()
     }
@@ -2815,6 +2833,7 @@ impl DeleteIpSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteFirewallManagerRuleGroupsOutput {
     /// <p>A token used for optimistic locking. WAF returns a token to your <code>get</code> and <code>list</code> requests, to mark the state of the entity at the time of the request. To make changes to the entity associated with the token, you provide the token to operations like <code>update</code> and <code>delete</code>. WAF uses the token to ensure that no changes have been made to the entity since you last retrieved it. If a change has been made, the update fails with a <code>WAFOptimisticLockException</code>. If this happens, perform another <code>get</code>, and use the new token returned by that operation. </p>
+    #[doc(hidden)]
     pub next_web_acl_lock_token: std::option::Option<std::string::String>,
 }
 impl DeleteFirewallManagerRuleGroupsOutput {
@@ -2830,11 +2849,10 @@ impl std::fmt::Debug for DeleteFirewallManagerRuleGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFirewallManagerRuleGroupsOutput`](crate::output::DeleteFirewallManagerRuleGroupsOutput)
+/// See [`DeleteFirewallManagerRuleGroupsOutput`](crate::output::DeleteFirewallManagerRuleGroupsOutput).
 pub mod delete_firewall_manager_rule_groups_output {
 
-    /// A builder for [`DeleteFirewallManagerRuleGroupsOutput`](crate::output::DeleteFirewallManagerRuleGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFirewallManagerRuleGroupsOutput`](crate::output::DeleteFirewallManagerRuleGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_web_acl_lock_token: std::option::Option<std::string::String>,
@@ -2853,7 +2871,7 @@ pub mod delete_firewall_manager_rule_groups_output {
             self.next_web_acl_lock_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFirewallManagerRuleGroupsOutput`](crate::output::DeleteFirewallManagerRuleGroupsOutput)
+        /// Consumes the builder and constructs a [`DeleteFirewallManagerRuleGroupsOutput`](crate::output::DeleteFirewallManagerRuleGroupsOutput).
         pub fn build(self) -> crate::output::DeleteFirewallManagerRuleGroupsOutput {
             crate::output::DeleteFirewallManagerRuleGroupsOutput {
                 next_web_acl_lock_token: self.next_web_acl_lock_token,
@@ -2862,7 +2880,7 @@ pub mod delete_firewall_manager_rule_groups_output {
     }
 }
 impl DeleteFirewallManagerRuleGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFirewallManagerRuleGroupsOutput`](crate::output::DeleteFirewallManagerRuleGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFirewallManagerRuleGroupsOutput`](crate::output::DeleteFirewallManagerRuleGroupsOutput).
     pub fn builder() -> crate::output::delete_firewall_manager_rule_groups_output::Builder {
         crate::output::delete_firewall_manager_rule_groups_output::Builder::default()
     }
@@ -2873,6 +2891,7 @@ impl DeleteFirewallManagerRuleGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateWebAclOutput {
     /// <p>High-level information about a <code>WebACL</code>, returned by operations like create and list. This provides information like the ID, that you can use to retrieve and manage a <code>WebACL</code>, and the ARN, that you provide to operations like <code>AssociateWebACL</code>.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::WebAclSummary>,
 }
 impl CreateWebAclOutput {
@@ -2888,11 +2907,10 @@ impl std::fmt::Debug for CreateWebAclOutput {
         formatter.finish()
     }
 }
-/// See [`CreateWebAclOutput`](crate::output::CreateWebAclOutput)
+/// See [`CreateWebAclOutput`](crate::output::CreateWebAclOutput).
 pub mod create_web_acl_output {
 
-    /// A builder for [`CreateWebAclOutput`](crate::output::CreateWebAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateWebAclOutput`](crate::output::CreateWebAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::WebAclSummary>,
@@ -2911,7 +2929,7 @@ pub mod create_web_acl_output {
             self.summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateWebAclOutput`](crate::output::CreateWebAclOutput)
+        /// Consumes the builder and constructs a [`CreateWebAclOutput`](crate::output::CreateWebAclOutput).
         pub fn build(self) -> crate::output::CreateWebAclOutput {
             crate::output::CreateWebAclOutput {
                 summary: self.summary,
@@ -2920,7 +2938,7 @@ pub mod create_web_acl_output {
     }
 }
 impl CreateWebAclOutput {
-    /// Creates a new builder-style object to manufacture [`CreateWebAclOutput`](crate::output::CreateWebAclOutput)
+    /// Creates a new builder-style object to manufacture [`CreateWebAclOutput`](crate::output::CreateWebAclOutput).
     pub fn builder() -> crate::output::create_web_acl_output::Builder {
         crate::output::create_web_acl_output::Builder::default()
     }
@@ -2931,6 +2949,7 @@ impl CreateWebAclOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRuleGroupOutput {
     /// <p>High-level information about a <code>RuleGroup</code>, returned by operations like create and list. This provides information like the ID, that you can use to retrieve and manage a <code>RuleGroup</code>, and the ARN, that you provide to the <code>RuleGroupReferenceStatement</code> to use the rule group in a <code>Rule</code>.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::RuleGroupSummary>,
 }
 impl CreateRuleGroupOutput {
@@ -2946,11 +2965,10 @@ impl std::fmt::Debug for CreateRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
+/// See [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput).
 pub mod create_rule_group_output {
 
-    /// A builder for [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::RuleGroupSummary>,
@@ -2969,7 +2987,7 @@ pub mod create_rule_group_output {
             self.summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
+        /// Consumes the builder and constructs a [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput).
         pub fn build(self) -> crate::output::CreateRuleGroupOutput {
             crate::output::CreateRuleGroupOutput {
                 summary: self.summary,
@@ -2978,7 +2996,7 @@ pub mod create_rule_group_output {
     }
 }
 impl CreateRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput).
     pub fn builder() -> crate::output::create_rule_group_output::Builder {
         crate::output::create_rule_group_output::Builder::default()
     }
@@ -2989,6 +3007,7 @@ impl CreateRuleGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRegexPatternSetOutput {
     /// <p>High-level information about a <code>RegexPatternSet</code>, returned by operations like create and list. This provides information like the ID, that you can use to retrieve and manage a <code>RegexPatternSet</code>, and the ARN, that you provide to the <code>RegexPatternSetReferenceStatement</code> to use the pattern set in a <code>Rule</code>.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::RegexPatternSetSummary>,
 }
 impl CreateRegexPatternSetOutput {
@@ -3004,11 +3023,10 @@ impl std::fmt::Debug for CreateRegexPatternSetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput)
+/// See [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput).
 pub mod create_regex_pattern_set_output {
 
-    /// A builder for [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::RegexPatternSetSummary>,
@@ -3027,7 +3045,7 @@ pub mod create_regex_pattern_set_output {
             self.summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput)
+        /// Consumes the builder and constructs a [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput).
         pub fn build(self) -> crate::output::CreateRegexPatternSetOutput {
             crate::output::CreateRegexPatternSetOutput {
                 summary: self.summary,
@@ -3036,7 +3054,7 @@ pub mod create_regex_pattern_set_output {
     }
 }
 impl CreateRegexPatternSetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRegexPatternSetOutput`](crate::output::CreateRegexPatternSetOutput).
     pub fn builder() -> crate::output::create_regex_pattern_set_output::Builder {
         crate::output::create_regex_pattern_set_output::Builder::default()
     }
@@ -3047,6 +3065,7 @@ impl CreateRegexPatternSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateIpSetOutput {
     /// <p>High-level information about an <code>IPSet</code>, returned by operations like create and list. This provides information like the ID, that you can use to retrieve and manage an <code>IPSet</code>, and the ARN, that you provide to the <code>IPSetReferenceStatement</code> to use the address set in a <code>Rule</code>.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::IpSetSummary>,
 }
 impl CreateIpSetOutput {
@@ -3062,11 +3081,10 @@ impl std::fmt::Debug for CreateIpSetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateIpSetOutput`](crate::output::CreateIpSetOutput)
+/// See [`CreateIpSetOutput`](crate::output::CreateIpSetOutput).
 pub mod create_ip_set_output {
 
-    /// A builder for [`CreateIpSetOutput`](crate::output::CreateIpSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateIpSetOutput`](crate::output::CreateIpSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::IpSetSummary>,
@@ -3085,7 +3103,7 @@ pub mod create_ip_set_output {
             self.summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateIpSetOutput`](crate::output::CreateIpSetOutput)
+        /// Consumes the builder and constructs a [`CreateIpSetOutput`](crate::output::CreateIpSetOutput).
         pub fn build(self) -> crate::output::CreateIpSetOutput {
             crate::output::CreateIpSetOutput {
                 summary: self.summary,
@@ -3094,7 +3112,7 @@ pub mod create_ip_set_output {
     }
 }
 impl CreateIpSetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateIpSetOutput`](crate::output::CreateIpSetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateIpSetOutput`](crate::output::CreateIpSetOutput).
     pub fn builder() -> crate::output::create_ip_set_output::Builder {
         crate::output::create_ip_set_output::Builder::default()
     }
@@ -3105,6 +3123,7 @@ impl CreateIpSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CheckCapacityOutput {
     /// <p>The capacity required by the rules and scope.</p>
+    #[doc(hidden)]
     pub capacity: i64,
 }
 impl CheckCapacityOutput {
@@ -3120,11 +3139,10 @@ impl std::fmt::Debug for CheckCapacityOutput {
         formatter.finish()
     }
 }
-/// See [`CheckCapacityOutput`](crate::output::CheckCapacityOutput)
+/// See [`CheckCapacityOutput`](crate::output::CheckCapacityOutput).
 pub mod check_capacity_output {
 
-    /// A builder for [`CheckCapacityOutput`](crate::output::CheckCapacityOutput)
-    #[non_exhaustive]
+    /// A builder for [`CheckCapacityOutput`](crate::output::CheckCapacityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) capacity: std::option::Option<i64>,
@@ -3140,7 +3158,7 @@ pub mod check_capacity_output {
             self.capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`CheckCapacityOutput`](crate::output::CheckCapacityOutput)
+        /// Consumes the builder and constructs a [`CheckCapacityOutput`](crate::output::CheckCapacityOutput).
         pub fn build(self) -> crate::output::CheckCapacityOutput {
             crate::output::CheckCapacityOutput {
                 capacity: self.capacity.unwrap_or_default(),
@@ -3149,7 +3167,7 @@ pub mod check_capacity_output {
     }
 }
 impl CheckCapacityOutput {
-    /// Creates a new builder-style object to manufacture [`CheckCapacityOutput`](crate::output::CheckCapacityOutput)
+    /// Creates a new builder-style object to manufacture [`CheckCapacityOutput`](crate::output::CheckCapacityOutput).
     pub fn builder() -> crate::output::check_capacity_output::Builder {
         crate::output::check_capacity_output::Builder::default()
     }
@@ -3165,22 +3183,21 @@ impl std::fmt::Debug for AssociateWebAclOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateWebAclOutput`](crate::output::AssociateWebAclOutput)
+/// See [`AssociateWebAclOutput`](crate::output::AssociateWebAclOutput).
 pub mod associate_web_acl_output {
 
-    /// A builder for [`AssociateWebAclOutput`](crate::output::AssociateWebAclOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateWebAclOutput`](crate::output::AssociateWebAclOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AssociateWebAclOutput`](crate::output::AssociateWebAclOutput)
+        /// Consumes the builder and constructs a [`AssociateWebAclOutput`](crate::output::AssociateWebAclOutput).
         pub fn build(self) -> crate::output::AssociateWebAclOutput {
             crate::output::AssociateWebAclOutput {}
         }
     }
 }
 impl AssociateWebAclOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateWebAclOutput`](crate::output::AssociateWebAclOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateWebAclOutput`](crate::output::AssociateWebAclOutput).
     pub fn builder() -> crate::output::associate_web_acl_output::Builder {
         crate::output::associate_web_acl_output::Builder::default()
     }

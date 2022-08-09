@@ -6,28 +6,36 @@
 pub struct PolicyDetails {
     /// <p>The valid target resource types and actions a policy can manage. Specify <code>EBS_SNAPSHOT_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle of Amazon EBS snapshots. Specify <code>IMAGE_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle of EBS-backed AMIs. Specify <code>EVENT_BASED_POLICY </code> to create an event-based policy that performs specific actions when a defined event occurs in your Amazon Web Services account.</p>
     /// <p>The default is <code>EBS_SNAPSHOT_MANAGEMENT</code>.</p>
+    #[doc(hidden)]
     pub policy_type: std::option::Option<crate::model::PolicyTypeValues>,
     /// <p>The target resource type for snapshot and AMI lifecycle policies. Use <code>VOLUME </code>to create snapshots of individual volumes or use <code>INSTANCE</code> to create multi-volume snapshots from the volumes for an instance.</p>
     /// <p>This parameter is required for snapshot and AMI policies only. If you are creating an event-based policy, omit this parameter.</p>
+    #[doc(hidden)]
     pub resource_types: std::option::Option<std::vec::Vec<crate::model::ResourceTypeValues>>,
     /// <p>The location of the resources to backup. If the source resources are located in an Amazon Web Services Region, specify <code>CLOUD</code>. If the source resources are located on an Outpost in your account, specify <code>OUTPOST</code>. </p>
     /// <p>If you specify <code>OUTPOST</code>, Amazon Data Lifecycle Manager backs up all resources of the specified type with matching target tags across all of the Outposts in your account.</p>
+    #[doc(hidden)]
     pub resource_locations:
         std::option::Option<std::vec::Vec<crate::model::ResourceLocationValues>>,
     /// <p>The single tag that identifies targeted resources for this policy.</p>
     /// <p>This parameter is required for snapshot and AMI policies only. If you are creating an event-based policy, omit this parameter.</p>
+    #[doc(hidden)]
     pub target_tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The schedules of policy-defined actions for snapshot and AMI lifecycle policies. A policy can have up to four schedules—one mandatory schedule and up to three optional schedules.</p>
     /// <p>This parameter is required for snapshot and AMI policies only. If you are creating an event-based policy, omit this parameter.</p>
+    #[doc(hidden)]
     pub schedules: std::option::Option<std::vec::Vec<crate::model::Schedule>>,
     /// <p>A set of optional parameters for snapshot and AMI lifecycle policies. </p>
     /// <p>This parameter is required for snapshot and AMI policies only. If you are creating an event-based policy, omit this parameter.</p>
+    #[doc(hidden)]
     pub parameters: std::option::Option<crate::model::Parameters>,
     /// <p>The event that triggers the event-based policy. </p>
     /// <p>This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter.</p>
+    #[doc(hidden)]
     pub event_source: std::option::Option<crate::model::EventSource>,
     /// <p>The actions to be performed when the event-based policy is triggered. You can specify only one action per policy.</p>
     /// <p>This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter.</p>
+    #[doc(hidden)]
     pub actions: std::option::Option<std::vec::Vec<crate::model::Action>>,
 }
 impl PolicyDetails {
@@ -88,11 +96,10 @@ impl std::fmt::Debug for PolicyDetails {
         formatter.finish()
     }
 }
-/// See [`PolicyDetails`](crate::model::PolicyDetails)
+/// See [`PolicyDetails`](crate::model::PolicyDetails).
 pub mod policy_details {
 
-    /// A builder for [`PolicyDetails`](crate::model::PolicyDetails)
-    #[non_exhaustive]
+    /// A builder for [`PolicyDetails`](crate::model::PolicyDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_type: std::option::Option<crate::model::PolicyTypeValues>,
@@ -257,7 +264,7 @@ pub mod policy_details {
             self.actions = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyDetails`](crate::model::PolicyDetails)
+        /// Consumes the builder and constructs a [`PolicyDetails`](crate::model::PolicyDetails).
         pub fn build(self) -> crate::model::PolicyDetails {
             crate::model::PolicyDetails {
                 policy_type: self.policy_type,
@@ -273,7 +280,7 @@ pub mod policy_details {
     }
 }
 impl PolicyDetails {
-    /// Creates a new builder-style object to manufacture [`PolicyDetails`](crate::model::PolicyDetails)
+    /// Creates a new builder-style object to manufacture [`PolicyDetails`](crate::model::PolicyDetails).
     pub fn builder() -> crate::model::policy_details::Builder {
         crate::model::policy_details::Builder::default()
     }
@@ -284,8 +291,10 @@ impl PolicyDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Action {
     /// <p>A descriptive name for the action.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The rule for copying shared snapshots across Regions.</p>
+    #[doc(hidden)]
     pub cross_region_copy: std::option::Option<std::vec::Vec<crate::model::CrossRegionCopyAction>>,
 }
 impl Action {
@@ -306,11 +315,10 @@ impl std::fmt::Debug for Action {
         formatter.finish()
     }
 }
-/// See [`Action`](crate::model::Action)
+/// See [`Action`](crate::model::Action).
 pub mod action {
 
-    /// A builder for [`Action`](crate::model::Action)
-    #[non_exhaustive]
+    /// A builder for [`Action`](crate::model::Action).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -347,7 +355,7 @@ pub mod action {
             self.cross_region_copy = input;
             self
         }
-        /// Consumes the builder and constructs a [`Action`](crate::model::Action)
+        /// Consumes the builder and constructs a [`Action`](crate::model::Action).
         pub fn build(self) -> crate::model::Action {
             crate::model::Action {
                 name: self.name,
@@ -357,7 +365,7 @@ pub mod action {
     }
 }
 impl Action {
-    /// Creates a new builder-style object to manufacture [`Action`](crate::model::Action)
+    /// Creates a new builder-style object to manufacture [`Action`](crate::model::Action).
     pub fn builder() -> crate::model::action::Builder {
         crate::model::action::Builder::default()
     }
@@ -368,10 +376,13 @@ impl Action {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CrossRegionCopyAction {
     /// <p>The target Region.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<std::string::String>,
     /// <p>The encryption settings for the copied snapshot.</p>
+    #[doc(hidden)]
     pub encryption_configuration: std::option::Option<crate::model::EncryptionConfiguration>,
     /// <p>Specifies the retention rule for cross-Region snapshot copies.</p>
+    #[doc(hidden)]
     pub retain_rule: std::option::Option<crate::model::CrossRegionCopyRetainRule>,
 }
 impl CrossRegionCopyAction {
@@ -399,11 +410,10 @@ impl std::fmt::Debug for CrossRegionCopyAction {
         formatter.finish()
     }
 }
-/// See [`CrossRegionCopyAction`](crate::model::CrossRegionCopyAction)
+/// See [`CrossRegionCopyAction`](crate::model::CrossRegionCopyAction).
 pub mod cross_region_copy_action {
 
-    /// A builder for [`CrossRegionCopyAction`](crate::model::CrossRegionCopyAction)
-    #[non_exhaustive]
+    /// A builder for [`CrossRegionCopyAction`](crate::model::CrossRegionCopyAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target: std::option::Option<std::string::String>,
@@ -451,7 +461,7 @@ pub mod cross_region_copy_action {
             self.retain_rule = input;
             self
         }
-        /// Consumes the builder and constructs a [`CrossRegionCopyAction`](crate::model::CrossRegionCopyAction)
+        /// Consumes the builder and constructs a [`CrossRegionCopyAction`](crate::model::CrossRegionCopyAction).
         pub fn build(self) -> crate::model::CrossRegionCopyAction {
             crate::model::CrossRegionCopyAction {
                 target: self.target,
@@ -462,7 +472,7 @@ pub mod cross_region_copy_action {
     }
 }
 impl CrossRegionCopyAction {
-    /// Creates a new builder-style object to manufacture [`CrossRegionCopyAction`](crate::model::CrossRegionCopyAction)
+    /// Creates a new builder-style object to manufacture [`CrossRegionCopyAction`](crate::model::CrossRegionCopyAction).
     pub fn builder() -> crate::model::cross_region_copy_action::Builder {
         crate::model::cross_region_copy_action::Builder::default()
     }
@@ -473,8 +483,10 @@ impl CrossRegionCopyAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CrossRegionCopyRetainRule {
     /// <p>The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.</p>
+    #[doc(hidden)]
     pub interval: i32,
     /// <p>The unit of time for time-based retention.</p>
+    #[doc(hidden)]
     pub interval_unit: std::option::Option<crate::model::RetentionIntervalUnitValues>,
 }
 impl CrossRegionCopyRetainRule {
@@ -495,11 +507,10 @@ impl std::fmt::Debug for CrossRegionCopyRetainRule {
         formatter.finish()
     }
 }
-/// See [`CrossRegionCopyRetainRule`](crate::model::CrossRegionCopyRetainRule)
+/// See [`CrossRegionCopyRetainRule`](crate::model::CrossRegionCopyRetainRule).
 pub mod cross_region_copy_retain_rule {
 
-    /// A builder for [`CrossRegionCopyRetainRule`](crate::model::CrossRegionCopyRetainRule)
-    #[non_exhaustive]
+    /// A builder for [`CrossRegionCopyRetainRule`](crate::model::CrossRegionCopyRetainRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) interval: std::option::Option<i32>,
@@ -529,7 +540,7 @@ pub mod cross_region_copy_retain_rule {
             self.interval_unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`CrossRegionCopyRetainRule`](crate::model::CrossRegionCopyRetainRule)
+        /// Consumes the builder and constructs a [`CrossRegionCopyRetainRule`](crate::model::CrossRegionCopyRetainRule).
         pub fn build(self) -> crate::model::CrossRegionCopyRetainRule {
             crate::model::CrossRegionCopyRetainRule {
                 interval: self.interval.unwrap_or_default(),
@@ -539,7 +550,7 @@ pub mod cross_region_copy_retain_rule {
     }
 }
 impl CrossRegionCopyRetainRule {
-    /// Creates a new builder-style object to manufacture [`CrossRegionCopyRetainRule`](crate::model::CrossRegionCopyRetainRule)
+    /// Creates a new builder-style object to manufacture [`CrossRegionCopyRetainRule`](crate::model::CrossRegionCopyRetainRule).
     pub fn builder() -> crate::model::cross_region_copy_retain_rule::Builder {
         crate::model::cross_region_copy_retain_rule::Builder::default()
     }
@@ -613,8 +624,10 @@ impl AsRef<str> for RetentionIntervalUnitValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EncryptionConfiguration {
     /// <p>To encrypt a copy of an unencrypted snapshot when encryption by default is not enabled, enable encryption using this parameter. Copies of encrypted snapshots are encrypted, even if this parameter is false or when encryption by default is not enabled.</p>
+    #[doc(hidden)]
     pub encrypted: std::option::Option<bool>,
     /// <p>The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not specified, the default KMS key for the account is used.</p>
+    #[doc(hidden)]
     pub cmk_arn: std::option::Option<std::string::String>,
 }
 impl EncryptionConfiguration {
@@ -635,11 +648,10 @@ impl std::fmt::Debug for EncryptionConfiguration {
         formatter.finish()
     }
 }
-/// See [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
+/// See [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
 pub mod encryption_configuration {
 
-    /// A builder for [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encrypted: std::option::Option<bool>,
@@ -666,7 +678,7 @@ pub mod encryption_configuration {
             self.cmk_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
+        /// Consumes the builder and constructs a [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
         pub fn build(self) -> crate::model::EncryptionConfiguration {
             crate::model::EncryptionConfiguration {
                 encrypted: self.encrypted,
@@ -676,7 +688,7 @@ pub mod encryption_configuration {
     }
 }
 impl EncryptionConfiguration {
-    /// Creates a new builder-style object to manufacture [`EncryptionConfiguration`](crate::model::EncryptionConfiguration)
+    /// Creates a new builder-style object to manufacture [`EncryptionConfiguration`](crate::model::EncryptionConfiguration).
     pub fn builder() -> crate::model::encryption_configuration::Builder {
         crate::model::encryption_configuration::Builder::default()
     }
@@ -687,8 +699,10 @@ impl EncryptionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventSource {
     /// <p>The source of the event. Currently only managed CloudWatch Events rules are supported.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EventSourceValues>,
     /// <p>Information about the event.</p>
+    #[doc(hidden)]
     pub parameters: std::option::Option<crate::model::EventParameters>,
 }
 impl EventSource {
@@ -709,11 +723,10 @@ impl std::fmt::Debug for EventSource {
         formatter.finish()
     }
 }
-/// See [`EventSource`](crate::model::EventSource)
+/// See [`EventSource`](crate::model::EventSource).
 pub mod event_source {
 
-    /// A builder for [`EventSource`](crate::model::EventSource)
-    #[non_exhaustive]
+    /// A builder for [`EventSource`](crate::model::EventSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::EventSourceValues>,
@@ -746,7 +759,7 @@ pub mod event_source {
             self.parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventSource`](crate::model::EventSource)
+        /// Consumes the builder and constructs a [`EventSource`](crate::model::EventSource).
         pub fn build(self) -> crate::model::EventSource {
             crate::model::EventSource {
                 r#type: self.r#type,
@@ -756,7 +769,7 @@ pub mod event_source {
     }
 }
 impl EventSource {
-    /// Creates a new builder-style object to manufacture [`EventSource`](crate::model::EventSource)
+    /// Creates a new builder-style object to manufacture [`EventSource`](crate::model::EventSource).
     pub fn builder() -> crate::model::event_source::Builder {
         crate::model::event_source::Builder::default()
     }
@@ -767,11 +780,14 @@ impl EventSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventParameters {
     /// <p>The type of event. Currently, only snapshot sharing events are supported.</p>
+    #[doc(hidden)]
     pub event_type: std::option::Option<crate::model::EventTypeValues>,
     /// <p>The IDs of the Amazon Web Services accounts that can trigger policy by sharing snapshots with your account. The policy only runs if one of the specified Amazon Web Services accounts shares a snapshot with your account.</p>
+    #[doc(hidden)]
     pub snapshot_owner: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The snapshot description that can trigger the policy. The description pattern is specified using a regular expression. The policy runs only if a snapshot with a description that matches the specified pattern is shared with your account.</p>
     /// <p>For example, specifying <code>^.*Created for policy: policy-1234567890abcdef0.*$</code> configures the policy to run only if snapshots created by policy <code>policy-1234567890abcdef0</code> are shared with your account.</p>
+    #[doc(hidden)]
     pub description_regex: std::option::Option<std::string::String>,
 }
 impl EventParameters {
@@ -798,11 +814,10 @@ impl std::fmt::Debug for EventParameters {
         formatter.finish()
     }
 }
-/// See [`EventParameters`](crate::model::EventParameters)
+/// See [`EventParameters`](crate::model::EventParameters).
 pub mod event_parameters {
 
-    /// A builder for [`EventParameters`](crate::model::EventParameters)
-    #[non_exhaustive]
+    /// A builder for [`EventParameters`](crate::model::EventParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_type: std::option::Option<crate::model::EventTypeValues>,
@@ -857,7 +872,7 @@ pub mod event_parameters {
             self.description_regex = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventParameters`](crate::model::EventParameters)
+        /// Consumes the builder and constructs a [`EventParameters`](crate::model::EventParameters).
         pub fn build(self) -> crate::model::EventParameters {
             crate::model::EventParameters {
                 event_type: self.event_type,
@@ -868,7 +883,7 @@ pub mod event_parameters {
     }
 }
 impl EventParameters {
-    /// Creates a new builder-style object to manufacture [`EventParameters`](crate::model::EventParameters)
+    /// Creates a new builder-style object to manufacture [`EventParameters`](crate::model::EventParameters).
     pub fn builder() -> crate::model::event_parameters::Builder {
         crate::model::event_parameters::Builder::default()
     }
@@ -981,8 +996,10 @@ impl AsRef<str> for EventSourceValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Parameters {
     /// <p>[EBS Snapshot Management – Instance policies only] Indicates whether to exclude the root volume from snapshots created using <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSnapshots.html">CreateSnapshots</a>. The default is false.</p>
+    #[doc(hidden)]
     pub exclude_boot_volume: std::option::Option<bool>,
     /// <p>Applies to AMI lifecycle policies only. Indicates whether targeted instances are rebooted when the lifecycle policy runs. <code>true</code> indicates that targeted instances are not rebooted when the policy runs. <code>false</code> indicates that target instances are rebooted when the policy runs. The default is <code>true</code> (instances are not rebooted).</p>
+    #[doc(hidden)]
     pub no_reboot: std::option::Option<bool>,
 }
 impl Parameters {
@@ -1003,11 +1020,10 @@ impl std::fmt::Debug for Parameters {
         formatter.finish()
     }
 }
-/// See [`Parameters`](crate::model::Parameters)
+/// See [`Parameters`](crate::model::Parameters).
 pub mod parameters {
 
-    /// A builder for [`Parameters`](crate::model::Parameters)
-    #[non_exhaustive]
+    /// A builder for [`Parameters`](crate::model::Parameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) exclude_boot_volume: std::option::Option<bool>,
@@ -1034,7 +1050,7 @@ pub mod parameters {
             self.no_reboot = input;
             self
         }
-        /// Consumes the builder and constructs a [`Parameters`](crate::model::Parameters)
+        /// Consumes the builder and constructs a [`Parameters`](crate::model::Parameters).
         pub fn build(self) -> crate::model::Parameters {
             crate::model::Parameters {
                 exclude_boot_volume: self.exclude_boot_volume,
@@ -1044,7 +1060,7 @@ pub mod parameters {
     }
 }
 impl Parameters {
-    /// Creates a new builder-style object to manufacture [`Parameters`](crate::model::Parameters)
+    /// Creates a new builder-style object to manufacture [`Parameters`](crate::model::Parameters).
     pub fn builder() -> crate::model::parameters::Builder {
         crate::model::parameters::Builder::default()
     }
@@ -1055,26 +1071,36 @@ impl Parameters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Schedule {
     /// <p>The name of the schedule.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.</p>
+    #[doc(hidden)]
     pub copy_tags: bool,
     /// <p>The tags to apply to policy-created resources. These user-defined tags are in addition to the Amazon Web Services-added lifecycle tags.</p>
+    #[doc(hidden)]
     pub tags_to_add: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A collection of key/value pairs with values determined dynamically when the policy is executed. Keys may be any valid Amazon EC2 tag key. Values must be in one of the two following formats: <code>$(instance-id)</code> or <code>$(timestamp)</code>. Variable tags are only valid for EBS Snapshot Management – Instance policies.</p>
+    #[doc(hidden)]
     pub variable_tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The creation rule.</p>
+    #[doc(hidden)]
     pub create_rule: std::option::Option<crate::model::CreateRule>,
     /// <p>The retention rule.</p>
+    #[doc(hidden)]
     pub retain_rule: std::option::Option<crate::model::RetainRule>,
     /// <p>The rule for enabling fast snapshot restore.</p>
+    #[doc(hidden)]
     pub fast_restore_rule: std::option::Option<crate::model::FastRestoreRule>,
     /// <p>The rule for cross-Region snapshot copies.</p>
     /// <p>You can only specify cross-Region copy rules for policies that create snapshots in a Region. If the policy creates snapshots on an Outpost, then you cannot copy the snapshots to a Region or to an Outpost. If the policy creates snapshots in a Region, then snapshots can be copied to up to three Regions or Outposts.</p>
+    #[doc(hidden)]
     pub cross_region_copy_rules:
         std::option::Option<std::vec::Vec<crate::model::CrossRegionCopyRule>>,
     /// <p>The rule for sharing snapshots with other Amazon Web Services accounts.</p>
+    #[doc(hidden)]
     pub share_rules: std::option::Option<std::vec::Vec<crate::model::ShareRule>>,
     /// <p>The AMI deprecation rule for the schedule.</p>
+    #[doc(hidden)]
     pub deprecate_rule: std::option::Option<crate::model::DeprecateRule>,
 }
 impl Schedule {
@@ -1138,11 +1164,10 @@ impl std::fmt::Debug for Schedule {
         formatter.finish()
     }
 }
-/// See [`Schedule`](crate::model::Schedule)
+/// See [`Schedule`](crate::model::Schedule).
 pub mod schedule {
 
-    /// A builder for [`Schedule`](crate::model::Schedule)
-    #[non_exhaustive]
+    /// A builder for [`Schedule`](crate::model::Schedule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1308,7 +1333,7 @@ pub mod schedule {
             self.deprecate_rule = input;
             self
         }
-        /// Consumes the builder and constructs a [`Schedule`](crate::model::Schedule)
+        /// Consumes the builder and constructs a [`Schedule`](crate::model::Schedule).
         pub fn build(self) -> crate::model::Schedule {
             crate::model::Schedule {
                 name: self.name,
@@ -1326,7 +1351,7 @@ pub mod schedule {
     }
 }
 impl Schedule {
-    /// Creates a new builder-style object to manufacture [`Schedule`](crate::model::Schedule)
+    /// Creates a new builder-style object to manufacture [`Schedule`](crate::model::Schedule).
     pub fn builder() -> crate::model::schedule::Builder {
         crate::model::schedule::Builder::default()
     }
@@ -1337,10 +1362,13 @@ impl Schedule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeprecateRule {
     /// <p>If the schedule has a count-based retention rule, this parameter specifies the number of oldest AMIs to deprecate. The count must be less than or equal to the schedule's retention count, and it can't be greater than 1000.</p>
+    #[doc(hidden)]
     pub count: i32,
     /// <p>If the schedule has an age-based retention rule, this parameter specifies the period after which to deprecate AMIs created by the schedule. The period must be less than or equal to the schedule's retention period, and it can't be greater than 10 years. This is equivalent to 120 months, 520 weeks, or 3650 days.</p>
+    #[doc(hidden)]
     pub interval: i32,
     /// <p>The unit of time in which to measure the <b>Interval</b>.</p>
+    #[doc(hidden)]
     pub interval_unit: std::option::Option<crate::model::RetentionIntervalUnitValues>,
 }
 impl DeprecateRule {
@@ -1366,11 +1394,10 @@ impl std::fmt::Debug for DeprecateRule {
         formatter.finish()
     }
 }
-/// See [`DeprecateRule`](crate::model::DeprecateRule)
+/// See [`DeprecateRule`](crate::model::DeprecateRule).
 pub mod deprecate_rule {
 
-    /// A builder for [`DeprecateRule`](crate::model::DeprecateRule)
-    #[non_exhaustive]
+    /// A builder for [`DeprecateRule`](crate::model::DeprecateRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) count: std::option::Option<i32>,
@@ -1411,7 +1438,7 @@ pub mod deprecate_rule {
             self.interval_unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeprecateRule`](crate::model::DeprecateRule)
+        /// Consumes the builder and constructs a [`DeprecateRule`](crate::model::DeprecateRule).
         pub fn build(self) -> crate::model::DeprecateRule {
             crate::model::DeprecateRule {
                 count: self.count.unwrap_or_default(),
@@ -1422,7 +1449,7 @@ pub mod deprecate_rule {
     }
 }
 impl DeprecateRule {
-    /// Creates a new builder-style object to manufacture [`DeprecateRule`](crate::model::DeprecateRule)
+    /// Creates a new builder-style object to manufacture [`DeprecateRule`](crate::model::DeprecateRule).
     pub fn builder() -> crate::model::deprecate_rule::Builder {
         crate::model::deprecate_rule::Builder::default()
     }
@@ -1433,10 +1460,13 @@ impl DeprecateRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ShareRule {
     /// <p>The IDs of the Amazon Web Services accounts with which to share the snapshots.</p>
+    #[doc(hidden)]
     pub target_accounts: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The period after which snapshots that are shared with other Amazon Web Services accounts are automatically unshared.</p>
+    #[doc(hidden)]
     pub unshare_interval: i32,
     /// <p>The unit of time for the automatic unsharing interval.</p>
+    #[doc(hidden)]
     pub unshare_interval_unit: std::option::Option<crate::model::RetentionIntervalUnitValues>,
 }
 impl ShareRule {
@@ -1464,11 +1494,10 @@ impl std::fmt::Debug for ShareRule {
         formatter.finish()
     }
 }
-/// See [`ShareRule`](crate::model::ShareRule)
+/// See [`ShareRule`](crate::model::ShareRule).
 pub mod share_rule {
 
-    /// A builder for [`ShareRule`](crate::model::ShareRule)
-    #[non_exhaustive]
+    /// A builder for [`ShareRule`](crate::model::ShareRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_accounts: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1522,7 +1551,7 @@ pub mod share_rule {
             self.unshare_interval_unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`ShareRule`](crate::model::ShareRule)
+        /// Consumes the builder and constructs a [`ShareRule`](crate::model::ShareRule).
         pub fn build(self) -> crate::model::ShareRule {
             crate::model::ShareRule {
                 target_accounts: self.target_accounts,
@@ -1533,7 +1562,7 @@ pub mod share_rule {
     }
 }
 impl ShareRule {
-    /// Creates a new builder-style object to manufacture [`ShareRule`](crate::model::ShareRule)
+    /// Creates a new builder-style object to manufacture [`ShareRule`](crate::model::ShareRule).
     pub fn builder() -> crate::model::share_rule::Builder {
         crate::model::share_rule::Builder::default()
     }
@@ -1545,19 +1574,26 @@ impl ShareRule {
 pub struct CrossRegionCopyRule {
     /// <p>Avoid using this parameter when creating new policies. Instead, use <b>Target</b> to specify a target Region or a target Outpost for snapshot copies.</p>
     /// <p>For policies created before the <b>Target</b> parameter was introduced, this parameter indicates the target Region for snapshot copies.</p>
+    #[doc(hidden)]
     pub target_region: std::option::Option<std::string::String>,
     /// <p>The target Region or the Amazon Resource Name (ARN) of the target Outpost for the snapshot copies.</p>
     /// <p>Use this parameter instead of <b>TargetRegion</b>. Do not specify both.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<std::string::String>,
     /// <p>To encrypt a copy of an unencrypted snapshot if encryption by default is not enabled, enable encryption using this parameter. Copies of encrypted snapshots are encrypted, even if this parameter is false or if encryption by default is not enabled.</p>
+    #[doc(hidden)]
     pub encrypted: std::option::Option<bool>,
     /// <p>The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not specified, the default KMS key for the account is used.</p>
+    #[doc(hidden)]
     pub cmk_arn: std::option::Option<std::string::String>,
     /// <p>Indicates whether to copy all user-defined tags from the source snapshot to the cross-Region snapshot copy.</p>
+    #[doc(hidden)]
     pub copy_tags: std::option::Option<bool>,
     /// <p>The retention rule that indicates how long snapshot copies are to be retained in the destination Region.</p>
+    #[doc(hidden)]
     pub retain_rule: std::option::Option<crate::model::CrossRegionCopyRetainRule>,
     /// <p>The AMI deprecation rule for cross-Region AMI copies created by the rule.</p>
+    #[doc(hidden)]
     pub deprecate_rule: std::option::Option<crate::model::CrossRegionCopyDeprecateRule>,
 }
 impl CrossRegionCopyRule {
@@ -1607,11 +1643,10 @@ impl std::fmt::Debug for CrossRegionCopyRule {
         formatter.finish()
     }
 }
-/// See [`CrossRegionCopyRule`](crate::model::CrossRegionCopyRule)
+/// See [`CrossRegionCopyRule`](crate::model::CrossRegionCopyRule).
 pub mod cross_region_copy_rule {
 
-    /// A builder for [`CrossRegionCopyRule`](crate::model::CrossRegionCopyRule)
-    #[non_exhaustive]
+    /// A builder for [`CrossRegionCopyRule`](crate::model::CrossRegionCopyRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_region: std::option::Option<std::string::String>,
@@ -1706,7 +1741,7 @@ pub mod cross_region_copy_rule {
             self.deprecate_rule = input;
             self
         }
-        /// Consumes the builder and constructs a [`CrossRegionCopyRule`](crate::model::CrossRegionCopyRule)
+        /// Consumes the builder and constructs a [`CrossRegionCopyRule`](crate::model::CrossRegionCopyRule).
         pub fn build(self) -> crate::model::CrossRegionCopyRule {
             crate::model::CrossRegionCopyRule {
                 target_region: self.target_region,
@@ -1721,7 +1756,7 @@ pub mod cross_region_copy_rule {
     }
 }
 impl CrossRegionCopyRule {
-    /// Creates a new builder-style object to manufacture [`CrossRegionCopyRule`](crate::model::CrossRegionCopyRule)
+    /// Creates a new builder-style object to manufacture [`CrossRegionCopyRule`](crate::model::CrossRegionCopyRule).
     pub fn builder() -> crate::model::cross_region_copy_rule::Builder {
         crate::model::cross_region_copy_rule::Builder::default()
     }
@@ -1732,8 +1767,10 @@ impl CrossRegionCopyRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CrossRegionCopyDeprecateRule {
     /// <p>The period after which to deprecate the cross-Region AMI copies. The period must be less than or equal to the cross-Region AMI copy retention period, and it can't be greater than 10 years. This is equivalent to 120 months, 520 weeks, or 3650 days.</p>
+    #[doc(hidden)]
     pub interval: i32,
     /// <p>The unit of time in which to measure the <b>Interval</b>.</p>
+    #[doc(hidden)]
     pub interval_unit: std::option::Option<crate::model::RetentionIntervalUnitValues>,
 }
 impl CrossRegionCopyDeprecateRule {
@@ -1754,11 +1791,10 @@ impl std::fmt::Debug for CrossRegionCopyDeprecateRule {
         formatter.finish()
     }
 }
-/// See [`CrossRegionCopyDeprecateRule`](crate::model::CrossRegionCopyDeprecateRule)
+/// See [`CrossRegionCopyDeprecateRule`](crate::model::CrossRegionCopyDeprecateRule).
 pub mod cross_region_copy_deprecate_rule {
 
-    /// A builder for [`CrossRegionCopyDeprecateRule`](crate::model::CrossRegionCopyDeprecateRule)
-    #[non_exhaustive]
+    /// A builder for [`CrossRegionCopyDeprecateRule`](crate::model::CrossRegionCopyDeprecateRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) interval: std::option::Option<i32>,
@@ -1788,7 +1824,7 @@ pub mod cross_region_copy_deprecate_rule {
             self.interval_unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`CrossRegionCopyDeprecateRule`](crate::model::CrossRegionCopyDeprecateRule)
+        /// Consumes the builder and constructs a [`CrossRegionCopyDeprecateRule`](crate::model::CrossRegionCopyDeprecateRule).
         pub fn build(self) -> crate::model::CrossRegionCopyDeprecateRule {
             crate::model::CrossRegionCopyDeprecateRule {
                 interval: self.interval.unwrap_or_default(),
@@ -1798,7 +1834,7 @@ pub mod cross_region_copy_deprecate_rule {
     }
 }
 impl CrossRegionCopyDeprecateRule {
-    /// Creates a new builder-style object to manufacture [`CrossRegionCopyDeprecateRule`](crate::model::CrossRegionCopyDeprecateRule)
+    /// Creates a new builder-style object to manufacture [`CrossRegionCopyDeprecateRule`](crate::model::CrossRegionCopyDeprecateRule).
     pub fn builder() -> crate::model::cross_region_copy_deprecate_rule::Builder {
         crate::model::cross_region_copy_deprecate_rule::Builder::default()
     }
@@ -1809,12 +1845,16 @@ impl CrossRegionCopyDeprecateRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FastRestoreRule {
     /// <p>The number of snapshots to be enabled with fast snapshot restore.</p>
+    #[doc(hidden)]
     pub count: i32,
     /// <p>The amount of time to enable fast snapshot restore. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.</p>
+    #[doc(hidden)]
     pub interval: i32,
     /// <p>The unit of time for enabling fast snapshot restore.</p>
+    #[doc(hidden)]
     pub interval_unit: std::option::Option<crate::model::RetentionIntervalUnitValues>,
     /// <p>The Availability Zones in which to enable fast snapshot restore.</p>
+    #[doc(hidden)]
     pub availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl FastRestoreRule {
@@ -1845,11 +1885,10 @@ impl std::fmt::Debug for FastRestoreRule {
         formatter.finish()
     }
 }
-/// See [`FastRestoreRule`](crate::model::FastRestoreRule)
+/// See [`FastRestoreRule`](crate::model::FastRestoreRule).
 pub mod fast_restore_rule {
 
-    /// A builder for [`FastRestoreRule`](crate::model::FastRestoreRule)
-    #[non_exhaustive]
+    /// A builder for [`FastRestoreRule`](crate::model::FastRestoreRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) count: std::option::Option<i32>,
@@ -1910,7 +1949,7 @@ pub mod fast_restore_rule {
             self.availability_zones = input;
             self
         }
-        /// Consumes the builder and constructs a [`FastRestoreRule`](crate::model::FastRestoreRule)
+        /// Consumes the builder and constructs a [`FastRestoreRule`](crate::model::FastRestoreRule).
         pub fn build(self) -> crate::model::FastRestoreRule {
             crate::model::FastRestoreRule {
                 count: self.count.unwrap_or_default(),
@@ -1922,7 +1961,7 @@ pub mod fast_restore_rule {
     }
 }
 impl FastRestoreRule {
-    /// Creates a new builder-style object to manufacture [`FastRestoreRule`](crate::model::FastRestoreRule)
+    /// Creates a new builder-style object to manufacture [`FastRestoreRule`](crate::model::FastRestoreRule).
     pub fn builder() -> crate::model::fast_restore_rule::Builder {
         crate::model::fast_restore_rule::Builder::default()
     }
@@ -1933,10 +1972,13 @@ impl FastRestoreRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RetainRule {
     /// <p>The number of snapshots to retain for each volume, up to a maximum of 1000.</p>
+    #[doc(hidden)]
     pub count: i32,
     /// <p>The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.</p>
+    #[doc(hidden)]
     pub interval: i32,
     /// <p>The unit of time for time-based retention.</p>
+    #[doc(hidden)]
     pub interval_unit: std::option::Option<crate::model::RetentionIntervalUnitValues>,
 }
 impl RetainRule {
@@ -1962,11 +2004,10 @@ impl std::fmt::Debug for RetainRule {
         formatter.finish()
     }
 }
-/// See [`RetainRule`](crate::model::RetainRule)
+/// See [`RetainRule`](crate::model::RetainRule).
 pub mod retain_rule {
 
-    /// A builder for [`RetainRule`](crate::model::RetainRule)
-    #[non_exhaustive]
+    /// A builder for [`RetainRule`](crate::model::RetainRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) count: std::option::Option<i32>,
@@ -2007,7 +2048,7 @@ pub mod retain_rule {
             self.interval_unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`RetainRule`](crate::model::RetainRule)
+        /// Consumes the builder and constructs a [`RetainRule`](crate::model::RetainRule).
         pub fn build(self) -> crate::model::RetainRule {
             crate::model::RetainRule {
                 count: self.count.unwrap_or_default(),
@@ -2018,7 +2059,7 @@ pub mod retain_rule {
     }
 }
 impl RetainRule {
-    /// Creates a new builder-style object to manufacture [`RetainRule`](crate::model::RetainRule)
+    /// Creates a new builder-style object to manufacture [`RetainRule`](crate::model::RetainRule).
     pub fn builder() -> crate::model::retain_rule::Builder {
         crate::model::retain_rule::Builder::default()
     }
@@ -2032,15 +2073,20 @@ pub struct CreateRule {
     /// <p>Specifies the destination for snapshots created by the policy. To create snapshots in the same Region as the source resource, specify <code>CLOUD</code>. To create snapshots on the same Outpost as the source resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by default.</p>
     /// <p>If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the same Region as the source resource.</p>
     /// <p>If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source resource, or in the Region of that Outpost.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::LocationValues>,
     /// <p>The interval between snapshots. The supported values are 1, 2, 3, 4, 6, 8, 12, and 24.</p>
+    #[doc(hidden)]
     pub interval: i32,
     /// <p>The interval unit.</p>
+    #[doc(hidden)]
     pub interval_unit: std::option::Option<crate::model::IntervalUnitValues>,
     /// <p>The time, in UTC, to start the operation. The supported format is hh:mm.</p>
     /// <p>The operation occurs within a one-hour window following the specified time. If you do not specify a time, Amazon DLM selects a time within the next 24 hours.</p>
+    #[doc(hidden)]
     pub times: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The schedule, as a Cron expression. The schedule interval must be between 1 hour and 1 year. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions">Cron expressions</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
+    #[doc(hidden)]
     pub cron_expression: std::option::Option<std::string::String>,
 }
 impl CreateRule {
@@ -2079,11 +2125,10 @@ impl std::fmt::Debug for CreateRule {
         formatter.finish()
     }
 }
-/// See [`CreateRule`](crate::model::CreateRule)
+/// See [`CreateRule`](crate::model::CreateRule).
 pub mod create_rule {
 
-    /// A builder for [`CreateRule`](crate::model::CreateRule)
-    #[non_exhaustive]
+    /// A builder for [`CreateRule`](crate::model::CreateRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location: std::option::Option<crate::model::LocationValues>,
@@ -2167,7 +2212,7 @@ pub mod create_rule {
             self.cron_expression = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRule`](crate::model::CreateRule)
+        /// Consumes the builder and constructs a [`CreateRule`](crate::model::CreateRule).
         pub fn build(self) -> crate::model::CreateRule {
             crate::model::CreateRule {
                 location: self.location,
@@ -2180,7 +2225,7 @@ pub mod create_rule {
     }
 }
 impl CreateRule {
-    /// Creates a new builder-style object to manufacture [`CreateRule`](crate::model::CreateRule)
+    /// Creates a new builder-style object to manufacture [`CreateRule`](crate::model::CreateRule).
     pub fn builder() -> crate::model::create_rule::Builder {
         crate::model::create_rule::Builder::default()
     }
@@ -2297,8 +2342,10 @@ impl AsRef<str> for LocationValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The tag key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The tag value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -2319,11 +2366,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -2350,7 +2396,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -2360,7 +2406,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -2599,25 +2645,35 @@ impl AsRef<str> for SettablePolicyStateValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecyclePolicy {
     /// <p>The identifier of the lifecycle policy.</p>
+    #[doc(hidden)]
     pub policy_id: std::option::Option<std::string::String>,
     /// <p>The description of the lifecycle policy.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The activation state of the lifecycle policy.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::GettablePolicyStateValues>,
     /// <p>The description of the status.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the IAM role used to run the operations specified by the lifecycle policy.</p>
+    #[doc(hidden)]
     pub execution_role_arn: std::option::Option<std::string::String>,
     /// <p>The local date and time when the lifecycle policy was created.</p>
+    #[doc(hidden)]
     pub date_created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The local date and time when the lifecycle policy was last modified.</p>
+    #[doc(hidden)]
     pub date_modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The configuration of the lifecycle policy</p>
+    #[doc(hidden)]
     pub policy_details: std::option::Option<crate::model::PolicyDetails>,
     /// <p>The tags.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the policy.</p>
+    #[doc(hidden)]
     pub policy_arn: std::option::Option<std::string::String>,
 }
 impl LifecyclePolicy {
@@ -2681,11 +2737,10 @@ impl std::fmt::Debug for LifecyclePolicy {
         formatter.finish()
     }
 }
-/// See [`LifecyclePolicy`](crate::model::LifecyclePolicy)
+/// See [`LifecyclePolicy`](crate::model::LifecyclePolicy).
 pub mod lifecycle_policy {
 
-    /// A builder for [`LifecyclePolicy`](crate::model::LifecyclePolicy)
-    #[non_exhaustive]
+    /// A builder for [`LifecyclePolicy`](crate::model::LifecyclePolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_id: std::option::Option<std::string::String>,
@@ -2835,7 +2890,7 @@ pub mod lifecycle_policy {
             self.policy_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecyclePolicy`](crate::model::LifecyclePolicy)
+        /// Consumes the builder and constructs a [`LifecyclePolicy`](crate::model::LifecyclePolicy).
         pub fn build(self) -> crate::model::LifecyclePolicy {
             crate::model::LifecyclePolicy {
                 policy_id: self.policy_id,
@@ -2853,7 +2908,7 @@ pub mod lifecycle_policy {
     }
 }
 impl LifecyclePolicy {
-    /// Creates a new builder-style object to manufacture [`LifecyclePolicy`](crate::model::LifecyclePolicy)
+    /// Creates a new builder-style object to manufacture [`LifecyclePolicy`](crate::model::LifecyclePolicy).
     pub fn builder() -> crate::model::lifecycle_policy::Builder {
         crate::model::lifecycle_policy::Builder::default()
     }
@@ -2923,15 +2978,20 @@ impl AsRef<str> for GettablePolicyStateValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LifecyclePolicySummary {
     /// <p>The identifier of the lifecycle policy.</p>
+    #[doc(hidden)]
     pub policy_id: std::option::Option<std::string::String>,
     /// <p>The description of the lifecycle policy.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The activation state of the lifecycle policy.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::GettablePolicyStateValues>,
     /// <p>The tags.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The type of policy. <code>EBS_SNAPSHOT_MANAGEMENT</code> indicates that the policy manages the lifecycle of Amazon EBS snapshots. <code>IMAGE_MANAGEMENT</code> indicates that the policy manages the lifecycle of EBS-backed AMIs.</p>
+    #[doc(hidden)]
     pub policy_type: std::option::Option<crate::model::PolicyTypeValues>,
 }
 impl LifecyclePolicySummary {
@@ -2970,11 +3030,10 @@ impl std::fmt::Debug for LifecyclePolicySummary {
         formatter.finish()
     }
 }
-/// See [`LifecyclePolicySummary`](crate::model::LifecyclePolicySummary)
+/// See [`LifecyclePolicySummary`](crate::model::LifecyclePolicySummary).
 pub mod lifecycle_policy_summary {
 
-    /// A builder for [`LifecyclePolicySummary`](crate::model::LifecyclePolicySummary)
-    #[non_exhaustive]
+    /// A builder for [`LifecyclePolicySummary`](crate::model::LifecyclePolicySummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_id: std::option::Option<std::string::String>,
@@ -3057,7 +3116,7 @@ pub mod lifecycle_policy_summary {
             self.policy_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`LifecyclePolicySummary`](crate::model::LifecyclePolicySummary)
+        /// Consumes the builder and constructs a [`LifecyclePolicySummary`](crate::model::LifecyclePolicySummary).
         pub fn build(self) -> crate::model::LifecyclePolicySummary {
             crate::model::LifecyclePolicySummary {
                 policy_id: self.policy_id,
@@ -3070,7 +3129,7 @@ pub mod lifecycle_policy_summary {
     }
 }
 impl LifecyclePolicySummary {
-    /// Creates a new builder-style object to manufacture [`LifecyclePolicySummary`](crate::model::LifecyclePolicySummary)
+    /// Creates a new builder-style object to manufacture [`LifecyclePolicySummary`](crate::model::LifecyclePolicySummary).
     pub fn builder() -> crate::model::lifecycle_policy_summary::Builder {
         crate::model::lifecycle_policy_summary::Builder::default()
     }

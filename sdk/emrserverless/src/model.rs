@@ -5,28 +5,40 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobRunSummary {
     /// <p>The ID of the application the job is running on.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The ID of the job run.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The optional job run name. This doesn't have to be unique.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The ARN of the job run.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The user who created the job run.</p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
     /// <p>The date and time when the job run was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the job run was last updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The execution role ARN of the job run.</p>
+    #[doc(hidden)]
     pub execution_role: std::option::Option<std::string::String>,
     /// <p>The state of the job run.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::JobRunState>,
     /// <p>The state details of the job run.</p>
+    #[doc(hidden)]
     pub state_details: std::option::Option<std::string::String>,
     /// <p>The EMR release version associated with the application your job is running on.</p>
+    #[doc(hidden)]
     pub release_label: std::option::Option<std::string::String>,
     /// <p>The type of job run, such as Spark or Hive.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
 }
 impl JobRunSummary {
@@ -97,11 +109,10 @@ impl std::fmt::Debug for JobRunSummary {
         formatter.finish()
     }
 }
-/// See [`JobRunSummary`](crate::model::JobRunSummary)
+/// See [`JobRunSummary`](crate::model::JobRunSummary).
 pub mod job_run_summary {
 
-    /// A builder for [`JobRunSummary`](crate::model::JobRunSummary)
-    #[non_exhaustive]
+    /// A builder for [`JobRunSummary`](crate::model::JobRunSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -256,7 +267,7 @@ pub mod job_run_summary {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobRunSummary`](crate::model::JobRunSummary)
+        /// Consumes the builder and constructs a [`JobRunSummary`](crate::model::JobRunSummary).
         pub fn build(self) -> crate::model::JobRunSummary {
             crate::model::JobRunSummary {
                 application_id: self.application_id,
@@ -276,7 +287,7 @@ pub mod job_run_summary {
     }
 }
 impl JobRunSummary {
-    /// Creates a new builder-style object to manufacture [`JobRunSummary`](crate::model::JobRunSummary)
+    /// Creates a new builder-style object to manufacture [`JobRunSummary`](crate::model::JobRunSummary).
     pub fn builder() -> crate::model::job_run_summary::Builder {
         crate::model::job_run_summary::Builder::default()
     }
@@ -375,8 +386,10 @@ impl AsRef<str> for JobRunState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigurationOverrides {
     /// <p>The override configurations for the application.</p>
+    #[doc(hidden)]
     pub application_configuration: std::option::Option<std::vec::Vec<crate::model::Configuration>>,
     /// <p>The override configurations for monitoring.</p>
+    #[doc(hidden)]
     pub monitoring_configuration: std::option::Option<crate::model::MonitoringConfiguration>,
 }
 impl ConfigurationOverrides {
@@ -399,11 +412,10 @@ impl std::fmt::Debug for ConfigurationOverrides {
         formatter.finish()
     }
 }
-/// See [`ConfigurationOverrides`](crate::model::ConfigurationOverrides)
+/// See [`ConfigurationOverrides`](crate::model::ConfigurationOverrides).
 pub mod configuration_overrides {
 
-    /// A builder for [`ConfigurationOverrides`](crate::model::ConfigurationOverrides)
-    #[non_exhaustive]
+    /// A builder for [`ConfigurationOverrides`](crate::model::ConfigurationOverrides).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_configuration:
@@ -447,7 +459,7 @@ pub mod configuration_overrides {
             self.monitoring_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigurationOverrides`](crate::model::ConfigurationOverrides)
+        /// Consumes the builder and constructs a [`ConfigurationOverrides`](crate::model::ConfigurationOverrides).
         pub fn build(self) -> crate::model::ConfigurationOverrides {
             crate::model::ConfigurationOverrides {
                 application_configuration: self.application_configuration,
@@ -457,7 +469,7 @@ pub mod configuration_overrides {
     }
 }
 impl ConfigurationOverrides {
-    /// Creates a new builder-style object to manufacture [`ConfigurationOverrides`](crate::model::ConfigurationOverrides)
+    /// Creates a new builder-style object to manufacture [`ConfigurationOverrides`](crate::model::ConfigurationOverrides).
     pub fn builder() -> crate::model::configuration_overrides::Builder {
         crate::model::configuration_overrides::Builder::default()
     }
@@ -468,8 +480,10 @@ impl ConfigurationOverrides {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MonitoringConfiguration {
     /// <p>The Amazon S3 configuration for monitoring log publishing.</p>
+    #[doc(hidden)]
     pub s3_monitoring_configuration: std::option::Option<crate::model::S3MonitoringConfiguration>,
     /// <p>The managed log persistence configuration for a job run.</p>
+    #[doc(hidden)]
     pub managed_persistence_monitoring_configuration:
         std::option::Option<crate::model::ManagedPersistenceMonitoringConfiguration>,
 }
@@ -501,11 +515,10 @@ impl std::fmt::Debug for MonitoringConfiguration {
         formatter.finish()
     }
 }
-/// See [`MonitoringConfiguration`](crate::model::MonitoringConfiguration)
+/// See [`MonitoringConfiguration`](crate::model::MonitoringConfiguration).
 pub mod monitoring_configuration {
 
-    /// A builder for [`MonitoringConfiguration`](crate::model::MonitoringConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MonitoringConfiguration`](crate::model::MonitoringConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_monitoring_configuration:
@@ -546,7 +559,7 @@ pub mod monitoring_configuration {
             self.managed_persistence_monitoring_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`MonitoringConfiguration`](crate::model::MonitoringConfiguration)
+        /// Consumes the builder and constructs a [`MonitoringConfiguration`](crate::model::MonitoringConfiguration).
         pub fn build(self) -> crate::model::MonitoringConfiguration {
             crate::model::MonitoringConfiguration {
                 s3_monitoring_configuration: self.s3_monitoring_configuration,
@@ -557,7 +570,7 @@ pub mod monitoring_configuration {
     }
 }
 impl MonitoringConfiguration {
-    /// Creates a new builder-style object to manufacture [`MonitoringConfiguration`](crate::model::MonitoringConfiguration)
+    /// Creates a new builder-style object to manufacture [`MonitoringConfiguration`](crate::model::MonitoringConfiguration).
     pub fn builder() -> crate::model::monitoring_configuration::Builder {
         crate::model::monitoring_configuration::Builder::default()
     }
@@ -568,8 +581,10 @@ impl MonitoringConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ManagedPersistenceMonitoringConfiguration {
     /// <p>Enables managed logging and defaults to true. If set to false, managed logging will be turned off.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>The KMS key ARN to encrypt the logs stored in managed log persistence.</p>
+    #[doc(hidden)]
     pub encryption_key_arn: std::option::Option<std::string::String>,
 }
 impl ManagedPersistenceMonitoringConfiguration {
@@ -590,11 +605,10 @@ impl std::fmt::Debug for ManagedPersistenceMonitoringConfiguration {
         formatter.finish()
     }
 }
-/// See [`ManagedPersistenceMonitoringConfiguration`](crate::model::ManagedPersistenceMonitoringConfiguration)
+/// See [`ManagedPersistenceMonitoringConfiguration`](crate::model::ManagedPersistenceMonitoringConfiguration).
 pub mod managed_persistence_monitoring_configuration {
 
-    /// A builder for [`ManagedPersistenceMonitoringConfiguration`](crate::model::ManagedPersistenceMonitoringConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ManagedPersistenceMonitoringConfiguration`](crate::model::ManagedPersistenceMonitoringConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -624,7 +638,7 @@ pub mod managed_persistence_monitoring_configuration {
             self.encryption_key_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManagedPersistenceMonitoringConfiguration`](crate::model::ManagedPersistenceMonitoringConfiguration)
+        /// Consumes the builder and constructs a [`ManagedPersistenceMonitoringConfiguration`](crate::model::ManagedPersistenceMonitoringConfiguration).
         pub fn build(self) -> crate::model::ManagedPersistenceMonitoringConfiguration {
             crate::model::ManagedPersistenceMonitoringConfiguration {
                 enabled: self.enabled,
@@ -634,7 +648,7 @@ pub mod managed_persistence_monitoring_configuration {
     }
 }
 impl ManagedPersistenceMonitoringConfiguration {
-    /// Creates a new builder-style object to manufacture [`ManagedPersistenceMonitoringConfiguration`](crate::model::ManagedPersistenceMonitoringConfiguration)
+    /// Creates a new builder-style object to manufacture [`ManagedPersistenceMonitoringConfiguration`](crate::model::ManagedPersistenceMonitoringConfiguration).
     pub fn builder() -> crate::model::managed_persistence_monitoring_configuration::Builder {
         crate::model::managed_persistence_monitoring_configuration::Builder::default()
     }
@@ -645,8 +659,10 @@ impl ManagedPersistenceMonitoringConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3MonitoringConfiguration {
     /// <p>The Amazon S3 destination URI for log publishing.</p>
+    #[doc(hidden)]
     pub log_uri: std::option::Option<std::string::String>,
     /// <p>The KMS key ARN to encrypt the logs published to the given Amazon S3 destination.</p>
+    #[doc(hidden)]
     pub encryption_key_arn: std::option::Option<std::string::String>,
 }
 impl S3MonitoringConfiguration {
@@ -667,11 +683,10 @@ impl std::fmt::Debug for S3MonitoringConfiguration {
         formatter.finish()
     }
 }
-/// See [`S3MonitoringConfiguration`](crate::model::S3MonitoringConfiguration)
+/// See [`S3MonitoringConfiguration`](crate::model::S3MonitoringConfiguration).
 pub mod s3_monitoring_configuration {
 
-    /// A builder for [`S3MonitoringConfiguration`](crate::model::S3MonitoringConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`S3MonitoringConfiguration`](crate::model::S3MonitoringConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_uri: std::option::Option<std::string::String>,
@@ -701,7 +716,7 @@ pub mod s3_monitoring_configuration {
             self.encryption_key_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3MonitoringConfiguration`](crate::model::S3MonitoringConfiguration)
+        /// Consumes the builder and constructs a [`S3MonitoringConfiguration`](crate::model::S3MonitoringConfiguration).
         pub fn build(self) -> crate::model::S3MonitoringConfiguration {
             crate::model::S3MonitoringConfiguration {
                 log_uri: self.log_uri,
@@ -711,7 +726,7 @@ pub mod s3_monitoring_configuration {
     }
 }
 impl S3MonitoringConfiguration {
-    /// Creates a new builder-style object to manufacture [`S3MonitoringConfiguration`](crate::model::S3MonitoringConfiguration)
+    /// Creates a new builder-style object to manufacture [`S3MonitoringConfiguration`](crate::model::S3MonitoringConfiguration).
     pub fn builder() -> crate::model::s3_monitoring_configuration::Builder {
         crate::model::s3_monitoring_configuration::Builder::default()
     }
@@ -722,11 +737,14 @@ impl S3MonitoringConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Configuration {
     /// <p>The classification within a configuration.</p>
+    #[doc(hidden)]
     pub classification: std::option::Option<std::string::String>,
     /// <p>A set of properties specified within a configuration classification.</p>
+    #[doc(hidden)]
     pub properties:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A list of additional configurations to apply within a configuration object.</p>
+    #[doc(hidden)]
     pub configurations: std::option::Option<std::vec::Vec<crate::model::Configuration>>,
 }
 impl Configuration {
@@ -755,11 +773,10 @@ impl std::fmt::Debug for Configuration {
         formatter.finish()
     }
 }
-/// See [`Configuration`](crate::model::Configuration)
+/// See [`Configuration`](crate::model::Configuration).
 pub mod configuration {
 
-    /// A builder for [`Configuration`](crate::model::Configuration)
-    #[non_exhaustive]
+    /// A builder for [`Configuration`](crate::model::Configuration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) classification: std::option::Option<std::string::String>,
@@ -826,7 +843,7 @@ pub mod configuration {
             self.configurations = input;
             self
         }
-        /// Consumes the builder and constructs a [`Configuration`](crate::model::Configuration)
+        /// Consumes the builder and constructs a [`Configuration`](crate::model::Configuration).
         pub fn build(self) -> crate::model::Configuration {
             crate::model::Configuration {
                 classification: self.classification,
@@ -837,7 +854,7 @@ pub mod configuration {
     }
 }
 impl Configuration {
-    /// Creates a new builder-style object to manufacture [`Configuration`](crate::model::Configuration)
+    /// Creates a new builder-style object to manufacture [`Configuration`](crate::model::Configuration).
     pub fn builder() -> crate::model::configuration::Builder {
         crate::model::configuration::Builder::default()
     }
@@ -899,10 +916,13 @@ impl JobDriver {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Hive {
     /// <p>The query for the Hive job run.</p>
+    #[doc(hidden)]
     pub query: std::option::Option<std::string::String>,
     /// <p>The query file for the Hive job run.</p>
+    #[doc(hidden)]
     pub init_query_file: std::option::Option<std::string::String>,
     /// <p>The parameters for the Hive job run.</p>
+    #[doc(hidden)]
     pub parameters: std::option::Option<std::string::String>,
 }
 impl Hive {
@@ -928,11 +948,10 @@ impl std::fmt::Debug for Hive {
         formatter.finish()
     }
 }
-/// See [`Hive`](crate::model::Hive)
+/// See [`Hive`](crate::model::Hive).
 pub mod hive {
 
-    /// A builder for [`Hive`](crate::model::Hive)
-    #[non_exhaustive]
+    /// A builder for [`Hive`](crate::model::Hive).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) query: std::option::Option<std::string::String>,
@@ -973,7 +992,7 @@ pub mod hive {
             self.parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`Hive`](crate::model::Hive)
+        /// Consumes the builder and constructs a [`Hive`](crate::model::Hive).
         pub fn build(self) -> crate::model::Hive {
             crate::model::Hive {
                 query: self.query,
@@ -984,7 +1003,7 @@ pub mod hive {
     }
 }
 impl Hive {
-    /// Creates a new builder-style object to manufacture [`Hive`](crate::model::Hive)
+    /// Creates a new builder-style object to manufacture [`Hive`](crate::model::Hive).
     pub fn builder() -> crate::model::hive::Builder {
         crate::model::hive::Builder::default()
     }
@@ -995,10 +1014,13 @@ impl Hive {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SparkSubmit {
     /// <p>The entry point for the Spark submit job run.</p>
+    #[doc(hidden)]
     pub entry_point: std::option::Option<std::string::String>,
     /// <p>The arguments for the Spark submit job run.</p>
+    #[doc(hidden)]
     pub entry_point_arguments: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The parameters for the Spark submit job run.</p>
+    #[doc(hidden)]
     pub spark_submit_parameters: std::option::Option<std::string::String>,
 }
 impl SparkSubmit {
@@ -1027,11 +1049,10 @@ impl std::fmt::Debug for SparkSubmit {
         formatter.finish()
     }
 }
-/// See [`SparkSubmit`](crate::model::SparkSubmit)
+/// See [`SparkSubmit`](crate::model::SparkSubmit).
 pub mod spark_submit {
 
-    /// A builder for [`SparkSubmit`](crate::model::SparkSubmit)
-    #[non_exhaustive]
+    /// A builder for [`SparkSubmit`](crate::model::SparkSubmit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entry_point: std::option::Option<std::string::String>,
@@ -1081,7 +1102,7 @@ pub mod spark_submit {
             self.spark_submit_parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`SparkSubmit`](crate::model::SparkSubmit)
+        /// Consumes the builder and constructs a [`SparkSubmit`](crate::model::SparkSubmit).
         pub fn build(self) -> crate::model::SparkSubmit {
             crate::model::SparkSubmit {
                 entry_point: self.entry_point,
@@ -1092,7 +1113,7 @@ pub mod spark_submit {
     }
 }
 impl SparkSubmit {
-    /// Creates a new builder-style object to manufacture [`SparkSubmit`](crate::model::SparkSubmit)
+    /// Creates a new builder-style object to manufacture [`SparkSubmit`](crate::model::SparkSubmit).
     pub fn builder() -> crate::model::spark_submit::Builder {
         crate::model::spark_submit::Builder::default()
     }
@@ -1103,39 +1124,56 @@ impl SparkSubmit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobRun {
     /// <p>The ID of the application the job is running on.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The ID of the job run.</p>
+    #[doc(hidden)]
     pub job_run_id: std::option::Option<std::string::String>,
     /// <p>The optional job run name. This doesn't have to be unique.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The execution role ARN of the job run.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The user who created the job run.</p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
     /// <p>The date and time when the job run was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the job run was updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The execution role ARN of the job run.</p>
+    #[doc(hidden)]
     pub execution_role: std::option::Option<std::string::String>,
     /// <p>The state of the job run.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::JobRunState>,
     /// <p>The state details of the job run.</p>
+    #[doc(hidden)]
     pub state_details: std::option::Option<std::string::String>,
     /// <p>The EMR release version associated with the application your job is running on.</p>
+    #[doc(hidden)]
     pub release_label: std::option::Option<std::string::String>,
     /// <p>The configuration settings that are used to override default configuration.</p>
+    #[doc(hidden)]
     pub configuration_overrides: std::option::Option<crate::model::ConfigurationOverrides>,
     /// <p>The job driver for the job run.</p>
+    #[doc(hidden)]
     pub job_driver: std::option::Option<crate::model::JobDriver>,
     /// <p>The tags assigned to the job run.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The aggregate vCPU, memory, and storage resources used from the time job start executing till the time job is terminated, rounded up to the nearest second.</p>
+    #[doc(hidden)]
     pub total_resource_utilization: std::option::Option<crate::model::TotalResourceUtilization>,
     /// <p>The network configuration for customer VPC connectivity.</p>
+    #[doc(hidden)]
     pub network_configuration: std::option::Option<crate::model::NetworkConfiguration>,
     /// <p>The job run total execution duration in seconds. This field is only available for job runs in a <code>COMPLETED</code>, <code>FAILED</code>, or <code>CANCELLED</code> state.</p>
+    #[doc(hidden)]
     pub total_execution_duration_seconds: std::option::Option<i32>,
 }
 impl JobRun {
@@ -1246,11 +1284,10 @@ impl std::fmt::Debug for JobRun {
         formatter.finish()
     }
 }
-/// See [`JobRun`](crate::model::JobRun)
+/// See [`JobRun`](crate::model::JobRun).
 pub mod job_run {
 
-    /// A builder for [`JobRun`](crate::model::JobRun)
-    #[non_exhaustive]
+    /// A builder for [`JobRun`](crate::model::JobRun).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -1500,7 +1537,7 @@ pub mod job_run {
             self.total_execution_duration_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobRun`](crate::model::JobRun)
+        /// Consumes the builder and constructs a [`JobRun`](crate::model::JobRun).
         pub fn build(self) -> crate::model::JobRun {
             crate::model::JobRun {
                 application_id: self.application_id,
@@ -1525,7 +1562,7 @@ pub mod job_run {
     }
 }
 impl JobRun {
-    /// Creates a new builder-style object to manufacture [`JobRun`](crate::model::JobRun)
+    /// Creates a new builder-style object to manufacture [`JobRun`](crate::model::JobRun).
     pub fn builder() -> crate::model::job_run::Builder {
         crate::model::job_run::Builder::default()
     }
@@ -1536,8 +1573,10 @@ impl JobRun {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkConfiguration {
     /// <p>The array of subnet Ids for customer VPC connectivity.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The array of security group Ids for customer VPC connectivity.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl NetworkConfiguration {
@@ -1558,11 +1597,10 @@ impl std::fmt::Debug for NetworkConfiguration {
         formatter.finish()
     }
 }
-/// See [`NetworkConfiguration`](crate::model::NetworkConfiguration)
+/// See [`NetworkConfiguration`](crate::model::NetworkConfiguration).
 pub mod network_configuration {
 
-    /// A builder for [`NetworkConfiguration`](crate::model::NetworkConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NetworkConfiguration`](crate::model::NetworkConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1607,7 +1645,7 @@ pub mod network_configuration {
             self.security_group_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkConfiguration`](crate::model::NetworkConfiguration)
+        /// Consumes the builder and constructs a [`NetworkConfiguration`](crate::model::NetworkConfiguration).
         pub fn build(self) -> crate::model::NetworkConfiguration {
             crate::model::NetworkConfiguration {
                 subnet_ids: self.subnet_ids,
@@ -1617,7 +1655,7 @@ pub mod network_configuration {
     }
 }
 impl NetworkConfiguration {
-    /// Creates a new builder-style object to manufacture [`NetworkConfiguration`](crate::model::NetworkConfiguration)
+    /// Creates a new builder-style object to manufacture [`NetworkConfiguration`](crate::model::NetworkConfiguration).
     pub fn builder() -> crate::model::network_configuration::Builder {
         crate::model::network_configuration::Builder::default()
     }
@@ -1628,10 +1666,13 @@ impl NetworkConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TotalResourceUtilization {
     /// <p>The aggregated vCPU used per hour from the time job start executing till the time job is terminated.</p>
+    #[doc(hidden)]
     pub v_cpu_hour: std::option::Option<f64>,
     /// <p>The aggregated memory used per hour from the time job start executing till the time job is terminated.</p>
+    #[doc(hidden)]
     pub memory_gb_hour: std::option::Option<f64>,
     /// <p>The aggregated storage used per hour from the time job start executing till the time job is terminated.</p>
+    #[doc(hidden)]
     pub storage_gb_hour: std::option::Option<f64>,
 }
 impl TotalResourceUtilization {
@@ -1657,11 +1698,10 @@ impl std::fmt::Debug for TotalResourceUtilization {
         formatter.finish()
     }
 }
-/// See [`TotalResourceUtilization`](crate::model::TotalResourceUtilization)
+/// See [`TotalResourceUtilization`](crate::model::TotalResourceUtilization).
 pub mod total_resource_utilization {
 
-    /// A builder for [`TotalResourceUtilization`](crate::model::TotalResourceUtilization)
-    #[non_exhaustive]
+    /// A builder for [`TotalResourceUtilization`](crate::model::TotalResourceUtilization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) v_cpu_hour: std::option::Option<f64>,
@@ -1699,7 +1739,7 @@ pub mod total_resource_utilization {
             self.storage_gb_hour = input;
             self
         }
-        /// Consumes the builder and constructs a [`TotalResourceUtilization`](crate::model::TotalResourceUtilization)
+        /// Consumes the builder and constructs a [`TotalResourceUtilization`](crate::model::TotalResourceUtilization).
         pub fn build(self) -> crate::model::TotalResourceUtilization {
             crate::model::TotalResourceUtilization {
                 v_cpu_hour: self.v_cpu_hour,
@@ -1710,7 +1750,7 @@ pub mod total_resource_utilization {
     }
 }
 impl TotalResourceUtilization {
-    /// Creates a new builder-style object to manufacture [`TotalResourceUtilization`](crate::model::TotalResourceUtilization)
+    /// Creates a new builder-style object to manufacture [`TotalResourceUtilization`](crate::model::TotalResourceUtilization).
     pub fn builder() -> crate::model::total_resource_utilization::Builder {
         crate::model::total_resource_utilization::Builder::default()
     }
@@ -1721,22 +1761,31 @@ impl TotalResourceUtilization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationSummary {
     /// <p>The ID of the application.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the application.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The ARN of the application.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The EMR release version associated with the application.</p>
+    #[doc(hidden)]
     pub release_label: std::option::Option<std::string::String>,
     /// <p>The type of application, such as Spark or Hive.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The state of the application.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ApplicationState>,
     /// <p>The state details of the application.</p>
+    #[doc(hidden)]
     pub state_details: std::option::Option<std::string::String>,
     /// <p>The date and time when the application was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the application was last updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ApplicationSummary {
@@ -1792,11 +1841,10 @@ impl std::fmt::Debug for ApplicationSummary {
         formatter.finish()
     }
 }
-/// See [`ApplicationSummary`](crate::model::ApplicationSummary)
+/// See [`ApplicationSummary`](crate::model::ApplicationSummary).
 pub mod application_summary {
 
-    /// A builder for [`ApplicationSummary`](crate::model::ApplicationSummary)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationSummary`](crate::model::ApplicationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1915,7 +1963,7 @@ pub mod application_summary {
             self.updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationSummary`](crate::model::ApplicationSummary)
+        /// Consumes the builder and constructs a [`ApplicationSummary`](crate::model::ApplicationSummary).
         pub fn build(self) -> crate::model::ApplicationSummary {
             crate::model::ApplicationSummary {
                 id: self.id,
@@ -1932,7 +1980,7 @@ pub mod application_summary {
     }
 }
 impl ApplicationSummary {
-    /// Creates a new builder-style object to manufacture [`ApplicationSummary`](crate::model::ApplicationSummary)
+    /// Creates a new builder-style object to manufacture [`ApplicationSummary`](crate::model::ApplicationSummary).
     pub fn builder() -> crate::model::application_summary::Builder {
         crate::model::application_summary::Builder::default()
     }
@@ -2026,8 +2074,10 @@ impl AsRef<str> for ApplicationState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoStopConfig {
     /// <p>Enables the application to automatically stop after a certain amount of time being idle. Defaults to true.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>The amount of idle time in minutes after which your application will automatically stop. Defaults to 15 minutes.</p>
+    #[doc(hidden)]
     pub idle_timeout_minutes: std::option::Option<i32>,
 }
 impl AutoStopConfig {
@@ -2048,11 +2098,10 @@ impl std::fmt::Debug for AutoStopConfig {
         formatter.finish()
     }
 }
-/// See [`AutoStopConfig`](crate::model::AutoStopConfig)
+/// See [`AutoStopConfig`](crate::model::AutoStopConfig).
 pub mod auto_stop_config {
 
-    /// A builder for [`AutoStopConfig`](crate::model::AutoStopConfig)
-    #[non_exhaustive]
+    /// A builder for [`AutoStopConfig`](crate::model::AutoStopConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -2079,7 +2128,7 @@ pub mod auto_stop_config {
             self.idle_timeout_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoStopConfig`](crate::model::AutoStopConfig)
+        /// Consumes the builder and constructs a [`AutoStopConfig`](crate::model::AutoStopConfig).
         pub fn build(self) -> crate::model::AutoStopConfig {
             crate::model::AutoStopConfig {
                 enabled: self.enabled,
@@ -2089,7 +2138,7 @@ pub mod auto_stop_config {
     }
 }
 impl AutoStopConfig {
-    /// Creates a new builder-style object to manufacture [`AutoStopConfig`](crate::model::AutoStopConfig)
+    /// Creates a new builder-style object to manufacture [`AutoStopConfig`](crate::model::AutoStopConfig).
     pub fn builder() -> crate::model::auto_stop_config::Builder {
         crate::model::auto_stop_config::Builder::default()
     }
@@ -2100,6 +2149,7 @@ impl AutoStopConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoStartConfig {
     /// <p>Enables the application to automatically start on job submission. Defaults to true.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
 }
 impl AutoStartConfig {
@@ -2115,11 +2165,10 @@ impl std::fmt::Debug for AutoStartConfig {
         formatter.finish()
     }
 }
-/// See [`AutoStartConfig`](crate::model::AutoStartConfig)
+/// See [`AutoStartConfig`](crate::model::AutoStartConfig).
 pub mod auto_start_config {
 
-    /// A builder for [`AutoStartConfig`](crate::model::AutoStartConfig)
-    #[non_exhaustive]
+    /// A builder for [`AutoStartConfig`](crate::model::AutoStartConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -2135,7 +2184,7 @@ pub mod auto_start_config {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoStartConfig`](crate::model::AutoStartConfig)
+        /// Consumes the builder and constructs a [`AutoStartConfig`](crate::model::AutoStartConfig).
         pub fn build(self) -> crate::model::AutoStartConfig {
             crate::model::AutoStartConfig {
                 enabled: self.enabled,
@@ -2144,7 +2193,7 @@ pub mod auto_start_config {
     }
 }
 impl AutoStartConfig {
-    /// Creates a new builder-style object to manufacture [`AutoStartConfig`](crate::model::AutoStartConfig)
+    /// Creates a new builder-style object to manufacture [`AutoStartConfig`](crate::model::AutoStartConfig).
     pub fn builder() -> crate::model::auto_start_config::Builder {
         crate::model::auto_start_config::Builder::default()
     }
@@ -2155,10 +2204,13 @@ impl AutoStartConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MaximumAllowedResources {
     /// <p>The maximum allowed CPU for an application.</p>
+    #[doc(hidden)]
     pub cpu: std::option::Option<std::string::String>,
     /// <p>The maximum allowed resources for an application.</p>
+    #[doc(hidden)]
     pub memory: std::option::Option<std::string::String>,
     /// <p>The maximum allowed disk for an application.</p>
+    #[doc(hidden)]
     pub disk: std::option::Option<std::string::String>,
 }
 impl MaximumAllowedResources {
@@ -2184,11 +2236,10 @@ impl std::fmt::Debug for MaximumAllowedResources {
         formatter.finish()
     }
 }
-/// See [`MaximumAllowedResources`](crate::model::MaximumAllowedResources)
+/// See [`MaximumAllowedResources`](crate::model::MaximumAllowedResources).
 pub mod maximum_allowed_resources {
 
-    /// A builder for [`MaximumAllowedResources`](crate::model::MaximumAllowedResources)
-    #[non_exhaustive]
+    /// A builder for [`MaximumAllowedResources`](crate::model::MaximumAllowedResources).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cpu: std::option::Option<std::string::String>,
@@ -2226,7 +2277,7 @@ pub mod maximum_allowed_resources {
             self.disk = input;
             self
         }
-        /// Consumes the builder and constructs a [`MaximumAllowedResources`](crate::model::MaximumAllowedResources)
+        /// Consumes the builder and constructs a [`MaximumAllowedResources`](crate::model::MaximumAllowedResources).
         pub fn build(self) -> crate::model::MaximumAllowedResources {
             crate::model::MaximumAllowedResources {
                 cpu: self.cpu,
@@ -2237,7 +2288,7 @@ pub mod maximum_allowed_resources {
     }
 }
 impl MaximumAllowedResources {
-    /// Creates a new builder-style object to manufacture [`MaximumAllowedResources`](crate::model::MaximumAllowedResources)
+    /// Creates a new builder-style object to manufacture [`MaximumAllowedResources`](crate::model::MaximumAllowedResources).
     pub fn builder() -> crate::model::maximum_allowed_resources::Builder {
         crate::model::maximum_allowed_resources::Builder::default()
     }
@@ -2248,8 +2299,10 @@ impl MaximumAllowedResources {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InitialCapacityConfig {
     /// <p>The number of workers in the initial capacity configuration.</p>
+    #[doc(hidden)]
     pub worker_count: i64,
     /// <p>The resource configuration of the initial capacity configuration.</p>
+    #[doc(hidden)]
     pub worker_configuration: std::option::Option<crate::model::WorkerResourceConfig>,
 }
 impl InitialCapacityConfig {
@@ -2270,11 +2323,10 @@ impl std::fmt::Debug for InitialCapacityConfig {
         formatter.finish()
     }
 }
-/// See [`InitialCapacityConfig`](crate::model::InitialCapacityConfig)
+/// See [`InitialCapacityConfig`](crate::model::InitialCapacityConfig).
 pub mod initial_capacity_config {
 
-    /// A builder for [`InitialCapacityConfig`](crate::model::InitialCapacityConfig)
-    #[non_exhaustive]
+    /// A builder for [`InitialCapacityConfig`](crate::model::InitialCapacityConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) worker_count: std::option::Option<i64>,
@@ -2304,7 +2356,7 @@ pub mod initial_capacity_config {
             self.worker_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`InitialCapacityConfig`](crate::model::InitialCapacityConfig)
+        /// Consumes the builder and constructs a [`InitialCapacityConfig`](crate::model::InitialCapacityConfig).
         pub fn build(self) -> crate::model::InitialCapacityConfig {
             crate::model::InitialCapacityConfig {
                 worker_count: self.worker_count.unwrap_or_default(),
@@ -2314,7 +2366,7 @@ pub mod initial_capacity_config {
     }
 }
 impl InitialCapacityConfig {
-    /// Creates a new builder-style object to manufacture [`InitialCapacityConfig`](crate::model::InitialCapacityConfig)
+    /// Creates a new builder-style object to manufacture [`InitialCapacityConfig`](crate::model::InitialCapacityConfig).
     pub fn builder() -> crate::model::initial_capacity_config::Builder {
         crate::model::initial_capacity_config::Builder::default()
     }
@@ -2325,10 +2377,13 @@ impl InitialCapacityConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkerResourceConfig {
     /// <p>The CPU requirements for every worker instance of the worker type.</p>
+    #[doc(hidden)]
     pub cpu: std::option::Option<std::string::String>,
     /// <p>The memory requirements for every worker instance of the worker type.</p>
+    #[doc(hidden)]
     pub memory: std::option::Option<std::string::String>,
     /// <p>The disk requirements for every worker instance of the worker type.</p>
+    #[doc(hidden)]
     pub disk: std::option::Option<std::string::String>,
 }
 impl WorkerResourceConfig {
@@ -2354,11 +2409,10 @@ impl std::fmt::Debug for WorkerResourceConfig {
         formatter.finish()
     }
 }
-/// See [`WorkerResourceConfig`](crate::model::WorkerResourceConfig)
+/// See [`WorkerResourceConfig`](crate::model::WorkerResourceConfig).
 pub mod worker_resource_config {
 
-    /// A builder for [`WorkerResourceConfig`](crate::model::WorkerResourceConfig)
-    #[non_exhaustive]
+    /// A builder for [`WorkerResourceConfig`](crate::model::WorkerResourceConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cpu: std::option::Option<std::string::String>,
@@ -2396,7 +2450,7 @@ pub mod worker_resource_config {
             self.disk = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkerResourceConfig`](crate::model::WorkerResourceConfig)
+        /// Consumes the builder and constructs a [`WorkerResourceConfig`](crate::model::WorkerResourceConfig).
         pub fn build(self) -> crate::model::WorkerResourceConfig {
             crate::model::WorkerResourceConfig {
                 cpu: self.cpu,
@@ -2407,7 +2461,7 @@ pub mod worker_resource_config {
     }
 }
 impl WorkerResourceConfig {
-    /// Creates a new builder-style object to manufacture [`WorkerResourceConfig`](crate::model::WorkerResourceConfig)
+    /// Creates a new builder-style object to manufacture [`WorkerResourceConfig`](crate::model::WorkerResourceConfig).
     pub fn builder() -> crate::model::worker_resource_config::Builder {
         crate::model::worker_resource_config::Builder::default()
     }
@@ -2418,37 +2472,52 @@ impl WorkerResourceConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Application {
     /// <p>The ID of the application.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The name of the application.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The ARN of the application.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The EMR release version associated with the application.</p>
+    #[doc(hidden)]
     pub release_label: std::option::Option<std::string::String>,
     /// <p>The type of application, such as Spark or Hive.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The state of the application.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ApplicationState>,
     /// <p>The state details of the application.</p>
+    #[doc(hidden)]
     pub state_details: std::option::Option<std::string::String>,
     /// <p>The initial capacity of the application.</p>
+    #[doc(hidden)]
     pub initial_capacity: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::InitialCapacityConfig>,
     >,
     /// <p>The maximum capacity of the application. This is cumulative across all workers at any given point in time during the lifespan of the application is created. No new resources will be created once any one of the defined limits is hit.</p>
+    #[doc(hidden)]
     pub maximum_capacity: std::option::Option<crate::model::MaximumAllowedResources>,
     /// <p>The date and time when the application run was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the application run was last updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The tags assigned to the application.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The configuration for an application to automatically start on job submission.</p>
+    #[doc(hidden)]
     pub auto_start_configuration: std::option::Option<crate::model::AutoStartConfig>,
     /// <p>The configuration for an application to automatically stop after a certain amount of time being idle.</p>
+    #[doc(hidden)]
     pub auto_stop_configuration: std::option::Option<crate::model::AutoStopConfig>,
     /// <p>The network configuration for customer VPC connectivity for the application.</p>
+    #[doc(hidden)]
     pub network_configuration: std::option::Option<crate::model::NetworkConfiguration>,
 }
 impl Application {
@@ -2543,11 +2612,10 @@ impl std::fmt::Debug for Application {
         formatter.finish()
     }
 }
-/// See [`Application`](crate::model::Application)
+/// See [`Application`](crate::model::Application).
 pub mod application {
 
-    /// A builder for [`Application`](crate::model::Application)
-    #[non_exhaustive]
+    /// A builder for [`Application`](crate::model::Application).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -2781,7 +2849,7 @@ pub mod application {
             self.network_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`Application`](crate::model::Application)
+        /// Consumes the builder and constructs a [`Application`](crate::model::Application).
         pub fn build(self) -> crate::model::Application {
             crate::model::Application {
                 application_id: self.application_id,
@@ -2804,7 +2872,7 @@ pub mod application {
     }
 }
 impl Application {
-    /// Creates a new builder-style object to manufacture [`Application`](crate::model::Application)
+    /// Creates a new builder-style object to manufacture [`Application`](crate::model::Application).
     pub fn builder() -> crate::model::application::Builder {
         crate::model::application::Builder::default()
     }

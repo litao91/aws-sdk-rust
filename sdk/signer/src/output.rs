@@ -9,22 +9,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -40,22 +39,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -66,8 +64,10 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartSigningJobOutput {
     /// <p>The ID of your signing job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The AWS account ID of the signing job owner.</p>
+    #[doc(hidden)]
     pub job_owner: std::option::Option<std::string::String>,
 }
 impl StartSigningJobOutput {
@@ -88,11 +88,10 @@ impl std::fmt::Debug for StartSigningJobOutput {
         formatter.finish()
     }
 }
-/// See [`StartSigningJobOutput`](crate::output::StartSigningJobOutput)
+/// See [`StartSigningJobOutput`](crate::output::StartSigningJobOutput).
 pub mod start_signing_job_output {
 
-    /// A builder for [`StartSigningJobOutput`](crate::output::StartSigningJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartSigningJobOutput`](crate::output::StartSigningJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -119,7 +118,7 @@ pub mod start_signing_job_output {
             self.job_owner = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartSigningJobOutput`](crate::output::StartSigningJobOutput)
+        /// Consumes the builder and constructs a [`StartSigningJobOutput`](crate::output::StartSigningJobOutput).
         pub fn build(self) -> crate::output::StartSigningJobOutput {
             crate::output::StartSigningJobOutput {
                 job_id: self.job_id,
@@ -129,7 +128,7 @@ pub mod start_signing_job_output {
     }
 }
 impl StartSigningJobOutput {
-    /// Creates a new builder-style object to manufacture [`StartSigningJobOutput`](crate::output::StartSigningJobOutput)
+    /// Creates a new builder-style object to manufacture [`StartSigningJobOutput`](crate::output::StartSigningJobOutput).
     pub fn builder() -> crate::output::start_signing_job_output::Builder {
         crate::output::start_signing_job_output::Builder::default()
     }
@@ -145,22 +144,21 @@ impl std::fmt::Debug for RevokeSigningProfileOutput {
         formatter.finish()
     }
 }
-/// See [`RevokeSigningProfileOutput`](crate::output::RevokeSigningProfileOutput)
+/// See [`RevokeSigningProfileOutput`](crate::output::RevokeSigningProfileOutput).
 pub mod revoke_signing_profile_output {
 
-    /// A builder for [`RevokeSigningProfileOutput`](crate::output::RevokeSigningProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`RevokeSigningProfileOutput`](crate::output::RevokeSigningProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RevokeSigningProfileOutput`](crate::output::RevokeSigningProfileOutput)
+        /// Consumes the builder and constructs a [`RevokeSigningProfileOutput`](crate::output::RevokeSigningProfileOutput).
         pub fn build(self) -> crate::output::RevokeSigningProfileOutput {
             crate::output::RevokeSigningProfileOutput {}
         }
     }
 }
 impl RevokeSigningProfileOutput {
-    /// Creates a new builder-style object to manufacture [`RevokeSigningProfileOutput`](crate::output::RevokeSigningProfileOutput)
+    /// Creates a new builder-style object to manufacture [`RevokeSigningProfileOutput`](crate::output::RevokeSigningProfileOutput).
     pub fn builder() -> crate::output::revoke_signing_profile_output::Builder {
         crate::output::revoke_signing_profile_output::Builder::default()
     }
@@ -176,22 +174,21 @@ impl std::fmt::Debug for RevokeSignatureOutput {
         formatter.finish()
     }
 }
-/// See [`RevokeSignatureOutput`](crate::output::RevokeSignatureOutput)
+/// See [`RevokeSignatureOutput`](crate::output::RevokeSignatureOutput).
 pub mod revoke_signature_output {
 
-    /// A builder for [`RevokeSignatureOutput`](crate::output::RevokeSignatureOutput)
-    #[non_exhaustive]
+    /// A builder for [`RevokeSignatureOutput`](crate::output::RevokeSignatureOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RevokeSignatureOutput`](crate::output::RevokeSignatureOutput)
+        /// Consumes the builder and constructs a [`RevokeSignatureOutput`](crate::output::RevokeSignatureOutput).
         pub fn build(self) -> crate::output::RevokeSignatureOutput {
             crate::output::RevokeSignatureOutput {}
         }
     }
 }
 impl RevokeSignatureOutput {
-    /// Creates a new builder-style object to manufacture [`RevokeSignatureOutput`](crate::output::RevokeSignatureOutput)
+    /// Creates a new builder-style object to manufacture [`RevokeSignatureOutput`](crate::output::RevokeSignatureOutput).
     pub fn builder() -> crate::output::revoke_signature_output::Builder {
         crate::output::revoke_signature_output::Builder::default()
     }
@@ -202,6 +199,7 @@ impl RevokeSignatureOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoveProfilePermissionOutput {
     /// <p>An identifier for the current revision of the profile permissions.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl RemoveProfilePermissionOutput {
@@ -217,11 +215,10 @@ impl std::fmt::Debug for RemoveProfilePermissionOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveProfilePermissionOutput`](crate::output::RemoveProfilePermissionOutput)
+/// See [`RemoveProfilePermissionOutput`](crate::output::RemoveProfilePermissionOutput).
 pub mod remove_profile_permission_output {
 
-    /// A builder for [`RemoveProfilePermissionOutput`](crate::output::RemoveProfilePermissionOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveProfilePermissionOutput`](crate::output::RemoveProfilePermissionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) revision_id: std::option::Option<std::string::String>,
@@ -237,7 +234,7 @@ pub mod remove_profile_permission_output {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoveProfilePermissionOutput`](crate::output::RemoveProfilePermissionOutput)
+        /// Consumes the builder and constructs a [`RemoveProfilePermissionOutput`](crate::output::RemoveProfilePermissionOutput).
         pub fn build(self) -> crate::output::RemoveProfilePermissionOutput {
             crate::output::RemoveProfilePermissionOutput {
                 revision_id: self.revision_id,
@@ -246,7 +243,7 @@ pub mod remove_profile_permission_output {
     }
 }
 impl RemoveProfilePermissionOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveProfilePermissionOutput`](crate::output::RemoveProfilePermissionOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveProfilePermissionOutput`](crate::output::RemoveProfilePermissionOutput).
     pub fn builder() -> crate::output::remove_profile_permission_output::Builder {
         crate::output::remove_profile_permission_output::Builder::default()
     }
@@ -257,10 +254,13 @@ impl RemoveProfilePermissionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutSigningProfileOutput {
     /// <p>The Amazon Resource Name (ARN) of the signing profile created.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The version of the signing profile being created.</p>
+    #[doc(hidden)]
     pub profile_version: std::option::Option<std::string::String>,
     /// <p>The signing profile ARN, including the profile version.</p>
+    #[doc(hidden)]
     pub profile_version_arn: std::option::Option<std::string::String>,
 }
 impl PutSigningProfileOutput {
@@ -286,11 +286,10 @@ impl std::fmt::Debug for PutSigningProfileOutput {
         formatter.finish()
     }
 }
-/// See [`PutSigningProfileOutput`](crate::output::PutSigningProfileOutput)
+/// See [`PutSigningProfileOutput`](crate::output::PutSigningProfileOutput).
 pub mod put_signing_profile_output {
 
-    /// A builder for [`PutSigningProfileOutput`](crate::output::PutSigningProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutSigningProfileOutput`](crate::output::PutSigningProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -334,7 +333,7 @@ pub mod put_signing_profile_output {
             self.profile_version_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutSigningProfileOutput`](crate::output::PutSigningProfileOutput)
+        /// Consumes the builder and constructs a [`PutSigningProfileOutput`](crate::output::PutSigningProfileOutput).
         pub fn build(self) -> crate::output::PutSigningProfileOutput {
             crate::output::PutSigningProfileOutput {
                 arn: self.arn,
@@ -345,7 +344,7 @@ pub mod put_signing_profile_output {
     }
 }
 impl PutSigningProfileOutput {
-    /// Creates a new builder-style object to manufacture [`PutSigningProfileOutput`](crate::output::PutSigningProfileOutput)
+    /// Creates a new builder-style object to manufacture [`PutSigningProfileOutput`](crate::output::PutSigningProfileOutput).
     pub fn builder() -> crate::output::put_signing_profile_output::Builder {
         crate::output::put_signing_profile_output::Builder::default()
     }
@@ -356,6 +355,7 @@ impl PutSigningProfileOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>A list of tags associated with the signing profile.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -375,11 +375,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -412,14 +411,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -430,8 +429,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSigningProfilesOutput {
     /// <p>A list of profiles that are available in the AWS account. This includes profiles with the status of <code>CANCELED</code> if the <code>includeCanceled</code> parameter is set to <code>true</code>.</p>
+    #[doc(hidden)]
     pub profiles: std::option::Option<std::vec::Vec<crate::model::SigningProfile>>,
     /// <p>Value for specifying the next set of paginated results to return.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListSigningProfilesOutput {
@@ -452,11 +453,10 @@ impl std::fmt::Debug for ListSigningProfilesOutput {
         formatter.finish()
     }
 }
-/// See [`ListSigningProfilesOutput`](crate::output::ListSigningProfilesOutput)
+/// See [`ListSigningProfilesOutput`](crate::output::ListSigningProfilesOutput).
 pub mod list_signing_profiles_output {
 
-    /// A builder for [`ListSigningProfilesOutput`](crate::output::ListSigningProfilesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSigningProfilesOutput`](crate::output::ListSigningProfilesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) profiles: std::option::Option<std::vec::Vec<crate::model::SigningProfile>>,
@@ -492,7 +492,7 @@ pub mod list_signing_profiles_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSigningProfilesOutput`](crate::output::ListSigningProfilesOutput)
+        /// Consumes the builder and constructs a [`ListSigningProfilesOutput`](crate::output::ListSigningProfilesOutput).
         pub fn build(self) -> crate::output::ListSigningProfilesOutput {
             crate::output::ListSigningProfilesOutput {
                 profiles: self.profiles,
@@ -502,7 +502,7 @@ pub mod list_signing_profiles_output {
     }
 }
 impl ListSigningProfilesOutput {
-    /// Creates a new builder-style object to manufacture [`ListSigningProfilesOutput`](crate::output::ListSigningProfilesOutput)
+    /// Creates a new builder-style object to manufacture [`ListSigningProfilesOutput`](crate::output::ListSigningProfilesOutput).
     pub fn builder() -> crate::output::list_signing_profiles_output::Builder {
         crate::output::list_signing_profiles_output::Builder::default()
     }
@@ -513,8 +513,10 @@ impl ListSigningProfilesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSigningPlatformsOutput {
     /// <p>A list of all platforms that match the request parameters.</p>
+    #[doc(hidden)]
     pub platforms: std::option::Option<std::vec::Vec<crate::model::SigningPlatform>>,
     /// <p>Value for specifying the next set of paginated results to return.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListSigningPlatformsOutput {
@@ -535,11 +537,10 @@ impl std::fmt::Debug for ListSigningPlatformsOutput {
         formatter.finish()
     }
 }
-/// See [`ListSigningPlatformsOutput`](crate::output::ListSigningPlatformsOutput)
+/// See [`ListSigningPlatformsOutput`](crate::output::ListSigningPlatformsOutput).
 pub mod list_signing_platforms_output {
 
-    /// A builder for [`ListSigningPlatformsOutput`](crate::output::ListSigningPlatformsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSigningPlatformsOutput`](crate::output::ListSigningPlatformsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) platforms: std::option::Option<std::vec::Vec<crate::model::SigningPlatform>>,
@@ -575,7 +576,7 @@ pub mod list_signing_platforms_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSigningPlatformsOutput`](crate::output::ListSigningPlatformsOutput)
+        /// Consumes the builder and constructs a [`ListSigningPlatformsOutput`](crate::output::ListSigningPlatformsOutput).
         pub fn build(self) -> crate::output::ListSigningPlatformsOutput {
             crate::output::ListSigningPlatformsOutput {
                 platforms: self.platforms,
@@ -585,7 +586,7 @@ pub mod list_signing_platforms_output {
     }
 }
 impl ListSigningPlatformsOutput {
-    /// Creates a new builder-style object to manufacture [`ListSigningPlatformsOutput`](crate::output::ListSigningPlatformsOutput)
+    /// Creates a new builder-style object to manufacture [`ListSigningPlatformsOutput`](crate::output::ListSigningPlatformsOutput).
     pub fn builder() -> crate::output::list_signing_platforms_output::Builder {
         crate::output::list_signing_platforms_output::Builder::default()
     }
@@ -596,8 +597,10 @@ impl ListSigningPlatformsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSigningJobsOutput {
     /// <p>A list of your signing jobs.</p>
+    #[doc(hidden)]
     pub jobs: std::option::Option<std::vec::Vec<crate::model::SigningJob>>,
     /// <p>String for specifying the next set of paginated results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListSigningJobsOutput {
@@ -618,11 +621,10 @@ impl std::fmt::Debug for ListSigningJobsOutput {
         formatter.finish()
     }
 }
-/// See [`ListSigningJobsOutput`](crate::output::ListSigningJobsOutput)
+/// See [`ListSigningJobsOutput`](crate::output::ListSigningJobsOutput).
 pub mod list_signing_jobs_output {
 
-    /// A builder for [`ListSigningJobsOutput`](crate::output::ListSigningJobsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSigningJobsOutput`](crate::output::ListSigningJobsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) jobs: std::option::Option<std::vec::Vec<crate::model::SigningJob>>,
@@ -658,7 +660,7 @@ pub mod list_signing_jobs_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSigningJobsOutput`](crate::output::ListSigningJobsOutput)
+        /// Consumes the builder and constructs a [`ListSigningJobsOutput`](crate::output::ListSigningJobsOutput).
         pub fn build(self) -> crate::output::ListSigningJobsOutput {
             crate::output::ListSigningJobsOutput {
                 jobs: self.jobs,
@@ -668,7 +670,7 @@ pub mod list_signing_jobs_output {
     }
 }
 impl ListSigningJobsOutput {
-    /// Creates a new builder-style object to manufacture [`ListSigningJobsOutput`](crate::output::ListSigningJobsOutput)
+    /// Creates a new builder-style object to manufacture [`ListSigningJobsOutput`](crate::output::ListSigningJobsOutput).
     pub fn builder() -> crate::output::list_signing_jobs_output::Builder {
         crate::output::list_signing_jobs_output::Builder::default()
     }
@@ -679,12 +681,16 @@ impl ListSigningJobsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListProfilePermissionsOutput {
     /// <p>The identifier for the current revision of profile permissions.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
     /// <p>Total size of the policy associated with the Signing Profile in bytes.</p>
+    #[doc(hidden)]
     pub policy_size_bytes: i32,
     /// <p>List of permissions associated with the Signing Profile.</p>
+    #[doc(hidden)]
     pub permissions: std::option::Option<std::vec::Vec<crate::model::Permission>>,
     /// <p>String for specifying the next set of paginated results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListProfilePermissionsOutput {
@@ -715,11 +721,10 @@ impl std::fmt::Debug for ListProfilePermissionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListProfilePermissionsOutput`](crate::output::ListProfilePermissionsOutput)
+/// See [`ListProfilePermissionsOutput`](crate::output::ListProfilePermissionsOutput).
 pub mod list_profile_permissions_output {
 
-    /// A builder for [`ListProfilePermissionsOutput`](crate::output::ListProfilePermissionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListProfilePermissionsOutput`](crate::output::ListProfilePermissionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) revision_id: std::option::Option<std::string::String>,
@@ -777,7 +782,7 @@ pub mod list_profile_permissions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListProfilePermissionsOutput`](crate::output::ListProfilePermissionsOutput)
+        /// Consumes the builder and constructs a [`ListProfilePermissionsOutput`](crate::output::ListProfilePermissionsOutput).
         pub fn build(self) -> crate::output::ListProfilePermissionsOutput {
             crate::output::ListProfilePermissionsOutput {
                 revision_id: self.revision_id,
@@ -789,7 +794,7 @@ pub mod list_profile_permissions_output {
     }
 }
 impl ListProfilePermissionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListProfilePermissionsOutput`](crate::output::ListProfilePermissionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListProfilePermissionsOutput`](crate::output::ListProfilePermissionsOutput).
     pub fn builder() -> crate::output::list_profile_permissions_output::Builder {
         crate::output::list_profile_permissions_output::Builder::default()
     }
@@ -800,33 +805,47 @@ impl ListProfilePermissionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSigningProfileOutput {
     /// <p>The name of the target signing profile.</p>
+    #[doc(hidden)]
     pub profile_name: std::option::Option<std::string::String>,
     /// <p>The current version of the signing profile.</p>
+    #[doc(hidden)]
     pub profile_version: std::option::Option<std::string::String>,
     /// <p>The signing profile ARN, including the profile version.</p>
+    #[doc(hidden)]
     pub profile_version_arn: std::option::Option<std::string::String>,
     /// <p>Revocation information for a signing profile.</p>
+    #[doc(hidden)]
     pub revocation_record: std::option::Option<crate::model::SigningProfileRevocationRecord>,
     /// <p>The ARN of the certificate that the target profile uses for signing operations.</p>
+    #[doc(hidden)]
     pub signing_material: std::option::Option<crate::model::SigningMaterial>,
     /// <p>The ID of the platform that is used by the target signing profile.</p>
+    #[doc(hidden)]
     pub platform_id: std::option::Option<std::string::String>,
     /// <p>A human-readable name for the signing platform associated with the signing profile.</p>
+    #[doc(hidden)]
     pub platform_display_name: std::option::Option<std::string::String>,
     /// <p>The validity period for a signing job.</p>
+    #[doc(hidden)]
     pub signature_validity_period: std::option::Option<crate::model::SignatureValidityPeriod>,
     /// <p>A list of overrides applied by the target signing profile for signing operations.</p>
+    #[doc(hidden)]
     pub overrides: std::option::Option<crate::model::SigningPlatformOverrides>,
     /// <p>A map of key-value pairs for signing operations that is attached to the target signing profile.</p>
+    #[doc(hidden)]
     pub signing_parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The status of the target signing profile.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::SigningProfileStatus>,
     /// <p>Reason for the status of the target signing profile.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the signing profile.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>A list of tags associated with the signing profile.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -918,11 +937,10 @@ impl std::fmt::Debug for GetSigningProfileOutput {
         formatter.finish()
     }
 }
-/// See [`GetSigningProfileOutput`](crate::output::GetSigningProfileOutput)
+/// See [`GetSigningProfileOutput`](crate::output::GetSigningProfileOutput).
 pub mod get_signing_profile_output {
 
-    /// A builder for [`GetSigningProfileOutput`](crate::output::GetSigningProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSigningProfileOutput`](crate::output::GetSigningProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) profile_name: std::option::Option<std::string::String>,
@@ -1150,7 +1168,7 @@ pub mod get_signing_profile_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSigningProfileOutput`](crate::output::GetSigningProfileOutput)
+        /// Consumes the builder and constructs a [`GetSigningProfileOutput`](crate::output::GetSigningProfileOutput).
         pub fn build(self) -> crate::output::GetSigningProfileOutput {
             crate::output::GetSigningProfileOutput {
                 profile_name: self.profile_name,
@@ -1172,7 +1190,7 @@ pub mod get_signing_profile_output {
     }
 }
 impl GetSigningProfileOutput {
-    /// Creates a new builder-style object to manufacture [`GetSigningProfileOutput`](crate::output::GetSigningProfileOutput)
+    /// Creates a new builder-style object to manufacture [`GetSigningProfileOutput`](crate::output::GetSigningProfileOutput).
     pub fn builder() -> crate::output::get_signing_profile_output::Builder {
         crate::output::get_signing_profile_output::Builder::default()
     }
@@ -1183,22 +1201,31 @@ impl GetSigningProfileOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSigningPlatformOutput {
     /// <p>The ID of the target signing platform.</p>
+    #[doc(hidden)]
     pub platform_id: std::option::Option<std::string::String>,
     /// <p>The display name of the target signing platform.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>A list of partner entities that use the target signing platform.</p>
+    #[doc(hidden)]
     pub partner: std::option::Option<std::string::String>,
     /// <p>The validation template that is used by the target signing platform.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<std::string::String>,
     /// <p>The category type of the target signing platform.</p>
+    #[doc(hidden)]
     pub category: std::option::Option<crate::model::Category>,
     /// <p>A list of configurations applied to the target platform at signing.</p>
+    #[doc(hidden)]
     pub signing_configuration: std::option::Option<crate::model::SigningConfiguration>,
     /// <p>The format of the target platform's signing image.</p>
+    #[doc(hidden)]
     pub signing_image_format: std::option::Option<crate::model::SigningImageFormat>,
     /// <p>The maximum size (in MB) of the payload that can be signed by the target platform.</p>
+    #[doc(hidden)]
     pub max_size_in_mb: i32,
     /// <p>A flag indicating whether signatures generated for the signing platform can be revoked.</p>
+    #[doc(hidden)]
     pub revocation_supported: bool,
 }
 impl GetSigningPlatformOutput {
@@ -1256,11 +1283,10 @@ impl std::fmt::Debug for GetSigningPlatformOutput {
         formatter.finish()
     }
 }
-/// See [`GetSigningPlatformOutput`](crate::output::GetSigningPlatformOutput)
+/// See [`GetSigningPlatformOutput`](crate::output::GetSigningPlatformOutput).
 pub mod get_signing_platform_output {
 
-    /// A builder for [`GetSigningPlatformOutput`](crate::output::GetSigningPlatformOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSigningPlatformOutput`](crate::output::GetSigningPlatformOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) platform_id: std::option::Option<std::string::String>,
@@ -1370,7 +1396,7 @@ pub mod get_signing_platform_output {
             self.revocation_supported = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSigningPlatformOutput`](crate::output::GetSigningPlatformOutput)
+        /// Consumes the builder and constructs a [`GetSigningPlatformOutput`](crate::output::GetSigningPlatformOutput).
         pub fn build(self) -> crate::output::GetSigningPlatformOutput {
             crate::output::GetSigningPlatformOutput {
                 platform_id: self.platform_id,
@@ -1387,7 +1413,7 @@ pub mod get_signing_platform_output {
     }
 }
 impl GetSigningPlatformOutput {
-    /// Creates a new builder-style object to manufacture [`GetSigningPlatformOutput`](crate::output::GetSigningPlatformOutput)
+    /// Creates a new builder-style object to manufacture [`GetSigningPlatformOutput`](crate::output::GetSigningPlatformOutput).
     pub fn builder() -> crate::output::get_signing_platform_output::Builder {
         crate::output::get_signing_platform_output::Builder::default()
     }
@@ -1398,43 +1424,62 @@ impl GetSigningPlatformOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSigningJobOutput {
     /// <p>The ID of the signing job on output.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The object that contains the name of your S3 bucket or your raw code.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<crate::model::Source>,
     /// <p>The Amazon Resource Name (ARN) of your code signing certificate.</p>
+    #[doc(hidden)]
     pub signing_material: std::option::Option<crate::model::SigningMaterial>,
     /// <p>The microcontroller platform to which your signed code image will be distributed.</p>
+    #[doc(hidden)]
     pub platform_id: std::option::Option<std::string::String>,
     /// <p>A human-readable name for the signing platform associated with the signing job.</p>
+    #[doc(hidden)]
     pub platform_display_name: std::option::Option<std::string::String>,
     /// <p>The name of the profile that initiated the signing operation.</p>
+    #[doc(hidden)]
     pub profile_name: std::option::Option<std::string::String>,
     /// <p>The version of the signing profile used to initiate the signing job.</p>
+    #[doc(hidden)]
     pub profile_version: std::option::Option<std::string::String>,
     /// <p>A list of any overrides that were applied to the signing operation.</p>
+    #[doc(hidden)]
     pub overrides: std::option::Option<crate::model::SigningPlatformOverrides>,
     /// <p>Map of user-assigned key-value pairs used during signing. These values contain any information that you specified for use in your signing job. </p>
+    #[doc(hidden)]
     pub signing_parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Date and time that the signing job was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Date and time that the signing job was completed.</p>
+    #[doc(hidden)]
     pub completed_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Thr expiration timestamp for the signature generated by the signing job.</p>
+    #[doc(hidden)]
     pub signature_expires_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The IAM principal that requested the signing job.</p>
+    #[doc(hidden)]
     pub requested_by: std::option::Option<std::string::String>,
     /// <p>Status of the signing job.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::SigningStatus>,
     /// <p>String value that contains the status reason.</p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p>A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.</p>
+    #[doc(hidden)]
     pub revocation_record: std::option::Option<crate::model::SigningJobRevocationRecord>,
     /// <p>Name of the S3 bucket where the signed code image is saved by code signing.</p>
+    #[doc(hidden)]
     pub signed_object: std::option::Option<crate::model::SignedObject>,
     /// <p>The AWS account ID of the job owner.</p>
+    #[doc(hidden)]
     pub job_owner: std::option::Option<std::string::String>,
     /// <p>The IAM entity that initiated the signing job.</p>
+    #[doc(hidden)]
     pub job_invoker: std::option::Option<std::string::String>,
 }
 impl DescribeSigningJobOutput {
@@ -1545,11 +1590,10 @@ impl std::fmt::Debug for DescribeSigningJobOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeSigningJobOutput`](crate::output::DescribeSigningJobOutput)
+/// See [`DescribeSigningJobOutput`](crate::output::DescribeSigningJobOutput).
 pub mod describe_signing_job_output {
 
-    /// A builder for [`DescribeSigningJobOutput`](crate::output::DescribeSigningJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSigningJobOutput`](crate::output::DescribeSigningJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -1816,7 +1860,7 @@ pub mod describe_signing_job_output {
             self.job_invoker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSigningJobOutput`](crate::output::DescribeSigningJobOutput)
+        /// Consumes the builder and constructs a [`DescribeSigningJobOutput`](crate::output::DescribeSigningJobOutput).
         pub fn build(self) -> crate::output::DescribeSigningJobOutput {
             crate::output::DescribeSigningJobOutput {
                 job_id: self.job_id,
@@ -1843,7 +1887,7 @@ pub mod describe_signing_job_output {
     }
 }
 impl DescribeSigningJobOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeSigningJobOutput`](crate::output::DescribeSigningJobOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeSigningJobOutput`](crate::output::DescribeSigningJobOutput).
     pub fn builder() -> crate::output::describe_signing_job_output::Builder {
         crate::output::describe_signing_job_output::Builder::default()
     }
@@ -1859,22 +1903,21 @@ impl std::fmt::Debug for CancelSigningProfileOutput {
         formatter.finish()
     }
 }
-/// See [`CancelSigningProfileOutput`](crate::output::CancelSigningProfileOutput)
+/// See [`CancelSigningProfileOutput`](crate::output::CancelSigningProfileOutput).
 pub mod cancel_signing_profile_output {
 
-    /// A builder for [`CancelSigningProfileOutput`](crate::output::CancelSigningProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`CancelSigningProfileOutput`](crate::output::CancelSigningProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`CancelSigningProfileOutput`](crate::output::CancelSigningProfileOutput)
+        /// Consumes the builder and constructs a [`CancelSigningProfileOutput`](crate::output::CancelSigningProfileOutput).
         pub fn build(self) -> crate::output::CancelSigningProfileOutput {
             crate::output::CancelSigningProfileOutput {}
         }
     }
 }
 impl CancelSigningProfileOutput {
-    /// Creates a new builder-style object to manufacture [`CancelSigningProfileOutput`](crate::output::CancelSigningProfileOutput)
+    /// Creates a new builder-style object to manufacture [`CancelSigningProfileOutput`](crate::output::CancelSigningProfileOutput).
     pub fn builder() -> crate::output::cancel_signing_profile_output::Builder {
         crate::output::cancel_signing_profile_output::Builder::default()
     }
@@ -1885,6 +1928,7 @@ impl CancelSigningProfileOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddProfilePermissionOutput {
     /// <p>A unique identifier for the current profile revision.</p>
+    #[doc(hidden)]
     pub revision_id: std::option::Option<std::string::String>,
 }
 impl AddProfilePermissionOutput {
@@ -1900,11 +1944,10 @@ impl std::fmt::Debug for AddProfilePermissionOutput {
         formatter.finish()
     }
 }
-/// See [`AddProfilePermissionOutput`](crate::output::AddProfilePermissionOutput)
+/// See [`AddProfilePermissionOutput`](crate::output::AddProfilePermissionOutput).
 pub mod add_profile_permission_output {
 
-    /// A builder for [`AddProfilePermissionOutput`](crate::output::AddProfilePermissionOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddProfilePermissionOutput`](crate::output::AddProfilePermissionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) revision_id: std::option::Option<std::string::String>,
@@ -1920,7 +1963,7 @@ pub mod add_profile_permission_output {
             self.revision_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddProfilePermissionOutput`](crate::output::AddProfilePermissionOutput)
+        /// Consumes the builder and constructs a [`AddProfilePermissionOutput`](crate::output::AddProfilePermissionOutput).
         pub fn build(self) -> crate::output::AddProfilePermissionOutput {
             crate::output::AddProfilePermissionOutput {
                 revision_id: self.revision_id,
@@ -1929,7 +1972,7 @@ pub mod add_profile_permission_output {
     }
 }
 impl AddProfilePermissionOutput {
-    /// Creates a new builder-style object to manufacture [`AddProfilePermissionOutput`](crate::output::AddProfilePermissionOutput)
+    /// Creates a new builder-style object to manufacture [`AddProfilePermissionOutput`](crate::output::AddProfilePermissionOutput).
     pub fn builder() -> crate::output::add_profile_permission_output::Builder {
         crate::output::add_profile_permission_output::Builder::default()
     }

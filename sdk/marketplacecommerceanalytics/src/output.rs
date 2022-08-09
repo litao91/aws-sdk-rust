@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartSupportDataExportOutput {
     /// A unique identifier representing a specific request to the StartSupportDataExport operation. This identifier can be used to correlate a request with notifications from the SNS topic.
+    #[doc(hidden)]
     pub data_set_request_id: std::option::Option<std::string::String>,
 }
 impl StartSupportDataExportOutput {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for StartSupportDataExportOutput {
         formatter.finish()
     }
 }
-/// See [`StartSupportDataExportOutput`](crate::output::StartSupportDataExportOutput)
+/// See [`StartSupportDataExportOutput`](crate::output::StartSupportDataExportOutput).
 pub mod start_support_data_export_output {
 
-    /// A builder for [`StartSupportDataExportOutput`](crate::output::StartSupportDataExportOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartSupportDataExportOutput`](crate::output::StartSupportDataExportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_set_request_id: std::option::Option<std::string::String>,
@@ -43,7 +43,7 @@ pub mod start_support_data_export_output {
             self.data_set_request_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartSupportDataExportOutput`](crate::output::StartSupportDataExportOutput)
+        /// Consumes the builder and constructs a [`StartSupportDataExportOutput`](crate::output::StartSupportDataExportOutput).
         pub fn build(self) -> crate::output::StartSupportDataExportOutput {
             crate::output::StartSupportDataExportOutput {
                 data_set_request_id: self.data_set_request_id,
@@ -52,7 +52,7 @@ pub mod start_support_data_export_output {
     }
 }
 impl StartSupportDataExportOutput {
-    /// Creates a new builder-style object to manufacture [`StartSupportDataExportOutput`](crate::output::StartSupportDataExportOutput)
+    /// Creates a new builder-style object to manufacture [`StartSupportDataExportOutput`](crate::output::StartSupportDataExportOutput).
     pub fn builder() -> crate::output::start_support_data_export_output::Builder {
         crate::output::start_support_data_export_output::Builder::default()
     }
@@ -63,6 +63,7 @@ impl StartSupportDataExportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GenerateDataSetOutput {
     /// A unique identifier representing a specific request to the GenerateDataSet operation. This identifier can be used to correlate a request with notifications from the SNS topic.
+    #[doc(hidden)]
     pub data_set_request_id: std::option::Option<std::string::String>,
 }
 impl GenerateDataSetOutput {
@@ -78,11 +79,10 @@ impl std::fmt::Debug for GenerateDataSetOutput {
         formatter.finish()
     }
 }
-/// See [`GenerateDataSetOutput`](crate::output::GenerateDataSetOutput)
+/// See [`GenerateDataSetOutput`](crate::output::GenerateDataSetOutput).
 pub mod generate_data_set_output {
 
-    /// A builder for [`GenerateDataSetOutput`](crate::output::GenerateDataSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`GenerateDataSetOutput`](crate::output::GenerateDataSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_set_request_id: std::option::Option<std::string::String>,
@@ -101,7 +101,7 @@ pub mod generate_data_set_output {
             self.data_set_request_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`GenerateDataSetOutput`](crate::output::GenerateDataSetOutput)
+        /// Consumes the builder and constructs a [`GenerateDataSetOutput`](crate::output::GenerateDataSetOutput).
         pub fn build(self) -> crate::output::GenerateDataSetOutput {
             crate::output::GenerateDataSetOutput {
                 data_set_request_id: self.data_set_request_id,
@@ -110,7 +110,7 @@ pub mod generate_data_set_output {
     }
 }
 impl GenerateDataSetOutput {
-    /// Creates a new builder-style object to manufacture [`GenerateDataSetOutput`](crate::output::GenerateDataSetOutput)
+    /// Creates a new builder-style object to manufacture [`GenerateDataSetOutput`](crate::output::GenerateDataSetOutput).
     pub fn builder() -> crate::output::generate_data_set_output::Builder {
         crate::output::generate_data_set_output::Builder::default()
     }

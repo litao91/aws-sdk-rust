@@ -5,12 +5,16 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Change {
     /// <p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.</p>
+    #[doc(hidden)]
     pub change_type: std::option::Option<std::string::String>,
     /// <p>The entity to be changed.</p>
+    #[doc(hidden)]
     pub entity: std::option::Option<crate::model::Entity>,
     /// <p>This object contains details specific to the change type of the requested change.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
     /// <p>Optional name for the change.</p>
+    #[doc(hidden)]
     pub change_name: std::option::Option<std::string::String>,
 }
 impl Change {
@@ -41,11 +45,10 @@ impl std::fmt::Debug for Change {
         formatter.finish()
     }
 }
-/// See [`Change`](crate::model::Change)
+/// See [`Change`](crate::model::Change).
 pub mod change {
 
-    /// A builder for [`Change`](crate::model::Change)
-    #[non_exhaustive]
+    /// A builder for [`Change`](crate::model::Change).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_type: std::option::Option<std::string::String>,
@@ -94,7 +97,7 @@ pub mod change {
             self.change_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Change`](crate::model::Change)
+        /// Consumes the builder and constructs a [`Change`](crate::model::Change).
         pub fn build(self) -> crate::model::Change {
             crate::model::Change {
                 change_type: self.change_type,
@@ -106,7 +109,7 @@ pub mod change {
     }
 }
 impl Change {
-    /// Creates a new builder-style object to manufacture [`Change`](crate::model::Change)
+    /// Creates a new builder-style object to manufacture [`Change`](crate::model::Change).
     pub fn builder() -> crate::model::change::Builder {
         crate::model::change::Builder::default()
     }
@@ -117,8 +120,10 @@ impl Change {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Entity {
     /// <p>The type of entity.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The identifier for the entity.</p>
+    #[doc(hidden)]
     pub identifier: std::option::Option<std::string::String>,
 }
 impl Entity {
@@ -139,11 +144,10 @@ impl std::fmt::Debug for Entity {
         formatter.finish()
     }
 }
-/// See [`Entity`](crate::model::Entity)
+/// See [`Entity`](crate::model::Entity).
 pub mod entity {
 
-    /// A builder for [`Entity`](crate::model::Entity)
-    #[non_exhaustive]
+    /// A builder for [`Entity`](crate::model::Entity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<std::string::String>,
@@ -170,7 +174,7 @@ pub mod entity {
             self.identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`Entity`](crate::model::Entity)
+        /// Consumes the builder and constructs a [`Entity`](crate::model::Entity).
         pub fn build(self) -> crate::model::Entity {
             crate::model::Entity {
                 r#type: self.r#type,
@@ -180,7 +184,7 @@ pub mod entity {
     }
 }
 impl Entity {
-    /// Creates a new builder-style object to manufacture [`Entity`](crate::model::Entity)
+    /// Creates a new builder-style object to manufacture [`Entity`](crate::model::Entity).
     pub fn builder() -> crate::model::entity::Builder {
         crate::model::entity::Builder::default()
     }
@@ -191,16 +195,22 @@ impl Entity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntitySummary {
     /// <p>The name for the entity. This value is not unique. It is defined by the seller.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of the entity.</p>
+    #[doc(hidden)]
     pub entity_type: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the entity.</p>
+    #[doc(hidden)]
     pub entity_id: std::option::Option<std::string::String>,
     /// <p>The ARN associated with the unique identifier for the entity.</p>
+    #[doc(hidden)]
     pub entity_arn: std::option::Option<std::string::String>,
     /// <p>The last time the entity was published, using ISO 8601 format (2018-02-27T13:45:22Z).</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>The visibility status of the entity to buyers. This value can be <code>Public</code> (everyone can view the entity), <code>Limited</code> (the entity is visible to limited accounts only), or <code>Restricted</code> (the entity was published and then unpublished and only existing buyers can view it). </p>
+    #[doc(hidden)]
     pub visibility: std::option::Option<std::string::String>,
 }
 impl EntitySummary {
@@ -241,11 +251,10 @@ impl std::fmt::Debug for EntitySummary {
         formatter.finish()
     }
 }
-/// See [`EntitySummary`](crate::model::EntitySummary)
+/// See [`EntitySummary`](crate::model::EntitySummary).
 pub mod entity_summary {
 
-    /// A builder for [`EntitySummary`](crate::model::EntitySummary)
-    #[non_exhaustive]
+    /// A builder for [`EntitySummary`](crate::model::EntitySummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -319,7 +328,7 @@ pub mod entity_summary {
             self.visibility = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntitySummary`](crate::model::EntitySummary)
+        /// Consumes the builder and constructs a [`EntitySummary`](crate::model::EntitySummary).
         pub fn build(self) -> crate::model::EntitySummary {
             crate::model::EntitySummary {
                 name: self.name,
@@ -333,7 +342,7 @@ pub mod entity_summary {
     }
 }
 impl EntitySummary {
-    /// Creates a new builder-style object to manufacture [`EntitySummary`](crate::model::EntitySummary)
+    /// Creates a new builder-style object to manufacture [`EntitySummary`](crate::model::EntitySummary).
     pub fn builder() -> crate::model::entity_summary::Builder {
         crate::model::entity_summary::Builder::default()
     }
@@ -345,8 +354,10 @@ impl EntitySummary {
 pub struct Sort {
     /// <p>For <code>ListEntities</code>, supported attributes include <code>LastModifiedDate</code> (default), <code>Visibility</code>, <code>EntityId</code>, and <code>Name</code>.</p>
     /// <p>For <code>ListChangeSets</code>, supported attributes include <code>StartTime</code> and <code>EndTime</code>.</p>
+    #[doc(hidden)]
     pub sort_by: std::option::Option<std::string::String>,
     /// <p>The sorting order. Can be <code>ASCENDING</code> or <code>DESCENDING</code>. The default value is <code>DESCENDING</code>.</p>
+    #[doc(hidden)]
     pub sort_order: std::option::Option<crate::model::SortOrder>,
 }
 impl Sort {
@@ -368,11 +379,10 @@ impl std::fmt::Debug for Sort {
         formatter.finish()
     }
 }
-/// See [`Sort`](crate::model::Sort)
+/// See [`Sort`](crate::model::Sort).
 pub mod sort {
 
-    /// A builder for [`Sort`](crate::model::Sort)
-    #[non_exhaustive]
+    /// A builder for [`Sort`](crate::model::Sort).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sort_by: std::option::Option<std::string::String>,
@@ -404,7 +414,7 @@ pub mod sort {
             self.sort_order = input;
             self
         }
-        /// Consumes the builder and constructs a [`Sort`](crate::model::Sort)
+        /// Consumes the builder and constructs a [`Sort`](crate::model::Sort).
         pub fn build(self) -> crate::model::Sort {
             crate::model::Sort {
                 sort_by: self.sort_by,
@@ -414,7 +424,7 @@ pub mod sort {
     }
 }
 impl Sort {
-    /// Creates a new builder-style object to manufacture [`Sort`](crate::model::Sort)
+    /// Creates a new builder-style object to manufacture [`Sort`](crate::model::Sort).
     pub fn builder() -> crate::model::sort::Builder {
         crate::model::sort::Builder::default()
     }
@@ -481,6 +491,7 @@ impl AsRef<str> for SortOrder {
 pub struct Filter {
     /// <p>For <code>ListEntities</code>, the supported value for this is an <code>EntityId</code>.</p>
     /// <p>For <code>ListChangeSets</code>, the supported values are as follows:</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> <code>ListEntities</code> - This is a list of unique <code>EntityId</code>s.</p>
     /// <p> <code>ListChangeSets</code> - The supported filter names and associated <code>ValueList</code>s is as follows:</p>
@@ -493,6 +504,7 @@ pub struct Filter {
     /// <li> <p> <code>BeforeEndTime</code> - The supported <code>ValueList</code> is a list of all change sets that ended before the filter value.</p> </li>
     /// <li> <p> <code>AfterEndTime</code> - The supported <code>ValueList</code> is a list of all change sets that ended after the filter value.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub value_list: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Filter {
@@ -524,11 +536,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -586,7 +597,7 @@ pub mod filter {
             self.value_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 name: self.name,
@@ -596,7 +607,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -607,20 +618,28 @@ impl Filter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChangeSetSummaryListItem {
     /// <p>The unique identifier for a change set.</p>
+    #[doc(hidden)]
     pub change_set_id: std::option::Option<std::string::String>,
     /// <p>The ARN associated with the unique identifier for the change set referenced in this request.</p>
+    #[doc(hidden)]
     pub change_set_arn: std::option::Option<std::string::String>,
     /// <p>The non-unique name for the change set.</p>
+    #[doc(hidden)]
     pub change_set_name: std::option::Option<std::string::String>,
     /// <p>The time, in ISO 8601 format (2018-02-27T13:45:22Z), when the change set was started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<std::string::String>,
     /// <p>The time, in ISO 8601 format (2018-02-27T13:45:22Z), when the change set was finished.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<std::string::String>,
     /// <p>The current status of the change set.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ChangeStatus>,
     /// <p>This object is a list of entity IDs (string) that are a part of a change set. The entity ID list is a maximum of 20 entities. It must contain at least one entity.</p>
+    #[doc(hidden)]
     pub entity_id_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Returned if the change set is in <code>FAILED</code> status. Can be either <code>CLIENT_ERROR</code>, which means that there are issues with the request (see the <code>ErrorDetailList</code> of <code>DescribeChangeSet</code>), or <code>SERVER_FAULT</code>, which means that there is a problem in the system, and you should retry your request.</p>
+    #[doc(hidden)]
     pub failure_code: std::option::Option<crate::model::FailureCode>,
 }
 impl ChangeSetSummaryListItem {
@@ -671,11 +690,10 @@ impl std::fmt::Debug for ChangeSetSummaryListItem {
         formatter.finish()
     }
 }
-/// See [`ChangeSetSummaryListItem`](crate::model::ChangeSetSummaryListItem)
+/// See [`ChangeSetSummaryListItem`](crate::model::ChangeSetSummaryListItem).
 pub mod change_set_summary_list_item {
 
-    /// A builder for [`ChangeSetSummaryListItem`](crate::model::ChangeSetSummaryListItem)
-    #[non_exhaustive]
+    /// A builder for [`ChangeSetSummaryListItem`](crate::model::ChangeSetSummaryListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_set_id: std::option::Option<std::string::String>,
@@ -792,7 +810,7 @@ pub mod change_set_summary_list_item {
             self.failure_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeSetSummaryListItem`](crate::model::ChangeSetSummaryListItem)
+        /// Consumes the builder and constructs a [`ChangeSetSummaryListItem`](crate::model::ChangeSetSummaryListItem).
         pub fn build(self) -> crate::model::ChangeSetSummaryListItem {
             crate::model::ChangeSetSummaryListItem {
                 change_set_id: self.change_set_id,
@@ -808,7 +826,7 @@ pub mod change_set_summary_list_item {
     }
 }
 impl ChangeSetSummaryListItem {
-    /// Creates a new builder-style object to manufacture [`ChangeSetSummaryListItem`](crate::model::ChangeSetSummaryListItem)
+    /// Creates a new builder-style object to manufacture [`ChangeSetSummaryListItem`](crate::model::ChangeSetSummaryListItem).
     pub fn builder() -> crate::model::change_set_summary_list_item::Builder {
         crate::model::change_set_summary_list_item::Builder::default()
     }
@@ -941,14 +959,19 @@ impl AsRef<str> for ChangeStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChangeSummary {
     /// <p>The type of the change.</p>
+    #[doc(hidden)]
     pub change_type: std::option::Option<std::string::String>,
     /// <p>The entity to be changed.</p>
+    #[doc(hidden)]
     pub entity: std::option::Option<crate::model::Entity>,
     /// <p>This object contains details specific to the change type of the requested change.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
     /// <p>An array of <code>ErrorDetail</code> objects associated with the change.</p>
+    #[doc(hidden)]
     pub error_detail_list: std::option::Option<std::vec::Vec<crate::model::ErrorDetail>>,
     /// <p>Optional name for the change.</p>
+    #[doc(hidden)]
     pub change_name: std::option::Option<std::string::String>,
 }
 impl ChangeSummary {
@@ -984,11 +1007,10 @@ impl std::fmt::Debug for ChangeSummary {
         formatter.finish()
     }
 }
-/// See [`ChangeSummary`](crate::model::ChangeSummary)
+/// See [`ChangeSummary`](crate::model::ChangeSummary).
 pub mod change_summary {
 
-    /// A builder for [`ChangeSummary`](crate::model::ChangeSummary)
-    #[non_exhaustive]
+    /// A builder for [`ChangeSummary`](crate::model::ChangeSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_type: std::option::Option<std::string::String>,
@@ -1057,7 +1079,7 @@ pub mod change_summary {
             self.change_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeSummary`](crate::model::ChangeSummary)
+        /// Consumes the builder and constructs a [`ChangeSummary`](crate::model::ChangeSummary).
         pub fn build(self) -> crate::model::ChangeSummary {
             crate::model::ChangeSummary {
                 change_type: self.change_type,
@@ -1070,7 +1092,7 @@ pub mod change_summary {
     }
 }
 impl ChangeSummary {
-    /// Creates a new builder-style object to manufacture [`ChangeSummary`](crate::model::ChangeSummary)
+    /// Creates a new builder-style object to manufacture [`ChangeSummary`](crate::model::ChangeSummary).
     pub fn builder() -> crate::model::change_summary::Builder {
         crate::model::change_summary::Builder::default()
     }
@@ -1081,8 +1103,10 @@ impl ChangeSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ErrorDetail {
     /// <p>The error code that identifies the type of error.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The message for the error.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl ErrorDetail {
@@ -1103,11 +1127,10 @@ impl std::fmt::Debug for ErrorDetail {
         formatter.finish()
     }
 }
-/// See [`ErrorDetail`](crate::model::ErrorDetail)
+/// See [`ErrorDetail`](crate::model::ErrorDetail).
 pub mod error_detail {
 
-    /// A builder for [`ErrorDetail`](crate::model::ErrorDetail)
-    #[non_exhaustive]
+    /// A builder for [`ErrorDetail`](crate::model::ErrorDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_code: std::option::Option<std::string::String>,
@@ -1137,7 +1160,7 @@ pub mod error_detail {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ErrorDetail`](crate::model::ErrorDetail)
+        /// Consumes the builder and constructs a [`ErrorDetail`](crate::model::ErrorDetail).
         pub fn build(self) -> crate::model::ErrorDetail {
             crate::model::ErrorDetail {
                 error_code: self.error_code,
@@ -1147,7 +1170,7 @@ pub mod error_detail {
     }
 }
 impl ErrorDetail {
-    /// Creates a new builder-style object to manufacture [`ErrorDetail`](crate::model::ErrorDetail)
+    /// Creates a new builder-style object to manufacture [`ErrorDetail`](crate::model::ErrorDetail).
     pub fn builder() -> crate::model::error_detail::Builder {
         crate::model::error_detail::Builder::default()
     }

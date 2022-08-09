@@ -5,10 +5,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EmailTemplateContent {
     /// <p>The subject line of the email.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<std::string::String>,
     /// <p>The email body that will be visible to recipients whose email clients do not display HTML.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>The HTML body of the email.</p>
+    #[doc(hidden)]
     pub html: std::option::Option<std::string::String>,
 }
 impl EmailTemplateContent {
@@ -34,11 +37,10 @@ impl std::fmt::Debug for EmailTemplateContent {
         formatter.finish()
     }
 }
-/// See [`EmailTemplateContent`](crate::model::EmailTemplateContent)
+/// See [`EmailTemplateContent`](crate::model::EmailTemplateContent).
 pub mod email_template_content {
 
-    /// A builder for [`EmailTemplateContent`](crate::model::EmailTemplateContent)
-    #[non_exhaustive]
+    /// A builder for [`EmailTemplateContent`](crate::model::EmailTemplateContent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subject: std::option::Option<std::string::String>,
@@ -76,7 +78,7 @@ pub mod email_template_content {
             self.html = input;
             self
         }
-        /// Consumes the builder and constructs a [`EmailTemplateContent`](crate::model::EmailTemplateContent)
+        /// Consumes the builder and constructs a [`EmailTemplateContent`](crate::model::EmailTemplateContent).
         pub fn build(self) -> crate::model::EmailTemplateContent {
             crate::model::EmailTemplateContent {
                 subject: self.subject,
@@ -87,7 +89,7 @@ pub mod email_template_content {
     }
 }
 impl EmailTemplateContent {
-    /// Creates a new builder-style object to manufacture [`EmailTemplateContent`](crate::model::EmailTemplateContent)
+    /// Creates a new builder-style object to manufacture [`EmailTemplateContent`](crate::model::EmailTemplateContent).
     pub fn builder() -> crate::model::email_template_content::Builder {
         crate::model::email_template_content::Builder::default()
     }
@@ -98,12 +100,16 @@ impl EmailTemplateContent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Topic {
     /// <p>The name of the topic.</p>
+    #[doc(hidden)]
     pub topic_name: std::option::Option<std::string::String>,
     /// <p>The name of the topic the contact will see.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>A description of what the topic is about, which the contact will see.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The default subscription status to be applied to a contact if the contact has not noted their preference for subscribing to a topic.</p>
+    #[doc(hidden)]
     pub default_subscription_status: std::option::Option<crate::model::SubscriptionStatus>,
 }
 impl Topic {
@@ -139,11 +145,10 @@ impl std::fmt::Debug for Topic {
         formatter.finish()
     }
 }
-/// See [`Topic`](crate::model::Topic)
+/// See [`Topic`](crate::model::Topic).
 pub mod topic {
 
-    /// A builder for [`Topic`](crate::model::Topic)
-    #[non_exhaustive]
+    /// A builder for [`Topic`](crate::model::Topic).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) topic_name: std::option::Option<std::string::String>,
@@ -199,7 +204,7 @@ pub mod topic {
             self.default_subscription_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`Topic`](crate::model::Topic)
+        /// Consumes the builder and constructs a [`Topic`](crate::model::Topic).
         pub fn build(self) -> crate::model::Topic {
             crate::model::Topic {
                 topic_name: self.topic_name,
@@ -211,7 +216,7 @@ pub mod topic {
     }
 }
 impl Topic {
-    /// Creates a new builder-style object to manufacture [`Topic`](crate::model::Topic)
+    /// Creates a new builder-style object to manufacture [`Topic`](crate::model::Topic).
     pub fn builder() -> crate::model::topic::Builder {
         crate::model::topic::Builder::default()
     }
@@ -277,8 +282,10 @@ impl AsRef<str> for SubscriptionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TopicPreference {
     /// <p>The name of the topic.</p>
+    #[doc(hidden)]
     pub topic_name: std::option::Option<std::string::String>,
     /// <p>The contact's subscription status to a topic which is either <code>OPT_IN</code> or <code>OPT_OUT</code>.</p>
+    #[doc(hidden)]
     pub subscription_status: std::option::Option<crate::model::SubscriptionStatus>,
 }
 impl TopicPreference {
@@ -299,11 +306,10 @@ impl std::fmt::Debug for TopicPreference {
         formatter.finish()
     }
 }
-/// See [`TopicPreference`](crate::model::TopicPreference)
+/// See [`TopicPreference`](crate::model::TopicPreference).
 pub mod topic_preference {
 
-    /// A builder for [`TopicPreference`](crate::model::TopicPreference)
-    #[non_exhaustive]
+    /// A builder for [`TopicPreference`](crate::model::TopicPreference).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) topic_name: std::option::Option<std::string::String>,
@@ -333,7 +339,7 @@ pub mod topic_preference {
             self.subscription_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`TopicPreference`](crate::model::TopicPreference)
+        /// Consumes the builder and constructs a [`TopicPreference`](crate::model::TopicPreference).
         pub fn build(self) -> crate::model::TopicPreference {
             crate::model::TopicPreference {
                 topic_name: self.topic_name,
@@ -343,7 +349,7 @@ pub mod topic_preference {
     }
 }
 impl TopicPreference {
-    /// Creates a new builder-style object to manufacture [`TopicPreference`](crate::model::TopicPreference)
+    /// Creates a new builder-style object to manufacture [`TopicPreference`](crate::model::TopicPreference).
     pub fn builder() -> crate::model::topic_preference::Builder {
         crate::model::topic_preference::Builder::default()
     }
@@ -355,16 +361,22 @@ impl TopicPreference {
 pub struct EventDestinationDefinition {
     /// <p>If <code>true</code>, the event destination is enabled. When the event destination is enabled, the specified event types are sent to the destinations in this <code>EventDestinationDefinition</code>.</p>
     /// <p>If <code>false</code>, the event destination is disabled. When the event destination is disabled, events aren't sent to the specified destinations.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>An array that specifies which events the Amazon SES API v2 should send to the destinations in this <code>EventDestinationDefinition</code>.</p>
+    #[doc(hidden)]
     pub matching_event_types: std::option::Option<std::vec::Vec<crate::model::EventType>>,
     /// <p>An object that defines an Amazon Kinesis Data Firehose destination for email events. You can use Amazon Kinesis Data Firehose to stream data to other services, such as Amazon S3 and Amazon Redshift.</p>
+    #[doc(hidden)]
     pub kinesis_firehose_destination: std::option::Option<crate::model::KinesisFirehoseDestination>,
     /// <p>An object that defines an Amazon CloudWatch destination for email events. You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.</p>
+    #[doc(hidden)]
     pub cloud_watch_destination: std::option::Option<crate::model::CloudWatchDestination>,
     /// <p>An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notification when certain email events occur.</p>
+    #[doc(hidden)]
     pub sns_destination: std::option::Option<crate::model::SnsDestination>,
     /// <p>An object that defines an Amazon Pinpoint project destination for email events. You can send email event data to a Amazon Pinpoint project to view metrics using the Transactional Messaging dashboards that are built in to Amazon Pinpoint. For more information, see <a href="https://docs.aws.amazon.com/pinpoint/latest/userguide/analytics-transactional-messages.html">Transactional Messaging Charts</a> in the <i>Amazon Pinpoint User Guide</i>.</p>
+    #[doc(hidden)]
     pub pinpoint_destination: std::option::Option<crate::model::PinpointDestination>,
 }
 impl EventDestinationDefinition {
@@ -413,11 +425,10 @@ impl std::fmt::Debug for EventDestinationDefinition {
         formatter.finish()
     }
 }
-/// See [`EventDestinationDefinition`](crate::model::EventDestinationDefinition)
+/// See [`EventDestinationDefinition`](crate::model::EventDestinationDefinition).
 pub mod event_destination_definition {
 
-    /// A builder for [`EventDestinationDefinition`](crate::model::EventDestinationDefinition)
-    #[non_exhaustive]
+    /// A builder for [`EventDestinationDefinition`](crate::model::EventDestinationDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -520,7 +531,7 @@ pub mod event_destination_definition {
             self.pinpoint_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventDestinationDefinition`](crate::model::EventDestinationDefinition)
+        /// Consumes the builder and constructs a [`EventDestinationDefinition`](crate::model::EventDestinationDefinition).
         pub fn build(self) -> crate::model::EventDestinationDefinition {
             crate::model::EventDestinationDefinition {
                 enabled: self.enabled.unwrap_or_default(),
@@ -534,7 +545,7 @@ pub mod event_destination_definition {
     }
 }
 impl EventDestinationDefinition {
-    /// Creates a new builder-style object to manufacture [`EventDestinationDefinition`](crate::model::EventDestinationDefinition)
+    /// Creates a new builder-style object to manufacture [`EventDestinationDefinition`](crate::model::EventDestinationDefinition).
     pub fn builder() -> crate::model::event_destination_definition::Builder {
         crate::model::event_destination_definition::Builder::default()
     }
@@ -545,6 +556,7 @@ impl EventDestinationDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PinpointDestination {
     /// <p>The Amazon Resource Name (ARN) of the Amazon Pinpoint project to send email events to.</p>
+    #[doc(hidden)]
     pub application_arn: std::option::Option<std::string::String>,
 }
 impl PinpointDestination {
@@ -560,11 +572,10 @@ impl std::fmt::Debug for PinpointDestination {
         formatter.finish()
     }
 }
-/// See [`PinpointDestination`](crate::model::PinpointDestination)
+/// See [`PinpointDestination`](crate::model::PinpointDestination).
 pub mod pinpoint_destination {
 
-    /// A builder for [`PinpointDestination`](crate::model::PinpointDestination)
-    #[non_exhaustive]
+    /// A builder for [`PinpointDestination`](crate::model::PinpointDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_arn: std::option::Option<std::string::String>,
@@ -583,7 +594,7 @@ pub mod pinpoint_destination {
             self.application_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PinpointDestination`](crate::model::PinpointDestination)
+        /// Consumes the builder and constructs a [`PinpointDestination`](crate::model::PinpointDestination).
         pub fn build(self) -> crate::model::PinpointDestination {
             crate::model::PinpointDestination {
                 application_arn: self.application_arn,
@@ -592,7 +603,7 @@ pub mod pinpoint_destination {
     }
 }
 impl PinpointDestination {
-    /// Creates a new builder-style object to manufacture [`PinpointDestination`](crate::model::PinpointDestination)
+    /// Creates a new builder-style object to manufacture [`PinpointDestination`](crate::model::PinpointDestination).
     pub fn builder() -> crate::model::pinpoint_destination::Builder {
         crate::model::pinpoint_destination::Builder::default()
     }
@@ -603,6 +614,7 @@ impl PinpointDestination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnsDestination {
     /// <p>The Amazon Resource Name (ARN) of the Amazon SNS topic to publish email events to. For more information about Amazon SNS topics, see the <a href="https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html">Amazon SNS Developer Guide</a>.</p>
+    #[doc(hidden)]
     pub topic_arn: std::option::Option<std::string::String>,
 }
 impl SnsDestination {
@@ -618,11 +630,10 @@ impl std::fmt::Debug for SnsDestination {
         formatter.finish()
     }
 }
-/// See [`SnsDestination`](crate::model::SnsDestination)
+/// See [`SnsDestination`](crate::model::SnsDestination).
 pub mod sns_destination {
 
-    /// A builder for [`SnsDestination`](crate::model::SnsDestination)
-    #[non_exhaustive]
+    /// A builder for [`SnsDestination`](crate::model::SnsDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) topic_arn: std::option::Option<std::string::String>,
@@ -638,7 +649,7 @@ pub mod sns_destination {
             self.topic_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnsDestination`](crate::model::SnsDestination)
+        /// Consumes the builder and constructs a [`SnsDestination`](crate::model::SnsDestination).
         pub fn build(self) -> crate::model::SnsDestination {
             crate::model::SnsDestination {
                 topic_arn: self.topic_arn,
@@ -647,7 +658,7 @@ pub mod sns_destination {
     }
 }
 impl SnsDestination {
-    /// Creates a new builder-style object to manufacture [`SnsDestination`](crate::model::SnsDestination)
+    /// Creates a new builder-style object to manufacture [`SnsDestination`](crate::model::SnsDestination).
     pub fn builder() -> crate::model::sns_destination::Builder {
         crate::model::sns_destination::Builder::default()
     }
@@ -658,6 +669,7 @@ impl SnsDestination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchDestination {
     /// <p>An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch.</p>
+    #[doc(hidden)]
     pub dimension_configurations:
         std::option::Option<std::vec::Vec<crate::model::CloudWatchDimensionConfiguration>>,
 }
@@ -676,11 +688,10 @@ impl std::fmt::Debug for CloudWatchDestination {
         formatter.finish()
     }
 }
-/// See [`CloudWatchDestination`](crate::model::CloudWatchDestination)
+/// See [`CloudWatchDestination`](crate::model::CloudWatchDestination).
 pub mod cloud_watch_destination {
 
-    /// A builder for [`CloudWatchDestination`](crate::model::CloudWatchDestination)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchDestination`](crate::model::CloudWatchDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimension_configurations:
@@ -711,7 +722,7 @@ pub mod cloud_watch_destination {
             self.dimension_configurations = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchDestination`](crate::model::CloudWatchDestination)
+        /// Consumes the builder and constructs a [`CloudWatchDestination`](crate::model::CloudWatchDestination).
         pub fn build(self) -> crate::model::CloudWatchDestination {
             crate::model::CloudWatchDestination {
                 dimension_configurations: self.dimension_configurations,
@@ -720,7 +731,7 @@ pub mod cloud_watch_destination {
     }
 }
 impl CloudWatchDestination {
-    /// Creates a new builder-style object to manufacture [`CloudWatchDestination`](crate::model::CloudWatchDestination)
+    /// Creates a new builder-style object to manufacture [`CloudWatchDestination`](crate::model::CloudWatchDestination).
     pub fn builder() -> crate::model::cloud_watch_destination::Builder {
         crate::model::cloud_watch_destination::Builder::default()
     }
@@ -735,14 +746,17 @@ pub struct CloudWatchDimensionConfiguration {
     /// <li> <p>It can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes (-).</p> </li>
     /// <li> <p>It can contain no more than 256 characters.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub dimension_name: std::option::Option<std::string::String>,
     /// <p>The location where the Amazon SES API v2 finds the value of a dimension to publish to Amazon CloudWatch. To use the message tags that you specify using an <code>X-SES-MESSAGE-TAGS</code> header or a parameter to the <code>SendEmail</code> or <code>SendRawEmail</code> API, choose <code>messageTag</code>. To use your own email headers, choose <code>emailHeader</code>. To use link tags, choose <code>linkTags</code>.</p>
+    #[doc(hidden)]
     pub dimension_value_source: std::option::Option<crate::model::DimensionValueSource>,
     /// <p>The default value of the dimension that is published to Amazon CloudWatch if you don't provide the value of the dimension when you send an email. This value has to meet the following criteria:</p>
     /// <ul>
     /// <li> <p>It can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes (-).</p> </li>
     /// <li> <p>It can contain no more than 256 characters.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub default_dimension_value: std::option::Option<std::string::String>,
 }
 impl CloudWatchDimensionConfiguration {
@@ -778,11 +792,10 @@ impl std::fmt::Debug for CloudWatchDimensionConfiguration {
         formatter.finish()
     }
 }
-/// See [`CloudWatchDimensionConfiguration`](crate::model::CloudWatchDimensionConfiguration)
+/// See [`CloudWatchDimensionConfiguration`](crate::model::CloudWatchDimensionConfiguration).
 pub mod cloud_watch_dimension_configuration {
 
-    /// A builder for [`CloudWatchDimensionConfiguration`](crate::model::CloudWatchDimensionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchDimensionConfiguration`](crate::model::CloudWatchDimensionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimension_name: std::option::Option<std::string::String>,
@@ -845,7 +858,7 @@ pub mod cloud_watch_dimension_configuration {
             self.default_dimension_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchDimensionConfiguration`](crate::model::CloudWatchDimensionConfiguration)
+        /// Consumes the builder and constructs a [`CloudWatchDimensionConfiguration`](crate::model::CloudWatchDimensionConfiguration).
         pub fn build(self) -> crate::model::CloudWatchDimensionConfiguration {
             crate::model::CloudWatchDimensionConfiguration {
                 dimension_name: self.dimension_name,
@@ -856,7 +869,7 @@ pub mod cloud_watch_dimension_configuration {
     }
 }
 impl CloudWatchDimensionConfiguration {
-    /// Creates a new builder-style object to manufacture [`CloudWatchDimensionConfiguration`](crate::model::CloudWatchDimensionConfiguration)
+    /// Creates a new builder-style object to manufacture [`CloudWatchDimensionConfiguration`](crate::model::CloudWatchDimensionConfiguration).
     pub fn builder() -> crate::model::cloud_watch_dimension_configuration::Builder {
         crate::model::cloud_watch_dimension_configuration::Builder::default()
     }
@@ -930,8 +943,10 @@ impl AsRef<str> for DimensionValueSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KinesisFirehoseDestination {
     /// <p>The Amazon Resource Name (ARN) of the IAM role that the Amazon SES API v2 uses to send email events to the Amazon Kinesis Data Firehose stream.</p>
+    #[doc(hidden)]
     pub iam_role_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose stream that the Amazon SES API v2 sends email events to.</p>
+    #[doc(hidden)]
     pub delivery_stream_arn: std::option::Option<std::string::String>,
 }
 impl KinesisFirehoseDestination {
@@ -952,11 +967,10 @@ impl std::fmt::Debug for KinesisFirehoseDestination {
         formatter.finish()
     }
 }
-/// See [`KinesisFirehoseDestination`](crate::model::KinesisFirehoseDestination)
+/// See [`KinesisFirehoseDestination`](crate::model::KinesisFirehoseDestination).
 pub mod kinesis_firehose_destination {
 
-    /// A builder for [`KinesisFirehoseDestination`](crate::model::KinesisFirehoseDestination)
-    #[non_exhaustive]
+    /// A builder for [`KinesisFirehoseDestination`](crate::model::KinesisFirehoseDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) iam_role_arn: std::option::Option<std::string::String>,
@@ -986,7 +1000,7 @@ pub mod kinesis_firehose_destination {
             self.delivery_stream_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`KinesisFirehoseDestination`](crate::model::KinesisFirehoseDestination)
+        /// Consumes the builder and constructs a [`KinesisFirehoseDestination`](crate::model::KinesisFirehoseDestination).
         pub fn build(self) -> crate::model::KinesisFirehoseDestination {
             crate::model::KinesisFirehoseDestination {
                 iam_role_arn: self.iam_role_arn,
@@ -996,7 +1010,7 @@ pub mod kinesis_firehose_destination {
     }
 }
 impl KinesisFirehoseDestination {
-    /// Creates a new builder-style object to manufacture [`KinesisFirehoseDestination`](crate::model::KinesisFirehoseDestination)
+    /// Creates a new builder-style object to manufacture [`KinesisFirehoseDestination`](crate::model::KinesisFirehoseDestination).
     pub fn builder() -> crate::model::kinesis_firehose_destination::Builder {
         crate::model::kinesis_firehose_destination::Builder::default()
     }
@@ -1113,8 +1127,10 @@ impl AsRef<str> for EventType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>One part of a key-value pair that defines a tag. The maximum length of a tag key is 128 characters. The minimum length is 1 character.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The optional part of a key-value pair that defines a tag. The maximum length of a tag value is 256 characters. The minimum length is 0 characters. If you don't want a resource to have a specific tag value, don't specify a value for this&nbsp;parameter. If you don't specify a value, Amazon SES sets the value to an empty string.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -1135,11 +1151,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1166,7 +1181,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -1176,7 +1191,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -1187,8 +1202,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListManagementOptions {
     /// <p>The name of the contact list.</p>
+    #[doc(hidden)]
     pub contact_list_name: std::option::Option<std::string::String>,
     /// <p>The name of the topic.</p>
+    #[doc(hidden)]
     pub topic_name: std::option::Option<std::string::String>,
 }
 impl ListManagementOptions {
@@ -1209,11 +1226,10 @@ impl std::fmt::Debug for ListManagementOptions {
         formatter.finish()
     }
 }
-/// See [`ListManagementOptions`](crate::model::ListManagementOptions)
+/// See [`ListManagementOptions`](crate::model::ListManagementOptions).
 pub mod list_management_options {
 
-    /// A builder for [`ListManagementOptions`](crate::model::ListManagementOptions)
-    #[non_exhaustive]
+    /// A builder for [`ListManagementOptions`](crate::model::ListManagementOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) contact_list_name: std::option::Option<std::string::String>,
@@ -1243,7 +1259,7 @@ pub mod list_management_options {
             self.topic_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListManagementOptions`](crate::model::ListManagementOptions)
+        /// Consumes the builder and constructs a [`ListManagementOptions`](crate::model::ListManagementOptions).
         pub fn build(self) -> crate::model::ListManagementOptions {
             crate::model::ListManagementOptions {
                 contact_list_name: self.contact_list_name,
@@ -1253,7 +1269,7 @@ pub mod list_management_options {
     }
 }
 impl ListManagementOptions {
-    /// Creates a new builder-style object to manufacture [`ListManagementOptions`](crate::model::ListManagementOptions)
+    /// Creates a new builder-style object to manufacture [`ListManagementOptions`](crate::model::ListManagementOptions).
     pub fn builder() -> crate::model::list_management_options::Builder {
         crate::model::list_management_options::Builder::default()
     }
@@ -1268,12 +1284,14 @@ pub struct MessageTag {
     /// <li> <p>It can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes (-).</p> </li>
     /// <li> <p>It can contain no more than 256 characters.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value of the message tag. The message tag value has to meet the following criteria:</p>
     /// <ul>
     /// <li> <p>It can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes (-).</p> </li>
     /// <li> <p>It can contain no more than 256 characters.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl MessageTag {
@@ -1302,11 +1320,10 @@ impl std::fmt::Debug for MessageTag {
         formatter.finish()
     }
 }
-/// See [`MessageTag`](crate::model::MessageTag)
+/// See [`MessageTag`](crate::model::MessageTag).
 pub mod message_tag {
 
-    /// A builder for [`MessageTag`](crate::model::MessageTag)
-    #[non_exhaustive]
+    /// A builder for [`MessageTag`](crate::model::MessageTag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1349,7 +1366,7 @@ pub mod message_tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`MessageTag`](crate::model::MessageTag)
+        /// Consumes the builder and constructs a [`MessageTag`](crate::model::MessageTag).
         pub fn build(self) -> crate::model::MessageTag {
             crate::model::MessageTag {
                 name: self.name,
@@ -1359,7 +1376,7 @@ pub mod message_tag {
     }
 }
 impl MessageTag {
-    /// Creates a new builder-style object to manufacture [`MessageTag`](crate::model::MessageTag)
+    /// Creates a new builder-style object to manufacture [`MessageTag`](crate::model::MessageTag).
     pub fn builder() -> crate::model::message_tag::Builder {
         crate::model::message_tag::Builder::default()
     }
@@ -1370,6 +1387,7 @@ impl MessageTag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EmailContent {
     /// <p>The simple email message. The message consists of a subject and a message body.</p>
+    #[doc(hidden)]
     pub simple: std::option::Option<crate::model::Message>,
     /// <p>The raw email message. The message has to meet the following criteria:</p>
     /// <ul>
@@ -1381,8 +1399,10 @@ pub struct EmailContent {
     /// <li> <p>If any of the MIME parts in your message contain content that is outside of the 7-bit ASCII character range, you should encode that content to ensure that recipients' email clients render the message properly.</p> </li>
     /// <li> <p>The length of any single line of text in the message can't exceed 1,000 characters. This restriction is defined in <a href="https://tools.ietf.org/html/rfc5321">RFC 5321</a>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub raw: std::option::Option<crate::model::RawMessage>,
     /// <p>The template to use for the email message.</p>
+    #[doc(hidden)]
     pub template: std::option::Option<crate::model::Template>,
 }
 impl EmailContent {
@@ -1417,11 +1437,10 @@ impl std::fmt::Debug for EmailContent {
         formatter.finish()
     }
 }
-/// See [`EmailContent`](crate::model::EmailContent)
+/// See [`EmailContent`](crate::model::EmailContent).
 pub mod email_content {
 
-    /// A builder for [`EmailContent`](crate::model::EmailContent)
-    #[non_exhaustive]
+    /// A builder for [`EmailContent`](crate::model::EmailContent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) simple: std::option::Option<crate::model::Message>,
@@ -1477,7 +1496,7 @@ pub mod email_content {
             self.template = input;
             self
         }
-        /// Consumes the builder and constructs a [`EmailContent`](crate::model::EmailContent)
+        /// Consumes the builder and constructs a [`EmailContent`](crate::model::EmailContent).
         pub fn build(self) -> crate::model::EmailContent {
             crate::model::EmailContent {
                 simple: self.simple,
@@ -1488,7 +1507,7 @@ pub mod email_content {
     }
 }
 impl EmailContent {
-    /// Creates a new builder-style object to manufacture [`EmailContent`](crate::model::EmailContent)
+    /// Creates a new builder-style object to manufacture [`EmailContent`](crate::model::EmailContent).
     pub fn builder() -> crate::model::email_content::Builder {
         crate::model::email_content::Builder::default()
     }
@@ -1499,10 +1518,13 @@ impl EmailContent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Template {
     /// <p>The name of the template. You will refer to this name when you send email using the <code>SendTemplatedEmail</code> or <code>SendBulkTemplatedEmail</code> operations. </p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the template.</p>
+    #[doc(hidden)]
     pub template_arn: std::option::Option<std::string::String>,
     /// <p>An object that defines the values to use for message variables in the template. This object is a set of key-value pairs. Each key defines a message variable in the template. The corresponding value defines the value to use for that variable.</p>
+    #[doc(hidden)]
     pub template_data: std::option::Option<std::string::String>,
 }
 impl Template {
@@ -1528,11 +1550,10 @@ impl std::fmt::Debug for Template {
         formatter.finish()
     }
 }
-/// See [`Template`](crate::model::Template)
+/// See [`Template`](crate::model::Template).
 pub mod template {
 
-    /// A builder for [`Template`](crate::model::Template)
-    #[non_exhaustive]
+    /// A builder for [`Template`](crate::model::Template).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_name: std::option::Option<std::string::String>,
@@ -1576,7 +1597,7 @@ pub mod template {
             self.template_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`Template`](crate::model::Template)
+        /// Consumes the builder and constructs a [`Template`](crate::model::Template).
         pub fn build(self) -> crate::model::Template {
             crate::model::Template {
                 template_name: self.template_name,
@@ -1587,7 +1608,7 @@ pub mod template {
     }
 }
 impl Template {
-    /// Creates a new builder-style object to manufacture [`Template`](crate::model::Template)
+    /// Creates a new builder-style object to manufacture [`Template`](crate::model::Template).
     pub fn builder() -> crate::model::template::Builder {
         crate::model::template::Builder::default()
     }
@@ -1607,6 +1628,7 @@ pub struct RawMessage {
     /// <li> <p>If any of the MIME parts in your message contain content that is outside of the 7-bit ASCII character range, you should encode that content to ensure that recipients' email clients render the message properly.</p> </li>
     /// <li> <p>The length of any single line of text in the message can't exceed 1,000 characters. This restriction is defined in <a href="https://tools.ietf.org/html/rfc5321">RFC 5321</a>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub data: std::option::Option<aws_smithy_types::Blob>,
 }
 impl RawMessage {
@@ -1631,11 +1653,10 @@ impl std::fmt::Debug for RawMessage {
         formatter.finish()
     }
 }
-/// See [`RawMessage`](crate::model::RawMessage)
+/// See [`RawMessage`](crate::model::RawMessage).
 pub mod raw_message {
 
-    /// A builder for [`RawMessage`](crate::model::RawMessage)
-    #[non_exhaustive]
+    /// A builder for [`RawMessage`](crate::model::RawMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data: std::option::Option<aws_smithy_types::Blob>,
@@ -1669,14 +1690,14 @@ pub mod raw_message {
             self.data = input;
             self
         }
-        /// Consumes the builder and constructs a [`RawMessage`](crate::model::RawMessage)
+        /// Consumes the builder and constructs a [`RawMessage`](crate::model::RawMessage).
         pub fn build(self) -> crate::model::RawMessage {
             crate::model::RawMessage { data: self.data }
         }
     }
 }
 impl RawMessage {
-    /// Creates a new builder-style object to manufacture [`RawMessage`](crate::model::RawMessage)
+    /// Creates a new builder-style object to manufacture [`RawMessage`](crate::model::RawMessage).
     pub fn builder() -> crate::model::raw_message::Builder {
         crate::model::raw_message::Builder::default()
     }
@@ -1687,8 +1708,10 @@ impl RawMessage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Message {
     /// <p>The subject line of the email. The subject line can only contain 7-bit ASCII characters. However, you can specify non-ASCII characters in the subject line by using encoded-word syntax, as described in <a href="https://tools.ietf.org/html/rfc2047">RFC 2047</a>.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<crate::model::Content>,
     /// <p>The body of the message. You can specify an HTML version of the message, a text-only version of the message, or both.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<crate::model::Body>,
 }
 impl Message {
@@ -1709,11 +1732,10 @@ impl std::fmt::Debug for Message {
         formatter.finish()
     }
 }
-/// See [`Message`](crate::model::Message)
+/// See [`Message`](crate::model::Message).
 pub mod message {
 
-    /// A builder for [`Message`](crate::model::Message)
-    #[non_exhaustive]
+    /// A builder for [`Message`](crate::model::Message).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subject: std::option::Option<crate::model::Content>,
@@ -1740,7 +1762,7 @@ pub mod message {
             self.body = input;
             self
         }
-        /// Consumes the builder and constructs a [`Message`](crate::model::Message)
+        /// Consumes the builder and constructs a [`Message`](crate::model::Message).
         pub fn build(self) -> crate::model::Message {
             crate::model::Message {
                 subject: self.subject,
@@ -1750,7 +1772,7 @@ pub mod message {
     }
 }
 impl Message {
-    /// Creates a new builder-style object to manufacture [`Message`](crate::model::Message)
+    /// Creates a new builder-style object to manufacture [`Message`](crate::model::Message).
     pub fn builder() -> crate::model::message::Builder {
         crate::model::message::Builder::default()
     }
@@ -1761,8 +1783,10 @@ impl Message {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Body {
     /// <p>An object that represents the version of the message that is displayed in email clients that don't support HTML, or clients where the recipient has disabled HTML rendering.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<crate::model::Content>,
     /// <p>An object that represents the version of the message that is displayed in email clients that support HTML. HTML messages can include formatted text, hyperlinks, images, and more. </p>
+    #[doc(hidden)]
     pub html: std::option::Option<crate::model::Content>,
 }
 impl Body {
@@ -1783,11 +1807,10 @@ impl std::fmt::Debug for Body {
         formatter.finish()
     }
 }
-/// See [`Body`](crate::model::Body)
+/// See [`Body`](crate::model::Body).
 pub mod body {
 
-    /// A builder for [`Body`](crate::model::Body)
-    #[non_exhaustive]
+    /// A builder for [`Body`](crate::model::Body).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text: std::option::Option<crate::model::Content>,
@@ -1814,7 +1837,7 @@ pub mod body {
             self.html = input;
             self
         }
-        /// Consumes the builder and constructs a [`Body`](crate::model::Body)
+        /// Consumes the builder and constructs a [`Body`](crate::model::Body).
         pub fn build(self) -> crate::model::Body {
             crate::model::Body {
                 text: self.text,
@@ -1824,7 +1847,7 @@ pub mod body {
     }
 }
 impl Body {
-    /// Creates a new builder-style object to manufacture [`Body`](crate::model::Body)
+    /// Creates a new builder-style object to manufacture [`Body`](crate::model::Body).
     pub fn builder() -> crate::model::body::Builder {
         crate::model::body::Builder::default()
     }
@@ -1835,8 +1858,10 @@ impl Body {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Content {
     /// <p>The content of the message itself.</p>
+    #[doc(hidden)]
     pub data: std::option::Option<std::string::String>,
     /// <p>The character set for the content. Because of the constraints of the SMTP protocol, Amazon SES uses 7-bit ASCII by default. If the text includes characters outside of the ASCII range, you have to specify a character set. For example, you could specify <code>UTF-8</code>, <code>ISO-8859-1</code>, or <code>Shift_JIS</code>.</p>
+    #[doc(hidden)]
     pub charset: std::option::Option<std::string::String>,
 }
 impl Content {
@@ -1857,11 +1882,10 @@ impl std::fmt::Debug for Content {
         formatter.finish()
     }
 }
-/// See [`Content`](crate::model::Content)
+/// See [`Content`](crate::model::Content).
 pub mod content {
 
-    /// A builder for [`Content`](crate::model::Content)
-    #[non_exhaustive]
+    /// A builder for [`Content`](crate::model::Content).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data: std::option::Option<std::string::String>,
@@ -1888,7 +1912,7 @@ pub mod content {
             self.charset = input;
             self
         }
-        /// Consumes the builder and constructs a [`Content`](crate::model::Content)
+        /// Consumes the builder and constructs a [`Content`](crate::model::Content).
         pub fn build(self) -> crate::model::Content {
             crate::model::Content {
                 data: self.data,
@@ -1898,7 +1922,7 @@ pub mod content {
     }
 }
 impl Content {
-    /// Creates a new builder-style object to manufacture [`Content`](crate::model::Content)
+    /// Creates a new builder-style object to manufacture [`Content`](crate::model::Content).
     pub fn builder() -> crate::model::content::Builder {
         crate::model::content::Builder::default()
     }
@@ -1911,10 +1935,13 @@ impl Content {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Destination {
     /// <p>An array that contains the email addresses of the "To" recipients for the email.</p>
+    #[doc(hidden)]
     pub to_addresses: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array that contains the email addresses of the "CC" (carbon copy) recipients for the email.</p>
+    #[doc(hidden)]
     pub cc_addresses: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array that contains the email addresses of the "BCC" (blind carbon copy) recipients for the email.</p>
+    #[doc(hidden)]
     pub bcc_addresses: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Destination {
@@ -1940,11 +1967,10 @@ impl std::fmt::Debug for Destination {
         formatter.finish()
     }
 }
-/// See [`Destination`](crate::model::Destination)
+/// See [`Destination`](crate::model::Destination).
 pub mod destination {
 
-    /// A builder for [`Destination`](crate::model::Destination)
-    #[non_exhaustive]
+    /// A builder for [`Destination`](crate::model::Destination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) to_addresses: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2009,7 +2035,7 @@ pub mod destination {
             self.bcc_addresses = input;
             self
         }
-        /// Consumes the builder and constructs a [`Destination`](crate::model::Destination)
+        /// Consumes the builder and constructs a [`Destination`](crate::model::Destination).
         pub fn build(self) -> crate::model::Destination {
             crate::model::Destination {
                 to_addresses: self.to_addresses,
@@ -2020,7 +2046,7 @@ pub mod destination {
     }
 }
 impl Destination {
-    /// Creates a new builder-style object to manufacture [`Destination`](crate::model::Destination)
+    /// Creates a new builder-style object to manufacture [`Destination`](crate::model::Destination).
     pub fn builder() -> crate::model::destination::Builder {
         crate::model::destination::Builder::default()
     }
@@ -2048,10 +2074,13 @@ pub struct BulkEmailEntryResult {
     /// <li> <p>TRANSIENT_FAILURE: Amazon SES was unable to process your request because of a temporary issue.</p> </li>
     /// <li> <p>FAILED: Amazon SES was unable to process your request. See the error message for additional information.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::BulkEmailStatus>,
     /// <p>A description of an error that prevented a message being sent using the <code>SendBulkTemplatedEmail</code> operation.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<std::string::String>,
     /// <p>The unique message identifier returned from the <code>SendBulkTemplatedEmail</code> operation.</p>
+    #[doc(hidden)]
     pub message_id: std::option::Option<std::string::String>,
 }
 impl BulkEmailEntryResult {
@@ -2094,11 +2123,10 @@ impl std::fmt::Debug for BulkEmailEntryResult {
         formatter.finish()
     }
 }
-/// See [`BulkEmailEntryResult`](crate::model::BulkEmailEntryResult)
+/// See [`BulkEmailEntryResult`](crate::model::BulkEmailEntryResult).
 pub mod bulk_email_entry_result {
 
-    /// A builder for [`BulkEmailEntryResult`](crate::model::BulkEmailEntryResult)
-    #[non_exhaustive]
+    /// A builder for [`BulkEmailEntryResult`](crate::model::BulkEmailEntryResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::BulkEmailStatus>,
@@ -2173,7 +2201,7 @@ pub mod bulk_email_entry_result {
             self.message_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`BulkEmailEntryResult`](crate::model::BulkEmailEntryResult)
+        /// Consumes the builder and constructs a [`BulkEmailEntryResult`](crate::model::BulkEmailEntryResult).
         pub fn build(self) -> crate::model::BulkEmailEntryResult {
             crate::model::BulkEmailEntryResult {
                 status: self.status,
@@ -2184,7 +2212,7 @@ pub mod bulk_email_entry_result {
     }
 }
 impl BulkEmailEntryResult {
-    /// Creates a new builder-style object to manufacture [`BulkEmailEntryResult`](crate::model::BulkEmailEntryResult)
+    /// Creates a new builder-style object to manufacture [`BulkEmailEntryResult`](crate::model::BulkEmailEntryResult).
     pub fn builder() -> crate::model::bulk_email_entry_result::Builder {
         crate::model::bulk_email_entry_result::Builder::default()
     }
@@ -2315,10 +2343,13 @@ pub struct BulkEmailEntry {
     /// <p>Represents the destination of the message, consisting of To:, CC:, and BCC: fields.</p> <note>
     /// <p>Amazon SES does not support the SMTPUTF8 extension, as described in <a href="https://tools.ietf.org/html/rfc6531">RFC6531</a>. For this reason, the local part of a destination email address (the part of the email address that precedes the @ sign) may only contain <a href="https://en.wikipedia.org/wiki/Email_address#Local-part">7-bit ASCII characters</a>. If the domain part of an address (the part after the @ sign) contains non-ASCII characters, they must be encoded using Punycode, as described in <a href="https://tools.ietf.org/html/rfc3492.html">RFC3492</a>.</p>
     /// </note>
+    #[doc(hidden)]
     pub destination: std::option::Option<crate::model::Destination>,
     /// <p>A list of tags, in the form of name/value pairs, to apply to an email that you send using the <code>SendBulkTemplatedEmail</code> operation. Tags correspond to characteristics of the email that you define, so that you can publish email sending events.</p>
+    #[doc(hidden)]
     pub replacement_tags: std::option::Option<std::vec::Vec<crate::model::MessageTag>>,
     /// <p>The <code>ReplacementEmailContent</code> associated with a <code>BulkEmailEntry</code>.</p>
+    #[doc(hidden)]
     pub replacement_email_content: std::option::Option<crate::model::ReplacementEmailContent>,
 }
 impl BulkEmailEntry {
@@ -2348,11 +2379,10 @@ impl std::fmt::Debug for BulkEmailEntry {
         formatter.finish()
     }
 }
-/// See [`BulkEmailEntry`](crate::model::BulkEmailEntry)
+/// See [`BulkEmailEntry`](crate::model::BulkEmailEntry).
 pub mod bulk_email_entry {
 
-    /// A builder for [`BulkEmailEntry`](crate::model::BulkEmailEntry)
-    #[non_exhaustive]
+    /// A builder for [`BulkEmailEntry`](crate::model::BulkEmailEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination: std::option::Option<crate::model::Destination>,
@@ -2413,7 +2443,7 @@ pub mod bulk_email_entry {
             self.replacement_email_content = input;
             self
         }
-        /// Consumes the builder and constructs a [`BulkEmailEntry`](crate::model::BulkEmailEntry)
+        /// Consumes the builder and constructs a [`BulkEmailEntry`](crate::model::BulkEmailEntry).
         pub fn build(self) -> crate::model::BulkEmailEntry {
             crate::model::BulkEmailEntry {
                 destination: self.destination,
@@ -2424,7 +2454,7 @@ pub mod bulk_email_entry {
     }
 }
 impl BulkEmailEntry {
-    /// Creates a new builder-style object to manufacture [`BulkEmailEntry`](crate::model::BulkEmailEntry)
+    /// Creates a new builder-style object to manufacture [`BulkEmailEntry`](crate::model::BulkEmailEntry).
     pub fn builder() -> crate::model::bulk_email_entry::Builder {
         crate::model::bulk_email_entry::Builder::default()
     }
@@ -2435,6 +2465,7 @@ impl BulkEmailEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplacementEmailContent {
     /// <p>The <code>ReplacementTemplate</code> associated with <code>ReplacementEmailContent</code>.</p>
+    #[doc(hidden)]
     pub replacement_template: std::option::Option<crate::model::ReplacementTemplate>,
 }
 impl ReplacementEmailContent {
@@ -2450,11 +2481,10 @@ impl std::fmt::Debug for ReplacementEmailContent {
         formatter.finish()
     }
 }
-/// See [`ReplacementEmailContent`](crate::model::ReplacementEmailContent)
+/// See [`ReplacementEmailContent`](crate::model::ReplacementEmailContent).
 pub mod replacement_email_content {
 
-    /// A builder for [`ReplacementEmailContent`](crate::model::ReplacementEmailContent)
-    #[non_exhaustive]
+    /// A builder for [`ReplacementEmailContent`](crate::model::ReplacementEmailContent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replacement_template: std::option::Option<crate::model::ReplacementTemplate>,
@@ -2473,7 +2503,7 @@ pub mod replacement_email_content {
             self.replacement_template = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplacementEmailContent`](crate::model::ReplacementEmailContent)
+        /// Consumes the builder and constructs a [`ReplacementEmailContent`](crate::model::ReplacementEmailContent).
         pub fn build(self) -> crate::model::ReplacementEmailContent {
             crate::model::ReplacementEmailContent {
                 replacement_template: self.replacement_template,
@@ -2482,7 +2512,7 @@ pub mod replacement_email_content {
     }
 }
 impl ReplacementEmailContent {
-    /// Creates a new builder-style object to manufacture [`ReplacementEmailContent`](crate::model::ReplacementEmailContent)
+    /// Creates a new builder-style object to manufacture [`ReplacementEmailContent`](crate::model::ReplacementEmailContent).
     pub fn builder() -> crate::model::replacement_email_content::Builder {
         crate::model::replacement_email_content::Builder::default()
     }
@@ -2493,6 +2523,7 @@ impl ReplacementEmailContent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplacementTemplate {
     /// <p>A list of replacement values to apply to the template. This parameter is a JSON object, typically consisting of key-value pairs in which the keys correspond to replacement tags in the email template.</p>
+    #[doc(hidden)]
     pub replacement_template_data: std::option::Option<std::string::String>,
 }
 impl ReplacementTemplate {
@@ -2508,11 +2539,10 @@ impl std::fmt::Debug for ReplacementTemplate {
         formatter.finish()
     }
 }
-/// See [`ReplacementTemplate`](crate::model::ReplacementTemplate)
+/// See [`ReplacementTemplate`](crate::model::ReplacementTemplate).
 pub mod replacement_template {
 
-    /// A builder for [`ReplacementTemplate`](crate::model::ReplacementTemplate)
-    #[non_exhaustive]
+    /// A builder for [`ReplacementTemplate`](crate::model::ReplacementTemplate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replacement_template_data: std::option::Option<std::string::String>,
@@ -2531,7 +2561,7 @@ pub mod replacement_template {
             self.replacement_template_data = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplacementTemplate`](crate::model::ReplacementTemplate)
+        /// Consumes the builder and constructs a [`ReplacementTemplate`](crate::model::ReplacementTemplate).
         pub fn build(self) -> crate::model::ReplacementTemplate {
             crate::model::ReplacementTemplate {
                 replacement_template_data: self.replacement_template_data,
@@ -2540,7 +2570,7 @@ pub mod replacement_template {
     }
 }
 impl ReplacementTemplate {
-    /// Creates a new builder-style object to manufacture [`ReplacementTemplate`](crate::model::ReplacementTemplate)
+    /// Creates a new builder-style object to manufacture [`ReplacementTemplate`](crate::model::ReplacementTemplate).
     pub fn builder() -> crate::model::replacement_template::Builder {
         crate::model::replacement_template::Builder::default()
     }
@@ -2551,6 +2581,7 @@ impl ReplacementTemplate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BulkEmailContent {
     /// <p>The template to use for the bulk email message.</p>
+    #[doc(hidden)]
     pub template: std::option::Option<crate::model::Template>,
 }
 impl BulkEmailContent {
@@ -2566,11 +2597,10 @@ impl std::fmt::Debug for BulkEmailContent {
         formatter.finish()
     }
 }
-/// See [`BulkEmailContent`](crate::model::BulkEmailContent)
+/// See [`BulkEmailContent`](crate::model::BulkEmailContent).
 pub mod bulk_email_content {
 
-    /// A builder for [`BulkEmailContent`](crate::model::BulkEmailContent)
-    #[non_exhaustive]
+    /// A builder for [`BulkEmailContent`](crate::model::BulkEmailContent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template: std::option::Option<crate::model::Template>,
@@ -2586,7 +2616,7 @@ pub mod bulk_email_content {
             self.template = input;
             self
         }
-        /// Consumes the builder and constructs a [`BulkEmailContent`](crate::model::BulkEmailContent)
+        /// Consumes the builder and constructs a [`BulkEmailContent`](crate::model::BulkEmailContent).
         pub fn build(self) -> crate::model::BulkEmailContent {
             crate::model::BulkEmailContent {
                 template: self.template,
@@ -2595,7 +2625,7 @@ pub mod bulk_email_content {
     }
 }
 impl BulkEmailContent {
-    /// Creates a new builder-style object to manufacture [`BulkEmailContent`](crate::model::BulkEmailContent)
+    /// Creates a new builder-style object to manufacture [`BulkEmailContent`](crate::model::BulkEmailContent).
     pub fn builder() -> crate::model::bulk_email_content::Builder {
         crate::model::bulk_email_content::Builder::default()
     }
@@ -2842,11 +2872,14 @@ impl AsRef<str> for DkimStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DkimSigningAttributes {
     /// <p>[Bring Your Own DKIM] A string that's used to identify a public key in the DNS configuration for a domain.</p>
+    #[doc(hidden)]
     pub domain_signing_selector: std::option::Option<std::string::String>,
     /// <p>[Bring Your Own DKIM] A private key that's used to generate a DKIM signature.</p>
     /// <p>The private key must use 1024 or 2048-bit RSA encryption, and must be encoded using base64 encoding.</p>
+    #[doc(hidden)]
     pub domain_signing_private_key: std::option::Option<std::string::String>,
     /// <p>[Easy DKIM] The key length of the future DKIM key pair to be generated. This can be changed at most once per day.</p>
+    #[doc(hidden)]
     pub next_signing_key_length: std::option::Option<crate::model::DkimSigningKeyLength>,
 }
 impl DkimSigningAttributes {
@@ -2878,11 +2911,10 @@ impl std::fmt::Debug for DkimSigningAttributes {
         formatter.finish()
     }
 }
-/// See [`DkimSigningAttributes`](crate::model::DkimSigningAttributes)
+/// See [`DkimSigningAttributes`](crate::model::DkimSigningAttributes).
 pub mod dkim_signing_attributes {
 
-    /// A builder for [`DkimSigningAttributes`](crate::model::DkimSigningAttributes)
-    #[non_exhaustive]
+    /// A builder for [`DkimSigningAttributes`](crate::model::DkimSigningAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_signing_selector: std::option::Option<std::string::String>,
@@ -2934,7 +2966,7 @@ pub mod dkim_signing_attributes {
             self.next_signing_key_length = input;
             self
         }
-        /// Consumes the builder and constructs a [`DkimSigningAttributes`](crate::model::DkimSigningAttributes)
+        /// Consumes the builder and constructs a [`DkimSigningAttributes`](crate::model::DkimSigningAttributes).
         pub fn build(self) -> crate::model::DkimSigningAttributes {
             crate::model::DkimSigningAttributes {
                 domain_signing_selector: self.domain_signing_selector,
@@ -2945,7 +2977,7 @@ pub mod dkim_signing_attributes {
     }
 }
 impl DkimSigningAttributes {
-    /// Creates a new builder-style object to manufacture [`DkimSigningAttributes`](crate::model::DkimSigningAttributes)
+    /// Creates a new builder-style object to manufacture [`DkimSigningAttributes`](crate::model::DkimSigningAttributes).
     pub fn builder() -> crate::model::dkim_signing_attributes::Builder {
         crate::model::dkim_signing_attributes::Builder::default()
     }
@@ -3066,10 +3098,13 @@ impl AsRef<str> for DkimSigningAttributesOrigin {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainDeliverabilityTrackingOption {
     /// <p>A verified domain that’s associated with your Amazon Web Services account and currently has an active Deliverability dashboard subscription.</p>
+    #[doc(hidden)]
     pub domain: std::option::Option<std::string::String>,
     /// <p>The date, in Unix time format, when you enabled the Deliverability dashboard for the domain.</p>
+    #[doc(hidden)]
     pub subscription_start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An object that contains information about the inbox placement data settings for the domain.</p>
+    #[doc(hidden)]
     pub inbox_placement_tracking_option:
         std::option::Option<crate::model::InboxPlacementTrackingOption>,
 }
@@ -3101,11 +3136,10 @@ impl std::fmt::Debug for DomainDeliverabilityTrackingOption {
         formatter.finish()
     }
 }
-/// See [`DomainDeliverabilityTrackingOption`](crate::model::DomainDeliverabilityTrackingOption)
+/// See [`DomainDeliverabilityTrackingOption`](crate::model::DomainDeliverabilityTrackingOption).
 pub mod domain_deliverability_tracking_option {
 
-    /// A builder for [`DomainDeliverabilityTrackingOption`](crate::model::DomainDeliverabilityTrackingOption)
-    #[non_exhaustive]
+    /// A builder for [`DomainDeliverabilityTrackingOption`](crate::model::DomainDeliverabilityTrackingOption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain: std::option::Option<std::string::String>,
@@ -3153,7 +3187,7 @@ pub mod domain_deliverability_tracking_option {
             self.inbox_placement_tracking_option = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainDeliverabilityTrackingOption`](crate::model::DomainDeliverabilityTrackingOption)
+        /// Consumes the builder and constructs a [`DomainDeliverabilityTrackingOption`](crate::model::DomainDeliverabilityTrackingOption).
         pub fn build(self) -> crate::model::DomainDeliverabilityTrackingOption {
             crate::model::DomainDeliverabilityTrackingOption {
                 domain: self.domain,
@@ -3164,7 +3198,7 @@ pub mod domain_deliverability_tracking_option {
     }
 }
 impl DomainDeliverabilityTrackingOption {
-    /// Creates a new builder-style object to manufacture [`DomainDeliverabilityTrackingOption`](crate::model::DomainDeliverabilityTrackingOption)
+    /// Creates a new builder-style object to manufacture [`DomainDeliverabilityTrackingOption`](crate::model::DomainDeliverabilityTrackingOption).
     pub fn builder() -> crate::model::domain_deliverability_tracking_option::Builder {
         crate::model::domain_deliverability_tracking_option::Builder::default()
     }
@@ -3175,8 +3209,10 @@ impl DomainDeliverabilityTrackingOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InboxPlacementTrackingOption {
     /// <p>Specifies whether inbox placement data is being tracked for the domain.</p>
+    #[doc(hidden)]
     pub global: bool,
     /// <p>An array of strings, one for each major email provider that the inbox placement data applies to.</p>
+    #[doc(hidden)]
     pub tracked_isps: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl InboxPlacementTrackingOption {
@@ -3197,11 +3233,10 @@ impl std::fmt::Debug for InboxPlacementTrackingOption {
         formatter.finish()
     }
 }
-/// See [`InboxPlacementTrackingOption`](crate::model::InboxPlacementTrackingOption)
+/// See [`InboxPlacementTrackingOption`](crate::model::InboxPlacementTrackingOption).
 pub mod inbox_placement_tracking_option {
 
-    /// A builder for [`InboxPlacementTrackingOption`](crate::model::InboxPlacementTrackingOption)
-    #[non_exhaustive]
+    /// A builder for [`InboxPlacementTrackingOption`](crate::model::InboxPlacementTrackingOption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) global: std::option::Option<bool>,
@@ -3237,7 +3272,7 @@ pub mod inbox_placement_tracking_option {
             self.tracked_isps = input;
             self
         }
-        /// Consumes the builder and constructs a [`InboxPlacementTrackingOption`](crate::model::InboxPlacementTrackingOption)
+        /// Consumes the builder and constructs a [`InboxPlacementTrackingOption`](crate::model::InboxPlacementTrackingOption).
         pub fn build(self) -> crate::model::InboxPlacementTrackingOption {
             crate::model::InboxPlacementTrackingOption {
                 global: self.global.unwrap_or_default(),
@@ -3247,7 +3282,7 @@ pub mod inbox_placement_tracking_option {
     }
 }
 impl InboxPlacementTrackingOption {
-    /// Creates a new builder-style object to manufacture [`InboxPlacementTrackingOption`](crate::model::InboxPlacementTrackingOption)
+    /// Creates a new builder-style object to manufacture [`InboxPlacementTrackingOption`](crate::model::InboxPlacementTrackingOption).
     pub fn builder() -> crate::model::inbox_placement_tracking_option::Builder {
         crate::model::inbox_placement_tracking_option::Builder::default()
     }
@@ -3426,10 +3461,13 @@ impl AsRef<str> for MailType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SuppressedDestinationSummary {
     /// <p>The email address that's on the suppression list for your account.</p>
+    #[doc(hidden)]
     pub email_address: std::option::Option<std::string::String>,
     /// <p>The reason that the address was added to the suppression list for your account.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<crate::model::SuppressionListReason>,
     /// <p>The date and time when the suppressed destination was last updated, shown in Unix time format.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SuppressedDestinationSummary {
@@ -3455,11 +3493,10 @@ impl std::fmt::Debug for SuppressedDestinationSummary {
         formatter.finish()
     }
 }
-/// See [`SuppressedDestinationSummary`](crate::model::SuppressedDestinationSummary)
+/// See [`SuppressedDestinationSummary`](crate::model::SuppressedDestinationSummary).
 pub mod suppressed_destination_summary {
 
-    /// A builder for [`SuppressedDestinationSummary`](crate::model::SuppressedDestinationSummary)
-    #[non_exhaustive]
+    /// A builder for [`SuppressedDestinationSummary`](crate::model::SuppressedDestinationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) email_address: std::option::Option<std::string::String>,
@@ -3506,7 +3543,7 @@ pub mod suppressed_destination_summary {
             self.last_update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`SuppressedDestinationSummary`](crate::model::SuppressedDestinationSummary)
+        /// Consumes the builder and constructs a [`SuppressedDestinationSummary`](crate::model::SuppressedDestinationSummary).
         pub fn build(self) -> crate::model::SuppressedDestinationSummary {
             crate::model::SuppressedDestinationSummary {
                 email_address: self.email_address,
@@ -3517,7 +3554,7 @@ pub mod suppressed_destination_summary {
     }
 }
 impl SuppressedDestinationSummary {
-    /// Creates a new builder-style object to manufacture [`SuppressedDestinationSummary`](crate::model::SuppressedDestinationSummary)
+    /// Creates a new builder-style object to manufacture [`SuppressedDestinationSummary`](crate::model::SuppressedDestinationSummary).
     pub fn builder() -> crate::model::suppressed_destination_summary::Builder {
         crate::model::suppressed_destination_summary::Builder::default()
     }
@@ -3528,12 +3565,16 @@ impl SuppressedDestinationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportJobSummary {
     /// <p>A string that represents the import job ID.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>An object that contains details about the resource destination the import job is going to target.</p>
+    #[doc(hidden)]
     pub import_destination: std::option::Option<crate::model::ImportDestination>,
     /// <p>The status of the import job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>The date and time when the import job was created.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ImportJobSummary {
@@ -3564,11 +3605,10 @@ impl std::fmt::Debug for ImportJobSummary {
         formatter.finish()
     }
 }
-/// See [`ImportJobSummary`](crate::model::ImportJobSummary)
+/// See [`ImportJobSummary`](crate::model::ImportJobSummary).
 pub mod import_job_summary {
 
-    /// A builder for [`ImportJobSummary`](crate::model::ImportJobSummary)
-    #[non_exhaustive]
+    /// A builder for [`ImportJobSummary`](crate::model::ImportJobSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -3626,7 +3666,7 @@ pub mod import_job_summary {
             self.created_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportJobSummary`](crate::model::ImportJobSummary)
+        /// Consumes the builder and constructs a [`ImportJobSummary`](crate::model::ImportJobSummary).
         pub fn build(self) -> crate::model::ImportJobSummary {
             crate::model::ImportJobSummary {
                 job_id: self.job_id,
@@ -3638,7 +3678,7 @@ pub mod import_job_summary {
     }
 }
 impl ImportJobSummary {
-    /// Creates a new builder-style object to manufacture [`ImportJobSummary`](crate::model::ImportJobSummary)
+    /// Creates a new builder-style object to manufacture [`ImportJobSummary`](crate::model::ImportJobSummary).
     pub fn builder() -> crate::model::import_job_summary::Builder {
         crate::model::import_job_summary::Builder::default()
     }
@@ -3712,8 +3752,10 @@ impl AsRef<str> for JobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportDestination {
     /// <p>An object that contains the action of the import job towards suppression list.</p>
+    #[doc(hidden)]
     pub suppression_list_destination: std::option::Option<crate::model::SuppressionListDestination>,
     /// <p>An object that contains the action of the import job towards a contact list.</p>
+    #[doc(hidden)]
     pub contact_list_destination: std::option::Option<crate::model::ContactListDestination>,
 }
 impl ImportDestination {
@@ -3741,11 +3783,10 @@ impl std::fmt::Debug for ImportDestination {
         formatter.finish()
     }
 }
-/// See [`ImportDestination`](crate::model::ImportDestination)
+/// See [`ImportDestination`](crate::model::ImportDestination).
 pub mod import_destination {
 
-    /// A builder for [`ImportDestination`](crate::model::ImportDestination)
-    #[non_exhaustive]
+    /// A builder for [`ImportDestination`](crate::model::ImportDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suppression_list_destination:
@@ -3786,7 +3827,7 @@ pub mod import_destination {
             self.contact_list_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportDestination`](crate::model::ImportDestination)
+        /// Consumes the builder and constructs a [`ImportDestination`](crate::model::ImportDestination).
         pub fn build(self) -> crate::model::ImportDestination {
             crate::model::ImportDestination {
                 suppression_list_destination: self.suppression_list_destination,
@@ -3796,7 +3837,7 @@ pub mod import_destination {
     }
 }
 impl ImportDestination {
-    /// Creates a new builder-style object to manufacture [`ImportDestination`](crate::model::ImportDestination)
+    /// Creates a new builder-style object to manufacture [`ImportDestination`](crate::model::ImportDestination).
     pub fn builder() -> crate::model::import_destination::Builder {
         crate::model::import_destination::Builder::default()
     }
@@ -3807,12 +3848,14 @@ impl ImportDestination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContactListDestination {
     /// <p>The name of the contact list.</p>
+    #[doc(hidden)]
     pub contact_list_name: std::option::Option<std::string::String>,
     /// <p>&gt;The type of action to perform on the addresses. The following are the possible values:</p>
     /// <ul>
     /// <li> <p>PUT: add the addresses to the contact list. If the record already exists, it will override it with the new value.</p> </li>
     /// <li> <p>DELETE: remove the addresses from the contact list.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub contact_list_import_action: std::option::Option<crate::model::ContactListImportAction>,
 }
 impl ContactListDestination {
@@ -3842,11 +3885,10 @@ impl std::fmt::Debug for ContactListDestination {
         formatter.finish()
     }
 }
-/// See [`ContactListDestination`](crate::model::ContactListDestination)
+/// See [`ContactListDestination`](crate::model::ContactListDestination).
 pub mod contact_list_destination {
 
-    /// A builder for [`ContactListDestination`](crate::model::ContactListDestination)
-    #[non_exhaustive]
+    /// A builder for [`ContactListDestination`](crate::model::ContactListDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) contact_list_name: std::option::Option<std::string::String>,
@@ -3891,7 +3933,7 @@ pub mod contact_list_destination {
             self.contact_list_import_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContactListDestination`](crate::model::ContactListDestination)
+        /// Consumes the builder and constructs a [`ContactListDestination`](crate::model::ContactListDestination).
         pub fn build(self) -> crate::model::ContactListDestination {
             crate::model::ContactListDestination {
                 contact_list_name: self.contact_list_name,
@@ -3901,7 +3943,7 @@ pub mod contact_list_destination {
     }
 }
 impl ContactListDestination {
-    /// Creates a new builder-style object to manufacture [`ContactListDestination`](crate::model::ContactListDestination)
+    /// Creates a new builder-style object to manufacture [`ContactListDestination`](crate::model::ContactListDestination).
     pub fn builder() -> crate::model::contact_list_destination::Builder {
         crate::model::contact_list_destination::Builder::default()
     }
@@ -3971,6 +4013,7 @@ pub struct SuppressionListDestination {
     /// <li> <p>PUT: add the addresses to the suppression list. If the record already exists, it will override it with the new value.</p> </li>
     /// <li> <p>DELETE: remove the addresses from the suppression list.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub suppression_list_import_action:
         std::option::Option<crate::model::SuppressionListImportAction>,
 }
@@ -3996,11 +4039,10 @@ impl std::fmt::Debug for SuppressionListDestination {
         formatter.finish()
     }
 }
-/// See [`SuppressionListDestination`](crate::model::SuppressionListDestination)
+/// See [`SuppressionListDestination`](crate::model::SuppressionListDestination).
 pub mod suppression_list_destination {
 
-    /// A builder for [`SuppressionListDestination`](crate::model::SuppressionListDestination)
-    #[non_exhaustive]
+    /// A builder for [`SuppressionListDestination`](crate::model::SuppressionListDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suppression_list_import_action:
@@ -4031,7 +4073,7 @@ pub mod suppression_list_destination {
             self.suppression_list_import_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`SuppressionListDestination`](crate::model::SuppressionListDestination)
+        /// Consumes the builder and constructs a [`SuppressionListDestination`](crate::model::SuppressionListDestination).
         pub fn build(self) -> crate::model::SuppressionListDestination {
             crate::model::SuppressionListDestination {
                 suppression_list_import_action: self.suppression_list_import_action,
@@ -4040,7 +4082,7 @@ pub mod suppression_list_destination {
     }
 }
 impl SuppressionListDestination {
-    /// Creates a new builder-style object to manufacture [`SuppressionListDestination`](crate::model::SuppressionListDestination)
+    /// Creates a new builder-style object to manufacture [`SuppressionListDestination`](crate::model::SuppressionListDestination).
     pub fn builder() -> crate::model::suppression_list_destination::Builder {
         crate::model::suppression_list_destination::Builder::default()
     }
@@ -4170,8 +4212,10 @@ impl AsRef<str> for ImportDestinationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EmailTemplateMetadata {
     /// <p>The name of the template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The time and date the template was created.</p>
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EmailTemplateMetadata {
@@ -4192,11 +4236,10 @@ impl std::fmt::Debug for EmailTemplateMetadata {
         formatter.finish()
     }
 }
-/// See [`EmailTemplateMetadata`](crate::model::EmailTemplateMetadata)
+/// See [`EmailTemplateMetadata`](crate::model::EmailTemplateMetadata).
 pub mod email_template_metadata {
 
-    /// A builder for [`EmailTemplateMetadata`](crate::model::EmailTemplateMetadata)
-    #[non_exhaustive]
+    /// A builder for [`EmailTemplateMetadata`](crate::model::EmailTemplateMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_name: std::option::Option<std::string::String>,
@@ -4229,7 +4272,7 @@ pub mod email_template_metadata {
             self.created_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`EmailTemplateMetadata`](crate::model::EmailTemplateMetadata)
+        /// Consumes the builder and constructs a [`EmailTemplateMetadata`](crate::model::EmailTemplateMetadata).
         pub fn build(self) -> crate::model::EmailTemplateMetadata {
             crate::model::EmailTemplateMetadata {
                 template_name: self.template_name,
@@ -4239,7 +4282,7 @@ pub mod email_template_metadata {
     }
 }
 impl EmailTemplateMetadata {
-    /// Creates a new builder-style object to manufacture [`EmailTemplateMetadata`](crate::model::EmailTemplateMetadata)
+    /// Creates a new builder-style object to manufacture [`EmailTemplateMetadata`](crate::model::EmailTemplateMetadata).
     pub fn builder() -> crate::model::email_template_metadata::Builder {
         crate::model::email_template_metadata::Builder::default()
     }
@@ -4250,11 +4293,14 @@ impl EmailTemplateMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IdentityInfo {
     /// <p>The email identity type. Note: the <code>MANAGED_DOMAIN</code> type is not supported for email identity types.</p>
+    #[doc(hidden)]
     pub identity_type: std::option::Option<crate::model::IdentityType>,
     /// <p>The address or domain of the identity.</p>
+    #[doc(hidden)]
     pub identity_name: std::option::Option<std::string::String>,
     /// <p>Indicates whether or not you can send email from the identity.</p>
     /// <p>An <i>identity</i> is an email address or domain that you send email from. Before you can send email from an identity, you have to demostrate that you own the identity, and that you authorize Amazon SES to send email from that identity.</p>
+    #[doc(hidden)]
     pub sending_enabled: bool,
 }
 impl IdentityInfo {
@@ -4281,11 +4327,10 @@ impl std::fmt::Debug for IdentityInfo {
         formatter.finish()
     }
 }
-/// See [`IdentityInfo`](crate::model::IdentityInfo)
+/// See [`IdentityInfo`](crate::model::IdentityInfo).
 pub mod identity_info {
 
-    /// A builder for [`IdentityInfo`](crate::model::IdentityInfo)
-    #[non_exhaustive]
+    /// A builder for [`IdentityInfo`](crate::model::IdentityInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_type: std::option::Option<crate::model::IdentityType>,
@@ -4331,7 +4376,7 @@ pub mod identity_info {
             self.sending_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`IdentityInfo`](crate::model::IdentityInfo)
+        /// Consumes the builder and constructs a [`IdentityInfo`](crate::model::IdentityInfo).
         pub fn build(self) -> crate::model::IdentityInfo {
             crate::model::IdentityInfo {
                 identity_type: self.identity_type,
@@ -4342,7 +4387,7 @@ pub mod identity_info {
     }
 }
 impl IdentityInfo {
-    /// Creates a new builder-style object to manufacture [`IdentityInfo`](crate::model::IdentityInfo)
+    /// Creates a new builder-style object to manufacture [`IdentityInfo`](crate::model::IdentityInfo).
     pub fn builder() -> crate::model::identity_info::Builder {
         crate::model::identity_info::Builder::default()
     }
@@ -4412,32 +4457,46 @@ impl AsRef<str> for IdentityType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainDeliverabilityCampaign {
     /// <p>The unique identifier for the campaign. The Deliverability dashboard automatically generates and assigns this identifier to a campaign.</p>
+    #[doc(hidden)]
     pub campaign_id: std::option::Option<std::string::String>,
     /// <p>The URL of an image that contains a snapshot of the email message that was sent.</p>
+    #[doc(hidden)]
     pub image_url: std::option::Option<std::string::String>,
     /// <p>The subject line, or title, of the email message.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<std::string::String>,
     /// <p>The verified email address that the email message was sent from.</p>
+    #[doc(hidden)]
     pub from_address: std::option::Option<std::string::String>,
     /// <p>The IP addresses that were used to send the email message.</p>
+    #[doc(hidden)]
     pub sending_ips: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The first time, in Unix time format, when the email message was delivered to any recipient's inbox. This value can help you determine how long it took for a campaign to deliver an email message.</p>
+    #[doc(hidden)]
     pub first_seen_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last time, in Unix time format, when the email message was delivered to any recipient's inbox. This value can help you determine how long it took for a campaign to deliver an email message.</p>
+    #[doc(hidden)]
     pub last_seen_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The number of email messages that were delivered to recipients’ inboxes.</p>
+    #[doc(hidden)]
     pub inbox_count: std::option::Option<i64>,
     /// <p>The number of email messages that were delivered to recipients' spam or junk mail folders.</p>
+    #[doc(hidden)]
     pub spam_count: std::option::Option<i64>,
     /// <p>The percentage of email messages that were opened by recipients. Due to technical limitations, this value only includes recipients who opened the message by using an email client that supports images.</p>
+    #[doc(hidden)]
     pub read_rate: std::option::Option<f64>,
     /// <p>The percentage of email messages that were deleted by recipients, without being opened first. Due to technical limitations, this value only includes recipients who opened the message by using an email client that supports images.</p>
+    #[doc(hidden)]
     pub delete_rate: std::option::Option<f64>,
     /// <p>The percentage of email messages that were opened and then deleted by recipients. Due to technical limitations, this value only includes recipients who opened the message by using an email client that supports images.</p>
+    #[doc(hidden)]
     pub read_delete_rate: std::option::Option<f64>,
     /// <p>The projected number of recipients that the email message was sent to.</p>
+    #[doc(hidden)]
     pub projected_volume: std::option::Option<i64>,
     /// <p>The major email providers who handled the email message.</p>
+    #[doc(hidden)]
     pub esps: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DomainDeliverabilityCampaign {
@@ -4518,11 +4577,10 @@ impl std::fmt::Debug for DomainDeliverabilityCampaign {
         formatter.finish()
     }
 }
-/// See [`DomainDeliverabilityCampaign`](crate::model::DomainDeliverabilityCampaign)
+/// See [`DomainDeliverabilityCampaign`](crate::model::DomainDeliverabilityCampaign).
 pub mod domain_deliverability_campaign {
 
-    /// A builder for [`DomainDeliverabilityCampaign`](crate::model::DomainDeliverabilityCampaign)
-    #[non_exhaustive]
+    /// A builder for [`DomainDeliverabilityCampaign`](crate::model::DomainDeliverabilityCampaign).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) campaign_id: std::option::Option<std::string::String>,
@@ -4705,7 +4763,7 @@ pub mod domain_deliverability_campaign {
             self.esps = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainDeliverabilityCampaign`](crate::model::DomainDeliverabilityCampaign)
+        /// Consumes the builder and constructs a [`DomainDeliverabilityCampaign`](crate::model::DomainDeliverabilityCampaign).
         pub fn build(self) -> crate::model::DomainDeliverabilityCampaign {
             crate::model::DomainDeliverabilityCampaign {
                 campaign_id: self.campaign_id,
@@ -4727,7 +4785,7 @@ pub mod domain_deliverability_campaign {
     }
 }
 impl DomainDeliverabilityCampaign {
-    /// Creates a new builder-style object to manufacture [`DomainDeliverabilityCampaign`](crate::model::DomainDeliverabilityCampaign)
+    /// Creates a new builder-style object to manufacture [`DomainDeliverabilityCampaign`](crate::model::DomainDeliverabilityCampaign).
     pub fn builder() -> crate::model::domain_deliverability_campaign::Builder {
         crate::model::domain_deliverability_campaign::Builder::default()
     }
@@ -4738,16 +4796,22 @@ impl DomainDeliverabilityCampaign {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeliverabilityTestReport {
     /// <p>A unique string that identifies the predictive inbox placement test.</p>
+    #[doc(hidden)]
     pub report_id: std::option::Option<std::string::String>,
     /// <p>A name that helps you identify a predictive inbox placement test report.</p>
+    #[doc(hidden)]
     pub report_name: std::option::Option<std::string::String>,
     /// <p>The subject line for an email that you submitted in a predictive inbox placement test.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<std::string::String>,
     /// <p>The sender address that you specified for the predictive inbox placement test.</p>
+    #[doc(hidden)]
     pub from_email_address: std::option::Option<std::string::String>,
     /// <p>The date and time when the predictive inbox placement test was created, in Unix time format.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the predictive inbox placement test. If the status is <code>IN_PROGRESS</code>, then the predictive inbox placement test is currently running. Predictive inbox placement tests are usually complete within 24 hours of creating the test. If the status is <code>COMPLETE</code>, then the test is finished, and you can use the <code>GetDeliverabilityTestReport</code> to view the results of the test.</p>
+    #[doc(hidden)]
     pub deliverability_test_status: std::option::Option<crate::model::DeliverabilityTestStatus>,
 }
 impl DeliverabilityTestReport {
@@ -4793,11 +4857,10 @@ impl std::fmt::Debug for DeliverabilityTestReport {
         formatter.finish()
     }
 }
-/// See [`DeliverabilityTestReport`](crate::model::DeliverabilityTestReport)
+/// See [`DeliverabilityTestReport`](crate::model::DeliverabilityTestReport).
 pub mod deliverability_test_report {
 
-    /// A builder for [`DeliverabilityTestReport`](crate::model::DeliverabilityTestReport)
-    #[non_exhaustive]
+    /// A builder for [`DeliverabilityTestReport`](crate::model::DeliverabilityTestReport).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) report_id: std::option::Option<std::string::String>,
@@ -4881,7 +4944,7 @@ pub mod deliverability_test_report {
             self.deliverability_test_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeliverabilityTestReport`](crate::model::DeliverabilityTestReport)
+        /// Consumes the builder and constructs a [`DeliverabilityTestReport`](crate::model::DeliverabilityTestReport).
         pub fn build(self) -> crate::model::DeliverabilityTestReport {
             crate::model::DeliverabilityTestReport {
                 report_id: self.report_id,
@@ -4895,7 +4958,7 @@ pub mod deliverability_test_report {
     }
 }
 impl DeliverabilityTestReport {
-    /// Creates a new builder-style object to manufacture [`DeliverabilityTestReport`](crate::model::DeliverabilityTestReport)
+    /// Creates a new builder-style object to manufacture [`DeliverabilityTestReport`](crate::model::DeliverabilityTestReport).
     pub fn builder() -> crate::model::deliverability_test_report::Builder {
         crate::model::deliverability_test_report::Builder::default()
     }
@@ -4965,14 +5028,19 @@ impl AsRef<str> for DeliverabilityTestStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomVerificationEmailTemplateMetadata {
     /// <p>The name of the custom verification email template.</p>
+    #[doc(hidden)]
     pub template_name: std::option::Option<std::string::String>,
     /// <p>The email address that the custom verification email is sent from.</p>
+    #[doc(hidden)]
     pub from_email_address: std::option::Option<std::string::String>,
     /// <p>The subject line of the custom verification email.</p>
+    #[doc(hidden)]
     pub template_subject: std::option::Option<std::string::String>,
     /// <p>The URL that the recipient of the verification email is sent to if his or her address is successfully verified.</p>
+    #[doc(hidden)]
     pub success_redirection_url: std::option::Option<std::string::String>,
     /// <p>The URL that the recipient of the verification email is sent to if his or her address is not successfully verified.</p>
+    #[doc(hidden)]
     pub failure_redirection_url: std::option::Option<std::string::String>,
 }
 impl CustomVerificationEmailTemplateMetadata {
@@ -5008,11 +5076,10 @@ impl std::fmt::Debug for CustomVerificationEmailTemplateMetadata {
         formatter.finish()
     }
 }
-/// See [`CustomVerificationEmailTemplateMetadata`](crate::model::CustomVerificationEmailTemplateMetadata)
+/// See [`CustomVerificationEmailTemplateMetadata`](crate::model::CustomVerificationEmailTemplateMetadata).
 pub mod custom_verification_email_template_metadata {
 
-    /// A builder for [`CustomVerificationEmailTemplateMetadata`](crate::model::CustomVerificationEmailTemplateMetadata)
-    #[non_exhaustive]
+    /// A builder for [`CustomVerificationEmailTemplateMetadata`](crate::model::CustomVerificationEmailTemplateMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) template_name: std::option::Option<std::string::String>,
@@ -5087,7 +5154,7 @@ pub mod custom_verification_email_template_metadata {
             self.failure_redirection_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomVerificationEmailTemplateMetadata`](crate::model::CustomVerificationEmailTemplateMetadata)
+        /// Consumes the builder and constructs a [`CustomVerificationEmailTemplateMetadata`](crate::model::CustomVerificationEmailTemplateMetadata).
         pub fn build(self) -> crate::model::CustomVerificationEmailTemplateMetadata {
             crate::model::CustomVerificationEmailTemplateMetadata {
                 template_name: self.template_name,
@@ -5100,7 +5167,7 @@ pub mod custom_verification_email_template_metadata {
     }
 }
 impl CustomVerificationEmailTemplateMetadata {
-    /// Creates a new builder-style object to manufacture [`CustomVerificationEmailTemplateMetadata`](crate::model::CustomVerificationEmailTemplateMetadata)
+    /// Creates a new builder-style object to manufacture [`CustomVerificationEmailTemplateMetadata`](crate::model::CustomVerificationEmailTemplateMetadata).
     pub fn builder() -> crate::model::custom_verification_email_template_metadata::Builder {
         crate::model::custom_verification_email_template_metadata::Builder::default()
     }
@@ -5111,15 +5178,20 @@ impl CustomVerificationEmailTemplateMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Contact {
     /// <p>The contact's email address.</p>
+    #[doc(hidden)]
     pub email_address: std::option::Option<std::string::String>,
     /// <p>The contact's preference for being opted-in to or opted-out of a topic.</p>
+    #[doc(hidden)]
     pub topic_preferences: std::option::Option<std::vec::Vec<crate::model::TopicPreference>>,
     /// <p>The default topic preferences applied to the contact.</p>
+    #[doc(hidden)]
     pub topic_default_preferences:
         std::option::Option<std::vec::Vec<crate::model::TopicPreference>>,
     /// <p>A boolean value status noting if the contact is unsubscribed from all contact list topics.</p>
+    #[doc(hidden)]
     pub unsubscribe_all: bool,
     /// <p>A timestamp noting the last time the contact's information was updated.</p>
+    #[doc(hidden)]
     pub last_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Contact {
@@ -5157,11 +5229,10 @@ impl std::fmt::Debug for Contact {
         formatter.finish()
     }
 }
-/// See [`Contact`](crate::model::Contact)
+/// See [`Contact`](crate::model::Contact).
 pub mod contact {
 
-    /// A builder for [`Contact`](crate::model::Contact)
-    #[non_exhaustive]
+    /// A builder for [`Contact`](crate::model::Contact).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) email_address: std::option::Option<std::string::String>,
@@ -5247,7 +5318,7 @@ pub mod contact {
             self.last_updated_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`Contact`](crate::model::Contact)
+        /// Consumes the builder and constructs a [`Contact`](crate::model::Contact).
         pub fn build(self) -> crate::model::Contact {
             crate::model::Contact {
                 email_address: self.email_address,
@@ -5260,7 +5331,7 @@ pub mod contact {
     }
 }
 impl Contact {
-    /// Creates a new builder-style object to manufacture [`Contact`](crate::model::Contact)
+    /// Creates a new builder-style object to manufacture [`Contact`](crate::model::Contact).
     pub fn builder() -> crate::model::contact::Builder {
         crate::model::contact::Builder::default()
     }
@@ -5271,8 +5342,10 @@ impl Contact {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListContactsFilter {
     /// <p>The status by which you are filtering: <code>OPT_IN</code> or <code>OPT_OUT</code>.</p>
+    #[doc(hidden)]
     pub filtered_status: std::option::Option<crate::model::SubscriptionStatus>,
     /// <p>Used for filtering by a specific topic preference.</p>
+    #[doc(hidden)]
     pub topic_filter: std::option::Option<crate::model::TopicFilter>,
 }
 impl ListContactsFilter {
@@ -5293,11 +5366,10 @@ impl std::fmt::Debug for ListContactsFilter {
         formatter.finish()
     }
 }
-/// See [`ListContactsFilter`](crate::model::ListContactsFilter)
+/// See [`ListContactsFilter`](crate::model::ListContactsFilter).
 pub mod list_contacts_filter {
 
-    /// A builder for [`ListContactsFilter`](crate::model::ListContactsFilter)
-    #[non_exhaustive]
+    /// A builder for [`ListContactsFilter`](crate::model::ListContactsFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) filtered_status: std::option::Option<crate::model::SubscriptionStatus>,
@@ -5330,7 +5402,7 @@ pub mod list_contacts_filter {
             self.topic_filter = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListContactsFilter`](crate::model::ListContactsFilter)
+        /// Consumes the builder and constructs a [`ListContactsFilter`](crate::model::ListContactsFilter).
         pub fn build(self) -> crate::model::ListContactsFilter {
             crate::model::ListContactsFilter {
                 filtered_status: self.filtered_status,
@@ -5340,7 +5412,7 @@ pub mod list_contacts_filter {
     }
 }
 impl ListContactsFilter {
-    /// Creates a new builder-style object to manufacture [`ListContactsFilter`](crate::model::ListContactsFilter)
+    /// Creates a new builder-style object to manufacture [`ListContactsFilter`](crate::model::ListContactsFilter).
     pub fn builder() -> crate::model::list_contacts_filter::Builder {
         crate::model::list_contacts_filter::Builder::default()
     }
@@ -5351,8 +5423,10 @@ impl ListContactsFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TopicFilter {
     /// <p>The name of a topic on which you wish to apply the filter.</p>
+    #[doc(hidden)]
     pub topic_name: std::option::Option<std::string::String>,
     /// <p>Notes that the default subscription status should be applied to a contact because the contact has not noted their preference for subscribing to a topic.</p>
+    #[doc(hidden)]
     pub use_default_if_preference_unavailable: bool,
 }
 impl TopicFilter {
@@ -5376,11 +5450,10 @@ impl std::fmt::Debug for TopicFilter {
         formatter.finish()
     }
 }
-/// See [`TopicFilter`](crate::model::TopicFilter)
+/// See [`TopicFilter`](crate::model::TopicFilter).
 pub mod topic_filter {
 
-    /// A builder for [`TopicFilter`](crate::model::TopicFilter)
-    #[non_exhaustive]
+    /// A builder for [`TopicFilter`](crate::model::TopicFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) topic_name: std::option::Option<std::string::String>,
@@ -5410,7 +5483,7 @@ pub mod topic_filter {
             self.use_default_if_preference_unavailable = input;
             self
         }
-        /// Consumes the builder and constructs a [`TopicFilter`](crate::model::TopicFilter)
+        /// Consumes the builder and constructs a [`TopicFilter`](crate::model::TopicFilter).
         pub fn build(self) -> crate::model::TopicFilter {
             crate::model::TopicFilter {
                 topic_name: self.topic_name,
@@ -5422,7 +5495,7 @@ pub mod topic_filter {
     }
 }
 impl TopicFilter {
-    /// Creates a new builder-style object to manufacture [`TopicFilter`](crate::model::TopicFilter)
+    /// Creates a new builder-style object to manufacture [`TopicFilter`](crate::model::TopicFilter).
     pub fn builder() -> crate::model::topic_filter::Builder {
         crate::model::topic_filter::Builder::default()
     }
@@ -5433,8 +5506,10 @@ impl TopicFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContactList {
     /// <p>The name of the contact list.</p>
+    #[doc(hidden)]
     pub contact_list_name: std::option::Option<std::string::String>,
     /// <p>A timestamp noting the last time the contact list was updated.</p>
+    #[doc(hidden)]
     pub last_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ContactList {
@@ -5455,11 +5530,10 @@ impl std::fmt::Debug for ContactList {
         formatter.finish()
     }
 }
-/// See [`ContactList`](crate::model::ContactList)
+/// See [`ContactList`](crate::model::ContactList).
 pub mod contact_list {
 
-    /// A builder for [`ContactList`](crate::model::ContactList)
-    #[non_exhaustive]
+    /// A builder for [`ContactList`](crate::model::ContactList).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) contact_list_name: std::option::Option<std::string::String>,
@@ -5492,7 +5566,7 @@ pub mod contact_list {
             self.last_updated_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContactList`](crate::model::ContactList)
+        /// Consumes the builder and constructs a [`ContactList`](crate::model::ContactList).
         pub fn build(self) -> crate::model::ContactList {
             crate::model::ContactList {
                 contact_list_name: self.contact_list_name,
@@ -5502,7 +5576,7 @@ pub mod contact_list {
     }
 }
 impl ContactList {
-    /// Creates a new builder-style object to manufacture [`ContactList`](crate::model::ContactList)
+    /// Creates a new builder-style object to manufacture [`ContactList`](crate::model::ContactList).
     pub fn builder() -> crate::model::contact_list::Builder {
         crate::model::contact_list::Builder::default()
     }
@@ -5513,12 +5587,16 @@ impl ContactList {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SuppressedDestination {
     /// <p>The email address that is on the suppression list for your account.</p>
+    #[doc(hidden)]
     pub email_address: std::option::Option<std::string::String>,
     /// <p>The reason that the address was added to the suppression list for your account.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<crate::model::SuppressionListReason>,
     /// <p>The date and time when the suppressed destination was last updated, shown in Unix time format.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An optional value that can contain additional information about the reasons that the address was added to the suppression list for your account.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<crate::model::SuppressedDestinationAttributes>,
 }
 impl SuppressedDestination {
@@ -5551,11 +5629,10 @@ impl std::fmt::Debug for SuppressedDestination {
         formatter.finish()
     }
 }
-/// See [`SuppressedDestination`](crate::model::SuppressedDestination)
+/// See [`SuppressedDestination`](crate::model::SuppressedDestination).
 pub mod suppressed_destination {
 
-    /// A builder for [`SuppressedDestination`](crate::model::SuppressedDestination)
-    #[non_exhaustive]
+    /// A builder for [`SuppressedDestination`](crate::model::SuppressedDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) email_address: std::option::Option<std::string::String>,
@@ -5616,7 +5693,7 @@ pub mod suppressed_destination {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`SuppressedDestination`](crate::model::SuppressedDestination)
+        /// Consumes the builder and constructs a [`SuppressedDestination`](crate::model::SuppressedDestination).
         pub fn build(self) -> crate::model::SuppressedDestination {
             crate::model::SuppressedDestination {
                 email_address: self.email_address,
@@ -5628,7 +5705,7 @@ pub mod suppressed_destination {
     }
 }
 impl SuppressedDestination {
-    /// Creates a new builder-style object to manufacture [`SuppressedDestination`](crate::model::SuppressedDestination)
+    /// Creates a new builder-style object to manufacture [`SuppressedDestination`](crate::model::SuppressedDestination).
     pub fn builder() -> crate::model::suppressed_destination::Builder {
         crate::model::suppressed_destination::Builder::default()
     }
@@ -5639,8 +5716,10 @@ impl SuppressedDestination {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SuppressedDestinationAttributes {
     /// <p>The unique identifier of the email message that caused the email address to be added to the suppression list for your account.</p>
+    #[doc(hidden)]
     pub message_id: std::option::Option<std::string::String>,
     /// <p>A unique identifier that's generated when an email address is added to the suppression list for your account.</p>
+    #[doc(hidden)]
     pub feedback_id: std::option::Option<std::string::String>,
 }
 impl SuppressedDestinationAttributes {
@@ -5661,11 +5740,10 @@ impl std::fmt::Debug for SuppressedDestinationAttributes {
         formatter.finish()
     }
 }
-/// See [`SuppressedDestinationAttributes`](crate::model::SuppressedDestinationAttributes)
+/// See [`SuppressedDestinationAttributes`](crate::model::SuppressedDestinationAttributes).
 pub mod suppressed_destination_attributes {
 
-    /// A builder for [`SuppressedDestinationAttributes`](crate::model::SuppressedDestinationAttributes)
-    #[non_exhaustive]
+    /// A builder for [`SuppressedDestinationAttributes`](crate::model::SuppressedDestinationAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message_id: std::option::Option<std::string::String>,
@@ -5692,7 +5770,7 @@ pub mod suppressed_destination_attributes {
             self.feedback_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SuppressedDestinationAttributes`](crate::model::SuppressedDestinationAttributes)
+        /// Consumes the builder and constructs a [`SuppressedDestinationAttributes`](crate::model::SuppressedDestinationAttributes).
         pub fn build(self) -> crate::model::SuppressedDestinationAttributes {
             crate::model::SuppressedDestinationAttributes {
                 message_id: self.message_id,
@@ -5702,7 +5780,7 @@ pub mod suppressed_destination_attributes {
     }
 }
 impl SuppressedDestinationAttributes {
-    /// Creates a new builder-style object to manufacture [`SuppressedDestinationAttributes`](crate::model::SuppressedDestinationAttributes)
+    /// Creates a new builder-style object to manufacture [`SuppressedDestinationAttributes`](crate::model::SuppressedDestinationAttributes).
     pub fn builder() -> crate::model::suppressed_destination_attributes::Builder {
         crate::model::suppressed_destination_attributes::Builder::default()
     }
@@ -5713,8 +5791,10 @@ impl SuppressedDestinationAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailureInfo {
     /// <p>An Amazon S3 presigned URL that contains all the failed records and related information.</p>
+    #[doc(hidden)]
     pub failed_records_s3_url: std::option::Option<std::string::String>,
     /// <p>A message about why the import job failed.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl FailureInfo {
@@ -5735,11 +5815,10 @@ impl std::fmt::Debug for FailureInfo {
         formatter.finish()
     }
 }
-/// See [`FailureInfo`](crate::model::FailureInfo)
+/// See [`FailureInfo`](crate::model::FailureInfo).
 pub mod failure_info {
 
-    /// A builder for [`FailureInfo`](crate::model::FailureInfo)
-    #[non_exhaustive]
+    /// A builder for [`FailureInfo`](crate::model::FailureInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failed_records_s3_url: std::option::Option<std::string::String>,
@@ -5772,7 +5851,7 @@ pub mod failure_info {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailureInfo`](crate::model::FailureInfo)
+        /// Consumes the builder and constructs a [`FailureInfo`](crate::model::FailureInfo).
         pub fn build(self) -> crate::model::FailureInfo {
             crate::model::FailureInfo {
                 failed_records_s3_url: self.failed_records_s3_url,
@@ -5782,7 +5861,7 @@ pub mod failure_info {
     }
 }
 impl FailureInfo {
-    /// Creates a new builder-style object to manufacture [`FailureInfo`](crate::model::FailureInfo)
+    /// Creates a new builder-style object to manufacture [`FailureInfo`](crate::model::FailureInfo).
     pub fn builder() -> crate::model::failure_info::Builder {
         crate::model::failure_info::Builder::default()
     }
@@ -5794,8 +5873,10 @@ impl FailureInfo {
 pub struct ImportDataSource {
     /// <p>An Amazon S3 URL in the format s3://<i>
     /// <bucket_name></bucket_name></i>/<i><object>.<p></p></object></i></p>
+    #[doc(hidden)]
     pub s3_url: std::option::Option<std::string::String>,
     /// <p>The data format of the import job's data source.</p>
+    #[doc(hidden)]
     pub data_format: std::option::Option<crate::model::DataFormat>,
 }
 impl ImportDataSource {
@@ -5817,11 +5898,10 @@ impl std::fmt::Debug for ImportDataSource {
         formatter.finish()
     }
 }
-/// See [`ImportDataSource`](crate::model::ImportDataSource)
+/// See [`ImportDataSource`](crate::model::ImportDataSource).
 pub mod import_data_source {
 
-    /// A builder for [`ImportDataSource`](crate::model::ImportDataSource)
-    #[non_exhaustive]
+    /// A builder for [`ImportDataSource`](crate::model::ImportDataSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_url: std::option::Option<std::string::String>,
@@ -5853,7 +5933,7 @@ pub mod import_data_source {
             self.data_format = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportDataSource`](crate::model::ImportDataSource)
+        /// Consumes the builder and constructs a [`ImportDataSource`](crate::model::ImportDataSource).
         pub fn build(self) -> crate::model::ImportDataSource {
             crate::model::ImportDataSource {
                 s3_url: self.s3_url,
@@ -5863,7 +5943,7 @@ pub mod import_data_source {
     }
 }
 impl ImportDataSource {
-    /// Creates a new builder-style object to manufacture [`ImportDataSource`](crate::model::ImportDataSource)
+    /// Creates a new builder-style object to manufacture [`ImportDataSource`](crate::model::ImportDataSource).
     pub fn builder() -> crate::model::import_data_source::Builder {
         crate::model::import_data_source::Builder::default()
     }
@@ -5929,6 +6009,7 @@ impl AsRef<str> for DataFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MailFromAttributes {
     /// <p>The name of a domain that an email identity uses as a custom MAIL FROM domain.</p>
+    #[doc(hidden)]
     pub mail_from_domain: std::option::Option<std::string::String>,
     /// <p>The status of the MAIL FROM domain. This status can have the following values:</p>
     /// <ul>
@@ -5937,9 +6018,11 @@ pub struct MailFromAttributes {
     /// <li> <p> <code>FAILED</code> – Amazon SES can't find the required MX record, or the record no longer exists.</p> </li>
     /// <li> <p> <code>TEMPORARY_FAILURE</code> – A temporary issue occurred, which prevented Amazon SES from determining the status of the MAIL FROM domain.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub mail_from_domain_status: std::option::Option<crate::model::MailFromDomainStatus>,
     /// <p>The action to take if the required MX record can't be found when you send an email. When you set this value to <code>UseDefaultValue</code>, the mail is sent using <i>amazonses.com</i> as the MAIL FROM domain. When you set this value to <code>RejectMessage</code>, the Amazon SES API v2 returns a <code>MailFromDomainNotVerified</code> error, and doesn't attempt to deliver the email.</p>
     /// <p>These behaviors are taken when the custom MAIL FROM domain configuration is in the <code>Pending</code>, <code>Failed</code>, and <code>TemporaryFailure</code> states.</p>
+    #[doc(hidden)]
     pub behavior_on_mx_failure: std::option::Option<crate::model::BehaviorOnMxFailure>,
 }
 impl MailFromAttributes {
@@ -5976,11 +6059,10 @@ impl std::fmt::Debug for MailFromAttributes {
         formatter.finish()
     }
 }
-/// See [`MailFromAttributes`](crate::model::MailFromAttributes)
+/// See [`MailFromAttributes`](crate::model::MailFromAttributes).
 pub mod mail_from_attributes {
 
-    /// A builder for [`MailFromAttributes`](crate::model::MailFromAttributes)
-    #[non_exhaustive]
+    /// A builder for [`MailFromAttributes`](crate::model::MailFromAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mail_from_domain: std::option::Option<std::string::String>,
@@ -6044,7 +6126,7 @@ pub mod mail_from_attributes {
             self.behavior_on_mx_failure = input;
             self
         }
-        /// Consumes the builder and constructs a [`MailFromAttributes`](crate::model::MailFromAttributes)
+        /// Consumes the builder and constructs a [`MailFromAttributes`](crate::model::MailFromAttributes).
         pub fn build(self) -> crate::model::MailFromAttributes {
             crate::model::MailFromAttributes {
                 mail_from_domain: self.mail_from_domain,
@@ -6055,7 +6137,7 @@ pub mod mail_from_attributes {
     }
 }
 impl MailFromAttributes {
-    /// Creates a new builder-style object to manufacture [`MailFromAttributes`](crate::model::MailFromAttributes)
+    /// Creates a new builder-style object to manufacture [`MailFromAttributes`](crate::model::MailFromAttributes).
     pub fn builder() -> crate::model::mail_from_attributes::Builder {
         crate::model::mail_from_attributes::Builder::default()
     }
@@ -6152,6 +6234,7 @@ impl AsRef<str> for MailFromDomainStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DkimAttributes {
     /// <p>If the value is <code>true</code>, then the messages that you send from the identity are signed using DKIM. If the value is <code>false</code>, then the messages that you send from the identity aren't DKIM-signed.</p>
+    #[doc(hidden)]
     pub signing_enabled: bool,
     /// <p>Describes whether or not Amazon SES has successfully located the DKIM records in the DNS records for the domain. The status can be one of the following:</p>
     /// <ul>
@@ -6161,22 +6244,28 @@ pub struct DkimAttributes {
     /// <li> <p> <code>TEMPORARY_FAILURE</code> – A temporary issue is preventing Amazon SES from determining the DKIM authentication status of the domain.</p> </li>
     /// <li> <p> <code>NOT_STARTED</code> – The DKIM verification process hasn't been initiated for the domain.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DkimStatus>,
     /// <p>If you used <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html">Easy DKIM</a> to configure DKIM authentication for the domain, then this object contains a set of unique strings that you use to create a set of CNAME records that you add to the DNS configuration for your domain. When Amazon SES detects these records in the DNS configuration for your domain, the DKIM authentication process is complete.</p>
     /// <p>If you configured DKIM authentication for the domain by providing your own public-private key pair, then this object contains the selector for the public key.</p>
     /// <p>Regardless of the DKIM authentication method you use, Amazon SES searches for the appropriate records in the DNS configuration of the domain for up to 72 hours.</p>
+    #[doc(hidden)]
     pub tokens: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A string that indicates how DKIM was configured for the identity. These are the possible values:</p>
     /// <ul>
     /// <li> <p> <code>AWS_SES</code> – Indicates that DKIM was configured for the identity by using <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html">Easy DKIM</a>.</p> </li>
     /// <li> <p> <code>EXTERNAL</code> – Indicates that DKIM was configured for the identity by using Bring Your Own DKIM (BYODKIM).</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub signing_attributes_origin: std::option::Option<crate::model::DkimSigningAttributesOrigin>,
     /// <p>[Easy DKIM] The key length of the future DKIM key pair to be generated. This can be changed at most once per day.</p>
+    #[doc(hidden)]
     pub next_signing_key_length: std::option::Option<crate::model::DkimSigningKeyLength>,
     /// <p>[Easy DKIM] The key length of the DKIM key pair in use.</p>
+    #[doc(hidden)]
     pub current_signing_key_length: std::option::Option<crate::model::DkimSigningKeyLength>,
     /// <p>[Easy DKIM] The last time a key pair was generated for this identity.</p>
+    #[doc(hidden)]
     pub last_key_generation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DkimAttributes {
@@ -6249,11 +6338,10 @@ impl std::fmt::Debug for DkimAttributes {
         formatter.finish()
     }
 }
-/// See [`DkimAttributes`](crate::model::DkimAttributes)
+/// See [`DkimAttributes`](crate::model::DkimAttributes).
 pub mod dkim_attributes {
 
-    /// A builder for [`DkimAttributes`](crate::model::DkimAttributes)
-    #[non_exhaustive]
+    /// A builder for [`DkimAttributes`](crate::model::DkimAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) signing_enabled: std::option::Option<bool>,
@@ -6393,7 +6481,7 @@ pub mod dkim_attributes {
             self.last_key_generation_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`DkimAttributes`](crate::model::DkimAttributes)
+        /// Consumes the builder and constructs a [`DkimAttributes`](crate::model::DkimAttributes).
         pub fn build(self) -> crate::model::DkimAttributes {
             crate::model::DkimAttributes {
                 signing_enabled: self.signing_enabled.unwrap_or_default(),
@@ -6408,7 +6496,7 @@ pub mod dkim_attributes {
     }
 }
 impl DkimAttributes {
-    /// Creates a new builder-style object to manufacture [`DkimAttributes`](crate::model::DkimAttributes)
+    /// Creates a new builder-style object to manufacture [`DkimAttributes`](crate::model::DkimAttributes).
     pub fn builder() -> crate::model::dkim_attributes::Builder {
         crate::model::dkim_attributes::Builder::default()
     }
@@ -6419,10 +6507,13 @@ impl DkimAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DailyVolume {
     /// <p>The date that the DailyVolume metrics apply to, in Unix time.</p>
+    #[doc(hidden)]
     pub start_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An object that contains inbox placement metrics for a specific day in the analysis period.</p>
+    #[doc(hidden)]
     pub volume_statistics: std::option::Option<crate::model::VolumeStatistics>,
     /// <p>An object that contains inbox placement metrics for a specified day in the analysis period, broken out by the recipient's email provider.</p>
+    #[doc(hidden)]
     pub domain_isp_placements: std::option::Option<std::vec::Vec<crate::model::DomainIspPlacement>>,
 }
 impl DailyVolume {
@@ -6450,11 +6541,10 @@ impl std::fmt::Debug for DailyVolume {
         formatter.finish()
     }
 }
-/// See [`DailyVolume`](crate::model::DailyVolume)
+/// See [`DailyVolume`](crate::model::DailyVolume).
 pub mod daily_volume {
 
-    /// A builder for [`DailyVolume`](crate::model::DailyVolume)
-    #[non_exhaustive]
+    /// A builder for [`DailyVolume`](crate::model::DailyVolume).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -6508,7 +6598,7 @@ pub mod daily_volume {
             self.domain_isp_placements = input;
             self
         }
-        /// Consumes the builder and constructs a [`DailyVolume`](crate::model::DailyVolume)
+        /// Consumes the builder and constructs a [`DailyVolume`](crate::model::DailyVolume).
         pub fn build(self) -> crate::model::DailyVolume {
             crate::model::DailyVolume {
                 start_date: self.start_date,
@@ -6519,7 +6609,7 @@ pub mod daily_volume {
     }
 }
 impl DailyVolume {
-    /// Creates a new builder-style object to manufacture [`DailyVolume`](crate::model::DailyVolume)
+    /// Creates a new builder-style object to manufacture [`DailyVolume`](crate::model::DailyVolume).
     pub fn builder() -> crate::model::daily_volume::Builder {
         crate::model::daily_volume::Builder::default()
     }
@@ -6530,14 +6620,19 @@ impl DailyVolume {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainIspPlacement {
     /// <p>The name of the email provider that the inbox placement data applies to.</p>
+    #[doc(hidden)]
     pub isp_name: std::option::Option<std::string::String>,
     /// <p>The total number of messages that were sent from the selected domain to the specified email provider that arrived in recipients' inboxes.</p>
+    #[doc(hidden)]
     pub inbox_raw_count: std::option::Option<i64>,
     /// <p>The total number of messages that were sent from the selected domain to the specified email provider that arrived in recipients' spam or junk mail folders.</p>
+    #[doc(hidden)]
     pub spam_raw_count: std::option::Option<i64>,
     /// <p>The percentage of messages that were sent from the selected domain to the specified email provider that arrived in recipients' inboxes.</p>
+    #[doc(hidden)]
     pub inbox_percentage: std::option::Option<f64>,
     /// <p>The percentage of messages that were sent from the selected domain to the specified email provider that arrived in recipients' spam or junk mail folders.</p>
+    #[doc(hidden)]
     pub spam_percentage: std::option::Option<f64>,
 }
 impl DomainIspPlacement {
@@ -6573,11 +6668,10 @@ impl std::fmt::Debug for DomainIspPlacement {
         formatter.finish()
     }
 }
-/// See [`DomainIspPlacement`](crate::model::DomainIspPlacement)
+/// See [`DomainIspPlacement`](crate::model::DomainIspPlacement).
 pub mod domain_isp_placement {
 
-    /// A builder for [`DomainIspPlacement`](crate::model::DomainIspPlacement)
-    #[non_exhaustive]
+    /// A builder for [`DomainIspPlacement`](crate::model::DomainIspPlacement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) isp_name: std::option::Option<std::string::String>,
@@ -6637,7 +6731,7 @@ pub mod domain_isp_placement {
             self.spam_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainIspPlacement`](crate::model::DomainIspPlacement)
+        /// Consumes the builder and constructs a [`DomainIspPlacement`](crate::model::DomainIspPlacement).
         pub fn build(self) -> crate::model::DomainIspPlacement {
             crate::model::DomainIspPlacement {
                 isp_name: self.isp_name,
@@ -6650,7 +6744,7 @@ pub mod domain_isp_placement {
     }
 }
 impl DomainIspPlacement {
-    /// Creates a new builder-style object to manufacture [`DomainIspPlacement`](crate::model::DomainIspPlacement)
+    /// Creates a new builder-style object to manufacture [`DomainIspPlacement`](crate::model::DomainIspPlacement).
     pub fn builder() -> crate::model::domain_isp_placement::Builder {
         crate::model::domain_isp_placement::Builder::default()
     }
@@ -6661,12 +6755,16 @@ impl DomainIspPlacement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VolumeStatistics {
     /// <p>The total number of emails that arrived in recipients' inboxes.</p>
+    #[doc(hidden)]
     pub inbox_raw_count: std::option::Option<i64>,
     /// <p>The total number of emails that arrived in recipients' spam or junk mail folders.</p>
+    #[doc(hidden)]
     pub spam_raw_count: std::option::Option<i64>,
     /// <p>An estimate of the percentage of emails sent from the current domain that will arrive in recipients' inboxes.</p>
+    #[doc(hidden)]
     pub projected_inbox: std::option::Option<i64>,
     /// <p>An estimate of the percentage of emails sent from the current domain that will arrive in recipients' spam or junk mail folders.</p>
+    #[doc(hidden)]
     pub projected_spam: std::option::Option<i64>,
 }
 impl VolumeStatistics {
@@ -6697,11 +6795,10 @@ impl std::fmt::Debug for VolumeStatistics {
         formatter.finish()
     }
 }
-/// See [`VolumeStatistics`](crate::model::VolumeStatistics)
+/// See [`VolumeStatistics`](crate::model::VolumeStatistics).
 pub mod volume_statistics {
 
-    /// A builder for [`VolumeStatistics`](crate::model::VolumeStatistics)
-    #[non_exhaustive]
+    /// A builder for [`VolumeStatistics`](crate::model::VolumeStatistics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) inbox_raw_count: std::option::Option<i64>,
@@ -6750,7 +6847,7 @@ pub mod volume_statistics {
             self.projected_spam = input;
             self
         }
-        /// Consumes the builder and constructs a [`VolumeStatistics`](crate::model::VolumeStatistics)
+        /// Consumes the builder and constructs a [`VolumeStatistics`](crate::model::VolumeStatistics).
         pub fn build(self) -> crate::model::VolumeStatistics {
             crate::model::VolumeStatistics {
                 inbox_raw_count: self.inbox_raw_count,
@@ -6762,7 +6859,7 @@ pub mod volume_statistics {
     }
 }
 impl VolumeStatistics {
-    /// Creates a new builder-style object to manufacture [`VolumeStatistics`](crate::model::VolumeStatistics)
+    /// Creates a new builder-style object to manufacture [`VolumeStatistics`](crate::model::VolumeStatistics).
     pub fn builder() -> crate::model::volume_statistics::Builder {
         crate::model::volume_statistics::Builder::default()
     }
@@ -6773,10 +6870,13 @@ impl VolumeStatistics {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OverallVolume {
     /// <p>An object that contains information about the numbers of messages that arrived in recipients' inboxes and junk mail folders.</p>
+    #[doc(hidden)]
     pub volume_statistics: std::option::Option<crate::model::VolumeStatistics>,
     /// <p>The percentage of emails that were sent from the domain that were read by their recipients.</p>
+    #[doc(hidden)]
     pub read_rate_percent: std::option::Option<f64>,
     /// <p>An object that contains inbox and junk mail placement metrics for individual email providers.</p>
+    #[doc(hidden)]
     pub domain_isp_placements: std::option::Option<std::vec::Vec<crate::model::DomainIspPlacement>>,
 }
 impl OverallVolume {
@@ -6804,11 +6904,10 @@ impl std::fmt::Debug for OverallVolume {
         formatter.finish()
     }
 }
-/// See [`OverallVolume`](crate::model::OverallVolume)
+/// See [`OverallVolume`](crate::model::OverallVolume).
 pub mod overall_volume {
 
-    /// A builder for [`OverallVolume`](crate::model::OverallVolume)
-    #[non_exhaustive]
+    /// A builder for [`OverallVolume`](crate::model::OverallVolume).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_statistics: std::option::Option<crate::model::VolumeStatistics>,
@@ -6859,7 +6958,7 @@ pub mod overall_volume {
             self.domain_isp_placements = input;
             self
         }
-        /// Consumes the builder and constructs a [`OverallVolume`](crate::model::OverallVolume)
+        /// Consumes the builder and constructs a [`OverallVolume`](crate::model::OverallVolume).
         pub fn build(self) -> crate::model::OverallVolume {
             crate::model::OverallVolume {
                 volume_statistics: self.volume_statistics,
@@ -6870,7 +6969,7 @@ pub mod overall_volume {
     }
 }
 impl OverallVolume {
-    /// Creates a new builder-style object to manufacture [`OverallVolume`](crate::model::OverallVolume)
+    /// Creates a new builder-style object to manufacture [`OverallVolume`](crate::model::OverallVolume).
     pub fn builder() -> crate::model::overall_volume::Builder {
         crate::model::overall_volume::Builder::default()
     }
@@ -6881,8 +6980,10 @@ impl OverallVolume {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IspPlacement {
     /// <p>The name of the email provider that the inbox placement data applies to.</p>
+    #[doc(hidden)]
     pub isp_name: std::option::Option<std::string::String>,
     /// <p>An object that contains inbox placement metrics for a specific email provider.</p>
+    #[doc(hidden)]
     pub placement_statistics: std::option::Option<crate::model::PlacementStatistics>,
 }
 impl IspPlacement {
@@ -6903,11 +7004,10 @@ impl std::fmt::Debug for IspPlacement {
         formatter.finish()
     }
 }
-/// See [`IspPlacement`](crate::model::IspPlacement)
+/// See [`IspPlacement`](crate::model::IspPlacement).
 pub mod isp_placement {
 
-    /// A builder for [`IspPlacement`](crate::model::IspPlacement)
-    #[non_exhaustive]
+    /// A builder for [`IspPlacement`](crate::model::IspPlacement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) isp_name: std::option::Option<std::string::String>,
@@ -6937,7 +7037,7 @@ pub mod isp_placement {
             self.placement_statistics = input;
             self
         }
-        /// Consumes the builder and constructs a [`IspPlacement`](crate::model::IspPlacement)
+        /// Consumes the builder and constructs a [`IspPlacement`](crate::model::IspPlacement).
         pub fn build(self) -> crate::model::IspPlacement {
             crate::model::IspPlacement {
                 isp_name: self.isp_name,
@@ -6947,7 +7047,7 @@ pub mod isp_placement {
     }
 }
 impl IspPlacement {
-    /// Creates a new builder-style object to manufacture [`IspPlacement`](crate::model::IspPlacement)
+    /// Creates a new builder-style object to manufacture [`IspPlacement`](crate::model::IspPlacement).
     pub fn builder() -> crate::model::isp_placement::Builder {
         crate::model::isp_placement::Builder::default()
     }
@@ -6958,14 +7058,19 @@ impl IspPlacement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PlacementStatistics {
     /// <p>The percentage of emails that arrived in recipients' inboxes during the predictive inbox placement test.</p>
+    #[doc(hidden)]
     pub inbox_percentage: std::option::Option<f64>,
     /// <p>The percentage of emails that arrived in recipients' spam or junk mail folders during the predictive inbox placement test.</p>
+    #[doc(hidden)]
     pub spam_percentage: std::option::Option<f64>,
     /// <p>The percentage of emails that didn't arrive in recipients' inboxes at all during the predictive inbox placement test.</p>
+    #[doc(hidden)]
     pub missing_percentage: std::option::Option<f64>,
     /// <p>The percentage of emails that were authenticated by using Sender Policy Framework (SPF) during the predictive inbox placement test.</p>
+    #[doc(hidden)]
     pub spf_percentage: std::option::Option<f64>,
     /// <p>The percentage of emails that were authenticated by using DomainKeys Identified Mail (DKIM) during the predictive inbox placement test.</p>
+    #[doc(hidden)]
     pub dkim_percentage: std::option::Option<f64>,
 }
 impl PlacementStatistics {
@@ -7001,11 +7106,10 @@ impl std::fmt::Debug for PlacementStatistics {
         formatter.finish()
     }
 }
-/// See [`PlacementStatistics`](crate::model::PlacementStatistics)
+/// See [`PlacementStatistics`](crate::model::PlacementStatistics).
 pub mod placement_statistics {
 
-    /// A builder for [`PlacementStatistics`](crate::model::PlacementStatistics)
-    #[non_exhaustive]
+    /// A builder for [`PlacementStatistics`](crate::model::PlacementStatistics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) inbox_percentage: std::option::Option<f64>,
@@ -7065,7 +7169,7 @@ pub mod placement_statistics {
             self.dkim_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`PlacementStatistics`](crate::model::PlacementStatistics)
+        /// Consumes the builder and constructs a [`PlacementStatistics`](crate::model::PlacementStatistics).
         pub fn build(self) -> crate::model::PlacementStatistics {
             crate::model::PlacementStatistics {
                 inbox_percentage: self.inbox_percentage,
@@ -7078,7 +7182,7 @@ pub mod placement_statistics {
     }
 }
 impl PlacementStatistics {
-    /// Creates a new builder-style object to manufacture [`PlacementStatistics`](crate::model::PlacementStatistics)
+    /// Creates a new builder-style object to manufacture [`PlacementStatistics`](crate::model::PlacementStatistics).
     pub fn builder() -> crate::model::placement_statistics::Builder {
         crate::model::placement_statistics::Builder::default()
     }
@@ -7151,16 +7255,20 @@ impl AsRef<str> for DeliverabilityDashboardAccountStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DedicatedIp {
     /// <p>An IPv4 address.</p>
+    #[doc(hidden)]
     pub ip: std::option::Option<std::string::String>,
     /// <p>The warm-up status of a dedicated IP address. The status can have one of the following values:</p>
     /// <ul>
     /// <li> <p> <code>IN_PROGRESS</code> – The IP address isn't ready to use because the dedicated IP warm-up process is ongoing.</p> </li>
     /// <li> <p> <code>DONE</code> – The dedicated IP warm-up process is complete, and the IP address is ready to use.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub warmup_status: std::option::Option<crate::model::WarmupStatus>,
     /// <p>Indicates how complete the dedicated IP warm-up process is. When this value equals 1, the address has completed the warm-up process and is ready for use.</p>
+    #[doc(hidden)]
     pub warmup_percentage: std::option::Option<i32>,
     /// <p>The name of the dedicated IP pool that the IP address is associated with.</p>
+    #[doc(hidden)]
     pub pool_name: std::option::Option<std::string::String>,
 }
 impl DedicatedIp {
@@ -7195,11 +7303,10 @@ impl std::fmt::Debug for DedicatedIp {
         formatter.finish()
     }
 }
-/// See [`DedicatedIp`](crate::model::DedicatedIp)
+/// See [`DedicatedIp`](crate::model::DedicatedIp).
 pub mod dedicated_ip {
 
-    /// A builder for [`DedicatedIp`](crate::model::DedicatedIp)
-    #[non_exhaustive]
+    /// A builder for [`DedicatedIp`](crate::model::DedicatedIp).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip: std::option::Option<std::string::String>,
@@ -7259,7 +7366,7 @@ pub mod dedicated_ip {
             self.pool_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DedicatedIp`](crate::model::DedicatedIp)
+        /// Consumes the builder and constructs a [`DedicatedIp`](crate::model::DedicatedIp).
         pub fn build(self) -> crate::model::DedicatedIp {
             crate::model::DedicatedIp {
                 ip: self.ip,
@@ -7271,7 +7378,7 @@ pub mod dedicated_ip {
     }
 }
 impl DedicatedIp {
-    /// Creates a new builder-style object to manufacture [`DedicatedIp`](crate::model::DedicatedIp)
+    /// Creates a new builder-style object to manufacture [`DedicatedIp`](crate::model::DedicatedIp).
     pub fn builder() -> crate::model::dedicated_ip::Builder {
         crate::model::dedicated_ip::Builder::default()
     }
@@ -7337,19 +7444,26 @@ impl AsRef<str> for WarmupStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventDestination {
     /// <p>A name that identifies the event destination.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>If <code>true</code>, the event destination is enabled. When the event destination is enabled, the specified event types are sent to the destinations in this <code>EventDestinationDefinition</code>.</p>
     /// <p>If <code>false</code>, the event destination is disabled. When the event destination is disabled, events aren't sent to the specified destinations.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The types of events that Amazon SES sends to the specified event destinations.</p>
+    #[doc(hidden)]
     pub matching_event_types: std::option::Option<std::vec::Vec<crate::model::EventType>>,
     /// <p>An object that defines an Amazon Kinesis Data Firehose destination for email events. You can use Amazon Kinesis Data Firehose to stream data to other services, such as Amazon S3 and Amazon Redshift.</p>
+    #[doc(hidden)]
     pub kinesis_firehose_destination: std::option::Option<crate::model::KinesisFirehoseDestination>,
     /// <p>An object that defines an Amazon CloudWatch destination for email events. You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.</p>
+    #[doc(hidden)]
     pub cloud_watch_destination: std::option::Option<crate::model::CloudWatchDestination>,
     /// <p>An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notification when certain email events occur.</p>
+    #[doc(hidden)]
     pub sns_destination: std::option::Option<crate::model::SnsDestination>,
     /// <p>An object that defines an Amazon Pinpoint project destination for email events. You can send email event data to a Amazon Pinpoint project to view metrics using the Transactional Messaging dashboards that are built in to Amazon Pinpoint. For more information, see <a href="https://docs.aws.amazon.com/pinpoint/latest/userguide/analytics-transactional-messages.html">Transactional Messaging Charts</a> in the <i>Amazon Pinpoint User Guide</i>.</p>
+    #[doc(hidden)]
     pub pinpoint_destination: std::option::Option<crate::model::PinpointDestination>,
 }
 impl EventDestination {
@@ -7403,11 +7517,10 @@ impl std::fmt::Debug for EventDestination {
         formatter.finish()
     }
 }
-/// See [`EventDestination`](crate::model::EventDestination)
+/// See [`EventDestination`](crate::model::EventDestination).
 pub mod event_destination {
 
-    /// A builder for [`EventDestination`](crate::model::EventDestination)
-    #[non_exhaustive]
+    /// A builder for [`EventDestination`](crate::model::EventDestination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -7521,7 +7634,7 @@ pub mod event_destination {
             self.pinpoint_destination = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventDestination`](crate::model::EventDestination)
+        /// Consumes the builder and constructs a [`EventDestination`](crate::model::EventDestination).
         pub fn build(self) -> crate::model::EventDestination {
             crate::model::EventDestination {
                 name: self.name,
@@ -7536,7 +7649,7 @@ pub mod event_destination {
     }
 }
 impl EventDestination {
-    /// Creates a new builder-style object to manufacture [`EventDestination`](crate::model::EventDestination)
+    /// Creates a new builder-style object to manufacture [`EventDestination`](crate::model::EventDestination).
     pub fn builder() -> crate::model::event_destination::Builder {
         crate::model::event_destination::Builder::default()
     }
@@ -7551,6 +7664,7 @@ pub struct SuppressionOptions {
     /// <li> <p> <code>COMPLAINT</code> – Amazon SES adds an email address to the suppression list for your account when a message sent to that address results in a complaint.</p> </li>
     /// <li> <p> <code>BOUNCE</code> – Amazon SES adds an email address to the suppression list for your account when a message sent to that address results in a hard bounce.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub suppressed_reasons: std::option::Option<std::vec::Vec<crate::model::SuppressionListReason>>,
 }
 impl SuppressionOptions {
@@ -7572,11 +7686,10 @@ impl std::fmt::Debug for SuppressionOptions {
         formatter.finish()
     }
 }
-/// See [`SuppressionOptions`](crate::model::SuppressionOptions)
+/// See [`SuppressionOptions`](crate::model::SuppressionOptions).
 pub mod suppression_options {
 
-    /// A builder for [`SuppressionOptions`](crate::model::SuppressionOptions)
-    #[non_exhaustive]
+    /// A builder for [`SuppressionOptions`](crate::model::SuppressionOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suppressed_reasons:
@@ -7610,7 +7723,7 @@ pub mod suppression_options {
             self.suppressed_reasons = input;
             self
         }
-        /// Consumes the builder and constructs a [`SuppressionOptions`](crate::model::SuppressionOptions)
+        /// Consumes the builder and constructs a [`SuppressionOptions`](crate::model::SuppressionOptions).
         pub fn build(self) -> crate::model::SuppressionOptions {
             crate::model::SuppressionOptions {
                 suppressed_reasons: self.suppressed_reasons,
@@ -7619,7 +7732,7 @@ pub mod suppression_options {
     }
 }
 impl SuppressionOptions {
-    /// Creates a new builder-style object to manufacture [`SuppressionOptions`](crate::model::SuppressionOptions)
+    /// Creates a new builder-style object to manufacture [`SuppressionOptions`](crate::model::SuppressionOptions).
     pub fn builder() -> crate::model::suppression_options::Builder {
         crate::model::suppression_options::Builder::default()
     }
@@ -7630,6 +7743,7 @@ impl SuppressionOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SendingOptions {
     /// <p>If <code>true</code>, email sending is enabled for the configuration set. If <code>false</code>, email sending is disabled for the configuration set.</p>
+    #[doc(hidden)]
     pub sending_enabled: bool,
 }
 impl SendingOptions {
@@ -7645,11 +7759,10 @@ impl std::fmt::Debug for SendingOptions {
         formatter.finish()
     }
 }
-/// See [`SendingOptions`](crate::model::SendingOptions)
+/// See [`SendingOptions`](crate::model::SendingOptions).
 pub mod sending_options {
 
-    /// A builder for [`SendingOptions`](crate::model::SendingOptions)
-    #[non_exhaustive]
+    /// A builder for [`SendingOptions`](crate::model::SendingOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sending_enabled: std::option::Option<bool>,
@@ -7665,7 +7778,7 @@ pub mod sending_options {
             self.sending_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`SendingOptions`](crate::model::SendingOptions)
+        /// Consumes the builder and constructs a [`SendingOptions`](crate::model::SendingOptions).
         pub fn build(self) -> crate::model::SendingOptions {
             crate::model::SendingOptions {
                 sending_enabled: self.sending_enabled.unwrap_or_default(),
@@ -7674,7 +7787,7 @@ pub mod sending_options {
     }
 }
 impl SendingOptions {
-    /// Creates a new builder-style object to manufacture [`SendingOptions`](crate::model::SendingOptions)
+    /// Creates a new builder-style object to manufacture [`SendingOptions`](crate::model::SendingOptions).
     pub fn builder() -> crate::model::sending_options::Builder {
         crate::model::sending_options::Builder::default()
     }
@@ -7685,8 +7798,10 @@ impl SendingOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReputationOptions {
     /// <p>If <code>true</code>, tracking of reputation metrics is enabled for the configuration set. If <code>false</code>, tracking of reputation metrics is disabled for the configuration set.</p>
+    #[doc(hidden)]
     pub reputation_metrics_enabled: bool,
     /// <p>The date and time (in Unix time) when the reputation metrics were last given a fresh start. When your account is given a fresh start, your reputation metrics are calculated starting from the date of the fresh start.</p>
+    #[doc(hidden)]
     pub last_fresh_start: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ReputationOptions {
@@ -7710,11 +7825,10 @@ impl std::fmt::Debug for ReputationOptions {
         formatter.finish()
     }
 }
-/// See [`ReputationOptions`](crate::model::ReputationOptions)
+/// See [`ReputationOptions`](crate::model::ReputationOptions).
 pub mod reputation_options {
 
-    /// A builder for [`ReputationOptions`](crate::model::ReputationOptions)
-    #[non_exhaustive]
+    /// A builder for [`ReputationOptions`](crate::model::ReputationOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reputation_metrics_enabled: std::option::Option<bool>,
@@ -7744,7 +7858,7 @@ pub mod reputation_options {
             self.last_fresh_start = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReputationOptions`](crate::model::ReputationOptions)
+        /// Consumes the builder and constructs a [`ReputationOptions`](crate::model::ReputationOptions).
         pub fn build(self) -> crate::model::ReputationOptions {
             crate::model::ReputationOptions {
                 reputation_metrics_enabled: self.reputation_metrics_enabled.unwrap_or_default(),
@@ -7754,7 +7868,7 @@ pub mod reputation_options {
     }
 }
 impl ReputationOptions {
-    /// Creates a new builder-style object to manufacture [`ReputationOptions`](crate::model::ReputationOptions)
+    /// Creates a new builder-style object to manufacture [`ReputationOptions`](crate::model::ReputationOptions).
     pub fn builder() -> crate::model::reputation_options::Builder {
         crate::model::reputation_options::Builder::default()
     }
@@ -7765,8 +7879,10 @@ impl ReputationOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeliveryOptions {
     /// <p>Specifies whether messages that use the configuration set are required to use Transport Layer Security (TLS). If the value is <code>Require</code>, messages are only delivered if a TLS connection can be established. If the value is <code>Optional</code>, messages can be delivered in plain text if a TLS connection can't be established.</p>
+    #[doc(hidden)]
     pub tls_policy: std::option::Option<crate::model::TlsPolicy>,
     /// <p>The name of the dedicated IP pool to associate with the configuration set.</p>
+    #[doc(hidden)]
     pub sending_pool_name: std::option::Option<std::string::String>,
 }
 impl DeliveryOptions {
@@ -7787,11 +7903,10 @@ impl std::fmt::Debug for DeliveryOptions {
         formatter.finish()
     }
 }
-/// See [`DeliveryOptions`](crate::model::DeliveryOptions)
+/// See [`DeliveryOptions`](crate::model::DeliveryOptions).
 pub mod delivery_options {
 
-    /// A builder for [`DeliveryOptions`](crate::model::DeliveryOptions)
-    #[non_exhaustive]
+    /// A builder for [`DeliveryOptions`](crate::model::DeliveryOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tls_policy: std::option::Option<crate::model::TlsPolicy>,
@@ -7824,7 +7939,7 @@ pub mod delivery_options {
             self.sending_pool_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeliveryOptions`](crate::model::DeliveryOptions)
+        /// Consumes the builder and constructs a [`DeliveryOptions`](crate::model::DeliveryOptions).
         pub fn build(self) -> crate::model::DeliveryOptions {
             crate::model::DeliveryOptions {
                 tls_policy: self.tls_policy,
@@ -7834,7 +7949,7 @@ pub mod delivery_options {
     }
 }
 impl DeliveryOptions {
-    /// Creates a new builder-style object to manufacture [`DeliveryOptions`](crate::model::DeliveryOptions)
+    /// Creates a new builder-style object to manufacture [`DeliveryOptions`](crate::model::DeliveryOptions).
     pub fn builder() -> crate::model::delivery_options::Builder {
         crate::model::delivery_options::Builder::default()
     }
@@ -7846,6 +7961,7 @@ impl DeliveryOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrackingOptions {
     /// <p>The domain to use for tracking open and click events.</p>
+    #[doc(hidden)]
     pub custom_redirect_domain: std::option::Option<std::string::String>,
 }
 impl TrackingOptions {
@@ -7861,11 +7977,10 @@ impl std::fmt::Debug for TrackingOptions {
         formatter.finish()
     }
 }
-/// See [`TrackingOptions`](crate::model::TrackingOptions)
+/// See [`TrackingOptions`](crate::model::TrackingOptions).
 pub mod tracking_options {
 
-    /// A builder for [`TrackingOptions`](crate::model::TrackingOptions)
-    #[non_exhaustive]
+    /// A builder for [`TrackingOptions`](crate::model::TrackingOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_redirect_domain: std::option::Option<std::string::String>,
@@ -7884,7 +7999,7 @@ pub mod tracking_options {
             self.custom_redirect_domain = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrackingOptions`](crate::model::TrackingOptions)
+        /// Consumes the builder and constructs a [`TrackingOptions`](crate::model::TrackingOptions).
         pub fn build(self) -> crate::model::TrackingOptions {
             crate::model::TrackingOptions {
                 custom_redirect_domain: self.custom_redirect_domain,
@@ -7893,7 +8008,7 @@ pub mod tracking_options {
     }
 }
 impl TrackingOptions {
-    /// Creates a new builder-style object to manufacture [`TrackingOptions`](crate::model::TrackingOptions)
+    /// Creates a new builder-style object to manufacture [`TrackingOptions`](crate::model::TrackingOptions).
     pub fn builder() -> crate::model::tracking_options::Builder {
         crate::model::tracking_options::Builder::default()
     }
@@ -7904,10 +8019,13 @@ impl TrackingOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BlacklistEntry {
     /// <p>The name of the blacklist that the IP address appears on.</p>
+    #[doc(hidden)]
     pub rbl_name: std::option::Option<std::string::String>,
     /// <p>The time when the blacklisting event occurred, shown in Unix time format.</p>
+    #[doc(hidden)]
     pub listing_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Additional information about the blacklisting event, as provided by the blacklist maintainer.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl BlacklistEntry {
@@ -7933,11 +8051,10 @@ impl std::fmt::Debug for BlacklistEntry {
         formatter.finish()
     }
 }
-/// See [`BlacklistEntry`](crate::model::BlacklistEntry)
+/// See [`BlacklistEntry`](crate::model::BlacklistEntry).
 pub mod blacklist_entry {
 
-    /// A builder for [`BlacklistEntry`](crate::model::BlacklistEntry)
-    #[non_exhaustive]
+    /// A builder for [`BlacklistEntry`](crate::model::BlacklistEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rbl_name: std::option::Option<std::string::String>,
@@ -7978,7 +8095,7 @@ pub mod blacklist_entry {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`BlacklistEntry`](crate::model::BlacklistEntry)
+        /// Consumes the builder and constructs a [`BlacklistEntry`](crate::model::BlacklistEntry).
         pub fn build(self) -> crate::model::BlacklistEntry {
             crate::model::BlacklistEntry {
                 rbl_name: self.rbl_name,
@@ -7989,7 +8106,7 @@ pub mod blacklist_entry {
     }
 }
 impl BlacklistEntry {
-    /// Creates a new builder-style object to manufacture [`BlacklistEntry`](crate::model::BlacklistEntry)
+    /// Creates a new builder-style object to manufacture [`BlacklistEntry`](crate::model::BlacklistEntry).
     pub fn builder() -> crate::model::blacklist_entry::Builder {
         crate::model::blacklist_entry::Builder::default()
     }
@@ -8004,16 +8121,22 @@ pub struct AccountDetails {
     /// <li> <p> <code>MARKETING</code> – Most of your sending traffic is to keep your customers informed of your latest offering.</p> </li>
     /// <li> <p> <code>TRANSACTIONAL</code> – Most of your sending traffic is to communicate during a transaction with a customer.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub mail_type: std::option::Option<crate::model::MailType>,
     /// <p>The URL of your website. This information helps us better understand the type of content that you plan to send.</p>
+    #[doc(hidden)]
     pub website_url: std::option::Option<std::string::String>,
     /// <p>The language you would prefer for the case. The contact language can be one of <code>ENGLISH</code> or <code>JAPANESE</code>.</p>
+    #[doc(hidden)]
     pub contact_language: std::option::Option<crate::model::ContactLanguage>,
     /// <p>A description of the types of email that you plan to send.</p>
+    #[doc(hidden)]
     pub use_case_description: std::option::Option<std::string::String>,
     /// <p>Additional email addresses where updates are sent about your account review process.</p>
+    #[doc(hidden)]
     pub additional_contact_email_addresses: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Information about the review of the latest details you submitted.</p>
+    #[doc(hidden)]
     pub review_details: std::option::Option<crate::model::ReviewDetails>,
 }
 impl AccountDetails {
@@ -8063,11 +8186,10 @@ impl std::fmt::Debug for AccountDetails {
         formatter.finish()
     }
 }
-/// See [`AccountDetails`](crate::model::AccountDetails)
+/// See [`AccountDetails`](crate::model::AccountDetails).
 pub mod account_details {
 
-    /// A builder for [`AccountDetails`](crate::model::AccountDetails)
-    #[non_exhaustive]
+    /// A builder for [`AccountDetails`](crate::model::AccountDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mail_type: std::option::Option<crate::model::MailType>,
@@ -8168,7 +8290,7 @@ pub mod account_details {
             self.review_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountDetails`](crate::model::AccountDetails)
+        /// Consumes the builder and constructs a [`AccountDetails`](crate::model::AccountDetails).
         pub fn build(self) -> crate::model::AccountDetails {
             crate::model::AccountDetails {
                 mail_type: self.mail_type,
@@ -8182,7 +8304,7 @@ pub mod account_details {
     }
 }
 impl AccountDetails {
-    /// Creates a new builder-style object to manufacture [`AccountDetails`](crate::model::AccountDetails)
+    /// Creates a new builder-style object to manufacture [`AccountDetails`](crate::model::AccountDetails).
     pub fn builder() -> crate::model::account_details::Builder {
         crate::model::account_details::Builder::default()
     }
@@ -8199,8 +8321,10 @@ pub struct ReviewDetails {
     /// <li> <p> <code>DENIED</code> – Your appeal has been reviewed and your production access has been denied.</p> </li>
     /// <li> <p> <code>FAILED</code> – An internal error occurred and we didn't receive your appeal. You can submit your appeal again.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ReviewStatus>,
     /// <p>The associated support center case ID (if any).</p>
+    #[doc(hidden)]
     pub case_id: std::option::Option<std::string::String>,
 }
 impl ReviewDetails {
@@ -8227,11 +8351,10 @@ impl std::fmt::Debug for ReviewDetails {
         formatter.finish()
     }
 }
-/// See [`ReviewDetails`](crate::model::ReviewDetails)
+/// See [`ReviewDetails`](crate::model::ReviewDetails).
 pub mod review_details {
 
-    /// A builder for [`ReviewDetails`](crate::model::ReviewDetails)
-    #[non_exhaustive]
+    /// A builder for [`ReviewDetails`](crate::model::ReviewDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ReviewStatus>,
@@ -8273,7 +8396,7 @@ pub mod review_details {
             self.case_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReviewDetails`](crate::model::ReviewDetails)
+        /// Consumes the builder and constructs a [`ReviewDetails`](crate::model::ReviewDetails).
         pub fn build(self) -> crate::model::ReviewDetails {
             crate::model::ReviewDetails {
                 status: self.status,
@@ -8283,7 +8406,7 @@ pub mod review_details {
     }
 }
 impl ReviewDetails {
-    /// Creates a new builder-style object to manufacture [`ReviewDetails`](crate::model::ReviewDetails)
+    /// Creates a new builder-style object to manufacture [`ReviewDetails`](crate::model::ReviewDetails).
     pub fn builder() -> crate::model::review_details::Builder {
         crate::model::review_details::Builder::default()
     }
@@ -8361,6 +8484,7 @@ pub struct SuppressionAttributes {
     /// <li> <p> <code>COMPLAINT</code> – Amazon SES adds an email address to the suppression list for your account when a message sent to that address results in a complaint.</p> </li>
     /// <li> <p> <code>BOUNCE</code> – Amazon SES adds an email address to the suppression list for your account when a message sent to that address results in a hard bounce.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub suppressed_reasons: std::option::Option<std::vec::Vec<crate::model::SuppressionListReason>>,
 }
 impl SuppressionAttributes {
@@ -8382,11 +8506,10 @@ impl std::fmt::Debug for SuppressionAttributes {
         formatter.finish()
     }
 }
-/// See [`SuppressionAttributes`](crate::model::SuppressionAttributes)
+/// See [`SuppressionAttributes`](crate::model::SuppressionAttributes).
 pub mod suppression_attributes {
 
-    /// A builder for [`SuppressionAttributes`](crate::model::SuppressionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`SuppressionAttributes`](crate::model::SuppressionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) suppressed_reasons:
@@ -8420,7 +8543,7 @@ pub mod suppression_attributes {
             self.suppressed_reasons = input;
             self
         }
-        /// Consumes the builder and constructs a [`SuppressionAttributes`](crate::model::SuppressionAttributes)
+        /// Consumes the builder and constructs a [`SuppressionAttributes`](crate::model::SuppressionAttributes).
         pub fn build(self) -> crate::model::SuppressionAttributes {
             crate::model::SuppressionAttributes {
                 suppressed_reasons: self.suppressed_reasons,
@@ -8429,7 +8552,7 @@ pub mod suppression_attributes {
     }
 }
 impl SuppressionAttributes {
-    /// Creates a new builder-style object to manufacture [`SuppressionAttributes`](crate::model::SuppressionAttributes)
+    /// Creates a new builder-style object to manufacture [`SuppressionAttributes`](crate::model::SuppressionAttributes).
     pub fn builder() -> crate::model::suppression_attributes::Builder {
         crate::model::suppression_attributes::Builder::default()
     }
@@ -8440,10 +8563,13 @@ impl SuppressionAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SendQuota {
     /// <p>The maximum number of emails that you can send in the current Amazon Web Services Region over a 24-hour period. This value is also called your <i>sending quota</i>.</p>
+    #[doc(hidden)]
     pub max24_hour_send: f64,
     /// <p>The maximum number of emails that you can send per second in the current Amazon Web Services Region. This value is also called your <i>maximum sending rate</i> or your <i>maximum TPS (transactions per second) rate</i>.</p>
+    #[doc(hidden)]
     pub max_send_rate: f64,
     /// <p>The number of emails sent from your Amazon SES account in the current Amazon Web Services Region over the past 24 hours.</p>
+    #[doc(hidden)]
     pub sent_last24_hours: f64,
 }
 impl SendQuota {
@@ -8469,11 +8595,10 @@ impl std::fmt::Debug for SendQuota {
         formatter.finish()
     }
 }
-/// See [`SendQuota`](crate::model::SendQuota)
+/// See [`SendQuota`](crate::model::SendQuota).
 pub mod send_quota {
 
-    /// A builder for [`SendQuota`](crate::model::SendQuota)
-    #[non_exhaustive]
+    /// A builder for [`SendQuota`](crate::model::SendQuota).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max24_hour_send: std::option::Option<f64>,
@@ -8511,7 +8636,7 @@ pub mod send_quota {
             self.sent_last24_hours = input;
             self
         }
-        /// Consumes the builder and constructs a [`SendQuota`](crate::model::SendQuota)
+        /// Consumes the builder and constructs a [`SendQuota`](crate::model::SendQuota).
         pub fn build(self) -> crate::model::SendQuota {
             crate::model::SendQuota {
                 max24_hour_send: self.max24_hour_send.unwrap_or_default(),
@@ -8522,7 +8647,7 @@ pub mod send_quota {
     }
 }
 impl SendQuota {
-    /// Creates a new builder-style object to manufacture [`SendQuota`](crate::model::SendQuota)
+    /// Creates a new builder-style object to manufacture [`SendQuota`](crate::model::SendQuota).
     pub fn builder() -> crate::model::send_quota::Builder {
         crate::model::send_quota::Builder::default()
     }

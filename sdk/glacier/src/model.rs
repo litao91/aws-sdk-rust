@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VaultNotificationConfig {
     /// <p>The Amazon Simple Notification Service (Amazon SNS) topic Amazon Resource Name (ARN).</p>
+    #[doc(hidden)]
     pub sns_topic: std::option::Option<std::string::String>,
     /// <p>A list of one or more events for which Amazon S3 Glacier will send a notification to the specified Amazon SNS topic.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VaultNotificationConfig {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for VaultNotificationConfig {
         formatter.finish()
     }
 }
-/// See [`VaultNotificationConfig`](crate::model::VaultNotificationConfig)
+/// See [`VaultNotificationConfig`](crate::model::VaultNotificationConfig).
 pub mod vault_notification_config {
 
-    /// A builder for [`VaultNotificationConfig`](crate::model::VaultNotificationConfig)
-    #[non_exhaustive]
+    /// A builder for [`VaultNotificationConfig`](crate::model::VaultNotificationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sns_topic: std::option::Option<std::string::String>,
@@ -67,7 +68,7 @@ pub mod vault_notification_config {
             self.events = input;
             self
         }
-        /// Consumes the builder and constructs a [`VaultNotificationConfig`](crate::model::VaultNotificationConfig)
+        /// Consumes the builder and constructs a [`VaultNotificationConfig`](crate::model::VaultNotificationConfig).
         pub fn build(self) -> crate::model::VaultNotificationConfig {
             crate::model::VaultNotificationConfig {
                 sns_topic: self.sns_topic,
@@ -77,7 +78,7 @@ pub mod vault_notification_config {
     }
 }
 impl VaultNotificationConfig {
-    /// Creates a new builder-style object to manufacture [`VaultNotificationConfig`](crate::model::VaultNotificationConfig)
+    /// Creates a new builder-style object to manufacture [`VaultNotificationConfig`](crate::model::VaultNotificationConfig).
     pub fn builder() -> crate::model::vault_notification_config::Builder {
         crate::model::vault_notification_config::Builder::default()
     }
@@ -88,6 +89,7 @@ impl VaultNotificationConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VaultAccessPolicy {
     /// <p>The vault access policy.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl VaultAccessPolicy {
@@ -103,11 +105,10 @@ impl std::fmt::Debug for VaultAccessPolicy {
         formatter.finish()
     }
 }
-/// See [`VaultAccessPolicy`](crate::model::VaultAccessPolicy)
+/// See [`VaultAccessPolicy`](crate::model::VaultAccessPolicy).
 pub mod vault_access_policy {
 
-    /// A builder for [`VaultAccessPolicy`](crate::model::VaultAccessPolicy)
-    #[non_exhaustive]
+    /// A builder for [`VaultAccessPolicy`](crate::model::VaultAccessPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<std::string::String>,
@@ -123,7 +124,7 @@ pub mod vault_access_policy {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`VaultAccessPolicy`](crate::model::VaultAccessPolicy)
+        /// Consumes the builder and constructs a [`VaultAccessPolicy`](crate::model::VaultAccessPolicy).
         pub fn build(self) -> crate::model::VaultAccessPolicy {
             crate::model::VaultAccessPolicy {
                 policy: self.policy,
@@ -132,7 +133,7 @@ pub mod vault_access_policy {
     }
 }
 impl VaultAccessPolicy {
-    /// Creates a new builder-style object to manufacture [`VaultAccessPolicy`](crate::model::VaultAccessPolicy)
+    /// Creates a new builder-style object to manufacture [`VaultAccessPolicy`](crate::model::VaultAccessPolicy).
     pub fn builder() -> crate::model::vault_access_policy::Builder {
         crate::model::vault_access_policy::Builder::default()
     }
@@ -143,6 +144,7 @@ impl VaultAccessPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataRetrievalPolicy {
     /// <p>The policy rule. Although this is a list type, currently there must be only one rule, which contains a Strategy field and optionally a BytesPerHour field.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::DataRetrievalRule>>,
 }
 impl DataRetrievalPolicy {
@@ -158,11 +160,10 @@ impl std::fmt::Debug for DataRetrievalPolicy {
         formatter.finish()
     }
 }
-/// See [`DataRetrievalPolicy`](crate::model::DataRetrievalPolicy)
+/// See [`DataRetrievalPolicy`](crate::model::DataRetrievalPolicy).
 pub mod data_retrieval_policy {
 
-    /// A builder for [`DataRetrievalPolicy`](crate::model::DataRetrievalPolicy)
-    #[non_exhaustive]
+    /// A builder for [`DataRetrievalPolicy`](crate::model::DataRetrievalPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rules: std::option::Option<std::vec::Vec<crate::model::DataRetrievalRule>>,
@@ -187,14 +188,14 @@ pub mod data_retrieval_policy {
             self.rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataRetrievalPolicy`](crate::model::DataRetrievalPolicy)
+        /// Consumes the builder and constructs a [`DataRetrievalPolicy`](crate::model::DataRetrievalPolicy).
         pub fn build(self) -> crate::model::DataRetrievalPolicy {
             crate::model::DataRetrievalPolicy { rules: self.rules }
         }
     }
 }
 impl DataRetrievalPolicy {
-    /// Creates a new builder-style object to manufacture [`DataRetrievalPolicy`](crate::model::DataRetrievalPolicy)
+    /// Creates a new builder-style object to manufacture [`DataRetrievalPolicy`](crate::model::DataRetrievalPolicy).
     pub fn builder() -> crate::model::data_retrieval_policy::Builder {
         crate::model::data_retrieval_policy::Builder::default()
     }
@@ -206,9 +207,11 @@ impl DataRetrievalPolicy {
 pub struct DataRetrievalRule {
     /// <p>The type of data retrieval policy to set.</p>
     /// <p>Valid values: BytesPerHour|FreeTier|None</p>
+    #[doc(hidden)]
     pub strategy: std::option::Option<std::string::String>,
     /// <p>The maximum number of bytes that can be retrieved in an hour.</p>
     /// <p>This field is required only if the value of the Strategy field is <code>BytesPerHour</code>. Your PUT operation will be rejected if the Strategy field is not set to <code>BytesPerHour</code> and you set this field.</p>
+    #[doc(hidden)]
     pub bytes_per_hour: std::option::Option<i64>,
 }
 impl DataRetrievalRule {
@@ -231,11 +234,10 @@ impl std::fmt::Debug for DataRetrievalRule {
         formatter.finish()
     }
 }
-/// See [`DataRetrievalRule`](crate::model::DataRetrievalRule)
+/// See [`DataRetrievalRule`](crate::model::DataRetrievalRule).
 pub mod data_retrieval_rule {
 
-    /// A builder for [`DataRetrievalRule`](crate::model::DataRetrievalRule)
-    #[non_exhaustive]
+    /// A builder for [`DataRetrievalRule`](crate::model::DataRetrievalRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) strategy: std::option::Option<std::string::String>,
@@ -266,7 +268,7 @@ pub mod data_retrieval_rule {
             self.bytes_per_hour = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataRetrievalRule`](crate::model::DataRetrievalRule)
+        /// Consumes the builder and constructs a [`DataRetrievalRule`](crate::model::DataRetrievalRule).
         pub fn build(self) -> crate::model::DataRetrievalRule {
             crate::model::DataRetrievalRule {
                 strategy: self.strategy,
@@ -276,7 +278,7 @@ pub mod data_retrieval_rule {
     }
 }
 impl DataRetrievalRule {
-    /// Creates a new builder-style object to manufacture [`DataRetrievalRule`](crate::model::DataRetrievalRule)
+    /// Creates a new builder-style object to manufacture [`DataRetrievalRule`](crate::model::DataRetrievalRule).
     pub fn builder() -> crate::model::data_retrieval_rule::Builder {
         crate::model::data_retrieval_rule::Builder::default()
     }
@@ -287,16 +289,22 @@ impl DataRetrievalRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeVaultOutput {
     /// <p>The Amazon Resource Name (ARN) of the vault.</p>
+    #[doc(hidden)]
     pub vault_arn: std::option::Option<std::string::String>,
     /// <p>The name of the vault.</p>
+    #[doc(hidden)]
     pub vault_name: std::option::Option<std::string::String>,
     /// <p>The Universal Coordinated Time (UTC) date when the vault was created. This value should be a string in the ISO 8601 date format, for example <code>2012-03-20T17:03:43.221Z</code>.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The Universal Coordinated Time (UTC) date when Amazon S3 Glacier completed the last vault inventory. This value should be a string in the ISO 8601 date format, for example <code>2012-03-20T17:03:43.221Z</code>.</p>
+    #[doc(hidden)]
     pub last_inventory_date: std::option::Option<std::string::String>,
     /// <p>The number of archives in the vault as of the last inventory date. This field will return <code>null</code> if an inventory has not yet run on the vault, for example if you just created the vault.</p>
+    #[doc(hidden)]
     pub number_of_archives: i64,
     /// <p>Total size, in bytes, of the archives in the vault as of the last inventory date. This field will return null if an inventory has not yet run on the vault, for example if you just created the vault.</p>
+    #[doc(hidden)]
     pub size_in_bytes: i64,
 }
 impl DescribeVaultOutput {
@@ -337,11 +345,10 @@ impl std::fmt::Debug for DescribeVaultOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeVaultOutput`](crate::model::DescribeVaultOutput)
+/// See [`DescribeVaultOutput`](crate::model::DescribeVaultOutput).
 pub mod describe_vault_output {
 
-    /// A builder for [`DescribeVaultOutput`](crate::model::DescribeVaultOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeVaultOutput`](crate::model::DescribeVaultOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vault_arn: std::option::Option<std::string::String>,
@@ -418,7 +425,7 @@ pub mod describe_vault_output {
             self.size_in_bytes = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeVaultOutput`](crate::model::DescribeVaultOutput)
+        /// Consumes the builder and constructs a [`DescribeVaultOutput`](crate::model::DescribeVaultOutput).
         pub fn build(self) -> crate::model::DescribeVaultOutput {
             crate::model::DescribeVaultOutput {
                 vault_arn: self.vault_arn,
@@ -432,7 +439,7 @@ pub mod describe_vault_output {
     }
 }
 impl DescribeVaultOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeVaultOutput`](crate::model::DescribeVaultOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeVaultOutput`](crate::model::DescribeVaultOutput).
     pub fn builder() -> crate::model::describe_vault_output::Builder {
         crate::model::describe_vault_output::Builder::default()
     }
@@ -443,10 +450,13 @@ impl DescribeVaultOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProvisionedCapacityDescription {
     /// <p>The ID that identifies the provisioned capacity unit.</p>
+    #[doc(hidden)]
     pub capacity_id: std::option::Option<std::string::String>,
     /// <p>The date that the provisioned capacity unit was purchased, in Universal Coordinated Time (UTC).</p>
+    #[doc(hidden)]
     pub start_date: std::option::Option<std::string::String>,
     /// <p>The date that the provisioned capacity unit expires, in Universal Coordinated Time (UTC).</p>
+    #[doc(hidden)]
     pub expiration_date: std::option::Option<std::string::String>,
 }
 impl ProvisionedCapacityDescription {
@@ -472,11 +482,10 @@ impl std::fmt::Debug for ProvisionedCapacityDescription {
         formatter.finish()
     }
 }
-/// See [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription)
+/// See [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription).
 pub mod provisioned_capacity_description {
 
-    /// A builder for [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription)
-    #[non_exhaustive]
+    /// A builder for [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) capacity_id: std::option::Option<std::string::String>,
@@ -517,7 +526,7 @@ pub mod provisioned_capacity_description {
             self.expiration_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription)
+        /// Consumes the builder and constructs a [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription).
         pub fn build(self) -> crate::model::ProvisionedCapacityDescription {
             crate::model::ProvisionedCapacityDescription {
                 capacity_id: self.capacity_id,
@@ -528,7 +537,7 @@ pub mod provisioned_capacity_description {
     }
 }
 impl ProvisionedCapacityDescription {
-    /// Creates a new builder-style object to manufacture [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription)
+    /// Creates a new builder-style object to manufacture [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription).
     pub fn builder() -> crate::model::provisioned_capacity_description::Builder {
         crate::model::provisioned_capacity_description::Builder::default()
     }
@@ -539,8 +548,10 @@ impl ProvisionedCapacityDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PartListElement {
     /// <p>The byte range of a part, inclusive of the upper value of the range.</p>
+    #[doc(hidden)]
     pub range_in_bytes: std::option::Option<std::string::String>,
     /// <p>The SHA256 tree hash value that Amazon S3 Glacier calculated for the part. This field is never <code>null</code>.</p>
+    #[doc(hidden)]
     pub sha256_tree_hash: std::option::Option<std::string::String>,
 }
 impl PartListElement {
@@ -561,11 +572,10 @@ impl std::fmt::Debug for PartListElement {
         formatter.finish()
     }
 }
-/// See [`PartListElement`](crate::model::PartListElement)
+/// See [`PartListElement`](crate::model::PartListElement).
 pub mod part_list_element {
 
-    /// A builder for [`PartListElement`](crate::model::PartListElement)
-    #[non_exhaustive]
+    /// A builder for [`PartListElement`](crate::model::PartListElement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) range_in_bytes: std::option::Option<std::string::String>,
@@ -598,7 +608,7 @@ pub mod part_list_element {
             self.sha256_tree_hash = input;
             self
         }
-        /// Consumes the builder and constructs a [`PartListElement`](crate::model::PartListElement)
+        /// Consumes the builder and constructs a [`PartListElement`](crate::model::PartListElement).
         pub fn build(self) -> crate::model::PartListElement {
             crate::model::PartListElement {
                 range_in_bytes: self.range_in_bytes,
@@ -608,7 +618,7 @@ pub mod part_list_element {
     }
 }
 impl PartListElement {
-    /// Creates a new builder-style object to manufacture [`PartListElement`](crate::model::PartListElement)
+    /// Creates a new builder-style object to manufacture [`PartListElement`](crate::model::PartListElement).
     pub fn builder() -> crate::model::part_list_element::Builder {
         crate::model::part_list_element::Builder::default()
     }
@@ -619,14 +629,19 @@ impl PartListElement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UploadListElement {
     /// <p>The ID of a multipart upload.</p>
+    #[doc(hidden)]
     pub multipart_upload_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the vault that contains the archive.</p>
+    #[doc(hidden)]
     pub vault_arn: std::option::Option<std::string::String>,
     /// <p>The description of the archive that was specified in the Initiate Multipart Upload request.</p>
+    #[doc(hidden)]
     pub archive_description: std::option::Option<std::string::String>,
     /// <p>The part size, in bytes, specified in the Initiate Multipart Upload request. This is the size of all the parts in the upload except the last part, which may be smaller than this size.</p>
+    #[doc(hidden)]
     pub part_size_in_bytes: i64,
     /// <p>The UTC time at which the multipart upload was initiated.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
 }
 impl UploadListElement {
@@ -662,11 +677,10 @@ impl std::fmt::Debug for UploadListElement {
         formatter.finish()
     }
 }
-/// See [`UploadListElement`](crate::model::UploadListElement)
+/// See [`UploadListElement`](crate::model::UploadListElement).
 pub mod upload_list_element {
 
-    /// A builder for [`UploadListElement`](crate::model::UploadListElement)
-    #[non_exhaustive]
+    /// A builder for [`UploadListElement`](crate::model::UploadListElement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) multipart_upload_id: std::option::Option<std::string::String>,
@@ -735,7 +749,7 @@ pub mod upload_list_element {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`UploadListElement`](crate::model::UploadListElement)
+        /// Consumes the builder and constructs a [`UploadListElement`](crate::model::UploadListElement).
         pub fn build(self) -> crate::model::UploadListElement {
             crate::model::UploadListElement {
                 multipart_upload_id: self.multipart_upload_id,
@@ -748,7 +762,7 @@ pub mod upload_list_element {
     }
 }
 impl UploadListElement {
-    /// Creates a new builder-style object to manufacture [`UploadListElement`](crate::model::UploadListElement)
+    /// Creates a new builder-style object to manufacture [`UploadListElement`](crate::model::UploadListElement).
     pub fn builder() -> crate::model::upload_list_element::Builder {
         crate::model::upload_list_element::Builder::default()
     }
@@ -759,30 +773,43 @@ impl UploadListElement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GlacierJobDescription {
     /// <p>An opaque string that identifies an Amazon S3 Glacier job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The job description provided when initiating the job.</p>
+    #[doc(hidden)]
     pub job_description: std::option::Option<std::string::String>,
     /// <p>The job type. This value is either <code>ArchiveRetrieval</code>, <code>InventoryRetrieval</code>, or <code>Select</code>. </p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ActionCode>,
     /// <p>The archive ID requested for a select job or archive retrieval. Otherwise, this field is null.</p>
+    #[doc(hidden)]
     pub archive_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the vault from which an archive retrieval was requested.</p>
+    #[doc(hidden)]
     pub vault_arn: std::option::Option<std::string::String>,
     /// <p>The UTC date when the job was created. This value is a string representation of ISO 8601 date format, for example <code>"2012-03-20T17:03:43.221Z"</code>.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The job status. When a job is completed, you get the job's output using Get Job Output (GET output).</p>
+    #[doc(hidden)]
     pub completed: bool,
     /// <p>The status code can be <code>InProgress</code>, <code>Succeeded</code>, or <code>Failed</code>, and indicates the status of the job.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::StatusCode>,
     /// <p>A friendly message that describes the job status.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>For an archive retrieval job, this value is the size in bytes of the archive being requested for download. For an inventory retrieval or select job, this value is null.</p>
+    #[doc(hidden)]
     pub archive_size_in_bytes: std::option::Option<i64>,
     /// <p>For an inventory retrieval job, this value is the size in bytes of the inventory requested for download. For an archive retrieval or select job, this value is null.</p>
+    #[doc(hidden)]
     pub inventory_size_in_bytes: std::option::Option<i64>,
     /// <p>An Amazon SNS topic that receives notification.</p>
+    #[doc(hidden)]
     pub sns_topic: std::option::Option<std::string::String>,
     /// <p>The UTC time that the job request completed. While the job is in progress, the value is null.</p>
+    #[doc(hidden)]
     pub completion_date: std::option::Option<std::string::String>,
     /// <p>For an archive retrieval job, this value is the checksum of the archive. Otherwise, this value is null.</p>
     /// <p>The SHA256 tree hash value for the requested range of an archive. If the <b>InitiateJob</b> request for an archive specified a tree-hash aligned range, then this field returns a value.</p>
@@ -798,21 +825,29 @@ pub struct GlacierJobDescription {
     /// <li> <p>Inventory jobs</p> </li>
     /// <li> <p>Select jobs</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub sha256_tree_hash: std::option::Option<std::string::String>,
     /// <p>The SHA256 tree hash of the entire archive for an archive retrieval. For inventory retrieval or select jobs, this field is null.</p>
+    #[doc(hidden)]
     pub archive_sha256_tree_hash: std::option::Option<std::string::String>,
     /// <p>The retrieved byte range for archive retrieval jobs in the form <i>StartByteValue</i>-<i>EndByteValue</i>. If no range was specified in the archive retrieval, then the whole archive is retrieved. In this case, <i>StartByteValue</i> equals 0 and <i>EndByteValue</i> equals the size of the archive minus 1. For inventory retrieval or select jobs, this field is null. </p>
+    #[doc(hidden)]
     pub retrieval_byte_range: std::option::Option<std::string::String>,
     /// <p>The tier to use for a select or an archive retrieval. Valid values are <code>Expedited</code>, <code>Standard</code>, or <code>Bulk</code>. <code>Standard</code> is the default.</p>
+    #[doc(hidden)]
     pub tier: std::option::Option<std::string::String>,
     /// <p>Parameters used for range inventory retrieval.</p>
+    #[doc(hidden)]
     pub inventory_retrieval_parameters:
         std::option::Option<crate::model::InventoryRetrievalJobDescription>,
     /// <p>Contains the job output location.</p>
+    #[doc(hidden)]
     pub job_output_path: std::option::Option<std::string::String>,
     /// <p>Contains the parameters used for a select.</p>
+    #[doc(hidden)]
     pub select_parameters: std::option::Option<crate::model::SelectParameters>,
     /// <p>Contains the location where the data from the select job is stored.</p>
+    #[doc(hidden)]
     pub output_location: std::option::Option<crate::model::OutputLocation>,
 }
 impl GlacierJobDescription {
@@ -946,11 +981,10 @@ impl std::fmt::Debug for GlacierJobDescription {
         formatter.finish()
     }
 }
-/// See [`GlacierJobDescription`](crate::model::GlacierJobDescription)
+/// See [`GlacierJobDescription`](crate::model::GlacierJobDescription).
 pub mod glacier_job_description {
 
-    /// A builder for [`GlacierJobDescription`](crate::model::GlacierJobDescription)
-    #[non_exhaustive]
+    /// A builder for [`GlacierJobDescription`](crate::model::GlacierJobDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -1252,7 +1286,7 @@ pub mod glacier_job_description {
             self.output_location = input;
             self
         }
-        /// Consumes the builder and constructs a [`GlacierJobDescription`](crate::model::GlacierJobDescription)
+        /// Consumes the builder and constructs a [`GlacierJobDescription`](crate::model::GlacierJobDescription).
         pub fn build(self) -> crate::model::GlacierJobDescription {
             crate::model::GlacierJobDescription {
                 job_id: self.job_id,
@@ -1281,7 +1315,7 @@ pub mod glacier_job_description {
     }
 }
 impl GlacierJobDescription {
-    /// Creates a new builder-style object to manufacture [`GlacierJobDescription`](crate::model::GlacierJobDescription)
+    /// Creates a new builder-style object to manufacture [`GlacierJobDescription`](crate::model::GlacierJobDescription).
     pub fn builder() -> crate::model::glacier_job_description::Builder {
         crate::model::glacier_job_description::Builder::default()
     }
@@ -1292,6 +1326,7 @@ impl GlacierJobDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputLocation {
     /// <p>Describes an S3 location that will receive the results of the job request.</p>
+    #[doc(hidden)]
     pub s3: std::option::Option<crate::model::S3Location>,
 }
 impl OutputLocation {
@@ -1307,11 +1342,10 @@ impl std::fmt::Debug for OutputLocation {
         formatter.finish()
     }
 }
-/// See [`OutputLocation`](crate::model::OutputLocation)
+/// See [`OutputLocation`](crate::model::OutputLocation).
 pub mod output_location {
 
-    /// A builder for [`OutputLocation`](crate::model::OutputLocation)
-    #[non_exhaustive]
+    /// A builder for [`OutputLocation`](crate::model::OutputLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3: std::option::Option<crate::model::S3Location>,
@@ -1327,14 +1361,14 @@ pub mod output_location {
             self.s3 = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputLocation`](crate::model::OutputLocation)
+        /// Consumes the builder and constructs a [`OutputLocation`](crate::model::OutputLocation).
         pub fn build(self) -> crate::model::OutputLocation {
             crate::model::OutputLocation { s3: self.s3 }
         }
     }
 }
 impl OutputLocation {
-    /// Creates a new builder-style object to manufacture [`OutputLocation`](crate::model::OutputLocation)
+    /// Creates a new builder-style object to manufacture [`OutputLocation`](crate::model::OutputLocation).
     pub fn builder() -> crate::model::output_location::Builder {
         crate::model::output_location::Builder::default()
     }
@@ -1345,22 +1379,30 @@ impl OutputLocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Location {
     /// <p>The name of the Amazon S3 bucket where the job results are stored.</p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p>The prefix that is prepended to the results for this request.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>Contains information about the encryption used to store the job results in Amazon S3.</p>
+    #[doc(hidden)]
     pub encryption: std::option::Option<crate::model::Encryption>,
     /// <p>The canned access control list (ACL) to apply to the job results.</p>
+    #[doc(hidden)]
     pub canned_acl: std::option::Option<crate::model::CannedAcl>,
     /// <p>A list of grants that control access to the staged results.</p>
+    #[doc(hidden)]
     pub access_control_list: std::option::Option<std::vec::Vec<crate::model::Grant>>,
     /// <p>The tag-set that is applied to the job results.</p>
+    #[doc(hidden)]
     pub tagging:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A map of metadata to store with the job results in Amazon S3.</p>
+    #[doc(hidden)]
     pub user_metadata:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The storage class used to store the job results.</p>
+    #[doc(hidden)]
     pub storage_class: std::option::Option<crate::model::StorageClass>,
 }
 impl S3Location {
@@ -1417,11 +1459,10 @@ impl std::fmt::Debug for S3Location {
         formatter.finish()
     }
 }
-/// See [`S3Location`](crate::model::S3Location)
+/// See [`S3Location`](crate::model::S3Location).
 pub mod s3_location {
 
-    /// A builder for [`S3Location`](crate::model::S3Location)
-    #[non_exhaustive]
+    /// A builder for [`S3Location`](crate::model::S3Location).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_name: std::option::Option<std::string::String>,
@@ -1566,7 +1607,7 @@ pub mod s3_location {
             self.storage_class = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location)
+        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location).
         pub fn build(self) -> crate::model::S3Location {
             crate::model::S3Location {
                 bucket_name: self.bucket_name,
@@ -1582,7 +1623,7 @@ pub mod s3_location {
     }
 }
 impl S3Location {
-    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location)
+    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location).
     pub fn builder() -> crate::model::s3_location::Builder {
         crate::model::s3_location::Builder::default()
     }
@@ -1652,8 +1693,10 @@ impl AsRef<str> for StorageClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Grant {
     /// <p>The grantee.</p>
+    #[doc(hidden)]
     pub grantee: std::option::Option<crate::model::Grantee>,
     /// <p>Specifies the permission given to the grantee. </p>
+    #[doc(hidden)]
     pub permission: std::option::Option<crate::model::Permission>,
 }
 impl Grant {
@@ -1674,11 +1717,10 @@ impl std::fmt::Debug for Grant {
         formatter.finish()
     }
 }
-/// See [`Grant`](crate::model::Grant)
+/// See [`Grant`](crate::model::Grant).
 pub mod grant {
 
-    /// A builder for [`Grant`](crate::model::Grant)
-    #[non_exhaustive]
+    /// A builder for [`Grant`](crate::model::Grant).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) grantee: std::option::Option<crate::model::Grantee>,
@@ -1708,7 +1750,7 @@ pub mod grant {
             self.permission = input;
             self
         }
-        /// Consumes the builder and constructs a [`Grant`](crate::model::Grant)
+        /// Consumes the builder and constructs a [`Grant`](crate::model::Grant).
         pub fn build(self) -> crate::model::Grant {
             crate::model::Grant {
                 grantee: self.grantee,
@@ -1718,7 +1760,7 @@ pub mod grant {
     }
 }
 impl Grant {
-    /// Creates a new builder-style object to manufacture [`Grant`](crate::model::Grant)
+    /// Creates a new builder-style object to manufacture [`Grant`](crate::model::Grant).
     pub fn builder() -> crate::model::grant::Builder {
         crate::model::grant::Builder::default()
     }
@@ -1796,14 +1838,19 @@ impl AsRef<str> for Permission {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Grantee {
     /// <p>Type of grantee</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
     /// <p>Screen name of the grantee.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>URI of the grantee group.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
     /// <p>The canonical user ID of the grantee.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Email address of the grantee.</p>
+    #[doc(hidden)]
     pub email_address: std::option::Option<std::string::String>,
 }
 impl Grantee {
@@ -1839,11 +1886,10 @@ impl std::fmt::Debug for Grantee {
         formatter.finish()
     }
 }
-/// See [`Grantee`](crate::model::Grantee)
+/// See [`Grantee`](crate::model::Grantee).
 pub mod grantee {
 
-    /// A builder for [`Grantee`](crate::model::Grantee)
-    #[non_exhaustive]
+    /// A builder for [`Grantee`](crate::model::Grantee).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::Type>,
@@ -1906,7 +1952,7 @@ pub mod grantee {
             self.email_address = input;
             self
         }
-        /// Consumes the builder and constructs a [`Grantee`](crate::model::Grantee)
+        /// Consumes the builder and constructs a [`Grantee`](crate::model::Grantee).
         pub fn build(self) -> crate::model::Grantee {
             crate::model::Grantee {
                 r#type: self.r#type,
@@ -1919,7 +1965,7 @@ pub mod grantee {
     }
 }
 impl Grantee {
-    /// Creates a new builder-style object to manufacture [`Grantee`](crate::model::Grantee)
+    /// Creates a new builder-style object to manufacture [`Grantee`](crate::model::Grantee).
     pub fn builder() -> crate::model::grantee::Builder {
         crate::model::grantee::Builder::default()
     }
@@ -2072,10 +2118,13 @@ impl AsRef<str> for CannedAcl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Encryption {
     /// <p>The server-side encryption algorithm used when storing job results in Amazon S3, for example <code>AES256</code> or <code>aws:kms</code>.</p>
+    #[doc(hidden)]
     pub encryption_type: std::option::Option<crate::model::EncryptionType>,
     /// <p>The AWS KMS key ID to use for object encryption. All GET and PUT requests for an object protected by AWS KMS fail if not made by using Secure Sockets Layer (SSL) or Signature Version 4. </p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>Optional. If the encryption type is <code>aws:kms</code>, you can use this value to specify the encryption context for the job results.</p>
+    #[doc(hidden)]
     pub kms_context: std::option::Option<std::string::String>,
 }
 impl Encryption {
@@ -2101,11 +2150,10 @@ impl std::fmt::Debug for Encryption {
         formatter.finish()
     }
 }
-/// See [`Encryption`](crate::model::Encryption)
+/// See [`Encryption`](crate::model::Encryption).
 pub mod encryption {
 
-    /// A builder for [`Encryption`](crate::model::Encryption)
-    #[non_exhaustive]
+    /// A builder for [`Encryption`](crate::model::Encryption).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encryption_type: std::option::Option<crate::model::EncryptionType>,
@@ -2146,7 +2194,7 @@ pub mod encryption {
             self.kms_context = input;
             self
         }
-        /// Consumes the builder and constructs a [`Encryption`](crate::model::Encryption)
+        /// Consumes the builder and constructs a [`Encryption`](crate::model::Encryption).
         pub fn build(self) -> crate::model::Encryption {
             crate::model::Encryption {
                 encryption_type: self.encryption_type,
@@ -2157,7 +2205,7 @@ pub mod encryption {
     }
 }
 impl Encryption {
-    /// Creates a new builder-style object to manufacture [`Encryption`](crate::model::Encryption)
+    /// Creates a new builder-style object to manufacture [`Encryption`](crate::model::Encryption).
     pub fn builder() -> crate::model::encryption::Builder {
         crate::model::encryption::Builder::default()
     }
@@ -2223,12 +2271,16 @@ impl AsRef<str> for EncryptionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SelectParameters {
     /// <p>Describes the serialization format of the object.</p>
+    #[doc(hidden)]
     pub input_serialization: std::option::Option<crate::model::InputSerialization>,
     /// <p>The type of the provided expression, for example <code>SQL</code>.</p>
+    #[doc(hidden)]
     pub expression_type: std::option::Option<crate::model::ExpressionType>,
     /// <p>The expression that is used to select the object.</p>
+    #[doc(hidden)]
     pub expression: std::option::Option<std::string::String>,
     /// <p>Describes how the results of the select job are serialized.</p>
+    #[doc(hidden)]
     pub output_serialization: std::option::Option<crate::model::OutputSerialization>,
 }
 impl SelectParameters {
@@ -2259,11 +2311,10 @@ impl std::fmt::Debug for SelectParameters {
         formatter.finish()
     }
 }
-/// See [`SelectParameters`](crate::model::SelectParameters)
+/// See [`SelectParameters`](crate::model::SelectParameters).
 pub mod select_parameters {
 
-    /// A builder for [`SelectParameters`](crate::model::SelectParameters)
-    #[non_exhaustive]
+    /// A builder for [`SelectParameters`](crate::model::SelectParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input_serialization: std::option::Option<crate::model::InputSerialization>,
@@ -2321,7 +2372,7 @@ pub mod select_parameters {
             self.output_serialization = input;
             self
         }
-        /// Consumes the builder and constructs a [`SelectParameters`](crate::model::SelectParameters)
+        /// Consumes the builder and constructs a [`SelectParameters`](crate::model::SelectParameters).
         pub fn build(self) -> crate::model::SelectParameters {
             crate::model::SelectParameters {
                 input_serialization: self.input_serialization,
@@ -2333,7 +2384,7 @@ pub mod select_parameters {
     }
 }
 impl SelectParameters {
-    /// Creates a new builder-style object to manufacture [`SelectParameters`](crate::model::SelectParameters)
+    /// Creates a new builder-style object to manufacture [`SelectParameters`](crate::model::SelectParameters).
     pub fn builder() -> crate::model::select_parameters::Builder {
         crate::model::select_parameters::Builder::default()
     }
@@ -2344,6 +2395,7 @@ impl SelectParameters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputSerialization {
     /// <p>Describes the serialization of CSV-encoded query results.</p>
+    #[doc(hidden)]
     pub csv: std::option::Option<crate::model::CsvOutput>,
 }
 impl OutputSerialization {
@@ -2359,11 +2411,10 @@ impl std::fmt::Debug for OutputSerialization {
         formatter.finish()
     }
 }
-/// See [`OutputSerialization`](crate::model::OutputSerialization)
+/// See [`OutputSerialization`](crate::model::OutputSerialization).
 pub mod output_serialization {
 
-    /// A builder for [`OutputSerialization`](crate::model::OutputSerialization)
-    #[non_exhaustive]
+    /// A builder for [`OutputSerialization`](crate::model::OutputSerialization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) csv: std::option::Option<crate::model::CsvOutput>,
@@ -2379,14 +2430,14 @@ pub mod output_serialization {
             self.csv = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputSerialization`](crate::model::OutputSerialization)
+        /// Consumes the builder and constructs a [`OutputSerialization`](crate::model::OutputSerialization).
         pub fn build(self) -> crate::model::OutputSerialization {
             crate::model::OutputSerialization { csv: self.csv }
         }
     }
 }
 impl OutputSerialization {
-    /// Creates a new builder-style object to manufacture [`OutputSerialization`](crate::model::OutputSerialization)
+    /// Creates a new builder-style object to manufacture [`OutputSerialization`](crate::model::OutputSerialization).
     pub fn builder() -> crate::model::output_serialization::Builder {
         crate::model::output_serialization::Builder::default()
     }
@@ -2397,14 +2448,19 @@ impl OutputSerialization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CsvOutput {
     /// <p>A value that indicates whether all output fields should be contained within quotation marks.</p>
+    #[doc(hidden)]
     pub quote_fields: std::option::Option<crate::model::QuoteFields>,
     /// <p>A single character used for escaping the quotation-mark character inside an already escaped value.</p>
+    #[doc(hidden)]
     pub quote_escape_character: std::option::Option<std::string::String>,
     /// <p>A value used to separate individual records from each other.</p>
+    #[doc(hidden)]
     pub record_delimiter: std::option::Option<std::string::String>,
     /// <p>A value used to separate individual fields from each other within a record.</p>
+    #[doc(hidden)]
     pub field_delimiter: std::option::Option<std::string::String>,
     /// <p>A value used as an escape character where the field delimiter is part of the value.</p>
+    #[doc(hidden)]
     pub quote_character: std::option::Option<std::string::String>,
 }
 impl CsvOutput {
@@ -2440,11 +2496,10 @@ impl std::fmt::Debug for CsvOutput {
         formatter.finish()
     }
 }
-/// See [`CsvOutput`](crate::model::CsvOutput)
+/// See [`CsvOutput`](crate::model::CsvOutput).
 pub mod csv_output {
 
-    /// A builder for [`CsvOutput`](crate::model::CsvOutput)
-    #[non_exhaustive]
+    /// A builder for [`CsvOutput`](crate::model::CsvOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) quote_fields: std::option::Option<crate::model::QuoteFields>,
@@ -2519,7 +2574,7 @@ pub mod csv_output {
             self.quote_character = input;
             self
         }
-        /// Consumes the builder and constructs a [`CsvOutput`](crate::model::CsvOutput)
+        /// Consumes the builder and constructs a [`CsvOutput`](crate::model::CsvOutput).
         pub fn build(self) -> crate::model::CsvOutput {
             crate::model::CsvOutput {
                 quote_fields: self.quote_fields,
@@ -2532,7 +2587,7 @@ pub mod csv_output {
     }
 }
 impl CsvOutput {
-    /// Creates a new builder-style object to manufacture [`CsvOutput`](crate::model::CsvOutput)
+    /// Creates a new builder-style object to manufacture [`CsvOutput`](crate::model::CsvOutput).
     pub fn builder() -> crate::model::csv_output::Builder {
         crate::model::csv_output::Builder::default()
     }
@@ -2649,6 +2704,7 @@ impl AsRef<str> for ExpressionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputSerialization {
     /// <p>Describes the serialization of a CSV-encoded object.</p>
+    #[doc(hidden)]
     pub csv: std::option::Option<crate::model::CsvInput>,
 }
 impl InputSerialization {
@@ -2664,11 +2720,10 @@ impl std::fmt::Debug for InputSerialization {
         formatter.finish()
     }
 }
-/// See [`InputSerialization`](crate::model::InputSerialization)
+/// See [`InputSerialization`](crate::model::InputSerialization).
 pub mod input_serialization {
 
-    /// A builder for [`InputSerialization`](crate::model::InputSerialization)
-    #[non_exhaustive]
+    /// A builder for [`InputSerialization`](crate::model::InputSerialization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) csv: std::option::Option<crate::model::CsvInput>,
@@ -2684,14 +2739,14 @@ pub mod input_serialization {
             self.csv = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputSerialization`](crate::model::InputSerialization)
+        /// Consumes the builder and constructs a [`InputSerialization`](crate::model::InputSerialization).
         pub fn build(self) -> crate::model::InputSerialization {
             crate::model::InputSerialization { csv: self.csv }
         }
     }
 }
 impl InputSerialization {
-    /// Creates a new builder-style object to manufacture [`InputSerialization`](crate::model::InputSerialization)
+    /// Creates a new builder-style object to manufacture [`InputSerialization`](crate::model::InputSerialization).
     pub fn builder() -> crate::model::input_serialization::Builder {
         crate::model::input_serialization::Builder::default()
     }
@@ -2702,16 +2757,22 @@ impl InputSerialization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CsvInput {
     /// <p>Describes the first line of input. Valid values are <code>None</code>, <code>Ignore</code>, and <code>Use</code>.</p>
+    #[doc(hidden)]
     pub file_header_info: std::option::Option<crate::model::FileHeaderInfo>,
     /// <p>A single character used to indicate that a row should be ignored when the character is present at the start of that row.</p>
+    #[doc(hidden)]
     pub comments: std::option::Option<std::string::String>,
     /// <p>A single character used for escaping the quotation-mark character inside an already escaped value.</p>
+    #[doc(hidden)]
     pub quote_escape_character: std::option::Option<std::string::String>,
     /// <p>A value used to separate individual records from each other.</p>
+    #[doc(hidden)]
     pub record_delimiter: std::option::Option<std::string::String>,
     /// <p>A value used to separate individual fields from each other within a record.</p>
+    #[doc(hidden)]
     pub field_delimiter: std::option::Option<std::string::String>,
     /// <p>A value used as an escape character where the field delimiter is part of the value.</p>
+    #[doc(hidden)]
     pub quote_character: std::option::Option<std::string::String>,
 }
 impl CsvInput {
@@ -2752,11 +2813,10 @@ impl std::fmt::Debug for CsvInput {
         formatter.finish()
     }
 }
-/// See [`CsvInput`](crate::model::CsvInput)
+/// See [`CsvInput`](crate::model::CsvInput).
 pub mod csv_input {
 
-    /// A builder for [`CsvInput`](crate::model::CsvInput)
-    #[non_exhaustive]
+    /// A builder for [`CsvInput`](crate::model::CsvInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_header_info: std::option::Option<crate::model::FileHeaderInfo>,
@@ -2842,7 +2902,7 @@ pub mod csv_input {
             self.quote_character = input;
             self
         }
-        /// Consumes the builder and constructs a [`CsvInput`](crate::model::CsvInput)
+        /// Consumes the builder and constructs a [`CsvInput`](crate::model::CsvInput).
         pub fn build(self) -> crate::model::CsvInput {
             crate::model::CsvInput {
                 file_header_info: self.file_header_info,
@@ -2856,7 +2916,7 @@ pub mod csv_input {
     }
 }
 impl CsvInput {
-    /// Creates a new builder-style object to manufacture [`CsvInput`](crate::model::CsvInput)
+    /// Creates a new builder-style object to manufacture [`CsvInput`](crate::model::CsvInput).
     pub fn builder() -> crate::model::csv_input::Builder {
         crate::model::csv_input::Builder::default()
     }
@@ -2926,14 +2986,19 @@ impl AsRef<str> for FileHeaderInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InventoryRetrievalJobDescription {
     /// <p>The output format for the vault inventory list, which is set by the <b>InitiateJob</b> request when initiating a job to retrieve a vault inventory. Valid values are <code>CSV</code> and <code>JSON</code>.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<std::string::String>,
     /// <p>The start of the date range in Universal Coordinated Time (UTC) for vault inventory retrieval that includes archives created on or after this date. This value should be a string in the ISO 8601 date format, for example <code>2013-03-20T17:03:43Z</code>.</p>
+    #[doc(hidden)]
     pub start_date: std::option::Option<std::string::String>,
     /// <p>The end of the date range in UTC for vault inventory retrieval that includes archives created before this date. This value should be a string in the ISO 8601 date format, for example <code>2013-03-20T17:03:43Z</code>.</p>
+    #[doc(hidden)]
     pub end_date: std::option::Option<std::string::String>,
     /// <p>The maximum number of inventory items returned per vault inventory retrieval request. This limit is set when initiating the job with the a <b>InitiateJob</b> request. </p>
+    #[doc(hidden)]
     pub limit: std::option::Option<std::string::String>,
     /// <p>An opaque string that represents where to continue pagination of the vault inventory retrieval results. You use the marker in a new <b>InitiateJob</b> request to obtain additional inventory items. If there are no more inventory items, this value is <code>null</code>. For more information, see <a href="https://docs.aws.amazon.com/amazonglacier/latest/dev/api-initiate-job-post.html#api-initiate-job-post-vault-inventory-list-filtering"> Range Inventory Retrieval</a>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl InventoryRetrievalJobDescription {
@@ -2969,11 +3034,10 @@ impl std::fmt::Debug for InventoryRetrievalJobDescription {
         formatter.finish()
     }
 }
-/// See [`InventoryRetrievalJobDescription`](crate::model::InventoryRetrievalJobDescription)
+/// See [`InventoryRetrievalJobDescription`](crate::model::InventoryRetrievalJobDescription).
 pub mod inventory_retrieval_job_description {
 
-    /// A builder for [`InventoryRetrievalJobDescription`](crate::model::InventoryRetrievalJobDescription)
-    #[non_exhaustive]
+    /// A builder for [`InventoryRetrievalJobDescription`](crate::model::InventoryRetrievalJobDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) format: std::option::Option<std::string::String>,
@@ -3033,7 +3097,7 @@ pub mod inventory_retrieval_job_description {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`InventoryRetrievalJobDescription`](crate::model::InventoryRetrievalJobDescription)
+        /// Consumes the builder and constructs a [`InventoryRetrievalJobDescription`](crate::model::InventoryRetrievalJobDescription).
         pub fn build(self) -> crate::model::InventoryRetrievalJobDescription {
             crate::model::InventoryRetrievalJobDescription {
                 format: self.format,
@@ -3046,7 +3110,7 @@ pub mod inventory_retrieval_job_description {
     }
 }
 impl InventoryRetrievalJobDescription {
-    /// Creates a new builder-style object to manufacture [`InventoryRetrievalJobDescription`](crate::model::InventoryRetrievalJobDescription)
+    /// Creates a new builder-style object to manufacture [`InventoryRetrievalJobDescription`](crate::model::InventoryRetrievalJobDescription).
     pub fn builder() -> crate::model::inventory_retrieval_job_description::Builder {
         crate::model::inventory_retrieval_job_description::Builder::default()
     }
@@ -3175,6 +3239,7 @@ impl AsRef<str> for ActionCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VaultLockPolicy {
     /// <p>The vault lock policy.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl VaultLockPolicy {
@@ -3190,11 +3255,10 @@ impl std::fmt::Debug for VaultLockPolicy {
         formatter.finish()
     }
 }
-/// See [`VaultLockPolicy`](crate::model::VaultLockPolicy)
+/// See [`VaultLockPolicy`](crate::model::VaultLockPolicy).
 pub mod vault_lock_policy {
 
-    /// A builder for [`VaultLockPolicy`](crate::model::VaultLockPolicy)
-    #[non_exhaustive]
+    /// A builder for [`VaultLockPolicy`](crate::model::VaultLockPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<std::string::String>,
@@ -3210,7 +3274,7 @@ pub mod vault_lock_policy {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`VaultLockPolicy`](crate::model::VaultLockPolicy)
+        /// Consumes the builder and constructs a [`VaultLockPolicy`](crate::model::VaultLockPolicy).
         pub fn build(self) -> crate::model::VaultLockPolicy {
             crate::model::VaultLockPolicy {
                 policy: self.policy,
@@ -3219,7 +3283,7 @@ pub mod vault_lock_policy {
     }
 }
 impl VaultLockPolicy {
-    /// Creates a new builder-style object to manufacture [`VaultLockPolicy`](crate::model::VaultLockPolicy)
+    /// Creates a new builder-style object to manufacture [`VaultLockPolicy`](crate::model::VaultLockPolicy).
     pub fn builder() -> crate::model::vault_lock_policy::Builder {
         crate::model::vault_lock_policy::Builder::default()
     }
@@ -3230,26 +3294,36 @@ impl VaultLockPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobParameters {
     /// <p>When initiating a job to retrieve a vault inventory, you can optionally add this parameter to your request to specify the output format. If you are initiating an inventory job and do not specify a Format field, JSON is the default format. Valid values are "CSV" and "JSON".</p>
+    #[doc(hidden)]
     pub format: std::option::Option<std::string::String>,
     /// <p>The job type. You can initiate a job to perform a select query on an archive, retrieve an archive, or get an inventory of a vault. Valid values are "select", "archive-retrieval" and "inventory-retrieval".</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The ID of the archive that you want to retrieve. This field is required only if <code>Type</code> is set to <code>select</code> or <code>archive-retrieval</code>code&gt;. An error occurs if you specify this request parameter for an inventory retrieval job request. </p>
+    #[doc(hidden)]
     pub archive_id: std::option::Option<std::string::String>,
     /// <p>The optional description for the job. The description must be less than or equal to 1,024 bytes. The allowable characters are 7-bit ASCII without control codes-specifically, ASCII values 32-126 decimal or 0x20-0x7E hexadecimal.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon SNS topic ARN to which Amazon S3 Glacier sends a notification when the job is completed and the output is ready for you to download. The specified topic publishes the notification to its subscribers. The SNS topic must exist.</p>
+    #[doc(hidden)]
     pub sns_topic: std::option::Option<std::string::String>,
     /// <p>The byte range to retrieve for an archive retrieval. in the form "<i>StartByteValue</i>-<i>EndByteValue</i>" If not specified, the whole archive is retrieved. If specified, the byte range must be megabyte (1024*1024) aligned which means that <i>StartByteValue</i> must be divisible by 1 MB and <i>EndByteValue</i> plus 1 must be divisible by 1 MB or be the end of the archive specified as the archive byte size value minus 1. If RetrievalByteRange is not megabyte aligned, this operation returns a 400 response. </p>
     /// <p>An error occurs if you specify this field for an inventory retrieval job request.</p>
+    #[doc(hidden)]
     pub retrieval_byte_range: std::option::Option<std::string::String>,
     /// <p>The tier to use for a select or an archive retrieval job. Valid values are <code>Expedited</code>, <code>Standard</code>, or <code>Bulk</code>. <code>Standard</code> is the default.</p>
+    #[doc(hidden)]
     pub tier: std::option::Option<std::string::String>,
     /// <p>Input parameters used for range inventory retrieval.</p>
+    #[doc(hidden)]
     pub inventory_retrieval_parameters:
         std::option::Option<crate::model::InventoryRetrievalJobInput>,
     /// <p>Contains the parameters that define a job.</p>
+    #[doc(hidden)]
     pub select_parameters: std::option::Option<crate::model::SelectParameters>,
     /// <p>Contains information about the location where the select job results are stored.</p>
+    #[doc(hidden)]
     pub output_location: std::option::Option<crate::model::OutputLocation>,
 }
 impl JobParameters {
@@ -3316,11 +3390,10 @@ impl std::fmt::Debug for JobParameters {
         formatter.finish()
     }
 }
-/// See [`JobParameters`](crate::model::JobParameters)
+/// See [`JobParameters`](crate::model::JobParameters).
 pub mod job_parameters {
 
-    /// A builder for [`JobParameters`](crate::model::JobParameters)
-    #[non_exhaustive]
+    /// A builder for [`JobParameters`](crate::model::JobParameters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) format: std::option::Option<std::string::String>,
@@ -3453,7 +3526,7 @@ pub mod job_parameters {
             self.output_location = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobParameters`](crate::model::JobParameters)
+        /// Consumes the builder and constructs a [`JobParameters`](crate::model::JobParameters).
         pub fn build(self) -> crate::model::JobParameters {
             crate::model::JobParameters {
                 format: self.format,
@@ -3471,7 +3544,7 @@ pub mod job_parameters {
     }
 }
 impl JobParameters {
-    /// Creates a new builder-style object to manufacture [`JobParameters`](crate::model::JobParameters)
+    /// Creates a new builder-style object to manufacture [`JobParameters`](crate::model::JobParameters).
     pub fn builder() -> crate::model::job_parameters::Builder {
         crate::model::job_parameters::Builder::default()
     }
@@ -3482,12 +3555,16 @@ impl JobParameters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InventoryRetrievalJobInput {
     /// <p>The start of the date range in UTC for vault inventory retrieval that includes archives created on or after this date. This value should be a string in the ISO 8601 date format, for example <code>2013-03-20T17:03:43Z</code>.</p>
+    #[doc(hidden)]
     pub start_date: std::option::Option<std::string::String>,
     /// <p>The end of the date range in UTC for vault inventory retrieval that includes archives created before this date. This value should be a string in the ISO 8601 date format, for example <code>2013-03-20T17:03:43Z</code>.</p>
+    #[doc(hidden)]
     pub end_date: std::option::Option<std::string::String>,
     /// <p>Specifies the maximum number of inventory items returned per vault inventory retrieval request. Valid values are greater than or equal to 1.</p>
+    #[doc(hidden)]
     pub limit: std::option::Option<std::string::String>,
     /// <p>An opaque string that represents where to continue pagination of the vault inventory retrieval results. You use the marker in a new <b>InitiateJob</b> request to obtain additional inventory items. If there are no more inventory items, this value is <code>null</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl InventoryRetrievalJobInput {
@@ -3518,11 +3595,10 @@ impl std::fmt::Debug for InventoryRetrievalJobInput {
         formatter.finish()
     }
 }
-/// See [`InventoryRetrievalJobInput`](crate::model::InventoryRetrievalJobInput)
+/// See [`InventoryRetrievalJobInput`](crate::model::InventoryRetrievalJobInput).
 pub mod inventory_retrieval_job_input {
 
-    /// A builder for [`InventoryRetrievalJobInput`](crate::model::InventoryRetrievalJobInput)
-    #[non_exhaustive]
+    /// A builder for [`InventoryRetrievalJobInput`](crate::model::InventoryRetrievalJobInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_date: std::option::Option<std::string::String>,
@@ -3571,7 +3647,7 @@ pub mod inventory_retrieval_job_input {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`InventoryRetrievalJobInput`](crate::model::InventoryRetrievalJobInput)
+        /// Consumes the builder and constructs a [`InventoryRetrievalJobInput`](crate::model::InventoryRetrievalJobInput).
         pub fn build(self) -> crate::model::InventoryRetrievalJobInput {
             crate::model::InventoryRetrievalJobInput {
                 start_date: self.start_date,
@@ -3583,7 +3659,7 @@ pub mod inventory_retrieval_job_input {
     }
 }
 impl InventoryRetrievalJobInput {
-    /// Creates a new builder-style object to manufacture [`InventoryRetrievalJobInput`](crate::model::InventoryRetrievalJobInput)
+    /// Creates a new builder-style object to manufacture [`InventoryRetrievalJobInput`](crate::model::InventoryRetrievalJobInput).
     pub fn builder() -> crate::model::inventory_retrieval_job_input::Builder {
         crate::model::inventory_retrieval_job_input::Builder::default()
     }

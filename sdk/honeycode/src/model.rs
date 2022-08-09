@@ -67,8 +67,10 @@ impl AsRef<str> for TableDataImportJobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportOptions {
     /// <p>Options relating to the destination of the import request.</p>
+    #[doc(hidden)]
     pub destination_options: std::option::Option<crate::model::DestinationOptions>,
     /// <p>Options relating to parsing delimited text. Required if dataFormat is DELIMITED_TEXT.</p>
+    #[doc(hidden)]
     pub delimited_text_options: std::option::Option<crate::model::DelimitedTextImportOptions>,
 }
 impl ImportOptions {
@@ -91,11 +93,10 @@ impl std::fmt::Debug for ImportOptions {
         formatter.finish()
     }
 }
-/// See [`ImportOptions`](crate::model::ImportOptions)
+/// See [`ImportOptions`](crate::model::ImportOptions).
 pub mod import_options {
 
-    /// A builder for [`ImportOptions`](crate::model::ImportOptions)
-    #[non_exhaustive]
+    /// A builder for [`ImportOptions`](crate::model::ImportOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination_options: std::option::Option<crate::model::DestinationOptions>,
@@ -132,7 +133,7 @@ pub mod import_options {
             self.delimited_text_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportOptions`](crate::model::ImportOptions)
+        /// Consumes the builder and constructs a [`ImportOptions`](crate::model::ImportOptions).
         pub fn build(self) -> crate::model::ImportOptions {
             crate::model::ImportOptions {
                 destination_options: self.destination_options,
@@ -142,7 +143,7 @@ pub mod import_options {
     }
 }
 impl ImportOptions {
-    /// Creates a new builder-style object to manufacture [`ImportOptions`](crate::model::ImportOptions)
+    /// Creates a new builder-style object to manufacture [`ImportOptions`](crate::model::ImportOptions).
     pub fn builder() -> crate::model::import_options::Builder {
         crate::model::import_options::Builder::default()
     }
@@ -153,12 +154,16 @@ impl ImportOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DelimitedTextImportOptions {
     /// <p>The delimiter to use for separating columns in a single row of the input.</p>
+    #[doc(hidden)]
     pub delimiter: std::option::Option<std::string::String>,
     /// <p>Indicates whether the input file has a header row at the top containing the column names.</p>
+    #[doc(hidden)]
     pub has_header_row: bool,
     /// <p>A parameter to indicate whether empty rows should be ignored or be included in the import.</p>
+    #[doc(hidden)]
     pub ignore_empty_rows: bool,
     /// <p>The encoding of the data in the input file.</p>
+    #[doc(hidden)]
     pub data_character_encoding: std::option::Option<crate::model::ImportDataCharacterEncoding>,
 }
 impl DelimitedTextImportOptions {
@@ -191,11 +196,10 @@ impl std::fmt::Debug for DelimitedTextImportOptions {
         formatter.finish()
     }
 }
-/// See [`DelimitedTextImportOptions`](crate::model::DelimitedTextImportOptions)
+/// See [`DelimitedTextImportOptions`](crate::model::DelimitedTextImportOptions).
 pub mod delimited_text_import_options {
 
-    /// A builder for [`DelimitedTextImportOptions`](crate::model::DelimitedTextImportOptions)
-    #[non_exhaustive]
+    /// A builder for [`DelimitedTextImportOptions`](crate::model::DelimitedTextImportOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delimiter: std::option::Option<std::string::String>,
@@ -251,7 +255,7 @@ pub mod delimited_text_import_options {
             self.data_character_encoding = input;
             self
         }
-        /// Consumes the builder and constructs a [`DelimitedTextImportOptions`](crate::model::DelimitedTextImportOptions)
+        /// Consumes the builder and constructs a [`DelimitedTextImportOptions`](crate::model::DelimitedTextImportOptions).
         pub fn build(self) -> crate::model::DelimitedTextImportOptions {
             crate::model::DelimitedTextImportOptions {
                 delimiter: self.delimiter,
@@ -263,7 +267,7 @@ pub mod delimited_text_import_options {
     }
 }
 impl DelimitedTextImportOptions {
-    /// Creates a new builder-style object to manufacture [`DelimitedTextImportOptions`](crate::model::DelimitedTextImportOptions)
+    /// Creates a new builder-style object to manufacture [`DelimitedTextImportOptions`](crate::model::DelimitedTextImportOptions).
     pub fn builder() -> crate::model::delimited_text_import_options::Builder {
         crate::model::delimited_text_import_options::Builder::default()
     }
@@ -352,6 +356,7 @@ impl AsRef<str> for ImportDataCharacterEncoding {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DestinationOptions {
     /// <p>A map of the column id to the import properties for each column.</p>
+    #[doc(hidden)]
     pub column_map: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::SourceDataColumnProperties>,
     >,
@@ -373,11 +378,10 @@ impl std::fmt::Debug for DestinationOptions {
         formatter.finish()
     }
 }
-/// See [`DestinationOptions`](crate::model::DestinationOptions)
+/// See [`DestinationOptions`](crate::model::DestinationOptions).
 pub mod destination_options {
 
-    /// A builder for [`DestinationOptions`](crate::model::DestinationOptions)
-    #[non_exhaustive]
+    /// A builder for [`DestinationOptions`](crate::model::DestinationOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) column_map: std::option::Option<
@@ -416,7 +420,7 @@ pub mod destination_options {
             self.column_map = input;
             self
         }
-        /// Consumes the builder and constructs a [`DestinationOptions`](crate::model::DestinationOptions)
+        /// Consumes the builder and constructs a [`DestinationOptions`](crate::model::DestinationOptions).
         pub fn build(self) -> crate::model::DestinationOptions {
             crate::model::DestinationOptions {
                 column_map: self.column_map,
@@ -425,7 +429,7 @@ pub mod destination_options {
     }
 }
 impl DestinationOptions {
-    /// Creates a new builder-style object to manufacture [`DestinationOptions`](crate::model::DestinationOptions)
+    /// Creates a new builder-style object to manufacture [`DestinationOptions`](crate::model::DestinationOptions).
     pub fn builder() -> crate::model::destination_options::Builder {
         crate::model::destination_options::Builder::default()
     }
@@ -436,6 +440,7 @@ impl DestinationOptions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceDataColumnProperties {
     /// <p>The index of the column in the input file.</p>
+    #[doc(hidden)]
     pub column_index: i32,
 }
 impl SourceDataColumnProperties {
@@ -451,11 +456,10 @@ impl std::fmt::Debug for SourceDataColumnProperties {
         formatter.finish()
     }
 }
-/// See [`SourceDataColumnProperties`](crate::model::SourceDataColumnProperties)
+/// See [`SourceDataColumnProperties`](crate::model::SourceDataColumnProperties).
 pub mod source_data_column_properties {
 
-    /// A builder for [`SourceDataColumnProperties`](crate::model::SourceDataColumnProperties)
-    #[non_exhaustive]
+    /// A builder for [`SourceDataColumnProperties`](crate::model::SourceDataColumnProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) column_index: std::option::Option<i32>,
@@ -471,7 +475,7 @@ pub mod source_data_column_properties {
             self.column_index = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceDataColumnProperties`](crate::model::SourceDataColumnProperties)
+        /// Consumes the builder and constructs a [`SourceDataColumnProperties`](crate::model::SourceDataColumnProperties).
         pub fn build(self) -> crate::model::SourceDataColumnProperties {
             crate::model::SourceDataColumnProperties {
                 column_index: self.column_index.unwrap_or_default(),
@@ -480,7 +484,7 @@ pub mod source_data_column_properties {
     }
 }
 impl SourceDataColumnProperties {
-    /// Creates a new builder-style object to manufacture [`SourceDataColumnProperties`](crate::model::SourceDataColumnProperties)
+    /// Creates a new builder-style object to manufacture [`SourceDataColumnProperties`](crate::model::SourceDataColumnProperties).
     pub fn builder() -> crate::model::source_data_column_properties::Builder {
         crate::model::source_data_column_properties::Builder::default()
     }
@@ -542,6 +546,7 @@ impl AsRef<str> for ImportSourceDataFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportDataSource {
     /// <p>The configuration parameters for the data source of the import</p>
+    #[doc(hidden)]
     pub data_source_config: std::option::Option<crate::model::ImportDataSourceConfig>,
 }
 impl ImportDataSource {
@@ -557,11 +562,10 @@ impl std::fmt::Debug for ImportDataSource {
         formatter.finish()
     }
 }
-/// See [`ImportDataSource`](crate::model::ImportDataSource)
+/// See [`ImportDataSource`](crate::model::ImportDataSource).
 pub mod import_data_source {
 
-    /// A builder for [`ImportDataSource`](crate::model::ImportDataSource)
-    #[non_exhaustive]
+    /// A builder for [`ImportDataSource`](crate::model::ImportDataSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_source_config: std::option::Option<crate::model::ImportDataSourceConfig>,
@@ -580,7 +584,7 @@ pub mod import_data_source {
             self.data_source_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportDataSource`](crate::model::ImportDataSource)
+        /// Consumes the builder and constructs a [`ImportDataSource`](crate::model::ImportDataSource).
         pub fn build(self) -> crate::model::ImportDataSource {
             crate::model::ImportDataSource {
                 data_source_config: self.data_source_config,
@@ -589,7 +593,7 @@ pub mod import_data_source {
     }
 }
 impl ImportDataSource {
-    /// Creates a new builder-style object to manufacture [`ImportDataSource`](crate::model::ImportDataSource)
+    /// Creates a new builder-style object to manufacture [`ImportDataSource`](crate::model::ImportDataSource).
     pub fn builder() -> crate::model::import_data_source::Builder {
         crate::model::import_data_source::Builder::default()
     }
@@ -600,6 +604,7 @@ impl ImportDataSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportDataSourceConfig {
     /// <p> The URL from which source data will be downloaded for the import request. </p>
+    #[doc(hidden)]
     pub data_source_url: std::option::Option<std::string::String>,
 }
 impl ImportDataSourceConfig {
@@ -615,11 +620,10 @@ impl std::fmt::Debug for ImportDataSourceConfig {
         formatter.finish()
     }
 }
-/// See [`ImportDataSourceConfig`](crate::model::ImportDataSourceConfig)
+/// See [`ImportDataSourceConfig`](crate::model::ImportDataSourceConfig).
 pub mod import_data_source_config {
 
-    /// A builder for [`ImportDataSourceConfig`](crate::model::ImportDataSourceConfig)
-    #[non_exhaustive]
+    /// A builder for [`ImportDataSourceConfig`](crate::model::ImportDataSourceConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_source_url: std::option::Option<std::string::String>,
@@ -638,7 +642,7 @@ pub mod import_data_source_config {
             self.data_source_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportDataSourceConfig`](crate::model::ImportDataSourceConfig)
+        /// Consumes the builder and constructs a [`ImportDataSourceConfig`](crate::model::ImportDataSourceConfig).
         pub fn build(self) -> crate::model::ImportDataSourceConfig {
             crate::model::ImportDataSourceConfig {
                 data_source_url: self.data_source_url,
@@ -647,7 +651,7 @@ pub mod import_data_source_config {
     }
 }
 impl ImportDataSourceConfig {
-    /// Creates a new builder-style object to manufacture [`ImportDataSourceConfig`](crate::model::ImportDataSourceConfig)
+    /// Creates a new builder-style object to manufacture [`ImportDataSourceConfig`](crate::model::ImportDataSourceConfig).
     pub fn builder() -> crate::model::import_data_source_config::Builder {
         crate::model::import_data_source_config::Builder::default()
     }
@@ -658,8 +662,10 @@ impl ImportDataSourceConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TableRow {
     /// <p>The id of the row in the table.</p>
+    #[doc(hidden)]
     pub row_id: std::option::Option<std::string::String>,
     /// <p>A list of cells in the table row. The cells appear in the same order as the columns of the table. </p>
+    #[doc(hidden)]
     pub cells: std::option::Option<std::vec::Vec<crate::model::Cell>>,
 }
 impl TableRow {
@@ -680,11 +686,10 @@ impl std::fmt::Debug for TableRow {
         formatter.finish()
     }
 }
-/// See [`TableRow`](crate::model::TableRow)
+/// See [`TableRow`](crate::model::TableRow).
 pub mod table_row {
 
-    /// A builder for [`TableRow`](crate::model::TableRow)
-    #[non_exhaustive]
+    /// A builder for [`TableRow`](crate::model::TableRow).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) row_id: std::option::Option<std::string::String>,
@@ -720,7 +725,7 @@ pub mod table_row {
             self.cells = input;
             self
         }
-        /// Consumes the builder and constructs a [`TableRow`](crate::model::TableRow)
+        /// Consumes the builder and constructs a [`TableRow`](crate::model::TableRow).
         pub fn build(self) -> crate::model::TableRow {
             crate::model::TableRow {
                 row_id: self.row_id,
@@ -730,7 +735,7 @@ pub mod table_row {
     }
 }
 impl TableRow {
-    /// Creates a new builder-style object to manufacture [`TableRow`](crate::model::TableRow)
+    /// Creates a new builder-style object to manufacture [`TableRow`](crate::model::TableRow).
     pub fn builder() -> crate::model::table_row::Builder {
         crate::model::table_row::Builder::default()
     }
@@ -741,8 +746,10 @@ impl TableRow {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Cell {
     /// <p> The formula contained in the cell. This field is empty if a cell does not have a formula. </p>
+    #[doc(hidden)]
     pub formula: std::option::Option<std::string::String>,
     /// <p>The format of the cell. If this field is empty, then the format is either not specified in the workbook or the format is set to AUTO.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::Format>,
     /// <p> The raw value of the data contained in the cell. The raw value depends on the format of the data in the cell. However the attribute in the API return value is always a string containing the raw value. </p>
     /// <p> Cells with format DATE, DATE_TIME or TIME have the raw value as a floating point number where the whole number represents the number of days since 1/1/1900 and the fractional part represents the fraction of the day since midnight. For example, a cell with date 11/3/2020 has the raw value "44138". A cell with the time 9:00 AM has the raw value "0.375" and a cell with date/time value of 11/3/2020 9:00 AM has the raw value "44138.375". Notice that even though the raw value is a number in all three cases, it is still represented as a string. </p>
@@ -753,11 +760,14 @@ pub struct Cell {
     /// <p> Cells with format ROWSET (aka multi-select or multi-record picklist) will by default have the first column of each of the linked rows as the formatted value in the list, and the rowset id of the linked rows as the raw value. For example, a cell containing a multi-select picklist to a table that contains items might have "Item A", "Item B" in the formatted value list and "rows:b742c1f4-6cb0-4650-a845-35eb86fcc2bb/ [fdea123b-8f68-474a-aa8a-5ff87aa333af,6daf41f0-a138-4eee-89da-123086d36ecf]" as the raw value. </p>
     /// <p> Cells with format ATTACHMENT will have the name of the attachment as the formatted value and the attachment id as the raw value. For example, a cell containing an attachment named "image.jpeg" will have "image.jpeg" as the formatted value and "attachment:ca432b2f-b8eb-431d-9fb5-cbe0342f9f03" as the raw value. </p>
     /// <p> Cells with format AUTO or cells without any format that are auto-detected as one of the formats above will contain the raw and formatted values as mentioned above, based on the auto-detected formats. If there is no auto-detected format, the raw and formatted values will be the same as the data in the cell. </p>
+    #[doc(hidden)]
     pub raw_value: std::option::Option<std::string::String>,
     /// <p> The formatted value of the cell. This is the value that you see displayed in the cell in the UI. </p>
     /// <p> Note that the formatted value of a cell is always represented as a string irrespective of the data that is stored in the cell. For example, if a cell contains a date, the formatted value of the cell is the string representation of the formatted date being shown in the cell in the UI. See details in the rawValue field below for how cells of different formats will have different raw and formatted values. </p>
+    #[doc(hidden)]
     pub formatted_value: std::option::Option<std::string::String>,
     /// <p> A list of formatted values of the cell. This field is only returned when the cell is ROWSET format (aka multi-select or multi-record picklist). Values in the list are always represented as strings. The formattedValue field will be empty if this field is returned. </p>
+    #[doc(hidden)]
     pub formatted_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Cell {
@@ -802,11 +812,10 @@ impl std::fmt::Debug for Cell {
         formatter.finish()
     }
 }
-/// See [`Cell`](crate::model::Cell)
+/// See [`Cell`](crate::model::Cell).
 pub mod cell {
 
-    /// A builder for [`Cell`](crate::model::Cell)
-    #[non_exhaustive]
+    /// A builder for [`Cell`](crate::model::Cell).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) formula: std::option::Option<std::string::String>,
@@ -896,7 +905,7 @@ pub mod cell {
             self.formatted_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`Cell`](crate::model::Cell)
+        /// Consumes the builder and constructs a [`Cell`](crate::model::Cell).
         pub fn build(self) -> crate::model::Cell {
             crate::model::Cell {
                 formula: self.formula,
@@ -909,7 +918,7 @@ pub mod cell {
     }
 }
 impl Cell {
-    /// Creates a new builder-style object to manufacture [`Cell`](crate::model::Cell)
+    /// Creates a new builder-style object to manufacture [`Cell`](crate::model::Cell).
     pub fn builder() -> crate::model::cell::Builder {
         crate::model::cell::Builder::default()
     }
@@ -1028,8 +1037,10 @@ impl AsRef<str> for Format {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
     /// <p> A formula representing a filter function that returns zero or more matching rows from a table. Valid formulas in this field return a list of rows from a table. The most common ways of writing a formula to return a list of rows are to use the FindRow() or Filter() functions. Any other formula that returns zero or more rows is also acceptable. For example, you can use a formula that points to a cell that contains a filter function. </p>
+    #[doc(hidden)]
     pub formula: std::option::Option<std::string::String>,
     /// <p> The optional contextRowId attribute can be used to specify the row id of the context row if the filter formula contains unqualified references to table columns and needs a context row to evaluate them successfully. </p>
+    #[doc(hidden)]
     pub context_row_id: std::option::Option<std::string::String>,
 }
 impl Filter {
@@ -1050,11 +1061,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) formula: std::option::Option<std::string::String>,
@@ -1084,7 +1094,7 @@ pub mod filter {
             self.context_row_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 formula: self.formula,
@@ -1094,7 +1104,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -1105,8 +1115,10 @@ impl Filter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Table {
     /// <p>The id of the table.</p>
+    #[doc(hidden)]
     pub table_id: std::option::Option<std::string::String>,
     /// <p>The name of the table.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
 }
 impl Table {
@@ -1127,11 +1139,10 @@ impl std::fmt::Debug for Table {
         formatter.finish()
     }
 }
-/// See [`Table`](crate::model::Table)
+/// See [`Table`](crate::model::Table).
 pub mod table {
 
-    /// A builder for [`Table`](crate::model::Table)
-    #[non_exhaustive]
+    /// A builder for [`Table`](crate::model::Table).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_id: std::option::Option<std::string::String>,
@@ -1158,7 +1169,7 @@ pub mod table {
             self.table_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Table`](crate::model::Table)
+        /// Consumes the builder and constructs a [`Table`](crate::model::Table).
         pub fn build(self) -> crate::model::Table {
             crate::model::Table {
                 table_id: self.table_id,
@@ -1168,7 +1179,7 @@ pub mod table {
     }
 }
 impl Table {
-    /// Creates a new builder-style object to manufacture [`Table`](crate::model::Table)
+    /// Creates a new builder-style object to manufacture [`Table`](crate::model::Table).
     pub fn builder() -> crate::model::table::Builder {
         crate::model::table::Builder::default()
     }
@@ -1179,10 +1190,13 @@ impl Table {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TableColumn {
     /// <p>The id of the column in the table.</p>
+    #[doc(hidden)]
     pub table_column_id: std::option::Option<std::string::String>,
     /// <p>The name of the column in the table.</p>
+    #[doc(hidden)]
     pub table_column_name: std::option::Option<std::string::String>,
     /// <p> The column level format that is applied in the table. An empty value in this field means that the column format is the default value 'AUTO'. </p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::Format>,
 }
 impl TableColumn {
@@ -1208,11 +1222,10 @@ impl std::fmt::Debug for TableColumn {
         formatter.finish()
     }
 }
-/// See [`TableColumn`](crate::model::TableColumn)
+/// See [`TableColumn`](crate::model::TableColumn).
 pub mod table_column {
 
-    /// A builder for [`TableColumn`](crate::model::TableColumn)
-    #[non_exhaustive]
+    /// A builder for [`TableColumn`](crate::model::TableColumn).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_column_id: std::option::Option<std::string::String>,
@@ -1256,7 +1269,7 @@ pub mod table_column {
             self.format = input;
             self
         }
-        /// Consumes the builder and constructs a [`TableColumn`](crate::model::TableColumn)
+        /// Consumes the builder and constructs a [`TableColumn`](crate::model::TableColumn).
         pub fn build(self) -> crate::model::TableColumn {
             crate::model::TableColumn {
                 table_column_id: self.table_column_id,
@@ -1267,7 +1280,7 @@ pub mod table_column {
     }
 }
 impl TableColumn {
-    /// Creates a new builder-style object to manufacture [`TableColumn`](crate::model::TableColumn)
+    /// Creates a new builder-style object to manufacture [`TableColumn`](crate::model::TableColumn).
     pub fn builder() -> crate::model::table_column::Builder {
         crate::model::table_column::Builder::default()
     }
@@ -1278,6 +1291,7 @@ impl TableColumn {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VariableValue {
     /// <p>Raw value of the variable.</p>
+    #[doc(hidden)]
     pub raw_value: std::option::Option<std::string::String>,
 }
 impl VariableValue {
@@ -1293,11 +1307,10 @@ impl std::fmt::Debug for VariableValue {
         formatter.finish()
     }
 }
-/// See [`VariableValue`](crate::model::VariableValue)
+/// See [`VariableValue`](crate::model::VariableValue).
 pub mod variable_value {
 
-    /// A builder for [`VariableValue`](crate::model::VariableValue)
-    #[non_exhaustive]
+    /// A builder for [`VariableValue`](crate::model::VariableValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) raw_value: std::option::Option<std::string::String>,
@@ -1313,7 +1326,7 @@ pub mod variable_value {
             self.raw_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`VariableValue`](crate::model::VariableValue)
+        /// Consumes the builder and constructs a [`VariableValue`](crate::model::VariableValue).
         pub fn build(self) -> crate::model::VariableValue {
             crate::model::VariableValue {
                 raw_value: self.raw_value,
@@ -1322,7 +1335,7 @@ pub mod variable_value {
     }
 }
 impl VariableValue {
-    /// Creates a new builder-style object to manufacture [`VariableValue`](crate::model::VariableValue)
+    /// Creates a new builder-style object to manufacture [`VariableValue`](crate::model::VariableValue).
     pub fn builder() -> crate::model::variable_value::Builder {
         crate::model::variable_value::Builder::default()
     }
@@ -1334,8 +1347,10 @@ impl VariableValue {
 pub struct ResultSet {
     /// <p> List of headers for all the data cells in the block. The header identifies the name and default format of the data cell. Data cells appear in the same order in all rows as defined in the header. The names and formats are not repeated in the rows. If a particular row does not have a value for a data cell, a blank value is used. </p>
     /// <p> For example, a task list that displays the task name, due date and assigned person might have headers [ { "name": "Task Name"}, {"name": "Due Date", "format": "DATE"}, {"name": "Assigned", "format": "CONTACT"} ]. Every row in the result will have the task name as the first item, due date as the second item and assigned person as the third item. If a particular task does not have a due date, that row will still have a blank value in the second element and the assigned person will still be in the third element. </p>
+    #[doc(hidden)]
     pub headers: std::option::Option<std::vec::Vec<crate::model::ColumnMetadata>>,
     /// <p> List of rows returned by the request. Each row has a row Id and a list of data cells in that row. The data cells will be present in the same order as they are defined in the header. </p>
+    #[doc(hidden)]
     pub rows: std::option::Option<std::vec::Vec<crate::model::ResultRow>>,
 }
 impl ResultSet {
@@ -1357,11 +1372,10 @@ impl std::fmt::Debug for ResultSet {
         formatter.finish()
     }
 }
-/// See [`ResultSet`](crate::model::ResultSet)
+/// See [`ResultSet`](crate::model::ResultSet).
 pub mod result_set {
 
-    /// A builder for [`ResultSet`](crate::model::ResultSet)
-    #[non_exhaustive]
+    /// A builder for [`ResultSet`](crate::model::ResultSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) headers: std::option::Option<std::vec::Vec<crate::model::ColumnMetadata>>,
@@ -1408,7 +1422,7 @@ pub mod result_set {
             self.rows = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultSet`](crate::model::ResultSet)
+        /// Consumes the builder and constructs a [`ResultSet`](crate::model::ResultSet).
         pub fn build(self) -> crate::model::ResultSet {
             crate::model::ResultSet {
                 headers: self.headers,
@@ -1418,7 +1432,7 @@ pub mod result_set {
     }
 }
 impl ResultSet {
-    /// Creates a new builder-style object to manufacture [`ResultSet`](crate::model::ResultSet)
+    /// Creates a new builder-style object to manufacture [`ResultSet`](crate::model::ResultSet).
     pub fn builder() -> crate::model::result_set::Builder {
         crate::model::result_set::Builder::default()
     }
@@ -1429,8 +1443,10 @@ impl ResultSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResultRow {
     /// <p>The ID for a particular row.</p>
+    #[doc(hidden)]
     pub row_id: std::option::Option<std::string::String>,
     /// <p>List of all the data cells in a row.</p>
+    #[doc(hidden)]
     pub data_items: std::option::Option<std::vec::Vec<crate::model::DataItem>>,
 }
 impl ResultRow {
@@ -1451,11 +1467,10 @@ impl std::fmt::Debug for ResultRow {
         formatter.finish()
     }
 }
-/// See [`ResultRow`](crate::model::ResultRow)
+/// See [`ResultRow`](crate::model::ResultRow).
 pub mod result_row {
 
-    /// A builder for [`ResultRow`](crate::model::ResultRow)
-    #[non_exhaustive]
+    /// A builder for [`ResultRow`](crate::model::ResultRow).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) row_id: std::option::Option<std::string::String>,
@@ -1491,7 +1506,7 @@ pub mod result_row {
             self.data_items = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultRow`](crate::model::ResultRow)
+        /// Consumes the builder and constructs a [`ResultRow`](crate::model::ResultRow).
         pub fn build(self) -> crate::model::ResultRow {
             crate::model::ResultRow {
                 row_id: self.row_id,
@@ -1501,7 +1516,7 @@ pub mod result_row {
     }
 }
 impl ResultRow {
-    /// Creates a new builder-style object to manufacture [`ResultRow`](crate::model::ResultRow)
+    /// Creates a new builder-style object to manufacture [`ResultRow`](crate::model::ResultRow).
     pub fn builder() -> crate::model::result_row::Builder {
         crate::model::result_row::Builder::default()
     }
@@ -1512,10 +1527,13 @@ impl ResultRow {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataItem {
     /// <p> The overrideFormat is optional and is specified only if a particular row of data has a different format for the data than the default format defined on the screen or the table. </p>
+    #[doc(hidden)]
     pub override_format: std::option::Option<crate::model::Format>,
     /// <p>The raw value of the data. e.g. jsmith@example.com</p>
+    #[doc(hidden)]
     pub raw_value: std::option::Option<std::string::String>,
     /// <p>The formatted value of the data. e.g. John Smith.</p>
+    #[doc(hidden)]
     pub formatted_value: std::option::Option<std::string::String>,
 }
 impl DataItem {
@@ -1541,11 +1559,10 @@ impl std::fmt::Debug for DataItem {
         formatter.finish()
     }
 }
-/// See [`DataItem`](crate::model::DataItem)
+/// See [`DataItem`](crate::model::DataItem).
 pub mod data_item {
 
-    /// A builder for [`DataItem`](crate::model::DataItem)
-    #[non_exhaustive]
+    /// A builder for [`DataItem`](crate::model::DataItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) override_format: std::option::Option<crate::model::Format>,
@@ -1589,7 +1606,7 @@ pub mod data_item {
             self.formatted_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataItem`](crate::model::DataItem)
+        /// Consumes the builder and constructs a [`DataItem`](crate::model::DataItem).
         pub fn build(self) -> crate::model::DataItem {
             crate::model::DataItem {
                 override_format: self.override_format,
@@ -1600,7 +1617,7 @@ pub mod data_item {
     }
 }
 impl DataItem {
-    /// Creates a new builder-style object to manufacture [`DataItem`](crate::model::DataItem)
+    /// Creates a new builder-style object to manufacture [`DataItem`](crate::model::DataItem).
     pub fn builder() -> crate::model::data_item::Builder {
         crate::model::data_item::Builder::default()
     }
@@ -1611,8 +1628,10 @@ impl DataItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ColumnMetadata {
     /// <p>The name of the column.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The format of the column.</p>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::Format>,
 }
 impl ColumnMetadata {
@@ -1633,11 +1652,10 @@ impl std::fmt::Debug for ColumnMetadata {
         formatter.finish()
     }
 }
-/// See [`ColumnMetadata`](crate::model::ColumnMetadata)
+/// See [`ColumnMetadata`](crate::model::ColumnMetadata).
 pub mod column_metadata {
 
-    /// A builder for [`ColumnMetadata`](crate::model::ColumnMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ColumnMetadata`](crate::model::ColumnMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1664,7 +1682,7 @@ pub mod column_metadata {
             self.format = input;
             self
         }
-        /// Consumes the builder and constructs a [`ColumnMetadata`](crate::model::ColumnMetadata)
+        /// Consumes the builder and constructs a [`ColumnMetadata`](crate::model::ColumnMetadata).
         pub fn build(self) -> crate::model::ColumnMetadata {
             crate::model::ColumnMetadata {
                 name: self.name,
@@ -1674,7 +1692,7 @@ pub mod column_metadata {
     }
 }
 impl ColumnMetadata {
-    /// Creates a new builder-style object to manufacture [`ColumnMetadata`](crate::model::ColumnMetadata)
+    /// Creates a new builder-style object to manufacture [`ColumnMetadata`](crate::model::ColumnMetadata).
     pub fn builder() -> crate::model::column_metadata::Builder {
         crate::model::column_metadata::Builder::default()
     }
@@ -1803,12 +1821,16 @@ impl AsRef<str> for ErrorCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TableDataImportJobMetadata {
     /// <p>Details about the submitter of the import request.</p>
+    #[doc(hidden)]
     pub submitter: std::option::Option<crate::model::ImportJobSubmitter>,
     /// <p>The timestamp when the job was submitted for import.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The options that was specified at the time of submitting the import request.</p>
+    #[doc(hidden)]
     pub import_options: std::option::Option<crate::model::ImportOptions>,
     /// <p>The source of the data that was submitted for import.</p>
+    #[doc(hidden)]
     pub data_source: std::option::Option<crate::model::ImportDataSource>,
 }
 impl TableDataImportJobMetadata {
@@ -1839,11 +1861,10 @@ impl std::fmt::Debug for TableDataImportJobMetadata {
         formatter.finish()
     }
 }
-/// See [`TableDataImportJobMetadata`](crate::model::TableDataImportJobMetadata)
+/// See [`TableDataImportJobMetadata`](crate::model::TableDataImportJobMetadata).
 pub mod table_data_import_job_metadata {
 
-    /// A builder for [`TableDataImportJobMetadata`](crate::model::TableDataImportJobMetadata)
-    #[non_exhaustive]
+    /// A builder for [`TableDataImportJobMetadata`](crate::model::TableDataImportJobMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) submitter: std::option::Option<crate::model::ImportJobSubmitter>,
@@ -1904,7 +1925,7 @@ pub mod table_data_import_job_metadata {
             self.data_source = input;
             self
         }
-        /// Consumes the builder and constructs a [`TableDataImportJobMetadata`](crate::model::TableDataImportJobMetadata)
+        /// Consumes the builder and constructs a [`TableDataImportJobMetadata`](crate::model::TableDataImportJobMetadata).
         pub fn build(self) -> crate::model::TableDataImportJobMetadata {
             crate::model::TableDataImportJobMetadata {
                 submitter: self.submitter,
@@ -1916,7 +1937,7 @@ pub mod table_data_import_job_metadata {
     }
 }
 impl TableDataImportJobMetadata {
-    /// Creates a new builder-style object to manufacture [`TableDataImportJobMetadata`](crate::model::TableDataImportJobMetadata)
+    /// Creates a new builder-style object to manufacture [`TableDataImportJobMetadata`](crate::model::TableDataImportJobMetadata).
     pub fn builder() -> crate::model::table_data_import_job_metadata::Builder {
         crate::model::table_data_import_job_metadata::Builder::default()
     }
@@ -1927,8 +1948,10 @@ impl TableDataImportJobMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportJobSubmitter {
     /// <p>The email id of the submitter of the import job, if available.</p>
+    #[doc(hidden)]
     pub email: std::option::Option<std::string::String>,
     /// <p>The AWS user ARN of the submitter of the import job, if available.</p>
+    #[doc(hidden)]
     pub user_arn: std::option::Option<std::string::String>,
 }
 impl ImportJobSubmitter {
@@ -1949,11 +1972,10 @@ impl std::fmt::Debug for ImportJobSubmitter {
         formatter.finish()
     }
 }
-/// See [`ImportJobSubmitter`](crate::model::ImportJobSubmitter)
+/// See [`ImportJobSubmitter`](crate::model::ImportJobSubmitter).
 pub mod import_job_submitter {
 
-    /// A builder for [`ImportJobSubmitter`](crate::model::ImportJobSubmitter)
-    #[non_exhaustive]
+    /// A builder for [`ImportJobSubmitter`](crate::model::ImportJobSubmitter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) email: std::option::Option<std::string::String>,
@@ -1980,7 +2002,7 @@ pub mod import_job_submitter {
             self.user_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportJobSubmitter`](crate::model::ImportJobSubmitter)
+        /// Consumes the builder and constructs a [`ImportJobSubmitter`](crate::model::ImportJobSubmitter).
         pub fn build(self) -> crate::model::ImportJobSubmitter {
             crate::model::ImportJobSubmitter {
                 email: self.email,
@@ -1990,7 +2012,7 @@ pub mod import_job_submitter {
     }
 }
 impl ImportJobSubmitter {
-    /// Creates a new builder-style object to manufacture [`ImportJobSubmitter`](crate::model::ImportJobSubmitter)
+    /// Creates a new builder-style object to manufacture [`ImportJobSubmitter`](crate::model::ImportJobSubmitter).
     pub fn builder() -> crate::model::import_job_submitter::Builder {
         crate::model::import_job_submitter::Builder::default()
     }
@@ -2001,8 +2023,10 @@ impl ImportJobSubmitter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailedBatchItem {
     /// <p> The id of the batch item that failed. This is the batch item id for the BatchCreateTableRows and BatchUpsertTableRows operations and the row id for the BatchUpdateTableRows and BatchDeleteTableRows operations. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p> The error message that indicates why the batch item failed. </p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl FailedBatchItem {
@@ -2023,11 +2047,10 @@ impl std::fmt::Debug for FailedBatchItem {
         formatter.finish()
     }
 }
-/// See [`FailedBatchItem`](crate::model::FailedBatchItem)
+/// See [`FailedBatchItem`](crate::model::FailedBatchItem).
 pub mod failed_batch_item {
 
-    /// A builder for [`FailedBatchItem`](crate::model::FailedBatchItem)
-    #[non_exhaustive]
+    /// A builder for [`FailedBatchItem`](crate::model::FailedBatchItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2057,7 +2080,7 @@ pub mod failed_batch_item {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailedBatchItem`](crate::model::FailedBatchItem)
+        /// Consumes the builder and constructs a [`FailedBatchItem`](crate::model::FailedBatchItem).
         pub fn build(self) -> crate::model::FailedBatchItem {
             crate::model::FailedBatchItem {
                 id: self.id,
@@ -2067,7 +2090,7 @@ pub mod failed_batch_item {
     }
 }
 impl FailedBatchItem {
-    /// Creates a new builder-style object to manufacture [`FailedBatchItem`](crate::model::FailedBatchItem)
+    /// Creates a new builder-style object to manufacture [`FailedBatchItem`](crate::model::FailedBatchItem).
     pub fn builder() -> crate::model::failed_batch_item::Builder {
         crate::model::failed_batch_item::Builder::default()
     }
@@ -2078,8 +2101,10 @@ impl FailedBatchItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpsertRowsResult {
     /// <p> The list of row ids that were changed as part of an upsert row operation. If the upsert resulted in an update, this list could potentially contain multiple rows that matched the filter and hence got updated. If the upsert resulted in an append, this list would only have the single row that was appended. </p>
+    #[doc(hidden)]
     pub row_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> The result of the upsert action. </p>
+    #[doc(hidden)]
     pub upsert_action: std::option::Option<crate::model::UpsertAction>,
 }
 impl UpsertRowsResult {
@@ -2100,11 +2125,10 @@ impl std::fmt::Debug for UpsertRowsResult {
         formatter.finish()
     }
 }
-/// See [`UpsertRowsResult`](crate::model::UpsertRowsResult)
+/// See [`UpsertRowsResult`](crate::model::UpsertRowsResult).
 pub mod upsert_rows_result {
 
-    /// A builder for [`UpsertRowsResult`](crate::model::UpsertRowsResult)
-    #[non_exhaustive]
+    /// A builder for [`UpsertRowsResult`](crate::model::UpsertRowsResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) row_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2143,7 +2167,7 @@ pub mod upsert_rows_result {
             self.upsert_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpsertRowsResult`](crate::model::UpsertRowsResult)
+        /// Consumes the builder and constructs a [`UpsertRowsResult`](crate::model::UpsertRowsResult).
         pub fn build(self) -> crate::model::UpsertRowsResult {
             crate::model::UpsertRowsResult {
                 row_ids: self.row_ids,
@@ -2153,7 +2177,7 @@ pub mod upsert_rows_result {
     }
 }
 impl UpsertRowsResult {
-    /// Creates a new builder-style object to manufacture [`UpsertRowsResult`](crate::model::UpsertRowsResult)
+    /// Creates a new builder-style object to manufacture [`UpsertRowsResult`](crate::model::UpsertRowsResult).
     pub fn builder() -> crate::model::upsert_rows_result::Builder {
         crate::model::upsert_rows_result::Builder::default()
     }
@@ -2219,11 +2243,14 @@ impl AsRef<str> for UpsertAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpsertRowData {
     /// <p> An external identifier that represents a single item in the request that is being upserted as part of the BatchUpsertTableRows request. This can be any string that you can use to identify the item in the request. The BatchUpsertTableRows API puts the batch item id in the results to allow you to link data in the request to data in the results. </p>
+    #[doc(hidden)]
     pub batch_item_id: std::option::Option<std::string::String>,
     /// <p> The filter formula to use to find existing matching rows to update. The formula needs to return zero or more rows. If the formula returns 0 rows, then a new row will be appended in the target table. If the formula returns one or more rows, then the returned rows will be updated. </p>
     /// <p> Note that the filter formula needs to return rows from the target table for the upsert operation to succeed. If the filter formula has a syntax error or it doesn't evaluate to zero or more rows in the target table for any one item in the input list, then the entire BatchUpsertTableRows request fails and no updates are made to the table. </p>
+    #[doc(hidden)]
     pub filter: std::option::Option<crate::model::Filter>,
     /// <p> A map representing the cells to update for the matching rows or an appended row. The key is the column id of the cell and the value is the CellInput object that represents the data to set in that cell. </p>
+    #[doc(hidden)]
     pub cells_to_update: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::CellInput>,
     >,
@@ -2255,11 +2282,10 @@ impl std::fmt::Debug for UpsertRowData {
         formatter.finish()
     }
 }
-/// See [`UpsertRowData`](crate::model::UpsertRowData)
+/// See [`UpsertRowData`](crate::model::UpsertRowData).
 pub mod upsert_row_data {
 
-    /// A builder for [`UpsertRowData`](crate::model::UpsertRowData)
-    #[non_exhaustive]
+    /// A builder for [`UpsertRowData`](crate::model::UpsertRowData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) batch_item_id: std::option::Option<std::string::String>,
@@ -2319,7 +2345,7 @@ pub mod upsert_row_data {
             self.cells_to_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpsertRowData`](crate::model::UpsertRowData)
+        /// Consumes the builder and constructs a [`UpsertRowData`](crate::model::UpsertRowData).
         pub fn build(self) -> crate::model::UpsertRowData {
             crate::model::UpsertRowData {
                 batch_item_id: self.batch_item_id,
@@ -2330,7 +2356,7 @@ pub mod upsert_row_data {
     }
 }
 impl UpsertRowData {
-    /// Creates a new builder-style object to manufacture [`UpsertRowData`](crate::model::UpsertRowData)
+    /// Creates a new builder-style object to manufacture [`UpsertRowData`](crate::model::UpsertRowData).
     pub fn builder() -> crate::model::upsert_row_data::Builder {
         crate::model::upsert_row_data::Builder::default()
     }
@@ -2343,8 +2369,10 @@ impl UpsertRowData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CellInput {
     /// <p> Fact represents the data that is entered into a cell. This data can be free text or a formula. Formulas need to start with the equals (=) sign. </p>
+    #[doc(hidden)]
     pub fact: std::option::Option<std::string::String>,
     /// <p> A list representing the values that are entered into a ROWSET cell. Facts list can have either only values or rowIDs, and rowIDs should from the same table. </p>
+    #[doc(hidden)]
     pub facts: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CellInput {
@@ -2365,11 +2393,10 @@ impl std::fmt::Debug for CellInput {
         formatter.finish()
     }
 }
-/// See [`CellInput`](crate::model::CellInput)
+/// See [`CellInput`](crate::model::CellInput).
 pub mod cell_input {
 
-    /// A builder for [`CellInput`](crate::model::CellInput)
-    #[non_exhaustive]
+    /// A builder for [`CellInput`](crate::model::CellInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fact: std::option::Option<std::string::String>,
@@ -2405,7 +2432,7 @@ pub mod cell_input {
             self.facts = input;
             self
         }
-        /// Consumes the builder and constructs a [`CellInput`](crate::model::CellInput)
+        /// Consumes the builder and constructs a [`CellInput`](crate::model::CellInput).
         pub fn build(self) -> crate::model::CellInput {
             crate::model::CellInput {
                 fact: self.fact,
@@ -2415,7 +2442,7 @@ pub mod cell_input {
     }
 }
 impl CellInput {
-    /// Creates a new builder-style object to manufacture [`CellInput`](crate::model::CellInput)
+    /// Creates a new builder-style object to manufacture [`CellInput`](crate::model::CellInput).
     pub fn builder() -> crate::model::cell_input::Builder {
         crate::model::cell_input::Builder::default()
     }
@@ -2426,8 +2453,10 @@ impl CellInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateRowData {
     /// <p> The id of the row that needs to be updated. </p>
+    #[doc(hidden)]
     pub row_id: std::option::Option<std::string::String>,
     /// <p> A map representing the cells to update in the given row. The key is the column id of the cell and the value is the CellInput object that represents the data to set in that cell. </p>
+    #[doc(hidden)]
     pub cells_to_update: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::CellInput>,
     >,
@@ -2453,11 +2482,10 @@ impl std::fmt::Debug for UpdateRowData {
         formatter.finish()
     }
 }
-/// See [`UpdateRowData`](crate::model::UpdateRowData)
+/// See [`UpdateRowData`](crate::model::UpdateRowData).
 pub mod update_row_data {
 
-    /// A builder for [`UpdateRowData`](crate::model::UpdateRowData)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRowData`](crate::model::UpdateRowData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) row_id: std::option::Option<std::string::String>,
@@ -2501,7 +2529,7 @@ pub mod update_row_data {
             self.cells_to_update = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRowData`](crate::model::UpdateRowData)
+        /// Consumes the builder and constructs a [`UpdateRowData`](crate::model::UpdateRowData).
         pub fn build(self) -> crate::model::UpdateRowData {
             crate::model::UpdateRowData {
                 row_id: self.row_id,
@@ -2511,7 +2539,7 @@ pub mod update_row_data {
     }
 }
 impl UpdateRowData {
-    /// Creates a new builder-style object to manufacture [`UpdateRowData`](crate::model::UpdateRowData)
+    /// Creates a new builder-style object to manufacture [`UpdateRowData`](crate::model::UpdateRowData).
     pub fn builder() -> crate::model::update_row_data::Builder {
         crate::model::update_row_data::Builder::default()
     }
@@ -2522,8 +2550,10 @@ impl UpdateRowData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRowData {
     /// <p> An external identifier that represents the single row that is being created as part of the BatchCreateTableRows request. This can be any string that you can use to identify the row in the request. The BatchCreateTableRows API puts the batch item id in the results to allow you to link data in the request to data in the results. </p>
+    #[doc(hidden)]
     pub batch_item_id: std::option::Option<std::string::String>,
     /// <p> A map representing the cells to create in the new row. The key is the column id of the cell and the value is the CellInput object that represents the data to set in that cell. </p>
+    #[doc(hidden)]
     pub cells_to_create: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::CellInput>,
     >,
@@ -2549,11 +2579,10 @@ impl std::fmt::Debug for CreateRowData {
         formatter.finish()
     }
 }
-/// See [`CreateRowData`](crate::model::CreateRowData)
+/// See [`CreateRowData`](crate::model::CreateRowData).
 pub mod create_row_data {
 
-    /// A builder for [`CreateRowData`](crate::model::CreateRowData)
-    #[non_exhaustive]
+    /// A builder for [`CreateRowData`](crate::model::CreateRowData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) batch_item_id: std::option::Option<std::string::String>,
@@ -2600,7 +2629,7 @@ pub mod create_row_data {
             self.cells_to_create = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRowData`](crate::model::CreateRowData)
+        /// Consumes the builder and constructs a [`CreateRowData`](crate::model::CreateRowData).
         pub fn build(self) -> crate::model::CreateRowData {
             crate::model::CreateRowData {
                 batch_item_id: self.batch_item_id,
@@ -2610,7 +2639,7 @@ pub mod create_row_data {
     }
 }
 impl CreateRowData {
-    /// Creates a new builder-style object to manufacture [`CreateRowData`](crate::model::CreateRowData)
+    /// Creates a new builder-style object to manufacture [`CreateRowData`](crate::model::CreateRowData).
     pub fn builder() -> crate::model::create_row_data::Builder {
         crate::model::create_row_data::Builder::default()
     }

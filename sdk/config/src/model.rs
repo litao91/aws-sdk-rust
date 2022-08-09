@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>One part of a key-value pair that make up a tag. A key is a general label that acts like a category for more specific tag values.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The optional part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key).</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -68,7 +69,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -79,8 +80,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceKey {
     /// <p>The resource type.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The ID of the resource (for example., sg-xxxxxx). </p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
 }
 impl ResourceKey {
@@ -101,11 +104,10 @@ impl std::fmt::Debug for ResourceKey {
         formatter.finish()
     }
 }
-/// See [`ResourceKey`](crate::model::ResourceKey)
+/// See [`ResourceKey`](crate::model::ResourceKey).
 pub mod resource_key {
 
-    /// A builder for [`ResourceKey`](crate::model::ResourceKey)
-    #[non_exhaustive]
+    /// A builder for [`ResourceKey`](crate::model::ResourceKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<crate::model::ResourceType>,
@@ -135,7 +137,7 @@ pub mod resource_key {
             self.resource_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceKey`](crate::model::ResourceKey)
+        /// Consumes the builder and constructs a [`ResourceKey`](crate::model::ResourceKey).
         pub fn build(self) -> crate::model::ResourceKey {
             crate::model::ResourceKey {
                 resource_type: self.resource_type,
@@ -145,7 +147,7 @@ pub mod resource_key {
     }
 }
 impl ResourceKey {
-    /// Creates a new builder-style object to manufacture [`ResourceKey`](crate::model::ResourceKey)
+    /// Creates a new builder-style object to manufacture [`ResourceKey`](crate::model::ResourceKey).
     pub fn builder() -> crate::model::resource_key::Builder {
         crate::model::resource_key::Builder::default()
     }
@@ -166,6 +168,8 @@ pub enum ResourceType {
     #[allow(missing_docs)] // documentation missing in model
     Certificate,
     #[allow(missing_docs)] // documentation missing in model
+    AccessAnalyzerAnalyzer,
+    #[allow(missing_docs)] // documentation missing in model
     RestApi,
     #[allow(missing_docs)] // documentation missing in model
     Stage,
@@ -173,6 +177,10 @@ pub enum ResourceType {
     Api,
     #[allow(missing_docs)] // documentation missing in model
     StageV2,
+    #[allow(missing_docs)] // documentation missing in model
+    AthenaDataCatalog,
+    #[allow(missing_docs)] // documentation missing in model
+    AthenaWorkGroup,
     #[allow(missing_docs)] // documentation missing in model
     AutoScalingGroup,
     #[allow(missing_docs)] // documentation missing in model
@@ -189,6 +197,10 @@ pub enum ResourceType {
     BackupVault,
     #[allow(missing_docs)] // documentation missing in model
     BackupRecoveryPoint,
+    #[allow(missing_docs)] // documentation missing in model
+    BatchComputeEnvironment,
+    #[allow(missing_docs)] // documentation missing in model
+    BatchJobQueue,
     #[allow(missing_docs)] // documentation missing in model
     Stack,
     #[allow(missing_docs)] // documentation missing in model
@@ -213,6 +225,14 @@ pub enum ResourceType {
     ConformancePackCompliance,
     #[allow(missing_docs)] // documentation missing in model
     ResourceCompliance,
+    #[allow(missing_docs)] // documentation missing in model
+    DmsCertificate,
+    #[allow(missing_docs)] // documentation missing in model
+    DmsEventSubscription,
+    #[allow(missing_docs)] // documentation missing in model
+    DmsReplicationSubnetGroup,
+    #[allow(missing_docs)] // documentation missing in model
+    DetectiveGraph,
     #[allow(missing_docs)] // documentation missing in model
     Table,
     #[allow(missing_docs)] // documentation missing in model
@@ -247,6 +267,10 @@ pub enum ResourceType {
     Subnet,
     #[allow(missing_docs)] // documentation missing in model
     TransitGateway,
+    #[allow(missing_docs)] // documentation missing in model
+    TransitGatewayAttachment,
+    #[allow(missing_docs)] // documentation missing in model
+    TransitGatewayRouteTable,
     #[allow(missing_docs)] // documentation missing in model
     Vpc,
     #[allow(missing_docs)] // documentation missing in model
@@ -288,9 +312,17 @@ pub enum ResourceType {
     #[allow(missing_docs)] // documentation missing in model
     LoadBalancer,
     #[allow(missing_docs)] // documentation missing in model
+    ListenerV2,
+    #[allow(missing_docs)] // documentation missing in model
     LoadBalancerV2,
     #[allow(missing_docs)] // documentation missing in model
     Domain,
+    #[allow(missing_docs)] // documentation missing in model
+    GlobalAcceleratorAccelerator,
+    #[allow(missing_docs)] // documentation missing in model
+    GlobalAcceleratorEndpointGroup,
+    #[allow(missing_docs)] // documentation missing in model
+    GlobalAcceleratorListener,
     #[allow(missing_docs)] // documentation missing in model
     GuardDutyDetector,
     #[allow(missing_docs)] // documentation missing in model
@@ -309,6 +341,8 @@ pub enum ResourceType {
     KinesisStreamConsumer,
     #[allow(missing_docs)] // documentation missing in model
     Function,
+    #[allow(missing_docs)] // documentation missing in model
+    MskCluster,
     #[allow(missing_docs)] // documentation missing in model
     NetworkFirewallFirewall,
     #[allow(missing_docs)] // documentation missing in model
@@ -346,6 +380,12 @@ pub enum ResourceType {
     #[allow(missing_docs)] // documentation missing in model
     RedshiftEventSubscription,
     #[allow(missing_docs)] // documentation missing in model
+    Route53ResolverResolverEndpoint,
+    #[allow(missing_docs)] // documentation missing in model
+    Route53ResolverResolverRule,
+    #[allow(missing_docs)] // documentation missing in model
+    Route53ResolverResolverRuleAssociation,
+    #[allow(missing_docs)] // documentation missing in model
     AccountPublicAccessBlock,
     #[allow(missing_docs)] // documentation missing in model
     Bucket,
@@ -364,6 +404,8 @@ pub enum ResourceType {
     #[allow(missing_docs)] // documentation missing in model
     SageMakerCodeRepository,
     #[allow(missing_docs)] // documentation missing in model
+    SageMakerModel,
+    #[allow(missing_docs)] // documentation missing in model
     Secret,
     #[allow(missing_docs)] // documentation missing in model
     CloudFormationProduct,
@@ -375,6 +417,10 @@ pub enum ResourceType {
     Protection,
     #[allow(missing_docs)] // documentation missing in model
     RegionalProtection,
+    #[allow(missing_docs)] // documentation missing in model
+    StepFunctionsActivity,
+    #[allow(missing_docs)] // documentation missing in model
+    StepFunctionsStateMachine,
     #[allow(missing_docs)] // documentation missing in model
     RateBasedRule,
     #[allow(missing_docs)] // documentation missing in model
@@ -402,6 +448,10 @@ pub enum ResourceType {
     #[allow(missing_docs)] // documentation missing in model
     WebAclv2,
     #[allow(missing_docs)] // documentation missing in model
+    WorkSpacesConnectionAlias,
+    #[allow(missing_docs)] // documentation missing in model
+    WorkSpacesWorkspace,
+    #[allow(missing_docs)] // documentation missing in model
     EncryptionConfig,
     /// Unknown contains new variants that have been added since this code was generated.
     Unknown(String),
@@ -410,10 +460,13 @@ impl std::convert::From<&str> for ResourceType {
     fn from(s: &str) -> Self {
         match s {
             "AWS::ACM::Certificate" => ResourceType::Certificate,
+            "AWS::AccessAnalyzer::Analyzer" => ResourceType::AccessAnalyzerAnalyzer,
             "AWS::ApiGateway::RestApi" => ResourceType::RestApi,
             "AWS::ApiGateway::Stage" => ResourceType::Stage,
             "AWS::ApiGatewayV2::Api" => ResourceType::Api,
             "AWS::ApiGatewayV2::Stage" => ResourceType::StageV2,
+            "AWS::Athena::DataCatalog" => ResourceType::AthenaDataCatalog,
+            "AWS::Athena::WorkGroup" => ResourceType::AthenaWorkGroup,
             "AWS::AutoScaling::AutoScalingGroup" => ResourceType::AutoScalingGroup,
             "AWS::AutoScaling::LaunchConfiguration" => ResourceType::LaunchConfiguration,
             "AWS::AutoScaling::ScalingPolicy" => ResourceType::ScalingPolicy,
@@ -422,6 +475,8 @@ impl std::convert::From<&str> for ResourceType {
             "AWS::Backup::BackupSelection" => ResourceType::BackupSelection,
             "AWS::Backup::BackupVault" => ResourceType::BackupVault,
             "AWS::Backup::RecoveryPoint" => ResourceType::BackupRecoveryPoint,
+            "AWS::Batch::ComputeEnvironment" => ResourceType::BatchComputeEnvironment,
+            "AWS::Batch::JobQueue" => ResourceType::BatchJobQueue,
             "AWS::CloudFormation::Stack" => ResourceType::Stack,
             "AWS::CloudFront::Distribution" => ResourceType::Distribution,
             "AWS::CloudFront::StreamingDistribution" => ResourceType::StreamingDistribution,
@@ -434,6 +489,10 @@ impl std::convert::From<&str> for ResourceType {
             "AWS::CodePipeline::Pipeline" => ResourceType::Pipeline,
             "AWS::Config::ConformancePackCompliance" => ResourceType::ConformancePackCompliance,
             "AWS::Config::ResourceCompliance" => ResourceType::ResourceCompliance,
+            "AWS::DMS::Certificate" => ResourceType::DmsCertificate,
+            "AWS::DMS::EventSubscription" => ResourceType::DmsEventSubscription,
+            "AWS::DMS::ReplicationSubnetGroup" => ResourceType::DmsReplicationSubnetGroup,
+            "AWS::Detective::Graph" => ResourceType::DetectiveGraph,
             "AWS::DynamoDB::Table" => ResourceType::Table,
             "AWS::EC2::CustomerGateway" => ResourceType::CustomerGateway,
             "AWS::EC2::EIP" => ResourceType::Eip,
@@ -451,6 +510,8 @@ impl std::convert::From<&str> for ResourceType {
             "AWS::EC2::SecurityGroup" => ResourceType::SecurityGroup,
             "AWS::EC2::Subnet" => ResourceType::Subnet,
             "AWS::EC2::TransitGateway" => ResourceType::TransitGateway,
+            "AWS::EC2::TransitGatewayAttachment" => ResourceType::TransitGatewayAttachment,
+            "AWS::EC2::TransitGatewayRouteTable" => ResourceType::TransitGatewayRouteTable,
             "AWS::EC2::VPC" => ResourceType::Vpc,
             "AWS::EC2::VPCEndpoint" => ResourceType::VpcEndpoint,
             "AWS::EC2::VPCEndpointService" => ResourceType::VpcEndpointService,
@@ -471,8 +532,12 @@ impl std::convert::From<&str> for ResourceType {
             "AWS::ElasticBeanstalk::ApplicationVersion" => ResourceType::ApplicationVersion,
             "AWS::ElasticBeanstalk::Environment" => ResourceType::Environment,
             "AWS::ElasticLoadBalancing::LoadBalancer" => ResourceType::LoadBalancer,
+            "AWS::ElasticLoadBalancingV2::Listener" => ResourceType::ListenerV2,
             "AWS::ElasticLoadBalancingV2::LoadBalancer" => ResourceType::LoadBalancerV2,
             "AWS::Elasticsearch::Domain" => ResourceType::Domain,
+            "AWS::GlobalAccelerator::Accelerator" => ResourceType::GlobalAcceleratorAccelerator,
+            "AWS::GlobalAccelerator::EndpointGroup" => ResourceType::GlobalAcceleratorEndpointGroup,
+            "AWS::GlobalAccelerator::Listener" => ResourceType::GlobalAcceleratorListener,
             "AWS::GuardDuty::Detector" => ResourceType::GuardDutyDetector,
             "AWS::IAM::Group" => ResourceType::Group,
             "AWS::IAM::Policy" => ResourceType::Policy,
@@ -482,6 +547,7 @@ impl std::convert::From<&str> for ResourceType {
             "AWS::Kinesis::Stream" => ResourceType::KinesisStream,
             "AWS::Kinesis::StreamConsumer" => ResourceType::KinesisStreamConsumer,
             "AWS::Lambda::Function" => ResourceType::Function,
+            "AWS::MSK::Cluster" => ResourceType::MskCluster,
             "AWS::NetworkFirewall::Firewall" => ResourceType::NetworkFirewallFirewall,
             "AWS::NetworkFirewall::FirewallPolicy" => ResourceType::NetworkFirewallFirewallPolicy,
             "AWS::NetworkFirewall::RuleGroup" => ResourceType::NetworkFirewallRuleGroup,
@@ -500,6 +566,13 @@ impl std::convert::From<&str> for ResourceType {
             "AWS::Redshift::ClusterSnapshot" => ResourceType::ClusterSnapshot,
             "AWS::Redshift::ClusterSubnetGroup" => ResourceType::ClusterSubnetGroup,
             "AWS::Redshift::EventSubscription" => ResourceType::RedshiftEventSubscription,
+            "AWS::Route53Resolver::ResolverEndpoint" => {
+                ResourceType::Route53ResolverResolverEndpoint
+            }
+            "AWS::Route53Resolver::ResolverRule" => ResourceType::Route53ResolverResolverRule,
+            "AWS::Route53Resolver::ResolverRuleAssociation" => {
+                ResourceType::Route53ResolverResolverRuleAssociation
+            }
             "AWS::S3::AccountPublicAccessBlock" => ResourceType::AccountPublicAccessBlock,
             "AWS::S3::Bucket" => ResourceType::Bucket,
             "AWS::SNS::Topic" => ResourceType::Topic,
@@ -509,6 +582,7 @@ impl std::convert::From<&str> for ResourceType {
             "AWS::SSM::ManagedInstanceInventory" => ResourceType::ManagedInstanceInventory,
             "AWS::SSM::PatchCompliance" => ResourceType::PatchCompliance,
             "AWS::SageMaker::CodeRepository" => ResourceType::SageMakerCodeRepository,
+            "AWS::SageMaker::Model" => ResourceType::SageMakerModel,
             "AWS::SecretsManager::Secret" => ResourceType::Secret,
             "AWS::ServiceCatalog::CloudFormationProduct" => ResourceType::CloudFormationProduct,
             "AWS::ServiceCatalog::CloudFormationProvisionedProduct" => {
@@ -517,6 +591,8 @@ impl std::convert::From<&str> for ResourceType {
             "AWS::ServiceCatalog::Portfolio" => ResourceType::Portfolio,
             "AWS::Shield::Protection" => ResourceType::Protection,
             "AWS::ShieldRegional::Protection" => ResourceType::RegionalProtection,
+            "AWS::StepFunctions::Activity" => ResourceType::StepFunctionsActivity,
+            "AWS::StepFunctions::StateMachine" => ResourceType::StepFunctionsStateMachine,
             "AWS::WAF::RateBasedRule" => ResourceType::RateBasedRule,
             "AWS::WAF::Rule" => ResourceType::Rule,
             "AWS::WAF::RuleGroup" => ResourceType::RuleGroup,
@@ -530,6 +606,8 @@ impl std::convert::From<&str> for ResourceType {
             "AWS::WAFv2::RegexPatternSet" => ResourceType::RegexPatternSetV2,
             "AWS::WAFv2::RuleGroup" => ResourceType::RuleGroupV2,
             "AWS::WAFv2::WebACL" => ResourceType::WebAclv2,
+            "AWS::WorkSpaces::ConnectionAlias" => ResourceType::WorkSpacesConnectionAlias,
+            "AWS::WorkSpaces::Workspace" => ResourceType::WorkSpacesWorkspace,
             "AWS::XRay::EncryptionConfig" => ResourceType::EncryptionConfig,
             other => ResourceType::Unknown(other.to_owned()),
         }
@@ -547,10 +625,13 @@ impl ResourceType {
     pub fn as_str(&self) -> &str {
         match self {
             ResourceType::Certificate => "AWS::ACM::Certificate",
+            ResourceType::AccessAnalyzerAnalyzer => "AWS::AccessAnalyzer::Analyzer",
             ResourceType::RestApi => "AWS::ApiGateway::RestApi",
             ResourceType::Stage => "AWS::ApiGateway::Stage",
             ResourceType::Api => "AWS::ApiGatewayV2::Api",
             ResourceType::StageV2 => "AWS::ApiGatewayV2::Stage",
+            ResourceType::AthenaDataCatalog => "AWS::Athena::DataCatalog",
+            ResourceType::AthenaWorkGroup => "AWS::Athena::WorkGroup",
             ResourceType::AutoScalingGroup => "AWS::AutoScaling::AutoScalingGroup",
             ResourceType::LaunchConfiguration => "AWS::AutoScaling::LaunchConfiguration",
             ResourceType::ScalingPolicy => "AWS::AutoScaling::ScalingPolicy",
@@ -559,6 +640,8 @@ impl ResourceType {
             ResourceType::BackupSelection => "AWS::Backup::BackupSelection",
             ResourceType::BackupVault => "AWS::Backup::BackupVault",
             ResourceType::BackupRecoveryPoint => "AWS::Backup::RecoveryPoint",
+            ResourceType::BatchComputeEnvironment => "AWS::Batch::ComputeEnvironment",
+            ResourceType::BatchJobQueue => "AWS::Batch::JobQueue",
             ResourceType::Stack => "AWS::CloudFormation::Stack",
             ResourceType::Distribution => "AWS::CloudFront::Distribution",
             ResourceType::StreamingDistribution => "AWS::CloudFront::StreamingDistribution",
@@ -571,6 +654,10 @@ impl ResourceType {
             ResourceType::Pipeline => "AWS::CodePipeline::Pipeline",
             ResourceType::ConformancePackCompliance => "AWS::Config::ConformancePackCompliance",
             ResourceType::ResourceCompliance => "AWS::Config::ResourceCompliance",
+            ResourceType::DmsCertificate => "AWS::DMS::Certificate",
+            ResourceType::DmsEventSubscription => "AWS::DMS::EventSubscription",
+            ResourceType::DmsReplicationSubnetGroup => "AWS::DMS::ReplicationSubnetGroup",
+            ResourceType::DetectiveGraph => "AWS::Detective::Graph",
             ResourceType::Table => "AWS::DynamoDB::Table",
             ResourceType::CustomerGateway => "AWS::EC2::CustomerGateway",
             ResourceType::Eip => "AWS::EC2::EIP",
@@ -588,6 +675,8 @@ impl ResourceType {
             ResourceType::SecurityGroup => "AWS::EC2::SecurityGroup",
             ResourceType::Subnet => "AWS::EC2::Subnet",
             ResourceType::TransitGateway => "AWS::EC2::TransitGateway",
+            ResourceType::TransitGatewayAttachment => "AWS::EC2::TransitGatewayAttachment",
+            ResourceType::TransitGatewayRouteTable => "AWS::EC2::TransitGatewayRouteTable",
             ResourceType::Vpc => "AWS::EC2::VPC",
             ResourceType::VpcEndpoint => "AWS::EC2::VPCEndpoint",
             ResourceType::VpcEndpointService => "AWS::EC2::VPCEndpointService",
@@ -608,8 +697,12 @@ impl ResourceType {
             ResourceType::ApplicationVersion => "AWS::ElasticBeanstalk::ApplicationVersion",
             ResourceType::Environment => "AWS::ElasticBeanstalk::Environment",
             ResourceType::LoadBalancer => "AWS::ElasticLoadBalancing::LoadBalancer",
+            ResourceType::ListenerV2 => "AWS::ElasticLoadBalancingV2::Listener",
             ResourceType::LoadBalancerV2 => "AWS::ElasticLoadBalancingV2::LoadBalancer",
             ResourceType::Domain => "AWS::Elasticsearch::Domain",
+            ResourceType::GlobalAcceleratorAccelerator => "AWS::GlobalAccelerator::Accelerator",
+            ResourceType::GlobalAcceleratorEndpointGroup => "AWS::GlobalAccelerator::EndpointGroup",
+            ResourceType::GlobalAcceleratorListener => "AWS::GlobalAccelerator::Listener",
             ResourceType::GuardDutyDetector => "AWS::GuardDuty::Detector",
             ResourceType::Group => "AWS::IAM::Group",
             ResourceType::Policy => "AWS::IAM::Policy",
@@ -619,6 +712,7 @@ impl ResourceType {
             ResourceType::KinesisStream => "AWS::Kinesis::Stream",
             ResourceType::KinesisStreamConsumer => "AWS::Kinesis::StreamConsumer",
             ResourceType::Function => "AWS::Lambda::Function",
+            ResourceType::MskCluster => "AWS::MSK::Cluster",
             ResourceType::NetworkFirewallFirewall => "AWS::NetworkFirewall::Firewall",
             ResourceType::NetworkFirewallFirewallPolicy => "AWS::NetworkFirewall::FirewallPolicy",
             ResourceType::NetworkFirewallRuleGroup => "AWS::NetworkFirewall::RuleGroup",
@@ -637,6 +731,13 @@ impl ResourceType {
             ResourceType::ClusterSnapshot => "AWS::Redshift::ClusterSnapshot",
             ResourceType::ClusterSubnetGroup => "AWS::Redshift::ClusterSubnetGroup",
             ResourceType::RedshiftEventSubscription => "AWS::Redshift::EventSubscription",
+            ResourceType::Route53ResolverResolverEndpoint => {
+                "AWS::Route53Resolver::ResolverEndpoint"
+            }
+            ResourceType::Route53ResolverResolverRule => "AWS::Route53Resolver::ResolverRule",
+            ResourceType::Route53ResolverResolverRuleAssociation => {
+                "AWS::Route53Resolver::ResolverRuleAssociation"
+            }
             ResourceType::AccountPublicAccessBlock => "AWS::S3::AccountPublicAccessBlock",
             ResourceType::Bucket => "AWS::S3::Bucket",
             ResourceType::Topic => "AWS::SNS::Topic",
@@ -646,6 +747,7 @@ impl ResourceType {
             ResourceType::ManagedInstanceInventory => "AWS::SSM::ManagedInstanceInventory",
             ResourceType::PatchCompliance => "AWS::SSM::PatchCompliance",
             ResourceType::SageMakerCodeRepository => "AWS::SageMaker::CodeRepository",
+            ResourceType::SageMakerModel => "AWS::SageMaker::Model",
             ResourceType::Secret => "AWS::SecretsManager::Secret",
             ResourceType::CloudFormationProduct => "AWS::ServiceCatalog::CloudFormationProduct",
             ResourceType::CloudFormationProvisionedProduct => {
@@ -654,6 +756,8 @@ impl ResourceType {
             ResourceType::Portfolio => "AWS::ServiceCatalog::Portfolio",
             ResourceType::Protection => "AWS::Shield::Protection",
             ResourceType::RegionalProtection => "AWS::ShieldRegional::Protection",
+            ResourceType::StepFunctionsActivity => "AWS::StepFunctions::Activity",
+            ResourceType::StepFunctionsStateMachine => "AWS::StepFunctions::StateMachine",
             ResourceType::RateBasedRule => "AWS::WAF::RateBasedRule",
             ResourceType::Rule => "AWS::WAF::Rule",
             ResourceType::RuleGroup => "AWS::WAF::RuleGroup",
@@ -667,6 +771,8 @@ impl ResourceType {
             ResourceType::RegexPatternSetV2 => "AWS::WAFv2::RegexPatternSet",
             ResourceType::RuleGroupV2 => "AWS::WAFv2::RuleGroup",
             ResourceType::WebAclv2 => "AWS::WAFv2::WebACL",
+            ResourceType::WorkSpacesConnectionAlias => "AWS::WorkSpaces::ConnectionAlias",
+            ResourceType::WorkSpacesWorkspace => "AWS::WorkSpaces::Workspace",
             ResourceType::EncryptionConfig => "AWS::XRay::EncryptionConfig",
             ResourceType::Unknown(s) => s.as_ref(),
         }
@@ -675,10 +781,13 @@ impl ResourceType {
     pub fn values() -> &'static [&'static str] {
         &[
             "AWS::ACM::Certificate",
+            "AWS::AccessAnalyzer::Analyzer",
             "AWS::ApiGateway::RestApi",
             "AWS::ApiGateway::Stage",
             "AWS::ApiGatewayV2::Api",
             "AWS::ApiGatewayV2::Stage",
+            "AWS::Athena::DataCatalog",
+            "AWS::Athena::WorkGroup",
             "AWS::AutoScaling::AutoScalingGroup",
             "AWS::AutoScaling::LaunchConfiguration",
             "AWS::AutoScaling::ScalingPolicy",
@@ -687,6 +796,8 @@ impl ResourceType {
             "AWS::Backup::BackupSelection",
             "AWS::Backup::BackupVault",
             "AWS::Backup::RecoveryPoint",
+            "AWS::Batch::ComputeEnvironment",
+            "AWS::Batch::JobQueue",
             "AWS::CloudFormation::Stack",
             "AWS::CloudFront::Distribution",
             "AWS::CloudFront::StreamingDistribution",
@@ -699,6 +810,10 @@ impl ResourceType {
             "AWS::CodePipeline::Pipeline",
             "AWS::Config::ConformancePackCompliance",
             "AWS::Config::ResourceCompliance",
+            "AWS::DMS::Certificate",
+            "AWS::DMS::EventSubscription",
+            "AWS::DMS::ReplicationSubnetGroup",
+            "AWS::Detective::Graph",
             "AWS::DynamoDB::Table",
             "AWS::EC2::CustomerGateway",
             "AWS::EC2::EIP",
@@ -716,6 +831,8 @@ impl ResourceType {
             "AWS::EC2::SecurityGroup",
             "AWS::EC2::Subnet",
             "AWS::EC2::TransitGateway",
+            "AWS::EC2::TransitGatewayAttachment",
+            "AWS::EC2::TransitGatewayRouteTable",
             "AWS::EC2::VPC",
             "AWS::EC2::VPCEndpoint",
             "AWS::EC2::VPCEndpointService",
@@ -736,8 +853,12 @@ impl ResourceType {
             "AWS::ElasticBeanstalk::ApplicationVersion",
             "AWS::ElasticBeanstalk::Environment",
             "AWS::ElasticLoadBalancing::LoadBalancer",
+            "AWS::ElasticLoadBalancingV2::Listener",
             "AWS::ElasticLoadBalancingV2::LoadBalancer",
             "AWS::Elasticsearch::Domain",
+            "AWS::GlobalAccelerator::Accelerator",
+            "AWS::GlobalAccelerator::EndpointGroup",
+            "AWS::GlobalAccelerator::Listener",
             "AWS::GuardDuty::Detector",
             "AWS::IAM::Group",
             "AWS::IAM::Policy",
@@ -747,6 +868,7 @@ impl ResourceType {
             "AWS::Kinesis::Stream",
             "AWS::Kinesis::StreamConsumer",
             "AWS::Lambda::Function",
+            "AWS::MSK::Cluster",
             "AWS::NetworkFirewall::Firewall",
             "AWS::NetworkFirewall::FirewallPolicy",
             "AWS::NetworkFirewall::RuleGroup",
@@ -765,6 +887,9 @@ impl ResourceType {
             "AWS::Redshift::ClusterSnapshot",
             "AWS::Redshift::ClusterSubnetGroup",
             "AWS::Redshift::EventSubscription",
+            "AWS::Route53Resolver::ResolverEndpoint",
+            "AWS::Route53Resolver::ResolverRule",
+            "AWS::Route53Resolver::ResolverRuleAssociation",
             "AWS::S3::AccountPublicAccessBlock",
             "AWS::S3::Bucket",
             "AWS::SNS::Topic",
@@ -774,12 +899,15 @@ impl ResourceType {
             "AWS::SSM::ManagedInstanceInventory",
             "AWS::SSM::PatchCompliance",
             "AWS::SageMaker::CodeRepository",
+            "AWS::SageMaker::Model",
             "AWS::SecretsManager::Secret",
             "AWS::ServiceCatalog::CloudFormationProduct",
             "AWS::ServiceCatalog::CloudFormationProvisionedProduct",
             "AWS::ServiceCatalog::Portfolio",
             "AWS::Shield::Protection",
             "AWS::ShieldRegional::Protection",
+            "AWS::StepFunctions::Activity",
+            "AWS::StepFunctions::StateMachine",
             "AWS::WAF::RateBasedRule",
             "AWS::WAF::Rule",
             "AWS::WAF::RuleGroup",
@@ -793,6 +921,8 @@ impl ResourceType {
             "AWS::WAFv2::RegexPatternSet",
             "AWS::WAFv2::RuleGroup",
             "AWS::WAFv2::WebACL",
+            "AWS::WorkSpaces::ConnectionAlias",
+            "AWS::WorkSpaces::Workspace",
             "AWS::XRay::EncryptionConfig",
         ]
     }
@@ -808,6 +938,7 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryInfo {
     /// <p>Returns a <code>FieldInfo</code> object.</p>
+    #[doc(hidden)]
     pub select_fields: std::option::Option<std::vec::Vec<crate::model::FieldInfo>>,
 }
 impl QueryInfo {
@@ -823,11 +954,10 @@ impl std::fmt::Debug for QueryInfo {
         formatter.finish()
     }
 }
-/// See [`QueryInfo`](crate::model::QueryInfo)
+/// See [`QueryInfo`](crate::model::QueryInfo).
 pub mod query_info {
 
-    /// A builder for [`QueryInfo`](crate::model::QueryInfo)
-    #[non_exhaustive]
+    /// A builder for [`QueryInfo`](crate::model::QueryInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) select_fields: std::option::Option<std::vec::Vec<crate::model::FieldInfo>>,
@@ -852,7 +982,7 @@ pub mod query_info {
             self.select_fields = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryInfo`](crate::model::QueryInfo)
+        /// Consumes the builder and constructs a [`QueryInfo`](crate::model::QueryInfo).
         pub fn build(self) -> crate::model::QueryInfo {
             crate::model::QueryInfo {
                 select_fields: self.select_fields,
@@ -861,7 +991,7 @@ pub mod query_info {
     }
 }
 impl QueryInfo {
-    /// Creates a new builder-style object to manufacture [`QueryInfo`](crate::model::QueryInfo)
+    /// Creates a new builder-style object to manufacture [`QueryInfo`](crate::model::QueryInfo).
     pub fn builder() -> crate::model::query_info::Builder {
         crate::model::query_info::Builder::default()
     }
@@ -872,6 +1002,7 @@ impl QueryInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FieldInfo {
     /// <p>Name of the field.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl FieldInfo {
@@ -887,11 +1018,10 @@ impl std::fmt::Debug for FieldInfo {
         formatter.finish()
     }
 }
-/// See [`FieldInfo`](crate::model::FieldInfo)
+/// See [`FieldInfo`](crate::model::FieldInfo).
 pub mod field_info {
 
-    /// A builder for [`FieldInfo`](crate::model::FieldInfo)
-    #[non_exhaustive]
+    /// A builder for [`FieldInfo`](crate::model::FieldInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -907,14 +1037,14 @@ pub mod field_info {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`FieldInfo`](crate::model::FieldInfo)
+        /// Consumes the builder and constructs a [`FieldInfo`](crate::model::FieldInfo).
         pub fn build(self) -> crate::model::FieldInfo {
             crate::model::FieldInfo { name: self.name }
         }
     }
 }
 impl FieldInfo {
-    /// Creates a new builder-style object to manufacture [`FieldInfo`](crate::model::FieldInfo)
+    /// Creates a new builder-style object to manufacture [`FieldInfo`](crate::model::FieldInfo).
     pub fn builder() -> crate::model::field_info::Builder {
         crate::model::field_info::Builder::default()
     }
@@ -925,14 +1055,19 @@ impl FieldInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StoredQuery {
     /// <p>The ID of the query.</p>
+    #[doc(hidden)]
     pub query_id: std::option::Option<std::string::String>,
     /// <p>Amazon Resource Name (ARN) of the query. For example, arn:partition:service:region:account-id:resource-type/resource-name/resource-id.</p>
+    #[doc(hidden)]
     pub query_arn: std::option::Option<std::string::String>,
     /// <p>The name of the query.</p>
+    #[doc(hidden)]
     pub query_name: std::option::Option<std::string::String>,
     /// <p>A unique description for the query.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The expression of the query. For example, <code>SELECT resourceId, resourceType, supplementaryConfiguration.BucketVersioningConfiguration.status WHERE resourceType = 'AWS::S3::Bucket' AND supplementaryConfiguration.BucketVersioningConfiguration.status = 'Off'.</code> </p>
+    #[doc(hidden)]
     pub expression: std::option::Option<std::string::String>,
 }
 impl StoredQuery {
@@ -968,11 +1103,10 @@ impl std::fmt::Debug for StoredQuery {
         formatter.finish()
     }
 }
-/// See [`StoredQuery`](crate::model::StoredQuery)
+/// See [`StoredQuery`](crate::model::StoredQuery).
 pub mod stored_query {
 
-    /// A builder for [`StoredQuery`](crate::model::StoredQuery)
-    #[non_exhaustive]
+    /// A builder for [`StoredQuery`](crate::model::StoredQuery).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) query_id: std::option::Option<std::string::String>,
@@ -1032,7 +1166,7 @@ pub mod stored_query {
             self.expression = input;
             self
         }
-        /// Consumes the builder and constructs a [`StoredQuery`](crate::model::StoredQuery)
+        /// Consumes the builder and constructs a [`StoredQuery`](crate::model::StoredQuery).
         pub fn build(self) -> crate::model::StoredQuery {
             crate::model::StoredQuery {
                 query_id: self.query_id,
@@ -1045,7 +1179,7 @@ pub mod stored_query {
     }
 }
 impl StoredQuery {
-    /// Creates a new builder-style object to manufacture [`StoredQuery`](crate::model::StoredQuery)
+    /// Creates a new builder-style object to manufacture [`StoredQuery`](crate::model::StoredQuery).
     pub fn builder() -> crate::model::stored_query::Builder {
         crate::model::stored_query::Builder::default()
     }
@@ -1056,10 +1190,12 @@ impl StoredQuery {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RetentionConfiguration {
     /// <p>The name of the retention configuration object.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Number of days Config stores your historical information.</p> <note>
     /// <p>Currently, only applicable to the configuration item history.</p>
     /// </note>
+    #[doc(hidden)]
     pub retention_period_in_days: i32,
 }
 impl RetentionConfiguration {
@@ -1082,11 +1218,10 @@ impl std::fmt::Debug for RetentionConfiguration {
         formatter.finish()
     }
 }
-/// See [`RetentionConfiguration`](crate::model::RetentionConfiguration)
+/// See [`RetentionConfiguration`](crate::model::RetentionConfiguration).
 pub mod retention_configuration {
 
-    /// A builder for [`RetentionConfiguration`](crate::model::RetentionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`RetentionConfiguration`](crate::model::RetentionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1117,7 +1252,7 @@ pub mod retention_configuration {
             self.retention_period_in_days = input;
             self
         }
-        /// Consumes the builder and constructs a [`RetentionConfiguration`](crate::model::RetentionConfiguration)
+        /// Consumes the builder and constructs a [`RetentionConfiguration`](crate::model::RetentionConfiguration).
         pub fn build(self) -> crate::model::RetentionConfiguration {
             crate::model::RetentionConfiguration {
                 name: self.name,
@@ -1127,7 +1262,7 @@ pub mod retention_configuration {
     }
 }
 impl RetentionConfiguration {
-    /// Creates a new builder-style object to manufacture [`RetentionConfiguration`](crate::model::RetentionConfiguration)
+    /// Creates a new builder-style object to manufacture [`RetentionConfiguration`](crate::model::RetentionConfiguration).
     pub fn builder() -> crate::model::retention_configuration::Builder {
         crate::model::retention_configuration::Builder::default()
     }
@@ -1138,8 +1273,10 @@ impl RetentionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailedRemediationExceptionBatch {
     /// <p>Returns a failure message. For example, the auto-remediation has failed.</p>
+    #[doc(hidden)]
     pub failure_message: std::option::Option<std::string::String>,
     /// <p>Returns remediation exception resource key object of the failed items.</p>
+    #[doc(hidden)]
     pub failed_items: std::option::Option<std::vec::Vec<crate::model::RemediationException>>,
 }
 impl FailedRemediationExceptionBatch {
@@ -1160,11 +1297,10 @@ impl std::fmt::Debug for FailedRemediationExceptionBatch {
         formatter.finish()
     }
 }
-/// See [`FailedRemediationExceptionBatch`](crate::model::FailedRemediationExceptionBatch)
+/// See [`FailedRemediationExceptionBatch`](crate::model::FailedRemediationExceptionBatch).
 pub mod failed_remediation_exception_batch {
 
-    /// A builder for [`FailedRemediationExceptionBatch`](crate::model::FailedRemediationExceptionBatch)
-    #[non_exhaustive]
+    /// A builder for [`FailedRemediationExceptionBatch`](crate::model::FailedRemediationExceptionBatch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failure_message: std::option::Option<std::string::String>,
@@ -1204,7 +1340,7 @@ pub mod failed_remediation_exception_batch {
             self.failed_items = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailedRemediationExceptionBatch`](crate::model::FailedRemediationExceptionBatch)
+        /// Consumes the builder and constructs a [`FailedRemediationExceptionBatch`](crate::model::FailedRemediationExceptionBatch).
         pub fn build(self) -> crate::model::FailedRemediationExceptionBatch {
             crate::model::FailedRemediationExceptionBatch {
                 failure_message: self.failure_message,
@@ -1214,7 +1350,7 @@ pub mod failed_remediation_exception_batch {
     }
 }
 impl FailedRemediationExceptionBatch {
-    /// Creates a new builder-style object to manufacture [`FailedRemediationExceptionBatch`](crate::model::FailedRemediationExceptionBatch)
+    /// Creates a new builder-style object to manufacture [`FailedRemediationExceptionBatch`](crate::model::FailedRemediationExceptionBatch).
     pub fn builder() -> crate::model::failed_remediation_exception_batch::Builder {
         crate::model::failed_remediation_exception_batch::Builder::default()
     }
@@ -1225,14 +1361,19 @@ impl FailedRemediationExceptionBatch {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemediationException {
     /// <p>The name of the Config rule.</p>
+    #[doc(hidden)]
     pub config_rule_name: std::option::Option<std::string::String>,
     /// <p>The type of a resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The ID of the resource (for example., sg-xxxxxx).</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>An explanation of an remediation exception.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time when the remediation exception will be deleted.</p>
+    #[doc(hidden)]
     pub expiration_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RemediationException {
@@ -1268,11 +1409,10 @@ impl std::fmt::Debug for RemediationException {
         formatter.finish()
     }
 }
-/// See [`RemediationException`](crate::model::RemediationException)
+/// See [`RemediationException`](crate::model::RemediationException).
 pub mod remediation_exception {
 
-    /// A builder for [`RemediationException`](crate::model::RemediationException)
-    #[non_exhaustive]
+    /// A builder for [`RemediationException`](crate::model::RemediationException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_rule_name: std::option::Option<std::string::String>,
@@ -1341,7 +1481,7 @@ pub mod remediation_exception {
             self.expiration_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemediationException`](crate::model::RemediationException)
+        /// Consumes the builder and constructs a [`RemediationException`](crate::model::RemediationException).
         pub fn build(self) -> crate::model::RemediationException {
             crate::model::RemediationException {
                 config_rule_name: self.config_rule_name,
@@ -1354,7 +1494,7 @@ pub mod remediation_exception {
     }
 }
 impl RemediationException {
-    /// Creates a new builder-style object to manufacture [`RemediationException`](crate::model::RemediationException)
+    /// Creates a new builder-style object to manufacture [`RemediationException`](crate::model::RemediationException).
     pub fn builder() -> crate::model::remediation_exception::Builder {
         crate::model::remediation_exception::Builder::default()
     }
@@ -1365,8 +1505,10 @@ impl RemediationException {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemediationExceptionResourceKey {
     /// <p>The type of a resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The ID of the resource (for example., sg-xxxxxx).</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
 }
 impl RemediationExceptionResourceKey {
@@ -1387,11 +1529,10 @@ impl std::fmt::Debug for RemediationExceptionResourceKey {
         formatter.finish()
     }
 }
-/// See [`RemediationExceptionResourceKey`](crate::model::RemediationExceptionResourceKey)
+/// See [`RemediationExceptionResourceKey`](crate::model::RemediationExceptionResourceKey).
 pub mod remediation_exception_resource_key {
 
-    /// A builder for [`RemediationExceptionResourceKey`](crate::model::RemediationExceptionResourceKey)
-    #[non_exhaustive]
+    /// A builder for [`RemediationExceptionResourceKey`](crate::model::RemediationExceptionResourceKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -1421,7 +1562,7 @@ pub mod remediation_exception_resource_key {
             self.resource_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemediationExceptionResourceKey`](crate::model::RemediationExceptionResourceKey)
+        /// Consumes the builder and constructs a [`RemediationExceptionResourceKey`](crate::model::RemediationExceptionResourceKey).
         pub fn build(self) -> crate::model::RemediationExceptionResourceKey {
             crate::model::RemediationExceptionResourceKey {
                 resource_type: self.resource_type,
@@ -1431,7 +1572,7 @@ pub mod remediation_exception_resource_key {
     }
 }
 impl RemediationExceptionResourceKey {
-    /// Creates a new builder-style object to manufacture [`RemediationExceptionResourceKey`](crate::model::RemediationExceptionResourceKey)
+    /// Creates a new builder-style object to manufacture [`RemediationExceptionResourceKey`](crate::model::RemediationExceptionResourceKey).
     pub fn builder() -> crate::model::remediation_exception_resource_key::Builder {
         crate::model::remediation_exception_resource_key::Builder::default()
     }
@@ -1442,8 +1583,10 @@ impl RemediationExceptionResourceKey {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailedRemediationBatch {
     /// <p>Returns a failure message. For example, the resource is already compliant.</p>
+    #[doc(hidden)]
     pub failure_message: std::option::Option<std::string::String>,
     /// <p>Returns remediation configurations of the failed items.</p>
+    #[doc(hidden)]
     pub failed_items: std::option::Option<std::vec::Vec<crate::model::RemediationConfiguration>>,
 }
 impl FailedRemediationBatch {
@@ -1464,11 +1607,10 @@ impl std::fmt::Debug for FailedRemediationBatch {
         formatter.finish()
     }
 }
-/// See [`FailedRemediationBatch`](crate::model::FailedRemediationBatch)
+/// See [`FailedRemediationBatch`](crate::model::FailedRemediationBatch).
 pub mod failed_remediation_batch {
 
-    /// A builder for [`FailedRemediationBatch`](crate::model::FailedRemediationBatch)
-    #[non_exhaustive]
+    /// A builder for [`FailedRemediationBatch`](crate::model::FailedRemediationBatch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failure_message: std::option::Option<std::string::String>,
@@ -1508,7 +1650,7 @@ pub mod failed_remediation_batch {
             self.failed_items = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailedRemediationBatch`](crate::model::FailedRemediationBatch)
+        /// Consumes the builder and constructs a [`FailedRemediationBatch`](crate::model::FailedRemediationBatch).
         pub fn build(self) -> crate::model::FailedRemediationBatch {
             crate::model::FailedRemediationBatch {
                 failure_message: self.failure_message,
@@ -1518,7 +1660,7 @@ pub mod failed_remediation_batch {
     }
 }
 impl FailedRemediationBatch {
-    /// Creates a new builder-style object to manufacture [`FailedRemediationBatch`](crate::model::FailedRemediationBatch)
+    /// Creates a new builder-style object to manufacture [`FailedRemediationBatch`](crate::model::FailedRemediationBatch).
     pub fn builder() -> crate::model::failed_remediation_batch::Builder {
         crate::model::failed_remediation_batch::Builder::default()
     }
@@ -1529,34 +1671,46 @@ impl FailedRemediationBatch {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemediationConfiguration {
     /// <p>The name of the Config rule.</p>
+    #[doc(hidden)]
     pub config_rule_name: std::option::Option<std::string::String>,
     /// <p>The type of the target. Target executes remediation. For example, SSM document.</p>
+    #[doc(hidden)]
     pub target_type: std::option::Option<crate::model::RemediationTargetType>,
     /// <p>Target ID is the name of the public document.</p>
+    #[doc(hidden)]
     pub target_id: std::option::Option<std::string::String>,
     /// <p>Version of the target. For example, version of the SSM document.</p> <note>
     /// <p>If you make backward incompatible changes to the SSM document, you must call PutRemediationConfiguration API again to ensure the remediations can run.</p>
     /// </note>
+    #[doc(hidden)]
     pub target_version: std::option::Option<std::string::String>,
     /// <p>An object of the RemediationParameterValue.</p>
+    #[doc(hidden)]
     pub parameters: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::RemediationParameterValue>,
     >,
     /// <p>The type of a resource. </p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The remediation is triggered automatically.</p>
+    #[doc(hidden)]
     pub automatic: bool,
     /// <p>An ExecutionControls object.</p>
+    #[doc(hidden)]
     pub execution_controls: std::option::Option<crate::model::ExecutionControls>,
     /// <p>The maximum number of failed attempts for auto-remediation. If you do not select a number, the default is 5.</p>
     /// <p>For example, if you specify MaximumAutomaticAttempts as 5 with RetryAttemptSeconds as 50 seconds, Config will put a RemediationException on your behalf for the failing resource after the 5th failed attempt within 50 seconds.</p>
+    #[doc(hidden)]
     pub maximum_automatic_attempts: std::option::Option<i32>,
     /// <p>Maximum time in seconds that Config runs auto-remediation. If you do not select a number, the default is 60 seconds. </p>
     /// <p>For example, if you specify RetryAttemptSeconds as 50 seconds and MaximumAutomaticAttempts as 5, Config will run auto-remediations 5 times within 50 seconds before throwing an exception.</p>
+    #[doc(hidden)]
     pub retry_attempt_seconds: std::option::Option<i64>,
     /// <p>Amazon Resource Name (ARN) of remediation configuration.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
-    /// <p>Name of the service that owns the service linked rule, if applicable.</p>
+    /// <p>Name of the service that owns the service-linked rule, if applicable.</p>
+    #[doc(hidden)]
     pub created_by_service: std::option::Option<std::string::String>,
 }
 impl RemediationConfiguration {
@@ -1612,7 +1766,7 @@ impl RemediationConfiguration {
     pub fn arn(&self) -> std::option::Option<&str> {
         self.arn.as_deref()
     }
-    /// <p>Name of the service that owns the service linked rule, if applicable.</p>
+    /// <p>Name of the service that owns the service-linked rule, if applicable.</p>
     pub fn created_by_service(&self) -> std::option::Option<&str> {
         self.created_by_service.as_deref()
     }
@@ -1638,11 +1792,10 @@ impl std::fmt::Debug for RemediationConfiguration {
         formatter.finish()
     }
 }
-/// See [`RemediationConfiguration`](crate::model::RemediationConfiguration)
+/// See [`RemediationConfiguration`](crate::model::RemediationConfiguration).
 pub mod remediation_configuration {
 
-    /// A builder for [`RemediationConfiguration`](crate::model::RemediationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`RemediationConfiguration`](crate::model::RemediationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_rule_name: std::option::Option<std::string::String>,
@@ -1812,12 +1965,12 @@ pub mod remediation_configuration {
             self.arn = input;
             self
         }
-        /// <p>Name of the service that owns the service linked rule, if applicable.</p>
+        /// <p>Name of the service that owns the service-linked rule, if applicable.</p>
         pub fn created_by_service(mut self, input: impl Into<std::string::String>) -> Self {
             self.created_by_service = Some(input.into());
             self
         }
-        /// <p>Name of the service that owns the service linked rule, if applicable.</p>
+        /// <p>Name of the service that owns the service-linked rule, if applicable.</p>
         pub fn set_created_by_service(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -1825,7 +1978,7 @@ pub mod remediation_configuration {
             self.created_by_service = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemediationConfiguration`](crate::model::RemediationConfiguration)
+        /// Consumes the builder and constructs a [`RemediationConfiguration`](crate::model::RemediationConfiguration).
         pub fn build(self) -> crate::model::RemediationConfiguration {
             crate::model::RemediationConfiguration {
                 config_rule_name: self.config_rule_name,
@@ -1845,7 +1998,7 @@ pub mod remediation_configuration {
     }
 }
 impl RemediationConfiguration {
-    /// Creates a new builder-style object to manufacture [`RemediationConfiguration`](crate::model::RemediationConfiguration)
+    /// Creates a new builder-style object to manufacture [`RemediationConfiguration`](crate::model::RemediationConfiguration).
     pub fn builder() -> crate::model::remediation_configuration::Builder {
         crate::model::remediation_configuration::Builder::default()
     }
@@ -1856,6 +2009,7 @@ impl RemediationConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionControls {
     /// <p>A SsmControls object.</p>
+    #[doc(hidden)]
     pub ssm_controls: std::option::Option<crate::model::SsmControls>,
 }
 impl ExecutionControls {
@@ -1871,11 +2025,10 @@ impl std::fmt::Debug for ExecutionControls {
         formatter.finish()
     }
 }
-/// See [`ExecutionControls`](crate::model::ExecutionControls)
+/// See [`ExecutionControls`](crate::model::ExecutionControls).
 pub mod execution_controls {
 
-    /// A builder for [`ExecutionControls`](crate::model::ExecutionControls)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionControls`](crate::model::ExecutionControls).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ssm_controls: std::option::Option<crate::model::SsmControls>,
@@ -1894,7 +2047,7 @@ pub mod execution_controls {
             self.ssm_controls = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionControls`](crate::model::ExecutionControls)
+        /// Consumes the builder and constructs a [`ExecutionControls`](crate::model::ExecutionControls).
         pub fn build(self) -> crate::model::ExecutionControls {
             crate::model::ExecutionControls {
                 ssm_controls: self.ssm_controls,
@@ -1903,7 +2056,7 @@ pub mod execution_controls {
     }
 }
 impl ExecutionControls {
-    /// Creates a new builder-style object to manufacture [`ExecutionControls`](crate::model::ExecutionControls)
+    /// Creates a new builder-style object to manufacture [`ExecutionControls`](crate::model::ExecutionControls).
     pub fn builder() -> crate::model::execution_controls::Builder {
         crate::model::execution_controls::Builder::default()
     }
@@ -1914,8 +2067,10 @@ impl ExecutionControls {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SsmControls {
     /// <p>The maximum percentage of remediation actions allowed to run in parallel on the non-compliant resources for that specific rule. You can specify a percentage, such as 10%. The default value is 10. </p>
+    #[doc(hidden)]
     pub concurrent_execution_rate_percentage: std::option::Option<i32>,
     /// <p>The percentage of errors that are allowed before SSM stops running automations on non-compliant resources for that specific rule. You can specify a percentage of errors, for example 10%. If you do not specifiy a percentage, the default is 50%. For example, if you set the ErrorPercentage to 40% for 10 non-compliant resources, then SSM stops running the automations when the fifth error is received. </p>
+    #[doc(hidden)]
     pub error_percentage: std::option::Option<i32>,
 }
 impl SsmControls {
@@ -1939,11 +2094,10 @@ impl std::fmt::Debug for SsmControls {
         formatter.finish()
     }
 }
-/// See [`SsmControls`](crate::model::SsmControls)
+/// See [`SsmControls`](crate::model::SsmControls).
 pub mod ssm_controls {
 
-    /// A builder for [`SsmControls`](crate::model::SsmControls)
-    #[non_exhaustive]
+    /// A builder for [`SsmControls`](crate::model::SsmControls).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) concurrent_execution_rate_percentage: std::option::Option<i32>,
@@ -1973,7 +2127,7 @@ pub mod ssm_controls {
             self.error_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`SsmControls`](crate::model::SsmControls)
+        /// Consumes the builder and constructs a [`SsmControls`](crate::model::SsmControls).
         pub fn build(self) -> crate::model::SsmControls {
             crate::model::SsmControls {
                 concurrent_execution_rate_percentage: self.concurrent_execution_rate_percentage,
@@ -1983,7 +2137,7 @@ pub mod ssm_controls {
     }
 }
 impl SsmControls {
-    /// Creates a new builder-style object to manufacture [`SsmControls`](crate::model::SsmControls)
+    /// Creates a new builder-style object to manufacture [`SsmControls`](crate::model::SsmControls).
     pub fn builder() -> crate::model::ssm_controls::Builder {
         crate::model::ssm_controls::Builder::default()
     }
@@ -1994,8 +2148,10 @@ impl SsmControls {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemediationParameterValue {
     /// <p>The value is dynamic and changes at run-time.</p>
+    #[doc(hidden)]
     pub resource_value: std::option::Option<crate::model::ResourceValue>,
     /// <p>The value is static and does not change at run-time.</p>
+    #[doc(hidden)]
     pub static_value: std::option::Option<crate::model::StaticValue>,
 }
 impl RemediationParameterValue {
@@ -2016,11 +2172,10 @@ impl std::fmt::Debug for RemediationParameterValue {
         formatter.finish()
     }
 }
-/// See [`RemediationParameterValue`](crate::model::RemediationParameterValue)
+/// See [`RemediationParameterValue`](crate::model::RemediationParameterValue).
 pub mod remediation_parameter_value {
 
-    /// A builder for [`RemediationParameterValue`](crate::model::RemediationParameterValue)
-    #[non_exhaustive]
+    /// A builder for [`RemediationParameterValue`](crate::model::RemediationParameterValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_value: std::option::Option<crate::model::ResourceValue>,
@@ -2053,7 +2208,7 @@ pub mod remediation_parameter_value {
             self.static_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemediationParameterValue`](crate::model::RemediationParameterValue)
+        /// Consumes the builder and constructs a [`RemediationParameterValue`](crate::model::RemediationParameterValue).
         pub fn build(self) -> crate::model::RemediationParameterValue {
             crate::model::RemediationParameterValue {
                 resource_value: self.resource_value,
@@ -2063,7 +2218,7 @@ pub mod remediation_parameter_value {
     }
 }
 impl RemediationParameterValue {
-    /// Creates a new builder-style object to manufacture [`RemediationParameterValue`](crate::model::RemediationParameterValue)
+    /// Creates a new builder-style object to manufacture [`RemediationParameterValue`](crate::model::RemediationParameterValue).
     pub fn builder() -> crate::model::remediation_parameter_value::Builder {
         crate::model::remediation_parameter_value::Builder::default()
     }
@@ -2074,6 +2229,7 @@ impl RemediationParameterValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StaticValue {
     /// <p>A list of values. For example, the ARN of the assumed role. </p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl StaticValue {
@@ -2089,11 +2245,10 @@ impl std::fmt::Debug for StaticValue {
         formatter.finish()
     }
 }
-/// See [`StaticValue`](crate::model::StaticValue)
+/// See [`StaticValue`](crate::model::StaticValue).
 pub mod static_value {
 
-    /// A builder for [`StaticValue`](crate::model::StaticValue)
-    #[non_exhaustive]
+    /// A builder for [`StaticValue`](crate::model::StaticValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) values: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2118,7 +2273,7 @@ pub mod static_value {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`StaticValue`](crate::model::StaticValue)
+        /// Consumes the builder and constructs a [`StaticValue`](crate::model::StaticValue).
         pub fn build(self) -> crate::model::StaticValue {
             crate::model::StaticValue {
                 values: self.values,
@@ -2127,7 +2282,7 @@ pub mod static_value {
     }
 }
 impl StaticValue {
-    /// Creates a new builder-style object to manufacture [`StaticValue`](crate::model::StaticValue)
+    /// Creates a new builder-style object to manufacture [`StaticValue`](crate::model::StaticValue).
     pub fn builder() -> crate::model::static_value::Builder {
         crate::model::static_value::Builder::default()
     }
@@ -2138,6 +2293,7 @@ impl StaticValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceValue {
     /// <p>The value is a resource ID.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<crate::model::ResourceValueType>,
 }
 impl ResourceValue {
@@ -2153,11 +2309,10 @@ impl std::fmt::Debug for ResourceValue {
         formatter.finish()
     }
 }
-/// See [`ResourceValue`](crate::model::ResourceValue)
+/// See [`ResourceValue`](crate::model::ResourceValue).
 pub mod resource_value {
 
-    /// A builder for [`ResourceValue`](crate::model::ResourceValue)
-    #[non_exhaustive]
+    /// A builder for [`ResourceValue`](crate::model::ResourceValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<crate::model::ResourceValueType>,
@@ -2176,14 +2331,14 @@ pub mod resource_value {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceValue`](crate::model::ResourceValue)
+        /// Consumes the builder and constructs a [`ResourceValue`](crate::model::ResourceValue).
         pub fn build(self) -> crate::model::ResourceValue {
             crate::model::ResourceValue { value: self.value }
         }
     }
 }
 impl ResourceValue {
-    /// Creates a new builder-style object to manufacture [`ResourceValue`](crate::model::ResourceValue)
+    /// Creates a new builder-style object to manufacture [`ResourceValue`](crate::model::ResourceValue).
     pub fn builder() -> crate::model::resource_value::Builder {
         crate::model::resource_value::Builder::default()
     }
@@ -2296,8 +2451,10 @@ impl AsRef<str> for RemediationTargetType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConformancePackInputParameter {
     /// <p>One part of a key-value pair.</p>
+    #[doc(hidden)]
     pub parameter_name: std::option::Option<std::string::String>,
     /// <p>Another part of the key-value pair. </p>
+    #[doc(hidden)]
     pub parameter_value: std::option::Option<std::string::String>,
 }
 impl ConformancePackInputParameter {
@@ -2318,11 +2475,10 @@ impl std::fmt::Debug for ConformancePackInputParameter {
         formatter.finish()
     }
 }
-/// See [`ConformancePackInputParameter`](crate::model::ConformancePackInputParameter)
+/// See [`ConformancePackInputParameter`](crate::model::ConformancePackInputParameter).
 pub mod conformance_pack_input_parameter {
 
-    /// A builder for [`ConformancePackInputParameter`](crate::model::ConformancePackInputParameter)
-    #[non_exhaustive]
+    /// A builder for [`ConformancePackInputParameter`](crate::model::ConformancePackInputParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_name: std::option::Option<std::string::String>,
@@ -2355,7 +2511,7 @@ pub mod conformance_pack_input_parameter {
             self.parameter_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConformancePackInputParameter`](crate::model::ConformancePackInputParameter)
+        /// Consumes the builder and constructs a [`ConformancePackInputParameter`](crate::model::ConformancePackInputParameter).
         pub fn build(self) -> crate::model::ConformancePackInputParameter {
             crate::model::ConformancePackInputParameter {
                 parameter_name: self.parameter_name,
@@ -2365,7 +2521,7 @@ pub mod conformance_pack_input_parameter {
     }
 }
 impl ConformancePackInputParameter {
-    /// Creates a new builder-style object to manufacture [`ConformancePackInputParameter`](crate::model::ConformancePackInputParameter)
+    /// Creates a new builder-style object to manufacture [`ConformancePackInputParameter`](crate::model::ConformancePackInputParameter).
     pub fn builder() -> crate::model::conformance_pack_input_parameter::Builder {
         crate::model::conformance_pack_input_parameter::Builder::default()
     }
@@ -2376,31 +2532,42 @@ impl ConformancePackInputParameter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrganizationCustomPolicyRuleMetadata {
     /// <p>The description that you provide for your organization Config Custom Policy rule.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The type of notification that initiates Config to run an evaluation for a rule. For Config Custom Policy rules, Config supports change-initiated notification types:</p>
     /// <ul>
     /// <li> <p> <code>ConfigurationItemChangeNotification</code> - Initiates an evaluation when Config delivers a configuration item as a result of a resource change.</p> </li>
     /// <li> <p> <code>OversizedConfigurationItemChangeNotification</code> - Initiates an evaluation when Config delivers an oversized configuration item. Config may generate this notification type when a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub organization_config_rule_trigger_types:
         std::option::Option<std::vec::Vec<crate::model::OrganizationConfigRuleTriggerTypeNoSn>>,
     /// <p>A string, in JSON format, that is passed to your organization Config Custom Policy rule.</p>
+    #[doc(hidden)]
     pub input_parameters: std::option::Option<std::string::String>,
     /// <p>The maximum frequency with which Config runs evaluations for a rule. Your Config Custom Policy rule is triggered when Config delivers the configuration snapshot. For more information, see <code>ConfigSnapshotDeliveryProperties</code>.</p>
+    #[doc(hidden)]
     pub maximum_execution_frequency: std::option::Option<crate::model::MaximumExecutionFrequency>,
     /// <p>The type of the Amazon Web Services resource that was evaluated.</p>
+    #[doc(hidden)]
     pub resource_types_scope: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ID of the Amazon Web Services resource that was evaluated.</p>
+    #[doc(hidden)]
     pub resource_id_scope: std::option::Option<std::string::String>,
     /// <p>One part of a key-value pair that make up a tag. A key is a general label that acts like a category for more specific tag values.</p>
+    #[doc(hidden)]
     pub tag_key_scope: std::option::Option<std::string::String>,
     /// <p>The optional part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key).</p>
+    #[doc(hidden)]
     pub tag_value_scope: std::option::Option<std::string::String>,
     /// <p>The runtime system for your organization Config Custom Policy rules. Guard is a policy-as-code language that allows you to write policies that are enforced by Config Custom Policy rules. For more information about Guard, see the <a href="https://github.com/aws-cloudformation/cloudformation-guard">Guard GitHub Repository</a>.</p>
+    #[doc(hidden)]
     pub policy_runtime: std::option::Option<std::string::String>,
     /// <p>The policy definition containing the logic for your organization Config Custom Policy rule.</p>
+    #[doc(hidden)]
     pub policy_text: std::option::Option<std::string::String>,
     /// <p>A list of accounts that you can enable debug logging for your organization Config Custom Policy rule. List is null when debug logging is enabled for all accounts.</p>
+    #[doc(hidden)]
     pub debug_log_delivery_accounts: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl OrganizationCustomPolicyRuleMetadata {
@@ -2483,11 +2650,10 @@ impl std::fmt::Debug for OrganizationCustomPolicyRuleMetadata {
         formatter.finish()
     }
 }
-/// See [`OrganizationCustomPolicyRuleMetadata`](crate::model::OrganizationCustomPolicyRuleMetadata)
+/// See [`OrganizationCustomPolicyRuleMetadata`](crate::model::OrganizationCustomPolicyRuleMetadata).
 pub mod organization_custom_policy_rule_metadata {
 
-    /// A builder for [`OrganizationCustomPolicyRuleMetadata`](crate::model::OrganizationCustomPolicyRuleMetadata)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationCustomPolicyRuleMetadata`](crate::model::OrganizationCustomPolicyRuleMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -2682,7 +2848,7 @@ pub mod organization_custom_policy_rule_metadata {
             self.debug_log_delivery_accounts = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationCustomPolicyRuleMetadata`](crate::model::OrganizationCustomPolicyRuleMetadata)
+        /// Consumes the builder and constructs a [`OrganizationCustomPolicyRuleMetadata`](crate::model::OrganizationCustomPolicyRuleMetadata).
         pub fn build(self) -> crate::model::OrganizationCustomPolicyRuleMetadata {
             crate::model::OrganizationCustomPolicyRuleMetadata {
                 description: self.description,
@@ -2701,7 +2867,7 @@ pub mod organization_custom_policy_rule_metadata {
     }
 }
 impl OrganizationCustomPolicyRuleMetadata {
-    /// Creates a new builder-style object to manufacture [`OrganizationCustomPolicyRuleMetadata`](crate::model::OrganizationCustomPolicyRuleMetadata)
+    /// Creates a new builder-style object to manufacture [`OrganizationCustomPolicyRuleMetadata`](crate::model::OrganizationCustomPolicyRuleMetadata).
     pub fn builder() -> crate::model::organization_custom_policy_rule_metadata::Builder {
         crate::model::organization_custom_policy_rule_metadata::Builder::default()
     }
@@ -2851,8 +3017,10 @@ impl AsRef<str> for OrganizationConfigRuleTriggerTypeNoSn {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrganizationCustomRuleMetadata {
     /// <p>The description that you provide for your organization Config rule.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The lambda function ARN.</p>
+    #[doc(hidden)]
     pub lambda_function_arn: std::option::Option<std::string::String>,
     /// <p>The type of notification that triggers Config to run an evaluation for a rule. You can specify the following notification types:</p>
     /// <ul>
@@ -2860,21 +3028,28 @@ pub struct OrganizationCustomRuleMetadata {
     /// <li> <p> <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers an oversized configuration item. Config may generate this notification type when a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.</p> </li>
     /// <li> <p> <code>ScheduledNotification</code> - Triggers a periodic evaluation at the frequency specified for <code>MaximumExecutionFrequency</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub organization_config_rule_trigger_types:
         std::option::Option<std::vec::Vec<crate::model::OrganizationConfigRuleTriggerType>>,
     /// <p>A string, in JSON format, that is passed to your organization Config rule Lambda function.</p>
+    #[doc(hidden)]
     pub input_parameters: std::option::Option<std::string::String>,
     /// <p>The maximum frequency with which Config runs evaluations for a rule. Your custom rule is triggered when Config delivers the configuration snapshot. For more information, see <code>ConfigSnapshotDeliveryProperties</code>.</p> <note>
     /// <p>By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a valid value for the <code>MaximumExecutionFrequency</code> parameter.</p>
     /// </note>
+    #[doc(hidden)]
     pub maximum_execution_frequency: std::option::Option<crate::model::MaximumExecutionFrequency>,
     /// <p>The type of the Amazon Web Services resource that was evaluated.</p>
+    #[doc(hidden)]
     pub resource_types_scope: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ID of the Amazon Web Services resource that was evaluated.</p>
+    #[doc(hidden)]
     pub resource_id_scope: std::option::Option<std::string::String>,
     /// <p>One part of a key-value pair that make up a tag. A key is a general label that acts like a category for more specific tag values. </p>
+    #[doc(hidden)]
     pub tag_key_scope: std::option::Option<std::string::String>,
     /// <p>The optional part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key). </p>
+    #[doc(hidden)]
     pub tag_value_scope: std::option::Option<std::string::String>,
 }
 impl OrganizationCustomRuleMetadata {
@@ -2947,11 +3122,10 @@ impl std::fmt::Debug for OrganizationCustomRuleMetadata {
         formatter.finish()
     }
 }
-/// See [`OrganizationCustomRuleMetadata`](crate::model::OrganizationCustomRuleMetadata)
+/// See [`OrganizationCustomRuleMetadata`](crate::model::OrganizationCustomRuleMetadata).
 pub mod organization_custom_rule_metadata {
 
-    /// A builder for [`OrganizationCustomRuleMetadata`](crate::model::OrganizationCustomRuleMetadata)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationCustomRuleMetadata`](crate::model::OrganizationCustomRuleMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -3117,7 +3291,7 @@ pub mod organization_custom_rule_metadata {
             self.tag_value_scope = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationCustomRuleMetadata`](crate::model::OrganizationCustomRuleMetadata)
+        /// Consumes the builder and constructs a [`OrganizationCustomRuleMetadata`](crate::model::OrganizationCustomRuleMetadata).
         pub fn build(self) -> crate::model::OrganizationCustomRuleMetadata {
             crate::model::OrganizationCustomRuleMetadata {
                 description: self.description,
@@ -3134,7 +3308,7 @@ pub mod organization_custom_rule_metadata {
     }
 }
 impl OrganizationCustomRuleMetadata {
-    /// Creates a new builder-style object to manufacture [`OrganizationCustomRuleMetadata`](crate::model::OrganizationCustomRuleMetadata)
+    /// Creates a new builder-style object to manufacture [`OrganizationCustomRuleMetadata`](crate::model::OrganizationCustomRuleMetadata).
     pub fn builder() -> crate::model::organization_custom_rule_metadata::Builder {
         crate::model::organization_custom_rule_metadata::Builder::default()
     }
@@ -3216,22 +3390,30 @@ impl AsRef<str> for OrganizationConfigRuleTriggerType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrganizationManagedRuleMetadata {
     /// <p>The description that you provide for your organization Config rule.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>For organization config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using Config managed rules</a>.</p>
+    #[doc(hidden)]
     pub rule_identifier: std::option::Option<std::string::String>,
     /// <p>A string, in JSON format, that is passed to your organization Config rule Lambda function.</p>
+    #[doc(hidden)]
     pub input_parameters: std::option::Option<std::string::String>,
-    /// <p>The maximum frequency with which Config runs evaluations for a rule. You are using an Config managed rule that is triggered at a periodic frequency.</p> <note>
+    /// <p>The maximum frequency with which Config runs evaluations for a rule. This is for an Config managed rule that is triggered at a periodic frequency.</p> <note>
     /// <p>By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a valid value for the <code>MaximumExecutionFrequency</code> parameter.</p>
     /// </note>
+    #[doc(hidden)]
     pub maximum_execution_frequency: std::option::Option<crate::model::MaximumExecutionFrequency>,
     /// <p>The type of the Amazon Web Services resource that was evaluated.</p>
+    #[doc(hidden)]
     pub resource_types_scope: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ID of the Amazon Web Services resource that was evaluated.</p>
+    #[doc(hidden)]
     pub resource_id_scope: std::option::Option<std::string::String>,
     /// <p>One part of a key-value pair that make up a tag. A key is a general label that acts like a category for more specific tag values. </p>
+    #[doc(hidden)]
     pub tag_key_scope: std::option::Option<std::string::String>,
     /// <p>The optional part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key).</p>
+    #[doc(hidden)]
     pub tag_value_scope: std::option::Option<std::string::String>,
 }
 impl OrganizationManagedRuleMetadata {
@@ -3247,7 +3429,7 @@ impl OrganizationManagedRuleMetadata {
     pub fn input_parameters(&self) -> std::option::Option<&str> {
         self.input_parameters.as_deref()
     }
-    /// <p>The maximum frequency with which Config runs evaluations for a rule. You are using an Config managed rule that is triggered at a periodic frequency.</p> <note>
+    /// <p>The maximum frequency with which Config runs evaluations for a rule. This is for an Config managed rule that is triggered at a periodic frequency.</p> <note>
     /// <p>By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a valid value for the <code>MaximumExecutionFrequency</code> parameter.</p>
     /// </note>
     pub fn maximum_execution_frequency(
@@ -3289,11 +3471,10 @@ impl std::fmt::Debug for OrganizationManagedRuleMetadata {
         formatter.finish()
     }
 }
-/// See [`OrganizationManagedRuleMetadata`](crate::model::OrganizationManagedRuleMetadata)
+/// See [`OrganizationManagedRuleMetadata`](crate::model::OrganizationManagedRuleMetadata).
 pub mod organization_managed_rule_metadata {
 
-    /// A builder for [`OrganizationManagedRuleMetadata`](crate::model::OrganizationManagedRuleMetadata)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationManagedRuleMetadata`](crate::model::OrganizationManagedRuleMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -3343,7 +3524,7 @@ pub mod organization_managed_rule_metadata {
             self.input_parameters = input;
             self
         }
-        /// <p>The maximum frequency with which Config runs evaluations for a rule. You are using an Config managed rule that is triggered at a periodic frequency.</p> <note>
+        /// <p>The maximum frequency with which Config runs evaluations for a rule. This is for an Config managed rule that is triggered at a periodic frequency.</p> <note>
         /// <p>By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a valid value for the <code>MaximumExecutionFrequency</code> parameter.</p>
         /// </note>
         pub fn maximum_execution_frequency(
@@ -3353,7 +3534,7 @@ pub mod organization_managed_rule_metadata {
             self.maximum_execution_frequency = Some(input);
             self
         }
-        /// <p>The maximum frequency with which Config runs evaluations for a rule. You are using an Config managed rule that is triggered at a periodic frequency.</p> <note>
+        /// <p>The maximum frequency with which Config runs evaluations for a rule. This is for an Config managed rule that is triggered at a periodic frequency.</p> <note>
         /// <p>By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a valid value for the <code>MaximumExecutionFrequency</code> parameter.</p>
         /// </note>
         pub fn set_maximum_execution_frequency(
@@ -3421,7 +3602,7 @@ pub mod organization_managed_rule_metadata {
             self.tag_value_scope = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationManagedRuleMetadata`](crate::model::OrganizationManagedRuleMetadata)
+        /// Consumes the builder and constructs a [`OrganizationManagedRuleMetadata`](crate::model::OrganizationManagedRuleMetadata).
         pub fn build(self) -> crate::model::OrganizationManagedRuleMetadata {
             crate::model::OrganizationManagedRuleMetadata {
                 description: self.description,
@@ -3437,7 +3618,7 @@ pub mod organization_managed_rule_metadata {
     }
 }
 impl OrganizationManagedRuleMetadata {
-    /// Creates a new builder-style object to manufacture [`OrganizationManagedRuleMetadata`](crate::model::OrganizationManagedRuleMetadata)
+    /// Creates a new builder-style object to manufacture [`OrganizationManagedRuleMetadata`](crate::model::OrganizationManagedRuleMetadata).
     pub fn builder() -> crate::model::organization_managed_rule_metadata::Builder {
         crate::model::organization_managed_rule_metadata::Builder::default()
     }
@@ -3448,14 +3629,19 @@ impl OrganizationManagedRuleMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExternalEvaluation {
     /// <p>The evaluated compliance resource type. Config accepts <code>AWS::::Account</code> resource type.</p>
+    #[doc(hidden)]
     pub compliance_resource_type: std::option::Option<std::string::String>,
     /// <p>The evaluated compliance resource ID. Config accepts only Amazon Web Services account ID.</p>
+    #[doc(hidden)]
     pub compliance_resource_id: std::option::Option<std::string::String>,
     /// <p>The compliance of the Amazon Web Services resource. The valid values are <code>COMPLIANT, NON_COMPLIANT, </code> and <code>NOT_APPLICABLE</code>.</p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<crate::model::ComplianceType>,
     /// <p>Supplementary information about the reason of compliance. For example, this task was completed on a specific date.</p>
+    #[doc(hidden)]
     pub annotation: std::option::Option<std::string::String>,
     /// <p>The time when the compliance was recorded. </p>
+    #[doc(hidden)]
     pub ordering_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ExternalEvaluation {
@@ -3491,11 +3677,10 @@ impl std::fmt::Debug for ExternalEvaluation {
         formatter.finish()
     }
 }
-/// See [`ExternalEvaluation`](crate::model::ExternalEvaluation)
+/// See [`ExternalEvaluation`](crate::model::ExternalEvaluation).
 pub mod external_evaluation {
 
-    /// A builder for [`ExternalEvaluation`](crate::model::ExternalEvaluation)
-    #[non_exhaustive]
+    /// A builder for [`ExternalEvaluation`](crate::model::ExternalEvaluation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliance_resource_type: std::option::Option<std::string::String>,
@@ -3567,7 +3752,7 @@ pub mod external_evaluation {
             self.ordering_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExternalEvaluation`](crate::model::ExternalEvaluation)
+        /// Consumes the builder and constructs a [`ExternalEvaluation`](crate::model::ExternalEvaluation).
         pub fn build(self) -> crate::model::ExternalEvaluation {
             crate::model::ExternalEvaluation {
                 compliance_resource_type: self.compliance_resource_type,
@@ -3580,7 +3765,7 @@ pub mod external_evaluation {
     }
 }
 impl ExternalEvaluation {
-    /// Creates a new builder-style object to manufacture [`ExternalEvaluation`](crate::model::ExternalEvaluation)
+    /// Creates a new builder-style object to manufacture [`ExternalEvaluation`](crate::model::ExternalEvaluation).
     pub fn builder() -> crate::model::external_evaluation::Builder {
         crate::model::external_evaluation::Builder::default()
     }
@@ -3659,16 +3844,21 @@ impl AsRef<str> for ComplianceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Evaluation {
     /// <p>The type of Amazon Web Services resource that was evaluated.</p>
+    #[doc(hidden)]
     pub compliance_resource_type: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services resource that was evaluated.</p>
+    #[doc(hidden)]
     pub compliance_resource_id: std::option::Option<std::string::String>,
     /// <p>Indicates whether the Amazon Web Services resource complies with the Config rule that it was evaluated against.</p>
     /// <p>For the <code>Evaluation</code> data type, Config supports only the <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the <code>INSUFFICIENT_DATA</code> value for this data type.</p>
     /// <p>Similarly, Config does not accept <code>INSUFFICIENT_DATA</code> as the value for <code>ComplianceType</code> from a <code>PutEvaluations</code> request. For example, an Lambda function for a custom Config rule cannot pass an <code>INSUFFICIENT_DATA</code> value to Config.</p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<crate::model::ComplianceType>,
     /// <p>Supplementary information about how the evaluation determined the compliance.</p>
+    #[doc(hidden)]
     pub annotation: std::option::Option<std::string::String>,
     /// <p>The time of the event in Config that triggered the evaluation. For event-based evaluations, the time indicates when Config created the configuration item that triggered the evaluation. For periodic evaluations, the time indicates when Config triggered the evaluation at the frequency that you specified (for example, every 24 hours).</p>
+    #[doc(hidden)]
     pub ordering_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Evaluation {
@@ -3706,11 +3896,10 @@ impl std::fmt::Debug for Evaluation {
         formatter.finish()
     }
 }
-/// See [`Evaluation`](crate::model::Evaluation)
+/// See [`Evaluation`](crate::model::Evaluation).
 pub mod evaluation {
 
-    /// A builder for [`Evaluation`](crate::model::Evaluation)
-    #[non_exhaustive]
+    /// A builder for [`Evaluation`](crate::model::Evaluation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliance_resource_type: std::option::Option<std::string::String>,
@@ -3786,7 +3975,7 @@ pub mod evaluation {
             self.ordering_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`Evaluation`](crate::model::Evaluation)
+        /// Consumes the builder and constructs a [`Evaluation`](crate::model::Evaluation).
         pub fn build(self) -> crate::model::Evaluation {
             crate::model::Evaluation {
                 compliance_resource_type: self.compliance_resource_type,
@@ -3799,7 +3988,7 @@ pub mod evaluation {
     }
 }
 impl Evaluation {
-    /// Creates a new builder-style object to manufacture [`Evaluation`](crate::model::Evaluation)
+    /// Creates a new builder-style object to manufacture [`Evaluation`](crate::model::Evaluation).
     pub fn builder() -> crate::model::evaluation::Builder {
         crate::model::evaluation::Builder::default()
     }
@@ -3810,18 +3999,24 @@ impl Evaluation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeliveryChannel {
     /// <p>The name of the delivery channel. By default, Config assigns the name "default" when creating the delivery channel. To change the delivery channel name, you must use the DeleteDeliveryChannel action to delete your current delivery channel, and then you must use the PutDeliveryChannel command to create a delivery channel that has the desired name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon S3 bucket to which Config delivers configuration snapshots and configuration history files.</p>
-    /// <p>If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the Amazon S3 Bucket</a> in the Config Developer Guide.</p>
+    /// <p>If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the Amazon S3 Bucket</a> in the <i>Config Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>The prefix for the specified Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub s3_key_prefix: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Key Management Service (KMS ) KMS key (KMS key) used to encrypt objects delivered by Config. Must belong to the same Region as the destination S3 bucket.</p>
+    #[doc(hidden)]
     pub s3_kms_key_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon SNS topic to which Config sends notifications about configuration changes.</p>
-    /// <p>If you choose a topic from another account, the topic must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the Amazon SNS Topic</a> in the Config Developer Guide.</p>
+    /// <p>If you choose a topic from another account, the topic must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the Amazon SNS Topic</a> in the <i>Config Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub sns_topic_arn: std::option::Option<std::string::String>,
     /// <p>The options for how often Config delivers configuration snapshots to the Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub config_snapshot_delivery_properties:
         std::option::Option<crate::model::ConfigSnapshotDeliveryProperties>,
 }
@@ -3831,7 +4026,7 @@ impl DeliveryChannel {
         self.name.as_deref()
     }
     /// <p>The name of the Amazon S3 bucket to which Config delivers configuration snapshots and configuration history files.</p>
-    /// <p>If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the Amazon S3 Bucket</a> in the Config Developer Guide.</p>
+    /// <p>If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the Amazon S3 Bucket</a> in the <i>Config Developer Guide</i>.</p>
     pub fn s3_bucket_name(&self) -> std::option::Option<&str> {
         self.s3_bucket_name.as_deref()
     }
@@ -3844,7 +4039,7 @@ impl DeliveryChannel {
         self.s3_kms_key_arn.as_deref()
     }
     /// <p>The Amazon Resource Name (ARN) of the Amazon SNS topic to which Config sends notifications about configuration changes.</p>
-    /// <p>If you choose a topic from another account, the topic must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the Amazon SNS Topic</a> in the Config Developer Guide.</p>
+    /// <p>If you choose a topic from another account, the topic must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the Amazon SNS Topic</a> in the <i>Config Developer Guide</i>.</p>
     pub fn sns_topic_arn(&self) -> std::option::Option<&str> {
         self.sns_topic_arn.as_deref()
     }
@@ -3870,11 +4065,10 @@ impl std::fmt::Debug for DeliveryChannel {
         formatter.finish()
     }
 }
-/// See [`DeliveryChannel`](crate::model::DeliveryChannel)
+/// See [`DeliveryChannel`](crate::model::DeliveryChannel).
 pub mod delivery_channel {
 
-    /// A builder for [`DeliveryChannel`](crate::model::DeliveryChannel)
-    #[non_exhaustive]
+    /// A builder for [`DeliveryChannel`](crate::model::DeliveryChannel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3897,13 +4091,13 @@ pub mod delivery_channel {
             self
         }
         /// <p>The name of the Amazon S3 bucket to which Config delivers configuration snapshots and configuration history files.</p>
-        /// <p>If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the Amazon S3 Bucket</a> in the Config Developer Guide.</p>
+        /// <p>If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the Amazon S3 Bucket</a> in the <i>Config Developer Guide</i>.</p>
         pub fn s3_bucket_name(mut self, input: impl Into<std::string::String>) -> Self {
             self.s3_bucket_name = Some(input.into());
             self
         }
         /// <p>The name of the Amazon S3 bucket to which Config delivers configuration snapshots and configuration history files.</p>
-        /// <p>If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the Amazon S3 Bucket</a> in the Config Developer Guide.</p>
+        /// <p>If you specify a bucket that belongs to another Amazon Web Services account, that bucket must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-policy.html">Permissions for the Amazon S3 Bucket</a> in the <i>Config Developer Guide</i>.</p>
         pub fn set_s3_bucket_name(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -3938,13 +4132,13 @@ pub mod delivery_channel {
             self
         }
         /// <p>The Amazon Resource Name (ARN) of the Amazon SNS topic to which Config sends notifications about configuration changes.</p>
-        /// <p>If you choose a topic from another account, the topic must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the Amazon SNS Topic</a> in the Config Developer Guide.</p>
+        /// <p>If you choose a topic from another account, the topic must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the Amazon SNS Topic</a> in the <i>Config Developer Guide</i>.</p>
         pub fn sns_topic_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.sns_topic_arn = Some(input.into());
             self
         }
         /// <p>The Amazon Resource Name (ARN) of the Amazon SNS topic to which Config sends notifications about configuration changes.</p>
-        /// <p>If you choose a topic from another account, the topic must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the Amazon SNS Topic</a> in the Config Developer Guide.</p>
+        /// <p>If you choose a topic from another account, the topic must have policies that grant access permissions to Config. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/sns-topic-policy.html">Permissions for the Amazon SNS Topic</a> in the <i>Config Developer Guide</i>.</p>
         pub fn set_sns_topic_arn(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -3968,7 +4162,7 @@ pub mod delivery_channel {
             self.config_snapshot_delivery_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeliveryChannel`](crate::model::DeliveryChannel)
+        /// Consumes the builder and constructs a [`DeliveryChannel`](crate::model::DeliveryChannel).
         pub fn build(self) -> crate::model::DeliveryChannel {
             crate::model::DeliveryChannel {
                 name: self.name,
@@ -3982,7 +4176,7 @@ pub mod delivery_channel {
     }
 }
 impl DeliveryChannel {
-    /// Creates a new builder-style object to manufacture [`DeliveryChannel`](crate::model::DeliveryChannel)
+    /// Creates a new builder-style object to manufacture [`DeliveryChannel`](crate::model::DeliveryChannel).
     pub fn builder() -> crate::model::delivery_channel::Builder {
         crate::model::delivery_channel::Builder::default()
     }
@@ -4007,6 +4201,7 @@ impl DeliveryChannel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigSnapshotDeliveryProperties {
     /// <p>The frequency with which Config delivers configuration snapshots.</p>
+    #[doc(hidden)]
     pub delivery_frequency: std::option::Option<crate::model::MaximumExecutionFrequency>,
 }
 impl ConfigSnapshotDeliveryProperties {
@@ -4024,11 +4219,10 @@ impl std::fmt::Debug for ConfigSnapshotDeliveryProperties {
         formatter.finish()
     }
 }
-/// See [`ConfigSnapshotDeliveryProperties`](crate::model::ConfigSnapshotDeliveryProperties)
+/// See [`ConfigSnapshotDeliveryProperties`](crate::model::ConfigSnapshotDeliveryProperties).
 pub mod config_snapshot_delivery_properties {
 
-    /// A builder for [`ConfigSnapshotDeliveryProperties`](crate::model::ConfigSnapshotDeliveryProperties)
-    #[non_exhaustive]
+    /// A builder for [`ConfigSnapshotDeliveryProperties`](crate::model::ConfigSnapshotDeliveryProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_frequency: std::option::Option<crate::model::MaximumExecutionFrequency>,
@@ -4050,7 +4244,7 @@ pub mod config_snapshot_delivery_properties {
             self.delivery_frequency = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigSnapshotDeliveryProperties`](crate::model::ConfigSnapshotDeliveryProperties)
+        /// Consumes the builder and constructs a [`ConfigSnapshotDeliveryProperties`](crate::model::ConfigSnapshotDeliveryProperties).
         pub fn build(self) -> crate::model::ConfigSnapshotDeliveryProperties {
             crate::model::ConfigSnapshotDeliveryProperties {
                 delivery_frequency: self.delivery_frequency,
@@ -4059,7 +4253,7 @@ pub mod config_snapshot_delivery_properties {
     }
 }
 impl ConfigSnapshotDeliveryProperties {
-    /// Creates a new builder-style object to manufacture [`ConfigSnapshotDeliveryProperties`](crate::model::ConfigSnapshotDeliveryProperties)
+    /// Creates a new builder-style object to manufacture [`ConfigSnapshotDeliveryProperties`](crate::model::ConfigSnapshotDeliveryProperties).
     pub fn builder() -> crate::model::config_snapshot_delivery_properties::Builder {
         crate::model::config_snapshot_delivery_properties::Builder::default()
     }
@@ -4070,10 +4264,15 @@ impl ConfigSnapshotDeliveryProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigurationRecorder {
     /// <p>The name of the recorder. By default, Config automatically assigns the name "default" when creating the configuration recorder. You cannot change the assigned name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
-    /// <p>Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated with the account.</p>
+    /// <p>Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated with the account.</p> <note>
+    /// <p>While the API model does not require this field, the server will reject a request without a defined roleARN for the configuration recorder.</p>
+    /// </note>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>Specifies the types of Amazon Web Services resources for which Config records configuration changes.</p>
+    #[doc(hidden)]
     pub recording_group: std::option::Option<crate::model::RecordingGroup>,
 }
 impl ConfigurationRecorder {
@@ -4081,7 +4280,9 @@ impl ConfigurationRecorder {
     pub fn name(&self) -> std::option::Option<&str> {
         self.name.as_deref()
     }
-    /// <p>Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated with the account.</p>
+    /// <p>Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated with the account.</p> <note>
+    /// <p>While the API model does not require this field, the server will reject a request without a defined roleARN for the configuration recorder.</p>
+    /// </note>
     pub fn role_arn(&self) -> std::option::Option<&str> {
         self.role_arn.as_deref()
     }
@@ -4099,11 +4300,10 @@ impl std::fmt::Debug for ConfigurationRecorder {
         formatter.finish()
     }
 }
-/// See [`ConfigurationRecorder`](crate::model::ConfigurationRecorder)
+/// See [`ConfigurationRecorder`](crate::model::ConfigurationRecorder).
 pub mod configuration_recorder {
 
-    /// A builder for [`ConfigurationRecorder`](crate::model::ConfigurationRecorder)
-    #[non_exhaustive]
+    /// A builder for [`ConfigurationRecorder`](crate::model::ConfigurationRecorder).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4121,12 +4321,16 @@ pub mod configuration_recorder {
             self.name = input;
             self
         }
-        /// <p>Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated with the account.</p>
+        /// <p>Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated with the account.</p> <note>
+        /// <p>While the API model does not require this field, the server will reject a request without a defined roleARN for the configuration recorder.</p>
+        /// </note>
         pub fn role_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.role_arn = Some(input.into());
             self
         }
-        /// <p>Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated with the account.</p>
+        /// <p>Amazon Resource Name (ARN) of the IAM role used to describe the Amazon Web Services resources associated with the account.</p> <note>
+        /// <p>While the API model does not require this field, the server will reject a request without a defined roleARN for the configuration recorder.</p>
+        /// </note>
         pub fn set_role_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.role_arn = input;
             self
@@ -4144,7 +4348,7 @@ pub mod configuration_recorder {
             self.recording_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigurationRecorder`](crate::model::ConfigurationRecorder)
+        /// Consumes the builder and constructs a [`ConfigurationRecorder`](crate::model::ConfigurationRecorder).
         pub fn build(self) -> crate::model::ConfigurationRecorder {
             crate::model::ConfigurationRecorder {
                 name: self.name,
@@ -4155,7 +4359,7 @@ pub mod configuration_recorder {
     }
 }
 impl ConfigurationRecorder {
-    /// Creates a new builder-style object to manufacture [`ConfigurationRecorder`](crate::model::ConfigurationRecorder)
+    /// Creates a new builder-style object to manufacture [`ConfigurationRecorder`](crate::model::ConfigurationRecorder).
     pub fn builder() -> crate::model::configuration_recorder::Builder {
         crate::model::configuration_recorder::Builder::default()
     }
@@ -4176,16 +4380,19 @@ pub struct RecordingGroup {
     /// <p>Specifies whether Config records configuration changes for every supported type of regional resource.</p>
     /// <p>If you set this option to <code>true</code>, when Config adds support for a new type of regional resource, it starts recording resources of that type automatically.</p>
     /// <p>If you set this option to <code>true</code>, you cannot enumerate a list of <code>resourceTypes</code>.</p>
+    #[doc(hidden)]
     pub all_supported: bool,
     /// <p>Specifies whether Config includes all supported types of global resources (for example, IAM resources) with the resources that it records.</p>
     /// <p>Before you can set this option to <code>true</code>, you must set the <code>allSupported</code> option to <code>true</code>.</p>
     /// <p>If you set this option to <code>true</code>, when Config adds support for a new type of global resource, it starts recording resources of that type automatically.</p>
     /// <p>The configuration details for any global resource are the same in all regions. To prevent duplicate configuration items, you should consider customizing Config in only one region to record global resources.</p>
+    #[doc(hidden)]
     pub include_global_resource_types: bool,
     /// <p>A comma-separated list that specifies the types of Amazon Web Services resources for which Config records configuration changes (for example, <code>AWS::EC2::Instance</code> or <code>AWS::CloudTrail::Trail</code>).</p>
     /// <p>To record all configuration changes, you must set the <code>allSupported</code> option to <code>true</code>.</p>
     /// <p>If you set this option to <code>false</code>, when Config adds support for a new type of resource, it will not record resources of that type unless you manually add that type to your recording group.</p>
     /// <p>For a list of valid <code>resourceTypes</code> values, see the <b>resourceType Value</b> column in <a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported Amazon Web Services resource Types</a>.</p>
+    #[doc(hidden)]
     pub resource_types: std::option::Option<std::vec::Vec<crate::model::ResourceType>>,
 }
 impl RecordingGroup {
@@ -4222,11 +4429,10 @@ impl std::fmt::Debug for RecordingGroup {
         formatter.finish()
     }
 }
-/// See [`RecordingGroup`](crate::model::RecordingGroup)
+/// See [`RecordingGroup`](crate::model::RecordingGroup).
 pub mod recording_group {
 
-    /// A builder for [`RecordingGroup`](crate::model::RecordingGroup)
-    #[non_exhaustive]
+    /// A builder for [`RecordingGroup`](crate::model::RecordingGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) all_supported: std::option::Option<bool>,
@@ -4292,7 +4498,7 @@ pub mod recording_group {
             self.resource_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecordingGroup`](crate::model::RecordingGroup)
+        /// Consumes the builder and constructs a [`RecordingGroup`](crate::model::RecordingGroup).
         pub fn build(self) -> crate::model::RecordingGroup {
             crate::model::RecordingGroup {
                 all_supported: self.all_supported.unwrap_or_default(),
@@ -4305,7 +4511,7 @@ pub mod recording_group {
     }
 }
 impl RecordingGroup {
-    /// Creates a new builder-style object to manufacture [`RecordingGroup`](crate::model::RecordingGroup)
+    /// Creates a new builder-style object to manufacture [`RecordingGroup`](crate::model::RecordingGroup).
     pub fn builder() -> crate::model::recording_group::Builder {
         crate::model::recording_group::Builder::default()
     }
@@ -4316,20 +4522,27 @@ impl RecordingGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigurationAggregator {
     /// <p>The name of the aggregator.</p>
+    #[doc(hidden)]
     pub configuration_aggregator_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the aggregator.</p>
+    #[doc(hidden)]
     pub configuration_aggregator_arn: std::option::Option<std::string::String>,
     /// <p>Provides a list of source accounts and regions to be aggregated.</p>
+    #[doc(hidden)]
     pub account_aggregation_sources:
         std::option::Option<std::vec::Vec<crate::model::AccountAggregationSource>>,
     /// <p>Provides an organization and list of regions to be aggregated.</p>
+    #[doc(hidden)]
     pub organization_aggregation_source:
         std::option::Option<crate::model::OrganizationAggregationSource>,
     /// <p>The time stamp when the configuration aggregator was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time of the last update.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Amazon Web Services service that created the configuration aggregator.</p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
 }
 impl ConfigurationAggregator {
@@ -4391,11 +4604,10 @@ impl std::fmt::Debug for ConfigurationAggregator {
         formatter.finish()
     }
 }
-/// See [`ConfigurationAggregator`](crate::model::ConfigurationAggregator)
+/// See [`ConfigurationAggregator`](crate::model::ConfigurationAggregator).
 pub mod configuration_aggregator {
 
-    /// A builder for [`ConfigurationAggregator`](crate::model::ConfigurationAggregator)
-    #[non_exhaustive]
+    /// A builder for [`ConfigurationAggregator`](crate::model::ConfigurationAggregator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_aggregator_name: std::option::Option<std::string::String>,
@@ -4515,7 +4727,7 @@ pub mod configuration_aggregator {
             self.created_by = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigurationAggregator`](crate::model::ConfigurationAggregator)
+        /// Consumes the builder and constructs a [`ConfigurationAggregator`](crate::model::ConfigurationAggregator).
         pub fn build(self) -> crate::model::ConfigurationAggregator {
             crate::model::ConfigurationAggregator {
                 configuration_aggregator_name: self.configuration_aggregator_name,
@@ -4530,7 +4742,7 @@ pub mod configuration_aggregator {
     }
 }
 impl ConfigurationAggregator {
-    /// Creates a new builder-style object to manufacture [`ConfigurationAggregator`](crate::model::ConfigurationAggregator)
+    /// Creates a new builder-style object to manufacture [`ConfigurationAggregator`](crate::model::ConfigurationAggregator).
     pub fn builder() -> crate::model::configuration_aggregator::Builder {
         crate::model::configuration_aggregator::Builder::default()
     }
@@ -4541,10 +4753,13 @@ impl ConfigurationAggregator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrganizationAggregationSource {
     /// <p>ARN of the IAM role used to retrieve Amazon Web Services Organization details associated with the aggregator account.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The source regions being aggregated.</p>
+    #[doc(hidden)]
     pub aws_regions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>If true, aggregate existing Config regions and future regions.</p>
+    #[doc(hidden)]
     pub all_aws_regions: bool,
 }
 impl OrganizationAggregationSource {
@@ -4570,11 +4785,10 @@ impl std::fmt::Debug for OrganizationAggregationSource {
         formatter.finish()
     }
 }
-/// See [`OrganizationAggregationSource`](crate::model::OrganizationAggregationSource)
+/// See [`OrganizationAggregationSource`](crate::model::OrganizationAggregationSource).
 pub mod organization_aggregation_source {
 
-    /// A builder for [`OrganizationAggregationSource`](crate::model::OrganizationAggregationSource)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationAggregationSource`](crate::model::OrganizationAggregationSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -4621,7 +4835,7 @@ pub mod organization_aggregation_source {
             self.all_aws_regions = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationAggregationSource`](crate::model::OrganizationAggregationSource)
+        /// Consumes the builder and constructs a [`OrganizationAggregationSource`](crate::model::OrganizationAggregationSource).
         pub fn build(self) -> crate::model::OrganizationAggregationSource {
             crate::model::OrganizationAggregationSource {
                 role_arn: self.role_arn,
@@ -4632,7 +4846,7 @@ pub mod organization_aggregation_source {
     }
 }
 impl OrganizationAggregationSource {
-    /// Creates a new builder-style object to manufacture [`OrganizationAggregationSource`](crate::model::OrganizationAggregationSource)
+    /// Creates a new builder-style object to manufacture [`OrganizationAggregationSource`](crate::model::OrganizationAggregationSource).
     pub fn builder() -> crate::model::organization_aggregation_source::Builder {
         crate::model::organization_aggregation_source::Builder::default()
     }
@@ -4643,10 +4857,13 @@ impl OrganizationAggregationSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountAggregationSource {
     /// <p>The 12-digit account ID of the account being aggregated. </p>
+    #[doc(hidden)]
     pub account_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>If true, aggregate existing Config regions and future regions.</p>
+    #[doc(hidden)]
     pub all_aws_regions: bool,
     /// <p>The source regions being aggregated.</p>
+    #[doc(hidden)]
     pub aws_regions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AccountAggregationSource {
@@ -4672,11 +4889,10 @@ impl std::fmt::Debug for AccountAggregationSource {
         formatter.finish()
     }
 }
-/// See [`AccountAggregationSource`](crate::model::AccountAggregationSource)
+/// See [`AccountAggregationSource`](crate::model::AccountAggregationSource).
 pub mod account_aggregation_source {
 
-    /// A builder for [`AccountAggregationSource`](crate::model::AccountAggregationSource)
-    #[non_exhaustive]
+    /// A builder for [`AccountAggregationSource`](crate::model::AccountAggregationSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -4732,7 +4948,7 @@ pub mod account_aggregation_source {
             self.aws_regions = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountAggregationSource`](crate::model::AccountAggregationSource)
+        /// Consumes the builder and constructs a [`AccountAggregationSource`](crate::model::AccountAggregationSource).
         pub fn build(self) -> crate::model::AccountAggregationSource {
             crate::model::AccountAggregationSource {
                 account_ids: self.account_ids,
@@ -4743,51 +4959,62 @@ pub mod account_aggregation_source {
     }
 }
 impl AccountAggregationSource {
-    /// Creates a new builder-style object to manufacture [`AccountAggregationSource`](crate::model::AccountAggregationSource)
+    /// Creates a new builder-style object to manufacture [`AccountAggregationSource`](crate::model::AccountAggregationSource).
     pub fn builder() -> crate::model::account_aggregation_source::Builder {
         crate::model::account_aggregation_source::Builder::default()
     }
 }
 
-/// <p>An Config rule represents an Lambda function that you create for a custom rule or a predefined function for an Config managed rule. The function evaluates configuration items to assess whether your Amazon Web Services resources comply with your desired configurations. This function can run when Config detects a configuration change to an Amazon Web Services resource and at a periodic frequency that you choose (for example, every 24 hours).</p> <note>
+/// <p>Config rules evaluate the configuration settings of your Amazon Web Services resources. A rule can run when Config detects a configuration change to an Amazon Web Services resource or at a periodic frequency that you choose (for example, every 24 hours). There are two types of rules: Config Managed Rules and Config Custom Rules. Managed rules are predefined, customizable rules created by Config. For a list of managed rules, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config Managed Rules</a>.</p>
+/// <p>Custom rules are rules that you can create using either Guard or Lambda functions. Guard (<a href="https://github.com/aws-cloudformation/cloudformation-guard">Guard GitHub Repository</a>) is a policy-as-code language that allows you to write policies that are enforced by Config Custom Policy rules. Lambda uses custom code that you upload to evaluate a custom rule. It is invoked by events that are published to it by an event source, which Config invokes when the custom rule is initiated.</p>
+/// <p>For more information about developing and using Config rules, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html">Evaluating Amazon Web Services resource Configurations with Config</a> in the <i>Config Developer Guide</i>.</p> <note>
 /// <p>You can use the Amazon Web Services CLI and Amazon Web Services SDKs if you want to create a rule that triggers evaluations for your resources when Config delivers the configuration snapshot. For more information, see <code>ConfigSnapshotDeliveryProperties</code>.</p>
 /// </note>
-/// <p>For more information about developing and using Config rules, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html">Evaluating Amazon Web Services resource Configurations with Config</a> in the <i>Config Developer Guide</i>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigRule {
     /// <p>The name that you assign to the Config rule. The name is required if you are adding a new rule.</p>
+    #[doc(hidden)]
     pub config_rule_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Config rule.</p>
+    #[doc(hidden)]
     pub config_rule_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the Config rule.</p>
+    #[doc(hidden)]
     pub config_rule_id: std::option::Option<std::string::String>,
     /// <p>The description that you provide for the Config rule.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Defines which resources can trigger an evaluation for the rule. The scope can include one or more resource types, a combination of one resource type and one resource ID, or a combination of a tag key and value. Specify a scope to constrain the resources that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are triggered when any resource in the recording group changes.</p> <note>
     /// <p>The scope can be empty. </p>
     /// </note>
+    #[doc(hidden)]
     pub scope: std::option::Option<crate::model::Scope>,
-    /// <p>Provides the rule owner (Amazon Web Services or customer), the rule identifier, and the notifications that cause the function to evaluate your Amazon Web Services resources.</p>
+    /// <p>Provides the rule owner (<code>Amazon Web Services</code> for managed rules, <code>CUSTOM_POLICY</code> for Custom Policy rules, and <code>CUSTOM_LAMBDA</code> for Custom Lambda rules), the rule identifier, and the notifications that cause the function to evaluate your Amazon Web Services resources.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<crate::model::Source>,
     /// <p>A string, in JSON format, that is passed to the Config rule Lambda function.</p>
+    #[doc(hidden)]
     pub input_parameters: std::option::Option<std::string::String>,
     /// <p>The maximum frequency with which Config runs evaluations for a rule. You can specify a value for <code>MaximumExecutionFrequency</code> when:</p>
     /// <ul>
-    /// <li> <p>You are using an Config managed rule that is triggered at a periodic frequency.</p> </li>
+    /// <li> <p>This is for an Config managed rule that is triggered at a periodic frequency.</p> </li>
     /// <li> <p>Your custom rule is triggered when Config delivers the configuration snapshot. For more information, see <code>ConfigSnapshotDeliveryProperties</code>.</p> </li>
     /// </ul> <note>
     /// <p>By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a valid value for the <code>MaximumExecutionFrequency</code> parameter.</p>
     /// </note>
+    #[doc(hidden)]
     pub maximum_execution_frequency: std::option::Option<crate::model::MaximumExecutionFrequency>,
     /// <p>Indicates whether the Config rule is active or is currently being deleted by Config. It can also indicate the evaluation status for the Config rule.</p>
     /// <p>Config sets the state of the rule to <code>EVALUATING</code> temporarily after you use the <code>StartConfigRulesEvaluation</code> request to evaluate your resources against the Config rule.</p>
     /// <p>Config sets the state of the rule to <code>DELETING_RESULTS</code> temporarily after you use the <code>DeleteEvaluationResults</code> request to delete the current evaluation results for the Config rule.</p>
     /// <p>Config temporarily sets the state of a rule to <code>DELETING</code> after you use the <code>DeleteConfigRule</code> request to delete the rule. After Config deletes the rule, the rule and all of its evaluations are erased and are no longer available.</p>
+    #[doc(hidden)]
     pub config_rule_state: std::option::Option<crate::model::ConfigRuleState>,
     /// <p>Service principal name of the service that created the rule.</p> <note>
-    /// <p>The field is populated only if the service linked rule is created by a service. The field is empty if you create your own rule.</p>
+    /// <p>The field is populated only if the service-linked rule is created by a service. The field is empty if you create your own rule.</p>
     /// </note>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
 }
 impl ConfigRule {
@@ -4813,7 +5040,7 @@ impl ConfigRule {
     pub fn scope(&self) -> std::option::Option<&crate::model::Scope> {
         self.scope.as_ref()
     }
-    /// <p>Provides the rule owner (Amazon Web Services or customer), the rule identifier, and the notifications that cause the function to evaluate your Amazon Web Services resources.</p>
+    /// <p>Provides the rule owner (<code>Amazon Web Services</code> for managed rules, <code>CUSTOM_POLICY</code> for Custom Policy rules, and <code>CUSTOM_LAMBDA</code> for Custom Lambda rules), the rule identifier, and the notifications that cause the function to evaluate your Amazon Web Services resources.</p>
     pub fn source(&self) -> std::option::Option<&crate::model::Source> {
         self.source.as_ref()
     }
@@ -4823,7 +5050,7 @@ impl ConfigRule {
     }
     /// <p>The maximum frequency with which Config runs evaluations for a rule. You can specify a value for <code>MaximumExecutionFrequency</code> when:</p>
     /// <ul>
-    /// <li> <p>You are using an Config managed rule that is triggered at a periodic frequency.</p> </li>
+    /// <li> <p>This is for an Config managed rule that is triggered at a periodic frequency.</p> </li>
     /// <li> <p>Your custom rule is triggered when Config delivers the configuration snapshot. For more information, see <code>ConfigSnapshotDeliveryProperties</code>.</p> </li>
     /// </ul> <note>
     /// <p>By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a valid value for the <code>MaximumExecutionFrequency</code> parameter.</p>
@@ -4841,7 +5068,7 @@ impl ConfigRule {
         self.config_rule_state.as_ref()
     }
     /// <p>Service principal name of the service that created the rule.</p> <note>
-    /// <p>The field is populated only if the service linked rule is created by a service. The field is empty if you create your own rule.</p>
+    /// <p>The field is populated only if the service-linked rule is created by a service. The field is empty if you create your own rule.</p>
     /// </note>
     pub fn created_by(&self) -> std::option::Option<&str> {
         self.created_by.as_deref()
@@ -4866,11 +5093,10 @@ impl std::fmt::Debug for ConfigRule {
         formatter.finish()
     }
 }
-/// See [`ConfigRule`](crate::model::ConfigRule)
+/// See [`ConfigRule`](crate::model::ConfigRule).
 pub mod config_rule {
 
-    /// A builder for [`ConfigRule`](crate::model::ConfigRule)
-    #[non_exhaustive]
+    /// A builder for [`ConfigRule`](crate::model::ConfigRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_rule_name: std::option::Option<std::string::String>,
@@ -4949,12 +5175,12 @@ pub mod config_rule {
             self.scope = input;
             self
         }
-        /// <p>Provides the rule owner (Amazon Web Services or customer), the rule identifier, and the notifications that cause the function to evaluate your Amazon Web Services resources.</p>
+        /// <p>Provides the rule owner (<code>Amazon Web Services</code> for managed rules, <code>CUSTOM_POLICY</code> for Custom Policy rules, and <code>CUSTOM_LAMBDA</code> for Custom Lambda rules), the rule identifier, and the notifications that cause the function to evaluate your Amazon Web Services resources.</p>
         pub fn source(mut self, input: crate::model::Source) -> Self {
             self.source = Some(input);
             self
         }
-        /// <p>Provides the rule owner (Amazon Web Services or customer), the rule identifier, and the notifications that cause the function to evaluate your Amazon Web Services resources.</p>
+        /// <p>Provides the rule owner (<code>Amazon Web Services</code> for managed rules, <code>CUSTOM_POLICY</code> for Custom Policy rules, and <code>CUSTOM_LAMBDA</code> for Custom Lambda rules), the rule identifier, and the notifications that cause the function to evaluate your Amazon Web Services resources.</p>
         pub fn set_source(mut self, input: std::option::Option<crate::model::Source>) -> Self {
             self.source = input;
             self
@@ -4974,7 +5200,7 @@ pub mod config_rule {
         }
         /// <p>The maximum frequency with which Config runs evaluations for a rule. You can specify a value for <code>MaximumExecutionFrequency</code> when:</p>
         /// <ul>
-        /// <li> <p>You are using an Config managed rule that is triggered at a periodic frequency.</p> </li>
+        /// <li> <p>This is for an Config managed rule that is triggered at a periodic frequency.</p> </li>
         /// <li> <p>Your custom rule is triggered when Config delivers the configuration snapshot. For more information, see <code>ConfigSnapshotDeliveryProperties</code>.</p> </li>
         /// </ul> <note>
         /// <p>By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a valid value for the <code>MaximumExecutionFrequency</code> parameter.</p>
@@ -4988,7 +5214,7 @@ pub mod config_rule {
         }
         /// <p>The maximum frequency with which Config runs evaluations for a rule. You can specify a value for <code>MaximumExecutionFrequency</code> when:</p>
         /// <ul>
-        /// <li> <p>You are using an Config managed rule that is triggered at a periodic frequency.</p> </li>
+        /// <li> <p>This is for an Config managed rule that is triggered at a periodic frequency.</p> </li>
         /// <li> <p>Your custom rule is triggered when Config delivers the configuration snapshot. For more information, see <code>ConfigSnapshotDeliveryProperties</code>.</p> </li>
         /// </ul> <note>
         /// <p>By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a valid value for the <code>MaximumExecutionFrequency</code> parameter.</p>
@@ -5020,20 +5246,20 @@ pub mod config_rule {
             self
         }
         /// <p>Service principal name of the service that created the rule.</p> <note>
-        /// <p>The field is populated only if the service linked rule is created by a service. The field is empty if you create your own rule.</p>
+        /// <p>The field is populated only if the service-linked rule is created by a service. The field is empty if you create your own rule.</p>
         /// </note>
         pub fn created_by(mut self, input: impl Into<std::string::String>) -> Self {
             self.created_by = Some(input.into());
             self
         }
         /// <p>Service principal name of the service that created the rule.</p> <note>
-        /// <p>The field is populated only if the service linked rule is created by a service. The field is empty if you create your own rule.</p>
+        /// <p>The field is populated only if the service-linked rule is created by a service. The field is empty if you create your own rule.</p>
         /// </note>
         pub fn set_created_by(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.created_by = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigRule`](crate::model::ConfigRule)
+        /// Consumes the builder and constructs a [`ConfigRule`](crate::model::ConfigRule).
         pub fn build(self) -> crate::model::ConfigRule {
             crate::model::ConfigRule {
                 config_rule_name: self.config_rule_name,
@@ -5051,7 +5277,7 @@ pub mod config_rule {
     }
 }
 impl ConfigRule {
-    /// Creates a new builder-style object to manufacture [`ConfigRule`](crate::model::ConfigRule)
+    /// Creates a new builder-style object to manufacture [`ConfigRule`](crate::model::ConfigRule).
     pub fn builder() -> crate::model::config_rule::Builder {
         crate::model::config_rule::Builder::default()
     }
@@ -5120,28 +5346,32 @@ impl AsRef<str> for ConfigRuleState {
     }
 }
 
-/// <p>Provides the CustomPolicyDetails, the rule owner (Amazon Web Services or customer), the rule identifier, and the events that cause the evaluation of your Amazon Web Services resources.</p>
+/// <p>Provides the CustomPolicyDetails, the rule owner (<code>Amazon Web Services</code> for managed rules, <code>CUSTOM_POLICY</code> for Custom Policy rules, and <code>CUSTOM_LAMBDA</code> for Custom Lambda rules), the rule identifier, and the events that cause the evaluation of your Amazon Web Services resources.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Source {
     /// <p>Indicates whether Amazon Web Services or the customer owns and manages the Config rule.</p>
-    /// <p>Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config Managed Rules</a> in the Config developer guide.</p>
-    /// <p>Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom Rules </a> in the Config developer guide.</p>
+    /// <p>Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config Managed Rules</a> in the <i>Config developer guide</i>.</p>
+    /// <p>Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom Rules </a> in the <i>Config developer guide</i>.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<crate::model::Owner>,
     /// <p>For Config Managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config Managed Rules</a>.</p>
     /// <p>For Config Custom Lambda rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.</p>
     /// <p>For Config Custom Policy rules, this field will be ignored.</p>
+    #[doc(hidden)]
     pub source_identifier: std::option::Option<std::string::String>,
     /// <p>Provides the source and the message types that cause Config to evaluate your Amazon Web Services resources against a rule. It also provides the frequency with which you want Config to run evaluations for the rule if the trigger type is periodic.</p>
     /// <p>If the owner is set to <code>CUSTOM_POLICY</code>, the only acceptable values for the Config rule trigger message type are <code>ConfigurationItemChangeNotification</code> and <code>OversizedConfigurationItemChangeNotification</code>.</p>
+    #[doc(hidden)]
     pub source_details: std::option::Option<std::vec::Vec<crate::model::SourceDetail>>,
     /// <p>Provides the runtime system, policy definition, and whether debug logging is enabled. Required when owner is set to <code>CUSTOM_POLICY</code>.</p>
+    #[doc(hidden)]
     pub custom_policy_details: std::option::Option<crate::model::CustomPolicyDetails>,
 }
 impl Source {
     /// <p>Indicates whether Amazon Web Services or the customer owns and manages the Config rule.</p>
-    /// <p>Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config Managed Rules</a> in the Config developer guide.</p>
-    /// <p>Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom Rules </a> in the Config developer guide.</p>
+    /// <p>Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config Managed Rules</a> in the <i>Config developer guide</i>.</p>
+    /// <p>Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom Rules </a> in the <i>Config developer guide</i>.</p>
     pub fn owner(&self) -> std::option::Option<&crate::model::Owner> {
         self.owner.as_ref()
     }
@@ -5171,11 +5401,10 @@ impl std::fmt::Debug for Source {
         formatter.finish()
     }
 }
-/// See [`Source`](crate::model::Source)
+/// See [`Source`](crate::model::Source).
 pub mod source {
 
-    /// A builder for [`Source`](crate::model::Source)
-    #[non_exhaustive]
+    /// A builder for [`Source`](crate::model::Source).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) owner: std::option::Option<crate::model::Owner>,
@@ -5185,15 +5414,15 @@ pub mod source {
     }
     impl Builder {
         /// <p>Indicates whether Amazon Web Services or the customer owns and manages the Config rule.</p>
-        /// <p>Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config Managed Rules</a> in the Config developer guide.</p>
-        /// <p>Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom Rules </a> in the Config developer guide.</p>
+        /// <p>Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config Managed Rules</a> in the <i>Config developer guide</i>.</p>
+        /// <p>Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom Rules </a> in the <i>Config developer guide</i>.</p>
         pub fn owner(mut self, input: crate::model::Owner) -> Self {
             self.owner = Some(input);
             self
         }
         /// <p>Indicates whether Amazon Web Services or the customer owns and manages the Config rule.</p>
-        /// <p>Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config Managed Rules</a> in the Config developer guide.</p>
-        /// <p>Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom Rules </a> in the Config developer guide.</p>
+        /// <p>Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config Managed Rules</a> in the <i>Config developer guide</i>.</p>
+        /// <p>Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom Rules </a> in the <i>Config developer guide</i>.</p>
         pub fn set_owner(mut self, input: std::option::Option<crate::model::Owner>) -> Self {
             self.owner = input;
             self
@@ -5249,7 +5478,7 @@ pub mod source {
             self.custom_policy_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`Source`](crate::model::Source)
+        /// Consumes the builder and constructs a [`Source`](crate::model::Source).
         pub fn build(self) -> crate::model::Source {
             crate::model::Source {
                 owner: self.owner,
@@ -5261,7 +5490,7 @@ pub mod source {
     }
 }
 impl Source {
-    /// Creates a new builder-style object to manufacture [`Source`](crate::model::Source)
+    /// Creates a new builder-style object to manufacture [`Source`](crate::model::Source).
     pub fn builder() -> crate::model::source::Builder {
         crate::model::source::Builder::default()
     }
@@ -5272,10 +5501,13 @@ impl Source {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomPolicyDetails {
     /// <p>The runtime system for your Config Custom Policy rule. Guard is a policy-as-code language that allows you to write policies that are enforced by Config Custom Policy rules. For more information about Guard, see the <a href="https://github.com/aws-cloudformation/cloudformation-guard">Guard GitHub Repository</a>.</p>
+    #[doc(hidden)]
     pub policy_runtime: std::option::Option<std::string::String>,
     /// <p>The policy definition containing the logic for your Config Custom Policy rule.</p>
+    #[doc(hidden)]
     pub policy_text: std::option::Option<std::string::String>,
     /// <p>The boolean expression for enabling debug logging for your Config Custom Policy rule. The default value is <code>false</code>.</p>
+    #[doc(hidden)]
     pub enable_debug_log_delivery: bool,
 }
 impl CustomPolicyDetails {
@@ -5301,11 +5533,10 @@ impl std::fmt::Debug for CustomPolicyDetails {
         formatter.finish()
     }
 }
-/// See [`CustomPolicyDetails`](crate::model::CustomPolicyDetails)
+/// See [`CustomPolicyDetails`](crate::model::CustomPolicyDetails).
 pub mod custom_policy_details {
 
-    /// A builder for [`CustomPolicyDetails`](crate::model::CustomPolicyDetails)
-    #[non_exhaustive]
+    /// A builder for [`CustomPolicyDetails`](crate::model::CustomPolicyDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_runtime: std::option::Option<std::string::String>,
@@ -5346,7 +5577,7 @@ pub mod custom_policy_details {
             self.enable_debug_log_delivery = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomPolicyDetails`](crate::model::CustomPolicyDetails)
+        /// Consumes the builder and constructs a [`CustomPolicyDetails`](crate::model::CustomPolicyDetails).
         pub fn build(self) -> crate::model::CustomPolicyDetails {
             crate::model::CustomPolicyDetails {
                 policy_runtime: self.policy_runtime,
@@ -5357,7 +5588,7 @@ pub mod custom_policy_details {
     }
 }
 impl CustomPolicyDetails {
-    /// Creates a new builder-style object to manufacture [`CustomPolicyDetails`](crate::model::CustomPolicyDetails)
+    /// Creates a new builder-style object to manufacture [`CustomPolicyDetails`](crate::model::CustomPolicyDetails).
     pub fn builder() -> crate::model::custom_policy_details::Builder {
         crate::model::custom_policy_details::Builder::default()
     }
@@ -5368,6 +5599,7 @@ impl CustomPolicyDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SourceDetail {
     /// <p>The source of the event, such as an Amazon Web Services service, that triggers Config to evaluate your Amazon Web Services resources.</p>
+    #[doc(hidden)]
     pub event_source: std::option::Option<crate::model::EventSource>,
     /// <p>The type of notification that triggers Config to run an evaluation for a rule. You can specify the following notification types:</p>
     /// <ul>
@@ -5377,11 +5609,13 @@ pub struct SourceDetail {
     /// <li> <p> <code>ConfigurationSnapshotDeliveryCompleted</code> - Triggers a periodic evaluation when Config delivers a configuration snapshot.</p> </li>
     /// </ul>
     /// <p>If you want your custom rule to be triggered by configuration changes, specify two SourceDetail objects, one for <code>ConfigurationItemChangeNotification</code> and one for <code>OversizedConfigurationItemChangeNotification</code>.</p>
+    #[doc(hidden)]
     pub message_type: std::option::Option<crate::model::MessageType>,
     /// <p>The frequency at which you want Config to run evaluations for a custom rule with a periodic trigger. If you specify a value for <code>MaximumExecutionFrequency</code>, then <code>MessageType</code> must use the <code>ScheduledNotification</code> value.</p> <note>
     /// <p>By default, rules with a periodic trigger are evaluated every 24 hours. To change the frequency, specify a valid value for the <code>MaximumExecutionFrequency</code> parameter.</p>
     /// <p>Based on the valid value you choose, Config runs evaluations once for each valid value. For example, if you choose <code>Three_Hours</code>, Config runs evaluations once every three hours. In this case, <code>Three_Hours</code> is the frequency of this rule. </p>
     /// </note>
+    #[doc(hidden)]
     pub maximum_execution_frequency: std::option::Option<crate::model::MaximumExecutionFrequency>,
 }
 impl SourceDetail {
@@ -5422,11 +5656,10 @@ impl std::fmt::Debug for SourceDetail {
         formatter.finish()
     }
 }
-/// See [`SourceDetail`](crate::model::SourceDetail)
+/// See [`SourceDetail`](crate::model::SourceDetail).
 pub mod source_detail {
 
-    /// A builder for [`SourceDetail`](crate::model::SourceDetail)
-    #[non_exhaustive]
+    /// A builder for [`SourceDetail`](crate::model::SourceDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_source: std::option::Option<crate::model::EventSource>,
@@ -5497,7 +5730,7 @@ pub mod source_detail {
             self.maximum_execution_frequency = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceDetail`](crate::model::SourceDetail)
+        /// Consumes the builder and constructs a [`SourceDetail`](crate::model::SourceDetail).
         pub fn build(self) -> crate::model::SourceDetail {
             crate::model::SourceDetail {
                 event_source: self.event_source,
@@ -5508,7 +5741,7 @@ pub mod source_detail {
     }
 }
 impl SourceDetail {
-    /// Creates a new builder-style object to manufacture [`SourceDetail`](crate::model::SourceDetail)
+    /// Creates a new builder-style object to manufacture [`SourceDetail`](crate::model::SourceDetail).
     pub fn builder() -> crate::model::source_detail::Builder {
         crate::model::source_detail::Builder::default()
     }
@@ -5709,12 +5942,16 @@ impl AsRef<str> for Owner {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Scope {
     /// <p>The resource types of only those Amazon Web Services resources that you want to trigger an evaluation for the rule. You can only specify one type if you also specify a resource ID for <code>ComplianceResourceId</code>.</p>
+    #[doc(hidden)]
     pub compliance_resource_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The tag key that is applied to only those Amazon Web Services resources that you want to trigger an evaluation for the rule.</p>
+    #[doc(hidden)]
     pub tag_key: std::option::Option<std::string::String>,
     /// <p>The tag value applied to only those Amazon Web Services resources that you want to trigger an evaluation for the rule. If you specify a value for <code>TagValue</code>, you must also specify a value for <code>TagKey</code>.</p>
+    #[doc(hidden)]
     pub tag_value: std::option::Option<std::string::String>,
     /// <p>The ID of the only Amazon Web Services resource that you want to trigger an evaluation for the rule. If you specify a resource ID, you must specify one resource type for <code>ComplianceResourceTypes</code>.</p>
+    #[doc(hidden)]
     pub compliance_resource_id: std::option::Option<std::string::String>,
 }
 impl Scope {
@@ -5745,11 +5982,10 @@ impl std::fmt::Debug for Scope {
         formatter.finish()
     }
 }
-/// See [`Scope`](crate::model::Scope)
+/// See [`Scope`](crate::model::Scope).
 pub mod scope {
 
-    /// A builder for [`Scope`](crate::model::Scope)
-    #[non_exhaustive]
+    /// A builder for [`Scope`](crate::model::Scope).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliance_resource_types:
@@ -5811,7 +6047,7 @@ pub mod scope {
             self.compliance_resource_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Scope`](crate::model::Scope)
+        /// Consumes the builder and constructs a [`Scope`](crate::model::Scope).
         pub fn build(self) -> crate::model::Scope {
             crate::model::Scope {
                 compliance_resource_types: self.compliance_resource_types,
@@ -5823,7 +6059,7 @@ pub mod scope {
     }
 }
 impl Scope {
-    /// Creates a new builder-style object to manufacture [`Scope`](crate::model::Scope)
+    /// Creates a new builder-style object to manufacture [`Scope`](crate::model::Scope).
     pub fn builder() -> crate::model::scope::Builder {
         crate::model::scope::Builder::default()
     }
@@ -5834,12 +6070,16 @@ impl Scope {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregationAuthorization {
     /// <p>The Amazon Resource Name (ARN) of the aggregation object.</p>
+    #[doc(hidden)]
     pub aggregation_authorization_arn: std::option::Option<std::string::String>,
     /// <p>The 12-digit account ID of the account authorized to aggregate data.</p>
+    #[doc(hidden)]
     pub authorized_account_id: std::option::Option<std::string::String>,
     /// <p>The region authorized to collect aggregated data.</p>
+    #[doc(hidden)]
     pub authorized_aws_region: std::option::Option<std::string::String>,
     /// <p>The time stamp when the aggregation authorization was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl AggregationAuthorization {
@@ -5873,11 +6113,10 @@ impl std::fmt::Debug for AggregationAuthorization {
         formatter.finish()
     }
 }
-/// See [`AggregationAuthorization`](crate::model::AggregationAuthorization)
+/// See [`AggregationAuthorization`](crate::model::AggregationAuthorization).
 pub mod aggregation_authorization {
 
-    /// A builder for [`AggregationAuthorization`](crate::model::AggregationAuthorization)
-    #[non_exhaustive]
+    /// A builder for [`AggregationAuthorization`](crate::model::AggregationAuthorization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) aggregation_authorization_arn: std::option::Option<std::string::String>,
@@ -5941,7 +6180,7 @@ pub mod aggregation_authorization {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregationAuthorization`](crate::model::AggregationAuthorization)
+        /// Consumes the builder and constructs a [`AggregationAuthorization`](crate::model::AggregationAuthorization).
         pub fn build(self) -> crate::model::AggregationAuthorization {
             crate::model::AggregationAuthorization {
                 aggregation_authorization_arn: self.aggregation_authorization_arn,
@@ -5953,7 +6192,7 @@ pub mod aggregation_authorization {
     }
 }
 impl AggregationAuthorization {
-    /// Creates a new builder-style object to manufacture [`AggregationAuthorization`](crate::model::AggregationAuthorization)
+    /// Creates a new builder-style object to manufacture [`AggregationAuthorization`](crate::model::AggregationAuthorization).
     pub fn builder() -> crate::model::aggregation_authorization::Builder {
         crate::model::aggregation_authorization::Builder::default()
     }
@@ -5964,12 +6203,16 @@ impl AggregationAuthorization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StoredQueryMetadata {
     /// <p>The ID of the query. </p>
+    #[doc(hidden)]
     pub query_id: std::option::Option<std::string::String>,
     /// <p>Amazon Resource Name (ARN) of the query. For example, arn:partition:service:region:account-id:resource-type/resource-name/resource-id.</p>
+    #[doc(hidden)]
     pub query_arn: std::option::Option<std::string::String>,
     /// <p>The name of the query.</p>
+    #[doc(hidden)]
     pub query_name: std::option::Option<std::string::String>,
     /// <p>A unique description for the query.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl StoredQueryMetadata {
@@ -6000,11 +6243,10 @@ impl std::fmt::Debug for StoredQueryMetadata {
         formatter.finish()
     }
 }
-/// See [`StoredQueryMetadata`](crate::model::StoredQueryMetadata)
+/// See [`StoredQueryMetadata`](crate::model::StoredQueryMetadata).
 pub mod stored_query_metadata {
 
-    /// A builder for [`StoredQueryMetadata`](crate::model::StoredQueryMetadata)
-    #[non_exhaustive]
+    /// A builder for [`StoredQueryMetadata`](crate::model::StoredQueryMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) query_id: std::option::Option<std::string::String>,
@@ -6053,7 +6295,7 @@ pub mod stored_query_metadata {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`StoredQueryMetadata`](crate::model::StoredQueryMetadata)
+        /// Consumes the builder and constructs a [`StoredQueryMetadata`](crate::model::StoredQueryMetadata).
         pub fn build(self) -> crate::model::StoredQueryMetadata {
             crate::model::StoredQueryMetadata {
                 query_id: self.query_id,
@@ -6065,7 +6307,7 @@ pub mod stored_query_metadata {
     }
 }
 impl StoredQueryMetadata {
-    /// Creates a new builder-style object to manufacture [`StoredQueryMetadata`](crate::model::StoredQueryMetadata)
+    /// Creates a new builder-style object to manufacture [`StoredQueryMetadata`](crate::model::StoredQueryMetadata).
     pub fn builder() -> crate::model::stored_query_metadata::Builder {
         crate::model::stored_query_metadata::Builder::default()
     }
@@ -6076,12 +6318,16 @@ impl StoredQueryMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceIdentifier {
     /// <p>The type of resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The ID of the resource (for example, <code>sg-xxxxxx</code>).</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The custom name of the resource (if available).</p>
+    #[doc(hidden)]
     pub resource_name: std::option::Option<std::string::String>,
     /// <p>The time that the resource was deleted.</p>
+    #[doc(hidden)]
     pub resource_deletion_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ResourceIdentifier {
@@ -6112,11 +6358,10 @@ impl std::fmt::Debug for ResourceIdentifier {
         formatter.finish()
     }
 }
-/// See [`ResourceIdentifier`](crate::model::ResourceIdentifier)
+/// See [`ResourceIdentifier`](crate::model::ResourceIdentifier).
 pub mod resource_identifier {
 
-    /// A builder for [`ResourceIdentifier`](crate::model::ResourceIdentifier)
-    #[non_exhaustive]
+    /// A builder for [`ResourceIdentifier`](crate::model::ResourceIdentifier).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<crate::model::ResourceType>,
@@ -6174,7 +6419,7 @@ pub mod resource_identifier {
             self.resource_deletion_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceIdentifier`](crate::model::ResourceIdentifier)
+        /// Consumes the builder and constructs a [`ResourceIdentifier`](crate::model::ResourceIdentifier).
         pub fn build(self) -> crate::model::ResourceIdentifier {
             crate::model::ResourceIdentifier {
                 resource_type: self.resource_type,
@@ -6186,9 +6431,280 @@ pub mod resource_identifier {
     }
 }
 impl ResourceIdentifier {
-    /// Creates a new builder-style object to manufacture [`ResourceIdentifier`](crate::model::ResourceIdentifier)
+    /// Creates a new builder-style object to manufacture [`ResourceIdentifier`](crate::model::ResourceIdentifier).
     pub fn builder() -> crate::model::resource_identifier::Builder {
         crate::model::resource_identifier::Builder::default()
+    }
+}
+
+/// <p>A compliance score is the percentage of the number of compliant rule-resource combinations in a conformance pack compared to the number of total possible rule-resource combinations in the conformance pack. This metric provides you with a high-level view of the compliance state of your conformance packs, and can be used to identify, investigate, and understand the level of compliance in your conformance packs.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ConformancePackComplianceScore {
+    /// <p>Compliance score for the conformance pack. Conformance packs with no evaluation results will have a compliance score of <code>INSUFFICIENT_DATA</code>.</p>
+    #[doc(hidden)]
+    pub score: std::option::Option<std::string::String>,
+    /// <p>The name of the conformance pack.</p>
+    #[doc(hidden)]
+    pub conformance_pack_name: std::option::Option<std::string::String>,
+    /// <p>The time that the conformance pack compliance score was last updated.</p>
+    #[doc(hidden)]
+    pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
+}
+impl ConformancePackComplianceScore {
+    /// <p>Compliance score for the conformance pack. Conformance packs with no evaluation results will have a compliance score of <code>INSUFFICIENT_DATA</code>.</p>
+    pub fn score(&self) -> std::option::Option<&str> {
+        self.score.as_deref()
+    }
+    /// <p>The name of the conformance pack.</p>
+    pub fn conformance_pack_name(&self) -> std::option::Option<&str> {
+        self.conformance_pack_name.as_deref()
+    }
+    /// <p>The time that the conformance pack compliance score was last updated.</p>
+    pub fn last_updated_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.last_updated_time.as_ref()
+    }
+}
+impl std::fmt::Debug for ConformancePackComplianceScore {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ConformancePackComplianceScore");
+        formatter.field("score", &self.score);
+        formatter.field("conformance_pack_name", &self.conformance_pack_name);
+        formatter.field("last_updated_time", &self.last_updated_time);
+        formatter.finish()
+    }
+}
+/// See [`ConformancePackComplianceScore`](crate::model::ConformancePackComplianceScore).
+pub mod conformance_pack_compliance_score {
+
+    /// A builder for [`ConformancePackComplianceScore`](crate::model::ConformancePackComplianceScore).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) score: std::option::Option<std::string::String>,
+        pub(crate) conformance_pack_name: std::option::Option<std::string::String>,
+        pub(crate) last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
+    }
+    impl Builder {
+        /// <p>Compliance score for the conformance pack. Conformance packs with no evaluation results will have a compliance score of <code>INSUFFICIENT_DATA</code>.</p>
+        pub fn score(mut self, input: impl Into<std::string::String>) -> Self {
+            self.score = Some(input.into());
+            self
+        }
+        /// <p>Compliance score for the conformance pack. Conformance packs with no evaluation results will have a compliance score of <code>INSUFFICIENT_DATA</code>.</p>
+        pub fn set_score(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.score = input;
+            self
+        }
+        /// <p>The name of the conformance pack.</p>
+        pub fn conformance_pack_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.conformance_pack_name = Some(input.into());
+            self
+        }
+        /// <p>The name of the conformance pack.</p>
+        pub fn set_conformance_pack_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.conformance_pack_name = input;
+            self
+        }
+        /// <p>The time that the conformance pack compliance score was last updated.</p>
+        pub fn last_updated_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.last_updated_time = Some(input);
+            self
+        }
+        /// <p>The time that the conformance pack compliance score was last updated.</p>
+        pub fn set_last_updated_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.last_updated_time = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ConformancePackComplianceScore`](crate::model::ConformancePackComplianceScore).
+        pub fn build(self) -> crate::model::ConformancePackComplianceScore {
+            crate::model::ConformancePackComplianceScore {
+                score: self.score,
+                conformance_pack_name: self.conformance_pack_name,
+                last_updated_time: self.last_updated_time,
+            }
+        }
+    }
+}
+impl ConformancePackComplianceScore {
+    /// Creates a new builder-style object to manufacture [`ConformancePackComplianceScore`](crate::model::ConformancePackComplianceScore).
+    pub fn builder() -> crate::model::conformance_pack_compliance_score::Builder {
+        crate::model::conformance_pack_compliance_score::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum SortBy {
+    #[allow(missing_docs)] // documentation missing in model
+    Score,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for SortBy {
+    fn from(s: &str) -> Self {
+        match s {
+            "SCORE" => SortBy::Score,
+            other => SortBy::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for SortBy {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(SortBy::from(s))
+    }
+}
+impl SortBy {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            SortBy::Score => "SCORE",
+            SortBy::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["SCORE"]
+    }
+}
+impl AsRef<str> for SortBy {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum SortOrder {
+    #[allow(missing_docs)] // documentation missing in model
+    Ascending,
+    #[allow(missing_docs)] // documentation missing in model
+    Descending,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for SortOrder {
+    fn from(s: &str) -> Self {
+        match s {
+            "ASCENDING" => SortOrder::Ascending,
+            "DESCENDING" => SortOrder::Descending,
+            other => SortOrder::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for SortOrder {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(SortOrder::from(s))
+    }
+}
+impl SortOrder {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            SortOrder::Ascending => "ASCENDING",
+            SortOrder::Descending => "DESCENDING",
+            SortOrder::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["ASCENDING", "DESCENDING"]
+    }
+}
+impl AsRef<str> for SortOrder {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+/// <p>A list of filters to apply to the conformance pack compliance score result set. </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ConformancePackComplianceScoresFilters {
+    /// <p>The names of the conformance packs whose compliance scores you want to include in the conformance pack compliance score result set. You can include up to 25 conformance packs in the <code>ConformancePackNames</code> array of strings, each with a character limit of 256 characters for the conformance pack name.</p>
+    #[doc(hidden)]
+    pub conformance_pack_names: std::option::Option<std::vec::Vec<std::string::String>>,
+}
+impl ConformancePackComplianceScoresFilters {
+    /// <p>The names of the conformance packs whose compliance scores you want to include in the conformance pack compliance score result set. You can include up to 25 conformance packs in the <code>ConformancePackNames</code> array of strings, each with a character limit of 256 characters for the conformance pack name.</p>
+    pub fn conformance_pack_names(&self) -> std::option::Option<&[std::string::String]> {
+        self.conformance_pack_names.as_deref()
+    }
+}
+impl std::fmt::Debug for ConformancePackComplianceScoresFilters {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ConformancePackComplianceScoresFilters");
+        formatter.field("conformance_pack_names", &self.conformance_pack_names);
+        formatter.finish()
+    }
+}
+/// See [`ConformancePackComplianceScoresFilters`](crate::model::ConformancePackComplianceScoresFilters).
+pub mod conformance_pack_compliance_scores_filters {
+
+    /// A builder for [`ConformancePackComplianceScoresFilters`](crate::model::ConformancePackComplianceScoresFilters).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) conformance_pack_names: std::option::Option<std::vec::Vec<std::string::String>>,
+    }
+    impl Builder {
+        /// Appends an item to `conformance_pack_names`.
+        ///
+        /// To override the contents of this collection use [`set_conformance_pack_names`](Self::set_conformance_pack_names).
+        ///
+        /// <p>The names of the conformance packs whose compliance scores you want to include in the conformance pack compliance score result set. You can include up to 25 conformance packs in the <code>ConformancePackNames</code> array of strings, each with a character limit of 256 characters for the conformance pack name.</p>
+        pub fn conformance_pack_names(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.conformance_pack_names.unwrap_or_default();
+            v.push(input.into());
+            self.conformance_pack_names = Some(v);
+            self
+        }
+        /// <p>The names of the conformance packs whose compliance scores you want to include in the conformance pack compliance score result set. You can include up to 25 conformance packs in the <code>ConformancePackNames</code> array of strings, each with a character limit of 256 characters for the conformance pack name.</p>
+        pub fn set_conformance_pack_names(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.conformance_pack_names = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ConformancePackComplianceScoresFilters`](crate::model::ConformancePackComplianceScoresFilters).
+        pub fn build(self) -> crate::model::ConformancePackComplianceScoresFilters {
+            crate::model::ConformancePackComplianceScoresFilters {
+                conformance_pack_names: self.conformance_pack_names,
+            }
+        }
+    }
+}
+impl ConformancePackComplianceScoresFilters {
+    /// Creates a new builder-style object to manufacture [`ConformancePackComplianceScoresFilters`](crate::model::ConformancePackComplianceScoresFilters).
+    pub fn builder() -> crate::model::conformance_pack_compliance_scores_filters::Builder {
+        crate::model::conformance_pack_compliance_scores_filters::Builder::default()
     }
 }
 
@@ -6197,14 +6713,19 @@ impl ResourceIdentifier {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregateResourceIdentifier {
     /// <p>The 12-digit account ID of the source account.</p>
+    #[doc(hidden)]
     pub source_account_id: std::option::Option<std::string::String>,
     /// <p>The source region where data is aggregated.</p>
+    #[doc(hidden)]
     pub source_region: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services resource.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The type of the Amazon Web Services resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The name of the Amazon Web Services resource.</p>
+    #[doc(hidden)]
     pub resource_name: std::option::Option<std::string::String>,
 }
 impl AggregateResourceIdentifier {
@@ -6240,11 +6761,10 @@ impl std::fmt::Debug for AggregateResourceIdentifier {
         formatter.finish()
     }
 }
-/// See [`AggregateResourceIdentifier`](crate::model::AggregateResourceIdentifier)
+/// See [`AggregateResourceIdentifier`](crate::model::AggregateResourceIdentifier).
 pub mod aggregate_resource_identifier {
 
-    /// A builder for [`AggregateResourceIdentifier`](crate::model::AggregateResourceIdentifier)
-    #[non_exhaustive]
+    /// A builder for [`AggregateResourceIdentifier`](crate::model::AggregateResourceIdentifier).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_account_id: std::option::Option<std::string::String>,
@@ -6316,7 +6836,7 @@ pub mod aggregate_resource_identifier {
             self.resource_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregateResourceIdentifier`](crate::model::AggregateResourceIdentifier)
+        /// Consumes the builder and constructs a [`AggregateResourceIdentifier`](crate::model::AggregateResourceIdentifier).
         pub fn build(self) -> crate::model::AggregateResourceIdentifier {
             crate::model::AggregateResourceIdentifier {
                 source_account_id: self.source_account_id,
@@ -6329,7 +6849,7 @@ pub mod aggregate_resource_identifier {
     }
 }
 impl AggregateResourceIdentifier {
-    /// Creates a new builder-style object to manufacture [`AggregateResourceIdentifier`](crate::model::AggregateResourceIdentifier)
+    /// Creates a new builder-style object to manufacture [`AggregateResourceIdentifier`](crate::model::AggregateResourceIdentifier).
     pub fn builder() -> crate::model::aggregate_resource_identifier::Builder {
         crate::model::aggregate_resource_identifier::Builder::default()
     }
@@ -6340,12 +6860,16 @@ impl AggregateResourceIdentifier {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceFilters {
     /// <p>The 12-digit source account ID.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The ID of the resource.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The name of the resource.</p>
+    #[doc(hidden)]
     pub resource_name: std::option::Option<std::string::String>,
     /// <p>The source region.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
 }
 impl ResourceFilters {
@@ -6376,11 +6900,10 @@ impl std::fmt::Debug for ResourceFilters {
         formatter.finish()
     }
 }
-/// See [`ResourceFilters`](crate::model::ResourceFilters)
+/// See [`ResourceFilters`](crate::model::ResourceFilters).
 pub mod resource_filters {
 
-    /// A builder for [`ResourceFilters`](crate::model::ResourceFilters)
-    #[non_exhaustive]
+    /// A builder for [`ResourceFilters`](crate::model::ResourceFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -6432,7 +6955,7 @@ pub mod resource_filters {
             self.region = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceFilters`](crate::model::ResourceFilters)
+        /// Consumes the builder and constructs a [`ResourceFilters`](crate::model::ResourceFilters).
         pub fn build(self) -> crate::model::ResourceFilters {
             crate::model::ResourceFilters {
                 account_id: self.account_id,
@@ -6444,7 +6967,7 @@ pub mod resource_filters {
     }
 }
 impl ResourceFilters {
-    /// Creates a new builder-style object to manufacture [`ResourceFilters`](crate::model::ResourceFilters)
+    /// Creates a new builder-style object to manufacture [`ResourceFilters`](crate::model::ResourceFilters).
     pub fn builder() -> crate::model::resource_filters::Builder {
         crate::model::resource_filters::Builder::default()
     }
@@ -6455,10 +6978,13 @@ impl ResourceFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigurationItem {
     /// <p>The version number of the resource configuration.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The 12-digit Amazon Web Services account ID associated with the resource.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The time when the configuration recording was initiated.</p>
+    #[doc(hidden)]
     pub configuration_item_capture_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The configuration item status. The valid values are:</p>
     /// <ul>
@@ -6470,38 +6996,53 @@ pub struct ConfigurationItem {
     /// </ul> <note>
     /// <p>The CIs do not incur any cost.</p>
     /// </note>
+    #[doc(hidden)]
     pub configuration_item_status: std::option::Option<crate::model::ConfigurationItemStatus>,
     /// <p>An identifier that indicates the ordering of the configuration items of a resource.</p>
+    #[doc(hidden)]
     pub configuration_state_id: std::option::Option<std::string::String>,
     /// <p>Unique MD5 hash that represents the configuration item's state.</p>
     /// <p>You can use MD5 hash to compare the states of two or more configuration items that are associated with the same resource.</p>
+    #[doc(hidden)]
     pub configuration_item_md5_hash: std::option::Option<std::string::String>,
     /// <p>Amazon Resource Name (ARN) associated with the resource.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The type of Amazon Web Services resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The ID of the resource (for example, <code>sg-xxxxxx</code>).</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The custom name of the resource, if available.</p>
+    #[doc(hidden)]
     pub resource_name: std::option::Option<std::string::String>,
     /// <p>The region where the resource resides.</p>
+    #[doc(hidden)]
     pub aws_region: std::option::Option<std::string::String>,
     /// <p>The Availability Zone associated with the resource.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>The time stamp when the resource was created.</p>
+    #[doc(hidden)]
     pub resource_creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A mapping of key value tags associated with the resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A list of CloudTrail event IDs.</p>
     /// <p>A populated field indicates that the current configuration was initiated by the events recorded in the CloudTrail log. For more information about CloudTrail, see <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">What Is CloudTrail</a>.</p>
     /// <p>An empty field indicates that the current configuration was not initiated by any event. As of Version 1.3, the relatedEvents field is empty. You can access the <a href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html">LookupEvents API</a> in the <i>CloudTrail API Reference</i> to retrieve the events for the resource.</p>
+    #[doc(hidden)]
     pub related_events: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of related Amazon Web Services resources.</p>
+    #[doc(hidden)]
     pub relationships: std::option::Option<std::vec::Vec<crate::model::Relationship>>,
     /// <p>The description of the resource configuration.</p>
+    #[doc(hidden)]
     pub configuration: std::option::Option<std::string::String>,
     /// <p>Configuration attributes that Config returns for certain resource types to supplement the information returned for the <code>configuration</code> parameter.</p>
+    #[doc(hidden)]
     pub supplementary_configuration:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -6634,11 +7175,10 @@ impl std::fmt::Debug for ConfigurationItem {
         formatter.finish()
     }
 }
-/// See [`ConfigurationItem`](crate::model::ConfigurationItem)
+/// See [`ConfigurationItem`](crate::model::ConfigurationItem).
 pub mod configuration_item {
 
-    /// A builder for [`ConfigurationItem`](crate::model::ConfigurationItem)
-    #[non_exhaustive]
+    /// A builder for [`ConfigurationItem`](crate::model::ConfigurationItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version: std::option::Option<std::string::String>,
@@ -6954,7 +7494,7 @@ pub mod configuration_item {
             self.supplementary_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigurationItem`](crate::model::ConfigurationItem)
+        /// Consumes the builder and constructs a [`ConfigurationItem`](crate::model::ConfigurationItem).
         pub fn build(self) -> crate::model::ConfigurationItem {
             crate::model::ConfigurationItem {
                 version: self.version,
@@ -6980,7 +7520,7 @@ pub mod configuration_item {
     }
 }
 impl ConfigurationItem {
-    /// Creates a new builder-style object to manufacture [`ConfigurationItem`](crate::model::ConfigurationItem)
+    /// Creates a new builder-style object to manufacture [`ConfigurationItem`](crate::model::ConfigurationItem).
     pub fn builder() -> crate::model::configuration_item::Builder {
         crate::model::configuration_item::Builder::default()
     }
@@ -6991,12 +7531,16 @@ impl ConfigurationItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Relationship {
     /// <p>The resource type of the related resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The ID of the related resource (for example, <code>sg-xxxxxx</code>).</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The custom name of the related resource, if available.</p>
+    #[doc(hidden)]
     pub resource_name: std::option::Option<std::string::String>,
     /// <p>The type of relationship with the related resource.</p>
+    #[doc(hidden)]
     pub relationship_name: std::option::Option<std::string::String>,
 }
 impl Relationship {
@@ -7027,11 +7571,10 @@ impl std::fmt::Debug for Relationship {
         formatter.finish()
     }
 }
-/// See [`Relationship`](crate::model::Relationship)
+/// See [`Relationship`](crate::model::Relationship).
 pub mod relationship {
 
-    /// A builder for [`Relationship`](crate::model::Relationship)
-    #[non_exhaustive]
+    /// A builder for [`Relationship`](crate::model::Relationship).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<crate::model::ResourceType>,
@@ -7089,7 +7632,7 @@ pub mod relationship {
             self.relationship_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Relationship`](crate::model::Relationship)
+        /// Consumes the builder and constructs a [`Relationship`](crate::model::Relationship).
         pub fn build(self) -> crate::model::Relationship {
             crate::model::Relationship {
                 resource_type: self.resource_type,
@@ -7101,7 +7644,7 @@ pub mod relationship {
     }
 }
 impl Relationship {
-    /// Creates a new builder-style object to manufacture [`Relationship`](crate::model::Relationship)
+    /// Creates a new builder-style object to manufacture [`Relationship`](crate::model::Relationship).
     pub fn builder() -> crate::model::relationship::Builder {
         crate::model::relationship::Builder::default()
     }
@@ -7240,8 +7783,10 @@ impl AsRef<str> for ChronologicalOrder {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrganizationConformancePackDetailedStatus {
     /// <p>The 12-digit account ID of a member account.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The name of conformance pack deployed in the member account.</p>
+    #[doc(hidden)]
     pub conformance_pack_name: std::option::Option<std::string::String>,
     /// <p>Indicates deployment status for conformance pack in a member account. When master account calls <code>PutOrganizationConformancePack</code> action for the first time, conformance pack status is created in the member account. When master account calls <code>PutOrganizationConformancePack</code> action for the second time, conformance pack status is updated in the member account. Conformance pack status is deleted when the master account deletes <code>OrganizationConformancePack</code> and disables service access for <code>config-multiaccountsetup.amazonaws.com</code>. </p>
     /// <p> Config sets the state of the conformance pack to:</p>
@@ -7256,12 +7801,16 @@ pub struct OrganizationConformancePackDetailedStatus {
     /// <li> <p> <code>UPDATE_IN_PROGRESS</code> when conformance pack is being updated in the member account.</p> </li>
     /// <li> <p> <code>UPDATE_FAILED</code> when conformance pack deletion has failed in the member account.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OrganizationResourceDetailedStatus>,
     /// <p>An error code that is returned when conformance pack creation or deletion failed in the member account. </p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>An error message indicating that conformance pack account creation or deletion has failed due to an error in the member account. </p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>The timestamp of the last status update.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl OrganizationConformancePackDetailedStatus {
@@ -7314,11 +7863,10 @@ impl std::fmt::Debug for OrganizationConformancePackDetailedStatus {
         formatter.finish()
     }
 }
-/// See [`OrganizationConformancePackDetailedStatus`](crate::model::OrganizationConformancePackDetailedStatus)
+/// See [`OrganizationConformancePackDetailedStatus`](crate::model::OrganizationConformancePackDetailedStatus).
 pub mod organization_conformance_pack_detailed_status {
 
-    /// A builder for [`OrganizationConformancePackDetailedStatus`](crate::model::OrganizationConformancePackDetailedStatus)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationConformancePackDetailedStatus`](crate::model::OrganizationConformancePackDetailedStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -7425,7 +7973,7 @@ pub mod organization_conformance_pack_detailed_status {
             self.last_update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationConformancePackDetailedStatus`](crate::model::OrganizationConformancePackDetailedStatus)
+        /// Consumes the builder and constructs a [`OrganizationConformancePackDetailedStatus`](crate::model::OrganizationConformancePackDetailedStatus).
         pub fn build(self) -> crate::model::OrganizationConformancePackDetailedStatus {
             crate::model::OrganizationConformancePackDetailedStatus {
                 account_id: self.account_id,
@@ -7439,7 +7987,7 @@ pub mod organization_conformance_pack_detailed_status {
     }
 }
 impl OrganizationConformancePackDetailedStatus {
-    /// Creates a new builder-style object to manufacture [`OrganizationConformancePackDetailedStatus`](crate::model::OrganizationConformancePackDetailedStatus)
+    /// Creates a new builder-style object to manufacture [`OrganizationConformancePackDetailedStatus`](crate::model::OrganizationConformancePackDetailedStatus).
     pub fn builder() -> crate::model::organization_conformance_pack_detailed_status::Builder {
         crate::model::organization_conformance_pack_detailed_status::Builder::default()
     }
@@ -7543,6 +8091,7 @@ impl AsRef<str> for OrganizationResourceDetailedStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrganizationResourceDetailedStatusFilters {
     /// <p>The 12-digit account ID of the member account within an organization.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>Indicates deployment status for conformance pack in a member account. When master account calls <code>PutOrganizationConformancePack</code> action for the first time, conformance pack status is created in the member account. When master account calls <code>PutOrganizationConformancePack</code> action for the second time, conformance pack status is updated in the member account. Conformance pack status is deleted when the master account deletes <code>OrganizationConformancePack</code> and disables service access for <code>config-multiaccountsetup.amazonaws.com</code>. </p>
     /// <p> Config sets the state of the conformance pack to:</p>
@@ -7557,6 +8106,7 @@ pub struct OrganizationResourceDetailedStatusFilters {
     /// <li> <p> <code>UPDATE_IN_PROGRESS</code> when conformance pack is being updated in the member account.</p> </li>
     /// <li> <p> <code>UPDATE_FAILED</code> when conformance pack deletion has failed in the member account.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OrganizationResourceDetailedStatus>,
 }
 impl OrganizationResourceDetailedStatusFilters {
@@ -7589,11 +8139,10 @@ impl std::fmt::Debug for OrganizationResourceDetailedStatusFilters {
         formatter.finish()
     }
 }
-/// See [`OrganizationResourceDetailedStatusFilters`](crate::model::OrganizationResourceDetailedStatusFilters)
+/// See [`OrganizationResourceDetailedStatusFilters`](crate::model::OrganizationResourceDetailedStatusFilters).
 pub mod organization_resource_detailed_status_filters {
 
-    /// A builder for [`OrganizationResourceDetailedStatusFilters`](crate::model::OrganizationResourceDetailedStatusFilters)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationResourceDetailedStatusFilters`](crate::model::OrganizationResourceDetailedStatusFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -7647,7 +8196,7 @@ pub mod organization_resource_detailed_status_filters {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationResourceDetailedStatusFilters`](crate::model::OrganizationResourceDetailedStatusFilters)
+        /// Consumes the builder and constructs a [`OrganizationResourceDetailedStatusFilters`](crate::model::OrganizationResourceDetailedStatusFilters).
         pub fn build(self) -> crate::model::OrganizationResourceDetailedStatusFilters {
             crate::model::OrganizationResourceDetailedStatusFilters {
                 account_id: self.account_id,
@@ -7657,7 +8206,7 @@ pub mod organization_resource_detailed_status_filters {
     }
 }
 impl OrganizationResourceDetailedStatusFilters {
-    /// Creates a new builder-style object to manufacture [`OrganizationResourceDetailedStatusFilters`](crate::model::OrganizationResourceDetailedStatusFilters)
+    /// Creates a new builder-style object to manufacture [`OrganizationResourceDetailedStatusFilters`](crate::model::OrganizationResourceDetailedStatusFilters).
     pub fn builder() -> crate::model::organization_resource_detailed_status_filters::Builder {
         crate::model::organization_resource_detailed_status_filters::Builder::default()
     }
@@ -7668,8 +8217,10 @@ impl OrganizationResourceDetailedStatusFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MemberAccountStatus {
     /// <p>The 12-digit account ID of a member account.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The name of Config rule deployed in the member account.</p>
+    #[doc(hidden)]
     pub config_rule_name: std::option::Option<std::string::String>,
     /// <p>Indicates deployment status for Config rule in the member account. When master account calls <code>PutOrganizationConfigRule</code> action for the first time, Config rule status is created in the member account. When master account calls <code>PutOrganizationConfigRule</code> action for the second time, Config rule status is updated in the member account. Config rule status is deleted when the master account deletes <code>OrganizationConfigRule</code> and disables service access for <code>config-multiaccountsetup.amazonaws.com</code>. </p>
     /// <p> Config sets the state of the rule to:</p>
@@ -7684,12 +8235,16 @@ pub struct MemberAccountStatus {
     /// <li> <p> <code>UPDATE_IN_PROGRESS</code> when Config rule is being updated in the member account.</p> </li>
     /// <li> <p> <code>UPDATE_FAILED</code> when Config rule deletion has failed in the member account.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub member_account_rule_status: std::option::Option<crate::model::MemberAccountRuleStatus>,
     /// <p>An error code that is returned when Config rule creation or deletion failed in the member account.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>An error message indicating that Config rule account creation or deletion has failed due to an error in the member account.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>The timestamp of the last status update.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl MemberAccountStatus {
@@ -7747,11 +8302,10 @@ impl std::fmt::Debug for MemberAccountStatus {
         formatter.finish()
     }
 }
-/// See [`MemberAccountStatus`](crate::model::MemberAccountStatus)
+/// See [`MemberAccountStatus`](crate::model::MemberAccountStatus).
 pub mod member_account_status {
 
-    /// A builder for [`MemberAccountStatus`](crate::model::MemberAccountStatus)
-    #[non_exhaustive]
+    /// A builder for [`MemberAccountStatus`](crate::model::MemberAccountStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -7862,7 +8416,7 @@ pub mod member_account_status {
             self.last_update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`MemberAccountStatus`](crate::model::MemberAccountStatus)
+        /// Consumes the builder and constructs a [`MemberAccountStatus`](crate::model::MemberAccountStatus).
         pub fn build(self) -> crate::model::MemberAccountStatus {
             crate::model::MemberAccountStatus {
                 account_id: self.account_id,
@@ -7876,7 +8430,7 @@ pub mod member_account_status {
     }
 }
 impl MemberAccountStatus {
-    /// Creates a new builder-style object to manufacture [`MemberAccountStatus`](crate::model::MemberAccountStatus)
+    /// Creates a new builder-style object to manufacture [`MemberAccountStatus`](crate::model::MemberAccountStatus).
     pub fn builder() -> crate::model::member_account_status::Builder {
         crate::model::member_account_status::Builder::default()
     }
@@ -7980,6 +8534,7 @@ impl AsRef<str> for MemberAccountRuleStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatusDetailFilters {
     /// <p>The 12-digit account ID of the member account within an organization.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>Indicates deployment status for Config rule in the member account. When master account calls <code>PutOrganizationConfigRule</code> action for the first time, Config rule status is created in the member account. When master account calls <code>PutOrganizationConfigRule</code> action for the second time, Config rule status is updated in the member account. Config rule status is deleted when the master account deletes <code>OrganizationConfigRule</code> and disables service access for <code>config-multiaccountsetup.amazonaws.com</code>. </p>
     /// <p>Config sets the state of the rule to:</p>
@@ -7994,6 +8549,7 @@ pub struct StatusDetailFilters {
     /// <li> <p> <code>UPDATE_IN_PROGRESS</code> when Config rule is being updated in the member account.</p> </li>
     /// <li> <p> <code>UPDATE_FAILED</code> when Config rule deletion has failed in the member account.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub member_account_rule_status: std::option::Option<crate::model::MemberAccountRuleStatus>,
 }
 impl StatusDetailFilters {
@@ -8031,11 +8587,10 @@ impl std::fmt::Debug for StatusDetailFilters {
         formatter.finish()
     }
 }
-/// See [`StatusDetailFilters`](crate::model::StatusDetailFilters)
+/// See [`StatusDetailFilters`](crate::model::StatusDetailFilters).
 pub mod status_detail_filters {
 
-    /// A builder for [`StatusDetailFilters`](crate::model::StatusDetailFilters)
-    #[non_exhaustive]
+    /// A builder for [`StatusDetailFilters`](crate::model::StatusDetailFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -8093,7 +8648,7 @@ pub mod status_detail_filters {
             self.member_account_rule_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatusDetailFilters`](crate::model::StatusDetailFilters)
+        /// Consumes the builder and constructs a [`StatusDetailFilters`](crate::model::StatusDetailFilters).
         pub fn build(self) -> crate::model::StatusDetailFilters {
             crate::model::StatusDetailFilters {
                 account_id: self.account_id,
@@ -8103,7 +8658,7 @@ pub mod status_detail_filters {
     }
 }
 impl StatusDetailFilters {
-    /// Creates a new builder-style object to manufacture [`StatusDetailFilters`](crate::model::StatusDetailFilters)
+    /// Creates a new builder-style object to manufacture [`StatusDetailFilters`](crate::model::StatusDetailFilters).
     pub fn builder() -> crate::model::status_detail_filters::Builder {
         crate::model::status_detail_filters::Builder::default()
     }
@@ -8114,8 +8669,10 @@ impl StatusDetailFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceCount {
     /// <p>The resource type (for example, <code>"AWS::EC2::Instance"</code>).</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The number of resources.</p>
+    #[doc(hidden)]
     pub count: i64,
 }
 impl ResourceCount {
@@ -8136,11 +8693,10 @@ impl std::fmt::Debug for ResourceCount {
         formatter.finish()
     }
 }
-/// See [`ResourceCount`](crate::model::ResourceCount)
+/// See [`ResourceCount`](crate::model::ResourceCount).
 pub mod resource_count {
 
-    /// A builder for [`ResourceCount`](crate::model::ResourceCount)
-    #[non_exhaustive]
+    /// A builder for [`ResourceCount`](crate::model::ResourceCount).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<crate::model::ResourceType>,
@@ -8170,7 +8726,7 @@ pub mod resource_count {
             self.count = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceCount`](crate::model::ResourceCount)
+        /// Consumes the builder and constructs a [`ResourceCount`](crate::model::ResourceCount).
         pub fn build(self) -> crate::model::ResourceCount {
             crate::model::ResourceCount {
                 resource_type: self.resource_type,
@@ -8180,7 +8736,7 @@ pub mod resource_count {
     }
 }
 impl ResourceCount {
-    /// Creates a new builder-style object to manufacture [`ResourceCount`](crate::model::ResourceCount)
+    /// Creates a new builder-style object to manufacture [`ResourceCount`](crate::model::ResourceCount).
     pub fn builder() -> crate::model::resource_count::Builder {
         crate::model::resource_count::Builder::default()
     }
@@ -8191,8 +8747,10 @@ impl ResourceCount {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConformancePackComplianceSummary {
     /// <p>The name of the conformance pack name.</p>
+    #[doc(hidden)]
     pub conformance_pack_name: std::option::Option<std::string::String>,
     /// <p>The status of the conformance pack. The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code> and <code>INSUFFICIENT_DATA</code>.</p>
+    #[doc(hidden)]
     pub conformance_pack_compliance_status:
         std::option::Option<crate::model::ConformancePackComplianceType>,
 }
@@ -8219,11 +8777,10 @@ impl std::fmt::Debug for ConformancePackComplianceSummary {
         formatter.finish()
     }
 }
-/// See [`ConformancePackComplianceSummary`](crate::model::ConformancePackComplianceSummary)
+/// See [`ConformancePackComplianceSummary`](crate::model::ConformancePackComplianceSummary).
 pub mod conformance_pack_compliance_summary {
 
-    /// A builder for [`ConformancePackComplianceSummary`](crate::model::ConformancePackComplianceSummary)
-    #[non_exhaustive]
+    /// A builder for [`ConformancePackComplianceSummary`](crate::model::ConformancePackComplianceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) conformance_pack_name: std::option::Option<std::string::String>,
@@ -8260,7 +8817,7 @@ pub mod conformance_pack_compliance_summary {
             self.conformance_pack_compliance_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConformancePackComplianceSummary`](crate::model::ConformancePackComplianceSummary)
+        /// Consumes the builder and constructs a [`ConformancePackComplianceSummary`](crate::model::ConformancePackComplianceSummary).
         pub fn build(self) -> crate::model::ConformancePackComplianceSummary {
             crate::model::ConformancePackComplianceSummary {
                 conformance_pack_name: self.conformance_pack_name,
@@ -8270,7 +8827,7 @@ pub mod conformance_pack_compliance_summary {
     }
 }
 impl ConformancePackComplianceSummary {
-    /// Creates a new builder-style object to manufacture [`ConformancePackComplianceSummary`](crate::model::ConformancePackComplianceSummary)
+    /// Creates a new builder-style object to manufacture [`ConformancePackComplianceSummary`](crate::model::ConformancePackComplianceSummary).
     pub fn builder() -> crate::model::conformance_pack_compliance_summary::Builder {
         crate::model::conformance_pack_compliance_summary::Builder::default()
     }
@@ -8340,14 +8897,19 @@ impl AsRef<str> for ConformancePackComplianceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConformancePackEvaluationResult {
     /// <p>The compliance type. The allowed values are <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. <code>INSUFFICIENT_DATA</code> is not supported.</p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<crate::model::ConformancePackComplianceType>,
     /// <p>Uniquely identifies an evaluation result.</p>
+    #[doc(hidden)]
     pub evaluation_result_identifier: std::option::Option<crate::model::EvaluationResultIdentifier>,
     /// <p>The time when Config rule evaluated Amazon Web Services resource.</p>
+    #[doc(hidden)]
     pub config_rule_invoked_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when Config recorded the evaluation result. </p>
+    #[doc(hidden)]
     pub result_recorded_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Supplementary information about how the evaluation determined the compliance. </p>
+    #[doc(hidden)]
     pub annotation: std::option::Option<std::string::String>,
 }
 impl ConformancePackEvaluationResult {
@@ -8390,11 +8952,10 @@ impl std::fmt::Debug for ConformancePackEvaluationResult {
         formatter.finish()
     }
 }
-/// See [`ConformancePackEvaluationResult`](crate::model::ConformancePackEvaluationResult)
+/// See [`ConformancePackEvaluationResult`](crate::model::ConformancePackEvaluationResult).
 pub mod conformance_pack_evaluation_result {
 
-    /// A builder for [`ConformancePackEvaluationResult`](crate::model::ConformancePackEvaluationResult)
-    #[non_exhaustive]
+    /// A builder for [`ConformancePackEvaluationResult`](crate::model::ConformancePackEvaluationResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliance_type:
@@ -8474,7 +9035,7 @@ pub mod conformance_pack_evaluation_result {
             self.annotation = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConformancePackEvaluationResult`](crate::model::ConformancePackEvaluationResult)
+        /// Consumes the builder and constructs a [`ConformancePackEvaluationResult`](crate::model::ConformancePackEvaluationResult).
         pub fn build(self) -> crate::model::ConformancePackEvaluationResult {
             crate::model::ConformancePackEvaluationResult {
                 compliance_type: self.compliance_type,
@@ -8487,7 +9048,7 @@ pub mod conformance_pack_evaluation_result {
     }
 }
 impl ConformancePackEvaluationResult {
-    /// Creates a new builder-style object to manufacture [`ConformancePackEvaluationResult`](crate::model::ConformancePackEvaluationResult)
+    /// Creates a new builder-style object to manufacture [`ConformancePackEvaluationResult`](crate::model::ConformancePackEvaluationResult).
     pub fn builder() -> crate::model::conformance_pack_evaluation_result::Builder {
         crate::model::conformance_pack_evaluation_result::Builder::default()
     }
@@ -8498,8 +9059,10 @@ impl ConformancePackEvaluationResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EvaluationResultIdentifier {
     /// <p>Identifies an Config rule used to evaluate an Amazon Web Services resource, and provides the type and ID of the evaluated resource.</p>
+    #[doc(hidden)]
     pub evaluation_result_qualifier: std::option::Option<crate::model::EvaluationResultQualifier>,
     /// <p>The time of the event that triggered the evaluation of your Amazon Web Services resources. The time can indicate when Config delivered a configuration item change notification, or it can indicate when Config delivered the configuration snapshot, depending on which event triggered the evaluation.</p>
+    #[doc(hidden)]
     pub ordering_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EvaluationResultIdentifier {
@@ -8525,11 +9088,10 @@ impl std::fmt::Debug for EvaluationResultIdentifier {
         formatter.finish()
     }
 }
-/// See [`EvaluationResultIdentifier`](crate::model::EvaluationResultIdentifier)
+/// See [`EvaluationResultIdentifier`](crate::model::EvaluationResultIdentifier).
 pub mod evaluation_result_identifier {
 
-    /// A builder for [`EvaluationResultIdentifier`](crate::model::EvaluationResultIdentifier)
-    #[non_exhaustive]
+    /// A builder for [`EvaluationResultIdentifier`](crate::model::EvaluationResultIdentifier).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) evaluation_result_qualifier:
@@ -8566,7 +9128,7 @@ pub mod evaluation_result_identifier {
             self.ordering_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`EvaluationResultIdentifier`](crate::model::EvaluationResultIdentifier)
+        /// Consumes the builder and constructs a [`EvaluationResultIdentifier`](crate::model::EvaluationResultIdentifier).
         pub fn build(self) -> crate::model::EvaluationResultIdentifier {
             crate::model::EvaluationResultIdentifier {
                 evaluation_result_qualifier: self.evaluation_result_qualifier,
@@ -8576,7 +9138,7 @@ pub mod evaluation_result_identifier {
     }
 }
 impl EvaluationResultIdentifier {
-    /// Creates a new builder-style object to manufacture [`EvaluationResultIdentifier`](crate::model::EvaluationResultIdentifier)
+    /// Creates a new builder-style object to manufacture [`EvaluationResultIdentifier`](crate::model::EvaluationResultIdentifier).
     pub fn builder() -> crate::model::evaluation_result_identifier::Builder {
         crate::model::evaluation_result_identifier::Builder::default()
     }
@@ -8587,10 +9149,13 @@ impl EvaluationResultIdentifier {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EvaluationResultQualifier {
     /// <p>The name of the Config rule that was used in the evaluation.</p>
+    #[doc(hidden)]
     pub config_rule_name: std::option::Option<std::string::String>,
     /// <p>The type of Amazon Web Services resource that was evaluated.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The ID of the evaluated Amazon Web Services resource.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
 }
 impl EvaluationResultQualifier {
@@ -8616,11 +9181,10 @@ impl std::fmt::Debug for EvaluationResultQualifier {
         formatter.finish()
     }
 }
-/// See [`EvaluationResultQualifier`](crate::model::EvaluationResultQualifier)
+/// See [`EvaluationResultQualifier`](crate::model::EvaluationResultQualifier).
 pub mod evaluation_result_qualifier {
 
-    /// A builder for [`EvaluationResultQualifier`](crate::model::EvaluationResultQualifier)
-    #[non_exhaustive]
+    /// A builder for [`EvaluationResultQualifier`](crate::model::EvaluationResultQualifier).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_rule_name: std::option::Option<std::string::String>,
@@ -8664,7 +9228,7 @@ pub mod evaluation_result_qualifier {
             self.resource_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`EvaluationResultQualifier`](crate::model::EvaluationResultQualifier)
+        /// Consumes the builder and constructs a [`EvaluationResultQualifier`](crate::model::EvaluationResultQualifier).
         pub fn build(self) -> crate::model::EvaluationResultQualifier {
             crate::model::EvaluationResultQualifier {
                 config_rule_name: self.config_rule_name,
@@ -8675,7 +9239,7 @@ pub mod evaluation_result_qualifier {
     }
 }
 impl EvaluationResultQualifier {
-    /// Creates a new builder-style object to manufacture [`EvaluationResultQualifier`](crate::model::EvaluationResultQualifier)
+    /// Creates a new builder-style object to manufacture [`EvaluationResultQualifier`](crate::model::EvaluationResultQualifier).
     pub fn builder() -> crate::model::evaluation_result_qualifier::Builder {
         crate::model::evaluation_result_qualifier::Builder::default()
     }
@@ -8686,15 +9250,19 @@ impl EvaluationResultQualifier {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConformancePackEvaluationFilters {
     /// <p>Filters the results by Config rule names.</p>
+    #[doc(hidden)]
     pub config_rule_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Filters the results by compliance.</p>
     /// <p>The allowed values are <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. <code>INSUFFICIENT_DATA</code> is not supported.</p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<crate::model::ConformancePackComplianceType>,
     /// <p>Filters the results by the resource type (for example, <code>"AWS::EC2::Instance"</code>). </p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>Filters the results by resource IDs.</p> <note>
     /// <p>This is valid only when you provide resource type. If there is no resource type, you will see an error.</p>
     /// </note>
+    #[doc(hidden)]
     pub resource_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ConformancePackEvaluationFilters {
@@ -8730,11 +9298,10 @@ impl std::fmt::Debug for ConformancePackEvaluationFilters {
         formatter.finish()
     }
 }
-/// See [`ConformancePackEvaluationFilters`](crate::model::ConformancePackEvaluationFilters)
+/// See [`ConformancePackEvaluationFilters`](crate::model::ConformancePackEvaluationFilters).
 pub mod conformance_pack_evaluation_filters {
 
-    /// A builder for [`ConformancePackEvaluationFilters`](crate::model::ConformancePackEvaluationFilters)
-    #[non_exhaustive]
+    /// A builder for [`ConformancePackEvaluationFilters`](crate::model::ConformancePackEvaluationFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_rule_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -8817,7 +9384,7 @@ pub mod conformance_pack_evaluation_filters {
             self.resource_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConformancePackEvaluationFilters`](crate::model::ConformancePackEvaluationFilters)
+        /// Consumes the builder and constructs a [`ConformancePackEvaluationFilters`](crate::model::ConformancePackEvaluationFilters).
         pub fn build(self) -> crate::model::ConformancePackEvaluationFilters {
             crate::model::ConformancePackEvaluationFilters {
                 config_rule_names: self.config_rule_names,
@@ -8829,7 +9396,7 @@ pub mod conformance_pack_evaluation_filters {
     }
 }
 impl ConformancePackEvaluationFilters {
-    /// Creates a new builder-style object to manufacture [`ConformancePackEvaluationFilters`](crate::model::ConformancePackEvaluationFilters)
+    /// Creates a new builder-style object to manufacture [`ConformancePackEvaluationFilters`](crate::model::ConformancePackEvaluationFilters).
     pub fn builder() -> crate::model::conformance_pack_evaluation_filters::Builder {
         crate::model::conformance_pack_evaluation_filters::Builder::default()
     }
@@ -8840,8 +9407,10 @@ impl ConformancePackEvaluationFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComplianceSummaryByResourceType {
     /// <p>The type of Amazon Web Services resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The number of Amazon Web Services resources that are compliant or noncompliant, up to a maximum of 100 for each.</p>
+    #[doc(hidden)]
     pub compliance_summary: std::option::Option<crate::model::ComplianceSummary>,
 }
 impl ComplianceSummaryByResourceType {
@@ -8862,11 +9431,10 @@ impl std::fmt::Debug for ComplianceSummaryByResourceType {
         formatter.finish()
     }
 }
-/// See [`ComplianceSummaryByResourceType`](crate::model::ComplianceSummaryByResourceType)
+/// See [`ComplianceSummaryByResourceType`](crate::model::ComplianceSummaryByResourceType).
 pub mod compliance_summary_by_resource_type {
 
-    /// A builder for [`ComplianceSummaryByResourceType`](crate::model::ComplianceSummaryByResourceType)
-    #[non_exhaustive]
+    /// A builder for [`ComplianceSummaryByResourceType`](crate::model::ComplianceSummaryByResourceType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -8899,7 +9467,7 @@ pub mod compliance_summary_by_resource_type {
             self.compliance_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComplianceSummaryByResourceType`](crate::model::ComplianceSummaryByResourceType)
+        /// Consumes the builder and constructs a [`ComplianceSummaryByResourceType`](crate::model::ComplianceSummaryByResourceType).
         pub fn build(self) -> crate::model::ComplianceSummaryByResourceType {
             crate::model::ComplianceSummaryByResourceType {
                 resource_type: self.resource_type,
@@ -8909,7 +9477,7 @@ pub mod compliance_summary_by_resource_type {
     }
 }
 impl ComplianceSummaryByResourceType {
-    /// Creates a new builder-style object to manufacture [`ComplianceSummaryByResourceType`](crate::model::ComplianceSummaryByResourceType)
+    /// Creates a new builder-style object to manufacture [`ComplianceSummaryByResourceType`](crate::model::ComplianceSummaryByResourceType).
     pub fn builder() -> crate::model::compliance_summary_by_resource_type::Builder {
         crate::model::compliance_summary_by_resource_type::Builder::default()
     }
@@ -8920,10 +9488,13 @@ impl ComplianceSummaryByResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComplianceSummary {
     /// <p>The number of Config rules or Amazon Web Services resources that are compliant, up to a maximum of 25 for rules and 100 for resources.</p>
+    #[doc(hidden)]
     pub compliant_resource_count: std::option::Option<crate::model::ComplianceContributorCount>,
     /// <p>The number of Config rules or Amazon Web Services resources that are noncompliant, up to a maximum of 25 for rules and 100 for resources.</p>
+    #[doc(hidden)]
     pub non_compliant_resource_count: std::option::Option<crate::model::ComplianceContributorCount>,
     /// <p>The time that Config created the compliance summary.</p>
+    #[doc(hidden)]
     pub compliance_summary_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ComplianceSummary {
@@ -8959,11 +9530,10 @@ impl std::fmt::Debug for ComplianceSummary {
         formatter.finish()
     }
 }
-/// See [`ComplianceSummary`](crate::model::ComplianceSummary)
+/// See [`ComplianceSummary`](crate::model::ComplianceSummary).
 pub mod compliance_summary {
 
-    /// A builder for [`ComplianceSummary`](crate::model::ComplianceSummary)
-    #[non_exhaustive]
+    /// A builder for [`ComplianceSummary`](crate::model::ComplianceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliant_resource_count:
@@ -9018,7 +9588,7 @@ pub mod compliance_summary {
             self.compliance_summary_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComplianceSummary`](crate::model::ComplianceSummary)
+        /// Consumes the builder and constructs a [`ComplianceSummary`](crate::model::ComplianceSummary).
         pub fn build(self) -> crate::model::ComplianceSummary {
             crate::model::ComplianceSummary {
                 compliant_resource_count: self.compliant_resource_count,
@@ -9029,7 +9599,7 @@ pub mod compliance_summary {
     }
 }
 impl ComplianceSummary {
-    /// Creates a new builder-style object to manufacture [`ComplianceSummary`](crate::model::ComplianceSummary)
+    /// Creates a new builder-style object to manufacture [`ComplianceSummary`](crate::model::ComplianceSummary).
     pub fn builder() -> crate::model::compliance_summary::Builder {
         crate::model::compliance_summary::Builder::default()
     }
@@ -9040,8 +9610,10 @@ impl ComplianceSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComplianceContributorCount {
     /// <p>The number of Amazon Web Services resources or Config rules responsible for the current compliance of the item.</p>
+    #[doc(hidden)]
     pub capped_count: i32,
     /// <p>Indicates whether the maximum count is reached.</p>
+    #[doc(hidden)]
     pub cap_exceeded: bool,
 }
 impl ComplianceContributorCount {
@@ -9062,11 +9634,10 @@ impl std::fmt::Debug for ComplianceContributorCount {
         formatter.finish()
     }
 }
-/// See [`ComplianceContributorCount`](crate::model::ComplianceContributorCount)
+/// See [`ComplianceContributorCount`](crate::model::ComplianceContributorCount).
 pub mod compliance_contributor_count {
 
-    /// A builder for [`ComplianceContributorCount`](crate::model::ComplianceContributorCount)
-    #[non_exhaustive]
+    /// A builder for [`ComplianceContributorCount`](crate::model::ComplianceContributorCount).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) capped_count: std::option::Option<i32>,
@@ -9093,7 +9664,7 @@ pub mod compliance_contributor_count {
             self.cap_exceeded = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComplianceContributorCount`](crate::model::ComplianceContributorCount)
+        /// Consumes the builder and constructs a [`ComplianceContributorCount`](crate::model::ComplianceContributorCount).
         pub fn build(self) -> crate::model::ComplianceContributorCount {
             crate::model::ComplianceContributorCount {
                 capped_count: self.capped_count.unwrap_or_default(),
@@ -9103,7 +9674,7 @@ pub mod compliance_contributor_count {
     }
 }
 impl ComplianceContributorCount {
-    /// Creates a new builder-style object to manufacture [`ComplianceContributorCount`](crate::model::ComplianceContributorCount)
+    /// Creates a new builder-style object to manufacture [`ComplianceContributorCount`](crate::model::ComplianceContributorCount).
     pub fn builder() -> crate::model::compliance_contributor_count::Builder {
         crate::model::compliance_contributor_count::Builder::default()
     }
@@ -9114,17 +9685,23 @@ impl ComplianceContributorCount {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EvaluationResult {
     /// <p>Uniquely identifies the evaluation result.</p>
+    #[doc(hidden)]
     pub evaluation_result_identifier: std::option::Option<crate::model::EvaluationResultIdentifier>,
     /// <p>Indicates whether the Amazon Web Services resource complies with the Config rule that evaluated it.</p>
     /// <p>For the <code>EvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>NOT_APPLICABLE</code> values. Config does not support the <code>INSUFFICIENT_DATA</code> value for the <code>EvaluationResult</code> data type.</p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<crate::model::ComplianceType>,
     /// <p>The time when Config recorded the evaluation result.</p>
+    #[doc(hidden)]
     pub result_recorded_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the Config rule evaluated the Amazon Web Services resource.</p>
+    #[doc(hidden)]
     pub config_rule_invoked_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Supplementary information about how the evaluation determined the compliance.</p>
+    #[doc(hidden)]
     pub annotation: std::option::Option<std::string::String>,
     /// <p>An encrypted token that associates an evaluation with an Config rule. The token identifies the rule, the Amazon Web Services resource being evaluated, and the event that triggered the evaluation.</p>
+    #[doc(hidden)]
     pub result_token: std::option::Option<std::string::String>,
 }
 impl EvaluationResult {
@@ -9171,11 +9748,10 @@ impl std::fmt::Debug for EvaluationResult {
         formatter.finish()
     }
 }
-/// See [`EvaluationResult`](crate::model::EvaluationResult)
+/// See [`EvaluationResult`](crate::model::EvaluationResult).
 pub mod evaluation_result {
 
-    /// A builder for [`EvaluationResult`](crate::model::EvaluationResult)
-    #[non_exhaustive]
+    /// A builder for [`EvaluationResult`](crate::model::EvaluationResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) evaluation_result_identifier:
@@ -9264,7 +9840,7 @@ pub mod evaluation_result {
             self.result_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`EvaluationResult`](crate::model::EvaluationResult)
+        /// Consumes the builder and constructs a [`EvaluationResult`](crate::model::EvaluationResult).
         pub fn build(self) -> crate::model::EvaluationResult {
             crate::model::EvaluationResult {
                 evaluation_result_identifier: self.evaluation_result_identifier,
@@ -9278,7 +9854,7 @@ pub mod evaluation_result {
     }
 }
 impl EvaluationResult {
-    /// Creates a new builder-style object to manufacture [`EvaluationResult`](crate::model::EvaluationResult)
+    /// Creates a new builder-style object to manufacture [`EvaluationResult`](crate::model::EvaluationResult).
     pub fn builder() -> crate::model::evaluation_result::Builder {
         crate::model::evaluation_result::Builder::default()
     }
@@ -9289,8 +9865,10 @@ impl EvaluationResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GroupedResourceCount {
     /// <p>The name of the group that can be region, account ID, or resource type. For example, region1, region2 if the region was chosen as <code>GroupByKey</code>.</p>
+    #[doc(hidden)]
     pub group_name: std::option::Option<std::string::String>,
     /// <p>The number of resources in the group.</p>
+    #[doc(hidden)]
     pub resource_count: i64,
 }
 impl GroupedResourceCount {
@@ -9311,11 +9889,10 @@ impl std::fmt::Debug for GroupedResourceCount {
         formatter.finish()
     }
 }
-/// See [`GroupedResourceCount`](crate::model::GroupedResourceCount)
+/// See [`GroupedResourceCount`](crate::model::GroupedResourceCount).
 pub mod grouped_resource_count {
 
-    /// A builder for [`GroupedResourceCount`](crate::model::GroupedResourceCount)
-    #[non_exhaustive]
+    /// A builder for [`GroupedResourceCount`](crate::model::GroupedResourceCount).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_name: std::option::Option<std::string::String>,
@@ -9342,7 +9919,7 @@ pub mod grouped_resource_count {
             self.resource_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`GroupedResourceCount`](crate::model::GroupedResourceCount)
+        /// Consumes the builder and constructs a [`GroupedResourceCount`](crate::model::GroupedResourceCount).
         pub fn build(self) -> crate::model::GroupedResourceCount {
             crate::model::GroupedResourceCount {
                 group_name: self.group_name,
@@ -9352,7 +9929,7 @@ pub mod grouped_resource_count {
     }
 }
 impl GroupedResourceCount {
-    /// Creates a new builder-style object to manufacture [`GroupedResourceCount`](crate::model::GroupedResourceCount)
+    /// Creates a new builder-style object to manufacture [`GroupedResourceCount`](crate::model::GroupedResourceCount).
     pub fn builder() -> crate::model::grouped_resource_count::Builder {
         crate::model::grouped_resource_count::Builder::default()
     }
@@ -9422,10 +9999,13 @@ impl AsRef<str> for ResourceCountGroupKey {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceCountFilters {
     /// <p>The type of the Amazon Web Services resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The 12-digit ID of the account.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The region where the account is located.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
 }
 impl ResourceCountFilters {
@@ -9451,11 +10031,10 @@ impl std::fmt::Debug for ResourceCountFilters {
         formatter.finish()
     }
 }
-/// See [`ResourceCountFilters`](crate::model::ResourceCountFilters)
+/// See [`ResourceCountFilters`](crate::model::ResourceCountFilters).
 pub mod resource_count_filters {
 
-    /// A builder for [`ResourceCountFilters`](crate::model::ResourceCountFilters)
-    #[non_exhaustive]
+    /// A builder for [`ResourceCountFilters`](crate::model::ResourceCountFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<crate::model::ResourceType>,
@@ -9496,7 +10075,7 @@ pub mod resource_count_filters {
             self.region = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceCountFilters`](crate::model::ResourceCountFilters)
+        /// Consumes the builder and constructs a [`ResourceCountFilters`](crate::model::ResourceCountFilters).
         pub fn build(self) -> crate::model::ResourceCountFilters {
             crate::model::ResourceCountFilters {
                 resource_type: self.resource_type,
@@ -9507,7 +10086,7 @@ pub mod resource_count_filters {
     }
 }
 impl ResourceCountFilters {
-    /// Creates a new builder-style object to manufacture [`ResourceCountFilters`](crate::model::ResourceCountFilters)
+    /// Creates a new builder-style object to manufacture [`ResourceCountFilters`](crate::model::ResourceCountFilters).
     pub fn builder() -> crate::model::resource_count_filters::Builder {
         crate::model::resource_count_filters::Builder::default()
     }
@@ -9518,9 +10097,11 @@ impl ResourceCountFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregateConformancePackComplianceSummary {
     /// <p>Returns an <code>AggregateConformancePackComplianceCount</code> object. </p>
+    #[doc(hidden)]
     pub compliance_summary:
         std::option::Option<crate::model::AggregateConformancePackComplianceCount>,
     /// <p>Groups the result based on Amazon Web Services account ID or Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub group_name: std::option::Option<std::string::String>,
 }
 impl AggregateConformancePackComplianceSummary {
@@ -9543,11 +10124,10 @@ impl std::fmt::Debug for AggregateConformancePackComplianceSummary {
         formatter.finish()
     }
 }
-/// See [`AggregateConformancePackComplianceSummary`](crate::model::AggregateConformancePackComplianceSummary)
+/// See [`AggregateConformancePackComplianceSummary`](crate::model::AggregateConformancePackComplianceSummary).
 pub mod aggregate_conformance_pack_compliance_summary {
 
-    /// A builder for [`AggregateConformancePackComplianceSummary`](crate::model::AggregateConformancePackComplianceSummary)
-    #[non_exhaustive]
+    /// A builder for [`AggregateConformancePackComplianceSummary`](crate::model::AggregateConformancePackComplianceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliance_summary:
@@ -9581,7 +10161,7 @@ pub mod aggregate_conformance_pack_compliance_summary {
             self.group_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregateConformancePackComplianceSummary`](crate::model::AggregateConformancePackComplianceSummary)
+        /// Consumes the builder and constructs a [`AggregateConformancePackComplianceSummary`](crate::model::AggregateConformancePackComplianceSummary).
         pub fn build(self) -> crate::model::AggregateConformancePackComplianceSummary {
             crate::model::AggregateConformancePackComplianceSummary {
                 compliance_summary: self.compliance_summary,
@@ -9591,7 +10171,7 @@ pub mod aggregate_conformance_pack_compliance_summary {
     }
 }
 impl AggregateConformancePackComplianceSummary {
-    /// Creates a new builder-style object to manufacture [`AggregateConformancePackComplianceSummary`](crate::model::AggregateConformancePackComplianceSummary)
+    /// Creates a new builder-style object to manufacture [`AggregateConformancePackComplianceSummary`](crate::model::AggregateConformancePackComplianceSummary).
     pub fn builder() -> crate::model::aggregate_conformance_pack_compliance_summary::Builder {
         crate::model::aggregate_conformance_pack_compliance_summary::Builder::default()
     }
@@ -9602,8 +10182,10 @@ impl AggregateConformancePackComplianceSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregateConformancePackComplianceCount {
     /// <p>Number of compliant conformance packs.</p>
+    #[doc(hidden)]
     pub compliant_conformance_pack_count: i32,
     /// <p>Number of noncompliant conformance packs.</p>
+    #[doc(hidden)]
     pub non_compliant_conformance_pack_count: i32,
 }
 impl AggregateConformancePackComplianceCount {
@@ -9630,11 +10212,10 @@ impl std::fmt::Debug for AggregateConformancePackComplianceCount {
         formatter.finish()
     }
 }
-/// See [`AggregateConformancePackComplianceCount`](crate::model::AggregateConformancePackComplianceCount)
+/// See [`AggregateConformancePackComplianceCount`](crate::model::AggregateConformancePackComplianceCount).
 pub mod aggregate_conformance_pack_compliance_count {
 
-    /// A builder for [`AggregateConformancePackComplianceCount`](crate::model::AggregateConformancePackComplianceCount)
-    #[non_exhaustive]
+    /// A builder for [`AggregateConformancePackComplianceCount`](crate::model::AggregateConformancePackComplianceCount).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliant_conformance_pack_count: std::option::Option<i32>,
@@ -9667,7 +10248,7 @@ pub mod aggregate_conformance_pack_compliance_count {
             self.non_compliant_conformance_pack_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregateConformancePackComplianceCount`](crate::model::AggregateConformancePackComplianceCount)
+        /// Consumes the builder and constructs a [`AggregateConformancePackComplianceCount`](crate::model::AggregateConformancePackComplianceCount).
         pub fn build(self) -> crate::model::AggregateConformancePackComplianceCount {
             crate::model::AggregateConformancePackComplianceCount {
                 compliant_conformance_pack_count: self
@@ -9681,7 +10262,7 @@ pub mod aggregate_conformance_pack_compliance_count {
     }
 }
 impl AggregateConformancePackComplianceCount {
-    /// Creates a new builder-style object to manufacture [`AggregateConformancePackComplianceCount`](crate::model::AggregateConformancePackComplianceCount)
+    /// Creates a new builder-style object to manufacture [`AggregateConformancePackComplianceCount`](crate::model::AggregateConformancePackComplianceCount).
     pub fn builder() -> crate::model::aggregate_conformance_pack_compliance_count::Builder {
         crate::model::aggregate_conformance_pack_compliance_count::Builder::default()
     }
@@ -9747,8 +10328,10 @@ impl AsRef<str> for AggregateConformancePackComplianceSummaryGroupKey {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregateConformancePackComplianceSummaryFilters {
     /// <p>The 12-digit Amazon Web Services account ID of the source account.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The source Amazon Web Services Region from where the data is aggregated.</p>
+    #[doc(hidden)]
     pub aws_region: std::option::Option<std::string::String>,
 }
 impl AggregateConformancePackComplianceSummaryFilters {
@@ -9769,11 +10352,10 @@ impl std::fmt::Debug for AggregateConformancePackComplianceSummaryFilters {
         formatter.finish()
     }
 }
-/// See [`AggregateConformancePackComplianceSummaryFilters`](crate::model::AggregateConformancePackComplianceSummaryFilters)
+/// See [`AggregateConformancePackComplianceSummaryFilters`](crate::model::AggregateConformancePackComplianceSummaryFilters).
 pub mod aggregate_conformance_pack_compliance_summary_filters {
 
-    /// A builder for [`AggregateConformancePackComplianceSummaryFilters`](crate::model::AggregateConformancePackComplianceSummaryFilters)
-    #[non_exhaustive]
+    /// A builder for [`AggregateConformancePackComplianceSummaryFilters`](crate::model::AggregateConformancePackComplianceSummaryFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -9800,7 +10382,7 @@ pub mod aggregate_conformance_pack_compliance_summary_filters {
             self.aws_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregateConformancePackComplianceSummaryFilters`](crate::model::AggregateConformancePackComplianceSummaryFilters)
+        /// Consumes the builder and constructs a [`AggregateConformancePackComplianceSummaryFilters`](crate::model::AggregateConformancePackComplianceSummaryFilters).
         pub fn build(self) -> crate::model::AggregateConformancePackComplianceSummaryFilters {
             crate::model::AggregateConformancePackComplianceSummaryFilters {
                 account_id: self.account_id,
@@ -9810,7 +10392,7 @@ pub mod aggregate_conformance_pack_compliance_summary_filters {
     }
 }
 impl AggregateConformancePackComplianceSummaryFilters {
-    /// Creates a new builder-style object to manufacture [`AggregateConformancePackComplianceSummaryFilters`](crate::model::AggregateConformancePackComplianceSummaryFilters)
+    /// Creates a new builder-style object to manufacture [`AggregateConformancePackComplianceSummaryFilters`](crate::model::AggregateConformancePackComplianceSummaryFilters).
     pub fn builder() -> crate::model::aggregate_conformance_pack_compliance_summary_filters::Builder
     {
         crate::model::aggregate_conformance_pack_compliance_summary_filters::Builder::default()
@@ -9822,8 +10404,10 @@ impl AggregateConformancePackComplianceSummaryFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregateComplianceCount {
     /// <p>The 12-digit account ID or region based on the GroupByKey value.</p>
+    #[doc(hidden)]
     pub group_name: std::option::Option<std::string::String>,
     /// <p>The number of compliant and noncompliant Config rules.</p>
+    #[doc(hidden)]
     pub compliance_summary: std::option::Option<crate::model::ComplianceSummary>,
 }
 impl AggregateComplianceCount {
@@ -9844,11 +10428,10 @@ impl std::fmt::Debug for AggregateComplianceCount {
         formatter.finish()
     }
 }
-/// See [`AggregateComplianceCount`](crate::model::AggregateComplianceCount)
+/// See [`AggregateComplianceCount`](crate::model::AggregateComplianceCount).
 pub mod aggregate_compliance_count {
 
-    /// A builder for [`AggregateComplianceCount`](crate::model::AggregateComplianceCount)
-    #[non_exhaustive]
+    /// A builder for [`AggregateComplianceCount`](crate::model::AggregateComplianceCount).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_name: std::option::Option<std::string::String>,
@@ -9878,7 +10461,7 @@ pub mod aggregate_compliance_count {
             self.compliance_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregateComplianceCount`](crate::model::AggregateComplianceCount)
+        /// Consumes the builder and constructs a [`AggregateComplianceCount`](crate::model::AggregateComplianceCount).
         pub fn build(self) -> crate::model::AggregateComplianceCount {
             crate::model::AggregateComplianceCount {
                 group_name: self.group_name,
@@ -9888,7 +10471,7 @@ pub mod aggregate_compliance_count {
     }
 }
 impl AggregateComplianceCount {
-    /// Creates a new builder-style object to manufacture [`AggregateComplianceCount`](crate::model::AggregateComplianceCount)
+    /// Creates a new builder-style object to manufacture [`AggregateComplianceCount`](crate::model::AggregateComplianceCount).
     pub fn builder() -> crate::model::aggregate_compliance_count::Builder {
         crate::model::aggregate_compliance_count::Builder::default()
     }
@@ -9954,8 +10537,10 @@ impl AsRef<str> for ConfigRuleComplianceSummaryGroupKey {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigRuleComplianceSummaryFilters {
     /// <p>The 12-digit account ID of the source account.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The source region where the data is aggregated.</p>
+    #[doc(hidden)]
     pub aws_region: std::option::Option<std::string::String>,
 }
 impl ConfigRuleComplianceSummaryFilters {
@@ -9976,11 +10561,10 @@ impl std::fmt::Debug for ConfigRuleComplianceSummaryFilters {
         formatter.finish()
     }
 }
-/// See [`ConfigRuleComplianceSummaryFilters`](crate::model::ConfigRuleComplianceSummaryFilters)
+/// See [`ConfigRuleComplianceSummaryFilters`](crate::model::ConfigRuleComplianceSummaryFilters).
 pub mod config_rule_compliance_summary_filters {
 
-    /// A builder for [`ConfigRuleComplianceSummaryFilters`](crate::model::ConfigRuleComplianceSummaryFilters)
-    #[non_exhaustive]
+    /// A builder for [`ConfigRuleComplianceSummaryFilters`](crate::model::ConfigRuleComplianceSummaryFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -10007,7 +10591,7 @@ pub mod config_rule_compliance_summary_filters {
             self.aws_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigRuleComplianceSummaryFilters`](crate::model::ConfigRuleComplianceSummaryFilters)
+        /// Consumes the builder and constructs a [`ConfigRuleComplianceSummaryFilters`](crate::model::ConfigRuleComplianceSummaryFilters).
         pub fn build(self) -> crate::model::ConfigRuleComplianceSummaryFilters {
             crate::model::ConfigRuleComplianceSummaryFilters {
                 account_id: self.account_id,
@@ -10017,7 +10601,7 @@ pub mod config_rule_compliance_summary_filters {
     }
 }
 impl ConfigRuleComplianceSummaryFilters {
-    /// Creates a new builder-style object to manufacture [`ConfigRuleComplianceSummaryFilters`](crate::model::ConfigRuleComplianceSummaryFilters)
+    /// Creates a new builder-style object to manufacture [`ConfigRuleComplianceSummaryFilters`](crate::model::ConfigRuleComplianceSummaryFilters).
     pub fn builder() -> crate::model::config_rule_compliance_summary_filters::Builder {
         crate::model::config_rule_compliance_summary_filters::Builder::default()
     }
@@ -10028,19 +10612,26 @@ impl ConfigRuleComplianceSummaryFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregateEvaluationResult {
     /// <p>Uniquely identifies the evaluation result.</p>
+    #[doc(hidden)]
     pub evaluation_result_identifier: std::option::Option<crate::model::EvaluationResultIdentifier>,
     /// <p>The resource compliance status.</p>
     /// <p>For the <code>AggregationEvaluationResult</code> data type, Config supports only the <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and <code>INSUFFICIENT_DATA</code> value.</p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<crate::model::ComplianceType>,
     /// <p>The time when Config recorded the aggregate evaluation result.</p>
+    #[doc(hidden)]
     pub result_recorded_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the Config rule evaluated the Amazon Web Services resource.</p>
+    #[doc(hidden)]
     pub config_rule_invoked_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Supplementary information about how the agrregate evaluation determined the compliance.</p>
+    #[doc(hidden)]
     pub annotation: std::option::Option<std::string::String>,
     /// <p>The 12-digit account ID of the source account.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The source region from where the data is aggregated.</p>
+    #[doc(hidden)]
     pub aws_region: std::option::Option<std::string::String>,
 }
 impl AggregateEvaluationResult {
@@ -10092,11 +10683,10 @@ impl std::fmt::Debug for AggregateEvaluationResult {
         formatter.finish()
     }
 }
-/// See [`AggregateEvaluationResult`](crate::model::AggregateEvaluationResult)
+/// See [`AggregateEvaluationResult`](crate::model::AggregateEvaluationResult).
 pub mod aggregate_evaluation_result {
 
-    /// A builder for [`AggregateEvaluationResult`](crate::model::AggregateEvaluationResult)
-    #[non_exhaustive]
+    /// A builder for [`AggregateEvaluationResult`](crate::model::AggregateEvaluationResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) evaluation_result_identifier:
@@ -10196,7 +10786,7 @@ pub mod aggregate_evaluation_result {
             self.aws_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregateEvaluationResult`](crate::model::AggregateEvaluationResult)
+        /// Consumes the builder and constructs a [`AggregateEvaluationResult`](crate::model::AggregateEvaluationResult).
         pub fn build(self) -> crate::model::AggregateEvaluationResult {
             crate::model::AggregateEvaluationResult {
                 evaluation_result_identifier: self.evaluation_result_identifier,
@@ -10211,7 +10801,7 @@ pub mod aggregate_evaluation_result {
     }
 }
 impl AggregateEvaluationResult {
-    /// Creates a new builder-style object to manufacture [`AggregateEvaluationResult`](crate::model::AggregateEvaluationResult)
+    /// Creates a new builder-style object to manufacture [`AggregateEvaluationResult`](crate::model::AggregateEvaluationResult).
     pub fn builder() -> crate::model::aggregate_evaluation_result::Builder {
         crate::model::aggregate_evaluation_result::Builder::default()
     }
@@ -10222,14 +10812,19 @@ impl AggregateEvaluationResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemediationExecutionStatus {
     /// <p>The details that identify a resource within Config, including the resource type and resource ID.</p>
+    #[doc(hidden)]
     pub resource_key: std::option::Option<crate::model::ResourceKey>,
     /// <p>ENUM of the values.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::RemediationExecutionState>,
     /// <p>Details of every step.</p>
+    #[doc(hidden)]
     pub step_details: std::option::Option<std::vec::Vec<crate::model::RemediationExecutionStep>>,
     /// <p>Start time when the remediation was executed.</p>
+    #[doc(hidden)]
     pub invocation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the remediation execution was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RemediationExecutionStatus {
@@ -10265,11 +10860,10 @@ impl std::fmt::Debug for RemediationExecutionStatus {
         formatter.finish()
     }
 }
-/// See [`RemediationExecutionStatus`](crate::model::RemediationExecutionStatus)
+/// See [`RemediationExecutionStatus`](crate::model::RemediationExecutionStatus).
 pub mod remediation_execution_status {
 
-    /// A builder for [`RemediationExecutionStatus`](crate::model::RemediationExecutionStatus)
-    #[non_exhaustive]
+    /// A builder for [`RemediationExecutionStatus`](crate::model::RemediationExecutionStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_key: std::option::Option<crate::model::ResourceKey>,
@@ -10351,7 +10945,7 @@ pub mod remediation_execution_status {
             self.last_updated_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemediationExecutionStatus`](crate::model::RemediationExecutionStatus)
+        /// Consumes the builder and constructs a [`RemediationExecutionStatus`](crate::model::RemediationExecutionStatus).
         pub fn build(self) -> crate::model::RemediationExecutionStatus {
             crate::model::RemediationExecutionStatus {
                 resource_key: self.resource_key,
@@ -10364,7 +10958,7 @@ pub mod remediation_execution_status {
     }
 }
 impl RemediationExecutionStatus {
-    /// Creates a new builder-style object to manufacture [`RemediationExecutionStatus`](crate::model::RemediationExecutionStatus)
+    /// Creates a new builder-style object to manufacture [`RemediationExecutionStatus`](crate::model::RemediationExecutionStatus).
     pub fn builder() -> crate::model::remediation_execution_status::Builder {
         crate::model::remediation_execution_status::Builder::default()
     }
@@ -10375,14 +10969,19 @@ impl RemediationExecutionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemediationExecutionStep {
     /// <p>The details of the step.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The valid status of the step.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::RemediationExecutionStepState>,
     /// <p>An error message if the step was interrupted during execution.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>The time when the step started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the step stopped.</p>
+    #[doc(hidden)]
     pub stop_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl RemediationExecutionStep {
@@ -10418,11 +11017,10 @@ impl std::fmt::Debug for RemediationExecutionStep {
         formatter.finish()
     }
 }
-/// See [`RemediationExecutionStep`](crate::model::RemediationExecutionStep)
+/// See [`RemediationExecutionStep`](crate::model::RemediationExecutionStep).
 pub mod remediation_execution_step {
 
-    /// A builder for [`RemediationExecutionStep`](crate::model::RemediationExecutionStep)
-    #[non_exhaustive]
+    /// A builder for [`RemediationExecutionStep`](crate::model::RemediationExecutionStep).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -10494,7 +11092,7 @@ pub mod remediation_execution_step {
             self.stop_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemediationExecutionStep`](crate::model::RemediationExecutionStep)
+        /// Consumes the builder and constructs a [`RemediationExecutionStep`](crate::model::RemediationExecutionStep).
         pub fn build(self) -> crate::model::RemediationExecutionStep {
             crate::model::RemediationExecutionStep {
                 name: self.name,
@@ -10507,7 +11105,7 @@ pub mod remediation_execution_step {
     }
 }
 impl RemediationExecutionStep {
-    /// Creates a new builder-style object to manufacture [`RemediationExecutionStep`](crate::model::RemediationExecutionStep)
+    /// Creates a new builder-style object to manufacture [`RemediationExecutionStep`](crate::model::RemediationExecutionStep).
     pub fn builder() -> crate::model::remediation_execution_step::Builder {
         crate::model::remediation_execution_step::Builder::default()
     }
@@ -10640,8 +11238,10 @@ impl AsRef<str> for RemediationExecutionState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PendingAggregationRequest {
     /// <p>The 12-digit account ID of the account requesting to aggregate data.</p>
+    #[doc(hidden)]
     pub requester_account_id: std::option::Option<std::string::String>,
     /// <p>The region requesting to aggregate data. </p>
+    #[doc(hidden)]
     pub requester_aws_region: std::option::Option<std::string::String>,
 }
 impl PendingAggregationRequest {
@@ -10662,11 +11262,10 @@ impl std::fmt::Debug for PendingAggregationRequest {
         formatter.finish()
     }
 }
-/// See [`PendingAggregationRequest`](crate::model::PendingAggregationRequest)
+/// See [`PendingAggregationRequest`](crate::model::PendingAggregationRequest).
 pub mod pending_aggregation_request {
 
-    /// A builder for [`PendingAggregationRequest`](crate::model::PendingAggregationRequest)
-    #[non_exhaustive]
+    /// A builder for [`PendingAggregationRequest`](crate::model::PendingAggregationRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) requester_account_id: std::option::Option<std::string::String>,
@@ -10699,7 +11298,7 @@ pub mod pending_aggregation_request {
             self.requester_aws_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`PendingAggregationRequest`](crate::model::PendingAggregationRequest)
+        /// Consumes the builder and constructs a [`PendingAggregationRequest`](crate::model::PendingAggregationRequest).
         pub fn build(self) -> crate::model::PendingAggregationRequest {
             crate::model::PendingAggregationRequest {
                 requester_account_id: self.requester_account_id,
@@ -10709,7 +11308,7 @@ pub mod pending_aggregation_request {
     }
 }
 impl PendingAggregationRequest {
-    /// Creates a new builder-style object to manufacture [`PendingAggregationRequest`](crate::model::PendingAggregationRequest)
+    /// Creates a new builder-style object to manufacture [`PendingAggregationRequest`](crate::model::PendingAggregationRequest).
     pub fn builder() -> crate::model::pending_aggregation_request::Builder {
         crate::model::pending_aggregation_request::Builder::default()
     }
@@ -10720,6 +11319,7 @@ impl PendingAggregationRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrganizationConformancePackStatus {
     /// <p>The name that you assign to organization conformance pack.</p>
+    #[doc(hidden)]
     pub organization_conformance_pack_name: std::option::Option<std::string::String>,
     /// <p>Indicates deployment status of an organization conformance pack. When master account calls PutOrganizationConformancePack for the first time, conformance pack status is created in all the member accounts. When master account calls PutOrganizationConformancePack for the second time, conformance pack status is updated in all the member accounts. Additionally, conformance pack status is updated when one or more member accounts join or leave an organization. Conformance pack status is deleted when the master account deletes OrganizationConformancePack in all the member accounts and disables service access for <code>config-multiaccountsetup.amazonaws.com</code>.</p>
     /// <p>Config sets the state of the conformance pack to:</p>
@@ -10734,12 +11334,16 @@ pub struct OrganizationConformancePackStatus {
     /// <li> <p> <code>UPDATE_IN_PROGRESS</code> when an organization conformance pack update is in progress.</p> </li>
     /// <li> <p> <code>UPDATE_FAILED</code> when an organization conformance pack update failed in one or more member accounts within that organization.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OrganizationResourceStatus>,
     /// <p>An error code that is returned when organization conformance pack creation or deletion has failed in a member account. </p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>An error message indicating that organization conformance pack creation or deletion failed due to an error. </p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>The timestamp of the last update.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl OrganizationConformancePackStatus {
@@ -10790,11 +11394,10 @@ impl std::fmt::Debug for OrganizationConformancePackStatus {
         formatter.finish()
     }
 }
-/// See [`OrganizationConformancePackStatus`](crate::model::OrganizationConformancePackStatus)
+/// See [`OrganizationConformancePackStatus`](crate::model::OrganizationConformancePackStatus).
 pub mod organization_conformance_pack_status {
 
-    /// A builder for [`OrganizationConformancePackStatus`](crate::model::OrganizationConformancePackStatus)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationConformancePackStatus`](crate::model::OrganizationConformancePackStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) organization_conformance_pack_name: std::option::Option<std::string::String>,
@@ -10893,7 +11496,7 @@ pub mod organization_conformance_pack_status {
             self.last_update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationConformancePackStatus`](crate::model::OrganizationConformancePackStatus)
+        /// Consumes the builder and constructs a [`OrganizationConformancePackStatus`](crate::model::OrganizationConformancePackStatus).
         pub fn build(self) -> crate::model::OrganizationConformancePackStatus {
             crate::model::OrganizationConformancePackStatus {
                 organization_conformance_pack_name: self.organization_conformance_pack_name,
@@ -10906,7 +11509,7 @@ pub mod organization_conformance_pack_status {
     }
 }
 impl OrganizationConformancePackStatus {
-    /// Creates a new builder-style object to manufacture [`OrganizationConformancePackStatus`](crate::model::OrganizationConformancePackStatus)
+    /// Creates a new builder-style object to manufacture [`OrganizationConformancePackStatus`](crate::model::OrganizationConformancePackStatus).
     pub fn builder() -> crate::model::organization_conformance_pack_status::Builder {
         crate::model::organization_conformance_pack_status::Builder::default()
     }
@@ -11010,23 +11613,30 @@ impl AsRef<str> for OrganizationResourceStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrganizationConformancePack {
     /// <p>The name you assign to an organization conformance pack.</p>
+    #[doc(hidden)]
     pub organization_conformance_pack_name: std::option::Option<std::string::String>,
     /// <p>Amazon Resource Name (ARN) of organization conformance pack.</p>
+    #[doc(hidden)]
     pub organization_conformance_pack_arn: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon S3 bucket where Config stores conformance pack templates. </p> <note>
     /// <p>This field is optional.</p>
     /// </note>
+    #[doc(hidden)]
     pub delivery_s3_bucket: std::option::Option<std::string::String>,
     /// <p>Any folder structure you want to add to an Amazon S3 bucket.</p> <note>
     /// <p>This field is optional.</p>
     /// </note>
+    #[doc(hidden)]
     pub delivery_s3_key_prefix: std::option::Option<std::string::String>,
     /// <p>A list of <code>ConformancePackInputParameter</code> objects.</p>
+    #[doc(hidden)]
     pub conformance_pack_input_parameters:
         std::option::Option<std::vec::Vec<crate::model::ConformancePackInputParameter>>,
     /// <p>A comma-separated list of accounts excluded from organization conformance pack.</p>
+    #[doc(hidden)]
     pub excluded_accounts: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Last time when organization conformation pack was updated.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl OrganizationConformancePack {
@@ -11087,11 +11697,10 @@ impl std::fmt::Debug for OrganizationConformancePack {
         formatter.finish()
     }
 }
-/// See [`OrganizationConformancePack`](crate::model::OrganizationConformancePack)
+/// See [`OrganizationConformancePack`](crate::model::OrganizationConformancePack).
 pub mod organization_conformance_pack {
 
-    /// A builder for [`OrganizationConformancePack`](crate::model::OrganizationConformancePack)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationConformancePack`](crate::model::OrganizationConformancePack).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) organization_conformance_pack_name: std::option::Option<std::string::String>,
@@ -11224,7 +11833,7 @@ pub mod organization_conformance_pack {
             self.last_update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationConformancePack`](crate::model::OrganizationConformancePack)
+        /// Consumes the builder and constructs a [`OrganizationConformancePack`](crate::model::OrganizationConformancePack).
         pub fn build(self) -> crate::model::OrganizationConformancePack {
             crate::model::OrganizationConformancePack {
                 organization_conformance_pack_name: self.organization_conformance_pack_name,
@@ -11239,7 +11848,7 @@ pub mod organization_conformance_pack {
     }
 }
 impl OrganizationConformancePack {
-    /// Creates a new builder-style object to manufacture [`OrganizationConformancePack`](crate::model::OrganizationConformancePack)
+    /// Creates a new builder-style object to manufacture [`OrganizationConformancePack`](crate::model::OrganizationConformancePack).
     pub fn builder() -> crate::model::organization_conformance_pack::Builder {
         crate::model::organization_conformance_pack::Builder::default()
     }
@@ -11250,6 +11859,7 @@ impl OrganizationConformancePack {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrganizationConfigRuleStatus {
     /// <p>The name that you assign to organization Config rule.</p>
+    #[doc(hidden)]
     pub organization_config_rule_name: std::option::Option<std::string::String>,
     /// <p>Indicates deployment status of an organization Config rule. When master account calls PutOrganizationConfigRule action for the first time, Config rule status is created in all the member accounts. When master account calls PutOrganizationConfigRule action for the second time, Config rule status is updated in all the member accounts. Additionally, Config rule status is updated when one or more member accounts join or leave an organization. Config rule status is deleted when the master account deletes OrganizationConfigRule in all the member accounts and disables service access for <code>config-multiaccountsetup.amazonaws.com</code>.</p>
     /// <p>Config sets the state of the rule to:</p>
@@ -11264,12 +11874,16 @@ pub struct OrganizationConfigRuleStatus {
     /// <li> <p> <code>UPDATE_IN_PROGRESS</code> when an organization Config rule update is in progress.</p> </li>
     /// <li> <p> <code>UPDATE_FAILED</code> when an organization Config rule update failed in one or more member accounts within that organization.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub organization_rule_status: std::option::Option<crate::model::OrganizationRuleStatus>,
     /// <p>An error code that is returned when organization Config rule creation or deletion has failed.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>An error message indicating that organization Config rule creation or deletion failed due to an error.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>The timestamp of the last update.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl OrganizationConfigRuleStatus {
@@ -11322,11 +11936,10 @@ impl std::fmt::Debug for OrganizationConfigRuleStatus {
         formatter.finish()
     }
 }
-/// See [`OrganizationConfigRuleStatus`](crate::model::OrganizationConfigRuleStatus)
+/// See [`OrganizationConfigRuleStatus`](crate::model::OrganizationConfigRuleStatus).
 pub mod organization_config_rule_status {
 
-    /// A builder for [`OrganizationConfigRuleStatus`](crate::model::OrganizationConfigRuleStatus)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationConfigRuleStatus`](crate::model::OrganizationConfigRuleStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) organization_config_rule_name: std::option::Option<std::string::String>,
@@ -11429,7 +12042,7 @@ pub mod organization_config_rule_status {
             self.last_update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationConfigRuleStatus`](crate::model::OrganizationConfigRuleStatus)
+        /// Consumes the builder and constructs a [`OrganizationConfigRuleStatus`](crate::model::OrganizationConfigRuleStatus).
         pub fn build(self) -> crate::model::OrganizationConfigRuleStatus {
             crate::model::OrganizationConfigRuleStatus {
                 organization_config_rule_name: self.organization_config_rule_name,
@@ -11442,7 +12055,7 @@ pub mod organization_config_rule_status {
     }
 }
 impl OrganizationConfigRuleStatus {
-    /// Creates a new builder-style object to manufacture [`OrganizationConfigRuleStatus`](crate::model::OrganizationConfigRuleStatus)
+    /// Creates a new builder-style object to manufacture [`OrganizationConfigRuleStatus`](crate::model::OrganizationConfigRuleStatus).
     pub fn builder() -> crate::model::organization_config_rule_status::Builder {
         crate::model::organization_config_rule_status::Builder::default()
     }
@@ -11546,20 +12159,27 @@ impl AsRef<str> for OrganizationRuleStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrganizationConfigRule {
     /// <p>The name that you assign to organization Config rule.</p>
+    #[doc(hidden)]
     pub organization_config_rule_name: std::option::Option<std::string::String>,
     /// <p>Amazon Resource Name (ARN) of organization Config rule.</p>
+    #[doc(hidden)]
     pub organization_config_rule_arn: std::option::Option<std::string::String>,
     /// <p>An <code>OrganizationManagedRuleMetadata</code> object.</p>
+    #[doc(hidden)]
     pub organization_managed_rule_metadata:
         std::option::Option<crate::model::OrganizationManagedRuleMetadata>,
     /// <p>An <code>OrganizationCustomRuleMetadata</code> object.</p>
+    #[doc(hidden)]
     pub organization_custom_rule_metadata:
         std::option::Option<crate::model::OrganizationCustomRuleMetadata>,
     /// <p>A comma-separated list of accounts excluded from organization Config rule.</p>
+    #[doc(hidden)]
     pub excluded_accounts: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The timestamp of the last update.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An object that specifies metadata for your organization's Config Custom Policy rule. The metadata includes the runtime system in use, which accounts have debug logging enabled, and other custom rule metadata, such as resource type, resource ID of Amazon Web Services resource, and organization trigger types that initiate Config to evaluate Amazon Web Services resources against a rule.</p>
+    #[doc(hidden)]
     pub organization_custom_policy_rule_metadata:
         std::option::Option<crate::model::OrganizationCustomPolicyRuleMetadataNoPolicy>,
 }
@@ -11627,11 +12247,10 @@ impl std::fmt::Debug for OrganizationConfigRule {
         formatter.finish()
     }
 }
-/// See [`OrganizationConfigRule`](crate::model::OrganizationConfigRule)
+/// See [`OrganizationConfigRule`](crate::model::OrganizationConfigRule).
 pub mod organization_config_rule {
 
-    /// A builder for [`OrganizationConfigRule`](crate::model::OrganizationConfigRule)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationConfigRule`](crate::model::OrganizationConfigRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) organization_config_rule_name: std::option::Option<std::string::String>,
@@ -11758,7 +12377,7 @@ pub mod organization_config_rule {
             self.organization_custom_policy_rule_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationConfigRule`](crate::model::OrganizationConfigRule)
+        /// Consumes the builder and constructs a [`OrganizationConfigRule`](crate::model::OrganizationConfigRule).
         pub fn build(self) -> crate::model::OrganizationConfigRule {
             crate::model::OrganizationConfigRule {
                 organization_config_rule_name: self.organization_config_rule_name,
@@ -11774,7 +12393,7 @@ pub mod organization_config_rule {
     }
 }
 impl OrganizationConfigRule {
-    /// Creates a new builder-style object to manufacture [`OrganizationConfigRule`](crate::model::OrganizationConfigRule)
+    /// Creates a new builder-style object to manufacture [`OrganizationConfigRule`](crate::model::OrganizationConfigRule).
     pub fn builder() -> crate::model::organization_config_rule::Builder {
         crate::model::organization_config_rule::Builder::default()
     }
@@ -11785,29 +12404,39 @@ impl OrganizationConfigRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrganizationCustomPolicyRuleMetadataNoPolicy {
     /// <p>The description that you provide for your organization Config Custom Policy rule.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The type of notification that triggers Config to run an evaluation for a rule. For Config Custom Policy rules, Config supports change triggered notification types:</p>
     /// <ul>
     /// <li> <p> <code>ConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers a configuration item as a result of a resource change.</p> </li>
     /// <li> <p> <code>OversizedConfigurationItemChangeNotification</code> - Triggers an evaluation when Config delivers an oversized configuration item. Config may generate this notification type when a resource changes and the notification exceeds the maximum size allowed by Amazon SNS.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub organization_config_rule_trigger_types:
         std::option::Option<std::vec::Vec<crate::model::OrganizationConfigRuleTriggerTypeNoSn>>,
     /// <p>A string, in JSON format, that is passed to your organization Config Custom Policy rule.</p>
+    #[doc(hidden)]
     pub input_parameters: std::option::Option<std::string::String>,
     /// <p>The maximum frequency with which Config runs evaluations for a rule. Your Config Custom Policy rule is triggered when Config delivers the configuration snapshot. For more information, see <code>ConfigSnapshotDeliveryProperties</code>.</p>
+    #[doc(hidden)]
     pub maximum_execution_frequency: std::option::Option<crate::model::MaximumExecutionFrequency>,
     /// <p>The type of the Amazon Web Services resource that was evaluated.</p>
+    #[doc(hidden)]
     pub resource_types_scope: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ID of the Amazon Web Services resource that was evaluated.</p>
+    #[doc(hidden)]
     pub resource_id_scope: std::option::Option<std::string::String>,
     /// <p>One part of a key-value pair that make up a tag. A key is a general label that acts like a category for more specific tag values.</p>
+    #[doc(hidden)]
     pub tag_key_scope: std::option::Option<std::string::String>,
     /// <p>The optional part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key).</p>
+    #[doc(hidden)]
     pub tag_value_scope: std::option::Option<std::string::String>,
     /// <p>The runtime system for your organization Config Custom Policy rules. Guard is a policy-as-code language that allows you to write policies that are enforced by Config Custom Policy rules. For more information about Guard, see the <a href="https://github.com/aws-cloudformation/cloudformation-guard">Guard GitHub Repository</a>.</p>
+    #[doc(hidden)]
     pub policy_runtime: std::option::Option<std::string::String>,
     /// <p>A list of accounts that you can enable debug logging for your organization Config Custom Policy rule. List is null when debug logging is enabled for all accounts.</p>
+    #[doc(hidden)]
     pub debug_log_delivery_accounts: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl OrganizationCustomPolicyRuleMetadataNoPolicy {
@@ -11885,11 +12514,10 @@ impl std::fmt::Debug for OrganizationCustomPolicyRuleMetadataNoPolicy {
         formatter.finish()
     }
 }
-/// See [`OrganizationCustomPolicyRuleMetadataNoPolicy`](crate::model::OrganizationCustomPolicyRuleMetadataNoPolicy)
+/// See [`OrganizationCustomPolicyRuleMetadataNoPolicy`](crate::model::OrganizationCustomPolicyRuleMetadataNoPolicy).
 pub mod organization_custom_policy_rule_metadata_no_policy {
 
-    /// A builder for [`OrganizationCustomPolicyRuleMetadataNoPolicy`](crate::model::OrganizationCustomPolicyRuleMetadataNoPolicy)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationCustomPolicyRuleMetadataNoPolicy`](crate::model::OrganizationCustomPolicyRuleMetadataNoPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) description: std::option::Option<std::string::String>,
@@ -12073,7 +12701,7 @@ pub mod organization_custom_policy_rule_metadata_no_policy {
             self.debug_log_delivery_accounts = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationCustomPolicyRuleMetadataNoPolicy`](crate::model::OrganizationCustomPolicyRuleMetadataNoPolicy)
+        /// Consumes the builder and constructs a [`OrganizationCustomPolicyRuleMetadataNoPolicy`](crate::model::OrganizationCustomPolicyRuleMetadataNoPolicy).
         pub fn build(self) -> crate::model::OrganizationCustomPolicyRuleMetadataNoPolicy {
             crate::model::OrganizationCustomPolicyRuleMetadataNoPolicy {
                 description: self.description,
@@ -12091,7 +12719,7 @@ pub mod organization_custom_policy_rule_metadata_no_policy {
     }
 }
 impl OrganizationCustomPolicyRuleMetadataNoPolicy {
-    /// Creates a new builder-style object to manufacture [`OrganizationCustomPolicyRuleMetadataNoPolicy`](crate::model::OrganizationCustomPolicyRuleMetadataNoPolicy)
+    /// Creates a new builder-style object to manufacture [`OrganizationCustomPolicyRuleMetadataNoPolicy`](crate::model::OrganizationCustomPolicyRuleMetadataNoPolicy).
     pub fn builder() -> crate::model::organization_custom_policy_rule_metadata_no_policy::Builder {
         crate::model::organization_custom_policy_rule_metadata_no_policy::Builder::default()
     }
@@ -12103,12 +12731,16 @@ impl OrganizationCustomPolicyRuleMetadataNoPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeliveryChannelStatus {
     /// <p>The name of the delivery channel.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A list containing the status of the delivery of the snapshot to the specified Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub config_snapshot_delivery_info: std::option::Option<crate::model::ConfigExportDeliveryInfo>,
     /// <p>A list that contains the status of the delivery of the configuration history to the specified Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub config_history_delivery_info: std::option::Option<crate::model::ConfigExportDeliveryInfo>,
     /// <p>A list containing the status of the delivery of the configuration stream notification to the specified Amazon SNS topic.</p>
+    #[doc(hidden)]
     pub config_stream_delivery_info: std::option::Option<crate::model::ConfigStreamDeliveryInfo>,
 }
 impl DeliveryChannelStatus {
@@ -12154,11 +12786,10 @@ impl std::fmt::Debug for DeliveryChannelStatus {
         formatter.finish()
     }
 }
-/// See [`DeliveryChannelStatus`](crate::model::DeliveryChannelStatus)
+/// See [`DeliveryChannelStatus`](crate::model::DeliveryChannelStatus).
 pub mod delivery_channel_status {
 
-    /// A builder for [`DeliveryChannelStatus`](crate::model::DeliveryChannelStatus)
-    #[non_exhaustive]
+    /// A builder for [`DeliveryChannelStatus`](crate::model::DeliveryChannelStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -12228,7 +12859,7 @@ pub mod delivery_channel_status {
             self.config_stream_delivery_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeliveryChannelStatus`](crate::model::DeliveryChannelStatus)
+        /// Consumes the builder and constructs a [`DeliveryChannelStatus`](crate::model::DeliveryChannelStatus).
         pub fn build(self) -> crate::model::DeliveryChannelStatus {
             crate::model::DeliveryChannelStatus {
                 name: self.name,
@@ -12240,7 +12871,7 @@ pub mod delivery_channel_status {
     }
 }
 impl DeliveryChannelStatus {
-    /// Creates a new builder-style object to manufacture [`DeliveryChannelStatus`](crate::model::DeliveryChannelStatus)
+    /// Creates a new builder-style object to manufacture [`DeliveryChannelStatus`](crate::model::DeliveryChannelStatus).
     pub fn builder() -> crate::model::delivery_channel_status::Builder {
         crate::model::delivery_channel_status::Builder::default()
     }
@@ -12252,12 +12883,16 @@ impl DeliveryChannelStatus {
 pub struct ConfigStreamDeliveryInfo {
     /// <p>Status of the last attempted delivery.</p>
     /// <p> <b>Note</b> Providing an SNS topic on a <a href="https://docs.aws.amazon.com/config/latest/APIReference/API_DeliveryChannel.html">DeliveryChannel</a> for Config is optional. If the SNS delivery is turned off, the last status will be <b>Not_Applicable</b>.</p>
+    #[doc(hidden)]
     pub last_status: std::option::Option<crate::model::DeliveryStatus>,
     /// <p>The error code from the last attempted delivery.</p>
+    #[doc(hidden)]
     pub last_error_code: std::option::Option<std::string::String>,
     /// <p>The error message from the last attempted delivery.</p>
+    #[doc(hidden)]
     pub last_error_message: std::option::Option<std::string::String>,
     /// <p>The time from the last status change.</p>
+    #[doc(hidden)]
     pub last_status_change_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ConfigStreamDeliveryInfo {
@@ -12289,11 +12924,10 @@ impl std::fmt::Debug for ConfigStreamDeliveryInfo {
         formatter.finish()
     }
 }
-/// See [`ConfigStreamDeliveryInfo`](crate::model::ConfigStreamDeliveryInfo)
+/// See [`ConfigStreamDeliveryInfo`](crate::model::ConfigStreamDeliveryInfo).
 pub mod config_stream_delivery_info {
 
-    /// A builder for [`ConfigStreamDeliveryInfo`](crate::model::ConfigStreamDeliveryInfo)
-    #[non_exhaustive]
+    /// A builder for [`ConfigStreamDeliveryInfo`](crate::model::ConfigStreamDeliveryInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) last_status: std::option::Option<crate::model::DeliveryStatus>,
@@ -12356,7 +12990,7 @@ pub mod config_stream_delivery_info {
             self.last_status_change_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigStreamDeliveryInfo`](crate::model::ConfigStreamDeliveryInfo)
+        /// Consumes the builder and constructs a [`ConfigStreamDeliveryInfo`](crate::model::ConfigStreamDeliveryInfo).
         pub fn build(self) -> crate::model::ConfigStreamDeliveryInfo {
             crate::model::ConfigStreamDeliveryInfo {
                 last_status: self.last_status,
@@ -12368,7 +13002,7 @@ pub mod config_stream_delivery_info {
     }
 }
 impl ConfigStreamDeliveryInfo {
-    /// Creates a new builder-style object to manufacture [`ConfigStreamDeliveryInfo`](crate::model::ConfigStreamDeliveryInfo)
+    /// Creates a new builder-style object to manufacture [`ConfigStreamDeliveryInfo`](crate::model::ConfigStreamDeliveryInfo).
     pub fn builder() -> crate::model::config_stream_delivery_info::Builder {
         crate::model::config_stream_delivery_info::Builder::default()
     }
@@ -12438,16 +13072,22 @@ impl AsRef<str> for DeliveryStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigExportDeliveryInfo {
     /// <p>Status of the last attempted delivery.</p>
+    #[doc(hidden)]
     pub last_status: std::option::Option<crate::model::DeliveryStatus>,
     /// <p>The error code from the last attempted delivery.</p>
+    #[doc(hidden)]
     pub last_error_code: std::option::Option<std::string::String>,
     /// <p>The error message from the last attempted delivery.</p>
+    #[doc(hidden)]
     pub last_error_message: std::option::Option<std::string::String>,
     /// <p>The time of the last attempted delivery.</p>
+    #[doc(hidden)]
     pub last_attempt_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time of the last successful delivery.</p>
+    #[doc(hidden)]
     pub last_successful_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the next delivery occurs.</p>
+    #[doc(hidden)]
     pub next_delivery_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ConfigExportDeliveryInfo {
@@ -12488,11 +13128,10 @@ impl std::fmt::Debug for ConfigExportDeliveryInfo {
         formatter.finish()
     }
 }
-/// See [`ConfigExportDeliveryInfo`](crate::model::ConfigExportDeliveryInfo)
+/// See [`ConfigExportDeliveryInfo`](crate::model::ConfigExportDeliveryInfo).
 pub mod config_export_delivery_info {
 
-    /// A builder for [`ConfigExportDeliveryInfo`](crate::model::ConfigExportDeliveryInfo)
-    #[non_exhaustive]
+    /// A builder for [`ConfigExportDeliveryInfo`](crate::model::ConfigExportDeliveryInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) last_status: std::option::Option<crate::model::DeliveryStatus>,
@@ -12581,7 +13220,7 @@ pub mod config_export_delivery_info {
             self.next_delivery_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigExportDeliveryInfo`](crate::model::ConfigExportDeliveryInfo)
+        /// Consumes the builder and constructs a [`ConfigExportDeliveryInfo`](crate::model::ConfigExportDeliveryInfo).
         pub fn build(self) -> crate::model::ConfigExportDeliveryInfo {
             crate::model::ConfigExportDeliveryInfo {
                 last_status: self.last_status,
@@ -12595,7 +13234,7 @@ pub mod config_export_delivery_info {
     }
 }
 impl ConfigExportDeliveryInfo {
-    /// Creates a new builder-style object to manufacture [`ConfigExportDeliveryInfo`](crate::model::ConfigExportDeliveryInfo)
+    /// Creates a new builder-style object to manufacture [`ConfigExportDeliveryInfo`](crate::model::ConfigExportDeliveryInfo).
     pub fn builder() -> crate::model::config_export_delivery_info::Builder {
         crate::model::config_export_delivery_info::Builder::default()
     }
@@ -12606,10 +13245,13 @@ impl ConfigExportDeliveryInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConformancePackStatusDetail {
     /// <p>Name of the conformance pack.</p>
+    #[doc(hidden)]
     pub conformance_pack_name: std::option::Option<std::string::String>,
     /// <p>ID of the conformance pack.</p>
+    #[doc(hidden)]
     pub conformance_pack_id: std::option::Option<std::string::String>,
     /// <p>Amazon Resource Name (ARN) of comformance pack.</p>
+    #[doc(hidden)]
     pub conformance_pack_arn: std::option::Option<std::string::String>,
     /// <p>Indicates deployment status of conformance pack.</p>
     /// <p>Config sets the state of the conformance pack to:</p>
@@ -12620,14 +13262,19 @@ pub struct ConformancePackStatusDetail {
     /// <li> <p>DELETE_IN_PROGRESS when a conformance pack deletion is in progress. </p> </li>
     /// <li> <p>DELETE_FAILED when a conformance pack deletion failed in your account.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub conformance_pack_state: std::option::Option<crate::model::ConformancePackState>,
     /// <p>Amazon Resource Name (ARN) of CloudFormation stack. </p>
+    #[doc(hidden)]
     pub stack_arn: std::option::Option<std::string::String>,
     /// <p>The reason of conformance pack creation failure.</p>
+    #[doc(hidden)]
     pub conformance_pack_status_reason: std::option::Option<std::string::String>,
     /// <p>Last time when conformation pack creation and update was requested.</p>
+    #[doc(hidden)]
     pub last_update_requested_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Last time when conformation pack creation and update was successful.</p>
+    #[doc(hidden)]
     pub last_update_completed_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ConformancePackStatusDetail {
@@ -12697,11 +13344,10 @@ impl std::fmt::Debug for ConformancePackStatusDetail {
         formatter.finish()
     }
 }
-/// See [`ConformancePackStatusDetail`](crate::model::ConformancePackStatusDetail)
+/// See [`ConformancePackStatusDetail`](crate::model::ConformancePackStatusDetail).
 pub mod conformance_pack_status_detail {
 
-    /// A builder for [`ConformancePackStatusDetail`](crate::model::ConformancePackStatusDetail)
-    #[non_exhaustive]
+    /// A builder for [`ConformancePackStatusDetail`](crate::model::ConformancePackStatusDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) conformance_pack_name: std::option::Option<std::string::String>,
@@ -12834,7 +13480,7 @@ pub mod conformance_pack_status_detail {
             self.last_update_completed_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConformancePackStatusDetail`](crate::model::ConformancePackStatusDetail)
+        /// Consumes the builder and constructs a [`ConformancePackStatusDetail`](crate::model::ConformancePackStatusDetail).
         pub fn build(self) -> crate::model::ConformancePackStatusDetail {
             crate::model::ConformancePackStatusDetail {
                 conformance_pack_name: self.conformance_pack_name,
@@ -12850,7 +13496,7 @@ pub mod conformance_pack_status_detail {
     }
 }
 impl ConformancePackStatusDetail {
-    /// Creates a new builder-style object to manufacture [`ConformancePackStatusDetail`](crate::model::ConformancePackStatusDetail)
+    /// Creates a new builder-style object to manufacture [`ConformancePackStatusDetail`](crate::model::ConformancePackStatusDetail).
     pub fn builder() -> crate::model::conformance_pack_status_detail::Builder {
         crate::model::conformance_pack_status_detail::Builder::default()
     }
@@ -12934,25 +13580,33 @@ impl AsRef<str> for ConformancePackState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConformancePackDetail {
     /// <p>Name of the conformance pack.</p>
+    #[doc(hidden)]
     pub conformance_pack_name: std::option::Option<std::string::String>,
     /// <p>Amazon Resource Name (ARN) of the conformance pack.</p>
+    #[doc(hidden)]
     pub conformance_pack_arn: std::option::Option<std::string::String>,
     /// <p>ID of the conformance pack.</p>
+    #[doc(hidden)]
     pub conformance_pack_id: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon S3 bucket where Config stores conformance pack templates. </p> <note>
     /// <p>This field is optional.</p>
     /// </note>
+    #[doc(hidden)]
     pub delivery_s3_bucket: std::option::Option<std::string::String>,
     /// <p>The prefix for the Amazon S3 bucket.</p> <note>
     /// <p>This field is optional.</p>
     /// </note>
+    #[doc(hidden)]
     pub delivery_s3_key_prefix: std::option::Option<std::string::String>,
     /// <p>A list of <code>ConformancePackInputParameter</code> objects.</p>
+    #[doc(hidden)]
     pub conformance_pack_input_parameters:
         std::option::Option<std::vec::Vec<crate::model::ConformancePackInputParameter>>,
     /// <p>Last time when conformation pack update was requested. </p>
+    #[doc(hidden)]
     pub last_update_requested_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Amazon Web Services service that created the conformance pack.</p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
 }
 impl ConformancePackDetail {
@@ -13015,11 +13669,10 @@ impl std::fmt::Debug for ConformancePackDetail {
         formatter.finish()
     }
 }
-/// See [`ConformancePackDetail`](crate::model::ConformancePackDetail)
+/// See [`ConformancePackDetail`](crate::model::ConformancePackDetail).
 pub mod conformance_pack_detail {
 
-    /// A builder for [`ConformancePackDetail`](crate::model::ConformancePackDetail)
-    #[non_exhaustive]
+    /// A builder for [`ConformancePackDetail`](crate::model::ConformancePackDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) conformance_pack_name: std::option::Option<std::string::String>,
@@ -13151,7 +13804,7 @@ pub mod conformance_pack_detail {
             self.created_by = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConformancePackDetail`](crate::model::ConformancePackDetail)
+        /// Consumes the builder and constructs a [`ConformancePackDetail`](crate::model::ConformancePackDetail).
         pub fn build(self) -> crate::model::ConformancePackDetail {
             crate::model::ConformancePackDetail {
                 conformance_pack_name: self.conformance_pack_name,
@@ -13167,7 +13820,7 @@ pub mod conformance_pack_detail {
     }
 }
 impl ConformancePackDetail {
-    /// Creates a new builder-style object to manufacture [`ConformancePackDetail`](crate::model::ConformancePackDetail)
+    /// Creates a new builder-style object to manufacture [`ConformancePackDetail`](crate::model::ConformancePackDetail).
     pub fn builder() -> crate::model::conformance_pack_detail::Builder {
         crate::model::conformance_pack_detail::Builder::default()
     }
@@ -13178,11 +13831,14 @@ impl ConformancePackDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConformancePackRuleCompliance {
     /// <p>Name of the Config rule.</p>
+    #[doc(hidden)]
     pub config_rule_name: std::option::Option<std::string::String>,
     /// <p>Compliance of the Config rule.</p>
     /// <p>The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code>.</p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<crate::model::ConformancePackComplianceType>,
     /// <p>Controls for the conformance pack. A control is a process to prevent or detect problems while meeting objectives. A control can align with a specific compliance regime or map to internal controls defined by an organization.</p>
+    #[doc(hidden)]
     pub controls: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ConformancePackRuleCompliance {
@@ -13211,11 +13867,10 @@ impl std::fmt::Debug for ConformancePackRuleCompliance {
         formatter.finish()
     }
 }
-/// See [`ConformancePackRuleCompliance`](crate::model::ConformancePackRuleCompliance)
+/// See [`ConformancePackRuleCompliance`](crate::model::ConformancePackRuleCompliance).
 pub mod conformance_pack_rule_compliance {
 
-    /// A builder for [`ConformancePackRuleCompliance`](crate::model::ConformancePackRuleCompliance)
-    #[non_exhaustive]
+    /// A builder for [`ConformancePackRuleCompliance`](crate::model::ConformancePackRuleCompliance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_rule_name: std::option::Option<std::string::String>,
@@ -13274,7 +13929,7 @@ pub mod conformance_pack_rule_compliance {
             self.controls = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConformancePackRuleCompliance`](crate::model::ConformancePackRuleCompliance)
+        /// Consumes the builder and constructs a [`ConformancePackRuleCompliance`](crate::model::ConformancePackRuleCompliance).
         pub fn build(self) -> crate::model::ConformancePackRuleCompliance {
             crate::model::ConformancePackRuleCompliance {
                 config_rule_name: self.config_rule_name,
@@ -13285,7 +13940,7 @@ pub mod conformance_pack_rule_compliance {
     }
 }
 impl ConformancePackRuleCompliance {
-    /// Creates a new builder-style object to manufacture [`ConformancePackRuleCompliance`](crate::model::ConformancePackRuleCompliance)
+    /// Creates a new builder-style object to manufacture [`ConformancePackRuleCompliance`](crate::model::ConformancePackRuleCompliance).
     pub fn builder() -> crate::model::conformance_pack_rule_compliance::Builder {
         crate::model::conformance_pack_rule_compliance::Builder::default()
     }
@@ -13296,9 +13951,11 @@ impl ConformancePackRuleCompliance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConformancePackComplianceFilters {
     /// <p>Filters the results by Config rule names.</p>
+    #[doc(hidden)]
     pub config_rule_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Filters the results by compliance.</p>
     /// <p>The allowed values are <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. <code>INSUFFICIENT_DATA</code> is not supported.</p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<crate::model::ConformancePackComplianceType>,
 }
 impl ConformancePackComplianceFilters {
@@ -13322,11 +13979,10 @@ impl std::fmt::Debug for ConformancePackComplianceFilters {
         formatter.finish()
     }
 }
-/// See [`ConformancePackComplianceFilters`](crate::model::ConformancePackComplianceFilters)
+/// See [`ConformancePackComplianceFilters`](crate::model::ConformancePackComplianceFilters).
 pub mod conformance_pack_compliance_filters {
 
-    /// A builder for [`ConformancePackComplianceFilters`](crate::model::ConformancePackComplianceFilters)
-    #[non_exhaustive]
+    /// A builder for [`ConformancePackComplianceFilters`](crate::model::ConformancePackComplianceFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_rule_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -13371,7 +14027,7 @@ pub mod conformance_pack_compliance_filters {
             self.compliance_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConformancePackComplianceFilters`](crate::model::ConformancePackComplianceFilters)
+        /// Consumes the builder and constructs a [`ConformancePackComplianceFilters`](crate::model::ConformancePackComplianceFilters).
         pub fn build(self) -> crate::model::ConformancePackComplianceFilters {
             crate::model::ConformancePackComplianceFilters {
                 config_rule_names: self.config_rule_names,
@@ -13381,7 +14037,7 @@ pub mod conformance_pack_compliance_filters {
     }
 }
 impl ConformancePackComplianceFilters {
-    /// Creates a new builder-style object to manufacture [`ConformancePackComplianceFilters`](crate::model::ConformancePackComplianceFilters)
+    /// Creates a new builder-style object to manufacture [`ConformancePackComplianceFilters`](crate::model::ConformancePackComplianceFilters).
     pub fn builder() -> crate::model::conformance_pack_compliance_filters::Builder {
         crate::model::conformance_pack_compliance_filters::Builder::default()
     }
@@ -13392,20 +14048,28 @@ impl ConformancePackComplianceFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigurationRecorderStatus {
     /// <p>The name of the configuration recorder.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The time the recorder was last started.</p>
+    #[doc(hidden)]
     pub last_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time the recorder was last stopped.</p>
+    #[doc(hidden)]
     pub last_stop_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies whether or not the recorder is currently recording.</p>
+    #[doc(hidden)]
     pub recording: bool,
     /// <p>The last (previous) status of the recorder.</p>
+    #[doc(hidden)]
     pub last_status: std::option::Option<crate::model::RecorderStatus>,
     /// <p>The error code indicating that the recording failed.</p>
+    #[doc(hidden)]
     pub last_error_code: std::option::Option<std::string::String>,
     /// <p>The message indicating that the recording failed due to an error.</p>
+    #[doc(hidden)]
     pub last_error_message: std::option::Option<std::string::String>,
     /// <p>The time when the status was last changed.</p>
+    #[doc(hidden)]
     pub last_status_change_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ConfigurationRecorderStatus {
@@ -13456,11 +14120,10 @@ impl std::fmt::Debug for ConfigurationRecorderStatus {
         formatter.finish()
     }
 }
-/// See [`ConfigurationRecorderStatus`](crate::model::ConfigurationRecorderStatus)
+/// See [`ConfigurationRecorderStatus`](crate::model::ConfigurationRecorderStatus).
 pub mod configuration_recorder_status {
 
-    /// A builder for [`ConfigurationRecorderStatus`](crate::model::ConfigurationRecorderStatus)
-    #[non_exhaustive]
+    /// A builder for [`ConfigurationRecorderStatus`](crate::model::ConfigurationRecorderStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -13571,7 +14234,7 @@ pub mod configuration_recorder_status {
             self.last_status_change_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigurationRecorderStatus`](crate::model::ConfigurationRecorderStatus)
+        /// Consumes the builder and constructs a [`ConfigurationRecorderStatus`](crate::model::ConfigurationRecorderStatus).
         pub fn build(self) -> crate::model::ConfigurationRecorderStatus {
             crate::model::ConfigurationRecorderStatus {
                 name: self.name,
@@ -13587,7 +14250,7 @@ pub mod configuration_recorder_status {
     }
 }
 impl ConfigurationRecorderStatus {
-    /// Creates a new builder-style object to manufacture [`ConfigurationRecorderStatus`](crate::model::ConfigurationRecorderStatus)
+    /// Creates a new builder-style object to manufacture [`ConfigurationRecorderStatus`](crate::model::ConfigurationRecorderStatus).
     pub fn builder() -> crate::model::configuration_recorder_status::Builder {
         crate::model::configuration_recorder_status::Builder::default()
     }
@@ -13657,10 +14320,13 @@ impl AsRef<str> for RecorderStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregatedSourceStatus {
     /// <p>The source account ID or an organization.</p>
+    #[doc(hidden)]
     pub source_id: std::option::Option<std::string::String>,
     /// <p>The source account or an organization.</p>
+    #[doc(hidden)]
     pub source_type: std::option::Option<crate::model::AggregatedSourceType>,
     /// <p>The region authorized to collect aggregated data.</p>
+    #[doc(hidden)]
     pub aws_region: std::option::Option<std::string::String>,
     /// <p>Filters the last updated status type.</p>
     /// <ul>
@@ -13668,12 +14334,16 @@ pub struct AggregatedSourceStatus {
     /// <li> <p>Valid value SUCCEEDED indicates the data was successfully moved.</p> </li>
     /// <li> <p>Valid value OUTDATED indicates the data is not the most recent.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub last_update_status: std::option::Option<crate::model::AggregatedSourceStatusType>,
     /// <p>The time of the last update.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The error code that Config returned when the source account aggregation last failed.</p>
+    #[doc(hidden)]
     pub last_error_code: std::option::Option<std::string::String>,
     /// <p>The message indicating that the source account aggregation failed due to an error.</p>
+    #[doc(hidden)]
     pub last_error_message: std::option::Option<std::string::String>,
 }
 impl AggregatedSourceStatus {
@@ -13726,11 +14396,10 @@ impl std::fmt::Debug for AggregatedSourceStatus {
         formatter.finish()
     }
 }
-/// See [`AggregatedSourceStatus`](crate::model::AggregatedSourceStatus)
+/// See [`AggregatedSourceStatus`](crate::model::AggregatedSourceStatus).
 pub mod aggregated_source_status {
 
-    /// A builder for [`AggregatedSourceStatus`](crate::model::AggregatedSourceStatus)
-    #[non_exhaustive]
+    /// A builder for [`AggregatedSourceStatus`](crate::model::AggregatedSourceStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_id: std::option::Option<std::string::String>,
@@ -13841,7 +14510,7 @@ pub mod aggregated_source_status {
             self.last_error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregatedSourceStatus`](crate::model::AggregatedSourceStatus)
+        /// Consumes the builder and constructs a [`AggregatedSourceStatus`](crate::model::AggregatedSourceStatus).
         pub fn build(self) -> crate::model::AggregatedSourceStatus {
             crate::model::AggregatedSourceStatus {
                 source_id: self.source_id,
@@ -13856,7 +14525,7 @@ pub mod aggregated_source_status {
     }
 }
 impl AggregatedSourceStatus {
-    /// Creates a new builder-style object to manufacture [`AggregatedSourceStatus`](crate::model::AggregatedSourceStatus)
+    /// Creates a new builder-style object to manufacture [`AggregatedSourceStatus`](crate::model::AggregatedSourceStatus).
     pub fn builder() -> crate::model::aggregated_source_status::Builder {
         crate::model::aggregated_source_status::Builder::default()
     }
@@ -13982,38 +14651,53 @@ impl AsRef<str> for AggregatedSourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigRuleEvaluationStatus {
     /// <p>The name of the Config rule.</p>
+    #[doc(hidden)]
     pub config_rule_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Config rule.</p>
+    #[doc(hidden)]
     pub config_rule_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the Config rule.</p>
+    #[doc(hidden)]
     pub config_rule_id: std::option::Option<std::string::String>,
     /// <p>The time that Config last successfully invoked the Config rule to evaluate your Amazon Web Services resources.</p>
+    #[doc(hidden)]
     pub last_successful_invocation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that Config last failed to invoke the Config rule to evaluate your Amazon Web Services resources.</p>
+    #[doc(hidden)]
     pub last_failed_invocation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that Config last successfully evaluated your Amazon Web Services resources against the rule.</p>
+    #[doc(hidden)]
     pub last_successful_evaluation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that Config last failed to evaluate your Amazon Web Services resources against the rule.</p>
+    #[doc(hidden)]
     pub last_failed_evaluation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that you first activated the Config rule.</p>
+    #[doc(hidden)]
     pub first_activated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that you last turned off the Config rule.</p>
+    #[doc(hidden)]
     pub last_deactivated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The error code that Config returned when the rule last failed.</p>
+    #[doc(hidden)]
     pub last_error_code: std::option::Option<std::string::String>,
     /// <p>The error message that Config returned when the rule last failed.</p>
+    #[doc(hidden)]
     pub last_error_message: std::option::Option<std::string::String>,
     /// <p>Indicates whether Config has evaluated your resources against the rule at least once.</p>
     /// <ul>
     /// <li> <p> <code>true</code> - Config has evaluated your Amazon Web Services resources against the rule at least once.</p> </li>
     /// <li> <p> <code>false</code> - Config has not finished evaluating your Amazon Web Services resources against the rule at least once.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub first_evaluation_started: bool,
     /// <p>The status of the last attempted delivery of a debug log for your Config Custom Policy rules. Either <code>Successful</code> or <code>Failed</code>.</p>
+    #[doc(hidden)]
     pub last_debug_log_delivery_status: std::option::Option<std::string::String>,
     /// <p>The reason Config was not able to deliver a debug log. This is for the last failed attempt to retrieve a debug log for your Config Custom Policy rules.</p>
+    #[doc(hidden)]
     pub last_debug_log_delivery_status_reason: std::option::Option<std::string::String>,
     /// <p>The time Config last attempted to deliver a debug log for your Config Custom Policy rules.</p>
+    #[doc(hidden)]
     pub last_debug_log_delivery_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ConfigRuleEvaluationStatus {
@@ -14128,11 +14812,10 @@ impl std::fmt::Debug for ConfigRuleEvaluationStatus {
         formatter.finish()
     }
 }
-/// See [`ConfigRuleEvaluationStatus`](crate::model::ConfigRuleEvaluationStatus)
+/// See [`ConfigRuleEvaluationStatus`](crate::model::ConfigRuleEvaluationStatus).
 pub mod config_rule_evaluation_status {
 
-    /// A builder for [`ConfigRuleEvaluationStatus`](crate::model::ConfigRuleEvaluationStatus)
-    #[non_exhaustive]
+    /// A builder for [`ConfigRuleEvaluationStatus`](crate::model::ConfigRuleEvaluationStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_rule_name: std::option::Option<std::string::String>,
@@ -14364,7 +15047,7 @@ pub mod config_rule_evaluation_status {
             self.last_debug_log_delivery_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigRuleEvaluationStatus`](crate::model::ConfigRuleEvaluationStatus)
+        /// Consumes the builder and constructs a [`ConfigRuleEvaluationStatus`](crate::model::ConfigRuleEvaluationStatus).
         pub fn build(self) -> crate::model::ConfigRuleEvaluationStatus {
             crate::model::ConfigRuleEvaluationStatus {
                 config_rule_name: self.config_rule_name,
@@ -14387,7 +15070,7 @@ pub mod config_rule_evaluation_status {
     }
 }
 impl ConfigRuleEvaluationStatus {
-    /// Creates a new builder-style object to manufacture [`ConfigRuleEvaluationStatus`](crate::model::ConfigRuleEvaluationStatus)
+    /// Creates a new builder-style object to manufacture [`ConfigRuleEvaluationStatus`](crate::model::ConfigRuleEvaluationStatus).
     pub fn builder() -> crate::model::config_rule_evaluation_status::Builder {
         crate::model::config_rule_evaluation_status::Builder::default()
     }
@@ -14398,10 +15081,13 @@ impl ConfigRuleEvaluationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComplianceByResource {
     /// <p>The type of the Amazon Web Services resource that was evaluated.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services resource that was evaluated.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>Indicates whether the Amazon Web Services resource complies with all of the Config rules that evaluated it.</p>
+    #[doc(hidden)]
     pub compliance: std::option::Option<crate::model::Compliance>,
 }
 impl ComplianceByResource {
@@ -14427,11 +15113,10 @@ impl std::fmt::Debug for ComplianceByResource {
         formatter.finish()
     }
 }
-/// See [`ComplianceByResource`](crate::model::ComplianceByResource)
+/// See [`ComplianceByResource`](crate::model::ComplianceByResource).
 pub mod compliance_by_resource {
 
-    /// A builder for [`ComplianceByResource`](crate::model::ComplianceByResource)
-    #[non_exhaustive]
+    /// A builder for [`ComplianceByResource`](crate::model::ComplianceByResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -14475,7 +15160,7 @@ pub mod compliance_by_resource {
             self.compliance = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComplianceByResource`](crate::model::ComplianceByResource)
+        /// Consumes the builder and constructs a [`ComplianceByResource`](crate::model::ComplianceByResource).
         pub fn build(self) -> crate::model::ComplianceByResource {
             crate::model::ComplianceByResource {
                 resource_type: self.resource_type,
@@ -14486,7 +15171,7 @@ pub mod compliance_by_resource {
     }
 }
 impl ComplianceByResource {
-    /// Creates a new builder-style object to manufacture [`ComplianceByResource`](crate::model::ComplianceByResource)
+    /// Creates a new builder-style object to manufacture [`ComplianceByResource`](crate::model::ComplianceByResource).
     pub fn builder() -> crate::model::compliance_by_resource::Builder {
         crate::model::compliance_by_resource::Builder::default()
     }
@@ -14501,8 +15186,10 @@ pub struct Compliance {
     /// <p>A rule is compliant if all of the resources that the rule evaluates comply with it. A rule is noncompliant if any of these resources do not comply.</p>
     /// <p>Config returns the <code>INSUFFICIENT_DATA</code> value when no evaluation results are available for the Amazon Web Services resource or Config rule.</p>
     /// <p>For the <code>Compliance</code> data type, Config supports only <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code> values. Config does not support the <code>NOT_APPLICABLE</code> value for the <code>Compliance</code> data type.</p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<crate::model::ComplianceType>,
     /// <p>The number of Amazon Web Services resources or Config rules that cause a result of <code>NON_COMPLIANT</code>, up to a maximum number.</p>
+    #[doc(hidden)]
     pub compliance_contributor_count: std::option::Option<crate::model::ComplianceContributorCount>,
 }
 impl Compliance {
@@ -14532,11 +15219,10 @@ impl std::fmt::Debug for Compliance {
         formatter.finish()
     }
 }
-/// See [`Compliance`](crate::model::Compliance)
+/// See [`Compliance`](crate::model::Compliance).
 pub mod compliance {
 
-    /// A builder for [`Compliance`](crate::model::Compliance)
-    #[non_exhaustive]
+    /// A builder for [`Compliance`](crate::model::Compliance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliance_type: std::option::Option<crate::model::ComplianceType>,
@@ -14581,7 +15267,7 @@ pub mod compliance {
             self.compliance_contributor_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`Compliance`](crate::model::Compliance)
+        /// Consumes the builder and constructs a [`Compliance`](crate::model::Compliance).
         pub fn build(self) -> crate::model::Compliance {
             crate::model::Compliance {
                 compliance_type: self.compliance_type,
@@ -14591,7 +15277,7 @@ pub mod compliance {
     }
 }
 impl Compliance {
-    /// Creates a new builder-style object to manufacture [`Compliance`](crate::model::Compliance)
+    /// Creates a new builder-style object to manufacture [`Compliance`](crate::model::Compliance).
     pub fn builder() -> crate::model::compliance::Builder {
         crate::model::compliance::Builder::default()
     }
@@ -14602,8 +15288,10 @@ impl Compliance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComplianceByConfigRule {
     /// <p>The name of the Config rule.</p>
+    #[doc(hidden)]
     pub config_rule_name: std::option::Option<std::string::String>,
     /// <p>Indicates whether the Config rule is compliant.</p>
+    #[doc(hidden)]
     pub compliance: std::option::Option<crate::model::Compliance>,
 }
 impl ComplianceByConfigRule {
@@ -14624,11 +15312,10 @@ impl std::fmt::Debug for ComplianceByConfigRule {
         formatter.finish()
     }
 }
-/// See [`ComplianceByConfigRule`](crate::model::ComplianceByConfigRule)
+/// See [`ComplianceByConfigRule`](crate::model::ComplianceByConfigRule).
 pub mod compliance_by_config_rule {
 
-    /// A builder for [`ComplianceByConfigRule`](crate::model::ComplianceByConfigRule)
-    #[non_exhaustive]
+    /// A builder for [`ComplianceByConfigRule`](crate::model::ComplianceByConfigRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_rule_name: std::option::Option<std::string::String>,
@@ -14661,7 +15348,7 @@ pub mod compliance_by_config_rule {
             self.compliance = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComplianceByConfigRule`](crate::model::ComplianceByConfigRule)
+        /// Consumes the builder and constructs a [`ComplianceByConfigRule`](crate::model::ComplianceByConfigRule).
         pub fn build(self) -> crate::model::ComplianceByConfigRule {
             crate::model::ComplianceByConfigRule {
                 config_rule_name: self.config_rule_name,
@@ -14671,7 +15358,7 @@ pub mod compliance_by_config_rule {
     }
 }
 impl ComplianceByConfigRule {
-    /// Creates a new builder-style object to manufacture [`ComplianceByConfigRule`](crate::model::ComplianceByConfigRule)
+    /// Creates a new builder-style object to manufacture [`ComplianceByConfigRule`](crate::model::ComplianceByConfigRule).
     pub fn builder() -> crate::model::compliance_by_config_rule::Builder {
         crate::model::compliance_by_config_rule::Builder::default()
     }
@@ -14683,12 +15370,16 @@ impl ComplianceByConfigRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregateComplianceByConformancePack {
     /// <p>The name of the conformance pack.</p>
+    #[doc(hidden)]
     pub conformance_pack_name: std::option::Option<std::string::String>,
     /// <p>The compliance status of the conformance pack.</p>
+    #[doc(hidden)]
     pub compliance: std::option::Option<crate::model::AggregateConformancePackCompliance>,
     /// <p>The 12-digit Amazon Web Services account ID of the source account.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The source Amazon Web Services Region from where the data is aggregated.</p>
+    #[doc(hidden)]
     pub aws_region: std::option::Option<std::string::String>,
 }
 impl AggregateComplianceByConformancePack {
@@ -14721,11 +15412,10 @@ impl std::fmt::Debug for AggregateComplianceByConformancePack {
         formatter.finish()
     }
 }
-/// See [`AggregateComplianceByConformancePack`](crate::model::AggregateComplianceByConformancePack)
+/// See [`AggregateComplianceByConformancePack`](crate::model::AggregateComplianceByConformancePack).
 pub mod aggregate_compliance_by_conformance_pack {
 
-    /// A builder for [`AggregateComplianceByConformancePack`](crate::model::AggregateComplianceByConformancePack)
-    #[non_exhaustive]
+    /// A builder for [`AggregateComplianceByConformancePack`](crate::model::AggregateComplianceByConformancePack).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) conformance_pack_name: std::option::Option<std::string::String>,
@@ -14784,7 +15474,7 @@ pub mod aggregate_compliance_by_conformance_pack {
             self.aws_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregateComplianceByConformancePack`](crate::model::AggregateComplianceByConformancePack)
+        /// Consumes the builder and constructs a [`AggregateComplianceByConformancePack`](crate::model::AggregateComplianceByConformancePack).
         pub fn build(self) -> crate::model::AggregateComplianceByConformancePack {
             crate::model::AggregateComplianceByConformancePack {
                 conformance_pack_name: self.conformance_pack_name,
@@ -14796,7 +15486,7 @@ pub mod aggregate_compliance_by_conformance_pack {
     }
 }
 impl AggregateComplianceByConformancePack {
-    /// Creates a new builder-style object to manufacture [`AggregateComplianceByConformancePack`](crate::model::AggregateComplianceByConformancePack)
+    /// Creates a new builder-style object to manufacture [`AggregateComplianceByConformancePack`](crate::model::AggregateComplianceByConformancePack).
     pub fn builder() -> crate::model::aggregate_compliance_by_conformance_pack::Builder {
         crate::model::aggregate_compliance_by_conformance_pack::Builder::default()
     }
@@ -14808,12 +15498,16 @@ impl AggregateComplianceByConformancePack {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregateConformancePackCompliance {
     /// <p>The compliance status of the conformance pack.</p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<crate::model::ConformancePackComplianceType>,
     /// <p>The number of compliant Config Rules.</p>
+    #[doc(hidden)]
     pub compliant_rule_count: i32,
     /// <p>The number of noncompliant Config Rules.</p>
+    #[doc(hidden)]
     pub non_compliant_rule_count: i32,
     /// <p>Total number of compliant rules, noncompliant rules, and the rules that do not have any applicable resources to evaluate upon resulting in insufficient data.</p>
+    #[doc(hidden)]
     pub total_rule_count: i32,
 }
 impl AggregateConformancePackCompliance {
@@ -14846,11 +15540,10 @@ impl std::fmt::Debug for AggregateConformancePackCompliance {
         formatter.finish()
     }
 }
-/// See [`AggregateConformancePackCompliance`](crate::model::AggregateConformancePackCompliance)
+/// See [`AggregateConformancePackCompliance`](crate::model::AggregateConformancePackCompliance).
 pub mod aggregate_conformance_pack_compliance {
 
-    /// A builder for [`AggregateConformancePackCompliance`](crate::model::AggregateConformancePackCompliance)
-    #[non_exhaustive]
+    /// A builder for [`AggregateConformancePackCompliance`](crate::model::AggregateConformancePackCompliance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compliance_type:
@@ -14906,7 +15599,7 @@ pub mod aggregate_conformance_pack_compliance {
             self.total_rule_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregateConformancePackCompliance`](crate::model::AggregateConformancePackCompliance)
+        /// Consumes the builder and constructs a [`AggregateConformancePackCompliance`](crate::model::AggregateConformancePackCompliance).
         pub fn build(self) -> crate::model::AggregateConformancePackCompliance {
             crate::model::AggregateConformancePackCompliance {
                 compliance_type: self.compliance_type,
@@ -14918,7 +15611,7 @@ pub mod aggregate_conformance_pack_compliance {
     }
 }
 impl AggregateConformancePackCompliance {
-    /// Creates a new builder-style object to manufacture [`AggregateConformancePackCompliance`](crate::model::AggregateConformancePackCompliance)
+    /// Creates a new builder-style object to manufacture [`AggregateConformancePackCompliance`](crate::model::AggregateConformancePackCompliance).
     pub fn builder() -> crate::model::aggregate_conformance_pack_compliance::Builder {
         crate::model::aggregate_conformance_pack_compliance::Builder::default()
     }
@@ -14929,12 +15622,16 @@ impl AggregateConformancePackCompliance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregateConformancePackComplianceFilters {
     /// <p>The name of the conformance pack.</p>
+    #[doc(hidden)]
     pub conformance_pack_name: std::option::Option<std::string::String>,
     /// <p>The compliance status of the conformance pack.</p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<crate::model::ConformancePackComplianceType>,
     /// <p>The 12-digit Amazon Web Services account ID of the source account.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The source Amazon Web Services Region from where the data is aggregated.</p>
+    #[doc(hidden)]
     pub aws_region: std::option::Option<std::string::String>,
 }
 impl AggregateConformancePackComplianceFilters {
@@ -14967,11 +15664,10 @@ impl std::fmt::Debug for AggregateConformancePackComplianceFilters {
         formatter.finish()
     }
 }
-/// See [`AggregateConformancePackComplianceFilters`](crate::model::AggregateConformancePackComplianceFilters)
+/// See [`AggregateConformancePackComplianceFilters`](crate::model::AggregateConformancePackComplianceFilters).
 pub mod aggregate_conformance_pack_compliance_filters {
 
-    /// A builder for [`AggregateConformancePackComplianceFilters`](crate::model::AggregateConformancePackComplianceFilters)
-    #[non_exhaustive]
+    /// A builder for [`AggregateConformancePackComplianceFilters`](crate::model::AggregateConformancePackComplianceFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) conformance_pack_name: std::option::Option<std::string::String>,
@@ -15030,7 +15726,7 @@ pub mod aggregate_conformance_pack_compliance_filters {
             self.aws_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregateConformancePackComplianceFilters`](crate::model::AggregateConformancePackComplianceFilters)
+        /// Consumes the builder and constructs a [`AggregateConformancePackComplianceFilters`](crate::model::AggregateConformancePackComplianceFilters).
         pub fn build(self) -> crate::model::AggregateConformancePackComplianceFilters {
             crate::model::AggregateConformancePackComplianceFilters {
                 conformance_pack_name: self.conformance_pack_name,
@@ -15042,7 +15738,7 @@ pub mod aggregate_conformance_pack_compliance_filters {
     }
 }
 impl AggregateConformancePackComplianceFilters {
-    /// Creates a new builder-style object to manufacture [`AggregateConformancePackComplianceFilters`](crate::model::AggregateConformancePackComplianceFilters)
+    /// Creates a new builder-style object to manufacture [`AggregateConformancePackComplianceFilters`](crate::model::AggregateConformancePackComplianceFilters).
     pub fn builder() -> crate::model::aggregate_conformance_pack_compliance_filters::Builder {
         crate::model::aggregate_conformance_pack_compliance_filters::Builder::default()
     }
@@ -15054,12 +15750,16 @@ impl AggregateConformancePackComplianceFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AggregateComplianceByConfigRule {
     /// <p>The name of the Config rule.</p>
+    #[doc(hidden)]
     pub config_rule_name: std::option::Option<std::string::String>,
     /// <p>Indicates whether an Amazon Web Services resource or Config rule is compliant and provides the number of contributors that affect the compliance.</p>
+    #[doc(hidden)]
     pub compliance: std::option::Option<crate::model::Compliance>,
     /// <p>The 12-digit account ID of the source account.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The source region from where the data is aggregated.</p>
+    #[doc(hidden)]
     pub aws_region: std::option::Option<std::string::String>,
 }
 impl AggregateComplianceByConfigRule {
@@ -15090,11 +15790,10 @@ impl std::fmt::Debug for AggregateComplianceByConfigRule {
         formatter.finish()
     }
 }
-/// See [`AggregateComplianceByConfigRule`](crate::model::AggregateComplianceByConfigRule)
+/// See [`AggregateComplianceByConfigRule`](crate::model::AggregateComplianceByConfigRule).
 pub mod aggregate_compliance_by_config_rule {
 
-    /// A builder for [`AggregateComplianceByConfigRule`](crate::model::AggregateComplianceByConfigRule)
-    #[non_exhaustive]
+    /// A builder for [`AggregateComplianceByConfigRule`](crate::model::AggregateComplianceByConfigRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_rule_name: std::option::Option<std::string::String>,
@@ -15149,7 +15848,7 @@ pub mod aggregate_compliance_by_config_rule {
             self.aws_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`AggregateComplianceByConfigRule`](crate::model::AggregateComplianceByConfigRule)
+        /// Consumes the builder and constructs a [`AggregateComplianceByConfigRule`](crate::model::AggregateComplianceByConfigRule).
         pub fn build(self) -> crate::model::AggregateComplianceByConfigRule {
             crate::model::AggregateComplianceByConfigRule {
                 config_rule_name: self.config_rule_name,
@@ -15161,7 +15860,7 @@ pub mod aggregate_compliance_by_config_rule {
     }
 }
 impl AggregateComplianceByConfigRule {
-    /// Creates a new builder-style object to manufacture [`AggregateComplianceByConfigRule`](crate::model::AggregateComplianceByConfigRule)
+    /// Creates a new builder-style object to manufacture [`AggregateComplianceByConfigRule`](crate::model::AggregateComplianceByConfigRule).
     pub fn builder() -> crate::model::aggregate_compliance_by_config_rule::Builder {
         crate::model::aggregate_compliance_by_config_rule::Builder::default()
     }
@@ -15172,13 +15871,17 @@ impl AggregateComplianceByConfigRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigRuleComplianceFilters {
     /// <p>The name of the Config rule.</p>
+    #[doc(hidden)]
     pub config_rule_name: std::option::Option<std::string::String>,
     /// <p>The rule compliance status.</p>
     /// <p>For the <code>ConfigRuleComplianceFilters</code> data type, Config supports only <code>COMPLIANT</code> and <code>NON_COMPLIANT</code>. Config does not support the <code>NOT_APPLICABLE</code> and the <code>INSUFFICIENT_DATA</code> values.</p>
+    #[doc(hidden)]
     pub compliance_type: std::option::Option<crate::model::ComplianceType>,
     /// <p>The 12-digit account ID of the source account. </p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The source region where the data is aggregated. </p>
+    #[doc(hidden)]
     pub aws_region: std::option::Option<std::string::String>,
 }
 impl ConfigRuleComplianceFilters {
@@ -15210,11 +15913,10 @@ impl std::fmt::Debug for ConfigRuleComplianceFilters {
         formatter.finish()
     }
 }
-/// See [`ConfigRuleComplianceFilters`](crate::model::ConfigRuleComplianceFilters)
+/// See [`ConfigRuleComplianceFilters`](crate::model::ConfigRuleComplianceFilters).
 pub mod config_rule_compliance_filters {
 
-    /// A builder for [`ConfigRuleComplianceFilters`](crate::model::ConfigRuleComplianceFilters)
-    #[non_exhaustive]
+    /// A builder for [`ConfigRuleComplianceFilters`](crate::model::ConfigRuleComplianceFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) config_rule_name: std::option::Option<std::string::String>,
@@ -15271,7 +15973,7 @@ pub mod config_rule_compliance_filters {
             self.aws_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigRuleComplianceFilters`](crate::model::ConfigRuleComplianceFilters)
+        /// Consumes the builder and constructs a [`ConfigRuleComplianceFilters`](crate::model::ConfigRuleComplianceFilters).
         pub fn build(self) -> crate::model::ConfigRuleComplianceFilters {
             crate::model::ConfigRuleComplianceFilters {
                 config_rule_name: self.config_rule_name,
@@ -15283,7 +15985,7 @@ pub mod config_rule_compliance_filters {
     }
 }
 impl ConfigRuleComplianceFilters {
-    /// Creates a new builder-style object to manufacture [`ConfigRuleComplianceFilters`](crate::model::ConfigRuleComplianceFilters)
+    /// Creates a new builder-style object to manufacture [`ConfigRuleComplianceFilters`](crate::model::ConfigRuleComplianceFilters).
     pub fn builder() -> crate::model::config_rule_compliance_filters::Builder {
         crate::model::config_rule_compliance_filters::Builder::default()
     }
@@ -15294,8 +15996,10 @@ impl ConfigRuleComplianceFilters {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailedDeleteRemediationExceptionsBatch {
     /// <p>Returns a failure message for delete remediation exception. For example, Config creates an exception due to an internal error.</p>
+    #[doc(hidden)]
     pub failure_message: std::option::Option<std::string::String>,
     /// <p>Returns remediation exception resource key object of the failed items.</p>
+    #[doc(hidden)]
     pub failed_items:
         std::option::Option<std::vec::Vec<crate::model::RemediationExceptionResourceKey>>,
 }
@@ -15319,11 +16023,10 @@ impl std::fmt::Debug for FailedDeleteRemediationExceptionsBatch {
         formatter.finish()
     }
 }
-/// See [`FailedDeleteRemediationExceptionsBatch`](crate::model::FailedDeleteRemediationExceptionsBatch)
+/// See [`FailedDeleteRemediationExceptionsBatch`](crate::model::FailedDeleteRemediationExceptionsBatch).
 pub mod failed_delete_remediation_exceptions_batch {
 
-    /// A builder for [`FailedDeleteRemediationExceptionsBatch`](crate::model::FailedDeleteRemediationExceptionsBatch)
-    #[non_exhaustive]
+    /// A builder for [`FailedDeleteRemediationExceptionsBatch`](crate::model::FailedDeleteRemediationExceptionsBatch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failure_message: std::option::Option<std::string::String>,
@@ -15368,7 +16071,7 @@ pub mod failed_delete_remediation_exceptions_batch {
             self.failed_items = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailedDeleteRemediationExceptionsBatch`](crate::model::FailedDeleteRemediationExceptionsBatch)
+        /// Consumes the builder and constructs a [`FailedDeleteRemediationExceptionsBatch`](crate::model::FailedDeleteRemediationExceptionsBatch).
         pub fn build(self) -> crate::model::FailedDeleteRemediationExceptionsBatch {
             crate::model::FailedDeleteRemediationExceptionsBatch {
                 failure_message: self.failure_message,
@@ -15378,7 +16081,7 @@ pub mod failed_delete_remediation_exceptions_batch {
     }
 }
 impl FailedDeleteRemediationExceptionsBatch {
-    /// Creates a new builder-style object to manufacture [`FailedDeleteRemediationExceptionsBatch`](crate::model::FailedDeleteRemediationExceptionsBatch)
+    /// Creates a new builder-style object to manufacture [`FailedDeleteRemediationExceptionsBatch`](crate::model::FailedDeleteRemediationExceptionsBatch).
     pub fn builder() -> crate::model::failed_delete_remediation_exceptions_batch::Builder {
         crate::model::failed_delete_remediation_exceptions_batch::Builder::default()
     }
@@ -15389,10 +16092,13 @@ impl FailedDeleteRemediationExceptionsBatch {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BaseConfigurationItem {
     /// <p>The version number of the resource configuration.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The 12-digit Amazon Web Services account ID associated with the resource.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The time when the configuration recording was initiated.</p>
+    #[doc(hidden)]
     pub configuration_item_capture_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The configuration item status. The valid values are:</p>
     /// <ul>
@@ -15404,26 +16110,37 @@ pub struct BaseConfigurationItem {
     /// </ul> <note>
     /// <p>The CIs do not incur any cost.</p>
     /// </note>
+    #[doc(hidden)]
     pub configuration_item_status: std::option::Option<crate::model::ConfigurationItemStatus>,
     /// <p>An identifier that indicates the ordering of the configuration items of a resource.</p>
+    #[doc(hidden)]
     pub configuration_state_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the resource.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The type of Amazon Web Services resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>The ID of the resource (for example., sg-xxxxxx).</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The custom name of the resource, if available.</p>
+    #[doc(hidden)]
     pub resource_name: std::option::Option<std::string::String>,
     /// <p>The region where the resource resides.</p>
+    #[doc(hidden)]
     pub aws_region: std::option::Option<std::string::String>,
     /// <p>The Availability Zone associated with the resource.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>The time stamp when the resource was created.</p>
+    #[doc(hidden)]
     pub resource_creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the resource configuration.</p>
+    #[doc(hidden)]
     pub configuration: std::option::Option<std::string::String>,
     /// <p>Configuration attributes that Config returns for certain resource types to supplement the information returned for the configuration parameter.</p>
+    #[doc(hidden)]
     pub supplementary_configuration:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -15527,11 +16244,10 @@ impl std::fmt::Debug for BaseConfigurationItem {
         formatter.finish()
     }
 }
-/// See [`BaseConfigurationItem`](crate::model::BaseConfigurationItem)
+/// See [`BaseConfigurationItem`](crate::model::BaseConfigurationItem).
 pub mod base_configuration_item {
 
-    /// A builder for [`BaseConfigurationItem`](crate::model::BaseConfigurationItem)
-    #[non_exhaustive]
+    /// A builder for [`BaseConfigurationItem`](crate::model::BaseConfigurationItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version: std::option::Option<std::string::String>,
@@ -15756,7 +16472,7 @@ pub mod base_configuration_item {
             self.supplementary_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`BaseConfigurationItem`](crate::model::BaseConfigurationItem)
+        /// Consumes the builder and constructs a [`BaseConfigurationItem`](crate::model::BaseConfigurationItem).
         pub fn build(self) -> crate::model::BaseConfigurationItem {
             crate::model::BaseConfigurationItem {
                 version: self.version,
@@ -15778,7 +16494,7 @@ pub mod base_configuration_item {
     }
 }
 impl BaseConfigurationItem {
-    /// Creates a new builder-style object to manufacture [`BaseConfigurationItem`](crate::model::BaseConfigurationItem)
+    /// Creates a new builder-style object to manufacture [`BaseConfigurationItem`](crate::model::BaseConfigurationItem).
     pub fn builder() -> crate::model::base_configuration_item::Builder {
         crate::model::base_configuration_item::Builder::default()
     }

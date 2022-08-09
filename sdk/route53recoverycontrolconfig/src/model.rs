@@ -6,20 +6,28 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GatingRule {
     /// <p>The Amazon Resource Name (ARN) of the control panel.</p>
+    #[doc(hidden)]
     pub control_panel_arn: std::option::Option<std::string::String>,
     /// <p>An array of gating routing control Amazon Resource Names (ARNs). For a simple "on/off" switch, specify the ARN for one routing control. The gating routing controls are evaluated by the rule configuration that you specify to determine if the target routing control states can be changed.</p>
+    #[doc(hidden)]
     pub gating_controls: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The name for the gating rule. You can use any non-white space character in the name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The criteria that you set for gating routing controls that designates how many of the routing control states must be ON to allow you to update target routing control states.</p>
+    #[doc(hidden)]
     pub rule_config: std::option::Option<crate::model::RuleConfig>,
     /// <p>The Amazon Resource Name (ARN) of the gating rule.</p>
+    #[doc(hidden)]
     pub safety_rule_arn: std::option::Option<std::string::String>,
     /// <p>The deployment status of a gating rule. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
     /// <p>An array of target routing control Amazon Resource Names (ARNs) for which the states can only be updated if the rule configuration that you specify evaluates to true for the gating routing control. As a simple example, if you have a single gating control, it acts as an overall "on/off" switch for a set of target routing controls. You can use this to manually override automated fail over, for example.</p>
+    #[doc(hidden)]
     pub target_controls: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.</p>
+    #[doc(hidden)]
     pub wait_period_ms: i32,
 }
 impl GatingRule {
@@ -70,11 +78,10 @@ impl std::fmt::Debug for GatingRule {
         formatter.finish()
     }
 }
-/// See [`GatingRule`](crate::model::GatingRule)
+/// See [`GatingRule`](crate::model::GatingRule).
 pub mod gating_rule {
 
-    /// A builder for [`GatingRule`](crate::model::GatingRule)
-    #[non_exhaustive]
+    /// A builder for [`GatingRule`](crate::model::GatingRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) control_panel_arn: std::option::Option<std::string::String>,
@@ -194,7 +201,7 @@ pub mod gating_rule {
             self.wait_period_ms = input;
             self
         }
-        /// Consumes the builder and constructs a [`GatingRule`](crate::model::GatingRule)
+        /// Consumes the builder and constructs a [`GatingRule`](crate::model::GatingRule).
         pub fn build(self) -> crate::model::GatingRule {
             crate::model::GatingRule {
                 control_panel_arn: self.control_panel_arn,
@@ -210,7 +217,7 @@ pub mod gating_rule {
     }
 }
 impl GatingRule {
-    /// Creates a new builder-style object to manufacture [`GatingRule`](crate::model::GatingRule)
+    /// Creates a new builder-style object to manufacture [`GatingRule`](crate::model::GatingRule).
     pub fn builder() -> crate::model::gating_rule::Builder {
         crate::model::gating_rule::Builder::default()
     }
@@ -280,10 +287,13 @@ impl AsRef<str> for Status {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleConfig {
     /// <p>Logical negation of the rule. If the rule would usually evaluate true, it's evaluated as false, and vice versa.</p>
+    #[doc(hidden)]
     pub inverted: bool,
     /// <p>The value of N, when you specify an ATLEAST rule type. That is, Threshold is the number of controls that must be set when you specify an ATLEAST type.</p>
+    #[doc(hidden)]
     pub threshold: i32,
     /// <p>A rule can be one of the following: ATLEAST, AND, or OR.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RuleType>,
 }
 impl RuleConfig {
@@ -309,11 +319,10 @@ impl std::fmt::Debug for RuleConfig {
         formatter.finish()
     }
 }
-/// See [`RuleConfig`](crate::model::RuleConfig)
+/// See [`RuleConfig`](crate::model::RuleConfig).
 pub mod rule_config {
 
-    /// A builder for [`RuleConfig`](crate::model::RuleConfig)
-    #[non_exhaustive]
+    /// A builder for [`RuleConfig`](crate::model::RuleConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) inverted: std::option::Option<bool>,
@@ -351,7 +360,7 @@ pub mod rule_config {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleConfig`](crate::model::RuleConfig)
+        /// Consumes the builder and constructs a [`RuleConfig`](crate::model::RuleConfig).
         pub fn build(self) -> crate::model::RuleConfig {
             crate::model::RuleConfig {
                 inverted: self.inverted.unwrap_or_default(),
@@ -362,7 +371,7 @@ pub mod rule_config {
     }
 }
 impl RuleConfig {
-    /// Creates a new builder-style object to manufacture [`RuleConfig`](crate::model::RuleConfig)
+    /// Creates a new builder-style object to manufacture [`RuleConfig`](crate::model::RuleConfig).
     pub fn builder() -> crate::model::rule_config::Builder {
         crate::model::rule_config::Builder::default()
     }
@@ -432,18 +441,25 @@ impl AsRef<str> for RuleType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssertionRule {
     /// <p>The routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed. For example, you might include three routing controls, one for each of three Amazon Web Services Regions.</p>
+    #[doc(hidden)]
     pub asserted_controls: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the control panel.</p>
+    #[doc(hidden)]
     pub control_panel_arn: std::option::Option<std::string::String>,
     /// <p>Name of the assertion rule. You can use any non-white space character in the name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The criteria that you set for specific assertion routing controls (AssertedControls) that designate how many routing control states must be ON as the result of a transaction. For example, if you have three assertion routing controls, you might specify atleast 2 for your rule configuration. This means that at least two assertion routing control states must be ON, so that at least two Amazon Web Services Regions have traffic flowing to them.</p>
+    #[doc(hidden)]
     pub rule_config: std::option::Option<crate::model::RuleConfig>,
     /// <p>The Amazon Resource Name (ARN) of the assertion rule.</p>
+    #[doc(hidden)]
     pub safety_rule_arn: std::option::Option<std::string::String>,
     /// <p>The deployment status of an assertion rule. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
     /// <p>An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.</p>
+    #[doc(hidden)]
     pub wait_period_ms: i32,
 }
 impl AssertionRule {
@@ -489,11 +505,10 @@ impl std::fmt::Debug for AssertionRule {
         formatter.finish()
     }
 }
-/// See [`AssertionRule`](crate::model::AssertionRule)
+/// See [`AssertionRule`](crate::model::AssertionRule).
 pub mod assertion_rule {
 
-    /// A builder for [`AssertionRule`](crate::model::AssertionRule)
-    #[non_exhaustive]
+    /// A builder for [`AssertionRule`](crate::model::AssertionRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asserted_controls: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -593,7 +608,7 @@ pub mod assertion_rule {
             self.wait_period_ms = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssertionRule`](crate::model::AssertionRule)
+        /// Consumes the builder and constructs a [`AssertionRule`](crate::model::AssertionRule).
         pub fn build(self) -> crate::model::AssertionRule {
             crate::model::AssertionRule {
                 asserted_controls: self.asserted_controls,
@@ -608,7 +623,7 @@ pub mod assertion_rule {
     }
 }
 impl AssertionRule {
-    /// Creates a new builder-style object to manufacture [`AssertionRule`](crate::model::AssertionRule)
+    /// Creates a new builder-style object to manufacture [`AssertionRule`](crate::model::AssertionRule).
     pub fn builder() -> crate::model::assertion_rule::Builder {
         crate::model::assertion_rule::Builder::default()
     }
@@ -619,10 +634,13 @@ impl AssertionRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GatingRuleUpdate {
     /// <p>The name for the gating rule. You can use any non-white space character in the name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the gating rule.</p>
+    #[doc(hidden)]
     pub safety_rule_arn: std::option::Option<std::string::String>,
     /// <p>An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.</p>
+    #[doc(hidden)]
     pub wait_period_ms: i32,
 }
 impl GatingRuleUpdate {
@@ -648,11 +666,10 @@ impl std::fmt::Debug for GatingRuleUpdate {
         formatter.finish()
     }
 }
-/// See [`GatingRuleUpdate`](crate::model::GatingRuleUpdate)
+/// See [`GatingRuleUpdate`](crate::model::GatingRuleUpdate).
 pub mod gating_rule_update {
 
-    /// A builder for [`GatingRuleUpdate`](crate::model::GatingRuleUpdate)
-    #[non_exhaustive]
+    /// A builder for [`GatingRuleUpdate`](crate::model::GatingRuleUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -693,7 +710,7 @@ pub mod gating_rule_update {
             self.wait_period_ms = input;
             self
         }
-        /// Consumes the builder and constructs a [`GatingRuleUpdate`](crate::model::GatingRuleUpdate)
+        /// Consumes the builder and constructs a [`GatingRuleUpdate`](crate::model::GatingRuleUpdate).
         pub fn build(self) -> crate::model::GatingRuleUpdate {
             crate::model::GatingRuleUpdate {
                 name: self.name,
@@ -704,7 +721,7 @@ pub mod gating_rule_update {
     }
 }
 impl GatingRuleUpdate {
-    /// Creates a new builder-style object to manufacture [`GatingRuleUpdate`](crate::model::GatingRuleUpdate)
+    /// Creates a new builder-style object to manufacture [`GatingRuleUpdate`](crate::model::GatingRuleUpdate).
     pub fn builder() -> crate::model::gating_rule_update::Builder {
         crate::model::gating_rule_update::Builder::default()
     }
@@ -715,10 +732,13 @@ impl GatingRuleUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssertionRuleUpdate {
     /// <p>The name of the assertion rule. You can use any non-white space character in the name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the assertion rule.</p>
+    #[doc(hidden)]
     pub safety_rule_arn: std::option::Option<std::string::String>,
     /// <p>An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.</p>
+    #[doc(hidden)]
     pub wait_period_ms: i32,
 }
 impl AssertionRuleUpdate {
@@ -744,11 +764,10 @@ impl std::fmt::Debug for AssertionRuleUpdate {
         formatter.finish()
     }
 }
-/// See [`AssertionRuleUpdate`](crate::model::AssertionRuleUpdate)
+/// See [`AssertionRuleUpdate`](crate::model::AssertionRuleUpdate).
 pub mod assertion_rule_update {
 
-    /// A builder for [`AssertionRuleUpdate`](crate::model::AssertionRuleUpdate)
-    #[non_exhaustive]
+    /// A builder for [`AssertionRuleUpdate`](crate::model::AssertionRuleUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -789,7 +808,7 @@ pub mod assertion_rule_update {
             self.wait_period_ms = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssertionRuleUpdate`](crate::model::AssertionRuleUpdate)
+        /// Consumes the builder and constructs a [`AssertionRuleUpdate`](crate::model::AssertionRuleUpdate).
         pub fn build(self) -> crate::model::AssertionRuleUpdate {
             crate::model::AssertionRuleUpdate {
                 name: self.name,
@@ -800,7 +819,7 @@ pub mod assertion_rule_update {
     }
 }
 impl AssertionRuleUpdate {
-    /// Creates a new builder-style object to manufacture [`AssertionRuleUpdate`](crate::model::AssertionRuleUpdate)
+    /// Creates a new builder-style object to manufacture [`AssertionRuleUpdate`](crate::model::AssertionRuleUpdate).
     pub fn builder() -> crate::model::assertion_rule_update::Builder {
         crate::model::assertion_rule_update::Builder::default()
     }
@@ -811,12 +830,16 @@ impl AssertionRuleUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RoutingControl {
     /// <p>The Amazon Resource Name (ARN) of the control panel that includes the routing control.</p>
+    #[doc(hidden)]
     pub control_panel_arn: std::option::Option<std::string::String>,
     /// <p>The name of the routing control.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the routing control.</p>
+    #[doc(hidden)]
     pub routing_control_arn: std::option::Option<std::string::String>,
     /// <p>The deployment status of a routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
 }
 impl RoutingControl {
@@ -847,11 +870,10 @@ impl std::fmt::Debug for RoutingControl {
         formatter.finish()
     }
 }
-/// See [`RoutingControl`](crate::model::RoutingControl)
+/// See [`RoutingControl`](crate::model::RoutingControl).
 pub mod routing_control {
 
-    /// A builder for [`RoutingControl`](crate::model::RoutingControl)
-    #[non_exhaustive]
+    /// A builder for [`RoutingControl`](crate::model::RoutingControl).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) control_panel_arn: std::option::Option<std::string::String>,
@@ -906,7 +928,7 @@ pub mod routing_control {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`RoutingControl`](crate::model::RoutingControl)
+        /// Consumes the builder and constructs a [`RoutingControl`](crate::model::RoutingControl).
         pub fn build(self) -> crate::model::RoutingControl {
             crate::model::RoutingControl {
                 control_panel_arn: self.control_panel_arn,
@@ -918,7 +940,7 @@ pub mod routing_control {
     }
 }
 impl RoutingControl {
-    /// Creates a new builder-style object to manufacture [`RoutingControl`](crate::model::RoutingControl)
+    /// Creates a new builder-style object to manufacture [`RoutingControl`](crate::model::RoutingControl).
     pub fn builder() -> crate::model::routing_control::Builder {
         crate::model::routing_control::Builder::default()
     }
@@ -929,16 +951,22 @@ impl RoutingControl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ControlPanel {
     /// <p>The Amazon Resource Name (ARN) of the cluster that includes the control panel.</p>
+    #[doc(hidden)]
     pub cluster_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the control panel.</p>
+    #[doc(hidden)]
     pub control_panel_arn: std::option::Option<std::string::String>,
     /// <p>A flag that Amazon Route 53 Application Recovery Controller sets to true to designate the default control panel for a cluster. When you create a cluster, Amazon Route 53 Application Recovery Controller creates a control panel, and sets this flag for that control panel. If you create a control panel yourself, this flag is set to false.</p>
+    #[doc(hidden)]
     pub default_control_panel: bool,
     /// <p>The name of the control panel. You can use any non-white space character in the name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The number of routing controls in the control panel.</p>
+    #[doc(hidden)]
     pub routing_control_count: i32,
     /// <p>The deployment status of control panel. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
 }
 impl ControlPanel {
@@ -979,11 +1007,10 @@ impl std::fmt::Debug for ControlPanel {
         formatter.finish()
     }
 }
-/// See [`ControlPanel`](crate::model::ControlPanel)
+/// See [`ControlPanel`](crate::model::ControlPanel).
 pub mod control_panel {
 
-    /// A builder for [`ControlPanel`](crate::model::ControlPanel)
-    #[non_exhaustive]
+    /// A builder for [`ControlPanel`](crate::model::ControlPanel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cluster_arn: std::option::Option<std::string::String>,
@@ -1057,7 +1084,7 @@ pub mod control_panel {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ControlPanel`](crate::model::ControlPanel)
+        /// Consumes the builder and constructs a [`ControlPanel`](crate::model::ControlPanel).
         pub fn build(self) -> crate::model::ControlPanel {
             crate::model::ControlPanel {
                 cluster_arn: self.cluster_arn,
@@ -1071,7 +1098,7 @@ pub mod control_panel {
     }
 }
 impl ControlPanel {
-    /// Creates a new builder-style object to manufacture [`ControlPanel`](crate::model::ControlPanel)
+    /// Creates a new builder-style object to manufacture [`ControlPanel`](crate::model::ControlPanel).
     pub fn builder() -> crate::model::control_panel::Builder {
         crate::model::control_panel::Builder::default()
     }
@@ -1082,9 +1109,11 @@ impl ControlPanel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Rule {
     /// <p>An assertion rule enforces that, when a routing control state is changed, the criteria set by the rule configuration is met. Otherwise, the change to the routing control state is not accepted. For example, the criteria might be that at least one routing control state is On after the transation so that traffic continues to flow to at least one cell for the application. This ensures that you avoid a fail-open scenario.</p>
+    #[doc(hidden)]
     pub assertion: std::option::Option<crate::model::AssertionRule>,
     /// <p>A gating rule verifies that a gating routing control or set of gating rounting controls, evaluates as true, based on a rule configuration that you specify, which allows a set of routing control state changes to complete.</p>
     /// <p>For example, if you specify one gating routing control and you set the Type in the rule configuration to OR, that indicates that you must set the gating routing control to On for the rule to evaluate as true; that is, for the gating control "switch" to be "On". When you do that, then you can update the routing control states for the target routing controls that you specify in the gating rule.</p>
+    #[doc(hidden)]
     pub gating: std::option::Option<crate::model::GatingRule>,
 }
 impl Rule {
@@ -1106,11 +1135,10 @@ impl std::fmt::Debug for Rule {
         formatter.finish()
     }
 }
-/// See [`Rule`](crate::model::Rule)
+/// See [`Rule`](crate::model::Rule).
 pub mod rule {
 
-    /// A builder for [`Rule`](crate::model::Rule)
-    #[non_exhaustive]
+    /// A builder for [`Rule`](crate::model::Rule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assertion: std::option::Option<crate::model::AssertionRule>,
@@ -1142,7 +1170,7 @@ pub mod rule {
             self.gating = input;
             self
         }
-        /// Consumes the builder and constructs a [`Rule`](crate::model::Rule)
+        /// Consumes the builder and constructs a [`Rule`](crate::model::Rule).
         pub fn build(self) -> crate::model::Rule {
             crate::model::Rule {
                 assertion: self.assertion,
@@ -1152,7 +1180,7 @@ pub mod rule {
     }
 }
 impl Rule {
-    /// Creates a new builder-style object to manufacture [`Rule`](crate::model::Rule)
+    /// Creates a new builder-style object to manufacture [`Rule`](crate::model::Rule).
     pub fn builder() -> crate::model::rule::Builder {
         crate::model::rule::Builder::default()
     }
@@ -1163,13 +1191,17 @@ impl Rule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Cluster {
     /// <p>The Amazon Resource Name (ARN) of the cluster.</p>
+    #[doc(hidden)]
     pub cluster_arn: std::option::Option<std::string::String>,
     /// <p>Endpoints for a cluster. Specify one of these endpoints when you want to set or retrieve a routing control state in the cluster.</p>
     /// <p>To get or update the routing control state, see the Amazon Route 53 Application Recovery Controller Routing Control Actions.</p>
+    #[doc(hidden)]
     pub cluster_endpoints: std::option::Option<std::vec::Vec<crate::model::ClusterEndpoint>>,
     /// <p>The name of the cluster.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Deployment status of a resource. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::Status>,
 }
 impl Cluster {
@@ -1201,11 +1233,10 @@ impl std::fmt::Debug for Cluster {
         formatter.finish()
     }
 }
-/// See [`Cluster`](crate::model::Cluster)
+/// See [`Cluster`](crate::model::Cluster).
 pub mod cluster {
 
-    /// A builder for [`Cluster`](crate::model::Cluster)
-    #[non_exhaustive]
+    /// A builder for [`Cluster`](crate::model::Cluster).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cluster_arn: std::option::Option<std::string::String>,
@@ -1266,7 +1297,7 @@ pub mod cluster {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`Cluster`](crate::model::Cluster)
+        /// Consumes the builder and constructs a [`Cluster`](crate::model::Cluster).
         pub fn build(self) -> crate::model::Cluster {
             crate::model::Cluster {
                 cluster_arn: self.cluster_arn,
@@ -1278,7 +1309,7 @@ pub mod cluster {
     }
 }
 impl Cluster {
-    /// Creates a new builder-style object to manufacture [`Cluster`](crate::model::Cluster)
+    /// Creates a new builder-style object to manufacture [`Cluster`](crate::model::Cluster).
     pub fn builder() -> crate::model::cluster::Builder {
         crate::model::cluster::Builder::default()
     }
@@ -1290,8 +1321,10 @@ impl Cluster {
 pub struct ClusterEndpoint {
     /// <p>A cluster endpoint. Specify an endpoint and Amazon Web Services Region when you want to set or retrieve a routing control state in the cluster.</p>
     /// <p>To get or update the routing control state, see the Amazon Route 53 Application Recovery Controller Routing Control Actions.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region for a cluster endpoint.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
 }
 impl ClusterEndpoint {
@@ -1313,11 +1346,10 @@ impl std::fmt::Debug for ClusterEndpoint {
         formatter.finish()
     }
 }
-/// See [`ClusterEndpoint`](crate::model::ClusterEndpoint)
+/// See [`ClusterEndpoint`](crate::model::ClusterEndpoint).
 pub mod cluster_endpoint {
 
-    /// A builder for [`ClusterEndpoint`](crate::model::ClusterEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`ClusterEndpoint`](crate::model::ClusterEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint: std::option::Option<std::string::String>,
@@ -1346,7 +1378,7 @@ pub mod cluster_endpoint {
             self.region = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClusterEndpoint`](crate::model::ClusterEndpoint)
+        /// Consumes the builder and constructs a [`ClusterEndpoint`](crate::model::ClusterEndpoint).
         pub fn build(self) -> crate::model::ClusterEndpoint {
             crate::model::ClusterEndpoint {
                 endpoint: self.endpoint,
@@ -1356,7 +1388,7 @@ pub mod cluster_endpoint {
     }
 }
 impl ClusterEndpoint {
-    /// Creates a new builder-style object to manufacture [`ClusterEndpoint`](crate::model::ClusterEndpoint)
+    /// Creates a new builder-style object to manufacture [`ClusterEndpoint`](crate::model::ClusterEndpoint).
     pub fn builder() -> crate::model::cluster_endpoint::Builder {
         crate::model::cluster_endpoint::Builder::default()
     }
@@ -1367,17 +1399,23 @@ impl ClusterEndpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NewGatingRule {
     /// <p>The Amazon Resource Name (ARN) of the control panel.</p>
+    #[doc(hidden)]
     pub control_panel_arn: std::option::Option<std::string::String>,
     /// <p>The gating controls for the new gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.</p>
+    #[doc(hidden)]
     pub gating_controls: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The name for the new gating rule.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The criteria that you set for specific gating controls (routing controls) that designates how many control states must be ON to allow you to change (set or unset) the target control states.</p>
+    #[doc(hidden)]
     pub rule_config: std::option::Option<crate::model::RuleConfig>,
     /// <p>Routing controls that can only be set or unset if the specified RuleConfig evaluates to true for the specified GatingControls. For example, say you have three gating controls, one for each of three Amazon Web Services Regions. Now you specify AtLeast 2 as your RuleConfig. With these settings, you can only change (set or unset) the routing controls that you have specified as TargetControls if that rule evaluates to true.</p>
     /// <p>In other words, your ability to change the routing controls that you have specified as TargetControls is gated by the rule that you set for the routing controls in GatingControls.</p>
+    #[doc(hidden)]
     pub target_controls: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.</p>
+    #[doc(hidden)]
     pub wait_period_ms: i32,
 }
 impl NewGatingRule {
@@ -1419,11 +1457,10 @@ impl std::fmt::Debug for NewGatingRule {
         formatter.finish()
     }
 }
-/// See [`NewGatingRule`](crate::model::NewGatingRule)
+/// See [`NewGatingRule`](crate::model::NewGatingRule).
 pub mod new_gating_rule {
 
-    /// A builder for [`NewGatingRule`](crate::model::NewGatingRule)
-    #[non_exhaustive]
+    /// A builder for [`NewGatingRule`](crate::model::NewGatingRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) control_panel_arn: std::option::Option<std::string::String>,
@@ -1520,7 +1557,7 @@ pub mod new_gating_rule {
             self.wait_period_ms = input;
             self
         }
-        /// Consumes the builder and constructs a [`NewGatingRule`](crate::model::NewGatingRule)
+        /// Consumes the builder and constructs a [`NewGatingRule`](crate::model::NewGatingRule).
         pub fn build(self) -> crate::model::NewGatingRule {
             crate::model::NewGatingRule {
                 control_panel_arn: self.control_panel_arn,
@@ -1534,7 +1571,7 @@ pub mod new_gating_rule {
     }
 }
 impl NewGatingRule {
-    /// Creates a new builder-style object to manufacture [`NewGatingRule`](crate::model::NewGatingRule)
+    /// Creates a new builder-style object to manufacture [`NewGatingRule`](crate::model::NewGatingRule).
     pub fn builder() -> crate::model::new_gating_rule::Builder {
         crate::model::new_gating_rule::Builder::default()
     }
@@ -1545,14 +1582,19 @@ impl NewGatingRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NewAssertionRule {
     /// <p>The routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed. For example, you might include three routing controls, one for each of three Amazon Web Services Regions.</p>
+    #[doc(hidden)]
     pub asserted_controls: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) for the control panel.</p>
+    #[doc(hidden)]
     pub control_panel_arn: std::option::Option<std::string::String>,
     /// <p>The name of the assertion rule. You can use any non-white space character in the name.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The criteria that you set for specific assertion controls (routing controls) that designate how many control states must be ON as the result of a transaction. For example, if you have three assertion controls, you might specify ATLEAST 2for your rule configuration. This means that at least two assertion controls must be ON, so that at least two Amazon Web Services Regions have traffic flowing to them.</p>
+    #[doc(hidden)]
     pub rule_config: std::option::Option<crate::model::RuleConfig>,
     /// <p>An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.</p>
+    #[doc(hidden)]
     pub wait_period_ms: i32,
 }
 impl NewAssertionRule {
@@ -1588,11 +1630,10 @@ impl std::fmt::Debug for NewAssertionRule {
         formatter.finish()
     }
 }
-/// See [`NewAssertionRule`](crate::model::NewAssertionRule)
+/// See [`NewAssertionRule`](crate::model::NewAssertionRule).
 pub mod new_assertion_rule {
 
-    /// A builder for [`NewAssertionRule`](crate::model::NewAssertionRule)
-    #[non_exhaustive]
+    /// A builder for [`NewAssertionRule`](crate::model::NewAssertionRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asserted_controls: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1667,7 +1708,7 @@ pub mod new_assertion_rule {
             self.wait_period_ms = input;
             self
         }
-        /// Consumes the builder and constructs a [`NewAssertionRule`](crate::model::NewAssertionRule)
+        /// Consumes the builder and constructs a [`NewAssertionRule`](crate::model::NewAssertionRule).
         pub fn build(self) -> crate::model::NewAssertionRule {
             crate::model::NewAssertionRule {
                 asserted_controls: self.asserted_controls,
@@ -1680,7 +1721,7 @@ pub mod new_assertion_rule {
     }
 }
 impl NewAssertionRule {
-    /// Creates a new builder-style object to manufacture [`NewAssertionRule`](crate::model::NewAssertionRule)
+    /// Creates a new builder-style object to manufacture [`NewAssertionRule`](crate::model::NewAssertionRule).
     pub fn builder() -> crate::model::new_assertion_rule::Builder {
         crate::model::new_assertion_rule::Builder::default()
     }

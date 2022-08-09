@@ -405,8 +405,10 @@ impl AsRef<str> for ConstraintViolationExceptionReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Policy {
     /// <p>A structure that contains additional details about the policy.</p>
+    #[doc(hidden)]
     pub policy_summary: std::option::Option<crate::model::PolicySummary>,
     /// <p>The text content of the policy.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
 }
 impl Policy {
@@ -427,11 +429,10 @@ impl std::fmt::Debug for Policy {
         formatter.finish()
     }
 }
-/// See [`Policy`](crate::model::Policy)
+/// See [`Policy`](crate::model::Policy).
 pub mod policy {
 
-    /// A builder for [`Policy`](crate::model::Policy)
-    #[non_exhaustive]
+    /// A builder for [`Policy`](crate::model::Policy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_summary: std::option::Option<crate::model::PolicySummary>,
@@ -461,7 +462,7 @@ pub mod policy {
             self.content = input;
             self
         }
-        /// Consumes the builder and constructs a [`Policy`](crate::model::Policy)
+        /// Consumes the builder and constructs a [`Policy`](crate::model::Policy).
         pub fn build(self) -> crate::model::Policy {
             crate::model::Policy {
                 policy_summary: self.policy_summary,
@@ -471,7 +472,7 @@ pub mod policy {
     }
 }
 impl Policy {
-    /// Creates a new builder-style object to manufacture [`Policy`](crate::model::Policy)
+    /// Creates a new builder-style object to manufacture [`Policy`](crate::model::Policy).
     pub fn builder() -> crate::model::policy::Builder {
         crate::model::policy::Builder::default()
     }
@@ -483,18 +484,24 @@ impl Policy {
 pub struct PolicySummary {
     /// <p>The unique identifier (ID) of the policy.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for a policy ID string requires "p-" followed by from 8 to 128 lowercase or uppercase letters, digits, or the underscore character (_).</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the policy.</p>
     /// <p>For more information about ARNs in Organizations, see <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies">ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The friendly name of the policy.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter is a string of any of the characters in the ASCII character range.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the policy.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The type of policy.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::PolicyType>,
     /// <p>A boolean value that indicates whether the specified policy is an Amazon Web Services managed policy. If true, then you can attach the policy to roots, OUs, or accounts, but you cannot edit it.</p>
+    #[doc(hidden)]
     pub aws_managed: bool,
 }
 impl PolicySummary {
@@ -538,11 +545,10 @@ impl std::fmt::Debug for PolicySummary {
         formatter.finish()
     }
 }
-/// See [`PolicySummary`](crate::model::PolicySummary)
+/// See [`PolicySummary`](crate::model::PolicySummary).
 pub mod policy_summary {
 
-    /// A builder for [`PolicySummary`](crate::model::PolicySummary)
-    #[non_exhaustive]
+    /// A builder for [`PolicySummary`](crate::model::PolicySummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -619,7 +625,7 @@ pub mod policy_summary {
             self.aws_managed = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicySummary`](crate::model::PolicySummary)
+        /// Consumes the builder and constructs a [`PolicySummary`](crate::model::PolicySummary).
         pub fn build(self) -> crate::model::PolicySummary {
             crate::model::PolicySummary {
                 id: self.id,
@@ -633,7 +639,7 @@ pub mod policy_summary {
     }
 }
 impl PolicySummary {
-    /// Creates a new builder-style object to manufacture [`PolicySummary`](crate::model::PolicySummary)
+    /// Creates a new builder-style object to manufacture [`PolicySummary`](crate::model::PolicySummary).
     pub fn builder() -> crate::model::policy_summary::Builder {
         crate::model::policy_summary::Builder::default()
     }
@@ -713,12 +719,15 @@ impl AsRef<str> for PolicyType {
 pub struct OrganizationalUnit {
     /// <p>The unique identifier (ID) associated with this OU.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for an organizational unit ID string requires "ou-" followed by from 4 to 32 lowercase letters or digits (the ID of the root that contains the OU). This string is followed by a second "-" dash and from 8 to 32 additional lowercase letters or digits.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of this OU.</p>
     /// <p>For more information about ARNs in Organizations, see <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies">ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The friendly name of this OU.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter is a string of any of the characters in the ASCII character range.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl OrganizationalUnit {
@@ -747,11 +756,10 @@ impl std::fmt::Debug for OrganizationalUnit {
         formatter.finish()
     }
 }
-/// See [`OrganizationalUnit`](crate::model::OrganizationalUnit)
+/// See [`OrganizationalUnit`](crate::model::OrganizationalUnit).
 pub mod organizational_unit {
 
-    /// A builder for [`OrganizationalUnit`](crate::model::OrganizationalUnit)
-    #[non_exhaustive]
+    /// A builder for [`OrganizationalUnit`](crate::model::OrganizationalUnit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -795,7 +803,7 @@ pub mod organizational_unit {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrganizationalUnit`](crate::model::OrganizationalUnit)
+        /// Consumes the builder and constructs a [`OrganizationalUnit`](crate::model::OrganizationalUnit).
         pub fn build(self) -> crate::model::OrganizationalUnit {
             crate::model::OrganizationalUnit {
                 id: self.id,
@@ -806,7 +814,7 @@ pub mod organizational_unit {
     }
 }
 impl OrganizationalUnit {
-    /// Creates a new builder-style object to manufacture [`OrganizationalUnit`](crate::model::OrganizationalUnit)
+    /// Creates a new builder-style object to manufacture [`OrganizationalUnit`](crate::model::OrganizationalUnit).
     pub fn builder() -> crate::model::organizational_unit::Builder {
         crate::model::organizational_unit::Builder::default()
     }
@@ -824,8 +832,10 @@ impl OrganizationalUnit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key identifier, or name, of the tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The string value that's associated with the key of the tag. You can set the value of a tag to an empty string, but you can't set the value of a tag to null.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -846,11 +856,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -877,7 +886,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -887,7 +896,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -904,14 +913,18 @@ pub struct PolicyTargetSummary {
     /// <li> <p> <b>Account</b> - A string that consists of exactly 12 digits.</p> </li>
     /// <li> <p> <b>Organizational unit (OU)</b> - A string that begins with "ou-" followed by from 4 to 32 lowercase letters or digits (the ID of the root that the OU is in). This string is followed by a second "-" dash and from 8 to 32 additional lowercase letters or digits.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub target_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the policy target.</p>
     /// <p>For more information about ARNs in Organizations, see <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies">ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The friendly name of the policy target.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter is a string of any of the characters in the ASCII character range.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of the policy target.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TargetType>,
 }
 impl PolicyTargetSummary {
@@ -950,11 +963,10 @@ impl std::fmt::Debug for PolicyTargetSummary {
         formatter.finish()
     }
 }
-/// See [`PolicyTargetSummary`](crate::model::PolicyTargetSummary)
+/// See [`PolicyTargetSummary`](crate::model::PolicyTargetSummary).
 pub mod policy_target_summary {
 
-    /// A builder for [`PolicyTargetSummary`](crate::model::PolicyTargetSummary)
-    #[non_exhaustive]
+    /// A builder for [`PolicyTargetSummary`](crate::model::PolicyTargetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_id: std::option::Option<std::string::String>,
@@ -1019,7 +1031,7 @@ pub mod policy_target_summary {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyTargetSummary`](crate::model::PolicyTargetSummary)
+        /// Consumes the builder and constructs a [`PolicyTargetSummary`](crate::model::PolicyTargetSummary).
         pub fn build(self) -> crate::model::PolicyTargetSummary {
             crate::model::PolicyTargetSummary {
                 target_id: self.target_id,
@@ -1031,7 +1043,7 @@ pub mod policy_target_summary {
     }
 }
 impl PolicyTargetSummary {
-    /// Creates a new builder-style object to manufacture [`PolicyTargetSummary`](crate::model::PolicyTargetSummary)
+    /// Creates a new builder-style object to manufacture [`PolicyTargetSummary`](crate::model::PolicyTargetSummary).
     pub fn builder() -> crate::model::policy_target_summary::Builder {
         crate::model::policy_target_summary::Builder::default()
     }
@@ -1102,16 +1114,20 @@ impl AsRef<str> for TargetType {
 pub struct Root {
     /// <p>The unique identifier (ID) for the root.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for a root ID string requires "r-" followed by from 4 to 32 lowercase letters or digits.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the root.</p>
     /// <p>For more information about ARNs in Organizations, see <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies">ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The friendly name of the root.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter is a string of any of the characters in the ASCII character range.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The types of policies that are currently enabled for the root and therefore can be attached to the root or to its OUs or accounts.</p> <note>
     /// <p>Even if a policy type is shown as available in the organization, you can separately enable and disable them at the root level by using <code>EnablePolicyType</code> and <code>DisablePolicyType</code>. Use <code>DescribeOrganization</code> to see the availability of the policy types in that organization.</p>
     /// </note>
+    #[doc(hidden)]
     pub policy_types: std::option::Option<std::vec::Vec<crate::model::PolicyTypeSummary>>,
 }
 impl Root {
@@ -1147,11 +1163,10 @@ impl std::fmt::Debug for Root {
         formatter.finish()
     }
 }
-/// See [`Root`](crate::model::Root)
+/// See [`Root`](crate::model::Root).
 pub mod root {
 
-    /// A builder for [`Root`](crate::model::Root)
-    #[non_exhaustive]
+    /// A builder for [`Root`](crate::model::Root).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1220,7 +1235,7 @@ pub mod root {
             self.policy_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`Root`](crate::model::Root)
+        /// Consumes the builder and constructs a [`Root`](crate::model::Root).
         pub fn build(self) -> crate::model::Root {
             crate::model::Root {
                 id: self.id,
@@ -1232,7 +1247,7 @@ pub mod root {
     }
 }
 impl Root {
-    /// Creates a new builder-style object to manufacture [`Root`](crate::model::Root)
+    /// Creates a new builder-style object to manufacture [`Root`](crate::model::Root).
     pub fn builder() -> crate::model::root::Builder {
         crate::model::root::Builder::default()
     }
@@ -1243,8 +1258,10 @@ impl Root {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PolicyTypeSummary {
     /// <p>The name of the policy type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::PolicyType>,
     /// <p>The status of the policy type as it relates to the associated root. To attach a policy of the specified type to a root or to an OU or account in that root, it must be available in the organization and enabled for that root.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::PolicyTypeStatus>,
 }
 impl PolicyTypeSummary {
@@ -1265,11 +1282,10 @@ impl std::fmt::Debug for PolicyTypeSummary {
         formatter.finish()
     }
 }
-/// See [`PolicyTypeSummary`](crate::model::PolicyTypeSummary)
+/// See [`PolicyTypeSummary`](crate::model::PolicyTypeSummary).
 pub mod policy_type_summary {
 
-    /// A builder for [`PolicyTypeSummary`](crate::model::PolicyTypeSummary)
-    #[non_exhaustive]
+    /// A builder for [`PolicyTypeSummary`](crate::model::PolicyTypeSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::PolicyType>,
@@ -1299,7 +1315,7 @@ pub mod policy_type_summary {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`PolicyTypeSummary`](crate::model::PolicyTypeSummary)
+        /// Consumes the builder and constructs a [`PolicyTypeSummary`](crate::model::PolicyTypeSummary).
         pub fn build(self) -> crate::model::PolicyTypeSummary {
             crate::model::PolicyTypeSummary {
                 r#type: self.r#type,
@@ -1309,7 +1325,7 @@ pub mod policy_type_summary {
     }
 }
 impl PolicyTypeSummary {
-    /// Creates a new builder-style object to manufacture [`PolicyTypeSummary`](crate::model::PolicyTypeSummary)
+    /// Creates a new builder-style object to manufacture [`PolicyTypeSummary`](crate::model::PolicyTypeSummary).
     pub fn builder() -> crate::model::policy_type_summary::Builder {
         crate::model::policy_type_summary::Builder::default()
     }
@@ -1384,8 +1400,10 @@ pub struct Parent {
     /// <li> <p> <b>Root</b> - A string that begins with "r-" followed by from 4 to 32 lowercase letters or digits.</p> </li>
     /// <li> <p> <b>Organizational unit (OU)</b> - A string that begins with "ou-" followed by from 4 to 32 lowercase letters or digits (the ID of the root that the OU is in). This string is followed by a second "-" dash and from 8 to 32 additional lowercase letters or digits.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The type of the parent entity.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ParentType>,
 }
 impl Parent {
@@ -1411,11 +1429,10 @@ impl std::fmt::Debug for Parent {
         formatter.finish()
     }
 }
-/// See [`Parent`](crate::model::Parent)
+/// See [`Parent`](crate::model::Parent).
 pub mod parent {
 
-    /// A builder for [`Parent`](crate::model::Parent)
-    #[non_exhaustive]
+    /// A builder for [`Parent`](crate::model::Parent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1452,7 +1469,7 @@ pub mod parent {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Parent`](crate::model::Parent)
+        /// Consumes the builder and constructs a [`Parent`](crate::model::Parent).
         pub fn build(self) -> crate::model::Parent {
             crate::model::Parent {
                 id: self.id,
@@ -1462,7 +1479,7 @@ pub mod parent {
     }
 }
 impl Parent {
-    /// Creates a new builder-style object to manufacture [`Parent`](crate::model::Parent)
+    /// Creates a new builder-style object to manufacture [`Parent`](crate::model::Parent).
     pub fn builder() -> crate::model::parent::Builder {
         crate::model::parent::Builder::default()
     }
@@ -1530,11 +1547,14 @@ impl AsRef<str> for ParentType {
 pub struct Handshake {
     /// <p>The unique identifier (ID) of a handshake. The originating account creates the ID when it initiates the handshake.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for handshake ID string requires "h-" followed by from 8 to 32 lowercase letters or digits.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of a handshake.</p>
     /// <p>For more information about ARNs in Organizations, see <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies">ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Information about the two accounts that are participating in the handshake.</p>
+    #[doc(hidden)]
     pub parties: std::option::Option<std::vec::Vec<crate::model::HandshakeParty>>,
     /// <p>The current state of the handshake. Use the state to trace the flow of the handshake through the process from its creation to its acceptance. The meaning of each of the valid values is as follows:</p>
     /// <ul>
@@ -1545,10 +1565,13 @@ pub struct Handshake {
     /// <li> <p> <b>DECLINED</b>: This handshake is no longer active because it was declined by the recipient account.</p> </li>
     /// <li> <p> <b>EXPIRED</b>: This handshake is no longer active because the originator did not receive a response of any kind from the recipient before the expiration time (15 days).</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::HandshakeState>,
     /// <p>The date and time that the handshake request was made.</p>
+    #[doc(hidden)]
     pub requested_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the handshake expires. If the recipient of the handshake request fails to respond before the specified date and time, the handshake becomes inactive and is no longer valid.</p>
+    #[doc(hidden)]
     pub expiration_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The type of handshake, indicating what action occurs when the recipient accepts the handshake. The following handshake types are supported:</p>
     /// <ul>
@@ -1556,8 +1579,10 @@ pub struct Handshake {
     /// <li> <p> <b>ENABLE_ALL_FEATURES</b>: This type of handshake represents a request to enable all features in an organization. It is always sent from the management account to only <i>invited</i> member accounts. Created accounts do not receive this because those accounts were created by the organization's management account and approval is inferred.</p> </li>
     /// <li> <p> <b>APPROVE_ALL_FEATURES</b>: This type of handshake is sent from the Organizations service when all member accounts have approved the <code>ENABLE_ALL_FEATURES</code> invitation. It is sent only to the management account and signals the master that it can finalize the process to enable all features.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ActionType>,
     /// <p>Additional information that is needed to process the handshake.</p>
+    #[doc(hidden)]
     pub resources: std::option::Option<std::vec::Vec<crate::model::HandshakeResource>>,
 }
 impl Handshake {
@@ -1623,11 +1648,10 @@ impl std::fmt::Debug for Handshake {
         formatter.finish()
     }
 }
-/// See [`Handshake`](crate::model::Handshake)
+/// See [`Handshake`](crate::model::Handshake).
 pub mod handshake {
 
-    /// A builder for [`Handshake`](crate::model::Handshake)
-    #[non_exhaustive]
+    /// A builder for [`Handshake`](crate::model::Handshake).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1777,7 +1801,7 @@ pub mod handshake {
             self.resources = input;
             self
         }
-        /// Consumes the builder and constructs a [`Handshake`](crate::model::Handshake)
+        /// Consumes the builder and constructs a [`Handshake`](crate::model::Handshake).
         pub fn build(self) -> crate::model::Handshake {
             crate::model::Handshake {
                 id: self.id,
@@ -1793,7 +1817,7 @@ pub mod handshake {
     }
 }
 impl Handshake {
-    /// Creates a new builder-style object to manufacture [`Handshake`](crate::model::Handshake)
+    /// Creates a new builder-style object to manufacture [`Handshake`](crate::model::Handshake).
     pub fn builder() -> crate::model::handshake::Builder {
         crate::model::handshake::Builder::default()
     }
@@ -1804,6 +1828,7 @@ impl Handshake {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HandshakeResource {
     /// <p>The information that is passed to the other party in the handshake. The format of the value string must match the requirements of the specified type.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The type of information being passed, specifying how the value is to be interpreted by the other party:</p>
     /// <ul>
@@ -1814,8 +1839,10 @@ pub struct HandshakeResource {
     /// <li> <p> <code>OWNER_NAME</code> - Specifies the name associated with the management account. Included as information about an organization. </p> </li>
     /// <li> <p> <code>NOTES</code> - Additional text provided by the handshake initiator and intended for the recipient to read.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::HandshakeResourceType>,
     /// <p>When needed, contains an additional array of <code>HandshakeResource</code> objects.</p>
+    #[doc(hidden)]
     pub resources: std::option::Option<std::vec::Vec<crate::model::HandshakeResource>>,
 }
 impl HandshakeResource {
@@ -1849,11 +1876,10 @@ impl std::fmt::Debug for HandshakeResource {
         formatter.finish()
     }
 }
-/// See [`HandshakeResource`](crate::model::HandshakeResource)
+/// See [`HandshakeResource`](crate::model::HandshakeResource).
 pub mod handshake_resource {
 
-    /// A builder for [`HandshakeResource`](crate::model::HandshakeResource)
-    #[non_exhaustive]
+    /// A builder for [`HandshakeResource`](crate::model::HandshakeResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<std::string::String>,
@@ -1919,7 +1945,7 @@ pub mod handshake_resource {
             self.resources = input;
             self
         }
-        /// Consumes the builder and constructs a [`HandshakeResource`](crate::model::HandshakeResource)
+        /// Consumes the builder and constructs a [`HandshakeResource`](crate::model::HandshakeResource).
         pub fn build(self) -> crate::model::HandshakeResource {
             crate::model::HandshakeResource {
                 value: self.value,
@@ -1930,7 +1956,7 @@ pub mod handshake_resource {
     }
 }
 impl HandshakeResource {
-    /// Creates a new builder-style object to manufacture [`HandshakeResource`](crate::model::HandshakeResource)
+    /// Creates a new builder-style object to manufacture [`HandshakeResource`](crate::model::HandshakeResource).
     pub fn builder() -> crate::model::handshake_resource::Builder {
         crate::model::handshake_resource::Builder::default()
     }
@@ -2180,8 +2206,10 @@ impl AsRef<str> for HandshakeState {
 pub struct HandshakeParty {
     /// <p>The unique identifier (ID) for the party.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for handshake ID string requires "h-" followed by from 8 to 32 lowercase letters or digits.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The type of party.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::HandshakePartyType>,
 }
 impl HandshakeParty {
@@ -2203,11 +2231,10 @@ impl std::fmt::Debug for HandshakeParty {
         formatter.finish()
     }
 }
-/// See [`HandshakeParty`](crate::model::HandshakeParty)
+/// See [`HandshakeParty`](crate::model::HandshakeParty).
 pub mod handshake_party {
 
-    /// A builder for [`HandshakeParty`](crate::model::HandshakeParty)
-    #[non_exhaustive]
+    /// A builder for [`HandshakeParty`](crate::model::HandshakeParty).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2239,7 +2266,7 @@ pub mod handshake_party {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`HandshakeParty`](crate::model::HandshakeParty)
+        /// Consumes the builder and constructs a [`HandshakeParty`](crate::model::HandshakeParty).
         pub fn build(self) -> crate::model::HandshakeParty {
             crate::model::HandshakeParty {
                 id: self.id,
@@ -2249,7 +2276,7 @@ pub mod handshake_party {
     }
 }
 impl HandshakeParty {
-    /// Creates a new builder-style object to manufacture [`HandshakeParty`](crate::model::HandshakeParty)
+    /// Creates a new builder-style object to manufacture [`HandshakeParty`](crate::model::HandshakeParty).
     pub fn builder() -> crate::model::handshake_party::Builder {
         crate::model::handshake_party::Builder::default()
     }
@@ -2320,10 +2347,12 @@ impl AsRef<str> for HandshakePartyType {
 pub struct HandshakeFilter {
     /// <p>Specifies the type of handshake action.</p>
     /// <p>If you specify <code>ActionType</code>, you cannot also specify <code>ParentHandshakeId</code>.</p>
+    #[doc(hidden)]
     pub action_type: std::option::Option<crate::model::ActionType>,
     /// <p>Specifies the parent handshake. Only used for handshake types that are a child of another type.</p>
     /// <p>If you specify <code>ParentHandshakeId</code>, you cannot also specify <code>ActionType</code>.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for handshake ID string requires "h-" followed by from 8 to 32 lowercase letters or digits.</p>
+    #[doc(hidden)]
     pub parent_handshake_id: std::option::Option<std::string::String>,
 }
 impl HandshakeFilter {
@@ -2347,11 +2376,10 @@ impl std::fmt::Debug for HandshakeFilter {
         formatter.finish()
     }
 }
-/// See [`HandshakeFilter`](crate::model::HandshakeFilter)
+/// See [`HandshakeFilter`](crate::model::HandshakeFilter).
 pub mod handshake_filter {
 
-    /// A builder for [`HandshakeFilter`](crate::model::HandshakeFilter)
-    #[non_exhaustive]
+    /// A builder for [`HandshakeFilter`](crate::model::HandshakeFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action_type: std::option::Option<crate::model::ActionType>,
@@ -2390,7 +2418,7 @@ pub mod handshake_filter {
             self.parent_handshake_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`HandshakeFilter`](crate::model::HandshakeFilter)
+        /// Consumes the builder and constructs a [`HandshakeFilter`](crate::model::HandshakeFilter).
         pub fn build(self) -> crate::model::HandshakeFilter {
             crate::model::HandshakeFilter {
                 action_type: self.action_type,
@@ -2400,7 +2428,7 @@ pub mod handshake_filter {
     }
 }
 impl HandshakeFilter {
-    /// Creates a new builder-style object to manufacture [`HandshakeFilter`](crate::model::HandshakeFilter)
+    /// Creates a new builder-style object to manufacture [`HandshakeFilter`](crate::model::HandshakeFilter).
     pub fn builder() -> crate::model::handshake_filter::Builder {
         crate::model::handshake_filter::Builder::default()
     }
@@ -2411,8 +2439,10 @@ impl HandshakeFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DelegatedService {
     /// <p>The name of an Amazon Web Services service that can request an operation for the specified service. This is typically in the form of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.</p>
+    #[doc(hidden)]
     pub service_principal: std::option::Option<std::string::String>,
     /// <p>The date that the account became a delegated administrator for this service. </p>
+    #[doc(hidden)]
     pub delegation_enabled_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DelegatedService {
@@ -2433,11 +2463,10 @@ impl std::fmt::Debug for DelegatedService {
         formatter.finish()
     }
 }
-/// See [`DelegatedService`](crate::model::DelegatedService)
+/// See [`DelegatedService`](crate::model::DelegatedService).
 pub mod delegated_service {
 
-    /// A builder for [`DelegatedService`](crate::model::DelegatedService)
-    #[non_exhaustive]
+    /// A builder for [`DelegatedService`](crate::model::DelegatedService).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_principal: std::option::Option<std::string::String>,
@@ -2470,7 +2499,7 @@ pub mod delegated_service {
             self.delegation_enabled_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`DelegatedService`](crate::model::DelegatedService)
+        /// Consumes the builder and constructs a [`DelegatedService`](crate::model::DelegatedService).
         pub fn build(self) -> crate::model::DelegatedService {
             crate::model::DelegatedService {
                 service_principal: self.service_principal,
@@ -2480,7 +2509,7 @@ pub mod delegated_service {
     }
 }
 impl DelegatedService {
-    /// Creates a new builder-style object to manufacture [`DelegatedService`](crate::model::DelegatedService)
+    /// Creates a new builder-style object to manufacture [`DelegatedService`](crate::model::DelegatedService).
     pub fn builder() -> crate::model::delegated_service::Builder {
         crate::model::delegated_service::Builder::default()
     }
@@ -2491,20 +2520,28 @@ impl DelegatedService {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DelegatedAdministrator {
     /// <p>The unique identifier (ID) of the delegated administrator's account.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the delegated administrator's account.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The email address that is associated with the delegated administrator's Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub email: std::option::Option<std::string::String>,
     /// <p>The friendly name of the delegated administrator's account.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The status of the delegated administrator's account in the organization.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AccountStatus>,
     /// <p>The method by which the delegated administrator's account joined the organization.</p>
+    #[doc(hidden)]
     pub joined_method: std::option::Option<crate::model::AccountJoinedMethod>,
     /// <p>The date when the delegated administrator's account became a part of the organization.</p>
+    #[doc(hidden)]
     pub joined_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date when the account was made a delegated administrator.</p>
+    #[doc(hidden)]
     pub delegation_enabled_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DelegatedAdministrator {
@@ -2555,11 +2592,10 @@ impl std::fmt::Debug for DelegatedAdministrator {
         formatter.finish()
     }
 }
-/// See [`DelegatedAdministrator`](crate::model::DelegatedAdministrator)
+/// See [`DelegatedAdministrator`](crate::model::DelegatedAdministrator).
 pub mod delegated_administrator {
 
-    /// A builder for [`DelegatedAdministrator`](crate::model::DelegatedAdministrator)
-    #[non_exhaustive]
+    /// A builder for [`DelegatedAdministrator`](crate::model::DelegatedAdministrator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2664,7 +2700,7 @@ pub mod delegated_administrator {
             self.delegation_enabled_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`DelegatedAdministrator`](crate::model::DelegatedAdministrator)
+        /// Consumes the builder and constructs a [`DelegatedAdministrator`](crate::model::DelegatedAdministrator).
         pub fn build(self) -> crate::model::DelegatedAdministrator {
             crate::model::DelegatedAdministrator {
                 id: self.id,
@@ -2680,7 +2716,7 @@ pub mod delegated_administrator {
     }
 }
 impl DelegatedAdministrator {
-    /// Creates a new builder-style object to manufacture [`DelegatedAdministrator`](crate::model::DelegatedAdministrator)
+    /// Creates a new builder-style object to manufacture [`DelegatedAdministrator`](crate::model::DelegatedAdministrator).
     pub fn builder() -> crate::model::delegated_administrator::Builder {
         crate::model::delegated_administrator::Builder::default()
     }
@@ -2806,19 +2842,26 @@ impl AsRef<str> for AccountStatus {
 pub struct CreateAccountStatus {
     /// <p>The unique identifier (ID) that references this request. You get this value from the response of the initial <code>CreateAccount</code> request to create the account.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for a create account request ID string requires "car-" followed by from 8 to 32 lowercase letters or digits.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The account name given to the account when it was created.</p>
+    #[doc(hidden)]
     pub account_name: std::option::Option<std::string::String>,
     /// <p>The status of the asynchronous request to create an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::CreateAccountState>,
     /// <p>The date and time that the request was made for the account creation.</p>
+    #[doc(hidden)]
     pub requested_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the account was created and the request completed.</p>
+    #[doc(hidden)]
     pub completed_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If the account was created successfully, the unique identifier (ID) of the new account.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for an account ID string requires exactly 12 digits.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>If the account was created successfully, the unique identifier (ID) of the new account in the Amazon Web Services GovCloud (US) Region.</p>
+    #[doc(hidden)]
     pub gov_cloud_account_id: std::option::Option<std::string::String>,
     /// <p>If the request failed, a description of the reason for the failure.</p>
     /// <ul>
@@ -2837,6 +2880,7 @@ pub struct CreateAccountStatus {
     /// <li> <p>PENDING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization is still in the process of completing business license validation.</p> </li>
     /// <li> <p>UNKNOWN_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has an unknown issue with business license validation.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<crate::model::CreateAccountFailureReason>,
 }
 impl CreateAccountStatus {
@@ -2905,11 +2949,10 @@ impl std::fmt::Debug for CreateAccountStatus {
         formatter.finish()
     }
 }
-/// See [`CreateAccountStatus`](crate::model::CreateAccountStatus)
+/// See [`CreateAccountStatus`](crate::model::CreateAccountStatus).
 pub mod create_account_status {
 
-    /// A builder for [`CreateAccountStatus`](crate::model::CreateAccountStatus)
-    #[non_exhaustive]
+    /// A builder for [`CreateAccountStatus`](crate::model::CreateAccountStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3053,7 +3096,7 @@ pub mod create_account_status {
             self.failure_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAccountStatus`](crate::model::CreateAccountStatus)
+        /// Consumes the builder and constructs a [`CreateAccountStatus`](crate::model::CreateAccountStatus).
         pub fn build(self) -> crate::model::CreateAccountStatus {
             crate::model::CreateAccountStatus {
                 id: self.id,
@@ -3069,7 +3112,7 @@ pub mod create_account_status {
     }
 }
 impl CreateAccountStatus {
-    /// Creates a new builder-style object to manufacture [`CreateAccountStatus`](crate::model::CreateAccountStatus)
+    /// Creates a new builder-style object to manufacture [`CreateAccountStatus`](crate::model::CreateAccountStatus).
     pub fn builder() -> crate::model::create_account_status::Builder {
         crate::model::create_account_status::Builder::default()
     }
@@ -3274,8 +3317,10 @@ pub struct Child {
     /// <li> <p> <b>Account</b> - A string that consists of exactly 12 digits.</p> </li>
     /// <li> <p> <b>Organizational unit (OU)</b> - A string that begins with "ou-" followed by from 4 to 32 lowercase letters or digits (the ID of the root that contains the OU). This string is followed by a second "-" dash and from 8 to 32 additional lowercase letters or digits.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The type of this child entity.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ChildType>,
 }
 impl Child {
@@ -3301,11 +3346,10 @@ impl std::fmt::Debug for Child {
         formatter.finish()
     }
 }
-/// See [`Child`](crate::model::Child)
+/// See [`Child`](crate::model::Child).
 pub mod child {
 
-    /// A builder for [`Child`](crate::model::Child)
-    #[non_exhaustive]
+    /// A builder for [`Child`](crate::model::Child).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3342,7 +3386,7 @@ pub mod child {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Child`](crate::model::Child)
+        /// Consumes the builder and constructs a [`Child`](crate::model::Child).
         pub fn build(self) -> crate::model::Child {
             crate::model::Child {
                 id: self.id,
@@ -3352,7 +3396,7 @@ pub mod child {
     }
 }
 impl Child {
-    /// Creates a new builder-style object to manufacture [`Child`](crate::model::Child)
+    /// Creates a new builder-style object to manufacture [`Child`](crate::model::Child).
     pub fn builder() -> crate::model::child::Builder {
         crate::model::child::Builder::default()
     }
@@ -3418,8 +3462,10 @@ impl AsRef<str> for ChildType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnabledServicePrincipal {
     /// <p>The name of the service principal. This is typically in the form of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.</p>
+    #[doc(hidden)]
     pub service_principal: std::option::Option<std::string::String>,
     /// <p>The date that the service principal was enabled for integration with Organizations.</p>
+    #[doc(hidden)]
     pub date_enabled: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EnabledServicePrincipal {
@@ -3440,11 +3486,10 @@ impl std::fmt::Debug for EnabledServicePrincipal {
         formatter.finish()
     }
 }
-/// See [`EnabledServicePrincipal`](crate::model::EnabledServicePrincipal)
+/// See [`EnabledServicePrincipal`](crate::model::EnabledServicePrincipal).
 pub mod enabled_service_principal {
 
-    /// A builder for [`EnabledServicePrincipal`](crate::model::EnabledServicePrincipal)
-    #[non_exhaustive]
+    /// A builder for [`EnabledServicePrincipal`](crate::model::EnabledServicePrincipal).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_principal: std::option::Option<std::string::String>,
@@ -3477,7 +3522,7 @@ pub mod enabled_service_principal {
             self.date_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnabledServicePrincipal`](crate::model::EnabledServicePrincipal)
+        /// Consumes the builder and constructs a [`EnabledServicePrincipal`](crate::model::EnabledServicePrincipal).
         pub fn build(self) -> crate::model::EnabledServicePrincipal {
             crate::model::EnabledServicePrincipal {
                 service_principal: self.service_principal,
@@ -3487,7 +3532,7 @@ pub mod enabled_service_principal {
     }
 }
 impl EnabledServicePrincipal {
-    /// Creates a new builder-style object to manufacture [`EnabledServicePrincipal`](crate::model::EnabledServicePrincipal)
+    /// Creates a new builder-style object to manufacture [`EnabledServicePrincipal`](crate::model::EnabledServicePrincipal).
     pub fn builder() -> crate::model::enabled_service_principal::Builder {
         crate::model::enabled_service_principal::Builder::default()
     }
@@ -3499,21 +3544,28 @@ impl EnabledServicePrincipal {
 pub struct Account {
     /// <p>The unique identifier (ID) of the account.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for an account ID string requires exactly 12 digits.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the account.</p>
     /// <p>For more information about ARNs in Organizations, see <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies">ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The email address associated with the Amazon Web Services account.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for this parameter is a string of characters that represents a standard internet email address.</p>
+    #[doc(hidden)]
     pub email: std::option::Option<std::string::String>,
     /// <p>The friendly name of the account.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter is a string of any of the characters in the ASCII character range.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The status of the account in the organization.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AccountStatus>,
     /// <p>The method by which the account joined the organization.</p>
+    #[doc(hidden)]
     pub joined_method: std::option::Option<crate::model::AccountJoinedMethod>,
     /// <p>The date the account became a part of the organization.</p>
+    #[doc(hidden)]
     pub joined_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Account {
@@ -3563,11 +3615,10 @@ impl std::fmt::Debug for Account {
         formatter.finish()
     }
 }
-/// See [`Account`](crate::model::Account)
+/// See [`Account`](crate::model::Account).
 pub mod account {
 
-    /// A builder for [`Account`](crate::model::Account)
-    #[non_exhaustive]
+    /// A builder for [`Account`](crate::model::Account).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3666,7 +3717,7 @@ pub mod account {
             self.joined_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`Account`](crate::model::Account)
+        /// Consumes the builder and constructs a [`Account`](crate::model::Account).
         pub fn build(self) -> crate::model::Account {
             crate::model::Account {
                 id: self.id,
@@ -3681,7 +3732,7 @@ pub mod account {
     }
 }
 impl Account {
-    /// Creates a new builder-style object to manufacture [`Account`](crate::model::Account)
+    /// Creates a new builder-style object to manufacture [`Account`](crate::model::Account).
     pub fn builder() -> crate::model::account::Builder {
         crate::model::account::Builder::default()
     }
@@ -3791,24 +3842,31 @@ impl AsRef<str> for HandshakeConstraintViolationExceptionReason {
 pub struct Organization {
     /// <p>The unique identifier (ID) of an organization.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for an organization ID string requires "o-" followed by from 10 to 32 lowercase letters or digits.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of an organization.</p>
     /// <p>For more information about ARNs in Organizations, see <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies">ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Specifies the functionality that currently is available to the organization. If set to "ALL", then all features are enabled and policies can be applied to accounts in the organization. If set to "CONSOLIDATED_BILLING", then only consolidated billing functionality is available. For more information, see <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">Enabling All Features in Your Organization</a> in the <i>Organizations User Guide</i>.</p>
+    #[doc(hidden)]
     pub feature_set: std::option::Option<crate::model::OrganizationFeatureSet>,
     /// <p>The Amazon Resource Name (ARN) of the account that is designated as the management account for the organization.</p>
     /// <p>For more information about ARNs in Organizations, see <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies">ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.</p>
+    #[doc(hidden)]
     pub master_account_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier (ID) of the management account of an organization.</p>
     /// <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for an account ID string requires exactly 12 digits.</p>
+    #[doc(hidden)]
     pub master_account_id: std::option::Option<std::string::String>,
     /// <p>The email address that is associated with the Amazon Web Services account that is designated as the management account for the organization.</p>
+    #[doc(hidden)]
     pub master_account_email: std::option::Option<std::string::String>,
     /// <important>
     /// <p>Do not use. This field is deprecated and doesn't provide complete information about the policies in your organization.</p>
     /// </important>
     /// <p>To determine the policies that are enabled and available for use in your organization, use the <code>ListRoots</code> operation instead.</p>
+    #[doc(hidden)]
     pub available_policy_types: std::option::Option<std::vec::Vec<crate::model::PolicyTypeSummary>>,
 }
 impl Organization {
@@ -3863,11 +3921,10 @@ impl std::fmt::Debug for Organization {
         formatter.finish()
     }
 }
-/// See [`Organization`](crate::model::Organization)
+/// See [`Organization`](crate::model::Organization).
 pub mod organization {
 
-    /// A builder for [`Organization`](crate::model::Organization)
-    #[non_exhaustive]
+    /// A builder for [`Organization`](crate::model::Organization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3985,7 +4042,7 @@ pub mod organization {
             self.available_policy_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`Organization`](crate::model::Organization)
+        /// Consumes the builder and constructs a [`Organization`](crate::model::Organization).
         pub fn build(self) -> crate::model::Organization {
             crate::model::Organization {
                 id: self.id,
@@ -4000,7 +4057,7 @@ pub mod organization {
     }
 }
 impl Organization {
-    /// Creates a new builder-style object to manufacture [`Organization`](crate::model::Organization)
+    /// Creates a new builder-style object to manufacture [`Organization`](crate::model::Organization).
     pub fn builder() -> crate::model::organization::Builder {
         crate::model::organization::Builder::default()
     }
@@ -4066,12 +4123,16 @@ impl AsRef<str> for OrganizationFeatureSet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EffectivePolicy {
     /// <p>The text content of the policy.</p>
+    #[doc(hidden)]
     pub policy_content: std::option::Option<std::string::String>,
     /// <p>The time of the last update to this policy.</p>
+    #[doc(hidden)]
     pub last_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The account ID of the policy target. </p>
+    #[doc(hidden)]
     pub target_id: std::option::Option<std::string::String>,
     /// <p>The policy type.</p>
+    #[doc(hidden)]
     pub policy_type: std::option::Option<crate::model::EffectivePolicyType>,
 }
 impl EffectivePolicy {
@@ -4102,11 +4163,10 @@ impl std::fmt::Debug for EffectivePolicy {
         formatter.finish()
     }
 }
-/// See [`EffectivePolicy`](crate::model::EffectivePolicy)
+/// See [`EffectivePolicy`](crate::model::EffectivePolicy).
 pub mod effective_policy {
 
-    /// A builder for [`EffectivePolicy`](crate::model::EffectivePolicy)
-    #[non_exhaustive]
+    /// A builder for [`EffectivePolicy`](crate::model::EffectivePolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_content: std::option::Option<std::string::String>,
@@ -4164,7 +4224,7 @@ pub mod effective_policy {
             self.policy_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`EffectivePolicy`](crate::model::EffectivePolicy)
+        /// Consumes the builder and constructs a [`EffectivePolicy`](crate::model::EffectivePolicy).
         pub fn build(self) -> crate::model::EffectivePolicy {
             crate::model::EffectivePolicy {
                 policy_content: self.policy_content,
@@ -4176,7 +4236,7 @@ pub mod effective_policy {
     }
 }
 impl EffectivePolicy {
-    /// Creates a new builder-style object to manufacture [`EffectivePolicy`](crate::model::EffectivePolicy)
+    /// Creates a new builder-style object to manufacture [`EffectivePolicy`](crate::model::EffectivePolicy).
     pub fn builder() -> crate::model::effective_policy::Builder {
         crate::model::effective_policy::Builder::default()
     }

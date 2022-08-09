@@ -5,18 +5,25 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Webhook {
     /// <p> The Amazon Resource Name (ARN) for the webhook. </p>
+    #[doc(hidden)]
     pub webhook_arn: std::option::Option<std::string::String>,
     /// <p> The ID of the webhook. </p>
+    #[doc(hidden)]
     pub webhook_id: std::option::Option<std::string::String>,
     /// <p> The URL of the webhook. </p>
+    #[doc(hidden)]
     pub webhook_url: std::option::Option<std::string::String>,
     /// <p> The name for a branch that is part of an Amplify app. </p>
+    #[doc(hidden)]
     pub branch_name: std::option::Option<std::string::String>,
     /// <p> The description for a webhook. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The create date and time for a webhook. </p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Updates the date and time for a webhook. </p>
+    #[doc(hidden)]
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Webhook {
@@ -62,11 +69,10 @@ impl std::fmt::Debug for Webhook {
         formatter.finish()
     }
 }
-/// See [`Webhook`](crate::model::Webhook)
+/// See [`Webhook`](crate::model::Webhook).
 pub mod webhook {
 
-    /// A builder for [`Webhook`](crate::model::Webhook)
-    #[non_exhaustive]
+    /// A builder for [`Webhook`](crate::model::Webhook).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) webhook_arn: std::option::Option<std::string::String>,
@@ -154,7 +160,7 @@ pub mod webhook {
             self.update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`Webhook`](crate::model::Webhook)
+        /// Consumes the builder and constructs a [`Webhook`](crate::model::Webhook).
         pub fn build(self) -> crate::model::Webhook {
             crate::model::Webhook {
                 webhook_arn: self.webhook_arn,
@@ -169,7 +175,7 @@ pub mod webhook {
     }
 }
 impl Webhook {
-    /// Creates a new builder-style object to manufacture [`Webhook`](crate::model::Webhook)
+    /// Creates a new builder-style object to manufacture [`Webhook`](crate::model::Webhook).
     pub fn builder() -> crate::model::webhook::Builder {
         crate::model::webhook::Builder::default()
     }
@@ -180,22 +186,31 @@ impl Webhook {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainAssociation {
     /// <p> The Amazon Resource Name (ARN) for the domain association. </p>
+    #[doc(hidden)]
     pub domain_association_arn: std::option::Option<std::string::String>,
     /// <p> The name of the domain. </p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p> Enables the automated creation of subdomains for branches. </p>
+    #[doc(hidden)]
     pub enable_auto_sub_domain: std::option::Option<bool>,
     /// <p> Sets branch patterns for automatic subdomain creation. </p>
+    #[doc(hidden)]
     pub auto_sub_domain_creation_patterns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> The required AWS Identity and Access Management (IAM) service role for the Amazon Resource Name (ARN) for automatically creating subdomains. </p>
+    #[doc(hidden)]
     pub auto_sub_domain_iam_role: std::option::Option<std::string::String>,
     /// <p> The current status of the domain association. </p>
+    #[doc(hidden)]
     pub domain_status: std::option::Option<crate::model::DomainStatus>,
     /// <p> The reason for the current status of the domain association. </p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p> The DNS record for certificate verification. </p>
+    #[doc(hidden)]
     pub certificate_verification_dns_record: std::option::Option<std::string::String>,
     /// <p> The subdomains for the domain association. </p>
+    #[doc(hidden)]
     pub sub_domains: std::option::Option<std::vec::Vec<crate::model::SubDomain>>,
 }
 impl DomainAssociation {
@@ -257,11 +272,10 @@ impl std::fmt::Debug for DomainAssociation {
         formatter.finish()
     }
 }
-/// See [`DomainAssociation`](crate::model::DomainAssociation)
+/// See [`DomainAssociation`](crate::model::DomainAssociation).
 pub mod domain_association {
 
-    /// A builder for [`DomainAssociation`](crate::model::DomainAssociation)
-    #[non_exhaustive]
+    /// A builder for [`DomainAssociation`](crate::model::DomainAssociation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_association_arn: std::option::Option<std::string::String>,
@@ -405,7 +419,7 @@ pub mod domain_association {
             self.sub_domains = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainAssociation`](crate::model::DomainAssociation)
+        /// Consumes the builder and constructs a [`DomainAssociation`](crate::model::DomainAssociation).
         pub fn build(self) -> crate::model::DomainAssociation {
             crate::model::DomainAssociation {
                 domain_association_arn: self.domain_association_arn,
@@ -422,7 +436,7 @@ pub mod domain_association {
     }
 }
 impl DomainAssociation {
-    /// Creates a new builder-style object to manufacture [`DomainAssociation`](crate::model::DomainAssociation)
+    /// Creates a new builder-style object to manufacture [`DomainAssociation`](crate::model::DomainAssociation).
     pub fn builder() -> crate::model::domain_association::Builder {
         crate::model::domain_association::Builder::default()
     }
@@ -433,10 +447,13 @@ impl DomainAssociation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SubDomain {
     /// <p> Describes the settings for the subdomain. </p>
+    #[doc(hidden)]
     pub sub_domain_setting: std::option::Option<crate::model::SubDomainSetting>,
     /// <p> The verified status of the subdomain </p>
+    #[doc(hidden)]
     pub verified: std::option::Option<bool>,
     /// <p> The DNS record for the subdomain. </p>
+    #[doc(hidden)]
     pub dns_record: std::option::Option<std::string::String>,
 }
 impl SubDomain {
@@ -462,11 +479,10 @@ impl std::fmt::Debug for SubDomain {
         formatter.finish()
     }
 }
-/// See [`SubDomain`](crate::model::SubDomain)
+/// See [`SubDomain`](crate::model::SubDomain).
 pub mod sub_domain {
 
-    /// A builder for [`SubDomain`](crate::model::SubDomain)
-    #[non_exhaustive]
+    /// A builder for [`SubDomain`](crate::model::SubDomain).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sub_domain_setting: std::option::Option<crate::model::SubDomainSetting>,
@@ -507,7 +523,7 @@ pub mod sub_domain {
             self.dns_record = input;
             self
         }
-        /// Consumes the builder and constructs a [`SubDomain`](crate::model::SubDomain)
+        /// Consumes the builder and constructs a [`SubDomain`](crate::model::SubDomain).
         pub fn build(self) -> crate::model::SubDomain {
             crate::model::SubDomain {
                 sub_domain_setting: self.sub_domain_setting,
@@ -518,7 +534,7 @@ pub mod sub_domain {
     }
 }
 impl SubDomain {
-    /// Creates a new builder-style object to manufacture [`SubDomain`](crate::model::SubDomain)
+    /// Creates a new builder-style object to manufacture [`SubDomain`](crate::model::SubDomain).
     pub fn builder() -> crate::model::sub_domain::Builder {
         crate::model::sub_domain::Builder::default()
     }
@@ -529,8 +545,10 @@ impl SubDomain {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SubDomainSetting {
     /// <p> The prefix setting for the subdomain. </p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p> The branch name setting for the subdomain. </p>
+    #[doc(hidden)]
     pub branch_name: std::option::Option<std::string::String>,
 }
 impl SubDomainSetting {
@@ -551,11 +569,10 @@ impl std::fmt::Debug for SubDomainSetting {
         formatter.finish()
     }
 }
-/// See [`SubDomainSetting`](crate::model::SubDomainSetting)
+/// See [`SubDomainSetting`](crate::model::SubDomainSetting).
 pub mod sub_domain_setting {
 
-    /// A builder for [`SubDomainSetting`](crate::model::SubDomainSetting)
-    #[non_exhaustive]
+    /// A builder for [`SubDomainSetting`](crate::model::SubDomainSetting).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prefix: std::option::Option<std::string::String>,
@@ -582,7 +599,7 @@ pub mod sub_domain_setting {
             self.branch_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`SubDomainSetting`](crate::model::SubDomainSetting)
+        /// Consumes the builder and constructs a [`SubDomainSetting`](crate::model::SubDomainSetting).
         pub fn build(self) -> crate::model::SubDomainSetting {
             crate::model::SubDomainSetting {
                 prefix: self.prefix,
@@ -592,7 +609,7 @@ pub mod sub_domain_setting {
     }
 }
 impl SubDomainSetting {
-    /// Creates a new builder-style object to manufacture [`SubDomainSetting`](crate::model::SubDomainSetting)
+    /// Creates a new builder-style object to manufacture [`SubDomainSetting`](crate::model::SubDomainSetting).
     pub fn builder() -> crate::model::sub_domain_setting::Builder {
         crate::model::sub_domain_setting::Builder::default()
     }
@@ -691,61 +708,88 @@ impl AsRef<str> for DomainStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Branch {
     /// <p> The Amazon Resource Name (ARN) for a branch that is part of an Amplify app. </p>
+    #[doc(hidden)]
     pub branch_arn: std::option::Option<std::string::String>,
     /// <p> The name for the branch that is part of an Amplify app. </p>
+    #[doc(hidden)]
     pub branch_name: std::option::Option<std::string::String>,
     /// <p> The description for the branch that is part of an Amplify app. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The tag for the branch of an Amplify app. </p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p> The current stage for the branch that is part of an Amplify app. </p>
+    #[doc(hidden)]
     pub stage: std::option::Option<crate::model::Stage>,
     /// <p> The display name for the branch. This is used as the default domain prefix. </p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p> Enables notifications for a branch that is part of an Amplify app. </p>
+    #[doc(hidden)]
     pub enable_notification: std::option::Option<bool>,
     /// <p> The creation date and time for a branch that is part of an Amplify app. </p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The last updated date and time for a branch that is part of an Amplify app. </p>
+    #[doc(hidden)]
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The environment variables specific to a branch of an Amplify app. </p>
+    #[doc(hidden)]
     pub environment_variables:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p> Enables auto-building on push for a branch of an Amplify app. </p>
+    #[doc(hidden)]
     pub enable_auto_build: std::option::Option<bool>,
     /// <p> The custom domains for a branch of an Amplify app. </p>
+    #[doc(hidden)]
     pub custom_domains: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> The framework for a branch of an Amplify app. </p>
+    #[doc(hidden)]
     pub framework: std::option::Option<std::string::String>,
     /// <p> The ID of the active job for a branch of an Amplify app. </p>
+    #[doc(hidden)]
     pub active_job_id: std::option::Option<std::string::String>,
     /// <p> The total number of jobs that are part of an Amplify app. </p>
+    #[doc(hidden)]
     pub total_number_of_jobs: std::option::Option<std::string::String>,
     /// <p> Enables basic authorization for a branch of an Amplify app. </p>
+    #[doc(hidden)]
     pub enable_basic_auth: std::option::Option<bool>,
     /// <p>Enables performance mode for the branch.</p>
     /// <p>Performance mode optimizes for faster hosting performance by keeping content cached at the edge for a longer interval. When performance mode is enabled, hosting configuration or code changes can take up to 10 minutes to roll out. </p>
+    #[doc(hidden)]
     pub enable_performance_mode: std::option::Option<bool>,
     /// <p> The thumbnail URL for the branch of an Amplify app. </p>
+    #[doc(hidden)]
     pub thumbnail_url: std::option::Option<std::string::String>,
     /// <p> The basic authorization credentials for a branch of an Amplify app. You must base64-encode the authorization credentials and provide them in the format <code>user:password</code>.</p>
+    #[doc(hidden)]
     pub basic_auth_credentials: std::option::Option<std::string::String>,
     /// <p> The build specification (build spec) content for the branch of an Amplify app. </p>
+    #[doc(hidden)]
     pub build_spec: std::option::Option<std::string::String>,
     /// <p> The content Time to Live (TTL) for the website in seconds. </p>
+    #[doc(hidden)]
     pub ttl: std::option::Option<std::string::String>,
     /// <p> A list of custom resources that are linked to this branch. </p>
+    #[doc(hidden)]
     pub associated_resources: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> Enables pull request previews for the branch. </p>
+    #[doc(hidden)]
     pub enable_pull_request_preview: std::option::Option<bool>,
     /// <p> The Amplify environment name for the pull request. </p>
+    #[doc(hidden)]
     pub pull_request_environment_name: std::option::Option<std::string::String>,
     /// <p> The destination branch if the branch is a pull request branch. </p>
+    #[doc(hidden)]
     pub destination_branch: std::option::Option<std::string::String>,
     /// <p> The source branch if the branch is a pull request branch. </p>
+    #[doc(hidden)]
     pub source_branch: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app. </p>
+    #[doc(hidden)]
     pub backend_environment_arn: std::option::Option<std::string::String>,
 }
 impl Branch {
@@ -904,11 +948,10 @@ impl std::fmt::Debug for Branch {
         formatter.finish()
     }
 }
-/// See [`Branch`](crate::model::Branch)
+/// See [`Branch`](crate::model::Branch).
 pub mod branch {
 
-    /// A builder for [`Branch`](crate::model::Branch)
-    #[non_exhaustive]
+    /// A builder for [`Branch`](crate::model::Branch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) branch_arn: std::option::Option<std::string::String>,
@@ -1297,7 +1340,7 @@ pub mod branch {
             self.backend_environment_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Branch`](crate::model::Branch)
+        /// Consumes the builder and constructs a [`Branch`](crate::model::Branch).
         pub fn build(self) -> crate::model::Branch {
             crate::model::Branch {
                 branch_arn: self.branch_arn,
@@ -1332,7 +1375,7 @@ pub mod branch {
     }
 }
 impl Branch {
-    /// Creates a new builder-style object to manufacture [`Branch`](crate::model::Branch)
+    /// Creates a new builder-style object to manufacture [`Branch`](crate::model::Branch).
     pub fn builder() -> crate::model::branch::Builder {
         crate::model::branch::Builder::default()
     }
@@ -1416,57 +1459,81 @@ impl AsRef<str> for Stage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct App {
     /// <p> The unique ID of the Amplify app. </p>
+    #[doc(hidden)]
     pub app_id: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the Amplify app. </p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p> The name for the Amplify app. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The tag for the Amplify app. </p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p> The description for the Amplify app. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p> The Git repository for the Amplify app. </p>
+    #[doc(hidden)]
     pub repository: std::option::Option<std::string::String>,
     /// <p> The platform for the Amplify app. </p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::Platform>,
     /// <p> Creates a date and time for the Amplify app. </p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Updates the date and time for the Amplify app. </p>
+    #[doc(hidden)]
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The AWS Identity and Access Management (IAM) service role for the Amazon Resource Name (ARN) of the Amplify app. </p>
+    #[doc(hidden)]
     pub iam_service_role_arn: std::option::Option<std::string::String>,
     /// <p> The environment variables for the Amplify app. </p>
+    #[doc(hidden)]
     pub environment_variables:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p> The default domain for the Amplify app. </p>
+    #[doc(hidden)]
     pub default_domain: std::option::Option<std::string::String>,
     /// <p> Enables the auto-building of branches for the Amplify app. </p>
+    #[doc(hidden)]
     pub enable_branch_auto_build: std::option::Option<bool>,
     /// <p> Automatically disconnect a branch in the Amplify Console when you delete a branch from your Git repository. </p>
+    #[doc(hidden)]
     pub enable_branch_auto_deletion: std::option::Option<bool>,
     /// <p> Enables basic authorization for the Amplify app's branches. </p>
+    #[doc(hidden)]
     pub enable_basic_auth: std::option::Option<bool>,
     /// <p> The basic authorization credentials for branches for the Amplify app. You must base64-encode the authorization credentials and provide them in the format <code>user:password</code>.</p>
+    #[doc(hidden)]
     pub basic_auth_credentials: std::option::Option<std::string::String>,
     /// <p> Describes the custom redirect and rewrite rules for the Amplify app. </p>
+    #[doc(hidden)]
     pub custom_rules: std::option::Option<std::vec::Vec<crate::model::CustomRule>>,
     /// <p> Describes the information about a production branch of the Amplify app. </p>
+    #[doc(hidden)]
     pub production_branch: std::option::Option<crate::model::ProductionBranch>,
     /// <p> Describes the content of the build specification (build spec) for the Amplify app. </p>
+    #[doc(hidden)]
     pub build_spec: std::option::Option<std::string::String>,
     /// <p>Describes the custom HTTP headers for the Amplify app.</p>
+    #[doc(hidden)]
     pub custom_headers: std::option::Option<std::string::String>,
     /// <p> Enables automated branch creation for the Amplify app. </p>
+    #[doc(hidden)]
     pub enable_auto_branch_creation: std::option::Option<bool>,
     /// <p> Describes the automated branch creation glob patterns for the Amplify app. </p>
+    #[doc(hidden)]
     pub auto_branch_creation_patterns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> Describes the automated branch creation configuration for the Amplify app. </p>
+    #[doc(hidden)]
     pub auto_branch_creation_config: std::option::Option<crate::model::AutoBranchCreationConfig>,
     /// <note>
     /// <p>This is for internal use.</p>
     /// </note>
     /// <p>The Amplify service uses this parameter to specify the authentication protocol to use to access the Git repository for an Amplify app. Amplify specifies <code>TOKEN</code> for a GitHub repository, <code>SIGV4</code> for an Amazon Web Services CodeCommit repository, and <code>SSH</code> for GitLab and Bitbucket repositories.</p>
+    #[doc(hidden)]
     pub repository_clone_method: std::option::Option<crate::model::RepositoryCloneMethod>,
 }
 impl App {
@@ -1622,11 +1689,10 @@ impl std::fmt::Debug for App {
         formatter.finish()
     }
 }
-/// See [`App`](crate::model::App)
+/// See [`App`](crate::model::App).
 pub mod app {
 
-    /// A builder for [`App`](crate::model::App)
-    #[non_exhaustive]
+    /// A builder for [`App`](crate::model::App).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_id: std::option::Option<std::string::String>,
@@ -1992,7 +2058,7 @@ pub mod app {
             self.repository_clone_method = input;
             self
         }
-        /// Consumes the builder and constructs a [`App`](crate::model::App)
+        /// Consumes the builder and constructs a [`App`](crate::model::App).
         pub fn build(self) -> crate::model::App {
             crate::model::App {
                 app_id: self.app_id,
@@ -2024,7 +2090,7 @@ pub mod app {
     }
 }
 impl App {
-    /// Creates a new builder-style object to manufacture [`App`](crate::model::App)
+    /// Creates a new builder-style object to manufacture [`App`](crate::model::App).
     pub fn builder() -> crate::model::app::Builder {
         crate::model::app::Builder::default()
     }
@@ -2094,26 +2160,36 @@ impl AsRef<str> for RepositoryCloneMethod {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoBranchCreationConfig {
     /// <p> Describes the current stage for the autocreated branch. </p>
+    #[doc(hidden)]
     pub stage: std::option::Option<crate::model::Stage>,
     /// <p> The framework for the autocreated branch. </p>
+    #[doc(hidden)]
     pub framework: std::option::Option<std::string::String>,
     /// <p> Enables auto building for the autocreated branch. </p>
+    #[doc(hidden)]
     pub enable_auto_build: std::option::Option<bool>,
     /// <p> The environment variables for the autocreated branch. </p>
+    #[doc(hidden)]
     pub environment_variables:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p> The basic authorization credentials for the autocreated branch. You must base64-encode the authorization credentials and provide them in the format <code>user:password</code>.</p>
+    #[doc(hidden)]
     pub basic_auth_credentials: std::option::Option<std::string::String>,
     /// <p> Enables basic authorization for the autocreated branch. </p>
+    #[doc(hidden)]
     pub enable_basic_auth: std::option::Option<bool>,
     /// <p>Enables performance mode for the branch.</p>
     /// <p>Performance mode optimizes for faster hosting performance by keeping content cached at the edge for a longer interval. When performance mode is enabled, hosting configuration or code changes can take up to 10 minutes to roll out. </p>
+    #[doc(hidden)]
     pub enable_performance_mode: std::option::Option<bool>,
     /// <p> The build specification (build spec) for the autocreated branch. </p>
+    #[doc(hidden)]
     pub build_spec: std::option::Option<std::string::String>,
     /// <p> Enables pull request previews for the autocreated branch. </p>
+    #[doc(hidden)]
     pub enable_pull_request_preview: std::option::Option<bool>,
     /// <p> The Amplify environment name for the pull request. </p>
+    #[doc(hidden)]
     pub pull_request_environment_name: std::option::Option<std::string::String>,
 }
 impl AutoBranchCreationConfig {
@@ -2184,11 +2260,10 @@ impl std::fmt::Debug for AutoBranchCreationConfig {
         formatter.finish()
     }
 }
-/// See [`AutoBranchCreationConfig`](crate::model::AutoBranchCreationConfig)
+/// See [`AutoBranchCreationConfig`](crate::model::AutoBranchCreationConfig).
 pub mod auto_branch_creation_config {
 
-    /// A builder for [`AutoBranchCreationConfig`](crate::model::AutoBranchCreationConfig)
-    #[non_exhaustive]
+    /// A builder for [`AutoBranchCreationConfig`](crate::model::AutoBranchCreationConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stage: std::option::Option<crate::model::Stage>,
@@ -2331,7 +2406,7 @@ pub mod auto_branch_creation_config {
             self.pull_request_environment_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoBranchCreationConfig`](crate::model::AutoBranchCreationConfig)
+        /// Consumes the builder and constructs a [`AutoBranchCreationConfig`](crate::model::AutoBranchCreationConfig).
         pub fn build(self) -> crate::model::AutoBranchCreationConfig {
             crate::model::AutoBranchCreationConfig {
                 stage: self.stage,
@@ -2349,7 +2424,7 @@ pub mod auto_branch_creation_config {
     }
 }
 impl AutoBranchCreationConfig {
-    /// Creates a new builder-style object to manufacture [`AutoBranchCreationConfig`](crate::model::AutoBranchCreationConfig)
+    /// Creates a new builder-style object to manufacture [`AutoBranchCreationConfig`](crate::model::AutoBranchCreationConfig).
     pub fn builder() -> crate::model::auto_branch_creation_config::Builder {
         crate::model::auto_branch_creation_config::Builder::default()
     }
@@ -2360,12 +2435,16 @@ impl AutoBranchCreationConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProductionBranch {
     /// <p> The last deploy time of the production branch. </p>
+    #[doc(hidden)]
     pub last_deploy_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The status of the production branch. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p> The thumbnail URL for the production branch. </p>
+    #[doc(hidden)]
     pub thumbnail_url: std::option::Option<std::string::String>,
     /// <p> The branch name for the production branch. </p>
+    #[doc(hidden)]
     pub branch_name: std::option::Option<std::string::String>,
 }
 impl ProductionBranch {
@@ -2396,11 +2475,10 @@ impl std::fmt::Debug for ProductionBranch {
         formatter.finish()
     }
 }
-/// See [`ProductionBranch`](crate::model::ProductionBranch)
+/// See [`ProductionBranch`](crate::model::ProductionBranch).
 pub mod production_branch {
 
-    /// A builder for [`ProductionBranch`](crate::model::ProductionBranch)
-    #[non_exhaustive]
+    /// A builder for [`ProductionBranch`](crate::model::ProductionBranch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) last_deploy_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -2455,7 +2533,7 @@ pub mod production_branch {
             self.branch_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProductionBranch`](crate::model::ProductionBranch)
+        /// Consumes the builder and constructs a [`ProductionBranch`](crate::model::ProductionBranch).
         pub fn build(self) -> crate::model::ProductionBranch {
             crate::model::ProductionBranch {
                 last_deploy_time: self.last_deploy_time,
@@ -2467,7 +2545,7 @@ pub mod production_branch {
     }
 }
 impl ProductionBranch {
-    /// Creates a new builder-style object to manufacture [`ProductionBranch`](crate::model::ProductionBranch)
+    /// Creates a new builder-style object to manufacture [`ProductionBranch`](crate::model::ProductionBranch).
     pub fn builder() -> crate::model::production_branch::Builder {
         crate::model::production_branch::Builder::default()
     }
@@ -2478,8 +2556,10 @@ impl ProductionBranch {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomRule {
     /// <p> The source pattern for a URL rewrite or redirect rule. </p>
+    #[doc(hidden)]
     pub source: std::option::Option<std::string::String>,
     /// <p> The target pattern for a URL rewrite or redirect rule. </p>
+    #[doc(hidden)]
     pub target: std::option::Option<std::string::String>,
     /// <p> The status code for a URL rewrite or redirect rule. </p>
     /// <dl>
@@ -2514,8 +2594,10 @@ pub struct CustomRule {
     /// <p>Represents a 404 rewrite rule.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p> The condition for a URL rewrite or redirect rule, such as a country code. </p>
+    #[doc(hidden)]
     pub condition: std::option::Option<std::string::String>,
 }
 impl CustomRule {
@@ -2578,11 +2660,10 @@ impl std::fmt::Debug for CustomRule {
         formatter.finish()
     }
 }
-/// See [`CustomRule`](crate::model::CustomRule)
+/// See [`CustomRule`](crate::model::CustomRule).
 pub mod custom_rule {
 
-    /// A builder for [`CustomRule`](crate::model::CustomRule)
-    #[non_exhaustive]
+    /// A builder for [`CustomRule`](crate::model::CustomRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source: std::option::Option<std::string::String>,
@@ -2695,7 +2776,7 @@ pub mod custom_rule {
             self.condition = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomRule`](crate::model::CustomRule)
+        /// Consumes the builder and constructs a [`CustomRule`](crate::model::CustomRule).
         pub fn build(self) -> crate::model::CustomRule {
             crate::model::CustomRule {
                 source: self.source,
@@ -2707,7 +2788,7 @@ pub mod custom_rule {
     }
 }
 impl CustomRule {
-    /// Creates a new builder-style object to manufacture [`CustomRule`](crate::model::CustomRule)
+    /// Creates a new builder-style object to manufacture [`CustomRule`](crate::model::CustomRule).
     pub fn builder() -> crate::model::custom_rule::Builder {
         crate::model::custom_rule::Builder::default()
     }
@@ -2773,22 +2854,31 @@ impl AsRef<str> for Platform {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobSummary {
     /// <p> The Amazon Resource Name (ARN) for the job. </p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p> The unique ID for the job. </p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p> The commit ID from a third-party repository provider for the job. </p>
+    #[doc(hidden)]
     pub commit_id: std::option::Option<std::string::String>,
     /// <p> The commit message from a third-party repository provider for the job. </p>
+    #[doc(hidden)]
     pub commit_message: std::option::Option<std::string::String>,
     /// <p> The commit date and time for the job. </p>
+    #[doc(hidden)]
     pub commit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The start date and time for the job. </p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The current status for the job. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobStatus>,
     /// <p> The end date and time for the job. </p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The type for the job. If the value is <code>RELEASE</code>, the job was manually released from its source by using the <code>StartJob</code> API. If the value is <code>RETRY</code>, the job was manually retried using the <code>StartJob</code> API. If the value is <code>WEB_HOOK</code>, the job was automatically triggered by webhooks. </p>
+    #[doc(hidden)]
     pub job_type: std::option::Option<crate::model::JobType>,
 }
 impl JobSummary {
@@ -2844,11 +2934,10 @@ impl std::fmt::Debug for JobSummary {
         formatter.finish()
     }
 }
-/// See [`JobSummary`](crate::model::JobSummary)
+/// See [`JobSummary`](crate::model::JobSummary).
 pub mod job_summary {
 
-    /// A builder for [`JobSummary`](crate::model::JobSummary)
-    #[non_exhaustive]
+    /// A builder for [`JobSummary`](crate::model::JobSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_arn: std::option::Option<std::string::String>,
@@ -2964,7 +3053,7 @@ pub mod job_summary {
             self.job_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobSummary`](crate::model::JobSummary)
+        /// Consumes the builder and constructs a [`JobSummary`](crate::model::JobSummary).
         pub fn build(self) -> crate::model::JobSummary {
             crate::model::JobSummary {
                 job_arn: self.job_arn,
@@ -2981,7 +3070,7 @@ pub mod job_summary {
     }
 }
 impl JobSummary {
-    /// Creates a new builder-style object to manufacture [`JobSummary`](crate::model::JobSummary)
+    /// Creates a new builder-style object to manufacture [`JobSummary`](crate::model::JobSummary).
     pub fn builder() -> crate::model::job_summary::Builder {
         crate::model::job_summary::Builder::default()
     }
@@ -3138,16 +3227,22 @@ impl AsRef<str> for JobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BackendEnvironment {
     /// <p> The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app. </p>
+    #[doc(hidden)]
     pub backend_environment_arn: std::option::Option<std::string::String>,
     /// <p> The name for a backend environment that is part of an Amplify app. </p>
+    #[doc(hidden)]
     pub environment_name: std::option::Option<std::string::String>,
     /// <p> The AWS CloudFormation stack name of a backend environment. </p>
+    #[doc(hidden)]
     pub stack_name: std::option::Option<std::string::String>,
     /// <p> The name of deployment artifacts. </p>
+    #[doc(hidden)]
     pub deployment_artifacts: std::option::Option<std::string::String>,
     /// <p> The creation date and time for a backend environment that is part of an Amplify app. </p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The last updated date and time for a backend environment that is part of an Amplify app. </p>
+    #[doc(hidden)]
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl BackendEnvironment {
@@ -3188,11 +3283,10 @@ impl std::fmt::Debug for BackendEnvironment {
         formatter.finish()
     }
 }
-/// See [`BackendEnvironment`](crate::model::BackendEnvironment)
+/// See [`BackendEnvironment`](crate::model::BackendEnvironment).
 pub mod backend_environment {
 
-    /// A builder for [`BackendEnvironment`](crate::model::BackendEnvironment)
-    #[non_exhaustive]
+    /// A builder for [`BackendEnvironment`](crate::model::BackendEnvironment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backend_environment_arn: std::option::Option<std::string::String>,
@@ -3278,7 +3372,7 @@ pub mod backend_environment {
             self.update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackendEnvironment`](crate::model::BackendEnvironment)
+        /// Consumes the builder and constructs a [`BackendEnvironment`](crate::model::BackendEnvironment).
         pub fn build(self) -> crate::model::BackendEnvironment {
             crate::model::BackendEnvironment {
                 backend_environment_arn: self.backend_environment_arn,
@@ -3292,7 +3386,7 @@ pub mod backend_environment {
     }
 }
 impl BackendEnvironment {
-    /// Creates a new builder-style object to manufacture [`BackendEnvironment`](crate::model::BackendEnvironment)
+    /// Creates a new builder-style object to manufacture [`BackendEnvironment`](crate::model::BackendEnvironment).
     pub fn builder() -> crate::model::backend_environment::Builder {
         crate::model::backend_environment::Builder::default()
     }
@@ -3303,8 +3397,10 @@ impl BackendEnvironment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Artifact {
     /// <p> The file name for the artifact. </p>
+    #[doc(hidden)]
     pub artifact_file_name: std::option::Option<std::string::String>,
     /// <p> The unique ID for the artifact. </p>
+    #[doc(hidden)]
     pub artifact_id: std::option::Option<std::string::String>,
 }
 impl Artifact {
@@ -3325,11 +3421,10 @@ impl std::fmt::Debug for Artifact {
         formatter.finish()
     }
 }
-/// See [`Artifact`](crate::model::Artifact)
+/// See [`Artifact`](crate::model::Artifact).
 pub mod artifact {
 
-    /// A builder for [`Artifact`](crate::model::Artifact)
-    #[non_exhaustive]
+    /// A builder for [`Artifact`](crate::model::Artifact).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) artifact_file_name: std::option::Option<std::string::String>,
@@ -3359,7 +3454,7 @@ pub mod artifact {
             self.artifact_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Artifact`](crate::model::Artifact)
+        /// Consumes the builder and constructs a [`Artifact`](crate::model::Artifact).
         pub fn build(self) -> crate::model::Artifact {
             crate::model::Artifact {
                 artifact_file_name: self.artifact_file_name,
@@ -3369,7 +3464,7 @@ pub mod artifact {
     }
 }
 impl Artifact {
-    /// Creates a new builder-style object to manufacture [`Artifact`](crate::model::Artifact)
+    /// Creates a new builder-style object to manufacture [`Artifact`](crate::model::Artifact).
     pub fn builder() -> crate::model::artifact::Builder {
         crate::model::artifact::Builder::default()
     }
@@ -3380,8 +3475,10 @@ impl Artifact {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Job {
     /// <p> Describes the summary for an execution job for an Amplify app. </p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::JobSummary>,
     /// <p> The execution steps for an execution job, for an Amplify app. </p>
+    #[doc(hidden)]
     pub steps: std::option::Option<std::vec::Vec<crate::model::Step>>,
 }
 impl Job {
@@ -3402,11 +3499,10 @@ impl std::fmt::Debug for Job {
         formatter.finish()
     }
 }
-/// See [`Job`](crate::model::Job)
+/// See [`Job`](crate::model::Job).
 pub mod job {
 
-    /// A builder for [`Job`](crate::model::Job)
-    #[non_exhaustive]
+    /// A builder for [`Job`](crate::model::Job).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::JobSummary>,
@@ -3442,7 +3538,7 @@ pub mod job {
             self.steps = input;
             self
         }
-        /// Consumes the builder and constructs a [`Job`](crate::model::Job)
+        /// Consumes the builder and constructs a [`Job`](crate::model::Job).
         pub fn build(self) -> crate::model::Job {
             crate::model::Job {
                 summary: self.summary,
@@ -3452,7 +3548,7 @@ pub mod job {
     }
 }
 impl Job {
-    /// Creates a new builder-style object to manufacture [`Job`](crate::model::Job)
+    /// Creates a new builder-style object to manufacture [`Job`](crate::model::Job).
     pub fn builder() -> crate::model::job::Builder {
         crate::model::job::Builder::default()
     }
@@ -3463,27 +3559,38 @@ impl Job {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Step {
     /// <p> The name of the execution step. </p>
+    #[doc(hidden)]
     pub step_name: std::option::Option<std::string::String>,
     /// <p> The start date and time of the execution step. </p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The status of the execution step. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::JobStatus>,
     /// <p> The end date and time of the execution step. </p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The URL to the logs for the execution step. </p>
+    #[doc(hidden)]
     pub log_url: std::option::Option<std::string::String>,
     /// <p> The URL to the artifact for the execution step. </p>
+    #[doc(hidden)]
     pub artifacts_url: std::option::Option<std::string::String>,
     /// <p> The URL to the test artifact for the execution step. </p>
+    #[doc(hidden)]
     pub test_artifacts_url: std::option::Option<std::string::String>,
     /// <p> The URL to the test configuration for the execution step. </p>
+    #[doc(hidden)]
     pub test_config_url: std::option::Option<std::string::String>,
     /// <p> The list of screenshot URLs for the execution step, if relevant. </p>
+    #[doc(hidden)]
     pub screenshots:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p> The reason for the current step status. </p>
+    #[doc(hidden)]
     pub status_reason: std::option::Option<std::string::String>,
     /// <p> The context for the current step. Includes a build image if the step is build. </p>
+    #[doc(hidden)]
     pub context: std::option::Option<std::string::String>,
 }
 impl Step {
@@ -3552,11 +3659,10 @@ impl std::fmt::Debug for Step {
         formatter.finish()
     }
 }
-/// See [`Step`](crate::model::Step)
+/// See [`Step`](crate::model::Step).
 pub mod step {
 
-    /// A builder for [`Step`](crate::model::Step)
-    #[non_exhaustive]
+    /// A builder for [`Step`](crate::model::Step).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) step_name: std::option::Option<std::string::String>,
@@ -3717,7 +3823,7 @@ pub mod step {
             self.context = input;
             self
         }
-        /// Consumes the builder and constructs a [`Step`](crate::model::Step)
+        /// Consumes the builder and constructs a [`Step`](crate::model::Step).
         pub fn build(self) -> crate::model::Step {
             crate::model::Step {
                 step_name: self.step_name,
@@ -3736,7 +3842,7 @@ pub mod step {
     }
 }
 impl Step {
-    /// Creates a new builder-style object to manufacture [`Step`](crate::model::Step)
+    /// Creates a new builder-style object to manufacture [`Step`](crate::model::Step).
     pub fn builder() -> crate::model::step::Builder {
         crate::model::step::Builder::default()
     }

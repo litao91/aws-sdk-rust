@@ -4,10 +4,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetProductsOutput {
     /// <p>The format version of the response. For example, aws_v1.</p>
+    #[doc(hidden)]
     pub format_version: std::option::Option<std::string::String>,
     /// <p>The list of products that match your filters. The list contains both the product metadata and the price information.</p>
+    #[doc(hidden)]
     pub price_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The pagination token that indicates the next set of results to retrieve.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetProductsOutput {
@@ -33,11 +36,10 @@ impl std::fmt::Debug for GetProductsOutput {
         formatter.finish()
     }
 }
-/// See [`GetProductsOutput`](crate::output::GetProductsOutput)
+/// See [`GetProductsOutput`](crate::output::GetProductsOutput).
 pub mod get_products_output {
 
-    /// A builder for [`GetProductsOutput`](crate::output::GetProductsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetProductsOutput`](crate::output::GetProductsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) format_version: std::option::Option<std::string::String>,
@@ -87,7 +89,7 @@ pub mod get_products_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetProductsOutput`](crate::output::GetProductsOutput)
+        /// Consumes the builder and constructs a [`GetProductsOutput`](crate::output::GetProductsOutput).
         pub fn build(self) -> crate::output::GetProductsOutput {
             crate::output::GetProductsOutput {
                 format_version: self.format_version,
@@ -98,7 +100,7 @@ pub mod get_products_output {
     }
 }
 impl GetProductsOutput {
-    /// Creates a new builder-style object to manufacture [`GetProductsOutput`](crate::output::GetProductsOutput)
+    /// Creates a new builder-style object to manufacture [`GetProductsOutput`](crate::output::GetProductsOutput).
     pub fn builder() -> crate::output::get_products_output::Builder {
         crate::output::get_products_output::Builder::default()
     }
@@ -109,8 +111,10 @@ impl GetProductsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAttributeValuesOutput {
     /// <p>The list of values for an attribute. For example, <code>Throughput Optimized HDD</code> and <code>Provisioned IOPS</code> are two available values for the <code>AmazonEC2</code> <code>volumeType</code>.</p>
+    #[doc(hidden)]
     pub attribute_values: std::option::Option<std::vec::Vec<crate::model::AttributeValue>>,
     /// <p>The pagination token that indicates the next set of results to retrieve.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl GetAttributeValuesOutput {
@@ -131,11 +135,10 @@ impl std::fmt::Debug for GetAttributeValuesOutput {
         formatter.finish()
     }
 }
-/// See [`GetAttributeValuesOutput`](crate::output::GetAttributeValuesOutput)
+/// See [`GetAttributeValuesOutput`](crate::output::GetAttributeValuesOutput).
 pub mod get_attribute_values_output {
 
-    /// A builder for [`GetAttributeValuesOutput`](crate::output::GetAttributeValuesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAttributeValuesOutput`](crate::output::GetAttributeValuesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_values:
@@ -172,7 +175,7 @@ pub mod get_attribute_values_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAttributeValuesOutput`](crate::output::GetAttributeValuesOutput)
+        /// Consumes the builder and constructs a [`GetAttributeValuesOutput`](crate::output::GetAttributeValuesOutput).
         pub fn build(self) -> crate::output::GetAttributeValuesOutput {
             crate::output::GetAttributeValuesOutput {
                 attribute_values: self.attribute_values,
@@ -182,7 +185,7 @@ pub mod get_attribute_values_output {
     }
 }
 impl GetAttributeValuesOutput {
-    /// Creates a new builder-style object to manufacture [`GetAttributeValuesOutput`](crate::output::GetAttributeValuesOutput)
+    /// Creates a new builder-style object to manufacture [`GetAttributeValuesOutput`](crate::output::GetAttributeValuesOutput).
     pub fn builder() -> crate::output::get_attribute_values_output::Builder {
         crate::output::get_attribute_values_output::Builder::default()
     }
@@ -193,10 +196,13 @@ impl GetAttributeValuesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeServicesOutput {
     /// <p>The service metadata for the service or services in the response.</p>
+    #[doc(hidden)]
     pub services: std::option::Option<std::vec::Vec<crate::model::Service>>,
     /// <p>The format version of the response. For example, <code>aws_v1</code>.</p>
+    #[doc(hidden)]
     pub format_version: std::option::Option<std::string::String>,
     /// <p>The pagination token for the next set of retrievable results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeServicesOutput {
@@ -222,11 +228,10 @@ impl std::fmt::Debug for DescribeServicesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeServicesOutput`](crate::output::DescribeServicesOutput)
+/// See [`DescribeServicesOutput`](crate::output::DescribeServicesOutput).
 pub mod describe_services_output {
 
-    /// A builder for [`DescribeServicesOutput`](crate::output::DescribeServicesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeServicesOutput`](crate::output::DescribeServicesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) services: std::option::Option<std::vec::Vec<crate::model::Service>>,
@@ -276,7 +281,7 @@ pub mod describe_services_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeServicesOutput`](crate::output::DescribeServicesOutput)
+        /// Consumes the builder and constructs a [`DescribeServicesOutput`](crate::output::DescribeServicesOutput).
         pub fn build(self) -> crate::output::DescribeServicesOutput {
             crate::output::DescribeServicesOutput {
                 services: self.services,
@@ -287,7 +292,7 @@ pub mod describe_services_output {
     }
 }
 impl DescribeServicesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeServicesOutput`](crate::output::DescribeServicesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeServicesOutput`](crate::output::DescribeServicesOutput).
     pub fn builder() -> crate::output::describe_services_output::Builder {
         crate::output::describe_services_output::Builder::default()
     }

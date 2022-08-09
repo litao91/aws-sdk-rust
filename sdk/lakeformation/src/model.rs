@@ -63,8 +63,10 @@ impl AsRef<str> for OptimizerType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WriteOperation {
     /// <p>A new object to add to the governed table.</p>
+    #[doc(hidden)]
     pub add_object: std::option::Option<crate::model::AddObjectInput>,
     /// <p>An object to delete from the governed table.</p>
+    #[doc(hidden)]
     pub delete_object: std::option::Option<crate::model::DeleteObjectInput>,
 }
 impl WriteOperation {
@@ -85,11 +87,10 @@ impl std::fmt::Debug for WriteOperation {
         formatter.finish()
     }
 }
-/// See [`WriteOperation`](crate::model::WriteOperation)
+/// See [`WriteOperation`](crate::model::WriteOperation).
 pub mod write_operation {
 
-    /// A builder for [`WriteOperation`](crate::model::WriteOperation)
-    #[non_exhaustive]
+    /// A builder for [`WriteOperation`](crate::model::WriteOperation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) add_object: std::option::Option<crate::model::AddObjectInput>,
@@ -122,7 +123,7 @@ pub mod write_operation {
             self.delete_object = input;
             self
         }
-        /// Consumes the builder and constructs a [`WriteOperation`](crate::model::WriteOperation)
+        /// Consumes the builder and constructs a [`WriteOperation`](crate::model::WriteOperation).
         pub fn build(self) -> crate::model::WriteOperation {
             crate::model::WriteOperation {
                 add_object: self.add_object,
@@ -132,7 +133,7 @@ pub mod write_operation {
     }
 }
 impl WriteOperation {
-    /// Creates a new builder-style object to manufacture [`WriteOperation`](crate::model::WriteOperation)
+    /// Creates a new builder-style object to manufacture [`WriteOperation`](crate::model::WriteOperation).
     pub fn builder() -> crate::model::write_operation::Builder {
         crate::model::write_operation::Builder::default()
     }
@@ -143,10 +144,13 @@ impl WriteOperation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteObjectInput {
     /// <p>The Amazon S3 location of the object to delete.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 ETag of the object. Returned by <code>GetTableObjects</code> for validation and used to identify changes to the underlying data.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
     /// <p>A list of partition values for the object. A value must be specified for each partition key associated with the governed table.</p>
+    #[doc(hidden)]
     pub partition_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DeleteObjectInput {
@@ -172,11 +176,10 @@ impl std::fmt::Debug for DeleteObjectInput {
         formatter.finish()
     }
 }
-/// See [`DeleteObjectInput`](crate::model::DeleteObjectInput)
+/// See [`DeleteObjectInput`](crate::model::DeleteObjectInput).
 pub mod delete_object_input {
 
-    /// A builder for [`DeleteObjectInput`](crate::model::DeleteObjectInput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteObjectInput`](crate::model::DeleteObjectInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) uri: std::option::Option<std::string::String>,
@@ -223,7 +226,7 @@ pub mod delete_object_input {
             self.partition_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteObjectInput`](crate::model::DeleteObjectInput)
+        /// Consumes the builder and constructs a [`DeleteObjectInput`](crate::model::DeleteObjectInput).
         pub fn build(self) -> crate::model::DeleteObjectInput {
             crate::model::DeleteObjectInput {
                 uri: self.uri,
@@ -234,7 +237,7 @@ pub mod delete_object_input {
     }
 }
 impl DeleteObjectInput {
-    /// Creates a new builder-style object to manufacture [`DeleteObjectInput`](crate::model::DeleteObjectInput)
+    /// Creates a new builder-style object to manufacture [`DeleteObjectInput`](crate::model::DeleteObjectInput).
     pub fn builder() -> crate::model::delete_object_input::Builder {
         crate::model::delete_object_input::Builder::default()
     }
@@ -245,13 +248,17 @@ impl DeleteObjectInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddObjectInput {
     /// <p>The Amazon S3 location of the object.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 ETag of the object. Returned by <code>GetTableObjects</code> for validation and used to identify changes to the underlying data.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
     /// <p>The size of the Amazon S3 object in bytes.</p>
+    #[doc(hidden)]
     pub size: i64,
     /// <p>A list of partition values for the object. A value must be specified for each partition key associated with the table.</p>
     /// <p>The supported data types are integer, long, date(yyyy-MM-dd), timestamp(yyyy-MM-dd HH:mm:ssXXX or yyyy-MM-dd HH:mm:ss"), string and decimal.</p>
+    #[doc(hidden)]
     pub partition_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AddObjectInput {
@@ -283,11 +290,10 @@ impl std::fmt::Debug for AddObjectInput {
         formatter.finish()
     }
 }
-/// See [`AddObjectInput`](crate::model::AddObjectInput)
+/// See [`AddObjectInput`](crate::model::AddObjectInput).
 pub mod add_object_input {
 
-    /// A builder for [`AddObjectInput`](crate::model::AddObjectInput)
-    #[non_exhaustive]
+    /// A builder for [`AddObjectInput`](crate::model::AddObjectInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) uri: std::option::Option<std::string::String>,
@@ -347,7 +353,7 @@ pub mod add_object_input {
             self.partition_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddObjectInput`](crate::model::AddObjectInput)
+        /// Consumes the builder and constructs a [`AddObjectInput`](crate::model::AddObjectInput).
         pub fn build(self) -> crate::model::AddObjectInput {
             crate::model::AddObjectInput {
                 uri: self.uri,
@@ -359,7 +365,7 @@ pub mod add_object_input {
     }
 }
 impl AddObjectInput {
-    /// Creates a new builder-style object to manufacture [`AddObjectInput`](crate::model::AddObjectInput)
+    /// Creates a new builder-style object to manufacture [`AddObjectInput`](crate::model::AddObjectInput).
     pub fn builder() -> crate::model::add_object_input::Builder {
         crate::model::add_object_input::Builder::default()
     }
@@ -425,15 +431,20 @@ impl AsRef<str> for TransactionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryPlanningContext {
     /// <p>The ID of the Data Catalog where the partition in question resides. If none is provided, the Amazon Web Services account ID is used by default.</p>
+    #[doc(hidden)]
     pub catalog_id: std::option::Option<std::string::String>,
     /// <p>The database containing the table.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>The time as of when to read the table contents. If not set, the most recent transaction commit time will be used. Cannot be specified along with <code>TransactionId</code>.</p>
+    #[doc(hidden)]
     pub query_as_of_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A map consisting of key-value pairs.</p>
+    #[doc(hidden)]
     pub query_parameters:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The transaction ID at which to read the table contents. If this transaction is not committed, the read will be treated as part of that transaction and will see its writes. If this transaction has aborted, an error will be returned. If not set, defaults to the most recent committed transaction. Cannot be specified along with <code>QueryAsOfTime</code>.</p>
+    #[doc(hidden)]
     pub transaction_id: std::option::Option<std::string::String>,
 }
 impl QueryPlanningContext {
@@ -472,11 +483,10 @@ impl std::fmt::Debug for QueryPlanningContext {
         formatter.finish()
     }
 }
-/// See [`QueryPlanningContext`](crate::model::QueryPlanningContext)
+/// See [`QueryPlanningContext`](crate::model::QueryPlanningContext).
 pub mod query_planning_context {
 
-    /// A builder for [`QueryPlanningContext`](crate::model::QueryPlanningContext)
-    #[non_exhaustive]
+    /// A builder for [`QueryPlanningContext`](crate::model::QueryPlanningContext).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog_id: std::option::Option<std::string::String>,
@@ -562,7 +572,7 @@ pub mod query_planning_context {
             self.transaction_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryPlanningContext`](crate::model::QueryPlanningContext)
+        /// Consumes the builder and constructs a [`QueryPlanningContext`](crate::model::QueryPlanningContext).
         pub fn build(self) -> crate::model::QueryPlanningContext {
             crate::model::QueryPlanningContext {
                 catalog_id: self.catalog_id,
@@ -575,7 +585,7 @@ pub mod query_planning_context {
     }
 }
 impl QueryPlanningContext {
-    /// Creates a new builder-style object to manufacture [`QueryPlanningContext`](crate::model::QueryPlanningContext)
+    /// Creates a new builder-style object to manufacture [`QueryPlanningContext`](crate::model::QueryPlanningContext).
     pub fn builder() -> crate::model::query_planning_context::Builder {
         crate::model::query_planning_context::Builder::default()
     }
@@ -586,12 +596,16 @@ impl QueryPlanningContext {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaggedTable {
     /// <p>A table that has LF-tags attached to it.</p>
+    #[doc(hidden)]
     pub table: std::option::Option<crate::model::TableResource>,
     /// <p>A list of LF-tags attached to the database where the table resides.</p>
+    #[doc(hidden)]
     pub lf_tag_on_database: std::option::Option<std::vec::Vec<crate::model::LfTagPair>>,
     /// <p>A list of LF-tags attached to the table.</p>
+    #[doc(hidden)]
     pub lf_tags_on_table: std::option::Option<std::vec::Vec<crate::model::LfTagPair>>,
     /// <p>A list of LF-tags attached to columns in the table.</p>
+    #[doc(hidden)]
     pub lf_tags_on_columns: std::option::Option<std::vec::Vec<crate::model::ColumnLfTag>>,
 }
 impl TaggedTable {
@@ -622,11 +636,10 @@ impl std::fmt::Debug for TaggedTable {
         formatter.finish()
     }
 }
-/// See [`TaggedTable`](crate::model::TaggedTable)
+/// See [`TaggedTable`](crate::model::TaggedTable).
 pub mod tagged_table {
 
-    /// A builder for [`TaggedTable`](crate::model::TaggedTable)
-    #[non_exhaustive]
+    /// A builder for [`TaggedTable`](crate::model::TaggedTable).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table: std::option::Option<crate::model::TableResource>,
@@ -706,7 +719,7 @@ pub mod tagged_table {
             self.lf_tags_on_columns = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaggedTable`](crate::model::TaggedTable)
+        /// Consumes the builder and constructs a [`TaggedTable`](crate::model::TaggedTable).
         pub fn build(self) -> crate::model::TaggedTable {
             crate::model::TaggedTable {
                 table: self.table,
@@ -718,7 +731,7 @@ pub mod tagged_table {
     }
 }
 impl TaggedTable {
-    /// Creates a new builder-style object to manufacture [`TaggedTable`](crate::model::TaggedTable)
+    /// Creates a new builder-style object to manufacture [`TaggedTable`](crate::model::TaggedTable).
     pub fn builder() -> crate::model::tagged_table::Builder {
         crate::model::tagged_table::Builder::default()
     }
@@ -729,8 +742,10 @@ impl TaggedTable {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ColumnLfTag {
     /// <p>The name of a column resource.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The LF-tags attached to a column resource.</p>
+    #[doc(hidden)]
     pub lf_tags: std::option::Option<std::vec::Vec<crate::model::LfTagPair>>,
 }
 impl ColumnLfTag {
@@ -751,11 +766,10 @@ impl std::fmt::Debug for ColumnLfTag {
         formatter.finish()
     }
 }
-/// See [`ColumnLfTag`](crate::model::ColumnLfTag)
+/// See [`ColumnLfTag`](crate::model::ColumnLfTag).
 pub mod column_lf_tag {
 
-    /// A builder for [`ColumnLfTag`](crate::model::ColumnLfTag)
-    #[non_exhaustive]
+    /// A builder for [`ColumnLfTag`](crate::model::ColumnLfTag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -791,7 +805,7 @@ pub mod column_lf_tag {
             self.lf_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ColumnLfTag`](crate::model::ColumnLfTag)
+        /// Consumes the builder and constructs a [`ColumnLfTag`](crate::model::ColumnLfTag).
         pub fn build(self) -> crate::model::ColumnLfTag {
             crate::model::ColumnLfTag {
                 name: self.name,
@@ -801,7 +815,7 @@ pub mod column_lf_tag {
     }
 }
 impl ColumnLfTag {
-    /// Creates a new builder-style object to manufacture [`ColumnLfTag`](crate::model::ColumnLfTag)
+    /// Creates a new builder-style object to manufacture [`ColumnLfTag`](crate::model::ColumnLfTag).
     pub fn builder() -> crate::model::column_lf_tag::Builder {
         crate::model::column_lf_tag::Builder::default()
     }
@@ -812,10 +826,13 @@ impl ColumnLfTag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LfTagPair {
     /// <p>The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment. </p>
+    #[doc(hidden)]
     pub catalog_id: std::option::Option<std::string::String>,
     /// <p>The key-name for the LF-tag.</p>
+    #[doc(hidden)]
     pub tag_key: std::option::Option<std::string::String>,
     /// <p>A list of possible values an attribute can take.</p>
+    #[doc(hidden)]
     pub tag_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl LfTagPair {
@@ -841,11 +858,10 @@ impl std::fmt::Debug for LfTagPair {
         formatter.finish()
     }
 }
-/// See [`LfTagPair`](crate::model::LfTagPair)
+/// See [`LfTagPair`](crate::model::LfTagPair).
 pub mod lf_tag_pair {
 
-    /// A builder for [`LfTagPair`](crate::model::LfTagPair)
-    #[non_exhaustive]
+    /// A builder for [`LfTagPair`](crate::model::LfTagPair).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog_id: std::option::Option<std::string::String>,
@@ -892,7 +908,7 @@ pub mod lf_tag_pair {
             self.tag_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`LfTagPair`](crate::model::LfTagPair)
+        /// Consumes the builder and constructs a [`LfTagPair`](crate::model::LfTagPair).
         pub fn build(self) -> crate::model::LfTagPair {
             crate::model::LfTagPair {
                 catalog_id: self.catalog_id,
@@ -903,7 +919,7 @@ pub mod lf_tag_pair {
     }
 }
 impl LfTagPair {
-    /// Creates a new builder-style object to manufacture [`LfTagPair`](crate::model::LfTagPair)
+    /// Creates a new builder-style object to manufacture [`LfTagPair`](crate::model::LfTagPair).
     pub fn builder() -> crate::model::lf_tag_pair::Builder {
         crate::model::lf_tag_pair::Builder::default()
     }
@@ -914,13 +930,17 @@ impl LfTagPair {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TableResource {
     /// <p>The identifier for the Data Catalog. By default, it is the account ID of the caller.</p>
+    #[doc(hidden)]
     pub catalog_id: std::option::Option<std::string::String>,
     /// <p>The name of the database for the table. Unique to a Data Catalog. A database is a set of associated table definitions organized into a logical group. You can Grant and Revoke database privileges to a principal. </p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>The name of the table.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A wildcard object representing every table under a database.</p>
     /// <p>At least one of <code>TableResource$Name</code> or <code>TableResource$TableWildcard</code> is required.</p>
+    #[doc(hidden)]
     pub table_wildcard: std::option::Option<crate::model::TableWildcard>,
 }
 impl TableResource {
@@ -952,11 +972,10 @@ impl std::fmt::Debug for TableResource {
         formatter.finish()
     }
 }
-/// See [`TableResource`](crate::model::TableResource)
+/// See [`TableResource`](crate::model::TableResource).
 pub mod table_resource {
 
-    /// A builder for [`TableResource`](crate::model::TableResource)
-    #[non_exhaustive]
+    /// A builder for [`TableResource`](crate::model::TableResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog_id: std::option::Option<std::string::String>,
@@ -1013,7 +1032,7 @@ pub mod table_resource {
             self.table_wildcard = input;
             self
         }
-        /// Consumes the builder and constructs a [`TableResource`](crate::model::TableResource)
+        /// Consumes the builder and constructs a [`TableResource`](crate::model::TableResource).
         pub fn build(self) -> crate::model::TableResource {
             crate::model::TableResource {
                 catalog_id: self.catalog_id,
@@ -1025,7 +1044,7 @@ pub mod table_resource {
     }
 }
 impl TableResource {
-    /// Creates a new builder-style object to manufacture [`TableResource`](crate::model::TableResource)
+    /// Creates a new builder-style object to manufacture [`TableResource`](crate::model::TableResource).
     pub fn builder() -> crate::model::table_resource::Builder {
         crate::model::table_resource::Builder::default()
     }
@@ -1041,22 +1060,21 @@ impl std::fmt::Debug for TableWildcard {
         formatter.finish()
     }
 }
-/// See [`TableWildcard`](crate::model::TableWildcard)
+/// See [`TableWildcard`](crate::model::TableWildcard).
 pub mod table_wildcard {
 
-    /// A builder for [`TableWildcard`](crate::model::TableWildcard)
-    #[non_exhaustive]
+    /// A builder for [`TableWildcard`](crate::model::TableWildcard).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TableWildcard`](crate::model::TableWildcard)
+        /// Consumes the builder and constructs a [`TableWildcard`](crate::model::TableWildcard).
         pub fn build(self) -> crate::model::TableWildcard {
             crate::model::TableWildcard {}
         }
     }
 }
 impl TableWildcard {
-    /// Creates a new builder-style object to manufacture [`TableWildcard`](crate::model::TableWildcard)
+    /// Creates a new builder-style object to manufacture [`TableWildcard`](crate::model::TableWildcard).
     pub fn builder() -> crate::model::table_wildcard::Builder {
         crate::model::table_wildcard::Builder::default()
     }
@@ -1067,8 +1085,10 @@ impl TableWildcard {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LfTag {
     /// <p>The key-name for the LF-tag.</p>
+    #[doc(hidden)]
     pub tag_key: std::option::Option<std::string::String>,
     /// <p>A list of possible values an attribute can take.</p>
+    #[doc(hidden)]
     pub tag_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl LfTag {
@@ -1089,11 +1109,10 @@ impl std::fmt::Debug for LfTag {
         formatter.finish()
     }
 }
-/// See [`LfTag`](crate::model::LfTag)
+/// See [`LfTag`](crate::model::LfTag).
 pub mod lf_tag {
 
-    /// A builder for [`LfTag`](crate::model::LfTag)
-    #[non_exhaustive]
+    /// A builder for [`LfTag`](crate::model::LfTag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_key: std::option::Option<std::string::String>,
@@ -1129,7 +1148,7 @@ pub mod lf_tag {
             self.tag_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`LfTag`](crate::model::LfTag)
+        /// Consumes the builder and constructs a [`LfTag`](crate::model::LfTag).
         pub fn build(self) -> crate::model::LfTag {
             crate::model::LfTag {
                 tag_key: self.tag_key,
@@ -1139,7 +1158,7 @@ pub mod lf_tag {
     }
 }
 impl LfTag {
-    /// Creates a new builder-style object to manufacture [`LfTag`](crate::model::LfTag)
+    /// Creates a new builder-style object to manufacture [`LfTag`](crate::model::LfTag).
     pub fn builder() -> crate::model::lf_tag::Builder {
         crate::model::lf_tag::Builder::default()
     }
@@ -1150,8 +1169,10 @@ impl LfTag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaggedDatabase {
     /// <p>A database that has LF-tags attached to it.</p>
+    #[doc(hidden)]
     pub database: std::option::Option<crate::model::DatabaseResource>,
     /// <p>A list of LF-tags attached to the database.</p>
+    #[doc(hidden)]
     pub lf_tags: std::option::Option<std::vec::Vec<crate::model::LfTagPair>>,
 }
 impl TaggedDatabase {
@@ -1172,11 +1193,10 @@ impl std::fmt::Debug for TaggedDatabase {
         formatter.finish()
     }
 }
-/// See [`TaggedDatabase`](crate::model::TaggedDatabase)
+/// See [`TaggedDatabase`](crate::model::TaggedDatabase).
 pub mod tagged_database {
 
-    /// A builder for [`TaggedDatabase`](crate::model::TaggedDatabase)
-    #[non_exhaustive]
+    /// A builder for [`TaggedDatabase`](crate::model::TaggedDatabase).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) database: std::option::Option<crate::model::DatabaseResource>,
@@ -1215,7 +1235,7 @@ pub mod tagged_database {
             self.lf_tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaggedDatabase`](crate::model::TaggedDatabase)
+        /// Consumes the builder and constructs a [`TaggedDatabase`](crate::model::TaggedDatabase).
         pub fn build(self) -> crate::model::TaggedDatabase {
             crate::model::TaggedDatabase {
                 database: self.database,
@@ -1225,7 +1245,7 @@ pub mod tagged_database {
     }
 }
 impl TaggedDatabase {
-    /// Creates a new builder-style object to manufacture [`TaggedDatabase`](crate::model::TaggedDatabase)
+    /// Creates a new builder-style object to manufacture [`TaggedDatabase`](crate::model::TaggedDatabase).
     pub fn builder() -> crate::model::tagged_database::Builder {
         crate::model::tagged_database::Builder::default()
     }
@@ -1236,8 +1256,10 @@ impl TaggedDatabase {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatabaseResource {
     /// <p>The identifier for the Data Catalog. By default, it is the account ID of the caller.</p>
+    #[doc(hidden)]
     pub catalog_id: std::option::Option<std::string::String>,
     /// <p>The name of the database resource. Unique to the Data Catalog.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl DatabaseResource {
@@ -1258,11 +1280,10 @@ impl std::fmt::Debug for DatabaseResource {
         formatter.finish()
     }
 }
-/// See [`DatabaseResource`](crate::model::DatabaseResource)
+/// See [`DatabaseResource`](crate::model::DatabaseResource).
 pub mod database_resource {
 
-    /// A builder for [`DatabaseResource`](crate::model::DatabaseResource)
-    #[non_exhaustive]
+    /// A builder for [`DatabaseResource`](crate::model::DatabaseResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog_id: std::option::Option<std::string::String>,
@@ -1289,7 +1310,7 @@ pub mod database_resource {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatabaseResource`](crate::model::DatabaseResource)
+        /// Consumes the builder and constructs a [`DatabaseResource`](crate::model::DatabaseResource).
         pub fn build(self) -> crate::model::DatabaseResource {
             crate::model::DatabaseResource {
                 catalog_id: self.catalog_id,
@@ -1299,7 +1320,7 @@ pub mod database_resource {
     }
 }
 impl DatabaseResource {
-    /// Creates a new builder-style object to manufacture [`DatabaseResource`](crate::model::DatabaseResource)
+    /// Creates a new builder-style object to manufacture [`DatabaseResource`](crate::model::DatabaseResource).
     pub fn builder() -> crate::model::database_resource::Builder {
         crate::model::database_resource::Builder::default()
     }
@@ -1418,20 +1439,28 @@ impl AsRef<str> for Permission {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Resource {
     /// <p>The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment. </p>
+    #[doc(hidden)]
     pub catalog: std::option::Option<crate::model::CatalogResource>,
     /// <p>The database for the resource. Unique to the Data Catalog. A database is a set of associated table definitions organized into a logical group. You can Grant and Revoke database permissions to a principal. </p>
+    #[doc(hidden)]
     pub database: std::option::Option<crate::model::DatabaseResource>,
     /// <p>The table for the resource. A table is a metadata definition that represents your data. You can Grant and Revoke table privileges to a principal. </p>
+    #[doc(hidden)]
     pub table: std::option::Option<crate::model::TableResource>,
     /// <p>The table with columns for the resource. A principal with permissions to this resource can select metadata from the columns of a table in the Data Catalog and the underlying data in Amazon S3.</p>
+    #[doc(hidden)]
     pub table_with_columns: std::option::Option<crate::model::TableWithColumnsResource>,
     /// <p>The location of an Amazon S3 path where permissions are granted or revoked. </p>
+    #[doc(hidden)]
     pub data_location: std::option::Option<crate::model::DataLocationResource>,
     /// <p>A data cell filter.</p>
+    #[doc(hidden)]
     pub data_cells_filter: std::option::Option<crate::model::DataCellsFilterResource>,
     /// <p>The LF-tag key and values attached to a resource.</p>
+    #[doc(hidden)]
     pub lf_tag: std::option::Option<crate::model::LfTagKeyResource>,
     /// <p>A list of LF-tag conditions that define a resource's LF-tag policy.</p>
+    #[doc(hidden)]
     pub lf_tag_policy: std::option::Option<crate::model::LfTagPolicyResource>,
 }
 impl Resource {
@@ -1484,11 +1513,10 @@ impl std::fmt::Debug for Resource {
         formatter.finish()
     }
 }
-/// See [`Resource`](crate::model::Resource)
+/// See [`Resource`](crate::model::Resource).
 pub mod resource {
 
-    /// A builder for [`Resource`](crate::model::Resource)
-    #[non_exhaustive]
+    /// A builder for [`Resource`](crate::model::Resource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog: std::option::Option<crate::model::CatalogResource>,
@@ -1605,7 +1633,7 @@ pub mod resource {
             self.lf_tag_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource)
+        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource).
         pub fn build(self) -> crate::model::Resource {
             crate::model::Resource {
                 catalog: self.catalog,
@@ -1621,7 +1649,7 @@ pub mod resource {
     }
 }
 impl Resource {
-    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource)
+    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource).
     pub fn builder() -> crate::model::resource::Builder {
         crate::model::resource::Builder::default()
     }
@@ -1632,10 +1660,13 @@ impl Resource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LfTagPolicyResource {
     /// <p>The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment. </p>
+    #[doc(hidden)]
     pub catalog_id: std::option::Option<std::string::String>,
     /// <p>The resource type for which the LF-tag policy applies.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<crate::model::ResourceType>,
     /// <p>A list of LF-tag conditions that apply to the resource's LF-tag policy.</p>
+    #[doc(hidden)]
     pub expression: std::option::Option<std::vec::Vec<crate::model::LfTag>>,
 }
 impl LfTagPolicyResource {
@@ -1661,11 +1692,10 @@ impl std::fmt::Debug for LfTagPolicyResource {
         formatter.finish()
     }
 }
-/// See [`LfTagPolicyResource`](crate::model::LfTagPolicyResource)
+/// See [`LfTagPolicyResource`](crate::model::LfTagPolicyResource).
 pub mod lf_tag_policy_resource {
 
-    /// A builder for [`LfTagPolicyResource`](crate::model::LfTagPolicyResource)
-    #[non_exhaustive]
+    /// A builder for [`LfTagPolicyResource`](crate::model::LfTagPolicyResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog_id: std::option::Option<std::string::String>,
@@ -1715,7 +1745,7 @@ pub mod lf_tag_policy_resource {
             self.expression = input;
             self
         }
-        /// Consumes the builder and constructs a [`LfTagPolicyResource`](crate::model::LfTagPolicyResource)
+        /// Consumes the builder and constructs a [`LfTagPolicyResource`](crate::model::LfTagPolicyResource).
         pub fn build(self) -> crate::model::LfTagPolicyResource {
             crate::model::LfTagPolicyResource {
                 catalog_id: self.catalog_id,
@@ -1726,7 +1756,7 @@ pub mod lf_tag_policy_resource {
     }
 }
 impl LfTagPolicyResource {
-    /// Creates a new builder-style object to manufacture [`LfTagPolicyResource`](crate::model::LfTagPolicyResource)
+    /// Creates a new builder-style object to manufacture [`LfTagPolicyResource`](crate::model::LfTagPolicyResource).
     pub fn builder() -> crate::model::lf_tag_policy_resource::Builder {
         crate::model::lf_tag_policy_resource::Builder::default()
     }
@@ -1792,10 +1822,13 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LfTagKeyResource {
     /// <p>The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment. </p>
+    #[doc(hidden)]
     pub catalog_id: std::option::Option<std::string::String>,
     /// <p>The key-name for the LF-tag.</p>
+    #[doc(hidden)]
     pub tag_key: std::option::Option<std::string::String>,
     /// <p>A list of possible values an attribute can take.</p>
+    #[doc(hidden)]
     pub tag_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl LfTagKeyResource {
@@ -1821,11 +1854,10 @@ impl std::fmt::Debug for LfTagKeyResource {
         formatter.finish()
     }
 }
-/// See [`LfTagKeyResource`](crate::model::LfTagKeyResource)
+/// See [`LfTagKeyResource`](crate::model::LfTagKeyResource).
 pub mod lf_tag_key_resource {
 
-    /// A builder for [`LfTagKeyResource`](crate::model::LfTagKeyResource)
-    #[non_exhaustive]
+    /// A builder for [`LfTagKeyResource`](crate::model::LfTagKeyResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog_id: std::option::Option<std::string::String>,
@@ -1872,7 +1904,7 @@ pub mod lf_tag_key_resource {
             self.tag_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`LfTagKeyResource`](crate::model::LfTagKeyResource)
+        /// Consumes the builder and constructs a [`LfTagKeyResource`](crate::model::LfTagKeyResource).
         pub fn build(self) -> crate::model::LfTagKeyResource {
             crate::model::LfTagKeyResource {
                 catalog_id: self.catalog_id,
@@ -1883,7 +1915,7 @@ pub mod lf_tag_key_resource {
     }
 }
 impl LfTagKeyResource {
-    /// Creates a new builder-style object to manufacture [`LfTagKeyResource`](crate::model::LfTagKeyResource)
+    /// Creates a new builder-style object to manufacture [`LfTagKeyResource`](crate::model::LfTagKeyResource).
     pub fn builder() -> crate::model::lf_tag_key_resource::Builder {
         crate::model::lf_tag_key_resource::Builder::default()
     }
@@ -1894,12 +1926,16 @@ impl LfTagKeyResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataCellsFilterResource {
     /// <p>The ID of the catalog to which the table belongs.</p>
+    #[doc(hidden)]
     pub table_catalog_id: std::option::Option<std::string::String>,
     /// <p>A database in the Glue Data Catalog.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>The name of the table.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>The name of the data cells filter. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl DataCellsFilterResource {
@@ -1930,11 +1966,10 @@ impl std::fmt::Debug for DataCellsFilterResource {
         formatter.finish()
     }
 }
-/// See [`DataCellsFilterResource`](crate::model::DataCellsFilterResource)
+/// See [`DataCellsFilterResource`](crate::model::DataCellsFilterResource).
 pub mod data_cells_filter_resource {
 
-    /// A builder for [`DataCellsFilterResource`](crate::model::DataCellsFilterResource)
-    #[non_exhaustive]
+    /// A builder for [`DataCellsFilterResource`](crate::model::DataCellsFilterResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_catalog_id: std::option::Option<std::string::String>,
@@ -1989,7 +2024,7 @@ pub mod data_cells_filter_resource {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataCellsFilterResource`](crate::model::DataCellsFilterResource)
+        /// Consumes the builder and constructs a [`DataCellsFilterResource`](crate::model::DataCellsFilterResource).
         pub fn build(self) -> crate::model::DataCellsFilterResource {
             crate::model::DataCellsFilterResource {
                 table_catalog_id: self.table_catalog_id,
@@ -2001,7 +2036,7 @@ pub mod data_cells_filter_resource {
     }
 }
 impl DataCellsFilterResource {
-    /// Creates a new builder-style object to manufacture [`DataCellsFilterResource`](crate::model::DataCellsFilterResource)
+    /// Creates a new builder-style object to manufacture [`DataCellsFilterResource`](crate::model::DataCellsFilterResource).
     pub fn builder() -> crate::model::data_cells_filter_resource::Builder {
         crate::model::data_cells_filter_resource::Builder::default()
     }
@@ -2012,8 +2047,10 @@ impl DataCellsFilterResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataLocationResource {
     /// <p>The identifier for the Data Catalog where the location is registered with Lake Formation. By default, it is the account ID of the caller.</p>
+    #[doc(hidden)]
     pub catalog_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) that uniquely identifies the data location resource.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl DataLocationResource {
@@ -2034,11 +2071,10 @@ impl std::fmt::Debug for DataLocationResource {
         formatter.finish()
     }
 }
-/// See [`DataLocationResource`](crate::model::DataLocationResource)
+/// See [`DataLocationResource`](crate::model::DataLocationResource).
 pub mod data_location_resource {
 
-    /// A builder for [`DataLocationResource`](crate::model::DataLocationResource)
-    #[non_exhaustive]
+    /// A builder for [`DataLocationResource`](crate::model::DataLocationResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog_id: std::option::Option<std::string::String>,
@@ -2065,7 +2101,7 @@ pub mod data_location_resource {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataLocationResource`](crate::model::DataLocationResource)
+        /// Consumes the builder and constructs a [`DataLocationResource`](crate::model::DataLocationResource).
         pub fn build(self) -> crate::model::DataLocationResource {
             crate::model::DataLocationResource {
                 catalog_id: self.catalog_id,
@@ -2075,7 +2111,7 @@ pub mod data_location_resource {
     }
 }
 impl DataLocationResource {
-    /// Creates a new builder-style object to manufacture [`DataLocationResource`](crate::model::DataLocationResource)
+    /// Creates a new builder-style object to manufacture [`DataLocationResource`](crate::model::DataLocationResource).
     pub fn builder() -> crate::model::data_location_resource::Builder {
         crate::model::data_location_resource::Builder::default()
     }
@@ -2087,14 +2123,19 @@ impl DataLocationResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TableWithColumnsResource {
     /// <p>The identifier for the Data Catalog. By default, it is the account ID of the caller.</p>
+    #[doc(hidden)]
     pub catalog_id: std::option::Option<std::string::String>,
     /// <p>The name of the database for the table with columns resource. Unique to the Data Catalog. A database is a set of associated table definitions organized into a logical group. You can Grant and Revoke database privileges to a principal. </p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>The name of the table resource. A table is a metadata definition that represents your data. You can Grant and Revoke table privileges to a principal. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The list of column names for the table. At least one of <code>ColumnNames</code> or <code>ColumnWildcard</code> is required.</p>
+    #[doc(hidden)]
     pub column_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A wildcard specified by a <code>ColumnWildcard</code> object. At least one of <code>ColumnNames</code> or <code>ColumnWildcard</code> is required.</p>
+    #[doc(hidden)]
     pub column_wildcard: std::option::Option<crate::model::ColumnWildcard>,
 }
 impl TableWithColumnsResource {
@@ -2130,11 +2171,10 @@ impl std::fmt::Debug for TableWithColumnsResource {
         formatter.finish()
     }
 }
-/// See [`TableWithColumnsResource`](crate::model::TableWithColumnsResource)
+/// See [`TableWithColumnsResource`](crate::model::TableWithColumnsResource).
 pub mod table_with_columns_resource {
 
-    /// A builder for [`TableWithColumnsResource`](crate::model::TableWithColumnsResource)
-    #[non_exhaustive]
+    /// A builder for [`TableWithColumnsResource`](crate::model::TableWithColumnsResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog_id: std::option::Option<std::string::String>,
@@ -2209,7 +2249,7 @@ pub mod table_with_columns_resource {
             self.column_wildcard = input;
             self
         }
-        /// Consumes the builder and constructs a [`TableWithColumnsResource`](crate::model::TableWithColumnsResource)
+        /// Consumes the builder and constructs a [`TableWithColumnsResource`](crate::model::TableWithColumnsResource).
         pub fn build(self) -> crate::model::TableWithColumnsResource {
             crate::model::TableWithColumnsResource {
                 catalog_id: self.catalog_id,
@@ -2222,7 +2262,7 @@ pub mod table_with_columns_resource {
     }
 }
 impl TableWithColumnsResource {
-    /// Creates a new builder-style object to manufacture [`TableWithColumnsResource`](crate::model::TableWithColumnsResource)
+    /// Creates a new builder-style object to manufacture [`TableWithColumnsResource`](crate::model::TableWithColumnsResource).
     pub fn builder() -> crate::model::table_with_columns_resource::Builder {
         crate::model::table_with_columns_resource::Builder::default()
     }
@@ -2233,6 +2273,7 @@ impl TableWithColumnsResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ColumnWildcard {
     /// <p>Excludes column names. Any column with this name will be excluded.</p>
+    #[doc(hidden)]
     pub excluded_column_names: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ColumnWildcard {
@@ -2248,11 +2289,10 @@ impl std::fmt::Debug for ColumnWildcard {
         formatter.finish()
     }
 }
-/// See [`ColumnWildcard`](crate::model::ColumnWildcard)
+/// See [`ColumnWildcard`](crate::model::ColumnWildcard).
 pub mod column_wildcard {
 
-    /// A builder for [`ColumnWildcard`](crate::model::ColumnWildcard)
-    #[non_exhaustive]
+    /// A builder for [`ColumnWildcard`](crate::model::ColumnWildcard).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) excluded_column_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2277,7 +2317,7 @@ pub mod column_wildcard {
             self.excluded_column_names = input;
             self
         }
-        /// Consumes the builder and constructs a [`ColumnWildcard`](crate::model::ColumnWildcard)
+        /// Consumes the builder and constructs a [`ColumnWildcard`](crate::model::ColumnWildcard).
         pub fn build(self) -> crate::model::ColumnWildcard {
             crate::model::ColumnWildcard {
                 excluded_column_names: self.excluded_column_names,
@@ -2286,7 +2326,7 @@ pub mod column_wildcard {
     }
 }
 impl ColumnWildcard {
-    /// Creates a new builder-style object to manufacture [`ColumnWildcard`](crate::model::ColumnWildcard)
+    /// Creates a new builder-style object to manufacture [`ColumnWildcard`](crate::model::ColumnWildcard).
     pub fn builder() -> crate::model::column_wildcard::Builder {
         crate::model::column_wildcard::Builder::default()
     }
@@ -2302,22 +2342,21 @@ impl std::fmt::Debug for CatalogResource {
         formatter.finish()
     }
 }
-/// See [`CatalogResource`](crate::model::CatalogResource)
+/// See [`CatalogResource`](crate::model::CatalogResource).
 pub mod catalog_resource {
 
-    /// A builder for [`CatalogResource`](crate::model::CatalogResource)
-    #[non_exhaustive]
+    /// A builder for [`CatalogResource`](crate::model::CatalogResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`CatalogResource`](crate::model::CatalogResource)
+        /// Consumes the builder and constructs a [`CatalogResource`](crate::model::CatalogResource).
         pub fn build(self) -> crate::model::CatalogResource {
             crate::model::CatalogResource {}
         }
     }
 }
 impl CatalogResource {
-    /// Creates a new builder-style object to manufacture [`CatalogResource`](crate::model::CatalogResource)
+    /// Creates a new builder-style object to manufacture [`CatalogResource`](crate::model::CatalogResource).
     pub fn builder() -> crate::model::catalog_resource::Builder {
         crate::model::catalog_resource::Builder::default()
     }
@@ -2328,6 +2367,7 @@ impl CatalogResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataLakePrincipal {
     /// <p>An identifier for the Lake Formation principal.</p>
+    #[doc(hidden)]
     pub data_lake_principal_identifier: std::option::Option<std::string::String>,
 }
 impl DataLakePrincipal {
@@ -2346,11 +2386,10 @@ impl std::fmt::Debug for DataLakePrincipal {
         formatter.finish()
     }
 }
-/// See [`DataLakePrincipal`](crate::model::DataLakePrincipal)
+/// See [`DataLakePrincipal`](crate::model::DataLakePrincipal).
 pub mod data_lake_principal {
 
-    /// A builder for [`DataLakePrincipal`](crate::model::DataLakePrincipal)
-    #[non_exhaustive]
+    /// A builder for [`DataLakePrincipal`](crate::model::DataLakePrincipal).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_lake_principal_identifier: std::option::Option<std::string::String>,
@@ -2372,7 +2411,7 @@ pub mod data_lake_principal {
             self.data_lake_principal_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataLakePrincipal`](crate::model::DataLakePrincipal)
+        /// Consumes the builder and constructs a [`DataLakePrincipal`](crate::model::DataLakePrincipal).
         pub fn build(self) -> crate::model::DataLakePrincipal {
             crate::model::DataLakePrincipal {
                 data_lake_principal_identifier: self.data_lake_principal_identifier,
@@ -2381,7 +2420,7 @@ pub mod data_lake_principal {
     }
 }
 impl DataLakePrincipal {
-    /// Creates a new builder-style object to manufacture [`DataLakePrincipal`](crate::model::DataLakePrincipal)
+    /// Creates a new builder-style object to manufacture [`DataLakePrincipal`](crate::model::DataLakePrincipal).
     pub fn builder() -> crate::model::data_lake_principal::Builder {
         crate::model::data_lake_principal::Builder::default()
     }
@@ -2392,8 +2431,10 @@ impl DataLakePrincipal {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LfTagError {
     /// <p>The key-name of the LF-tag.</p>
+    #[doc(hidden)]
     pub lf_tag: std::option::Option<crate::model::LfTagPair>,
     /// <p>An error that occurred with the attachment or detachment of the LF-tag.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::ErrorDetail>,
 }
 impl LfTagError {
@@ -2414,11 +2455,10 @@ impl std::fmt::Debug for LfTagError {
         formatter.finish()
     }
 }
-/// See [`LfTagError`](crate::model::LfTagError)
+/// See [`LfTagError`](crate::model::LfTagError).
 pub mod lf_tag_error {
 
-    /// A builder for [`LfTagError`](crate::model::LfTagError)
-    #[non_exhaustive]
+    /// A builder for [`LfTagError`](crate::model::LfTagError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lf_tag: std::option::Option<crate::model::LfTagPair>,
@@ -2445,7 +2485,7 @@ pub mod lf_tag_error {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`LfTagError`](crate::model::LfTagError)
+        /// Consumes the builder and constructs a [`LfTagError`](crate::model::LfTagError).
         pub fn build(self) -> crate::model::LfTagError {
             crate::model::LfTagError {
                 lf_tag: self.lf_tag,
@@ -2455,7 +2495,7 @@ pub mod lf_tag_error {
     }
 }
 impl LfTagError {
-    /// Creates a new builder-style object to manufacture [`LfTagError`](crate::model::LfTagError)
+    /// Creates a new builder-style object to manufacture [`LfTagError`](crate::model::LfTagError).
     pub fn builder() -> crate::model::lf_tag_error::Builder {
         crate::model::lf_tag_error::Builder::default()
     }
@@ -2466,8 +2506,10 @@ impl LfTagError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ErrorDetail {
     /// <p>The code associated with this error.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>A message describing the error.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl ErrorDetail {
@@ -2488,11 +2530,10 @@ impl std::fmt::Debug for ErrorDetail {
         formatter.finish()
     }
 }
-/// See [`ErrorDetail`](crate::model::ErrorDetail)
+/// See [`ErrorDetail`](crate::model::ErrorDetail).
 pub mod error_detail {
 
-    /// A builder for [`ErrorDetail`](crate::model::ErrorDetail)
-    #[non_exhaustive]
+    /// A builder for [`ErrorDetail`](crate::model::ErrorDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_code: std::option::Option<std::string::String>,
@@ -2522,7 +2563,7 @@ pub mod error_detail {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ErrorDetail`](crate::model::ErrorDetail)
+        /// Consumes the builder and constructs a [`ErrorDetail`](crate::model::ErrorDetail).
         pub fn build(self) -> crate::model::ErrorDetail {
             crate::model::ErrorDetail {
                 error_code: self.error_code,
@@ -2532,7 +2573,7 @@ pub mod error_detail {
     }
 }
 impl ErrorDetail {
-    /// Creates a new builder-style object to manufacture [`ErrorDetail`](crate::model::ErrorDetail)
+    /// Creates a new builder-style object to manufacture [`ErrorDetail`](crate::model::ErrorDetail).
     pub fn builder() -> crate::model::error_detail::Builder {
         crate::model::error_detail::Builder::default()
     }
@@ -2543,31 +2584,38 @@ impl ErrorDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataLakeSettings {
     /// <p>A list of Lake Formation principals. Supported principals are IAM users or IAM roles.</p>
+    #[doc(hidden)]
     pub data_lake_admins: std::option::Option<std::vec::Vec<crate::model::DataLakePrincipal>>,
     /// <p>Specifies whether access control on newly created database is managed by Lake Formation permissions or exclusively by IAM permissions. You can override this default setting when you create a database.</p>
     /// <p>A null value indicates access control by Lake Formation permissions. A value that assigns ALL to IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting "Use only IAM access control," and is for backward compatibility with the Glue permission model implemented by IAM permissions.</p>
     /// <p>The only permitted values are an empty array or an array that contains a single JSON object that grants ALL to IAM_ALLOWED_PRINCIPALS.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default Security Settings for Your Data Lake</a>.</p>
+    #[doc(hidden)]
     pub create_database_default_permissions:
         std::option::Option<std::vec::Vec<crate::model::PrincipalPermissions>>,
     /// <p>Specifies whether access control on newly created table is managed by Lake Formation permissions or exclusively by IAM permissions.</p>
     /// <p>A null value indicates access control by Lake Formation permissions. A value that assigns ALL to IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting "Use only IAM access control," and is for backward compatibility with the Glue permission model implemented by IAM permissions.</p>
     /// <p>The only permitted values are an empty array or an array that contains a single JSON object that grants ALL to IAM_ALLOWED_PRINCIPALS.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default Security Settings for Your Data Lake</a>.</p>
+    #[doc(hidden)]
     pub create_table_default_permissions:
         std::option::Option<std::vec::Vec<crate::model::PrincipalPermissions>>,
     /// <p>A list of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs). The user ARNs can be logged in the resource owner's CloudTrail log.</p>
     /// <p>You may want to specify this property when you are in a high-trust boundary, such as the same team or company. </p>
+    #[doc(hidden)]
     pub trusted_resource_owners: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Whether to allow Amazon EMR clusters to access data managed by Lake Formation. </p>
     /// <p>If true, you allow Amazon EMR clusters to access data in Amazon S3 locations that are registered with Lake Formation.</p>
     /// <p>If false or null, no Amazon EMR clusters will be able to access data in Amazon S3 locations that are registered with Lake Formation.</p>
     /// <p>For more information, see <a href="https://docs-aws.amazon.com/lake-formation/latest/dg/getting-started-setup.html#emr-switch">(Optional) Allow Data Filtering on Amazon EMR</a>.</p>
+    #[doc(hidden)]
     pub allow_external_data_filtering: std::option::Option<bool>,
     /// <p>A list of the account IDs of Amazon Web Services accounts with Amazon EMR clusters that are to perform data filtering.&gt;</p>
+    #[doc(hidden)]
     pub external_data_filtering_allow_list:
         std::option::Option<std::vec::Vec<crate::model::DataLakePrincipal>>,
     /// <p>Lake Formation relies on a privileged process secured by Amazon EMR or the third party integrator to tag the user's role while assuming it. Lake Formation will publish the acceptable key-value pair, for example key = "LakeFormationTrustedCaller" and value = "TRUE" and the third party integrator must properly tag the temporary security credentials that will be used to call Lake Formation's administrative APIs.</p>
+    #[doc(hidden)]
     pub authorized_session_tag_value_list: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DataLakeSettings {
@@ -2644,11 +2692,10 @@ impl std::fmt::Debug for DataLakeSettings {
         formatter.finish()
     }
 }
-/// See [`DataLakeSettings`](crate::model::DataLakeSettings)
+/// See [`DataLakeSettings`](crate::model::DataLakeSettings).
 pub mod data_lake_settings {
 
-    /// A builder for [`DataLakeSettings`](crate::model::DataLakeSettings)
-    #[non_exhaustive]
+    /// A builder for [`DataLakeSettings`](crate::model::DataLakeSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_lake_admins:
@@ -2824,7 +2871,7 @@ pub mod data_lake_settings {
             self.authorized_session_tag_value_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataLakeSettings`](crate::model::DataLakeSettings)
+        /// Consumes the builder and constructs a [`DataLakeSettings`](crate::model::DataLakeSettings).
         pub fn build(self) -> crate::model::DataLakeSettings {
             crate::model::DataLakeSettings {
                 data_lake_admins: self.data_lake_admins,
@@ -2839,7 +2886,7 @@ pub mod data_lake_settings {
     }
 }
 impl DataLakeSettings {
-    /// Creates a new builder-style object to manufacture [`DataLakeSettings`](crate::model::DataLakeSettings)
+    /// Creates a new builder-style object to manufacture [`DataLakeSettings`](crate::model::DataLakeSettings).
     pub fn builder() -> crate::model::data_lake_settings::Builder {
         crate::model::data_lake_settings::Builder::default()
     }
@@ -2850,8 +2897,10 @@ impl DataLakeSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrincipalPermissions {
     /// <p>The principal who is granted permissions.</p>
+    #[doc(hidden)]
     pub principal: std::option::Option<crate::model::DataLakePrincipal>,
     /// <p>The permissions that are granted to the principal.</p>
+    #[doc(hidden)]
     pub permissions: std::option::Option<std::vec::Vec<crate::model::Permission>>,
 }
 impl PrincipalPermissions {
@@ -2872,11 +2921,10 @@ impl std::fmt::Debug for PrincipalPermissions {
         formatter.finish()
     }
 }
-/// See [`PrincipalPermissions`](crate::model::PrincipalPermissions)
+/// See [`PrincipalPermissions`](crate::model::PrincipalPermissions).
 pub mod principal_permissions {
 
-    /// A builder for [`PrincipalPermissions`](crate::model::PrincipalPermissions)
-    #[non_exhaustive]
+    /// A builder for [`PrincipalPermissions`](crate::model::PrincipalPermissions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) principal: std::option::Option<crate::model::DataLakePrincipal>,
@@ -2915,7 +2963,7 @@ pub mod principal_permissions {
             self.permissions = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrincipalPermissions`](crate::model::PrincipalPermissions)
+        /// Consumes the builder and constructs a [`PrincipalPermissions`](crate::model::PrincipalPermissions).
         pub fn build(self) -> crate::model::PrincipalPermissions {
             crate::model::PrincipalPermissions {
                 principal: self.principal,
@@ -2925,7 +2973,7 @@ pub mod principal_permissions {
     }
 }
 impl PrincipalPermissions {
-    /// Creates a new builder-style object to manufacture [`PrincipalPermissions`](crate::model::PrincipalPermissions)
+    /// Creates a new builder-style object to manufacture [`PrincipalPermissions`](crate::model::PrincipalPermissions).
     pub fn builder() -> crate::model::principal_permissions::Builder {
         crate::model::principal_permissions::Builder::default()
     }
@@ -2936,12 +2984,16 @@ impl PrincipalPermissions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TransactionDescription {
     /// <p>The ID of the transaction.</p>
+    #[doc(hidden)]
     pub transaction_id: std::option::Option<std::string::String>,
     /// <p>A status of ACTIVE, COMMITTED, or ABORTED.</p>
+    #[doc(hidden)]
     pub transaction_status: std::option::Option<crate::model::TransactionStatus>,
     /// <p>The time when the transaction started.</p>
+    #[doc(hidden)]
     pub transaction_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the transaction committed or aborted, if it is not currently active.</p>
+    #[doc(hidden)]
     pub transaction_end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TransactionDescription {
@@ -2972,11 +3024,10 @@ impl std::fmt::Debug for TransactionDescription {
         formatter.finish()
     }
 }
-/// See [`TransactionDescription`](crate::model::TransactionDescription)
+/// See [`TransactionDescription`](crate::model::TransactionDescription).
 pub mod transaction_description {
 
-    /// A builder for [`TransactionDescription`](crate::model::TransactionDescription)
-    #[non_exhaustive]
+    /// A builder for [`TransactionDescription`](crate::model::TransactionDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transaction_id: std::option::Option<std::string::String>,
@@ -3037,7 +3088,7 @@ pub mod transaction_description {
             self.transaction_end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`TransactionDescription`](crate::model::TransactionDescription)
+        /// Consumes the builder and constructs a [`TransactionDescription`](crate::model::TransactionDescription).
         pub fn build(self) -> crate::model::TransactionDescription {
             crate::model::TransactionDescription {
                 transaction_id: self.transaction_id,
@@ -3049,7 +3100,7 @@ pub mod transaction_description {
     }
 }
 impl TransactionDescription {
-    /// Creates a new builder-style object to manufacture [`TransactionDescription`](crate::model::TransactionDescription)
+    /// Creates a new builder-style object to manufacture [`TransactionDescription`](crate::model::TransactionDescription).
     pub fn builder() -> crate::model::transaction_description::Builder {
         crate::model::transaction_description::Builder::default()
     }
@@ -3190,17 +3241,22 @@ impl AsRef<str> for TransactionStatusFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StorageOptimizer {
     /// <p>The specific type of storage optimizer. The supported value is <code>compaction</code>.</p>
+    #[doc(hidden)]
     pub storage_optimizer_type: std::option::Option<crate::model::OptimizerType>,
     /// <p>A map of the storage optimizer configuration. Currently contains only one key-value pair: <code>is_enabled</code> indicates true or false for acceleration.</p>
+    #[doc(hidden)]
     pub config:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A message that contains information about any error (if present).</p>
     /// <p>When an acceleration result has an enabled status, the error message is empty.</p>
     /// <p>When an acceleration result has a disabled status, the message describes an error or simply indicates "disabled by the user".</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>A message that contains information about any warnings (if present).</p>
+    #[doc(hidden)]
     pub warnings: std::option::Option<std::string::String>,
     /// <p>When an acceleration result has an enabled status, contains the details of the last job run.</p>
+    #[doc(hidden)]
     pub last_run_details: std::option::Option<std::string::String>,
 }
 impl StorageOptimizer {
@@ -3241,11 +3297,10 @@ impl std::fmt::Debug for StorageOptimizer {
         formatter.finish()
     }
 }
-/// See [`StorageOptimizer`](crate::model::StorageOptimizer)
+/// See [`StorageOptimizer`](crate::model::StorageOptimizer).
 pub mod storage_optimizer {
 
-    /// A builder for [`StorageOptimizer`](crate::model::StorageOptimizer)
-    #[non_exhaustive]
+    /// A builder for [`StorageOptimizer`](crate::model::StorageOptimizer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storage_optimizer_type: std::option::Option<crate::model::OptimizerType>,
@@ -3335,7 +3390,7 @@ pub mod storage_optimizer {
             self.last_run_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageOptimizer`](crate::model::StorageOptimizer)
+        /// Consumes the builder and constructs a [`StorageOptimizer`](crate::model::StorageOptimizer).
         pub fn build(self) -> crate::model::StorageOptimizer {
             crate::model::StorageOptimizer {
                 storage_optimizer_type: self.storage_optimizer_type,
@@ -3348,7 +3403,7 @@ pub mod storage_optimizer {
     }
 }
 impl StorageOptimizer {
-    /// Creates a new builder-style object to manufacture [`StorageOptimizer`](crate::model::StorageOptimizer)
+    /// Creates a new builder-style object to manufacture [`StorageOptimizer`](crate::model::StorageOptimizer).
     pub fn builder() -> crate::model::storage_optimizer::Builder {
         crate::model::storage_optimizer::Builder::default()
     }
@@ -3359,10 +3414,13 @@ impl StorageOptimizer {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceInfo {
     /// <p>The Amazon Resource Name (ARN) of the resource.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The IAM role that registered a resource.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The date and time the resource was last modified.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ResourceInfo {
@@ -3388,11 +3446,10 @@ impl std::fmt::Debug for ResourceInfo {
         formatter.finish()
     }
 }
-/// See [`ResourceInfo`](crate::model::ResourceInfo)
+/// See [`ResourceInfo`](crate::model::ResourceInfo).
 pub mod resource_info {
 
-    /// A builder for [`ResourceInfo`](crate::model::ResourceInfo)
-    #[non_exhaustive]
+    /// A builder for [`ResourceInfo`](crate::model::ResourceInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -3433,7 +3490,7 @@ pub mod resource_info {
             self.last_modified = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceInfo`](crate::model::ResourceInfo)
+        /// Consumes the builder and constructs a [`ResourceInfo`](crate::model::ResourceInfo).
         pub fn build(self) -> crate::model::ResourceInfo {
             crate::model::ResourceInfo {
                 resource_arn: self.resource_arn,
@@ -3444,7 +3501,7 @@ pub mod resource_info {
     }
 }
 impl ResourceInfo {
-    /// Creates a new builder-style object to manufacture [`ResourceInfo`](crate::model::ResourceInfo)
+    /// Creates a new builder-style object to manufacture [`ResourceInfo`](crate::model::ResourceInfo).
     pub fn builder() -> crate::model::resource_info::Builder {
         crate::model::resource_info::Builder::default()
     }
@@ -3455,10 +3512,13 @@ impl ResourceInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FilterCondition {
     /// <p>The field to filter in the filter condition.</p>
+    #[doc(hidden)]
     pub field: std::option::Option<crate::model::FieldNameString>,
     /// <p>The comparison operator used in the filter condition.</p>
+    #[doc(hidden)]
     pub comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
     /// <p>A string with values used in evaluating the filter condition.</p>
+    #[doc(hidden)]
     pub string_value_list: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl FilterCondition {
@@ -3484,11 +3544,10 @@ impl std::fmt::Debug for FilterCondition {
         formatter.finish()
     }
 }
-/// See [`FilterCondition`](crate::model::FilterCondition)
+/// See [`FilterCondition`](crate::model::FilterCondition).
 pub mod filter_condition {
 
-    /// A builder for [`FilterCondition`](crate::model::FilterCondition)
-    #[non_exhaustive]
+    /// A builder for [`FilterCondition`](crate::model::FilterCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field: std::option::Option<crate::model::FieldNameString>,
@@ -3541,7 +3600,7 @@ pub mod filter_condition {
             self.string_value_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`FilterCondition`](crate::model::FilterCondition)
+        /// Consumes the builder and constructs a [`FilterCondition`](crate::model::FilterCondition).
         pub fn build(self) -> crate::model::FilterCondition {
             crate::model::FilterCondition {
                 field: self.field,
@@ -3552,7 +3611,7 @@ pub mod filter_condition {
     }
 }
 impl FilterCondition {
-    /// Creates a new builder-style object to manufacture [`FilterCondition`](crate::model::FilterCondition)
+    /// Creates a new builder-style object to manufacture [`FilterCondition`](crate::model::FilterCondition).
     pub fn builder() -> crate::model::filter_condition::Builder {
         crate::model::filter_condition::Builder::default()
     }
@@ -3725,14 +3784,19 @@ impl AsRef<str> for FieldNameString {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrincipalResourcePermissions {
     /// <p>The Data Lake principal to be granted or revoked permissions.</p>
+    #[doc(hidden)]
     pub principal: std::option::Option<crate::model::DataLakePrincipal>,
     /// <p>The resource where permissions are to be granted or revoked.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<crate::model::Resource>,
     /// <p>The permissions to be granted or revoked on the resource.</p>
+    #[doc(hidden)]
     pub permissions: std::option::Option<std::vec::Vec<crate::model::Permission>>,
     /// <p>Indicates whether to grant the ability to grant permissions (as a subset of permissions granted).</p>
+    #[doc(hidden)]
     pub permissions_with_grant_option: std::option::Option<std::vec::Vec<crate::model::Permission>>,
     /// <p>This attribute can be used to return any additional details of <code>PrincipalResourcePermissions</code>. Currently returns only as a RAM resource share ARN.</p>
+    #[doc(hidden)]
     pub additional_details: std::option::Option<crate::model::DetailsMap>,
 }
 impl PrincipalResourcePermissions {
@@ -3773,11 +3837,10 @@ impl std::fmt::Debug for PrincipalResourcePermissions {
         formatter.finish()
     }
 }
-/// See [`PrincipalResourcePermissions`](crate::model::PrincipalResourcePermissions)
+/// See [`PrincipalResourcePermissions`](crate::model::PrincipalResourcePermissions).
 pub mod principal_resource_permissions {
 
-    /// A builder for [`PrincipalResourcePermissions`](crate::model::PrincipalResourcePermissions)
-    #[non_exhaustive]
+    /// A builder for [`PrincipalResourcePermissions`](crate::model::PrincipalResourcePermissions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) principal: std::option::Option<crate::model::DataLakePrincipal>,
@@ -3862,7 +3925,7 @@ pub mod principal_resource_permissions {
             self.additional_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrincipalResourcePermissions`](crate::model::PrincipalResourcePermissions)
+        /// Consumes the builder and constructs a [`PrincipalResourcePermissions`](crate::model::PrincipalResourcePermissions).
         pub fn build(self) -> crate::model::PrincipalResourcePermissions {
             crate::model::PrincipalResourcePermissions {
                 principal: self.principal,
@@ -3875,7 +3938,7 @@ pub mod principal_resource_permissions {
     }
 }
 impl PrincipalResourcePermissions {
-    /// Creates a new builder-style object to manufacture [`PrincipalResourcePermissions`](crate::model::PrincipalResourcePermissions)
+    /// Creates a new builder-style object to manufacture [`PrincipalResourcePermissions`](crate::model::PrincipalResourcePermissions).
     pub fn builder() -> crate::model::principal_resource_permissions::Builder {
         crate::model::principal_resource_permissions::Builder::default()
     }
@@ -3887,6 +3950,7 @@ impl PrincipalResourcePermissions {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetailsMap {
     /// <p>A resource share ARN for a catalog resource shared through RAM.</p>
+    #[doc(hidden)]
     pub resource_share: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DetailsMap {
@@ -3902,11 +3966,10 @@ impl std::fmt::Debug for DetailsMap {
         formatter.finish()
     }
 }
-/// See [`DetailsMap`](crate::model::DetailsMap)
+/// See [`DetailsMap`](crate::model::DetailsMap).
 pub mod details_map {
 
-    /// A builder for [`DetailsMap`](crate::model::DetailsMap)
-    #[non_exhaustive]
+    /// A builder for [`DetailsMap`](crate::model::DetailsMap).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_share: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3931,7 +3994,7 @@ pub mod details_map {
             self.resource_share = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetailsMap`](crate::model::DetailsMap)
+        /// Consumes the builder and constructs a [`DetailsMap`](crate::model::DetailsMap).
         pub fn build(self) -> crate::model::DetailsMap {
             crate::model::DetailsMap {
                 resource_share: self.resource_share,
@@ -3940,7 +4003,7 @@ pub mod details_map {
     }
 }
 impl DetailsMap {
-    /// Creates a new builder-style object to manufacture [`DetailsMap`](crate::model::DetailsMap)
+    /// Creates a new builder-style object to manufacture [`DetailsMap`](crate::model::DetailsMap).
     pub fn builder() -> crate::model::details_map::Builder {
         crate::model::details_map::Builder::default()
     }
@@ -4094,19 +4157,26 @@ impl AsRef<str> for ResourceShareType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataCellsFilter {
     /// <p>The ID of the catalog to which the table belongs.</p>
+    #[doc(hidden)]
     pub table_catalog_id: std::option::Option<std::string::String>,
     /// <p>A database in the Glue Data Catalog.</p>
+    #[doc(hidden)]
     pub database_name: std::option::Option<std::string::String>,
     /// <p>A table in the database.</p>
+    #[doc(hidden)]
     pub table_name: std::option::Option<std::string::String>,
     /// <p>The name given by the user to the data filter cell.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A PartiQL predicate.</p>
+    #[doc(hidden)]
     pub row_filter: std::option::Option<crate::model::RowFilter>,
     /// <p>A list of column names.</p>
+    #[doc(hidden)]
     pub column_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A wildcard with exclusions.</p>
     /// <p>You must specify either a <code>ColumnNames</code> list or the <code>ColumnWildCard</code>. </p>
+    #[doc(hidden)]
     pub column_wildcard: std::option::Option<crate::model::ColumnWildcard>,
 }
 impl DataCellsFilter {
@@ -4153,11 +4223,10 @@ impl std::fmt::Debug for DataCellsFilter {
         formatter.finish()
     }
 }
-/// See [`DataCellsFilter`](crate::model::DataCellsFilter)
+/// See [`DataCellsFilter`](crate::model::DataCellsFilter).
 pub mod data_cells_filter {
 
-    /// A builder for [`DataCellsFilter`](crate::model::DataCellsFilter)
-    #[non_exhaustive]
+    /// A builder for [`DataCellsFilter`](crate::model::DataCellsFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) table_catalog_id: std::option::Option<std::string::String>,
@@ -4262,7 +4331,7 @@ pub mod data_cells_filter {
             self.column_wildcard = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataCellsFilter`](crate::model::DataCellsFilter)
+        /// Consumes the builder and constructs a [`DataCellsFilter`](crate::model::DataCellsFilter).
         pub fn build(self) -> crate::model::DataCellsFilter {
             crate::model::DataCellsFilter {
                 table_catalog_id: self.table_catalog_id,
@@ -4277,7 +4346,7 @@ pub mod data_cells_filter {
     }
 }
 impl DataCellsFilter {
-    /// Creates a new builder-style object to manufacture [`DataCellsFilter`](crate::model::DataCellsFilter)
+    /// Creates a new builder-style object to manufacture [`DataCellsFilter`](crate::model::DataCellsFilter).
     pub fn builder() -> crate::model::data_cells_filter::Builder {
         crate::model::data_cells_filter::Builder::default()
     }
@@ -4288,8 +4357,10 @@ impl DataCellsFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RowFilter {
     /// <p>A filter expression.</p>
+    #[doc(hidden)]
     pub filter_expression: std::option::Option<std::string::String>,
     /// <p>A wildcard for all rows.</p>
+    #[doc(hidden)]
     pub all_rows_wildcard: std::option::Option<crate::model::AllRowsWildcard>,
 }
 impl RowFilter {
@@ -4310,11 +4381,10 @@ impl std::fmt::Debug for RowFilter {
         formatter.finish()
     }
 }
-/// See [`RowFilter`](crate::model::RowFilter)
+/// See [`RowFilter`](crate::model::RowFilter).
 pub mod row_filter {
 
-    /// A builder for [`RowFilter`](crate::model::RowFilter)
-    #[non_exhaustive]
+    /// A builder for [`RowFilter`](crate::model::RowFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) filter_expression: std::option::Option<std::string::String>,
@@ -4347,7 +4417,7 @@ pub mod row_filter {
             self.all_rows_wildcard = input;
             self
         }
-        /// Consumes the builder and constructs a [`RowFilter`](crate::model::RowFilter)
+        /// Consumes the builder and constructs a [`RowFilter`](crate::model::RowFilter).
         pub fn build(self) -> crate::model::RowFilter {
             crate::model::RowFilter {
                 filter_expression: self.filter_expression,
@@ -4357,7 +4427,7 @@ pub mod row_filter {
     }
 }
 impl RowFilter {
-    /// Creates a new builder-style object to manufacture [`RowFilter`](crate::model::RowFilter)
+    /// Creates a new builder-style object to manufacture [`RowFilter`](crate::model::RowFilter).
     pub fn builder() -> crate::model::row_filter::Builder {
         crate::model::row_filter::Builder::default()
     }
@@ -4373,22 +4443,21 @@ impl std::fmt::Debug for AllRowsWildcard {
         formatter.finish()
     }
 }
-/// See [`AllRowsWildcard`](crate::model::AllRowsWildcard)
+/// See [`AllRowsWildcard`](crate::model::AllRowsWildcard).
 pub mod all_rows_wildcard {
 
-    /// A builder for [`AllRowsWildcard`](crate::model::AllRowsWildcard)
-    #[non_exhaustive]
+    /// A builder for [`AllRowsWildcard`](crate::model::AllRowsWildcard).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AllRowsWildcard`](crate::model::AllRowsWildcard)
+        /// Consumes the builder and constructs a [`AllRowsWildcard`](crate::model::AllRowsWildcard).
         pub fn build(self) -> crate::model::AllRowsWildcard {
             crate::model::AllRowsWildcard {}
         }
     }
 }
 impl AllRowsWildcard {
-    /// Creates a new builder-style object to manufacture [`AllRowsWildcard`](crate::model::AllRowsWildcard)
+    /// Creates a new builder-style object to manufacture [`AllRowsWildcard`](crate::model::AllRowsWildcard).
     pub fn builder() -> crate::model::all_rows_wildcard::Builder {
         crate::model::all_rows_wildcard::Builder::default()
     }
@@ -4399,10 +4468,13 @@ impl AllRowsWildcard {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkUnitRange {
     /// <p>Defines the maximum work unit ID in the range. The maximum value is inclusive.</p>
+    #[doc(hidden)]
     pub work_unit_id_max: i64,
     /// <p>Defines the minimum work unit ID in the range.</p>
+    #[doc(hidden)]
     pub work_unit_id_min: i64,
     /// <p>A work token used to query the execution service.</p>
+    #[doc(hidden)]
     pub work_unit_token: std::option::Option<std::string::String>,
 }
 impl WorkUnitRange {
@@ -4428,11 +4500,10 @@ impl std::fmt::Debug for WorkUnitRange {
         formatter.finish()
     }
 }
-/// See [`WorkUnitRange`](crate::model::WorkUnitRange)
+/// See [`WorkUnitRange`](crate::model::WorkUnitRange).
 pub mod work_unit_range {
 
-    /// A builder for [`WorkUnitRange`](crate::model::WorkUnitRange)
-    #[non_exhaustive]
+    /// A builder for [`WorkUnitRange`](crate::model::WorkUnitRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) work_unit_id_max: std::option::Option<i64>,
@@ -4473,7 +4544,7 @@ pub mod work_unit_range {
             self.work_unit_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkUnitRange`](crate::model::WorkUnitRange)
+        /// Consumes the builder and constructs a [`WorkUnitRange`](crate::model::WorkUnitRange).
         pub fn build(self) -> crate::model::WorkUnitRange {
             crate::model::WorkUnitRange {
                 work_unit_id_max: self.work_unit_id_max.unwrap_or_default(),
@@ -4484,7 +4555,7 @@ pub mod work_unit_range {
     }
 }
 impl WorkUnitRange {
-    /// Creates a new builder-style object to manufacture [`WorkUnitRange`](crate::model::WorkUnitRange)
+    /// Creates a new builder-style object to manufacture [`WorkUnitRange`](crate::model::WorkUnitRange).
     pub fn builder() -> crate::model::work_unit_range::Builder {
         crate::model::work_unit_range::Builder::default()
     }
@@ -4550,6 +4621,7 @@ impl AsRef<str> for PermissionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuditContext {
     /// <p>The filter engine can populate the 'AdditionalAuditContext' information with the request ID for you to track. This information will be displayed in CloudTrail log in your account.</p>
+    #[doc(hidden)]
     pub additional_audit_context: std::option::Option<std::string::String>,
 }
 impl AuditContext {
@@ -4565,11 +4637,10 @@ impl std::fmt::Debug for AuditContext {
         formatter.finish()
     }
 }
-/// See [`AuditContext`](crate::model::AuditContext)
+/// See [`AuditContext`](crate::model::AuditContext).
 pub mod audit_context {
 
-    /// A builder for [`AuditContext`](crate::model::AuditContext)
-    #[non_exhaustive]
+    /// A builder for [`AuditContext`](crate::model::AuditContext).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) additional_audit_context: std::option::Option<std::string::String>,
@@ -4588,7 +4659,7 @@ pub mod audit_context {
             self.additional_audit_context = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuditContext`](crate::model::AuditContext)
+        /// Consumes the builder and constructs a [`AuditContext`](crate::model::AuditContext).
         pub fn build(self) -> crate::model::AuditContext {
             crate::model::AuditContext {
                 additional_audit_context: self.additional_audit_context,
@@ -4597,7 +4668,7 @@ pub mod audit_context {
     }
 }
 impl AuditContext {
-    /// Creates a new builder-style object to manufacture [`AuditContext`](crate::model::AuditContext)
+    /// Creates a new builder-style object to manufacture [`AuditContext`](crate::model::AuditContext).
     pub fn builder() -> crate::model::audit_context::Builder {
         crate::model::audit_context::Builder::default()
     }
@@ -4608,6 +4679,7 @@ impl AuditContext {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PartitionValueList {
     /// <p>The list of partition values.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl PartitionValueList {
@@ -4623,11 +4695,10 @@ impl std::fmt::Debug for PartitionValueList {
         formatter.finish()
     }
 }
-/// See [`PartitionValueList`](crate::model::PartitionValueList)
+/// See [`PartitionValueList`](crate::model::PartitionValueList).
 pub mod partition_value_list {
 
-    /// A builder for [`PartitionValueList`](crate::model::PartitionValueList)
-    #[non_exhaustive]
+    /// A builder for [`PartitionValueList`](crate::model::PartitionValueList).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) values: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -4652,7 +4723,7 @@ pub mod partition_value_list {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`PartitionValueList`](crate::model::PartitionValueList)
+        /// Consumes the builder and constructs a [`PartitionValueList`](crate::model::PartitionValueList).
         pub fn build(self) -> crate::model::PartitionValueList {
             crate::model::PartitionValueList {
                 values: self.values,
@@ -4661,7 +4732,7 @@ pub mod partition_value_list {
     }
 }
 impl PartitionValueList {
-    /// Creates a new builder-style object to manufacture [`PartitionValueList`](crate::model::PartitionValueList)
+    /// Creates a new builder-style object to manufacture [`PartitionValueList`](crate::model::PartitionValueList).
     pub fn builder() -> crate::model::partition_value_list::Builder {
         crate::model::partition_value_list::Builder::default()
     }
@@ -4672,8 +4743,10 @@ impl PartitionValueList {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PartitionObjects {
     /// <p>A list of partition values.</p>
+    #[doc(hidden)]
     pub partition_values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of table objects</p>
+    #[doc(hidden)]
     pub objects: std::option::Option<std::vec::Vec<crate::model::TableObject>>,
 }
 impl PartitionObjects {
@@ -4694,11 +4767,10 @@ impl std::fmt::Debug for PartitionObjects {
         formatter.finish()
     }
 }
-/// See [`PartitionObjects`](crate::model::PartitionObjects)
+/// See [`PartitionObjects`](crate::model::PartitionObjects).
 pub mod partition_objects {
 
-    /// A builder for [`PartitionObjects`](crate::model::PartitionObjects)
-    #[non_exhaustive]
+    /// A builder for [`PartitionObjects`](crate::model::PartitionObjects).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) partition_values: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -4743,7 +4815,7 @@ pub mod partition_objects {
             self.objects = input;
             self
         }
-        /// Consumes the builder and constructs a [`PartitionObjects`](crate::model::PartitionObjects)
+        /// Consumes the builder and constructs a [`PartitionObjects`](crate::model::PartitionObjects).
         pub fn build(self) -> crate::model::PartitionObjects {
             crate::model::PartitionObjects {
                 partition_values: self.partition_values,
@@ -4753,7 +4825,7 @@ pub mod partition_objects {
     }
 }
 impl PartitionObjects {
-    /// Creates a new builder-style object to manufacture [`PartitionObjects`](crate::model::PartitionObjects)
+    /// Creates a new builder-style object to manufacture [`PartitionObjects`](crate::model::PartitionObjects).
     pub fn builder() -> crate::model::partition_objects::Builder {
         crate::model::partition_objects::Builder::default()
     }
@@ -4764,10 +4836,13 @@ impl PartitionObjects {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TableObject {
     /// <p>The Amazon S3 location of the object.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 ETag of the object. Returned by <code>GetTableObjects</code> for validation and used to identify changes to the underlying data.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
     /// <p>The size of the Amazon S3 object in bytes.</p>
+    #[doc(hidden)]
     pub size: i64,
 }
 impl TableObject {
@@ -4793,11 +4868,10 @@ impl std::fmt::Debug for TableObject {
         formatter.finish()
     }
 }
-/// See [`TableObject`](crate::model::TableObject)
+/// See [`TableObject`](crate::model::TableObject).
 pub mod table_object {
 
-    /// A builder for [`TableObject`](crate::model::TableObject)
-    #[non_exhaustive]
+    /// A builder for [`TableObject`](crate::model::TableObject).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) uri: std::option::Option<std::string::String>,
@@ -4835,7 +4909,7 @@ pub mod table_object {
             self.size = input;
             self
         }
-        /// Consumes the builder and constructs a [`TableObject`](crate::model::TableObject)
+        /// Consumes the builder and constructs a [`TableObject`](crate::model::TableObject).
         pub fn build(self) -> crate::model::TableObject {
             crate::model::TableObject {
                 uri: self.uri,
@@ -4846,7 +4920,7 @@ pub mod table_object {
     }
 }
 impl TableObject {
-    /// Creates a new builder-style object to manufacture [`TableObject`](crate::model::TableObject)
+    /// Creates a new builder-style object to manufacture [`TableObject`](crate::model::TableObject).
     pub fn builder() -> crate::model::table_object::Builder {
         crate::model::table_object::Builder::default()
     }
@@ -4857,12 +4931,16 @@ impl TableObject {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PlanningStatistics {
     /// <p>An estimate of the data that was scanned in bytes.</p>
+    #[doc(hidden)]
     pub estimated_data_to_scan_bytes: i64,
     /// <p>The time that it took to process the request.</p>
+    #[doc(hidden)]
     pub planning_time_millis: i64,
     /// <p>The time the request was in queue to be processed.</p>
+    #[doc(hidden)]
     pub queue_time_millis: i64,
     /// <p>The number of work units generated.</p>
+    #[doc(hidden)]
     pub work_units_generated_count: i64,
 }
 impl PlanningStatistics {
@@ -4899,11 +4977,10 @@ impl std::fmt::Debug for PlanningStatistics {
         formatter.finish()
     }
 }
-/// See [`PlanningStatistics`](crate::model::PlanningStatistics)
+/// See [`PlanningStatistics`](crate::model::PlanningStatistics).
 pub mod planning_statistics {
 
-    /// A builder for [`PlanningStatistics`](crate::model::PlanningStatistics)
-    #[non_exhaustive]
+    /// A builder for [`PlanningStatistics`](crate::model::PlanningStatistics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) estimated_data_to_scan_bytes: std::option::Option<i64>,
@@ -4952,7 +5029,7 @@ pub mod planning_statistics {
             self.work_units_generated_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`PlanningStatistics`](crate::model::PlanningStatistics)
+        /// Consumes the builder and constructs a [`PlanningStatistics`](crate::model::PlanningStatistics).
         pub fn build(self) -> crate::model::PlanningStatistics {
             crate::model::PlanningStatistics {
                 estimated_data_to_scan_bytes: self.estimated_data_to_scan_bytes.unwrap_or_default(),
@@ -4964,7 +5041,7 @@ pub mod planning_statistics {
     }
 }
 impl PlanningStatistics {
-    /// Creates a new builder-style object to manufacture [`PlanningStatistics`](crate::model::PlanningStatistics)
+    /// Creates a new builder-style object to manufacture [`PlanningStatistics`](crate::model::PlanningStatistics).
     pub fn builder() -> crate::model::planning_statistics::Builder {
         crate::model::planning_statistics::Builder::default()
     }
@@ -4975,10 +5052,13 @@ impl PlanningStatistics {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionStatistics {
     /// <p>The average time the request took to be executed.</p>
+    #[doc(hidden)]
     pub average_execution_time_millis: i64,
     /// <p>The amount of data that was scanned in bytes.</p>
+    #[doc(hidden)]
     pub data_scanned_bytes: i64,
     /// <p>The number of work units executed.</p>
+    #[doc(hidden)]
     pub work_units_executed_count: i64,
 }
 impl ExecutionStatistics {
@@ -5007,11 +5087,10 @@ impl std::fmt::Debug for ExecutionStatistics {
         formatter.finish()
     }
 }
-/// See [`ExecutionStatistics`](crate::model::ExecutionStatistics)
+/// See [`ExecutionStatistics`](crate::model::ExecutionStatistics).
 pub mod execution_statistics {
 
-    /// A builder for [`ExecutionStatistics`](crate::model::ExecutionStatistics)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionStatistics`](crate::model::ExecutionStatistics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) average_execution_time_millis: std::option::Option<i64>,
@@ -5052,7 +5131,7 @@ pub mod execution_statistics {
             self.work_units_executed_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionStatistics`](crate::model::ExecutionStatistics)
+        /// Consumes the builder and constructs a [`ExecutionStatistics`](crate::model::ExecutionStatistics).
         pub fn build(self) -> crate::model::ExecutionStatistics {
             crate::model::ExecutionStatistics {
                 average_execution_time_millis: self
@@ -5065,7 +5144,7 @@ pub mod execution_statistics {
     }
 }
 impl ExecutionStatistics {
-    /// Creates a new builder-style object to manufacture [`ExecutionStatistics`](crate::model::ExecutionStatistics)
+    /// Creates a new builder-style object to manufacture [`ExecutionStatistics`](crate::model::ExecutionStatistics).
     pub fn builder() -> crate::model::execution_statistics::Builder {
         crate::model::execution_statistics::Builder::default()
     }
@@ -5149,8 +5228,10 @@ impl AsRef<str> for QueryStateString {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VirtualObject {
     /// <p>The path to the Amazon S3 object. Must start with s3://</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
     /// <p>The ETag of the Amazon S3 object.</p>
+    #[doc(hidden)]
     pub e_tag: std::option::Option<std::string::String>,
 }
 impl VirtualObject {
@@ -5171,11 +5252,10 @@ impl std::fmt::Debug for VirtualObject {
         formatter.finish()
     }
 }
-/// See [`VirtualObject`](crate::model::VirtualObject)
+/// See [`VirtualObject`](crate::model::VirtualObject).
 pub mod virtual_object {
 
-    /// A builder for [`VirtualObject`](crate::model::VirtualObject)
-    #[non_exhaustive]
+    /// A builder for [`VirtualObject`](crate::model::VirtualObject).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) uri: std::option::Option<std::string::String>,
@@ -5202,7 +5282,7 @@ pub mod virtual_object {
             self.e_tag = input;
             self
         }
-        /// Consumes the builder and constructs a [`VirtualObject`](crate::model::VirtualObject)
+        /// Consumes the builder and constructs a [`VirtualObject`](crate::model::VirtualObject).
         pub fn build(self) -> crate::model::VirtualObject {
             crate::model::VirtualObject {
                 uri: self.uri,
@@ -5212,7 +5292,7 @@ pub mod virtual_object {
     }
 }
 impl VirtualObject {
-    /// Creates a new builder-style object to manufacture [`VirtualObject`](crate::model::VirtualObject)
+    /// Creates a new builder-style object to manufacture [`VirtualObject`](crate::model::VirtualObject).
     pub fn builder() -> crate::model::virtual_object::Builder {
         crate::model::virtual_object::Builder::default()
     }
@@ -5223,8 +5303,10 @@ impl VirtualObject {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchPermissionsFailureEntry {
     /// <p>An identifier for an entry of the batch request.</p>
+    #[doc(hidden)]
     pub request_entry: std::option::Option<crate::model::BatchPermissionsRequestEntry>,
     /// <p>An error message that applies to the failure of the entry.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::ErrorDetail>,
 }
 impl BatchPermissionsFailureEntry {
@@ -5247,11 +5329,10 @@ impl std::fmt::Debug for BatchPermissionsFailureEntry {
         formatter.finish()
     }
 }
-/// See [`BatchPermissionsFailureEntry`](crate::model::BatchPermissionsFailureEntry)
+/// See [`BatchPermissionsFailureEntry`](crate::model::BatchPermissionsFailureEntry).
 pub mod batch_permissions_failure_entry {
 
-    /// A builder for [`BatchPermissionsFailureEntry`](crate::model::BatchPermissionsFailureEntry)
-    #[non_exhaustive]
+    /// A builder for [`BatchPermissionsFailureEntry`](crate::model::BatchPermissionsFailureEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_entry: std::option::Option<crate::model::BatchPermissionsRequestEntry>,
@@ -5281,7 +5362,7 @@ pub mod batch_permissions_failure_entry {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchPermissionsFailureEntry`](crate::model::BatchPermissionsFailureEntry)
+        /// Consumes the builder and constructs a [`BatchPermissionsFailureEntry`](crate::model::BatchPermissionsFailureEntry).
         pub fn build(self) -> crate::model::BatchPermissionsFailureEntry {
             crate::model::BatchPermissionsFailureEntry {
                 request_entry: self.request_entry,
@@ -5291,7 +5372,7 @@ pub mod batch_permissions_failure_entry {
     }
 }
 impl BatchPermissionsFailureEntry {
-    /// Creates a new builder-style object to manufacture [`BatchPermissionsFailureEntry`](crate::model::BatchPermissionsFailureEntry)
+    /// Creates a new builder-style object to manufacture [`BatchPermissionsFailureEntry`](crate::model::BatchPermissionsFailureEntry).
     pub fn builder() -> crate::model::batch_permissions_failure_entry::Builder {
         crate::model::batch_permissions_failure_entry::Builder::default()
     }
@@ -5302,14 +5383,19 @@ impl BatchPermissionsFailureEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchPermissionsRequestEntry {
     /// <p>A unique identifier for the batch permissions request entry.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The principal to be granted a permission.</p>
+    #[doc(hidden)]
     pub principal: std::option::Option<crate::model::DataLakePrincipal>,
     /// <p>The resource to which the principal is to be granted a permission.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<crate::model::Resource>,
     /// <p>The permissions to be granted.</p>
+    #[doc(hidden)]
     pub permissions: std::option::Option<std::vec::Vec<crate::model::Permission>>,
     /// <p>Indicates if the option to pass permissions is granted.</p>
+    #[doc(hidden)]
     pub permissions_with_grant_option: std::option::Option<std::vec::Vec<crate::model::Permission>>,
 }
 impl BatchPermissionsRequestEntry {
@@ -5350,11 +5436,10 @@ impl std::fmt::Debug for BatchPermissionsRequestEntry {
         formatter.finish()
     }
 }
-/// See [`BatchPermissionsRequestEntry`](crate::model::BatchPermissionsRequestEntry)
+/// See [`BatchPermissionsRequestEntry`](crate::model::BatchPermissionsRequestEntry).
 pub mod batch_permissions_request_entry {
 
-    /// A builder for [`BatchPermissionsRequestEntry`](crate::model::BatchPermissionsRequestEntry)
-    #[non_exhaustive]
+    /// A builder for [`BatchPermissionsRequestEntry`](crate::model::BatchPermissionsRequestEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -5436,7 +5521,7 @@ pub mod batch_permissions_request_entry {
             self.permissions_with_grant_option = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchPermissionsRequestEntry`](crate::model::BatchPermissionsRequestEntry)
+        /// Consumes the builder and constructs a [`BatchPermissionsRequestEntry`](crate::model::BatchPermissionsRequestEntry).
         pub fn build(self) -> crate::model::BatchPermissionsRequestEntry {
             crate::model::BatchPermissionsRequestEntry {
                 id: self.id,
@@ -5449,7 +5534,7 @@ pub mod batch_permissions_request_entry {
     }
 }
 impl BatchPermissionsRequestEntry {
-    /// Creates a new builder-style object to manufacture [`BatchPermissionsRequestEntry`](crate::model::BatchPermissionsRequestEntry)
+    /// Creates a new builder-style object to manufacture [`BatchPermissionsRequestEntry`](crate::model::BatchPermissionsRequestEntry).
     pub fn builder() -> crate::model::batch_permissions_request_entry::Builder {
         crate::model::batch_permissions_request_entry::Builder::default()
     }

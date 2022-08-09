@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpgradePublishedSchemaOutput {
     /// <p>The ARN of the upgraded schema that is returned as part of the response.</p>
+    #[doc(hidden)]
     pub upgraded_schema_arn: std::option::Option<std::string::String>,
 }
 impl UpgradePublishedSchemaOutput {
@@ -19,11 +20,10 @@ impl std::fmt::Debug for UpgradePublishedSchemaOutput {
         formatter.finish()
     }
 }
-/// See [`UpgradePublishedSchemaOutput`](crate::output::UpgradePublishedSchemaOutput)
+/// See [`UpgradePublishedSchemaOutput`](crate::output::UpgradePublishedSchemaOutput).
 pub mod upgrade_published_schema_output {
 
-    /// A builder for [`UpgradePublishedSchemaOutput`](crate::output::UpgradePublishedSchemaOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpgradePublishedSchemaOutput`](crate::output::UpgradePublishedSchemaOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) upgraded_schema_arn: std::option::Option<std::string::String>,
@@ -42,7 +42,7 @@ pub mod upgrade_published_schema_output {
             self.upgraded_schema_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpgradePublishedSchemaOutput`](crate::output::UpgradePublishedSchemaOutput)
+        /// Consumes the builder and constructs a [`UpgradePublishedSchemaOutput`](crate::output::UpgradePublishedSchemaOutput).
         pub fn build(self) -> crate::output::UpgradePublishedSchemaOutput {
             crate::output::UpgradePublishedSchemaOutput {
                 upgraded_schema_arn: self.upgraded_schema_arn,
@@ -51,7 +51,7 @@ pub mod upgrade_published_schema_output {
     }
 }
 impl UpgradePublishedSchemaOutput {
-    /// Creates a new builder-style object to manufacture [`UpgradePublishedSchemaOutput`](crate::output::UpgradePublishedSchemaOutput)
+    /// Creates a new builder-style object to manufacture [`UpgradePublishedSchemaOutput`](crate::output::UpgradePublishedSchemaOutput).
     pub fn builder() -> crate::output::upgrade_published_schema_output::Builder {
         crate::output::upgrade_published_schema_output::Builder::default()
     }
@@ -62,8 +62,10 @@ impl UpgradePublishedSchemaOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpgradeAppliedSchemaOutput {
     /// <p>The ARN of the upgraded schema that is returned as part of the response.</p>
+    #[doc(hidden)]
     pub upgraded_schema_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the directory that is returned as part of the response.</p>
+    #[doc(hidden)]
     pub directory_arn: std::option::Option<std::string::String>,
 }
 impl UpgradeAppliedSchemaOutput {
@@ -84,11 +86,10 @@ impl std::fmt::Debug for UpgradeAppliedSchemaOutput {
         formatter.finish()
     }
 }
-/// See [`UpgradeAppliedSchemaOutput`](crate::output::UpgradeAppliedSchemaOutput)
+/// See [`UpgradeAppliedSchemaOutput`](crate::output::UpgradeAppliedSchemaOutput).
 pub mod upgrade_applied_schema_output {
 
-    /// A builder for [`UpgradeAppliedSchemaOutput`](crate::output::UpgradeAppliedSchemaOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpgradeAppliedSchemaOutput`](crate::output::UpgradeAppliedSchemaOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) upgraded_schema_arn: std::option::Option<std::string::String>,
@@ -121,7 +122,7 @@ pub mod upgrade_applied_schema_output {
             self.directory_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpgradeAppliedSchemaOutput`](crate::output::UpgradeAppliedSchemaOutput)
+        /// Consumes the builder and constructs a [`UpgradeAppliedSchemaOutput`](crate::output::UpgradeAppliedSchemaOutput).
         pub fn build(self) -> crate::output::UpgradeAppliedSchemaOutput {
             crate::output::UpgradeAppliedSchemaOutput {
                 upgraded_schema_arn: self.upgraded_schema_arn,
@@ -131,7 +132,7 @@ pub mod upgrade_applied_schema_output {
     }
 }
 impl UpgradeAppliedSchemaOutput {
-    /// Creates a new builder-style object to manufacture [`UpgradeAppliedSchemaOutput`](crate::output::UpgradeAppliedSchemaOutput)
+    /// Creates a new builder-style object to manufacture [`UpgradeAppliedSchemaOutput`](crate::output::UpgradeAppliedSchemaOutput).
     pub fn builder() -> crate::output::upgrade_applied_schema_output::Builder {
         crate::output::upgrade_applied_schema_output::Builder::default()
     }
@@ -147,22 +148,21 @@ impl std::fmt::Debug for UpdateTypedLinkFacetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateTypedLinkFacetOutput`](crate::output::UpdateTypedLinkFacetOutput)
+/// See [`UpdateTypedLinkFacetOutput`](crate::output::UpdateTypedLinkFacetOutput).
 pub mod update_typed_link_facet_output {
 
-    /// A builder for [`UpdateTypedLinkFacetOutput`](crate::output::UpdateTypedLinkFacetOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateTypedLinkFacetOutput`](crate::output::UpdateTypedLinkFacetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateTypedLinkFacetOutput`](crate::output::UpdateTypedLinkFacetOutput)
+        /// Consumes the builder and constructs a [`UpdateTypedLinkFacetOutput`](crate::output::UpdateTypedLinkFacetOutput).
         pub fn build(self) -> crate::output::UpdateTypedLinkFacetOutput {
             crate::output::UpdateTypedLinkFacetOutput {}
         }
     }
 }
 impl UpdateTypedLinkFacetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateTypedLinkFacetOutput`](crate::output::UpdateTypedLinkFacetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateTypedLinkFacetOutput`](crate::output::UpdateTypedLinkFacetOutput).
     pub fn builder() -> crate::output::update_typed_link_facet_output::Builder {
         crate::output::update_typed_link_facet_output::Builder::default()
     }
@@ -173,6 +173,7 @@ impl UpdateTypedLinkFacetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSchemaOutput {
     /// <p>The ARN that is associated with the updated schema. For more information, see <code>arns</code>.</p>
+    #[doc(hidden)]
     pub schema_arn: std::option::Option<std::string::String>,
 }
 impl UpdateSchemaOutput {
@@ -188,11 +189,10 @@ impl std::fmt::Debug for UpdateSchemaOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSchemaOutput`](crate::output::UpdateSchemaOutput)
+/// See [`UpdateSchemaOutput`](crate::output::UpdateSchemaOutput).
 pub mod update_schema_output {
 
-    /// A builder for [`UpdateSchemaOutput`](crate::output::UpdateSchemaOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSchemaOutput`](crate::output::UpdateSchemaOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schema_arn: std::option::Option<std::string::String>,
@@ -208,7 +208,7 @@ pub mod update_schema_output {
             self.schema_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSchemaOutput`](crate::output::UpdateSchemaOutput)
+        /// Consumes the builder and constructs a [`UpdateSchemaOutput`](crate::output::UpdateSchemaOutput).
         pub fn build(self) -> crate::output::UpdateSchemaOutput {
             crate::output::UpdateSchemaOutput {
                 schema_arn: self.schema_arn,
@@ -217,7 +217,7 @@ pub mod update_schema_output {
     }
 }
 impl UpdateSchemaOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSchemaOutput`](crate::output::UpdateSchemaOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSchemaOutput`](crate::output::UpdateSchemaOutput).
     pub fn builder() -> crate::output::update_schema_output::Builder {
         crate::output::update_schema_output::Builder::default()
     }
@@ -228,6 +228,7 @@ impl UpdateSchemaOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateObjectAttributesOutput {
     /// <p>The <code>ObjectIdentifier</code> of the updated object.</p>
+    #[doc(hidden)]
     pub object_identifier: std::option::Option<std::string::String>,
 }
 impl UpdateObjectAttributesOutput {
@@ -243,11 +244,10 @@ impl std::fmt::Debug for UpdateObjectAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateObjectAttributesOutput`](crate::output::UpdateObjectAttributesOutput)
+/// See [`UpdateObjectAttributesOutput`](crate::output::UpdateObjectAttributesOutput).
 pub mod update_object_attributes_output {
 
-    /// A builder for [`UpdateObjectAttributesOutput`](crate::output::UpdateObjectAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateObjectAttributesOutput`](crate::output::UpdateObjectAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_identifier: std::option::Option<std::string::String>,
@@ -266,7 +266,7 @@ pub mod update_object_attributes_output {
             self.object_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateObjectAttributesOutput`](crate::output::UpdateObjectAttributesOutput)
+        /// Consumes the builder and constructs a [`UpdateObjectAttributesOutput`](crate::output::UpdateObjectAttributesOutput).
         pub fn build(self) -> crate::output::UpdateObjectAttributesOutput {
             crate::output::UpdateObjectAttributesOutput {
                 object_identifier: self.object_identifier,
@@ -275,7 +275,7 @@ pub mod update_object_attributes_output {
     }
 }
 impl UpdateObjectAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateObjectAttributesOutput`](crate::output::UpdateObjectAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateObjectAttributesOutput`](crate::output::UpdateObjectAttributesOutput).
     pub fn builder() -> crate::output::update_object_attributes_output::Builder {
         crate::output::update_object_attributes_output::Builder::default()
     }
@@ -291,22 +291,21 @@ impl std::fmt::Debug for UpdateLinkAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateLinkAttributesOutput`](crate::output::UpdateLinkAttributesOutput)
+/// See [`UpdateLinkAttributesOutput`](crate::output::UpdateLinkAttributesOutput).
 pub mod update_link_attributes_output {
 
-    /// A builder for [`UpdateLinkAttributesOutput`](crate::output::UpdateLinkAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateLinkAttributesOutput`](crate::output::UpdateLinkAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateLinkAttributesOutput`](crate::output::UpdateLinkAttributesOutput)
+        /// Consumes the builder and constructs a [`UpdateLinkAttributesOutput`](crate::output::UpdateLinkAttributesOutput).
         pub fn build(self) -> crate::output::UpdateLinkAttributesOutput {
             crate::output::UpdateLinkAttributesOutput {}
         }
     }
 }
 impl UpdateLinkAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateLinkAttributesOutput`](crate::output::UpdateLinkAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateLinkAttributesOutput`](crate::output::UpdateLinkAttributesOutput).
     pub fn builder() -> crate::output::update_link_attributes_output::Builder {
         crate::output::update_link_attributes_output::Builder::default()
     }
@@ -322,22 +321,21 @@ impl std::fmt::Debug for UpdateFacetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFacetOutput`](crate::output::UpdateFacetOutput)
+/// See [`UpdateFacetOutput`](crate::output::UpdateFacetOutput).
 pub mod update_facet_output {
 
-    /// A builder for [`UpdateFacetOutput`](crate::output::UpdateFacetOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFacetOutput`](crate::output::UpdateFacetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateFacetOutput`](crate::output::UpdateFacetOutput)
+        /// Consumes the builder and constructs a [`UpdateFacetOutput`](crate::output::UpdateFacetOutput).
         pub fn build(self) -> crate::output::UpdateFacetOutput {
             crate::output::UpdateFacetOutput {}
         }
     }
 }
 impl UpdateFacetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFacetOutput`](crate::output::UpdateFacetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFacetOutput`](crate::output::UpdateFacetOutput).
     pub fn builder() -> crate::output::update_facet_output::Builder {
         crate::output::update_facet_output::Builder::default()
     }
@@ -353,22 +351,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -384,22 +381,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -415,22 +411,21 @@ impl std::fmt::Debug for RemoveFacetFromObjectOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveFacetFromObjectOutput`](crate::output::RemoveFacetFromObjectOutput)
+/// See [`RemoveFacetFromObjectOutput`](crate::output::RemoveFacetFromObjectOutput).
 pub mod remove_facet_from_object_output {
 
-    /// A builder for [`RemoveFacetFromObjectOutput`](crate::output::RemoveFacetFromObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveFacetFromObjectOutput`](crate::output::RemoveFacetFromObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RemoveFacetFromObjectOutput`](crate::output::RemoveFacetFromObjectOutput)
+        /// Consumes the builder and constructs a [`RemoveFacetFromObjectOutput`](crate::output::RemoveFacetFromObjectOutput).
         pub fn build(self) -> crate::output::RemoveFacetFromObjectOutput {
             crate::output::RemoveFacetFromObjectOutput {}
         }
     }
 }
 impl RemoveFacetFromObjectOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveFacetFromObjectOutput`](crate::output::RemoveFacetFromObjectOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveFacetFromObjectOutput`](crate::output::RemoveFacetFromObjectOutput).
     pub fn builder() -> crate::output::remove_facet_from_object_output::Builder {
         crate::output::remove_facet_from_object_output::Builder::default()
     }
@@ -441,6 +436,7 @@ impl RemoveFacetFromObjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutSchemaFromJsonOutput {
     /// <p>The ARN of the schema to update.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl PutSchemaFromJsonOutput {
@@ -456,11 +452,10 @@ impl std::fmt::Debug for PutSchemaFromJsonOutput {
         formatter.finish()
     }
 }
-/// See [`PutSchemaFromJsonOutput`](crate::output::PutSchemaFromJsonOutput)
+/// See [`PutSchemaFromJsonOutput`](crate::output::PutSchemaFromJsonOutput).
 pub mod put_schema_from_json_output {
 
-    /// A builder for [`PutSchemaFromJsonOutput`](crate::output::PutSchemaFromJsonOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutSchemaFromJsonOutput`](crate::output::PutSchemaFromJsonOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -476,14 +471,14 @@ pub mod put_schema_from_json_output {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutSchemaFromJsonOutput`](crate::output::PutSchemaFromJsonOutput)
+        /// Consumes the builder and constructs a [`PutSchemaFromJsonOutput`](crate::output::PutSchemaFromJsonOutput).
         pub fn build(self) -> crate::output::PutSchemaFromJsonOutput {
             crate::output::PutSchemaFromJsonOutput { arn: self.arn }
         }
     }
 }
 impl PutSchemaFromJsonOutput {
-    /// Creates a new builder-style object to manufacture [`PutSchemaFromJsonOutput`](crate::output::PutSchemaFromJsonOutput)
+    /// Creates a new builder-style object to manufacture [`PutSchemaFromJsonOutput`](crate::output::PutSchemaFromJsonOutput).
     pub fn builder() -> crate::output::put_schema_from_json_output::Builder {
         crate::output::put_schema_from_json_output::Builder::default()
     }
@@ -494,6 +489,7 @@ impl PutSchemaFromJsonOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublishSchemaOutput {
     /// <p>The ARN that is associated with the published schema. For more information, see <code>arns</code>.</p>
+    #[doc(hidden)]
     pub published_schema_arn: std::option::Option<std::string::String>,
 }
 impl PublishSchemaOutput {
@@ -509,11 +505,10 @@ impl std::fmt::Debug for PublishSchemaOutput {
         formatter.finish()
     }
 }
-/// See [`PublishSchemaOutput`](crate::output::PublishSchemaOutput)
+/// See [`PublishSchemaOutput`](crate::output::PublishSchemaOutput).
 pub mod publish_schema_output {
 
-    /// A builder for [`PublishSchemaOutput`](crate::output::PublishSchemaOutput)
-    #[non_exhaustive]
+    /// A builder for [`PublishSchemaOutput`](crate::output::PublishSchemaOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) published_schema_arn: std::option::Option<std::string::String>,
@@ -532,7 +527,7 @@ pub mod publish_schema_output {
             self.published_schema_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublishSchemaOutput`](crate::output::PublishSchemaOutput)
+        /// Consumes the builder and constructs a [`PublishSchemaOutput`](crate::output::PublishSchemaOutput).
         pub fn build(self) -> crate::output::PublishSchemaOutput {
             crate::output::PublishSchemaOutput {
                 published_schema_arn: self.published_schema_arn,
@@ -541,7 +536,7 @@ pub mod publish_schema_output {
     }
 }
 impl PublishSchemaOutput {
-    /// Creates a new builder-style object to manufacture [`PublishSchemaOutput`](crate::output::PublishSchemaOutput)
+    /// Creates a new builder-style object to manufacture [`PublishSchemaOutput`](crate::output::PublishSchemaOutput).
     pub fn builder() -> crate::output::publish_schema_output::Builder {
         crate::output::publish_schema_output::Builder::default()
     }
@@ -552,8 +547,10 @@ impl PublishSchemaOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LookupPolicyOutput {
     /// <p>Provides list of path to policies. Policies contain <code>PolicyId</code>, <code>ObjectIdentifier</code>, and <code>PolicyType</code>. For more information, see <a href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/key_concepts_directory.html#key_concepts_policies">Policies</a>.</p>
+    #[doc(hidden)]
     pub policy_to_path_list: std::option::Option<std::vec::Vec<crate::model::PolicyToPath>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl LookupPolicyOutput {
@@ -574,11 +571,10 @@ impl std::fmt::Debug for LookupPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`LookupPolicyOutput`](crate::output::LookupPolicyOutput)
+/// See [`LookupPolicyOutput`](crate::output::LookupPolicyOutput).
 pub mod lookup_policy_output {
 
-    /// A builder for [`LookupPolicyOutput`](crate::output::LookupPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`LookupPolicyOutput`](crate::output::LookupPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_to_path_list:
@@ -615,7 +611,7 @@ pub mod lookup_policy_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`LookupPolicyOutput`](crate::output::LookupPolicyOutput)
+        /// Consumes the builder and constructs a [`LookupPolicyOutput`](crate::output::LookupPolicyOutput).
         pub fn build(self) -> crate::output::LookupPolicyOutput {
             crate::output::LookupPolicyOutput {
                 policy_to_path_list: self.policy_to_path_list,
@@ -625,7 +621,7 @@ pub mod lookup_policy_output {
     }
 }
 impl LookupPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`LookupPolicyOutput`](crate::output::LookupPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`LookupPolicyOutput`](crate::output::LookupPolicyOutput).
     pub fn builder() -> crate::output::lookup_policy_output::Builder {
         crate::output::lookup_policy_output::Builder::default()
     }
@@ -636,8 +632,10 @@ impl LookupPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTypedLinkFacetNamesOutput {
     /// <p>The names of typed link facets that exist within the schema.</p>
+    #[doc(hidden)]
     pub facet_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListTypedLinkFacetNamesOutput {
@@ -658,11 +656,10 @@ impl std::fmt::Debug for ListTypedLinkFacetNamesOutput {
         formatter.finish()
     }
 }
-/// See [`ListTypedLinkFacetNamesOutput`](crate::output::ListTypedLinkFacetNamesOutput)
+/// See [`ListTypedLinkFacetNamesOutput`](crate::output::ListTypedLinkFacetNamesOutput).
 pub mod list_typed_link_facet_names_output {
 
-    /// A builder for [`ListTypedLinkFacetNamesOutput`](crate::output::ListTypedLinkFacetNamesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTypedLinkFacetNamesOutput`](crate::output::ListTypedLinkFacetNamesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) facet_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -698,7 +695,7 @@ pub mod list_typed_link_facet_names_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTypedLinkFacetNamesOutput`](crate::output::ListTypedLinkFacetNamesOutput)
+        /// Consumes the builder and constructs a [`ListTypedLinkFacetNamesOutput`](crate::output::ListTypedLinkFacetNamesOutput).
         pub fn build(self) -> crate::output::ListTypedLinkFacetNamesOutput {
             crate::output::ListTypedLinkFacetNamesOutput {
                 facet_names: self.facet_names,
@@ -708,7 +705,7 @@ pub mod list_typed_link_facet_names_output {
     }
 }
 impl ListTypedLinkFacetNamesOutput {
-    /// Creates a new builder-style object to manufacture [`ListTypedLinkFacetNamesOutput`](crate::output::ListTypedLinkFacetNamesOutput)
+    /// Creates a new builder-style object to manufacture [`ListTypedLinkFacetNamesOutput`](crate::output::ListTypedLinkFacetNamesOutput).
     pub fn builder() -> crate::output::list_typed_link_facet_names_output::Builder {
         crate::output::list_typed_link_facet_names_output::Builder::default()
     }
@@ -719,8 +716,10 @@ impl ListTypedLinkFacetNamesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTypedLinkFacetAttributesOutput {
     /// <p>An ordered set of attributes associate with the typed link.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<std::vec::Vec<crate::model::TypedLinkAttributeDefinition>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListTypedLinkFacetAttributesOutput {
@@ -741,11 +740,10 @@ impl std::fmt::Debug for ListTypedLinkFacetAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`ListTypedLinkFacetAttributesOutput`](crate::output::ListTypedLinkFacetAttributesOutput)
+/// See [`ListTypedLinkFacetAttributesOutput`](crate::output::ListTypedLinkFacetAttributesOutput).
 pub mod list_typed_link_facet_attributes_output {
 
-    /// A builder for [`ListTypedLinkFacetAttributesOutput`](crate::output::ListTypedLinkFacetAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTypedLinkFacetAttributesOutput`](crate::output::ListTypedLinkFacetAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes:
@@ -782,7 +780,7 @@ pub mod list_typed_link_facet_attributes_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTypedLinkFacetAttributesOutput`](crate::output::ListTypedLinkFacetAttributesOutput)
+        /// Consumes the builder and constructs a [`ListTypedLinkFacetAttributesOutput`](crate::output::ListTypedLinkFacetAttributesOutput).
         pub fn build(self) -> crate::output::ListTypedLinkFacetAttributesOutput {
             crate::output::ListTypedLinkFacetAttributesOutput {
                 attributes: self.attributes,
@@ -792,7 +790,7 @@ pub mod list_typed_link_facet_attributes_output {
     }
 }
 impl ListTypedLinkFacetAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`ListTypedLinkFacetAttributesOutput`](crate::output::ListTypedLinkFacetAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`ListTypedLinkFacetAttributesOutput`](crate::output::ListTypedLinkFacetAttributesOutput).
     pub fn builder() -> crate::output::list_typed_link_facet_attributes_output::Builder {
         crate::output::list_typed_link_facet_attributes_output::Builder::default()
     }
@@ -803,8 +801,10 @@ impl ListTypedLinkFacetAttributesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>A list of tag key value pairs that are associated with the response.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The token to use to retrieve the next page of results. This value is null when there are no more results to return.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListTagsForResourceOutput {
@@ -825,11 +825,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -865,7 +864,7 @@ pub mod list_tags_for_resource_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 tags: self.tags,
@@ -875,7 +874,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -886,8 +885,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListPublishedSchemaArnsOutput {
     /// <p>The ARNs of published schemas.</p>
+    #[doc(hidden)]
     pub schema_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListPublishedSchemaArnsOutput {
@@ -908,11 +909,10 @@ impl std::fmt::Debug for ListPublishedSchemaArnsOutput {
         formatter.finish()
     }
 }
-/// See [`ListPublishedSchemaArnsOutput`](crate::output::ListPublishedSchemaArnsOutput)
+/// See [`ListPublishedSchemaArnsOutput`](crate::output::ListPublishedSchemaArnsOutput).
 pub mod list_published_schema_arns_output {
 
-    /// A builder for [`ListPublishedSchemaArnsOutput`](crate::output::ListPublishedSchemaArnsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListPublishedSchemaArnsOutput`](crate::output::ListPublishedSchemaArnsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schema_arns: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -948,7 +948,7 @@ pub mod list_published_schema_arns_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPublishedSchemaArnsOutput`](crate::output::ListPublishedSchemaArnsOutput)
+        /// Consumes the builder and constructs a [`ListPublishedSchemaArnsOutput`](crate::output::ListPublishedSchemaArnsOutput).
         pub fn build(self) -> crate::output::ListPublishedSchemaArnsOutput {
             crate::output::ListPublishedSchemaArnsOutput {
                 schema_arns: self.schema_arns,
@@ -958,7 +958,7 @@ pub mod list_published_schema_arns_output {
     }
 }
 impl ListPublishedSchemaArnsOutput {
-    /// Creates a new builder-style object to manufacture [`ListPublishedSchemaArnsOutput`](crate::output::ListPublishedSchemaArnsOutput)
+    /// Creates a new builder-style object to manufacture [`ListPublishedSchemaArnsOutput`](crate::output::ListPublishedSchemaArnsOutput).
     pub fn builder() -> crate::output::list_published_schema_arns_output::Builder {
         crate::output::list_published_schema_arns_output::Builder::default()
     }
@@ -969,8 +969,10 @@ impl ListPublishedSchemaArnsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListPolicyAttachmentsOutput {
     /// <p>A list of <code>ObjectIdentifiers</code> to which the policy is attached.</p>
+    #[doc(hidden)]
     pub object_identifiers: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListPolicyAttachmentsOutput {
@@ -991,11 +993,10 @@ impl std::fmt::Debug for ListPolicyAttachmentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListPolicyAttachmentsOutput`](crate::output::ListPolicyAttachmentsOutput)
+/// See [`ListPolicyAttachmentsOutput`](crate::output::ListPolicyAttachmentsOutput).
 pub mod list_policy_attachments_output {
 
-    /// A builder for [`ListPolicyAttachmentsOutput`](crate::output::ListPolicyAttachmentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListPolicyAttachmentsOutput`](crate::output::ListPolicyAttachmentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_identifiers: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1031,7 +1032,7 @@ pub mod list_policy_attachments_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPolicyAttachmentsOutput`](crate::output::ListPolicyAttachmentsOutput)
+        /// Consumes the builder and constructs a [`ListPolicyAttachmentsOutput`](crate::output::ListPolicyAttachmentsOutput).
         pub fn build(self) -> crate::output::ListPolicyAttachmentsOutput {
             crate::output::ListPolicyAttachmentsOutput {
                 object_identifiers: self.object_identifiers,
@@ -1041,7 +1042,7 @@ pub mod list_policy_attachments_output {
     }
 }
 impl ListPolicyAttachmentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListPolicyAttachmentsOutput`](crate::output::ListPolicyAttachmentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListPolicyAttachmentsOutput`](crate::output::ListPolicyAttachmentsOutput).
     pub fn builder() -> crate::output::list_policy_attachments_output::Builder {
         crate::output::list_policy_attachments_output::Builder::default()
     }
@@ -1052,8 +1053,10 @@ impl ListPolicyAttachmentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListOutgoingTypedLinksOutput {
     /// <p>Returns a typed link specifier as output.</p>
+    #[doc(hidden)]
     pub typed_link_specifiers: std::option::Option<std::vec::Vec<crate::model::TypedLinkSpecifier>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListOutgoingTypedLinksOutput {
@@ -1076,11 +1079,10 @@ impl std::fmt::Debug for ListOutgoingTypedLinksOutput {
         formatter.finish()
     }
 }
-/// See [`ListOutgoingTypedLinksOutput`](crate::output::ListOutgoingTypedLinksOutput)
+/// See [`ListOutgoingTypedLinksOutput`](crate::output::ListOutgoingTypedLinksOutput).
 pub mod list_outgoing_typed_links_output {
 
-    /// A builder for [`ListOutgoingTypedLinksOutput`](crate::output::ListOutgoingTypedLinksOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListOutgoingTypedLinksOutput`](crate::output::ListOutgoingTypedLinksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) typed_link_specifiers:
@@ -1117,7 +1119,7 @@ pub mod list_outgoing_typed_links_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListOutgoingTypedLinksOutput`](crate::output::ListOutgoingTypedLinksOutput)
+        /// Consumes the builder and constructs a [`ListOutgoingTypedLinksOutput`](crate::output::ListOutgoingTypedLinksOutput).
         pub fn build(self) -> crate::output::ListOutgoingTypedLinksOutput {
             crate::output::ListOutgoingTypedLinksOutput {
                 typed_link_specifiers: self.typed_link_specifiers,
@@ -1127,7 +1129,7 @@ pub mod list_outgoing_typed_links_output {
     }
 }
 impl ListOutgoingTypedLinksOutput {
-    /// Creates a new builder-style object to manufacture [`ListOutgoingTypedLinksOutput`](crate::output::ListOutgoingTypedLinksOutput)
+    /// Creates a new builder-style object to manufacture [`ListOutgoingTypedLinksOutput`](crate::output::ListOutgoingTypedLinksOutput).
     pub fn builder() -> crate::output::list_outgoing_typed_links_output::Builder {
         crate::output::list_outgoing_typed_links_output::Builder::default()
     }
@@ -1138,8 +1140,10 @@ impl ListOutgoingTypedLinksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListObjectPoliciesOutput {
     /// <p>A list of policy <code>ObjectIdentifiers</code>, that are attached to the object.</p>
+    #[doc(hidden)]
     pub attached_policy_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListObjectPoliciesOutput {
@@ -1160,11 +1164,10 @@ impl std::fmt::Debug for ListObjectPoliciesOutput {
         formatter.finish()
     }
 }
-/// See [`ListObjectPoliciesOutput`](crate::output::ListObjectPoliciesOutput)
+/// See [`ListObjectPoliciesOutput`](crate::output::ListObjectPoliciesOutput).
 pub mod list_object_policies_output {
 
-    /// A builder for [`ListObjectPoliciesOutput`](crate::output::ListObjectPoliciesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListObjectPoliciesOutput`](crate::output::ListObjectPoliciesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attached_policy_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1200,7 +1203,7 @@ pub mod list_object_policies_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListObjectPoliciesOutput`](crate::output::ListObjectPoliciesOutput)
+        /// Consumes the builder and constructs a [`ListObjectPoliciesOutput`](crate::output::ListObjectPoliciesOutput).
         pub fn build(self) -> crate::output::ListObjectPoliciesOutput {
             crate::output::ListObjectPoliciesOutput {
                 attached_policy_ids: self.attached_policy_ids,
@@ -1210,7 +1213,7 @@ pub mod list_object_policies_output {
     }
 }
 impl ListObjectPoliciesOutput {
-    /// Creates a new builder-style object to manufacture [`ListObjectPoliciesOutput`](crate::output::ListObjectPoliciesOutput)
+    /// Creates a new builder-style object to manufacture [`ListObjectPoliciesOutput`](crate::output::ListObjectPoliciesOutput).
     pub fn builder() -> crate::output::list_object_policies_output::Builder {
         crate::output::list_object_policies_output::Builder::default()
     }
@@ -1221,11 +1224,14 @@ impl ListObjectPoliciesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListObjectParentsOutput {
     /// <p>The parent structure, which is a map with key as the <code>ObjectIdentifier</code> and LinkName as the value.</p>
+    #[doc(hidden)]
     pub parents:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Returns a list of parent reference and LinkName Tuples.</p>
+    #[doc(hidden)]
     pub parent_links:
         std::option::Option<std::vec::Vec<crate::model::ObjectIdentifierAndLinkNameTuple>>,
 }
@@ -1257,11 +1263,10 @@ impl std::fmt::Debug for ListObjectParentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListObjectParentsOutput`](crate::output::ListObjectParentsOutput)
+/// See [`ListObjectParentsOutput`](crate::output::ListObjectParentsOutput).
 pub mod list_object_parents_output {
 
-    /// A builder for [`ListObjectParentsOutput`](crate::output::ListObjectParentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListObjectParentsOutput`](crate::output::ListObjectParentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parents: std::option::Option<
@@ -1331,7 +1336,7 @@ pub mod list_object_parents_output {
             self.parent_links = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListObjectParentsOutput`](crate::output::ListObjectParentsOutput)
+        /// Consumes the builder and constructs a [`ListObjectParentsOutput`](crate::output::ListObjectParentsOutput).
         pub fn build(self) -> crate::output::ListObjectParentsOutput {
             crate::output::ListObjectParentsOutput {
                 parents: self.parents,
@@ -1342,7 +1347,7 @@ pub mod list_object_parents_output {
     }
 }
 impl ListObjectParentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListObjectParentsOutput`](crate::output::ListObjectParentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListObjectParentsOutput`](crate::output::ListObjectParentsOutput).
     pub fn builder() -> crate::output::list_object_parents_output::Builder {
         crate::output::list_object_parents_output::Builder::default()
     }
@@ -1353,9 +1358,11 @@ impl ListObjectParentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListObjectParentPathsOutput {
     /// <p>Returns the path to the <code>ObjectIdentifiers</code> that are associated with the directory.</p>
+    #[doc(hidden)]
     pub path_to_object_identifiers_list:
         std::option::Option<std::vec::Vec<crate::model::PathToObjectIdentifiers>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListObjectParentPathsOutput {
@@ -1381,11 +1388,10 @@ impl std::fmt::Debug for ListObjectParentPathsOutput {
         formatter.finish()
     }
 }
-/// See [`ListObjectParentPathsOutput`](crate::output::ListObjectParentPathsOutput)
+/// See [`ListObjectParentPathsOutput`](crate::output::ListObjectParentPathsOutput).
 pub mod list_object_parent_paths_output {
 
-    /// A builder for [`ListObjectParentPathsOutput`](crate::output::ListObjectParentPathsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListObjectParentPathsOutput`](crate::output::ListObjectParentPathsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path_to_object_identifiers_list:
@@ -1425,7 +1431,7 @@ pub mod list_object_parent_paths_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListObjectParentPathsOutput`](crate::output::ListObjectParentPathsOutput)
+        /// Consumes the builder and constructs a [`ListObjectParentPathsOutput`](crate::output::ListObjectParentPathsOutput).
         pub fn build(self) -> crate::output::ListObjectParentPathsOutput {
             crate::output::ListObjectParentPathsOutput {
                 path_to_object_identifiers_list: self.path_to_object_identifiers_list,
@@ -1435,7 +1441,7 @@ pub mod list_object_parent_paths_output {
     }
 }
 impl ListObjectParentPathsOutput {
-    /// Creates a new builder-style object to manufacture [`ListObjectParentPathsOutput`](crate::output::ListObjectParentPathsOutput)
+    /// Creates a new builder-style object to manufacture [`ListObjectParentPathsOutput`](crate::output::ListObjectParentPathsOutput).
     pub fn builder() -> crate::output::list_object_parent_paths_output::Builder {
         crate::output::list_object_parent_paths_output::Builder::default()
     }
@@ -1446,9 +1452,11 @@ impl ListObjectParentPathsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListObjectChildrenOutput {
     /// <p>Children structure, which is a map with key as the <code>LinkName</code> and <code>ObjectIdentifier</code> as the value.</p>
+    #[doc(hidden)]
     pub children:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListObjectChildrenOutput {
@@ -1472,11 +1480,10 @@ impl std::fmt::Debug for ListObjectChildrenOutput {
         formatter.finish()
     }
 }
-/// See [`ListObjectChildrenOutput`](crate::output::ListObjectChildrenOutput)
+/// See [`ListObjectChildrenOutput`](crate::output::ListObjectChildrenOutput).
 pub mod list_object_children_output {
 
-    /// A builder for [`ListObjectChildrenOutput`](crate::output::ListObjectChildrenOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListObjectChildrenOutput`](crate::output::ListObjectChildrenOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) children: std::option::Option<
@@ -1520,7 +1527,7 @@ pub mod list_object_children_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListObjectChildrenOutput`](crate::output::ListObjectChildrenOutput)
+        /// Consumes the builder and constructs a [`ListObjectChildrenOutput`](crate::output::ListObjectChildrenOutput).
         pub fn build(self) -> crate::output::ListObjectChildrenOutput {
             crate::output::ListObjectChildrenOutput {
                 children: self.children,
@@ -1530,7 +1537,7 @@ pub mod list_object_children_output {
     }
 }
 impl ListObjectChildrenOutput {
-    /// Creates a new builder-style object to manufacture [`ListObjectChildrenOutput`](crate::output::ListObjectChildrenOutput)
+    /// Creates a new builder-style object to manufacture [`ListObjectChildrenOutput`](crate::output::ListObjectChildrenOutput).
     pub fn builder() -> crate::output::list_object_children_output::Builder {
         crate::output::list_object_children_output::Builder::default()
     }
@@ -1541,8 +1548,10 @@ impl ListObjectChildrenOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListObjectAttributesOutput {
     /// <p>Attributes map that is associated with the object. <code>AttributeArn</code> is the key, and attribute value is the value.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<std::vec::Vec<crate::model::AttributeKeyAndValue>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListObjectAttributesOutput {
@@ -1563,11 +1572,10 @@ impl std::fmt::Debug for ListObjectAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`ListObjectAttributesOutput`](crate::output::ListObjectAttributesOutput)
+/// See [`ListObjectAttributesOutput`](crate::output::ListObjectAttributesOutput).
 pub mod list_object_attributes_output {
 
-    /// A builder for [`ListObjectAttributesOutput`](crate::output::ListObjectAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListObjectAttributesOutput`](crate::output::ListObjectAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes:
@@ -1604,7 +1612,7 @@ pub mod list_object_attributes_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListObjectAttributesOutput`](crate::output::ListObjectAttributesOutput)
+        /// Consumes the builder and constructs a [`ListObjectAttributesOutput`](crate::output::ListObjectAttributesOutput).
         pub fn build(self) -> crate::output::ListObjectAttributesOutput {
             crate::output::ListObjectAttributesOutput {
                 attributes: self.attributes,
@@ -1614,7 +1622,7 @@ pub mod list_object_attributes_output {
     }
 }
 impl ListObjectAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`ListObjectAttributesOutput`](crate::output::ListObjectAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`ListObjectAttributesOutput`](crate::output::ListObjectAttributesOutput).
     pub fn builder() -> crate::output::list_object_attributes_output::Builder {
         crate::output::list_object_attributes_output::Builder::default()
     }
@@ -1625,8 +1633,10 @@ impl ListObjectAttributesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListManagedSchemaArnsOutput {
     /// <p>The ARNs for all AWS managed schemas.</p>
+    #[doc(hidden)]
     pub schema_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListManagedSchemaArnsOutput {
@@ -1647,11 +1657,10 @@ impl std::fmt::Debug for ListManagedSchemaArnsOutput {
         formatter.finish()
     }
 }
-/// See [`ListManagedSchemaArnsOutput`](crate::output::ListManagedSchemaArnsOutput)
+/// See [`ListManagedSchemaArnsOutput`](crate::output::ListManagedSchemaArnsOutput).
 pub mod list_managed_schema_arns_output {
 
-    /// A builder for [`ListManagedSchemaArnsOutput`](crate::output::ListManagedSchemaArnsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListManagedSchemaArnsOutput`](crate::output::ListManagedSchemaArnsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schema_arns: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1687,7 +1696,7 @@ pub mod list_managed_schema_arns_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListManagedSchemaArnsOutput`](crate::output::ListManagedSchemaArnsOutput)
+        /// Consumes the builder and constructs a [`ListManagedSchemaArnsOutput`](crate::output::ListManagedSchemaArnsOutput).
         pub fn build(self) -> crate::output::ListManagedSchemaArnsOutput {
             crate::output::ListManagedSchemaArnsOutput {
                 schema_arns: self.schema_arns,
@@ -1697,7 +1706,7 @@ pub mod list_managed_schema_arns_output {
     }
 }
 impl ListManagedSchemaArnsOutput {
-    /// Creates a new builder-style object to manufacture [`ListManagedSchemaArnsOutput`](crate::output::ListManagedSchemaArnsOutput)
+    /// Creates a new builder-style object to manufacture [`ListManagedSchemaArnsOutput`](crate::output::ListManagedSchemaArnsOutput).
     pub fn builder() -> crate::output::list_managed_schema_arns_output::Builder {
         crate::output::list_managed_schema_arns_output::Builder::default()
     }
@@ -1708,8 +1717,10 @@ impl ListManagedSchemaArnsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListIndexOutput {
     /// <p>The objects and indexed values attached to the index.</p>
+    #[doc(hidden)]
     pub index_attachments: std::option::Option<std::vec::Vec<crate::model::IndexAttachment>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListIndexOutput {
@@ -1730,11 +1741,10 @@ impl std::fmt::Debug for ListIndexOutput {
         formatter.finish()
     }
 }
-/// See [`ListIndexOutput`](crate::output::ListIndexOutput)
+/// See [`ListIndexOutput`](crate::output::ListIndexOutput).
 pub mod list_index_output {
 
-    /// A builder for [`ListIndexOutput`](crate::output::ListIndexOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListIndexOutput`](crate::output::ListIndexOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) index_attachments:
@@ -1771,7 +1781,7 @@ pub mod list_index_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListIndexOutput`](crate::output::ListIndexOutput)
+        /// Consumes the builder and constructs a [`ListIndexOutput`](crate::output::ListIndexOutput).
         pub fn build(self) -> crate::output::ListIndexOutput {
             crate::output::ListIndexOutput {
                 index_attachments: self.index_attachments,
@@ -1781,7 +1791,7 @@ pub mod list_index_output {
     }
 }
 impl ListIndexOutput {
-    /// Creates a new builder-style object to manufacture [`ListIndexOutput`](crate::output::ListIndexOutput)
+    /// Creates a new builder-style object to manufacture [`ListIndexOutput`](crate::output::ListIndexOutput).
     pub fn builder() -> crate::output::list_index_output::Builder {
         crate::output::list_index_output::Builder::default()
     }
@@ -1792,8 +1802,10 @@ impl ListIndexOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListIncomingTypedLinksOutput {
     /// <p>Returns one or more typed link specifiers as output.</p>
+    #[doc(hidden)]
     pub link_specifiers: std::option::Option<std::vec::Vec<crate::model::TypedLinkSpecifier>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListIncomingTypedLinksOutput {
@@ -1814,11 +1826,10 @@ impl std::fmt::Debug for ListIncomingTypedLinksOutput {
         formatter.finish()
     }
 }
-/// See [`ListIncomingTypedLinksOutput`](crate::output::ListIncomingTypedLinksOutput)
+/// See [`ListIncomingTypedLinksOutput`](crate::output::ListIncomingTypedLinksOutput).
 pub mod list_incoming_typed_links_output {
 
-    /// A builder for [`ListIncomingTypedLinksOutput`](crate::output::ListIncomingTypedLinksOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListIncomingTypedLinksOutput`](crate::output::ListIncomingTypedLinksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) link_specifiers:
@@ -1855,7 +1866,7 @@ pub mod list_incoming_typed_links_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListIncomingTypedLinksOutput`](crate::output::ListIncomingTypedLinksOutput)
+        /// Consumes the builder and constructs a [`ListIncomingTypedLinksOutput`](crate::output::ListIncomingTypedLinksOutput).
         pub fn build(self) -> crate::output::ListIncomingTypedLinksOutput {
             crate::output::ListIncomingTypedLinksOutput {
                 link_specifiers: self.link_specifiers,
@@ -1865,7 +1876,7 @@ pub mod list_incoming_typed_links_output {
     }
 }
 impl ListIncomingTypedLinksOutput {
-    /// Creates a new builder-style object to manufacture [`ListIncomingTypedLinksOutput`](crate::output::ListIncomingTypedLinksOutput)
+    /// Creates a new builder-style object to manufacture [`ListIncomingTypedLinksOutput`](crate::output::ListIncomingTypedLinksOutput).
     pub fn builder() -> crate::output::list_incoming_typed_links_output::Builder {
         crate::output::list_incoming_typed_links_output::Builder::default()
     }
@@ -1876,8 +1887,10 @@ impl ListIncomingTypedLinksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListFacetNamesOutput {
     /// <p>The names of facets that exist within the schema.</p>
+    #[doc(hidden)]
     pub facet_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListFacetNamesOutput {
@@ -1898,11 +1911,10 @@ impl std::fmt::Debug for ListFacetNamesOutput {
         formatter.finish()
     }
 }
-/// See [`ListFacetNamesOutput`](crate::output::ListFacetNamesOutput)
+/// See [`ListFacetNamesOutput`](crate::output::ListFacetNamesOutput).
 pub mod list_facet_names_output {
 
-    /// A builder for [`ListFacetNamesOutput`](crate::output::ListFacetNamesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListFacetNamesOutput`](crate::output::ListFacetNamesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) facet_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1938,7 +1950,7 @@ pub mod list_facet_names_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFacetNamesOutput`](crate::output::ListFacetNamesOutput)
+        /// Consumes the builder and constructs a [`ListFacetNamesOutput`](crate::output::ListFacetNamesOutput).
         pub fn build(self) -> crate::output::ListFacetNamesOutput {
             crate::output::ListFacetNamesOutput {
                 facet_names: self.facet_names,
@@ -1948,7 +1960,7 @@ pub mod list_facet_names_output {
     }
 }
 impl ListFacetNamesOutput {
-    /// Creates a new builder-style object to manufacture [`ListFacetNamesOutput`](crate::output::ListFacetNamesOutput)
+    /// Creates a new builder-style object to manufacture [`ListFacetNamesOutput`](crate::output::ListFacetNamesOutput).
     pub fn builder() -> crate::output::list_facet_names_output::Builder {
         crate::output::list_facet_names_output::Builder::default()
     }
@@ -1959,8 +1971,10 @@ impl ListFacetNamesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListFacetAttributesOutput {
     /// <p>The attributes attached to the facet.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<std::vec::Vec<crate::model::FacetAttribute>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListFacetAttributesOutput {
@@ -1981,11 +1995,10 @@ impl std::fmt::Debug for ListFacetAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`ListFacetAttributesOutput`](crate::output::ListFacetAttributesOutput)
+/// See [`ListFacetAttributesOutput`](crate::output::ListFacetAttributesOutput).
 pub mod list_facet_attributes_output {
 
-    /// A builder for [`ListFacetAttributesOutput`](crate::output::ListFacetAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListFacetAttributesOutput`](crate::output::ListFacetAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<std::vec::Vec<crate::model::FacetAttribute>>,
@@ -2021,7 +2034,7 @@ pub mod list_facet_attributes_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFacetAttributesOutput`](crate::output::ListFacetAttributesOutput)
+        /// Consumes the builder and constructs a [`ListFacetAttributesOutput`](crate::output::ListFacetAttributesOutput).
         pub fn build(self) -> crate::output::ListFacetAttributesOutput {
             crate::output::ListFacetAttributesOutput {
                 attributes: self.attributes,
@@ -2031,7 +2044,7 @@ pub mod list_facet_attributes_output {
     }
 }
 impl ListFacetAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`ListFacetAttributesOutput`](crate::output::ListFacetAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`ListFacetAttributesOutput`](crate::output::ListFacetAttributesOutput).
     pub fn builder() -> crate::output::list_facet_attributes_output::Builder {
         crate::output::list_facet_attributes_output::Builder::default()
     }
@@ -2042,8 +2055,10 @@ impl ListFacetAttributesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDirectoriesOutput {
     /// <p>Lists all directories that are associated with your account in pagination fashion.</p>
+    #[doc(hidden)]
     pub directories: std::option::Option<std::vec::Vec<crate::model::Directory>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListDirectoriesOutput {
@@ -2064,11 +2079,10 @@ impl std::fmt::Debug for ListDirectoriesOutput {
         formatter.finish()
     }
 }
-/// See [`ListDirectoriesOutput`](crate::output::ListDirectoriesOutput)
+/// See [`ListDirectoriesOutput`](crate::output::ListDirectoriesOutput).
 pub mod list_directories_output {
 
-    /// A builder for [`ListDirectoriesOutput`](crate::output::ListDirectoriesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListDirectoriesOutput`](crate::output::ListDirectoriesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) directories: std::option::Option<std::vec::Vec<crate::model::Directory>>,
@@ -2104,7 +2118,7 @@ pub mod list_directories_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDirectoriesOutput`](crate::output::ListDirectoriesOutput)
+        /// Consumes the builder and constructs a [`ListDirectoriesOutput`](crate::output::ListDirectoriesOutput).
         pub fn build(self) -> crate::output::ListDirectoriesOutput {
             crate::output::ListDirectoriesOutput {
                 directories: self.directories,
@@ -2114,7 +2128,7 @@ pub mod list_directories_output {
     }
 }
 impl ListDirectoriesOutput {
-    /// Creates a new builder-style object to manufacture [`ListDirectoriesOutput`](crate::output::ListDirectoriesOutput)
+    /// Creates a new builder-style object to manufacture [`ListDirectoriesOutput`](crate::output::ListDirectoriesOutput).
     pub fn builder() -> crate::output::list_directories_output::Builder {
         crate::output::list_directories_output::Builder::default()
     }
@@ -2125,8 +2139,10 @@ impl ListDirectoriesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDevelopmentSchemaArnsOutput {
     /// <p>The ARNs of retrieved development schemas.</p>
+    #[doc(hidden)]
     pub schema_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListDevelopmentSchemaArnsOutput {
@@ -2147,11 +2163,10 @@ impl std::fmt::Debug for ListDevelopmentSchemaArnsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDevelopmentSchemaArnsOutput`](crate::output::ListDevelopmentSchemaArnsOutput)
+/// See [`ListDevelopmentSchemaArnsOutput`](crate::output::ListDevelopmentSchemaArnsOutput).
 pub mod list_development_schema_arns_output {
 
-    /// A builder for [`ListDevelopmentSchemaArnsOutput`](crate::output::ListDevelopmentSchemaArnsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListDevelopmentSchemaArnsOutput`](crate::output::ListDevelopmentSchemaArnsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schema_arns: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2187,7 +2202,7 @@ pub mod list_development_schema_arns_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDevelopmentSchemaArnsOutput`](crate::output::ListDevelopmentSchemaArnsOutput)
+        /// Consumes the builder and constructs a [`ListDevelopmentSchemaArnsOutput`](crate::output::ListDevelopmentSchemaArnsOutput).
         pub fn build(self) -> crate::output::ListDevelopmentSchemaArnsOutput {
             crate::output::ListDevelopmentSchemaArnsOutput {
                 schema_arns: self.schema_arns,
@@ -2197,7 +2212,7 @@ pub mod list_development_schema_arns_output {
     }
 }
 impl ListDevelopmentSchemaArnsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDevelopmentSchemaArnsOutput`](crate::output::ListDevelopmentSchemaArnsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDevelopmentSchemaArnsOutput`](crate::output::ListDevelopmentSchemaArnsOutput).
     pub fn builder() -> crate::output::list_development_schema_arns_output::Builder {
         crate::output::list_development_schema_arns_output::Builder::default()
     }
@@ -2208,8 +2223,10 @@ impl ListDevelopmentSchemaArnsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAttachedIndicesOutput {
     /// <p>The indices attached to the specified object.</p>
+    #[doc(hidden)]
     pub index_attachments: std::option::Option<std::vec::Vec<crate::model::IndexAttachment>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAttachedIndicesOutput {
@@ -2230,11 +2247,10 @@ impl std::fmt::Debug for ListAttachedIndicesOutput {
         formatter.finish()
     }
 }
-/// See [`ListAttachedIndicesOutput`](crate::output::ListAttachedIndicesOutput)
+/// See [`ListAttachedIndicesOutput`](crate::output::ListAttachedIndicesOutput).
 pub mod list_attached_indices_output {
 
-    /// A builder for [`ListAttachedIndicesOutput`](crate::output::ListAttachedIndicesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAttachedIndicesOutput`](crate::output::ListAttachedIndicesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) index_attachments:
@@ -2271,7 +2287,7 @@ pub mod list_attached_indices_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAttachedIndicesOutput`](crate::output::ListAttachedIndicesOutput)
+        /// Consumes the builder and constructs a [`ListAttachedIndicesOutput`](crate::output::ListAttachedIndicesOutput).
         pub fn build(self) -> crate::output::ListAttachedIndicesOutput {
             crate::output::ListAttachedIndicesOutput {
                 index_attachments: self.index_attachments,
@@ -2281,7 +2297,7 @@ pub mod list_attached_indices_output {
     }
 }
 impl ListAttachedIndicesOutput {
-    /// Creates a new builder-style object to manufacture [`ListAttachedIndicesOutput`](crate::output::ListAttachedIndicesOutput)
+    /// Creates a new builder-style object to manufacture [`ListAttachedIndicesOutput`](crate::output::ListAttachedIndicesOutput).
     pub fn builder() -> crate::output::list_attached_indices_output::Builder {
         crate::output::list_attached_indices_output::Builder::default()
     }
@@ -2292,8 +2308,10 @@ impl ListAttachedIndicesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAppliedSchemaArnsOutput {
     /// <p>The ARNs of schemas that are applied to the directory.</p>
+    #[doc(hidden)]
     pub schema_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAppliedSchemaArnsOutput {
@@ -2314,11 +2332,10 @@ impl std::fmt::Debug for ListAppliedSchemaArnsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAppliedSchemaArnsOutput`](crate::output::ListAppliedSchemaArnsOutput)
+/// See [`ListAppliedSchemaArnsOutput`](crate::output::ListAppliedSchemaArnsOutput).
 pub mod list_applied_schema_arns_output {
 
-    /// A builder for [`ListAppliedSchemaArnsOutput`](crate::output::ListAppliedSchemaArnsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAppliedSchemaArnsOutput`](crate::output::ListAppliedSchemaArnsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schema_arns: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2354,7 +2371,7 @@ pub mod list_applied_schema_arns_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAppliedSchemaArnsOutput`](crate::output::ListAppliedSchemaArnsOutput)
+        /// Consumes the builder and constructs a [`ListAppliedSchemaArnsOutput`](crate::output::ListAppliedSchemaArnsOutput).
         pub fn build(self) -> crate::output::ListAppliedSchemaArnsOutput {
             crate::output::ListAppliedSchemaArnsOutput {
                 schema_arns: self.schema_arns,
@@ -2364,7 +2381,7 @@ pub mod list_applied_schema_arns_output {
     }
 }
 impl ListAppliedSchemaArnsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAppliedSchemaArnsOutput`](crate::output::ListAppliedSchemaArnsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAppliedSchemaArnsOutput`](crate::output::ListAppliedSchemaArnsOutput).
     pub fn builder() -> crate::output::list_applied_schema_arns_output::Builder {
         crate::output::list_applied_schema_arns_output::Builder::default()
     }
@@ -2375,6 +2392,7 @@ impl ListAppliedSchemaArnsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetTypedLinkFacetInformationOutput {
     /// <p>The order of identity attributes for the facet, from most significant to least significant. The ability to filter typed links considers the order that the attributes are defined on the typed link facet. When providing ranges to typed link selection, any inexact ranges must be specified at the end. Any attributes that do not have a range specified are presumed to match the entire range. Filters are interpreted in the order of the attributes on the typed link facet, not the order in which they are supplied to any API calls. For more information about identity attributes, see <a href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink">Typed Links</a>.</p>
+    #[doc(hidden)]
     pub identity_attribute_order: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl GetTypedLinkFacetInformationOutput {
@@ -2390,11 +2408,10 @@ impl std::fmt::Debug for GetTypedLinkFacetInformationOutput {
         formatter.finish()
     }
 }
-/// See [`GetTypedLinkFacetInformationOutput`](crate::output::GetTypedLinkFacetInformationOutput)
+/// See [`GetTypedLinkFacetInformationOutput`](crate::output::GetTypedLinkFacetInformationOutput).
 pub mod get_typed_link_facet_information_output {
 
-    /// A builder for [`GetTypedLinkFacetInformationOutput`](crate::output::GetTypedLinkFacetInformationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetTypedLinkFacetInformationOutput`](crate::output::GetTypedLinkFacetInformationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_attribute_order:
@@ -2420,7 +2437,7 @@ pub mod get_typed_link_facet_information_output {
             self.identity_attribute_order = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetTypedLinkFacetInformationOutput`](crate::output::GetTypedLinkFacetInformationOutput)
+        /// Consumes the builder and constructs a [`GetTypedLinkFacetInformationOutput`](crate::output::GetTypedLinkFacetInformationOutput).
         pub fn build(self) -> crate::output::GetTypedLinkFacetInformationOutput {
             crate::output::GetTypedLinkFacetInformationOutput {
                 identity_attribute_order: self.identity_attribute_order,
@@ -2429,7 +2446,7 @@ pub mod get_typed_link_facet_information_output {
     }
 }
 impl GetTypedLinkFacetInformationOutput {
-    /// Creates a new builder-style object to manufacture [`GetTypedLinkFacetInformationOutput`](crate::output::GetTypedLinkFacetInformationOutput)
+    /// Creates a new builder-style object to manufacture [`GetTypedLinkFacetInformationOutput`](crate::output::GetTypedLinkFacetInformationOutput).
     pub fn builder() -> crate::output::get_typed_link_facet_information_output::Builder {
         crate::output::get_typed_link_facet_information_output::Builder::default()
     }
@@ -2440,8 +2457,10 @@ impl GetTypedLinkFacetInformationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSchemaAsJsonOutput {
     /// <p>The name of the retrieved schema.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The JSON representation of the schema document.</p>
+    #[doc(hidden)]
     pub document: std::option::Option<std::string::String>,
 }
 impl GetSchemaAsJsonOutput {
@@ -2462,11 +2481,10 @@ impl std::fmt::Debug for GetSchemaAsJsonOutput {
         formatter.finish()
     }
 }
-/// See [`GetSchemaAsJsonOutput`](crate::output::GetSchemaAsJsonOutput)
+/// See [`GetSchemaAsJsonOutput`](crate::output::GetSchemaAsJsonOutput).
 pub mod get_schema_as_json_output {
 
-    /// A builder for [`GetSchemaAsJsonOutput`](crate::output::GetSchemaAsJsonOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSchemaAsJsonOutput`](crate::output::GetSchemaAsJsonOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2493,7 +2511,7 @@ pub mod get_schema_as_json_output {
             self.document = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSchemaAsJsonOutput`](crate::output::GetSchemaAsJsonOutput)
+        /// Consumes the builder and constructs a [`GetSchemaAsJsonOutput`](crate::output::GetSchemaAsJsonOutput).
         pub fn build(self) -> crate::output::GetSchemaAsJsonOutput {
             crate::output::GetSchemaAsJsonOutput {
                 name: self.name,
@@ -2503,7 +2521,7 @@ pub mod get_schema_as_json_output {
     }
 }
 impl GetSchemaAsJsonOutput {
-    /// Creates a new builder-style object to manufacture [`GetSchemaAsJsonOutput`](crate::output::GetSchemaAsJsonOutput)
+    /// Creates a new builder-style object to manufacture [`GetSchemaAsJsonOutput`](crate::output::GetSchemaAsJsonOutput).
     pub fn builder() -> crate::output::get_schema_as_json_output::Builder {
         crate::output::get_schema_as_json_output::Builder::default()
     }
@@ -2514,8 +2532,10 @@ impl GetSchemaAsJsonOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetObjectInformationOutput {
     /// <p>The facets attached to the specified object. Although the response does not include minor version information, the most recently applied minor version of each Facet is in effect. See <code>GetAppliedSchemaVersion</code> for details.</p>
+    #[doc(hidden)]
     pub schema_facets: std::option::Option<std::vec::Vec<crate::model::SchemaFacet>>,
     /// <p>The <code>ObjectIdentifier</code> of the specified object.</p>
+    #[doc(hidden)]
     pub object_identifier: std::option::Option<std::string::String>,
 }
 impl GetObjectInformationOutput {
@@ -2536,11 +2556,10 @@ impl std::fmt::Debug for GetObjectInformationOutput {
         formatter.finish()
     }
 }
-/// See [`GetObjectInformationOutput`](crate::output::GetObjectInformationOutput)
+/// See [`GetObjectInformationOutput`](crate::output::GetObjectInformationOutput).
 pub mod get_object_information_output {
 
-    /// A builder for [`GetObjectInformationOutput`](crate::output::GetObjectInformationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetObjectInformationOutput`](crate::output::GetObjectInformationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schema_facets: std::option::Option<std::vec::Vec<crate::model::SchemaFacet>>,
@@ -2579,7 +2598,7 @@ pub mod get_object_information_output {
             self.object_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetObjectInformationOutput`](crate::output::GetObjectInformationOutput)
+        /// Consumes the builder and constructs a [`GetObjectInformationOutput`](crate::output::GetObjectInformationOutput).
         pub fn build(self) -> crate::output::GetObjectInformationOutput {
             crate::output::GetObjectInformationOutput {
                 schema_facets: self.schema_facets,
@@ -2589,7 +2608,7 @@ pub mod get_object_information_output {
     }
 }
 impl GetObjectInformationOutput {
-    /// Creates a new builder-style object to manufacture [`GetObjectInformationOutput`](crate::output::GetObjectInformationOutput)
+    /// Creates a new builder-style object to manufacture [`GetObjectInformationOutput`](crate::output::GetObjectInformationOutput).
     pub fn builder() -> crate::output::get_object_information_output::Builder {
         crate::output::get_object_information_output::Builder::default()
     }
@@ -2600,6 +2619,7 @@ impl GetObjectInformationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetObjectAttributesOutput {
     /// <p>The attributes that are associated with the object.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<std::vec::Vec<crate::model::AttributeKeyAndValue>>,
 }
 impl GetObjectAttributesOutput {
@@ -2615,11 +2635,10 @@ impl std::fmt::Debug for GetObjectAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`GetObjectAttributesOutput`](crate::output::GetObjectAttributesOutput)
+/// See [`GetObjectAttributesOutput`](crate::output::GetObjectAttributesOutput).
 pub mod get_object_attributes_output {
 
-    /// A builder for [`GetObjectAttributesOutput`](crate::output::GetObjectAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetObjectAttributesOutput`](crate::output::GetObjectAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes:
@@ -2645,7 +2664,7 @@ pub mod get_object_attributes_output {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetObjectAttributesOutput`](crate::output::GetObjectAttributesOutput)
+        /// Consumes the builder and constructs a [`GetObjectAttributesOutput`](crate::output::GetObjectAttributesOutput).
         pub fn build(self) -> crate::output::GetObjectAttributesOutput {
             crate::output::GetObjectAttributesOutput {
                 attributes: self.attributes,
@@ -2654,7 +2673,7 @@ pub mod get_object_attributes_output {
     }
 }
 impl GetObjectAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`GetObjectAttributesOutput`](crate::output::GetObjectAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`GetObjectAttributesOutput`](crate::output::GetObjectAttributesOutput).
     pub fn builder() -> crate::output::get_object_attributes_output::Builder {
         crate::output::get_object_attributes_output::Builder::default()
     }
@@ -2665,6 +2684,7 @@ impl GetObjectAttributesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetLinkAttributesOutput {
     /// <p>The attributes that are associated with the typed link.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<std::vec::Vec<crate::model::AttributeKeyAndValue>>,
 }
 impl GetLinkAttributesOutput {
@@ -2680,11 +2700,10 @@ impl std::fmt::Debug for GetLinkAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`GetLinkAttributesOutput`](crate::output::GetLinkAttributesOutput)
+/// See [`GetLinkAttributesOutput`](crate::output::GetLinkAttributesOutput).
 pub mod get_link_attributes_output {
 
-    /// A builder for [`GetLinkAttributesOutput`](crate::output::GetLinkAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetLinkAttributesOutput`](crate::output::GetLinkAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes:
@@ -2710,7 +2729,7 @@ pub mod get_link_attributes_output {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetLinkAttributesOutput`](crate::output::GetLinkAttributesOutput)
+        /// Consumes the builder and constructs a [`GetLinkAttributesOutput`](crate::output::GetLinkAttributesOutput).
         pub fn build(self) -> crate::output::GetLinkAttributesOutput {
             crate::output::GetLinkAttributesOutput {
                 attributes: self.attributes,
@@ -2719,7 +2738,7 @@ pub mod get_link_attributes_output {
     }
 }
 impl GetLinkAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`GetLinkAttributesOutput`](crate::output::GetLinkAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`GetLinkAttributesOutput`](crate::output::GetLinkAttributesOutput).
     pub fn builder() -> crate::output::get_link_attributes_output::Builder {
         crate::output::get_link_attributes_output::Builder::default()
     }
@@ -2730,6 +2749,7 @@ impl GetLinkAttributesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetFacetOutput {
     /// <p>The <code>Facet</code> structure that is associated with the facet.</p>
+    #[doc(hidden)]
     pub facet: std::option::Option<crate::model::Facet>,
 }
 impl GetFacetOutput {
@@ -2745,11 +2765,10 @@ impl std::fmt::Debug for GetFacetOutput {
         formatter.finish()
     }
 }
-/// See [`GetFacetOutput`](crate::output::GetFacetOutput)
+/// See [`GetFacetOutput`](crate::output::GetFacetOutput).
 pub mod get_facet_output {
 
-    /// A builder for [`GetFacetOutput`](crate::output::GetFacetOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetFacetOutput`](crate::output::GetFacetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) facet: std::option::Option<crate::model::Facet>,
@@ -2765,14 +2784,14 @@ pub mod get_facet_output {
             self.facet = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetFacetOutput`](crate::output::GetFacetOutput)
+        /// Consumes the builder and constructs a [`GetFacetOutput`](crate::output::GetFacetOutput).
         pub fn build(self) -> crate::output::GetFacetOutput {
             crate::output::GetFacetOutput { facet: self.facet }
         }
     }
 }
 impl GetFacetOutput {
-    /// Creates a new builder-style object to manufacture [`GetFacetOutput`](crate::output::GetFacetOutput)
+    /// Creates a new builder-style object to manufacture [`GetFacetOutput`](crate::output::GetFacetOutput).
     pub fn builder() -> crate::output::get_facet_output::Builder {
         crate::output::get_facet_output::Builder::default()
     }
@@ -2783,6 +2802,7 @@ impl GetFacetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDirectoryOutput {
     /// <p>Metadata about the directory.</p>
+    #[doc(hidden)]
     pub directory: std::option::Option<crate::model::Directory>,
 }
 impl GetDirectoryOutput {
@@ -2798,11 +2818,10 @@ impl std::fmt::Debug for GetDirectoryOutput {
         formatter.finish()
     }
 }
-/// See [`GetDirectoryOutput`](crate::output::GetDirectoryOutput)
+/// See [`GetDirectoryOutput`](crate::output::GetDirectoryOutput).
 pub mod get_directory_output {
 
-    /// A builder for [`GetDirectoryOutput`](crate::output::GetDirectoryOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDirectoryOutput`](crate::output::GetDirectoryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) directory: std::option::Option<crate::model::Directory>,
@@ -2821,7 +2840,7 @@ pub mod get_directory_output {
             self.directory = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDirectoryOutput`](crate::output::GetDirectoryOutput)
+        /// Consumes the builder and constructs a [`GetDirectoryOutput`](crate::output::GetDirectoryOutput).
         pub fn build(self) -> crate::output::GetDirectoryOutput {
             crate::output::GetDirectoryOutput {
                 directory: self.directory,
@@ -2830,7 +2849,7 @@ pub mod get_directory_output {
     }
 }
 impl GetDirectoryOutput {
-    /// Creates a new builder-style object to manufacture [`GetDirectoryOutput`](crate::output::GetDirectoryOutput)
+    /// Creates a new builder-style object to manufacture [`GetDirectoryOutput`](crate::output::GetDirectoryOutput).
     pub fn builder() -> crate::output::get_directory_output::Builder {
         crate::output::get_directory_output::Builder::default()
     }
@@ -2841,6 +2860,7 @@ impl GetDirectoryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAppliedSchemaVersionOutput {
     /// <p>Current applied schema ARN, including the minor version in use if one was provided.</p>
+    #[doc(hidden)]
     pub applied_schema_arn: std::option::Option<std::string::String>,
 }
 impl GetAppliedSchemaVersionOutput {
@@ -2856,11 +2876,10 @@ impl std::fmt::Debug for GetAppliedSchemaVersionOutput {
         formatter.finish()
     }
 }
-/// See [`GetAppliedSchemaVersionOutput`](crate::output::GetAppliedSchemaVersionOutput)
+/// See [`GetAppliedSchemaVersionOutput`](crate::output::GetAppliedSchemaVersionOutput).
 pub mod get_applied_schema_version_output {
 
-    /// A builder for [`GetAppliedSchemaVersionOutput`](crate::output::GetAppliedSchemaVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAppliedSchemaVersionOutput`](crate::output::GetAppliedSchemaVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) applied_schema_arn: std::option::Option<std::string::String>,
@@ -2879,7 +2898,7 @@ pub mod get_applied_schema_version_output {
             self.applied_schema_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAppliedSchemaVersionOutput`](crate::output::GetAppliedSchemaVersionOutput)
+        /// Consumes the builder and constructs a [`GetAppliedSchemaVersionOutput`](crate::output::GetAppliedSchemaVersionOutput).
         pub fn build(self) -> crate::output::GetAppliedSchemaVersionOutput {
             crate::output::GetAppliedSchemaVersionOutput {
                 applied_schema_arn: self.applied_schema_arn,
@@ -2888,7 +2907,7 @@ pub mod get_applied_schema_version_output {
     }
 }
 impl GetAppliedSchemaVersionOutput {
-    /// Creates a new builder-style object to manufacture [`GetAppliedSchemaVersionOutput`](crate::output::GetAppliedSchemaVersionOutput)
+    /// Creates a new builder-style object to manufacture [`GetAppliedSchemaVersionOutput`](crate::output::GetAppliedSchemaVersionOutput).
     pub fn builder() -> crate::output::get_applied_schema_version_output::Builder {
         crate::output::get_applied_schema_version_output::Builder::default()
     }
@@ -2899,6 +2918,7 @@ impl GetAppliedSchemaVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EnableDirectoryOutput {
     /// <p>The ARN of the enabled directory.</p>
+    #[doc(hidden)]
     pub directory_arn: std::option::Option<std::string::String>,
 }
 impl EnableDirectoryOutput {
@@ -2914,11 +2934,10 @@ impl std::fmt::Debug for EnableDirectoryOutput {
         formatter.finish()
     }
 }
-/// See [`EnableDirectoryOutput`](crate::output::EnableDirectoryOutput)
+/// See [`EnableDirectoryOutput`](crate::output::EnableDirectoryOutput).
 pub mod enable_directory_output {
 
-    /// A builder for [`EnableDirectoryOutput`](crate::output::EnableDirectoryOutput)
-    #[non_exhaustive]
+    /// A builder for [`EnableDirectoryOutput`](crate::output::EnableDirectoryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) directory_arn: std::option::Option<std::string::String>,
@@ -2937,7 +2956,7 @@ pub mod enable_directory_output {
             self.directory_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnableDirectoryOutput`](crate::output::EnableDirectoryOutput)
+        /// Consumes the builder and constructs a [`EnableDirectoryOutput`](crate::output::EnableDirectoryOutput).
         pub fn build(self) -> crate::output::EnableDirectoryOutput {
             crate::output::EnableDirectoryOutput {
                 directory_arn: self.directory_arn,
@@ -2946,7 +2965,7 @@ pub mod enable_directory_output {
     }
 }
 impl EnableDirectoryOutput {
-    /// Creates a new builder-style object to manufacture [`EnableDirectoryOutput`](crate::output::EnableDirectoryOutput)
+    /// Creates a new builder-style object to manufacture [`EnableDirectoryOutput`](crate::output::EnableDirectoryOutput).
     pub fn builder() -> crate::output::enable_directory_output::Builder {
         crate::output::enable_directory_output::Builder::default()
     }
@@ -2957,6 +2976,7 @@ impl EnableDirectoryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisableDirectoryOutput {
     /// <p>The ARN of the directory that has been disabled.</p>
+    #[doc(hidden)]
     pub directory_arn: std::option::Option<std::string::String>,
 }
 impl DisableDirectoryOutput {
@@ -2972,11 +2992,10 @@ impl std::fmt::Debug for DisableDirectoryOutput {
         formatter.finish()
     }
 }
-/// See [`DisableDirectoryOutput`](crate::output::DisableDirectoryOutput)
+/// See [`DisableDirectoryOutput`](crate::output::DisableDirectoryOutput).
 pub mod disable_directory_output {
 
-    /// A builder for [`DisableDirectoryOutput`](crate::output::DisableDirectoryOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisableDirectoryOutput`](crate::output::DisableDirectoryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) directory_arn: std::option::Option<std::string::String>,
@@ -2995,7 +3014,7 @@ pub mod disable_directory_output {
             self.directory_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisableDirectoryOutput`](crate::output::DisableDirectoryOutput)
+        /// Consumes the builder and constructs a [`DisableDirectoryOutput`](crate::output::DisableDirectoryOutput).
         pub fn build(self) -> crate::output::DisableDirectoryOutput {
             crate::output::DisableDirectoryOutput {
                 directory_arn: self.directory_arn,
@@ -3004,7 +3023,7 @@ pub mod disable_directory_output {
     }
 }
 impl DisableDirectoryOutput {
-    /// Creates a new builder-style object to manufacture [`DisableDirectoryOutput`](crate::output::DisableDirectoryOutput)
+    /// Creates a new builder-style object to manufacture [`DisableDirectoryOutput`](crate::output::DisableDirectoryOutput).
     pub fn builder() -> crate::output::disable_directory_output::Builder {
         crate::output::disable_directory_output::Builder::default()
     }
@@ -3020,22 +3039,21 @@ impl std::fmt::Debug for DetachTypedLinkOutput {
         formatter.finish()
     }
 }
-/// See [`DetachTypedLinkOutput`](crate::output::DetachTypedLinkOutput)
+/// See [`DetachTypedLinkOutput`](crate::output::DetachTypedLinkOutput).
 pub mod detach_typed_link_output {
 
-    /// A builder for [`DetachTypedLinkOutput`](crate::output::DetachTypedLinkOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetachTypedLinkOutput`](crate::output::DetachTypedLinkOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DetachTypedLinkOutput`](crate::output::DetachTypedLinkOutput)
+        /// Consumes the builder and constructs a [`DetachTypedLinkOutput`](crate::output::DetachTypedLinkOutput).
         pub fn build(self) -> crate::output::DetachTypedLinkOutput {
             crate::output::DetachTypedLinkOutput {}
         }
     }
 }
 impl DetachTypedLinkOutput {
-    /// Creates a new builder-style object to manufacture [`DetachTypedLinkOutput`](crate::output::DetachTypedLinkOutput)
+    /// Creates a new builder-style object to manufacture [`DetachTypedLinkOutput`](crate::output::DetachTypedLinkOutput).
     pub fn builder() -> crate::output::detach_typed_link_output::Builder {
         crate::output::detach_typed_link_output::Builder::default()
     }
@@ -3051,22 +3069,21 @@ impl std::fmt::Debug for DetachPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DetachPolicyOutput`](crate::output::DetachPolicyOutput)
+/// See [`DetachPolicyOutput`](crate::output::DetachPolicyOutput).
 pub mod detach_policy_output {
 
-    /// A builder for [`DetachPolicyOutput`](crate::output::DetachPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetachPolicyOutput`](crate::output::DetachPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DetachPolicyOutput`](crate::output::DetachPolicyOutput)
+        /// Consumes the builder and constructs a [`DetachPolicyOutput`](crate::output::DetachPolicyOutput).
         pub fn build(self) -> crate::output::DetachPolicyOutput {
             crate::output::DetachPolicyOutput {}
         }
     }
 }
 impl DetachPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DetachPolicyOutput`](crate::output::DetachPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DetachPolicyOutput`](crate::output::DetachPolicyOutput).
     pub fn builder() -> crate::output::detach_policy_output::Builder {
         crate::output::detach_policy_output::Builder::default()
     }
@@ -3077,6 +3094,7 @@ impl DetachPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetachObjectOutput {
     /// <p>The <code>ObjectIdentifier</code> that was detached from the object.</p>
+    #[doc(hidden)]
     pub detached_object_identifier: std::option::Option<std::string::String>,
 }
 impl DetachObjectOutput {
@@ -3095,11 +3113,10 @@ impl std::fmt::Debug for DetachObjectOutput {
         formatter.finish()
     }
 }
-/// See [`DetachObjectOutput`](crate::output::DetachObjectOutput)
+/// See [`DetachObjectOutput`](crate::output::DetachObjectOutput).
 pub mod detach_object_output {
 
-    /// A builder for [`DetachObjectOutput`](crate::output::DetachObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetachObjectOutput`](crate::output::DetachObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) detached_object_identifier: std::option::Option<std::string::String>,
@@ -3118,7 +3135,7 @@ pub mod detach_object_output {
             self.detached_object_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetachObjectOutput`](crate::output::DetachObjectOutput)
+        /// Consumes the builder and constructs a [`DetachObjectOutput`](crate::output::DetachObjectOutput).
         pub fn build(self) -> crate::output::DetachObjectOutput {
             crate::output::DetachObjectOutput {
                 detached_object_identifier: self.detached_object_identifier,
@@ -3127,7 +3144,7 @@ pub mod detach_object_output {
     }
 }
 impl DetachObjectOutput {
-    /// Creates a new builder-style object to manufacture [`DetachObjectOutput`](crate::output::DetachObjectOutput)
+    /// Creates a new builder-style object to manufacture [`DetachObjectOutput`](crate::output::DetachObjectOutput).
     pub fn builder() -> crate::output::detach_object_output::Builder {
         crate::output::detach_object_output::Builder::default()
     }
@@ -3138,6 +3155,7 @@ impl DetachObjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetachFromIndexOutput {
     /// <p>The <code>ObjectIdentifier</code> of the object that was detached from the index.</p>
+    #[doc(hidden)]
     pub detached_object_identifier: std::option::Option<std::string::String>,
 }
 impl DetachFromIndexOutput {
@@ -3156,11 +3174,10 @@ impl std::fmt::Debug for DetachFromIndexOutput {
         formatter.finish()
     }
 }
-/// See [`DetachFromIndexOutput`](crate::output::DetachFromIndexOutput)
+/// See [`DetachFromIndexOutput`](crate::output::DetachFromIndexOutput).
 pub mod detach_from_index_output {
 
-    /// A builder for [`DetachFromIndexOutput`](crate::output::DetachFromIndexOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetachFromIndexOutput`](crate::output::DetachFromIndexOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) detached_object_identifier: std::option::Option<std::string::String>,
@@ -3179,7 +3196,7 @@ pub mod detach_from_index_output {
             self.detached_object_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetachFromIndexOutput`](crate::output::DetachFromIndexOutput)
+        /// Consumes the builder and constructs a [`DetachFromIndexOutput`](crate::output::DetachFromIndexOutput).
         pub fn build(self) -> crate::output::DetachFromIndexOutput {
             crate::output::DetachFromIndexOutput {
                 detached_object_identifier: self.detached_object_identifier,
@@ -3188,7 +3205,7 @@ pub mod detach_from_index_output {
     }
 }
 impl DetachFromIndexOutput {
-    /// Creates a new builder-style object to manufacture [`DetachFromIndexOutput`](crate::output::DetachFromIndexOutput)
+    /// Creates a new builder-style object to manufacture [`DetachFromIndexOutput`](crate::output::DetachFromIndexOutput).
     pub fn builder() -> crate::output::detach_from_index_output::Builder {
         crate::output::detach_from_index_output::Builder::default()
     }
@@ -3204,22 +3221,21 @@ impl std::fmt::Debug for DeleteTypedLinkFacetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteTypedLinkFacetOutput`](crate::output::DeleteTypedLinkFacetOutput)
+/// See [`DeleteTypedLinkFacetOutput`](crate::output::DeleteTypedLinkFacetOutput).
 pub mod delete_typed_link_facet_output {
 
-    /// A builder for [`DeleteTypedLinkFacetOutput`](crate::output::DeleteTypedLinkFacetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteTypedLinkFacetOutput`](crate::output::DeleteTypedLinkFacetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteTypedLinkFacetOutput`](crate::output::DeleteTypedLinkFacetOutput)
+        /// Consumes the builder and constructs a [`DeleteTypedLinkFacetOutput`](crate::output::DeleteTypedLinkFacetOutput).
         pub fn build(self) -> crate::output::DeleteTypedLinkFacetOutput {
             crate::output::DeleteTypedLinkFacetOutput {}
         }
     }
 }
 impl DeleteTypedLinkFacetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteTypedLinkFacetOutput`](crate::output::DeleteTypedLinkFacetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteTypedLinkFacetOutput`](crate::output::DeleteTypedLinkFacetOutput).
     pub fn builder() -> crate::output::delete_typed_link_facet_output::Builder {
         crate::output::delete_typed_link_facet_output::Builder::default()
     }
@@ -3230,6 +3246,7 @@ impl DeleteTypedLinkFacetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteSchemaOutput {
     /// <p>The input ARN that is returned as part of the response. For more information, see <code>arns</code>.</p>
+    #[doc(hidden)]
     pub schema_arn: std::option::Option<std::string::String>,
 }
 impl DeleteSchemaOutput {
@@ -3245,11 +3262,10 @@ impl std::fmt::Debug for DeleteSchemaOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSchemaOutput`](crate::output::DeleteSchemaOutput)
+/// See [`DeleteSchemaOutput`](crate::output::DeleteSchemaOutput).
 pub mod delete_schema_output {
 
-    /// A builder for [`DeleteSchemaOutput`](crate::output::DeleteSchemaOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSchemaOutput`](crate::output::DeleteSchemaOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schema_arn: std::option::Option<std::string::String>,
@@ -3265,7 +3281,7 @@ pub mod delete_schema_output {
             self.schema_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteSchemaOutput`](crate::output::DeleteSchemaOutput)
+        /// Consumes the builder and constructs a [`DeleteSchemaOutput`](crate::output::DeleteSchemaOutput).
         pub fn build(self) -> crate::output::DeleteSchemaOutput {
             crate::output::DeleteSchemaOutput {
                 schema_arn: self.schema_arn,
@@ -3274,7 +3290,7 @@ pub mod delete_schema_output {
     }
 }
 impl DeleteSchemaOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSchemaOutput`](crate::output::DeleteSchemaOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSchemaOutput`](crate::output::DeleteSchemaOutput).
     pub fn builder() -> crate::output::delete_schema_output::Builder {
         crate::output::delete_schema_output::Builder::default()
     }
@@ -3290,22 +3306,21 @@ impl std::fmt::Debug for DeleteObjectOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteObjectOutput`](crate::output::DeleteObjectOutput)
+/// See [`DeleteObjectOutput`](crate::output::DeleteObjectOutput).
 pub mod delete_object_output {
 
-    /// A builder for [`DeleteObjectOutput`](crate::output::DeleteObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteObjectOutput`](crate::output::DeleteObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteObjectOutput`](crate::output::DeleteObjectOutput)
+        /// Consumes the builder and constructs a [`DeleteObjectOutput`](crate::output::DeleteObjectOutput).
         pub fn build(self) -> crate::output::DeleteObjectOutput {
             crate::output::DeleteObjectOutput {}
         }
     }
 }
 impl DeleteObjectOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteObjectOutput`](crate::output::DeleteObjectOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteObjectOutput`](crate::output::DeleteObjectOutput).
     pub fn builder() -> crate::output::delete_object_output::Builder {
         crate::output::delete_object_output::Builder::default()
     }
@@ -3321,22 +3336,21 @@ impl std::fmt::Debug for DeleteFacetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFacetOutput`](crate::output::DeleteFacetOutput)
+/// See [`DeleteFacetOutput`](crate::output::DeleteFacetOutput).
 pub mod delete_facet_output {
 
-    /// A builder for [`DeleteFacetOutput`](crate::output::DeleteFacetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFacetOutput`](crate::output::DeleteFacetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteFacetOutput`](crate::output::DeleteFacetOutput)
+        /// Consumes the builder and constructs a [`DeleteFacetOutput`](crate::output::DeleteFacetOutput).
         pub fn build(self) -> crate::output::DeleteFacetOutput {
             crate::output::DeleteFacetOutput {}
         }
     }
 }
 impl DeleteFacetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFacetOutput`](crate::output::DeleteFacetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFacetOutput`](crate::output::DeleteFacetOutput).
     pub fn builder() -> crate::output::delete_facet_output::Builder {
         crate::output::delete_facet_output::Builder::default()
     }
@@ -3347,6 +3361,7 @@ impl DeleteFacetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteDirectoryOutput {
     /// <p>The ARN of the deleted directory.</p>
+    #[doc(hidden)]
     pub directory_arn: std::option::Option<std::string::String>,
 }
 impl DeleteDirectoryOutput {
@@ -3362,11 +3377,10 @@ impl std::fmt::Debug for DeleteDirectoryOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDirectoryOutput`](crate::output::DeleteDirectoryOutput)
+/// See [`DeleteDirectoryOutput`](crate::output::DeleteDirectoryOutput).
 pub mod delete_directory_output {
 
-    /// A builder for [`DeleteDirectoryOutput`](crate::output::DeleteDirectoryOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDirectoryOutput`](crate::output::DeleteDirectoryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) directory_arn: std::option::Option<std::string::String>,
@@ -3385,7 +3399,7 @@ pub mod delete_directory_output {
             self.directory_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDirectoryOutput`](crate::output::DeleteDirectoryOutput)
+        /// Consumes the builder and constructs a [`DeleteDirectoryOutput`](crate::output::DeleteDirectoryOutput).
         pub fn build(self) -> crate::output::DeleteDirectoryOutput {
             crate::output::DeleteDirectoryOutput {
                 directory_arn: self.directory_arn,
@@ -3394,7 +3408,7 @@ pub mod delete_directory_output {
     }
 }
 impl DeleteDirectoryOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDirectoryOutput`](crate::output::DeleteDirectoryOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDirectoryOutput`](crate::output::DeleteDirectoryOutput).
     pub fn builder() -> crate::output::delete_directory_output::Builder {
         crate::output::delete_directory_output::Builder::default()
     }
@@ -3410,22 +3424,21 @@ impl std::fmt::Debug for CreateTypedLinkFacetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateTypedLinkFacetOutput`](crate::output::CreateTypedLinkFacetOutput)
+/// See [`CreateTypedLinkFacetOutput`](crate::output::CreateTypedLinkFacetOutput).
 pub mod create_typed_link_facet_output {
 
-    /// A builder for [`CreateTypedLinkFacetOutput`](crate::output::CreateTypedLinkFacetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateTypedLinkFacetOutput`](crate::output::CreateTypedLinkFacetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`CreateTypedLinkFacetOutput`](crate::output::CreateTypedLinkFacetOutput)
+        /// Consumes the builder and constructs a [`CreateTypedLinkFacetOutput`](crate::output::CreateTypedLinkFacetOutput).
         pub fn build(self) -> crate::output::CreateTypedLinkFacetOutput {
             crate::output::CreateTypedLinkFacetOutput {}
         }
     }
 }
 impl CreateTypedLinkFacetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateTypedLinkFacetOutput`](crate::output::CreateTypedLinkFacetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateTypedLinkFacetOutput`](crate::output::CreateTypedLinkFacetOutput).
     pub fn builder() -> crate::output::create_typed_link_facet_output::Builder {
         crate::output::create_typed_link_facet_output::Builder::default()
     }
@@ -3436,6 +3449,7 @@ impl CreateTypedLinkFacetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSchemaOutput {
     /// <p>The Amazon Resource Name (ARN) that is associated with the schema. For more information, see <code>arns</code>.</p>
+    #[doc(hidden)]
     pub schema_arn: std::option::Option<std::string::String>,
 }
 impl CreateSchemaOutput {
@@ -3451,11 +3465,10 @@ impl std::fmt::Debug for CreateSchemaOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSchemaOutput`](crate::output::CreateSchemaOutput)
+/// See [`CreateSchemaOutput`](crate::output::CreateSchemaOutput).
 pub mod create_schema_output {
 
-    /// A builder for [`CreateSchemaOutput`](crate::output::CreateSchemaOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSchemaOutput`](crate::output::CreateSchemaOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) schema_arn: std::option::Option<std::string::String>,
@@ -3471,7 +3484,7 @@ pub mod create_schema_output {
             self.schema_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSchemaOutput`](crate::output::CreateSchemaOutput)
+        /// Consumes the builder and constructs a [`CreateSchemaOutput`](crate::output::CreateSchemaOutput).
         pub fn build(self) -> crate::output::CreateSchemaOutput {
             crate::output::CreateSchemaOutput {
                 schema_arn: self.schema_arn,
@@ -3480,7 +3493,7 @@ pub mod create_schema_output {
     }
 }
 impl CreateSchemaOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSchemaOutput`](crate::output::CreateSchemaOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSchemaOutput`](crate::output::CreateSchemaOutput).
     pub fn builder() -> crate::output::create_schema_output::Builder {
         crate::output::create_schema_output::Builder::default()
     }
@@ -3491,6 +3504,7 @@ impl CreateSchemaOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateObjectOutput {
     /// <p>The identifier that is associated with the object.</p>
+    #[doc(hidden)]
     pub object_identifier: std::option::Option<std::string::String>,
 }
 impl CreateObjectOutput {
@@ -3506,11 +3520,10 @@ impl std::fmt::Debug for CreateObjectOutput {
         formatter.finish()
     }
 }
-/// See [`CreateObjectOutput`](crate::output::CreateObjectOutput)
+/// See [`CreateObjectOutput`](crate::output::CreateObjectOutput).
 pub mod create_object_output {
 
-    /// A builder for [`CreateObjectOutput`](crate::output::CreateObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateObjectOutput`](crate::output::CreateObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_identifier: std::option::Option<std::string::String>,
@@ -3529,7 +3542,7 @@ pub mod create_object_output {
             self.object_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateObjectOutput`](crate::output::CreateObjectOutput)
+        /// Consumes the builder and constructs a [`CreateObjectOutput`](crate::output::CreateObjectOutput).
         pub fn build(self) -> crate::output::CreateObjectOutput {
             crate::output::CreateObjectOutput {
                 object_identifier: self.object_identifier,
@@ -3538,7 +3551,7 @@ pub mod create_object_output {
     }
 }
 impl CreateObjectOutput {
-    /// Creates a new builder-style object to manufacture [`CreateObjectOutput`](crate::output::CreateObjectOutput)
+    /// Creates a new builder-style object to manufacture [`CreateObjectOutput`](crate::output::CreateObjectOutput).
     pub fn builder() -> crate::output::create_object_output::Builder {
         crate::output::create_object_output::Builder::default()
     }
@@ -3549,6 +3562,7 @@ impl CreateObjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateIndexOutput {
     /// <p>The <code>ObjectIdentifier</code> of the index created by this operation.</p>
+    #[doc(hidden)]
     pub object_identifier: std::option::Option<std::string::String>,
 }
 impl CreateIndexOutput {
@@ -3564,11 +3578,10 @@ impl std::fmt::Debug for CreateIndexOutput {
         formatter.finish()
     }
 }
-/// See [`CreateIndexOutput`](crate::output::CreateIndexOutput)
+/// See [`CreateIndexOutput`](crate::output::CreateIndexOutput).
 pub mod create_index_output {
 
-    /// A builder for [`CreateIndexOutput`](crate::output::CreateIndexOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateIndexOutput`](crate::output::CreateIndexOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_identifier: std::option::Option<std::string::String>,
@@ -3587,7 +3600,7 @@ pub mod create_index_output {
             self.object_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateIndexOutput`](crate::output::CreateIndexOutput)
+        /// Consumes the builder and constructs a [`CreateIndexOutput`](crate::output::CreateIndexOutput).
         pub fn build(self) -> crate::output::CreateIndexOutput {
             crate::output::CreateIndexOutput {
                 object_identifier: self.object_identifier,
@@ -3596,7 +3609,7 @@ pub mod create_index_output {
     }
 }
 impl CreateIndexOutput {
-    /// Creates a new builder-style object to manufacture [`CreateIndexOutput`](crate::output::CreateIndexOutput)
+    /// Creates a new builder-style object to manufacture [`CreateIndexOutput`](crate::output::CreateIndexOutput).
     pub fn builder() -> crate::output::create_index_output::Builder {
         crate::output::create_index_output::Builder::default()
     }
@@ -3612,22 +3625,21 @@ impl std::fmt::Debug for CreateFacetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateFacetOutput`](crate::output::CreateFacetOutput)
+/// See [`CreateFacetOutput`](crate::output::CreateFacetOutput).
 pub mod create_facet_output {
 
-    /// A builder for [`CreateFacetOutput`](crate::output::CreateFacetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateFacetOutput`](crate::output::CreateFacetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`CreateFacetOutput`](crate::output::CreateFacetOutput)
+        /// Consumes the builder and constructs a [`CreateFacetOutput`](crate::output::CreateFacetOutput).
         pub fn build(self) -> crate::output::CreateFacetOutput {
             crate::output::CreateFacetOutput {}
         }
     }
 }
 impl CreateFacetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateFacetOutput`](crate::output::CreateFacetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateFacetOutput`](crate::output::CreateFacetOutput).
     pub fn builder() -> crate::output::create_facet_output::Builder {
         crate::output::create_facet_output::Builder::default()
     }
@@ -3638,12 +3650,16 @@ impl CreateFacetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDirectoryOutput {
     /// <p>The ARN that is associated with the <code>Directory</code>. For more information, see <code>arns</code>.</p>
+    #[doc(hidden)]
     pub directory_arn: std::option::Option<std::string::String>,
     /// <p>The name of the <code>Directory</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The root object node of the created directory.</p>
+    #[doc(hidden)]
     pub object_identifier: std::option::Option<std::string::String>,
     /// <p>The ARN of the published schema in the <code>Directory</code>. Once a published schema is copied into the directory, it has its own ARN, which is referred to applied schema ARN. For more information, see <code>arns</code>.</p>
+    #[doc(hidden)]
     pub applied_schema_arn: std::option::Option<std::string::String>,
 }
 impl CreateDirectoryOutput {
@@ -3674,11 +3690,10 @@ impl std::fmt::Debug for CreateDirectoryOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDirectoryOutput`](crate::output::CreateDirectoryOutput)
+/// See [`CreateDirectoryOutput`](crate::output::CreateDirectoryOutput).
 pub mod create_directory_output {
 
-    /// A builder for [`CreateDirectoryOutput`](crate::output::CreateDirectoryOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDirectoryOutput`](crate::output::CreateDirectoryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) directory_arn: std::option::Option<std::string::String>,
@@ -3736,7 +3751,7 @@ pub mod create_directory_output {
             self.applied_schema_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDirectoryOutput`](crate::output::CreateDirectoryOutput)
+        /// Consumes the builder and constructs a [`CreateDirectoryOutput`](crate::output::CreateDirectoryOutput).
         pub fn build(self) -> crate::output::CreateDirectoryOutput {
             crate::output::CreateDirectoryOutput {
                 directory_arn: self.directory_arn,
@@ -3748,7 +3763,7 @@ pub mod create_directory_output {
     }
 }
 impl CreateDirectoryOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDirectoryOutput`](crate::output::CreateDirectoryOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDirectoryOutput`](crate::output::CreateDirectoryOutput).
     pub fn builder() -> crate::output::create_directory_output::Builder {
         crate::output::create_directory_output::Builder::default()
     }
@@ -3759,6 +3774,7 @@ impl CreateDirectoryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchWriteOutput {
     /// <p>A list of all the responses for each batch write.</p>
+    #[doc(hidden)]
     pub responses: std::option::Option<std::vec::Vec<crate::model::BatchWriteOperationResponse>>,
 }
 impl BatchWriteOutput {
@@ -3774,11 +3790,10 @@ impl std::fmt::Debug for BatchWriteOutput {
         formatter.finish()
     }
 }
-/// See [`BatchWriteOutput`](crate::output::BatchWriteOutput)
+/// See [`BatchWriteOutput`](crate::output::BatchWriteOutput).
 pub mod batch_write_output {
 
-    /// A builder for [`BatchWriteOutput`](crate::output::BatchWriteOutput)
-    #[non_exhaustive]
+    /// A builder for [`BatchWriteOutput`](crate::output::BatchWriteOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) responses:
@@ -3804,7 +3819,7 @@ pub mod batch_write_output {
             self.responses = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchWriteOutput`](crate::output::BatchWriteOutput)
+        /// Consumes the builder and constructs a [`BatchWriteOutput`](crate::output::BatchWriteOutput).
         pub fn build(self) -> crate::output::BatchWriteOutput {
             crate::output::BatchWriteOutput {
                 responses: self.responses,
@@ -3813,7 +3828,7 @@ pub mod batch_write_output {
     }
 }
 impl BatchWriteOutput {
-    /// Creates a new builder-style object to manufacture [`BatchWriteOutput`](crate::output::BatchWriteOutput)
+    /// Creates a new builder-style object to manufacture [`BatchWriteOutput`](crate::output::BatchWriteOutput).
     pub fn builder() -> crate::output::batch_write_output::Builder {
         crate::output::batch_write_output::Builder::default()
     }
@@ -3824,6 +3839,7 @@ impl BatchWriteOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchReadOutput {
     /// <p>A list of all the responses for each batch read.</p>
+    #[doc(hidden)]
     pub responses: std::option::Option<std::vec::Vec<crate::model::BatchReadOperationResponse>>,
 }
 impl BatchReadOutput {
@@ -3839,11 +3855,10 @@ impl std::fmt::Debug for BatchReadOutput {
         formatter.finish()
     }
 }
-/// See [`BatchReadOutput`](crate::output::BatchReadOutput)
+/// See [`BatchReadOutput`](crate::output::BatchReadOutput).
 pub mod batch_read_output {
 
-    /// A builder for [`BatchReadOutput`](crate::output::BatchReadOutput)
-    #[non_exhaustive]
+    /// A builder for [`BatchReadOutput`](crate::output::BatchReadOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) responses:
@@ -3869,7 +3884,7 @@ pub mod batch_read_output {
             self.responses = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchReadOutput`](crate::output::BatchReadOutput)
+        /// Consumes the builder and constructs a [`BatchReadOutput`](crate::output::BatchReadOutput).
         pub fn build(self) -> crate::output::BatchReadOutput {
             crate::output::BatchReadOutput {
                 responses: self.responses,
@@ -3878,7 +3893,7 @@ pub mod batch_read_output {
     }
 }
 impl BatchReadOutput {
-    /// Creates a new builder-style object to manufacture [`BatchReadOutput`](crate::output::BatchReadOutput)
+    /// Creates a new builder-style object to manufacture [`BatchReadOutput`](crate::output::BatchReadOutput).
     pub fn builder() -> crate::output::batch_read_output::Builder {
         crate::output::batch_read_output::Builder::default()
     }
@@ -3889,6 +3904,7 @@ impl BatchReadOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttachTypedLinkOutput {
     /// <p>Returns a typed link specifier as output.</p>
+    #[doc(hidden)]
     pub typed_link_specifier: std::option::Option<crate::model::TypedLinkSpecifier>,
 }
 impl AttachTypedLinkOutput {
@@ -3904,11 +3920,10 @@ impl std::fmt::Debug for AttachTypedLinkOutput {
         formatter.finish()
     }
 }
-/// See [`AttachTypedLinkOutput`](crate::output::AttachTypedLinkOutput)
+/// See [`AttachTypedLinkOutput`](crate::output::AttachTypedLinkOutput).
 pub mod attach_typed_link_output {
 
-    /// A builder for [`AttachTypedLinkOutput`](crate::output::AttachTypedLinkOutput)
-    #[non_exhaustive]
+    /// A builder for [`AttachTypedLinkOutput`](crate::output::AttachTypedLinkOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) typed_link_specifier: std::option::Option<crate::model::TypedLinkSpecifier>,
@@ -3927,7 +3942,7 @@ pub mod attach_typed_link_output {
             self.typed_link_specifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttachTypedLinkOutput`](crate::output::AttachTypedLinkOutput)
+        /// Consumes the builder and constructs a [`AttachTypedLinkOutput`](crate::output::AttachTypedLinkOutput).
         pub fn build(self) -> crate::output::AttachTypedLinkOutput {
             crate::output::AttachTypedLinkOutput {
                 typed_link_specifier: self.typed_link_specifier,
@@ -3936,7 +3951,7 @@ pub mod attach_typed_link_output {
     }
 }
 impl AttachTypedLinkOutput {
-    /// Creates a new builder-style object to manufacture [`AttachTypedLinkOutput`](crate::output::AttachTypedLinkOutput)
+    /// Creates a new builder-style object to manufacture [`AttachTypedLinkOutput`](crate::output::AttachTypedLinkOutput).
     pub fn builder() -> crate::output::attach_typed_link_output::Builder {
         crate::output::attach_typed_link_output::Builder::default()
     }
@@ -3947,6 +3962,7 @@ impl AttachTypedLinkOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttachToIndexOutput {
     /// <p>The <code>ObjectIdentifier</code> of the object that was attached to the index.</p>
+    #[doc(hidden)]
     pub attached_object_identifier: std::option::Option<std::string::String>,
 }
 impl AttachToIndexOutput {
@@ -3965,11 +3981,10 @@ impl std::fmt::Debug for AttachToIndexOutput {
         formatter.finish()
     }
 }
-/// See [`AttachToIndexOutput`](crate::output::AttachToIndexOutput)
+/// See [`AttachToIndexOutput`](crate::output::AttachToIndexOutput).
 pub mod attach_to_index_output {
 
-    /// A builder for [`AttachToIndexOutput`](crate::output::AttachToIndexOutput)
-    #[non_exhaustive]
+    /// A builder for [`AttachToIndexOutput`](crate::output::AttachToIndexOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attached_object_identifier: std::option::Option<std::string::String>,
@@ -3988,7 +4003,7 @@ pub mod attach_to_index_output {
             self.attached_object_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttachToIndexOutput`](crate::output::AttachToIndexOutput)
+        /// Consumes the builder and constructs a [`AttachToIndexOutput`](crate::output::AttachToIndexOutput).
         pub fn build(self) -> crate::output::AttachToIndexOutput {
             crate::output::AttachToIndexOutput {
                 attached_object_identifier: self.attached_object_identifier,
@@ -3997,7 +4012,7 @@ pub mod attach_to_index_output {
     }
 }
 impl AttachToIndexOutput {
-    /// Creates a new builder-style object to manufacture [`AttachToIndexOutput`](crate::output::AttachToIndexOutput)
+    /// Creates a new builder-style object to manufacture [`AttachToIndexOutput`](crate::output::AttachToIndexOutput).
     pub fn builder() -> crate::output::attach_to_index_output::Builder {
         crate::output::attach_to_index_output::Builder::default()
     }
@@ -4013,22 +4028,21 @@ impl std::fmt::Debug for AttachPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`AttachPolicyOutput`](crate::output::AttachPolicyOutput)
+/// See [`AttachPolicyOutput`](crate::output::AttachPolicyOutput).
 pub mod attach_policy_output {
 
-    /// A builder for [`AttachPolicyOutput`](crate::output::AttachPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`AttachPolicyOutput`](crate::output::AttachPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AttachPolicyOutput`](crate::output::AttachPolicyOutput)
+        /// Consumes the builder and constructs a [`AttachPolicyOutput`](crate::output::AttachPolicyOutput).
         pub fn build(self) -> crate::output::AttachPolicyOutput {
             crate::output::AttachPolicyOutput {}
         }
     }
 }
 impl AttachPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`AttachPolicyOutput`](crate::output::AttachPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`AttachPolicyOutput`](crate::output::AttachPolicyOutput).
     pub fn builder() -> crate::output::attach_policy_output::Builder {
         crate::output::attach_policy_output::Builder::default()
     }
@@ -4039,6 +4053,7 @@ impl AttachPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttachObjectOutput {
     /// <p>The attached <code>ObjectIdentifier</code>, which is the child <code>ObjectIdentifier</code>.</p>
+    #[doc(hidden)]
     pub attached_object_identifier: std::option::Option<std::string::String>,
 }
 impl AttachObjectOutput {
@@ -4057,11 +4072,10 @@ impl std::fmt::Debug for AttachObjectOutput {
         formatter.finish()
     }
 }
-/// See [`AttachObjectOutput`](crate::output::AttachObjectOutput)
+/// See [`AttachObjectOutput`](crate::output::AttachObjectOutput).
 pub mod attach_object_output {
 
-    /// A builder for [`AttachObjectOutput`](crate::output::AttachObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`AttachObjectOutput`](crate::output::AttachObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attached_object_identifier: std::option::Option<std::string::String>,
@@ -4080,7 +4094,7 @@ pub mod attach_object_output {
             self.attached_object_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttachObjectOutput`](crate::output::AttachObjectOutput)
+        /// Consumes the builder and constructs a [`AttachObjectOutput`](crate::output::AttachObjectOutput).
         pub fn build(self) -> crate::output::AttachObjectOutput {
             crate::output::AttachObjectOutput {
                 attached_object_identifier: self.attached_object_identifier,
@@ -4089,7 +4103,7 @@ pub mod attach_object_output {
     }
 }
 impl AttachObjectOutput {
-    /// Creates a new builder-style object to manufacture [`AttachObjectOutput`](crate::output::AttachObjectOutput)
+    /// Creates a new builder-style object to manufacture [`AttachObjectOutput`](crate::output::AttachObjectOutput).
     pub fn builder() -> crate::output::attach_object_output::Builder {
         crate::output::attach_object_output::Builder::default()
     }
@@ -4100,8 +4114,10 @@ impl AttachObjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplySchemaOutput {
     /// <p>The applied schema ARN that is associated with the copied schema in the <code>Directory</code>. You can use this ARN to describe the schema information applied on this directory. For more information, see <code>arns</code>.</p>
+    #[doc(hidden)]
     pub applied_schema_arn: std::option::Option<std::string::String>,
     /// <p>The ARN that is associated with the <code>Directory</code>. For more information, see <code>arns</code>.</p>
+    #[doc(hidden)]
     pub directory_arn: std::option::Option<std::string::String>,
 }
 impl ApplySchemaOutput {
@@ -4122,11 +4138,10 @@ impl std::fmt::Debug for ApplySchemaOutput {
         formatter.finish()
     }
 }
-/// See [`ApplySchemaOutput`](crate::output::ApplySchemaOutput)
+/// See [`ApplySchemaOutput`](crate::output::ApplySchemaOutput).
 pub mod apply_schema_output {
 
-    /// A builder for [`ApplySchemaOutput`](crate::output::ApplySchemaOutput)
-    #[non_exhaustive]
+    /// A builder for [`ApplySchemaOutput`](crate::output::ApplySchemaOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) applied_schema_arn: std::option::Option<std::string::String>,
@@ -4159,7 +4174,7 @@ pub mod apply_schema_output {
             self.directory_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplySchemaOutput`](crate::output::ApplySchemaOutput)
+        /// Consumes the builder and constructs a [`ApplySchemaOutput`](crate::output::ApplySchemaOutput).
         pub fn build(self) -> crate::output::ApplySchemaOutput {
             crate::output::ApplySchemaOutput {
                 applied_schema_arn: self.applied_schema_arn,
@@ -4169,7 +4184,7 @@ pub mod apply_schema_output {
     }
 }
 impl ApplySchemaOutput {
-    /// Creates a new builder-style object to manufacture [`ApplySchemaOutput`](crate::output::ApplySchemaOutput)
+    /// Creates a new builder-style object to manufacture [`ApplySchemaOutput`](crate::output::ApplySchemaOutput).
     pub fn builder() -> crate::output::apply_schema_output::Builder {
         crate::output::apply_schema_output::Builder::default()
     }
@@ -4185,22 +4200,21 @@ impl std::fmt::Debug for AddFacetToObjectOutput {
         formatter.finish()
     }
 }
-/// See [`AddFacetToObjectOutput`](crate::output::AddFacetToObjectOutput)
+/// See [`AddFacetToObjectOutput`](crate::output::AddFacetToObjectOutput).
 pub mod add_facet_to_object_output {
 
-    /// A builder for [`AddFacetToObjectOutput`](crate::output::AddFacetToObjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddFacetToObjectOutput`](crate::output::AddFacetToObjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AddFacetToObjectOutput`](crate::output::AddFacetToObjectOutput)
+        /// Consumes the builder and constructs a [`AddFacetToObjectOutput`](crate::output::AddFacetToObjectOutput).
         pub fn build(self) -> crate::output::AddFacetToObjectOutput {
             crate::output::AddFacetToObjectOutput {}
         }
     }
 }
 impl AddFacetToObjectOutput {
-    /// Creates a new builder-style object to manufacture [`AddFacetToObjectOutput`](crate::output::AddFacetToObjectOutput)
+    /// Creates a new builder-style object to manufacture [`AddFacetToObjectOutput`](crate::output::AddFacetToObjectOutput).
     pub fn builder() -> crate::output::add_facet_to_object_output::Builder {
         crate::output::add_facet_to_object_output::Builder::default()
     }

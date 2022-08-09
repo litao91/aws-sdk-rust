@@ -4,8 +4,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSafetyRuleOutput {
     /// <p>The assertion rule updated.</p>
+    #[doc(hidden)]
     pub assertion_rule: std::option::Option<crate::model::AssertionRule>,
     /// <p>The gating rule updated.</p>
+    #[doc(hidden)]
     pub gating_rule: std::option::Option<crate::model::GatingRule>,
 }
 impl UpdateSafetyRuleOutput {
@@ -26,11 +28,10 @@ impl std::fmt::Debug for UpdateSafetyRuleOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSafetyRuleOutput`](crate::output::UpdateSafetyRuleOutput)
+/// See [`UpdateSafetyRuleOutput`](crate::output::UpdateSafetyRuleOutput).
 pub mod update_safety_rule_output {
 
-    /// A builder for [`UpdateSafetyRuleOutput`](crate::output::UpdateSafetyRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSafetyRuleOutput`](crate::output::UpdateSafetyRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assertion_rule: std::option::Option<crate::model::AssertionRule>,
@@ -63,7 +64,7 @@ pub mod update_safety_rule_output {
             self.gating_rule = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSafetyRuleOutput`](crate::output::UpdateSafetyRuleOutput)
+        /// Consumes the builder and constructs a [`UpdateSafetyRuleOutput`](crate::output::UpdateSafetyRuleOutput).
         pub fn build(self) -> crate::output::UpdateSafetyRuleOutput {
             crate::output::UpdateSafetyRuleOutput {
                 assertion_rule: self.assertion_rule,
@@ -73,7 +74,7 @@ pub mod update_safety_rule_output {
     }
 }
 impl UpdateSafetyRuleOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSafetyRuleOutput`](crate::output::UpdateSafetyRuleOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSafetyRuleOutput`](crate::output::UpdateSafetyRuleOutput).
     pub fn builder() -> crate::output::update_safety_rule_output::Builder {
         crate::output::update_safety_rule_output::Builder::default()
     }
@@ -84,6 +85,7 @@ impl UpdateSafetyRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateRoutingControlOutput {
     /// <p>The routing control that was updated.</p>
+    #[doc(hidden)]
     pub routing_control: std::option::Option<crate::model::RoutingControl>,
 }
 impl UpdateRoutingControlOutput {
@@ -99,11 +101,10 @@ impl std::fmt::Debug for UpdateRoutingControlOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRoutingControlOutput`](crate::output::UpdateRoutingControlOutput)
+/// See [`UpdateRoutingControlOutput`](crate::output::UpdateRoutingControlOutput).
 pub mod update_routing_control_output {
 
-    /// A builder for [`UpdateRoutingControlOutput`](crate::output::UpdateRoutingControlOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRoutingControlOutput`](crate::output::UpdateRoutingControlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) routing_control: std::option::Option<crate::model::RoutingControl>,
@@ -122,7 +123,7 @@ pub mod update_routing_control_output {
             self.routing_control = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRoutingControlOutput`](crate::output::UpdateRoutingControlOutput)
+        /// Consumes the builder and constructs a [`UpdateRoutingControlOutput`](crate::output::UpdateRoutingControlOutput).
         pub fn build(self) -> crate::output::UpdateRoutingControlOutput {
             crate::output::UpdateRoutingControlOutput {
                 routing_control: self.routing_control,
@@ -131,7 +132,7 @@ pub mod update_routing_control_output {
     }
 }
 impl UpdateRoutingControlOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRoutingControlOutput`](crate::output::UpdateRoutingControlOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRoutingControlOutput`](crate::output::UpdateRoutingControlOutput).
     pub fn builder() -> crate::output::update_routing_control_output::Builder {
         crate::output::update_routing_control_output::Builder::default()
     }
@@ -142,6 +143,7 @@ impl UpdateRoutingControlOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateControlPanelOutput {
     /// <p>The control panel to update.</p>
+    #[doc(hidden)]
     pub control_panel: std::option::Option<crate::model::ControlPanel>,
 }
 impl UpdateControlPanelOutput {
@@ -157,11 +159,10 @@ impl std::fmt::Debug for UpdateControlPanelOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateControlPanelOutput`](crate::output::UpdateControlPanelOutput)
+/// See [`UpdateControlPanelOutput`](crate::output::UpdateControlPanelOutput).
 pub mod update_control_panel_output {
 
-    /// A builder for [`UpdateControlPanelOutput`](crate::output::UpdateControlPanelOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateControlPanelOutput`](crate::output::UpdateControlPanelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) control_panel: std::option::Option<crate::model::ControlPanel>,
@@ -180,7 +181,7 @@ pub mod update_control_panel_output {
             self.control_panel = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateControlPanelOutput`](crate::output::UpdateControlPanelOutput)
+        /// Consumes the builder and constructs a [`UpdateControlPanelOutput`](crate::output::UpdateControlPanelOutput).
         pub fn build(self) -> crate::output::UpdateControlPanelOutput {
             crate::output::UpdateControlPanelOutput {
                 control_panel: self.control_panel,
@@ -189,7 +190,7 @@ pub mod update_control_panel_output {
     }
 }
 impl UpdateControlPanelOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateControlPanelOutput`](crate::output::UpdateControlPanelOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateControlPanelOutput`](crate::output::UpdateControlPanelOutput).
     pub fn builder() -> crate::output::update_control_panel_output::Builder {
         crate::output::update_control_panel_output::Builder::default()
     }
@@ -205,22 +206,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -236,22 +236,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -262,6 +261,7 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tags associated with the resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -281,11 +281,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -318,14 +317,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -336,8 +335,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSafetyRulesOutput {
     /// <p>The token that identifies which batch of results you want to see.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The list of safety rules in a control panel.</p>
+    #[doc(hidden)]
     pub safety_rules: std::option::Option<std::vec::Vec<crate::model::Rule>>,
 }
 impl ListSafetyRulesOutput {
@@ -358,11 +359,10 @@ impl std::fmt::Debug for ListSafetyRulesOutput {
         formatter.finish()
     }
 }
-/// See [`ListSafetyRulesOutput`](crate::output::ListSafetyRulesOutput)
+/// See [`ListSafetyRulesOutput`](crate::output::ListSafetyRulesOutput).
 pub mod list_safety_rules_output {
 
-    /// A builder for [`ListSafetyRulesOutput`](crate::output::ListSafetyRulesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSafetyRulesOutput`](crate::output::ListSafetyRulesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -398,7 +398,7 @@ pub mod list_safety_rules_output {
             self.safety_rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSafetyRulesOutput`](crate::output::ListSafetyRulesOutput)
+        /// Consumes the builder and constructs a [`ListSafetyRulesOutput`](crate::output::ListSafetyRulesOutput).
         pub fn build(self) -> crate::output::ListSafetyRulesOutput {
             crate::output::ListSafetyRulesOutput {
                 next_token: self.next_token,
@@ -408,7 +408,7 @@ pub mod list_safety_rules_output {
     }
 }
 impl ListSafetyRulesOutput {
-    /// Creates a new builder-style object to manufacture [`ListSafetyRulesOutput`](crate::output::ListSafetyRulesOutput)
+    /// Creates a new builder-style object to manufacture [`ListSafetyRulesOutput`](crate::output::ListSafetyRulesOutput).
     pub fn builder() -> crate::output::list_safety_rules_output::Builder {
         crate::output::list_safety_rules_output::Builder::default()
     }
@@ -419,8 +419,10 @@ impl ListSafetyRulesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRoutingControlsOutput {
     /// <p>The token that identifies which batch of results you want to see.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>An array of routing controls.</p>
+    #[doc(hidden)]
     pub routing_controls: std::option::Option<std::vec::Vec<crate::model::RoutingControl>>,
 }
 impl ListRoutingControlsOutput {
@@ -441,11 +443,10 @@ impl std::fmt::Debug for ListRoutingControlsOutput {
         formatter.finish()
     }
 }
-/// See [`ListRoutingControlsOutput`](crate::output::ListRoutingControlsOutput)
+/// See [`ListRoutingControlsOutput`](crate::output::ListRoutingControlsOutput).
 pub mod list_routing_controls_output {
 
-    /// A builder for [`ListRoutingControlsOutput`](crate::output::ListRoutingControlsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRoutingControlsOutput`](crate::output::ListRoutingControlsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -482,7 +483,7 @@ pub mod list_routing_controls_output {
             self.routing_controls = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRoutingControlsOutput`](crate::output::ListRoutingControlsOutput)
+        /// Consumes the builder and constructs a [`ListRoutingControlsOutput`](crate::output::ListRoutingControlsOutput).
         pub fn build(self) -> crate::output::ListRoutingControlsOutput {
             crate::output::ListRoutingControlsOutput {
                 next_token: self.next_token,
@@ -492,7 +493,7 @@ pub mod list_routing_controls_output {
     }
 }
 impl ListRoutingControlsOutput {
-    /// Creates a new builder-style object to manufacture [`ListRoutingControlsOutput`](crate::output::ListRoutingControlsOutput)
+    /// Creates a new builder-style object to manufacture [`ListRoutingControlsOutput`](crate::output::ListRoutingControlsOutput).
     pub fn builder() -> crate::output::list_routing_controls_output::Builder {
         crate::output::list_routing_controls_output::Builder::default()
     }
@@ -503,8 +504,10 @@ impl ListRoutingControlsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListControlPanelsOutput {
     /// <p>The result of a successful ListControlPanel request.</p>
+    #[doc(hidden)]
     pub control_panels: std::option::Option<std::vec::Vec<crate::model::ControlPanel>>,
     /// <p>The token that identifies which batch of results you want to see.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListControlPanelsOutput {
@@ -525,11 +528,10 @@ impl std::fmt::Debug for ListControlPanelsOutput {
         formatter.finish()
     }
 }
-/// See [`ListControlPanelsOutput`](crate::output::ListControlPanelsOutput)
+/// See [`ListControlPanelsOutput`](crate::output::ListControlPanelsOutput).
 pub mod list_control_panels_output {
 
-    /// A builder for [`ListControlPanelsOutput`](crate::output::ListControlPanelsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListControlPanelsOutput`](crate::output::ListControlPanelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) control_panels: std::option::Option<std::vec::Vec<crate::model::ControlPanel>>,
@@ -565,7 +567,7 @@ pub mod list_control_panels_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListControlPanelsOutput`](crate::output::ListControlPanelsOutput)
+        /// Consumes the builder and constructs a [`ListControlPanelsOutput`](crate::output::ListControlPanelsOutput).
         pub fn build(self) -> crate::output::ListControlPanelsOutput {
             crate::output::ListControlPanelsOutput {
                 control_panels: self.control_panels,
@@ -575,7 +577,7 @@ pub mod list_control_panels_output {
     }
 }
 impl ListControlPanelsOutput {
-    /// Creates a new builder-style object to manufacture [`ListControlPanelsOutput`](crate::output::ListControlPanelsOutput)
+    /// Creates a new builder-style object to manufacture [`ListControlPanelsOutput`](crate::output::ListControlPanelsOutput).
     pub fn builder() -> crate::output::list_control_panels_output::Builder {
         crate::output::list_control_panels_output::Builder::default()
     }
@@ -586,8 +588,10 @@ impl ListControlPanelsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListClustersOutput {
     /// <p>An array of the clusters in an account.</p>
+    #[doc(hidden)]
     pub clusters: std::option::Option<std::vec::Vec<crate::model::Cluster>>,
     /// <p>The token that identifies which batch of results you want to see.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListClustersOutput {
@@ -608,11 +612,10 @@ impl std::fmt::Debug for ListClustersOutput {
         formatter.finish()
     }
 }
-/// See [`ListClustersOutput`](crate::output::ListClustersOutput)
+/// See [`ListClustersOutput`](crate::output::ListClustersOutput).
 pub mod list_clusters_output {
 
-    /// A builder for [`ListClustersOutput`](crate::output::ListClustersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListClustersOutput`](crate::output::ListClustersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) clusters: std::option::Option<std::vec::Vec<crate::model::Cluster>>,
@@ -648,7 +651,7 @@ pub mod list_clusters_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListClustersOutput`](crate::output::ListClustersOutput)
+        /// Consumes the builder and constructs a [`ListClustersOutput`](crate::output::ListClustersOutput).
         pub fn build(self) -> crate::output::ListClustersOutput {
             crate::output::ListClustersOutput {
                 clusters: self.clusters,
@@ -658,7 +661,7 @@ pub mod list_clusters_output {
     }
 }
 impl ListClustersOutput {
-    /// Creates a new builder-style object to manufacture [`ListClustersOutput`](crate::output::ListClustersOutput)
+    /// Creates a new builder-style object to manufacture [`ListClustersOutput`](crate::output::ListClustersOutput).
     pub fn builder() -> crate::output::list_clusters_output::Builder {
         crate::output::list_clusters_output::Builder::default()
     }
@@ -669,8 +672,10 @@ impl ListClustersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAssociatedRoute53HealthChecksOutput {
     /// <p>Identifiers for the health checks.</p>
+    #[doc(hidden)]
     pub health_check_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Next token for listing health checks.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAssociatedRoute53HealthChecksOutput {
@@ -691,11 +696,10 @@ impl std::fmt::Debug for ListAssociatedRoute53HealthChecksOutput {
         formatter.finish()
     }
 }
-/// See [`ListAssociatedRoute53HealthChecksOutput`](crate::output::ListAssociatedRoute53HealthChecksOutput)
+/// See [`ListAssociatedRoute53HealthChecksOutput`](crate::output::ListAssociatedRoute53HealthChecksOutput).
 pub mod list_associated_route53_health_checks_output {
 
-    /// A builder for [`ListAssociatedRoute53HealthChecksOutput`](crate::output::ListAssociatedRoute53HealthChecksOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAssociatedRoute53HealthChecksOutput`](crate::output::ListAssociatedRoute53HealthChecksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) health_check_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -731,7 +735,7 @@ pub mod list_associated_route53_health_checks_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAssociatedRoute53HealthChecksOutput`](crate::output::ListAssociatedRoute53HealthChecksOutput)
+        /// Consumes the builder and constructs a [`ListAssociatedRoute53HealthChecksOutput`](crate::output::ListAssociatedRoute53HealthChecksOutput).
         pub fn build(self) -> crate::output::ListAssociatedRoute53HealthChecksOutput {
             crate::output::ListAssociatedRoute53HealthChecksOutput {
                 health_check_ids: self.health_check_ids,
@@ -741,7 +745,7 @@ pub mod list_associated_route53_health_checks_output {
     }
 }
 impl ListAssociatedRoute53HealthChecksOutput {
-    /// Creates a new builder-style object to manufacture [`ListAssociatedRoute53HealthChecksOutput`](crate::output::ListAssociatedRoute53HealthChecksOutput)
+    /// Creates a new builder-style object to manufacture [`ListAssociatedRoute53HealthChecksOutput`](crate::output::ListAssociatedRoute53HealthChecksOutput).
     pub fn builder() -> crate::output::list_associated_route53_health_checks_output::Builder {
         crate::output::list_associated_route53_health_checks_output::Builder::default()
     }
@@ -752,8 +756,10 @@ impl ListAssociatedRoute53HealthChecksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSafetyRuleOutput {
     /// <p>The assertion rule in the response.</p>
+    #[doc(hidden)]
     pub assertion_rule: std::option::Option<crate::model::AssertionRule>,
     /// <p>The gating rule in the response.</p>
+    #[doc(hidden)]
     pub gating_rule: std::option::Option<crate::model::GatingRule>,
 }
 impl DescribeSafetyRuleOutput {
@@ -774,11 +780,10 @@ impl std::fmt::Debug for DescribeSafetyRuleOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeSafetyRuleOutput`](crate::output::DescribeSafetyRuleOutput)
+/// See [`DescribeSafetyRuleOutput`](crate::output::DescribeSafetyRuleOutput).
 pub mod describe_safety_rule_output {
 
-    /// A builder for [`DescribeSafetyRuleOutput`](crate::output::DescribeSafetyRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSafetyRuleOutput`](crate::output::DescribeSafetyRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assertion_rule: std::option::Option<crate::model::AssertionRule>,
@@ -811,7 +816,7 @@ pub mod describe_safety_rule_output {
             self.gating_rule = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSafetyRuleOutput`](crate::output::DescribeSafetyRuleOutput)
+        /// Consumes the builder and constructs a [`DescribeSafetyRuleOutput`](crate::output::DescribeSafetyRuleOutput).
         pub fn build(self) -> crate::output::DescribeSafetyRuleOutput {
             crate::output::DescribeSafetyRuleOutput {
                 assertion_rule: self.assertion_rule,
@@ -821,7 +826,7 @@ pub mod describe_safety_rule_output {
     }
 }
 impl DescribeSafetyRuleOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeSafetyRuleOutput`](crate::output::DescribeSafetyRuleOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeSafetyRuleOutput`](crate::output::DescribeSafetyRuleOutput).
     pub fn builder() -> crate::output::describe_safety_rule_output::Builder {
         crate::output::describe_safety_rule_output::Builder::default()
     }
@@ -832,6 +837,7 @@ impl DescribeSafetyRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeRoutingControlOutput {
     /// <p>Information about the routing control.</p>
+    #[doc(hidden)]
     pub routing_control: std::option::Option<crate::model::RoutingControl>,
 }
 impl DescribeRoutingControlOutput {
@@ -847,11 +853,10 @@ impl std::fmt::Debug for DescribeRoutingControlOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeRoutingControlOutput`](crate::output::DescribeRoutingControlOutput)
+/// See [`DescribeRoutingControlOutput`](crate::output::DescribeRoutingControlOutput).
 pub mod describe_routing_control_output {
 
-    /// A builder for [`DescribeRoutingControlOutput`](crate::output::DescribeRoutingControlOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeRoutingControlOutput`](crate::output::DescribeRoutingControlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) routing_control: std::option::Option<crate::model::RoutingControl>,
@@ -870,7 +875,7 @@ pub mod describe_routing_control_output {
             self.routing_control = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeRoutingControlOutput`](crate::output::DescribeRoutingControlOutput)
+        /// Consumes the builder and constructs a [`DescribeRoutingControlOutput`](crate::output::DescribeRoutingControlOutput).
         pub fn build(self) -> crate::output::DescribeRoutingControlOutput {
             crate::output::DescribeRoutingControlOutput {
                 routing_control: self.routing_control,
@@ -879,7 +884,7 @@ pub mod describe_routing_control_output {
     }
 }
 impl DescribeRoutingControlOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeRoutingControlOutput`](crate::output::DescribeRoutingControlOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeRoutingControlOutput`](crate::output::DescribeRoutingControlOutput).
     pub fn builder() -> crate::output::describe_routing_control_output::Builder {
         crate::output::describe_routing_control_output::Builder::default()
     }
@@ -890,6 +895,7 @@ impl DescribeRoutingControlOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeControlPanelOutput {
     /// <p>Information about the control panel.</p>
+    #[doc(hidden)]
     pub control_panel: std::option::Option<crate::model::ControlPanel>,
 }
 impl DescribeControlPanelOutput {
@@ -905,11 +911,10 @@ impl std::fmt::Debug for DescribeControlPanelOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeControlPanelOutput`](crate::output::DescribeControlPanelOutput)
+/// See [`DescribeControlPanelOutput`](crate::output::DescribeControlPanelOutput).
 pub mod describe_control_panel_output {
 
-    /// A builder for [`DescribeControlPanelOutput`](crate::output::DescribeControlPanelOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeControlPanelOutput`](crate::output::DescribeControlPanelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) control_panel: std::option::Option<crate::model::ControlPanel>,
@@ -928,7 +933,7 @@ pub mod describe_control_panel_output {
             self.control_panel = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeControlPanelOutput`](crate::output::DescribeControlPanelOutput)
+        /// Consumes the builder and constructs a [`DescribeControlPanelOutput`](crate::output::DescribeControlPanelOutput).
         pub fn build(self) -> crate::output::DescribeControlPanelOutput {
             crate::output::DescribeControlPanelOutput {
                 control_panel: self.control_panel,
@@ -937,7 +942,7 @@ pub mod describe_control_panel_output {
     }
 }
 impl DescribeControlPanelOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeControlPanelOutput`](crate::output::DescribeControlPanelOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeControlPanelOutput`](crate::output::DescribeControlPanelOutput).
     pub fn builder() -> crate::output::describe_control_panel_output::Builder {
         crate::output::describe_control_panel_output::Builder::default()
     }
@@ -948,6 +953,7 @@ impl DescribeControlPanelOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeClusterOutput {
     /// <p>The cluster for the DescribeCluster request.</p>
+    #[doc(hidden)]
     pub cluster: std::option::Option<crate::model::Cluster>,
 }
 impl DescribeClusterOutput {
@@ -963,11 +969,10 @@ impl std::fmt::Debug for DescribeClusterOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeClusterOutput`](crate::output::DescribeClusterOutput)
+/// See [`DescribeClusterOutput`](crate::output::DescribeClusterOutput).
 pub mod describe_cluster_output {
 
-    /// A builder for [`DescribeClusterOutput`](crate::output::DescribeClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeClusterOutput`](crate::output::DescribeClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cluster: std::option::Option<crate::model::Cluster>,
@@ -983,7 +988,7 @@ pub mod describe_cluster_output {
             self.cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeClusterOutput`](crate::output::DescribeClusterOutput)
+        /// Consumes the builder and constructs a [`DescribeClusterOutput`](crate::output::DescribeClusterOutput).
         pub fn build(self) -> crate::output::DescribeClusterOutput {
             crate::output::DescribeClusterOutput {
                 cluster: self.cluster,
@@ -992,7 +997,7 @@ pub mod describe_cluster_output {
     }
 }
 impl DescribeClusterOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeClusterOutput`](crate::output::DescribeClusterOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeClusterOutput`](crate::output::DescribeClusterOutput).
     pub fn builder() -> crate::output::describe_cluster_output::Builder {
         crate::output::describe_cluster_output::Builder::default()
     }
@@ -1008,22 +1013,21 @@ impl std::fmt::Debug for DeleteSafetyRuleOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSafetyRuleOutput`](crate::output::DeleteSafetyRuleOutput)
+/// See [`DeleteSafetyRuleOutput`](crate::output::DeleteSafetyRuleOutput).
 pub mod delete_safety_rule_output {
 
-    /// A builder for [`DeleteSafetyRuleOutput`](crate::output::DeleteSafetyRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSafetyRuleOutput`](crate::output::DeleteSafetyRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteSafetyRuleOutput`](crate::output::DeleteSafetyRuleOutput)
+        /// Consumes the builder and constructs a [`DeleteSafetyRuleOutput`](crate::output::DeleteSafetyRuleOutput).
         pub fn build(self) -> crate::output::DeleteSafetyRuleOutput {
             crate::output::DeleteSafetyRuleOutput {}
         }
     }
 }
 impl DeleteSafetyRuleOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSafetyRuleOutput`](crate::output::DeleteSafetyRuleOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSafetyRuleOutput`](crate::output::DeleteSafetyRuleOutput).
     pub fn builder() -> crate::output::delete_safety_rule_output::Builder {
         crate::output::delete_safety_rule_output::Builder::default()
     }
@@ -1039,22 +1043,21 @@ impl std::fmt::Debug for DeleteRoutingControlOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRoutingControlOutput`](crate::output::DeleteRoutingControlOutput)
+/// See [`DeleteRoutingControlOutput`](crate::output::DeleteRoutingControlOutput).
 pub mod delete_routing_control_output {
 
-    /// A builder for [`DeleteRoutingControlOutput`](crate::output::DeleteRoutingControlOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRoutingControlOutput`](crate::output::DeleteRoutingControlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteRoutingControlOutput`](crate::output::DeleteRoutingControlOutput)
+        /// Consumes the builder and constructs a [`DeleteRoutingControlOutput`](crate::output::DeleteRoutingControlOutput).
         pub fn build(self) -> crate::output::DeleteRoutingControlOutput {
             crate::output::DeleteRoutingControlOutput {}
         }
     }
 }
 impl DeleteRoutingControlOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRoutingControlOutput`](crate::output::DeleteRoutingControlOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRoutingControlOutput`](crate::output::DeleteRoutingControlOutput).
     pub fn builder() -> crate::output::delete_routing_control_output::Builder {
         crate::output::delete_routing_control_output::Builder::default()
     }
@@ -1070,22 +1073,21 @@ impl std::fmt::Debug for DeleteControlPanelOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteControlPanelOutput`](crate::output::DeleteControlPanelOutput)
+/// See [`DeleteControlPanelOutput`](crate::output::DeleteControlPanelOutput).
 pub mod delete_control_panel_output {
 
-    /// A builder for [`DeleteControlPanelOutput`](crate::output::DeleteControlPanelOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteControlPanelOutput`](crate::output::DeleteControlPanelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteControlPanelOutput`](crate::output::DeleteControlPanelOutput)
+        /// Consumes the builder and constructs a [`DeleteControlPanelOutput`](crate::output::DeleteControlPanelOutput).
         pub fn build(self) -> crate::output::DeleteControlPanelOutput {
             crate::output::DeleteControlPanelOutput {}
         }
     }
 }
 impl DeleteControlPanelOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteControlPanelOutput`](crate::output::DeleteControlPanelOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteControlPanelOutput`](crate::output::DeleteControlPanelOutput).
     pub fn builder() -> crate::output::delete_control_panel_output::Builder {
         crate::output::delete_control_panel_output::Builder::default()
     }
@@ -1101,22 +1103,21 @@ impl std::fmt::Debug for DeleteClusterOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteClusterOutput`](crate::output::DeleteClusterOutput)
+/// See [`DeleteClusterOutput`](crate::output::DeleteClusterOutput).
 pub mod delete_cluster_output {
 
-    /// A builder for [`DeleteClusterOutput`](crate::output::DeleteClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteClusterOutput`](crate::output::DeleteClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteClusterOutput`](crate::output::DeleteClusterOutput)
+        /// Consumes the builder and constructs a [`DeleteClusterOutput`](crate::output::DeleteClusterOutput).
         pub fn build(self) -> crate::output::DeleteClusterOutput {
             crate::output::DeleteClusterOutput {}
         }
     }
 }
 impl DeleteClusterOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteClusterOutput`](crate::output::DeleteClusterOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteClusterOutput`](crate::output::DeleteClusterOutput).
     pub fn builder() -> crate::output::delete_cluster_output::Builder {
         crate::output::delete_cluster_output::Builder::default()
     }
@@ -1127,8 +1128,10 @@ impl DeleteClusterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSafetyRuleOutput {
     /// <p>The assertion rule created.</p>
+    #[doc(hidden)]
     pub assertion_rule: std::option::Option<crate::model::AssertionRule>,
     /// <p>The gating rule created.</p>
+    #[doc(hidden)]
     pub gating_rule: std::option::Option<crate::model::GatingRule>,
 }
 impl CreateSafetyRuleOutput {
@@ -1149,11 +1152,10 @@ impl std::fmt::Debug for CreateSafetyRuleOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSafetyRuleOutput`](crate::output::CreateSafetyRuleOutput)
+/// See [`CreateSafetyRuleOutput`](crate::output::CreateSafetyRuleOutput).
 pub mod create_safety_rule_output {
 
-    /// A builder for [`CreateSafetyRuleOutput`](crate::output::CreateSafetyRuleOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSafetyRuleOutput`](crate::output::CreateSafetyRuleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assertion_rule: std::option::Option<crate::model::AssertionRule>,
@@ -1186,7 +1188,7 @@ pub mod create_safety_rule_output {
             self.gating_rule = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSafetyRuleOutput`](crate::output::CreateSafetyRuleOutput)
+        /// Consumes the builder and constructs a [`CreateSafetyRuleOutput`](crate::output::CreateSafetyRuleOutput).
         pub fn build(self) -> crate::output::CreateSafetyRuleOutput {
             crate::output::CreateSafetyRuleOutput {
                 assertion_rule: self.assertion_rule,
@@ -1196,7 +1198,7 @@ pub mod create_safety_rule_output {
     }
 }
 impl CreateSafetyRuleOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSafetyRuleOutput`](crate::output::CreateSafetyRuleOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSafetyRuleOutput`](crate::output::CreateSafetyRuleOutput).
     pub fn builder() -> crate::output::create_safety_rule_output::Builder {
         crate::output::create_safety_rule_output::Builder::default()
     }
@@ -1207,6 +1209,7 @@ impl CreateSafetyRuleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRoutingControlOutput {
     /// <p>The routing control that is created.</p>
+    #[doc(hidden)]
     pub routing_control: std::option::Option<crate::model::RoutingControl>,
 }
 impl CreateRoutingControlOutput {
@@ -1222,11 +1225,10 @@ impl std::fmt::Debug for CreateRoutingControlOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRoutingControlOutput`](crate::output::CreateRoutingControlOutput)
+/// See [`CreateRoutingControlOutput`](crate::output::CreateRoutingControlOutput).
 pub mod create_routing_control_output {
 
-    /// A builder for [`CreateRoutingControlOutput`](crate::output::CreateRoutingControlOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRoutingControlOutput`](crate::output::CreateRoutingControlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) routing_control: std::option::Option<crate::model::RoutingControl>,
@@ -1245,7 +1247,7 @@ pub mod create_routing_control_output {
             self.routing_control = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRoutingControlOutput`](crate::output::CreateRoutingControlOutput)
+        /// Consumes the builder and constructs a [`CreateRoutingControlOutput`](crate::output::CreateRoutingControlOutput).
         pub fn build(self) -> crate::output::CreateRoutingControlOutput {
             crate::output::CreateRoutingControlOutput {
                 routing_control: self.routing_control,
@@ -1254,7 +1256,7 @@ pub mod create_routing_control_output {
     }
 }
 impl CreateRoutingControlOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRoutingControlOutput`](crate::output::CreateRoutingControlOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRoutingControlOutput`](crate::output::CreateRoutingControlOutput).
     pub fn builder() -> crate::output::create_routing_control_output::Builder {
         crate::output::create_routing_control_output::Builder::default()
     }
@@ -1265,6 +1267,7 @@ impl CreateRoutingControlOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateControlPanelOutput {
     /// <p>Information about a control panel.</p>
+    #[doc(hidden)]
     pub control_panel: std::option::Option<crate::model::ControlPanel>,
 }
 impl CreateControlPanelOutput {
@@ -1280,11 +1283,10 @@ impl std::fmt::Debug for CreateControlPanelOutput {
         formatter.finish()
     }
 }
-/// See [`CreateControlPanelOutput`](crate::output::CreateControlPanelOutput)
+/// See [`CreateControlPanelOutput`](crate::output::CreateControlPanelOutput).
 pub mod create_control_panel_output {
 
-    /// A builder for [`CreateControlPanelOutput`](crate::output::CreateControlPanelOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateControlPanelOutput`](crate::output::CreateControlPanelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) control_panel: std::option::Option<crate::model::ControlPanel>,
@@ -1303,7 +1305,7 @@ pub mod create_control_panel_output {
             self.control_panel = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateControlPanelOutput`](crate::output::CreateControlPanelOutput)
+        /// Consumes the builder and constructs a [`CreateControlPanelOutput`](crate::output::CreateControlPanelOutput).
         pub fn build(self) -> crate::output::CreateControlPanelOutput {
             crate::output::CreateControlPanelOutput {
                 control_panel: self.control_panel,
@@ -1312,7 +1314,7 @@ pub mod create_control_panel_output {
     }
 }
 impl CreateControlPanelOutput {
-    /// Creates a new builder-style object to manufacture [`CreateControlPanelOutput`](crate::output::CreateControlPanelOutput)
+    /// Creates a new builder-style object to manufacture [`CreateControlPanelOutput`](crate::output::CreateControlPanelOutput).
     pub fn builder() -> crate::output::create_control_panel_output::Builder {
         crate::output::create_control_panel_output::Builder::default()
     }
@@ -1323,6 +1325,7 @@ impl CreateControlPanelOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateClusterOutput {
     /// <p>The cluster that was created.</p>
+    #[doc(hidden)]
     pub cluster: std::option::Option<crate::model::Cluster>,
 }
 impl CreateClusterOutput {
@@ -1338,11 +1341,10 @@ impl std::fmt::Debug for CreateClusterOutput {
         formatter.finish()
     }
 }
-/// See [`CreateClusterOutput`](crate::output::CreateClusterOutput)
+/// See [`CreateClusterOutput`](crate::output::CreateClusterOutput).
 pub mod create_cluster_output {
 
-    /// A builder for [`CreateClusterOutput`](crate::output::CreateClusterOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateClusterOutput`](crate::output::CreateClusterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cluster: std::option::Option<crate::model::Cluster>,
@@ -1358,7 +1360,7 @@ pub mod create_cluster_output {
             self.cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateClusterOutput`](crate::output::CreateClusterOutput)
+        /// Consumes the builder and constructs a [`CreateClusterOutput`](crate::output::CreateClusterOutput).
         pub fn build(self) -> crate::output::CreateClusterOutput {
             crate::output::CreateClusterOutput {
                 cluster: self.cluster,
@@ -1367,7 +1369,7 @@ pub mod create_cluster_output {
     }
 }
 impl CreateClusterOutput {
-    /// Creates a new builder-style object to manufacture [`CreateClusterOutput`](crate::output::CreateClusterOutput)
+    /// Creates a new builder-style object to manufacture [`CreateClusterOutput`](crate::output::CreateClusterOutput).
     pub fn builder() -> crate::output::create_cluster_output::Builder {
         crate::output::create_cluster_output::Builder::default()
     }

@@ -5,10 +5,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricFilterMatchRecord {
     /// <p>The event number.</p>
+    #[doc(hidden)]
     pub event_number: i64,
     /// <p>The raw event data.</p>
+    #[doc(hidden)]
     pub event_message: std::option::Option<std::string::String>,
     /// <p>The values extracted from the event data by the filter.</p>
+    #[doc(hidden)]
     pub extracted_values:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -38,11 +41,10 @@ impl std::fmt::Debug for MetricFilterMatchRecord {
         formatter.finish()
     }
 }
-/// See [`MetricFilterMatchRecord`](crate::model::MetricFilterMatchRecord)
+/// See [`MetricFilterMatchRecord`](crate::model::MetricFilterMatchRecord).
 pub mod metric_filter_match_record {
 
-    /// A builder for [`MetricFilterMatchRecord`](crate::model::MetricFilterMatchRecord)
-    #[non_exhaustive]
+    /// A builder for [`MetricFilterMatchRecord`](crate::model::MetricFilterMatchRecord).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_number: std::option::Option<i64>,
@@ -100,7 +102,7 @@ pub mod metric_filter_match_record {
             self.extracted_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricFilterMatchRecord`](crate::model::MetricFilterMatchRecord)
+        /// Consumes the builder and constructs a [`MetricFilterMatchRecord`](crate::model::MetricFilterMatchRecord).
         pub fn build(self) -> crate::model::MetricFilterMatchRecord {
             crate::model::MetricFilterMatchRecord {
                 event_number: self.event_number.unwrap_or_default(),
@@ -111,7 +113,7 @@ pub mod metric_filter_match_record {
     }
 }
 impl MetricFilterMatchRecord {
-    /// Creates a new builder-style object to manufacture [`MetricFilterMatchRecord`](crate::model::MetricFilterMatchRecord)
+    /// Creates a new builder-style object to manufacture [`MetricFilterMatchRecord`](crate::model::MetricFilterMatchRecord).
     pub fn builder() -> crate::model::metric_filter_match_record::Builder {
         crate::model::metric_filter_match_record::Builder::default()
     }
@@ -122,8 +124,10 @@ impl MetricFilterMatchRecord {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryCompileError {
     /// <p>Reserved.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::QueryCompileErrorLocation>,
     /// <p>Reserved.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl QueryCompileError {
@@ -144,11 +148,10 @@ impl std::fmt::Debug for QueryCompileError {
         formatter.finish()
     }
 }
-/// See [`QueryCompileError`](crate::model::QueryCompileError)
+/// See [`QueryCompileError`](crate::model::QueryCompileError).
 pub mod query_compile_error {
 
-    /// A builder for [`QueryCompileError`](crate::model::QueryCompileError)
-    #[non_exhaustive]
+    /// A builder for [`QueryCompileError`](crate::model::QueryCompileError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location: std::option::Option<crate::model::QueryCompileErrorLocation>,
@@ -178,7 +181,7 @@ pub mod query_compile_error {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryCompileError`](crate::model::QueryCompileError)
+        /// Consumes the builder and constructs a [`QueryCompileError`](crate::model::QueryCompileError).
         pub fn build(self) -> crate::model::QueryCompileError {
             crate::model::QueryCompileError {
                 location: self.location,
@@ -188,7 +191,7 @@ pub mod query_compile_error {
     }
 }
 impl QueryCompileError {
-    /// Creates a new builder-style object to manufacture [`QueryCompileError`](crate::model::QueryCompileError)
+    /// Creates a new builder-style object to manufacture [`QueryCompileError`](crate::model::QueryCompileError).
     pub fn builder() -> crate::model::query_compile_error::Builder {
         crate::model::query_compile_error::Builder::default()
     }
@@ -199,8 +202,10 @@ impl QueryCompileError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryCompileErrorLocation {
     /// <p>Reserved.</p>
+    #[doc(hidden)]
     pub start_char_offset: std::option::Option<i32>,
     /// <p>Reserved.</p>
+    #[doc(hidden)]
     pub end_char_offset: std::option::Option<i32>,
 }
 impl QueryCompileErrorLocation {
@@ -221,11 +226,10 @@ impl std::fmt::Debug for QueryCompileErrorLocation {
         formatter.finish()
     }
 }
-/// See [`QueryCompileErrorLocation`](crate::model::QueryCompileErrorLocation)
+/// See [`QueryCompileErrorLocation`](crate::model::QueryCompileErrorLocation).
 pub mod query_compile_error_location {
 
-    /// A builder for [`QueryCompileErrorLocation`](crate::model::QueryCompileErrorLocation)
-    #[non_exhaustive]
+    /// A builder for [`QueryCompileErrorLocation`](crate::model::QueryCompileErrorLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_char_offset: std::option::Option<i32>,
@@ -252,7 +256,7 @@ pub mod query_compile_error_location {
             self.end_char_offset = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryCompileErrorLocation`](crate::model::QueryCompileErrorLocation)
+        /// Consumes the builder and constructs a [`QueryCompileErrorLocation`](crate::model::QueryCompileErrorLocation).
         pub fn build(self) -> crate::model::QueryCompileErrorLocation {
             crate::model::QueryCompileErrorLocation {
                 start_char_offset: self.start_char_offset,
@@ -262,7 +266,7 @@ pub mod query_compile_error_location {
     }
 }
 impl QueryCompileErrorLocation {
-    /// Creates a new builder-style object to manufacture [`QueryCompileErrorLocation`](crate::model::QueryCompileErrorLocation)
+    /// Creates a new builder-style object to manufacture [`QueryCompileErrorLocation`](crate::model::QueryCompileErrorLocation).
     pub fn builder() -> crate::model::query_compile_error_location::Builder {
         crate::model::query_compile_error_location::Builder::default()
     }
@@ -329,10 +333,13 @@ impl AsRef<str> for Distribution {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourcePolicy {
     /// <p>The name of the resource policy.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The details of the policy.</p>
+    #[doc(hidden)]
     pub policy_document: std::option::Option<std::string::String>,
     /// <p>Timestamp showing when this policy was last updated, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<i64>,
 }
 impl ResourcePolicy {
@@ -358,11 +365,10 @@ impl std::fmt::Debug for ResourcePolicy {
         formatter.finish()
     }
 }
-/// See [`ResourcePolicy`](crate::model::ResourcePolicy)
+/// See [`ResourcePolicy`](crate::model::ResourcePolicy).
 pub mod resource_policy {
 
-    /// A builder for [`ResourcePolicy`](crate::model::ResourcePolicy)
-    #[non_exhaustive]
+    /// A builder for [`ResourcePolicy`](crate::model::ResourcePolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_name: std::option::Option<std::string::String>,
@@ -403,7 +409,7 @@ pub mod resource_policy {
             self.last_updated_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourcePolicy`](crate::model::ResourcePolicy)
+        /// Consumes the builder and constructs a [`ResourcePolicy`](crate::model::ResourcePolicy).
         pub fn build(self) -> crate::model::ResourcePolicy {
             crate::model::ResourcePolicy {
                 policy_name: self.policy_name,
@@ -414,7 +420,7 @@ pub mod resource_policy {
     }
 }
 impl ResourcePolicy {
-    /// Creates a new builder-style object to manufacture [`ResourcePolicy`](crate::model::ResourcePolicy)
+    /// Creates a new builder-style object to manufacture [`ResourcePolicy`](crate::model::ResourcePolicy).
     pub fn builder() -> crate::model::resource_policy::Builder {
         crate::model::resource_policy::Builder::default()
     }
@@ -425,21 +431,27 @@ impl ResourcePolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricTransformation {
     /// <p>The name of the CloudWatch metric.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>A custom namespace to contain your metric in CloudWatch. Use namespaces to group together metrics that are similar. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Namespace">Namespaces</a>.</p>
+    #[doc(hidden)]
     pub metric_namespace: std::option::Option<std::string::String>,
     /// <p>The value to publish to the CloudWatch metric when a filter pattern matches a log event.</p>
+    #[doc(hidden)]
     pub metric_value: std::option::Option<std::string::String>,
     /// <p>(Optional) The value to emit when a filter pattern does not match a log event. This value can be null.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<f64>,
     /// <p>The fields to use as dimensions for the metric. One metric filter can include as many as three dimensions.</p> <important>
     /// <p>Metrics extracted from log events are charged as custom metrics. To prevent unexpected high charges, do not specify high-cardinality fields such as <code>IPAddress</code> or <code>requestID</code> as dimensions. Each different value found for a dimension is treated as a separate metric and accrues charges as a separate custom metric. </p>
     /// <p>To help prevent accidental high charges, Amazon disables a metric filter if it generates 1000 different name/value pairs for the dimensions that you have specified within a certain amount of time.</p>
     /// <p>You can also set up a billing alarm to alert you if your charges are higher than expected. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html"> Creating a Billing Alarm to Monitor Your Estimated Amazon Web Services Charges</a>. </p>
     /// </important>
+    #[doc(hidden)]
     pub dimensions:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The unit to assign to the metric. If you omit this, the unit is set as <code>None</code>.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<crate::model::StandardUnit>,
 }
 impl MetricTransformation {
@@ -487,11 +499,10 @@ impl std::fmt::Debug for MetricTransformation {
         formatter.finish()
     }
 }
-/// See [`MetricTransformation`](crate::model::MetricTransformation)
+/// See [`MetricTransformation`](crate::model::MetricTransformation).
 pub mod metric_transformation {
 
-    /// A builder for [`MetricTransformation`](crate::model::MetricTransformation)
-    #[non_exhaustive]
+    /// A builder for [`MetricTransformation`](crate::model::MetricTransformation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_name: std::option::Option<std::string::String>,
@@ -590,7 +601,7 @@ pub mod metric_transformation {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricTransformation`](crate::model::MetricTransformation)
+        /// Consumes the builder and constructs a [`MetricTransformation`](crate::model::MetricTransformation).
         pub fn build(self) -> crate::model::MetricTransformation {
             crate::model::MetricTransformation {
                 metric_name: self.metric_name,
@@ -604,7 +615,7 @@ pub mod metric_transformation {
     }
 }
 impl MetricTransformation {
-    /// Creates a new builder-style object to manufacture [`MetricTransformation`](crate::model::MetricTransformation)
+    /// Creates a new builder-style object to manufacture [`MetricTransformation`](crate::model::MetricTransformation).
     pub fn builder() -> crate::model::metric_transformation::Builder {
         crate::model::metric_transformation::Builder::default()
     }
@@ -798,10 +809,13 @@ impl AsRef<str> for StandardUnit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RejectedLogEventsInfo {
     /// <p>The log events that are too new.</p>
+    #[doc(hidden)]
     pub too_new_log_event_start_index: std::option::Option<i32>,
     /// <p>The log events that are too old.</p>
+    #[doc(hidden)]
     pub too_old_log_event_end_index: std::option::Option<i32>,
     /// <p>The expired log events.</p>
+    #[doc(hidden)]
     pub expired_log_event_end_index: std::option::Option<i32>,
 }
 impl RejectedLogEventsInfo {
@@ -836,11 +850,10 @@ impl std::fmt::Debug for RejectedLogEventsInfo {
         formatter.finish()
     }
 }
-/// See [`RejectedLogEventsInfo`](crate::model::RejectedLogEventsInfo)
+/// See [`RejectedLogEventsInfo`](crate::model::RejectedLogEventsInfo).
 pub mod rejected_log_events_info {
 
-    /// A builder for [`RejectedLogEventsInfo`](crate::model::RejectedLogEventsInfo)
-    #[non_exhaustive]
+    /// A builder for [`RejectedLogEventsInfo`](crate::model::RejectedLogEventsInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) too_new_log_event_start_index: std::option::Option<i32>,
@@ -881,7 +894,7 @@ pub mod rejected_log_events_info {
             self.expired_log_event_end_index = input;
             self
         }
-        /// Consumes the builder and constructs a [`RejectedLogEventsInfo`](crate::model::RejectedLogEventsInfo)
+        /// Consumes the builder and constructs a [`RejectedLogEventsInfo`](crate::model::RejectedLogEventsInfo).
         pub fn build(self) -> crate::model::RejectedLogEventsInfo {
             crate::model::RejectedLogEventsInfo {
                 too_new_log_event_start_index: self.too_new_log_event_start_index,
@@ -892,7 +905,7 @@ pub mod rejected_log_events_info {
     }
 }
 impl RejectedLogEventsInfo {
-    /// Creates a new builder-style object to manufacture [`RejectedLogEventsInfo`](crate::model::RejectedLogEventsInfo)
+    /// Creates a new builder-style object to manufacture [`RejectedLogEventsInfo`](crate::model::RejectedLogEventsInfo).
     pub fn builder() -> crate::model::rejected_log_events_info::Builder {
         crate::model::rejected_log_events_info::Builder::default()
     }
@@ -903,8 +916,10 @@ impl RejectedLogEventsInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputLogEvent {
     /// <p>The time the event occurred, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<i64>,
     /// <p>The raw event message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl InputLogEvent {
@@ -925,11 +940,10 @@ impl std::fmt::Debug for InputLogEvent {
         formatter.finish()
     }
 }
-/// See [`InputLogEvent`](crate::model::InputLogEvent)
+/// See [`InputLogEvent`](crate::model::InputLogEvent).
 pub mod input_log_event {
 
-    /// A builder for [`InputLogEvent`](crate::model::InputLogEvent)
-    #[non_exhaustive]
+    /// A builder for [`InputLogEvent`](crate::model::InputLogEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timestamp: std::option::Option<i64>,
@@ -956,7 +970,7 @@ pub mod input_log_event {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputLogEvent`](crate::model::InputLogEvent)
+        /// Consumes the builder and constructs a [`InputLogEvent`](crate::model::InputLogEvent).
         pub fn build(self) -> crate::model::InputLogEvent {
             crate::model::InputLogEvent {
                 timestamp: self.timestamp,
@@ -966,7 +980,7 @@ pub mod input_log_event {
     }
 }
 impl InputLogEvent {
-    /// Creates a new builder-style object to manufacture [`InputLogEvent`](crate::model::InputLogEvent)
+    /// Creates a new builder-style object to manufacture [`InputLogEvent`](crate::model::InputLogEvent).
     pub fn builder() -> crate::model::input_log_event::Builder {
         crate::model::input_log_event::Builder::default()
     }
@@ -977,16 +991,22 @@ impl InputLogEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Destination {
     /// <p>The name of the destination.</p>
+    #[doc(hidden)]
     pub destination_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the physical target where the log events are delivered (for example, a Kinesis stream).</p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
     /// <p>A role for impersonation, used when delivering log events to the target.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>An IAM policy document that governs which Amazon Web Services accounts can create subscription filters against this destination.</p>
+    #[doc(hidden)]
     pub access_policy: std::option::Option<std::string::String>,
     /// <p>The ARN of this destination.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The creation time of the destination, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<i64>,
 }
 impl Destination {
@@ -1027,11 +1047,10 @@ impl std::fmt::Debug for Destination {
         formatter.finish()
     }
 }
-/// See [`Destination`](crate::model::Destination)
+/// See [`Destination`](crate::model::Destination).
 pub mod destination {
 
-    /// A builder for [`Destination`](crate::model::Destination)
-    #[non_exhaustive]
+    /// A builder for [`Destination`](crate::model::Destination).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination_name: std::option::Option<std::string::String>,
@@ -1108,7 +1127,7 @@ pub mod destination {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`Destination`](crate::model::Destination)
+        /// Consumes the builder and constructs a [`Destination`](crate::model::Destination).
         pub fn build(self) -> crate::model::Destination {
             crate::model::Destination {
                 destination_name: self.destination_name,
@@ -1122,7 +1141,7 @@ pub mod destination {
     }
 }
 impl Destination {
-    /// Creates a new builder-style object to manufacture [`Destination`](crate::model::Destination)
+    /// Creates a new builder-style object to manufacture [`Destination`](crate::model::Destination).
     pub fn builder() -> crate::model::destination::Builder {
         crate::model::destination::Builder::default()
     }
@@ -1216,10 +1235,13 @@ impl AsRef<str> for QueryStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryStatistics {
     /// <p>The number of log events that matched the query string.</p>
+    #[doc(hidden)]
     pub records_matched: f64,
     /// <p>The total number of log events scanned during the query.</p>
+    #[doc(hidden)]
     pub records_scanned: f64,
     /// <p>The total number of bytes in the log events scanned during the query.</p>
+    #[doc(hidden)]
     pub bytes_scanned: f64,
 }
 impl QueryStatistics {
@@ -1245,11 +1267,10 @@ impl std::fmt::Debug for QueryStatistics {
         formatter.finish()
     }
 }
-/// See [`QueryStatistics`](crate::model::QueryStatistics)
+/// See [`QueryStatistics`](crate::model::QueryStatistics).
 pub mod query_statistics {
 
-    /// A builder for [`QueryStatistics`](crate::model::QueryStatistics)
-    #[non_exhaustive]
+    /// A builder for [`QueryStatistics`](crate::model::QueryStatistics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) records_matched: std::option::Option<f64>,
@@ -1287,7 +1308,7 @@ pub mod query_statistics {
             self.bytes_scanned = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryStatistics`](crate::model::QueryStatistics)
+        /// Consumes the builder and constructs a [`QueryStatistics`](crate::model::QueryStatistics).
         pub fn build(self) -> crate::model::QueryStatistics {
             crate::model::QueryStatistics {
                 records_matched: self.records_matched.unwrap_or_default(),
@@ -1298,7 +1319,7 @@ pub mod query_statistics {
     }
 }
 impl QueryStatistics {
-    /// Creates a new builder-style object to manufacture [`QueryStatistics`](crate::model::QueryStatistics)
+    /// Creates a new builder-style object to manufacture [`QueryStatistics`](crate::model::QueryStatistics).
     pub fn builder() -> crate::model::query_statistics::Builder {
         crate::model::query_statistics::Builder::default()
     }
@@ -1310,8 +1331,10 @@ impl QueryStatistics {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResultField {
     /// <p>The log event field.</p>
+    #[doc(hidden)]
     pub field: std::option::Option<std::string::String>,
     /// <p>The value of this field.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl ResultField {
@@ -1332,11 +1355,10 @@ impl std::fmt::Debug for ResultField {
         formatter.finish()
     }
 }
-/// See [`ResultField`](crate::model::ResultField)
+/// See [`ResultField`](crate::model::ResultField).
 pub mod result_field {
 
-    /// A builder for [`ResultField`](crate::model::ResultField)
-    #[non_exhaustive]
+    /// A builder for [`ResultField`](crate::model::ResultField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field: std::option::Option<std::string::String>,
@@ -1363,7 +1385,7 @@ pub mod result_field {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultField`](crate::model::ResultField)
+        /// Consumes the builder and constructs a [`ResultField`](crate::model::ResultField).
         pub fn build(self) -> crate::model::ResultField {
             crate::model::ResultField {
                 field: self.field,
@@ -1373,7 +1395,7 @@ pub mod result_field {
     }
 }
 impl ResultField {
-    /// Creates a new builder-style object to manufacture [`ResultField`](crate::model::ResultField)
+    /// Creates a new builder-style object to manufacture [`ResultField`](crate::model::ResultField).
     pub fn builder() -> crate::model::result_field::Builder {
         crate::model::result_field::Builder::default()
     }
@@ -1384,8 +1406,10 @@ impl ResultField {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogGroupField {
     /// <p>The name of a log field.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The percentage of log events queried that contained the field.</p>
+    #[doc(hidden)]
     pub percent: i32,
 }
 impl LogGroupField {
@@ -1406,11 +1430,10 @@ impl std::fmt::Debug for LogGroupField {
         formatter.finish()
     }
 }
-/// See [`LogGroupField`](crate::model::LogGroupField)
+/// See [`LogGroupField`](crate::model::LogGroupField).
 pub mod log_group_field {
 
-    /// A builder for [`LogGroupField`](crate::model::LogGroupField)
-    #[non_exhaustive]
+    /// A builder for [`LogGroupField`](crate::model::LogGroupField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1437,7 +1460,7 @@ pub mod log_group_field {
             self.percent = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogGroupField`](crate::model::LogGroupField)
+        /// Consumes the builder and constructs a [`LogGroupField`](crate::model::LogGroupField).
         pub fn build(self) -> crate::model::LogGroupField {
             crate::model::LogGroupField {
                 name: self.name,
@@ -1447,7 +1470,7 @@ pub mod log_group_field {
     }
 }
 impl LogGroupField {
-    /// Creates a new builder-style object to manufacture [`LogGroupField`](crate::model::LogGroupField)
+    /// Creates a new builder-style object to manufacture [`LogGroupField`](crate::model::LogGroupField).
     pub fn builder() -> crate::model::log_group_field::Builder {
         crate::model::log_group_field::Builder::default()
     }
@@ -1458,10 +1481,13 @@ impl LogGroupField {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputLogEvent {
     /// <p>The time the event occurred, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<i64>,
     /// <p>The data contained in the log event.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time the event was ingested, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub ingestion_time: std::option::Option<i64>,
 }
 impl OutputLogEvent {
@@ -1487,11 +1513,10 @@ impl std::fmt::Debug for OutputLogEvent {
         formatter.finish()
     }
 }
-/// See [`OutputLogEvent`](crate::model::OutputLogEvent)
+/// See [`OutputLogEvent`](crate::model::OutputLogEvent).
 pub mod output_log_event {
 
-    /// A builder for [`OutputLogEvent`](crate::model::OutputLogEvent)
-    #[non_exhaustive]
+    /// A builder for [`OutputLogEvent`](crate::model::OutputLogEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timestamp: std::option::Option<i64>,
@@ -1529,7 +1554,7 @@ pub mod output_log_event {
             self.ingestion_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputLogEvent`](crate::model::OutputLogEvent)
+        /// Consumes the builder and constructs a [`OutputLogEvent`](crate::model::OutputLogEvent).
         pub fn build(self) -> crate::model::OutputLogEvent {
             crate::model::OutputLogEvent {
                 timestamp: self.timestamp,
@@ -1540,7 +1565,7 @@ pub mod output_log_event {
     }
 }
 impl OutputLogEvent {
-    /// Creates a new builder-style object to manufacture [`OutputLogEvent`](crate::model::OutputLogEvent)
+    /// Creates a new builder-style object to manufacture [`OutputLogEvent`](crate::model::OutputLogEvent).
     pub fn builder() -> crate::model::output_log_event::Builder {
         crate::model::output_log_event::Builder::default()
     }
@@ -1551,8 +1576,10 @@ impl OutputLogEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchedLogStream {
     /// <p>The name of the log stream.</p>
+    #[doc(hidden)]
     pub log_stream_name: std::option::Option<std::string::String>,
     /// <p>Indicates whether all the events in this log stream were searched.</p>
+    #[doc(hidden)]
     pub searched_completely: std::option::Option<bool>,
 }
 impl SearchedLogStream {
@@ -1573,11 +1600,10 @@ impl std::fmt::Debug for SearchedLogStream {
         formatter.finish()
     }
 }
-/// See [`SearchedLogStream`](crate::model::SearchedLogStream)
+/// See [`SearchedLogStream`](crate::model::SearchedLogStream).
 pub mod searched_log_stream {
 
-    /// A builder for [`SearchedLogStream`](crate::model::SearchedLogStream)
-    #[non_exhaustive]
+    /// A builder for [`SearchedLogStream`](crate::model::SearchedLogStream).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_stream_name: std::option::Option<std::string::String>,
@@ -1607,7 +1633,7 @@ pub mod searched_log_stream {
             self.searched_completely = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchedLogStream`](crate::model::SearchedLogStream)
+        /// Consumes the builder and constructs a [`SearchedLogStream`](crate::model::SearchedLogStream).
         pub fn build(self) -> crate::model::SearchedLogStream {
             crate::model::SearchedLogStream {
                 log_stream_name: self.log_stream_name,
@@ -1617,7 +1643,7 @@ pub mod searched_log_stream {
     }
 }
 impl SearchedLogStream {
-    /// Creates a new builder-style object to manufacture [`SearchedLogStream`](crate::model::SearchedLogStream)
+    /// Creates a new builder-style object to manufacture [`SearchedLogStream`](crate::model::SearchedLogStream).
     pub fn builder() -> crate::model::searched_log_stream::Builder {
         crate::model::searched_log_stream::Builder::default()
     }
@@ -1628,14 +1654,19 @@ impl SearchedLogStream {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FilteredLogEvent {
     /// <p>The name of the log stream to which this event belongs.</p>
+    #[doc(hidden)]
     pub log_stream_name: std::option::Option<std::string::String>,
     /// <p>The time the event occurred, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<i64>,
     /// <p>The data contained in the log event.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time the event was ingested, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub ingestion_time: std::option::Option<i64>,
     /// <p>The ID of the event.</p>
+    #[doc(hidden)]
     pub event_id: std::option::Option<std::string::String>,
 }
 impl FilteredLogEvent {
@@ -1671,11 +1702,10 @@ impl std::fmt::Debug for FilteredLogEvent {
         formatter.finish()
     }
 }
-/// See [`FilteredLogEvent`](crate::model::FilteredLogEvent)
+/// See [`FilteredLogEvent`](crate::model::FilteredLogEvent).
 pub mod filtered_log_event {
 
-    /// A builder for [`FilteredLogEvent`](crate::model::FilteredLogEvent)
-    #[non_exhaustive]
+    /// A builder for [`FilteredLogEvent`](crate::model::FilteredLogEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_stream_name: std::option::Option<std::string::String>,
@@ -1738,7 +1768,7 @@ pub mod filtered_log_event {
             self.event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`FilteredLogEvent`](crate::model::FilteredLogEvent)
+        /// Consumes the builder and constructs a [`FilteredLogEvent`](crate::model::FilteredLogEvent).
         pub fn build(self) -> crate::model::FilteredLogEvent {
             crate::model::FilteredLogEvent {
                 log_stream_name: self.log_stream_name,
@@ -1751,7 +1781,7 @@ pub mod filtered_log_event {
     }
 }
 impl FilteredLogEvent {
-    /// Creates a new builder-style object to manufacture [`FilteredLogEvent`](crate::model::FilteredLogEvent)
+    /// Creates a new builder-style object to manufacture [`FilteredLogEvent`](crate::model::FilteredLogEvent).
     pub fn builder() -> crate::model::filtered_log_event::Builder {
         crate::model::filtered_log_event::Builder::default()
     }
@@ -1762,18 +1792,25 @@ impl FilteredLogEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SubscriptionFilter {
     /// <p>The name of the subscription filter.</p>
+    #[doc(hidden)]
     pub filter_name: std::option::Option<std::string::String>,
     /// <p>The name of the log group.</p>
+    #[doc(hidden)]
     pub log_group_name: std::option::Option<std::string::String>,
     /// <p>A symbolic description of how CloudWatch Logs should interpret the data in each log event. For example, a log event can contain timestamps, IP addresses, strings, and so on. You use the filter pattern to specify what to look for in the log event message.</p>
+    #[doc(hidden)]
     pub filter_pattern: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the destination.</p>
+    #[doc(hidden)]
     pub destination_arn: std::option::Option<std::string::String>,
     /// <p></p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The method used to distribute log data to the destination, which can be either random or grouped by log stream.</p>
+    #[doc(hidden)]
     pub distribution: std::option::Option<crate::model::Distribution>,
     /// <p>The creation time of the subscription filter, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<i64>,
 }
 impl SubscriptionFilter {
@@ -1819,11 +1856,10 @@ impl std::fmt::Debug for SubscriptionFilter {
         formatter.finish()
     }
 }
-/// See [`SubscriptionFilter`](crate::model::SubscriptionFilter)
+/// See [`SubscriptionFilter`](crate::model::SubscriptionFilter).
 pub mod subscription_filter {
 
-    /// A builder for [`SubscriptionFilter`](crate::model::SubscriptionFilter)
-    #[non_exhaustive]
+    /// A builder for [`SubscriptionFilter`](crate::model::SubscriptionFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) filter_name: std::option::Option<std::string::String>,
@@ -1917,7 +1953,7 @@ pub mod subscription_filter {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`SubscriptionFilter`](crate::model::SubscriptionFilter)
+        /// Consumes the builder and constructs a [`SubscriptionFilter`](crate::model::SubscriptionFilter).
         pub fn build(self) -> crate::model::SubscriptionFilter {
             crate::model::SubscriptionFilter {
                 filter_name: self.filter_name,
@@ -1932,7 +1968,7 @@ pub mod subscription_filter {
     }
 }
 impl SubscriptionFilter {
-    /// Creates a new builder-style object to manufacture [`SubscriptionFilter`](crate::model::SubscriptionFilter)
+    /// Creates a new builder-style object to manufacture [`SubscriptionFilter`](crate::model::SubscriptionFilter).
     pub fn builder() -> crate::model::subscription_filter::Builder {
         crate::model::subscription_filter::Builder::default()
     }
@@ -1943,14 +1979,19 @@ impl SubscriptionFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryDefinition {
     /// <p>The unique ID of the query definition.</p>
+    #[doc(hidden)]
     pub query_definition_id: std::option::Option<std::string::String>,
     /// <p>The name of the query definition.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The query string to use for this definition. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html">CloudWatch Logs Insights Query Syntax</a>.</p>
+    #[doc(hidden)]
     pub query_string: std::option::Option<std::string::String>,
     /// <p>The date that the query definition was most recently modified.</p>
+    #[doc(hidden)]
     pub last_modified: std::option::Option<i64>,
     /// <p>If this query definition contains a list of log groups that it is limited to, that list appears here.</p>
+    #[doc(hidden)]
     pub log_group_names: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl QueryDefinition {
@@ -1986,11 +2027,10 @@ impl std::fmt::Debug for QueryDefinition {
         formatter.finish()
     }
 }
-/// See [`QueryDefinition`](crate::model::QueryDefinition)
+/// See [`QueryDefinition`](crate::model::QueryDefinition).
 pub mod query_definition {
 
-    /// A builder for [`QueryDefinition`](crate::model::QueryDefinition)
-    #[non_exhaustive]
+    /// A builder for [`QueryDefinition`](crate::model::QueryDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) query_definition_id: std::option::Option<std::string::String>,
@@ -2062,7 +2102,7 @@ pub mod query_definition {
             self.log_group_names = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryDefinition`](crate::model::QueryDefinition)
+        /// Consumes the builder and constructs a [`QueryDefinition`](crate::model::QueryDefinition).
         pub fn build(self) -> crate::model::QueryDefinition {
             crate::model::QueryDefinition {
                 query_definition_id: self.query_definition_id,
@@ -2075,7 +2115,7 @@ pub mod query_definition {
     }
 }
 impl QueryDefinition {
-    /// Creates a new builder-style object to manufacture [`QueryDefinition`](crate::model::QueryDefinition)
+    /// Creates a new builder-style object to manufacture [`QueryDefinition`](crate::model::QueryDefinition).
     pub fn builder() -> crate::model::query_definition::Builder {
         crate::model::query_definition::Builder::default()
     }
@@ -2086,14 +2126,19 @@ impl QueryDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryInfo {
     /// <p>The unique ID number of this query.</p>
+    #[doc(hidden)]
     pub query_id: std::option::Option<std::string::String>,
     /// <p>The query string used in this query.</p>
+    #[doc(hidden)]
     pub query_string: std::option::Option<std::string::String>,
     /// <p>The status of this query. Possible values are <code>Cancelled</code>, <code>Complete</code>, <code>Failed</code>, <code>Running</code>, <code>Scheduled</code>, and <code>Unknown</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::QueryStatus>,
     /// <p>The date and time that this query was created.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<i64>,
     /// <p>The name of the log group scanned by this query.</p>
+    #[doc(hidden)]
     pub log_group_name: std::option::Option<std::string::String>,
 }
 impl QueryInfo {
@@ -2129,11 +2174,10 @@ impl std::fmt::Debug for QueryInfo {
         formatter.finish()
     }
 }
-/// See [`QueryInfo`](crate::model::QueryInfo)
+/// See [`QueryInfo`](crate::model::QueryInfo).
 pub mod query_info {
 
-    /// A builder for [`QueryInfo`](crate::model::QueryInfo)
-    #[non_exhaustive]
+    /// A builder for [`QueryInfo`](crate::model::QueryInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) query_id: std::option::Option<std::string::String>,
@@ -2196,7 +2240,7 @@ pub mod query_info {
             self.log_group_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryInfo`](crate::model::QueryInfo)
+        /// Consumes the builder and constructs a [`QueryInfo`](crate::model::QueryInfo).
         pub fn build(self) -> crate::model::QueryInfo {
             crate::model::QueryInfo {
                 query_id: self.query_id,
@@ -2209,7 +2253,7 @@ pub mod query_info {
     }
 }
 impl QueryInfo {
-    /// Creates a new builder-style object to manufacture [`QueryInfo`](crate::model::QueryInfo)
+    /// Creates a new builder-style object to manufacture [`QueryInfo`](crate::model::QueryInfo).
     pub fn builder() -> crate::model::query_info::Builder {
         crate::model::query_info::Builder::default()
     }
@@ -2220,15 +2264,20 @@ impl QueryInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricFilter {
     /// <p>The name of the metric filter.</p>
+    #[doc(hidden)]
     pub filter_name: std::option::Option<std::string::String>,
     /// <p>A symbolic description of how CloudWatch Logs should interpret the data in each log event. For example, a log event can contain timestamps, IP addresses, strings, and so on. You use the filter pattern to specify what to look for in the log event message.</p>
+    #[doc(hidden)]
     pub filter_pattern: std::option::Option<std::string::String>,
     /// <p>The metric transformations.</p>
+    #[doc(hidden)]
     pub metric_transformations:
         std::option::Option<std::vec::Vec<crate::model::MetricTransformation>>,
     /// <p>The creation time of the metric filter, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<i64>,
     /// <p>The name of the log group.</p>
+    #[doc(hidden)]
     pub log_group_name: std::option::Option<std::string::String>,
 }
 impl MetricFilter {
@@ -2266,11 +2315,10 @@ impl std::fmt::Debug for MetricFilter {
         formatter.finish()
     }
 }
-/// See [`MetricFilter`](crate::model::MetricFilter)
+/// See [`MetricFilter`](crate::model::MetricFilter).
 pub mod metric_filter {
 
-    /// A builder for [`MetricFilter`](crate::model::MetricFilter)
-    #[non_exhaustive]
+    /// A builder for [`MetricFilter`](crate::model::MetricFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) filter_name: std::option::Option<std::string::String>,
@@ -2346,7 +2394,7 @@ pub mod metric_filter {
             self.log_group_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricFilter`](crate::model::MetricFilter)
+        /// Consumes the builder and constructs a [`MetricFilter`](crate::model::MetricFilter).
         pub fn build(self) -> crate::model::MetricFilter {
             crate::model::MetricFilter {
                 filter_name: self.filter_name,
@@ -2359,7 +2407,7 @@ pub mod metric_filter {
     }
 }
 impl MetricFilter {
-    /// Creates a new builder-style object to manufacture [`MetricFilter`](crate::model::MetricFilter)
+    /// Creates a new builder-style object to manufacture [`MetricFilter`](crate::model::MetricFilter).
     pub fn builder() -> crate::model::metric_filter::Builder {
         crate::model::metric_filter::Builder::default()
     }
@@ -2370,21 +2418,32 @@ impl MetricFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogStream {
     /// <p>The name of the log stream.</p>
+    #[doc(hidden)]
     pub log_stream_name: std::option::Option<std::string::String>,
     /// <p>The creation time of the stream, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<i64>,
     /// <p>The time of the first event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub first_event_timestamp: std::option::Option<i64>,
     /// <p>The time of the most recent log event in the log stream in CloudWatch Logs. This number is expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC. The <code>lastEventTime</code> value updates on an eventual consistency basis. It typically updates in less than an hour from ingestion, but in rare situations might take longer.</p>
+    #[doc(hidden)]
     pub last_event_timestamp: std::option::Option<i64>,
     /// <p>The ingestion time, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub last_ingestion_time: std::option::Option<i64>,
     /// <p>The sequence token.</p>
+    #[doc(hidden)]
     pub upload_sequence_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the log stream.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The number of bytes stored.</p>
     /// <p> <b>Important:</b> On June 17, 2019, this parameter was deprecated for log streams, and is always reported as zero. This change applies only to log streams. The <code>storedBytes</code> parameter for log groups is not affected.</p>
+    #[deprecated(
+        note = "Starting on June 17, 2019, this parameter will be deprecated for log streams, and will be reported as zero. This change applies only to log streams. The storedBytes parameter for log groups is not affected."
+    )]
+    #[doc(hidden)]
     pub stored_bytes: std::option::Option<i64>,
 }
 impl LogStream {
@@ -2418,6 +2477,9 @@ impl LogStream {
     }
     /// <p>The number of bytes stored.</p>
     /// <p> <b>Important:</b> On June 17, 2019, this parameter was deprecated for log streams, and is always reported as zero. This change applies only to log streams. The <code>storedBytes</code> parameter for log groups is not affected.</p>
+    #[deprecated(
+        note = "Starting on June 17, 2019, this parameter will be deprecated for log streams, and will be reported as zero. This change applies only to log streams. The storedBytes parameter for log groups is not affected."
+    )]
     pub fn stored_bytes(&self) -> std::option::Option<i64> {
         self.stored_bytes
     }
@@ -2436,11 +2498,10 @@ impl std::fmt::Debug for LogStream {
         formatter.finish()
     }
 }
-/// See [`LogStream`](crate::model::LogStream)
+/// See [`LogStream`](crate::model::LogStream).
 pub mod log_stream {
 
-    /// A builder for [`LogStream`](crate::model::LogStream)
-    #[non_exhaustive]
+    /// A builder for [`LogStream`](crate::model::LogStream).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_stream_name: std::option::Option<std::string::String>,
@@ -2531,17 +2592,23 @@ pub mod log_stream {
         }
         /// <p>The number of bytes stored.</p>
         /// <p> <b>Important:</b> On June 17, 2019, this parameter was deprecated for log streams, and is always reported as zero. This change applies only to log streams. The <code>storedBytes</code> parameter for log groups is not affected.</p>
+        #[deprecated(
+            note = "Starting on June 17, 2019, this parameter will be deprecated for log streams, and will be reported as zero. This change applies only to log streams. The storedBytes parameter for log groups is not affected."
+        )]
         pub fn stored_bytes(mut self, input: i64) -> Self {
             self.stored_bytes = Some(input);
             self
         }
         /// <p>The number of bytes stored.</p>
         /// <p> <b>Important:</b> On June 17, 2019, this parameter was deprecated for log streams, and is always reported as zero. This change applies only to log streams. The <code>storedBytes</code> parameter for log groups is not affected.</p>
+        #[deprecated(
+            note = "Starting on June 17, 2019, this parameter will be deprecated for log streams, and will be reported as zero. This change applies only to log streams. The storedBytes parameter for log groups is not affected."
+        )]
         pub fn set_stored_bytes(mut self, input: std::option::Option<i64>) -> Self {
             self.stored_bytes = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogStream`](crate::model::LogStream)
+        /// Consumes the builder and constructs a [`LogStream`](crate::model::LogStream).
         pub fn build(self) -> crate::model::LogStream {
             crate::model::LogStream {
                 log_stream_name: self.log_stream_name,
@@ -2557,7 +2624,7 @@ pub mod log_stream {
     }
 }
 impl LogStream {
-    /// Creates a new builder-style object to manufacture [`LogStream`](crate::model::LogStream)
+    /// Creates a new builder-style object to manufacture [`LogStream`](crate::model::LogStream).
     pub fn builder() -> crate::model::log_stream::Builder {
         crate::model::log_stream::Builder::default()
     }
@@ -2623,19 +2690,26 @@ impl AsRef<str> for OrderBy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogGroup {
     /// <p>The name of the log group.</p>
+    #[doc(hidden)]
     pub log_group_name: std::option::Option<std::string::String>,
     /// <p>The creation time of the log group, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<i64>,
     /// <p>The number of days to retain the log events in the specified log group. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, 2192, 2557, 2922, 3288, and 3653.</p>
     /// <p>To set a log group to never have log events expire, use <a href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DeleteRetentionPolicy.html">DeleteRetentionPolicy</a>. </p>
+    #[doc(hidden)]
     pub retention_in_days: std::option::Option<i32>,
     /// <p>The number of metric filters.</p>
+    #[doc(hidden)]
     pub metric_filter_count: std::option::Option<i32>,
     /// <p>The Amazon Resource Name (ARN) of the log group.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The number of bytes stored.</p>
+    #[doc(hidden)]
     pub stored_bytes: std::option::Option<i64>,
     /// <p>The Amazon Resource Name (ARN) of the CMK to use when encrypting log data.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
 }
 impl LogGroup {
@@ -2682,11 +2756,10 @@ impl std::fmt::Debug for LogGroup {
         formatter.finish()
     }
 }
-/// See [`LogGroup`](crate::model::LogGroup)
+/// See [`LogGroup`](crate::model::LogGroup).
 pub mod log_group {
 
-    /// A builder for [`LogGroup`](crate::model::LogGroup)
-    #[non_exhaustive]
+    /// A builder for [`LogGroup`](crate::model::LogGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_group_name: std::option::Option<std::string::String>,
@@ -2773,7 +2846,7 @@ pub mod log_group {
             self.kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogGroup`](crate::model::LogGroup)
+        /// Consumes the builder and constructs a [`LogGroup`](crate::model::LogGroup).
         pub fn build(self) -> crate::model::LogGroup {
             crate::model::LogGroup {
                 log_group_name: self.log_group_name,
@@ -2788,7 +2861,7 @@ pub mod log_group {
     }
 }
 impl LogGroup {
-    /// Creates a new builder-style object to manufacture [`LogGroup`](crate::model::LogGroup)
+    /// Creates a new builder-style object to manufacture [`LogGroup`](crate::model::LogGroup).
     pub fn builder() -> crate::model::log_group::Builder {
         crate::model::log_group::Builder::default()
     }
@@ -2799,22 +2872,31 @@ impl LogGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportTask {
     /// <p>The ID of the export task.</p>
+    #[doc(hidden)]
     pub task_id: std::option::Option<std::string::String>,
     /// <p>The name of the export task.</p>
+    #[doc(hidden)]
     pub task_name: std::option::Option<std::string::String>,
     /// <p>The name of the log group from which logs data was exported.</p>
+    #[doc(hidden)]
     pub log_group_name: std::option::Option<std::string::String>,
     /// <p>The start time, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC. Events with a timestamp before this time are not exported.</p>
+    #[doc(hidden)]
     pub from: std::option::Option<i64>,
     /// <p>The end time, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC. Events with a timestamp later than this time are not exported.</p>
+    #[doc(hidden)]
     pub to: std::option::Option<i64>,
     /// <p>The name of the S3 bucket to which the log data was exported.</p>
+    #[doc(hidden)]
     pub destination: std::option::Option<std::string::String>,
     /// <p>The prefix that was used as the start of Amazon S3 key for every object exported.</p>
+    #[doc(hidden)]
     pub destination_prefix: std::option::Option<std::string::String>,
     /// <p>The status of the export task.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ExportTaskStatus>,
     /// <p>Execution information about the export task.</p>
+    #[doc(hidden)]
     pub execution_info: std::option::Option<crate::model::ExportTaskExecutionInfo>,
 }
 impl ExportTask {
@@ -2870,11 +2952,10 @@ impl std::fmt::Debug for ExportTask {
         formatter.finish()
     }
 }
-/// See [`ExportTask`](crate::model::ExportTask)
+/// See [`ExportTask`](crate::model::ExportTask).
 pub mod export_task {
 
-    /// A builder for [`ExportTask`](crate::model::ExportTask)
-    #[non_exhaustive]
+    /// A builder for [`ExportTask`](crate::model::ExportTask).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_id: std::option::Option<std::string::String>,
@@ -2990,7 +3071,7 @@ pub mod export_task {
             self.execution_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportTask`](crate::model::ExportTask)
+        /// Consumes the builder and constructs a [`ExportTask`](crate::model::ExportTask).
         pub fn build(self) -> crate::model::ExportTask {
             crate::model::ExportTask {
                 task_id: self.task_id,
@@ -3007,7 +3088,7 @@ pub mod export_task {
     }
 }
 impl ExportTask {
-    /// Creates a new builder-style object to manufacture [`ExportTask`](crate::model::ExportTask)
+    /// Creates a new builder-style object to manufacture [`ExportTask`](crate::model::ExportTask).
     pub fn builder() -> crate::model::export_task::Builder {
         crate::model::export_task::Builder::default()
     }
@@ -3018,8 +3099,10 @@ impl ExportTask {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportTaskExecutionInfo {
     /// <p>The creation time of the export task, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<i64>,
     /// <p>The completion time of the export task, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</p>
+    #[doc(hidden)]
     pub completion_time: std::option::Option<i64>,
 }
 impl ExportTaskExecutionInfo {
@@ -3040,11 +3123,10 @@ impl std::fmt::Debug for ExportTaskExecutionInfo {
         formatter.finish()
     }
 }
-/// See [`ExportTaskExecutionInfo`](crate::model::ExportTaskExecutionInfo)
+/// See [`ExportTaskExecutionInfo`](crate::model::ExportTaskExecutionInfo).
 pub mod export_task_execution_info {
 
-    /// A builder for [`ExportTaskExecutionInfo`](crate::model::ExportTaskExecutionInfo)
-    #[non_exhaustive]
+    /// A builder for [`ExportTaskExecutionInfo`](crate::model::ExportTaskExecutionInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_time: std::option::Option<i64>,
@@ -3071,7 +3153,7 @@ pub mod export_task_execution_info {
             self.completion_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportTaskExecutionInfo`](crate::model::ExportTaskExecutionInfo)
+        /// Consumes the builder and constructs a [`ExportTaskExecutionInfo`](crate::model::ExportTaskExecutionInfo).
         pub fn build(self) -> crate::model::ExportTaskExecutionInfo {
             crate::model::ExportTaskExecutionInfo {
                 creation_time: self.creation_time,
@@ -3081,7 +3163,7 @@ pub mod export_task_execution_info {
     }
 }
 impl ExportTaskExecutionInfo {
-    /// Creates a new builder-style object to manufacture [`ExportTaskExecutionInfo`](crate::model::ExportTaskExecutionInfo)
+    /// Creates a new builder-style object to manufacture [`ExportTaskExecutionInfo`](crate::model::ExportTaskExecutionInfo).
     pub fn builder() -> crate::model::export_task_execution_info::Builder {
         crate::model::export_task_execution_info::Builder::default()
     }
@@ -3092,8 +3174,10 @@ impl ExportTaskExecutionInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportTaskStatus {
     /// <p>The status code of the export task.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::ExportTaskStatusCode>,
     /// <p>The status message related to the status code.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ExportTaskStatus {
@@ -3114,11 +3198,10 @@ impl std::fmt::Debug for ExportTaskStatus {
         formatter.finish()
     }
 }
-/// See [`ExportTaskStatus`](crate::model::ExportTaskStatus)
+/// See [`ExportTaskStatus`](crate::model::ExportTaskStatus).
 pub mod export_task_status {
 
-    /// A builder for [`ExportTaskStatus`](crate::model::ExportTaskStatus)
-    #[non_exhaustive]
+    /// A builder for [`ExportTaskStatus`](crate::model::ExportTaskStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ExportTaskStatusCode>,
@@ -3148,7 +3231,7 @@ pub mod export_task_status {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportTaskStatus`](crate::model::ExportTaskStatus)
+        /// Consumes the builder and constructs a [`ExportTaskStatus`](crate::model::ExportTaskStatus).
         pub fn build(self) -> crate::model::ExportTaskStatus {
             crate::model::ExportTaskStatus {
                 code: self.code,
@@ -3158,7 +3241,7 @@ pub mod export_task_status {
     }
 }
 impl ExportTaskStatus {
-    /// Creates a new builder-style object to manufacture [`ExportTaskStatus`](crate::model::ExportTaskStatus)
+    /// Creates a new builder-style object to manufacture [`ExportTaskStatus`](crate::model::ExportTaskStatus).
     pub fn builder() -> crate::model::export_task_status::Builder {
         crate::model::export_task_status::Builder::default()
     }

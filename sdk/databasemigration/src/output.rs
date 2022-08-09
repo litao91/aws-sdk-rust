@@ -3,8 +3,64 @@
 /// <p></p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateSubscriptionsToEventBridgeOutput {
+    /// <p>A string that indicates how many event subscriptions were migrated and how many remain to be migrated.</p>
+    #[doc(hidden)]
+    pub result: std::option::Option<std::string::String>,
+}
+impl UpdateSubscriptionsToEventBridgeOutput {
+    /// <p>A string that indicates how many event subscriptions were migrated and how many remain to be migrated.</p>
+    pub fn result(&self) -> std::option::Option<&str> {
+        self.result.as_deref()
+    }
+}
+impl std::fmt::Debug for UpdateSubscriptionsToEventBridgeOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateSubscriptionsToEventBridgeOutput");
+        formatter.field("result", &self.result);
+        formatter.finish()
+    }
+}
+/// See [`UpdateSubscriptionsToEventBridgeOutput`](crate::output::UpdateSubscriptionsToEventBridgeOutput).
+pub mod update_subscriptions_to_event_bridge_output {
+
+    /// A builder for [`UpdateSubscriptionsToEventBridgeOutput`](crate::output::UpdateSubscriptionsToEventBridgeOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) result: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>A string that indicates how many event subscriptions were migrated and how many remain to be migrated.</p>
+        pub fn result(mut self, input: impl Into<std::string::String>) -> Self {
+            self.result = Some(input.into());
+            self
+        }
+        /// <p>A string that indicates how many event subscriptions were migrated and how many remain to be migrated.</p>
+        pub fn set_result(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.result = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`UpdateSubscriptionsToEventBridgeOutput`](crate::output::UpdateSubscriptionsToEventBridgeOutput).
+        pub fn build(self) -> crate::output::UpdateSubscriptionsToEventBridgeOutput {
+            crate::output::UpdateSubscriptionsToEventBridgeOutput {
+                result: self.result,
+            }
+        }
+    }
+}
+impl UpdateSubscriptionsToEventBridgeOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateSubscriptionsToEventBridgeOutput`](crate::output::UpdateSubscriptionsToEventBridgeOutput).
+    pub fn builder() -> crate::output::update_subscriptions_to_event_bridge_output::Builder {
+        crate::output::update_subscriptions_to_event_bridge_output::Builder::default()
+    }
+}
+
+/// <p></p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TestConnectionOutput {
     /// <p>The connection tested.</p>
+    #[doc(hidden)]
     pub connection: std::option::Option<crate::model::Connection>,
 }
 impl TestConnectionOutput {
@@ -20,11 +76,10 @@ impl std::fmt::Debug for TestConnectionOutput {
         formatter.finish()
     }
 }
-/// See [`TestConnectionOutput`](crate::output::TestConnectionOutput)
+/// See [`TestConnectionOutput`](crate::output::TestConnectionOutput).
 pub mod test_connection_output {
 
-    /// A builder for [`TestConnectionOutput`](crate::output::TestConnectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`TestConnectionOutput`](crate::output::TestConnectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connection: std::option::Option<crate::model::Connection>,
@@ -43,7 +98,7 @@ pub mod test_connection_output {
             self.connection = input;
             self
         }
-        /// Consumes the builder and constructs a [`TestConnectionOutput`](crate::output::TestConnectionOutput)
+        /// Consumes the builder and constructs a [`TestConnectionOutput`](crate::output::TestConnectionOutput).
         pub fn build(self) -> crate::output::TestConnectionOutput {
             crate::output::TestConnectionOutput {
                 connection: self.connection,
@@ -52,7 +107,7 @@ pub mod test_connection_output {
     }
 }
 impl TestConnectionOutput {
-    /// Creates a new builder-style object to manufacture [`TestConnectionOutput`](crate::output::TestConnectionOutput)
+    /// Creates a new builder-style object to manufacture [`TestConnectionOutput`](crate::output::TestConnectionOutput).
     pub fn builder() -> crate::output::test_connection_output::Builder {
         crate::output::test_connection_output::Builder::default()
     }
@@ -63,6 +118,7 @@ impl TestConnectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StopReplicationTaskOutput {
     /// <p>The replication task stopped.</p>
+    #[doc(hidden)]
     pub replication_task: std::option::Option<crate::model::ReplicationTask>,
 }
 impl StopReplicationTaskOutput {
@@ -78,11 +134,10 @@ impl std::fmt::Debug for StopReplicationTaskOutput {
         formatter.finish()
     }
 }
-/// See [`StopReplicationTaskOutput`](crate::output::StopReplicationTaskOutput)
+/// See [`StopReplicationTaskOutput`](crate::output::StopReplicationTaskOutput).
 pub mod stop_replication_task_output {
 
-    /// A builder for [`StopReplicationTaskOutput`](crate::output::StopReplicationTaskOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopReplicationTaskOutput`](crate::output::StopReplicationTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task: std::option::Option<crate::model::ReplicationTask>,
@@ -101,7 +156,7 @@ pub mod stop_replication_task_output {
             self.replication_task = input;
             self
         }
-        /// Consumes the builder and constructs a [`StopReplicationTaskOutput`](crate::output::StopReplicationTaskOutput)
+        /// Consumes the builder and constructs a [`StopReplicationTaskOutput`](crate::output::StopReplicationTaskOutput).
         pub fn build(self) -> crate::output::StopReplicationTaskOutput {
             crate::output::StopReplicationTaskOutput {
                 replication_task: self.replication_task,
@@ -110,7 +165,7 @@ pub mod stop_replication_task_output {
     }
 }
 impl StopReplicationTaskOutput {
-    /// Creates a new builder-style object to manufacture [`StopReplicationTaskOutput`](crate::output::StopReplicationTaskOutput)
+    /// Creates a new builder-style object to manufacture [`StopReplicationTaskOutput`](crate::output::StopReplicationTaskOutput).
     pub fn builder() -> crate::output::stop_replication_task_output::Builder {
         crate::output::stop_replication_task_output::Builder::default()
     }
@@ -121,6 +176,7 @@ impl StopReplicationTaskOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartReplicationTaskAssessmentRunOutput {
     /// <p>The premigration assessment run that was started.</p>
+    #[doc(hidden)]
     pub replication_task_assessment_run:
         std::option::Option<crate::model::ReplicationTaskAssessmentRun>,
 }
@@ -142,11 +198,10 @@ impl std::fmt::Debug for StartReplicationTaskAssessmentRunOutput {
         formatter.finish()
     }
 }
-/// See [`StartReplicationTaskAssessmentRunOutput`](crate::output::StartReplicationTaskAssessmentRunOutput)
+/// See [`StartReplicationTaskAssessmentRunOutput`](crate::output::StartReplicationTaskAssessmentRunOutput).
 pub mod start_replication_task_assessment_run_output {
 
-    /// A builder for [`StartReplicationTaskAssessmentRunOutput`](crate::output::StartReplicationTaskAssessmentRunOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartReplicationTaskAssessmentRunOutput`](crate::output::StartReplicationTaskAssessmentRunOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task_assessment_run:
@@ -169,7 +224,7 @@ pub mod start_replication_task_assessment_run_output {
             self.replication_task_assessment_run = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartReplicationTaskAssessmentRunOutput`](crate::output::StartReplicationTaskAssessmentRunOutput)
+        /// Consumes the builder and constructs a [`StartReplicationTaskAssessmentRunOutput`](crate::output::StartReplicationTaskAssessmentRunOutput).
         pub fn build(self) -> crate::output::StartReplicationTaskAssessmentRunOutput {
             crate::output::StartReplicationTaskAssessmentRunOutput {
                 replication_task_assessment_run: self.replication_task_assessment_run,
@@ -178,7 +233,7 @@ pub mod start_replication_task_assessment_run_output {
     }
 }
 impl StartReplicationTaskAssessmentRunOutput {
-    /// Creates a new builder-style object to manufacture [`StartReplicationTaskAssessmentRunOutput`](crate::output::StartReplicationTaskAssessmentRunOutput)
+    /// Creates a new builder-style object to manufacture [`StartReplicationTaskAssessmentRunOutput`](crate::output::StartReplicationTaskAssessmentRunOutput).
     pub fn builder() -> crate::output::start_replication_task_assessment_run_output::Builder {
         crate::output::start_replication_task_assessment_run_output::Builder::default()
     }
@@ -189,6 +244,7 @@ impl StartReplicationTaskAssessmentRunOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartReplicationTaskAssessmentOutput {
     /// <p> The assessed replication task. </p>
+    #[doc(hidden)]
     pub replication_task: std::option::Option<crate::model::ReplicationTask>,
 }
 impl StartReplicationTaskAssessmentOutput {
@@ -204,11 +260,10 @@ impl std::fmt::Debug for StartReplicationTaskAssessmentOutput {
         formatter.finish()
     }
 }
-/// See [`StartReplicationTaskAssessmentOutput`](crate::output::StartReplicationTaskAssessmentOutput)
+/// See [`StartReplicationTaskAssessmentOutput`](crate::output::StartReplicationTaskAssessmentOutput).
 pub mod start_replication_task_assessment_output {
 
-    /// A builder for [`StartReplicationTaskAssessmentOutput`](crate::output::StartReplicationTaskAssessmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartReplicationTaskAssessmentOutput`](crate::output::StartReplicationTaskAssessmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task: std::option::Option<crate::model::ReplicationTask>,
@@ -227,7 +282,7 @@ pub mod start_replication_task_assessment_output {
             self.replication_task = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartReplicationTaskAssessmentOutput`](crate::output::StartReplicationTaskAssessmentOutput)
+        /// Consumes the builder and constructs a [`StartReplicationTaskAssessmentOutput`](crate::output::StartReplicationTaskAssessmentOutput).
         pub fn build(self) -> crate::output::StartReplicationTaskAssessmentOutput {
             crate::output::StartReplicationTaskAssessmentOutput {
                 replication_task: self.replication_task,
@@ -236,7 +291,7 @@ pub mod start_replication_task_assessment_output {
     }
 }
 impl StartReplicationTaskAssessmentOutput {
-    /// Creates a new builder-style object to manufacture [`StartReplicationTaskAssessmentOutput`](crate::output::StartReplicationTaskAssessmentOutput)
+    /// Creates a new builder-style object to manufacture [`StartReplicationTaskAssessmentOutput`](crate::output::StartReplicationTaskAssessmentOutput).
     pub fn builder() -> crate::output::start_replication_task_assessment_output::Builder {
         crate::output::start_replication_task_assessment_output::Builder::default()
     }
@@ -247,6 +302,7 @@ impl StartReplicationTaskAssessmentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartReplicationTaskOutput {
     /// <p>The replication task started.</p>
+    #[doc(hidden)]
     pub replication_task: std::option::Option<crate::model::ReplicationTask>,
 }
 impl StartReplicationTaskOutput {
@@ -262,11 +318,10 @@ impl std::fmt::Debug for StartReplicationTaskOutput {
         formatter.finish()
     }
 }
-/// See [`StartReplicationTaskOutput`](crate::output::StartReplicationTaskOutput)
+/// See [`StartReplicationTaskOutput`](crate::output::StartReplicationTaskOutput).
 pub mod start_replication_task_output {
 
-    /// A builder for [`StartReplicationTaskOutput`](crate::output::StartReplicationTaskOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartReplicationTaskOutput`](crate::output::StartReplicationTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task: std::option::Option<crate::model::ReplicationTask>,
@@ -285,7 +340,7 @@ pub mod start_replication_task_output {
             self.replication_task = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartReplicationTaskOutput`](crate::output::StartReplicationTaskOutput)
+        /// Consumes the builder and constructs a [`StartReplicationTaskOutput`](crate::output::StartReplicationTaskOutput).
         pub fn build(self) -> crate::output::StartReplicationTaskOutput {
             crate::output::StartReplicationTaskOutput {
                 replication_task: self.replication_task,
@@ -294,7 +349,7 @@ pub mod start_replication_task_output {
     }
 }
 impl StartReplicationTaskOutput {
-    /// Creates a new builder-style object to manufacture [`StartReplicationTaskOutput`](crate::output::StartReplicationTaskOutput)
+    /// Creates a new builder-style object to manufacture [`StartReplicationTaskOutput`](crate::output::StartReplicationTaskOutput).
     pub fn builder() -> crate::output::start_replication_task_output::Builder {
         crate::output::start_replication_task_output::Builder::default()
     }
@@ -305,8 +360,10 @@ impl StartReplicationTaskOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RunFleetAdvisorLsaAnalysisOutput {
     /// <p>The ID of the LSA analysis run.</p>
+    #[doc(hidden)]
     pub lsa_analysis_id: std::option::Option<std::string::String>,
     /// <p>The status of the LSA analysis, for example <code>COMPLETED</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl RunFleetAdvisorLsaAnalysisOutput {
@@ -327,11 +384,10 @@ impl std::fmt::Debug for RunFleetAdvisorLsaAnalysisOutput {
         formatter.finish()
     }
 }
-/// See [`RunFleetAdvisorLsaAnalysisOutput`](crate::output::RunFleetAdvisorLsaAnalysisOutput)
+/// See [`RunFleetAdvisorLsaAnalysisOutput`](crate::output::RunFleetAdvisorLsaAnalysisOutput).
 pub mod run_fleet_advisor_lsa_analysis_output {
 
-    /// A builder for [`RunFleetAdvisorLsaAnalysisOutput`](crate::output::RunFleetAdvisorLsaAnalysisOutput)
-    #[non_exhaustive]
+    /// A builder for [`RunFleetAdvisorLsaAnalysisOutput`](crate::output::RunFleetAdvisorLsaAnalysisOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lsa_analysis_id: std::option::Option<std::string::String>,
@@ -361,7 +417,7 @@ pub mod run_fleet_advisor_lsa_analysis_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`RunFleetAdvisorLsaAnalysisOutput`](crate::output::RunFleetAdvisorLsaAnalysisOutput)
+        /// Consumes the builder and constructs a [`RunFleetAdvisorLsaAnalysisOutput`](crate::output::RunFleetAdvisorLsaAnalysisOutput).
         pub fn build(self) -> crate::output::RunFleetAdvisorLsaAnalysisOutput {
             crate::output::RunFleetAdvisorLsaAnalysisOutput {
                 lsa_analysis_id: self.lsa_analysis_id,
@@ -371,7 +427,7 @@ pub mod run_fleet_advisor_lsa_analysis_output {
     }
 }
 impl RunFleetAdvisorLsaAnalysisOutput {
-    /// Creates a new builder-style object to manufacture [`RunFleetAdvisorLsaAnalysisOutput`](crate::output::RunFleetAdvisorLsaAnalysisOutput)
+    /// Creates a new builder-style object to manufacture [`RunFleetAdvisorLsaAnalysisOutput`](crate::output::RunFleetAdvisorLsaAnalysisOutput).
     pub fn builder() -> crate::output::run_fleet_advisor_lsa_analysis_output::Builder {
         crate::output::run_fleet_advisor_lsa_analysis_output::Builder::default()
     }
@@ -387,22 +443,21 @@ impl std::fmt::Debug for RemoveTagsFromResourceOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
+/// See [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput).
 pub mod remove_tags_from_resource_output {
 
-    /// A builder for [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
+        /// Consumes the builder and constructs a [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput).
         pub fn build(self) -> crate::output::RemoveTagsFromResourceOutput {
             crate::output::RemoveTagsFromResourceOutput {}
         }
     }
 }
 impl RemoveTagsFromResourceOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput).
     pub fn builder() -> crate::output::remove_tags_from_resource_output::Builder {
         crate::output::remove_tags_from_resource_output::Builder::default()
     }
@@ -413,6 +468,7 @@ impl RemoveTagsFromResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReloadTablesOutput {
     /// <p>The Amazon Resource Name (ARN) of the replication task. </p>
+    #[doc(hidden)]
     pub replication_task_arn: std::option::Option<std::string::String>,
 }
 impl ReloadTablesOutput {
@@ -428,11 +484,10 @@ impl std::fmt::Debug for ReloadTablesOutput {
         formatter.finish()
     }
 }
-/// See [`ReloadTablesOutput`](crate::output::ReloadTablesOutput)
+/// See [`ReloadTablesOutput`](crate::output::ReloadTablesOutput).
 pub mod reload_tables_output {
 
-    /// A builder for [`ReloadTablesOutput`](crate::output::ReloadTablesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ReloadTablesOutput`](crate::output::ReloadTablesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task_arn: std::option::Option<std::string::String>,
@@ -451,7 +506,7 @@ pub mod reload_tables_output {
             self.replication_task_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReloadTablesOutput`](crate::output::ReloadTablesOutput)
+        /// Consumes the builder and constructs a [`ReloadTablesOutput`](crate::output::ReloadTablesOutput).
         pub fn build(self) -> crate::output::ReloadTablesOutput {
             crate::output::ReloadTablesOutput {
                 replication_task_arn: self.replication_task_arn,
@@ -460,7 +515,7 @@ pub mod reload_tables_output {
     }
 }
 impl ReloadTablesOutput {
-    /// Creates a new builder-style object to manufacture [`ReloadTablesOutput`](crate::output::ReloadTablesOutput)
+    /// Creates a new builder-style object to manufacture [`ReloadTablesOutput`](crate::output::ReloadTablesOutput).
     pub fn builder() -> crate::output::reload_tables_output::Builder {
         crate::output::reload_tables_output::Builder::default()
     }
@@ -471,6 +526,7 @@ impl ReloadTablesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RefreshSchemasOutput {
     /// <p>The status of the refreshed schema.</p>
+    #[doc(hidden)]
     pub refresh_schemas_status: std::option::Option<crate::model::RefreshSchemasStatus>,
 }
 impl RefreshSchemasOutput {
@@ -488,11 +544,10 @@ impl std::fmt::Debug for RefreshSchemasOutput {
         formatter.finish()
     }
 }
-/// See [`RefreshSchemasOutput`](crate::output::RefreshSchemasOutput)
+/// See [`RefreshSchemasOutput`](crate::output::RefreshSchemasOutput).
 pub mod refresh_schemas_output {
 
-    /// A builder for [`RefreshSchemasOutput`](crate::output::RefreshSchemasOutput)
-    #[non_exhaustive]
+    /// A builder for [`RefreshSchemasOutput`](crate::output::RefreshSchemasOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) refresh_schemas_status: std::option::Option<crate::model::RefreshSchemasStatus>,
@@ -511,7 +566,7 @@ pub mod refresh_schemas_output {
             self.refresh_schemas_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`RefreshSchemasOutput`](crate::output::RefreshSchemasOutput)
+        /// Consumes the builder and constructs a [`RefreshSchemasOutput`](crate::output::RefreshSchemasOutput).
         pub fn build(self) -> crate::output::RefreshSchemasOutput {
             crate::output::RefreshSchemasOutput {
                 refresh_schemas_status: self.refresh_schemas_status,
@@ -520,7 +575,7 @@ pub mod refresh_schemas_output {
     }
 }
 impl RefreshSchemasOutput {
-    /// Creates a new builder-style object to manufacture [`RefreshSchemasOutput`](crate::output::RefreshSchemasOutput)
+    /// Creates a new builder-style object to manufacture [`RefreshSchemasOutput`](crate::output::RefreshSchemasOutput).
     pub fn builder() -> crate::output::refresh_schemas_output::Builder {
         crate::output::refresh_schemas_output::Builder::default()
     }
@@ -531,6 +586,7 @@ impl RefreshSchemasOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RebootReplicationInstanceOutput {
     /// <p>The replication instance that is being rebooted. </p>
+    #[doc(hidden)]
     pub replication_instance: std::option::Option<crate::model::ReplicationInstance>,
 }
 impl RebootReplicationInstanceOutput {
@@ -546,11 +602,10 @@ impl std::fmt::Debug for RebootReplicationInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`RebootReplicationInstanceOutput`](crate::output::RebootReplicationInstanceOutput)
+/// See [`RebootReplicationInstanceOutput`](crate::output::RebootReplicationInstanceOutput).
 pub mod reboot_replication_instance_output {
 
-    /// A builder for [`RebootReplicationInstanceOutput`](crate::output::RebootReplicationInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`RebootReplicationInstanceOutput`](crate::output::RebootReplicationInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_instance: std::option::Option<crate::model::ReplicationInstance>,
@@ -569,7 +624,7 @@ pub mod reboot_replication_instance_output {
             self.replication_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`RebootReplicationInstanceOutput`](crate::output::RebootReplicationInstanceOutput)
+        /// Consumes the builder and constructs a [`RebootReplicationInstanceOutput`](crate::output::RebootReplicationInstanceOutput).
         pub fn build(self) -> crate::output::RebootReplicationInstanceOutput {
             crate::output::RebootReplicationInstanceOutput {
                 replication_instance: self.replication_instance,
@@ -578,7 +633,7 @@ pub mod reboot_replication_instance_output {
     }
 }
 impl RebootReplicationInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`RebootReplicationInstanceOutput`](crate::output::RebootReplicationInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`RebootReplicationInstanceOutput`](crate::output::RebootReplicationInstanceOutput).
     pub fn builder() -> crate::output::reboot_replication_instance_output::Builder {
         crate::output::reboot_replication_instance_output::Builder::default()
     }
@@ -589,6 +644,7 @@ impl RebootReplicationInstanceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MoveReplicationTaskOutput {
     /// <p>The replication task that was moved.</p>
+    #[doc(hidden)]
     pub replication_task: std::option::Option<crate::model::ReplicationTask>,
 }
 impl MoveReplicationTaskOutput {
@@ -604,11 +660,10 @@ impl std::fmt::Debug for MoveReplicationTaskOutput {
         formatter.finish()
     }
 }
-/// See [`MoveReplicationTaskOutput`](crate::output::MoveReplicationTaskOutput)
+/// See [`MoveReplicationTaskOutput`](crate::output::MoveReplicationTaskOutput).
 pub mod move_replication_task_output {
 
-    /// A builder for [`MoveReplicationTaskOutput`](crate::output::MoveReplicationTaskOutput)
-    #[non_exhaustive]
+    /// A builder for [`MoveReplicationTaskOutput`](crate::output::MoveReplicationTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task: std::option::Option<crate::model::ReplicationTask>,
@@ -627,7 +682,7 @@ pub mod move_replication_task_output {
             self.replication_task = input;
             self
         }
-        /// Consumes the builder and constructs a [`MoveReplicationTaskOutput`](crate::output::MoveReplicationTaskOutput)
+        /// Consumes the builder and constructs a [`MoveReplicationTaskOutput`](crate::output::MoveReplicationTaskOutput).
         pub fn build(self) -> crate::output::MoveReplicationTaskOutput {
             crate::output::MoveReplicationTaskOutput {
                 replication_task: self.replication_task,
@@ -636,7 +691,7 @@ pub mod move_replication_task_output {
     }
 }
 impl MoveReplicationTaskOutput {
-    /// Creates a new builder-style object to manufacture [`MoveReplicationTaskOutput`](crate::output::MoveReplicationTaskOutput)
+    /// Creates a new builder-style object to manufacture [`MoveReplicationTaskOutput`](crate::output::MoveReplicationTaskOutput).
     pub fn builder() -> crate::output::move_replication_task_output::Builder {
         crate::output::move_replication_task_output::Builder::default()
     }
@@ -647,6 +702,7 @@ impl MoveReplicationTaskOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyReplicationTaskOutput {
     /// <p>The replication task that was modified.</p>
+    #[doc(hidden)]
     pub replication_task: std::option::Option<crate::model::ReplicationTask>,
 }
 impl ModifyReplicationTaskOutput {
@@ -662,11 +718,10 @@ impl std::fmt::Debug for ModifyReplicationTaskOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyReplicationTaskOutput`](crate::output::ModifyReplicationTaskOutput)
+/// See [`ModifyReplicationTaskOutput`](crate::output::ModifyReplicationTaskOutput).
 pub mod modify_replication_task_output {
 
-    /// A builder for [`ModifyReplicationTaskOutput`](crate::output::ModifyReplicationTaskOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyReplicationTaskOutput`](crate::output::ModifyReplicationTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task: std::option::Option<crate::model::ReplicationTask>,
@@ -685,7 +740,7 @@ pub mod modify_replication_task_output {
             self.replication_task = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyReplicationTaskOutput`](crate::output::ModifyReplicationTaskOutput)
+        /// Consumes the builder and constructs a [`ModifyReplicationTaskOutput`](crate::output::ModifyReplicationTaskOutput).
         pub fn build(self) -> crate::output::ModifyReplicationTaskOutput {
             crate::output::ModifyReplicationTaskOutput {
                 replication_task: self.replication_task,
@@ -694,7 +749,7 @@ pub mod modify_replication_task_output {
     }
 }
 impl ModifyReplicationTaskOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyReplicationTaskOutput`](crate::output::ModifyReplicationTaskOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyReplicationTaskOutput`](crate::output::ModifyReplicationTaskOutput).
     pub fn builder() -> crate::output::modify_replication_task_output::Builder {
         crate::output::modify_replication_task_output::Builder::default()
     }
@@ -705,6 +760,7 @@ impl ModifyReplicationTaskOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyReplicationSubnetGroupOutput {
     /// <p>The modified replication subnet group.</p>
+    #[doc(hidden)]
     pub replication_subnet_group: std::option::Option<crate::model::ReplicationSubnetGroup>,
 }
 impl ModifyReplicationSubnetGroupOutput {
@@ -722,11 +778,10 @@ impl std::fmt::Debug for ModifyReplicationSubnetGroupOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyReplicationSubnetGroupOutput`](crate::output::ModifyReplicationSubnetGroupOutput)
+/// See [`ModifyReplicationSubnetGroupOutput`](crate::output::ModifyReplicationSubnetGroupOutput).
 pub mod modify_replication_subnet_group_output {
 
-    /// A builder for [`ModifyReplicationSubnetGroupOutput`](crate::output::ModifyReplicationSubnetGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyReplicationSubnetGroupOutput`](crate::output::ModifyReplicationSubnetGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_subnet_group:
@@ -749,7 +804,7 @@ pub mod modify_replication_subnet_group_output {
             self.replication_subnet_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyReplicationSubnetGroupOutput`](crate::output::ModifyReplicationSubnetGroupOutput)
+        /// Consumes the builder and constructs a [`ModifyReplicationSubnetGroupOutput`](crate::output::ModifyReplicationSubnetGroupOutput).
         pub fn build(self) -> crate::output::ModifyReplicationSubnetGroupOutput {
             crate::output::ModifyReplicationSubnetGroupOutput {
                 replication_subnet_group: self.replication_subnet_group,
@@ -758,7 +813,7 @@ pub mod modify_replication_subnet_group_output {
     }
 }
 impl ModifyReplicationSubnetGroupOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyReplicationSubnetGroupOutput`](crate::output::ModifyReplicationSubnetGroupOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyReplicationSubnetGroupOutput`](crate::output::ModifyReplicationSubnetGroupOutput).
     pub fn builder() -> crate::output::modify_replication_subnet_group_output::Builder {
         crate::output::modify_replication_subnet_group_output::Builder::default()
     }
@@ -769,6 +824,7 @@ impl ModifyReplicationSubnetGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyReplicationInstanceOutput {
     /// <p>The modified replication instance.</p>
+    #[doc(hidden)]
     pub replication_instance: std::option::Option<crate::model::ReplicationInstance>,
 }
 impl ModifyReplicationInstanceOutput {
@@ -784,11 +840,10 @@ impl std::fmt::Debug for ModifyReplicationInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyReplicationInstanceOutput`](crate::output::ModifyReplicationInstanceOutput)
+/// See [`ModifyReplicationInstanceOutput`](crate::output::ModifyReplicationInstanceOutput).
 pub mod modify_replication_instance_output {
 
-    /// A builder for [`ModifyReplicationInstanceOutput`](crate::output::ModifyReplicationInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyReplicationInstanceOutput`](crate::output::ModifyReplicationInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_instance: std::option::Option<crate::model::ReplicationInstance>,
@@ -807,7 +862,7 @@ pub mod modify_replication_instance_output {
             self.replication_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyReplicationInstanceOutput`](crate::output::ModifyReplicationInstanceOutput)
+        /// Consumes the builder and constructs a [`ModifyReplicationInstanceOutput`](crate::output::ModifyReplicationInstanceOutput).
         pub fn build(self) -> crate::output::ModifyReplicationInstanceOutput {
             crate::output::ModifyReplicationInstanceOutput {
                 replication_instance: self.replication_instance,
@@ -816,7 +871,7 @@ pub mod modify_replication_instance_output {
     }
 }
 impl ModifyReplicationInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyReplicationInstanceOutput`](crate::output::ModifyReplicationInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyReplicationInstanceOutput`](crate::output::ModifyReplicationInstanceOutput).
     pub fn builder() -> crate::output::modify_replication_instance_output::Builder {
         crate::output::modify_replication_instance_output::Builder::default()
     }
@@ -827,6 +882,7 @@ impl ModifyReplicationInstanceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyEventSubscriptionOutput {
     /// <p>The modified event subscription.</p>
+    #[doc(hidden)]
     pub event_subscription: std::option::Option<crate::model::EventSubscription>,
 }
 impl ModifyEventSubscriptionOutput {
@@ -842,11 +898,10 @@ impl std::fmt::Debug for ModifyEventSubscriptionOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput)
+/// See [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput).
 pub mod modify_event_subscription_output {
 
-    /// A builder for [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_subscription: std::option::Option<crate::model::EventSubscription>,
@@ -865,7 +920,7 @@ pub mod modify_event_subscription_output {
             self.event_subscription = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput)
+        /// Consumes the builder and constructs a [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput).
         pub fn build(self) -> crate::output::ModifyEventSubscriptionOutput {
             crate::output::ModifyEventSubscriptionOutput {
                 event_subscription: self.event_subscription,
@@ -874,7 +929,7 @@ pub mod modify_event_subscription_output {
     }
 }
 impl ModifyEventSubscriptionOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput).
     pub fn builder() -> crate::output::modify_event_subscription_output::Builder {
         crate::output::modify_event_subscription_output::Builder::default()
     }
@@ -885,6 +940,7 @@ impl ModifyEventSubscriptionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyEndpointOutput {
     /// <p>The modified endpoint.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<crate::model::Endpoint>,
 }
 impl ModifyEndpointOutput {
@@ -900,11 +956,10 @@ impl std::fmt::Debug for ModifyEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`ModifyEndpointOutput`](crate::output::ModifyEndpointOutput)
+/// See [`ModifyEndpointOutput`](crate::output::ModifyEndpointOutput).
 pub mod modify_endpoint_output {
 
-    /// A builder for [`ModifyEndpointOutput`](crate::output::ModifyEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`ModifyEndpointOutput`](crate::output::ModifyEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint: std::option::Option<crate::model::Endpoint>,
@@ -920,7 +975,7 @@ pub mod modify_endpoint_output {
             self.endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyEndpointOutput`](crate::output::ModifyEndpointOutput)
+        /// Consumes the builder and constructs a [`ModifyEndpointOutput`](crate::output::ModifyEndpointOutput).
         pub fn build(self) -> crate::output::ModifyEndpointOutput {
             crate::output::ModifyEndpointOutput {
                 endpoint: self.endpoint,
@@ -929,7 +984,7 @@ pub mod modify_endpoint_output {
     }
 }
 impl ModifyEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`ModifyEndpointOutput`](crate::output::ModifyEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`ModifyEndpointOutput`](crate::output::ModifyEndpointOutput).
     pub fn builder() -> crate::output::modify_endpoint_output::Builder {
         crate::output::modify_endpoint_output::Builder::default()
     }
@@ -940,6 +995,7 @@ impl ModifyEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>A list of tags for the resource.</p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ListTagsForResourceOutput {
@@ -955,11 +1011,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -984,7 +1039,7 @@ pub mod list_tags_for_resource_output {
             self.tag_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 tag_list: self.tag_list,
@@ -993,7 +1048,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -1004,6 +1059,7 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportCertificateOutput {
     /// <p>The certificate to be uploaded.</p>
+    #[doc(hidden)]
     pub certificate: std::option::Option<crate::model::Certificate>,
 }
 impl ImportCertificateOutput {
@@ -1019,11 +1075,10 @@ impl std::fmt::Debug for ImportCertificateOutput {
         formatter.finish()
     }
 }
-/// See [`ImportCertificateOutput`](crate::output::ImportCertificateOutput)
+/// See [`ImportCertificateOutput`](crate::output::ImportCertificateOutput).
 pub mod import_certificate_output {
 
-    /// A builder for [`ImportCertificateOutput`](crate::output::ImportCertificateOutput)
-    #[non_exhaustive]
+    /// A builder for [`ImportCertificateOutput`](crate::output::ImportCertificateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate: std::option::Option<crate::model::Certificate>,
@@ -1042,7 +1097,7 @@ pub mod import_certificate_output {
             self.certificate = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportCertificateOutput`](crate::output::ImportCertificateOutput)
+        /// Consumes the builder and constructs a [`ImportCertificateOutput`](crate::output::ImportCertificateOutput).
         pub fn build(self) -> crate::output::ImportCertificateOutput {
             crate::output::ImportCertificateOutput {
                 certificate: self.certificate,
@@ -1051,7 +1106,7 @@ pub mod import_certificate_output {
     }
 }
 impl ImportCertificateOutput {
-    /// Creates a new builder-style object to manufacture [`ImportCertificateOutput`](crate::output::ImportCertificateOutput)
+    /// Creates a new builder-style object to manufacture [`ImportCertificateOutput`](crate::output::ImportCertificateOutput).
     pub fn builder() -> crate::output::import_certificate_output::Builder {
         crate::output::import_certificate_output::Builder::default()
     }
@@ -1062,10 +1117,13 @@ impl ImportCertificateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeTableStatisticsOutput {
     /// <p>The Amazon Resource Name (ARN) of the replication task.</p>
+    #[doc(hidden)]
     pub replication_task_arn: std::option::Option<std::string::String>,
     /// <p>The table statistics.</p>
+    #[doc(hidden)]
     pub table_statistics: std::option::Option<std::vec::Vec<crate::model::TableStatistics>>,
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeTableStatisticsOutput {
@@ -1091,11 +1149,10 @@ impl std::fmt::Debug for DescribeTableStatisticsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeTableStatisticsOutput`](crate::output::DescribeTableStatisticsOutput)
+/// See [`DescribeTableStatisticsOutput`](crate::output::DescribeTableStatisticsOutput).
 pub mod describe_table_statistics_output {
 
-    /// A builder for [`DescribeTableStatisticsOutput`](crate::output::DescribeTableStatisticsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeTableStatisticsOutput`](crate::output::DescribeTableStatisticsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task_arn: std::option::Option<std::string::String>,
@@ -1146,7 +1203,7 @@ pub mod describe_table_statistics_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeTableStatisticsOutput`](crate::output::DescribeTableStatisticsOutput)
+        /// Consumes the builder and constructs a [`DescribeTableStatisticsOutput`](crate::output::DescribeTableStatisticsOutput).
         pub fn build(self) -> crate::output::DescribeTableStatisticsOutput {
             crate::output::DescribeTableStatisticsOutput {
                 replication_task_arn: self.replication_task_arn,
@@ -1157,7 +1214,7 @@ pub mod describe_table_statistics_output {
     }
 }
 impl DescribeTableStatisticsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeTableStatisticsOutput`](crate::output::DescribeTableStatisticsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeTableStatisticsOutput`](crate::output::DescribeTableStatisticsOutput).
     pub fn builder() -> crate::output::describe_table_statistics_output::Builder {
         crate::output::describe_table_statistics_output::Builder::default()
     }
@@ -1168,8 +1225,10 @@ impl DescribeTableStatisticsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSchemasOutput {
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>The described schema.</p>
+    #[doc(hidden)]
     pub schemas: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DescribeSchemasOutput {
@@ -1190,11 +1249,10 @@ impl std::fmt::Debug for DescribeSchemasOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeSchemasOutput`](crate::output::DescribeSchemasOutput)
+/// See [`DescribeSchemasOutput`](crate::output::DescribeSchemasOutput).
 pub mod describe_schemas_output {
 
-    /// A builder for [`DescribeSchemasOutput`](crate::output::DescribeSchemasOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSchemasOutput`](crate::output::DescribeSchemasOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -1230,7 +1288,7 @@ pub mod describe_schemas_output {
             self.schemas = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSchemasOutput`](crate::output::DescribeSchemasOutput)
+        /// Consumes the builder and constructs a [`DescribeSchemasOutput`](crate::output::DescribeSchemasOutput).
         pub fn build(self) -> crate::output::DescribeSchemasOutput {
             crate::output::DescribeSchemasOutput {
                 marker: self.marker,
@@ -1240,7 +1298,7 @@ pub mod describe_schemas_output {
     }
 }
 impl DescribeSchemasOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeSchemasOutput`](crate::output::DescribeSchemasOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeSchemasOutput`](crate::output::DescribeSchemasOutput).
     pub fn builder() -> crate::output::describe_schemas_output::Builder {
         crate::output::describe_schemas_output::Builder::default()
     }
@@ -1251,8 +1309,10 @@ impl DescribeSchemasOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeReplicationTasksOutput {
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A description of the replication tasks.</p>
+    #[doc(hidden)]
     pub replication_tasks: std::option::Option<std::vec::Vec<crate::model::ReplicationTask>>,
 }
 impl DescribeReplicationTasksOutput {
@@ -1273,11 +1333,10 @@ impl std::fmt::Debug for DescribeReplicationTasksOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeReplicationTasksOutput`](crate::output::DescribeReplicationTasksOutput)
+/// See [`DescribeReplicationTasksOutput`](crate::output::DescribeReplicationTasksOutput).
 pub mod describe_replication_tasks_output {
 
-    /// A builder for [`DescribeReplicationTasksOutput`](crate::output::DescribeReplicationTasksOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeReplicationTasksOutput`](crate::output::DescribeReplicationTasksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -1314,7 +1373,7 @@ pub mod describe_replication_tasks_output {
             self.replication_tasks = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeReplicationTasksOutput`](crate::output::DescribeReplicationTasksOutput)
+        /// Consumes the builder and constructs a [`DescribeReplicationTasksOutput`](crate::output::DescribeReplicationTasksOutput).
         pub fn build(self) -> crate::output::DescribeReplicationTasksOutput {
             crate::output::DescribeReplicationTasksOutput {
                 marker: self.marker,
@@ -1324,7 +1383,7 @@ pub mod describe_replication_tasks_output {
     }
 }
 impl DescribeReplicationTasksOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeReplicationTasksOutput`](crate::output::DescribeReplicationTasksOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeReplicationTasksOutput`](crate::output::DescribeReplicationTasksOutput).
     pub fn builder() -> crate::output::describe_replication_tasks_output::Builder {
         crate::output::describe_replication_tasks_output::Builder::default()
     }
@@ -1335,8 +1394,10 @@ impl DescribeReplicationTasksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeReplicationTaskIndividualAssessmentsOutput {
     /// <p>A pagination token returned for you to pass to a subsequent request. If you pass this token as the <code>Marker</code> value in a subsequent request, the response includes only records beyond the marker, up to the value specified in the request by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>One or more individual assessments as specified by <code>Filters</code>.</p>
+    #[doc(hidden)]
     pub replication_task_individual_assessments:
         std::option::Option<std::vec::Vec<crate::model::ReplicationTaskIndividualAssessment>>,
 }
@@ -1363,11 +1424,10 @@ impl std::fmt::Debug for DescribeReplicationTaskIndividualAssessmentsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeReplicationTaskIndividualAssessmentsOutput`](crate::output::DescribeReplicationTaskIndividualAssessmentsOutput)
+/// See [`DescribeReplicationTaskIndividualAssessmentsOutput`](crate::output::DescribeReplicationTaskIndividualAssessmentsOutput).
 pub mod describe_replication_task_individual_assessments_output {
 
-    /// A builder for [`DescribeReplicationTaskIndividualAssessmentsOutput`](crate::output::DescribeReplicationTaskIndividualAssessmentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeReplicationTaskIndividualAssessmentsOutput`](crate::output::DescribeReplicationTaskIndividualAssessmentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -1411,7 +1471,7 @@ pub mod describe_replication_task_individual_assessments_output {
             self.replication_task_individual_assessments = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeReplicationTaskIndividualAssessmentsOutput`](crate::output::DescribeReplicationTaskIndividualAssessmentsOutput)
+        /// Consumes the builder and constructs a [`DescribeReplicationTaskIndividualAssessmentsOutput`](crate::output::DescribeReplicationTaskIndividualAssessmentsOutput).
         pub fn build(self) -> crate::output::DescribeReplicationTaskIndividualAssessmentsOutput {
             crate::output::DescribeReplicationTaskIndividualAssessmentsOutput {
                 marker: self.marker,
@@ -1422,7 +1482,7 @@ pub mod describe_replication_task_individual_assessments_output {
     }
 }
 impl DescribeReplicationTaskIndividualAssessmentsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeReplicationTaskIndividualAssessmentsOutput`](crate::output::DescribeReplicationTaskIndividualAssessmentsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeReplicationTaskIndividualAssessmentsOutput`](crate::output::DescribeReplicationTaskIndividualAssessmentsOutput).
     pub fn builder(
     ) -> crate::output::describe_replication_task_individual_assessments_output::Builder {
         crate::output::describe_replication_task_individual_assessments_output::Builder::default()
@@ -1434,8 +1494,10 @@ impl DescribeReplicationTaskIndividualAssessmentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeReplicationTaskAssessmentRunsOutput {
     /// <p>A pagination token returned for you to pass to a subsequent request. If you pass this token as the <code>Marker</code> value in a subsequent request, the response includes only records beyond the marker, up to the value specified in the request by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>One or more premigration assessment runs as specified by <code>Filters</code>.</p>
+    #[doc(hidden)]
     pub replication_task_assessment_runs:
         std::option::Option<std::vec::Vec<crate::model::ReplicationTaskAssessmentRun>>,
 }
@@ -1462,11 +1524,10 @@ impl std::fmt::Debug for DescribeReplicationTaskAssessmentRunsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeReplicationTaskAssessmentRunsOutput`](crate::output::DescribeReplicationTaskAssessmentRunsOutput)
+/// See [`DescribeReplicationTaskAssessmentRunsOutput`](crate::output::DescribeReplicationTaskAssessmentRunsOutput).
 pub mod describe_replication_task_assessment_runs_output {
 
-    /// A builder for [`DescribeReplicationTaskAssessmentRunsOutput`](crate::output::DescribeReplicationTaskAssessmentRunsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeReplicationTaskAssessmentRunsOutput`](crate::output::DescribeReplicationTaskAssessmentRunsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -1506,7 +1567,7 @@ pub mod describe_replication_task_assessment_runs_output {
             self.replication_task_assessment_runs = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeReplicationTaskAssessmentRunsOutput`](crate::output::DescribeReplicationTaskAssessmentRunsOutput)
+        /// Consumes the builder and constructs a [`DescribeReplicationTaskAssessmentRunsOutput`](crate::output::DescribeReplicationTaskAssessmentRunsOutput).
         pub fn build(self) -> crate::output::DescribeReplicationTaskAssessmentRunsOutput {
             crate::output::DescribeReplicationTaskAssessmentRunsOutput {
                 marker: self.marker,
@@ -1516,7 +1577,7 @@ pub mod describe_replication_task_assessment_runs_output {
     }
 }
 impl DescribeReplicationTaskAssessmentRunsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeReplicationTaskAssessmentRunsOutput`](crate::output::DescribeReplicationTaskAssessmentRunsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeReplicationTaskAssessmentRunsOutput`](crate::output::DescribeReplicationTaskAssessmentRunsOutput).
     pub fn builder() -> crate::output::describe_replication_task_assessment_runs_output::Builder {
         crate::output::describe_replication_task_assessment_runs_output::Builder::default()
     }
@@ -1527,10 +1588,13 @@ impl DescribeReplicationTaskAssessmentRunsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeReplicationTaskAssessmentResultsOutput {
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>- The Amazon S3 bucket where the task assessment report is located. </p>
+    #[doc(hidden)]
     pub bucket_name: std::option::Option<std::string::String>,
     /// <p> The task assessment report. </p>
+    #[doc(hidden)]
     pub replication_task_assessment_results:
         std::option::Option<std::vec::Vec<crate::model::ReplicationTaskAssessmentResult>>,
 }
@@ -1562,11 +1626,10 @@ impl std::fmt::Debug for DescribeReplicationTaskAssessmentResultsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeReplicationTaskAssessmentResultsOutput`](crate::output::DescribeReplicationTaskAssessmentResultsOutput)
+/// See [`DescribeReplicationTaskAssessmentResultsOutput`](crate::output::DescribeReplicationTaskAssessmentResultsOutput).
 pub mod describe_replication_task_assessment_results_output {
 
-    /// A builder for [`DescribeReplicationTaskAssessmentResultsOutput`](crate::output::DescribeReplicationTaskAssessmentResultsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeReplicationTaskAssessmentResultsOutput`](crate::output::DescribeReplicationTaskAssessmentResultsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -1619,7 +1682,7 @@ pub mod describe_replication_task_assessment_results_output {
             self.replication_task_assessment_results = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeReplicationTaskAssessmentResultsOutput`](crate::output::DescribeReplicationTaskAssessmentResultsOutput)
+        /// Consumes the builder and constructs a [`DescribeReplicationTaskAssessmentResultsOutput`](crate::output::DescribeReplicationTaskAssessmentResultsOutput).
         pub fn build(self) -> crate::output::DescribeReplicationTaskAssessmentResultsOutput {
             crate::output::DescribeReplicationTaskAssessmentResultsOutput {
                 marker: self.marker,
@@ -1630,7 +1693,7 @@ pub mod describe_replication_task_assessment_results_output {
     }
 }
 impl DescribeReplicationTaskAssessmentResultsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeReplicationTaskAssessmentResultsOutput`](crate::output::DescribeReplicationTaskAssessmentResultsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeReplicationTaskAssessmentResultsOutput`](crate::output::DescribeReplicationTaskAssessmentResultsOutput).
     pub fn builder() -> crate::output::describe_replication_task_assessment_results_output::Builder
     {
         crate::output::describe_replication_task_assessment_results_output::Builder::default()
@@ -1642,8 +1705,10 @@ impl DescribeReplicationTaskAssessmentResultsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeReplicationSubnetGroupsOutput {
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A description of the replication subnet groups.</p>
+    #[doc(hidden)]
     pub replication_subnet_groups:
         std::option::Option<std::vec::Vec<crate::model::ReplicationSubnetGroup>>,
 }
@@ -1667,11 +1732,10 @@ impl std::fmt::Debug for DescribeReplicationSubnetGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeReplicationSubnetGroupsOutput`](crate::output::DescribeReplicationSubnetGroupsOutput)
+/// See [`DescribeReplicationSubnetGroupsOutput`](crate::output::DescribeReplicationSubnetGroupsOutput).
 pub mod describe_replication_subnet_groups_output {
 
-    /// A builder for [`DescribeReplicationSubnetGroupsOutput`](crate::output::DescribeReplicationSubnetGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeReplicationSubnetGroupsOutput`](crate::output::DescribeReplicationSubnetGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -1711,7 +1775,7 @@ pub mod describe_replication_subnet_groups_output {
             self.replication_subnet_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeReplicationSubnetGroupsOutput`](crate::output::DescribeReplicationSubnetGroupsOutput)
+        /// Consumes the builder and constructs a [`DescribeReplicationSubnetGroupsOutput`](crate::output::DescribeReplicationSubnetGroupsOutput).
         pub fn build(self) -> crate::output::DescribeReplicationSubnetGroupsOutput {
             crate::output::DescribeReplicationSubnetGroupsOutput {
                 marker: self.marker,
@@ -1721,7 +1785,7 @@ pub mod describe_replication_subnet_groups_output {
     }
 }
 impl DescribeReplicationSubnetGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeReplicationSubnetGroupsOutput`](crate::output::DescribeReplicationSubnetGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeReplicationSubnetGroupsOutput`](crate::output::DescribeReplicationSubnetGroupsOutput).
     pub fn builder() -> crate::output::describe_replication_subnet_groups_output::Builder {
         crate::output::describe_replication_subnet_groups_output::Builder::default()
     }
@@ -1732,11 +1796,14 @@ impl DescribeReplicationSubnetGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeReplicationInstanceTaskLogsOutput {
     /// <p>The Amazon Resource Name (ARN) of the replication instance.</p>
+    #[doc(hidden)]
     pub replication_instance_arn: std::option::Option<std::string::String>,
     /// <p>An array of replication task log metadata. Each member of the array contains the replication task name, ARN, and task log size (in bytes). </p>
+    #[doc(hidden)]
     pub replication_instance_task_logs:
         std::option::Option<std::vec::Vec<crate::model::ReplicationInstanceTaskLog>>,
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeReplicationInstanceTaskLogsOutput {
@@ -1767,11 +1834,10 @@ impl std::fmt::Debug for DescribeReplicationInstanceTaskLogsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeReplicationInstanceTaskLogsOutput`](crate::output::DescribeReplicationInstanceTaskLogsOutput)
+/// See [`DescribeReplicationInstanceTaskLogsOutput`](crate::output::DescribeReplicationInstanceTaskLogsOutput).
 pub mod describe_replication_instance_task_logs_output {
 
-    /// A builder for [`DescribeReplicationInstanceTaskLogsOutput`](crate::output::DescribeReplicationInstanceTaskLogsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeReplicationInstanceTaskLogsOutput`](crate::output::DescribeReplicationInstanceTaskLogsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_instance_arn: std::option::Option<std::string::String>,
@@ -1825,7 +1891,7 @@ pub mod describe_replication_instance_task_logs_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeReplicationInstanceTaskLogsOutput`](crate::output::DescribeReplicationInstanceTaskLogsOutput)
+        /// Consumes the builder and constructs a [`DescribeReplicationInstanceTaskLogsOutput`](crate::output::DescribeReplicationInstanceTaskLogsOutput).
         pub fn build(self) -> crate::output::DescribeReplicationInstanceTaskLogsOutput {
             crate::output::DescribeReplicationInstanceTaskLogsOutput {
                 replication_instance_arn: self.replication_instance_arn,
@@ -1836,7 +1902,7 @@ pub mod describe_replication_instance_task_logs_output {
     }
 }
 impl DescribeReplicationInstanceTaskLogsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeReplicationInstanceTaskLogsOutput`](crate::output::DescribeReplicationInstanceTaskLogsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeReplicationInstanceTaskLogsOutput`](crate::output::DescribeReplicationInstanceTaskLogsOutput).
     pub fn builder() -> crate::output::describe_replication_instance_task_logs_output::Builder {
         crate::output::describe_replication_instance_task_logs_output::Builder::default()
     }
@@ -1847,8 +1913,10 @@ impl DescribeReplicationInstanceTaskLogsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeReplicationInstancesOutput {
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>The replication instances described.</p>
+    #[doc(hidden)]
     pub replication_instances:
         std::option::Option<std::vec::Vec<crate::model::ReplicationInstance>>,
 }
@@ -1872,11 +1940,10 @@ impl std::fmt::Debug for DescribeReplicationInstancesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeReplicationInstancesOutput`](crate::output::DescribeReplicationInstancesOutput)
+/// See [`DescribeReplicationInstancesOutput`](crate::output::DescribeReplicationInstancesOutput).
 pub mod describe_replication_instances_output {
 
-    /// A builder for [`DescribeReplicationInstancesOutput`](crate::output::DescribeReplicationInstancesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeReplicationInstancesOutput`](crate::output::DescribeReplicationInstancesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -1913,7 +1980,7 @@ pub mod describe_replication_instances_output {
             self.replication_instances = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeReplicationInstancesOutput`](crate::output::DescribeReplicationInstancesOutput)
+        /// Consumes the builder and constructs a [`DescribeReplicationInstancesOutput`](crate::output::DescribeReplicationInstancesOutput).
         pub fn build(self) -> crate::output::DescribeReplicationInstancesOutput {
             crate::output::DescribeReplicationInstancesOutput {
                 marker: self.marker,
@@ -1923,7 +1990,7 @@ pub mod describe_replication_instances_output {
     }
 }
 impl DescribeReplicationInstancesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeReplicationInstancesOutput`](crate::output::DescribeReplicationInstancesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeReplicationInstancesOutput`](crate::output::DescribeReplicationInstancesOutput).
     pub fn builder() -> crate::output::describe_replication_instances_output::Builder {
         crate::output::describe_replication_instances_output::Builder::default()
     }
@@ -1934,6 +2001,7 @@ impl DescribeReplicationInstancesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeRefreshSchemasStatusOutput {
     /// <p>The status of the schema.</p>
+    #[doc(hidden)]
     pub refresh_schemas_status: std::option::Option<crate::model::RefreshSchemasStatus>,
 }
 impl DescribeRefreshSchemasStatusOutput {
@@ -1951,11 +2019,10 @@ impl std::fmt::Debug for DescribeRefreshSchemasStatusOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeRefreshSchemasStatusOutput`](crate::output::DescribeRefreshSchemasStatusOutput)
+/// See [`DescribeRefreshSchemasStatusOutput`](crate::output::DescribeRefreshSchemasStatusOutput).
 pub mod describe_refresh_schemas_status_output {
 
-    /// A builder for [`DescribeRefreshSchemasStatusOutput`](crate::output::DescribeRefreshSchemasStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeRefreshSchemasStatusOutput`](crate::output::DescribeRefreshSchemasStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) refresh_schemas_status: std::option::Option<crate::model::RefreshSchemasStatus>,
@@ -1974,7 +2041,7 @@ pub mod describe_refresh_schemas_status_output {
             self.refresh_schemas_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeRefreshSchemasStatusOutput`](crate::output::DescribeRefreshSchemasStatusOutput)
+        /// Consumes the builder and constructs a [`DescribeRefreshSchemasStatusOutput`](crate::output::DescribeRefreshSchemasStatusOutput).
         pub fn build(self) -> crate::output::DescribeRefreshSchemasStatusOutput {
             crate::output::DescribeRefreshSchemasStatusOutput {
                 refresh_schemas_status: self.refresh_schemas_status,
@@ -1983,7 +2050,7 @@ pub mod describe_refresh_schemas_status_output {
     }
 }
 impl DescribeRefreshSchemasStatusOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeRefreshSchemasStatusOutput`](crate::output::DescribeRefreshSchemasStatusOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeRefreshSchemasStatusOutput`](crate::output::DescribeRefreshSchemasStatusOutput).
     pub fn builder() -> crate::output::describe_refresh_schemas_status_output::Builder {
         crate::output::describe_refresh_schemas_status_output::Builder::default()
     }
@@ -1994,9 +2061,11 @@ impl DescribeRefreshSchemasStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribePendingMaintenanceActionsOutput {
     /// <p>The pending maintenance action.</p>
+    #[doc(hidden)]
     pub pending_maintenance_actions:
         std::option::Option<std::vec::Vec<crate::model::ResourcePendingMaintenanceActions>>,
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribePendingMaintenanceActionsOutput {
@@ -2022,11 +2091,10 @@ impl std::fmt::Debug for DescribePendingMaintenanceActionsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput)
+/// See [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput).
 pub mod describe_pending_maintenance_actions_output {
 
-    /// A builder for [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pending_maintenance_actions:
@@ -2068,7 +2136,7 @@ pub mod describe_pending_maintenance_actions_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput)
+        /// Consumes the builder and constructs a [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput).
         pub fn build(self) -> crate::output::DescribePendingMaintenanceActionsOutput {
             crate::output::DescribePendingMaintenanceActionsOutput {
                 pending_maintenance_actions: self.pending_maintenance_actions,
@@ -2078,7 +2146,7 @@ pub mod describe_pending_maintenance_actions_output {
     }
 }
 impl DescribePendingMaintenanceActionsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput).
     pub fn builder() -> crate::output::describe_pending_maintenance_actions_output::Builder {
         crate::output::describe_pending_maintenance_actions_output::Builder::default()
     }
@@ -2089,9 +2157,11 @@ impl DescribePendingMaintenanceActionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeOrderableReplicationInstancesOutput {
     /// <p>The order-able replication instances available.</p>
+    #[doc(hidden)]
     pub orderable_replication_instances:
         std::option::Option<std::vec::Vec<crate::model::OrderableReplicationInstance>>,
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeOrderableReplicationInstancesOutput {
@@ -2117,11 +2187,10 @@ impl std::fmt::Debug for DescribeOrderableReplicationInstancesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOrderableReplicationInstancesOutput`](crate::output::DescribeOrderableReplicationInstancesOutput)
+/// See [`DescribeOrderableReplicationInstancesOutput`](crate::output::DescribeOrderableReplicationInstancesOutput).
 pub mod describe_orderable_replication_instances_output {
 
-    /// A builder for [`DescribeOrderableReplicationInstancesOutput`](crate::output::DescribeOrderableReplicationInstancesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeOrderableReplicationInstancesOutput`](crate::output::DescribeOrderableReplicationInstancesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) orderable_replication_instances:
@@ -2161,7 +2230,7 @@ pub mod describe_orderable_replication_instances_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOrderableReplicationInstancesOutput`](crate::output::DescribeOrderableReplicationInstancesOutput)
+        /// Consumes the builder and constructs a [`DescribeOrderableReplicationInstancesOutput`](crate::output::DescribeOrderableReplicationInstancesOutput).
         pub fn build(self) -> crate::output::DescribeOrderableReplicationInstancesOutput {
             crate::output::DescribeOrderableReplicationInstancesOutput {
                 orderable_replication_instances: self.orderable_replication_instances,
@@ -2171,7 +2240,7 @@ pub mod describe_orderable_replication_instances_output {
     }
 }
 impl DescribeOrderableReplicationInstancesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOrderableReplicationInstancesOutput`](crate::output::DescribeOrderableReplicationInstancesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOrderableReplicationInstancesOutput`](crate::output::DescribeOrderableReplicationInstancesOutput).
     pub fn builder() -> crate::output::describe_orderable_replication_instances_output::Builder {
         crate::output::describe_orderable_replication_instances_output::Builder::default()
     }
@@ -2182,8 +2251,10 @@ impl DescribeOrderableReplicationInstancesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeFleetAdvisorSchemasOutput {
     /// <p>A collection of <code>SchemaResponse</code> objects.</p>
+    #[doc(hidden)]
     pub fleet_advisor_schemas: std::option::Option<std::vec::Vec<crate::model::SchemaResponse>>,
     /// <p>If <code>NextToken</code> is returned, there are more results available. The value of <code>NextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeFleetAdvisorSchemasOutput {
@@ -2204,11 +2275,10 @@ impl std::fmt::Debug for DescribeFleetAdvisorSchemasOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFleetAdvisorSchemasOutput`](crate::output::DescribeFleetAdvisorSchemasOutput)
+/// See [`DescribeFleetAdvisorSchemasOutput`](crate::output::DescribeFleetAdvisorSchemasOutput).
 pub mod describe_fleet_advisor_schemas_output {
 
-    /// A builder for [`DescribeFleetAdvisorSchemasOutput`](crate::output::DescribeFleetAdvisorSchemasOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeFleetAdvisorSchemasOutput`](crate::output::DescribeFleetAdvisorSchemasOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fleet_advisor_schemas:
@@ -2245,7 +2315,7 @@ pub mod describe_fleet_advisor_schemas_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFleetAdvisorSchemasOutput`](crate::output::DescribeFleetAdvisorSchemasOutput)
+        /// Consumes the builder and constructs a [`DescribeFleetAdvisorSchemasOutput`](crate::output::DescribeFleetAdvisorSchemasOutput).
         pub fn build(self) -> crate::output::DescribeFleetAdvisorSchemasOutput {
             crate::output::DescribeFleetAdvisorSchemasOutput {
                 fleet_advisor_schemas: self.fleet_advisor_schemas,
@@ -2255,7 +2325,7 @@ pub mod describe_fleet_advisor_schemas_output {
     }
 }
 impl DescribeFleetAdvisorSchemasOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFleetAdvisorSchemasOutput`](crate::output::DescribeFleetAdvisorSchemasOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFleetAdvisorSchemasOutput`](crate::output::DescribeFleetAdvisorSchemasOutput).
     pub fn builder() -> crate::output::describe_fleet_advisor_schemas_output::Builder {
         crate::output::describe_fleet_advisor_schemas_output::Builder::default()
     }
@@ -2266,9 +2336,11 @@ impl DescribeFleetAdvisorSchemasOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeFleetAdvisorSchemaObjectSummaryOutput {
     /// <p>A collection of <code>FleetAdvisorSchemaObjectResponse</code> objects.</p>
+    #[doc(hidden)]
     pub fleet_advisor_schema_objects:
         std::option::Option<std::vec::Vec<crate::model::FleetAdvisorSchemaObjectResponse>>,
     /// <p>If <code>NextToken</code> is returned, there are more results available. The value of <code>NextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeFleetAdvisorSchemaObjectSummaryOutput {
@@ -2294,11 +2366,10 @@ impl std::fmt::Debug for DescribeFleetAdvisorSchemaObjectSummaryOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFleetAdvisorSchemaObjectSummaryOutput`](crate::output::DescribeFleetAdvisorSchemaObjectSummaryOutput)
+/// See [`DescribeFleetAdvisorSchemaObjectSummaryOutput`](crate::output::DescribeFleetAdvisorSchemaObjectSummaryOutput).
 pub mod describe_fleet_advisor_schema_object_summary_output {
 
-    /// A builder for [`DescribeFleetAdvisorSchemaObjectSummaryOutput`](crate::output::DescribeFleetAdvisorSchemaObjectSummaryOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeFleetAdvisorSchemaObjectSummaryOutput`](crate::output::DescribeFleetAdvisorSchemaObjectSummaryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fleet_advisor_schema_objects:
@@ -2340,7 +2411,7 @@ pub mod describe_fleet_advisor_schema_object_summary_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFleetAdvisorSchemaObjectSummaryOutput`](crate::output::DescribeFleetAdvisorSchemaObjectSummaryOutput)
+        /// Consumes the builder and constructs a [`DescribeFleetAdvisorSchemaObjectSummaryOutput`](crate::output::DescribeFleetAdvisorSchemaObjectSummaryOutput).
         pub fn build(self) -> crate::output::DescribeFleetAdvisorSchemaObjectSummaryOutput {
             crate::output::DescribeFleetAdvisorSchemaObjectSummaryOutput {
                 fleet_advisor_schema_objects: self.fleet_advisor_schema_objects,
@@ -2350,7 +2421,7 @@ pub mod describe_fleet_advisor_schema_object_summary_output {
     }
 }
 impl DescribeFleetAdvisorSchemaObjectSummaryOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFleetAdvisorSchemaObjectSummaryOutput`](crate::output::DescribeFleetAdvisorSchemaObjectSummaryOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFleetAdvisorSchemaObjectSummaryOutput`](crate::output::DescribeFleetAdvisorSchemaObjectSummaryOutput).
     pub fn builder() -> crate::output::describe_fleet_advisor_schema_object_summary_output::Builder
     {
         crate::output::describe_fleet_advisor_schema_object_summary_output::Builder::default()
@@ -2362,8 +2433,10 @@ impl DescribeFleetAdvisorSchemaObjectSummaryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeFleetAdvisorLsaAnalysisOutput {
     /// <p>A list of <code>FleetAdvisorLsaAnalysisResponse</code> objects.</p>
+    #[doc(hidden)]
     pub analysis: std::option::Option<std::vec::Vec<crate::model::FleetAdvisorLsaAnalysisResponse>>,
     /// <p>If <code>NextToken</code> is returned, there are more results available. The value of <code>NextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeFleetAdvisorLsaAnalysisOutput {
@@ -2386,11 +2459,10 @@ impl std::fmt::Debug for DescribeFleetAdvisorLsaAnalysisOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFleetAdvisorLsaAnalysisOutput`](crate::output::DescribeFleetAdvisorLsaAnalysisOutput)
+/// See [`DescribeFleetAdvisorLsaAnalysisOutput`](crate::output::DescribeFleetAdvisorLsaAnalysisOutput).
 pub mod describe_fleet_advisor_lsa_analysis_output {
 
-    /// A builder for [`DescribeFleetAdvisorLsaAnalysisOutput`](crate::output::DescribeFleetAdvisorLsaAnalysisOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeFleetAdvisorLsaAnalysisOutput`](crate::output::DescribeFleetAdvisorLsaAnalysisOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) analysis:
@@ -2429,7 +2501,7 @@ pub mod describe_fleet_advisor_lsa_analysis_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFleetAdvisorLsaAnalysisOutput`](crate::output::DescribeFleetAdvisorLsaAnalysisOutput)
+        /// Consumes the builder and constructs a [`DescribeFleetAdvisorLsaAnalysisOutput`](crate::output::DescribeFleetAdvisorLsaAnalysisOutput).
         pub fn build(self) -> crate::output::DescribeFleetAdvisorLsaAnalysisOutput {
             crate::output::DescribeFleetAdvisorLsaAnalysisOutput {
                 analysis: self.analysis,
@@ -2439,7 +2511,7 @@ pub mod describe_fleet_advisor_lsa_analysis_output {
     }
 }
 impl DescribeFleetAdvisorLsaAnalysisOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFleetAdvisorLsaAnalysisOutput`](crate::output::DescribeFleetAdvisorLsaAnalysisOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFleetAdvisorLsaAnalysisOutput`](crate::output::DescribeFleetAdvisorLsaAnalysisOutput).
     pub fn builder() -> crate::output::describe_fleet_advisor_lsa_analysis_output::Builder {
         crate::output::describe_fleet_advisor_lsa_analysis_output::Builder::default()
     }
@@ -2450,8 +2522,10 @@ impl DescribeFleetAdvisorLsaAnalysisOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeFleetAdvisorDatabasesOutput {
     /// <p>Provides descriptions of the Fleet Advisor collector databases, including the database's collector, ID, and name.</p>
+    #[doc(hidden)]
     pub databases: std::option::Option<std::vec::Vec<crate::model::DatabaseResponse>>,
     /// <p>If <code>NextToken</code> is returned, there are more results available. The value of <code>NextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeFleetAdvisorDatabasesOutput {
@@ -2472,11 +2546,10 @@ impl std::fmt::Debug for DescribeFleetAdvisorDatabasesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFleetAdvisorDatabasesOutput`](crate::output::DescribeFleetAdvisorDatabasesOutput)
+/// See [`DescribeFleetAdvisorDatabasesOutput`](crate::output::DescribeFleetAdvisorDatabasesOutput).
 pub mod describe_fleet_advisor_databases_output {
 
-    /// A builder for [`DescribeFleetAdvisorDatabasesOutput`](crate::output::DescribeFleetAdvisorDatabasesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeFleetAdvisorDatabasesOutput`](crate::output::DescribeFleetAdvisorDatabasesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) databases: std::option::Option<std::vec::Vec<crate::model::DatabaseResponse>>,
@@ -2512,7 +2585,7 @@ pub mod describe_fleet_advisor_databases_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFleetAdvisorDatabasesOutput`](crate::output::DescribeFleetAdvisorDatabasesOutput)
+        /// Consumes the builder and constructs a [`DescribeFleetAdvisorDatabasesOutput`](crate::output::DescribeFleetAdvisorDatabasesOutput).
         pub fn build(self) -> crate::output::DescribeFleetAdvisorDatabasesOutput {
             crate::output::DescribeFleetAdvisorDatabasesOutput {
                 databases: self.databases,
@@ -2522,7 +2595,7 @@ pub mod describe_fleet_advisor_databases_output {
     }
 }
 impl DescribeFleetAdvisorDatabasesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFleetAdvisorDatabasesOutput`](crate::output::DescribeFleetAdvisorDatabasesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFleetAdvisorDatabasesOutput`](crate::output::DescribeFleetAdvisorDatabasesOutput).
     pub fn builder() -> crate::output::describe_fleet_advisor_databases_output::Builder {
         crate::output::describe_fleet_advisor_databases_output::Builder::default()
     }
@@ -2533,8 +2606,10 @@ impl DescribeFleetAdvisorDatabasesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeFleetAdvisorCollectorsOutput {
     /// <p>Provides descriptions of the Fleet Advisor collectors, including the collectors' name and ID, and the latest inventory data. </p>
+    #[doc(hidden)]
     pub collectors: std::option::Option<std::vec::Vec<crate::model::CollectorResponse>>,
     /// <p>If <code>NextToken</code> is returned, there are more results available. The value of <code>NextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeFleetAdvisorCollectorsOutput {
@@ -2555,11 +2630,10 @@ impl std::fmt::Debug for DescribeFleetAdvisorCollectorsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFleetAdvisorCollectorsOutput`](crate::output::DescribeFleetAdvisorCollectorsOutput)
+/// See [`DescribeFleetAdvisorCollectorsOutput`](crate::output::DescribeFleetAdvisorCollectorsOutput).
 pub mod describe_fleet_advisor_collectors_output {
 
-    /// A builder for [`DescribeFleetAdvisorCollectorsOutput`](crate::output::DescribeFleetAdvisorCollectorsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeFleetAdvisorCollectorsOutput`](crate::output::DescribeFleetAdvisorCollectorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) collectors: std::option::Option<std::vec::Vec<crate::model::CollectorResponse>>,
@@ -2595,7 +2669,7 @@ pub mod describe_fleet_advisor_collectors_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFleetAdvisorCollectorsOutput`](crate::output::DescribeFleetAdvisorCollectorsOutput)
+        /// Consumes the builder and constructs a [`DescribeFleetAdvisorCollectorsOutput`](crate::output::DescribeFleetAdvisorCollectorsOutput).
         pub fn build(self) -> crate::output::DescribeFleetAdvisorCollectorsOutput {
             crate::output::DescribeFleetAdvisorCollectorsOutput {
                 collectors: self.collectors,
@@ -2605,7 +2679,7 @@ pub mod describe_fleet_advisor_collectors_output {
     }
 }
 impl DescribeFleetAdvisorCollectorsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFleetAdvisorCollectorsOutput`](crate::output::DescribeFleetAdvisorCollectorsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFleetAdvisorCollectorsOutput`](crate::output::DescribeFleetAdvisorCollectorsOutput).
     pub fn builder() -> crate::output::describe_fleet_advisor_collectors_output::Builder {
         crate::output::describe_fleet_advisor_collectors_output::Builder::default()
     }
@@ -2616,8 +2690,10 @@ impl DescribeFleetAdvisorCollectorsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEventSubscriptionsOutput {
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A list of event subscriptions.</p>
+    #[doc(hidden)]
     pub event_subscriptions_list:
         std::option::Option<std::vec::Vec<crate::model::EventSubscription>>,
 }
@@ -2641,11 +2717,10 @@ impl std::fmt::Debug for DescribeEventSubscriptionsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput)
+/// See [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput).
 pub mod describe_event_subscriptions_output {
 
-    /// A builder for [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -2682,7 +2757,7 @@ pub mod describe_event_subscriptions_output {
             self.event_subscriptions_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput)
+        /// Consumes the builder and constructs a [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput).
         pub fn build(self) -> crate::output::DescribeEventSubscriptionsOutput {
             crate::output::DescribeEventSubscriptionsOutput {
                 marker: self.marker,
@@ -2692,7 +2767,7 @@ pub mod describe_event_subscriptions_output {
     }
 }
 impl DescribeEventSubscriptionsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput).
     pub fn builder() -> crate::output::describe_event_subscriptions_output::Builder {
         crate::output::describe_event_subscriptions_output::Builder::default()
     }
@@ -2703,8 +2778,10 @@ impl DescribeEventSubscriptionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEventsOutput {
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>The events described.</p>
+    #[doc(hidden)]
     pub events: std::option::Option<std::vec::Vec<crate::model::Event>>,
 }
 impl DescribeEventsOutput {
@@ -2725,11 +2802,10 @@ impl std::fmt::Debug for DescribeEventsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEventsOutput`](crate::output::DescribeEventsOutput)
+/// See [`DescribeEventsOutput`](crate::output::DescribeEventsOutput).
 pub mod describe_events_output {
 
-    /// A builder for [`DescribeEventsOutput`](crate::output::DescribeEventsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEventsOutput`](crate::output::DescribeEventsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -2765,7 +2841,7 @@ pub mod describe_events_output {
             self.events = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEventsOutput`](crate::output::DescribeEventsOutput)
+        /// Consumes the builder and constructs a [`DescribeEventsOutput`](crate::output::DescribeEventsOutput).
         pub fn build(self) -> crate::output::DescribeEventsOutput {
             crate::output::DescribeEventsOutput {
                 marker: self.marker,
@@ -2775,7 +2851,7 @@ pub mod describe_events_output {
     }
 }
 impl DescribeEventsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEventsOutput`](crate::output::DescribeEventsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEventsOutput`](crate::output::DescribeEventsOutput).
     pub fn builder() -> crate::output::describe_events_output::Builder {
         crate::output::describe_events_output::Builder::default()
     }
@@ -2786,6 +2862,7 @@ impl DescribeEventsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEventCategoriesOutput {
     /// <p>A list of event categories.</p>
+    #[doc(hidden)]
     pub event_category_group_list:
         std::option::Option<std::vec::Vec<crate::model::EventCategoryGroup>>,
 }
@@ -2804,11 +2881,10 @@ impl std::fmt::Debug for DescribeEventCategoriesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput)
+/// See [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput).
 pub mod describe_event_categories_output {
 
-    /// A builder for [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_category_group_list:
@@ -2837,7 +2913,7 @@ pub mod describe_event_categories_output {
             self.event_category_group_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput)
+        /// Consumes the builder and constructs a [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput).
         pub fn build(self) -> crate::output::DescribeEventCategoriesOutput {
             crate::output::DescribeEventCategoriesOutput {
                 event_category_group_list: self.event_category_group_list,
@@ -2846,7 +2922,7 @@ pub mod describe_event_categories_output {
     }
 }
 impl DescribeEventCategoriesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput).
     pub fn builder() -> crate::output::describe_event_categories_output::Builder {
         crate::output::describe_event_categories_output::Builder::default()
     }
@@ -2857,8 +2933,10 @@ impl DescribeEventCategoriesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEndpointTypesOutput {
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>The types of endpoints that are supported.</p>
+    #[doc(hidden)]
     pub supported_endpoint_types:
         std::option::Option<std::vec::Vec<crate::model::SupportedEndpointType>>,
 }
@@ -2882,11 +2960,10 @@ impl std::fmt::Debug for DescribeEndpointTypesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEndpointTypesOutput`](crate::output::DescribeEndpointTypesOutput)
+/// See [`DescribeEndpointTypesOutput`](crate::output::DescribeEndpointTypesOutput).
 pub mod describe_endpoint_types_output {
 
-    /// A builder for [`DescribeEndpointTypesOutput`](crate::output::DescribeEndpointTypesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEndpointTypesOutput`](crate::output::DescribeEndpointTypesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -2926,7 +3003,7 @@ pub mod describe_endpoint_types_output {
             self.supported_endpoint_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEndpointTypesOutput`](crate::output::DescribeEndpointTypesOutput)
+        /// Consumes the builder and constructs a [`DescribeEndpointTypesOutput`](crate::output::DescribeEndpointTypesOutput).
         pub fn build(self) -> crate::output::DescribeEndpointTypesOutput {
             crate::output::DescribeEndpointTypesOutput {
                 marker: self.marker,
@@ -2936,7 +3013,7 @@ pub mod describe_endpoint_types_output {
     }
 }
 impl DescribeEndpointTypesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEndpointTypesOutput`](crate::output::DescribeEndpointTypesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEndpointTypesOutput`](crate::output::DescribeEndpointTypesOutput).
     pub fn builder() -> crate::output::describe_endpoint_types_output::Builder {
         crate::output::describe_endpoint_types_output::Builder::default()
     }
@@ -2947,8 +3024,10 @@ impl DescribeEndpointTypesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEndpointSettingsOutput {
     /// <p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>Descriptions of the endpoint settings available for your source or target database engine.</p>
+    #[doc(hidden)]
     pub endpoint_settings: std::option::Option<std::vec::Vec<crate::model::EndpointSetting>>,
 }
 impl DescribeEndpointSettingsOutput {
@@ -2969,11 +3048,10 @@ impl std::fmt::Debug for DescribeEndpointSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEndpointSettingsOutput`](crate::output::DescribeEndpointSettingsOutput)
+/// See [`DescribeEndpointSettingsOutput`](crate::output::DescribeEndpointSettingsOutput).
 pub mod describe_endpoint_settings_output {
 
-    /// A builder for [`DescribeEndpointSettingsOutput`](crate::output::DescribeEndpointSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEndpointSettingsOutput`](crate::output::DescribeEndpointSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -3010,7 +3088,7 @@ pub mod describe_endpoint_settings_output {
             self.endpoint_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEndpointSettingsOutput`](crate::output::DescribeEndpointSettingsOutput)
+        /// Consumes the builder and constructs a [`DescribeEndpointSettingsOutput`](crate::output::DescribeEndpointSettingsOutput).
         pub fn build(self) -> crate::output::DescribeEndpointSettingsOutput {
             crate::output::DescribeEndpointSettingsOutput {
                 marker: self.marker,
@@ -3020,7 +3098,7 @@ pub mod describe_endpoint_settings_output {
     }
 }
 impl DescribeEndpointSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEndpointSettingsOutput`](crate::output::DescribeEndpointSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEndpointSettingsOutput`](crate::output::DescribeEndpointSettingsOutput).
     pub fn builder() -> crate::output::describe_endpoint_settings_output::Builder {
         crate::output::describe_endpoint_settings_output::Builder::default()
     }
@@ -3031,8 +3109,10 @@ impl DescribeEndpointSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEndpointsOutput {
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>Endpoint description.</p>
+    #[doc(hidden)]
     pub endpoints: std::option::Option<std::vec::Vec<crate::model::Endpoint>>,
 }
 impl DescribeEndpointsOutput {
@@ -3053,11 +3133,10 @@ impl std::fmt::Debug for DescribeEndpointsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput)
+/// See [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput).
 pub mod describe_endpoints_output {
 
-    /// A builder for [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -3093,7 +3172,7 @@ pub mod describe_endpoints_output {
             self.endpoints = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput)
+        /// Consumes the builder and constructs a [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput).
         pub fn build(self) -> crate::output::DescribeEndpointsOutput {
             crate::output::DescribeEndpointsOutput {
                 marker: self.marker,
@@ -3103,7 +3182,7 @@ pub mod describe_endpoints_output {
     }
 }
 impl DescribeEndpointsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEndpointsOutput`](crate::output::DescribeEndpointsOutput).
     pub fn builder() -> crate::output::describe_endpoints_output::Builder {
         crate::output::describe_endpoints_output::Builder::default()
     }
@@ -3114,8 +3193,10 @@ impl DescribeEndpointsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeConnectionsOutput {
     /// <p> An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>A description of the connections.</p>
+    #[doc(hidden)]
     pub connections: std::option::Option<std::vec::Vec<crate::model::Connection>>,
 }
 impl DescribeConnectionsOutput {
@@ -3136,11 +3217,10 @@ impl std::fmt::Debug for DescribeConnectionsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeConnectionsOutput`](crate::output::DescribeConnectionsOutput)
+/// See [`DescribeConnectionsOutput`](crate::output::DescribeConnectionsOutput).
 pub mod describe_connections_output {
 
-    /// A builder for [`DescribeConnectionsOutput`](crate::output::DescribeConnectionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeConnectionsOutput`](crate::output::DescribeConnectionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -3176,7 +3256,7 @@ pub mod describe_connections_output {
             self.connections = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeConnectionsOutput`](crate::output::DescribeConnectionsOutput)
+        /// Consumes the builder and constructs a [`DescribeConnectionsOutput`](crate::output::DescribeConnectionsOutput).
         pub fn build(self) -> crate::output::DescribeConnectionsOutput {
             crate::output::DescribeConnectionsOutput {
                 marker: self.marker,
@@ -3186,7 +3266,7 @@ pub mod describe_connections_output {
     }
 }
 impl DescribeConnectionsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeConnectionsOutput`](crate::output::DescribeConnectionsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeConnectionsOutput`](crate::output::DescribeConnectionsOutput).
     pub fn builder() -> crate::output::describe_connections_output::Builder {
         crate::output::describe_connections_output::Builder::default()
     }
@@ -3197,8 +3277,10 @@ impl DescribeConnectionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeCertificatesOutput {
     /// <p>The pagination token.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>The Secure Sockets Layer (SSL) certificates associated with the replication instance.</p>
+    #[doc(hidden)]
     pub certificates: std::option::Option<std::vec::Vec<crate::model::Certificate>>,
 }
 impl DescribeCertificatesOutput {
@@ -3219,11 +3301,10 @@ impl std::fmt::Debug for DescribeCertificatesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput)
+/// See [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput).
 pub mod describe_certificates_output {
 
-    /// A builder for [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -3259,7 +3340,7 @@ pub mod describe_certificates_output {
             self.certificates = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput)
+        /// Consumes the builder and constructs a [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput).
         pub fn build(self) -> crate::output::DescribeCertificatesOutput {
             crate::output::DescribeCertificatesOutput {
                 marker: self.marker,
@@ -3269,7 +3350,7 @@ pub mod describe_certificates_output {
     }
 }
 impl DescribeCertificatesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeCertificatesOutput`](crate::output::DescribeCertificatesOutput).
     pub fn builder() -> crate::output::describe_certificates_output::Builder {
         crate::output::describe_certificates_output::Builder::default()
     }
@@ -3280,8 +3361,10 @@ impl DescribeCertificatesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeApplicableIndividualAssessmentsOutput {
     /// <p>List of names for the individual assessments supported by the premigration assessment run that you start based on the specified request parameters. For more information on the available individual assessments, including compatibility with different migration task configurations, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Working with premigration assessment runs</a> in the <i>Database Migration Service User Guide.</i> </p>
+    #[doc(hidden)]
     pub individual_assessment_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Pagination token returned for you to pass to a subsequent request. If you pass this token as the <code>Marker</code> value in a subsequent request, the response includes only records beyond the marker, up to the value specified in the request by <code>MaxRecords</code>.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeApplicableIndividualAssessmentsOutput {
@@ -3305,11 +3388,10 @@ impl std::fmt::Debug for DescribeApplicableIndividualAssessmentsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeApplicableIndividualAssessmentsOutput`](crate::output::DescribeApplicableIndividualAssessmentsOutput)
+/// See [`DescribeApplicableIndividualAssessmentsOutput`](crate::output::DescribeApplicableIndividualAssessmentsOutput).
 pub mod describe_applicable_individual_assessments_output {
 
-    /// A builder for [`DescribeApplicableIndividualAssessmentsOutput`](crate::output::DescribeApplicableIndividualAssessmentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeApplicableIndividualAssessmentsOutput`](crate::output::DescribeApplicableIndividualAssessmentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) individual_assessment_names:
@@ -3349,7 +3431,7 @@ pub mod describe_applicable_individual_assessments_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeApplicableIndividualAssessmentsOutput`](crate::output::DescribeApplicableIndividualAssessmentsOutput)
+        /// Consumes the builder and constructs a [`DescribeApplicableIndividualAssessmentsOutput`](crate::output::DescribeApplicableIndividualAssessmentsOutput).
         pub fn build(self) -> crate::output::DescribeApplicableIndividualAssessmentsOutput {
             crate::output::DescribeApplicableIndividualAssessmentsOutput {
                 individual_assessment_names: self.individual_assessment_names,
@@ -3359,7 +3441,7 @@ pub mod describe_applicable_individual_assessments_output {
     }
 }
 impl DescribeApplicableIndividualAssessmentsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeApplicableIndividualAssessmentsOutput`](crate::output::DescribeApplicableIndividualAssessmentsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeApplicableIndividualAssessmentsOutput`](crate::output::DescribeApplicableIndividualAssessmentsOutput).
     pub fn builder() -> crate::output::describe_applicable_individual_assessments_output::Builder {
         crate::output::describe_applicable_individual_assessments_output::Builder::default()
     }
@@ -3370,10 +3452,12 @@ impl DescribeApplicableIndividualAssessmentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAccountAttributesOutput {
     /// <p>Account quota information.</p>
+    #[doc(hidden)]
     pub account_quotas: std::option::Option<std::vec::Vec<crate::model::AccountQuota>>,
     /// <p>A unique DMS identifier for an account in a particular Amazon Web Services Region. The value of this identifier has the following format: <code>c99999999999</code>. DMS uses this identifier to name artifacts. For example, DMS uses this identifier to name the default Amazon S3 bucket for storing task assessment reports in a given Amazon Web Services Region. The format of this S3 bucket name is the following: <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code> Here is an example name for this default S3 bucket: <code>dms-111122223333-c44445555666</code>.</p> <note>
     /// <p>DMS supports the <code>UniqueAccountIdentifier</code> parameter in versions 3.1.4 and later.</p>
     /// </note>
+    #[doc(hidden)]
     pub unique_account_identifier: std::option::Option<std::string::String>,
 }
 impl DescribeAccountAttributesOutput {
@@ -3396,11 +3480,10 @@ impl std::fmt::Debug for DescribeAccountAttributesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
+/// See [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput).
 pub mod describe_account_attributes_output {
 
-    /// A builder for [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_quotas: std::option::Option<std::vec::Vec<crate::model::AccountQuota>>,
@@ -3443,7 +3526,7 @@ pub mod describe_account_attributes_output {
             self.unique_account_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
+        /// Consumes the builder and constructs a [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput).
         pub fn build(self) -> crate::output::DescribeAccountAttributesOutput {
             crate::output::DescribeAccountAttributesOutput {
                 account_quotas: self.account_quotas,
@@ -3453,7 +3536,7 @@ pub mod describe_account_attributes_output {
     }
 }
 impl DescribeAccountAttributesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput).
     pub fn builder() -> crate::output::describe_account_attributes_output::Builder {
         crate::output::describe_account_attributes_output::Builder::default()
     }
@@ -3464,6 +3547,7 @@ impl DescribeAccountAttributesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteReplicationTaskAssessmentRunOutput {
     /// <p>The <code>ReplicationTaskAssessmentRun</code> object for the deleted assessment run.</p>
+    #[doc(hidden)]
     pub replication_task_assessment_run:
         std::option::Option<crate::model::ReplicationTaskAssessmentRun>,
 }
@@ -3485,11 +3569,10 @@ impl std::fmt::Debug for DeleteReplicationTaskAssessmentRunOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteReplicationTaskAssessmentRunOutput`](crate::output::DeleteReplicationTaskAssessmentRunOutput)
+/// See [`DeleteReplicationTaskAssessmentRunOutput`](crate::output::DeleteReplicationTaskAssessmentRunOutput).
 pub mod delete_replication_task_assessment_run_output {
 
-    /// A builder for [`DeleteReplicationTaskAssessmentRunOutput`](crate::output::DeleteReplicationTaskAssessmentRunOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteReplicationTaskAssessmentRunOutput`](crate::output::DeleteReplicationTaskAssessmentRunOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task_assessment_run:
@@ -3512,7 +3595,7 @@ pub mod delete_replication_task_assessment_run_output {
             self.replication_task_assessment_run = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteReplicationTaskAssessmentRunOutput`](crate::output::DeleteReplicationTaskAssessmentRunOutput)
+        /// Consumes the builder and constructs a [`DeleteReplicationTaskAssessmentRunOutput`](crate::output::DeleteReplicationTaskAssessmentRunOutput).
         pub fn build(self) -> crate::output::DeleteReplicationTaskAssessmentRunOutput {
             crate::output::DeleteReplicationTaskAssessmentRunOutput {
                 replication_task_assessment_run: self.replication_task_assessment_run,
@@ -3521,7 +3604,7 @@ pub mod delete_replication_task_assessment_run_output {
     }
 }
 impl DeleteReplicationTaskAssessmentRunOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteReplicationTaskAssessmentRunOutput`](crate::output::DeleteReplicationTaskAssessmentRunOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteReplicationTaskAssessmentRunOutput`](crate::output::DeleteReplicationTaskAssessmentRunOutput).
     pub fn builder() -> crate::output::delete_replication_task_assessment_run_output::Builder {
         crate::output::delete_replication_task_assessment_run_output::Builder::default()
     }
@@ -3532,6 +3615,7 @@ impl DeleteReplicationTaskAssessmentRunOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteReplicationTaskOutput {
     /// <p>The deleted replication task.</p>
+    #[doc(hidden)]
     pub replication_task: std::option::Option<crate::model::ReplicationTask>,
 }
 impl DeleteReplicationTaskOutput {
@@ -3547,11 +3631,10 @@ impl std::fmt::Debug for DeleteReplicationTaskOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteReplicationTaskOutput`](crate::output::DeleteReplicationTaskOutput)
+/// See [`DeleteReplicationTaskOutput`](crate::output::DeleteReplicationTaskOutput).
 pub mod delete_replication_task_output {
 
-    /// A builder for [`DeleteReplicationTaskOutput`](crate::output::DeleteReplicationTaskOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteReplicationTaskOutput`](crate::output::DeleteReplicationTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task: std::option::Option<crate::model::ReplicationTask>,
@@ -3570,7 +3653,7 @@ pub mod delete_replication_task_output {
             self.replication_task = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteReplicationTaskOutput`](crate::output::DeleteReplicationTaskOutput)
+        /// Consumes the builder and constructs a [`DeleteReplicationTaskOutput`](crate::output::DeleteReplicationTaskOutput).
         pub fn build(self) -> crate::output::DeleteReplicationTaskOutput {
             crate::output::DeleteReplicationTaskOutput {
                 replication_task: self.replication_task,
@@ -3579,7 +3662,7 @@ pub mod delete_replication_task_output {
     }
 }
 impl DeleteReplicationTaskOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteReplicationTaskOutput`](crate::output::DeleteReplicationTaskOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteReplicationTaskOutput`](crate::output::DeleteReplicationTaskOutput).
     pub fn builder() -> crate::output::delete_replication_task_output::Builder {
         crate::output::delete_replication_task_output::Builder::default()
     }
@@ -3595,22 +3678,21 @@ impl std::fmt::Debug for DeleteReplicationSubnetGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteReplicationSubnetGroupOutput`](crate::output::DeleteReplicationSubnetGroupOutput)
+/// See [`DeleteReplicationSubnetGroupOutput`](crate::output::DeleteReplicationSubnetGroupOutput).
 pub mod delete_replication_subnet_group_output {
 
-    /// A builder for [`DeleteReplicationSubnetGroupOutput`](crate::output::DeleteReplicationSubnetGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteReplicationSubnetGroupOutput`](crate::output::DeleteReplicationSubnetGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteReplicationSubnetGroupOutput`](crate::output::DeleteReplicationSubnetGroupOutput)
+        /// Consumes the builder and constructs a [`DeleteReplicationSubnetGroupOutput`](crate::output::DeleteReplicationSubnetGroupOutput).
         pub fn build(self) -> crate::output::DeleteReplicationSubnetGroupOutput {
             crate::output::DeleteReplicationSubnetGroupOutput {}
         }
     }
 }
 impl DeleteReplicationSubnetGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteReplicationSubnetGroupOutput`](crate::output::DeleteReplicationSubnetGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteReplicationSubnetGroupOutput`](crate::output::DeleteReplicationSubnetGroupOutput).
     pub fn builder() -> crate::output::delete_replication_subnet_group_output::Builder {
         crate::output::delete_replication_subnet_group_output::Builder::default()
     }
@@ -3621,6 +3703,7 @@ impl DeleteReplicationSubnetGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteReplicationInstanceOutput {
     /// <p>The replication instance that was deleted.</p>
+    #[doc(hidden)]
     pub replication_instance: std::option::Option<crate::model::ReplicationInstance>,
 }
 impl DeleteReplicationInstanceOutput {
@@ -3636,11 +3719,10 @@ impl std::fmt::Debug for DeleteReplicationInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteReplicationInstanceOutput`](crate::output::DeleteReplicationInstanceOutput)
+/// See [`DeleteReplicationInstanceOutput`](crate::output::DeleteReplicationInstanceOutput).
 pub mod delete_replication_instance_output {
 
-    /// A builder for [`DeleteReplicationInstanceOutput`](crate::output::DeleteReplicationInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteReplicationInstanceOutput`](crate::output::DeleteReplicationInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_instance: std::option::Option<crate::model::ReplicationInstance>,
@@ -3659,7 +3741,7 @@ pub mod delete_replication_instance_output {
             self.replication_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteReplicationInstanceOutput`](crate::output::DeleteReplicationInstanceOutput)
+        /// Consumes the builder and constructs a [`DeleteReplicationInstanceOutput`](crate::output::DeleteReplicationInstanceOutput).
         pub fn build(self) -> crate::output::DeleteReplicationInstanceOutput {
             crate::output::DeleteReplicationInstanceOutput {
                 replication_instance: self.replication_instance,
@@ -3668,7 +3750,7 @@ pub mod delete_replication_instance_output {
     }
 }
 impl DeleteReplicationInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteReplicationInstanceOutput`](crate::output::DeleteReplicationInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteReplicationInstanceOutput`](crate::output::DeleteReplicationInstanceOutput).
     pub fn builder() -> crate::output::delete_replication_instance_output::Builder {
         crate::output::delete_replication_instance_output::Builder::default()
     }
@@ -3679,6 +3761,7 @@ impl DeleteReplicationInstanceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteFleetAdvisorDatabasesOutput {
     /// <p>The IDs of the databases that the operation deleted.</p>
+    #[doc(hidden)]
     pub database_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DeleteFleetAdvisorDatabasesOutput {
@@ -3694,11 +3777,10 @@ impl std::fmt::Debug for DeleteFleetAdvisorDatabasesOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFleetAdvisorDatabasesOutput`](crate::output::DeleteFleetAdvisorDatabasesOutput)
+/// See [`DeleteFleetAdvisorDatabasesOutput`](crate::output::DeleteFleetAdvisorDatabasesOutput).
 pub mod delete_fleet_advisor_databases_output {
 
-    /// A builder for [`DeleteFleetAdvisorDatabasesOutput`](crate::output::DeleteFleetAdvisorDatabasesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFleetAdvisorDatabasesOutput`](crate::output::DeleteFleetAdvisorDatabasesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) database_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3723,7 +3805,7 @@ pub mod delete_fleet_advisor_databases_output {
             self.database_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFleetAdvisorDatabasesOutput`](crate::output::DeleteFleetAdvisorDatabasesOutput)
+        /// Consumes the builder and constructs a [`DeleteFleetAdvisorDatabasesOutput`](crate::output::DeleteFleetAdvisorDatabasesOutput).
         pub fn build(self) -> crate::output::DeleteFleetAdvisorDatabasesOutput {
             crate::output::DeleteFleetAdvisorDatabasesOutput {
                 database_ids: self.database_ids,
@@ -3732,7 +3814,7 @@ pub mod delete_fleet_advisor_databases_output {
     }
 }
 impl DeleteFleetAdvisorDatabasesOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFleetAdvisorDatabasesOutput`](crate::output::DeleteFleetAdvisorDatabasesOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFleetAdvisorDatabasesOutput`](crate::output::DeleteFleetAdvisorDatabasesOutput).
     pub fn builder() -> crate::output::delete_fleet_advisor_databases_output::Builder {
         crate::output::delete_fleet_advisor_databases_output::Builder::default()
     }
@@ -3748,22 +3830,21 @@ impl std::fmt::Debug for DeleteFleetAdvisorCollectorOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFleetAdvisorCollectorOutput`](crate::output::DeleteFleetAdvisorCollectorOutput)
+/// See [`DeleteFleetAdvisorCollectorOutput`](crate::output::DeleteFleetAdvisorCollectorOutput).
 pub mod delete_fleet_advisor_collector_output {
 
-    /// A builder for [`DeleteFleetAdvisorCollectorOutput`](crate::output::DeleteFleetAdvisorCollectorOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFleetAdvisorCollectorOutput`](crate::output::DeleteFleetAdvisorCollectorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteFleetAdvisorCollectorOutput`](crate::output::DeleteFleetAdvisorCollectorOutput)
+        /// Consumes the builder and constructs a [`DeleteFleetAdvisorCollectorOutput`](crate::output::DeleteFleetAdvisorCollectorOutput).
         pub fn build(self) -> crate::output::DeleteFleetAdvisorCollectorOutput {
             crate::output::DeleteFleetAdvisorCollectorOutput {}
         }
     }
 }
 impl DeleteFleetAdvisorCollectorOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFleetAdvisorCollectorOutput`](crate::output::DeleteFleetAdvisorCollectorOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFleetAdvisorCollectorOutput`](crate::output::DeleteFleetAdvisorCollectorOutput).
     pub fn builder() -> crate::output::delete_fleet_advisor_collector_output::Builder {
         crate::output::delete_fleet_advisor_collector_output::Builder::default()
     }
@@ -3774,6 +3855,7 @@ impl DeleteFleetAdvisorCollectorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteEventSubscriptionOutput {
     /// <p>The event subscription that was deleted.</p>
+    #[doc(hidden)]
     pub event_subscription: std::option::Option<crate::model::EventSubscription>,
 }
 impl DeleteEventSubscriptionOutput {
@@ -3789,11 +3871,10 @@ impl std::fmt::Debug for DeleteEventSubscriptionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput)
+/// See [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput).
 pub mod delete_event_subscription_output {
 
-    /// A builder for [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_subscription: std::option::Option<crate::model::EventSubscription>,
@@ -3812,7 +3893,7 @@ pub mod delete_event_subscription_output {
             self.event_subscription = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput)
+        /// Consumes the builder and constructs a [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput).
         pub fn build(self) -> crate::output::DeleteEventSubscriptionOutput {
             crate::output::DeleteEventSubscriptionOutput {
                 event_subscription: self.event_subscription,
@@ -3821,7 +3902,7 @@ pub mod delete_event_subscription_output {
     }
 }
 impl DeleteEventSubscriptionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput).
     pub fn builder() -> crate::output::delete_event_subscription_output::Builder {
         crate::output::delete_event_subscription_output::Builder::default()
     }
@@ -3832,6 +3913,7 @@ impl DeleteEventSubscriptionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteEndpointOutput {
     /// <p>The endpoint that was deleted.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<crate::model::Endpoint>,
 }
 impl DeleteEndpointOutput {
@@ -3847,11 +3929,10 @@ impl std::fmt::Debug for DeleteEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteEndpointOutput`](crate::output::DeleteEndpointOutput)
+/// See [`DeleteEndpointOutput`](crate::output::DeleteEndpointOutput).
 pub mod delete_endpoint_output {
 
-    /// A builder for [`DeleteEndpointOutput`](crate::output::DeleteEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteEndpointOutput`](crate::output::DeleteEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint: std::option::Option<crate::model::Endpoint>,
@@ -3867,7 +3948,7 @@ pub mod delete_endpoint_output {
             self.endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteEndpointOutput`](crate::output::DeleteEndpointOutput)
+        /// Consumes the builder and constructs a [`DeleteEndpointOutput`](crate::output::DeleteEndpointOutput).
         pub fn build(self) -> crate::output::DeleteEndpointOutput {
             crate::output::DeleteEndpointOutput {
                 endpoint: self.endpoint,
@@ -3876,7 +3957,7 @@ pub mod delete_endpoint_output {
     }
 }
 impl DeleteEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteEndpointOutput`](crate::output::DeleteEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteEndpointOutput`](crate::output::DeleteEndpointOutput).
     pub fn builder() -> crate::output::delete_endpoint_output::Builder {
         crate::output::delete_endpoint_output::Builder::default()
     }
@@ -3887,6 +3968,7 @@ impl DeleteEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteConnectionOutput {
     /// <p>The connection that is being deleted.</p>
+    #[doc(hidden)]
     pub connection: std::option::Option<crate::model::Connection>,
 }
 impl DeleteConnectionOutput {
@@ -3902,11 +3984,10 @@ impl std::fmt::Debug for DeleteConnectionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput)
+/// See [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput).
 pub mod delete_connection_output {
 
-    /// A builder for [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connection: std::option::Option<crate::model::Connection>,
@@ -3925,7 +4006,7 @@ pub mod delete_connection_output {
             self.connection = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput)
+        /// Consumes the builder and constructs a [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput).
         pub fn build(self) -> crate::output::DeleteConnectionOutput {
             crate::output::DeleteConnectionOutput {
                 connection: self.connection,
@@ -3934,7 +4015,7 @@ pub mod delete_connection_output {
     }
 }
 impl DeleteConnectionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteConnectionOutput`](crate::output::DeleteConnectionOutput).
     pub fn builder() -> crate::output::delete_connection_output::Builder {
         crate::output::delete_connection_output::Builder::default()
     }
@@ -3945,6 +4026,7 @@ impl DeleteConnectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteCertificateOutput {
     /// <p>The Secure Sockets Layer (SSL) certificate.</p>
+    #[doc(hidden)]
     pub certificate: std::option::Option<crate::model::Certificate>,
 }
 impl DeleteCertificateOutput {
@@ -3960,11 +4042,10 @@ impl std::fmt::Debug for DeleteCertificateOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteCertificateOutput`](crate::output::DeleteCertificateOutput)
+/// See [`DeleteCertificateOutput`](crate::output::DeleteCertificateOutput).
 pub mod delete_certificate_output {
 
-    /// A builder for [`DeleteCertificateOutput`](crate::output::DeleteCertificateOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteCertificateOutput`](crate::output::DeleteCertificateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate: std::option::Option<crate::model::Certificate>,
@@ -3983,7 +4064,7 @@ pub mod delete_certificate_output {
             self.certificate = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteCertificateOutput`](crate::output::DeleteCertificateOutput)
+        /// Consumes the builder and constructs a [`DeleteCertificateOutput`](crate::output::DeleteCertificateOutput).
         pub fn build(self) -> crate::output::DeleteCertificateOutput {
             crate::output::DeleteCertificateOutput {
                 certificate: self.certificate,
@@ -3992,7 +4073,7 @@ pub mod delete_certificate_output {
     }
 }
 impl DeleteCertificateOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteCertificateOutput`](crate::output::DeleteCertificateOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteCertificateOutput`](crate::output::DeleteCertificateOutput).
     pub fn builder() -> crate::output::delete_certificate_output::Builder {
         crate::output::delete_certificate_output::Builder::default()
     }
@@ -4003,6 +4084,7 @@ impl DeleteCertificateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateReplicationTaskOutput {
     /// <p>The replication task that was created.</p>
+    #[doc(hidden)]
     pub replication_task: std::option::Option<crate::model::ReplicationTask>,
 }
 impl CreateReplicationTaskOutput {
@@ -4018,11 +4100,10 @@ impl std::fmt::Debug for CreateReplicationTaskOutput {
         formatter.finish()
     }
 }
-/// See [`CreateReplicationTaskOutput`](crate::output::CreateReplicationTaskOutput)
+/// See [`CreateReplicationTaskOutput`](crate::output::CreateReplicationTaskOutput).
 pub mod create_replication_task_output {
 
-    /// A builder for [`CreateReplicationTaskOutput`](crate::output::CreateReplicationTaskOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateReplicationTaskOutput`](crate::output::CreateReplicationTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task: std::option::Option<crate::model::ReplicationTask>,
@@ -4041,7 +4122,7 @@ pub mod create_replication_task_output {
             self.replication_task = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateReplicationTaskOutput`](crate::output::CreateReplicationTaskOutput)
+        /// Consumes the builder and constructs a [`CreateReplicationTaskOutput`](crate::output::CreateReplicationTaskOutput).
         pub fn build(self) -> crate::output::CreateReplicationTaskOutput {
             crate::output::CreateReplicationTaskOutput {
                 replication_task: self.replication_task,
@@ -4050,7 +4131,7 @@ pub mod create_replication_task_output {
     }
 }
 impl CreateReplicationTaskOutput {
-    /// Creates a new builder-style object to manufacture [`CreateReplicationTaskOutput`](crate::output::CreateReplicationTaskOutput)
+    /// Creates a new builder-style object to manufacture [`CreateReplicationTaskOutput`](crate::output::CreateReplicationTaskOutput).
     pub fn builder() -> crate::output::create_replication_task_output::Builder {
         crate::output::create_replication_task_output::Builder::default()
     }
@@ -4061,6 +4142,7 @@ impl CreateReplicationTaskOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateReplicationSubnetGroupOutput {
     /// <p>The replication subnet group that was created.</p>
+    #[doc(hidden)]
     pub replication_subnet_group: std::option::Option<crate::model::ReplicationSubnetGroup>,
 }
 impl CreateReplicationSubnetGroupOutput {
@@ -4078,11 +4160,10 @@ impl std::fmt::Debug for CreateReplicationSubnetGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateReplicationSubnetGroupOutput`](crate::output::CreateReplicationSubnetGroupOutput)
+/// See [`CreateReplicationSubnetGroupOutput`](crate::output::CreateReplicationSubnetGroupOutput).
 pub mod create_replication_subnet_group_output {
 
-    /// A builder for [`CreateReplicationSubnetGroupOutput`](crate::output::CreateReplicationSubnetGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateReplicationSubnetGroupOutput`](crate::output::CreateReplicationSubnetGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_subnet_group:
@@ -4105,7 +4186,7 @@ pub mod create_replication_subnet_group_output {
             self.replication_subnet_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateReplicationSubnetGroupOutput`](crate::output::CreateReplicationSubnetGroupOutput)
+        /// Consumes the builder and constructs a [`CreateReplicationSubnetGroupOutput`](crate::output::CreateReplicationSubnetGroupOutput).
         pub fn build(self) -> crate::output::CreateReplicationSubnetGroupOutput {
             crate::output::CreateReplicationSubnetGroupOutput {
                 replication_subnet_group: self.replication_subnet_group,
@@ -4114,7 +4195,7 @@ pub mod create_replication_subnet_group_output {
     }
 }
 impl CreateReplicationSubnetGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateReplicationSubnetGroupOutput`](crate::output::CreateReplicationSubnetGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateReplicationSubnetGroupOutput`](crate::output::CreateReplicationSubnetGroupOutput).
     pub fn builder() -> crate::output::create_replication_subnet_group_output::Builder {
         crate::output::create_replication_subnet_group_output::Builder::default()
     }
@@ -4125,6 +4206,7 @@ impl CreateReplicationSubnetGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateReplicationInstanceOutput {
     /// <p>The replication instance that was created.</p>
+    #[doc(hidden)]
     pub replication_instance: std::option::Option<crate::model::ReplicationInstance>,
 }
 impl CreateReplicationInstanceOutput {
@@ -4140,11 +4222,10 @@ impl std::fmt::Debug for CreateReplicationInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`CreateReplicationInstanceOutput`](crate::output::CreateReplicationInstanceOutput)
+/// See [`CreateReplicationInstanceOutput`](crate::output::CreateReplicationInstanceOutput).
 pub mod create_replication_instance_output {
 
-    /// A builder for [`CreateReplicationInstanceOutput`](crate::output::CreateReplicationInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateReplicationInstanceOutput`](crate::output::CreateReplicationInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_instance: std::option::Option<crate::model::ReplicationInstance>,
@@ -4163,7 +4244,7 @@ pub mod create_replication_instance_output {
             self.replication_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateReplicationInstanceOutput`](crate::output::CreateReplicationInstanceOutput)
+        /// Consumes the builder and constructs a [`CreateReplicationInstanceOutput`](crate::output::CreateReplicationInstanceOutput).
         pub fn build(self) -> crate::output::CreateReplicationInstanceOutput {
             crate::output::CreateReplicationInstanceOutput {
                 replication_instance: self.replication_instance,
@@ -4172,7 +4253,7 @@ pub mod create_replication_instance_output {
     }
 }
 impl CreateReplicationInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`CreateReplicationInstanceOutput`](crate::output::CreateReplicationInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`CreateReplicationInstanceOutput`](crate::output::CreateReplicationInstanceOutput).
     pub fn builder() -> crate::output::create_replication_instance_output::Builder {
         crate::output::create_replication_instance_output::Builder::default()
     }
@@ -4183,14 +4264,19 @@ impl CreateReplicationInstanceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateFleetAdvisorCollectorOutput {
     /// <p>The unique ID of the new Fleet Advisor collector, for example: <code>22fda70c-40d5-4acf-b233-a495bd8eb7f5</code> </p>
+    #[doc(hidden)]
     pub collector_referenced_id: std::option::Option<std::string::String>,
     /// <p>The name of the new Fleet Advisor collector.</p>
+    #[doc(hidden)]
     pub collector_name: std::option::Option<std::string::String>,
     /// <p>A summary description of the Fleet Advisor collector.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The IAM role that grants permissions to access the specified Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub service_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 bucket that the collector uses to store inventory metadata.</p>
+    #[doc(hidden)]
     pub s3_bucket_name: std::option::Option<std::string::String>,
 }
 impl CreateFleetAdvisorCollectorOutput {
@@ -4226,11 +4312,10 @@ impl std::fmt::Debug for CreateFleetAdvisorCollectorOutput {
         formatter.finish()
     }
 }
-/// See [`CreateFleetAdvisorCollectorOutput`](crate::output::CreateFleetAdvisorCollectorOutput)
+/// See [`CreateFleetAdvisorCollectorOutput`](crate::output::CreateFleetAdvisorCollectorOutput).
 pub mod create_fleet_advisor_collector_output {
 
-    /// A builder for [`CreateFleetAdvisorCollectorOutput`](crate::output::CreateFleetAdvisorCollectorOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateFleetAdvisorCollectorOutput`](crate::output::CreateFleetAdvisorCollectorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) collector_referenced_id: std::option::Option<std::string::String>,
@@ -4302,7 +4387,7 @@ pub mod create_fleet_advisor_collector_output {
             self.s3_bucket_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFleetAdvisorCollectorOutput`](crate::output::CreateFleetAdvisorCollectorOutput)
+        /// Consumes the builder and constructs a [`CreateFleetAdvisorCollectorOutput`](crate::output::CreateFleetAdvisorCollectorOutput).
         pub fn build(self) -> crate::output::CreateFleetAdvisorCollectorOutput {
             crate::output::CreateFleetAdvisorCollectorOutput {
                 collector_referenced_id: self.collector_referenced_id,
@@ -4315,7 +4400,7 @@ pub mod create_fleet_advisor_collector_output {
     }
 }
 impl CreateFleetAdvisorCollectorOutput {
-    /// Creates a new builder-style object to manufacture [`CreateFleetAdvisorCollectorOutput`](crate::output::CreateFleetAdvisorCollectorOutput)
+    /// Creates a new builder-style object to manufacture [`CreateFleetAdvisorCollectorOutput`](crate::output::CreateFleetAdvisorCollectorOutput).
     pub fn builder() -> crate::output::create_fleet_advisor_collector_output::Builder {
         crate::output::create_fleet_advisor_collector_output::Builder::default()
     }
@@ -4326,6 +4411,7 @@ impl CreateFleetAdvisorCollectorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateEventSubscriptionOutput {
     /// <p>The event subscription that was created.</p>
+    #[doc(hidden)]
     pub event_subscription: std::option::Option<crate::model::EventSubscription>,
 }
 impl CreateEventSubscriptionOutput {
@@ -4341,11 +4427,10 @@ impl std::fmt::Debug for CreateEventSubscriptionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput)
+/// See [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput).
 pub mod create_event_subscription_output {
 
-    /// A builder for [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_subscription: std::option::Option<crate::model::EventSubscription>,
@@ -4364,7 +4449,7 @@ pub mod create_event_subscription_output {
             self.event_subscription = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput)
+        /// Consumes the builder and constructs a [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput).
         pub fn build(self) -> crate::output::CreateEventSubscriptionOutput {
             crate::output::CreateEventSubscriptionOutput {
                 event_subscription: self.event_subscription,
@@ -4373,7 +4458,7 @@ pub mod create_event_subscription_output {
     }
 }
 impl CreateEventSubscriptionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput).
     pub fn builder() -> crate::output::create_event_subscription_output::Builder {
         crate::output::create_event_subscription_output::Builder::default()
     }
@@ -4384,6 +4469,7 @@ impl CreateEventSubscriptionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateEndpointOutput {
     /// <p>The endpoint that was created.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<crate::model::Endpoint>,
 }
 impl CreateEndpointOutput {
@@ -4399,11 +4485,10 @@ impl std::fmt::Debug for CreateEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`CreateEndpointOutput`](crate::output::CreateEndpointOutput)
+/// See [`CreateEndpointOutput`](crate::output::CreateEndpointOutput).
 pub mod create_endpoint_output {
 
-    /// A builder for [`CreateEndpointOutput`](crate::output::CreateEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateEndpointOutput`](crate::output::CreateEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint: std::option::Option<crate::model::Endpoint>,
@@ -4419,7 +4504,7 @@ pub mod create_endpoint_output {
             self.endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateEndpointOutput`](crate::output::CreateEndpointOutput)
+        /// Consumes the builder and constructs a [`CreateEndpointOutput`](crate::output::CreateEndpointOutput).
         pub fn build(self) -> crate::output::CreateEndpointOutput {
             crate::output::CreateEndpointOutput {
                 endpoint: self.endpoint,
@@ -4428,7 +4513,7 @@ pub mod create_endpoint_output {
     }
 }
 impl CreateEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`CreateEndpointOutput`](crate::output::CreateEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`CreateEndpointOutput`](crate::output::CreateEndpointOutput).
     pub fn builder() -> crate::output::create_endpoint_output::Builder {
         crate::output::create_endpoint_output::Builder::default()
     }
@@ -4439,6 +4524,7 @@ impl CreateEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelReplicationTaskAssessmentRunOutput {
     /// <p>The <code>ReplicationTaskAssessmentRun</code> object for the canceled assessment run.</p>
+    #[doc(hidden)]
     pub replication_task_assessment_run:
         std::option::Option<crate::model::ReplicationTaskAssessmentRun>,
 }
@@ -4460,11 +4546,10 @@ impl std::fmt::Debug for CancelReplicationTaskAssessmentRunOutput {
         formatter.finish()
     }
 }
-/// See [`CancelReplicationTaskAssessmentRunOutput`](crate::output::CancelReplicationTaskAssessmentRunOutput)
+/// See [`CancelReplicationTaskAssessmentRunOutput`](crate::output::CancelReplicationTaskAssessmentRunOutput).
 pub mod cancel_replication_task_assessment_run_output {
 
-    /// A builder for [`CancelReplicationTaskAssessmentRunOutput`](crate::output::CancelReplicationTaskAssessmentRunOutput)
-    #[non_exhaustive]
+    /// A builder for [`CancelReplicationTaskAssessmentRunOutput`](crate::output::CancelReplicationTaskAssessmentRunOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) replication_task_assessment_run:
@@ -4487,7 +4572,7 @@ pub mod cancel_replication_task_assessment_run_output {
             self.replication_task_assessment_run = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelReplicationTaskAssessmentRunOutput`](crate::output::CancelReplicationTaskAssessmentRunOutput)
+        /// Consumes the builder and constructs a [`CancelReplicationTaskAssessmentRunOutput`](crate::output::CancelReplicationTaskAssessmentRunOutput).
         pub fn build(self) -> crate::output::CancelReplicationTaskAssessmentRunOutput {
             crate::output::CancelReplicationTaskAssessmentRunOutput {
                 replication_task_assessment_run: self.replication_task_assessment_run,
@@ -4496,7 +4581,7 @@ pub mod cancel_replication_task_assessment_run_output {
     }
 }
 impl CancelReplicationTaskAssessmentRunOutput {
-    /// Creates a new builder-style object to manufacture [`CancelReplicationTaskAssessmentRunOutput`](crate::output::CancelReplicationTaskAssessmentRunOutput)
+    /// Creates a new builder-style object to manufacture [`CancelReplicationTaskAssessmentRunOutput`](crate::output::CancelReplicationTaskAssessmentRunOutput).
     pub fn builder() -> crate::output::cancel_replication_task_assessment_run_output::Builder {
         crate::output::cancel_replication_task_assessment_run_output::Builder::default()
     }
@@ -4507,6 +4592,7 @@ impl CancelReplicationTaskAssessmentRunOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplyPendingMaintenanceActionOutput {
     /// <p>The DMS resource that the pending maintenance action will be applied to.</p>
+    #[doc(hidden)]
     pub resource_pending_maintenance_actions:
         std::option::Option<crate::model::ResourcePendingMaintenanceActions>,
 }
@@ -4528,11 +4614,10 @@ impl std::fmt::Debug for ApplyPendingMaintenanceActionOutput {
         formatter.finish()
     }
 }
-/// See [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput)
+/// See [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput).
 pub mod apply_pending_maintenance_action_output {
 
-    /// A builder for [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput)
-    #[non_exhaustive]
+    /// A builder for [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_pending_maintenance_actions:
@@ -4555,7 +4640,7 @@ pub mod apply_pending_maintenance_action_output {
             self.resource_pending_maintenance_actions = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput)
+        /// Consumes the builder and constructs a [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput).
         pub fn build(self) -> crate::output::ApplyPendingMaintenanceActionOutput {
             crate::output::ApplyPendingMaintenanceActionOutput {
                 resource_pending_maintenance_actions: self.resource_pending_maintenance_actions,
@@ -4564,7 +4649,7 @@ pub mod apply_pending_maintenance_action_output {
     }
 }
 impl ApplyPendingMaintenanceActionOutput {
-    /// Creates a new builder-style object to manufacture [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput)
+    /// Creates a new builder-style object to manufacture [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput).
     pub fn builder() -> crate::output::apply_pending_maintenance_action_output::Builder {
         crate::output::apply_pending_maintenance_action_output::Builder::default()
     }
@@ -4580,22 +4665,21 @@ impl std::fmt::Debug for AddTagsToResourceOutput {
         formatter.finish()
     }
 }
-/// See [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
+/// See [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput).
 pub mod add_tags_to_resource_output {
 
-    /// A builder for [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
+        /// Consumes the builder and constructs a [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput).
         pub fn build(self) -> crate::output::AddTagsToResourceOutput {
             crate::output::AddTagsToResourceOutput {}
         }
     }
 }
 impl AddTagsToResourceOutput {
-    /// Creates a new builder-style object to manufacture [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
+    /// Creates a new builder-style object to manufacture [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput).
     pub fn builder() -> crate::output::add_tags_to_resource_output::Builder {
         crate::output::add_tags_to_resource_output::Builder::default()
     }

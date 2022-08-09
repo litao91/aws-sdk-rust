@@ -10,38 +10,54 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Studio {
     /// <p>The IAM role that studio admins assume when logging in to the Nimble Studio portal.</p>
+    #[doc(hidden)]
     pub admin_role_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) that is assigned to a studio resource and uniquely identifies it. ARNs are unique across all Regions.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The Unix epoch timestamp in seconds for when the resource was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A friendly name for the studio.</p>
+    #[doc(hidden)]
     pub display_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region where the studio resource is located.</p>
+    #[doc(hidden)]
     pub home_region: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble Studio portal.</p>
+    #[doc(hidden)]
     pub sso_client_id: std::option::Option<std::string::String>,
     /// <p>The current state of the studio resource.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::StudioState>,
     /// <p>Status codes that provide additional detail on the studio state.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::StudioStatusCode>,
     /// <p>Additional detail on the studio state.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Configuration of the encryption method that is used for the studio.</p>
+    #[doc(hidden)]
     pub studio_encryption_configuration:
         std::option::Option<crate::model::StudioEncryptionConfiguration>,
     /// <p>The unique identifier for a studio resource. In Nimble Studio, all other resources are contained in a studio resource.</p>
+    #[doc(hidden)]
     pub studio_id: std::option::Option<std::string::String>,
     /// <p>The name of the studio, as included in the URL when accessing it in the Nimble Studio portal.</p>
+    #[doc(hidden)]
     pub studio_name: std::option::Option<std::string::String>,
     /// <p>The address of the web page for the studio.</p>
+    #[doc(hidden)]
     pub studio_url: std::option::Option<std::string::String>,
     /// <p>A collection of labels, in the form of key:value pairs, that apply to this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Unix epoch timestamp in seconds for when the resource was updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The IAM role that studio users assume when logging in to the Nimble Studio portal.</p>
+    #[doc(hidden)]
     pub user_role_arn: std::option::Option<std::string::String>,
 }
 impl Studio {
@@ -140,11 +156,10 @@ impl std::fmt::Debug for Studio {
         formatter.finish()
     }
 }
-/// See [`Studio`](crate::model::Studio)
+/// See [`Studio`](crate::model::Studio).
 pub mod studio {
 
-    /// A builder for [`Studio`](crate::model::Studio)
-    #[non_exhaustive]
+    /// A builder for [`Studio`](crate::model::Studio).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) admin_role_arn: std::option::Option<std::string::String>,
@@ -370,7 +385,7 @@ pub mod studio {
             self.user_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Studio`](crate::model::Studio)
+        /// Consumes the builder and constructs a [`Studio`](crate::model::Studio).
         pub fn build(self) -> crate::model::Studio {
             crate::model::Studio {
                 admin_role_arn: self.admin_role_arn,
@@ -394,7 +409,7 @@ pub mod studio {
     }
 }
 impl Studio {
-    /// Creates a new builder-style object to manufacture [`Studio`](crate::model::Studio)
+    /// Creates a new builder-style object to manufacture [`Studio`](crate::model::Studio).
     pub fn builder() -> crate::model::studio::Builder {
         crate::model::studio::Builder::default()
     }
@@ -405,8 +420,10 @@ impl Studio {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StudioEncryptionConfiguration {
     /// <p>The ARN for a KMS key that is used to encrypt studio data.</p>
+    #[doc(hidden)]
     pub key_arn: std::option::Option<std::string::String>,
     /// <p>The type of KMS key that is used to encrypt studio data.</p>
+    #[doc(hidden)]
     pub key_type: std::option::Option<crate::model::StudioEncryptionConfigurationKeyType>,
 }
 impl StudioEncryptionConfiguration {
@@ -429,11 +446,10 @@ impl std::fmt::Debug for StudioEncryptionConfiguration {
         formatter.finish()
     }
 }
-/// See [`StudioEncryptionConfiguration`](crate::model::StudioEncryptionConfiguration)
+/// See [`StudioEncryptionConfiguration`](crate::model::StudioEncryptionConfiguration).
 pub mod studio_encryption_configuration {
 
-    /// A builder for [`StudioEncryptionConfiguration`](crate::model::StudioEncryptionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`StudioEncryptionConfiguration`](crate::model::StudioEncryptionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_arn: std::option::Option<std::string::String>,
@@ -467,7 +483,7 @@ pub mod studio_encryption_configuration {
             self.key_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`StudioEncryptionConfiguration`](crate::model::StudioEncryptionConfiguration)
+        /// Consumes the builder and constructs a [`StudioEncryptionConfiguration`](crate::model::StudioEncryptionConfiguration).
         pub fn build(self) -> crate::model::StudioEncryptionConfiguration {
             crate::model::StudioEncryptionConfiguration {
                 key_arn: self.key_arn,
@@ -477,7 +493,7 @@ pub mod studio_encryption_configuration {
     }
 }
 impl StudioEncryptionConfiguration {
-    /// Creates a new builder-style object to manufacture [`StudioEncryptionConfiguration`](crate::model::StudioEncryptionConfiguration)
+    /// Creates a new builder-style object to manufacture [`StudioEncryptionConfiguration`](crate::model::StudioEncryptionConfiguration).
     pub fn builder() -> crate::model::studio_encryption_configuration::Builder {
         crate::model::studio_encryption_configuration::Builder::default()
     }
@@ -785,8 +801,10 @@ impl AsRef<str> for StudioState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NewStudioMember {
     /// <p>The persona.</p>
+    #[doc(hidden)]
     pub persona: std::option::Option<crate::model::StudioPersona>,
     /// <p>The principal ID.</p>
+    #[doc(hidden)]
     pub principal_id: std::option::Option<std::string::String>,
 }
 impl NewStudioMember {
@@ -807,11 +825,10 @@ impl std::fmt::Debug for NewStudioMember {
         formatter.finish()
     }
 }
-/// See [`NewStudioMember`](crate::model::NewStudioMember)
+/// See [`NewStudioMember`](crate::model::NewStudioMember).
 pub mod new_studio_member {
 
-    /// A builder for [`NewStudioMember`](crate::model::NewStudioMember)
-    #[non_exhaustive]
+    /// A builder for [`NewStudioMember`](crate::model::NewStudioMember).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) persona: std::option::Option<crate::model::StudioPersona>,
@@ -841,7 +858,7 @@ pub mod new_studio_member {
             self.principal_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`NewStudioMember`](crate::model::NewStudioMember)
+        /// Consumes the builder and constructs a [`NewStudioMember`](crate::model::NewStudioMember).
         pub fn build(self) -> crate::model::NewStudioMember {
             crate::model::NewStudioMember {
                 persona: self.persona,
@@ -851,7 +868,7 @@ pub mod new_studio_member {
     }
 }
 impl NewStudioMember {
-    /// Creates a new builder-style object to manufacture [`NewStudioMember`](crate::model::NewStudioMember)
+    /// Creates a new builder-style object to manufacture [`NewStudioMember`](crate::model::NewStudioMember).
     pub fn builder() -> crate::model::new_studio_member::Builder {
         crate::model::new_studio_member::Builder::default()
     }
@@ -915,12 +932,16 @@ impl AsRef<str> for StudioPersona {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StudioMembership {
     /// <p>The ID of the identity store.</p>
+    #[doc(hidden)]
     pub identity_store_id: std::option::Option<std::string::String>,
     /// <p>The persona.</p>
+    #[doc(hidden)]
     pub persona: std::option::Option<crate::model::StudioPersona>,
     /// <p>The principal ID.</p>
+    #[doc(hidden)]
     pub principal_id: std::option::Option<std::string::String>,
     /// <p>The Active Directory Security Identifier for this user, if available.</p>
+    #[doc(hidden)]
     pub sid: std::option::Option<std::string::String>,
 }
 impl StudioMembership {
@@ -951,11 +972,10 @@ impl std::fmt::Debug for StudioMembership {
         formatter.finish()
     }
 }
-/// See [`StudioMembership`](crate::model::StudioMembership)
+/// See [`StudioMembership`](crate::model::StudioMembership).
 pub mod studio_membership {
 
-    /// A builder for [`StudioMembership`](crate::model::StudioMembership)
-    #[non_exhaustive]
+    /// A builder for [`StudioMembership`](crate::model::StudioMembership).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_store_id: std::option::Option<std::string::String>,
@@ -1010,7 +1030,7 @@ pub mod studio_membership {
             self.sid = input;
             self
         }
-        /// Consumes the builder and constructs a [`StudioMembership`](crate::model::StudioMembership)
+        /// Consumes the builder and constructs a [`StudioMembership`](crate::model::StudioMembership).
         pub fn build(self) -> crate::model::StudioMembership {
             crate::model::StudioMembership {
                 identity_store_id: self.identity_store_id,
@@ -1022,7 +1042,7 @@ pub mod studio_membership {
     }
 }
 impl StudioMembership {
-    /// Creates a new builder-style object to manufacture [`StudioMembership`](crate::model::StudioMembership)
+    /// Creates a new builder-style object to manufacture [`StudioMembership`](crate::model::StudioMembership).
     pub fn builder() -> crate::model::studio_membership::Builder {
         crate::model::studio_membership::Builder::default()
     }
@@ -1035,44 +1055,68 @@ impl StudioMembership {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StudioComponent {
     /// <p>The ARN of the resource.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The configuration of the studio component, based on component type.</p>
+    #[doc(hidden)]
     pub configuration: std::option::Option<crate::model::StudioComponentConfiguration>,
     /// <p>The Unix epoch timestamp in seconds for when the resource was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The user ID of the user that created the studio component.</p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
     /// <p>A human-readable description for the studio component resource.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The EC2 security groups that control access to the studio component.</p>
+    #[doc(hidden)]
     pub ec2_security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Initialization scripts for studio components.</p>
+    #[doc(hidden)]
     pub initialization_scripts:
         std::option::Option<std::vec::Vec<crate::model::StudioComponentInitializationScript>>,
     /// <p>A friendly name for the studio component resource.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Parameters for the studio component scripts.</p>
+    #[doc(hidden)]
     pub script_parameters:
         std::option::Option<std::vec::Vec<crate::model::ScriptParameterKeyValue>>,
     /// <p>The current state.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::StudioComponentState>,
     /// <p>The status code.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::StudioComponentStatusCode>,
     /// <p>The status message for the studio component.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The unique identifier for a studio component resource.</p>
+    #[doc(hidden)]
     pub studio_component_id: std::option::Option<std::string::String>,
     /// <p>The specific subtype of a studio component.</p>
+    #[doc(hidden)]
     pub subtype: std::option::Option<crate::model::StudioComponentSubtype>,
     /// <p>A collection of labels, in the form of key:value pairs, that apply to this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The type of the studio component.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::StudioComponentType>,
     /// <p>The Unix epoch timestamp in seconds for when the resource was updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The user ID of the user that most recently updated the resource.</p>
+    #[doc(hidden)]
     pub updated_by: std::option::Option<std::string::String>,
+    /// <p>An IAM role attached to Studio Component when the system initialization script runs which give the studio component access to AWS resources when the system initialization script runs.</p>
+    #[doc(hidden)]
+    pub secure_initialization_role_arn: std::option::Option<std::string::String>,
+    /// <p>An IAM role attached to a Studio Component that gives the studio component access to AWS resources at anytime while the instance is running. </p>
+    #[doc(hidden)]
+    pub runtime_role_arn: std::option::Option<std::string::String>,
 }
 impl StudioComponent {
     /// <p>The ARN of the resource.</p>
@@ -1156,6 +1200,14 @@ impl StudioComponent {
     pub fn updated_by(&self) -> std::option::Option<&str> {
         self.updated_by.as_deref()
     }
+    /// <p>An IAM role attached to Studio Component when the system initialization script runs which give the studio component access to AWS resources when the system initialization script runs.</p>
+    pub fn secure_initialization_role_arn(&self) -> std::option::Option<&str> {
+        self.secure_initialization_role_arn.as_deref()
+    }
+    /// <p>An IAM role attached to a Studio Component that gives the studio component access to AWS resources at anytime while the instance is running. </p>
+    pub fn runtime_role_arn(&self) -> std::option::Option<&str> {
+        self.runtime_role_arn.as_deref()
+    }
 }
 impl std::fmt::Debug for StudioComponent {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -1178,14 +1230,18 @@ impl std::fmt::Debug for StudioComponent {
         formatter.field("r#type", &self.r#type);
         formatter.field("updated_at", &self.updated_at);
         formatter.field("updated_by", &self.updated_by);
+        formatter.field(
+            "secure_initialization_role_arn",
+            &self.secure_initialization_role_arn,
+        );
+        formatter.field("runtime_role_arn", &self.runtime_role_arn);
         formatter.finish()
     }
 }
-/// See [`StudioComponent`](crate::model::StudioComponent)
+/// See [`StudioComponent`](crate::model::StudioComponent).
 pub mod studio_component {
 
-    /// A builder for [`StudioComponent`](crate::model::StudioComponent)
-    #[non_exhaustive]
+    /// A builder for [`StudioComponent`](crate::model::StudioComponent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1210,6 +1266,8 @@ pub mod studio_component {
         pub(crate) r#type: std::option::Option<crate::model::StudioComponentType>,
         pub(crate) updated_at: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) updated_by: std::option::Option<std::string::String>,
+        pub(crate) secure_initialization_role_arn: std::option::Option<std::string::String>,
+        pub(crate) runtime_role_arn: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>The ARN of the resource.</p>
@@ -1466,7 +1524,36 @@ pub mod studio_component {
             self.updated_by = input;
             self
         }
-        /// Consumes the builder and constructs a [`StudioComponent`](crate::model::StudioComponent)
+        /// <p>An IAM role attached to Studio Component when the system initialization script runs which give the studio component access to AWS resources when the system initialization script runs.</p>
+        pub fn secure_initialization_role_arn(
+            mut self,
+            input: impl Into<std::string::String>,
+        ) -> Self {
+            self.secure_initialization_role_arn = Some(input.into());
+            self
+        }
+        /// <p>An IAM role attached to Studio Component when the system initialization script runs which give the studio component access to AWS resources when the system initialization script runs.</p>
+        pub fn set_secure_initialization_role_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.secure_initialization_role_arn = input;
+            self
+        }
+        /// <p>An IAM role attached to a Studio Component that gives the studio component access to AWS resources at anytime while the instance is running. </p>
+        pub fn runtime_role_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.runtime_role_arn = Some(input.into());
+            self
+        }
+        /// <p>An IAM role attached to a Studio Component that gives the studio component access to AWS resources at anytime while the instance is running. </p>
+        pub fn set_runtime_role_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.runtime_role_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`StudioComponent`](crate::model::StudioComponent).
         pub fn build(self) -> crate::model::StudioComponent {
             crate::model::StudioComponent {
                 arn: self.arn,
@@ -1487,12 +1574,14 @@ pub mod studio_component {
                 r#type: self.r#type,
                 updated_at: self.updated_at,
                 updated_by: self.updated_by,
+                secure_initialization_role_arn: self.secure_initialization_role_arn,
+                runtime_role_arn: self.runtime_role_arn,
             }
         }
     }
 }
 impl StudioComponent {
-    /// Creates a new builder-style object to manufacture [`StudioComponent`](crate::model::StudioComponent)
+    /// Creates a new builder-style object to manufacture [`StudioComponent`](crate::model::StudioComponent).
     pub fn builder() -> crate::model::studio_component::Builder {
         crate::model::studio_component::Builder::default()
     }
@@ -1869,8 +1958,10 @@ impl AsRef<str> for StudioComponentState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScriptParameterKeyValue {
     /// <p>A script parameter key.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>A script parameter value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl ScriptParameterKeyValue {
@@ -1891,11 +1982,10 @@ impl std::fmt::Debug for ScriptParameterKeyValue {
         formatter.finish()
     }
 }
-/// See [`ScriptParameterKeyValue`](crate::model::ScriptParameterKeyValue)
+/// See [`ScriptParameterKeyValue`](crate::model::ScriptParameterKeyValue).
 pub mod script_parameter_key_value {
 
-    /// A builder for [`ScriptParameterKeyValue`](crate::model::ScriptParameterKeyValue)
-    #[non_exhaustive]
+    /// A builder for [`ScriptParameterKeyValue`](crate::model::ScriptParameterKeyValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1922,7 +2012,7 @@ pub mod script_parameter_key_value {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScriptParameterKeyValue`](crate::model::ScriptParameterKeyValue)
+        /// Consumes the builder and constructs a [`ScriptParameterKeyValue`](crate::model::ScriptParameterKeyValue).
         pub fn build(self) -> crate::model::ScriptParameterKeyValue {
             crate::model::ScriptParameterKeyValue {
                 key: self.key,
@@ -1932,7 +2022,7 @@ pub mod script_parameter_key_value {
     }
 }
 impl ScriptParameterKeyValue {
-    /// Creates a new builder-style object to manufacture [`ScriptParameterKeyValue`](crate::model::ScriptParameterKeyValue)
+    /// Creates a new builder-style object to manufacture [`ScriptParameterKeyValue`](crate::model::ScriptParameterKeyValue).
     pub fn builder() -> crate::model::script_parameter_key_value::Builder {
         crate::model::script_parameter_key_value::Builder::default()
     }
@@ -1943,13 +2033,17 @@ impl ScriptParameterKeyValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StudioComponentInitializationScript {
     /// <p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>
+    #[doc(hidden)]
     pub launch_profile_protocol_version: std::option::Option<std::string::String>,
     /// <p>The platform of the initialization script, either WINDOWS or LINUX.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::LaunchProfilePlatform>,
     /// <p>The method to use when running the initialization script.</p>
+    #[doc(hidden)]
     pub run_context:
         std::option::Option<crate::model::StudioComponentInitializationScriptRunContext>,
     /// <p>The initialization script.</p>
+    #[doc(hidden)]
     pub script: std::option::Option<std::string::String>,
 }
 impl StudioComponentInitializationScript {
@@ -1985,11 +2079,10 @@ impl std::fmt::Debug for StudioComponentInitializationScript {
         formatter.finish()
     }
 }
-/// See [`StudioComponentInitializationScript`](crate::model::StudioComponentInitializationScript)
+/// See [`StudioComponentInitializationScript`](crate::model::StudioComponentInitializationScript).
 pub mod studio_component_initialization_script {
 
-    /// A builder for [`StudioComponentInitializationScript`](crate::model::StudioComponentInitializationScript)
-    #[non_exhaustive]
+    /// A builder for [`StudioComponentInitializationScript`](crate::model::StudioComponentInitializationScript).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) launch_profile_protocol_version: std::option::Option<std::string::String>,
@@ -2054,7 +2147,7 @@ pub mod studio_component_initialization_script {
             self.script = input;
             self
         }
-        /// Consumes the builder and constructs a [`StudioComponentInitializationScript`](crate::model::StudioComponentInitializationScript)
+        /// Consumes the builder and constructs a [`StudioComponentInitializationScript`](crate::model::StudioComponentInitializationScript).
         pub fn build(self) -> crate::model::StudioComponentInitializationScript {
             crate::model::StudioComponentInitializationScript {
                 launch_profile_protocol_version: self.launch_profile_protocol_version,
@@ -2066,7 +2159,7 @@ pub mod studio_component_initialization_script {
     }
 }
 impl StudioComponentInitializationScript {
-    /// Creates a new builder-style object to manufacture [`StudioComponentInitializationScript`](crate::model::StudioComponentInitializationScript)
+    /// Creates a new builder-style object to manufacture [`StudioComponentInitializationScript`](crate::model::StudioComponentInitializationScript).
     pub fn builder() -> crate::model::studio_component_initialization_script::Builder {
         crate::model::studio_component_initialization_script::Builder::default()
     }
@@ -2284,14 +2377,19 @@ impl StudioComponentConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SharedFileSystemConfiguration {
     /// <p>The endpoint of the shared file system that is accessed by the studio component resource.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The unique identifier for a file system.</p>
+    #[doc(hidden)]
     pub file_system_id: std::option::Option<std::string::String>,
     /// <p>The mount location for a shared file system on a Linux virtual workstation.</p>
+    #[doc(hidden)]
     pub linux_mount_point: std::option::Option<std::string::String>,
     /// <p>The name of the file share.</p>
+    #[doc(hidden)]
     pub share_name: std::option::Option<std::string::String>,
     /// <p>The mount location for a shared file system on a Windows virtual workstation.</p>
+    #[doc(hidden)]
     pub windows_mount_drive: std::option::Option<std::string::String>,
 }
 impl SharedFileSystemConfiguration {
@@ -2327,11 +2425,10 @@ impl std::fmt::Debug for SharedFileSystemConfiguration {
         formatter.finish()
     }
 }
-/// See [`SharedFileSystemConfiguration`](crate::model::SharedFileSystemConfiguration)
+/// See [`SharedFileSystemConfiguration`](crate::model::SharedFileSystemConfiguration).
 pub mod shared_file_system_configuration {
 
-    /// A builder for [`SharedFileSystemConfiguration`](crate::model::SharedFileSystemConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SharedFileSystemConfiguration`](crate::model::SharedFileSystemConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint: std::option::Option<std::string::String>,
@@ -2400,7 +2497,7 @@ pub mod shared_file_system_configuration {
             self.windows_mount_drive = input;
             self
         }
-        /// Consumes the builder and constructs a [`SharedFileSystemConfiguration`](crate::model::SharedFileSystemConfiguration)
+        /// Consumes the builder and constructs a [`SharedFileSystemConfiguration`](crate::model::SharedFileSystemConfiguration).
         pub fn build(self) -> crate::model::SharedFileSystemConfiguration {
             crate::model::SharedFileSystemConfiguration {
                 endpoint: self.endpoint,
@@ -2413,7 +2510,7 @@ pub mod shared_file_system_configuration {
     }
 }
 impl SharedFileSystemConfiguration {
-    /// Creates a new builder-style object to manufacture [`SharedFileSystemConfiguration`](crate::model::SharedFileSystemConfiguration)
+    /// Creates a new builder-style object to manufacture [`SharedFileSystemConfiguration`](crate::model::SharedFileSystemConfiguration).
     pub fn builder() -> crate::model::shared_file_system_configuration::Builder {
         crate::model::shared_file_system_configuration::Builder::default()
     }
@@ -2424,6 +2521,7 @@ impl SharedFileSystemConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LicenseServiceConfiguration {
     /// <p>The endpoint of the license service that is accessed by the studio component resource.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
 }
 impl LicenseServiceConfiguration {
@@ -2439,11 +2537,10 @@ impl std::fmt::Debug for LicenseServiceConfiguration {
         formatter.finish()
     }
 }
-/// See [`LicenseServiceConfiguration`](crate::model::LicenseServiceConfiguration)
+/// See [`LicenseServiceConfiguration`](crate::model::LicenseServiceConfiguration).
 pub mod license_service_configuration {
 
-    /// A builder for [`LicenseServiceConfiguration`](crate::model::LicenseServiceConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LicenseServiceConfiguration`](crate::model::LicenseServiceConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint: std::option::Option<std::string::String>,
@@ -2459,7 +2556,7 @@ pub mod license_service_configuration {
             self.endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`LicenseServiceConfiguration`](crate::model::LicenseServiceConfiguration)
+        /// Consumes the builder and constructs a [`LicenseServiceConfiguration`](crate::model::LicenseServiceConfiguration).
         pub fn build(self) -> crate::model::LicenseServiceConfiguration {
             crate::model::LicenseServiceConfiguration {
                 endpoint: self.endpoint,
@@ -2468,7 +2565,7 @@ pub mod license_service_configuration {
     }
 }
 impl LicenseServiceConfiguration {
-    /// Creates a new builder-style object to manufacture [`LicenseServiceConfiguration`](crate::model::LicenseServiceConfiguration)
+    /// Creates a new builder-style object to manufacture [`LicenseServiceConfiguration`](crate::model::LicenseServiceConfiguration).
     pub fn builder() -> crate::model::license_service_configuration::Builder {
         crate::model::license_service_configuration::Builder::default()
     }
@@ -2479,8 +2576,10 @@ impl LicenseServiceConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComputeFarmConfiguration {
     /// <p>The name of an Active Directory user that is used on ComputeFarm worker instances.</p>
+    #[doc(hidden)]
     pub active_directory_user: std::option::Option<std::string::String>,
     /// <p>The endpoint of the ComputeFarm that is accessed by the studio component resource.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
 }
 impl ComputeFarmConfiguration {
@@ -2501,11 +2600,10 @@ impl std::fmt::Debug for ComputeFarmConfiguration {
         formatter.finish()
     }
 }
-/// See [`ComputeFarmConfiguration`](crate::model::ComputeFarmConfiguration)
+/// See [`ComputeFarmConfiguration`](crate::model::ComputeFarmConfiguration).
 pub mod compute_farm_configuration {
 
-    /// A builder for [`ComputeFarmConfiguration`](crate::model::ComputeFarmConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ComputeFarmConfiguration`](crate::model::ComputeFarmConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) active_directory_user: std::option::Option<std::string::String>,
@@ -2535,7 +2633,7 @@ pub mod compute_farm_configuration {
             self.endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComputeFarmConfiguration`](crate::model::ComputeFarmConfiguration)
+        /// Consumes the builder and constructs a [`ComputeFarmConfiguration`](crate::model::ComputeFarmConfiguration).
         pub fn build(self) -> crate::model::ComputeFarmConfiguration {
             crate::model::ComputeFarmConfiguration {
                 active_directory_user: self.active_directory_user,
@@ -2545,7 +2643,7 @@ pub mod compute_farm_configuration {
     }
 }
 impl ComputeFarmConfiguration {
-    /// Creates a new builder-style object to manufacture [`ComputeFarmConfiguration`](crate::model::ComputeFarmConfiguration)
+    /// Creates a new builder-style object to manufacture [`ComputeFarmConfiguration`](crate::model::ComputeFarmConfiguration).
     pub fn builder() -> crate::model::compute_farm_configuration::Builder {
         crate::model::compute_farm_configuration::Builder::default()
     }
@@ -2556,11 +2654,14 @@ impl ComputeFarmConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActiveDirectoryConfiguration {
     /// <p>A collection of custom attributes for an Active Directory computer.</p>
+    #[doc(hidden)]
     pub computer_attributes:
         std::option::Option<std::vec::Vec<crate::model::ActiveDirectoryComputerAttribute>>,
     /// <p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>
+    #[doc(hidden)]
     pub directory_id: std::option::Option<std::string::String>,
     /// <p>The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.</p>
+    #[doc(hidden)]
     pub organizational_unit_distinguished_name: std::option::Option<std::string::String>,
 }
 impl ActiveDirectoryConfiguration {
@@ -2591,11 +2692,10 @@ impl std::fmt::Debug for ActiveDirectoryConfiguration {
         formatter.finish()
     }
 }
-/// See [`ActiveDirectoryConfiguration`](crate::model::ActiveDirectoryConfiguration)
+/// See [`ActiveDirectoryConfiguration`](crate::model::ActiveDirectoryConfiguration).
 pub mod active_directory_configuration {
 
-    /// A builder for [`ActiveDirectoryConfiguration`](crate::model::ActiveDirectoryConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ActiveDirectoryConfiguration`](crate::model::ActiveDirectoryConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) computer_attributes:
@@ -2654,7 +2754,7 @@ pub mod active_directory_configuration {
             self.organizational_unit_distinguished_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActiveDirectoryConfiguration`](crate::model::ActiveDirectoryConfiguration)
+        /// Consumes the builder and constructs a [`ActiveDirectoryConfiguration`](crate::model::ActiveDirectoryConfiguration).
         pub fn build(self) -> crate::model::ActiveDirectoryConfiguration {
             crate::model::ActiveDirectoryConfiguration {
                 computer_attributes: self.computer_attributes,
@@ -2665,7 +2765,7 @@ pub mod active_directory_configuration {
     }
 }
 impl ActiveDirectoryConfiguration {
-    /// Creates a new builder-style object to manufacture [`ActiveDirectoryConfiguration`](crate::model::ActiveDirectoryConfiguration)
+    /// Creates a new builder-style object to manufacture [`ActiveDirectoryConfiguration`](crate::model::ActiveDirectoryConfiguration).
     pub fn builder() -> crate::model::active_directory_configuration::Builder {
         crate::model::active_directory_configuration::Builder::default()
     }
@@ -2676,8 +2776,10 @@ impl ActiveDirectoryConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActiveDirectoryComputerAttribute {
     /// <p>The name for the LDAP attribute.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The value for the LDAP attribute.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl ActiveDirectoryComputerAttribute {
@@ -2698,11 +2800,10 @@ impl std::fmt::Debug for ActiveDirectoryComputerAttribute {
         formatter.finish()
     }
 }
-/// See [`ActiveDirectoryComputerAttribute`](crate::model::ActiveDirectoryComputerAttribute)
+/// See [`ActiveDirectoryComputerAttribute`](crate::model::ActiveDirectoryComputerAttribute).
 pub mod active_directory_computer_attribute {
 
-    /// A builder for [`ActiveDirectoryComputerAttribute`](crate::model::ActiveDirectoryComputerAttribute)
-    #[non_exhaustive]
+    /// A builder for [`ActiveDirectoryComputerAttribute`](crate::model::ActiveDirectoryComputerAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2729,7 +2830,7 @@ pub mod active_directory_computer_attribute {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActiveDirectoryComputerAttribute`](crate::model::ActiveDirectoryComputerAttribute)
+        /// Consumes the builder and constructs a [`ActiveDirectoryComputerAttribute`](crate::model::ActiveDirectoryComputerAttribute).
         pub fn build(self) -> crate::model::ActiveDirectoryComputerAttribute {
             crate::model::ActiveDirectoryComputerAttribute {
                 name: self.name,
@@ -2739,7 +2840,7 @@ pub mod active_directory_computer_attribute {
     }
 }
 impl ActiveDirectoryComputerAttribute {
-    /// Creates a new builder-style object to manufacture [`ActiveDirectoryComputerAttribute`](crate::model::ActiveDirectoryComputerAttribute)
+    /// Creates a new builder-style object to manufacture [`ActiveDirectoryComputerAttribute`](crate::model::ActiveDirectoryComputerAttribute).
     pub fn builder() -> crate::model::active_directory_computer_attribute::Builder {
         crate::model::active_directory_computer_attribute::Builder::default()
     }
@@ -2750,45 +2851,65 @@ impl ActiveDirectoryComputerAttribute {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamingSession {
     /// <p>The ARN of the resource.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The Unix epoch timestamp in seconds for when the resource was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The user ID of the user that created the streaming session.</p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
     /// <p>The EC2 Instance type used for the streaming session.</p>
+    #[doc(hidden)]
     pub ec2_instance_type: std::option::Option<std::string::String>,
     /// <p>The ID of the launch profile used to control access from the streaming session.</p>
+    #[doc(hidden)]
     pub launch_profile_id: std::option::Option<std::string::String>,
     /// <p>The user ID of the user that owns the streaming session. The user that owns the session will be logging into the session and interacting with the virtual workstation.</p>
+    #[doc(hidden)]
     pub owned_by: std::option::Option<std::string::String>,
     /// <p>The session ID.</p>
+    #[doc(hidden)]
     pub session_id: std::option::Option<std::string::String>,
     /// <p>The current state.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::StreamingSessionState>,
     /// <p>The status code.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::StreamingSessionStatusCode>,
     /// <p>The status message for the streaming session.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The ID of the streaming image.</p>
+    #[doc(hidden)]
     pub streaming_image_id: std::option::Option<std::string::String>,
     /// <p>A collection of labels, in the form of key:value pairs, that apply to this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The time the streaming session will automatically terminate if not terminated by the user.</p>
+    #[doc(hidden)]
     pub terminate_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Unix epoch timestamp in seconds for when the resource was updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The user ID of the user that most recently updated the resource.</p>
+    #[doc(hidden)]
     pub updated_by: std::option::Option<std::string::String>,
     /// <p>The time the session entered STOP_IN_PROGRESS state.</p>
+    #[doc(hidden)]
     pub stopped_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The user ID of the user that stopped the streaming session.</p>
+    #[doc(hidden)]
     pub stopped_by: std::option::Option<std::string::String>,
     /// <p>The time the session entered START_IN_PROGRESS state.</p>
+    #[doc(hidden)]
     pub started_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The user ID of the user that started the streaming session.</p>
+    #[doc(hidden)]
     pub started_by: std::option::Option<std::string::String>,
     /// <p>The time the streaming session will automatically be stopped if the user doesn’t stop the session themselves. </p>
+    #[doc(hidden)]
     pub stop_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl StreamingSession {
@@ -2902,11 +3023,10 @@ impl std::fmt::Debug for StreamingSession {
         formatter.finish()
     }
 }
-/// See [`StreamingSession`](crate::model::StreamingSession)
+/// See [`StreamingSession`](crate::model::StreamingSession).
 pub mod streaming_session {
 
-    /// A builder for [`StreamingSession`](crate::model::StreamingSession)
-    #[non_exhaustive]
+    /// A builder for [`StreamingSession`](crate::model::StreamingSession).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3184,7 +3304,7 @@ pub mod streaming_session {
             self.stop_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamingSession`](crate::model::StreamingSession)
+        /// Consumes the builder and constructs a [`StreamingSession`](crate::model::StreamingSession).
         pub fn build(self) -> crate::model::StreamingSession {
             crate::model::StreamingSession {
                 arn: self.arn,
@@ -3212,7 +3332,7 @@ pub mod streaming_session {
     }
 }
 impl StreamingSession {
-    /// Creates a new builder-style object to manufacture [`StreamingSession`](crate::model::StreamingSession)
+    /// Creates a new builder-style object to manufacture [`StreamingSession`](crate::model::StreamingSession).
     pub fn builder() -> crate::model::streaming_session::Builder {
         crate::model::streaming_session::Builder::default()
     }
@@ -3478,20 +3598,28 @@ impl AsRef<str> for StreamingSessionState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamingSessionStream {
     /// <p>The Unix epoch timestamp in seconds for when the resource was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The user ID of the user that created the streaming session stream.</p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
     /// <p>The Unix epoch timestamp in seconds for when the resource expires.</p>
+    #[doc(hidden)]
     pub expires_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The user ID of the user that owns the streaming session. The user that owns the session will be logging into the session and interacting with the virtual workstation.</p>
+    #[doc(hidden)]
     pub owned_by: std::option::Option<std::string::String>,
     /// <p>The current state.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::StreamingSessionStreamState>,
     /// <p>The streaming session stream status code.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::StreamingSessionStreamStatusCode>,
     /// <p>The stream ID.</p>
+    #[doc(hidden)]
     pub stream_id: std::option::Option<std::string::String>,
     /// <p>The URL to connect to this stream using the DCV client.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl StreamingSessionStream {
@@ -3544,11 +3672,10 @@ impl std::fmt::Debug for StreamingSessionStream {
         formatter.finish()
     }
 }
-/// See [`StreamingSessionStream`](crate::model::StreamingSessionStream)
+/// See [`StreamingSessionStream`](crate::model::StreamingSessionStream).
 pub mod streaming_session_stream {
 
-    /// A builder for [`StreamingSessionStream`](crate::model::StreamingSessionStream)
-    #[non_exhaustive]
+    /// A builder for [`StreamingSessionStream`](crate::model::StreamingSessionStream).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) created_at: std::option::Option<aws_smithy_types::DateTime>,
@@ -3656,7 +3783,7 @@ pub mod streaming_session_stream {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamingSessionStream`](crate::model::StreamingSessionStream)
+        /// Consumes the builder and constructs a [`StreamingSessionStream`](crate::model::StreamingSessionStream).
         pub fn build(self) -> crate::model::StreamingSessionStream {
             crate::model::StreamingSessionStream {
                 created_at: self.created_at,
@@ -3672,7 +3799,7 @@ pub mod streaming_session_stream {
     }
 }
 impl StreamingSessionStream {
-    /// Creates a new builder-style object to manufacture [`StreamingSessionStream`](crate::model::StreamingSessionStream)
+    /// Creates a new builder-style object to manufacture [`StreamingSessionStream`](crate::model::StreamingSessionStream).
     pub fn builder() -> crate::model::streaming_session_stream::Builder {
         crate::model::streaming_session_stream::Builder::default()
     }
@@ -3920,31 +4047,44 @@ impl AsRef<str> for StreamingInstanceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamingImage {
     /// <p>The ARN of the resource.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>A human-readable description of the streaming image.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The ID of an EC2 machine image with which to create the streaming image.</p>
+    #[doc(hidden)]
     pub ec2_image_id: std::option::Option<std::string::String>,
     /// <p>The encryption configuration.</p>
+    #[doc(hidden)]
     pub encryption_configuration:
         std::option::Option<crate::model::StreamingImageEncryptionConfiguration>,
     /// <p>The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.</p>
+    #[doc(hidden)]
     pub eula_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A friendly name for a streaming image resource.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The owner of the streaming image, either the studioId that contains the streaming image, or 'amazon' for images that are provided by Amazon Nimble Studio.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The platform of the streaming image, either WINDOWS or LINUX.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The current state.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::StreamingImageState>,
     /// <p>The status code.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::StreamingImageStatusCode>,
     /// <p>The status message for the streaming image.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The ID of the streaming image.</p>
+    #[doc(hidden)]
     pub streaming_image_id: std::option::Option<std::string::String>,
     /// <p>A collection of labels, in the form of key:value pairs, that apply to this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -4026,11 +4166,10 @@ impl std::fmt::Debug for StreamingImage {
         formatter.finish()
     }
 }
-/// See [`StreamingImage`](crate::model::StreamingImage)
+/// See [`StreamingImage`](crate::model::StreamingImage).
 pub mod streaming_image {
 
-    /// A builder for [`StreamingImage`](crate::model::StreamingImage)
-    #[non_exhaustive]
+    /// A builder for [`StreamingImage`](crate::model::StreamingImage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4223,7 +4362,7 @@ pub mod streaming_image {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamingImage`](crate::model::StreamingImage)
+        /// Consumes the builder and constructs a [`StreamingImage`](crate::model::StreamingImage).
         pub fn build(self) -> crate::model::StreamingImage {
             crate::model::StreamingImage {
                 arn: self.arn,
@@ -4244,7 +4383,7 @@ pub mod streaming_image {
     }
 }
 impl StreamingImage {
-    /// Creates a new builder-style object to manufacture [`StreamingImage`](crate::model::StreamingImage)
+    /// Creates a new builder-style object to manufacture [`StreamingImage`](crate::model::StreamingImage).
     pub fn builder() -> crate::model::streaming_image::Builder {
         crate::model::streaming_image::Builder::default()
     }
@@ -4438,8 +4577,10 @@ impl AsRef<str> for StreamingImageState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamingImageEncryptionConfiguration {
     /// <p>The ARN for a KMS key that is used to encrypt studio data.</p>
+    #[doc(hidden)]
     pub key_arn: std::option::Option<std::string::String>,
     /// <p>The type of KMS key that is used to encrypt studio data.</p>
+    #[doc(hidden)]
     pub key_type: std::option::Option<crate::model::StreamingImageEncryptionConfigurationKeyType>,
 }
 impl StreamingImageEncryptionConfiguration {
@@ -4462,11 +4603,10 @@ impl std::fmt::Debug for StreamingImageEncryptionConfiguration {
         formatter.finish()
     }
 }
-/// See [`StreamingImageEncryptionConfiguration`](crate::model::StreamingImageEncryptionConfiguration)
+/// See [`StreamingImageEncryptionConfiguration`](crate::model::StreamingImageEncryptionConfiguration).
 pub mod streaming_image_encryption_configuration {
 
-    /// A builder for [`StreamingImageEncryptionConfiguration`](crate::model::StreamingImageEncryptionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`StreamingImageEncryptionConfiguration`](crate::model::StreamingImageEncryptionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_arn: std::option::Option<std::string::String>,
@@ -4500,7 +4640,7 @@ pub mod streaming_image_encryption_configuration {
             self.key_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamingImageEncryptionConfiguration`](crate::model::StreamingImageEncryptionConfiguration)
+        /// Consumes the builder and constructs a [`StreamingImageEncryptionConfiguration`](crate::model::StreamingImageEncryptionConfiguration).
         pub fn build(self) -> crate::model::StreamingImageEncryptionConfiguration {
             crate::model::StreamingImageEncryptionConfiguration {
                 key_arn: self.key_arn,
@@ -4510,7 +4650,7 @@ pub mod streaming_image_encryption_configuration {
     }
 }
 impl StreamingImageEncryptionConfiguration {
-    /// Creates a new builder-style object to manufacture [`StreamingImageEncryptionConfiguration`](crate::model::StreamingImageEncryptionConfiguration)
+    /// Creates a new builder-style object to manufacture [`StreamingImageEncryptionConfiguration`](crate::model::StreamingImageEncryptionConfiguration).
     pub fn builder() -> crate::model::streaming_image_encryption_configuration::Builder {
         crate::model::streaming_image_encryption_configuration::Builder::default()
     }
@@ -4585,12 +4725,16 @@ impl AsRef<str> for StreamingImageEncryptionConfigurationKeyType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchProfileMembership {
     /// <p>The ID of the identity store.</p>
+    #[doc(hidden)]
     pub identity_store_id: std::option::Option<std::string::String>,
     /// <p>The persona.</p>
+    #[doc(hidden)]
     pub persona: std::option::Option<crate::model::LaunchProfilePersona>,
     /// <p>The principal ID.</p>
+    #[doc(hidden)]
     pub principal_id: std::option::Option<std::string::String>,
     /// <p>The Active Directory Security Identifier for this user, if available.</p>
+    #[doc(hidden)]
     pub sid: std::option::Option<std::string::String>,
 }
 impl LaunchProfileMembership {
@@ -4621,11 +4765,10 @@ impl std::fmt::Debug for LaunchProfileMembership {
         formatter.finish()
     }
 }
-/// See [`LaunchProfileMembership`](crate::model::LaunchProfileMembership)
+/// See [`LaunchProfileMembership`](crate::model::LaunchProfileMembership).
 pub mod launch_profile_membership {
 
-    /// A builder for [`LaunchProfileMembership`](crate::model::LaunchProfileMembership)
-    #[non_exhaustive]
+    /// A builder for [`LaunchProfileMembership`](crate::model::LaunchProfileMembership).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_store_id: std::option::Option<std::string::String>,
@@ -4680,7 +4823,7 @@ pub mod launch_profile_membership {
             self.sid = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchProfileMembership`](crate::model::LaunchProfileMembership)
+        /// Consumes the builder and constructs a [`LaunchProfileMembership`](crate::model::LaunchProfileMembership).
         pub fn build(self) -> crate::model::LaunchProfileMembership {
             crate::model::LaunchProfileMembership {
                 identity_store_id: self.identity_store_id,
@@ -4692,7 +4835,7 @@ pub mod launch_profile_membership {
     }
 }
 impl LaunchProfileMembership {
-    /// Creates a new builder-style object to manufacture [`LaunchProfileMembership`](crate::model::LaunchProfileMembership)
+    /// Creates a new builder-style object to manufacture [`LaunchProfileMembership`](crate::model::LaunchProfileMembership).
     pub fn builder() -> crate::model::launch_profile_membership::Builder {
         crate::model::launch_profile_membership::Builder::default()
     }
@@ -4754,8 +4897,10 @@ impl AsRef<str> for LaunchProfilePersona {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NewLaunchProfileMember {
     /// <p>The persona.</p>
+    #[doc(hidden)]
     pub persona: std::option::Option<crate::model::LaunchProfilePersona>,
     /// <p>The principal ID.</p>
+    #[doc(hidden)]
     pub principal_id: std::option::Option<std::string::String>,
 }
 impl NewLaunchProfileMember {
@@ -4776,11 +4921,10 @@ impl std::fmt::Debug for NewLaunchProfileMember {
         formatter.finish()
     }
 }
-/// See [`NewLaunchProfileMember`](crate::model::NewLaunchProfileMember)
+/// See [`NewLaunchProfileMember`](crate::model::NewLaunchProfileMember).
 pub mod new_launch_profile_member {
 
-    /// A builder for [`NewLaunchProfileMember`](crate::model::NewLaunchProfileMember)
-    #[non_exhaustive]
+    /// A builder for [`NewLaunchProfileMember`](crate::model::NewLaunchProfileMember).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) persona: std::option::Option<crate::model::LaunchProfilePersona>,
@@ -4810,7 +4954,7 @@ pub mod new_launch_profile_member {
             self.principal_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`NewLaunchProfileMember`](crate::model::NewLaunchProfileMember)
+        /// Consumes the builder and constructs a [`NewLaunchProfileMember`](crate::model::NewLaunchProfileMember).
         pub fn build(self) -> crate::model::NewLaunchProfileMember {
             crate::model::NewLaunchProfileMember {
                 persona: self.persona,
@@ -4820,7 +4964,7 @@ pub mod new_launch_profile_member {
     }
 }
 impl NewLaunchProfileMember {
-    /// Creates a new builder-style object to manufacture [`NewLaunchProfileMember`](crate::model::NewLaunchProfileMember)
+    /// Creates a new builder-style object to manufacture [`NewLaunchProfileMember`](crate::model::NewLaunchProfileMember).
     pub fn builder() -> crate::model::new_launch_profile_member::Builder {
         crate::model::new_launch_profile_member::Builder::default()
     }
@@ -4832,24 +4976,33 @@ impl NewLaunchProfileMember {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchProfileInitialization {
     /// <p>A LaunchProfileInitializationActiveDirectory resource.</p>
+    #[doc(hidden)]
     pub active_directory:
         std::option::Option<crate::model::LaunchProfileInitializationActiveDirectory>,
     /// <p>The EC2 security groups that control access to the studio component.</p>
+    #[doc(hidden)]
     pub ec2_security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The launch profile ID.</p>
+    #[doc(hidden)]
     pub launch_profile_id: std::option::Option<std::string::String>,
     /// <p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>
+    #[doc(hidden)]
     pub launch_profile_protocol_version: std::option::Option<std::string::String>,
     /// <p>The launch purpose.</p>
+    #[doc(hidden)]
     pub launch_purpose: std::option::Option<std::string::String>,
     /// <p>The name for the launch profile.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The platform of the launch platform, either WINDOWS or LINUX.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<crate::model::LaunchProfilePlatform>,
     /// <p>The system initializtion scripts.</p>
+    #[doc(hidden)]
     pub system_initialization_scripts:
         std::option::Option<std::vec::Vec<crate::model::LaunchProfileInitializationScript>>,
     /// <p>The user initializtion scripts.</p>
+    #[doc(hidden)]
     pub user_initialization_scripts:
         std::option::Option<std::vec::Vec<crate::model::LaunchProfileInitializationScript>>,
 }
@@ -4921,11 +5074,10 @@ impl std::fmt::Debug for LaunchProfileInitialization {
         formatter.finish()
     }
 }
-/// See [`LaunchProfileInitialization`](crate::model::LaunchProfileInitialization)
+/// See [`LaunchProfileInitialization`](crate::model::LaunchProfileInitialization).
 pub mod launch_profile_initialization {
 
-    /// A builder for [`LaunchProfileInitialization`](crate::model::LaunchProfileInitialization)
-    #[non_exhaustive]
+    /// A builder for [`LaunchProfileInitialization`](crate::model::LaunchProfileInitialization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) active_directory:
@@ -5090,7 +5242,7 @@ pub mod launch_profile_initialization {
             self.user_initialization_scripts = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchProfileInitialization`](crate::model::LaunchProfileInitialization)
+        /// Consumes the builder and constructs a [`LaunchProfileInitialization`](crate::model::LaunchProfileInitialization).
         pub fn build(self) -> crate::model::LaunchProfileInitialization {
             crate::model::LaunchProfileInitialization {
                 active_directory: self.active_directory,
@@ -5107,7 +5259,7 @@ pub mod launch_profile_initialization {
     }
 }
 impl LaunchProfileInitialization {
-    /// Creates a new builder-style object to manufacture [`LaunchProfileInitialization`](crate::model::LaunchProfileInitialization)
+    /// Creates a new builder-style object to manufacture [`LaunchProfileInitialization`](crate::model::LaunchProfileInitialization).
     pub fn builder() -> crate::model::launch_profile_initialization::Builder {
         crate::model::launch_profile_initialization::Builder::default()
     }
@@ -5118,11 +5270,20 @@ impl LaunchProfileInitialization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchProfileInitializationScript {
     /// <p>The initialization script.</p>
+    #[doc(hidden)]
     pub script: std::option::Option<std::string::String>,
     /// <p>The unique identifier for a studio component resource.</p>
+    #[doc(hidden)]
     pub studio_component_id: std::option::Option<std::string::String>,
     /// <p>The name for the studio component.</p>
+    #[doc(hidden)]
     pub studio_component_name: std::option::Option<std::string::String>,
+    /// <p>An IAM role attached to Studio Component when the system initialization script runs which give the studio component access to AWS resources when the system initialization script runs.</p>
+    #[doc(hidden)]
+    pub secure_initialization_role_arn: std::option::Option<std::string::String>,
+    /// <p>An IAM role attached to a Studio Component that gives the studio component access to AWS resources at anytime while the instance is running. </p>
+    #[doc(hidden)]
+    pub runtime_role_arn: std::option::Option<std::string::String>,
 }
 impl LaunchProfileInitializationScript {
     /// <p>The initialization script.</p>
@@ -5137,6 +5298,14 @@ impl LaunchProfileInitializationScript {
     pub fn studio_component_name(&self) -> std::option::Option<&str> {
         self.studio_component_name.as_deref()
     }
+    /// <p>An IAM role attached to Studio Component when the system initialization script runs which give the studio component access to AWS resources when the system initialization script runs.</p>
+    pub fn secure_initialization_role_arn(&self) -> std::option::Option<&str> {
+        self.secure_initialization_role_arn.as_deref()
+    }
+    /// <p>An IAM role attached to a Studio Component that gives the studio component access to AWS resources at anytime while the instance is running. </p>
+    pub fn runtime_role_arn(&self) -> std::option::Option<&str> {
+        self.runtime_role_arn.as_deref()
+    }
 }
 impl std::fmt::Debug for LaunchProfileInitializationScript {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -5144,19 +5313,25 @@ impl std::fmt::Debug for LaunchProfileInitializationScript {
         formatter.field("script", &"*** Sensitive Data Redacted ***");
         formatter.field("studio_component_id", &self.studio_component_id);
         formatter.field("studio_component_name", &"*** Sensitive Data Redacted ***");
+        formatter.field(
+            "secure_initialization_role_arn",
+            &self.secure_initialization_role_arn,
+        );
+        formatter.field("runtime_role_arn", &self.runtime_role_arn);
         formatter.finish()
     }
 }
-/// See [`LaunchProfileInitializationScript`](crate::model::LaunchProfileInitializationScript)
+/// See [`LaunchProfileInitializationScript`](crate::model::LaunchProfileInitializationScript).
 pub mod launch_profile_initialization_script {
 
-    /// A builder for [`LaunchProfileInitializationScript`](crate::model::LaunchProfileInitializationScript)
-    #[non_exhaustive]
+    /// A builder for [`LaunchProfileInitializationScript`](crate::model::LaunchProfileInitializationScript).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) script: std::option::Option<std::string::String>,
         pub(crate) studio_component_id: std::option::Option<std::string::String>,
         pub(crate) studio_component_name: std::option::Option<std::string::String>,
+        pub(crate) secure_initialization_role_arn: std::option::Option<std::string::String>,
+        pub(crate) runtime_role_arn: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>The initialization script.</p>
@@ -5195,18 +5370,49 @@ pub mod launch_profile_initialization_script {
             self.studio_component_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchProfileInitializationScript`](crate::model::LaunchProfileInitializationScript)
+        /// <p>An IAM role attached to Studio Component when the system initialization script runs which give the studio component access to AWS resources when the system initialization script runs.</p>
+        pub fn secure_initialization_role_arn(
+            mut self,
+            input: impl Into<std::string::String>,
+        ) -> Self {
+            self.secure_initialization_role_arn = Some(input.into());
+            self
+        }
+        /// <p>An IAM role attached to Studio Component when the system initialization script runs which give the studio component access to AWS resources when the system initialization script runs.</p>
+        pub fn set_secure_initialization_role_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.secure_initialization_role_arn = input;
+            self
+        }
+        /// <p>An IAM role attached to a Studio Component that gives the studio component access to AWS resources at anytime while the instance is running. </p>
+        pub fn runtime_role_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.runtime_role_arn = Some(input.into());
+            self
+        }
+        /// <p>An IAM role attached to a Studio Component that gives the studio component access to AWS resources at anytime while the instance is running. </p>
+        pub fn set_runtime_role_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.runtime_role_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`LaunchProfileInitializationScript`](crate::model::LaunchProfileInitializationScript).
         pub fn build(self) -> crate::model::LaunchProfileInitializationScript {
             crate::model::LaunchProfileInitializationScript {
                 script: self.script,
                 studio_component_id: self.studio_component_id,
                 studio_component_name: self.studio_component_name,
+                secure_initialization_role_arn: self.secure_initialization_role_arn,
+                runtime_role_arn: self.runtime_role_arn,
             }
         }
     }
 }
 impl LaunchProfileInitializationScript {
-    /// Creates a new builder-style object to manufacture [`LaunchProfileInitializationScript`](crate::model::LaunchProfileInitializationScript)
+    /// Creates a new builder-style object to manufacture [`LaunchProfileInitializationScript`](crate::model::LaunchProfileInitializationScript).
     pub fn builder() -> crate::model::launch_profile_initialization_script::Builder {
         crate::model::launch_profile_initialization_script::Builder::default()
     }
@@ -5217,19 +5423,26 @@ impl LaunchProfileInitializationScript {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchProfileInitializationActiveDirectory {
     /// <p>A collection of custom attributes for an Active Directory computer.</p>
+    #[doc(hidden)]
     pub computer_attributes:
         std::option::Option<std::vec::Vec<crate::model::ActiveDirectoryComputerAttribute>>,
     /// <p>The directory ID of the Directory Service for Microsoft Active Directory to access using this launch profile.</p>
+    #[doc(hidden)]
     pub directory_id: std::option::Option<std::string::String>,
     /// <p>The directory name.</p>
+    #[doc(hidden)]
     pub directory_name: std::option::Option<std::string::String>,
     /// <p>The DNS IP address.</p>
+    #[doc(hidden)]
     pub dns_ip_addresses: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The name for the organizational unit distinguished name.</p>
+    #[doc(hidden)]
     pub organizational_unit_distinguished_name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for a studio component resource.</p>
+    #[doc(hidden)]
     pub studio_component_id: std::option::Option<std::string::String>,
     /// <p>The name for the studio component.</p>
+    #[doc(hidden)]
     pub studio_component_name: std::option::Option<std::string::String>,
 }
 impl LaunchProfileInitializationActiveDirectory {
@@ -5280,11 +5493,10 @@ impl std::fmt::Debug for LaunchProfileInitializationActiveDirectory {
         formatter.finish()
     }
 }
-/// See [`LaunchProfileInitializationActiveDirectory`](crate::model::LaunchProfileInitializationActiveDirectory)
+/// See [`LaunchProfileInitializationActiveDirectory`](crate::model::LaunchProfileInitializationActiveDirectory).
 pub mod launch_profile_initialization_active_directory {
 
-    /// A builder for [`LaunchProfileInitializationActiveDirectory`](crate::model::LaunchProfileInitializationActiveDirectory)
-    #[non_exhaustive]
+    /// A builder for [`LaunchProfileInitializationActiveDirectory`](crate::model::LaunchProfileInitializationActiveDirectory).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) computer_attributes:
@@ -5405,7 +5617,7 @@ pub mod launch_profile_initialization_active_directory {
             self.studio_component_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchProfileInitializationActiveDirectory`](crate::model::LaunchProfileInitializationActiveDirectory)
+        /// Consumes the builder and constructs a [`LaunchProfileInitializationActiveDirectory`](crate::model::LaunchProfileInitializationActiveDirectory).
         pub fn build(self) -> crate::model::LaunchProfileInitializationActiveDirectory {
             crate::model::LaunchProfileInitializationActiveDirectory {
                 computer_attributes: self.computer_attributes,
@@ -5420,7 +5632,7 @@ pub mod launch_profile_initialization_active_directory {
     }
 }
 impl LaunchProfileInitializationActiveDirectory {
-    /// Creates a new builder-style object to manufacture [`LaunchProfileInitializationActiveDirectory`](crate::model::LaunchProfileInitializationActiveDirectory)
+    /// Creates a new builder-style object to manufacture [`LaunchProfileInitializationActiveDirectory`](crate::model::LaunchProfileInitializationActiveDirectory).
     pub fn builder() -> crate::model::launch_profile_initialization_active_directory::Builder {
         crate::model::launch_profile_initialization_active_directory::Builder::default()
     }
@@ -5431,22 +5643,31 @@ impl LaunchProfileInitializationActiveDirectory {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StudioComponentSummary {
     /// <p>The Unix epoch timestamp in seconds for when the resource was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The user ID of the user that created the studio component.</p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
     /// <p>The description.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The name for the studio component.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The unique identifier for a studio component resource.</p>
+    #[doc(hidden)]
     pub studio_component_id: std::option::Option<std::string::String>,
     /// <p>The specific subtype of a studio component.</p>
+    #[doc(hidden)]
     pub subtype: std::option::Option<crate::model::StudioComponentSubtype>,
     /// <p>The type of the studio component.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::StudioComponentType>,
     /// <p>The Unix epoch timestamp in seconds for when the resource was updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The user ID of the user that most recently updated the resource.</p>
+    #[doc(hidden)]
     pub updated_by: std::option::Option<std::string::String>,
 }
 impl StudioComponentSummary {
@@ -5502,11 +5723,10 @@ impl std::fmt::Debug for StudioComponentSummary {
         formatter.finish()
     }
 }
-/// See [`StudioComponentSummary`](crate::model::StudioComponentSummary)
+/// See [`StudioComponentSummary`](crate::model::StudioComponentSummary).
 pub mod studio_component_summary {
 
-    /// A builder for [`StudioComponentSummary`](crate::model::StudioComponentSummary)
-    #[non_exhaustive]
+    /// A builder for [`StudioComponentSummary`](crate::model::StudioComponentSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) created_at: std::option::Option<aws_smithy_types::DateTime>,
@@ -5625,7 +5845,7 @@ pub mod studio_component_summary {
             self.updated_by = input;
             self
         }
-        /// Consumes the builder and constructs a [`StudioComponentSummary`](crate::model::StudioComponentSummary)
+        /// Consumes the builder and constructs a [`StudioComponentSummary`](crate::model::StudioComponentSummary).
         pub fn build(self) -> crate::model::StudioComponentSummary {
             crate::model::StudioComponentSummary {
                 created_at: self.created_at,
@@ -5642,7 +5862,7 @@ pub mod studio_component_summary {
     }
 }
 impl StudioComponentSummary {
-    /// Creates a new builder-style object to manufacture [`StudioComponentSummary`](crate::model::StudioComponentSummary)
+    /// Creates a new builder-style object to manufacture [`StudioComponentSummary`](crate::model::StudioComponentSummary).
     pub fn builder() -> crate::model::studio_component_summary::Builder {
         crate::model::studio_component_summary::Builder::default()
     }
@@ -5654,39 +5874,56 @@ impl StudioComponentSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchProfile {
     /// <p>The ARN of the resource.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The Unix epoch timestamp in seconds for when the resource was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The user ID of the user that created the launch profile.</p>
+    #[doc(hidden)]
     pub created_by: std::option::Option<std::string::String>,
     /// <p>A human-readable description of the launch profile.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Unique identifiers for a collection of EC2 subnets.</p>
+    #[doc(hidden)]
     pub ec2_subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The launch profile ID.</p>
+    #[doc(hidden)]
     pub launch_profile_id: std::option::Option<std::string::String>,
     /// <p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>
+    #[doc(hidden)]
     pub launch_profile_protocol_versions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A friendly name for the launch profile.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The current state.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::LaunchProfileState>,
     /// <p>The status code.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::LaunchProfileStatusCode>,
     /// <p>The status message for the launch profile.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>A configuration for a streaming session.</p>
+    #[doc(hidden)]
     pub stream_configuration: std::option::Option<crate::model::StreamConfiguration>,
     /// <p>Unique identifiers for a collection of studio components that can be used with this launch profile.</p>
+    #[doc(hidden)]
     pub studio_component_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A collection of labels, in the form of key:value pairs, that apply to this resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Unix epoch timestamp in seconds for when the resource was updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The user ID of the user that most recently updated the resource.</p>
+    #[doc(hidden)]
     pub updated_by: std::option::Option<std::string::String>,
     /// <p>The list of the latest validation results.</p>
+    #[doc(hidden)]
     pub validation_results: std::option::Option<std::vec::Vec<crate::model::ValidationResult>>,
 }
 impl LaunchProfile {
@@ -5788,11 +6025,10 @@ impl std::fmt::Debug for LaunchProfile {
         formatter.finish()
     }
 }
-/// See [`LaunchProfile`](crate::model::LaunchProfile)
+/// See [`LaunchProfile`](crate::model::LaunchProfile).
 pub mod launch_profile {
 
-    /// A builder for [`LaunchProfile`](crate::model::LaunchProfile)
-    #[non_exhaustive]
+    /// A builder for [`LaunchProfile`](crate::model::LaunchProfile).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -6063,7 +6299,7 @@ pub mod launch_profile {
             self.validation_results = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchProfile`](crate::model::LaunchProfile)
+        /// Consumes the builder and constructs a [`LaunchProfile`](crate::model::LaunchProfile).
         pub fn build(self) -> crate::model::LaunchProfile {
             crate::model::LaunchProfile {
                 arn: self.arn,
@@ -6088,7 +6324,7 @@ pub mod launch_profile {
     }
 }
 impl LaunchProfile {
-    /// Creates a new builder-style object to manufacture [`LaunchProfile`](crate::model::LaunchProfile)
+    /// Creates a new builder-style object to manufacture [`LaunchProfile`](crate::model::LaunchProfile).
     pub fn builder() -> crate::model::launch_profile::Builder {
         crate::model::launch_profile::Builder::default()
     }
@@ -6099,12 +6335,16 @@ impl LaunchProfile {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationResult {
     /// <p>The type of the validation result.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::LaunchProfileValidationType>,
     /// <p>The current state.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::LaunchProfileValidationState>,
     /// <p>The status code. This will contain the failure reason if the state is <code>VALIDATION_FAILED</code>.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<crate::model::LaunchProfileValidationStatusCode>,
     /// <p>The status message for the validation result.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
 }
 impl ValidationResult {
@@ -6137,11 +6377,10 @@ impl std::fmt::Debug for ValidationResult {
         formatter.finish()
     }
 }
-/// See [`ValidationResult`](crate::model::ValidationResult)
+/// See [`ValidationResult`](crate::model::ValidationResult).
 pub mod validation_result {
 
-    /// A builder for [`ValidationResult`](crate::model::ValidationResult)
-    #[non_exhaustive]
+    /// A builder for [`ValidationResult`](crate::model::ValidationResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::LaunchProfileValidationType>,
@@ -6206,7 +6445,7 @@ pub mod validation_result {
             self.status_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationResult`](crate::model::ValidationResult)
+        /// Consumes the builder and constructs a [`ValidationResult`](crate::model::ValidationResult).
         pub fn build(self) -> crate::model::ValidationResult {
             crate::model::ValidationResult {
                 r#type: self.r#type,
@@ -6218,7 +6457,7 @@ pub mod validation_result {
     }
 }
 impl ValidationResult {
-    /// Creates a new builder-style object to manufacture [`ValidationResult`](crate::model::ValidationResult)
+    /// Creates a new builder-style object to manufacture [`ValidationResult`](crate::model::ValidationResult).
     pub fn builder() -> crate::model::validation_result::Builder {
         crate::model::validation_result::Builder::default()
     }
@@ -6479,18 +6718,24 @@ impl AsRef<str> for LaunchProfileValidationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamConfiguration {
     /// <p>Enable or disable the use of the system clipboard to copy and paste between the streaming session and streaming client.</p>
+    #[doc(hidden)]
     pub clipboard_mode: std::option::Option<crate::model::StreamingClipboardMode>,
     /// <p>The EC2 instance types that users can select from when launching a streaming session with this launch profile.</p>
+    #[doc(hidden)]
     pub ec2_instance_types: std::option::Option<std::vec::Vec<crate::model::StreamingInstanceType>>,
     /// <p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>
+    #[doc(hidden)]
     pub max_session_length_in_minutes: i32,
     /// <p>The streaming images that users can select from when launching a streaming session with this launch profile.</p>
+    #[doc(hidden)]
     pub streaming_image_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p>
-    /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated by AWS (instead of stopped).</p>
-    /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped by AWS (instead of terminated).</p>
+    /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated (instead of stopped).</p>
+    /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped (instead of terminated).</p>
+    #[doc(hidden)]
     pub max_stopped_session_length_in_minutes: i32,
     /// <p>(Optional) The upload storage for a streaming session.</p>
+    #[doc(hidden)]
     pub session_storage: std::option::Option<crate::model::StreamConfigurationSessionStorage>,
 }
 impl StreamConfiguration {
@@ -6513,8 +6758,8 @@ impl StreamConfiguration {
         self.streaming_image_ids.as_deref()
     }
     /// <p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p>
-    /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated by AWS (instead of stopped).</p>
-    /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped by AWS (instead of terminated).</p>
+    /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated (instead of stopped).</p>
+    /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped (instead of terminated).</p>
     pub fn max_stopped_session_length_in_minutes(&self) -> i32 {
         self.max_stopped_session_length_in_minutes
     }
@@ -6543,11 +6788,10 @@ impl std::fmt::Debug for StreamConfiguration {
         formatter.finish()
     }
 }
-/// See [`StreamConfiguration`](crate::model::StreamConfiguration)
+/// See [`StreamConfiguration`](crate::model::StreamConfiguration).
 pub mod stream_configuration {
 
-    /// A builder for [`StreamConfiguration`](crate::model::StreamConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`StreamConfiguration`](crate::model::StreamConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) clipboard_mode: std::option::Option<crate::model::StreamingClipboardMode>,
@@ -6625,15 +6869,15 @@ pub mod stream_configuration {
             self
         }
         /// <p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p>
-        /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated by AWS (instead of stopped).</p>
-        /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped by AWS (instead of terminated).</p>
+        /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated (instead of stopped).</p>
+        /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped (instead of terminated).</p>
         pub fn max_stopped_session_length_in_minutes(mut self, input: i32) -> Self {
             self.max_stopped_session_length_in_minutes = Some(input);
             self
         }
         /// <p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p>
-        /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated by AWS (instead of stopped).</p>
-        /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped by AWS (instead of terminated).</p>
+        /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated (instead of stopped).</p>
+        /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped (instead of terminated).</p>
         pub fn set_max_stopped_session_length_in_minutes(
             mut self,
             input: std::option::Option<i32>,
@@ -6657,7 +6901,7 @@ pub mod stream_configuration {
             self.session_storage = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamConfiguration`](crate::model::StreamConfiguration)
+        /// Consumes the builder and constructs a [`StreamConfiguration`](crate::model::StreamConfiguration).
         pub fn build(self) -> crate::model::StreamConfiguration {
             crate::model::StreamConfiguration {
                 clipboard_mode: self.clipboard_mode,
@@ -6675,7 +6919,7 @@ pub mod stream_configuration {
     }
 }
 impl StreamConfiguration {
-    /// Creates a new builder-style object to manufacture [`StreamConfiguration`](crate::model::StreamConfiguration)
+    /// Creates a new builder-style object to manufacture [`StreamConfiguration`](crate::model::StreamConfiguration).
     pub fn builder() -> crate::model::stream_configuration::Builder {
         crate::model::stream_configuration::Builder::default()
     }
@@ -6686,8 +6930,10 @@ impl StreamConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamConfigurationSessionStorage {
     /// <p>The configuration for the upload storage root of the streaming session.</p>
+    #[doc(hidden)]
     pub root: std::option::Option<crate::model::StreamingSessionStorageRoot>,
     /// <p>Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.</p>
+    #[doc(hidden)]
     pub mode: std::option::Option<std::vec::Vec<crate::model::StreamingSessionStorageMode>>,
 }
 impl StreamConfigurationSessionStorage {
@@ -6708,11 +6954,10 @@ impl std::fmt::Debug for StreamConfigurationSessionStorage {
         formatter.finish()
     }
 }
-/// See [`StreamConfigurationSessionStorage`](crate::model::StreamConfigurationSessionStorage)
+/// See [`StreamConfigurationSessionStorage`](crate::model::StreamConfigurationSessionStorage).
 pub mod stream_configuration_session_storage {
 
-    /// A builder for [`StreamConfigurationSessionStorage`](crate::model::StreamConfigurationSessionStorage)
-    #[non_exhaustive]
+    /// A builder for [`StreamConfigurationSessionStorage`](crate::model::StreamConfigurationSessionStorage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) root: std::option::Option<crate::model::StreamingSessionStorageRoot>,
@@ -6752,7 +6997,7 @@ pub mod stream_configuration_session_storage {
             self.mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamConfigurationSessionStorage`](crate::model::StreamConfigurationSessionStorage)
+        /// Consumes the builder and constructs a [`StreamConfigurationSessionStorage`](crate::model::StreamConfigurationSessionStorage).
         pub fn build(self) -> crate::model::StreamConfigurationSessionStorage {
             crate::model::StreamConfigurationSessionStorage {
                 root: self.root,
@@ -6762,7 +7007,7 @@ pub mod stream_configuration_session_storage {
     }
 }
 impl StreamConfigurationSessionStorage {
-    /// Creates a new builder-style object to manufacture [`StreamConfigurationSessionStorage`](crate::model::StreamConfigurationSessionStorage)
+    /// Creates a new builder-style object to manufacture [`StreamConfigurationSessionStorage`](crate::model::StreamConfigurationSessionStorage).
     pub fn builder() -> crate::model::stream_configuration_session_storage::Builder {
         crate::model::stream_configuration_session_storage::Builder::default()
     }
@@ -6824,8 +7069,10 @@ impl AsRef<str> for StreamingSessionStorageMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamingSessionStorageRoot {
     /// <p>The folder path in Linux workstations where files are uploaded.</p>
+    #[doc(hidden)]
     pub linux: std::option::Option<std::string::String>,
     /// <p>The folder path in Windows workstations where files are uploaded.</p>
+    #[doc(hidden)]
     pub windows: std::option::Option<std::string::String>,
 }
 impl StreamingSessionStorageRoot {
@@ -6846,11 +7093,10 @@ impl std::fmt::Debug for StreamingSessionStorageRoot {
         formatter.finish()
     }
 }
-/// See [`StreamingSessionStorageRoot`](crate::model::StreamingSessionStorageRoot)
+/// See [`StreamingSessionStorageRoot`](crate::model::StreamingSessionStorageRoot).
 pub mod streaming_session_storage_root {
 
-    /// A builder for [`StreamingSessionStorageRoot`](crate::model::StreamingSessionStorageRoot)
-    #[non_exhaustive]
+    /// A builder for [`StreamingSessionStorageRoot`](crate::model::StreamingSessionStorageRoot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) linux: std::option::Option<std::string::String>,
@@ -6877,7 +7123,7 @@ pub mod streaming_session_storage_root {
             self.windows = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamingSessionStorageRoot`](crate::model::StreamingSessionStorageRoot)
+        /// Consumes the builder and constructs a [`StreamingSessionStorageRoot`](crate::model::StreamingSessionStorageRoot).
         pub fn build(self) -> crate::model::StreamingSessionStorageRoot {
             crate::model::StreamingSessionStorageRoot {
                 linux: self.linux,
@@ -6887,7 +7133,7 @@ pub mod streaming_session_storage_root {
     }
 }
 impl StreamingSessionStorageRoot {
-    /// Creates a new builder-style object to manufacture [`StreamingSessionStorageRoot`](crate::model::StreamingSessionStorageRoot)
+    /// Creates a new builder-style object to manufacture [`StreamingSessionStorageRoot`](crate::model::StreamingSessionStorageRoot).
     pub fn builder() -> crate::model::streaming_session_storage_root::Builder {
         crate::model::streaming_session_storage_root::Builder::default()
     }
@@ -7170,18 +7416,24 @@ impl AsRef<str> for LaunchProfileState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StreamConfigurationCreate {
     /// <p>Enable or disable the use of the system clipboard to copy and paste between the streaming session and streaming client.</p>
+    #[doc(hidden)]
     pub clipboard_mode: std::option::Option<crate::model::StreamingClipboardMode>,
     /// <p>The EC2 instance types that users can select from when launching a streaming session with this launch profile.</p>
+    #[doc(hidden)]
     pub ec2_instance_types: std::option::Option<std::vec::Vec<crate::model::StreamingInstanceType>>,
     /// <p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>
+    #[doc(hidden)]
     pub max_session_length_in_minutes: i32,
     /// <p>The streaming images that users can select from when launching a streaming session with this launch profile.</p>
+    #[doc(hidden)]
     pub streaming_image_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p>
-    /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated by AWS (instead of stopped).</p>
-    /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped by AWS (instead of terminated).</p>
+    /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated (instead of stopped).</p>
+    /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped (instead of terminated).</p>
+    #[doc(hidden)]
     pub max_stopped_session_length_in_minutes: i32,
     /// <p>(Optional) The upload storage for a streaming workstation that is created using this launch profile.</p>
+    #[doc(hidden)]
     pub session_storage: std::option::Option<crate::model::StreamConfigurationSessionStorage>,
 }
 impl StreamConfigurationCreate {
@@ -7204,8 +7456,8 @@ impl StreamConfigurationCreate {
         self.streaming_image_ids.as_deref()
     }
     /// <p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p>
-    /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated by AWS (instead of stopped).</p>
-    /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped by AWS (instead of terminated).</p>
+    /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated (instead of stopped).</p>
+    /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped (instead of terminated).</p>
     pub fn max_stopped_session_length_in_minutes(&self) -> i32 {
         self.max_stopped_session_length_in_minutes
     }
@@ -7234,11 +7486,10 @@ impl std::fmt::Debug for StreamConfigurationCreate {
         formatter.finish()
     }
 }
-/// See [`StreamConfigurationCreate`](crate::model::StreamConfigurationCreate)
+/// See [`StreamConfigurationCreate`](crate::model::StreamConfigurationCreate).
 pub mod stream_configuration_create {
 
-    /// A builder for [`StreamConfigurationCreate`](crate::model::StreamConfigurationCreate)
-    #[non_exhaustive]
+    /// A builder for [`StreamConfigurationCreate`](crate::model::StreamConfigurationCreate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) clipboard_mode: std::option::Option<crate::model::StreamingClipboardMode>,
@@ -7316,15 +7567,15 @@ pub mod stream_configuration_create {
             self
         }
         /// <p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p>
-        /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated by AWS (instead of stopped).</p>
-        /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped by AWS (instead of terminated).</p>
+        /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated (instead of stopped).</p>
+        /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped (instead of terminated).</p>
         pub fn max_stopped_session_length_in_minutes(mut self, input: i32) -> Self {
             self.max_stopped_session_length_in_minutes = Some(input);
             self
         }
         /// <p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p>
-        /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated by AWS (instead of stopped).</p>
-        /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped by AWS (instead of terminated).</p>
+        /// <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call <code>StopStreamingSession</code>, the session fails. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be terminated (instead of stopped).</p>
+        /// <p>If the value is set to a positive number, the session can be stopped. You can call <code>StopStreamingSession</code> to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the <code>maxSessionLengthInMinutes</code> value, the session will automatically be stopped (instead of terminated).</p>
         pub fn set_max_stopped_session_length_in_minutes(
             mut self,
             input: std::option::Option<i32>,
@@ -7348,7 +7599,7 @@ pub mod stream_configuration_create {
             self.session_storage = input;
             self
         }
-        /// Consumes the builder and constructs a [`StreamConfigurationCreate`](crate::model::StreamConfigurationCreate)
+        /// Consumes the builder and constructs a [`StreamConfigurationCreate`](crate::model::StreamConfigurationCreate).
         pub fn build(self) -> crate::model::StreamConfigurationCreate {
             crate::model::StreamConfigurationCreate {
                 clipboard_mode: self.clipboard_mode,
@@ -7366,7 +7617,7 @@ pub mod stream_configuration_create {
     }
 }
 impl StreamConfigurationCreate {
-    /// Creates a new builder-style object to manufacture [`StreamConfigurationCreate`](crate::model::StreamConfigurationCreate)
+    /// Creates a new builder-style object to manufacture [`StreamConfigurationCreate`](crate::model::StreamConfigurationCreate).
     pub fn builder() -> crate::model::stream_configuration_create::Builder {
         crate::model::stream_configuration_create::Builder::default()
     }
@@ -7377,14 +7628,19 @@ impl StreamConfigurationCreate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Eula {
     /// <p>The EULA content.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<std::string::String>,
     /// <p>The Unix epoch timestamp in seconds for when the resource was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The EULA ID.</p>
+    #[doc(hidden)]
     pub eula_id: std::option::Option<std::string::String>,
     /// <p>The name for the EULA.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Unix epoch timestamp in seconds for when the resource was updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Eula {
@@ -7420,11 +7676,10 @@ impl std::fmt::Debug for Eula {
         formatter.finish()
     }
 }
-/// See [`Eula`](crate::model::Eula)
+/// See [`Eula`](crate::model::Eula).
 pub mod eula {
 
-    /// A builder for [`Eula`](crate::model::Eula)
-    #[non_exhaustive]
+    /// A builder for [`Eula`](crate::model::Eula).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content: std::option::Option<std::string::String>,
@@ -7490,7 +7745,7 @@ pub mod eula {
             self.updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`Eula`](crate::model::Eula)
+        /// Consumes the builder and constructs a [`Eula`](crate::model::Eula).
         pub fn build(self) -> crate::model::Eula {
             crate::model::Eula {
                 content: self.content,
@@ -7503,7 +7758,7 @@ pub mod eula {
     }
 }
 impl Eula {
-    /// Creates a new builder-style object to manufacture [`Eula`](crate::model::Eula)
+    /// Creates a new builder-style object to manufacture [`Eula`](crate::model::Eula).
     pub fn builder() -> crate::model::eula::Builder {
         crate::model::eula::Builder::default()
     }
@@ -7514,14 +7769,19 @@ impl Eula {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EulaAcceptance {
     /// <p>The Unix epoch timestamp in seconds for when the EULA was accepted.</p>
+    #[doc(hidden)]
     pub accepted_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The ID of the person who accepted the EULA.</p>
+    #[doc(hidden)]
     pub accepted_by: std::option::Option<std::string::String>,
     /// <p>The ID of the acceptee.</p>
+    #[doc(hidden)]
     pub acceptee_id: std::option::Option<std::string::String>,
     /// <p>The EULA acceptance ID.</p>
+    #[doc(hidden)]
     pub eula_acceptance_id: std::option::Option<std::string::String>,
     /// <p>The EULA ID.</p>
+    #[doc(hidden)]
     pub eula_id: std::option::Option<std::string::String>,
 }
 impl EulaAcceptance {
@@ -7557,11 +7817,10 @@ impl std::fmt::Debug for EulaAcceptance {
         formatter.finish()
     }
 }
-/// See [`EulaAcceptance`](crate::model::EulaAcceptance)
+/// See [`EulaAcceptance`](crate::model::EulaAcceptance).
 pub mod eula_acceptance {
 
-    /// A builder for [`EulaAcceptance`](crate::model::EulaAcceptance)
-    #[non_exhaustive]
+    /// A builder for [`EulaAcceptance`](crate::model::EulaAcceptance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) accepted_at: std::option::Option<aws_smithy_types::DateTime>,
@@ -7627,7 +7886,7 @@ pub mod eula_acceptance {
             self.eula_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`EulaAcceptance`](crate::model::EulaAcceptance)
+        /// Consumes the builder and constructs a [`EulaAcceptance`](crate::model::EulaAcceptance).
         pub fn build(self) -> crate::model::EulaAcceptance {
             crate::model::EulaAcceptance {
                 accepted_at: self.accepted_at,
@@ -7640,7 +7899,7 @@ pub mod eula_acceptance {
     }
 }
 impl EulaAcceptance {
-    /// Creates a new builder-style object to manufacture [`EulaAcceptance`](crate::model::EulaAcceptance)
+    /// Creates a new builder-style object to manufacture [`EulaAcceptance`](crate::model::EulaAcceptance).
     pub fn builder() -> crate::model::eula_acceptance::Builder {
         crate::model::eula_acceptance::Builder::default()
     }

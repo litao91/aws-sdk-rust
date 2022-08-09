@@ -5,26 +5,37 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Endpoint {
     /// <p>The Amazon Resource Name (ARN) of the endpoint.</p>
+    #[doc(hidden)]
     pub endpoint_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the Outposts.</p>
+    #[doc(hidden)]
     pub outposts_id: std::option::Option<std::string::String>,
     /// <p>The VPC CIDR committed by this endpoint.</p>
+    #[doc(hidden)]
     pub cidr_block: std::option::Option<std::string::String>,
     /// <p>The status of the endpoint.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EndpointStatus>,
     /// <p>The time the endpoint was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The network interface of the endpoint.</p>
+    #[doc(hidden)]
     pub network_interfaces: std::option::Option<std::vec::Vec<crate::model::NetworkInterface>>,
     /// <p>The ID of the VPC used for the endpoint.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>The ID of the subnet used for the endpoint.</p>
+    #[doc(hidden)]
     pub subnet_id: std::option::Option<std::string::String>,
     /// <p>The ID of the security group used for the endpoint.</p>
+    #[doc(hidden)]
     pub security_group_id: std::option::Option<std::string::String>,
     /// <p>The type of connectivity used to access the Amazon S3 on Outposts endpoint.</p>
+    #[doc(hidden)]
     pub access_type: std::option::Option<crate::model::EndpointAccessType>,
     /// <p>The ID of the customer-owned IPv4 address pool used for the endpoint.</p>
+    #[doc(hidden)]
     pub customer_owned_ipv4_pool: std::option::Option<std::string::String>,
 }
 impl Endpoint {
@@ -90,11 +101,10 @@ impl std::fmt::Debug for Endpoint {
         formatter.finish()
     }
 }
-/// See [`Endpoint`](crate::model::Endpoint)
+/// See [`Endpoint`](crate::model::Endpoint).
 pub mod endpoint {
 
-    /// A builder for [`Endpoint`](crate::model::Endpoint)
-    #[non_exhaustive]
+    /// A builder for [`Endpoint`](crate::model::Endpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint_arn: std::option::Option<std::string::String>,
@@ -245,7 +255,7 @@ pub mod endpoint {
             self.customer_owned_ipv4_pool = input;
             self
         }
-        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint)
+        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint).
         pub fn build(self) -> crate::model::Endpoint {
             crate::model::Endpoint {
                 endpoint_arn: self.endpoint_arn,
@@ -264,7 +274,7 @@ pub mod endpoint {
     }
 }
 impl Endpoint {
-    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint)
+    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint).
     pub fn builder() -> crate::model::endpoint::Builder {
         crate::model::endpoint::Builder::default()
     }
@@ -330,6 +340,7 @@ impl AsRef<str> for EndpointAccessType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkInterface {
     /// <p>The ID for the network interface.</p>
+    #[doc(hidden)]
     pub network_interface_id: std::option::Option<std::string::String>,
 }
 impl NetworkInterface {
@@ -345,11 +356,10 @@ impl std::fmt::Debug for NetworkInterface {
         formatter.finish()
     }
 }
-/// See [`NetworkInterface`](crate::model::NetworkInterface)
+/// See [`NetworkInterface`](crate::model::NetworkInterface).
 pub mod network_interface {
 
-    /// A builder for [`NetworkInterface`](crate::model::NetworkInterface)
-    #[non_exhaustive]
+    /// A builder for [`NetworkInterface`](crate::model::NetworkInterface).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) network_interface_id: std::option::Option<std::string::String>,
@@ -368,7 +378,7 @@ pub mod network_interface {
             self.network_interface_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkInterface`](crate::model::NetworkInterface)
+        /// Consumes the builder and constructs a [`NetworkInterface`](crate::model::NetworkInterface).
         pub fn build(self) -> crate::model::NetworkInterface {
             crate::model::NetworkInterface {
                 network_interface_id: self.network_interface_id,
@@ -377,7 +387,7 @@ pub mod network_interface {
     }
 }
 impl NetworkInterface {
-    /// Creates a new builder-style object to manufacture [`NetworkInterface`](crate::model::NetworkInterface)
+    /// Creates a new builder-style object to manufacture [`NetworkInterface`](crate::model::NetworkInterface).
     pub fn builder() -> crate::model::network_interface::Builder {
         crate::model::network_interface::Builder::default()
     }

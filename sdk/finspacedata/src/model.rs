@@ -197,6 +197,7 @@ impl AsRef<str> for ApplicationPermission {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SchemaUnion {
     /// <p>The configuration for a schema on a tabular Dataset.</p>
+    #[doc(hidden)]
     pub tabular_schema_config: std::option::Option<crate::model::SchemaDefinition>,
 }
 impl SchemaUnion {
@@ -212,11 +213,10 @@ impl std::fmt::Debug for SchemaUnion {
         formatter.finish()
     }
 }
-/// See [`SchemaUnion`](crate::model::SchemaUnion)
+/// See [`SchemaUnion`](crate::model::SchemaUnion).
 pub mod schema_union {
 
-    /// A builder for [`SchemaUnion`](crate::model::SchemaUnion)
-    #[non_exhaustive]
+    /// A builder for [`SchemaUnion`](crate::model::SchemaUnion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tabular_schema_config: std::option::Option<crate::model::SchemaDefinition>,
@@ -235,7 +235,7 @@ pub mod schema_union {
             self.tabular_schema_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`SchemaUnion`](crate::model::SchemaUnion)
+        /// Consumes the builder and constructs a [`SchemaUnion`](crate::model::SchemaUnion).
         pub fn build(self) -> crate::model::SchemaUnion {
             crate::model::SchemaUnion {
                 tabular_schema_config: self.tabular_schema_config,
@@ -244,7 +244,7 @@ pub mod schema_union {
     }
 }
 impl SchemaUnion {
-    /// Creates a new builder-style object to manufacture [`SchemaUnion`](crate::model::SchemaUnion)
+    /// Creates a new builder-style object to manufacture [`SchemaUnion`](crate::model::SchemaUnion).
     pub fn builder() -> crate::model::schema_union::Builder {
         crate::model::schema_union::Builder::default()
     }
@@ -255,8 +255,10 @@ impl SchemaUnion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SchemaDefinition {
     /// <p>List of column definitions.</p>
+    #[doc(hidden)]
     pub columns: std::option::Option<std::vec::Vec<crate::model::ColumnDefinition>>,
     /// <p>List of column names used for primary key.</p>
+    #[doc(hidden)]
     pub primary_key_columns: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SchemaDefinition {
@@ -277,11 +279,10 @@ impl std::fmt::Debug for SchemaDefinition {
         formatter.finish()
     }
 }
-/// See [`SchemaDefinition`](crate::model::SchemaDefinition)
+/// See [`SchemaDefinition`](crate::model::SchemaDefinition).
 pub mod schema_definition {
 
-    /// A builder for [`SchemaDefinition`](crate::model::SchemaDefinition)
-    #[non_exhaustive]
+    /// A builder for [`SchemaDefinition`](crate::model::SchemaDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) columns: std::option::Option<std::vec::Vec<crate::model::ColumnDefinition>>,
@@ -326,7 +327,7 @@ pub mod schema_definition {
             self.primary_key_columns = input;
             self
         }
-        /// Consumes the builder and constructs a [`SchemaDefinition`](crate::model::SchemaDefinition)
+        /// Consumes the builder and constructs a [`SchemaDefinition`](crate::model::SchemaDefinition).
         pub fn build(self) -> crate::model::SchemaDefinition {
             crate::model::SchemaDefinition {
                 columns: self.columns,
@@ -336,7 +337,7 @@ pub mod schema_definition {
     }
 }
 impl SchemaDefinition {
-    /// Creates a new builder-style object to manufacture [`SchemaDefinition`](crate::model::SchemaDefinition)
+    /// Creates a new builder-style object to manufacture [`SchemaDefinition`](crate::model::SchemaDefinition).
     pub fn builder() -> crate::model::schema_definition::Builder {
         crate::model::schema_definition::Builder::default()
     }
@@ -350,10 +351,13 @@ pub struct ColumnDefinition {
     /// <ul>
     /// <li> <p> <code>STRING</code> – A String data type.</p> <p> <code>CHAR</code> – A char data type.</p> <p> <code>INTEGER</code> – An integer data type.</p> <p> <code>TINYINT</code> – A tinyint data type.</p> <p> <code>SMALLINT</code> – A smallint data type.</p> <p> <code>BIGINT</code> – A bigint data type.</p> <p> <code>FLOAT</code> – A float data type.</p> <p> <code>DOUBLE</code> – A double data type.</p> <p> <code>DATE</code> – A date data type.</p> <p> <code>DATETIME</code> – A datetime data type.</p> <p> <code>BOOLEAN</code> – A boolean data type.</p> <p> <code>BINARY</code> – A binary data type.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub data_type: std::option::Option<crate::model::ColumnDataType>,
     /// <p>The name of a column.</p>
+    #[doc(hidden)]
     pub column_name: std::option::Option<std::string::String>,
     /// <p>Description for a column.</p>
+    #[doc(hidden)]
     pub column_description: std::option::Option<std::string::String>,
 }
 impl ColumnDefinition {
@@ -382,11 +386,10 @@ impl std::fmt::Debug for ColumnDefinition {
         formatter.finish()
     }
 }
-/// See [`ColumnDefinition`](crate::model::ColumnDefinition)
+/// See [`ColumnDefinition`](crate::model::ColumnDefinition).
 pub mod column_definition {
 
-    /// A builder for [`ColumnDefinition`](crate::model::ColumnDefinition)
-    #[non_exhaustive]
+    /// A builder for [`ColumnDefinition`](crate::model::ColumnDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_type: std::option::Option<crate::model::ColumnDataType>,
@@ -436,7 +439,7 @@ pub mod column_definition {
             self.column_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`ColumnDefinition`](crate::model::ColumnDefinition)
+        /// Consumes the builder and constructs a [`ColumnDefinition`](crate::model::ColumnDefinition).
         pub fn build(self) -> crate::model::ColumnDefinition {
             crate::model::ColumnDefinition {
                 data_type: self.data_type,
@@ -447,7 +450,7 @@ pub mod column_definition {
     }
 }
 impl ColumnDefinition {
-    /// Creates a new builder-style object to manufacture [`ColumnDefinition`](crate::model::ColumnDefinition)
+    /// Creates a new builder-style object to manufacture [`ColumnDefinition`](crate::model::ColumnDefinition).
     pub fn builder() -> crate::model::column_definition::Builder {
         crate::model::column_definition::Builder::default()
     }
@@ -611,6 +614,7 @@ impl AsRef<str> for DatasetKind {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserByPermissionGroup {
     /// <p>The unique identifier for the user.</p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
     /// <p>The current status of the user account. </p>
     /// <ul>
@@ -618,26 +622,33 @@ pub struct UserByPermissionGroup {
     /// <li> <p> <code>ENABLED</code> – The user account is created and is currently active.</p> </li>
     /// <li> <p> <code>DISABLED</code> – The user account is currently inactive.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::UserStatus>,
     /// <p>The first name of the user.</p>
+    #[doc(hidden)]
     pub first_name: std::option::Option<std::string::String>,
     /// <p>The last name of the user.</p>
+    #[doc(hidden)]
     pub last_name: std::option::Option<std::string::String>,
     /// <p>The email address of the user. The email address serves as a unique identifier for each user and cannot be changed after it's created.</p>
+    #[doc(hidden)]
     pub email_address: std::option::Option<std::string::String>,
     /// <p> Indicates the type of user.</p>
     /// <ul>
     /// <li> <p> <code>SUPER_USER</code> – A user with permission to all the functionality and data in FinSpace.</p> </li>
     /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permission group.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::UserType>,
     /// <p>Indicates whether the user can access FinSpace API operations.</p>
     /// <ul>
     /// <li> <p> <code>ENABLED</code> – The user has permissions to use the API operations.</p> </li>
     /// <li> <p> <code>DISABLED</code> – The user does not have permissions to use any API operations.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub api_access: std::option::Option<crate::model::ApiAccess>,
     /// <p>The IAM ARN identifier that is attached to FinSpace API calls.</p>
+    #[doc(hidden)]
     pub api_access_principal_arn: std::option::Option<std::string::String>,
     /// <p>Indicates the status of the user account within a permission group.</p>
     /// <ul>
@@ -645,6 +656,7 @@ pub struct UserByPermissionGroup {
     /// <li> <p> <code>ADDITION_SUCCESS</code> – The user account is successfully added to the permission group.</p> </li>
     /// <li> <p> <code>REMOVAL_IN_PROGRESS</code> – The user is currently being removed from the permission group.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub membership_status: std::option::Option<crate::model::PermissionGroupMembershipStatus>,
 }
 impl UserByPermissionGroup {
@@ -720,11 +732,10 @@ impl std::fmt::Debug for UserByPermissionGroup {
         formatter.finish()
     }
 }
-/// See [`UserByPermissionGroup`](crate::model::UserByPermissionGroup)
+/// See [`UserByPermissionGroup`](crate::model::UserByPermissionGroup).
 pub mod user_by_permission_group {
 
-    /// A builder for [`UserByPermissionGroup`](crate::model::UserByPermissionGroup)
-    #[non_exhaustive]
+    /// A builder for [`UserByPermissionGroup`](crate::model::UserByPermissionGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_id: std::option::Option<std::string::String>,
@@ -880,7 +891,7 @@ pub mod user_by_permission_group {
             self.membership_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserByPermissionGroup`](crate::model::UserByPermissionGroup)
+        /// Consumes the builder and constructs a [`UserByPermissionGroup`](crate::model::UserByPermissionGroup).
         pub fn build(self) -> crate::model::UserByPermissionGroup {
             crate::model::UserByPermissionGroup {
                 user_id: self.user_id,
@@ -897,7 +908,7 @@ pub mod user_by_permission_group {
     }
 }
 impl UserByPermissionGroup {
-    /// Creates a new builder-style object to manufacture [`UserByPermissionGroup`](crate::model::UserByPermissionGroup)
+    /// Creates a new builder-style object to manufacture [`UserByPermissionGroup`](crate::model::UserByPermissionGroup).
     pub fn builder() -> crate::model::user_by_permission_group::Builder {
         crate::model::user_by_permission_group::Builder::default()
     }
@@ -1030,6 +1041,7 @@ impl AsRef<str> for UserStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct User {
     /// <p>The unique identifier for the user.</p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
     /// <p>The current status of the user account. </p>
     /// <ul>
@@ -1037,36 +1049,48 @@ pub struct User {
     /// <li> <p> <code>ENABLED</code> – The user account is created and is currently active.</p> </li>
     /// <li> <p> <code>DISABLED</code> – The user account is currently inactive.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::UserStatus>,
     /// <p>The first name of the user.</p>
+    #[doc(hidden)]
     pub first_name: std::option::Option<std::string::String>,
     /// <p> The last name of the user.</p>
+    #[doc(hidden)]
     pub last_name: std::option::Option<std::string::String>,
     /// <p>The email address of the user. The email address serves as a uniquer identifier for each user and cannot be changed after it's created.</p>
+    #[doc(hidden)]
     pub email_address: std::option::Option<std::string::String>,
     /// <p> Indicates the type of user.</p>
     /// <ul>
     /// <li> <p> <code>SUPER_USER</code> – A user with permission to all the functionality and data in FinSpace.</p> </li>
     /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permission group.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::UserType>,
     /// <p>Indicates whether the user can use the <code>GetProgrammaticAccessCredentials</code> API to obtain credentials that can then be used to access other FinSpace Data API operations.</p>
     /// <ul>
     /// <li> <p> <code>ENABLED</code> – The user has permissions to use the APIs.</p> </li>
     /// <li> <p> <code>DISABLED</code> – The user does not have permissions to use any APIs.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub api_access: std::option::Option<crate::model::ApiAccess>,
     /// <p>The ARN identifier of an AWS user or role that is allowed to call the <code>GetProgrammaticAccessCredentials</code> API to obtain a credentials token for a specific FinSpace user. This must be an IAM role within your FinSpace account.</p>
+    #[doc(hidden)]
     pub api_access_principal_arn: std::option::Option<std::string::String>,
     /// <p>The timestamp at which the user account was created in FinSpace. The value is determined as epoch time in milliseconds. </p>
+    #[doc(hidden)]
     pub create_time: i64,
     /// <p> Describes the last time the user account was enabled. The value is determined as epoch time in milliseconds. </p>
+    #[doc(hidden)]
     pub last_enabled_time: i64,
     /// <p>Describes the last time the user account was disabled. The value is determined as epoch time in milliseconds.</p>
+    #[doc(hidden)]
     pub last_disabled_time: i64,
     /// <p>Describes the last time the user account was updated. The value is determined as epoch time in milliseconds. </p>
+    #[doc(hidden)]
     pub last_modified_time: i64,
     /// <p>Describes the last time that the user logged into their account. The value is determined as epoch time in milliseconds. </p>
+    #[doc(hidden)]
     pub last_login_time: i64,
 }
 impl User {
@@ -1155,11 +1179,10 @@ impl std::fmt::Debug for User {
         formatter.finish()
     }
 }
-/// See [`User`](crate::model::User)
+/// See [`User`](crate::model::User).
 pub mod user {
 
-    /// A builder for [`User`](crate::model::User)
-    #[non_exhaustive]
+    /// A builder for [`User`](crate::model::User).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_id: std::option::Option<std::string::String>,
@@ -1342,7 +1365,7 @@ pub mod user {
             self.last_login_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`User`](crate::model::User)
+        /// Consumes the builder and constructs a [`User`](crate::model::User).
         pub fn build(self) -> crate::model::User {
             crate::model::User {
                 user_id: self.user_id,
@@ -1363,7 +1386,7 @@ pub mod user {
     }
 }
 impl User {
-    /// Creates a new builder-style object to manufacture [`User`](crate::model::User)
+    /// Creates a new builder-style object to manufacture [`User`](crate::model::User).
     pub fn builder() -> crate::model::user::Builder {
         crate::model::user::Builder::default()
     }
@@ -1374,8 +1397,10 @@ impl User {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PermissionGroupByUser {
     /// <p>The unique identifier for the permission group.</p>
+    #[doc(hidden)]
     pub permission_group_id: std::option::Option<std::string::String>,
     /// <p>The name of the permission group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Indicates the status of the user account within a permission group.</p>
     /// <ul>
@@ -1383,6 +1408,7 @@ pub struct PermissionGroupByUser {
     /// <li> <p> <code>ADDITION_SUCCESS</code> – The user account is successfully added to the permission group.</p> </li>
     /// <li> <p> <code>REMOVAL_IN_PROGRESS</code> – The user is currently being removed from the permission group.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub membership_status: std::option::Option<crate::model::PermissionGroupMembershipStatus>,
 }
 impl PermissionGroupByUser {
@@ -1415,11 +1441,10 @@ impl std::fmt::Debug for PermissionGroupByUser {
         formatter.finish()
     }
 }
-/// See [`PermissionGroupByUser`](crate::model::PermissionGroupByUser)
+/// See [`PermissionGroupByUser`](crate::model::PermissionGroupByUser).
 pub mod permission_group_by_user {
 
-    /// A builder for [`PermissionGroupByUser`](crate::model::PermissionGroupByUser)
-    #[non_exhaustive]
+    /// A builder for [`PermissionGroupByUser`](crate::model::PermissionGroupByUser).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission_group_id: std::option::Option<std::string::String>,
@@ -1477,7 +1502,7 @@ pub mod permission_group_by_user {
             self.membership_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`PermissionGroupByUser`](crate::model::PermissionGroupByUser)
+        /// Consumes the builder and constructs a [`PermissionGroupByUser`](crate::model::PermissionGroupByUser).
         pub fn build(self) -> crate::model::PermissionGroupByUser {
             crate::model::PermissionGroupByUser {
                 permission_group_id: self.permission_group_id,
@@ -1488,7 +1513,7 @@ pub mod permission_group_by_user {
     }
 }
 impl PermissionGroupByUser {
-    /// Creates a new builder-style object to manufacture [`PermissionGroupByUser`](crate::model::PermissionGroupByUser)
+    /// Creates a new builder-style object to manufacture [`PermissionGroupByUser`](crate::model::PermissionGroupByUser).
     pub fn builder() -> crate::model::permission_group_by_user::Builder {
         crate::model::permission_group_by_user::Builder::default()
     }
@@ -1499,26 +1524,34 @@ impl PermissionGroupByUser {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PermissionGroup {
     /// <p> The unique identifier for the permission group.</p>
+    #[doc(hidden)]
     pub permission_group_id: std::option::Option<std::string::String>,
     /// <p>The name of the permission group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> A brief description for the permission group.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
-    /// <p>Indicates the permissions that are granted to a specific group for accessing the FinSpace application.</p>
+    /// <p>Indicates the permissions that are granted to a specific group for accessing the FinSpace application.</p> <important>
+    /// <p>When assigning application permissions, be aware that the permission <code>ManageUsersAndGroups</code> allows users to grant themselves or others access to any functionality in their FinSpace environment's application. It should only be granted to trusted users.</p>
+    /// </important>
     /// <ul>
     /// <li> <p> <code>CreateDataset</code> – Group members can create new datasets.</p> </li>
     /// <li> <p> <code>ManageClusters</code> – Group members can manage Apache Spark clusters from FinSpace notebooks.</p> </li>
-    /// <li> <p> <code>ManageUsersAndGroups</code> – Group members can manage users and permission groups.</p> </li>
+    /// <li> <p> <code>ManageUsersAndGroups</code> – Group members can manage users and permission groups. This is a privileged permission that allows users to grant themselves or others access to any functionality in the application. It should only be granted to trusted users.</p> </li>
     /// <li> <p> <code>ManageAttributeSets</code> – Group members can manage attribute sets.</p> </li>
     /// <li> <p> <code>ViewAuditData</code> – Group members can view audit data.</p> </li>
     /// <li> <p> <code>AccessNotebooks</code> – Group members will have access to FinSpace notebooks.</p> </li>
     /// <li> <p> <code>GetTemporaryCredentials</code> – Group members can get temporary API credentials.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub application_permissions:
         std::option::Option<std::vec::Vec<crate::model::ApplicationPermission>>,
     /// <p>The timestamp at which the group was created in FinSpace. The value is determined as epoch time in milliseconds. </p>
+    #[doc(hidden)]
     pub create_time: i64,
     /// <p>Describes the last time the permission group was updated. The value is determined as epoch time in milliseconds. </p>
+    #[doc(hidden)]
     pub last_modified_time: i64,
     /// <p>Indicates the status of the user account within a permission group.</p>
     /// <ul>
@@ -1526,6 +1559,7 @@ pub struct PermissionGroup {
     /// <li> <p> <code>ADDITION_SUCCESS</code> – The user account is successfully added to the permission group.</p> </li>
     /// <li> <p> <code>REMOVAL_IN_PROGRESS</code> – The user is currently being removed from the permission group.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub membership_status: std::option::Option<crate::model::PermissionGroupMembershipStatus>,
 }
 impl PermissionGroup {
@@ -1541,11 +1575,13 @@ impl PermissionGroup {
     pub fn description(&self) -> std::option::Option<&str> {
         self.description.as_deref()
     }
-    /// <p>Indicates the permissions that are granted to a specific group for accessing the FinSpace application.</p>
+    /// <p>Indicates the permissions that are granted to a specific group for accessing the FinSpace application.</p> <important>
+    /// <p>When assigning application permissions, be aware that the permission <code>ManageUsersAndGroups</code> allows users to grant themselves or others access to any functionality in their FinSpace environment's application. It should only be granted to trusted users.</p>
+    /// </important>
     /// <ul>
     /// <li> <p> <code>CreateDataset</code> – Group members can create new datasets.</p> </li>
     /// <li> <p> <code>ManageClusters</code> – Group members can manage Apache Spark clusters from FinSpace notebooks.</p> </li>
-    /// <li> <p> <code>ManageUsersAndGroups</code> – Group members can manage users and permission groups.</p> </li>
+    /// <li> <p> <code>ManageUsersAndGroups</code> – Group members can manage users and permission groups. This is a privileged permission that allows users to grant themselves or others access to any functionality in the application. It should only be granted to trusted users.</p> </li>
     /// <li> <p> <code>ManageAttributeSets</code> – Group members can manage attribute sets.</p> </li>
     /// <li> <p> <code>ViewAuditData</code> – Group members can view audit data.</p> </li>
     /// <li> <p> <code>AccessNotebooks</code> – Group members will have access to FinSpace notebooks.</p> </li>
@@ -1589,11 +1625,10 @@ impl std::fmt::Debug for PermissionGroup {
         formatter.finish()
     }
 }
-/// See [`PermissionGroup`](crate::model::PermissionGroup)
+/// See [`PermissionGroup`](crate::model::PermissionGroup).
 pub mod permission_group {
 
-    /// A builder for [`PermissionGroup`](crate::model::PermissionGroup)
-    #[non_exhaustive]
+    /// A builder for [`PermissionGroup`](crate::model::PermissionGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission_group_id: std::option::Option<std::string::String>,
@@ -1644,11 +1679,13 @@ pub mod permission_group {
         ///
         /// To override the contents of this collection use [`set_application_permissions`](Self::set_application_permissions).
         ///
-        /// <p>Indicates the permissions that are granted to a specific group for accessing the FinSpace application.</p>
+        /// <p>Indicates the permissions that are granted to a specific group for accessing the FinSpace application.</p> <important>
+        /// <p>When assigning application permissions, be aware that the permission <code>ManageUsersAndGroups</code> allows users to grant themselves or others access to any functionality in their FinSpace environment's application. It should only be granted to trusted users.</p>
+        /// </important>
         /// <ul>
         /// <li> <p> <code>CreateDataset</code> – Group members can create new datasets.</p> </li>
         /// <li> <p> <code>ManageClusters</code> – Group members can manage Apache Spark clusters from FinSpace notebooks.</p> </li>
-        /// <li> <p> <code>ManageUsersAndGroups</code> – Group members can manage users and permission groups.</p> </li>
+        /// <li> <p> <code>ManageUsersAndGroups</code> – Group members can manage users and permission groups. This is a privileged permission that allows users to grant themselves or others access to any functionality in the application. It should only be granted to trusted users.</p> </li>
         /// <li> <p> <code>ManageAttributeSets</code> – Group members can manage attribute sets.</p> </li>
         /// <li> <p> <code>ViewAuditData</code> – Group members can view audit data.</p> </li>
         /// <li> <p> <code>AccessNotebooks</code> – Group members will have access to FinSpace notebooks.</p> </li>
@@ -1663,11 +1700,13 @@ pub mod permission_group {
             self.application_permissions = Some(v);
             self
         }
-        /// <p>Indicates the permissions that are granted to a specific group for accessing the FinSpace application.</p>
+        /// <p>Indicates the permissions that are granted to a specific group for accessing the FinSpace application.</p> <important>
+        /// <p>When assigning application permissions, be aware that the permission <code>ManageUsersAndGroups</code> allows users to grant themselves or others access to any functionality in their FinSpace environment's application. It should only be granted to trusted users.</p>
+        /// </important>
         /// <ul>
         /// <li> <p> <code>CreateDataset</code> – Group members can create new datasets.</p> </li>
         /// <li> <p> <code>ManageClusters</code> – Group members can manage Apache Spark clusters from FinSpace notebooks.</p> </li>
-        /// <li> <p> <code>ManageUsersAndGroups</code> – Group members can manage users and permission groups.</p> </li>
+        /// <li> <p> <code>ManageUsersAndGroups</code> – Group members can manage users and permission groups. This is a privileged permission that allows users to grant themselves or others access to any functionality in the application. It should only be granted to trusted users.</p> </li>
         /// <li> <p> <code>ManageAttributeSets</code> – Group members can manage attribute sets.</p> </li>
         /// <li> <p> <code>ViewAuditData</code> – Group members can view audit data.</p> </li>
         /// <li> <p> <code>AccessNotebooks</code> – Group members will have access to FinSpace notebooks.</p> </li>
@@ -1726,7 +1765,7 @@ pub mod permission_group {
             self.membership_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`PermissionGroup`](crate::model::PermissionGroup)
+        /// Consumes the builder and constructs a [`PermissionGroup`](crate::model::PermissionGroup).
         pub fn build(self) -> crate::model::PermissionGroup {
             crate::model::PermissionGroup {
                 permission_group_id: self.permission_group_id,
@@ -1741,7 +1780,7 @@ pub mod permission_group {
     }
 }
 impl PermissionGroup {
-    /// Creates a new builder-style object to manufacture [`PermissionGroup`](crate::model::PermissionGroup)
+    /// Creates a new builder-style object to manufacture [`PermissionGroup`](crate::model::PermissionGroup).
     pub fn builder() -> crate::model::permission_group::Builder {
         crate::model::permission_group::Builder::default()
     }
@@ -1752,16 +1791,22 @@ impl PermissionGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataViewSummary {
     /// <p>The unique identifier for the Dataview.</p>
+    #[doc(hidden)]
     pub data_view_id: std::option::Option<std::string::String>,
     /// <p>The ARN identifier of the Dataview.</p>
+    #[doc(hidden)]
     pub data_view_arn: std::option::Option<std::string::String>,
     /// <p>Th unique identifier for the Dataview Dataset.</p>
+    #[doc(hidden)]
     pub dataset_id: std::option::Option<std::string::String>,
     /// <p>Time range to use for the Dataview. The value is determined as epoch time in milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.</p>
+    #[doc(hidden)]
     pub as_of_timestamp: std::option::Option<i64>,
     /// <p>Ordered set of column names used to partition data.</p>
+    #[doc(hidden)]
     pub partition_columns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Columns to be used for sorting the data.</p>
+    #[doc(hidden)]
     pub sort_columns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The status of a Dataview creation.</p>
     /// <ul>
@@ -1774,17 +1819,23 @@ pub struct DataViewSummary {
     /// <li> <p> <code>PENDING</code> – Dataview creation is pending.</p> </li>
     /// <li> <p> <code>FAILED_CLEANUP_FAILED</code> – Dataview creation failed and resource cleanup failed.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DataViewStatus>,
     /// <p>The structure with error messages.</p>
+    #[doc(hidden)]
     pub error_info: std::option::Option<crate::model::DataViewErrorInfo>,
     /// <p>Information about the Dataview destination.</p>
+    #[doc(hidden)]
     pub destination_type_properties:
         std::option::Option<crate::model::DataViewDestinationTypeParams>,
     /// <p>The flag to indicate Dataview should be updated automatically.</p>
+    #[doc(hidden)]
     pub auto_update: bool,
     /// <p>The timestamp at which the Dataview was created in FinSpace. The value is determined as epoch time in milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.</p>
+    #[doc(hidden)]
     pub create_time: i64,
     /// <p>The last time that a Dataview was modified. The value is determined as epoch time in milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.</p>
+    #[doc(hidden)]
     pub last_modified_time: i64,
 }
 impl DataViewSummary {
@@ -1870,11 +1921,10 @@ impl std::fmt::Debug for DataViewSummary {
         formatter.finish()
     }
 }
-/// See [`DataViewSummary`](crate::model::DataViewSummary)
+/// See [`DataViewSummary`](crate::model::DataViewSummary).
 pub mod data_view_summary {
 
-    /// A builder for [`DataViewSummary`](crate::model::DataViewSummary)
-    #[non_exhaustive]
+    /// A builder for [`DataViewSummary`](crate::model::DataViewSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_view_id: std::option::Option<std::string::String>,
@@ -2065,7 +2115,7 @@ pub mod data_view_summary {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataViewSummary`](crate::model::DataViewSummary)
+        /// Consumes the builder and constructs a [`DataViewSummary`](crate::model::DataViewSummary).
         pub fn build(self) -> crate::model::DataViewSummary {
             crate::model::DataViewSummary {
                 data_view_id: self.data_view_id,
@@ -2085,7 +2135,7 @@ pub mod data_view_summary {
     }
 }
 impl DataViewSummary {
-    /// Creates a new builder-style object to manufacture [`DataViewSummary`](crate::model::DataViewSummary)
+    /// Creates a new builder-style object to manufacture [`DataViewSummary`](crate::model::DataViewSummary).
     pub fn builder() -> crate::model::data_view_summary::Builder {
         crate::model::data_view_summary::Builder::default()
     }
@@ -2100,16 +2150,19 @@ pub struct DataViewDestinationTypeParams {
     /// <li> <p> <code>GLUE_TABLE</code> – Glue table destination type.</p> </li>
     /// <li> <p> <code>S3</code> – S3 destination type.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub destination_type: std::option::Option<std::string::String>,
     /// <p>Dataview export file format.</p>
     /// <ul>
     /// <li> <p> <code>PARQUET</code> – Parquet export file format.</p> </li>
     /// <li> <p> <code>DELIMITED_TEXT</code> – Delimited text export file format.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub s3_destination_export_file_format: std::option::Option<crate::model::ExportFileFormat>,
     /// <p>Format Options for S3 Destination type.</p>
     /// <p>Here is an example of how you could specify the <code>s3DestinationExportFileFormatOptions</code> </p>
     /// <p> <code> { "header": "true", "delimiter": ",", "compression": "gzip" }</code> </p>
+    #[doc(hidden)]
     pub s3_destination_export_file_format_options:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2157,11 +2210,10 @@ impl std::fmt::Debug for DataViewDestinationTypeParams {
         formatter.finish()
     }
 }
-/// See [`DataViewDestinationTypeParams`](crate::model::DataViewDestinationTypeParams)
+/// See [`DataViewDestinationTypeParams`](crate::model::DataViewDestinationTypeParams).
 pub mod data_view_destination_type_params {
 
-    /// A builder for [`DataViewDestinationTypeParams`](crate::model::DataViewDestinationTypeParams)
-    #[non_exhaustive]
+    /// A builder for [`DataViewDestinationTypeParams`](crate::model::DataViewDestinationTypeParams).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) destination_type: std::option::Option<std::string::String>,
@@ -2248,7 +2300,7 @@ pub mod data_view_destination_type_params {
             self.s3_destination_export_file_format_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataViewDestinationTypeParams`](crate::model::DataViewDestinationTypeParams)
+        /// Consumes the builder and constructs a [`DataViewDestinationTypeParams`](crate::model::DataViewDestinationTypeParams).
         pub fn build(self) -> crate::model::DataViewDestinationTypeParams {
             crate::model::DataViewDestinationTypeParams {
                 destination_type: self.destination_type,
@@ -2260,7 +2312,7 @@ pub mod data_view_destination_type_params {
     }
 }
 impl DataViewDestinationTypeParams {
-    /// Creates a new builder-style object to manufacture [`DataViewDestinationTypeParams`](crate::model::DataViewDestinationTypeParams)
+    /// Creates a new builder-style object to manufacture [`DataViewDestinationTypeParams`](crate::model::DataViewDestinationTypeParams).
     pub fn builder() -> crate::model::data_view_destination_type_params::Builder {
         crate::model::data_view_destination_type_params::Builder::default()
     }
@@ -2326,6 +2378,7 @@ impl AsRef<str> for ExportFileFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataViewErrorInfo {
     /// <p>The text of the error message.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>The category of the error.</p>
     /// <ul>
@@ -2338,6 +2391,7 @@ pub struct DataViewErrorInfo {
     /// <li> <p> <code>CANCELLED</code> – Cancelled.</p> </li>
     /// <li> <p> <code>USER_RECOVERABLE</code> – A user recoverable error has occurred.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub error_category: std::option::Option<crate::model::ErrorCategory>,
 }
 impl DataViewErrorInfo {
@@ -2368,11 +2422,10 @@ impl std::fmt::Debug for DataViewErrorInfo {
         formatter.finish()
     }
 }
-/// See [`DataViewErrorInfo`](crate::model::DataViewErrorInfo)
+/// See [`DataViewErrorInfo`](crate::model::DataViewErrorInfo).
 pub mod data_view_error_info {
 
-    /// A builder for [`DataViewErrorInfo`](crate::model::DataViewErrorInfo)
-    #[non_exhaustive]
+    /// A builder for [`DataViewErrorInfo`](crate::model::DataViewErrorInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_message: std::option::Option<std::string::String>,
@@ -2425,7 +2478,7 @@ pub mod data_view_error_info {
             self.error_category = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataViewErrorInfo`](crate::model::DataViewErrorInfo)
+        /// Consumes the builder and constructs a [`DataViewErrorInfo`](crate::model::DataViewErrorInfo).
         pub fn build(self) -> crate::model::DataViewErrorInfo {
             crate::model::DataViewErrorInfo {
                 error_message: self.error_message,
@@ -2435,7 +2488,7 @@ pub mod data_view_error_info {
     }
 }
 impl DataViewErrorInfo {
-    /// Creates a new builder-style object to manufacture [`DataViewErrorInfo`](crate::model::DataViewErrorInfo)
+    /// Creates a new builder-style object to manufacture [`DataViewErrorInfo`](crate::model::DataViewErrorInfo).
     pub fn builder() -> crate::model::data_view_error_info::Builder {
         crate::model::data_view_error_info::Builder::default()
     }
@@ -2622,28 +2675,38 @@ impl AsRef<str> for DataViewStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Dataset {
     /// <p>An identifier for a Dataset.</p>
+    #[doc(hidden)]
     pub dataset_id: std::option::Option<std::string::String>,
     /// <p>The ARN identifier of the Dataset.</p>
+    #[doc(hidden)]
     pub dataset_arn: std::option::Option<std::string::String>,
     /// <p>Display title for a Dataset.</p>
+    #[doc(hidden)]
     pub dataset_title: std::option::Option<std::string::String>,
     /// <p>The format in which Dataset data is structured.</p>
     /// <ul>
     /// <li> <p> <code>TABULAR</code> – Data is structured in a tabular format.</p> </li>
     /// <li> <p> <code>NON_TABULAR</code> – Data is structured in a non-tabular format.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub kind: std::option::Option<crate::model::DatasetKind>,
     /// <p>Description for a Dataset.</p>
+    #[doc(hidden)]
     pub dataset_description: std::option::Option<std::string::String>,
     /// <p>Contact information for a Dataset owner.</p>
+    #[doc(hidden)]
     pub owner_info: std::option::Option<crate::model::DatasetOwnerInfo>,
     /// <p>The timestamp at which the Dataset was created in FinSpace. The value is determined as epoch time in milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.</p>
+    #[doc(hidden)]
     pub create_time: i64,
     /// <p>The last time that the Dataset was modified. The value is determined as epoch time in milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.</p>
+    #[doc(hidden)]
     pub last_modified_time: i64,
     /// <p>Definition for a schema on a tabular Dataset.</p>
+    #[doc(hidden)]
     pub schema_definition: std::option::Option<crate::model::SchemaUnion>,
     /// <p>The unique resource identifier for a Dataset.</p>
+    #[doc(hidden)]
     pub alias: std::option::Option<std::string::String>,
 }
 impl Dataset {
@@ -2708,11 +2771,10 @@ impl std::fmt::Debug for Dataset {
         formatter.finish()
     }
 }
-/// See [`Dataset`](crate::model::Dataset)
+/// See [`Dataset`](crate::model::Dataset).
 pub mod dataset {
 
-    /// A builder for [`Dataset`](crate::model::Dataset)
-    #[non_exhaustive]
+    /// A builder for [`Dataset`](crate::model::Dataset).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_id: std::option::Option<std::string::String>,
@@ -2847,7 +2909,7 @@ pub mod dataset {
             self.alias = input;
             self
         }
-        /// Consumes the builder and constructs a [`Dataset`](crate::model::Dataset)
+        /// Consumes the builder and constructs a [`Dataset`](crate::model::Dataset).
         pub fn build(self) -> crate::model::Dataset {
             crate::model::Dataset {
                 dataset_id: self.dataset_id,
@@ -2865,7 +2927,7 @@ pub mod dataset {
     }
 }
 impl Dataset {
-    /// Creates a new builder-style object to manufacture [`Dataset`](crate::model::Dataset)
+    /// Creates a new builder-style object to manufacture [`Dataset`](crate::model::Dataset).
     pub fn builder() -> crate::model::dataset::Builder {
         crate::model::dataset::Builder::default()
     }
@@ -2876,10 +2938,13 @@ impl Dataset {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatasetOwnerInfo {
     /// <p>The name of the Dataset owner.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Phone number for the Dataset owner.</p>
+    #[doc(hidden)]
     pub phone_number: std::option::Option<std::string::String>,
     /// <p>Email address for the Dataset owner.</p>
+    #[doc(hidden)]
     pub email: std::option::Option<std::string::String>,
 }
 impl DatasetOwnerInfo {
@@ -2905,11 +2970,10 @@ impl std::fmt::Debug for DatasetOwnerInfo {
         formatter.finish()
     }
 }
-/// See [`DatasetOwnerInfo`](crate::model::DatasetOwnerInfo)
+/// See [`DatasetOwnerInfo`](crate::model::DatasetOwnerInfo).
 pub mod dataset_owner_info {
 
-    /// A builder for [`DatasetOwnerInfo`](crate::model::DatasetOwnerInfo)
-    #[non_exhaustive]
+    /// A builder for [`DatasetOwnerInfo`](crate::model::DatasetOwnerInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2947,7 +3011,7 @@ pub mod dataset_owner_info {
             self.email = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatasetOwnerInfo`](crate::model::DatasetOwnerInfo)
+        /// Consumes the builder and constructs a [`DatasetOwnerInfo`](crate::model::DatasetOwnerInfo).
         pub fn build(self) -> crate::model::DatasetOwnerInfo {
             crate::model::DatasetOwnerInfo {
                 name: self.name,
@@ -2958,7 +3022,7 @@ pub mod dataset_owner_info {
     }
 }
 impl DatasetOwnerInfo {
-    /// Creates a new builder-style object to manufacture [`DatasetOwnerInfo`](crate::model::DatasetOwnerInfo)
+    /// Creates a new builder-style object to manufacture [`DatasetOwnerInfo`](crate::model::DatasetOwnerInfo).
     pub fn builder() -> crate::model::dataset_owner_info::Builder {
         crate::model::dataset_owner_info::Builder::default()
     }
@@ -2969,10 +3033,13 @@ impl DatasetOwnerInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChangesetSummary {
     /// <p>The unique identifier for a Changeset.</p>
+    #[doc(hidden)]
     pub changeset_id: std::option::Option<std::string::String>,
     /// <p>The ARN identifier of the Changeset.</p>
+    #[doc(hidden)]
     pub changeset_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the FinSpace Dataset in which the Changeset is created.</p>
+    #[doc(hidden)]
     pub dataset_id: std::option::Option<std::string::String>,
     /// <p>Type that indicates how a Changeset is applied to a Dataset.</p>
     /// <ul>
@@ -2980,14 +3047,18 @@ pub struct ChangesetSummary {
     /// <li> <p> <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.</p> </li>
     /// <li> <p> <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub change_type: std::option::Option<crate::model::ChangeType>,
     /// <p>Options that define the location of the data being ingested.</p>
+    #[doc(hidden)]
     pub source_params:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Options that define the structure of the source file(s).</p>
+    #[doc(hidden)]
     pub format_params:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.</p>
+    #[doc(hidden)]
     pub create_time: i64,
     /// <p>Status of the Changeset ingestion.</p>
     /// <ul>
@@ -2997,16 +3068,22 @@ pub struct ChangesetSummary {
     /// <li> <p> <code>RUNNING</code> – Changeset creation is running.</p> </li>
     /// <li> <p> <code>STOP_REQUESTED</code> – User requested Changeset creation to stop.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::IngestionStatus>,
     /// <p>The structure with error messages.</p>
+    #[doc(hidden)]
     pub error_info: std::option::Option<crate::model::ChangesetErrorInfo>,
     /// <p>Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.</p>
+    #[doc(hidden)]
     pub active_until_timestamp: std::option::Option<i64>,
     /// <p>Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.</p>
+    #[doc(hidden)]
     pub active_from_timestamp: std::option::Option<i64>,
     /// <p>The unique identifier of the Changeset that is updated.</p>
+    #[doc(hidden)]
     pub updates_changeset_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the updated Changeset.</p>
+    #[doc(hidden)]
     pub updated_by_changeset_id: std::option::Option<std::string::String>,
 }
 impl ChangesetSummary {
@@ -3100,11 +3177,10 @@ impl std::fmt::Debug for ChangesetSummary {
         formatter.finish()
     }
 }
-/// See [`ChangesetSummary`](crate::model::ChangesetSummary)
+/// See [`ChangesetSummary`](crate::model::ChangesetSummary).
 pub mod changeset_summary {
 
-    /// A builder for [`ChangesetSummary`](crate::model::ChangesetSummary)
-    #[non_exhaustive]
+    /// A builder for [`ChangesetSummary`](crate::model::ChangesetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) changeset_id: std::option::Option<std::string::String>,
@@ -3328,7 +3404,7 @@ pub mod changeset_summary {
             self.updated_by_changeset_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangesetSummary`](crate::model::ChangesetSummary)
+        /// Consumes the builder and constructs a [`ChangesetSummary`](crate::model::ChangesetSummary).
         pub fn build(self) -> crate::model::ChangesetSummary {
             crate::model::ChangesetSummary {
                 changeset_id: self.changeset_id,
@@ -3349,7 +3425,7 @@ pub mod changeset_summary {
     }
 }
 impl ChangesetSummary {
-    /// Creates a new builder-style object to manufacture [`ChangesetSummary`](crate::model::ChangesetSummary)
+    /// Creates a new builder-style object to manufacture [`ChangesetSummary`](crate::model::ChangesetSummary).
     pub fn builder() -> crate::model::changeset_summary::Builder {
         crate::model::changeset_summary::Builder::default()
     }
@@ -3360,6 +3436,7 @@ impl ChangesetSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChangesetErrorInfo {
     /// <p>The text of the error message.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>The category of the error.</p>
     /// <ul>
@@ -3372,6 +3449,7 @@ pub struct ChangesetErrorInfo {
     /// <li> <p> <code>CANCELLED</code> – Cancelled.</p> </li>
     /// <li> <p> <code>USER_RECOVERABLE</code> – A user recoverable error has occurred.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub error_category: std::option::Option<crate::model::ErrorCategory>,
 }
 impl ChangesetErrorInfo {
@@ -3402,11 +3480,10 @@ impl std::fmt::Debug for ChangesetErrorInfo {
         formatter.finish()
     }
 }
-/// See [`ChangesetErrorInfo`](crate::model::ChangesetErrorInfo)
+/// See [`ChangesetErrorInfo`](crate::model::ChangesetErrorInfo).
 pub mod changeset_error_info {
 
-    /// A builder for [`ChangesetErrorInfo`](crate::model::ChangesetErrorInfo)
-    #[non_exhaustive]
+    /// A builder for [`ChangesetErrorInfo`](crate::model::ChangesetErrorInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_message: std::option::Option<std::string::String>,
@@ -3459,7 +3536,7 @@ pub mod changeset_error_info {
             self.error_category = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangesetErrorInfo`](crate::model::ChangesetErrorInfo)
+        /// Consumes the builder and constructs a [`ChangesetErrorInfo`](crate::model::ChangesetErrorInfo).
         pub fn build(self) -> crate::model::ChangesetErrorInfo {
             crate::model::ChangesetErrorInfo {
                 error_message: self.error_message,
@@ -3469,7 +3546,7 @@ pub mod changeset_error_info {
     }
 }
 impl ChangesetErrorInfo {
-    /// Creates a new builder-style object to manufacture [`ChangesetErrorInfo`](crate::model::ChangesetErrorInfo)
+    /// Creates a new builder-style object to manufacture [`ChangesetErrorInfo`](crate::model::ChangesetErrorInfo).
     pub fn builder() -> crate::model::changeset_error_info::Builder {
         crate::model::changeset_error_info::Builder::default()
     }
@@ -3661,10 +3738,13 @@ impl AsRef<str> for LocationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Credentials {
     /// <p>The access key identifier.</p>
+    #[doc(hidden)]
     pub access_key_id: std::option::Option<std::string::String>,
     /// <p>The access key.</p>
+    #[doc(hidden)]
     pub secret_access_key: std::option::Option<std::string::String>,
     /// <p>The session token.</p>
+    #[doc(hidden)]
     pub session_token: std::option::Option<std::string::String>,
 }
 impl Credentials {
@@ -3690,11 +3770,10 @@ impl std::fmt::Debug for Credentials {
         formatter.finish()
     }
 }
-/// See [`Credentials`](crate::model::Credentials)
+/// See [`Credentials`](crate::model::Credentials).
 pub mod credentials {
 
-    /// A builder for [`Credentials`](crate::model::Credentials)
-    #[non_exhaustive]
+    /// A builder for [`Credentials`](crate::model::Credentials).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_key_id: std::option::Option<std::string::String>,
@@ -3741,7 +3820,7 @@ pub mod credentials {
             self.session_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`Credentials`](crate::model::Credentials)
+        /// Consumes the builder and constructs a [`Credentials`](crate::model::Credentials).
         pub fn build(self) -> crate::model::Credentials {
             crate::model::Credentials {
                 access_key_id: self.access_key_id,
@@ -3752,9 +3831,208 @@ pub mod credentials {
     }
 }
 impl Credentials {
-    /// Creates a new builder-style object to manufacture [`Credentials`](crate::model::Credentials)
+    /// Creates a new builder-style object to manufacture [`Credentials`](crate::model::Credentials).
     pub fn builder() -> crate::model::credentials::Builder {
         crate::model::credentials::Builder::default()
+    }
+}
+
+/// <p>The location of an external Dataview in an S3 bucket.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct S3Location {
+    /// <p> The name of the S3 bucket.</p>
+    #[doc(hidden)]
+    pub bucket: std::option::Option<std::string::String>,
+    /// <p> The path of the folder, within the S3 bucket that contains the Dataset.</p>
+    #[doc(hidden)]
+    pub key: std::option::Option<std::string::String>,
+}
+impl S3Location {
+    /// <p> The name of the S3 bucket.</p>
+    pub fn bucket(&self) -> std::option::Option<&str> {
+        self.bucket.as_deref()
+    }
+    /// <p> The path of the folder, within the S3 bucket that contains the Dataset.</p>
+    pub fn key(&self) -> std::option::Option<&str> {
+        self.key.as_deref()
+    }
+}
+impl std::fmt::Debug for S3Location {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("S3Location");
+        formatter.field("bucket", &self.bucket);
+        formatter.field("key", &self.key);
+        formatter.finish()
+    }
+}
+/// See [`S3Location`](crate::model::S3Location).
+pub mod s3_location {
+
+    /// A builder for [`S3Location`](crate::model::S3Location).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) bucket: std::option::Option<std::string::String>,
+        pub(crate) key: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p> The name of the S3 bucket.</p>
+        pub fn bucket(mut self, input: impl Into<std::string::String>) -> Self {
+            self.bucket = Some(input.into());
+            self
+        }
+        /// <p> The name of the S3 bucket.</p>
+        pub fn set_bucket(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.bucket = input;
+            self
+        }
+        /// <p> The path of the folder, within the S3 bucket that contains the Dataset.</p>
+        pub fn key(mut self, input: impl Into<std::string::String>) -> Self {
+            self.key = Some(input.into());
+            self
+        }
+        /// <p> The path of the folder, within the S3 bucket that contains the Dataset.</p>
+        pub fn set_key(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.key = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location).
+        pub fn build(self) -> crate::model::S3Location {
+            crate::model::S3Location {
+                bucket: self.bucket,
+                key: self.key,
+            }
+        }
+    }
+}
+impl S3Location {
+    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location).
+    pub fn builder() -> crate::model::s3_location::Builder {
+        crate::model::s3_location::Builder::default()
+    }
+}
+
+/// <p> The credentials required to access the external Dataview from the S3 location.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct AwsCredentials {
+    /// <p> The unique identifier for the security credentials.</p>
+    #[doc(hidden)]
+    pub access_key_id: std::option::Option<std::string::String>,
+    /// <p> The secret access key that can be used to sign requests.</p>
+    #[doc(hidden)]
+    pub secret_access_key: std::option::Option<std::string::String>,
+    /// <p> The token that users must pass to use the credentials.</p>
+    #[doc(hidden)]
+    pub session_token: std::option::Option<std::string::String>,
+    /// <p> The Epoch time when the current credentials expire.</p>
+    #[doc(hidden)]
+    pub expiration: i64,
+}
+impl AwsCredentials {
+    /// <p> The unique identifier for the security credentials.</p>
+    pub fn access_key_id(&self) -> std::option::Option<&str> {
+        self.access_key_id.as_deref()
+    }
+    /// <p> The secret access key that can be used to sign requests.</p>
+    pub fn secret_access_key(&self) -> std::option::Option<&str> {
+        self.secret_access_key.as_deref()
+    }
+    /// <p> The token that users must pass to use the credentials.</p>
+    pub fn session_token(&self) -> std::option::Option<&str> {
+        self.session_token.as_deref()
+    }
+    /// <p> The Epoch time when the current credentials expire.</p>
+    pub fn expiration(&self) -> i64 {
+        self.expiration
+    }
+}
+impl std::fmt::Debug for AwsCredentials {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("AwsCredentials");
+        formatter.field("access_key_id", &self.access_key_id);
+        formatter.field("secret_access_key", &"*** Sensitive Data Redacted ***");
+        formatter.field("session_token", &"*** Sensitive Data Redacted ***");
+        formatter.field("expiration", &self.expiration);
+        formatter.finish()
+    }
+}
+/// See [`AwsCredentials`](crate::model::AwsCredentials).
+pub mod aws_credentials {
+
+    /// A builder for [`AwsCredentials`](crate::model::AwsCredentials).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) access_key_id: std::option::Option<std::string::String>,
+        pub(crate) secret_access_key: std::option::Option<std::string::String>,
+        pub(crate) session_token: std::option::Option<std::string::String>,
+        pub(crate) expiration: std::option::Option<i64>,
+    }
+    impl Builder {
+        /// <p> The unique identifier for the security credentials.</p>
+        pub fn access_key_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.access_key_id = Some(input.into());
+            self
+        }
+        /// <p> The unique identifier for the security credentials.</p>
+        pub fn set_access_key_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.access_key_id = input;
+            self
+        }
+        /// <p> The secret access key that can be used to sign requests.</p>
+        pub fn secret_access_key(mut self, input: impl Into<std::string::String>) -> Self {
+            self.secret_access_key = Some(input.into());
+            self
+        }
+        /// <p> The secret access key that can be used to sign requests.</p>
+        pub fn set_secret_access_key(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.secret_access_key = input;
+            self
+        }
+        /// <p> The token that users must pass to use the credentials.</p>
+        pub fn session_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.session_token = Some(input.into());
+            self
+        }
+        /// <p> The token that users must pass to use the credentials.</p>
+        pub fn set_session_token(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.session_token = input;
+            self
+        }
+        /// <p> The Epoch time when the current credentials expire.</p>
+        pub fn expiration(mut self, input: i64) -> Self {
+            self.expiration = Some(input);
+            self
+        }
+        /// <p> The Epoch time when the current credentials expire.</p>
+        pub fn set_expiration(mut self, input: std::option::Option<i64>) -> Self {
+            self.expiration = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`AwsCredentials`](crate::model::AwsCredentials).
+        pub fn build(self) -> crate::model::AwsCredentials {
+            crate::model::AwsCredentials {
+                access_key_id: self.access_key_id,
+                secret_access_key: self.secret_access_key,
+                session_token: self.session_token,
+                expiration: self.expiration.unwrap_or_default(),
+            }
+        }
+    }
+}
+impl AwsCredentials {
+    /// Creates a new builder-style object to manufacture [`AwsCredentials`](crate::model::AwsCredentials).
+    pub fn builder() -> crate::model::aws_credentials::Builder {
+        crate::model::aws_credentials::Builder::default()
     }
 }
 
@@ -3828,8 +4106,10 @@ impl AsRef<str> for DatasetStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PermissionGroupParams {
     /// <p>The unique identifier for the <code>PermissionGroup</code>.</p>
+    #[doc(hidden)]
     pub permission_group_id: std::option::Option<std::string::String>,
     /// <p>List of resource permissions.</p>
+    #[doc(hidden)]
     pub dataset_permissions: std::option::Option<std::vec::Vec<crate::model::ResourcePermission>>,
 }
 impl PermissionGroupParams {
@@ -3850,11 +4130,10 @@ impl std::fmt::Debug for PermissionGroupParams {
         formatter.finish()
     }
 }
-/// See [`PermissionGroupParams`](crate::model::PermissionGroupParams)
+/// See [`PermissionGroupParams`](crate::model::PermissionGroupParams).
 pub mod permission_group_params {
 
-    /// A builder for [`PermissionGroupParams`](crate::model::PermissionGroupParams)
-    #[non_exhaustive]
+    /// A builder for [`PermissionGroupParams`](crate::model::PermissionGroupParams).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission_group_id: std::option::Option<std::string::String>,
@@ -3894,7 +4173,7 @@ pub mod permission_group_params {
             self.dataset_permissions = input;
             self
         }
-        /// Consumes the builder and constructs a [`PermissionGroupParams`](crate::model::PermissionGroupParams)
+        /// Consumes the builder and constructs a [`PermissionGroupParams`](crate::model::PermissionGroupParams).
         pub fn build(self) -> crate::model::PermissionGroupParams {
             crate::model::PermissionGroupParams {
                 permission_group_id: self.permission_group_id,
@@ -3904,7 +4183,7 @@ pub mod permission_group_params {
     }
 }
 impl PermissionGroupParams {
-    /// Creates a new builder-style object to manufacture [`PermissionGroupParams`](crate::model::PermissionGroupParams)
+    /// Creates a new builder-style object to manufacture [`PermissionGroupParams`](crate::model::PermissionGroupParams).
     pub fn builder() -> crate::model::permission_group_params::Builder {
         crate::model::permission_group_params::Builder::default()
     }
@@ -3925,6 +4204,7 @@ impl PermissionGroupParams {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourcePermission {
     /// <p>Permission for a resource.</p>
+    #[doc(hidden)]
     pub permission: std::option::Option<std::string::String>,
 }
 impl ResourcePermission {
@@ -3940,11 +4220,10 @@ impl std::fmt::Debug for ResourcePermission {
         formatter.finish()
     }
 }
-/// See [`ResourcePermission`](crate::model::ResourcePermission)
+/// See [`ResourcePermission`](crate::model::ResourcePermission).
 pub mod resource_permission {
 
-    /// A builder for [`ResourcePermission`](crate::model::ResourcePermission)
-    #[non_exhaustive]
+    /// A builder for [`ResourcePermission`](crate::model::ResourcePermission).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission: std::option::Option<std::string::String>,
@@ -3960,7 +4239,7 @@ pub mod resource_permission {
             self.permission = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourcePermission`](crate::model::ResourcePermission)
+        /// Consumes the builder and constructs a [`ResourcePermission`](crate::model::ResourcePermission).
         pub fn build(self) -> crate::model::ResourcePermission {
             crate::model::ResourcePermission {
                 permission: self.permission,
@@ -3969,7 +4248,7 @@ pub mod resource_permission {
     }
 }
 impl ResourcePermission {
-    /// Creates a new builder-style object to manufacture [`ResourcePermission`](crate::model::ResourcePermission)
+    /// Creates a new builder-style object to manufacture [`ResourcePermission`](crate::model::ResourcePermission).
     pub fn builder() -> crate::model::resource_permission::Builder {
         crate::model::resource_permission::Builder::default()
     }

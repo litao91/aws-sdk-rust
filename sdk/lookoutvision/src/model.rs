@@ -169,8 +169,10 @@ impl AsRef<str> for DatasetStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key of the tag that is attached to the specified model.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the tag that is attached to the specified model.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -191,11 +193,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -222,7 +223,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -232,7 +233,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -316,6 +317,7 @@ impl AsRef<str> for ModelHostingStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModelPackagingConfiguration {
     /// <p> Configuration information for the AWS IoT Greengrass component in a model packaging job. </p>
+    #[doc(hidden)]
     pub greengrass: std::option::Option<crate::model::GreengrassConfiguration>,
 }
 impl ModelPackagingConfiguration {
@@ -331,11 +333,10 @@ impl std::fmt::Debug for ModelPackagingConfiguration {
         formatter.finish()
     }
 }
-/// See [`ModelPackagingConfiguration`](crate::model::ModelPackagingConfiguration)
+/// See [`ModelPackagingConfiguration`](crate::model::ModelPackagingConfiguration).
 pub mod model_packaging_configuration {
 
-    /// A builder for [`ModelPackagingConfiguration`](crate::model::ModelPackagingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ModelPackagingConfiguration`](crate::model::ModelPackagingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) greengrass: std::option::Option<crate::model::GreengrassConfiguration>,
@@ -354,7 +355,7 @@ pub mod model_packaging_configuration {
             self.greengrass = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModelPackagingConfiguration`](crate::model::ModelPackagingConfiguration)
+        /// Consumes the builder and constructs a [`ModelPackagingConfiguration`](crate::model::ModelPackagingConfiguration).
         pub fn build(self) -> crate::model::ModelPackagingConfiguration {
             crate::model::ModelPackagingConfiguration {
                 greengrass: self.greengrass,
@@ -363,7 +364,7 @@ pub mod model_packaging_configuration {
     }
 }
 impl ModelPackagingConfiguration {
-    /// Creates a new builder-style object to manufacture [`ModelPackagingConfiguration`](crate::model::ModelPackagingConfiguration)
+    /// Creates a new builder-style object to manufacture [`ModelPackagingConfiguration`](crate::model::ModelPackagingConfiguration).
     pub fn builder() -> crate::model::model_packaging_configuration::Builder {
         crate::model::model_packaging_configuration::Builder::default()
     }
@@ -375,26 +376,34 @@ impl ModelPackagingConfiguration {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GreengrassConfiguration {
-    /// <p>Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units (GPU) are supported. If you specify <code>TargetPlatform</code>, you must specify <code>CompilerOptions</code>. If you specify <code>TargetDevice</code>, don't specify <code>CompilerOptions</code>.</p>
+    /// <p>Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units (GPU) and CPU accelerators are supported. If you specify <code>TargetDevice</code>, don't specify <code>CompilerOptions</code>.</p>
     /// <p>For more information, see <i>Compiler options</i> in the Amazon Lookout for Vision Developer Guide. </p>
+    #[doc(hidden)]
     pub compiler_options: std::option::Option<std::string::String>,
     /// <p>The target device for the model. Currently the only supported value is <code>jetson_xavier</code>. If you specify <code>TargetDevice</code>, you can't specify <code>TargetPlatform</code>. </p>
+    #[doc(hidden)]
     pub target_device: std::option::Option<crate::model::TargetDevice>,
     /// <p>The target platform for the model. If you specify <code>TargetPlatform</code>, you can't specify <code>TargetDevice</code>. </p>
+    #[doc(hidden)]
     pub target_platform: std::option::Option<crate::model::TargetPlatform>,
     /// <p> An S3 location in which Lookout for Vision stores the component artifacts. </p>
+    #[doc(hidden)]
     pub s3_output_location: std::option::Option<crate::model::S3Location>,
     /// <p> A name for the AWS IoT Greengrass component. </p>
+    #[doc(hidden)]
     pub component_name: std::option::Option<std::string::String>,
     /// <p>A Version for the AWS IoT Greengrass component. If you don't provide a value, a default value of <code> <i>Model Version</i>.0.0</code> is used. </p>
+    #[doc(hidden)]
     pub component_version: std::option::Option<std::string::String>,
     /// <p> A description for the AWS IoT Greengrass component. </p>
+    #[doc(hidden)]
     pub component_description: std::option::Option<std::string::String>,
     /// <p> A set of tags (key-value pairs) that you want to attach to the AWS IoT Greengrass component. </p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl GreengrassConfiguration {
-    /// <p>Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units (GPU) are supported. If you specify <code>TargetPlatform</code>, you must specify <code>CompilerOptions</code>. If you specify <code>TargetDevice</code>, don't specify <code>CompilerOptions</code>.</p>
+    /// <p>Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units (GPU) and CPU accelerators are supported. If you specify <code>TargetDevice</code>, don't specify <code>CompilerOptions</code>.</p>
     /// <p>For more information, see <i>Compiler options</i> in the Amazon Lookout for Vision Developer Guide. </p>
     pub fn compiler_options(&self) -> std::option::Option<&str> {
         self.compiler_options.as_deref()
@@ -442,11 +451,10 @@ impl std::fmt::Debug for GreengrassConfiguration {
         formatter.finish()
     }
 }
-/// See [`GreengrassConfiguration`](crate::model::GreengrassConfiguration)
+/// See [`GreengrassConfiguration`](crate::model::GreengrassConfiguration).
 pub mod greengrass_configuration {
 
-    /// A builder for [`GreengrassConfiguration`](crate::model::GreengrassConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`GreengrassConfiguration`](crate::model::GreengrassConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compiler_options: std::option::Option<std::string::String>,
@@ -459,13 +467,13 @@ pub mod greengrass_configuration {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     }
     impl Builder {
-        /// <p>Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units (GPU) are supported. If you specify <code>TargetPlatform</code>, you must specify <code>CompilerOptions</code>. If you specify <code>TargetDevice</code>, don't specify <code>CompilerOptions</code>.</p>
+        /// <p>Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units (GPU) and CPU accelerators are supported. If you specify <code>TargetDevice</code>, don't specify <code>CompilerOptions</code>.</p>
         /// <p>For more information, see <i>Compiler options</i> in the Amazon Lookout for Vision Developer Guide. </p>
         pub fn compiler_options(mut self, input: impl Into<std::string::String>) -> Self {
             self.compiler_options = Some(input.into());
             self
         }
-        /// <p>Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units (GPU) are supported. If you specify <code>TargetPlatform</code>, you must specify <code>CompilerOptions</code>. If you specify <code>TargetDevice</code>, don't specify <code>CompilerOptions</code>.</p>
+        /// <p>Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units (GPU) and CPU accelerators are supported. If you specify <code>TargetDevice</code>, don't specify <code>CompilerOptions</code>.</p>
         /// <p>For more information, see <i>Compiler options</i> in the Amazon Lookout for Vision Developer Guide. </p>
         pub fn set_compiler_options(
             mut self,
@@ -571,7 +579,7 @@ pub mod greengrass_configuration {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GreengrassConfiguration`](crate::model::GreengrassConfiguration)
+        /// Consumes the builder and constructs a [`GreengrassConfiguration`](crate::model::GreengrassConfiguration).
         pub fn build(self) -> crate::model::GreengrassConfiguration {
             crate::model::GreengrassConfiguration {
                 compiler_options: self.compiler_options,
@@ -587,7 +595,7 @@ pub mod greengrass_configuration {
     }
 }
 impl GreengrassConfiguration {
-    /// Creates a new builder-style object to manufacture [`GreengrassConfiguration`](crate::model::GreengrassConfiguration)
+    /// Creates a new builder-style object to manufacture [`GreengrassConfiguration`](crate::model::GreengrassConfiguration).
     pub fn builder() -> crate::model::greengrass_configuration::Builder {
         crate::model::greengrass_configuration::Builder::default()
     }
@@ -598,8 +606,10 @@ impl GreengrassConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Location {
     /// <p>The S3 bucket that contains the training or model packaging job output. If you are training a model, the bucket must in your AWS account. If you use an S3 bucket for a model packaging job, the S3 bucket must be in the same AWS Region and AWS account in which you use AWS IoT Greengrass.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The path of the folder, within the S3 bucket, that contains the output.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl S3Location {
@@ -620,11 +630,10 @@ impl std::fmt::Debug for S3Location {
         formatter.finish()
     }
 }
-/// See [`S3Location`](crate::model::S3Location)
+/// See [`S3Location`](crate::model::S3Location).
 pub mod s3_location {
 
-    /// A builder for [`S3Location`](crate::model::S3Location)
-    #[non_exhaustive]
+    /// A builder for [`S3Location`](crate::model::S3Location).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -651,7 +660,7 @@ pub mod s3_location {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location)
+        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location).
         pub fn build(self) -> crate::model::S3Location {
             crate::model::S3Location {
                 bucket: self.bucket,
@@ -661,7 +670,7 @@ pub mod s3_location {
     }
 }
 impl S3Location {
-    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location)
+    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location).
     pub fn builder() -> crate::model::s3_location::Builder {
         crate::model::s3_location::Builder::default()
     }
@@ -672,10 +681,17 @@ impl S3Location {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetPlatform {
     /// <p>The target operating system for the model. Linux is the only operating system that is currently supported. </p>
+    #[doc(hidden)]
     pub os: std::option::Option<crate::model::TargetPlatformOs>,
     /// <p>The target architecture for the model. The currently supported architectures are X86_64 (64-bit version of the x86 instruction set) and ARM_64 (ARMv8 64-bit CPU). </p>
+    #[doc(hidden)]
     pub arch: std::option::Option<crate::model::TargetPlatformArch>,
-    /// <p>The target accelerator for the model. NVIDIA (Nvidia graphics processing unit) is the only accelerator that is currently supported. You must also specify the <code>gpu-code</code>, <code>trt-ver</code>, and <code>cuda-ver</code> compiler options. </p>
+    /// <p>The target accelerator for the model. Currently, Amazon Lookout for Vision only supports NVIDIA (Nvidia graphics processing unit) and CPU accelerators. If you specify NVIDIA as an accelerator, you must also specify the <code>gpu-code</code>, <code>trt-ver</code>, and <code>cuda-ver</code> compiler options. If you don't specify an accelerator, Lookout for Vision uses the CPU for compilation and we highly recommend that you use the <code>GreengrassConfiguration$CompilerOptions</code> field. For example, you can use the following compiler options for CPU: </p>
+    /// <ul>
+    /// <li> <p> <code>mcpu</code>: CPU micro-architecture. For example, <code>{'mcpu': 'skylake-avx512'}</code> </p> </li>
+    /// <li> <p> <code>mattr</code>: CPU flags. For example, <code>{'mattr': ['+neon', '+vfpv4']}</code> </p> </li>
+    /// </ul>
+    #[doc(hidden)]
     pub accelerator: std::option::Option<crate::model::TargetPlatformAccelerator>,
 }
 impl TargetPlatform {
@@ -687,7 +703,11 @@ impl TargetPlatform {
     pub fn arch(&self) -> std::option::Option<&crate::model::TargetPlatformArch> {
         self.arch.as_ref()
     }
-    /// <p>The target accelerator for the model. NVIDIA (Nvidia graphics processing unit) is the only accelerator that is currently supported. You must also specify the <code>gpu-code</code>, <code>trt-ver</code>, and <code>cuda-ver</code> compiler options. </p>
+    /// <p>The target accelerator for the model. Currently, Amazon Lookout for Vision only supports NVIDIA (Nvidia graphics processing unit) and CPU accelerators. If you specify NVIDIA as an accelerator, you must also specify the <code>gpu-code</code>, <code>trt-ver</code>, and <code>cuda-ver</code> compiler options. If you don't specify an accelerator, Lookout for Vision uses the CPU for compilation and we highly recommend that you use the <code>GreengrassConfiguration$CompilerOptions</code> field. For example, you can use the following compiler options for CPU: </p>
+    /// <ul>
+    /// <li> <p> <code>mcpu</code>: CPU micro-architecture. For example, <code>{'mcpu': 'skylake-avx512'}</code> </p> </li>
+    /// <li> <p> <code>mattr</code>: CPU flags. For example, <code>{'mattr': ['+neon', '+vfpv4']}</code> </p> </li>
+    /// </ul>
     pub fn accelerator(&self) -> std::option::Option<&crate::model::TargetPlatformAccelerator> {
         self.accelerator.as_ref()
     }
@@ -701,11 +721,10 @@ impl std::fmt::Debug for TargetPlatform {
         formatter.finish()
     }
 }
-/// See [`TargetPlatform`](crate::model::TargetPlatform)
+/// See [`TargetPlatform`](crate::model::TargetPlatform).
 pub mod target_platform {
 
-    /// A builder for [`TargetPlatform`](crate::model::TargetPlatform)
-    #[non_exhaustive]
+    /// A builder for [`TargetPlatform`](crate::model::TargetPlatform).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) os: std::option::Option<crate::model::TargetPlatformOs>,
@@ -739,12 +758,20 @@ pub mod target_platform {
             self.arch = input;
             self
         }
-        /// <p>The target accelerator for the model. NVIDIA (Nvidia graphics processing unit) is the only accelerator that is currently supported. You must also specify the <code>gpu-code</code>, <code>trt-ver</code>, and <code>cuda-ver</code> compiler options. </p>
+        /// <p>The target accelerator for the model. Currently, Amazon Lookout for Vision only supports NVIDIA (Nvidia graphics processing unit) and CPU accelerators. If you specify NVIDIA as an accelerator, you must also specify the <code>gpu-code</code>, <code>trt-ver</code>, and <code>cuda-ver</code> compiler options. If you don't specify an accelerator, Lookout for Vision uses the CPU for compilation and we highly recommend that you use the <code>GreengrassConfiguration$CompilerOptions</code> field. For example, you can use the following compiler options for CPU: </p>
+        /// <ul>
+        /// <li> <p> <code>mcpu</code>: CPU micro-architecture. For example, <code>{'mcpu': 'skylake-avx512'}</code> </p> </li>
+        /// <li> <p> <code>mattr</code>: CPU flags. For example, <code>{'mattr': ['+neon', '+vfpv4']}</code> </p> </li>
+        /// </ul>
         pub fn accelerator(mut self, input: crate::model::TargetPlatformAccelerator) -> Self {
             self.accelerator = Some(input);
             self
         }
-        /// <p>The target accelerator for the model. NVIDIA (Nvidia graphics processing unit) is the only accelerator that is currently supported. You must also specify the <code>gpu-code</code>, <code>trt-ver</code>, and <code>cuda-ver</code> compiler options. </p>
+        /// <p>The target accelerator for the model. Currently, Amazon Lookout for Vision only supports NVIDIA (Nvidia graphics processing unit) and CPU accelerators. If you specify NVIDIA as an accelerator, you must also specify the <code>gpu-code</code>, <code>trt-ver</code>, and <code>cuda-ver</code> compiler options. If you don't specify an accelerator, Lookout for Vision uses the CPU for compilation and we highly recommend that you use the <code>GreengrassConfiguration$CompilerOptions</code> field. For example, you can use the following compiler options for CPU: </p>
+        /// <ul>
+        /// <li> <p> <code>mcpu</code>: CPU micro-architecture. For example, <code>{'mcpu': 'skylake-avx512'}</code> </p> </li>
+        /// <li> <p> <code>mattr</code>: CPU flags. For example, <code>{'mattr': ['+neon', '+vfpv4']}</code> </p> </li>
+        /// </ul>
         pub fn set_accelerator(
             mut self,
             input: std::option::Option<crate::model::TargetPlatformAccelerator>,
@@ -752,7 +779,7 @@ pub mod target_platform {
             self.accelerator = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetPlatform`](crate::model::TargetPlatform)
+        /// Consumes the builder and constructs a [`TargetPlatform`](crate::model::TargetPlatform).
         pub fn build(self) -> crate::model::TargetPlatform {
             crate::model::TargetPlatform {
                 os: self.os,
@@ -763,7 +790,7 @@ pub mod target_platform {
     }
 }
 impl TargetPlatform {
-    /// Creates a new builder-style object to manufacture [`TargetPlatform`](crate::model::TargetPlatform)
+    /// Creates a new builder-style object to manufacture [`TargetPlatform`](crate::model::TargetPlatform).
     pub fn builder() -> crate::model::target_platform::Builder {
         crate::model::target_platform::Builder::default()
     }
@@ -982,10 +1009,13 @@ impl AsRef<str> for TargetDevice {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProjectMetadata {
     /// <p>The Amazon Resource Name (ARN) of the project.</p>
+    #[doc(hidden)]
     pub project_arn: std::option::Option<std::string::String>,
     /// <p>The name of the project.</p>
+    #[doc(hidden)]
     pub project_name: std::option::Option<std::string::String>,
     /// <p>The unix timestamp for the date and time that the project was created. </p>
+    #[doc(hidden)]
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ProjectMetadata {
@@ -1011,11 +1041,10 @@ impl std::fmt::Debug for ProjectMetadata {
         formatter.finish()
     }
 }
-/// See [`ProjectMetadata`](crate::model::ProjectMetadata)
+/// See [`ProjectMetadata`](crate::model::ProjectMetadata).
 pub mod project_metadata {
 
-    /// A builder for [`ProjectMetadata`](crate::model::ProjectMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ProjectMetadata`](crate::model::ProjectMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) project_arn: std::option::Option<std::string::String>,
@@ -1056,7 +1085,7 @@ pub mod project_metadata {
             self.creation_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectMetadata`](crate::model::ProjectMetadata)
+        /// Consumes the builder and constructs a [`ProjectMetadata`](crate::model::ProjectMetadata).
         pub fn build(self) -> crate::model::ProjectMetadata {
             crate::model::ProjectMetadata {
                 project_arn: self.project_arn,
@@ -1067,7 +1096,7 @@ pub mod project_metadata {
     }
 }
 impl ProjectMetadata {
-    /// Creates a new builder-style object to manufacture [`ProjectMetadata`](crate::model::ProjectMetadata)
+    /// Creates a new builder-style object to manufacture [`ProjectMetadata`](crate::model::ProjectMetadata).
     pub fn builder() -> crate::model::project_metadata::Builder {
         crate::model::project_metadata::Builder::default()
     }
@@ -1078,18 +1107,25 @@ impl ProjectMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModelMetadata {
     /// <p>The unix timestamp for the date and time that the model was created. </p>
+    #[doc(hidden)]
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The version of the model.</p>
+    #[doc(hidden)]
     pub model_version: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the model.</p>
+    #[doc(hidden)]
     pub model_arn: std::option::Option<std::string::String>,
     /// <p>The description for the model.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The status of the model.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ModelStatus>,
     /// <p>The status message for the model.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Performance metrics for the model. Not available until training has successfully completed.</p>
+    #[doc(hidden)]
     pub performance: std::option::Option<crate::model::ModelPerformance>,
 }
 impl ModelMetadata {
@@ -1135,11 +1171,10 @@ impl std::fmt::Debug for ModelMetadata {
         formatter.finish()
     }
 }
-/// See [`ModelMetadata`](crate::model::ModelMetadata)
+/// See [`ModelMetadata`](crate::model::ModelMetadata).
 pub mod model_metadata {
 
-    /// A builder for [`ModelMetadata`](crate::model::ModelMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ModelMetadata`](crate::model::ModelMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
@@ -1233,7 +1268,7 @@ pub mod model_metadata {
             self.performance = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModelMetadata`](crate::model::ModelMetadata)
+        /// Consumes the builder and constructs a [`ModelMetadata`](crate::model::ModelMetadata).
         pub fn build(self) -> crate::model::ModelMetadata {
             crate::model::ModelMetadata {
                 creation_timestamp: self.creation_timestamp,
@@ -1248,7 +1283,7 @@ pub mod model_metadata {
     }
 }
 impl ModelMetadata {
-    /// Creates a new builder-style object to manufacture [`ModelMetadata`](crate::model::ModelMetadata)
+    /// Creates a new builder-style object to manufacture [`ModelMetadata`](crate::model::ModelMetadata).
     pub fn builder() -> crate::model::model_metadata::Builder {
         crate::model::model_metadata::Builder::default()
     }
@@ -1259,10 +1294,13 @@ impl ModelMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModelPerformance {
     /// <p>The overall F1 score metric for the trained model.</p>
+    #[doc(hidden)]
     pub f1_score: std::option::Option<f32>,
     /// <p>The overall recall metric value for the trained model. </p>
+    #[doc(hidden)]
     pub recall: std::option::Option<f32>,
     /// <p>The overall precision metric value for the trained model.</p>
+    #[doc(hidden)]
     pub precision: std::option::Option<f32>,
 }
 impl ModelPerformance {
@@ -1288,11 +1326,10 @@ impl std::fmt::Debug for ModelPerformance {
         formatter.finish()
     }
 }
-/// See [`ModelPerformance`](crate::model::ModelPerformance)
+/// See [`ModelPerformance`](crate::model::ModelPerformance).
 pub mod model_performance {
 
-    /// A builder for [`ModelPerformance`](crate::model::ModelPerformance)
-    #[non_exhaustive]
+    /// A builder for [`ModelPerformance`](crate::model::ModelPerformance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) f1_score: std::option::Option<f32>,
@@ -1330,7 +1367,7 @@ pub mod model_performance {
             self.precision = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModelPerformance`](crate::model::ModelPerformance)
+        /// Consumes the builder and constructs a [`ModelPerformance`](crate::model::ModelPerformance).
         pub fn build(self) -> crate::model::ModelPerformance {
             crate::model::ModelPerformance {
                 f1_score: self.f1_score,
@@ -1341,7 +1378,7 @@ pub mod model_performance {
     }
 }
 impl ModelPerformance {
-    /// Creates a new builder-style object to manufacture [`ModelPerformance`](crate::model::ModelPerformance)
+    /// Creates a new builder-style object to manufacture [`ModelPerformance`](crate::model::ModelPerformance).
     pub fn builder() -> crate::model::model_performance::Builder {
         crate::model::model_performance::Builder::default()
     }
@@ -1445,22 +1482,31 @@ impl AsRef<str> for ModelStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModelPackagingJobMetadata {
     /// <p> The name of the model packaging job. </p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p> The project that contains the model that is in the model package. </p>
+    #[doc(hidden)]
     pub project_name: std::option::Option<std::string::String>,
     /// <p> The version of the model that is in the model package. </p>
+    #[doc(hidden)]
     pub model_version: std::option::Option<std::string::String>,
     /// <p> The description for the model packaging job. </p>
+    #[doc(hidden)]
     pub model_packaging_job_description: std::option::Option<std::string::String>,
     /// <p> The AWS service used to package the job. Currently Lookout for Vision can package jobs with AWS IoT Greengrass. </p>
+    #[doc(hidden)]
     pub model_packaging_method: std::option::Option<std::string::String>,
     /// <p>The status of the model packaging job. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ModelPackagingJobStatus>,
     /// <p>The status message for the model packaging job. </p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>The Unix timestamp for the time and date that the model packaging job was created.</p>
+    #[doc(hidden)]
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Unix timestamp for the time and date that the model packaging job was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ModelPackagingJobMetadata {
@@ -1519,11 +1565,10 @@ impl std::fmt::Debug for ModelPackagingJobMetadata {
         formatter.finish()
     }
 }
-/// See [`ModelPackagingJobMetadata`](crate::model::ModelPackagingJobMetadata)
+/// See [`ModelPackagingJobMetadata`](crate::model::ModelPackagingJobMetadata).
 pub mod model_packaging_job_metadata {
 
-    /// A builder for [`ModelPackagingJobMetadata`](crate::model::ModelPackagingJobMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ModelPackagingJobMetadata`](crate::model::ModelPackagingJobMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -1651,7 +1696,7 @@ pub mod model_packaging_job_metadata {
             self.last_updated_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModelPackagingJobMetadata`](crate::model::ModelPackagingJobMetadata)
+        /// Consumes the builder and constructs a [`ModelPackagingJobMetadata`](crate::model::ModelPackagingJobMetadata).
         pub fn build(self) -> crate::model::ModelPackagingJobMetadata {
             crate::model::ModelPackagingJobMetadata {
                 job_name: self.job_name,
@@ -1668,7 +1713,7 @@ pub mod model_packaging_job_metadata {
     }
 }
 impl ModelPackagingJobMetadata {
-    /// Creates a new builder-style object to manufacture [`ModelPackagingJobMetadata`](crate::model::ModelPackagingJobMetadata)
+    /// Creates a new builder-style object to manufacture [`ModelPackagingJobMetadata`](crate::model::ModelPackagingJobMetadata).
     pub fn builder() -> crate::model::model_packaging_job_metadata::Builder {
         crate::model::model_packaging_job_metadata::Builder::default()
     }
@@ -1737,29 +1782,54 @@ impl AsRef<str> for ModelPackagingJobStatus {
     }
 }
 
-/// <p>The prediction results from a call to <code>DetectAnomalies</code>.</p>
+/// <p>The prediction results from a call to <code>DetectAnomalies</code>. <code>DetectAnomalyResult</code> includes classification information for the prediction (<code>IsAnomalous</code> and <code>Confidence</code>). If the model you use is an image segementation model, <code>DetectAnomalyResult</code> also includes segmentation information (<code>Anomalies</code> and <code>AnomalyMask</code>). Classification information is calculated separately from segmentation information and you shouldn't assume a relationship between them.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetectAnomalyResult {
     /// <p>The source of the image that was analyzed. <code>direct</code> means that the images was supplied from the local computer. No other values are supported.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<crate::model::ImageSource>,
-    /// <p>True if the image contains an anomaly, otherwise false.</p>
+    /// <p>True if Amazon Lookout for Vision classifies the image as containing an anomaly, otherwise false.</p>
+    #[doc(hidden)]
     pub is_anomalous: bool,
-    /// <p>The confidence that Amazon Lookout for Vision has in the accuracy of the prediction.</p>
+    /// <p>The confidence that Lookout for Vision has in the accuracy of the classification in <code>IsAnomalous</code>.</p>
+    #[doc(hidden)]
     pub confidence: std::option::Option<f32>,
+    /// <p>If the model is an image segmentation model, <code>Anomalies</code> contains a list of anomaly types found in the image. There is one entry for each type of anomaly found (even if multiple instances of an anomaly type exist on the image). The first element in the list is always an anomaly type representing the image background ('background') and shouldn't be considered an anomaly. Amazon Lookout for Vision automatically add the background anomaly type to the response, and you don't need to declare a background anomaly type in your dataset.</p>
+    /// <p>If the list has one entry ('background'), no anomalies were found on the image.</p>
+    /// <p></p>
+    /// <p>An image classification model doesn't return an <code>Anomalies</code> list. </p>
+    #[doc(hidden)]
+    pub anomalies: std::option::Option<std::vec::Vec<crate::model::Anomaly>>,
+    /// <p>If the model is an image segmentation model, <code>AnomalyMask</code> contains pixel masks that covers all anomaly types found on the image. Each anomaly type has a different mask color. To map a color to an anomaly type, see the <code>color</code> field of the <code>PixelAnomaly</code> object.</p>
+    /// <p>An image classification model doesn't return an <code>Anomalies</code> list. </p>
+    #[doc(hidden)]
+    pub anomaly_mask: std::option::Option<aws_smithy_types::Blob>,
 }
 impl DetectAnomalyResult {
     /// <p>The source of the image that was analyzed. <code>direct</code> means that the images was supplied from the local computer. No other values are supported.</p>
     pub fn source(&self) -> std::option::Option<&crate::model::ImageSource> {
         self.source.as_ref()
     }
-    /// <p>True if the image contains an anomaly, otherwise false.</p>
+    /// <p>True if Amazon Lookout for Vision classifies the image as containing an anomaly, otherwise false.</p>
     pub fn is_anomalous(&self) -> bool {
         self.is_anomalous
     }
-    /// <p>The confidence that Amazon Lookout for Vision has in the accuracy of the prediction.</p>
+    /// <p>The confidence that Lookout for Vision has in the accuracy of the classification in <code>IsAnomalous</code>.</p>
     pub fn confidence(&self) -> std::option::Option<f32> {
         self.confidence
+    }
+    /// <p>If the model is an image segmentation model, <code>Anomalies</code> contains a list of anomaly types found in the image. There is one entry for each type of anomaly found (even if multiple instances of an anomaly type exist on the image). The first element in the list is always an anomaly type representing the image background ('background') and shouldn't be considered an anomaly. Amazon Lookout for Vision automatically add the background anomaly type to the response, and you don't need to declare a background anomaly type in your dataset.</p>
+    /// <p>If the list has one entry ('background'), no anomalies were found on the image.</p>
+    /// <p></p>
+    /// <p>An image classification model doesn't return an <code>Anomalies</code> list. </p>
+    pub fn anomalies(&self) -> std::option::Option<&[crate::model::Anomaly]> {
+        self.anomalies.as_deref()
+    }
+    /// <p>If the model is an image segmentation model, <code>AnomalyMask</code> contains pixel masks that covers all anomaly types found on the image. Each anomaly type has a different mask color. To map a color to an anomaly type, see the <code>color</code> field of the <code>PixelAnomaly</code> object.</p>
+    /// <p>An image classification model doesn't return an <code>Anomalies</code> list. </p>
+    pub fn anomaly_mask(&self) -> std::option::Option<&aws_smithy_types::Blob> {
+        self.anomaly_mask.as_ref()
     }
 }
 impl std::fmt::Debug for DetectAnomalyResult {
@@ -1768,19 +1838,22 @@ impl std::fmt::Debug for DetectAnomalyResult {
         formatter.field("source", &self.source);
         formatter.field("is_anomalous", &self.is_anomalous);
         formatter.field("confidence", &self.confidence);
+        formatter.field("anomalies", &self.anomalies);
+        formatter.field("anomaly_mask", &self.anomaly_mask);
         formatter.finish()
     }
 }
-/// See [`DetectAnomalyResult`](crate::model::DetectAnomalyResult)
+/// See [`DetectAnomalyResult`](crate::model::DetectAnomalyResult).
 pub mod detect_anomaly_result {
 
-    /// A builder for [`DetectAnomalyResult`](crate::model::DetectAnomalyResult)
-    #[non_exhaustive]
+    /// A builder for [`DetectAnomalyResult`](crate::model::DetectAnomalyResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source: std::option::Option<crate::model::ImageSource>,
         pub(crate) is_anomalous: std::option::Option<bool>,
         pub(crate) confidence: std::option::Option<f32>,
+        pub(crate) anomalies: std::option::Option<std::vec::Vec<crate::model::Anomaly>>,
+        pub(crate) anomaly_mask: std::option::Option<aws_smithy_types::Blob>,
     }
     impl Builder {
         /// <p>The source of the image that was analyzed. <code>direct</code> means that the images was supplied from the local computer. No other values are supported.</p>
@@ -1793,40 +1866,235 @@ pub mod detect_anomaly_result {
             self.source = input;
             self
         }
-        /// <p>True if the image contains an anomaly, otherwise false.</p>
+        /// <p>True if Amazon Lookout for Vision classifies the image as containing an anomaly, otherwise false.</p>
         pub fn is_anomalous(mut self, input: bool) -> Self {
             self.is_anomalous = Some(input);
             self
         }
-        /// <p>True if the image contains an anomaly, otherwise false.</p>
+        /// <p>True if Amazon Lookout for Vision classifies the image as containing an anomaly, otherwise false.</p>
         pub fn set_is_anomalous(mut self, input: std::option::Option<bool>) -> Self {
             self.is_anomalous = input;
             self
         }
-        /// <p>The confidence that Amazon Lookout for Vision has in the accuracy of the prediction.</p>
+        /// <p>The confidence that Lookout for Vision has in the accuracy of the classification in <code>IsAnomalous</code>.</p>
         pub fn confidence(mut self, input: f32) -> Self {
             self.confidence = Some(input);
             self
         }
-        /// <p>The confidence that Amazon Lookout for Vision has in the accuracy of the prediction.</p>
+        /// <p>The confidence that Lookout for Vision has in the accuracy of the classification in <code>IsAnomalous</code>.</p>
         pub fn set_confidence(mut self, input: std::option::Option<f32>) -> Self {
             self.confidence = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetectAnomalyResult`](crate::model::DetectAnomalyResult)
+        /// Appends an item to `anomalies`.
+        ///
+        /// To override the contents of this collection use [`set_anomalies`](Self::set_anomalies).
+        ///
+        /// <p>If the model is an image segmentation model, <code>Anomalies</code> contains a list of anomaly types found in the image. There is one entry for each type of anomaly found (even if multiple instances of an anomaly type exist on the image). The first element in the list is always an anomaly type representing the image background ('background') and shouldn't be considered an anomaly. Amazon Lookout for Vision automatically add the background anomaly type to the response, and you don't need to declare a background anomaly type in your dataset.</p>
+        /// <p>If the list has one entry ('background'), no anomalies were found on the image.</p>
+        /// <p></p>
+        /// <p>An image classification model doesn't return an <code>Anomalies</code> list. </p>
+        pub fn anomalies(mut self, input: crate::model::Anomaly) -> Self {
+            let mut v = self.anomalies.unwrap_or_default();
+            v.push(input);
+            self.anomalies = Some(v);
+            self
+        }
+        /// <p>If the model is an image segmentation model, <code>Anomalies</code> contains a list of anomaly types found in the image. There is one entry for each type of anomaly found (even if multiple instances of an anomaly type exist on the image). The first element in the list is always an anomaly type representing the image background ('background') and shouldn't be considered an anomaly. Amazon Lookout for Vision automatically add the background anomaly type to the response, and you don't need to declare a background anomaly type in your dataset.</p>
+        /// <p>If the list has one entry ('background'), no anomalies were found on the image.</p>
+        /// <p></p>
+        /// <p>An image classification model doesn't return an <code>Anomalies</code> list. </p>
+        pub fn set_anomalies(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::Anomaly>>,
+        ) -> Self {
+            self.anomalies = input;
+            self
+        }
+        /// <p>If the model is an image segmentation model, <code>AnomalyMask</code> contains pixel masks that covers all anomaly types found on the image. Each anomaly type has a different mask color. To map a color to an anomaly type, see the <code>color</code> field of the <code>PixelAnomaly</code> object.</p>
+        /// <p>An image classification model doesn't return an <code>Anomalies</code> list. </p>
+        pub fn anomaly_mask(mut self, input: aws_smithy_types::Blob) -> Self {
+            self.anomaly_mask = Some(input);
+            self
+        }
+        /// <p>If the model is an image segmentation model, <code>AnomalyMask</code> contains pixel masks that covers all anomaly types found on the image. Each anomaly type has a different mask color. To map a color to an anomaly type, see the <code>color</code> field of the <code>PixelAnomaly</code> object.</p>
+        /// <p>An image classification model doesn't return an <code>Anomalies</code> list. </p>
+        pub fn set_anomaly_mask(
+            mut self,
+            input: std::option::Option<aws_smithy_types::Blob>,
+        ) -> Self {
+            self.anomaly_mask = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DetectAnomalyResult`](crate::model::DetectAnomalyResult).
         pub fn build(self) -> crate::model::DetectAnomalyResult {
             crate::model::DetectAnomalyResult {
                 source: self.source,
                 is_anomalous: self.is_anomalous.unwrap_or_default(),
                 confidence: self.confidence,
+                anomalies: self.anomalies,
+                anomaly_mask: self.anomaly_mask,
             }
         }
     }
 }
 impl DetectAnomalyResult {
-    /// Creates a new builder-style object to manufacture [`DetectAnomalyResult`](crate::model::DetectAnomalyResult)
+    /// Creates a new builder-style object to manufacture [`DetectAnomalyResult`](crate::model::DetectAnomalyResult).
     pub fn builder() -> crate::model::detect_anomaly_result::Builder {
         crate::model::detect_anomaly_result::Builder::default()
+    }
+}
+
+/// <p>Information about an anomaly type found on an image by an image segmentation model. For more information, see <code>DetectAnomalies</code>.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct Anomaly {
+    /// <p>The name of an anomaly type found in an image. <code>Name</code> maps to an anomaly type in the training dataset, apart from the anomaly type <code>background</code>. The service automatically inserts the <code>background</code> anomaly type into the response from <code>DetectAnomalies</code>. </p>
+    #[doc(hidden)]
+    pub name: std::option::Option<std::string::String>,
+    /// <p>Information about the pixel mask that covers an anomaly type.</p>
+    #[doc(hidden)]
+    pub pixel_anomaly: std::option::Option<crate::model::PixelAnomaly>,
+}
+impl Anomaly {
+    /// <p>The name of an anomaly type found in an image. <code>Name</code> maps to an anomaly type in the training dataset, apart from the anomaly type <code>background</code>. The service automatically inserts the <code>background</code> anomaly type into the response from <code>DetectAnomalies</code>. </p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+    /// <p>Information about the pixel mask that covers an anomaly type.</p>
+    pub fn pixel_anomaly(&self) -> std::option::Option<&crate::model::PixelAnomaly> {
+        self.pixel_anomaly.as_ref()
+    }
+}
+impl std::fmt::Debug for Anomaly {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("Anomaly");
+        formatter.field("name", &self.name);
+        formatter.field("pixel_anomaly", &self.pixel_anomaly);
+        formatter.finish()
+    }
+}
+/// See [`Anomaly`](crate::model::Anomaly).
+pub mod anomaly {
+
+    /// A builder for [`Anomaly`](crate::model::Anomaly).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) name: std::option::Option<std::string::String>,
+        pub(crate) pixel_anomaly: std::option::Option<crate::model::PixelAnomaly>,
+    }
+    impl Builder {
+        /// <p>The name of an anomaly type found in an image. <code>Name</code> maps to an anomaly type in the training dataset, apart from the anomaly type <code>background</code>. The service automatically inserts the <code>background</code> anomaly type into the response from <code>DetectAnomalies</code>. </p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>The name of an anomaly type found in an image. <code>Name</code> maps to an anomaly type in the training dataset, apart from the anomaly type <code>background</code>. The service automatically inserts the <code>background</code> anomaly type into the response from <code>DetectAnomalies</code>. </p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// <p>Information about the pixel mask that covers an anomaly type.</p>
+        pub fn pixel_anomaly(mut self, input: crate::model::PixelAnomaly) -> Self {
+            self.pixel_anomaly = Some(input);
+            self
+        }
+        /// <p>Information about the pixel mask that covers an anomaly type.</p>
+        pub fn set_pixel_anomaly(
+            mut self,
+            input: std::option::Option<crate::model::PixelAnomaly>,
+        ) -> Self {
+            self.pixel_anomaly = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`Anomaly`](crate::model::Anomaly).
+        pub fn build(self) -> crate::model::Anomaly {
+            crate::model::Anomaly {
+                name: self.name,
+                pixel_anomaly: self.pixel_anomaly,
+            }
+        }
+    }
+}
+impl Anomaly {
+    /// Creates a new builder-style object to manufacture [`Anomaly`](crate::model::Anomaly).
+    pub fn builder() -> crate::model::anomaly::Builder {
+        crate::model::anomaly::Builder::default()
+    }
+}
+
+/// <p>Information about the pixels in an anomaly mask. For more information, see <code>Anomaly</code>. <code>PixelAnomaly</code> is only returned by image segmentation models.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct PixelAnomaly {
+    /// <p>The percentage area of the image that the anomaly type covers.</p>
+    #[doc(hidden)]
+    pub total_percentage_area: std::option::Option<f32>,
+    /// <p>A hex color value for the mask that covers an anomaly type. Each anomaly type has a different mask color. The color maps to the color of the anomaly type used in the training dataset. </p>
+    #[doc(hidden)]
+    pub color: std::option::Option<std::string::String>,
+}
+impl PixelAnomaly {
+    /// <p>The percentage area of the image that the anomaly type covers.</p>
+    pub fn total_percentage_area(&self) -> std::option::Option<f32> {
+        self.total_percentage_area
+    }
+    /// <p>A hex color value for the mask that covers an anomaly type. Each anomaly type has a different mask color. The color maps to the color of the anomaly type used in the training dataset. </p>
+    pub fn color(&self) -> std::option::Option<&str> {
+        self.color.as_deref()
+    }
+}
+impl std::fmt::Debug for PixelAnomaly {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("PixelAnomaly");
+        formatter.field("total_percentage_area", &self.total_percentage_area);
+        formatter.field("color", &self.color);
+        formatter.finish()
+    }
+}
+/// See [`PixelAnomaly`](crate::model::PixelAnomaly).
+pub mod pixel_anomaly {
+
+    /// A builder for [`PixelAnomaly`](crate::model::PixelAnomaly).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) total_percentage_area: std::option::Option<f32>,
+        pub(crate) color: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The percentage area of the image that the anomaly type covers.</p>
+        pub fn total_percentage_area(mut self, input: f32) -> Self {
+            self.total_percentage_area = Some(input);
+            self
+        }
+        /// <p>The percentage area of the image that the anomaly type covers.</p>
+        pub fn set_total_percentage_area(mut self, input: std::option::Option<f32>) -> Self {
+            self.total_percentage_area = input;
+            self
+        }
+        /// <p>A hex color value for the mask that covers an anomaly type. Each anomaly type has a different mask color. The color maps to the color of the anomaly type used in the training dataset. </p>
+        pub fn color(mut self, input: impl Into<std::string::String>) -> Self {
+            self.color = Some(input.into());
+            self
+        }
+        /// <p>A hex color value for the mask that covers an anomaly type. Each anomaly type has a different mask color. The color maps to the color of the anomaly type used in the training dataset. </p>
+        pub fn set_color(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.color = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`PixelAnomaly`](crate::model::PixelAnomaly).
+        pub fn build(self) -> crate::model::PixelAnomaly {
+            crate::model::PixelAnomaly {
+                total_percentage_area: self.total_percentage_area,
+                color: self.color,
+            }
+        }
+    }
+}
+impl PixelAnomaly {
+    /// Creates a new builder-style object to manufacture [`PixelAnomaly`](crate::model::PixelAnomaly).
+    pub fn builder() -> crate::model::pixel_anomaly::Builder {
+        crate::model::pixel_anomaly::Builder::default()
     }
 }
 
@@ -1835,6 +2103,7 @@ impl DetectAnomalyResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageSource {
     /// <p>The type of the image.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
 }
 impl ImageSource {
@@ -1850,11 +2119,10 @@ impl std::fmt::Debug for ImageSource {
         formatter.finish()
     }
 }
-/// See [`ImageSource`](crate::model::ImageSource)
+/// See [`ImageSource`](crate::model::ImageSource).
 pub mod image_source {
 
-    /// A builder for [`ImageSource`](crate::model::ImageSource)
-    #[non_exhaustive]
+    /// A builder for [`ImageSource`](crate::model::ImageSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<std::string::String>,
@@ -1870,7 +2138,7 @@ pub mod image_source {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImageSource`](crate::model::ImageSource)
+        /// Consumes the builder and constructs a [`ImageSource`](crate::model::ImageSource).
         pub fn build(self) -> crate::model::ImageSource {
             crate::model::ImageSource {
                 r#type: self.r#type,
@@ -1879,7 +2147,7 @@ pub mod image_source {
     }
 }
 impl ImageSource {
-    /// Creates a new builder-style object to manufacture [`ImageSource`](crate::model::ImageSource)
+    /// Creates a new builder-style object to manufacture [`ImageSource`](crate::model::ImageSource).
     pub fn builder() -> crate::model::image_source::Builder {
         crate::model::image_source::Builder::default()
     }
@@ -1890,12 +2158,16 @@ impl ImageSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProjectDescription {
     /// <p>The Amazon Resource Name (ARN) of the project.</p>
+    #[doc(hidden)]
     pub project_arn: std::option::Option<std::string::String>,
     /// <p>The name of the project.</p>
+    #[doc(hidden)]
     pub project_name: std::option::Option<std::string::String>,
     /// <p>The unix timestamp for the date and time that the project was created. </p>
+    #[doc(hidden)]
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of datasets in the project.</p>
+    #[doc(hidden)]
     pub datasets: std::option::Option<std::vec::Vec<crate::model::DatasetMetadata>>,
 }
 impl ProjectDescription {
@@ -1926,11 +2198,10 @@ impl std::fmt::Debug for ProjectDescription {
         formatter.finish()
     }
 }
-/// See [`ProjectDescription`](crate::model::ProjectDescription)
+/// See [`ProjectDescription`](crate::model::ProjectDescription).
 pub mod project_description {
 
-    /// A builder for [`ProjectDescription`](crate::model::ProjectDescription)
-    #[non_exhaustive]
+    /// A builder for [`ProjectDescription`](crate::model::ProjectDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) project_arn: std::option::Option<std::string::String>,
@@ -1991,7 +2262,7 @@ pub mod project_description {
             self.datasets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProjectDescription`](crate::model::ProjectDescription)
+        /// Consumes the builder and constructs a [`ProjectDescription`](crate::model::ProjectDescription).
         pub fn build(self) -> crate::model::ProjectDescription {
             crate::model::ProjectDescription {
                 project_arn: self.project_arn,
@@ -2003,7 +2274,7 @@ pub mod project_description {
     }
 }
 impl ProjectDescription {
-    /// Creates a new builder-style object to manufacture [`ProjectDescription`](crate::model::ProjectDescription)
+    /// Creates a new builder-style object to manufacture [`ProjectDescription`](crate::model::ProjectDescription).
     pub fn builder() -> crate::model::project_description::Builder {
         crate::model::project_description::Builder::default()
     }
@@ -2014,12 +2285,16 @@ impl ProjectDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatasetMetadata {
     /// <p>The type of the dataset.</p>
+    #[doc(hidden)]
     pub dataset_type: std::option::Option<std::string::String>,
     /// <p>The Unix timestamp for the date and time that the dataset was created. </p>
+    #[doc(hidden)]
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status for the dataset.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DatasetStatus>,
     /// <p>The status message for the dataset.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
 }
 impl DatasetMetadata {
@@ -2050,11 +2325,10 @@ impl std::fmt::Debug for DatasetMetadata {
         formatter.finish()
     }
 }
-/// See [`DatasetMetadata`](crate::model::DatasetMetadata)
+/// See [`DatasetMetadata`](crate::model::DatasetMetadata).
 pub mod dataset_metadata {
 
-    /// A builder for [`DatasetMetadata`](crate::model::DatasetMetadata)
-    #[non_exhaustive]
+    /// A builder for [`DatasetMetadata`](crate::model::DatasetMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_type: std::option::Option<std::string::String>,
@@ -2112,7 +2386,7 @@ pub mod dataset_metadata {
             self.status_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatasetMetadata`](crate::model::DatasetMetadata)
+        /// Consumes the builder and constructs a [`DatasetMetadata`](crate::model::DatasetMetadata).
         pub fn build(self) -> crate::model::DatasetMetadata {
             crate::model::DatasetMetadata {
                 dataset_type: self.dataset_type,
@@ -2124,7 +2398,7 @@ pub mod dataset_metadata {
     }
 }
 impl DatasetMetadata {
-    /// Creates a new builder-style object to manufacture [`DatasetMetadata`](crate::model::DatasetMetadata)
+    /// Creates a new builder-style object to manufacture [`DatasetMetadata`](crate::model::DatasetMetadata).
     pub fn builder() -> crate::model::dataset_metadata::Builder {
         crate::model::dataset_metadata::Builder::default()
     }
@@ -2135,28 +2409,39 @@ impl DatasetMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModelPackagingDescription {
     /// <p> The name of the model packaging job. </p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The name of the project that's associated with a model that's in the model package. </p>
+    #[doc(hidden)]
     pub project_name: std::option::Option<std::string::String>,
     /// <p>The version of the model used in the model packaging job. </p>
+    #[doc(hidden)]
     pub model_version: std::option::Option<std::string::String>,
     /// <p> The configuration information used in the model packaging job. </p>
+    #[doc(hidden)]
     pub model_packaging_configuration:
         std::option::Option<crate::model::ModelPackagingConfiguration>,
     /// <p>The description for the model packaging job. </p>
+    #[doc(hidden)]
     pub model_packaging_job_description: std::option::Option<std::string::String>,
     /// <p>The AWS service used to package the job. Currently Lookout for Vision can package jobs with AWS IoT Greengrass. </p>
+    #[doc(hidden)]
     pub model_packaging_method: std::option::Option<std::string::String>,
     /// <p>Information about the output of the model packaging job. For more information, see <code>DescribeModelPackagingJob</code>. </p>
+    #[doc(hidden)]
     pub model_packaging_output_details:
         std::option::Option<crate::model::ModelPackagingOutputDetails>,
     /// <p> The status of the model packaging job. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ModelPackagingJobStatus>,
     /// <p> The status message for the model packaging job. </p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p> The Unix timestamp for the time and date that the model packaging job was created. </p>
+    #[doc(hidden)]
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The Unix timestamp for the time and date that the model packaging job was last updated. </p>
+    #[doc(hidden)]
     pub last_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ModelPackagingDescription {
@@ -2235,11 +2520,10 @@ impl std::fmt::Debug for ModelPackagingDescription {
         formatter.finish()
     }
 }
-/// See [`ModelPackagingDescription`](crate::model::ModelPackagingDescription)
+/// See [`ModelPackagingDescription`](crate::model::ModelPackagingDescription).
 pub mod model_packaging_description {
 
-    /// A builder for [`ModelPackagingDescription`](crate::model::ModelPackagingDescription)
-    #[non_exhaustive]
+    /// A builder for [`ModelPackagingDescription`](crate::model::ModelPackagingDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -2403,7 +2687,7 @@ pub mod model_packaging_description {
             self.last_updated_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModelPackagingDescription`](crate::model::ModelPackagingDescription)
+        /// Consumes the builder and constructs a [`ModelPackagingDescription`](crate::model::ModelPackagingDescription).
         pub fn build(self) -> crate::model::ModelPackagingDescription {
             crate::model::ModelPackagingDescription {
                 job_name: self.job_name,
@@ -2422,7 +2706,7 @@ pub mod model_packaging_description {
     }
 }
 impl ModelPackagingDescription {
-    /// Creates a new builder-style object to manufacture [`ModelPackagingDescription`](crate::model::ModelPackagingDescription)
+    /// Creates a new builder-style object to manufacture [`ModelPackagingDescription`](crate::model::ModelPackagingDescription).
     pub fn builder() -> crate::model::model_packaging_description::Builder {
         crate::model::model_packaging_description::Builder::default()
     }
@@ -2433,6 +2717,7 @@ impl ModelPackagingDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModelPackagingOutputDetails {
     /// <p> Information about the AWS IoT Greengrass component in a model packaging job. </p>
+    #[doc(hidden)]
     pub greengrass: std::option::Option<crate::model::GreengrassOutputDetails>,
 }
 impl ModelPackagingOutputDetails {
@@ -2448,11 +2733,10 @@ impl std::fmt::Debug for ModelPackagingOutputDetails {
         formatter.finish()
     }
 }
-/// See [`ModelPackagingOutputDetails`](crate::model::ModelPackagingOutputDetails)
+/// See [`ModelPackagingOutputDetails`](crate::model::ModelPackagingOutputDetails).
 pub mod model_packaging_output_details {
 
-    /// A builder for [`ModelPackagingOutputDetails`](crate::model::ModelPackagingOutputDetails)
-    #[non_exhaustive]
+    /// A builder for [`ModelPackagingOutputDetails`](crate::model::ModelPackagingOutputDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) greengrass: std::option::Option<crate::model::GreengrassOutputDetails>,
@@ -2471,7 +2755,7 @@ pub mod model_packaging_output_details {
             self.greengrass = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModelPackagingOutputDetails`](crate::model::ModelPackagingOutputDetails)
+        /// Consumes the builder and constructs a [`ModelPackagingOutputDetails`](crate::model::ModelPackagingOutputDetails).
         pub fn build(self) -> crate::model::ModelPackagingOutputDetails {
             crate::model::ModelPackagingOutputDetails {
                 greengrass: self.greengrass,
@@ -2480,7 +2764,7 @@ pub mod model_packaging_output_details {
     }
 }
 impl ModelPackagingOutputDetails {
-    /// Creates a new builder-style object to manufacture [`ModelPackagingOutputDetails`](crate::model::ModelPackagingOutputDetails)
+    /// Creates a new builder-style object to manufacture [`ModelPackagingOutputDetails`](crate::model::ModelPackagingOutputDetails).
     pub fn builder() -> crate::model::model_packaging_output_details::Builder {
         crate::model::model_packaging_output_details::Builder::default()
     }
@@ -2491,10 +2775,13 @@ impl ModelPackagingOutputDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GreengrassOutputDetails {
     /// <p> The Amazon Resource Name (ARN) of the component. </p>
+    #[doc(hidden)]
     pub component_version_arn: std::option::Option<std::string::String>,
     /// <p> The name of the component. </p>
+    #[doc(hidden)]
     pub component_name: std::option::Option<std::string::String>,
     /// <p> The version of the component. </p>
+    #[doc(hidden)]
     pub component_version: std::option::Option<std::string::String>,
 }
 impl GreengrassOutputDetails {
@@ -2520,11 +2807,10 @@ impl std::fmt::Debug for GreengrassOutputDetails {
         formatter.finish()
     }
 }
-/// See [`GreengrassOutputDetails`](crate::model::GreengrassOutputDetails)
+/// See [`GreengrassOutputDetails`](crate::model::GreengrassOutputDetails).
 pub mod greengrass_output_details {
 
-    /// A builder for [`GreengrassOutputDetails`](crate::model::GreengrassOutputDetails)
-    #[non_exhaustive]
+    /// A builder for [`GreengrassOutputDetails`](crate::model::GreengrassOutputDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) component_version_arn: std::option::Option<std::string::String>,
@@ -2571,7 +2857,7 @@ pub mod greengrass_output_details {
             self.component_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`GreengrassOutputDetails`](crate::model::GreengrassOutputDetails)
+        /// Consumes the builder and constructs a [`GreengrassOutputDetails`](crate::model::GreengrassOutputDetails).
         pub fn build(self) -> crate::model::GreengrassOutputDetails {
             crate::model::GreengrassOutputDetails {
                 component_version_arn: self.component_version_arn,
@@ -2582,7 +2868,7 @@ pub mod greengrass_output_details {
     }
 }
 impl GreengrassOutputDetails {
-    /// Creates a new builder-style object to manufacture [`GreengrassOutputDetails`](crate::model::GreengrassOutputDetails)
+    /// Creates a new builder-style object to manufacture [`GreengrassOutputDetails`](crate::model::GreengrassOutputDetails).
     pub fn builder() -> crate::model::greengrass_output_details::Builder {
         crate::model::greengrass_output_details::Builder::default()
     }
@@ -2593,29 +2879,47 @@ impl GreengrassOutputDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModelDescription {
     /// <p>The version of the model</p>
+    #[doc(hidden)]
     pub model_version: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the model.</p>
+    #[doc(hidden)]
     pub model_arn: std::option::Option<std::string::String>,
     /// <p>The unix timestamp for the date and time that the model was created. </p>
+    #[doc(hidden)]
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description for the model.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The status of the model.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ModelStatus>,
     /// <p>The status message for the model.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Performance metrics for the model. Created during training.</p>
+    #[doc(hidden)]
     pub performance: std::option::Option<crate::model::ModelPerformance>,
     /// <p>The S3 location where Amazon Lookout for Vision saves model training files.</p>
+    #[doc(hidden)]
     pub output_config: std::option::Option<crate::model::OutputConfig>,
     /// <p>The S3 location where Amazon Lookout for Vision saves the manifest file that was used to test the trained model and generate the performance scores.</p>
+    #[doc(hidden)]
     pub evaluation_manifest: std::option::Option<crate::model::OutputS3Object>,
     /// <p>The S3 location where Amazon Lookout for Vision saves the performance metrics.</p>
+    #[doc(hidden)]
     pub evaluation_result: std::option::Option<crate::model::OutputS3Object>,
     /// <p>The unix timestamp for the date and time that the evaluation ended. </p>
+    #[doc(hidden)]
     pub evaluation_end_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The identifer for the AWS Key Management Service (AWS KMS) key that was used to encrypt the model during training.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
+    /// <p>The minimum number of inference units used by the model. For more information, see <code>StartModel</code> </p>
+    #[doc(hidden)]
+    pub min_inference_units: std::option::Option<i32>,
+    /// <p>The maximum number of inference units Amazon Lookout for Vision uses to auto-scale the model. For more information, see <code>StartModel</code>.</p>
+    #[doc(hidden)]
+    pub max_inference_units: std::option::Option<i32>,
 }
 impl ModelDescription {
     /// <p>The version of the model</p>
@@ -2666,6 +2970,14 @@ impl ModelDescription {
     pub fn kms_key_id(&self) -> std::option::Option<&str> {
         self.kms_key_id.as_deref()
     }
+    /// <p>The minimum number of inference units used by the model. For more information, see <code>StartModel</code> </p>
+    pub fn min_inference_units(&self) -> std::option::Option<i32> {
+        self.min_inference_units
+    }
+    /// <p>The maximum number of inference units Amazon Lookout for Vision uses to auto-scale the model. For more information, see <code>StartModel</code>.</p>
+    pub fn max_inference_units(&self) -> std::option::Option<i32> {
+        self.max_inference_units
+    }
 }
 impl std::fmt::Debug for ModelDescription {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -2682,14 +2994,15 @@ impl std::fmt::Debug for ModelDescription {
         formatter.field("evaluation_result", &self.evaluation_result);
         formatter.field("evaluation_end_timestamp", &self.evaluation_end_timestamp);
         formatter.field("kms_key_id", &self.kms_key_id);
+        formatter.field("min_inference_units", &self.min_inference_units);
+        formatter.field("max_inference_units", &self.max_inference_units);
         formatter.finish()
     }
 }
-/// See [`ModelDescription`](crate::model::ModelDescription)
+/// See [`ModelDescription`](crate::model::ModelDescription).
 pub mod model_description {
 
-    /// A builder for [`ModelDescription`](crate::model::ModelDescription)
-    #[non_exhaustive]
+    /// A builder for [`ModelDescription`](crate::model::ModelDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_version: std::option::Option<std::string::String>,
@@ -2704,6 +3017,8 @@ pub mod model_description {
         pub(crate) evaluation_result: std::option::Option<crate::model::OutputS3Object>,
         pub(crate) evaluation_end_timestamp: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) kms_key_id: std::option::Option<std::string::String>,
+        pub(crate) min_inference_units: std::option::Option<i32>,
+        pub(crate) max_inference_units: std::option::Option<i32>,
     }
     impl Builder {
         /// <p>The version of the model</p>
@@ -2850,7 +3165,27 @@ pub mod model_description {
             self.kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModelDescription`](crate::model::ModelDescription)
+        /// <p>The minimum number of inference units used by the model. For more information, see <code>StartModel</code> </p>
+        pub fn min_inference_units(mut self, input: i32) -> Self {
+            self.min_inference_units = Some(input);
+            self
+        }
+        /// <p>The minimum number of inference units used by the model. For more information, see <code>StartModel</code> </p>
+        pub fn set_min_inference_units(mut self, input: std::option::Option<i32>) -> Self {
+            self.min_inference_units = input;
+            self
+        }
+        /// <p>The maximum number of inference units Amazon Lookout for Vision uses to auto-scale the model. For more information, see <code>StartModel</code>.</p>
+        pub fn max_inference_units(mut self, input: i32) -> Self {
+            self.max_inference_units = Some(input);
+            self
+        }
+        /// <p>The maximum number of inference units Amazon Lookout for Vision uses to auto-scale the model. For more information, see <code>StartModel</code>.</p>
+        pub fn set_max_inference_units(mut self, input: std::option::Option<i32>) -> Self {
+            self.max_inference_units = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ModelDescription`](crate::model::ModelDescription).
         pub fn build(self) -> crate::model::ModelDescription {
             crate::model::ModelDescription {
                 model_version: self.model_version,
@@ -2865,12 +3200,14 @@ pub mod model_description {
                 evaluation_result: self.evaluation_result,
                 evaluation_end_timestamp: self.evaluation_end_timestamp,
                 kms_key_id: self.kms_key_id,
+                min_inference_units: self.min_inference_units,
+                max_inference_units: self.max_inference_units,
             }
         }
     }
 }
 impl ModelDescription {
-    /// Creates a new builder-style object to manufacture [`ModelDescription`](crate::model::ModelDescription)
+    /// Creates a new builder-style object to manufacture [`ModelDescription`](crate::model::ModelDescription).
     pub fn builder() -> crate::model::model_description::Builder {
         crate::model::model_description::Builder::default()
     }
@@ -2881,8 +3218,10 @@ impl ModelDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputS3Object {
     /// <p>The bucket that contains the training output.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The location of the training output in the bucket.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
 }
 impl OutputS3Object {
@@ -2903,11 +3242,10 @@ impl std::fmt::Debug for OutputS3Object {
         formatter.finish()
     }
 }
-/// See [`OutputS3Object`](crate::model::OutputS3Object)
+/// See [`OutputS3Object`](crate::model::OutputS3Object).
 pub mod output_s3_object {
 
-    /// A builder for [`OutputS3Object`](crate::model::OutputS3Object)
-    #[non_exhaustive]
+    /// A builder for [`OutputS3Object`](crate::model::OutputS3Object).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -2934,7 +3272,7 @@ pub mod output_s3_object {
             self.key = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputS3Object`](crate::model::OutputS3Object)
+        /// Consumes the builder and constructs a [`OutputS3Object`](crate::model::OutputS3Object).
         pub fn build(self) -> crate::model::OutputS3Object {
             crate::model::OutputS3Object {
                 bucket: self.bucket,
@@ -2944,7 +3282,7 @@ pub mod output_s3_object {
     }
 }
 impl OutputS3Object {
-    /// Creates a new builder-style object to manufacture [`OutputS3Object`](crate::model::OutputS3Object)
+    /// Creates a new builder-style object to manufacture [`OutputS3Object`](crate::model::OutputS3Object).
     pub fn builder() -> crate::model::output_s3_object::Builder {
         crate::model::output_s3_object::Builder::default()
     }
@@ -2955,6 +3293,7 @@ impl OutputS3Object {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputConfig {
     /// <p>The S3 location for the output.</p>
+    #[doc(hidden)]
     pub s3_location: std::option::Option<crate::model::S3Location>,
 }
 impl OutputConfig {
@@ -2970,11 +3309,10 @@ impl std::fmt::Debug for OutputConfig {
         formatter.finish()
     }
 }
-/// See [`OutputConfig`](crate::model::OutputConfig)
+/// See [`OutputConfig`](crate::model::OutputConfig).
 pub mod output_config {
 
-    /// A builder for [`OutputConfig`](crate::model::OutputConfig)
-    #[non_exhaustive]
+    /// A builder for [`OutputConfig`](crate::model::OutputConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_location: std::option::Option<crate::model::S3Location>,
@@ -2993,7 +3331,7 @@ pub mod output_config {
             self.s3_location = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputConfig`](crate::model::OutputConfig)
+        /// Consumes the builder and constructs a [`OutputConfig`](crate::model::OutputConfig).
         pub fn build(self) -> crate::model::OutputConfig {
             crate::model::OutputConfig {
                 s3_location: self.s3_location,
@@ -3002,7 +3340,7 @@ pub mod output_config {
     }
 }
 impl OutputConfig {
-    /// Creates a new builder-style object to manufacture [`OutputConfig`](crate::model::OutputConfig)
+    /// Creates a new builder-style object to manufacture [`OutputConfig`](crate::model::OutputConfig).
     pub fn builder() -> crate::model::output_config::Builder {
         crate::model::output_config::Builder::default()
     }
@@ -3013,18 +3351,25 @@ impl OutputConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatasetDescription {
     /// <p>The name of the project that contains the dataset.</p>
+    #[doc(hidden)]
     pub project_name: std::option::Option<std::string::String>,
     /// <p>The type of the dataset. The value <code>train</code> represents a training dataset or single dataset project. The value <code>test</code> represents a test dataset.</p>
+    #[doc(hidden)]
     pub dataset_type: std::option::Option<std::string::String>,
     /// <p>The Unix timestamp for the time and date that the dataset was created.</p>
+    #[doc(hidden)]
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Unix timestamp for the date and time that the dataset was last updated.</p>
+    #[doc(hidden)]
     pub last_updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the dataset.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DatasetStatus>,
     /// <p>The status message for the dataset. </p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Statistics about the images in a dataset.</p>
+    #[doc(hidden)]
     pub image_stats: std::option::Option<crate::model::DatasetImageStats>,
 }
 impl DatasetDescription {
@@ -3070,11 +3415,10 @@ impl std::fmt::Debug for DatasetDescription {
         formatter.finish()
     }
 }
-/// See [`DatasetDescription`](crate::model::DatasetDescription)
+/// See [`DatasetDescription`](crate::model::DatasetDescription).
 pub mod dataset_description {
 
-    /// A builder for [`DatasetDescription`](crate::model::DatasetDescription)
-    #[non_exhaustive]
+    /// A builder for [`DatasetDescription`](crate::model::DatasetDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) project_name: std::option::Option<std::string::String>,
@@ -3171,7 +3515,7 @@ pub mod dataset_description {
             self.image_stats = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatasetDescription`](crate::model::DatasetDescription)
+        /// Consumes the builder and constructs a [`DatasetDescription`](crate::model::DatasetDescription).
         pub fn build(self) -> crate::model::DatasetDescription {
             crate::model::DatasetDescription {
                 project_name: self.project_name,
@@ -3186,7 +3530,7 @@ pub mod dataset_description {
     }
 }
 impl DatasetDescription {
-    /// Creates a new builder-style object to manufacture [`DatasetDescription`](crate::model::DatasetDescription)
+    /// Creates a new builder-style object to manufacture [`DatasetDescription`](crate::model::DatasetDescription).
     pub fn builder() -> crate::model::dataset_description::Builder {
         crate::model::dataset_description::Builder::default()
     }
@@ -3197,12 +3541,16 @@ impl DatasetDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatasetImageStats {
     /// <p>The total number of images in the dataset.</p>
+    #[doc(hidden)]
     pub total: std::option::Option<i32>,
     /// <p>The total number of labeled images.</p>
+    #[doc(hidden)]
     pub labeled: std::option::Option<i32>,
     /// <p>The total number of images labeled as normal.</p>
+    #[doc(hidden)]
     pub normal: std::option::Option<i32>,
     /// <p>the total number of images labeled as an anomaly.</p>
+    #[doc(hidden)]
     pub anomaly: std::option::Option<i32>,
 }
 impl DatasetImageStats {
@@ -3233,11 +3581,10 @@ impl std::fmt::Debug for DatasetImageStats {
         formatter.finish()
     }
 }
-/// See [`DatasetImageStats`](crate::model::DatasetImageStats)
+/// See [`DatasetImageStats`](crate::model::DatasetImageStats).
 pub mod dataset_image_stats {
 
-    /// A builder for [`DatasetImageStats`](crate::model::DatasetImageStats)
-    #[non_exhaustive]
+    /// A builder for [`DatasetImageStats`](crate::model::DatasetImageStats).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total: std::option::Option<i32>,
@@ -3286,7 +3633,7 @@ pub mod dataset_image_stats {
             self.anomaly = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatasetImageStats`](crate::model::DatasetImageStats)
+        /// Consumes the builder and constructs a [`DatasetImageStats`](crate::model::DatasetImageStats).
         pub fn build(self) -> crate::model::DatasetImageStats {
             crate::model::DatasetImageStats {
                 total: self.total,
@@ -3298,7 +3645,7 @@ pub mod dataset_image_stats {
     }
 }
 impl DatasetImageStats {
-    /// Creates a new builder-style object to manufacture [`DatasetImageStats`](crate::model::DatasetImageStats)
+    /// Creates a new builder-style object to manufacture [`DatasetImageStats`](crate::model::DatasetImageStats).
     pub fn builder() -> crate::model::dataset_image_stats::Builder {
         crate::model::dataset_image_stats::Builder::default()
     }
@@ -3309,6 +3656,7 @@ impl DatasetImageStats {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatasetSource {
     /// <p>Location information for the manifest file.</p>
+    #[doc(hidden)]
     pub ground_truth_manifest: std::option::Option<crate::model::DatasetGroundTruthManifest>,
 }
 impl DatasetSource {
@@ -3326,11 +3674,10 @@ impl std::fmt::Debug for DatasetSource {
         formatter.finish()
     }
 }
-/// See [`DatasetSource`](crate::model::DatasetSource)
+/// See [`DatasetSource`](crate::model::DatasetSource).
 pub mod dataset_source {
 
-    /// A builder for [`DatasetSource`](crate::model::DatasetSource)
-    #[non_exhaustive]
+    /// A builder for [`DatasetSource`](crate::model::DatasetSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ground_truth_manifest:
@@ -3353,7 +3700,7 @@ pub mod dataset_source {
             self.ground_truth_manifest = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatasetSource`](crate::model::DatasetSource)
+        /// Consumes the builder and constructs a [`DatasetSource`](crate::model::DatasetSource).
         pub fn build(self) -> crate::model::DatasetSource {
             crate::model::DatasetSource {
                 ground_truth_manifest: self.ground_truth_manifest,
@@ -3362,7 +3709,7 @@ pub mod dataset_source {
     }
 }
 impl DatasetSource {
-    /// Creates a new builder-style object to manufacture [`DatasetSource`](crate::model::DatasetSource)
+    /// Creates a new builder-style object to manufacture [`DatasetSource`](crate::model::DatasetSource).
     pub fn builder() -> crate::model::dataset_source::Builder {
         crate::model::dataset_source::Builder::default()
     }
@@ -3373,6 +3720,7 @@ impl DatasetSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DatasetGroundTruthManifest {
     /// <p>The S3 bucket location for the manifest file.</p>
+    #[doc(hidden)]
     pub s3_object: std::option::Option<crate::model::InputS3Object>,
 }
 impl DatasetGroundTruthManifest {
@@ -3388,11 +3736,10 @@ impl std::fmt::Debug for DatasetGroundTruthManifest {
         formatter.finish()
     }
 }
-/// See [`DatasetGroundTruthManifest`](crate::model::DatasetGroundTruthManifest)
+/// See [`DatasetGroundTruthManifest`](crate::model::DatasetGroundTruthManifest).
 pub mod dataset_ground_truth_manifest {
 
-    /// A builder for [`DatasetGroundTruthManifest`](crate::model::DatasetGroundTruthManifest)
-    #[non_exhaustive]
+    /// A builder for [`DatasetGroundTruthManifest`](crate::model::DatasetGroundTruthManifest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_object: std::option::Option<crate::model::InputS3Object>,
@@ -3411,7 +3758,7 @@ pub mod dataset_ground_truth_manifest {
             self.s3_object = input;
             self
         }
-        /// Consumes the builder and constructs a [`DatasetGroundTruthManifest`](crate::model::DatasetGroundTruthManifest)
+        /// Consumes the builder and constructs a [`DatasetGroundTruthManifest`](crate::model::DatasetGroundTruthManifest).
         pub fn build(self) -> crate::model::DatasetGroundTruthManifest {
             crate::model::DatasetGroundTruthManifest {
                 s3_object: self.s3_object,
@@ -3420,7 +3767,7 @@ pub mod dataset_ground_truth_manifest {
     }
 }
 impl DatasetGroundTruthManifest {
-    /// Creates a new builder-style object to manufacture [`DatasetGroundTruthManifest`](crate::model::DatasetGroundTruthManifest)
+    /// Creates a new builder-style object to manufacture [`DatasetGroundTruthManifest`](crate::model::DatasetGroundTruthManifest).
     pub fn builder() -> crate::model::dataset_ground_truth_manifest::Builder {
         crate::model::dataset_ground_truth_manifest::Builder::default()
     }
@@ -3431,10 +3778,13 @@ impl DatasetGroundTruthManifest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InputS3Object {
     /// <p>The Amazon S3 bucket that contains the manifest.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The name and location of the manifest file withiin the bucket.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The version ID of the bucket.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
 }
 impl InputS3Object {
@@ -3460,11 +3810,10 @@ impl std::fmt::Debug for InputS3Object {
         formatter.finish()
     }
 }
-/// See [`InputS3Object`](crate::model::InputS3Object)
+/// See [`InputS3Object`](crate::model::InputS3Object).
 pub mod input_s3_object {
 
-    /// A builder for [`InputS3Object`](crate::model::InputS3Object)
-    #[non_exhaustive]
+    /// A builder for [`InputS3Object`](crate::model::InputS3Object).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -3502,7 +3851,7 @@ pub mod input_s3_object {
             self.version_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputS3Object`](crate::model::InputS3Object)
+        /// Consumes the builder and constructs a [`InputS3Object`](crate::model::InputS3Object).
         pub fn build(self) -> crate::model::InputS3Object {
             crate::model::InputS3Object {
                 bucket: self.bucket,
@@ -3513,7 +3862,7 @@ pub mod input_s3_object {
     }
 }
 impl InputS3Object {
-    /// Creates a new builder-style object to manufacture [`InputS3Object`](crate::model::InputS3Object)
+    /// Creates a new builder-style object to manufacture [`InputS3Object`](crate::model::InputS3Object).
     pub fn builder() -> crate::model::input_s3_object::Builder {
         crate::model::input_s3_object::Builder::default()
     }

@@ -10,14 +10,19 @@ pub struct EnvironmentMember {
     /// <li> <p> <code>read-only</code>: Has read-only access to the environment.</p> </li>
     /// <li> <p> <code>read-write</code>: Has read-write access to the environment.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub permissions: std::option::Option<crate::model::Permissions>,
     /// <p>The user ID in Identity and Access Management (IAM) of the environment member.</p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the environment member.</p>
+    #[doc(hidden)]
     pub user_arn: std::option::Option<std::string::String>,
     /// <p>The ID of the environment for the environment member.</p>
+    #[doc(hidden)]
     pub environment_id: std::option::Option<std::string::String>,
     /// <p>The time, expressed in epoch time format, when the environment member last opened the environment.</p>
+    #[doc(hidden)]
     pub last_access: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EnvironmentMember {
@@ -58,11 +63,10 @@ impl std::fmt::Debug for EnvironmentMember {
         formatter.finish()
     }
 }
-/// See [`EnvironmentMember`](crate::model::EnvironmentMember)
+/// See [`EnvironmentMember`](crate::model::EnvironmentMember).
 pub mod environment_member {
 
-    /// A builder for [`EnvironmentMember`](crate::model::EnvironmentMember)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentMember`](crate::model::EnvironmentMember).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permissions: std::option::Option<crate::model::Permissions>,
@@ -141,7 +145,7 @@ pub mod environment_member {
             self.last_access = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentMember`](crate::model::EnvironmentMember)
+        /// Consumes the builder and constructs a [`EnvironmentMember`](crate::model::EnvironmentMember).
         pub fn build(self) -> crate::model::EnvironmentMember {
             crate::model::EnvironmentMember {
                 permissions: self.permissions,
@@ -154,7 +158,7 @@ pub mod environment_member {
     }
 }
 impl EnvironmentMember {
-    /// Creates a new builder-style object to manufacture [`EnvironmentMember`](crate::model::EnvironmentMember)
+    /// Creates a new builder-style object to manufacture [`EnvironmentMember`](crate::model::EnvironmentMember).
     pub fn builder() -> crate::model::environment_member::Builder {
         crate::model::environment_member::Builder::default()
     }
@@ -334,8 +338,10 @@ impl AsRef<str> for ManagedCredentialsAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The <b>name</b> part of a tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The <b>value</b> part of a tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -356,11 +362,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -387,7 +392,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -397,7 +402,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -491,24 +496,32 @@ impl AsRef<str> for EnvironmentStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Environment {
     /// <p>The ID of the environment.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the environment.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description for the environment.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The type of environment. Valid values include the following:</p>
     /// <ul>
     /// <li> <p> <code>ec2</code>: An Amazon Elastic Compute Cloud (Amazon EC2) instance connects to the environment.</p> </li>
     /// <li> <p> <code>ssh</code>: Your own server connects to the environment.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EnvironmentType>,
     /// <p>The connection type used for connecting to an Amazon EC2 environment. <code>CONNECT_SSH</code> is selected by default.</p>
+    #[doc(hidden)]
     pub connection_type: std::option::Option<crate::model::ConnectionType>,
     /// <p>The Amazon Resource Name (ARN) of the environment.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the environment owner.</p>
+    #[doc(hidden)]
     pub owner_arn: std::option::Option<std::string::String>,
     /// <p>The state of the environment in its creation or deletion lifecycle.</p>
+    #[doc(hidden)]
     pub lifecycle: std::option::Option<crate::model::EnvironmentLifecycle>,
     /// <p>Describes the status of Amazon Web Services managed temporary credentials for the Cloud9 environment. Available values are:</p>
     /// <ul>
@@ -523,6 +536,7 @@ pub struct Environment {
     /// <li> <p> <code>ENABLED_BY_OWNER</code> </p> </li>
     /// <li> <p> <code>DISABLED_BY_DEFAULT</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub managed_credentials_status: std::option::Option<crate::model::ManagedCredentialsStatus>,
 }
 impl Environment {
@@ -599,11 +613,10 @@ impl std::fmt::Debug for Environment {
         formatter.finish()
     }
 }
-/// See [`Environment`](crate::model::Environment)
+/// See [`Environment`](crate::model::Environment).
 pub mod environment {
 
-    /// A builder for [`Environment`](crate::model::Environment)
-    #[non_exhaustive]
+    /// A builder for [`Environment`](crate::model::Environment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -755,7 +768,7 @@ pub mod environment {
             self.managed_credentials_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`Environment`](crate::model::Environment)
+        /// Consumes the builder and constructs a [`Environment`](crate::model::Environment).
         pub fn build(self) -> crate::model::Environment {
             crate::model::Environment {
                 id: self.id,
@@ -772,7 +785,7 @@ pub mod environment {
     }
 }
 impl Environment {
-    /// Creates a new builder-style object to manufacture [`Environment`](crate::model::Environment)
+    /// Creates a new builder-style object to manufacture [`Environment`](crate::model::Environment).
     pub fn builder() -> crate::model::environment::Builder {
         crate::model::environment::Builder::default()
     }
@@ -909,10 +922,13 @@ pub struct EnvironmentLifecycle {
     /// <li> <p> <code>DELETING</code>: The environment is in the process of being deleted.</p> </li>
     /// <li> <p> <code>DELETE_FAILED</code>: The environment failed to delete.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EnvironmentLifecycleStatus>,
     /// <p>Any informational message about the lifecycle state of the environment.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p>If the environment failed to delete, the Amazon Resource Name (ARN) of the related Amazon Web Services resource.</p>
+    #[doc(hidden)]
     pub failure_resource: std::option::Option<std::string::String>,
 }
 impl EnvironmentLifecycle {
@@ -945,11 +961,10 @@ impl std::fmt::Debug for EnvironmentLifecycle {
         formatter.finish()
     }
 }
-/// See [`EnvironmentLifecycle`](crate::model::EnvironmentLifecycle)
+/// See [`EnvironmentLifecycle`](crate::model::EnvironmentLifecycle).
 pub mod environment_lifecycle {
 
-    /// A builder for [`EnvironmentLifecycle`](crate::model::EnvironmentLifecycle)
-    #[non_exhaustive]
+    /// A builder for [`EnvironmentLifecycle`](crate::model::EnvironmentLifecycle).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::EnvironmentLifecycleStatus>,
@@ -1007,7 +1022,7 @@ pub mod environment_lifecycle {
             self.failure_resource = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnvironmentLifecycle`](crate::model::EnvironmentLifecycle)
+        /// Consumes the builder and constructs a [`EnvironmentLifecycle`](crate::model::EnvironmentLifecycle).
         pub fn build(self) -> crate::model::EnvironmentLifecycle {
             crate::model::EnvironmentLifecycle {
                 status: self.status,
@@ -1018,7 +1033,7 @@ pub mod environment_lifecycle {
     }
 }
 impl EnvironmentLifecycle {
-    /// Creates a new builder-style object to manufacture [`EnvironmentLifecycle`](crate::model::EnvironmentLifecycle)
+    /// Creates a new builder-style object to manufacture [`EnvironmentLifecycle`](crate::model::EnvironmentLifecycle).
     pub fn builder() -> crate::model::environment_lifecycle::Builder {
         crate::model::environment_lifecycle::Builder::default()
     }

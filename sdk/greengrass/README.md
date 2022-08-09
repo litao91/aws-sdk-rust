@@ -16,10 +16,29 @@ your project, add the following to your **Cargo.toml** file:
 
 ```toml
 [dependencies]
-aws-config = "0.14.0"
-aws-sdk-greengrass = "0.14.0"
+aws-config = "0.47.0"
+aws-sdk-greengrass = "0.17.0"
 tokio = { version = "1", features = ["full"] }
 ```
+
+Then in code, a client can be created with the following:
+
+```rust
+use aws_sdk_greengrass as greengrass;
+
+#[tokio::main]
+async fn main() -> Result<(), greengrass::Error> {
+    let config = aws_config::load_from_env().await;
+    let client = greengrass::Client::new(&config);
+
+    // ... make some calls with the client
+
+    Ok(())
+}
+```
+
+See the [client documentation](https://docs.rs/aws-sdk-greengrass/latest/aws_sdk_greengrass/client/struct.Client.html)
+for information on what calls can be made, and the inputs and outputs for each of those calls.
 
 ## Using the SDK
 

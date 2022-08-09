@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UploadSshPublicKeyOutput {
     /// <p>Contains information about the SSH public key.</p>
+    #[doc(hidden)]
     pub ssh_public_key: std::option::Option<crate::model::SshPublicKey>,
 }
 impl UploadSshPublicKeyOutput {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for UploadSshPublicKeyOutput {
         formatter.finish()
     }
 }
-/// See [`UploadSshPublicKeyOutput`](crate::output::UploadSshPublicKeyOutput)
+/// See [`UploadSshPublicKeyOutput`](crate::output::UploadSshPublicKeyOutput).
 pub mod upload_ssh_public_key_output {
 
-    /// A builder for [`UploadSshPublicKeyOutput`](crate::output::UploadSshPublicKeyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UploadSshPublicKeyOutput`](crate::output::UploadSshPublicKeyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ssh_public_key: std::option::Option<crate::model::SshPublicKey>,
@@ -43,7 +43,7 @@ pub mod upload_ssh_public_key_output {
             self.ssh_public_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`UploadSshPublicKeyOutput`](crate::output::UploadSshPublicKeyOutput)
+        /// Consumes the builder and constructs a [`UploadSshPublicKeyOutput`](crate::output::UploadSshPublicKeyOutput).
         pub fn build(self) -> crate::output::UploadSshPublicKeyOutput {
             crate::output::UploadSshPublicKeyOutput {
                 ssh_public_key: self.ssh_public_key,
@@ -52,7 +52,7 @@ pub mod upload_ssh_public_key_output {
     }
 }
 impl UploadSshPublicKeyOutput {
-    /// Creates a new builder-style object to manufacture [`UploadSshPublicKeyOutput`](crate::output::UploadSshPublicKeyOutput)
+    /// Creates a new builder-style object to manufacture [`UploadSshPublicKeyOutput`](crate::output::UploadSshPublicKeyOutput).
     pub fn builder() -> crate::output::upload_ssh_public_key_output::Builder {
         crate::output::upload_ssh_public_key_output::Builder::default()
     }
@@ -63,6 +63,7 @@ impl UploadSshPublicKeyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UploadSigningCertificateOutput {
     /// <p>Information about the certificate.</p>
+    #[doc(hidden)]
     pub certificate: std::option::Option<crate::model::SigningCertificate>,
 }
 impl UploadSigningCertificateOutput {
@@ -78,11 +79,10 @@ impl std::fmt::Debug for UploadSigningCertificateOutput {
         formatter.finish()
     }
 }
-/// See [`UploadSigningCertificateOutput`](crate::output::UploadSigningCertificateOutput)
+/// See [`UploadSigningCertificateOutput`](crate::output::UploadSigningCertificateOutput).
 pub mod upload_signing_certificate_output {
 
-    /// A builder for [`UploadSigningCertificateOutput`](crate::output::UploadSigningCertificateOutput)
-    #[non_exhaustive]
+    /// A builder for [`UploadSigningCertificateOutput`](crate::output::UploadSigningCertificateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate: std::option::Option<crate::model::SigningCertificate>,
@@ -101,7 +101,7 @@ pub mod upload_signing_certificate_output {
             self.certificate = input;
             self
         }
-        /// Consumes the builder and constructs a [`UploadSigningCertificateOutput`](crate::output::UploadSigningCertificateOutput)
+        /// Consumes the builder and constructs a [`UploadSigningCertificateOutput`](crate::output::UploadSigningCertificateOutput).
         pub fn build(self) -> crate::output::UploadSigningCertificateOutput {
             crate::output::UploadSigningCertificateOutput {
                 certificate: self.certificate,
@@ -110,7 +110,7 @@ pub mod upload_signing_certificate_output {
     }
 }
 impl UploadSigningCertificateOutput {
-    /// Creates a new builder-style object to manufacture [`UploadSigningCertificateOutput`](crate::output::UploadSigningCertificateOutput)
+    /// Creates a new builder-style object to manufacture [`UploadSigningCertificateOutput`](crate::output::UploadSigningCertificateOutput).
     pub fn builder() -> crate::output::upload_signing_certificate_output::Builder {
         crate::output::upload_signing_certificate_output::Builder::default()
     }
@@ -121,8 +121,10 @@ impl UploadSigningCertificateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UploadServerCertificateOutput {
     /// <p>The meta information of the uploaded server certificate without its certificate body, certificate chain, and private key.</p>
+    #[doc(hidden)]
     pub server_certificate_metadata: std::option::Option<crate::model::ServerCertificateMetadata>,
     /// <p>A list of tags that are attached to the new IAM server certificate. The returned list of tags is sorted by tag key. For more information about tagging, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM resources</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl UploadServerCertificateOutput {
@@ -148,11 +150,10 @@ impl std::fmt::Debug for UploadServerCertificateOutput {
         formatter.finish()
     }
 }
-/// See [`UploadServerCertificateOutput`](crate::output::UploadServerCertificateOutput)
+/// See [`UploadServerCertificateOutput`](crate::output::UploadServerCertificateOutput).
 pub mod upload_server_certificate_output {
 
-    /// A builder for [`UploadServerCertificateOutput`](crate::output::UploadServerCertificateOutput)
-    #[non_exhaustive]
+    /// A builder for [`UploadServerCertificateOutput`](crate::output::UploadServerCertificateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) server_certificate_metadata:
@@ -195,7 +196,7 @@ pub mod upload_server_certificate_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`UploadServerCertificateOutput`](crate::output::UploadServerCertificateOutput)
+        /// Consumes the builder and constructs a [`UploadServerCertificateOutput`](crate::output::UploadServerCertificateOutput).
         pub fn build(self) -> crate::output::UploadServerCertificateOutput {
             crate::output::UploadServerCertificateOutput {
                 server_certificate_metadata: self.server_certificate_metadata,
@@ -205,7 +206,7 @@ pub mod upload_server_certificate_output {
     }
 }
 impl UploadServerCertificateOutput {
-    /// Creates a new builder-style object to manufacture [`UploadServerCertificateOutput`](crate::output::UploadServerCertificateOutput)
+    /// Creates a new builder-style object to manufacture [`UploadServerCertificateOutput`](crate::output::UploadServerCertificateOutput).
     pub fn builder() -> crate::output::upload_server_certificate_output::Builder {
         crate::output::upload_server_certificate_output::Builder::default()
     }
@@ -221,22 +222,21 @@ impl std::fmt::Debug for UpdateUserOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateUserOutput`](crate::output::UpdateUserOutput)
+/// See [`UpdateUserOutput`](crate::output::UpdateUserOutput).
 pub mod update_user_output {
 
-    /// A builder for [`UpdateUserOutput`](crate::output::UpdateUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateUserOutput`](crate::output::UpdateUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateUserOutput`](crate::output::UpdateUserOutput)
+        /// Consumes the builder and constructs a [`UpdateUserOutput`](crate::output::UpdateUserOutput).
         pub fn build(self) -> crate::output::UpdateUserOutput {
             crate::output::UpdateUserOutput {}
         }
     }
 }
 impl UpdateUserOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateUserOutput`](crate::output::UpdateUserOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateUserOutput`](crate::output::UpdateUserOutput).
     pub fn builder() -> crate::output::update_user_output::Builder {
         crate::output::update_user_output::Builder::default()
     }
@@ -252,22 +252,21 @@ impl std::fmt::Debug for UpdateSshPublicKeyOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSshPublicKeyOutput`](crate::output::UpdateSshPublicKeyOutput)
+/// See [`UpdateSshPublicKeyOutput`](crate::output::UpdateSshPublicKeyOutput).
 pub mod update_ssh_public_key_output {
 
-    /// A builder for [`UpdateSshPublicKeyOutput`](crate::output::UpdateSshPublicKeyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSshPublicKeyOutput`](crate::output::UpdateSshPublicKeyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateSshPublicKeyOutput`](crate::output::UpdateSshPublicKeyOutput)
+        /// Consumes the builder and constructs a [`UpdateSshPublicKeyOutput`](crate::output::UpdateSshPublicKeyOutput).
         pub fn build(self) -> crate::output::UpdateSshPublicKeyOutput {
             crate::output::UpdateSshPublicKeyOutput {}
         }
     }
 }
 impl UpdateSshPublicKeyOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSshPublicKeyOutput`](crate::output::UpdateSshPublicKeyOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSshPublicKeyOutput`](crate::output::UpdateSshPublicKeyOutput).
     pub fn builder() -> crate::output::update_ssh_public_key_output::Builder {
         crate::output::update_ssh_public_key_output::Builder::default()
     }
@@ -283,22 +282,21 @@ impl std::fmt::Debug for UpdateSigningCertificateOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSigningCertificateOutput`](crate::output::UpdateSigningCertificateOutput)
+/// See [`UpdateSigningCertificateOutput`](crate::output::UpdateSigningCertificateOutput).
 pub mod update_signing_certificate_output {
 
-    /// A builder for [`UpdateSigningCertificateOutput`](crate::output::UpdateSigningCertificateOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSigningCertificateOutput`](crate::output::UpdateSigningCertificateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateSigningCertificateOutput`](crate::output::UpdateSigningCertificateOutput)
+        /// Consumes the builder and constructs a [`UpdateSigningCertificateOutput`](crate::output::UpdateSigningCertificateOutput).
         pub fn build(self) -> crate::output::UpdateSigningCertificateOutput {
             crate::output::UpdateSigningCertificateOutput {}
         }
     }
 }
 impl UpdateSigningCertificateOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSigningCertificateOutput`](crate::output::UpdateSigningCertificateOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSigningCertificateOutput`](crate::output::UpdateSigningCertificateOutput).
     pub fn builder() -> crate::output::update_signing_certificate_output::Builder {
         crate::output::update_signing_certificate_output::Builder::default()
     }
@@ -314,22 +312,21 @@ impl std::fmt::Debug for UpdateServiceSpecificCredentialOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateServiceSpecificCredentialOutput`](crate::output::UpdateServiceSpecificCredentialOutput)
+/// See [`UpdateServiceSpecificCredentialOutput`](crate::output::UpdateServiceSpecificCredentialOutput).
 pub mod update_service_specific_credential_output {
 
-    /// A builder for [`UpdateServiceSpecificCredentialOutput`](crate::output::UpdateServiceSpecificCredentialOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateServiceSpecificCredentialOutput`](crate::output::UpdateServiceSpecificCredentialOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateServiceSpecificCredentialOutput`](crate::output::UpdateServiceSpecificCredentialOutput)
+        /// Consumes the builder and constructs a [`UpdateServiceSpecificCredentialOutput`](crate::output::UpdateServiceSpecificCredentialOutput).
         pub fn build(self) -> crate::output::UpdateServiceSpecificCredentialOutput {
             crate::output::UpdateServiceSpecificCredentialOutput {}
         }
     }
 }
 impl UpdateServiceSpecificCredentialOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateServiceSpecificCredentialOutput`](crate::output::UpdateServiceSpecificCredentialOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateServiceSpecificCredentialOutput`](crate::output::UpdateServiceSpecificCredentialOutput).
     pub fn builder() -> crate::output::update_service_specific_credential_output::Builder {
         crate::output::update_service_specific_credential_output::Builder::default()
     }
@@ -345,22 +342,21 @@ impl std::fmt::Debug for UpdateServerCertificateOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateServerCertificateOutput`](crate::output::UpdateServerCertificateOutput)
+/// See [`UpdateServerCertificateOutput`](crate::output::UpdateServerCertificateOutput).
 pub mod update_server_certificate_output {
 
-    /// A builder for [`UpdateServerCertificateOutput`](crate::output::UpdateServerCertificateOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateServerCertificateOutput`](crate::output::UpdateServerCertificateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateServerCertificateOutput`](crate::output::UpdateServerCertificateOutput)
+        /// Consumes the builder and constructs a [`UpdateServerCertificateOutput`](crate::output::UpdateServerCertificateOutput).
         pub fn build(self) -> crate::output::UpdateServerCertificateOutput {
             crate::output::UpdateServerCertificateOutput {}
         }
     }
 }
 impl UpdateServerCertificateOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateServerCertificateOutput`](crate::output::UpdateServerCertificateOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateServerCertificateOutput`](crate::output::UpdateServerCertificateOutput).
     pub fn builder() -> crate::output::update_server_certificate_output::Builder {
         crate::output::update_server_certificate_output::Builder::default()
     }
@@ -371,6 +367,7 @@ impl UpdateServerCertificateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSamlProviderOutput {
     /// <p>The Amazon Resource Name (ARN) of the SAML provider that was updated.</p>
+    #[doc(hidden)]
     pub saml_provider_arn: std::option::Option<std::string::String>,
 }
 impl UpdateSamlProviderOutput {
@@ -386,11 +383,10 @@ impl std::fmt::Debug for UpdateSamlProviderOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSamlProviderOutput`](crate::output::UpdateSamlProviderOutput)
+/// See [`UpdateSamlProviderOutput`](crate::output::UpdateSamlProviderOutput).
 pub mod update_saml_provider_output {
 
-    /// A builder for [`UpdateSamlProviderOutput`](crate::output::UpdateSamlProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSamlProviderOutput`](crate::output::UpdateSamlProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) saml_provider_arn: std::option::Option<std::string::String>,
@@ -409,7 +405,7 @@ pub mod update_saml_provider_output {
             self.saml_provider_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSamlProviderOutput`](crate::output::UpdateSamlProviderOutput)
+        /// Consumes the builder and constructs a [`UpdateSamlProviderOutput`](crate::output::UpdateSamlProviderOutput).
         pub fn build(self) -> crate::output::UpdateSamlProviderOutput {
             crate::output::UpdateSamlProviderOutput {
                 saml_provider_arn: self.saml_provider_arn,
@@ -418,7 +414,7 @@ pub mod update_saml_provider_output {
     }
 }
 impl UpdateSamlProviderOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSamlProviderOutput`](crate::output::UpdateSamlProviderOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSamlProviderOutput`](crate::output::UpdateSamlProviderOutput).
     pub fn builder() -> crate::output::update_saml_provider_output::Builder {
         crate::output::update_saml_provider_output::Builder::default()
     }
@@ -429,6 +425,7 @@ impl UpdateSamlProviderOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateRoleDescriptionOutput {
     /// <p>A structure that contains details about the modified role.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<crate::model::Role>,
 }
 impl UpdateRoleDescriptionOutput {
@@ -444,11 +441,10 @@ impl std::fmt::Debug for UpdateRoleDescriptionOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRoleDescriptionOutput`](crate::output::UpdateRoleDescriptionOutput)
+/// See [`UpdateRoleDescriptionOutput`](crate::output::UpdateRoleDescriptionOutput).
 pub mod update_role_description_output {
 
-    /// A builder for [`UpdateRoleDescriptionOutput`](crate::output::UpdateRoleDescriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRoleDescriptionOutput`](crate::output::UpdateRoleDescriptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role: std::option::Option<crate::model::Role>,
@@ -464,14 +460,14 @@ pub mod update_role_description_output {
             self.role = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRoleDescriptionOutput`](crate::output::UpdateRoleDescriptionOutput)
+        /// Consumes the builder and constructs a [`UpdateRoleDescriptionOutput`](crate::output::UpdateRoleDescriptionOutput).
         pub fn build(self) -> crate::output::UpdateRoleDescriptionOutput {
             crate::output::UpdateRoleDescriptionOutput { role: self.role }
         }
     }
 }
 impl UpdateRoleDescriptionOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRoleDescriptionOutput`](crate::output::UpdateRoleDescriptionOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRoleDescriptionOutput`](crate::output::UpdateRoleDescriptionOutput).
     pub fn builder() -> crate::output::update_role_description_output::Builder {
         crate::output::update_role_description_output::Builder::default()
     }
@@ -487,22 +483,21 @@ impl std::fmt::Debug for UpdateRoleOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRoleOutput`](crate::output::UpdateRoleOutput)
+/// See [`UpdateRoleOutput`](crate::output::UpdateRoleOutput).
 pub mod update_role_output {
 
-    /// A builder for [`UpdateRoleOutput`](crate::output::UpdateRoleOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRoleOutput`](crate::output::UpdateRoleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateRoleOutput`](crate::output::UpdateRoleOutput)
+        /// Consumes the builder and constructs a [`UpdateRoleOutput`](crate::output::UpdateRoleOutput).
         pub fn build(self) -> crate::output::UpdateRoleOutput {
             crate::output::UpdateRoleOutput {}
         }
     }
 }
 impl UpdateRoleOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRoleOutput`](crate::output::UpdateRoleOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRoleOutput`](crate::output::UpdateRoleOutput).
     pub fn builder() -> crate::output::update_role_output::Builder {
         crate::output::update_role_output::Builder::default()
     }
@@ -518,22 +513,21 @@ impl std::fmt::Debug for UpdateOpenIdConnectProviderThumbprintOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateOpenIdConnectProviderThumbprintOutput`](crate::output::UpdateOpenIdConnectProviderThumbprintOutput)
+/// See [`UpdateOpenIdConnectProviderThumbprintOutput`](crate::output::UpdateOpenIdConnectProviderThumbprintOutput).
 pub mod update_open_id_connect_provider_thumbprint_output {
 
-    /// A builder for [`UpdateOpenIdConnectProviderThumbprintOutput`](crate::output::UpdateOpenIdConnectProviderThumbprintOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateOpenIdConnectProviderThumbprintOutput`](crate::output::UpdateOpenIdConnectProviderThumbprintOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateOpenIdConnectProviderThumbprintOutput`](crate::output::UpdateOpenIdConnectProviderThumbprintOutput)
+        /// Consumes the builder and constructs a [`UpdateOpenIdConnectProviderThumbprintOutput`](crate::output::UpdateOpenIdConnectProviderThumbprintOutput).
         pub fn build(self) -> crate::output::UpdateOpenIdConnectProviderThumbprintOutput {
             crate::output::UpdateOpenIdConnectProviderThumbprintOutput {}
         }
     }
 }
 impl UpdateOpenIdConnectProviderThumbprintOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateOpenIdConnectProviderThumbprintOutput`](crate::output::UpdateOpenIdConnectProviderThumbprintOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateOpenIdConnectProviderThumbprintOutput`](crate::output::UpdateOpenIdConnectProviderThumbprintOutput).
     pub fn builder() -> crate::output::update_open_id_connect_provider_thumbprint_output::Builder {
         crate::output::update_open_id_connect_provider_thumbprint_output::Builder::default()
     }
@@ -549,22 +543,21 @@ impl std::fmt::Debug for UpdateLoginProfileOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateLoginProfileOutput`](crate::output::UpdateLoginProfileOutput)
+/// See [`UpdateLoginProfileOutput`](crate::output::UpdateLoginProfileOutput).
 pub mod update_login_profile_output {
 
-    /// A builder for [`UpdateLoginProfileOutput`](crate::output::UpdateLoginProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateLoginProfileOutput`](crate::output::UpdateLoginProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateLoginProfileOutput`](crate::output::UpdateLoginProfileOutput)
+        /// Consumes the builder and constructs a [`UpdateLoginProfileOutput`](crate::output::UpdateLoginProfileOutput).
         pub fn build(self) -> crate::output::UpdateLoginProfileOutput {
             crate::output::UpdateLoginProfileOutput {}
         }
     }
 }
 impl UpdateLoginProfileOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateLoginProfileOutput`](crate::output::UpdateLoginProfileOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateLoginProfileOutput`](crate::output::UpdateLoginProfileOutput).
     pub fn builder() -> crate::output::update_login_profile_output::Builder {
         crate::output::update_login_profile_output::Builder::default()
     }
@@ -580,22 +573,21 @@ impl std::fmt::Debug for UpdateGroupOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateGroupOutput`](crate::output::UpdateGroupOutput)
+/// See [`UpdateGroupOutput`](crate::output::UpdateGroupOutput).
 pub mod update_group_output {
 
-    /// A builder for [`UpdateGroupOutput`](crate::output::UpdateGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateGroupOutput`](crate::output::UpdateGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateGroupOutput`](crate::output::UpdateGroupOutput)
+        /// Consumes the builder and constructs a [`UpdateGroupOutput`](crate::output::UpdateGroupOutput).
         pub fn build(self) -> crate::output::UpdateGroupOutput {
             crate::output::UpdateGroupOutput {}
         }
     }
 }
 impl UpdateGroupOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateGroupOutput`](crate::output::UpdateGroupOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateGroupOutput`](crate::output::UpdateGroupOutput).
     pub fn builder() -> crate::output::update_group_output::Builder {
         crate::output::update_group_output::Builder::default()
     }
@@ -611,22 +603,21 @@ impl std::fmt::Debug for UpdateAssumeRolePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAssumeRolePolicyOutput`](crate::output::UpdateAssumeRolePolicyOutput)
+/// See [`UpdateAssumeRolePolicyOutput`](crate::output::UpdateAssumeRolePolicyOutput).
 pub mod update_assume_role_policy_output {
 
-    /// A builder for [`UpdateAssumeRolePolicyOutput`](crate::output::UpdateAssumeRolePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAssumeRolePolicyOutput`](crate::output::UpdateAssumeRolePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateAssumeRolePolicyOutput`](crate::output::UpdateAssumeRolePolicyOutput)
+        /// Consumes the builder and constructs a [`UpdateAssumeRolePolicyOutput`](crate::output::UpdateAssumeRolePolicyOutput).
         pub fn build(self) -> crate::output::UpdateAssumeRolePolicyOutput {
             crate::output::UpdateAssumeRolePolicyOutput {}
         }
     }
 }
 impl UpdateAssumeRolePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAssumeRolePolicyOutput`](crate::output::UpdateAssumeRolePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAssumeRolePolicyOutput`](crate::output::UpdateAssumeRolePolicyOutput).
     pub fn builder() -> crate::output::update_assume_role_policy_output::Builder {
         crate::output::update_assume_role_policy_output::Builder::default()
     }
@@ -642,22 +633,21 @@ impl std::fmt::Debug for UpdateAccountPasswordPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAccountPasswordPolicyOutput`](crate::output::UpdateAccountPasswordPolicyOutput)
+/// See [`UpdateAccountPasswordPolicyOutput`](crate::output::UpdateAccountPasswordPolicyOutput).
 pub mod update_account_password_policy_output {
 
-    /// A builder for [`UpdateAccountPasswordPolicyOutput`](crate::output::UpdateAccountPasswordPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAccountPasswordPolicyOutput`](crate::output::UpdateAccountPasswordPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateAccountPasswordPolicyOutput`](crate::output::UpdateAccountPasswordPolicyOutput)
+        /// Consumes the builder and constructs a [`UpdateAccountPasswordPolicyOutput`](crate::output::UpdateAccountPasswordPolicyOutput).
         pub fn build(self) -> crate::output::UpdateAccountPasswordPolicyOutput {
             crate::output::UpdateAccountPasswordPolicyOutput {}
         }
     }
 }
 impl UpdateAccountPasswordPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAccountPasswordPolicyOutput`](crate::output::UpdateAccountPasswordPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAccountPasswordPolicyOutput`](crate::output::UpdateAccountPasswordPolicyOutput).
     pub fn builder() -> crate::output::update_account_password_policy_output::Builder {
         crate::output::update_account_password_policy_output::Builder::default()
     }
@@ -673,22 +663,21 @@ impl std::fmt::Debug for UpdateAccessKeyOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAccessKeyOutput`](crate::output::UpdateAccessKeyOutput)
+/// See [`UpdateAccessKeyOutput`](crate::output::UpdateAccessKeyOutput).
 pub mod update_access_key_output {
 
-    /// A builder for [`UpdateAccessKeyOutput`](crate::output::UpdateAccessKeyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAccessKeyOutput`](crate::output::UpdateAccessKeyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateAccessKeyOutput`](crate::output::UpdateAccessKeyOutput)
+        /// Consumes the builder and constructs a [`UpdateAccessKeyOutput`](crate::output::UpdateAccessKeyOutput).
         pub fn build(self) -> crate::output::UpdateAccessKeyOutput {
             crate::output::UpdateAccessKeyOutput {}
         }
     }
 }
 impl UpdateAccessKeyOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAccessKeyOutput`](crate::output::UpdateAccessKeyOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAccessKeyOutput`](crate::output::UpdateAccessKeyOutput).
     pub fn builder() -> crate::output::update_access_key_output::Builder {
         crate::output::update_access_key_output::Builder::default()
     }
@@ -704,22 +693,21 @@ impl std::fmt::Debug for UntagUserOutput {
         formatter.finish()
     }
 }
-/// See [`UntagUserOutput`](crate::output::UntagUserOutput)
+/// See [`UntagUserOutput`](crate::output::UntagUserOutput).
 pub mod untag_user_output {
 
-    /// A builder for [`UntagUserOutput`](crate::output::UntagUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagUserOutput`](crate::output::UntagUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagUserOutput`](crate::output::UntagUserOutput)
+        /// Consumes the builder and constructs a [`UntagUserOutput`](crate::output::UntagUserOutput).
         pub fn build(self) -> crate::output::UntagUserOutput {
             crate::output::UntagUserOutput {}
         }
     }
 }
 impl UntagUserOutput {
-    /// Creates a new builder-style object to manufacture [`UntagUserOutput`](crate::output::UntagUserOutput)
+    /// Creates a new builder-style object to manufacture [`UntagUserOutput`](crate::output::UntagUserOutput).
     pub fn builder() -> crate::output::untag_user_output::Builder {
         crate::output::untag_user_output::Builder::default()
     }
@@ -735,22 +723,21 @@ impl std::fmt::Debug for UntagServerCertificateOutput {
         formatter.finish()
     }
 }
-/// See [`UntagServerCertificateOutput`](crate::output::UntagServerCertificateOutput)
+/// See [`UntagServerCertificateOutput`](crate::output::UntagServerCertificateOutput).
 pub mod untag_server_certificate_output {
 
-    /// A builder for [`UntagServerCertificateOutput`](crate::output::UntagServerCertificateOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagServerCertificateOutput`](crate::output::UntagServerCertificateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagServerCertificateOutput`](crate::output::UntagServerCertificateOutput)
+        /// Consumes the builder and constructs a [`UntagServerCertificateOutput`](crate::output::UntagServerCertificateOutput).
         pub fn build(self) -> crate::output::UntagServerCertificateOutput {
             crate::output::UntagServerCertificateOutput {}
         }
     }
 }
 impl UntagServerCertificateOutput {
-    /// Creates a new builder-style object to manufacture [`UntagServerCertificateOutput`](crate::output::UntagServerCertificateOutput)
+    /// Creates a new builder-style object to manufacture [`UntagServerCertificateOutput`](crate::output::UntagServerCertificateOutput).
     pub fn builder() -> crate::output::untag_server_certificate_output::Builder {
         crate::output::untag_server_certificate_output::Builder::default()
     }
@@ -766,22 +753,21 @@ impl std::fmt::Debug for UntagSamlProviderOutput {
         formatter.finish()
     }
 }
-/// See [`UntagSamlProviderOutput`](crate::output::UntagSamlProviderOutput)
+/// See [`UntagSamlProviderOutput`](crate::output::UntagSamlProviderOutput).
 pub mod untag_saml_provider_output {
 
-    /// A builder for [`UntagSamlProviderOutput`](crate::output::UntagSamlProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagSamlProviderOutput`](crate::output::UntagSamlProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagSamlProviderOutput`](crate::output::UntagSamlProviderOutput)
+        /// Consumes the builder and constructs a [`UntagSamlProviderOutput`](crate::output::UntagSamlProviderOutput).
         pub fn build(self) -> crate::output::UntagSamlProviderOutput {
             crate::output::UntagSamlProviderOutput {}
         }
     }
 }
 impl UntagSamlProviderOutput {
-    /// Creates a new builder-style object to manufacture [`UntagSamlProviderOutput`](crate::output::UntagSamlProviderOutput)
+    /// Creates a new builder-style object to manufacture [`UntagSamlProviderOutput`](crate::output::UntagSamlProviderOutput).
     pub fn builder() -> crate::output::untag_saml_provider_output::Builder {
         crate::output::untag_saml_provider_output::Builder::default()
     }
@@ -797,22 +783,21 @@ impl std::fmt::Debug for UntagRoleOutput {
         formatter.finish()
     }
 }
-/// See [`UntagRoleOutput`](crate::output::UntagRoleOutput)
+/// See [`UntagRoleOutput`](crate::output::UntagRoleOutput).
 pub mod untag_role_output {
 
-    /// A builder for [`UntagRoleOutput`](crate::output::UntagRoleOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagRoleOutput`](crate::output::UntagRoleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagRoleOutput`](crate::output::UntagRoleOutput)
+        /// Consumes the builder and constructs a [`UntagRoleOutput`](crate::output::UntagRoleOutput).
         pub fn build(self) -> crate::output::UntagRoleOutput {
             crate::output::UntagRoleOutput {}
         }
     }
 }
 impl UntagRoleOutput {
-    /// Creates a new builder-style object to manufacture [`UntagRoleOutput`](crate::output::UntagRoleOutput)
+    /// Creates a new builder-style object to manufacture [`UntagRoleOutput`](crate::output::UntagRoleOutput).
     pub fn builder() -> crate::output::untag_role_output::Builder {
         crate::output::untag_role_output::Builder::default()
     }
@@ -828,22 +813,21 @@ impl std::fmt::Debug for UntagPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`UntagPolicyOutput`](crate::output::UntagPolicyOutput)
+/// See [`UntagPolicyOutput`](crate::output::UntagPolicyOutput).
 pub mod untag_policy_output {
 
-    /// A builder for [`UntagPolicyOutput`](crate::output::UntagPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagPolicyOutput`](crate::output::UntagPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagPolicyOutput`](crate::output::UntagPolicyOutput)
+        /// Consumes the builder and constructs a [`UntagPolicyOutput`](crate::output::UntagPolicyOutput).
         pub fn build(self) -> crate::output::UntagPolicyOutput {
             crate::output::UntagPolicyOutput {}
         }
     }
 }
 impl UntagPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`UntagPolicyOutput`](crate::output::UntagPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`UntagPolicyOutput`](crate::output::UntagPolicyOutput).
     pub fn builder() -> crate::output::untag_policy_output::Builder {
         crate::output::untag_policy_output::Builder::default()
     }
@@ -859,22 +843,21 @@ impl std::fmt::Debug for UntagOpenIdConnectProviderOutput {
         formatter.finish()
     }
 }
-/// See [`UntagOpenIdConnectProviderOutput`](crate::output::UntagOpenIdConnectProviderOutput)
+/// See [`UntagOpenIdConnectProviderOutput`](crate::output::UntagOpenIdConnectProviderOutput).
 pub mod untag_open_id_connect_provider_output {
 
-    /// A builder for [`UntagOpenIdConnectProviderOutput`](crate::output::UntagOpenIdConnectProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagOpenIdConnectProviderOutput`](crate::output::UntagOpenIdConnectProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagOpenIdConnectProviderOutput`](crate::output::UntagOpenIdConnectProviderOutput)
+        /// Consumes the builder and constructs a [`UntagOpenIdConnectProviderOutput`](crate::output::UntagOpenIdConnectProviderOutput).
         pub fn build(self) -> crate::output::UntagOpenIdConnectProviderOutput {
             crate::output::UntagOpenIdConnectProviderOutput {}
         }
     }
 }
 impl UntagOpenIdConnectProviderOutput {
-    /// Creates a new builder-style object to manufacture [`UntagOpenIdConnectProviderOutput`](crate::output::UntagOpenIdConnectProviderOutput)
+    /// Creates a new builder-style object to manufacture [`UntagOpenIdConnectProviderOutput`](crate::output::UntagOpenIdConnectProviderOutput).
     pub fn builder() -> crate::output::untag_open_id_connect_provider_output::Builder {
         crate::output::untag_open_id_connect_provider_output::Builder::default()
     }
@@ -890,22 +873,21 @@ impl std::fmt::Debug for UntagMfaDeviceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagMfaDeviceOutput`](crate::output::UntagMfaDeviceOutput)
+/// See [`UntagMfaDeviceOutput`](crate::output::UntagMfaDeviceOutput).
 pub mod untag_mfa_device_output {
 
-    /// A builder for [`UntagMfaDeviceOutput`](crate::output::UntagMfaDeviceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagMfaDeviceOutput`](crate::output::UntagMfaDeviceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagMfaDeviceOutput`](crate::output::UntagMfaDeviceOutput)
+        /// Consumes the builder and constructs a [`UntagMfaDeviceOutput`](crate::output::UntagMfaDeviceOutput).
         pub fn build(self) -> crate::output::UntagMfaDeviceOutput {
             crate::output::UntagMfaDeviceOutput {}
         }
     }
 }
 impl UntagMfaDeviceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagMfaDeviceOutput`](crate::output::UntagMfaDeviceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagMfaDeviceOutput`](crate::output::UntagMfaDeviceOutput).
     pub fn builder() -> crate::output::untag_mfa_device_output::Builder {
         crate::output::untag_mfa_device_output::Builder::default()
     }
@@ -921,22 +903,21 @@ impl std::fmt::Debug for UntagInstanceProfileOutput {
         formatter.finish()
     }
 }
-/// See [`UntagInstanceProfileOutput`](crate::output::UntagInstanceProfileOutput)
+/// See [`UntagInstanceProfileOutput`](crate::output::UntagInstanceProfileOutput).
 pub mod untag_instance_profile_output {
 
-    /// A builder for [`UntagInstanceProfileOutput`](crate::output::UntagInstanceProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagInstanceProfileOutput`](crate::output::UntagInstanceProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagInstanceProfileOutput`](crate::output::UntagInstanceProfileOutput)
+        /// Consumes the builder and constructs a [`UntagInstanceProfileOutput`](crate::output::UntagInstanceProfileOutput).
         pub fn build(self) -> crate::output::UntagInstanceProfileOutput {
             crate::output::UntagInstanceProfileOutput {}
         }
     }
 }
 impl UntagInstanceProfileOutput {
-    /// Creates a new builder-style object to manufacture [`UntagInstanceProfileOutput`](crate::output::UntagInstanceProfileOutput)
+    /// Creates a new builder-style object to manufacture [`UntagInstanceProfileOutput`](crate::output::UntagInstanceProfileOutput).
     pub fn builder() -> crate::output::untag_instance_profile_output::Builder {
         crate::output::untag_instance_profile_output::Builder::default()
     }
@@ -952,22 +933,21 @@ impl std::fmt::Debug for TagUserOutput {
         formatter.finish()
     }
 }
-/// See [`TagUserOutput`](crate::output::TagUserOutput)
+/// See [`TagUserOutput`](crate::output::TagUserOutput).
 pub mod tag_user_output {
 
-    /// A builder for [`TagUserOutput`](crate::output::TagUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagUserOutput`](crate::output::TagUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagUserOutput`](crate::output::TagUserOutput)
+        /// Consumes the builder and constructs a [`TagUserOutput`](crate::output::TagUserOutput).
         pub fn build(self) -> crate::output::TagUserOutput {
             crate::output::TagUserOutput {}
         }
     }
 }
 impl TagUserOutput {
-    /// Creates a new builder-style object to manufacture [`TagUserOutput`](crate::output::TagUserOutput)
+    /// Creates a new builder-style object to manufacture [`TagUserOutput`](crate::output::TagUserOutput).
     pub fn builder() -> crate::output::tag_user_output::Builder {
         crate::output::tag_user_output::Builder::default()
     }
@@ -983,22 +963,21 @@ impl std::fmt::Debug for TagServerCertificateOutput {
         formatter.finish()
     }
 }
-/// See [`TagServerCertificateOutput`](crate::output::TagServerCertificateOutput)
+/// See [`TagServerCertificateOutput`](crate::output::TagServerCertificateOutput).
 pub mod tag_server_certificate_output {
 
-    /// A builder for [`TagServerCertificateOutput`](crate::output::TagServerCertificateOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagServerCertificateOutput`](crate::output::TagServerCertificateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagServerCertificateOutput`](crate::output::TagServerCertificateOutput)
+        /// Consumes the builder and constructs a [`TagServerCertificateOutput`](crate::output::TagServerCertificateOutput).
         pub fn build(self) -> crate::output::TagServerCertificateOutput {
             crate::output::TagServerCertificateOutput {}
         }
     }
 }
 impl TagServerCertificateOutput {
-    /// Creates a new builder-style object to manufacture [`TagServerCertificateOutput`](crate::output::TagServerCertificateOutput)
+    /// Creates a new builder-style object to manufacture [`TagServerCertificateOutput`](crate::output::TagServerCertificateOutput).
     pub fn builder() -> crate::output::tag_server_certificate_output::Builder {
         crate::output::tag_server_certificate_output::Builder::default()
     }
@@ -1014,22 +993,21 @@ impl std::fmt::Debug for TagSamlProviderOutput {
         formatter.finish()
     }
 }
-/// See [`TagSamlProviderOutput`](crate::output::TagSamlProviderOutput)
+/// See [`TagSamlProviderOutput`](crate::output::TagSamlProviderOutput).
 pub mod tag_saml_provider_output {
 
-    /// A builder for [`TagSamlProviderOutput`](crate::output::TagSamlProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagSamlProviderOutput`](crate::output::TagSamlProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagSamlProviderOutput`](crate::output::TagSamlProviderOutput)
+        /// Consumes the builder and constructs a [`TagSamlProviderOutput`](crate::output::TagSamlProviderOutput).
         pub fn build(self) -> crate::output::TagSamlProviderOutput {
             crate::output::TagSamlProviderOutput {}
         }
     }
 }
 impl TagSamlProviderOutput {
-    /// Creates a new builder-style object to manufacture [`TagSamlProviderOutput`](crate::output::TagSamlProviderOutput)
+    /// Creates a new builder-style object to manufacture [`TagSamlProviderOutput`](crate::output::TagSamlProviderOutput).
     pub fn builder() -> crate::output::tag_saml_provider_output::Builder {
         crate::output::tag_saml_provider_output::Builder::default()
     }
@@ -1045,22 +1023,21 @@ impl std::fmt::Debug for TagRoleOutput {
         formatter.finish()
     }
 }
-/// See [`TagRoleOutput`](crate::output::TagRoleOutput)
+/// See [`TagRoleOutput`](crate::output::TagRoleOutput).
 pub mod tag_role_output {
 
-    /// A builder for [`TagRoleOutput`](crate::output::TagRoleOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagRoleOutput`](crate::output::TagRoleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagRoleOutput`](crate::output::TagRoleOutput)
+        /// Consumes the builder and constructs a [`TagRoleOutput`](crate::output::TagRoleOutput).
         pub fn build(self) -> crate::output::TagRoleOutput {
             crate::output::TagRoleOutput {}
         }
     }
 }
 impl TagRoleOutput {
-    /// Creates a new builder-style object to manufacture [`TagRoleOutput`](crate::output::TagRoleOutput)
+    /// Creates a new builder-style object to manufacture [`TagRoleOutput`](crate::output::TagRoleOutput).
     pub fn builder() -> crate::output::tag_role_output::Builder {
         crate::output::tag_role_output::Builder::default()
     }
@@ -1076,22 +1053,21 @@ impl std::fmt::Debug for TagPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`TagPolicyOutput`](crate::output::TagPolicyOutput)
+/// See [`TagPolicyOutput`](crate::output::TagPolicyOutput).
 pub mod tag_policy_output {
 
-    /// A builder for [`TagPolicyOutput`](crate::output::TagPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagPolicyOutput`](crate::output::TagPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagPolicyOutput`](crate::output::TagPolicyOutput)
+        /// Consumes the builder and constructs a [`TagPolicyOutput`](crate::output::TagPolicyOutput).
         pub fn build(self) -> crate::output::TagPolicyOutput {
             crate::output::TagPolicyOutput {}
         }
     }
 }
 impl TagPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`TagPolicyOutput`](crate::output::TagPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`TagPolicyOutput`](crate::output::TagPolicyOutput).
     pub fn builder() -> crate::output::tag_policy_output::Builder {
         crate::output::tag_policy_output::Builder::default()
     }
@@ -1107,22 +1083,21 @@ impl std::fmt::Debug for TagOpenIdConnectProviderOutput {
         formatter.finish()
     }
 }
-/// See [`TagOpenIdConnectProviderOutput`](crate::output::TagOpenIdConnectProviderOutput)
+/// See [`TagOpenIdConnectProviderOutput`](crate::output::TagOpenIdConnectProviderOutput).
 pub mod tag_open_id_connect_provider_output {
 
-    /// A builder for [`TagOpenIdConnectProviderOutput`](crate::output::TagOpenIdConnectProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagOpenIdConnectProviderOutput`](crate::output::TagOpenIdConnectProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagOpenIdConnectProviderOutput`](crate::output::TagOpenIdConnectProviderOutput)
+        /// Consumes the builder and constructs a [`TagOpenIdConnectProviderOutput`](crate::output::TagOpenIdConnectProviderOutput).
         pub fn build(self) -> crate::output::TagOpenIdConnectProviderOutput {
             crate::output::TagOpenIdConnectProviderOutput {}
         }
     }
 }
 impl TagOpenIdConnectProviderOutput {
-    /// Creates a new builder-style object to manufacture [`TagOpenIdConnectProviderOutput`](crate::output::TagOpenIdConnectProviderOutput)
+    /// Creates a new builder-style object to manufacture [`TagOpenIdConnectProviderOutput`](crate::output::TagOpenIdConnectProviderOutput).
     pub fn builder() -> crate::output::tag_open_id_connect_provider_output::Builder {
         crate::output::tag_open_id_connect_provider_output::Builder::default()
     }
@@ -1138,22 +1113,21 @@ impl std::fmt::Debug for TagMfaDeviceOutput {
         formatter.finish()
     }
 }
-/// See [`TagMfaDeviceOutput`](crate::output::TagMfaDeviceOutput)
+/// See [`TagMfaDeviceOutput`](crate::output::TagMfaDeviceOutput).
 pub mod tag_mfa_device_output {
 
-    /// A builder for [`TagMfaDeviceOutput`](crate::output::TagMfaDeviceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagMfaDeviceOutput`](crate::output::TagMfaDeviceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagMfaDeviceOutput`](crate::output::TagMfaDeviceOutput)
+        /// Consumes the builder and constructs a [`TagMfaDeviceOutput`](crate::output::TagMfaDeviceOutput).
         pub fn build(self) -> crate::output::TagMfaDeviceOutput {
             crate::output::TagMfaDeviceOutput {}
         }
     }
 }
 impl TagMfaDeviceOutput {
-    /// Creates a new builder-style object to manufacture [`TagMfaDeviceOutput`](crate::output::TagMfaDeviceOutput)
+    /// Creates a new builder-style object to manufacture [`TagMfaDeviceOutput`](crate::output::TagMfaDeviceOutput).
     pub fn builder() -> crate::output::tag_mfa_device_output::Builder {
         crate::output::tag_mfa_device_output::Builder::default()
     }
@@ -1169,22 +1143,21 @@ impl std::fmt::Debug for TagInstanceProfileOutput {
         formatter.finish()
     }
 }
-/// See [`TagInstanceProfileOutput`](crate::output::TagInstanceProfileOutput)
+/// See [`TagInstanceProfileOutput`](crate::output::TagInstanceProfileOutput).
 pub mod tag_instance_profile_output {
 
-    /// A builder for [`TagInstanceProfileOutput`](crate::output::TagInstanceProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagInstanceProfileOutput`](crate::output::TagInstanceProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagInstanceProfileOutput`](crate::output::TagInstanceProfileOutput)
+        /// Consumes the builder and constructs a [`TagInstanceProfileOutput`](crate::output::TagInstanceProfileOutput).
         pub fn build(self) -> crate::output::TagInstanceProfileOutput {
             crate::output::TagInstanceProfileOutput {}
         }
     }
 }
 impl TagInstanceProfileOutput {
-    /// Creates a new builder-style object to manufacture [`TagInstanceProfileOutput`](crate::output::TagInstanceProfileOutput)
+    /// Creates a new builder-style object to manufacture [`TagInstanceProfileOutput`](crate::output::TagInstanceProfileOutput).
     pub fn builder() -> crate::output::tag_instance_profile_output::Builder {
         crate::output::tag_instance_profile_output::Builder::default()
     }
@@ -1195,10 +1168,13 @@ impl TagInstanceProfileOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SimulatePrincipalPolicyOutput {
     /// <p>The results of the simulation.</p>
+    #[doc(hidden)]
     pub evaluation_results: std::option::Option<std::vec::Vec<crate::model::EvaluationResult>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl SimulatePrincipalPolicyOutput {
@@ -1224,11 +1200,10 @@ impl std::fmt::Debug for SimulatePrincipalPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`SimulatePrincipalPolicyOutput`](crate::output::SimulatePrincipalPolicyOutput)
+/// See [`SimulatePrincipalPolicyOutput`](crate::output::SimulatePrincipalPolicyOutput).
 pub mod simulate_principal_policy_output {
 
-    /// A builder for [`SimulatePrincipalPolicyOutput`](crate::output::SimulatePrincipalPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`SimulatePrincipalPolicyOutput`](crate::output::SimulatePrincipalPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) evaluation_results:
@@ -1276,7 +1251,7 @@ pub mod simulate_principal_policy_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`SimulatePrincipalPolicyOutput`](crate::output::SimulatePrincipalPolicyOutput)
+        /// Consumes the builder and constructs a [`SimulatePrincipalPolicyOutput`](crate::output::SimulatePrincipalPolicyOutput).
         pub fn build(self) -> crate::output::SimulatePrincipalPolicyOutput {
             crate::output::SimulatePrincipalPolicyOutput {
                 evaluation_results: self.evaluation_results,
@@ -1287,7 +1262,7 @@ pub mod simulate_principal_policy_output {
     }
 }
 impl SimulatePrincipalPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`SimulatePrincipalPolicyOutput`](crate::output::SimulatePrincipalPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`SimulatePrincipalPolicyOutput`](crate::output::SimulatePrincipalPolicyOutput).
     pub fn builder() -> crate::output::simulate_principal_policy_output::Builder {
         crate::output::simulate_principal_policy_output::Builder::default()
     }
@@ -1298,10 +1273,13 @@ impl SimulatePrincipalPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SimulateCustomPolicyOutput {
     /// <p>The results of the simulation.</p>
+    #[doc(hidden)]
     pub evaluation_results: std::option::Option<std::vec::Vec<crate::model::EvaluationResult>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl SimulateCustomPolicyOutput {
@@ -1327,11 +1305,10 @@ impl std::fmt::Debug for SimulateCustomPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`SimulateCustomPolicyOutput`](crate::output::SimulateCustomPolicyOutput)
+/// See [`SimulateCustomPolicyOutput`](crate::output::SimulateCustomPolicyOutput).
 pub mod simulate_custom_policy_output {
 
-    /// A builder for [`SimulateCustomPolicyOutput`](crate::output::SimulateCustomPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`SimulateCustomPolicyOutput`](crate::output::SimulateCustomPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) evaluation_results:
@@ -1379,7 +1356,7 @@ pub mod simulate_custom_policy_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`SimulateCustomPolicyOutput`](crate::output::SimulateCustomPolicyOutput)
+        /// Consumes the builder and constructs a [`SimulateCustomPolicyOutput`](crate::output::SimulateCustomPolicyOutput).
         pub fn build(self) -> crate::output::SimulateCustomPolicyOutput {
             crate::output::SimulateCustomPolicyOutput {
                 evaluation_results: self.evaluation_results,
@@ -1390,7 +1367,7 @@ pub mod simulate_custom_policy_output {
     }
 }
 impl SimulateCustomPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`SimulateCustomPolicyOutput`](crate::output::SimulateCustomPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`SimulateCustomPolicyOutput`](crate::output::SimulateCustomPolicyOutput).
     pub fn builder() -> crate::output::simulate_custom_policy_output::Builder {
         crate::output::simulate_custom_policy_output::Builder::default()
     }
@@ -1406,22 +1383,21 @@ impl std::fmt::Debug for SetSecurityTokenServicePreferencesOutput {
         formatter.finish()
     }
 }
-/// See [`SetSecurityTokenServicePreferencesOutput`](crate::output::SetSecurityTokenServicePreferencesOutput)
+/// See [`SetSecurityTokenServicePreferencesOutput`](crate::output::SetSecurityTokenServicePreferencesOutput).
 pub mod set_security_token_service_preferences_output {
 
-    /// A builder for [`SetSecurityTokenServicePreferencesOutput`](crate::output::SetSecurityTokenServicePreferencesOutput)
-    #[non_exhaustive]
+    /// A builder for [`SetSecurityTokenServicePreferencesOutput`](crate::output::SetSecurityTokenServicePreferencesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`SetSecurityTokenServicePreferencesOutput`](crate::output::SetSecurityTokenServicePreferencesOutput)
+        /// Consumes the builder and constructs a [`SetSecurityTokenServicePreferencesOutput`](crate::output::SetSecurityTokenServicePreferencesOutput).
         pub fn build(self) -> crate::output::SetSecurityTokenServicePreferencesOutput {
             crate::output::SetSecurityTokenServicePreferencesOutput {}
         }
     }
 }
 impl SetSecurityTokenServicePreferencesOutput {
-    /// Creates a new builder-style object to manufacture [`SetSecurityTokenServicePreferencesOutput`](crate::output::SetSecurityTokenServicePreferencesOutput)
+    /// Creates a new builder-style object to manufacture [`SetSecurityTokenServicePreferencesOutput`](crate::output::SetSecurityTokenServicePreferencesOutput).
     pub fn builder() -> crate::output::set_security_token_service_preferences_output::Builder {
         crate::output::set_security_token_service_preferences_output::Builder::default()
     }
@@ -1437,22 +1413,21 @@ impl std::fmt::Debug for SetDefaultPolicyVersionOutput {
         formatter.finish()
     }
 }
-/// See [`SetDefaultPolicyVersionOutput`](crate::output::SetDefaultPolicyVersionOutput)
+/// See [`SetDefaultPolicyVersionOutput`](crate::output::SetDefaultPolicyVersionOutput).
 pub mod set_default_policy_version_output {
 
-    /// A builder for [`SetDefaultPolicyVersionOutput`](crate::output::SetDefaultPolicyVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`SetDefaultPolicyVersionOutput`](crate::output::SetDefaultPolicyVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`SetDefaultPolicyVersionOutput`](crate::output::SetDefaultPolicyVersionOutput)
+        /// Consumes the builder and constructs a [`SetDefaultPolicyVersionOutput`](crate::output::SetDefaultPolicyVersionOutput).
         pub fn build(self) -> crate::output::SetDefaultPolicyVersionOutput {
             crate::output::SetDefaultPolicyVersionOutput {}
         }
     }
 }
 impl SetDefaultPolicyVersionOutput {
-    /// Creates a new builder-style object to manufacture [`SetDefaultPolicyVersionOutput`](crate::output::SetDefaultPolicyVersionOutput)
+    /// Creates a new builder-style object to manufacture [`SetDefaultPolicyVersionOutput`](crate::output::SetDefaultPolicyVersionOutput).
     pub fn builder() -> crate::output::set_default_policy_version_output::Builder {
         crate::output::set_default_policy_version_output::Builder::default()
     }
@@ -1468,22 +1443,21 @@ impl std::fmt::Debug for ResyncMfaDeviceOutput {
         formatter.finish()
     }
 }
-/// See [`ResyncMfaDeviceOutput`](crate::output::ResyncMfaDeviceOutput)
+/// See [`ResyncMfaDeviceOutput`](crate::output::ResyncMfaDeviceOutput).
 pub mod resync_mfa_device_output {
 
-    /// A builder for [`ResyncMfaDeviceOutput`](crate::output::ResyncMfaDeviceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ResyncMfaDeviceOutput`](crate::output::ResyncMfaDeviceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`ResyncMfaDeviceOutput`](crate::output::ResyncMfaDeviceOutput)
+        /// Consumes the builder and constructs a [`ResyncMfaDeviceOutput`](crate::output::ResyncMfaDeviceOutput).
         pub fn build(self) -> crate::output::ResyncMfaDeviceOutput {
             crate::output::ResyncMfaDeviceOutput {}
         }
     }
 }
 impl ResyncMfaDeviceOutput {
-    /// Creates a new builder-style object to manufacture [`ResyncMfaDeviceOutput`](crate::output::ResyncMfaDeviceOutput)
+    /// Creates a new builder-style object to manufacture [`ResyncMfaDeviceOutput`](crate::output::ResyncMfaDeviceOutput).
     pub fn builder() -> crate::output::resync_mfa_device_output::Builder {
         crate::output::resync_mfa_device_output::Builder::default()
     }
@@ -1496,6 +1470,7 @@ pub struct ResetServiceSpecificCredentialOutput {
     /// <p>A structure with details about the updated service-specific credential, including the new password.</p> <important>
     /// <p>This is the <b>only</b> time that you can access the password. You cannot recover the password later, but you can reset it again.</p>
     /// </important>
+    #[doc(hidden)]
     pub service_specific_credential: std::option::Option<crate::model::ServiceSpecificCredential>,
 }
 impl ResetServiceSpecificCredentialOutput {
@@ -1518,11 +1493,10 @@ impl std::fmt::Debug for ResetServiceSpecificCredentialOutput {
         formatter.finish()
     }
 }
-/// See [`ResetServiceSpecificCredentialOutput`](crate::output::ResetServiceSpecificCredentialOutput)
+/// See [`ResetServiceSpecificCredentialOutput`](crate::output::ResetServiceSpecificCredentialOutput).
 pub mod reset_service_specific_credential_output {
 
-    /// A builder for [`ResetServiceSpecificCredentialOutput`](crate::output::ResetServiceSpecificCredentialOutput)
-    #[non_exhaustive]
+    /// A builder for [`ResetServiceSpecificCredentialOutput`](crate::output::ResetServiceSpecificCredentialOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_specific_credential:
@@ -1549,7 +1523,7 @@ pub mod reset_service_specific_credential_output {
             self.service_specific_credential = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResetServiceSpecificCredentialOutput`](crate::output::ResetServiceSpecificCredentialOutput)
+        /// Consumes the builder and constructs a [`ResetServiceSpecificCredentialOutput`](crate::output::ResetServiceSpecificCredentialOutput).
         pub fn build(self) -> crate::output::ResetServiceSpecificCredentialOutput {
             crate::output::ResetServiceSpecificCredentialOutput {
                 service_specific_credential: self.service_specific_credential,
@@ -1558,7 +1532,7 @@ pub mod reset_service_specific_credential_output {
     }
 }
 impl ResetServiceSpecificCredentialOutput {
-    /// Creates a new builder-style object to manufacture [`ResetServiceSpecificCredentialOutput`](crate::output::ResetServiceSpecificCredentialOutput)
+    /// Creates a new builder-style object to manufacture [`ResetServiceSpecificCredentialOutput`](crate::output::ResetServiceSpecificCredentialOutput).
     pub fn builder() -> crate::output::reset_service_specific_credential_output::Builder {
         crate::output::reset_service_specific_credential_output::Builder::default()
     }
@@ -1574,22 +1548,21 @@ impl std::fmt::Debug for RemoveUserFromGroupOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveUserFromGroupOutput`](crate::output::RemoveUserFromGroupOutput)
+/// See [`RemoveUserFromGroupOutput`](crate::output::RemoveUserFromGroupOutput).
 pub mod remove_user_from_group_output {
 
-    /// A builder for [`RemoveUserFromGroupOutput`](crate::output::RemoveUserFromGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveUserFromGroupOutput`](crate::output::RemoveUserFromGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RemoveUserFromGroupOutput`](crate::output::RemoveUserFromGroupOutput)
+        /// Consumes the builder and constructs a [`RemoveUserFromGroupOutput`](crate::output::RemoveUserFromGroupOutput).
         pub fn build(self) -> crate::output::RemoveUserFromGroupOutput {
             crate::output::RemoveUserFromGroupOutput {}
         }
     }
 }
 impl RemoveUserFromGroupOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveUserFromGroupOutput`](crate::output::RemoveUserFromGroupOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveUserFromGroupOutput`](crate::output::RemoveUserFromGroupOutput).
     pub fn builder() -> crate::output::remove_user_from_group_output::Builder {
         crate::output::remove_user_from_group_output::Builder::default()
     }
@@ -1605,22 +1578,21 @@ impl std::fmt::Debug for RemoveRoleFromInstanceProfileOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveRoleFromInstanceProfileOutput`](crate::output::RemoveRoleFromInstanceProfileOutput)
+/// See [`RemoveRoleFromInstanceProfileOutput`](crate::output::RemoveRoleFromInstanceProfileOutput).
 pub mod remove_role_from_instance_profile_output {
 
-    /// A builder for [`RemoveRoleFromInstanceProfileOutput`](crate::output::RemoveRoleFromInstanceProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveRoleFromInstanceProfileOutput`](crate::output::RemoveRoleFromInstanceProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RemoveRoleFromInstanceProfileOutput`](crate::output::RemoveRoleFromInstanceProfileOutput)
+        /// Consumes the builder and constructs a [`RemoveRoleFromInstanceProfileOutput`](crate::output::RemoveRoleFromInstanceProfileOutput).
         pub fn build(self) -> crate::output::RemoveRoleFromInstanceProfileOutput {
             crate::output::RemoveRoleFromInstanceProfileOutput {}
         }
     }
 }
 impl RemoveRoleFromInstanceProfileOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveRoleFromInstanceProfileOutput`](crate::output::RemoveRoleFromInstanceProfileOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveRoleFromInstanceProfileOutput`](crate::output::RemoveRoleFromInstanceProfileOutput).
     pub fn builder() -> crate::output::remove_role_from_instance_profile_output::Builder {
         crate::output::remove_role_from_instance_profile_output::Builder::default()
     }
@@ -1636,22 +1608,21 @@ impl std::fmt::Debug for RemoveClientIdFromOpenIdConnectProviderOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveClientIdFromOpenIdConnectProviderOutput`](crate::output::RemoveClientIdFromOpenIdConnectProviderOutput)
+/// See [`RemoveClientIdFromOpenIdConnectProviderOutput`](crate::output::RemoveClientIdFromOpenIdConnectProviderOutput).
 pub mod remove_client_id_from_open_id_connect_provider_output {
 
-    /// A builder for [`RemoveClientIdFromOpenIdConnectProviderOutput`](crate::output::RemoveClientIdFromOpenIdConnectProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveClientIdFromOpenIdConnectProviderOutput`](crate::output::RemoveClientIdFromOpenIdConnectProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RemoveClientIdFromOpenIdConnectProviderOutput`](crate::output::RemoveClientIdFromOpenIdConnectProviderOutput)
+        /// Consumes the builder and constructs a [`RemoveClientIdFromOpenIdConnectProviderOutput`](crate::output::RemoveClientIdFromOpenIdConnectProviderOutput).
         pub fn build(self) -> crate::output::RemoveClientIdFromOpenIdConnectProviderOutput {
             crate::output::RemoveClientIdFromOpenIdConnectProviderOutput {}
         }
     }
 }
 impl RemoveClientIdFromOpenIdConnectProviderOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveClientIdFromOpenIdConnectProviderOutput`](crate::output::RemoveClientIdFromOpenIdConnectProviderOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveClientIdFromOpenIdConnectProviderOutput`](crate::output::RemoveClientIdFromOpenIdConnectProviderOutput).
     pub fn builder() -> crate::output::remove_client_id_from_open_id_connect_provider_output::Builder
     {
         crate::output::remove_client_id_from_open_id_connect_provider_output::Builder::default()
@@ -1668,22 +1639,21 @@ impl std::fmt::Debug for PutUserPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutUserPolicyOutput`](crate::output::PutUserPolicyOutput)
+/// See [`PutUserPolicyOutput`](crate::output::PutUserPolicyOutput).
 pub mod put_user_policy_output {
 
-    /// A builder for [`PutUserPolicyOutput`](crate::output::PutUserPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutUserPolicyOutput`](crate::output::PutUserPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutUserPolicyOutput`](crate::output::PutUserPolicyOutput)
+        /// Consumes the builder and constructs a [`PutUserPolicyOutput`](crate::output::PutUserPolicyOutput).
         pub fn build(self) -> crate::output::PutUserPolicyOutput {
             crate::output::PutUserPolicyOutput {}
         }
     }
 }
 impl PutUserPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutUserPolicyOutput`](crate::output::PutUserPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutUserPolicyOutput`](crate::output::PutUserPolicyOutput).
     pub fn builder() -> crate::output::put_user_policy_output::Builder {
         crate::output::put_user_policy_output::Builder::default()
     }
@@ -1699,22 +1669,21 @@ impl std::fmt::Debug for PutUserPermissionsBoundaryOutput {
         formatter.finish()
     }
 }
-/// See [`PutUserPermissionsBoundaryOutput`](crate::output::PutUserPermissionsBoundaryOutput)
+/// See [`PutUserPermissionsBoundaryOutput`](crate::output::PutUserPermissionsBoundaryOutput).
 pub mod put_user_permissions_boundary_output {
 
-    /// A builder for [`PutUserPermissionsBoundaryOutput`](crate::output::PutUserPermissionsBoundaryOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutUserPermissionsBoundaryOutput`](crate::output::PutUserPermissionsBoundaryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutUserPermissionsBoundaryOutput`](crate::output::PutUserPermissionsBoundaryOutput)
+        /// Consumes the builder and constructs a [`PutUserPermissionsBoundaryOutput`](crate::output::PutUserPermissionsBoundaryOutput).
         pub fn build(self) -> crate::output::PutUserPermissionsBoundaryOutput {
             crate::output::PutUserPermissionsBoundaryOutput {}
         }
     }
 }
 impl PutUserPermissionsBoundaryOutput {
-    /// Creates a new builder-style object to manufacture [`PutUserPermissionsBoundaryOutput`](crate::output::PutUserPermissionsBoundaryOutput)
+    /// Creates a new builder-style object to manufacture [`PutUserPermissionsBoundaryOutput`](crate::output::PutUserPermissionsBoundaryOutput).
     pub fn builder() -> crate::output::put_user_permissions_boundary_output::Builder {
         crate::output::put_user_permissions_boundary_output::Builder::default()
     }
@@ -1730,22 +1699,21 @@ impl std::fmt::Debug for PutRolePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutRolePolicyOutput`](crate::output::PutRolePolicyOutput)
+/// See [`PutRolePolicyOutput`](crate::output::PutRolePolicyOutput).
 pub mod put_role_policy_output {
 
-    /// A builder for [`PutRolePolicyOutput`](crate::output::PutRolePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutRolePolicyOutput`](crate::output::PutRolePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutRolePolicyOutput`](crate::output::PutRolePolicyOutput)
+        /// Consumes the builder and constructs a [`PutRolePolicyOutput`](crate::output::PutRolePolicyOutput).
         pub fn build(self) -> crate::output::PutRolePolicyOutput {
             crate::output::PutRolePolicyOutput {}
         }
     }
 }
 impl PutRolePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutRolePolicyOutput`](crate::output::PutRolePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutRolePolicyOutput`](crate::output::PutRolePolicyOutput).
     pub fn builder() -> crate::output::put_role_policy_output::Builder {
         crate::output::put_role_policy_output::Builder::default()
     }
@@ -1761,22 +1729,21 @@ impl std::fmt::Debug for PutRolePermissionsBoundaryOutput {
         formatter.finish()
     }
 }
-/// See [`PutRolePermissionsBoundaryOutput`](crate::output::PutRolePermissionsBoundaryOutput)
+/// See [`PutRolePermissionsBoundaryOutput`](crate::output::PutRolePermissionsBoundaryOutput).
 pub mod put_role_permissions_boundary_output {
 
-    /// A builder for [`PutRolePermissionsBoundaryOutput`](crate::output::PutRolePermissionsBoundaryOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutRolePermissionsBoundaryOutput`](crate::output::PutRolePermissionsBoundaryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutRolePermissionsBoundaryOutput`](crate::output::PutRolePermissionsBoundaryOutput)
+        /// Consumes the builder and constructs a [`PutRolePermissionsBoundaryOutput`](crate::output::PutRolePermissionsBoundaryOutput).
         pub fn build(self) -> crate::output::PutRolePermissionsBoundaryOutput {
             crate::output::PutRolePermissionsBoundaryOutput {}
         }
     }
 }
 impl PutRolePermissionsBoundaryOutput {
-    /// Creates a new builder-style object to manufacture [`PutRolePermissionsBoundaryOutput`](crate::output::PutRolePermissionsBoundaryOutput)
+    /// Creates a new builder-style object to manufacture [`PutRolePermissionsBoundaryOutput`](crate::output::PutRolePermissionsBoundaryOutput).
     pub fn builder() -> crate::output::put_role_permissions_boundary_output::Builder {
         crate::output::put_role_permissions_boundary_output::Builder::default()
     }
@@ -1792,22 +1759,21 @@ impl std::fmt::Debug for PutGroupPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutGroupPolicyOutput`](crate::output::PutGroupPolicyOutput)
+/// See [`PutGroupPolicyOutput`](crate::output::PutGroupPolicyOutput).
 pub mod put_group_policy_output {
 
-    /// A builder for [`PutGroupPolicyOutput`](crate::output::PutGroupPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutGroupPolicyOutput`](crate::output::PutGroupPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutGroupPolicyOutput`](crate::output::PutGroupPolicyOutput)
+        /// Consumes the builder and constructs a [`PutGroupPolicyOutput`](crate::output::PutGroupPolicyOutput).
         pub fn build(self) -> crate::output::PutGroupPolicyOutput {
             crate::output::PutGroupPolicyOutput {}
         }
     }
 }
 impl PutGroupPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutGroupPolicyOutput`](crate::output::PutGroupPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutGroupPolicyOutput`](crate::output::PutGroupPolicyOutput).
     pub fn builder() -> crate::output::put_group_policy_output::Builder {
         crate::output::put_group_policy_output::Builder::default()
     }
@@ -1818,10 +1784,13 @@ impl PutGroupPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListVirtualMfaDevicesOutput {
     /// <p> The list of virtual MFA devices in the current account that match the <code>AssignmentStatus</code> value that was passed in the request.</p>
+    #[doc(hidden)]
     pub virtual_mfa_devices: std::option::Option<std::vec::Vec<crate::model::VirtualMfaDevice>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListVirtualMfaDevicesOutput {
@@ -1847,11 +1816,10 @@ impl std::fmt::Debug for ListVirtualMfaDevicesOutput {
         formatter.finish()
     }
 }
-/// See [`ListVirtualMfaDevicesOutput`](crate::output::ListVirtualMfaDevicesOutput)
+/// See [`ListVirtualMfaDevicesOutput`](crate::output::ListVirtualMfaDevicesOutput).
 pub mod list_virtual_mfa_devices_output {
 
-    /// A builder for [`ListVirtualMfaDevicesOutput`](crate::output::ListVirtualMfaDevicesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListVirtualMfaDevicesOutput`](crate::output::ListVirtualMfaDevicesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) virtual_mfa_devices:
@@ -1899,7 +1867,7 @@ pub mod list_virtual_mfa_devices_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListVirtualMfaDevicesOutput`](crate::output::ListVirtualMfaDevicesOutput)
+        /// Consumes the builder and constructs a [`ListVirtualMfaDevicesOutput`](crate::output::ListVirtualMfaDevicesOutput).
         pub fn build(self) -> crate::output::ListVirtualMfaDevicesOutput {
             crate::output::ListVirtualMfaDevicesOutput {
                 virtual_mfa_devices: self.virtual_mfa_devices,
@@ -1910,7 +1878,7 @@ pub mod list_virtual_mfa_devices_output {
     }
 }
 impl ListVirtualMfaDevicesOutput {
-    /// Creates a new builder-style object to manufacture [`ListVirtualMfaDevicesOutput`](crate::output::ListVirtualMfaDevicesOutput)
+    /// Creates a new builder-style object to manufacture [`ListVirtualMfaDevicesOutput`](crate::output::ListVirtualMfaDevicesOutput).
     pub fn builder() -> crate::output::list_virtual_mfa_devices_output::Builder {
         crate::output::list_virtual_mfa_devices_output::Builder::default()
     }
@@ -1921,10 +1889,13 @@ impl ListVirtualMfaDevicesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListUserTagsOutput {
     /// <p>The list of tags that are currently attached to the user. Each tag consists of a key name and an associated value. If no tags are attached to the specified resource, the response contains an empty list.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListUserTagsOutput {
@@ -1950,11 +1921,10 @@ impl std::fmt::Debug for ListUserTagsOutput {
         formatter.finish()
     }
 }
-/// See [`ListUserTagsOutput`](crate::output::ListUserTagsOutput)
+/// See [`ListUserTagsOutput`](crate::output::ListUserTagsOutput).
 pub mod list_user_tags_output {
 
-    /// A builder for [`ListUserTagsOutput`](crate::output::ListUserTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListUserTagsOutput`](crate::output::ListUserTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -2001,7 +1971,7 @@ pub mod list_user_tags_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListUserTagsOutput`](crate::output::ListUserTagsOutput)
+        /// Consumes the builder and constructs a [`ListUserTagsOutput`](crate::output::ListUserTagsOutput).
         pub fn build(self) -> crate::output::ListUserTagsOutput {
             crate::output::ListUserTagsOutput {
                 tags: self.tags,
@@ -2012,7 +1982,7 @@ pub mod list_user_tags_output {
     }
 }
 impl ListUserTagsOutput {
-    /// Creates a new builder-style object to manufacture [`ListUserTagsOutput`](crate::output::ListUserTagsOutput)
+    /// Creates a new builder-style object to manufacture [`ListUserTagsOutput`](crate::output::ListUserTagsOutput).
     pub fn builder() -> crate::output::list_user_tags_output::Builder {
         crate::output::list_user_tags_output::Builder::default()
     }
@@ -2023,10 +1993,13 @@ impl ListUserTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListUsersOutput {
     /// <p>A list of users.</p>
+    #[doc(hidden)]
     pub users: std::option::Option<std::vec::Vec<crate::model::User>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListUsersOutput {
@@ -2052,11 +2025,10 @@ impl std::fmt::Debug for ListUsersOutput {
         formatter.finish()
     }
 }
-/// See [`ListUsersOutput`](crate::output::ListUsersOutput)
+/// See [`ListUsersOutput`](crate::output::ListUsersOutput).
 pub mod list_users_output {
 
-    /// A builder for [`ListUsersOutput`](crate::output::ListUsersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListUsersOutput`](crate::output::ListUsersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) users: std::option::Option<std::vec::Vec<crate::model::User>>,
@@ -2103,7 +2075,7 @@ pub mod list_users_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListUsersOutput`](crate::output::ListUsersOutput)
+        /// Consumes the builder and constructs a [`ListUsersOutput`](crate::output::ListUsersOutput).
         pub fn build(self) -> crate::output::ListUsersOutput {
             crate::output::ListUsersOutput {
                 users: self.users,
@@ -2114,7 +2086,7 @@ pub mod list_users_output {
     }
 }
 impl ListUsersOutput {
-    /// Creates a new builder-style object to manufacture [`ListUsersOutput`](crate::output::ListUsersOutput)
+    /// Creates a new builder-style object to manufacture [`ListUsersOutput`](crate::output::ListUsersOutput).
     pub fn builder() -> crate::output::list_users_output::Builder {
         crate::output::list_users_output::Builder::default()
     }
@@ -2125,10 +2097,13 @@ impl ListUsersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListUserPoliciesOutput {
     /// <p>A list of policy names.</p>
+    #[doc(hidden)]
     pub policy_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListUserPoliciesOutput {
@@ -2154,11 +2129,10 @@ impl std::fmt::Debug for ListUserPoliciesOutput {
         formatter.finish()
     }
 }
-/// See [`ListUserPoliciesOutput`](crate::output::ListUserPoliciesOutput)
+/// See [`ListUserPoliciesOutput`](crate::output::ListUserPoliciesOutput).
 pub mod list_user_policies_output {
 
-    /// A builder for [`ListUserPoliciesOutput`](crate::output::ListUserPoliciesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListUserPoliciesOutput`](crate::output::ListUserPoliciesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2205,7 +2179,7 @@ pub mod list_user_policies_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListUserPoliciesOutput`](crate::output::ListUserPoliciesOutput)
+        /// Consumes the builder and constructs a [`ListUserPoliciesOutput`](crate::output::ListUserPoliciesOutput).
         pub fn build(self) -> crate::output::ListUserPoliciesOutput {
             crate::output::ListUserPoliciesOutput {
                 policy_names: self.policy_names,
@@ -2216,7 +2190,7 @@ pub mod list_user_policies_output {
     }
 }
 impl ListUserPoliciesOutput {
-    /// Creates a new builder-style object to manufacture [`ListUserPoliciesOutput`](crate::output::ListUserPoliciesOutput)
+    /// Creates a new builder-style object to manufacture [`ListUserPoliciesOutput`](crate::output::ListUserPoliciesOutput).
     pub fn builder() -> crate::output::list_user_policies_output::Builder {
         crate::output::list_user_policies_output::Builder::default()
     }
@@ -2227,10 +2201,13 @@ impl ListUserPoliciesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSshPublicKeysOutput {
     /// <p>A list of the SSH public keys assigned to IAM user.</p>
+    #[doc(hidden)]
     pub ssh_public_keys: std::option::Option<std::vec::Vec<crate::model::SshPublicKeyMetadata>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListSshPublicKeysOutput {
@@ -2256,11 +2233,10 @@ impl std::fmt::Debug for ListSshPublicKeysOutput {
         formatter.finish()
     }
 }
-/// See [`ListSshPublicKeysOutput`](crate::output::ListSshPublicKeysOutput)
+/// See [`ListSshPublicKeysOutput`](crate::output::ListSshPublicKeysOutput).
 pub mod list_ssh_public_keys_output {
 
-    /// A builder for [`ListSshPublicKeysOutput`](crate::output::ListSshPublicKeysOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSshPublicKeysOutput`](crate::output::ListSshPublicKeysOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ssh_public_keys:
@@ -2308,7 +2284,7 @@ pub mod list_ssh_public_keys_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSshPublicKeysOutput`](crate::output::ListSshPublicKeysOutput)
+        /// Consumes the builder and constructs a [`ListSshPublicKeysOutput`](crate::output::ListSshPublicKeysOutput).
         pub fn build(self) -> crate::output::ListSshPublicKeysOutput {
             crate::output::ListSshPublicKeysOutput {
                 ssh_public_keys: self.ssh_public_keys,
@@ -2319,7 +2295,7 @@ pub mod list_ssh_public_keys_output {
     }
 }
 impl ListSshPublicKeysOutput {
-    /// Creates a new builder-style object to manufacture [`ListSshPublicKeysOutput`](crate::output::ListSshPublicKeysOutput)
+    /// Creates a new builder-style object to manufacture [`ListSshPublicKeysOutput`](crate::output::ListSshPublicKeysOutput).
     pub fn builder() -> crate::output::list_ssh_public_keys_output::Builder {
         crate::output::list_ssh_public_keys_output::Builder::default()
     }
@@ -2330,10 +2306,13 @@ impl ListSshPublicKeysOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSigningCertificatesOutput {
     /// <p>A list of the user's signing certificate information.</p>
+    #[doc(hidden)]
     pub certificates: std::option::Option<std::vec::Vec<crate::model::SigningCertificate>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListSigningCertificatesOutput {
@@ -2359,11 +2338,10 @@ impl std::fmt::Debug for ListSigningCertificatesOutput {
         formatter.finish()
     }
 }
-/// See [`ListSigningCertificatesOutput`](crate::output::ListSigningCertificatesOutput)
+/// See [`ListSigningCertificatesOutput`](crate::output::ListSigningCertificatesOutput).
 pub mod list_signing_certificates_output {
 
-    /// A builder for [`ListSigningCertificatesOutput`](crate::output::ListSigningCertificatesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSigningCertificatesOutput`](crate::output::ListSigningCertificatesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificates:
@@ -2411,7 +2389,7 @@ pub mod list_signing_certificates_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSigningCertificatesOutput`](crate::output::ListSigningCertificatesOutput)
+        /// Consumes the builder and constructs a [`ListSigningCertificatesOutput`](crate::output::ListSigningCertificatesOutput).
         pub fn build(self) -> crate::output::ListSigningCertificatesOutput {
             crate::output::ListSigningCertificatesOutput {
                 certificates: self.certificates,
@@ -2422,7 +2400,7 @@ pub mod list_signing_certificates_output {
     }
 }
 impl ListSigningCertificatesOutput {
-    /// Creates a new builder-style object to manufacture [`ListSigningCertificatesOutput`](crate::output::ListSigningCertificatesOutput)
+    /// Creates a new builder-style object to manufacture [`ListSigningCertificatesOutput`](crate::output::ListSigningCertificatesOutput).
     pub fn builder() -> crate::output::list_signing_certificates_output::Builder {
         crate::output::list_signing_certificates_output::Builder::default()
     }
@@ -2433,6 +2411,7 @@ impl ListSigningCertificatesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListServiceSpecificCredentialsOutput {
     /// <p>A list of structures that each contain details about a service-specific credential.</p>
+    #[doc(hidden)]
     pub service_specific_credentials:
         std::option::Option<std::vec::Vec<crate::model::ServiceSpecificCredentialMetadata>>,
 }
@@ -2454,11 +2433,10 @@ impl std::fmt::Debug for ListServiceSpecificCredentialsOutput {
         formatter.finish()
     }
 }
-/// See [`ListServiceSpecificCredentialsOutput`](crate::output::ListServiceSpecificCredentialsOutput)
+/// See [`ListServiceSpecificCredentialsOutput`](crate::output::ListServiceSpecificCredentialsOutput).
 pub mod list_service_specific_credentials_output {
 
-    /// A builder for [`ListServiceSpecificCredentialsOutput`](crate::output::ListServiceSpecificCredentialsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListServiceSpecificCredentialsOutput`](crate::output::ListServiceSpecificCredentialsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_specific_credentials:
@@ -2489,7 +2467,7 @@ pub mod list_service_specific_credentials_output {
             self.service_specific_credentials = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListServiceSpecificCredentialsOutput`](crate::output::ListServiceSpecificCredentialsOutput)
+        /// Consumes the builder and constructs a [`ListServiceSpecificCredentialsOutput`](crate::output::ListServiceSpecificCredentialsOutput).
         pub fn build(self) -> crate::output::ListServiceSpecificCredentialsOutput {
             crate::output::ListServiceSpecificCredentialsOutput {
                 service_specific_credentials: self.service_specific_credentials,
@@ -2498,7 +2476,7 @@ pub mod list_service_specific_credentials_output {
     }
 }
 impl ListServiceSpecificCredentialsOutput {
-    /// Creates a new builder-style object to manufacture [`ListServiceSpecificCredentialsOutput`](crate::output::ListServiceSpecificCredentialsOutput)
+    /// Creates a new builder-style object to manufacture [`ListServiceSpecificCredentialsOutput`](crate::output::ListServiceSpecificCredentialsOutput).
     pub fn builder() -> crate::output::list_service_specific_credentials_output::Builder {
         crate::output::list_service_specific_credentials_output::Builder::default()
     }
@@ -2509,10 +2487,13 @@ impl ListServiceSpecificCredentialsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListServerCertificateTagsOutput {
     /// <p>The list of tags that are currently attached to the IAM server certificate. Each tag consists of a key name and an associated value. If no tags are attached to the specified resource, the response contains an empty list.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListServerCertificateTagsOutput {
@@ -2538,11 +2519,10 @@ impl std::fmt::Debug for ListServerCertificateTagsOutput {
         formatter.finish()
     }
 }
-/// See [`ListServerCertificateTagsOutput`](crate::output::ListServerCertificateTagsOutput)
+/// See [`ListServerCertificateTagsOutput`](crate::output::ListServerCertificateTagsOutput).
 pub mod list_server_certificate_tags_output {
 
-    /// A builder for [`ListServerCertificateTagsOutput`](crate::output::ListServerCertificateTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListServerCertificateTagsOutput`](crate::output::ListServerCertificateTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -2589,7 +2569,7 @@ pub mod list_server_certificate_tags_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListServerCertificateTagsOutput`](crate::output::ListServerCertificateTagsOutput)
+        /// Consumes the builder and constructs a [`ListServerCertificateTagsOutput`](crate::output::ListServerCertificateTagsOutput).
         pub fn build(self) -> crate::output::ListServerCertificateTagsOutput {
             crate::output::ListServerCertificateTagsOutput {
                 tags: self.tags,
@@ -2600,7 +2580,7 @@ pub mod list_server_certificate_tags_output {
     }
 }
 impl ListServerCertificateTagsOutput {
-    /// Creates a new builder-style object to manufacture [`ListServerCertificateTagsOutput`](crate::output::ListServerCertificateTagsOutput)
+    /// Creates a new builder-style object to manufacture [`ListServerCertificateTagsOutput`](crate::output::ListServerCertificateTagsOutput).
     pub fn builder() -> crate::output::list_server_certificate_tags_output::Builder {
         crate::output::list_server_certificate_tags_output::Builder::default()
     }
@@ -2611,11 +2591,14 @@ impl ListServerCertificateTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListServerCertificatesOutput {
     /// <p>A list of server certificates.</p>
+    #[doc(hidden)]
     pub server_certificate_metadata_list:
         std::option::Option<std::vec::Vec<crate::model::ServerCertificateMetadata>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListServerCertificatesOutput {
@@ -2646,11 +2629,10 @@ impl std::fmt::Debug for ListServerCertificatesOutput {
         formatter.finish()
     }
 }
-/// See [`ListServerCertificatesOutput`](crate::output::ListServerCertificatesOutput)
+/// See [`ListServerCertificatesOutput`](crate::output::ListServerCertificatesOutput).
 pub mod list_server_certificates_output {
 
-    /// A builder for [`ListServerCertificatesOutput`](crate::output::ListServerCertificatesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListServerCertificatesOutput`](crate::output::ListServerCertificatesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) server_certificate_metadata_list:
@@ -2701,7 +2683,7 @@ pub mod list_server_certificates_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListServerCertificatesOutput`](crate::output::ListServerCertificatesOutput)
+        /// Consumes the builder and constructs a [`ListServerCertificatesOutput`](crate::output::ListServerCertificatesOutput).
         pub fn build(self) -> crate::output::ListServerCertificatesOutput {
             crate::output::ListServerCertificatesOutput {
                 server_certificate_metadata_list: self.server_certificate_metadata_list,
@@ -2712,7 +2694,7 @@ pub mod list_server_certificates_output {
     }
 }
 impl ListServerCertificatesOutput {
-    /// Creates a new builder-style object to manufacture [`ListServerCertificatesOutput`](crate::output::ListServerCertificatesOutput)
+    /// Creates a new builder-style object to manufacture [`ListServerCertificatesOutput`](crate::output::ListServerCertificatesOutput).
     pub fn builder() -> crate::output::list_server_certificates_output::Builder {
         crate::output::list_server_certificates_output::Builder::default()
     }
@@ -2723,10 +2705,13 @@ impl ListServerCertificatesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSamlProviderTagsOutput {
     /// <p>The list of tags that are currently attached to the Security Assertion Markup Language (SAML) identity provider. Each tag consists of a key name and an associated value. If no tags are attached to the specified resource, the response contains an empty list.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListSamlProviderTagsOutput {
@@ -2752,11 +2737,10 @@ impl std::fmt::Debug for ListSamlProviderTagsOutput {
         formatter.finish()
     }
 }
-/// See [`ListSamlProviderTagsOutput`](crate::output::ListSamlProviderTagsOutput)
+/// See [`ListSamlProviderTagsOutput`](crate::output::ListSamlProviderTagsOutput).
 pub mod list_saml_provider_tags_output {
 
-    /// A builder for [`ListSamlProviderTagsOutput`](crate::output::ListSamlProviderTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSamlProviderTagsOutput`](crate::output::ListSamlProviderTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -2803,7 +2787,7 @@ pub mod list_saml_provider_tags_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSamlProviderTagsOutput`](crate::output::ListSamlProviderTagsOutput)
+        /// Consumes the builder and constructs a [`ListSamlProviderTagsOutput`](crate::output::ListSamlProviderTagsOutput).
         pub fn build(self) -> crate::output::ListSamlProviderTagsOutput {
             crate::output::ListSamlProviderTagsOutput {
                 tags: self.tags,
@@ -2814,7 +2798,7 @@ pub mod list_saml_provider_tags_output {
     }
 }
 impl ListSamlProviderTagsOutput {
-    /// Creates a new builder-style object to manufacture [`ListSamlProviderTagsOutput`](crate::output::ListSamlProviderTagsOutput)
+    /// Creates a new builder-style object to manufacture [`ListSamlProviderTagsOutput`](crate::output::ListSamlProviderTagsOutput).
     pub fn builder() -> crate::output::list_saml_provider_tags_output::Builder {
         crate::output::list_saml_provider_tags_output::Builder::default()
     }
@@ -2825,6 +2809,7 @@ impl ListSamlProviderTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSamlProvidersOutput {
     /// <p>The list of SAML provider resource objects defined in IAM for this Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub saml_provider_list: std::option::Option<std::vec::Vec<crate::model::SamlProviderListEntry>>,
 }
 impl ListSamlProvidersOutput {
@@ -2842,11 +2827,10 @@ impl std::fmt::Debug for ListSamlProvidersOutput {
         formatter.finish()
     }
 }
-/// See [`ListSamlProvidersOutput`](crate::output::ListSamlProvidersOutput)
+/// See [`ListSamlProvidersOutput`](crate::output::ListSamlProvidersOutput).
 pub mod list_saml_providers_output {
 
-    /// A builder for [`ListSamlProvidersOutput`](crate::output::ListSamlProvidersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSamlProvidersOutput`](crate::output::ListSamlProvidersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) saml_provider_list:
@@ -2872,7 +2856,7 @@ pub mod list_saml_providers_output {
             self.saml_provider_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSamlProvidersOutput`](crate::output::ListSamlProvidersOutput)
+        /// Consumes the builder and constructs a [`ListSamlProvidersOutput`](crate::output::ListSamlProvidersOutput).
         pub fn build(self) -> crate::output::ListSamlProvidersOutput {
             crate::output::ListSamlProvidersOutput {
                 saml_provider_list: self.saml_provider_list,
@@ -2881,7 +2865,7 @@ pub mod list_saml_providers_output {
     }
 }
 impl ListSamlProvidersOutput {
-    /// Creates a new builder-style object to manufacture [`ListSamlProvidersOutput`](crate::output::ListSamlProvidersOutput)
+    /// Creates a new builder-style object to manufacture [`ListSamlProvidersOutput`](crate::output::ListSamlProvidersOutput).
     pub fn builder() -> crate::output::list_saml_providers_output::Builder {
         crate::output::list_saml_providers_output::Builder::default()
     }
@@ -2892,10 +2876,13 @@ impl ListSamlProvidersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRoleTagsOutput {
     /// <p>The list of tags that are currently attached to the role. Each tag consists of a key name and an associated value. If no tags are attached to the specified resource, the response contains an empty list.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListRoleTagsOutput {
@@ -2921,11 +2908,10 @@ impl std::fmt::Debug for ListRoleTagsOutput {
         formatter.finish()
     }
 }
-/// See [`ListRoleTagsOutput`](crate::output::ListRoleTagsOutput)
+/// See [`ListRoleTagsOutput`](crate::output::ListRoleTagsOutput).
 pub mod list_role_tags_output {
 
-    /// A builder for [`ListRoleTagsOutput`](crate::output::ListRoleTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRoleTagsOutput`](crate::output::ListRoleTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -2972,7 +2958,7 @@ pub mod list_role_tags_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRoleTagsOutput`](crate::output::ListRoleTagsOutput)
+        /// Consumes the builder and constructs a [`ListRoleTagsOutput`](crate::output::ListRoleTagsOutput).
         pub fn build(self) -> crate::output::ListRoleTagsOutput {
             crate::output::ListRoleTagsOutput {
                 tags: self.tags,
@@ -2983,7 +2969,7 @@ pub mod list_role_tags_output {
     }
 }
 impl ListRoleTagsOutput {
-    /// Creates a new builder-style object to manufacture [`ListRoleTagsOutput`](crate::output::ListRoleTagsOutput)
+    /// Creates a new builder-style object to manufacture [`ListRoleTagsOutput`](crate::output::ListRoleTagsOutput).
     pub fn builder() -> crate::output::list_role_tags_output::Builder {
         crate::output::list_role_tags_output::Builder::default()
     }
@@ -2994,10 +2980,13 @@ impl ListRoleTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRolesOutput {
     /// <p>A list of roles.</p>
+    #[doc(hidden)]
     pub roles: std::option::Option<std::vec::Vec<crate::model::Role>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListRolesOutput {
@@ -3023,11 +3012,10 @@ impl std::fmt::Debug for ListRolesOutput {
         formatter.finish()
     }
 }
-/// See [`ListRolesOutput`](crate::output::ListRolesOutput)
+/// See [`ListRolesOutput`](crate::output::ListRolesOutput).
 pub mod list_roles_output {
 
-    /// A builder for [`ListRolesOutput`](crate::output::ListRolesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRolesOutput`](crate::output::ListRolesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) roles: std::option::Option<std::vec::Vec<crate::model::Role>>,
@@ -3074,7 +3062,7 @@ pub mod list_roles_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRolesOutput`](crate::output::ListRolesOutput)
+        /// Consumes the builder and constructs a [`ListRolesOutput`](crate::output::ListRolesOutput).
         pub fn build(self) -> crate::output::ListRolesOutput {
             crate::output::ListRolesOutput {
                 roles: self.roles,
@@ -3085,7 +3073,7 @@ pub mod list_roles_output {
     }
 }
 impl ListRolesOutput {
-    /// Creates a new builder-style object to manufacture [`ListRolesOutput`](crate::output::ListRolesOutput)
+    /// Creates a new builder-style object to manufacture [`ListRolesOutput`](crate::output::ListRolesOutput).
     pub fn builder() -> crate::output::list_roles_output::Builder {
         crate::output::list_roles_output::Builder::default()
     }
@@ -3096,10 +3084,13 @@ impl ListRolesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRolePoliciesOutput {
     /// <p>A list of policy names.</p>
+    #[doc(hidden)]
     pub policy_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListRolePoliciesOutput {
@@ -3125,11 +3116,10 @@ impl std::fmt::Debug for ListRolePoliciesOutput {
         formatter.finish()
     }
 }
-/// See [`ListRolePoliciesOutput`](crate::output::ListRolePoliciesOutput)
+/// See [`ListRolePoliciesOutput`](crate::output::ListRolePoliciesOutput).
 pub mod list_role_policies_output {
 
-    /// A builder for [`ListRolePoliciesOutput`](crate::output::ListRolePoliciesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRolePoliciesOutput`](crate::output::ListRolePoliciesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3176,7 +3166,7 @@ pub mod list_role_policies_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRolePoliciesOutput`](crate::output::ListRolePoliciesOutput)
+        /// Consumes the builder and constructs a [`ListRolePoliciesOutput`](crate::output::ListRolePoliciesOutput).
         pub fn build(self) -> crate::output::ListRolePoliciesOutput {
             crate::output::ListRolePoliciesOutput {
                 policy_names: self.policy_names,
@@ -3187,7 +3177,7 @@ pub mod list_role_policies_output {
     }
 }
 impl ListRolePoliciesOutput {
-    /// Creates a new builder-style object to manufacture [`ListRolePoliciesOutput`](crate::output::ListRolePoliciesOutput)
+    /// Creates a new builder-style object to manufacture [`ListRolePoliciesOutput`](crate::output::ListRolePoliciesOutput).
     pub fn builder() -> crate::output::list_role_policies_output::Builder {
         crate::output::list_role_policies_output::Builder::default()
     }
@@ -3199,10 +3189,13 @@ impl ListRolePoliciesOutput {
 pub struct ListPolicyVersionsOutput {
     /// <p>A list of policy versions.</p>
     /// <p>For more information about managed policy versions, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html">Versioning for managed policies</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub versions: std::option::Option<std::vec::Vec<crate::model::PolicyVersion>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListPolicyVersionsOutput {
@@ -3229,11 +3222,10 @@ impl std::fmt::Debug for ListPolicyVersionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListPolicyVersionsOutput`](crate::output::ListPolicyVersionsOutput)
+/// See [`ListPolicyVersionsOutput`](crate::output::ListPolicyVersionsOutput).
 pub mod list_policy_versions_output {
 
-    /// A builder for [`ListPolicyVersionsOutput`](crate::output::ListPolicyVersionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListPolicyVersionsOutput`](crate::output::ListPolicyVersionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) versions: std::option::Option<std::vec::Vec<crate::model::PolicyVersion>>,
@@ -3282,7 +3274,7 @@ pub mod list_policy_versions_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPolicyVersionsOutput`](crate::output::ListPolicyVersionsOutput)
+        /// Consumes the builder and constructs a [`ListPolicyVersionsOutput`](crate::output::ListPolicyVersionsOutput).
         pub fn build(self) -> crate::output::ListPolicyVersionsOutput {
             crate::output::ListPolicyVersionsOutput {
                 versions: self.versions,
@@ -3293,7 +3285,7 @@ pub mod list_policy_versions_output {
     }
 }
 impl ListPolicyVersionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListPolicyVersionsOutput`](crate::output::ListPolicyVersionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListPolicyVersionsOutput`](crate::output::ListPolicyVersionsOutput).
     pub fn builder() -> crate::output::list_policy_versions_output::Builder {
         crate::output::list_policy_versions_output::Builder::default()
     }
@@ -3304,10 +3296,13 @@ impl ListPolicyVersionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListPolicyTagsOutput {
     /// <p>The list of tags that are currently attached to the IAM customer managed policy. Each tag consists of a key name and an associated value. If no tags are attached to the specified resource, the response contains an empty list.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListPolicyTagsOutput {
@@ -3333,11 +3328,10 @@ impl std::fmt::Debug for ListPolicyTagsOutput {
         formatter.finish()
     }
 }
-/// See [`ListPolicyTagsOutput`](crate::output::ListPolicyTagsOutput)
+/// See [`ListPolicyTagsOutput`](crate::output::ListPolicyTagsOutput).
 pub mod list_policy_tags_output {
 
-    /// A builder for [`ListPolicyTagsOutput`](crate::output::ListPolicyTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListPolicyTagsOutput`](crate::output::ListPolicyTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -3384,7 +3378,7 @@ pub mod list_policy_tags_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPolicyTagsOutput`](crate::output::ListPolicyTagsOutput)
+        /// Consumes the builder and constructs a [`ListPolicyTagsOutput`](crate::output::ListPolicyTagsOutput).
         pub fn build(self) -> crate::output::ListPolicyTagsOutput {
             crate::output::ListPolicyTagsOutput {
                 tags: self.tags,
@@ -3395,7 +3389,7 @@ pub mod list_policy_tags_output {
     }
 }
 impl ListPolicyTagsOutput {
-    /// Creates a new builder-style object to manufacture [`ListPolicyTagsOutput`](crate::output::ListPolicyTagsOutput)
+    /// Creates a new builder-style object to manufacture [`ListPolicyTagsOutput`](crate::output::ListPolicyTagsOutput).
     pub fn builder() -> crate::output::list_policy_tags_output::Builder {
         crate::output::list_policy_tags_output::Builder::default()
     }
@@ -3406,11 +3400,14 @@ impl ListPolicyTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListPoliciesGrantingServiceAccessOutput {
     /// <p>A&nbsp;<code>ListPoliciesGrantingServiceAccess</code> object that contains details about the permissions policies attached to the specified identity (user, group, or role).</p>
+    #[doc(hidden)]
     pub policies_granting_service_access:
         std::option::Option<std::vec::Vec<crate::model::ListPoliciesGrantingServiceAccessEntry>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListPoliciesGrantingServiceAccessOutput {
@@ -3441,11 +3438,10 @@ impl std::fmt::Debug for ListPoliciesGrantingServiceAccessOutput {
         formatter.finish()
     }
 }
-/// See [`ListPoliciesGrantingServiceAccessOutput`](crate::output::ListPoliciesGrantingServiceAccessOutput)
+/// See [`ListPoliciesGrantingServiceAccessOutput`](crate::output::ListPoliciesGrantingServiceAccessOutput).
 pub mod list_policies_granting_service_access_output {
 
-    /// A builder for [`ListPoliciesGrantingServiceAccessOutput`](crate::output::ListPoliciesGrantingServiceAccessOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListPoliciesGrantingServiceAccessOutput`](crate::output::ListPoliciesGrantingServiceAccessOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policies_granting_service_access: std::option::Option<
@@ -3499,7 +3495,7 @@ pub mod list_policies_granting_service_access_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPoliciesGrantingServiceAccessOutput`](crate::output::ListPoliciesGrantingServiceAccessOutput)
+        /// Consumes the builder and constructs a [`ListPoliciesGrantingServiceAccessOutput`](crate::output::ListPoliciesGrantingServiceAccessOutput).
         pub fn build(self) -> crate::output::ListPoliciesGrantingServiceAccessOutput {
             crate::output::ListPoliciesGrantingServiceAccessOutput {
                 policies_granting_service_access: self.policies_granting_service_access,
@@ -3510,7 +3506,7 @@ pub mod list_policies_granting_service_access_output {
     }
 }
 impl ListPoliciesGrantingServiceAccessOutput {
-    /// Creates a new builder-style object to manufacture [`ListPoliciesGrantingServiceAccessOutput`](crate::output::ListPoliciesGrantingServiceAccessOutput)
+    /// Creates a new builder-style object to manufacture [`ListPoliciesGrantingServiceAccessOutput`](crate::output::ListPoliciesGrantingServiceAccessOutput).
     pub fn builder() -> crate::output::list_policies_granting_service_access_output::Builder {
         crate::output::list_policies_granting_service_access_output::Builder::default()
     }
@@ -3521,10 +3517,13 @@ impl ListPoliciesGrantingServiceAccessOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListPoliciesOutput {
     /// <p>A list of policies.</p>
+    #[doc(hidden)]
     pub policies: std::option::Option<std::vec::Vec<crate::model::Policy>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListPoliciesOutput {
@@ -3550,11 +3549,10 @@ impl std::fmt::Debug for ListPoliciesOutput {
         formatter.finish()
     }
 }
-/// See [`ListPoliciesOutput`](crate::output::ListPoliciesOutput)
+/// See [`ListPoliciesOutput`](crate::output::ListPoliciesOutput).
 pub mod list_policies_output {
 
-    /// A builder for [`ListPoliciesOutput`](crate::output::ListPoliciesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListPoliciesOutput`](crate::output::ListPoliciesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policies: std::option::Option<std::vec::Vec<crate::model::Policy>>,
@@ -3601,7 +3599,7 @@ pub mod list_policies_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPoliciesOutput`](crate::output::ListPoliciesOutput)
+        /// Consumes the builder and constructs a [`ListPoliciesOutput`](crate::output::ListPoliciesOutput).
         pub fn build(self) -> crate::output::ListPoliciesOutput {
             crate::output::ListPoliciesOutput {
                 policies: self.policies,
@@ -3612,7 +3610,7 @@ pub mod list_policies_output {
     }
 }
 impl ListPoliciesOutput {
-    /// Creates a new builder-style object to manufacture [`ListPoliciesOutput`](crate::output::ListPoliciesOutput)
+    /// Creates a new builder-style object to manufacture [`ListPoliciesOutput`](crate::output::ListPoliciesOutput).
     pub fn builder() -> crate::output::list_policies_output::Builder {
         crate::output::list_policies_output::Builder::default()
     }
@@ -3623,10 +3621,13 @@ impl ListPoliciesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListOpenIdConnectProviderTagsOutput {
     /// <p>The list of tags that are currently attached to the OpenID Connect (OIDC) identity provider. Each tag consists of a key name and an associated value. If no tags are attached to the specified resource, the response contains an empty list.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListOpenIdConnectProviderTagsOutput {
@@ -3652,11 +3653,10 @@ impl std::fmt::Debug for ListOpenIdConnectProviderTagsOutput {
         formatter.finish()
     }
 }
-/// See [`ListOpenIdConnectProviderTagsOutput`](crate::output::ListOpenIdConnectProviderTagsOutput)
+/// See [`ListOpenIdConnectProviderTagsOutput`](crate::output::ListOpenIdConnectProviderTagsOutput).
 pub mod list_open_id_connect_provider_tags_output {
 
-    /// A builder for [`ListOpenIdConnectProviderTagsOutput`](crate::output::ListOpenIdConnectProviderTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListOpenIdConnectProviderTagsOutput`](crate::output::ListOpenIdConnectProviderTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -3703,7 +3703,7 @@ pub mod list_open_id_connect_provider_tags_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListOpenIdConnectProviderTagsOutput`](crate::output::ListOpenIdConnectProviderTagsOutput)
+        /// Consumes the builder and constructs a [`ListOpenIdConnectProviderTagsOutput`](crate::output::ListOpenIdConnectProviderTagsOutput).
         pub fn build(self) -> crate::output::ListOpenIdConnectProviderTagsOutput {
             crate::output::ListOpenIdConnectProviderTagsOutput {
                 tags: self.tags,
@@ -3714,7 +3714,7 @@ pub mod list_open_id_connect_provider_tags_output {
     }
 }
 impl ListOpenIdConnectProviderTagsOutput {
-    /// Creates a new builder-style object to manufacture [`ListOpenIdConnectProviderTagsOutput`](crate::output::ListOpenIdConnectProviderTagsOutput)
+    /// Creates a new builder-style object to manufacture [`ListOpenIdConnectProviderTagsOutput`](crate::output::ListOpenIdConnectProviderTagsOutput).
     pub fn builder() -> crate::output::list_open_id_connect_provider_tags_output::Builder {
         crate::output::list_open_id_connect_provider_tags_output::Builder::default()
     }
@@ -3725,6 +3725,7 @@ impl ListOpenIdConnectProviderTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListOpenIdConnectProvidersOutput {
     /// <p>The list of IAM OIDC provider resource objects defined in the Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub open_id_connect_provider_list:
         std::option::Option<std::vec::Vec<crate::model::OpenIdConnectProviderListEntry>>,
 }
@@ -3746,11 +3747,10 @@ impl std::fmt::Debug for ListOpenIdConnectProvidersOutput {
         formatter.finish()
     }
 }
-/// See [`ListOpenIdConnectProvidersOutput`](crate::output::ListOpenIdConnectProvidersOutput)
+/// See [`ListOpenIdConnectProvidersOutput`](crate::output::ListOpenIdConnectProvidersOutput).
 pub mod list_open_id_connect_providers_output {
 
-    /// A builder for [`ListOpenIdConnectProvidersOutput`](crate::output::ListOpenIdConnectProvidersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListOpenIdConnectProvidersOutput`](crate::output::ListOpenIdConnectProvidersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) open_id_connect_provider_list:
@@ -3779,7 +3779,7 @@ pub mod list_open_id_connect_providers_output {
             self.open_id_connect_provider_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListOpenIdConnectProvidersOutput`](crate::output::ListOpenIdConnectProvidersOutput)
+        /// Consumes the builder and constructs a [`ListOpenIdConnectProvidersOutput`](crate::output::ListOpenIdConnectProvidersOutput).
         pub fn build(self) -> crate::output::ListOpenIdConnectProvidersOutput {
             crate::output::ListOpenIdConnectProvidersOutput {
                 open_id_connect_provider_list: self.open_id_connect_provider_list,
@@ -3788,7 +3788,7 @@ pub mod list_open_id_connect_providers_output {
     }
 }
 impl ListOpenIdConnectProvidersOutput {
-    /// Creates a new builder-style object to manufacture [`ListOpenIdConnectProvidersOutput`](crate::output::ListOpenIdConnectProvidersOutput)
+    /// Creates a new builder-style object to manufacture [`ListOpenIdConnectProvidersOutput`](crate::output::ListOpenIdConnectProvidersOutput).
     pub fn builder() -> crate::output::list_open_id_connect_providers_output::Builder {
         crate::output::list_open_id_connect_providers_output::Builder::default()
     }
@@ -3799,10 +3799,13 @@ impl ListOpenIdConnectProvidersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListMfaDeviceTagsOutput {
     /// <p>The list of tags that are currently attached to the virtual MFA device. Each tag consists of a key name and an associated value. If no tags are attached to the specified resource, the response contains an empty list.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListMfaDeviceTagsOutput {
@@ -3828,11 +3831,10 @@ impl std::fmt::Debug for ListMfaDeviceTagsOutput {
         formatter.finish()
     }
 }
-/// See [`ListMfaDeviceTagsOutput`](crate::output::ListMfaDeviceTagsOutput)
+/// See [`ListMfaDeviceTagsOutput`](crate::output::ListMfaDeviceTagsOutput).
 pub mod list_mfa_device_tags_output {
 
-    /// A builder for [`ListMfaDeviceTagsOutput`](crate::output::ListMfaDeviceTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListMfaDeviceTagsOutput`](crate::output::ListMfaDeviceTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -3879,7 +3881,7 @@ pub mod list_mfa_device_tags_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListMfaDeviceTagsOutput`](crate::output::ListMfaDeviceTagsOutput)
+        /// Consumes the builder and constructs a [`ListMfaDeviceTagsOutput`](crate::output::ListMfaDeviceTagsOutput).
         pub fn build(self) -> crate::output::ListMfaDeviceTagsOutput {
             crate::output::ListMfaDeviceTagsOutput {
                 tags: self.tags,
@@ -3890,7 +3892,7 @@ pub mod list_mfa_device_tags_output {
     }
 }
 impl ListMfaDeviceTagsOutput {
-    /// Creates a new builder-style object to manufacture [`ListMfaDeviceTagsOutput`](crate::output::ListMfaDeviceTagsOutput)
+    /// Creates a new builder-style object to manufacture [`ListMfaDeviceTagsOutput`](crate::output::ListMfaDeviceTagsOutput).
     pub fn builder() -> crate::output::list_mfa_device_tags_output::Builder {
         crate::output::list_mfa_device_tags_output::Builder::default()
     }
@@ -3901,10 +3903,13 @@ impl ListMfaDeviceTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListMfaDevicesOutput {
     /// <p>A list of MFA devices.</p>
+    #[doc(hidden)]
     pub mfa_devices: std::option::Option<std::vec::Vec<crate::model::MfaDevice>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListMfaDevicesOutput {
@@ -3930,11 +3935,10 @@ impl std::fmt::Debug for ListMfaDevicesOutput {
         formatter.finish()
     }
 }
-/// See [`ListMfaDevicesOutput`](crate::output::ListMfaDevicesOutput)
+/// See [`ListMfaDevicesOutput`](crate::output::ListMfaDevicesOutput).
 pub mod list_mfa_devices_output {
 
-    /// A builder for [`ListMfaDevicesOutput`](crate::output::ListMfaDevicesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListMfaDevicesOutput`](crate::output::ListMfaDevicesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mfa_devices: std::option::Option<std::vec::Vec<crate::model::MfaDevice>>,
@@ -3981,7 +3985,7 @@ pub mod list_mfa_devices_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListMfaDevicesOutput`](crate::output::ListMfaDevicesOutput)
+        /// Consumes the builder and constructs a [`ListMfaDevicesOutput`](crate::output::ListMfaDevicesOutput).
         pub fn build(self) -> crate::output::ListMfaDevicesOutput {
             crate::output::ListMfaDevicesOutput {
                 mfa_devices: self.mfa_devices,
@@ -3992,7 +3996,7 @@ pub mod list_mfa_devices_output {
     }
 }
 impl ListMfaDevicesOutput {
-    /// Creates a new builder-style object to manufacture [`ListMfaDevicesOutput`](crate::output::ListMfaDevicesOutput)
+    /// Creates a new builder-style object to manufacture [`ListMfaDevicesOutput`](crate::output::ListMfaDevicesOutput).
     pub fn builder() -> crate::output::list_mfa_devices_output::Builder {
         crate::output::list_mfa_devices_output::Builder::default()
     }
@@ -4003,10 +4007,13 @@ impl ListMfaDevicesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListInstanceProfileTagsOutput {
     /// <p>The list of tags that are currently attached to the IAM instance profile. Each tag consists of a key name and an associated value. If no tags are attached to the specified resource, the response contains an empty list.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListInstanceProfileTagsOutput {
@@ -4032,11 +4039,10 @@ impl std::fmt::Debug for ListInstanceProfileTagsOutput {
         formatter.finish()
     }
 }
-/// See [`ListInstanceProfileTagsOutput`](crate::output::ListInstanceProfileTagsOutput)
+/// See [`ListInstanceProfileTagsOutput`](crate::output::ListInstanceProfileTagsOutput).
 pub mod list_instance_profile_tags_output {
 
-    /// A builder for [`ListInstanceProfileTagsOutput`](crate::output::ListInstanceProfileTagsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListInstanceProfileTagsOutput`](crate::output::ListInstanceProfileTagsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -4083,7 +4089,7 @@ pub mod list_instance_profile_tags_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListInstanceProfileTagsOutput`](crate::output::ListInstanceProfileTagsOutput)
+        /// Consumes the builder and constructs a [`ListInstanceProfileTagsOutput`](crate::output::ListInstanceProfileTagsOutput).
         pub fn build(self) -> crate::output::ListInstanceProfileTagsOutput {
             crate::output::ListInstanceProfileTagsOutput {
                 tags: self.tags,
@@ -4094,7 +4100,7 @@ pub mod list_instance_profile_tags_output {
     }
 }
 impl ListInstanceProfileTagsOutput {
-    /// Creates a new builder-style object to manufacture [`ListInstanceProfileTagsOutput`](crate::output::ListInstanceProfileTagsOutput)
+    /// Creates a new builder-style object to manufacture [`ListInstanceProfileTagsOutput`](crate::output::ListInstanceProfileTagsOutput).
     pub fn builder() -> crate::output::list_instance_profile_tags_output::Builder {
         crate::output::list_instance_profile_tags_output::Builder::default()
     }
@@ -4105,10 +4111,13 @@ impl ListInstanceProfileTagsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListInstanceProfilesForRoleOutput {
     /// <p>A list of instance profiles.</p>
+    #[doc(hidden)]
     pub instance_profiles: std::option::Option<std::vec::Vec<crate::model::InstanceProfile>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListInstanceProfilesForRoleOutput {
@@ -4134,11 +4143,10 @@ impl std::fmt::Debug for ListInstanceProfilesForRoleOutput {
         formatter.finish()
     }
 }
-/// See [`ListInstanceProfilesForRoleOutput`](crate::output::ListInstanceProfilesForRoleOutput)
+/// See [`ListInstanceProfilesForRoleOutput`](crate::output::ListInstanceProfilesForRoleOutput).
 pub mod list_instance_profiles_for_role_output {
 
-    /// A builder for [`ListInstanceProfilesForRoleOutput`](crate::output::ListInstanceProfilesForRoleOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListInstanceProfilesForRoleOutput`](crate::output::ListInstanceProfilesForRoleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_profiles:
@@ -4186,7 +4194,7 @@ pub mod list_instance_profiles_for_role_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListInstanceProfilesForRoleOutput`](crate::output::ListInstanceProfilesForRoleOutput)
+        /// Consumes the builder and constructs a [`ListInstanceProfilesForRoleOutput`](crate::output::ListInstanceProfilesForRoleOutput).
         pub fn build(self) -> crate::output::ListInstanceProfilesForRoleOutput {
             crate::output::ListInstanceProfilesForRoleOutput {
                 instance_profiles: self.instance_profiles,
@@ -4197,7 +4205,7 @@ pub mod list_instance_profiles_for_role_output {
     }
 }
 impl ListInstanceProfilesForRoleOutput {
-    /// Creates a new builder-style object to manufacture [`ListInstanceProfilesForRoleOutput`](crate::output::ListInstanceProfilesForRoleOutput)
+    /// Creates a new builder-style object to manufacture [`ListInstanceProfilesForRoleOutput`](crate::output::ListInstanceProfilesForRoleOutput).
     pub fn builder() -> crate::output::list_instance_profiles_for_role_output::Builder {
         crate::output::list_instance_profiles_for_role_output::Builder::default()
     }
@@ -4208,10 +4216,13 @@ impl ListInstanceProfilesForRoleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListInstanceProfilesOutput {
     /// <p>A list of instance profiles.</p>
+    #[doc(hidden)]
     pub instance_profiles: std::option::Option<std::vec::Vec<crate::model::InstanceProfile>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListInstanceProfilesOutput {
@@ -4237,11 +4248,10 @@ impl std::fmt::Debug for ListInstanceProfilesOutput {
         formatter.finish()
     }
 }
-/// See [`ListInstanceProfilesOutput`](crate::output::ListInstanceProfilesOutput)
+/// See [`ListInstanceProfilesOutput`](crate::output::ListInstanceProfilesOutput).
 pub mod list_instance_profiles_output {
 
-    /// A builder for [`ListInstanceProfilesOutput`](crate::output::ListInstanceProfilesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListInstanceProfilesOutput`](crate::output::ListInstanceProfilesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_profiles:
@@ -4289,7 +4299,7 @@ pub mod list_instance_profiles_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListInstanceProfilesOutput`](crate::output::ListInstanceProfilesOutput)
+        /// Consumes the builder and constructs a [`ListInstanceProfilesOutput`](crate::output::ListInstanceProfilesOutput).
         pub fn build(self) -> crate::output::ListInstanceProfilesOutput {
             crate::output::ListInstanceProfilesOutput {
                 instance_profiles: self.instance_profiles,
@@ -4300,7 +4310,7 @@ pub mod list_instance_profiles_output {
     }
 }
 impl ListInstanceProfilesOutput {
-    /// Creates a new builder-style object to manufacture [`ListInstanceProfilesOutput`](crate::output::ListInstanceProfilesOutput)
+    /// Creates a new builder-style object to manufacture [`ListInstanceProfilesOutput`](crate::output::ListInstanceProfilesOutput).
     pub fn builder() -> crate::output::list_instance_profiles_output::Builder {
         crate::output::list_instance_profiles_output::Builder::default()
     }
@@ -4311,10 +4321,13 @@ impl ListInstanceProfilesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListGroupsForUserOutput {
     /// <p>A list of groups.</p>
+    #[doc(hidden)]
     pub groups: std::option::Option<std::vec::Vec<crate::model::Group>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListGroupsForUserOutput {
@@ -4340,11 +4353,10 @@ impl std::fmt::Debug for ListGroupsForUserOutput {
         formatter.finish()
     }
 }
-/// See [`ListGroupsForUserOutput`](crate::output::ListGroupsForUserOutput)
+/// See [`ListGroupsForUserOutput`](crate::output::ListGroupsForUserOutput).
 pub mod list_groups_for_user_output {
 
-    /// A builder for [`ListGroupsForUserOutput`](crate::output::ListGroupsForUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListGroupsForUserOutput`](crate::output::ListGroupsForUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) groups: std::option::Option<std::vec::Vec<crate::model::Group>>,
@@ -4391,7 +4403,7 @@ pub mod list_groups_for_user_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGroupsForUserOutput`](crate::output::ListGroupsForUserOutput)
+        /// Consumes the builder and constructs a [`ListGroupsForUserOutput`](crate::output::ListGroupsForUserOutput).
         pub fn build(self) -> crate::output::ListGroupsForUserOutput {
             crate::output::ListGroupsForUserOutput {
                 groups: self.groups,
@@ -4402,7 +4414,7 @@ pub mod list_groups_for_user_output {
     }
 }
 impl ListGroupsForUserOutput {
-    /// Creates a new builder-style object to manufacture [`ListGroupsForUserOutput`](crate::output::ListGroupsForUserOutput)
+    /// Creates a new builder-style object to manufacture [`ListGroupsForUserOutput`](crate::output::ListGroupsForUserOutput).
     pub fn builder() -> crate::output::list_groups_for_user_output::Builder {
         crate::output::list_groups_for_user_output::Builder::default()
     }
@@ -4413,10 +4425,13 @@ impl ListGroupsForUserOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListGroupsOutput {
     /// <p>A list of groups.</p>
+    #[doc(hidden)]
     pub groups: std::option::Option<std::vec::Vec<crate::model::Group>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListGroupsOutput {
@@ -4442,11 +4457,10 @@ impl std::fmt::Debug for ListGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`ListGroupsOutput`](crate::output::ListGroupsOutput)
+/// See [`ListGroupsOutput`](crate::output::ListGroupsOutput).
 pub mod list_groups_output {
 
-    /// A builder for [`ListGroupsOutput`](crate::output::ListGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListGroupsOutput`](crate::output::ListGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) groups: std::option::Option<std::vec::Vec<crate::model::Group>>,
@@ -4493,7 +4507,7 @@ pub mod list_groups_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGroupsOutput`](crate::output::ListGroupsOutput)
+        /// Consumes the builder and constructs a [`ListGroupsOutput`](crate::output::ListGroupsOutput).
         pub fn build(self) -> crate::output::ListGroupsOutput {
             crate::output::ListGroupsOutput {
                 groups: self.groups,
@@ -4504,7 +4518,7 @@ pub mod list_groups_output {
     }
 }
 impl ListGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`ListGroupsOutput`](crate::output::ListGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`ListGroupsOutput`](crate::output::ListGroupsOutput).
     pub fn builder() -> crate::output::list_groups_output::Builder {
         crate::output::list_groups_output::Builder::default()
     }
@@ -4516,10 +4530,13 @@ impl ListGroupsOutput {
 pub struct ListGroupPoliciesOutput {
     /// <p>A list of policy names.</p>
     /// <p>This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>
+    #[doc(hidden)]
     pub policy_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListGroupPoliciesOutput {
@@ -4546,11 +4563,10 @@ impl std::fmt::Debug for ListGroupPoliciesOutput {
         formatter.finish()
     }
 }
-/// See [`ListGroupPoliciesOutput`](crate::output::ListGroupPoliciesOutput)
+/// See [`ListGroupPoliciesOutput`](crate::output::ListGroupPoliciesOutput).
 pub mod list_group_policies_output {
 
-    /// A builder for [`ListGroupPoliciesOutput`](crate::output::ListGroupPoliciesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListGroupPoliciesOutput`](crate::output::ListGroupPoliciesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -4599,7 +4615,7 @@ pub mod list_group_policies_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGroupPoliciesOutput`](crate::output::ListGroupPoliciesOutput)
+        /// Consumes the builder and constructs a [`ListGroupPoliciesOutput`](crate::output::ListGroupPoliciesOutput).
         pub fn build(self) -> crate::output::ListGroupPoliciesOutput {
             crate::output::ListGroupPoliciesOutput {
                 policy_names: self.policy_names,
@@ -4610,7 +4626,7 @@ pub mod list_group_policies_output {
     }
 }
 impl ListGroupPoliciesOutput {
-    /// Creates a new builder-style object to manufacture [`ListGroupPoliciesOutput`](crate::output::ListGroupPoliciesOutput)
+    /// Creates a new builder-style object to manufacture [`ListGroupPoliciesOutput`](crate::output::ListGroupPoliciesOutput).
     pub fn builder() -> crate::output::list_group_policies_output::Builder {
         crate::output::list_group_policies_output::Builder::default()
     }
@@ -4621,14 +4637,19 @@ impl ListGroupPoliciesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListEntitiesForPolicyOutput {
     /// <p>A list of IAM groups that the policy is attached to.</p>
+    #[doc(hidden)]
     pub policy_groups: std::option::Option<std::vec::Vec<crate::model::PolicyGroup>>,
     /// <p>A list of IAM users that the policy is attached to.</p>
+    #[doc(hidden)]
     pub policy_users: std::option::Option<std::vec::Vec<crate::model::PolicyUser>>,
     /// <p>A list of IAM roles that the policy is attached to.</p>
+    #[doc(hidden)]
     pub policy_roles: std::option::Option<std::vec::Vec<crate::model::PolicyRole>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListEntitiesForPolicyOutput {
@@ -4664,11 +4685,10 @@ impl std::fmt::Debug for ListEntitiesForPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`ListEntitiesForPolicyOutput`](crate::output::ListEntitiesForPolicyOutput)
+/// See [`ListEntitiesForPolicyOutput`](crate::output::ListEntitiesForPolicyOutput).
 pub mod list_entities_for_policy_output {
 
-    /// A builder for [`ListEntitiesForPolicyOutput`](crate::output::ListEntitiesForPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListEntitiesForPolicyOutput`](crate::output::ListEntitiesForPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_groups: std::option::Option<std::vec::Vec<crate::model::PolicyGroup>>,
@@ -4755,7 +4775,7 @@ pub mod list_entities_for_policy_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListEntitiesForPolicyOutput`](crate::output::ListEntitiesForPolicyOutput)
+        /// Consumes the builder and constructs a [`ListEntitiesForPolicyOutput`](crate::output::ListEntitiesForPolicyOutput).
         pub fn build(self) -> crate::output::ListEntitiesForPolicyOutput {
             crate::output::ListEntitiesForPolicyOutput {
                 policy_groups: self.policy_groups,
@@ -4768,7 +4788,7 @@ pub mod list_entities_for_policy_output {
     }
 }
 impl ListEntitiesForPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`ListEntitiesForPolicyOutput`](crate::output::ListEntitiesForPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`ListEntitiesForPolicyOutput`](crate::output::ListEntitiesForPolicyOutput).
     pub fn builder() -> crate::output::list_entities_for_policy_output::Builder {
         crate::output::list_entities_for_policy_output::Builder::default()
     }
@@ -4779,10 +4799,13 @@ impl ListEntitiesForPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAttachedUserPoliciesOutput {
     /// <p>A list of the attached policies.</p>
+    #[doc(hidden)]
     pub attached_policies: std::option::Option<std::vec::Vec<crate::model::AttachedPolicy>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListAttachedUserPoliciesOutput {
@@ -4808,11 +4831,10 @@ impl std::fmt::Debug for ListAttachedUserPoliciesOutput {
         formatter.finish()
     }
 }
-/// See [`ListAttachedUserPoliciesOutput`](crate::output::ListAttachedUserPoliciesOutput)
+/// See [`ListAttachedUserPoliciesOutput`](crate::output::ListAttachedUserPoliciesOutput).
 pub mod list_attached_user_policies_output {
 
-    /// A builder for [`ListAttachedUserPoliciesOutput`](crate::output::ListAttachedUserPoliciesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAttachedUserPoliciesOutput`](crate::output::ListAttachedUserPoliciesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attached_policies:
@@ -4860,7 +4882,7 @@ pub mod list_attached_user_policies_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAttachedUserPoliciesOutput`](crate::output::ListAttachedUserPoliciesOutput)
+        /// Consumes the builder and constructs a [`ListAttachedUserPoliciesOutput`](crate::output::ListAttachedUserPoliciesOutput).
         pub fn build(self) -> crate::output::ListAttachedUserPoliciesOutput {
             crate::output::ListAttachedUserPoliciesOutput {
                 attached_policies: self.attached_policies,
@@ -4871,7 +4893,7 @@ pub mod list_attached_user_policies_output {
     }
 }
 impl ListAttachedUserPoliciesOutput {
-    /// Creates a new builder-style object to manufacture [`ListAttachedUserPoliciesOutput`](crate::output::ListAttachedUserPoliciesOutput)
+    /// Creates a new builder-style object to manufacture [`ListAttachedUserPoliciesOutput`](crate::output::ListAttachedUserPoliciesOutput).
     pub fn builder() -> crate::output::list_attached_user_policies_output::Builder {
         crate::output::list_attached_user_policies_output::Builder::default()
     }
@@ -4882,10 +4904,13 @@ impl ListAttachedUserPoliciesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAttachedRolePoliciesOutput {
     /// <p>A list of the attached policies.</p>
+    #[doc(hidden)]
     pub attached_policies: std::option::Option<std::vec::Vec<crate::model::AttachedPolicy>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListAttachedRolePoliciesOutput {
@@ -4911,11 +4936,10 @@ impl std::fmt::Debug for ListAttachedRolePoliciesOutput {
         formatter.finish()
     }
 }
-/// See [`ListAttachedRolePoliciesOutput`](crate::output::ListAttachedRolePoliciesOutput)
+/// See [`ListAttachedRolePoliciesOutput`](crate::output::ListAttachedRolePoliciesOutput).
 pub mod list_attached_role_policies_output {
 
-    /// A builder for [`ListAttachedRolePoliciesOutput`](crate::output::ListAttachedRolePoliciesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAttachedRolePoliciesOutput`](crate::output::ListAttachedRolePoliciesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attached_policies:
@@ -4963,7 +4987,7 @@ pub mod list_attached_role_policies_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAttachedRolePoliciesOutput`](crate::output::ListAttachedRolePoliciesOutput)
+        /// Consumes the builder and constructs a [`ListAttachedRolePoliciesOutput`](crate::output::ListAttachedRolePoliciesOutput).
         pub fn build(self) -> crate::output::ListAttachedRolePoliciesOutput {
             crate::output::ListAttachedRolePoliciesOutput {
                 attached_policies: self.attached_policies,
@@ -4974,7 +4998,7 @@ pub mod list_attached_role_policies_output {
     }
 }
 impl ListAttachedRolePoliciesOutput {
-    /// Creates a new builder-style object to manufacture [`ListAttachedRolePoliciesOutput`](crate::output::ListAttachedRolePoliciesOutput)
+    /// Creates a new builder-style object to manufacture [`ListAttachedRolePoliciesOutput`](crate::output::ListAttachedRolePoliciesOutput).
     pub fn builder() -> crate::output::list_attached_role_policies_output::Builder {
         crate::output::list_attached_role_policies_output::Builder::default()
     }
@@ -4985,10 +5009,13 @@ impl ListAttachedRolePoliciesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAttachedGroupPoliciesOutput {
     /// <p>A list of the attached policies.</p>
+    #[doc(hidden)]
     pub attached_policies: std::option::Option<std::vec::Vec<crate::model::AttachedPolicy>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListAttachedGroupPoliciesOutput {
@@ -5014,11 +5041,10 @@ impl std::fmt::Debug for ListAttachedGroupPoliciesOutput {
         formatter.finish()
     }
 }
-/// See [`ListAttachedGroupPoliciesOutput`](crate::output::ListAttachedGroupPoliciesOutput)
+/// See [`ListAttachedGroupPoliciesOutput`](crate::output::ListAttachedGroupPoliciesOutput).
 pub mod list_attached_group_policies_output {
 
-    /// A builder for [`ListAttachedGroupPoliciesOutput`](crate::output::ListAttachedGroupPoliciesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAttachedGroupPoliciesOutput`](crate::output::ListAttachedGroupPoliciesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attached_policies:
@@ -5066,7 +5092,7 @@ pub mod list_attached_group_policies_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAttachedGroupPoliciesOutput`](crate::output::ListAttachedGroupPoliciesOutput)
+        /// Consumes the builder and constructs a [`ListAttachedGroupPoliciesOutput`](crate::output::ListAttachedGroupPoliciesOutput).
         pub fn build(self) -> crate::output::ListAttachedGroupPoliciesOutput {
             crate::output::ListAttachedGroupPoliciesOutput {
                 attached_policies: self.attached_policies,
@@ -5077,7 +5103,7 @@ pub mod list_attached_group_policies_output {
     }
 }
 impl ListAttachedGroupPoliciesOutput {
-    /// Creates a new builder-style object to manufacture [`ListAttachedGroupPoliciesOutput`](crate::output::ListAttachedGroupPoliciesOutput)
+    /// Creates a new builder-style object to manufacture [`ListAttachedGroupPoliciesOutput`](crate::output::ListAttachedGroupPoliciesOutput).
     pub fn builder() -> crate::output::list_attached_group_policies_output::Builder {
         crate::output::list_attached_group_policies_output::Builder::default()
     }
@@ -5088,10 +5114,13 @@ impl ListAttachedGroupPoliciesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAccountAliasesOutput {
     /// <p>A list of aliases associated with the account. Amazon Web Services supports only one alias per account.</p>
+    #[doc(hidden)]
     pub account_aliases: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListAccountAliasesOutput {
@@ -5117,11 +5146,10 @@ impl std::fmt::Debug for ListAccountAliasesOutput {
         formatter.finish()
     }
 }
-/// See [`ListAccountAliasesOutput`](crate::output::ListAccountAliasesOutput)
+/// See [`ListAccountAliasesOutput`](crate::output::ListAccountAliasesOutput).
 pub mod list_account_aliases_output {
 
-    /// A builder for [`ListAccountAliasesOutput`](crate::output::ListAccountAliasesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAccountAliasesOutput`](crate::output::ListAccountAliasesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_aliases: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -5168,7 +5196,7 @@ pub mod list_account_aliases_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAccountAliasesOutput`](crate::output::ListAccountAliasesOutput)
+        /// Consumes the builder and constructs a [`ListAccountAliasesOutput`](crate::output::ListAccountAliasesOutput).
         pub fn build(self) -> crate::output::ListAccountAliasesOutput {
             crate::output::ListAccountAliasesOutput {
                 account_aliases: self.account_aliases,
@@ -5179,7 +5207,7 @@ pub mod list_account_aliases_output {
     }
 }
 impl ListAccountAliasesOutput {
-    /// Creates a new builder-style object to manufacture [`ListAccountAliasesOutput`](crate::output::ListAccountAliasesOutput)
+    /// Creates a new builder-style object to manufacture [`ListAccountAliasesOutput`](crate::output::ListAccountAliasesOutput).
     pub fn builder() -> crate::output::list_account_aliases_output::Builder {
         crate::output::list_account_aliases_output::Builder::default()
     }
@@ -5190,10 +5218,13 @@ impl ListAccountAliasesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAccessKeysOutput {
     /// <p>A list of objects containing metadata about the access keys.</p>
+    #[doc(hidden)]
     pub access_key_metadata: std::option::Option<std::vec::Vec<crate::model::AccessKeyMetadata>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListAccessKeysOutput {
@@ -5219,11 +5250,10 @@ impl std::fmt::Debug for ListAccessKeysOutput {
         formatter.finish()
     }
 }
-/// See [`ListAccessKeysOutput`](crate::output::ListAccessKeysOutput)
+/// See [`ListAccessKeysOutput`](crate::output::ListAccessKeysOutput).
 pub mod list_access_keys_output {
 
-    /// A builder for [`ListAccessKeysOutput`](crate::output::ListAccessKeysOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAccessKeysOutput`](crate::output::ListAccessKeysOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_key_metadata:
@@ -5271,7 +5301,7 @@ pub mod list_access_keys_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAccessKeysOutput`](crate::output::ListAccessKeysOutput)
+        /// Consumes the builder and constructs a [`ListAccessKeysOutput`](crate::output::ListAccessKeysOutput).
         pub fn build(self) -> crate::output::ListAccessKeysOutput {
             crate::output::ListAccessKeysOutput {
                 access_key_metadata: self.access_key_metadata,
@@ -5282,7 +5312,7 @@ pub mod list_access_keys_output {
     }
 }
 impl ListAccessKeysOutput {
-    /// Creates a new builder-style object to manufacture [`ListAccessKeysOutput`](crate::output::ListAccessKeysOutput)
+    /// Creates a new builder-style object to manufacture [`ListAccessKeysOutput`](crate::output::ListAccessKeysOutput).
     pub fn builder() -> crate::output::list_access_keys_output::Builder {
         crate::output::list_access_keys_output::Builder::default()
     }
@@ -5293,11 +5323,14 @@ impl ListAccessKeysOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetUserPolicyOutput {
     /// <p>The user the policy is associated with.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The name of the policy.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The policy document.</p>
     /// <p>IAM stores policies in JSON format. However, resources that were created using CloudFormation templates can be formatted in YAML. CloudFormation always converts a YAML policy to JSON format before submitting it to IAM.</p>
+    #[doc(hidden)]
     pub policy_document: std::option::Option<std::string::String>,
 }
 impl GetUserPolicyOutput {
@@ -5324,11 +5357,10 @@ impl std::fmt::Debug for GetUserPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetUserPolicyOutput`](crate::output::GetUserPolicyOutput)
+/// See [`GetUserPolicyOutput`](crate::output::GetUserPolicyOutput).
 pub mod get_user_policy_output {
 
-    /// A builder for [`GetUserPolicyOutput`](crate::output::GetUserPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetUserPolicyOutput`](crate::output::GetUserPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -5371,7 +5403,7 @@ pub mod get_user_policy_output {
             self.policy_document = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetUserPolicyOutput`](crate::output::GetUserPolicyOutput)
+        /// Consumes the builder and constructs a [`GetUserPolicyOutput`](crate::output::GetUserPolicyOutput).
         pub fn build(self) -> crate::output::GetUserPolicyOutput {
             crate::output::GetUserPolicyOutput {
                 user_name: self.user_name,
@@ -5382,7 +5414,7 @@ pub mod get_user_policy_output {
     }
 }
 impl GetUserPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetUserPolicyOutput`](crate::output::GetUserPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetUserPolicyOutput`](crate::output::GetUserPolicyOutput).
     pub fn builder() -> crate::output::get_user_policy_output::Builder {
         crate::output::get_user_policy_output::Builder::default()
     }
@@ -5396,6 +5428,7 @@ pub struct GetUserOutput {
     /// <p>Due to a service issue, password last used data does not include password use from May 3, 2018 22:50 PDT to May 23, 2018 14:08 PDT. This affects <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_finding-unused.html">last sign-in</a> dates shown in the IAM console and password last used dates in the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_getting-report.html">IAM credential report</a>, and returned by this operation. If users signed in during the affected time, the password last used date that is returned is the date the user last signed in before May 3, 2018. For users that signed in after May 23, 2018 14:08 PDT, the returned password last used date is accurate.</p>
     /// <p>You can use password last used information to identify unused credentials for deletion. For example, you might delete users who did not sign in to Amazon Web Services in the last 90 days. In cases like this, we recommend that you adjust your evaluation window to include dates after May 23, 2018. Alternatively, if your users use access keys to access Amazon Web Services programmatically you can refer to access key last used information because it is accurate for all dates. </p>
     /// </important>
+    #[doc(hidden)]
     pub user: std::option::Option<crate::model::User>,
 }
 impl GetUserOutput {
@@ -5414,11 +5447,10 @@ impl std::fmt::Debug for GetUserOutput {
         formatter.finish()
     }
 }
-/// See [`GetUserOutput`](crate::output::GetUserOutput)
+/// See [`GetUserOutput`](crate::output::GetUserOutput).
 pub mod get_user_output {
 
-    /// A builder for [`GetUserOutput`](crate::output::GetUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetUserOutput`](crate::output::GetUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user: std::option::Option<crate::model::User>,
@@ -5440,14 +5472,14 @@ pub mod get_user_output {
             self.user = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetUserOutput`](crate::output::GetUserOutput)
+        /// Consumes the builder and constructs a [`GetUserOutput`](crate::output::GetUserOutput).
         pub fn build(self) -> crate::output::GetUserOutput {
             crate::output::GetUserOutput { user: self.user }
         }
     }
 }
 impl GetUserOutput {
-    /// Creates a new builder-style object to manufacture [`GetUserOutput`](crate::output::GetUserOutput)
+    /// Creates a new builder-style object to manufacture [`GetUserOutput`](crate::output::GetUserOutput).
     pub fn builder() -> crate::output::get_user_output::Builder {
         crate::output::get_user_output::Builder::default()
     }
@@ -5458,6 +5490,7 @@ impl GetUserOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSshPublicKeyOutput {
     /// <p>A structure containing details about the SSH public key.</p>
+    #[doc(hidden)]
     pub ssh_public_key: std::option::Option<crate::model::SshPublicKey>,
 }
 impl GetSshPublicKeyOutput {
@@ -5473,11 +5506,10 @@ impl std::fmt::Debug for GetSshPublicKeyOutput {
         formatter.finish()
     }
 }
-/// See [`GetSshPublicKeyOutput`](crate::output::GetSshPublicKeyOutput)
+/// See [`GetSshPublicKeyOutput`](crate::output::GetSshPublicKeyOutput).
 pub mod get_ssh_public_key_output {
 
-    /// A builder for [`GetSshPublicKeyOutput`](crate::output::GetSshPublicKeyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSshPublicKeyOutput`](crate::output::GetSshPublicKeyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ssh_public_key: std::option::Option<crate::model::SshPublicKey>,
@@ -5496,7 +5528,7 @@ pub mod get_ssh_public_key_output {
             self.ssh_public_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSshPublicKeyOutput`](crate::output::GetSshPublicKeyOutput)
+        /// Consumes the builder and constructs a [`GetSshPublicKeyOutput`](crate::output::GetSshPublicKeyOutput).
         pub fn build(self) -> crate::output::GetSshPublicKeyOutput {
             crate::output::GetSshPublicKeyOutput {
                 ssh_public_key: self.ssh_public_key,
@@ -5505,7 +5537,7 @@ pub mod get_ssh_public_key_output {
     }
 }
 impl GetSshPublicKeyOutput {
-    /// Creates a new builder-style object to manufacture [`GetSshPublicKeyOutput`](crate::output::GetSshPublicKeyOutput)
+    /// Creates a new builder-style object to manufacture [`GetSshPublicKeyOutput`](crate::output::GetSshPublicKeyOutput).
     pub fn builder() -> crate::output::get_ssh_public_key_output::Builder {
         crate::output::get_ssh_public_key_output::Builder::default()
     }
@@ -5516,8 +5548,10 @@ impl GetSshPublicKeyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetServiceLinkedRoleDeletionStatusOutput {
     /// <p>The status of the deletion.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DeletionTaskStatusType>,
     /// <p>An object that contains details about the reason the deletion failed.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<crate::model::DeletionTaskFailureReasonType>,
 }
 impl GetServiceLinkedRoleDeletionStatusOutput {
@@ -5538,11 +5572,10 @@ impl std::fmt::Debug for GetServiceLinkedRoleDeletionStatusOutput {
         formatter.finish()
     }
 }
-/// See [`GetServiceLinkedRoleDeletionStatusOutput`](crate::output::GetServiceLinkedRoleDeletionStatusOutput)
+/// See [`GetServiceLinkedRoleDeletionStatusOutput`](crate::output::GetServiceLinkedRoleDeletionStatusOutput).
 pub mod get_service_linked_role_deletion_status_output {
 
-    /// A builder for [`GetServiceLinkedRoleDeletionStatusOutput`](crate::output::GetServiceLinkedRoleDeletionStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetServiceLinkedRoleDeletionStatusOutput`](crate::output::GetServiceLinkedRoleDeletionStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::DeletionTaskStatusType>,
@@ -5575,7 +5608,7 @@ pub mod get_service_linked_role_deletion_status_output {
             self.reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetServiceLinkedRoleDeletionStatusOutput`](crate::output::GetServiceLinkedRoleDeletionStatusOutput)
+        /// Consumes the builder and constructs a [`GetServiceLinkedRoleDeletionStatusOutput`](crate::output::GetServiceLinkedRoleDeletionStatusOutput).
         pub fn build(self) -> crate::output::GetServiceLinkedRoleDeletionStatusOutput {
             crate::output::GetServiceLinkedRoleDeletionStatusOutput {
                 status: self.status,
@@ -5585,7 +5618,7 @@ pub mod get_service_linked_role_deletion_status_output {
     }
 }
 impl GetServiceLinkedRoleDeletionStatusOutput {
-    /// Creates a new builder-style object to manufacture [`GetServiceLinkedRoleDeletionStatusOutput`](crate::output::GetServiceLinkedRoleDeletionStatusOutput)
+    /// Creates a new builder-style object to manufacture [`GetServiceLinkedRoleDeletionStatusOutput`](crate::output::GetServiceLinkedRoleDeletionStatusOutput).
     pub fn builder() -> crate::output::get_service_linked_role_deletion_status_output::Builder {
         crate::output::get_service_linked_role_deletion_status_output::Builder::default()
     }
@@ -5596,19 +5629,26 @@ impl GetServiceLinkedRoleDeletionStatusOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetServiceLastAccessedDetailsWithEntitiesOutput {
     /// <p>The status of the job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatusType>,
     /// <p>The date and time, in&nbsp;<a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the report job was created.</p>
+    #[doc(hidden)]
     pub job_creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time, in&nbsp;<a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the generated report job was completed or failed.</p>
     /// <p>This field is null if the job is still in progress, as indicated by a job status value of <code>IN_PROGRESS</code>.</p>
+    #[doc(hidden)]
     pub job_completion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An&nbsp;<code>EntityDetailsList</code> object that contains details about when an IAM entity (user or role) used group or policy permissions in an attempt to access the specified Amazon Web Services service.</p>
+    #[doc(hidden)]
     pub entity_details_list: std::option::Option<std::vec::Vec<crate::model::EntityDetails>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>An object that contains details about the reason the operation failed.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::ErrorDetails>,
 }
 impl GetServiceLastAccessedDetailsWithEntitiesOutput {
@@ -5655,11 +5695,10 @@ impl std::fmt::Debug for GetServiceLastAccessedDetailsWithEntitiesOutput {
         formatter.finish()
     }
 }
-/// See [`GetServiceLastAccessedDetailsWithEntitiesOutput`](crate::output::GetServiceLastAccessedDetailsWithEntitiesOutput)
+/// See [`GetServiceLastAccessedDetailsWithEntitiesOutput`](crate::output::GetServiceLastAccessedDetailsWithEntitiesOutput).
 pub mod get_service_last_accessed_details_with_entities_output {
 
-    /// A builder for [`GetServiceLastAccessedDetailsWithEntitiesOutput`](crate::output::GetServiceLastAccessedDetailsWithEntitiesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetServiceLastAccessedDetailsWithEntitiesOutput`](crate::output::GetServiceLastAccessedDetailsWithEntitiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_status: std::option::Option<crate::model::JobStatusType>,
@@ -5762,7 +5801,7 @@ pub mod get_service_last_accessed_details_with_entities_output {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetServiceLastAccessedDetailsWithEntitiesOutput`](crate::output::GetServiceLastAccessedDetailsWithEntitiesOutput)
+        /// Consumes the builder and constructs a [`GetServiceLastAccessedDetailsWithEntitiesOutput`](crate::output::GetServiceLastAccessedDetailsWithEntitiesOutput).
         pub fn build(self) -> crate::output::GetServiceLastAccessedDetailsWithEntitiesOutput {
             crate::output::GetServiceLastAccessedDetailsWithEntitiesOutput {
                 job_status: self.job_status,
@@ -5777,7 +5816,7 @@ pub mod get_service_last_accessed_details_with_entities_output {
     }
 }
 impl GetServiceLastAccessedDetailsWithEntitiesOutput {
-    /// Creates a new builder-style object to manufacture [`GetServiceLastAccessedDetailsWithEntitiesOutput`](crate::output::GetServiceLastAccessedDetailsWithEntitiesOutput)
+    /// Creates a new builder-style object to manufacture [`GetServiceLastAccessedDetailsWithEntitiesOutput`](crate::output::GetServiceLastAccessedDetailsWithEntitiesOutput).
     pub fn builder(
     ) -> crate::output::get_service_last_accessed_details_with_entities_output::Builder {
         crate::output::get_service_last_accessed_details_with_entities_output::Builder::default()
@@ -5789,22 +5828,30 @@ impl GetServiceLastAccessedDetailsWithEntitiesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetServiceLastAccessedDetailsOutput {
     /// <p>The status of the job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatusType>,
     /// <p>The type of job. Service jobs return information about when each service was last accessed. Action jobs also include information about when tracked actions within the service were last accessed.</p>
+    #[doc(hidden)]
     pub job_type: std::option::Option<crate::model::AccessAdvisorUsageGranularityType>,
     /// <p>The date and time, in&nbsp;<a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the report job was created.</p>
+    #[doc(hidden)]
     pub job_creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> A&nbsp;<code>ServiceLastAccessed</code> object that contains details about the most recent attempt to access the service.</p>
+    #[doc(hidden)]
     pub services_last_accessed:
         std::option::Option<std::vec::Vec<crate::model::ServiceLastAccessed>>,
     /// <p>The date and time, in&nbsp;<a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the generated report job was completed or failed.</p>
     /// <p>This field is null if the job is still in progress, as indicated by a job status value of <code>IN_PROGRESS</code>.</p>
+    #[doc(hidden)]
     pub job_completion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>An object that contains details about the reason the operation failed.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::ErrorDetails>,
 }
 impl GetServiceLastAccessedDetailsOutput {
@@ -5860,11 +5907,10 @@ impl std::fmt::Debug for GetServiceLastAccessedDetailsOutput {
         formatter.finish()
     }
 }
-/// See [`GetServiceLastAccessedDetailsOutput`](crate::output::GetServiceLastAccessedDetailsOutput)
+/// See [`GetServiceLastAccessedDetailsOutput`](crate::output::GetServiceLastAccessedDetailsOutput).
 pub mod get_service_last_accessed_details_output {
 
-    /// A builder for [`GetServiceLastAccessedDetailsOutput`](crate::output::GetServiceLastAccessedDetailsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetServiceLastAccessedDetailsOutput`](crate::output::GetServiceLastAccessedDetailsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_status: std::option::Option<crate::model::JobStatusType>,
@@ -5981,7 +6027,7 @@ pub mod get_service_last_accessed_details_output {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetServiceLastAccessedDetailsOutput`](crate::output::GetServiceLastAccessedDetailsOutput)
+        /// Consumes the builder and constructs a [`GetServiceLastAccessedDetailsOutput`](crate::output::GetServiceLastAccessedDetailsOutput).
         pub fn build(self) -> crate::output::GetServiceLastAccessedDetailsOutput {
             crate::output::GetServiceLastAccessedDetailsOutput {
                 job_status: self.job_status,
@@ -5997,7 +6043,7 @@ pub mod get_service_last_accessed_details_output {
     }
 }
 impl GetServiceLastAccessedDetailsOutput {
-    /// Creates a new builder-style object to manufacture [`GetServiceLastAccessedDetailsOutput`](crate::output::GetServiceLastAccessedDetailsOutput)
+    /// Creates a new builder-style object to manufacture [`GetServiceLastAccessedDetailsOutput`](crate::output::GetServiceLastAccessedDetailsOutput).
     pub fn builder() -> crate::output::get_service_last_accessed_details_output::Builder {
         crate::output::get_service_last_accessed_details_output::Builder::default()
     }
@@ -6008,6 +6054,7 @@ impl GetServiceLastAccessedDetailsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetServerCertificateOutput {
     /// <p>A structure containing details about the server certificate.</p>
+    #[doc(hidden)]
     pub server_certificate: std::option::Option<crate::model::ServerCertificate>,
 }
 impl GetServerCertificateOutput {
@@ -6023,11 +6070,10 @@ impl std::fmt::Debug for GetServerCertificateOutput {
         formatter.finish()
     }
 }
-/// See [`GetServerCertificateOutput`](crate::output::GetServerCertificateOutput)
+/// See [`GetServerCertificateOutput`](crate::output::GetServerCertificateOutput).
 pub mod get_server_certificate_output {
 
-    /// A builder for [`GetServerCertificateOutput`](crate::output::GetServerCertificateOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetServerCertificateOutput`](crate::output::GetServerCertificateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) server_certificate: std::option::Option<crate::model::ServerCertificate>,
@@ -6046,7 +6092,7 @@ pub mod get_server_certificate_output {
             self.server_certificate = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetServerCertificateOutput`](crate::output::GetServerCertificateOutput)
+        /// Consumes the builder and constructs a [`GetServerCertificateOutput`](crate::output::GetServerCertificateOutput).
         pub fn build(self) -> crate::output::GetServerCertificateOutput {
             crate::output::GetServerCertificateOutput {
                 server_certificate: self.server_certificate,
@@ -6055,7 +6101,7 @@ pub mod get_server_certificate_output {
     }
 }
 impl GetServerCertificateOutput {
-    /// Creates a new builder-style object to manufacture [`GetServerCertificateOutput`](crate::output::GetServerCertificateOutput)
+    /// Creates a new builder-style object to manufacture [`GetServerCertificateOutput`](crate::output::GetServerCertificateOutput).
     pub fn builder() -> crate::output::get_server_certificate_output::Builder {
         crate::output::get_server_certificate_output::Builder::default()
     }
@@ -6066,12 +6112,16 @@ impl GetServerCertificateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSamlProviderOutput {
     /// <p>The XML metadata document that includes information about an identity provider.</p>
+    #[doc(hidden)]
     pub saml_metadata_document: std::option::Option<std::string::String>,
     /// <p>The date and time when the SAML provider was created.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The expiration date and time for the SAML provider.</p>
+    #[doc(hidden)]
     pub valid_until: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of tags that are attached to the specified IAM SAML provider. The returned list of tags is sorted by tag key. For more information about tagging, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM resources</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl GetSamlProviderOutput {
@@ -6102,11 +6152,10 @@ impl std::fmt::Debug for GetSamlProviderOutput {
         formatter.finish()
     }
 }
-/// See [`GetSamlProviderOutput`](crate::output::GetSamlProviderOutput)
+/// See [`GetSamlProviderOutput`](crate::output::GetSamlProviderOutput).
 pub mod get_saml_provider_output {
 
-    /// A builder for [`GetSamlProviderOutput`](crate::output::GetSamlProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSamlProviderOutput`](crate::output::GetSamlProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) saml_metadata_document: std::option::Option<std::string::String>,
@@ -6173,7 +6222,7 @@ pub mod get_saml_provider_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSamlProviderOutput`](crate::output::GetSamlProviderOutput)
+        /// Consumes the builder and constructs a [`GetSamlProviderOutput`](crate::output::GetSamlProviderOutput).
         pub fn build(self) -> crate::output::GetSamlProviderOutput {
             crate::output::GetSamlProviderOutput {
                 saml_metadata_document: self.saml_metadata_document,
@@ -6185,7 +6234,7 @@ pub mod get_saml_provider_output {
     }
 }
 impl GetSamlProviderOutput {
-    /// Creates a new builder-style object to manufacture [`GetSamlProviderOutput`](crate::output::GetSamlProviderOutput)
+    /// Creates a new builder-style object to manufacture [`GetSamlProviderOutput`](crate::output::GetSamlProviderOutput).
     pub fn builder() -> crate::output::get_saml_provider_output::Builder {
         crate::output::get_saml_provider_output::Builder::default()
     }
@@ -6196,11 +6245,14 @@ impl GetSamlProviderOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRolePolicyOutput {
     /// <p>The role the policy is associated with.</p>
+    #[doc(hidden)]
     pub role_name: std::option::Option<std::string::String>,
     /// <p>The name of the policy.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The policy document.</p>
     /// <p>IAM stores policies in JSON format. However, resources that were created using CloudFormation templates can be formatted in YAML. CloudFormation always converts a YAML policy to JSON format before submitting it to IAM.</p>
+    #[doc(hidden)]
     pub policy_document: std::option::Option<std::string::String>,
 }
 impl GetRolePolicyOutput {
@@ -6227,11 +6279,10 @@ impl std::fmt::Debug for GetRolePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetRolePolicyOutput`](crate::output::GetRolePolicyOutput)
+/// See [`GetRolePolicyOutput`](crate::output::GetRolePolicyOutput).
 pub mod get_role_policy_output {
 
-    /// A builder for [`GetRolePolicyOutput`](crate::output::GetRolePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRolePolicyOutput`](crate::output::GetRolePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_name: std::option::Option<std::string::String>,
@@ -6274,7 +6325,7 @@ pub mod get_role_policy_output {
             self.policy_document = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRolePolicyOutput`](crate::output::GetRolePolicyOutput)
+        /// Consumes the builder and constructs a [`GetRolePolicyOutput`](crate::output::GetRolePolicyOutput).
         pub fn build(self) -> crate::output::GetRolePolicyOutput {
             crate::output::GetRolePolicyOutput {
                 role_name: self.role_name,
@@ -6285,7 +6336,7 @@ pub mod get_role_policy_output {
     }
 }
 impl GetRolePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetRolePolicyOutput`](crate::output::GetRolePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetRolePolicyOutput`](crate::output::GetRolePolicyOutput).
     pub fn builder() -> crate::output::get_role_policy_output::Builder {
         crate::output::get_role_policy_output::Builder::default()
     }
@@ -6296,6 +6347,7 @@ impl GetRolePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRoleOutput {
     /// <p>A structure containing details about the IAM role.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<crate::model::Role>,
 }
 impl GetRoleOutput {
@@ -6311,11 +6363,10 @@ impl std::fmt::Debug for GetRoleOutput {
         formatter.finish()
     }
 }
-/// See [`GetRoleOutput`](crate::output::GetRoleOutput)
+/// See [`GetRoleOutput`](crate::output::GetRoleOutput).
 pub mod get_role_output {
 
-    /// A builder for [`GetRoleOutput`](crate::output::GetRoleOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRoleOutput`](crate::output::GetRoleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role: std::option::Option<crate::model::Role>,
@@ -6331,14 +6382,14 @@ pub mod get_role_output {
             self.role = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRoleOutput`](crate::output::GetRoleOutput)
+        /// Consumes the builder and constructs a [`GetRoleOutput`](crate::output::GetRoleOutput).
         pub fn build(self) -> crate::output::GetRoleOutput {
             crate::output::GetRoleOutput { role: self.role }
         }
     }
 }
 impl GetRoleOutput {
-    /// Creates a new builder-style object to manufacture [`GetRoleOutput`](crate::output::GetRoleOutput)
+    /// Creates a new builder-style object to manufacture [`GetRoleOutput`](crate::output::GetRoleOutput).
     pub fn builder() -> crate::output::get_role_output::Builder {
         crate::output::get_role_output::Builder::default()
     }
@@ -6349,6 +6400,7 @@ impl GetRoleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetPolicyVersionOutput {
     /// <p>A structure containing details about the policy version.</p>
+    #[doc(hidden)]
     pub policy_version: std::option::Option<crate::model::PolicyVersion>,
 }
 impl GetPolicyVersionOutput {
@@ -6364,11 +6416,10 @@ impl std::fmt::Debug for GetPolicyVersionOutput {
         formatter.finish()
     }
 }
-/// See [`GetPolicyVersionOutput`](crate::output::GetPolicyVersionOutput)
+/// See [`GetPolicyVersionOutput`](crate::output::GetPolicyVersionOutput).
 pub mod get_policy_version_output {
 
-    /// A builder for [`GetPolicyVersionOutput`](crate::output::GetPolicyVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetPolicyVersionOutput`](crate::output::GetPolicyVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_version: std::option::Option<crate::model::PolicyVersion>,
@@ -6387,7 +6438,7 @@ pub mod get_policy_version_output {
             self.policy_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetPolicyVersionOutput`](crate::output::GetPolicyVersionOutput)
+        /// Consumes the builder and constructs a [`GetPolicyVersionOutput`](crate::output::GetPolicyVersionOutput).
         pub fn build(self) -> crate::output::GetPolicyVersionOutput {
             crate::output::GetPolicyVersionOutput {
                 policy_version: self.policy_version,
@@ -6396,7 +6447,7 @@ pub mod get_policy_version_output {
     }
 }
 impl GetPolicyVersionOutput {
-    /// Creates a new builder-style object to manufacture [`GetPolicyVersionOutput`](crate::output::GetPolicyVersionOutput)
+    /// Creates a new builder-style object to manufacture [`GetPolicyVersionOutput`](crate::output::GetPolicyVersionOutput).
     pub fn builder() -> crate::output::get_policy_version_output::Builder {
         crate::output::get_policy_version_output::Builder::default()
     }
@@ -6407,6 +6458,7 @@ impl GetPolicyVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetPolicyOutput {
     /// <p>A structure containing details about the policy.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<crate::model::Policy>,
 }
 impl GetPolicyOutput {
@@ -6422,11 +6474,10 @@ impl std::fmt::Debug for GetPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetPolicyOutput`](crate::output::GetPolicyOutput)
+/// See [`GetPolicyOutput`](crate::output::GetPolicyOutput).
 pub mod get_policy_output {
 
-    /// A builder for [`GetPolicyOutput`](crate::output::GetPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetPolicyOutput`](crate::output::GetPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<crate::model::Policy>,
@@ -6442,7 +6493,7 @@ pub mod get_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetPolicyOutput`](crate::output::GetPolicyOutput)
+        /// Consumes the builder and constructs a [`GetPolicyOutput`](crate::output::GetPolicyOutput).
         pub fn build(self) -> crate::output::GetPolicyOutput {
             crate::output::GetPolicyOutput {
                 policy: self.policy,
@@ -6451,7 +6502,7 @@ pub mod get_policy_output {
     }
 }
 impl GetPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetPolicyOutput`](crate::output::GetPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetPolicyOutput`](crate::output::GetPolicyOutput).
     pub fn builder() -> crate::output::get_policy_output::Builder {
         crate::output::get_policy_output::Builder::default()
     }
@@ -6462,24 +6513,33 @@ impl GetPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetOrganizationsAccessReportOutput {
     /// <p>The status of the job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatusType>,
     /// <p>The date and time, in&nbsp;<a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the report job was created.</p>
+    #[doc(hidden)]
     pub job_creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time, in&nbsp;<a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the generated report job was completed or failed.</p>
     /// <p>This field is null if the job is still in progress, as indicated by a job status value of <code>IN_PROGRESS</code>.</p>
+    #[doc(hidden)]
     pub job_completion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The number of services that the applicable SCPs allow account principals to access.</p>
+    #[doc(hidden)]
     pub number_of_services_accessible: std::option::Option<i32>,
     /// <p>The number of services that account principals are allowed but did not attempt to access.</p>
+    #[doc(hidden)]
     pub number_of_services_not_accessed: std::option::Option<i32>,
     /// <p>An&nbsp;object that contains details about the most recent attempt to access the service.</p>
+    #[doc(hidden)]
     pub access_details: std::option::Option<std::vec::Vec<crate::model::AccessDetail>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>Contains information about the reason that the operation failed.</p>
     /// <p>This data type is used as a response element in the <code>GetOrganizationsAccessReport</code>, <code>GetServiceLastAccessedDetails</code>, and <code>GetServiceLastAccessedDetailsWithEntities</code> operations.</p>
+    #[doc(hidden)]
     pub error_details: std::option::Option<crate::model::ErrorDetails>,
 }
 impl GetOrganizationsAccessReportOutput {
@@ -6543,11 +6603,10 @@ impl std::fmt::Debug for GetOrganizationsAccessReportOutput {
         formatter.finish()
     }
 }
-/// See [`GetOrganizationsAccessReportOutput`](crate::output::GetOrganizationsAccessReportOutput)
+/// See [`GetOrganizationsAccessReportOutput`](crate::output::GetOrganizationsAccessReportOutput).
 pub mod get_organizations_access_report_output {
 
-    /// A builder for [`GetOrganizationsAccessReportOutput`](crate::output::GetOrganizationsAccessReportOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetOrganizationsAccessReportOutput`](crate::output::GetOrganizationsAccessReportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_status: std::option::Option<crate::model::JobStatusType>,
@@ -6682,7 +6741,7 @@ pub mod get_organizations_access_report_output {
             self.error_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetOrganizationsAccessReportOutput`](crate::output::GetOrganizationsAccessReportOutput)
+        /// Consumes the builder and constructs a [`GetOrganizationsAccessReportOutput`](crate::output::GetOrganizationsAccessReportOutput).
         pub fn build(self) -> crate::output::GetOrganizationsAccessReportOutput {
             crate::output::GetOrganizationsAccessReportOutput {
                 job_status: self.job_status,
@@ -6699,7 +6758,7 @@ pub mod get_organizations_access_report_output {
     }
 }
 impl GetOrganizationsAccessReportOutput {
-    /// Creates a new builder-style object to manufacture [`GetOrganizationsAccessReportOutput`](crate::output::GetOrganizationsAccessReportOutput)
+    /// Creates a new builder-style object to manufacture [`GetOrganizationsAccessReportOutput`](crate::output::GetOrganizationsAccessReportOutput).
     pub fn builder() -> crate::output::get_organizations_access_report_output::Builder {
         crate::output::get_organizations_access_report_output::Builder::default()
     }
@@ -6710,14 +6769,19 @@ impl GetOrganizationsAccessReportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetOpenIdConnectProviderOutput {
     /// <p>The URL that the IAM OIDC provider resource object is associated with. For more information, see <code>CreateOpenIDConnectProvider</code>.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// <p>A list of client IDs (also known as audiences) that are associated with the specified IAM OIDC provider resource object. For more information, see <code>CreateOpenIDConnectProvider</code>.</p>
+    #[doc(hidden)]
     pub client_id_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of certificate thumbprints that are associated with the specified IAM OIDC provider resource object. For more information, see <code>CreateOpenIDConnectProvider</code>. </p>
+    #[doc(hidden)]
     pub thumbprint_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The date and time when the IAM OIDC provider resource object was created in the Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub create_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A list of tags that are attached to the specified IAM OIDC provider. The returned list of tags is sorted by tag key. For more information about tagging, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM resources</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl GetOpenIdConnectProviderOutput {
@@ -6753,11 +6817,10 @@ impl std::fmt::Debug for GetOpenIdConnectProviderOutput {
         formatter.finish()
     }
 }
-/// See [`GetOpenIdConnectProviderOutput`](crate::output::GetOpenIdConnectProviderOutput)
+/// See [`GetOpenIdConnectProviderOutput`](crate::output::GetOpenIdConnectProviderOutput).
 pub mod get_open_id_connect_provider_output {
 
-    /// A builder for [`GetOpenIdConnectProviderOutput`](crate::output::GetOpenIdConnectProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetOpenIdConnectProviderOutput`](crate::output::GetOpenIdConnectProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) url: std::option::Option<std::string::String>,
@@ -6847,7 +6910,7 @@ pub mod get_open_id_connect_provider_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetOpenIdConnectProviderOutput`](crate::output::GetOpenIdConnectProviderOutput)
+        /// Consumes the builder and constructs a [`GetOpenIdConnectProviderOutput`](crate::output::GetOpenIdConnectProviderOutput).
         pub fn build(self) -> crate::output::GetOpenIdConnectProviderOutput {
             crate::output::GetOpenIdConnectProviderOutput {
                 url: self.url,
@@ -6860,7 +6923,7 @@ pub mod get_open_id_connect_provider_output {
     }
 }
 impl GetOpenIdConnectProviderOutput {
-    /// Creates a new builder-style object to manufacture [`GetOpenIdConnectProviderOutput`](crate::output::GetOpenIdConnectProviderOutput)
+    /// Creates a new builder-style object to manufacture [`GetOpenIdConnectProviderOutput`](crate::output::GetOpenIdConnectProviderOutput).
     pub fn builder() -> crate::output::get_open_id_connect_provider_output::Builder {
         crate::output::get_open_id_connect_provider_output::Builder::default()
     }
@@ -6871,6 +6934,7 @@ impl GetOpenIdConnectProviderOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetLoginProfileOutput {
     /// <p>A structure containing the user name and the profile creation date for the user.</p>
+    #[doc(hidden)]
     pub login_profile: std::option::Option<crate::model::LoginProfile>,
 }
 impl GetLoginProfileOutput {
@@ -6886,11 +6950,10 @@ impl std::fmt::Debug for GetLoginProfileOutput {
         formatter.finish()
     }
 }
-/// See [`GetLoginProfileOutput`](crate::output::GetLoginProfileOutput)
+/// See [`GetLoginProfileOutput`](crate::output::GetLoginProfileOutput).
 pub mod get_login_profile_output {
 
-    /// A builder for [`GetLoginProfileOutput`](crate::output::GetLoginProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetLoginProfileOutput`](crate::output::GetLoginProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) login_profile: std::option::Option<crate::model::LoginProfile>,
@@ -6909,7 +6972,7 @@ pub mod get_login_profile_output {
             self.login_profile = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetLoginProfileOutput`](crate::output::GetLoginProfileOutput)
+        /// Consumes the builder and constructs a [`GetLoginProfileOutput`](crate::output::GetLoginProfileOutput).
         pub fn build(self) -> crate::output::GetLoginProfileOutput {
             crate::output::GetLoginProfileOutput {
                 login_profile: self.login_profile,
@@ -6918,7 +6981,7 @@ pub mod get_login_profile_output {
     }
 }
 impl GetLoginProfileOutput {
-    /// Creates a new builder-style object to manufacture [`GetLoginProfileOutput`](crate::output::GetLoginProfileOutput)
+    /// Creates a new builder-style object to manufacture [`GetLoginProfileOutput`](crate::output::GetLoginProfileOutput).
     pub fn builder() -> crate::output::get_login_profile_output::Builder {
         crate::output::get_login_profile_output::Builder::default()
     }
@@ -6929,6 +6992,7 @@ impl GetLoginProfileOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetInstanceProfileOutput {
     /// <p>A structure containing details about the instance profile.</p>
+    #[doc(hidden)]
     pub instance_profile: std::option::Option<crate::model::InstanceProfile>,
 }
 impl GetInstanceProfileOutput {
@@ -6944,11 +7008,10 @@ impl std::fmt::Debug for GetInstanceProfileOutput {
         formatter.finish()
     }
 }
-/// See [`GetInstanceProfileOutput`](crate::output::GetInstanceProfileOutput)
+/// See [`GetInstanceProfileOutput`](crate::output::GetInstanceProfileOutput).
 pub mod get_instance_profile_output {
 
-    /// A builder for [`GetInstanceProfileOutput`](crate::output::GetInstanceProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetInstanceProfileOutput`](crate::output::GetInstanceProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_profile: std::option::Option<crate::model::InstanceProfile>,
@@ -6967,7 +7030,7 @@ pub mod get_instance_profile_output {
             self.instance_profile = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetInstanceProfileOutput`](crate::output::GetInstanceProfileOutput)
+        /// Consumes the builder and constructs a [`GetInstanceProfileOutput`](crate::output::GetInstanceProfileOutput).
         pub fn build(self) -> crate::output::GetInstanceProfileOutput {
             crate::output::GetInstanceProfileOutput {
                 instance_profile: self.instance_profile,
@@ -6976,7 +7039,7 @@ pub mod get_instance_profile_output {
     }
 }
 impl GetInstanceProfileOutput {
-    /// Creates a new builder-style object to manufacture [`GetInstanceProfileOutput`](crate::output::GetInstanceProfileOutput)
+    /// Creates a new builder-style object to manufacture [`GetInstanceProfileOutput`](crate::output::GetInstanceProfileOutput).
     pub fn builder() -> crate::output::get_instance_profile_output::Builder {
         crate::output::get_instance_profile_output::Builder::default()
     }
@@ -6987,11 +7050,14 @@ impl GetInstanceProfileOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetGroupPolicyOutput {
     /// <p>The group the policy is associated with.</p>
+    #[doc(hidden)]
     pub group_name: std::option::Option<std::string::String>,
     /// <p>The name of the policy.</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The policy document.</p>
     /// <p>IAM stores policies in JSON format. However, resources that were created using CloudFormation templates can be formatted in YAML. CloudFormation always converts a YAML policy to JSON format before submitting it to IAM.</p>
+    #[doc(hidden)]
     pub policy_document: std::option::Option<std::string::String>,
 }
 impl GetGroupPolicyOutput {
@@ -7018,11 +7084,10 @@ impl std::fmt::Debug for GetGroupPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetGroupPolicyOutput`](crate::output::GetGroupPolicyOutput)
+/// See [`GetGroupPolicyOutput`](crate::output::GetGroupPolicyOutput).
 pub mod get_group_policy_output {
 
-    /// A builder for [`GetGroupPolicyOutput`](crate::output::GetGroupPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetGroupPolicyOutput`](crate::output::GetGroupPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_name: std::option::Option<std::string::String>,
@@ -7065,7 +7130,7 @@ pub mod get_group_policy_output {
             self.policy_document = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetGroupPolicyOutput`](crate::output::GetGroupPolicyOutput)
+        /// Consumes the builder and constructs a [`GetGroupPolicyOutput`](crate::output::GetGroupPolicyOutput).
         pub fn build(self) -> crate::output::GetGroupPolicyOutput {
             crate::output::GetGroupPolicyOutput {
                 group_name: self.group_name,
@@ -7076,7 +7141,7 @@ pub mod get_group_policy_output {
     }
 }
 impl GetGroupPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetGroupPolicyOutput`](crate::output::GetGroupPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetGroupPolicyOutput`](crate::output::GetGroupPolicyOutput).
     pub fn builder() -> crate::output::get_group_policy_output::Builder {
         crate::output::get_group_policy_output::Builder::default()
     }
@@ -7087,12 +7152,16 @@ impl GetGroupPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetGroupOutput {
     /// <p>A structure that contains details about the group.</p>
+    #[doc(hidden)]
     pub group: std::option::Option<crate::model::Group>,
     /// <p>A list of users in the group.</p>
+    #[doc(hidden)]
     pub users: std::option::Option<std::vec::Vec<crate::model::User>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl GetGroupOutput {
@@ -7123,11 +7192,10 @@ impl std::fmt::Debug for GetGroupOutput {
         formatter.finish()
     }
 }
-/// See [`GetGroupOutput`](crate::output::GetGroupOutput)
+/// See [`GetGroupOutput`](crate::output::GetGroupOutput).
 pub mod get_group_output {
 
-    /// A builder for [`GetGroupOutput`](crate::output::GetGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetGroupOutput`](crate::output::GetGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group: std::option::Option<crate::model::Group>,
@@ -7185,7 +7253,7 @@ pub mod get_group_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetGroupOutput`](crate::output::GetGroupOutput)
+        /// Consumes the builder and constructs a [`GetGroupOutput`](crate::output::GetGroupOutput).
         pub fn build(self) -> crate::output::GetGroupOutput {
             crate::output::GetGroupOutput {
                 group: self.group,
@@ -7197,7 +7265,7 @@ pub mod get_group_output {
     }
 }
 impl GetGroupOutput {
-    /// Creates a new builder-style object to manufacture [`GetGroupOutput`](crate::output::GetGroupOutput)
+    /// Creates a new builder-style object to manufacture [`GetGroupOutput`](crate::output::GetGroupOutput).
     pub fn builder() -> crate::output::get_group_output::Builder {
         crate::output::get_group_output::Builder::default()
     }
@@ -7208,10 +7276,13 @@ impl GetGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCredentialReportOutput {
     /// <p>Contains the credential report. The report is Base64-encoded.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The format (MIME type) of the credential report.</p>
+    #[doc(hidden)]
     pub report_format: std::option::Option<crate::model::ReportFormatType>,
     /// <p> The date and time when the credential report was created, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>.</p>
+    #[doc(hidden)]
     pub generated_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GetCredentialReportOutput {
@@ -7237,11 +7308,10 @@ impl std::fmt::Debug for GetCredentialReportOutput {
         formatter.finish()
     }
 }
-/// See [`GetCredentialReportOutput`](crate::output::GetCredentialReportOutput)
+/// See [`GetCredentialReportOutput`](crate::output::GetCredentialReportOutput).
 pub mod get_credential_report_output {
 
-    /// A builder for [`GetCredentialReportOutput`](crate::output::GetCredentialReportOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCredentialReportOutput`](crate::output::GetCredentialReportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content: std::option::Option<aws_smithy_types::Blob>,
@@ -7285,7 +7355,7 @@ pub mod get_credential_report_output {
             self.generated_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCredentialReportOutput`](crate::output::GetCredentialReportOutput)
+        /// Consumes the builder and constructs a [`GetCredentialReportOutput`](crate::output::GetCredentialReportOutput).
         pub fn build(self) -> crate::output::GetCredentialReportOutput {
             crate::output::GetCredentialReportOutput {
                 content: self.content,
@@ -7296,7 +7366,7 @@ pub mod get_credential_report_output {
     }
 }
 impl GetCredentialReportOutput {
-    /// Creates a new builder-style object to manufacture [`GetCredentialReportOutput`](crate::output::GetCredentialReportOutput)
+    /// Creates a new builder-style object to manufacture [`GetCredentialReportOutput`](crate::output::GetCredentialReportOutput).
     pub fn builder() -> crate::output::get_credential_report_output::Builder {
         crate::output::get_credential_report_output::Builder::default()
     }
@@ -7307,6 +7377,7 @@ impl GetCredentialReportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetContextKeysForPrincipalPolicyOutput {
     /// <p>The list of context keys that are referenced in the input policies.</p>
+    #[doc(hidden)]
     pub context_key_names: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl GetContextKeysForPrincipalPolicyOutput {
@@ -7322,11 +7393,10 @@ impl std::fmt::Debug for GetContextKeysForPrincipalPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetContextKeysForPrincipalPolicyOutput`](crate::output::GetContextKeysForPrincipalPolicyOutput)
+/// See [`GetContextKeysForPrincipalPolicyOutput`](crate::output::GetContextKeysForPrincipalPolicyOutput).
 pub mod get_context_keys_for_principal_policy_output {
 
-    /// A builder for [`GetContextKeysForPrincipalPolicyOutput`](crate::output::GetContextKeysForPrincipalPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetContextKeysForPrincipalPolicyOutput`](crate::output::GetContextKeysForPrincipalPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) context_key_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -7351,7 +7421,7 @@ pub mod get_context_keys_for_principal_policy_output {
             self.context_key_names = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetContextKeysForPrincipalPolicyOutput`](crate::output::GetContextKeysForPrincipalPolicyOutput)
+        /// Consumes the builder and constructs a [`GetContextKeysForPrincipalPolicyOutput`](crate::output::GetContextKeysForPrincipalPolicyOutput).
         pub fn build(self) -> crate::output::GetContextKeysForPrincipalPolicyOutput {
             crate::output::GetContextKeysForPrincipalPolicyOutput {
                 context_key_names: self.context_key_names,
@@ -7360,7 +7430,7 @@ pub mod get_context_keys_for_principal_policy_output {
     }
 }
 impl GetContextKeysForPrincipalPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetContextKeysForPrincipalPolicyOutput`](crate::output::GetContextKeysForPrincipalPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetContextKeysForPrincipalPolicyOutput`](crate::output::GetContextKeysForPrincipalPolicyOutput).
     pub fn builder() -> crate::output::get_context_keys_for_principal_policy_output::Builder {
         crate::output::get_context_keys_for_principal_policy_output::Builder::default()
     }
@@ -7371,6 +7441,7 @@ impl GetContextKeysForPrincipalPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetContextKeysForCustomPolicyOutput {
     /// <p>The list of context keys that are referenced in the input policies.</p>
+    #[doc(hidden)]
     pub context_key_names: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl GetContextKeysForCustomPolicyOutput {
@@ -7386,11 +7457,10 @@ impl std::fmt::Debug for GetContextKeysForCustomPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetContextKeysForCustomPolicyOutput`](crate::output::GetContextKeysForCustomPolicyOutput)
+/// See [`GetContextKeysForCustomPolicyOutput`](crate::output::GetContextKeysForCustomPolicyOutput).
 pub mod get_context_keys_for_custom_policy_output {
 
-    /// A builder for [`GetContextKeysForCustomPolicyOutput`](crate::output::GetContextKeysForCustomPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetContextKeysForCustomPolicyOutput`](crate::output::GetContextKeysForCustomPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) context_key_names: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -7415,7 +7485,7 @@ pub mod get_context_keys_for_custom_policy_output {
             self.context_key_names = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetContextKeysForCustomPolicyOutput`](crate::output::GetContextKeysForCustomPolicyOutput)
+        /// Consumes the builder and constructs a [`GetContextKeysForCustomPolicyOutput`](crate::output::GetContextKeysForCustomPolicyOutput).
         pub fn build(self) -> crate::output::GetContextKeysForCustomPolicyOutput {
             crate::output::GetContextKeysForCustomPolicyOutput {
                 context_key_names: self.context_key_names,
@@ -7424,7 +7494,7 @@ pub mod get_context_keys_for_custom_policy_output {
     }
 }
 impl GetContextKeysForCustomPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetContextKeysForCustomPolicyOutput`](crate::output::GetContextKeysForCustomPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetContextKeysForCustomPolicyOutput`](crate::output::GetContextKeysForCustomPolicyOutput).
     pub fn builder() -> crate::output::get_context_keys_for_custom_policy_output::Builder {
         crate::output::get_context_keys_for_custom_policy_output::Builder::default()
     }
@@ -7435,6 +7505,7 @@ impl GetContextKeysForCustomPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAccountSummaryOutput {
     /// <p>A set of key–value pairs containing information about IAM entity usage and IAM quotas.</p>
+    #[doc(hidden)]
     pub summary_map:
         std::option::Option<std::collections::HashMap<crate::model::SummaryKeyType, i32>>,
 }
@@ -7453,11 +7524,10 @@ impl std::fmt::Debug for GetAccountSummaryOutput {
         formatter.finish()
     }
 }
-/// See [`GetAccountSummaryOutput`](crate::output::GetAccountSummaryOutput)
+/// See [`GetAccountSummaryOutput`](crate::output::GetAccountSummaryOutput).
 pub mod get_account_summary_output {
 
-    /// A builder for [`GetAccountSummaryOutput`](crate::output::GetAccountSummaryOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAccountSummaryOutput`](crate::output::GetAccountSummaryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary_map:
@@ -7485,7 +7555,7 @@ pub mod get_account_summary_output {
             self.summary_map = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAccountSummaryOutput`](crate::output::GetAccountSummaryOutput)
+        /// Consumes the builder and constructs a [`GetAccountSummaryOutput`](crate::output::GetAccountSummaryOutput).
         pub fn build(self) -> crate::output::GetAccountSummaryOutput {
             crate::output::GetAccountSummaryOutput {
                 summary_map: self.summary_map,
@@ -7494,7 +7564,7 @@ pub mod get_account_summary_output {
     }
 }
 impl GetAccountSummaryOutput {
-    /// Creates a new builder-style object to manufacture [`GetAccountSummaryOutput`](crate::output::GetAccountSummaryOutput)
+    /// Creates a new builder-style object to manufacture [`GetAccountSummaryOutput`](crate::output::GetAccountSummaryOutput).
     pub fn builder() -> crate::output::get_account_summary_output::Builder {
         crate::output::get_account_summary_output::Builder::default()
     }
@@ -7505,6 +7575,7 @@ impl GetAccountSummaryOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAccountPasswordPolicyOutput {
     /// <p>A structure that contains details about the account's password policy.</p>
+    #[doc(hidden)]
     pub password_policy: std::option::Option<crate::model::PasswordPolicy>,
 }
 impl GetAccountPasswordPolicyOutput {
@@ -7520,11 +7591,10 @@ impl std::fmt::Debug for GetAccountPasswordPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetAccountPasswordPolicyOutput`](crate::output::GetAccountPasswordPolicyOutput)
+/// See [`GetAccountPasswordPolicyOutput`](crate::output::GetAccountPasswordPolicyOutput).
 pub mod get_account_password_policy_output {
 
-    /// A builder for [`GetAccountPasswordPolicyOutput`](crate::output::GetAccountPasswordPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAccountPasswordPolicyOutput`](crate::output::GetAccountPasswordPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) password_policy: std::option::Option<crate::model::PasswordPolicy>,
@@ -7543,7 +7613,7 @@ pub mod get_account_password_policy_output {
             self.password_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAccountPasswordPolicyOutput`](crate::output::GetAccountPasswordPolicyOutput)
+        /// Consumes the builder and constructs a [`GetAccountPasswordPolicyOutput`](crate::output::GetAccountPasswordPolicyOutput).
         pub fn build(self) -> crate::output::GetAccountPasswordPolicyOutput {
             crate::output::GetAccountPasswordPolicyOutput {
                 password_policy: self.password_policy,
@@ -7552,7 +7622,7 @@ pub mod get_account_password_policy_output {
     }
 }
 impl GetAccountPasswordPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetAccountPasswordPolicyOutput`](crate::output::GetAccountPasswordPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetAccountPasswordPolicyOutput`](crate::output::GetAccountPasswordPolicyOutput).
     pub fn builder() -> crate::output::get_account_password_policy_output::Builder {
         crate::output::get_account_password_policy_output::Builder::default()
     }
@@ -7563,16 +7633,22 @@ impl GetAccountPasswordPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAccountAuthorizationDetailsOutput {
     /// <p>A list containing information about IAM users.</p>
+    #[doc(hidden)]
     pub user_detail_list: std::option::Option<std::vec::Vec<crate::model::UserDetail>>,
     /// <p>A list containing information about IAM groups.</p>
+    #[doc(hidden)]
     pub group_detail_list: std::option::Option<std::vec::Vec<crate::model::GroupDetail>>,
     /// <p>A list containing information about IAM roles.</p>
+    #[doc(hidden)]
     pub role_detail_list: std::option::Option<std::vec::Vec<crate::model::RoleDetail>>,
     /// <p>A list containing information about managed policies.</p>
+    #[doc(hidden)]
     pub policies: std::option::Option<std::vec::Vec<crate::model::ManagedPolicyDetail>>,
     /// <p>A flag that indicates whether there are more items to return. If your results were truncated, you can make a subsequent pagination request using the <code>Marker</code> request parameter to retrieve more items. Note that IAM might return fewer than the <code>MaxItems</code> number of results even when there are more results available. We recommend that you check <code>IsTruncated</code> after every call to ensure that you receive all your results.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>When <code>IsTruncated</code> is <code>true</code>, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent pagination request.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl GetAccountAuthorizationDetailsOutput {
@@ -7613,11 +7689,10 @@ impl std::fmt::Debug for GetAccountAuthorizationDetailsOutput {
         formatter.finish()
     }
 }
-/// See [`GetAccountAuthorizationDetailsOutput`](crate::output::GetAccountAuthorizationDetailsOutput)
+/// See [`GetAccountAuthorizationDetailsOutput`](crate::output::GetAccountAuthorizationDetailsOutput).
 pub mod get_account_authorization_details_output {
 
-    /// A builder for [`GetAccountAuthorizationDetailsOutput`](crate::output::GetAccountAuthorizationDetailsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAccountAuthorizationDetailsOutput`](crate::output::GetAccountAuthorizationDetailsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_detail_list: std::option::Option<std::vec::Vec<crate::model::UserDetail>>,
@@ -7724,7 +7799,7 @@ pub mod get_account_authorization_details_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAccountAuthorizationDetailsOutput`](crate::output::GetAccountAuthorizationDetailsOutput)
+        /// Consumes the builder and constructs a [`GetAccountAuthorizationDetailsOutput`](crate::output::GetAccountAuthorizationDetailsOutput).
         pub fn build(self) -> crate::output::GetAccountAuthorizationDetailsOutput {
             crate::output::GetAccountAuthorizationDetailsOutput {
                 user_detail_list: self.user_detail_list,
@@ -7738,7 +7813,7 @@ pub mod get_account_authorization_details_output {
     }
 }
 impl GetAccountAuthorizationDetailsOutput {
-    /// Creates a new builder-style object to manufacture [`GetAccountAuthorizationDetailsOutput`](crate::output::GetAccountAuthorizationDetailsOutput)
+    /// Creates a new builder-style object to manufacture [`GetAccountAuthorizationDetailsOutput`](crate::output::GetAccountAuthorizationDetailsOutput).
     pub fn builder() -> crate::output::get_account_authorization_details_output::Builder {
         crate::output::get_account_authorization_details_output::Builder::default()
     }
@@ -7750,8 +7825,10 @@ impl GetAccountAuthorizationDetailsOutput {
 pub struct GetAccessKeyLastUsedOutput {
     /// <p>The name of the IAM user that owns this access key.</p>
     /// <p></p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>Contains information about the last time the access key was used.</p>
+    #[doc(hidden)]
     pub access_key_last_used: std::option::Option<crate::model::AccessKeyLastUsed>,
 }
 impl GetAccessKeyLastUsedOutput {
@@ -7773,11 +7850,10 @@ impl std::fmt::Debug for GetAccessKeyLastUsedOutput {
         formatter.finish()
     }
 }
-/// See [`GetAccessKeyLastUsedOutput`](crate::output::GetAccessKeyLastUsedOutput)
+/// See [`GetAccessKeyLastUsedOutput`](crate::output::GetAccessKeyLastUsedOutput).
 pub mod get_access_key_last_used_output {
 
-    /// A builder for [`GetAccessKeyLastUsedOutput`](crate::output::GetAccessKeyLastUsedOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAccessKeyLastUsedOutput`](crate::output::GetAccessKeyLastUsedOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -7809,7 +7885,7 @@ pub mod get_access_key_last_used_output {
             self.access_key_last_used = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAccessKeyLastUsedOutput`](crate::output::GetAccessKeyLastUsedOutput)
+        /// Consumes the builder and constructs a [`GetAccessKeyLastUsedOutput`](crate::output::GetAccessKeyLastUsedOutput).
         pub fn build(self) -> crate::output::GetAccessKeyLastUsedOutput {
             crate::output::GetAccessKeyLastUsedOutput {
                 user_name: self.user_name,
@@ -7819,7 +7895,7 @@ pub mod get_access_key_last_used_output {
     }
 }
 impl GetAccessKeyLastUsedOutput {
-    /// Creates a new builder-style object to manufacture [`GetAccessKeyLastUsedOutput`](crate::output::GetAccessKeyLastUsedOutput)
+    /// Creates a new builder-style object to manufacture [`GetAccessKeyLastUsedOutput`](crate::output::GetAccessKeyLastUsedOutput).
     pub fn builder() -> crate::output::get_access_key_last_used_output::Builder {
         crate::output::get_access_key_last_used_output::Builder::default()
     }
@@ -7830,6 +7906,7 @@ impl GetAccessKeyLastUsedOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GenerateServiceLastAccessedDetailsOutput {
     /// <p>The <code>JobId</code> that you can use in the <code>GetServiceLastAccessedDetails</code> or <code>GetServiceLastAccessedDetailsWithEntities</code> operations. The <code>JobId</code> returned by <code>GenerateServiceLastAccessedDetail</code> must be used by the same role within a session, or by the same user when used to call <code>GetServiceLastAccessedDetail</code>.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
 }
 impl GenerateServiceLastAccessedDetailsOutput {
@@ -7845,11 +7922,10 @@ impl std::fmt::Debug for GenerateServiceLastAccessedDetailsOutput {
         formatter.finish()
     }
 }
-/// See [`GenerateServiceLastAccessedDetailsOutput`](crate::output::GenerateServiceLastAccessedDetailsOutput)
+/// See [`GenerateServiceLastAccessedDetailsOutput`](crate::output::GenerateServiceLastAccessedDetailsOutput).
 pub mod generate_service_last_accessed_details_output {
 
-    /// A builder for [`GenerateServiceLastAccessedDetailsOutput`](crate::output::GenerateServiceLastAccessedDetailsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GenerateServiceLastAccessedDetailsOutput`](crate::output::GenerateServiceLastAccessedDetailsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -7865,7 +7941,7 @@ pub mod generate_service_last_accessed_details_output {
             self.job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`GenerateServiceLastAccessedDetailsOutput`](crate::output::GenerateServiceLastAccessedDetailsOutput)
+        /// Consumes the builder and constructs a [`GenerateServiceLastAccessedDetailsOutput`](crate::output::GenerateServiceLastAccessedDetailsOutput).
         pub fn build(self) -> crate::output::GenerateServiceLastAccessedDetailsOutput {
             crate::output::GenerateServiceLastAccessedDetailsOutput {
                 job_id: self.job_id,
@@ -7874,7 +7950,7 @@ pub mod generate_service_last_accessed_details_output {
     }
 }
 impl GenerateServiceLastAccessedDetailsOutput {
-    /// Creates a new builder-style object to manufacture [`GenerateServiceLastAccessedDetailsOutput`](crate::output::GenerateServiceLastAccessedDetailsOutput)
+    /// Creates a new builder-style object to manufacture [`GenerateServiceLastAccessedDetailsOutput`](crate::output::GenerateServiceLastAccessedDetailsOutput).
     pub fn builder() -> crate::output::generate_service_last_accessed_details_output::Builder {
         crate::output::generate_service_last_accessed_details_output::Builder::default()
     }
@@ -7885,6 +7961,7 @@ impl GenerateServiceLastAccessedDetailsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GenerateOrganizationsAccessReportOutput {
     /// <p>The job identifier that you can use in the <code>GetOrganizationsAccessReport</code> operation.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
 }
 impl GenerateOrganizationsAccessReportOutput {
@@ -7900,11 +7977,10 @@ impl std::fmt::Debug for GenerateOrganizationsAccessReportOutput {
         formatter.finish()
     }
 }
-/// See [`GenerateOrganizationsAccessReportOutput`](crate::output::GenerateOrganizationsAccessReportOutput)
+/// See [`GenerateOrganizationsAccessReportOutput`](crate::output::GenerateOrganizationsAccessReportOutput).
 pub mod generate_organizations_access_report_output {
 
-    /// A builder for [`GenerateOrganizationsAccessReportOutput`](crate::output::GenerateOrganizationsAccessReportOutput)
-    #[non_exhaustive]
+    /// A builder for [`GenerateOrganizationsAccessReportOutput`](crate::output::GenerateOrganizationsAccessReportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -7920,7 +7996,7 @@ pub mod generate_organizations_access_report_output {
             self.job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`GenerateOrganizationsAccessReportOutput`](crate::output::GenerateOrganizationsAccessReportOutput)
+        /// Consumes the builder and constructs a [`GenerateOrganizationsAccessReportOutput`](crate::output::GenerateOrganizationsAccessReportOutput).
         pub fn build(self) -> crate::output::GenerateOrganizationsAccessReportOutput {
             crate::output::GenerateOrganizationsAccessReportOutput {
                 job_id: self.job_id,
@@ -7929,7 +8005,7 @@ pub mod generate_organizations_access_report_output {
     }
 }
 impl GenerateOrganizationsAccessReportOutput {
-    /// Creates a new builder-style object to manufacture [`GenerateOrganizationsAccessReportOutput`](crate::output::GenerateOrganizationsAccessReportOutput)
+    /// Creates a new builder-style object to manufacture [`GenerateOrganizationsAccessReportOutput`](crate::output::GenerateOrganizationsAccessReportOutput).
     pub fn builder() -> crate::output::generate_organizations_access_report_output::Builder {
         crate::output::generate_organizations_access_report_output::Builder::default()
     }
@@ -7940,8 +8016,10 @@ impl GenerateOrganizationsAccessReportOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GenerateCredentialReportOutput {
     /// <p>Information about the state of the credential report.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ReportStateType>,
     /// <p>Information about the credential report.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl GenerateCredentialReportOutput {
@@ -7962,11 +8040,10 @@ impl std::fmt::Debug for GenerateCredentialReportOutput {
         formatter.finish()
     }
 }
-/// See [`GenerateCredentialReportOutput`](crate::output::GenerateCredentialReportOutput)
+/// See [`GenerateCredentialReportOutput`](crate::output::GenerateCredentialReportOutput).
 pub mod generate_credential_report_output {
 
-    /// A builder for [`GenerateCredentialReportOutput`](crate::output::GenerateCredentialReportOutput)
-    #[non_exhaustive]
+    /// A builder for [`GenerateCredentialReportOutput`](crate::output::GenerateCredentialReportOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::ReportStateType>,
@@ -7996,7 +8073,7 @@ pub mod generate_credential_report_output {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`GenerateCredentialReportOutput`](crate::output::GenerateCredentialReportOutput)
+        /// Consumes the builder and constructs a [`GenerateCredentialReportOutput`](crate::output::GenerateCredentialReportOutput).
         pub fn build(self) -> crate::output::GenerateCredentialReportOutput {
             crate::output::GenerateCredentialReportOutput {
                 state: self.state,
@@ -8006,7 +8083,7 @@ pub mod generate_credential_report_output {
     }
 }
 impl GenerateCredentialReportOutput {
-    /// Creates a new builder-style object to manufacture [`GenerateCredentialReportOutput`](crate::output::GenerateCredentialReportOutput)
+    /// Creates a new builder-style object to manufacture [`GenerateCredentialReportOutput`](crate::output::GenerateCredentialReportOutput).
     pub fn builder() -> crate::output::generate_credential_report_output::Builder {
         crate::output::generate_credential_report_output::Builder::default()
     }
@@ -8022,22 +8099,21 @@ impl std::fmt::Debug for EnableMfaDeviceOutput {
         formatter.finish()
     }
 }
-/// See [`EnableMfaDeviceOutput`](crate::output::EnableMfaDeviceOutput)
+/// See [`EnableMfaDeviceOutput`](crate::output::EnableMfaDeviceOutput).
 pub mod enable_mfa_device_output {
 
-    /// A builder for [`EnableMfaDeviceOutput`](crate::output::EnableMfaDeviceOutput)
-    #[non_exhaustive]
+    /// A builder for [`EnableMfaDeviceOutput`](crate::output::EnableMfaDeviceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`EnableMfaDeviceOutput`](crate::output::EnableMfaDeviceOutput)
+        /// Consumes the builder and constructs a [`EnableMfaDeviceOutput`](crate::output::EnableMfaDeviceOutput).
         pub fn build(self) -> crate::output::EnableMfaDeviceOutput {
             crate::output::EnableMfaDeviceOutput {}
         }
     }
 }
 impl EnableMfaDeviceOutput {
-    /// Creates a new builder-style object to manufacture [`EnableMfaDeviceOutput`](crate::output::EnableMfaDeviceOutput)
+    /// Creates a new builder-style object to manufacture [`EnableMfaDeviceOutput`](crate::output::EnableMfaDeviceOutput).
     pub fn builder() -> crate::output::enable_mfa_device_output::Builder {
         crate::output::enable_mfa_device_output::Builder::default()
     }
@@ -8053,22 +8129,21 @@ impl std::fmt::Debug for DetachUserPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DetachUserPolicyOutput`](crate::output::DetachUserPolicyOutput)
+/// See [`DetachUserPolicyOutput`](crate::output::DetachUserPolicyOutput).
 pub mod detach_user_policy_output {
 
-    /// A builder for [`DetachUserPolicyOutput`](crate::output::DetachUserPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetachUserPolicyOutput`](crate::output::DetachUserPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DetachUserPolicyOutput`](crate::output::DetachUserPolicyOutput)
+        /// Consumes the builder and constructs a [`DetachUserPolicyOutput`](crate::output::DetachUserPolicyOutput).
         pub fn build(self) -> crate::output::DetachUserPolicyOutput {
             crate::output::DetachUserPolicyOutput {}
         }
     }
 }
 impl DetachUserPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DetachUserPolicyOutput`](crate::output::DetachUserPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DetachUserPolicyOutput`](crate::output::DetachUserPolicyOutput).
     pub fn builder() -> crate::output::detach_user_policy_output::Builder {
         crate::output::detach_user_policy_output::Builder::default()
     }
@@ -8084,22 +8159,21 @@ impl std::fmt::Debug for DetachRolePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DetachRolePolicyOutput`](crate::output::DetachRolePolicyOutput)
+/// See [`DetachRolePolicyOutput`](crate::output::DetachRolePolicyOutput).
 pub mod detach_role_policy_output {
 
-    /// A builder for [`DetachRolePolicyOutput`](crate::output::DetachRolePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetachRolePolicyOutput`](crate::output::DetachRolePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DetachRolePolicyOutput`](crate::output::DetachRolePolicyOutput)
+        /// Consumes the builder and constructs a [`DetachRolePolicyOutput`](crate::output::DetachRolePolicyOutput).
         pub fn build(self) -> crate::output::DetachRolePolicyOutput {
             crate::output::DetachRolePolicyOutput {}
         }
     }
 }
 impl DetachRolePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DetachRolePolicyOutput`](crate::output::DetachRolePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DetachRolePolicyOutput`](crate::output::DetachRolePolicyOutput).
     pub fn builder() -> crate::output::detach_role_policy_output::Builder {
         crate::output::detach_role_policy_output::Builder::default()
     }
@@ -8115,22 +8189,21 @@ impl std::fmt::Debug for DetachGroupPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DetachGroupPolicyOutput`](crate::output::DetachGroupPolicyOutput)
+/// See [`DetachGroupPolicyOutput`](crate::output::DetachGroupPolicyOutput).
 pub mod detach_group_policy_output {
 
-    /// A builder for [`DetachGroupPolicyOutput`](crate::output::DetachGroupPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetachGroupPolicyOutput`](crate::output::DetachGroupPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DetachGroupPolicyOutput`](crate::output::DetachGroupPolicyOutput)
+        /// Consumes the builder and constructs a [`DetachGroupPolicyOutput`](crate::output::DetachGroupPolicyOutput).
         pub fn build(self) -> crate::output::DetachGroupPolicyOutput {
             crate::output::DetachGroupPolicyOutput {}
         }
     }
 }
 impl DetachGroupPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DetachGroupPolicyOutput`](crate::output::DetachGroupPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DetachGroupPolicyOutput`](crate::output::DetachGroupPolicyOutput).
     pub fn builder() -> crate::output::detach_group_policy_output::Builder {
         crate::output::detach_group_policy_output::Builder::default()
     }
@@ -8146,22 +8219,21 @@ impl std::fmt::Debug for DeleteVirtualMfaDeviceOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteVirtualMfaDeviceOutput`](crate::output::DeleteVirtualMfaDeviceOutput)
+/// See [`DeleteVirtualMfaDeviceOutput`](crate::output::DeleteVirtualMfaDeviceOutput).
 pub mod delete_virtual_mfa_device_output {
 
-    /// A builder for [`DeleteVirtualMfaDeviceOutput`](crate::output::DeleteVirtualMfaDeviceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteVirtualMfaDeviceOutput`](crate::output::DeleteVirtualMfaDeviceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteVirtualMfaDeviceOutput`](crate::output::DeleteVirtualMfaDeviceOutput)
+        /// Consumes the builder and constructs a [`DeleteVirtualMfaDeviceOutput`](crate::output::DeleteVirtualMfaDeviceOutput).
         pub fn build(self) -> crate::output::DeleteVirtualMfaDeviceOutput {
             crate::output::DeleteVirtualMfaDeviceOutput {}
         }
     }
 }
 impl DeleteVirtualMfaDeviceOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteVirtualMfaDeviceOutput`](crate::output::DeleteVirtualMfaDeviceOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteVirtualMfaDeviceOutput`](crate::output::DeleteVirtualMfaDeviceOutput).
     pub fn builder() -> crate::output::delete_virtual_mfa_device_output::Builder {
         crate::output::delete_virtual_mfa_device_output::Builder::default()
     }
@@ -8177,22 +8249,21 @@ impl std::fmt::Debug for DeleteUserPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteUserPolicyOutput`](crate::output::DeleteUserPolicyOutput)
+/// See [`DeleteUserPolicyOutput`](crate::output::DeleteUserPolicyOutput).
 pub mod delete_user_policy_output {
 
-    /// A builder for [`DeleteUserPolicyOutput`](crate::output::DeleteUserPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteUserPolicyOutput`](crate::output::DeleteUserPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteUserPolicyOutput`](crate::output::DeleteUserPolicyOutput)
+        /// Consumes the builder and constructs a [`DeleteUserPolicyOutput`](crate::output::DeleteUserPolicyOutput).
         pub fn build(self) -> crate::output::DeleteUserPolicyOutput {
             crate::output::DeleteUserPolicyOutput {}
         }
     }
 }
 impl DeleteUserPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteUserPolicyOutput`](crate::output::DeleteUserPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteUserPolicyOutput`](crate::output::DeleteUserPolicyOutput).
     pub fn builder() -> crate::output::delete_user_policy_output::Builder {
         crate::output::delete_user_policy_output::Builder::default()
     }
@@ -8208,22 +8279,21 @@ impl std::fmt::Debug for DeleteUserPermissionsBoundaryOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteUserPermissionsBoundaryOutput`](crate::output::DeleteUserPermissionsBoundaryOutput)
+/// See [`DeleteUserPermissionsBoundaryOutput`](crate::output::DeleteUserPermissionsBoundaryOutput).
 pub mod delete_user_permissions_boundary_output {
 
-    /// A builder for [`DeleteUserPermissionsBoundaryOutput`](crate::output::DeleteUserPermissionsBoundaryOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteUserPermissionsBoundaryOutput`](crate::output::DeleteUserPermissionsBoundaryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteUserPermissionsBoundaryOutput`](crate::output::DeleteUserPermissionsBoundaryOutput)
+        /// Consumes the builder and constructs a [`DeleteUserPermissionsBoundaryOutput`](crate::output::DeleteUserPermissionsBoundaryOutput).
         pub fn build(self) -> crate::output::DeleteUserPermissionsBoundaryOutput {
             crate::output::DeleteUserPermissionsBoundaryOutput {}
         }
     }
 }
 impl DeleteUserPermissionsBoundaryOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteUserPermissionsBoundaryOutput`](crate::output::DeleteUserPermissionsBoundaryOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteUserPermissionsBoundaryOutput`](crate::output::DeleteUserPermissionsBoundaryOutput).
     pub fn builder() -> crate::output::delete_user_permissions_boundary_output::Builder {
         crate::output::delete_user_permissions_boundary_output::Builder::default()
     }
@@ -8239,22 +8309,21 @@ impl std::fmt::Debug for DeleteUserOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteUserOutput`](crate::output::DeleteUserOutput)
+/// See [`DeleteUserOutput`](crate::output::DeleteUserOutput).
 pub mod delete_user_output {
 
-    /// A builder for [`DeleteUserOutput`](crate::output::DeleteUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteUserOutput`](crate::output::DeleteUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteUserOutput`](crate::output::DeleteUserOutput)
+        /// Consumes the builder and constructs a [`DeleteUserOutput`](crate::output::DeleteUserOutput).
         pub fn build(self) -> crate::output::DeleteUserOutput {
             crate::output::DeleteUserOutput {}
         }
     }
 }
 impl DeleteUserOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteUserOutput`](crate::output::DeleteUserOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteUserOutput`](crate::output::DeleteUserOutput).
     pub fn builder() -> crate::output::delete_user_output::Builder {
         crate::output::delete_user_output::Builder::default()
     }
@@ -8270,22 +8339,21 @@ impl std::fmt::Debug for DeleteSshPublicKeyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSshPublicKeyOutput`](crate::output::DeleteSshPublicKeyOutput)
+/// See [`DeleteSshPublicKeyOutput`](crate::output::DeleteSshPublicKeyOutput).
 pub mod delete_ssh_public_key_output {
 
-    /// A builder for [`DeleteSshPublicKeyOutput`](crate::output::DeleteSshPublicKeyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSshPublicKeyOutput`](crate::output::DeleteSshPublicKeyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteSshPublicKeyOutput`](crate::output::DeleteSshPublicKeyOutput)
+        /// Consumes the builder and constructs a [`DeleteSshPublicKeyOutput`](crate::output::DeleteSshPublicKeyOutput).
         pub fn build(self) -> crate::output::DeleteSshPublicKeyOutput {
             crate::output::DeleteSshPublicKeyOutput {}
         }
     }
 }
 impl DeleteSshPublicKeyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSshPublicKeyOutput`](crate::output::DeleteSshPublicKeyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSshPublicKeyOutput`](crate::output::DeleteSshPublicKeyOutput).
     pub fn builder() -> crate::output::delete_ssh_public_key_output::Builder {
         crate::output::delete_ssh_public_key_output::Builder::default()
     }
@@ -8301,22 +8369,21 @@ impl std::fmt::Debug for DeleteSigningCertificateOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSigningCertificateOutput`](crate::output::DeleteSigningCertificateOutput)
+/// See [`DeleteSigningCertificateOutput`](crate::output::DeleteSigningCertificateOutput).
 pub mod delete_signing_certificate_output {
 
-    /// A builder for [`DeleteSigningCertificateOutput`](crate::output::DeleteSigningCertificateOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSigningCertificateOutput`](crate::output::DeleteSigningCertificateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteSigningCertificateOutput`](crate::output::DeleteSigningCertificateOutput)
+        /// Consumes the builder and constructs a [`DeleteSigningCertificateOutput`](crate::output::DeleteSigningCertificateOutput).
         pub fn build(self) -> crate::output::DeleteSigningCertificateOutput {
             crate::output::DeleteSigningCertificateOutput {}
         }
     }
 }
 impl DeleteSigningCertificateOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSigningCertificateOutput`](crate::output::DeleteSigningCertificateOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSigningCertificateOutput`](crate::output::DeleteSigningCertificateOutput).
     pub fn builder() -> crate::output::delete_signing_certificate_output::Builder {
         crate::output::delete_signing_certificate_output::Builder::default()
     }
@@ -8332,22 +8399,21 @@ impl std::fmt::Debug for DeleteServiceSpecificCredentialOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteServiceSpecificCredentialOutput`](crate::output::DeleteServiceSpecificCredentialOutput)
+/// See [`DeleteServiceSpecificCredentialOutput`](crate::output::DeleteServiceSpecificCredentialOutput).
 pub mod delete_service_specific_credential_output {
 
-    /// A builder for [`DeleteServiceSpecificCredentialOutput`](crate::output::DeleteServiceSpecificCredentialOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteServiceSpecificCredentialOutput`](crate::output::DeleteServiceSpecificCredentialOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteServiceSpecificCredentialOutput`](crate::output::DeleteServiceSpecificCredentialOutput)
+        /// Consumes the builder and constructs a [`DeleteServiceSpecificCredentialOutput`](crate::output::DeleteServiceSpecificCredentialOutput).
         pub fn build(self) -> crate::output::DeleteServiceSpecificCredentialOutput {
             crate::output::DeleteServiceSpecificCredentialOutput {}
         }
     }
 }
 impl DeleteServiceSpecificCredentialOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteServiceSpecificCredentialOutput`](crate::output::DeleteServiceSpecificCredentialOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteServiceSpecificCredentialOutput`](crate::output::DeleteServiceSpecificCredentialOutput).
     pub fn builder() -> crate::output::delete_service_specific_credential_output::Builder {
         crate::output::delete_service_specific_credential_output::Builder::default()
     }
@@ -8365,6 +8431,7 @@ pub struct DeleteServiceLinkedRoleOutput {
     /// <task-uuid></task-uuid>
     /// </role-name>
     /// </service-principal-name></code>.</p>
+    #[doc(hidden)]
     pub deletion_task_id: std::option::Option<std::string::String>,
 }
 impl DeleteServiceLinkedRoleOutput {
@@ -8387,11 +8454,10 @@ impl std::fmt::Debug for DeleteServiceLinkedRoleOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteServiceLinkedRoleOutput`](crate::output::DeleteServiceLinkedRoleOutput)
+/// See [`DeleteServiceLinkedRoleOutput`](crate::output::DeleteServiceLinkedRoleOutput).
 pub mod delete_service_linked_role_output {
 
-    /// A builder for [`DeleteServiceLinkedRoleOutput`](crate::output::DeleteServiceLinkedRoleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteServiceLinkedRoleOutput`](crate::output::DeleteServiceLinkedRoleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deletion_task_id: std::option::Option<std::string::String>,
@@ -8424,7 +8490,7 @@ pub mod delete_service_linked_role_output {
             self.deletion_task_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteServiceLinkedRoleOutput`](crate::output::DeleteServiceLinkedRoleOutput)
+        /// Consumes the builder and constructs a [`DeleteServiceLinkedRoleOutput`](crate::output::DeleteServiceLinkedRoleOutput).
         pub fn build(self) -> crate::output::DeleteServiceLinkedRoleOutput {
             crate::output::DeleteServiceLinkedRoleOutput {
                 deletion_task_id: self.deletion_task_id,
@@ -8433,7 +8499,7 @@ pub mod delete_service_linked_role_output {
     }
 }
 impl DeleteServiceLinkedRoleOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteServiceLinkedRoleOutput`](crate::output::DeleteServiceLinkedRoleOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteServiceLinkedRoleOutput`](crate::output::DeleteServiceLinkedRoleOutput).
     pub fn builder() -> crate::output::delete_service_linked_role_output::Builder {
         crate::output::delete_service_linked_role_output::Builder::default()
     }
@@ -8449,22 +8515,21 @@ impl std::fmt::Debug for DeleteServerCertificateOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteServerCertificateOutput`](crate::output::DeleteServerCertificateOutput)
+/// See [`DeleteServerCertificateOutput`](crate::output::DeleteServerCertificateOutput).
 pub mod delete_server_certificate_output {
 
-    /// A builder for [`DeleteServerCertificateOutput`](crate::output::DeleteServerCertificateOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteServerCertificateOutput`](crate::output::DeleteServerCertificateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteServerCertificateOutput`](crate::output::DeleteServerCertificateOutput)
+        /// Consumes the builder and constructs a [`DeleteServerCertificateOutput`](crate::output::DeleteServerCertificateOutput).
         pub fn build(self) -> crate::output::DeleteServerCertificateOutput {
             crate::output::DeleteServerCertificateOutput {}
         }
     }
 }
 impl DeleteServerCertificateOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteServerCertificateOutput`](crate::output::DeleteServerCertificateOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteServerCertificateOutput`](crate::output::DeleteServerCertificateOutput).
     pub fn builder() -> crate::output::delete_server_certificate_output::Builder {
         crate::output::delete_server_certificate_output::Builder::default()
     }
@@ -8480,22 +8545,21 @@ impl std::fmt::Debug for DeleteSamlProviderOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSamlProviderOutput`](crate::output::DeleteSamlProviderOutput)
+/// See [`DeleteSamlProviderOutput`](crate::output::DeleteSamlProviderOutput).
 pub mod delete_saml_provider_output {
 
-    /// A builder for [`DeleteSamlProviderOutput`](crate::output::DeleteSamlProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSamlProviderOutput`](crate::output::DeleteSamlProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteSamlProviderOutput`](crate::output::DeleteSamlProviderOutput)
+        /// Consumes the builder and constructs a [`DeleteSamlProviderOutput`](crate::output::DeleteSamlProviderOutput).
         pub fn build(self) -> crate::output::DeleteSamlProviderOutput {
             crate::output::DeleteSamlProviderOutput {}
         }
     }
 }
 impl DeleteSamlProviderOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSamlProviderOutput`](crate::output::DeleteSamlProviderOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSamlProviderOutput`](crate::output::DeleteSamlProviderOutput).
     pub fn builder() -> crate::output::delete_saml_provider_output::Builder {
         crate::output::delete_saml_provider_output::Builder::default()
     }
@@ -8511,22 +8575,21 @@ impl std::fmt::Debug for DeleteRolePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRolePolicyOutput`](crate::output::DeleteRolePolicyOutput)
+/// See [`DeleteRolePolicyOutput`](crate::output::DeleteRolePolicyOutput).
 pub mod delete_role_policy_output {
 
-    /// A builder for [`DeleteRolePolicyOutput`](crate::output::DeleteRolePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRolePolicyOutput`](crate::output::DeleteRolePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteRolePolicyOutput`](crate::output::DeleteRolePolicyOutput)
+        /// Consumes the builder and constructs a [`DeleteRolePolicyOutput`](crate::output::DeleteRolePolicyOutput).
         pub fn build(self) -> crate::output::DeleteRolePolicyOutput {
             crate::output::DeleteRolePolicyOutput {}
         }
     }
 }
 impl DeleteRolePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRolePolicyOutput`](crate::output::DeleteRolePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRolePolicyOutput`](crate::output::DeleteRolePolicyOutput).
     pub fn builder() -> crate::output::delete_role_policy_output::Builder {
         crate::output::delete_role_policy_output::Builder::default()
     }
@@ -8542,22 +8605,21 @@ impl std::fmt::Debug for DeleteRolePermissionsBoundaryOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRolePermissionsBoundaryOutput`](crate::output::DeleteRolePermissionsBoundaryOutput)
+/// See [`DeleteRolePermissionsBoundaryOutput`](crate::output::DeleteRolePermissionsBoundaryOutput).
 pub mod delete_role_permissions_boundary_output {
 
-    /// A builder for [`DeleteRolePermissionsBoundaryOutput`](crate::output::DeleteRolePermissionsBoundaryOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRolePermissionsBoundaryOutput`](crate::output::DeleteRolePermissionsBoundaryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteRolePermissionsBoundaryOutput`](crate::output::DeleteRolePermissionsBoundaryOutput)
+        /// Consumes the builder and constructs a [`DeleteRolePermissionsBoundaryOutput`](crate::output::DeleteRolePermissionsBoundaryOutput).
         pub fn build(self) -> crate::output::DeleteRolePermissionsBoundaryOutput {
             crate::output::DeleteRolePermissionsBoundaryOutput {}
         }
     }
 }
 impl DeleteRolePermissionsBoundaryOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRolePermissionsBoundaryOutput`](crate::output::DeleteRolePermissionsBoundaryOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRolePermissionsBoundaryOutput`](crate::output::DeleteRolePermissionsBoundaryOutput).
     pub fn builder() -> crate::output::delete_role_permissions_boundary_output::Builder {
         crate::output::delete_role_permissions_boundary_output::Builder::default()
     }
@@ -8573,22 +8635,21 @@ impl std::fmt::Debug for DeleteRoleOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRoleOutput`](crate::output::DeleteRoleOutput)
+/// See [`DeleteRoleOutput`](crate::output::DeleteRoleOutput).
 pub mod delete_role_output {
 
-    /// A builder for [`DeleteRoleOutput`](crate::output::DeleteRoleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRoleOutput`](crate::output::DeleteRoleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteRoleOutput`](crate::output::DeleteRoleOutput)
+        /// Consumes the builder and constructs a [`DeleteRoleOutput`](crate::output::DeleteRoleOutput).
         pub fn build(self) -> crate::output::DeleteRoleOutput {
             crate::output::DeleteRoleOutput {}
         }
     }
 }
 impl DeleteRoleOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRoleOutput`](crate::output::DeleteRoleOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRoleOutput`](crate::output::DeleteRoleOutput).
     pub fn builder() -> crate::output::delete_role_output::Builder {
         crate::output::delete_role_output::Builder::default()
     }
@@ -8604,22 +8665,21 @@ impl std::fmt::Debug for DeletePolicyVersionOutput {
         formatter.finish()
     }
 }
-/// See [`DeletePolicyVersionOutput`](crate::output::DeletePolicyVersionOutput)
+/// See [`DeletePolicyVersionOutput`](crate::output::DeletePolicyVersionOutput).
 pub mod delete_policy_version_output {
 
-    /// A builder for [`DeletePolicyVersionOutput`](crate::output::DeletePolicyVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeletePolicyVersionOutput`](crate::output::DeletePolicyVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeletePolicyVersionOutput`](crate::output::DeletePolicyVersionOutput)
+        /// Consumes the builder and constructs a [`DeletePolicyVersionOutput`](crate::output::DeletePolicyVersionOutput).
         pub fn build(self) -> crate::output::DeletePolicyVersionOutput {
             crate::output::DeletePolicyVersionOutput {}
         }
     }
 }
 impl DeletePolicyVersionOutput {
-    /// Creates a new builder-style object to manufacture [`DeletePolicyVersionOutput`](crate::output::DeletePolicyVersionOutput)
+    /// Creates a new builder-style object to manufacture [`DeletePolicyVersionOutput`](crate::output::DeletePolicyVersionOutput).
     pub fn builder() -> crate::output::delete_policy_version_output::Builder {
         crate::output::delete_policy_version_output::Builder::default()
     }
@@ -8635,22 +8695,21 @@ impl std::fmt::Debug for DeletePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeletePolicyOutput`](crate::output::DeletePolicyOutput)
+/// See [`DeletePolicyOutput`](crate::output::DeletePolicyOutput).
 pub mod delete_policy_output {
 
-    /// A builder for [`DeletePolicyOutput`](crate::output::DeletePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeletePolicyOutput`](crate::output::DeletePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeletePolicyOutput`](crate::output::DeletePolicyOutput)
+        /// Consumes the builder and constructs a [`DeletePolicyOutput`](crate::output::DeletePolicyOutput).
         pub fn build(self) -> crate::output::DeletePolicyOutput {
             crate::output::DeletePolicyOutput {}
         }
     }
 }
 impl DeletePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeletePolicyOutput`](crate::output::DeletePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeletePolicyOutput`](crate::output::DeletePolicyOutput).
     pub fn builder() -> crate::output::delete_policy_output::Builder {
         crate::output::delete_policy_output::Builder::default()
     }
@@ -8666,22 +8725,21 @@ impl std::fmt::Debug for DeleteOpenIdConnectProviderOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteOpenIdConnectProviderOutput`](crate::output::DeleteOpenIdConnectProviderOutput)
+/// See [`DeleteOpenIdConnectProviderOutput`](crate::output::DeleteOpenIdConnectProviderOutput).
 pub mod delete_open_id_connect_provider_output {
 
-    /// A builder for [`DeleteOpenIdConnectProviderOutput`](crate::output::DeleteOpenIdConnectProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteOpenIdConnectProviderOutput`](crate::output::DeleteOpenIdConnectProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteOpenIdConnectProviderOutput`](crate::output::DeleteOpenIdConnectProviderOutput)
+        /// Consumes the builder and constructs a [`DeleteOpenIdConnectProviderOutput`](crate::output::DeleteOpenIdConnectProviderOutput).
         pub fn build(self) -> crate::output::DeleteOpenIdConnectProviderOutput {
             crate::output::DeleteOpenIdConnectProviderOutput {}
         }
     }
 }
 impl DeleteOpenIdConnectProviderOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteOpenIdConnectProviderOutput`](crate::output::DeleteOpenIdConnectProviderOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteOpenIdConnectProviderOutput`](crate::output::DeleteOpenIdConnectProviderOutput).
     pub fn builder() -> crate::output::delete_open_id_connect_provider_output::Builder {
         crate::output::delete_open_id_connect_provider_output::Builder::default()
     }
@@ -8697,22 +8755,21 @@ impl std::fmt::Debug for DeleteLoginProfileOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteLoginProfileOutput`](crate::output::DeleteLoginProfileOutput)
+/// See [`DeleteLoginProfileOutput`](crate::output::DeleteLoginProfileOutput).
 pub mod delete_login_profile_output {
 
-    /// A builder for [`DeleteLoginProfileOutput`](crate::output::DeleteLoginProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteLoginProfileOutput`](crate::output::DeleteLoginProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteLoginProfileOutput`](crate::output::DeleteLoginProfileOutput)
+        /// Consumes the builder and constructs a [`DeleteLoginProfileOutput`](crate::output::DeleteLoginProfileOutput).
         pub fn build(self) -> crate::output::DeleteLoginProfileOutput {
             crate::output::DeleteLoginProfileOutput {}
         }
     }
 }
 impl DeleteLoginProfileOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteLoginProfileOutput`](crate::output::DeleteLoginProfileOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteLoginProfileOutput`](crate::output::DeleteLoginProfileOutput).
     pub fn builder() -> crate::output::delete_login_profile_output::Builder {
         crate::output::delete_login_profile_output::Builder::default()
     }
@@ -8728,22 +8785,21 @@ impl std::fmt::Debug for DeleteInstanceProfileOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteInstanceProfileOutput`](crate::output::DeleteInstanceProfileOutput)
+/// See [`DeleteInstanceProfileOutput`](crate::output::DeleteInstanceProfileOutput).
 pub mod delete_instance_profile_output {
 
-    /// A builder for [`DeleteInstanceProfileOutput`](crate::output::DeleteInstanceProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteInstanceProfileOutput`](crate::output::DeleteInstanceProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteInstanceProfileOutput`](crate::output::DeleteInstanceProfileOutput)
+        /// Consumes the builder and constructs a [`DeleteInstanceProfileOutput`](crate::output::DeleteInstanceProfileOutput).
         pub fn build(self) -> crate::output::DeleteInstanceProfileOutput {
             crate::output::DeleteInstanceProfileOutput {}
         }
     }
 }
 impl DeleteInstanceProfileOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteInstanceProfileOutput`](crate::output::DeleteInstanceProfileOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteInstanceProfileOutput`](crate::output::DeleteInstanceProfileOutput).
     pub fn builder() -> crate::output::delete_instance_profile_output::Builder {
         crate::output::delete_instance_profile_output::Builder::default()
     }
@@ -8759,22 +8815,21 @@ impl std::fmt::Debug for DeleteGroupPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteGroupPolicyOutput`](crate::output::DeleteGroupPolicyOutput)
+/// See [`DeleteGroupPolicyOutput`](crate::output::DeleteGroupPolicyOutput).
 pub mod delete_group_policy_output {
 
-    /// A builder for [`DeleteGroupPolicyOutput`](crate::output::DeleteGroupPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteGroupPolicyOutput`](crate::output::DeleteGroupPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteGroupPolicyOutput`](crate::output::DeleteGroupPolicyOutput)
+        /// Consumes the builder and constructs a [`DeleteGroupPolicyOutput`](crate::output::DeleteGroupPolicyOutput).
         pub fn build(self) -> crate::output::DeleteGroupPolicyOutput {
             crate::output::DeleteGroupPolicyOutput {}
         }
     }
 }
 impl DeleteGroupPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteGroupPolicyOutput`](crate::output::DeleteGroupPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteGroupPolicyOutput`](crate::output::DeleteGroupPolicyOutput).
     pub fn builder() -> crate::output::delete_group_policy_output::Builder {
         crate::output::delete_group_policy_output::Builder::default()
     }
@@ -8790,22 +8845,21 @@ impl std::fmt::Debug for DeleteGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteGroupOutput`](crate::output::DeleteGroupOutput)
+/// See [`DeleteGroupOutput`](crate::output::DeleteGroupOutput).
 pub mod delete_group_output {
 
-    /// A builder for [`DeleteGroupOutput`](crate::output::DeleteGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteGroupOutput`](crate::output::DeleteGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteGroupOutput`](crate::output::DeleteGroupOutput)
+        /// Consumes the builder and constructs a [`DeleteGroupOutput`](crate::output::DeleteGroupOutput).
         pub fn build(self) -> crate::output::DeleteGroupOutput {
             crate::output::DeleteGroupOutput {}
         }
     }
 }
 impl DeleteGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteGroupOutput`](crate::output::DeleteGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteGroupOutput`](crate::output::DeleteGroupOutput).
     pub fn builder() -> crate::output::delete_group_output::Builder {
         crate::output::delete_group_output::Builder::default()
     }
@@ -8821,22 +8875,21 @@ impl std::fmt::Debug for DeleteAccountPasswordPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAccountPasswordPolicyOutput`](crate::output::DeleteAccountPasswordPolicyOutput)
+/// See [`DeleteAccountPasswordPolicyOutput`](crate::output::DeleteAccountPasswordPolicyOutput).
 pub mod delete_account_password_policy_output {
 
-    /// A builder for [`DeleteAccountPasswordPolicyOutput`](crate::output::DeleteAccountPasswordPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAccountPasswordPolicyOutput`](crate::output::DeleteAccountPasswordPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteAccountPasswordPolicyOutput`](crate::output::DeleteAccountPasswordPolicyOutput)
+        /// Consumes the builder and constructs a [`DeleteAccountPasswordPolicyOutput`](crate::output::DeleteAccountPasswordPolicyOutput).
         pub fn build(self) -> crate::output::DeleteAccountPasswordPolicyOutput {
             crate::output::DeleteAccountPasswordPolicyOutput {}
         }
     }
 }
 impl DeleteAccountPasswordPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAccountPasswordPolicyOutput`](crate::output::DeleteAccountPasswordPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAccountPasswordPolicyOutput`](crate::output::DeleteAccountPasswordPolicyOutput).
     pub fn builder() -> crate::output::delete_account_password_policy_output::Builder {
         crate::output::delete_account_password_policy_output::Builder::default()
     }
@@ -8852,22 +8905,21 @@ impl std::fmt::Debug for DeleteAccountAliasOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAccountAliasOutput`](crate::output::DeleteAccountAliasOutput)
+/// See [`DeleteAccountAliasOutput`](crate::output::DeleteAccountAliasOutput).
 pub mod delete_account_alias_output {
 
-    /// A builder for [`DeleteAccountAliasOutput`](crate::output::DeleteAccountAliasOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAccountAliasOutput`](crate::output::DeleteAccountAliasOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteAccountAliasOutput`](crate::output::DeleteAccountAliasOutput)
+        /// Consumes the builder and constructs a [`DeleteAccountAliasOutput`](crate::output::DeleteAccountAliasOutput).
         pub fn build(self) -> crate::output::DeleteAccountAliasOutput {
             crate::output::DeleteAccountAliasOutput {}
         }
     }
 }
 impl DeleteAccountAliasOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAccountAliasOutput`](crate::output::DeleteAccountAliasOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAccountAliasOutput`](crate::output::DeleteAccountAliasOutput).
     pub fn builder() -> crate::output::delete_account_alias_output::Builder {
         crate::output::delete_account_alias_output::Builder::default()
     }
@@ -8883,22 +8935,21 @@ impl std::fmt::Debug for DeleteAccessKeyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAccessKeyOutput`](crate::output::DeleteAccessKeyOutput)
+/// See [`DeleteAccessKeyOutput`](crate::output::DeleteAccessKeyOutput).
 pub mod delete_access_key_output {
 
-    /// A builder for [`DeleteAccessKeyOutput`](crate::output::DeleteAccessKeyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAccessKeyOutput`](crate::output::DeleteAccessKeyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteAccessKeyOutput`](crate::output::DeleteAccessKeyOutput)
+        /// Consumes the builder and constructs a [`DeleteAccessKeyOutput`](crate::output::DeleteAccessKeyOutput).
         pub fn build(self) -> crate::output::DeleteAccessKeyOutput {
             crate::output::DeleteAccessKeyOutput {}
         }
     }
 }
 impl DeleteAccessKeyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAccessKeyOutput`](crate::output::DeleteAccessKeyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAccessKeyOutput`](crate::output::DeleteAccessKeyOutput).
     pub fn builder() -> crate::output::delete_access_key_output::Builder {
         crate::output::delete_access_key_output::Builder::default()
     }
@@ -8914,22 +8965,21 @@ impl std::fmt::Debug for DeactivateMfaDeviceOutput {
         formatter.finish()
     }
 }
-/// See [`DeactivateMfaDeviceOutput`](crate::output::DeactivateMfaDeviceOutput)
+/// See [`DeactivateMfaDeviceOutput`](crate::output::DeactivateMfaDeviceOutput).
 pub mod deactivate_mfa_device_output {
 
-    /// A builder for [`DeactivateMfaDeviceOutput`](crate::output::DeactivateMfaDeviceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeactivateMfaDeviceOutput`](crate::output::DeactivateMfaDeviceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeactivateMfaDeviceOutput`](crate::output::DeactivateMfaDeviceOutput)
+        /// Consumes the builder and constructs a [`DeactivateMfaDeviceOutput`](crate::output::DeactivateMfaDeviceOutput).
         pub fn build(self) -> crate::output::DeactivateMfaDeviceOutput {
             crate::output::DeactivateMfaDeviceOutput {}
         }
     }
 }
 impl DeactivateMfaDeviceOutput {
-    /// Creates a new builder-style object to manufacture [`DeactivateMfaDeviceOutput`](crate::output::DeactivateMfaDeviceOutput)
+    /// Creates a new builder-style object to manufacture [`DeactivateMfaDeviceOutput`](crate::output::DeactivateMfaDeviceOutput).
     pub fn builder() -> crate::output::deactivate_mfa_device_output::Builder {
         crate::output::deactivate_mfa_device_output::Builder::default()
     }
@@ -8940,6 +8990,7 @@ impl DeactivateMfaDeviceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateVirtualMfaDeviceOutput {
     /// <p>A structure containing details about the new virtual MFA device.</p>
+    #[doc(hidden)]
     pub virtual_mfa_device: std::option::Option<crate::model::VirtualMfaDevice>,
 }
 impl CreateVirtualMfaDeviceOutput {
@@ -8955,11 +9006,10 @@ impl std::fmt::Debug for CreateVirtualMfaDeviceOutput {
         formatter.finish()
     }
 }
-/// See [`CreateVirtualMfaDeviceOutput`](crate::output::CreateVirtualMfaDeviceOutput)
+/// See [`CreateVirtualMfaDeviceOutput`](crate::output::CreateVirtualMfaDeviceOutput).
 pub mod create_virtual_mfa_device_output {
 
-    /// A builder for [`CreateVirtualMfaDeviceOutput`](crate::output::CreateVirtualMfaDeviceOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateVirtualMfaDeviceOutput`](crate::output::CreateVirtualMfaDeviceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) virtual_mfa_device: std::option::Option<crate::model::VirtualMfaDevice>,
@@ -8978,7 +9028,7 @@ pub mod create_virtual_mfa_device_output {
             self.virtual_mfa_device = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateVirtualMfaDeviceOutput`](crate::output::CreateVirtualMfaDeviceOutput)
+        /// Consumes the builder and constructs a [`CreateVirtualMfaDeviceOutput`](crate::output::CreateVirtualMfaDeviceOutput).
         pub fn build(self) -> crate::output::CreateVirtualMfaDeviceOutput {
             crate::output::CreateVirtualMfaDeviceOutput {
                 virtual_mfa_device: self.virtual_mfa_device,
@@ -8987,7 +9037,7 @@ pub mod create_virtual_mfa_device_output {
     }
 }
 impl CreateVirtualMfaDeviceOutput {
-    /// Creates a new builder-style object to manufacture [`CreateVirtualMfaDeviceOutput`](crate::output::CreateVirtualMfaDeviceOutput)
+    /// Creates a new builder-style object to manufacture [`CreateVirtualMfaDeviceOutput`](crate::output::CreateVirtualMfaDeviceOutput).
     pub fn builder() -> crate::output::create_virtual_mfa_device_output::Builder {
         crate::output::create_virtual_mfa_device_output::Builder::default()
     }
@@ -8998,6 +9048,7 @@ impl CreateVirtualMfaDeviceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateUserOutput {
     /// <p>A structure with details about the new IAM user.</p>
+    #[doc(hidden)]
     pub user: std::option::Option<crate::model::User>,
 }
 impl CreateUserOutput {
@@ -9013,11 +9064,10 @@ impl std::fmt::Debug for CreateUserOutput {
         formatter.finish()
     }
 }
-/// See [`CreateUserOutput`](crate::output::CreateUserOutput)
+/// See [`CreateUserOutput`](crate::output::CreateUserOutput).
 pub mod create_user_output {
 
-    /// A builder for [`CreateUserOutput`](crate::output::CreateUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateUserOutput`](crate::output::CreateUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user: std::option::Option<crate::model::User>,
@@ -9033,14 +9083,14 @@ pub mod create_user_output {
             self.user = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateUserOutput`](crate::output::CreateUserOutput)
+        /// Consumes the builder and constructs a [`CreateUserOutput`](crate::output::CreateUserOutput).
         pub fn build(self) -> crate::output::CreateUserOutput {
             crate::output::CreateUserOutput { user: self.user }
         }
     }
 }
 impl CreateUserOutput {
-    /// Creates a new builder-style object to manufacture [`CreateUserOutput`](crate::output::CreateUserOutput)
+    /// Creates a new builder-style object to manufacture [`CreateUserOutput`](crate::output::CreateUserOutput).
     pub fn builder() -> crate::output::create_user_output::Builder {
         crate::output::create_user_output::Builder::default()
     }
@@ -9053,6 +9103,7 @@ pub struct CreateServiceSpecificCredentialOutput {
     /// <p>A structure that contains information about the newly created service-specific credential.</p> <important>
     /// <p>This is the only time that the password for this credential set is available. It cannot be recovered later. Instead, you must reset the password with <code>ResetServiceSpecificCredential</code>.</p>
     /// </important>
+    #[doc(hidden)]
     pub service_specific_credential: std::option::Option<crate::model::ServiceSpecificCredential>,
 }
 impl CreateServiceSpecificCredentialOutput {
@@ -9075,11 +9126,10 @@ impl std::fmt::Debug for CreateServiceSpecificCredentialOutput {
         formatter.finish()
     }
 }
-/// See [`CreateServiceSpecificCredentialOutput`](crate::output::CreateServiceSpecificCredentialOutput)
+/// See [`CreateServiceSpecificCredentialOutput`](crate::output::CreateServiceSpecificCredentialOutput).
 pub mod create_service_specific_credential_output {
 
-    /// A builder for [`CreateServiceSpecificCredentialOutput`](crate::output::CreateServiceSpecificCredentialOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateServiceSpecificCredentialOutput`](crate::output::CreateServiceSpecificCredentialOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_specific_credential:
@@ -9106,7 +9156,7 @@ pub mod create_service_specific_credential_output {
             self.service_specific_credential = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateServiceSpecificCredentialOutput`](crate::output::CreateServiceSpecificCredentialOutput)
+        /// Consumes the builder and constructs a [`CreateServiceSpecificCredentialOutput`](crate::output::CreateServiceSpecificCredentialOutput).
         pub fn build(self) -> crate::output::CreateServiceSpecificCredentialOutput {
             crate::output::CreateServiceSpecificCredentialOutput {
                 service_specific_credential: self.service_specific_credential,
@@ -9115,7 +9165,7 @@ pub mod create_service_specific_credential_output {
     }
 }
 impl CreateServiceSpecificCredentialOutput {
-    /// Creates a new builder-style object to manufacture [`CreateServiceSpecificCredentialOutput`](crate::output::CreateServiceSpecificCredentialOutput)
+    /// Creates a new builder-style object to manufacture [`CreateServiceSpecificCredentialOutput`](crate::output::CreateServiceSpecificCredentialOutput).
     pub fn builder() -> crate::output::create_service_specific_credential_output::Builder {
         crate::output::create_service_specific_credential_output::Builder::default()
     }
@@ -9126,6 +9176,7 @@ impl CreateServiceSpecificCredentialOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateServiceLinkedRoleOutput {
     /// <p>A <code>Role</code> object that contains details about the newly created role.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<crate::model::Role>,
 }
 impl CreateServiceLinkedRoleOutput {
@@ -9141,11 +9192,10 @@ impl std::fmt::Debug for CreateServiceLinkedRoleOutput {
         formatter.finish()
     }
 }
-/// See [`CreateServiceLinkedRoleOutput`](crate::output::CreateServiceLinkedRoleOutput)
+/// See [`CreateServiceLinkedRoleOutput`](crate::output::CreateServiceLinkedRoleOutput).
 pub mod create_service_linked_role_output {
 
-    /// A builder for [`CreateServiceLinkedRoleOutput`](crate::output::CreateServiceLinkedRoleOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateServiceLinkedRoleOutput`](crate::output::CreateServiceLinkedRoleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role: std::option::Option<crate::model::Role>,
@@ -9161,14 +9211,14 @@ pub mod create_service_linked_role_output {
             self.role = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateServiceLinkedRoleOutput`](crate::output::CreateServiceLinkedRoleOutput)
+        /// Consumes the builder and constructs a [`CreateServiceLinkedRoleOutput`](crate::output::CreateServiceLinkedRoleOutput).
         pub fn build(self) -> crate::output::CreateServiceLinkedRoleOutput {
             crate::output::CreateServiceLinkedRoleOutput { role: self.role }
         }
     }
 }
 impl CreateServiceLinkedRoleOutput {
-    /// Creates a new builder-style object to manufacture [`CreateServiceLinkedRoleOutput`](crate::output::CreateServiceLinkedRoleOutput)
+    /// Creates a new builder-style object to manufacture [`CreateServiceLinkedRoleOutput`](crate::output::CreateServiceLinkedRoleOutput).
     pub fn builder() -> crate::output::create_service_linked_role_output::Builder {
         crate::output::create_service_linked_role_output::Builder::default()
     }
@@ -9179,8 +9229,10 @@ impl CreateServiceLinkedRoleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSamlProviderOutput {
     /// <p>The Amazon Resource Name (ARN) of the new SAML provider resource in IAM.</p>
+    #[doc(hidden)]
     pub saml_provider_arn: std::option::Option<std::string::String>,
     /// <p>A list of tags that are attached to the new IAM SAML provider. The returned list of tags is sorted by tag key. For more information about tagging, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM resources</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl CreateSamlProviderOutput {
@@ -9201,11 +9253,10 @@ impl std::fmt::Debug for CreateSamlProviderOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSamlProviderOutput`](crate::output::CreateSamlProviderOutput)
+/// See [`CreateSamlProviderOutput`](crate::output::CreateSamlProviderOutput).
 pub mod create_saml_provider_output {
 
-    /// A builder for [`CreateSamlProviderOutput`](crate::output::CreateSamlProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSamlProviderOutput`](crate::output::CreateSamlProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) saml_provider_arn: std::option::Option<std::string::String>,
@@ -9244,7 +9295,7 @@ pub mod create_saml_provider_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSamlProviderOutput`](crate::output::CreateSamlProviderOutput)
+        /// Consumes the builder and constructs a [`CreateSamlProviderOutput`](crate::output::CreateSamlProviderOutput).
         pub fn build(self) -> crate::output::CreateSamlProviderOutput {
             crate::output::CreateSamlProviderOutput {
                 saml_provider_arn: self.saml_provider_arn,
@@ -9254,7 +9305,7 @@ pub mod create_saml_provider_output {
     }
 }
 impl CreateSamlProviderOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSamlProviderOutput`](crate::output::CreateSamlProviderOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSamlProviderOutput`](crate::output::CreateSamlProviderOutput).
     pub fn builder() -> crate::output::create_saml_provider_output::Builder {
         crate::output::create_saml_provider_output::Builder::default()
     }
@@ -9265,6 +9316,7 @@ impl CreateSamlProviderOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateRoleOutput {
     /// <p>A structure containing details about the new role.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<crate::model::Role>,
 }
 impl CreateRoleOutput {
@@ -9280,11 +9332,10 @@ impl std::fmt::Debug for CreateRoleOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRoleOutput`](crate::output::CreateRoleOutput)
+/// See [`CreateRoleOutput`](crate::output::CreateRoleOutput).
 pub mod create_role_output {
 
-    /// A builder for [`CreateRoleOutput`](crate::output::CreateRoleOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRoleOutput`](crate::output::CreateRoleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role: std::option::Option<crate::model::Role>,
@@ -9300,14 +9351,14 @@ pub mod create_role_output {
             self.role = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRoleOutput`](crate::output::CreateRoleOutput)
+        /// Consumes the builder and constructs a [`CreateRoleOutput`](crate::output::CreateRoleOutput).
         pub fn build(self) -> crate::output::CreateRoleOutput {
             crate::output::CreateRoleOutput { role: self.role }
         }
     }
 }
 impl CreateRoleOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRoleOutput`](crate::output::CreateRoleOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRoleOutput`](crate::output::CreateRoleOutput).
     pub fn builder() -> crate::output::create_role_output::Builder {
         crate::output::create_role_output::Builder::default()
     }
@@ -9318,6 +9369,7 @@ impl CreateRoleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreatePolicyVersionOutput {
     /// <p>A structure containing details about the new policy version.</p>
+    #[doc(hidden)]
     pub policy_version: std::option::Option<crate::model::PolicyVersion>,
 }
 impl CreatePolicyVersionOutput {
@@ -9333,11 +9385,10 @@ impl std::fmt::Debug for CreatePolicyVersionOutput {
         formatter.finish()
     }
 }
-/// See [`CreatePolicyVersionOutput`](crate::output::CreatePolicyVersionOutput)
+/// See [`CreatePolicyVersionOutput`](crate::output::CreatePolicyVersionOutput).
 pub mod create_policy_version_output {
 
-    /// A builder for [`CreatePolicyVersionOutput`](crate::output::CreatePolicyVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreatePolicyVersionOutput`](crate::output::CreatePolicyVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_version: std::option::Option<crate::model::PolicyVersion>,
@@ -9356,7 +9407,7 @@ pub mod create_policy_version_output {
             self.policy_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreatePolicyVersionOutput`](crate::output::CreatePolicyVersionOutput)
+        /// Consumes the builder and constructs a [`CreatePolicyVersionOutput`](crate::output::CreatePolicyVersionOutput).
         pub fn build(self) -> crate::output::CreatePolicyVersionOutput {
             crate::output::CreatePolicyVersionOutput {
                 policy_version: self.policy_version,
@@ -9365,7 +9416,7 @@ pub mod create_policy_version_output {
     }
 }
 impl CreatePolicyVersionOutput {
-    /// Creates a new builder-style object to manufacture [`CreatePolicyVersionOutput`](crate::output::CreatePolicyVersionOutput)
+    /// Creates a new builder-style object to manufacture [`CreatePolicyVersionOutput`](crate::output::CreatePolicyVersionOutput).
     pub fn builder() -> crate::output::create_policy_version_output::Builder {
         crate::output::create_policy_version_output::Builder::default()
     }
@@ -9376,6 +9427,7 @@ impl CreatePolicyVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreatePolicyOutput {
     /// <p>A structure containing details about the new policy.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<crate::model::Policy>,
 }
 impl CreatePolicyOutput {
@@ -9391,11 +9443,10 @@ impl std::fmt::Debug for CreatePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`CreatePolicyOutput`](crate::output::CreatePolicyOutput)
+/// See [`CreatePolicyOutput`](crate::output::CreatePolicyOutput).
 pub mod create_policy_output {
 
-    /// A builder for [`CreatePolicyOutput`](crate::output::CreatePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreatePolicyOutput`](crate::output::CreatePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<crate::model::Policy>,
@@ -9411,7 +9462,7 @@ pub mod create_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreatePolicyOutput`](crate::output::CreatePolicyOutput)
+        /// Consumes the builder and constructs a [`CreatePolicyOutput`](crate::output::CreatePolicyOutput).
         pub fn build(self) -> crate::output::CreatePolicyOutput {
             crate::output::CreatePolicyOutput {
                 policy: self.policy,
@@ -9420,7 +9471,7 @@ pub mod create_policy_output {
     }
 }
 impl CreatePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`CreatePolicyOutput`](crate::output::CreatePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`CreatePolicyOutput`](crate::output::CreatePolicyOutput).
     pub fn builder() -> crate::output::create_policy_output::Builder {
         crate::output::create_policy_output::Builder::default()
     }
@@ -9431,8 +9482,10 @@ impl CreatePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateOpenIdConnectProviderOutput {
     /// <p>The Amazon Resource Name (ARN) of the new IAM OpenID Connect provider that is created. For more information, see <code>OpenIDConnectProviderListEntry</code>. </p>
+    #[doc(hidden)]
     pub open_id_connect_provider_arn: std::option::Option<std::string::String>,
     /// <p>A list of tags that are attached to the new IAM OIDC provider. The returned list of tags is sorted by tag key. For more information about tagging, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM resources</a> in the <i>IAM User Guide</i>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl CreateOpenIdConnectProviderOutput {
@@ -9456,11 +9509,10 @@ impl std::fmt::Debug for CreateOpenIdConnectProviderOutput {
         formatter.finish()
     }
 }
-/// See [`CreateOpenIdConnectProviderOutput`](crate::output::CreateOpenIdConnectProviderOutput)
+/// See [`CreateOpenIdConnectProviderOutput`](crate::output::CreateOpenIdConnectProviderOutput).
 pub mod create_open_id_connect_provider_output {
 
-    /// A builder for [`CreateOpenIdConnectProviderOutput`](crate::output::CreateOpenIdConnectProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateOpenIdConnectProviderOutput`](crate::output::CreateOpenIdConnectProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) open_id_connect_provider_arn: std::option::Option<std::string::String>,
@@ -9502,7 +9554,7 @@ pub mod create_open_id_connect_provider_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateOpenIdConnectProviderOutput`](crate::output::CreateOpenIdConnectProviderOutput)
+        /// Consumes the builder and constructs a [`CreateOpenIdConnectProviderOutput`](crate::output::CreateOpenIdConnectProviderOutput).
         pub fn build(self) -> crate::output::CreateOpenIdConnectProviderOutput {
             crate::output::CreateOpenIdConnectProviderOutput {
                 open_id_connect_provider_arn: self.open_id_connect_provider_arn,
@@ -9512,7 +9564,7 @@ pub mod create_open_id_connect_provider_output {
     }
 }
 impl CreateOpenIdConnectProviderOutput {
-    /// Creates a new builder-style object to manufacture [`CreateOpenIdConnectProviderOutput`](crate::output::CreateOpenIdConnectProviderOutput)
+    /// Creates a new builder-style object to manufacture [`CreateOpenIdConnectProviderOutput`](crate::output::CreateOpenIdConnectProviderOutput).
     pub fn builder() -> crate::output::create_open_id_connect_provider_output::Builder {
         crate::output::create_open_id_connect_provider_output::Builder::default()
     }
@@ -9523,6 +9575,7 @@ impl CreateOpenIdConnectProviderOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateLoginProfileOutput {
     /// <p>A structure containing the user name and password create date.</p>
+    #[doc(hidden)]
     pub login_profile: std::option::Option<crate::model::LoginProfile>,
 }
 impl CreateLoginProfileOutput {
@@ -9538,11 +9591,10 @@ impl std::fmt::Debug for CreateLoginProfileOutput {
         formatter.finish()
     }
 }
-/// See [`CreateLoginProfileOutput`](crate::output::CreateLoginProfileOutput)
+/// See [`CreateLoginProfileOutput`](crate::output::CreateLoginProfileOutput).
 pub mod create_login_profile_output {
 
-    /// A builder for [`CreateLoginProfileOutput`](crate::output::CreateLoginProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateLoginProfileOutput`](crate::output::CreateLoginProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) login_profile: std::option::Option<crate::model::LoginProfile>,
@@ -9561,7 +9613,7 @@ pub mod create_login_profile_output {
             self.login_profile = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateLoginProfileOutput`](crate::output::CreateLoginProfileOutput)
+        /// Consumes the builder and constructs a [`CreateLoginProfileOutput`](crate::output::CreateLoginProfileOutput).
         pub fn build(self) -> crate::output::CreateLoginProfileOutput {
             crate::output::CreateLoginProfileOutput {
                 login_profile: self.login_profile,
@@ -9570,7 +9622,7 @@ pub mod create_login_profile_output {
     }
 }
 impl CreateLoginProfileOutput {
-    /// Creates a new builder-style object to manufacture [`CreateLoginProfileOutput`](crate::output::CreateLoginProfileOutput)
+    /// Creates a new builder-style object to manufacture [`CreateLoginProfileOutput`](crate::output::CreateLoginProfileOutput).
     pub fn builder() -> crate::output::create_login_profile_output::Builder {
         crate::output::create_login_profile_output::Builder::default()
     }
@@ -9581,6 +9633,7 @@ impl CreateLoginProfileOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateInstanceProfileOutput {
     /// <p>A structure containing details about the new instance profile.</p>
+    #[doc(hidden)]
     pub instance_profile: std::option::Option<crate::model::InstanceProfile>,
 }
 impl CreateInstanceProfileOutput {
@@ -9596,11 +9649,10 @@ impl std::fmt::Debug for CreateInstanceProfileOutput {
         formatter.finish()
     }
 }
-/// See [`CreateInstanceProfileOutput`](crate::output::CreateInstanceProfileOutput)
+/// See [`CreateInstanceProfileOutput`](crate::output::CreateInstanceProfileOutput).
 pub mod create_instance_profile_output {
 
-    /// A builder for [`CreateInstanceProfileOutput`](crate::output::CreateInstanceProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateInstanceProfileOutput`](crate::output::CreateInstanceProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_profile: std::option::Option<crate::model::InstanceProfile>,
@@ -9619,7 +9671,7 @@ pub mod create_instance_profile_output {
             self.instance_profile = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateInstanceProfileOutput`](crate::output::CreateInstanceProfileOutput)
+        /// Consumes the builder and constructs a [`CreateInstanceProfileOutput`](crate::output::CreateInstanceProfileOutput).
         pub fn build(self) -> crate::output::CreateInstanceProfileOutput {
             crate::output::CreateInstanceProfileOutput {
                 instance_profile: self.instance_profile,
@@ -9628,7 +9680,7 @@ pub mod create_instance_profile_output {
     }
 }
 impl CreateInstanceProfileOutput {
-    /// Creates a new builder-style object to manufacture [`CreateInstanceProfileOutput`](crate::output::CreateInstanceProfileOutput)
+    /// Creates a new builder-style object to manufacture [`CreateInstanceProfileOutput`](crate::output::CreateInstanceProfileOutput).
     pub fn builder() -> crate::output::create_instance_profile_output::Builder {
         crate::output::create_instance_profile_output::Builder::default()
     }
@@ -9639,6 +9691,7 @@ impl CreateInstanceProfileOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateGroupOutput {
     /// <p>A structure containing details about the new group.</p>
+    #[doc(hidden)]
     pub group: std::option::Option<crate::model::Group>,
 }
 impl CreateGroupOutput {
@@ -9654,11 +9707,10 @@ impl std::fmt::Debug for CreateGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateGroupOutput`](crate::output::CreateGroupOutput)
+/// See [`CreateGroupOutput`](crate::output::CreateGroupOutput).
 pub mod create_group_output {
 
-    /// A builder for [`CreateGroupOutput`](crate::output::CreateGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateGroupOutput`](crate::output::CreateGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group: std::option::Option<crate::model::Group>,
@@ -9674,14 +9726,14 @@ pub mod create_group_output {
             self.group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateGroupOutput`](crate::output::CreateGroupOutput)
+        /// Consumes the builder and constructs a [`CreateGroupOutput`](crate::output::CreateGroupOutput).
         pub fn build(self) -> crate::output::CreateGroupOutput {
             crate::output::CreateGroupOutput { group: self.group }
         }
     }
 }
 impl CreateGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateGroupOutput`](crate::output::CreateGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateGroupOutput`](crate::output::CreateGroupOutput).
     pub fn builder() -> crate::output::create_group_output::Builder {
         crate::output::create_group_output::Builder::default()
     }
@@ -9697,22 +9749,21 @@ impl std::fmt::Debug for CreateAccountAliasOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAccountAliasOutput`](crate::output::CreateAccountAliasOutput)
+/// See [`CreateAccountAliasOutput`](crate::output::CreateAccountAliasOutput).
 pub mod create_account_alias_output {
 
-    /// A builder for [`CreateAccountAliasOutput`](crate::output::CreateAccountAliasOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateAccountAliasOutput`](crate::output::CreateAccountAliasOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`CreateAccountAliasOutput`](crate::output::CreateAccountAliasOutput)
+        /// Consumes the builder and constructs a [`CreateAccountAliasOutput`](crate::output::CreateAccountAliasOutput).
         pub fn build(self) -> crate::output::CreateAccountAliasOutput {
             crate::output::CreateAccountAliasOutput {}
         }
     }
 }
 impl CreateAccountAliasOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAccountAliasOutput`](crate::output::CreateAccountAliasOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAccountAliasOutput`](crate::output::CreateAccountAliasOutput).
     pub fn builder() -> crate::output::create_account_alias_output::Builder {
         crate::output::create_account_alias_output::Builder::default()
     }
@@ -9723,6 +9774,7 @@ impl CreateAccountAliasOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAccessKeyOutput {
     /// <p>A structure with details about the access key.</p>
+    #[doc(hidden)]
     pub access_key: std::option::Option<crate::model::AccessKey>,
 }
 impl CreateAccessKeyOutput {
@@ -9738,11 +9790,10 @@ impl std::fmt::Debug for CreateAccessKeyOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAccessKeyOutput`](crate::output::CreateAccessKeyOutput)
+/// See [`CreateAccessKeyOutput`](crate::output::CreateAccessKeyOutput).
 pub mod create_access_key_output {
 
-    /// A builder for [`CreateAccessKeyOutput`](crate::output::CreateAccessKeyOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateAccessKeyOutput`](crate::output::CreateAccessKeyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) access_key: std::option::Option<crate::model::AccessKey>,
@@ -9761,7 +9812,7 @@ pub mod create_access_key_output {
             self.access_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAccessKeyOutput`](crate::output::CreateAccessKeyOutput)
+        /// Consumes the builder and constructs a [`CreateAccessKeyOutput`](crate::output::CreateAccessKeyOutput).
         pub fn build(self) -> crate::output::CreateAccessKeyOutput {
             crate::output::CreateAccessKeyOutput {
                 access_key: self.access_key,
@@ -9770,7 +9821,7 @@ pub mod create_access_key_output {
     }
 }
 impl CreateAccessKeyOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAccessKeyOutput`](crate::output::CreateAccessKeyOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAccessKeyOutput`](crate::output::CreateAccessKeyOutput).
     pub fn builder() -> crate::output::create_access_key_output::Builder {
         crate::output::create_access_key_output::Builder::default()
     }
@@ -9786,22 +9837,21 @@ impl std::fmt::Debug for ChangePasswordOutput {
         formatter.finish()
     }
 }
-/// See [`ChangePasswordOutput`](crate::output::ChangePasswordOutput)
+/// See [`ChangePasswordOutput`](crate::output::ChangePasswordOutput).
 pub mod change_password_output {
 
-    /// A builder for [`ChangePasswordOutput`](crate::output::ChangePasswordOutput)
-    #[non_exhaustive]
+    /// A builder for [`ChangePasswordOutput`](crate::output::ChangePasswordOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`ChangePasswordOutput`](crate::output::ChangePasswordOutput)
+        /// Consumes the builder and constructs a [`ChangePasswordOutput`](crate::output::ChangePasswordOutput).
         pub fn build(self) -> crate::output::ChangePasswordOutput {
             crate::output::ChangePasswordOutput {}
         }
     }
 }
 impl ChangePasswordOutput {
-    /// Creates a new builder-style object to manufacture [`ChangePasswordOutput`](crate::output::ChangePasswordOutput)
+    /// Creates a new builder-style object to manufacture [`ChangePasswordOutput`](crate::output::ChangePasswordOutput).
     pub fn builder() -> crate::output::change_password_output::Builder {
         crate::output::change_password_output::Builder::default()
     }
@@ -9817,22 +9867,21 @@ impl std::fmt::Debug for AttachUserPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`AttachUserPolicyOutput`](crate::output::AttachUserPolicyOutput)
+/// See [`AttachUserPolicyOutput`](crate::output::AttachUserPolicyOutput).
 pub mod attach_user_policy_output {
 
-    /// A builder for [`AttachUserPolicyOutput`](crate::output::AttachUserPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`AttachUserPolicyOutput`](crate::output::AttachUserPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AttachUserPolicyOutput`](crate::output::AttachUserPolicyOutput)
+        /// Consumes the builder and constructs a [`AttachUserPolicyOutput`](crate::output::AttachUserPolicyOutput).
         pub fn build(self) -> crate::output::AttachUserPolicyOutput {
             crate::output::AttachUserPolicyOutput {}
         }
     }
 }
 impl AttachUserPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`AttachUserPolicyOutput`](crate::output::AttachUserPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`AttachUserPolicyOutput`](crate::output::AttachUserPolicyOutput).
     pub fn builder() -> crate::output::attach_user_policy_output::Builder {
         crate::output::attach_user_policy_output::Builder::default()
     }
@@ -9848,22 +9897,21 @@ impl std::fmt::Debug for AttachRolePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`AttachRolePolicyOutput`](crate::output::AttachRolePolicyOutput)
+/// See [`AttachRolePolicyOutput`](crate::output::AttachRolePolicyOutput).
 pub mod attach_role_policy_output {
 
-    /// A builder for [`AttachRolePolicyOutput`](crate::output::AttachRolePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`AttachRolePolicyOutput`](crate::output::AttachRolePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AttachRolePolicyOutput`](crate::output::AttachRolePolicyOutput)
+        /// Consumes the builder and constructs a [`AttachRolePolicyOutput`](crate::output::AttachRolePolicyOutput).
         pub fn build(self) -> crate::output::AttachRolePolicyOutput {
             crate::output::AttachRolePolicyOutput {}
         }
     }
 }
 impl AttachRolePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`AttachRolePolicyOutput`](crate::output::AttachRolePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`AttachRolePolicyOutput`](crate::output::AttachRolePolicyOutput).
     pub fn builder() -> crate::output::attach_role_policy_output::Builder {
         crate::output::attach_role_policy_output::Builder::default()
     }
@@ -9879,22 +9927,21 @@ impl std::fmt::Debug for AttachGroupPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`AttachGroupPolicyOutput`](crate::output::AttachGroupPolicyOutput)
+/// See [`AttachGroupPolicyOutput`](crate::output::AttachGroupPolicyOutput).
 pub mod attach_group_policy_output {
 
-    /// A builder for [`AttachGroupPolicyOutput`](crate::output::AttachGroupPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`AttachGroupPolicyOutput`](crate::output::AttachGroupPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AttachGroupPolicyOutput`](crate::output::AttachGroupPolicyOutput)
+        /// Consumes the builder and constructs a [`AttachGroupPolicyOutput`](crate::output::AttachGroupPolicyOutput).
         pub fn build(self) -> crate::output::AttachGroupPolicyOutput {
             crate::output::AttachGroupPolicyOutput {}
         }
     }
 }
 impl AttachGroupPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`AttachGroupPolicyOutput`](crate::output::AttachGroupPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`AttachGroupPolicyOutput`](crate::output::AttachGroupPolicyOutput).
     pub fn builder() -> crate::output::attach_group_policy_output::Builder {
         crate::output::attach_group_policy_output::Builder::default()
     }
@@ -9910,22 +9957,21 @@ impl std::fmt::Debug for AddUserToGroupOutput {
         formatter.finish()
     }
 }
-/// See [`AddUserToGroupOutput`](crate::output::AddUserToGroupOutput)
+/// See [`AddUserToGroupOutput`](crate::output::AddUserToGroupOutput).
 pub mod add_user_to_group_output {
 
-    /// A builder for [`AddUserToGroupOutput`](crate::output::AddUserToGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddUserToGroupOutput`](crate::output::AddUserToGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AddUserToGroupOutput`](crate::output::AddUserToGroupOutput)
+        /// Consumes the builder and constructs a [`AddUserToGroupOutput`](crate::output::AddUserToGroupOutput).
         pub fn build(self) -> crate::output::AddUserToGroupOutput {
             crate::output::AddUserToGroupOutput {}
         }
     }
 }
 impl AddUserToGroupOutput {
-    /// Creates a new builder-style object to manufacture [`AddUserToGroupOutput`](crate::output::AddUserToGroupOutput)
+    /// Creates a new builder-style object to manufacture [`AddUserToGroupOutput`](crate::output::AddUserToGroupOutput).
     pub fn builder() -> crate::output::add_user_to_group_output::Builder {
         crate::output::add_user_to_group_output::Builder::default()
     }
@@ -9941,22 +9987,21 @@ impl std::fmt::Debug for AddRoleToInstanceProfileOutput {
         formatter.finish()
     }
 }
-/// See [`AddRoleToInstanceProfileOutput`](crate::output::AddRoleToInstanceProfileOutput)
+/// See [`AddRoleToInstanceProfileOutput`](crate::output::AddRoleToInstanceProfileOutput).
 pub mod add_role_to_instance_profile_output {
 
-    /// A builder for [`AddRoleToInstanceProfileOutput`](crate::output::AddRoleToInstanceProfileOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddRoleToInstanceProfileOutput`](crate::output::AddRoleToInstanceProfileOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AddRoleToInstanceProfileOutput`](crate::output::AddRoleToInstanceProfileOutput)
+        /// Consumes the builder and constructs a [`AddRoleToInstanceProfileOutput`](crate::output::AddRoleToInstanceProfileOutput).
         pub fn build(self) -> crate::output::AddRoleToInstanceProfileOutput {
             crate::output::AddRoleToInstanceProfileOutput {}
         }
     }
 }
 impl AddRoleToInstanceProfileOutput {
-    /// Creates a new builder-style object to manufacture [`AddRoleToInstanceProfileOutput`](crate::output::AddRoleToInstanceProfileOutput)
+    /// Creates a new builder-style object to manufacture [`AddRoleToInstanceProfileOutput`](crate::output::AddRoleToInstanceProfileOutput).
     pub fn builder() -> crate::output::add_role_to_instance_profile_output::Builder {
         crate::output::add_role_to_instance_profile_output::Builder::default()
     }
@@ -9972,22 +10017,21 @@ impl std::fmt::Debug for AddClientIdToOpenIdConnectProviderOutput {
         formatter.finish()
     }
 }
-/// See [`AddClientIdToOpenIdConnectProviderOutput`](crate::output::AddClientIdToOpenIdConnectProviderOutput)
+/// See [`AddClientIdToOpenIdConnectProviderOutput`](crate::output::AddClientIdToOpenIdConnectProviderOutput).
 pub mod add_client_id_to_open_id_connect_provider_output {
 
-    /// A builder for [`AddClientIdToOpenIdConnectProviderOutput`](crate::output::AddClientIdToOpenIdConnectProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddClientIdToOpenIdConnectProviderOutput`](crate::output::AddClientIdToOpenIdConnectProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AddClientIdToOpenIdConnectProviderOutput`](crate::output::AddClientIdToOpenIdConnectProviderOutput)
+        /// Consumes the builder and constructs a [`AddClientIdToOpenIdConnectProviderOutput`](crate::output::AddClientIdToOpenIdConnectProviderOutput).
         pub fn build(self) -> crate::output::AddClientIdToOpenIdConnectProviderOutput {
             crate::output::AddClientIdToOpenIdConnectProviderOutput {}
         }
     }
 }
 impl AddClientIdToOpenIdConnectProviderOutput {
-    /// Creates a new builder-style object to manufacture [`AddClientIdToOpenIdConnectProviderOutput`](crate::output::AddClientIdToOpenIdConnectProviderOutput)
+    /// Creates a new builder-style object to manufacture [`AddClientIdToOpenIdConnectProviderOutput`](crate::output::AddClientIdToOpenIdConnectProviderOutput).
     pub fn builder() -> crate::output::add_client_id_to_open_id_connect_provider_output::Builder {
         crate::output::add_client_id_to_open_id_connect_provider_output::Builder::default()
     }

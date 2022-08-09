@@ -5,16 +5,22 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Update {
     /// <p>A UUID that is used to track the update.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The current status of the update.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::UpdateStatus>,
     /// <p>The type of the update.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::UpdateType>,
     /// <p>A key-value map that contains the parameters associated with the update.</p>
+    #[doc(hidden)]
     pub params: std::option::Option<std::vec::Vec<crate::model::UpdateParam>>,
     /// <p>The Unix epoch timestamp in seconds for when the update was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Any errors associated with a <code>Failed</code> update.</p>
+    #[doc(hidden)]
     pub errors: std::option::Option<std::vec::Vec<crate::model::ErrorDetail>>,
 }
 impl Update {
@@ -55,11 +61,10 @@ impl std::fmt::Debug for Update {
         formatter.finish()
     }
 }
-/// See [`Update`](crate::model::Update)
+/// See [`Update`](crate::model::Update).
 pub mod update {
 
-    /// A builder for [`Update`](crate::model::Update)
-    #[non_exhaustive]
+    /// A builder for [`Update`](crate::model::Update).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -154,7 +159,7 @@ pub mod update {
             self.errors = input;
             self
         }
-        /// Consumes the builder and constructs a [`Update`](crate::model::Update)
+        /// Consumes the builder and constructs a [`Update`](crate::model::Update).
         pub fn build(self) -> crate::model::Update {
             crate::model::Update {
                 id: self.id,
@@ -168,7 +173,7 @@ pub mod update {
     }
 }
 impl Update {
-    /// Creates a new builder-style object to manufacture [`Update`](crate::model::Update)
+    /// Creates a new builder-style object to manufacture [`Update`](crate::model::Update).
     pub fn builder() -> crate::model::update::Builder {
         crate::model::update::Builder::default()
     }
@@ -188,10 +193,13 @@ pub struct ErrorDetail {
     /// <li> <p> <b>OperationNotPermitted</b>: The service role associated with the cluster doesn't have the required access permissions for Amazon EKS.</p> </li>
     /// <li> <p> <b>VpcIdNotFound</b>: We couldn't find the VPC associated with the cluster.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub error_code: std::option::Option<crate::model::ErrorCode>,
     /// <p>A more complete description of the error.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>An optional field that contains the resource IDs associated with the error.</p>
+    #[doc(hidden)]
     pub resource_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ErrorDetail {
@@ -226,11 +234,10 @@ impl std::fmt::Debug for ErrorDetail {
         formatter.finish()
     }
 }
-/// See [`ErrorDetail`](crate::model::ErrorDetail)
+/// See [`ErrorDetail`](crate::model::ErrorDetail).
 pub mod error_detail {
 
-    /// A builder for [`ErrorDetail`](crate::model::ErrorDetail)
-    #[non_exhaustive]
+    /// A builder for [`ErrorDetail`](crate::model::ErrorDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_code: std::option::Option<crate::model::ErrorCode>,
@@ -301,7 +308,7 @@ pub mod error_detail {
             self.resource_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`ErrorDetail`](crate::model::ErrorDetail)
+        /// Consumes the builder and constructs a [`ErrorDetail`](crate::model::ErrorDetail).
         pub fn build(self) -> crate::model::ErrorDetail {
             crate::model::ErrorDetail {
                 error_code: self.error_code,
@@ -312,7 +319,7 @@ pub mod error_detail {
     }
 }
 impl ErrorDetail {
-    /// Creates a new builder-style object to manufacture [`ErrorDetail`](crate::model::ErrorDetail)
+    /// Creates a new builder-style object to manufacture [`ErrorDetail`](crate::model::ErrorDetail).
     pub fn builder() -> crate::model::error_detail::Builder {
         crate::model::error_detail::Builder::default()
     }
@@ -456,8 +463,10 @@ impl AsRef<str> for ErrorCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateParam {
     /// <p>The keys associated with an update request.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::UpdateParamType>,
     /// <p>The value of the keys submitted as part of an update request.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl UpdateParam {
@@ -478,11 +487,10 @@ impl std::fmt::Debug for UpdateParam {
         formatter.finish()
     }
 }
-/// See [`UpdateParam`](crate::model::UpdateParam)
+/// See [`UpdateParam`](crate::model::UpdateParam).
 pub mod update_param {
 
-    /// A builder for [`UpdateParam`](crate::model::UpdateParam)
-    #[non_exhaustive]
+    /// A builder for [`UpdateParam`](crate::model::UpdateParam).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::UpdateParamType>,
@@ -512,7 +520,7 @@ pub mod update_param {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateParam`](crate::model::UpdateParam)
+        /// Consumes the builder and constructs a [`UpdateParam`](crate::model::UpdateParam).
         pub fn build(self) -> crate::model::UpdateParam {
             crate::model::UpdateParam {
                 r#type: self.r#type,
@@ -522,7 +530,7 @@ pub mod update_param {
     }
 }
 impl UpdateParam {
-    /// Creates a new builder-style object to manufacture [`UpdateParam`](crate::model::UpdateParam)
+    /// Creates a new builder-style object to manufacture [`UpdateParam`](crate::model::UpdateParam).
     pub fn builder() -> crate::model::update_param::Builder {
         crate::model::update_param::Builder::default()
     }
@@ -848,10 +856,13 @@ impl AsRef<str> for UpdateStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LaunchTemplateSpecification {
     /// <p>The name of the launch template.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The version of the launch template to use. If no version is specified, then the template's default version is used.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The ID of the launch template.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
 }
 impl LaunchTemplateSpecification {
@@ -877,11 +888,10 @@ impl std::fmt::Debug for LaunchTemplateSpecification {
         formatter.finish()
     }
 }
-/// See [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
+/// See [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
 pub mod launch_template_specification {
 
-    /// A builder for [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
-    #[non_exhaustive]
+    /// A builder for [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -919,7 +929,7 @@ pub mod launch_template_specification {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
+        /// Consumes the builder and constructs a [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
         pub fn build(self) -> crate::model::LaunchTemplateSpecification {
             crate::model::LaunchTemplateSpecification {
                 name: self.name,
@@ -930,7 +940,7 @@ pub mod launch_template_specification {
     }
 }
 impl LaunchTemplateSpecification {
-    /// Creates a new builder-style object to manufacture [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification)
+    /// Creates a new builder-style object to manufacture [`LaunchTemplateSpecification`](crate::model::LaunchTemplateSpecification).
     pub fn builder() -> crate::model::launch_template_specification::Builder {
         crate::model::launch_template_specification::Builder::default()
     }
@@ -941,8 +951,10 @@ impl LaunchTemplateSpecification {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodegroupUpdateConfig {
     /// <p>The maximum number of nodes unavailable at once during a version update. Nodes will be updated in parallel. This value or <code>maxUnavailablePercentage</code> is required to have a value.The maximum number is 100.</p>
+    #[doc(hidden)]
     pub max_unavailable: std::option::Option<i32>,
     /// <p>The maximum percentage of nodes unavailable during a version update. This percentage of nodes will be updated in parallel, up to 100 nodes at once. This value or <code>maxUnavailable</code> is required to have a value.</p>
+    #[doc(hidden)]
     pub max_unavailable_percentage: std::option::Option<i32>,
 }
 impl NodegroupUpdateConfig {
@@ -966,11 +978,10 @@ impl std::fmt::Debug for NodegroupUpdateConfig {
         formatter.finish()
     }
 }
-/// See [`NodegroupUpdateConfig`](crate::model::NodegroupUpdateConfig)
+/// See [`NodegroupUpdateConfig`](crate::model::NodegroupUpdateConfig).
 pub mod nodegroup_update_config {
 
-    /// A builder for [`NodegroupUpdateConfig`](crate::model::NodegroupUpdateConfig)
-    #[non_exhaustive]
+    /// A builder for [`NodegroupUpdateConfig`](crate::model::NodegroupUpdateConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_unavailable: std::option::Option<i32>,
@@ -997,7 +1008,7 @@ pub mod nodegroup_update_config {
             self.max_unavailable_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodegroupUpdateConfig`](crate::model::NodegroupUpdateConfig)
+        /// Consumes the builder and constructs a [`NodegroupUpdateConfig`](crate::model::NodegroupUpdateConfig).
         pub fn build(self) -> crate::model::NodegroupUpdateConfig {
             crate::model::NodegroupUpdateConfig {
                 max_unavailable: self.max_unavailable,
@@ -1007,7 +1018,7 @@ pub mod nodegroup_update_config {
     }
 }
 impl NodegroupUpdateConfig {
-    /// Creates a new builder-style object to manufacture [`NodegroupUpdateConfig`](crate::model::NodegroupUpdateConfig)
+    /// Creates a new builder-style object to manufacture [`NodegroupUpdateConfig`](crate::model::NodegroupUpdateConfig).
     pub fn builder() -> crate::model::nodegroup_update_config::Builder {
         crate::model::nodegroup_update_config::Builder::default()
     }
@@ -1018,14 +1029,17 @@ impl NodegroupUpdateConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodegroupScalingConfig {
     /// <p>The minimum number of nodes that the managed node group can scale in to.</p>
+    #[doc(hidden)]
     pub min_size: std::option::Option<i32>,
     /// <p>The maximum number of nodes that the managed node group can scale out to. For information about the maximum number that you can specify, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/service-quotas.html">Amazon EKS service quotas</a> in the <i>Amazon EKS User Guide</i>.</p>
+    #[doc(hidden)]
     pub max_size: std::option::Option<i32>,
     /// <p>The current number of nodes that the managed node group should maintain.</p> <important>
     /// <p>If you use Cluster Autoscaler, you shouldn't change the desiredSize value directly, as this can cause the Cluster Autoscaler to suddenly scale up or scale down.</p>
     /// </important>
     /// <p>Whenever this parameter changes, the number of worker nodes in the node group is updated to the specified size. If this parameter is given a value that is smaller than the current number of running worker nodes, the necessary number of worker nodes are terminated to match the given value. When using CloudFormation, no action occurs if you remove this parameter from your CFN template.</p>
     /// <p>This parameter can be different from minSize in some cases, such as when starting with extra hosts for testing. This parameter can also be different when you want to start with an estimated number of needed hosts, but let Cluster Autoscaler reduce the number if there are too many. When Cluster Autoscaler is used, the desiredSize parameter is altered by Cluster Autoscaler (but can be out-of-date for short periods of time). Cluster Autoscaler doesn't scale a managed node group lower than minSize or higher than maxSize.</p>
+    #[doc(hidden)]
     pub desired_size: std::option::Option<i32>,
 }
 impl NodegroupScalingConfig {
@@ -1055,11 +1069,10 @@ impl std::fmt::Debug for NodegroupScalingConfig {
         formatter.finish()
     }
 }
-/// See [`NodegroupScalingConfig`](crate::model::NodegroupScalingConfig)
+/// See [`NodegroupScalingConfig`](crate::model::NodegroupScalingConfig).
 pub mod nodegroup_scaling_config {
 
-    /// A builder for [`NodegroupScalingConfig`](crate::model::NodegroupScalingConfig)
-    #[non_exhaustive]
+    /// A builder for [`NodegroupScalingConfig`](crate::model::NodegroupScalingConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min_size: std::option::Option<i32>,
@@ -1105,7 +1118,7 @@ pub mod nodegroup_scaling_config {
             self.desired_size = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodegroupScalingConfig`](crate::model::NodegroupScalingConfig)
+        /// Consumes the builder and constructs a [`NodegroupScalingConfig`](crate::model::NodegroupScalingConfig).
         pub fn build(self) -> crate::model::NodegroupScalingConfig {
             crate::model::NodegroupScalingConfig {
                 min_size: self.min_size,
@@ -1116,7 +1129,7 @@ pub mod nodegroup_scaling_config {
     }
 }
 impl NodegroupScalingConfig {
-    /// Creates a new builder-style object to manufacture [`NodegroupScalingConfig`](crate::model::NodegroupScalingConfig)
+    /// Creates a new builder-style object to manufacture [`NodegroupScalingConfig`](crate::model::NodegroupScalingConfig).
     pub fn builder() -> crate::model::nodegroup_scaling_config::Builder {
         crate::model::nodegroup_scaling_config::Builder::default()
     }
@@ -1127,8 +1140,10 @@ impl NodegroupScalingConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateTaintsPayload {
     /// <p>Kubernetes taints to be added or updated.</p>
+    #[doc(hidden)]
     pub add_or_update_taints: std::option::Option<std::vec::Vec<crate::model::Taint>>,
     /// <p>Kubernetes taints to be removed.</p>
+    #[doc(hidden)]
     pub remove_taints: std::option::Option<std::vec::Vec<crate::model::Taint>>,
 }
 impl UpdateTaintsPayload {
@@ -1149,11 +1164,10 @@ impl std::fmt::Debug for UpdateTaintsPayload {
         formatter.finish()
     }
 }
-/// See [`UpdateTaintsPayload`](crate::model::UpdateTaintsPayload)
+/// See [`UpdateTaintsPayload`](crate::model::UpdateTaintsPayload).
 pub mod update_taints_payload {
 
-    /// A builder for [`UpdateTaintsPayload`](crate::model::UpdateTaintsPayload)
-    #[non_exhaustive]
+    /// A builder for [`UpdateTaintsPayload`](crate::model::UpdateTaintsPayload).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) add_or_update_taints: std::option::Option<std::vec::Vec<crate::model::Taint>>,
@@ -1198,7 +1212,7 @@ pub mod update_taints_payload {
             self.remove_taints = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateTaintsPayload`](crate::model::UpdateTaintsPayload)
+        /// Consumes the builder and constructs a [`UpdateTaintsPayload`](crate::model::UpdateTaintsPayload).
         pub fn build(self) -> crate::model::UpdateTaintsPayload {
             crate::model::UpdateTaintsPayload {
                 add_or_update_taints: self.add_or_update_taints,
@@ -1208,7 +1222,7 @@ pub mod update_taints_payload {
     }
 }
 impl UpdateTaintsPayload {
-    /// Creates a new builder-style object to manufacture [`UpdateTaintsPayload`](crate::model::UpdateTaintsPayload)
+    /// Creates a new builder-style object to manufacture [`UpdateTaintsPayload`](crate::model::UpdateTaintsPayload).
     pub fn builder() -> crate::model::update_taints_payload::Builder {
         crate::model::update_taints_payload::Builder::default()
     }
@@ -1219,10 +1233,13 @@ impl UpdateTaintsPayload {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Taint {
     /// <p>The key of the taint.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the taint.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The effect of the taint.</p>
+    #[doc(hidden)]
     pub effect: std::option::Option<crate::model::TaintEffect>,
 }
 impl Taint {
@@ -1248,11 +1265,10 @@ impl std::fmt::Debug for Taint {
         formatter.finish()
     }
 }
-/// See [`Taint`](crate::model::Taint)
+/// See [`Taint`](crate::model::Taint).
 pub mod taint {
 
-    /// A builder for [`Taint`](crate::model::Taint)
-    #[non_exhaustive]
+    /// A builder for [`Taint`](crate::model::Taint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1290,7 +1306,7 @@ pub mod taint {
             self.effect = input;
             self
         }
-        /// Consumes the builder and constructs a [`Taint`](crate::model::Taint)
+        /// Consumes the builder and constructs a [`Taint`](crate::model::Taint).
         pub fn build(self) -> crate::model::Taint {
             crate::model::Taint {
                 key: self.key,
@@ -1301,7 +1317,7 @@ pub mod taint {
     }
 }
 impl Taint {
-    /// Creates a new builder-style object to manufacture [`Taint`](crate::model::Taint)
+    /// Creates a new builder-style object to manufacture [`Taint`](crate::model::Taint).
     pub fn builder() -> crate::model::taint::Builder {
         crate::model::taint::Builder::default()
     }
@@ -1371,9 +1387,11 @@ impl AsRef<str> for TaintEffect {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateLabelsPayload {
     /// <p>Kubernetes labels to be added or updated.</p>
+    #[doc(hidden)]
     pub add_or_update_labels:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Kubernetes labels to be removed.</p>
+    #[doc(hidden)]
     pub remove_labels: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl UpdateLabelsPayload {
@@ -1397,11 +1415,10 @@ impl std::fmt::Debug for UpdateLabelsPayload {
         formatter.finish()
     }
 }
-/// See [`UpdateLabelsPayload`](crate::model::UpdateLabelsPayload)
+/// See [`UpdateLabelsPayload`](crate::model::UpdateLabelsPayload).
 pub mod update_labels_payload {
 
-    /// A builder for [`UpdateLabelsPayload`](crate::model::UpdateLabelsPayload)
-    #[non_exhaustive]
+    /// A builder for [`UpdateLabelsPayload`](crate::model::UpdateLabelsPayload).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) add_or_update_labels: std::option::Option<
@@ -1454,7 +1471,7 @@ pub mod update_labels_payload {
             self.remove_labels = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateLabelsPayload`](crate::model::UpdateLabelsPayload)
+        /// Consumes the builder and constructs a [`UpdateLabelsPayload`](crate::model::UpdateLabelsPayload).
         pub fn build(self) -> crate::model::UpdateLabelsPayload {
             crate::model::UpdateLabelsPayload {
                 add_or_update_labels: self.add_or_update_labels,
@@ -1464,7 +1481,7 @@ pub mod update_labels_payload {
     }
 }
 impl UpdateLabelsPayload {
-    /// Creates a new builder-style object to manufacture [`UpdateLabelsPayload`](crate::model::UpdateLabelsPayload)
+    /// Creates a new builder-style object to manufacture [`UpdateLabelsPayload`](crate::model::UpdateLabelsPayload).
     pub fn builder() -> crate::model::update_labels_payload::Builder {
         crate::model::update_labels_payload::Builder::default()
     }
@@ -1475,6 +1492,7 @@ impl UpdateLabelsPayload {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Logging {
     /// <p>The cluster control plane logging configuration for your cluster.</p>
+    #[doc(hidden)]
     pub cluster_logging: std::option::Option<std::vec::Vec<crate::model::LogSetup>>,
 }
 impl Logging {
@@ -1490,11 +1508,10 @@ impl std::fmt::Debug for Logging {
         formatter.finish()
     }
 }
-/// See [`Logging`](crate::model::Logging)
+/// See [`Logging`](crate::model::Logging).
 pub mod logging {
 
-    /// A builder for [`Logging`](crate::model::Logging)
-    #[non_exhaustive]
+    /// A builder for [`Logging`](crate::model::Logging).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cluster_logging: std::option::Option<std::vec::Vec<crate::model::LogSetup>>,
@@ -1519,7 +1536,7 @@ pub mod logging {
             self.cluster_logging = input;
             self
         }
-        /// Consumes the builder and constructs a [`Logging`](crate::model::Logging)
+        /// Consumes the builder and constructs a [`Logging`](crate::model::Logging).
         pub fn build(self) -> crate::model::Logging {
             crate::model::Logging {
                 cluster_logging: self.cluster_logging,
@@ -1528,7 +1545,7 @@ pub mod logging {
     }
 }
 impl Logging {
-    /// Creates a new builder-style object to manufacture [`Logging`](crate::model::Logging)
+    /// Creates a new builder-style object to manufacture [`Logging`](crate::model::Logging).
     pub fn builder() -> crate::model::logging::Builder {
         crate::model::logging::Builder::default()
     }
@@ -1539,8 +1556,10 @@ impl Logging {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogSetup {
     /// <p>The available cluster control plane log types.</p>
+    #[doc(hidden)]
     pub types: std::option::Option<std::vec::Vec<crate::model::LogType>>,
     /// <p>If a log type is enabled, that log type exports its control plane logs to CloudWatch Logs. If a log type isn't enabled, that log type doesn't export its control plane logs. Each individual log type can be enabled or disabled independently.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
 }
 impl LogSetup {
@@ -1561,11 +1580,10 @@ impl std::fmt::Debug for LogSetup {
         formatter.finish()
     }
 }
-/// See [`LogSetup`](crate::model::LogSetup)
+/// See [`LogSetup`](crate::model::LogSetup).
 pub mod log_setup {
 
-    /// A builder for [`LogSetup`](crate::model::LogSetup)
-    #[non_exhaustive]
+    /// A builder for [`LogSetup`](crate::model::LogSetup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) types: std::option::Option<std::vec::Vec<crate::model::LogType>>,
@@ -1601,7 +1619,7 @@ pub mod log_setup {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogSetup`](crate::model::LogSetup)
+        /// Consumes the builder and constructs a [`LogSetup`](crate::model::LogSetup).
         pub fn build(self) -> crate::model::LogSetup {
             crate::model::LogSetup {
                 types: self.types,
@@ -1611,7 +1629,7 @@ pub mod log_setup {
     }
 }
 impl LogSetup {
-    /// Creates a new builder-style object to manufacture [`LogSetup`](crate::model::LogSetup)
+    /// Creates a new builder-style object to manufacture [`LogSetup`](crate::model::LogSetup).
     pub fn builder() -> crate::model::log_setup::Builder {
         crate::model::log_setup::Builder::default()
     }
@@ -1695,6 +1713,7 @@ impl AsRef<str> for LogType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcConfigRequest {
     /// <p>Specify subnets for your Amazon EKS nodes. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your nodes and the Kubernetes control plane.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specify one or more security groups for the cross-account elastic network interfaces that Amazon EKS creates to use that allow communication between your nodes and the Kubernetes control plane. If you don't specify any security groups, then familiarize yourself with the difference between Amazon EKS defaults for clusters deployed with Kubernetes:</p>
     /// <ul>
@@ -1702,12 +1721,16 @@ pub struct VpcConfigRequest {
     /// <li> <p>1.14 Amazon EKS platform version <code>eks.3</code> and later </p> </li>
     /// </ul>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html">Amazon EKS security group considerations</a> in the <i> <i>Amazon EKS User Guide</i> </i>.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Set this value to <code>false</code> to disable public access to your cluster's Kubernetes API server endpoint. If you disable public access, your cluster's Kubernetes API server can only receive requests from within the cluster VPC. The default value for this parameter is <code>true</code>, which enables public access for your Kubernetes API server. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS cluster endpoint access control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.</p>
+    #[doc(hidden)]
     pub endpoint_public_access: std::option::Option<bool>,
     /// <p>Set this value to <code>true</code> to enable private access for your cluster's Kubernetes API server endpoint. If you enable private access, Kubernetes API requests from within your cluster's VPC use the private VPC endpoint. The default value for this parameter is <code>false</code>, which disables private access for your Kubernetes API server. If you disable private access and you have nodes or Fargate pods in the cluster, then ensure that <code>publicAccessCidrs</code> includes the necessary CIDR blocks for communication with the nodes or Fargate pods. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS cluster endpoint access control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.</p>
+    #[doc(hidden)]
     pub endpoint_private_access: std::option::Option<bool>,
     /// <p>The CIDR blocks that are allowed access to your cluster's public Kubernetes API server endpoint. Communication to the endpoint from addresses outside of the CIDR blocks that you specify is denied. The default value is <code>0.0.0.0/0</code>. If you've disabled private endpoint access and you have nodes or Fargate pods in the cluster, then ensure that you specify the necessary CIDR blocks. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS cluster endpoint access control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.</p>
+    #[doc(hidden)]
     pub public_access_cidrs: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VpcConfigRequest {
@@ -1748,11 +1771,10 @@ impl std::fmt::Debug for VpcConfigRequest {
         formatter.finish()
     }
 }
-/// See [`VpcConfigRequest`](crate::model::VpcConfigRequest)
+/// See [`VpcConfigRequest`](crate::model::VpcConfigRequest).
 pub mod vpc_config_request {
 
-    /// A builder for [`VpcConfigRequest`](crate::model::VpcConfigRequest)
-    #[non_exhaustive]
+    /// A builder for [`VpcConfigRequest`](crate::model::VpcConfigRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1849,7 +1871,7 @@ pub mod vpc_config_request {
             self.public_access_cidrs = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcConfigRequest`](crate::model::VpcConfigRequest)
+        /// Consumes the builder and constructs a [`VpcConfigRequest`](crate::model::VpcConfigRequest).
         pub fn build(self) -> crate::model::VpcConfigRequest {
             crate::model::VpcConfigRequest {
                 subnet_ids: self.subnet_ids,
@@ -1862,7 +1884,7 @@ pub mod vpc_config_request {
     }
 }
 impl VpcConfigRequest {
-    /// Creates a new builder-style object to manufacture [`VpcConfigRequest`](crate::model::VpcConfigRequest)
+    /// Creates a new builder-style object to manufacture [`VpcConfigRequest`](crate::model::VpcConfigRequest).
     pub fn builder() -> crate::model::vpc_config_request::Builder {
         crate::model::vpc_config_request::Builder::default()
     }
@@ -1928,40 +1950,57 @@ impl AsRef<str> for ResolveConflicts {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Cluster {
     /// <p>The name of the cluster.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the cluster.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The Unix epoch timestamp in seconds for when the cluster was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Kubernetes server version for the cluster.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The endpoint for your Kubernetes API server.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to Amazon Web Services API operations on your behalf.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The VPC configuration used by the cluster control plane. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html">Cluster VPC Considerations</a> and <a href="https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html">Cluster Security Group Considerations</a> in the <i>Amazon EKS User Guide</i>.</p>
+    #[doc(hidden)]
     pub resources_vpc_config: std::option::Option<crate::model::VpcConfigResponse>,
     /// <p>The Kubernetes network configuration for the cluster.</p>
+    #[doc(hidden)]
     pub kubernetes_network_config:
         std::option::Option<crate::model::KubernetesNetworkConfigResponse>,
     /// <p>The logging configuration for your cluster.</p>
+    #[doc(hidden)]
     pub logging: std::option::Option<crate::model::Logging>,
     /// <p>The identity provider information for the cluster.</p>
+    #[doc(hidden)]
     pub identity: std::option::Option<crate::model::Identity>,
     /// <p>The current status of the cluster.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ClusterStatus>,
     /// <p>The <code>certificate-authority-data</code> for your cluster.</p>
+    #[doc(hidden)]
     pub certificate_authority: std::option::Option<crate::model::Certificate>,
     /// <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the request.</p>
+    #[doc(hidden)]
     pub client_request_token: std::option::Option<std::string::String>,
     /// <p>The platform version of your Amazon EKS cluster. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/platform-versions.html">Platform Versions</a> in the <i> <i>Amazon EKS User Guide</i> </i>.</p>
+    #[doc(hidden)]
     pub platform_version: std::option::Option<std::string::String>,
     /// <p>The metadata that you apply to the cluster to assist with categorization and organization. Each tag consists of a key and an optional value. You define both. Cluster tags do not propagate to any other resources associated with the cluster.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The encryption configuration for the cluster.</p>
+    #[doc(hidden)]
     pub encryption_config: std::option::Option<std::vec::Vec<crate::model::EncryptionConfig>>,
     /// <p>The configuration used to connect to a cluster for registration.</p>
+    #[doc(hidden)]
     pub connector_config: std::option::Option<crate::model::ConnectorConfigResponse>,
 }
 impl Cluster {
@@ -2062,11 +2101,10 @@ impl std::fmt::Debug for Cluster {
         formatter.finish()
     }
 }
-/// See [`Cluster`](crate::model::Cluster)
+/// See [`Cluster`](crate::model::Cluster).
 pub mod cluster {
 
-    /// A builder for [`Cluster`](crate::model::Cluster)
-    #[non_exhaustive]
+    /// A builder for [`Cluster`](crate::model::Cluster).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2313,7 +2351,7 @@ pub mod cluster {
             self.connector_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`Cluster`](crate::model::Cluster)
+        /// Consumes the builder and constructs a [`Cluster`](crate::model::Cluster).
         pub fn build(self) -> crate::model::Cluster {
             crate::model::Cluster {
                 name: self.name,
@@ -2338,7 +2376,7 @@ pub mod cluster {
     }
 }
 impl Cluster {
-    /// Creates a new builder-style object to manufacture [`Cluster`](crate::model::Cluster)
+    /// Creates a new builder-style object to manufacture [`Cluster`](crate::model::Cluster).
     pub fn builder() -> crate::model::cluster::Builder {
         crate::model::cluster::Builder::default()
     }
@@ -2349,14 +2387,19 @@ impl Cluster {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorConfigResponse {
     /// <p>A unique ID associated with the cluster for registration purposes.</p>
+    #[doc(hidden)]
     pub activation_id: std::option::Option<std::string::String>,
     /// <p>A unique code associated with the cluster for registration purposes.</p>
+    #[doc(hidden)]
     pub activation_code: std::option::Option<std::string::String>,
     /// <p>The expiration time of the connected cluster. The cluster's YAML file must be applied through the native provider.</p>
+    #[doc(hidden)]
     pub activation_expiry: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The cluster's cloud service provider.</p>
+    #[doc(hidden)]
     pub provider: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the role to communicate with services from the connected Kubernetes cluster.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl ConnectorConfigResponse {
@@ -2392,11 +2435,10 @@ impl std::fmt::Debug for ConnectorConfigResponse {
         formatter.finish()
     }
 }
-/// See [`ConnectorConfigResponse`](crate::model::ConnectorConfigResponse)
+/// See [`ConnectorConfigResponse`](crate::model::ConnectorConfigResponse).
 pub mod connector_config_response {
 
-    /// A builder for [`ConnectorConfigResponse`](crate::model::ConnectorConfigResponse)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorConfigResponse`](crate::model::ConnectorConfigResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activation_id: std::option::Option<std::string::String>,
@@ -2465,7 +2507,7 @@ pub mod connector_config_response {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorConfigResponse`](crate::model::ConnectorConfigResponse)
+        /// Consumes the builder and constructs a [`ConnectorConfigResponse`](crate::model::ConnectorConfigResponse).
         pub fn build(self) -> crate::model::ConnectorConfigResponse {
             crate::model::ConnectorConfigResponse {
                 activation_id: self.activation_id,
@@ -2478,7 +2520,7 @@ pub mod connector_config_response {
     }
 }
 impl ConnectorConfigResponse {
-    /// Creates a new builder-style object to manufacture [`ConnectorConfigResponse`](crate::model::ConnectorConfigResponse)
+    /// Creates a new builder-style object to manufacture [`ConnectorConfigResponse`](crate::model::ConnectorConfigResponse).
     pub fn builder() -> crate::model::connector_config_response::Builder {
         crate::model::connector_config_response::Builder::default()
     }
@@ -2489,8 +2531,10 @@ impl ConnectorConfigResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EncryptionConfig {
     /// <p>Specifies the resources to be encrypted. The only supported value is "secrets".</p>
+    #[doc(hidden)]
     pub resources: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Key Management Service (KMS) key. Either the ARN or the alias can be used.</p>
+    #[doc(hidden)]
     pub provider: std::option::Option<crate::model::Provider>,
 }
 impl EncryptionConfig {
@@ -2511,11 +2555,10 @@ impl std::fmt::Debug for EncryptionConfig {
         formatter.finish()
     }
 }
-/// See [`EncryptionConfig`](crate::model::EncryptionConfig)
+/// See [`EncryptionConfig`](crate::model::EncryptionConfig).
 pub mod encryption_config {
 
-    /// A builder for [`EncryptionConfig`](crate::model::EncryptionConfig)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionConfig`](crate::model::EncryptionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resources: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2551,7 +2594,7 @@ pub mod encryption_config {
             self.provider = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionConfig`](crate::model::EncryptionConfig)
+        /// Consumes the builder and constructs a [`EncryptionConfig`](crate::model::EncryptionConfig).
         pub fn build(self) -> crate::model::EncryptionConfig {
             crate::model::EncryptionConfig {
                 resources: self.resources,
@@ -2561,7 +2604,7 @@ pub mod encryption_config {
     }
 }
 impl EncryptionConfig {
-    /// Creates a new builder-style object to manufacture [`EncryptionConfig`](crate::model::EncryptionConfig)
+    /// Creates a new builder-style object to manufacture [`EncryptionConfig`](crate::model::EncryptionConfig).
     pub fn builder() -> crate::model::encryption_config::Builder {
         crate::model::encryption_config::Builder::default()
     }
@@ -2572,6 +2615,7 @@ impl EncryptionConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Provider {
     /// <p>Amazon Resource Name (ARN) or alias of the KMS key. The KMS key must be symmetric, created in the same region as the cluster, and if the KMS key was created in a different account, the user must have access to the KMS key. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html">Allowing Users in Other Accounts to Use a KMS key</a> in the <i>Key Management Service Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub key_arn: std::option::Option<std::string::String>,
 }
 impl Provider {
@@ -2587,11 +2631,10 @@ impl std::fmt::Debug for Provider {
         formatter.finish()
     }
 }
-/// See [`Provider`](crate::model::Provider)
+/// See [`Provider`](crate::model::Provider).
 pub mod provider {
 
-    /// A builder for [`Provider`](crate::model::Provider)
-    #[non_exhaustive]
+    /// A builder for [`Provider`](crate::model::Provider).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key_arn: std::option::Option<std::string::String>,
@@ -2607,7 +2650,7 @@ pub mod provider {
             self.key_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Provider`](crate::model::Provider)
+        /// Consumes the builder and constructs a [`Provider`](crate::model::Provider).
         pub fn build(self) -> crate::model::Provider {
             crate::model::Provider {
                 key_arn: self.key_arn,
@@ -2616,7 +2659,7 @@ pub mod provider {
     }
 }
 impl Provider {
-    /// Creates a new builder-style object to manufacture [`Provider`](crate::model::Provider)
+    /// Creates a new builder-style object to manufacture [`Provider`](crate::model::Provider).
     pub fn builder() -> crate::model::provider::Builder {
         crate::model::provider::Builder::default()
     }
@@ -2627,6 +2670,7 @@ impl Provider {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Certificate {
     /// <p>The Base64-encoded certificate data required to communicate with your cluster. Add this to the <code>certificate-authority-data</code> section of the <code>kubeconfig</code> file for your cluster.</p>
+    #[doc(hidden)]
     pub data: std::option::Option<std::string::String>,
 }
 impl Certificate {
@@ -2642,11 +2686,10 @@ impl std::fmt::Debug for Certificate {
         formatter.finish()
     }
 }
-/// See [`Certificate`](crate::model::Certificate)
+/// See [`Certificate`](crate::model::Certificate).
 pub mod certificate {
 
-    /// A builder for [`Certificate`](crate::model::Certificate)
-    #[non_exhaustive]
+    /// A builder for [`Certificate`](crate::model::Certificate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data: std::option::Option<std::string::String>,
@@ -2662,14 +2705,14 @@ pub mod certificate {
             self.data = input;
             self
         }
-        /// Consumes the builder and constructs a [`Certificate`](crate::model::Certificate)
+        /// Consumes the builder and constructs a [`Certificate`](crate::model::Certificate).
         pub fn build(self) -> crate::model::Certificate {
             crate::model::Certificate { data: self.data }
         }
     }
 }
 impl Certificate {
-    /// Creates a new builder-style object to manufacture [`Certificate`](crate::model::Certificate)
+    /// Creates a new builder-style object to manufacture [`Certificate`](crate::model::Certificate).
     pub fn builder() -> crate::model::certificate::Builder {
         crate::model::certificate::Builder::default()
     }
@@ -2753,6 +2796,7 @@ impl AsRef<str> for ClusterStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Identity {
     /// <p>An object representing the <a href="https://openid.net/connect/">OpenID Connect</a> identity provider information.</p>
+    #[doc(hidden)]
     pub oidc: std::option::Option<crate::model::Oidc>,
 }
 impl Identity {
@@ -2768,11 +2812,10 @@ impl std::fmt::Debug for Identity {
         formatter.finish()
     }
 }
-/// See [`Identity`](crate::model::Identity)
+/// See [`Identity`](crate::model::Identity).
 pub mod identity {
 
-    /// A builder for [`Identity`](crate::model::Identity)
-    #[non_exhaustive]
+    /// A builder for [`Identity`](crate::model::Identity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) oidc: std::option::Option<crate::model::Oidc>,
@@ -2788,14 +2831,14 @@ pub mod identity {
             self.oidc = input;
             self
         }
-        /// Consumes the builder and constructs a [`Identity`](crate::model::Identity)
+        /// Consumes the builder and constructs a [`Identity`](crate::model::Identity).
         pub fn build(self) -> crate::model::Identity {
             crate::model::Identity { oidc: self.oidc }
         }
     }
 }
 impl Identity {
-    /// Creates a new builder-style object to manufacture [`Identity`](crate::model::Identity)
+    /// Creates a new builder-style object to manufacture [`Identity`](crate::model::Identity).
     pub fn builder() -> crate::model::identity::Builder {
         crate::model::identity::Builder::default()
     }
@@ -2806,6 +2849,7 @@ impl Identity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Oidc {
     /// <p>The issuer URL for the OIDC identity provider.</p>
+    #[doc(hidden)]
     pub issuer: std::option::Option<std::string::String>,
 }
 impl Oidc {
@@ -2821,11 +2865,10 @@ impl std::fmt::Debug for Oidc {
         formatter.finish()
     }
 }
-/// See [`Oidc`](crate::model::Oidc)
+/// See [`Oidc`](crate::model::Oidc).
 pub mod oidc {
 
-    /// A builder for [`Oidc`](crate::model::Oidc)
-    #[non_exhaustive]
+    /// A builder for [`Oidc`](crate::model::Oidc).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) issuer: std::option::Option<std::string::String>,
@@ -2841,7 +2884,7 @@ pub mod oidc {
             self.issuer = input;
             self
         }
-        /// Consumes the builder and constructs a [`Oidc`](crate::model::Oidc)
+        /// Consumes the builder and constructs a [`Oidc`](crate::model::Oidc).
         pub fn build(self) -> crate::model::Oidc {
             crate::model::Oidc {
                 issuer: self.issuer,
@@ -2850,7 +2893,7 @@ pub mod oidc {
     }
 }
 impl Oidc {
-    /// Creates a new builder-style object to manufacture [`Oidc`](crate::model::Oidc)
+    /// Creates a new builder-style object to manufacture [`Oidc`](crate::model::Oidc).
     pub fn builder() -> crate::model::oidc::Builder {
         crate::model::oidc::Builder::default()
     }
@@ -2861,10 +2904,13 @@ impl Oidc {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KubernetesNetworkConfigResponse {
     /// <p>The CIDR block that Kubernetes pod and service IP addresses are assigned from. Kubernetes assigns addresses from an IPv4 CIDR block assigned to a subnet that the node is in. If you didn't specify a CIDR block when you created the cluster, then Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. If this was specified, then it was specified when the cluster was created and it can't be changed.</p>
+    #[doc(hidden)]
     pub service_ipv4_cidr: std::option::Option<std::string::String>,
     /// <p>The CIDR block that Kubernetes pod and service IP addresses are assigned from if you created a 1.21 or later cluster with version 1.10.1 or later of the Amazon VPC CNI add-on and specified <code>ipv6</code> for <b>ipFamily</b> when you created the cluster. Kubernetes assigns service addresses from the unique local address range (<code>fc00::/7</code>) because you can't specify a custom IPv6 CIDR block when you create the cluster.</p>
+    #[doc(hidden)]
     pub service_ipv6_cidr: std::option::Option<std::string::String>,
     /// <p>The IP family used to assign Kubernetes pod and service IP addresses. The IP family is always <code>ipv4</code>, unless you have a <code>1.21</code> or later cluster running version 1.10.1 or later of the Amazon VPC CNI add-on and specified <code>ipv6</code> when you created the cluster. </p>
+    #[doc(hidden)]
     pub ip_family: std::option::Option<crate::model::IpFamily>,
 }
 impl KubernetesNetworkConfigResponse {
@@ -2890,11 +2936,10 @@ impl std::fmt::Debug for KubernetesNetworkConfigResponse {
         formatter.finish()
     }
 }
-/// See [`KubernetesNetworkConfigResponse`](crate::model::KubernetesNetworkConfigResponse)
+/// See [`KubernetesNetworkConfigResponse`](crate::model::KubernetesNetworkConfigResponse).
 pub mod kubernetes_network_config_response {
 
-    /// A builder for [`KubernetesNetworkConfigResponse`](crate::model::KubernetesNetworkConfigResponse)
-    #[non_exhaustive]
+    /// A builder for [`KubernetesNetworkConfigResponse`](crate::model::KubernetesNetworkConfigResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_ipv4_cidr: std::option::Option<std::string::String>,
@@ -2938,7 +2983,7 @@ pub mod kubernetes_network_config_response {
             self.ip_family = input;
             self
         }
-        /// Consumes the builder and constructs a [`KubernetesNetworkConfigResponse`](crate::model::KubernetesNetworkConfigResponse)
+        /// Consumes the builder and constructs a [`KubernetesNetworkConfigResponse`](crate::model::KubernetesNetworkConfigResponse).
         pub fn build(self) -> crate::model::KubernetesNetworkConfigResponse {
             crate::model::KubernetesNetworkConfigResponse {
                 service_ipv4_cidr: self.service_ipv4_cidr,
@@ -2949,7 +2994,7 @@ pub mod kubernetes_network_config_response {
     }
 }
 impl KubernetesNetworkConfigResponse {
-    /// Creates a new builder-style object to manufacture [`KubernetesNetworkConfigResponse`](crate::model::KubernetesNetworkConfigResponse)
+    /// Creates a new builder-style object to manufacture [`KubernetesNetworkConfigResponse`](crate::model::KubernetesNetworkConfigResponse).
     pub fn builder() -> crate::model::kubernetes_network_config_response::Builder {
         crate::model::kubernetes_network_config_response::Builder::default()
     }
@@ -3015,18 +3060,25 @@ impl AsRef<str> for IpFamily {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcConfigResponse {
     /// <p>The subnets associated with your cluster.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The security groups associated with the cross-account elastic network interfaces that are used to allow communication between your nodes and the Kubernetes control plane.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.</p>
+    #[doc(hidden)]
     pub cluster_security_group_id: std::option::Option<std::string::String>,
     /// <p>The VPC associated with your cluster.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>This parameter indicates whether the Amazon EKS public API server endpoint is enabled. If the Amazon EKS public API server endpoint is disabled, your cluster's Kubernetes API server can only receive requests that originate from within the cluster VPC.</p>
+    #[doc(hidden)]
     pub endpoint_public_access: bool,
     /// <p>This parameter indicates whether the Amazon EKS private API server endpoint is enabled. If the Amazon EKS private API server endpoint is enabled, Kubernetes API requests that originate from within your cluster's VPC use the private VPC endpoint instead of traversing the internet. If this value is disabled and you have nodes or Fargate pods in the cluster, then ensure that <code>publicAccessCidrs</code> includes the necessary CIDR blocks for communication with the nodes or Fargate pods. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS cluster endpoint access control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.</p>
+    #[doc(hidden)]
     pub endpoint_private_access: bool,
     /// <p>The CIDR blocks that are allowed access to your cluster's public Kubernetes API server endpoint. Communication to the endpoint from addresses outside of the listed CIDR blocks is denied. The default value is <code>0.0.0.0/0</code>. If you've disabled private endpoint access and you have nodes or Fargate pods in the cluster, then ensure that the necessary CIDR blocks are listed. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS cluster endpoint access control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.</p>
+    #[doc(hidden)]
     pub public_access_cidrs: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VpcConfigResponse {
@@ -3072,11 +3124,10 @@ impl std::fmt::Debug for VpcConfigResponse {
         formatter.finish()
     }
 }
-/// See [`VpcConfigResponse`](crate::model::VpcConfigResponse)
+/// See [`VpcConfigResponse`](crate::model::VpcConfigResponse).
 pub mod vpc_config_response {
 
-    /// A builder for [`VpcConfigResponse`](crate::model::VpcConfigResponse)
-    #[non_exhaustive]
+    /// A builder for [`VpcConfigResponse`](crate::model::VpcConfigResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3188,7 +3239,7 @@ pub mod vpc_config_response {
             self.public_access_cidrs = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcConfigResponse`](crate::model::VpcConfigResponse)
+        /// Consumes the builder and constructs a [`VpcConfigResponse`](crate::model::VpcConfigResponse).
         pub fn build(self) -> crate::model::VpcConfigResponse {
             crate::model::VpcConfigResponse {
                 subnet_ids: self.subnet_ids,
@@ -3203,7 +3254,7 @@ pub mod vpc_config_response {
     }
 }
 impl VpcConfigResponse {
-    /// Creates a new builder-style object to manufacture [`VpcConfigResponse`](crate::model::VpcConfigResponse)
+    /// Creates a new builder-style object to manufacture [`VpcConfigResponse`](crate::model::VpcConfigResponse).
     pub fn builder() -> crate::model::vpc_config_response::Builder {
         crate::model::vpc_config_response::Builder::default()
     }
@@ -3214,8 +3265,10 @@ impl VpcConfigResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorConfigRequest {
     /// <p>The Amazon Resource Name (ARN) of the role that is authorized to request the connector configuration.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>The cloud provider for the target cluster to connect.</p>
+    #[doc(hidden)]
     pub provider: std::option::Option<crate::model::ConnectorConfigProvider>,
 }
 impl ConnectorConfigRequest {
@@ -3236,11 +3289,10 @@ impl std::fmt::Debug for ConnectorConfigRequest {
         formatter.finish()
     }
 }
-/// See [`ConnectorConfigRequest`](crate::model::ConnectorConfigRequest)
+/// See [`ConnectorConfigRequest`](crate::model::ConnectorConfigRequest).
 pub mod connector_config_request {
 
-    /// A builder for [`ConnectorConfigRequest`](crate::model::ConnectorConfigRequest)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorConfigRequest`](crate::model::ConnectorConfigRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) role_arn: std::option::Option<std::string::String>,
@@ -3270,7 +3322,7 @@ pub mod connector_config_request {
             self.provider = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorConfigRequest`](crate::model::ConnectorConfigRequest)
+        /// Consumes the builder and constructs a [`ConnectorConfigRequest`](crate::model::ConnectorConfigRequest).
         pub fn build(self) -> crate::model::ConnectorConfigRequest {
             crate::model::ConnectorConfigRequest {
                 role_arn: self.role_arn,
@@ -3280,7 +3332,7 @@ pub mod connector_config_request {
     }
 }
 impl ConnectorConfigRequest {
-    /// Creates a new builder-style object to manufacture [`ConnectorConfigRequest`](crate::model::ConnectorConfigRequest)
+    /// Creates a new builder-style object to manufacture [`ConnectorConfigRequest`](crate::model::ConnectorConfigRequest).
     pub fn builder() -> crate::model::connector_config_request::Builder {
         crate::model::connector_config_request::Builder::default()
     }
@@ -3384,8 +3436,10 @@ impl AsRef<str> for ConnectorConfigProvider {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IdentityProviderConfig {
     /// <p>The type of the identity provider configuration. The only type available is <code>oidc</code>.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>The name of the identity provider configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl IdentityProviderConfig {
@@ -3406,11 +3460,10 @@ impl std::fmt::Debug for IdentityProviderConfig {
         formatter.finish()
     }
 }
-/// See [`IdentityProviderConfig`](crate::model::IdentityProviderConfig)
+/// See [`IdentityProviderConfig`](crate::model::IdentityProviderConfig).
 pub mod identity_provider_config {
 
-    /// A builder for [`IdentityProviderConfig`](crate::model::IdentityProviderConfig)
-    #[non_exhaustive]
+    /// A builder for [`IdentityProviderConfig`](crate::model::IdentityProviderConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<std::string::String>,
@@ -3437,7 +3490,7 @@ pub mod identity_provider_config {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`IdentityProviderConfig`](crate::model::IdentityProviderConfig)
+        /// Consumes the builder and constructs a [`IdentityProviderConfig`](crate::model::IdentityProviderConfig).
         pub fn build(self) -> crate::model::IdentityProviderConfig {
             crate::model::IdentityProviderConfig {
                 r#type: self.r#type,
@@ -3447,7 +3500,7 @@ pub mod identity_provider_config {
     }
 }
 impl IdentityProviderConfig {
-    /// Creates a new builder-style object to manufacture [`IdentityProviderConfig`](crate::model::IdentityProviderConfig)
+    /// Creates a new builder-style object to manufacture [`IdentityProviderConfig`](crate::model::IdentityProviderConfig).
     pub fn builder() -> crate::model::identity_provider_config::Builder {
         crate::model::identity_provider_config::Builder::default()
     }
@@ -3458,53 +3511,76 @@ impl IdentityProviderConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Nodegroup {
     /// <p>The name associated with an Amazon EKS managed node group.</p>
+    #[doc(hidden)]
     pub nodegroup_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) associated with the managed node group.</p>
+    #[doc(hidden)]
     pub nodegroup_arn: std::option::Option<std::string::String>,
     /// <p>The name of the cluster that the managed node group resides in.</p>
+    #[doc(hidden)]
     pub cluster_name: std::option::Option<std::string::String>,
     /// <p>The Kubernetes version of the managed node group.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>If the node group was deployed using a launch template with a custom AMI, then this is the AMI ID that was specified in the launch template. For node groups that weren't deployed using a launch template, this is the version of the Amazon EKS optimized AMI that the node group was deployed with.</p>
+    #[doc(hidden)]
     pub release_version: std::option::Option<std::string::String>,
     /// <p>The Unix epoch timestamp in seconds for when the managed node group was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Unix epoch timestamp in seconds for when the managed node group was last modified.</p>
+    #[doc(hidden)]
     pub modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current status of the managed node group.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::NodegroupStatus>,
     /// <p>The capacity type of your managed node group.</p>
+    #[doc(hidden)]
     pub capacity_type: std::option::Option<crate::model::CapacityTypes>,
     /// <p>The scaling configuration details for the Auto Scaling group that is associated with your node group.</p>
+    #[doc(hidden)]
     pub scaling_config: std::option::Option<crate::model::NodegroupScalingConfig>,
     /// <p>If the node group wasn't deployed with a launch template, then this is the instance type that is associated with the node group. If the node group was deployed with a launch template, then this is <code>null</code>.</p>
+    #[doc(hidden)]
     pub instance_types: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The subnets that were specified for the Auto Scaling group that is associated with your node group.</p>
+    #[doc(hidden)]
     pub subnets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>If the node group wasn't deployed with a launch template, then this is the remote access configuration that is associated with the node group. If the node group was deployed with a launch template, then this is <code>null</code>.</p>
+    #[doc(hidden)]
     pub remote_access: std::option::Option<crate::model::RemoteAccessConfig>,
     /// <p>If the node group was deployed using a launch template with a custom AMI, then this is <code>CUSTOM</code>. For node groups that weren't deployed using a launch template, this is the AMI type that was specified in the node group configuration.</p>
+    #[doc(hidden)]
     pub ami_type: std::option::Option<crate::model::AmiTypes>,
     /// <p>The IAM role associated with your node group. The Amazon EKS node <code>kubelet</code> daemon makes calls to Amazon Web Services APIs on your behalf. Nodes receive permissions for these API calls through an IAM instance profile and associated policies.</p>
+    #[doc(hidden)]
     pub node_role: std::option::Option<std::string::String>,
     /// <p>The Kubernetes labels applied to the nodes in the node group.</p> <note>
     /// <p>Only labels that are applied with the Amazon EKS API are shown here. There may be other Kubernetes labels applied to the nodes in this group.</p>
     /// </note>
+    #[doc(hidden)]
     pub labels:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Kubernetes taints to be applied to the nodes in the node group when they are created. Effect is one of <code>No_Schedule</code>, <code>Prefer_No_Schedule</code>, or <code>No_Execute</code>. Kubernetes taints can be used together with tolerations to control how workloads are scheduled to your nodes. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/node-taints-managed-node-groups.html">Node taints on managed node groups</a>.</p>
+    #[doc(hidden)]
     pub taints: std::option::Option<std::vec::Vec<crate::model::Taint>>,
     /// <p>The resources associated with the node group, such as Auto Scaling groups and security groups for remote access.</p>
+    #[doc(hidden)]
     pub resources: std::option::Option<crate::model::NodegroupResources>,
     /// <p>If the node group wasn't deployed with a launch template, then this is the disk size in the node group configuration. If the node group was deployed with a launch template, then this is <code>null</code>.</p>
+    #[doc(hidden)]
     pub disk_size: std::option::Option<i32>,
     /// <p>The health status of the node group. If there are issues with your node group's health, they are listed here.</p>
+    #[doc(hidden)]
     pub health: std::option::Option<crate::model::NodegroupHealth>,
     /// <p>The node group update configuration.</p>
+    #[doc(hidden)]
     pub update_config: std::option::Option<crate::model::NodegroupUpdateConfig>,
     /// <p>If a launch template was used to create the node group, then this is the launch template that was used.</p>
+    #[doc(hidden)]
     pub launch_template: std::option::Option<crate::model::LaunchTemplateSpecification>,
     /// <p>The metadata applied to the node group to assist with categorization and organization. Each tag consists of a key and an optional value. You define both. Node group tags do not propagate to any other resources associated with the node group, such as the Amazon EC2 instances or subnets. </p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -3641,11 +3717,10 @@ impl std::fmt::Debug for Nodegroup {
         formatter.finish()
     }
 }
-/// See [`Nodegroup`](crate::model::Nodegroup)
+/// See [`Nodegroup`](crate::model::Nodegroup).
 pub mod nodegroup {
 
-    /// A builder for [`Nodegroup`](crate::model::Nodegroup)
-    #[non_exhaustive]
+    /// A builder for [`Nodegroup`](crate::model::Nodegroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) nodegroup_name: std::option::Option<std::string::String>,
@@ -4007,7 +4082,7 @@ pub mod nodegroup {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Nodegroup`](crate::model::Nodegroup)
+        /// Consumes the builder and constructs a [`Nodegroup`](crate::model::Nodegroup).
         pub fn build(self) -> crate::model::Nodegroup {
             crate::model::Nodegroup {
                 nodegroup_name: self.nodegroup_name,
@@ -4038,7 +4113,7 @@ pub mod nodegroup {
     }
 }
 impl Nodegroup {
-    /// Creates a new builder-style object to manufacture [`Nodegroup`](crate::model::Nodegroup)
+    /// Creates a new builder-style object to manufacture [`Nodegroup`](crate::model::Nodegroup).
     pub fn builder() -> crate::model::nodegroup::Builder {
         crate::model::nodegroup::Builder::default()
     }
@@ -4049,6 +4124,7 @@ impl Nodegroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodegroupHealth {
     /// <p>Any issues that are associated with the node group. </p>
+    #[doc(hidden)]
     pub issues: std::option::Option<std::vec::Vec<crate::model::Issue>>,
 }
 impl NodegroupHealth {
@@ -4064,11 +4140,10 @@ impl std::fmt::Debug for NodegroupHealth {
         formatter.finish()
     }
 }
-/// See [`NodegroupHealth`](crate::model::NodegroupHealth)
+/// See [`NodegroupHealth`](crate::model::NodegroupHealth).
 pub mod nodegroup_health {
 
-    /// A builder for [`NodegroupHealth`](crate::model::NodegroupHealth)
-    #[non_exhaustive]
+    /// A builder for [`NodegroupHealth`](crate::model::NodegroupHealth).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) issues: std::option::Option<std::vec::Vec<crate::model::Issue>>,
@@ -4093,7 +4168,7 @@ pub mod nodegroup_health {
             self.issues = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodegroupHealth`](crate::model::NodegroupHealth)
+        /// Consumes the builder and constructs a [`NodegroupHealth`](crate::model::NodegroupHealth).
         pub fn build(self) -> crate::model::NodegroupHealth {
             crate::model::NodegroupHealth {
                 issues: self.issues,
@@ -4102,7 +4177,7 @@ pub mod nodegroup_health {
     }
 }
 impl NodegroupHealth {
-    /// Creates a new builder-style object to manufacture [`NodegroupHealth`](crate::model::NodegroupHealth)
+    /// Creates a new builder-style object to manufacture [`NodegroupHealth`](crate::model::NodegroupHealth).
     pub fn builder() -> crate::model::nodegroup_health::Builder {
         crate::model::nodegroup_health::Builder::default()
     }
@@ -4130,10 +4205,13 @@ pub struct Issue {
     /// <li> <p> <b>InternalFailure</b>: These errors are usually caused by an Amazon EKS server-side issue.</p> </li>
     /// <li> <p> <b>NodeCreationFailure</b>: Your launched instances are unable to register with your Amazon EKS cluster. Common causes of this failure are insufficient <a href="https://docs.aws.amazon.com/eks/latest/userguide/create-node-role.html">node IAM role</a> permissions or lack of outbound internet access for the nodes. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::NodegroupIssueCode>,
     /// <p>The error message associated with the issue.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services resources that are afflicted by this issue.</p>
+    #[doc(hidden)]
     pub resource_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Issue {
@@ -4176,11 +4254,10 @@ impl std::fmt::Debug for Issue {
         formatter.finish()
     }
 }
-/// See [`Issue`](crate::model::Issue)
+/// See [`Issue`](crate::model::Issue).
 pub mod issue {
 
-    /// A builder for [`Issue`](crate::model::Issue)
-    #[non_exhaustive]
+    /// A builder for [`Issue`](crate::model::Issue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::NodegroupIssueCode>,
@@ -4264,7 +4341,7 @@ pub mod issue {
             self.resource_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`Issue`](crate::model::Issue)
+        /// Consumes the builder and constructs a [`Issue`](crate::model::Issue).
         pub fn build(self) -> crate::model::Issue {
             crate::model::Issue {
                 code: self.code,
@@ -4275,7 +4352,7 @@ pub mod issue {
     }
 }
 impl Issue {
-    /// Creates a new builder-style object to manufacture [`Issue`](crate::model::Issue)
+    /// Creates a new builder-style object to manufacture [`Issue`](crate::model::Issue).
     pub fn builder() -> crate::model::issue::Builder {
         crate::model::issue::Builder::default()
     }
@@ -4441,8 +4518,10 @@ impl AsRef<str> for NodegroupIssueCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodegroupResources {
     /// <p>The Auto Scaling groups associated with the node group.</p>
+    #[doc(hidden)]
     pub auto_scaling_groups: std::option::Option<std::vec::Vec<crate::model::AutoScalingGroup>>,
     /// <p>The remote access security group associated with the node group. This security group controls SSH access to the nodes.</p>
+    #[doc(hidden)]
     pub remote_access_security_group: std::option::Option<std::string::String>,
 }
 impl NodegroupResources {
@@ -4466,11 +4545,10 @@ impl std::fmt::Debug for NodegroupResources {
         formatter.finish()
     }
 }
-/// See [`NodegroupResources`](crate::model::NodegroupResources)
+/// See [`NodegroupResources`](crate::model::NodegroupResources).
 pub mod nodegroup_resources {
 
-    /// A builder for [`NodegroupResources`](crate::model::NodegroupResources)
-    #[non_exhaustive]
+    /// A builder for [`NodegroupResources`](crate::model::NodegroupResources).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_scaling_groups:
@@ -4513,7 +4591,7 @@ pub mod nodegroup_resources {
             self.remote_access_security_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodegroupResources`](crate::model::NodegroupResources)
+        /// Consumes the builder and constructs a [`NodegroupResources`](crate::model::NodegroupResources).
         pub fn build(self) -> crate::model::NodegroupResources {
             crate::model::NodegroupResources {
                 auto_scaling_groups: self.auto_scaling_groups,
@@ -4523,7 +4601,7 @@ pub mod nodegroup_resources {
     }
 }
 impl NodegroupResources {
-    /// Creates a new builder-style object to manufacture [`NodegroupResources`](crate::model::NodegroupResources)
+    /// Creates a new builder-style object to manufacture [`NodegroupResources`](crate::model::NodegroupResources).
     pub fn builder() -> crate::model::nodegroup_resources::Builder {
         crate::model::nodegroup_resources::Builder::default()
     }
@@ -4534,6 +4612,7 @@ impl NodegroupResources {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoScalingGroup {
     /// <p>The name of the Auto Scaling group associated with an Amazon EKS managed node group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl AutoScalingGroup {
@@ -4549,11 +4628,10 @@ impl std::fmt::Debug for AutoScalingGroup {
         formatter.finish()
     }
 }
-/// See [`AutoScalingGroup`](crate::model::AutoScalingGroup)
+/// See [`AutoScalingGroup`](crate::model::AutoScalingGroup).
 pub mod auto_scaling_group {
 
-    /// A builder for [`AutoScalingGroup`](crate::model::AutoScalingGroup)
-    #[non_exhaustive]
+    /// A builder for [`AutoScalingGroup`](crate::model::AutoScalingGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4569,14 +4647,14 @@ pub mod auto_scaling_group {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoScalingGroup`](crate::model::AutoScalingGroup)
+        /// Consumes the builder and constructs a [`AutoScalingGroup`](crate::model::AutoScalingGroup).
         pub fn build(self) -> crate::model::AutoScalingGroup {
             crate::model::AutoScalingGroup { name: self.name }
         }
     }
 }
 impl AutoScalingGroup {
-    /// Creates a new builder-style object to manufacture [`AutoScalingGroup`](crate::model::AutoScalingGroup)
+    /// Creates a new builder-style object to manufacture [`AutoScalingGroup`](crate::model::AutoScalingGroup).
     pub fn builder() -> crate::model::auto_scaling_group::Builder {
         crate::model::auto_scaling_group::Builder::default()
     }
@@ -4675,8 +4753,10 @@ impl AsRef<str> for AmiTypes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoteAccessConfig {
     /// <p>The Amazon EC2 SSH key that provides access for SSH communication with the nodes in the managed node group. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2 key pairs and Linux instances</a> in the <i>Amazon Elastic Compute Cloud User Guide for Linux Instances</i>.</p>
+    #[doc(hidden)]
     pub ec2_ssh_key: std::option::Option<std::string::String>,
     /// <p>The security groups that are allowed SSH access (port 22) to the nodes. If you specify an Amazon EC2 SSH key but do not specify a source security group when you create a managed node group, then port 22 on the nodes is opened to the internet (0.0.0.0/0). For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html">Security Groups for Your VPC</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.</p>
+    #[doc(hidden)]
     pub source_security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl RemoteAccessConfig {
@@ -4697,11 +4777,10 @@ impl std::fmt::Debug for RemoteAccessConfig {
         formatter.finish()
     }
 }
-/// See [`RemoteAccessConfig`](crate::model::RemoteAccessConfig)
+/// See [`RemoteAccessConfig`](crate::model::RemoteAccessConfig).
 pub mod remote_access_config {
 
-    /// A builder for [`RemoteAccessConfig`](crate::model::RemoteAccessConfig)
-    #[non_exhaustive]
+    /// A builder for [`RemoteAccessConfig`](crate::model::RemoteAccessConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ec2_ssh_key: std::option::Option<std::string::String>,
@@ -4737,7 +4816,7 @@ pub mod remote_access_config {
             self.source_security_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoteAccessConfig`](crate::model::RemoteAccessConfig)
+        /// Consumes the builder and constructs a [`RemoteAccessConfig`](crate::model::RemoteAccessConfig).
         pub fn build(self) -> crate::model::RemoteAccessConfig {
             crate::model::RemoteAccessConfig {
                 ec2_ssh_key: self.ec2_ssh_key,
@@ -4747,7 +4826,7 @@ pub mod remote_access_config {
     }
 }
 impl RemoteAccessConfig {
-    /// Creates a new builder-style object to manufacture [`RemoteAccessConfig`](crate::model::RemoteAccessConfig)
+    /// Creates a new builder-style object to manufacture [`RemoteAccessConfig`](crate::model::RemoteAccessConfig).
     pub fn builder() -> crate::model::remote_access_config::Builder {
         crate::model::remote_access_config::Builder::default()
     }
@@ -4896,6 +4975,7 @@ impl AsRef<str> for NodegroupStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IdentityProviderConfigResponse {
     /// <p>An object that represents an OpenID Connect (OIDC) identity provider configuration.</p>
+    #[doc(hidden)]
     pub oidc: std::option::Option<crate::model::OidcIdentityProviderConfig>,
 }
 impl IdentityProviderConfigResponse {
@@ -4911,11 +4991,10 @@ impl std::fmt::Debug for IdentityProviderConfigResponse {
         formatter.finish()
     }
 }
-/// See [`IdentityProviderConfigResponse`](crate::model::IdentityProviderConfigResponse)
+/// See [`IdentityProviderConfigResponse`](crate::model::IdentityProviderConfigResponse).
 pub mod identity_provider_config_response {
 
-    /// A builder for [`IdentityProviderConfigResponse`](crate::model::IdentityProviderConfigResponse)
-    #[non_exhaustive]
+    /// A builder for [`IdentityProviderConfigResponse`](crate::model::IdentityProviderConfigResponse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) oidc: std::option::Option<crate::model::OidcIdentityProviderConfig>,
@@ -4934,14 +5013,14 @@ pub mod identity_provider_config_response {
             self.oidc = input;
             self
         }
-        /// Consumes the builder and constructs a [`IdentityProviderConfigResponse`](crate::model::IdentityProviderConfigResponse)
+        /// Consumes the builder and constructs a [`IdentityProviderConfigResponse`](crate::model::IdentityProviderConfigResponse).
         pub fn build(self) -> crate::model::IdentityProviderConfigResponse {
             crate::model::IdentityProviderConfigResponse { oidc: self.oidc }
         }
     }
 }
 impl IdentityProviderConfigResponse {
-    /// Creates a new builder-style object to manufacture [`IdentityProviderConfigResponse`](crate::model::IdentityProviderConfigResponse)
+    /// Creates a new builder-style object to manufacture [`IdentityProviderConfigResponse`](crate::model::IdentityProviderConfigResponse).
     pub fn builder() -> crate::model::identity_provider_config_response::Builder {
         crate::model::identity_provider_config_response::Builder::default()
     }
@@ -4952,30 +5031,42 @@ impl IdentityProviderConfigResponse {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OidcIdentityProviderConfig {
     /// <p>The name of the configuration.</p>
+    #[doc(hidden)]
     pub identity_provider_config_name: std::option::Option<std::string::String>,
     /// <p>The ARN of the configuration.</p>
+    #[doc(hidden)]
     pub identity_provider_config_arn: std::option::Option<std::string::String>,
     /// <p>The cluster that the configuration is associated to.</p>
+    #[doc(hidden)]
     pub cluster_name: std::option::Option<std::string::String>,
     /// <p>The URL of the OIDC identity provider that allows the API server to discover public signing keys for verifying tokens.</p>
+    #[doc(hidden)]
     pub issuer_url: std::option::Option<std::string::String>,
     /// <p>This is also known as <i>audience</i>. The ID of the client application that makes authentication requests to the OIDC identity provider.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>The JSON Web token (JWT) claim that is used as the username.</p>
+    #[doc(hidden)]
     pub username_claim: std::option::Option<std::string::String>,
     /// <p>The prefix that is prepended to username claims to prevent clashes with existing names. The prefix can't contain <code>system:</code> </p>
+    #[doc(hidden)]
     pub username_prefix: std::option::Option<std::string::String>,
     /// <p>The JSON web token (JWT) claim that the provider uses to return your groups.</p>
+    #[doc(hidden)]
     pub groups_claim: std::option::Option<std::string::String>,
     /// <p>The prefix that is prepended to group claims to prevent clashes with existing names (such as <code>system:</code> groups). For example, the value<code> oidc:</code> creates group names like <code>oidc:engineering</code> and <code>oidc:infra</code>. The prefix can't contain <code>system:</code> </p>
+    #[doc(hidden)]
     pub groups_prefix: std::option::Option<std::string::String>,
     /// <p>The key-value pairs that describe required claims in the identity token. If set, each claim is verified to be present in the token with a matching value.</p>
+    #[doc(hidden)]
     pub required_claims:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The metadata to apply to the provider configuration to assist with categorization and organization. Each tag consists of a key and an optional value. You define both.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The status of the OIDC identity provider.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ConfigStatus>,
 }
 impl OidcIdentityProviderConfig {
@@ -5058,11 +5149,10 @@ impl std::fmt::Debug for OidcIdentityProviderConfig {
         formatter.finish()
     }
 }
-/// See [`OidcIdentityProviderConfig`](crate::model::OidcIdentityProviderConfig)
+/// See [`OidcIdentityProviderConfig`](crate::model::OidcIdentityProviderConfig).
 pub mod oidc_identity_provider_config {
 
-    /// A builder for [`OidcIdentityProviderConfig`](crate::model::OidcIdentityProviderConfig)
-    #[non_exhaustive]
+    /// A builder for [`OidcIdentityProviderConfig`](crate::model::OidcIdentityProviderConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_provider_config_name: std::option::Option<std::string::String>,
@@ -5257,7 +5347,7 @@ pub mod oidc_identity_provider_config {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`OidcIdentityProviderConfig`](crate::model::OidcIdentityProviderConfig)
+        /// Consumes the builder and constructs a [`OidcIdentityProviderConfig`](crate::model::OidcIdentityProviderConfig).
         pub fn build(self) -> crate::model::OidcIdentityProviderConfig {
             crate::model::OidcIdentityProviderConfig {
                 identity_provider_config_name: self.identity_provider_config_name,
@@ -5277,7 +5367,7 @@ pub mod oidc_identity_provider_config {
     }
 }
 impl OidcIdentityProviderConfig {
-    /// Creates a new builder-style object to manufacture [`OidcIdentityProviderConfig`](crate::model::OidcIdentityProviderConfig)
+    /// Creates a new builder-style object to manufacture [`OidcIdentityProviderConfig`](crate::model::OidcIdentityProviderConfig).
     pub fn builder() -> crate::model::oidc_identity_provider_config::Builder {
         crate::model::oidc_identity_provider_config::Builder::default()
     }
@@ -5347,22 +5437,31 @@ impl AsRef<str> for ConfigStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FargateProfile {
     /// <p>The name of the Fargate profile.</p>
+    #[doc(hidden)]
     pub fargate_profile_name: std::option::Option<std::string::String>,
     /// <p>The full Amazon Resource Name (ARN) of the Fargate profile.</p>
+    #[doc(hidden)]
     pub fargate_profile_arn: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon EKS cluster that the Fargate profile belongs to.</p>
+    #[doc(hidden)]
     pub cluster_name: std::option::Option<std::string::String>,
     /// <p>The Unix epoch timestamp in seconds for when the Fargate profile was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) of the pod execution role to use for pods that match the selectors in the Fargate profile. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/pod-execution-role.html">Pod Execution Role</a> in the <i>Amazon EKS User Guide</i>.</p>
+    #[doc(hidden)]
     pub pod_execution_role_arn: std::option::Option<std::string::String>,
     /// <p>The IDs of subnets to launch pods into.</p>
+    #[doc(hidden)]
     pub subnets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The selectors to match for pods to use this Fargate profile.</p>
+    #[doc(hidden)]
     pub selectors: std::option::Option<std::vec::Vec<crate::model::FargateProfileSelector>>,
     /// <p>The current status of the Fargate profile.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::FargateProfileStatus>,
     /// <p>The metadata applied to the Fargate profile to assist with categorization and organization. Each tag consists of a key and an optional value. You define both. Fargate profile tags do not propagate to any other resources associated with the Fargate profile, such as the pods that are scheduled with it.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -5422,11 +5521,10 @@ impl std::fmt::Debug for FargateProfile {
         formatter.finish()
     }
 }
-/// See [`FargateProfile`](crate::model::FargateProfile)
+/// See [`FargateProfile`](crate::model::FargateProfile).
 pub mod fargate_profile {
 
-    /// A builder for [`FargateProfile`](crate::model::FargateProfile)
-    #[non_exhaustive]
+    /// A builder for [`FargateProfile`](crate::model::FargateProfile).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) fargate_profile_name: std::option::Option<std::string::String>,
@@ -5581,7 +5679,7 @@ pub mod fargate_profile {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`FargateProfile`](crate::model::FargateProfile)
+        /// Consumes the builder and constructs a [`FargateProfile`](crate::model::FargateProfile).
         pub fn build(self) -> crate::model::FargateProfile {
             crate::model::FargateProfile {
                 fargate_profile_name: self.fargate_profile_name,
@@ -5598,7 +5696,7 @@ pub mod fargate_profile {
     }
 }
 impl FargateProfile {
-    /// Creates a new builder-style object to manufacture [`FargateProfile`](crate::model::FargateProfile)
+    /// Creates a new builder-style object to manufacture [`FargateProfile`](crate::model::FargateProfile).
     pub fn builder() -> crate::model::fargate_profile::Builder {
         crate::model::fargate_profile::Builder::default()
     }
@@ -5682,8 +5780,10 @@ impl AsRef<str> for FargateProfileStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FargateProfileSelector {
     /// <p>The Kubernetes namespace that the selector should match.</p>
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
     /// <p>The Kubernetes labels that the selector should match. A pod must contain all of the labels that are specified in the selector for it to be considered a match.</p>
+    #[doc(hidden)]
     pub labels:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -5708,11 +5808,10 @@ impl std::fmt::Debug for FargateProfileSelector {
         formatter.finish()
     }
 }
-/// See [`FargateProfileSelector`](crate::model::FargateProfileSelector)
+/// See [`FargateProfileSelector`](crate::model::FargateProfileSelector).
 pub mod fargate_profile_selector {
 
-    /// A builder for [`FargateProfileSelector`](crate::model::FargateProfileSelector)
-    #[non_exhaustive]
+    /// A builder for [`FargateProfileSelector`](crate::model::FargateProfileSelector).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace: std::option::Option<std::string::String>,
@@ -5756,7 +5855,7 @@ pub mod fargate_profile_selector {
             self.labels = input;
             self
         }
-        /// Consumes the builder and constructs a [`FargateProfileSelector`](crate::model::FargateProfileSelector)
+        /// Consumes the builder and constructs a [`FargateProfileSelector`](crate::model::FargateProfileSelector).
         pub fn build(self) -> crate::model::FargateProfileSelector {
             crate::model::FargateProfileSelector {
                 namespace: self.namespace,
@@ -5766,7 +5865,7 @@ pub mod fargate_profile_selector {
     }
 }
 impl FargateProfileSelector {
-    /// Creates a new builder-style object to manufacture [`FargateProfileSelector`](crate::model::FargateProfileSelector)
+    /// Creates a new builder-style object to manufacture [`FargateProfileSelector`](crate::model::FargateProfileSelector).
     pub fn builder() -> crate::model::fargate_profile_selector::Builder {
         crate::model::fargate_profile_selector::Builder::default()
     }
@@ -5777,10 +5876,13 @@ impl FargateProfileSelector {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddonInfo {
     /// <p>The name of the add-on.</p>
+    #[doc(hidden)]
     pub addon_name: std::option::Option<std::string::String>,
     /// <p>The type of the add-on.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>An object that represents information about available add-on versions and compatible Kubernetes versions.</p>
+    #[doc(hidden)]
     pub addon_versions: std::option::Option<std::vec::Vec<crate::model::AddonVersionInfo>>,
 }
 impl AddonInfo {
@@ -5806,11 +5908,10 @@ impl std::fmt::Debug for AddonInfo {
         formatter.finish()
     }
 }
-/// See [`AddonInfo`](crate::model::AddonInfo)
+/// See [`AddonInfo`](crate::model::AddonInfo).
 pub mod addon_info {
 
-    /// A builder for [`AddonInfo`](crate::model::AddonInfo)
-    #[non_exhaustive]
+    /// A builder for [`AddonInfo`](crate::model::AddonInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) addon_name: std::option::Option<std::string::String>,
@@ -5858,7 +5959,7 @@ pub mod addon_info {
             self.addon_versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddonInfo`](crate::model::AddonInfo)
+        /// Consumes the builder and constructs a [`AddonInfo`](crate::model::AddonInfo).
         pub fn build(self) -> crate::model::AddonInfo {
             crate::model::AddonInfo {
                 addon_name: self.addon_name,
@@ -5869,7 +5970,7 @@ pub mod addon_info {
     }
 }
 impl AddonInfo {
-    /// Creates a new builder-style object to manufacture [`AddonInfo`](crate::model::AddonInfo)
+    /// Creates a new builder-style object to manufacture [`AddonInfo`](crate::model::AddonInfo).
     pub fn builder() -> crate::model::addon_info::Builder {
         crate::model::addon_info::Builder::default()
     }
@@ -5880,10 +5981,13 @@ impl AddonInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddonVersionInfo {
     /// <p>The version of the add-on.</p>
+    #[doc(hidden)]
     pub addon_version: std::option::Option<std::string::String>,
     /// <p>The architectures that the version supports.</p>
+    #[doc(hidden)]
     pub architecture: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An object that represents the compatibilities of a version.</p>
+    #[doc(hidden)]
     pub compatibilities: std::option::Option<std::vec::Vec<crate::model::Compatibility>>,
 }
 impl AddonVersionInfo {
@@ -5909,11 +6013,10 @@ impl std::fmt::Debug for AddonVersionInfo {
         formatter.finish()
     }
 }
-/// See [`AddonVersionInfo`](crate::model::AddonVersionInfo)
+/// See [`AddonVersionInfo`](crate::model::AddonVersionInfo).
 pub mod addon_version_info {
 
-    /// A builder for [`AddonVersionInfo`](crate::model::AddonVersionInfo)
-    #[non_exhaustive]
+    /// A builder for [`AddonVersionInfo`](crate::model::AddonVersionInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) addon_version: std::option::Option<std::string::String>,
@@ -5972,7 +6075,7 @@ pub mod addon_version_info {
             self.compatibilities = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddonVersionInfo`](crate::model::AddonVersionInfo)
+        /// Consumes the builder and constructs a [`AddonVersionInfo`](crate::model::AddonVersionInfo).
         pub fn build(self) -> crate::model::AddonVersionInfo {
             crate::model::AddonVersionInfo {
                 addon_version: self.addon_version,
@@ -5983,7 +6086,7 @@ pub mod addon_version_info {
     }
 }
 impl AddonVersionInfo {
-    /// Creates a new builder-style object to manufacture [`AddonVersionInfo`](crate::model::AddonVersionInfo)
+    /// Creates a new builder-style object to manufacture [`AddonVersionInfo`](crate::model::AddonVersionInfo).
     pub fn builder() -> crate::model::addon_version_info::Builder {
         crate::model::addon_version_info::Builder::default()
     }
@@ -5994,10 +6097,13 @@ impl AddonVersionInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Compatibility {
     /// <p>The supported Kubernetes version of the cluster.</p>
+    #[doc(hidden)]
     pub cluster_version: std::option::Option<std::string::String>,
     /// <p>The supported compute platform.</p>
+    #[doc(hidden)]
     pub platform_versions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The supported default version.</p>
+    #[doc(hidden)]
     pub default_version: bool,
 }
 impl Compatibility {
@@ -6023,11 +6129,10 @@ impl std::fmt::Debug for Compatibility {
         formatter.finish()
     }
 }
-/// See [`Compatibility`](crate::model::Compatibility)
+/// See [`Compatibility`](crate::model::Compatibility).
 pub mod compatibility {
 
-    /// A builder for [`Compatibility`](crate::model::Compatibility)
-    #[non_exhaustive]
+    /// A builder for [`Compatibility`](crate::model::Compatibility).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cluster_version: std::option::Option<std::string::String>,
@@ -6077,7 +6182,7 @@ pub mod compatibility {
             self.default_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`Compatibility`](crate::model::Compatibility)
+        /// Consumes the builder and constructs a [`Compatibility`](crate::model::Compatibility).
         pub fn build(self) -> crate::model::Compatibility {
             crate::model::Compatibility {
                 cluster_version: self.cluster_version,
@@ -6088,7 +6193,7 @@ pub mod compatibility {
     }
 }
 impl Compatibility {
-    /// Creates a new builder-style object to manufacture [`Compatibility`](crate::model::Compatibility)
+    /// Creates a new builder-style object to manufacture [`Compatibility`](crate::model::Compatibility).
     pub fn builder() -> crate::model::compatibility::Builder {
         crate::model::compatibility::Builder::default()
     }
@@ -6099,24 +6204,34 @@ impl Compatibility {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Addon {
     /// <p>The name of the add-on.</p>
+    #[doc(hidden)]
     pub addon_name: std::option::Option<std::string::String>,
     /// <p>The name of the cluster.</p>
+    #[doc(hidden)]
     pub cluster_name: std::option::Option<std::string::String>,
     /// <p>The status of the add-on.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AddonStatus>,
     /// <p>The version of the add-on.</p>
+    #[doc(hidden)]
     pub addon_version: std::option::Option<std::string::String>,
     /// <p>An object that represents the health of the add-on.</p>
+    #[doc(hidden)]
     pub health: std::option::Option<crate::model::AddonHealth>,
     /// <p>The Amazon Resource Name (ARN) of the add-on.</p>
+    #[doc(hidden)]
     pub addon_arn: std::option::Option<std::string::String>,
     /// <p>The date and time that the add-on was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the add-on was last modified.</p>
+    #[doc(hidden)]
     pub modified_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) of the IAM role that is bound to the Kubernetes service account used by the add-on.</p>
+    #[doc(hidden)]
     pub service_account_role_arn: std::option::Option<std::string::String>,
     /// <p>The metadata that you apply to the add-on to assist with categorization and organization. Each tag consists of a key and an optional value. You define both. Add-on tags do not propagate to any other resources associated with the cluster. </p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -6181,11 +6296,10 @@ impl std::fmt::Debug for Addon {
         formatter.finish()
     }
 }
-/// See [`Addon`](crate::model::Addon)
+/// See [`Addon`](crate::model::Addon).
 pub mod addon {
 
-    /// A builder for [`Addon`](crate::model::Addon)
-    #[non_exhaustive]
+    /// A builder for [`Addon`](crate::model::Addon).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) addon_name: std::option::Option<std::string::String>,
@@ -6329,7 +6443,7 @@ pub mod addon {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Addon`](crate::model::Addon)
+        /// Consumes the builder and constructs a [`Addon`](crate::model::Addon).
         pub fn build(self) -> crate::model::Addon {
             crate::model::Addon {
                 addon_name: self.addon_name,
@@ -6347,7 +6461,7 @@ pub mod addon {
     }
 }
 impl Addon {
-    /// Creates a new builder-style object to manufacture [`Addon`](crate::model::Addon)
+    /// Creates a new builder-style object to manufacture [`Addon`](crate::model::Addon).
     pub fn builder() -> crate::model::addon::Builder {
         crate::model::addon::Builder::default()
     }
@@ -6358,6 +6472,7 @@ impl Addon {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddonHealth {
     /// <p>An object that represents the add-on's health issues.</p>
+    #[doc(hidden)]
     pub issues: std::option::Option<std::vec::Vec<crate::model::AddonIssue>>,
 }
 impl AddonHealth {
@@ -6373,11 +6488,10 @@ impl std::fmt::Debug for AddonHealth {
         formatter.finish()
     }
 }
-/// See [`AddonHealth`](crate::model::AddonHealth)
+/// See [`AddonHealth`](crate::model::AddonHealth).
 pub mod addon_health {
 
-    /// A builder for [`AddonHealth`](crate::model::AddonHealth)
-    #[non_exhaustive]
+    /// A builder for [`AddonHealth`](crate::model::AddonHealth).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) issues: std::option::Option<std::vec::Vec<crate::model::AddonIssue>>,
@@ -6402,7 +6516,7 @@ pub mod addon_health {
             self.issues = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddonHealth`](crate::model::AddonHealth)
+        /// Consumes the builder and constructs a [`AddonHealth`](crate::model::AddonHealth).
         pub fn build(self) -> crate::model::AddonHealth {
             crate::model::AddonHealth {
                 issues: self.issues,
@@ -6411,7 +6525,7 @@ pub mod addon_health {
     }
 }
 impl AddonHealth {
-    /// Creates a new builder-style object to manufacture [`AddonHealth`](crate::model::AddonHealth)
+    /// Creates a new builder-style object to manufacture [`AddonHealth`](crate::model::AddonHealth).
     pub fn builder() -> crate::model::addon_health::Builder {
         crate::model::addon_health::Builder::default()
     }
@@ -6422,10 +6536,13 @@ impl AddonHealth {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddonIssue {
     /// <p>A code that describes the type of issue.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::AddonIssueCode>,
     /// <p>A message that provides details about the issue and what might cause it.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The resource IDs of the issue.</p>
+    #[doc(hidden)]
     pub resource_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AddonIssue {
@@ -6451,11 +6568,10 @@ impl std::fmt::Debug for AddonIssue {
         formatter.finish()
     }
 }
-/// See [`AddonIssue`](crate::model::AddonIssue)
+/// See [`AddonIssue`](crate::model::AddonIssue).
 pub mod addon_issue {
 
-    /// A builder for [`AddonIssue`](crate::model::AddonIssue)
-    #[non_exhaustive]
+    /// A builder for [`AddonIssue`](crate::model::AddonIssue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::AddonIssueCode>,
@@ -6505,7 +6621,7 @@ pub mod addon_issue {
             self.resource_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddonIssue`](crate::model::AddonIssue)
+        /// Consumes the builder and constructs a [`AddonIssue`](crate::model::AddonIssue).
         pub fn build(self) -> crate::model::AddonIssue {
             crate::model::AddonIssue {
                 code: self.code,
@@ -6516,7 +6632,7 @@ pub mod addon_issue {
     }
 }
 impl AddonIssue {
-    /// Creates a new builder-style object to manufacture [`AddonIssue`](crate::model::AddonIssue)
+    /// Creates a new builder-style object to manufacture [`AddonIssue`](crate::model::AddonIssue).
     pub fn builder() -> crate::model::addon_issue::Builder {
         crate::model::addon_issue::Builder::default()
     }
@@ -6705,9 +6821,11 @@ pub struct KubernetesNetworkConfigRequest {
     /// </ul> <important>
     /// <p>You can only specify a custom CIDR block when you create a cluster and can't change this value once the cluster is created.</p>
     /// </important>
+    #[doc(hidden)]
     pub service_ipv4_cidr: std::option::Option<std::string::String>,
     /// <p>Specify which IP family is used to assign Kubernetes pod and service IP addresses. If you don't specify a value, <code>ipv4</code> is used by default. You can only specify an IP family when you create a cluster and can't change this value once the cluster is created. If you specify <code>ipv6</code>, the VPC and subnets that you specify for cluster creation must have both IPv4 and IPv6 CIDR blocks assigned to them. You can't specify <code>ipv6</code> for clusters in China Regions.</p>
     /// <p>You can only specify <code>ipv6</code> for 1.21 and later clusters that use version 1.10.1 or later of the Amazon VPC CNI add-on. If you specify <code>ipv6</code>, then ensure that your VPC meets the requirements listed in the considerations listed in <a href="https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html">Assigning IPv6 addresses to pods and services</a> in the Amazon EKS User Guide. Kubernetes assigns services IPv6 addresses from the unique local address range (fc00::/7). You can't specify a custom IPv6 CIDR block. Pod addresses are assigned from the subnet's IPv6 CIDR.</p>
+    #[doc(hidden)]
     pub ip_family: std::option::Option<crate::model::IpFamily>,
 }
 impl KubernetesNetworkConfigRequest {
@@ -6736,11 +6854,10 @@ impl std::fmt::Debug for KubernetesNetworkConfigRequest {
         formatter.finish()
     }
 }
-/// See [`KubernetesNetworkConfigRequest`](crate::model::KubernetesNetworkConfigRequest)
+/// See [`KubernetesNetworkConfigRequest`](crate::model::KubernetesNetworkConfigRequest).
 pub mod kubernetes_network_config_request {
 
-    /// A builder for [`KubernetesNetworkConfigRequest`](crate::model::KubernetesNetworkConfigRequest)
-    #[non_exhaustive]
+    /// A builder for [`KubernetesNetworkConfigRequest`](crate::model::KubernetesNetworkConfigRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_ipv4_cidr: std::option::Option<std::string::String>,
@@ -6786,7 +6903,7 @@ pub mod kubernetes_network_config_request {
             self.ip_family = input;
             self
         }
-        /// Consumes the builder and constructs a [`KubernetesNetworkConfigRequest`](crate::model::KubernetesNetworkConfigRequest)
+        /// Consumes the builder and constructs a [`KubernetesNetworkConfigRequest`](crate::model::KubernetesNetworkConfigRequest).
         pub fn build(self) -> crate::model::KubernetesNetworkConfigRequest {
             crate::model::KubernetesNetworkConfigRequest {
                 service_ipv4_cidr: self.service_ipv4_cidr,
@@ -6796,7 +6913,7 @@ pub mod kubernetes_network_config_request {
     }
 }
 impl KubernetesNetworkConfigRequest {
-    /// Creates a new builder-style object to manufacture [`KubernetesNetworkConfigRequest`](crate::model::KubernetesNetworkConfigRequest)
+    /// Creates a new builder-style object to manufacture [`KubernetesNetworkConfigRequest`](crate::model::KubernetesNetworkConfigRequest).
     pub fn builder() -> crate::model::kubernetes_network_config_request::Builder {
         crate::model::kubernetes_network_config_request::Builder::default()
     }
@@ -6807,20 +6924,28 @@ impl KubernetesNetworkConfigRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OidcIdentityProviderConfigRequest {
     /// <p>The name of the OIDC provider configuration.</p>
+    #[doc(hidden)]
     pub identity_provider_config_name: std::option::Option<std::string::String>,
     /// <p>The URL of the OpenID identity provider that allows the API server to discover public signing keys for verifying tokens. The URL must begin with <code>https://</code> and should correspond to the <code>iss</code> claim in the provider's OIDC ID tokens. Per the OIDC standard, path components are allowed but query parameters are not. Typically the URL consists of only a hostname, like <code>https://server.example.org</code> or <code>https://example.com</code>. This URL should point to the level below <code>.well-known/openid-configuration</code> and must be publicly accessible over the internet.</p>
+    #[doc(hidden)]
     pub issuer_url: std::option::Option<std::string::String>,
     /// <p>This is also known as <i>audience</i>. The ID for the client application that makes authentication requests to the OpenID identity provider.</p>
+    #[doc(hidden)]
     pub client_id: std::option::Option<std::string::String>,
     /// <p>The JSON Web Token (JWT) claim to use as the username. The default is <code>sub</code>, which is expected to be a unique identifier of the end user. You can choose other claims, such as <code>email</code> or <code>name</code>, depending on the OpenID identity provider. Claims other than <code>email</code> are prefixed with the issuer URL to prevent naming clashes with other plug-ins.</p>
+    #[doc(hidden)]
     pub username_claim: std::option::Option<std::string::String>,
     /// <p>The prefix that is prepended to username claims to prevent clashes with existing names. If you do not provide this field, and <code>username</code> is a value other than <code>email</code>, the prefix defaults to <code>issuerurl#</code>. You can use the value <code>-</code> to disable all prefixing.</p>
+    #[doc(hidden)]
     pub username_prefix: std::option::Option<std::string::String>,
     /// <p>The JWT claim that the provider uses to return your groups.</p>
+    #[doc(hidden)]
     pub groups_claim: std::option::Option<std::string::String>,
     /// <p>The prefix that is prepended to group claims to prevent clashes with existing names (such as <code>system:</code> groups). For example, the value<code> oidc:</code> will create group names like <code>oidc:engineering</code> and <code>oidc:infra</code>.</p>
+    #[doc(hidden)]
     pub groups_prefix: std::option::Option<std::string::String>,
     /// <p>The key value pairs that describe required claims in the identity token. If set, each claim is verified to be present in the token with a matching value. For the maximum number of claims that you can require, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/service-quotas.html">Amazon EKS service quotas</a> in the <i>Amazon EKS User Guide</i>.</p>
+    #[doc(hidden)]
     pub required_claims:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -6878,11 +7003,10 @@ impl std::fmt::Debug for OidcIdentityProviderConfigRequest {
         formatter.finish()
     }
 }
-/// See [`OidcIdentityProviderConfigRequest`](crate::model::OidcIdentityProviderConfigRequest)
+/// See [`OidcIdentityProviderConfigRequest`](crate::model::OidcIdentityProviderConfigRequest).
 pub mod oidc_identity_provider_config_request {
 
-    /// A builder for [`OidcIdentityProviderConfigRequest`](crate::model::OidcIdentityProviderConfigRequest)
-    #[non_exhaustive]
+    /// A builder for [`OidcIdentityProviderConfigRequest`](crate::model::OidcIdentityProviderConfigRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_provider_config_name: std::option::Option<std::string::String>,
@@ -7007,7 +7131,7 @@ pub mod oidc_identity_provider_config_request {
             self.required_claims = input;
             self
         }
-        /// Consumes the builder and constructs a [`OidcIdentityProviderConfigRequest`](crate::model::OidcIdentityProviderConfigRequest)
+        /// Consumes the builder and constructs a [`OidcIdentityProviderConfigRequest`](crate::model::OidcIdentityProviderConfigRequest).
         pub fn build(self) -> crate::model::OidcIdentityProviderConfigRequest {
             crate::model::OidcIdentityProviderConfigRequest {
                 identity_provider_config_name: self.identity_provider_config_name,
@@ -7023,7 +7147,7 @@ pub mod oidc_identity_provider_config_request {
     }
 }
 impl OidcIdentityProviderConfigRequest {
-    /// Creates a new builder-style object to manufacture [`OidcIdentityProviderConfigRequest`](crate::model::OidcIdentityProviderConfigRequest)
+    /// Creates a new builder-style object to manufacture [`OidcIdentityProviderConfigRequest`](crate::model::OidcIdentityProviderConfigRequest).
     pub fn builder() -> crate::model::oidc_identity_provider_config_request::Builder {
         crate::model::oidc_identity_provider_config_request::Builder::default()
     }

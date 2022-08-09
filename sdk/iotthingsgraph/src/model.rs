@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DefinitionDocument {
     /// <p>The language used to define the entity. <code>GRAPHQL</code> is the only valid value.</p>
+    #[doc(hidden)]
     pub language: std::option::Option<crate::model::DefinitionLanguage>,
     /// <p>The GraphQL text that defines the entity.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
 }
 impl DefinitionDocument {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for DefinitionDocument {
         formatter.finish()
     }
 }
-/// See [`DefinitionDocument`](crate::model::DefinitionDocument)
+/// See [`DefinitionDocument`](crate::model::DefinitionDocument).
 pub mod definition_document {
 
-    /// A builder for [`DefinitionDocument`](crate::model::DefinitionDocument)
-    #[non_exhaustive]
+    /// A builder for [`DefinitionDocument`](crate::model::DefinitionDocument).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) language: std::option::Option<crate::model::DefinitionLanguage>,
@@ -61,7 +62,7 @@ pub mod definition_document {
             self.text = input;
             self
         }
-        /// Consumes the builder and constructs a [`DefinitionDocument`](crate::model::DefinitionDocument)
+        /// Consumes the builder and constructs a [`DefinitionDocument`](crate::model::DefinitionDocument).
         pub fn build(self) -> crate::model::DefinitionDocument {
             crate::model::DefinitionDocument {
                 language: self.language,
@@ -71,7 +72,7 @@ pub mod definition_document {
     }
 }
 impl DefinitionDocument {
-    /// Creates a new builder-style object to manufacture [`DefinitionDocument`](crate::model::DefinitionDocument)
+    /// Creates a new builder-style object to manufacture [`DefinitionDocument`](crate::model::DefinitionDocument).
     pub fn builder() -> crate::model::definition_document::Builder {
         crate::model::definition_document::Builder::default()
     }
@@ -133,12 +134,16 @@ impl AsRef<str> for DefinitionLanguage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SystemTemplateSummary {
     /// <p>The ID of the system.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The ARN of the system.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The revision number of the system.</p>
+    #[doc(hidden)]
     pub revision_number: std::option::Option<i64>,
     /// <p>The date when the system was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SystemTemplateSummary {
@@ -169,11 +174,10 @@ impl std::fmt::Debug for SystemTemplateSummary {
         formatter.finish()
     }
 }
-/// See [`SystemTemplateSummary`](crate::model::SystemTemplateSummary)
+/// See [`SystemTemplateSummary`](crate::model::SystemTemplateSummary).
 pub mod system_template_summary {
 
-    /// A builder for [`SystemTemplateSummary`](crate::model::SystemTemplateSummary)
-    #[non_exhaustive]
+    /// A builder for [`SystemTemplateSummary`](crate::model::SystemTemplateSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -225,7 +229,7 @@ pub mod system_template_summary {
             self.created_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`SystemTemplateSummary`](crate::model::SystemTemplateSummary)
+        /// Consumes the builder and constructs a [`SystemTemplateSummary`](crate::model::SystemTemplateSummary).
         pub fn build(self) -> crate::model::SystemTemplateSummary {
             crate::model::SystemTemplateSummary {
                 id: self.id,
@@ -237,7 +241,7 @@ pub mod system_template_summary {
     }
 }
 impl SystemTemplateSummary {
-    /// Creates a new builder-style object to manufacture [`SystemTemplateSummary`](crate::model::SystemTemplateSummary)
+    /// Creates a new builder-style object to manufacture [`SystemTemplateSummary`](crate::model::SystemTemplateSummary).
     pub fn builder() -> crate::model::system_template_summary::Builder {
         crate::model::system_template_summary::Builder::default()
     }
@@ -248,12 +252,16 @@ impl SystemTemplateSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FlowTemplateSummary {
     /// <p>The ID of the workflow.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The ARN of the workflow.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The revision number of the workflow.</p>
+    #[doc(hidden)]
     pub revision_number: std::option::Option<i64>,
     /// <p>The date when the workflow was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl FlowTemplateSummary {
@@ -284,11 +292,10 @@ impl std::fmt::Debug for FlowTemplateSummary {
         formatter.finish()
     }
 }
-/// See [`FlowTemplateSummary`](crate::model::FlowTemplateSummary)
+/// See [`FlowTemplateSummary`](crate::model::FlowTemplateSummary).
 pub mod flow_template_summary {
 
-    /// A builder for [`FlowTemplateSummary`](crate::model::FlowTemplateSummary)
-    #[non_exhaustive]
+    /// A builder for [`FlowTemplateSummary`](crate::model::FlowTemplateSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -340,7 +347,7 @@ pub mod flow_template_summary {
             self.created_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`FlowTemplateSummary`](crate::model::FlowTemplateSummary)
+        /// Consumes the builder and constructs a [`FlowTemplateSummary`](crate::model::FlowTemplateSummary).
         pub fn build(self) -> crate::model::FlowTemplateSummary {
             crate::model::FlowTemplateSummary {
                 id: self.id,
@@ -352,7 +359,7 @@ pub mod flow_template_summary {
     }
 }
 impl FlowTemplateSummary {
-    /// Creates a new builder-style object to manufacture [`FlowTemplateSummary`](crate::model::FlowTemplateSummary)
+    /// Creates a new builder-style object to manufacture [`FlowTemplateSummary`](crate::model::FlowTemplateSummary).
     pub fn builder() -> crate::model::flow_template_summary::Builder {
         crate::model::flow_template_summary::Builder::default()
     }
@@ -363,22 +370,31 @@ impl FlowTemplateSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SystemInstanceSummary {
     /// <p>The ID of the system instance.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The ARN of the system instance.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The status of the system instance.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::SystemInstanceDeploymentStatus>,
     /// <p>The target of the system instance.</p>
+    #[doc(hidden)]
     pub target: std::option::Option<crate::model::DeploymentTarget>,
     /// <p>The ID of the Greengrass group where the system instance is deployed.</p>
+    #[doc(hidden)]
     pub greengrass_group_name: std::option::Option<std::string::String>,
     /// <p>The date when the system instance was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The date and time when the system instance was last updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The ID of the Greengrass group where the system instance is deployed.</p>
+    #[doc(hidden)]
     pub greengrass_group_id: std::option::Option<std::string::String>,
     /// <p>The version of the Greengrass group where the system instance is deployed.</p>
+    #[doc(hidden)]
     pub greengrass_group_version_id: std::option::Option<std::string::String>,
 }
 impl SystemInstanceSummary {
@@ -437,11 +453,10 @@ impl std::fmt::Debug for SystemInstanceSummary {
         formatter.finish()
     }
 }
-/// See [`SystemInstanceSummary`](crate::model::SystemInstanceSummary)
+/// See [`SystemInstanceSummary`](crate::model::SystemInstanceSummary).
 pub mod system_instance_summary {
 
-    /// A builder for [`SystemInstanceSummary`](crate::model::SystemInstanceSummary)
-    #[non_exhaustive]
+    /// A builder for [`SystemInstanceSummary`](crate::model::SystemInstanceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -569,7 +584,7 @@ pub mod system_instance_summary {
             self.greengrass_group_version_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SystemInstanceSummary`](crate::model::SystemInstanceSummary)
+        /// Consumes the builder and constructs a [`SystemInstanceSummary`](crate::model::SystemInstanceSummary).
         pub fn build(self) -> crate::model::SystemInstanceSummary {
             crate::model::SystemInstanceSummary {
                 id: self.id,
@@ -586,7 +601,7 @@ pub mod system_instance_summary {
     }
 }
 impl SystemInstanceSummary {
-    /// Creates a new builder-style object to manufacture [`SystemInstanceSummary`](crate::model::SystemInstanceSummary)
+    /// Creates a new builder-style object to manufacture [`SystemInstanceSummary`](crate::model::SystemInstanceSummary).
     pub fn builder() -> crate::model::system_instance_summary::Builder {
         crate::model::system_instance_summary::Builder::default()
     }
@@ -740,8 +755,10 @@ impl AsRef<str> for SystemInstanceDeploymentStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The required name of the tag. The string value can be from 1 to 128 Unicode characters in length.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The optional value of the tag. The string value can be from 1 to 256 Unicode characters in length.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -762,11 +779,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -793,7 +809,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -803,7 +819,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -814,8 +830,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Thing {
     /// <p>The ARN of the thing.</p>
+    #[doc(hidden)]
     pub thing_arn: std::option::Option<std::string::String>,
     /// <p>The name of the thing.</p>
+    #[doc(hidden)]
     pub thing_name: std::option::Option<std::string::String>,
 }
 impl Thing {
@@ -836,11 +854,10 @@ impl std::fmt::Debug for Thing {
         formatter.finish()
     }
 }
-/// See [`Thing`](crate::model::Thing)
+/// See [`Thing`](crate::model::Thing).
 pub mod thing {
 
-    /// A builder for [`Thing`](crate::model::Thing)
-    #[non_exhaustive]
+    /// A builder for [`Thing`](crate::model::Thing).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) thing_arn: std::option::Option<std::string::String>,
@@ -867,7 +884,7 @@ pub mod thing {
             self.thing_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Thing`](crate::model::Thing)
+        /// Consumes the builder and constructs a [`Thing`](crate::model::Thing).
         pub fn build(self) -> crate::model::Thing {
             crate::model::Thing {
                 thing_arn: self.thing_arn,
@@ -877,7 +894,7 @@ pub mod thing {
     }
 }
 impl Thing {
-    /// Creates a new builder-style object to manufacture [`Thing`](crate::model::Thing)
+    /// Creates a new builder-style object to manufacture [`Thing`](crate::model::Thing).
     pub fn builder() -> crate::model::thing::Builder {
         crate::model::thing::Builder::default()
     }
@@ -888,8 +905,10 @@ impl Thing {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SystemTemplateFilter {
     /// <p>The name of the system search filter field.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::SystemTemplateFilterName>,
     /// <p>An array of string values for the search filter field. Multiple values function as AND criteria in the search.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SystemTemplateFilter {
@@ -910,11 +929,10 @@ impl std::fmt::Debug for SystemTemplateFilter {
         formatter.finish()
     }
 }
-/// See [`SystemTemplateFilter`](crate::model::SystemTemplateFilter)
+/// See [`SystemTemplateFilter`](crate::model::SystemTemplateFilter).
 pub mod system_template_filter {
 
-    /// A builder for [`SystemTemplateFilter`](crate::model::SystemTemplateFilter)
-    #[non_exhaustive]
+    /// A builder for [`SystemTemplateFilter`](crate::model::SystemTemplateFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::SystemTemplateFilterName>,
@@ -953,7 +971,7 @@ pub mod system_template_filter {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`SystemTemplateFilter`](crate::model::SystemTemplateFilter)
+        /// Consumes the builder and constructs a [`SystemTemplateFilter`](crate::model::SystemTemplateFilter).
         pub fn build(self) -> crate::model::SystemTemplateFilter {
             crate::model::SystemTemplateFilter {
                 name: self.name,
@@ -963,7 +981,7 @@ pub mod system_template_filter {
     }
 }
 impl SystemTemplateFilter {
-    /// Creates a new builder-style object to manufacture [`SystemTemplateFilter`](crate::model::SystemTemplateFilter)
+    /// Creates a new builder-style object to manufacture [`SystemTemplateFilter`](crate::model::SystemTemplateFilter).
     pub fn builder() -> crate::model::system_template_filter::Builder {
         crate::model::system_template_filter::Builder::default()
     }
@@ -1025,8 +1043,10 @@ impl AsRef<str> for SystemTemplateFilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SystemInstanceFilter {
     /// <p>The name of the search filter field.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::SystemInstanceFilterName>,
     /// <p>An array of string values for the search filter field. Multiple values function as AND criteria in the search. </p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SystemInstanceFilter {
@@ -1047,11 +1067,10 @@ impl std::fmt::Debug for SystemInstanceFilter {
         formatter.finish()
     }
 }
-/// See [`SystemInstanceFilter`](crate::model::SystemInstanceFilter)
+/// See [`SystemInstanceFilter`](crate::model::SystemInstanceFilter).
 pub mod system_instance_filter {
 
-    /// A builder for [`SystemInstanceFilter`](crate::model::SystemInstanceFilter)
-    #[non_exhaustive]
+    /// A builder for [`SystemInstanceFilter`](crate::model::SystemInstanceFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::SystemInstanceFilterName>,
@@ -1090,7 +1109,7 @@ pub mod system_instance_filter {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`SystemInstanceFilter`](crate::model::SystemInstanceFilter)
+        /// Consumes the builder and constructs a [`SystemInstanceFilter`](crate::model::SystemInstanceFilter).
         pub fn build(self) -> crate::model::SystemInstanceFilter {
             crate::model::SystemInstanceFilter {
                 name: self.name,
@@ -1100,7 +1119,7 @@ pub mod system_instance_filter {
     }
 }
 impl SystemInstanceFilter {
-    /// Creates a new builder-style object to manufacture [`SystemInstanceFilter`](crate::model::SystemInstanceFilter)
+    /// Creates a new builder-style object to manufacture [`SystemInstanceFilter`](crate::model::SystemInstanceFilter).
     pub fn builder() -> crate::model::system_instance_filter::Builder {
         crate::model::system_instance_filter::Builder::default()
     }
@@ -1170,8 +1189,10 @@ impl AsRef<str> for SystemInstanceFilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FlowTemplateFilter {
     /// <p>The name of the search filter field.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::FlowTemplateFilterName>,
     /// <p>An array of string values for the search filter field. Multiple values function as AND criteria in the search.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl FlowTemplateFilter {
@@ -1192,11 +1213,10 @@ impl std::fmt::Debug for FlowTemplateFilter {
         formatter.finish()
     }
 }
-/// See [`FlowTemplateFilter`](crate::model::FlowTemplateFilter)
+/// See [`FlowTemplateFilter`](crate::model::FlowTemplateFilter).
 pub mod flow_template_filter {
 
-    /// A builder for [`FlowTemplateFilter`](crate::model::FlowTemplateFilter)
-    #[non_exhaustive]
+    /// A builder for [`FlowTemplateFilter`](crate::model::FlowTemplateFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::FlowTemplateFilterName>,
@@ -1235,7 +1255,7 @@ pub mod flow_template_filter {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`FlowTemplateFilter`](crate::model::FlowTemplateFilter)
+        /// Consumes the builder and constructs a [`FlowTemplateFilter`](crate::model::FlowTemplateFilter).
         pub fn build(self) -> crate::model::FlowTemplateFilter {
             crate::model::FlowTemplateFilter {
                 name: self.name,
@@ -1245,7 +1265,7 @@ pub mod flow_template_filter {
     }
 }
 impl FlowTemplateFilter {
-    /// Creates a new builder-style object to manufacture [`FlowTemplateFilter`](crate::model::FlowTemplateFilter)
+    /// Creates a new builder-style object to manufacture [`FlowTemplateFilter`](crate::model::FlowTemplateFilter).
     pub fn builder() -> crate::model::flow_template_filter::Builder {
         crate::model::flow_template_filter::Builder::default()
     }
@@ -1307,16 +1327,22 @@ impl AsRef<str> for FlowTemplateFilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FlowExecutionSummary {
     /// <p>The ID of the flow execution.</p>
+    #[doc(hidden)]
     pub flow_execution_id: std::option::Option<std::string::String>,
     /// <p>The current status of the flow execution.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::FlowExecutionStatus>,
     /// <p>The ID of the system instance that contains the flow.</p>
+    #[doc(hidden)]
     pub system_instance_id: std::option::Option<std::string::String>,
     /// <p>The ID of the flow.</p>
+    #[doc(hidden)]
     pub flow_template_id: std::option::Option<std::string::String>,
     /// <p>The date and time when the flow execution summary was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the flow execution summary was last updated.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl FlowExecutionSummary {
@@ -1357,11 +1383,10 @@ impl std::fmt::Debug for FlowExecutionSummary {
         formatter.finish()
     }
 }
-/// See [`FlowExecutionSummary`](crate::model::FlowExecutionSummary)
+/// See [`FlowExecutionSummary`](crate::model::FlowExecutionSummary).
 pub mod flow_execution_summary {
 
-    /// A builder for [`FlowExecutionSummary`](crate::model::FlowExecutionSummary)
-    #[non_exhaustive]
+    /// A builder for [`FlowExecutionSummary`](crate::model::FlowExecutionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) flow_execution_id: std::option::Option<std::string::String>,
@@ -1450,7 +1475,7 @@ pub mod flow_execution_summary {
             self.updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`FlowExecutionSummary`](crate::model::FlowExecutionSummary)
+        /// Consumes the builder and constructs a [`FlowExecutionSummary`](crate::model::FlowExecutionSummary).
         pub fn build(self) -> crate::model::FlowExecutionSummary {
             crate::model::FlowExecutionSummary {
                 flow_execution_id: self.flow_execution_id,
@@ -1464,7 +1489,7 @@ pub mod flow_execution_summary {
     }
 }
 impl FlowExecutionSummary {
-    /// Creates a new builder-style object to manufacture [`FlowExecutionSummary`](crate::model::FlowExecutionSummary)
+    /// Creates a new builder-style object to manufacture [`FlowExecutionSummary`](crate::model::FlowExecutionSummary).
     pub fn builder() -> crate::model::flow_execution_summary::Builder {
         crate::model::flow_execution_summary::Builder::default()
     }
@@ -1538,14 +1563,19 @@ impl AsRef<str> for FlowExecutionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityDescription {
     /// <p>The entity ID.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The entity ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The entity type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EntityType>,
     /// <p>The time at which the entity was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The definition document of the entity.</p>
+    #[doc(hidden)]
     pub definition: std::option::Option<crate::model::DefinitionDocument>,
 }
 impl EntityDescription {
@@ -1581,11 +1611,10 @@ impl std::fmt::Debug for EntityDescription {
         formatter.finish()
     }
 }
-/// See [`EntityDescription`](crate::model::EntityDescription)
+/// See [`EntityDescription`](crate::model::EntityDescription).
 pub mod entity_description {
 
-    /// A builder for [`EntityDescription`](crate::model::EntityDescription)
-    #[non_exhaustive]
+    /// A builder for [`EntityDescription`](crate::model::EntityDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1651,7 +1680,7 @@ pub mod entity_description {
             self.definition = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityDescription`](crate::model::EntityDescription)
+        /// Consumes the builder and constructs a [`EntityDescription`](crate::model::EntityDescription).
         pub fn build(self) -> crate::model::EntityDescription {
             crate::model::EntityDescription {
                 id: self.id,
@@ -1664,7 +1693,7 @@ pub mod entity_description {
     }
 }
 impl EntityDescription {
-    /// Creates a new builder-style object to manufacture [`EntityDescription`](crate::model::EntityDescription)
+    /// Creates a new builder-style object to manufacture [`EntityDescription`](crate::model::EntityDescription).
     pub fn builder() -> crate::model::entity_description::Builder {
         crate::model::entity_description::Builder::default()
     }
@@ -1773,8 +1802,10 @@ impl AsRef<str> for EntityType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityFilter {
     /// <p>The name of the entity search filter field. <code>REFERENCED_ENTITY_ID</code> filters on entities that are used by the entity in the result set. For example, you can filter on the ID of a property that is used in a state.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::EntityFilterName>,
     /// <p>An array of string values for the search filter field. Multiple values function as AND criteria in the search.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl EntityFilter {
@@ -1795,11 +1826,10 @@ impl std::fmt::Debug for EntityFilter {
         formatter.finish()
     }
 }
-/// See [`EntityFilter`](crate::model::EntityFilter)
+/// See [`EntityFilter`](crate::model::EntityFilter).
 pub mod entity_filter {
 
-    /// A builder for [`EntityFilter`](crate::model::EntityFilter)
-    #[non_exhaustive]
+    /// A builder for [`EntityFilter`](crate::model::EntityFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::EntityFilterName>,
@@ -1838,7 +1868,7 @@ pub mod entity_filter {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityFilter`](crate::model::EntityFilter)
+        /// Consumes the builder and constructs a [`EntityFilter`](crate::model::EntityFilter).
         pub fn build(self) -> crate::model::EntityFilter {
             crate::model::EntityFilter {
                 name: self.name,
@@ -1848,7 +1878,7 @@ pub mod entity_filter {
     }
 }
 impl EntityFilter {
-    /// Creates a new builder-style object to manufacture [`EntityFilter`](crate::model::EntityFilter)
+    /// Creates a new builder-style object to manufacture [`EntityFilter`](crate::model::EntityFilter).
     pub fn builder() -> crate::model::entity_filter::Builder {
         crate::model::entity_filter::Builder::default()
     }
@@ -1927,12 +1957,16 @@ impl AsRef<str> for EntityFilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FlowExecutionMessage {
     /// <p>The unique identifier of the message.</p>
+    #[doc(hidden)]
     pub message_id: std::option::Option<std::string::String>,
     /// <p>The type of flow event .</p>
+    #[doc(hidden)]
     pub event_type: std::option::Option<crate::model::FlowExecutionEventType>,
     /// <p>The date and time when the message was last updated.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A string containing information about the flow event.</p>
+    #[doc(hidden)]
     pub payload: std::option::Option<std::string::String>,
 }
 impl FlowExecutionMessage {
@@ -1963,11 +1997,10 @@ impl std::fmt::Debug for FlowExecutionMessage {
         formatter.finish()
     }
 }
-/// See [`FlowExecutionMessage`](crate::model::FlowExecutionMessage)
+/// See [`FlowExecutionMessage`](crate::model::FlowExecutionMessage).
 pub mod flow_execution_message {
 
-    /// A builder for [`FlowExecutionMessage`](crate::model::FlowExecutionMessage)
-    #[non_exhaustive]
+    /// A builder for [`FlowExecutionMessage`](crate::model::FlowExecutionMessage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message_id: std::option::Option<std::string::String>,
@@ -2022,7 +2055,7 @@ pub mod flow_execution_message {
             self.payload = input;
             self
         }
-        /// Consumes the builder and constructs a [`FlowExecutionMessage`](crate::model::FlowExecutionMessage)
+        /// Consumes the builder and constructs a [`FlowExecutionMessage`](crate::model::FlowExecutionMessage).
         pub fn build(self) -> crate::model::FlowExecutionMessage {
             crate::model::FlowExecutionMessage {
                 message_id: self.message_id,
@@ -2034,7 +2067,7 @@ pub mod flow_execution_message {
     }
 }
 impl FlowExecutionMessage {
-    /// Creates a new builder-style object to manufacture [`FlowExecutionMessage`](crate::model::FlowExecutionMessage)
+    /// Creates a new builder-style object to manufacture [`FlowExecutionMessage`](crate::model::FlowExecutionMessage).
     pub fn builder() -> crate::model::flow_execution_message::Builder {
         crate::model::flow_execution_message::Builder::default()
     }
@@ -2237,10 +2270,13 @@ impl AsRef<str> for UploadStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SystemTemplateDescription {
     /// <p>An object that contains summary information about a system.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::SystemTemplateSummary>,
     /// <p>The definition document of a system.</p>
+    #[doc(hidden)]
     pub definition: std::option::Option<crate::model::DefinitionDocument>,
     /// <p>The namespace version against which the system was validated. Use this value in your system instance.</p>
+    #[doc(hidden)]
     pub validated_namespace_version: std::option::Option<i64>,
 }
 impl SystemTemplateDescription {
@@ -2269,11 +2305,10 @@ impl std::fmt::Debug for SystemTemplateDescription {
         formatter.finish()
     }
 }
-/// See [`SystemTemplateDescription`](crate::model::SystemTemplateDescription)
+/// See [`SystemTemplateDescription`](crate::model::SystemTemplateDescription).
 pub mod system_template_description {
 
-    /// A builder for [`SystemTemplateDescription`](crate::model::SystemTemplateDescription)
-    #[non_exhaustive]
+    /// A builder for [`SystemTemplateDescription`](crate::model::SystemTemplateDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::SystemTemplateSummary>,
@@ -2317,7 +2352,7 @@ pub mod system_template_description {
             self.validated_namespace_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`SystemTemplateDescription`](crate::model::SystemTemplateDescription)
+        /// Consumes the builder and constructs a [`SystemTemplateDescription`](crate::model::SystemTemplateDescription).
         pub fn build(self) -> crate::model::SystemTemplateDescription {
             crate::model::SystemTemplateDescription {
                 summary: self.summary,
@@ -2328,7 +2363,7 @@ pub mod system_template_description {
     }
 }
 impl SystemTemplateDescription {
-    /// Creates a new builder-style object to manufacture [`SystemTemplateDescription`](crate::model::SystemTemplateDescription)
+    /// Creates a new builder-style object to manufacture [`SystemTemplateDescription`](crate::model::SystemTemplateDescription).
     pub fn builder() -> crate::model::system_template_description::Builder {
         crate::model::system_template_description::Builder::default()
     }
@@ -2339,19 +2374,26 @@ impl SystemTemplateDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SystemInstanceDescription {
     /// <p>An object that contains summary information about a system instance.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::SystemInstanceSummary>,
     /// <p>A document that defines an entity. </p>
+    #[doc(hidden)]
     pub definition: std::option::Option<crate::model::DefinitionDocument>,
     /// <p>The Amazon Simple Storage Service bucket where information about a system instance is stored.</p>
+    #[doc(hidden)]
     pub s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>An object that specifies whether cloud metrics are collected in a deployment and, if so, what role is used to collect metrics.</p>
+    #[doc(hidden)]
     pub metrics_configuration: std::option::Option<crate::model::MetricsConfiguration>,
     /// <p>The version of the user's namespace against which the system instance was validated.</p>
+    #[doc(hidden)]
     pub validated_namespace_version: std::option::Option<i64>,
     /// <p>A list of objects that contain all of the IDs and revision numbers of workflows and systems that are used in a system instance.</p>
+    #[doc(hidden)]
     pub validated_dependency_revisions:
         std::option::Option<std::vec::Vec<crate::model::DependencyRevision>>,
     /// <p>The AWS Identity and Access Management (IAM) role that AWS IoT Things Graph assumes during flow execution in a cloud deployment. This role must have read and write permissionss to AWS Lambda and AWS IoT and to any other AWS services that the flow uses.</p>
+    #[doc(hidden)]
     pub flow_actions_role_arn: std::option::Option<std::string::String>,
 }
 impl SystemInstanceDescription {
@@ -2407,11 +2449,10 @@ impl std::fmt::Debug for SystemInstanceDescription {
         formatter.finish()
     }
 }
-/// See [`SystemInstanceDescription`](crate::model::SystemInstanceDescription)
+/// See [`SystemInstanceDescription`](crate::model::SystemInstanceDescription).
 pub mod system_instance_description {
 
-    /// A builder for [`SystemInstanceDescription`](crate::model::SystemInstanceDescription)
-    #[non_exhaustive]
+    /// A builder for [`SystemInstanceDescription`](crate::model::SystemInstanceDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::SystemInstanceSummary>,
@@ -2521,7 +2562,7 @@ pub mod system_instance_description {
             self.flow_actions_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`SystemInstanceDescription`](crate::model::SystemInstanceDescription)
+        /// Consumes the builder and constructs a [`SystemInstanceDescription`](crate::model::SystemInstanceDescription).
         pub fn build(self) -> crate::model::SystemInstanceDescription {
             crate::model::SystemInstanceDescription {
                 summary: self.summary,
@@ -2536,7 +2577,7 @@ pub mod system_instance_description {
     }
 }
 impl SystemInstanceDescription {
-    /// Creates a new builder-style object to manufacture [`SystemInstanceDescription`](crate::model::SystemInstanceDescription)
+    /// Creates a new builder-style object to manufacture [`SystemInstanceDescription`](crate::model::SystemInstanceDescription).
     pub fn builder() -> crate::model::system_instance_description::Builder {
         crate::model::system_instance_description::Builder::default()
     }
@@ -2547,8 +2588,10 @@ impl SystemInstanceDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DependencyRevision {
     /// <p>The ID of the workflow or system.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The revision number of the workflow or system.</p>
+    #[doc(hidden)]
     pub revision_number: std::option::Option<i64>,
 }
 impl DependencyRevision {
@@ -2569,11 +2612,10 @@ impl std::fmt::Debug for DependencyRevision {
         formatter.finish()
     }
 }
-/// See [`DependencyRevision`](crate::model::DependencyRevision)
+/// See [`DependencyRevision`](crate::model::DependencyRevision).
 pub mod dependency_revision {
 
-    /// A builder for [`DependencyRevision`](crate::model::DependencyRevision)
-    #[non_exhaustive]
+    /// A builder for [`DependencyRevision`](crate::model::DependencyRevision).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2600,7 +2642,7 @@ pub mod dependency_revision {
             self.revision_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`DependencyRevision`](crate::model::DependencyRevision)
+        /// Consumes the builder and constructs a [`DependencyRevision`](crate::model::DependencyRevision).
         pub fn build(self) -> crate::model::DependencyRevision {
             crate::model::DependencyRevision {
                 id: self.id,
@@ -2610,7 +2652,7 @@ pub mod dependency_revision {
     }
 }
 impl DependencyRevision {
-    /// Creates a new builder-style object to manufacture [`DependencyRevision`](crate::model::DependencyRevision)
+    /// Creates a new builder-style object to manufacture [`DependencyRevision`](crate::model::DependencyRevision).
     pub fn builder() -> crate::model::dependency_revision::Builder {
         crate::model::dependency_revision::Builder::default()
     }
@@ -2621,8 +2663,10 @@ impl DependencyRevision {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricsConfiguration {
     /// <p>A Boolean that specifies whether cloud metrics are collected.</p>
+    #[doc(hidden)]
     pub cloud_metric_enabled: bool,
     /// <p>The ARN of the role that is used to collect cloud metrics.</p>
+    #[doc(hidden)]
     pub metric_rule_role_arn: std::option::Option<std::string::String>,
 }
 impl MetricsConfiguration {
@@ -2643,11 +2687,10 @@ impl std::fmt::Debug for MetricsConfiguration {
         formatter.finish()
     }
 }
-/// See [`MetricsConfiguration`](crate::model::MetricsConfiguration)
+/// See [`MetricsConfiguration`](crate::model::MetricsConfiguration).
 pub mod metrics_configuration {
 
-    /// A builder for [`MetricsConfiguration`](crate::model::MetricsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MetricsConfiguration`](crate::model::MetricsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloud_metric_enabled: std::option::Option<bool>,
@@ -2677,7 +2720,7 @@ pub mod metrics_configuration {
             self.metric_rule_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricsConfiguration`](crate::model::MetricsConfiguration)
+        /// Consumes the builder and constructs a [`MetricsConfiguration`](crate::model::MetricsConfiguration).
         pub fn build(self) -> crate::model::MetricsConfiguration {
             crate::model::MetricsConfiguration {
                 cloud_metric_enabled: self.cloud_metric_enabled.unwrap_or_default(),
@@ -2687,7 +2730,7 @@ pub mod metrics_configuration {
     }
 }
 impl MetricsConfiguration {
-    /// Creates a new builder-style object to manufacture [`MetricsConfiguration`](crate::model::MetricsConfiguration)
+    /// Creates a new builder-style object to manufacture [`MetricsConfiguration`](crate::model::MetricsConfiguration).
     pub fn builder() -> crate::model::metrics_configuration::Builder {
         crate::model::metrics_configuration::Builder::default()
     }
@@ -2808,10 +2851,13 @@ impl AsRef<str> for NamespaceDeletionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FlowTemplateDescription {
     /// <p>An object that contains summary information about a workflow.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::FlowTemplateSummary>,
     /// <p>A workflow's definition document.</p>
+    #[doc(hidden)]
     pub definition: std::option::Option<crate::model::DefinitionDocument>,
     /// <p>The version of the user's namespace against which the workflow was validated. Use this value in your system instance.</p>
+    #[doc(hidden)]
     pub validated_namespace_version: std::option::Option<i64>,
 }
 impl FlowTemplateDescription {
@@ -2840,11 +2886,10 @@ impl std::fmt::Debug for FlowTemplateDescription {
         formatter.finish()
     }
 }
-/// See [`FlowTemplateDescription`](crate::model::FlowTemplateDescription)
+/// See [`FlowTemplateDescription`](crate::model::FlowTemplateDescription).
 pub mod flow_template_description {
 
-    /// A builder for [`FlowTemplateDescription`](crate::model::FlowTemplateDescription)
-    #[non_exhaustive]
+    /// A builder for [`FlowTemplateDescription`](crate::model::FlowTemplateDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary: std::option::Option<crate::model::FlowTemplateSummary>,
@@ -2888,7 +2933,7 @@ pub mod flow_template_description {
             self.validated_namespace_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`FlowTemplateDescription`](crate::model::FlowTemplateDescription)
+        /// Consumes the builder and constructs a [`FlowTemplateDescription`](crate::model::FlowTemplateDescription).
         pub fn build(self) -> crate::model::FlowTemplateDescription {
             crate::model::FlowTemplateDescription {
                 summary: self.summary,
@@ -2899,7 +2944,7 @@ pub mod flow_template_description {
     }
 }
 impl FlowTemplateDescription {
-    /// Creates a new builder-style object to manufacture [`FlowTemplateDescription`](crate::model::FlowTemplateDescription)
+    /// Creates a new builder-style object to manufacture [`FlowTemplateDescription`](crate::model::FlowTemplateDescription).
     pub fn builder() -> crate::model::flow_template_description::Builder {
         crate::model::flow_template_description::Builder::default()
     }

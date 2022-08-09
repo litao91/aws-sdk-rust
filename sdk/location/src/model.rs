@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationExceptionField {
     /// <p>The field name where the invalid entry was detected.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A message with the reason for the validation exception error.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ValidationExceptionField {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ValidationExceptionField {
         formatter.finish()
     }
 }
-/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField).
 pub mod validation_exception_field {
 
-    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField)
-    #[non_exhaustive]
+    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod validation_exception_field {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField).
         pub fn build(self) -> crate::model::ValidationExceptionField {
             crate::model::ValidationExceptionField {
                 name: self.name,
@@ -68,7 +69,7 @@ pub mod validation_exception_field {
     }
 }
 impl ValidationExceptionField {
-    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     pub fn builder() -> crate::model::validation_exception_field::Builder {
         crate::model::validation_exception_field::Builder::default()
     }
@@ -116,14 +117,19 @@ where
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDevicePositionsResponseEntry {
     /// <p>The ID of the device for this position.</p>
+    #[doc(hidden)]
     pub device_id: std::option::Option<std::string::String>,
     /// <p>The timestamp at which the device position was determined. Uses <a href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.</p>
+    #[doc(hidden)]
     pub sample_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last known device position. Empty if no positions currently stored.</p>
+    #[doc(hidden)]
     pub position: std::option::Option<std::vec::Vec<f64>>,
     /// <p>The accuracy of the device position.</p>
+    #[doc(hidden)]
     pub accuracy: std::option::Option<crate::model::PositionalAccuracy>,
     /// <p>The properties associated with the position.</p>
+    #[doc(hidden)]
     pub position_properties:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -163,11 +169,10 @@ impl std::fmt::Debug for ListDevicePositionsResponseEntry {
         formatter.finish()
     }
 }
-/// See [`ListDevicePositionsResponseEntry`](crate::model::ListDevicePositionsResponseEntry)
+/// See [`ListDevicePositionsResponseEntry`](crate::model::ListDevicePositionsResponseEntry).
 pub mod list_device_positions_response_entry {
 
-    /// A builder for [`ListDevicePositionsResponseEntry`](crate::model::ListDevicePositionsResponseEntry)
-    #[non_exhaustive]
+    /// A builder for [`ListDevicePositionsResponseEntry`](crate::model::ListDevicePositionsResponseEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_id: std::option::Option<std::string::String>,
@@ -256,7 +261,7 @@ pub mod list_device_positions_response_entry {
             self.position_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDevicePositionsResponseEntry`](crate::model::ListDevicePositionsResponseEntry)
+        /// Consumes the builder and constructs a [`ListDevicePositionsResponseEntry`](crate::model::ListDevicePositionsResponseEntry).
         pub fn build(self) -> crate::model::ListDevicePositionsResponseEntry {
             crate::model::ListDevicePositionsResponseEntry {
                 device_id: self.device_id,
@@ -269,7 +274,7 @@ pub mod list_device_positions_response_entry {
     }
 }
 impl ListDevicePositionsResponseEntry {
-    /// Creates a new builder-style object to manufacture [`ListDevicePositionsResponseEntry`](crate::model::ListDevicePositionsResponseEntry)
+    /// Creates a new builder-style object to manufacture [`ListDevicePositionsResponseEntry`](crate::model::ListDevicePositionsResponseEntry).
     pub fn builder() -> crate::model::list_device_positions_response_entry::Builder {
         crate::model::list_device_positions_response_entry::Builder::default()
     }
@@ -280,6 +285,7 @@ impl ListDevicePositionsResponseEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PositionalAccuracy {
     /// <p>Estimated maximum distance, in meters, between the measured position and the true position of a device, along the Earth's surface.</p>
+    #[doc(hidden)]
     pub horizontal: std::option::Option<f64>,
 }
 impl PositionalAccuracy {
@@ -295,11 +301,10 @@ impl std::fmt::Debug for PositionalAccuracy {
         formatter.finish()
     }
 }
-/// See [`PositionalAccuracy`](crate::model::PositionalAccuracy)
+/// See [`PositionalAccuracy`](crate::model::PositionalAccuracy).
 pub mod positional_accuracy {
 
-    /// A builder for [`PositionalAccuracy`](crate::model::PositionalAccuracy)
-    #[non_exhaustive]
+    /// A builder for [`PositionalAccuracy`](crate::model::PositionalAccuracy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) horizontal: std::option::Option<f64>,
@@ -315,7 +320,7 @@ pub mod positional_accuracy {
             self.horizontal = input;
             self
         }
-        /// Consumes the builder and constructs a [`PositionalAccuracy`](crate::model::PositionalAccuracy)
+        /// Consumes the builder and constructs a [`PositionalAccuracy`](crate::model::PositionalAccuracy).
         pub fn build(self) -> crate::model::PositionalAccuracy {
             crate::model::PositionalAccuracy {
                 horizontal: self.horizontal,
@@ -324,7 +329,7 @@ pub mod positional_accuracy {
     }
 }
 impl PositionalAccuracy {
-    /// Creates a new builder-style object to manufacture [`PositionalAccuracy`](crate::model::PositionalAccuracy)
+    /// Creates a new builder-style object to manufacture [`PositionalAccuracy`](crate::model::PositionalAccuracy).
     pub fn builder() -> crate::model::positional_accuracy::Builder {
         crate::model::positional_accuracy::Builder::default()
     }
@@ -335,16 +340,22 @@ impl PositionalAccuracy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DevicePosition {
     /// <p>The device whose position you retrieved.</p>
+    #[doc(hidden)]
     pub device_id: std::option::Option<std::string::String>,
     /// <p>The timestamp at which the device's position was determined. Uses <a href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
+    #[doc(hidden)]
     pub sample_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp for when the tracker resource received the device position in <a href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
+    #[doc(hidden)]
     pub received_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last known device position.</p>
+    #[doc(hidden)]
     pub position: std::option::Option<std::vec::Vec<f64>>,
     /// <p>The accuracy of the device position.</p>
+    #[doc(hidden)]
     pub accuracy: std::option::Option<crate::model::PositionalAccuracy>,
     /// <p>The properties associated with the position.</p>
+    #[doc(hidden)]
     pub position_properties:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -389,11 +400,10 @@ impl std::fmt::Debug for DevicePosition {
         formatter.finish()
     }
 }
-/// See [`DevicePosition`](crate::model::DevicePosition)
+/// See [`DevicePosition`](crate::model::DevicePosition).
 pub mod device_position {
 
-    /// A builder for [`DevicePosition`](crate::model::DevicePosition)
-    #[non_exhaustive]
+    /// A builder for [`DevicePosition`](crate::model::DevicePosition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_id: std::option::Option<std::string::String>,
@@ -496,7 +506,7 @@ pub mod device_position {
             self.position_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`DevicePosition`](crate::model::DevicePosition)
+        /// Consumes the builder and constructs a [`DevicePosition`](crate::model::DevicePosition).
         pub fn build(self) -> crate::model::DevicePosition {
             crate::model::DevicePosition {
                 device_id: self.device_id,
@@ -510,7 +520,7 @@ pub mod device_position {
     }
 }
 impl DevicePosition {
-    /// Creates a new builder-style object to manufacture [`DevicePosition`](crate::model::DevicePosition)
+    /// Creates a new builder-style object to manufacture [`DevicePosition`](crate::model::DevicePosition).
     pub fn builder() -> crate::model::device_position::Builder {
         crate::model::device_position::Builder::default()
     }
@@ -521,10 +531,13 @@ impl DevicePosition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchUpdateDevicePositionError {
     /// <p>The device associated with the failed location update.</p>
+    #[doc(hidden)]
     pub device_id: std::option::Option<std::string::String>,
     /// <p>The timestamp at which the device position was determined. Uses <a href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
+    #[doc(hidden)]
     pub sample_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Contains details related to the error code such as the error code and error message.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::BatchItemError>,
 }
 impl BatchUpdateDevicePositionError {
@@ -550,11 +563,10 @@ impl std::fmt::Debug for BatchUpdateDevicePositionError {
         formatter.finish()
     }
 }
-/// See [`BatchUpdateDevicePositionError`](crate::model::BatchUpdateDevicePositionError)
+/// See [`BatchUpdateDevicePositionError`](crate::model::BatchUpdateDevicePositionError).
 pub mod batch_update_device_position_error {
 
-    /// A builder for [`BatchUpdateDevicePositionError`](crate::model::BatchUpdateDevicePositionError)
-    #[non_exhaustive]
+    /// A builder for [`BatchUpdateDevicePositionError`](crate::model::BatchUpdateDevicePositionError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_id: std::option::Option<std::string::String>,
@@ -598,7 +610,7 @@ pub mod batch_update_device_position_error {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchUpdateDevicePositionError`](crate::model::BatchUpdateDevicePositionError)
+        /// Consumes the builder and constructs a [`BatchUpdateDevicePositionError`](crate::model::BatchUpdateDevicePositionError).
         pub fn build(self) -> crate::model::BatchUpdateDevicePositionError {
             crate::model::BatchUpdateDevicePositionError {
                 device_id: self.device_id,
@@ -609,7 +621,7 @@ pub mod batch_update_device_position_error {
     }
 }
 impl BatchUpdateDevicePositionError {
-    /// Creates a new builder-style object to manufacture [`BatchUpdateDevicePositionError`](crate::model::BatchUpdateDevicePositionError)
+    /// Creates a new builder-style object to manufacture [`BatchUpdateDevicePositionError`](crate::model::BatchUpdateDevicePositionError).
     pub fn builder() -> crate::model::batch_update_device_position_error::Builder {
         crate::model::batch_update_device_position_error::Builder::default()
     }
@@ -620,8 +632,10 @@ impl BatchUpdateDevicePositionError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchItemError {
     /// <p>The error code associated with the batch request error.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::BatchItemErrorCode>,
     /// <p>A message with the reason for the batch request error.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl BatchItemError {
@@ -642,11 +656,10 @@ impl std::fmt::Debug for BatchItemError {
         formatter.finish()
     }
 }
-/// See [`BatchItemError`](crate::model::BatchItemError)
+/// See [`BatchItemError`](crate::model::BatchItemError).
 pub mod batch_item_error {
 
-    /// A builder for [`BatchItemError`](crate::model::BatchItemError)
-    #[non_exhaustive]
+    /// A builder for [`BatchItemError`](crate::model::BatchItemError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::BatchItemErrorCode>,
@@ -676,7 +689,7 @@ pub mod batch_item_error {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchItemError`](crate::model::BatchItemError)
+        /// Consumes the builder and constructs a [`BatchItemError`](crate::model::BatchItemError).
         pub fn build(self) -> crate::model::BatchItemError {
             crate::model::BatchItemError {
                 code: self.code,
@@ -686,7 +699,7 @@ pub mod batch_item_error {
     }
 }
 impl BatchItemError {
-    /// Creates a new builder-style object to manufacture [`BatchItemError`](crate::model::BatchItemError)
+    /// Creates a new builder-style object to manufacture [`BatchItemError`](crate::model::BatchItemError).
     pub fn builder() -> crate::model::batch_item_error::Builder {
         crate::model::batch_item_error::Builder::default()
     }
@@ -735,15 +748,20 @@ where
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DevicePositionUpdate {
     /// <p>The device associated to the position update.</p>
+    #[doc(hidden)]
     pub device_id: std::option::Option<std::string::String>,
     /// <p>The timestamp at which the device's position was determined. Uses <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code> </p>
+    #[doc(hidden)]
     pub sample_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The latest device position defined in <a href="https://earth-info.nga.mil/index.php?dir=wgs84&amp;action=wgs84">WGS 84</a> format: <code>[X or longitude, Y or latitude]</code>.</p>
+    #[doc(hidden)]
     pub position: std::option::Option<std::vec::Vec<f64>>,
     /// <p>The accuracy of the device position.</p>
+    #[doc(hidden)]
     pub accuracy: std::option::Option<crate::model::PositionalAccuracy>,
     /// <p>Associates one of more properties with the position update. A property is a key-value pair stored with the position update and added to any geofence event the update may trigger.</p>
     /// <p>Format: <code>"key" : "value"</code> </p>
+    #[doc(hidden)]
     pub position_properties:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -784,11 +802,10 @@ impl std::fmt::Debug for DevicePositionUpdate {
         formatter.finish()
     }
 }
-/// See [`DevicePositionUpdate`](crate::model::DevicePositionUpdate)
+/// See [`DevicePositionUpdate`](crate::model::DevicePositionUpdate).
 pub mod device_position_update {
 
-    /// A builder for [`DevicePositionUpdate`](crate::model::DevicePositionUpdate)
-    #[non_exhaustive]
+    /// A builder for [`DevicePositionUpdate`](crate::model::DevicePositionUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_id: std::option::Option<std::string::String>,
@@ -879,7 +896,7 @@ pub mod device_position_update {
             self.position_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`DevicePositionUpdate`](crate::model::DevicePositionUpdate)
+        /// Consumes the builder and constructs a [`DevicePositionUpdate`](crate::model::DevicePositionUpdate).
         pub fn build(self) -> crate::model::DevicePositionUpdate {
             crate::model::DevicePositionUpdate {
                 device_id: self.device_id,
@@ -892,7 +909,7 @@ pub mod device_position_update {
     }
 }
 impl DevicePositionUpdate {
-    /// Creates a new builder-style object to manufacture [`DevicePositionUpdate`](crate::model::DevicePositionUpdate)
+    /// Creates a new builder-style object to manufacture [`DevicePositionUpdate`](crate::model::DevicePositionUpdate).
     pub fn builder() -> crate::model::device_position_update::Builder {
         crate::model::device_position_update::Builder::default()
     }
@@ -903,8 +920,10 @@ impl DevicePositionUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchGetDevicePositionError {
     /// <p>The ID of the device that didn't return a position.</p>
+    #[doc(hidden)]
     pub device_id: std::option::Option<std::string::String>,
     /// <p>Contains details related to the error code.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::BatchItemError>,
 }
 impl BatchGetDevicePositionError {
@@ -925,11 +944,10 @@ impl std::fmt::Debug for BatchGetDevicePositionError {
         formatter.finish()
     }
 }
-/// See [`BatchGetDevicePositionError`](crate::model::BatchGetDevicePositionError)
+/// See [`BatchGetDevicePositionError`](crate::model::BatchGetDevicePositionError).
 pub mod batch_get_device_position_error {
 
-    /// A builder for [`BatchGetDevicePositionError`](crate::model::BatchGetDevicePositionError)
-    #[non_exhaustive]
+    /// A builder for [`BatchGetDevicePositionError`](crate::model::BatchGetDevicePositionError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_id: std::option::Option<std::string::String>,
@@ -959,7 +977,7 @@ pub mod batch_get_device_position_error {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchGetDevicePositionError`](crate::model::BatchGetDevicePositionError)
+        /// Consumes the builder and constructs a [`BatchGetDevicePositionError`](crate::model::BatchGetDevicePositionError).
         pub fn build(self) -> crate::model::BatchGetDevicePositionError {
             crate::model::BatchGetDevicePositionError {
                 device_id: self.device_id,
@@ -969,7 +987,7 @@ pub mod batch_get_device_position_error {
     }
 }
 impl BatchGetDevicePositionError {
-    /// Creates a new builder-style object to manufacture [`BatchGetDevicePositionError`](crate::model::BatchGetDevicePositionError)
+    /// Creates a new builder-style object to manufacture [`BatchGetDevicePositionError`](crate::model::BatchGetDevicePositionError).
     pub fn builder() -> crate::model::batch_get_device_position_error::Builder {
         crate::model::batch_get_device_position_error::Builder::default()
     }
@@ -980,8 +998,10 @@ impl BatchGetDevicePositionError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchDeleteDevicePositionHistoryError {
     /// <p>The ID of the device for this position.</p>
+    #[doc(hidden)]
     pub device_id: std::option::Option<std::string::String>,
     /// <p>Contains the batch request error details associated with the request.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::BatchItemError>,
 }
 impl BatchDeleteDevicePositionHistoryError {
@@ -1002,11 +1022,10 @@ impl std::fmt::Debug for BatchDeleteDevicePositionHistoryError {
         formatter.finish()
     }
 }
-/// See [`BatchDeleteDevicePositionHistoryError`](crate::model::BatchDeleteDevicePositionHistoryError)
+/// See [`BatchDeleteDevicePositionHistoryError`](crate::model::BatchDeleteDevicePositionHistoryError).
 pub mod batch_delete_device_position_history_error {
 
-    /// A builder for [`BatchDeleteDevicePositionHistoryError`](crate::model::BatchDeleteDevicePositionHistoryError)
-    #[non_exhaustive]
+    /// A builder for [`BatchDeleteDevicePositionHistoryError`](crate::model::BatchDeleteDevicePositionHistoryError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_id: std::option::Option<std::string::String>,
@@ -1036,7 +1055,7 @@ pub mod batch_delete_device_position_history_error {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchDeleteDevicePositionHistoryError`](crate::model::BatchDeleteDevicePositionHistoryError)
+        /// Consumes the builder and constructs a [`BatchDeleteDevicePositionHistoryError`](crate::model::BatchDeleteDevicePositionHistoryError).
         pub fn build(self) -> crate::model::BatchDeleteDevicePositionHistoryError {
             crate::model::BatchDeleteDevicePositionHistoryError {
                 device_id: self.device_id,
@@ -1046,7 +1065,7 @@ pub mod batch_delete_device_position_history_error {
     }
 }
 impl BatchDeleteDevicePositionHistoryError {
-    /// Creates a new builder-style object to manufacture [`BatchDeleteDevicePositionHistoryError`](crate::model::BatchDeleteDevicePositionHistoryError)
+    /// Creates a new builder-style object to manufacture [`BatchDeleteDevicePositionHistoryError`](crate::model::BatchDeleteDevicePositionHistoryError).
     pub fn builder() -> crate::model::batch_delete_device_position_history_error::Builder {
         crate::model::batch_delete_device_position_history_error::Builder::default()
     }
@@ -1057,16 +1076,27 @@ impl BatchDeleteDevicePositionHistoryError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTrackersResponseEntry {
     /// <p>The name of the tracker resource.</p>
+    #[doc(hidden)]
     pub tracker_name: std::option::Option<std::string::String>,
     /// <p>The description for the tracker resource.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Always returns <code>RequestBasedUsage</code>.</p>
+    #[deprecated(
+        note = "Deprecated. Always returns RequestBasedUsage.",
+        since = "2022-02-01"
+    )]
+    #[doc(hidden)]
     pub pricing_plan: std::option::Option<crate::model::PricingPlan>,
     /// <p>No longer used. Always returns an empty string.</p>
+    #[deprecated(note = "Deprecated. Unused.", since = "2022-02-01")]
+    #[doc(hidden)]
     pub pricing_plan_data_source: std::option::Option<std::string::String>,
     /// <p>The timestamp for when the tracker resource was created in <a href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp at which the device's position was determined. Uses <a href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
+    #[doc(hidden)]
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ListTrackersResponseEntry {
@@ -1079,10 +1109,15 @@ impl ListTrackersResponseEntry {
         self.description.as_deref()
     }
     /// <p>Always returns <code>RequestBasedUsage</code>.</p>
+    #[deprecated(
+        note = "Deprecated. Always returns RequestBasedUsage.",
+        since = "2022-02-01"
+    )]
     pub fn pricing_plan(&self) -> std::option::Option<&crate::model::PricingPlan> {
         self.pricing_plan.as_ref()
     }
     /// <p>No longer used. Always returns an empty string.</p>
+    #[deprecated(note = "Deprecated. Unused.", since = "2022-02-01")]
     pub fn pricing_plan_data_source(&self) -> std::option::Option<&str> {
         self.pricing_plan_data_source.as_deref()
     }
@@ -1107,11 +1142,10 @@ impl std::fmt::Debug for ListTrackersResponseEntry {
         formatter.finish()
     }
 }
-/// See [`ListTrackersResponseEntry`](crate::model::ListTrackersResponseEntry)
+/// See [`ListTrackersResponseEntry`](crate::model::ListTrackersResponseEntry).
 pub mod list_trackers_response_entry {
 
-    /// A builder for [`ListTrackersResponseEntry`](crate::model::ListTrackersResponseEntry)
-    #[non_exhaustive]
+    /// A builder for [`ListTrackersResponseEntry`](crate::model::ListTrackersResponseEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tracker_name: std::option::Option<std::string::String>,
@@ -1143,11 +1177,19 @@ pub mod list_trackers_response_entry {
             self
         }
         /// <p>Always returns <code>RequestBasedUsage</code>.</p>
+        #[deprecated(
+            note = "Deprecated. Always returns RequestBasedUsage.",
+            since = "2022-02-01"
+        )]
         pub fn pricing_plan(mut self, input: crate::model::PricingPlan) -> Self {
             self.pricing_plan = Some(input);
             self
         }
         /// <p>Always returns <code>RequestBasedUsage</code>.</p>
+        #[deprecated(
+            note = "Deprecated. Always returns RequestBasedUsage.",
+            since = "2022-02-01"
+        )]
         pub fn set_pricing_plan(
             mut self,
             input: std::option::Option<crate::model::PricingPlan>,
@@ -1156,11 +1198,13 @@ pub mod list_trackers_response_entry {
             self
         }
         /// <p>No longer used. Always returns an empty string.</p>
+        #[deprecated(note = "Deprecated. Unused.", since = "2022-02-01")]
         pub fn pricing_plan_data_source(mut self, input: impl Into<std::string::String>) -> Self {
             self.pricing_plan_data_source = Some(input.into());
             self
         }
         /// <p>No longer used. Always returns an empty string.</p>
+        #[deprecated(note = "Deprecated. Unused.", since = "2022-02-01")]
         pub fn set_pricing_plan_data_source(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -1194,7 +1238,7 @@ pub mod list_trackers_response_entry {
             self.update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTrackersResponseEntry`](crate::model::ListTrackersResponseEntry)
+        /// Consumes the builder and constructs a [`ListTrackersResponseEntry`](crate::model::ListTrackersResponseEntry).
         pub fn build(self) -> crate::model::ListTrackersResponseEntry {
             crate::model::ListTrackersResponseEntry {
                 tracker_name: self.tracker_name,
@@ -1208,7 +1252,7 @@ pub mod list_trackers_response_entry {
     }
 }
 impl ListTrackersResponseEntry {
-    /// Creates a new builder-style object to manufacture [`ListTrackersResponseEntry`](crate::model::ListTrackersResponseEntry)
+    /// Creates a new builder-style object to manufacture [`ListTrackersResponseEntry`](crate::model::ListTrackersResponseEntry).
     pub fn builder() -> crate::model::list_trackers_response_entry::Builder {
         crate::model::list_trackers_response_entry::Builder::default()
     }
@@ -1290,12 +1334,16 @@ pub struct CalculateRouteMatrixSummary {
     /// <li> <p> <code>Here</code> </p> </li>
     /// </ul>
     /// <p>For more information about data providers, see <a href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location Service data providers</a>.</p>
+    #[doc(hidden)]
     pub data_source: std::option::Option<std::string::String>,
     /// <p>The count of cells in the route matrix. Equal to the number of <code>DeparturePositions</code> multiplied by the number of <code>DestinationPositions</code>.</p>
+    #[doc(hidden)]
     pub route_count: std::option::Option<i32>,
     /// <p>The count of error results in the route matrix. If this number is 0, all routes were calculated successfully.</p>
+    #[doc(hidden)]
     pub error_count: std::option::Option<i32>,
     /// <p>The unit of measurement for route distances.</p>
+    #[doc(hidden)]
     pub distance_unit: std::option::Option<crate::model::DistanceUnit>,
 }
 impl CalculateRouteMatrixSummary {
@@ -1331,11 +1379,10 @@ impl std::fmt::Debug for CalculateRouteMatrixSummary {
         formatter.finish()
     }
 }
-/// See [`CalculateRouteMatrixSummary`](crate::model::CalculateRouteMatrixSummary)
+/// See [`CalculateRouteMatrixSummary`](crate::model::CalculateRouteMatrixSummary).
 pub mod calculate_route_matrix_summary {
 
-    /// A builder for [`CalculateRouteMatrixSummary`](crate::model::CalculateRouteMatrixSummary)
-    #[non_exhaustive]
+    /// A builder for [`CalculateRouteMatrixSummary`](crate::model::CalculateRouteMatrixSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_source: std::option::Option<std::string::String>,
@@ -1397,7 +1444,7 @@ pub mod calculate_route_matrix_summary {
             self.distance_unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`CalculateRouteMatrixSummary`](crate::model::CalculateRouteMatrixSummary)
+        /// Consumes the builder and constructs a [`CalculateRouteMatrixSummary`](crate::model::CalculateRouteMatrixSummary).
         pub fn build(self) -> crate::model::CalculateRouteMatrixSummary {
             crate::model::CalculateRouteMatrixSummary {
                 data_source: self.data_source,
@@ -1409,7 +1456,7 @@ pub mod calculate_route_matrix_summary {
     }
 }
 impl CalculateRouteMatrixSummary {
-    /// Creates a new builder-style object to manufacture [`CalculateRouteMatrixSummary`](crate::model::CalculateRouteMatrixSummary)
+    /// Creates a new builder-style object to manufacture [`CalculateRouteMatrixSummary`](crate::model::CalculateRouteMatrixSummary).
     pub fn builder() -> crate::model::calculate_route_matrix_summary::Builder {
         crate::model::calculate_route_matrix_summary::Builder::default()
     }
@@ -1451,10 +1498,13 @@ where
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RouteMatrixEntry {
     /// <p>The total distance of travel for the route.</p>
+    #[doc(hidden)]
     pub distance: std::option::Option<f64>,
     /// <p>The expected duration of travel for the route.</p>
+    #[doc(hidden)]
     pub duration_seconds: std::option::Option<f64>,
     /// <p>An error corresponding to the calculation of a route between the <code>DeparturePosition</code> and <code>DestinationPosition</code>.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::RouteMatrixEntryError>,
 }
 impl RouteMatrixEntry {
@@ -1480,11 +1530,10 @@ impl std::fmt::Debug for RouteMatrixEntry {
         formatter.finish()
     }
 }
-/// See [`RouteMatrixEntry`](crate::model::RouteMatrixEntry)
+/// See [`RouteMatrixEntry`](crate::model::RouteMatrixEntry).
 pub mod route_matrix_entry {
 
-    /// A builder for [`RouteMatrixEntry`](crate::model::RouteMatrixEntry)
-    #[non_exhaustive]
+    /// A builder for [`RouteMatrixEntry`](crate::model::RouteMatrixEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) distance: std::option::Option<f64>,
@@ -1525,7 +1574,7 @@ pub mod route_matrix_entry {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`RouteMatrixEntry`](crate::model::RouteMatrixEntry)
+        /// Consumes the builder and constructs a [`RouteMatrixEntry`](crate::model::RouteMatrixEntry).
         pub fn build(self) -> crate::model::RouteMatrixEntry {
             crate::model::RouteMatrixEntry {
                 distance: self.distance,
@@ -1536,7 +1585,7 @@ pub mod route_matrix_entry {
     }
 }
 impl RouteMatrixEntry {
-    /// Creates a new builder-style object to manufacture [`RouteMatrixEntry`](crate::model::RouteMatrixEntry)
+    /// Creates a new builder-style object to manufacture [`RouteMatrixEntry`](crate::model::RouteMatrixEntry).
     pub fn builder() -> crate::model::route_matrix_entry::Builder {
         crate::model::route_matrix_entry::Builder::default()
     }
@@ -1566,8 +1615,10 @@ impl RouteMatrixEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RouteMatrixEntryError {
     /// <p>The type of error which occurred for the route calculation.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::RouteMatrixErrorCode>,
     /// <p>A message about the error that occurred for the route calculation.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl RouteMatrixEntryError {
@@ -1588,11 +1639,10 @@ impl std::fmt::Debug for RouteMatrixEntryError {
         formatter.finish()
     }
 }
-/// See [`RouteMatrixEntryError`](crate::model::RouteMatrixEntryError)
+/// See [`RouteMatrixEntryError`](crate::model::RouteMatrixEntryError).
 pub mod route_matrix_entry_error {
 
-    /// A builder for [`RouteMatrixEntryError`](crate::model::RouteMatrixEntryError)
-    #[non_exhaustive]
+    /// A builder for [`RouteMatrixEntryError`](crate::model::RouteMatrixEntryError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::RouteMatrixErrorCode>,
@@ -1622,7 +1672,7 @@ pub mod route_matrix_entry_error {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`RouteMatrixEntryError`](crate::model::RouteMatrixEntryError)
+        /// Consumes the builder and constructs a [`RouteMatrixEntryError`](crate::model::RouteMatrixEntryError).
         pub fn build(self) -> crate::model::RouteMatrixEntryError {
             crate::model::RouteMatrixEntryError {
                 code: self.code,
@@ -1632,7 +1682,7 @@ pub mod route_matrix_entry_error {
     }
 }
 impl RouteMatrixEntryError {
-    /// Creates a new builder-style object to manufacture [`RouteMatrixEntryError`](crate::model::RouteMatrixEntryError)
+    /// Creates a new builder-style object to manufacture [`RouteMatrixEntryError`](crate::model::RouteMatrixEntryError).
     pub fn builder() -> crate::model::route_matrix_entry_error::Builder {
         crate::model::route_matrix_entry_error::Builder::default()
     }
@@ -1683,14 +1733,18 @@ pub struct CalculateRouteTruckModeOptions {
     /// <p>Avoids ferries when calculating routes.</p>
     /// <p>Default Value: <code>false</code> </p>
     /// <p>Valid Values: <code>false</code> | <code>true</code> </p>
+    #[doc(hidden)]
     pub avoid_ferries: std::option::Option<bool>,
     /// <p>Avoids tolls when calculating routes.</p>
     /// <p>Default Value: <code>false</code> </p>
     /// <p>Valid Values: <code>false</code> | <code>true</code> </p>
+    #[doc(hidden)]
     pub avoid_tolls: std::option::Option<bool>,
     /// <p>Specifies the truck's dimension specifications including length, height, width, and unit of measurement. Used to avoid roads that can't support the truck's dimensions.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<crate::model::TruckDimensions>,
     /// <p>Specifies the truck's weight specifications including total weight and unit of measurement. Used to avoid roads that can't support the truck's weight.</p>
+    #[doc(hidden)]
     pub weight: std::option::Option<crate::model::TruckWeight>,
 }
 impl CalculateRouteTruckModeOptions {
@@ -1725,11 +1779,10 @@ impl std::fmt::Debug for CalculateRouteTruckModeOptions {
         formatter.finish()
     }
 }
-/// See [`CalculateRouteTruckModeOptions`](crate::model::CalculateRouteTruckModeOptions)
+/// See [`CalculateRouteTruckModeOptions`](crate::model::CalculateRouteTruckModeOptions).
 pub mod calculate_route_truck_mode_options {
 
-    /// A builder for [`CalculateRouteTruckModeOptions`](crate::model::CalculateRouteTruckModeOptions)
-    #[non_exhaustive]
+    /// A builder for [`CalculateRouteTruckModeOptions`](crate::model::CalculateRouteTruckModeOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) avoid_ferries: std::option::Option<bool>,
@@ -1789,7 +1842,7 @@ pub mod calculate_route_truck_mode_options {
             self.weight = input;
             self
         }
-        /// Consumes the builder and constructs a [`CalculateRouteTruckModeOptions`](crate::model::CalculateRouteTruckModeOptions)
+        /// Consumes the builder and constructs a [`CalculateRouteTruckModeOptions`](crate::model::CalculateRouteTruckModeOptions).
         pub fn build(self) -> crate::model::CalculateRouteTruckModeOptions {
             crate::model::CalculateRouteTruckModeOptions {
                 avoid_ferries: self.avoid_ferries,
@@ -1801,7 +1854,7 @@ pub mod calculate_route_truck_mode_options {
     }
 }
 impl CalculateRouteTruckModeOptions {
-    /// Creates a new builder-style object to manufacture [`CalculateRouteTruckModeOptions`](crate::model::CalculateRouteTruckModeOptions)
+    /// Creates a new builder-style object to manufacture [`CalculateRouteTruckModeOptions`](crate::model::CalculateRouteTruckModeOptions).
     pub fn builder() -> crate::model::calculate_route_truck_mode_options::Builder {
         crate::model::calculate_route_truck_mode_options::Builder::default()
     }
@@ -1815,9 +1868,11 @@ pub struct TruckWeight {
     /// <ul>
     /// <li> <p>For example, <code>3500</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub total: std::option::Option<f64>,
     /// <p>The unit of measurement to use for the truck weight.</p>
     /// <p>Default Value: <code>Kilograms</code> </p>
+    #[doc(hidden)]
     pub unit: std::option::Option<crate::model::VehicleWeightUnit>,
 }
 impl TruckWeight {
@@ -1842,11 +1897,10 @@ impl std::fmt::Debug for TruckWeight {
         formatter.finish()
     }
 }
-/// See [`TruckWeight`](crate::model::TruckWeight)
+/// See [`TruckWeight`](crate::model::TruckWeight).
 pub mod truck_weight {
 
-    /// A builder for [`TruckWeight`](crate::model::TruckWeight)
-    #[non_exhaustive]
+    /// A builder for [`TruckWeight`](crate::model::TruckWeight).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total: std::option::Option<f64>,
@@ -1884,7 +1938,7 @@ pub mod truck_weight {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`TruckWeight`](crate::model::TruckWeight)
+        /// Consumes the builder and constructs a [`TruckWeight`](crate::model::TruckWeight).
         pub fn build(self) -> crate::model::TruckWeight {
             crate::model::TruckWeight {
                 total: self.total,
@@ -1894,7 +1948,7 @@ pub mod truck_weight {
     }
 }
 impl TruckWeight {
-    /// Creates a new builder-style object to manufacture [`TruckWeight`](crate::model::TruckWeight)
+    /// Creates a new builder-style object to manufacture [`TruckWeight`](crate::model::TruckWeight).
     pub fn builder() -> crate::model::truck_weight::Builder {
         crate::model::truck_weight::Builder::default()
     }
@@ -1939,19 +1993,23 @@ pub struct TruckDimensions {
     /// <ul>
     /// <li> <p>For example, <code>15.5</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub length: std::option::Option<f64>,
     /// <p>The height of the truck.</p>
     /// <ul>
     /// <li> <p>For example, <code>4.5</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub height: std::option::Option<f64>,
     /// <p>The width of the truck.</p>
     /// <ul>
     /// <li> <p>For example, <code>4.5</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub width: std::option::Option<f64>,
     /// <p> Specifies the unit of measurement for the truck dimensions.</p>
     /// <p>Default Value: <code>Meters</code> </p>
+    #[doc(hidden)]
     pub unit: std::option::Option<crate::model::DimensionUnit>,
 }
 impl TruckDimensions {
@@ -1992,11 +2050,10 @@ impl std::fmt::Debug for TruckDimensions {
         formatter.finish()
     }
 }
-/// See [`TruckDimensions`](crate::model::TruckDimensions)
+/// See [`TruckDimensions`](crate::model::TruckDimensions).
 pub mod truck_dimensions {
 
-    /// A builder for [`TruckDimensions`](crate::model::TruckDimensions)
-    #[non_exhaustive]
+    /// A builder for [`TruckDimensions`](crate::model::TruckDimensions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) length: std::option::Option<f64>,
@@ -2065,7 +2122,7 @@ pub mod truck_dimensions {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`TruckDimensions`](crate::model::TruckDimensions)
+        /// Consumes the builder and constructs a [`TruckDimensions`](crate::model::TruckDimensions).
         pub fn build(self) -> crate::model::TruckDimensions {
             crate::model::TruckDimensions {
                 length: self.length,
@@ -2077,7 +2134,7 @@ pub mod truck_dimensions {
     }
 }
 impl TruckDimensions {
-    /// Creates a new builder-style object to manufacture [`TruckDimensions`](crate::model::TruckDimensions)
+    /// Creates a new builder-style object to manufacture [`TruckDimensions`](crate::model::TruckDimensions).
     pub fn builder() -> crate::model::truck_dimensions::Builder {
         crate::model::truck_dimensions::Builder::default()
     }
@@ -2121,10 +2178,12 @@ pub struct CalculateRouteCarModeOptions {
     /// <p>Avoids ferries when calculating routes.</p>
     /// <p>Default Value: <code>false</code> </p>
     /// <p>Valid Values: <code>false</code> | <code>true</code> </p>
+    #[doc(hidden)]
     pub avoid_ferries: std::option::Option<bool>,
     /// <p>Avoids tolls when calculating routes.</p>
     /// <p>Default Value: <code>false</code> </p>
     /// <p>Valid Values: <code>false</code> | <code>true</code> </p>
+    #[doc(hidden)]
     pub avoid_tolls: std::option::Option<bool>,
 }
 impl CalculateRouteCarModeOptions {
@@ -2149,11 +2208,10 @@ impl std::fmt::Debug for CalculateRouteCarModeOptions {
         formatter.finish()
     }
 }
-/// See [`CalculateRouteCarModeOptions`](crate::model::CalculateRouteCarModeOptions)
+/// See [`CalculateRouteCarModeOptions`](crate::model::CalculateRouteCarModeOptions).
 pub mod calculate_route_car_mode_options {
 
-    /// A builder for [`CalculateRouteCarModeOptions`](crate::model::CalculateRouteCarModeOptions)
-    #[non_exhaustive]
+    /// A builder for [`CalculateRouteCarModeOptions`](crate::model::CalculateRouteCarModeOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) avoid_ferries: std::option::Option<bool>,
@@ -2188,7 +2246,7 @@ pub mod calculate_route_car_mode_options {
             self.avoid_tolls = input;
             self
         }
-        /// Consumes the builder and constructs a [`CalculateRouteCarModeOptions`](crate::model::CalculateRouteCarModeOptions)
+        /// Consumes the builder and constructs a [`CalculateRouteCarModeOptions`](crate::model::CalculateRouteCarModeOptions).
         pub fn build(self) -> crate::model::CalculateRouteCarModeOptions {
             crate::model::CalculateRouteCarModeOptions {
                 avoid_ferries: self.avoid_ferries,
@@ -2198,7 +2256,7 @@ pub mod calculate_route_car_mode_options {
     }
 }
 impl CalculateRouteCarModeOptions {
-    /// Creates a new builder-style object to manufacture [`CalculateRouteCarModeOptions`](crate::model::CalculateRouteCarModeOptions)
+    /// Creates a new builder-style object to manufacture [`CalculateRouteCarModeOptions`](crate::model::CalculateRouteCarModeOptions).
     pub fn builder() -> crate::model::calculate_route_car_mode_options::Builder {
         crate::model::calculate_route_car_mode_options::Builder::default()
     }
@@ -2250,6 +2308,7 @@ pub struct CalculateRouteSummary {
     /// <li> <p>The third <code>bbox</code> position is the X coordinate, or longitude of the upper northeast corner. </p> </li>
     /// <li> <p>The fourth <code>bbox</code> position is the Y coordinate, or latitude of the upper northeast corner. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub route_b_box: std::option::Option<std::vec::Vec<f64>>,
     /// <p>The data provider of traffic and road network data used to calculate the route. Indicates one of the available providers:</p>
     /// <ul>
@@ -2257,14 +2316,18 @@ pub struct CalculateRouteSummary {
     /// <li> <p> <code>Here</code> </p> </li>
     /// </ul>
     /// <p>For more information about data providers, see <a href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location Service data providers</a>.</p>
+    #[doc(hidden)]
     pub data_source: std::option::Option<std::string::String>,
     /// <p>The total distance covered by the route. The sum of the distance travelled between every stop on the route.</p> <note>
     /// <p>If Esri is the data source for the route calculator, the route distance can’t be greater than 400 km. If the route exceeds 400 km, the response is a <code>400 RoutesValidationException</code> error.</p>
     /// </note>
+    #[doc(hidden)]
     pub distance: std::option::Option<f64>,
     /// <p>The total travel time for the route measured in seconds. The sum of the travel time between every stop on the route.</p>
+    #[doc(hidden)]
     pub duration_seconds: std::option::Option<f64>,
     /// <p>The unit of measurement for route distances.</p>
+    #[doc(hidden)]
     pub distance_unit: std::option::Option<crate::model::DistanceUnit>,
 }
 impl CalculateRouteSummary {
@@ -2317,11 +2380,10 @@ impl std::fmt::Debug for CalculateRouteSummary {
         formatter.finish()
     }
 }
-/// See [`CalculateRouteSummary`](crate::model::CalculateRouteSummary)
+/// See [`CalculateRouteSummary`](crate::model::CalculateRouteSummary).
 pub mod calculate_route_summary {
 
-    /// A builder for [`CalculateRouteSummary`](crate::model::CalculateRouteSummary)
-    #[non_exhaustive]
+    /// A builder for [`CalculateRouteSummary`](crate::model::CalculateRouteSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) route_b_box: std::option::Option<std::vec::Vec<f64>>,
@@ -2424,7 +2486,7 @@ pub mod calculate_route_summary {
             self.distance_unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`CalculateRouteSummary`](crate::model::CalculateRouteSummary)
+        /// Consumes the builder and constructs a [`CalculateRouteSummary`](crate::model::CalculateRouteSummary).
         pub fn build(self) -> crate::model::CalculateRouteSummary {
             crate::model::CalculateRouteSummary {
                 route_b_box: self.route_b_box,
@@ -2437,7 +2499,7 @@ pub mod calculate_route_summary {
     }
 }
 impl CalculateRouteSummary {
-    /// Creates a new builder-style object to manufacture [`CalculateRouteSummary`](crate::model::CalculateRouteSummary)
+    /// Creates a new builder-style object to manufacture [`CalculateRouteSummary`](crate::model::CalculateRouteSummary).
     pub fn builder() -> crate::model::calculate_route_summary::Builder {
         crate::model::calculate_route_summary::Builder::default()
     }
@@ -2460,21 +2522,27 @@ pub struct Leg {
     /// <p>The starting position of the leg. Follows the format <code>[longitude,latitude]</code>.</p> <note>
     /// <p>If the <code>StartPosition</code> isn't located on a road, it's <a href="https://docs.aws.amazon.com/location/latest/developerguide/snap-to-nearby-road.html">snapped to a nearby road</a>. </p>
     /// </note>
+    #[doc(hidden)]
     pub start_position: std::option::Option<std::vec::Vec<f64>>,
     /// <p>The terminating position of the leg. Follows the format <code>[longitude,latitude]</code>.</p> <note>
     /// <p>If the <code>EndPosition</code> isn't located on a road, it's <a href="https://docs.aws.amazon.com/location/latest/developerguide/nap-to-nearby-road.html">snapped to a nearby road</a>. </p>
     /// </note>
+    #[doc(hidden)]
     pub end_position: std::option::Option<std::vec::Vec<f64>>,
     /// <p>The distance between the leg's <code>StartPosition</code> and <code>EndPosition</code> along a calculated route. </p>
     /// <ul>
     /// <li> <p>The default measurement is <code>Kilometers</code> unless the request specifies a <code>DistanceUnit</code> of <code>Miles</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub distance: std::option::Option<f64>,
     /// <p>The estimated travel time between the leg's <code>StartPosition</code> and <code>EndPosition</code>. The travel mode and departure time that you specify in the request determines the calculated time.</p>
+    #[doc(hidden)]
     pub duration_seconds: std::option::Option<f64>,
     /// <p>Contains the calculated route's path as a linestring geometry.</p>
+    #[doc(hidden)]
     pub geometry: std::option::Option<crate::model::LegGeometry>,
     /// <p>Contains a list of steps, which represent subsections of a leg. Each step provides instructions for how to move to the next step in the leg such as the step's start position, end position, travel distance, travel duration, and geometry offset.</p>
+    #[doc(hidden)]
     pub steps: std::option::Option<std::vec::Vec<crate::model::Step>>,
 }
 impl Leg {
@@ -2522,11 +2590,10 @@ impl std::fmt::Debug for Leg {
         formatter.finish()
     }
 }
-/// See [`Leg`](crate::model::Leg)
+/// See [`Leg`](crate::model::Leg).
 pub mod leg {
 
-    /// A builder for [`Leg`](crate::model::Leg)
-    #[non_exhaustive]
+    /// A builder for [`Leg`](crate::model::Leg).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_position: std::option::Option<std::vec::Vec<f64>>,
@@ -2638,7 +2705,7 @@ pub mod leg {
             self.steps = input;
             self
         }
-        /// Consumes the builder and constructs a [`Leg`](crate::model::Leg)
+        /// Consumes the builder and constructs a [`Leg`](crate::model::Leg).
         pub fn build(self) -> crate::model::Leg {
             crate::model::Leg {
                 start_position: self.start_position,
@@ -2652,7 +2719,7 @@ pub mod leg {
     }
 }
 impl Leg {
-    /// Creates a new builder-style object to manufacture [`Leg`](crate::model::Leg)
+    /// Creates a new builder-style object to manufacture [`Leg`](crate::model::Leg).
     pub fn builder() -> crate::model::leg::Builder {
         crate::model::leg::Builder::default()
     }
@@ -2663,15 +2730,20 @@ impl Leg {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Step {
     /// <p>The starting position of a step. If the position is the first step in the leg, this position is the same as the start position of the leg.</p>
+    #[doc(hidden)]
     pub start_position: std::option::Option<std::vec::Vec<f64>>,
     /// <p>The end position of a step. If the position the last step in the leg, this position is the same as the end position of the leg.</p>
+    #[doc(hidden)]
     pub end_position: std::option::Option<std::vec::Vec<f64>>,
     /// <p>The travel distance between the step's <code>StartPosition</code> and <code>EndPosition</code>.</p>
+    #[doc(hidden)]
     pub distance: std::option::Option<f64>,
     /// <p>The estimated travel time, in seconds, from the step's <code>StartPosition</code> to the <code>EndPosition</code>. . The travel mode and departure time that you specify in the request determines the calculated time.</p>
+    #[doc(hidden)]
     pub duration_seconds: std::option::Option<f64>,
     /// <p>Represents the start position, or index, in a sequence of steps within the leg's line string geometry. For example, the index of the first step in a leg geometry is <code>0</code>. </p>
     /// <p>Included in the response for queries that set <code>IncludeLegGeometry</code> to <code>True</code>. </p>
+    #[doc(hidden)]
     pub geometry_offset: std::option::Option<i32>,
 }
 impl Step {
@@ -2708,11 +2780,10 @@ impl std::fmt::Debug for Step {
         formatter.finish()
     }
 }
-/// See [`Step`](crate::model::Step)
+/// See [`Step`](crate::model::Step).
 pub mod step {
 
-    /// A builder for [`Step`](crate::model::Step)
-    #[non_exhaustive]
+    /// A builder for [`Step`](crate::model::Step).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_position: std::option::Option<std::vec::Vec<f64>>,
@@ -2789,7 +2860,7 @@ pub mod step {
             self.geometry_offset = input;
             self
         }
-        /// Consumes the builder and constructs a [`Step`](crate::model::Step)
+        /// Consumes the builder and constructs a [`Step`](crate::model::Step).
         pub fn build(self) -> crate::model::Step {
             crate::model::Step {
                 start_position: self.start_position,
@@ -2802,7 +2873,7 @@ pub mod step {
     }
 }
 impl Step {
-    /// Creates a new builder-style object to manufacture [`Step`](crate::model::Step)
+    /// Creates a new builder-style object to manufacture [`Step`](crate::model::Step).
     pub fn builder() -> crate::model::step::Builder {
         crate::model::step::Builder::default()
     }
@@ -2817,6 +2888,7 @@ pub struct LegGeometry {
     /// <ul>
     /// <li> <p>For example, <code>[[-123.117, 49.284],[-123.115, 49.285],[-123.115, 49.285]]</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub line_string: std::option::Option<std::vec::Vec<std::vec::Vec<f64>>>,
 }
 impl LegGeometry {
@@ -2836,11 +2908,10 @@ impl std::fmt::Debug for LegGeometry {
         formatter.finish()
     }
 }
-/// See [`LegGeometry`](crate::model::LegGeometry)
+/// See [`LegGeometry`](crate::model::LegGeometry).
 pub mod leg_geometry {
 
-    /// A builder for [`LegGeometry`](crate::model::LegGeometry)
-    #[non_exhaustive]
+    /// A builder for [`LegGeometry`](crate::model::LegGeometry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) line_string: std::option::Option<std::vec::Vec<std::vec::Vec<f64>>>,
@@ -2873,7 +2944,7 @@ pub mod leg_geometry {
             self.line_string = input;
             self
         }
-        /// Consumes the builder and constructs a [`LegGeometry`](crate::model::LegGeometry)
+        /// Consumes the builder and constructs a [`LegGeometry`](crate::model::LegGeometry).
         pub fn build(self) -> crate::model::LegGeometry {
             crate::model::LegGeometry {
                 line_string: self.line_string,
@@ -2882,7 +2953,7 @@ pub mod leg_geometry {
     }
 }
 impl LegGeometry {
-    /// Creates a new builder-style object to manufacture [`LegGeometry`](crate::model::LegGeometry)
+    /// Creates a new builder-style object to manufacture [`LegGeometry`](crate::model::LegGeometry).
     pub fn builder() -> crate::model::leg_geometry::Builder {
         crate::model::leg_geometry::Builder::default()
     }
@@ -2893,8 +2964,10 @@ impl LegGeometry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRouteCalculatorsResponseEntry {
     /// <p>The name of the route calculator resource.</p>
+    #[doc(hidden)]
     pub calculator_name: std::option::Option<std::string::String>,
     /// <p>The optional description of the route calculator resource.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The data provider of traffic and road network data. Indicates one of the available providers:</p>
     /// <ul>
@@ -2902,18 +2975,26 @@ pub struct ListRouteCalculatorsResponseEntry {
     /// <li> <p> <code>Here</code> </p> </li>
     /// </ul>
     /// <p>For more information about data providers, see <a href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location Service data providers</a>.</p>
+    #[doc(hidden)]
     pub data_source: std::option::Option<std::string::String>,
     /// <p>Always returns <code>RequestBasedUsage</code>.</p>
+    #[deprecated(
+        note = "Deprecated. Always returns RequestBasedUsage.",
+        since = "2022-02-01"
+    )]
+    #[doc(hidden)]
     pub pricing_plan: std::option::Option<crate::model::PricingPlan>,
     /// <p>The timestamp when the route calculator resource was created in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
     /// <ul>
     /// <li> <p>For example, <code>2020–07-2T12:15:20.000Z+01:00</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp when the route calculator resource was last updated in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
     /// <ul>
     /// <li> <p>For example, <code>2020–07-2T12:15:20.000Z+01:00</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ListRouteCalculatorsResponseEntry {
@@ -2935,6 +3016,10 @@ impl ListRouteCalculatorsResponseEntry {
         self.data_source.as_deref()
     }
     /// <p>Always returns <code>RequestBasedUsage</code>.</p>
+    #[deprecated(
+        note = "Deprecated. Always returns RequestBasedUsage.",
+        since = "2022-02-01"
+    )]
     pub fn pricing_plan(&self) -> std::option::Option<&crate::model::PricingPlan> {
         self.pricing_plan.as_ref()
     }
@@ -2965,11 +3050,10 @@ impl std::fmt::Debug for ListRouteCalculatorsResponseEntry {
         formatter.finish()
     }
 }
-/// See [`ListRouteCalculatorsResponseEntry`](crate::model::ListRouteCalculatorsResponseEntry)
+/// See [`ListRouteCalculatorsResponseEntry`](crate::model::ListRouteCalculatorsResponseEntry).
 pub mod list_route_calculators_response_entry {
 
-    /// A builder for [`ListRouteCalculatorsResponseEntry`](crate::model::ListRouteCalculatorsResponseEntry)
-    #[non_exhaustive]
+    /// A builder for [`ListRouteCalculatorsResponseEntry`](crate::model::ListRouteCalculatorsResponseEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) calculator_name: std::option::Option<std::string::String>,
@@ -3024,11 +3108,19 @@ pub mod list_route_calculators_response_entry {
             self
         }
         /// <p>Always returns <code>RequestBasedUsage</code>.</p>
+        #[deprecated(
+            note = "Deprecated. Always returns RequestBasedUsage.",
+            since = "2022-02-01"
+        )]
         pub fn pricing_plan(mut self, input: crate::model::PricingPlan) -> Self {
             self.pricing_plan = Some(input);
             self
         }
         /// <p>Always returns <code>RequestBasedUsage</code>.</p>
+        #[deprecated(
+            note = "Deprecated. Always returns RequestBasedUsage.",
+            since = "2022-02-01"
+        )]
         pub fn set_pricing_plan(
             mut self,
             input: std::option::Option<crate::model::PricingPlan>,
@@ -3074,7 +3166,7 @@ pub mod list_route_calculators_response_entry {
             self.update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRouteCalculatorsResponseEntry`](crate::model::ListRouteCalculatorsResponseEntry)
+        /// Consumes the builder and constructs a [`ListRouteCalculatorsResponseEntry`](crate::model::ListRouteCalculatorsResponseEntry).
         pub fn build(self) -> crate::model::ListRouteCalculatorsResponseEntry {
             crate::model::ListRouteCalculatorsResponseEntry {
                 calculator_name: self.calculator_name,
@@ -3088,7 +3180,7 @@ pub mod list_route_calculators_response_entry {
     }
 }
 impl ListRouteCalculatorsResponseEntry {
-    /// Creates a new builder-style object to manufacture [`ListRouteCalculatorsResponseEntry`](crate::model::ListRouteCalculatorsResponseEntry)
+    /// Creates a new builder-style object to manufacture [`ListRouteCalculatorsResponseEntry`](crate::model::ListRouteCalculatorsResponseEntry).
     pub fn builder() -> crate::model::list_route_calculators_response_entry::Builder {
         crate::model::list_route_calculators_response_entry::Builder::default()
     }
@@ -3099,13 +3191,16 @@ impl ListRouteCalculatorsResponseEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchForTextResult {
     /// <p>Details about the search result, such as its address and position.</p>
+    #[doc(hidden)]
     pub place: std::option::Option<crate::model::Place>,
     /// <p>The distance in meters of a great-circle arc between the bias position specified and the result. <code>Distance</code> will be returned only if a bias position was specified in the query.</p> <note>
     /// <p>A great-circle arc is the shortest path on a sphere, in this case the Earth. This returns the shortest distance between two locations.</p>
     /// </note>
+    #[doc(hidden)]
     pub distance: std::option::Option<f64>,
     /// <p>The relative confidence in the match for a result among the results returned. For example, if more fields for an address match (including house number, street, city, country/region, and postal code), the relevance score is closer to 1.</p>
     /// <p>Returned only when the partner selected is Esri.</p>
+    #[doc(hidden)]
     pub relevance: std::option::Option<f64>,
 }
 impl SearchForTextResult {
@@ -3134,11 +3229,10 @@ impl std::fmt::Debug for SearchForTextResult {
         formatter.finish()
     }
 }
-/// See [`SearchForTextResult`](crate::model::SearchForTextResult)
+/// See [`SearchForTextResult`](crate::model::SearchForTextResult).
 pub mod search_for_text_result {
 
-    /// A builder for [`SearchForTextResult`](crate::model::SearchForTextResult)
-    #[non_exhaustive]
+    /// A builder for [`SearchForTextResult`](crate::model::SearchForTextResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) place: std::option::Option<crate::model::Place>,
@@ -3182,7 +3276,7 @@ pub mod search_for_text_result {
             self.relevance = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchForTextResult`](crate::model::SearchForTextResult)
+        /// Consumes the builder and constructs a [`SearchForTextResult`](crate::model::SearchForTextResult).
         pub fn build(self) -> crate::model::SearchForTextResult {
             crate::model::SearchForTextResult {
                 place: self.place,
@@ -3193,7 +3287,7 @@ pub mod search_for_text_result {
     }
 }
 impl SearchForTextResult {
-    /// Creates a new builder-style object to manufacture [`SearchForTextResult`](crate::model::SearchForTextResult)
+    /// Creates a new builder-style object to manufacture [`SearchForTextResult`](crate::model::SearchForTextResult).
     pub fn builder() -> crate::model::search_for_text_result::Builder {
         crate::model::search_for_text_result::Builder::default()
     }
@@ -3205,31 +3299,43 @@ impl SearchForTextResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Place {
     /// <p>The full name and address of the point of interest such as a city, region, or country. For example, <code>123 Any Street, Any Town, USA</code>.</p>
+    #[doc(hidden)]
     pub label: std::option::Option<std::string::String>,
     /// <p>Places uses a point geometry to specify a location or a Place.</p>
+    #[doc(hidden)]
     pub geometry: std::option::Option<crate::model::PlaceGeometry>,
     /// <p>The numerical portion of an address, such as a building number. </p>
+    #[doc(hidden)]
     pub address_number: std::option::Option<std::string::String>,
     /// <p>The name for a street or a road to identify a location. For example, <code>Main Street</code>.</p>
+    #[doc(hidden)]
     pub street: std::option::Option<std::string::String>,
     /// <p>The name of a community district. For example, <code>Downtown</code>.</p>
+    #[doc(hidden)]
     pub neighborhood: std::option::Option<std::string::String>,
     /// <p>A name for a local area, such as a city or town name. For example, <code>Toronto</code>.</p>
+    #[doc(hidden)]
     pub municipality: std::option::Option<std::string::String>,
     /// <p>A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.</p>
+    #[doc(hidden)]
     pub sub_region: std::option::Option<std::string::String>,
     /// <p>A name for an area or geographical division, such as a province or state name. For example, <code>British Columbia</code>.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>A country/region specified using <a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166</a> 3-digit country/region code. For example, <code>CAN</code>.</p>
+    #[doc(hidden)]
     pub country: std::option::Option<std::string::String>,
     /// <p>A group of numbers and letters in a country-specific format, which accompanies the address for the purpose of identifying a location. </p>
+    #[doc(hidden)]
     pub postal_code: std::option::Option<std::string::String>,
     /// <p> <code>True</code> if the result is interpolated from other known places.</p>
     /// <p> <code>False</code> if the Place is a known place.</p>
     /// <p>Not returned when the partner does not provide the information.</p>
     /// <p>For example, returns <code>False</code> for an address location that is found in the partner data, but returns <code>True</code> if an address does not exist in the partner data and its location is calculated by interpolating between other known addresses. </p>
+    #[doc(hidden)]
     pub interpolated: std::option::Option<bool>,
     /// <p>The time zone in which the <code>Place</code> is located. Returned only when using Here as the selected partner.</p>
+    #[doc(hidden)]
     pub time_zone: std::option::Option<crate::model::TimeZone>,
 }
 impl Place {
@@ -3303,11 +3409,10 @@ impl std::fmt::Debug for Place {
         formatter.finish()
     }
 }
-/// See [`Place`](crate::model::Place)
+/// See [`Place`](crate::model::Place).
 pub mod place {
 
-    /// A builder for [`Place`](crate::model::Place)
-    #[non_exhaustive]
+    /// A builder for [`Place`](crate::model::Place).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) label: std::option::Option<std::string::String>,
@@ -3456,7 +3561,7 @@ pub mod place {
             self.time_zone = input;
             self
         }
-        /// Consumes the builder and constructs a [`Place`](crate::model::Place)
+        /// Consumes the builder and constructs a [`Place`](crate::model::Place).
         pub fn build(self) -> crate::model::Place {
             crate::model::Place {
                 label: self.label,
@@ -3476,7 +3581,7 @@ pub mod place {
     }
 }
 impl Place {
-    /// Creates a new builder-style object to manufacture [`Place`](crate::model::Place)
+    /// Creates a new builder-style object to manufacture [`Place`](crate::model::Place).
     pub fn builder() -> crate::model::place::Builder {
         crate::model::place::Builder::default()
     }
@@ -3487,8 +3592,10 @@ impl Place {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimeZone {
     /// <p>The name of the time zone, following the <a href="https://www.iana.org/time-zones"> IANA time zone standard</a>. For example, <code>America/Los_Angeles</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The time zone's offset, in seconds, from UTC.</p>
+    #[doc(hidden)]
     pub offset: std::option::Option<i32>,
 }
 impl TimeZone {
@@ -3509,11 +3616,10 @@ impl std::fmt::Debug for TimeZone {
         formatter.finish()
     }
 }
-/// See [`TimeZone`](crate::model::TimeZone)
+/// See [`TimeZone`](crate::model::TimeZone).
 pub mod time_zone {
 
-    /// A builder for [`TimeZone`](crate::model::TimeZone)
-    #[non_exhaustive]
+    /// A builder for [`TimeZone`](crate::model::TimeZone).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3540,7 +3646,7 @@ pub mod time_zone {
             self.offset = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimeZone`](crate::model::TimeZone)
+        /// Consumes the builder and constructs a [`TimeZone`](crate::model::TimeZone).
         pub fn build(self) -> crate::model::TimeZone {
             crate::model::TimeZone {
                 name: self.name,
@@ -3550,7 +3656,7 @@ pub mod time_zone {
     }
 }
 impl TimeZone {
-    /// Creates a new builder-style object to manufacture [`TimeZone`](crate::model::TimeZone)
+    /// Creates a new builder-style object to manufacture [`TimeZone`](crate::model::TimeZone).
     pub fn builder() -> crate::model::time_zone::Builder {
         crate::model::time_zone::Builder::default()
     }
@@ -3565,6 +3671,7 @@ pub struct PlaceGeometry {
     /// <li> <p> <i>x</i> — Specifies the x coordinate or longitude. </p> </li>
     /// <li> <p> <i>y</i> — Specifies the y coordinate or latitude. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub point: std::option::Option<std::vec::Vec<f64>>,
 }
 impl PlaceGeometry {
@@ -3584,11 +3691,10 @@ impl std::fmt::Debug for PlaceGeometry {
         formatter.finish()
     }
 }
-/// See [`PlaceGeometry`](crate::model::PlaceGeometry)
+/// See [`PlaceGeometry`](crate::model::PlaceGeometry).
 pub mod place_geometry {
 
-    /// A builder for [`PlaceGeometry`](crate::model::PlaceGeometry)
-    #[non_exhaustive]
+    /// A builder for [`PlaceGeometry`](crate::model::PlaceGeometry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) point: std::option::Option<std::vec::Vec<f64>>,
@@ -3618,14 +3724,14 @@ pub mod place_geometry {
             self.point = input;
             self
         }
-        /// Consumes the builder and constructs a [`PlaceGeometry`](crate::model::PlaceGeometry)
+        /// Consumes the builder and constructs a [`PlaceGeometry`](crate::model::PlaceGeometry).
         pub fn build(self) -> crate::model::PlaceGeometry {
             crate::model::PlaceGeometry { point: self.point }
         }
     }
 }
 impl PlaceGeometry {
-    /// Creates a new builder-style object to manufacture [`PlaceGeometry`](crate::model::PlaceGeometry)
+    /// Creates a new builder-style object to manufacture [`PlaceGeometry`](crate::model::PlaceGeometry).
     pub fn builder() -> crate::model::place_geometry::Builder {
         crate::model::place_geometry::Builder::default()
     }
@@ -3636,20 +3742,26 @@ impl PlaceGeometry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchPlaceIndexForTextSummary {
     /// <p>The search text specified in the request.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>Contains the coordinates for the optional bias position specified in the request.</p>
     /// <p>This parameter contains a pair of numbers. The first number represents the X coordinate, or longitude; the second number represents the Y coordinate, or latitude.</p>
     /// <p>For example, <code>[-123.1174, 49.2847]</code> represents the position with longitude <code>-123.1174</code> and latitude <code>49.2847</code>.</p>
+    #[doc(hidden)]
     pub bias_position: std::option::Option<std::vec::Vec<f64>>,
     /// <p>Contains the coordinates for the optional bounding box specified in the request.</p>
+    #[doc(hidden)]
     pub filter_b_box: std::option::Option<std::vec::Vec<f64>>,
     /// <p>Contains the optional country filter specified in the request.</p>
+    #[doc(hidden)]
     pub filter_countries: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Contains the optional result count limit specified in the request.</p>
+    #[doc(hidden)]
     pub max_results: i32,
     /// <p>The bounding box that fully contains all search results.</p> <note>
     /// <p>If you specified the optional <code>FilterBBox</code> parameter in the request, <code>ResultBBox</code> is contained within <code>FilterBBox</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub result_b_box: std::option::Option<std::vec::Vec<f64>>,
     /// <p>The geospatial data provider attached to the place index resource specified in the request. Values can be one of the following:</p>
     /// <ul>
@@ -3657,8 +3769,10 @@ pub struct SearchPlaceIndexForTextSummary {
     /// <li> <p>Here</p> </li>
     /// </ul>
     /// <p>For more information about data providers, see <a href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location Service data providers</a>.</p>
+    #[doc(hidden)]
     pub data_source: std::option::Option<std::string::String>,
     /// <p>The preferred language used to return results. Matches the language in the request. The value is a valid <a href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for English.</p>
+    #[doc(hidden)]
     pub language: std::option::Option<std::string::String>,
 }
 impl SearchPlaceIndexForTextSummary {
@@ -3718,11 +3832,10 @@ impl std::fmt::Debug for SearchPlaceIndexForTextSummary {
         formatter.finish()
     }
 }
-/// See [`SearchPlaceIndexForTextSummary`](crate::model::SearchPlaceIndexForTextSummary)
+/// See [`SearchPlaceIndexForTextSummary`](crate::model::SearchPlaceIndexForTextSummary).
 pub mod search_place_index_for_text_summary {
 
-    /// A builder for [`SearchPlaceIndexForTextSummary`](crate::model::SearchPlaceIndexForTextSummary)
-    #[non_exhaustive]
+    /// A builder for [`SearchPlaceIndexForTextSummary`](crate::model::SearchPlaceIndexForTextSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text: std::option::Option<std::string::String>,
@@ -3860,7 +3973,7 @@ pub mod search_place_index_for_text_summary {
             self.language = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchPlaceIndexForTextSummary`](crate::model::SearchPlaceIndexForTextSummary)
+        /// Consumes the builder and constructs a [`SearchPlaceIndexForTextSummary`](crate::model::SearchPlaceIndexForTextSummary).
         pub fn build(self) -> crate::model::SearchPlaceIndexForTextSummary {
             crate::model::SearchPlaceIndexForTextSummary {
                 text: self.text,
@@ -3876,7 +3989,7 @@ pub mod search_place_index_for_text_summary {
     }
 }
 impl SearchPlaceIndexForTextSummary {
-    /// Creates a new builder-style object to manufacture [`SearchPlaceIndexForTextSummary`](crate::model::SearchPlaceIndexForTextSummary)
+    /// Creates a new builder-style object to manufacture [`SearchPlaceIndexForTextSummary`](crate::model::SearchPlaceIndexForTextSummary).
     pub fn builder() -> crate::model::search_place_index_for_text_summary::Builder {
         crate::model::search_place_index_for_text_summary::Builder::default()
     }
@@ -3887,6 +4000,7 @@ impl SearchPlaceIndexForTextSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchForSuggestionsResult {
     /// <p>The text of the place suggestion, typically formatted as an address string.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
 }
 impl SearchForSuggestionsResult {
@@ -3902,11 +4016,10 @@ impl std::fmt::Debug for SearchForSuggestionsResult {
         formatter.finish()
     }
 }
-/// See [`SearchForSuggestionsResult`](crate::model::SearchForSuggestionsResult)
+/// See [`SearchForSuggestionsResult`](crate::model::SearchForSuggestionsResult).
 pub mod search_for_suggestions_result {
 
-    /// A builder for [`SearchForSuggestionsResult`](crate::model::SearchForSuggestionsResult)
-    #[non_exhaustive]
+    /// A builder for [`SearchForSuggestionsResult`](crate::model::SearchForSuggestionsResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text: std::option::Option<std::string::String>,
@@ -3922,14 +4035,14 @@ pub mod search_for_suggestions_result {
             self.text = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchForSuggestionsResult`](crate::model::SearchForSuggestionsResult)
+        /// Consumes the builder and constructs a [`SearchForSuggestionsResult`](crate::model::SearchForSuggestionsResult).
         pub fn build(self) -> crate::model::SearchForSuggestionsResult {
             crate::model::SearchForSuggestionsResult { text: self.text }
         }
     }
 }
 impl SearchForSuggestionsResult {
-    /// Creates a new builder-style object to manufacture [`SearchForSuggestionsResult`](crate::model::SearchForSuggestionsResult)
+    /// Creates a new builder-style object to manufacture [`SearchForSuggestionsResult`](crate::model::SearchForSuggestionsResult).
     pub fn builder() -> crate::model::search_for_suggestions_result::Builder {
         crate::model::search_for_suggestions_result::Builder::default()
     }
@@ -3940,16 +4053,21 @@ impl SearchForSuggestionsResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchPlaceIndexForSuggestionsSummary {
     /// <p>The free-form partial text input specified in the request.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>Contains the coordinates for the optional bias position specified in the request.</p>
     /// <p>This parameter contains a pair of numbers. The first number represents the X coordinate, or longitude; the second number represents the Y coordinate, or latitude.</p>
     /// <p>For example, <code>[-123.1174, 49.2847]</code> represents the position with longitude <code>-123.1174</code> and latitude <code>49.2847</code>.</p>
+    #[doc(hidden)]
     pub bias_position: std::option::Option<std::vec::Vec<f64>>,
     /// <p>Contains the coordinates for the optional bounding box specified in the request.</p>
+    #[doc(hidden)]
     pub filter_b_box: std::option::Option<std::vec::Vec<f64>>,
     /// <p>Contains the optional country filter specified in the request.</p>
+    #[doc(hidden)]
     pub filter_countries: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Contains the optional result count limit specified in the request.</p>
+    #[doc(hidden)]
     pub max_results: std::option::Option<i32>,
     /// <p>The geospatial data provider attached to the place index resource specified in the request. Values can be one of the following:</p>
     /// <ul>
@@ -3957,8 +4075,10 @@ pub struct SearchPlaceIndexForSuggestionsSummary {
     /// <li> <p>Here</p> </li>
     /// </ul>
     /// <p>For more information about data providers, see <a href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location Service data providers</a>.</p>
+    #[doc(hidden)]
     pub data_source: std::option::Option<std::string::String>,
     /// <p>The preferred language used to return results. Matches the language in the request. The value is a valid <a href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for English.</p>
+    #[doc(hidden)]
     pub language: std::option::Option<std::string::String>,
 }
 impl SearchPlaceIndexForSuggestionsSummary {
@@ -4011,11 +4131,10 @@ impl std::fmt::Debug for SearchPlaceIndexForSuggestionsSummary {
         formatter.finish()
     }
 }
-/// See [`SearchPlaceIndexForSuggestionsSummary`](crate::model::SearchPlaceIndexForSuggestionsSummary)
+/// See [`SearchPlaceIndexForSuggestionsSummary`](crate::model::SearchPlaceIndexForSuggestionsSummary).
 pub mod search_place_index_for_suggestions_summary {
 
-    /// A builder for [`SearchPlaceIndexForSuggestionsSummary`](crate::model::SearchPlaceIndexForSuggestionsSummary)
-    #[non_exhaustive]
+    /// A builder for [`SearchPlaceIndexForSuggestionsSummary`](crate::model::SearchPlaceIndexForSuggestionsSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text: std::option::Option<std::string::String>,
@@ -4132,7 +4251,7 @@ pub mod search_place_index_for_suggestions_summary {
             self.language = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchPlaceIndexForSuggestionsSummary`](crate::model::SearchPlaceIndexForSuggestionsSummary)
+        /// Consumes the builder and constructs a [`SearchPlaceIndexForSuggestionsSummary`](crate::model::SearchPlaceIndexForSuggestionsSummary).
         pub fn build(self) -> crate::model::SearchPlaceIndexForSuggestionsSummary {
             crate::model::SearchPlaceIndexForSuggestionsSummary {
                 text: self.text,
@@ -4147,7 +4266,7 @@ pub mod search_place_index_for_suggestions_summary {
     }
 }
 impl SearchPlaceIndexForSuggestionsSummary {
-    /// Creates a new builder-style object to manufacture [`SearchPlaceIndexForSuggestionsSummary`](crate::model::SearchPlaceIndexForSuggestionsSummary)
+    /// Creates a new builder-style object to manufacture [`SearchPlaceIndexForSuggestionsSummary`](crate::model::SearchPlaceIndexForSuggestionsSummary).
     pub fn builder() -> crate::model::search_place_index_for_suggestions_summary::Builder {
         crate::model::search_place_index_for_suggestions_summary::Builder::default()
     }
@@ -4158,10 +4277,12 @@ impl SearchPlaceIndexForSuggestionsSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchForPositionResult {
     /// <p>Details about the search result, such as its address and position.</p>
+    #[doc(hidden)]
     pub place: std::option::Option<crate::model::Place>,
     /// <p>The distance in meters of a great-circle arc between the query position and the result.</p> <note>
     /// <p>A great-circle arc is the shortest path on a sphere, in this case the Earth. This returns the shortest distance between two locations.</p>
     /// </note>
+    #[doc(hidden)]
     pub distance: std::option::Option<f64>,
 }
 impl SearchForPositionResult {
@@ -4184,11 +4305,10 @@ impl std::fmt::Debug for SearchForPositionResult {
         formatter.finish()
     }
 }
-/// See [`SearchForPositionResult`](crate::model::SearchForPositionResult)
+/// See [`SearchForPositionResult`](crate::model::SearchForPositionResult).
 pub mod search_for_position_result {
 
-    /// A builder for [`SearchForPositionResult`](crate::model::SearchForPositionResult)
-    #[non_exhaustive]
+    /// A builder for [`SearchForPositionResult`](crate::model::SearchForPositionResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) place: std::option::Option<crate::model::Place>,
@@ -4219,7 +4339,7 @@ pub mod search_for_position_result {
             self.distance = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchForPositionResult`](crate::model::SearchForPositionResult)
+        /// Consumes the builder and constructs a [`SearchForPositionResult`](crate::model::SearchForPositionResult).
         pub fn build(self) -> crate::model::SearchForPositionResult {
             crate::model::SearchForPositionResult {
                 place: self.place,
@@ -4229,7 +4349,7 @@ pub mod search_for_position_result {
     }
 }
 impl SearchForPositionResult {
-    /// Creates a new builder-style object to manufacture [`SearchForPositionResult`](crate::model::SearchForPositionResult)
+    /// Creates a new builder-style object to manufacture [`SearchForPositionResult`](crate::model::SearchForPositionResult).
     pub fn builder() -> crate::model::search_for_position_result::Builder {
         crate::model::search_for_position_result::Builder::default()
     }
@@ -4240,9 +4360,11 @@ impl SearchForPositionResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchPlaceIndexForPositionSummary {
     /// <p>The position specified in the request.</p>
+    #[doc(hidden)]
     pub position: std::option::Option<std::vec::Vec<f64>>,
     /// <p>Contains the optional result count limit that is specified in the request.</p>
     /// <p>Default value: <code>50</code> </p>
+    #[doc(hidden)]
     pub max_results: i32,
     /// <p>The geospatial data provider attached to the place index resource specified in the request. Values can be one of the following:</p>
     /// <ul>
@@ -4250,8 +4372,10 @@ pub struct SearchPlaceIndexForPositionSummary {
     /// <li> <p>Here</p> </li>
     /// </ul>
     /// <p>For more information about data providers, see <a href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location Service data providers</a>.</p>
+    #[doc(hidden)]
     pub data_source: std::option::Option<std::string::String>,
     /// <p>The preferred language used to return results. Matches the language in the request. The value is a valid <a href="https://tools.ietf.org/search/bcp47">BCP 47</a> language tag, for example, <code>en</code> for English.</p>
+    #[doc(hidden)]
     pub language: std::option::Option<std::string::String>,
 }
 impl SearchPlaceIndexForPositionSummary {
@@ -4288,11 +4412,10 @@ impl std::fmt::Debug for SearchPlaceIndexForPositionSummary {
         formatter.finish()
     }
 }
-/// See [`SearchPlaceIndexForPositionSummary`](crate::model::SearchPlaceIndexForPositionSummary)
+/// See [`SearchPlaceIndexForPositionSummary`](crate::model::SearchPlaceIndexForPositionSummary).
 pub mod search_place_index_for_position_summary {
 
-    /// A builder for [`SearchPlaceIndexForPositionSummary`](crate::model::SearchPlaceIndexForPositionSummary)
-    #[non_exhaustive]
+    /// A builder for [`SearchPlaceIndexForPositionSummary`](crate::model::SearchPlaceIndexForPositionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) position: std::option::Option<std::vec::Vec<f64>>,
@@ -4359,7 +4482,7 @@ pub mod search_place_index_for_position_summary {
             self.language = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchPlaceIndexForPositionSummary`](crate::model::SearchPlaceIndexForPositionSummary)
+        /// Consumes the builder and constructs a [`SearchPlaceIndexForPositionSummary`](crate::model::SearchPlaceIndexForPositionSummary).
         pub fn build(self) -> crate::model::SearchPlaceIndexForPositionSummary {
             crate::model::SearchPlaceIndexForPositionSummary {
                 position: self.position,
@@ -4371,7 +4494,7 @@ pub mod search_place_index_for_position_summary {
     }
 }
 impl SearchPlaceIndexForPositionSummary {
-    /// Creates a new builder-style object to manufacture [`SearchPlaceIndexForPositionSummary`](crate::model::SearchPlaceIndexForPositionSummary)
+    /// Creates a new builder-style object to manufacture [`SearchPlaceIndexForPositionSummary`](crate::model::SearchPlaceIndexForPositionSummary).
     pub fn builder() -> crate::model::search_place_index_for_position_summary::Builder {
         crate::model::search_place_index_for_position_summary::Builder::default()
     }
@@ -4382,8 +4505,10 @@ impl SearchPlaceIndexForPositionSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListPlaceIndexesResponseEntry {
     /// <p>The name of the place index resource.</p>
+    #[doc(hidden)]
     pub index_name: std::option::Option<std::string::String>,
     /// <p>The optional description for the place index resource.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The data provider of geospatial data. Values can be one of the following:</p>
     /// <ul>
@@ -4391,12 +4516,20 @@ pub struct ListPlaceIndexesResponseEntry {
     /// <li> <p> <code>Here</code> </p> </li>
     /// </ul>
     /// <p>For more information about data providers, see <a href="https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html">Amazon Location Service data providers</a>.</p>
+    #[doc(hidden)]
     pub data_source: std::option::Option<std::string::String>,
     /// <p>No longer used. Always returns <code>RequestBasedUsage</code>.</p>
+    #[deprecated(
+        note = "Deprecated. Always returns RequestBasedUsage.",
+        since = "2022-02-01"
+    )]
+    #[doc(hidden)]
     pub pricing_plan: std::option::Option<crate::model::PricingPlan>,
     /// <p>The timestamp for when the place index resource was created in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp for when the place index resource was last updated in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code>. </p>
+    #[doc(hidden)]
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ListPlaceIndexesResponseEntry {
@@ -4418,6 +4551,10 @@ impl ListPlaceIndexesResponseEntry {
         self.data_source.as_deref()
     }
     /// <p>No longer used. Always returns <code>RequestBasedUsage</code>.</p>
+    #[deprecated(
+        note = "Deprecated. Always returns RequestBasedUsage.",
+        since = "2022-02-01"
+    )]
     pub fn pricing_plan(&self) -> std::option::Option<&crate::model::PricingPlan> {
         self.pricing_plan.as_ref()
     }
@@ -4442,11 +4579,10 @@ impl std::fmt::Debug for ListPlaceIndexesResponseEntry {
         formatter.finish()
     }
 }
-/// See [`ListPlaceIndexesResponseEntry`](crate::model::ListPlaceIndexesResponseEntry)
+/// See [`ListPlaceIndexesResponseEntry`](crate::model::ListPlaceIndexesResponseEntry).
 pub mod list_place_indexes_response_entry {
 
-    /// A builder for [`ListPlaceIndexesResponseEntry`](crate::model::ListPlaceIndexesResponseEntry)
-    #[non_exhaustive]
+    /// A builder for [`ListPlaceIndexesResponseEntry`](crate::model::ListPlaceIndexesResponseEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) index_name: std::option::Option<std::string::String>,
@@ -4498,11 +4634,19 @@ pub mod list_place_indexes_response_entry {
             self
         }
         /// <p>No longer used. Always returns <code>RequestBasedUsage</code>.</p>
+        #[deprecated(
+            note = "Deprecated. Always returns RequestBasedUsage.",
+            since = "2022-02-01"
+        )]
         pub fn pricing_plan(mut self, input: crate::model::PricingPlan) -> Self {
             self.pricing_plan = Some(input);
             self
         }
         /// <p>No longer used. Always returns <code>RequestBasedUsage</code>.</p>
+        #[deprecated(
+            note = "Deprecated. Always returns RequestBasedUsage.",
+            since = "2022-02-01"
+        )]
         pub fn set_pricing_plan(
             mut self,
             input: std::option::Option<crate::model::PricingPlan>,
@@ -4536,7 +4680,7 @@ pub mod list_place_indexes_response_entry {
             self.update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPlaceIndexesResponseEntry`](crate::model::ListPlaceIndexesResponseEntry)
+        /// Consumes the builder and constructs a [`ListPlaceIndexesResponseEntry`](crate::model::ListPlaceIndexesResponseEntry).
         pub fn build(self) -> crate::model::ListPlaceIndexesResponseEntry {
             crate::model::ListPlaceIndexesResponseEntry {
                 index_name: self.index_name,
@@ -4550,7 +4694,7 @@ pub mod list_place_indexes_response_entry {
     }
 }
 impl ListPlaceIndexesResponseEntry {
-    /// Creates a new builder-style object to manufacture [`ListPlaceIndexesResponseEntry`](crate::model::ListPlaceIndexesResponseEntry)
+    /// Creates a new builder-style object to manufacture [`ListPlaceIndexesResponseEntry`](crate::model::ListPlaceIndexesResponseEntry).
     pub fn builder() -> crate::model::list_place_indexes_response_entry::Builder {
         crate::model::list_place_indexes_response_entry::Builder::default()
     }
@@ -4574,6 +4718,7 @@ pub struct DataSourceConfiguration {
     /// <li> <p> <code>Storage</code> specifies that the result can be cached or stored in a database.</p> </li>
     /// </ul>
     /// <p>Default value: <code>SingleUse</code> </p>
+    #[doc(hidden)]
     pub intended_use: std::option::Option<crate::model::IntendedUse>,
 }
 impl DataSourceConfiguration {
@@ -4595,11 +4740,10 @@ impl std::fmt::Debug for DataSourceConfiguration {
         formatter.finish()
     }
 }
-/// See [`DataSourceConfiguration`](crate::model::DataSourceConfiguration)
+/// See [`DataSourceConfiguration`](crate::model::DataSourceConfiguration).
 pub mod data_source_configuration {
 
-    /// A builder for [`DataSourceConfiguration`](crate::model::DataSourceConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DataSourceConfiguration`](crate::model::DataSourceConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) intended_use: std::option::Option<crate::model::IntendedUse>,
@@ -4630,7 +4774,7 @@ pub mod data_source_configuration {
             self.intended_use = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataSourceConfiguration`](crate::model::DataSourceConfiguration)
+        /// Consumes the builder and constructs a [`DataSourceConfiguration`](crate::model::DataSourceConfiguration).
         pub fn build(self) -> crate::model::DataSourceConfiguration {
             crate::model::DataSourceConfiguration {
                 intended_use: self.intended_use,
@@ -4639,7 +4783,7 @@ pub mod data_source_configuration {
     }
 }
 impl DataSourceConfiguration {
-    /// Creates a new builder-style object to manufacture [`DataSourceConfiguration`](crate::model::DataSourceConfiguration)
+    /// Creates a new builder-style object to manufacture [`DataSourceConfiguration`](crate::model::DataSourceConfiguration).
     pub fn builder() -> crate::model::data_source_configuration::Builder {
         crate::model::data_source_configuration::Builder::default()
     }
@@ -4681,16 +4825,26 @@ where
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListMapsResponseEntry {
     /// <p>The name of the associated map resource.</p>
+    #[doc(hidden)]
     pub map_name: std::option::Option<std::string::String>,
     /// <p>The description for the map resource.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Specifies the data provider for the associated map tiles.</p>
+    #[doc(hidden)]
     pub data_source: std::option::Option<std::string::String>,
     /// <p>No longer used. Always returns <code>RequestBasedUsage</code>.</p>
+    #[deprecated(
+        note = "Deprecated. Always returns RequestBasedUsage.",
+        since = "2022-02-01"
+    )]
+    #[doc(hidden)]
     pub pricing_plan: std::option::Option<crate::model::PricingPlan>,
     /// <p>The timestamp for when the map resource was created in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp for when the map resource was last updated in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.</p>
+    #[doc(hidden)]
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ListMapsResponseEntry {
@@ -4707,6 +4861,10 @@ impl ListMapsResponseEntry {
         self.data_source.as_deref()
     }
     /// <p>No longer used. Always returns <code>RequestBasedUsage</code>.</p>
+    #[deprecated(
+        note = "Deprecated. Always returns RequestBasedUsage.",
+        since = "2022-02-01"
+    )]
     pub fn pricing_plan(&self) -> std::option::Option<&crate::model::PricingPlan> {
         self.pricing_plan.as_ref()
     }
@@ -4731,11 +4889,10 @@ impl std::fmt::Debug for ListMapsResponseEntry {
         formatter.finish()
     }
 }
-/// See [`ListMapsResponseEntry`](crate::model::ListMapsResponseEntry)
+/// See [`ListMapsResponseEntry`](crate::model::ListMapsResponseEntry).
 pub mod list_maps_response_entry {
 
-    /// A builder for [`ListMapsResponseEntry`](crate::model::ListMapsResponseEntry)
-    #[non_exhaustive]
+    /// A builder for [`ListMapsResponseEntry`](crate::model::ListMapsResponseEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) map_name: std::option::Option<std::string::String>,
@@ -4777,11 +4934,19 @@ pub mod list_maps_response_entry {
             self
         }
         /// <p>No longer used. Always returns <code>RequestBasedUsage</code>.</p>
+        #[deprecated(
+            note = "Deprecated. Always returns RequestBasedUsage.",
+            since = "2022-02-01"
+        )]
         pub fn pricing_plan(mut self, input: crate::model::PricingPlan) -> Self {
             self.pricing_plan = Some(input);
             self
         }
         /// <p>No longer used. Always returns <code>RequestBasedUsage</code>.</p>
+        #[deprecated(
+            note = "Deprecated. Always returns RequestBasedUsage.",
+            since = "2022-02-01"
+        )]
         pub fn set_pricing_plan(
             mut self,
             input: std::option::Option<crate::model::PricingPlan>,
@@ -4815,7 +4980,7 @@ pub mod list_maps_response_entry {
             self.update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListMapsResponseEntry`](crate::model::ListMapsResponseEntry)
+        /// Consumes the builder and constructs a [`ListMapsResponseEntry`](crate::model::ListMapsResponseEntry).
         pub fn build(self) -> crate::model::ListMapsResponseEntry {
             crate::model::ListMapsResponseEntry {
                 map_name: self.map_name,
@@ -4829,7 +4994,7 @@ pub mod list_maps_response_entry {
     }
 }
 impl ListMapsResponseEntry {
-    /// Creates a new builder-style object to manufacture [`ListMapsResponseEntry`](crate::model::ListMapsResponseEntry)
+    /// Creates a new builder-style object to manufacture [`ListMapsResponseEntry`](crate::model::ListMapsResponseEntry).
     pub fn builder() -> crate::model::list_maps_response_entry::Builder {
         crate::model::list_maps_response_entry::Builder::default()
     }
@@ -4855,6 +5020,7 @@ pub struct MapConfiguration {
     /// <li> <p> <code>VectorHereExplore</code> – A default HERE map style containing a neutral, global map and its features including roads, buildings, landmarks, and water features. It also now includes a fully designed map of Japan.</p> </li>
     /// <li> <p> <code>VectorHereExploreTruck</code> – A global map containing truck restrictions and attributes (e.g. width / height / HAZMAT) symbolized with highlighted segments and icons on top of HERE Explore to support use cases within transport and logistics.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub style: std::option::Option<std::string::String>,
 }
 impl MapConfiguration {
@@ -4885,11 +5051,10 @@ impl std::fmt::Debug for MapConfiguration {
         formatter.finish()
     }
 }
-/// See [`MapConfiguration`](crate::model::MapConfiguration)
+/// See [`MapConfiguration`](crate::model::MapConfiguration).
 pub mod map_configuration {
 
-    /// A builder for [`MapConfiguration`](crate::model::MapConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MapConfiguration`](crate::model::MapConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) style: std::option::Option<std::string::String>,
@@ -4935,14 +5100,14 @@ pub mod map_configuration {
             self.style = input;
             self
         }
-        /// Consumes the builder and constructs a [`MapConfiguration`](crate::model::MapConfiguration)
+        /// Consumes the builder and constructs a [`MapConfiguration`](crate::model::MapConfiguration).
         pub fn build(self) -> crate::model::MapConfiguration {
             crate::model::MapConfiguration { style: self.style }
         }
     }
 }
 impl MapConfiguration {
-    /// Creates a new builder-style object to manufacture [`MapConfiguration`](crate::model::MapConfiguration)
+    /// Creates a new builder-style object to manufacture [`MapConfiguration`](crate::model::MapConfiguration).
     pub fn builder() -> crate::model::map_configuration::Builder {
         crate::model::map_configuration::Builder::default()
     }
@@ -4956,6 +5121,7 @@ impl MapConfiguration {
 pub struct GeofenceGeometry {
     /// <p>An array of 1 or more linear rings. A linear ring is an array of 4 or more vertices, where the first and last vertex are the same to form a closed boundary. Each vertex is a 2-dimensional point of the form: <code>[longitude, latitude]</code>. </p>
     /// <p>The first linear ring is an outer ring, describing the polygon's boundary. Subsequent linear rings may be inner or outer rings to describe holes and islands. Outer rings must list their vertices in counter-clockwise order around the ring's center, where the left side is the polygon's exterior. Inner rings must list their vertices in clockwise order, where the left side is the polygon's interior.</p>
+    #[doc(hidden)]
     pub polygon: std::option::Option<std::vec::Vec<std::vec::Vec<std::vec::Vec<f64>>>>,
 }
 impl GeofenceGeometry {
@@ -4972,11 +5138,10 @@ impl std::fmt::Debug for GeofenceGeometry {
         formatter.finish()
     }
 }
-/// See [`GeofenceGeometry`](crate::model::GeofenceGeometry)
+/// See [`GeofenceGeometry`](crate::model::GeofenceGeometry).
 pub mod geofence_geometry {
 
-    /// A builder for [`GeofenceGeometry`](crate::model::GeofenceGeometry)
-    #[non_exhaustive]
+    /// A builder for [`GeofenceGeometry`](crate::model::GeofenceGeometry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) polygon: std::option::Option<std::vec::Vec<std::vec::Vec<std::vec::Vec<f64>>>>,
@@ -5003,7 +5168,7 @@ pub mod geofence_geometry {
             self.polygon = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeofenceGeometry`](crate::model::GeofenceGeometry)
+        /// Consumes the builder and constructs a [`GeofenceGeometry`](crate::model::GeofenceGeometry).
         pub fn build(self) -> crate::model::GeofenceGeometry {
             crate::model::GeofenceGeometry {
                 polygon: self.polygon,
@@ -5012,7 +5177,7 @@ pub mod geofence_geometry {
     }
 }
 impl GeofenceGeometry {
-    /// Creates a new builder-style object to manufacture [`GeofenceGeometry`](crate::model::GeofenceGeometry)
+    /// Creates a new builder-style object to manufacture [`GeofenceGeometry`](crate::model::GeofenceGeometry).
     pub fn builder() -> crate::model::geofence_geometry::Builder {
         crate::model::geofence_geometry::Builder::default()
     }
@@ -5023,8 +5188,10 @@ impl GeofenceGeometry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListGeofenceResponseEntry {
     /// <p>The geofence identifier.</p>
+    #[doc(hidden)]
     pub geofence_id: std::option::Option<std::string::String>,
     /// <p>Contains the geofence geometry details describing a polygon.</p>
+    #[doc(hidden)]
     pub geometry: std::option::Option<crate::model::GeofenceGeometry>,
     /// <p>Identifies the state of the geofence. A geofence will hold one of the following states:</p>
     /// <ul>
@@ -5034,10 +5201,13 @@ pub struct ListGeofenceResponseEntry {
     /// <li> <p> <code>DELETED</code> — The geofence has been deleted from the system index.</p> </li>
     /// <li> <p> <code>DELETING</code> — The geofence is being deleted from the system index.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The timestamp for when the geofence was stored in a geofence collection in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code> </p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp for when the geofence was last updated in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code> </p>
+    #[doc(hidden)]
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ListGeofenceResponseEntry {
@@ -5080,11 +5250,10 @@ impl std::fmt::Debug for ListGeofenceResponseEntry {
         formatter.finish()
     }
 }
-/// See [`ListGeofenceResponseEntry`](crate::model::ListGeofenceResponseEntry)
+/// See [`ListGeofenceResponseEntry`](crate::model::ListGeofenceResponseEntry).
 pub mod list_geofence_response_entry {
 
-    /// A builder for [`ListGeofenceResponseEntry`](crate::model::ListGeofenceResponseEntry)
-    #[non_exhaustive]
+    /// A builder for [`ListGeofenceResponseEntry`](crate::model::ListGeofenceResponseEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) geofence_id: std::option::Option<std::string::String>,
@@ -5167,7 +5336,7 @@ pub mod list_geofence_response_entry {
             self.update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGeofenceResponseEntry`](crate::model::ListGeofenceResponseEntry)
+        /// Consumes the builder and constructs a [`ListGeofenceResponseEntry`](crate::model::ListGeofenceResponseEntry).
         pub fn build(self) -> crate::model::ListGeofenceResponseEntry {
             crate::model::ListGeofenceResponseEntry {
                 geofence_id: self.geofence_id,
@@ -5180,7 +5349,7 @@ pub mod list_geofence_response_entry {
     }
 }
 impl ListGeofenceResponseEntry {
-    /// Creates a new builder-style object to manufacture [`ListGeofenceResponseEntry`](crate::model::ListGeofenceResponseEntry)
+    /// Creates a new builder-style object to manufacture [`ListGeofenceResponseEntry`](crate::model::ListGeofenceResponseEntry).
     pub fn builder() -> crate::model::list_geofence_response_entry::Builder {
         crate::model::list_geofence_response_entry::Builder::default()
     }
@@ -5191,8 +5360,10 @@ impl ListGeofenceResponseEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchPutGeofenceError {
     /// <p>The geofence associated with the error message.</p>
+    #[doc(hidden)]
     pub geofence_id: std::option::Option<std::string::String>,
     /// <p>Contains details associated to the batch error.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::BatchItemError>,
 }
 impl BatchPutGeofenceError {
@@ -5213,11 +5384,10 @@ impl std::fmt::Debug for BatchPutGeofenceError {
         formatter.finish()
     }
 }
-/// See [`BatchPutGeofenceError`](crate::model::BatchPutGeofenceError)
+/// See [`BatchPutGeofenceError`](crate::model::BatchPutGeofenceError).
 pub mod batch_put_geofence_error {
 
-    /// A builder for [`BatchPutGeofenceError`](crate::model::BatchPutGeofenceError)
-    #[non_exhaustive]
+    /// A builder for [`BatchPutGeofenceError`](crate::model::BatchPutGeofenceError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) geofence_id: std::option::Option<std::string::String>,
@@ -5247,7 +5417,7 @@ pub mod batch_put_geofence_error {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchPutGeofenceError`](crate::model::BatchPutGeofenceError)
+        /// Consumes the builder and constructs a [`BatchPutGeofenceError`](crate::model::BatchPutGeofenceError).
         pub fn build(self) -> crate::model::BatchPutGeofenceError {
             crate::model::BatchPutGeofenceError {
                 geofence_id: self.geofence_id,
@@ -5257,7 +5427,7 @@ pub mod batch_put_geofence_error {
     }
 }
 impl BatchPutGeofenceError {
-    /// Creates a new builder-style object to manufacture [`BatchPutGeofenceError`](crate::model::BatchPutGeofenceError)
+    /// Creates a new builder-style object to manufacture [`BatchPutGeofenceError`](crate::model::BatchPutGeofenceError).
     pub fn builder() -> crate::model::batch_put_geofence_error::Builder {
         crate::model::batch_put_geofence_error::Builder::default()
     }
@@ -5268,10 +5438,13 @@ impl BatchPutGeofenceError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchPutGeofenceSuccess {
     /// <p>The geofence successfully stored in a geofence collection.</p>
+    #[doc(hidden)]
     pub geofence_id: std::option::Option<std::string::String>,
     /// <p>The timestamp for when the geofence was stored in a geofence collection in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code> </p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp for when the geofence was last updated in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code> </p>
+    #[doc(hidden)]
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl BatchPutGeofenceSuccess {
@@ -5297,11 +5470,10 @@ impl std::fmt::Debug for BatchPutGeofenceSuccess {
         formatter.finish()
     }
 }
-/// See [`BatchPutGeofenceSuccess`](crate::model::BatchPutGeofenceSuccess)
+/// See [`BatchPutGeofenceSuccess`](crate::model::BatchPutGeofenceSuccess).
 pub mod batch_put_geofence_success {
 
-    /// A builder for [`BatchPutGeofenceSuccess`](crate::model::BatchPutGeofenceSuccess)
-    #[non_exhaustive]
+    /// A builder for [`BatchPutGeofenceSuccess`](crate::model::BatchPutGeofenceSuccess).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) geofence_id: std::option::Option<std::string::String>,
@@ -5345,7 +5517,7 @@ pub mod batch_put_geofence_success {
             self.update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchPutGeofenceSuccess`](crate::model::BatchPutGeofenceSuccess)
+        /// Consumes the builder and constructs a [`BatchPutGeofenceSuccess`](crate::model::BatchPutGeofenceSuccess).
         pub fn build(self) -> crate::model::BatchPutGeofenceSuccess {
             crate::model::BatchPutGeofenceSuccess {
                 geofence_id: self.geofence_id,
@@ -5356,7 +5528,7 @@ pub mod batch_put_geofence_success {
     }
 }
 impl BatchPutGeofenceSuccess {
-    /// Creates a new builder-style object to manufacture [`BatchPutGeofenceSuccess`](crate::model::BatchPutGeofenceSuccess)
+    /// Creates a new builder-style object to manufacture [`BatchPutGeofenceSuccess`](crate::model::BatchPutGeofenceSuccess).
     pub fn builder() -> crate::model::batch_put_geofence_success::Builder {
         crate::model::batch_put_geofence_success::Builder::default()
     }
@@ -5367,10 +5539,12 @@ impl BatchPutGeofenceSuccess {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchPutGeofenceRequestEntry {
     /// <p>The identifier for the geofence to be stored in a given geofence collection.</p>
+    #[doc(hidden)]
     pub geofence_id: std::option::Option<std::string::String>,
     /// <p>Contains the polygon details to specify the position of the geofence.</p> <note>
     /// <p>Each <a href="https://docs.aws.amazon.com/location-geofences/latest/APIReference/API_GeofenceGeometry.html">geofence polygon</a> can have a maximum of 1,000 vertices.</p>
     /// </note>
+    #[doc(hidden)]
     pub geometry: std::option::Option<crate::model::GeofenceGeometry>,
 }
 impl BatchPutGeofenceRequestEntry {
@@ -5393,11 +5567,10 @@ impl std::fmt::Debug for BatchPutGeofenceRequestEntry {
         formatter.finish()
     }
 }
-/// See [`BatchPutGeofenceRequestEntry`](crate::model::BatchPutGeofenceRequestEntry)
+/// See [`BatchPutGeofenceRequestEntry`](crate::model::BatchPutGeofenceRequestEntry).
 pub mod batch_put_geofence_request_entry {
 
-    /// A builder for [`BatchPutGeofenceRequestEntry`](crate::model::BatchPutGeofenceRequestEntry)
-    #[non_exhaustive]
+    /// A builder for [`BatchPutGeofenceRequestEntry`](crate::model::BatchPutGeofenceRequestEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) geofence_id: std::option::Option<std::string::String>,
@@ -5431,7 +5604,7 @@ pub mod batch_put_geofence_request_entry {
             self.geometry = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchPutGeofenceRequestEntry`](crate::model::BatchPutGeofenceRequestEntry)
+        /// Consumes the builder and constructs a [`BatchPutGeofenceRequestEntry`](crate::model::BatchPutGeofenceRequestEntry).
         pub fn build(self) -> crate::model::BatchPutGeofenceRequestEntry {
             crate::model::BatchPutGeofenceRequestEntry {
                 geofence_id: self.geofence_id,
@@ -5441,7 +5614,7 @@ pub mod batch_put_geofence_request_entry {
     }
 }
 impl BatchPutGeofenceRequestEntry {
-    /// Creates a new builder-style object to manufacture [`BatchPutGeofenceRequestEntry`](crate::model::BatchPutGeofenceRequestEntry)
+    /// Creates a new builder-style object to manufacture [`BatchPutGeofenceRequestEntry`](crate::model::BatchPutGeofenceRequestEntry).
     pub fn builder() -> crate::model::batch_put_geofence_request_entry::Builder {
         crate::model::batch_put_geofence_request_entry::Builder::default()
     }
@@ -5452,10 +5625,13 @@ impl BatchPutGeofenceRequestEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchEvaluateGeofencesError {
     /// <p>The device associated with the position evaluation error.</p>
+    #[doc(hidden)]
     pub device_id: std::option::Option<std::string::String>,
     /// <p>Specifies a timestamp for when the error occurred in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code> </p>
+    #[doc(hidden)]
     pub sample_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Contains details associated to the batch error.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::BatchItemError>,
 }
 impl BatchEvaluateGeofencesError {
@@ -5481,11 +5657,10 @@ impl std::fmt::Debug for BatchEvaluateGeofencesError {
         formatter.finish()
     }
 }
-/// See [`BatchEvaluateGeofencesError`](crate::model::BatchEvaluateGeofencesError)
+/// See [`BatchEvaluateGeofencesError`](crate::model::BatchEvaluateGeofencesError).
 pub mod batch_evaluate_geofences_error {
 
-    /// A builder for [`BatchEvaluateGeofencesError`](crate::model::BatchEvaluateGeofencesError)
-    #[non_exhaustive]
+    /// A builder for [`BatchEvaluateGeofencesError`](crate::model::BatchEvaluateGeofencesError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_id: std::option::Option<std::string::String>,
@@ -5529,7 +5704,7 @@ pub mod batch_evaluate_geofences_error {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchEvaluateGeofencesError`](crate::model::BatchEvaluateGeofencesError)
+        /// Consumes the builder and constructs a [`BatchEvaluateGeofencesError`](crate::model::BatchEvaluateGeofencesError).
         pub fn build(self) -> crate::model::BatchEvaluateGeofencesError {
             crate::model::BatchEvaluateGeofencesError {
                 device_id: self.device_id,
@@ -5540,7 +5715,7 @@ pub mod batch_evaluate_geofences_error {
     }
 }
 impl BatchEvaluateGeofencesError {
-    /// Creates a new builder-style object to manufacture [`BatchEvaluateGeofencesError`](crate::model::BatchEvaluateGeofencesError)
+    /// Creates a new builder-style object to manufacture [`BatchEvaluateGeofencesError`](crate::model::BatchEvaluateGeofencesError).
     pub fn builder() -> crate::model::batch_evaluate_geofences_error::Builder {
         crate::model::batch_evaluate_geofences_error::Builder::default()
     }
@@ -5551,8 +5726,10 @@ impl BatchEvaluateGeofencesError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchDeleteGeofenceError {
     /// <p>The geofence associated with the error message.</p>
+    #[doc(hidden)]
     pub geofence_id: std::option::Option<std::string::String>,
     /// <p>Contains details associated to the batch error.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::BatchItemError>,
 }
 impl BatchDeleteGeofenceError {
@@ -5573,11 +5750,10 @@ impl std::fmt::Debug for BatchDeleteGeofenceError {
         formatter.finish()
     }
 }
-/// See [`BatchDeleteGeofenceError`](crate::model::BatchDeleteGeofenceError)
+/// See [`BatchDeleteGeofenceError`](crate::model::BatchDeleteGeofenceError).
 pub mod batch_delete_geofence_error {
 
-    /// A builder for [`BatchDeleteGeofenceError`](crate::model::BatchDeleteGeofenceError)
-    #[non_exhaustive]
+    /// A builder for [`BatchDeleteGeofenceError`](crate::model::BatchDeleteGeofenceError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) geofence_id: std::option::Option<std::string::String>,
@@ -5607,7 +5783,7 @@ pub mod batch_delete_geofence_error {
             self.error = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchDeleteGeofenceError`](crate::model::BatchDeleteGeofenceError)
+        /// Consumes the builder and constructs a [`BatchDeleteGeofenceError`](crate::model::BatchDeleteGeofenceError).
         pub fn build(self) -> crate::model::BatchDeleteGeofenceError {
             crate::model::BatchDeleteGeofenceError {
                 geofence_id: self.geofence_id,
@@ -5617,7 +5793,7 @@ pub mod batch_delete_geofence_error {
     }
 }
 impl BatchDeleteGeofenceError {
-    /// Creates a new builder-style object to manufacture [`BatchDeleteGeofenceError`](crate::model::BatchDeleteGeofenceError)
+    /// Creates a new builder-style object to manufacture [`BatchDeleteGeofenceError`](crate::model::BatchDeleteGeofenceError).
     pub fn builder() -> crate::model::batch_delete_geofence_error::Builder {
         crate::model::batch_delete_geofence_error::Builder::default()
     }
@@ -5628,16 +5804,27 @@ impl BatchDeleteGeofenceError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListGeofenceCollectionsResponseEntry {
     /// <p>The name of the geofence collection.</p>
+    #[doc(hidden)]
     pub collection_name: std::option::Option<std::string::String>,
     /// <p>The description for the geofence collection</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>No longer used. Always returns <code>RequestBasedUsage</code>.</p>
+    #[deprecated(
+        note = "Deprecated. Always returns RequestBasedUsage.",
+        since = "2022-02-01"
+    )]
+    #[doc(hidden)]
     pub pricing_plan: std::option::Option<crate::model::PricingPlan>,
     /// <p>No longer used. Always returns an empty string.</p>
+    #[deprecated(note = "Deprecated. Unused.", since = "2022-02-01")]
+    #[doc(hidden)]
     pub pricing_plan_data_source: std::option::Option<std::string::String>,
     /// <p>The timestamp for when the geofence collection was created in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code> </p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies a timestamp for when the resource was last updated in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format: <code>YYYY-MM-DDThh:mm:ss.sssZ</code> </p>
+    #[doc(hidden)]
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ListGeofenceCollectionsResponseEntry {
@@ -5650,10 +5837,15 @@ impl ListGeofenceCollectionsResponseEntry {
         self.description.as_deref()
     }
     /// <p>No longer used. Always returns <code>RequestBasedUsage</code>.</p>
+    #[deprecated(
+        note = "Deprecated. Always returns RequestBasedUsage.",
+        since = "2022-02-01"
+    )]
     pub fn pricing_plan(&self) -> std::option::Option<&crate::model::PricingPlan> {
         self.pricing_plan.as_ref()
     }
     /// <p>No longer used. Always returns an empty string.</p>
+    #[deprecated(note = "Deprecated. Unused.", since = "2022-02-01")]
     pub fn pricing_plan_data_source(&self) -> std::option::Option<&str> {
         self.pricing_plan_data_source.as_deref()
     }
@@ -5678,11 +5870,10 @@ impl std::fmt::Debug for ListGeofenceCollectionsResponseEntry {
         formatter.finish()
     }
 }
-/// See [`ListGeofenceCollectionsResponseEntry`](crate::model::ListGeofenceCollectionsResponseEntry)
+/// See [`ListGeofenceCollectionsResponseEntry`](crate::model::ListGeofenceCollectionsResponseEntry).
 pub mod list_geofence_collections_response_entry {
 
-    /// A builder for [`ListGeofenceCollectionsResponseEntry`](crate::model::ListGeofenceCollectionsResponseEntry)
-    #[non_exhaustive]
+    /// A builder for [`ListGeofenceCollectionsResponseEntry`](crate::model::ListGeofenceCollectionsResponseEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) collection_name: std::option::Option<std::string::String>,
@@ -5717,11 +5908,19 @@ pub mod list_geofence_collections_response_entry {
             self
         }
         /// <p>No longer used. Always returns <code>RequestBasedUsage</code>.</p>
+        #[deprecated(
+            note = "Deprecated. Always returns RequestBasedUsage.",
+            since = "2022-02-01"
+        )]
         pub fn pricing_plan(mut self, input: crate::model::PricingPlan) -> Self {
             self.pricing_plan = Some(input);
             self
         }
         /// <p>No longer used. Always returns <code>RequestBasedUsage</code>.</p>
+        #[deprecated(
+            note = "Deprecated. Always returns RequestBasedUsage.",
+            since = "2022-02-01"
+        )]
         pub fn set_pricing_plan(
             mut self,
             input: std::option::Option<crate::model::PricingPlan>,
@@ -5730,11 +5929,13 @@ pub mod list_geofence_collections_response_entry {
             self
         }
         /// <p>No longer used. Always returns an empty string.</p>
+        #[deprecated(note = "Deprecated. Unused.", since = "2022-02-01")]
         pub fn pricing_plan_data_source(mut self, input: impl Into<std::string::String>) -> Self {
             self.pricing_plan_data_source = Some(input.into());
             self
         }
         /// <p>No longer used. Always returns an empty string.</p>
+        #[deprecated(note = "Deprecated. Unused.", since = "2022-02-01")]
         pub fn set_pricing_plan_data_source(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -5768,7 +5969,7 @@ pub mod list_geofence_collections_response_entry {
             self.update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGeofenceCollectionsResponseEntry`](crate::model::ListGeofenceCollectionsResponseEntry)
+        /// Consumes the builder and constructs a [`ListGeofenceCollectionsResponseEntry`](crate::model::ListGeofenceCollectionsResponseEntry).
         pub fn build(self) -> crate::model::ListGeofenceCollectionsResponseEntry {
             crate::model::ListGeofenceCollectionsResponseEntry {
                 collection_name: self.collection_name,
@@ -5782,7 +5983,7 @@ pub mod list_geofence_collections_response_entry {
     }
 }
 impl ListGeofenceCollectionsResponseEntry {
-    /// Creates a new builder-style object to manufacture [`ListGeofenceCollectionsResponseEntry`](crate::model::ListGeofenceCollectionsResponseEntry)
+    /// Creates a new builder-style object to manufacture [`ListGeofenceCollectionsResponseEntry`](crate::model::ListGeofenceCollectionsResponseEntry).
     pub fn builder() -> crate::model::list_geofence_collections_response_entry::Builder {
         crate::model::list_geofence_collections_response_entry::Builder::default()
     }

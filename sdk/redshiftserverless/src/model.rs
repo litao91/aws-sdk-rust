@@ -5,30 +5,43 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Workgroup {
     /// <p>The unique identifier of the workgroup.</p>
+    #[doc(hidden)]
     pub workgroup_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) that links to the workgroup.</p>
+    #[doc(hidden)]
     pub workgroup_arn: std::option::Option<std::string::String>,
     /// <p>The name of the workgroup.</p>
+    #[doc(hidden)]
     pub workgroup_name: std::option::Option<std::string::String>,
     /// <p>The namespace the workgroup is associated with.</p>
+    #[doc(hidden)]
     pub namespace_name: std::option::Option<std::string::String>,
     /// <p>The base data warehouse capacity of the workgroup in Redshift Processing Units (RPUs).</p>
+    #[doc(hidden)]
     pub base_capacity: std::option::Option<i32>,
     /// <p>The value that specifies whether to enable enhanced virtual private cloud (VPC) routing, which forces Amazon Redshift Serverless to route traffic through your VPC.</p>
+    #[doc(hidden)]
     pub enhanced_vpc_routing: std::option::Option<bool>,
     /// <p>An array of parameters to set for finer control over a database. The options are <code>datestyle</code>, <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and <code>max_query_execution_time</code>.</p>
+    #[doc(hidden)]
     pub config_parameters: std::option::Option<std::vec::Vec<crate::model::ConfigParameter>>,
     /// <p>An array of security group IDs to associate with the workgroup.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array of subnet IDs the workgroup is associated with.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The status of the workgroup.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::WorkgroupStatus>,
     /// <p>The endpoint that is created from the workgroup.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<crate::model::Endpoint>,
     /// <p>A value that specifies whether the workgroup can be accessible from a public network</p>
+    #[doc(hidden)]
     pub publicly_accessible: std::option::Option<bool>,
     /// <p>The creation date of the workgroup.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Workgroup {
@@ -104,11 +117,10 @@ impl std::fmt::Debug for Workgroup {
         formatter.finish()
     }
 }
-/// See [`Workgroup`](crate::model::Workgroup)
+/// See [`Workgroup`](crate::model::Workgroup).
 pub mod workgroup {
 
-    /// A builder for [`Workgroup`](crate::model::Workgroup)
-    #[non_exhaustive]
+    /// A builder for [`Workgroup`](crate::model::Workgroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workgroup_id: std::option::Option<std::string::String>,
@@ -299,7 +311,7 @@ pub mod workgroup {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Workgroup`](crate::model::Workgroup)
+        /// Consumes the builder and constructs a [`Workgroup`](crate::model::Workgroup).
         pub fn build(self) -> crate::model::Workgroup {
             crate::model::Workgroup {
                 workgroup_id: self.workgroup_id,
@@ -320,7 +332,7 @@ pub mod workgroup {
     }
 }
 impl Workgroup {
-    /// Creates a new builder-style object to manufacture [`Workgroup`](crate::model::Workgroup)
+    /// Creates a new builder-style object to manufacture [`Workgroup`](crate::model::Workgroup).
     pub fn builder() -> crate::model::workgroup::Builder {
         crate::model::workgroup::Builder::default()
     }
@@ -331,10 +343,13 @@ impl Workgroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Endpoint {
     /// <p>The DNS address of the VPC endpoint.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
     /// <p>The port that Amazon Redshift Serverless listens on.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>An array of <code>VpcEndpoint</code> objects.</p>
+    #[doc(hidden)]
     pub vpc_endpoints: std::option::Option<std::vec::Vec<crate::model::VpcEndpoint>>,
 }
 impl Endpoint {
@@ -360,11 +375,10 @@ impl std::fmt::Debug for Endpoint {
         formatter.finish()
     }
 }
-/// See [`Endpoint`](crate::model::Endpoint)
+/// See [`Endpoint`](crate::model::Endpoint).
 pub mod endpoint {
 
-    /// A builder for [`Endpoint`](crate::model::Endpoint)
-    #[non_exhaustive]
+    /// A builder for [`Endpoint`](crate::model::Endpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) address: std::option::Option<std::string::String>,
@@ -411,7 +425,7 @@ pub mod endpoint {
             self.vpc_endpoints = input;
             self
         }
-        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint)
+        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint).
         pub fn build(self) -> crate::model::Endpoint {
             crate::model::Endpoint {
                 address: self.address,
@@ -422,7 +436,7 @@ pub mod endpoint {
     }
 }
 impl Endpoint {
-    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint)
+    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint).
     pub fn builder() -> crate::model::endpoint::Builder {
         crate::model::endpoint::Builder::default()
     }
@@ -433,10 +447,13 @@ impl Endpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcEndpoint {
     /// <p>The connection endpoint ID for connecting to Amazon Redshift Serverless.</p>
+    #[doc(hidden)]
     pub vpc_endpoint_id: std::option::Option<std::string::String>,
     /// <p>The VPC identifier that the endpoint is associated with.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>One or more network interfaces of the endpoint. Also known as an interface endpoint.</p>
+    #[doc(hidden)]
     pub network_interfaces: std::option::Option<std::vec::Vec<crate::model::NetworkInterface>>,
 }
 impl VpcEndpoint {
@@ -462,11 +479,10 @@ impl std::fmt::Debug for VpcEndpoint {
         formatter.finish()
     }
 }
-/// See [`VpcEndpoint`](crate::model::VpcEndpoint)
+/// See [`VpcEndpoint`](crate::model::VpcEndpoint).
 pub mod vpc_endpoint {
 
-    /// A builder for [`VpcEndpoint`](crate::model::VpcEndpoint)
-    #[non_exhaustive]
+    /// A builder for [`VpcEndpoint`](crate::model::VpcEndpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_endpoint_id: std::option::Option<std::string::String>,
@@ -517,7 +533,7 @@ pub mod vpc_endpoint {
             self.network_interfaces = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcEndpoint`](crate::model::VpcEndpoint)
+        /// Consumes the builder and constructs a [`VpcEndpoint`](crate::model::VpcEndpoint).
         pub fn build(self) -> crate::model::VpcEndpoint {
             crate::model::VpcEndpoint {
                 vpc_endpoint_id: self.vpc_endpoint_id,
@@ -528,7 +544,7 @@ pub mod vpc_endpoint {
     }
 }
 impl VpcEndpoint {
-    /// Creates a new builder-style object to manufacture [`VpcEndpoint`](crate::model::VpcEndpoint)
+    /// Creates a new builder-style object to manufacture [`VpcEndpoint`](crate::model::VpcEndpoint).
     pub fn builder() -> crate::model::vpc_endpoint::Builder {
         crate::model::vpc_endpoint::Builder::default()
     }
@@ -539,12 +555,16 @@ impl VpcEndpoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkInterface {
     /// <p>The unique identifier of the network interface.</p>
+    #[doc(hidden)]
     pub network_interface_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the subnet.</p>
+    #[doc(hidden)]
     pub subnet_id: std::option::Option<std::string::String>,
     /// <p>The IPv4 address of the network interface within the subnet.</p>
+    #[doc(hidden)]
     pub private_ip_address: std::option::Option<std::string::String>,
     /// <p>The availability Zone.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
 }
 impl NetworkInterface {
@@ -575,11 +595,10 @@ impl std::fmt::Debug for NetworkInterface {
         formatter.finish()
     }
 }
-/// See [`NetworkInterface`](crate::model::NetworkInterface)
+/// See [`NetworkInterface`](crate::model::NetworkInterface).
 pub mod network_interface {
 
-    /// A builder for [`NetworkInterface`](crate::model::NetworkInterface)
-    #[non_exhaustive]
+    /// A builder for [`NetworkInterface`](crate::model::NetworkInterface).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) network_interface_id: std::option::Option<std::string::String>,
@@ -637,7 +656,7 @@ pub mod network_interface {
             self.availability_zone = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkInterface`](crate::model::NetworkInterface)
+        /// Consumes the builder and constructs a [`NetworkInterface`](crate::model::NetworkInterface).
         pub fn build(self) -> crate::model::NetworkInterface {
             crate::model::NetworkInterface {
                 network_interface_id: self.network_interface_id,
@@ -649,7 +668,7 @@ pub mod network_interface {
     }
 }
 impl NetworkInterface {
-    /// Creates a new builder-style object to manufacture [`NetworkInterface`](crate::model::NetworkInterface)
+    /// Creates a new builder-style object to manufacture [`NetworkInterface`](crate::model::NetworkInterface).
     pub fn builder() -> crate::model::network_interface::Builder {
         crate::model::network_interface::Builder::default()
     }
@@ -723,8 +742,10 @@ impl AsRef<str> for WorkgroupStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigParameter {
     /// <p>The key of the parameter. The options are <code>datestyle</code>, <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and <code>max_query_execution_time</code>.</p>
+    #[doc(hidden)]
     pub parameter_key: std::option::Option<std::string::String>,
     /// <p>The value of the parameter to set.</p>
+    #[doc(hidden)]
     pub parameter_value: std::option::Option<std::string::String>,
 }
 impl ConfigParameter {
@@ -745,11 +766,10 @@ impl std::fmt::Debug for ConfigParameter {
         formatter.finish()
     }
 }
-/// See [`ConfigParameter`](crate::model::ConfigParameter)
+/// See [`ConfigParameter`](crate::model::ConfigParameter).
 pub mod config_parameter {
 
-    /// A builder for [`ConfigParameter`](crate::model::ConfigParameter)
-    #[non_exhaustive]
+    /// A builder for [`ConfigParameter`](crate::model::ConfigParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_key: std::option::Option<std::string::String>,
@@ -782,7 +802,7 @@ pub mod config_parameter {
             self.parameter_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigParameter`](crate::model::ConfigParameter)
+        /// Consumes the builder and constructs a [`ConfigParameter`](crate::model::ConfigParameter).
         pub fn build(self) -> crate::model::ConfigParameter {
             crate::model::ConfigParameter {
                 parameter_key: self.parameter_key,
@@ -792,7 +812,7 @@ pub mod config_parameter {
     }
 }
 impl ConfigParameter {
-    /// Creates a new builder-style object to manufacture [`ConfigParameter`](crate::model::ConfigParameter)
+    /// Creates a new builder-style object to manufacture [`ConfigParameter`](crate::model::ConfigParameter).
     pub fn builder() -> crate::model::config_parameter::Builder {
         crate::model::config_parameter::Builder::default()
     }
@@ -803,8 +823,10 @@ impl ConfigParameter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key to use in the tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -825,11 +847,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -856,7 +877,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -866,7 +887,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -877,18 +898,25 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UsageLimit {
     /// <p>The identifier of the usage limit.</p>
+    #[doc(hidden)]
     pub usage_limit_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the resource associated with the usage limit.</p>
+    #[doc(hidden)]
     pub usage_limit_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) that identifies the Amazon Redshift Serverless resource.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Redshift Serverless feature to limit.</p>
+    #[doc(hidden)]
     pub usage_type: std::option::Option<crate::model::UsageLimitUsageType>,
     /// <p>The limit amount. If time-based, this amount is in RPUs consumed per hour. If data-based, this amount is in terabytes (TB). The value must be a positive number.</p>
+    #[doc(hidden)]
     pub amount: std::option::Option<i64>,
     /// <p>The time period that the amount applies to. A weekly period begins on Sunday. The default is monthly.</p>
+    #[doc(hidden)]
     pub period: std::option::Option<crate::model::UsageLimitPeriod>,
     /// <p>The action that Amazon Redshift Serverless takes when the limit is reached.</p>
+    #[doc(hidden)]
     pub breach_action: std::option::Option<crate::model::UsageLimitBreachAction>,
 }
 impl UsageLimit {
@@ -934,11 +962,10 @@ impl std::fmt::Debug for UsageLimit {
         formatter.finish()
     }
 }
-/// See [`UsageLimit`](crate::model::UsageLimit)
+/// See [`UsageLimit`](crate::model::UsageLimit).
 pub mod usage_limit {
 
-    /// A builder for [`UsageLimit`](crate::model::UsageLimit)
-    #[non_exhaustive]
+    /// A builder for [`UsageLimit`](crate::model::UsageLimit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) usage_limit_id: std::option::Option<std::string::String>,
@@ -1035,7 +1062,7 @@ pub mod usage_limit {
             self.breach_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`UsageLimit`](crate::model::UsageLimit)
+        /// Consumes the builder and constructs a [`UsageLimit`](crate::model::UsageLimit).
         pub fn build(self) -> crate::model::UsageLimit {
             crate::model::UsageLimit {
                 usage_limit_id: self.usage_limit_id,
@@ -1050,7 +1077,7 @@ pub mod usage_limit {
     }
 }
 impl UsageLimit {
-    /// Creates a new builder-style object to manufacture [`UsageLimit`](crate::model::UsageLimit)
+    /// Creates a new builder-style object to manufacture [`UsageLimit`](crate::model::UsageLimit).
     pub fn builder() -> crate::model::usage_limit::Builder {
         crate::model::usage_limit::Builder::default()
     }
@@ -1234,44 +1261,64 @@ impl AsRef<str> for UsageLimitUsageType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Snapshot {
     /// <p>The name of the namepsace.</p>
+    #[doc(hidden)]
     pub namespace_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the namespace the snapshot was created from.</p>
+    #[doc(hidden)]
     pub namespace_arn: std::option::Option<std::string::String>,
     /// <p>The name of the snapshot.</p>
+    #[doc(hidden)]
     pub snapshot_name: std::option::Option<std::string::String>,
     /// <p>The timestamp of when the snapshot was created.</p>
+    #[doc(hidden)]
     pub snapshot_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The username of the database within a snapshot.</p>
+    #[doc(hidden)]
     pub admin_username: std::option::Option<std::string::String>,
     /// <p>The status of the snapshot.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::SnapshotStatus>,
     /// <p>The unique identifier of the KMS key used to encrypt the snapshot.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The owner Amazon Web Services; account of the snapshot.</p>
+    #[doc(hidden)]
     pub owner_account: std::option::Option<std::string::String>,
     /// <p>The total size, in megabytes, of how big the snapshot is.</p>
+    #[doc(hidden)]
     pub total_backup_size_in_mega_bytes: std::option::Option<f64>,
     /// <p>The size of the incremental backup in megabytes.</p>
+    #[doc(hidden)]
     pub actual_incremental_backup_size_in_mega_bytes: std::option::Option<f64>,
     /// <p>The size in megabytes of the data that has been backed up to a snapshot.</p>
+    #[doc(hidden)]
     pub backup_progress_in_mega_bytes: std::option::Option<f64>,
     /// <p>The rate at which data is backed up into a snapshot in megabytes per second.</p>
+    #[doc(hidden)]
     pub current_backup_rate_in_mega_bytes_per_second: std::option::Option<f64>,
     /// <p>The estimated amount of seconds until the snapshot completes backup.</p>
+    #[doc(hidden)]
     pub estimated_seconds_to_completion: std::option::Option<i64>,
     /// <p>The amount of time it took to back up data into a snapshot.</p>
+    #[doc(hidden)]
     pub elapsed_time_in_seconds: std::option::Option<i64>,
     /// <p>The period of time, in days, of how long the snapshot is retained.</p>
+    #[doc(hidden)]
     pub snapshot_retention_period: std::option::Option<i32>,
     /// <p>The amount of days until the snapshot is deleted.</p>
+    #[doc(hidden)]
     pub snapshot_remaining_days: std::option::Option<i32>,
     /// <p>The timestamp of when data within the snapshot started getting retained.</p>
+    #[doc(hidden)]
     pub snapshot_retention_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) of the snapshot.</p>
+    #[doc(hidden)]
     pub snapshot_arn: std::option::Option<std::string::String>,
     /// <p>All of the Amazon Web Services accounts that have access to restore a snapshot to a namespace.</p>
+    #[doc(hidden)]
     pub accounts_with_restore_access: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>All of the Amazon Web Services accounts that have access to restore a snapshot to a provisioned cluster.</p>
+    #[doc(hidden)]
     pub accounts_with_provisioned_restore_access:
         std::option::Option<std::vec::Vec<std::string::String>>,
 }
@@ -1411,11 +1458,10 @@ impl std::fmt::Debug for Snapshot {
         formatter.finish()
     }
 }
-/// See [`Snapshot`](crate::model::Snapshot)
+/// See [`Snapshot`](crate::model::Snapshot).
 pub mod snapshot {
 
-    /// A builder for [`Snapshot`](crate::model::Snapshot)
-    #[non_exhaustive]
+    /// A builder for [`Snapshot`](crate::model::Snapshot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace_name: std::option::Option<std::string::String>,
@@ -1707,7 +1753,7 @@ pub mod snapshot {
             self.accounts_with_provisioned_restore_access = input;
             self
         }
-        /// Consumes the builder and constructs a [`Snapshot`](crate::model::Snapshot)
+        /// Consumes the builder and constructs a [`Snapshot`](crate::model::Snapshot).
         pub fn build(self) -> crate::model::Snapshot {
             crate::model::Snapshot {
                 namespace_name: self.namespace_name,
@@ -1738,7 +1784,7 @@ pub mod snapshot {
     }
 }
 impl Snapshot {
-    /// Creates a new builder-style object to manufacture [`Snapshot`](crate::model::Snapshot)
+    /// Creates a new builder-style object to manufacture [`Snapshot`](crate::model::Snapshot).
     pub fn builder() -> crate::model::snapshot::Builder {
         crate::model::snapshot::Builder::default()
     }
@@ -1827,26 +1873,37 @@ impl AsRef<str> for SnapshotStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Namespace {
     /// <p>The Amazon Resource Name (ARN) associated with a namespace.</p>
+    #[doc(hidden)]
     pub namespace_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier of a namespace.</p>
+    #[doc(hidden)]
     pub namespace_id: std::option::Option<std::string::String>,
     /// <p>The name of the namespace. Must be between 3-64 alphanumeric characters in lowercase, and it cannot be a reserved word. A list of reserved words can be found in <a href="https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html">Reserved Words</a> in the Amazon Redshift Database Developer Guide.</p>
+    #[doc(hidden)]
     pub namespace_name: std::option::Option<std::string::String>,
     /// <p>The username of the administrator for the first database created in the namespace.</p>
+    #[doc(hidden)]
     pub admin_username: std::option::Option<std::string::String>,
     /// <p>The name of the first database created in the namespace.</p>
+    #[doc(hidden)]
     pub db_name: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services Key Management Service key used to encrypt your data.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace.</p>
+    #[doc(hidden)]
     pub default_iam_role_arn: std::option::Option<std::string::String>,
     /// <p>A list of IAM roles to associate with the namespace.</p>
+    #[doc(hidden)]
     pub iam_roles: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The types of logs the namespace can export. Available export types are User log, Connection log, and User activity log.</p>
+    #[doc(hidden)]
     pub log_exports: std::option::Option<std::vec::Vec<crate::model::LogExport>>,
     /// <p>The status of the namespace.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::NamespaceStatus>,
     /// <p>The date of when the namespace was created.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Namespace {
@@ -1912,11 +1969,10 @@ impl std::fmt::Debug for Namespace {
         formatter.finish()
     }
 }
-/// See [`Namespace`](crate::model::Namespace)
+/// See [`Namespace`](crate::model::Namespace).
 pub mod namespace {
 
-    /// A builder for [`Namespace`](crate::model::Namespace)
-    #[non_exhaustive]
+    /// A builder for [`Namespace`](crate::model::Namespace).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace_arn: std::option::Option<std::string::String>,
@@ -2078,7 +2134,7 @@ pub mod namespace {
             self.creation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Namespace`](crate::model::Namespace)
+        /// Consumes the builder and constructs a [`Namespace`](crate::model::Namespace).
         pub fn build(self) -> crate::model::Namespace {
             crate::model::Namespace {
                 namespace_arn: self.namespace_arn,
@@ -2097,7 +2153,7 @@ pub mod namespace {
     }
 }
 impl Namespace {
-    /// Creates a new builder-style object to manufacture [`Namespace`](crate::model::Namespace)
+    /// Creates a new builder-style object to manufacture [`Namespace`](crate::model::Namespace).
     pub fn builder() -> crate::model::namespace::Builder {
         crate::model::namespace::Builder::default()
     }
@@ -2226,14 +2282,19 @@ impl AsRef<str> for LogExport {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecoveryPoint {
     /// <p>The unique identifier of the recovery point.</p>
+    #[doc(hidden)]
     pub recovery_point_id: std::option::Option<std::string::String>,
     /// <p>The time the recovery point is created.</p>
+    #[doc(hidden)]
     pub recovery_point_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The total size of the data in the recovery point in megabytes.</p>
+    #[doc(hidden)]
     pub total_size_in_mega_bytes: std::option::Option<f64>,
     /// <p>The name of the namespace the recovery point is associated with.</p>
+    #[doc(hidden)]
     pub namespace_name: std::option::Option<std::string::String>,
     /// <p>The name of the workgroup the recovery point is associated with.</p>
+    #[doc(hidden)]
     pub workgroup_name: std::option::Option<std::string::String>,
 }
 impl RecoveryPoint {
@@ -2272,11 +2333,10 @@ impl std::fmt::Debug for RecoveryPoint {
         formatter.finish()
     }
 }
-/// See [`RecoveryPoint`](crate::model::RecoveryPoint)
+/// See [`RecoveryPoint`](crate::model::RecoveryPoint).
 pub mod recovery_point {
 
-    /// A builder for [`RecoveryPoint`](crate::model::RecoveryPoint)
-    #[non_exhaustive]
+    /// A builder for [`RecoveryPoint`](crate::model::RecoveryPoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recovery_point_id: std::option::Option<std::string::String>,
@@ -2348,7 +2408,7 @@ pub mod recovery_point {
             self.workgroup_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecoveryPoint`](crate::model::RecoveryPoint)
+        /// Consumes the builder and constructs a [`RecoveryPoint`](crate::model::RecoveryPoint).
         pub fn build(self) -> crate::model::RecoveryPoint {
             crate::model::RecoveryPoint {
                 recovery_point_id: self.recovery_point_id,
@@ -2361,7 +2421,7 @@ pub mod recovery_point {
     }
 }
 impl RecoveryPoint {
-    /// Creates a new builder-style object to manufacture [`RecoveryPoint`](crate::model::RecoveryPoint)
+    /// Creates a new builder-style object to manufacture [`RecoveryPoint`](crate::model::RecoveryPoint).
     pub fn builder() -> crate::model::recovery_point::Builder {
         crate::model::recovery_point::Builder::default()
     }
@@ -2372,25 +2432,35 @@ impl RecoveryPoint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointAccess {
     /// <p>The name of the VPC endpoint.</p>
+    #[doc(hidden)]
     pub endpoint_name: std::option::Option<std::string::String>,
     /// <p>The status of the VPC endpoint.</p>
+    #[doc(hidden)]
     pub endpoint_status: std::option::Option<std::string::String>,
     /// <p>The name of the workgroup associated with the endpoint.</p>
+    #[doc(hidden)]
     pub workgroup_name: std::option::Option<std::string::String>,
     /// <p>The time that the endpoint was created.</p>
+    #[doc(hidden)]
     pub endpoint_create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The port number on which Amazon Redshift Serverless accepts incoming connections.</p>
+    #[doc(hidden)]
     pub port: std::option::Option<i32>,
     /// <p>The DNS address of the endpoint.</p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
     /// <p>The unique identifier of subnets where Amazon Redshift Serverless choose to deploy the VPC endpoint.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The security groups associated with the endpoint.</p>
+    #[doc(hidden)]
     pub vpc_security_groups:
         std::option::Option<std::vec::Vec<crate::model::VpcSecurityGroupMembership>>,
     /// <p>The connection endpoint for connecting to Amazon Redshift Serverless.</p>
+    #[doc(hidden)]
     pub vpc_endpoint: std::option::Option<crate::model::VpcEndpoint>,
     /// <p>The Amazon Resource Name (ARN) of the VPC endpoint.</p>
+    #[doc(hidden)]
     pub endpoint_arn: std::option::Option<std::string::String>,
 }
 impl EndpointAccess {
@@ -2453,11 +2523,10 @@ impl std::fmt::Debug for EndpointAccess {
         formatter.finish()
     }
 }
-/// See [`EndpointAccess`](crate::model::EndpointAccess)
+/// See [`EndpointAccess`](crate::model::EndpointAccess).
 pub mod endpoint_access {
 
-    /// A builder for [`EndpointAccess`](crate::model::EndpointAccess)
-    #[non_exhaustive]
+    /// A builder for [`EndpointAccess`](crate::model::EndpointAccess).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint_name: std::option::Option<std::string::String>,
@@ -2609,7 +2678,7 @@ pub mod endpoint_access {
             self.endpoint_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointAccess`](crate::model::EndpointAccess)
+        /// Consumes the builder and constructs a [`EndpointAccess`](crate::model::EndpointAccess).
         pub fn build(self) -> crate::model::EndpointAccess {
             crate::model::EndpointAccess {
                 endpoint_name: self.endpoint_name,
@@ -2627,7 +2696,7 @@ pub mod endpoint_access {
     }
 }
 impl EndpointAccess {
-    /// Creates a new builder-style object to manufacture [`EndpointAccess`](crate::model::EndpointAccess)
+    /// Creates a new builder-style object to manufacture [`EndpointAccess`](crate::model::EndpointAccess).
     pub fn builder() -> crate::model::endpoint_access::Builder {
         crate::model::endpoint_access::Builder::default()
     }
@@ -2638,8 +2707,10 @@ impl EndpointAccess {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcSecurityGroupMembership {
     /// <p>The unique identifier of the VPC security group.</p>
+    #[doc(hidden)]
     pub vpc_security_group_id: std::option::Option<std::string::String>,
     /// <p>The status of the VPC security group.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
 }
 impl VpcSecurityGroupMembership {
@@ -2660,11 +2731,10 @@ impl std::fmt::Debug for VpcSecurityGroupMembership {
         formatter.finish()
     }
 }
-/// See [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership)
+/// See [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership).
 pub mod vpc_security_group_membership {
 
-    /// A builder for [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership)
-    #[non_exhaustive]
+    /// A builder for [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_security_group_id: std::option::Option<std::string::String>,
@@ -2694,7 +2764,7 @@ pub mod vpc_security_group_membership {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership)
+        /// Consumes the builder and constructs a [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership).
         pub fn build(self) -> crate::model::VpcSecurityGroupMembership {
             crate::model::VpcSecurityGroupMembership {
                 vpc_security_group_id: self.vpc_security_group_id,
@@ -2704,7 +2774,7 @@ pub mod vpc_security_group_membership {
     }
 }
 impl VpcSecurityGroupMembership {
-    /// Creates a new builder-style object to manufacture [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership)
+    /// Creates a new builder-style object to manufacture [`VpcSecurityGroupMembership`](crate::model::VpcSecurityGroupMembership).
     pub fn builder() -> crate::model::vpc_security_group_membership::Builder {
         crate::model::vpc_security_group_membership::Builder::default()
     }
@@ -2715,8 +2785,10 @@ impl VpcSecurityGroupMembership {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourcePolicy {
     /// <p>The Amazon Resource Name (ARN) of the policy.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The resource policy.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl ResourcePolicy {
@@ -2737,11 +2809,10 @@ impl std::fmt::Debug for ResourcePolicy {
         formatter.finish()
     }
 }
-/// See [`ResourcePolicy`](crate::model::ResourcePolicy)
+/// See [`ResourcePolicy`](crate::model::ResourcePolicy).
 pub mod resource_policy {
 
-    /// A builder for [`ResourcePolicy`](crate::model::ResourcePolicy)
-    #[non_exhaustive]
+    /// A builder for [`ResourcePolicy`](crate::model::ResourcePolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -2768,7 +2839,7 @@ pub mod resource_policy {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourcePolicy`](crate::model::ResourcePolicy)
+        /// Consumes the builder and constructs a [`ResourcePolicy`](crate::model::ResourcePolicy).
         pub fn build(self) -> crate::model::ResourcePolicy {
             crate::model::ResourcePolicy {
                 resource_arn: self.resource_arn,
@@ -2778,7 +2849,7 @@ pub mod resource_policy {
     }
 }
 impl ResourcePolicy {
-    /// Creates a new builder-style object to manufacture [`ResourcePolicy`](crate::model::ResourcePolicy)
+    /// Creates a new builder-style object to manufacture [`ResourcePolicy`](crate::model::ResourcePolicy).
     pub fn builder() -> crate::model::resource_policy::Builder {
         crate::model::resource_policy::Builder::default()
     }

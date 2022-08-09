@@ -59,27 +59,38 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Site {
     /// <p> The ID of the site. </p>
+    #[doc(hidden)]
     pub site_id: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The name of the site.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the site.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The site tags.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the site.</p>
+    #[doc(hidden)]
     pub site_arn: std::option::Option<std::string::String>,
     /// <p> Notes about a site. </p>
+    #[doc(hidden)]
     pub notes: std::option::Option<std::string::String>,
     /// <p> The ISO-3166 two-letter country code where the hardware is installed and powered on. </p>
+    #[doc(hidden)]
     pub operating_address_country_code: std::option::Option<std::string::String>,
     /// <p> State or region where the hardware is installed and powered on. </p>
+    #[doc(hidden)]
     pub operating_address_state_or_region: std::option::Option<std::string::String>,
     /// <p> City where the hardware is installed and powered on. </p>
+    #[doc(hidden)]
     pub operating_address_city: std::option::Option<std::string::String>,
     /// <p> Information about the physical and logistical details for a rack at the site. </p>
+    #[doc(hidden)]
     pub rack_physical_properties: std::option::Option<crate::model::RackPhysicalProperties>,
 }
 impl Site {
@@ -156,11 +167,10 @@ impl std::fmt::Debug for Site {
         formatter.finish()
     }
 }
-/// See [`Site`](crate::model::Site)
+/// See [`Site`](crate::model::Site).
 pub mod site {
 
-    /// A builder for [`Site`](crate::model::Site)
-    #[non_exhaustive]
+    /// A builder for [`Site`](crate::model::Site).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) site_id: std::option::Option<std::string::String>,
@@ -325,7 +335,7 @@ pub mod site {
             self.rack_physical_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`Site`](crate::model::Site)
+        /// Consumes the builder and constructs a [`Site`](crate::model::Site).
         pub fn build(self) -> crate::model::Site {
             crate::model::Site {
                 site_id: self.site_id,
@@ -344,7 +354,7 @@ pub mod site {
     }
 }
 impl Site {
-    /// Creates a new builder-style object to manufacture [`Site`](crate::model::Site)
+    /// Creates a new builder-style object to manufacture [`Site`](crate::model::Site).
     pub fn builder() -> crate::model::site::Builder {
         crate::model::site::Builder::default()
     }
@@ -355,22 +365,31 @@ impl Site {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RackPhysicalProperties {
     /// <p>The power draw available at the hardware placement position for the rack. </p>
+    #[doc(hidden)]
     pub power_draw_kva: std::option::Option<crate::model::PowerDrawKva>,
     /// <p>The power option that you can provide for hardware.</p>
+    #[doc(hidden)]
     pub power_phase: std::option::Option<crate::model::PowerPhase>,
     /// <p>The power connector for the hardware. </p>
+    #[doc(hidden)]
     pub power_connector: std::option::Option<crate::model::PowerConnector>,
     /// <p>The position of the power feed.</p>
+    #[doc(hidden)]
     pub power_feed_drop: std::option::Option<crate::model::PowerFeedDrop>,
     /// <p>The uplink speed the rack supports for the connection to the Region. </p>
+    #[doc(hidden)]
     pub uplink_gbps: std::option::Option<crate::model::UplinkGbps>,
     /// <p>The number of uplinks each Outpost network device.</p>
+    #[doc(hidden)]
     pub uplink_count: std::option::Option<crate::model::UplinkCount>,
     /// <p>The type of fiber used to attach the Outpost to the network. </p>
+    #[doc(hidden)]
     pub fiber_optic_cable_type: std::option::Option<crate::model::FiberOpticCableType>,
     /// <p>The type of optical standard used to attach the Outpost to the network. This field is dependent on uplink speed, fiber type, and distance to the upstream device. For more information about networking requirements for racks, see <a href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-requirements.html#facility-networking">Network</a> in the Amazon Web Services Outposts User Guide. </p>
+    #[doc(hidden)]
     pub optical_standard: std::option::Option<crate::model::OpticalStandard>,
     /// <p>The maximum rack weight that this site can support. <code>NO_LIMIT</code> is over 2000 lbs (907 kg). </p>
+    #[doc(hidden)]
     pub maximum_supported_weight_lbs: std::option::Option<crate::model::MaximumSupportedWeightLbs>,
 }
 impl RackPhysicalProperties {
@@ -433,11 +452,10 @@ impl std::fmt::Debug for RackPhysicalProperties {
         formatter.finish()
     }
 }
-/// See [`RackPhysicalProperties`](crate::model::RackPhysicalProperties)
+/// See [`RackPhysicalProperties`](crate::model::RackPhysicalProperties).
 pub mod rack_physical_properties {
 
-    /// A builder for [`RackPhysicalProperties`](crate::model::RackPhysicalProperties)
-    #[non_exhaustive]
+    /// A builder for [`RackPhysicalProperties`](crate::model::RackPhysicalProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) power_draw_kva: std::option::Option<crate::model::PowerDrawKva>,
@@ -572,7 +590,7 @@ pub mod rack_physical_properties {
             self.maximum_supported_weight_lbs = input;
             self
         }
-        /// Consumes the builder and constructs a [`RackPhysicalProperties`](crate::model::RackPhysicalProperties)
+        /// Consumes the builder and constructs a [`RackPhysicalProperties`](crate::model::RackPhysicalProperties).
         pub fn build(self) -> crate::model::RackPhysicalProperties {
             crate::model::RackPhysicalProperties {
                 power_draw_kva: self.power_draw_kva,
@@ -589,7 +607,7 @@ pub mod rack_physical_properties {
     }
 }
 impl RackPhysicalProperties {
-    /// Creates a new builder-style object to manufacture [`RackPhysicalProperties`](crate::model::RackPhysicalProperties)
+    /// Creates a new builder-style object to manufacture [`RackPhysicalProperties`](crate::model::RackPhysicalProperties).
     pub fn builder() -> crate::model::rack_physical_properties::Builder {
         crate::model::rack_physical_properties::Builder::default()
     }
@@ -1234,26 +1252,37 @@ impl AsRef<str> for PowerDrawKva {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Address {
     /// <p>The name of the contact.</p>
+    #[doc(hidden)]
     pub contact_name: std::option::Option<std::string::String>,
     /// <p>The phone number of the contact.</p>
+    #[doc(hidden)]
     pub contact_phone_number: std::option::Option<std::string::String>,
     /// <p>The first line of the address.</p>
+    #[doc(hidden)]
     pub address_line1: std::option::Option<std::string::String>,
     /// <p>The second line of the address.</p>
+    #[doc(hidden)]
     pub address_line2: std::option::Option<std::string::String>,
     /// <p>The third line of the address.</p>
+    #[doc(hidden)]
     pub address_line3: std::option::Option<std::string::String>,
     /// <p>The city for the address.</p>
+    #[doc(hidden)]
     pub city: std::option::Option<std::string::String>,
     /// <p>The state for the address.</p>
+    #[doc(hidden)]
     pub state_or_region: std::option::Option<std::string::String>,
     /// <p>The district or county for the address.</p>
+    #[doc(hidden)]
     pub district_or_county: std::option::Option<std::string::String>,
     /// <p>The postal code for the address.</p>
+    #[doc(hidden)]
     pub postal_code: std::option::Option<std::string::String>,
     /// <p>The ISO-3166 two-letter country code for the address.</p>
+    #[doc(hidden)]
     pub country_code: std::option::Option<std::string::String>,
     /// <p>The municipality for the address.</p>
+    #[doc(hidden)]
     pub municipality: std::option::Option<std::string::String>,
 }
 impl Address {
@@ -1319,11 +1348,10 @@ impl std::fmt::Debug for Address {
         formatter.finish()
     }
 }
-/// See [`Address`](crate::model::Address)
+/// See [`Address`](crate::model::Address).
 pub mod address {
 
-    /// A builder for [`Address`](crate::model::Address)
-    #[non_exhaustive]
+    /// A builder for [`Address`](crate::model::Address).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) contact_name: std::option::Option<std::string::String>,
@@ -1467,7 +1495,7 @@ pub mod address {
             self.municipality = input;
             self
         }
-        /// Consumes the builder and constructs a [`Address`](crate::model::Address)
+        /// Consumes the builder and constructs a [`Address`](crate::model::Address).
         pub fn build(self) -> crate::model::Address {
             crate::model::Address {
                 contact_name: self.contact_name,
@@ -1486,7 +1514,7 @@ pub mod address {
     }
 }
 impl Address {
-    /// Creates a new builder-style object to manufacture [`Address`](crate::model::Address)
+    /// Creates a new builder-style object to manufacture [`Address`](crate::model::Address).
     pub fn builder() -> crate::model::address::Builder {
         crate::model::address::Builder::default()
     }
@@ -1552,29 +1580,41 @@ impl AsRef<str> for AddressType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Outpost {
     /// <p> The ID of the Outpost. </p>
+    #[doc(hidden)]
     pub outpost_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services account ID of the Outpost owner.</p>
+    #[doc(hidden)]
     pub owner_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Outpost.</p>
+    #[doc(hidden)]
     pub outpost_arn: std::option::Option<std::string::String>,
     /// <p> The ID of the site. </p>
+    #[doc(hidden)]
     pub site_id: std::option::Option<std::string::String>,
     /// <p>The name of the Outpost.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the Outpost.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The life cycle status.</p>
+    #[doc(hidden)]
     pub life_cycle_status: std::option::Option<std::string::String>,
     /// <p>The Availability Zone.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>The ID of the Availability Zone.</p>
+    #[doc(hidden)]
     pub availability_zone_id: std::option::Option<std::string::String>,
     /// <p>The Outpost tags.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Amazon Resource Name (ARN) of the site.</p>
+    #[doc(hidden)]
     pub site_arn: std::option::Option<std::string::String>,
     /// <p> The hardware type. </p>
+    #[doc(hidden)]
     pub supported_hardware_type: std::option::Option<crate::model::SupportedHardwareType>,
 }
 impl Outpost {
@@ -1650,11 +1690,10 @@ impl std::fmt::Debug for Outpost {
         formatter.finish()
     }
 }
-/// See [`Outpost`](crate::model::Outpost)
+/// See [`Outpost`](crate::model::Outpost).
 pub mod outpost {
 
-    /// A builder for [`Outpost`](crate::model::Outpost)
-    #[non_exhaustive]
+    /// A builder for [`Outpost`](crate::model::Outpost).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) outpost_id: std::option::Option<std::string::String>,
@@ -1824,7 +1863,7 @@ pub mod outpost {
             self.supported_hardware_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`Outpost`](crate::model::Outpost)
+        /// Consumes the builder and constructs a [`Outpost`](crate::model::Outpost).
         pub fn build(self) -> crate::model::Outpost {
             crate::model::Outpost {
                 outpost_id: self.outpost_id,
@@ -1844,7 +1883,7 @@ pub mod outpost {
     }
 }
 impl Outpost {
-    /// Creates a new builder-style object to manufacture [`Outpost`](crate::model::Outpost)
+    /// Creates a new builder-style object to manufacture [`Outpost`](crate::model::Outpost).
     pub fn builder() -> crate::model::outpost::Builder {
         crate::model::outpost::Builder::default()
     }
@@ -1910,10 +1949,13 @@ impl AsRef<str> for SupportedHardwareType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrderSummary {
     /// <p> The ID of the Outpost. </p>
+    #[doc(hidden)]
     pub outpost_id: std::option::Option<std::string::String>,
     /// <p> The ID of the order. </p>
+    #[doc(hidden)]
     pub order_id: std::option::Option<std::string::String>,
     /// <p> The type of order. </p>
+    #[doc(hidden)]
     pub order_type: std::option::Option<crate::model::OrderType>,
     /// <p>The status of the order.</p>
     /// <ul>
@@ -1925,13 +1967,17 @@ pub struct OrderSummary {
     /// </ul> <note>
     /// <p>The following statuses are deprecated: <code>RECEIVED</code>, <code>PENDING</code>, <code>PROCESSING</code>, <code>INSTALLING</code>, and <code>FULFILLED</code>. </p>
     /// </note>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OrderStatus>,
     /// <p> The status of all line items in the order. </p>
+    #[doc(hidden)]
     pub line_item_counts_by_status:
         std::option::Option<std::collections::HashMap<crate::model::LineItemStatus, i32>>,
     /// <p> Submission date for the order. </p>
+    #[doc(hidden)]
     pub order_submission_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> Fulfilment date for the order. </p>
+    #[doc(hidden)]
     pub order_fulfilled_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl OrderSummary {
@@ -1991,11 +2037,10 @@ impl std::fmt::Debug for OrderSummary {
         formatter.finish()
     }
 }
-/// See [`OrderSummary`](crate::model::OrderSummary)
+/// See [`OrderSummary`](crate::model::OrderSummary).
 pub mod order_summary {
 
-    /// A builder for [`OrderSummary`](crate::model::OrderSummary)
-    #[non_exhaustive]
+    /// A builder for [`OrderSummary`](crate::model::OrderSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) outpost_id: std::option::Option<std::string::String>,
@@ -2120,7 +2165,7 @@ pub mod order_summary {
             self.order_fulfilled_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrderSummary`](crate::model::OrderSummary)
+        /// Consumes the builder and constructs a [`OrderSummary`](crate::model::OrderSummary).
         pub fn build(self) -> crate::model::OrderSummary {
             crate::model::OrderSummary {
                 outpost_id: self.outpost_id,
@@ -2135,7 +2180,7 @@ pub mod order_summary {
     }
 }
 impl OrderSummary {
-    /// Creates a new builder-style object to manufacture [`OrderSummary`](crate::model::OrderSummary)
+    /// Creates a new builder-style object to manufacture [`OrderSummary`](crate::model::OrderSummary).
     pub fn builder() -> crate::model::order_summary::Builder {
         crate::model::order_summary::Builder::default()
     }
@@ -2387,18 +2432,25 @@ impl AsRef<str> for OrderType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CatalogItem {
     /// <p> The ID of the catalog item. </p>
+    #[doc(hidden)]
     pub catalog_item_id: std::option::Option<std::string::String>,
     /// <p> The status of a catalog item. </p>
+    #[doc(hidden)]
     pub item_status: std::option::Option<crate::model::CatalogItemStatus>,
     /// <p> Information about the EC2 capacity of an item. </p>
+    #[doc(hidden)]
     pub ec2_capacities: std::option::Option<std::vec::Vec<crate::model::Ec2Capacity>>,
     /// <p> Information about the power draw of an item. </p>
+    #[doc(hidden)]
     pub power_kva: std::option::Option<f32>,
     /// <p> The weight of the item in pounds. </p>
+    #[doc(hidden)]
     pub weight_lbs: std::option::Option<i32>,
     /// <p> The uplink speed this catalog item requires for the connection to the Region. </p>
+    #[doc(hidden)]
     pub supported_uplink_gbps: std::option::Option<std::vec::Vec<i32>>,
     /// <p> The supported storage options for the catalog item. </p>
+    #[doc(hidden)]
     pub supported_storage: std::option::Option<std::vec::Vec<crate::model::SupportedStorageEnum>>,
 }
 impl CatalogItem {
@@ -2444,11 +2496,10 @@ impl std::fmt::Debug for CatalogItem {
         formatter.finish()
     }
 }
-/// See [`CatalogItem`](crate::model::CatalogItem)
+/// See [`CatalogItem`](crate::model::CatalogItem).
 pub mod catalog_item {
 
-    /// A builder for [`CatalogItem`](crate::model::CatalogItem)
-    #[non_exhaustive]
+    /// A builder for [`CatalogItem`](crate::model::CatalogItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog_item_id: std::option::Option<std::string::String>,
@@ -2564,7 +2615,7 @@ pub mod catalog_item {
             self.supported_storage = input;
             self
         }
-        /// Consumes the builder and constructs a [`CatalogItem`](crate::model::CatalogItem)
+        /// Consumes the builder and constructs a [`CatalogItem`](crate::model::CatalogItem).
         pub fn build(self) -> crate::model::CatalogItem {
             crate::model::CatalogItem {
                 catalog_item_id: self.catalog_item_id,
@@ -2579,7 +2630,7 @@ pub mod catalog_item {
     }
 }
 impl CatalogItem {
-    /// Creates a new builder-style object to manufacture [`CatalogItem`](crate::model::CatalogItem)
+    /// Creates a new builder-style object to manufacture [`CatalogItem`](crate::model::CatalogItem).
     pub fn builder() -> crate::model::catalog_item::Builder {
         crate::model::catalog_item::Builder::default()
     }
@@ -2645,10 +2696,13 @@ impl AsRef<str> for SupportedStorageEnum {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ec2Capacity {
     /// <p> The family of the EC2 capacity. </p>
+    #[doc(hidden)]
     pub family: std::option::Option<std::string::String>,
     /// <p> The maximum size of the EC2 capacity. </p>
+    #[doc(hidden)]
     pub max_size: std::option::Option<std::string::String>,
     /// <p> The quantity of the EC2 capacity. </p>
+    #[doc(hidden)]
     pub quantity: std::option::Option<std::string::String>,
 }
 impl Ec2Capacity {
@@ -2674,11 +2728,10 @@ impl std::fmt::Debug for Ec2Capacity {
         formatter.finish()
     }
 }
-/// See [`Ec2Capacity`](crate::model::Ec2Capacity)
+/// See [`Ec2Capacity`](crate::model::Ec2Capacity).
 pub mod ec2_capacity {
 
-    /// A builder for [`Ec2Capacity`](crate::model::Ec2Capacity)
-    #[non_exhaustive]
+    /// A builder for [`Ec2Capacity`](crate::model::Ec2Capacity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) family: std::option::Option<std::string::String>,
@@ -2716,7 +2769,7 @@ pub mod ec2_capacity {
             self.quantity = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2Capacity`](crate::model::Ec2Capacity)
+        /// Consumes the builder and constructs a [`Ec2Capacity`](crate::model::Ec2Capacity).
         pub fn build(self) -> crate::model::Ec2Capacity {
             crate::model::Ec2Capacity {
                 family: self.family,
@@ -2727,7 +2780,7 @@ pub mod ec2_capacity {
     }
 }
 impl Ec2Capacity {
-    /// Creates a new builder-style object to manufacture [`Ec2Capacity`](crate::model::Ec2Capacity)
+    /// Creates a new builder-style object to manufacture [`Ec2Capacity`](crate::model::Ec2Capacity).
     pub fn builder() -> crate::model::ec2_capacity::Builder {
         crate::model::ec2_capacity::Builder::default()
     }
@@ -2848,14 +2901,19 @@ impl AsRef<str> for CatalogItemClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssetInfo {
     /// <p> The ID of the asset. </p>
+    #[doc(hidden)]
     pub asset_id: std::option::Option<std::string::String>,
     /// <p> The rack ID of the asset. </p>
+    #[doc(hidden)]
     pub rack_id: std::option::Option<std::string::String>,
     /// <p> The type of the asset. </p>
+    #[doc(hidden)]
     pub asset_type: std::option::Option<crate::model::AssetType>,
     /// <p> Information about compute hardware assets. </p>
+    #[doc(hidden)]
     pub compute_attributes: std::option::Option<crate::model::ComputeAttributes>,
     /// <p> The position of an asset in a rack. </p>
+    #[doc(hidden)]
     pub asset_location: std::option::Option<crate::model::AssetLocation>,
 }
 impl AssetInfo {
@@ -2891,11 +2949,10 @@ impl std::fmt::Debug for AssetInfo {
         formatter.finish()
     }
 }
-/// See [`AssetInfo`](crate::model::AssetInfo)
+/// See [`AssetInfo`](crate::model::AssetInfo).
 pub mod asset_info {
 
-    /// A builder for [`AssetInfo`](crate::model::AssetInfo)
-    #[non_exhaustive]
+    /// A builder for [`AssetInfo`](crate::model::AssetInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) asset_id: std::option::Option<std::string::String>,
@@ -2964,7 +3021,7 @@ pub mod asset_info {
             self.asset_location = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssetInfo`](crate::model::AssetInfo)
+        /// Consumes the builder and constructs a [`AssetInfo`](crate::model::AssetInfo).
         pub fn build(self) -> crate::model::AssetInfo {
             crate::model::AssetInfo {
                 asset_id: self.asset_id,
@@ -2977,7 +3034,7 @@ pub mod asset_info {
     }
 }
 impl AssetInfo {
-    /// Creates a new builder-style object to manufacture [`AssetInfo`](crate::model::AssetInfo)
+    /// Creates a new builder-style object to manufacture [`AssetInfo`](crate::model::AssetInfo).
     pub fn builder() -> crate::model::asset_info::Builder {
         crate::model::asset_info::Builder::default()
     }
@@ -2988,6 +3045,7 @@ impl AssetInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssetLocation {
     /// <p> The position of an asset in a rack measured in rack units. </p>
+    #[doc(hidden)]
     pub rack_elevation: std::option::Option<f32>,
 }
 impl AssetLocation {
@@ -3003,11 +3061,10 @@ impl std::fmt::Debug for AssetLocation {
         formatter.finish()
     }
 }
-/// See [`AssetLocation`](crate::model::AssetLocation)
+/// See [`AssetLocation`](crate::model::AssetLocation).
 pub mod asset_location {
 
-    /// A builder for [`AssetLocation`](crate::model::AssetLocation)
-    #[non_exhaustive]
+    /// A builder for [`AssetLocation`](crate::model::AssetLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rack_elevation: std::option::Option<f32>,
@@ -3023,7 +3080,7 @@ pub mod asset_location {
             self.rack_elevation = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssetLocation`](crate::model::AssetLocation)
+        /// Consumes the builder and constructs a [`AssetLocation`](crate::model::AssetLocation).
         pub fn build(self) -> crate::model::AssetLocation {
             crate::model::AssetLocation {
                 rack_elevation: self.rack_elevation,
@@ -3032,7 +3089,7 @@ pub mod asset_location {
     }
 }
 impl AssetLocation {
-    /// Creates a new builder-style object to manufacture [`AssetLocation`](crate::model::AssetLocation)
+    /// Creates a new builder-style object to manufacture [`AssetLocation`](crate::model::AssetLocation).
     pub fn builder() -> crate::model::asset_location::Builder {
         crate::model::asset_location::Builder::default()
     }
@@ -3043,6 +3100,7 @@ impl AssetLocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComputeAttributes {
     /// <p> The host ID of any Dedicated Hosts on the asset. </p>
+    #[doc(hidden)]
     pub host_id: std::option::Option<std::string::String>,
 }
 impl ComputeAttributes {
@@ -3058,11 +3116,10 @@ impl std::fmt::Debug for ComputeAttributes {
         formatter.finish()
     }
 }
-/// See [`ComputeAttributes`](crate::model::ComputeAttributes)
+/// See [`ComputeAttributes`](crate::model::ComputeAttributes).
 pub mod compute_attributes {
 
-    /// A builder for [`ComputeAttributes`](crate::model::ComputeAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ComputeAttributes`](crate::model::ComputeAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) host_id: std::option::Option<std::string::String>,
@@ -3078,7 +3135,7 @@ pub mod compute_attributes {
             self.host_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComputeAttributes`](crate::model::ComputeAttributes)
+        /// Consumes the builder and constructs a [`ComputeAttributes`](crate::model::ComputeAttributes).
         pub fn build(self) -> crate::model::ComputeAttributes {
             crate::model::ComputeAttributes {
                 host_id: self.host_id,
@@ -3087,7 +3144,7 @@ pub mod compute_attributes {
     }
 }
 impl ComputeAttributes {
-    /// Creates a new builder-style object to manufacture [`ComputeAttributes`](crate::model::ComputeAttributes)
+    /// Creates a new builder-style object to manufacture [`ComputeAttributes`](crate::model::ComputeAttributes).
     pub fn builder() -> crate::model::compute_attributes::Builder {
         crate::model::compute_attributes::Builder::default()
     }
@@ -3149,6 +3206,7 @@ impl AsRef<str> for AssetType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceTypeItem {
     /// <p>The instance type.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
 }
 impl InstanceTypeItem {
@@ -3164,11 +3222,10 @@ impl std::fmt::Debug for InstanceTypeItem {
         formatter.finish()
     }
 }
-/// See [`InstanceTypeItem`](crate::model::InstanceTypeItem)
+/// See [`InstanceTypeItem`](crate::model::InstanceTypeItem).
 pub mod instance_type_item {
 
-    /// A builder for [`InstanceTypeItem`](crate::model::InstanceTypeItem)
-    #[non_exhaustive]
+    /// A builder for [`InstanceTypeItem`](crate::model::InstanceTypeItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_type: std::option::Option<std::string::String>,
@@ -3187,7 +3244,7 @@ pub mod instance_type_item {
             self.instance_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceTypeItem`](crate::model::InstanceTypeItem)
+        /// Consumes the builder and constructs a [`InstanceTypeItem`](crate::model::InstanceTypeItem).
         pub fn build(self) -> crate::model::InstanceTypeItem {
             crate::model::InstanceTypeItem {
                 instance_type: self.instance_type,
@@ -3196,7 +3253,7 @@ pub mod instance_type_item {
     }
 }
 impl InstanceTypeItem {
-    /// Creates a new builder-style object to manufacture [`InstanceTypeItem`](crate::model::InstanceTypeItem)
+    /// Creates a new builder-style object to manufacture [`InstanceTypeItem`](crate::model::InstanceTypeItem).
     pub fn builder() -> crate::model::instance_type_item::Builder {
         crate::model::instance_type_item::Builder::default()
     }
@@ -3207,8 +3264,10 @@ impl InstanceTypeItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Order {
     /// <p> The ID of the Outpost in the order. </p>
+    #[doc(hidden)]
     pub outpost_id: std::option::Option<std::string::String>,
     /// <p>The ID of the order.</p>
+    #[doc(hidden)]
     pub order_id: std::option::Option<std::string::String>,
     /// <p>The status of the order.</p>
     /// <ul>
@@ -3220,14 +3279,19 @@ pub struct Order {
     /// </ul> <note>
     /// <p>The following status are deprecated: <code>RECEIVED</code>, <code>PENDING</code>, <code>PROCESSING</code>, <code>INSTALLING</code>, and <code>FULFILLED</code>. </p>
     /// </note>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::OrderStatus>,
     /// <p>The line items for the order</p>
+    #[doc(hidden)]
     pub line_items: std::option::Option<std::vec::Vec<crate::model::LineItem>>,
     /// <p>The payment option for the order.</p>
+    #[doc(hidden)]
     pub payment_option: std::option::Option<crate::model::PaymentOption>,
     /// <p>The submission date for the order.</p>
+    #[doc(hidden)]
     pub order_submission_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The fulfillment date of the order.</p>
+    #[doc(hidden)]
     pub order_fulfilled_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Order {
@@ -3282,11 +3346,10 @@ impl std::fmt::Debug for Order {
         formatter.finish()
     }
 }
-/// See [`Order`](crate::model::Order)
+/// See [`Order`](crate::model::Order).
 pub mod order {
 
-    /// A builder for [`Order`](crate::model::Order)
-    #[non_exhaustive]
+    /// A builder for [`Order`](crate::model::Order).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) outpost_id: std::option::Option<std::string::String>,
@@ -3404,7 +3467,7 @@ pub mod order {
             self.order_fulfilled_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`Order`](crate::model::Order)
+        /// Consumes the builder and constructs a [`Order`](crate::model::Order).
         pub fn build(self) -> crate::model::Order {
             crate::model::Order {
                 outpost_id: self.outpost_id,
@@ -3419,7 +3482,7 @@ pub mod order {
     }
 }
 impl Order {
-    /// Creates a new builder-style object to manufacture [`Order`](crate::model::Order)
+    /// Creates a new builder-style object to manufacture [`Order`](crate::model::Order).
     pub fn builder() -> crate::model::order::Builder {
         crate::model::order::Builder::default()
     }
@@ -3489,13 +3552,24 @@ impl AsRef<str> for PaymentOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LineItem {
     /// <p> The ID of the catalog item. </p>
+    #[doc(hidden)]
     pub catalog_item_id: std::option::Option<std::string::String>,
     /// <p>The ID of the line item.</p>
+    #[doc(hidden)]
     pub line_item_id: std::option::Option<std::string::String>,
     /// <p>The quantity of the line item.</p>
+    #[doc(hidden)]
     pub quantity: i32,
     /// <p>The status of the line item.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::LineItemStatus>,
+    /// <p> Information about a line item shipment. </p>
+    #[doc(hidden)]
+    pub shipment_information: std::option::Option<crate::model::ShipmentInformation>,
+    /// <p> Information about assets. </p>
+    #[doc(hidden)]
+    pub asset_information_list:
+        std::option::Option<std::vec::Vec<crate::model::LineItemAssetInformation>>,
 }
 impl LineItem {
     /// <p> The ID of the catalog item. </p>
@@ -3514,6 +3588,16 @@ impl LineItem {
     pub fn status(&self) -> std::option::Option<&crate::model::LineItemStatus> {
         self.status.as_ref()
     }
+    /// <p> Information about a line item shipment. </p>
+    pub fn shipment_information(&self) -> std::option::Option<&crate::model::ShipmentInformation> {
+        self.shipment_information.as_ref()
+    }
+    /// <p> Information about assets. </p>
+    pub fn asset_information_list(
+        &self,
+    ) -> std::option::Option<&[crate::model::LineItemAssetInformation]> {
+        self.asset_information_list.as_deref()
+    }
 }
 impl std::fmt::Debug for LineItem {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -3522,20 +3606,24 @@ impl std::fmt::Debug for LineItem {
         formatter.field("line_item_id", &self.line_item_id);
         formatter.field("quantity", &self.quantity);
         formatter.field("status", &self.status);
+        formatter.field("shipment_information", &self.shipment_information);
+        formatter.field("asset_information_list", &self.asset_information_list);
         formatter.finish()
     }
 }
-/// See [`LineItem`](crate::model::LineItem)
+/// See [`LineItem`](crate::model::LineItem).
 pub mod line_item {
 
-    /// A builder for [`LineItem`](crate::model::LineItem)
-    #[non_exhaustive]
+    /// A builder for [`LineItem`](crate::model::LineItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog_item_id: std::option::Option<std::string::String>,
         pub(crate) line_item_id: std::option::Option<std::string::String>,
         pub(crate) quantity: std::option::Option<i32>,
         pub(crate) status: std::option::Option<crate::model::LineItemStatus>,
+        pub(crate) shipment_information: std::option::Option<crate::model::ShipmentInformation>,
+        pub(crate) asset_information_list:
+            std::option::Option<std::vec::Vec<crate::model::LineItemAssetInformation>>,
     }
     impl Builder {
         /// <p> The ID of the catalog item. </p>
@@ -3584,21 +3672,286 @@ pub mod line_item {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`LineItem`](crate::model::LineItem)
+        /// <p> Information about a line item shipment. </p>
+        pub fn shipment_information(mut self, input: crate::model::ShipmentInformation) -> Self {
+            self.shipment_information = Some(input);
+            self
+        }
+        /// <p> Information about a line item shipment. </p>
+        pub fn set_shipment_information(
+            mut self,
+            input: std::option::Option<crate::model::ShipmentInformation>,
+        ) -> Self {
+            self.shipment_information = input;
+            self
+        }
+        /// Appends an item to `asset_information_list`.
+        ///
+        /// To override the contents of this collection use [`set_asset_information_list`](Self::set_asset_information_list).
+        ///
+        /// <p> Information about assets. </p>
+        pub fn asset_information_list(
+            mut self,
+            input: crate::model::LineItemAssetInformation,
+        ) -> Self {
+            let mut v = self.asset_information_list.unwrap_or_default();
+            v.push(input);
+            self.asset_information_list = Some(v);
+            self
+        }
+        /// <p> Information about assets. </p>
+        pub fn set_asset_information_list(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::LineItemAssetInformation>>,
+        ) -> Self {
+            self.asset_information_list = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`LineItem`](crate::model::LineItem).
         pub fn build(self) -> crate::model::LineItem {
             crate::model::LineItem {
                 catalog_item_id: self.catalog_item_id,
                 line_item_id: self.line_item_id,
                 quantity: self.quantity.unwrap_or_default(),
                 status: self.status,
+                shipment_information: self.shipment_information,
+                asset_information_list: self.asset_information_list,
             }
         }
     }
 }
 impl LineItem {
-    /// Creates a new builder-style object to manufacture [`LineItem`](crate::model::LineItem)
+    /// Creates a new builder-style object to manufacture [`LineItem`](crate::model::LineItem).
     pub fn builder() -> crate::model::line_item::Builder {
         crate::model::line_item::Builder::default()
+    }
+}
+
+/// <p> Information about a line item asset. </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct LineItemAssetInformation {
+    /// <p> The ID of the asset. </p>
+    #[doc(hidden)]
+    pub asset_id: std::option::Option<std::string::String>,
+    /// <p> MAC addresses of the asset. </p>
+    #[doc(hidden)]
+    pub mac_address_list: std::option::Option<std::vec::Vec<std::string::String>>,
+}
+impl LineItemAssetInformation {
+    /// <p> The ID of the asset. </p>
+    pub fn asset_id(&self) -> std::option::Option<&str> {
+        self.asset_id.as_deref()
+    }
+    /// <p> MAC addresses of the asset. </p>
+    pub fn mac_address_list(&self) -> std::option::Option<&[std::string::String]> {
+        self.mac_address_list.as_deref()
+    }
+}
+impl std::fmt::Debug for LineItemAssetInformation {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("LineItemAssetInformation");
+        formatter.field("asset_id", &self.asset_id);
+        formatter.field("mac_address_list", &self.mac_address_list);
+        formatter.finish()
+    }
+}
+/// See [`LineItemAssetInformation`](crate::model::LineItemAssetInformation).
+pub mod line_item_asset_information {
+
+    /// A builder for [`LineItemAssetInformation`](crate::model::LineItemAssetInformation).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) asset_id: std::option::Option<std::string::String>,
+        pub(crate) mac_address_list: std::option::Option<std::vec::Vec<std::string::String>>,
+    }
+    impl Builder {
+        /// <p> The ID of the asset. </p>
+        pub fn asset_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.asset_id = Some(input.into());
+            self
+        }
+        /// <p> The ID of the asset. </p>
+        pub fn set_asset_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.asset_id = input;
+            self
+        }
+        /// Appends an item to `mac_address_list`.
+        ///
+        /// To override the contents of this collection use [`set_mac_address_list`](Self::set_mac_address_list).
+        ///
+        /// <p> MAC addresses of the asset. </p>
+        pub fn mac_address_list(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.mac_address_list.unwrap_or_default();
+            v.push(input.into());
+            self.mac_address_list = Some(v);
+            self
+        }
+        /// <p> MAC addresses of the asset. </p>
+        pub fn set_mac_address_list(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.mac_address_list = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`LineItemAssetInformation`](crate::model::LineItemAssetInformation).
+        pub fn build(self) -> crate::model::LineItemAssetInformation {
+            crate::model::LineItemAssetInformation {
+                asset_id: self.asset_id,
+                mac_address_list: self.mac_address_list,
+            }
+        }
+    }
+}
+impl LineItemAssetInformation {
+    /// Creates a new builder-style object to manufacture [`LineItemAssetInformation`](crate::model::LineItemAssetInformation).
+    pub fn builder() -> crate::model::line_item_asset_information::Builder {
+        crate::model::line_item_asset_information::Builder::default()
+    }
+}
+
+/// <p> Information about a line item shipment. </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ShipmentInformation {
+    /// <p> The tracking number of the shipment. </p>
+    #[doc(hidden)]
+    pub shipment_tracking_number: std::option::Option<std::string::String>,
+    /// <p> The carrier of the shipment. </p>
+    #[doc(hidden)]
+    pub shipment_carrier: std::option::Option<crate::model::ShipmentCarrier>,
+}
+impl ShipmentInformation {
+    /// <p> The tracking number of the shipment. </p>
+    pub fn shipment_tracking_number(&self) -> std::option::Option<&str> {
+        self.shipment_tracking_number.as_deref()
+    }
+    /// <p> The carrier of the shipment. </p>
+    pub fn shipment_carrier(&self) -> std::option::Option<&crate::model::ShipmentCarrier> {
+        self.shipment_carrier.as_ref()
+    }
+}
+impl std::fmt::Debug for ShipmentInformation {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ShipmentInformation");
+        formatter.field("shipment_tracking_number", &self.shipment_tracking_number);
+        formatter.field("shipment_carrier", &self.shipment_carrier);
+        formatter.finish()
+    }
+}
+/// See [`ShipmentInformation`](crate::model::ShipmentInformation).
+pub mod shipment_information {
+
+    /// A builder for [`ShipmentInformation`](crate::model::ShipmentInformation).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) shipment_tracking_number: std::option::Option<std::string::String>,
+        pub(crate) shipment_carrier: std::option::Option<crate::model::ShipmentCarrier>,
+    }
+    impl Builder {
+        /// <p> The tracking number of the shipment. </p>
+        pub fn shipment_tracking_number(mut self, input: impl Into<std::string::String>) -> Self {
+            self.shipment_tracking_number = Some(input.into());
+            self
+        }
+        /// <p> The tracking number of the shipment. </p>
+        pub fn set_shipment_tracking_number(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.shipment_tracking_number = input;
+            self
+        }
+        /// <p> The carrier of the shipment. </p>
+        pub fn shipment_carrier(mut self, input: crate::model::ShipmentCarrier) -> Self {
+            self.shipment_carrier = Some(input);
+            self
+        }
+        /// <p> The carrier of the shipment. </p>
+        pub fn set_shipment_carrier(
+            mut self,
+            input: std::option::Option<crate::model::ShipmentCarrier>,
+        ) -> Self {
+            self.shipment_carrier = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ShipmentInformation`](crate::model::ShipmentInformation).
+        pub fn build(self) -> crate::model::ShipmentInformation {
+            crate::model::ShipmentInformation {
+                shipment_tracking_number: self.shipment_tracking_number,
+                shipment_carrier: self.shipment_carrier,
+            }
+        }
+    }
+}
+impl ShipmentInformation {
+    /// Creates a new builder-style object to manufacture [`ShipmentInformation`](crate::model::ShipmentInformation).
+    pub fn builder() -> crate::model::shipment_information::Builder {
+        crate::model::shipment_information::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum ShipmentCarrier {
+    #[allow(missing_docs)] // documentation missing in model
+    Dbs,
+    #[allow(missing_docs)] // documentation missing in model
+    Dhl,
+    #[allow(missing_docs)] // documentation missing in model
+    Fedex,
+    #[allow(missing_docs)] // documentation missing in model
+    Ups,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for ShipmentCarrier {
+    fn from(s: &str) -> Self {
+        match s {
+            "DBS" => ShipmentCarrier::Dbs,
+            "DHL" => ShipmentCarrier::Dhl,
+            "FEDEX" => ShipmentCarrier::Fedex,
+            "UPS" => ShipmentCarrier::Ups,
+            other => ShipmentCarrier::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for ShipmentCarrier {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(ShipmentCarrier::from(s))
+    }
+}
+impl ShipmentCarrier {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            ShipmentCarrier::Dbs => "DBS",
+            ShipmentCarrier::Dhl => "DHL",
+            ShipmentCarrier::Fedex => "FEDEX",
+            ShipmentCarrier::Ups => "UPS",
+            ShipmentCarrier::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["DBS", "DHL", "FEDEX", "UPS"]
+    }
+}
+impl AsRef<str> for ShipmentCarrier {
+    fn as_ref(&self) -> &str {
+        self.as_str()
     }
 }
 
@@ -3607,16 +3960,22 @@ impl LineItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectionDetails {
     /// <p> The public key of the client. </p>
+    #[doc(hidden)]
     pub client_public_key: std::option::Option<std::string::String>,
     /// <p> The public key of the server. </p>
+    #[doc(hidden)]
     pub server_public_key: std::option::Option<std::string::String>,
     /// <p> The endpoint for the server. </p>
+    #[doc(hidden)]
     pub server_endpoint: std::option::Option<std::string::String>,
     /// <p> The client tunnel address. </p>
+    #[doc(hidden)]
     pub client_tunnel_address: std::option::Option<std::string::String>,
     /// <p> The server tunnel address. </p>
+    #[doc(hidden)]
     pub server_tunnel_address: std::option::Option<std::string::String>,
     /// <p> The allowed IP addresses. </p>
+    #[doc(hidden)]
     pub allowed_ips: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ConnectionDetails {
@@ -3657,11 +4016,10 @@ impl std::fmt::Debug for ConnectionDetails {
         formatter.finish()
     }
 }
-/// See [`ConnectionDetails`](crate::model::ConnectionDetails)
+/// See [`ConnectionDetails`](crate::model::ConnectionDetails).
 pub mod connection_details {
 
-    /// A builder for [`ConnectionDetails`](crate::model::ConnectionDetails)
-    #[non_exhaustive]
+    /// A builder for [`ConnectionDetails`](crate::model::ConnectionDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_public_key: std::option::Option<std::string::String>,
@@ -3756,7 +4114,7 @@ pub mod connection_details {
             self.allowed_ips = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectionDetails`](crate::model::ConnectionDetails)
+        /// Consumes the builder and constructs a [`ConnectionDetails`](crate::model::ConnectionDetails).
         pub fn build(self) -> crate::model::ConnectionDetails {
             crate::model::ConnectionDetails {
                 client_public_key: self.client_public_key,
@@ -3770,7 +4128,7 @@ pub mod connection_details {
     }
 }
 impl ConnectionDetails {
-    /// Creates a new builder-style object to manufacture [`ConnectionDetails`](crate::model::ConnectionDetails)
+    /// Creates a new builder-style object to manufacture [`ConnectionDetails`](crate::model::ConnectionDetails).
     pub fn builder() -> crate::model::connection_details::Builder {
         crate::model::connection_details::Builder::default()
     }
@@ -3832,8 +4190,10 @@ impl AsRef<str> for PaymentTerm {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LineItemRequest {
     /// <p>The ID of the catalog item.</p>
+    #[doc(hidden)]
     pub catalog_item_id: std::option::Option<std::string::String>,
     /// <p>The quantity of a line item request.</p>
+    #[doc(hidden)]
     pub quantity: i32,
 }
 impl LineItemRequest {
@@ -3854,11 +4214,10 @@ impl std::fmt::Debug for LineItemRequest {
         formatter.finish()
     }
 }
-/// See [`LineItemRequest`](crate::model::LineItemRequest)
+/// See [`LineItemRequest`](crate::model::LineItemRequest).
 pub mod line_item_request {
 
-    /// A builder for [`LineItemRequest`](crate::model::LineItemRequest)
-    #[non_exhaustive]
+    /// A builder for [`LineItemRequest`](crate::model::LineItemRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) catalog_item_id: std::option::Option<std::string::String>,
@@ -3888,7 +4247,7 @@ pub mod line_item_request {
             self.quantity = input;
             self
         }
-        /// Consumes the builder and constructs a [`LineItemRequest`](crate::model::LineItemRequest)
+        /// Consumes the builder and constructs a [`LineItemRequest`](crate::model::LineItemRequest).
         pub fn build(self) -> crate::model::LineItemRequest {
             crate::model::LineItemRequest {
                 catalog_item_id: self.catalog_item_id,
@@ -3898,7 +4257,7 @@ pub mod line_item_request {
     }
 }
 impl LineItemRequest {
-    /// Creates a new builder-style object to manufacture [`LineItemRequest`](crate::model::LineItemRequest)
+    /// Creates a new builder-style object to manufacture [`LineItemRequest`](crate::model::LineItemRequest).
     pub fn builder() -> crate::model::line_item_request::Builder {
         crate::model::line_item_request::Builder::default()
     }

@@ -11,10 +11,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailureInfo {
     /// <p>The HTTP status code of the common error.</p>
+    #[doc(hidden)]
     pub status_code: i32,
     /// <p>The code of the common error. Valid values include <code>InternalServiceException</code>, <code>InvalidParameterException</code>, and any valid error code returned by the Amazon Web Services service that hosts the resource that you want to tag.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<crate::model::ErrorCode>,
     /// <p>The message of the common error.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl FailureInfo {
@@ -40,11 +43,10 @@ impl std::fmt::Debug for FailureInfo {
         formatter.finish()
     }
 }
-/// See [`FailureInfo`](crate::model::FailureInfo)
+/// See [`FailureInfo`](crate::model::FailureInfo).
 pub mod failure_info {
 
-    /// A builder for [`FailureInfo`](crate::model::FailureInfo)
-    #[non_exhaustive]
+    /// A builder for [`FailureInfo`](crate::model::FailureInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status_code: std::option::Option<i32>,
@@ -88,7 +90,7 @@ pub mod failure_info {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailureInfo`](crate::model::FailureInfo)
+        /// Consumes the builder and constructs a [`FailureInfo`](crate::model::FailureInfo).
         pub fn build(self) -> crate::model::FailureInfo {
             crate::model::FailureInfo {
                 status_code: self.status_code.unwrap_or_default(),
@@ -99,7 +101,7 @@ pub mod failure_info {
     }
 }
 impl FailureInfo {
-    /// Creates a new builder-style object to manufacture [`FailureInfo`](crate::model::FailureInfo)
+    /// Creates a new builder-style object to manufacture [`FailureInfo`](crate::model::FailureInfo).
     pub fn builder() -> crate::model::failure_info::Builder {
         crate::model::failure_info::Builder::default()
     }
@@ -165,10 +167,13 @@ impl AsRef<str> for ErrorCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceTagMapping {
     /// <p>The ARN of the resource.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>The tags that have been applied to one or more Amazon Web Services resources.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Information that shows whether a resource is compliant with the effective tag policy, including details on any noncompliant tag keys.</p>
+    #[doc(hidden)]
     pub compliance_details: std::option::Option<crate::model::ComplianceDetails>,
 }
 impl ResourceTagMapping {
@@ -194,11 +199,10 @@ impl std::fmt::Debug for ResourceTagMapping {
         formatter.finish()
     }
 }
-/// See [`ResourceTagMapping`](crate::model::ResourceTagMapping)
+/// See [`ResourceTagMapping`](crate::model::ResourceTagMapping).
 pub mod resource_tag_mapping {
 
-    /// A builder for [`ResourceTagMapping`](crate::model::ResourceTagMapping)
-    #[non_exhaustive]
+    /// A builder for [`ResourceTagMapping`](crate::model::ResourceTagMapping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -248,7 +252,7 @@ pub mod resource_tag_mapping {
             self.compliance_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceTagMapping`](crate::model::ResourceTagMapping)
+        /// Consumes the builder and constructs a [`ResourceTagMapping`](crate::model::ResourceTagMapping).
         pub fn build(self) -> crate::model::ResourceTagMapping {
             crate::model::ResourceTagMapping {
                 resource_arn: self.resource_arn,
@@ -259,7 +263,7 @@ pub mod resource_tag_mapping {
     }
 }
 impl ResourceTagMapping {
-    /// Creates a new builder-style object to manufacture [`ResourceTagMapping`](crate::model::ResourceTagMapping)
+    /// Creates a new builder-style object to manufacture [`ResourceTagMapping`](crate::model::ResourceTagMapping).
     pub fn builder() -> crate::model::resource_tag_mapping::Builder {
         crate::model::resource_tag_mapping::Builder::default()
     }
@@ -270,10 +274,13 @@ impl ResourceTagMapping {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComplianceDetails {
     /// <p>These tag keys on the resource are noncompliant with the effective tag policy.</p>
+    #[doc(hidden)]
     pub noncompliant_keys: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>These are keys defined in the effective policy that are on the resource with either incorrect case treatment or noncompliant values. </p>
+    #[doc(hidden)]
     pub keys_with_noncompliant_values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Whether a resource is compliant with the effective tag policy.</p>
+    #[doc(hidden)]
     pub compliance_status: std::option::Option<bool>,
 }
 impl ComplianceDetails {
@@ -302,11 +309,10 @@ impl std::fmt::Debug for ComplianceDetails {
         formatter.finish()
     }
 }
-/// See [`ComplianceDetails`](crate::model::ComplianceDetails)
+/// See [`ComplianceDetails`](crate::model::ComplianceDetails).
 pub mod compliance_details {
 
-    /// A builder for [`ComplianceDetails`](crate::model::ComplianceDetails)
-    #[non_exhaustive]
+    /// A builder for [`ComplianceDetails`](crate::model::ComplianceDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) noncompliant_keys: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -366,7 +372,7 @@ pub mod compliance_details {
             self.compliance_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComplianceDetails`](crate::model::ComplianceDetails)
+        /// Consumes the builder and constructs a [`ComplianceDetails`](crate::model::ComplianceDetails).
         pub fn build(self) -> crate::model::ComplianceDetails {
             crate::model::ComplianceDetails {
                 noncompliant_keys: self.noncompliant_keys,
@@ -377,7 +383,7 @@ pub mod compliance_details {
     }
 }
 impl ComplianceDetails {
-    /// Creates a new builder-style object to manufacture [`ComplianceDetails`](crate::model::ComplianceDetails)
+    /// Creates a new builder-style object to manufacture [`ComplianceDetails`](crate::model::ComplianceDetails).
     pub fn builder() -> crate::model::compliance_details::Builder {
         crate::model::compliance_details::Builder::default()
     }
@@ -388,8 +394,10 @@ impl ComplianceDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>One part of a key-value pair that makes up a tag. A key is a general label that acts like a category for more specific tag values.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>One part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key). The value can be empty or null.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -410,11 +418,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -441,7 +448,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -451,7 +458,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -462,8 +469,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TagFilter {
     /// <p>One part of a key-value pair that makes up a tag. A key is a general label that acts like a category for more specific tag values.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>One part of a key-value pair that make up a tag. A value acts as a descriptor within a tag category (key). The value can be empty or null.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl TagFilter {
@@ -484,11 +493,10 @@ impl std::fmt::Debug for TagFilter {
         formatter.finish()
     }
 }
-/// See [`TagFilter`](crate::model::TagFilter)
+/// See [`TagFilter`](crate::model::TagFilter).
 pub mod tag_filter {
 
-    /// A builder for [`TagFilter`](crate::model::TagFilter)
-    #[non_exhaustive]
+    /// A builder for [`TagFilter`](crate::model::TagFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -524,7 +532,7 @@ pub mod tag_filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagFilter`](crate::model::TagFilter)
+        /// Consumes the builder and constructs a [`TagFilter`](crate::model::TagFilter).
         pub fn build(self) -> crate::model::TagFilter {
             crate::model::TagFilter {
                 key: self.key,
@@ -534,7 +542,7 @@ pub mod tag_filter {
     }
 }
 impl TagFilter {
-    /// Creates a new builder-style object to manufacture [`TagFilter`](crate::model::TagFilter)
+    /// Creates a new builder-style object to manufacture [`TagFilter`](crate::model::TagFilter).
     pub fn builder() -> crate::model::tag_filter::Builder {
         crate::model::tag_filter::Builder::default()
     }
@@ -545,16 +553,22 @@ impl TagFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Summary {
     /// <p>The timestamp that shows when this summary was generated in this Region. </p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<std::string::String>,
     /// <p>The account identifier or the root identifier of the organization. If you don't know the root ID, you can call the Organizations <a href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.</p>
+    #[doc(hidden)]
     pub target_id: std::option::Option<std::string::String>,
     /// <p>Whether the target is an account, an OU, or the organization root.</p>
+    #[doc(hidden)]
     pub target_id_type: std::option::Option<crate::model::TargetIdType>,
     /// <p>The Amazon Web Services Region that the summary applies to.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services resource type.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The count of noncompliant resources.</p>
+    #[doc(hidden)]
     pub non_compliant_resources: i64,
 }
 impl Summary {
@@ -595,11 +609,10 @@ impl std::fmt::Debug for Summary {
         formatter.finish()
     }
 }
-/// See [`Summary`](crate::model::Summary)
+/// See [`Summary`](crate::model::Summary).
 pub mod summary {
 
-    /// A builder for [`Summary`](crate::model::Summary)
-    #[non_exhaustive]
+    /// A builder for [`Summary`](crate::model::Summary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) last_updated: std::option::Option<std::string::String>,
@@ -676,7 +689,7 @@ pub mod summary {
             self.non_compliant_resources = input;
             self
         }
-        /// Consumes the builder and constructs a [`Summary`](crate::model::Summary)
+        /// Consumes the builder and constructs a [`Summary`](crate::model::Summary).
         pub fn build(self) -> crate::model::Summary {
             crate::model::Summary {
                 last_updated: self.last_updated,
@@ -690,7 +703,7 @@ pub mod summary {
     }
 }
 impl Summary {
-    /// Creates a new builder-style object to manufacture [`Summary`](crate::model::Summary)
+    /// Creates a new builder-style object to manufacture [`Summary`](crate::model::Summary).
     pub fn builder() -> crate::model::summary::Builder {
         crate::model::summary::Builder::default()
     }

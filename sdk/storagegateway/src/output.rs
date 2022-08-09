@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateVtlDeviceTypeOutput {
     /// <p>The Amazon Resource Name (ARN) of the medium changer you have selected.</p>
+    #[doc(hidden)]
     pub vtl_device_arn: std::option::Option<std::string::String>,
 }
 impl UpdateVtlDeviceTypeOutput {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for UpdateVtlDeviceTypeOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateVtlDeviceTypeOutput`](crate::output::UpdateVtlDeviceTypeOutput)
+/// See [`UpdateVtlDeviceTypeOutput`](crate::output::UpdateVtlDeviceTypeOutput).
 pub mod update_vtl_device_type_output {
 
-    /// A builder for [`UpdateVtlDeviceTypeOutput`](crate::output::UpdateVtlDeviceTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateVtlDeviceTypeOutput`](crate::output::UpdateVtlDeviceTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vtl_device_arn: std::option::Option<std::string::String>,
@@ -43,7 +43,7 @@ pub mod update_vtl_device_type_output {
             self.vtl_device_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateVtlDeviceTypeOutput`](crate::output::UpdateVtlDeviceTypeOutput)
+        /// Consumes the builder and constructs a [`UpdateVtlDeviceTypeOutput`](crate::output::UpdateVtlDeviceTypeOutput).
         pub fn build(self) -> crate::output::UpdateVtlDeviceTypeOutput {
             crate::output::UpdateVtlDeviceTypeOutput {
                 vtl_device_arn: self.vtl_device_arn,
@@ -52,7 +52,7 @@ pub mod update_vtl_device_type_output {
     }
 }
 impl UpdateVtlDeviceTypeOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateVtlDeviceTypeOutput`](crate::output::UpdateVtlDeviceTypeOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateVtlDeviceTypeOutput`](crate::output::UpdateVtlDeviceTypeOutput).
     pub fn builder() -> crate::output::update_vtl_device_type_output::Builder {
         crate::output::update_vtl_device_type_output::Builder::default()
     }
@@ -63,6 +63,7 @@ impl UpdateVtlDeviceTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSnapshotScheduleOutput {
     /// <p>The Amazon Resource Name (ARN) of the volume. Use the <code>ListVolumes</code> operation to return a list of gateway volumes.</p>
+    #[doc(hidden)]
     pub volume_arn: std::option::Option<std::string::String>,
 }
 impl UpdateSnapshotScheduleOutput {
@@ -78,11 +79,10 @@ impl std::fmt::Debug for UpdateSnapshotScheduleOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSnapshotScheduleOutput`](crate::output::UpdateSnapshotScheduleOutput)
+/// See [`UpdateSnapshotScheduleOutput`](crate::output::UpdateSnapshotScheduleOutput).
 pub mod update_snapshot_schedule_output {
 
-    /// A builder for [`UpdateSnapshotScheduleOutput`](crate::output::UpdateSnapshotScheduleOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSnapshotScheduleOutput`](crate::output::UpdateSnapshotScheduleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_arn: std::option::Option<std::string::String>,
@@ -98,7 +98,7 @@ pub mod update_snapshot_schedule_output {
             self.volume_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSnapshotScheduleOutput`](crate::output::UpdateSnapshotScheduleOutput)
+        /// Consumes the builder and constructs a [`UpdateSnapshotScheduleOutput`](crate::output::UpdateSnapshotScheduleOutput).
         pub fn build(self) -> crate::output::UpdateSnapshotScheduleOutput {
             crate::output::UpdateSnapshotScheduleOutput {
                 volume_arn: self.volume_arn,
@@ -107,7 +107,7 @@ pub mod update_snapshot_schedule_output {
     }
 }
 impl UpdateSnapshotScheduleOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSnapshotScheduleOutput`](crate::output::UpdateSnapshotScheduleOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSnapshotScheduleOutput`](crate::output::UpdateSnapshotScheduleOutput).
     pub fn builder() -> crate::output::update_snapshot_schedule_output::Builder {
         crate::output::update_snapshot_schedule_output::Builder::default()
     }
@@ -118,6 +118,7 @@ impl UpdateSnapshotScheduleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSmbSecurityStrategyOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl UpdateSmbSecurityStrategyOutput {
@@ -133,11 +134,10 @@ impl std::fmt::Debug for UpdateSmbSecurityStrategyOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSmbSecurityStrategyOutput`](crate::output::UpdateSmbSecurityStrategyOutput)
+/// See [`UpdateSmbSecurityStrategyOutput`](crate::output::UpdateSmbSecurityStrategyOutput).
 pub mod update_smb_security_strategy_output {
 
-    /// A builder for [`UpdateSmbSecurityStrategyOutput`](crate::output::UpdateSmbSecurityStrategyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSmbSecurityStrategyOutput`](crate::output::UpdateSmbSecurityStrategyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -153,7 +153,7 @@ pub mod update_smb_security_strategy_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSmbSecurityStrategyOutput`](crate::output::UpdateSmbSecurityStrategyOutput)
+        /// Consumes the builder and constructs a [`UpdateSmbSecurityStrategyOutput`](crate::output::UpdateSmbSecurityStrategyOutput).
         pub fn build(self) -> crate::output::UpdateSmbSecurityStrategyOutput {
             crate::output::UpdateSmbSecurityStrategyOutput {
                 gateway_arn: self.gateway_arn,
@@ -162,7 +162,7 @@ pub mod update_smb_security_strategy_output {
     }
 }
 impl UpdateSmbSecurityStrategyOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSmbSecurityStrategyOutput`](crate::output::UpdateSmbSecurityStrategyOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSmbSecurityStrategyOutput`](crate::output::UpdateSmbSecurityStrategyOutput).
     pub fn builder() -> crate::output::update_smb_security_strategy_output::Builder {
         crate::output::update_smb_security_strategy_output::Builder::default()
     }
@@ -173,6 +173,7 @@ impl UpdateSmbSecurityStrategyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSmbLocalGroupsOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl UpdateSmbLocalGroupsOutput {
@@ -188,11 +189,10 @@ impl std::fmt::Debug for UpdateSmbLocalGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSmbLocalGroupsOutput`](crate::output::UpdateSmbLocalGroupsOutput)
+/// See [`UpdateSmbLocalGroupsOutput`](crate::output::UpdateSmbLocalGroupsOutput).
 pub mod update_smb_local_groups_output {
 
-    /// A builder for [`UpdateSmbLocalGroupsOutput`](crate::output::UpdateSmbLocalGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSmbLocalGroupsOutput`](crate::output::UpdateSmbLocalGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -208,7 +208,7 @@ pub mod update_smb_local_groups_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSmbLocalGroupsOutput`](crate::output::UpdateSmbLocalGroupsOutput)
+        /// Consumes the builder and constructs a [`UpdateSmbLocalGroupsOutput`](crate::output::UpdateSmbLocalGroupsOutput).
         pub fn build(self) -> crate::output::UpdateSmbLocalGroupsOutput {
             crate::output::UpdateSmbLocalGroupsOutput {
                 gateway_arn: self.gateway_arn,
@@ -217,7 +217,7 @@ pub mod update_smb_local_groups_output {
     }
 }
 impl UpdateSmbLocalGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSmbLocalGroupsOutput`](crate::output::UpdateSmbLocalGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSmbLocalGroupsOutput`](crate::output::UpdateSmbLocalGroupsOutput).
     pub fn builder() -> crate::output::update_smb_local_groups_output::Builder {
         crate::output::update_smb_local_groups_output::Builder::default()
     }
@@ -228,6 +228,7 @@ impl UpdateSmbLocalGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSmbFileShareVisibilityOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl UpdateSmbFileShareVisibilityOutput {
@@ -243,11 +244,10 @@ impl std::fmt::Debug for UpdateSmbFileShareVisibilityOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSmbFileShareVisibilityOutput`](crate::output::UpdateSmbFileShareVisibilityOutput)
+/// See [`UpdateSmbFileShareVisibilityOutput`](crate::output::UpdateSmbFileShareVisibilityOutput).
 pub mod update_smb_file_share_visibility_output {
 
-    /// A builder for [`UpdateSmbFileShareVisibilityOutput`](crate::output::UpdateSmbFileShareVisibilityOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSmbFileShareVisibilityOutput`](crate::output::UpdateSmbFileShareVisibilityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -263,7 +263,7 @@ pub mod update_smb_file_share_visibility_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSmbFileShareVisibilityOutput`](crate::output::UpdateSmbFileShareVisibilityOutput)
+        /// Consumes the builder and constructs a [`UpdateSmbFileShareVisibilityOutput`](crate::output::UpdateSmbFileShareVisibilityOutput).
         pub fn build(self) -> crate::output::UpdateSmbFileShareVisibilityOutput {
             crate::output::UpdateSmbFileShareVisibilityOutput {
                 gateway_arn: self.gateway_arn,
@@ -272,7 +272,7 @@ pub mod update_smb_file_share_visibility_output {
     }
 }
 impl UpdateSmbFileShareVisibilityOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSmbFileShareVisibilityOutput`](crate::output::UpdateSmbFileShareVisibilityOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSmbFileShareVisibilityOutput`](crate::output::UpdateSmbFileShareVisibilityOutput).
     pub fn builder() -> crate::output::update_smb_file_share_visibility_output::Builder {
         crate::output::update_smb_file_share_visibility_output::Builder::default()
     }
@@ -283,6 +283,7 @@ impl UpdateSmbFileShareVisibilityOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSmbFileShareOutput {
     /// <p>The Amazon Resource Name (ARN) of the updated SMB file share.</p>
+    #[doc(hidden)]
     pub file_share_arn: std::option::Option<std::string::String>,
 }
 impl UpdateSmbFileShareOutput {
@@ -298,11 +299,10 @@ impl std::fmt::Debug for UpdateSmbFileShareOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSmbFileShareOutput`](crate::output::UpdateSmbFileShareOutput)
+/// See [`UpdateSmbFileShareOutput`](crate::output::UpdateSmbFileShareOutput).
 pub mod update_smb_file_share_output {
 
-    /// A builder for [`UpdateSmbFileShareOutput`](crate::output::UpdateSmbFileShareOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSmbFileShareOutput`](crate::output::UpdateSmbFileShareOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_share_arn: std::option::Option<std::string::String>,
@@ -321,7 +321,7 @@ pub mod update_smb_file_share_output {
             self.file_share_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSmbFileShareOutput`](crate::output::UpdateSmbFileShareOutput)
+        /// Consumes the builder and constructs a [`UpdateSmbFileShareOutput`](crate::output::UpdateSmbFileShareOutput).
         pub fn build(self) -> crate::output::UpdateSmbFileShareOutput {
             crate::output::UpdateSmbFileShareOutput {
                 file_share_arn: self.file_share_arn,
@@ -330,7 +330,7 @@ pub mod update_smb_file_share_output {
     }
 }
 impl UpdateSmbFileShareOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSmbFileShareOutput`](crate::output::UpdateSmbFileShareOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSmbFileShareOutput`](crate::output::UpdateSmbFileShareOutput).
     pub fn builder() -> crate::output::update_smb_file_share_output::Builder {
         crate::output::update_smb_file_share_output::Builder::default()
     }
@@ -341,6 +341,7 @@ impl UpdateSmbFileShareOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateNfsFileShareOutput {
     /// <p>The Amazon Resource Name (ARN) of the updated file share.</p>
+    #[doc(hidden)]
     pub file_share_arn: std::option::Option<std::string::String>,
 }
 impl UpdateNfsFileShareOutput {
@@ -356,11 +357,10 @@ impl std::fmt::Debug for UpdateNfsFileShareOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateNfsFileShareOutput`](crate::output::UpdateNfsFileShareOutput)
+/// See [`UpdateNfsFileShareOutput`](crate::output::UpdateNfsFileShareOutput).
 pub mod update_nfs_file_share_output {
 
-    /// A builder for [`UpdateNfsFileShareOutput`](crate::output::UpdateNfsFileShareOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateNfsFileShareOutput`](crate::output::UpdateNfsFileShareOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_share_arn: std::option::Option<std::string::String>,
@@ -379,7 +379,7 @@ pub mod update_nfs_file_share_output {
             self.file_share_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateNfsFileShareOutput`](crate::output::UpdateNfsFileShareOutput)
+        /// Consumes the builder and constructs a [`UpdateNfsFileShareOutput`](crate::output::UpdateNfsFileShareOutput).
         pub fn build(self) -> crate::output::UpdateNfsFileShareOutput {
             crate::output::UpdateNfsFileShareOutput {
                 file_share_arn: self.file_share_arn,
@@ -388,7 +388,7 @@ pub mod update_nfs_file_share_output {
     }
 }
 impl UpdateNfsFileShareOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateNfsFileShareOutput`](crate::output::UpdateNfsFileShareOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateNfsFileShareOutput`](crate::output::UpdateNfsFileShareOutput).
     pub fn builder() -> crate::output::update_nfs_file_share_output::Builder {
         crate::output::update_nfs_file_share_output::Builder::default()
     }
@@ -399,6 +399,7 @@ impl UpdateNfsFileShareOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateMaintenanceStartTimeOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl UpdateMaintenanceStartTimeOutput {
@@ -414,11 +415,10 @@ impl std::fmt::Debug for UpdateMaintenanceStartTimeOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateMaintenanceStartTimeOutput`](crate::output::UpdateMaintenanceStartTimeOutput)
+/// See [`UpdateMaintenanceStartTimeOutput`](crate::output::UpdateMaintenanceStartTimeOutput).
 pub mod update_maintenance_start_time_output {
 
-    /// A builder for [`UpdateMaintenanceStartTimeOutput`](crate::output::UpdateMaintenanceStartTimeOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateMaintenanceStartTimeOutput`](crate::output::UpdateMaintenanceStartTimeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -434,7 +434,7 @@ pub mod update_maintenance_start_time_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateMaintenanceStartTimeOutput`](crate::output::UpdateMaintenanceStartTimeOutput)
+        /// Consumes the builder and constructs a [`UpdateMaintenanceStartTimeOutput`](crate::output::UpdateMaintenanceStartTimeOutput).
         pub fn build(self) -> crate::output::UpdateMaintenanceStartTimeOutput {
             crate::output::UpdateMaintenanceStartTimeOutput {
                 gateway_arn: self.gateway_arn,
@@ -443,7 +443,7 @@ pub mod update_maintenance_start_time_output {
     }
 }
 impl UpdateMaintenanceStartTimeOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateMaintenanceStartTimeOutput`](crate::output::UpdateMaintenanceStartTimeOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateMaintenanceStartTimeOutput`](crate::output::UpdateMaintenanceStartTimeOutput).
     pub fn builder() -> crate::output::update_maintenance_start_time_output::Builder {
         crate::output::update_maintenance_start_time_output::Builder::default()
     }
@@ -454,6 +454,7 @@ impl UpdateMaintenanceStartTimeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateGatewaySoftwareNowOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl UpdateGatewaySoftwareNowOutput {
@@ -469,11 +470,10 @@ impl std::fmt::Debug for UpdateGatewaySoftwareNowOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput)
+/// See [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput).
 pub mod update_gateway_software_now_output {
 
-    /// A builder for [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -489,7 +489,7 @@ pub mod update_gateway_software_now_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput)
+        /// Consumes the builder and constructs a [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput).
         pub fn build(self) -> crate::output::UpdateGatewaySoftwareNowOutput {
             crate::output::UpdateGatewaySoftwareNowOutput {
                 gateway_arn: self.gateway_arn,
@@ -498,7 +498,7 @@ pub mod update_gateway_software_now_output {
     }
 }
 impl UpdateGatewaySoftwareNowOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput).
     pub fn builder() -> crate::output::update_gateway_software_now_output::Builder {
         crate::output::update_gateway_software_now_output::Builder::default()
     }
@@ -509,8 +509,10 @@ impl UpdateGatewaySoftwareNowOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateGatewayInformationOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>The name you configured for your gateway.</p>
+    #[doc(hidden)]
     pub gateway_name: std::option::Option<std::string::String>,
 }
 impl UpdateGatewayInformationOutput {
@@ -531,11 +533,10 @@ impl std::fmt::Debug for UpdateGatewayInformationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput)
+/// See [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput).
 pub mod update_gateway_information_output {
 
-    /// A builder for [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -562,7 +563,7 @@ pub mod update_gateway_information_output {
             self.gateway_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput)
+        /// Consumes the builder and constructs a [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput).
         pub fn build(self) -> crate::output::UpdateGatewayInformationOutput {
             crate::output::UpdateGatewayInformationOutput {
                 gateway_arn: self.gateway_arn,
@@ -572,7 +573,7 @@ pub mod update_gateway_information_output {
     }
 }
 impl UpdateGatewayInformationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput).
     pub fn builder() -> crate::output::update_gateway_information_output::Builder {
         crate::output::update_gateway_information_output::Builder::default()
     }
@@ -583,6 +584,7 @@ impl UpdateGatewayInformationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFileSystemAssociationOutput {
     /// <p>The ARN of the updated file system association.</p>
+    #[doc(hidden)]
     pub file_system_association_arn: std::option::Option<std::string::String>,
 }
 impl UpdateFileSystemAssociationOutput {
@@ -601,11 +603,10 @@ impl std::fmt::Debug for UpdateFileSystemAssociationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFileSystemAssociationOutput`](crate::output::UpdateFileSystemAssociationOutput)
+/// See [`UpdateFileSystemAssociationOutput`](crate::output::UpdateFileSystemAssociationOutput).
 pub mod update_file_system_association_output {
 
-    /// A builder for [`UpdateFileSystemAssociationOutput`](crate::output::UpdateFileSystemAssociationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFileSystemAssociationOutput`](crate::output::UpdateFileSystemAssociationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_system_association_arn: std::option::Option<std::string::String>,
@@ -627,7 +628,7 @@ pub mod update_file_system_association_output {
             self.file_system_association_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFileSystemAssociationOutput`](crate::output::UpdateFileSystemAssociationOutput)
+        /// Consumes the builder and constructs a [`UpdateFileSystemAssociationOutput`](crate::output::UpdateFileSystemAssociationOutput).
         pub fn build(self) -> crate::output::UpdateFileSystemAssociationOutput {
             crate::output::UpdateFileSystemAssociationOutput {
                 file_system_association_arn: self.file_system_association_arn,
@@ -636,7 +637,7 @@ pub mod update_file_system_association_output {
     }
 }
 impl UpdateFileSystemAssociationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFileSystemAssociationOutput`](crate::output::UpdateFileSystemAssociationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFileSystemAssociationOutput`](crate::output::UpdateFileSystemAssociationOutput).
     pub fn builder() -> crate::output::update_file_system_association_output::Builder {
         crate::output::update_file_system_association_output::Builder::default()
     }
@@ -647,8 +648,10 @@ impl UpdateFileSystemAssociationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateChapCredentialsOutput {
     /// <p>The Amazon Resource Name (ARN) of the target. This is the same target specified in the request.</p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
     /// <p>The iSCSI initiator that connects to the target. This is the same initiator name specified in the request.</p>
+    #[doc(hidden)]
     pub initiator_name: std::option::Option<std::string::String>,
 }
 impl UpdateChapCredentialsOutput {
@@ -669,11 +672,10 @@ impl std::fmt::Debug for UpdateChapCredentialsOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateChapCredentialsOutput`](crate::output::UpdateChapCredentialsOutput)
+/// See [`UpdateChapCredentialsOutput`](crate::output::UpdateChapCredentialsOutput).
 pub mod update_chap_credentials_output {
 
-    /// A builder for [`UpdateChapCredentialsOutput`](crate::output::UpdateChapCredentialsOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateChapCredentialsOutput`](crate::output::UpdateChapCredentialsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_arn: std::option::Option<std::string::String>,
@@ -703,7 +705,7 @@ pub mod update_chap_credentials_output {
             self.initiator_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateChapCredentialsOutput`](crate::output::UpdateChapCredentialsOutput)
+        /// Consumes the builder and constructs a [`UpdateChapCredentialsOutput`](crate::output::UpdateChapCredentialsOutput).
         pub fn build(self) -> crate::output::UpdateChapCredentialsOutput {
             crate::output::UpdateChapCredentialsOutput {
                 target_arn: self.target_arn,
@@ -713,7 +715,7 @@ pub mod update_chap_credentials_output {
     }
 }
 impl UpdateChapCredentialsOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateChapCredentialsOutput`](crate::output::UpdateChapCredentialsOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateChapCredentialsOutput`](crate::output::UpdateChapCredentialsOutput).
     pub fn builder() -> crate::output::update_chap_credentials_output::Builder {
         crate::output::update_chap_credentials_output::Builder::default()
     }
@@ -724,6 +726,7 @@ impl UpdateChapCredentialsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBandwidthRateLimitScheduleOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl UpdateBandwidthRateLimitScheduleOutput {
@@ -739,11 +742,10 @@ impl std::fmt::Debug for UpdateBandwidthRateLimitScheduleOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateBandwidthRateLimitScheduleOutput`](crate::output::UpdateBandwidthRateLimitScheduleOutput)
+/// See [`UpdateBandwidthRateLimitScheduleOutput`](crate::output::UpdateBandwidthRateLimitScheduleOutput).
 pub mod update_bandwidth_rate_limit_schedule_output {
 
-    /// A builder for [`UpdateBandwidthRateLimitScheduleOutput`](crate::output::UpdateBandwidthRateLimitScheduleOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBandwidthRateLimitScheduleOutput`](crate::output::UpdateBandwidthRateLimitScheduleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -759,7 +761,7 @@ pub mod update_bandwidth_rate_limit_schedule_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBandwidthRateLimitScheduleOutput`](crate::output::UpdateBandwidthRateLimitScheduleOutput)
+        /// Consumes the builder and constructs a [`UpdateBandwidthRateLimitScheduleOutput`](crate::output::UpdateBandwidthRateLimitScheduleOutput).
         pub fn build(self) -> crate::output::UpdateBandwidthRateLimitScheduleOutput {
             crate::output::UpdateBandwidthRateLimitScheduleOutput {
                 gateway_arn: self.gateway_arn,
@@ -768,7 +770,7 @@ pub mod update_bandwidth_rate_limit_schedule_output {
     }
 }
 impl UpdateBandwidthRateLimitScheduleOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateBandwidthRateLimitScheduleOutput`](crate::output::UpdateBandwidthRateLimitScheduleOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateBandwidthRateLimitScheduleOutput`](crate::output::UpdateBandwidthRateLimitScheduleOutput).
     pub fn builder() -> crate::output::update_bandwidth_rate_limit_schedule_output::Builder {
         crate::output::update_bandwidth_rate_limit_schedule_output::Builder::default()
     }
@@ -779,6 +781,7 @@ impl UpdateBandwidthRateLimitScheduleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBandwidthRateLimitOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl UpdateBandwidthRateLimitOutput {
@@ -794,11 +797,10 @@ impl std::fmt::Debug for UpdateBandwidthRateLimitOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateBandwidthRateLimitOutput`](crate::output::UpdateBandwidthRateLimitOutput)
+/// See [`UpdateBandwidthRateLimitOutput`](crate::output::UpdateBandwidthRateLimitOutput).
 pub mod update_bandwidth_rate_limit_output {
 
-    /// A builder for [`UpdateBandwidthRateLimitOutput`](crate::output::UpdateBandwidthRateLimitOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBandwidthRateLimitOutput`](crate::output::UpdateBandwidthRateLimitOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -814,7 +816,7 @@ pub mod update_bandwidth_rate_limit_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBandwidthRateLimitOutput`](crate::output::UpdateBandwidthRateLimitOutput)
+        /// Consumes the builder and constructs a [`UpdateBandwidthRateLimitOutput`](crate::output::UpdateBandwidthRateLimitOutput).
         pub fn build(self) -> crate::output::UpdateBandwidthRateLimitOutput {
             crate::output::UpdateBandwidthRateLimitOutput {
                 gateway_arn: self.gateway_arn,
@@ -823,7 +825,7 @@ pub mod update_bandwidth_rate_limit_output {
     }
 }
 impl UpdateBandwidthRateLimitOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateBandwidthRateLimitOutput`](crate::output::UpdateBandwidthRateLimitOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateBandwidthRateLimitOutput`](crate::output::UpdateBandwidthRateLimitOutput).
     pub fn builder() -> crate::output::update_bandwidth_rate_limit_output::Builder {
         crate::output::update_bandwidth_rate_limit_output::Builder::default()
     }
@@ -834,6 +836,7 @@ impl UpdateBandwidthRateLimitOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAutomaticTapeCreationPolicyOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl UpdateAutomaticTapeCreationPolicyOutput {
@@ -849,11 +852,10 @@ impl std::fmt::Debug for UpdateAutomaticTapeCreationPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAutomaticTapeCreationPolicyOutput`](crate::output::UpdateAutomaticTapeCreationPolicyOutput)
+/// See [`UpdateAutomaticTapeCreationPolicyOutput`](crate::output::UpdateAutomaticTapeCreationPolicyOutput).
 pub mod update_automatic_tape_creation_policy_output {
 
-    /// A builder for [`UpdateAutomaticTapeCreationPolicyOutput`](crate::output::UpdateAutomaticTapeCreationPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAutomaticTapeCreationPolicyOutput`](crate::output::UpdateAutomaticTapeCreationPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -869,7 +871,7 @@ pub mod update_automatic_tape_creation_policy_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAutomaticTapeCreationPolicyOutput`](crate::output::UpdateAutomaticTapeCreationPolicyOutput)
+        /// Consumes the builder and constructs a [`UpdateAutomaticTapeCreationPolicyOutput`](crate::output::UpdateAutomaticTapeCreationPolicyOutput).
         pub fn build(self) -> crate::output::UpdateAutomaticTapeCreationPolicyOutput {
             crate::output::UpdateAutomaticTapeCreationPolicyOutput {
                 gateway_arn: self.gateway_arn,
@@ -878,7 +880,7 @@ pub mod update_automatic_tape_creation_policy_output {
     }
 }
 impl UpdateAutomaticTapeCreationPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAutomaticTapeCreationPolicyOutput`](crate::output::UpdateAutomaticTapeCreationPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAutomaticTapeCreationPolicyOutput`](crate::output::UpdateAutomaticTapeCreationPolicyOutput).
     pub fn builder() -> crate::output::update_automatic_tape_creation_policy_output::Builder {
         crate::output::update_automatic_tape_creation_policy_output::Builder::default()
     }
@@ -889,6 +891,7 @@ impl UpdateAutomaticTapeCreationPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartGatewayOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl StartGatewayOutput {
@@ -904,11 +907,10 @@ impl std::fmt::Debug for StartGatewayOutput {
         formatter.finish()
     }
 }
-/// See [`StartGatewayOutput`](crate::output::StartGatewayOutput)
+/// See [`StartGatewayOutput`](crate::output::StartGatewayOutput).
 pub mod start_gateway_output {
 
-    /// A builder for [`StartGatewayOutput`](crate::output::StartGatewayOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartGatewayOutput`](crate::output::StartGatewayOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -924,7 +926,7 @@ pub mod start_gateway_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartGatewayOutput`](crate::output::StartGatewayOutput)
+        /// Consumes the builder and constructs a [`StartGatewayOutput`](crate::output::StartGatewayOutput).
         pub fn build(self) -> crate::output::StartGatewayOutput {
             crate::output::StartGatewayOutput {
                 gateway_arn: self.gateway_arn,
@@ -933,7 +935,7 @@ pub mod start_gateway_output {
     }
 }
 impl StartGatewayOutput {
-    /// Creates a new builder-style object to manufacture [`StartGatewayOutput`](crate::output::StartGatewayOutput)
+    /// Creates a new builder-style object to manufacture [`StartGatewayOutput`](crate::output::StartGatewayOutput).
     pub fn builder() -> crate::output::start_gateway_output::Builder {
         crate::output::start_gateway_output::Builder::default()
     }
@@ -944,6 +946,7 @@ impl StartGatewayOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartAvailabilityMonitorTestOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl StartAvailabilityMonitorTestOutput {
@@ -959,11 +962,10 @@ impl std::fmt::Debug for StartAvailabilityMonitorTestOutput {
         formatter.finish()
     }
 }
-/// See [`StartAvailabilityMonitorTestOutput`](crate::output::StartAvailabilityMonitorTestOutput)
+/// See [`StartAvailabilityMonitorTestOutput`](crate::output::StartAvailabilityMonitorTestOutput).
 pub mod start_availability_monitor_test_output {
 
-    /// A builder for [`StartAvailabilityMonitorTestOutput`](crate::output::StartAvailabilityMonitorTestOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartAvailabilityMonitorTestOutput`](crate::output::StartAvailabilityMonitorTestOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -979,7 +981,7 @@ pub mod start_availability_monitor_test_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartAvailabilityMonitorTestOutput`](crate::output::StartAvailabilityMonitorTestOutput)
+        /// Consumes the builder and constructs a [`StartAvailabilityMonitorTestOutput`](crate::output::StartAvailabilityMonitorTestOutput).
         pub fn build(self) -> crate::output::StartAvailabilityMonitorTestOutput {
             crate::output::StartAvailabilityMonitorTestOutput {
                 gateway_arn: self.gateway_arn,
@@ -988,7 +990,7 @@ pub mod start_availability_monitor_test_output {
     }
 }
 impl StartAvailabilityMonitorTestOutput {
-    /// Creates a new builder-style object to manufacture [`StartAvailabilityMonitorTestOutput`](crate::output::StartAvailabilityMonitorTestOutput)
+    /// Creates a new builder-style object to manufacture [`StartAvailabilityMonitorTestOutput`](crate::output::StartAvailabilityMonitorTestOutput).
     pub fn builder() -> crate::output::start_availability_monitor_test_output::Builder {
         crate::output::start_availability_monitor_test_output::Builder::default()
     }
@@ -999,6 +1001,7 @@ impl StartAvailabilityMonitorTestOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ShutdownGatewayOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl ShutdownGatewayOutput {
@@ -1014,11 +1017,10 @@ impl std::fmt::Debug for ShutdownGatewayOutput {
         formatter.finish()
     }
 }
-/// See [`ShutdownGatewayOutput`](crate::output::ShutdownGatewayOutput)
+/// See [`ShutdownGatewayOutput`](crate::output::ShutdownGatewayOutput).
 pub mod shutdown_gateway_output {
 
-    /// A builder for [`ShutdownGatewayOutput`](crate::output::ShutdownGatewayOutput)
-    #[non_exhaustive]
+    /// A builder for [`ShutdownGatewayOutput`](crate::output::ShutdownGatewayOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -1034,7 +1036,7 @@ pub mod shutdown_gateway_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ShutdownGatewayOutput`](crate::output::ShutdownGatewayOutput)
+        /// Consumes the builder and constructs a [`ShutdownGatewayOutput`](crate::output::ShutdownGatewayOutput).
         pub fn build(self) -> crate::output::ShutdownGatewayOutput {
             crate::output::ShutdownGatewayOutput {
                 gateway_arn: self.gateway_arn,
@@ -1043,7 +1045,7 @@ pub mod shutdown_gateway_output {
     }
 }
 impl ShutdownGatewayOutput {
-    /// Creates a new builder-style object to manufacture [`ShutdownGatewayOutput`](crate::output::ShutdownGatewayOutput)
+    /// Creates a new builder-style object to manufacture [`ShutdownGatewayOutput`](crate::output::ShutdownGatewayOutput).
     pub fn builder() -> crate::output::shutdown_gateway_output::Builder {
         crate::output::shutdown_gateway_output::Builder::default()
     }
@@ -1054,6 +1056,7 @@ impl ShutdownGatewayOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SetSmbGuestPasswordOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl SetSmbGuestPasswordOutput {
@@ -1069,11 +1072,10 @@ impl std::fmt::Debug for SetSmbGuestPasswordOutput {
         formatter.finish()
     }
 }
-/// See [`SetSmbGuestPasswordOutput`](crate::output::SetSmbGuestPasswordOutput)
+/// See [`SetSmbGuestPasswordOutput`](crate::output::SetSmbGuestPasswordOutput).
 pub mod set_smb_guest_password_output {
 
-    /// A builder for [`SetSmbGuestPasswordOutput`](crate::output::SetSmbGuestPasswordOutput)
-    #[non_exhaustive]
+    /// A builder for [`SetSmbGuestPasswordOutput`](crate::output::SetSmbGuestPasswordOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -1089,7 +1091,7 @@ pub mod set_smb_guest_password_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`SetSmbGuestPasswordOutput`](crate::output::SetSmbGuestPasswordOutput)
+        /// Consumes the builder and constructs a [`SetSmbGuestPasswordOutput`](crate::output::SetSmbGuestPasswordOutput).
         pub fn build(self) -> crate::output::SetSmbGuestPasswordOutput {
             crate::output::SetSmbGuestPasswordOutput {
                 gateway_arn: self.gateway_arn,
@@ -1098,7 +1100,7 @@ pub mod set_smb_guest_password_output {
     }
 }
 impl SetSmbGuestPasswordOutput {
-    /// Creates a new builder-style object to manufacture [`SetSmbGuestPasswordOutput`](crate::output::SetSmbGuestPasswordOutput)
+    /// Creates a new builder-style object to manufacture [`SetSmbGuestPasswordOutput`](crate::output::SetSmbGuestPasswordOutput).
     pub fn builder() -> crate::output::set_smb_guest_password_output::Builder {
         crate::output::set_smb_guest_password_output::Builder::default()
     }
@@ -1109,6 +1111,7 @@ impl SetSmbGuestPasswordOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SetLocalConsolePasswordOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl SetLocalConsolePasswordOutput {
@@ -1124,11 +1127,10 @@ impl std::fmt::Debug for SetLocalConsolePasswordOutput {
         formatter.finish()
     }
 }
-/// See [`SetLocalConsolePasswordOutput`](crate::output::SetLocalConsolePasswordOutput)
+/// See [`SetLocalConsolePasswordOutput`](crate::output::SetLocalConsolePasswordOutput).
 pub mod set_local_console_password_output {
 
-    /// A builder for [`SetLocalConsolePasswordOutput`](crate::output::SetLocalConsolePasswordOutput)
-    #[non_exhaustive]
+    /// A builder for [`SetLocalConsolePasswordOutput`](crate::output::SetLocalConsolePasswordOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -1144,7 +1146,7 @@ pub mod set_local_console_password_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`SetLocalConsolePasswordOutput`](crate::output::SetLocalConsolePasswordOutput)
+        /// Consumes the builder and constructs a [`SetLocalConsolePasswordOutput`](crate::output::SetLocalConsolePasswordOutput).
         pub fn build(self) -> crate::output::SetLocalConsolePasswordOutput {
             crate::output::SetLocalConsolePasswordOutput {
                 gateway_arn: self.gateway_arn,
@@ -1153,7 +1155,7 @@ pub mod set_local_console_password_output {
     }
 }
 impl SetLocalConsolePasswordOutput {
-    /// Creates a new builder-style object to manufacture [`SetLocalConsolePasswordOutput`](crate::output::SetLocalConsolePasswordOutput)
+    /// Creates a new builder-style object to manufacture [`SetLocalConsolePasswordOutput`](crate::output::SetLocalConsolePasswordOutput).
     pub fn builder() -> crate::output::set_local_console_password_output::Builder {
         crate::output::set_local_console_password_output::Builder::default()
     }
@@ -1164,6 +1166,7 @@ impl SetLocalConsolePasswordOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RetrieveTapeRecoveryPointOutput {
     /// <p>The Amazon Resource Name (ARN) of the virtual tape for which the recovery point was retrieved.</p>
+    #[doc(hidden)]
     pub tape_arn: std::option::Option<std::string::String>,
 }
 impl RetrieveTapeRecoveryPointOutput {
@@ -1179,11 +1182,10 @@ impl std::fmt::Debug for RetrieveTapeRecoveryPointOutput {
         formatter.finish()
     }
 }
-/// See [`RetrieveTapeRecoveryPointOutput`](crate::output::RetrieveTapeRecoveryPointOutput)
+/// See [`RetrieveTapeRecoveryPointOutput`](crate::output::RetrieveTapeRecoveryPointOutput).
 pub mod retrieve_tape_recovery_point_output {
 
-    /// A builder for [`RetrieveTapeRecoveryPointOutput`](crate::output::RetrieveTapeRecoveryPointOutput)
-    #[non_exhaustive]
+    /// A builder for [`RetrieveTapeRecoveryPointOutput`](crate::output::RetrieveTapeRecoveryPointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tape_arn: std::option::Option<std::string::String>,
@@ -1199,7 +1201,7 @@ pub mod retrieve_tape_recovery_point_output {
             self.tape_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RetrieveTapeRecoveryPointOutput`](crate::output::RetrieveTapeRecoveryPointOutput)
+        /// Consumes the builder and constructs a [`RetrieveTapeRecoveryPointOutput`](crate::output::RetrieveTapeRecoveryPointOutput).
         pub fn build(self) -> crate::output::RetrieveTapeRecoveryPointOutput {
             crate::output::RetrieveTapeRecoveryPointOutput {
                 tape_arn: self.tape_arn,
@@ -1208,7 +1210,7 @@ pub mod retrieve_tape_recovery_point_output {
     }
 }
 impl RetrieveTapeRecoveryPointOutput {
-    /// Creates a new builder-style object to manufacture [`RetrieveTapeRecoveryPointOutput`](crate::output::RetrieveTapeRecoveryPointOutput)
+    /// Creates a new builder-style object to manufacture [`RetrieveTapeRecoveryPointOutput`](crate::output::RetrieveTapeRecoveryPointOutput).
     pub fn builder() -> crate::output::retrieve_tape_recovery_point_output::Builder {
         crate::output::retrieve_tape_recovery_point_output::Builder::default()
     }
@@ -1219,6 +1221,7 @@ impl RetrieveTapeRecoveryPointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RetrieveTapeArchiveOutput {
     /// <p>The Amazon Resource Name (ARN) of the retrieved virtual tape.</p>
+    #[doc(hidden)]
     pub tape_arn: std::option::Option<std::string::String>,
 }
 impl RetrieveTapeArchiveOutput {
@@ -1234,11 +1237,10 @@ impl std::fmt::Debug for RetrieveTapeArchiveOutput {
         formatter.finish()
     }
 }
-/// See [`RetrieveTapeArchiveOutput`](crate::output::RetrieveTapeArchiveOutput)
+/// See [`RetrieveTapeArchiveOutput`](crate::output::RetrieveTapeArchiveOutput).
 pub mod retrieve_tape_archive_output {
 
-    /// A builder for [`RetrieveTapeArchiveOutput`](crate::output::RetrieveTapeArchiveOutput)
-    #[non_exhaustive]
+    /// A builder for [`RetrieveTapeArchiveOutput`](crate::output::RetrieveTapeArchiveOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tape_arn: std::option::Option<std::string::String>,
@@ -1254,7 +1256,7 @@ pub mod retrieve_tape_archive_output {
             self.tape_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RetrieveTapeArchiveOutput`](crate::output::RetrieveTapeArchiveOutput)
+        /// Consumes the builder and constructs a [`RetrieveTapeArchiveOutput`](crate::output::RetrieveTapeArchiveOutput).
         pub fn build(self) -> crate::output::RetrieveTapeArchiveOutput {
             crate::output::RetrieveTapeArchiveOutput {
                 tape_arn: self.tape_arn,
@@ -1263,7 +1265,7 @@ pub mod retrieve_tape_archive_output {
     }
 }
 impl RetrieveTapeArchiveOutput {
-    /// Creates a new builder-style object to manufacture [`RetrieveTapeArchiveOutput`](crate::output::RetrieveTapeArchiveOutput)
+    /// Creates a new builder-style object to manufacture [`RetrieveTapeArchiveOutput`](crate::output::RetrieveTapeArchiveOutput).
     pub fn builder() -> crate::output::retrieve_tape_archive_output::Builder {
         crate::output::retrieve_tape_archive_output::Builder::default()
     }
@@ -1274,6 +1276,7 @@ impl RetrieveTapeArchiveOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResetCacheOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl ResetCacheOutput {
@@ -1289,11 +1292,10 @@ impl std::fmt::Debug for ResetCacheOutput {
         formatter.finish()
     }
 }
-/// See [`ResetCacheOutput`](crate::output::ResetCacheOutput)
+/// See [`ResetCacheOutput`](crate::output::ResetCacheOutput).
 pub mod reset_cache_output {
 
-    /// A builder for [`ResetCacheOutput`](crate::output::ResetCacheOutput)
-    #[non_exhaustive]
+    /// A builder for [`ResetCacheOutput`](crate::output::ResetCacheOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -1309,7 +1311,7 @@ pub mod reset_cache_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResetCacheOutput`](crate::output::ResetCacheOutput)
+        /// Consumes the builder and constructs a [`ResetCacheOutput`](crate::output::ResetCacheOutput).
         pub fn build(self) -> crate::output::ResetCacheOutput {
             crate::output::ResetCacheOutput {
                 gateway_arn: self.gateway_arn,
@@ -1318,7 +1320,7 @@ pub mod reset_cache_output {
     }
 }
 impl ResetCacheOutput {
-    /// Creates a new builder-style object to manufacture [`ResetCacheOutput`](crate::output::ResetCacheOutput)
+    /// Creates a new builder-style object to manufacture [`ResetCacheOutput`](crate::output::ResetCacheOutput).
     pub fn builder() -> crate::output::reset_cache_output::Builder {
         crate::output::reset_cache_output::Builder::default()
     }
@@ -1329,6 +1331,7 @@ impl ResetCacheOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoveTagsFromResourceOutput {
     /// <p>The Amazon Resource Name (ARN) of the resource that the tags were removed from.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl RemoveTagsFromResourceOutput {
@@ -1344,11 +1347,10 @@ impl std::fmt::Debug for RemoveTagsFromResourceOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
+/// See [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput).
 pub mod remove_tags_from_resource_output {
 
-    /// A builder for [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -1364,7 +1366,7 @@ pub mod remove_tags_from_resource_output {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
+        /// Consumes the builder and constructs a [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput).
         pub fn build(self) -> crate::output::RemoveTagsFromResourceOutput {
             crate::output::RemoveTagsFromResourceOutput {
                 resource_arn: self.resource_arn,
@@ -1373,7 +1375,7 @@ pub mod remove_tags_from_resource_output {
     }
 }
 impl RemoveTagsFromResourceOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput).
     pub fn builder() -> crate::output::remove_tags_from_resource_output::Builder {
         crate::output::remove_tags_from_resource_output::Builder::default()
     }
@@ -1384,8 +1386,10 @@ impl RemoveTagsFromResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RefreshCacheOutput {
     /// <p>The Amazon Resource Name (ARN) of the file share.</p>
+    #[doc(hidden)]
     pub file_share_arn: std::option::Option<std::string::String>,
     /// <p>The randomly generated ID of the notification that was sent. This ID is in UUID format.</p>
+    #[doc(hidden)]
     pub notification_id: std::option::Option<std::string::String>,
 }
 impl RefreshCacheOutput {
@@ -1406,11 +1410,10 @@ impl std::fmt::Debug for RefreshCacheOutput {
         formatter.finish()
     }
 }
-/// See [`RefreshCacheOutput`](crate::output::RefreshCacheOutput)
+/// See [`RefreshCacheOutput`](crate::output::RefreshCacheOutput).
 pub mod refresh_cache_output {
 
-    /// A builder for [`RefreshCacheOutput`](crate::output::RefreshCacheOutput)
-    #[non_exhaustive]
+    /// A builder for [`RefreshCacheOutput`](crate::output::RefreshCacheOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_share_arn: std::option::Option<std::string::String>,
@@ -1443,7 +1446,7 @@ pub mod refresh_cache_output {
             self.notification_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RefreshCacheOutput`](crate::output::RefreshCacheOutput)
+        /// Consumes the builder and constructs a [`RefreshCacheOutput`](crate::output::RefreshCacheOutput).
         pub fn build(self) -> crate::output::RefreshCacheOutput {
             crate::output::RefreshCacheOutput {
                 file_share_arn: self.file_share_arn,
@@ -1453,7 +1456,7 @@ pub mod refresh_cache_output {
     }
 }
 impl RefreshCacheOutput {
-    /// Creates a new builder-style object to manufacture [`RefreshCacheOutput`](crate::output::RefreshCacheOutput)
+    /// Creates a new builder-style object to manufacture [`RefreshCacheOutput`](crate::output::RefreshCacheOutput).
     pub fn builder() -> crate::output::refresh_cache_output::Builder {
         crate::output::refresh_cache_output::Builder::default()
     }
@@ -1464,8 +1467,10 @@ impl RefreshCacheOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotifyWhenUploadedOutput {
     /// <p>The Amazon Resource Name (ARN) of the file share.</p>
+    #[doc(hidden)]
     pub file_share_arn: std::option::Option<std::string::String>,
     /// <p>The randomly generated ID of the notification that was sent. This ID is in UUID format.</p>
+    #[doc(hidden)]
     pub notification_id: std::option::Option<std::string::String>,
 }
 impl NotifyWhenUploadedOutput {
@@ -1486,11 +1491,10 @@ impl std::fmt::Debug for NotifyWhenUploadedOutput {
         formatter.finish()
     }
 }
-/// See [`NotifyWhenUploadedOutput`](crate::output::NotifyWhenUploadedOutput)
+/// See [`NotifyWhenUploadedOutput`](crate::output::NotifyWhenUploadedOutput).
 pub mod notify_when_uploaded_output {
 
-    /// A builder for [`NotifyWhenUploadedOutput`](crate::output::NotifyWhenUploadedOutput)
-    #[non_exhaustive]
+    /// A builder for [`NotifyWhenUploadedOutput`](crate::output::NotifyWhenUploadedOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_share_arn: std::option::Option<std::string::String>,
@@ -1523,7 +1527,7 @@ pub mod notify_when_uploaded_output {
             self.notification_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotifyWhenUploadedOutput`](crate::output::NotifyWhenUploadedOutput)
+        /// Consumes the builder and constructs a [`NotifyWhenUploadedOutput`](crate::output::NotifyWhenUploadedOutput).
         pub fn build(self) -> crate::output::NotifyWhenUploadedOutput {
             crate::output::NotifyWhenUploadedOutput {
                 file_share_arn: self.file_share_arn,
@@ -1533,7 +1537,7 @@ pub mod notify_when_uploaded_output {
     }
 }
 impl NotifyWhenUploadedOutput {
-    /// Creates a new builder-style object to manufacture [`NotifyWhenUploadedOutput`](crate::output::NotifyWhenUploadedOutput)
+    /// Creates a new builder-style object to manufacture [`NotifyWhenUploadedOutput`](crate::output::NotifyWhenUploadedOutput).
     pub fn builder() -> crate::output::notify_when_uploaded_output::Builder {
         crate::output::notify_when_uploaded_output::Builder::default()
     }
@@ -1548,10 +1552,13 @@ impl NotifyWhenUploadedOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListVolumesOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>Use the marker in your next request to continue pagination of iSCSI volumes. If there are no more volumes to list, this field does not appear in the response body.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>An array of <code>VolumeInfo</code> objects, where each object describes an iSCSI volume. If no volumes are defined for the gateway, then <code>VolumeInfos</code> is an empty array "[]".</p>
+    #[doc(hidden)]
     pub volume_infos: std::option::Option<std::vec::Vec<crate::model::VolumeInfo>>,
 }
 impl ListVolumesOutput {
@@ -1577,11 +1584,10 @@ impl std::fmt::Debug for ListVolumesOutput {
         formatter.finish()
     }
 }
-/// See [`ListVolumesOutput`](crate::output::ListVolumesOutput)
+/// See [`ListVolumesOutput`](crate::output::ListVolumesOutput).
 pub mod list_volumes_output {
 
-    /// A builder for [`ListVolumesOutput`](crate::output::ListVolumesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListVolumesOutput`](crate::output::ListVolumesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -1628,7 +1634,7 @@ pub mod list_volumes_output {
             self.volume_infos = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListVolumesOutput`](crate::output::ListVolumesOutput)
+        /// Consumes the builder and constructs a [`ListVolumesOutput`](crate::output::ListVolumesOutput).
         pub fn build(self) -> crate::output::ListVolumesOutput {
             crate::output::ListVolumesOutput {
                 gateway_arn: self.gateway_arn,
@@ -1639,7 +1645,7 @@ pub mod list_volumes_output {
     }
 }
 impl ListVolumesOutput {
-    /// Creates a new builder-style object to manufacture [`ListVolumesOutput`](crate::output::ListVolumesOutput)
+    /// Creates a new builder-style object to manufacture [`ListVolumesOutput`](crate::output::ListVolumesOutput).
     pub fn builder() -> crate::output::list_volumes_output::Builder {
         crate::output::list_volumes_output::Builder::default()
     }
@@ -1650,8 +1656,10 @@ impl ListVolumesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListVolumeRecoveryPointsOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>An array of <code>VolumeRecoveryPointInfo</code> objects.</p>
+    #[doc(hidden)]
     pub volume_recovery_point_infos:
         std::option::Option<std::vec::Vec<crate::model::VolumeRecoveryPointInfo>>,
 }
@@ -1678,11 +1686,10 @@ impl std::fmt::Debug for ListVolumeRecoveryPointsOutput {
         formatter.finish()
     }
 }
-/// See [`ListVolumeRecoveryPointsOutput`](crate::output::ListVolumeRecoveryPointsOutput)
+/// See [`ListVolumeRecoveryPointsOutput`](crate::output::ListVolumeRecoveryPointsOutput).
 pub mod list_volume_recovery_points_output {
 
-    /// A builder for [`ListVolumeRecoveryPointsOutput`](crate::output::ListVolumeRecoveryPointsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListVolumeRecoveryPointsOutput`](crate::output::ListVolumeRecoveryPointsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -1722,7 +1729,7 @@ pub mod list_volume_recovery_points_output {
             self.volume_recovery_point_infos = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListVolumeRecoveryPointsOutput`](crate::output::ListVolumeRecoveryPointsOutput)
+        /// Consumes the builder and constructs a [`ListVolumeRecoveryPointsOutput`](crate::output::ListVolumeRecoveryPointsOutput).
         pub fn build(self) -> crate::output::ListVolumeRecoveryPointsOutput {
             crate::output::ListVolumeRecoveryPointsOutput {
                 gateway_arn: self.gateway_arn,
@@ -1732,7 +1739,7 @@ pub mod list_volume_recovery_points_output {
     }
 }
 impl ListVolumeRecoveryPointsOutput {
-    /// Creates a new builder-style object to manufacture [`ListVolumeRecoveryPointsOutput`](crate::output::ListVolumeRecoveryPointsOutput)
+    /// Creates a new builder-style object to manufacture [`ListVolumeRecoveryPointsOutput`](crate::output::ListVolumeRecoveryPointsOutput).
     pub fn builder() -> crate::output::list_volume_recovery_points_output::Builder {
         crate::output::list_volume_recovery_points_output::Builder::default()
     }
@@ -1743,6 +1750,7 @@ impl ListVolumeRecoveryPointsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListVolumeInitiatorsOutput {
     /// <p>The host names and port numbers of all iSCSI initiators that are connected to the gateway.</p>
+    #[doc(hidden)]
     pub initiators: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ListVolumeInitiatorsOutput {
@@ -1758,11 +1766,10 @@ impl std::fmt::Debug for ListVolumeInitiatorsOutput {
         formatter.finish()
     }
 }
-/// See [`ListVolumeInitiatorsOutput`](crate::output::ListVolumeInitiatorsOutput)
+/// See [`ListVolumeInitiatorsOutput`](crate::output::ListVolumeInitiatorsOutput).
 pub mod list_volume_initiators_output {
 
-    /// A builder for [`ListVolumeInitiatorsOutput`](crate::output::ListVolumeInitiatorsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListVolumeInitiatorsOutput`](crate::output::ListVolumeInitiatorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) initiators: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1787,7 +1794,7 @@ pub mod list_volume_initiators_output {
             self.initiators = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListVolumeInitiatorsOutput`](crate::output::ListVolumeInitiatorsOutput)
+        /// Consumes the builder and constructs a [`ListVolumeInitiatorsOutput`](crate::output::ListVolumeInitiatorsOutput).
         pub fn build(self) -> crate::output::ListVolumeInitiatorsOutput {
             crate::output::ListVolumeInitiatorsOutput {
                 initiators: self.initiators,
@@ -1796,7 +1803,7 @@ pub mod list_volume_initiators_output {
     }
 }
 impl ListVolumeInitiatorsOutput {
-    /// Creates a new builder-style object to manufacture [`ListVolumeInitiatorsOutput`](crate::output::ListVolumeInitiatorsOutput)
+    /// Creates a new builder-style object to manufacture [`ListVolumeInitiatorsOutput`](crate::output::ListVolumeInitiatorsOutput).
     pub fn builder() -> crate::output::list_volume_initiators_output::Builder {
         crate::output::list_volume_initiators_output::Builder::default()
     }
@@ -1811,8 +1818,10 @@ impl ListVolumeInitiatorsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTapesOutput {
     /// <p>An array of <code>TapeInfo</code> objects, where each object describes a single tape. If there are no tapes in the tape library or VTS, then the <code>TapeInfos</code> is an empty array.</p>
+    #[doc(hidden)]
     pub tape_infos: std::option::Option<std::vec::Vec<crate::model::TapeInfo>>,
     /// <p>A string that indicates the position at which to begin returning the next list of tapes. Use the marker in your next request to continue pagination of tapes. If there are no more tapes to list, this element does not appear in the response body.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListTapesOutput {
@@ -1833,11 +1842,10 @@ impl std::fmt::Debug for ListTapesOutput {
         formatter.finish()
     }
 }
-/// See [`ListTapesOutput`](crate::output::ListTapesOutput)
+/// See [`ListTapesOutput`](crate::output::ListTapesOutput).
 pub mod list_tapes_output {
 
-    /// A builder for [`ListTapesOutput`](crate::output::ListTapesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTapesOutput`](crate::output::ListTapesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tape_infos: std::option::Option<std::vec::Vec<crate::model::TapeInfo>>,
@@ -1873,7 +1881,7 @@ pub mod list_tapes_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTapesOutput`](crate::output::ListTapesOutput)
+        /// Consumes the builder and constructs a [`ListTapesOutput`](crate::output::ListTapesOutput).
         pub fn build(self) -> crate::output::ListTapesOutput {
             crate::output::ListTapesOutput {
                 tape_infos: self.tape_infos,
@@ -1883,7 +1891,7 @@ pub mod list_tapes_output {
     }
 }
 impl ListTapesOutput {
-    /// Creates a new builder-style object to manufacture [`ListTapesOutput`](crate::output::ListTapesOutput)
+    /// Creates a new builder-style object to manufacture [`ListTapesOutput`](crate::output::ListTapesOutput).
     pub fn builder() -> crate::output::list_tapes_output::Builder {
         crate::output::list_tapes_output::Builder::default()
     }
@@ -1894,8 +1902,10 @@ impl ListTapesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTapePoolsOutput {
     /// <p>An array of <code>PoolInfo</code> objects, where each object describes a single custom tape pool. If there are no custom tape pools, the <code>PoolInfos</code> is an empty array. </p>
+    #[doc(hidden)]
     pub pool_infos: std::option::Option<std::vec::Vec<crate::model::PoolInfo>>,
     /// <p>A string that indicates the position at which to begin the returned list of tape pools. Use the marker in your next request to continue pagination of tape pools. If there are no more tape pools to list, this element does not appear in the response body. </p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListTapePoolsOutput {
@@ -1916,11 +1926,10 @@ impl std::fmt::Debug for ListTapePoolsOutput {
         formatter.finish()
     }
 }
-/// See [`ListTapePoolsOutput`](crate::output::ListTapePoolsOutput)
+/// See [`ListTapePoolsOutput`](crate::output::ListTapePoolsOutput).
 pub mod list_tape_pools_output {
 
-    /// A builder for [`ListTapePoolsOutput`](crate::output::ListTapePoolsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTapePoolsOutput`](crate::output::ListTapePoolsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pool_infos: std::option::Option<std::vec::Vec<crate::model::PoolInfo>>,
@@ -1956,7 +1965,7 @@ pub mod list_tape_pools_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTapePoolsOutput`](crate::output::ListTapePoolsOutput)
+        /// Consumes the builder and constructs a [`ListTapePoolsOutput`](crate::output::ListTapePoolsOutput).
         pub fn build(self) -> crate::output::ListTapePoolsOutput {
             crate::output::ListTapePoolsOutput {
                 pool_infos: self.pool_infos,
@@ -1966,7 +1975,7 @@ pub mod list_tape_pools_output {
     }
 }
 impl ListTapePoolsOutput {
-    /// Creates a new builder-style object to manufacture [`ListTapePoolsOutput`](crate::output::ListTapePoolsOutput)
+    /// Creates a new builder-style object to manufacture [`ListTapePoolsOutput`](crate::output::ListTapePoolsOutput).
     pub fn builder() -> crate::output::list_tape_pools_output::Builder {
         crate::output::list_tape_pools_output::Builder::default()
     }
@@ -1977,10 +1986,13 @@ impl ListTapePoolsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The Amazon Resource Name (ARN) of the resource for which you want to list tags.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
     /// <p>An opaque string that indicates the position at which to stop returning the list of tags.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>An array that contains the tags for the specified resource.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ListTagsForResourceOutput {
@@ -2006,11 +2018,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -2057,7 +2068,7 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 resource_arn: self.resource_arn,
@@ -2068,7 +2079,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -2079,11 +2090,13 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListLocalDisksOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>A JSON object containing the following fields:</p>
     /// <ul>
     /// <li> <p> <code>ListLocalDisksOutput$Disks</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub disks: std::option::Option<std::vec::Vec<crate::model::Disk>>,
 }
 impl ListLocalDisksOutput {
@@ -2107,11 +2120,10 @@ impl std::fmt::Debug for ListLocalDisksOutput {
         formatter.finish()
     }
 }
-/// See [`ListLocalDisksOutput`](crate::output::ListLocalDisksOutput)
+/// See [`ListLocalDisksOutput`](crate::output::ListLocalDisksOutput).
 pub mod list_local_disks_output {
 
-    /// A builder for [`ListLocalDisksOutput`](crate::output::ListLocalDisksOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListLocalDisksOutput`](crate::output::ListLocalDisksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -2153,7 +2165,7 @@ pub mod list_local_disks_output {
             self.disks = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListLocalDisksOutput`](crate::output::ListLocalDisksOutput)
+        /// Consumes the builder and constructs a [`ListLocalDisksOutput`](crate::output::ListLocalDisksOutput).
         pub fn build(self) -> crate::output::ListLocalDisksOutput {
             crate::output::ListLocalDisksOutput {
                 gateway_arn: self.gateway_arn,
@@ -2163,7 +2175,7 @@ pub mod list_local_disks_output {
     }
 }
 impl ListLocalDisksOutput {
-    /// Creates a new builder-style object to manufacture [`ListLocalDisksOutput`](crate::output::ListLocalDisksOutput)
+    /// Creates a new builder-style object to manufacture [`ListLocalDisksOutput`](crate::output::ListLocalDisksOutput).
     pub fn builder() -> crate::output::list_local_disks_output::Builder {
         crate::output::list_local_disks_output::Builder::default()
     }
@@ -2174,8 +2186,10 @@ impl ListLocalDisksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListGatewaysOutput {
     /// <p>An array of <code>GatewayInfo</code> objects.</p>
+    #[doc(hidden)]
     pub gateways: std::option::Option<std::vec::Vec<crate::model::GatewayInfo>>,
     /// <p>Use the marker in your next request to fetch the next set of gateways in the list. If there are no more gateways to list, this field does not appear in the response.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl ListGatewaysOutput {
@@ -2196,11 +2210,10 @@ impl std::fmt::Debug for ListGatewaysOutput {
         formatter.finish()
     }
 }
-/// See [`ListGatewaysOutput`](crate::output::ListGatewaysOutput)
+/// See [`ListGatewaysOutput`](crate::output::ListGatewaysOutput).
 pub mod list_gateways_output {
 
-    /// A builder for [`ListGatewaysOutput`](crate::output::ListGatewaysOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListGatewaysOutput`](crate::output::ListGatewaysOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateways: std::option::Option<std::vec::Vec<crate::model::GatewayInfo>>,
@@ -2236,7 +2249,7 @@ pub mod list_gateways_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGatewaysOutput`](crate::output::ListGatewaysOutput)
+        /// Consumes the builder and constructs a [`ListGatewaysOutput`](crate::output::ListGatewaysOutput).
         pub fn build(self) -> crate::output::ListGatewaysOutput {
             crate::output::ListGatewaysOutput {
                 gateways: self.gateways,
@@ -2246,7 +2259,7 @@ pub mod list_gateways_output {
     }
 }
 impl ListGatewaysOutput {
-    /// Creates a new builder-style object to manufacture [`ListGatewaysOutput`](crate::output::ListGatewaysOutput)
+    /// Creates a new builder-style object to manufacture [`ListGatewaysOutput`](crate::output::ListGatewaysOutput).
     pub fn builder() -> crate::output::list_gateways_output::Builder {
         crate::output::list_gateways_output::Builder::default()
     }
@@ -2257,10 +2270,13 @@ impl ListGatewaysOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListFileSystemAssociationsOutput {
     /// <p>If the request includes <code>Marker</code>, the response returns that value in this field.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>If a value is present, there are more file system associations to return. In a subsequent request, use <code>NextMarker</code> as the value for <code>Marker</code> to retrieve the next set of file system associations.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of information about the Amazon FSx gateway's file system associations.</p>
+    #[doc(hidden)]
     pub file_system_association_summary_list:
         std::option::Option<std::vec::Vec<crate::model::FileSystemAssociationSummary>>,
 }
@@ -2292,11 +2308,10 @@ impl std::fmt::Debug for ListFileSystemAssociationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListFileSystemAssociationsOutput`](crate::output::ListFileSystemAssociationsOutput)
+/// See [`ListFileSystemAssociationsOutput`](crate::output::ListFileSystemAssociationsOutput).
 pub mod list_file_system_associations_output {
 
-    /// A builder for [`ListFileSystemAssociationsOutput`](crate::output::ListFileSystemAssociationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListFileSystemAssociationsOutput`](crate::output::ListFileSystemAssociationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -2349,7 +2364,7 @@ pub mod list_file_system_associations_output {
             self.file_system_association_summary_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFileSystemAssociationsOutput`](crate::output::ListFileSystemAssociationsOutput)
+        /// Consumes the builder and constructs a [`ListFileSystemAssociationsOutput`](crate::output::ListFileSystemAssociationsOutput).
         pub fn build(self) -> crate::output::ListFileSystemAssociationsOutput {
             crate::output::ListFileSystemAssociationsOutput {
                 marker: self.marker,
@@ -2360,7 +2375,7 @@ pub mod list_file_system_associations_output {
     }
 }
 impl ListFileSystemAssociationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListFileSystemAssociationsOutput`](crate::output::ListFileSystemAssociationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListFileSystemAssociationsOutput`](crate::output::ListFileSystemAssociationsOutput).
     pub fn builder() -> crate::output::list_file_system_associations_output::Builder {
         crate::output::list_file_system_associations_output::Builder::default()
     }
@@ -2371,10 +2386,13 @@ impl ListFileSystemAssociationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListFileSharesOutput {
     /// <p>If the request includes <code>Marker</code>, the response returns that value in this field.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
     /// <p>If a value is present, there are more file shares to return. In a subsequent request, use <code>NextMarker</code> as the value for <code>Marker</code> to retrieve the next set of file shares.</p>
+    #[doc(hidden)]
     pub next_marker: std::option::Option<std::string::String>,
     /// <p>An array of information about the S3 File Gateway's file shares.</p>
+    #[doc(hidden)]
     pub file_share_info_list: std::option::Option<std::vec::Vec<crate::model::FileShareInfo>>,
 }
 impl ListFileSharesOutput {
@@ -2400,11 +2418,10 @@ impl std::fmt::Debug for ListFileSharesOutput {
         formatter.finish()
     }
 }
-/// See [`ListFileSharesOutput`](crate::output::ListFileSharesOutput)
+/// See [`ListFileSharesOutput`](crate::output::ListFileSharesOutput).
 pub mod list_file_shares_output {
 
-    /// A builder for [`ListFileSharesOutput`](crate::output::ListFileSharesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListFileSharesOutput`](crate::output::ListFileSharesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker: std::option::Option<std::string::String>,
@@ -2452,7 +2469,7 @@ pub mod list_file_shares_output {
             self.file_share_info_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFileSharesOutput`](crate::output::ListFileSharesOutput)
+        /// Consumes the builder and constructs a [`ListFileSharesOutput`](crate::output::ListFileSharesOutput).
         pub fn build(self) -> crate::output::ListFileSharesOutput {
             crate::output::ListFileSharesOutput {
                 marker: self.marker,
@@ -2463,7 +2480,7 @@ pub mod list_file_shares_output {
     }
 }
 impl ListFileSharesOutput {
-    /// Creates a new builder-style object to manufacture [`ListFileSharesOutput`](crate::output::ListFileSharesOutput)
+    /// Creates a new builder-style object to manufacture [`ListFileSharesOutput`](crate::output::ListFileSharesOutput).
     pub fn builder() -> crate::output::list_file_shares_output::Builder {
         crate::output::list_file_shares_output::Builder::default()
     }
@@ -2474,6 +2491,7 @@ impl ListFileSharesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAutomaticTapeCreationPoliciesOutput {
     /// <p>Gets a listing of information about the gateway's automatic tape creation policies, including the automatic tape creation rules and the gateway that is using the policies.</p>
+    #[doc(hidden)]
     pub automatic_tape_creation_policy_infos:
         std::option::Option<std::vec::Vec<crate::model::AutomaticTapeCreationPolicyInfo>>,
 }
@@ -2495,11 +2513,10 @@ impl std::fmt::Debug for ListAutomaticTapeCreationPoliciesOutput {
         formatter.finish()
     }
 }
-/// See [`ListAutomaticTapeCreationPoliciesOutput`](crate::output::ListAutomaticTapeCreationPoliciesOutput)
+/// See [`ListAutomaticTapeCreationPoliciesOutput`](crate::output::ListAutomaticTapeCreationPoliciesOutput).
 pub mod list_automatic_tape_creation_policies_output {
 
-    /// A builder for [`ListAutomaticTapeCreationPoliciesOutput`](crate::output::ListAutomaticTapeCreationPoliciesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAutomaticTapeCreationPoliciesOutput`](crate::output::ListAutomaticTapeCreationPoliciesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) automatic_tape_creation_policy_infos:
@@ -2532,7 +2549,7 @@ pub mod list_automatic_tape_creation_policies_output {
             self.automatic_tape_creation_policy_infos = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAutomaticTapeCreationPoliciesOutput`](crate::output::ListAutomaticTapeCreationPoliciesOutput)
+        /// Consumes the builder and constructs a [`ListAutomaticTapeCreationPoliciesOutput`](crate::output::ListAutomaticTapeCreationPoliciesOutput).
         pub fn build(self) -> crate::output::ListAutomaticTapeCreationPoliciesOutput {
             crate::output::ListAutomaticTapeCreationPoliciesOutput {
                 automatic_tape_creation_policy_infos: self.automatic_tape_creation_policy_infos,
@@ -2541,7 +2558,7 @@ pub mod list_automatic_tape_creation_policies_output {
     }
 }
 impl ListAutomaticTapeCreationPoliciesOutput {
-    /// Creates a new builder-style object to manufacture [`ListAutomaticTapeCreationPoliciesOutput`](crate::output::ListAutomaticTapeCreationPoliciesOutput)
+    /// Creates a new builder-style object to manufacture [`ListAutomaticTapeCreationPoliciesOutput`](crate::output::ListAutomaticTapeCreationPoliciesOutput).
     pub fn builder() -> crate::output::list_automatic_tape_creation_policies_output::Builder {
         crate::output::list_automatic_tape_creation_policies_output::Builder::default()
     }
@@ -2552,6 +2569,7 @@ impl ListAutomaticTapeCreationPoliciesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JoinDomainOutput {
     /// <p>The unique Amazon Resource Name (ARN) of the gateway that joined the domain.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>Indicates the status of the gateway as a member of the Active Directory domain.</p>
     /// <ul>
@@ -2563,6 +2581,7 @@ pub struct JoinDomainOutput {
     /// <li> <p> <code>TIMEOUT</code>: Indicates that the <code>JoinDomain</code> operation failed because the operation didn't complete within the allotted time.</p> </li>
     /// <li> <p> <code>UNKNOWN_ERROR</code>: Indicates that the <code>JoinDomain</code> operation failed due to another type of error.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub active_directory_status: std::option::Option<crate::model::ActiveDirectoryStatus>,
 }
 impl JoinDomainOutput {
@@ -2594,11 +2613,10 @@ impl std::fmt::Debug for JoinDomainOutput {
         formatter.finish()
     }
 }
-/// See [`JoinDomainOutput`](crate::output::JoinDomainOutput)
+/// See [`JoinDomainOutput`](crate::output::JoinDomainOutput).
 pub mod join_domain_output {
 
-    /// A builder for [`JoinDomainOutput`](crate::output::JoinDomainOutput)
-    #[non_exhaustive]
+    /// A builder for [`JoinDomainOutput`](crate::output::JoinDomainOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -2650,7 +2668,7 @@ pub mod join_domain_output {
             self.active_directory_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`JoinDomainOutput`](crate::output::JoinDomainOutput)
+        /// Consumes the builder and constructs a [`JoinDomainOutput`](crate::output::JoinDomainOutput).
         pub fn build(self) -> crate::output::JoinDomainOutput {
             crate::output::JoinDomainOutput {
                 gateway_arn: self.gateway_arn,
@@ -2660,7 +2678,7 @@ pub mod join_domain_output {
     }
 }
 impl JoinDomainOutput {
-    /// Creates a new builder-style object to manufacture [`JoinDomainOutput`](crate::output::JoinDomainOutput)
+    /// Creates a new builder-style object to manufacture [`JoinDomainOutput`](crate::output::JoinDomainOutput).
     pub fn builder() -> crate::output::join_domain_output::Builder {
         crate::output::join_domain_output::Builder::default()
     }
@@ -2671,6 +2689,7 @@ impl JoinDomainOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisassociateFileSystemOutput {
     /// <p>The Amazon Resource Name (ARN) of the deleted file system association.</p>
+    #[doc(hidden)]
     pub file_system_association_arn: std::option::Option<std::string::String>,
 }
 impl DisassociateFileSystemOutput {
@@ -2689,11 +2708,10 @@ impl std::fmt::Debug for DisassociateFileSystemOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateFileSystemOutput`](crate::output::DisassociateFileSystemOutput)
+/// See [`DisassociateFileSystemOutput`](crate::output::DisassociateFileSystemOutput).
 pub mod disassociate_file_system_output {
 
-    /// A builder for [`DisassociateFileSystemOutput`](crate::output::DisassociateFileSystemOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateFileSystemOutput`](crate::output::DisassociateFileSystemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_system_association_arn: std::option::Option<std::string::String>,
@@ -2715,7 +2733,7 @@ pub mod disassociate_file_system_output {
             self.file_system_association_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociateFileSystemOutput`](crate::output::DisassociateFileSystemOutput)
+        /// Consumes the builder and constructs a [`DisassociateFileSystemOutput`](crate::output::DisassociateFileSystemOutput).
         pub fn build(self) -> crate::output::DisassociateFileSystemOutput {
             crate::output::DisassociateFileSystemOutput {
                 file_system_association_arn: self.file_system_association_arn,
@@ -2724,7 +2742,7 @@ pub mod disassociate_file_system_output {
     }
 }
 impl DisassociateFileSystemOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateFileSystemOutput`](crate::output::DisassociateFileSystemOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateFileSystemOutput`](crate::output::DisassociateFileSystemOutput).
     pub fn builder() -> crate::output::disassociate_file_system_output::Builder {
         crate::output::disassociate_file_system_output::Builder::default()
     }
@@ -2735,6 +2753,7 @@ impl DisassociateFileSystemOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisableGatewayOutput {
     /// <p>The unique Amazon Resource Name (ARN) of the disabled gateway.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl DisableGatewayOutput {
@@ -2750,11 +2769,10 @@ impl std::fmt::Debug for DisableGatewayOutput {
         formatter.finish()
     }
 }
-/// See [`DisableGatewayOutput`](crate::output::DisableGatewayOutput)
+/// See [`DisableGatewayOutput`](crate::output::DisableGatewayOutput).
 pub mod disable_gateway_output {
 
-    /// A builder for [`DisableGatewayOutput`](crate::output::DisableGatewayOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisableGatewayOutput`](crate::output::DisableGatewayOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -2770,7 +2788,7 @@ pub mod disable_gateway_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisableGatewayOutput`](crate::output::DisableGatewayOutput)
+        /// Consumes the builder and constructs a [`DisableGatewayOutput`](crate::output::DisableGatewayOutput).
         pub fn build(self) -> crate::output::DisableGatewayOutput {
             crate::output::DisableGatewayOutput {
                 gateway_arn: self.gateway_arn,
@@ -2779,7 +2797,7 @@ pub mod disable_gateway_output {
     }
 }
 impl DisableGatewayOutput {
-    /// Creates a new builder-style object to manufacture [`DisableGatewayOutput`](crate::output::DisableGatewayOutput)
+    /// Creates a new builder-style object to manufacture [`DisableGatewayOutput`](crate::output::DisableGatewayOutput).
     pub fn builder() -> crate::output::disable_gateway_output::Builder {
         crate::output::disable_gateway_output::Builder::default()
     }
@@ -2790,6 +2808,7 @@ impl DisableGatewayOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetachVolumeOutput {
     /// <p>The Amazon Resource Name (ARN) of the volume that was detached.</p>
+    #[doc(hidden)]
     pub volume_arn: std::option::Option<std::string::String>,
 }
 impl DetachVolumeOutput {
@@ -2805,11 +2824,10 @@ impl std::fmt::Debug for DetachVolumeOutput {
         formatter.finish()
     }
 }
-/// See [`DetachVolumeOutput`](crate::output::DetachVolumeOutput)
+/// See [`DetachVolumeOutput`](crate::output::DetachVolumeOutput).
 pub mod detach_volume_output {
 
-    /// A builder for [`DetachVolumeOutput`](crate::output::DetachVolumeOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetachVolumeOutput`](crate::output::DetachVolumeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_arn: std::option::Option<std::string::String>,
@@ -2825,7 +2843,7 @@ pub mod detach_volume_output {
             self.volume_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetachVolumeOutput`](crate::output::DetachVolumeOutput)
+        /// Consumes the builder and constructs a [`DetachVolumeOutput`](crate::output::DetachVolumeOutput).
         pub fn build(self) -> crate::output::DetachVolumeOutput {
             crate::output::DetachVolumeOutput {
                 volume_arn: self.volume_arn,
@@ -2834,7 +2852,7 @@ pub mod detach_volume_output {
     }
 }
 impl DetachVolumeOutput {
-    /// Creates a new builder-style object to manufacture [`DetachVolumeOutput`](crate::output::DetachVolumeOutput)
+    /// Creates a new builder-style object to manufacture [`DetachVolumeOutput`](crate::output::DetachVolumeOutput).
     pub fn builder() -> crate::output::detach_volume_output::Builder {
         crate::output::detach_volume_output::Builder::default()
     }
@@ -2845,12 +2863,16 @@ impl DetachVolumeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeWorkingStorageOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>An array of the gateway's local disk IDs that are configured as working storage. Each local disk ID is specified as a string (minimum length of 1 and maximum length of 300). If no local disks are configured as working storage, then the DiskIds array is empty.</p>
+    #[doc(hidden)]
     pub disk_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The total working storage in bytes in use by the gateway. If no working storage is configured for the gateway, this field returns 0.</p>
+    #[doc(hidden)]
     pub working_storage_used_in_bytes: i64,
     /// <p>The total working storage in bytes allocated for the gateway. If no working storage is configured for the gateway, this field returns 0.</p>
+    #[doc(hidden)]
     pub working_storage_allocated_in_bytes: i64,
 }
 impl DescribeWorkingStorageOutput {
@@ -2887,11 +2909,10 @@ impl std::fmt::Debug for DescribeWorkingStorageOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeWorkingStorageOutput`](crate::output::DescribeWorkingStorageOutput)
+/// See [`DescribeWorkingStorageOutput`](crate::output::DescribeWorkingStorageOutput).
 pub mod describe_working_storage_output {
 
-    /// A builder for [`DescribeWorkingStorageOutput`](crate::output::DescribeWorkingStorageOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeWorkingStorageOutput`](crate::output::DescribeWorkingStorageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -2955,7 +2976,7 @@ pub mod describe_working_storage_output {
             self.working_storage_allocated_in_bytes = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeWorkingStorageOutput`](crate::output::DescribeWorkingStorageOutput)
+        /// Consumes the builder and constructs a [`DescribeWorkingStorageOutput`](crate::output::DescribeWorkingStorageOutput).
         pub fn build(self) -> crate::output::DescribeWorkingStorageOutput {
             crate::output::DescribeWorkingStorageOutput {
                 gateway_arn: self.gateway_arn,
@@ -2971,7 +2992,7 @@ pub mod describe_working_storage_output {
     }
 }
 impl DescribeWorkingStorageOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeWorkingStorageOutput`](crate::output::DescribeWorkingStorageOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeWorkingStorageOutput`](crate::output::DescribeWorkingStorageOutput).
     pub fn builder() -> crate::output::describe_working_storage_output::Builder {
         crate::output::describe_working_storage_output::Builder::default()
     }
@@ -2982,10 +3003,13 @@ impl DescribeWorkingStorageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeVtlDevicesOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>An array of VTL device objects composed of the Amazon Resource Name (ARN) of the VTL devices.</p>
+    #[doc(hidden)]
     pub vtl_devices: std::option::Option<std::vec::Vec<crate::model::VtlDevice>>,
     /// <p>An opaque string that indicates the position at which the VTL devices that were fetched for description ended. Use the marker in your next request to fetch the next set of VTL devices in the list. If there are no more VTL devices to describe, this field does not appear in the response.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeVtlDevicesOutput {
@@ -3011,11 +3035,10 @@ impl std::fmt::Debug for DescribeVtlDevicesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeVtlDevicesOutput`](crate::output::DescribeVtlDevicesOutput)
+/// See [`DescribeVtlDevicesOutput`](crate::output::DescribeVtlDevicesOutput).
 pub mod describe_vtl_devices_output {
 
-    /// A builder for [`DescribeVtlDevicesOutput`](crate::output::DescribeVtlDevicesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeVtlDevicesOutput`](crate::output::DescribeVtlDevicesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -3062,7 +3085,7 @@ pub mod describe_vtl_devices_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeVtlDevicesOutput`](crate::output::DescribeVtlDevicesOutput)
+        /// Consumes the builder and constructs a [`DescribeVtlDevicesOutput`](crate::output::DescribeVtlDevicesOutput).
         pub fn build(self) -> crate::output::DescribeVtlDevicesOutput {
             crate::output::DescribeVtlDevicesOutput {
                 gateway_arn: self.gateway_arn,
@@ -3073,7 +3096,7 @@ pub mod describe_vtl_devices_output {
     }
 }
 impl DescribeVtlDevicesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeVtlDevicesOutput`](crate::output::DescribeVtlDevicesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeVtlDevicesOutput`](crate::output::DescribeVtlDevicesOutput).
     pub fn builder() -> crate::output::describe_vtl_devices_output::Builder {
         crate::output::describe_vtl_devices_output::Builder::default()
     }
@@ -3084,12 +3107,16 @@ impl DescribeVtlDevicesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeUploadBufferOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>An array of the gateway's local disk IDs that are configured as working storage. Each local disk ID is specified as a string (minimum length of 1 and maximum length of 300). If no local disks are configured as working storage, then the DiskIds array is empty.</p>
+    #[doc(hidden)]
     pub disk_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The total number of bytes being used in the gateway's upload buffer.</p>
+    #[doc(hidden)]
     pub upload_buffer_used_in_bytes: i64,
     /// <p>The total number of bytes allocated in the gateway's as upload buffer.</p>
+    #[doc(hidden)]
     pub upload_buffer_allocated_in_bytes: i64,
 }
 impl DescribeUploadBufferOutput {
@@ -3126,11 +3153,10 @@ impl std::fmt::Debug for DescribeUploadBufferOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeUploadBufferOutput`](crate::output::DescribeUploadBufferOutput)
+/// See [`DescribeUploadBufferOutput`](crate::output::DescribeUploadBufferOutput).
 pub mod describe_upload_buffer_output {
 
-    /// A builder for [`DescribeUploadBufferOutput`](crate::output::DescribeUploadBufferOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeUploadBufferOutput`](crate::output::DescribeUploadBufferOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -3191,7 +3217,7 @@ pub mod describe_upload_buffer_output {
             self.upload_buffer_allocated_in_bytes = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeUploadBufferOutput`](crate::output::DescribeUploadBufferOutput)
+        /// Consumes the builder and constructs a [`DescribeUploadBufferOutput`](crate::output::DescribeUploadBufferOutput).
         pub fn build(self) -> crate::output::DescribeUploadBufferOutput {
             crate::output::DescribeUploadBufferOutput {
                 gateway_arn: self.gateway_arn,
@@ -3205,7 +3231,7 @@ pub mod describe_upload_buffer_output {
     }
 }
 impl DescribeUploadBufferOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeUploadBufferOutput`](crate::output::DescribeUploadBufferOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeUploadBufferOutput`](crate::output::DescribeUploadBufferOutput).
     pub fn builder() -> crate::output::describe_upload_buffer_output::Builder {
         crate::output::describe_upload_buffer_output::Builder::default()
     }
@@ -3216,9 +3242,11 @@ impl DescribeUploadBufferOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeTapesOutput {
     /// <p>An array of virtual tape descriptions.</p>
+    #[doc(hidden)]
     pub tapes: std::option::Option<std::vec::Vec<crate::model::Tape>>,
     /// <p>An opaque string that can be used as part of a subsequent <code>DescribeTapes</code> call to retrieve the next page of results.</p>
     /// <p>If a response does not contain a marker, then there are no more results to be retrieved.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeTapesOutput {
@@ -3240,11 +3268,10 @@ impl std::fmt::Debug for DescribeTapesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeTapesOutput`](crate::output::DescribeTapesOutput)
+/// See [`DescribeTapesOutput`](crate::output::DescribeTapesOutput).
 pub mod describe_tapes_output {
 
-    /// A builder for [`DescribeTapesOutput`](crate::output::DescribeTapesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeTapesOutput`](crate::output::DescribeTapesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tapes: std::option::Option<std::vec::Vec<crate::model::Tape>>,
@@ -3282,7 +3309,7 @@ pub mod describe_tapes_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeTapesOutput`](crate::output::DescribeTapesOutput)
+        /// Consumes the builder and constructs a [`DescribeTapesOutput`](crate::output::DescribeTapesOutput).
         pub fn build(self) -> crate::output::DescribeTapesOutput {
             crate::output::DescribeTapesOutput {
                 tapes: self.tapes,
@@ -3292,7 +3319,7 @@ pub mod describe_tapes_output {
     }
 }
 impl DescribeTapesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeTapesOutput`](crate::output::DescribeTapesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeTapesOutput`](crate::output::DescribeTapesOutput).
     pub fn builder() -> crate::output::describe_tapes_output::Builder {
         crate::output::describe_tapes_output::Builder::default()
     }
@@ -3303,12 +3330,15 @@ impl DescribeTapesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeTapeRecoveryPointsOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>An array of TapeRecoveryPointInfos that are available for the specified gateway.</p>
+    #[doc(hidden)]
     pub tape_recovery_point_infos:
         std::option::Option<std::vec::Vec<crate::model::TapeRecoveryPointInfo>>,
     /// <p>An opaque string that indicates the position at which the virtual tape recovery points that were listed for description ended.</p>
     /// <p>Use this marker in your next request to list the next set of virtual tape recovery points in the list. If there are no more recovery points to describe, this field does not appear in the response.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeTapeRecoveryPointsOutput {
@@ -3337,11 +3367,10 @@ impl std::fmt::Debug for DescribeTapeRecoveryPointsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeTapeRecoveryPointsOutput`](crate::output::DescribeTapeRecoveryPointsOutput)
+/// See [`DescribeTapeRecoveryPointsOutput`](crate::output::DescribeTapeRecoveryPointsOutput).
 pub mod describe_tape_recovery_points_output {
 
-    /// A builder for [`DescribeTapeRecoveryPointsOutput`](crate::output::DescribeTapeRecoveryPointsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeTapeRecoveryPointsOutput`](crate::output::DescribeTapeRecoveryPointsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -3394,7 +3423,7 @@ pub mod describe_tape_recovery_points_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeTapeRecoveryPointsOutput`](crate::output::DescribeTapeRecoveryPointsOutput)
+        /// Consumes the builder and constructs a [`DescribeTapeRecoveryPointsOutput`](crate::output::DescribeTapeRecoveryPointsOutput).
         pub fn build(self) -> crate::output::DescribeTapeRecoveryPointsOutput {
             crate::output::DescribeTapeRecoveryPointsOutput {
                 gateway_arn: self.gateway_arn,
@@ -3405,7 +3434,7 @@ pub mod describe_tape_recovery_points_output {
     }
 }
 impl DescribeTapeRecoveryPointsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeTapeRecoveryPointsOutput`](crate::output::DescribeTapeRecoveryPointsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeTapeRecoveryPointsOutput`](crate::output::DescribeTapeRecoveryPointsOutput).
     pub fn builder() -> crate::output::describe_tape_recovery_points_output::Builder {
         crate::output::describe_tape_recovery_points_output::Builder::default()
     }
@@ -3416,8 +3445,10 @@ impl DescribeTapeRecoveryPointsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeTapeArchivesOutput {
     /// <p>An array of virtual tape objects in the virtual tape shelf (VTS). The description includes of the Amazon Resource Name (ARN) of the virtual tapes. The information returned includes the Amazon Resource Names (ARNs) of the tapes, size of the tapes, status of the tapes, progress of the description, and tape barcode.</p>
+    #[doc(hidden)]
     pub tape_archives: std::option::Option<std::vec::Vec<crate::model::TapeArchive>>,
     /// <p>An opaque string that indicates the position at which the virtual tapes that were fetched for description ended. Use this marker in your next request to fetch the next set of virtual tapes in the virtual tape shelf (VTS). If there are no more virtual tapes to describe, this field does not appear in the response.</p>
+    #[doc(hidden)]
     pub marker: std::option::Option<std::string::String>,
 }
 impl DescribeTapeArchivesOutput {
@@ -3438,11 +3469,10 @@ impl std::fmt::Debug for DescribeTapeArchivesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeTapeArchivesOutput`](crate::output::DescribeTapeArchivesOutput)
+/// See [`DescribeTapeArchivesOutput`](crate::output::DescribeTapeArchivesOutput).
 pub mod describe_tape_archives_output {
 
-    /// A builder for [`DescribeTapeArchivesOutput`](crate::output::DescribeTapeArchivesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeTapeArchivesOutput`](crate::output::DescribeTapeArchivesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tape_archives: std::option::Option<std::vec::Vec<crate::model::TapeArchive>>,
@@ -3478,7 +3508,7 @@ pub mod describe_tape_archives_output {
             self.marker = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeTapeArchivesOutput`](crate::output::DescribeTapeArchivesOutput)
+        /// Consumes the builder and constructs a [`DescribeTapeArchivesOutput`](crate::output::DescribeTapeArchivesOutput).
         pub fn build(self) -> crate::output::DescribeTapeArchivesOutput {
             crate::output::DescribeTapeArchivesOutput {
                 tape_archives: self.tape_archives,
@@ -3488,7 +3518,7 @@ pub mod describe_tape_archives_output {
     }
 }
 impl DescribeTapeArchivesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeTapeArchivesOutput`](crate::output::DescribeTapeArchivesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeTapeArchivesOutput`](crate::output::DescribeTapeArchivesOutput).
     pub fn builder() -> crate::output::describe_tape_archives_output::Builder {
         crate::output::describe_tape_archives_output::Builder::default()
     }
@@ -3517,6 +3547,7 @@ pub struct DescribeStorediScsiVolumesOutput {
     /// <li> <p> <code>VolumeStatus</code>: One of the <code>VolumeStatus</code> values that indicates the state of the volume.</p> </li>
     /// <li> <p> <code>VolumeType</code>: One of the enumeration values describing the type of the volume. Currently, only <code>STORED</code> volumes are supported.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub storedi_scsi_volumes: std::option::Option<std::vec::Vec<crate::model::StorediScsiVolume>>,
 }
 impl DescribeStorediScsiVolumesOutput {
@@ -3550,11 +3581,10 @@ impl std::fmt::Debug for DescribeStorediScsiVolumesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeStorediScsiVolumesOutput`](crate::output::DescribeStorediScsiVolumesOutput)
+/// See [`DescribeStorediScsiVolumesOutput`](crate::output::DescribeStorediScsiVolumesOutput).
 pub mod describe_storedi_scsi_volumes_output {
 
-    /// A builder for [`DescribeStorediScsiVolumesOutput`](crate::output::DescribeStorediScsiVolumesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeStorediScsiVolumesOutput`](crate::output::DescribeStorediScsiVolumesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) storedi_scsi_volumes:
@@ -3616,7 +3646,7 @@ pub mod describe_storedi_scsi_volumes_output {
             self.storedi_scsi_volumes = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeStorediScsiVolumesOutput`](crate::output::DescribeStorediScsiVolumesOutput)
+        /// Consumes the builder and constructs a [`DescribeStorediScsiVolumesOutput`](crate::output::DescribeStorediScsiVolumesOutput).
         pub fn build(self) -> crate::output::DescribeStorediScsiVolumesOutput {
             crate::output::DescribeStorediScsiVolumesOutput {
                 storedi_scsi_volumes: self.storedi_scsi_volumes,
@@ -3625,7 +3655,7 @@ pub mod describe_storedi_scsi_volumes_output {
     }
 }
 impl DescribeStorediScsiVolumesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeStorediScsiVolumesOutput`](crate::output::DescribeStorediScsiVolumesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeStorediScsiVolumesOutput`](crate::output::DescribeStorediScsiVolumesOutput).
     pub fn builder() -> crate::output::describe_storedi_scsi_volumes_output::Builder {
         crate::output::describe_storedi_scsi_volumes_output::Builder::default()
     }
@@ -3636,16 +3666,22 @@ impl DescribeStorediScsiVolumesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSnapshotScheduleOutput {
     /// <p>The Amazon Resource Name (ARN) of the volume that was specified in the request.</p>
+    #[doc(hidden)]
     pub volume_arn: std::option::Option<std::string::String>,
     /// <p>The hour of the day at which the snapshot schedule begins represented as <i>hh</i>, where <i>hh</i> is the hour (0 to 23). The hour of the day is in the time zone of the gateway.</p>
+    #[doc(hidden)]
     pub start_at: std::option::Option<i32>,
     /// <p>The number of hours between snapshots.</p>
+    #[doc(hidden)]
     pub recurrence_in_hours: std::option::Option<i32>,
     /// <p>The snapshot description.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>A value that indicates the time zone of the gateway.</p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
     /// <p>A list of up to 50 tags assigned to the snapshot schedule, sorted alphabetically by key name. Each tag is a key-value pair. For a gateway with more than 10 tags assigned, you can view all tags using the <code>ListTagsForResource</code> API operation.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl DescribeSnapshotScheduleOutput {
@@ -3686,11 +3722,10 @@ impl std::fmt::Debug for DescribeSnapshotScheduleOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeSnapshotScheduleOutput`](crate::output::DescribeSnapshotScheduleOutput)
+/// See [`DescribeSnapshotScheduleOutput`](crate::output::DescribeSnapshotScheduleOutput).
 pub mod describe_snapshot_schedule_output {
 
-    /// A builder for [`DescribeSnapshotScheduleOutput`](crate::output::DescribeSnapshotScheduleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSnapshotScheduleOutput`](crate::output::DescribeSnapshotScheduleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_arn: std::option::Option<std::string::String>,
@@ -3770,7 +3805,7 @@ pub mod describe_snapshot_schedule_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSnapshotScheduleOutput`](crate::output::DescribeSnapshotScheduleOutput)
+        /// Consumes the builder and constructs a [`DescribeSnapshotScheduleOutput`](crate::output::DescribeSnapshotScheduleOutput).
         pub fn build(self) -> crate::output::DescribeSnapshotScheduleOutput {
             crate::output::DescribeSnapshotScheduleOutput {
                 volume_arn: self.volume_arn,
@@ -3784,7 +3819,7 @@ pub mod describe_snapshot_schedule_output {
     }
 }
 impl DescribeSnapshotScheduleOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeSnapshotScheduleOutput`](crate::output::DescribeSnapshotScheduleOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeSnapshotScheduleOutput`](crate::output::DescribeSnapshotScheduleOutput).
     pub fn builder() -> crate::output::describe_snapshot_schedule_output::Builder {
         crate::output::describe_snapshot_schedule_output::Builder::default()
     }
@@ -3795,8 +3830,10 @@ impl DescribeSnapshotScheduleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSmbSettingsOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>The name of the domain that the gateway is joined to.</p>
+    #[doc(hidden)]
     pub domain_name: std::option::Option<std::string::String>,
     /// <p>Indicates the status of a gateway that is a member of the Active Directory domain.</p>
     /// <ul>
@@ -3808,9 +3845,11 @@ pub struct DescribeSmbSettingsOutput {
     /// <li> <p> <code>TIMEOUT</code>: Indicates that the <code>JoinDomain</code> operation failed because the operation didn't complete within the allotted time.</p> </li>
     /// <li> <p> <code>UNKNOWN_ERROR</code>: Indicates that the <code>JoinDomain</code> operation failed due to another type of error.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub active_directory_status: std::option::Option<crate::model::ActiveDirectoryStatus>,
     /// <p>This value is <code>true</code> if a password for the guest user <code>smbguest</code> is set, otherwise <code>false</code>. Only supported for S3 File Gateways.</p>
     /// <p>Valid Values: <code>true</code> | <code>false</code> </p>
+    #[doc(hidden)]
     pub smb_guest_password_set: std::option::Option<bool>,
     /// <p>The type of security strategy that was specified for file gateway.</p>
     /// <ul>
@@ -3818,10 +3857,13 @@ pub struct DescribeSmbSettingsOutput {
     /// <li> <p> <code>MandatorySigning</code>: If you use this option, file gateway only allows connections from SMBv2 or SMBv3 clients that have signing enabled. This option works with SMB clients on Microsoft Windows Vista, Windows Server 2008 or newer.</p> </li>
     /// <li> <p> <code>MandatoryEncryption</code>: If you use this option, file gateway only allows connections from SMBv3 clients that have encryption enabled. This option is highly recommended for environments that handle sensitive data. This option works with SMB clients on Microsoft Windows 8, Windows Server 2012 or newer.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub smb_security_strategy: std::option::Option<crate::model::SmbSecurityStrategy>,
     /// <p>The shares on this gateway appear when listing shares. Only supported for S3 File Gateways. </p>
+    #[doc(hidden)]
     pub file_shares_visible: std::option::Option<bool>,
     /// <p>A list of Active Directory users and groups that have special permissions for SMB file shares on the gateway.</p>
+    #[doc(hidden)]
     pub smb_local_groups: std::option::Option<crate::model::SmbLocalGroups>,
 }
 impl DescribeSmbSettingsOutput {
@@ -3884,11 +3926,10 @@ impl std::fmt::Debug for DescribeSmbSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeSmbSettingsOutput`](crate::output::DescribeSmbSettingsOutput)
+/// See [`DescribeSmbSettingsOutput`](crate::output::DescribeSmbSettingsOutput).
 pub mod describe_smb_settings_output {
 
-    /// A builder for [`DescribeSmbSettingsOutput`](crate::output::DescribeSmbSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSmbSettingsOutput`](crate::output::DescribeSmbSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -4013,7 +4054,7 @@ pub mod describe_smb_settings_output {
             self.smb_local_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSmbSettingsOutput`](crate::output::DescribeSmbSettingsOutput)
+        /// Consumes the builder and constructs a [`DescribeSmbSettingsOutput`](crate::output::DescribeSmbSettingsOutput).
         pub fn build(self) -> crate::output::DescribeSmbSettingsOutput {
             crate::output::DescribeSmbSettingsOutput {
                 gateway_arn: self.gateway_arn,
@@ -4028,7 +4069,7 @@ pub mod describe_smb_settings_output {
     }
 }
 impl DescribeSmbSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeSmbSettingsOutput`](crate::output::DescribeSmbSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeSmbSettingsOutput`](crate::output::DescribeSmbSettingsOutput).
     pub fn builder() -> crate::output::describe_smb_settings_output::Builder {
         crate::output::describe_smb_settings_output::Builder::default()
     }
@@ -4039,6 +4080,7 @@ impl DescribeSmbSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSmbFileSharesOutput {
     /// <p>An array containing a description for each requested file share.</p>
+    #[doc(hidden)]
     pub smb_file_share_info_list:
         std::option::Option<std::vec::Vec<crate::model::SmbFileShareInfo>>,
 }
@@ -4057,11 +4099,10 @@ impl std::fmt::Debug for DescribeSmbFileSharesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeSmbFileSharesOutput`](crate::output::DescribeSmbFileSharesOutput)
+/// See [`DescribeSmbFileSharesOutput`](crate::output::DescribeSmbFileSharesOutput).
 pub mod describe_smb_file_shares_output {
 
-    /// A builder for [`DescribeSmbFileSharesOutput`](crate::output::DescribeSmbFileSharesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSmbFileSharesOutput`](crate::output::DescribeSmbFileSharesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) smb_file_share_info_list:
@@ -4087,7 +4128,7 @@ pub mod describe_smb_file_shares_output {
             self.smb_file_share_info_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSmbFileSharesOutput`](crate::output::DescribeSmbFileSharesOutput)
+        /// Consumes the builder and constructs a [`DescribeSmbFileSharesOutput`](crate::output::DescribeSmbFileSharesOutput).
         pub fn build(self) -> crate::output::DescribeSmbFileSharesOutput {
             crate::output::DescribeSmbFileSharesOutput {
                 smb_file_share_info_list: self.smb_file_share_info_list,
@@ -4096,7 +4137,7 @@ pub mod describe_smb_file_shares_output {
     }
 }
 impl DescribeSmbFileSharesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeSmbFileSharesOutput`](crate::output::DescribeSmbFileSharesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeSmbFileSharesOutput`](crate::output::DescribeSmbFileSharesOutput).
     pub fn builder() -> crate::output::describe_smb_file_shares_output::Builder {
         crate::output::describe_smb_file_shares_output::Builder::default()
     }
@@ -4107,6 +4148,7 @@ impl DescribeSmbFileSharesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeNfsFileSharesOutput {
     /// <p>An array containing a description for each requested file share.</p>
+    #[doc(hidden)]
     pub nfs_file_share_info_list:
         std::option::Option<std::vec::Vec<crate::model::NfsFileShareInfo>>,
 }
@@ -4125,11 +4167,10 @@ impl std::fmt::Debug for DescribeNfsFileSharesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeNfsFileSharesOutput`](crate::output::DescribeNfsFileSharesOutput)
+/// See [`DescribeNfsFileSharesOutput`](crate::output::DescribeNfsFileSharesOutput).
 pub mod describe_nfs_file_shares_output {
 
-    /// A builder for [`DescribeNfsFileSharesOutput`](crate::output::DescribeNfsFileSharesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeNfsFileSharesOutput`](crate::output::DescribeNfsFileSharesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) nfs_file_share_info_list:
@@ -4155,7 +4196,7 @@ pub mod describe_nfs_file_shares_output {
             self.nfs_file_share_info_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeNfsFileSharesOutput`](crate::output::DescribeNfsFileSharesOutput)
+        /// Consumes the builder and constructs a [`DescribeNfsFileSharesOutput`](crate::output::DescribeNfsFileSharesOutput).
         pub fn build(self) -> crate::output::DescribeNfsFileSharesOutput {
             crate::output::DescribeNfsFileSharesOutput {
                 nfs_file_share_info_list: self.nfs_file_share_info_list,
@@ -4164,7 +4205,7 @@ pub mod describe_nfs_file_shares_output {
     }
 }
 impl DescribeNfsFileSharesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeNfsFileSharesOutput`](crate::output::DescribeNfsFileSharesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeNfsFileSharesOutput`](crate::output::DescribeNfsFileSharesOutput).
     pub fn builder() -> crate::output::describe_nfs_file_shares_output::Builder {
         crate::output::describe_nfs_file_shares_output::Builder::default()
     }
@@ -4182,16 +4223,22 @@ impl DescribeNfsFileSharesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeMaintenanceStartTimeOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>The hour component of the maintenance start time represented as <i>hh</i>, where <i>hh</i> is the hour (0 to 23). The hour of the day is in the time zone of the gateway.</p>
+    #[doc(hidden)]
     pub hour_of_day: std::option::Option<i32>,
     /// <p>The minute component of the maintenance start time represented as <i>mm</i>, where <i>mm</i> is the minute (0 to 59). The minute of the hour is in the time zone of the gateway.</p>
+    #[doc(hidden)]
     pub minute_of_hour: std::option::Option<i32>,
     /// <p>An ordinal number between 0 and 6 that represents the day of the week, where 0 represents Sunday and 6 represents Saturday. The day of week is in the time zone of the gateway.</p>
+    #[doc(hidden)]
     pub day_of_week: std::option::Option<i32>,
     /// <p>The day of the month component of the maintenance start time represented as an ordinal number from 1 to 28, where 1 represents the first day of the month and 28 represents the last day of the month.</p>
+    #[doc(hidden)]
     pub day_of_month: std::option::Option<i32>,
     /// <p>A value that indicates the time zone that is set for the gateway. The start time and day of week specified should be in the time zone of the gateway.</p>
+    #[doc(hidden)]
     pub timezone: std::option::Option<std::string::String>,
 }
 impl DescribeMaintenanceStartTimeOutput {
@@ -4232,11 +4279,10 @@ impl std::fmt::Debug for DescribeMaintenanceStartTimeOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeMaintenanceStartTimeOutput`](crate::output::DescribeMaintenanceStartTimeOutput)
+/// See [`DescribeMaintenanceStartTimeOutput`](crate::output::DescribeMaintenanceStartTimeOutput).
 pub mod describe_maintenance_start_time_output {
 
-    /// A builder for [`DescribeMaintenanceStartTimeOutput`](crate::output::DescribeMaintenanceStartTimeOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeMaintenanceStartTimeOutput`](crate::output::DescribeMaintenanceStartTimeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -4307,7 +4353,7 @@ pub mod describe_maintenance_start_time_output {
             self.timezone = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeMaintenanceStartTimeOutput`](crate::output::DescribeMaintenanceStartTimeOutput)
+        /// Consumes the builder and constructs a [`DescribeMaintenanceStartTimeOutput`](crate::output::DescribeMaintenanceStartTimeOutput).
         pub fn build(self) -> crate::output::DescribeMaintenanceStartTimeOutput {
             crate::output::DescribeMaintenanceStartTimeOutput {
                 gateway_arn: self.gateway_arn,
@@ -4321,7 +4367,7 @@ pub mod describe_maintenance_start_time_output {
     }
 }
 impl DescribeMaintenanceStartTimeOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeMaintenanceStartTimeOutput`](crate::output::DescribeMaintenanceStartTimeOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeMaintenanceStartTimeOutput`](crate::output::DescribeMaintenanceStartTimeOutput).
     pub fn builder() -> crate::output::describe_maintenance_start_time_output::Builder {
         crate::output::describe_maintenance_start_time_output::Builder::default()
     }
@@ -4332,49 +4378,70 @@ impl DescribeMaintenanceStartTimeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeGatewayInformationOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier assigned to your gateway during activation. This ID becomes part of the gateway Amazon Resource Name (ARN), which you use as input for other operations.</p>
+    #[doc(hidden)]
     pub gateway_id: std::option::Option<std::string::String>,
     /// <p>The name you configured for your gateway.</p>
+    #[doc(hidden)]
     pub gateway_name: std::option::Option<std::string::String>,
     /// <p>A value that indicates the time zone configured for the gateway.</p>
+    #[doc(hidden)]
     pub gateway_timezone: std::option::Option<std::string::String>,
     /// <p>A value that indicates the operating state of the gateway.</p>
+    #[doc(hidden)]
     pub gateway_state: std::option::Option<std::string::String>,
     /// <p>A <code>NetworkInterface</code> array that contains descriptions of the gateway network interfaces.</p>
+    #[doc(hidden)]
     pub gateway_network_interfaces:
         std::option::Option<std::vec::Vec<crate::model::NetworkInterface>>,
     /// <p>The type of the gateway.</p>
+    #[doc(hidden)]
     pub gateway_type: std::option::Option<std::string::String>,
     /// <p>The date on which an update to the gateway is available. This date is in the time zone of the gateway. If the gateway is not available for an update this field is not returned in the response.</p>
+    #[doc(hidden)]
     pub next_update_availability_date: std::option::Option<std::string::String>,
     /// <p>The date on which the last software update was applied to the gateway. If the gateway has never been updated, this field does not return a value in the response. This only only exist and returns once it have been chosen and set by the SGW service, based on the OS version of the gateway VM</p>
+    #[doc(hidden)]
     pub last_software_update: std::option::Option<std::string::String>,
     /// <p>The ID of the Amazon EC2 instance that was used to launch the gateway.</p>
+    #[doc(hidden)]
     pub ec2_instance_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region where the Amazon EC2 instance is located.</p>
+    #[doc(hidden)]
     pub ec2_instance_region: std::option::Option<std::string::String>,
     /// <p>A list of up to 50 tags assigned to the gateway, sorted alphabetically by key name. Each tag is a key-value pair. For a gateway with more than 10 tags assigned, you can view all tags using the <code>ListTagsForResource</code> API operation.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The configuration settings for the virtual private cloud (VPC) endpoint for your gateway.</p>
+    #[doc(hidden)]
     pub vpc_endpoint: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor events in the gateway. This field only only exist and returns once it have been chosen and set by the SGW service, based on the OS version of the gateway VM</p>
+    #[doc(hidden)]
     pub cloud_watch_log_group_arn: std::option::Option<std::string::String>,
     /// <p>The type of hardware or software platform on which the gateway is running.</p>
+    #[doc(hidden)]
     pub host_environment: std::option::Option<crate::model::HostEnvironment>,
     /// <p>The type of endpoint for your gateway.</p>
     /// <p>Valid Values: <code>STANDARD</code> | <code>FIPS</code> </p>
+    #[doc(hidden)]
     pub endpoint_type: std::option::Option<std::string::String>,
     /// <p>Date after which this gateway will not receive software updates for new features.</p>
+    #[doc(hidden)]
     pub software_updates_end_date: std::option::Option<std::string::String>,
     /// <p>Date after which this gateway will not receive software updates for new features and bug fixes.</p>
+    #[doc(hidden)]
     pub deprecation_date: std::option::Option<std::string::String>,
     /// <p>Specifies the size of the gateway's metadata cache.</p>
+    #[doc(hidden)]
     pub gateway_capacity: std::option::Option<crate::model::GatewayCapacity>,
     /// <p>A list of the metadata cache sizes that the gateway can support based on its current hardware specifications.</p>
+    #[doc(hidden)]
     pub supported_gateway_capacities:
         std::option::Option<std::vec::Vec<crate::model::GatewayCapacity>>,
     /// <p>A unique identifier for the specific instance of the host platform running the gateway. This value is only available for certain host environments, and its format depends on the host environment type.</p>
+    #[doc(hidden)]
     pub host_environment_id: std::option::Option<std::string::String>,
 }
 impl DescribeGatewayInformationOutput {
@@ -4504,11 +4571,10 @@ impl std::fmt::Debug for DescribeGatewayInformationOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeGatewayInformationOutput`](crate::output::DescribeGatewayInformationOutput)
+/// See [`DescribeGatewayInformationOutput`](crate::output::DescribeGatewayInformationOutput).
 pub mod describe_gateway_information_output {
 
-    /// A builder for [`DescribeGatewayInformationOutput`](crate::output::DescribeGatewayInformationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeGatewayInformationOutput`](crate::output::DescribeGatewayInformationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -4820,7 +4886,7 @@ pub mod describe_gateway_information_output {
             self.host_environment_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeGatewayInformationOutput`](crate::output::DescribeGatewayInformationOutput)
+        /// Consumes the builder and constructs a [`DescribeGatewayInformationOutput`](crate::output::DescribeGatewayInformationOutput).
         pub fn build(self) -> crate::output::DescribeGatewayInformationOutput {
             crate::output::DescribeGatewayInformationOutput {
                 gateway_arn: self.gateway_arn,
@@ -4849,7 +4915,7 @@ pub mod describe_gateway_information_output {
     }
 }
 impl DescribeGatewayInformationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeGatewayInformationOutput`](crate::output::DescribeGatewayInformationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeGatewayInformationOutput`](crate::output::DescribeGatewayInformationOutput).
     pub fn builder() -> crate::output::describe_gateway_information_output::Builder {
         crate::output::describe_gateway_information_output::Builder::default()
     }
@@ -4860,6 +4926,7 @@ impl DescribeGatewayInformationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeFileSystemAssociationsOutput {
     /// <p>An array containing the <code>FileSystemAssociationInfo</code> data type of each file system association to be described. </p>
+    #[doc(hidden)]
     pub file_system_association_info_list:
         std::option::Option<std::vec::Vec<crate::model::FileSystemAssociationInfo>>,
 }
@@ -4881,11 +4948,10 @@ impl std::fmt::Debug for DescribeFileSystemAssociationsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFileSystemAssociationsOutput`](crate::output::DescribeFileSystemAssociationsOutput)
+/// See [`DescribeFileSystemAssociationsOutput`](crate::output::DescribeFileSystemAssociationsOutput).
 pub mod describe_file_system_associations_output {
 
-    /// A builder for [`DescribeFileSystemAssociationsOutput`](crate::output::DescribeFileSystemAssociationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeFileSystemAssociationsOutput`](crate::output::DescribeFileSystemAssociationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_system_association_info_list:
@@ -4914,7 +4980,7 @@ pub mod describe_file_system_associations_output {
             self.file_system_association_info_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFileSystemAssociationsOutput`](crate::output::DescribeFileSystemAssociationsOutput)
+        /// Consumes the builder and constructs a [`DescribeFileSystemAssociationsOutput`](crate::output::DescribeFileSystemAssociationsOutput).
         pub fn build(self) -> crate::output::DescribeFileSystemAssociationsOutput {
             crate::output::DescribeFileSystemAssociationsOutput {
                 file_system_association_info_list: self.file_system_association_info_list,
@@ -4923,7 +4989,7 @@ pub mod describe_file_system_associations_output {
     }
 }
 impl DescribeFileSystemAssociationsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFileSystemAssociationsOutput`](crate::output::DescribeFileSystemAssociationsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFileSystemAssociationsOutput`](crate::output::DescribeFileSystemAssociationsOutput).
     pub fn builder() -> crate::output::describe_file_system_associations_output::Builder {
         crate::output::describe_file_system_associations_output::Builder::default()
     }
@@ -4940,6 +5006,7 @@ pub struct DescribeChapCredentialsOutput {
     /// <li> <p> <b>SecretToAuthenticateTarget</b>: The secret key that the target must provide to participate in mutual CHAP with the initiator (e.g. Windows client).</p> </li>
     /// <li> <p> <b>TargetARN</b>: The Amazon Resource Name (ARN) of the storage volume.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub chap_credentials: std::option::Option<std::vec::Vec<crate::model::ChapInfo>>,
 }
 impl DescribeChapCredentialsOutput {
@@ -4961,11 +5028,10 @@ impl std::fmt::Debug for DescribeChapCredentialsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeChapCredentialsOutput`](crate::output::DescribeChapCredentialsOutput)
+/// See [`DescribeChapCredentialsOutput`](crate::output::DescribeChapCredentialsOutput).
 pub mod describe_chap_credentials_output {
 
-    /// A builder for [`DescribeChapCredentialsOutput`](crate::output::DescribeChapCredentialsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeChapCredentialsOutput`](crate::output::DescribeChapCredentialsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) chap_credentials: std::option::Option<std::vec::Vec<crate::model::ChapInfo>>,
@@ -5002,7 +5068,7 @@ pub mod describe_chap_credentials_output {
             self.chap_credentials = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeChapCredentialsOutput`](crate::output::DescribeChapCredentialsOutput)
+        /// Consumes the builder and constructs a [`DescribeChapCredentialsOutput`](crate::output::DescribeChapCredentialsOutput).
         pub fn build(self) -> crate::output::DescribeChapCredentialsOutput {
             crate::output::DescribeChapCredentialsOutput {
                 chap_credentials: self.chap_credentials,
@@ -5011,7 +5077,7 @@ pub mod describe_chap_credentials_output {
     }
 }
 impl DescribeChapCredentialsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeChapCredentialsOutput`](crate::output::DescribeChapCredentialsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeChapCredentialsOutput`](crate::output::DescribeChapCredentialsOutput).
     pub fn builder() -> crate::output::describe_chap_credentials_output::Builder {
         crate::output::describe_chap_credentials_output::Builder::default()
     }
@@ -5022,6 +5088,7 @@ impl DescribeChapCredentialsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeCachediScsiVolumesOutput {
     /// <p>An array of objects where each object contains metadata about one cached volume.</p>
+    #[doc(hidden)]
     pub cachedi_scsi_volumes: std::option::Option<std::vec::Vec<crate::model::CachediScsiVolume>>,
 }
 impl DescribeCachediScsiVolumesOutput {
@@ -5037,11 +5104,10 @@ impl std::fmt::Debug for DescribeCachediScsiVolumesOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeCachediScsiVolumesOutput`](crate::output::DescribeCachediScsiVolumesOutput)
+/// See [`DescribeCachediScsiVolumesOutput`](crate::output::DescribeCachediScsiVolumesOutput).
 pub mod describe_cachedi_scsi_volumes_output {
 
-    /// A builder for [`DescribeCachediScsiVolumesOutput`](crate::output::DescribeCachediScsiVolumesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeCachediScsiVolumesOutput`](crate::output::DescribeCachediScsiVolumesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cachedi_scsi_volumes:
@@ -5067,7 +5133,7 @@ pub mod describe_cachedi_scsi_volumes_output {
             self.cachedi_scsi_volumes = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeCachediScsiVolumesOutput`](crate::output::DescribeCachediScsiVolumesOutput)
+        /// Consumes the builder and constructs a [`DescribeCachediScsiVolumesOutput`](crate::output::DescribeCachediScsiVolumesOutput).
         pub fn build(self) -> crate::output::DescribeCachediScsiVolumesOutput {
             crate::output::DescribeCachediScsiVolumesOutput {
                 cachedi_scsi_volumes: self.cachedi_scsi_volumes,
@@ -5076,7 +5142,7 @@ pub mod describe_cachedi_scsi_volumes_output {
     }
 }
 impl DescribeCachediScsiVolumesOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeCachediScsiVolumesOutput`](crate::output::DescribeCachediScsiVolumesOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeCachediScsiVolumesOutput`](crate::output::DescribeCachediScsiVolumesOutput).
     pub fn builder() -> crate::output::describe_cachedi_scsi_volumes_output::Builder {
         crate::output::describe_cachedi_scsi_volumes_output::Builder::default()
     }
@@ -5087,18 +5153,25 @@ impl DescribeCachediScsiVolumesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeCacheOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>An array of strings that identify disks that are to be configured as working storage. Each string has a minimum length of 1 and maximum length of 300. You can get the disk IDs from the <code>ListLocalDisks</code> API.</p>
+    #[doc(hidden)]
     pub disk_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The amount of cache in bytes allocated to a gateway.</p>
+    #[doc(hidden)]
     pub cache_allocated_in_bytes: i64,
     /// <p>Percent use of the gateway's cache storage. This metric applies only to the gateway-cached volume setup. The sample is taken at the end of the reporting period.</p>
+    #[doc(hidden)]
     pub cache_used_percentage: f64,
     /// <p>The file share's contribution to the overall percentage of the gateway's cache that has not been persisted to Amazon Web Services. The sample is taken at the end of the reporting period.</p>
+    #[doc(hidden)]
     pub cache_dirty_percentage: f64,
     /// <p>Percent of application read operations from the file shares that are served from cache. The sample is taken at the end of the reporting period.</p>
+    #[doc(hidden)]
     pub cache_hit_percentage: f64,
     /// <p>Percent of application read operations from the file shares that are not served from cache. The sample is taken at the end of the reporting period.</p>
+    #[doc(hidden)]
     pub cache_miss_percentage: f64,
 }
 impl DescribeCacheOutput {
@@ -5144,11 +5217,10 @@ impl std::fmt::Debug for DescribeCacheOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeCacheOutput`](crate::output::DescribeCacheOutput)
+/// See [`DescribeCacheOutput`](crate::output::DescribeCacheOutput).
 pub mod describe_cache_output {
 
-    /// A builder for [`DescribeCacheOutput`](crate::output::DescribeCacheOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeCacheOutput`](crate::output::DescribeCacheOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -5239,7 +5311,7 @@ pub mod describe_cache_output {
             self.cache_miss_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeCacheOutput`](crate::output::DescribeCacheOutput)
+        /// Consumes the builder and constructs a [`DescribeCacheOutput`](crate::output::DescribeCacheOutput).
         pub fn build(self) -> crate::output::DescribeCacheOutput {
             crate::output::DescribeCacheOutput {
                 gateway_arn: self.gateway_arn,
@@ -5254,7 +5326,7 @@ pub mod describe_cache_output {
     }
 }
 impl DescribeCacheOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeCacheOutput`](crate::output::DescribeCacheOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeCacheOutput`](crate::output::DescribeCacheOutput).
     pub fn builder() -> crate::output::describe_cache_output::Builder {
         crate::output::describe_cache_output::Builder::default()
     }
@@ -5265,8 +5337,10 @@ impl DescribeCacheOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBandwidthRateLimitScheduleOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p> An array that contains the bandwidth rate limit intervals for a tape or volume gateway. </p>
+    #[doc(hidden)]
     pub bandwidth_rate_limit_intervals:
         std::option::Option<std::vec::Vec<crate::model::BandwidthRateLimitInterval>>,
 }
@@ -5293,11 +5367,10 @@ impl std::fmt::Debug for DescribeBandwidthRateLimitScheduleOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeBandwidthRateLimitScheduleOutput`](crate::output::DescribeBandwidthRateLimitScheduleOutput)
+/// See [`DescribeBandwidthRateLimitScheduleOutput`](crate::output::DescribeBandwidthRateLimitScheduleOutput).
 pub mod describe_bandwidth_rate_limit_schedule_output {
 
-    /// A builder for [`DescribeBandwidthRateLimitScheduleOutput`](crate::output::DescribeBandwidthRateLimitScheduleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeBandwidthRateLimitScheduleOutput`](crate::output::DescribeBandwidthRateLimitScheduleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -5337,7 +5410,7 @@ pub mod describe_bandwidth_rate_limit_schedule_output {
             self.bandwidth_rate_limit_intervals = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeBandwidthRateLimitScheduleOutput`](crate::output::DescribeBandwidthRateLimitScheduleOutput)
+        /// Consumes the builder and constructs a [`DescribeBandwidthRateLimitScheduleOutput`](crate::output::DescribeBandwidthRateLimitScheduleOutput).
         pub fn build(self) -> crate::output::DescribeBandwidthRateLimitScheduleOutput {
             crate::output::DescribeBandwidthRateLimitScheduleOutput {
                 gateway_arn: self.gateway_arn,
@@ -5347,7 +5420,7 @@ pub mod describe_bandwidth_rate_limit_schedule_output {
     }
 }
 impl DescribeBandwidthRateLimitScheduleOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeBandwidthRateLimitScheduleOutput`](crate::output::DescribeBandwidthRateLimitScheduleOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeBandwidthRateLimitScheduleOutput`](crate::output::DescribeBandwidthRateLimitScheduleOutput).
     pub fn builder() -> crate::output::describe_bandwidth_rate_limit_schedule_output::Builder {
         crate::output::describe_bandwidth_rate_limit_schedule_output::Builder::default()
     }
@@ -5358,10 +5431,13 @@ impl DescribeBandwidthRateLimitScheduleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBandwidthRateLimitOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>The average upload bandwidth rate limit in bits per second. This field does not appear in the response if the upload rate limit is not set.</p>
+    #[doc(hidden)]
     pub average_upload_rate_limit_in_bits_per_sec: std::option::Option<i64>,
     /// <p>The average download bandwidth rate limit in bits per second. This field does not appear in the response if the download rate limit is not set.</p>
+    #[doc(hidden)]
     pub average_download_rate_limit_in_bits_per_sec: std::option::Option<i64>,
 }
 impl DescribeBandwidthRateLimitOutput {
@@ -5393,11 +5469,10 @@ impl std::fmt::Debug for DescribeBandwidthRateLimitOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeBandwidthRateLimitOutput`](crate::output::DescribeBandwidthRateLimitOutput)
+/// See [`DescribeBandwidthRateLimitOutput`](crate::output::DescribeBandwidthRateLimitOutput).
 pub mod describe_bandwidth_rate_limit_output {
 
-    /// A builder for [`DescribeBandwidthRateLimitOutput`](crate::output::DescribeBandwidthRateLimitOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeBandwidthRateLimitOutput`](crate::output::DescribeBandwidthRateLimitOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -5441,7 +5516,7 @@ pub mod describe_bandwidth_rate_limit_output {
             self.average_download_rate_limit_in_bits_per_sec = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeBandwidthRateLimitOutput`](crate::output::DescribeBandwidthRateLimitOutput)
+        /// Consumes the builder and constructs a [`DescribeBandwidthRateLimitOutput`](crate::output::DescribeBandwidthRateLimitOutput).
         pub fn build(self) -> crate::output::DescribeBandwidthRateLimitOutput {
             crate::output::DescribeBandwidthRateLimitOutput {
                 gateway_arn: self.gateway_arn,
@@ -5454,7 +5529,7 @@ pub mod describe_bandwidth_rate_limit_output {
     }
 }
 impl DescribeBandwidthRateLimitOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeBandwidthRateLimitOutput`](crate::output::DescribeBandwidthRateLimitOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeBandwidthRateLimitOutput`](crate::output::DescribeBandwidthRateLimitOutput).
     pub fn builder() -> crate::output::describe_bandwidth_rate_limit_output::Builder {
         crate::output::describe_bandwidth_rate_limit_output::Builder::default()
     }
@@ -5465,10 +5540,13 @@ impl DescribeBandwidthRateLimitOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAvailabilityMonitorTestOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
     /// <p>The status of the high availability monitoring test. If a test hasn't been performed, the value of this field is null.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AvailabilityMonitorTestStatus>,
     /// <p>The time the high availability monitoring test was started. If a test hasn't been performed, the value of this field is null.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeAvailabilityMonitorTestOutput {
@@ -5494,11 +5572,10 @@ impl std::fmt::Debug for DescribeAvailabilityMonitorTestOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAvailabilityMonitorTestOutput`](crate::output::DescribeAvailabilityMonitorTestOutput)
+/// See [`DescribeAvailabilityMonitorTestOutput`](crate::output::DescribeAvailabilityMonitorTestOutput).
 pub mod describe_availability_monitor_test_output {
 
-    /// A builder for [`DescribeAvailabilityMonitorTestOutput`](crate::output::DescribeAvailabilityMonitorTestOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAvailabilityMonitorTestOutput`](crate::output::DescribeAvailabilityMonitorTestOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -5542,7 +5619,7 @@ pub mod describe_availability_monitor_test_output {
             self.start_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAvailabilityMonitorTestOutput`](crate::output::DescribeAvailabilityMonitorTestOutput)
+        /// Consumes the builder and constructs a [`DescribeAvailabilityMonitorTestOutput`](crate::output::DescribeAvailabilityMonitorTestOutput).
         pub fn build(self) -> crate::output::DescribeAvailabilityMonitorTestOutput {
             crate::output::DescribeAvailabilityMonitorTestOutput {
                 gateway_arn: self.gateway_arn,
@@ -5553,7 +5630,7 @@ pub mod describe_availability_monitor_test_output {
     }
 }
 impl DescribeAvailabilityMonitorTestOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAvailabilityMonitorTestOutput`](crate::output::DescribeAvailabilityMonitorTestOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAvailabilityMonitorTestOutput`](crate::output::DescribeAvailabilityMonitorTestOutput).
     pub fn builder() -> crate::output::describe_availability_monitor_test_output::Builder {
         crate::output::describe_availability_monitor_test_output::Builder::default()
     }
@@ -5564,6 +5641,7 @@ impl DescribeAvailabilityMonitorTestOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteVolumeOutput {
     /// <p>The Amazon Resource Name (ARN) of the storage volume that was deleted. It is the same ARN you provided in the request.</p>
+    #[doc(hidden)]
     pub volume_arn: std::option::Option<std::string::String>,
 }
 impl DeleteVolumeOutput {
@@ -5579,11 +5657,10 @@ impl std::fmt::Debug for DeleteVolumeOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput)
+/// See [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput).
 pub mod delete_volume_output {
 
-    /// A builder for [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_arn: std::option::Option<std::string::String>,
@@ -5599,7 +5676,7 @@ pub mod delete_volume_output {
             self.volume_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput)
+        /// Consumes the builder and constructs a [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput).
         pub fn build(self) -> crate::output::DeleteVolumeOutput {
             crate::output::DeleteVolumeOutput {
                 volume_arn: self.volume_arn,
@@ -5608,7 +5685,7 @@ pub mod delete_volume_output {
     }
 }
 impl DeleteVolumeOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteVolumeOutput`](crate::output::DeleteVolumeOutput).
     pub fn builder() -> crate::output::delete_volume_output::Builder {
         crate::output::delete_volume_output::Builder::default()
     }
@@ -5619,6 +5696,7 @@ impl DeleteVolumeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteTapePoolOutput {
     /// <p>The Amazon Resource Name (ARN) of the custom tape pool being deleted.</p>
+    #[doc(hidden)]
     pub pool_arn: std::option::Option<std::string::String>,
 }
 impl DeleteTapePoolOutput {
@@ -5634,11 +5712,10 @@ impl std::fmt::Debug for DeleteTapePoolOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteTapePoolOutput`](crate::output::DeleteTapePoolOutput)
+/// See [`DeleteTapePoolOutput`](crate::output::DeleteTapePoolOutput).
 pub mod delete_tape_pool_output {
 
-    /// A builder for [`DeleteTapePoolOutput`](crate::output::DeleteTapePoolOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteTapePoolOutput`](crate::output::DeleteTapePoolOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pool_arn: std::option::Option<std::string::String>,
@@ -5654,7 +5731,7 @@ pub mod delete_tape_pool_output {
             self.pool_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteTapePoolOutput`](crate::output::DeleteTapePoolOutput)
+        /// Consumes the builder and constructs a [`DeleteTapePoolOutput`](crate::output::DeleteTapePoolOutput).
         pub fn build(self) -> crate::output::DeleteTapePoolOutput {
             crate::output::DeleteTapePoolOutput {
                 pool_arn: self.pool_arn,
@@ -5663,7 +5740,7 @@ pub mod delete_tape_pool_output {
     }
 }
 impl DeleteTapePoolOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteTapePoolOutput`](crate::output::DeleteTapePoolOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteTapePoolOutput`](crate::output::DeleteTapePoolOutput).
     pub fn builder() -> crate::output::delete_tape_pool_output::Builder {
         crate::output::delete_tape_pool_output::Builder::default()
     }
@@ -5674,6 +5751,7 @@ impl DeleteTapePoolOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteTapeArchiveOutput {
     /// <p>The Amazon Resource Name (ARN) of the virtual tape that was deleted from the virtual tape shelf (VTS).</p>
+    #[doc(hidden)]
     pub tape_arn: std::option::Option<std::string::String>,
 }
 impl DeleteTapeArchiveOutput {
@@ -5689,11 +5767,10 @@ impl std::fmt::Debug for DeleteTapeArchiveOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteTapeArchiveOutput`](crate::output::DeleteTapeArchiveOutput)
+/// See [`DeleteTapeArchiveOutput`](crate::output::DeleteTapeArchiveOutput).
 pub mod delete_tape_archive_output {
 
-    /// A builder for [`DeleteTapeArchiveOutput`](crate::output::DeleteTapeArchiveOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteTapeArchiveOutput`](crate::output::DeleteTapeArchiveOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tape_arn: std::option::Option<std::string::String>,
@@ -5709,7 +5786,7 @@ pub mod delete_tape_archive_output {
             self.tape_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteTapeArchiveOutput`](crate::output::DeleteTapeArchiveOutput)
+        /// Consumes the builder and constructs a [`DeleteTapeArchiveOutput`](crate::output::DeleteTapeArchiveOutput).
         pub fn build(self) -> crate::output::DeleteTapeArchiveOutput {
             crate::output::DeleteTapeArchiveOutput {
                 tape_arn: self.tape_arn,
@@ -5718,7 +5795,7 @@ pub mod delete_tape_archive_output {
     }
 }
 impl DeleteTapeArchiveOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteTapeArchiveOutput`](crate::output::DeleteTapeArchiveOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteTapeArchiveOutput`](crate::output::DeleteTapeArchiveOutput).
     pub fn builder() -> crate::output::delete_tape_archive_output::Builder {
         crate::output::delete_tape_archive_output::Builder::default()
     }
@@ -5729,6 +5806,7 @@ impl DeleteTapeArchiveOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteTapeOutput {
     /// <p>The Amazon Resource Name (ARN) of the deleted virtual tape.</p>
+    #[doc(hidden)]
     pub tape_arn: std::option::Option<std::string::String>,
 }
 impl DeleteTapeOutput {
@@ -5744,11 +5822,10 @@ impl std::fmt::Debug for DeleteTapeOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteTapeOutput`](crate::output::DeleteTapeOutput)
+/// See [`DeleteTapeOutput`](crate::output::DeleteTapeOutput).
 pub mod delete_tape_output {
 
-    /// A builder for [`DeleteTapeOutput`](crate::output::DeleteTapeOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteTapeOutput`](crate::output::DeleteTapeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tape_arn: std::option::Option<std::string::String>,
@@ -5764,7 +5841,7 @@ pub mod delete_tape_output {
             self.tape_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteTapeOutput`](crate::output::DeleteTapeOutput)
+        /// Consumes the builder and constructs a [`DeleteTapeOutput`](crate::output::DeleteTapeOutput).
         pub fn build(self) -> crate::output::DeleteTapeOutput {
             crate::output::DeleteTapeOutput {
                 tape_arn: self.tape_arn,
@@ -5773,7 +5850,7 @@ pub mod delete_tape_output {
     }
 }
 impl DeleteTapeOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteTapeOutput`](crate::output::DeleteTapeOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteTapeOutput`](crate::output::DeleteTapeOutput).
     pub fn builder() -> crate::output::delete_tape_output::Builder {
         crate::output::delete_tape_output::Builder::default()
     }
@@ -5784,6 +5861,7 @@ impl DeleteTapeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteSnapshotScheduleOutput {
     /// <p>The volume which snapshot schedule was deleted.</p>
+    #[doc(hidden)]
     pub volume_arn: std::option::Option<std::string::String>,
 }
 impl DeleteSnapshotScheduleOutput {
@@ -5799,11 +5877,10 @@ impl std::fmt::Debug for DeleteSnapshotScheduleOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSnapshotScheduleOutput`](crate::output::DeleteSnapshotScheduleOutput)
+/// See [`DeleteSnapshotScheduleOutput`](crate::output::DeleteSnapshotScheduleOutput).
 pub mod delete_snapshot_schedule_output {
 
-    /// A builder for [`DeleteSnapshotScheduleOutput`](crate::output::DeleteSnapshotScheduleOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSnapshotScheduleOutput`](crate::output::DeleteSnapshotScheduleOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_arn: std::option::Option<std::string::String>,
@@ -5819,7 +5896,7 @@ pub mod delete_snapshot_schedule_output {
             self.volume_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteSnapshotScheduleOutput`](crate::output::DeleteSnapshotScheduleOutput)
+        /// Consumes the builder and constructs a [`DeleteSnapshotScheduleOutput`](crate::output::DeleteSnapshotScheduleOutput).
         pub fn build(self) -> crate::output::DeleteSnapshotScheduleOutput {
             crate::output::DeleteSnapshotScheduleOutput {
                 volume_arn: self.volume_arn,
@@ -5828,7 +5905,7 @@ pub mod delete_snapshot_schedule_output {
     }
 }
 impl DeleteSnapshotScheduleOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSnapshotScheduleOutput`](crate::output::DeleteSnapshotScheduleOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSnapshotScheduleOutput`](crate::output::DeleteSnapshotScheduleOutput).
     pub fn builder() -> crate::output::delete_snapshot_schedule_output::Builder {
         crate::output::delete_snapshot_schedule_output::Builder::default()
     }
@@ -5839,6 +5916,7 @@ impl DeleteSnapshotScheduleOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteGatewayOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl DeleteGatewayOutput {
@@ -5854,11 +5932,10 @@ impl std::fmt::Debug for DeleteGatewayOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput)
+/// See [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput).
 pub mod delete_gateway_output {
 
-    /// A builder for [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -5874,7 +5951,7 @@ pub mod delete_gateway_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput)
+        /// Consumes the builder and constructs a [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput).
         pub fn build(self) -> crate::output::DeleteGatewayOutput {
             crate::output::DeleteGatewayOutput {
                 gateway_arn: self.gateway_arn,
@@ -5883,7 +5960,7 @@ pub mod delete_gateway_output {
     }
 }
 impl DeleteGatewayOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput).
     pub fn builder() -> crate::output::delete_gateway_output::Builder {
         crate::output::delete_gateway_output::Builder::default()
     }
@@ -5894,6 +5971,7 @@ impl DeleteGatewayOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteFileShareOutput {
     /// <p>The Amazon Resource Name (ARN) of the deleted file share.</p>
+    #[doc(hidden)]
     pub file_share_arn: std::option::Option<std::string::String>,
 }
 impl DeleteFileShareOutput {
@@ -5909,11 +5987,10 @@ impl std::fmt::Debug for DeleteFileShareOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFileShareOutput`](crate::output::DeleteFileShareOutput)
+/// See [`DeleteFileShareOutput`](crate::output::DeleteFileShareOutput).
 pub mod delete_file_share_output {
 
-    /// A builder for [`DeleteFileShareOutput`](crate::output::DeleteFileShareOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFileShareOutput`](crate::output::DeleteFileShareOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_share_arn: std::option::Option<std::string::String>,
@@ -5932,7 +6009,7 @@ pub mod delete_file_share_output {
             self.file_share_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFileShareOutput`](crate::output::DeleteFileShareOutput)
+        /// Consumes the builder and constructs a [`DeleteFileShareOutput`](crate::output::DeleteFileShareOutput).
         pub fn build(self) -> crate::output::DeleteFileShareOutput {
             crate::output::DeleteFileShareOutput {
                 file_share_arn: self.file_share_arn,
@@ -5941,7 +6018,7 @@ pub mod delete_file_share_output {
     }
 }
 impl DeleteFileShareOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFileShareOutput`](crate::output::DeleteFileShareOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFileShareOutput`](crate::output::DeleteFileShareOutput).
     pub fn builder() -> crate::output::delete_file_share_output::Builder {
         crate::output::delete_file_share_output::Builder::default()
     }
@@ -5952,8 +6029,10 @@ impl DeleteFileShareOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteChapCredentialsOutput {
     /// <p>The Amazon Resource Name (ARN) of the target.</p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
     /// <p>The iSCSI initiator that connects to the target.</p>
+    #[doc(hidden)]
     pub initiator_name: std::option::Option<std::string::String>,
 }
 impl DeleteChapCredentialsOutput {
@@ -5974,11 +6053,10 @@ impl std::fmt::Debug for DeleteChapCredentialsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteChapCredentialsOutput`](crate::output::DeleteChapCredentialsOutput)
+/// See [`DeleteChapCredentialsOutput`](crate::output::DeleteChapCredentialsOutput).
 pub mod delete_chap_credentials_output {
 
-    /// A builder for [`DeleteChapCredentialsOutput`](crate::output::DeleteChapCredentialsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteChapCredentialsOutput`](crate::output::DeleteChapCredentialsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_arn: std::option::Option<std::string::String>,
@@ -6008,7 +6086,7 @@ pub mod delete_chap_credentials_output {
             self.initiator_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteChapCredentialsOutput`](crate::output::DeleteChapCredentialsOutput)
+        /// Consumes the builder and constructs a [`DeleteChapCredentialsOutput`](crate::output::DeleteChapCredentialsOutput).
         pub fn build(self) -> crate::output::DeleteChapCredentialsOutput {
             crate::output::DeleteChapCredentialsOutput {
                 target_arn: self.target_arn,
@@ -6018,7 +6096,7 @@ pub mod delete_chap_credentials_output {
     }
 }
 impl DeleteChapCredentialsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteChapCredentialsOutput`](crate::output::DeleteChapCredentialsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteChapCredentialsOutput`](crate::output::DeleteChapCredentialsOutput).
     pub fn builder() -> crate::output::delete_chap_credentials_output::Builder {
         crate::output::delete_chap_credentials_output::Builder::default()
     }
@@ -6029,6 +6107,7 @@ impl DeleteChapCredentialsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteBandwidthRateLimitOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl DeleteBandwidthRateLimitOutput {
@@ -6044,11 +6123,10 @@ impl std::fmt::Debug for DeleteBandwidthRateLimitOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBandwidthRateLimitOutput`](crate::output::DeleteBandwidthRateLimitOutput)
+/// See [`DeleteBandwidthRateLimitOutput`](crate::output::DeleteBandwidthRateLimitOutput).
 pub mod delete_bandwidth_rate_limit_output {
 
-    /// A builder for [`DeleteBandwidthRateLimitOutput`](crate::output::DeleteBandwidthRateLimitOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBandwidthRateLimitOutput`](crate::output::DeleteBandwidthRateLimitOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -6064,7 +6142,7 @@ pub mod delete_bandwidth_rate_limit_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteBandwidthRateLimitOutput`](crate::output::DeleteBandwidthRateLimitOutput)
+        /// Consumes the builder and constructs a [`DeleteBandwidthRateLimitOutput`](crate::output::DeleteBandwidthRateLimitOutput).
         pub fn build(self) -> crate::output::DeleteBandwidthRateLimitOutput {
             crate::output::DeleteBandwidthRateLimitOutput {
                 gateway_arn: self.gateway_arn,
@@ -6073,7 +6151,7 @@ pub mod delete_bandwidth_rate_limit_output {
     }
 }
 impl DeleteBandwidthRateLimitOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBandwidthRateLimitOutput`](crate::output::DeleteBandwidthRateLimitOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBandwidthRateLimitOutput`](crate::output::DeleteBandwidthRateLimitOutput).
     pub fn builder() -> crate::output::delete_bandwidth_rate_limit_output::Builder {
         crate::output::delete_bandwidth_rate_limit_output::Builder::default()
     }
@@ -6084,6 +6162,7 @@ impl DeleteBandwidthRateLimitOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteAutomaticTapeCreationPolicyOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl DeleteAutomaticTapeCreationPolicyOutput {
@@ -6099,11 +6178,10 @@ impl std::fmt::Debug for DeleteAutomaticTapeCreationPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAutomaticTapeCreationPolicyOutput`](crate::output::DeleteAutomaticTapeCreationPolicyOutput)
+/// See [`DeleteAutomaticTapeCreationPolicyOutput`](crate::output::DeleteAutomaticTapeCreationPolicyOutput).
 pub mod delete_automatic_tape_creation_policy_output {
 
-    /// A builder for [`DeleteAutomaticTapeCreationPolicyOutput`](crate::output::DeleteAutomaticTapeCreationPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAutomaticTapeCreationPolicyOutput`](crate::output::DeleteAutomaticTapeCreationPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -6119,7 +6197,7 @@ pub mod delete_automatic_tape_creation_policy_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteAutomaticTapeCreationPolicyOutput`](crate::output::DeleteAutomaticTapeCreationPolicyOutput)
+        /// Consumes the builder and constructs a [`DeleteAutomaticTapeCreationPolicyOutput`](crate::output::DeleteAutomaticTapeCreationPolicyOutput).
         pub fn build(self) -> crate::output::DeleteAutomaticTapeCreationPolicyOutput {
             crate::output::DeleteAutomaticTapeCreationPolicyOutput {
                 gateway_arn: self.gateway_arn,
@@ -6128,7 +6206,7 @@ pub mod delete_automatic_tape_creation_policy_output {
     }
 }
 impl DeleteAutomaticTapeCreationPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAutomaticTapeCreationPolicyOutput`](crate::output::DeleteAutomaticTapeCreationPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAutomaticTapeCreationPolicyOutput`](crate::output::DeleteAutomaticTapeCreationPolicyOutput).
     pub fn builder() -> crate::output::delete_automatic_tape_creation_policy_output::Builder {
         crate::output::delete_automatic_tape_creation_policy_output::Builder::default()
     }
@@ -6139,6 +6217,7 @@ impl DeleteAutomaticTapeCreationPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateTapeWithBarcodeOutput {
     /// <p>A unique Amazon Resource Name (ARN) that represents the virtual tape that was created.</p>
+    #[doc(hidden)]
     pub tape_arn: std::option::Option<std::string::String>,
 }
 impl CreateTapeWithBarcodeOutput {
@@ -6154,11 +6233,10 @@ impl std::fmt::Debug for CreateTapeWithBarcodeOutput {
         formatter.finish()
     }
 }
-/// See [`CreateTapeWithBarcodeOutput`](crate::output::CreateTapeWithBarcodeOutput)
+/// See [`CreateTapeWithBarcodeOutput`](crate::output::CreateTapeWithBarcodeOutput).
 pub mod create_tape_with_barcode_output {
 
-    /// A builder for [`CreateTapeWithBarcodeOutput`](crate::output::CreateTapeWithBarcodeOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateTapeWithBarcodeOutput`](crate::output::CreateTapeWithBarcodeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tape_arn: std::option::Option<std::string::String>,
@@ -6174,7 +6252,7 @@ pub mod create_tape_with_barcode_output {
             self.tape_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateTapeWithBarcodeOutput`](crate::output::CreateTapeWithBarcodeOutput)
+        /// Consumes the builder and constructs a [`CreateTapeWithBarcodeOutput`](crate::output::CreateTapeWithBarcodeOutput).
         pub fn build(self) -> crate::output::CreateTapeWithBarcodeOutput {
             crate::output::CreateTapeWithBarcodeOutput {
                 tape_arn: self.tape_arn,
@@ -6183,7 +6261,7 @@ pub mod create_tape_with_barcode_output {
     }
 }
 impl CreateTapeWithBarcodeOutput {
-    /// Creates a new builder-style object to manufacture [`CreateTapeWithBarcodeOutput`](crate::output::CreateTapeWithBarcodeOutput)
+    /// Creates a new builder-style object to manufacture [`CreateTapeWithBarcodeOutput`](crate::output::CreateTapeWithBarcodeOutput).
     pub fn builder() -> crate::output::create_tape_with_barcode_output::Builder {
         crate::output::create_tape_with_barcode_output::Builder::default()
     }
@@ -6194,6 +6272,7 @@ impl CreateTapeWithBarcodeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateTapesOutput {
     /// <p>A list of unique Amazon Resource Names (ARNs) that represents the virtual tapes that were created.</p>
+    #[doc(hidden)]
     pub tape_ar_ns: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CreateTapesOutput {
@@ -6209,11 +6288,10 @@ impl std::fmt::Debug for CreateTapesOutput {
         formatter.finish()
     }
 }
-/// See [`CreateTapesOutput`](crate::output::CreateTapesOutput)
+/// See [`CreateTapesOutput`](crate::output::CreateTapesOutput).
 pub mod create_tapes_output {
 
-    /// A builder for [`CreateTapesOutput`](crate::output::CreateTapesOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateTapesOutput`](crate::output::CreateTapesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tape_ar_ns: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -6238,7 +6316,7 @@ pub mod create_tapes_output {
             self.tape_ar_ns = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateTapesOutput`](crate::output::CreateTapesOutput)
+        /// Consumes the builder and constructs a [`CreateTapesOutput`](crate::output::CreateTapesOutput).
         pub fn build(self) -> crate::output::CreateTapesOutput {
             crate::output::CreateTapesOutput {
                 tape_ar_ns: self.tape_ar_ns,
@@ -6247,7 +6325,7 @@ pub mod create_tapes_output {
     }
 }
 impl CreateTapesOutput {
-    /// Creates a new builder-style object to manufacture [`CreateTapesOutput`](crate::output::CreateTapesOutput)
+    /// Creates a new builder-style object to manufacture [`CreateTapesOutput`](crate::output::CreateTapesOutput).
     pub fn builder() -> crate::output::create_tapes_output::Builder {
         crate::output::create_tapes_output::Builder::default()
     }
@@ -6258,6 +6336,7 @@ impl CreateTapesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateTapePoolOutput {
     /// <p>The unique Amazon Resource Name (ARN) that represents the custom tape pool. Use the <code>ListTapePools</code> operation to return a list of tape pools for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub pool_arn: std::option::Option<std::string::String>,
 }
 impl CreateTapePoolOutput {
@@ -6273,11 +6352,10 @@ impl std::fmt::Debug for CreateTapePoolOutput {
         formatter.finish()
     }
 }
-/// See [`CreateTapePoolOutput`](crate::output::CreateTapePoolOutput)
+/// See [`CreateTapePoolOutput`](crate::output::CreateTapePoolOutput).
 pub mod create_tape_pool_output {
 
-    /// A builder for [`CreateTapePoolOutput`](crate::output::CreateTapePoolOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateTapePoolOutput`](crate::output::CreateTapePoolOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pool_arn: std::option::Option<std::string::String>,
@@ -6293,7 +6371,7 @@ pub mod create_tape_pool_output {
             self.pool_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateTapePoolOutput`](crate::output::CreateTapePoolOutput)
+        /// Consumes the builder and constructs a [`CreateTapePoolOutput`](crate::output::CreateTapePoolOutput).
         pub fn build(self) -> crate::output::CreateTapePoolOutput {
             crate::output::CreateTapePoolOutput {
                 pool_arn: self.pool_arn,
@@ -6302,7 +6380,7 @@ pub mod create_tape_pool_output {
     }
 }
 impl CreateTapePoolOutput {
-    /// Creates a new builder-style object to manufacture [`CreateTapePoolOutput`](crate::output::CreateTapePoolOutput)
+    /// Creates a new builder-style object to manufacture [`CreateTapePoolOutput`](crate::output::CreateTapePoolOutput).
     pub fn builder() -> crate::output::create_tape_pool_output::Builder {
         crate::output::create_tape_pool_output::Builder::default()
     }
@@ -6313,10 +6391,13 @@ impl CreateTapePoolOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateStorediScsiVolumeOutput {
     /// <p>The Amazon Resource Name (ARN) of the configured volume.</p>
+    #[doc(hidden)]
     pub volume_arn: std::option::Option<std::string::String>,
     /// <p>The size of the volume in bytes.</p>
+    #[doc(hidden)]
     pub volume_size_in_bytes: i64,
     /// <p>The Amazon Resource Name (ARN) of the volume target, which includes the iSCSI name that initiators can use to connect to the target.</p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
 }
 impl CreateStorediScsiVolumeOutput {
@@ -6342,11 +6423,10 @@ impl std::fmt::Debug for CreateStorediScsiVolumeOutput {
         formatter.finish()
     }
 }
-/// See [`CreateStorediScsiVolumeOutput`](crate::output::CreateStorediScsiVolumeOutput)
+/// See [`CreateStorediScsiVolumeOutput`](crate::output::CreateStorediScsiVolumeOutput).
 pub mod create_storedi_scsi_volume_output {
 
-    /// A builder for [`CreateStorediScsiVolumeOutput`](crate::output::CreateStorediScsiVolumeOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateStorediScsiVolumeOutput`](crate::output::CreateStorediScsiVolumeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_arn: std::option::Option<std::string::String>,
@@ -6384,7 +6464,7 @@ pub mod create_storedi_scsi_volume_output {
             self.target_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateStorediScsiVolumeOutput`](crate::output::CreateStorediScsiVolumeOutput)
+        /// Consumes the builder and constructs a [`CreateStorediScsiVolumeOutput`](crate::output::CreateStorediScsiVolumeOutput).
         pub fn build(self) -> crate::output::CreateStorediScsiVolumeOutput {
             crate::output::CreateStorediScsiVolumeOutput {
                 volume_arn: self.volume_arn,
@@ -6395,7 +6475,7 @@ pub mod create_storedi_scsi_volume_output {
     }
 }
 impl CreateStorediScsiVolumeOutput {
-    /// Creates a new builder-style object to manufacture [`CreateStorediScsiVolumeOutput`](crate::output::CreateStorediScsiVolumeOutput)
+    /// Creates a new builder-style object to manufacture [`CreateStorediScsiVolumeOutput`](crate::output::CreateStorediScsiVolumeOutput).
     pub fn builder() -> crate::output::create_storedi_scsi_volume_output::Builder {
         crate::output::create_storedi_scsi_volume_output::Builder::default()
     }
@@ -6406,10 +6486,13 @@ impl CreateStorediScsiVolumeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSnapshotFromVolumeRecoveryPointOutput {
     /// <p>The ID of the snapshot.</p>
+    #[doc(hidden)]
     pub snapshot_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the iSCSI volume target. Use the <code>DescribeStorediSCSIVolumes</code> operation to return to retrieve the TargetARN for specified VolumeARN.</p>
+    #[doc(hidden)]
     pub volume_arn: std::option::Option<std::string::String>,
     /// <p>The time the volume was created from the recovery point.</p>
+    #[doc(hidden)]
     pub volume_recovery_point_time: std::option::Option<std::string::String>,
 }
 impl CreateSnapshotFromVolumeRecoveryPointOutput {
@@ -6438,11 +6521,10 @@ impl std::fmt::Debug for CreateSnapshotFromVolumeRecoveryPointOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSnapshotFromVolumeRecoveryPointOutput`](crate::output::CreateSnapshotFromVolumeRecoveryPointOutput)
+/// See [`CreateSnapshotFromVolumeRecoveryPointOutput`](crate::output::CreateSnapshotFromVolumeRecoveryPointOutput).
 pub mod create_snapshot_from_volume_recovery_point_output {
 
-    /// A builder for [`CreateSnapshotFromVolumeRecoveryPointOutput`](crate::output::CreateSnapshotFromVolumeRecoveryPointOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSnapshotFromVolumeRecoveryPointOutput`](crate::output::CreateSnapshotFromVolumeRecoveryPointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshot_id: std::option::Option<std::string::String>,
@@ -6483,7 +6565,7 @@ pub mod create_snapshot_from_volume_recovery_point_output {
             self.volume_recovery_point_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSnapshotFromVolumeRecoveryPointOutput`](crate::output::CreateSnapshotFromVolumeRecoveryPointOutput)
+        /// Consumes the builder and constructs a [`CreateSnapshotFromVolumeRecoveryPointOutput`](crate::output::CreateSnapshotFromVolumeRecoveryPointOutput).
         pub fn build(self) -> crate::output::CreateSnapshotFromVolumeRecoveryPointOutput {
             crate::output::CreateSnapshotFromVolumeRecoveryPointOutput {
                 snapshot_id: self.snapshot_id,
@@ -6494,7 +6576,7 @@ pub mod create_snapshot_from_volume_recovery_point_output {
     }
 }
 impl CreateSnapshotFromVolumeRecoveryPointOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSnapshotFromVolumeRecoveryPointOutput`](crate::output::CreateSnapshotFromVolumeRecoveryPointOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSnapshotFromVolumeRecoveryPointOutput`](crate::output::CreateSnapshotFromVolumeRecoveryPointOutput).
     pub fn builder() -> crate::output::create_snapshot_from_volume_recovery_point_output::Builder {
         crate::output::create_snapshot_from_volume_recovery_point_output::Builder::default()
     }
@@ -6505,8 +6587,10 @@ impl CreateSnapshotFromVolumeRecoveryPointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSnapshotOutput {
     /// <p>The Amazon Resource Name (ARN) of the volume of which the snapshot was taken.</p>
+    #[doc(hidden)]
     pub volume_arn: std::option::Option<std::string::String>,
     /// <p>The snapshot ID that is used to refer to the snapshot in future operations such as describing snapshots (Amazon Elastic Compute Cloud API <code>DescribeSnapshots</code>) or creating a volume from a snapshot (<code>CreateStorediSCSIVolume</code>).</p>
+    #[doc(hidden)]
     pub snapshot_id: std::option::Option<std::string::String>,
 }
 impl CreateSnapshotOutput {
@@ -6527,11 +6611,10 @@ impl std::fmt::Debug for CreateSnapshotOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput)
+/// See [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput).
 pub mod create_snapshot_output {
 
-    /// A builder for [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_arn: std::option::Option<std::string::String>,
@@ -6558,7 +6641,7 @@ pub mod create_snapshot_output {
             self.snapshot_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput)
+        /// Consumes the builder and constructs a [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput).
         pub fn build(self) -> crate::output::CreateSnapshotOutput {
             crate::output::CreateSnapshotOutput {
                 volume_arn: self.volume_arn,
@@ -6568,7 +6651,7 @@ pub mod create_snapshot_output {
     }
 }
 impl CreateSnapshotOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSnapshotOutput`](crate::output::CreateSnapshotOutput).
     pub fn builder() -> crate::output::create_snapshot_output::Builder {
         crate::output::create_snapshot_output::Builder::default()
     }
@@ -6579,6 +6662,7 @@ impl CreateSnapshotOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSmbFileShareOutput {
     /// <p>The Amazon Resource Name (ARN) of the newly created file share.</p>
+    #[doc(hidden)]
     pub file_share_arn: std::option::Option<std::string::String>,
 }
 impl CreateSmbFileShareOutput {
@@ -6594,11 +6678,10 @@ impl std::fmt::Debug for CreateSmbFileShareOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSmbFileShareOutput`](crate::output::CreateSmbFileShareOutput)
+/// See [`CreateSmbFileShareOutput`](crate::output::CreateSmbFileShareOutput).
 pub mod create_smb_file_share_output {
 
-    /// A builder for [`CreateSmbFileShareOutput`](crate::output::CreateSmbFileShareOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSmbFileShareOutput`](crate::output::CreateSmbFileShareOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_share_arn: std::option::Option<std::string::String>,
@@ -6617,7 +6700,7 @@ pub mod create_smb_file_share_output {
             self.file_share_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSmbFileShareOutput`](crate::output::CreateSmbFileShareOutput)
+        /// Consumes the builder and constructs a [`CreateSmbFileShareOutput`](crate::output::CreateSmbFileShareOutput).
         pub fn build(self) -> crate::output::CreateSmbFileShareOutput {
             crate::output::CreateSmbFileShareOutput {
                 file_share_arn: self.file_share_arn,
@@ -6626,7 +6709,7 @@ pub mod create_smb_file_share_output {
     }
 }
 impl CreateSmbFileShareOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSmbFileShareOutput`](crate::output::CreateSmbFileShareOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSmbFileShareOutput`](crate::output::CreateSmbFileShareOutput).
     pub fn builder() -> crate::output::create_smb_file_share_output::Builder {
         crate::output::create_smb_file_share_output::Builder::default()
     }
@@ -6637,6 +6720,7 @@ impl CreateSmbFileShareOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateNfsFileShareOutput {
     /// <p>The Amazon Resource Name (ARN) of the newly created file share.</p>
+    #[doc(hidden)]
     pub file_share_arn: std::option::Option<std::string::String>,
 }
 impl CreateNfsFileShareOutput {
@@ -6652,11 +6736,10 @@ impl std::fmt::Debug for CreateNfsFileShareOutput {
         formatter.finish()
     }
 }
-/// See [`CreateNfsFileShareOutput`](crate::output::CreateNfsFileShareOutput)
+/// See [`CreateNfsFileShareOutput`](crate::output::CreateNfsFileShareOutput).
 pub mod create_nfs_file_share_output {
 
-    /// A builder for [`CreateNfsFileShareOutput`](crate::output::CreateNfsFileShareOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateNfsFileShareOutput`](crate::output::CreateNfsFileShareOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_share_arn: std::option::Option<std::string::String>,
@@ -6675,7 +6758,7 @@ pub mod create_nfs_file_share_output {
             self.file_share_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateNfsFileShareOutput`](crate::output::CreateNfsFileShareOutput)
+        /// Consumes the builder and constructs a [`CreateNfsFileShareOutput`](crate::output::CreateNfsFileShareOutput).
         pub fn build(self) -> crate::output::CreateNfsFileShareOutput {
             crate::output::CreateNfsFileShareOutput {
                 file_share_arn: self.file_share_arn,
@@ -6684,7 +6767,7 @@ pub mod create_nfs_file_share_output {
     }
 }
 impl CreateNfsFileShareOutput {
-    /// Creates a new builder-style object to manufacture [`CreateNfsFileShareOutput`](crate::output::CreateNfsFileShareOutput)
+    /// Creates a new builder-style object to manufacture [`CreateNfsFileShareOutput`](crate::output::CreateNfsFileShareOutput).
     pub fn builder() -> crate::output::create_nfs_file_share_output::Builder {
         crate::output::create_nfs_file_share_output::Builder::default()
     }
@@ -6695,8 +6778,10 @@ impl CreateNfsFileShareOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateCachediScsiVolumeOutput {
     /// <p>The Amazon Resource Name (ARN) of the configured volume.</p>
+    #[doc(hidden)]
     pub volume_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the volume target, which includes the iSCSI name that initiators can use to connect to the target.</p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
 }
 impl CreateCachediScsiVolumeOutput {
@@ -6717,11 +6802,10 @@ impl std::fmt::Debug for CreateCachediScsiVolumeOutput {
         formatter.finish()
     }
 }
-/// See [`CreateCachediScsiVolumeOutput`](crate::output::CreateCachediScsiVolumeOutput)
+/// See [`CreateCachediScsiVolumeOutput`](crate::output::CreateCachediScsiVolumeOutput).
 pub mod create_cachedi_scsi_volume_output {
 
-    /// A builder for [`CreateCachediScsiVolumeOutput`](crate::output::CreateCachediScsiVolumeOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateCachediScsiVolumeOutput`](crate::output::CreateCachediScsiVolumeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_arn: std::option::Option<std::string::String>,
@@ -6748,7 +6832,7 @@ pub mod create_cachedi_scsi_volume_output {
             self.target_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateCachediScsiVolumeOutput`](crate::output::CreateCachediScsiVolumeOutput)
+        /// Consumes the builder and constructs a [`CreateCachediScsiVolumeOutput`](crate::output::CreateCachediScsiVolumeOutput).
         pub fn build(self) -> crate::output::CreateCachediScsiVolumeOutput {
             crate::output::CreateCachediScsiVolumeOutput {
                 volume_arn: self.volume_arn,
@@ -6758,7 +6842,7 @@ pub mod create_cachedi_scsi_volume_output {
     }
 }
 impl CreateCachediScsiVolumeOutput {
-    /// Creates a new builder-style object to manufacture [`CreateCachediScsiVolumeOutput`](crate::output::CreateCachediScsiVolumeOutput)
+    /// Creates a new builder-style object to manufacture [`CreateCachediScsiVolumeOutput`](crate::output::CreateCachediScsiVolumeOutput).
     pub fn builder() -> crate::output::create_cachedi_scsi_volume_output::Builder {
         crate::output::create_cachedi_scsi_volume_output::Builder::default()
     }
@@ -6769,6 +6853,7 @@ impl CreateCachediScsiVolumeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelRetrievalOutput {
     /// <p>The Amazon Resource Name (ARN) of the virtual tape for which retrieval was canceled.</p>
+    #[doc(hidden)]
     pub tape_arn: std::option::Option<std::string::String>,
 }
 impl CancelRetrievalOutput {
@@ -6784,11 +6869,10 @@ impl std::fmt::Debug for CancelRetrievalOutput {
         formatter.finish()
     }
 }
-/// See [`CancelRetrievalOutput`](crate::output::CancelRetrievalOutput)
+/// See [`CancelRetrievalOutput`](crate::output::CancelRetrievalOutput).
 pub mod cancel_retrieval_output {
 
-    /// A builder for [`CancelRetrievalOutput`](crate::output::CancelRetrievalOutput)
-    #[non_exhaustive]
+    /// A builder for [`CancelRetrievalOutput`](crate::output::CancelRetrievalOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tape_arn: std::option::Option<std::string::String>,
@@ -6804,7 +6888,7 @@ pub mod cancel_retrieval_output {
             self.tape_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelRetrievalOutput`](crate::output::CancelRetrievalOutput)
+        /// Consumes the builder and constructs a [`CancelRetrievalOutput`](crate::output::CancelRetrievalOutput).
         pub fn build(self) -> crate::output::CancelRetrievalOutput {
             crate::output::CancelRetrievalOutput {
                 tape_arn: self.tape_arn,
@@ -6813,7 +6897,7 @@ pub mod cancel_retrieval_output {
     }
 }
 impl CancelRetrievalOutput {
-    /// Creates a new builder-style object to manufacture [`CancelRetrievalOutput`](crate::output::CancelRetrievalOutput)
+    /// Creates a new builder-style object to manufacture [`CancelRetrievalOutput`](crate::output::CancelRetrievalOutput).
     pub fn builder() -> crate::output::cancel_retrieval_output::Builder {
         crate::output::cancel_retrieval_output::Builder::default()
     }
@@ -6824,6 +6908,7 @@ impl CancelRetrievalOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelArchivalOutput {
     /// <p>The Amazon Resource Name (ARN) of the virtual tape for which archiving was canceled.</p>
+    #[doc(hidden)]
     pub tape_arn: std::option::Option<std::string::String>,
 }
 impl CancelArchivalOutput {
@@ -6839,11 +6924,10 @@ impl std::fmt::Debug for CancelArchivalOutput {
         formatter.finish()
     }
 }
-/// See [`CancelArchivalOutput`](crate::output::CancelArchivalOutput)
+/// See [`CancelArchivalOutput`](crate::output::CancelArchivalOutput).
 pub mod cancel_archival_output {
 
-    /// A builder for [`CancelArchivalOutput`](crate::output::CancelArchivalOutput)
-    #[non_exhaustive]
+    /// A builder for [`CancelArchivalOutput`](crate::output::CancelArchivalOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tape_arn: std::option::Option<std::string::String>,
@@ -6859,7 +6943,7 @@ pub mod cancel_archival_output {
             self.tape_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelArchivalOutput`](crate::output::CancelArchivalOutput)
+        /// Consumes the builder and constructs a [`CancelArchivalOutput`](crate::output::CancelArchivalOutput).
         pub fn build(self) -> crate::output::CancelArchivalOutput {
             crate::output::CancelArchivalOutput {
                 tape_arn: self.tape_arn,
@@ -6868,7 +6952,7 @@ pub mod cancel_archival_output {
     }
 }
 impl CancelArchivalOutput {
-    /// Creates a new builder-style object to manufacture [`CancelArchivalOutput`](crate::output::CancelArchivalOutput)
+    /// Creates a new builder-style object to manufacture [`CancelArchivalOutput`](crate::output::CancelArchivalOutput).
     pub fn builder() -> crate::output::cancel_archival_output::Builder {
         crate::output::cancel_archival_output::Builder::default()
     }
@@ -6879,8 +6963,10 @@ impl CancelArchivalOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttachVolumeOutput {
     /// <p>The Amazon Resource Name (ARN) of the volume that was attached to the gateway.</p>
+    #[doc(hidden)]
     pub volume_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the volume target, which includes the iSCSI name for the initiator that was used to connect to the target.</p>
+    #[doc(hidden)]
     pub target_arn: std::option::Option<std::string::String>,
 }
 impl AttachVolumeOutput {
@@ -6901,11 +6987,10 @@ impl std::fmt::Debug for AttachVolumeOutput {
         formatter.finish()
     }
 }
-/// See [`AttachVolumeOutput`](crate::output::AttachVolumeOutput)
+/// See [`AttachVolumeOutput`](crate::output::AttachVolumeOutput).
 pub mod attach_volume_output {
 
-    /// A builder for [`AttachVolumeOutput`](crate::output::AttachVolumeOutput)
-    #[non_exhaustive]
+    /// A builder for [`AttachVolumeOutput`](crate::output::AttachVolumeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_arn: std::option::Option<std::string::String>,
@@ -6932,7 +7017,7 @@ pub mod attach_volume_output {
             self.target_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttachVolumeOutput`](crate::output::AttachVolumeOutput)
+        /// Consumes the builder and constructs a [`AttachVolumeOutput`](crate::output::AttachVolumeOutput).
         pub fn build(self) -> crate::output::AttachVolumeOutput {
             crate::output::AttachVolumeOutput {
                 volume_arn: self.volume_arn,
@@ -6942,7 +7027,7 @@ pub mod attach_volume_output {
     }
 }
 impl AttachVolumeOutput {
-    /// Creates a new builder-style object to manufacture [`AttachVolumeOutput`](crate::output::AttachVolumeOutput)
+    /// Creates a new builder-style object to manufacture [`AttachVolumeOutput`](crate::output::AttachVolumeOutput).
     pub fn builder() -> crate::output::attach_volume_output::Builder {
         crate::output::attach_volume_output::Builder::default()
     }
@@ -6953,6 +7038,7 @@ impl AttachVolumeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateFileSystemOutput {
     /// <p>The ARN of the newly created file system association.</p>
+    #[doc(hidden)]
     pub file_system_association_arn: std::option::Option<std::string::String>,
 }
 impl AssociateFileSystemOutput {
@@ -6971,11 +7057,10 @@ impl std::fmt::Debug for AssociateFileSystemOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateFileSystemOutput`](crate::output::AssociateFileSystemOutput)
+/// See [`AssociateFileSystemOutput`](crate::output::AssociateFileSystemOutput).
 pub mod associate_file_system_output {
 
-    /// A builder for [`AssociateFileSystemOutput`](crate::output::AssociateFileSystemOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateFileSystemOutput`](crate::output::AssociateFileSystemOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_system_association_arn: std::option::Option<std::string::String>,
@@ -6997,7 +7082,7 @@ pub mod associate_file_system_output {
             self.file_system_association_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateFileSystemOutput`](crate::output::AssociateFileSystemOutput)
+        /// Consumes the builder and constructs a [`AssociateFileSystemOutput`](crate::output::AssociateFileSystemOutput).
         pub fn build(self) -> crate::output::AssociateFileSystemOutput {
             crate::output::AssociateFileSystemOutput {
                 file_system_association_arn: self.file_system_association_arn,
@@ -7006,7 +7091,7 @@ pub mod associate_file_system_output {
     }
 }
 impl AssociateFileSystemOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateFileSystemOutput`](crate::output::AssociateFileSystemOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateFileSystemOutput`](crate::output::AssociateFileSystemOutput).
     pub fn builder() -> crate::output::associate_file_system_output::Builder {
         crate::output::associate_file_system_output::Builder::default()
     }
@@ -7017,6 +7102,7 @@ impl AssociateFileSystemOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssignTapePoolOutput {
     /// <p>The unique Amazon Resource Names (ARN) of the virtual tape that was added to the tape pool.</p>
+    #[doc(hidden)]
     pub tape_arn: std::option::Option<std::string::String>,
 }
 impl AssignTapePoolOutput {
@@ -7032,11 +7118,10 @@ impl std::fmt::Debug for AssignTapePoolOutput {
         formatter.finish()
     }
 }
-/// See [`AssignTapePoolOutput`](crate::output::AssignTapePoolOutput)
+/// See [`AssignTapePoolOutput`](crate::output::AssignTapePoolOutput).
 pub mod assign_tape_pool_output {
 
-    /// A builder for [`AssignTapePoolOutput`](crate::output::AssignTapePoolOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssignTapePoolOutput`](crate::output::AssignTapePoolOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tape_arn: std::option::Option<std::string::String>,
@@ -7052,7 +7137,7 @@ pub mod assign_tape_pool_output {
             self.tape_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssignTapePoolOutput`](crate::output::AssignTapePoolOutput)
+        /// Consumes the builder and constructs a [`AssignTapePoolOutput`](crate::output::AssignTapePoolOutput).
         pub fn build(self) -> crate::output::AssignTapePoolOutput {
             crate::output::AssignTapePoolOutput {
                 tape_arn: self.tape_arn,
@@ -7061,7 +7146,7 @@ pub mod assign_tape_pool_output {
     }
 }
 impl AssignTapePoolOutput {
-    /// Creates a new builder-style object to manufacture [`AssignTapePoolOutput`](crate::output::AssignTapePoolOutput)
+    /// Creates a new builder-style object to manufacture [`AssignTapePoolOutput`](crate::output::AssignTapePoolOutput).
     pub fn builder() -> crate::output::assign_tape_pool_output::Builder {
         crate::output::assign_tape_pool_output::Builder::default()
     }
@@ -7072,6 +7157,7 @@ impl AssignTapePoolOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddWorkingStorageOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl AddWorkingStorageOutput {
@@ -7087,11 +7173,10 @@ impl std::fmt::Debug for AddWorkingStorageOutput {
         formatter.finish()
     }
 }
-/// See [`AddWorkingStorageOutput`](crate::output::AddWorkingStorageOutput)
+/// See [`AddWorkingStorageOutput`](crate::output::AddWorkingStorageOutput).
 pub mod add_working_storage_output {
 
-    /// A builder for [`AddWorkingStorageOutput`](crate::output::AddWorkingStorageOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddWorkingStorageOutput`](crate::output::AddWorkingStorageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -7107,7 +7192,7 @@ pub mod add_working_storage_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddWorkingStorageOutput`](crate::output::AddWorkingStorageOutput)
+        /// Consumes the builder and constructs a [`AddWorkingStorageOutput`](crate::output::AddWorkingStorageOutput).
         pub fn build(self) -> crate::output::AddWorkingStorageOutput {
             crate::output::AddWorkingStorageOutput {
                 gateway_arn: self.gateway_arn,
@@ -7116,7 +7201,7 @@ pub mod add_working_storage_output {
     }
 }
 impl AddWorkingStorageOutput {
-    /// Creates a new builder-style object to manufacture [`AddWorkingStorageOutput`](crate::output::AddWorkingStorageOutput)
+    /// Creates a new builder-style object to manufacture [`AddWorkingStorageOutput`](crate::output::AddWorkingStorageOutput).
     pub fn builder() -> crate::output::add_working_storage_output::Builder {
         crate::output::add_working_storage_output::Builder::default()
     }
@@ -7127,6 +7212,7 @@ impl AddWorkingStorageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddUploadBufferOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl AddUploadBufferOutput {
@@ -7142,11 +7228,10 @@ impl std::fmt::Debug for AddUploadBufferOutput {
         formatter.finish()
     }
 }
-/// See [`AddUploadBufferOutput`](crate::output::AddUploadBufferOutput)
+/// See [`AddUploadBufferOutput`](crate::output::AddUploadBufferOutput).
 pub mod add_upload_buffer_output {
 
-    /// A builder for [`AddUploadBufferOutput`](crate::output::AddUploadBufferOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddUploadBufferOutput`](crate::output::AddUploadBufferOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -7162,7 +7247,7 @@ pub mod add_upload_buffer_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddUploadBufferOutput`](crate::output::AddUploadBufferOutput)
+        /// Consumes the builder and constructs a [`AddUploadBufferOutput`](crate::output::AddUploadBufferOutput).
         pub fn build(self) -> crate::output::AddUploadBufferOutput {
             crate::output::AddUploadBufferOutput {
                 gateway_arn: self.gateway_arn,
@@ -7171,7 +7256,7 @@ pub mod add_upload_buffer_output {
     }
 }
 impl AddUploadBufferOutput {
-    /// Creates a new builder-style object to manufacture [`AddUploadBufferOutput`](crate::output::AddUploadBufferOutput)
+    /// Creates a new builder-style object to manufacture [`AddUploadBufferOutput`](crate::output::AddUploadBufferOutput).
     pub fn builder() -> crate::output::add_upload_buffer_output::Builder {
         crate::output::add_upload_buffer_output::Builder::default()
     }
@@ -7182,6 +7267,7 @@ impl AddUploadBufferOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddTagsToResourceOutput {
     /// <p>The Amazon Resource Name (ARN) of the resource you want to add tags to.</p>
+    #[doc(hidden)]
     pub resource_arn: std::option::Option<std::string::String>,
 }
 impl AddTagsToResourceOutput {
@@ -7197,11 +7283,10 @@ impl std::fmt::Debug for AddTagsToResourceOutput {
         formatter.finish()
     }
 }
-/// See [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
+/// See [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput).
 pub mod add_tags_to_resource_output {
 
-    /// A builder for [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -7217,7 +7302,7 @@ pub mod add_tags_to_resource_output {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
+        /// Consumes the builder and constructs a [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput).
         pub fn build(self) -> crate::output::AddTagsToResourceOutput {
             crate::output::AddTagsToResourceOutput {
                 resource_arn: self.resource_arn,
@@ -7226,7 +7311,7 @@ pub mod add_tags_to_resource_output {
     }
 }
 impl AddTagsToResourceOutput {
-    /// Creates a new builder-style object to manufacture [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
+    /// Creates a new builder-style object to manufacture [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput).
     pub fn builder() -> crate::output::add_tags_to_resource_output::Builder {
         crate::output::add_tags_to_resource_output::Builder::default()
     }
@@ -7237,6 +7322,7 @@ impl AddTagsToResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddCacheOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl AddCacheOutput {
@@ -7252,11 +7338,10 @@ impl std::fmt::Debug for AddCacheOutput {
         formatter.finish()
     }
 }
-/// See [`AddCacheOutput`](crate::output::AddCacheOutput)
+/// See [`AddCacheOutput`](crate::output::AddCacheOutput).
 pub mod add_cache_output {
 
-    /// A builder for [`AddCacheOutput`](crate::output::AddCacheOutput)
-    #[non_exhaustive]
+    /// A builder for [`AddCacheOutput`](crate::output::AddCacheOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -7272,7 +7357,7 @@ pub mod add_cache_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AddCacheOutput`](crate::output::AddCacheOutput)
+        /// Consumes the builder and constructs a [`AddCacheOutput`](crate::output::AddCacheOutput).
         pub fn build(self) -> crate::output::AddCacheOutput {
             crate::output::AddCacheOutput {
                 gateway_arn: self.gateway_arn,
@@ -7281,7 +7366,7 @@ pub mod add_cache_output {
     }
 }
 impl AddCacheOutput {
-    /// Creates a new builder-style object to manufacture [`AddCacheOutput`](crate::output::AddCacheOutput)
+    /// Creates a new builder-style object to manufacture [`AddCacheOutput`](crate::output::AddCacheOutput).
     pub fn builder() -> crate::output::add_cache_output::Builder {
         crate::output::add_cache_output::Builder::default()
     }
@@ -7294,6 +7379,7 @@ impl AddCacheOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivateGatewayOutput {
     /// <p>The Amazon Resource Name (ARN) of the gateway. Use the <code>ListGateways</code> operation to return a list of gateways for your account and Amazon Web Services Region.</p>
+    #[doc(hidden)]
     pub gateway_arn: std::option::Option<std::string::String>,
 }
 impl ActivateGatewayOutput {
@@ -7309,11 +7395,10 @@ impl std::fmt::Debug for ActivateGatewayOutput {
         formatter.finish()
     }
 }
-/// See [`ActivateGatewayOutput`](crate::output::ActivateGatewayOutput)
+/// See [`ActivateGatewayOutput`](crate::output::ActivateGatewayOutput).
 pub mod activate_gateway_output {
 
-    /// A builder for [`ActivateGatewayOutput`](crate::output::ActivateGatewayOutput)
-    #[non_exhaustive]
+    /// A builder for [`ActivateGatewayOutput`](crate::output::ActivateGatewayOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -7329,7 +7414,7 @@ pub mod activate_gateway_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivateGatewayOutput`](crate::output::ActivateGatewayOutput)
+        /// Consumes the builder and constructs a [`ActivateGatewayOutput`](crate::output::ActivateGatewayOutput).
         pub fn build(self) -> crate::output::ActivateGatewayOutput {
             crate::output::ActivateGatewayOutput {
                 gateway_arn: self.gateway_arn,
@@ -7338,7 +7423,7 @@ pub mod activate_gateway_output {
     }
 }
 impl ActivateGatewayOutput {
-    /// Creates a new builder-style object to manufacture [`ActivateGatewayOutput`](crate::output::ActivateGatewayOutput)
+    /// Creates a new builder-style object to manufacture [`ActivateGatewayOutput`](crate::output::ActivateGatewayOutput).
     pub fn builder() -> crate::output::activate_gateway_output::Builder {
         crate::output::activate_gateway_output::Builder::default()
     }

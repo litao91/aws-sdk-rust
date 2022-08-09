@@ -5,10 +5,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResponseResourceMetric {
     /// <p>The full name of the metric.</p>
+    #[doc(hidden)]
     pub metric: std::option::Option<std::string::String>,
     /// <p>The description of the metric.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The unit of the metric.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<std::string::String>,
 }
 impl ResponseResourceMetric {
@@ -34,11 +37,10 @@ impl std::fmt::Debug for ResponseResourceMetric {
         formatter.finish()
     }
 }
-/// See [`ResponseResourceMetric`](crate::model::ResponseResourceMetric)
+/// See [`ResponseResourceMetric`](crate::model::ResponseResourceMetric).
 pub mod response_resource_metric {
 
-    /// A builder for [`ResponseResourceMetric`](crate::model::ResponseResourceMetric)
-    #[non_exhaustive]
+    /// A builder for [`ResponseResourceMetric`](crate::model::ResponseResourceMetric).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric: std::option::Option<std::string::String>,
@@ -76,7 +78,7 @@ pub mod response_resource_metric {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResponseResourceMetric`](crate::model::ResponseResourceMetric)
+        /// Consumes the builder and constructs a [`ResponseResourceMetric`](crate::model::ResponseResourceMetric).
         pub fn build(self) -> crate::model::ResponseResourceMetric {
             crate::model::ResponseResourceMetric {
                 metric: self.metric,
@@ -87,7 +89,7 @@ pub mod response_resource_metric {
     }
 }
 impl ResponseResourceMetric {
-    /// Creates a new builder-style object to manufacture [`ResponseResourceMetric`](crate::model::ResponseResourceMetric)
+    /// Creates a new builder-style object to manufacture [`ResponseResourceMetric`](crate::model::ResponseResourceMetric).
     pub fn builder() -> crate::model::response_resource_metric::Builder {
         crate::model::response_resource_metric::Builder::default()
     }
@@ -153,8 +155,10 @@ impl AsRef<str> for ServiceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDimensionGroups {
     /// <p>The metric type to which the dimension information belongs.</p>
+    #[doc(hidden)]
     pub metric: std::option::Option<std::string::String>,
     /// <p>The available dimension groups for a metric type.</p>
+    #[doc(hidden)]
     pub groups: std::option::Option<std::vec::Vec<crate::model::DimensionGroupDetail>>,
 }
 impl MetricDimensionGroups {
@@ -175,11 +179,10 @@ impl std::fmt::Debug for MetricDimensionGroups {
         formatter.finish()
     }
 }
-/// See [`MetricDimensionGroups`](crate::model::MetricDimensionGroups)
+/// See [`MetricDimensionGroups`](crate::model::MetricDimensionGroups).
 pub mod metric_dimension_groups {
 
-    /// A builder for [`MetricDimensionGroups`](crate::model::MetricDimensionGroups)
-    #[non_exhaustive]
+    /// A builder for [`MetricDimensionGroups`](crate::model::MetricDimensionGroups).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric: std::option::Option<std::string::String>,
@@ -215,7 +218,7 @@ pub mod metric_dimension_groups {
             self.groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDimensionGroups`](crate::model::MetricDimensionGroups)
+        /// Consumes the builder and constructs a [`MetricDimensionGroups`](crate::model::MetricDimensionGroups).
         pub fn build(self) -> crate::model::MetricDimensionGroups {
             crate::model::MetricDimensionGroups {
                 metric: self.metric,
@@ -225,7 +228,7 @@ pub mod metric_dimension_groups {
     }
 }
 impl MetricDimensionGroups {
-    /// Creates a new builder-style object to manufacture [`MetricDimensionGroups`](crate::model::MetricDimensionGroups)
+    /// Creates a new builder-style object to manufacture [`MetricDimensionGroups`](crate::model::MetricDimensionGroups).
     pub fn builder() -> crate::model::metric_dimension_groups::Builder {
         crate::model::metric_dimension_groups::Builder::default()
     }
@@ -236,8 +239,10 @@ impl MetricDimensionGroups {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DimensionGroupDetail {
     /// <p>The name of the dimension group.</p>
+    #[doc(hidden)]
     pub group: std::option::Option<std::string::String>,
     /// <p>The dimensions within a dimension group.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::DimensionDetail>>,
 }
 impl DimensionGroupDetail {
@@ -258,11 +263,10 @@ impl std::fmt::Debug for DimensionGroupDetail {
         formatter.finish()
     }
 }
-/// See [`DimensionGroupDetail`](crate::model::DimensionGroupDetail)
+/// See [`DimensionGroupDetail`](crate::model::DimensionGroupDetail).
 pub mod dimension_group_detail {
 
-    /// A builder for [`DimensionGroupDetail`](crate::model::DimensionGroupDetail)
-    #[non_exhaustive]
+    /// A builder for [`DimensionGroupDetail`](crate::model::DimensionGroupDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group: std::option::Option<std::string::String>,
@@ -298,7 +302,7 @@ pub mod dimension_group_detail {
             self.dimensions = input;
             self
         }
-        /// Consumes the builder and constructs a [`DimensionGroupDetail`](crate::model::DimensionGroupDetail)
+        /// Consumes the builder and constructs a [`DimensionGroupDetail`](crate::model::DimensionGroupDetail).
         pub fn build(self) -> crate::model::DimensionGroupDetail {
             crate::model::DimensionGroupDetail {
                 group: self.group,
@@ -308,7 +312,7 @@ pub mod dimension_group_detail {
     }
 }
 impl DimensionGroupDetail {
-    /// Creates a new builder-style object to manufacture [`DimensionGroupDetail`](crate::model::DimensionGroupDetail)
+    /// Creates a new builder-style object to manufacture [`DimensionGroupDetail`](crate::model::DimensionGroupDetail).
     pub fn builder() -> crate::model::dimension_group_detail::Builder {
         crate::model::dimension_group_detail::Builder::default()
     }
@@ -319,6 +323,7 @@ impl DimensionGroupDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DimensionDetail {
     /// <p>The identifier of a dimension.</p>
+    #[doc(hidden)]
     pub identifier: std::option::Option<std::string::String>,
 }
 impl DimensionDetail {
@@ -334,11 +339,10 @@ impl std::fmt::Debug for DimensionDetail {
         formatter.finish()
     }
 }
-/// See [`DimensionDetail`](crate::model::DimensionDetail)
+/// See [`DimensionDetail`](crate::model::DimensionDetail).
 pub mod dimension_detail {
 
-    /// A builder for [`DimensionDetail`](crate::model::DimensionDetail)
-    #[non_exhaustive]
+    /// A builder for [`DimensionDetail`](crate::model::DimensionDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identifier: std::option::Option<std::string::String>,
@@ -354,7 +358,7 @@ pub mod dimension_detail {
             self.identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`DimensionDetail`](crate::model::DimensionDetail)
+        /// Consumes the builder and constructs a [`DimensionDetail`](crate::model::DimensionDetail).
         pub fn build(self) -> crate::model::DimensionDetail {
             crate::model::DimensionDetail {
                 identifier: self.identifier,
@@ -363,7 +367,7 @@ pub mod dimension_detail {
     }
 }
 impl DimensionDetail {
-    /// Creates a new builder-style object to manufacture [`DimensionDetail`](crate::model::DimensionDetail)
+    /// Creates a new builder-style object to manufacture [`DimensionDetail`](crate::model::DimensionDetail).
     pub fn builder() -> crate::model::dimension_detail::Builder {
         crate::model::dimension_detail::Builder::default()
     }
@@ -374,8 +378,10 @@ impl DimensionDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricKeyDataPoints {
     /// <p>The dimensions to which the data points apply.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<crate::model::ResponseResourceMetricKey>,
     /// <p>An array of timestamp-value pairs, representing measurements over a period of time.</p>
+    #[doc(hidden)]
     pub data_points: std::option::Option<std::vec::Vec<crate::model::DataPoint>>,
 }
 impl MetricKeyDataPoints {
@@ -396,11 +402,10 @@ impl std::fmt::Debug for MetricKeyDataPoints {
         formatter.finish()
     }
 }
-/// See [`MetricKeyDataPoints`](crate::model::MetricKeyDataPoints)
+/// See [`MetricKeyDataPoints`](crate::model::MetricKeyDataPoints).
 pub mod metric_key_data_points {
 
-    /// A builder for [`MetricKeyDataPoints`](crate::model::MetricKeyDataPoints)
-    #[non_exhaustive]
+    /// A builder for [`MetricKeyDataPoints`](crate::model::MetricKeyDataPoints).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<crate::model::ResponseResourceMetricKey>,
@@ -439,7 +444,7 @@ pub mod metric_key_data_points {
             self.data_points = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricKeyDataPoints`](crate::model::MetricKeyDataPoints)
+        /// Consumes the builder and constructs a [`MetricKeyDataPoints`](crate::model::MetricKeyDataPoints).
         pub fn build(self) -> crate::model::MetricKeyDataPoints {
             crate::model::MetricKeyDataPoints {
                 key: self.key,
@@ -449,7 +454,7 @@ pub mod metric_key_data_points {
     }
 }
 impl MetricKeyDataPoints {
-    /// Creates a new builder-style object to manufacture [`MetricKeyDataPoints`](crate::model::MetricKeyDataPoints)
+    /// Creates a new builder-style object to manufacture [`MetricKeyDataPoints`](crate::model::MetricKeyDataPoints).
     pub fn builder() -> crate::model::metric_key_data_points::Builder {
         crate::model::metric_key_data_points::Builder::default()
     }
@@ -460,8 +465,10 @@ impl MetricKeyDataPoints {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DataPoint {
     /// <p>The time, in epoch format, associated with a particular <code>Value</code>.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The actual value associated with a particular <code>Timestamp</code>.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<f64>,
 }
 impl DataPoint {
@@ -482,11 +489,10 @@ impl std::fmt::Debug for DataPoint {
         formatter.finish()
     }
 }
-/// See [`DataPoint`](crate::model::DataPoint)
+/// See [`DataPoint`](crate::model::DataPoint).
 pub mod data_point {
 
-    /// A builder for [`DataPoint`](crate::model::DataPoint)
-    #[non_exhaustive]
+    /// A builder for [`DataPoint`](crate::model::DataPoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timestamp: std::option::Option<aws_smithy_types::DateTime>,
@@ -516,7 +522,7 @@ pub mod data_point {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataPoint`](crate::model::DataPoint)
+        /// Consumes the builder and constructs a [`DataPoint`](crate::model::DataPoint).
         pub fn build(self) -> crate::model::DataPoint {
             crate::model::DataPoint {
                 timestamp: self.timestamp,
@@ -526,7 +532,7 @@ pub mod data_point {
     }
 }
 impl DataPoint {
-    /// Creates a new builder-style object to manufacture [`DataPoint`](crate::model::DataPoint)
+    /// Creates a new builder-style object to manufacture [`DataPoint`](crate::model::DataPoint).
     pub fn builder() -> crate::model::data_point::Builder {
         crate::model::data_point::Builder::default()
     }
@@ -544,8 +550,10 @@ pub struct ResponseResourceMetricKey {
     /// <li> <p>The counter metrics listed in <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights_Counters.html#USER_PerfInsights_Counters.OS">Performance Insights operating system counters</a> in the <i>Amazon Aurora User Guide</i>.</p> </li>
     /// </ul>
     /// <p>If the number of active sessions is less than an internal Performance Insights threshold, <code>db.load.avg</code> and <code>db.sampledload.avg</code> are the same value. If the number of active sessions is greater than the internal threshold, Performance Insights samples the active sessions, with <code>db.load.avg</code> showing the scaled values, <code>db.sampledload.avg</code> showing the raw values, and <code>db.sampledload.avg</code> less than <code>db.load.avg</code>. For most use cases, you can query <code>db.load.avg</code> only. </p>
+    #[doc(hidden)]
     pub metric: std::option::Option<std::string::String>,
     /// <p>The valid dimensions for the metric.</p>
+    #[doc(hidden)]
     pub dimensions:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -577,11 +585,10 @@ impl std::fmt::Debug for ResponseResourceMetricKey {
         formatter.finish()
     }
 }
-/// See [`ResponseResourceMetricKey`](crate::model::ResponseResourceMetricKey)
+/// See [`ResponseResourceMetricKey`](crate::model::ResponseResourceMetricKey).
 pub mod response_resource_metric_key {
 
-    /// A builder for [`ResponseResourceMetricKey`](crate::model::ResponseResourceMetricKey)
-    #[non_exhaustive]
+    /// A builder for [`ResponseResourceMetricKey`](crate::model::ResponseResourceMetricKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric: std::option::Option<std::string::String>,
@@ -639,7 +646,7 @@ pub mod response_resource_metric_key {
             self.dimensions = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResponseResourceMetricKey`](crate::model::ResponseResourceMetricKey)
+        /// Consumes the builder and constructs a [`ResponseResourceMetricKey`](crate::model::ResponseResourceMetricKey).
         pub fn build(self) -> crate::model::ResponseResourceMetricKey {
             crate::model::ResponseResourceMetricKey {
                 metric: self.metric,
@@ -649,7 +656,7 @@ pub mod response_resource_metric_key {
     }
 }
 impl ResponseResourceMetricKey {
-    /// Creates a new builder-style object to manufacture [`ResponseResourceMetricKey`](crate::model::ResponseResourceMetricKey)
+    /// Creates a new builder-style object to manufacture [`ResponseResourceMetricKey`](crate::model::ResponseResourceMetricKey).
     pub fn builder() -> crate::model::response_resource_metric_key::Builder {
         crate::model::response_resource_metric_key::Builder::default()
     }
@@ -667,14 +674,17 @@ pub struct MetricQuery {
     /// <li> <p>The counter metrics listed in <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights_Counters.html#USER_PerfInsights_Counters.OS">Performance Insights operating system counters</a> in the <i>Amazon Aurora User Guide</i>.</p> </li>
     /// </ul>
     /// <p>If the number of active sessions is less than an internal Performance Insights threshold, <code>db.load.avg</code> and <code>db.sampledload.avg</code> are the same value. If the number of active sessions is greater than the internal threshold, Performance Insights samples the active sessions, with <code>db.load.avg</code> showing the scaled values, <code>db.sampledload.avg</code> showing the raw values, and <code>db.sampledload.avg</code> less than <code>db.load.avg</code>. For most use cases, you can query <code>db.load.avg</code> only.</p>
+    #[doc(hidden)]
     pub metric: std::option::Option<std::string::String>,
     /// <p>A specification for how to aggregate the data points from a query result. You must specify a valid dimension group. Performance Insights will return all of the dimensions within that group, unless you provide the names of specific dimensions within that group. You can also request that Performance Insights return a limited number of values for a dimension.</p>
+    #[doc(hidden)]
     pub group_by: std::option::Option<crate::model::DimensionGroup>,
     /// <p>One or more filters to apply in the request. Restrictions:</p>
     /// <ul>
     /// <li> <p>Any number of filters by the same dimension, as specified in the <code>GroupBy</code> parameter.</p> </li>
     /// <li> <p>A single filter for any other dimension in this dimension group.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub filter:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -715,11 +725,10 @@ impl std::fmt::Debug for MetricQuery {
         formatter.finish()
     }
 }
-/// See [`MetricQuery`](crate::model::MetricQuery)
+/// See [`MetricQuery`](crate::model::MetricQuery).
 pub mod metric_query {
 
-    /// A builder for [`MetricQuery`](crate::model::MetricQuery)
-    #[non_exhaustive]
+    /// A builder for [`MetricQuery`](crate::model::MetricQuery).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric: std::option::Option<std::string::String>,
@@ -799,7 +808,7 @@ pub mod metric_query {
             self.filter = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricQuery`](crate::model::MetricQuery)
+        /// Consumes the builder and constructs a [`MetricQuery`](crate::model::MetricQuery).
         pub fn build(self) -> crate::model::MetricQuery {
             crate::model::MetricQuery {
                 metric: self.metric,
@@ -810,7 +819,7 @@ pub mod metric_query {
     }
 }
 impl MetricQuery {
-    /// Creates a new builder-style object to manufacture [`MetricQuery`](crate::model::MetricQuery)
+    /// Creates a new builder-style object to manufacture [`MetricQuery`](crate::model::MetricQuery).
     pub fn builder() -> crate::model::metric_query::Builder {
         crate::model::metric_query::Builder::default()
     }
@@ -856,6 +865,7 @@ pub struct DimensionGroup {
     /// <li> <p> <code>db.wait_event_type</code> - The type of event for which the database backend is waiting (all engines except Amazon DocumentDB).</p> </li>
     /// <li> <p> <code>db.wait_state</code> - The event for which the database backend is waiting (only Amazon DocumentDB).</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub group: std::option::Option<std::string::String>,
     /// <p>A list of specific dimensions from a dimension group. If this parameter is not present, then it signifies that all of the dimensions in the group were requested, or are present in the response.</p>
     /// <p>Valid values for elements in the <code>Dimensions</code> array are:</p>
@@ -899,8 +909,10 @@ pub struct DimensionGroup {
     /// <li> <p> <code>db.wait_event_type.name</code> - The name of the event type for which the backend is waiting (all engines except Amazon DocumentDB).</p> </li>
     /// <li> <p> <code>db.wait_state.name</code> - The event for which the backend is waiting (only Amazon DocumentDB).</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The maximum number of items to fetch for this dimension group.</p>
+    #[doc(hidden)]
     pub limit: std::option::Option<i32>,
 }
 impl DimensionGroup {
@@ -994,11 +1006,10 @@ impl std::fmt::Debug for DimensionGroup {
         formatter.finish()
     }
 }
-/// See [`DimensionGroup`](crate::model::DimensionGroup)
+/// See [`DimensionGroup`](crate::model::DimensionGroup).
 pub mod dimension_group {
 
-    /// A builder for [`DimensionGroup`](crate::model::DimensionGroup)
-    #[non_exhaustive]
+    /// A builder for [`DimensionGroup`](crate::model::DimensionGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group: std::option::Option<std::string::String>,
@@ -1181,7 +1192,7 @@ pub mod dimension_group {
             self.limit = input;
             self
         }
-        /// Consumes the builder and constructs a [`DimensionGroup`](crate::model::DimensionGroup)
+        /// Consumes the builder and constructs a [`DimensionGroup`](crate::model::DimensionGroup).
         pub fn build(self) -> crate::model::DimensionGroup {
             crate::model::DimensionGroup {
                 group: self.group,
@@ -1192,7 +1203,7 @@ pub mod dimension_group {
     }
 }
 impl DimensionGroup {
-    /// Creates a new builder-style object to manufacture [`DimensionGroup`](crate::model::DimensionGroup)
+    /// Creates a new builder-style object to manufacture [`DimensionGroup`](crate::model::DimensionGroup).
     pub fn builder() -> crate::model::dimension_group::Builder {
         crate::model::dimension_group::Builder::default()
     }
@@ -1211,6 +1222,7 @@ pub struct FeatureMetadata {
     /// <li> <p> <code>DISABLED_PENDING_REBOOT</code> - The feature is disabled on the instance but requires a reboot to take effect.</p> </li>
     /// <li> <p> <code>UNKNOWN</code> - The feature status couldn't be determined.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::FeatureStatus>,
 }
 impl FeatureMetadata {
@@ -1234,11 +1246,10 @@ impl std::fmt::Debug for FeatureMetadata {
         formatter.finish()
     }
 }
-/// See [`FeatureMetadata`](crate::model::FeatureMetadata)
+/// See [`FeatureMetadata`](crate::model::FeatureMetadata).
 pub mod feature_metadata {
 
-    /// A builder for [`FeatureMetadata`](crate::model::FeatureMetadata)
-    #[non_exhaustive]
+    /// A builder for [`FeatureMetadata`](crate::model::FeatureMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::FeatureStatus>,
@@ -1273,7 +1284,7 @@ pub mod feature_metadata {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`FeatureMetadata`](crate::model::FeatureMetadata)
+        /// Consumes the builder and constructs a [`FeatureMetadata`](crate::model::FeatureMetadata).
         pub fn build(self) -> crate::model::FeatureMetadata {
             crate::model::FeatureMetadata {
                 status: self.status,
@@ -1282,7 +1293,7 @@ pub mod feature_metadata {
     }
 }
 impl FeatureMetadata {
-    /// Creates a new builder-style object to manufacture [`FeatureMetadata`](crate::model::FeatureMetadata)
+    /// Creates a new builder-style object to manufacture [`FeatureMetadata`](crate::model::FeatureMetadata).
     pub fn builder() -> crate::model::feature_metadata::Builder {
         crate::model::feature_metadata::Builder::default()
     }
@@ -1375,12 +1386,14 @@ pub struct DimensionKeyDetail {
     /// <li> <p> <code>db.query.statement</code> (Amazon DocumentDB)</p> </li>
     /// <li> <p> <code>db.sql.statement</code> (Amazon RDS and Aurora)</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The full name of the dimension. The full name includes the group name and key name. The following values are valid:</p>
     /// <ul>
     /// <li> <p> <code>db.query.statement</code> (Amazon DocumentDB)</p> </li>
     /// <li> <p> <code>db.sql.statement</code> (Amazon RDS and Aurora)</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub dimension: std::option::Option<std::string::String>,
     /// <p>The status of the dimension detail data. Possible values include the following:</p>
     /// <ul>
@@ -1388,6 +1401,7 @@ pub struct DimensionKeyDetail {
     /// <li> <p> <code>PROCESSING</code> - The dimension detail data isn't ready to be retrieved because more processing time is required. If the requested detail data has the status <code>PROCESSING</code>, Performance Insights returns the truncated query.</p> </li>
     /// <li> <p> <code>UNAVAILABLE</code> - The dimension detail data could not be collected successfully.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::DetailStatus>,
 }
 impl DimensionKeyDetail {
@@ -1426,11 +1440,10 @@ impl std::fmt::Debug for DimensionKeyDetail {
         formatter.finish()
     }
 }
-/// See [`DimensionKeyDetail`](crate::model::DimensionKeyDetail)
+/// See [`DimensionKeyDetail`](crate::model::DimensionKeyDetail).
 pub mod dimension_key_detail {
 
-    /// A builder for [`DimensionKeyDetail`](crate::model::DimensionKeyDetail)
-    #[non_exhaustive]
+    /// A builder for [`DimensionKeyDetail`](crate::model::DimensionKeyDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<std::string::String>,
@@ -1497,7 +1510,7 @@ pub mod dimension_key_detail {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DimensionKeyDetail`](crate::model::DimensionKeyDetail)
+        /// Consumes the builder and constructs a [`DimensionKeyDetail`](crate::model::DimensionKeyDetail).
         pub fn build(self) -> crate::model::DimensionKeyDetail {
             crate::model::DimensionKeyDetail {
                 value: self.value,
@@ -1508,7 +1521,7 @@ pub mod dimension_key_detail {
     }
 }
 impl DimensionKeyDetail {
-    /// Creates a new builder-style object to manufacture [`DimensionKeyDetail`](crate::model::DimensionKeyDetail)
+    /// Creates a new builder-style object to manufacture [`DimensionKeyDetail`](crate::model::DimensionKeyDetail).
     pub fn builder() -> crate::model::dimension_key_detail::Builder {
         crate::model::dimension_key_detail::Builder::default()
     }
@@ -1578,14 +1591,18 @@ impl AsRef<str> for DetailStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DimensionKeyDescription {
     /// <p>A map of name-value pairs for the dimensions in the group.</p>
+    #[doc(hidden)]
     pub dimensions:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The aggregated metric value for the dimensions, over the requested time range.</p>
+    #[doc(hidden)]
     pub total: std::option::Option<f64>,
     /// <p>A map that contains the value for each additional metric.</p>
+    #[doc(hidden)]
     pub additional_metrics:
         std::option::Option<std::collections::HashMap<std::string::String, f64>>,
     /// <p>If <code>PartitionBy</code> was specified, <code>PartitionKeys</code> contains the dimensions that were.</p>
+    #[doc(hidden)]
     pub partitions: std::option::Option<std::vec::Vec<f64>>,
 }
 impl DimensionKeyDescription {
@@ -1621,11 +1638,10 @@ impl std::fmt::Debug for DimensionKeyDescription {
         formatter.finish()
     }
 }
-/// See [`DimensionKeyDescription`](crate::model::DimensionKeyDescription)
+/// See [`DimensionKeyDescription`](crate::model::DimensionKeyDescription).
 pub mod dimension_key_description {
 
-    /// A builder for [`DimensionKeyDescription`](crate::model::DimensionKeyDescription)
-    #[non_exhaustive]
+    /// A builder for [`DimensionKeyDescription`](crate::model::DimensionKeyDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimensions: std::option::Option<
@@ -1707,7 +1723,7 @@ pub mod dimension_key_description {
             self.partitions = input;
             self
         }
-        /// Consumes the builder and constructs a [`DimensionKeyDescription`](crate::model::DimensionKeyDescription)
+        /// Consumes the builder and constructs a [`DimensionKeyDescription`](crate::model::DimensionKeyDescription).
         pub fn build(self) -> crate::model::DimensionKeyDescription {
             crate::model::DimensionKeyDescription {
                 dimensions: self.dimensions,
@@ -1719,7 +1735,7 @@ pub mod dimension_key_description {
     }
 }
 impl DimensionKeyDescription {
-    /// Creates a new builder-style object to manufacture [`DimensionKeyDescription`](crate::model::DimensionKeyDescription)
+    /// Creates a new builder-style object to manufacture [`DimensionKeyDescription`](crate::model::DimensionKeyDescription).
     pub fn builder() -> crate::model::dimension_key_description::Builder {
         crate::model::dimension_key_description::Builder::default()
     }
@@ -1730,6 +1746,7 @@ impl DimensionKeyDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResponsePartitionKey {
     /// <p>A dimension map that contains the dimensions for this partition.</p>
+    #[doc(hidden)]
     pub dimensions:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1749,11 +1766,10 @@ impl std::fmt::Debug for ResponsePartitionKey {
         formatter.finish()
     }
 }
-/// See [`ResponsePartitionKey`](crate::model::ResponsePartitionKey)
+/// See [`ResponsePartitionKey`](crate::model::ResponsePartitionKey).
 pub mod response_partition_key {
 
-    /// A builder for [`ResponsePartitionKey`](crate::model::ResponsePartitionKey)
-    #[non_exhaustive]
+    /// A builder for [`ResponsePartitionKey`](crate::model::ResponsePartitionKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimensions: std::option::Option<
@@ -1786,7 +1802,7 @@ pub mod response_partition_key {
             self.dimensions = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResponsePartitionKey`](crate::model::ResponsePartitionKey)
+        /// Consumes the builder and constructs a [`ResponsePartitionKey`](crate::model::ResponsePartitionKey).
         pub fn build(self) -> crate::model::ResponsePartitionKey {
             crate::model::ResponsePartitionKey {
                 dimensions: self.dimensions,
@@ -1795,7 +1811,7 @@ pub mod response_partition_key {
     }
 }
 impl ResponsePartitionKey {
-    /// Creates a new builder-style object to manufacture [`ResponsePartitionKey`](crate::model::ResponsePartitionKey)
+    /// Creates a new builder-style object to manufacture [`ResponsePartitionKey`](crate::model::ResponsePartitionKey).
     pub fn builder() -> crate::model::response_partition_key::Builder {
         crate::model::response_partition_key::Builder::default()
     }

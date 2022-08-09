@@ -5,24 +5,33 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResiliencyPolicy {
     /// <p>The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub policy_arn: std::option::Option<std::string::String>,
     /// <p>The name of the policy</p>
+    #[doc(hidden)]
     pub policy_name: std::option::Option<std::string::String>,
     /// <p>The description for the policy.</p>
+    #[doc(hidden)]
     pub policy_description: std::option::Option<std::string::String>,
     /// <p>Specifies a high-level geographical location constraint for where your resilience policy data can be stored.</p>
+    #[doc(hidden)]
     pub data_location_constraint: std::option::Option<crate::model::DataLocationConstraint>,
     /// <p>The tier for this resiliency policy, ranging from the highest severity (<code>MissionCritical</code>) to lowest (<code>NonCritical</code>).</p>
+    #[doc(hidden)]
     pub tier: std::option::Option<crate::model::ResiliencyPolicyTier>,
     /// <p>Specifies the estimated cost tier of the resiliency policy.</p>
+    #[doc(hidden)]
     pub estimated_cost_tier: std::option::Option<crate::model::EstimatedCostTier>,
     /// <p>The resiliency policy.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<
         std::collections::HashMap<crate::model::DisruptionType, crate::model::FailurePolicy>,
     >,
     /// <p>The timestamp for when the resiliency policy was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key/value pair.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -88,11 +97,10 @@ impl std::fmt::Debug for ResiliencyPolicy {
         formatter.finish()
     }
 }
-/// See [`ResiliencyPolicy`](crate::model::ResiliencyPolicy)
+/// See [`ResiliencyPolicy`](crate::model::ResiliencyPolicy).
 pub mod resiliency_policy {
 
-    /// A builder for [`ResiliencyPolicy`](crate::model::ResiliencyPolicy)
-    #[non_exhaustive]
+    /// A builder for [`ResiliencyPolicy`](crate::model::ResiliencyPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_arn: std::option::Option<std::string::String>,
@@ -252,7 +260,7 @@ pub mod resiliency_policy {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResiliencyPolicy`](crate::model::ResiliencyPolicy)
+        /// Consumes the builder and constructs a [`ResiliencyPolicy`](crate::model::ResiliencyPolicy).
         pub fn build(self) -> crate::model::ResiliencyPolicy {
             crate::model::ResiliencyPolicy {
                 policy_arn: self.policy_arn,
@@ -269,7 +277,7 @@ pub mod resiliency_policy {
     }
 }
 impl ResiliencyPolicy {
-    /// Creates a new builder-style object to manufacture [`ResiliencyPolicy`](crate::model::ResiliencyPolicy)
+    /// Creates a new builder-style object to manufacture [`ResiliencyPolicy`](crate::model::ResiliencyPolicy).
     pub fn builder() -> crate::model::resiliency_policy::Builder {
         crate::model::resiliency_policy::Builder::default()
     }
@@ -280,8 +288,10 @@ impl ResiliencyPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailurePolicy {
     /// <p>The Recovery Time Objective (RTO), in seconds.</p>
+    #[doc(hidden)]
     pub rto_in_secs: i32,
     /// <p>The Recovery Point Objective (RPO), in seconds.</p>
+    #[doc(hidden)]
     pub rpo_in_secs: i32,
 }
 impl FailurePolicy {
@@ -302,11 +312,10 @@ impl std::fmt::Debug for FailurePolicy {
         formatter.finish()
     }
 }
-/// See [`FailurePolicy`](crate::model::FailurePolicy)
+/// See [`FailurePolicy`](crate::model::FailurePolicy).
 pub mod failure_policy {
 
-    /// A builder for [`FailurePolicy`](crate::model::FailurePolicy)
-    #[non_exhaustive]
+    /// A builder for [`FailurePolicy`](crate::model::FailurePolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rto_in_secs: std::option::Option<i32>,
@@ -333,7 +342,7 @@ pub mod failure_policy {
             self.rpo_in_secs = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailurePolicy`](crate::model::FailurePolicy)
+        /// Consumes the builder and constructs a [`FailurePolicy`](crate::model::FailurePolicy).
         pub fn build(self) -> crate::model::FailurePolicy {
             crate::model::FailurePolicy {
                 rto_in_secs: self.rto_in_secs.unwrap_or_default(),
@@ -343,7 +352,7 @@ pub mod failure_policy {
     }
 }
 impl FailurePolicy {
-    /// Creates a new builder-style object to manufacture [`FailurePolicy`](crate::model::FailurePolicy)
+    /// Creates a new builder-style object to manufacture [`FailurePolicy`](crate::model::FailurePolicy).
     pub fn builder() -> crate::model::failure_policy::Builder {
         crate::model::failure_policy::Builder::default()
     }
@@ -612,29 +621,41 @@ impl AsRef<str> for DataLocationConstraint {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct App {
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The name for the application.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The optional description for an app.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub policy_arn: std::option::Option<std::string::String>,
     /// <p>The timestamp for when the app was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The status of the action.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AppStatusType>,
     /// <p>The current status of compliance for the resiliency policy.</p>
+    #[doc(hidden)]
     pub compliance_status: std::option::Option<crate::model::AppComplianceStatusType>,
     /// <p>The timestamp for the most recent compliance evaluation.</p>
+    #[doc(hidden)]
     pub last_app_compliance_evaluation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current resiliency score for the application.</p>
+    #[doc(hidden)]
     pub resiliency_score: f64,
     /// <p>The timestamp for the most recent resiliency score evaluation.</p>
+    #[doc(hidden)]
     pub last_resiliency_score_evaluation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key/value pair.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p> Assessment execution schedule with 'Daily' or 'Disabled' values. </p>
+    #[doc(hidden)]
     pub assessment_schedule: std::option::Option<crate::model::AppAssessmentScheduleType>,
 }
 impl App {
@@ -720,11 +741,10 @@ impl std::fmt::Debug for App {
         formatter.finish()
     }
 }
-/// See [`App`](crate::model::App)
+/// See [`App`](crate::model::App).
 pub mod app {
 
-    /// A builder for [`App`](crate::model::App)
-    #[non_exhaustive]
+    /// A builder for [`App`](crate::model::App).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -908,7 +928,7 @@ pub mod app {
             self.assessment_schedule = input;
             self
         }
-        /// Consumes the builder and constructs a [`App`](crate::model::App)
+        /// Consumes the builder and constructs a [`App`](crate::model::App).
         pub fn build(self) -> crate::model::App {
             crate::model::App {
                 app_arn: self.app_arn,
@@ -928,7 +948,7 @@ pub mod app {
     }
 }
 impl App {
-    /// Creates a new builder-style object to manufacture [`App`](crate::model::App)
+    /// Creates a new builder-style object to manufacture [`App`](crate::model::App).
     pub fn builder() -> crate::model::app::Builder {
         crate::model::app::Builder::default()
     }
@@ -1117,39 +1137,55 @@ impl AsRef<str> for AppStatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppAssessment {
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<std::string::String>,
     /// <p>The entity that invoked the assessment.</p>
+    #[doc(hidden)]
     pub invoker: std::option::Option<crate::model::AssessmentInvoker>,
     /// <p>The cost for the application.</p>
+    #[doc(hidden)]
     pub cost: std::option::Option<crate::model::Cost>,
     /// <p>The current resiliency score for the application.</p>
+    #[doc(hidden)]
     pub resiliency_score: std::option::Option<crate::model::ResiliencyScore>,
     /// <p>The application compliance against the resiliency policy.</p>
+    #[doc(hidden)]
     pub compliance: std::option::Option<
         std::collections::HashMap<crate::model::DisruptionType, crate::model::DisruptionCompliance>,
     >,
     /// <p>The current status of the compliance for the resiliency policy.</p>
+    #[doc(hidden)]
     pub compliance_status: std::option::Option<crate::model::ComplianceStatus>,
     /// <p>The current status of the assessment for the resiliency policy.</p>
+    #[doc(hidden)]
     pub assessment_status: std::option::Option<crate::model::AssessmentStatus>,
     /// <p>The starting time for the action.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end time for the action.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Error or warning message from the assessment execution</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The name of the assessment.</p>
+    #[doc(hidden)]
     pub assessment_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub assessment_arn: std::option::Option<std::string::String>,
     /// <p>The resiliency policy.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<crate::model::ResiliencyPolicy>,
     /// <p>The tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key/value pair.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p> A resource error object containing a list of errors retrieving an application's resources. </p>
+    #[doc(hidden)]
     pub resource_errors_details: std::option::Option<crate::model::ResourceErrorsDetails>,
 }
 impl AppAssessment {
@@ -1252,11 +1288,10 @@ impl std::fmt::Debug for AppAssessment {
         formatter.finish()
     }
 }
-/// See [`AppAssessment`](crate::model::AppAssessment)
+/// See [`AppAssessment`](crate::model::AppAssessment).
 pub mod app_assessment {
 
-    /// A builder for [`AppAssessment`](crate::model::AppAssessment)
-    #[non_exhaustive]
+    /// A builder for [`AppAssessment`](crate::model::AppAssessment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -1511,7 +1546,7 @@ pub mod app_assessment {
             self.resource_errors_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppAssessment`](crate::model::AppAssessment)
+        /// Consumes the builder and constructs a [`AppAssessment`](crate::model::AppAssessment).
         pub fn build(self) -> crate::model::AppAssessment {
             crate::model::AppAssessment {
                 app_arn: self.app_arn,
@@ -1535,7 +1570,7 @@ pub mod app_assessment {
     }
 }
 impl AppAssessment {
-    /// Creates a new builder-style object to manufacture [`AppAssessment`](crate::model::AppAssessment)
+    /// Creates a new builder-style object to manufacture [`AppAssessment`](crate::model::AppAssessment).
     pub fn builder() -> crate::model::app_assessment::Builder {
         crate::model::app_assessment::Builder::default()
     }
@@ -1546,8 +1581,10 @@ impl AppAssessment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceErrorsDetails {
     /// <p> A list of errors retrieving an application's resources. </p>
+    #[doc(hidden)]
     pub resource_errors: std::option::Option<std::vec::Vec<crate::model::ResourceError>>,
     /// <p> This indicates if there are more errors not listed in the resourceErrors list. </p>
+    #[doc(hidden)]
     pub has_more_errors: std::option::Option<bool>,
 }
 impl ResourceErrorsDetails {
@@ -1568,11 +1605,10 @@ impl std::fmt::Debug for ResourceErrorsDetails {
         formatter.finish()
     }
 }
-/// See [`ResourceErrorsDetails`](crate::model::ResourceErrorsDetails)
+/// See [`ResourceErrorsDetails`](crate::model::ResourceErrorsDetails).
 pub mod resource_errors_details {
 
-    /// A builder for [`ResourceErrorsDetails`](crate::model::ResourceErrorsDetails)
-    #[non_exhaustive]
+    /// A builder for [`ResourceErrorsDetails`](crate::model::ResourceErrorsDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_errors: std::option::Option<std::vec::Vec<crate::model::ResourceError>>,
@@ -1608,7 +1644,7 @@ pub mod resource_errors_details {
             self.has_more_errors = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceErrorsDetails`](crate::model::ResourceErrorsDetails)
+        /// Consumes the builder and constructs a [`ResourceErrorsDetails`](crate::model::ResourceErrorsDetails).
         pub fn build(self) -> crate::model::ResourceErrorsDetails {
             crate::model::ResourceErrorsDetails {
                 resource_errors: self.resource_errors,
@@ -1618,7 +1654,7 @@ pub mod resource_errors_details {
     }
 }
 impl ResourceErrorsDetails {
-    /// Creates a new builder-style object to manufacture [`ResourceErrorsDetails`](crate::model::ResourceErrorsDetails)
+    /// Creates a new builder-style object to manufacture [`ResourceErrorsDetails`](crate::model::ResourceErrorsDetails).
     pub fn builder() -> crate::model::resource_errors_details::Builder {
         crate::model::resource_errors_details::Builder::default()
     }
@@ -1629,10 +1665,13 @@ impl ResourceErrorsDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceError {
     /// <p> This is the identifier of the resource. </p>
+    #[doc(hidden)]
     pub logical_resource_id: std::option::Option<std::string::String>,
     /// <p> This is the identifier of the physical resource. </p>
+    #[doc(hidden)]
     pub physical_resource_id: std::option::Option<std::string::String>,
     /// <p> This is the error message. </p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
 }
 impl ResourceError {
@@ -1658,11 +1697,10 @@ impl std::fmt::Debug for ResourceError {
         formatter.finish()
     }
 }
-/// See [`ResourceError`](crate::model::ResourceError)
+/// See [`ResourceError`](crate::model::ResourceError).
 pub mod resource_error {
 
-    /// A builder for [`ResourceError`](crate::model::ResourceError)
-    #[non_exhaustive]
+    /// A builder for [`ResourceError`](crate::model::ResourceError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logical_resource_id: std::option::Option<std::string::String>,
@@ -1706,7 +1744,7 @@ pub mod resource_error {
             self.reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceError`](crate::model::ResourceError)
+        /// Consumes the builder and constructs a [`ResourceError`](crate::model::ResourceError).
         pub fn build(self) -> crate::model::ResourceError {
             crate::model::ResourceError {
                 logical_resource_id: self.logical_resource_id,
@@ -1717,7 +1755,7 @@ pub mod resource_error {
     }
 }
 impl ResourceError {
-    /// Creates a new builder-style object to manufacture [`ResourceError`](crate::model::ResourceError)
+    /// Creates a new builder-style object to manufacture [`ResourceError`](crate::model::ResourceError).
     pub fn builder() -> crate::model::resource_error::Builder {
         crate::model::resource_error::Builder::default()
     }
@@ -1846,24 +1884,34 @@ impl AsRef<str> for ComplianceStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisruptionCompliance {
     /// <p>The Recovery Time Objective (RTO) that is achievable, in seconds</p>
+    #[doc(hidden)]
     pub achievable_rto_in_secs: i32,
     /// <p>The current RTO, in seconds.</p>
+    #[doc(hidden)]
     pub current_rto_in_secs: i32,
     /// <p>The RTO reference identifier.</p>
+    #[doc(hidden)]
     pub rto_reference_id: std::option::Option<std::string::String>,
     /// <p>The RTO description.</p>
+    #[doc(hidden)]
     pub rto_description: std::option::Option<std::string::String>,
     /// <p>The current RPO, in seconds.</p>
+    #[doc(hidden)]
     pub current_rpo_in_secs: i32,
     /// <p>The RPO reference identifier.</p>
+    #[doc(hidden)]
     pub rpo_reference_id: std::option::Option<std::string::String>,
     /// <p>The RPO description.</p>
+    #[doc(hidden)]
     pub rpo_description: std::option::Option<std::string::String>,
     /// <p>The current status of compliance for the resiliency policy.</p>
+    #[doc(hidden)]
     pub compliance_status: std::option::Option<crate::model::ComplianceStatus>,
     /// <p>The Recovery Point Objective (RPO) that is achievable, in seconds.</p>
+    #[doc(hidden)]
     pub achievable_rpo_in_secs: i32,
     /// <p>The disruption compliance message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DisruptionCompliance {
@@ -1924,11 +1972,10 @@ impl std::fmt::Debug for DisruptionCompliance {
         formatter.finish()
     }
 }
-/// See [`DisruptionCompliance`](crate::model::DisruptionCompliance)
+/// See [`DisruptionCompliance`](crate::model::DisruptionCompliance).
 pub mod disruption_compliance {
 
-    /// A builder for [`DisruptionCompliance`](crate::model::DisruptionCompliance)
-    #[non_exhaustive]
+    /// A builder for [`DisruptionCompliance`](crate::model::DisruptionCompliance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) achievable_rto_in_secs: std::option::Option<i32>,
@@ -2058,7 +2105,7 @@ pub mod disruption_compliance {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisruptionCompliance`](crate::model::DisruptionCompliance)
+        /// Consumes the builder and constructs a [`DisruptionCompliance`](crate::model::DisruptionCompliance).
         pub fn build(self) -> crate::model::DisruptionCompliance {
             crate::model::DisruptionCompliance {
                 achievable_rto_in_secs: self.achievable_rto_in_secs.unwrap_or_default(),
@@ -2076,7 +2123,7 @@ pub mod disruption_compliance {
     }
 }
 impl DisruptionCompliance {
-    /// Creates a new builder-style object to manufacture [`DisruptionCompliance`](crate::model::DisruptionCompliance)
+    /// Creates a new builder-style object to manufacture [`DisruptionCompliance`](crate::model::DisruptionCompliance).
     pub fn builder() -> crate::model::disruption_compliance::Builder {
         crate::model::disruption_compliance::Builder::default()
     }
@@ -2087,8 +2134,10 @@ impl DisruptionCompliance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResiliencyScore {
     /// <p>The outage score for a valid key.</p>
+    #[doc(hidden)]
     pub score: f64,
     /// <p>The disruption score for a valid key.</p>
+    #[doc(hidden)]
     pub disruption_score:
         std::option::Option<std::collections::HashMap<crate::model::DisruptionType, f64>>,
 }
@@ -2112,11 +2161,10 @@ impl std::fmt::Debug for ResiliencyScore {
         formatter.finish()
     }
 }
-/// See [`ResiliencyScore`](crate::model::ResiliencyScore)
+/// See [`ResiliencyScore`](crate::model::ResiliencyScore).
 pub mod resiliency_score {
 
-    /// A builder for [`ResiliencyScore`](crate::model::ResiliencyScore)
-    #[non_exhaustive]
+    /// A builder for [`ResiliencyScore`](crate::model::ResiliencyScore).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) score: std::option::Option<f64>,
@@ -2155,7 +2203,7 @@ pub mod resiliency_score {
             self.disruption_score = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResiliencyScore`](crate::model::ResiliencyScore)
+        /// Consumes the builder and constructs a [`ResiliencyScore`](crate::model::ResiliencyScore).
         pub fn build(self) -> crate::model::ResiliencyScore {
             crate::model::ResiliencyScore {
                 score: self.score.unwrap_or_default(),
@@ -2165,7 +2213,7 @@ pub mod resiliency_score {
     }
 }
 impl ResiliencyScore {
-    /// Creates a new builder-style object to manufacture [`ResiliencyScore`](crate::model::ResiliencyScore)
+    /// Creates a new builder-style object to manufacture [`ResiliencyScore`](crate::model::ResiliencyScore).
     pub fn builder() -> crate::model::resiliency_score::Builder {
         crate::model::resiliency_score::Builder::default()
     }
@@ -2176,10 +2224,13 @@ impl ResiliencyScore {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Cost {
     /// <p>The cost amount.</p>
+    #[doc(hidden)]
     pub amount: f64,
     /// <p>The cost currency, for example <code>USD</code>.</p>
+    #[doc(hidden)]
     pub currency: std::option::Option<std::string::String>,
     /// <p>The cost frequency.</p>
+    #[doc(hidden)]
     pub frequency: std::option::Option<crate::model::CostFrequency>,
 }
 impl Cost {
@@ -2205,11 +2256,10 @@ impl std::fmt::Debug for Cost {
         formatter.finish()
     }
 }
-/// See [`Cost`](crate::model::Cost)
+/// See [`Cost`](crate::model::Cost).
 pub mod cost {
 
-    /// A builder for [`Cost`](crate::model::Cost)
-    #[non_exhaustive]
+    /// A builder for [`Cost`](crate::model::Cost).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) amount: std::option::Option<f64>,
@@ -2250,7 +2300,7 @@ pub mod cost {
             self.frequency = input;
             self
         }
-        /// Consumes the builder and constructs a [`Cost`](crate::model::Cost)
+        /// Consumes the builder and constructs a [`Cost`](crate::model::Cost).
         pub fn build(self) -> crate::model::Cost {
             crate::model::Cost {
                 amount: self.amount.unwrap_or_default(),
@@ -2261,7 +2311,7 @@ pub mod cost {
     }
 }
 impl Cost {
-    /// Creates a new builder-style object to manufacture [`Cost`](crate::model::Cost)
+    /// Creates a new builder-style object to manufacture [`Cost`](crate::model::Cost).
     pub fn builder() -> crate::model::cost::Builder {
         crate::model::cost::Builder::default()
     }
@@ -2453,10 +2503,13 @@ impl AsRef<str> for ResourceResolutionStatusType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UnsupportedResource {
     /// <p>The logical resource identifier for the unsupported resource.</p>
+    #[doc(hidden)]
     pub logical_resource_id: std::option::Option<crate::model::LogicalResourceId>,
     /// <p>The physical resource identifier for the unsupported resource.</p>
+    #[doc(hidden)]
     pub physical_resource_id: std::option::Option<crate::model::PhysicalResourceId>,
     /// <p>The type of resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
 }
 impl UnsupportedResource {
@@ -2482,11 +2535,10 @@ impl std::fmt::Debug for UnsupportedResource {
         formatter.finish()
     }
 }
-/// See [`UnsupportedResource`](crate::model::UnsupportedResource)
+/// See [`UnsupportedResource`](crate::model::UnsupportedResource).
 pub mod unsupported_resource {
 
-    /// A builder for [`UnsupportedResource`](crate::model::UnsupportedResource)
-    #[non_exhaustive]
+    /// A builder for [`UnsupportedResource`](crate::model::UnsupportedResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logical_resource_id: std::option::Option<crate::model::LogicalResourceId>,
@@ -2533,7 +2585,7 @@ pub mod unsupported_resource {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`UnsupportedResource`](crate::model::UnsupportedResource)
+        /// Consumes the builder and constructs a [`UnsupportedResource`](crate::model::UnsupportedResource).
         pub fn build(self) -> crate::model::UnsupportedResource {
             crate::model::UnsupportedResource {
                 logical_resource_id: self.logical_resource_id,
@@ -2544,7 +2596,7 @@ pub mod unsupported_resource {
     }
 }
 impl UnsupportedResource {
-    /// Creates a new builder-style object to manufacture [`UnsupportedResource`](crate::model::UnsupportedResource)
+    /// Creates a new builder-style object to manufacture [`UnsupportedResource`](crate::model::UnsupportedResource).
     pub fn builder() -> crate::model::unsupported_resource::Builder {
         crate::model::unsupported_resource::Builder::default()
     }
@@ -2555,6 +2607,7 @@ impl UnsupportedResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PhysicalResourceId {
     /// <p>The identifier of the physical resource.</p>
+    #[doc(hidden)]
     pub identifier: std::option::Option<std::string::String>,
     /// <p>Specifies the type of physical resource identifier.</p>
     /// <dl>
@@ -2571,10 +2624,13 @@ pub struct PhysicalResourceId {
     /// <p>The resource identifier is a Resilience Hub-native identifier.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::PhysicalIdentifierType>,
     /// <p>The Amazon Web Services Region that the physical resource is located in.</p>
+    #[doc(hidden)]
     pub aws_region: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services account that owns the physical resource.</p>
+    #[doc(hidden)]
     pub aws_account_id: std::option::Option<std::string::String>,
 }
 impl PhysicalResourceId {
@@ -2619,11 +2675,10 @@ impl std::fmt::Debug for PhysicalResourceId {
         formatter.finish()
     }
 }
-/// See [`PhysicalResourceId`](crate::model::PhysicalResourceId)
+/// See [`PhysicalResourceId`](crate::model::PhysicalResourceId).
 pub mod physical_resource_id {
 
-    /// A builder for [`PhysicalResourceId`](crate::model::PhysicalResourceId)
-    #[non_exhaustive]
+    /// A builder for [`PhysicalResourceId`](crate::model::PhysicalResourceId).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identifier: std::option::Option<std::string::String>,
@@ -2706,7 +2761,7 @@ pub mod physical_resource_id {
             self.aws_account_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PhysicalResourceId`](crate::model::PhysicalResourceId)
+        /// Consumes the builder and constructs a [`PhysicalResourceId`](crate::model::PhysicalResourceId).
         pub fn build(self) -> crate::model::PhysicalResourceId {
             crate::model::PhysicalResourceId {
                 identifier: self.identifier,
@@ -2718,7 +2773,7 @@ pub mod physical_resource_id {
     }
 }
 impl PhysicalResourceId {
-    /// Creates a new builder-style object to manufacture [`PhysicalResourceId`](crate::model::PhysicalResourceId)
+    /// Creates a new builder-style object to manufacture [`PhysicalResourceId`](crate::model::PhysicalResourceId).
     pub fn builder() -> crate::model::physical_resource_id::Builder {
         crate::model::physical_resource_id::Builder::default()
     }
@@ -2784,12 +2839,16 @@ impl AsRef<str> for PhysicalIdentifierType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogicalResourceId {
     /// <p>The identifier of the resource.</p>
+    #[doc(hidden)]
     pub identifier: std::option::Option<std::string::String>,
     /// <p>The name of the CloudFormation stack this resource belongs to.</p>
+    #[doc(hidden)]
     pub logical_stack_name: std::option::Option<std::string::String>,
     /// <p>The name of the resource group that this resource belongs to.</p>
+    #[doc(hidden)]
     pub resource_group_name: std::option::Option<std::string::String>,
     /// <p> The name of the Terraform S3 state file this resource belongs to. </p>
+    #[doc(hidden)]
     pub terraform_source_name: std::option::Option<std::string::String>,
 }
 impl LogicalResourceId {
@@ -2820,11 +2879,10 @@ impl std::fmt::Debug for LogicalResourceId {
         formatter.finish()
     }
 }
-/// See [`LogicalResourceId`](crate::model::LogicalResourceId)
+/// See [`LogicalResourceId`](crate::model::LogicalResourceId).
 pub mod logical_resource_id {
 
-    /// A builder for [`LogicalResourceId`](crate::model::LogicalResourceId)
-    #[non_exhaustive]
+    /// A builder for [`LogicalResourceId`](crate::model::LogicalResourceId).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identifier: std::option::Option<std::string::String>,
@@ -2882,7 +2940,7 @@ pub mod logical_resource_id {
             self.terraform_source_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogicalResourceId`](crate::model::LogicalResourceId)
+        /// Consumes the builder and constructs a [`LogicalResourceId`](crate::model::LogicalResourceId).
         pub fn build(self) -> crate::model::LogicalResourceId {
             crate::model::LogicalResourceId {
                 identifier: self.identifier,
@@ -2894,7 +2952,7 @@ pub mod logical_resource_id {
     }
 }
 impl LogicalResourceId {
-    /// Creates a new builder-style object to manufacture [`LogicalResourceId`](crate::model::LogicalResourceId)
+    /// Creates a new builder-style object to manufacture [`LogicalResourceId`](crate::model::LogicalResourceId).
     pub fn builder() -> crate::model::logical_resource_id::Builder {
         crate::model::logical_resource_id::Builder::default()
     }
@@ -2905,26 +2963,37 @@ impl LogicalResourceId {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TestRecommendation {
     /// <p>Identifier for the test recommendation.</p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
     /// <p>The reference identifier for the test recommendation.</p>
+    #[doc(hidden)]
     pub reference_id: std::option::Option<std::string::String>,
     /// <p>The name of the application component.</p>
+    #[doc(hidden)]
     pub app_component_name: std::option::Option<std::string::String>,
     /// <p>The name of the test recommendation.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The intent of the test recommendation.</p>
+    #[doc(hidden)]
     pub intent: std::option::Option<std::string::String>,
     /// <p>The level of risk for this test recommendation.</p>
+    #[doc(hidden)]
     pub risk: std::option::Option<crate::model::TestRisk>,
     /// <p>The type of test recommendation.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TestType>,
     /// <p>The description for the test recommendation.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The test recommendation items.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::RecommendationItem>>,
     /// <p>The prerequisite of the test recommendation.</p>
+    #[doc(hidden)]
     pub prerequisite: std::option::Option<std::string::String>,
     /// <p> A list of recommended alarms that are used in the test and must be exported before or with the test. </p>
+    #[doc(hidden)]
     pub depends_on_alarms: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl TestRecommendation {
@@ -2990,11 +3059,10 @@ impl std::fmt::Debug for TestRecommendation {
         formatter.finish()
     }
 }
-/// See [`TestRecommendation`](crate::model::TestRecommendation)
+/// See [`TestRecommendation`](crate::model::TestRecommendation).
 pub mod test_recommendation {
 
-    /// A builder for [`TestRecommendation`](crate::model::TestRecommendation)
-    #[non_exhaustive]
+    /// A builder for [`TestRecommendation`](crate::model::TestRecommendation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_id: std::option::Option<std::string::String>,
@@ -3144,7 +3212,7 @@ pub mod test_recommendation {
             self.depends_on_alarms = input;
             self
         }
-        /// Consumes the builder and constructs a [`TestRecommendation`](crate::model::TestRecommendation)
+        /// Consumes the builder and constructs a [`TestRecommendation`](crate::model::TestRecommendation).
         pub fn build(self) -> crate::model::TestRecommendation {
             crate::model::TestRecommendation {
                 recommendation_id: self.recommendation_id,
@@ -3163,7 +3231,7 @@ pub mod test_recommendation {
     }
 }
 impl TestRecommendation {
-    /// Creates a new builder-style object to manufacture [`TestRecommendation`](crate::model::TestRecommendation)
+    /// Creates a new builder-style object to manufacture [`TestRecommendation`](crate::model::TestRecommendation).
     pub fn builder() -> crate::model::test_recommendation::Builder {
         crate::model::test_recommendation::Builder::default()
     }
@@ -3174,12 +3242,16 @@ impl TestRecommendation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecommendationItem {
     /// <p>The resource identifier.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The target account identifier.</p>
+    #[doc(hidden)]
     pub target_account_id: std::option::Option<std::string::String>,
     /// <p>The target region.</p>
+    #[doc(hidden)]
     pub target_region: std::option::Option<std::string::String>,
     /// <p>Specifies if the recommendation has already been implemented.</p>
+    #[doc(hidden)]
     pub already_implemented: std::option::Option<bool>,
 }
 impl RecommendationItem {
@@ -3210,11 +3282,10 @@ impl std::fmt::Debug for RecommendationItem {
         formatter.finish()
     }
 }
-/// See [`RecommendationItem`](crate::model::RecommendationItem)
+/// See [`RecommendationItem`](crate::model::RecommendationItem).
 pub mod recommendation_item {
 
-    /// A builder for [`RecommendationItem`](crate::model::RecommendationItem)
-    #[non_exhaustive]
+    /// A builder for [`RecommendationItem`](crate::model::RecommendationItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_id: std::option::Option<std::string::String>,
@@ -3269,7 +3340,7 @@ pub mod recommendation_item {
             self.already_implemented = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecommendationItem`](crate::model::RecommendationItem)
+        /// Consumes the builder and constructs a [`RecommendationItem`](crate::model::RecommendationItem).
         pub fn build(self) -> crate::model::RecommendationItem {
             crate::model::RecommendationItem {
                 resource_id: self.resource_id,
@@ -3281,7 +3352,7 @@ pub mod recommendation_item {
     }
 }
 impl RecommendationItem {
-    /// Creates a new builder-style object to manufacture [`RecommendationItem`](crate::model::RecommendationItem)
+    /// Creates a new builder-style object to manufacture [`RecommendationItem`](crate::model::RecommendationItem).
     pub fn builder() -> crate::model::recommendation_item::Builder {
         crate::model::recommendation_item::Builder::default()
     }
@@ -3414,20 +3485,28 @@ impl AsRef<str> for TestRisk {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SopRecommendation {
     /// <p>The service type.</p>
+    #[doc(hidden)]
     pub service_type: std::option::Option<crate::model::SopServiceType>,
     /// <p>The application component name.</p>
+    #[doc(hidden)]
     pub app_component_name: std::option::Option<std::string::String>,
     /// <p>The description of the SOP recommendation.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Identifier for the SOP recommendation.</p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
     /// <p>The name of the SOP recommendation.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The recommendation items.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::RecommendationItem>>,
     /// <p>The reference identifier for the SOP recommendation.</p>
+    #[doc(hidden)]
     pub reference_id: std::option::Option<std::string::String>,
     /// <p>The prerequisite for the SOP recommendation.</p>
+    #[doc(hidden)]
     pub prerequisite: std::option::Option<std::string::String>,
 }
 impl SopRecommendation {
@@ -3478,11 +3557,10 @@ impl std::fmt::Debug for SopRecommendation {
         formatter.finish()
     }
 }
-/// See [`SopRecommendation`](crate::model::SopRecommendation)
+/// See [`SopRecommendation`](crate::model::SopRecommendation).
 pub mod sop_recommendation {
 
-    /// A builder for [`SopRecommendation`](crate::model::SopRecommendation)
-    #[non_exhaustive]
+    /// A builder for [`SopRecommendation`](crate::model::SopRecommendation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_type: std::option::Option<crate::model::SopServiceType>,
@@ -3593,7 +3671,7 @@ pub mod sop_recommendation {
             self.prerequisite = input;
             self
         }
-        /// Consumes the builder and constructs a [`SopRecommendation`](crate::model::SopRecommendation)
+        /// Consumes the builder and constructs a [`SopRecommendation`](crate::model::SopRecommendation).
         pub fn build(self) -> crate::model::SopRecommendation {
             crate::model::SopRecommendation {
                 service_type: self.service_type,
@@ -3609,7 +3687,7 @@ pub mod sop_recommendation {
     }
 }
 impl SopRecommendation {
-    /// Creates a new builder-style object to manufacture [`SopRecommendation`](crate::model::SopRecommendation)
+    /// Creates a new builder-style object to manufacture [`SopRecommendation`](crate::model::SopRecommendation).
     pub fn builder() -> crate::model::sop_recommendation::Builder {
         crate::model::sop_recommendation::Builder::default()
     }
@@ -3671,12 +3749,16 @@ impl AsRef<str> for SopServiceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecommendationTemplate {
     /// <p>The file location of the template.</p>
+    #[doc(hidden)]
     pub templates_location: std::option::Option<crate::model::S3Location>,
     /// <p>The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub assessment_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>Identifiers for the recommendations used in the recommendation template.</p>
+    #[doc(hidden)]
     pub recommendation_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An array of strings that specify the recommendation template type or types.</p>
     /// <dl>
@@ -3699,6 +3781,7 @@ pub struct RecommendationTemplate {
     /// <p>The template is a <code>TestRecommendation</code> template.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub recommendation_types:
         std::option::Option<std::vec::Vec<crate::model::RenderRecommendationType>>,
     /// <p>The format of the recommendation template.</p>
@@ -3716,23 +3799,32 @@ pub struct RecommendationTemplate {
     /// <p>The template is CloudFormation YAML.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub format: std::option::Option<crate::model::TemplateFormat>,
     /// <p>The Amazon Resource Name (ARN) for the recommendation template.</p>
+    #[doc(hidden)]
     pub recommendation_template_arn: std::option::Option<std::string::String>,
     /// <p>The message for the recommendation template.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The status of the action.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::RecommendationTemplateStatus>,
     /// <p>The name for the recommendation template.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The start time for the action.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end time for the action.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key/value pair.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Indicates if replacements are needed.</p>
+    #[doc(hidden)]
     pub needs_replacements: std::option::Option<bool>,
 }
 impl RecommendationTemplate {
@@ -3855,11 +3947,10 @@ impl std::fmt::Debug for RecommendationTemplate {
         formatter.finish()
     }
 }
-/// See [`RecommendationTemplate`](crate::model::RecommendationTemplate)
+/// See [`RecommendationTemplate`](crate::model::RecommendationTemplate).
 pub mod recommendation_template {
 
-    /// A builder for [`RecommendationTemplate`](crate::model::RecommendationTemplate)
-    #[non_exhaustive]
+    /// A builder for [`RecommendationTemplate`](crate::model::RecommendationTemplate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) templates_location: std::option::Option<crate::model::S3Location>,
@@ -4149,7 +4240,7 @@ pub mod recommendation_template {
             self.needs_replacements = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecommendationTemplate`](crate::model::RecommendationTemplate)
+        /// Consumes the builder and constructs a [`RecommendationTemplate`](crate::model::RecommendationTemplate).
         pub fn build(self) -> crate::model::RecommendationTemplate {
             crate::model::RecommendationTemplate {
                 templates_location: self.templates_location,
@@ -4171,7 +4262,7 @@ pub mod recommendation_template {
     }
 }
 impl RecommendationTemplate {
-    /// Creates a new builder-style object to manufacture [`RecommendationTemplate`](crate::model::RecommendationTemplate)
+    /// Creates a new builder-style object to manufacture [`RecommendationTemplate`](crate::model::RecommendationTemplate).
     pub fn builder() -> crate::model::recommendation_template::Builder {
         crate::model::recommendation_template::Builder::default()
     }
@@ -4359,8 +4450,10 @@ impl AsRef<str> for RenderRecommendationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Location {
     /// <p>The name of the Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>The prefix for the Amazon S3 bucket.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl S3Location {
@@ -4381,11 +4474,10 @@ impl std::fmt::Debug for S3Location {
         formatter.finish()
     }
 }
-/// See [`S3Location`](crate::model::S3Location)
+/// See [`S3Location`](crate::model::S3Location).
 pub mod s3_location {
 
-    /// A builder for [`S3Location`](crate::model::S3Location)
-    #[non_exhaustive]
+    /// A builder for [`S3Location`](crate::model::S3Location).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -4412,7 +4504,7 @@ pub mod s3_location {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location)
+        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location).
         pub fn build(self) -> crate::model::S3Location {
             crate::model::S3Location {
                 bucket: self.bucket,
@@ -4422,7 +4514,7 @@ pub mod s3_location {
     }
 }
 impl S3Location {
-    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location)
+    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location).
     pub fn builder() -> crate::model::s3_location::Builder {
         crate::model::s3_location::Builder::default()
     }
@@ -4433,6 +4525,7 @@ impl S3Location {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppVersionSummary {
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<std::string::String>,
 }
 impl AppVersionSummary {
@@ -4448,11 +4541,10 @@ impl std::fmt::Debug for AppVersionSummary {
         formatter.finish()
     }
 }
-/// See [`AppVersionSummary`](crate::model::AppVersionSummary)
+/// See [`AppVersionSummary`](crate::model::AppVersionSummary).
 pub mod app_version_summary {
 
-    /// A builder for [`AppVersionSummary`](crate::model::AppVersionSummary)
-    #[non_exhaustive]
+    /// A builder for [`AppVersionSummary`](crate::model::AppVersionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_version: std::option::Option<std::string::String>,
@@ -4468,7 +4560,7 @@ pub mod app_version_summary {
             self.app_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppVersionSummary`](crate::model::AppVersionSummary)
+        /// Consumes the builder and constructs a [`AppVersionSummary`](crate::model::AppVersionSummary).
         pub fn build(self) -> crate::model::AppVersionSummary {
             crate::model::AppVersionSummary {
                 app_version: self.app_version,
@@ -4477,7 +4569,7 @@ pub mod app_version_summary {
     }
 }
 impl AppVersionSummary {
-    /// Creates a new builder-style object to manufacture [`AppVersionSummary`](crate::model::AppVersionSummary)
+    /// Creates a new builder-style object to manufacture [`AppVersionSummary`](crate::model::AppVersionSummary).
     pub fn builder() -> crate::model::app_version_summary::Builder {
         crate::model::app_version_summary::Builder::default()
     }
@@ -4488,14 +4580,19 @@ impl AppVersionSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PhysicalResource {
     /// <p>The name of the resource.</p>
+    #[doc(hidden)]
     pub resource_name: std::option::Option<std::string::String>,
     /// <p>The logical identifier of the resource.</p>
+    #[doc(hidden)]
     pub logical_resource_id: std::option::Option<crate::model::LogicalResourceId>,
     /// <p>The physical identifier of the resource.</p>
+    #[doc(hidden)]
     pub physical_resource_id: std::option::Option<crate::model::PhysicalResourceId>,
     /// <p>The type of resource.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The application components that belong to this resource.</p>
+    #[doc(hidden)]
     pub app_components: std::option::Option<std::vec::Vec<crate::model::AppComponent>>,
 }
 impl PhysicalResource {
@@ -4531,11 +4628,10 @@ impl std::fmt::Debug for PhysicalResource {
         formatter.finish()
     }
 }
-/// See [`PhysicalResource`](crate::model::PhysicalResource)
+/// See [`PhysicalResource`](crate::model::PhysicalResource).
 pub mod physical_resource {
 
-    /// A builder for [`PhysicalResource`](crate::model::PhysicalResource)
-    #[non_exhaustive]
+    /// A builder for [`PhysicalResource`](crate::model::PhysicalResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_name: std::option::Option<std::string::String>,
@@ -4616,7 +4712,7 @@ pub mod physical_resource {
             self.app_components = input;
             self
         }
-        /// Consumes the builder and constructs a [`PhysicalResource`](crate::model::PhysicalResource)
+        /// Consumes the builder and constructs a [`PhysicalResource`](crate::model::PhysicalResource).
         pub fn build(self) -> crate::model::PhysicalResource {
             crate::model::PhysicalResource {
                 resource_name: self.resource_name,
@@ -4629,7 +4725,7 @@ pub mod physical_resource {
     }
 }
 impl PhysicalResource {
-    /// Creates a new builder-style object to manufacture [`PhysicalResource`](crate::model::PhysicalResource)
+    /// Creates a new builder-style object to manufacture [`PhysicalResource`](crate::model::PhysicalResource).
     pub fn builder() -> crate::model::physical_resource::Builder {
         crate::model::physical_resource::Builder::default()
     }
@@ -4640,8 +4736,10 @@ impl PhysicalResource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppComponent {
     /// <p>The name of the application component.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of application component.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
 }
 impl AppComponent {
@@ -4662,11 +4760,10 @@ impl std::fmt::Debug for AppComponent {
         formatter.finish()
     }
 }
-/// See [`AppComponent`](crate::model::AppComponent)
+/// See [`AppComponent`](crate::model::AppComponent).
 pub mod app_component {
 
-    /// A builder for [`AppComponent`](crate::model::AppComponent)
-    #[non_exhaustive]
+    /// A builder for [`AppComponent`](crate::model::AppComponent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4693,7 +4790,7 @@ pub mod app_component {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppComponent`](crate::model::AppComponent)
+        /// Consumes the builder and constructs a [`AppComponent`](crate::model::AppComponent).
         pub fn build(self) -> crate::model::AppComponent {
             crate::model::AppComponent {
                 name: self.name,
@@ -4703,7 +4800,7 @@ pub mod app_component {
     }
 }
 impl AppComponent {
-    /// Creates a new builder-style object to manufacture [`AppComponent`](crate::model::AppComponent)
+    /// Creates a new builder-style object to manufacture [`AppComponent`](crate::model::AppComponent).
     pub fn builder() -> crate::model::app_component::Builder {
         crate::model::app_component::Builder::default()
     }
@@ -4714,12 +4811,16 @@ impl AppComponent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceMapping {
     /// <p>The name of the resource this resource is mapped to.</p>
+    #[doc(hidden)]
     pub resource_name: std::option::Option<std::string::String>,
     /// <p>The name of the CloudFormation stack this resource is mapped to.</p>
+    #[doc(hidden)]
     pub logical_stack_name: std::option::Option<std::string::String>,
     /// <p>The name of the application this resource is mapped to.</p>
+    #[doc(hidden)]
     pub app_registry_app_name: std::option::Option<std::string::String>,
     /// <p>The name of the resource group this resource is mapped to.</p>
+    #[doc(hidden)]
     pub resource_group_name: std::option::Option<std::string::String>,
     /// <p>Specifies the type of resource mapping.</p>
     /// <dl>
@@ -4748,10 +4849,13 @@ pub struct ResourceMapping {
     /// <p>The resource is mapped to a resource group. The name of the resource group is contained in the <code>resourceGroupName</code> property.</p>
     /// </dd>
     /// </dl>
+    #[doc(hidden)]
     pub mapping_type: std::option::Option<crate::model::ResourceMappingType>,
     /// <p>The identifier of this resource.</p>
+    #[doc(hidden)]
     pub physical_resource_id: std::option::Option<crate::model::PhysicalResourceId>,
     /// <p> The short name of the Terraform source. </p>
+    #[doc(hidden)]
     pub terraform_source_name: std::option::Option<std::string::String>,
 }
 impl ResourceMapping {
@@ -4823,11 +4927,10 @@ impl std::fmt::Debug for ResourceMapping {
         formatter.finish()
     }
 }
-/// See [`ResourceMapping`](crate::model::ResourceMapping)
+/// See [`ResourceMapping`](crate::model::ResourceMapping).
 pub mod resource_mapping {
 
-    /// A builder for [`ResourceMapping`](crate::model::ResourceMapping)
-    #[non_exhaustive]
+    /// A builder for [`ResourceMapping`](crate::model::ResourceMapping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_name: std::option::Option<std::string::String>,
@@ -4982,7 +5085,7 @@ pub mod resource_mapping {
             self.terraform_source_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceMapping`](crate::model::ResourceMapping)
+        /// Consumes the builder and constructs a [`ResourceMapping`](crate::model::ResourceMapping).
         pub fn build(self) -> crate::model::ResourceMapping {
             crate::model::ResourceMapping {
                 resource_name: self.resource_name,
@@ -4997,7 +5100,7 @@ pub mod resource_mapping {
     }
 }
 impl ResourceMapping {
-    /// Creates a new builder-style object to manufacture [`ResourceMapping`](crate::model::ResourceMapping)
+    /// Creates a new builder-style object to manufacture [`ResourceMapping`](crate::model::ResourceMapping).
     pub fn builder() -> crate::model::resource_mapping::Builder {
         crate::model::resource_mapping::Builder::default()
     }
@@ -5081,18 +5184,25 @@ impl AsRef<str> for ResourceMappingType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppSummary {
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The name of the application.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The optional description for an app.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The timestamp for when the app was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current status of compliance for the resiliency policy.</p>
+    #[doc(hidden)]
     pub compliance_status: std::option::Option<crate::model::AppComplianceStatusType>,
     /// <p>The current resiliency score for the application.</p>
+    #[doc(hidden)]
     pub resiliency_score: f64,
     /// <p> Assessment execution schedule with 'Daily' or 'Disabled' values. </p>
+    #[doc(hidden)]
     pub assessment_schedule: std::option::Option<crate::model::AppAssessmentScheduleType>,
 }
 impl AppSummary {
@@ -5140,11 +5250,10 @@ impl std::fmt::Debug for AppSummary {
         formatter.finish()
     }
 }
-/// See [`AppSummary`](crate::model::AppSummary)
+/// See [`AppSummary`](crate::model::AppSummary).
 pub mod app_summary {
 
-    /// A builder for [`AppSummary`](crate::model::AppSummary)
-    #[non_exhaustive]
+    /// A builder for [`AppSummary`](crate::model::AppSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -5239,7 +5348,7 @@ pub mod app_summary {
             self.assessment_schedule = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppSummary`](crate::model::AppSummary)
+        /// Consumes the builder and constructs a [`AppSummary`](crate::model::AppSummary).
         pub fn build(self) -> crate::model::AppSummary {
             crate::model::AppSummary {
                 app_arn: self.app_arn,
@@ -5254,7 +5363,7 @@ pub mod app_summary {
     }
 }
 impl AppSummary {
-    /// Creates a new builder-style object to manufacture [`AppSummary`](crate::model::AppSummary)
+    /// Creates a new builder-style object to manufacture [`AppSummary`](crate::model::AppSummary).
     pub fn builder() -> crate::model::app_summary::Builder {
         crate::model::app_summary::Builder::default()
     }
@@ -5265,10 +5374,13 @@ impl AppSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComponentRecommendation {
     /// <p>The name of the application component.</p>
+    #[doc(hidden)]
     pub app_component_name: std::option::Option<std::string::String>,
     /// <p>The recommendation status.</p>
+    #[doc(hidden)]
     pub recommendation_status: std::option::Option<crate::model::RecommendationComplianceStatus>,
     /// <p>The list of recommendations.</p>
+    #[doc(hidden)]
     pub config_recommendations:
         std::option::Option<std::vec::Vec<crate::model::ConfigRecommendation>>,
 }
@@ -5299,11 +5411,10 @@ impl std::fmt::Debug for ComponentRecommendation {
         formatter.finish()
     }
 }
-/// See [`ComponentRecommendation`](crate::model::ComponentRecommendation)
+/// See [`ComponentRecommendation`](crate::model::ComponentRecommendation).
 pub mod component_recommendation {
 
-    /// A builder for [`ComponentRecommendation`](crate::model::ComponentRecommendation)
-    #[non_exhaustive]
+    /// A builder for [`ComponentRecommendation`](crate::model::ComponentRecommendation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_component_name: std::option::Option<std::string::String>,
@@ -5361,7 +5472,7 @@ pub mod component_recommendation {
             self.config_recommendations = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComponentRecommendation`](crate::model::ComponentRecommendation)
+        /// Consumes the builder and constructs a [`ComponentRecommendation`](crate::model::ComponentRecommendation).
         pub fn build(self) -> crate::model::ComponentRecommendation {
             crate::model::ComponentRecommendation {
                 app_component_name: self.app_component_name,
@@ -5372,7 +5483,7 @@ pub mod component_recommendation {
     }
 }
 impl ComponentRecommendation {
-    /// Creates a new builder-style object to manufacture [`ComponentRecommendation`](crate::model::ComponentRecommendation)
+    /// Creates a new builder-style object to manufacture [`ComponentRecommendation`](crate::model::ComponentRecommendation).
     pub fn builder() -> crate::model::component_recommendation::Builder {
         crate::model::component_recommendation::Builder::default()
     }
@@ -5383,14 +5494,18 @@ impl ComponentRecommendation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigRecommendation {
     /// <p>The cost for the application.</p>
+    #[doc(hidden)]
     pub cost: std::option::Option<crate::model::Cost>,
     /// <p>The application component name.</p>
+    #[doc(hidden)]
     pub app_component_name: std::option::Option<std::string::String>,
     /// <p>The current compliance against the resiliency policy before applying the configuration change.</p>
+    #[doc(hidden)]
     pub compliance: std::option::Option<
         std::collections::HashMap<crate::model::DisruptionType, crate::model::DisruptionCompliance>,
     >,
     /// <p>The expected compliance against the resiliency policy after applying the configuration change.</p>
+    #[doc(hidden)]
     pub recommendation_compliance: std::option::Option<
         std::collections::HashMap<
             crate::model::DisruptionType,
@@ -5398,16 +5513,22 @@ pub struct ConfigRecommendation {
         >,
     >,
     /// <p>The type of optimization.</p>
+    #[doc(hidden)]
     pub optimization_type: std::option::Option<crate::model::ConfigRecommendationOptimizationType>,
     /// <p>The name of the recommendation configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The optional description for an app.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>List of the suggested configuration changes.</p>
+    #[doc(hidden)]
     pub suggested_changes: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The architecture type.</p>
+    #[doc(hidden)]
     pub ha_architecture: std::option::Option<crate::model::HaArchitecture>,
     /// <p>The reference identifier for the recommendation configuration.</p>
+    #[doc(hidden)]
     pub reference_id: std::option::Option<std::string::String>,
 }
 impl ConfigRecommendation {
@@ -5484,11 +5605,10 @@ impl std::fmt::Debug for ConfigRecommendation {
         formatter.finish()
     }
 }
-/// See [`ConfigRecommendation`](crate::model::ConfigRecommendation)
+/// See [`ConfigRecommendation`](crate::model::ConfigRecommendation).
 pub mod config_recommendation {
 
-    /// A builder for [`ConfigRecommendation`](crate::model::ConfigRecommendation)
-    #[non_exhaustive]
+    /// A builder for [`ConfigRecommendation`](crate::model::ConfigRecommendation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cost: std::option::Option<crate::model::Cost>,
@@ -5671,7 +5791,7 @@ pub mod config_recommendation {
             self.reference_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigRecommendation`](crate::model::ConfigRecommendation)
+        /// Consumes the builder and constructs a [`ConfigRecommendation`](crate::model::ConfigRecommendation).
         pub fn build(self) -> crate::model::ConfigRecommendation {
             crate::model::ConfigRecommendation {
                 cost: self.cost,
@@ -5689,7 +5809,7 @@ pub mod config_recommendation {
     }
 }
 impl ConfigRecommendation {
-    /// Creates a new builder-style object to manufacture [`ConfigRecommendation`](crate::model::ConfigRecommendation)
+    /// Creates a new builder-style object to manufacture [`ConfigRecommendation`](crate::model::ConfigRecommendation).
     pub fn builder() -> crate::model::config_recommendation::Builder {
         crate::model::config_recommendation::Builder::default()
     }
@@ -5846,14 +5966,19 @@ impl AsRef<str> for ConfigRecommendationOptimizationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecommendationDisruptionCompliance {
     /// <p>The expected compliance status after applying the recommended configuration change.</p>
+    #[doc(hidden)]
     pub expected_compliance_status: std::option::Option<crate::model::ComplianceStatus>,
     /// <p>The expected RTO after applying the recommended configuration change.</p>
+    #[doc(hidden)]
     pub expected_rto_in_secs: i32,
     /// <p>The expected Recovery Time Objective (RTO) description after applying the recommended configuration change.</p>
+    #[doc(hidden)]
     pub expected_rto_description: std::option::Option<std::string::String>,
     /// <p>The expected RPO after applying the recommended configuration change.</p>
+    #[doc(hidden)]
     pub expected_rpo_in_secs: i32,
     /// <p>The expected Recovery Point Objective (RPO) description after applying the recommended configuration change.</p>
+    #[doc(hidden)]
     pub expected_rpo_description: std::option::Option<std::string::String>,
 }
 impl RecommendationDisruptionCompliance {
@@ -5894,11 +6019,10 @@ impl std::fmt::Debug for RecommendationDisruptionCompliance {
         formatter.finish()
     }
 }
-/// See [`RecommendationDisruptionCompliance`](crate::model::RecommendationDisruptionCompliance)
+/// See [`RecommendationDisruptionCompliance`](crate::model::RecommendationDisruptionCompliance).
 pub mod recommendation_disruption_compliance {
 
-    /// A builder for [`RecommendationDisruptionCompliance`](crate::model::RecommendationDisruptionCompliance)
-    #[non_exhaustive]
+    /// A builder for [`RecommendationDisruptionCompliance`](crate::model::RecommendationDisruptionCompliance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) expected_compliance_status: std::option::Option<crate::model::ComplianceStatus>,
@@ -5967,7 +6091,7 @@ pub mod recommendation_disruption_compliance {
             self.expected_rpo_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecommendationDisruptionCompliance`](crate::model::RecommendationDisruptionCompliance)
+        /// Consumes the builder and constructs a [`RecommendationDisruptionCompliance`](crate::model::RecommendationDisruptionCompliance).
         pub fn build(self) -> crate::model::RecommendationDisruptionCompliance {
             crate::model::RecommendationDisruptionCompliance {
                 expected_compliance_status: self.expected_compliance_status,
@@ -5980,7 +6104,7 @@ pub mod recommendation_disruption_compliance {
     }
 }
 impl RecommendationDisruptionCompliance {
-    /// Creates a new builder-style object to manufacture [`RecommendationDisruptionCompliance`](crate::model::RecommendationDisruptionCompliance)
+    /// Creates a new builder-style object to manufacture [`RecommendationDisruptionCompliance`](crate::model::RecommendationDisruptionCompliance).
     pub fn builder() -> crate::model::recommendation_disruption_compliance::Builder {
         crate::model::recommendation_disruption_compliance::Builder::default()
     }
@@ -6050,18 +6174,24 @@ impl AsRef<str> for RecommendationComplianceStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppComponentCompliance {
     /// <p>The cost for the application.</p>
+    #[doc(hidden)]
     pub cost: std::option::Option<crate::model::Cost>,
     /// <p>The name of the application component.</p>
+    #[doc(hidden)]
     pub app_component_name: std::option::Option<std::string::String>,
     /// <p>The compliance of the application component against the resiliency policy.</p>
+    #[doc(hidden)]
     pub compliance: std::option::Option<
         std::collections::HashMap<crate::model::DisruptionType, crate::model::DisruptionCompliance>,
     >,
     /// <p>The compliance message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The status of the action.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ComplianceStatus>,
     /// <p>The current resiliency score for the application.</p>
+    #[doc(hidden)]
     pub resiliency_score: std::option::Option<crate::model::ResiliencyScore>,
 }
 impl AppComponentCompliance {
@@ -6109,11 +6239,10 @@ impl std::fmt::Debug for AppComponentCompliance {
         formatter.finish()
     }
 }
-/// See [`AppComponentCompliance`](crate::model::AppComponentCompliance)
+/// See [`AppComponentCompliance`](crate::model::AppComponentCompliance).
 pub mod app_component_compliance {
 
-    /// A builder for [`AppComponentCompliance`](crate::model::AppComponentCompliance)
-    #[non_exhaustive]
+    /// A builder for [`AppComponentCompliance`](crate::model::AppComponentCompliance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cost: std::option::Option<crate::model::Cost>,
@@ -6216,7 +6345,7 @@ pub mod app_component_compliance {
             self.resiliency_score = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppComponentCompliance`](crate::model::AppComponentCompliance)
+        /// Consumes the builder and constructs a [`AppComponentCompliance`](crate::model::AppComponentCompliance).
         pub fn build(self) -> crate::model::AppComponentCompliance {
             crate::model::AppComponentCompliance {
                 cost: self.cost,
@@ -6230,7 +6359,7 @@ pub mod app_component_compliance {
     }
 }
 impl AppComponentCompliance {
-    /// Creates a new builder-style object to manufacture [`AppComponentCompliance`](crate::model::AppComponentCompliance)
+    /// Creates a new builder-style object to manufacture [`AppComponentCompliance`](crate::model::AppComponentCompliance).
     pub fn builder() -> crate::model::app_component_compliance::Builder {
         crate::model::app_component_compliance::Builder::default()
     }
@@ -6241,28 +6370,40 @@ impl AppComponentCompliance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AppAssessmentSummary {
     /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub app_version: std::option::Option<std::string::String>,
     /// <p>The current status of the assessment for the resiliency policy.</p>
+    #[doc(hidden)]
     pub assessment_status: std::option::Option<crate::model::AssessmentStatus>,
     /// <p>The entity that invoked the assessment.</p>
+    #[doc(hidden)]
     pub invoker: std::option::Option<crate::model::AssessmentInvoker>,
     /// <p>The starting time for the action.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The end time for the action.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The message from the assessment run.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The name of the assessment.</p>
+    #[doc(hidden)]
     pub assessment_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    #[doc(hidden)]
     pub assessment_arn: std::option::Option<std::string::String>,
     /// <p>The current status of compliance for the resiliency policy.</p>
+    #[doc(hidden)]
     pub compliance_status: std::option::Option<crate::model::ComplianceStatus>,
     /// <p>The cost for the application.</p>
+    #[doc(hidden)]
     pub cost: std::option::Option<crate::model::Cost>,
     /// <p>The current resiliency score for the application.</p>
+    #[doc(hidden)]
     pub resiliency_score: f64,
 }
 impl AppAssessmentSummary {
@@ -6333,11 +6474,10 @@ impl std::fmt::Debug for AppAssessmentSummary {
         formatter.finish()
     }
 }
-/// See [`AppAssessmentSummary`](crate::model::AppAssessmentSummary)
+/// See [`AppAssessmentSummary`](crate::model::AppAssessmentSummary).
 pub mod app_assessment_summary {
 
-    /// A builder for [`AppAssessmentSummary`](crate::model::AppAssessmentSummary)
-    #[non_exhaustive]
+    /// A builder for [`AppAssessmentSummary`](crate::model::AppAssessmentSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_arn: std::option::Option<std::string::String>,
@@ -6495,7 +6635,7 @@ pub mod app_assessment_summary {
             self.resiliency_score = input;
             self
         }
-        /// Consumes the builder and constructs a [`AppAssessmentSummary`](crate::model::AppAssessmentSummary)
+        /// Consumes the builder and constructs a [`AppAssessmentSummary`](crate::model::AppAssessmentSummary).
         pub fn build(self) -> crate::model::AppAssessmentSummary {
             crate::model::AppAssessmentSummary {
                 app_arn: self.app_arn,
@@ -6515,7 +6655,7 @@ pub mod app_assessment_summary {
     }
 }
 impl AppAssessmentSummary {
-    /// Creates a new builder-style object to manufacture [`AppAssessmentSummary`](crate::model::AppAssessmentSummary)
+    /// Creates a new builder-style object to manufacture [`AppAssessmentSummary`](crate::model::AppAssessmentSummary).
     pub fn builder() -> crate::model::app_assessment_summary::Builder {
         crate::model::app_assessment_summary::Builder::default()
     }
@@ -6526,20 +6666,28 @@ impl AppAssessmentSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AlarmRecommendation {
     /// <p>The identifier of the alarm recommendation.</p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
     /// <p>The reference identifier of the alarm recommendation.</p>
+    #[doc(hidden)]
     pub reference_id: std::option::Option<std::string::String>,
     /// <p>The name of the alarm recommendation.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the recommendation.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The type of alarm recommendation.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::AlarmType>,
     /// <p>The application component for the CloudWatch alarm recommendation.</p>
+    #[doc(hidden)]
     pub app_component_name: std::option::Option<std::string::String>,
     /// <p>The list of CloudWatch alarm recommendations.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::RecommendationItem>>,
     /// <p>The prerequisite for the alarm recommendation.</p>
+    #[doc(hidden)]
     pub prerequisite: std::option::Option<std::string::String>,
 }
 impl AlarmRecommendation {
@@ -6590,11 +6738,10 @@ impl std::fmt::Debug for AlarmRecommendation {
         formatter.finish()
     }
 }
-/// See [`AlarmRecommendation`](crate::model::AlarmRecommendation)
+/// See [`AlarmRecommendation`](crate::model::AlarmRecommendation).
 pub mod alarm_recommendation {
 
-    /// A builder for [`AlarmRecommendation`](crate::model::AlarmRecommendation)
-    #[non_exhaustive]
+    /// A builder for [`AlarmRecommendation`](crate::model::AlarmRecommendation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_id: std::option::Option<std::string::String>,
@@ -6702,7 +6849,7 @@ pub mod alarm_recommendation {
             self.prerequisite = input;
             self
         }
-        /// Consumes the builder and constructs a [`AlarmRecommendation`](crate::model::AlarmRecommendation)
+        /// Consumes the builder and constructs a [`AlarmRecommendation`](crate::model::AlarmRecommendation).
         pub fn build(self) -> crate::model::AlarmRecommendation {
             crate::model::AlarmRecommendation {
                 recommendation_id: self.recommendation_id,
@@ -6718,7 +6865,7 @@ pub mod alarm_recommendation {
     }
 }
 impl AlarmRecommendation {
-    /// Creates a new builder-style object to manufacture [`AlarmRecommendation`](crate::model::AlarmRecommendation)
+    /// Creates a new builder-style object to manufacture [`AlarmRecommendation`](crate::model::AlarmRecommendation).
     pub fn builder() -> crate::model::alarm_recommendation::Builder {
         crate::model::alarm_recommendation::Builder::default()
     }
@@ -6796,6 +6943,7 @@ impl AsRef<str> for AlarmType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TerraformSource {
     /// <p> The Terraform s3 state file you need to import. </p>
+    #[doc(hidden)]
     pub s3_state_file_url: std::option::Option<std::string::String>,
 }
 impl TerraformSource {
@@ -6811,11 +6959,10 @@ impl std::fmt::Debug for TerraformSource {
         formatter.finish()
     }
 }
-/// See [`TerraformSource`](crate::model::TerraformSource)
+/// See [`TerraformSource`](crate::model::TerraformSource).
 pub mod terraform_source {
 
-    /// A builder for [`TerraformSource`](crate::model::TerraformSource)
-    #[non_exhaustive]
+    /// A builder for [`TerraformSource`](crate::model::TerraformSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_state_file_url: std::option::Option<std::string::String>,
@@ -6834,7 +6981,7 @@ pub mod terraform_source {
             self.s3_state_file_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`TerraformSource`](crate::model::TerraformSource)
+        /// Consumes the builder and constructs a [`TerraformSource`](crate::model::TerraformSource).
         pub fn build(self) -> crate::model::TerraformSource {
             crate::model::TerraformSource {
                 s3_state_file_url: self.s3_state_file_url,
@@ -6843,7 +6990,7 @@ pub mod terraform_source {
     }
 }
 impl TerraformSource {
-    /// Creates a new builder-style object to manufacture [`TerraformSource`](crate::model::TerraformSource)
+    /// Creates a new builder-style object to manufacture [`TerraformSource`](crate::model::TerraformSource).
     pub fn builder() -> crate::model::terraform_source::Builder {
         crate::model::terraform_source::Builder::default()
     }

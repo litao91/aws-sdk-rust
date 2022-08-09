@@ -71,8 +71,10 @@ impl AsRef<str> for ConnectorState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CapacityUpdate {
     /// <p>The target auto scaling setting.</p>
+    #[doc(hidden)]
     pub auto_scaling: std::option::Option<crate::model::AutoScalingUpdate>,
     /// <p>The target settings for provisioned capacity.</p>
+    #[doc(hidden)]
     pub provisioned_capacity: std::option::Option<crate::model::ProvisionedCapacityUpdate>,
 }
 impl CapacityUpdate {
@@ -95,11 +97,10 @@ impl std::fmt::Debug for CapacityUpdate {
         formatter.finish()
     }
 }
-/// See [`CapacityUpdate`](crate::model::CapacityUpdate)
+/// See [`CapacityUpdate`](crate::model::CapacityUpdate).
 pub mod capacity_update {
 
-    /// A builder for [`CapacityUpdate`](crate::model::CapacityUpdate)
-    #[non_exhaustive]
+    /// A builder for [`CapacityUpdate`](crate::model::CapacityUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_scaling: std::option::Option<crate::model::AutoScalingUpdate>,
@@ -136,7 +137,7 @@ pub mod capacity_update {
             self.provisioned_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`CapacityUpdate`](crate::model::CapacityUpdate)
+        /// Consumes the builder and constructs a [`CapacityUpdate`](crate::model::CapacityUpdate).
         pub fn build(self) -> crate::model::CapacityUpdate {
             crate::model::CapacityUpdate {
                 auto_scaling: self.auto_scaling,
@@ -146,7 +147,7 @@ pub mod capacity_update {
     }
 }
 impl CapacityUpdate {
-    /// Creates a new builder-style object to manufacture [`CapacityUpdate`](crate::model::CapacityUpdate)
+    /// Creates a new builder-style object to manufacture [`CapacityUpdate`](crate::model::CapacityUpdate).
     pub fn builder() -> crate::model::capacity_update::Builder {
         crate::model::capacity_update::Builder::default()
     }
@@ -157,8 +158,10 @@ impl CapacityUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProvisionedCapacityUpdate {
     /// <p>The number of microcontroller units (MCUs) allocated to each connector worker. The valid values are 1,2,4,8.</p>
+    #[doc(hidden)]
     pub mcu_count: i32,
     /// <p>The number of workers that are allocated to the connector.</p>
+    #[doc(hidden)]
     pub worker_count: i32,
 }
 impl ProvisionedCapacityUpdate {
@@ -179,11 +182,10 @@ impl std::fmt::Debug for ProvisionedCapacityUpdate {
         formatter.finish()
     }
 }
-/// See [`ProvisionedCapacityUpdate`](crate::model::ProvisionedCapacityUpdate)
+/// See [`ProvisionedCapacityUpdate`](crate::model::ProvisionedCapacityUpdate).
 pub mod provisioned_capacity_update {
 
-    /// A builder for [`ProvisionedCapacityUpdate`](crate::model::ProvisionedCapacityUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ProvisionedCapacityUpdate`](crate::model::ProvisionedCapacityUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mcu_count: std::option::Option<i32>,
@@ -210,7 +212,7 @@ pub mod provisioned_capacity_update {
             self.worker_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvisionedCapacityUpdate`](crate::model::ProvisionedCapacityUpdate)
+        /// Consumes the builder and constructs a [`ProvisionedCapacityUpdate`](crate::model::ProvisionedCapacityUpdate).
         pub fn build(self) -> crate::model::ProvisionedCapacityUpdate {
             crate::model::ProvisionedCapacityUpdate {
                 mcu_count: self.mcu_count.unwrap_or_default(),
@@ -220,7 +222,7 @@ pub mod provisioned_capacity_update {
     }
 }
 impl ProvisionedCapacityUpdate {
-    /// Creates a new builder-style object to manufacture [`ProvisionedCapacityUpdate`](crate::model::ProvisionedCapacityUpdate)
+    /// Creates a new builder-style object to manufacture [`ProvisionedCapacityUpdate`](crate::model::ProvisionedCapacityUpdate).
     pub fn builder() -> crate::model::provisioned_capacity_update::Builder {
         crate::model::provisioned_capacity_update::Builder::default()
     }
@@ -231,14 +233,19 @@ impl ProvisionedCapacityUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoScalingUpdate {
     /// <p>The target maximum number of workers allocated to the connector.</p>
+    #[doc(hidden)]
     pub max_worker_count: i32,
     /// <p>The target number of microcontroller units (MCUs) allocated to each connector worker. The valid values are 1,2,4,8.</p>
+    #[doc(hidden)]
     pub mcu_count: i32,
     /// <p>The target minimum number of workers allocated to the connector.</p>
+    #[doc(hidden)]
     pub min_worker_count: i32,
     /// <p>The target sacle-in policy for the connector.</p>
+    #[doc(hidden)]
     pub scale_in_policy: std::option::Option<crate::model::ScaleInPolicyUpdate>,
     /// <p>The target sacle-out policy for the connector.</p>
+    #[doc(hidden)]
     pub scale_out_policy: std::option::Option<crate::model::ScaleOutPolicyUpdate>,
 }
 impl AutoScalingUpdate {
@@ -274,11 +281,10 @@ impl std::fmt::Debug for AutoScalingUpdate {
         formatter.finish()
     }
 }
-/// See [`AutoScalingUpdate`](crate::model::AutoScalingUpdate)
+/// See [`AutoScalingUpdate`](crate::model::AutoScalingUpdate).
 pub mod auto_scaling_update {
 
-    /// A builder for [`AutoScalingUpdate`](crate::model::AutoScalingUpdate)
-    #[non_exhaustive]
+    /// A builder for [`AutoScalingUpdate`](crate::model::AutoScalingUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_worker_count: std::option::Option<i32>,
@@ -344,7 +350,7 @@ pub mod auto_scaling_update {
             self.scale_out_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoScalingUpdate`](crate::model::AutoScalingUpdate)
+        /// Consumes the builder and constructs a [`AutoScalingUpdate`](crate::model::AutoScalingUpdate).
         pub fn build(self) -> crate::model::AutoScalingUpdate {
             crate::model::AutoScalingUpdate {
                 max_worker_count: self.max_worker_count.unwrap_or_default(),
@@ -357,7 +363,7 @@ pub mod auto_scaling_update {
     }
 }
 impl AutoScalingUpdate {
-    /// Creates a new builder-style object to manufacture [`AutoScalingUpdate`](crate::model::AutoScalingUpdate)
+    /// Creates a new builder-style object to manufacture [`AutoScalingUpdate`](crate::model::AutoScalingUpdate).
     pub fn builder() -> crate::model::auto_scaling_update::Builder {
         crate::model::auto_scaling_update::Builder::default()
     }
@@ -368,6 +374,7 @@ impl AutoScalingUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScaleOutPolicyUpdate {
     /// <p>The target CPU utilization percentage threshold at which you want connector scale out to be triggered.</p>
+    #[doc(hidden)]
     pub cpu_utilization_percentage: i32,
 }
 impl ScaleOutPolicyUpdate {
@@ -386,11 +393,10 @@ impl std::fmt::Debug for ScaleOutPolicyUpdate {
         formatter.finish()
     }
 }
-/// See [`ScaleOutPolicyUpdate`](crate::model::ScaleOutPolicyUpdate)
+/// See [`ScaleOutPolicyUpdate`](crate::model::ScaleOutPolicyUpdate).
 pub mod scale_out_policy_update {
 
-    /// A builder for [`ScaleOutPolicyUpdate`](crate::model::ScaleOutPolicyUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ScaleOutPolicyUpdate`](crate::model::ScaleOutPolicyUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cpu_utilization_percentage: std::option::Option<i32>,
@@ -406,7 +412,7 @@ pub mod scale_out_policy_update {
             self.cpu_utilization_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScaleOutPolicyUpdate`](crate::model::ScaleOutPolicyUpdate)
+        /// Consumes the builder and constructs a [`ScaleOutPolicyUpdate`](crate::model::ScaleOutPolicyUpdate).
         pub fn build(self) -> crate::model::ScaleOutPolicyUpdate {
             crate::model::ScaleOutPolicyUpdate {
                 cpu_utilization_percentage: self.cpu_utilization_percentage.unwrap_or_default(),
@@ -415,7 +421,7 @@ pub mod scale_out_policy_update {
     }
 }
 impl ScaleOutPolicyUpdate {
-    /// Creates a new builder-style object to manufacture [`ScaleOutPolicyUpdate`](crate::model::ScaleOutPolicyUpdate)
+    /// Creates a new builder-style object to manufacture [`ScaleOutPolicyUpdate`](crate::model::ScaleOutPolicyUpdate).
     pub fn builder() -> crate::model::scale_out_policy_update::Builder {
         crate::model::scale_out_policy_update::Builder::default()
     }
@@ -426,6 +432,7 @@ impl ScaleOutPolicyUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScaleInPolicyUpdate {
     /// <p>The target CPU utilization percentage threshold at which you want connector scale in to be triggered.</p>
+    #[doc(hidden)]
     pub cpu_utilization_percentage: i32,
 }
 impl ScaleInPolicyUpdate {
@@ -444,11 +451,10 @@ impl std::fmt::Debug for ScaleInPolicyUpdate {
         formatter.finish()
     }
 }
-/// See [`ScaleInPolicyUpdate`](crate::model::ScaleInPolicyUpdate)
+/// See [`ScaleInPolicyUpdate`](crate::model::ScaleInPolicyUpdate).
 pub mod scale_in_policy_update {
 
-    /// A builder for [`ScaleInPolicyUpdate`](crate::model::ScaleInPolicyUpdate)
-    #[non_exhaustive]
+    /// A builder for [`ScaleInPolicyUpdate`](crate::model::ScaleInPolicyUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cpu_utilization_percentage: std::option::Option<i32>,
@@ -464,7 +470,7 @@ pub mod scale_in_policy_update {
             self.cpu_utilization_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScaleInPolicyUpdate`](crate::model::ScaleInPolicyUpdate)
+        /// Consumes the builder and constructs a [`ScaleInPolicyUpdate`](crate::model::ScaleInPolicyUpdate).
         pub fn build(self) -> crate::model::ScaleInPolicyUpdate {
             crate::model::ScaleInPolicyUpdate {
                 cpu_utilization_percentage: self.cpu_utilization_percentage.unwrap_or_default(),
@@ -473,7 +479,7 @@ pub mod scale_in_policy_update {
     }
 }
 impl ScaleInPolicyUpdate {
-    /// Creates a new builder-style object to manufacture [`ScaleInPolicyUpdate`](crate::model::ScaleInPolicyUpdate)
+    /// Creates a new builder-style object to manufacture [`ScaleInPolicyUpdate`](crate::model::ScaleInPolicyUpdate).
     pub fn builder() -> crate::model::scale_in_policy_update::Builder {
         crate::model::scale_in_policy_update::Builder::default()
     }
@@ -484,14 +490,19 @@ impl ScaleInPolicyUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkerConfigurationSummary {
     /// <p>The time that a worker configuration was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of a worker configuration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The latest revision of a worker configuration.</p>
+    #[doc(hidden)]
     pub latest_revision: std::option::Option<crate::model::WorkerConfigurationRevisionSummary>,
     /// <p>The name of the worker configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the worker configuration.</p>
+    #[doc(hidden)]
     pub worker_configuration_arn: std::option::Option<std::string::String>,
 }
 impl WorkerConfigurationSummary {
@@ -529,11 +540,10 @@ impl std::fmt::Debug for WorkerConfigurationSummary {
         formatter.finish()
     }
 }
-/// See [`WorkerConfigurationSummary`](crate::model::WorkerConfigurationSummary)
+/// See [`WorkerConfigurationSummary`](crate::model::WorkerConfigurationSummary).
 pub mod worker_configuration_summary {
 
-    /// A builder for [`WorkerConfigurationSummary`](crate::model::WorkerConfigurationSummary)
-    #[non_exhaustive]
+    /// A builder for [`WorkerConfigurationSummary`](crate::model::WorkerConfigurationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -606,7 +616,7 @@ pub mod worker_configuration_summary {
             self.worker_configuration_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkerConfigurationSummary`](crate::model::WorkerConfigurationSummary)
+        /// Consumes the builder and constructs a [`WorkerConfigurationSummary`](crate::model::WorkerConfigurationSummary).
         pub fn build(self) -> crate::model::WorkerConfigurationSummary {
             crate::model::WorkerConfigurationSummary {
                 creation_time: self.creation_time,
@@ -619,7 +629,7 @@ pub mod worker_configuration_summary {
     }
 }
 impl WorkerConfigurationSummary {
-    /// Creates a new builder-style object to manufacture [`WorkerConfigurationSummary`](crate::model::WorkerConfigurationSummary)
+    /// Creates a new builder-style object to manufacture [`WorkerConfigurationSummary`](crate::model::WorkerConfigurationSummary).
     pub fn builder() -> crate::model::worker_configuration_summary::Builder {
         crate::model::worker_configuration_summary::Builder::default()
     }
@@ -630,10 +640,13 @@ impl WorkerConfigurationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkerConfigurationRevisionSummary {
     /// <p>The time that a worker configuration revision was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of a worker configuration revision.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The revision of a worker configuration.</p>
+    #[doc(hidden)]
     pub revision: i64,
 }
 impl WorkerConfigurationRevisionSummary {
@@ -659,11 +672,10 @@ impl std::fmt::Debug for WorkerConfigurationRevisionSummary {
         formatter.finish()
     }
 }
-/// See [`WorkerConfigurationRevisionSummary`](crate::model::WorkerConfigurationRevisionSummary)
+/// See [`WorkerConfigurationRevisionSummary`](crate::model::WorkerConfigurationRevisionSummary).
 pub mod worker_configuration_revision_summary {
 
-    /// A builder for [`WorkerConfigurationRevisionSummary`](crate::model::WorkerConfigurationRevisionSummary)
-    #[non_exhaustive]
+    /// A builder for [`WorkerConfigurationRevisionSummary`](crate::model::WorkerConfigurationRevisionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -704,7 +716,7 @@ pub mod worker_configuration_revision_summary {
             self.revision = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkerConfigurationRevisionSummary`](crate::model::WorkerConfigurationRevisionSummary)
+        /// Consumes the builder and constructs a [`WorkerConfigurationRevisionSummary`](crate::model::WorkerConfigurationRevisionSummary).
         pub fn build(self) -> crate::model::WorkerConfigurationRevisionSummary {
             crate::model::WorkerConfigurationRevisionSummary {
                 creation_time: self.creation_time,
@@ -715,7 +727,7 @@ pub mod worker_configuration_revision_summary {
     }
 }
 impl WorkerConfigurationRevisionSummary {
-    /// Creates a new builder-style object to manufacture [`WorkerConfigurationRevisionSummary`](crate::model::WorkerConfigurationRevisionSummary)
+    /// Creates a new builder-style object to manufacture [`WorkerConfigurationRevisionSummary`](crate::model::WorkerConfigurationRevisionSummary).
     pub fn builder() -> crate::model::worker_configuration_revision_summary::Builder {
         crate::model::worker_configuration_revision_summary::Builder::default()
     }
@@ -726,16 +738,22 @@ impl WorkerConfigurationRevisionSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomPluginSummary {
     /// <p>The time that the custom plugin was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) of the custom plugin.</p>
+    #[doc(hidden)]
     pub custom_plugin_arn: std::option::Option<std::string::String>,
     /// <p>The state of the custom plugin.</p>
+    #[doc(hidden)]
     pub custom_plugin_state: std::option::Option<crate::model::CustomPluginState>,
     /// <p>A description of the custom plugin.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The latest revision of the custom plugin.</p>
+    #[doc(hidden)]
     pub latest_revision: std::option::Option<crate::model::CustomPluginRevisionSummary>,
     /// <p>The name of the custom plugin.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl CustomPluginSummary {
@@ -778,11 +796,10 @@ impl std::fmt::Debug for CustomPluginSummary {
         formatter.finish()
     }
 }
-/// See [`CustomPluginSummary`](crate::model::CustomPluginSummary)
+/// See [`CustomPluginSummary`](crate::model::CustomPluginSummary).
 pub mod custom_plugin_summary {
 
-    /// A builder for [`CustomPluginSummary`](crate::model::CustomPluginSummary)
-    #[non_exhaustive]
+    /// A builder for [`CustomPluginSummary`](crate::model::CustomPluginSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -865,7 +882,7 @@ pub mod custom_plugin_summary {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomPluginSummary`](crate::model::CustomPluginSummary)
+        /// Consumes the builder and constructs a [`CustomPluginSummary`](crate::model::CustomPluginSummary).
         pub fn build(self) -> crate::model::CustomPluginSummary {
             crate::model::CustomPluginSummary {
                 creation_time: self.creation_time,
@@ -879,7 +896,7 @@ pub mod custom_plugin_summary {
     }
 }
 impl CustomPluginSummary {
-    /// Creates a new builder-style object to manufacture [`CustomPluginSummary`](crate::model::CustomPluginSummary)
+    /// Creates a new builder-style object to manufacture [`CustomPluginSummary`](crate::model::CustomPluginSummary).
     pub fn builder() -> crate::model::custom_plugin_summary::Builder {
         crate::model::custom_plugin_summary::Builder::default()
     }
@@ -890,16 +907,22 @@ impl CustomPluginSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomPluginRevisionSummary {
     /// <p>The format of the plugin file.</p>
+    #[doc(hidden)]
     pub content_type: std::option::Option<crate::model::CustomPluginContentType>,
     /// <p>The time that the custom plugin was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the custom plugin.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Details about the custom plugin file.</p>
+    #[doc(hidden)]
     pub file_description: std::option::Option<crate::model::CustomPluginFileDescription>,
     /// <p>Information about the location of the custom plugin.</p>
+    #[doc(hidden)]
     pub location: std::option::Option<crate::model::CustomPluginLocationDescription>,
     /// <p>The revision of the custom plugin.</p>
+    #[doc(hidden)]
     pub revision: i64,
 }
 impl CustomPluginRevisionSummary {
@@ -942,11 +965,10 @@ impl std::fmt::Debug for CustomPluginRevisionSummary {
         formatter.finish()
     }
 }
-/// See [`CustomPluginRevisionSummary`](crate::model::CustomPluginRevisionSummary)
+/// See [`CustomPluginRevisionSummary`](crate::model::CustomPluginRevisionSummary).
 pub mod custom_plugin_revision_summary {
 
-    /// A builder for [`CustomPluginRevisionSummary`](crate::model::CustomPluginRevisionSummary)
-    #[non_exhaustive]
+    /// A builder for [`CustomPluginRevisionSummary`](crate::model::CustomPluginRevisionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content_type: std::option::Option<crate::model::CustomPluginContentType>,
@@ -1032,7 +1054,7 @@ pub mod custom_plugin_revision_summary {
             self.revision = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomPluginRevisionSummary`](crate::model::CustomPluginRevisionSummary)
+        /// Consumes the builder and constructs a [`CustomPluginRevisionSummary`](crate::model::CustomPluginRevisionSummary).
         pub fn build(self) -> crate::model::CustomPluginRevisionSummary {
             crate::model::CustomPluginRevisionSummary {
                 content_type: self.content_type,
@@ -1046,7 +1068,7 @@ pub mod custom_plugin_revision_summary {
     }
 }
 impl CustomPluginRevisionSummary {
-    /// Creates a new builder-style object to manufacture [`CustomPluginRevisionSummary`](crate::model::CustomPluginRevisionSummary)
+    /// Creates a new builder-style object to manufacture [`CustomPluginRevisionSummary`](crate::model::CustomPluginRevisionSummary).
     pub fn builder() -> crate::model::custom_plugin_revision_summary::Builder {
         crate::model::custom_plugin_revision_summary::Builder::default()
     }
@@ -1057,6 +1079,7 @@ impl CustomPluginRevisionSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomPluginLocationDescription {
     /// <p>The S3 bucket Amazon Resource Name (ARN), file key, and object version of the plugin file stored in Amazon S3.</p>
+    #[doc(hidden)]
     pub s3_location: std::option::Option<crate::model::S3LocationDescription>,
 }
 impl CustomPluginLocationDescription {
@@ -1072,11 +1095,10 @@ impl std::fmt::Debug for CustomPluginLocationDescription {
         formatter.finish()
     }
 }
-/// See [`CustomPluginLocationDescription`](crate::model::CustomPluginLocationDescription)
+/// See [`CustomPluginLocationDescription`](crate::model::CustomPluginLocationDescription).
 pub mod custom_plugin_location_description {
 
-    /// A builder for [`CustomPluginLocationDescription`](crate::model::CustomPluginLocationDescription)
-    #[non_exhaustive]
+    /// A builder for [`CustomPluginLocationDescription`](crate::model::CustomPluginLocationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_location: std::option::Option<crate::model::S3LocationDescription>,
@@ -1095,7 +1117,7 @@ pub mod custom_plugin_location_description {
             self.s3_location = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomPluginLocationDescription`](crate::model::CustomPluginLocationDescription)
+        /// Consumes the builder and constructs a [`CustomPluginLocationDescription`](crate::model::CustomPluginLocationDescription).
         pub fn build(self) -> crate::model::CustomPluginLocationDescription {
             crate::model::CustomPluginLocationDescription {
                 s3_location: self.s3_location,
@@ -1104,7 +1126,7 @@ pub mod custom_plugin_location_description {
     }
 }
 impl CustomPluginLocationDescription {
-    /// Creates a new builder-style object to manufacture [`CustomPluginLocationDescription`](crate::model::CustomPluginLocationDescription)
+    /// Creates a new builder-style object to manufacture [`CustomPluginLocationDescription`](crate::model::CustomPluginLocationDescription).
     pub fn builder() -> crate::model::custom_plugin_location_description::Builder {
         crate::model::custom_plugin_location_description::Builder::default()
     }
@@ -1115,10 +1137,13 @@ impl CustomPluginLocationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3LocationDescription {
     /// <p>The Amazon Resource Name (ARN) of an S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_arn: std::option::Option<std::string::String>,
     /// <p>The file key for an object in an S3 bucket.</p>
+    #[doc(hidden)]
     pub file_key: std::option::Option<std::string::String>,
     /// <p>The version of an object in an S3 bucket.</p>
+    #[doc(hidden)]
     pub object_version: std::option::Option<std::string::String>,
 }
 impl S3LocationDescription {
@@ -1144,11 +1169,10 @@ impl std::fmt::Debug for S3LocationDescription {
         formatter.finish()
     }
 }
-/// See [`S3LocationDescription`](crate::model::S3LocationDescription)
+/// See [`S3LocationDescription`](crate::model::S3LocationDescription).
 pub mod s3_location_description {
 
-    /// A builder for [`S3LocationDescription`](crate::model::S3LocationDescription)
-    #[non_exhaustive]
+    /// A builder for [`S3LocationDescription`](crate::model::S3LocationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn: std::option::Option<std::string::String>,
@@ -1189,7 +1213,7 @@ pub mod s3_location_description {
             self.object_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3LocationDescription`](crate::model::S3LocationDescription)
+        /// Consumes the builder and constructs a [`S3LocationDescription`](crate::model::S3LocationDescription).
         pub fn build(self) -> crate::model::S3LocationDescription {
             crate::model::S3LocationDescription {
                 bucket_arn: self.bucket_arn,
@@ -1200,7 +1224,7 @@ pub mod s3_location_description {
     }
 }
 impl S3LocationDescription {
-    /// Creates a new builder-style object to manufacture [`S3LocationDescription`](crate::model::S3LocationDescription)
+    /// Creates a new builder-style object to manufacture [`S3LocationDescription`](crate::model::S3LocationDescription).
     pub fn builder() -> crate::model::s3_location_description::Builder {
         crate::model::s3_location_description::Builder::default()
     }
@@ -1211,8 +1235,10 @@ impl S3LocationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomPluginFileDescription {
     /// <p>The hex-encoded MD5 checksum of the custom plugin file. You can use it to validate the file.</p>
+    #[doc(hidden)]
     pub file_md5: std::option::Option<std::string::String>,
     /// <p>The size in bytes of the custom plugin file. You can use it to validate the file.</p>
+    #[doc(hidden)]
     pub file_size: i64,
 }
 impl CustomPluginFileDescription {
@@ -1233,11 +1259,10 @@ impl std::fmt::Debug for CustomPluginFileDescription {
         formatter.finish()
     }
 }
-/// See [`CustomPluginFileDescription`](crate::model::CustomPluginFileDescription)
+/// See [`CustomPluginFileDescription`](crate::model::CustomPluginFileDescription).
 pub mod custom_plugin_file_description {
 
-    /// A builder for [`CustomPluginFileDescription`](crate::model::CustomPluginFileDescription)
-    #[non_exhaustive]
+    /// A builder for [`CustomPluginFileDescription`](crate::model::CustomPluginFileDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_md5: std::option::Option<std::string::String>,
@@ -1264,7 +1289,7 @@ pub mod custom_plugin_file_description {
             self.file_size = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomPluginFileDescription`](crate::model::CustomPluginFileDescription)
+        /// Consumes the builder and constructs a [`CustomPluginFileDescription`](crate::model::CustomPluginFileDescription).
         pub fn build(self) -> crate::model::CustomPluginFileDescription {
             crate::model::CustomPluginFileDescription {
                 file_md5: self.file_md5,
@@ -1274,7 +1299,7 @@ pub mod custom_plugin_file_description {
     }
 }
 impl CustomPluginFileDescription {
-    /// Creates a new builder-style object to manufacture [`CustomPluginFileDescription`](crate::model::CustomPluginFileDescription)
+    /// Creates a new builder-style object to manufacture [`CustomPluginFileDescription`](crate::model::CustomPluginFileDescription).
     pub fn builder() -> crate::model::custom_plugin_file_description::Builder {
         crate::model::custom_plugin_file_description::Builder::default()
     }
@@ -1418,36 +1443,51 @@ impl AsRef<str> for CustomPluginState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectorSummary {
     /// <p>The connector's compute capacity settings.</p>
+    #[doc(hidden)]
     pub capacity: std::option::Option<crate::model::CapacityDescription>,
     /// <p>The Amazon Resource Name (ARN) of the connector.</p>
+    #[doc(hidden)]
     pub connector_arn: std::option::Option<std::string::String>,
     /// <p>The description of the connector.</p>
+    #[doc(hidden)]
     pub connector_description: std::option::Option<std::string::String>,
     /// <p>The name of the connector.</p>
+    #[doc(hidden)]
     pub connector_name: std::option::Option<std::string::String>,
     /// <p>The state of the connector.</p>
+    #[doc(hidden)]
     pub connector_state: std::option::Option<crate::model::ConnectorState>,
     /// <p>The time that the connector was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current version of the connector.</p>
+    #[doc(hidden)]
     pub current_version: std::option::Option<std::string::String>,
     /// <p>The details of the Apache Kafka cluster to which the connector is connected.</p>
+    #[doc(hidden)]
     pub kafka_cluster: std::option::Option<crate::model::KafkaClusterDescription>,
     /// <p>The type of client authentication used to connect to the Apache Kafka cluster. The value is NONE when no client authentication is used.</p>
+    #[doc(hidden)]
     pub kafka_cluster_client_authentication:
         std::option::Option<crate::model::KafkaClusterClientAuthenticationDescription>,
     /// <p>Details of encryption in transit to the Apache Kafka cluster.</p>
+    #[doc(hidden)]
     pub kafka_cluster_encryption_in_transit:
         std::option::Option<crate::model::KafkaClusterEncryptionInTransitDescription>,
     /// <p>The version of Kafka Connect. It has to be compatible with both the Apache Kafka cluster's version and the plugins.</p>
+    #[doc(hidden)]
     pub kafka_connect_version: std::option::Option<std::string::String>,
     /// <p>The settings for delivering connector logs to Amazon CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub log_delivery: std::option::Option<crate::model::LogDeliveryDescription>,
     /// <p>Specifies which plugins were used for this connector.</p>
+    #[doc(hidden)]
     pub plugins: std::option::Option<std::vec::Vec<crate::model::PluginDescription>>,
     /// <p>The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon Web Services resources.</p>
+    #[doc(hidden)]
     pub service_execution_role_arn: std::option::Option<std::string::String>,
     /// <p>The worker configurations that are in use with the connector.</p>
+    #[doc(hidden)]
     pub worker_configuration: std::option::Option<crate::model::WorkerConfigurationDescription>,
 }
 impl ConnectorSummary {
@@ -1548,11 +1588,10 @@ impl std::fmt::Debug for ConnectorSummary {
         formatter.finish()
     }
 }
-/// See [`ConnectorSummary`](crate::model::ConnectorSummary)
+/// See [`ConnectorSummary`](crate::model::ConnectorSummary).
 pub mod connector_summary {
 
-    /// A builder for [`ConnectorSummary`](crate::model::ConnectorSummary)
-    #[non_exhaustive]
+    /// A builder for [`ConnectorSummary`](crate::model::ConnectorSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) capacity: std::option::Option<crate::model::CapacityDescription>,
@@ -1785,7 +1824,7 @@ pub mod connector_summary {
             self.worker_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectorSummary`](crate::model::ConnectorSummary)
+        /// Consumes the builder and constructs a [`ConnectorSummary`](crate::model::ConnectorSummary).
         pub fn build(self) -> crate::model::ConnectorSummary {
             crate::model::ConnectorSummary {
                 capacity: self.capacity,
@@ -1808,7 +1847,7 @@ pub mod connector_summary {
     }
 }
 impl ConnectorSummary {
-    /// Creates a new builder-style object to manufacture [`ConnectorSummary`](crate::model::ConnectorSummary)
+    /// Creates a new builder-style object to manufacture [`ConnectorSummary`](crate::model::ConnectorSummary).
     pub fn builder() -> crate::model::connector_summary::Builder {
         crate::model::connector_summary::Builder::default()
     }
@@ -1819,8 +1858,10 @@ impl ConnectorSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkerConfigurationDescription {
     /// <p>The revision of the worker configuration.</p>
+    #[doc(hidden)]
     pub revision: i64,
     /// <p>The Amazon Resource Name (ARN) of the worker configuration.</p>
+    #[doc(hidden)]
     pub worker_configuration_arn: std::option::Option<std::string::String>,
 }
 impl WorkerConfigurationDescription {
@@ -1841,11 +1882,10 @@ impl std::fmt::Debug for WorkerConfigurationDescription {
         formatter.finish()
     }
 }
-/// See [`WorkerConfigurationDescription`](crate::model::WorkerConfigurationDescription)
+/// See [`WorkerConfigurationDescription`](crate::model::WorkerConfigurationDescription).
 pub mod worker_configuration_description {
 
-    /// A builder for [`WorkerConfigurationDescription`](crate::model::WorkerConfigurationDescription)
-    #[non_exhaustive]
+    /// A builder for [`WorkerConfigurationDescription`](crate::model::WorkerConfigurationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) revision: std::option::Option<i64>,
@@ -1875,7 +1915,7 @@ pub mod worker_configuration_description {
             self.worker_configuration_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkerConfigurationDescription`](crate::model::WorkerConfigurationDescription)
+        /// Consumes the builder and constructs a [`WorkerConfigurationDescription`](crate::model::WorkerConfigurationDescription).
         pub fn build(self) -> crate::model::WorkerConfigurationDescription {
             crate::model::WorkerConfigurationDescription {
                 revision: self.revision.unwrap_or_default(),
@@ -1885,7 +1925,7 @@ pub mod worker_configuration_description {
     }
 }
 impl WorkerConfigurationDescription {
-    /// Creates a new builder-style object to manufacture [`WorkerConfigurationDescription`](crate::model::WorkerConfigurationDescription)
+    /// Creates a new builder-style object to manufacture [`WorkerConfigurationDescription`](crate::model::WorkerConfigurationDescription).
     pub fn builder() -> crate::model::worker_configuration_description::Builder {
         crate::model::worker_configuration_description::Builder::default()
     }
@@ -1896,6 +1936,7 @@ impl WorkerConfigurationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PluginDescription {
     /// <p>Details about a custom plugin.</p>
+    #[doc(hidden)]
     pub custom_plugin: std::option::Option<crate::model::CustomPluginDescription>,
 }
 impl PluginDescription {
@@ -1911,11 +1952,10 @@ impl std::fmt::Debug for PluginDescription {
         formatter.finish()
     }
 }
-/// See [`PluginDescription`](crate::model::PluginDescription)
+/// See [`PluginDescription`](crate::model::PluginDescription).
 pub mod plugin_description {
 
-    /// A builder for [`PluginDescription`](crate::model::PluginDescription)
-    #[non_exhaustive]
+    /// A builder for [`PluginDescription`](crate::model::PluginDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_plugin: std::option::Option<crate::model::CustomPluginDescription>,
@@ -1934,7 +1974,7 @@ pub mod plugin_description {
             self.custom_plugin = input;
             self
         }
-        /// Consumes the builder and constructs a [`PluginDescription`](crate::model::PluginDescription)
+        /// Consumes the builder and constructs a [`PluginDescription`](crate::model::PluginDescription).
         pub fn build(self) -> crate::model::PluginDescription {
             crate::model::PluginDescription {
                 custom_plugin: self.custom_plugin,
@@ -1943,7 +1983,7 @@ pub mod plugin_description {
     }
 }
 impl PluginDescription {
-    /// Creates a new builder-style object to manufacture [`PluginDescription`](crate::model::PluginDescription)
+    /// Creates a new builder-style object to manufacture [`PluginDescription`](crate::model::PluginDescription).
     pub fn builder() -> crate::model::plugin_description::Builder {
         crate::model::plugin_description::Builder::default()
     }
@@ -1954,8 +1994,10 @@ impl PluginDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomPluginDescription {
     /// <p>The Amazon Resource Name (ARN) of the custom plugin.</p>
+    #[doc(hidden)]
     pub custom_plugin_arn: std::option::Option<std::string::String>,
     /// <p>The revision of the custom plugin.</p>
+    #[doc(hidden)]
     pub revision: i64,
 }
 impl CustomPluginDescription {
@@ -1976,11 +2018,10 @@ impl std::fmt::Debug for CustomPluginDescription {
         formatter.finish()
     }
 }
-/// See [`CustomPluginDescription`](crate::model::CustomPluginDescription)
+/// See [`CustomPluginDescription`](crate::model::CustomPluginDescription).
 pub mod custom_plugin_description {
 
-    /// A builder for [`CustomPluginDescription`](crate::model::CustomPluginDescription)
-    #[non_exhaustive]
+    /// A builder for [`CustomPluginDescription`](crate::model::CustomPluginDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_plugin_arn: std::option::Option<std::string::String>,
@@ -2010,7 +2051,7 @@ pub mod custom_plugin_description {
             self.revision = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomPluginDescription`](crate::model::CustomPluginDescription)
+        /// Consumes the builder and constructs a [`CustomPluginDescription`](crate::model::CustomPluginDescription).
         pub fn build(self) -> crate::model::CustomPluginDescription {
             crate::model::CustomPluginDescription {
                 custom_plugin_arn: self.custom_plugin_arn,
@@ -2020,7 +2061,7 @@ pub mod custom_plugin_description {
     }
 }
 impl CustomPluginDescription {
-    /// Creates a new builder-style object to manufacture [`CustomPluginDescription`](crate::model::CustomPluginDescription)
+    /// Creates a new builder-style object to manufacture [`CustomPluginDescription`](crate::model::CustomPluginDescription).
     pub fn builder() -> crate::model::custom_plugin_description::Builder {
         crate::model::custom_plugin_description::Builder::default()
     }
@@ -2031,6 +2072,7 @@ impl CustomPluginDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogDeliveryDescription {
     /// <p>The workers can send worker logs to different destination types. This configuration specifies the details of these destinations.</p>
+    #[doc(hidden)]
     pub worker_log_delivery: std::option::Option<crate::model::WorkerLogDeliveryDescription>,
 }
 impl LogDeliveryDescription {
@@ -2048,11 +2090,10 @@ impl std::fmt::Debug for LogDeliveryDescription {
         formatter.finish()
     }
 }
-/// See [`LogDeliveryDescription`](crate::model::LogDeliveryDescription)
+/// See [`LogDeliveryDescription`](crate::model::LogDeliveryDescription).
 pub mod log_delivery_description {
 
-    /// A builder for [`LogDeliveryDescription`](crate::model::LogDeliveryDescription)
-    #[non_exhaustive]
+    /// A builder for [`LogDeliveryDescription`](crate::model::LogDeliveryDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) worker_log_delivery:
@@ -2075,7 +2116,7 @@ pub mod log_delivery_description {
             self.worker_log_delivery = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogDeliveryDescription`](crate::model::LogDeliveryDescription)
+        /// Consumes the builder and constructs a [`LogDeliveryDescription`](crate::model::LogDeliveryDescription).
         pub fn build(self) -> crate::model::LogDeliveryDescription {
             crate::model::LogDeliveryDescription {
                 worker_log_delivery: self.worker_log_delivery,
@@ -2084,7 +2125,7 @@ pub mod log_delivery_description {
     }
 }
 impl LogDeliveryDescription {
-    /// Creates a new builder-style object to manufacture [`LogDeliveryDescription`](crate::model::LogDeliveryDescription)
+    /// Creates a new builder-style object to manufacture [`LogDeliveryDescription`](crate::model::LogDeliveryDescription).
     pub fn builder() -> crate::model::log_delivery_description::Builder {
         crate::model::log_delivery_description::Builder::default()
     }
@@ -2095,10 +2136,13 @@ impl LogDeliveryDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkerLogDeliveryDescription {
     /// <p>Details about delivering logs to Amazon CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub cloud_watch_logs: std::option::Option<crate::model::CloudWatchLogsLogDeliveryDescription>,
     /// <p>Details about delivering logs to Amazon Kinesis Data Firehose.</p>
+    #[doc(hidden)]
     pub firehose: std::option::Option<crate::model::FirehoseLogDeliveryDescription>,
     /// <p>Details about delivering logs to Amazon S3.</p>
+    #[doc(hidden)]
     pub s3: std::option::Option<crate::model::S3LogDeliveryDescription>,
 }
 impl WorkerLogDeliveryDescription {
@@ -2126,11 +2170,10 @@ impl std::fmt::Debug for WorkerLogDeliveryDescription {
         formatter.finish()
     }
 }
-/// See [`WorkerLogDeliveryDescription`](crate::model::WorkerLogDeliveryDescription)
+/// See [`WorkerLogDeliveryDescription`](crate::model::WorkerLogDeliveryDescription).
 pub mod worker_log_delivery_description {
 
-    /// A builder for [`WorkerLogDeliveryDescription`](crate::model::WorkerLogDeliveryDescription)
-    #[non_exhaustive]
+    /// A builder for [`WorkerLogDeliveryDescription`](crate::model::WorkerLogDeliveryDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloud_watch_logs:
@@ -2181,7 +2224,7 @@ pub mod worker_log_delivery_description {
             self.s3 = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkerLogDeliveryDescription`](crate::model::WorkerLogDeliveryDescription)
+        /// Consumes the builder and constructs a [`WorkerLogDeliveryDescription`](crate::model::WorkerLogDeliveryDescription).
         pub fn build(self) -> crate::model::WorkerLogDeliveryDescription {
             crate::model::WorkerLogDeliveryDescription {
                 cloud_watch_logs: self.cloud_watch_logs,
@@ -2192,7 +2235,7 @@ pub mod worker_log_delivery_description {
     }
 }
 impl WorkerLogDeliveryDescription {
-    /// Creates a new builder-style object to manufacture [`WorkerLogDeliveryDescription`](crate::model::WorkerLogDeliveryDescription)
+    /// Creates a new builder-style object to manufacture [`WorkerLogDeliveryDescription`](crate::model::WorkerLogDeliveryDescription).
     pub fn builder() -> crate::model::worker_log_delivery_description::Builder {
         crate::model::worker_log_delivery_description::Builder::default()
     }
@@ -2203,10 +2246,13 @@ impl WorkerLogDeliveryDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3LogDeliveryDescription {
     /// <p>The name of the S3 bucket that is the destination for log delivery.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>Specifies whether connector logs get sent to the specified Amazon S3 destination.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The S3 prefix that is the destination for log delivery.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl S3LogDeliveryDescription {
@@ -2232,11 +2278,10 @@ impl std::fmt::Debug for S3LogDeliveryDescription {
         formatter.finish()
     }
 }
-/// See [`S3LogDeliveryDescription`](crate::model::S3LogDeliveryDescription)
+/// See [`S3LogDeliveryDescription`](crate::model::S3LogDeliveryDescription).
 pub mod s3_log_delivery_description {
 
-    /// A builder for [`S3LogDeliveryDescription`](crate::model::S3LogDeliveryDescription)
-    #[non_exhaustive]
+    /// A builder for [`S3LogDeliveryDescription`](crate::model::S3LogDeliveryDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -2274,7 +2319,7 @@ pub mod s3_log_delivery_description {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3LogDeliveryDescription`](crate::model::S3LogDeliveryDescription)
+        /// Consumes the builder and constructs a [`S3LogDeliveryDescription`](crate::model::S3LogDeliveryDescription).
         pub fn build(self) -> crate::model::S3LogDeliveryDescription {
             crate::model::S3LogDeliveryDescription {
                 bucket: self.bucket,
@@ -2285,7 +2330,7 @@ pub mod s3_log_delivery_description {
     }
 }
 impl S3LogDeliveryDescription {
-    /// Creates a new builder-style object to manufacture [`S3LogDeliveryDescription`](crate::model::S3LogDeliveryDescription)
+    /// Creates a new builder-style object to manufacture [`S3LogDeliveryDescription`](crate::model::S3LogDeliveryDescription).
     pub fn builder() -> crate::model::s3_log_delivery_description::Builder {
         crate::model::s3_log_delivery_description::Builder::default()
     }
@@ -2296,8 +2341,10 @@ impl S3LogDeliveryDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FirehoseLogDeliveryDescription {
     /// <p>The name of the Kinesis Data Firehose delivery stream that is the destination for log delivery.</p>
+    #[doc(hidden)]
     pub delivery_stream: std::option::Option<std::string::String>,
     /// <p>Specifies whether connector logs get delivered to Amazon Kinesis Data Firehose.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl FirehoseLogDeliveryDescription {
@@ -2318,11 +2365,10 @@ impl std::fmt::Debug for FirehoseLogDeliveryDescription {
         formatter.finish()
     }
 }
-/// See [`FirehoseLogDeliveryDescription`](crate::model::FirehoseLogDeliveryDescription)
+/// See [`FirehoseLogDeliveryDescription`](crate::model::FirehoseLogDeliveryDescription).
 pub mod firehose_log_delivery_description {
 
-    /// A builder for [`FirehoseLogDeliveryDescription`](crate::model::FirehoseLogDeliveryDescription)
-    #[non_exhaustive]
+    /// A builder for [`FirehoseLogDeliveryDescription`](crate::model::FirehoseLogDeliveryDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_stream: std::option::Option<std::string::String>,
@@ -2352,7 +2398,7 @@ pub mod firehose_log_delivery_description {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`FirehoseLogDeliveryDescription`](crate::model::FirehoseLogDeliveryDescription)
+        /// Consumes the builder and constructs a [`FirehoseLogDeliveryDescription`](crate::model::FirehoseLogDeliveryDescription).
         pub fn build(self) -> crate::model::FirehoseLogDeliveryDescription {
             crate::model::FirehoseLogDeliveryDescription {
                 delivery_stream: self.delivery_stream,
@@ -2362,7 +2408,7 @@ pub mod firehose_log_delivery_description {
     }
 }
 impl FirehoseLogDeliveryDescription {
-    /// Creates a new builder-style object to manufacture [`FirehoseLogDeliveryDescription`](crate::model::FirehoseLogDeliveryDescription)
+    /// Creates a new builder-style object to manufacture [`FirehoseLogDeliveryDescription`](crate::model::FirehoseLogDeliveryDescription).
     pub fn builder() -> crate::model::firehose_log_delivery_description::Builder {
         crate::model::firehose_log_delivery_description::Builder::default()
     }
@@ -2373,8 +2419,10 @@ impl FirehoseLogDeliveryDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchLogsLogDeliveryDescription {
     /// <p>Whether log delivery to Amazon CloudWatch Logs is enabled.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The name of the CloudWatch log group that is the destination for log delivery.</p>
+    #[doc(hidden)]
     pub log_group: std::option::Option<std::string::String>,
 }
 impl CloudWatchLogsLogDeliveryDescription {
@@ -2395,11 +2443,10 @@ impl std::fmt::Debug for CloudWatchLogsLogDeliveryDescription {
         formatter.finish()
     }
 }
-/// See [`CloudWatchLogsLogDeliveryDescription`](crate::model::CloudWatchLogsLogDeliveryDescription)
+/// See [`CloudWatchLogsLogDeliveryDescription`](crate::model::CloudWatchLogsLogDeliveryDescription).
 pub mod cloud_watch_logs_log_delivery_description {
 
-    /// A builder for [`CloudWatchLogsLogDeliveryDescription`](crate::model::CloudWatchLogsLogDeliveryDescription)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchLogsLogDeliveryDescription`](crate::model::CloudWatchLogsLogDeliveryDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -2426,7 +2473,7 @@ pub mod cloud_watch_logs_log_delivery_description {
             self.log_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchLogsLogDeliveryDescription`](crate::model::CloudWatchLogsLogDeliveryDescription)
+        /// Consumes the builder and constructs a [`CloudWatchLogsLogDeliveryDescription`](crate::model::CloudWatchLogsLogDeliveryDescription).
         pub fn build(self) -> crate::model::CloudWatchLogsLogDeliveryDescription {
             crate::model::CloudWatchLogsLogDeliveryDescription {
                 enabled: self.enabled.unwrap_or_default(),
@@ -2436,7 +2483,7 @@ pub mod cloud_watch_logs_log_delivery_description {
     }
 }
 impl CloudWatchLogsLogDeliveryDescription {
-    /// Creates a new builder-style object to manufacture [`CloudWatchLogsLogDeliveryDescription`](crate::model::CloudWatchLogsLogDeliveryDescription)
+    /// Creates a new builder-style object to manufacture [`CloudWatchLogsLogDeliveryDescription`](crate::model::CloudWatchLogsLogDeliveryDescription).
     pub fn builder() -> crate::model::cloud_watch_logs_log_delivery_description::Builder {
         crate::model::cloud_watch_logs_log_delivery_description::Builder::default()
     }
@@ -2447,6 +2494,7 @@ impl CloudWatchLogsLogDeliveryDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KafkaClusterEncryptionInTransitDescription {
     /// <p>The type of encryption in transit to the Apache Kafka cluster.</p>
+    #[doc(hidden)]
     pub encryption_type: std::option::Option<crate::model::KafkaClusterEncryptionInTransitType>,
 }
 impl KafkaClusterEncryptionInTransitDescription {
@@ -2464,11 +2512,10 @@ impl std::fmt::Debug for KafkaClusterEncryptionInTransitDescription {
         formatter.finish()
     }
 }
-/// See [`KafkaClusterEncryptionInTransitDescription`](crate::model::KafkaClusterEncryptionInTransitDescription)
+/// See [`KafkaClusterEncryptionInTransitDescription`](crate::model::KafkaClusterEncryptionInTransitDescription).
 pub mod kafka_cluster_encryption_in_transit_description {
 
-    /// A builder for [`KafkaClusterEncryptionInTransitDescription`](crate::model::KafkaClusterEncryptionInTransitDescription)
-    #[non_exhaustive]
+    /// A builder for [`KafkaClusterEncryptionInTransitDescription`](crate::model::KafkaClusterEncryptionInTransitDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encryption_type:
@@ -2491,7 +2538,7 @@ pub mod kafka_cluster_encryption_in_transit_description {
             self.encryption_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`KafkaClusterEncryptionInTransitDescription`](crate::model::KafkaClusterEncryptionInTransitDescription)
+        /// Consumes the builder and constructs a [`KafkaClusterEncryptionInTransitDescription`](crate::model::KafkaClusterEncryptionInTransitDescription).
         pub fn build(self) -> crate::model::KafkaClusterEncryptionInTransitDescription {
             crate::model::KafkaClusterEncryptionInTransitDescription {
                 encryption_type: self.encryption_type,
@@ -2500,7 +2547,7 @@ pub mod kafka_cluster_encryption_in_transit_description {
     }
 }
 impl KafkaClusterEncryptionInTransitDescription {
-    /// Creates a new builder-style object to manufacture [`KafkaClusterEncryptionInTransitDescription`](crate::model::KafkaClusterEncryptionInTransitDescription)
+    /// Creates a new builder-style object to manufacture [`KafkaClusterEncryptionInTransitDescription`](crate::model::KafkaClusterEncryptionInTransitDescription).
     pub fn builder() -> crate::model::kafka_cluster_encryption_in_transit_description::Builder {
         crate::model::kafka_cluster_encryption_in_transit_description::Builder::default()
     }
@@ -2566,6 +2613,7 @@ impl AsRef<str> for KafkaClusterEncryptionInTransitType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KafkaClusterClientAuthenticationDescription {
     /// <p>The type of client authentication used to connect to the Apache Kafka cluster. Value NONE means that no client authentication is used.</p>
+    #[doc(hidden)]
     pub authentication_type:
         std::option::Option<crate::model::KafkaClusterClientAuthenticationType>,
 }
@@ -2584,11 +2632,10 @@ impl std::fmt::Debug for KafkaClusterClientAuthenticationDescription {
         formatter.finish()
     }
 }
-/// See [`KafkaClusterClientAuthenticationDescription`](crate::model::KafkaClusterClientAuthenticationDescription)
+/// See [`KafkaClusterClientAuthenticationDescription`](crate::model::KafkaClusterClientAuthenticationDescription).
 pub mod kafka_cluster_client_authentication_description {
 
-    /// A builder for [`KafkaClusterClientAuthenticationDescription`](crate::model::KafkaClusterClientAuthenticationDescription)
-    #[non_exhaustive]
+    /// A builder for [`KafkaClusterClientAuthenticationDescription`](crate::model::KafkaClusterClientAuthenticationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) authentication_type:
@@ -2611,7 +2658,7 @@ pub mod kafka_cluster_client_authentication_description {
             self.authentication_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`KafkaClusterClientAuthenticationDescription`](crate::model::KafkaClusterClientAuthenticationDescription)
+        /// Consumes the builder and constructs a [`KafkaClusterClientAuthenticationDescription`](crate::model::KafkaClusterClientAuthenticationDescription).
         pub fn build(self) -> crate::model::KafkaClusterClientAuthenticationDescription {
             crate::model::KafkaClusterClientAuthenticationDescription {
                 authentication_type: self.authentication_type,
@@ -2620,7 +2667,7 @@ pub mod kafka_cluster_client_authentication_description {
     }
 }
 impl KafkaClusterClientAuthenticationDescription {
-    /// Creates a new builder-style object to manufacture [`KafkaClusterClientAuthenticationDescription`](crate::model::KafkaClusterClientAuthenticationDescription)
+    /// Creates a new builder-style object to manufacture [`KafkaClusterClientAuthenticationDescription`](crate::model::KafkaClusterClientAuthenticationDescription).
     pub fn builder() -> crate::model::kafka_cluster_client_authentication_description::Builder {
         crate::model::kafka_cluster_client_authentication_description::Builder::default()
     }
@@ -2686,6 +2733,7 @@ impl AsRef<str> for KafkaClusterClientAuthenticationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KafkaClusterDescription {
     /// <p>The Apache Kafka cluster to which the connector is connected.</p>
+    #[doc(hidden)]
     pub apache_kafka_cluster: std::option::Option<crate::model::ApacheKafkaClusterDescription>,
 }
 impl KafkaClusterDescription {
@@ -2703,11 +2751,10 @@ impl std::fmt::Debug for KafkaClusterDescription {
         formatter.finish()
     }
 }
-/// See [`KafkaClusterDescription`](crate::model::KafkaClusterDescription)
+/// See [`KafkaClusterDescription`](crate::model::KafkaClusterDescription).
 pub mod kafka_cluster_description {
 
-    /// A builder for [`KafkaClusterDescription`](crate::model::KafkaClusterDescription)
-    #[non_exhaustive]
+    /// A builder for [`KafkaClusterDescription`](crate::model::KafkaClusterDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) apache_kafka_cluster:
@@ -2730,7 +2777,7 @@ pub mod kafka_cluster_description {
             self.apache_kafka_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`KafkaClusterDescription`](crate::model::KafkaClusterDescription)
+        /// Consumes the builder and constructs a [`KafkaClusterDescription`](crate::model::KafkaClusterDescription).
         pub fn build(self) -> crate::model::KafkaClusterDescription {
             crate::model::KafkaClusterDescription {
                 apache_kafka_cluster: self.apache_kafka_cluster,
@@ -2739,7 +2786,7 @@ pub mod kafka_cluster_description {
     }
 }
 impl KafkaClusterDescription {
-    /// Creates a new builder-style object to manufacture [`KafkaClusterDescription`](crate::model::KafkaClusterDescription)
+    /// Creates a new builder-style object to manufacture [`KafkaClusterDescription`](crate::model::KafkaClusterDescription).
     pub fn builder() -> crate::model::kafka_cluster_description::Builder {
         crate::model::kafka_cluster_description::Builder::default()
     }
@@ -2750,8 +2797,10 @@ impl KafkaClusterDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApacheKafkaClusterDescription {
     /// <p>The bootstrap servers of the cluster.</p>
+    #[doc(hidden)]
     pub bootstrap_servers: std::option::Option<std::string::String>,
     /// <p>Details of an Amazon VPC which has network connectivity to the Apache Kafka cluster.</p>
+    #[doc(hidden)]
     pub vpc: std::option::Option<crate::model::VpcDescription>,
 }
 impl ApacheKafkaClusterDescription {
@@ -2772,11 +2821,10 @@ impl std::fmt::Debug for ApacheKafkaClusterDescription {
         formatter.finish()
     }
 }
-/// See [`ApacheKafkaClusterDescription`](crate::model::ApacheKafkaClusterDescription)
+/// See [`ApacheKafkaClusterDescription`](crate::model::ApacheKafkaClusterDescription).
 pub mod apache_kafka_cluster_description {
 
-    /// A builder for [`ApacheKafkaClusterDescription`](crate::model::ApacheKafkaClusterDescription)
-    #[non_exhaustive]
+    /// A builder for [`ApacheKafkaClusterDescription`](crate::model::ApacheKafkaClusterDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bootstrap_servers: std::option::Option<std::string::String>,
@@ -2806,7 +2854,7 @@ pub mod apache_kafka_cluster_description {
             self.vpc = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApacheKafkaClusterDescription`](crate::model::ApacheKafkaClusterDescription)
+        /// Consumes the builder and constructs a [`ApacheKafkaClusterDescription`](crate::model::ApacheKafkaClusterDescription).
         pub fn build(self) -> crate::model::ApacheKafkaClusterDescription {
             crate::model::ApacheKafkaClusterDescription {
                 bootstrap_servers: self.bootstrap_servers,
@@ -2816,7 +2864,7 @@ pub mod apache_kafka_cluster_description {
     }
 }
 impl ApacheKafkaClusterDescription {
-    /// Creates a new builder-style object to manufacture [`ApacheKafkaClusterDescription`](crate::model::ApacheKafkaClusterDescription)
+    /// Creates a new builder-style object to manufacture [`ApacheKafkaClusterDescription`](crate::model::ApacheKafkaClusterDescription).
     pub fn builder() -> crate::model::apache_kafka_cluster_description::Builder {
         crate::model::apache_kafka_cluster_description::Builder::default()
     }
@@ -2827,8 +2875,10 @@ impl ApacheKafkaClusterDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcDescription {
     /// <p>The security groups for the connector.</p>
+    #[doc(hidden)]
     pub security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The subnets for the connector.</p>
+    #[doc(hidden)]
     pub subnets: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VpcDescription {
@@ -2849,11 +2899,10 @@ impl std::fmt::Debug for VpcDescription {
         formatter.finish()
     }
 }
-/// See [`VpcDescription`](crate::model::VpcDescription)
+/// See [`VpcDescription`](crate::model::VpcDescription).
 pub mod vpc_description {
 
-    /// A builder for [`VpcDescription`](crate::model::VpcDescription)
-    #[non_exhaustive]
+    /// A builder for [`VpcDescription`](crate::model::VpcDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2898,7 +2947,7 @@ pub mod vpc_description {
             self.subnets = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcDescription`](crate::model::VpcDescription)
+        /// Consumes the builder and constructs a [`VpcDescription`](crate::model::VpcDescription).
         pub fn build(self) -> crate::model::VpcDescription {
             crate::model::VpcDescription {
                 security_groups: self.security_groups,
@@ -2908,7 +2957,7 @@ pub mod vpc_description {
     }
 }
 impl VpcDescription {
-    /// Creates a new builder-style object to manufacture [`VpcDescription`](crate::model::VpcDescription)
+    /// Creates a new builder-style object to manufacture [`VpcDescription`](crate::model::VpcDescription).
     pub fn builder() -> crate::model::vpc_description::Builder {
         crate::model::vpc_description::Builder::default()
     }
@@ -2919,8 +2968,10 @@ impl VpcDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CapacityDescription {
     /// <p>Describes the connector's auto scaling capacity.</p>
+    #[doc(hidden)]
     pub auto_scaling: std::option::Option<crate::model::AutoScalingDescription>,
     /// <p>Describes a connector's provisioned capacity.</p>
+    #[doc(hidden)]
     pub provisioned_capacity: std::option::Option<crate::model::ProvisionedCapacityDescription>,
 }
 impl CapacityDescription {
@@ -2943,11 +2994,10 @@ impl std::fmt::Debug for CapacityDescription {
         formatter.finish()
     }
 }
-/// See [`CapacityDescription`](crate::model::CapacityDescription)
+/// See [`CapacityDescription`](crate::model::CapacityDescription).
 pub mod capacity_description {
 
-    /// A builder for [`CapacityDescription`](crate::model::CapacityDescription)
-    #[non_exhaustive]
+    /// A builder for [`CapacityDescription`](crate::model::CapacityDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_scaling: std::option::Option<crate::model::AutoScalingDescription>,
@@ -2984,7 +3034,7 @@ pub mod capacity_description {
             self.provisioned_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`CapacityDescription`](crate::model::CapacityDescription)
+        /// Consumes the builder and constructs a [`CapacityDescription`](crate::model::CapacityDescription).
         pub fn build(self) -> crate::model::CapacityDescription {
             crate::model::CapacityDescription {
                 auto_scaling: self.auto_scaling,
@@ -2994,7 +3044,7 @@ pub mod capacity_description {
     }
 }
 impl CapacityDescription {
-    /// Creates a new builder-style object to manufacture [`CapacityDescription`](crate::model::CapacityDescription)
+    /// Creates a new builder-style object to manufacture [`CapacityDescription`](crate::model::CapacityDescription).
     pub fn builder() -> crate::model::capacity_description::Builder {
         crate::model::capacity_description::Builder::default()
     }
@@ -3005,8 +3055,10 @@ impl CapacityDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProvisionedCapacityDescription {
     /// <p>The number of microcontroller units (MCUs) allocated to each connector worker. The valid values are 1,2,4,8.</p>
+    #[doc(hidden)]
     pub mcu_count: i32,
     /// <p>The number of workers that are allocated to the connector.</p>
+    #[doc(hidden)]
     pub worker_count: i32,
 }
 impl ProvisionedCapacityDescription {
@@ -3027,11 +3079,10 @@ impl std::fmt::Debug for ProvisionedCapacityDescription {
         formatter.finish()
     }
 }
-/// See [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription)
+/// See [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription).
 pub mod provisioned_capacity_description {
 
-    /// A builder for [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription)
-    #[non_exhaustive]
+    /// A builder for [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mcu_count: std::option::Option<i32>,
@@ -3058,7 +3109,7 @@ pub mod provisioned_capacity_description {
             self.worker_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription)
+        /// Consumes the builder and constructs a [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription).
         pub fn build(self) -> crate::model::ProvisionedCapacityDescription {
             crate::model::ProvisionedCapacityDescription {
                 mcu_count: self.mcu_count.unwrap_or_default(),
@@ -3068,7 +3119,7 @@ pub mod provisioned_capacity_description {
     }
 }
 impl ProvisionedCapacityDescription {
-    /// Creates a new builder-style object to manufacture [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription)
+    /// Creates a new builder-style object to manufacture [`ProvisionedCapacityDescription`](crate::model::ProvisionedCapacityDescription).
     pub fn builder() -> crate::model::provisioned_capacity_description::Builder {
         crate::model::provisioned_capacity_description::Builder::default()
     }
@@ -3079,14 +3130,19 @@ impl ProvisionedCapacityDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoScalingDescription {
     /// <p>The maximum number of workers allocated to the connector.</p>
+    #[doc(hidden)]
     pub max_worker_count: i32,
     /// <p>The number of microcontroller units (MCUs) allocated to each connector worker. The valid values are 1,2,4,8.</p>
+    #[doc(hidden)]
     pub mcu_count: i32,
     /// <p>The minimum number of workers allocated to the connector.</p>
+    #[doc(hidden)]
     pub min_worker_count: i32,
     /// <p>The sacle-in policy for the connector.</p>
+    #[doc(hidden)]
     pub scale_in_policy: std::option::Option<crate::model::ScaleInPolicyDescription>,
     /// <p>The sacle-out policy for the connector.&gt;</p>
+    #[doc(hidden)]
     pub scale_out_policy: std::option::Option<crate::model::ScaleOutPolicyDescription>,
 }
 impl AutoScalingDescription {
@@ -3124,11 +3180,10 @@ impl std::fmt::Debug for AutoScalingDescription {
         formatter.finish()
     }
 }
-/// See [`AutoScalingDescription`](crate::model::AutoScalingDescription)
+/// See [`AutoScalingDescription`](crate::model::AutoScalingDescription).
 pub mod auto_scaling_description {
 
-    /// A builder for [`AutoScalingDescription`](crate::model::AutoScalingDescription)
-    #[non_exhaustive]
+    /// A builder for [`AutoScalingDescription`](crate::model::AutoScalingDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_worker_count: std::option::Option<i32>,
@@ -3194,7 +3249,7 @@ pub mod auto_scaling_description {
             self.scale_out_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoScalingDescription`](crate::model::AutoScalingDescription)
+        /// Consumes the builder and constructs a [`AutoScalingDescription`](crate::model::AutoScalingDescription).
         pub fn build(self) -> crate::model::AutoScalingDescription {
             crate::model::AutoScalingDescription {
                 max_worker_count: self.max_worker_count.unwrap_or_default(),
@@ -3207,7 +3262,7 @@ pub mod auto_scaling_description {
     }
 }
 impl AutoScalingDescription {
-    /// Creates a new builder-style object to manufacture [`AutoScalingDescription`](crate::model::AutoScalingDescription)
+    /// Creates a new builder-style object to manufacture [`AutoScalingDescription`](crate::model::AutoScalingDescription).
     pub fn builder() -> crate::model::auto_scaling_description::Builder {
         crate::model::auto_scaling_description::Builder::default()
     }
@@ -3218,6 +3273,7 @@ impl AutoScalingDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScaleOutPolicyDescription {
     /// <p>The CPU utilization percentage threshold at which you want connector scale out to be triggered.</p>
+    #[doc(hidden)]
     pub cpu_utilization_percentage: i32,
 }
 impl ScaleOutPolicyDescription {
@@ -3236,11 +3292,10 @@ impl std::fmt::Debug for ScaleOutPolicyDescription {
         formatter.finish()
     }
 }
-/// See [`ScaleOutPolicyDescription`](crate::model::ScaleOutPolicyDescription)
+/// See [`ScaleOutPolicyDescription`](crate::model::ScaleOutPolicyDescription).
 pub mod scale_out_policy_description {
 
-    /// A builder for [`ScaleOutPolicyDescription`](crate::model::ScaleOutPolicyDescription)
-    #[non_exhaustive]
+    /// A builder for [`ScaleOutPolicyDescription`](crate::model::ScaleOutPolicyDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cpu_utilization_percentage: std::option::Option<i32>,
@@ -3256,7 +3311,7 @@ pub mod scale_out_policy_description {
             self.cpu_utilization_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScaleOutPolicyDescription`](crate::model::ScaleOutPolicyDescription)
+        /// Consumes the builder and constructs a [`ScaleOutPolicyDescription`](crate::model::ScaleOutPolicyDescription).
         pub fn build(self) -> crate::model::ScaleOutPolicyDescription {
             crate::model::ScaleOutPolicyDescription {
                 cpu_utilization_percentage: self.cpu_utilization_percentage.unwrap_or_default(),
@@ -3265,7 +3320,7 @@ pub mod scale_out_policy_description {
     }
 }
 impl ScaleOutPolicyDescription {
-    /// Creates a new builder-style object to manufacture [`ScaleOutPolicyDescription`](crate::model::ScaleOutPolicyDescription)
+    /// Creates a new builder-style object to manufacture [`ScaleOutPolicyDescription`](crate::model::ScaleOutPolicyDescription).
     pub fn builder() -> crate::model::scale_out_policy_description::Builder {
         crate::model::scale_out_policy_description::Builder::default()
     }
@@ -3276,6 +3331,7 @@ impl ScaleOutPolicyDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScaleInPolicyDescription {
     /// <p>Specifies the CPU utilization percentage threshold at which you want connector scale in to be triggered.</p>
+    #[doc(hidden)]
     pub cpu_utilization_percentage: i32,
 }
 impl ScaleInPolicyDescription {
@@ -3294,11 +3350,10 @@ impl std::fmt::Debug for ScaleInPolicyDescription {
         formatter.finish()
     }
 }
-/// See [`ScaleInPolicyDescription`](crate::model::ScaleInPolicyDescription)
+/// See [`ScaleInPolicyDescription`](crate::model::ScaleInPolicyDescription).
 pub mod scale_in_policy_description {
 
-    /// A builder for [`ScaleInPolicyDescription`](crate::model::ScaleInPolicyDescription)
-    #[non_exhaustive]
+    /// A builder for [`ScaleInPolicyDescription`](crate::model::ScaleInPolicyDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cpu_utilization_percentage: std::option::Option<i32>,
@@ -3314,7 +3369,7 @@ pub mod scale_in_policy_description {
             self.cpu_utilization_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScaleInPolicyDescription`](crate::model::ScaleInPolicyDescription)
+        /// Consumes the builder and constructs a [`ScaleInPolicyDescription`](crate::model::ScaleInPolicyDescription).
         pub fn build(self) -> crate::model::ScaleInPolicyDescription {
             crate::model::ScaleInPolicyDescription {
                 cpu_utilization_percentage: self.cpu_utilization_percentage.unwrap_or_default(),
@@ -3323,7 +3378,7 @@ pub mod scale_in_policy_description {
     }
 }
 impl ScaleInPolicyDescription {
-    /// Creates a new builder-style object to manufacture [`ScaleInPolicyDescription`](crate::model::ScaleInPolicyDescription)
+    /// Creates a new builder-style object to manufacture [`ScaleInPolicyDescription`](crate::model::ScaleInPolicyDescription).
     pub fn builder() -> crate::model::scale_in_policy_description::Builder {
         crate::model::scale_in_policy_description::Builder::default()
     }
@@ -3334,12 +3389,16 @@ impl ScaleInPolicyDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkerConfigurationRevisionDescription {
     /// <p>The time that the worker configuration was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the worker configuration revision.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Base64 encoded contents of the connect-distributed.properties file.</p>
+    #[doc(hidden)]
     pub properties_file_content: std::option::Option<std::string::String>,
     /// <p>The description of a revision of the worker configuration.</p>
+    #[doc(hidden)]
     pub revision: i64,
 }
 impl WorkerConfigurationRevisionDescription {
@@ -3373,11 +3432,10 @@ impl std::fmt::Debug for WorkerConfigurationRevisionDescription {
         formatter.finish()
     }
 }
-/// See [`WorkerConfigurationRevisionDescription`](crate::model::WorkerConfigurationRevisionDescription)
+/// See [`WorkerConfigurationRevisionDescription`](crate::model::WorkerConfigurationRevisionDescription).
 pub mod worker_configuration_revision_description {
 
-    /// A builder for [`WorkerConfigurationRevisionDescription`](crate::model::WorkerConfigurationRevisionDescription)
-    #[non_exhaustive]
+    /// A builder for [`WorkerConfigurationRevisionDescription`](crate::model::WorkerConfigurationRevisionDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -3432,7 +3490,7 @@ pub mod worker_configuration_revision_description {
             self.revision = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkerConfigurationRevisionDescription`](crate::model::WorkerConfigurationRevisionDescription)
+        /// Consumes the builder and constructs a [`WorkerConfigurationRevisionDescription`](crate::model::WorkerConfigurationRevisionDescription).
         pub fn build(self) -> crate::model::WorkerConfigurationRevisionDescription {
             crate::model::WorkerConfigurationRevisionDescription {
                 creation_time: self.creation_time,
@@ -3444,7 +3502,7 @@ pub mod worker_configuration_revision_description {
     }
 }
 impl WorkerConfigurationRevisionDescription {
-    /// Creates a new builder-style object to manufacture [`WorkerConfigurationRevisionDescription`](crate::model::WorkerConfigurationRevisionDescription)
+    /// Creates a new builder-style object to manufacture [`WorkerConfigurationRevisionDescription`](crate::model::WorkerConfigurationRevisionDescription).
     pub fn builder() -> crate::model::worker_configuration_revision_description::Builder {
         crate::model::worker_configuration_revision_description::Builder::default()
     }
@@ -3455,8 +3513,10 @@ impl WorkerConfigurationRevisionDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StateDescription {
     /// <p>A code that describes the state of a resource.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>A message that describes the state of a resource.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl StateDescription {
@@ -3477,11 +3537,10 @@ impl std::fmt::Debug for StateDescription {
         formatter.finish()
     }
 }
-/// See [`StateDescription`](crate::model::StateDescription)
+/// See [`StateDescription`](crate::model::StateDescription).
 pub mod state_description {
 
-    /// A builder for [`StateDescription`](crate::model::StateDescription)
-    #[non_exhaustive]
+    /// A builder for [`StateDescription`](crate::model::StateDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<std::string::String>,
@@ -3508,7 +3567,7 @@ pub mod state_description {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`StateDescription`](crate::model::StateDescription)
+        /// Consumes the builder and constructs a [`StateDescription`](crate::model::StateDescription).
         pub fn build(self) -> crate::model::StateDescription {
             crate::model::StateDescription {
                 code: self.code,
@@ -3518,7 +3577,7 @@ pub mod state_description {
     }
 }
 impl StateDescription {
-    /// Creates a new builder-style object to manufacture [`StateDescription`](crate::model::StateDescription)
+    /// Creates a new builder-style object to manufacture [`StateDescription`](crate::model::StateDescription).
     pub fn builder() -> crate::model::state_description::Builder {
         crate::model::state_description::Builder::default()
     }
@@ -3529,6 +3588,7 @@ impl StateDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomPluginLocation {
     /// <p>The S3 bucket Amazon Resource Name (ARN), file key, and object version of the plugin file stored in Amazon S3.</p>
+    #[doc(hidden)]
     pub s3_location: std::option::Option<crate::model::S3Location>,
 }
 impl CustomPluginLocation {
@@ -3544,11 +3604,10 @@ impl std::fmt::Debug for CustomPluginLocation {
         formatter.finish()
     }
 }
-/// See [`CustomPluginLocation`](crate::model::CustomPluginLocation)
+/// See [`CustomPluginLocation`](crate::model::CustomPluginLocation).
 pub mod custom_plugin_location {
 
-    /// A builder for [`CustomPluginLocation`](crate::model::CustomPluginLocation)
-    #[non_exhaustive]
+    /// A builder for [`CustomPluginLocation`](crate::model::CustomPluginLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_location: std::option::Option<crate::model::S3Location>,
@@ -3567,7 +3626,7 @@ pub mod custom_plugin_location {
             self.s3_location = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomPluginLocation`](crate::model::CustomPluginLocation)
+        /// Consumes the builder and constructs a [`CustomPluginLocation`](crate::model::CustomPluginLocation).
         pub fn build(self) -> crate::model::CustomPluginLocation {
             crate::model::CustomPluginLocation {
                 s3_location: self.s3_location,
@@ -3576,7 +3635,7 @@ pub mod custom_plugin_location {
     }
 }
 impl CustomPluginLocation {
-    /// Creates a new builder-style object to manufacture [`CustomPluginLocation`](crate::model::CustomPluginLocation)
+    /// Creates a new builder-style object to manufacture [`CustomPluginLocation`](crate::model::CustomPluginLocation).
     pub fn builder() -> crate::model::custom_plugin_location::Builder {
         crate::model::custom_plugin_location::Builder::default()
     }
@@ -3587,10 +3646,13 @@ impl CustomPluginLocation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3Location {
     /// <p>The Amazon Resource Name (ARN) of an S3 bucket.</p>
+    #[doc(hidden)]
     pub bucket_arn: std::option::Option<std::string::String>,
     /// <p>The file key for an object in an S3 bucket.</p>
+    #[doc(hidden)]
     pub file_key: std::option::Option<std::string::String>,
     /// <p>The version of an object in an S3 bucket.</p>
+    #[doc(hidden)]
     pub object_version: std::option::Option<std::string::String>,
 }
 impl S3Location {
@@ -3616,11 +3678,10 @@ impl std::fmt::Debug for S3Location {
         formatter.finish()
     }
 }
-/// See [`S3Location`](crate::model::S3Location)
+/// See [`S3Location`](crate::model::S3Location).
 pub mod s3_location {
 
-    /// A builder for [`S3Location`](crate::model::S3Location)
-    #[non_exhaustive]
+    /// A builder for [`S3Location`](crate::model::S3Location).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_arn: std::option::Option<std::string::String>,
@@ -3661,7 +3722,7 @@ pub mod s3_location {
             self.object_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location)
+        /// Consumes the builder and constructs a [`S3Location`](crate::model::S3Location).
         pub fn build(self) -> crate::model::S3Location {
             crate::model::S3Location {
                 bucket_arn: self.bucket_arn,
@@ -3672,7 +3733,7 @@ pub mod s3_location {
     }
 }
 impl S3Location {
-    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location)
+    /// Creates a new builder-style object to manufacture [`S3Location`](crate::model::S3Location).
     pub fn builder() -> crate::model::s3_location::Builder {
         crate::model::s3_location::Builder::default()
     }
@@ -3683,8 +3744,10 @@ impl S3Location {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkerConfiguration {
     /// <p>The revision of the worker configuration.</p>
+    #[doc(hidden)]
     pub revision: i64,
     /// <p>The Amazon Resource Name (ARN) of the worker configuration.</p>
+    #[doc(hidden)]
     pub worker_configuration_arn: std::option::Option<std::string::String>,
 }
 impl WorkerConfiguration {
@@ -3705,11 +3768,10 @@ impl std::fmt::Debug for WorkerConfiguration {
         formatter.finish()
     }
 }
-/// See [`WorkerConfiguration`](crate::model::WorkerConfiguration)
+/// See [`WorkerConfiguration`](crate::model::WorkerConfiguration).
 pub mod worker_configuration {
 
-    /// A builder for [`WorkerConfiguration`](crate::model::WorkerConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`WorkerConfiguration`](crate::model::WorkerConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) revision: std::option::Option<i64>,
@@ -3739,7 +3801,7 @@ pub mod worker_configuration {
             self.worker_configuration_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkerConfiguration`](crate::model::WorkerConfiguration)
+        /// Consumes the builder and constructs a [`WorkerConfiguration`](crate::model::WorkerConfiguration).
         pub fn build(self) -> crate::model::WorkerConfiguration {
             crate::model::WorkerConfiguration {
                 revision: self.revision.unwrap_or_default(),
@@ -3749,7 +3811,7 @@ pub mod worker_configuration {
     }
 }
 impl WorkerConfiguration {
-    /// Creates a new builder-style object to manufacture [`WorkerConfiguration`](crate::model::WorkerConfiguration)
+    /// Creates a new builder-style object to manufacture [`WorkerConfiguration`](crate::model::WorkerConfiguration).
     pub fn builder() -> crate::model::worker_configuration::Builder {
         crate::model::worker_configuration::Builder::default()
     }
@@ -3760,6 +3822,7 @@ impl WorkerConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Plugin {
     /// <p>Details about a custom plugin.</p>
+    #[doc(hidden)]
     pub custom_plugin: std::option::Option<crate::model::CustomPlugin>,
 }
 impl Plugin {
@@ -3775,11 +3838,10 @@ impl std::fmt::Debug for Plugin {
         formatter.finish()
     }
 }
-/// See [`Plugin`](crate::model::Plugin)
+/// See [`Plugin`](crate::model::Plugin).
 pub mod plugin {
 
-    /// A builder for [`Plugin`](crate::model::Plugin)
-    #[non_exhaustive]
+    /// A builder for [`Plugin`](crate::model::Plugin).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_plugin: std::option::Option<crate::model::CustomPlugin>,
@@ -3798,7 +3860,7 @@ pub mod plugin {
             self.custom_plugin = input;
             self
         }
-        /// Consumes the builder and constructs a [`Plugin`](crate::model::Plugin)
+        /// Consumes the builder and constructs a [`Plugin`](crate::model::Plugin).
         pub fn build(self) -> crate::model::Plugin {
             crate::model::Plugin {
                 custom_plugin: self.custom_plugin,
@@ -3807,7 +3869,7 @@ pub mod plugin {
     }
 }
 impl Plugin {
-    /// Creates a new builder-style object to manufacture [`Plugin`](crate::model::Plugin)
+    /// Creates a new builder-style object to manufacture [`Plugin`](crate::model::Plugin).
     pub fn builder() -> crate::model::plugin::Builder {
         crate::model::plugin::Builder::default()
     }
@@ -3818,8 +3880,10 @@ impl Plugin {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomPlugin {
     /// <p>The Amazon Resource Name (ARN) of the custom plugin.</p>
+    #[doc(hidden)]
     pub custom_plugin_arn: std::option::Option<std::string::String>,
     /// <p>The revision of the custom plugin.</p>
+    #[doc(hidden)]
     pub revision: i64,
 }
 impl CustomPlugin {
@@ -3840,11 +3904,10 @@ impl std::fmt::Debug for CustomPlugin {
         formatter.finish()
     }
 }
-/// See [`CustomPlugin`](crate::model::CustomPlugin)
+/// See [`CustomPlugin`](crate::model::CustomPlugin).
 pub mod custom_plugin {
 
-    /// A builder for [`CustomPlugin`](crate::model::CustomPlugin)
-    #[non_exhaustive]
+    /// A builder for [`CustomPlugin`](crate::model::CustomPlugin).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_plugin_arn: std::option::Option<std::string::String>,
@@ -3874,7 +3937,7 @@ pub mod custom_plugin {
             self.revision = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomPlugin`](crate::model::CustomPlugin)
+        /// Consumes the builder and constructs a [`CustomPlugin`](crate::model::CustomPlugin).
         pub fn build(self) -> crate::model::CustomPlugin {
             crate::model::CustomPlugin {
                 custom_plugin_arn: self.custom_plugin_arn,
@@ -3884,7 +3947,7 @@ pub mod custom_plugin {
     }
 }
 impl CustomPlugin {
-    /// Creates a new builder-style object to manufacture [`CustomPlugin`](crate::model::CustomPlugin)
+    /// Creates a new builder-style object to manufacture [`CustomPlugin`](crate::model::CustomPlugin).
     pub fn builder() -> crate::model::custom_plugin::Builder {
         crate::model::custom_plugin::Builder::default()
     }
@@ -3895,6 +3958,7 @@ impl CustomPlugin {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LogDelivery {
     /// <p>The workers can send worker logs to different destination types. This configuration specifies the details of these destinations.</p>
+    #[doc(hidden)]
     pub worker_log_delivery: std::option::Option<crate::model::WorkerLogDelivery>,
 }
 impl LogDelivery {
@@ -3910,11 +3974,10 @@ impl std::fmt::Debug for LogDelivery {
         formatter.finish()
     }
 }
-/// See [`LogDelivery`](crate::model::LogDelivery)
+/// See [`LogDelivery`](crate::model::LogDelivery).
 pub mod log_delivery {
 
-    /// A builder for [`LogDelivery`](crate::model::LogDelivery)
-    #[non_exhaustive]
+    /// A builder for [`LogDelivery`](crate::model::LogDelivery).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) worker_log_delivery: std::option::Option<crate::model::WorkerLogDelivery>,
@@ -3933,7 +3996,7 @@ pub mod log_delivery {
             self.worker_log_delivery = input;
             self
         }
-        /// Consumes the builder and constructs a [`LogDelivery`](crate::model::LogDelivery)
+        /// Consumes the builder and constructs a [`LogDelivery`](crate::model::LogDelivery).
         pub fn build(self) -> crate::model::LogDelivery {
             crate::model::LogDelivery {
                 worker_log_delivery: self.worker_log_delivery,
@@ -3942,7 +4005,7 @@ pub mod log_delivery {
     }
 }
 impl LogDelivery {
-    /// Creates a new builder-style object to manufacture [`LogDelivery`](crate::model::LogDelivery)
+    /// Creates a new builder-style object to manufacture [`LogDelivery`](crate::model::LogDelivery).
     pub fn builder() -> crate::model::log_delivery::Builder {
         crate::model::log_delivery::Builder::default()
     }
@@ -3953,10 +4016,13 @@ impl LogDelivery {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkerLogDelivery {
     /// <p>Details about delivering logs to Amazon CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub cloud_watch_logs: std::option::Option<crate::model::CloudWatchLogsLogDelivery>,
     /// <p>Details about delivering logs to Amazon Kinesis Data Firehose.</p>
+    #[doc(hidden)]
     pub firehose: std::option::Option<crate::model::FirehoseLogDelivery>,
     /// <p>Details about delivering logs to Amazon S3.</p>
+    #[doc(hidden)]
     pub s3: std::option::Option<crate::model::S3LogDelivery>,
 }
 impl WorkerLogDelivery {
@@ -3984,11 +4050,10 @@ impl std::fmt::Debug for WorkerLogDelivery {
         formatter.finish()
     }
 }
-/// See [`WorkerLogDelivery`](crate::model::WorkerLogDelivery)
+/// See [`WorkerLogDelivery`](crate::model::WorkerLogDelivery).
 pub mod worker_log_delivery {
 
-    /// A builder for [`WorkerLogDelivery`](crate::model::WorkerLogDelivery)
-    #[non_exhaustive]
+    /// A builder for [`WorkerLogDelivery`](crate::model::WorkerLogDelivery).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloud_watch_logs: std::option::Option<crate::model::CloudWatchLogsLogDelivery>,
@@ -4032,7 +4097,7 @@ pub mod worker_log_delivery {
             self.s3 = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkerLogDelivery`](crate::model::WorkerLogDelivery)
+        /// Consumes the builder and constructs a [`WorkerLogDelivery`](crate::model::WorkerLogDelivery).
         pub fn build(self) -> crate::model::WorkerLogDelivery {
             crate::model::WorkerLogDelivery {
                 cloud_watch_logs: self.cloud_watch_logs,
@@ -4043,7 +4108,7 @@ pub mod worker_log_delivery {
     }
 }
 impl WorkerLogDelivery {
-    /// Creates a new builder-style object to manufacture [`WorkerLogDelivery`](crate::model::WorkerLogDelivery)
+    /// Creates a new builder-style object to manufacture [`WorkerLogDelivery`](crate::model::WorkerLogDelivery).
     pub fn builder() -> crate::model::worker_log_delivery::Builder {
         crate::model::worker_log_delivery::Builder::default()
     }
@@ -4054,10 +4119,13 @@ impl WorkerLogDelivery {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3LogDelivery {
     /// <p>The name of the S3 bucket that is the destination for log delivery.</p>
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     /// <p>Specifies whether connector logs get sent to the specified Amazon S3 destination.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The S3 prefix that is the destination for log delivery.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl S3LogDelivery {
@@ -4083,11 +4151,10 @@ impl std::fmt::Debug for S3LogDelivery {
         formatter.finish()
     }
 }
-/// See [`S3LogDelivery`](crate::model::S3LogDelivery)
+/// See [`S3LogDelivery`](crate::model::S3LogDelivery).
 pub mod s3_log_delivery {
 
-    /// A builder for [`S3LogDelivery`](crate::model::S3LogDelivery)
-    #[non_exhaustive]
+    /// A builder for [`S3LogDelivery`](crate::model::S3LogDelivery).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -4125,7 +4192,7 @@ pub mod s3_log_delivery {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3LogDelivery`](crate::model::S3LogDelivery)
+        /// Consumes the builder and constructs a [`S3LogDelivery`](crate::model::S3LogDelivery).
         pub fn build(self) -> crate::model::S3LogDelivery {
             crate::model::S3LogDelivery {
                 bucket: self.bucket,
@@ -4136,7 +4203,7 @@ pub mod s3_log_delivery {
     }
 }
 impl S3LogDelivery {
-    /// Creates a new builder-style object to manufacture [`S3LogDelivery`](crate::model::S3LogDelivery)
+    /// Creates a new builder-style object to manufacture [`S3LogDelivery`](crate::model::S3LogDelivery).
     pub fn builder() -> crate::model::s3_log_delivery::Builder {
         crate::model::s3_log_delivery::Builder::default()
     }
@@ -4147,8 +4214,10 @@ impl S3LogDelivery {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FirehoseLogDelivery {
     /// <p>The name of the Kinesis Data Firehose delivery stream that is the destination for log delivery.</p>
+    #[doc(hidden)]
     pub delivery_stream: std::option::Option<std::string::String>,
     /// <p>Specifies whether connector logs get delivered to Amazon Kinesis Data Firehose.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl FirehoseLogDelivery {
@@ -4169,11 +4238,10 @@ impl std::fmt::Debug for FirehoseLogDelivery {
         formatter.finish()
     }
 }
-/// See [`FirehoseLogDelivery`](crate::model::FirehoseLogDelivery)
+/// See [`FirehoseLogDelivery`](crate::model::FirehoseLogDelivery).
 pub mod firehose_log_delivery {
 
-    /// A builder for [`FirehoseLogDelivery`](crate::model::FirehoseLogDelivery)
-    #[non_exhaustive]
+    /// A builder for [`FirehoseLogDelivery`](crate::model::FirehoseLogDelivery).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_stream: std::option::Option<std::string::String>,
@@ -4203,7 +4271,7 @@ pub mod firehose_log_delivery {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`FirehoseLogDelivery`](crate::model::FirehoseLogDelivery)
+        /// Consumes the builder and constructs a [`FirehoseLogDelivery`](crate::model::FirehoseLogDelivery).
         pub fn build(self) -> crate::model::FirehoseLogDelivery {
             crate::model::FirehoseLogDelivery {
                 delivery_stream: self.delivery_stream,
@@ -4213,7 +4281,7 @@ pub mod firehose_log_delivery {
     }
 }
 impl FirehoseLogDelivery {
-    /// Creates a new builder-style object to manufacture [`FirehoseLogDelivery`](crate::model::FirehoseLogDelivery)
+    /// Creates a new builder-style object to manufacture [`FirehoseLogDelivery`](crate::model::FirehoseLogDelivery).
     pub fn builder() -> crate::model::firehose_log_delivery::Builder {
         crate::model::firehose_log_delivery::Builder::default()
     }
@@ -4224,8 +4292,10 @@ impl FirehoseLogDelivery {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchLogsLogDelivery {
     /// <p>Whether log delivery to Amazon CloudWatch Logs is enabled.</p>
+    #[doc(hidden)]
     pub enabled: bool,
     /// <p>The name of the CloudWatch log group that is the destination for log delivery.</p>
+    #[doc(hidden)]
     pub log_group: std::option::Option<std::string::String>,
 }
 impl CloudWatchLogsLogDelivery {
@@ -4246,11 +4316,10 @@ impl std::fmt::Debug for CloudWatchLogsLogDelivery {
         formatter.finish()
     }
 }
-/// See [`CloudWatchLogsLogDelivery`](crate::model::CloudWatchLogsLogDelivery)
+/// See [`CloudWatchLogsLogDelivery`](crate::model::CloudWatchLogsLogDelivery).
 pub mod cloud_watch_logs_log_delivery {
 
-    /// A builder for [`CloudWatchLogsLogDelivery`](crate::model::CloudWatchLogsLogDelivery)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchLogsLogDelivery`](crate::model::CloudWatchLogsLogDelivery).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -4277,7 +4346,7 @@ pub mod cloud_watch_logs_log_delivery {
             self.log_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchLogsLogDelivery`](crate::model::CloudWatchLogsLogDelivery)
+        /// Consumes the builder and constructs a [`CloudWatchLogsLogDelivery`](crate::model::CloudWatchLogsLogDelivery).
         pub fn build(self) -> crate::model::CloudWatchLogsLogDelivery {
             crate::model::CloudWatchLogsLogDelivery {
                 enabled: self.enabled.unwrap_or_default(),
@@ -4287,7 +4356,7 @@ pub mod cloud_watch_logs_log_delivery {
     }
 }
 impl CloudWatchLogsLogDelivery {
-    /// Creates a new builder-style object to manufacture [`CloudWatchLogsLogDelivery`](crate::model::CloudWatchLogsLogDelivery)
+    /// Creates a new builder-style object to manufacture [`CloudWatchLogsLogDelivery`](crate::model::CloudWatchLogsLogDelivery).
     pub fn builder() -> crate::model::cloud_watch_logs_log_delivery::Builder {
         crate::model::cloud_watch_logs_log_delivery::Builder::default()
     }
@@ -4298,6 +4367,7 @@ impl CloudWatchLogsLogDelivery {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KafkaClusterEncryptionInTransit {
     /// <p>The type of encryption in transit to the Apache Kafka cluster.</p>
+    #[doc(hidden)]
     pub encryption_type: std::option::Option<crate::model::KafkaClusterEncryptionInTransitType>,
 }
 impl KafkaClusterEncryptionInTransit {
@@ -4315,11 +4385,10 @@ impl std::fmt::Debug for KafkaClusterEncryptionInTransit {
         formatter.finish()
     }
 }
-/// See [`KafkaClusterEncryptionInTransit`](crate::model::KafkaClusterEncryptionInTransit)
+/// See [`KafkaClusterEncryptionInTransit`](crate::model::KafkaClusterEncryptionInTransit).
 pub mod kafka_cluster_encryption_in_transit {
 
-    /// A builder for [`KafkaClusterEncryptionInTransit`](crate::model::KafkaClusterEncryptionInTransit)
-    #[non_exhaustive]
+    /// A builder for [`KafkaClusterEncryptionInTransit`](crate::model::KafkaClusterEncryptionInTransit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encryption_type:
@@ -4342,7 +4411,7 @@ pub mod kafka_cluster_encryption_in_transit {
             self.encryption_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`KafkaClusterEncryptionInTransit`](crate::model::KafkaClusterEncryptionInTransit)
+        /// Consumes the builder and constructs a [`KafkaClusterEncryptionInTransit`](crate::model::KafkaClusterEncryptionInTransit).
         pub fn build(self) -> crate::model::KafkaClusterEncryptionInTransit {
             crate::model::KafkaClusterEncryptionInTransit {
                 encryption_type: self.encryption_type,
@@ -4351,7 +4420,7 @@ pub mod kafka_cluster_encryption_in_transit {
     }
 }
 impl KafkaClusterEncryptionInTransit {
-    /// Creates a new builder-style object to manufacture [`KafkaClusterEncryptionInTransit`](crate::model::KafkaClusterEncryptionInTransit)
+    /// Creates a new builder-style object to manufacture [`KafkaClusterEncryptionInTransit`](crate::model::KafkaClusterEncryptionInTransit).
     pub fn builder() -> crate::model::kafka_cluster_encryption_in_transit::Builder {
         crate::model::kafka_cluster_encryption_in_transit::Builder::default()
     }
@@ -4362,6 +4431,7 @@ impl KafkaClusterEncryptionInTransit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KafkaClusterClientAuthentication {
     /// <p>The type of client authentication used to connect to the Apache Kafka cluster. Value NONE means that no client authentication is used.</p>
+    #[doc(hidden)]
     pub authentication_type:
         std::option::Option<crate::model::KafkaClusterClientAuthenticationType>,
 }
@@ -4380,11 +4450,10 @@ impl std::fmt::Debug for KafkaClusterClientAuthentication {
         formatter.finish()
     }
 }
-/// See [`KafkaClusterClientAuthentication`](crate::model::KafkaClusterClientAuthentication)
+/// See [`KafkaClusterClientAuthentication`](crate::model::KafkaClusterClientAuthentication).
 pub mod kafka_cluster_client_authentication {
 
-    /// A builder for [`KafkaClusterClientAuthentication`](crate::model::KafkaClusterClientAuthentication)
-    #[non_exhaustive]
+    /// A builder for [`KafkaClusterClientAuthentication`](crate::model::KafkaClusterClientAuthentication).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) authentication_type:
@@ -4407,7 +4476,7 @@ pub mod kafka_cluster_client_authentication {
             self.authentication_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`KafkaClusterClientAuthentication`](crate::model::KafkaClusterClientAuthentication)
+        /// Consumes the builder and constructs a [`KafkaClusterClientAuthentication`](crate::model::KafkaClusterClientAuthentication).
         pub fn build(self) -> crate::model::KafkaClusterClientAuthentication {
             crate::model::KafkaClusterClientAuthentication {
                 authentication_type: self.authentication_type,
@@ -4416,7 +4485,7 @@ pub mod kafka_cluster_client_authentication {
     }
 }
 impl KafkaClusterClientAuthentication {
-    /// Creates a new builder-style object to manufacture [`KafkaClusterClientAuthentication`](crate::model::KafkaClusterClientAuthentication)
+    /// Creates a new builder-style object to manufacture [`KafkaClusterClientAuthentication`](crate::model::KafkaClusterClientAuthentication).
     pub fn builder() -> crate::model::kafka_cluster_client_authentication::Builder {
         crate::model::kafka_cluster_client_authentication::Builder::default()
     }
@@ -4427,6 +4496,7 @@ impl KafkaClusterClientAuthentication {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KafkaCluster {
     /// <p>The Apache Kafka cluster to which the connector is connected.</p>
+    #[doc(hidden)]
     pub apache_kafka_cluster: std::option::Option<crate::model::ApacheKafkaCluster>,
 }
 impl KafkaCluster {
@@ -4442,11 +4512,10 @@ impl std::fmt::Debug for KafkaCluster {
         formatter.finish()
     }
 }
-/// See [`KafkaCluster`](crate::model::KafkaCluster)
+/// See [`KafkaCluster`](crate::model::KafkaCluster).
 pub mod kafka_cluster {
 
-    /// A builder for [`KafkaCluster`](crate::model::KafkaCluster)
-    #[non_exhaustive]
+    /// A builder for [`KafkaCluster`](crate::model::KafkaCluster).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) apache_kafka_cluster: std::option::Option<crate::model::ApacheKafkaCluster>,
@@ -4465,7 +4534,7 @@ pub mod kafka_cluster {
             self.apache_kafka_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`KafkaCluster`](crate::model::KafkaCluster)
+        /// Consumes the builder and constructs a [`KafkaCluster`](crate::model::KafkaCluster).
         pub fn build(self) -> crate::model::KafkaCluster {
             crate::model::KafkaCluster {
                 apache_kafka_cluster: self.apache_kafka_cluster,
@@ -4474,7 +4543,7 @@ pub mod kafka_cluster {
     }
 }
 impl KafkaCluster {
-    /// Creates a new builder-style object to manufacture [`KafkaCluster`](crate::model::KafkaCluster)
+    /// Creates a new builder-style object to manufacture [`KafkaCluster`](crate::model::KafkaCluster).
     pub fn builder() -> crate::model::kafka_cluster::Builder {
         crate::model::kafka_cluster::Builder::default()
     }
@@ -4485,8 +4554,10 @@ impl KafkaCluster {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApacheKafkaCluster {
     /// <p>The bootstrap servers of the cluster.</p>
+    #[doc(hidden)]
     pub bootstrap_servers: std::option::Option<std::string::String>,
     /// <p>Details of an Amazon VPC which has network connectivity to the Apache Kafka cluster.</p>
+    #[doc(hidden)]
     pub vpc: std::option::Option<crate::model::Vpc>,
 }
 impl ApacheKafkaCluster {
@@ -4507,11 +4578,10 @@ impl std::fmt::Debug for ApacheKafkaCluster {
         formatter.finish()
     }
 }
-/// See [`ApacheKafkaCluster`](crate::model::ApacheKafkaCluster)
+/// See [`ApacheKafkaCluster`](crate::model::ApacheKafkaCluster).
 pub mod apache_kafka_cluster {
 
-    /// A builder for [`ApacheKafkaCluster`](crate::model::ApacheKafkaCluster)
-    #[non_exhaustive]
+    /// A builder for [`ApacheKafkaCluster`](crate::model::ApacheKafkaCluster).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bootstrap_servers: std::option::Option<std::string::String>,
@@ -4541,7 +4611,7 @@ pub mod apache_kafka_cluster {
             self.vpc = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApacheKafkaCluster`](crate::model::ApacheKafkaCluster)
+        /// Consumes the builder and constructs a [`ApacheKafkaCluster`](crate::model::ApacheKafkaCluster).
         pub fn build(self) -> crate::model::ApacheKafkaCluster {
             crate::model::ApacheKafkaCluster {
                 bootstrap_servers: self.bootstrap_servers,
@@ -4551,7 +4621,7 @@ pub mod apache_kafka_cluster {
     }
 }
 impl ApacheKafkaCluster {
-    /// Creates a new builder-style object to manufacture [`ApacheKafkaCluster`](crate::model::ApacheKafkaCluster)
+    /// Creates a new builder-style object to manufacture [`ApacheKafkaCluster`](crate::model::ApacheKafkaCluster).
     pub fn builder() -> crate::model::apache_kafka_cluster::Builder {
         crate::model::apache_kafka_cluster::Builder::default()
     }
@@ -4562,8 +4632,10 @@ impl ApacheKafkaCluster {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Vpc {
     /// <p>The security groups for the connector.</p>
+    #[doc(hidden)]
     pub security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The subnets for the connector.</p>
+    #[doc(hidden)]
     pub subnets: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Vpc {
@@ -4584,11 +4656,10 @@ impl std::fmt::Debug for Vpc {
         formatter.finish()
     }
 }
-/// See [`Vpc`](crate::model::Vpc)
+/// See [`Vpc`](crate::model::Vpc).
 pub mod vpc {
 
-    /// A builder for [`Vpc`](crate::model::Vpc)
-    #[non_exhaustive]
+    /// A builder for [`Vpc`](crate::model::Vpc).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -4633,7 +4704,7 @@ pub mod vpc {
             self.subnets = input;
             self
         }
-        /// Consumes the builder and constructs a [`Vpc`](crate::model::Vpc)
+        /// Consumes the builder and constructs a [`Vpc`](crate::model::Vpc).
         pub fn build(self) -> crate::model::Vpc {
             crate::model::Vpc {
                 security_groups: self.security_groups,
@@ -4643,7 +4714,7 @@ pub mod vpc {
     }
 }
 impl Vpc {
-    /// Creates a new builder-style object to manufacture [`Vpc`](crate::model::Vpc)
+    /// Creates a new builder-style object to manufacture [`Vpc`](crate::model::Vpc).
     pub fn builder() -> crate::model::vpc::Builder {
         crate::model::vpc::Builder::default()
     }
@@ -4654,8 +4725,10 @@ impl Vpc {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Capacity {
     /// <p>Information about the auto scaling parameters for the connector.</p>
+    #[doc(hidden)]
     pub auto_scaling: std::option::Option<crate::model::AutoScaling>,
     /// <p>Details about a fixed capacity allocated to a connector.</p>
+    #[doc(hidden)]
     pub provisioned_capacity: std::option::Option<crate::model::ProvisionedCapacity>,
 }
 impl Capacity {
@@ -4676,11 +4749,10 @@ impl std::fmt::Debug for Capacity {
         formatter.finish()
     }
 }
-/// See [`Capacity`](crate::model::Capacity)
+/// See [`Capacity`](crate::model::Capacity).
 pub mod capacity {
 
-    /// A builder for [`Capacity`](crate::model::Capacity)
-    #[non_exhaustive]
+    /// A builder for [`Capacity`](crate::model::Capacity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_scaling: std::option::Option<crate::model::AutoScaling>,
@@ -4713,7 +4785,7 @@ pub mod capacity {
             self.provisioned_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`Capacity`](crate::model::Capacity)
+        /// Consumes the builder and constructs a [`Capacity`](crate::model::Capacity).
         pub fn build(self) -> crate::model::Capacity {
             crate::model::Capacity {
                 auto_scaling: self.auto_scaling,
@@ -4723,7 +4795,7 @@ pub mod capacity {
     }
 }
 impl Capacity {
-    /// Creates a new builder-style object to manufacture [`Capacity`](crate::model::Capacity)
+    /// Creates a new builder-style object to manufacture [`Capacity`](crate::model::Capacity).
     pub fn builder() -> crate::model::capacity::Builder {
         crate::model::capacity::Builder::default()
     }
@@ -4734,8 +4806,10 @@ impl Capacity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProvisionedCapacity {
     /// <p>The number of microcontroller units (MCUs) allocated to each connector worker. The valid values are 1,2,4,8.</p>
+    #[doc(hidden)]
     pub mcu_count: i32,
     /// <p>The number of workers that are allocated to the connector.</p>
+    #[doc(hidden)]
     pub worker_count: i32,
 }
 impl ProvisionedCapacity {
@@ -4756,11 +4830,10 @@ impl std::fmt::Debug for ProvisionedCapacity {
         formatter.finish()
     }
 }
-/// See [`ProvisionedCapacity`](crate::model::ProvisionedCapacity)
+/// See [`ProvisionedCapacity`](crate::model::ProvisionedCapacity).
 pub mod provisioned_capacity {
 
-    /// A builder for [`ProvisionedCapacity`](crate::model::ProvisionedCapacity)
-    #[non_exhaustive]
+    /// A builder for [`ProvisionedCapacity`](crate::model::ProvisionedCapacity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mcu_count: std::option::Option<i32>,
@@ -4787,7 +4860,7 @@ pub mod provisioned_capacity {
             self.worker_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvisionedCapacity`](crate::model::ProvisionedCapacity)
+        /// Consumes the builder and constructs a [`ProvisionedCapacity`](crate::model::ProvisionedCapacity).
         pub fn build(self) -> crate::model::ProvisionedCapacity {
             crate::model::ProvisionedCapacity {
                 mcu_count: self.mcu_count.unwrap_or_default(),
@@ -4797,7 +4870,7 @@ pub mod provisioned_capacity {
     }
 }
 impl ProvisionedCapacity {
-    /// Creates a new builder-style object to manufacture [`ProvisionedCapacity`](crate::model::ProvisionedCapacity)
+    /// Creates a new builder-style object to manufacture [`ProvisionedCapacity`](crate::model::ProvisionedCapacity).
     pub fn builder() -> crate::model::provisioned_capacity::Builder {
         crate::model::provisioned_capacity::Builder::default()
     }
@@ -4808,14 +4881,19 @@ impl ProvisionedCapacity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoScaling {
     /// <p>The maximum number of workers allocated to the connector.</p>
+    #[doc(hidden)]
     pub max_worker_count: i32,
     /// <p>The number of microcontroller units (MCUs) allocated to each connector worker. The valid values are 1,2,4,8.</p>
+    #[doc(hidden)]
     pub mcu_count: i32,
     /// <p>The minimum number of workers allocated to the connector.</p>
+    #[doc(hidden)]
     pub min_worker_count: i32,
     /// <p>The sacle-in policy for the connector.</p>
+    #[doc(hidden)]
     pub scale_in_policy: std::option::Option<crate::model::ScaleInPolicy>,
     /// <p>The sacle-out policy for the connector.</p>
+    #[doc(hidden)]
     pub scale_out_policy: std::option::Option<crate::model::ScaleOutPolicy>,
 }
 impl AutoScaling {
@@ -4851,11 +4929,10 @@ impl std::fmt::Debug for AutoScaling {
         formatter.finish()
     }
 }
-/// See [`AutoScaling`](crate::model::AutoScaling)
+/// See [`AutoScaling`](crate::model::AutoScaling).
 pub mod auto_scaling {
 
-    /// A builder for [`AutoScaling`](crate::model::AutoScaling)
-    #[non_exhaustive]
+    /// A builder for [`AutoScaling`](crate::model::AutoScaling).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_worker_count: std::option::Option<i32>,
@@ -4921,7 +4998,7 @@ pub mod auto_scaling {
             self.scale_out_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoScaling`](crate::model::AutoScaling)
+        /// Consumes the builder and constructs a [`AutoScaling`](crate::model::AutoScaling).
         pub fn build(self) -> crate::model::AutoScaling {
             crate::model::AutoScaling {
                 max_worker_count: self.max_worker_count.unwrap_or_default(),
@@ -4934,7 +5011,7 @@ pub mod auto_scaling {
     }
 }
 impl AutoScaling {
-    /// Creates a new builder-style object to manufacture [`AutoScaling`](crate::model::AutoScaling)
+    /// Creates a new builder-style object to manufacture [`AutoScaling`](crate::model::AutoScaling).
     pub fn builder() -> crate::model::auto_scaling::Builder {
         crate::model::auto_scaling::Builder::default()
     }
@@ -4945,6 +5022,7 @@ impl AutoScaling {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScaleOutPolicy {
     /// <p>The CPU utilization percentage threshold at which you want connector scale out to be triggered.</p>
+    #[doc(hidden)]
     pub cpu_utilization_percentage: i32,
 }
 impl ScaleOutPolicy {
@@ -4963,11 +5041,10 @@ impl std::fmt::Debug for ScaleOutPolicy {
         formatter.finish()
     }
 }
-/// See [`ScaleOutPolicy`](crate::model::ScaleOutPolicy)
+/// See [`ScaleOutPolicy`](crate::model::ScaleOutPolicy).
 pub mod scale_out_policy {
 
-    /// A builder for [`ScaleOutPolicy`](crate::model::ScaleOutPolicy)
-    #[non_exhaustive]
+    /// A builder for [`ScaleOutPolicy`](crate::model::ScaleOutPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cpu_utilization_percentage: std::option::Option<i32>,
@@ -4983,7 +5060,7 @@ pub mod scale_out_policy {
             self.cpu_utilization_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScaleOutPolicy`](crate::model::ScaleOutPolicy)
+        /// Consumes the builder and constructs a [`ScaleOutPolicy`](crate::model::ScaleOutPolicy).
         pub fn build(self) -> crate::model::ScaleOutPolicy {
             crate::model::ScaleOutPolicy {
                 cpu_utilization_percentage: self.cpu_utilization_percentage.unwrap_or_default(),
@@ -4992,7 +5069,7 @@ pub mod scale_out_policy {
     }
 }
 impl ScaleOutPolicy {
-    /// Creates a new builder-style object to manufacture [`ScaleOutPolicy`](crate::model::ScaleOutPolicy)
+    /// Creates a new builder-style object to manufacture [`ScaleOutPolicy`](crate::model::ScaleOutPolicy).
     pub fn builder() -> crate::model::scale_out_policy::Builder {
         crate::model::scale_out_policy::Builder::default()
     }
@@ -5003,6 +5080,7 @@ impl ScaleOutPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScaleInPolicy {
     /// <p>Specifies the CPU utilization percentage threshold at which you want connector scale in to be triggered.</p>
+    #[doc(hidden)]
     pub cpu_utilization_percentage: i32,
 }
 impl ScaleInPolicy {
@@ -5021,11 +5099,10 @@ impl std::fmt::Debug for ScaleInPolicy {
         formatter.finish()
     }
 }
-/// See [`ScaleInPolicy`](crate::model::ScaleInPolicy)
+/// See [`ScaleInPolicy`](crate::model::ScaleInPolicy).
 pub mod scale_in_policy {
 
-    /// A builder for [`ScaleInPolicy`](crate::model::ScaleInPolicy)
-    #[non_exhaustive]
+    /// A builder for [`ScaleInPolicy`](crate::model::ScaleInPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cpu_utilization_percentage: std::option::Option<i32>,
@@ -5041,7 +5118,7 @@ pub mod scale_in_policy {
             self.cpu_utilization_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScaleInPolicy`](crate::model::ScaleInPolicy)
+        /// Consumes the builder and constructs a [`ScaleInPolicy`](crate::model::ScaleInPolicy).
         pub fn build(self) -> crate::model::ScaleInPolicy {
             crate::model::ScaleInPolicy {
                 cpu_utilization_percentage: self.cpu_utilization_percentage.unwrap_or_default(),
@@ -5050,7 +5127,7 @@ pub mod scale_in_policy {
     }
 }
 impl ScaleInPolicy {
-    /// Creates a new builder-style object to manufacture [`ScaleInPolicy`](crate::model::ScaleInPolicy)
+    /// Creates a new builder-style object to manufacture [`ScaleInPolicy`](crate::model::ScaleInPolicy).
     pub fn builder() -> crate::model::scale_in_policy::Builder {
         crate::model::scale_in_policy::Builder::default()
     }

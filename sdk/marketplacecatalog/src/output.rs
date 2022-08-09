@@ -4,8 +4,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartChangeSetOutput {
     /// <p>Unique identifier generated for the request.</p>
+    #[doc(hidden)]
     pub change_set_id: std::option::Option<std::string::String>,
     /// <p>The ARN associated to the unique identifier generated for the request.</p>
+    #[doc(hidden)]
     pub change_set_arn: std::option::Option<std::string::String>,
 }
 impl StartChangeSetOutput {
@@ -26,11 +28,10 @@ impl std::fmt::Debug for StartChangeSetOutput {
         formatter.finish()
     }
 }
-/// See [`StartChangeSetOutput`](crate::output::StartChangeSetOutput)
+/// See [`StartChangeSetOutput`](crate::output::StartChangeSetOutput).
 pub mod start_change_set_output {
 
-    /// A builder for [`StartChangeSetOutput`](crate::output::StartChangeSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartChangeSetOutput`](crate::output::StartChangeSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_set_id: std::option::Option<std::string::String>,
@@ -63,7 +64,7 @@ pub mod start_change_set_output {
             self.change_set_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartChangeSetOutput`](crate::output::StartChangeSetOutput)
+        /// Consumes the builder and constructs a [`StartChangeSetOutput`](crate::output::StartChangeSetOutput).
         pub fn build(self) -> crate::output::StartChangeSetOutput {
             crate::output::StartChangeSetOutput {
                 change_set_id: self.change_set_id,
@@ -73,7 +74,7 @@ pub mod start_change_set_output {
     }
 }
 impl StartChangeSetOutput {
-    /// Creates a new builder-style object to manufacture [`StartChangeSetOutput`](crate::output::StartChangeSetOutput)
+    /// Creates a new builder-style object to manufacture [`StartChangeSetOutput`](crate::output::StartChangeSetOutput).
     pub fn builder() -> crate::output::start_change_set_output::Builder {
         crate::output::start_change_set_output::Builder::default()
     }
@@ -84,8 +85,10 @@ impl StartChangeSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListEntitiesOutput {
     /// <p> Array of <code>EntitySummary</code> object.</p>
+    #[doc(hidden)]
     pub entity_summary_list: std::option::Option<std::vec::Vec<crate::model::EntitySummary>>,
     /// <p>The value of the next token if it exists. Null if there is no more result.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListEntitiesOutput {
@@ -106,11 +109,10 @@ impl std::fmt::Debug for ListEntitiesOutput {
         formatter.finish()
     }
 }
-/// See [`ListEntitiesOutput`](crate::output::ListEntitiesOutput)
+/// See [`ListEntitiesOutput`](crate::output::ListEntitiesOutput).
 pub mod list_entities_output {
 
-    /// A builder for [`ListEntitiesOutput`](crate::output::ListEntitiesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListEntitiesOutput`](crate::output::ListEntitiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entity_summary_list:
@@ -147,7 +149,7 @@ pub mod list_entities_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListEntitiesOutput`](crate::output::ListEntitiesOutput)
+        /// Consumes the builder and constructs a [`ListEntitiesOutput`](crate::output::ListEntitiesOutput).
         pub fn build(self) -> crate::output::ListEntitiesOutput {
             crate::output::ListEntitiesOutput {
                 entity_summary_list: self.entity_summary_list,
@@ -157,7 +159,7 @@ pub mod list_entities_output {
     }
 }
 impl ListEntitiesOutput {
-    /// Creates a new builder-style object to manufacture [`ListEntitiesOutput`](crate::output::ListEntitiesOutput)
+    /// Creates a new builder-style object to manufacture [`ListEntitiesOutput`](crate::output::ListEntitiesOutput).
     pub fn builder() -> crate::output::list_entities_output::Builder {
         crate::output::list_entities_output::Builder::default()
     }
@@ -168,9 +170,11 @@ impl ListEntitiesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListChangeSetsOutput {
     /// <p> Array of <code>ChangeSetSummaryListItem</code> objects.</p>
+    #[doc(hidden)]
     pub change_set_summary_list:
         std::option::Option<std::vec::Vec<crate::model::ChangeSetSummaryListItem>>,
     /// <p>The value of the next token, if it exists. Null if there are no more results.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListChangeSetsOutput {
@@ -193,11 +197,10 @@ impl std::fmt::Debug for ListChangeSetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListChangeSetsOutput`](crate::output::ListChangeSetsOutput)
+/// See [`ListChangeSetsOutput`](crate::output::ListChangeSetsOutput).
 pub mod list_change_sets_output {
 
-    /// A builder for [`ListChangeSetsOutput`](crate::output::ListChangeSetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListChangeSetsOutput`](crate::output::ListChangeSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_set_summary_list:
@@ -237,7 +240,7 @@ pub mod list_change_sets_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListChangeSetsOutput`](crate::output::ListChangeSetsOutput)
+        /// Consumes the builder and constructs a [`ListChangeSetsOutput`](crate::output::ListChangeSetsOutput).
         pub fn build(self) -> crate::output::ListChangeSetsOutput {
             crate::output::ListChangeSetsOutput {
                 change_set_summary_list: self.change_set_summary_list,
@@ -247,7 +250,7 @@ pub mod list_change_sets_output {
     }
 }
 impl ListChangeSetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListChangeSetsOutput`](crate::output::ListChangeSetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListChangeSetsOutput`](crate::output::ListChangeSetsOutput).
     pub fn builder() -> crate::output::list_change_sets_output::Builder {
         crate::output::list_change_sets_output::Builder::default()
     }
@@ -258,14 +261,19 @@ impl ListChangeSetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEntityOutput {
     /// <p>The named type of the entity, in the format of <code>EntityType@Version</code>.</p>
+    #[doc(hidden)]
     pub entity_type: std::option::Option<std::string::String>,
     /// <p>The identifier of the entity, in the format of <code>EntityId@RevisionId</code>.</p>
+    #[doc(hidden)]
     pub entity_identifier: std::option::Option<std::string::String>,
-    /// <p>The ARN associated to the unique identifier for the change set referenced in this request.</p>
+    /// <p>The ARN associated to the unique identifier for the entity referenced in this request.</p>
+    #[doc(hidden)]
     pub entity_arn: std::option::Option<std::string::String>,
     /// <p>The last modified date of the entity, in ISO 8601 format (2018-02-27T13:45:22Z).</p>
+    #[doc(hidden)]
     pub last_modified_date: std::option::Option<std::string::String>,
     /// <p>This stringified JSON object includes the details of the entity.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
 }
 impl DescribeEntityOutput {
@@ -277,7 +285,7 @@ impl DescribeEntityOutput {
     pub fn entity_identifier(&self) -> std::option::Option<&str> {
         self.entity_identifier.as_deref()
     }
-    /// <p>The ARN associated to the unique identifier for the change set referenced in this request.</p>
+    /// <p>The ARN associated to the unique identifier for the entity referenced in this request.</p>
     pub fn entity_arn(&self) -> std::option::Option<&str> {
         self.entity_arn.as_deref()
     }
@@ -301,11 +309,10 @@ impl std::fmt::Debug for DescribeEntityOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeEntityOutput`](crate::output::DescribeEntityOutput)
+/// See [`DescribeEntityOutput`](crate::output::DescribeEntityOutput).
 pub mod describe_entity_output {
 
-    /// A builder for [`DescribeEntityOutput`](crate::output::DescribeEntityOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeEntityOutput`](crate::output::DescribeEntityOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entity_type: std::option::Option<std::string::String>,
@@ -338,12 +345,12 @@ pub mod describe_entity_output {
             self.entity_identifier = input;
             self
         }
-        /// <p>The ARN associated to the unique identifier for the change set referenced in this request.</p>
+        /// <p>The ARN associated to the unique identifier for the entity referenced in this request.</p>
         pub fn entity_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.entity_arn = Some(input.into());
             self
         }
-        /// <p>The ARN associated to the unique identifier for the change set referenced in this request.</p>
+        /// <p>The ARN associated to the unique identifier for the entity referenced in this request.</p>
         pub fn set_entity_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.entity_arn = input;
             self
@@ -371,7 +378,7 @@ pub mod describe_entity_output {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeEntityOutput`](crate::output::DescribeEntityOutput)
+        /// Consumes the builder and constructs a [`DescribeEntityOutput`](crate::output::DescribeEntityOutput).
         pub fn build(self) -> crate::output::DescribeEntityOutput {
             crate::output::DescribeEntityOutput {
                 entity_type: self.entity_type,
@@ -384,7 +391,7 @@ pub mod describe_entity_output {
     }
 }
 impl DescribeEntityOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeEntityOutput`](crate::output::DescribeEntityOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeEntityOutput`](crate::output::DescribeEntityOutput).
     pub fn builder() -> crate::output::describe_entity_output::Builder {
         crate::output::describe_entity_output::Builder::default()
     }
@@ -395,22 +402,31 @@ impl DescribeEntityOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeChangeSetOutput {
     /// <p>Required. The unique identifier for the change set referenced in this request.</p>
+    #[doc(hidden)]
     pub change_set_id: std::option::Option<std::string::String>,
     /// <p>The ARN associated with the unique identifier for the change set referenced in this request.</p>
+    #[doc(hidden)]
     pub change_set_arn: std::option::Option<std::string::String>,
     /// <p>The optional name provided in the <code>StartChangeSet</code> request. If you do not provide a name, one is set by default.</p>
+    #[doc(hidden)]
     pub change_set_name: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format (2018-02-27T13:45:22Z), the request started. </p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<std::string::String>,
     /// <p>The date and time, in ISO 8601 format (2018-02-27T13:45:22Z), the request transitioned to a terminal state. The change cannot transition to a different state. Null if the request is not in a terminal state. </p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<std::string::String>,
     /// <p>The status of the change request.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ChangeStatus>,
     /// <p>Returned if the change set is in <code>FAILED</code> status. Can be either <code>CLIENT_ERROR</code>, which means that there are issues with the request (see the <code>ErrorDetailList</code>), or <code>SERVER_FAULT</code>, which means that there is a problem in the system, and you should retry your request.</p>
+    #[doc(hidden)]
     pub failure_code: std::option::Option<crate::model::FailureCode>,
     /// <p>Returned if there is a failure on the change set, but that failure is not related to any of the changes in the request.</p>
+    #[doc(hidden)]
     pub failure_description: std::option::Option<std::string::String>,
     /// <p>An array of <code>ChangeSummary</code> objects.</p>
+    #[doc(hidden)]
     pub change_set: std::option::Option<std::vec::Vec<crate::model::ChangeSummary>>,
 }
 impl DescribeChangeSetOutput {
@@ -466,11 +482,10 @@ impl std::fmt::Debug for DescribeChangeSetOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeChangeSetOutput`](crate::output::DescribeChangeSetOutput)
+/// See [`DescribeChangeSetOutput`](crate::output::DescribeChangeSetOutput).
 pub mod describe_change_set_output {
 
-    /// A builder for [`DescribeChangeSetOutput`](crate::output::DescribeChangeSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeChangeSetOutput`](crate::output::DescribeChangeSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_set_id: std::option::Option<std::string::String>,
@@ -601,7 +616,7 @@ pub mod describe_change_set_output {
             self.change_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeChangeSetOutput`](crate::output::DescribeChangeSetOutput)
+        /// Consumes the builder and constructs a [`DescribeChangeSetOutput`](crate::output::DescribeChangeSetOutput).
         pub fn build(self) -> crate::output::DescribeChangeSetOutput {
             crate::output::DescribeChangeSetOutput {
                 change_set_id: self.change_set_id,
@@ -618,7 +633,7 @@ pub mod describe_change_set_output {
     }
 }
 impl DescribeChangeSetOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeChangeSetOutput`](crate::output::DescribeChangeSetOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeChangeSetOutput`](crate::output::DescribeChangeSetOutput).
     pub fn builder() -> crate::output::describe_change_set_output::Builder {
         crate::output::describe_change_set_output::Builder::default()
     }
@@ -629,8 +644,10 @@ impl DescribeChangeSetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelChangeSetOutput {
     /// <p>The unique identifier for the change set referenced in this request.</p>
+    #[doc(hidden)]
     pub change_set_id: std::option::Option<std::string::String>,
     /// <p>The ARN associated with the change set referenced in this request.</p>
+    #[doc(hidden)]
     pub change_set_arn: std::option::Option<std::string::String>,
 }
 impl CancelChangeSetOutput {
@@ -651,11 +668,10 @@ impl std::fmt::Debug for CancelChangeSetOutput {
         formatter.finish()
     }
 }
-/// See [`CancelChangeSetOutput`](crate::output::CancelChangeSetOutput)
+/// See [`CancelChangeSetOutput`](crate::output::CancelChangeSetOutput).
 pub mod cancel_change_set_output {
 
-    /// A builder for [`CancelChangeSetOutput`](crate::output::CancelChangeSetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CancelChangeSetOutput`](crate::output::CancelChangeSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) change_set_id: std::option::Option<std::string::String>,
@@ -688,7 +704,7 @@ pub mod cancel_change_set_output {
             self.change_set_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelChangeSetOutput`](crate::output::CancelChangeSetOutput)
+        /// Consumes the builder and constructs a [`CancelChangeSetOutput`](crate::output::CancelChangeSetOutput).
         pub fn build(self) -> crate::output::CancelChangeSetOutput {
             crate::output::CancelChangeSetOutput {
                 change_set_id: self.change_set_id,
@@ -698,7 +714,7 @@ pub mod cancel_change_set_output {
     }
 }
 impl CancelChangeSetOutput {
-    /// Creates a new builder-style object to manufacture [`CancelChangeSetOutput`](crate::output::CancelChangeSetOutput)
+    /// Creates a new builder-style object to manufacture [`CancelChangeSetOutput`](crate::output::CancelChangeSetOutput).
     pub fn builder() -> crate::output::cancel_change_set_output::Builder {
         crate::output::cancel_change_set_output::Builder::default()
     }

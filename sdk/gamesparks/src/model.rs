@@ -5,26 +5,36 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StageDetails {
     /// <p>The name of the stage.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The game key associated with the stage.</p>
     /// <p> The game key is a unique identifier that the game client uses to connect to the GameSparks backend. </p>
+    #[doc(hidden)]
     pub game_key: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the stage.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the role used to run the game runtimes deployed to the stage.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<std::string::String>,
     /// <p>The description of the stage.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The timestamp of when the stage was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of when the stage was last updated.</p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The state of the stage.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::StageState>,
     /// <p>The tags associated with the stage.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Amazon CloudWatch log group for game runtimes deployed to the stage.</p>
+    #[doc(hidden)]
     pub log_group: std::option::Option<std::string::String>,
 }
 impl StageDetails {
@@ -89,11 +99,10 @@ impl std::fmt::Debug for StageDetails {
         formatter.finish()
     }
 }
-/// See [`StageDetails`](crate::model::StageDetails)
+/// See [`StageDetails`](crate::model::StageDetails).
 pub mod stage_details {
 
-    /// A builder for [`StageDetails`](crate::model::StageDetails)
-    #[non_exhaustive]
+    /// A builder for [`StageDetails`](crate::model::StageDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -233,7 +242,7 @@ pub mod stage_details {
             self.log_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`StageDetails`](crate::model::StageDetails)
+        /// Consumes the builder and constructs a [`StageDetails`](crate::model::StageDetails).
         pub fn build(self) -> crate::model::StageDetails {
             crate::model::StageDetails {
                 name: self.name,
@@ -251,7 +260,7 @@ pub mod stage_details {
     }
 }
 impl StageDetails {
-    /// Creates a new builder-style object to manufacture [`StageDetails`](crate::model::StageDetails)
+    /// Creates a new builder-style object to manufacture [`StageDetails`](crate::model::StageDetails).
     pub fn builder() -> crate::model::stage_details::Builder {
         crate::model::stage_details::Builder::default()
     }
@@ -317,15 +326,20 @@ impl AsRef<str> for StageState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnapshotDetails {
     /// <p>The identifier of the snapshot.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The description of the snapshot.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The sections in the snapshot.</p>
+    #[doc(hidden)]
     pub sections:
         std::option::Option<std::collections::HashMap<std::string::String, crate::model::Section>>,
     /// <p>The timestamp of when the snapshot was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of when the snapshot was last updated.</p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SnapshotDetails {
@@ -364,11 +378,10 @@ impl std::fmt::Debug for SnapshotDetails {
         formatter.finish()
     }
 }
-/// See [`SnapshotDetails`](crate::model::SnapshotDetails)
+/// See [`SnapshotDetails`](crate::model::SnapshotDetails).
 pub mod snapshot_details {
 
-    /// A builder for [`SnapshotDetails`](crate::model::SnapshotDetails)
-    #[non_exhaustive]
+    /// A builder for [`SnapshotDetails`](crate::model::SnapshotDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -451,7 +464,7 @@ pub mod snapshot_details {
             self.last_updated = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnapshotDetails`](crate::model::SnapshotDetails)
+        /// Consumes the builder and constructs a [`SnapshotDetails`](crate::model::SnapshotDetails).
         pub fn build(self) -> crate::model::SnapshotDetails {
             crate::model::SnapshotDetails {
                 id: self.id,
@@ -464,7 +477,7 @@ pub mod snapshot_details {
     }
 }
 impl SnapshotDetails {
-    /// Creates a new builder-style object to manufacture [`SnapshotDetails`](crate::model::SnapshotDetails)
+    /// Creates a new builder-style object to manufacture [`SnapshotDetails`](crate::model::SnapshotDetails).
     pub fn builder() -> crate::model::snapshot_details::Builder {
         crate::model::snapshot_details::Builder::default()
     }
@@ -475,10 +488,13 @@ impl SnapshotDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Section {
     /// <p>The name of the section.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The size, in bytes, of the section contents.</p>
+    #[doc(hidden)]
     pub size: i32,
     /// <p>The content of a configuration section.</p>
+    #[doc(hidden)]
     pub attributes: std::option::Option<aws_smithy_types::Document>,
 }
 impl Section {
@@ -504,11 +520,10 @@ impl std::fmt::Debug for Section {
         formatter.finish()
     }
 }
-/// See [`Section`](crate::model::Section)
+/// See [`Section`](crate::model::Section).
 pub mod section {
 
-    /// A builder for [`Section`](crate::model::Section)
-    #[non_exhaustive]
+    /// A builder for [`Section`](crate::model::Section).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -549,7 +564,7 @@ pub mod section {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`Section`](crate::model::Section)
+        /// Consumes the builder and constructs a [`Section`](crate::model::Section).
         pub fn build(self) -> crate::model::Section {
             crate::model::Section {
                 name: self.name,
@@ -560,7 +575,7 @@ pub mod section {
     }
 }
 impl Section {
-    /// Creates a new builder-style object to manufacture [`Section`](crate::model::Section)
+    /// Creates a new builder-style object to manufacture [`Section`](crate::model::Section).
     pub fn builder() -> crate::model::section::Builder {
         crate::model::section::Builder::default()
     }
@@ -572,11 +587,14 @@ impl Section {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GameConfigurationDetails {
     /// <p>Configuration data, organized by section name.</p>
+    #[doc(hidden)]
     pub sections:
         std::option::Option<std::collections::HashMap<std::string::String, crate::model::Section>>,
     /// <p>The date when the game was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date when the game was last modified.</p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GameConfigurationDetails {
@@ -605,11 +623,10 @@ impl std::fmt::Debug for GameConfigurationDetails {
         formatter.finish()
     }
 }
-/// See [`GameConfigurationDetails`](crate::model::GameConfigurationDetails)
+/// See [`GameConfigurationDetails`](crate::model::GameConfigurationDetails).
 pub mod game_configuration_details {
 
-    /// A builder for [`GameConfigurationDetails`](crate::model::GameConfigurationDetails)
-    #[non_exhaustive]
+    /// A builder for [`GameConfigurationDetails`](crate::model::GameConfigurationDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sections: std::option::Option<
@@ -670,7 +687,7 @@ pub mod game_configuration_details {
             self.last_updated = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameConfigurationDetails`](crate::model::GameConfigurationDetails)
+        /// Consumes the builder and constructs a [`GameConfigurationDetails`](crate::model::GameConfigurationDetails).
         pub fn build(self) -> crate::model::GameConfigurationDetails {
             crate::model::GameConfigurationDetails {
                 sections: self.sections,
@@ -681,7 +698,7 @@ pub mod game_configuration_details {
     }
 }
 impl GameConfigurationDetails {
-    /// Creates a new builder-style object to manufacture [`GameConfigurationDetails`](crate::model::GameConfigurationDetails)
+    /// Creates a new builder-style object to manufacture [`GameConfigurationDetails`](crate::model::GameConfigurationDetails).
     pub fn builder() -> crate::model::game_configuration_details::Builder {
         crate::model::game_configuration_details::Builder::default()
     }
@@ -692,14 +709,18 @@ impl GameConfigurationDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SectionModification {
     /// <p>The name of the section to be modified.</p>
+    #[doc(hidden)]
     pub section: std::option::Option<std::string::String>,
     /// <p>The path within the section content to be modified.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>The operation to be performed on a configuration section.</p>
     /// <p> Content can be added, deleted, or replaced within a section. </p>
+    #[doc(hidden)]
     pub operation: std::option::Option<crate::model::Operation>,
     /// <p>For add and replace operations, this is the value that will be used.</p>
     /// <p> This field should be omitted for delete operations. </p>
+    #[doc(hidden)]
     pub value: std::option::Option<aws_smithy_types::Document>,
 }
 impl SectionModification {
@@ -732,11 +753,10 @@ impl std::fmt::Debug for SectionModification {
         formatter.finish()
     }
 }
-/// See [`SectionModification`](crate::model::SectionModification)
+/// See [`SectionModification`](crate::model::SectionModification).
 pub mod section_modification {
 
-    /// A builder for [`SectionModification`](crate::model::SectionModification)
-    #[non_exhaustive]
+    /// A builder for [`SectionModification`](crate::model::SectionModification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) section: std::option::Option<std::string::String>,
@@ -792,7 +812,7 @@ pub mod section_modification {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`SectionModification`](crate::model::SectionModification)
+        /// Consumes the builder and constructs a [`SectionModification`](crate::model::SectionModification).
         pub fn build(self) -> crate::model::SectionModification {
             crate::model::SectionModification {
                 section: self.section,
@@ -804,7 +824,7 @@ pub mod section_modification {
     }
 }
 impl SectionModification {
-    /// Creates a new builder-style object to manufacture [`SectionModification`](crate::model::SectionModification)
+    /// Creates a new builder-style object to manufacture [`SectionModification`](crate::model::SectionModification).
     pub fn builder() -> crate::model::section_modification::Builder {
         crate::model::section_modification::Builder::default()
     }
@@ -874,20 +894,28 @@ impl AsRef<str> for Operation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GameDetails {
     /// <p>The name of the game.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of this game.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The description of the game.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date when the game was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date when the game was last modified.</p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The state of the game.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::GameState>,
     /// <p>Determines if the game can be deleted.</p>
+    #[doc(hidden)]
     pub enable_termination_protection: bool,
     /// <p>The tags associated with the game.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -945,11 +973,10 @@ impl std::fmt::Debug for GameDetails {
         formatter.finish()
     }
 }
-/// See [`GameDetails`](crate::model::GameDetails)
+/// See [`GameDetails`](crate::model::GameDetails).
 pub mod game_details {
 
-    /// A builder for [`GameDetails`](crate::model::GameDetails)
-    #[non_exhaustive]
+    /// A builder for [`GameDetails`](crate::model::GameDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1068,7 +1095,7 @@ pub mod game_details {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameDetails`](crate::model::GameDetails)
+        /// Consumes the builder and constructs a [`GameDetails`](crate::model::GameDetails).
         pub fn build(self) -> crate::model::GameDetails {
             crate::model::GameDetails {
                 name: self.name,
@@ -1086,7 +1113,7 @@ pub mod game_details {
     }
 }
 impl GameDetails {
-    /// Creates a new builder-style object to manufacture [`GameDetails`](crate::model::GameDetails)
+    /// Creates a new builder-style object to manufacture [`GameDetails`](crate::model::GameDetails).
     pub fn builder() -> crate::model::game_details::Builder {
         crate::model::game_details::Builder::default()
     }
@@ -1152,18 +1179,25 @@ impl AsRef<str> for GameState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StageDeploymentDetails {
     /// <p>The identifier of the deployment.</p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the snapshot associated with the stage deployment.</p>
+    #[doc(hidden)]
     pub snapshot_id: std::option::Option<std::string::String>,
     /// <p>The type of action of the stage deployment.</p>
+    #[doc(hidden)]
     pub deployment_action: std::option::Option<crate::model::DeploymentAction>,
     /// <p>The state of the deployment.</p>
+    #[doc(hidden)]
     pub deployment_state: std::option::Option<crate::model::DeploymentState>,
     /// <p>The timestamp of when the stage deployment was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of when the deployment was last updated.</p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The result of the deployment.</p>
+    #[doc(hidden)]
     pub deployment_result: std::option::Option<crate::model::DeploymentResult>,
 }
 impl StageDeploymentDetails {
@@ -1209,11 +1243,10 @@ impl std::fmt::Debug for StageDeploymentDetails {
         formatter.finish()
     }
 }
-/// See [`StageDeploymentDetails`](crate::model::StageDeploymentDetails)
+/// See [`StageDeploymentDetails`](crate::model::StageDeploymentDetails).
 pub mod stage_deployment_details {
 
-    /// A builder for [`StageDeploymentDetails`](crate::model::StageDeploymentDetails)
-    #[non_exhaustive]
+    /// A builder for [`StageDeploymentDetails`](crate::model::StageDeploymentDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_id: std::option::Option<std::string::String>,
@@ -1313,7 +1346,7 @@ pub mod stage_deployment_details {
             self.deployment_result = input;
             self
         }
-        /// Consumes the builder and constructs a [`StageDeploymentDetails`](crate::model::StageDeploymentDetails)
+        /// Consumes the builder and constructs a [`StageDeploymentDetails`](crate::model::StageDeploymentDetails).
         pub fn build(self) -> crate::model::StageDeploymentDetails {
             crate::model::StageDeploymentDetails {
                 deployment_id: self.deployment_id,
@@ -1328,7 +1361,7 @@ pub mod stage_deployment_details {
     }
 }
 impl StageDeploymentDetails {
-    /// Creates a new builder-style object to manufacture [`StageDeploymentDetails`](crate::model::StageDeploymentDetails)
+    /// Creates a new builder-style object to manufacture [`StageDeploymentDetails`](crate::model::StageDeploymentDetails).
     pub fn builder() -> crate::model::stage_deployment_details::Builder {
         crate::model::stage_deployment_details::Builder::default()
     }
@@ -1339,8 +1372,10 @@ impl StageDeploymentDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeploymentResult {
     /// <p>The type of deployment result.</p>
+    #[doc(hidden)]
     pub result_code: std::option::Option<crate::model::ResultCode>,
     /// <p>Details about the deployment result.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl DeploymentResult {
@@ -1361,11 +1396,10 @@ impl std::fmt::Debug for DeploymentResult {
         formatter.finish()
     }
 }
-/// See [`DeploymentResult`](crate::model::DeploymentResult)
+/// See [`DeploymentResult`](crate::model::DeploymentResult).
 pub mod deployment_result {
 
-    /// A builder for [`DeploymentResult`](crate::model::DeploymentResult)
-    #[non_exhaustive]
+    /// A builder for [`DeploymentResult`](crate::model::DeploymentResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) result_code: std::option::Option<crate::model::ResultCode>,
@@ -1395,7 +1429,7 @@ pub mod deployment_result {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentResult`](crate::model::DeploymentResult)
+        /// Consumes the builder and constructs a [`DeploymentResult`](crate::model::DeploymentResult).
         pub fn build(self) -> crate::model::DeploymentResult {
             crate::model::DeploymentResult {
                 result_code: self.result_code,
@@ -1405,7 +1439,7 @@ pub mod deployment_result {
     }
 }
 impl DeploymentResult {
-    /// Creates a new builder-style object to manufacture [`DeploymentResult`](crate::model::DeploymentResult)
+    /// Creates a new builder-style object to manufacture [`DeploymentResult`](crate::model::DeploymentResult).
     pub fn builder() -> crate::model::deployment_result::Builder {
         crate::model::deployment_result::Builder::default()
     }
@@ -1593,11 +1627,14 @@ impl AsRef<str> for DeploymentAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Generator {
     /// <p>The platform that will be used to run the generated code.</p>
+    #[doc(hidden)]
     pub target_platform: std::option::Option<std::string::String>,
     /// <p>The programming language for the generated code.</p>
     /// <p> Not all languages are supported for each platform. For cases where multiple languages are supported, this parameter specifies the language to be used. If this value is omitted, the default language for the target platform will be used. </p>
+    #[doc(hidden)]
     pub language: std::option::Option<std::string::String>,
     /// <p>The target version of the GameSparks Game SDK.</p>
+    #[doc(hidden)]
     pub game_sdk_version: std::option::Option<std::string::String>,
 }
 impl Generator {
@@ -1624,11 +1661,10 @@ impl std::fmt::Debug for Generator {
         formatter.finish()
     }
 }
-/// See [`Generator`](crate::model::Generator)
+/// See [`Generator`](crate::model::Generator).
 pub mod generator {
 
-    /// A builder for [`Generator`](crate::model::Generator)
-    #[non_exhaustive]
+    /// A builder for [`Generator`](crate::model::Generator).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_platform: std::option::Option<std::string::String>,
@@ -1674,7 +1710,7 @@ pub mod generator {
             self.game_sdk_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`Generator`](crate::model::Generator)
+        /// Consumes the builder and constructs a [`Generator`](crate::model::Generator).
         pub fn build(self) -> crate::model::Generator {
             crate::model::Generator {
                 target_platform: self.target_platform,
@@ -1685,7 +1721,7 @@ pub mod generator {
     }
 }
 impl Generator {
-    /// Creates a new builder-style object to manufacture [`Generator`](crate::model::Generator)
+    /// Creates a new builder-style object to manufacture [`Generator`](crate::model::Generator).
     pub fn builder() -> crate::model::generator::Builder {
         crate::model::generator::Builder::default()
     }
@@ -1696,15 +1732,20 @@ impl Generator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StageSummary {
     /// <p>The name of the stage.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The game key associated with the stage.</p>
     /// <p> The game key is a unique identifier that the game client uses to connect to the GameSparks backend. </p>
+    #[doc(hidden)]
     pub game_key: std::option::Option<std::string::String>,
     /// <p>The description of the stage.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The state of the stage.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::StageState>,
     /// <p>The tags associated with the stage.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1745,11 +1786,10 @@ impl std::fmt::Debug for StageSummary {
         formatter.finish()
     }
 }
-/// See [`StageSummary`](crate::model::StageSummary)
+/// See [`StageSummary`](crate::model::StageSummary).
 pub mod stage_summary {
 
-    /// A builder for [`StageSummary`](crate::model::StageSummary)
-    #[non_exhaustive]
+    /// A builder for [`StageSummary`](crate::model::StageSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1828,7 +1868,7 @@ pub mod stage_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`StageSummary`](crate::model::StageSummary)
+        /// Consumes the builder and constructs a [`StageSummary`](crate::model::StageSummary).
         pub fn build(self) -> crate::model::StageSummary {
             crate::model::StageSummary {
                 name: self.name,
@@ -1841,7 +1881,7 @@ pub mod stage_summary {
     }
 }
 impl StageSummary {
-    /// Creates a new builder-style object to manufacture [`StageSummary`](crate::model::StageSummary)
+    /// Creates a new builder-style object to manufacture [`StageSummary`](crate::model::StageSummary).
     pub fn builder() -> crate::model::stage_summary::Builder {
         crate::model::stage_summary::Builder::default()
     }
@@ -1852,16 +1892,22 @@ impl StageSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StageDeploymentSummary {
     /// <p>The identifier of the deployment.</p>
+    #[doc(hidden)]
     pub deployment_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the snapshot associated with the stage deployment.</p>
+    #[doc(hidden)]
     pub snapshot_id: std::option::Option<std::string::String>,
     /// <p>The type of action of the deployment.</p>
+    #[doc(hidden)]
     pub deployment_action: std::option::Option<crate::model::DeploymentAction>,
     /// <p>The state of the deployment.</p>
+    #[doc(hidden)]
     pub deployment_state: std::option::Option<crate::model::DeploymentState>,
     /// <p>The timestamp of when the deployment was last updated.</p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The result of the deployment.</p>
+    #[doc(hidden)]
     pub deployment_result: std::option::Option<crate::model::DeploymentResult>,
 }
 impl StageDeploymentSummary {
@@ -1902,11 +1948,10 @@ impl std::fmt::Debug for StageDeploymentSummary {
         formatter.finish()
     }
 }
-/// See [`StageDeploymentSummary`](crate::model::StageDeploymentSummary)
+/// See [`StageDeploymentSummary`](crate::model::StageDeploymentSummary).
 pub mod stage_deployment_summary {
 
-    /// A builder for [`StageDeploymentSummary`](crate::model::StageDeploymentSummary)
-    #[non_exhaustive]
+    /// A builder for [`StageDeploymentSummary`](crate::model::StageDeploymentSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deployment_id: std::option::Option<std::string::String>,
@@ -1992,7 +2037,7 @@ pub mod stage_deployment_summary {
             self.deployment_result = input;
             self
         }
-        /// Consumes the builder and constructs a [`StageDeploymentSummary`](crate::model::StageDeploymentSummary)
+        /// Consumes the builder and constructs a [`StageDeploymentSummary`](crate::model::StageDeploymentSummary).
         pub fn build(self) -> crate::model::StageDeploymentSummary {
             crate::model::StageDeploymentSummary {
                 deployment_id: self.deployment_id,
@@ -2006,7 +2051,7 @@ pub mod stage_deployment_summary {
     }
 }
 impl StageDeploymentSummary {
-    /// Creates a new builder-style object to manufacture [`StageDeploymentSummary`](crate::model::StageDeploymentSummary)
+    /// Creates a new builder-style object to manufacture [`StageDeploymentSummary`](crate::model::StageDeploymentSummary).
     pub fn builder() -> crate::model::stage_deployment_summary::Builder {
         crate::model::stage_deployment_summary::Builder::default()
     }
@@ -2017,12 +2062,16 @@ impl StageDeploymentSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SnapshotSummary {
     /// <p>The identifier of the snapshot.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The description of the snapshot.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The timestamp of when the snapshot was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Then timestamp of when the snapshot was last updated.</p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SnapshotSummary {
@@ -2053,11 +2102,10 @@ impl std::fmt::Debug for SnapshotSummary {
         formatter.finish()
     }
 }
-/// See [`SnapshotSummary`](crate::model::SnapshotSummary)
+/// See [`SnapshotSummary`](crate::model::SnapshotSummary).
 pub mod snapshot_summary {
 
-    /// A builder for [`SnapshotSummary`](crate::model::SnapshotSummary)
-    #[non_exhaustive]
+    /// A builder for [`SnapshotSummary`](crate::model::SnapshotSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2112,7 +2160,7 @@ pub mod snapshot_summary {
             self.last_updated = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnapshotSummary`](crate::model::SnapshotSummary)
+        /// Consumes the builder and constructs a [`SnapshotSummary`](crate::model::SnapshotSummary).
         pub fn build(self) -> crate::model::SnapshotSummary {
             crate::model::SnapshotSummary {
                 id: self.id,
@@ -2124,7 +2172,7 @@ pub mod snapshot_summary {
     }
 }
 impl SnapshotSummary {
-    /// Creates a new builder-style object to manufacture [`SnapshotSummary`](crate::model::SnapshotSummary)
+    /// Creates a new builder-style object to manufacture [`SnapshotSummary`](crate::model::SnapshotSummary).
     pub fn builder() -> crate::model::snapshot_summary::Builder {
         crate::model::snapshot_summary::Builder::default()
     }
@@ -2135,15 +2183,20 @@ impl SnapshotSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GeneratedCodeJobDetails {
     /// <p>A presigned URL that can be used to download the generated code.</p>
+    #[doc(hidden)]
     pub s3_url: std::option::Option<std::string::String>,
     /// <p>The status of the generated code job</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::GeneratedCodeJobState>,
     /// <p>The description of the generated code job.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The expiration date and time for the download URL.</p>
     /// <p> The download URL us guaranteed to be available until at least this time. </p>
+    #[doc(hidden)]
     pub expiration_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The identifier for the generated code job.</p>
+    #[doc(hidden)]
     pub generated_code_job_id: std::option::Option<std::string::String>,
 }
 impl GeneratedCodeJobDetails {
@@ -2180,11 +2233,10 @@ impl std::fmt::Debug for GeneratedCodeJobDetails {
         formatter.finish()
     }
 }
-/// See [`GeneratedCodeJobDetails`](crate::model::GeneratedCodeJobDetails)
+/// See [`GeneratedCodeJobDetails`](crate::model::GeneratedCodeJobDetails).
 pub mod generated_code_job_details {
 
-    /// A builder for [`GeneratedCodeJobDetails`](crate::model::GeneratedCodeJobDetails)
-    #[non_exhaustive]
+    /// A builder for [`GeneratedCodeJobDetails`](crate::model::GeneratedCodeJobDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_url: std::option::Option<std::string::String>,
@@ -2255,7 +2307,7 @@ pub mod generated_code_job_details {
             self.generated_code_job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`GeneratedCodeJobDetails`](crate::model::GeneratedCodeJobDetails)
+        /// Consumes the builder and constructs a [`GeneratedCodeJobDetails`](crate::model::GeneratedCodeJobDetails).
         pub fn build(self) -> crate::model::GeneratedCodeJobDetails {
             crate::model::GeneratedCodeJobDetails {
                 s3_url: self.s3_url,
@@ -2268,7 +2320,7 @@ pub mod generated_code_job_details {
     }
 }
 impl GeneratedCodeJobDetails {
-    /// Creates a new builder-style object to manufacture [`GeneratedCodeJobDetails`](crate::model::GeneratedCodeJobDetails)
+    /// Creates a new builder-style object to manufacture [`GeneratedCodeJobDetails`](crate::model::GeneratedCodeJobDetails).
     pub fn builder() -> crate::model::generated_code_job_details::Builder {
         crate::model::generated_code_job_details::Builder::default()
     }
@@ -2342,12 +2394,16 @@ impl AsRef<str> for GeneratedCodeJobState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GameSummary {
     /// <p>The name of the game.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the game.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The state of the game.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::GameState>,
     /// <p>The tags associated with the game.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2382,11 +2438,10 @@ impl std::fmt::Debug for GameSummary {
         formatter.finish()
     }
 }
-/// See [`GameSummary`](crate::model::GameSummary)
+/// See [`GameSummary`](crate::model::GameSummary).
 pub mod game_summary {
 
-    /// A builder for [`GameSummary`](crate::model::GameSummary)
-    #[non_exhaustive]
+    /// A builder for [`GameSummary`](crate::model::GameSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2452,7 +2507,7 @@ pub mod game_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GameSummary`](crate::model::GameSummary)
+        /// Consumes the builder and constructs a [`GameSummary`](crate::model::GameSummary).
         pub fn build(self) -> crate::model::GameSummary {
             crate::model::GameSummary {
                 name: self.name,
@@ -2464,7 +2519,7 @@ pub mod game_summary {
     }
 }
 impl GameSummary {
-    /// Creates a new builder-style object to manufacture [`GameSummary`](crate::model::GameSummary)
+    /// Creates a new builder-style object to manufacture [`GameSummary`](crate::model::GameSummary).
     pub fn builder() -> crate::model::game_summary::Builder {
         crate::model::game_summary::Builder::default()
     }
@@ -2475,12 +2530,16 @@ impl GameSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExtensionVersionDetails {
     /// <p>The namespace (qualifier) of the extension.</p>
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
     /// <p>The name of the extension.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The model that defines the interface for this extension version.</p>
+    #[doc(hidden)]
     pub schema: std::option::Option<std::string::String>,
     /// <p>The version of the extension.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl ExtensionVersionDetails {
@@ -2511,11 +2570,10 @@ impl std::fmt::Debug for ExtensionVersionDetails {
         formatter.finish()
     }
 }
-/// See [`ExtensionVersionDetails`](crate::model::ExtensionVersionDetails)
+/// See [`ExtensionVersionDetails`](crate::model::ExtensionVersionDetails).
 pub mod extension_version_details {
 
-    /// A builder for [`ExtensionVersionDetails`](crate::model::ExtensionVersionDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExtensionVersionDetails`](crate::model::ExtensionVersionDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace: std::option::Option<std::string::String>,
@@ -2564,7 +2622,7 @@ pub mod extension_version_details {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExtensionVersionDetails`](crate::model::ExtensionVersionDetails)
+        /// Consumes the builder and constructs a [`ExtensionVersionDetails`](crate::model::ExtensionVersionDetails).
         pub fn build(self) -> crate::model::ExtensionVersionDetails {
             crate::model::ExtensionVersionDetails {
                 namespace: self.namespace,
@@ -2576,7 +2634,7 @@ pub mod extension_version_details {
     }
 }
 impl ExtensionVersionDetails {
-    /// Creates a new builder-style object to manufacture [`ExtensionVersionDetails`](crate::model::ExtensionVersionDetails)
+    /// Creates a new builder-style object to manufacture [`ExtensionVersionDetails`](crate::model::ExtensionVersionDetails).
     pub fn builder() -> crate::model::extension_version_details::Builder {
         crate::model::extension_version_details::Builder::default()
     }
@@ -2587,10 +2645,13 @@ impl ExtensionVersionDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExtensionDetails {
     /// <p>The namespace (qualifier) of the extension.</p>
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
     /// <p>The name of the extension.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the extension.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl ExtensionDetails {
@@ -2616,11 +2677,10 @@ impl std::fmt::Debug for ExtensionDetails {
         formatter.finish()
     }
 }
-/// See [`ExtensionDetails`](crate::model::ExtensionDetails)
+/// See [`ExtensionDetails`](crate::model::ExtensionDetails).
 pub mod extension_details {
 
-    /// A builder for [`ExtensionDetails`](crate::model::ExtensionDetails)
-    #[non_exhaustive]
+    /// A builder for [`ExtensionDetails`](crate::model::ExtensionDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) namespace: std::option::Option<std::string::String>,
@@ -2658,7 +2718,7 @@ pub mod extension_details {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExtensionDetails`](crate::model::ExtensionDetails)
+        /// Consumes the builder and constructs a [`ExtensionDetails`](crate::model::ExtensionDetails).
         pub fn build(self) -> crate::model::ExtensionDetails {
             crate::model::ExtensionDetails {
                 namespace: self.namespace,
@@ -2669,7 +2729,7 @@ pub mod extension_details {
     }
 }
 impl ExtensionDetails {
-    /// Creates a new builder-style object to manufacture [`ExtensionDetails`](crate::model::ExtensionDetails)
+    /// Creates a new builder-style object to manufacture [`ExtensionDetails`](crate::model::ExtensionDetails).
     pub fn builder() -> crate::model::extension_details::Builder {
         crate::model::extension_details::Builder::default()
     }
@@ -2680,6 +2740,7 @@ impl ExtensionDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportGameConfigurationSource {
     /// <p>The JSON string containing the configuration sections.</p>
+    #[doc(hidden)]
     pub file: std::option::Option<aws_smithy_types::Blob>,
 }
 impl ImportGameConfigurationSource {
@@ -2695,11 +2756,10 @@ impl std::fmt::Debug for ImportGameConfigurationSource {
         formatter.finish()
     }
 }
-/// See [`ImportGameConfigurationSource`](crate::model::ImportGameConfigurationSource)
+/// See [`ImportGameConfigurationSource`](crate::model::ImportGameConfigurationSource).
 pub mod import_game_configuration_source {
 
-    /// A builder for [`ImportGameConfigurationSource`](crate::model::ImportGameConfigurationSource)
-    #[non_exhaustive]
+    /// A builder for [`ImportGameConfigurationSource`](crate::model::ImportGameConfigurationSource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file: std::option::Option<aws_smithy_types::Blob>,
@@ -2715,14 +2775,14 @@ pub mod import_game_configuration_source {
             self.file = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportGameConfigurationSource`](crate::model::ImportGameConfigurationSource)
+        /// Consumes the builder and constructs a [`ImportGameConfigurationSource`](crate::model::ImportGameConfigurationSource).
         pub fn build(self) -> crate::model::ImportGameConfigurationSource {
             crate::model::ImportGameConfigurationSource { file: self.file }
         }
     }
 }
 impl ImportGameConfigurationSource {
-    /// Creates a new builder-style object to manufacture [`ImportGameConfigurationSource`](crate::model::ImportGameConfigurationSource)
+    /// Creates a new builder-style object to manufacture [`ImportGameConfigurationSource`](crate::model::ImportGameConfigurationSource).
     pub fn builder() -> crate::model::import_game_configuration_source::Builder {
         crate::model::import_game_configuration_source::Builder::default()
     }
@@ -2733,8 +2793,10 @@ impl ImportGameConfigurationSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Connection {
     /// <p>The identifier used to indicate a specific WebSocket connection.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The date and time when the connection was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Connection {
@@ -2755,11 +2817,10 @@ impl std::fmt::Debug for Connection {
         formatter.finish()
     }
 }
-/// See [`Connection`](crate::model::Connection)
+/// See [`Connection`](crate::model::Connection).
 pub mod connection {
 
-    /// A builder for [`Connection`](crate::model::Connection)
-    #[non_exhaustive]
+    /// A builder for [`Connection`](crate::model::Connection).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -2789,7 +2850,7 @@ pub mod connection {
             self.created = input;
             self
         }
-        /// Consumes the builder and constructs a [`Connection`](crate::model::Connection)
+        /// Consumes the builder and constructs a [`Connection`](crate::model::Connection).
         pub fn build(self) -> crate::model::Connection {
             crate::model::Connection {
                 id: self.id,
@@ -2799,7 +2860,7 @@ pub mod connection {
     }
 }
 impl Connection {
-    /// Creates a new builder-style object to manufacture [`Connection`](crate::model::Connection)
+    /// Creates a new builder-style object to manufacture [`Connection`](crate::model::Connection).
     pub fn builder() -> crate::model::connection::Builder {
         crate::model::connection::Builder::default()
     }

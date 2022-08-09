@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EncryptionInfo {
     /// <p>The data-volume encryption details.</p>
+    #[doc(hidden)]
     pub encryption_at_rest: std::option::Option<crate::model::EncryptionAtRest>,
     /// <p>The details for encryption in transit.</p>
+    #[doc(hidden)]
     pub encryption_in_transit: std::option::Option<crate::model::EncryptionInTransit>,
 }
 impl EncryptionInfo {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for EncryptionInfo {
         formatter.finish()
     }
 }
-/// See [`EncryptionInfo`](crate::model::EncryptionInfo)
+/// See [`EncryptionInfo`](crate::model::EncryptionInfo).
 pub mod encryption_info {
 
-    /// A builder for [`EncryptionInfo`](crate::model::EncryptionInfo)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionInfo`](crate::model::EncryptionInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) encryption_at_rest: std::option::Option<crate::model::EncryptionAtRest>,
@@ -64,7 +65,7 @@ pub mod encryption_info {
             self.encryption_in_transit = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionInfo`](crate::model::EncryptionInfo)
+        /// Consumes the builder and constructs a [`EncryptionInfo`](crate::model::EncryptionInfo).
         pub fn build(self) -> crate::model::EncryptionInfo {
             crate::model::EncryptionInfo {
                 encryption_at_rest: self.encryption_at_rest,
@@ -74,7 +75,7 @@ pub mod encryption_info {
     }
 }
 impl EncryptionInfo {
-    /// Creates a new builder-style object to manufacture [`EncryptionInfo`](crate::model::EncryptionInfo)
+    /// Creates a new builder-style object to manufacture [`EncryptionInfo`](crate::model::EncryptionInfo).
     pub fn builder() -> crate::model::encryption_info::Builder {
         crate::model::encryption_info::Builder::default()
     }
@@ -89,9 +90,11 @@ pub struct EncryptionInTransit {
     /// <p> TLS_PLAINTEXT means that client-broker communication is enabled for both TLS-encrypted, as well as plaintext data.</p>
     /// <p> PLAINTEXT means that client-broker communication is enabled in plaintext only.</p>
     /// <p>The default value is TLS_PLAINTEXT.</p>
+    #[doc(hidden)]
     pub client_broker: std::option::Option<crate::model::ClientBroker>,
     /// <p>When set to true, it indicates that data communication among the broker nodes of the cluster is encrypted. When set to false, the communication happens in plaintext.</p>
     /// <p>The default value is true.</p>
+    #[doc(hidden)]
     pub in_cluster: bool,
 }
 impl EncryptionInTransit {
@@ -117,11 +120,10 @@ impl std::fmt::Debug for EncryptionInTransit {
         formatter.finish()
     }
 }
-/// See [`EncryptionInTransit`](crate::model::EncryptionInTransit)
+/// See [`EncryptionInTransit`](crate::model::EncryptionInTransit).
 pub mod encryption_in_transit {
 
-    /// A builder for [`EncryptionInTransit`](crate::model::EncryptionInTransit)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionInTransit`](crate::model::EncryptionInTransit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_broker: std::option::Option<crate::model::ClientBroker>,
@@ -161,7 +163,7 @@ pub mod encryption_in_transit {
             self.in_cluster = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionInTransit`](crate::model::EncryptionInTransit)
+        /// Consumes the builder and constructs a [`EncryptionInTransit`](crate::model::EncryptionInTransit).
         pub fn build(self) -> crate::model::EncryptionInTransit {
             crate::model::EncryptionInTransit {
                 client_broker: self.client_broker,
@@ -171,7 +173,7 @@ pub mod encryption_in_transit {
     }
 }
 impl EncryptionInTransit {
-    /// Creates a new builder-style object to manufacture [`EncryptionInTransit`](crate::model::EncryptionInTransit)
+    /// Creates a new builder-style object to manufacture [`EncryptionInTransit`](crate::model::EncryptionInTransit).
     pub fn builder() -> crate::model::encryption_in_transit::Builder {
         crate::model::encryption_in_transit::Builder::default()
     }
@@ -241,6 +243,7 @@ impl AsRef<str> for ClientBroker {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EncryptionAtRest {
     /// <p>The ARN of the AWS KMS key for encrypting data at rest. If you don't specify a KMS key, MSK creates one for you and uses it.</p>
+    #[doc(hidden)]
     pub data_volume_kms_key_id: std::option::Option<std::string::String>,
 }
 impl EncryptionAtRest {
@@ -256,11 +259,10 @@ impl std::fmt::Debug for EncryptionAtRest {
         formatter.finish()
     }
 }
-/// See [`EncryptionAtRest`](crate::model::EncryptionAtRest)
+/// See [`EncryptionAtRest`](crate::model::EncryptionAtRest).
 pub mod encryption_at_rest {
 
-    /// A builder for [`EncryptionAtRest`](crate::model::EncryptionAtRest)
-    #[non_exhaustive]
+    /// A builder for [`EncryptionAtRest`](crate::model::EncryptionAtRest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_volume_kms_key_id: std::option::Option<std::string::String>,
@@ -279,7 +281,7 @@ pub mod encryption_at_rest {
             self.data_volume_kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`EncryptionAtRest`](crate::model::EncryptionAtRest)
+        /// Consumes the builder and constructs a [`EncryptionAtRest`](crate::model::EncryptionAtRest).
         pub fn build(self) -> crate::model::EncryptionAtRest {
             crate::model::EncryptionAtRest {
                 data_volume_kms_key_id: self.data_volume_kms_key_id,
@@ -288,7 +290,7 @@ pub mod encryption_at_rest {
     }
 }
 impl EncryptionAtRest {
-    /// Creates a new builder-style object to manufacture [`EncryptionAtRest`](crate::model::EncryptionAtRest)
+    /// Creates a new builder-style object to manufacture [`EncryptionAtRest`](crate::model::EncryptionAtRest).
     pub fn builder() -> crate::model::encryption_at_rest::Builder {
         crate::model::encryption_at_rest::Builder::default()
     }
@@ -299,10 +301,13 @@ impl EncryptionAtRest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClientAuthentication {
     /// <p>Details for ClientAuthentication using SASL.</p>
+    #[doc(hidden)]
     pub sasl: std::option::Option<crate::model::Sasl>,
     /// <p>Details for ClientAuthentication using TLS.</p>
+    #[doc(hidden)]
     pub tls: std::option::Option<crate::model::Tls>,
     /// <p>Contains information about unauthenticated traffic to the cluster.</p>
+    #[doc(hidden)]
     pub unauthenticated: std::option::Option<crate::model::Unauthenticated>,
 }
 impl ClientAuthentication {
@@ -328,11 +333,10 @@ impl std::fmt::Debug for ClientAuthentication {
         formatter.finish()
     }
 }
-/// See [`ClientAuthentication`](crate::model::ClientAuthentication)
+/// See [`ClientAuthentication`](crate::model::ClientAuthentication).
 pub mod client_authentication {
 
-    /// A builder for [`ClientAuthentication`](crate::model::ClientAuthentication)
-    #[non_exhaustive]
+    /// A builder for [`ClientAuthentication`](crate::model::ClientAuthentication).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sasl: std::option::Option<crate::model::Sasl>,
@@ -373,7 +377,7 @@ pub mod client_authentication {
             self.unauthenticated = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClientAuthentication`](crate::model::ClientAuthentication)
+        /// Consumes the builder and constructs a [`ClientAuthentication`](crate::model::ClientAuthentication).
         pub fn build(self) -> crate::model::ClientAuthentication {
             crate::model::ClientAuthentication {
                 sasl: self.sasl,
@@ -384,7 +388,7 @@ pub mod client_authentication {
     }
 }
 impl ClientAuthentication {
-    /// Creates a new builder-style object to manufacture [`ClientAuthentication`](crate::model::ClientAuthentication)
+    /// Creates a new builder-style object to manufacture [`ClientAuthentication`](crate::model::ClientAuthentication).
     pub fn builder() -> crate::model::client_authentication::Builder {
         crate::model::client_authentication::Builder::default()
     }
@@ -395,6 +399,7 @@ impl ClientAuthentication {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Unauthenticated {
     /// <p>Specifies whether you want to turn on or turn off unauthenticated traffic to your cluster.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl Unauthenticated {
@@ -410,11 +415,10 @@ impl std::fmt::Debug for Unauthenticated {
         formatter.finish()
     }
 }
-/// See [`Unauthenticated`](crate::model::Unauthenticated)
+/// See [`Unauthenticated`](crate::model::Unauthenticated).
 pub mod unauthenticated {
 
-    /// A builder for [`Unauthenticated`](crate::model::Unauthenticated)
-    #[non_exhaustive]
+    /// A builder for [`Unauthenticated`](crate::model::Unauthenticated).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -430,7 +434,7 @@ pub mod unauthenticated {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`Unauthenticated`](crate::model::Unauthenticated)
+        /// Consumes the builder and constructs a [`Unauthenticated`](crate::model::Unauthenticated).
         pub fn build(self) -> crate::model::Unauthenticated {
             crate::model::Unauthenticated {
                 enabled: self.enabled.unwrap_or_default(),
@@ -439,7 +443,7 @@ pub mod unauthenticated {
     }
 }
 impl Unauthenticated {
-    /// Creates a new builder-style object to manufacture [`Unauthenticated`](crate::model::Unauthenticated)
+    /// Creates a new builder-style object to manufacture [`Unauthenticated`](crate::model::Unauthenticated).
     pub fn builder() -> crate::model::unauthenticated::Builder {
         crate::model::unauthenticated::Builder::default()
     }
@@ -450,8 +454,10 @@ impl Unauthenticated {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tls {
     /// <p>List of ACM Certificate Authority ARNs.</p>
+    #[doc(hidden)]
     pub certificate_authority_arn_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specifies whether you want to turn on or turn off TLS authentication.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl Tls {
@@ -475,11 +481,10 @@ impl std::fmt::Debug for Tls {
         formatter.finish()
     }
 }
-/// See [`Tls`](crate::model::Tls)
+/// See [`Tls`](crate::model::Tls).
 pub mod tls {
 
-    /// A builder for [`Tls`](crate::model::Tls)
-    #[non_exhaustive]
+    /// A builder for [`Tls`](crate::model::Tls).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_authority_arn_list:
@@ -519,7 +524,7 @@ pub mod tls {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tls`](crate::model::Tls)
+        /// Consumes the builder and constructs a [`Tls`](crate::model::Tls).
         pub fn build(self) -> crate::model::Tls {
             crate::model::Tls {
                 certificate_authority_arn_list: self.certificate_authority_arn_list,
@@ -529,7 +534,7 @@ pub mod tls {
     }
 }
 impl Tls {
-    /// Creates a new builder-style object to manufacture [`Tls`](crate::model::Tls)
+    /// Creates a new builder-style object to manufacture [`Tls`](crate::model::Tls).
     pub fn builder() -> crate::model::tls::Builder {
         crate::model::tls::Builder::default()
     }
@@ -540,8 +545,10 @@ impl Tls {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Sasl {
     /// <p>Details for SASL/SCRAM client authentication.</p>
+    #[doc(hidden)]
     pub scram: std::option::Option<crate::model::Scram>,
     /// <p>Indicates whether IAM access control is enabled.</p>
+    #[doc(hidden)]
     pub iam: std::option::Option<crate::model::Iam>,
 }
 impl Sasl {
@@ -562,11 +569,10 @@ impl std::fmt::Debug for Sasl {
         formatter.finish()
     }
 }
-/// See [`Sasl`](crate::model::Sasl)
+/// See [`Sasl`](crate::model::Sasl).
 pub mod sasl {
 
-    /// A builder for [`Sasl`](crate::model::Sasl)
-    #[non_exhaustive]
+    /// A builder for [`Sasl`](crate::model::Sasl).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scram: std::option::Option<crate::model::Scram>,
@@ -593,7 +599,7 @@ pub mod sasl {
             self.iam = input;
             self
         }
-        /// Consumes the builder and constructs a [`Sasl`](crate::model::Sasl)
+        /// Consumes the builder and constructs a [`Sasl`](crate::model::Sasl).
         pub fn build(self) -> crate::model::Sasl {
             crate::model::Sasl {
                 scram: self.scram,
@@ -603,7 +609,7 @@ pub mod sasl {
     }
 }
 impl Sasl {
-    /// Creates a new builder-style object to manufacture [`Sasl`](crate::model::Sasl)
+    /// Creates a new builder-style object to manufacture [`Sasl`](crate::model::Sasl).
     pub fn builder() -> crate::model::sasl::Builder {
         crate::model::sasl::Builder::default()
     }
@@ -614,6 +620,7 @@ impl Sasl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Iam {
     /// <p>Indicates whether IAM access control is enabled.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl Iam {
@@ -629,11 +636,10 @@ impl std::fmt::Debug for Iam {
         formatter.finish()
     }
 }
-/// See [`Iam`](crate::model::Iam)
+/// See [`Iam`](crate::model::Iam).
 pub mod iam {
 
-    /// A builder for [`Iam`](crate::model::Iam)
-    #[non_exhaustive]
+    /// A builder for [`Iam`](crate::model::Iam).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -649,7 +655,7 @@ pub mod iam {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`Iam`](crate::model::Iam)
+        /// Consumes the builder and constructs a [`Iam`](crate::model::Iam).
         pub fn build(self) -> crate::model::Iam {
             crate::model::Iam {
                 enabled: self.enabled.unwrap_or_default(),
@@ -658,7 +664,7 @@ pub mod iam {
     }
 }
 impl Iam {
-    /// Creates a new builder-style object to manufacture [`Iam`](crate::model::Iam)
+    /// Creates a new builder-style object to manufacture [`Iam`](crate::model::Iam).
     pub fn builder() -> crate::model::iam::Builder {
         crate::model::iam::Builder::default()
     }
@@ -669,6 +675,7 @@ impl Iam {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Scram {
     /// <p>SASL/SCRAM authentication is enabled or not.</p>
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl Scram {
@@ -684,11 +691,10 @@ impl std::fmt::Debug for Scram {
         formatter.finish()
     }
 }
-/// See [`Scram`](crate::model::Scram)
+/// See [`Scram`](crate::model::Scram).
 pub mod scram {
 
-    /// A builder for [`Scram`](crate::model::Scram)
-    #[non_exhaustive]
+    /// A builder for [`Scram`](crate::model::Scram).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -704,7 +710,7 @@ pub mod scram {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`Scram`](crate::model::Scram)
+        /// Consumes the builder and constructs a [`Scram`](crate::model::Scram).
         pub fn build(self) -> crate::model::Scram {
             crate::model::Scram {
                 enabled: self.enabled.unwrap_or_default(),
@@ -713,7 +719,7 @@ pub mod scram {
     }
 }
 impl Scram {
-    /// Creates a new builder-style object to manufacture [`Scram`](crate::model::Scram)
+    /// Creates a new builder-style object to manufacture [`Scram`](crate::model::Scram).
     pub fn builder() -> crate::model::scram::Builder {
         crate::model::scram::Builder::default()
     }
@@ -724,6 +730,7 @@ impl Scram {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoggingInfo {
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub broker_logs: std::option::Option<crate::model::BrokerLogs>,
 }
 impl LoggingInfo {
@@ -739,11 +746,10 @@ impl std::fmt::Debug for LoggingInfo {
         formatter.finish()
     }
 }
-/// See [`LoggingInfo`](crate::model::LoggingInfo)
+/// See [`LoggingInfo`](crate::model::LoggingInfo).
 pub mod logging_info {
 
-    /// A builder for [`LoggingInfo`](crate::model::LoggingInfo)
-    #[non_exhaustive]
+    /// A builder for [`LoggingInfo`](crate::model::LoggingInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) broker_logs: std::option::Option<crate::model::BrokerLogs>,
@@ -762,7 +768,7 @@ pub mod logging_info {
             self.broker_logs = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoggingInfo`](crate::model::LoggingInfo)
+        /// Consumes the builder and constructs a [`LoggingInfo`](crate::model::LoggingInfo).
         pub fn build(self) -> crate::model::LoggingInfo {
             crate::model::LoggingInfo {
                 broker_logs: self.broker_logs,
@@ -771,7 +777,7 @@ pub mod logging_info {
     }
 }
 impl LoggingInfo {
-    /// Creates a new builder-style object to manufacture [`LoggingInfo`](crate::model::LoggingInfo)
+    /// Creates a new builder-style object to manufacture [`LoggingInfo`](crate::model::LoggingInfo).
     pub fn builder() -> crate::model::logging_info::Builder {
         crate::model::logging_info::Builder::default()
     }
@@ -782,10 +788,13 @@ impl LoggingInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BrokerLogs {
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub cloud_watch_logs: std::option::Option<crate::model::CloudWatchLogs>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub firehose: std::option::Option<crate::model::Firehose>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub s3: std::option::Option<crate::model::S3>,
 }
 impl BrokerLogs {
@@ -811,11 +820,10 @@ impl std::fmt::Debug for BrokerLogs {
         formatter.finish()
     }
 }
-/// See [`BrokerLogs`](crate::model::BrokerLogs)
+/// See [`BrokerLogs`](crate::model::BrokerLogs).
 pub mod broker_logs {
 
-    /// A builder for [`BrokerLogs`](crate::model::BrokerLogs)
-    #[non_exhaustive]
+    /// A builder for [`BrokerLogs`](crate::model::BrokerLogs).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloud_watch_logs: std::option::Option<crate::model::CloudWatchLogs>,
@@ -856,7 +864,7 @@ pub mod broker_logs {
             self.s3 = input;
             self
         }
-        /// Consumes the builder and constructs a [`BrokerLogs`](crate::model::BrokerLogs)
+        /// Consumes the builder and constructs a [`BrokerLogs`](crate::model::BrokerLogs).
         pub fn build(self) -> crate::model::BrokerLogs {
             crate::model::BrokerLogs {
                 cloud_watch_logs: self.cloud_watch_logs,
@@ -867,7 +875,7 @@ pub mod broker_logs {
     }
 }
 impl BrokerLogs {
-    /// Creates a new builder-style object to manufacture [`BrokerLogs`](crate::model::BrokerLogs)
+    /// Creates a new builder-style object to manufacture [`BrokerLogs`](crate::model::BrokerLogs).
     pub fn builder() -> crate::model::broker_logs::Builder {
         crate::model::broker_logs::Builder::default()
     }
@@ -878,10 +886,13 @@ impl BrokerLogs {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct S3 {
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub bucket: std::option::Option<std::string::String>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub enabled: bool,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
 }
 impl S3 {
@@ -907,11 +918,10 @@ impl std::fmt::Debug for S3 {
         formatter.finish()
     }
 }
-/// See [`S3`](crate::model::S3)
+/// See [`S3`](crate::model::S3).
 pub mod s3 {
 
-    /// A builder for [`S3`](crate::model::S3)
-    #[non_exhaustive]
+    /// A builder for [`S3`](crate::model::S3).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket: std::option::Option<std::string::String>,
@@ -949,7 +959,7 @@ pub mod s3 {
             self.prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3`](crate::model::S3)
+        /// Consumes the builder and constructs a [`S3`](crate::model::S3).
         pub fn build(self) -> crate::model::S3 {
             crate::model::S3 {
                 bucket: self.bucket,
@@ -960,7 +970,7 @@ pub mod s3 {
     }
 }
 impl S3 {
-    /// Creates a new builder-style object to manufacture [`S3`](crate::model::S3)
+    /// Creates a new builder-style object to manufacture [`S3`](crate::model::S3).
     pub fn builder() -> crate::model::s3::Builder {
         crate::model::s3::Builder::default()
     }
@@ -971,8 +981,10 @@ impl S3 {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Firehose {
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub delivery_stream: std::option::Option<std::string::String>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub enabled: bool,
 }
 impl Firehose {
@@ -993,11 +1005,10 @@ impl std::fmt::Debug for Firehose {
         formatter.finish()
     }
 }
-/// See [`Firehose`](crate::model::Firehose)
+/// See [`Firehose`](crate::model::Firehose).
 pub mod firehose {
 
-    /// A builder for [`Firehose`](crate::model::Firehose)
-    #[non_exhaustive]
+    /// A builder for [`Firehose`](crate::model::Firehose).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) delivery_stream: std::option::Option<std::string::String>,
@@ -1027,7 +1038,7 @@ pub mod firehose {
             self.enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`Firehose`](crate::model::Firehose)
+        /// Consumes the builder and constructs a [`Firehose`](crate::model::Firehose).
         pub fn build(self) -> crate::model::Firehose {
             crate::model::Firehose {
                 delivery_stream: self.delivery_stream,
@@ -1037,7 +1048,7 @@ pub mod firehose {
     }
 }
 impl Firehose {
-    /// Creates a new builder-style object to manufacture [`Firehose`](crate::model::Firehose)
+    /// Creates a new builder-style object to manufacture [`Firehose`](crate::model::Firehose).
     pub fn builder() -> crate::model::firehose::Builder {
         crate::model::firehose::Builder::default()
     }
@@ -1048,8 +1059,10 @@ impl Firehose {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchLogs {
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub enabled: bool,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub log_group: std::option::Option<std::string::String>,
 }
 impl CloudWatchLogs {
@@ -1070,11 +1083,10 @@ impl std::fmt::Debug for CloudWatchLogs {
         formatter.finish()
     }
 }
-/// See [`CloudWatchLogs`](crate::model::CloudWatchLogs)
+/// See [`CloudWatchLogs`](crate::model::CloudWatchLogs).
 pub mod cloud_watch_logs {
 
-    /// A builder for [`CloudWatchLogs`](crate::model::CloudWatchLogs)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchLogs`](crate::model::CloudWatchLogs).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -1101,7 +1113,7 @@ pub mod cloud_watch_logs {
             self.log_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchLogs`](crate::model::CloudWatchLogs)
+        /// Consumes the builder and constructs a [`CloudWatchLogs`](crate::model::CloudWatchLogs).
         pub fn build(self) -> crate::model::CloudWatchLogs {
             crate::model::CloudWatchLogs {
                 enabled: self.enabled.unwrap_or_default(),
@@ -1111,7 +1123,7 @@ pub mod cloud_watch_logs {
     }
 }
 impl CloudWatchLogs {
-    /// Creates a new builder-style object to manufacture [`CloudWatchLogs`](crate::model::CloudWatchLogs)
+    /// Creates a new builder-style object to manufacture [`CloudWatchLogs`](crate::model::CloudWatchLogs).
     pub fn builder() -> crate::model::cloud_watch_logs::Builder {
         crate::model::cloud_watch_logs::Builder::default()
     }
@@ -1122,6 +1134,7 @@ impl CloudWatchLogs {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OpenMonitoringInfo {
     /// <p>Prometheus settings.</p>
+    #[doc(hidden)]
     pub prometheus: std::option::Option<crate::model::PrometheusInfo>,
 }
 impl OpenMonitoringInfo {
@@ -1137,11 +1150,10 @@ impl std::fmt::Debug for OpenMonitoringInfo {
         formatter.finish()
     }
 }
-/// See [`OpenMonitoringInfo`](crate::model::OpenMonitoringInfo)
+/// See [`OpenMonitoringInfo`](crate::model::OpenMonitoringInfo).
 pub mod open_monitoring_info {
 
-    /// A builder for [`OpenMonitoringInfo`](crate::model::OpenMonitoringInfo)
-    #[non_exhaustive]
+    /// A builder for [`OpenMonitoringInfo`](crate::model::OpenMonitoringInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prometheus: std::option::Option<crate::model::PrometheusInfo>,
@@ -1160,7 +1172,7 @@ pub mod open_monitoring_info {
             self.prometheus = input;
             self
         }
-        /// Consumes the builder and constructs a [`OpenMonitoringInfo`](crate::model::OpenMonitoringInfo)
+        /// Consumes the builder and constructs a [`OpenMonitoringInfo`](crate::model::OpenMonitoringInfo).
         pub fn build(self) -> crate::model::OpenMonitoringInfo {
             crate::model::OpenMonitoringInfo {
                 prometheus: self.prometheus,
@@ -1169,7 +1181,7 @@ pub mod open_monitoring_info {
     }
 }
 impl OpenMonitoringInfo {
-    /// Creates a new builder-style object to manufacture [`OpenMonitoringInfo`](crate::model::OpenMonitoringInfo)
+    /// Creates a new builder-style object to manufacture [`OpenMonitoringInfo`](crate::model::OpenMonitoringInfo).
     pub fn builder() -> crate::model::open_monitoring_info::Builder {
         crate::model::open_monitoring_info::Builder::default()
     }
@@ -1180,8 +1192,10 @@ impl OpenMonitoringInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PrometheusInfo {
     /// <p>Indicates whether you want to turn on or turn off the JMX Exporter.</p>
+    #[doc(hidden)]
     pub jmx_exporter: std::option::Option<crate::model::JmxExporterInfo>,
     /// <p>Indicates whether you want to turn on or turn off the Node Exporter.</p>
+    #[doc(hidden)]
     pub node_exporter: std::option::Option<crate::model::NodeExporterInfo>,
 }
 impl PrometheusInfo {
@@ -1202,11 +1216,10 @@ impl std::fmt::Debug for PrometheusInfo {
         formatter.finish()
     }
 }
-/// See [`PrometheusInfo`](crate::model::PrometheusInfo)
+/// See [`PrometheusInfo`](crate::model::PrometheusInfo).
 pub mod prometheus_info {
 
-    /// A builder for [`PrometheusInfo`](crate::model::PrometheusInfo)
-    #[non_exhaustive]
+    /// A builder for [`PrometheusInfo`](crate::model::PrometheusInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) jmx_exporter: std::option::Option<crate::model::JmxExporterInfo>,
@@ -1239,7 +1252,7 @@ pub mod prometheus_info {
             self.node_exporter = input;
             self
         }
-        /// Consumes the builder and constructs a [`PrometheusInfo`](crate::model::PrometheusInfo)
+        /// Consumes the builder and constructs a [`PrometheusInfo`](crate::model::PrometheusInfo).
         pub fn build(self) -> crate::model::PrometheusInfo {
             crate::model::PrometheusInfo {
                 jmx_exporter: self.jmx_exporter,
@@ -1249,7 +1262,7 @@ pub mod prometheus_info {
     }
 }
 impl PrometheusInfo {
-    /// Creates a new builder-style object to manufacture [`PrometheusInfo`](crate::model::PrometheusInfo)
+    /// Creates a new builder-style object to manufacture [`PrometheusInfo`](crate::model::PrometheusInfo).
     pub fn builder() -> crate::model::prometheus_info::Builder {
         crate::model::prometheus_info::Builder::default()
     }
@@ -1260,6 +1273,7 @@ impl PrometheusInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeExporterInfo {
     /// <p>Indicates whether you want to turn on or turn off the Node Exporter.</p>
+    #[doc(hidden)]
     pub enabled_in_broker: bool,
 }
 impl NodeExporterInfo {
@@ -1275,11 +1289,10 @@ impl std::fmt::Debug for NodeExporterInfo {
         formatter.finish()
     }
 }
-/// See [`NodeExporterInfo`](crate::model::NodeExporterInfo)
+/// See [`NodeExporterInfo`](crate::model::NodeExporterInfo).
 pub mod node_exporter_info {
 
-    /// A builder for [`NodeExporterInfo`](crate::model::NodeExporterInfo)
-    #[non_exhaustive]
+    /// A builder for [`NodeExporterInfo`](crate::model::NodeExporterInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled_in_broker: std::option::Option<bool>,
@@ -1295,7 +1308,7 @@ pub mod node_exporter_info {
             self.enabled_in_broker = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeExporterInfo`](crate::model::NodeExporterInfo)
+        /// Consumes the builder and constructs a [`NodeExporterInfo`](crate::model::NodeExporterInfo).
         pub fn build(self) -> crate::model::NodeExporterInfo {
             crate::model::NodeExporterInfo {
                 enabled_in_broker: self.enabled_in_broker.unwrap_or_default(),
@@ -1304,7 +1317,7 @@ pub mod node_exporter_info {
     }
 }
 impl NodeExporterInfo {
-    /// Creates a new builder-style object to manufacture [`NodeExporterInfo`](crate::model::NodeExporterInfo)
+    /// Creates a new builder-style object to manufacture [`NodeExporterInfo`](crate::model::NodeExporterInfo).
     pub fn builder() -> crate::model::node_exporter_info::Builder {
         crate::model::node_exporter_info::Builder::default()
     }
@@ -1315,6 +1328,7 @@ impl NodeExporterInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JmxExporterInfo {
     /// <p>Indicates whether you want to turn on or turn off the JMX Exporter.</p>
+    #[doc(hidden)]
     pub enabled_in_broker: bool,
 }
 impl JmxExporterInfo {
@@ -1330,11 +1344,10 @@ impl std::fmt::Debug for JmxExporterInfo {
         formatter.finish()
     }
 }
-/// See [`JmxExporterInfo`](crate::model::JmxExporterInfo)
+/// See [`JmxExporterInfo`](crate::model::JmxExporterInfo).
 pub mod jmx_exporter_info {
 
-    /// A builder for [`JmxExporterInfo`](crate::model::JmxExporterInfo)
-    #[non_exhaustive]
+    /// A builder for [`JmxExporterInfo`](crate::model::JmxExporterInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled_in_broker: std::option::Option<bool>,
@@ -1350,7 +1363,7 @@ pub mod jmx_exporter_info {
             self.enabled_in_broker = input;
             self
         }
-        /// Consumes the builder and constructs a [`JmxExporterInfo`](crate::model::JmxExporterInfo)
+        /// Consumes the builder and constructs a [`JmxExporterInfo`](crate::model::JmxExporterInfo).
         pub fn build(self) -> crate::model::JmxExporterInfo {
             crate::model::JmxExporterInfo {
                 enabled_in_broker: self.enabled_in_broker.unwrap_or_default(),
@@ -1359,7 +1372,7 @@ pub mod jmx_exporter_info {
     }
 }
 impl JmxExporterInfo {
-    /// Creates a new builder-style object to manufacture [`JmxExporterInfo`](crate::model::JmxExporterInfo)
+    /// Creates a new builder-style object to manufacture [`JmxExporterInfo`](crate::model::JmxExporterInfo).
     pub fn builder() -> crate::model::jmx_exporter_info::Builder {
         crate::model::jmx_exporter_info::Builder::default()
     }
@@ -1438,6 +1451,7 @@ impl AsRef<str> for EnhancedMonitoring {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectivityInfo {
     /// <p>Public access control for brokers.</p>
+    #[doc(hidden)]
     pub public_access: std::option::Option<crate::model::PublicAccess>,
 }
 impl ConnectivityInfo {
@@ -1453,11 +1467,10 @@ impl std::fmt::Debug for ConnectivityInfo {
         formatter.finish()
     }
 }
-/// See [`ConnectivityInfo`](crate::model::ConnectivityInfo)
+/// See [`ConnectivityInfo`](crate::model::ConnectivityInfo).
 pub mod connectivity_info {
 
-    /// A builder for [`ConnectivityInfo`](crate::model::ConnectivityInfo)
-    #[non_exhaustive]
+    /// A builder for [`ConnectivityInfo`](crate::model::ConnectivityInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) public_access: std::option::Option<crate::model::PublicAccess>,
@@ -1476,7 +1489,7 @@ pub mod connectivity_info {
             self.public_access = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectivityInfo`](crate::model::ConnectivityInfo)
+        /// Consumes the builder and constructs a [`ConnectivityInfo`](crate::model::ConnectivityInfo).
         pub fn build(self) -> crate::model::ConnectivityInfo {
             crate::model::ConnectivityInfo {
                 public_access: self.public_access,
@@ -1485,7 +1498,7 @@ pub mod connectivity_info {
     }
 }
 impl ConnectivityInfo {
-    /// Creates a new builder-style object to manufacture [`ConnectivityInfo`](crate::model::ConnectivityInfo)
+    /// Creates a new builder-style object to manufacture [`ConnectivityInfo`](crate::model::ConnectivityInfo).
     pub fn builder() -> crate::model::connectivity_info::Builder {
         crate::model::connectivity_info::Builder::default()
     }
@@ -1496,6 +1509,7 @@ impl ConnectivityInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublicAccess {
     /// <p>The value DISABLED indicates that public access is turned off. SERVICE_PROVIDED_EIPS indicates that public access is turned on.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
 }
 impl PublicAccess {
@@ -1511,11 +1525,10 @@ impl std::fmt::Debug for PublicAccess {
         formatter.finish()
     }
 }
-/// See [`PublicAccess`](crate::model::PublicAccess)
+/// See [`PublicAccess`](crate::model::PublicAccess).
 pub mod public_access {
 
-    /// A builder for [`PublicAccess`](crate::model::PublicAccess)
-    #[non_exhaustive]
+    /// A builder for [`PublicAccess`](crate::model::PublicAccess).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<std::string::String>,
@@ -1531,7 +1544,7 @@ pub mod public_access {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublicAccess`](crate::model::PublicAccess)
+        /// Consumes the builder and constructs a [`PublicAccess`](crate::model::PublicAccess).
         pub fn build(self) -> crate::model::PublicAccess {
             crate::model::PublicAccess {
                 r#type: self.r#type,
@@ -1540,7 +1553,7 @@ pub mod public_access {
     }
 }
 impl PublicAccess {
-    /// Creates a new builder-style object to manufacture [`PublicAccess`](crate::model::PublicAccess)
+    /// Creates a new builder-style object to manufacture [`PublicAccess`](crate::model::PublicAccess).
     pub fn builder() -> crate::model::public_access::Builder {
         crate::model::public_access::Builder::default()
     }
@@ -1551,10 +1564,13 @@ impl PublicAccess {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigurationRevision {
     /// <p>The time when the configuration revision was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the configuration revision.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The revision number.</p>
+    #[doc(hidden)]
     pub revision: i64,
 }
 impl ConfigurationRevision {
@@ -1580,11 +1596,10 @@ impl std::fmt::Debug for ConfigurationRevision {
         formatter.finish()
     }
 }
-/// See [`ConfigurationRevision`](crate::model::ConfigurationRevision)
+/// See [`ConfigurationRevision`](crate::model::ConfigurationRevision).
 pub mod configuration_revision {
 
-    /// A builder for [`ConfigurationRevision`](crate::model::ConfigurationRevision)
-    #[non_exhaustive]
+    /// A builder for [`ConfigurationRevision`](crate::model::ConfigurationRevision).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -1625,7 +1640,7 @@ pub mod configuration_revision {
             self.revision = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigurationRevision`](crate::model::ConfigurationRevision)
+        /// Consumes the builder and constructs a [`ConfigurationRevision`](crate::model::ConfigurationRevision).
         pub fn build(self) -> crate::model::ConfigurationRevision {
             crate::model::ConfigurationRevision {
                 creation_time: self.creation_time,
@@ -1636,7 +1651,7 @@ pub mod configuration_revision {
     }
 }
 impl ConfigurationRevision {
-    /// Creates a new builder-style object to manufacture [`ConfigurationRevision`](crate::model::ConfigurationRevision)
+    /// Creates a new builder-style object to manufacture [`ConfigurationRevision`](crate::model::ConfigurationRevision).
     pub fn builder() -> crate::model::configuration_revision::Builder {
         crate::model::configuration_revision::Builder::default()
     }
@@ -1647,8 +1662,10 @@ impl ConfigurationRevision {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigurationInfo {
     /// <p>ARN of the configuration to use.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The revision of the configuration to use.</p>
+    #[doc(hidden)]
     pub revision: i64,
 }
 impl ConfigurationInfo {
@@ -1669,11 +1686,10 @@ impl std::fmt::Debug for ConfigurationInfo {
         formatter.finish()
     }
 }
-/// See [`ConfigurationInfo`](crate::model::ConfigurationInfo)
+/// See [`ConfigurationInfo`](crate::model::ConfigurationInfo).
 pub mod configuration_info {
 
-    /// A builder for [`ConfigurationInfo`](crate::model::ConfigurationInfo)
-    #[non_exhaustive]
+    /// A builder for [`ConfigurationInfo`](crate::model::ConfigurationInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1700,7 +1716,7 @@ pub mod configuration_info {
             self.revision = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigurationInfo`](crate::model::ConfigurationInfo)
+        /// Consumes the builder and constructs a [`ConfigurationInfo`](crate::model::ConfigurationInfo).
         pub fn build(self) -> crate::model::ConfigurationInfo {
             crate::model::ConfigurationInfo {
                 arn: self.arn,
@@ -1710,7 +1726,7 @@ pub mod configuration_info {
     }
 }
 impl ConfigurationInfo {
-    /// Creates a new builder-style object to manufacture [`ConfigurationInfo`](crate::model::ConfigurationInfo)
+    /// Creates a new builder-style object to manufacture [`ConfigurationInfo`](crate::model::ConfigurationInfo).
     pub fn builder() -> crate::model::configuration_info::Builder {
         crate::model::configuration_info::Builder::default()
     }
@@ -1721,10 +1737,13 @@ impl ConfigurationInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BrokerEbsVolumeInfo {
     /// <p>The ID of the broker to update.</p>
+    #[doc(hidden)]
     pub kafka_broker_node_id: std::option::Option<std::string::String>,
     /// EBS volume provisioned throughput information.
+    #[doc(hidden)]
     pub provisioned_throughput: std::option::Option<crate::model::ProvisionedThroughput>,
     /// <p>Size of the EBS volume to update.</p>
+    #[doc(hidden)]
     pub volume_size_gb: i32,
 }
 impl BrokerEbsVolumeInfo {
@@ -1752,11 +1771,10 @@ impl std::fmt::Debug for BrokerEbsVolumeInfo {
         formatter.finish()
     }
 }
-/// See [`BrokerEbsVolumeInfo`](crate::model::BrokerEbsVolumeInfo)
+/// See [`BrokerEbsVolumeInfo`](crate::model::BrokerEbsVolumeInfo).
 pub mod broker_ebs_volume_info {
 
-    /// A builder for [`BrokerEbsVolumeInfo`](crate::model::BrokerEbsVolumeInfo)
-    #[non_exhaustive]
+    /// A builder for [`BrokerEbsVolumeInfo`](crate::model::BrokerEbsVolumeInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) kafka_broker_node_id: std::option::Option<std::string::String>,
@@ -1803,7 +1821,7 @@ pub mod broker_ebs_volume_info {
             self.volume_size_gb = input;
             self
         }
-        /// Consumes the builder and constructs a [`BrokerEbsVolumeInfo`](crate::model::BrokerEbsVolumeInfo)
+        /// Consumes the builder and constructs a [`BrokerEbsVolumeInfo`](crate::model::BrokerEbsVolumeInfo).
         pub fn build(self) -> crate::model::BrokerEbsVolumeInfo {
             crate::model::BrokerEbsVolumeInfo {
                 kafka_broker_node_id: self.kafka_broker_node_id,
@@ -1814,7 +1832,7 @@ pub mod broker_ebs_volume_info {
     }
 }
 impl BrokerEbsVolumeInfo {
-    /// Creates a new builder-style object to manufacture [`BrokerEbsVolumeInfo`](crate::model::BrokerEbsVolumeInfo)
+    /// Creates a new builder-style object to manufacture [`BrokerEbsVolumeInfo`](crate::model::BrokerEbsVolumeInfo).
     pub fn builder() -> crate::model::broker_ebs_volume_info::Builder {
         crate::model::broker_ebs_volume_info::Builder::default()
     }
@@ -1825,8 +1843,10 @@ impl BrokerEbsVolumeInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProvisionedThroughput {
     /// Provisioned throughput is enabled or not.
+    #[doc(hidden)]
     pub enabled: bool,
     /// Throughput value of the EBS volumes for the data drive on each kafka broker node in MiB per second.
+    #[doc(hidden)]
     pub volume_throughput: i32,
 }
 impl ProvisionedThroughput {
@@ -1847,11 +1867,10 @@ impl std::fmt::Debug for ProvisionedThroughput {
         formatter.finish()
     }
 }
-/// See [`ProvisionedThroughput`](crate::model::ProvisionedThroughput)
+/// See [`ProvisionedThroughput`](crate::model::ProvisionedThroughput).
 pub mod provisioned_throughput {
 
-    /// A builder for [`ProvisionedThroughput`](crate::model::ProvisionedThroughput)
-    #[non_exhaustive]
+    /// A builder for [`ProvisionedThroughput`](crate::model::ProvisionedThroughput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -1878,7 +1897,7 @@ pub mod provisioned_throughput {
             self.volume_throughput = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvisionedThroughput`](crate::model::ProvisionedThroughput)
+        /// Consumes the builder and constructs a [`ProvisionedThroughput`](crate::model::ProvisionedThroughput).
         pub fn build(self) -> crate::model::ProvisionedThroughput {
             crate::model::ProvisionedThroughput {
                 enabled: self.enabled.unwrap_or_default(),
@@ -1888,7 +1907,7 @@ pub mod provisioned_throughput {
     }
 }
 impl ProvisionedThroughput {
-    /// Creates a new builder-style object to manufacture [`ProvisionedThroughput`](crate::model::ProvisionedThroughput)
+    /// Creates a new builder-style object to manufacture [`ProvisionedThroughput`](crate::model::ProvisionedThroughput).
     pub fn builder() -> crate::model::provisioned_throughput::Builder {
         crate::model::provisioned_throughput::Builder::default()
     }
@@ -1899,16 +1918,22 @@ impl ProvisionedThroughput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeInfo {
     /// <p>The start time.</p>
+    #[doc(hidden)]
     pub added_to_cluster_time: std::option::Option<std::string::String>,
     /// <p>The broker node info.</p>
+    #[doc(hidden)]
     pub broker_node_info: std::option::Option<crate::model::BrokerNodeInfo>,
     /// <p>The instance type.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the node.</p>
+    #[doc(hidden)]
     pub node_arn: std::option::Option<std::string::String>,
     /// <p>The node type.</p>
+    #[doc(hidden)]
     pub node_type: std::option::Option<crate::model::NodeType>,
     /// <p>The ZookeeperNodeInfo.</p>
+    #[doc(hidden)]
     pub zookeeper_node_info: std::option::Option<crate::model::ZookeeperNodeInfo>,
 }
 impl NodeInfo {
@@ -1949,11 +1974,10 @@ impl std::fmt::Debug for NodeInfo {
         formatter.finish()
     }
 }
-/// See [`NodeInfo`](crate::model::NodeInfo)
+/// See [`NodeInfo`](crate::model::NodeInfo).
 pub mod node_info {
 
-    /// A builder for [`NodeInfo`](crate::model::NodeInfo)
-    #[non_exhaustive]
+    /// A builder for [`NodeInfo`](crate::model::NodeInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) added_to_cluster_time: std::option::Option<std::string::String>,
@@ -2036,7 +2060,7 @@ pub mod node_info {
             self.zookeeper_node_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeInfo`](crate::model::NodeInfo)
+        /// Consumes the builder and constructs a [`NodeInfo`](crate::model::NodeInfo).
         pub fn build(self) -> crate::model::NodeInfo {
             crate::model::NodeInfo {
                 added_to_cluster_time: self.added_to_cluster_time,
@@ -2050,7 +2074,7 @@ pub mod node_info {
     }
 }
 impl NodeInfo {
-    /// Creates a new builder-style object to manufacture [`NodeInfo`](crate::model::NodeInfo)
+    /// Creates a new builder-style object to manufacture [`NodeInfo`](crate::model::NodeInfo).
     pub fn builder() -> crate::model::node_info::Builder {
         crate::model::node_info::Builder::default()
     }
@@ -2061,14 +2085,19 @@ impl NodeInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ZookeeperNodeInfo {
     /// <p>The attached elastic network interface of the broker.</p>
+    #[doc(hidden)]
     pub attached_eni_id: std::option::Option<std::string::String>,
     /// <p>The virtual private cloud (VPC) IP address of the client.</p>
+    #[doc(hidden)]
     pub client_vpc_ip_address: std::option::Option<std::string::String>,
     /// <p>Endpoints for accessing the ZooKeeper.</p>
+    #[doc(hidden)]
     pub endpoints: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The role-specific ID for Zookeeper.</p>
+    #[doc(hidden)]
     pub zookeeper_id: f64,
     /// <p>The version of Zookeeper.</p>
+    #[doc(hidden)]
     pub zookeeper_version: std::option::Option<std::string::String>,
 }
 impl ZookeeperNodeInfo {
@@ -2104,11 +2133,10 @@ impl std::fmt::Debug for ZookeeperNodeInfo {
         formatter.finish()
     }
 }
-/// See [`ZookeeperNodeInfo`](crate::model::ZookeeperNodeInfo)
+/// See [`ZookeeperNodeInfo`](crate::model::ZookeeperNodeInfo).
 pub mod zookeeper_node_info {
 
-    /// A builder for [`ZookeeperNodeInfo`](crate::model::ZookeeperNodeInfo)
-    #[non_exhaustive]
+    /// A builder for [`ZookeeperNodeInfo`](crate::model::ZookeeperNodeInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attached_eni_id: std::option::Option<std::string::String>,
@@ -2186,7 +2214,7 @@ pub mod zookeeper_node_info {
             self.zookeeper_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ZookeeperNodeInfo`](crate::model::ZookeeperNodeInfo)
+        /// Consumes the builder and constructs a [`ZookeeperNodeInfo`](crate::model::ZookeeperNodeInfo).
         pub fn build(self) -> crate::model::ZookeeperNodeInfo {
             crate::model::ZookeeperNodeInfo {
                 attached_eni_id: self.attached_eni_id,
@@ -2199,7 +2227,7 @@ pub mod zookeeper_node_info {
     }
 }
 impl ZookeeperNodeInfo {
-    /// Creates a new builder-style object to manufacture [`ZookeeperNodeInfo`](crate::model::ZookeeperNodeInfo)
+    /// Creates a new builder-style object to manufacture [`ZookeeperNodeInfo`](crate::model::ZookeeperNodeInfo).
     pub fn builder() -> crate::model::zookeeper_node_info::Builder {
         crate::model::zookeeper_node_info::Builder::default()
     }
@@ -2261,16 +2289,22 @@ impl AsRef<str> for NodeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BrokerNodeInfo {
     /// <p>The attached elastic network interface of the broker.</p>
+    #[doc(hidden)]
     pub attached_eni_id: std::option::Option<std::string::String>,
     /// <p>The ID of the broker.</p>
+    #[doc(hidden)]
     pub broker_id: f64,
     /// <p>The client subnet to which this broker node belongs.</p>
+    #[doc(hidden)]
     pub client_subnet: std::option::Option<std::string::String>,
     /// <p>The virtual private cloud (VPC) of the client.</p>
+    #[doc(hidden)]
     pub client_vpc_ip_address: std::option::Option<std::string::String>,
     /// <p>Information about the version of software currently deployed on the Apache Kafka brokers in the cluster.</p>
+    #[doc(hidden)]
     pub current_broker_software_info: std::option::Option<crate::model::BrokerSoftwareInfo>,
     /// <p>Endpoints for accessing the broker.</p>
+    #[doc(hidden)]
     pub endpoints: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl BrokerNodeInfo {
@@ -2316,11 +2350,10 @@ impl std::fmt::Debug for BrokerNodeInfo {
         formatter.finish()
     }
 }
-/// See [`BrokerNodeInfo`](crate::model::BrokerNodeInfo)
+/// See [`BrokerNodeInfo`](crate::model::BrokerNodeInfo).
 pub mod broker_node_info {
 
-    /// A builder for [`BrokerNodeInfo`](crate::model::BrokerNodeInfo)
-    #[non_exhaustive]
+    /// A builder for [`BrokerNodeInfo`](crate::model::BrokerNodeInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attached_eni_id: std::option::Option<std::string::String>,
@@ -2416,7 +2449,7 @@ pub mod broker_node_info {
             self.endpoints = input;
             self
         }
-        /// Consumes the builder and constructs a [`BrokerNodeInfo`](crate::model::BrokerNodeInfo)
+        /// Consumes the builder and constructs a [`BrokerNodeInfo`](crate::model::BrokerNodeInfo).
         pub fn build(self) -> crate::model::BrokerNodeInfo {
             crate::model::BrokerNodeInfo {
                 attached_eni_id: self.attached_eni_id,
@@ -2430,7 +2463,7 @@ pub mod broker_node_info {
     }
 }
 impl BrokerNodeInfo {
-    /// Creates a new builder-style object to manufacture [`BrokerNodeInfo`](crate::model::BrokerNodeInfo)
+    /// Creates a new builder-style object to manufacture [`BrokerNodeInfo`](crate::model::BrokerNodeInfo).
     pub fn builder() -> crate::model::broker_node_info::Builder {
         crate::model::broker_node_info::Builder::default()
     }
@@ -2441,10 +2474,13 @@ impl BrokerNodeInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BrokerSoftwareInfo {
     /// <p>The Amazon Resource Name (ARN) of the configuration used for the cluster. This field isn't visible in this preview release.</p>
+    #[doc(hidden)]
     pub configuration_arn: std::option::Option<std::string::String>,
     /// <p>The revision of the configuration to use. This field isn't visible in this preview release.</p>
+    #[doc(hidden)]
     pub configuration_revision: i64,
     /// <p>The version of Apache Kafka.</p>
+    #[doc(hidden)]
     pub kafka_version: std::option::Option<std::string::String>,
 }
 impl BrokerSoftwareInfo {
@@ -2470,11 +2506,10 @@ impl std::fmt::Debug for BrokerSoftwareInfo {
         formatter.finish()
     }
 }
-/// See [`BrokerSoftwareInfo`](crate::model::BrokerSoftwareInfo)
+/// See [`BrokerSoftwareInfo`](crate::model::BrokerSoftwareInfo).
 pub mod broker_software_info {
 
-    /// A builder for [`BrokerSoftwareInfo`](crate::model::BrokerSoftwareInfo)
-    #[non_exhaustive]
+    /// A builder for [`BrokerSoftwareInfo`](crate::model::BrokerSoftwareInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_arn: std::option::Option<std::string::String>,
@@ -2518,7 +2553,7 @@ pub mod broker_software_info {
             self.kafka_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`BrokerSoftwareInfo`](crate::model::BrokerSoftwareInfo)
+        /// Consumes the builder and constructs a [`BrokerSoftwareInfo`](crate::model::BrokerSoftwareInfo).
         pub fn build(self) -> crate::model::BrokerSoftwareInfo {
             crate::model::BrokerSoftwareInfo {
                 configuration_arn: self.configuration_arn,
@@ -2529,7 +2564,7 @@ pub mod broker_software_info {
     }
 }
 impl BrokerSoftwareInfo {
-    /// Creates a new builder-style object to manufacture [`BrokerSoftwareInfo`](crate::model::BrokerSoftwareInfo)
+    /// Creates a new builder-style object to manufacture [`BrokerSoftwareInfo`](crate::model::BrokerSoftwareInfo).
     pub fn builder() -> crate::model::broker_software_info::Builder {
         crate::model::broker_software_info::Builder::default()
     }
@@ -2540,8 +2575,10 @@ impl BrokerSoftwareInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KafkaVersion {
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::KafkaVersionStatus>,
 }
 impl KafkaVersion {
@@ -2562,11 +2599,10 @@ impl std::fmt::Debug for KafkaVersion {
         formatter.finish()
     }
 }
-/// See [`KafkaVersion`](crate::model::KafkaVersion)
+/// See [`KafkaVersion`](crate::model::KafkaVersion).
 pub mod kafka_version {
 
-    /// A builder for [`KafkaVersion`](crate::model::KafkaVersion)
-    #[non_exhaustive]
+    /// A builder for [`KafkaVersion`](crate::model::KafkaVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) version: std::option::Option<std::string::String>,
@@ -2596,7 +2632,7 @@ pub mod kafka_version {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`KafkaVersion`](crate::model::KafkaVersion)
+        /// Consumes the builder and constructs a [`KafkaVersion`](crate::model::KafkaVersion).
         pub fn build(self) -> crate::model::KafkaVersion {
             crate::model::KafkaVersion {
                 version: self.version,
@@ -2606,7 +2642,7 @@ pub mod kafka_version {
     }
 }
 impl KafkaVersion {
-    /// Creates a new builder-style object to manufacture [`KafkaVersion`](crate::model::KafkaVersion)
+    /// Creates a new builder-style object to manufacture [`KafkaVersion`](crate::model::KafkaVersion).
     pub fn builder() -> crate::model::kafka_version::Builder {
         crate::model::kafka_version::Builder::default()
     }
@@ -2672,18 +2708,25 @@ impl AsRef<str> for KafkaVersionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Configuration {
     /// <p>The Amazon Resource Name (ARN) of the configuration.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The time when the configuration was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The description of the configuration.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>An array of the versions of Apache Kafka with which you can use this MSK configuration. You can use this configuration for an MSK cluster only if the Apache Kafka version specified for the cluster appears in this array.</p>
+    #[doc(hidden)]
     pub kafka_versions: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Latest revision of the configuration.</p>
+    #[doc(hidden)]
     pub latest_revision: std::option::Option<crate::model::ConfigurationRevision>,
     /// <p>The name of the configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The state of the configuration. The possible states are ACTIVE, DELETING, and DELETE_FAILED. </p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ConfigurationState>,
 }
 impl Configuration {
@@ -2729,11 +2772,10 @@ impl std::fmt::Debug for Configuration {
         formatter.finish()
     }
 }
-/// See [`Configuration`](crate::model::Configuration)
+/// See [`Configuration`](crate::model::Configuration).
 pub mod configuration {
 
-    /// A builder for [`Configuration`](crate::model::Configuration)
-    #[non_exhaustive]
+    /// A builder for [`Configuration`](crate::model::Configuration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2833,7 +2875,7 @@ pub mod configuration {
             self.state = input;
             self
         }
-        /// Consumes the builder and constructs a [`Configuration`](crate::model::Configuration)
+        /// Consumes the builder and constructs a [`Configuration`](crate::model::Configuration).
         pub fn build(self) -> crate::model::Configuration {
             crate::model::Configuration {
                 arn: self.arn,
@@ -2848,7 +2890,7 @@ pub mod configuration {
     }
 }
 impl Configuration {
-    /// Creates a new builder-style object to manufacture [`Configuration`](crate::model::Configuration)
+    /// Creates a new builder-style object to manufacture [`Configuration`](crate::model::Configuration).
     pub fn builder() -> crate::model::configuration::Builder {
         crate::model::configuration::Builder::default()
     }
@@ -2918,27 +2960,38 @@ impl AsRef<str> for ConfigurationState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Cluster {
     /// <p>The Amazon Resource Name (ARN) that uniquely identifies a cluster operation.</p>
+    #[doc(hidden)]
     pub active_operation_arn: std::option::Option<std::string::String>,
     /// <p>Cluster Type.</p>
+    #[doc(hidden)]
     pub cluster_type: std::option::Option<crate::model::ClusterType>,
     /// <p>The Amazon Resource Name (ARN) that uniquely identifies the cluster.</p>
+    #[doc(hidden)]
     pub cluster_arn: std::option::Option<std::string::String>,
     /// <p>The name of the cluster.</p>
+    #[doc(hidden)]
     pub cluster_name: std::option::Option<std::string::String>,
     /// <p>The time when the cluster was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current version of the MSK cluster.</p>
+    #[doc(hidden)]
     pub current_version: std::option::Option<std::string::String>,
     /// <p>The state of the cluster. The possible states are ACTIVE, CREATING, DELETING, FAILED, HEALING, MAINTENANCE, REBOOTING_BROKER, and UPDATING.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ClusterState>,
     /// <p>State Info for the Amazon MSK cluster.</p>
+    #[doc(hidden)]
     pub state_info: std::option::Option<crate::model::StateInfo>,
     /// <p>Tags attached to the cluster.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>Information about the provisioned cluster.</p>
+    #[doc(hidden)]
     pub provisioned: std::option::Option<crate::model::Provisioned>,
     /// <p>Information about the serverless cluster.</p>
+    #[doc(hidden)]
     pub serverless: std::option::Option<crate::model::Serverless>,
 }
 impl Cluster {
@@ -3007,11 +3060,10 @@ impl std::fmt::Debug for Cluster {
         formatter.finish()
     }
 }
-/// See [`Cluster`](crate::model::Cluster)
+/// See [`Cluster`](crate::model::Cluster).
 pub mod cluster {
 
-    /// A builder for [`Cluster`](crate::model::Cluster)
-    #[non_exhaustive]
+    /// A builder for [`Cluster`](crate::model::Cluster).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) active_operation_arn: std::option::Option<std::string::String>,
@@ -3175,7 +3227,7 @@ pub mod cluster {
             self.serverless = input;
             self
         }
-        /// Consumes the builder and constructs a [`Cluster`](crate::model::Cluster)
+        /// Consumes the builder and constructs a [`Cluster`](crate::model::Cluster).
         pub fn build(self) -> crate::model::Cluster {
             crate::model::Cluster {
                 active_operation_arn: self.active_operation_arn,
@@ -3194,7 +3246,7 @@ pub mod cluster {
     }
 }
 impl Cluster {
-    /// Creates a new builder-style object to manufacture [`Cluster`](crate::model::Cluster)
+    /// Creates a new builder-style object to manufacture [`Cluster`](crate::model::Cluster).
     pub fn builder() -> crate::model::cluster::Builder {
         crate::model::cluster::Builder::default()
     }
@@ -3205,8 +3257,10 @@ impl Cluster {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Serverless {
     /// <p>The configuration of the Amazon VPCs for the cluster.</p>
+    #[doc(hidden)]
     pub vpc_configs: std::option::Option<std::vec::Vec<crate::model::VpcConfig>>,
     /// <p>Includes all client authentication information.</p>
+    #[doc(hidden)]
     pub client_authentication: std::option::Option<crate::model::ServerlessClientAuthentication>,
 }
 impl Serverless {
@@ -3229,11 +3283,10 @@ impl std::fmt::Debug for Serverless {
         formatter.finish()
     }
 }
-/// See [`Serverless`](crate::model::Serverless)
+/// See [`Serverless`](crate::model::Serverless).
 pub mod serverless {
 
-    /// A builder for [`Serverless`](crate::model::Serverless)
-    #[non_exhaustive]
+    /// A builder for [`Serverless`](crate::model::Serverless).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_configs: std::option::Option<std::vec::Vec<crate::model::VpcConfig>>,
@@ -3276,7 +3329,7 @@ pub mod serverless {
             self.client_authentication = input;
             self
         }
-        /// Consumes the builder and constructs a [`Serverless`](crate::model::Serverless)
+        /// Consumes the builder and constructs a [`Serverless`](crate::model::Serverless).
         pub fn build(self) -> crate::model::Serverless {
             crate::model::Serverless {
                 vpc_configs: self.vpc_configs,
@@ -3286,7 +3339,7 @@ pub mod serverless {
     }
 }
 impl Serverless {
-    /// Creates a new builder-style object to manufacture [`Serverless`](crate::model::Serverless)
+    /// Creates a new builder-style object to manufacture [`Serverless`](crate::model::Serverless).
     pub fn builder() -> crate::model::serverless::Builder {
         crate::model::serverless::Builder::default()
     }
@@ -3297,6 +3350,7 @@ impl Serverless {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerlessClientAuthentication {
     /// <p>Details for ClientAuthentication using SASL.</p>
+    #[doc(hidden)]
     pub sasl: std::option::Option<crate::model::ServerlessSasl>,
 }
 impl ServerlessClientAuthentication {
@@ -3312,11 +3366,10 @@ impl std::fmt::Debug for ServerlessClientAuthentication {
         formatter.finish()
     }
 }
-/// See [`ServerlessClientAuthentication`](crate::model::ServerlessClientAuthentication)
+/// See [`ServerlessClientAuthentication`](crate::model::ServerlessClientAuthentication).
 pub mod serverless_client_authentication {
 
-    /// A builder for [`ServerlessClientAuthentication`](crate::model::ServerlessClientAuthentication)
-    #[non_exhaustive]
+    /// A builder for [`ServerlessClientAuthentication`](crate::model::ServerlessClientAuthentication).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sasl: std::option::Option<crate::model::ServerlessSasl>,
@@ -3335,14 +3388,14 @@ pub mod serverless_client_authentication {
             self.sasl = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerlessClientAuthentication`](crate::model::ServerlessClientAuthentication)
+        /// Consumes the builder and constructs a [`ServerlessClientAuthentication`](crate::model::ServerlessClientAuthentication).
         pub fn build(self) -> crate::model::ServerlessClientAuthentication {
             crate::model::ServerlessClientAuthentication { sasl: self.sasl }
         }
     }
 }
 impl ServerlessClientAuthentication {
-    /// Creates a new builder-style object to manufacture [`ServerlessClientAuthentication`](crate::model::ServerlessClientAuthentication)
+    /// Creates a new builder-style object to manufacture [`ServerlessClientAuthentication`](crate::model::ServerlessClientAuthentication).
     pub fn builder() -> crate::model::serverless_client_authentication::Builder {
         crate::model::serverless_client_authentication::Builder::default()
     }
@@ -3353,6 +3406,7 @@ impl ServerlessClientAuthentication {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerlessSasl {
     /// <p>Indicates whether IAM access control is enabled.</p>
+    #[doc(hidden)]
     pub iam: std::option::Option<crate::model::Iam>,
 }
 impl ServerlessSasl {
@@ -3368,11 +3422,10 @@ impl std::fmt::Debug for ServerlessSasl {
         formatter.finish()
     }
 }
-/// See [`ServerlessSasl`](crate::model::ServerlessSasl)
+/// See [`ServerlessSasl`](crate::model::ServerlessSasl).
 pub mod serverless_sasl {
 
-    /// A builder for [`ServerlessSasl`](crate::model::ServerlessSasl)
-    #[non_exhaustive]
+    /// A builder for [`ServerlessSasl`](crate::model::ServerlessSasl).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) iam: std::option::Option<crate::model::Iam>,
@@ -3388,14 +3441,14 @@ pub mod serverless_sasl {
             self.iam = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerlessSasl`](crate::model::ServerlessSasl)
+        /// Consumes the builder and constructs a [`ServerlessSasl`](crate::model::ServerlessSasl).
         pub fn build(self) -> crate::model::ServerlessSasl {
             crate::model::ServerlessSasl { iam: self.iam }
         }
     }
 }
 impl ServerlessSasl {
-    /// Creates a new builder-style object to manufacture [`ServerlessSasl`](crate::model::ServerlessSasl)
+    /// Creates a new builder-style object to manufacture [`ServerlessSasl`](crate::model::ServerlessSasl).
     pub fn builder() -> crate::model::serverless_sasl::Builder {
         crate::model::serverless_sasl::Builder::default()
     }
@@ -3406,8 +3459,10 @@ impl ServerlessSasl {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcConfig {
     /// <p>The IDs of the subnets associated with the cluster.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The IDs of the security groups associated with the cluster.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VpcConfig {
@@ -3428,11 +3483,10 @@ impl std::fmt::Debug for VpcConfig {
         formatter.finish()
     }
 }
-/// See [`VpcConfig`](crate::model::VpcConfig)
+/// See [`VpcConfig`](crate::model::VpcConfig).
 pub mod vpc_config {
 
-    /// A builder for [`VpcConfig`](crate::model::VpcConfig)
-    #[non_exhaustive]
+    /// A builder for [`VpcConfig`](crate::model::VpcConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3477,7 +3531,7 @@ pub mod vpc_config {
             self.security_group_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcConfig`](crate::model::VpcConfig)
+        /// Consumes the builder and constructs a [`VpcConfig`](crate::model::VpcConfig).
         pub fn build(self) -> crate::model::VpcConfig {
             crate::model::VpcConfig {
                 subnet_ids: self.subnet_ids,
@@ -3487,7 +3541,7 @@ pub mod vpc_config {
     }
 }
 impl VpcConfig {
-    /// Creates a new builder-style object to manufacture [`VpcConfig`](crate::model::VpcConfig)
+    /// Creates a new builder-style object to manufacture [`VpcConfig`](crate::model::VpcConfig).
     pub fn builder() -> crate::model::vpc_config::Builder {
         crate::model::vpc_config::Builder::default()
     }
@@ -3498,24 +3552,34 @@ impl VpcConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Provisioned {
     /// <p>Information about the brokers.</p>
+    #[doc(hidden)]
     pub broker_node_group_info: std::option::Option<crate::model::BrokerNodeGroupInfo>,
     /// <p>Information about the Apache Kafka version deployed on the brokers.</p>
+    #[doc(hidden)]
     pub current_broker_software_info: std::option::Option<crate::model::BrokerSoftwareInfo>,
     /// <p>Includes all client authentication information.</p>
+    #[doc(hidden)]
     pub client_authentication: std::option::Option<crate::model::ClientAuthentication>,
     /// <p>Includes all encryption-related information.</p>
+    #[doc(hidden)]
     pub encryption_info: std::option::Option<crate::model::EncryptionInfo>,
     /// <p>Specifies the level of monitoring for the MSK cluster. The possible values are DEFAULT, PER_BROKER, PER_TOPIC_PER_BROKER, and PER_TOPIC_PER_PARTITION.</p>
+    #[doc(hidden)]
     pub enhanced_monitoring: std::option::Option<crate::model::EnhancedMonitoring>,
     /// <p>The settings for open monitoring.</p>
+    #[doc(hidden)]
     pub open_monitoring: std::option::Option<crate::model::OpenMonitoringInfo>,
     /// <p>Log delivery information for the cluster.</p>
+    #[doc(hidden)]
     pub logging_info: std::option::Option<crate::model::LoggingInfo>,
     /// <p>The number of broker nodes in the cluster.</p>
+    #[doc(hidden)]
     pub number_of_broker_nodes: i32,
     /// <p>The connection string to use to connect to the Apache ZooKeeper cluster.</p>
+    #[doc(hidden)]
     pub zookeeper_connect_string: std::option::Option<std::string::String>,
     /// <p>The connection string to use to connect to the Apache ZooKeeper cluster on a TLS port.</p>
+    #[doc(hidden)]
     pub zookeeper_connect_string_tls: std::option::Option<std::string::String>,
 }
 impl Provisioned {
@@ -3588,11 +3652,10 @@ impl std::fmt::Debug for Provisioned {
         formatter.finish()
     }
 }
-/// See [`Provisioned`](crate::model::Provisioned)
+/// See [`Provisioned`](crate::model::Provisioned).
 pub mod provisioned {
 
-    /// A builder for [`Provisioned`](crate::model::Provisioned)
-    #[non_exhaustive]
+    /// A builder for [`Provisioned`](crate::model::Provisioned).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) broker_node_group_info: std::option::Option<crate::model::BrokerNodeGroupInfo>,
@@ -3741,7 +3804,7 @@ pub mod provisioned {
             self.zookeeper_connect_string_tls = input;
             self
         }
-        /// Consumes the builder and constructs a [`Provisioned`](crate::model::Provisioned)
+        /// Consumes the builder and constructs a [`Provisioned`](crate::model::Provisioned).
         pub fn build(self) -> crate::model::Provisioned {
             crate::model::Provisioned {
                 broker_node_group_info: self.broker_node_group_info,
@@ -3759,7 +3822,7 @@ pub mod provisioned {
     }
 }
 impl Provisioned {
-    /// Creates a new builder-style object to manufacture [`Provisioned`](crate::model::Provisioned)
+    /// Creates a new builder-style object to manufacture [`Provisioned`](crate::model::Provisioned).
     pub fn builder() -> crate::model::provisioned::Builder {
         crate::model::provisioned::Builder::default()
     }
@@ -3771,16 +3834,22 @@ impl Provisioned {
 pub struct BrokerNodeGroupInfo {
     /// <p>The distribution of broker nodes across Availability Zones. This is an optional parameter. If you don't specify it, Amazon MSK gives it the value DEFAULT. You can also explicitly set this parameter to the value DEFAULT. No other values are currently allowed.</p>
     /// <p>Amazon MSK distributes the broker nodes evenly across the Availability Zones that correspond to the subnets you provide when you create the cluster.</p>
+    #[doc(hidden)]
     pub broker_az_distribution: std::option::Option<crate::model::BrokerAzDistribution>,
     /// <p>The list of subnets to connect to in the client virtual private cloud (VPC). AWS creates elastic network interfaces inside these subnets. Client applications use elastic network interfaces to produce and consume data. Client subnets can't occupy the Availability Zone with ID use use1-az3.</p>
+    #[doc(hidden)]
     pub client_subnets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The type of Amazon EC2 instances to use for Apache Kafka brokers. The following instance types are allowed: kafka.m5.large, kafka.m5.xlarge, kafka.m5.2xlarge, kafka.m5.4xlarge, kafka.m5.12xlarge, and kafka.m5.24xlarge.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The AWS security groups to associate with the elastic network interfaces in order to specify who can connect to and communicate with the Amazon MSK cluster. If you don't specify a security group, Amazon MSK uses the default security group associated with the VPC.</p>
+    #[doc(hidden)]
     pub security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Contains information about storage volumes attached to MSK broker nodes.</p>
+    #[doc(hidden)]
     pub storage_info: std::option::Option<crate::model::StorageInfo>,
     /// <p>Information about the broker access configuration.</p>
+    #[doc(hidden)]
     pub connectivity_info: std::option::Option<crate::model::ConnectivityInfo>,
 }
 impl BrokerNodeGroupInfo {
@@ -3824,11 +3893,10 @@ impl std::fmt::Debug for BrokerNodeGroupInfo {
         formatter.finish()
     }
 }
-/// See [`BrokerNodeGroupInfo`](crate::model::BrokerNodeGroupInfo)
+/// See [`BrokerNodeGroupInfo`](crate::model::BrokerNodeGroupInfo).
 pub mod broker_node_group_info {
 
-    /// A builder for [`BrokerNodeGroupInfo`](crate::model::BrokerNodeGroupInfo)
-    #[non_exhaustive]
+    /// A builder for [`BrokerNodeGroupInfo`](crate::model::BrokerNodeGroupInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) broker_az_distribution: std::option::Option<crate::model::BrokerAzDistribution>,
@@ -3931,7 +3999,7 @@ pub mod broker_node_group_info {
             self.connectivity_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`BrokerNodeGroupInfo`](crate::model::BrokerNodeGroupInfo)
+        /// Consumes the builder and constructs a [`BrokerNodeGroupInfo`](crate::model::BrokerNodeGroupInfo).
         pub fn build(self) -> crate::model::BrokerNodeGroupInfo {
             crate::model::BrokerNodeGroupInfo {
                 broker_az_distribution: self.broker_az_distribution,
@@ -3945,7 +4013,7 @@ pub mod broker_node_group_info {
     }
 }
 impl BrokerNodeGroupInfo {
-    /// Creates a new builder-style object to manufacture [`BrokerNodeGroupInfo`](crate::model::BrokerNodeGroupInfo)
+    /// Creates a new builder-style object to manufacture [`BrokerNodeGroupInfo`](crate::model::BrokerNodeGroupInfo).
     pub fn builder() -> crate::model::broker_node_group_info::Builder {
         crate::model::broker_node_group_info::Builder::default()
     }
@@ -3956,6 +4024,7 @@ impl BrokerNodeGroupInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StorageInfo {
     /// <p>EBS volume information.</p>
+    #[doc(hidden)]
     pub ebs_storage_info: std::option::Option<crate::model::EbsStorageInfo>,
 }
 impl StorageInfo {
@@ -3971,11 +4040,10 @@ impl std::fmt::Debug for StorageInfo {
         formatter.finish()
     }
 }
-/// See [`StorageInfo`](crate::model::StorageInfo)
+/// See [`StorageInfo`](crate::model::StorageInfo).
 pub mod storage_info {
 
-    /// A builder for [`StorageInfo`](crate::model::StorageInfo)
-    #[non_exhaustive]
+    /// A builder for [`StorageInfo`](crate::model::StorageInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ebs_storage_info: std::option::Option<crate::model::EbsStorageInfo>,
@@ -3994,7 +4062,7 @@ pub mod storage_info {
             self.ebs_storage_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageInfo`](crate::model::StorageInfo)
+        /// Consumes the builder and constructs a [`StorageInfo`](crate::model::StorageInfo).
         pub fn build(self) -> crate::model::StorageInfo {
             crate::model::StorageInfo {
                 ebs_storage_info: self.ebs_storage_info,
@@ -4003,7 +4071,7 @@ pub mod storage_info {
     }
 }
 impl StorageInfo {
-    /// Creates a new builder-style object to manufacture [`StorageInfo`](crate::model::StorageInfo)
+    /// Creates a new builder-style object to manufacture [`StorageInfo`](crate::model::StorageInfo).
     pub fn builder() -> crate::model::storage_info::Builder {
         crate::model::storage_info::Builder::default()
     }
@@ -4014,8 +4082,10 @@ impl StorageInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EbsStorageInfo {
     /// EBS volume provisioned throughput information.
+    #[doc(hidden)]
     pub provisioned_throughput: std::option::Option<crate::model::ProvisionedThroughput>,
     /// <p>The size in GiB of the EBS volume for the data drive on each broker node.</p>
+    #[doc(hidden)]
     pub volume_size: i32,
 }
 impl EbsStorageInfo {
@@ -4038,11 +4108,10 @@ impl std::fmt::Debug for EbsStorageInfo {
         formatter.finish()
     }
 }
-/// See [`EbsStorageInfo`](crate::model::EbsStorageInfo)
+/// See [`EbsStorageInfo`](crate::model::EbsStorageInfo).
 pub mod ebs_storage_info {
 
-    /// A builder for [`EbsStorageInfo`](crate::model::EbsStorageInfo)
-    #[non_exhaustive]
+    /// A builder for [`EbsStorageInfo`](crate::model::EbsStorageInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) provisioned_throughput: std::option::Option<crate::model::ProvisionedThroughput>,
@@ -4075,7 +4144,7 @@ pub mod ebs_storage_info {
             self.volume_size = input;
             self
         }
-        /// Consumes the builder and constructs a [`EbsStorageInfo`](crate::model::EbsStorageInfo)
+        /// Consumes the builder and constructs a [`EbsStorageInfo`](crate::model::EbsStorageInfo).
         pub fn build(self) -> crate::model::EbsStorageInfo {
             crate::model::EbsStorageInfo {
                 provisioned_throughput: self.provisioned_throughput,
@@ -4085,7 +4154,7 @@ pub mod ebs_storage_info {
     }
 }
 impl EbsStorageInfo {
-    /// Creates a new builder-style object to manufacture [`EbsStorageInfo`](crate::model::EbsStorageInfo)
+    /// Creates a new builder-style object to manufacture [`EbsStorageInfo`](crate::model::EbsStorageInfo).
     pub fn builder() -> crate::model::ebs_storage_info::Builder {
         crate::model::ebs_storage_info::Builder::default()
     }
@@ -4148,8 +4217,10 @@ impl AsRef<str> for BrokerAzDistribution {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StateInfo {
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl StateInfo {
@@ -4170,11 +4241,10 @@ impl std::fmt::Debug for StateInfo {
         formatter.finish()
     }
 }
-/// See [`StateInfo`](crate::model::StateInfo)
+/// See [`StateInfo`](crate::model::StateInfo).
 pub mod state_info {
 
-    /// A builder for [`StateInfo`](crate::model::StateInfo)
-    #[non_exhaustive]
+    /// A builder for [`StateInfo`](crate::model::StateInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<std::string::String>,
@@ -4201,7 +4271,7 @@ pub mod state_info {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`StateInfo`](crate::model::StateInfo)
+        /// Consumes the builder and constructs a [`StateInfo`](crate::model::StateInfo).
         pub fn build(self) -> crate::model::StateInfo {
             crate::model::StateInfo {
                 code: self.code,
@@ -4211,7 +4281,7 @@ pub mod state_info {
     }
 }
 impl StateInfo {
-    /// Creates a new builder-style object to manufacture [`StateInfo`](crate::model::StateInfo)
+    /// Creates a new builder-style object to manufacture [`StateInfo`](crate::model::StateInfo).
     pub fn builder() -> crate::model::state_info::Builder {
         crate::model::state_info::Builder::default()
     }
@@ -4365,41 +4435,59 @@ impl AsRef<str> for ClusterType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClusterInfo {
     /// <p>Arn of active cluster operation.</p>
+    #[doc(hidden)]
     pub active_operation_arn: std::option::Option<std::string::String>,
     /// <p>Information about the broker nodes.</p>
+    #[doc(hidden)]
     pub broker_node_group_info: std::option::Option<crate::model::BrokerNodeGroupInfo>,
     /// <p>Includes all client authentication information.</p>
+    #[doc(hidden)]
     pub client_authentication: std::option::Option<crate::model::ClientAuthentication>,
     /// <p>The Amazon Resource Name (ARN) that uniquely identifies the cluster.</p>
+    #[doc(hidden)]
     pub cluster_arn: std::option::Option<std::string::String>,
     /// <p>The name of the cluster.</p>
+    #[doc(hidden)]
     pub cluster_name: std::option::Option<std::string::String>,
     /// <p>The time when the cluster was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Information about the version of software currently deployed on the Apache Kafka brokers in the cluster.</p>
+    #[doc(hidden)]
     pub current_broker_software_info: std::option::Option<crate::model::BrokerSoftwareInfo>,
     /// <p>The current version of the MSK cluster.</p>
+    #[doc(hidden)]
     pub current_version: std::option::Option<std::string::String>,
     /// <p>Includes all encryption-related information.</p>
+    #[doc(hidden)]
     pub encryption_info: std::option::Option<crate::model::EncryptionInfo>,
     /// <p>Specifies which metrics are gathered for the MSK cluster. This property has the following possible values: DEFAULT, PER_BROKER, PER_TOPIC_PER_BROKER, and PER_TOPIC_PER_PARTITION. For a list of the metrics associated with each of these levels of monitoring, see <a href="https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html">Monitoring</a>.</p>
+    #[doc(hidden)]
     pub enhanced_monitoring: std::option::Option<crate::model::EnhancedMonitoring>,
     /// <p>Settings for open monitoring using Prometheus.</p>
+    #[doc(hidden)]
     pub open_monitoring: std::option::Option<crate::model::OpenMonitoring>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub logging_info: std::option::Option<crate::model::LoggingInfo>,
     /// <p>The number of broker nodes in the cluster.</p>
+    #[doc(hidden)]
     pub number_of_broker_nodes: i32,
     /// <p>The state of the cluster. The possible states are ACTIVE, CREATING, DELETING, FAILED, HEALING, MAINTENANCE, REBOOTING_BROKER, and UPDATING.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ClusterState>,
     #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
     pub state_info: std::option::Option<crate::model::StateInfo>,
     /// <p>Tags attached to the cluster.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The connection string to use to connect to the Apache ZooKeeper cluster.</p>
+    #[doc(hidden)]
     pub zookeeper_connect_string: std::option::Option<std::string::String>,
     /// <p>The connection string to use to connect to zookeeper cluster on Tls port.</p>
+    #[doc(hidden)]
     pub zookeeper_connect_string_tls: std::option::Option<std::string::String>,
 }
 impl ClusterInfo {
@@ -4515,11 +4603,10 @@ impl std::fmt::Debug for ClusterInfo {
         formatter.finish()
     }
 }
-/// See [`ClusterInfo`](crate::model::ClusterInfo)
+/// See [`ClusterInfo`](crate::model::ClusterInfo).
 pub mod cluster_info {
 
-    /// A builder for [`ClusterInfo`](crate::model::ClusterInfo)
-    #[non_exhaustive]
+    /// A builder for [`ClusterInfo`](crate::model::ClusterInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) active_operation_arn: std::option::Option<std::string::String>,
@@ -4785,7 +4872,7 @@ pub mod cluster_info {
             self.zookeeper_connect_string_tls = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClusterInfo`](crate::model::ClusterInfo)
+        /// Consumes the builder and constructs a [`ClusterInfo`](crate::model::ClusterInfo).
         pub fn build(self) -> crate::model::ClusterInfo {
             crate::model::ClusterInfo {
                 active_operation_arn: self.active_operation_arn,
@@ -4811,7 +4898,7 @@ pub mod cluster_info {
     }
 }
 impl ClusterInfo {
-    /// Creates a new builder-style object to manufacture [`ClusterInfo`](crate::model::ClusterInfo)
+    /// Creates a new builder-style object to manufacture [`ClusterInfo`](crate::model::ClusterInfo).
     pub fn builder() -> crate::model::cluster_info::Builder {
         crate::model::cluster_info::Builder::default()
     }
@@ -4822,6 +4909,7 @@ impl ClusterInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OpenMonitoring {
     /// <p>Prometheus settings.</p>
+    #[doc(hidden)]
     pub prometheus: std::option::Option<crate::model::Prometheus>,
 }
 impl OpenMonitoring {
@@ -4837,11 +4925,10 @@ impl std::fmt::Debug for OpenMonitoring {
         formatter.finish()
     }
 }
-/// See [`OpenMonitoring`](crate::model::OpenMonitoring)
+/// See [`OpenMonitoring`](crate::model::OpenMonitoring).
 pub mod open_monitoring {
 
-    /// A builder for [`OpenMonitoring`](crate::model::OpenMonitoring)
-    #[non_exhaustive]
+    /// A builder for [`OpenMonitoring`](crate::model::OpenMonitoring).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prometheus: std::option::Option<crate::model::Prometheus>,
@@ -4860,7 +4947,7 @@ pub mod open_monitoring {
             self.prometheus = input;
             self
         }
-        /// Consumes the builder and constructs a [`OpenMonitoring`](crate::model::OpenMonitoring)
+        /// Consumes the builder and constructs a [`OpenMonitoring`](crate::model::OpenMonitoring).
         pub fn build(self) -> crate::model::OpenMonitoring {
             crate::model::OpenMonitoring {
                 prometheus: self.prometheus,
@@ -4869,7 +4956,7 @@ pub mod open_monitoring {
     }
 }
 impl OpenMonitoring {
-    /// Creates a new builder-style object to manufacture [`OpenMonitoring`](crate::model::OpenMonitoring)
+    /// Creates a new builder-style object to manufacture [`OpenMonitoring`](crate::model::OpenMonitoring).
     pub fn builder() -> crate::model::open_monitoring::Builder {
         crate::model::open_monitoring::Builder::default()
     }
@@ -4880,8 +4967,10 @@ impl OpenMonitoring {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Prometheus {
     /// <p>Indicates whether you want to turn on or turn off the JMX Exporter.</p>
+    #[doc(hidden)]
     pub jmx_exporter: std::option::Option<crate::model::JmxExporter>,
     /// <p>Indicates whether you want to turn on or turn off the Node Exporter.</p>
+    #[doc(hidden)]
     pub node_exporter: std::option::Option<crate::model::NodeExporter>,
 }
 impl Prometheus {
@@ -4902,11 +4991,10 @@ impl std::fmt::Debug for Prometheus {
         formatter.finish()
     }
 }
-/// See [`Prometheus`](crate::model::Prometheus)
+/// See [`Prometheus`](crate::model::Prometheus).
 pub mod prometheus {
 
-    /// A builder for [`Prometheus`](crate::model::Prometheus)
-    #[non_exhaustive]
+    /// A builder for [`Prometheus`](crate::model::Prometheus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) jmx_exporter: std::option::Option<crate::model::JmxExporter>,
@@ -4939,7 +5027,7 @@ pub mod prometheus {
             self.node_exporter = input;
             self
         }
-        /// Consumes the builder and constructs a [`Prometheus`](crate::model::Prometheus)
+        /// Consumes the builder and constructs a [`Prometheus`](crate::model::Prometheus).
         pub fn build(self) -> crate::model::Prometheus {
             crate::model::Prometheus {
                 jmx_exporter: self.jmx_exporter,
@@ -4949,7 +5037,7 @@ pub mod prometheus {
     }
 }
 impl Prometheus {
-    /// Creates a new builder-style object to manufacture [`Prometheus`](crate::model::Prometheus)
+    /// Creates a new builder-style object to manufacture [`Prometheus`](crate::model::Prometheus).
     pub fn builder() -> crate::model::prometheus::Builder {
         crate::model::prometheus::Builder::default()
     }
@@ -4960,6 +5048,7 @@ impl Prometheus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NodeExporter {
     /// <p>Indicates whether you want to turn on or turn off the Node Exporter.</p>
+    #[doc(hidden)]
     pub enabled_in_broker: bool,
 }
 impl NodeExporter {
@@ -4975,11 +5064,10 @@ impl std::fmt::Debug for NodeExporter {
         formatter.finish()
     }
 }
-/// See [`NodeExporter`](crate::model::NodeExporter)
+/// See [`NodeExporter`](crate::model::NodeExporter).
 pub mod node_exporter {
 
-    /// A builder for [`NodeExporter`](crate::model::NodeExporter)
-    #[non_exhaustive]
+    /// A builder for [`NodeExporter`](crate::model::NodeExporter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled_in_broker: std::option::Option<bool>,
@@ -4995,7 +5083,7 @@ pub mod node_exporter {
             self.enabled_in_broker = input;
             self
         }
-        /// Consumes the builder and constructs a [`NodeExporter`](crate::model::NodeExporter)
+        /// Consumes the builder and constructs a [`NodeExporter`](crate::model::NodeExporter).
         pub fn build(self) -> crate::model::NodeExporter {
             crate::model::NodeExporter {
                 enabled_in_broker: self.enabled_in_broker.unwrap_or_default(),
@@ -5004,7 +5092,7 @@ pub mod node_exporter {
     }
 }
 impl NodeExporter {
-    /// Creates a new builder-style object to manufacture [`NodeExporter`](crate::model::NodeExporter)
+    /// Creates a new builder-style object to manufacture [`NodeExporter`](crate::model::NodeExporter).
     pub fn builder() -> crate::model::node_exporter::Builder {
         crate::model::node_exporter::Builder::default()
     }
@@ -5015,6 +5103,7 @@ impl NodeExporter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JmxExporter {
     /// <p>Indicates whether you want to turn on or turn off the JMX Exporter.</p>
+    #[doc(hidden)]
     pub enabled_in_broker: bool,
 }
 impl JmxExporter {
@@ -5030,11 +5119,10 @@ impl std::fmt::Debug for JmxExporter {
         formatter.finish()
     }
 }
-/// See [`JmxExporter`](crate::model::JmxExporter)
+/// See [`JmxExporter`](crate::model::JmxExporter).
 pub mod jmx_exporter {
 
-    /// A builder for [`JmxExporter`](crate::model::JmxExporter)
-    #[non_exhaustive]
+    /// A builder for [`JmxExporter`](crate::model::JmxExporter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled_in_broker: std::option::Option<bool>,
@@ -5050,7 +5138,7 @@ pub mod jmx_exporter {
             self.enabled_in_broker = input;
             self
         }
-        /// Consumes the builder and constructs a [`JmxExporter`](crate::model::JmxExporter)
+        /// Consumes the builder and constructs a [`JmxExporter`](crate::model::JmxExporter).
         pub fn build(self) -> crate::model::JmxExporter {
             crate::model::JmxExporter {
                 enabled_in_broker: self.enabled_in_broker.unwrap_or_default(),
@@ -5059,7 +5147,7 @@ pub mod jmx_exporter {
     }
 }
 impl JmxExporter {
-    /// Creates a new builder-style object to manufacture [`JmxExporter`](crate::model::JmxExporter)
+    /// Creates a new builder-style object to manufacture [`JmxExporter`](crate::model::JmxExporter).
     pub fn builder() -> crate::model::jmx_exporter::Builder {
         crate::model::jmx_exporter::Builder::default()
     }
@@ -5070,26 +5158,37 @@ impl JmxExporter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClusterOperationInfo {
     /// <p>The ID of the API request that triggered this operation.</p>
+    #[doc(hidden)]
     pub client_request_id: std::option::Option<std::string::String>,
     /// <p>ARN of the cluster.</p>
+    #[doc(hidden)]
     pub cluster_arn: std::option::Option<std::string::String>,
     /// <p>The time that the operation was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the operation finished.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Describes the error if the operation fails.</p>
+    #[doc(hidden)]
     pub error_info: std::option::Option<crate::model::ErrorInfo>,
     /// <p>ARN of the cluster operation.</p>
+    #[doc(hidden)]
     pub operation_arn: std::option::Option<std::string::String>,
     /// <p>State of the cluster operation.</p>
+    #[doc(hidden)]
     pub operation_state: std::option::Option<std::string::String>,
     /// <p>Steps completed during the operation.</p>
+    #[doc(hidden)]
     pub operation_steps: std::option::Option<std::vec::Vec<crate::model::ClusterOperationStep>>,
     /// <p>Type of the cluster operation.</p>
+    #[doc(hidden)]
     pub operation_type: std::option::Option<std::string::String>,
     /// <p>Information about cluster attributes before a cluster is updated.</p>
+    #[doc(hidden)]
     pub source_cluster_info: std::option::Option<crate::model::MutableClusterInfo>,
     /// <p>Information about cluster attributes after a cluster is updated.</p>
+    #[doc(hidden)]
     pub target_cluster_info: std::option::Option<crate::model::MutableClusterInfo>,
 }
 impl ClusterOperationInfo {
@@ -5155,11 +5254,10 @@ impl std::fmt::Debug for ClusterOperationInfo {
         formatter.finish()
     }
 }
-/// See [`ClusterOperationInfo`](crate::model::ClusterOperationInfo)
+/// See [`ClusterOperationInfo`](crate::model::ClusterOperationInfo).
 pub mod cluster_operation_info {
 
-    /// A builder for [`ClusterOperationInfo`](crate::model::ClusterOperationInfo)
-    #[non_exhaustive]
+    /// A builder for [`ClusterOperationInfo`](crate::model::ClusterOperationInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_request_id: std::option::Option<std::string::String>,
@@ -5322,7 +5420,7 @@ pub mod cluster_operation_info {
             self.target_cluster_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClusterOperationInfo`](crate::model::ClusterOperationInfo)
+        /// Consumes the builder and constructs a [`ClusterOperationInfo`](crate::model::ClusterOperationInfo).
         pub fn build(self) -> crate::model::ClusterOperationInfo {
             crate::model::ClusterOperationInfo {
                 client_request_id: self.client_request_id,
@@ -5341,7 +5439,7 @@ pub mod cluster_operation_info {
     }
 }
 impl ClusterOperationInfo {
-    /// Creates a new builder-style object to manufacture [`ClusterOperationInfo`](crate::model::ClusterOperationInfo)
+    /// Creates a new builder-style object to manufacture [`ClusterOperationInfo`](crate::model::ClusterOperationInfo).
     pub fn builder() -> crate::model::cluster_operation_info::Builder {
         crate::model::cluster_operation_info::Builder::default()
     }
@@ -5352,27 +5450,38 @@ impl ClusterOperationInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MutableClusterInfo {
     /// <p>Specifies the size of the EBS volume and the ID of the associated broker.</p>
+    #[doc(hidden)]
     pub broker_ebs_volume_info:
         std::option::Option<std::vec::Vec<crate::model::BrokerEbsVolumeInfo>>,
     /// <p>Information about the changes in the configuration of the brokers.</p>
+    #[doc(hidden)]
     pub configuration_info: std::option::Option<crate::model::ConfigurationInfo>,
     /// <p>The number of broker nodes in the cluster.</p>
+    #[doc(hidden)]
     pub number_of_broker_nodes: i32,
     /// <p>Specifies which Apache Kafka metrics Amazon MSK gathers and sends to Amazon CloudWatch for this cluster.</p>
+    #[doc(hidden)]
     pub enhanced_monitoring: std::option::Option<crate::model::EnhancedMonitoring>,
     /// <p>The settings for open monitoring.</p>
+    #[doc(hidden)]
     pub open_monitoring: std::option::Option<crate::model::OpenMonitoring>,
     /// <p>The Apache Kafka version.</p>
+    #[doc(hidden)]
     pub kafka_version: std::option::Option<std::string::String>,
     /// <p>You can configure your MSK cluster to send broker logs to different destination types. This is a container for the configuration details related to broker logs.</p>
+    #[doc(hidden)]
     pub logging_info: std::option::Option<crate::model::LoggingInfo>,
     /// <p>Information about the Amazon MSK broker type.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>Includes all client authentication information.</p>
+    #[doc(hidden)]
     pub client_authentication: std::option::Option<crate::model::ClientAuthentication>,
     /// <p>Includes all encryption-related information.</p>
+    #[doc(hidden)]
     pub encryption_info: std::option::Option<crate::model::EncryptionInfo>,
     /// <p>Information about the broker access configuration.</p>
+    #[doc(hidden)]
     pub connectivity_info: std::option::Option<crate::model::ConnectivityInfo>,
 }
 impl MutableClusterInfo {
@@ -5442,11 +5551,10 @@ impl std::fmt::Debug for MutableClusterInfo {
         formatter.finish()
     }
 }
-/// See [`MutableClusterInfo`](crate::model::MutableClusterInfo)
+/// See [`MutableClusterInfo`](crate::model::MutableClusterInfo).
 pub mod mutable_cluster_info {
 
-    /// A builder for [`MutableClusterInfo`](crate::model::MutableClusterInfo)
-    #[non_exhaustive]
+    /// A builder for [`MutableClusterInfo`](crate::model::MutableClusterInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) broker_ebs_volume_info:
@@ -5609,7 +5717,7 @@ pub mod mutable_cluster_info {
             self.connectivity_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`MutableClusterInfo`](crate::model::MutableClusterInfo)
+        /// Consumes the builder and constructs a [`MutableClusterInfo`](crate::model::MutableClusterInfo).
         pub fn build(self) -> crate::model::MutableClusterInfo {
             crate::model::MutableClusterInfo {
                 broker_ebs_volume_info: self.broker_ebs_volume_info,
@@ -5628,7 +5736,7 @@ pub mod mutable_cluster_info {
     }
 }
 impl MutableClusterInfo {
-    /// Creates a new builder-style object to manufacture [`MutableClusterInfo`](crate::model::MutableClusterInfo)
+    /// Creates a new builder-style object to manufacture [`MutableClusterInfo`](crate::model::MutableClusterInfo).
     pub fn builder() -> crate::model::mutable_cluster_info::Builder {
         crate::model::mutable_cluster_info::Builder::default()
     }
@@ -5639,8 +5747,10 @@ impl MutableClusterInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClusterOperationStep {
     /// <p>Information about the step and its status.</p>
+    #[doc(hidden)]
     pub step_info: std::option::Option<crate::model::ClusterOperationStepInfo>,
     /// <p>The name of the step.</p>
+    #[doc(hidden)]
     pub step_name: std::option::Option<std::string::String>,
 }
 impl ClusterOperationStep {
@@ -5661,11 +5771,10 @@ impl std::fmt::Debug for ClusterOperationStep {
         formatter.finish()
     }
 }
-/// See [`ClusterOperationStep`](crate::model::ClusterOperationStep)
+/// See [`ClusterOperationStep`](crate::model::ClusterOperationStep).
 pub mod cluster_operation_step {
 
-    /// A builder for [`ClusterOperationStep`](crate::model::ClusterOperationStep)
-    #[non_exhaustive]
+    /// A builder for [`ClusterOperationStep`](crate::model::ClusterOperationStep).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) step_info: std::option::Option<crate::model::ClusterOperationStepInfo>,
@@ -5695,7 +5804,7 @@ pub mod cluster_operation_step {
             self.step_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClusterOperationStep`](crate::model::ClusterOperationStep)
+        /// Consumes the builder and constructs a [`ClusterOperationStep`](crate::model::ClusterOperationStep).
         pub fn build(self) -> crate::model::ClusterOperationStep {
             crate::model::ClusterOperationStep {
                 step_info: self.step_info,
@@ -5705,7 +5814,7 @@ pub mod cluster_operation_step {
     }
 }
 impl ClusterOperationStep {
-    /// Creates a new builder-style object to manufacture [`ClusterOperationStep`](crate::model::ClusterOperationStep)
+    /// Creates a new builder-style object to manufacture [`ClusterOperationStep`](crate::model::ClusterOperationStep).
     pub fn builder() -> crate::model::cluster_operation_step::Builder {
         crate::model::cluster_operation_step::Builder::default()
     }
@@ -5716,6 +5825,7 @@ impl ClusterOperationStep {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClusterOperationStepInfo {
     /// <p>The steps current status.</p>
+    #[doc(hidden)]
     pub step_status: std::option::Option<std::string::String>,
 }
 impl ClusterOperationStepInfo {
@@ -5731,11 +5841,10 @@ impl std::fmt::Debug for ClusterOperationStepInfo {
         formatter.finish()
     }
 }
-/// See [`ClusterOperationStepInfo`](crate::model::ClusterOperationStepInfo)
+/// See [`ClusterOperationStepInfo`](crate::model::ClusterOperationStepInfo).
 pub mod cluster_operation_step_info {
 
-    /// A builder for [`ClusterOperationStepInfo`](crate::model::ClusterOperationStepInfo)
-    #[non_exhaustive]
+    /// A builder for [`ClusterOperationStepInfo`](crate::model::ClusterOperationStepInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) step_status: std::option::Option<std::string::String>,
@@ -5751,7 +5860,7 @@ pub mod cluster_operation_step_info {
             self.step_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClusterOperationStepInfo`](crate::model::ClusterOperationStepInfo)
+        /// Consumes the builder and constructs a [`ClusterOperationStepInfo`](crate::model::ClusterOperationStepInfo).
         pub fn build(self) -> crate::model::ClusterOperationStepInfo {
             crate::model::ClusterOperationStepInfo {
                 step_status: self.step_status,
@@ -5760,7 +5869,7 @@ pub mod cluster_operation_step_info {
     }
 }
 impl ClusterOperationStepInfo {
-    /// Creates a new builder-style object to manufacture [`ClusterOperationStepInfo`](crate::model::ClusterOperationStepInfo)
+    /// Creates a new builder-style object to manufacture [`ClusterOperationStepInfo`](crate::model::ClusterOperationStepInfo).
     pub fn builder() -> crate::model::cluster_operation_step_info::Builder {
         crate::model::cluster_operation_step_info::Builder::default()
     }
@@ -5771,8 +5880,10 @@ impl ClusterOperationStepInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ErrorInfo {
     /// <p>A number describing the error programmatically.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>An optional field to provide more details about the error.</p>
+    #[doc(hidden)]
     pub error_string: std::option::Option<std::string::String>,
 }
 impl ErrorInfo {
@@ -5793,11 +5904,10 @@ impl std::fmt::Debug for ErrorInfo {
         formatter.finish()
     }
 }
-/// See [`ErrorInfo`](crate::model::ErrorInfo)
+/// See [`ErrorInfo`](crate::model::ErrorInfo).
 pub mod error_info {
 
-    /// A builder for [`ErrorInfo`](crate::model::ErrorInfo)
-    #[non_exhaustive]
+    /// A builder for [`ErrorInfo`](crate::model::ErrorInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_code: std::option::Option<std::string::String>,
@@ -5824,7 +5934,7 @@ pub mod error_info {
             self.error_string = input;
             self
         }
-        /// Consumes the builder and constructs a [`ErrorInfo`](crate::model::ErrorInfo)
+        /// Consumes the builder and constructs a [`ErrorInfo`](crate::model::ErrorInfo).
         pub fn build(self) -> crate::model::ErrorInfo {
             crate::model::ErrorInfo {
                 error_code: self.error_code,
@@ -5834,7 +5944,7 @@ pub mod error_info {
     }
 }
 impl ErrorInfo {
-    /// Creates a new builder-style object to manufacture [`ErrorInfo`](crate::model::ErrorInfo)
+    /// Creates a new builder-style object to manufacture [`ErrorInfo`](crate::model::ErrorInfo).
     pub fn builder() -> crate::model::error_info::Builder {
         crate::model::error_info::Builder::default()
     }
@@ -5845,8 +5955,10 @@ impl ErrorInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CompatibleKafkaVersion {
     /// <p>An Apache Kafka version.</p>
+    #[doc(hidden)]
     pub source_version: std::option::Option<std::string::String>,
     /// <p>A list of Apache Kafka versions.</p>
+    #[doc(hidden)]
     pub target_versions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CompatibleKafkaVersion {
@@ -5867,11 +5979,10 @@ impl std::fmt::Debug for CompatibleKafkaVersion {
         formatter.finish()
     }
 }
-/// See [`CompatibleKafkaVersion`](crate::model::CompatibleKafkaVersion)
+/// See [`CompatibleKafkaVersion`](crate::model::CompatibleKafkaVersion).
 pub mod compatible_kafka_version {
 
-    /// A builder for [`CompatibleKafkaVersion`](crate::model::CompatibleKafkaVersion)
-    #[non_exhaustive]
+    /// A builder for [`CompatibleKafkaVersion`](crate::model::CompatibleKafkaVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_version: std::option::Option<std::string::String>,
@@ -5910,7 +6021,7 @@ pub mod compatible_kafka_version {
             self.target_versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompatibleKafkaVersion`](crate::model::CompatibleKafkaVersion)
+        /// Consumes the builder and constructs a [`CompatibleKafkaVersion`](crate::model::CompatibleKafkaVersion).
         pub fn build(self) -> crate::model::CompatibleKafkaVersion {
             crate::model::CompatibleKafkaVersion {
                 source_version: self.source_version,
@@ -5920,7 +6031,7 @@ pub mod compatible_kafka_version {
     }
 }
 impl CompatibleKafkaVersion {
-    /// Creates a new builder-style object to manufacture [`CompatibleKafkaVersion`](crate::model::CompatibleKafkaVersion)
+    /// Creates a new builder-style object to manufacture [`CompatibleKafkaVersion`](crate::model::CompatibleKafkaVersion).
     pub fn builder() -> crate::model::compatible_kafka_version::Builder {
         crate::model::compatible_kafka_version::Builder::default()
     }
@@ -5931,8 +6042,10 @@ impl CompatibleKafkaVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerlessRequest {
     /// <p>The configuration of the Amazon VPCs for the cluster.</p>
+    #[doc(hidden)]
     pub vpc_configs: std::option::Option<std::vec::Vec<crate::model::VpcConfig>>,
     /// <p>Includes all client authentication information.</p>
+    #[doc(hidden)]
     pub client_authentication: std::option::Option<crate::model::ServerlessClientAuthentication>,
 }
 impl ServerlessRequest {
@@ -5955,11 +6068,10 @@ impl std::fmt::Debug for ServerlessRequest {
         formatter.finish()
     }
 }
-/// See [`ServerlessRequest`](crate::model::ServerlessRequest)
+/// See [`ServerlessRequest`](crate::model::ServerlessRequest).
 pub mod serverless_request {
 
-    /// A builder for [`ServerlessRequest`](crate::model::ServerlessRequest)
-    #[non_exhaustive]
+    /// A builder for [`ServerlessRequest`](crate::model::ServerlessRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vpc_configs: std::option::Option<std::vec::Vec<crate::model::VpcConfig>>,
@@ -6002,7 +6114,7 @@ pub mod serverless_request {
             self.client_authentication = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServerlessRequest`](crate::model::ServerlessRequest)
+        /// Consumes the builder and constructs a [`ServerlessRequest`](crate::model::ServerlessRequest).
         pub fn build(self) -> crate::model::ServerlessRequest {
             crate::model::ServerlessRequest {
                 vpc_configs: self.vpc_configs,
@@ -6012,7 +6124,7 @@ pub mod serverless_request {
     }
 }
 impl ServerlessRequest {
-    /// Creates a new builder-style object to manufacture [`ServerlessRequest`](crate::model::ServerlessRequest)
+    /// Creates a new builder-style object to manufacture [`ServerlessRequest`](crate::model::ServerlessRequest).
     pub fn builder() -> crate::model::serverless_request::Builder {
         crate::model::serverless_request::Builder::default()
     }
@@ -6023,22 +6135,31 @@ impl ServerlessRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ProvisionedRequest {
     /// <p>Information about the brokers.</p>
+    #[doc(hidden)]
     pub broker_node_group_info: std::option::Option<crate::model::BrokerNodeGroupInfo>,
     /// <p>Includes all client authentication information.</p>
+    #[doc(hidden)]
     pub client_authentication: std::option::Option<crate::model::ClientAuthentication>,
     /// <p>Represents the configuration that you want Amazon MSK to use for the brokers in a cluster.</p>
+    #[doc(hidden)]
     pub configuration_info: std::option::Option<crate::model::ConfigurationInfo>,
     /// <p>Includes all encryption-related information.</p>
+    #[doc(hidden)]
     pub encryption_info: std::option::Option<crate::model::EncryptionInfo>,
     /// <p>Specifies the level of monitoring for the MSK cluster. The possible values are DEFAULT, PER_BROKER, PER_TOPIC_PER_BROKER, and PER_TOPIC_PER_PARTITION.</p>
+    #[doc(hidden)]
     pub enhanced_monitoring: std::option::Option<crate::model::EnhancedMonitoring>,
     /// <p>The settings for open monitoring.</p>
+    #[doc(hidden)]
     pub open_monitoring: std::option::Option<crate::model::OpenMonitoringInfo>,
     /// <p>The Apache Kafka version that you want for the cluster.</p>
+    #[doc(hidden)]
     pub kafka_version: std::option::Option<std::string::String>,
     /// <p>Log delivery information for the cluster.</p>
+    #[doc(hidden)]
     pub logging_info: std::option::Option<crate::model::LoggingInfo>,
     /// <p>The number of broker nodes in the cluster.</p>
+    #[doc(hidden)]
     pub number_of_broker_nodes: i32,
 }
 impl ProvisionedRequest {
@@ -6098,11 +6219,10 @@ impl std::fmt::Debug for ProvisionedRequest {
         formatter.finish()
     }
 }
-/// See [`ProvisionedRequest`](crate::model::ProvisionedRequest)
+/// See [`ProvisionedRequest`](crate::model::ProvisionedRequest).
 pub mod provisioned_request {
 
-    /// A builder for [`ProvisionedRequest`](crate::model::ProvisionedRequest)
-    #[non_exhaustive]
+    /// A builder for [`ProvisionedRequest`](crate::model::ProvisionedRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) broker_node_group_info: std::option::Option<crate::model::BrokerNodeGroupInfo>,
@@ -6230,7 +6350,7 @@ pub mod provisioned_request {
             self.number_of_broker_nodes = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvisionedRequest`](crate::model::ProvisionedRequest)
+        /// Consumes the builder and constructs a [`ProvisionedRequest`](crate::model::ProvisionedRequest).
         pub fn build(self) -> crate::model::ProvisionedRequest {
             crate::model::ProvisionedRequest {
                 broker_node_group_info: self.broker_node_group_info,
@@ -6247,7 +6367,7 @@ pub mod provisioned_request {
     }
 }
 impl ProvisionedRequest {
-    /// Creates a new builder-style object to manufacture [`ProvisionedRequest`](crate::model::ProvisionedRequest)
+    /// Creates a new builder-style object to manufacture [`ProvisionedRequest`](crate::model::ProvisionedRequest).
     pub fn builder() -> crate::model::provisioned_request::Builder {
         crate::model::provisioned_request::Builder::default()
     }
@@ -6258,10 +6378,13 @@ impl ProvisionedRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UnprocessedScramSecret {
     /// <p>Error code for associate/disassociate failure.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>Error message for associate/disassociate failure.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>AWS Secrets Manager secret ARN.</p>
+    #[doc(hidden)]
     pub secret_arn: std::option::Option<std::string::String>,
 }
 impl UnprocessedScramSecret {
@@ -6287,11 +6410,10 @@ impl std::fmt::Debug for UnprocessedScramSecret {
         formatter.finish()
     }
 }
-/// See [`UnprocessedScramSecret`](crate::model::UnprocessedScramSecret)
+/// See [`UnprocessedScramSecret`](crate::model::UnprocessedScramSecret).
 pub mod unprocessed_scram_secret {
 
-    /// A builder for [`UnprocessedScramSecret`](crate::model::UnprocessedScramSecret)
-    #[non_exhaustive]
+    /// A builder for [`UnprocessedScramSecret`](crate::model::UnprocessedScramSecret).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_code: std::option::Option<std::string::String>,
@@ -6332,7 +6454,7 @@ pub mod unprocessed_scram_secret {
             self.secret_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UnprocessedScramSecret`](crate::model::UnprocessedScramSecret)
+        /// Consumes the builder and constructs a [`UnprocessedScramSecret`](crate::model::UnprocessedScramSecret).
         pub fn build(self) -> crate::model::UnprocessedScramSecret {
             crate::model::UnprocessedScramSecret {
                 error_code: self.error_code,
@@ -6343,7 +6465,7 @@ pub mod unprocessed_scram_secret {
     }
 }
 impl UnprocessedScramSecret {
-    /// Creates a new builder-style object to manufacture [`UnprocessedScramSecret`](crate::model::UnprocessedScramSecret)
+    /// Creates a new builder-style object to manufacture [`UnprocessedScramSecret`](crate::model::UnprocessedScramSecret).
     pub fn builder() -> crate::model::unprocessed_scram_secret::Builder {
         crate::model::unprocessed_scram_secret::Builder::default()
     }

@@ -4,8 +4,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidateResourcePolicyOutput {
     /// <p>True if your policy passes validation, otherwise false.</p>
+    #[doc(hidden)]
     pub policy_validation_passed: bool,
     /// <p>Validation errors if your policy didn't pass validation.</p>
+    #[doc(hidden)]
     pub validation_errors: std::option::Option<std::vec::Vec<crate::model::ValidationErrorsEntry>>,
 }
 impl ValidateResourcePolicyOutput {
@@ -26,11 +28,10 @@ impl std::fmt::Debug for ValidateResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`ValidateResourcePolicyOutput`](crate::output::ValidateResourcePolicyOutput)
+/// See [`ValidateResourcePolicyOutput`](crate::output::ValidateResourcePolicyOutput).
 pub mod validate_resource_policy_output {
 
-    /// A builder for [`ValidateResourcePolicyOutput`](crate::output::ValidateResourcePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`ValidateResourcePolicyOutput`](crate::output::ValidateResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy_validation_passed: std::option::Option<bool>,
@@ -67,7 +68,7 @@ pub mod validate_resource_policy_output {
             self.validation_errors = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidateResourcePolicyOutput`](crate::output::ValidateResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`ValidateResourcePolicyOutput`](crate::output::ValidateResourcePolicyOutput).
         pub fn build(self) -> crate::output::ValidateResourcePolicyOutput {
             crate::output::ValidateResourcePolicyOutput {
                 policy_validation_passed: self.policy_validation_passed.unwrap_or_default(),
@@ -77,7 +78,7 @@ pub mod validate_resource_policy_output {
     }
 }
 impl ValidateResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`ValidateResourcePolicyOutput`](crate::output::ValidateResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`ValidateResourcePolicyOutput`](crate::output::ValidateResourcePolicyOutput).
     pub fn builder() -> crate::output::validate_resource_policy_output::Builder {
         crate::output::validate_resource_policy_output::Builder::default()
     }
@@ -88,8 +89,10 @@ impl ValidateResourcePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSecretVersionStageOutput {
     /// <p>The ARN of the secret that was updated.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the secret that was updated.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl UpdateSecretVersionStageOutput {
@@ -110,11 +113,10 @@ impl std::fmt::Debug for UpdateSecretVersionStageOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSecretVersionStageOutput`](crate::output::UpdateSecretVersionStageOutput)
+/// See [`UpdateSecretVersionStageOutput`](crate::output::UpdateSecretVersionStageOutput).
 pub mod update_secret_version_stage_output {
 
-    /// A builder for [`UpdateSecretVersionStageOutput`](crate::output::UpdateSecretVersionStageOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSecretVersionStageOutput`](crate::output::UpdateSecretVersionStageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -141,7 +143,7 @@ pub mod update_secret_version_stage_output {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSecretVersionStageOutput`](crate::output::UpdateSecretVersionStageOutput)
+        /// Consumes the builder and constructs a [`UpdateSecretVersionStageOutput`](crate::output::UpdateSecretVersionStageOutput).
         pub fn build(self) -> crate::output::UpdateSecretVersionStageOutput {
             crate::output::UpdateSecretVersionStageOutput {
                 arn: self.arn,
@@ -151,7 +153,7 @@ pub mod update_secret_version_stage_output {
     }
 }
 impl UpdateSecretVersionStageOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSecretVersionStageOutput`](crate::output::UpdateSecretVersionStageOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSecretVersionStageOutput`](crate::output::UpdateSecretVersionStageOutput).
     pub fn builder() -> crate::output::update_secret_version_stage_output::Builder {
         crate::output::update_secret_version_stage_output::Builder::default()
     }
@@ -162,10 +164,13 @@ impl UpdateSecretVersionStageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSecretOutput {
     /// <p>The ARN of the secret that was updated.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the secret that was updated.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>If Secrets Manager created a new version of the secret during this operation, then <code>VersionId</code> contains the unique identifier of the new version.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
 }
 impl UpdateSecretOutput {
@@ -191,11 +196,10 @@ impl std::fmt::Debug for UpdateSecretOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSecretOutput`](crate::output::UpdateSecretOutput)
+/// See [`UpdateSecretOutput`](crate::output::UpdateSecretOutput).
 pub mod update_secret_output {
 
-    /// A builder for [`UpdateSecretOutput`](crate::output::UpdateSecretOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSecretOutput`](crate::output::UpdateSecretOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -233,7 +237,7 @@ pub mod update_secret_output {
             self.version_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSecretOutput`](crate::output::UpdateSecretOutput)
+        /// Consumes the builder and constructs a [`UpdateSecretOutput`](crate::output::UpdateSecretOutput).
         pub fn build(self) -> crate::output::UpdateSecretOutput {
             crate::output::UpdateSecretOutput {
                 arn: self.arn,
@@ -244,7 +248,7 @@ pub mod update_secret_output {
     }
 }
 impl UpdateSecretOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSecretOutput`](crate::output::UpdateSecretOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSecretOutput`](crate::output::UpdateSecretOutput).
     pub fn builder() -> crate::output::update_secret_output::Builder {
         crate::output::update_secret_output::Builder::default()
     }
@@ -260,22 +264,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -291,22 +294,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -317,6 +319,7 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StopReplicationToReplicaOutput {
     /// <p>The ARN of the promoted secret. The ARN is the same as the original primary secret except the Region is changed.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl StopReplicationToReplicaOutput {
@@ -332,11 +335,10 @@ impl std::fmt::Debug for StopReplicationToReplicaOutput {
         formatter.finish()
     }
 }
-/// See [`StopReplicationToReplicaOutput`](crate::output::StopReplicationToReplicaOutput)
+/// See [`StopReplicationToReplicaOutput`](crate::output::StopReplicationToReplicaOutput).
 pub mod stop_replication_to_replica_output {
 
-    /// A builder for [`StopReplicationToReplicaOutput`](crate::output::StopReplicationToReplicaOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopReplicationToReplicaOutput`](crate::output::StopReplicationToReplicaOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -352,14 +354,14 @@ pub mod stop_replication_to_replica_output {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`StopReplicationToReplicaOutput`](crate::output::StopReplicationToReplicaOutput)
+        /// Consumes the builder and constructs a [`StopReplicationToReplicaOutput`](crate::output::StopReplicationToReplicaOutput).
         pub fn build(self) -> crate::output::StopReplicationToReplicaOutput {
             crate::output::StopReplicationToReplicaOutput { arn: self.arn }
         }
     }
 }
 impl StopReplicationToReplicaOutput {
-    /// Creates a new builder-style object to manufacture [`StopReplicationToReplicaOutput`](crate::output::StopReplicationToReplicaOutput)
+    /// Creates a new builder-style object to manufacture [`StopReplicationToReplicaOutput`](crate::output::StopReplicationToReplicaOutput).
     pub fn builder() -> crate::output::stop_replication_to_replica_output::Builder {
         crate::output::stop_replication_to_replica_output::Builder::default()
     }
@@ -370,10 +372,13 @@ impl StopReplicationToReplicaOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RotateSecretOutput {
     /// <p>The ARN of the secret.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the secret.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The ID of the new version of the secret.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
 }
 impl RotateSecretOutput {
@@ -399,11 +404,10 @@ impl std::fmt::Debug for RotateSecretOutput {
         formatter.finish()
     }
 }
-/// See [`RotateSecretOutput`](crate::output::RotateSecretOutput)
+/// See [`RotateSecretOutput`](crate::output::RotateSecretOutput).
 pub mod rotate_secret_output {
 
-    /// A builder for [`RotateSecretOutput`](crate::output::RotateSecretOutput)
-    #[non_exhaustive]
+    /// A builder for [`RotateSecretOutput`](crate::output::RotateSecretOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -441,7 +445,7 @@ pub mod rotate_secret_output {
             self.version_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RotateSecretOutput`](crate::output::RotateSecretOutput)
+        /// Consumes the builder and constructs a [`RotateSecretOutput`](crate::output::RotateSecretOutput).
         pub fn build(self) -> crate::output::RotateSecretOutput {
             crate::output::RotateSecretOutput {
                 arn: self.arn,
@@ -452,7 +456,7 @@ pub mod rotate_secret_output {
     }
 }
 impl RotateSecretOutput {
-    /// Creates a new builder-style object to manufacture [`RotateSecretOutput`](crate::output::RotateSecretOutput)
+    /// Creates a new builder-style object to manufacture [`RotateSecretOutput`](crate::output::RotateSecretOutput).
     pub fn builder() -> crate::output::rotate_secret_output::Builder {
         crate::output::rotate_secret_output::Builder::default()
     }
@@ -463,8 +467,10 @@ impl RotateSecretOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RestoreSecretOutput {
     /// <p>The ARN of the secret that was restored.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the secret that was restored.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl RestoreSecretOutput {
@@ -485,11 +491,10 @@ impl std::fmt::Debug for RestoreSecretOutput {
         formatter.finish()
     }
 }
-/// See [`RestoreSecretOutput`](crate::output::RestoreSecretOutput)
+/// See [`RestoreSecretOutput`](crate::output::RestoreSecretOutput).
 pub mod restore_secret_output {
 
-    /// A builder for [`RestoreSecretOutput`](crate::output::RestoreSecretOutput)
-    #[non_exhaustive]
+    /// A builder for [`RestoreSecretOutput`](crate::output::RestoreSecretOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -516,7 +521,7 @@ pub mod restore_secret_output {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`RestoreSecretOutput`](crate::output::RestoreSecretOutput)
+        /// Consumes the builder and constructs a [`RestoreSecretOutput`](crate::output::RestoreSecretOutput).
         pub fn build(self) -> crate::output::RestoreSecretOutput {
             crate::output::RestoreSecretOutput {
                 arn: self.arn,
@@ -526,7 +531,7 @@ pub mod restore_secret_output {
     }
 }
 impl RestoreSecretOutput {
-    /// Creates a new builder-style object to manufacture [`RestoreSecretOutput`](crate::output::RestoreSecretOutput)
+    /// Creates a new builder-style object to manufacture [`RestoreSecretOutput`](crate::output::RestoreSecretOutput).
     pub fn builder() -> crate::output::restore_secret_output::Builder {
         crate::output::restore_secret_output::Builder::default()
     }
@@ -537,8 +542,10 @@ impl RestoreSecretOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicateSecretToRegionsOutput {
     /// <p>The ARN of the primary secret.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The status of replication.</p>
+    #[doc(hidden)]
     pub replication_status: std::option::Option<std::vec::Vec<crate::model::ReplicationStatusType>>,
 }
 impl ReplicateSecretToRegionsOutput {
@@ -561,11 +568,10 @@ impl std::fmt::Debug for ReplicateSecretToRegionsOutput {
         formatter.finish()
     }
 }
-/// See [`ReplicateSecretToRegionsOutput`](crate::output::ReplicateSecretToRegionsOutput)
+/// See [`ReplicateSecretToRegionsOutput`](crate::output::ReplicateSecretToRegionsOutput).
 pub mod replicate_secret_to_regions_output {
 
-    /// A builder for [`ReplicateSecretToRegionsOutput`](crate::output::ReplicateSecretToRegionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ReplicateSecretToRegionsOutput`](crate::output::ReplicateSecretToRegionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -602,7 +608,7 @@ pub mod replicate_secret_to_regions_output {
             self.replication_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicateSecretToRegionsOutput`](crate::output::ReplicateSecretToRegionsOutput)
+        /// Consumes the builder and constructs a [`ReplicateSecretToRegionsOutput`](crate::output::ReplicateSecretToRegionsOutput).
         pub fn build(self) -> crate::output::ReplicateSecretToRegionsOutput {
             crate::output::ReplicateSecretToRegionsOutput {
                 arn: self.arn,
@@ -612,7 +618,7 @@ pub mod replicate_secret_to_regions_output {
     }
 }
 impl ReplicateSecretToRegionsOutput {
-    /// Creates a new builder-style object to manufacture [`ReplicateSecretToRegionsOutput`](crate::output::ReplicateSecretToRegionsOutput)
+    /// Creates a new builder-style object to manufacture [`ReplicateSecretToRegionsOutput`](crate::output::ReplicateSecretToRegionsOutput).
     pub fn builder() -> crate::output::replicate_secret_to_regions_output::Builder {
         crate::output::replicate_secret_to_regions_output::Builder::default()
     }
@@ -623,8 +629,10 @@ impl ReplicateSecretToRegionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoveRegionsFromReplicationOutput {
     /// <p>The ARN of the primary secret.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The status of replicas for this secret after you remove Regions.</p>
+    #[doc(hidden)]
     pub replication_status: std::option::Option<std::vec::Vec<crate::model::ReplicationStatusType>>,
 }
 impl RemoveRegionsFromReplicationOutput {
@@ -647,11 +655,10 @@ impl std::fmt::Debug for RemoveRegionsFromReplicationOutput {
         formatter.finish()
     }
 }
-/// See [`RemoveRegionsFromReplicationOutput`](crate::output::RemoveRegionsFromReplicationOutput)
+/// See [`RemoveRegionsFromReplicationOutput`](crate::output::RemoveRegionsFromReplicationOutput).
 pub mod remove_regions_from_replication_output {
 
-    /// A builder for [`RemoveRegionsFromReplicationOutput`](crate::output::RemoveRegionsFromReplicationOutput)
-    #[non_exhaustive]
+    /// A builder for [`RemoveRegionsFromReplicationOutput`](crate::output::RemoveRegionsFromReplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -688,7 +695,7 @@ pub mod remove_regions_from_replication_output {
             self.replication_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`RemoveRegionsFromReplicationOutput`](crate::output::RemoveRegionsFromReplicationOutput)
+        /// Consumes the builder and constructs a [`RemoveRegionsFromReplicationOutput`](crate::output::RemoveRegionsFromReplicationOutput).
         pub fn build(self) -> crate::output::RemoveRegionsFromReplicationOutput {
             crate::output::RemoveRegionsFromReplicationOutput {
                 arn: self.arn,
@@ -698,7 +705,7 @@ pub mod remove_regions_from_replication_output {
     }
 }
 impl RemoveRegionsFromReplicationOutput {
-    /// Creates a new builder-style object to manufacture [`RemoveRegionsFromReplicationOutput`](crate::output::RemoveRegionsFromReplicationOutput)
+    /// Creates a new builder-style object to manufacture [`RemoveRegionsFromReplicationOutput`](crate::output::RemoveRegionsFromReplicationOutput).
     pub fn builder() -> crate::output::remove_regions_from_replication_output::Builder {
         crate::output::remove_regions_from_replication_output::Builder::default()
     }
@@ -709,12 +716,16 @@ impl RemoveRegionsFromReplicationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutSecretValueOutput {
     /// <p>The ARN of the secret.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the secret.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the version of the secret.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>The list of staging labels that are currently attached to this version of the secret. Secrets Manager uses staging labels to track a version as it progresses through the secret rotation process.</p>
+    #[doc(hidden)]
     pub version_stages: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl PutSecretValueOutput {
@@ -745,11 +756,10 @@ impl std::fmt::Debug for PutSecretValueOutput {
         formatter.finish()
     }
 }
-/// See [`PutSecretValueOutput`](crate::output::PutSecretValueOutput)
+/// See [`PutSecretValueOutput`](crate::output::PutSecretValueOutput).
 pub mod put_secret_value_output {
 
-    /// A builder for [`PutSecretValueOutput`](crate::output::PutSecretValueOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutSecretValueOutput`](crate::output::PutSecretValueOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -807,7 +817,7 @@ pub mod put_secret_value_output {
             self.version_stages = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutSecretValueOutput`](crate::output::PutSecretValueOutput)
+        /// Consumes the builder and constructs a [`PutSecretValueOutput`](crate::output::PutSecretValueOutput).
         pub fn build(self) -> crate::output::PutSecretValueOutput {
             crate::output::PutSecretValueOutput {
                 arn: self.arn,
@@ -819,7 +829,7 @@ pub mod put_secret_value_output {
     }
 }
 impl PutSecretValueOutput {
-    /// Creates a new builder-style object to manufacture [`PutSecretValueOutput`](crate::output::PutSecretValueOutput)
+    /// Creates a new builder-style object to manufacture [`PutSecretValueOutput`](crate::output::PutSecretValueOutput).
     pub fn builder() -> crate::output::put_secret_value_output::Builder {
         crate::output::put_secret_value_output::Builder::default()
     }
@@ -830,8 +840,10 @@ impl PutSecretValueOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutResourcePolicyOutput {
     /// <p>The ARN of the secret.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the secret.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl PutResourcePolicyOutput {
@@ -852,11 +864,10 @@ impl std::fmt::Debug for PutResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
+/// See [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput).
 pub mod put_resource_policy_output {
 
-    /// A builder for [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -883,7 +894,7 @@ pub mod put_resource_policy_output {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput).
         pub fn build(self) -> crate::output::PutResourcePolicyOutput {
             crate::output::PutResourcePolicyOutput {
                 arn: self.arn,
@@ -893,7 +904,7 @@ pub mod put_resource_policy_output {
     }
 }
 impl PutResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput).
     pub fn builder() -> crate::output::put_resource_policy_output::Builder {
         crate::output::put_resource_policy_output::Builder::default()
     }
@@ -904,12 +915,16 @@ impl PutResourcePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSecretVersionIdsOutput {
     /// <p>A list of the versions of the secret.</p>
+    #[doc(hidden)]
     pub versions: std::option::Option<std::vec::Vec<crate::model::SecretVersionsListEntry>>,
     /// <p>Secrets Manager includes this value if there's more output available than what is included in the current response. This can occur even when the response includes no values at all, such as when you ask for a filtered view of a long list. To get the next results, call <code>ListSecretVersionIds</code> again with this value. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The ARN of the secret.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the secret.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl ListSecretVersionIdsOutput {
@@ -940,11 +955,10 @@ impl std::fmt::Debug for ListSecretVersionIdsOutput {
         formatter.finish()
     }
 }
-/// See [`ListSecretVersionIdsOutput`](crate::output::ListSecretVersionIdsOutput)
+/// See [`ListSecretVersionIdsOutput`](crate::output::ListSecretVersionIdsOutput).
 pub mod list_secret_version_ids_output {
 
-    /// A builder for [`ListSecretVersionIdsOutput`](crate::output::ListSecretVersionIdsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSecretVersionIdsOutput`](crate::output::ListSecretVersionIdsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) versions:
@@ -1003,7 +1017,7 @@ pub mod list_secret_version_ids_output {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSecretVersionIdsOutput`](crate::output::ListSecretVersionIdsOutput)
+        /// Consumes the builder and constructs a [`ListSecretVersionIdsOutput`](crate::output::ListSecretVersionIdsOutput).
         pub fn build(self) -> crate::output::ListSecretVersionIdsOutput {
             crate::output::ListSecretVersionIdsOutput {
                 versions: self.versions,
@@ -1015,7 +1029,7 @@ pub mod list_secret_version_ids_output {
     }
 }
 impl ListSecretVersionIdsOutput {
-    /// Creates a new builder-style object to manufacture [`ListSecretVersionIdsOutput`](crate::output::ListSecretVersionIdsOutput)
+    /// Creates a new builder-style object to manufacture [`ListSecretVersionIdsOutput`](crate::output::ListSecretVersionIdsOutput).
     pub fn builder() -> crate::output::list_secret_version_ids_output::Builder {
         crate::output::list_secret_version_ids_output::Builder::default()
     }
@@ -1026,8 +1040,10 @@ impl ListSecretVersionIdsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListSecretsOutput {
     /// <p>A list of the secrets in the account.</p>
+    #[doc(hidden)]
     pub secret_list: std::option::Option<std::vec::Vec<crate::model::SecretListEntry>>,
     /// <p>Secrets Manager includes this value if there's more output available than what is included in the current response. This can occur even when the response includes no values at all, such as when you ask for a filtered view of a long list. To get the next results, call <code>ListSecrets</code> again with this value.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListSecretsOutput {
@@ -1048,11 +1064,10 @@ impl std::fmt::Debug for ListSecretsOutput {
         formatter.finish()
     }
 }
-/// See [`ListSecretsOutput`](crate::output::ListSecretsOutput)
+/// See [`ListSecretsOutput`](crate::output::ListSecretsOutput).
 pub mod list_secrets_output {
 
-    /// A builder for [`ListSecretsOutput`](crate::output::ListSecretsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListSecretsOutput`](crate::output::ListSecretsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) secret_list: std::option::Option<std::vec::Vec<crate::model::SecretListEntry>>,
@@ -1088,7 +1103,7 @@ pub mod list_secrets_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSecretsOutput`](crate::output::ListSecretsOutput)
+        /// Consumes the builder and constructs a [`ListSecretsOutput`](crate::output::ListSecretsOutput).
         pub fn build(self) -> crate::output::ListSecretsOutput {
             crate::output::ListSecretsOutput {
                 secret_list: self.secret_list,
@@ -1098,7 +1113,7 @@ pub mod list_secrets_output {
     }
 }
 impl ListSecretsOutput {
-    /// Creates a new builder-style object to manufacture [`ListSecretsOutput`](crate::output::ListSecretsOutput)
+    /// Creates a new builder-style object to manufacture [`ListSecretsOutput`](crate::output::ListSecretsOutput).
     pub fn builder() -> crate::output::list_secrets_output::Builder {
         crate::output::list_secrets_output::Builder::default()
     }
@@ -1109,20 +1124,27 @@ impl ListSecretsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSecretValueOutput {
     /// <p>The ARN of the secret.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The friendly name of the secret.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The unique identifier of this version of the secret.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>The decrypted secret value, if the secret value was originally provided as binary data in the form of a byte array. The response parameter represents the binary data as a <a href="https://tools.ietf.org/html/rfc4648#section-4">base64-encoded</a> string.</p>
     /// <p>If the secret was created by using the Secrets Manager console, or if the secret value was originally provided as a string, then this field is omitted. The secret value appears in <code>SecretString</code> instead.</p>
+    #[doc(hidden)]
     pub secret_binary: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The decrypted secret value, if the secret value was originally provided as a string or through the Secrets Manager console.</p>
     /// <p>If this secret was created by using the console, then Secrets Manager stores the information as a JSON structure of key/value pairs. </p>
+    #[doc(hidden)]
     pub secret_string: std::option::Option<std::string::String>,
     /// <p>A list of all of the staging labels currently attached to this version of the secret.</p>
+    #[doc(hidden)]
     pub version_stages: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The date and time that this version of the secret was created. If you don't specify which version in <code>VersionId</code> or <code>VersionStage</code>, then Secrets Manager uses the <code>AWSCURRENT</code> version.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GetSecretValueOutput {
@@ -1170,11 +1192,10 @@ impl std::fmt::Debug for GetSecretValueOutput {
         formatter.finish()
     }
 }
-/// See [`GetSecretValueOutput`](crate::output::GetSecretValueOutput)
+/// See [`GetSecretValueOutput`](crate::output::GetSecretValueOutput).
 pub mod get_secret_value_output {
 
-    /// A builder for [`GetSecretValueOutput`](crate::output::GetSecretValueOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSecretValueOutput`](crate::output::GetSecretValueOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1278,7 +1299,7 @@ pub mod get_secret_value_output {
             self.created_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSecretValueOutput`](crate::output::GetSecretValueOutput)
+        /// Consumes the builder and constructs a [`GetSecretValueOutput`](crate::output::GetSecretValueOutput).
         pub fn build(self) -> crate::output::GetSecretValueOutput {
             crate::output::GetSecretValueOutput {
                 arn: self.arn,
@@ -1293,7 +1314,7 @@ pub mod get_secret_value_output {
     }
 }
 impl GetSecretValueOutput {
-    /// Creates a new builder-style object to manufacture [`GetSecretValueOutput`](crate::output::GetSecretValueOutput)
+    /// Creates a new builder-style object to manufacture [`GetSecretValueOutput`](crate::output::GetSecretValueOutput).
     pub fn builder() -> crate::output::get_secret_value_output::Builder {
         crate::output::get_secret_value_output::Builder::default()
     }
@@ -1304,10 +1325,13 @@ impl GetSecretValueOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetResourcePolicyOutput {
     /// <p>The ARN of the secret that the resource-based policy was retrieved for.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the secret that the resource-based policy was retrieved for.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A JSON-formatted string that contains the permissions policy attached to the secret. For more information about permissions policies, see <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access control for Secrets Manager</a>.</p>
+    #[doc(hidden)]
     pub resource_policy: std::option::Option<std::string::String>,
 }
 impl GetResourcePolicyOutput {
@@ -1333,11 +1357,10 @@ impl std::fmt::Debug for GetResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput)
+/// See [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput).
 pub mod get_resource_policy_output {
 
-    /// A builder for [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1378,7 +1401,7 @@ pub mod get_resource_policy_output {
             self.resource_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput).
         pub fn build(self) -> crate::output::GetResourcePolicyOutput {
             crate::output::GetResourcePolicyOutput {
                 arn: self.arn,
@@ -1389,7 +1412,7 @@ pub mod get_resource_policy_output {
     }
 }
 impl GetResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput).
     pub fn builder() -> crate::output::get_resource_policy_output::Builder {
         crate::output::get_resource_policy_output::Builder::default()
     }
@@ -1400,6 +1423,7 @@ impl GetResourcePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetRandomPasswordOutput {
     /// <p>A string with the password.</p>
+    #[doc(hidden)]
     pub random_password: std::option::Option<std::string::String>,
 }
 impl GetRandomPasswordOutput {
@@ -1415,11 +1439,10 @@ impl std::fmt::Debug for GetRandomPasswordOutput {
         formatter.finish()
     }
 }
-/// See [`GetRandomPasswordOutput`](crate::output::GetRandomPasswordOutput)
+/// See [`GetRandomPasswordOutput`](crate::output::GetRandomPasswordOutput).
 pub mod get_random_password_output {
 
-    /// A builder for [`GetRandomPasswordOutput`](crate::output::GetRandomPasswordOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetRandomPasswordOutput`](crate::output::GetRandomPasswordOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) random_password: std::option::Option<std::string::String>,
@@ -1438,7 +1461,7 @@ pub mod get_random_password_output {
             self.random_password = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRandomPasswordOutput`](crate::output::GetRandomPasswordOutput)
+        /// Consumes the builder and constructs a [`GetRandomPasswordOutput`](crate::output::GetRandomPasswordOutput).
         pub fn build(self) -> crate::output::GetRandomPasswordOutput {
             crate::output::GetRandomPasswordOutput {
                 random_password: self.random_password,
@@ -1447,7 +1470,7 @@ pub mod get_random_password_output {
     }
 }
 impl GetRandomPasswordOutput {
-    /// Creates a new builder-style object to manufacture [`GetRandomPasswordOutput`](crate::output::GetRandomPasswordOutput)
+    /// Creates a new builder-style object to manufacture [`GetRandomPasswordOutput`](crate::output::GetRandomPasswordOutput).
     pub fn builder() -> crate::output::get_random_password_output::Builder {
         crate::output::get_random_password_output::Builder::default()
     }
@@ -1458,30 +1481,42 @@ impl GetRandomPasswordOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeSecretOutput {
     /// <p>The ARN of the secret.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the secret.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the secret.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted with the Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>Specifies whether automatic rotation is turned on for this secret.</p>
     /// <p>To turn on rotation, use <code>RotateSecret</code>. To turn off rotation, use <code>CancelRotateSecret</code>.</p>
+    #[doc(hidden)]
     pub rotation_enabled: std::option::Option<bool>,
     /// <p>The ARN of the Lambda function that Secrets Manager invokes to rotate the secret. </p>
+    #[doc(hidden)]
     pub rotation_lambda_arn: std::option::Option<std::string::String>,
     /// <p>The rotation schedule and Lambda function for this secret. If the secret previously had rotation turned on, but it is now turned off, this field shows the previous rotation schedule and rotation function. If the secret never had rotation turned on, this field is omitted.</p>
+    #[doc(hidden)]
     pub rotation_rules: std::option::Option<crate::model::RotationRulesType>,
     /// <p>The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for rotation, Secrets Manager returns null.</p>
+    #[doc(hidden)]
     pub last_rotated_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last date and time that this secret was modified in any way.</p>
+    #[doc(hidden)]
     pub last_changed_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The last date that the secret value was retrieved. This value does not include the time. This field is omitted if the secret has never been retrieved.</p>
+    #[doc(hidden)]
     pub last_accessed_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date the secret is scheduled for deletion. If it is not scheduled for deletion, this field is omitted. When you delete a secret, Secrets Manager requires a recovery window of at least 7 days before deleting the secret. Some time after the deleted date, Secrets Manager deletes the secret, including all of its versions.</p>
     /// <p>If a secret is scheduled for deletion, then its details, including the encrypted secret value, is not accessible. To cancel a scheduled deletion and restore access to the secret, use <code>RestoreSecret</code>.</p>
+    #[doc(hidden)]
     pub deleted_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The list of tags attached to the secret. To add tags to a secret, use <code>TagResource</code>. To remove tags, use <code>UntagResource</code>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>A list of the versions of the secret that have staging labels attached. Versions that don't have staging labels are considered deprecated and Secrets Manager can delete them.</p>
     /// <p>Secrets Manager uses staging labels to indicate the status of a secret version during rotation. The three staging labels for rotation are: </p>
@@ -1491,14 +1526,18 @@ pub struct DescribeSecretOutput {
     /// <li> <p> <code>AWSPREVIOUS</code>, which indicates the previous current version of the secret. You can use this as the <i>last known good</i> version.</p> </li>
     /// </ul>
     /// <p>For more information about rotation and staging labels, see <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">How rotation works</a>.</p>
+    #[doc(hidden)]
     pub version_ids_to_stages: std::option::Option<
         std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>,
     >,
     /// <p>The name of the service that created this secret.</p>
+    #[doc(hidden)]
     pub owning_service: std::option::Option<std::string::String>,
     /// <p>The date the secret was created.</p>
+    #[doc(hidden)]
     pub created_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Region the secret is in. If a secret is replicated to other Regions, the replicas are listed in <code>ReplicationStatus</code>. </p>
+    #[doc(hidden)]
     pub primary_region: std::option::Option<std::string::String>,
     /// <p>A list of the replicas of this secret and their status: </p>
     /// <ul>
@@ -1506,6 +1545,7 @@ pub struct DescribeSecretOutput {
     /// <li> <p> <code>InProgress</code>, which indicates that Secrets Manager is in the process of creating the replica.</p> </li>
     /// <li> <p> <code>InSync</code>, which indicates that the replica was created.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub replication_status: std::option::Option<std::vec::Vec<crate::model::ReplicationStatusType>>,
 }
 impl DescribeSecretOutput {
@@ -1621,11 +1661,10 @@ impl std::fmt::Debug for DescribeSecretOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeSecretOutput`](crate::output::DescribeSecretOutput)
+/// See [`DescribeSecretOutput`](crate::output::DescribeSecretOutput).
 pub mod describe_secret_output {
 
-    /// A builder for [`DescribeSecretOutput`](crate::output::DescribeSecretOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeSecretOutput`](crate::output::DescribeSecretOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1908,7 +1947,7 @@ pub mod describe_secret_output {
             self.replication_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeSecretOutput`](crate::output::DescribeSecretOutput)
+        /// Consumes the builder and constructs a [`DescribeSecretOutput`](crate::output::DescribeSecretOutput).
         pub fn build(self) -> crate::output::DescribeSecretOutput {
             crate::output::DescribeSecretOutput {
                 arn: self.arn,
@@ -1933,7 +1972,7 @@ pub mod describe_secret_output {
     }
 }
 impl DescribeSecretOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeSecretOutput`](crate::output::DescribeSecretOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeSecretOutput`](crate::output::DescribeSecretOutput).
     pub fn builder() -> crate::output::describe_secret_output::Builder {
         crate::output::describe_secret_output::Builder::default()
     }
@@ -1944,10 +1983,13 @@ impl DescribeSecretOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteSecretOutput {
     /// <p>The ARN of the secret.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the secret.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The date and time after which this secret Secrets Manager can permanently delete this secret, and it can no longer be restored. This value is the date and time of the delete request plus the number of days in <code>RecoveryWindowInDays</code>.</p>
+    #[doc(hidden)]
     pub deletion_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DeleteSecretOutput {
@@ -1973,11 +2015,10 @@ impl std::fmt::Debug for DeleteSecretOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteSecretOutput`](crate::output::DeleteSecretOutput)
+/// See [`DeleteSecretOutput`](crate::output::DeleteSecretOutput).
 pub mod delete_secret_output {
 
-    /// A builder for [`DeleteSecretOutput`](crate::output::DeleteSecretOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteSecretOutput`](crate::output::DeleteSecretOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2018,7 +2059,7 @@ pub mod delete_secret_output {
             self.deletion_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteSecretOutput`](crate::output::DeleteSecretOutput)
+        /// Consumes the builder and constructs a [`DeleteSecretOutput`](crate::output::DeleteSecretOutput).
         pub fn build(self) -> crate::output::DeleteSecretOutput {
             crate::output::DeleteSecretOutput {
                 arn: self.arn,
@@ -2029,7 +2070,7 @@ pub mod delete_secret_output {
     }
 }
 impl DeleteSecretOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteSecretOutput`](crate::output::DeleteSecretOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteSecretOutput`](crate::output::DeleteSecretOutput).
     pub fn builder() -> crate::output::delete_secret_output::Builder {
         crate::output::delete_secret_output::Builder::default()
     }
@@ -2040,8 +2081,10 @@ impl DeleteSecretOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteResourcePolicyOutput {
     /// <p>The ARN of the secret that the resource-based policy was deleted for.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the secret that the resource-based policy was deleted for.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl DeleteResourcePolicyOutput {
@@ -2062,11 +2105,10 @@ impl std::fmt::Debug for DeleteResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
+/// See [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
 pub mod delete_resource_policy_output {
 
-    /// A builder for [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2093,7 +2135,7 @@ pub mod delete_resource_policy_output {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
         pub fn build(self) -> crate::output::DeleteResourcePolicyOutput {
             crate::output::DeleteResourcePolicyOutput {
                 arn: self.arn,
@@ -2103,7 +2145,7 @@ pub mod delete_resource_policy_output {
     }
 }
 impl DeleteResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
     pub fn builder() -> crate::output::delete_resource_policy_output::Builder {
         crate::output::delete_resource_policy_output::Builder::default()
     }
@@ -2114,10 +2156,13 @@ impl DeleteResourcePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSecretOutput {
     /// <p>The ARN of the new secret. The ARN includes the name of the secret followed by six random characters. This ensures that if you create a new secret with the same name as a deleted secret, then users with access to the old secret don't get access to the new secret because the ARNs are different.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the new secret.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The unique identifier associated with the version of the new secret.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
     /// <p>A list of the replicas of this secret and their status:</p>
     /// <ul>
@@ -2125,6 +2170,7 @@ pub struct CreateSecretOutput {
     /// <li> <p> <code>InProgress</code>, which indicates that Secrets Manager is in the process of creating the replica.</p> </li>
     /// <li> <p> <code>InSync</code>, which indicates that the replica was created.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub replication_status: std::option::Option<std::vec::Vec<crate::model::ReplicationStatusType>>,
 }
 impl CreateSecretOutput {
@@ -2162,11 +2208,10 @@ impl std::fmt::Debug for CreateSecretOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSecretOutput`](crate::output::CreateSecretOutput)
+/// See [`CreateSecretOutput`](crate::output::CreateSecretOutput).
 pub mod create_secret_output {
 
-    /// A builder for [`CreateSecretOutput`](crate::output::CreateSecretOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSecretOutput`](crate::output::CreateSecretOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2235,7 +2280,7 @@ pub mod create_secret_output {
             self.replication_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateSecretOutput`](crate::output::CreateSecretOutput)
+        /// Consumes the builder and constructs a [`CreateSecretOutput`](crate::output::CreateSecretOutput).
         pub fn build(self) -> crate::output::CreateSecretOutput {
             crate::output::CreateSecretOutput {
                 arn: self.arn,
@@ -2247,7 +2292,7 @@ pub mod create_secret_output {
     }
 }
 impl CreateSecretOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSecretOutput`](crate::output::CreateSecretOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSecretOutput`](crate::output::CreateSecretOutput).
     pub fn builder() -> crate::output::create_secret_output::Builder {
         crate::output::create_secret_output::Builder::default()
     }
@@ -2258,10 +2303,13 @@ impl CreateSecretOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelRotateSecretOutput {
     /// <p>The ARN of the secret.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the secret.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the version of the secret created during the rotation. This version might not be complete, and should be evaluated for possible deletion. We recommend that you remove the <code>VersionStage</code> value <code>AWSPENDING</code> from this version so that Secrets Manager can delete it. Failing to clean up a cancelled rotation can block you from starting future rotations.</p>
+    #[doc(hidden)]
     pub version_id: std::option::Option<std::string::String>,
 }
 impl CancelRotateSecretOutput {
@@ -2287,11 +2335,10 @@ impl std::fmt::Debug for CancelRotateSecretOutput {
         formatter.finish()
     }
 }
-/// See [`CancelRotateSecretOutput`](crate::output::CancelRotateSecretOutput)
+/// See [`CancelRotateSecretOutput`](crate::output::CancelRotateSecretOutput).
 pub mod cancel_rotate_secret_output {
 
-    /// A builder for [`CancelRotateSecretOutput`](crate::output::CancelRotateSecretOutput)
-    #[non_exhaustive]
+    /// A builder for [`CancelRotateSecretOutput`](crate::output::CancelRotateSecretOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2329,7 +2376,7 @@ pub mod cancel_rotate_secret_output {
             self.version_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelRotateSecretOutput`](crate::output::CancelRotateSecretOutput)
+        /// Consumes the builder and constructs a [`CancelRotateSecretOutput`](crate::output::CancelRotateSecretOutput).
         pub fn build(self) -> crate::output::CancelRotateSecretOutput {
             crate::output::CancelRotateSecretOutput {
                 arn: self.arn,
@@ -2340,7 +2387,7 @@ pub mod cancel_rotate_secret_output {
     }
 }
 impl CancelRotateSecretOutput {
-    /// Creates a new builder-style object to manufacture [`CancelRotateSecretOutput`](crate::output::CancelRotateSecretOutput)
+    /// Creates a new builder-style object to manufacture [`CancelRotateSecretOutput`](crate::output::CancelRotateSecretOutput).
     pub fn builder() -> crate::output::cancel_rotate_secret_output::Builder {
         crate::output::cancel_rotate_secret_output::Builder::default()
     }

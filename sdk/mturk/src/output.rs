@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateQualificationTypeOutput {
     /// <p> Contains a QualificationType data structure.</p>
+    #[doc(hidden)]
     pub qualification_type: std::option::Option<crate::model::QualificationType>,
 }
 impl UpdateQualificationTypeOutput {
@@ -19,11 +20,10 @@ impl std::fmt::Debug for UpdateQualificationTypeOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateQualificationTypeOutput`](crate::output::UpdateQualificationTypeOutput)
+/// See [`UpdateQualificationTypeOutput`](crate::output::UpdateQualificationTypeOutput).
 pub mod update_qualification_type_output {
 
-    /// A builder for [`UpdateQualificationTypeOutput`](crate::output::UpdateQualificationTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateQualificationTypeOutput`](crate::output::UpdateQualificationTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) qualification_type: std::option::Option<crate::model::QualificationType>,
@@ -42,7 +42,7 @@ pub mod update_qualification_type_output {
             self.qualification_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateQualificationTypeOutput`](crate::output::UpdateQualificationTypeOutput)
+        /// Consumes the builder and constructs a [`UpdateQualificationTypeOutput`](crate::output::UpdateQualificationTypeOutput).
         pub fn build(self) -> crate::output::UpdateQualificationTypeOutput {
             crate::output::UpdateQualificationTypeOutput {
                 qualification_type: self.qualification_type,
@@ -51,7 +51,7 @@ pub mod update_qualification_type_output {
     }
 }
 impl UpdateQualificationTypeOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateQualificationTypeOutput`](crate::output::UpdateQualificationTypeOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateQualificationTypeOutput`](crate::output::UpdateQualificationTypeOutput).
     pub fn builder() -> crate::output::update_qualification_type_output::Builder {
         crate::output::update_qualification_type_output::Builder::default()
     }
@@ -67,22 +67,21 @@ impl std::fmt::Debug for UpdateNotificationSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateNotificationSettingsOutput`](crate::output::UpdateNotificationSettingsOutput)
+/// See [`UpdateNotificationSettingsOutput`](crate::output::UpdateNotificationSettingsOutput).
 pub mod update_notification_settings_output {
 
-    /// A builder for [`UpdateNotificationSettingsOutput`](crate::output::UpdateNotificationSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateNotificationSettingsOutput`](crate::output::UpdateNotificationSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateNotificationSettingsOutput`](crate::output::UpdateNotificationSettingsOutput)
+        /// Consumes the builder and constructs a [`UpdateNotificationSettingsOutput`](crate::output::UpdateNotificationSettingsOutput).
         pub fn build(self) -> crate::output::UpdateNotificationSettingsOutput {
             crate::output::UpdateNotificationSettingsOutput {}
         }
     }
 }
 impl UpdateNotificationSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateNotificationSettingsOutput`](crate::output::UpdateNotificationSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateNotificationSettingsOutput`](crate::output::UpdateNotificationSettingsOutput).
     pub fn builder() -> crate::output::update_notification_settings_output::Builder {
         crate::output::update_notification_settings_output::Builder::default()
     }
@@ -98,22 +97,21 @@ impl std::fmt::Debug for UpdateHitTypeOfHitOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateHitTypeOfHitOutput`](crate::output::UpdateHitTypeOfHitOutput)
+/// See [`UpdateHitTypeOfHitOutput`](crate::output::UpdateHitTypeOfHitOutput).
 pub mod update_hit_type_of_hit_output {
 
-    /// A builder for [`UpdateHitTypeOfHitOutput`](crate::output::UpdateHitTypeOfHitOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateHitTypeOfHitOutput`](crate::output::UpdateHitTypeOfHitOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateHitTypeOfHitOutput`](crate::output::UpdateHitTypeOfHitOutput)
+        /// Consumes the builder and constructs a [`UpdateHitTypeOfHitOutput`](crate::output::UpdateHitTypeOfHitOutput).
         pub fn build(self) -> crate::output::UpdateHitTypeOfHitOutput {
             crate::output::UpdateHitTypeOfHitOutput {}
         }
     }
 }
 impl UpdateHitTypeOfHitOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateHitTypeOfHitOutput`](crate::output::UpdateHitTypeOfHitOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateHitTypeOfHitOutput`](crate::output::UpdateHitTypeOfHitOutput).
     pub fn builder() -> crate::output::update_hit_type_of_hit_output::Builder {
         crate::output::update_hit_type_of_hit_output::Builder::default()
     }
@@ -129,22 +127,21 @@ impl std::fmt::Debug for UpdateHitReviewStatusOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateHitReviewStatusOutput`](crate::output::UpdateHitReviewStatusOutput)
+/// See [`UpdateHitReviewStatusOutput`](crate::output::UpdateHitReviewStatusOutput).
 pub mod update_hit_review_status_output {
 
-    /// A builder for [`UpdateHitReviewStatusOutput`](crate::output::UpdateHitReviewStatusOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateHitReviewStatusOutput`](crate::output::UpdateHitReviewStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateHitReviewStatusOutput`](crate::output::UpdateHitReviewStatusOutput)
+        /// Consumes the builder and constructs a [`UpdateHitReviewStatusOutput`](crate::output::UpdateHitReviewStatusOutput).
         pub fn build(self) -> crate::output::UpdateHitReviewStatusOutput {
             crate::output::UpdateHitReviewStatusOutput {}
         }
     }
 }
 impl UpdateHitReviewStatusOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateHitReviewStatusOutput`](crate::output::UpdateHitReviewStatusOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateHitReviewStatusOutput`](crate::output::UpdateHitReviewStatusOutput).
     pub fn builder() -> crate::output::update_hit_review_status_output::Builder {
         crate::output::update_hit_review_status_output::Builder::default()
     }
@@ -160,22 +157,21 @@ impl std::fmt::Debug for UpdateExpirationForHitOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateExpirationForHitOutput`](crate::output::UpdateExpirationForHitOutput)
+/// See [`UpdateExpirationForHitOutput`](crate::output::UpdateExpirationForHitOutput).
 pub mod update_expiration_for_hit_output {
 
-    /// A builder for [`UpdateExpirationForHitOutput`](crate::output::UpdateExpirationForHitOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateExpirationForHitOutput`](crate::output::UpdateExpirationForHitOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateExpirationForHitOutput`](crate::output::UpdateExpirationForHitOutput)
+        /// Consumes the builder and constructs a [`UpdateExpirationForHitOutput`](crate::output::UpdateExpirationForHitOutput).
         pub fn build(self) -> crate::output::UpdateExpirationForHitOutput {
             crate::output::UpdateExpirationForHitOutput {}
         }
     }
 }
 impl UpdateExpirationForHitOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateExpirationForHitOutput`](crate::output::UpdateExpirationForHitOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateExpirationForHitOutput`](crate::output::UpdateExpirationForHitOutput).
     pub fn builder() -> crate::output::update_expiration_for_hit_output::Builder {
         crate::output::update_expiration_for_hit_output::Builder::default()
     }
@@ -191,22 +187,21 @@ impl std::fmt::Debug for SendTestEventNotificationOutput {
         formatter.finish()
     }
 }
-/// See [`SendTestEventNotificationOutput`](crate::output::SendTestEventNotificationOutput)
+/// See [`SendTestEventNotificationOutput`](crate::output::SendTestEventNotificationOutput).
 pub mod send_test_event_notification_output {
 
-    /// A builder for [`SendTestEventNotificationOutput`](crate::output::SendTestEventNotificationOutput)
-    #[non_exhaustive]
+    /// A builder for [`SendTestEventNotificationOutput`](crate::output::SendTestEventNotificationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`SendTestEventNotificationOutput`](crate::output::SendTestEventNotificationOutput)
+        /// Consumes the builder and constructs a [`SendTestEventNotificationOutput`](crate::output::SendTestEventNotificationOutput).
         pub fn build(self) -> crate::output::SendTestEventNotificationOutput {
             crate::output::SendTestEventNotificationOutput {}
         }
     }
 }
 impl SendTestEventNotificationOutput {
-    /// Creates a new builder-style object to manufacture [`SendTestEventNotificationOutput`](crate::output::SendTestEventNotificationOutput)
+    /// Creates a new builder-style object to manufacture [`SendTestEventNotificationOutput`](crate::output::SendTestEventNotificationOutput).
     pub fn builder() -> crate::output::send_test_event_notification_output::Builder {
         crate::output::send_test_event_notification_output::Builder::default()
     }
@@ -222,22 +217,21 @@ impl std::fmt::Debug for SendBonusOutput {
         formatter.finish()
     }
 }
-/// See [`SendBonusOutput`](crate::output::SendBonusOutput)
+/// See [`SendBonusOutput`](crate::output::SendBonusOutput).
 pub mod send_bonus_output {
 
-    /// A builder for [`SendBonusOutput`](crate::output::SendBonusOutput)
-    #[non_exhaustive]
+    /// A builder for [`SendBonusOutput`](crate::output::SendBonusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`SendBonusOutput`](crate::output::SendBonusOutput)
+        /// Consumes the builder and constructs a [`SendBonusOutput`](crate::output::SendBonusOutput).
         pub fn build(self) -> crate::output::SendBonusOutput {
             crate::output::SendBonusOutput {}
         }
     }
 }
 impl SendBonusOutput {
-    /// Creates a new builder-style object to manufacture [`SendBonusOutput`](crate::output::SendBonusOutput)
+    /// Creates a new builder-style object to manufacture [`SendBonusOutput`](crate::output::SendBonusOutput).
     pub fn builder() -> crate::output::send_bonus_output::Builder {
         crate::output::send_bonus_output::Builder::default()
     }
@@ -253,22 +247,21 @@ impl std::fmt::Debug for RejectQualificationRequestOutput {
         formatter.finish()
     }
 }
-/// See [`RejectQualificationRequestOutput`](crate::output::RejectQualificationRequestOutput)
+/// See [`RejectQualificationRequestOutput`](crate::output::RejectQualificationRequestOutput).
 pub mod reject_qualification_request_output {
 
-    /// A builder for [`RejectQualificationRequestOutput`](crate::output::RejectQualificationRequestOutput)
-    #[non_exhaustive]
+    /// A builder for [`RejectQualificationRequestOutput`](crate::output::RejectQualificationRequestOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RejectQualificationRequestOutput`](crate::output::RejectQualificationRequestOutput)
+        /// Consumes the builder and constructs a [`RejectQualificationRequestOutput`](crate::output::RejectQualificationRequestOutput).
         pub fn build(self) -> crate::output::RejectQualificationRequestOutput {
             crate::output::RejectQualificationRequestOutput {}
         }
     }
 }
 impl RejectQualificationRequestOutput {
-    /// Creates a new builder-style object to manufacture [`RejectQualificationRequestOutput`](crate::output::RejectQualificationRequestOutput)
+    /// Creates a new builder-style object to manufacture [`RejectQualificationRequestOutput`](crate::output::RejectQualificationRequestOutput).
     pub fn builder() -> crate::output::reject_qualification_request_output::Builder {
         crate::output::reject_qualification_request_output::Builder::default()
     }
@@ -284,22 +277,21 @@ impl std::fmt::Debug for RejectAssignmentOutput {
         formatter.finish()
     }
 }
-/// See [`RejectAssignmentOutput`](crate::output::RejectAssignmentOutput)
+/// See [`RejectAssignmentOutput`](crate::output::RejectAssignmentOutput).
 pub mod reject_assignment_output {
 
-    /// A builder for [`RejectAssignmentOutput`](crate::output::RejectAssignmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`RejectAssignmentOutput`](crate::output::RejectAssignmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`RejectAssignmentOutput`](crate::output::RejectAssignmentOutput)
+        /// Consumes the builder and constructs a [`RejectAssignmentOutput`](crate::output::RejectAssignmentOutput).
         pub fn build(self) -> crate::output::RejectAssignmentOutput {
             crate::output::RejectAssignmentOutput {}
         }
     }
 }
 impl RejectAssignmentOutput {
-    /// Creates a new builder-style object to manufacture [`RejectAssignmentOutput`](crate::output::RejectAssignmentOutput)
+    /// Creates a new builder-style object to manufacture [`RejectAssignmentOutput`](crate::output::RejectAssignmentOutput).
     pub fn builder() -> crate::output::reject_assignment_output::Builder {
         crate::output::reject_assignment_output::Builder::default()
     }
@@ -310,6 +302,7 @@ impl RejectAssignmentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotifyWorkersOutput {
     /// <p> When MTurk sends notifications to the list of Workers, it returns back any failures it encounters in this list of NotifyWorkersFailureStatus objects. </p>
+    #[doc(hidden)]
     pub notify_workers_failure_statuses:
         std::option::Option<std::vec::Vec<crate::model::NotifyWorkersFailureStatus>>,
 }
@@ -331,11 +324,10 @@ impl std::fmt::Debug for NotifyWorkersOutput {
         formatter.finish()
     }
 }
-/// See [`NotifyWorkersOutput`](crate::output::NotifyWorkersOutput)
+/// See [`NotifyWorkersOutput`](crate::output::NotifyWorkersOutput).
 pub mod notify_workers_output {
 
-    /// A builder for [`NotifyWorkersOutput`](crate::output::NotifyWorkersOutput)
-    #[non_exhaustive]
+    /// A builder for [`NotifyWorkersOutput`](crate::output::NotifyWorkersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) notify_workers_failure_statuses:
@@ -364,7 +356,7 @@ pub mod notify_workers_output {
             self.notify_workers_failure_statuses = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotifyWorkersOutput`](crate::output::NotifyWorkersOutput)
+        /// Consumes the builder and constructs a [`NotifyWorkersOutput`](crate::output::NotifyWorkersOutput).
         pub fn build(self) -> crate::output::NotifyWorkersOutput {
             crate::output::NotifyWorkersOutput {
                 notify_workers_failure_statuses: self.notify_workers_failure_statuses,
@@ -373,7 +365,7 @@ pub mod notify_workers_output {
     }
 }
 impl NotifyWorkersOutput {
-    /// Creates a new builder-style object to manufacture [`NotifyWorkersOutput`](crate::output::NotifyWorkersOutput)
+    /// Creates a new builder-style object to manufacture [`NotifyWorkersOutput`](crate::output::NotifyWorkersOutput).
     pub fn builder() -> crate::output::notify_workers_output::Builder {
         crate::output::notify_workers_output::Builder::default()
     }
@@ -384,10 +376,13 @@ impl NotifyWorkersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListWorkersWithQualificationTypeOutput {
     /// <p>If the previous response was incomplete (because there is more data to retrieve), Amazon Mechanical Turk returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p> The number of Qualifications on this page in the filtered results list, equivalent to the number of Qualifications being returned by this call.</p>
+    #[doc(hidden)]
     pub num_results: std::option::Option<i32>,
     /// <p> The list of Qualification elements returned by this call. </p>
+    #[doc(hidden)]
     pub qualifications: std::option::Option<std::vec::Vec<crate::model::Qualification>>,
 }
 impl ListWorkersWithQualificationTypeOutput {
@@ -413,11 +408,10 @@ impl std::fmt::Debug for ListWorkersWithQualificationTypeOutput {
         formatter.finish()
     }
 }
-/// See [`ListWorkersWithQualificationTypeOutput`](crate::output::ListWorkersWithQualificationTypeOutput)
+/// See [`ListWorkersWithQualificationTypeOutput`](crate::output::ListWorkersWithQualificationTypeOutput).
 pub mod list_workers_with_qualification_type_output {
 
-    /// A builder for [`ListWorkersWithQualificationTypeOutput`](crate::output::ListWorkersWithQualificationTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListWorkersWithQualificationTypeOutput`](crate::output::ListWorkersWithQualificationTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -464,7 +458,7 @@ pub mod list_workers_with_qualification_type_output {
             self.qualifications = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListWorkersWithQualificationTypeOutput`](crate::output::ListWorkersWithQualificationTypeOutput)
+        /// Consumes the builder and constructs a [`ListWorkersWithQualificationTypeOutput`](crate::output::ListWorkersWithQualificationTypeOutput).
         pub fn build(self) -> crate::output::ListWorkersWithQualificationTypeOutput {
             crate::output::ListWorkersWithQualificationTypeOutput {
                 next_token: self.next_token,
@@ -475,7 +469,7 @@ pub mod list_workers_with_qualification_type_output {
     }
 }
 impl ListWorkersWithQualificationTypeOutput {
-    /// Creates a new builder-style object to manufacture [`ListWorkersWithQualificationTypeOutput`](crate::output::ListWorkersWithQualificationTypeOutput)
+    /// Creates a new builder-style object to manufacture [`ListWorkersWithQualificationTypeOutput`](crate::output::ListWorkersWithQualificationTypeOutput).
     pub fn builder() -> crate::output::list_workers_with_qualification_type_output::Builder {
         crate::output::list_workers_with_qualification_type_output::Builder::default()
     }
@@ -486,10 +480,13 @@ impl ListWorkersWithQualificationTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListWorkerBlocksOutput {
     /// <p>If the previous response was incomplete (because there is more data to retrieve), Amazon Mechanical Turk returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p> The number of assignments on the page in the filtered results list, equivalent to the number of assignments returned by this call.</p>
+    #[doc(hidden)]
     pub num_results: std::option::Option<i32>,
     /// <p> The list of WorkerBlocks, containing the collection of Worker IDs and reasons for blocking.</p>
+    #[doc(hidden)]
     pub worker_blocks: std::option::Option<std::vec::Vec<crate::model::WorkerBlock>>,
 }
 impl ListWorkerBlocksOutput {
@@ -515,11 +512,10 @@ impl std::fmt::Debug for ListWorkerBlocksOutput {
         formatter.finish()
     }
 }
-/// See [`ListWorkerBlocksOutput`](crate::output::ListWorkerBlocksOutput)
+/// See [`ListWorkerBlocksOutput`](crate::output::ListWorkerBlocksOutput).
 pub mod list_worker_blocks_output {
 
-    /// A builder for [`ListWorkerBlocksOutput`](crate::output::ListWorkerBlocksOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListWorkerBlocksOutput`](crate::output::ListWorkerBlocksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -566,7 +562,7 @@ pub mod list_worker_blocks_output {
             self.worker_blocks = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListWorkerBlocksOutput`](crate::output::ListWorkerBlocksOutput)
+        /// Consumes the builder and constructs a [`ListWorkerBlocksOutput`](crate::output::ListWorkerBlocksOutput).
         pub fn build(self) -> crate::output::ListWorkerBlocksOutput {
             crate::output::ListWorkerBlocksOutput {
                 next_token: self.next_token,
@@ -577,7 +573,7 @@ pub mod list_worker_blocks_output {
     }
 }
 impl ListWorkerBlocksOutput {
-    /// Creates a new builder-style object to manufacture [`ListWorkerBlocksOutput`](crate::output::ListWorkerBlocksOutput)
+    /// Creates a new builder-style object to manufacture [`ListWorkerBlocksOutput`](crate::output::ListWorkerBlocksOutput).
     pub fn builder() -> crate::output::list_worker_blocks_output::Builder {
         crate::output::list_worker_blocks_output::Builder::default()
     }
@@ -588,16 +584,22 @@ impl ListWorkerBlocksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListReviewPolicyResultsForHitOutput {
     /// <p>The HITId of the HIT for which results have been returned.</p>
+    #[doc(hidden)]
     pub hit_id: std::option::Option<std::string::String>,
     /// <p> The name of the Assignment-level Review Policy. This contains only the PolicyName element. </p>
+    #[doc(hidden)]
     pub assignment_review_policy: std::option::Option<crate::model::ReviewPolicy>,
     /// <p>The name of the HIT-level Review Policy. This contains only the PolicyName element.</p>
+    #[doc(hidden)]
     pub hit_review_policy: std::option::Option<crate::model::ReviewPolicy>,
     /// <p> Contains both ReviewResult and ReviewAction elements for an Assignment. </p>
+    #[doc(hidden)]
     pub assignment_review_report: std::option::Option<crate::model::ReviewReport>,
     /// <p>Contains both ReviewResult and ReviewAction elements for a particular HIT. </p>
+    #[doc(hidden)]
     pub hit_review_report: std::option::Option<crate::model::ReviewReport>,
     /// <p>If the previous response was incomplete (because there is more data to retrieve), Amazon Mechanical Turk returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListReviewPolicyResultsForHitOutput {
@@ -638,11 +640,10 @@ impl std::fmt::Debug for ListReviewPolicyResultsForHitOutput {
         formatter.finish()
     }
 }
-/// See [`ListReviewPolicyResultsForHitOutput`](crate::output::ListReviewPolicyResultsForHitOutput)
+/// See [`ListReviewPolicyResultsForHitOutput`](crate::output::ListReviewPolicyResultsForHitOutput).
 pub mod list_review_policy_results_for_hit_output {
 
-    /// A builder for [`ListReviewPolicyResultsForHitOutput`](crate::output::ListReviewPolicyResultsForHitOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListReviewPolicyResultsForHitOutput`](crate::output::ListReviewPolicyResultsForHitOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hit_id: std::option::Option<std::string::String>,
@@ -725,7 +726,7 @@ pub mod list_review_policy_results_for_hit_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListReviewPolicyResultsForHitOutput`](crate::output::ListReviewPolicyResultsForHitOutput)
+        /// Consumes the builder and constructs a [`ListReviewPolicyResultsForHitOutput`](crate::output::ListReviewPolicyResultsForHitOutput).
         pub fn build(self) -> crate::output::ListReviewPolicyResultsForHitOutput {
             crate::output::ListReviewPolicyResultsForHitOutput {
                 hit_id: self.hit_id,
@@ -739,7 +740,7 @@ pub mod list_review_policy_results_for_hit_output {
     }
 }
 impl ListReviewPolicyResultsForHitOutput {
-    /// Creates a new builder-style object to manufacture [`ListReviewPolicyResultsForHitOutput`](crate::output::ListReviewPolicyResultsForHitOutput)
+    /// Creates a new builder-style object to manufacture [`ListReviewPolicyResultsForHitOutput`](crate::output::ListReviewPolicyResultsForHitOutput).
     pub fn builder() -> crate::output::list_review_policy_results_for_hit_output::Builder {
         crate::output::list_review_policy_results_for_hit_output::Builder::default()
     }
@@ -750,10 +751,13 @@ impl ListReviewPolicyResultsForHitOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListReviewableHiTsOutput {
     /// <p>If the previous response was incomplete (because there is more data to retrieve), Amazon Mechanical Turk returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p> The number of HITs on this page in the filtered results list, equivalent to the number of HITs being returned by this call. </p>
+    #[doc(hidden)]
     pub num_results: std::option::Option<i32>,
     /// <p> The list of HIT elements returned by the query.</p>
+    #[doc(hidden)]
     pub hi_ts: std::option::Option<std::vec::Vec<crate::model::Hit>>,
 }
 impl ListReviewableHiTsOutput {
@@ -779,11 +783,10 @@ impl std::fmt::Debug for ListReviewableHiTsOutput {
         formatter.finish()
     }
 }
-/// See [`ListReviewableHiTsOutput`](crate::output::ListReviewableHiTsOutput)
+/// See [`ListReviewableHiTsOutput`](crate::output::ListReviewableHiTsOutput).
 pub mod list_reviewable_hi_ts_output {
 
-    /// A builder for [`ListReviewableHiTsOutput`](crate::output::ListReviewableHiTsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListReviewableHiTsOutput`](crate::output::ListReviewableHiTsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -830,7 +833,7 @@ pub mod list_reviewable_hi_ts_output {
             self.hi_ts = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListReviewableHiTsOutput`](crate::output::ListReviewableHiTsOutput)
+        /// Consumes the builder and constructs a [`ListReviewableHiTsOutput`](crate::output::ListReviewableHiTsOutput).
         pub fn build(self) -> crate::output::ListReviewableHiTsOutput {
             crate::output::ListReviewableHiTsOutput {
                 next_token: self.next_token,
@@ -841,7 +844,7 @@ pub mod list_reviewable_hi_ts_output {
     }
 }
 impl ListReviewableHiTsOutput {
-    /// Creates a new builder-style object to manufacture [`ListReviewableHiTsOutput`](crate::output::ListReviewableHiTsOutput)
+    /// Creates a new builder-style object to manufacture [`ListReviewableHiTsOutput`](crate::output::ListReviewableHiTsOutput).
     pub fn builder() -> crate::output::list_reviewable_hi_ts_output::Builder {
         crate::output::list_reviewable_hi_ts_output::Builder::default()
     }
@@ -852,10 +855,13 @@ impl ListReviewableHiTsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListQualificationTypesOutput {
     /// <p> The number of Qualification types on this page in the filtered results list, equivalent to the number of types this operation returns. </p>
+    #[doc(hidden)]
     pub num_results: std::option::Option<i32>,
     /// <p>If the previous response was incomplete (because there is more data to retrieve), Amazon Mechanical Turk returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p> The list of QualificationType elements returned by the query. </p>
+    #[doc(hidden)]
     pub qualification_types: std::option::Option<std::vec::Vec<crate::model::QualificationType>>,
 }
 impl ListQualificationTypesOutput {
@@ -881,11 +887,10 @@ impl std::fmt::Debug for ListQualificationTypesOutput {
         formatter.finish()
     }
 }
-/// See [`ListQualificationTypesOutput`](crate::output::ListQualificationTypesOutput)
+/// See [`ListQualificationTypesOutput`](crate::output::ListQualificationTypesOutput).
 pub mod list_qualification_types_output {
 
-    /// A builder for [`ListQualificationTypesOutput`](crate::output::ListQualificationTypesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListQualificationTypesOutput`](crate::output::ListQualificationTypesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) num_results: std::option::Option<i32>,
@@ -933,7 +938,7 @@ pub mod list_qualification_types_output {
             self.qualification_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListQualificationTypesOutput`](crate::output::ListQualificationTypesOutput)
+        /// Consumes the builder and constructs a [`ListQualificationTypesOutput`](crate::output::ListQualificationTypesOutput).
         pub fn build(self) -> crate::output::ListQualificationTypesOutput {
             crate::output::ListQualificationTypesOutput {
                 num_results: self.num_results,
@@ -944,7 +949,7 @@ pub mod list_qualification_types_output {
     }
 }
 impl ListQualificationTypesOutput {
-    /// Creates a new builder-style object to manufacture [`ListQualificationTypesOutput`](crate::output::ListQualificationTypesOutput)
+    /// Creates a new builder-style object to manufacture [`ListQualificationTypesOutput`](crate::output::ListQualificationTypesOutput).
     pub fn builder() -> crate::output::list_qualification_types_output::Builder {
         crate::output::list_qualification_types_output::Builder::default()
     }
@@ -955,10 +960,13 @@ impl ListQualificationTypesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListQualificationRequestsOutput {
     /// <p>The number of Qualification requests on this page in the filtered results list, equivalent to the number of Qualification requests being returned by this call.</p>
+    #[doc(hidden)]
     pub num_results: std::option::Option<i32>,
     /// <p>If the previous response was incomplete (because there is more data to retrieve), Amazon Mechanical Turk returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The Qualification request. The response includes one QualificationRequest element for each Qualification request returned by the query.</p>
+    #[doc(hidden)]
     pub qualification_requests:
         std::option::Option<std::vec::Vec<crate::model::QualificationRequest>>,
 }
@@ -987,11 +995,10 @@ impl std::fmt::Debug for ListQualificationRequestsOutput {
         formatter.finish()
     }
 }
-/// See [`ListQualificationRequestsOutput`](crate::output::ListQualificationRequestsOutput)
+/// See [`ListQualificationRequestsOutput`](crate::output::ListQualificationRequestsOutput).
 pub mod list_qualification_requests_output {
 
-    /// A builder for [`ListQualificationRequestsOutput`](crate::output::ListQualificationRequestsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListQualificationRequestsOutput`](crate::output::ListQualificationRequestsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) num_results: std::option::Option<i32>,
@@ -1039,7 +1046,7 @@ pub mod list_qualification_requests_output {
             self.qualification_requests = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListQualificationRequestsOutput`](crate::output::ListQualificationRequestsOutput)
+        /// Consumes the builder and constructs a [`ListQualificationRequestsOutput`](crate::output::ListQualificationRequestsOutput).
         pub fn build(self) -> crate::output::ListQualificationRequestsOutput {
             crate::output::ListQualificationRequestsOutput {
                 num_results: self.num_results,
@@ -1050,7 +1057,7 @@ pub mod list_qualification_requests_output {
     }
 }
 impl ListQualificationRequestsOutput {
-    /// Creates a new builder-style object to manufacture [`ListQualificationRequestsOutput`](crate::output::ListQualificationRequestsOutput)
+    /// Creates a new builder-style object to manufacture [`ListQualificationRequestsOutput`](crate::output::ListQualificationRequestsOutput).
     pub fn builder() -> crate::output::list_qualification_requests_output::Builder {
         crate::output::list_qualification_requests_output::Builder::default()
     }
@@ -1061,10 +1068,13 @@ impl ListQualificationRequestsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListHiTsForQualificationTypeOutput {
     /// <p>If the previous response was incomplete (because there is more data to retrieve), Amazon Mechanical Turk returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p> The number of HITs on this page in the filtered results list, equivalent to the number of HITs being returned by this call. </p>
+    #[doc(hidden)]
     pub num_results: std::option::Option<i32>,
     /// <p> The list of HIT elements returned by the query.</p>
+    #[doc(hidden)]
     pub hi_ts: std::option::Option<std::vec::Vec<crate::model::Hit>>,
 }
 impl ListHiTsForQualificationTypeOutput {
@@ -1090,11 +1100,10 @@ impl std::fmt::Debug for ListHiTsForQualificationTypeOutput {
         formatter.finish()
     }
 }
-/// See [`ListHiTsForQualificationTypeOutput`](crate::output::ListHiTsForQualificationTypeOutput)
+/// See [`ListHiTsForQualificationTypeOutput`](crate::output::ListHiTsForQualificationTypeOutput).
 pub mod list_hi_ts_for_qualification_type_output {
 
-    /// A builder for [`ListHiTsForQualificationTypeOutput`](crate::output::ListHiTsForQualificationTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListHiTsForQualificationTypeOutput`](crate::output::ListHiTsForQualificationTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1141,7 +1150,7 @@ pub mod list_hi_ts_for_qualification_type_output {
             self.hi_ts = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListHiTsForQualificationTypeOutput`](crate::output::ListHiTsForQualificationTypeOutput)
+        /// Consumes the builder and constructs a [`ListHiTsForQualificationTypeOutput`](crate::output::ListHiTsForQualificationTypeOutput).
         pub fn build(self) -> crate::output::ListHiTsForQualificationTypeOutput {
             crate::output::ListHiTsForQualificationTypeOutput {
                 next_token: self.next_token,
@@ -1152,7 +1161,7 @@ pub mod list_hi_ts_for_qualification_type_output {
     }
 }
 impl ListHiTsForQualificationTypeOutput {
-    /// Creates a new builder-style object to manufacture [`ListHiTsForQualificationTypeOutput`](crate::output::ListHiTsForQualificationTypeOutput)
+    /// Creates a new builder-style object to manufacture [`ListHiTsForQualificationTypeOutput`](crate::output::ListHiTsForQualificationTypeOutput).
     pub fn builder() -> crate::output::list_hi_ts_for_qualification_type_output::Builder {
         crate::output::list_hi_ts_for_qualification_type_output::Builder::default()
     }
@@ -1163,10 +1172,13 @@ impl ListHiTsForQualificationTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListHiTsOutput {
     /// <p>If the previous response was incomplete (because there is more data to retrieve), Amazon Mechanical Turk returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The number of HITs on this page in the filtered results list, equivalent to the number of HITs being returned by this call.</p>
+    #[doc(hidden)]
     pub num_results: std::option::Option<i32>,
     /// <p> The list of HIT elements returned by the query.</p>
+    #[doc(hidden)]
     pub hi_ts: std::option::Option<std::vec::Vec<crate::model::Hit>>,
 }
 impl ListHiTsOutput {
@@ -1192,11 +1204,10 @@ impl std::fmt::Debug for ListHiTsOutput {
         formatter.finish()
     }
 }
-/// See [`ListHiTsOutput`](crate::output::ListHiTsOutput)
+/// See [`ListHiTsOutput`](crate::output::ListHiTsOutput).
 pub mod list_hi_ts_output {
 
-    /// A builder for [`ListHiTsOutput`](crate::output::ListHiTsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListHiTsOutput`](crate::output::ListHiTsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1243,7 +1254,7 @@ pub mod list_hi_ts_output {
             self.hi_ts = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListHiTsOutput`](crate::output::ListHiTsOutput)
+        /// Consumes the builder and constructs a [`ListHiTsOutput`](crate::output::ListHiTsOutput).
         pub fn build(self) -> crate::output::ListHiTsOutput {
             crate::output::ListHiTsOutput {
                 next_token: self.next_token,
@@ -1254,7 +1265,7 @@ pub mod list_hi_ts_output {
     }
 }
 impl ListHiTsOutput {
-    /// Creates a new builder-style object to manufacture [`ListHiTsOutput`](crate::output::ListHiTsOutput)
+    /// Creates a new builder-style object to manufacture [`ListHiTsOutput`](crate::output::ListHiTsOutput).
     pub fn builder() -> crate::output::list_hi_ts_output::Builder {
         crate::output::list_hi_ts_output::Builder::default()
     }
@@ -1265,10 +1276,13 @@ impl ListHiTsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBonusPaymentsOutput {
     /// <p>The number of bonus payments on this page in the filtered results list, equivalent to the number of bonus payments being returned by this call. </p>
+    #[doc(hidden)]
     pub num_results: std::option::Option<i32>,
     /// <p>If the previous response was incomplete (because there is more data to retrieve), Amazon Mechanical Turk returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>A successful request to the ListBonusPayments operation returns a list of BonusPayment objects. </p>
+    #[doc(hidden)]
     pub bonus_payments: std::option::Option<std::vec::Vec<crate::model::BonusPayment>>,
 }
 impl ListBonusPaymentsOutput {
@@ -1294,11 +1308,10 @@ impl std::fmt::Debug for ListBonusPaymentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListBonusPaymentsOutput`](crate::output::ListBonusPaymentsOutput)
+/// See [`ListBonusPaymentsOutput`](crate::output::ListBonusPaymentsOutput).
 pub mod list_bonus_payments_output {
 
-    /// A builder for [`ListBonusPaymentsOutput`](crate::output::ListBonusPaymentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBonusPaymentsOutput`](crate::output::ListBonusPaymentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) num_results: std::option::Option<i32>,
@@ -1345,7 +1358,7 @@ pub mod list_bonus_payments_output {
             self.bonus_payments = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBonusPaymentsOutput`](crate::output::ListBonusPaymentsOutput)
+        /// Consumes the builder and constructs a [`ListBonusPaymentsOutput`](crate::output::ListBonusPaymentsOutput).
         pub fn build(self) -> crate::output::ListBonusPaymentsOutput {
             crate::output::ListBonusPaymentsOutput {
                 num_results: self.num_results,
@@ -1356,7 +1369,7 @@ pub mod list_bonus_payments_output {
     }
 }
 impl ListBonusPaymentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListBonusPaymentsOutput`](crate::output::ListBonusPaymentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListBonusPaymentsOutput`](crate::output::ListBonusPaymentsOutput).
     pub fn builder() -> crate::output::list_bonus_payments_output::Builder {
         crate::output::list_bonus_payments_output::Builder::default()
     }
@@ -1367,10 +1380,13 @@ impl ListBonusPaymentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAssignmentsForHitOutput {
     /// <p>If the previous response was incomplete (because there is more data to retrieve), Amazon Mechanical Turk returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p> The number of assignments on the page in the filtered results list, equivalent to the number of assignments returned by this call.</p>
+    #[doc(hidden)]
     pub num_results: std::option::Option<i32>,
     /// <p> The collection of Assignment data structures returned by this call.</p>
+    #[doc(hidden)]
     pub assignments: std::option::Option<std::vec::Vec<crate::model::Assignment>>,
 }
 impl ListAssignmentsForHitOutput {
@@ -1396,11 +1412,10 @@ impl std::fmt::Debug for ListAssignmentsForHitOutput {
         formatter.finish()
     }
 }
-/// See [`ListAssignmentsForHitOutput`](crate::output::ListAssignmentsForHitOutput)
+/// See [`ListAssignmentsForHitOutput`](crate::output::ListAssignmentsForHitOutput).
 pub mod list_assignments_for_hit_output {
 
-    /// A builder for [`ListAssignmentsForHitOutput`](crate::output::ListAssignmentsForHitOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAssignmentsForHitOutput`](crate::output::ListAssignmentsForHitOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1447,7 +1462,7 @@ pub mod list_assignments_for_hit_output {
             self.assignments = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAssignmentsForHitOutput`](crate::output::ListAssignmentsForHitOutput)
+        /// Consumes the builder and constructs a [`ListAssignmentsForHitOutput`](crate::output::ListAssignmentsForHitOutput).
         pub fn build(self) -> crate::output::ListAssignmentsForHitOutput {
             crate::output::ListAssignmentsForHitOutput {
                 next_token: self.next_token,
@@ -1458,7 +1473,7 @@ pub mod list_assignments_for_hit_output {
     }
 }
 impl ListAssignmentsForHitOutput {
-    /// Creates a new builder-style object to manufacture [`ListAssignmentsForHitOutput`](crate::output::ListAssignmentsForHitOutput)
+    /// Creates a new builder-style object to manufacture [`ListAssignmentsForHitOutput`](crate::output::ListAssignmentsForHitOutput).
     pub fn builder() -> crate::output::list_assignments_for_hit_output::Builder {
         crate::output::list_assignments_for_hit_output::Builder::default()
     }
@@ -1469,6 +1484,7 @@ impl ListAssignmentsForHitOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetQualificationTypeOutput {
     /// <p> The returned Qualification Type</p>
+    #[doc(hidden)]
     pub qualification_type: std::option::Option<crate::model::QualificationType>,
 }
 impl GetQualificationTypeOutput {
@@ -1484,11 +1500,10 @@ impl std::fmt::Debug for GetQualificationTypeOutput {
         formatter.finish()
     }
 }
-/// See [`GetQualificationTypeOutput`](crate::output::GetQualificationTypeOutput)
+/// See [`GetQualificationTypeOutput`](crate::output::GetQualificationTypeOutput).
 pub mod get_qualification_type_output {
 
-    /// A builder for [`GetQualificationTypeOutput`](crate::output::GetQualificationTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetQualificationTypeOutput`](crate::output::GetQualificationTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) qualification_type: std::option::Option<crate::model::QualificationType>,
@@ -1507,7 +1522,7 @@ pub mod get_qualification_type_output {
             self.qualification_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetQualificationTypeOutput`](crate::output::GetQualificationTypeOutput)
+        /// Consumes the builder and constructs a [`GetQualificationTypeOutput`](crate::output::GetQualificationTypeOutput).
         pub fn build(self) -> crate::output::GetQualificationTypeOutput {
             crate::output::GetQualificationTypeOutput {
                 qualification_type: self.qualification_type,
@@ -1516,7 +1531,7 @@ pub mod get_qualification_type_output {
     }
 }
 impl GetQualificationTypeOutput {
-    /// Creates a new builder-style object to manufacture [`GetQualificationTypeOutput`](crate::output::GetQualificationTypeOutput)
+    /// Creates a new builder-style object to manufacture [`GetQualificationTypeOutput`](crate::output::GetQualificationTypeOutput).
     pub fn builder() -> crate::output::get_qualification_type_output::Builder {
         crate::output::get_qualification_type_output::Builder::default()
     }
@@ -1527,6 +1542,7 @@ impl GetQualificationTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetQualificationScoreOutput {
     /// <p> The Qualification data structure of the Qualification assigned to a user, including the Qualification type and the value (score). </p>
+    #[doc(hidden)]
     pub qualification: std::option::Option<crate::model::Qualification>,
 }
 impl GetQualificationScoreOutput {
@@ -1542,11 +1558,10 @@ impl std::fmt::Debug for GetQualificationScoreOutput {
         formatter.finish()
     }
 }
-/// See [`GetQualificationScoreOutput`](crate::output::GetQualificationScoreOutput)
+/// See [`GetQualificationScoreOutput`](crate::output::GetQualificationScoreOutput).
 pub mod get_qualification_score_output {
 
-    /// A builder for [`GetQualificationScoreOutput`](crate::output::GetQualificationScoreOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetQualificationScoreOutput`](crate::output::GetQualificationScoreOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) qualification: std::option::Option<crate::model::Qualification>,
@@ -1565,7 +1580,7 @@ pub mod get_qualification_score_output {
             self.qualification = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetQualificationScoreOutput`](crate::output::GetQualificationScoreOutput)
+        /// Consumes the builder and constructs a [`GetQualificationScoreOutput`](crate::output::GetQualificationScoreOutput).
         pub fn build(self) -> crate::output::GetQualificationScoreOutput {
             crate::output::GetQualificationScoreOutput {
                 qualification: self.qualification,
@@ -1574,7 +1589,7 @@ pub mod get_qualification_score_output {
     }
 }
 impl GetQualificationScoreOutput {
-    /// Creates a new builder-style object to manufacture [`GetQualificationScoreOutput`](crate::output::GetQualificationScoreOutput)
+    /// Creates a new builder-style object to manufacture [`GetQualificationScoreOutput`](crate::output::GetQualificationScoreOutput).
     pub fn builder() -> crate::output::get_qualification_score_output::Builder {
         crate::output::get_qualification_score_output::Builder::default()
     }
@@ -1585,6 +1600,7 @@ impl GetQualificationScoreOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetHitOutput {
     /// <p> Contains the requested HIT data.</p>
+    #[doc(hidden)]
     pub hit: std::option::Option<crate::model::Hit>,
 }
 impl GetHitOutput {
@@ -1600,11 +1616,10 @@ impl std::fmt::Debug for GetHitOutput {
         formatter.finish()
     }
 }
-/// See [`GetHitOutput`](crate::output::GetHitOutput)
+/// See [`GetHitOutput`](crate::output::GetHitOutput).
 pub mod get_hit_output {
 
-    /// A builder for [`GetHitOutput`](crate::output::GetHitOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetHitOutput`](crate::output::GetHitOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hit: std::option::Option<crate::model::Hit>,
@@ -1620,14 +1635,14 @@ pub mod get_hit_output {
             self.hit = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetHitOutput`](crate::output::GetHitOutput)
+        /// Consumes the builder and constructs a [`GetHitOutput`](crate::output::GetHitOutput).
         pub fn build(self) -> crate::output::GetHitOutput {
             crate::output::GetHitOutput { hit: self.hit }
         }
     }
 }
 impl GetHitOutput {
-    /// Creates a new builder-style object to manufacture [`GetHitOutput`](crate::output::GetHitOutput)
+    /// Creates a new builder-style object to manufacture [`GetHitOutput`](crate::output::GetHitOutput).
     pub fn builder() -> crate::output::get_hit_output::Builder {
         crate::output::get_hit_output::Builder::default()
     }
@@ -1638,6 +1653,7 @@ impl GetHitOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetFileUploadUrlOutput {
     /// <p> A temporary URL for the file that the Worker uploaded for the answer. </p>
+    #[doc(hidden)]
     pub file_upload_url: std::option::Option<std::string::String>,
 }
 impl GetFileUploadUrlOutput {
@@ -1653,11 +1669,10 @@ impl std::fmt::Debug for GetFileUploadUrlOutput {
         formatter.finish()
     }
 }
-/// See [`GetFileUploadUrlOutput`](crate::output::GetFileUploadUrlOutput)
+/// See [`GetFileUploadUrlOutput`](crate::output::GetFileUploadUrlOutput).
 pub mod get_file_upload_url_output {
 
-    /// A builder for [`GetFileUploadUrlOutput`](crate::output::GetFileUploadUrlOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetFileUploadUrlOutput`](crate::output::GetFileUploadUrlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_upload_url: std::option::Option<std::string::String>,
@@ -1676,7 +1691,7 @@ pub mod get_file_upload_url_output {
             self.file_upload_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetFileUploadUrlOutput`](crate::output::GetFileUploadUrlOutput)
+        /// Consumes the builder and constructs a [`GetFileUploadUrlOutput`](crate::output::GetFileUploadUrlOutput).
         pub fn build(self) -> crate::output::GetFileUploadUrlOutput {
             crate::output::GetFileUploadUrlOutput {
                 file_upload_url: self.file_upload_url,
@@ -1685,7 +1700,7 @@ pub mod get_file_upload_url_output {
     }
 }
 impl GetFileUploadUrlOutput {
-    /// Creates a new builder-style object to manufacture [`GetFileUploadUrlOutput`](crate::output::GetFileUploadUrlOutput)
+    /// Creates a new builder-style object to manufacture [`GetFileUploadUrlOutput`](crate::output::GetFileUploadUrlOutput).
     pub fn builder() -> crate::output::get_file_upload_url_output::Builder {
         crate::output::get_file_upload_url_output::Builder::default()
     }
@@ -1696,8 +1711,10 @@ impl GetFileUploadUrlOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAssignmentOutput {
     /// <p> The assignment. The response includes one Assignment element. </p>
+    #[doc(hidden)]
     pub assignment: std::option::Option<crate::model::Assignment>,
     /// <p> The HIT associated with this assignment. The response includes one HIT element.</p>
+    #[doc(hidden)]
     pub hit: std::option::Option<crate::model::Hit>,
 }
 impl GetAssignmentOutput {
@@ -1718,11 +1735,10 @@ impl std::fmt::Debug for GetAssignmentOutput {
         formatter.finish()
     }
 }
-/// See [`GetAssignmentOutput`](crate::output::GetAssignmentOutput)
+/// See [`GetAssignmentOutput`](crate::output::GetAssignmentOutput).
 pub mod get_assignment_output {
 
-    /// A builder for [`GetAssignmentOutput`](crate::output::GetAssignmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAssignmentOutput`](crate::output::GetAssignmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) assignment: std::option::Option<crate::model::Assignment>,
@@ -1752,7 +1768,7 @@ pub mod get_assignment_output {
             self.hit = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAssignmentOutput`](crate::output::GetAssignmentOutput)
+        /// Consumes the builder and constructs a [`GetAssignmentOutput`](crate::output::GetAssignmentOutput).
         pub fn build(self) -> crate::output::GetAssignmentOutput {
             crate::output::GetAssignmentOutput {
                 assignment: self.assignment,
@@ -1762,7 +1778,7 @@ pub mod get_assignment_output {
     }
 }
 impl GetAssignmentOutput {
-    /// Creates a new builder-style object to manufacture [`GetAssignmentOutput`](crate::output::GetAssignmentOutput)
+    /// Creates a new builder-style object to manufacture [`GetAssignmentOutput`](crate::output::GetAssignmentOutput).
     pub fn builder() -> crate::output::get_assignment_output::Builder {
         crate::output::get_assignment_output::Builder::default()
     }
@@ -1773,8 +1789,10 @@ impl GetAssignmentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAccountBalanceOutput {
     /// <p>A string representing a currency amount.</p>
+    #[doc(hidden)]
     pub available_balance: std::option::Option<std::string::String>,
     /// <p>A string representing a currency amount.</p>
+    #[doc(hidden)]
     pub on_hold_balance: std::option::Option<std::string::String>,
 }
 impl GetAccountBalanceOutput {
@@ -1795,11 +1813,10 @@ impl std::fmt::Debug for GetAccountBalanceOutput {
         formatter.finish()
     }
 }
-/// See [`GetAccountBalanceOutput`](crate::output::GetAccountBalanceOutput)
+/// See [`GetAccountBalanceOutput`](crate::output::GetAccountBalanceOutput).
 pub mod get_account_balance_output {
 
-    /// A builder for [`GetAccountBalanceOutput`](crate::output::GetAccountBalanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAccountBalanceOutput`](crate::output::GetAccountBalanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) available_balance: std::option::Option<std::string::String>,
@@ -1832,7 +1849,7 @@ pub mod get_account_balance_output {
             self.on_hold_balance = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAccountBalanceOutput`](crate::output::GetAccountBalanceOutput)
+        /// Consumes the builder and constructs a [`GetAccountBalanceOutput`](crate::output::GetAccountBalanceOutput).
         pub fn build(self) -> crate::output::GetAccountBalanceOutput {
             crate::output::GetAccountBalanceOutput {
                 available_balance: self.available_balance,
@@ -1842,7 +1859,7 @@ pub mod get_account_balance_output {
     }
 }
 impl GetAccountBalanceOutput {
-    /// Creates a new builder-style object to manufacture [`GetAccountBalanceOutput`](crate::output::GetAccountBalanceOutput)
+    /// Creates a new builder-style object to manufacture [`GetAccountBalanceOutput`](crate::output::GetAccountBalanceOutput).
     pub fn builder() -> crate::output::get_account_balance_output::Builder {
         crate::output::get_account_balance_output::Builder::default()
     }
@@ -1858,22 +1875,21 @@ impl std::fmt::Debug for DisassociateQualificationFromWorkerOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateQualificationFromWorkerOutput`](crate::output::DisassociateQualificationFromWorkerOutput)
+/// See [`DisassociateQualificationFromWorkerOutput`](crate::output::DisassociateQualificationFromWorkerOutput).
 pub mod disassociate_qualification_from_worker_output {
 
-    /// A builder for [`DisassociateQualificationFromWorkerOutput`](crate::output::DisassociateQualificationFromWorkerOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateQualificationFromWorkerOutput`](crate::output::DisassociateQualificationFromWorkerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisassociateQualificationFromWorkerOutput`](crate::output::DisassociateQualificationFromWorkerOutput)
+        /// Consumes the builder and constructs a [`DisassociateQualificationFromWorkerOutput`](crate::output::DisassociateQualificationFromWorkerOutput).
         pub fn build(self) -> crate::output::DisassociateQualificationFromWorkerOutput {
             crate::output::DisassociateQualificationFromWorkerOutput {}
         }
     }
 }
 impl DisassociateQualificationFromWorkerOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateQualificationFromWorkerOutput`](crate::output::DisassociateQualificationFromWorkerOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateQualificationFromWorkerOutput`](crate::output::DisassociateQualificationFromWorkerOutput).
     pub fn builder() -> crate::output::disassociate_qualification_from_worker_output::Builder {
         crate::output::disassociate_qualification_from_worker_output::Builder::default()
     }
@@ -1889,22 +1905,21 @@ impl std::fmt::Debug for DeleteWorkerBlockOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteWorkerBlockOutput`](crate::output::DeleteWorkerBlockOutput)
+/// See [`DeleteWorkerBlockOutput`](crate::output::DeleteWorkerBlockOutput).
 pub mod delete_worker_block_output {
 
-    /// A builder for [`DeleteWorkerBlockOutput`](crate::output::DeleteWorkerBlockOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteWorkerBlockOutput`](crate::output::DeleteWorkerBlockOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteWorkerBlockOutput`](crate::output::DeleteWorkerBlockOutput)
+        /// Consumes the builder and constructs a [`DeleteWorkerBlockOutput`](crate::output::DeleteWorkerBlockOutput).
         pub fn build(self) -> crate::output::DeleteWorkerBlockOutput {
             crate::output::DeleteWorkerBlockOutput {}
         }
     }
 }
 impl DeleteWorkerBlockOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteWorkerBlockOutput`](crate::output::DeleteWorkerBlockOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteWorkerBlockOutput`](crate::output::DeleteWorkerBlockOutput).
     pub fn builder() -> crate::output::delete_worker_block_output::Builder {
         crate::output::delete_worker_block_output::Builder::default()
     }
@@ -1920,22 +1935,21 @@ impl std::fmt::Debug for DeleteQualificationTypeOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteQualificationTypeOutput`](crate::output::DeleteQualificationTypeOutput)
+/// See [`DeleteQualificationTypeOutput`](crate::output::DeleteQualificationTypeOutput).
 pub mod delete_qualification_type_output {
 
-    /// A builder for [`DeleteQualificationTypeOutput`](crate::output::DeleteQualificationTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteQualificationTypeOutput`](crate::output::DeleteQualificationTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteQualificationTypeOutput`](crate::output::DeleteQualificationTypeOutput)
+        /// Consumes the builder and constructs a [`DeleteQualificationTypeOutput`](crate::output::DeleteQualificationTypeOutput).
         pub fn build(self) -> crate::output::DeleteQualificationTypeOutput {
             crate::output::DeleteQualificationTypeOutput {}
         }
     }
 }
 impl DeleteQualificationTypeOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteQualificationTypeOutput`](crate::output::DeleteQualificationTypeOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteQualificationTypeOutput`](crate::output::DeleteQualificationTypeOutput).
     pub fn builder() -> crate::output::delete_qualification_type_output::Builder {
         crate::output::delete_qualification_type_output::Builder::default()
     }
@@ -1951,22 +1965,21 @@ impl std::fmt::Debug for DeleteHitOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteHitOutput`](crate::output::DeleteHitOutput)
+/// See [`DeleteHitOutput`](crate::output::DeleteHitOutput).
 pub mod delete_hit_output {
 
-    /// A builder for [`DeleteHitOutput`](crate::output::DeleteHitOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteHitOutput`](crate::output::DeleteHitOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteHitOutput`](crate::output::DeleteHitOutput)
+        /// Consumes the builder and constructs a [`DeleteHitOutput`](crate::output::DeleteHitOutput).
         pub fn build(self) -> crate::output::DeleteHitOutput {
             crate::output::DeleteHitOutput {}
         }
     }
 }
 impl DeleteHitOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteHitOutput`](crate::output::DeleteHitOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteHitOutput`](crate::output::DeleteHitOutput).
     pub fn builder() -> crate::output::delete_hit_output::Builder {
         crate::output::delete_hit_output::Builder::default()
     }
@@ -1982,22 +1995,21 @@ impl std::fmt::Debug for CreateWorkerBlockOutput {
         formatter.finish()
     }
 }
-/// See [`CreateWorkerBlockOutput`](crate::output::CreateWorkerBlockOutput)
+/// See [`CreateWorkerBlockOutput`](crate::output::CreateWorkerBlockOutput).
 pub mod create_worker_block_output {
 
-    /// A builder for [`CreateWorkerBlockOutput`](crate::output::CreateWorkerBlockOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateWorkerBlockOutput`](crate::output::CreateWorkerBlockOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`CreateWorkerBlockOutput`](crate::output::CreateWorkerBlockOutput)
+        /// Consumes the builder and constructs a [`CreateWorkerBlockOutput`](crate::output::CreateWorkerBlockOutput).
         pub fn build(self) -> crate::output::CreateWorkerBlockOutput {
             crate::output::CreateWorkerBlockOutput {}
         }
     }
 }
 impl CreateWorkerBlockOutput {
-    /// Creates a new builder-style object to manufacture [`CreateWorkerBlockOutput`](crate::output::CreateWorkerBlockOutput)
+    /// Creates a new builder-style object to manufacture [`CreateWorkerBlockOutput`](crate::output::CreateWorkerBlockOutput).
     pub fn builder() -> crate::output::create_worker_block_output::Builder {
         crate::output::create_worker_block_output::Builder::default()
     }
@@ -2008,6 +2020,7 @@ impl CreateWorkerBlockOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateQualificationTypeOutput {
     /// <p>The created Qualification type, returned as a QualificationType data structure.</p>
+    #[doc(hidden)]
     pub qualification_type: std::option::Option<crate::model::QualificationType>,
 }
 impl CreateQualificationTypeOutput {
@@ -2023,11 +2036,10 @@ impl std::fmt::Debug for CreateQualificationTypeOutput {
         formatter.finish()
     }
 }
-/// See [`CreateQualificationTypeOutput`](crate::output::CreateQualificationTypeOutput)
+/// See [`CreateQualificationTypeOutput`](crate::output::CreateQualificationTypeOutput).
 pub mod create_qualification_type_output {
 
-    /// A builder for [`CreateQualificationTypeOutput`](crate::output::CreateQualificationTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateQualificationTypeOutput`](crate::output::CreateQualificationTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) qualification_type: std::option::Option<crate::model::QualificationType>,
@@ -2046,7 +2058,7 @@ pub mod create_qualification_type_output {
             self.qualification_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateQualificationTypeOutput`](crate::output::CreateQualificationTypeOutput)
+        /// Consumes the builder and constructs a [`CreateQualificationTypeOutput`](crate::output::CreateQualificationTypeOutput).
         pub fn build(self) -> crate::output::CreateQualificationTypeOutput {
             crate::output::CreateQualificationTypeOutput {
                 qualification_type: self.qualification_type,
@@ -2055,7 +2067,7 @@ pub mod create_qualification_type_output {
     }
 }
 impl CreateQualificationTypeOutput {
-    /// Creates a new builder-style object to manufacture [`CreateQualificationTypeOutput`](crate::output::CreateQualificationTypeOutput)
+    /// Creates a new builder-style object to manufacture [`CreateQualificationTypeOutput`](crate::output::CreateQualificationTypeOutput).
     pub fn builder() -> crate::output::create_qualification_type_output::Builder {
         crate::output::create_qualification_type_output::Builder::default()
     }
@@ -2066,6 +2078,7 @@ impl CreateQualificationTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateHitWithHitTypeOutput {
     /// <p> Contains the newly created HIT data. For a description of the HIT data structure as it appears in responses, see the HIT Data Structure documentation. </p>
+    #[doc(hidden)]
     pub hit: std::option::Option<crate::model::Hit>,
 }
 impl CreateHitWithHitTypeOutput {
@@ -2081,11 +2094,10 @@ impl std::fmt::Debug for CreateHitWithHitTypeOutput {
         formatter.finish()
     }
 }
-/// See [`CreateHitWithHitTypeOutput`](crate::output::CreateHitWithHitTypeOutput)
+/// See [`CreateHitWithHitTypeOutput`](crate::output::CreateHitWithHitTypeOutput).
 pub mod create_hit_with_hit_type_output {
 
-    /// A builder for [`CreateHitWithHitTypeOutput`](crate::output::CreateHitWithHitTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateHitWithHitTypeOutput`](crate::output::CreateHitWithHitTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hit: std::option::Option<crate::model::Hit>,
@@ -2101,14 +2113,14 @@ pub mod create_hit_with_hit_type_output {
             self.hit = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateHitWithHitTypeOutput`](crate::output::CreateHitWithHitTypeOutput)
+        /// Consumes the builder and constructs a [`CreateHitWithHitTypeOutput`](crate::output::CreateHitWithHitTypeOutput).
         pub fn build(self) -> crate::output::CreateHitWithHitTypeOutput {
             crate::output::CreateHitWithHitTypeOutput { hit: self.hit }
         }
     }
 }
 impl CreateHitWithHitTypeOutput {
-    /// Creates a new builder-style object to manufacture [`CreateHitWithHitTypeOutput`](crate::output::CreateHitWithHitTypeOutput)
+    /// Creates a new builder-style object to manufacture [`CreateHitWithHitTypeOutput`](crate::output::CreateHitWithHitTypeOutput).
     pub fn builder() -> crate::output::create_hit_with_hit_type_output::Builder {
         crate::output::create_hit_with_hit_type_output::Builder::default()
     }
@@ -2119,6 +2131,7 @@ impl CreateHitWithHitTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateHitTypeOutput {
     /// <p> The ID of the newly registered HIT type.</p>
+    #[doc(hidden)]
     pub hit_type_id: std::option::Option<std::string::String>,
 }
 impl CreateHitTypeOutput {
@@ -2134,11 +2147,10 @@ impl std::fmt::Debug for CreateHitTypeOutput {
         formatter.finish()
     }
 }
-/// See [`CreateHitTypeOutput`](crate::output::CreateHitTypeOutput)
+/// See [`CreateHitTypeOutput`](crate::output::CreateHitTypeOutput).
 pub mod create_hit_type_output {
 
-    /// A builder for [`CreateHitTypeOutput`](crate::output::CreateHitTypeOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateHitTypeOutput`](crate::output::CreateHitTypeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hit_type_id: std::option::Option<std::string::String>,
@@ -2154,7 +2166,7 @@ pub mod create_hit_type_output {
             self.hit_type_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateHitTypeOutput`](crate::output::CreateHitTypeOutput)
+        /// Consumes the builder and constructs a [`CreateHitTypeOutput`](crate::output::CreateHitTypeOutput).
         pub fn build(self) -> crate::output::CreateHitTypeOutput {
             crate::output::CreateHitTypeOutput {
                 hit_type_id: self.hit_type_id,
@@ -2163,7 +2175,7 @@ pub mod create_hit_type_output {
     }
 }
 impl CreateHitTypeOutput {
-    /// Creates a new builder-style object to manufacture [`CreateHitTypeOutput`](crate::output::CreateHitTypeOutput)
+    /// Creates a new builder-style object to manufacture [`CreateHitTypeOutput`](crate::output::CreateHitTypeOutput).
     pub fn builder() -> crate::output::create_hit_type_output::Builder {
         crate::output::create_hit_type_output::Builder::default()
     }
@@ -2174,6 +2186,7 @@ impl CreateHitTypeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateHitOutput {
     /// <p> Contains the newly created HIT data. For a description of the HIT data structure as it appears in responses, see the HIT Data Structure documentation. </p>
+    #[doc(hidden)]
     pub hit: std::option::Option<crate::model::Hit>,
 }
 impl CreateHitOutput {
@@ -2189,11 +2202,10 @@ impl std::fmt::Debug for CreateHitOutput {
         formatter.finish()
     }
 }
-/// See [`CreateHitOutput`](crate::output::CreateHitOutput)
+/// See [`CreateHitOutput`](crate::output::CreateHitOutput).
 pub mod create_hit_output {
 
-    /// A builder for [`CreateHitOutput`](crate::output::CreateHitOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateHitOutput`](crate::output::CreateHitOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hit: std::option::Option<crate::model::Hit>,
@@ -2209,14 +2221,14 @@ pub mod create_hit_output {
             self.hit = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateHitOutput`](crate::output::CreateHitOutput)
+        /// Consumes the builder and constructs a [`CreateHitOutput`](crate::output::CreateHitOutput).
         pub fn build(self) -> crate::output::CreateHitOutput {
             crate::output::CreateHitOutput { hit: self.hit }
         }
     }
 }
 impl CreateHitOutput {
-    /// Creates a new builder-style object to manufacture [`CreateHitOutput`](crate::output::CreateHitOutput)
+    /// Creates a new builder-style object to manufacture [`CreateHitOutput`](crate::output::CreateHitOutput).
     pub fn builder() -> crate::output::create_hit_output::Builder {
         crate::output::create_hit_output::Builder::default()
     }
@@ -2232,22 +2244,21 @@ impl std::fmt::Debug for CreateAdditionalAssignmentsForHitOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAdditionalAssignmentsForHitOutput`](crate::output::CreateAdditionalAssignmentsForHitOutput)
+/// See [`CreateAdditionalAssignmentsForHitOutput`](crate::output::CreateAdditionalAssignmentsForHitOutput).
 pub mod create_additional_assignments_for_hit_output {
 
-    /// A builder for [`CreateAdditionalAssignmentsForHitOutput`](crate::output::CreateAdditionalAssignmentsForHitOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateAdditionalAssignmentsForHitOutput`](crate::output::CreateAdditionalAssignmentsForHitOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`CreateAdditionalAssignmentsForHitOutput`](crate::output::CreateAdditionalAssignmentsForHitOutput)
+        /// Consumes the builder and constructs a [`CreateAdditionalAssignmentsForHitOutput`](crate::output::CreateAdditionalAssignmentsForHitOutput).
         pub fn build(self) -> crate::output::CreateAdditionalAssignmentsForHitOutput {
             crate::output::CreateAdditionalAssignmentsForHitOutput {}
         }
     }
 }
 impl CreateAdditionalAssignmentsForHitOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAdditionalAssignmentsForHitOutput`](crate::output::CreateAdditionalAssignmentsForHitOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAdditionalAssignmentsForHitOutput`](crate::output::CreateAdditionalAssignmentsForHitOutput).
     pub fn builder() -> crate::output::create_additional_assignments_for_hit_output::Builder {
         crate::output::create_additional_assignments_for_hit_output::Builder::default()
     }
@@ -2263,22 +2274,21 @@ impl std::fmt::Debug for AssociateQualificationWithWorkerOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateQualificationWithWorkerOutput`](crate::output::AssociateQualificationWithWorkerOutput)
+/// See [`AssociateQualificationWithWorkerOutput`](crate::output::AssociateQualificationWithWorkerOutput).
 pub mod associate_qualification_with_worker_output {
 
-    /// A builder for [`AssociateQualificationWithWorkerOutput`](crate::output::AssociateQualificationWithWorkerOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateQualificationWithWorkerOutput`](crate::output::AssociateQualificationWithWorkerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AssociateQualificationWithWorkerOutput`](crate::output::AssociateQualificationWithWorkerOutput)
+        /// Consumes the builder and constructs a [`AssociateQualificationWithWorkerOutput`](crate::output::AssociateQualificationWithWorkerOutput).
         pub fn build(self) -> crate::output::AssociateQualificationWithWorkerOutput {
             crate::output::AssociateQualificationWithWorkerOutput {}
         }
     }
 }
 impl AssociateQualificationWithWorkerOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateQualificationWithWorkerOutput`](crate::output::AssociateQualificationWithWorkerOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateQualificationWithWorkerOutput`](crate::output::AssociateQualificationWithWorkerOutput).
     pub fn builder() -> crate::output::associate_qualification_with_worker_output::Builder {
         crate::output::associate_qualification_with_worker_output::Builder::default()
     }
@@ -2294,22 +2304,21 @@ impl std::fmt::Debug for ApproveAssignmentOutput {
         formatter.finish()
     }
 }
-/// See [`ApproveAssignmentOutput`](crate::output::ApproveAssignmentOutput)
+/// See [`ApproveAssignmentOutput`](crate::output::ApproveAssignmentOutput).
 pub mod approve_assignment_output {
 
-    /// A builder for [`ApproveAssignmentOutput`](crate::output::ApproveAssignmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`ApproveAssignmentOutput`](crate::output::ApproveAssignmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`ApproveAssignmentOutput`](crate::output::ApproveAssignmentOutput)
+        /// Consumes the builder and constructs a [`ApproveAssignmentOutput`](crate::output::ApproveAssignmentOutput).
         pub fn build(self) -> crate::output::ApproveAssignmentOutput {
             crate::output::ApproveAssignmentOutput {}
         }
     }
 }
 impl ApproveAssignmentOutput {
-    /// Creates a new builder-style object to manufacture [`ApproveAssignmentOutput`](crate::output::ApproveAssignmentOutput)
+    /// Creates a new builder-style object to manufacture [`ApproveAssignmentOutput`](crate::output::ApproveAssignmentOutput).
     pub fn builder() -> crate::output::approve_assignment_output::Builder {
         crate::output::approve_assignment_output::Builder::default()
     }
@@ -2325,22 +2334,21 @@ impl std::fmt::Debug for AcceptQualificationRequestOutput {
         formatter.finish()
     }
 }
-/// See [`AcceptQualificationRequestOutput`](crate::output::AcceptQualificationRequestOutput)
+/// See [`AcceptQualificationRequestOutput`](crate::output::AcceptQualificationRequestOutput).
 pub mod accept_qualification_request_output {
 
-    /// A builder for [`AcceptQualificationRequestOutput`](crate::output::AcceptQualificationRequestOutput)
-    #[non_exhaustive]
+    /// A builder for [`AcceptQualificationRequestOutput`](crate::output::AcceptQualificationRequestOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AcceptQualificationRequestOutput`](crate::output::AcceptQualificationRequestOutput)
+        /// Consumes the builder and constructs a [`AcceptQualificationRequestOutput`](crate::output::AcceptQualificationRequestOutput).
         pub fn build(self) -> crate::output::AcceptQualificationRequestOutput {
             crate::output::AcceptQualificationRequestOutput {}
         }
     }
 }
 impl AcceptQualificationRequestOutput {
-    /// Creates a new builder-style object to manufacture [`AcceptQualificationRequestOutput`](crate::output::AcceptQualificationRequestOutput)
+    /// Creates a new builder-style object to manufacture [`AcceptQualificationRequestOutput`](crate::output::AcceptQualificationRequestOutput).
     pub fn builder() -> crate::output::accept_qualification_request_output::Builder {
         crate::output::accept_qualification_request_output::Builder::default()
     }

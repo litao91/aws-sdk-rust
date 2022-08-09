@@ -4,10 +4,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateInfrastructureConfigurationOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The idempotency token used to make this request idempotent.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the infrastructure configuration that was updated by this request.</p>
+    #[doc(hidden)]
     pub infrastructure_configuration_arn: std::option::Option<std::string::String>,
 }
 impl UpdateInfrastructureConfigurationOutput {
@@ -36,11 +39,10 @@ impl std::fmt::Debug for UpdateInfrastructureConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateInfrastructureConfigurationOutput`](crate::output::UpdateInfrastructureConfigurationOutput)
+/// See [`UpdateInfrastructureConfigurationOutput`](crate::output::UpdateInfrastructureConfigurationOutput).
 pub mod update_infrastructure_configuration_output {
 
-    /// A builder for [`UpdateInfrastructureConfigurationOutput`](crate::output::UpdateInfrastructureConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateInfrastructureConfigurationOutput`](crate::output::UpdateInfrastructureConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -84,7 +86,7 @@ pub mod update_infrastructure_configuration_output {
             self.infrastructure_configuration_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateInfrastructureConfigurationOutput`](crate::output::UpdateInfrastructureConfigurationOutput)
+        /// Consumes the builder and constructs a [`UpdateInfrastructureConfigurationOutput`](crate::output::UpdateInfrastructureConfigurationOutput).
         pub fn build(self) -> crate::output::UpdateInfrastructureConfigurationOutput {
             crate::output::UpdateInfrastructureConfigurationOutput {
                 request_id: self.request_id,
@@ -95,7 +97,7 @@ pub mod update_infrastructure_configuration_output {
     }
 }
 impl UpdateInfrastructureConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateInfrastructureConfigurationOutput`](crate::output::UpdateInfrastructureConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateInfrastructureConfigurationOutput`](crate::output::UpdateInfrastructureConfigurationOutput).
     pub fn builder() -> crate::output::update_infrastructure_configuration_output::Builder {
         crate::output::update_infrastructure_configuration_output::Builder::default()
     }
@@ -106,10 +108,13 @@ impl UpdateInfrastructureConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateImagePipelineOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The idempotency token used to make this request idempotent.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the image pipeline that was updated by this request.</p>
+    #[doc(hidden)]
     pub image_pipeline_arn: std::option::Option<std::string::String>,
 }
 impl UpdateImagePipelineOutput {
@@ -135,11 +140,10 @@ impl std::fmt::Debug for UpdateImagePipelineOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateImagePipelineOutput`](crate::output::UpdateImagePipelineOutput)
+/// See [`UpdateImagePipelineOutput`](crate::output::UpdateImagePipelineOutput).
 pub mod update_image_pipeline_output {
 
-    /// A builder for [`UpdateImagePipelineOutput`](crate::output::UpdateImagePipelineOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateImagePipelineOutput`](crate::output::UpdateImagePipelineOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -180,7 +184,7 @@ pub mod update_image_pipeline_output {
             self.image_pipeline_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateImagePipelineOutput`](crate::output::UpdateImagePipelineOutput)
+        /// Consumes the builder and constructs a [`UpdateImagePipelineOutput`](crate::output::UpdateImagePipelineOutput).
         pub fn build(self) -> crate::output::UpdateImagePipelineOutput {
             crate::output::UpdateImagePipelineOutput {
                 request_id: self.request_id,
@@ -191,7 +195,7 @@ pub mod update_image_pipeline_output {
     }
 }
 impl UpdateImagePipelineOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateImagePipelineOutput`](crate::output::UpdateImagePipelineOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateImagePipelineOutput`](crate::output::UpdateImagePipelineOutput).
     pub fn builder() -> crate::output::update_image_pipeline_output::Builder {
         crate::output::update_image_pipeline_output::Builder::default()
     }
@@ -202,10 +206,13 @@ impl UpdateImagePipelineOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDistributionConfigurationOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The idempotency token used to make this request idempotent.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the distribution configuration that was updated by this request.</p>
+    #[doc(hidden)]
     pub distribution_configuration_arn: std::option::Option<std::string::String>,
 }
 impl UpdateDistributionConfigurationOutput {
@@ -234,11 +241,10 @@ impl std::fmt::Debug for UpdateDistributionConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDistributionConfigurationOutput`](crate::output::UpdateDistributionConfigurationOutput)
+/// See [`UpdateDistributionConfigurationOutput`](crate::output::UpdateDistributionConfigurationOutput).
 pub mod update_distribution_configuration_output {
 
-    /// A builder for [`UpdateDistributionConfigurationOutput`](crate::output::UpdateDistributionConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateDistributionConfigurationOutput`](crate::output::UpdateDistributionConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -282,7 +288,7 @@ pub mod update_distribution_configuration_output {
             self.distribution_configuration_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateDistributionConfigurationOutput`](crate::output::UpdateDistributionConfigurationOutput)
+        /// Consumes the builder and constructs a [`UpdateDistributionConfigurationOutput`](crate::output::UpdateDistributionConfigurationOutput).
         pub fn build(self) -> crate::output::UpdateDistributionConfigurationOutput {
             crate::output::UpdateDistributionConfigurationOutput {
                 request_id: self.request_id,
@@ -293,7 +299,7 @@ pub mod update_distribution_configuration_output {
     }
 }
 impl UpdateDistributionConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDistributionConfigurationOutput`](crate::output::UpdateDistributionConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDistributionConfigurationOutput`](crate::output::UpdateDistributionConfigurationOutput).
     pub fn builder() -> crate::output::update_distribution_configuration_output::Builder {
         crate::output::update_distribution_configuration_output::Builder::default()
     }
@@ -309,22 +315,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -340,22 +345,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -366,10 +370,13 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartImagePipelineExecutionOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The idempotency token used to make this request idempotent.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the image that was created by this request.</p>
+    #[doc(hidden)]
     pub image_build_version_arn: std::option::Option<std::string::String>,
 }
 impl StartImagePipelineExecutionOutput {
@@ -395,11 +402,10 @@ impl std::fmt::Debug for StartImagePipelineExecutionOutput {
         formatter.finish()
     }
 }
-/// See [`StartImagePipelineExecutionOutput`](crate::output::StartImagePipelineExecutionOutput)
+/// See [`StartImagePipelineExecutionOutput`](crate::output::StartImagePipelineExecutionOutput).
 pub mod start_image_pipeline_execution_output {
 
-    /// A builder for [`StartImagePipelineExecutionOutput`](crate::output::StartImagePipelineExecutionOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartImagePipelineExecutionOutput`](crate::output::StartImagePipelineExecutionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -440,7 +446,7 @@ pub mod start_image_pipeline_execution_output {
             self.image_build_version_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartImagePipelineExecutionOutput`](crate::output::StartImagePipelineExecutionOutput)
+        /// Consumes the builder and constructs a [`StartImagePipelineExecutionOutput`](crate::output::StartImagePipelineExecutionOutput).
         pub fn build(self) -> crate::output::StartImagePipelineExecutionOutput {
             crate::output::StartImagePipelineExecutionOutput {
                 request_id: self.request_id,
@@ -451,7 +457,7 @@ pub mod start_image_pipeline_execution_output {
     }
 }
 impl StartImagePipelineExecutionOutput {
-    /// Creates a new builder-style object to manufacture [`StartImagePipelineExecutionOutput`](crate::output::StartImagePipelineExecutionOutput)
+    /// Creates a new builder-style object to manufacture [`StartImagePipelineExecutionOutput`](crate::output::StartImagePipelineExecutionOutput).
     pub fn builder() -> crate::output::start_image_pipeline_execution_output::Builder {
         crate::output::start_image_pipeline_execution_output::Builder::default()
     }
@@ -462,8 +468,10 @@ impl StartImagePipelineExecutionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutImageRecipePolicyOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the image recipe that this policy was applied to.</p>
+    #[doc(hidden)]
     pub image_recipe_arn: std::option::Option<std::string::String>,
 }
 impl PutImageRecipePolicyOutput {
@@ -484,11 +492,10 @@ impl std::fmt::Debug for PutImageRecipePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutImageRecipePolicyOutput`](crate::output::PutImageRecipePolicyOutput)
+/// See [`PutImageRecipePolicyOutput`](crate::output::PutImageRecipePolicyOutput).
 pub mod put_image_recipe_policy_output {
 
-    /// A builder for [`PutImageRecipePolicyOutput`](crate::output::PutImageRecipePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutImageRecipePolicyOutput`](crate::output::PutImageRecipePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -518,7 +525,7 @@ pub mod put_image_recipe_policy_output {
             self.image_recipe_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutImageRecipePolicyOutput`](crate::output::PutImageRecipePolicyOutput)
+        /// Consumes the builder and constructs a [`PutImageRecipePolicyOutput`](crate::output::PutImageRecipePolicyOutput).
         pub fn build(self) -> crate::output::PutImageRecipePolicyOutput {
             crate::output::PutImageRecipePolicyOutput {
                 request_id: self.request_id,
@@ -528,7 +535,7 @@ pub mod put_image_recipe_policy_output {
     }
 }
 impl PutImageRecipePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutImageRecipePolicyOutput`](crate::output::PutImageRecipePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutImageRecipePolicyOutput`](crate::output::PutImageRecipePolicyOutput).
     pub fn builder() -> crate::output::put_image_recipe_policy_output::Builder {
         crate::output::put_image_recipe_policy_output::Builder::default()
     }
@@ -539,8 +546,10 @@ impl PutImageRecipePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutImagePolicyOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the image that this policy was applied to.</p>
+    #[doc(hidden)]
     pub image_arn: std::option::Option<std::string::String>,
 }
 impl PutImagePolicyOutput {
@@ -561,11 +570,10 @@ impl std::fmt::Debug for PutImagePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutImagePolicyOutput`](crate::output::PutImagePolicyOutput)
+/// See [`PutImagePolicyOutput`](crate::output::PutImagePolicyOutput).
 pub mod put_image_policy_output {
 
-    /// A builder for [`PutImagePolicyOutput`](crate::output::PutImagePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutImagePolicyOutput`](crate::output::PutImagePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -592,7 +600,7 @@ pub mod put_image_policy_output {
             self.image_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutImagePolicyOutput`](crate::output::PutImagePolicyOutput)
+        /// Consumes the builder and constructs a [`PutImagePolicyOutput`](crate::output::PutImagePolicyOutput).
         pub fn build(self) -> crate::output::PutImagePolicyOutput {
             crate::output::PutImagePolicyOutput {
                 request_id: self.request_id,
@@ -602,7 +610,7 @@ pub mod put_image_policy_output {
     }
 }
 impl PutImagePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutImagePolicyOutput`](crate::output::PutImagePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutImagePolicyOutput`](crate::output::PutImagePolicyOutput).
     pub fn builder() -> crate::output::put_image_policy_output::Builder {
         crate::output::put_image_policy_output::Builder::default()
     }
@@ -613,8 +621,10 @@ impl PutImagePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutContainerRecipePolicyOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the container recipe that this policy was applied to.</p>
+    #[doc(hidden)]
     pub container_recipe_arn: std::option::Option<std::string::String>,
 }
 impl PutContainerRecipePolicyOutput {
@@ -635,11 +645,10 @@ impl std::fmt::Debug for PutContainerRecipePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutContainerRecipePolicyOutput`](crate::output::PutContainerRecipePolicyOutput)
+/// See [`PutContainerRecipePolicyOutput`](crate::output::PutContainerRecipePolicyOutput).
 pub mod put_container_recipe_policy_output {
 
-    /// A builder for [`PutContainerRecipePolicyOutput`](crate::output::PutContainerRecipePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutContainerRecipePolicyOutput`](crate::output::PutContainerRecipePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -669,7 +678,7 @@ pub mod put_container_recipe_policy_output {
             self.container_recipe_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutContainerRecipePolicyOutput`](crate::output::PutContainerRecipePolicyOutput)
+        /// Consumes the builder and constructs a [`PutContainerRecipePolicyOutput`](crate::output::PutContainerRecipePolicyOutput).
         pub fn build(self) -> crate::output::PutContainerRecipePolicyOutput {
             crate::output::PutContainerRecipePolicyOutput {
                 request_id: self.request_id,
@@ -679,7 +688,7 @@ pub mod put_container_recipe_policy_output {
     }
 }
 impl PutContainerRecipePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutContainerRecipePolicyOutput`](crate::output::PutContainerRecipePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutContainerRecipePolicyOutput`](crate::output::PutContainerRecipePolicyOutput).
     pub fn builder() -> crate::output::put_container_recipe_policy_output::Builder {
         crate::output::put_container_recipe_policy_output::Builder::default()
     }
@@ -690,8 +699,10 @@ impl PutContainerRecipePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutComponentPolicyOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the component that this policy was applied to.</p>
+    #[doc(hidden)]
     pub component_arn: std::option::Option<std::string::String>,
 }
 impl PutComponentPolicyOutput {
@@ -712,11 +723,10 @@ impl std::fmt::Debug for PutComponentPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutComponentPolicyOutput`](crate::output::PutComponentPolicyOutput)
+/// See [`PutComponentPolicyOutput`](crate::output::PutComponentPolicyOutput).
 pub mod put_component_policy_output {
 
-    /// A builder for [`PutComponentPolicyOutput`](crate::output::PutComponentPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutComponentPolicyOutput`](crate::output::PutComponentPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -746,7 +756,7 @@ pub mod put_component_policy_output {
             self.component_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutComponentPolicyOutput`](crate::output::PutComponentPolicyOutput)
+        /// Consumes the builder and constructs a [`PutComponentPolicyOutput`](crate::output::PutComponentPolicyOutput).
         pub fn build(self) -> crate::output::PutComponentPolicyOutput {
             crate::output::PutComponentPolicyOutput {
                 request_id: self.request_id,
@@ -756,7 +766,7 @@ pub mod put_component_policy_output {
     }
 }
 impl PutComponentPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutComponentPolicyOutput`](crate::output::PutComponentPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutComponentPolicyOutput`](crate::output::PutComponentPolicyOutput).
     pub fn builder() -> crate::output::put_component_policy_output::Builder {
         crate::output::put_component_policy_output::Builder::default()
     }
@@ -767,6 +777,7 @@ impl PutComponentPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tags for the specified resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -786,11 +797,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -823,14 +833,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -841,11 +851,14 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListInfrastructureConfigurationsOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The list of infrastructure configurations.</p>
+    #[doc(hidden)]
     pub infrastructure_configuration_summary_list:
         std::option::Option<std::vec::Vec<crate::model::InfrastructureConfigurationSummary>>,
     /// <p>The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListInfrastructureConfigurationsOutput {
@@ -876,11 +889,10 @@ impl std::fmt::Debug for ListInfrastructureConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListInfrastructureConfigurationsOutput`](crate::output::ListInfrastructureConfigurationsOutput)
+/// See [`ListInfrastructureConfigurationsOutput`](crate::output::ListInfrastructureConfigurationsOutput).
 pub mod list_infrastructure_configurations_output {
 
-    /// A builder for [`ListInfrastructureConfigurationsOutput`](crate::output::ListInfrastructureConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListInfrastructureConfigurationsOutput`](crate::output::ListInfrastructureConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -935,7 +947,7 @@ pub mod list_infrastructure_configurations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListInfrastructureConfigurationsOutput`](crate::output::ListInfrastructureConfigurationsOutput)
+        /// Consumes the builder and constructs a [`ListInfrastructureConfigurationsOutput`](crate::output::ListInfrastructureConfigurationsOutput).
         pub fn build(self) -> crate::output::ListInfrastructureConfigurationsOutput {
             crate::output::ListInfrastructureConfigurationsOutput {
                 request_id: self.request_id,
@@ -947,7 +959,7 @@ pub mod list_infrastructure_configurations_output {
     }
 }
 impl ListInfrastructureConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListInfrastructureConfigurationsOutput`](crate::output::ListInfrastructureConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListInfrastructureConfigurationsOutput`](crate::output::ListInfrastructureConfigurationsOutput).
     pub fn builder() -> crate::output::list_infrastructure_configurations_output::Builder {
         crate::output::list_infrastructure_configurations_output::Builder::default()
     }
@@ -958,6 +970,7 @@ impl ListInfrastructureConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListImagesOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The list of image semantic versions.</p> <note>
     /// <p>The semantic version has four nodes: <major>
@@ -974,8 +987,10 @@ pub struct ListImagesOutput {
     /// </major></p>
     /// <p> <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.</p>
     /// </note>
+    #[doc(hidden)]
     pub image_version_list: std::option::Option<std::vec::Vec<crate::model::ImageVersion>>,
     /// <p>The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListImagesOutput {
@@ -1015,11 +1030,10 @@ impl std::fmt::Debug for ListImagesOutput {
         formatter.finish()
     }
 }
-/// See [`ListImagesOutput`](crate::output::ListImagesOutput)
+/// See [`ListImagesOutput`](crate::output::ListImagesOutput).
 pub mod list_images_output {
 
-    /// A builder for [`ListImagesOutput`](crate::output::ListImagesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListImagesOutput`](crate::output::ListImagesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -1095,7 +1109,7 @@ pub mod list_images_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListImagesOutput`](crate::output::ListImagesOutput)
+        /// Consumes the builder and constructs a [`ListImagesOutput`](crate::output::ListImagesOutput).
         pub fn build(self) -> crate::output::ListImagesOutput {
             crate::output::ListImagesOutput {
                 request_id: self.request_id,
@@ -1106,7 +1120,7 @@ pub mod list_images_output {
     }
 }
 impl ListImagesOutput {
-    /// Creates a new builder-style object to manufacture [`ListImagesOutput`](crate::output::ListImagesOutput)
+    /// Creates a new builder-style object to manufacture [`ListImagesOutput`](crate::output::ListImagesOutput).
     pub fn builder() -> crate::output::list_images_output::Builder {
         crate::output::list_images_output::Builder::default()
     }
@@ -1117,11 +1131,14 @@ impl ListImagesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListImageRecipesOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The list of image pipelines.</p>
+    #[doc(hidden)]
     pub image_recipe_summary_list:
         std::option::Option<std::vec::Vec<crate::model::ImageRecipeSummary>>,
     /// <p>The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListImageRecipesOutput {
@@ -1149,11 +1166,10 @@ impl std::fmt::Debug for ListImageRecipesOutput {
         formatter.finish()
     }
 }
-/// See [`ListImageRecipesOutput`](crate::output::ListImageRecipesOutput)
+/// See [`ListImageRecipesOutput`](crate::output::ListImageRecipesOutput).
 pub mod list_image_recipes_output {
 
-    /// A builder for [`ListImageRecipesOutput`](crate::output::ListImageRecipesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListImageRecipesOutput`](crate::output::ListImageRecipesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -1204,7 +1220,7 @@ pub mod list_image_recipes_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListImageRecipesOutput`](crate::output::ListImageRecipesOutput)
+        /// Consumes the builder and constructs a [`ListImageRecipesOutput`](crate::output::ListImageRecipesOutput).
         pub fn build(self) -> crate::output::ListImageRecipesOutput {
             crate::output::ListImageRecipesOutput {
                 request_id: self.request_id,
@@ -1215,7 +1231,7 @@ pub mod list_image_recipes_output {
     }
 }
 impl ListImageRecipesOutput {
-    /// Creates a new builder-style object to manufacture [`ListImageRecipesOutput`](crate::output::ListImageRecipesOutput)
+    /// Creates a new builder-style object to manufacture [`ListImageRecipesOutput`](crate::output::ListImageRecipesOutput).
     pub fn builder() -> crate::output::list_image_recipes_output::Builder {
         crate::output::list_image_recipes_output::Builder::default()
     }
@@ -1226,10 +1242,13 @@ impl ListImageRecipesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListImagePipelinesOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The list of image pipelines.</p>
+    #[doc(hidden)]
     pub image_pipeline_list: std::option::Option<std::vec::Vec<crate::model::ImagePipeline>>,
     /// <p>The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListImagePipelinesOutput {
@@ -1255,11 +1274,10 @@ impl std::fmt::Debug for ListImagePipelinesOutput {
         formatter.finish()
     }
 }
-/// See [`ListImagePipelinesOutput`](crate::output::ListImagePipelinesOutput)
+/// See [`ListImagePipelinesOutput`](crate::output::ListImagePipelinesOutput).
 pub mod list_image_pipelines_output {
 
-    /// A builder for [`ListImagePipelinesOutput`](crate::output::ListImagePipelinesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListImagePipelinesOutput`](crate::output::ListImagePipelinesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -1307,7 +1325,7 @@ pub mod list_image_pipelines_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListImagePipelinesOutput`](crate::output::ListImagePipelinesOutput)
+        /// Consumes the builder and constructs a [`ListImagePipelinesOutput`](crate::output::ListImagePipelinesOutput).
         pub fn build(self) -> crate::output::ListImagePipelinesOutput {
             crate::output::ListImagePipelinesOutput {
                 request_id: self.request_id,
@@ -1318,7 +1336,7 @@ pub mod list_image_pipelines_output {
     }
 }
 impl ListImagePipelinesOutput {
-    /// Creates a new builder-style object to manufacture [`ListImagePipelinesOutput`](crate::output::ListImagePipelinesOutput)
+    /// Creates a new builder-style object to manufacture [`ListImagePipelinesOutput`](crate::output::ListImagePipelinesOutput).
     pub fn builder() -> crate::output::list_image_pipelines_output::Builder {
         crate::output::list_image_pipelines_output::Builder::default()
     }
@@ -1329,10 +1347,13 @@ impl ListImagePipelinesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListImagePipelineImagesOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The list of images built by this pipeline.</p>
+    #[doc(hidden)]
     pub image_summary_list: std::option::Option<std::vec::Vec<crate::model::ImageSummary>>,
     /// <p>The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListImagePipelineImagesOutput {
@@ -1358,11 +1379,10 @@ impl std::fmt::Debug for ListImagePipelineImagesOutput {
         formatter.finish()
     }
 }
-/// See [`ListImagePipelineImagesOutput`](crate::output::ListImagePipelineImagesOutput)
+/// See [`ListImagePipelineImagesOutput`](crate::output::ListImagePipelineImagesOutput).
 pub mod list_image_pipeline_images_output {
 
-    /// A builder for [`ListImagePipelineImagesOutput`](crate::output::ListImagePipelineImagesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListImagePipelineImagesOutput`](crate::output::ListImagePipelineImagesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -1410,7 +1430,7 @@ pub mod list_image_pipeline_images_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListImagePipelineImagesOutput`](crate::output::ListImagePipelineImagesOutput)
+        /// Consumes the builder and constructs a [`ListImagePipelineImagesOutput`](crate::output::ListImagePipelineImagesOutput).
         pub fn build(self) -> crate::output::ListImagePipelineImagesOutput {
             crate::output::ListImagePipelineImagesOutput {
                 request_id: self.request_id,
@@ -1421,7 +1441,7 @@ pub mod list_image_pipeline_images_output {
     }
 }
 impl ListImagePipelineImagesOutput {
-    /// Creates a new builder-style object to manufacture [`ListImagePipelineImagesOutput`](crate::output::ListImagePipelineImagesOutput)
+    /// Creates a new builder-style object to manufacture [`ListImagePipelineImagesOutput`](crate::output::ListImagePipelineImagesOutput).
     pub fn builder() -> crate::output::list_image_pipeline_images_output::Builder {
         crate::output::list_image_pipeline_images_output::Builder::default()
     }
@@ -1432,10 +1452,13 @@ impl ListImagePipelineImagesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListImagePackagesOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The list of Image Packages returned in the response.</p>
+    #[doc(hidden)]
     pub image_package_list: std::option::Option<std::vec::Vec<crate::model::ImagePackage>>,
     /// <p>A token to specify where to start paginating. This is the NextToken from a previously truncated response.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListImagePackagesOutput {
@@ -1461,11 +1484,10 @@ impl std::fmt::Debug for ListImagePackagesOutput {
         formatter.finish()
     }
 }
-/// See [`ListImagePackagesOutput`](crate::output::ListImagePackagesOutput)
+/// See [`ListImagePackagesOutput`](crate::output::ListImagePackagesOutput).
 pub mod list_image_packages_output {
 
-    /// A builder for [`ListImagePackagesOutput`](crate::output::ListImagePackagesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListImagePackagesOutput`](crate::output::ListImagePackagesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -1513,7 +1535,7 @@ pub mod list_image_packages_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListImagePackagesOutput`](crate::output::ListImagePackagesOutput)
+        /// Consumes the builder and constructs a [`ListImagePackagesOutput`](crate::output::ListImagePackagesOutput).
         pub fn build(self) -> crate::output::ListImagePackagesOutput {
             crate::output::ListImagePackagesOutput {
                 request_id: self.request_id,
@@ -1524,7 +1546,7 @@ pub mod list_image_packages_output {
     }
 }
 impl ListImagePackagesOutput {
-    /// Creates a new builder-style object to manufacture [`ListImagePackagesOutput`](crate::output::ListImagePackagesOutput)
+    /// Creates a new builder-style object to manufacture [`ListImagePackagesOutput`](crate::output::ListImagePackagesOutput).
     pub fn builder() -> crate::output::list_image_packages_output::Builder {
         crate::output::list_image_packages_output::Builder::default()
     }
@@ -1535,10 +1557,13 @@ impl ListImagePackagesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListImageBuildVersionsOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The list of image build versions.</p>
+    #[doc(hidden)]
     pub image_summary_list: std::option::Option<std::vec::Vec<crate::model::ImageSummary>>,
     /// <p>The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListImageBuildVersionsOutput {
@@ -1564,11 +1589,10 @@ impl std::fmt::Debug for ListImageBuildVersionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListImageBuildVersionsOutput`](crate::output::ListImageBuildVersionsOutput)
+/// See [`ListImageBuildVersionsOutput`](crate::output::ListImageBuildVersionsOutput).
 pub mod list_image_build_versions_output {
 
-    /// A builder for [`ListImageBuildVersionsOutput`](crate::output::ListImageBuildVersionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListImageBuildVersionsOutput`](crate::output::ListImageBuildVersionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -1616,7 +1640,7 @@ pub mod list_image_build_versions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListImageBuildVersionsOutput`](crate::output::ListImageBuildVersionsOutput)
+        /// Consumes the builder and constructs a [`ListImageBuildVersionsOutput`](crate::output::ListImageBuildVersionsOutput).
         pub fn build(self) -> crate::output::ListImageBuildVersionsOutput {
             crate::output::ListImageBuildVersionsOutput {
                 request_id: self.request_id,
@@ -1627,7 +1651,7 @@ pub mod list_image_build_versions_output {
     }
 }
 impl ListImageBuildVersionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListImageBuildVersionsOutput`](crate::output::ListImageBuildVersionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListImageBuildVersionsOutput`](crate::output::ListImageBuildVersionsOutput).
     pub fn builder() -> crate::output::list_image_build_versions_output::Builder {
         crate::output::list_image_build_versions_output::Builder::default()
     }
@@ -1638,11 +1662,14 @@ impl ListImageBuildVersionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDistributionConfigurationsOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The list of distributions.</p>
+    #[doc(hidden)]
     pub distribution_configuration_summary_list:
         std::option::Option<std::vec::Vec<crate::model::DistributionConfigurationSummary>>,
     /// <p>The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListDistributionConfigurationsOutput {
@@ -1673,11 +1700,10 @@ impl std::fmt::Debug for ListDistributionConfigurationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDistributionConfigurationsOutput`](crate::output::ListDistributionConfigurationsOutput)
+/// See [`ListDistributionConfigurationsOutput`](crate::output::ListDistributionConfigurationsOutput).
 pub mod list_distribution_configurations_output {
 
-    /// A builder for [`ListDistributionConfigurationsOutput`](crate::output::ListDistributionConfigurationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListDistributionConfigurationsOutput`](crate::output::ListDistributionConfigurationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -1732,7 +1758,7 @@ pub mod list_distribution_configurations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDistributionConfigurationsOutput`](crate::output::ListDistributionConfigurationsOutput)
+        /// Consumes the builder and constructs a [`ListDistributionConfigurationsOutput`](crate::output::ListDistributionConfigurationsOutput).
         pub fn build(self) -> crate::output::ListDistributionConfigurationsOutput {
             crate::output::ListDistributionConfigurationsOutput {
                 request_id: self.request_id,
@@ -1744,7 +1770,7 @@ pub mod list_distribution_configurations_output {
     }
 }
 impl ListDistributionConfigurationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDistributionConfigurationsOutput`](crate::output::ListDistributionConfigurationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDistributionConfigurationsOutput`](crate::output::ListDistributionConfigurationsOutput).
     pub fn builder() -> crate::output::list_distribution_configurations_output::Builder {
         crate::output::list_distribution_configurations_output::Builder::default()
     }
@@ -1755,11 +1781,14 @@ impl ListDistributionConfigurationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListContainerRecipesOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The list of container recipes returned for the request.</p>
+    #[doc(hidden)]
     pub container_recipe_summary_list:
         std::option::Option<std::vec::Vec<crate::model::ContainerRecipeSummary>>,
     /// <p>The next token field is used for paginated responses. When this is not empty, there are additional container recipes that the service has not included in this response. Use this token with the next request to retrieve additional list items.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListContainerRecipesOutput {
@@ -1790,11 +1819,10 @@ impl std::fmt::Debug for ListContainerRecipesOutput {
         formatter.finish()
     }
 }
-/// See [`ListContainerRecipesOutput`](crate::output::ListContainerRecipesOutput)
+/// See [`ListContainerRecipesOutput`](crate::output::ListContainerRecipesOutput).
 pub mod list_container_recipes_output {
 
-    /// A builder for [`ListContainerRecipesOutput`](crate::output::ListContainerRecipesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListContainerRecipesOutput`](crate::output::ListContainerRecipesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -1845,7 +1873,7 @@ pub mod list_container_recipes_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListContainerRecipesOutput`](crate::output::ListContainerRecipesOutput)
+        /// Consumes the builder and constructs a [`ListContainerRecipesOutput`](crate::output::ListContainerRecipesOutput).
         pub fn build(self) -> crate::output::ListContainerRecipesOutput {
             crate::output::ListContainerRecipesOutput {
                 request_id: self.request_id,
@@ -1856,7 +1884,7 @@ pub mod list_container_recipes_output {
     }
 }
 impl ListContainerRecipesOutput {
-    /// Creates a new builder-style object to manufacture [`ListContainerRecipesOutput`](crate::output::ListContainerRecipesOutput)
+    /// Creates a new builder-style object to manufacture [`ListContainerRecipesOutput`](crate::output::ListContainerRecipesOutput).
     pub fn builder() -> crate::output::list_container_recipes_output::Builder {
         crate::output::list_container_recipes_output::Builder::default()
     }
@@ -1867,6 +1895,7 @@ impl ListContainerRecipesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListComponentsOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The list of component semantic versions.</p> <note>
     /// <p>The semantic version has four nodes: <major>
@@ -1882,8 +1911,10 @@ pub struct ListComponentsOutput {
     /// </minor>
     /// </major></p>
     /// </note>
+    #[doc(hidden)]
     pub component_version_list: std::option::Option<std::vec::Vec<crate::model::ComponentVersion>>,
     /// <p>The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListComponentsOutput {
@@ -1922,11 +1953,10 @@ impl std::fmt::Debug for ListComponentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListComponentsOutput`](crate::output::ListComponentsOutput)
+/// See [`ListComponentsOutput`](crate::output::ListComponentsOutput).
 pub mod list_components_output {
 
-    /// A builder for [`ListComponentsOutput`](crate::output::ListComponentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListComponentsOutput`](crate::output::ListComponentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -2000,7 +2030,7 @@ pub mod list_components_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListComponentsOutput`](crate::output::ListComponentsOutput)
+        /// Consumes the builder and constructs a [`ListComponentsOutput`](crate::output::ListComponentsOutput).
         pub fn build(self) -> crate::output::ListComponentsOutput {
             crate::output::ListComponentsOutput {
                 request_id: self.request_id,
@@ -2011,7 +2041,7 @@ pub mod list_components_output {
     }
 }
 impl ListComponentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListComponentsOutput`](crate::output::ListComponentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListComponentsOutput`](crate::output::ListComponentsOutput).
     pub fn builder() -> crate::output::list_components_output::Builder {
         crate::output::list_components_output::Builder::default()
     }
@@ -2022,10 +2052,13 @@ impl ListComponentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListComponentBuildVersionsOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The list of component summaries for the specified semantic version.</p>
+    #[doc(hidden)]
     pub component_summary_list: std::option::Option<std::vec::Vec<crate::model::ComponentSummary>>,
     /// <p>The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListComponentBuildVersionsOutput {
@@ -2051,11 +2084,10 @@ impl std::fmt::Debug for ListComponentBuildVersionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListComponentBuildVersionsOutput`](crate::output::ListComponentBuildVersionsOutput)
+/// See [`ListComponentBuildVersionsOutput`](crate::output::ListComponentBuildVersionsOutput).
 pub mod list_component_build_versions_output {
 
-    /// A builder for [`ListComponentBuildVersionsOutput`](crate::output::ListComponentBuildVersionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListComponentBuildVersionsOutput`](crate::output::ListComponentBuildVersionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -2103,7 +2135,7 @@ pub mod list_component_build_versions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListComponentBuildVersionsOutput`](crate::output::ListComponentBuildVersionsOutput)
+        /// Consumes the builder and constructs a [`ListComponentBuildVersionsOutput`](crate::output::ListComponentBuildVersionsOutput).
         pub fn build(self) -> crate::output::ListComponentBuildVersionsOutput {
             crate::output::ListComponentBuildVersionsOutput {
                 request_id: self.request_id,
@@ -2114,7 +2146,7 @@ pub mod list_component_build_versions_output {
     }
 }
 impl ListComponentBuildVersionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListComponentBuildVersionsOutput`](crate::output::ListComponentBuildVersionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListComponentBuildVersionsOutput`](crate::output::ListComponentBuildVersionsOutput).
     pub fn builder() -> crate::output::list_component_build_versions_output::Builder {
         crate::output::list_component_build_versions_output::Builder::default()
     }
@@ -2125,10 +2157,13 @@ impl ListComponentBuildVersionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportVmImageOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the AMI that was created during the VM import process. This AMI is used as the base image for the recipe that imported the VM.</p>
+    #[doc(hidden)]
     pub image_arn: std::option::Option<std::string::String>,
     /// <p>The idempotency token that was used for this request.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
 }
 impl ImportVmImageOutput {
@@ -2154,11 +2189,10 @@ impl std::fmt::Debug for ImportVmImageOutput {
         formatter.finish()
     }
 }
-/// See [`ImportVmImageOutput`](crate::output::ImportVmImageOutput)
+/// See [`ImportVmImageOutput`](crate::output::ImportVmImageOutput).
 pub mod import_vm_image_output {
 
-    /// A builder for [`ImportVmImageOutput`](crate::output::ImportVmImageOutput)
-    #[non_exhaustive]
+    /// A builder for [`ImportVmImageOutput`](crate::output::ImportVmImageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -2196,7 +2230,7 @@ pub mod import_vm_image_output {
             self.client_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportVmImageOutput`](crate::output::ImportVmImageOutput)
+        /// Consumes the builder and constructs a [`ImportVmImageOutput`](crate::output::ImportVmImageOutput).
         pub fn build(self) -> crate::output::ImportVmImageOutput {
             crate::output::ImportVmImageOutput {
                 request_id: self.request_id,
@@ -2207,7 +2241,7 @@ pub mod import_vm_image_output {
     }
 }
 impl ImportVmImageOutput {
-    /// Creates a new builder-style object to manufacture [`ImportVmImageOutput`](crate::output::ImportVmImageOutput)
+    /// Creates a new builder-style object to manufacture [`ImportVmImageOutput`](crate::output::ImportVmImageOutput).
     pub fn builder() -> crate::output::import_vm_image_output::Builder {
         crate::output::import_vm_image_output::Builder::default()
     }
@@ -2218,10 +2252,13 @@ impl ImportVmImageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportComponentOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The idempotency token used to make this request idempotent.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the imported component.</p>
+    #[doc(hidden)]
     pub component_build_version_arn: std::option::Option<std::string::String>,
 }
 impl ImportComponentOutput {
@@ -2250,11 +2287,10 @@ impl std::fmt::Debug for ImportComponentOutput {
         formatter.finish()
     }
 }
-/// See [`ImportComponentOutput`](crate::output::ImportComponentOutput)
+/// See [`ImportComponentOutput`](crate::output::ImportComponentOutput).
 pub mod import_component_output {
 
-    /// A builder for [`ImportComponentOutput`](crate::output::ImportComponentOutput)
-    #[non_exhaustive]
+    /// A builder for [`ImportComponentOutput`](crate::output::ImportComponentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -2298,7 +2334,7 @@ pub mod import_component_output {
             self.component_build_version_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportComponentOutput`](crate::output::ImportComponentOutput)
+        /// Consumes the builder and constructs a [`ImportComponentOutput`](crate::output::ImportComponentOutput).
         pub fn build(self) -> crate::output::ImportComponentOutput {
             crate::output::ImportComponentOutput {
                 request_id: self.request_id,
@@ -2309,7 +2345,7 @@ pub mod import_component_output {
     }
 }
 impl ImportComponentOutput {
-    /// Creates a new builder-style object to manufacture [`ImportComponentOutput`](crate::output::ImportComponentOutput)
+    /// Creates a new builder-style object to manufacture [`ImportComponentOutput`](crate::output::ImportComponentOutput).
     pub fn builder() -> crate::output::import_component_output::Builder {
         crate::output::import_component_output::Builder::default()
     }
@@ -2320,8 +2356,10 @@ impl ImportComponentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetInfrastructureConfigurationOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The infrastructure configuration object.</p>
+    #[doc(hidden)]
     pub infrastructure_configuration:
         std::option::Option<crate::model::InfrastructureConfiguration>,
 }
@@ -2348,11 +2386,10 @@ impl std::fmt::Debug for GetInfrastructureConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetInfrastructureConfigurationOutput`](crate::output::GetInfrastructureConfigurationOutput)
+/// See [`GetInfrastructureConfigurationOutput`](crate::output::GetInfrastructureConfigurationOutput).
 pub mod get_infrastructure_configuration_output {
 
-    /// A builder for [`GetInfrastructureConfigurationOutput`](crate::output::GetInfrastructureConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetInfrastructureConfigurationOutput`](crate::output::GetInfrastructureConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -2386,7 +2423,7 @@ pub mod get_infrastructure_configuration_output {
             self.infrastructure_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetInfrastructureConfigurationOutput`](crate::output::GetInfrastructureConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetInfrastructureConfigurationOutput`](crate::output::GetInfrastructureConfigurationOutput).
         pub fn build(self) -> crate::output::GetInfrastructureConfigurationOutput {
             crate::output::GetInfrastructureConfigurationOutput {
                 request_id: self.request_id,
@@ -2396,7 +2433,7 @@ pub mod get_infrastructure_configuration_output {
     }
 }
 impl GetInfrastructureConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetInfrastructureConfigurationOutput`](crate::output::GetInfrastructureConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetInfrastructureConfigurationOutput`](crate::output::GetInfrastructureConfigurationOutput).
     pub fn builder() -> crate::output::get_infrastructure_configuration_output::Builder {
         crate::output::get_infrastructure_configuration_output::Builder::default()
     }
@@ -2407,8 +2444,10 @@ impl GetInfrastructureConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetImageRecipePolicyOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The image recipe policy object.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl GetImageRecipePolicyOutput {
@@ -2429,11 +2468,10 @@ impl std::fmt::Debug for GetImageRecipePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetImageRecipePolicyOutput`](crate::output::GetImageRecipePolicyOutput)
+/// See [`GetImageRecipePolicyOutput`](crate::output::GetImageRecipePolicyOutput).
 pub mod get_image_recipe_policy_output {
 
-    /// A builder for [`GetImageRecipePolicyOutput`](crate::output::GetImageRecipePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetImageRecipePolicyOutput`](crate::output::GetImageRecipePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -2460,7 +2498,7 @@ pub mod get_image_recipe_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetImageRecipePolicyOutput`](crate::output::GetImageRecipePolicyOutput)
+        /// Consumes the builder and constructs a [`GetImageRecipePolicyOutput`](crate::output::GetImageRecipePolicyOutput).
         pub fn build(self) -> crate::output::GetImageRecipePolicyOutput {
             crate::output::GetImageRecipePolicyOutput {
                 request_id: self.request_id,
@@ -2470,7 +2508,7 @@ pub mod get_image_recipe_policy_output {
     }
 }
 impl GetImageRecipePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetImageRecipePolicyOutput`](crate::output::GetImageRecipePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetImageRecipePolicyOutput`](crate::output::GetImageRecipePolicyOutput).
     pub fn builder() -> crate::output::get_image_recipe_policy_output::Builder {
         crate::output::get_image_recipe_policy_output::Builder::default()
     }
@@ -2481,8 +2519,10 @@ impl GetImageRecipePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetImageRecipeOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The image recipe object.</p>
+    #[doc(hidden)]
     pub image_recipe: std::option::Option<crate::model::ImageRecipe>,
 }
 impl GetImageRecipeOutput {
@@ -2503,11 +2543,10 @@ impl std::fmt::Debug for GetImageRecipeOutput {
         formatter.finish()
     }
 }
-/// See [`GetImageRecipeOutput`](crate::output::GetImageRecipeOutput)
+/// See [`GetImageRecipeOutput`](crate::output::GetImageRecipeOutput).
 pub mod get_image_recipe_output {
 
-    /// A builder for [`GetImageRecipeOutput`](crate::output::GetImageRecipeOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetImageRecipeOutput`](crate::output::GetImageRecipeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -2537,7 +2576,7 @@ pub mod get_image_recipe_output {
             self.image_recipe = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetImageRecipeOutput`](crate::output::GetImageRecipeOutput)
+        /// Consumes the builder and constructs a [`GetImageRecipeOutput`](crate::output::GetImageRecipeOutput).
         pub fn build(self) -> crate::output::GetImageRecipeOutput {
             crate::output::GetImageRecipeOutput {
                 request_id: self.request_id,
@@ -2547,7 +2586,7 @@ pub mod get_image_recipe_output {
     }
 }
 impl GetImageRecipeOutput {
-    /// Creates a new builder-style object to manufacture [`GetImageRecipeOutput`](crate::output::GetImageRecipeOutput)
+    /// Creates a new builder-style object to manufacture [`GetImageRecipeOutput`](crate::output::GetImageRecipeOutput).
     pub fn builder() -> crate::output::get_image_recipe_output::Builder {
         crate::output::get_image_recipe_output::Builder::default()
     }
@@ -2558,8 +2597,10 @@ impl GetImageRecipeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetImagePolicyOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The image policy object.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl GetImagePolicyOutput {
@@ -2580,11 +2621,10 @@ impl std::fmt::Debug for GetImagePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetImagePolicyOutput`](crate::output::GetImagePolicyOutput)
+/// See [`GetImagePolicyOutput`](crate::output::GetImagePolicyOutput).
 pub mod get_image_policy_output {
 
-    /// A builder for [`GetImagePolicyOutput`](crate::output::GetImagePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetImagePolicyOutput`](crate::output::GetImagePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -2611,7 +2651,7 @@ pub mod get_image_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetImagePolicyOutput`](crate::output::GetImagePolicyOutput)
+        /// Consumes the builder and constructs a [`GetImagePolicyOutput`](crate::output::GetImagePolicyOutput).
         pub fn build(self) -> crate::output::GetImagePolicyOutput {
             crate::output::GetImagePolicyOutput {
                 request_id: self.request_id,
@@ -2621,7 +2661,7 @@ pub mod get_image_policy_output {
     }
 }
 impl GetImagePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetImagePolicyOutput`](crate::output::GetImagePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetImagePolicyOutput`](crate::output::GetImagePolicyOutput).
     pub fn builder() -> crate::output::get_image_policy_output::Builder {
         crate::output::get_image_policy_output::Builder::default()
     }
@@ -2632,8 +2672,10 @@ impl GetImagePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetImagePipelineOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The image pipeline object.</p>
+    #[doc(hidden)]
     pub image_pipeline: std::option::Option<crate::model::ImagePipeline>,
 }
 impl GetImagePipelineOutput {
@@ -2654,11 +2696,10 @@ impl std::fmt::Debug for GetImagePipelineOutput {
         formatter.finish()
     }
 }
-/// See [`GetImagePipelineOutput`](crate::output::GetImagePipelineOutput)
+/// See [`GetImagePipelineOutput`](crate::output::GetImagePipelineOutput).
 pub mod get_image_pipeline_output {
 
-    /// A builder for [`GetImagePipelineOutput`](crate::output::GetImagePipelineOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetImagePipelineOutput`](crate::output::GetImagePipelineOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -2688,7 +2729,7 @@ pub mod get_image_pipeline_output {
             self.image_pipeline = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetImagePipelineOutput`](crate::output::GetImagePipelineOutput)
+        /// Consumes the builder and constructs a [`GetImagePipelineOutput`](crate::output::GetImagePipelineOutput).
         pub fn build(self) -> crate::output::GetImagePipelineOutput {
             crate::output::GetImagePipelineOutput {
                 request_id: self.request_id,
@@ -2698,7 +2739,7 @@ pub mod get_image_pipeline_output {
     }
 }
 impl GetImagePipelineOutput {
-    /// Creates a new builder-style object to manufacture [`GetImagePipelineOutput`](crate::output::GetImagePipelineOutput)
+    /// Creates a new builder-style object to manufacture [`GetImagePipelineOutput`](crate::output::GetImagePipelineOutput).
     pub fn builder() -> crate::output::get_image_pipeline_output::Builder {
         crate::output::get_image_pipeline_output::Builder::default()
     }
@@ -2709,8 +2750,10 @@ impl GetImagePipelineOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetImageOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The image object.</p>
+    #[doc(hidden)]
     pub image: std::option::Option<crate::model::Image>,
 }
 impl GetImageOutput {
@@ -2731,11 +2774,10 @@ impl std::fmt::Debug for GetImageOutput {
         formatter.finish()
     }
 }
-/// See [`GetImageOutput`](crate::output::GetImageOutput)
+/// See [`GetImageOutput`](crate::output::GetImageOutput).
 pub mod get_image_output {
 
-    /// A builder for [`GetImageOutput`](crate::output::GetImageOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetImageOutput`](crate::output::GetImageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -2762,7 +2804,7 @@ pub mod get_image_output {
             self.image = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetImageOutput`](crate::output::GetImageOutput)
+        /// Consumes the builder and constructs a [`GetImageOutput`](crate::output::GetImageOutput).
         pub fn build(self) -> crate::output::GetImageOutput {
             crate::output::GetImageOutput {
                 request_id: self.request_id,
@@ -2772,7 +2814,7 @@ pub mod get_image_output {
     }
 }
 impl GetImageOutput {
-    /// Creates a new builder-style object to manufacture [`GetImageOutput`](crate::output::GetImageOutput)
+    /// Creates a new builder-style object to manufacture [`GetImageOutput`](crate::output::GetImageOutput).
     pub fn builder() -> crate::output::get_image_output::Builder {
         crate::output::get_image_output::Builder::default()
     }
@@ -2783,8 +2825,10 @@ impl GetImageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDistributionConfigurationOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The distribution configuration object.</p>
+    #[doc(hidden)]
     pub distribution_configuration: std::option::Option<crate::model::DistributionConfiguration>,
 }
 impl GetDistributionConfigurationOutput {
@@ -2810,11 +2854,10 @@ impl std::fmt::Debug for GetDistributionConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetDistributionConfigurationOutput`](crate::output::GetDistributionConfigurationOutput)
+/// See [`GetDistributionConfigurationOutput`](crate::output::GetDistributionConfigurationOutput).
 pub mod get_distribution_configuration_output {
 
-    /// A builder for [`GetDistributionConfigurationOutput`](crate::output::GetDistributionConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDistributionConfigurationOutput`](crate::output::GetDistributionConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -2848,7 +2891,7 @@ pub mod get_distribution_configuration_output {
             self.distribution_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDistributionConfigurationOutput`](crate::output::GetDistributionConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetDistributionConfigurationOutput`](crate::output::GetDistributionConfigurationOutput).
         pub fn build(self) -> crate::output::GetDistributionConfigurationOutput {
             crate::output::GetDistributionConfigurationOutput {
                 request_id: self.request_id,
@@ -2858,7 +2901,7 @@ pub mod get_distribution_configuration_output {
     }
 }
 impl GetDistributionConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetDistributionConfigurationOutput`](crate::output::GetDistributionConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetDistributionConfigurationOutput`](crate::output::GetDistributionConfigurationOutput).
     pub fn builder() -> crate::output::get_distribution_configuration_output::Builder {
         crate::output::get_distribution_configuration_output::Builder::default()
     }
@@ -2869,8 +2912,10 @@ impl GetDistributionConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetContainerRecipePolicyOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The container recipe policy object that is returned.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl GetContainerRecipePolicyOutput {
@@ -2891,11 +2936,10 @@ impl std::fmt::Debug for GetContainerRecipePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetContainerRecipePolicyOutput`](crate::output::GetContainerRecipePolicyOutput)
+/// See [`GetContainerRecipePolicyOutput`](crate::output::GetContainerRecipePolicyOutput).
 pub mod get_container_recipe_policy_output {
 
-    /// A builder for [`GetContainerRecipePolicyOutput`](crate::output::GetContainerRecipePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetContainerRecipePolicyOutput`](crate::output::GetContainerRecipePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -2922,7 +2966,7 @@ pub mod get_container_recipe_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetContainerRecipePolicyOutput`](crate::output::GetContainerRecipePolicyOutput)
+        /// Consumes the builder and constructs a [`GetContainerRecipePolicyOutput`](crate::output::GetContainerRecipePolicyOutput).
         pub fn build(self) -> crate::output::GetContainerRecipePolicyOutput {
             crate::output::GetContainerRecipePolicyOutput {
                 request_id: self.request_id,
@@ -2932,7 +2976,7 @@ pub mod get_container_recipe_policy_output {
     }
 }
 impl GetContainerRecipePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetContainerRecipePolicyOutput`](crate::output::GetContainerRecipePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetContainerRecipePolicyOutput`](crate::output::GetContainerRecipePolicyOutput).
     pub fn builder() -> crate::output::get_container_recipe_policy_output::Builder {
         crate::output::get_container_recipe_policy_output::Builder::default()
     }
@@ -2943,8 +2987,10 @@ impl GetContainerRecipePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetContainerRecipeOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The container recipe object that is returned.</p>
+    #[doc(hidden)]
     pub container_recipe: std::option::Option<crate::model::ContainerRecipe>,
 }
 impl GetContainerRecipeOutput {
@@ -2965,11 +3011,10 @@ impl std::fmt::Debug for GetContainerRecipeOutput {
         formatter.finish()
     }
 }
-/// See [`GetContainerRecipeOutput`](crate::output::GetContainerRecipeOutput)
+/// See [`GetContainerRecipeOutput`](crate::output::GetContainerRecipeOutput).
 pub mod get_container_recipe_output {
 
-    /// A builder for [`GetContainerRecipeOutput`](crate::output::GetContainerRecipeOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetContainerRecipeOutput`](crate::output::GetContainerRecipeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -2999,7 +3044,7 @@ pub mod get_container_recipe_output {
             self.container_recipe = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetContainerRecipeOutput`](crate::output::GetContainerRecipeOutput)
+        /// Consumes the builder and constructs a [`GetContainerRecipeOutput`](crate::output::GetContainerRecipeOutput).
         pub fn build(self) -> crate::output::GetContainerRecipeOutput {
             crate::output::GetContainerRecipeOutput {
                 request_id: self.request_id,
@@ -3009,7 +3054,7 @@ pub mod get_container_recipe_output {
     }
 }
 impl GetContainerRecipeOutput {
-    /// Creates a new builder-style object to manufacture [`GetContainerRecipeOutput`](crate::output::GetContainerRecipeOutput)
+    /// Creates a new builder-style object to manufacture [`GetContainerRecipeOutput`](crate::output::GetContainerRecipeOutput).
     pub fn builder() -> crate::output::get_container_recipe_output::Builder {
         crate::output::get_container_recipe_output::Builder::default()
     }
@@ -3020,8 +3065,10 @@ impl GetContainerRecipeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetComponentPolicyOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The component policy.</p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl GetComponentPolicyOutput {
@@ -3042,11 +3089,10 @@ impl std::fmt::Debug for GetComponentPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetComponentPolicyOutput`](crate::output::GetComponentPolicyOutput)
+/// See [`GetComponentPolicyOutput`](crate::output::GetComponentPolicyOutput).
 pub mod get_component_policy_output {
 
-    /// A builder for [`GetComponentPolicyOutput`](crate::output::GetComponentPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetComponentPolicyOutput`](crate::output::GetComponentPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -3073,7 +3119,7 @@ pub mod get_component_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetComponentPolicyOutput`](crate::output::GetComponentPolicyOutput)
+        /// Consumes the builder and constructs a [`GetComponentPolicyOutput`](crate::output::GetComponentPolicyOutput).
         pub fn build(self) -> crate::output::GetComponentPolicyOutput {
             crate::output::GetComponentPolicyOutput {
                 request_id: self.request_id,
@@ -3083,7 +3129,7 @@ pub mod get_component_policy_output {
     }
 }
 impl GetComponentPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetComponentPolicyOutput`](crate::output::GetComponentPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetComponentPolicyOutput`](crate::output::GetComponentPolicyOutput).
     pub fn builder() -> crate::output::get_component_policy_output::Builder {
         crate::output::get_component_policy_output::Builder::default()
     }
@@ -3094,8 +3140,10 @@ impl GetComponentPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetComponentOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The component object associated with the specified ARN.</p>
+    #[doc(hidden)]
     pub component: std::option::Option<crate::model::Component>,
 }
 impl GetComponentOutput {
@@ -3116,11 +3164,10 @@ impl std::fmt::Debug for GetComponentOutput {
         formatter.finish()
     }
 }
-/// See [`GetComponentOutput`](crate::output::GetComponentOutput)
+/// See [`GetComponentOutput`](crate::output::GetComponentOutput).
 pub mod get_component_output {
 
-    /// A builder for [`GetComponentOutput`](crate::output::GetComponentOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetComponentOutput`](crate::output::GetComponentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -3150,7 +3197,7 @@ pub mod get_component_output {
             self.component = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetComponentOutput`](crate::output::GetComponentOutput)
+        /// Consumes the builder and constructs a [`GetComponentOutput`](crate::output::GetComponentOutput).
         pub fn build(self) -> crate::output::GetComponentOutput {
             crate::output::GetComponentOutput {
                 request_id: self.request_id,
@@ -3160,7 +3207,7 @@ pub mod get_component_output {
     }
 }
 impl GetComponentOutput {
-    /// Creates a new builder-style object to manufacture [`GetComponentOutput`](crate::output::GetComponentOutput)
+    /// Creates a new builder-style object to manufacture [`GetComponentOutput`](crate::output::GetComponentOutput).
     pub fn builder() -> crate::output::get_component_output::Builder {
         crate::output::get_component_output::Builder::default()
     }
@@ -3171,8 +3218,10 @@ impl GetComponentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteInfrastructureConfigurationOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the infrastructure configuration that was deleted.</p>
+    #[doc(hidden)]
     pub infrastructure_configuration_arn: std::option::Option<std::string::String>,
 }
 impl DeleteInfrastructureConfigurationOutput {
@@ -3196,11 +3245,10 @@ impl std::fmt::Debug for DeleteInfrastructureConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteInfrastructureConfigurationOutput`](crate::output::DeleteInfrastructureConfigurationOutput)
+/// See [`DeleteInfrastructureConfigurationOutput`](crate::output::DeleteInfrastructureConfigurationOutput).
 pub mod delete_infrastructure_configuration_output {
 
-    /// A builder for [`DeleteInfrastructureConfigurationOutput`](crate::output::DeleteInfrastructureConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteInfrastructureConfigurationOutput`](crate::output::DeleteInfrastructureConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -3233,7 +3281,7 @@ pub mod delete_infrastructure_configuration_output {
             self.infrastructure_configuration_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteInfrastructureConfigurationOutput`](crate::output::DeleteInfrastructureConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteInfrastructureConfigurationOutput`](crate::output::DeleteInfrastructureConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteInfrastructureConfigurationOutput {
             crate::output::DeleteInfrastructureConfigurationOutput {
                 request_id: self.request_id,
@@ -3243,7 +3291,7 @@ pub mod delete_infrastructure_configuration_output {
     }
 }
 impl DeleteInfrastructureConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteInfrastructureConfigurationOutput`](crate::output::DeleteInfrastructureConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteInfrastructureConfigurationOutput`](crate::output::DeleteInfrastructureConfigurationOutput).
     pub fn builder() -> crate::output::delete_infrastructure_configuration_output::Builder {
         crate::output::delete_infrastructure_configuration_output::Builder::default()
     }
@@ -3254,8 +3302,10 @@ impl DeleteInfrastructureConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteImageRecipeOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the image recipe that was deleted.</p>
+    #[doc(hidden)]
     pub image_recipe_arn: std::option::Option<std::string::String>,
 }
 impl DeleteImageRecipeOutput {
@@ -3276,11 +3326,10 @@ impl std::fmt::Debug for DeleteImageRecipeOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteImageRecipeOutput`](crate::output::DeleteImageRecipeOutput)
+/// See [`DeleteImageRecipeOutput`](crate::output::DeleteImageRecipeOutput).
 pub mod delete_image_recipe_output {
 
-    /// A builder for [`DeleteImageRecipeOutput`](crate::output::DeleteImageRecipeOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteImageRecipeOutput`](crate::output::DeleteImageRecipeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -3310,7 +3359,7 @@ pub mod delete_image_recipe_output {
             self.image_recipe_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteImageRecipeOutput`](crate::output::DeleteImageRecipeOutput)
+        /// Consumes the builder and constructs a [`DeleteImageRecipeOutput`](crate::output::DeleteImageRecipeOutput).
         pub fn build(self) -> crate::output::DeleteImageRecipeOutput {
             crate::output::DeleteImageRecipeOutput {
                 request_id: self.request_id,
@@ -3320,7 +3369,7 @@ pub mod delete_image_recipe_output {
     }
 }
 impl DeleteImageRecipeOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteImageRecipeOutput`](crate::output::DeleteImageRecipeOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteImageRecipeOutput`](crate::output::DeleteImageRecipeOutput).
     pub fn builder() -> crate::output::delete_image_recipe_output::Builder {
         crate::output::delete_image_recipe_output::Builder::default()
     }
@@ -3331,8 +3380,10 @@ impl DeleteImageRecipeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteImagePipelineOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the image pipeline that was deleted.</p>
+    #[doc(hidden)]
     pub image_pipeline_arn: std::option::Option<std::string::String>,
 }
 impl DeleteImagePipelineOutput {
@@ -3353,11 +3404,10 @@ impl std::fmt::Debug for DeleteImagePipelineOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteImagePipelineOutput`](crate::output::DeleteImagePipelineOutput)
+/// See [`DeleteImagePipelineOutput`](crate::output::DeleteImagePipelineOutput).
 pub mod delete_image_pipeline_output {
 
-    /// A builder for [`DeleteImagePipelineOutput`](crate::output::DeleteImagePipelineOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteImagePipelineOutput`](crate::output::DeleteImagePipelineOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -3387,7 +3437,7 @@ pub mod delete_image_pipeline_output {
             self.image_pipeline_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteImagePipelineOutput`](crate::output::DeleteImagePipelineOutput)
+        /// Consumes the builder and constructs a [`DeleteImagePipelineOutput`](crate::output::DeleteImagePipelineOutput).
         pub fn build(self) -> crate::output::DeleteImagePipelineOutput {
             crate::output::DeleteImagePipelineOutput {
                 request_id: self.request_id,
@@ -3397,7 +3447,7 @@ pub mod delete_image_pipeline_output {
     }
 }
 impl DeleteImagePipelineOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteImagePipelineOutput`](crate::output::DeleteImagePipelineOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteImagePipelineOutput`](crate::output::DeleteImagePipelineOutput).
     pub fn builder() -> crate::output::delete_image_pipeline_output::Builder {
         crate::output::delete_image_pipeline_output::Builder::default()
     }
@@ -3408,8 +3458,10 @@ impl DeleteImagePipelineOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteImageOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Image Builder image resource that was deleted.</p>
+    #[doc(hidden)]
     pub image_build_version_arn: std::option::Option<std::string::String>,
 }
 impl DeleteImageOutput {
@@ -3430,11 +3482,10 @@ impl std::fmt::Debug for DeleteImageOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteImageOutput`](crate::output::DeleteImageOutput)
+/// See [`DeleteImageOutput`](crate::output::DeleteImageOutput).
 pub mod delete_image_output {
 
-    /// A builder for [`DeleteImageOutput`](crate::output::DeleteImageOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteImageOutput`](crate::output::DeleteImageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -3464,7 +3515,7 @@ pub mod delete_image_output {
             self.image_build_version_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteImageOutput`](crate::output::DeleteImageOutput)
+        /// Consumes the builder and constructs a [`DeleteImageOutput`](crate::output::DeleteImageOutput).
         pub fn build(self) -> crate::output::DeleteImageOutput {
             crate::output::DeleteImageOutput {
                 request_id: self.request_id,
@@ -3474,7 +3525,7 @@ pub mod delete_image_output {
     }
 }
 impl DeleteImageOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteImageOutput`](crate::output::DeleteImageOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteImageOutput`](crate::output::DeleteImageOutput).
     pub fn builder() -> crate::output::delete_image_output::Builder {
         crate::output::delete_image_output::Builder::default()
     }
@@ -3485,8 +3536,10 @@ impl DeleteImageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteDistributionConfigurationOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the distribution configuration that was deleted.</p>
+    #[doc(hidden)]
     pub distribution_configuration_arn: std::option::Option<std::string::String>,
 }
 impl DeleteDistributionConfigurationOutput {
@@ -3510,11 +3563,10 @@ impl std::fmt::Debug for DeleteDistributionConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDistributionConfigurationOutput`](crate::output::DeleteDistributionConfigurationOutput)
+/// See [`DeleteDistributionConfigurationOutput`](crate::output::DeleteDistributionConfigurationOutput).
 pub mod delete_distribution_configuration_output {
 
-    /// A builder for [`DeleteDistributionConfigurationOutput`](crate::output::DeleteDistributionConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDistributionConfigurationOutput`](crate::output::DeleteDistributionConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -3547,7 +3599,7 @@ pub mod delete_distribution_configuration_output {
             self.distribution_configuration_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDistributionConfigurationOutput`](crate::output::DeleteDistributionConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteDistributionConfigurationOutput`](crate::output::DeleteDistributionConfigurationOutput).
         pub fn build(self) -> crate::output::DeleteDistributionConfigurationOutput {
             crate::output::DeleteDistributionConfigurationOutput {
                 request_id: self.request_id,
@@ -3557,7 +3609,7 @@ pub mod delete_distribution_configuration_output {
     }
 }
 impl DeleteDistributionConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDistributionConfigurationOutput`](crate::output::DeleteDistributionConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDistributionConfigurationOutput`](crate::output::DeleteDistributionConfigurationOutput).
     pub fn builder() -> crate::output::delete_distribution_configuration_output::Builder {
         crate::output::delete_distribution_configuration_output::Builder::default()
     }
@@ -3568,8 +3620,10 @@ impl DeleteDistributionConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteContainerRecipeOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the container recipe that was deleted.</p>
+    #[doc(hidden)]
     pub container_recipe_arn: std::option::Option<std::string::String>,
 }
 impl DeleteContainerRecipeOutput {
@@ -3590,11 +3644,10 @@ impl std::fmt::Debug for DeleteContainerRecipeOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteContainerRecipeOutput`](crate::output::DeleteContainerRecipeOutput)
+/// See [`DeleteContainerRecipeOutput`](crate::output::DeleteContainerRecipeOutput).
 pub mod delete_container_recipe_output {
 
-    /// A builder for [`DeleteContainerRecipeOutput`](crate::output::DeleteContainerRecipeOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteContainerRecipeOutput`](crate::output::DeleteContainerRecipeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -3624,7 +3677,7 @@ pub mod delete_container_recipe_output {
             self.container_recipe_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteContainerRecipeOutput`](crate::output::DeleteContainerRecipeOutput)
+        /// Consumes the builder and constructs a [`DeleteContainerRecipeOutput`](crate::output::DeleteContainerRecipeOutput).
         pub fn build(self) -> crate::output::DeleteContainerRecipeOutput {
             crate::output::DeleteContainerRecipeOutput {
                 request_id: self.request_id,
@@ -3634,7 +3687,7 @@ pub mod delete_container_recipe_output {
     }
 }
 impl DeleteContainerRecipeOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteContainerRecipeOutput`](crate::output::DeleteContainerRecipeOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteContainerRecipeOutput`](crate::output::DeleteContainerRecipeOutput).
     pub fn builder() -> crate::output::delete_container_recipe_output::Builder {
         crate::output::delete_container_recipe_output::Builder::default()
     }
@@ -3645,8 +3698,10 @@ impl DeleteContainerRecipeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteComponentOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the component build version that was deleted.</p>
+    #[doc(hidden)]
     pub component_build_version_arn: std::option::Option<std::string::String>,
 }
 impl DeleteComponentOutput {
@@ -3670,11 +3725,10 @@ impl std::fmt::Debug for DeleteComponentOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteComponentOutput`](crate::output::DeleteComponentOutput)
+/// See [`DeleteComponentOutput`](crate::output::DeleteComponentOutput).
 pub mod delete_component_output {
 
-    /// A builder for [`DeleteComponentOutput`](crate::output::DeleteComponentOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteComponentOutput`](crate::output::DeleteComponentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -3707,7 +3761,7 @@ pub mod delete_component_output {
             self.component_build_version_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteComponentOutput`](crate::output::DeleteComponentOutput)
+        /// Consumes the builder and constructs a [`DeleteComponentOutput`](crate::output::DeleteComponentOutput).
         pub fn build(self) -> crate::output::DeleteComponentOutput {
             crate::output::DeleteComponentOutput {
                 request_id: self.request_id,
@@ -3717,7 +3771,7 @@ pub mod delete_component_output {
     }
 }
 impl DeleteComponentOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteComponentOutput`](crate::output::DeleteComponentOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteComponentOutput`](crate::output::DeleteComponentOutput).
     pub fn builder() -> crate::output::delete_component_output::Builder {
         crate::output::delete_component_output::Builder::default()
     }
@@ -3728,10 +3782,13 @@ impl DeleteComponentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateInfrastructureConfigurationOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The idempotency token used to make this request idempotent.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the infrastructure configuration that was created by this request.</p>
+    #[doc(hidden)]
     pub infrastructure_configuration_arn: std::option::Option<std::string::String>,
 }
 impl CreateInfrastructureConfigurationOutput {
@@ -3760,11 +3817,10 @@ impl std::fmt::Debug for CreateInfrastructureConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateInfrastructureConfigurationOutput`](crate::output::CreateInfrastructureConfigurationOutput)
+/// See [`CreateInfrastructureConfigurationOutput`](crate::output::CreateInfrastructureConfigurationOutput).
 pub mod create_infrastructure_configuration_output {
 
-    /// A builder for [`CreateInfrastructureConfigurationOutput`](crate::output::CreateInfrastructureConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateInfrastructureConfigurationOutput`](crate::output::CreateInfrastructureConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -3808,7 +3864,7 @@ pub mod create_infrastructure_configuration_output {
             self.infrastructure_configuration_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateInfrastructureConfigurationOutput`](crate::output::CreateInfrastructureConfigurationOutput)
+        /// Consumes the builder and constructs a [`CreateInfrastructureConfigurationOutput`](crate::output::CreateInfrastructureConfigurationOutput).
         pub fn build(self) -> crate::output::CreateInfrastructureConfigurationOutput {
             crate::output::CreateInfrastructureConfigurationOutput {
                 request_id: self.request_id,
@@ -3819,7 +3875,7 @@ pub mod create_infrastructure_configuration_output {
     }
 }
 impl CreateInfrastructureConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateInfrastructureConfigurationOutput`](crate::output::CreateInfrastructureConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateInfrastructureConfigurationOutput`](crate::output::CreateInfrastructureConfigurationOutput).
     pub fn builder() -> crate::output::create_infrastructure_configuration_output::Builder {
         crate::output::create_infrastructure_configuration_output::Builder::default()
     }
@@ -3830,10 +3886,13 @@ impl CreateInfrastructureConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateImageRecipeOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The idempotency token used to make this request idempotent.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the image recipe that was created by this request.</p>
+    #[doc(hidden)]
     pub image_recipe_arn: std::option::Option<std::string::String>,
 }
 impl CreateImageRecipeOutput {
@@ -3859,11 +3918,10 @@ impl std::fmt::Debug for CreateImageRecipeOutput {
         formatter.finish()
     }
 }
-/// See [`CreateImageRecipeOutput`](crate::output::CreateImageRecipeOutput)
+/// See [`CreateImageRecipeOutput`](crate::output::CreateImageRecipeOutput).
 pub mod create_image_recipe_output {
 
-    /// A builder for [`CreateImageRecipeOutput`](crate::output::CreateImageRecipeOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateImageRecipeOutput`](crate::output::CreateImageRecipeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -3904,7 +3962,7 @@ pub mod create_image_recipe_output {
             self.image_recipe_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateImageRecipeOutput`](crate::output::CreateImageRecipeOutput)
+        /// Consumes the builder and constructs a [`CreateImageRecipeOutput`](crate::output::CreateImageRecipeOutput).
         pub fn build(self) -> crate::output::CreateImageRecipeOutput {
             crate::output::CreateImageRecipeOutput {
                 request_id: self.request_id,
@@ -3915,7 +3973,7 @@ pub mod create_image_recipe_output {
     }
 }
 impl CreateImageRecipeOutput {
-    /// Creates a new builder-style object to manufacture [`CreateImageRecipeOutput`](crate::output::CreateImageRecipeOutput)
+    /// Creates a new builder-style object to manufacture [`CreateImageRecipeOutput`](crate::output::CreateImageRecipeOutput).
     pub fn builder() -> crate::output::create_image_recipe_output::Builder {
         crate::output::create_image_recipe_output::Builder::default()
     }
@@ -3926,10 +3984,13 @@ impl CreateImageRecipeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateImagePipelineOutput {
     /// <p> The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p> The idempotency token used to make this request idempotent.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the image pipeline that was created by this request.</p>
+    #[doc(hidden)]
     pub image_pipeline_arn: std::option::Option<std::string::String>,
 }
 impl CreateImagePipelineOutput {
@@ -3955,11 +4016,10 @@ impl std::fmt::Debug for CreateImagePipelineOutput {
         formatter.finish()
     }
 }
-/// See [`CreateImagePipelineOutput`](crate::output::CreateImagePipelineOutput)
+/// See [`CreateImagePipelineOutput`](crate::output::CreateImagePipelineOutput).
 pub mod create_image_pipeline_output {
 
-    /// A builder for [`CreateImagePipelineOutput`](crate::output::CreateImagePipelineOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateImagePipelineOutput`](crate::output::CreateImagePipelineOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -4000,7 +4060,7 @@ pub mod create_image_pipeline_output {
             self.image_pipeline_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateImagePipelineOutput`](crate::output::CreateImagePipelineOutput)
+        /// Consumes the builder and constructs a [`CreateImagePipelineOutput`](crate::output::CreateImagePipelineOutput).
         pub fn build(self) -> crate::output::CreateImagePipelineOutput {
             crate::output::CreateImagePipelineOutput {
                 request_id: self.request_id,
@@ -4011,7 +4071,7 @@ pub mod create_image_pipeline_output {
     }
 }
 impl CreateImagePipelineOutput {
-    /// Creates a new builder-style object to manufacture [`CreateImagePipelineOutput`](crate::output::CreateImagePipelineOutput)
+    /// Creates a new builder-style object to manufacture [`CreateImagePipelineOutput`](crate::output::CreateImagePipelineOutput).
     pub fn builder() -> crate::output::create_image_pipeline_output::Builder {
         crate::output::create_image_pipeline_output::Builder::default()
     }
@@ -4022,10 +4082,13 @@ impl CreateImagePipelineOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateImageOutput {
     /// <p> The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p> The idempotency token used to make this request idempotent.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the image that was created by this request.</p>
+    #[doc(hidden)]
     pub image_build_version_arn: std::option::Option<std::string::String>,
 }
 impl CreateImageOutput {
@@ -4051,11 +4114,10 @@ impl std::fmt::Debug for CreateImageOutput {
         formatter.finish()
     }
 }
-/// See [`CreateImageOutput`](crate::output::CreateImageOutput)
+/// See [`CreateImageOutput`](crate::output::CreateImageOutput).
 pub mod create_image_output {
 
-    /// A builder for [`CreateImageOutput`](crate::output::CreateImageOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateImageOutput`](crate::output::CreateImageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -4096,7 +4158,7 @@ pub mod create_image_output {
             self.image_build_version_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateImageOutput`](crate::output::CreateImageOutput)
+        /// Consumes the builder and constructs a [`CreateImageOutput`](crate::output::CreateImageOutput).
         pub fn build(self) -> crate::output::CreateImageOutput {
             crate::output::CreateImageOutput {
                 request_id: self.request_id,
@@ -4107,7 +4169,7 @@ pub mod create_image_output {
     }
 }
 impl CreateImageOutput {
-    /// Creates a new builder-style object to manufacture [`CreateImageOutput`](crate::output::CreateImageOutput)
+    /// Creates a new builder-style object to manufacture [`CreateImageOutput`](crate::output::CreateImageOutput).
     pub fn builder() -> crate::output::create_image_output::Builder {
         crate::output::create_image_output::Builder::default()
     }
@@ -4118,10 +4180,13 @@ impl CreateImageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDistributionConfigurationOutput {
     /// <p> The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p> The idempotency token used to make this request idempotent.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the distribution configuration that was created by this request.</p>
+    #[doc(hidden)]
     pub distribution_configuration_arn: std::option::Option<std::string::String>,
 }
 impl CreateDistributionConfigurationOutput {
@@ -4150,11 +4215,10 @@ impl std::fmt::Debug for CreateDistributionConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDistributionConfigurationOutput`](crate::output::CreateDistributionConfigurationOutput)
+/// See [`CreateDistributionConfigurationOutput`](crate::output::CreateDistributionConfigurationOutput).
 pub mod create_distribution_configuration_output {
 
-    /// A builder for [`CreateDistributionConfigurationOutput`](crate::output::CreateDistributionConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDistributionConfigurationOutput`](crate::output::CreateDistributionConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -4198,7 +4262,7 @@ pub mod create_distribution_configuration_output {
             self.distribution_configuration_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDistributionConfigurationOutput`](crate::output::CreateDistributionConfigurationOutput)
+        /// Consumes the builder and constructs a [`CreateDistributionConfigurationOutput`](crate::output::CreateDistributionConfigurationOutput).
         pub fn build(self) -> crate::output::CreateDistributionConfigurationOutput {
             crate::output::CreateDistributionConfigurationOutput {
                 request_id: self.request_id,
@@ -4209,7 +4273,7 @@ pub mod create_distribution_configuration_output {
     }
 }
 impl CreateDistributionConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDistributionConfigurationOutput`](crate::output::CreateDistributionConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDistributionConfigurationOutput`](crate::output::CreateDistributionConfigurationOutput).
     pub fn builder() -> crate::output::create_distribution_configuration_output::Builder {
         crate::output::create_distribution_configuration_output::Builder::default()
     }
@@ -4220,10 +4284,13 @@ impl CreateDistributionConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateContainerRecipeOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The client token used to make this request idempotent.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p>Returns the Amazon Resource Name (ARN) of the container recipe that the request created.</p>
+    #[doc(hidden)]
     pub container_recipe_arn: std::option::Option<std::string::String>,
 }
 impl CreateContainerRecipeOutput {
@@ -4249,11 +4316,10 @@ impl std::fmt::Debug for CreateContainerRecipeOutput {
         formatter.finish()
     }
 }
-/// See [`CreateContainerRecipeOutput`](crate::output::CreateContainerRecipeOutput)
+/// See [`CreateContainerRecipeOutput`](crate::output::CreateContainerRecipeOutput).
 pub mod create_container_recipe_output {
 
-    /// A builder for [`CreateContainerRecipeOutput`](crate::output::CreateContainerRecipeOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateContainerRecipeOutput`](crate::output::CreateContainerRecipeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -4294,7 +4360,7 @@ pub mod create_container_recipe_output {
             self.container_recipe_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateContainerRecipeOutput`](crate::output::CreateContainerRecipeOutput)
+        /// Consumes the builder and constructs a [`CreateContainerRecipeOutput`](crate::output::CreateContainerRecipeOutput).
         pub fn build(self) -> crate::output::CreateContainerRecipeOutput {
             crate::output::CreateContainerRecipeOutput {
                 request_id: self.request_id,
@@ -4305,7 +4371,7 @@ pub mod create_container_recipe_output {
     }
 }
 impl CreateContainerRecipeOutput {
-    /// Creates a new builder-style object to manufacture [`CreateContainerRecipeOutput`](crate::output::CreateContainerRecipeOutput)
+    /// Creates a new builder-style object to manufacture [`CreateContainerRecipeOutput`](crate::output::CreateContainerRecipeOutput).
     pub fn builder() -> crate::output::create_container_recipe_output::Builder {
         crate::output::create_container_recipe_output::Builder::default()
     }
@@ -4316,10 +4382,13 @@ impl CreateContainerRecipeOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateComponentOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The idempotency token used to make this request idempotent.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the component that was created by this request.</p>
+    #[doc(hidden)]
     pub component_build_version_arn: std::option::Option<std::string::String>,
 }
 impl CreateComponentOutput {
@@ -4348,11 +4417,10 @@ impl std::fmt::Debug for CreateComponentOutput {
         formatter.finish()
     }
 }
-/// See [`CreateComponentOutput`](crate::output::CreateComponentOutput)
+/// See [`CreateComponentOutput`](crate::output::CreateComponentOutput).
 pub mod create_component_output {
 
-    /// A builder for [`CreateComponentOutput`](crate::output::CreateComponentOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateComponentOutput`](crate::output::CreateComponentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -4396,7 +4464,7 @@ pub mod create_component_output {
             self.component_build_version_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateComponentOutput`](crate::output::CreateComponentOutput)
+        /// Consumes the builder and constructs a [`CreateComponentOutput`](crate::output::CreateComponentOutput).
         pub fn build(self) -> crate::output::CreateComponentOutput {
             crate::output::CreateComponentOutput {
                 request_id: self.request_id,
@@ -4407,7 +4475,7 @@ pub mod create_component_output {
     }
 }
 impl CreateComponentOutput {
-    /// Creates a new builder-style object to manufacture [`CreateComponentOutput`](crate::output::CreateComponentOutput)
+    /// Creates a new builder-style object to manufacture [`CreateComponentOutput`](crate::output::CreateComponentOutput).
     pub fn builder() -> crate::output::create_component_output::Builder {
         crate::output::create_component_output::Builder::default()
     }
@@ -4418,10 +4486,13 @@ impl CreateComponentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelImageCreationOutput {
     /// <p>The request ID that uniquely identifies this request.</p>
+    #[doc(hidden)]
     pub request_id: std::option::Option<std::string::String>,
     /// <p>The idempotency token that was used for this request.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the image whose creation has been cancelled.</p>
+    #[doc(hidden)]
     pub image_build_version_arn: std::option::Option<std::string::String>,
 }
 impl CancelImageCreationOutput {
@@ -4447,11 +4518,10 @@ impl std::fmt::Debug for CancelImageCreationOutput {
         formatter.finish()
     }
 }
-/// See [`CancelImageCreationOutput`](crate::output::CancelImageCreationOutput)
+/// See [`CancelImageCreationOutput`](crate::output::CancelImageCreationOutput).
 pub mod cancel_image_creation_output {
 
-    /// A builder for [`CancelImageCreationOutput`](crate::output::CancelImageCreationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CancelImageCreationOutput`](crate::output::CancelImageCreationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) request_id: std::option::Option<std::string::String>,
@@ -4492,7 +4562,7 @@ pub mod cancel_image_creation_output {
             self.image_build_version_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelImageCreationOutput`](crate::output::CancelImageCreationOutput)
+        /// Consumes the builder and constructs a [`CancelImageCreationOutput`](crate::output::CancelImageCreationOutput).
         pub fn build(self) -> crate::output::CancelImageCreationOutput {
             crate::output::CancelImageCreationOutput {
                 request_id: self.request_id,
@@ -4503,7 +4573,7 @@ pub mod cancel_image_creation_output {
     }
 }
 impl CancelImageCreationOutput {
-    /// Creates a new builder-style object to manufacture [`CancelImageCreationOutput`](crate::output::CancelImageCreationOutput)
+    /// Creates a new builder-style object to manufacture [`CancelImageCreationOutput`](crate::output::CancelImageCreationOutput).
     pub fn builder() -> crate::output::cancel_image_creation_output::Builder {
         crate::output::cancel_image_creation_output::Builder::default()
     }

@@ -5,9 +5,11 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct User {
     /// <p>The ID associated with the user.</p>
+    #[doc(hidden)]
     pub user_id: std::option::Option<std::string::String>,
     /// <p>A string map of user-specific metadata. Each element in the map consists of a key-value pair. For example, <code>{"numberOfVideosWatched": "45"}</code>.</p>
     /// <p>The keys use camel case names that match the fields in the schema for the Users dataset. In the previous example, the <code>numberOfVideosWatched</code> matches the 'NUMBER_OF_VIDEOS_WATCHED' field defined in the Users schema. For categorical string data, to include multiple categories for a single user, separate each category with a pipe separator (<code>|</code>). For example, <code>\"Member|Frequent shopper\"</code>.</p>
+    #[doc(hidden)]
     pub properties: std::option::Option<std::string::String>,
 }
 impl User {
@@ -29,11 +31,10 @@ impl std::fmt::Debug for User {
         formatter.finish()
     }
 }
-/// See [`User`](crate::model::User)
+/// See [`User`](crate::model::User).
 pub mod user {
 
-    /// A builder for [`User`](crate::model::User)
-    #[non_exhaustive]
+    /// A builder for [`User`](crate::model::User).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_id: std::option::Option<std::string::String>,
@@ -62,7 +63,7 @@ pub mod user {
             self.properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`User`](crate::model::User)
+        /// Consumes the builder and constructs a [`User`](crate::model::User).
         pub fn build(self) -> crate::model::User {
             crate::model::User {
                 user_id: self.user_id,
@@ -72,7 +73,7 @@ pub mod user {
     }
 }
 impl User {
-    /// Creates a new builder-style object to manufacture [`User`](crate::model::User)
+    /// Creates a new builder-style object to manufacture [`User`](crate::model::User).
     pub fn builder() -> crate::model::user::Builder {
         crate::model::user::Builder::default()
     }
@@ -83,9 +84,11 @@ impl User {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Item {
     /// <p>The ID associated with the item.</p>
+    #[doc(hidden)]
     pub item_id: std::option::Option<std::string::String>,
     /// <p>A string map of item-specific metadata. Each element in the map consists of a key-value pair. For example, <code>{"numberOfRatings": "12"}</code>.</p>
     /// <p>The keys use camel case names that match the fields in the schema for the Items dataset. In the previous example, the <code>numberOfRatings</code> matches the 'NUMBER_OF_RATINGS' field defined in the Items schema. For categorical string data, to include multiple categories for a single item, separate each category with a pipe separator (<code>|</code>). For example, <code>\"Horror|Action\"</code>.</p>
+    #[doc(hidden)]
     pub properties: std::option::Option<std::string::String>,
 }
 impl Item {
@@ -107,11 +110,10 @@ impl std::fmt::Debug for Item {
         formatter.finish()
     }
 }
-/// See [`Item`](crate::model::Item)
+/// See [`Item`](crate::model::Item).
 pub mod item {
 
-    /// A builder for [`Item`](crate::model::Item)
-    #[non_exhaustive]
+    /// A builder for [`Item`](crate::model::Item).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) item_id: std::option::Option<std::string::String>,
@@ -140,7 +142,7 @@ pub mod item {
             self.properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`Item`](crate::model::Item)
+        /// Consumes the builder and constructs a [`Item`](crate::model::Item).
         pub fn build(self) -> crate::model::Item {
             crate::model::Item {
                 item_id: self.item_id,
@@ -150,7 +152,7 @@ pub mod item {
     }
 }
 impl Item {
-    /// Creates a new builder-style object to manufacture [`Item`](crate::model::Item)
+    /// Creates a new builder-style object to manufacture [`Item`](crate::model::Item).
     pub fn builder() -> crate::model::item::Builder {
         crate::model::item::Builder::default()
     }
@@ -161,23 +163,31 @@ impl Item {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Event {
     /// <p>An ID associated with the event. If an event ID is not provided, Amazon Personalize generates a unique ID for the event. An event ID is not used as an input to the model. Amazon Personalize uses the event ID to distinquish unique events. Any subsequent events after the first with the same event ID are not used in model training.</p>
+    #[doc(hidden)]
     pub event_id: std::option::Option<std::string::String>,
     /// <p>The type of event, such as click or download. This property corresponds to the <code>EVENT_TYPE</code> field of your Interactions schema and depends on the types of events you are tracking.</p>
+    #[doc(hidden)]
     pub event_type: std::option::Option<std::string::String>,
     /// <p>The event value that corresponds to the <code>EVENT_VALUE</code> field of the Interactions schema.</p>
+    #[doc(hidden)]
     pub event_value: std::option::Option<f32>,
     /// <p>The item ID key that corresponds to the <code>ITEM_ID</code> field of the Interactions schema.</p>
+    #[doc(hidden)]
     pub item_id: std::option::Option<std::string::String>,
     /// <p>A string map of event-specific data that you might choose to record. For example, if a user rates a movie on your site, other than movie ID (<code>itemId</code>) and rating (<code>eventValue</code>) , you might also send the number of movie ratings made by the user.</p>
     /// <p>Each item in the map consists of a key-value pair. For example,</p>
     /// <p> <code>{"numberOfRatings": "12"}</code> </p>
     /// <p>The keys use camel case names that match the fields in the Interactions schema. In the above example, the <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the Interactions schema.</p>
+    #[doc(hidden)]
     pub properties: std::option::Option<std::string::String>,
     /// <p>The timestamp (in Unix time) on the client side when the event occurred.</p>
+    #[doc(hidden)]
     pub sent_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The ID of the recommendation.</p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
     /// <p>A list of item IDs that represents the sequence of items you have shown the user. For example, <code>["itemId1", "itemId2", "itemId3"]</code>.</p>
+    #[doc(hidden)]
     pub impression: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Event {
@@ -231,11 +241,10 @@ impl std::fmt::Debug for Event {
         formatter.finish()
     }
 }
-/// See [`Event`](crate::model::Event)
+/// See [`Event`](crate::model::Event).
 pub mod event {
 
-    /// A builder for [`Event`](crate::model::Event)
-    #[non_exhaustive]
+    /// A builder for [`Event`](crate::model::Event).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_id: std::option::Option<std::string::String>,
@@ -349,7 +358,7 @@ pub mod event {
             self.impression = input;
             self
         }
-        /// Consumes the builder and constructs a [`Event`](crate::model::Event)
+        /// Consumes the builder and constructs a [`Event`](crate::model::Event).
         pub fn build(self) -> crate::model::Event {
             crate::model::Event {
                 event_id: self.event_id,
@@ -365,7 +374,7 @@ pub mod event {
     }
 }
 impl Event {
-    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event)
+    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event).
     pub fn builder() -> crate::model::event::Builder {
         crate::model::event::Builder::default()
     }

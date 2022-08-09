@@ -9,22 +9,21 @@ impl std::fmt::Debug for UpdateStreamProcessorOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateStreamProcessorOutput`](crate::output::UpdateStreamProcessorOutput)
+/// See [`UpdateStreamProcessorOutput`](crate::output::UpdateStreamProcessorOutput).
 pub mod update_stream_processor_output {
 
-    /// A builder for [`UpdateStreamProcessorOutput`](crate::output::UpdateStreamProcessorOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateStreamProcessorOutput`](crate::output::UpdateStreamProcessorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateStreamProcessorOutput`](crate::output::UpdateStreamProcessorOutput)
+        /// Consumes the builder and constructs a [`UpdateStreamProcessorOutput`](crate::output::UpdateStreamProcessorOutput).
         pub fn build(self) -> crate::output::UpdateStreamProcessorOutput {
             crate::output::UpdateStreamProcessorOutput {}
         }
     }
 }
 impl UpdateStreamProcessorOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateStreamProcessorOutput`](crate::output::UpdateStreamProcessorOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateStreamProcessorOutput`](crate::output::UpdateStreamProcessorOutput).
     pub fn builder() -> crate::output::update_stream_processor_output::Builder {
         crate::output::update_stream_processor_output::Builder::default()
     }
@@ -40,22 +39,21 @@ impl std::fmt::Debug for UpdateDatasetEntriesOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDatasetEntriesOutput`](crate::output::UpdateDatasetEntriesOutput)
+/// See [`UpdateDatasetEntriesOutput`](crate::output::UpdateDatasetEntriesOutput).
 pub mod update_dataset_entries_output {
 
-    /// A builder for [`UpdateDatasetEntriesOutput`](crate::output::UpdateDatasetEntriesOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateDatasetEntriesOutput`](crate::output::UpdateDatasetEntriesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateDatasetEntriesOutput`](crate::output::UpdateDatasetEntriesOutput)
+        /// Consumes the builder and constructs a [`UpdateDatasetEntriesOutput`](crate::output::UpdateDatasetEntriesOutput).
         pub fn build(self) -> crate::output::UpdateDatasetEntriesOutput {
             crate::output::UpdateDatasetEntriesOutput {}
         }
     }
 }
 impl UpdateDatasetEntriesOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDatasetEntriesOutput`](crate::output::UpdateDatasetEntriesOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDatasetEntriesOutput`](crate::output::UpdateDatasetEntriesOutput).
     pub fn builder() -> crate::output::update_dataset_entries_output::Builder {
         crate::output::update_dataset_entries_output::Builder::default()
     }
@@ -71,22 +69,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -102,22 +99,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -133,22 +129,21 @@ impl std::fmt::Debug for StopStreamProcessorOutput {
         formatter.finish()
     }
 }
-/// See [`StopStreamProcessorOutput`](crate::output::StopStreamProcessorOutput)
+/// See [`StopStreamProcessorOutput`](crate::output::StopStreamProcessorOutput).
 pub mod stop_stream_processor_output {
 
-    /// A builder for [`StopStreamProcessorOutput`](crate::output::StopStreamProcessorOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopStreamProcessorOutput`](crate::output::StopStreamProcessorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`StopStreamProcessorOutput`](crate::output::StopStreamProcessorOutput)
+        /// Consumes the builder and constructs a [`StopStreamProcessorOutput`](crate::output::StopStreamProcessorOutput).
         pub fn build(self) -> crate::output::StopStreamProcessorOutput {
             crate::output::StopStreamProcessorOutput {}
         }
     }
 }
 impl StopStreamProcessorOutput {
-    /// Creates a new builder-style object to manufacture [`StopStreamProcessorOutput`](crate::output::StopStreamProcessorOutput)
+    /// Creates a new builder-style object to manufacture [`StopStreamProcessorOutput`](crate::output::StopStreamProcessorOutput).
     pub fn builder() -> crate::output::stop_stream_processor_output::Builder {
         crate::output::stop_stream_processor_output::Builder::default()
     }
@@ -159,6 +154,7 @@ impl StopStreamProcessorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StopProjectVersionOutput {
     /// <p>The current status of the stop operation. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ProjectVersionStatus>,
 }
 impl StopProjectVersionOutput {
@@ -174,11 +170,10 @@ impl std::fmt::Debug for StopProjectVersionOutput {
         formatter.finish()
     }
 }
-/// See [`StopProjectVersionOutput`](crate::output::StopProjectVersionOutput)
+/// See [`StopProjectVersionOutput`](crate::output::StopProjectVersionOutput).
 pub mod stop_project_version_output {
 
-    /// A builder for [`StopProjectVersionOutput`](crate::output::StopProjectVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopProjectVersionOutput`](crate::output::StopProjectVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ProjectVersionStatus>,
@@ -197,7 +192,7 @@ pub mod stop_project_version_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`StopProjectVersionOutput`](crate::output::StopProjectVersionOutput)
+        /// Consumes the builder and constructs a [`StopProjectVersionOutput`](crate::output::StopProjectVersionOutput).
         pub fn build(self) -> crate::output::StopProjectVersionOutput {
             crate::output::StopProjectVersionOutput {
                 status: self.status,
@@ -206,7 +201,7 @@ pub mod stop_project_version_output {
     }
 }
 impl StopProjectVersionOutput {
-    /// Creates a new builder-style object to manufacture [`StopProjectVersionOutput`](crate::output::StopProjectVersionOutput)
+    /// Creates a new builder-style object to manufacture [`StopProjectVersionOutput`](crate::output::StopProjectVersionOutput).
     pub fn builder() -> crate::output::stop_project_version_output::Builder {
         crate::output::stop_project_version_output::Builder::default()
     }
@@ -217,6 +212,7 @@ impl StopProjectVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartTextDetectionOutput {
     /// <p>Identifier for the text detection job. Use <code>JobId</code> to identify the job in a subsequent call to <code>GetTextDetection</code>.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
 }
 impl StartTextDetectionOutput {
@@ -232,11 +228,10 @@ impl std::fmt::Debug for StartTextDetectionOutput {
         formatter.finish()
     }
 }
-/// See [`StartTextDetectionOutput`](crate::output::StartTextDetectionOutput)
+/// See [`StartTextDetectionOutput`](crate::output::StartTextDetectionOutput).
 pub mod start_text_detection_output {
 
-    /// A builder for [`StartTextDetectionOutput`](crate::output::StartTextDetectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartTextDetectionOutput`](crate::output::StartTextDetectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -252,7 +247,7 @@ pub mod start_text_detection_output {
             self.job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartTextDetectionOutput`](crate::output::StartTextDetectionOutput)
+        /// Consumes the builder and constructs a [`StartTextDetectionOutput`](crate::output::StartTextDetectionOutput).
         pub fn build(self) -> crate::output::StartTextDetectionOutput {
             crate::output::StartTextDetectionOutput {
                 job_id: self.job_id,
@@ -261,7 +256,7 @@ pub mod start_text_detection_output {
     }
 }
 impl StartTextDetectionOutput {
-    /// Creates a new builder-style object to manufacture [`StartTextDetectionOutput`](crate::output::StartTextDetectionOutput)
+    /// Creates a new builder-style object to manufacture [`StartTextDetectionOutput`](crate::output::StartTextDetectionOutput).
     pub fn builder() -> crate::output::start_text_detection_output::Builder {
         crate::output::start_text_detection_output::Builder::default()
     }
@@ -272,6 +267,7 @@ impl StartTextDetectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartStreamProcessorOutput {
     /// <p> A unique identifier for the stream processing session. </p>
+    #[doc(hidden)]
     pub session_id: std::option::Option<std::string::String>,
 }
 impl StartStreamProcessorOutput {
@@ -287,11 +283,10 @@ impl std::fmt::Debug for StartStreamProcessorOutput {
         formatter.finish()
     }
 }
-/// See [`StartStreamProcessorOutput`](crate::output::StartStreamProcessorOutput)
+/// See [`StartStreamProcessorOutput`](crate::output::StartStreamProcessorOutput).
 pub mod start_stream_processor_output {
 
-    /// A builder for [`StartStreamProcessorOutput`](crate::output::StartStreamProcessorOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartStreamProcessorOutput`](crate::output::StartStreamProcessorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) session_id: std::option::Option<std::string::String>,
@@ -307,7 +302,7 @@ pub mod start_stream_processor_output {
             self.session_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartStreamProcessorOutput`](crate::output::StartStreamProcessorOutput)
+        /// Consumes the builder and constructs a [`StartStreamProcessorOutput`](crate::output::StartStreamProcessorOutput).
         pub fn build(self) -> crate::output::StartStreamProcessorOutput {
             crate::output::StartStreamProcessorOutput {
                 session_id: self.session_id,
@@ -316,7 +311,7 @@ pub mod start_stream_processor_output {
     }
 }
 impl StartStreamProcessorOutput {
-    /// Creates a new builder-style object to manufacture [`StartStreamProcessorOutput`](crate::output::StartStreamProcessorOutput)
+    /// Creates a new builder-style object to manufacture [`StartStreamProcessorOutput`](crate::output::StartStreamProcessorOutput).
     pub fn builder() -> crate::output::start_stream_processor_output::Builder {
         crate::output::start_stream_processor_output::Builder::default()
     }
@@ -327,6 +322,7 @@ impl StartStreamProcessorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartSegmentDetectionOutput {
     /// <p>Unique identifier for the segment detection job. The <code>JobId</code> is returned from <code>StartSegmentDetection</code>. </p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
 }
 impl StartSegmentDetectionOutput {
@@ -342,11 +338,10 @@ impl std::fmt::Debug for StartSegmentDetectionOutput {
         formatter.finish()
     }
 }
-/// See [`StartSegmentDetectionOutput`](crate::output::StartSegmentDetectionOutput)
+/// See [`StartSegmentDetectionOutput`](crate::output::StartSegmentDetectionOutput).
 pub mod start_segment_detection_output {
 
-    /// A builder for [`StartSegmentDetectionOutput`](crate::output::StartSegmentDetectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartSegmentDetectionOutput`](crate::output::StartSegmentDetectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -362,7 +357,7 @@ pub mod start_segment_detection_output {
             self.job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartSegmentDetectionOutput`](crate::output::StartSegmentDetectionOutput)
+        /// Consumes the builder and constructs a [`StartSegmentDetectionOutput`](crate::output::StartSegmentDetectionOutput).
         pub fn build(self) -> crate::output::StartSegmentDetectionOutput {
             crate::output::StartSegmentDetectionOutput {
                 job_id: self.job_id,
@@ -371,7 +366,7 @@ pub mod start_segment_detection_output {
     }
 }
 impl StartSegmentDetectionOutput {
-    /// Creates a new builder-style object to manufacture [`StartSegmentDetectionOutput`](crate::output::StartSegmentDetectionOutput)
+    /// Creates a new builder-style object to manufacture [`StartSegmentDetectionOutput`](crate::output::StartSegmentDetectionOutput).
     pub fn builder() -> crate::output::start_segment_detection_output::Builder {
         crate::output::start_segment_detection_output::Builder::default()
     }
@@ -382,6 +377,7 @@ impl StartSegmentDetectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartProjectVersionOutput {
     /// <p>The current running status of the model. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ProjectVersionStatus>,
 }
 impl StartProjectVersionOutput {
@@ -397,11 +393,10 @@ impl std::fmt::Debug for StartProjectVersionOutput {
         formatter.finish()
     }
 }
-/// See [`StartProjectVersionOutput`](crate::output::StartProjectVersionOutput)
+/// See [`StartProjectVersionOutput`](crate::output::StartProjectVersionOutput).
 pub mod start_project_version_output {
 
-    /// A builder for [`StartProjectVersionOutput`](crate::output::StartProjectVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartProjectVersionOutput`](crate::output::StartProjectVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ProjectVersionStatus>,
@@ -420,7 +415,7 @@ pub mod start_project_version_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartProjectVersionOutput`](crate::output::StartProjectVersionOutput)
+        /// Consumes the builder and constructs a [`StartProjectVersionOutput`](crate::output::StartProjectVersionOutput).
         pub fn build(self) -> crate::output::StartProjectVersionOutput {
             crate::output::StartProjectVersionOutput {
                 status: self.status,
@@ -429,7 +424,7 @@ pub mod start_project_version_output {
     }
 }
 impl StartProjectVersionOutput {
-    /// Creates a new builder-style object to manufacture [`StartProjectVersionOutput`](crate::output::StartProjectVersionOutput)
+    /// Creates a new builder-style object to manufacture [`StartProjectVersionOutput`](crate::output::StartProjectVersionOutput).
     pub fn builder() -> crate::output::start_project_version_output::Builder {
         crate::output::start_project_version_output::Builder::default()
     }
@@ -440,6 +435,7 @@ impl StartProjectVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartPersonTrackingOutput {
     /// <p>The identifier for the person detection job. Use <code>JobId</code> to identify the job in a subsequent call to <code>GetPersonTracking</code>.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
 }
 impl StartPersonTrackingOutput {
@@ -455,11 +451,10 @@ impl std::fmt::Debug for StartPersonTrackingOutput {
         formatter.finish()
     }
 }
-/// See [`StartPersonTrackingOutput`](crate::output::StartPersonTrackingOutput)
+/// See [`StartPersonTrackingOutput`](crate::output::StartPersonTrackingOutput).
 pub mod start_person_tracking_output {
 
-    /// A builder for [`StartPersonTrackingOutput`](crate::output::StartPersonTrackingOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartPersonTrackingOutput`](crate::output::StartPersonTrackingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -475,7 +470,7 @@ pub mod start_person_tracking_output {
             self.job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartPersonTrackingOutput`](crate::output::StartPersonTrackingOutput)
+        /// Consumes the builder and constructs a [`StartPersonTrackingOutput`](crate::output::StartPersonTrackingOutput).
         pub fn build(self) -> crate::output::StartPersonTrackingOutput {
             crate::output::StartPersonTrackingOutput {
                 job_id: self.job_id,
@@ -484,7 +479,7 @@ pub mod start_person_tracking_output {
     }
 }
 impl StartPersonTrackingOutput {
-    /// Creates a new builder-style object to manufacture [`StartPersonTrackingOutput`](crate::output::StartPersonTrackingOutput)
+    /// Creates a new builder-style object to manufacture [`StartPersonTrackingOutput`](crate::output::StartPersonTrackingOutput).
     pub fn builder() -> crate::output::start_person_tracking_output::Builder {
         crate::output::start_person_tracking_output::Builder::default()
     }
@@ -495,6 +490,7 @@ impl StartPersonTrackingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartLabelDetectionOutput {
     /// <p>The identifier for the label detection job. Use <code>JobId</code> to identify the job in a subsequent call to <code>GetLabelDetection</code>. </p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
 }
 impl StartLabelDetectionOutput {
@@ -510,11 +506,10 @@ impl std::fmt::Debug for StartLabelDetectionOutput {
         formatter.finish()
     }
 }
-/// See [`StartLabelDetectionOutput`](crate::output::StartLabelDetectionOutput)
+/// See [`StartLabelDetectionOutput`](crate::output::StartLabelDetectionOutput).
 pub mod start_label_detection_output {
 
-    /// A builder for [`StartLabelDetectionOutput`](crate::output::StartLabelDetectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartLabelDetectionOutput`](crate::output::StartLabelDetectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -530,7 +525,7 @@ pub mod start_label_detection_output {
             self.job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartLabelDetectionOutput`](crate::output::StartLabelDetectionOutput)
+        /// Consumes the builder and constructs a [`StartLabelDetectionOutput`](crate::output::StartLabelDetectionOutput).
         pub fn build(self) -> crate::output::StartLabelDetectionOutput {
             crate::output::StartLabelDetectionOutput {
                 job_id: self.job_id,
@@ -539,7 +534,7 @@ pub mod start_label_detection_output {
     }
 }
 impl StartLabelDetectionOutput {
-    /// Creates a new builder-style object to manufacture [`StartLabelDetectionOutput`](crate::output::StartLabelDetectionOutput)
+    /// Creates a new builder-style object to manufacture [`StartLabelDetectionOutput`](crate::output::StartLabelDetectionOutput).
     pub fn builder() -> crate::output::start_label_detection_output::Builder {
         crate::output::start_label_detection_output::Builder::default()
     }
@@ -550,6 +545,7 @@ impl StartLabelDetectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartFaceSearchOutput {
     /// <p>The identifier for the search job. Use <code>JobId</code> to identify the job in a subsequent call to <code>GetFaceSearch</code>. </p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
 }
 impl StartFaceSearchOutput {
@@ -565,11 +561,10 @@ impl std::fmt::Debug for StartFaceSearchOutput {
         formatter.finish()
     }
 }
-/// See [`StartFaceSearchOutput`](crate::output::StartFaceSearchOutput)
+/// See [`StartFaceSearchOutput`](crate::output::StartFaceSearchOutput).
 pub mod start_face_search_output {
 
-    /// A builder for [`StartFaceSearchOutput`](crate::output::StartFaceSearchOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartFaceSearchOutput`](crate::output::StartFaceSearchOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -585,7 +580,7 @@ pub mod start_face_search_output {
             self.job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartFaceSearchOutput`](crate::output::StartFaceSearchOutput)
+        /// Consumes the builder and constructs a [`StartFaceSearchOutput`](crate::output::StartFaceSearchOutput).
         pub fn build(self) -> crate::output::StartFaceSearchOutput {
             crate::output::StartFaceSearchOutput {
                 job_id: self.job_id,
@@ -594,7 +589,7 @@ pub mod start_face_search_output {
     }
 }
 impl StartFaceSearchOutput {
-    /// Creates a new builder-style object to manufacture [`StartFaceSearchOutput`](crate::output::StartFaceSearchOutput)
+    /// Creates a new builder-style object to manufacture [`StartFaceSearchOutput`](crate::output::StartFaceSearchOutput).
     pub fn builder() -> crate::output::start_face_search_output::Builder {
         crate::output::start_face_search_output::Builder::default()
     }
@@ -605,6 +600,7 @@ impl StartFaceSearchOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartFaceDetectionOutput {
     /// <p>The identifier for the face detection job. Use <code>JobId</code> to identify the job in a subsequent call to <code>GetFaceDetection</code>.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
 }
 impl StartFaceDetectionOutput {
@@ -620,11 +616,10 @@ impl std::fmt::Debug for StartFaceDetectionOutput {
         formatter.finish()
     }
 }
-/// See [`StartFaceDetectionOutput`](crate::output::StartFaceDetectionOutput)
+/// See [`StartFaceDetectionOutput`](crate::output::StartFaceDetectionOutput).
 pub mod start_face_detection_output {
 
-    /// A builder for [`StartFaceDetectionOutput`](crate::output::StartFaceDetectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartFaceDetectionOutput`](crate::output::StartFaceDetectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -640,7 +635,7 @@ pub mod start_face_detection_output {
             self.job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartFaceDetectionOutput`](crate::output::StartFaceDetectionOutput)
+        /// Consumes the builder and constructs a [`StartFaceDetectionOutput`](crate::output::StartFaceDetectionOutput).
         pub fn build(self) -> crate::output::StartFaceDetectionOutput {
             crate::output::StartFaceDetectionOutput {
                 job_id: self.job_id,
@@ -649,7 +644,7 @@ pub mod start_face_detection_output {
     }
 }
 impl StartFaceDetectionOutput {
-    /// Creates a new builder-style object to manufacture [`StartFaceDetectionOutput`](crate::output::StartFaceDetectionOutput)
+    /// Creates a new builder-style object to manufacture [`StartFaceDetectionOutput`](crate::output::StartFaceDetectionOutput).
     pub fn builder() -> crate::output::start_face_detection_output::Builder {
         crate::output::start_face_detection_output::Builder::default()
     }
@@ -660,6 +655,7 @@ impl StartFaceDetectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartContentModerationOutput {
     /// <p>The identifier for the content analysis job. Use <code>JobId</code> to identify the job in a subsequent call to <code>GetContentModeration</code>.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
 }
 impl StartContentModerationOutput {
@@ -675,11 +671,10 @@ impl std::fmt::Debug for StartContentModerationOutput {
         formatter.finish()
     }
 }
-/// See [`StartContentModerationOutput`](crate::output::StartContentModerationOutput)
+/// See [`StartContentModerationOutput`](crate::output::StartContentModerationOutput).
 pub mod start_content_moderation_output {
 
-    /// A builder for [`StartContentModerationOutput`](crate::output::StartContentModerationOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartContentModerationOutput`](crate::output::StartContentModerationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -695,7 +690,7 @@ pub mod start_content_moderation_output {
             self.job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartContentModerationOutput`](crate::output::StartContentModerationOutput)
+        /// Consumes the builder and constructs a [`StartContentModerationOutput`](crate::output::StartContentModerationOutput).
         pub fn build(self) -> crate::output::StartContentModerationOutput {
             crate::output::StartContentModerationOutput {
                 job_id: self.job_id,
@@ -704,7 +699,7 @@ pub mod start_content_moderation_output {
     }
 }
 impl StartContentModerationOutput {
-    /// Creates a new builder-style object to manufacture [`StartContentModerationOutput`](crate::output::StartContentModerationOutput)
+    /// Creates a new builder-style object to manufacture [`StartContentModerationOutput`](crate::output::StartContentModerationOutput).
     pub fn builder() -> crate::output::start_content_moderation_output::Builder {
         crate::output::start_content_moderation_output::Builder::default()
     }
@@ -715,6 +710,7 @@ impl StartContentModerationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartCelebrityRecognitionOutput {
     /// <p>The identifier for the celebrity recognition analysis job. Use <code>JobId</code> to identify the job in a subsequent call to <code>GetCelebrityRecognition</code>.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
 }
 impl StartCelebrityRecognitionOutput {
@@ -730,11 +726,10 @@ impl std::fmt::Debug for StartCelebrityRecognitionOutput {
         formatter.finish()
     }
 }
-/// See [`StartCelebrityRecognitionOutput`](crate::output::StartCelebrityRecognitionOutput)
+/// See [`StartCelebrityRecognitionOutput`](crate::output::StartCelebrityRecognitionOutput).
 pub mod start_celebrity_recognition_output {
 
-    /// A builder for [`StartCelebrityRecognitionOutput`](crate::output::StartCelebrityRecognitionOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartCelebrityRecognitionOutput`](crate::output::StartCelebrityRecognitionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -750,7 +745,7 @@ pub mod start_celebrity_recognition_output {
             self.job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartCelebrityRecognitionOutput`](crate::output::StartCelebrityRecognitionOutput)
+        /// Consumes the builder and constructs a [`StartCelebrityRecognitionOutput`](crate::output::StartCelebrityRecognitionOutput).
         pub fn build(self) -> crate::output::StartCelebrityRecognitionOutput {
             crate::output::StartCelebrityRecognitionOutput {
                 job_id: self.job_id,
@@ -759,7 +754,7 @@ pub mod start_celebrity_recognition_output {
     }
 }
 impl StartCelebrityRecognitionOutput {
-    /// Creates a new builder-style object to manufacture [`StartCelebrityRecognitionOutput`](crate::output::StartCelebrityRecognitionOutput)
+    /// Creates a new builder-style object to manufacture [`StartCelebrityRecognitionOutput`](crate::output::StartCelebrityRecognitionOutput).
     pub fn builder() -> crate::output::start_celebrity_recognition_output::Builder {
         crate::output::start_celebrity_recognition_output::Builder::default()
     }
@@ -770,12 +765,16 @@ impl StartCelebrityRecognitionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchFacesByImageOutput {
     /// <p>The bounding box around the face in the input image that Amazon Rekognition used for the search.</p>
+    #[doc(hidden)]
     pub searched_face_bounding_box: std::option::Option<crate::model::BoundingBox>,
     /// <p>The level of confidence that the <code>searchedFaceBoundingBox</code>, contains a face.</p>
+    #[doc(hidden)]
     pub searched_face_confidence: std::option::Option<f32>,
     /// <p>An array of faces that match the input face, along with the confidence in the match.</p>
+    #[doc(hidden)]
     pub face_matches: std::option::Option<std::vec::Vec<crate::model::FaceMatch>>,
     /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
+    #[doc(hidden)]
     pub face_model_version: std::option::Option<std::string::String>,
 }
 impl SearchFacesByImageOutput {
@@ -809,11 +808,10 @@ impl std::fmt::Debug for SearchFacesByImageOutput {
         formatter.finish()
     }
 }
-/// See [`SearchFacesByImageOutput`](crate::output::SearchFacesByImageOutput)
+/// See [`SearchFacesByImageOutput`](crate::output::SearchFacesByImageOutput).
 pub mod search_faces_by_image_output {
 
-    /// A builder for [`SearchFacesByImageOutput`](crate::output::SearchFacesByImageOutput)
-    #[non_exhaustive]
+    /// A builder for [`SearchFacesByImageOutput`](crate::output::SearchFacesByImageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) searched_face_bounding_box: std::option::Option<crate::model::BoundingBox>,
@@ -877,7 +875,7 @@ pub mod search_faces_by_image_output {
             self.face_model_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchFacesByImageOutput`](crate::output::SearchFacesByImageOutput)
+        /// Consumes the builder and constructs a [`SearchFacesByImageOutput`](crate::output::SearchFacesByImageOutput).
         pub fn build(self) -> crate::output::SearchFacesByImageOutput {
             crate::output::SearchFacesByImageOutput {
                 searched_face_bounding_box: self.searched_face_bounding_box,
@@ -889,7 +887,7 @@ pub mod search_faces_by_image_output {
     }
 }
 impl SearchFacesByImageOutput {
-    /// Creates a new builder-style object to manufacture [`SearchFacesByImageOutput`](crate::output::SearchFacesByImageOutput)
+    /// Creates a new builder-style object to manufacture [`SearchFacesByImageOutput`](crate::output::SearchFacesByImageOutput).
     pub fn builder() -> crate::output::search_faces_by_image_output::Builder {
         crate::output::search_faces_by_image_output::Builder::default()
     }
@@ -900,10 +898,13 @@ impl SearchFacesByImageOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchFacesOutput {
     /// <p>ID of the face that was searched for matches in a collection.</p>
+    #[doc(hidden)]
     pub searched_face_id: std::option::Option<std::string::String>,
     /// <p>An array of faces that matched the input face, along with the confidence in the match.</p>
+    #[doc(hidden)]
     pub face_matches: std::option::Option<std::vec::Vec<crate::model::FaceMatch>>,
     /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
+    #[doc(hidden)]
     pub face_model_version: std::option::Option<std::string::String>,
 }
 impl SearchFacesOutput {
@@ -929,11 +930,10 @@ impl std::fmt::Debug for SearchFacesOutput {
         formatter.finish()
     }
 }
-/// See [`SearchFacesOutput`](crate::output::SearchFacesOutput)
+/// See [`SearchFacesOutput`](crate::output::SearchFacesOutput).
 pub mod search_faces_output {
 
-    /// A builder for [`SearchFacesOutput`](crate::output::SearchFacesOutput)
-    #[non_exhaustive]
+    /// A builder for [`SearchFacesOutput`](crate::output::SearchFacesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) searched_face_id: std::option::Option<std::string::String>,
@@ -986,7 +986,7 @@ pub mod search_faces_output {
             self.face_model_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchFacesOutput`](crate::output::SearchFacesOutput)
+        /// Consumes the builder and constructs a [`SearchFacesOutput`](crate::output::SearchFacesOutput).
         pub fn build(self) -> crate::output::SearchFacesOutput {
             crate::output::SearchFacesOutput {
                 searched_face_id: self.searched_face_id,
@@ -997,7 +997,7 @@ pub mod search_faces_output {
     }
 }
 impl SearchFacesOutput {
-    /// Creates a new builder-style object to manufacture [`SearchFacesOutput`](crate::output::SearchFacesOutput)
+    /// Creates a new builder-style object to manufacture [`SearchFacesOutput`](crate::output::SearchFacesOutput).
     pub fn builder() -> crate::output::search_faces_output::Builder {
         crate::output::search_faces_output::Builder::default()
     }
@@ -1008,8 +1008,10 @@ impl SearchFacesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecognizeCelebritiesOutput {
     /// <p>Details about each celebrity found in the image. Amazon Rekognition can detect a maximum of 64 celebrities in an image. Each celebrity object includes the following attributes: <code>Face</code>, <code>Confidence</code>, <code>Emotions</code>, <code>Landmarks</code>, <code>Pose</code>, <code>Quality</code>, <code>Smile</code>, <code>Id</code>, <code>KnownGender</code>, <code>MatchConfidence</code>, <code>Name</code>, <code>Urls</code>.</p>
+    #[doc(hidden)]
     pub celebrity_faces: std::option::Option<std::vec::Vec<crate::model::Celebrity>>,
     /// <p>Details about each unrecognized face in the image.</p>
+    #[doc(hidden)]
     pub unrecognized_faces: std::option::Option<std::vec::Vec<crate::model::ComparedFace>>,
     /// <note>
     /// <p>Support for estimating image orientation using the the OrientationCorrection field has ceased as of August 2021. Any returned values for this field included in an API response will always be NULL.</p>
@@ -1017,6 +1019,7 @@ pub struct RecognizeCelebritiesOutput {
     /// <p>The orientation of the input image (counterclockwise direction). If your application displays the image, you can use this value to correct the orientation. The bounding box coordinates returned in <code>CelebrityFaces</code> and <code>UnrecognizedFaces</code> represent face locations before the image orientation is corrected. </p> <note>
     /// <p>If the input image is in .jpeg format, it might contain exchangeable image (Exif) metadata that includes the image's orientation. If so, and the Exif metadata for the input image populates the orientation field, the value of <code>OrientationCorrection</code> is null. The <code>CelebrityFaces</code> and <code>UnrecognizedFaces</code> bounding box coordinates represent face locations after Exif metadata is used to correct the image orientation. Images in .png format don't contain Exif metadata. </p>
     /// </note>
+    #[doc(hidden)]
     pub orientation_correction: std::option::Option<crate::model::OrientationCorrection>,
 }
 impl RecognizeCelebritiesOutput {
@@ -1049,11 +1052,10 @@ impl std::fmt::Debug for RecognizeCelebritiesOutput {
         formatter.finish()
     }
 }
-/// See [`RecognizeCelebritiesOutput`](crate::output::RecognizeCelebritiesOutput)
+/// See [`RecognizeCelebritiesOutput`](crate::output::RecognizeCelebritiesOutput).
 pub mod recognize_celebrities_output {
 
-    /// A builder for [`RecognizeCelebritiesOutput`](crate::output::RecognizeCelebritiesOutput)
-    #[non_exhaustive]
+    /// A builder for [`RecognizeCelebritiesOutput`](crate::output::RecognizeCelebritiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) celebrity_faces: std::option::Option<std::vec::Vec<crate::model::Celebrity>>,
@@ -1126,7 +1128,7 @@ pub mod recognize_celebrities_output {
             self.orientation_correction = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecognizeCelebritiesOutput`](crate::output::RecognizeCelebritiesOutput)
+        /// Consumes the builder and constructs a [`RecognizeCelebritiesOutput`](crate::output::RecognizeCelebritiesOutput).
         pub fn build(self) -> crate::output::RecognizeCelebritiesOutput {
             crate::output::RecognizeCelebritiesOutput {
                 celebrity_faces: self.celebrity_faces,
@@ -1137,7 +1139,7 @@ pub mod recognize_celebrities_output {
     }
 }
 impl RecognizeCelebritiesOutput {
-    /// Creates a new builder-style object to manufacture [`RecognizeCelebritiesOutput`](crate::output::RecognizeCelebritiesOutput)
+    /// Creates a new builder-style object to manufacture [`RecognizeCelebritiesOutput`](crate::output::RecognizeCelebritiesOutput).
     pub fn builder() -> crate::output::recognize_celebrities_output::Builder {
         crate::output::recognize_celebrities_output::Builder::default()
     }
@@ -1148,6 +1150,7 @@ impl RecognizeCelebritiesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p> A list of key-value tags assigned to the resource. </p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1167,11 +1170,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -1204,14 +1206,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -1222,8 +1224,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListStreamProcessorsOutput {
     /// <p>If the response is truncated, Amazon Rekognition Video returns this token that you can use in the subsequent request to retrieve the next set of stream processors. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>List of stream processors that you have created.</p>
+    #[doc(hidden)]
     pub stream_processors: std::option::Option<std::vec::Vec<crate::model::StreamProcessor>>,
 }
 impl ListStreamProcessorsOutput {
@@ -1244,11 +1248,10 @@ impl std::fmt::Debug for ListStreamProcessorsOutput {
         formatter.finish()
     }
 }
-/// See [`ListStreamProcessorsOutput`](crate::output::ListStreamProcessorsOutput)
+/// See [`ListStreamProcessorsOutput`](crate::output::ListStreamProcessorsOutput).
 pub mod list_stream_processors_output {
 
-    /// A builder for [`ListStreamProcessorsOutput`](crate::output::ListStreamProcessorsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListStreamProcessorsOutput`](crate::output::ListStreamProcessorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1285,7 +1288,7 @@ pub mod list_stream_processors_output {
             self.stream_processors = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListStreamProcessorsOutput`](crate::output::ListStreamProcessorsOutput)
+        /// Consumes the builder and constructs a [`ListStreamProcessorsOutput`](crate::output::ListStreamProcessorsOutput).
         pub fn build(self) -> crate::output::ListStreamProcessorsOutput {
             crate::output::ListStreamProcessorsOutput {
                 next_token: self.next_token,
@@ -1295,7 +1298,7 @@ pub mod list_stream_processors_output {
     }
 }
 impl ListStreamProcessorsOutput {
-    /// Creates a new builder-style object to manufacture [`ListStreamProcessorsOutput`](crate::output::ListStreamProcessorsOutput)
+    /// Creates a new builder-style object to manufacture [`ListStreamProcessorsOutput`](crate::output::ListStreamProcessorsOutput).
     pub fn builder() -> crate::output::list_stream_processors_output::Builder {
         crate::output::list_stream_processors_output::Builder::default()
     }
@@ -1306,10 +1309,13 @@ impl ListStreamProcessorsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListFacesOutput {
     /// <p>An array of <code>Face</code> objects. </p>
+    #[doc(hidden)]
     pub faces: std::option::Option<std::vec::Vec<crate::model::Face>>,
     /// <p>If the response is truncated, Amazon Rekognition returns this token that you can use in the subsequent request to retrieve the next set of faces.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
+    #[doc(hidden)]
     pub face_model_version: std::option::Option<std::string::String>,
 }
 impl ListFacesOutput {
@@ -1335,11 +1341,10 @@ impl std::fmt::Debug for ListFacesOutput {
         formatter.finish()
     }
 }
-/// See [`ListFacesOutput`](crate::output::ListFacesOutput)
+/// See [`ListFacesOutput`](crate::output::ListFacesOutput).
 pub mod list_faces_output {
 
-    /// A builder for [`ListFacesOutput`](crate::output::ListFacesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListFacesOutput`](crate::output::ListFacesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) faces: std::option::Option<std::vec::Vec<crate::model::Face>>,
@@ -1389,7 +1394,7 @@ pub mod list_faces_output {
             self.face_model_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFacesOutput`](crate::output::ListFacesOutput)
+        /// Consumes the builder and constructs a [`ListFacesOutput`](crate::output::ListFacesOutput).
         pub fn build(self) -> crate::output::ListFacesOutput {
             crate::output::ListFacesOutput {
                 faces: self.faces,
@@ -1400,7 +1405,7 @@ pub mod list_faces_output {
     }
 }
 impl ListFacesOutput {
-    /// Creates a new builder-style object to manufacture [`ListFacesOutput`](crate::output::ListFacesOutput)
+    /// Creates a new builder-style object to manufacture [`ListFacesOutput`](crate::output::ListFacesOutput).
     pub fn builder() -> crate::output::list_faces_output::Builder {
         crate::output::list_faces_output::Builder::default()
     }
@@ -1411,9 +1416,11 @@ impl ListFacesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDatasetLabelsOutput {
     /// <p> A list of the labels in the dataset. </p>
+    #[doc(hidden)]
     pub dataset_label_descriptions:
         std::option::Option<std::vec::Vec<crate::model::DatasetLabelDescription>>,
     /// <p>If the previous response was incomplete (because there is more results to retrieve), Amazon Rekognition Custom Labels returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListDatasetLabelsOutput {
@@ -1439,11 +1446,10 @@ impl std::fmt::Debug for ListDatasetLabelsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDatasetLabelsOutput`](crate::output::ListDatasetLabelsOutput)
+/// See [`ListDatasetLabelsOutput`](crate::output::ListDatasetLabelsOutput).
 pub mod list_dataset_labels_output {
 
-    /// A builder for [`ListDatasetLabelsOutput`](crate::output::ListDatasetLabelsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListDatasetLabelsOutput`](crate::output::ListDatasetLabelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_label_descriptions:
@@ -1483,7 +1489,7 @@ pub mod list_dataset_labels_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDatasetLabelsOutput`](crate::output::ListDatasetLabelsOutput)
+        /// Consumes the builder and constructs a [`ListDatasetLabelsOutput`](crate::output::ListDatasetLabelsOutput).
         pub fn build(self) -> crate::output::ListDatasetLabelsOutput {
             crate::output::ListDatasetLabelsOutput {
                 dataset_label_descriptions: self.dataset_label_descriptions,
@@ -1493,7 +1499,7 @@ pub mod list_dataset_labels_output {
     }
 }
 impl ListDatasetLabelsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDatasetLabelsOutput`](crate::output::ListDatasetLabelsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDatasetLabelsOutput`](crate::output::ListDatasetLabelsOutput).
     pub fn builder() -> crate::output::list_dataset_labels_output::Builder {
         crate::output::list_dataset_labels_output::Builder::default()
     }
@@ -1504,8 +1510,10 @@ impl ListDatasetLabelsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDatasetEntriesOutput {
     /// <p> A list of entries (images) in the dataset. </p>
+    #[doc(hidden)]
     pub dataset_entries: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>If the previous response was incomplete (because there is more results to retrieve), Amazon Rekognition Custom Labels returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListDatasetEntriesOutput {
@@ -1526,11 +1534,10 @@ impl std::fmt::Debug for ListDatasetEntriesOutput {
         formatter.finish()
     }
 }
-/// See [`ListDatasetEntriesOutput`](crate::output::ListDatasetEntriesOutput)
+/// See [`ListDatasetEntriesOutput`](crate::output::ListDatasetEntriesOutput).
 pub mod list_dataset_entries_output {
 
-    /// A builder for [`ListDatasetEntriesOutput`](crate::output::ListDatasetEntriesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListDatasetEntriesOutput`](crate::output::ListDatasetEntriesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_entries: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1566,7 +1573,7 @@ pub mod list_dataset_entries_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDatasetEntriesOutput`](crate::output::ListDatasetEntriesOutput)
+        /// Consumes the builder and constructs a [`ListDatasetEntriesOutput`](crate::output::ListDatasetEntriesOutput).
         pub fn build(self) -> crate::output::ListDatasetEntriesOutput {
             crate::output::ListDatasetEntriesOutput {
                 dataset_entries: self.dataset_entries,
@@ -1576,7 +1583,7 @@ pub mod list_dataset_entries_output {
     }
 }
 impl ListDatasetEntriesOutput {
-    /// Creates a new builder-style object to manufacture [`ListDatasetEntriesOutput`](crate::output::ListDatasetEntriesOutput)
+    /// Creates a new builder-style object to manufacture [`ListDatasetEntriesOutput`](crate::output::ListDatasetEntriesOutput).
     pub fn builder() -> crate::output::list_dataset_entries_output::Builder {
         crate::output::list_dataset_entries_output::Builder::default()
     }
@@ -1587,10 +1594,13 @@ impl ListDatasetEntriesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListCollectionsOutput {
     /// <p>An array of collection IDs.</p>
+    #[doc(hidden)]
     pub collection_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>If the result is truncated, the response provides a <code>NextToken</code> that you can use in the subsequent request to fetch the next set of collection IDs.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Version numbers of the face detection models associated with the collections in the array <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used by the collection in <code>CollectionId[2]</code>.</p>
+    #[doc(hidden)]
     pub face_model_versions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ListCollectionsOutput {
@@ -1616,11 +1626,10 @@ impl std::fmt::Debug for ListCollectionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListCollectionsOutput`](crate::output::ListCollectionsOutput)
+/// See [`ListCollectionsOutput`](crate::output::ListCollectionsOutput).
 pub mod list_collections_output {
 
-    /// A builder for [`ListCollectionsOutput`](crate::output::ListCollectionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListCollectionsOutput`](crate::output::ListCollectionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) collection_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1676,7 +1685,7 @@ pub mod list_collections_output {
             self.face_model_versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListCollectionsOutput`](crate::output::ListCollectionsOutput)
+        /// Consumes the builder and constructs a [`ListCollectionsOutput`](crate::output::ListCollectionsOutput).
         pub fn build(self) -> crate::output::ListCollectionsOutput {
             crate::output::ListCollectionsOutput {
                 collection_ids: self.collection_ids,
@@ -1687,7 +1696,7 @@ pub mod list_collections_output {
     }
 }
 impl ListCollectionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListCollectionsOutput`](crate::output::ListCollectionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListCollectionsOutput`](crate::output::ListCollectionsOutput).
     pub fn builder() -> crate::output::list_collections_output::Builder {
         crate::output::list_collections_output::Builder::default()
     }
@@ -1698,6 +1707,7 @@ impl ListCollectionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IndexFacesOutput {
     /// <p>An array of faces detected and added to the collection. For more information, see Searching Faces in a Collection in the Amazon Rekognition Developer Guide. </p>
+    #[doc(hidden)]
     pub face_records: std::option::Option<std::vec::Vec<crate::model::FaceRecord>>,
     /// <p>If your collection is associated with a face detection model that's later than version 3.0, the value of <code>OrientationCorrection</code> is always null and no orientation information is returned.</p>
     /// <p>If your collection is associated with a face detection model that's version 3.0 or earlier, the following applies:</p>
@@ -1706,10 +1716,13 @@ pub struct IndexFacesOutput {
     /// <li> <p>If the image doesn't contain orientation information in its Exif metadata, Amazon Rekognition returns an estimated orientation (ROTATE_0, ROTATE_90, ROTATE_180, ROTATE_270). Amazon Rekognition doesn’t perform image correction for images. The bounding box coordinates aren't translated and represent the object locations before the image is rotated.</p> </li>
     /// </ul>
     /// <p>Bounding box information is returned in the <code>FaceRecords</code> array. You can get the version of the face detection model by calling <code>DescribeCollection</code>. </p>
+    #[doc(hidden)]
     pub orientation_correction: std::option::Option<crate::model::OrientationCorrection>,
     /// <p>The version number of the face detection model that's associated with the input collection (<code>CollectionId</code>).</p>
+    #[doc(hidden)]
     pub face_model_version: std::option::Option<std::string::String>,
     /// <p>An array of faces that were detected in the image but weren't indexed. They weren't indexed because the quality filter identified them as low quality, or the <code>MaxFaces</code> request parameter filtered them out. To use the quality filter, you specify the <code>QualityFilter</code> request parameter.</p>
+    #[doc(hidden)]
     pub unindexed_faces: std::option::Option<std::vec::Vec<crate::model::UnindexedFace>>,
 }
 impl IndexFacesOutput {
@@ -1748,11 +1761,10 @@ impl std::fmt::Debug for IndexFacesOutput {
         formatter.finish()
     }
 }
-/// See [`IndexFacesOutput`](crate::output::IndexFacesOutput)
+/// See [`IndexFacesOutput`](crate::output::IndexFacesOutput).
 pub mod index_faces_output {
 
-    /// A builder for [`IndexFacesOutput`](crate::output::IndexFacesOutput)
-    #[non_exhaustive]
+    /// A builder for [`IndexFacesOutput`](crate::output::IndexFacesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) face_records: std::option::Option<std::vec::Vec<crate::model::FaceRecord>>,
@@ -1840,7 +1852,7 @@ pub mod index_faces_output {
             self.unindexed_faces = input;
             self
         }
-        /// Consumes the builder and constructs a [`IndexFacesOutput`](crate::output::IndexFacesOutput)
+        /// Consumes the builder and constructs a [`IndexFacesOutput`](crate::output::IndexFacesOutput).
         pub fn build(self) -> crate::output::IndexFacesOutput {
             crate::output::IndexFacesOutput {
                 face_records: self.face_records,
@@ -1852,7 +1864,7 @@ pub mod index_faces_output {
     }
 }
 impl IndexFacesOutput {
-    /// Creates a new builder-style object to manufacture [`IndexFacesOutput`](crate::output::IndexFacesOutput)
+    /// Creates a new builder-style object to manufacture [`IndexFacesOutput`](crate::output::IndexFacesOutput).
     pub fn builder() -> crate::output::index_faces_output::Builder {
         crate::output::index_faces_output::Builder::default()
     }
@@ -1863,16 +1875,22 @@ impl IndexFacesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetTextDetectionOutput {
     /// <p>Current status of the text detection job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::VideoJobStatus>,
     /// <p>If the job fails, <code>StatusMessage</code> provides a descriptive error message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Information about a video that Amazon Rekognition analyzed. <code>Videometadata</code> is returned in every page of paginated responses from a Amazon Rekognition video operation.</p>
+    #[doc(hidden)]
     pub video_metadata: std::option::Option<crate::model::VideoMetadata>,
     /// <p>An array of text detected in the video. Each element contains the detected text, the time in milliseconds from the start of the video that the text was detected, and where it was detected on the screen.</p>
+    #[doc(hidden)]
     pub text_detections: std::option::Option<std::vec::Vec<crate::model::TextDetectionResult>>,
     /// <p>If the response is truncated, Amazon Rekognition Video returns this token that you can use in the subsequent request to retrieve the next set of text.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Version number of the text detection model that was used to detect text.</p>
+    #[doc(hidden)]
     pub text_model_version: std::option::Option<std::string::String>,
 }
 impl GetTextDetectionOutput {
@@ -1913,11 +1931,10 @@ impl std::fmt::Debug for GetTextDetectionOutput {
         formatter.finish()
     }
 }
-/// See [`GetTextDetectionOutput`](crate::output::GetTextDetectionOutput)
+/// See [`GetTextDetectionOutput`](crate::output::GetTextDetectionOutput).
 pub mod get_text_detection_output {
 
-    /// A builder for [`GetTextDetectionOutput`](crate::output::GetTextDetectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetTextDetectionOutput`](crate::output::GetTextDetectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_status: std::option::Option<crate::model::VideoJobStatus>,
@@ -2010,7 +2027,7 @@ pub mod get_text_detection_output {
             self.text_model_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetTextDetectionOutput`](crate::output::GetTextDetectionOutput)
+        /// Consumes the builder and constructs a [`GetTextDetectionOutput`](crate::output::GetTextDetectionOutput).
         pub fn build(self) -> crate::output::GetTextDetectionOutput {
             crate::output::GetTextDetectionOutput {
                 job_status: self.job_status,
@@ -2024,7 +2041,7 @@ pub mod get_text_detection_output {
     }
 }
 impl GetTextDetectionOutput {
-    /// Creates a new builder-style object to manufacture [`GetTextDetectionOutput`](crate::output::GetTextDetectionOutput)
+    /// Creates a new builder-style object to manufacture [`GetTextDetectionOutput`](crate::output::GetTextDetectionOutput).
     pub fn builder() -> crate::output::get_text_detection_output::Builder {
         crate::output::get_text_detection_output::Builder::default()
     }
@@ -2035,18 +2052,25 @@ impl GetTextDetectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSegmentDetectionOutput {
     /// <p>Current status of the segment detection job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::VideoJobStatus>,
     /// <p>If the job fails, <code>StatusMessage</code> provides a descriptive error message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Currently, Amazon Rekognition Video returns a single object in the <code>VideoMetadata</code> array. The object contains information about the video stream in the input file that Amazon Rekognition Video chose to analyze. The <code>VideoMetadata</code> object includes the video codec, video format and other information. Video metadata is returned in each page of information returned by <code>GetSegmentDetection</code>.</p>
+    #[doc(hidden)]
     pub video_metadata: std::option::Option<std::vec::Vec<crate::model::VideoMetadata>>,
     /// <p>An array of objects. There can be multiple audio streams. Each <code>AudioMetadata</code> object contains metadata for a single audio stream. Audio information in an <code>AudioMetadata</code> objects includes the audio codec, the number of audio channels, the duration of the audio stream, and the sample rate. Audio metadata is returned in each page of information returned by <code>GetSegmentDetection</code>.</p>
+    #[doc(hidden)]
     pub audio_metadata: std::option::Option<std::vec::Vec<crate::model::AudioMetadata>>,
     /// <p>If the previous response was incomplete (because there are more labels to retrieve), Amazon Rekognition Video returns a pagination token in the response. You can use this pagination token to retrieve the next set of text.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>An array of segments detected in a video. The array is sorted by the segment types (TECHNICAL_CUE or SHOT) specified in the <code>SegmentTypes</code> input parameter of <code>StartSegmentDetection</code>. Within each segment type the array is sorted by timestamp values.</p>
+    #[doc(hidden)]
     pub segments: std::option::Option<std::vec::Vec<crate::model::SegmentDetection>>,
     /// <p>An array containing the segment types requested in the call to <code>StartSegmentDetection</code>. </p>
+    #[doc(hidden)]
     pub selected_segment_types: std::option::Option<std::vec::Vec<crate::model::SegmentTypeInfo>>,
 }
 impl GetSegmentDetectionOutput {
@@ -2092,11 +2116,10 @@ impl std::fmt::Debug for GetSegmentDetectionOutput {
         formatter.finish()
     }
 }
-/// See [`GetSegmentDetectionOutput`](crate::output::GetSegmentDetectionOutput)
+/// See [`GetSegmentDetectionOutput`](crate::output::GetSegmentDetectionOutput).
 pub mod get_segment_detection_output {
 
-    /// A builder for [`GetSegmentDetectionOutput`](crate::output::GetSegmentDetectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetSegmentDetectionOutput`](crate::output::GetSegmentDetectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_status: std::option::Option<crate::model::VideoJobStatus>,
@@ -2221,7 +2244,7 @@ pub mod get_segment_detection_output {
             self.selected_segment_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSegmentDetectionOutput`](crate::output::GetSegmentDetectionOutput)
+        /// Consumes the builder and constructs a [`GetSegmentDetectionOutput`](crate::output::GetSegmentDetectionOutput).
         pub fn build(self) -> crate::output::GetSegmentDetectionOutput {
             crate::output::GetSegmentDetectionOutput {
                 job_status: self.job_status,
@@ -2236,7 +2259,7 @@ pub mod get_segment_detection_output {
     }
 }
 impl GetSegmentDetectionOutput {
-    /// Creates a new builder-style object to manufacture [`GetSegmentDetectionOutput`](crate::output::GetSegmentDetectionOutput)
+    /// Creates a new builder-style object to manufacture [`GetSegmentDetectionOutput`](crate::output::GetSegmentDetectionOutput).
     pub fn builder() -> crate::output::get_segment_detection_output::Builder {
         crate::output::get_segment_detection_output::Builder::default()
     }
@@ -2247,14 +2270,19 @@ impl GetSegmentDetectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetPersonTrackingOutput {
     /// <p>The current status of the person tracking job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::VideoJobStatus>,
     /// <p>If the job fails, <code>StatusMessage</code> provides a descriptive error message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Information about a video that Amazon Rekognition Video analyzed. <code>Videometadata</code> is returned in every page of paginated responses from a Amazon Rekognition Video operation.</p>
+    #[doc(hidden)]
     pub video_metadata: std::option::Option<crate::model::VideoMetadata>,
     /// <p>If the response is truncated, Amazon Rekognition Video returns this token that you can use in the subsequent request to retrieve the next set of persons. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>An array of the persons detected in the video and the time(s) their path was tracked throughout the video. An array element will exist for each time a person's path is tracked. </p>
+    #[doc(hidden)]
     pub persons: std::option::Option<std::vec::Vec<crate::model::PersonDetection>>,
 }
 impl GetPersonTrackingOutput {
@@ -2290,11 +2318,10 @@ impl std::fmt::Debug for GetPersonTrackingOutput {
         formatter.finish()
     }
 }
-/// See [`GetPersonTrackingOutput`](crate::output::GetPersonTrackingOutput)
+/// See [`GetPersonTrackingOutput`](crate::output::GetPersonTrackingOutput).
 pub mod get_person_tracking_output {
 
-    /// A builder for [`GetPersonTrackingOutput`](crate::output::GetPersonTrackingOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetPersonTrackingOutput`](crate::output::GetPersonTrackingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_status: std::option::Option<crate::model::VideoJobStatus>,
@@ -2372,7 +2399,7 @@ pub mod get_person_tracking_output {
             self.persons = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetPersonTrackingOutput`](crate::output::GetPersonTrackingOutput)
+        /// Consumes the builder and constructs a [`GetPersonTrackingOutput`](crate::output::GetPersonTrackingOutput).
         pub fn build(self) -> crate::output::GetPersonTrackingOutput {
             crate::output::GetPersonTrackingOutput {
                 job_status: self.job_status,
@@ -2385,7 +2412,7 @@ pub mod get_person_tracking_output {
     }
 }
 impl GetPersonTrackingOutput {
-    /// Creates a new builder-style object to manufacture [`GetPersonTrackingOutput`](crate::output::GetPersonTrackingOutput)
+    /// Creates a new builder-style object to manufacture [`GetPersonTrackingOutput`](crate::output::GetPersonTrackingOutput).
     pub fn builder() -> crate::output::get_person_tracking_output::Builder {
         crate::output::get_person_tracking_output::Builder::default()
     }
@@ -2396,16 +2423,22 @@ impl GetPersonTrackingOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetLabelDetectionOutput {
     /// <p>The current status of the label detection job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::VideoJobStatus>,
     /// <p>If the job fails, <code>StatusMessage</code> provides a descriptive error message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Information about a video that Amazon Rekognition Video analyzed. <code>Videometadata</code> is returned in every page of paginated responses from a Amazon Rekognition video operation.</p>
+    #[doc(hidden)]
     pub video_metadata: std::option::Option<crate::model::VideoMetadata>,
     /// <p>If the response is truncated, Amazon Rekognition Video returns this token that you can use in the subsequent request to retrieve the next set of labels.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>An array of labels detected in the video. Each element contains the detected label and the time, in milliseconds from the start of the video, that the label was detected. </p>
+    #[doc(hidden)]
     pub labels: std::option::Option<std::vec::Vec<crate::model::LabelDetection>>,
     /// <p>Version number of the label detection model that was used to detect labels.</p>
+    #[doc(hidden)]
     pub label_model_version: std::option::Option<std::string::String>,
 }
 impl GetLabelDetectionOutput {
@@ -2446,11 +2479,10 @@ impl std::fmt::Debug for GetLabelDetectionOutput {
         formatter.finish()
     }
 }
-/// See [`GetLabelDetectionOutput`](crate::output::GetLabelDetectionOutput)
+/// See [`GetLabelDetectionOutput`](crate::output::GetLabelDetectionOutput).
 pub mod get_label_detection_output {
 
-    /// A builder for [`GetLabelDetectionOutput`](crate::output::GetLabelDetectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetLabelDetectionOutput`](crate::output::GetLabelDetectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_status: std::option::Option<crate::model::VideoJobStatus>,
@@ -2542,7 +2574,7 @@ pub mod get_label_detection_output {
             self.label_model_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetLabelDetectionOutput`](crate::output::GetLabelDetectionOutput)
+        /// Consumes the builder and constructs a [`GetLabelDetectionOutput`](crate::output::GetLabelDetectionOutput).
         pub fn build(self) -> crate::output::GetLabelDetectionOutput {
             crate::output::GetLabelDetectionOutput {
                 job_status: self.job_status,
@@ -2556,7 +2588,7 @@ pub mod get_label_detection_output {
     }
 }
 impl GetLabelDetectionOutput {
-    /// Creates a new builder-style object to manufacture [`GetLabelDetectionOutput`](crate::output::GetLabelDetectionOutput)
+    /// Creates a new builder-style object to manufacture [`GetLabelDetectionOutput`](crate::output::GetLabelDetectionOutput).
     pub fn builder() -> crate::output::get_label_detection_output::Builder {
         crate::output::get_label_detection_output::Builder::default()
     }
@@ -2567,14 +2599,19 @@ impl GetLabelDetectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetFaceSearchOutput {
     /// <p>The current status of the face search job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::VideoJobStatus>,
     /// <p>If the job fails, <code>StatusMessage</code> provides a descriptive error message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>If the response is truncated, Amazon Rekognition Video returns this token that you can use in the subsequent request to retrieve the next set of search results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Information about a video that Amazon Rekognition analyzed. <code>Videometadata</code> is returned in every page of paginated responses from a Amazon Rekognition Video operation. </p>
+    #[doc(hidden)]
     pub video_metadata: std::option::Option<crate::model::VideoMetadata>,
     /// <p>An array of persons, <code>PersonMatch</code>, in the video whose face(s) match the face(s) in an Amazon Rekognition collection. It also includes time information for when persons are matched in the video. You specify the input collection in an initial call to <code>StartFaceSearch</code>. Each <code>Persons</code> element includes a time the person was matched, face match details (<code>FaceMatches</code>) for matching faces in the collection, and person information (<code>Person</code>) for the matched person. </p>
+    #[doc(hidden)]
     pub persons: std::option::Option<std::vec::Vec<crate::model::PersonMatch>>,
 }
 impl GetFaceSearchOutput {
@@ -2610,11 +2647,10 @@ impl std::fmt::Debug for GetFaceSearchOutput {
         formatter.finish()
     }
 }
-/// See [`GetFaceSearchOutput`](crate::output::GetFaceSearchOutput)
+/// See [`GetFaceSearchOutput`](crate::output::GetFaceSearchOutput).
 pub mod get_face_search_output {
 
-    /// A builder for [`GetFaceSearchOutput`](crate::output::GetFaceSearchOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetFaceSearchOutput`](crate::output::GetFaceSearchOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_status: std::option::Option<crate::model::VideoJobStatus>,
@@ -2692,7 +2728,7 @@ pub mod get_face_search_output {
             self.persons = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetFaceSearchOutput`](crate::output::GetFaceSearchOutput)
+        /// Consumes the builder and constructs a [`GetFaceSearchOutput`](crate::output::GetFaceSearchOutput).
         pub fn build(self) -> crate::output::GetFaceSearchOutput {
             crate::output::GetFaceSearchOutput {
                 job_status: self.job_status,
@@ -2705,7 +2741,7 @@ pub mod get_face_search_output {
     }
 }
 impl GetFaceSearchOutput {
-    /// Creates a new builder-style object to manufacture [`GetFaceSearchOutput`](crate::output::GetFaceSearchOutput)
+    /// Creates a new builder-style object to manufacture [`GetFaceSearchOutput`](crate::output::GetFaceSearchOutput).
     pub fn builder() -> crate::output::get_face_search_output::Builder {
         crate::output::get_face_search_output::Builder::default()
     }
@@ -2716,14 +2752,19 @@ impl GetFaceSearchOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetFaceDetectionOutput {
     /// <p>The current status of the face detection job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::VideoJobStatus>,
     /// <p>If the job fails, <code>StatusMessage</code> provides a descriptive error message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Information about a video that Amazon Rekognition Video analyzed. <code>Videometadata</code> is returned in every page of paginated responses from a Amazon Rekognition video operation.</p>
+    #[doc(hidden)]
     pub video_metadata: std::option::Option<crate::model::VideoMetadata>,
     /// <p>If the response is truncated, Amazon Rekognition returns this token that you can use in the subsequent request to retrieve the next set of faces. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>An array of faces detected in the video. Each element contains a detected face's details and the time, in milliseconds from the start of the video, the face was detected. </p>
+    #[doc(hidden)]
     pub faces: std::option::Option<std::vec::Vec<crate::model::FaceDetection>>,
 }
 impl GetFaceDetectionOutput {
@@ -2759,11 +2800,10 @@ impl std::fmt::Debug for GetFaceDetectionOutput {
         formatter.finish()
     }
 }
-/// See [`GetFaceDetectionOutput`](crate::output::GetFaceDetectionOutput)
+/// See [`GetFaceDetectionOutput`](crate::output::GetFaceDetectionOutput).
 pub mod get_face_detection_output {
 
-    /// A builder for [`GetFaceDetectionOutput`](crate::output::GetFaceDetectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetFaceDetectionOutput`](crate::output::GetFaceDetectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_status: std::option::Option<crate::model::VideoJobStatus>,
@@ -2841,7 +2881,7 @@ pub mod get_face_detection_output {
             self.faces = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetFaceDetectionOutput`](crate::output::GetFaceDetectionOutput)
+        /// Consumes the builder and constructs a [`GetFaceDetectionOutput`](crate::output::GetFaceDetectionOutput).
         pub fn build(self) -> crate::output::GetFaceDetectionOutput {
             crate::output::GetFaceDetectionOutput {
                 job_status: self.job_status,
@@ -2854,7 +2894,7 @@ pub mod get_face_detection_output {
     }
 }
 impl GetFaceDetectionOutput {
-    /// Creates a new builder-style object to manufacture [`GetFaceDetectionOutput`](crate::output::GetFaceDetectionOutput)
+    /// Creates a new builder-style object to manufacture [`GetFaceDetectionOutput`](crate::output::GetFaceDetectionOutput).
     pub fn builder() -> crate::output::get_face_detection_output::Builder {
         crate::output::get_face_detection_output::Builder::default()
     }
@@ -2865,17 +2905,23 @@ impl GetFaceDetectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetContentModerationOutput {
     /// <p>The current status of the content moderation analysis job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::VideoJobStatus>,
     /// <p>If the job fails, <code>StatusMessage</code> provides a descriptive error message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Information about a video that Amazon Rekognition analyzed. <code>Videometadata</code> is returned in every page of paginated responses from <code>GetContentModeration</code>. </p>
+    #[doc(hidden)]
     pub video_metadata: std::option::Option<crate::model::VideoMetadata>,
     /// <p>The detected inappropriate, unwanted, or offensive content moderation labels and the time(s) they were detected.</p>
+    #[doc(hidden)]
     pub moderation_labels:
         std::option::Option<std::vec::Vec<crate::model::ContentModerationDetection>>,
     /// <p>If the response is truncated, Amazon Rekognition Video returns this token that you can use in the subsequent request to retrieve the next set of content moderation labels. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Version number of the moderation detection model that was used to detect inappropriate, unwanted, or offensive content.</p>
+    #[doc(hidden)]
     pub moderation_model_version: std::option::Option<std::string::String>,
 }
 impl GetContentModerationOutput {
@@ -2918,11 +2964,10 @@ impl std::fmt::Debug for GetContentModerationOutput {
         formatter.finish()
     }
 }
-/// See [`GetContentModerationOutput`](crate::output::GetContentModerationOutput)
+/// See [`GetContentModerationOutput`](crate::output::GetContentModerationOutput).
 pub mod get_content_moderation_output {
 
-    /// A builder for [`GetContentModerationOutput`](crate::output::GetContentModerationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetContentModerationOutput`](crate::output::GetContentModerationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_status: std::option::Option<crate::model::VideoJobStatus>,
@@ -3018,7 +3063,7 @@ pub mod get_content_moderation_output {
             self.moderation_model_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetContentModerationOutput`](crate::output::GetContentModerationOutput)
+        /// Consumes the builder and constructs a [`GetContentModerationOutput`](crate::output::GetContentModerationOutput).
         pub fn build(self) -> crate::output::GetContentModerationOutput {
             crate::output::GetContentModerationOutput {
                 job_status: self.job_status,
@@ -3032,7 +3077,7 @@ pub mod get_content_moderation_output {
     }
 }
 impl GetContentModerationOutput {
-    /// Creates a new builder-style object to manufacture [`GetContentModerationOutput`](crate::output::GetContentModerationOutput)
+    /// Creates a new builder-style object to manufacture [`GetContentModerationOutput`](crate::output::GetContentModerationOutput).
     pub fn builder() -> crate::output::get_content_moderation_output::Builder {
         crate::output::get_content_moderation_output::Builder::default()
     }
@@ -3043,14 +3088,19 @@ impl GetContentModerationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCelebrityRecognitionOutput {
     /// <p>The current status of the celebrity recognition job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::VideoJobStatus>,
     /// <p>If the job fails, <code>StatusMessage</code> provides a descriptive error message.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Information about a video that Amazon Rekognition Video analyzed. <code>Videometadata</code> is returned in every page of paginated responses from a Amazon Rekognition Video operation.</p>
+    #[doc(hidden)]
     pub video_metadata: std::option::Option<crate::model::VideoMetadata>,
     /// <p>If the response is truncated, Amazon Rekognition Video returns this token that you can use in the subsequent request to retrieve the next set of celebrities.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>Array of celebrities recognized in the video.</p>
+    #[doc(hidden)]
     pub celebrities: std::option::Option<std::vec::Vec<crate::model::CelebrityRecognition>>,
 }
 impl GetCelebrityRecognitionOutput {
@@ -3086,11 +3136,10 @@ impl std::fmt::Debug for GetCelebrityRecognitionOutput {
         formatter.finish()
     }
 }
-/// See [`GetCelebrityRecognitionOutput`](crate::output::GetCelebrityRecognitionOutput)
+/// See [`GetCelebrityRecognitionOutput`](crate::output::GetCelebrityRecognitionOutput).
 pub mod get_celebrity_recognition_output {
 
-    /// A builder for [`GetCelebrityRecognitionOutput`](crate::output::GetCelebrityRecognitionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCelebrityRecognitionOutput`](crate::output::GetCelebrityRecognitionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_status: std::option::Option<crate::model::VideoJobStatus>,
@@ -3169,7 +3218,7 @@ pub mod get_celebrity_recognition_output {
             self.celebrities = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCelebrityRecognitionOutput`](crate::output::GetCelebrityRecognitionOutput)
+        /// Consumes the builder and constructs a [`GetCelebrityRecognitionOutput`](crate::output::GetCelebrityRecognitionOutput).
         pub fn build(self) -> crate::output::GetCelebrityRecognitionOutput {
             crate::output::GetCelebrityRecognitionOutput {
                 job_status: self.job_status,
@@ -3182,7 +3231,7 @@ pub mod get_celebrity_recognition_output {
     }
 }
 impl GetCelebrityRecognitionOutput {
-    /// Creates a new builder-style object to manufacture [`GetCelebrityRecognitionOutput`](crate::output::GetCelebrityRecognitionOutput)
+    /// Creates a new builder-style object to manufacture [`GetCelebrityRecognitionOutput`](crate::output::GetCelebrityRecognitionOutput).
     pub fn builder() -> crate::output::get_celebrity_recognition_output::Builder {
         crate::output::get_celebrity_recognition_output::Builder::default()
     }
@@ -3193,10 +3242,13 @@ impl GetCelebrityRecognitionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCelebrityInfoOutput {
     /// <p>An array of URLs pointing to additional celebrity information. </p>
+    #[doc(hidden)]
     pub urls: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The name of the celebrity.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Retrieves the known gender for the celebrity.</p>
+    #[doc(hidden)]
     pub known_gender: std::option::Option<crate::model::KnownGender>,
 }
 impl GetCelebrityInfoOutput {
@@ -3222,11 +3274,10 @@ impl std::fmt::Debug for GetCelebrityInfoOutput {
         formatter.finish()
     }
 }
-/// See [`GetCelebrityInfoOutput`](crate::output::GetCelebrityInfoOutput)
+/// See [`GetCelebrityInfoOutput`](crate::output::GetCelebrityInfoOutput).
 pub mod get_celebrity_info_output {
 
-    /// A builder for [`GetCelebrityInfoOutput`](crate::output::GetCelebrityInfoOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCelebrityInfoOutput`](crate::output::GetCelebrityInfoOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) urls: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3276,7 +3327,7 @@ pub mod get_celebrity_info_output {
             self.known_gender = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCelebrityInfoOutput`](crate::output::GetCelebrityInfoOutput)
+        /// Consumes the builder and constructs a [`GetCelebrityInfoOutput`](crate::output::GetCelebrityInfoOutput).
         pub fn build(self) -> crate::output::GetCelebrityInfoOutput {
             crate::output::GetCelebrityInfoOutput {
                 urls: self.urls,
@@ -3287,7 +3338,7 @@ pub mod get_celebrity_info_output {
     }
 }
 impl GetCelebrityInfoOutput {
-    /// Creates a new builder-style object to manufacture [`GetCelebrityInfoOutput`](crate::output::GetCelebrityInfoOutput)
+    /// Creates a new builder-style object to manufacture [`GetCelebrityInfoOutput`](crate::output::GetCelebrityInfoOutput).
     pub fn builder() -> crate::output::get_celebrity_info_output::Builder {
         crate::output::get_celebrity_info_output::Builder::default()
     }
@@ -3303,22 +3354,21 @@ impl std::fmt::Debug for DistributeDatasetEntriesOutput {
         formatter.finish()
     }
 }
-/// See [`DistributeDatasetEntriesOutput`](crate::output::DistributeDatasetEntriesOutput)
+/// See [`DistributeDatasetEntriesOutput`](crate::output::DistributeDatasetEntriesOutput).
 pub mod distribute_dataset_entries_output {
 
-    /// A builder for [`DistributeDatasetEntriesOutput`](crate::output::DistributeDatasetEntriesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DistributeDatasetEntriesOutput`](crate::output::DistributeDatasetEntriesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DistributeDatasetEntriesOutput`](crate::output::DistributeDatasetEntriesOutput)
+        /// Consumes the builder and constructs a [`DistributeDatasetEntriesOutput`](crate::output::DistributeDatasetEntriesOutput).
         pub fn build(self) -> crate::output::DistributeDatasetEntriesOutput {
             crate::output::DistributeDatasetEntriesOutput {}
         }
     }
 }
 impl DistributeDatasetEntriesOutput {
-    /// Creates a new builder-style object to manufacture [`DistributeDatasetEntriesOutput`](crate::output::DistributeDatasetEntriesOutput)
+    /// Creates a new builder-style object to manufacture [`DistributeDatasetEntriesOutput`](crate::output::DistributeDatasetEntriesOutput).
     pub fn builder() -> crate::output::distribute_dataset_entries_output::Builder {
         crate::output::distribute_dataset_entries_output::Builder::default()
     }
@@ -3329,8 +3379,10 @@ impl DistributeDatasetEntriesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetectTextOutput {
     /// <p>An array of text that was detected in the input image.</p>
+    #[doc(hidden)]
     pub text_detections: std::option::Option<std::vec::Vec<crate::model::TextDetection>>,
     /// <p>The model version used to detect text.</p>
+    #[doc(hidden)]
     pub text_model_version: std::option::Option<std::string::String>,
 }
 impl DetectTextOutput {
@@ -3351,11 +3403,10 @@ impl std::fmt::Debug for DetectTextOutput {
         formatter.finish()
     }
 }
-/// See [`DetectTextOutput`](crate::output::DetectTextOutput)
+/// See [`DetectTextOutput`](crate::output::DetectTextOutput).
 pub mod detect_text_output {
 
-    /// A builder for [`DetectTextOutput`](crate::output::DetectTextOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetectTextOutput`](crate::output::DetectTextOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) text_detections: std::option::Option<std::vec::Vec<crate::model::TextDetection>>,
@@ -3394,7 +3445,7 @@ pub mod detect_text_output {
             self.text_model_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetectTextOutput`](crate::output::DetectTextOutput)
+        /// Consumes the builder and constructs a [`DetectTextOutput`](crate::output::DetectTextOutput).
         pub fn build(self) -> crate::output::DetectTextOutput {
             crate::output::DetectTextOutput {
                 text_detections: self.text_detections,
@@ -3404,7 +3455,7 @@ pub mod detect_text_output {
     }
 }
 impl DetectTextOutput {
-    /// Creates a new builder-style object to manufacture [`DetectTextOutput`](crate::output::DetectTextOutput)
+    /// Creates a new builder-style object to manufacture [`DetectTextOutput`](crate::output::DetectTextOutput).
     pub fn builder() -> crate::output::detect_text_output::Builder {
         crate::output::detect_text_output::Builder::default()
     }
@@ -3415,10 +3466,13 @@ impl DetectTextOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetectProtectiveEquipmentOutput {
     /// <p>The version number of the PPE detection model used to detect PPE in the image.</p>
+    #[doc(hidden)]
     pub protective_equipment_model_version: std::option::Option<std::string::String>,
     /// <p>An array of persons detected in the image (including persons not wearing PPE).</p>
+    #[doc(hidden)]
     pub persons: std::option::Option<std::vec::Vec<crate::model::ProtectiveEquipmentPerson>>,
     /// <p>Summary information for the types of PPE specified in the <code>SummarizationAttributes</code> input parameter.</p>
+    #[doc(hidden)]
     pub summary: std::option::Option<crate::model::ProtectiveEquipmentSummary>,
 }
 impl DetectProtectiveEquipmentOutput {
@@ -3447,11 +3501,10 @@ impl std::fmt::Debug for DetectProtectiveEquipmentOutput {
         formatter.finish()
     }
 }
-/// See [`DetectProtectiveEquipmentOutput`](crate::output::DetectProtectiveEquipmentOutput)
+/// See [`DetectProtectiveEquipmentOutput`](crate::output::DetectProtectiveEquipmentOutput).
 pub mod detect_protective_equipment_output {
 
-    /// A builder for [`DetectProtectiveEquipmentOutput`](crate::output::DetectProtectiveEquipmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetectProtectiveEquipmentOutput`](crate::output::DetectProtectiveEquipmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) protective_equipment_model_version: std::option::Option<std::string::String>,
@@ -3508,7 +3561,7 @@ pub mod detect_protective_equipment_output {
             self.summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetectProtectiveEquipmentOutput`](crate::output::DetectProtectiveEquipmentOutput)
+        /// Consumes the builder and constructs a [`DetectProtectiveEquipmentOutput`](crate::output::DetectProtectiveEquipmentOutput).
         pub fn build(self) -> crate::output::DetectProtectiveEquipmentOutput {
             crate::output::DetectProtectiveEquipmentOutput {
                 protective_equipment_model_version: self.protective_equipment_model_version,
@@ -3519,7 +3572,7 @@ pub mod detect_protective_equipment_output {
     }
 }
 impl DetectProtectiveEquipmentOutput {
-    /// Creates a new builder-style object to manufacture [`DetectProtectiveEquipmentOutput`](crate::output::DetectProtectiveEquipmentOutput)
+    /// Creates a new builder-style object to manufacture [`DetectProtectiveEquipmentOutput`](crate::output::DetectProtectiveEquipmentOutput).
     pub fn builder() -> crate::output::detect_protective_equipment_output::Builder {
         crate::output::detect_protective_equipment_output::Builder::default()
     }
@@ -3530,10 +3583,13 @@ impl DetectProtectiveEquipmentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetectModerationLabelsOutput {
     /// <p>Array of detected Moderation labels and the time, in milliseconds from the start of the video, they were detected.</p>
+    #[doc(hidden)]
     pub moderation_labels: std::option::Option<std::vec::Vec<crate::model::ModerationLabel>>,
     /// <p>Version number of the moderation detection model that was used to detect unsafe content.</p>
+    #[doc(hidden)]
     pub moderation_model_version: std::option::Option<std::string::String>,
     /// <p>Shows the results of the human in the loop evaluation.</p>
+    #[doc(hidden)]
     pub human_loop_activation_output: std::option::Option<crate::model::HumanLoopActivationOutput>,
 }
 impl DetectModerationLabelsOutput {
@@ -3564,11 +3620,10 @@ impl std::fmt::Debug for DetectModerationLabelsOutput {
         formatter.finish()
     }
 }
-/// See [`DetectModerationLabelsOutput`](crate::output::DetectModerationLabelsOutput)
+/// See [`DetectModerationLabelsOutput`](crate::output::DetectModerationLabelsOutput).
 pub mod detect_moderation_labels_output {
 
-    /// A builder for [`DetectModerationLabelsOutput`](crate::output::DetectModerationLabelsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetectModerationLabelsOutput`](crate::output::DetectModerationLabelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) moderation_labels:
@@ -3626,7 +3681,7 @@ pub mod detect_moderation_labels_output {
             self.human_loop_activation_output = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetectModerationLabelsOutput`](crate::output::DetectModerationLabelsOutput)
+        /// Consumes the builder and constructs a [`DetectModerationLabelsOutput`](crate::output::DetectModerationLabelsOutput).
         pub fn build(self) -> crate::output::DetectModerationLabelsOutput {
             crate::output::DetectModerationLabelsOutput {
                 moderation_labels: self.moderation_labels,
@@ -3637,7 +3692,7 @@ pub mod detect_moderation_labels_output {
     }
 }
 impl DetectModerationLabelsOutput {
-    /// Creates a new builder-style object to manufacture [`DetectModerationLabelsOutput`](crate::output::DetectModerationLabelsOutput)
+    /// Creates a new builder-style object to manufacture [`DetectModerationLabelsOutput`](crate::output::DetectModerationLabelsOutput).
     pub fn builder() -> crate::output::detect_moderation_labels_output::Builder {
         crate::output::detect_moderation_labels_output::Builder::default()
     }
@@ -3648,12 +3703,15 @@ impl DetectModerationLabelsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetectLabelsOutput {
     /// <p>An array of labels for the real-world objects detected. </p>
+    #[doc(hidden)]
     pub labels: std::option::Option<std::vec::Vec<crate::model::Label>>,
     /// <p>The value of <code>OrientationCorrection</code> is always null.</p>
     /// <p>If the input image is in .jpeg format, it might contain exchangeable image file format (Exif) metadata that includes the image's orientation. Amazon Rekognition uses this orientation information to perform image correction. The bounding box coordinates are translated to represent object locations after the orientation information in the Exif metadata is used to correct the image orientation. Images in .png format don't contain Exif metadata.</p>
     /// <p>Amazon Rekognition doesn’t perform image correction for images in .png format and .jpeg images without orientation information in the image Exif metadata. The bounding box coordinates aren't translated and represent the object locations before the image is rotated. </p>
+    #[doc(hidden)]
     pub orientation_correction: std::option::Option<crate::model::OrientationCorrection>,
     /// <p>Version number of the label detection model that was used to detect labels.</p>
+    #[doc(hidden)]
     pub label_model_version: std::option::Option<std::string::String>,
 }
 impl DetectLabelsOutput {
@@ -3683,11 +3741,10 @@ impl std::fmt::Debug for DetectLabelsOutput {
         formatter.finish()
     }
 }
-/// See [`DetectLabelsOutput`](crate::output::DetectLabelsOutput)
+/// See [`DetectLabelsOutput`](crate::output::DetectLabelsOutput).
 pub mod detect_labels_output {
 
-    /// A builder for [`DetectLabelsOutput`](crate::output::DetectLabelsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetectLabelsOutput`](crate::output::DetectLabelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) labels: std::option::Option<std::vec::Vec<crate::model::Label>>,
@@ -3747,7 +3804,7 @@ pub mod detect_labels_output {
             self.label_model_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetectLabelsOutput`](crate::output::DetectLabelsOutput)
+        /// Consumes the builder and constructs a [`DetectLabelsOutput`](crate::output::DetectLabelsOutput).
         pub fn build(self) -> crate::output::DetectLabelsOutput {
             crate::output::DetectLabelsOutput {
                 labels: self.labels,
@@ -3758,7 +3815,7 @@ pub mod detect_labels_output {
     }
 }
 impl DetectLabelsOutput {
-    /// Creates a new builder-style object to manufacture [`DetectLabelsOutput`](crate::output::DetectLabelsOutput)
+    /// Creates a new builder-style object to manufacture [`DetectLabelsOutput`](crate::output::DetectLabelsOutput).
     pub fn builder() -> crate::output::detect_labels_output::Builder {
         crate::output::detect_labels_output::Builder::default()
     }
@@ -3769,10 +3826,12 @@ impl DetectLabelsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetectFacesOutput {
     /// <p>Details of each face found in the image. </p>
+    #[doc(hidden)]
     pub face_details: std::option::Option<std::vec::Vec<crate::model::FaceDetail>>,
     /// <p>The value of <code>OrientationCorrection</code> is always null.</p>
     /// <p>If the input image is in .jpeg format, it might contain exchangeable image file format (Exif) metadata that includes the image's orientation. Amazon Rekognition uses this orientation information to perform image correction. The bounding box coordinates are translated to represent object locations after the orientation information in the Exif metadata is used to correct the image orientation. Images in .png format don't contain Exif metadata.</p>
     /// <p>Amazon Rekognition doesn’t perform image correction for images in .png format and .jpeg images without orientation information in the image Exif metadata. The bounding box coordinates aren't translated and represent the object locations before the image is rotated. </p>
+    #[doc(hidden)]
     pub orientation_correction: std::option::Option<crate::model::OrientationCorrection>,
 }
 impl DetectFacesOutput {
@@ -3797,11 +3856,10 @@ impl std::fmt::Debug for DetectFacesOutput {
         formatter.finish()
     }
 }
-/// See [`DetectFacesOutput`](crate::output::DetectFacesOutput)
+/// See [`DetectFacesOutput`](crate::output::DetectFacesOutput).
 pub mod detect_faces_output {
 
-    /// A builder for [`DetectFacesOutput`](crate::output::DetectFacesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetectFacesOutput`](crate::output::DetectFacesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) face_details: std::option::Option<std::vec::Vec<crate::model::FaceDetail>>,
@@ -3847,7 +3905,7 @@ pub mod detect_faces_output {
             self.orientation_correction = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetectFacesOutput`](crate::output::DetectFacesOutput)
+        /// Consumes the builder and constructs a [`DetectFacesOutput`](crate::output::DetectFacesOutput).
         pub fn build(self) -> crate::output::DetectFacesOutput {
             crate::output::DetectFacesOutput {
                 face_details: self.face_details,
@@ -3857,7 +3915,7 @@ pub mod detect_faces_output {
     }
 }
 impl DetectFacesOutput {
-    /// Creates a new builder-style object to manufacture [`DetectFacesOutput`](crate::output::DetectFacesOutput)
+    /// Creates a new builder-style object to manufacture [`DetectFacesOutput`](crate::output::DetectFacesOutput).
     pub fn builder() -> crate::output::detect_faces_output::Builder {
         crate::output::detect_faces_output::Builder::default()
     }
@@ -3868,6 +3926,7 @@ impl DetectFacesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DetectCustomLabelsOutput {
     /// <p>An array of custom labels detected in the input image.</p>
+    #[doc(hidden)]
     pub custom_labels: std::option::Option<std::vec::Vec<crate::model::CustomLabel>>,
 }
 impl DetectCustomLabelsOutput {
@@ -3883,11 +3942,10 @@ impl std::fmt::Debug for DetectCustomLabelsOutput {
         formatter.finish()
     }
 }
-/// See [`DetectCustomLabelsOutput`](crate::output::DetectCustomLabelsOutput)
+/// See [`DetectCustomLabelsOutput`](crate::output::DetectCustomLabelsOutput).
 pub mod detect_custom_labels_output {
 
-    /// A builder for [`DetectCustomLabelsOutput`](crate::output::DetectCustomLabelsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DetectCustomLabelsOutput`](crate::output::DetectCustomLabelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_labels: std::option::Option<std::vec::Vec<crate::model::CustomLabel>>,
@@ -3912,7 +3970,7 @@ pub mod detect_custom_labels_output {
             self.custom_labels = input;
             self
         }
-        /// Consumes the builder and constructs a [`DetectCustomLabelsOutput`](crate::output::DetectCustomLabelsOutput)
+        /// Consumes the builder and constructs a [`DetectCustomLabelsOutput`](crate::output::DetectCustomLabelsOutput).
         pub fn build(self) -> crate::output::DetectCustomLabelsOutput {
             crate::output::DetectCustomLabelsOutput {
                 custom_labels: self.custom_labels,
@@ -3921,7 +3979,7 @@ pub mod detect_custom_labels_output {
     }
 }
 impl DetectCustomLabelsOutput {
-    /// Creates a new builder-style object to manufacture [`DetectCustomLabelsOutput`](crate::output::DetectCustomLabelsOutput)
+    /// Creates a new builder-style object to manufacture [`DetectCustomLabelsOutput`](crate::output::DetectCustomLabelsOutput).
     pub fn builder() -> crate::output::detect_custom_labels_output::Builder {
         crate::output::detect_custom_labels_output::Builder::default()
     }
@@ -3932,34 +3990,48 @@ impl DetectCustomLabelsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeStreamProcessorOutput {
     /// <p>Name of the stream processor. </p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>ARN of the stream processor.</p>
+    #[doc(hidden)]
     pub stream_processor_arn: std::option::Option<std::string::String>,
     /// <p>Current status of the stream processor.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StreamProcessorStatus>,
     /// <p>Detailed status message about the stream processor.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>Date and time the stream processor was created</p>
+    #[doc(hidden)]
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time, in Unix format, the stream processor was last updated. For example, when the stream processor moves from a running state to a failed state, or when the user starts or stops the stream processor.</p>
+    #[doc(hidden)]
     pub last_update_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Kinesis video stream that provides the source streaming video.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<crate::model::StreamProcessorInput>,
     /// <p>Kinesis data stream to which Amazon Rekognition Video puts the analysis results.</p>
+    #[doc(hidden)]
     pub output: std::option::Option<crate::model::StreamProcessorOutput>,
     /// <p>ARN of the IAM role that allows access to the stream processor.</p>
+    #[doc(hidden)]
     pub role_arn: std::option::Option<std::string::String>,
     /// <p>Input parameters used in a streaming video analyzed by a stream processor. You can use <code>FaceSearch</code> to recognize faces in a streaming video, or you can use <code>ConnectedHome</code> to detect labels.</p>
+    #[doc(hidden)]
     pub settings: std::option::Option<crate::model::StreamProcessorSettings>,
     /// <p>The Amazon Simple Notification Service topic to which Amazon Rekognition publishes the object detection results and completion status of a video analysis operation.</p>
     /// <p>Amazon Rekognition publishes a notification the first time an object of interest or a person is detected in the video stream. For example, if Amazon Rekognition detects a person at second 2, a pet at second 4, and a person again at second 5, Amazon Rekognition sends 2 object class detected notifications, one for a person at second 2 and one for a pet at second 4.</p>
     /// <p>Amazon Rekognition also publishes an an end-of-session notification with a summary when the stream processing session is complete.</p>
+    #[doc(hidden)]
     pub notification_channel: std::option::Option<crate::model::StreamProcessorNotificationChannel>,
     /// <p> The identifier for your AWS Key Management Service key (AWS KMS key). This is an optional parameter for label detection stream processors. </p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p> Specifies locations in the frames where Amazon Rekognition checks for objects or people. This is an optional parameter for label detection stream processors. </p>
+    #[doc(hidden)]
     pub regions_of_interest: std::option::Option<std::vec::Vec<crate::model::RegionOfInterest>>,
     /// <p> Shows whether you are sharing data with Rekognition to improve model performance. You can choose this option at the account level or on a per-stream basis. Note that if you opt out at the account level this setting is ignored on individual streams. </p>
+    #[doc(hidden)]
     pub data_sharing_preference:
         std::option::Option<crate::model::StreamProcessorDataSharingPreference>,
 }
@@ -4047,11 +4119,10 @@ impl std::fmt::Debug for DescribeStreamProcessorOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeStreamProcessorOutput`](crate::output::DescribeStreamProcessorOutput)
+/// See [`DescribeStreamProcessorOutput`](crate::output::DescribeStreamProcessorOutput).
 pub mod describe_stream_processor_output {
 
-    /// A builder for [`DescribeStreamProcessorOutput`](crate::output::DescribeStreamProcessorOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeStreamProcessorOutput`](crate::output::DescribeStreamProcessorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4262,7 +4333,7 @@ pub mod describe_stream_processor_output {
             self.data_sharing_preference = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeStreamProcessorOutput`](crate::output::DescribeStreamProcessorOutput)
+        /// Consumes the builder and constructs a [`DescribeStreamProcessorOutput`](crate::output::DescribeStreamProcessorOutput).
         pub fn build(self) -> crate::output::DescribeStreamProcessorOutput {
             crate::output::DescribeStreamProcessorOutput {
                 name: self.name,
@@ -4284,7 +4355,7 @@ pub mod describe_stream_processor_output {
     }
 }
 impl DescribeStreamProcessorOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeStreamProcessorOutput`](crate::output::DescribeStreamProcessorOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeStreamProcessorOutput`](crate::output::DescribeStreamProcessorOutput).
     pub fn builder() -> crate::output::describe_stream_processor_output::Builder {
         crate::output::describe_stream_processor_output::Builder::default()
     }
@@ -4295,9 +4366,11 @@ impl DescribeStreamProcessorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeProjectVersionsOutput {
     /// <p>A list of model descriptions. The list is sorted by the creation date and time of the model versions, latest to earliest.</p>
+    #[doc(hidden)]
     pub project_version_descriptions:
         std::option::Option<std::vec::Vec<crate::model::ProjectVersionDescription>>,
     /// <p>If the previous response was incomplete (because there is more results to retrieve), Amazon Rekognition Custom Labels returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeProjectVersionsOutput {
@@ -4323,11 +4396,10 @@ impl std::fmt::Debug for DescribeProjectVersionsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeProjectVersionsOutput`](crate::output::DescribeProjectVersionsOutput)
+/// See [`DescribeProjectVersionsOutput`](crate::output::DescribeProjectVersionsOutput).
 pub mod describe_project_versions_output {
 
-    /// A builder for [`DescribeProjectVersionsOutput`](crate::output::DescribeProjectVersionsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeProjectVersionsOutput`](crate::output::DescribeProjectVersionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) project_version_descriptions:
@@ -4367,7 +4439,7 @@ pub mod describe_project_versions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeProjectVersionsOutput`](crate::output::DescribeProjectVersionsOutput)
+        /// Consumes the builder and constructs a [`DescribeProjectVersionsOutput`](crate::output::DescribeProjectVersionsOutput).
         pub fn build(self) -> crate::output::DescribeProjectVersionsOutput {
             crate::output::DescribeProjectVersionsOutput {
                 project_version_descriptions: self.project_version_descriptions,
@@ -4377,7 +4449,7 @@ pub mod describe_project_versions_output {
     }
 }
 impl DescribeProjectVersionsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeProjectVersionsOutput`](crate::output::DescribeProjectVersionsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeProjectVersionsOutput`](crate::output::DescribeProjectVersionsOutput).
     pub fn builder() -> crate::output::describe_project_versions_output::Builder {
         crate::output::describe_project_versions_output::Builder::default()
     }
@@ -4388,8 +4460,10 @@ impl DescribeProjectVersionsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeProjectsOutput {
     /// <p>A list of project descriptions. The list is sorted by the date and time the projects are created.</p>
+    #[doc(hidden)]
     pub project_descriptions: std::option::Option<std::vec::Vec<crate::model::ProjectDescription>>,
     /// <p>If the previous response was incomplete (because there is more results to retrieve), Amazon Rekognition Custom Labels returns a pagination token in the response. You can use this pagination token to retrieve the next set of results. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeProjectsOutput {
@@ -4410,11 +4484,10 @@ impl std::fmt::Debug for DescribeProjectsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeProjectsOutput`](crate::output::DescribeProjectsOutput)
+/// See [`DescribeProjectsOutput`](crate::output::DescribeProjectsOutput).
 pub mod describe_projects_output {
 
-    /// A builder for [`DescribeProjectsOutput`](crate::output::DescribeProjectsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeProjectsOutput`](crate::output::DescribeProjectsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) project_descriptions:
@@ -4451,7 +4524,7 @@ pub mod describe_projects_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeProjectsOutput`](crate::output::DescribeProjectsOutput)
+        /// Consumes the builder and constructs a [`DescribeProjectsOutput`](crate::output::DescribeProjectsOutput).
         pub fn build(self) -> crate::output::DescribeProjectsOutput {
             crate::output::DescribeProjectsOutput {
                 project_descriptions: self.project_descriptions,
@@ -4461,7 +4534,7 @@ pub mod describe_projects_output {
     }
 }
 impl DescribeProjectsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeProjectsOutput`](crate::output::DescribeProjectsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeProjectsOutput`](crate::output::DescribeProjectsOutput).
     pub fn builder() -> crate::output::describe_projects_output::Builder {
         crate::output::describe_projects_output::Builder::default()
     }
@@ -4472,6 +4545,7 @@ impl DescribeProjectsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDatasetOutput {
     /// <p> The description for the dataset. </p>
+    #[doc(hidden)]
     pub dataset_description: std::option::Option<crate::model::DatasetDescription>,
 }
 impl DescribeDatasetOutput {
@@ -4487,11 +4561,10 @@ impl std::fmt::Debug for DescribeDatasetOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput)
+/// See [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput).
 pub mod describe_dataset_output {
 
-    /// A builder for [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_description: std::option::Option<crate::model::DatasetDescription>,
@@ -4510,7 +4583,7 @@ pub mod describe_dataset_output {
             self.dataset_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput)
+        /// Consumes the builder and constructs a [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput).
         pub fn build(self) -> crate::output::DescribeDatasetOutput {
             crate::output::DescribeDatasetOutput {
                 dataset_description: self.dataset_description,
@@ -4519,7 +4592,7 @@ pub mod describe_dataset_output {
     }
 }
 impl DescribeDatasetOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput).
     pub fn builder() -> crate::output::describe_dataset_output::Builder {
         crate::output::describe_dataset_output::Builder::default()
     }
@@ -4530,13 +4603,17 @@ impl DescribeDatasetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeCollectionOutput {
     /// <p>The number of faces that are indexed into the collection. To index faces into a collection, use <code>IndexFaces</code>.</p>
+    #[doc(hidden)]
     pub face_count: std::option::Option<i64>,
     /// <p>The version of the face model that's used by the collection for face detection.</p>
     /// <p>For more information, see Model versioning in the Amazon Rekognition Developer Guide.</p>
+    #[doc(hidden)]
     pub face_model_version: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the collection.</p>
+    #[doc(hidden)]
     pub collection_arn: std::option::Option<std::string::String>,
     /// <p>The number of milliseconds since the Unix epoch time until the creation of the collection. The Unix epoch time is 00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970.</p>
+    #[doc(hidden)]
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeCollectionOutput {
@@ -4568,11 +4645,10 @@ impl std::fmt::Debug for DescribeCollectionOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeCollectionOutput`](crate::output::DescribeCollectionOutput)
+/// See [`DescribeCollectionOutput`](crate::output::DescribeCollectionOutput).
 pub mod describe_collection_output {
 
-    /// A builder for [`DescribeCollectionOutput`](crate::output::DescribeCollectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeCollectionOutput`](crate::output::DescribeCollectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) face_count: std::option::Option<i64>,
@@ -4632,7 +4708,7 @@ pub mod describe_collection_output {
             self.creation_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeCollectionOutput`](crate::output::DescribeCollectionOutput)
+        /// Consumes the builder and constructs a [`DescribeCollectionOutput`](crate::output::DescribeCollectionOutput).
         pub fn build(self) -> crate::output::DescribeCollectionOutput {
             crate::output::DescribeCollectionOutput {
                 face_count: self.face_count,
@@ -4644,7 +4720,7 @@ pub mod describe_collection_output {
     }
 }
 impl DescribeCollectionOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeCollectionOutput`](crate::output::DescribeCollectionOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeCollectionOutput`](crate::output::DescribeCollectionOutput).
     pub fn builder() -> crate::output::describe_collection_output::Builder {
         crate::output::describe_collection_output::Builder::default()
     }
@@ -4660,22 +4736,21 @@ impl std::fmt::Debug for DeleteStreamProcessorOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteStreamProcessorOutput`](crate::output::DeleteStreamProcessorOutput)
+/// See [`DeleteStreamProcessorOutput`](crate::output::DeleteStreamProcessorOutput).
 pub mod delete_stream_processor_output {
 
-    /// A builder for [`DeleteStreamProcessorOutput`](crate::output::DeleteStreamProcessorOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteStreamProcessorOutput`](crate::output::DeleteStreamProcessorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteStreamProcessorOutput`](crate::output::DeleteStreamProcessorOutput)
+        /// Consumes the builder and constructs a [`DeleteStreamProcessorOutput`](crate::output::DeleteStreamProcessorOutput).
         pub fn build(self) -> crate::output::DeleteStreamProcessorOutput {
             crate::output::DeleteStreamProcessorOutput {}
         }
     }
 }
 impl DeleteStreamProcessorOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteStreamProcessorOutput`](crate::output::DeleteStreamProcessorOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteStreamProcessorOutput`](crate::output::DeleteStreamProcessorOutput).
     pub fn builder() -> crate::output::delete_stream_processor_output::Builder {
         crate::output::delete_stream_processor_output::Builder::default()
     }
@@ -4686,6 +4761,7 @@ impl DeleteStreamProcessorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteProjectVersionOutput {
     /// <p>The status of the deletion operation.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ProjectVersionStatus>,
 }
 impl DeleteProjectVersionOutput {
@@ -4701,11 +4777,10 @@ impl std::fmt::Debug for DeleteProjectVersionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteProjectVersionOutput`](crate::output::DeleteProjectVersionOutput)
+/// See [`DeleteProjectVersionOutput`](crate::output::DeleteProjectVersionOutput).
 pub mod delete_project_version_output {
 
-    /// A builder for [`DeleteProjectVersionOutput`](crate::output::DeleteProjectVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteProjectVersionOutput`](crate::output::DeleteProjectVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ProjectVersionStatus>,
@@ -4724,7 +4799,7 @@ pub mod delete_project_version_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteProjectVersionOutput`](crate::output::DeleteProjectVersionOutput)
+        /// Consumes the builder and constructs a [`DeleteProjectVersionOutput`](crate::output::DeleteProjectVersionOutput).
         pub fn build(self) -> crate::output::DeleteProjectVersionOutput {
             crate::output::DeleteProjectVersionOutput {
                 status: self.status,
@@ -4733,7 +4808,7 @@ pub mod delete_project_version_output {
     }
 }
 impl DeleteProjectVersionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteProjectVersionOutput`](crate::output::DeleteProjectVersionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteProjectVersionOutput`](crate::output::DeleteProjectVersionOutput).
     pub fn builder() -> crate::output::delete_project_version_output::Builder {
         crate::output::delete_project_version_output::Builder::default()
     }
@@ -4744,6 +4819,7 @@ impl DeleteProjectVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteProjectOutput {
     /// <p>The current status of the delete project operation.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ProjectStatus>,
 }
 impl DeleteProjectOutput {
@@ -4759,11 +4835,10 @@ impl std::fmt::Debug for DeleteProjectOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteProjectOutput`](crate::output::DeleteProjectOutput)
+/// See [`DeleteProjectOutput`](crate::output::DeleteProjectOutput).
 pub mod delete_project_output {
 
-    /// A builder for [`DeleteProjectOutput`](crate::output::DeleteProjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteProjectOutput`](crate::output::DeleteProjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ProjectStatus>,
@@ -4782,7 +4857,7 @@ pub mod delete_project_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteProjectOutput`](crate::output::DeleteProjectOutput)
+        /// Consumes the builder and constructs a [`DeleteProjectOutput`](crate::output::DeleteProjectOutput).
         pub fn build(self) -> crate::output::DeleteProjectOutput {
             crate::output::DeleteProjectOutput {
                 status: self.status,
@@ -4791,7 +4866,7 @@ pub mod delete_project_output {
     }
 }
 impl DeleteProjectOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteProjectOutput`](crate::output::DeleteProjectOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteProjectOutput`](crate::output::DeleteProjectOutput).
     pub fn builder() -> crate::output::delete_project_output::Builder {
         crate::output::delete_project_output::Builder::default()
     }
@@ -4802,6 +4877,7 @@ impl DeleteProjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteFacesOutput {
     /// <p>An array of strings (face IDs) of the faces that were deleted.</p>
+    #[doc(hidden)]
     pub deleted_faces: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DeleteFacesOutput {
@@ -4817,11 +4893,10 @@ impl std::fmt::Debug for DeleteFacesOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFacesOutput`](crate::output::DeleteFacesOutput)
+/// See [`DeleteFacesOutput`](crate::output::DeleteFacesOutput).
 pub mod delete_faces_output {
 
-    /// A builder for [`DeleteFacesOutput`](crate::output::DeleteFacesOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFacesOutput`](crate::output::DeleteFacesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) deleted_faces: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -4846,7 +4921,7 @@ pub mod delete_faces_output {
             self.deleted_faces = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFacesOutput`](crate::output::DeleteFacesOutput)
+        /// Consumes the builder and constructs a [`DeleteFacesOutput`](crate::output::DeleteFacesOutput).
         pub fn build(self) -> crate::output::DeleteFacesOutput {
             crate::output::DeleteFacesOutput {
                 deleted_faces: self.deleted_faces,
@@ -4855,7 +4930,7 @@ pub mod delete_faces_output {
     }
 }
 impl DeleteFacesOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFacesOutput`](crate::output::DeleteFacesOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFacesOutput`](crate::output::DeleteFacesOutput).
     pub fn builder() -> crate::output::delete_faces_output::Builder {
         crate::output::delete_faces_output::Builder::default()
     }
@@ -4871,22 +4946,21 @@ impl std::fmt::Debug for DeleteDatasetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
+/// See [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput).
 pub mod delete_dataset_output {
 
-    /// A builder for [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
+        /// Consumes the builder and constructs a [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput).
         pub fn build(self) -> crate::output::DeleteDatasetOutput {
             crate::output::DeleteDatasetOutput {}
         }
     }
 }
 impl DeleteDatasetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput).
     pub fn builder() -> crate::output::delete_dataset_output::Builder {
         crate::output::delete_dataset_output::Builder::default()
     }
@@ -4897,6 +4971,7 @@ impl DeleteDatasetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteCollectionOutput {
     /// <p>HTTP status code that indicates the result of the operation.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<i32>,
 }
 impl DeleteCollectionOutput {
@@ -4912,11 +4987,10 @@ impl std::fmt::Debug for DeleteCollectionOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteCollectionOutput`](crate::output::DeleteCollectionOutput)
+/// See [`DeleteCollectionOutput`](crate::output::DeleteCollectionOutput).
 pub mod delete_collection_output {
 
-    /// A builder for [`DeleteCollectionOutput`](crate::output::DeleteCollectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteCollectionOutput`](crate::output::DeleteCollectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status_code: std::option::Option<i32>,
@@ -4932,7 +5006,7 @@ pub mod delete_collection_output {
             self.status_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteCollectionOutput`](crate::output::DeleteCollectionOutput)
+        /// Consumes the builder and constructs a [`DeleteCollectionOutput`](crate::output::DeleteCollectionOutput).
         pub fn build(self) -> crate::output::DeleteCollectionOutput {
             crate::output::DeleteCollectionOutput {
                 status_code: self.status_code,
@@ -4941,7 +5015,7 @@ pub mod delete_collection_output {
     }
 }
 impl DeleteCollectionOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteCollectionOutput`](crate::output::DeleteCollectionOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteCollectionOutput`](crate::output::DeleteCollectionOutput).
     pub fn builder() -> crate::output::delete_collection_output::Builder {
         crate::output::delete_collection_output::Builder::default()
     }
@@ -4952,6 +5026,7 @@ impl DeleteCollectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateStreamProcessorOutput {
     /// <p>Amazon Resource Number for the newly created stream processor.</p>
+    #[doc(hidden)]
     pub stream_processor_arn: std::option::Option<std::string::String>,
 }
 impl CreateStreamProcessorOutput {
@@ -4967,11 +5042,10 @@ impl std::fmt::Debug for CreateStreamProcessorOutput {
         formatter.finish()
     }
 }
-/// See [`CreateStreamProcessorOutput`](crate::output::CreateStreamProcessorOutput)
+/// See [`CreateStreamProcessorOutput`](crate::output::CreateStreamProcessorOutput).
 pub mod create_stream_processor_output {
 
-    /// A builder for [`CreateStreamProcessorOutput`](crate::output::CreateStreamProcessorOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateStreamProcessorOutput`](crate::output::CreateStreamProcessorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stream_processor_arn: std::option::Option<std::string::String>,
@@ -4990,7 +5064,7 @@ pub mod create_stream_processor_output {
             self.stream_processor_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateStreamProcessorOutput`](crate::output::CreateStreamProcessorOutput)
+        /// Consumes the builder and constructs a [`CreateStreamProcessorOutput`](crate::output::CreateStreamProcessorOutput).
         pub fn build(self) -> crate::output::CreateStreamProcessorOutput {
             crate::output::CreateStreamProcessorOutput {
                 stream_processor_arn: self.stream_processor_arn,
@@ -4999,7 +5073,7 @@ pub mod create_stream_processor_output {
     }
 }
 impl CreateStreamProcessorOutput {
-    /// Creates a new builder-style object to manufacture [`CreateStreamProcessorOutput`](crate::output::CreateStreamProcessorOutput)
+    /// Creates a new builder-style object to manufacture [`CreateStreamProcessorOutput`](crate::output::CreateStreamProcessorOutput).
     pub fn builder() -> crate::output::create_stream_processor_output::Builder {
         crate::output::create_stream_processor_output::Builder::default()
     }
@@ -5010,6 +5084,7 @@ impl CreateStreamProcessorOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateProjectVersionOutput {
     /// <p>The ARN of the model version that was created. Use <code>DescribeProjectVersion</code> to get the current status of the training operation.</p>
+    #[doc(hidden)]
     pub project_version_arn: std::option::Option<std::string::String>,
 }
 impl CreateProjectVersionOutput {
@@ -5025,11 +5100,10 @@ impl std::fmt::Debug for CreateProjectVersionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateProjectVersionOutput`](crate::output::CreateProjectVersionOutput)
+/// See [`CreateProjectVersionOutput`](crate::output::CreateProjectVersionOutput).
 pub mod create_project_version_output {
 
-    /// A builder for [`CreateProjectVersionOutput`](crate::output::CreateProjectVersionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateProjectVersionOutput`](crate::output::CreateProjectVersionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) project_version_arn: std::option::Option<std::string::String>,
@@ -5048,7 +5122,7 @@ pub mod create_project_version_output {
             self.project_version_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateProjectVersionOutput`](crate::output::CreateProjectVersionOutput)
+        /// Consumes the builder and constructs a [`CreateProjectVersionOutput`](crate::output::CreateProjectVersionOutput).
         pub fn build(self) -> crate::output::CreateProjectVersionOutput {
             crate::output::CreateProjectVersionOutput {
                 project_version_arn: self.project_version_arn,
@@ -5057,7 +5131,7 @@ pub mod create_project_version_output {
     }
 }
 impl CreateProjectVersionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateProjectVersionOutput`](crate::output::CreateProjectVersionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateProjectVersionOutput`](crate::output::CreateProjectVersionOutput).
     pub fn builder() -> crate::output::create_project_version_output::Builder {
         crate::output::create_project_version_output::Builder::default()
     }
@@ -5068,6 +5142,7 @@ impl CreateProjectVersionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateProjectOutput {
     /// <p>The Amazon Resource Name (ARN) of the new project. You can use the ARN to configure IAM access to the project. </p>
+    #[doc(hidden)]
     pub project_arn: std::option::Option<std::string::String>,
 }
 impl CreateProjectOutput {
@@ -5083,11 +5158,10 @@ impl std::fmt::Debug for CreateProjectOutput {
         formatter.finish()
     }
 }
-/// See [`CreateProjectOutput`](crate::output::CreateProjectOutput)
+/// See [`CreateProjectOutput`](crate::output::CreateProjectOutput).
 pub mod create_project_output {
 
-    /// A builder for [`CreateProjectOutput`](crate::output::CreateProjectOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateProjectOutput`](crate::output::CreateProjectOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) project_arn: std::option::Option<std::string::String>,
@@ -5103,7 +5177,7 @@ pub mod create_project_output {
             self.project_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateProjectOutput`](crate::output::CreateProjectOutput)
+        /// Consumes the builder and constructs a [`CreateProjectOutput`](crate::output::CreateProjectOutput).
         pub fn build(self) -> crate::output::CreateProjectOutput {
             crate::output::CreateProjectOutput {
                 project_arn: self.project_arn,
@@ -5112,7 +5186,7 @@ pub mod create_project_output {
     }
 }
 impl CreateProjectOutput {
-    /// Creates a new builder-style object to manufacture [`CreateProjectOutput`](crate::output::CreateProjectOutput)
+    /// Creates a new builder-style object to manufacture [`CreateProjectOutput`](crate::output::CreateProjectOutput).
     pub fn builder() -> crate::output::create_project_output::Builder {
         crate::output::create_project_output::Builder::default()
     }
@@ -5123,6 +5197,7 @@ impl CreateProjectOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDatasetOutput {
     /// <p> The ARN of the created Amazon Rekognition Custom Labels dataset. </p>
+    #[doc(hidden)]
     pub dataset_arn: std::option::Option<std::string::String>,
 }
 impl CreateDatasetOutput {
@@ -5138,11 +5213,10 @@ impl std::fmt::Debug for CreateDatasetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
+/// See [`CreateDatasetOutput`](crate::output::CreateDatasetOutput).
 pub mod create_dataset_output {
 
-    /// A builder for [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDatasetOutput`](crate::output::CreateDatasetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_arn: std::option::Option<std::string::String>,
@@ -5158,7 +5232,7 @@ pub mod create_dataset_output {
             self.dataset_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
+        /// Consumes the builder and constructs a [`CreateDatasetOutput`](crate::output::CreateDatasetOutput).
         pub fn build(self) -> crate::output::CreateDatasetOutput {
             crate::output::CreateDatasetOutput {
                 dataset_arn: self.dataset_arn,
@@ -5167,7 +5241,7 @@ pub mod create_dataset_output {
     }
 }
 impl CreateDatasetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDatasetOutput`](crate::output::CreateDatasetOutput).
     pub fn builder() -> crate::output::create_dataset_output::Builder {
         crate::output::create_dataset_output::Builder::default()
     }
@@ -5178,10 +5252,13 @@ impl CreateDatasetOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateCollectionOutput {
     /// <p>HTTP status code indicating the result of the operation.</p>
+    #[doc(hidden)]
     pub status_code: std::option::Option<i32>,
     /// <p>Amazon Resource Name (ARN) of the collection. You can use this to manage permissions on your resources. </p>
+    #[doc(hidden)]
     pub collection_arn: std::option::Option<std::string::String>,
     /// <p>Version number of the face detection model associated with the collection you are creating.</p>
+    #[doc(hidden)]
     pub face_model_version: std::option::Option<std::string::String>,
 }
 impl CreateCollectionOutput {
@@ -5207,11 +5284,10 @@ impl std::fmt::Debug for CreateCollectionOutput {
         formatter.finish()
     }
 }
-/// See [`CreateCollectionOutput`](crate::output::CreateCollectionOutput)
+/// See [`CreateCollectionOutput`](crate::output::CreateCollectionOutput).
 pub mod create_collection_output {
 
-    /// A builder for [`CreateCollectionOutput`](crate::output::CreateCollectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateCollectionOutput`](crate::output::CreateCollectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status_code: std::option::Option<i32>,
@@ -5255,7 +5331,7 @@ pub mod create_collection_output {
             self.face_model_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateCollectionOutput`](crate::output::CreateCollectionOutput)
+        /// Consumes the builder and constructs a [`CreateCollectionOutput`](crate::output::CreateCollectionOutput).
         pub fn build(self) -> crate::output::CreateCollectionOutput {
             crate::output::CreateCollectionOutput {
                 status_code: self.status_code,
@@ -5266,7 +5342,7 @@ pub mod create_collection_output {
     }
 }
 impl CreateCollectionOutput {
-    /// Creates a new builder-style object to manufacture [`CreateCollectionOutput`](crate::output::CreateCollectionOutput)
+    /// Creates a new builder-style object to manufacture [`CreateCollectionOutput`](crate::output::CreateCollectionOutput).
     pub fn builder() -> crate::output::create_collection_output::Builder {
         crate::output::create_collection_output::Builder::default()
     }
@@ -5277,19 +5353,24 @@ impl CreateCollectionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CompareFacesOutput {
     /// <p>The face in the source image that was used for comparison.</p>
+    #[doc(hidden)]
     pub source_image_face: std::option::Option<crate::model::ComparedSourceImageFace>,
     /// <p>An array of faces in the target image that match the source image face. Each <code>CompareFacesMatch</code> object provides the bounding box, the confidence level that the bounding box contains a face, and the similarity score for the face in the bounding box and the face in the source image.</p>
+    #[doc(hidden)]
     pub face_matches: std::option::Option<std::vec::Vec<crate::model::CompareFacesMatch>>,
     /// <p>An array of faces in the target image that did not match the source image face.</p>
+    #[doc(hidden)]
     pub unmatched_faces: std::option::Option<std::vec::Vec<crate::model::ComparedFace>>,
     /// <p>The value of <code>SourceImageOrientationCorrection</code> is always null.</p>
     /// <p>If the input image is in .jpeg format, it might contain exchangeable image file format (Exif) metadata that includes the image's orientation. Amazon Rekognition uses this orientation information to perform image correction. The bounding box coordinates are translated to represent object locations after the orientation information in the Exif metadata is used to correct the image orientation. Images in .png format don't contain Exif metadata.</p>
     /// <p>Amazon Rekognition doesn’t perform image correction for images in .png format and .jpeg images without orientation information in the image Exif metadata. The bounding box coordinates aren't translated and represent the object locations before the image is rotated. </p>
+    #[doc(hidden)]
     pub source_image_orientation_correction:
         std::option::Option<crate::model::OrientationCorrection>,
     /// <p>The value of <code>TargetImageOrientationCorrection</code> is always null.</p>
     /// <p>If the input image is in .jpeg format, it might contain exchangeable image file format (Exif) metadata that includes the image's orientation. Amazon Rekognition uses this orientation information to perform image correction. The bounding box coordinates are translated to represent object locations after the orientation information in the Exif metadata is used to correct the image orientation. Images in .png format don't contain Exif metadata.</p>
     /// <p>Amazon Rekognition doesn’t perform image correction for images in .png format and .jpeg images without orientation information in the image Exif metadata. The bounding box coordinates aren't translated and represent the object locations before the image is rotated. </p>
+    #[doc(hidden)]
     pub target_image_orientation_correction:
         std::option::Option<crate::model::OrientationCorrection>,
 }
@@ -5340,11 +5421,10 @@ impl std::fmt::Debug for CompareFacesOutput {
         formatter.finish()
     }
 }
-/// See [`CompareFacesOutput`](crate::output::CompareFacesOutput)
+/// See [`CompareFacesOutput`](crate::output::CompareFacesOutput).
 pub mod compare_faces_output {
 
-    /// A builder for [`CompareFacesOutput`](crate::output::CompareFacesOutput)
-    #[non_exhaustive]
+    /// A builder for [`CompareFacesOutput`](crate::output::CompareFacesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_image_face: std::option::Option<crate::model::ComparedSourceImageFace>,
@@ -5448,7 +5528,7 @@ pub mod compare_faces_output {
             self.target_image_orientation_correction = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompareFacesOutput`](crate::output::CompareFacesOutput)
+        /// Consumes the builder and constructs a [`CompareFacesOutput`](crate::output::CompareFacesOutput).
         pub fn build(self) -> crate::output::CompareFacesOutput {
             crate::output::CompareFacesOutput {
                 source_image_face: self.source_image_face,
@@ -5461,7 +5541,7 @@ pub mod compare_faces_output {
     }
 }
 impl CompareFacesOutput {
-    /// Creates a new builder-style object to manufacture [`CompareFacesOutput`](crate::output::CompareFacesOutput)
+    /// Creates a new builder-style object to manufacture [`CompareFacesOutput`](crate::output::CompareFacesOutput).
     pub fn builder() -> crate::output::compare_faces_output::Builder {
         crate::output::compare_faces_output::Builder::default()
     }

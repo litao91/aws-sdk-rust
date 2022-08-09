@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateWebhookOutput {
     /// <p> Describes a webhook that connects repository events to an Amplify app. </p>
+    #[doc(hidden)]
     pub webhook: std::option::Option<crate::model::Webhook>,
 }
 impl UpdateWebhookOutput {
@@ -20,11 +21,10 @@ impl std::fmt::Debug for UpdateWebhookOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateWebhookOutput`](crate::output::UpdateWebhookOutput)
+/// See [`UpdateWebhookOutput`](crate::output::UpdateWebhookOutput).
 pub mod update_webhook_output {
 
-    /// A builder for [`UpdateWebhookOutput`](crate::output::UpdateWebhookOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateWebhookOutput`](crate::output::UpdateWebhookOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) webhook: std::option::Option<crate::model::Webhook>,
@@ -40,7 +40,7 @@ pub mod update_webhook_output {
             self.webhook = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateWebhookOutput`](crate::output::UpdateWebhookOutput)
+        /// Consumes the builder and constructs a [`UpdateWebhookOutput`](crate::output::UpdateWebhookOutput).
         pub fn build(self) -> crate::output::UpdateWebhookOutput {
             crate::output::UpdateWebhookOutput {
                 webhook: self.webhook,
@@ -49,7 +49,7 @@ pub mod update_webhook_output {
     }
 }
 impl UpdateWebhookOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateWebhookOutput`](crate::output::UpdateWebhookOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateWebhookOutput`](crate::output::UpdateWebhookOutput).
     pub fn builder() -> crate::output::update_webhook_output::Builder {
         crate::output::update_webhook_output::Builder::default()
     }
@@ -60,6 +60,7 @@ impl UpdateWebhookOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDomainAssociationOutput {
     /// <p> Describes a domain association, which associates a custom domain with an Amplify app. </p>
+    #[doc(hidden)]
     pub domain_association: std::option::Option<crate::model::DomainAssociation>,
 }
 impl UpdateDomainAssociationOutput {
@@ -75,11 +76,10 @@ impl std::fmt::Debug for UpdateDomainAssociationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDomainAssociationOutput`](crate::output::UpdateDomainAssociationOutput)
+/// See [`UpdateDomainAssociationOutput`](crate::output::UpdateDomainAssociationOutput).
 pub mod update_domain_association_output {
 
-    /// A builder for [`UpdateDomainAssociationOutput`](crate::output::UpdateDomainAssociationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateDomainAssociationOutput`](crate::output::UpdateDomainAssociationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_association: std::option::Option<crate::model::DomainAssociation>,
@@ -98,7 +98,7 @@ pub mod update_domain_association_output {
             self.domain_association = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateDomainAssociationOutput`](crate::output::UpdateDomainAssociationOutput)
+        /// Consumes the builder and constructs a [`UpdateDomainAssociationOutput`](crate::output::UpdateDomainAssociationOutput).
         pub fn build(self) -> crate::output::UpdateDomainAssociationOutput {
             crate::output::UpdateDomainAssociationOutput {
                 domain_association: self.domain_association,
@@ -107,7 +107,7 @@ pub mod update_domain_association_output {
     }
 }
 impl UpdateDomainAssociationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDomainAssociationOutput`](crate::output::UpdateDomainAssociationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDomainAssociationOutput`](crate::output::UpdateDomainAssociationOutput).
     pub fn builder() -> crate::output::update_domain_association_output::Builder {
         crate::output::update_domain_association_output::Builder::default()
     }
@@ -118,6 +118,7 @@ impl UpdateDomainAssociationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBranchOutput {
     /// <p> The branch for an Amplify app, which maps to a third-party repository branch. </p>
+    #[doc(hidden)]
     pub branch: std::option::Option<crate::model::Branch>,
 }
 impl UpdateBranchOutput {
@@ -133,11 +134,10 @@ impl std::fmt::Debug for UpdateBranchOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateBranchOutput`](crate::output::UpdateBranchOutput)
+/// See [`UpdateBranchOutput`](crate::output::UpdateBranchOutput).
 pub mod update_branch_output {
 
-    /// A builder for [`UpdateBranchOutput`](crate::output::UpdateBranchOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBranchOutput`](crate::output::UpdateBranchOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) branch: std::option::Option<crate::model::Branch>,
@@ -153,7 +153,7 @@ pub mod update_branch_output {
             self.branch = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBranchOutput`](crate::output::UpdateBranchOutput)
+        /// Consumes the builder and constructs a [`UpdateBranchOutput`](crate::output::UpdateBranchOutput).
         pub fn build(self) -> crate::output::UpdateBranchOutput {
             crate::output::UpdateBranchOutput {
                 branch: self.branch,
@@ -162,7 +162,7 @@ pub mod update_branch_output {
     }
 }
 impl UpdateBranchOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateBranchOutput`](crate::output::UpdateBranchOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateBranchOutput`](crate::output::UpdateBranchOutput).
     pub fn builder() -> crate::output::update_branch_output::Builder {
         crate::output::update_branch_output::Builder::default()
     }
@@ -173,6 +173,7 @@ impl UpdateBranchOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAppOutput {
     /// <p> Represents the updated Amplify app. </p>
+    #[doc(hidden)]
     pub app: std::option::Option<crate::model::App>,
 }
 impl UpdateAppOutput {
@@ -188,11 +189,10 @@ impl std::fmt::Debug for UpdateAppOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAppOutput`](crate::output::UpdateAppOutput)
+/// See [`UpdateAppOutput`](crate::output::UpdateAppOutput).
 pub mod update_app_output {
 
-    /// A builder for [`UpdateAppOutput`](crate::output::UpdateAppOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAppOutput`](crate::output::UpdateAppOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app: std::option::Option<crate::model::App>,
@@ -208,14 +208,14 @@ pub mod update_app_output {
             self.app = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAppOutput`](crate::output::UpdateAppOutput)
+        /// Consumes the builder and constructs a [`UpdateAppOutput`](crate::output::UpdateAppOutput).
         pub fn build(self) -> crate::output::UpdateAppOutput {
             crate::output::UpdateAppOutput { app: self.app }
         }
     }
 }
 impl UpdateAppOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAppOutput`](crate::output::UpdateAppOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAppOutput`](crate::output::UpdateAppOutput).
     pub fn builder() -> crate::output::update_app_output::Builder {
         crate::output::update_app_output::Builder::default()
     }
@@ -231,22 +231,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -262,22 +261,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -288,6 +286,7 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StopJobOutput {
     /// <p> The summary for the job. </p>
+    #[doc(hidden)]
     pub job_summary: std::option::Option<crate::model::JobSummary>,
 }
 impl StopJobOutput {
@@ -303,11 +302,10 @@ impl std::fmt::Debug for StopJobOutput {
         formatter.finish()
     }
 }
-/// See [`StopJobOutput`](crate::output::StopJobOutput)
+/// See [`StopJobOutput`](crate::output::StopJobOutput).
 pub mod stop_job_output {
 
-    /// A builder for [`StopJobOutput`](crate::output::StopJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`StopJobOutput`](crate::output::StopJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_summary: std::option::Option<crate::model::JobSummary>,
@@ -326,7 +324,7 @@ pub mod stop_job_output {
             self.job_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`StopJobOutput`](crate::output::StopJobOutput)
+        /// Consumes the builder and constructs a [`StopJobOutput`](crate::output::StopJobOutput).
         pub fn build(self) -> crate::output::StopJobOutput {
             crate::output::StopJobOutput {
                 job_summary: self.job_summary,
@@ -335,7 +333,7 @@ pub mod stop_job_output {
     }
 }
 impl StopJobOutput {
-    /// Creates a new builder-style object to manufacture [`StopJobOutput`](crate::output::StopJobOutput)
+    /// Creates a new builder-style object to manufacture [`StopJobOutput`](crate::output::StopJobOutput).
     pub fn builder() -> crate::output::stop_job_output::Builder {
         crate::output::stop_job_output::Builder::default()
     }
@@ -346,6 +344,7 @@ impl StopJobOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartJobOutput {
     /// <p> The summary for the job. </p>
+    #[doc(hidden)]
     pub job_summary: std::option::Option<crate::model::JobSummary>,
 }
 impl StartJobOutput {
@@ -361,11 +360,10 @@ impl std::fmt::Debug for StartJobOutput {
         formatter.finish()
     }
 }
-/// See [`StartJobOutput`](crate::output::StartJobOutput)
+/// See [`StartJobOutput`](crate::output::StartJobOutput).
 pub mod start_job_output {
 
-    /// A builder for [`StartJobOutput`](crate::output::StartJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartJobOutput`](crate::output::StartJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_summary: std::option::Option<crate::model::JobSummary>,
@@ -384,7 +382,7 @@ pub mod start_job_output {
             self.job_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartJobOutput`](crate::output::StartJobOutput)
+        /// Consumes the builder and constructs a [`StartJobOutput`](crate::output::StartJobOutput).
         pub fn build(self) -> crate::output::StartJobOutput {
             crate::output::StartJobOutput {
                 job_summary: self.job_summary,
@@ -393,7 +391,7 @@ pub mod start_job_output {
     }
 }
 impl StartJobOutput {
-    /// Creates a new builder-style object to manufacture [`StartJobOutput`](crate::output::StartJobOutput)
+    /// Creates a new builder-style object to manufacture [`StartJobOutput`](crate::output::StartJobOutput).
     pub fn builder() -> crate::output::start_job_output::Builder {
         crate::output::start_job_output::Builder::default()
     }
@@ -404,6 +402,7 @@ impl StartJobOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartDeploymentOutput {
     /// <p> The summary for the job. </p>
+    #[doc(hidden)]
     pub job_summary: std::option::Option<crate::model::JobSummary>,
 }
 impl StartDeploymentOutput {
@@ -419,11 +418,10 @@ impl std::fmt::Debug for StartDeploymentOutput {
         formatter.finish()
     }
 }
-/// See [`StartDeploymentOutput`](crate::output::StartDeploymentOutput)
+/// See [`StartDeploymentOutput`](crate::output::StartDeploymentOutput).
 pub mod start_deployment_output {
 
-    /// A builder for [`StartDeploymentOutput`](crate::output::StartDeploymentOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartDeploymentOutput`](crate::output::StartDeploymentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_summary: std::option::Option<crate::model::JobSummary>,
@@ -442,7 +440,7 @@ pub mod start_deployment_output {
             self.job_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartDeploymentOutput`](crate::output::StartDeploymentOutput)
+        /// Consumes the builder and constructs a [`StartDeploymentOutput`](crate::output::StartDeploymentOutput).
         pub fn build(self) -> crate::output::StartDeploymentOutput {
             crate::output::StartDeploymentOutput {
                 job_summary: self.job_summary,
@@ -451,7 +449,7 @@ pub mod start_deployment_output {
     }
 }
 impl StartDeploymentOutput {
-    /// Creates a new builder-style object to manufacture [`StartDeploymentOutput`](crate::output::StartDeploymentOutput)
+    /// Creates a new builder-style object to manufacture [`StartDeploymentOutput`](crate::output::StartDeploymentOutput).
     pub fn builder() -> crate::output::start_deployment_output::Builder {
         crate::output::start_deployment_output::Builder::default()
     }
@@ -462,8 +460,10 @@ impl StartDeploymentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListWebhooksOutput {
     /// <p> A list of webhooks. </p>
+    #[doc(hidden)]
     pub webhooks: std::option::Option<std::vec::Vec<crate::model::Webhook>>,
     /// <p> A pagination token. If non-null, the pagination token is returned in a result. Pass its value in another request to retrieve more entries. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListWebhooksOutput {
@@ -484,11 +484,10 @@ impl std::fmt::Debug for ListWebhooksOutput {
         formatter.finish()
     }
 }
-/// See [`ListWebhooksOutput`](crate::output::ListWebhooksOutput)
+/// See [`ListWebhooksOutput`](crate::output::ListWebhooksOutput).
 pub mod list_webhooks_output {
 
-    /// A builder for [`ListWebhooksOutput`](crate::output::ListWebhooksOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListWebhooksOutput`](crate::output::ListWebhooksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) webhooks: std::option::Option<std::vec::Vec<crate::model::Webhook>>,
@@ -524,7 +523,7 @@ pub mod list_webhooks_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListWebhooksOutput`](crate::output::ListWebhooksOutput)
+        /// Consumes the builder and constructs a [`ListWebhooksOutput`](crate::output::ListWebhooksOutput).
         pub fn build(self) -> crate::output::ListWebhooksOutput {
             crate::output::ListWebhooksOutput {
                 webhooks: self.webhooks,
@@ -534,7 +533,7 @@ pub mod list_webhooks_output {
     }
 }
 impl ListWebhooksOutput {
-    /// Creates a new builder-style object to manufacture [`ListWebhooksOutput`](crate::output::ListWebhooksOutput)
+    /// Creates a new builder-style object to manufacture [`ListWebhooksOutput`](crate::output::ListWebhooksOutput).
     pub fn builder() -> crate::output::list_webhooks_output::Builder {
         crate::output::list_webhooks_output::Builder::default()
     }
@@ -545,6 +544,7 @@ impl ListWebhooksOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p> A list of tags for the specified The Amazon Resource Name (ARN). </p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -564,11 +564,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -601,14 +600,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -619,8 +618,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListJobsOutput {
     /// <p> The result structure for the list job result request. </p>
+    #[doc(hidden)]
     pub job_summaries: std::option::Option<std::vec::Vec<crate::model::JobSummary>>,
     /// <p> A pagination token. If non-null the pagination token is returned in a result. Pass its value in another request to retrieve more entries. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListJobsOutput {
@@ -641,11 +642,10 @@ impl std::fmt::Debug for ListJobsOutput {
         formatter.finish()
     }
 }
-/// See [`ListJobsOutput`](crate::output::ListJobsOutput)
+/// See [`ListJobsOutput`](crate::output::ListJobsOutput).
 pub mod list_jobs_output {
 
-    /// A builder for [`ListJobsOutput`](crate::output::ListJobsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListJobsOutput`](crate::output::ListJobsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_summaries: std::option::Option<std::vec::Vec<crate::model::JobSummary>>,
@@ -681,7 +681,7 @@ pub mod list_jobs_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListJobsOutput`](crate::output::ListJobsOutput)
+        /// Consumes the builder and constructs a [`ListJobsOutput`](crate::output::ListJobsOutput).
         pub fn build(self) -> crate::output::ListJobsOutput {
             crate::output::ListJobsOutput {
                 job_summaries: self.job_summaries,
@@ -691,7 +691,7 @@ pub mod list_jobs_output {
     }
 }
 impl ListJobsOutput {
-    /// Creates a new builder-style object to manufacture [`ListJobsOutput`](crate::output::ListJobsOutput)
+    /// Creates a new builder-style object to manufacture [`ListJobsOutput`](crate::output::ListJobsOutput).
     pub fn builder() -> crate::output::list_jobs_output::Builder {
         crate::output::list_jobs_output::Builder::default()
     }
@@ -702,8 +702,10 @@ impl ListJobsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDomainAssociationsOutput {
     /// <p> A list of domain associations. </p>
+    #[doc(hidden)]
     pub domain_associations: std::option::Option<std::vec::Vec<crate::model::DomainAssociation>>,
     /// <p> A pagination token. If non-null, a pagination token is returned in a result. Pass its value in another request to retrieve more entries. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListDomainAssociationsOutput {
@@ -724,11 +726,10 @@ impl std::fmt::Debug for ListDomainAssociationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDomainAssociationsOutput`](crate::output::ListDomainAssociationsOutput)
+/// See [`ListDomainAssociationsOutput`](crate::output::ListDomainAssociationsOutput).
 pub mod list_domain_associations_output {
 
-    /// A builder for [`ListDomainAssociationsOutput`](crate::output::ListDomainAssociationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListDomainAssociationsOutput`](crate::output::ListDomainAssociationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_associations:
@@ -765,7 +766,7 @@ pub mod list_domain_associations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDomainAssociationsOutput`](crate::output::ListDomainAssociationsOutput)
+        /// Consumes the builder and constructs a [`ListDomainAssociationsOutput`](crate::output::ListDomainAssociationsOutput).
         pub fn build(self) -> crate::output::ListDomainAssociationsOutput {
             crate::output::ListDomainAssociationsOutput {
                 domain_associations: self.domain_associations,
@@ -775,7 +776,7 @@ pub mod list_domain_associations_output {
     }
 }
 impl ListDomainAssociationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDomainAssociationsOutput`](crate::output::ListDomainAssociationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDomainAssociationsOutput`](crate::output::ListDomainAssociationsOutput).
     pub fn builder() -> crate::output::list_domain_associations_output::Builder {
         crate::output::list_domain_associations_output::Builder::default()
     }
@@ -786,8 +787,10 @@ impl ListDomainAssociationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBranchesOutput {
     /// <p> A list of branches for an Amplify app. </p>
+    #[doc(hidden)]
     pub branches: std::option::Option<std::vec::Vec<crate::model::Branch>>,
     /// <p> A pagination token. If a non-null pagination token is returned in a result, pass its value in another request to retrieve more entries. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListBranchesOutput {
@@ -808,11 +811,10 @@ impl std::fmt::Debug for ListBranchesOutput {
         formatter.finish()
     }
 }
-/// See [`ListBranchesOutput`](crate::output::ListBranchesOutput)
+/// See [`ListBranchesOutput`](crate::output::ListBranchesOutput).
 pub mod list_branches_output {
 
-    /// A builder for [`ListBranchesOutput`](crate::output::ListBranchesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBranchesOutput`](crate::output::ListBranchesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) branches: std::option::Option<std::vec::Vec<crate::model::Branch>>,
@@ -848,7 +850,7 @@ pub mod list_branches_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBranchesOutput`](crate::output::ListBranchesOutput)
+        /// Consumes the builder and constructs a [`ListBranchesOutput`](crate::output::ListBranchesOutput).
         pub fn build(self) -> crate::output::ListBranchesOutput {
             crate::output::ListBranchesOutput {
                 branches: self.branches,
@@ -858,7 +860,7 @@ pub mod list_branches_output {
     }
 }
 impl ListBranchesOutput {
-    /// Creates a new builder-style object to manufacture [`ListBranchesOutput`](crate::output::ListBranchesOutput)
+    /// Creates a new builder-style object to manufacture [`ListBranchesOutput`](crate::output::ListBranchesOutput).
     pub fn builder() -> crate::output::list_branches_output::Builder {
         crate::output::list_branches_output::Builder::default()
     }
@@ -869,8 +871,10 @@ impl ListBranchesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBackendEnvironmentsOutput {
     /// <p> The list of backend environments for an Amplify app. </p>
+    #[doc(hidden)]
     pub backend_environments: std::option::Option<std::vec::Vec<crate::model::BackendEnvironment>>,
     /// <p> A pagination token. If a non-null pagination token is returned in a result, pass its value in another request to retrieve more entries. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListBackendEnvironmentsOutput {
@@ -891,11 +895,10 @@ impl std::fmt::Debug for ListBackendEnvironmentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListBackendEnvironmentsOutput`](crate::output::ListBackendEnvironmentsOutput)
+/// See [`ListBackendEnvironmentsOutput`](crate::output::ListBackendEnvironmentsOutput).
 pub mod list_backend_environments_output {
 
-    /// A builder for [`ListBackendEnvironmentsOutput`](crate::output::ListBackendEnvironmentsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBackendEnvironmentsOutput`](crate::output::ListBackendEnvironmentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backend_environments:
@@ -932,7 +935,7 @@ pub mod list_backend_environments_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBackendEnvironmentsOutput`](crate::output::ListBackendEnvironmentsOutput)
+        /// Consumes the builder and constructs a [`ListBackendEnvironmentsOutput`](crate::output::ListBackendEnvironmentsOutput).
         pub fn build(self) -> crate::output::ListBackendEnvironmentsOutput {
             crate::output::ListBackendEnvironmentsOutput {
                 backend_environments: self.backend_environments,
@@ -942,7 +945,7 @@ pub mod list_backend_environments_output {
     }
 }
 impl ListBackendEnvironmentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListBackendEnvironmentsOutput`](crate::output::ListBackendEnvironmentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListBackendEnvironmentsOutput`](crate::output::ListBackendEnvironmentsOutput).
     pub fn builder() -> crate::output::list_backend_environments_output::Builder {
         crate::output::list_backend_environments_output::Builder::default()
     }
@@ -953,8 +956,10 @@ impl ListBackendEnvironmentsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListArtifactsOutput {
     /// <p> A list of artifacts. </p>
+    #[doc(hidden)]
     pub artifacts: std::option::Option<std::vec::Vec<crate::model::Artifact>>,
     /// <p> A pagination token. If a non-null pagination token is returned in a result, pass its value in another request to retrieve more entries. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListArtifactsOutput {
@@ -975,11 +980,10 @@ impl std::fmt::Debug for ListArtifactsOutput {
         formatter.finish()
     }
 }
-/// See [`ListArtifactsOutput`](crate::output::ListArtifactsOutput)
+/// See [`ListArtifactsOutput`](crate::output::ListArtifactsOutput).
 pub mod list_artifacts_output {
 
-    /// A builder for [`ListArtifactsOutput`](crate::output::ListArtifactsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListArtifactsOutput`](crate::output::ListArtifactsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) artifacts: std::option::Option<std::vec::Vec<crate::model::Artifact>>,
@@ -1015,7 +1019,7 @@ pub mod list_artifacts_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListArtifactsOutput`](crate::output::ListArtifactsOutput)
+        /// Consumes the builder and constructs a [`ListArtifactsOutput`](crate::output::ListArtifactsOutput).
         pub fn build(self) -> crate::output::ListArtifactsOutput {
             crate::output::ListArtifactsOutput {
                 artifacts: self.artifacts,
@@ -1025,7 +1029,7 @@ pub mod list_artifacts_output {
     }
 }
 impl ListArtifactsOutput {
-    /// Creates a new builder-style object to manufacture [`ListArtifactsOutput`](crate::output::ListArtifactsOutput)
+    /// Creates a new builder-style object to manufacture [`ListArtifactsOutput`](crate::output::ListArtifactsOutput).
     pub fn builder() -> crate::output::list_artifacts_output::Builder {
         crate::output::list_artifacts_output::Builder::default()
     }
@@ -1036,8 +1040,10 @@ impl ListArtifactsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAppsOutput {
     /// <p> A list of Amplify apps. </p>
+    #[doc(hidden)]
     pub apps: std::option::Option<std::vec::Vec<crate::model::App>>,
     /// <p> A pagination token. Set to null to start listing apps from start. If non-null, the pagination token is returned in a result. Pass its value in here to list more projects. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAppsOutput {
@@ -1058,11 +1064,10 @@ impl std::fmt::Debug for ListAppsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAppsOutput`](crate::output::ListAppsOutput)
+/// See [`ListAppsOutput`](crate::output::ListAppsOutput).
 pub mod list_apps_output {
 
-    /// A builder for [`ListAppsOutput`](crate::output::ListAppsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAppsOutput`](crate::output::ListAppsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) apps: std::option::Option<std::vec::Vec<crate::model::App>>,
@@ -1098,7 +1103,7 @@ pub mod list_apps_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAppsOutput`](crate::output::ListAppsOutput)
+        /// Consumes the builder and constructs a [`ListAppsOutput`](crate::output::ListAppsOutput).
         pub fn build(self) -> crate::output::ListAppsOutput {
             crate::output::ListAppsOutput {
                 apps: self.apps,
@@ -1108,7 +1113,7 @@ pub mod list_apps_output {
     }
 }
 impl ListAppsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAppsOutput`](crate::output::ListAppsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAppsOutput`](crate::output::ListAppsOutput).
     pub fn builder() -> crate::output::list_apps_output::Builder {
         crate::output::list_apps_output::Builder::default()
     }
@@ -1119,6 +1124,7 @@ impl ListAppsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetWebhookOutput {
     /// <p> Describes the structure of a webhook. </p>
+    #[doc(hidden)]
     pub webhook: std::option::Option<crate::model::Webhook>,
 }
 impl GetWebhookOutput {
@@ -1134,11 +1140,10 @@ impl std::fmt::Debug for GetWebhookOutput {
         formatter.finish()
     }
 }
-/// See [`GetWebhookOutput`](crate::output::GetWebhookOutput)
+/// See [`GetWebhookOutput`](crate::output::GetWebhookOutput).
 pub mod get_webhook_output {
 
-    /// A builder for [`GetWebhookOutput`](crate::output::GetWebhookOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetWebhookOutput`](crate::output::GetWebhookOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) webhook: std::option::Option<crate::model::Webhook>,
@@ -1154,7 +1159,7 @@ pub mod get_webhook_output {
             self.webhook = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetWebhookOutput`](crate::output::GetWebhookOutput)
+        /// Consumes the builder and constructs a [`GetWebhookOutput`](crate::output::GetWebhookOutput).
         pub fn build(self) -> crate::output::GetWebhookOutput {
             crate::output::GetWebhookOutput {
                 webhook: self.webhook,
@@ -1163,7 +1168,7 @@ pub mod get_webhook_output {
     }
 }
 impl GetWebhookOutput {
-    /// Creates a new builder-style object to manufacture [`GetWebhookOutput`](crate::output::GetWebhookOutput)
+    /// Creates a new builder-style object to manufacture [`GetWebhookOutput`](crate::output::GetWebhookOutput).
     pub fn builder() -> crate::output::get_webhook_output::Builder {
         crate::output::get_webhook_output::Builder::default()
     }
@@ -1174,6 +1179,7 @@ impl GetWebhookOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetJobOutput {
     /// <p> Describes an execution job for an Amplify app. </p>
+    #[doc(hidden)]
     pub job: std::option::Option<crate::model::Job>,
 }
 impl GetJobOutput {
@@ -1189,11 +1195,10 @@ impl std::fmt::Debug for GetJobOutput {
         formatter.finish()
     }
 }
-/// See [`GetJobOutput`](crate::output::GetJobOutput)
+/// See [`GetJobOutput`](crate::output::GetJobOutput).
 pub mod get_job_output {
 
-    /// A builder for [`GetJobOutput`](crate::output::GetJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetJobOutput`](crate::output::GetJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job: std::option::Option<crate::model::Job>,
@@ -1209,14 +1214,14 @@ pub mod get_job_output {
             self.job = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetJobOutput`](crate::output::GetJobOutput)
+        /// Consumes the builder and constructs a [`GetJobOutput`](crate::output::GetJobOutput).
         pub fn build(self) -> crate::output::GetJobOutput {
             crate::output::GetJobOutput { job: self.job }
         }
     }
 }
 impl GetJobOutput {
-    /// Creates a new builder-style object to manufacture [`GetJobOutput`](crate::output::GetJobOutput)
+    /// Creates a new builder-style object to manufacture [`GetJobOutput`](crate::output::GetJobOutput).
     pub fn builder() -> crate::output::get_job_output::Builder {
         crate::output::get_job_output::Builder::default()
     }
@@ -1227,6 +1232,7 @@ impl GetJobOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDomainAssociationOutput {
     /// <p> Describes the structure of a domain association, which associates a custom domain with an Amplify app. </p>
+    #[doc(hidden)]
     pub domain_association: std::option::Option<crate::model::DomainAssociation>,
 }
 impl GetDomainAssociationOutput {
@@ -1242,11 +1248,10 @@ impl std::fmt::Debug for GetDomainAssociationOutput {
         formatter.finish()
     }
 }
-/// See [`GetDomainAssociationOutput`](crate::output::GetDomainAssociationOutput)
+/// See [`GetDomainAssociationOutput`](crate::output::GetDomainAssociationOutput).
 pub mod get_domain_association_output {
 
-    /// A builder for [`GetDomainAssociationOutput`](crate::output::GetDomainAssociationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetDomainAssociationOutput`](crate::output::GetDomainAssociationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_association: std::option::Option<crate::model::DomainAssociation>,
@@ -1265,7 +1270,7 @@ pub mod get_domain_association_output {
             self.domain_association = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDomainAssociationOutput`](crate::output::GetDomainAssociationOutput)
+        /// Consumes the builder and constructs a [`GetDomainAssociationOutput`](crate::output::GetDomainAssociationOutput).
         pub fn build(self) -> crate::output::GetDomainAssociationOutput {
             crate::output::GetDomainAssociationOutput {
                 domain_association: self.domain_association,
@@ -1274,7 +1279,7 @@ pub mod get_domain_association_output {
     }
 }
 impl GetDomainAssociationOutput {
-    /// Creates a new builder-style object to manufacture [`GetDomainAssociationOutput`](crate::output::GetDomainAssociationOutput)
+    /// Creates a new builder-style object to manufacture [`GetDomainAssociationOutput`](crate::output::GetDomainAssociationOutput).
     pub fn builder() -> crate::output::get_domain_association_output::Builder {
         crate::output::get_domain_association_output::Builder::default()
     }
@@ -1285,6 +1290,7 @@ impl GetDomainAssociationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBranchOutput {
     /// <p> The branch for an Amplify app, which maps to a third-party repository branch. </p>
+    #[doc(hidden)]
     pub branch: std::option::Option<crate::model::Branch>,
 }
 impl GetBranchOutput {
@@ -1300,11 +1306,10 @@ impl std::fmt::Debug for GetBranchOutput {
         formatter.finish()
     }
 }
-/// See [`GetBranchOutput`](crate::output::GetBranchOutput)
+/// See [`GetBranchOutput`](crate::output::GetBranchOutput).
 pub mod get_branch_output {
 
-    /// A builder for [`GetBranchOutput`](crate::output::GetBranchOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBranchOutput`](crate::output::GetBranchOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) branch: std::option::Option<crate::model::Branch>,
@@ -1320,7 +1325,7 @@ pub mod get_branch_output {
             self.branch = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBranchOutput`](crate::output::GetBranchOutput)
+        /// Consumes the builder and constructs a [`GetBranchOutput`](crate::output::GetBranchOutput).
         pub fn build(self) -> crate::output::GetBranchOutput {
             crate::output::GetBranchOutput {
                 branch: self.branch,
@@ -1329,7 +1334,7 @@ pub mod get_branch_output {
     }
 }
 impl GetBranchOutput {
-    /// Creates a new builder-style object to manufacture [`GetBranchOutput`](crate::output::GetBranchOutput)
+    /// Creates a new builder-style object to manufacture [`GetBranchOutput`](crate::output::GetBranchOutput).
     pub fn builder() -> crate::output::get_branch_output::Builder {
         crate::output::get_branch_output::Builder::default()
     }
@@ -1340,6 +1345,7 @@ impl GetBranchOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBackendEnvironmentOutput {
     /// <p> Describes the backend environment for an Amplify app. </p>
+    #[doc(hidden)]
     pub backend_environment: std::option::Option<crate::model::BackendEnvironment>,
 }
 impl GetBackendEnvironmentOutput {
@@ -1355,11 +1361,10 @@ impl std::fmt::Debug for GetBackendEnvironmentOutput {
         formatter.finish()
     }
 }
-/// See [`GetBackendEnvironmentOutput`](crate::output::GetBackendEnvironmentOutput)
+/// See [`GetBackendEnvironmentOutput`](crate::output::GetBackendEnvironmentOutput).
 pub mod get_backend_environment_output {
 
-    /// A builder for [`GetBackendEnvironmentOutput`](crate::output::GetBackendEnvironmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBackendEnvironmentOutput`](crate::output::GetBackendEnvironmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backend_environment: std::option::Option<crate::model::BackendEnvironment>,
@@ -1378,7 +1383,7 @@ pub mod get_backend_environment_output {
             self.backend_environment = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBackendEnvironmentOutput`](crate::output::GetBackendEnvironmentOutput)
+        /// Consumes the builder and constructs a [`GetBackendEnvironmentOutput`](crate::output::GetBackendEnvironmentOutput).
         pub fn build(self) -> crate::output::GetBackendEnvironmentOutput {
             crate::output::GetBackendEnvironmentOutput {
                 backend_environment: self.backend_environment,
@@ -1387,7 +1392,7 @@ pub mod get_backend_environment_output {
     }
 }
 impl GetBackendEnvironmentOutput {
-    /// Creates a new builder-style object to manufacture [`GetBackendEnvironmentOutput`](crate::output::GetBackendEnvironmentOutput)
+    /// Creates a new builder-style object to manufacture [`GetBackendEnvironmentOutput`](crate::output::GetBackendEnvironmentOutput).
     pub fn builder() -> crate::output::get_backend_environment_output::Builder {
         crate::output::get_backend_environment_output::Builder::default()
     }
@@ -1398,8 +1403,10 @@ impl GetBackendEnvironmentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetArtifactUrlOutput {
     /// <p> The unique ID for an artifact. </p>
+    #[doc(hidden)]
     pub artifact_id: std::option::Option<std::string::String>,
     /// <p> The presigned URL for the artifact. </p>
+    #[doc(hidden)]
     pub artifact_url: std::option::Option<std::string::String>,
 }
 impl GetArtifactUrlOutput {
@@ -1420,11 +1427,10 @@ impl std::fmt::Debug for GetArtifactUrlOutput {
         formatter.finish()
     }
 }
-/// See [`GetArtifactUrlOutput`](crate::output::GetArtifactUrlOutput)
+/// See [`GetArtifactUrlOutput`](crate::output::GetArtifactUrlOutput).
 pub mod get_artifact_url_output {
 
-    /// A builder for [`GetArtifactUrlOutput`](crate::output::GetArtifactUrlOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetArtifactUrlOutput`](crate::output::GetArtifactUrlOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) artifact_id: std::option::Option<std::string::String>,
@@ -1451,7 +1457,7 @@ pub mod get_artifact_url_output {
             self.artifact_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetArtifactUrlOutput`](crate::output::GetArtifactUrlOutput)
+        /// Consumes the builder and constructs a [`GetArtifactUrlOutput`](crate::output::GetArtifactUrlOutput).
         pub fn build(self) -> crate::output::GetArtifactUrlOutput {
             crate::output::GetArtifactUrlOutput {
                 artifact_id: self.artifact_id,
@@ -1461,7 +1467,7 @@ pub mod get_artifact_url_output {
     }
 }
 impl GetArtifactUrlOutput {
-    /// Creates a new builder-style object to manufacture [`GetArtifactUrlOutput`](crate::output::GetArtifactUrlOutput)
+    /// Creates a new builder-style object to manufacture [`GetArtifactUrlOutput`](crate::output::GetArtifactUrlOutput).
     pub fn builder() -> crate::output::get_artifact_url_output::Builder {
         crate::output::get_artifact_url_output::Builder::default()
     }
@@ -1472,6 +1478,7 @@ impl GetArtifactUrlOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAppOutput {
     /// <p> Represents the different branches of a repository for building, deploying, and hosting an Amplify app. </p>
+    #[doc(hidden)]
     pub app: std::option::Option<crate::model::App>,
 }
 impl GetAppOutput {
@@ -1487,11 +1494,10 @@ impl std::fmt::Debug for GetAppOutput {
         formatter.finish()
     }
 }
-/// See [`GetAppOutput`](crate::output::GetAppOutput)
+/// See [`GetAppOutput`](crate::output::GetAppOutput).
 pub mod get_app_output {
 
-    /// A builder for [`GetAppOutput`](crate::output::GetAppOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAppOutput`](crate::output::GetAppOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app: std::option::Option<crate::model::App>,
@@ -1507,14 +1513,14 @@ pub mod get_app_output {
             self.app = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAppOutput`](crate::output::GetAppOutput)
+        /// Consumes the builder and constructs a [`GetAppOutput`](crate::output::GetAppOutput).
         pub fn build(self) -> crate::output::GetAppOutput {
             crate::output::GetAppOutput { app: self.app }
         }
     }
 }
 impl GetAppOutput {
-    /// Creates a new builder-style object to manufacture [`GetAppOutput`](crate::output::GetAppOutput)
+    /// Creates a new builder-style object to manufacture [`GetAppOutput`](crate::output::GetAppOutput).
     pub fn builder() -> crate::output::get_app_output::Builder {
         crate::output::get_app_output::Builder::default()
     }
@@ -1525,6 +1531,7 @@ impl GetAppOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GenerateAccessLogsOutput {
     /// <p> The pre-signed URL for the requested access logs. </p>
+    #[doc(hidden)]
     pub log_url: std::option::Option<std::string::String>,
 }
 impl GenerateAccessLogsOutput {
@@ -1540,11 +1547,10 @@ impl std::fmt::Debug for GenerateAccessLogsOutput {
         formatter.finish()
     }
 }
-/// See [`GenerateAccessLogsOutput`](crate::output::GenerateAccessLogsOutput)
+/// See [`GenerateAccessLogsOutput`](crate::output::GenerateAccessLogsOutput).
 pub mod generate_access_logs_output {
 
-    /// A builder for [`GenerateAccessLogsOutput`](crate::output::GenerateAccessLogsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GenerateAccessLogsOutput`](crate::output::GenerateAccessLogsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_url: std::option::Option<std::string::String>,
@@ -1560,7 +1566,7 @@ pub mod generate_access_logs_output {
             self.log_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`GenerateAccessLogsOutput`](crate::output::GenerateAccessLogsOutput)
+        /// Consumes the builder and constructs a [`GenerateAccessLogsOutput`](crate::output::GenerateAccessLogsOutput).
         pub fn build(self) -> crate::output::GenerateAccessLogsOutput {
             crate::output::GenerateAccessLogsOutput {
                 log_url: self.log_url,
@@ -1569,7 +1575,7 @@ pub mod generate_access_logs_output {
     }
 }
 impl GenerateAccessLogsOutput {
-    /// Creates a new builder-style object to manufacture [`GenerateAccessLogsOutput`](crate::output::GenerateAccessLogsOutput)
+    /// Creates a new builder-style object to manufacture [`GenerateAccessLogsOutput`](crate::output::GenerateAccessLogsOutput).
     pub fn builder() -> crate::output::generate_access_logs_output::Builder {
         crate::output::generate_access_logs_output::Builder::default()
     }
@@ -1580,6 +1586,7 @@ impl GenerateAccessLogsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteWebhookOutput {
     /// <p> Describes a webhook that connects repository events to an Amplify app. </p>
+    #[doc(hidden)]
     pub webhook: std::option::Option<crate::model::Webhook>,
 }
 impl DeleteWebhookOutput {
@@ -1595,11 +1602,10 @@ impl std::fmt::Debug for DeleteWebhookOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteWebhookOutput`](crate::output::DeleteWebhookOutput)
+/// See [`DeleteWebhookOutput`](crate::output::DeleteWebhookOutput).
 pub mod delete_webhook_output {
 
-    /// A builder for [`DeleteWebhookOutput`](crate::output::DeleteWebhookOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteWebhookOutput`](crate::output::DeleteWebhookOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) webhook: std::option::Option<crate::model::Webhook>,
@@ -1615,7 +1621,7 @@ pub mod delete_webhook_output {
             self.webhook = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteWebhookOutput`](crate::output::DeleteWebhookOutput)
+        /// Consumes the builder and constructs a [`DeleteWebhookOutput`](crate::output::DeleteWebhookOutput).
         pub fn build(self) -> crate::output::DeleteWebhookOutput {
             crate::output::DeleteWebhookOutput {
                 webhook: self.webhook,
@@ -1624,7 +1630,7 @@ pub mod delete_webhook_output {
     }
 }
 impl DeleteWebhookOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteWebhookOutput`](crate::output::DeleteWebhookOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteWebhookOutput`](crate::output::DeleteWebhookOutput).
     pub fn builder() -> crate::output::delete_webhook_output::Builder {
         crate::output::delete_webhook_output::Builder::default()
     }
@@ -1635,6 +1641,7 @@ impl DeleteWebhookOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteJobOutput {
     /// <p> Describes the summary for an execution job for an Amplify app. </p>
+    #[doc(hidden)]
     pub job_summary: std::option::Option<crate::model::JobSummary>,
 }
 impl DeleteJobOutput {
@@ -1650,11 +1657,10 @@ impl std::fmt::Debug for DeleteJobOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteJobOutput`](crate::output::DeleteJobOutput)
+/// See [`DeleteJobOutput`](crate::output::DeleteJobOutput).
 pub mod delete_job_output {
 
-    /// A builder for [`DeleteJobOutput`](crate::output::DeleteJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteJobOutput`](crate::output::DeleteJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_summary: std::option::Option<crate::model::JobSummary>,
@@ -1673,7 +1679,7 @@ pub mod delete_job_output {
             self.job_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteJobOutput`](crate::output::DeleteJobOutput)
+        /// Consumes the builder and constructs a [`DeleteJobOutput`](crate::output::DeleteJobOutput).
         pub fn build(self) -> crate::output::DeleteJobOutput {
             crate::output::DeleteJobOutput {
                 job_summary: self.job_summary,
@@ -1682,7 +1688,7 @@ pub mod delete_job_output {
     }
 }
 impl DeleteJobOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteJobOutput`](crate::output::DeleteJobOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteJobOutput`](crate::output::DeleteJobOutput).
     pub fn builder() -> crate::output::delete_job_output::Builder {
         crate::output::delete_job_output::Builder::default()
     }
@@ -1693,6 +1699,7 @@ impl DeleteJobOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteDomainAssociationOutput {
     /// <p> Describes a domain association that associates a custom domain with an Amplify app. </p>
+    #[doc(hidden)]
     pub domain_association: std::option::Option<crate::model::DomainAssociation>,
 }
 impl DeleteDomainAssociationOutput {
@@ -1708,11 +1715,10 @@ impl std::fmt::Debug for DeleteDomainAssociationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDomainAssociationOutput`](crate::output::DeleteDomainAssociationOutput)
+/// See [`DeleteDomainAssociationOutput`](crate::output::DeleteDomainAssociationOutput).
 pub mod delete_domain_association_output {
 
-    /// A builder for [`DeleteDomainAssociationOutput`](crate::output::DeleteDomainAssociationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteDomainAssociationOutput`](crate::output::DeleteDomainAssociationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_association: std::option::Option<crate::model::DomainAssociation>,
@@ -1731,7 +1737,7 @@ pub mod delete_domain_association_output {
             self.domain_association = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDomainAssociationOutput`](crate::output::DeleteDomainAssociationOutput)
+        /// Consumes the builder and constructs a [`DeleteDomainAssociationOutput`](crate::output::DeleteDomainAssociationOutput).
         pub fn build(self) -> crate::output::DeleteDomainAssociationOutput {
             crate::output::DeleteDomainAssociationOutput {
                 domain_association: self.domain_association,
@@ -1740,7 +1746,7 @@ pub mod delete_domain_association_output {
     }
 }
 impl DeleteDomainAssociationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDomainAssociationOutput`](crate::output::DeleteDomainAssociationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDomainAssociationOutput`](crate::output::DeleteDomainAssociationOutput).
     pub fn builder() -> crate::output::delete_domain_association_output::Builder {
         crate::output::delete_domain_association_output::Builder::default()
     }
@@ -1751,6 +1757,7 @@ impl DeleteDomainAssociationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteBranchOutput {
     /// <p> The branch for an Amplify app, which maps to a third-party repository branch. </p>
+    #[doc(hidden)]
     pub branch: std::option::Option<crate::model::Branch>,
 }
 impl DeleteBranchOutput {
@@ -1766,11 +1773,10 @@ impl std::fmt::Debug for DeleteBranchOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBranchOutput`](crate::output::DeleteBranchOutput)
+/// See [`DeleteBranchOutput`](crate::output::DeleteBranchOutput).
 pub mod delete_branch_output {
 
-    /// A builder for [`DeleteBranchOutput`](crate::output::DeleteBranchOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBranchOutput`](crate::output::DeleteBranchOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) branch: std::option::Option<crate::model::Branch>,
@@ -1786,7 +1792,7 @@ pub mod delete_branch_output {
             self.branch = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteBranchOutput`](crate::output::DeleteBranchOutput)
+        /// Consumes the builder and constructs a [`DeleteBranchOutput`](crate::output::DeleteBranchOutput).
         pub fn build(self) -> crate::output::DeleteBranchOutput {
             crate::output::DeleteBranchOutput {
                 branch: self.branch,
@@ -1795,7 +1801,7 @@ pub mod delete_branch_output {
     }
 }
 impl DeleteBranchOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBranchOutput`](crate::output::DeleteBranchOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBranchOutput`](crate::output::DeleteBranchOutput).
     pub fn builder() -> crate::output::delete_branch_output::Builder {
         crate::output::delete_branch_output::Builder::default()
     }
@@ -1806,6 +1812,7 @@ impl DeleteBranchOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteBackendEnvironmentOutput {
     /// <p> Describes the backend environment for an Amplify app. </p>
+    #[doc(hidden)]
     pub backend_environment: std::option::Option<crate::model::BackendEnvironment>,
 }
 impl DeleteBackendEnvironmentOutput {
@@ -1821,11 +1828,10 @@ impl std::fmt::Debug for DeleteBackendEnvironmentOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBackendEnvironmentOutput`](crate::output::DeleteBackendEnvironmentOutput)
+/// See [`DeleteBackendEnvironmentOutput`](crate::output::DeleteBackendEnvironmentOutput).
 pub mod delete_backend_environment_output {
 
-    /// A builder for [`DeleteBackendEnvironmentOutput`](crate::output::DeleteBackendEnvironmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBackendEnvironmentOutput`](crate::output::DeleteBackendEnvironmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backend_environment: std::option::Option<crate::model::BackendEnvironment>,
@@ -1844,7 +1850,7 @@ pub mod delete_backend_environment_output {
             self.backend_environment = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteBackendEnvironmentOutput`](crate::output::DeleteBackendEnvironmentOutput)
+        /// Consumes the builder and constructs a [`DeleteBackendEnvironmentOutput`](crate::output::DeleteBackendEnvironmentOutput).
         pub fn build(self) -> crate::output::DeleteBackendEnvironmentOutput {
             crate::output::DeleteBackendEnvironmentOutput {
                 backend_environment: self.backend_environment,
@@ -1853,7 +1859,7 @@ pub mod delete_backend_environment_output {
     }
 }
 impl DeleteBackendEnvironmentOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBackendEnvironmentOutput`](crate::output::DeleteBackendEnvironmentOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBackendEnvironmentOutput`](crate::output::DeleteBackendEnvironmentOutput).
     pub fn builder() -> crate::output::delete_backend_environment_output::Builder {
         crate::output::delete_backend_environment_output::Builder::default()
     }
@@ -1864,6 +1870,7 @@ impl DeleteBackendEnvironmentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteAppOutput {
     /// <p> Represents the different branches of a repository for building, deploying, and hosting an Amplify app. </p>
+    #[doc(hidden)]
     pub app: std::option::Option<crate::model::App>,
 }
 impl DeleteAppOutput {
@@ -1879,11 +1886,10 @@ impl std::fmt::Debug for DeleteAppOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAppOutput`](crate::output::DeleteAppOutput)
+/// See [`DeleteAppOutput`](crate::output::DeleteAppOutput).
 pub mod delete_app_output {
 
-    /// A builder for [`DeleteAppOutput`](crate::output::DeleteAppOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAppOutput`](crate::output::DeleteAppOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app: std::option::Option<crate::model::App>,
@@ -1899,14 +1905,14 @@ pub mod delete_app_output {
             self.app = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteAppOutput`](crate::output::DeleteAppOutput)
+        /// Consumes the builder and constructs a [`DeleteAppOutput`](crate::output::DeleteAppOutput).
         pub fn build(self) -> crate::output::DeleteAppOutput {
             crate::output::DeleteAppOutput { app: self.app }
         }
     }
 }
 impl DeleteAppOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAppOutput`](crate::output::DeleteAppOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAppOutput`](crate::output::DeleteAppOutput).
     pub fn builder() -> crate::output::delete_app_output::Builder {
         crate::output::delete_app_output::Builder::default()
     }
@@ -1917,6 +1923,7 @@ impl DeleteAppOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateWebhookOutput {
     /// <p> Describes a webhook that connects repository events to an Amplify app. </p>
+    #[doc(hidden)]
     pub webhook: std::option::Option<crate::model::Webhook>,
 }
 impl CreateWebhookOutput {
@@ -1932,11 +1939,10 @@ impl std::fmt::Debug for CreateWebhookOutput {
         formatter.finish()
     }
 }
-/// See [`CreateWebhookOutput`](crate::output::CreateWebhookOutput)
+/// See [`CreateWebhookOutput`](crate::output::CreateWebhookOutput).
 pub mod create_webhook_output {
 
-    /// A builder for [`CreateWebhookOutput`](crate::output::CreateWebhookOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateWebhookOutput`](crate::output::CreateWebhookOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) webhook: std::option::Option<crate::model::Webhook>,
@@ -1952,7 +1958,7 @@ pub mod create_webhook_output {
             self.webhook = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateWebhookOutput`](crate::output::CreateWebhookOutput)
+        /// Consumes the builder and constructs a [`CreateWebhookOutput`](crate::output::CreateWebhookOutput).
         pub fn build(self) -> crate::output::CreateWebhookOutput {
             crate::output::CreateWebhookOutput {
                 webhook: self.webhook,
@@ -1961,7 +1967,7 @@ pub mod create_webhook_output {
     }
 }
 impl CreateWebhookOutput {
-    /// Creates a new builder-style object to manufacture [`CreateWebhookOutput`](crate::output::CreateWebhookOutput)
+    /// Creates a new builder-style object to manufacture [`CreateWebhookOutput`](crate::output::CreateWebhookOutput).
     pub fn builder() -> crate::output::create_webhook_output::Builder {
         crate::output::create_webhook_output::Builder::default()
     }
@@ -1972,6 +1978,7 @@ impl CreateWebhookOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDomainAssociationOutput {
     /// <p> Describes the structure of a domain association, which associates a custom domain with an Amplify app. </p>
+    #[doc(hidden)]
     pub domain_association: std::option::Option<crate::model::DomainAssociation>,
 }
 impl CreateDomainAssociationOutput {
@@ -1987,11 +1994,10 @@ impl std::fmt::Debug for CreateDomainAssociationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDomainAssociationOutput`](crate::output::CreateDomainAssociationOutput)
+/// See [`CreateDomainAssociationOutput`](crate::output::CreateDomainAssociationOutput).
 pub mod create_domain_association_output {
 
-    /// A builder for [`CreateDomainAssociationOutput`](crate::output::CreateDomainAssociationOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDomainAssociationOutput`](crate::output::CreateDomainAssociationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) domain_association: std::option::Option<crate::model::DomainAssociation>,
@@ -2010,7 +2016,7 @@ pub mod create_domain_association_output {
             self.domain_association = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDomainAssociationOutput`](crate::output::CreateDomainAssociationOutput)
+        /// Consumes the builder and constructs a [`CreateDomainAssociationOutput`](crate::output::CreateDomainAssociationOutput).
         pub fn build(self) -> crate::output::CreateDomainAssociationOutput {
             crate::output::CreateDomainAssociationOutput {
                 domain_association: self.domain_association,
@@ -2019,7 +2025,7 @@ pub mod create_domain_association_output {
     }
 }
 impl CreateDomainAssociationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDomainAssociationOutput`](crate::output::CreateDomainAssociationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDomainAssociationOutput`](crate::output::CreateDomainAssociationOutput).
     pub fn builder() -> crate::output::create_domain_association_output::Builder {
         crate::output::create_domain_association_output::Builder::default()
     }
@@ -2030,11 +2036,14 @@ impl CreateDomainAssociationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDeploymentOutput {
     /// <p> The job ID for this deployment. will supply to start deployment api. </p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p> When the <code>fileMap</code> argument is provided in the request, <code>fileUploadUrls</code> will contain a map of file names to upload URLs. </p>
+    #[doc(hidden)]
     pub file_upload_urls:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p> When the <code>fileMap</code> argument is not provided in the request, this <code>zipUploadUrl</code> is returned. </p>
+    #[doc(hidden)]
     pub zip_upload_url: std::option::Option<std::string::String>,
 }
 impl CreateDeploymentOutput {
@@ -2063,11 +2072,10 @@ impl std::fmt::Debug for CreateDeploymentOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput)
+/// See [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput).
 pub mod create_deployment_output {
 
-    /// A builder for [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -2125,7 +2133,7 @@ pub mod create_deployment_output {
             self.zip_upload_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput)
+        /// Consumes the builder and constructs a [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput).
         pub fn build(self) -> crate::output::CreateDeploymentOutput {
             crate::output::CreateDeploymentOutput {
                 job_id: self.job_id,
@@ -2136,7 +2144,7 @@ pub mod create_deployment_output {
     }
 }
 impl CreateDeploymentOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDeploymentOutput`](crate::output::CreateDeploymentOutput).
     pub fn builder() -> crate::output::create_deployment_output::Builder {
         crate::output::create_deployment_output::Builder::default()
     }
@@ -2147,6 +2155,7 @@ impl CreateDeploymentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBranchOutput {
     /// <p> Describes the branch for an Amplify app, which maps to a third-party repository branch. </p>
+    #[doc(hidden)]
     pub branch: std::option::Option<crate::model::Branch>,
 }
 impl CreateBranchOutput {
@@ -2162,11 +2171,10 @@ impl std::fmt::Debug for CreateBranchOutput {
         formatter.finish()
     }
 }
-/// See [`CreateBranchOutput`](crate::output::CreateBranchOutput)
+/// See [`CreateBranchOutput`](crate::output::CreateBranchOutput).
 pub mod create_branch_output {
 
-    /// A builder for [`CreateBranchOutput`](crate::output::CreateBranchOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateBranchOutput`](crate::output::CreateBranchOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) branch: std::option::Option<crate::model::Branch>,
@@ -2182,7 +2190,7 @@ pub mod create_branch_output {
             self.branch = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBranchOutput`](crate::output::CreateBranchOutput)
+        /// Consumes the builder and constructs a [`CreateBranchOutput`](crate::output::CreateBranchOutput).
         pub fn build(self) -> crate::output::CreateBranchOutput {
             crate::output::CreateBranchOutput {
                 branch: self.branch,
@@ -2191,7 +2199,7 @@ pub mod create_branch_output {
     }
 }
 impl CreateBranchOutput {
-    /// Creates a new builder-style object to manufacture [`CreateBranchOutput`](crate::output::CreateBranchOutput)
+    /// Creates a new builder-style object to manufacture [`CreateBranchOutput`](crate::output::CreateBranchOutput).
     pub fn builder() -> crate::output::create_branch_output::Builder {
         crate::output::create_branch_output::Builder::default()
     }
@@ -2202,6 +2210,7 @@ impl CreateBranchOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBackendEnvironmentOutput {
     /// <p> Describes the backend environment for an Amplify app. </p>
+    #[doc(hidden)]
     pub backend_environment: std::option::Option<crate::model::BackendEnvironment>,
 }
 impl CreateBackendEnvironmentOutput {
@@ -2217,11 +2226,10 @@ impl std::fmt::Debug for CreateBackendEnvironmentOutput {
         formatter.finish()
     }
 }
-/// See [`CreateBackendEnvironmentOutput`](crate::output::CreateBackendEnvironmentOutput)
+/// See [`CreateBackendEnvironmentOutput`](crate::output::CreateBackendEnvironmentOutput).
 pub mod create_backend_environment_output {
 
-    /// A builder for [`CreateBackendEnvironmentOutput`](crate::output::CreateBackendEnvironmentOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateBackendEnvironmentOutput`](crate::output::CreateBackendEnvironmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) backend_environment: std::option::Option<crate::model::BackendEnvironment>,
@@ -2240,7 +2248,7 @@ pub mod create_backend_environment_output {
             self.backend_environment = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBackendEnvironmentOutput`](crate::output::CreateBackendEnvironmentOutput)
+        /// Consumes the builder and constructs a [`CreateBackendEnvironmentOutput`](crate::output::CreateBackendEnvironmentOutput).
         pub fn build(self) -> crate::output::CreateBackendEnvironmentOutput {
             crate::output::CreateBackendEnvironmentOutput {
                 backend_environment: self.backend_environment,
@@ -2249,7 +2257,7 @@ pub mod create_backend_environment_output {
     }
 }
 impl CreateBackendEnvironmentOutput {
-    /// Creates a new builder-style object to manufacture [`CreateBackendEnvironmentOutput`](crate::output::CreateBackendEnvironmentOutput)
+    /// Creates a new builder-style object to manufacture [`CreateBackendEnvironmentOutput`](crate::output::CreateBackendEnvironmentOutput).
     pub fn builder() -> crate::output::create_backend_environment_output::Builder {
         crate::output::create_backend_environment_output::Builder::default()
     }
@@ -2260,6 +2268,7 @@ impl CreateBackendEnvironmentOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAppOutput {
     /// <p> Represents the different branches of a repository for building, deploying, and hosting an Amplify app. </p>
+    #[doc(hidden)]
     pub app: std::option::Option<crate::model::App>,
 }
 impl CreateAppOutput {
@@ -2275,11 +2284,10 @@ impl std::fmt::Debug for CreateAppOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAppOutput`](crate::output::CreateAppOutput)
+/// See [`CreateAppOutput`](crate::output::CreateAppOutput).
 pub mod create_app_output {
 
-    /// A builder for [`CreateAppOutput`](crate::output::CreateAppOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateAppOutput`](crate::output::CreateAppOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app: std::option::Option<crate::model::App>,
@@ -2295,14 +2303,14 @@ pub mod create_app_output {
             self.app = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAppOutput`](crate::output::CreateAppOutput)
+        /// Consumes the builder and constructs a [`CreateAppOutput`](crate::output::CreateAppOutput).
         pub fn build(self) -> crate::output::CreateAppOutput {
             crate::output::CreateAppOutput { app: self.app }
         }
     }
 }
 impl CreateAppOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAppOutput`](crate::output::CreateAppOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAppOutput`](crate::output::CreateAppOutput).
     pub fn builder() -> crate::output::create_app_output::Builder {
         crate::output::create_app_output::Builder::default()
     }

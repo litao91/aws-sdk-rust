@@ -18,8 +18,6 @@ pub enum LanguageCode {
     #[allow(missing_docs)] // documentation missing in model
     ArSa,
     #[allow(missing_docs)] // documentation missing in model
-    CyGb,
-    #[allow(missing_docs)] // documentation missing in model
     DaDk,
     #[allow(missing_docs)] // documentation missing in model
     DeCh,
@@ -53,10 +51,6 @@ pub enum LanguageCode {
     FrCa,
     #[allow(missing_docs)] // documentation missing in model
     FrFr,
-    #[allow(missing_docs)] // documentation missing in model
-    GaIe,
-    #[allow(missing_docs)] // documentation missing in model
-    GdGb,
     #[allow(missing_docs)] // documentation missing in model
     HeIl,
     #[allow(missing_docs)] // documentation missing in model
@@ -100,7 +94,6 @@ impl std::convert::From<&str> for LanguageCode {
             "af-ZA" => LanguageCode::AfZa,
             "ar-AE" => LanguageCode::ArAe,
             "ar-SA" => LanguageCode::ArSa,
-            "cy-GB" => LanguageCode::CyGb,
             "da-DK" => LanguageCode::DaDk,
             "de-CH" => LanguageCode::DeCh,
             "de-DE" => LanguageCode::DeDe,
@@ -118,8 +111,6 @@ impl std::convert::From<&str> for LanguageCode {
             "fa-IR" => LanguageCode::FaIr,
             "fr-CA" => LanguageCode::FrCa,
             "fr-FR" => LanguageCode::FrFr,
-            "ga-IE" => LanguageCode::GaIe,
-            "gd-GB" => LanguageCode::GdGb,
             "he-IL" => LanguageCode::HeIl,
             "hi-IN" => LanguageCode::HiIn,
             "id-ID" => LanguageCode::IdId,
@@ -155,7 +146,6 @@ impl LanguageCode {
             LanguageCode::AfZa => "af-ZA",
             LanguageCode::ArAe => "ar-AE",
             LanguageCode::ArSa => "ar-SA",
-            LanguageCode::CyGb => "cy-GB",
             LanguageCode::DaDk => "da-DK",
             LanguageCode::DeCh => "de-CH",
             LanguageCode::DeDe => "de-DE",
@@ -173,8 +163,6 @@ impl LanguageCode {
             LanguageCode::FaIr => "fa-IR",
             LanguageCode::FrCa => "fr-CA",
             LanguageCode::FrFr => "fr-FR",
-            LanguageCode::GaIe => "ga-IE",
-            LanguageCode::GdGb => "gd-GB",
             LanguageCode::HeIl => "he-IL",
             LanguageCode::HiIn => "hi-IN",
             LanguageCode::IdId => "id-ID",
@@ -198,11 +186,11 @@ impl LanguageCode {
     /// Returns all the `&str` values of the enum members.
     pub fn values() -> &'static [&'static str] {
         &[
-            "af-ZA", "ar-AE", "ar-SA", "cy-GB", "da-DK", "de-CH", "de-DE", "en-AB", "en-AU",
-            "en-GB", "en-IE", "en-IN", "en-NZ", "en-US", "en-WL", "en-ZA", "es-ES", "es-US",
-            "fa-IR", "fr-CA", "fr-FR", "ga-IE", "gd-GB", "he-IL", "hi-IN", "id-ID", "it-IT",
-            "ja-JP", "ko-KR", "ms-MY", "nl-NL", "pt-BR", "pt-PT", "ru-RU", "ta-IN", "te-IN",
-            "th-TH", "tr-TR", "zh-CN", "zh-TW",
+            "af-ZA", "ar-AE", "ar-SA", "da-DK", "de-CH", "de-DE", "en-AB", "en-AU", "en-GB",
+            "en-IE", "en-IN", "en-NZ", "en-US", "en-WL", "en-ZA", "es-ES", "es-US", "fa-IR",
+            "fr-CA", "fr-FR", "he-IL", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "ms-MY",
+            "nl-NL", "pt-BR", "pt-PT", "ru-RU", "ta-IN", "te-IN", "th-TH", "tr-TR", "zh-CN",
+            "zh-TW",
         ]
     }
 }
@@ -276,14 +264,18 @@ impl AsRef<str> for VocabularyState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CategoryProperties {
     /// <p>The name of the Call Analytics category. Category names are case sensitive and must be unique within an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub category_name: std::option::Option<std::string::String>,
     /// <p>The rules used to define a Call Analytics category. Each category can have between 1 and 20 rules.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::Rule>>,
     /// <p>The date and time the specified Call Analytics category was created.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time the specified Call Analytics category was last updated.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-05T12:45:32.691000-07:00</code> represents 12:45 PM UTC-7 on May 5, 2022.</p>
+    #[doc(hidden)]
     pub last_update_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl CategoryProperties {
@@ -316,11 +308,10 @@ impl std::fmt::Debug for CategoryProperties {
         formatter.finish()
     }
 }
-/// See [`CategoryProperties`](crate::model::CategoryProperties)
+/// See [`CategoryProperties`](crate::model::CategoryProperties).
 pub mod category_properties {
 
-    /// A builder for [`CategoryProperties`](crate::model::CategoryProperties)
-    #[non_exhaustive]
+    /// A builder for [`CategoryProperties`](crate::model::CategoryProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) category_name: std::option::Option<std::string::String>,
@@ -391,7 +382,7 @@ pub mod category_properties {
             self.last_update_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CategoryProperties`](crate::model::CategoryProperties)
+        /// Consumes the builder and constructs a [`CategoryProperties`](crate::model::CategoryProperties).
         pub fn build(self) -> crate::model::CategoryProperties {
             crate::model::CategoryProperties {
                 category_name: self.category_name,
@@ -403,7 +394,7 @@ pub mod category_properties {
     }
 }
 impl CategoryProperties {
-    /// Creates a new builder-style object to manufacture [`CategoryProperties`](crate::model::CategoryProperties)
+    /// Creates a new builder-style object to manufacture [`CategoryProperties`](crate::model::CategoryProperties).
     pub fn builder() -> crate::model::category_properties::Builder {
         crate::model::category_properties::Builder::default()
     }
@@ -514,14 +505,19 @@ impl Rule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SentimentFilter {
     /// <p>Specify the sentiments you want to flag.</p>
+    #[doc(hidden)]
     pub sentiments: std::option::Option<std::vec::Vec<crate::model::SentimentValue>>,
     /// <p>Allows you to specify a time range (in milliseconds) in your audio, during which you want to search for the specified sentiments. See for more detail.</p>
+    #[doc(hidden)]
     pub absolute_time_range: std::option::Option<crate::model::AbsoluteTimeRange>,
     /// <p>Allows you to specify a time range (in percentage) in your media file, during which you want to search for the specified sentiments. See for more detail.</p>
+    #[doc(hidden)]
     pub relative_time_range: std::option::Option<crate::model::RelativeTimeRange>,
     /// <p>Specify the participant you want to flag. Omitting this parameter is equivalent to specifying both participants.</p>
+    #[doc(hidden)]
     pub participant_role: std::option::Option<crate::model::ParticipantRole>,
     /// <p>Set to <code>TRUE</code> to flag the sentiments you didn't include in your request. Set to <code>FALSE</code> to flag the sentiments you specified in your request.</p>
+    #[doc(hidden)]
     pub negate: std::option::Option<bool>,
 }
 impl SentimentFilter {
@@ -557,11 +553,10 @@ impl std::fmt::Debug for SentimentFilter {
         formatter.finish()
     }
 }
-/// See [`SentimentFilter`](crate::model::SentimentFilter)
+/// See [`SentimentFilter`](crate::model::SentimentFilter).
 pub mod sentiment_filter {
 
-    /// A builder for [`SentimentFilter`](crate::model::SentimentFilter)
-    #[non_exhaustive]
+    /// A builder for [`SentimentFilter`](crate::model::SentimentFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sentiments: std::option::Option<std::vec::Vec<crate::model::SentimentValue>>,
@@ -639,7 +634,7 @@ pub mod sentiment_filter {
             self.negate = input;
             self
         }
-        /// Consumes the builder and constructs a [`SentimentFilter`](crate::model::SentimentFilter)
+        /// Consumes the builder and constructs a [`SentimentFilter`](crate::model::SentimentFilter).
         pub fn build(self) -> crate::model::SentimentFilter {
             crate::model::SentimentFilter {
                 sentiments: self.sentiments,
@@ -652,7 +647,7 @@ pub mod sentiment_filter {
     }
 }
 impl SentimentFilter {
-    /// Creates a new builder-style object to manufacture [`SentimentFilter`](crate::model::SentimentFilter)
+    /// Creates a new builder-style object to manufacture [`SentimentFilter`](crate::model::SentimentFilter).
     pub fn builder() -> crate::model::sentiment_filter::Builder {
         crate::model::sentiment_filter::Builder::default()
     }
@@ -721,12 +716,16 @@ impl AsRef<str> for ParticipantRole {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RelativeTimeRange {
     /// <p>The time, in percentage, when Amazon Transcribe starts searching for the specified criteria in your media file. If you include <code>StartPercentage</code> in your request, you must also include <code>EndPercentage</code>.</p>
+    #[doc(hidden)]
     pub start_percentage: std::option::Option<i32>,
     /// <p>The time, in percentage, when Amazon Transcribe stops searching for the specified criteria in your media file. If you include <code>EndPercentage</code> in your request, you must also include <code>StartPercentage</code>.</p>
+    #[doc(hidden)]
     pub end_percentage: std::option::Option<i32>,
     /// <p>The time, in percentage, from the start of your media file until the value you specify in which Amazon Transcribe searches for your specified criteria.</p>
+    #[doc(hidden)]
     pub first: std::option::Option<i32>,
     /// <p>The time, in percentage, from the value you specify until the end of your media file in which Amazon Transcribe searches for your specified criteria.</p>
+    #[doc(hidden)]
     pub last: std::option::Option<i32>,
 }
 impl RelativeTimeRange {
@@ -757,11 +756,10 @@ impl std::fmt::Debug for RelativeTimeRange {
         formatter.finish()
     }
 }
-/// See [`RelativeTimeRange`](crate::model::RelativeTimeRange)
+/// See [`RelativeTimeRange`](crate::model::RelativeTimeRange).
 pub mod relative_time_range {
 
-    /// A builder for [`RelativeTimeRange`](crate::model::RelativeTimeRange)
-    #[non_exhaustive]
+    /// A builder for [`RelativeTimeRange`](crate::model::RelativeTimeRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_percentage: std::option::Option<i32>,
@@ -810,7 +808,7 @@ pub mod relative_time_range {
             self.last = input;
             self
         }
-        /// Consumes the builder and constructs a [`RelativeTimeRange`](crate::model::RelativeTimeRange)
+        /// Consumes the builder and constructs a [`RelativeTimeRange`](crate::model::RelativeTimeRange).
         pub fn build(self) -> crate::model::RelativeTimeRange {
             crate::model::RelativeTimeRange {
                 start_percentage: self.start_percentage,
@@ -822,7 +820,7 @@ pub mod relative_time_range {
     }
 }
 impl RelativeTimeRange {
-    /// Creates a new builder-style object to manufacture [`RelativeTimeRange`](crate::model::RelativeTimeRange)
+    /// Creates a new builder-style object to manufacture [`RelativeTimeRange`](crate::model::RelativeTimeRange).
     pub fn builder() -> crate::model::relative_time_range::Builder {
         crate::model::relative_time_range::Builder::default()
     }
@@ -836,12 +834,16 @@ impl RelativeTimeRange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AbsoluteTimeRange {
     /// <p>The time, in milliseconds, when Amazon Transcribe starts searching for the specified criteria in your audio. If you include <code>StartTime</code> in your request, you must also include <code>EndTime</code>.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<i64>,
     /// <p>The time, in milliseconds, when Amazon Transcribe stops searching for the specified criteria in your audio. If you include <code>EndTime</code> in your request, you must also include <code>StartTime</code>.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<i64>,
     /// <p>The time, in milliseconds, from the start of your media file until the value you specify in which Amazon Transcribe searches for your specified criteria.</p>
+    #[doc(hidden)]
     pub first: std::option::Option<i64>,
     /// <p>The time, in milliseconds, from the value you specify until the end of your media file in which Amazon Transcribe searches for your specified criteria.</p>
+    #[doc(hidden)]
     pub last: std::option::Option<i64>,
 }
 impl AbsoluteTimeRange {
@@ -872,11 +874,10 @@ impl std::fmt::Debug for AbsoluteTimeRange {
         formatter.finish()
     }
 }
-/// See [`AbsoluteTimeRange`](crate::model::AbsoluteTimeRange)
+/// See [`AbsoluteTimeRange`](crate::model::AbsoluteTimeRange).
 pub mod absolute_time_range {
 
-    /// A builder for [`AbsoluteTimeRange`](crate::model::AbsoluteTimeRange)
-    #[non_exhaustive]
+    /// A builder for [`AbsoluteTimeRange`](crate::model::AbsoluteTimeRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_time: std::option::Option<i64>,
@@ -925,7 +926,7 @@ pub mod absolute_time_range {
             self.last = input;
             self
         }
-        /// Consumes the builder and constructs a [`AbsoluteTimeRange`](crate::model::AbsoluteTimeRange)
+        /// Consumes the builder and constructs a [`AbsoluteTimeRange`](crate::model::AbsoluteTimeRange).
         pub fn build(self) -> crate::model::AbsoluteTimeRange {
             crate::model::AbsoluteTimeRange {
                 start_time: self.start_time,
@@ -937,7 +938,7 @@ pub mod absolute_time_range {
     }
 }
 impl AbsoluteTimeRange {
-    /// Creates a new builder-style object to manufacture [`AbsoluteTimeRange`](crate::model::AbsoluteTimeRange)
+    /// Creates a new builder-style object to manufacture [`AbsoluteTimeRange`](crate::model::AbsoluteTimeRange).
     pub fn builder() -> crate::model::absolute_time_range::Builder {
         crate::model::absolute_time_range::Builder::default()
     }
@@ -1019,16 +1020,22 @@ impl AsRef<str> for SentimentValue {
 pub struct TranscriptFilter {
     /// <p>Flag the presence or absence of an exact match to the phrases you specify. For example, if you specify the phrase "speak to a manager" as your <code>Targets</code> value, only that exact phrase is flagged.</p>
     /// <p>Note that semantic matching is not supported. For example, if your customer says "speak to <i>the</i> manager", instead of "speak to <i>a</i> manager", your content is not flagged.</p>
+    #[doc(hidden)]
     pub transcript_filter_type: std::option::Option<crate::model::TranscriptFilterType>,
     /// <p>Allows you to specify a time range (in milliseconds) in your audio, during which you want to search for the specified key words or phrases. See for more detail.</p>
+    #[doc(hidden)]
     pub absolute_time_range: std::option::Option<crate::model::AbsoluteTimeRange>,
     /// <p>Allows you to specify a time range (in percentage) in your media file, during which you want to search for the specified key words or phrases. See for more detail.</p>
+    #[doc(hidden)]
     pub relative_time_range: std::option::Option<crate::model::RelativeTimeRange>,
     /// <p>Specify the participant you want to flag. Omitting this parameter is equivalent to specifying both participants.</p>
+    #[doc(hidden)]
     pub participant_role: std::option::Option<crate::model::ParticipantRole>,
     /// <p>Set to <code>TRUE</code> to flag the absence of the phrase you specified in your request. Set to <code>FALSE</code> to flag the presence of the phrase you specified in your request.</p>
+    #[doc(hidden)]
     pub negate: std::option::Option<bool>,
     /// <p>Specify the phrases you want to flag.</p>
+    #[doc(hidden)]
     pub targets: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl TranscriptFilter {
@@ -1072,11 +1079,10 @@ impl std::fmt::Debug for TranscriptFilter {
         formatter.finish()
     }
 }
-/// See [`TranscriptFilter`](crate::model::TranscriptFilter)
+/// See [`TranscriptFilter`](crate::model::TranscriptFilter).
 pub mod transcript_filter {
 
-    /// A builder for [`TranscriptFilter`](crate::model::TranscriptFilter)
-    #[non_exhaustive]
+    /// A builder for [`TranscriptFilter`](crate::model::TranscriptFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transcript_filter_type: std::option::Option<crate::model::TranscriptFilterType>,
@@ -1170,7 +1176,7 @@ pub mod transcript_filter {
             self.targets = input;
             self
         }
-        /// Consumes the builder and constructs a [`TranscriptFilter`](crate::model::TranscriptFilter)
+        /// Consumes the builder and constructs a [`TranscriptFilter`](crate::model::TranscriptFilter).
         pub fn build(self) -> crate::model::TranscriptFilter {
             crate::model::TranscriptFilter {
                 transcript_filter_type: self.transcript_filter_type,
@@ -1184,7 +1190,7 @@ pub mod transcript_filter {
     }
 }
 impl TranscriptFilter {
-    /// Creates a new builder-style object to manufacture [`TranscriptFilter`](crate::model::TranscriptFilter)
+    /// Creates a new builder-style object to manufacture [`TranscriptFilter`](crate::model::TranscriptFilter).
     pub fn builder() -> crate::model::transcript_filter::Builder {
         crate::model::transcript_filter::Builder::default()
     }
@@ -1254,14 +1260,19 @@ impl AsRef<str> for TranscriptFilterType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InterruptionFilter {
     /// <p>Specify the duration of the interruptions in milliseconds. For example, you can flag speech that contains more than 10000 milliseconds of interruptions.</p>
+    #[doc(hidden)]
     pub threshold: std::option::Option<i64>,
     /// <p>Specify the interrupter you want to flag. Omitting this parameter is equivalent to specifying both participants.</p>
+    #[doc(hidden)]
     pub participant_role: std::option::Option<crate::model::ParticipantRole>,
     /// <p>Allows you to specify a time range (in milliseconds) in your audio, during which you want to search for an interruption. See for more detail.</p>
+    #[doc(hidden)]
     pub absolute_time_range: std::option::Option<crate::model::AbsoluteTimeRange>,
     /// <p>Allows you to specify a time range (in percentage) in your media file, during which you want to search for an interruption. See for more detail.</p>
+    #[doc(hidden)]
     pub relative_time_range: std::option::Option<crate::model::RelativeTimeRange>,
     /// <p>Set to <code>TRUE</code> to flag speech that does not contain interruptions. Set to <code>FALSE</code> to flag speech that contains interruptions.</p>
+    #[doc(hidden)]
     pub negate: std::option::Option<bool>,
 }
 impl InterruptionFilter {
@@ -1297,11 +1308,10 @@ impl std::fmt::Debug for InterruptionFilter {
         formatter.finish()
     }
 }
-/// See [`InterruptionFilter`](crate::model::InterruptionFilter)
+/// See [`InterruptionFilter`](crate::model::InterruptionFilter).
 pub mod interruption_filter {
 
-    /// A builder for [`InterruptionFilter`](crate::model::InterruptionFilter)
-    #[non_exhaustive]
+    /// A builder for [`InterruptionFilter`](crate::model::InterruptionFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) threshold: std::option::Option<i64>,
@@ -1370,7 +1380,7 @@ pub mod interruption_filter {
             self.negate = input;
             self
         }
-        /// Consumes the builder and constructs a [`InterruptionFilter`](crate::model::InterruptionFilter)
+        /// Consumes the builder and constructs a [`InterruptionFilter`](crate::model::InterruptionFilter).
         pub fn build(self) -> crate::model::InterruptionFilter {
             crate::model::InterruptionFilter {
                 threshold: self.threshold,
@@ -1383,7 +1393,7 @@ pub mod interruption_filter {
     }
 }
 impl InterruptionFilter {
-    /// Creates a new builder-style object to manufacture [`InterruptionFilter`](crate::model::InterruptionFilter)
+    /// Creates a new builder-style object to manufacture [`InterruptionFilter`](crate::model::InterruptionFilter).
     pub fn builder() -> crate::model::interruption_filter::Builder {
         crate::model::interruption_filter::Builder::default()
     }
@@ -1400,12 +1410,16 @@ impl InterruptionFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NonTalkTimeFilter {
     /// <p>Specify the duration, in milliseconds, of the period of silence you want to flag. For example, you can flag a silent period that lasts 30000 milliseconds.</p>
+    #[doc(hidden)]
     pub threshold: std::option::Option<i64>,
     /// <p>Allows you to specify a time range (in milliseconds) in your audio, during which you want to search for a period of silence. See for more detail.</p>
+    #[doc(hidden)]
     pub absolute_time_range: std::option::Option<crate::model::AbsoluteTimeRange>,
     /// <p>Allows you to specify a time range (in percentage) in your media file, during which you want to search for a period of silence. See for more detail.</p>
+    #[doc(hidden)]
     pub relative_time_range: std::option::Option<crate::model::RelativeTimeRange>,
     /// <p>Set to <code>TRUE</code> to flag periods of speech. Set to <code>FALSE</code> to flag periods of silence</p>
+    #[doc(hidden)]
     pub negate: std::option::Option<bool>,
 }
 impl NonTalkTimeFilter {
@@ -1436,11 +1450,10 @@ impl std::fmt::Debug for NonTalkTimeFilter {
         formatter.finish()
     }
 }
-/// See [`NonTalkTimeFilter`](crate::model::NonTalkTimeFilter)
+/// See [`NonTalkTimeFilter`](crate::model::NonTalkTimeFilter).
 pub mod non_talk_time_filter {
 
-    /// A builder for [`NonTalkTimeFilter`](crate::model::NonTalkTimeFilter)
-    #[non_exhaustive]
+    /// A builder for [`NonTalkTimeFilter`](crate::model::NonTalkTimeFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) threshold: std::option::Option<i64>,
@@ -1495,7 +1508,7 @@ pub mod non_talk_time_filter {
             self.negate = input;
             self
         }
-        /// Consumes the builder and constructs a [`NonTalkTimeFilter`](crate::model::NonTalkTimeFilter)
+        /// Consumes the builder and constructs a [`NonTalkTimeFilter`](crate::model::NonTalkTimeFilter).
         pub fn build(self) -> crate::model::NonTalkTimeFilter {
             crate::model::NonTalkTimeFilter {
                 threshold: self.threshold,
@@ -1507,7 +1520,7 @@ pub mod non_talk_time_filter {
     }
 }
 impl NonTalkTimeFilter {
-    /// Creates a new builder-style object to manufacture [`NonTalkTimeFilter`](crate::model::NonTalkTimeFilter)
+    /// Creates a new builder-style object to manufacture [`NonTalkTimeFilter`](crate::model::NonTalkTimeFilter).
     pub fn builder() -> crate::model::non_talk_time_filter::Builder {
         crate::model::non_talk_time_filter::Builder::default()
     }
@@ -1520,9 +1533,11 @@ impl NonTalkTimeFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The first part of a key:value pair that forms a tag associated with a given resource. For example, in the tag <code>Department:Sales</code>, the key is 'Department'.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The second part of a key:value pair that forms a tag associated with a given resource. For example, in the tag <code>Department:Sales</code>, the value is 'Sales'.</p>
     /// <p>Note that you can set the value of a tag to an empty string, but you can't set the value of a tag to null. Omitting the tag value is the same as using an empty string.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -1544,11 +1559,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1577,7 +1591,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -1587,7 +1601,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -1600,29 +1614,39 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TranscriptionJob {
     /// <p>The name of the transcription job. Job names are case sensitive and must be unique within an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub transcription_job_name: std::option::Option<std::string::String>,
     /// <p>Provides the status of the specified transcription job.</p>
     /// <p>If the status is <code>COMPLETED</code>, the job is finished and you can find the results at the location specified in <code>TranscriptFileUri</code> (or <code>RedactedTranscriptFileUri</code>, if you requested transcript redaction). If the status is <code>FAILED</code>, <code>FailureReason</code> provides details on why your transcription job failed.</p>
+    #[doc(hidden)]
     pub transcription_job_status: std::option::Option<crate::model::TranscriptionJobStatus>,
     /// <p>The language code used to create your transcription job. For a list of supported languages and their associated language codes, refer to the <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> table.</p>
     /// <p>Note that you must include one of <code>LanguageCode</code>, <code>IdentifyLanguage</code>, or <code>IdentifyMultipleLanguages</code> in your request. If you include more than one of these parameters, your transcription job fails.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The sample rate, in Hertz, of the audio track in your input media file.</p>
+    #[doc(hidden)]
     pub media_sample_rate_hertz: std::option::Option<i32>,
     /// <p>The format of the input media file.</p>
+    #[doc(hidden)]
     pub media_format: std::option::Option<crate::model::MediaFormat>,
     /// <p>Describes the Amazon S3 location of the media file you want to use in your request.</p>
+    #[doc(hidden)]
     pub media: std::option::Option<crate::model::Media>,
     /// <p>Provides you with the Amazon S3 URI you can use to access your transcript.</p>
+    #[doc(hidden)]
     pub transcript: std::option::Option<crate::model::Transcript>,
     /// <p>The date and time the specified transcription job began processing.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.789000-07:00</code> represents a transcription job that started processing at 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time the specified transcription job request was made.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents a transcription job that started processing at 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time the specified transcription job finished processing.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:33:13.922000-07:00</code> represents a transcription job that started processing at 12:33 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub completion_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If <code>TranscriptionJobStatus</code> is <code>FAILED</code>, <code>FailureReason</code> contains information about why the transcription job request failed.</p>
     /// <p>The <code>FailureReason</code> field contains one of the following values:</p>
@@ -1634,42 +1658,55 @@ pub struct TranscriptionJob {
     /// <li> <p> <code>Invalid file size: file size too large</code>.</p> <p>The size of your media file is larger than what Amazon Transcribe can process. For more information, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.</p> </li>
     /// <li> <p> <code>Invalid number of channels: number of channels too large</code>.</p> <p>Your audio contains more channels than Amazon Transcribe is able to process. For more information, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
     /// <p>Specify additional optional settings in your request, including channel identification, alternative transcriptions, speaker labeling; allows you to apply custom vocabularies and vocabulary filters.</p>
     /// <p>If you want to include a custom vocabulary or a custom vocabulary filter (or both) with your request but <b>do not</b> want to use automatic language identification, use <code>Settings</code> with the <code>VocabularyName</code> or <code>VocabularyFilterName</code> (or both) sub-parameter.</p>
     /// <p>If you're using automatic language identification with your request and want to include a custom language model, a custom vocabulary, or a custom vocabulary filter, do not use the <code>Settings</code> parameter; use instead the <code></code> parameter with the <code>LanguageModelName</code>, <code>VocabularyName</code> or <code>VocabularyFilterName</code> sub-parameters.</p>
+    #[doc(hidden)]
     pub settings: std::option::Option<crate::model::Settings>,
     /// <p>The custom language model you want to include with your transcription job. If you include <code>ModelSettings</code> in your request, you must include the <code>LanguageModelName</code> sub-parameter.</p>
+    #[doc(hidden)]
     pub model_settings: std::option::Option<crate::model::ModelSettings>,
     /// <p>Provides information about how your transcription job is being processed. This parameter shows if your request is queued and what data access role is being used.</p>
+    #[doc(hidden)]
     pub job_execution_settings: std::option::Option<crate::model::JobExecutionSettings>,
     /// <p>Redacts or flags specified personally identifiable information (PII) in your transcript.</p>
+    #[doc(hidden)]
     pub content_redaction: std::option::Option<crate::model::ContentRedaction>,
     /// <p>Indicates whether automatic language identification was enabled (<code>TRUE</code>) for the specified transcription job.</p>
+    #[doc(hidden)]
     pub identify_language: std::option::Option<bool>,
     /// <p>Indicates whether automatic multi-language identification was enabled (<code>TRUE</code>) for the specified transcription job.</p>
+    #[doc(hidden)]
     pub identify_multiple_languages: std::option::Option<bool>,
     /// <p>You can specify two or more language codes that represent the languages you think may be present in your media; including more than five is not recommended. If you're unsure what languages are present, do not include this parameter.</p>
     /// <p>If you include <code>LanguageOptions</code> in your request, you must also include <code>IdentifyLanguage</code>.</p>
     /// <p>For more information, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>.</p>
     /// <p>To transcribe speech in Modern Standard Arabic (<code>ar-SA</code>), your media file must be encoded at a sample rate of 16,000 Hz or higher.</p>
+    #[doc(hidden)]
     pub language_options: std::option::Option<std::vec::Vec<crate::model::LanguageCode>>,
     /// <p>The confidence score associated with the language identified in your media file.</p>
     /// <p>Confidence scores are values between 0 and 1; a larger value indicates a higher probability that the identified language correctly matches the language spoken in your media.</p>
+    #[doc(hidden)]
     pub identified_language_score: std::option::Option<f32>,
     /// <p>The language codes used to create your transcription job. This parameter is used with multi-language identification. For single-language identification requests, refer to the singular version of this parameter, <code>LanguageCode</code>.</p>
     /// <p>For a list of supported languages and their associated language codes, refer to the <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> table.</p>
+    #[doc(hidden)]
     pub language_codes: std::option::Option<std::vec::Vec<crate::model::LanguageCodeItem>>,
     /// <p>Adds one or more custom tags, each in the form of a key:value pair, to a new transcription job at the time you start this new job.</p>
     /// <p>To learn more about using tags with Amazon Transcribe, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/tagging.html">Tagging resources</a>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Generate subtitles for your media file with your transcription request.</p>
+    #[doc(hidden)]
     pub subtitles: std::option::Option<crate::model::SubtitlesOutput>,
     /// <p>If using automatic language identification (<code>IdentifyLanguage</code>) in your request and you want to apply a custom language model, a custom vocabulary, or a custom vocabulary filter, include <code>LanguageIdSettings</code> with the relevant sub-parameters (<code>VocabularyName</code>, <code>LanguageModelName</code>, and <code>VocabularyFilterName</code>).</p>
     /// <p>You can specify two or more language codes that represent the languages you think may be present in your media; including more than five is not recommended. Each language code you include can have an associated custom language model, custom vocabulary, and custom vocabulary filter. The languages you specify must match the languages of the specified custom language models, custom vocabularies, and custom vocabulary filters.</p>
     /// <p>To include language options using <code>IdentifyLanguage</code> <b>without</b> including a custom language model, a custom vocabulary, or a custom vocabulary filter, use <code>LanguageOptions</code> instead of <code>LanguageIdSettings</code>. Including language options can improve the accuracy of automatic language identification.</p>
     /// <p>If you want to include a custom language model with your request but <b>do not</b> want to use automatic language identification, use instead the <code></code> parameter with the <code>LanguageModelName</code> sub-parameter.</p>
     /// <p>If you want to include a custom vocabulary or a custom vocabulary filter (or both) with your request but <b>do not</b> want to use automatic language identification, use instead the <code></code> parameter with the <code>VocabularyName</code> or <code>VocabularyFilterName</code> (or both) sub-parameter.</p>
+    #[doc(hidden)]
     pub language_id_settings: std::option::Option<
         std::collections::HashMap<crate::model::LanguageCode, crate::model::LanguageIdSettings>,
     >,
@@ -1834,11 +1871,10 @@ impl std::fmt::Debug for TranscriptionJob {
         formatter.finish()
     }
 }
-/// See [`TranscriptionJob`](crate::model::TranscriptionJob)
+/// See [`TranscriptionJob`](crate::model::TranscriptionJob).
 pub mod transcription_job {
 
-    /// A builder for [`TranscriptionJob`](crate::model::TranscriptionJob)
-    #[non_exhaustive]
+    /// A builder for [`TranscriptionJob`](crate::model::TranscriptionJob).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transcription_job_name: std::option::Option<std::string::String>,
@@ -2239,7 +2275,7 @@ pub mod transcription_job {
             self.language_id_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`TranscriptionJob`](crate::model::TranscriptionJob)
+        /// Consumes the builder and constructs a [`TranscriptionJob`](crate::model::TranscriptionJob).
         pub fn build(self) -> crate::model::TranscriptionJob {
             crate::model::TranscriptionJob {
                 transcription_job_name: self.transcription_job_name,
@@ -2270,7 +2306,7 @@ pub mod transcription_job {
     }
 }
 impl TranscriptionJob {
-    /// Creates a new builder-style object to manufacture [`TranscriptionJob`](crate::model::TranscriptionJob)
+    /// Creates a new builder-style object to manufacture [`TranscriptionJob`](crate::model::TranscriptionJob).
     pub fn builder() -> crate::model::transcription_job::Builder {
         crate::model::transcription_job::Builder::default()
     }
@@ -2286,13 +2322,16 @@ impl TranscriptionJob {
 pub struct LanguageIdSettings {
     /// <p>The name of the custom vocabulary you want to use when processing your transcription job. Vocabulary names are case sensitive.</p>
     /// <p>The language of the specified vocabulary must match the language code you specify in your transcription request. If the languages don't match, the vocabulary isn't applied. There are no errors or warnings associated with a language mismatch.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
     /// <p>The name of the custom vocabulary filter you want to use when processing your transcription job. Vocabulary filter names are case sensitive.</p>
     /// <p>The language of the specified vocabulary filter must match the language code you specify in your transcription request. If the languages don't match, the vocabulary filter isn't applied. There are no errors or warnings associated with a language mismatch.</p>
     /// <p>Note that if you include <code>VocabularyFilterName</code> in your request, you must also include <code>VocabularyFilterMethod</code>.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_name: std::option::Option<std::string::String>,
     /// <p>The name of the custom language model you want to use when processing your transcription job. Note that language model names are case sensitive.</p>
     /// <p>The language of the specified language model must match the language code you specify in your transcription request. If the languages don't match, the language model isn't applied. There are no errors or warnings associated with a language mismatch.</p>
+    #[doc(hidden)]
     pub language_model_name: std::option::Option<std::string::String>,
 }
 impl LanguageIdSettings {
@@ -2322,11 +2361,10 @@ impl std::fmt::Debug for LanguageIdSettings {
         formatter.finish()
     }
 }
-/// See [`LanguageIdSettings`](crate::model::LanguageIdSettings)
+/// See [`LanguageIdSettings`](crate::model::LanguageIdSettings).
 pub mod language_id_settings {
 
-    /// A builder for [`LanguageIdSettings`](crate::model::LanguageIdSettings)
-    #[non_exhaustive]
+    /// A builder for [`LanguageIdSettings`](crate::model::LanguageIdSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_name: std::option::Option<std::string::String>,
@@ -2381,7 +2419,7 @@ pub mod language_id_settings {
             self.language_model_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`LanguageIdSettings`](crate::model::LanguageIdSettings)
+        /// Consumes the builder and constructs a [`LanguageIdSettings`](crate::model::LanguageIdSettings).
         pub fn build(self) -> crate::model::LanguageIdSettings {
             crate::model::LanguageIdSettings {
                 vocabulary_name: self.vocabulary_name,
@@ -2392,7 +2430,7 @@ pub mod language_id_settings {
     }
 }
 impl LanguageIdSettings {
-    /// Creates a new builder-style object to manufacture [`LanguageIdSettings`](crate::model::LanguageIdSettings)
+    /// Creates a new builder-style object to manufacture [`LanguageIdSettings`](crate::model::LanguageIdSettings).
     pub fn builder() -> crate::model::language_id_settings::Builder {
         crate::model::language_id_settings::Builder::default()
     }
@@ -2403,14 +2441,17 @@ impl LanguageIdSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SubtitlesOutput {
     /// <p>Provides the format of your subtitle files. If your request included both WebVTT (<code>vtt</code>) and SubRip (<code>srt</code>) formats, both formats are shown.</p>
+    #[doc(hidden)]
     pub formats: std::option::Option<std::vec::Vec<crate::model::SubtitleFormat>>,
     /// <p>The Amazon S3 location of your transcript. You can use this URI to access or download your subtitle file. Your subtitle file is stored in the same location as your transcript. If you specified both WebVTT and SubRip subtitle formats, two URIs are provided.</p>
     /// <p>If you included <code>OutputBucketName</code> in your transcription job request, this is the URI of that bucket. If you also included <code>OutputKey</code> in your request, your output is located in the path you specified in your request.</p>
     /// <p>If you didn't include <code>OutputBucketName</code> in your transcription job request, your subtitle file is stored in a service-managed bucket, and <code>TranscriptFileUri</code> provides you with a temporary URI you can use for secure access to your subtitle file.</p> <note>
     /// <p>Temporary URIs for service-managed Amazon S3 buckets are only valid for 15 minutes. If you get an <code>AccesDenied</code> error, you can get a new temporary URI by running a <code>GetTranscriptionJob</code> or <code>ListTranscriptionJob</code> request.</p>
     /// </note>
+    #[doc(hidden)]
     pub subtitle_file_uris: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Provides the start index value for your subtitle files. If you did not specify a value in your request, the default value of <code>0</code> is used.</p>
+    #[doc(hidden)]
     pub output_start_index: std::option::Option<i32>,
 }
 impl SubtitlesOutput {
@@ -2440,11 +2481,10 @@ impl std::fmt::Debug for SubtitlesOutput {
         formatter.finish()
     }
 }
-/// See [`SubtitlesOutput`](crate::model::SubtitlesOutput)
+/// See [`SubtitlesOutput`](crate::model::SubtitlesOutput).
 pub mod subtitles_output {
 
-    /// A builder for [`SubtitlesOutput`](crate::model::SubtitlesOutput)
-    #[non_exhaustive]
+    /// A builder for [`SubtitlesOutput`](crate::model::SubtitlesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) formats: std::option::Option<std::vec::Vec<crate::model::SubtitleFormat>>,
@@ -2508,7 +2548,7 @@ pub mod subtitles_output {
             self.output_start_index = input;
             self
         }
-        /// Consumes the builder and constructs a [`SubtitlesOutput`](crate::model::SubtitlesOutput)
+        /// Consumes the builder and constructs a [`SubtitlesOutput`](crate::model::SubtitlesOutput).
         pub fn build(self) -> crate::model::SubtitlesOutput {
             crate::model::SubtitlesOutput {
                 formats: self.formats,
@@ -2519,7 +2559,7 @@ pub mod subtitles_output {
     }
 }
 impl SubtitlesOutput {
-    /// Creates a new builder-style object to manufacture [`SubtitlesOutput`](crate::model::SubtitlesOutput)
+    /// Creates a new builder-style object to manufacture [`SubtitlesOutput`](crate::model::SubtitlesOutput).
     pub fn builder() -> crate::model::subtitles_output::Builder {
         crate::model::subtitles_output::Builder::default()
     }
@@ -2585,8 +2625,10 @@ impl AsRef<str> for SubtitleFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LanguageCodeItem {
     /// <p>Provides the language code for each language identified in your media.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>Provides the total time, in seconds, each identified language is spoken in your media.</p>
+    #[doc(hidden)]
     pub duration_in_seconds: std::option::Option<f32>,
 }
 impl LanguageCodeItem {
@@ -2607,11 +2649,10 @@ impl std::fmt::Debug for LanguageCodeItem {
         formatter.finish()
     }
 }
-/// See [`LanguageCodeItem`](crate::model::LanguageCodeItem)
+/// See [`LanguageCodeItem`](crate::model::LanguageCodeItem).
 pub mod language_code_item {
 
-    /// A builder for [`LanguageCodeItem`](crate::model::LanguageCodeItem)
-    #[non_exhaustive]
+    /// A builder for [`LanguageCodeItem`](crate::model::LanguageCodeItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) language_code: std::option::Option<crate::model::LanguageCode>,
@@ -2641,7 +2682,7 @@ pub mod language_code_item {
             self.duration_in_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`LanguageCodeItem`](crate::model::LanguageCodeItem)
+        /// Consumes the builder and constructs a [`LanguageCodeItem`](crate::model::LanguageCodeItem).
         pub fn build(self) -> crate::model::LanguageCodeItem {
             crate::model::LanguageCodeItem {
                 language_code: self.language_code,
@@ -2651,7 +2692,7 @@ pub mod language_code_item {
     }
 }
 impl LanguageCodeItem {
-    /// Creates a new builder-style object to manufacture [`LanguageCodeItem`](crate::model::LanguageCodeItem)
+    /// Creates a new builder-style object to manufacture [`LanguageCodeItem`](crate::model::LanguageCodeItem).
     pub fn builder() -> crate::model::language_code_item::Builder {
         crate::model::language_code_item::Builder::default()
     }
@@ -2662,12 +2703,15 @@ impl LanguageCodeItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContentRedaction {
     /// <p>Specify the category of information you want to redact; <code>PII</code> (personally identifiable information) is the only valid value. You can use <code>PiiEntityTypes</code> to choose which types of PII you want to redact.</p>
+    #[doc(hidden)]
     pub redaction_type: std::option::Option<crate::model::RedactionType>,
     /// <p>Specify if you want only a redacted transcript, or if you want a redacted and an unredacted transcript.</p>
     /// <p>When you choose <code>redacted</code> Amazon Transcribe creates only a redacted transcript.</p>
     /// <p>When you choose <code>redacted_and_unredacted</code> Amazon Transcribe creates a redacted and an unredacted transcript (as two separate files).</p>
+    #[doc(hidden)]
     pub redaction_output: std::option::Option<crate::model::RedactionOutput>,
     /// <p>Specify which types of personally identifiable information (PII) you want to redact in your transcript. You can include as many types as you'd like, or you can select <code>ALL</code>.</p>
+    #[doc(hidden)]
     pub pii_entity_types: std::option::Option<std::vec::Vec<crate::model::PiiEntityType>>,
 }
 impl ContentRedaction {
@@ -2695,11 +2739,10 @@ impl std::fmt::Debug for ContentRedaction {
         formatter.finish()
     }
 }
-/// See [`ContentRedaction`](crate::model::ContentRedaction)
+/// See [`ContentRedaction`](crate::model::ContentRedaction).
 pub mod content_redaction {
 
-    /// A builder for [`ContentRedaction`](crate::model::ContentRedaction)
-    #[non_exhaustive]
+    /// A builder for [`ContentRedaction`](crate::model::ContentRedaction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) redaction_type: std::option::Option<crate::model::RedactionType>,
@@ -2757,7 +2800,7 @@ pub mod content_redaction {
             self.pii_entity_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContentRedaction`](crate::model::ContentRedaction)
+        /// Consumes the builder and constructs a [`ContentRedaction`](crate::model::ContentRedaction).
         pub fn build(self) -> crate::model::ContentRedaction {
             crate::model::ContentRedaction {
                 redaction_type: self.redaction_type,
@@ -2768,7 +2811,7 @@ pub mod content_redaction {
     }
 }
 impl ContentRedaction {
-    /// Creates a new builder-style object to manufacture [`ContentRedaction`](crate::model::ContentRedaction)
+    /// Creates a new builder-style object to manufacture [`ContentRedaction`](crate::model::ContentRedaction).
     pub fn builder() -> crate::model::content_redaction::Builder {
         crate::model::content_redaction::Builder::default()
     }
@@ -2996,10 +3039,12 @@ pub struct JobExecutionSettings {
     /// <p>Allows you to enable job queuing when your concurrent request limit is exceeded. When <code>AllowDeferredExecution</code> is set to <code>true</code>, transcription job requests are placed in a queue until the number of jobs falls below the concurrent request limit. If <code>AllowDeferredExecution</code> is set to <code>false</code> and the number of transcription job requests exceed the concurrent request limit, you get a <code>LimitExceededException</code> error.</p>
     /// <p>Note that job queuing is enabled by default for Call Analytics jobs.</p>
     /// <p>If you include <code>AllowDeferredExecution</code> in your request, you must also include <code>DataAccessRoleArn</code>.</p>
+    #[doc(hidden)]
     pub allow_deferred_execution: std::option::Option<bool>,
     /// <p>The Amazon Resource Name (ARN) of an IAM role that has permissions to access the Amazon S3 bucket that contains your input files. If the role you specify doesn’t have the appropriate permissions to access the specified Amazon S3 location, your request fails.</p>
     /// <p>IAM role ARNs have the format <code>arn:partition:iam::account:role/role-name-with-path</code>. For example: <code>arn:aws:iam::111122223333:role/Admin</code>. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns">IAM ARNs</a>.</p>
     /// <p>Note that if you include <code>DataAccessRoleArn</code> in your request, you must also include <code>AllowDeferredExecution</code>.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
 }
 impl JobExecutionSettings {
@@ -3024,11 +3069,10 @@ impl std::fmt::Debug for JobExecutionSettings {
         formatter.finish()
     }
 }
-/// See [`JobExecutionSettings`](crate::model::JobExecutionSettings)
+/// See [`JobExecutionSettings`](crate::model::JobExecutionSettings).
 pub mod job_execution_settings {
 
-    /// A builder for [`JobExecutionSettings`](crate::model::JobExecutionSettings)
-    #[non_exhaustive]
+    /// A builder for [`JobExecutionSettings`](crate::model::JobExecutionSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allow_deferred_execution: std::option::Option<bool>,
@@ -3066,7 +3110,7 @@ pub mod job_execution_settings {
             self.data_access_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobExecutionSettings`](crate::model::JobExecutionSettings)
+        /// Consumes the builder and constructs a [`JobExecutionSettings`](crate::model::JobExecutionSettings).
         pub fn build(self) -> crate::model::JobExecutionSettings {
             crate::model::JobExecutionSettings {
                 allow_deferred_execution: self.allow_deferred_execution,
@@ -3076,7 +3120,7 @@ pub mod job_execution_settings {
     }
 }
 impl JobExecutionSettings {
-    /// Creates a new builder-style object to manufacture [`JobExecutionSettings`](crate::model::JobExecutionSettings)
+    /// Creates a new builder-style object to manufacture [`JobExecutionSettings`](crate::model::JobExecutionSettings).
     pub fn builder() -> crate::model::job_execution_settings::Builder {
         crate::model::job_execution_settings::Builder::default()
     }
@@ -3089,6 +3133,7 @@ impl JobExecutionSettings {
 pub struct ModelSettings {
     /// <p>The name of the custom language model you want to use when processing your transcription job. Note that language model names are case sensitive.</p>
     /// <p>The language of the specified language model must match the language code you specify in your transcription request. If the languages don't match, the language model isn't applied. There are no errors or warnings associated with a language mismatch.</p>
+    #[doc(hidden)]
     pub language_model_name: std::option::Option<std::string::String>,
 }
 impl ModelSettings {
@@ -3105,11 +3150,10 @@ impl std::fmt::Debug for ModelSettings {
         formatter.finish()
     }
 }
-/// See [`ModelSettings`](crate::model::ModelSettings)
+/// See [`ModelSettings`](crate::model::ModelSettings).
 pub mod model_settings {
 
-    /// A builder for [`ModelSettings`](crate::model::ModelSettings)
-    #[non_exhaustive]
+    /// A builder for [`ModelSettings`](crate::model::ModelSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) language_model_name: std::option::Option<std::string::String>,
@@ -3130,7 +3174,7 @@ pub mod model_settings {
             self.language_model_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModelSettings`](crate::model::ModelSettings)
+        /// Consumes the builder and constructs a [`ModelSettings`](crate::model::ModelSettings).
         pub fn build(self) -> crate::model::ModelSettings {
             crate::model::ModelSettings {
                 language_model_name: self.language_model_name,
@@ -3139,7 +3183,7 @@ pub mod model_settings {
     }
 }
 impl ModelSettings {
-    /// Creates a new builder-style object to manufacture [`ModelSettings`](crate::model::ModelSettings)
+    /// Creates a new builder-style object to manufacture [`ModelSettings`](crate::model::ModelSettings).
     pub fn builder() -> crate::model::model_settings::Builder {
         crate::model::model_settings::Builder::default()
     }
@@ -3150,38 +3194,46 @@ impl ModelSettings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Settings {
     /// <p>The name of the custom vocabulary you want to use in your transcription job request. This name is case sensitive, cannot contain spaces, and must be unique within an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
     /// <p>Enables speaker identification (diarization) in your transcription output. Speaker identification labels the speech from individual speakers in your media file.</p>
     /// <p>If you enable <code>ShowSpeakerLabels</code> in your request, you must also include <code>MaxSpeakerLabels</code>.</p>
     /// <p>You can't include both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code> in the same request. Including both parameters returns a <code>BadRequestException</code>.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/diarization.html">Identifying speakers (diarization)</a>.</p>
+    #[doc(hidden)]
     pub show_speaker_labels: std::option::Option<bool>,
     /// <p>Specify the maximum number of speakers you want to identify in your media.</p>
     /// <p>Note that if your media contains more speakers than the specified number, multiple speakers will be identified as a single speaker.</p>
     /// <p>If you specify the <code>MaxSpeakerLabels</code> field, you must set the <code>ShowSpeakerLabels</code> field to true.</p>
+    #[doc(hidden)]
     pub max_speaker_labels: std::option::Option<i32>,
     /// <p>Enables channel identification in multi-channel audio.</p>
     /// <p>Channel identification transcribes the audio on each channel independently, then appends the output for each channel into one transcript.</p>
     /// <p>You can't include both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code> in the same request. Including both parameters returns a <code>BadRequestException</code>.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/channel-id.html">Transcribing multi-channel audio</a>.</p>
+    #[doc(hidden)]
     pub channel_identification: std::option::Option<bool>,
     /// <p>To include alternative transcriptions within your transcription output, include <code>ShowAlternatives</code> in your transcription request.</p>
     /// <p>If you have multi-channel audio and do not enable channel identification, your audio is transcribed in a continuous manner and your transcript does not separate the speech by channel.</p>
     /// <p>If you include <code>ShowAlternatives</code>, you must also include <code>MaxAlternatives</code>, which is the maximum number of alternative transcriptions you want Amazon Transcribe to generate.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-alternatives.html">Alternative transcriptions</a>.</p>
+    #[doc(hidden)]
     pub show_alternatives: std::option::Option<bool>,
     /// <p>Indicate the maximum number of alternative transcriptions you want Amazon Transcribe to include in your transcript.</p>
     /// <p>If you select a number greater than the number of alternative transcriptions generated by Amazon Transcribe, only the actual number of alternative transcriptions are included.</p>
     /// <p>If you include <code>MaxAlternatives</code> in your request, you must also include <code>ShowAlternatives</code> with a value of <code>true</code>.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-alternatives.html">Alternative transcriptions</a>.</p>
+    #[doc(hidden)]
     pub max_alternatives: std::option::Option<i32>,
     /// <p>The name of the custom vocabulary filter you want to use in your transcription job request. This name is case sensitive, cannot contain spaces, and must be unique within an Amazon Web Services account.</p>
     /// <p>Note that if you include <code>VocabularyFilterName</code> in your request, you must also include <code>VocabularyFilterMethod</code>.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_name: std::option::Option<std::string::String>,
     /// <p>Specify how you want your vocabulary filter applied to your transcript.</p>
     /// <p>To replace words with <code>***</code>, choose <code>mask</code>.</p>
     /// <p>To delete words, choose <code>remove</code>.</p>
     /// <p>To flag words without changing them, choose <code>tag</code>.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_method: std::option::Option<crate::model::VocabularyFilterMethod>,
 }
 impl Settings {
@@ -3252,11 +3304,10 @@ impl std::fmt::Debug for Settings {
         formatter.finish()
     }
 }
-/// See [`Settings`](crate::model::Settings)
+/// See [`Settings`](crate::model::Settings).
 pub mod settings {
 
-    /// A builder for [`Settings`](crate::model::Settings)
-    #[non_exhaustive]
+    /// A builder for [`Settings`](crate::model::Settings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_name: std::option::Option<std::string::String>,
@@ -3398,7 +3449,7 @@ pub mod settings {
             self.vocabulary_filter_method = input;
             self
         }
-        /// Consumes the builder and constructs a [`Settings`](crate::model::Settings)
+        /// Consumes the builder and constructs a [`Settings`](crate::model::Settings).
         pub fn build(self) -> crate::model::Settings {
             crate::model::Settings {
                 vocabulary_name: self.vocabulary_name,
@@ -3414,7 +3465,7 @@ pub mod settings {
     }
 }
 impl Settings {
-    /// Creates a new builder-style object to manufacture [`Settings`](crate::model::Settings)
+    /// Creates a new builder-style object to manufacture [`Settings`](crate::model::Settings).
     pub fn builder() -> crate::model::settings::Builder {
         crate::model::settings::Builder::default()
     }
@@ -3488,12 +3539,14 @@ pub struct Transcript {
     /// <p>If you didn't include <code>OutputBucketName</code> in your transcription job request, your transcript is stored in a service-managed bucket, and <code>TranscriptFileUri</code> provides you with a temporary URI you can use for secure access to your transcript.</p> <note>
     /// <p>Temporary URIs for service-managed Amazon S3 buckets are only valid for 15 minutes. If you get an <code>AccesDenied</code> error, you can get a new temporary URI by running a <code>GetTranscriptionJob</code> or <code>ListTranscriptionJob</code> request.</p>
     /// </note>
+    #[doc(hidden)]
     pub transcript_file_uri: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 location of your redacted transcript. You can use this URI to access or download your transcript.</p>
     /// <p>If you included <code>OutputBucketName</code> in your transcription job request, this is the URI of that bucket. If you also included <code>OutputKey</code> in your request, your output is located in the path you specified in your request.</p>
     /// <p>If you didn't include <code>OutputBucketName</code> in your transcription job request, your transcript is stored in a service-managed bucket, and <code>RedactedTranscriptFileUri</code> provides you with a temporary URI you can use for secure access to your transcript.</p> <note>
     /// <p>Temporary URIs for service-managed Amazon S3 buckets are only valid for 15 minutes. If you get an <code>AccesDenied</code> error, you can get a new temporary URI by running a <code>GetTranscriptionJob</code> or <code>ListTranscriptionJob</code> request.</p>
     /// </note>
+    #[doc(hidden)]
     pub redacted_transcript_file_uri: std::option::Option<std::string::String>,
 }
 impl Transcript {
@@ -3525,11 +3578,10 @@ impl std::fmt::Debug for Transcript {
         formatter.finish()
     }
 }
-/// See [`Transcript`](crate::model::Transcript)
+/// See [`Transcript`](crate::model::Transcript).
 pub mod transcript {
 
-    /// A builder for [`Transcript`](crate::model::Transcript)
-    #[non_exhaustive]
+    /// A builder for [`Transcript`](crate::model::Transcript).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transcript_file_uri: std::option::Option<std::string::String>,
@@ -3581,7 +3633,7 @@ pub mod transcript {
             self.redacted_transcript_file_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`Transcript`](crate::model::Transcript)
+        /// Consumes the builder and constructs a [`Transcript`](crate::model::Transcript).
         pub fn build(self) -> crate::model::Transcript {
             crate::model::Transcript {
                 transcript_file_uri: self.transcript_file_uri,
@@ -3591,7 +3643,7 @@ pub mod transcript {
     }
 }
 impl Transcript {
-    /// Creates a new builder-style object to manufacture [`Transcript`](crate::model::Transcript)
+    /// Creates a new builder-style object to manufacture [`Transcript`](crate::model::Transcript).
     pub fn builder() -> crate::model::transcript::Builder {
         crate::model::transcript::Builder::default()
     }
@@ -3607,6 +3659,7 @@ pub struct Media {
     /// <li> <p> <code>s3://DOC-EXAMPLE-BUCKET/media-files/my-media-file.flac</code> </p> </li>
     /// </ul>
     /// <p>Note that the Amazon S3 bucket that contains your input media must be located in the same Amazon Web Services Region where you're making your transcription request.</p>
+    #[doc(hidden)]
     pub media_file_uri: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 location of the media file you want to redact. For example:</p>
     /// <ul>
@@ -3616,6 +3669,7 @@ pub struct Media {
     /// <p>Note that the Amazon S3 bucket that contains your input media must be located in the same Amazon Web Services Region where you're making your transcription request.</p> <important>
     /// <p> <code>RedactedMediaFileUri</code> is only supported for Call Analytics (<code>StartCallAnalyticsJob</code>) transcription requests.</p>
     /// </important>
+    #[doc(hidden)]
     pub redacted_media_file_uri: std::option::Option<std::string::String>,
 }
 impl Media {
@@ -3648,11 +3702,10 @@ impl std::fmt::Debug for Media {
         formatter.finish()
     }
 }
-/// See [`Media`](crate::model::Media)
+/// See [`Media`](crate::model::Media).
 pub mod media {
 
-    /// A builder for [`Media`](crate::model::Media)
-    #[non_exhaustive]
+    /// A builder for [`Media`](crate::model::Media).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) media_file_uri: std::option::Option<std::string::String>,
@@ -3709,7 +3762,7 @@ pub mod media {
             self.redacted_media_file_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`Media`](crate::model::Media)
+        /// Consumes the builder and constructs a [`Media`](crate::model::Media).
         pub fn build(self) -> crate::model::Media {
             crate::model::Media {
                 media_file_uri: self.media_file_uri,
@@ -3719,7 +3772,7 @@ pub mod media {
     }
 }
 impl Media {
-    /// Creates a new builder-style object to manufacture [`Media`](crate::model::Media)
+    /// Creates a new builder-style object to manufacture [`Media`](crate::model::Media).
     pub fn builder() -> crate::model::media::Builder {
         crate::model::media::Builder::default()
     }
@@ -3870,9 +3923,11 @@ impl AsRef<str> for TranscriptionJobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Subtitles {
     /// <p>Specify the output format for your subtitle file; if you select both WebVTT (<code>vtt</code>) and SubRip (<code>srt</code>) formats, two output files are generated.</p>
+    #[doc(hidden)]
     pub formats: std::option::Option<std::vec::Vec<crate::model::SubtitleFormat>>,
     /// <p>Specify the starting value that is assigned to the first subtitle segment.</p>
     /// <p>The default start index for Amazon Transcribe is <code>0</code>, which differs from the more widely used standard of <code>1</code>. If you're uncertain which value to use, we recommend choosing <code>1</code>, as this may improve compatibility with other services.</p>
+    #[doc(hidden)]
     pub output_start_index: std::option::Option<i32>,
 }
 impl Subtitles {
@@ -3894,11 +3949,10 @@ impl std::fmt::Debug for Subtitles {
         formatter.finish()
     }
 }
-/// See [`Subtitles`](crate::model::Subtitles)
+/// See [`Subtitles`](crate::model::Subtitles).
 pub mod subtitles {
 
-    /// A builder for [`Subtitles`](crate::model::Subtitles)
-    #[non_exhaustive]
+    /// A builder for [`Subtitles`](crate::model::Subtitles).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) formats: std::option::Option<std::vec::Vec<crate::model::SubtitleFormat>>,
@@ -3936,7 +3990,7 @@ pub mod subtitles {
             self.output_start_index = input;
             self
         }
-        /// Consumes the builder and constructs a [`Subtitles`](crate::model::Subtitles)
+        /// Consumes the builder and constructs a [`Subtitles`](crate::model::Subtitles).
         pub fn build(self) -> crate::model::Subtitles {
             crate::model::Subtitles {
                 formats: self.formats,
@@ -3946,7 +4000,7 @@ pub mod subtitles {
     }
 }
 impl Subtitles {
-    /// Creates a new builder-style object to manufacture [`Subtitles`](crate::model::Subtitles)
+    /// Creates a new builder-style object to manufacture [`Subtitles`](crate::model::Subtitles).
     pub fn builder() -> crate::model::subtitles::Builder {
         crate::model::subtitles::Builder::default()
     }
@@ -3958,28 +4012,38 @@ impl Subtitles {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MedicalTranscriptionJob {
     /// <p>The name of the medical transcription job. Job names are case sensitive and must be unique within an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub medical_transcription_job_name: std::option::Option<std::string::String>,
     /// <p>Provides the status of the specified medical transcription job.</p>
     /// <p>If the status is <code>COMPLETED</code>, the job is finished and you can find the results at the location specified in <code>TranscriptFileUri</code>. If the status is <code>FAILED</code>, <code>FailureReason</code> provides details on why your transcription job failed.</p>
+    #[doc(hidden)]
     pub transcription_job_status: std::option::Option<crate::model::TranscriptionJobStatus>,
     /// <p>The language code used to create your medical transcription job. US English (<code>en-US</code>) is the only supported language for medical transcriptions.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The sample rate, in Hertz, of the audio track in your input media file.</p>
+    #[doc(hidden)]
     pub media_sample_rate_hertz: std::option::Option<i32>,
     /// <p>The format of the input media file.</p>
+    #[doc(hidden)]
     pub media_format: std::option::Option<crate::model::MediaFormat>,
     /// <p>Describes the Amazon S3 location of the media file you want to use in your request.</p>
+    #[doc(hidden)]
     pub media: std::option::Option<crate::model::Media>,
     /// <p>Provides you with the Amazon S3 URI you can use to access your transcript.</p>
+    #[doc(hidden)]
     pub transcript: std::option::Option<crate::model::MedicalTranscript>,
     /// <p>The date and time the specified medical transcription job began processing.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.789000-07:00</code> represents a transcription job that started processing at 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time the specified medical transcription job request was made.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents a transcription job that started processing at 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time the specified medical transcription job finished processing.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:33:13.922000-07:00</code> represents a transcription job that started processing at 12:33 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub completion_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If <code>TranscriptionJobStatus</code> is <code>FAILED</code>, <code>FailureReason</code> contains information about why the transcription job request failed.</p>
     /// <p>The <code>FailureReason</code> field contains one of the following values:</p>
@@ -3991,17 +4055,23 @@ pub struct MedicalTranscriptionJob {
     /// <li> <p> <code>Invalid file size: file size too large</code>.</p> <p>The size of your media file is larger than what Amazon Transcribe can process. For more information, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.</p> </li>
     /// <li> <p> <code>Invalid number of channels: number of channels too large</code>.</p> <p>Your audio contains more channels than Amazon Transcribe is able to process. For more information, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
     /// <p>Specify additional optional settings in your request, including channel identification, alternative transcriptions, and speaker labeling; allows you to apply custom vocabularies to your medical transcription job.</p>
+    #[doc(hidden)]
     pub settings: std::option::Option<crate::model::MedicalTranscriptionSetting>,
     /// <p>Labels all personal health information (PHI) identified in your transcript. For more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/phi-id.html">Identifying personal health information (PHI) in a transcription</a>.</p>
+    #[doc(hidden)]
     pub content_identification_type:
         std::option::Option<crate::model::MedicalContentIdentificationType>,
     /// <p>Describes the medical specialty represented in your media.</p>
+    #[doc(hidden)]
     pub specialty: std::option::Option<crate::model::Specialty>,
     /// <p>Indicates whether the input media is a dictation or a conversation, as specified in the <code>StartMedicalTranscriptionJob</code> request.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
     /// <p>The tags, each in the form of a key:value pair, assigned to the specified medical transcription job.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl MedicalTranscriptionJob {
@@ -4115,11 +4185,10 @@ impl std::fmt::Debug for MedicalTranscriptionJob {
         formatter.finish()
     }
 }
-/// See [`MedicalTranscriptionJob`](crate::model::MedicalTranscriptionJob)
+/// See [`MedicalTranscriptionJob`](crate::model::MedicalTranscriptionJob).
 pub mod medical_transcription_job {
 
-    /// A builder for [`MedicalTranscriptionJob`](crate::model::MedicalTranscriptionJob)
-    #[non_exhaustive]
+    /// A builder for [`MedicalTranscriptionJob`](crate::model::MedicalTranscriptionJob).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) medical_transcription_job_name: std::option::Option<std::string::String>,
@@ -4382,7 +4451,7 @@ pub mod medical_transcription_job {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`MedicalTranscriptionJob`](crate::model::MedicalTranscriptionJob)
+        /// Consumes the builder and constructs a [`MedicalTranscriptionJob`](crate::model::MedicalTranscriptionJob).
         pub fn build(self) -> crate::model::MedicalTranscriptionJob {
             crate::model::MedicalTranscriptionJob {
                 medical_transcription_job_name: self.medical_transcription_job_name,
@@ -4406,7 +4475,7 @@ pub mod medical_transcription_job {
     }
 }
 impl MedicalTranscriptionJob {
-    /// Creates a new builder-style object to manufacture [`MedicalTranscriptionJob`](crate::model::MedicalTranscriptionJob)
+    /// Creates a new builder-style object to manufacture [`MedicalTranscriptionJob`](crate::model::MedicalTranscriptionJob).
     pub fn builder() -> crate::model::medical_transcription_job::Builder {
         crate::model::medical_transcription_job::Builder::default()
     }
@@ -4577,28 +4646,34 @@ pub struct MedicalTranscriptionSetting {
     /// <p>If you enable <code>ShowSpeakerLabels</code> in your request, you must also include <code>MaxSpeakerLabels</code>.</p>
     /// <p>You can't include both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code> in the same request. Including both parameters returns a <code>BadRequestException</code>.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/diarization.html">Identifying speakers (diarization)</a>.</p>
+    #[doc(hidden)]
     pub show_speaker_labels: std::option::Option<bool>,
     /// <p>Specify the maximum number of speakers you want to identify in your media.</p>
     /// <p>Note that if your media contains more speakers than the specified number, multiple speakers will be identified as a single speaker.</p>
     /// <p>If you specify the <code>MaxSpeakerLabels</code> field, you must set the <code>ShowSpeakerLabels</code> field to true.</p>
+    #[doc(hidden)]
     pub max_speaker_labels: std::option::Option<i32>,
     /// <p>Enables channel identification in multi-channel audio.</p>
     /// <p>Channel identification transcribes the audio on each channel independently, then appends the output for each channel into one transcript.</p>
     /// <p>If you have multi-channel audio and do not enable channel identification, your audio is transcribed in a continuous manner and your transcript does not separate the speech by channel.</p>
     /// <p>You can't include both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code> in the same request. Including both parameters returns a <code>BadRequestException</code>.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/channel-id.html">Transcribing multi-channel audio</a>.</p>
+    #[doc(hidden)]
     pub channel_identification: std::option::Option<bool>,
     /// <p>To include alternative transcriptions within your transcription output, include <code>ShowAlternatives</code> in your transcription request.</p>
     /// <p>If you include <code>ShowAlternatives</code>, you must also include <code>MaxAlternatives</code>, which is the maximum number of alternative transcriptions you want Amazon Transcribe Medical to generate.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-alternatives.html">Alternative transcriptions</a>.</p>
+    #[doc(hidden)]
     pub show_alternatives: std::option::Option<bool>,
     /// <p>Indicate the maximum number of alternative transcriptions you want Amazon Transcribe Medical to include in your transcript.</p>
     /// <p>If you select a number greater than the number of alternative transcriptions generated by Amazon Transcribe Medical, only the actual number of alternative transcriptions are included.</p>
     /// <p>If you include <code>MaxAlternatives</code> in your request, you must also include <code>ShowAlternatives</code> with a value of <code>true</code>.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-alternatives.html">Alternative transcriptions</a>.</p>
+    #[doc(hidden)]
     pub max_alternatives: std::option::Option<i32>,
     /// <p>The name of the custom vocabulary you want to use when processing your medical transcription job. Vocabulary names are case sensitive.</p>
     /// <p>The language of the specified vocabulary must match the language code you specify in your transcription request. If the languages don't match, the vocabulary isn't applied. There are no errors or warnings associated with a language mismatch. US English (<code>en-US</code>) is the only valid language for Amazon Transcribe Medical.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
 }
 impl MedicalTranscriptionSetting {
@@ -4654,11 +4729,10 @@ impl std::fmt::Debug for MedicalTranscriptionSetting {
         formatter.finish()
     }
 }
-/// See [`MedicalTranscriptionSetting`](crate::model::MedicalTranscriptionSetting)
+/// See [`MedicalTranscriptionSetting`](crate::model::MedicalTranscriptionSetting).
 pub mod medical_transcription_setting {
 
-    /// A builder for [`MedicalTranscriptionSetting`](crate::model::MedicalTranscriptionSetting)
-    #[non_exhaustive]
+    /// A builder for [`MedicalTranscriptionSetting`](crate::model::MedicalTranscriptionSetting).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) show_speaker_labels: std::option::Option<bool>,
@@ -4762,7 +4836,7 @@ pub mod medical_transcription_setting {
             self.vocabulary_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`MedicalTranscriptionSetting`](crate::model::MedicalTranscriptionSetting)
+        /// Consumes the builder and constructs a [`MedicalTranscriptionSetting`](crate::model::MedicalTranscriptionSetting).
         pub fn build(self) -> crate::model::MedicalTranscriptionSetting {
             crate::model::MedicalTranscriptionSetting {
                 show_speaker_labels: self.show_speaker_labels,
@@ -4776,7 +4850,7 @@ pub mod medical_transcription_setting {
     }
 }
 impl MedicalTranscriptionSetting {
-    /// Creates a new builder-style object to manufacture [`MedicalTranscriptionSetting`](crate::model::MedicalTranscriptionSetting)
+    /// Creates a new builder-style object to manufacture [`MedicalTranscriptionSetting`](crate::model::MedicalTranscriptionSetting).
     pub fn builder() -> crate::model::medical_transcription_setting::Builder {
         crate::model::medical_transcription_setting::Builder::default()
     }
@@ -4791,6 +4865,7 @@ pub struct MedicalTranscript {
     /// <p>If you didn't include <code>OutputBucketName</code> in your transcription job request, your transcript is stored in a service-managed bucket, and <code>TranscriptFileUri</code> provides you with a temporary URI you can use for secure access to your transcript.</p> <note>
     /// <p>Temporary URIs for service-managed Amazon S3 buckets are only valid for 15 minutes. If you get an <code>AccesDenied</code> error, you can get a new temporary URI by running a <code>GetTranscriptionJob</code> or <code>ListTranscriptionJob</code> request.</p>
     /// </note>
+    #[doc(hidden)]
     pub transcript_file_uri: std::option::Option<std::string::String>,
 }
 impl MedicalTranscript {
@@ -4810,11 +4885,10 @@ impl std::fmt::Debug for MedicalTranscript {
         formatter.finish()
     }
 }
-/// See [`MedicalTranscript`](crate::model::MedicalTranscript)
+/// See [`MedicalTranscript`](crate::model::MedicalTranscript).
 pub mod medical_transcript {
 
-    /// A builder for [`MedicalTranscript`](crate::model::MedicalTranscript)
-    #[non_exhaustive]
+    /// A builder for [`MedicalTranscript`](crate::model::MedicalTranscript).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transcript_file_uri: std::option::Option<std::string::String>,
@@ -4841,7 +4915,7 @@ pub mod medical_transcript {
             self.transcript_file_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`MedicalTranscript`](crate::model::MedicalTranscript)
+        /// Consumes the builder and constructs a [`MedicalTranscript`](crate::model::MedicalTranscript).
         pub fn build(self) -> crate::model::MedicalTranscript {
             crate::model::MedicalTranscript {
                 transcript_file_uri: self.transcript_file_uri,
@@ -4850,7 +4924,7 @@ pub mod medical_transcript {
     }
 }
 impl MedicalTranscript {
-    /// Creates a new builder-style object to manufacture [`MedicalTranscript`](crate::model::MedicalTranscript)
+    /// Creates a new builder-style object to manufacture [`MedicalTranscript`](crate::model::MedicalTranscript).
     pub fn builder() -> crate::model::medical_transcript::Builder {
         crate::model::medical_transcript::Builder::default()
     }
@@ -4864,29 +4938,39 @@ impl MedicalTranscript {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CallAnalyticsJob {
     /// <p>The name of the Call Analytics job. Job names are case sensitive and must be unique within an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub call_analytics_job_name: std::option::Option<std::string::String>,
     /// <p>Provides the status of the specified Call Analytics job.</p>
     /// <p>If the status is <code>COMPLETED</code>, the job is finished and you can find the results at the location specified in <code>TranscriptFileUri</code> (or <code>RedactedTranscriptFileUri</code>, if you requested transcript redaction). If the status is <code>FAILED</code>, <code>FailureReason</code> provides details on why your transcription job failed.</p>
+    #[doc(hidden)]
     pub call_analytics_job_status: std::option::Option<crate::model::CallAnalyticsJobStatus>,
     /// <p>The language code used to create your Call Analytics job. For a list of supported languages and their associated language codes, refer to the <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> table.</p>
     /// <p>If you don't know the language spoken in your media file, you can omit this field and let Amazon Transcribe automatically identify the language of your media. To improve the accuracy of language identification, you can include several language codes and Amazon Transcribe chooses the closest match for your transcription.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The sample rate, in Hertz, of the audio track in your input media file.</p>
+    #[doc(hidden)]
     pub media_sample_rate_hertz: std::option::Option<i32>,
     /// <p>The format of the input media file.</p>
+    #[doc(hidden)]
     pub media_format: std::option::Option<crate::model::MediaFormat>,
     /// <p>Describes the Amazon S3 location of the media file you want to use in your request.</p>
+    #[doc(hidden)]
     pub media: std::option::Option<crate::model::Media>,
     /// <p>Provides you with the Amazon S3 URI you can use to access your transcript.</p>
+    #[doc(hidden)]
     pub transcript: std::option::Option<crate::model::Transcript>,
     /// <p>The date and time the specified Call Analytics job began processing.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.789000-07:00</code> represents a transcription job that started processing at 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time the specified Call Analytics job request was made.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents a transcription job that started processing at 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time the specified Call Analytics job finished processing.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:33:13.922000-07:00</code> represents a transcription job that started processing at 12:33 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub completion_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If <code>CallAnalyticsJobStatus</code> is <code>FAILED</code>, <code>FailureReason</code> contains information about why the Call Analytics job request failed.</p>
     /// <p>The <code>FailureReason</code> field contains one of the following values:</p>
@@ -4898,17 +4982,22 @@ pub struct CallAnalyticsJob {
     /// <li> <p> <code>Invalid file size: file size too large</code>.</p> <p>The size of your media file is larger than what Amazon Transcribe can process. For more information, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.</p> </li>
     /// <li> <p> <code>Invalid number of channels: number of channels too large</code>.</p> <p>Your audio contains more channels than Amazon Transcribe is able to process. For more information, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and quotas</a>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of an IAM role that has permissions to access the Amazon S3 bucket that contains your input files. If the role you specify doesn’t have the appropriate permissions to access the specified Amazon S3 location, your request fails.</p>
     /// <p>IAM role ARNs have the format <code>arn:partition:iam::account:role/role-name-with-path</code>. For example: <code>arn:aws:iam::111122223333:role/Admin</code>.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns">IAM ARNs</a>.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The confidence score associated with the language identified in your media file.</p>
     /// <p>Confidence scores are values between 0 and 1; a larger value indicates a higher probability that the identified language correctly matches the language spoken in your media.</p>
+    #[doc(hidden)]
     pub identified_language_score: std::option::Option<f32>,
     /// <p>Allows additional optional settings in your request, including content redaction; allows you to apply custom language models, vocabulary filters, and custom vocabularies to your Call Analytics job.</p>
+    #[doc(hidden)]
     pub settings: std::option::Option<crate::model::CallAnalyticsJobSettings>,
     /// <p>Allows you to specify which speaker is on which channel in your Call Analytics job request. For example, if your agent is the first participant to speak, you would set <code>ChannelId</code> to <code>0</code> (to indicate the first channel) and <code>ParticipantRole</code> to <code>AGENT</code> (to indicate that it's the agent speaking).</p>
+    #[doc(hidden)]
     pub channel_definitions: std::option::Option<std::vec::Vec<crate::model::ChannelDefinition>>,
 }
 impl CallAnalyticsJob {
@@ -5013,11 +5102,10 @@ impl std::fmt::Debug for CallAnalyticsJob {
         formatter.finish()
     }
 }
-/// See [`CallAnalyticsJob`](crate::model::CallAnalyticsJob)
+/// See [`CallAnalyticsJob`](crate::model::CallAnalyticsJob).
 pub mod call_analytics_job {
 
-    /// A builder for [`CallAnalyticsJob`](crate::model::CallAnalyticsJob)
-    #[non_exhaustive]
+    /// A builder for [`CallAnalyticsJob`](crate::model::CallAnalyticsJob).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) call_analytics_job_name: std::option::Option<std::string::String>,
@@ -5268,7 +5356,7 @@ pub mod call_analytics_job {
             self.channel_definitions = input;
             self
         }
-        /// Consumes the builder and constructs a [`CallAnalyticsJob`](crate::model::CallAnalyticsJob)
+        /// Consumes the builder and constructs a [`CallAnalyticsJob`](crate::model::CallAnalyticsJob).
         pub fn build(self) -> crate::model::CallAnalyticsJob {
             crate::model::CallAnalyticsJob {
                 call_analytics_job_name: self.call_analytics_job_name,
@@ -5291,7 +5379,7 @@ pub mod call_analytics_job {
     }
 }
 impl CallAnalyticsJob {
-    /// Creates a new builder-style object to manufacture [`CallAnalyticsJob`](crate::model::CallAnalyticsJob)
+    /// Creates a new builder-style object to manufacture [`CallAnalyticsJob`](crate::model::CallAnalyticsJob).
     pub fn builder() -> crate::model::call_analytics_job::Builder {
         crate::model::call_analytics_job::Builder::default()
     }
@@ -5302,8 +5390,10 @@ impl CallAnalyticsJob {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChannelDefinition {
     /// <p>Specify the audio channel you want to define.</p>
+    #[doc(hidden)]
     pub channel_id: i32,
     /// <p>Specify the speaker you want to define. Omitting this parameter is equivalent to specifying both participants.</p>
+    #[doc(hidden)]
     pub participant_role: std::option::Option<crate::model::ParticipantRole>,
 }
 impl ChannelDefinition {
@@ -5324,11 +5414,10 @@ impl std::fmt::Debug for ChannelDefinition {
         formatter.finish()
     }
 }
-/// See [`ChannelDefinition`](crate::model::ChannelDefinition)
+/// See [`ChannelDefinition`](crate::model::ChannelDefinition).
 pub mod channel_definition {
 
-    /// A builder for [`ChannelDefinition`](crate::model::ChannelDefinition)
-    #[non_exhaustive]
+    /// A builder for [`ChannelDefinition`](crate::model::ChannelDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channel_id: std::option::Option<i32>,
@@ -5358,7 +5447,7 @@ pub mod channel_definition {
             self.participant_role = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChannelDefinition`](crate::model::ChannelDefinition)
+        /// Consumes the builder and constructs a [`ChannelDefinition`](crate::model::ChannelDefinition).
         pub fn build(self) -> crate::model::ChannelDefinition {
             crate::model::ChannelDefinition {
                 channel_id: self.channel_id.unwrap_or_default(),
@@ -5368,7 +5457,7 @@ pub mod channel_definition {
     }
 }
 impl ChannelDefinition {
-    /// Creates a new builder-style object to manufacture [`ChannelDefinition`](crate::model::ChannelDefinition)
+    /// Creates a new builder-style object to manufacture [`ChannelDefinition`](crate::model::ChannelDefinition).
     pub fn builder() -> crate::model::channel_definition::Builder {
         crate::model::channel_definition::Builder::default()
     }
@@ -5379,29 +5468,36 @@ impl ChannelDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CallAnalyticsJobSettings {
     /// <p>The name of the custom vocabulary you want to include in your Call Analytics transcription request. Vocabulary names are case sensitive.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
     /// <p>The name of the custom vocabulary filter you want to include in your Call Analytics transcription request. Vocabulary filter names are case sensitive.</p>
     /// <p>Note that if you include <code>VocabularyFilterName</code> in your request, you must also include <code>VocabularyFilterMethod</code>.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_name: std::option::Option<std::string::String>,
     /// <p>Specify how you want your vocabulary filter applied to your transcript.</p>
     /// <p>To replace words with <code>***</code>, choose <code>mask</code>.</p>
     /// <p>To delete words, choose <code>remove</code>.</p>
     /// <p>To flag words without changing them, choose <code>tag</code>.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_method: std::option::Option<crate::model::VocabularyFilterMethod>,
     /// <p>The name of the custom language model you want to use when processing your Call Analytics job. Note that language model names are case sensitive.</p>
     /// <p>The language of the specified language model must match the language code you specify in your transcription request. If the languages don't match, the language model isn't applied. There are no errors or warnings associated with a language mismatch.</p>
+    #[doc(hidden)]
     pub language_model_name: std::option::Option<std::string::String>,
     /// <p>Allows you to redact or flag specified personally identifiable information (PII) in your transcript. If you use <code>ContentRedaction</code>, you must also include the sub-parameters: <code>PiiEntityTypes</code>, <code>RedactionOutput</code>, and <code>RedactionType</code>.</p>
+    #[doc(hidden)]
     pub content_redaction: std::option::Option<crate::model::ContentRedaction>,
     /// <p>You can specify two or more language codes that represent the languages you think may be present in your media; including more than five is not recommended. If you're unsure what languages are present, do not include this parameter.</p>
     /// <p>Including language options can improve the accuracy of language identification.</p>
     /// <p>For a list of languages supported with Call Analytics, refer to the <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> table.</p>
+    #[doc(hidden)]
     pub language_options: std::option::Option<std::vec::Vec<crate::model::LanguageCode>>,
     /// <p>If using automatic language identification (<code>IdentifyLanguage</code>) in your request and you want to apply a custom language model, a custom vocabulary, or a custom vocabulary filter, include <code>LanguageIdSettings</code> with the relevant sub-parameters (<code>VocabularyName</code>, <code>LanguageModelName</code>, and <code>VocabularyFilterName</code>).</p>
     /// <p>You can specify two or more language codes that represent the languages you think may be present in your media; including more than five is not recommended. Each language code you include can have an associated custom language model, custom vocabulary, and custom vocabulary filter. The languages you specify must match the languages of the specified custom language models, custom vocabularies, and custom vocabulary filters.</p>
     /// <p>To include language options using <code>IdentifyLanguage</code> <b>without</b> including a custom language model, a custom vocabulary, or a custom vocabulary filter, use <code>LanguageOptions</code> instead of <code>LanguageIdSettings</code>. Including language options can improve the accuracy of automatic language identification.</p>
     /// <p>If you want to include a custom language model with your request but <b>do not</b> want to use automatic language identification, use instead the <code></code> parameter with the <code>LanguageModelName</code> sub-parameter.</p>
     /// <p>If you want to include a custom vocabulary or a custom vocabulary filter (or both) with your request but <b>do not</b> want to use automatic language identification, use instead the <code></code> parameter with the <code>VocabularyName</code> or <code>VocabularyFilterName</code> (or both) sub-parameter.</p>
+    #[doc(hidden)]
     pub language_id_settings: std::option::Option<
         std::collections::HashMap<crate::model::LanguageCode, crate::model::LanguageIdSettings>,
     >,
@@ -5466,11 +5562,10 @@ impl std::fmt::Debug for CallAnalyticsJobSettings {
         formatter.finish()
     }
 }
-/// See [`CallAnalyticsJobSettings`](crate::model::CallAnalyticsJobSettings)
+/// See [`CallAnalyticsJobSettings`](crate::model::CallAnalyticsJobSettings).
 pub mod call_analytics_job_settings {
 
-    /// A builder for [`CallAnalyticsJobSettings`](crate::model::CallAnalyticsJobSettings)
-    #[non_exhaustive]
+    /// A builder for [`CallAnalyticsJobSettings`](crate::model::CallAnalyticsJobSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_name: std::option::Option<std::string::String>,
@@ -5622,7 +5717,7 @@ pub mod call_analytics_job_settings {
             self.language_id_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`CallAnalyticsJobSettings`](crate::model::CallAnalyticsJobSettings)
+        /// Consumes the builder and constructs a [`CallAnalyticsJobSettings`](crate::model::CallAnalyticsJobSettings).
         pub fn build(self) -> crate::model::CallAnalyticsJobSettings {
             crate::model::CallAnalyticsJobSettings {
                 vocabulary_name: self.vocabulary_name,
@@ -5637,7 +5732,7 @@ pub mod call_analytics_job_settings {
     }
 }
 impl CallAnalyticsJobSettings {
-    /// Creates a new builder-style object to manufacture [`CallAnalyticsJobSettings`](crate::model::CallAnalyticsJobSettings)
+    /// Creates a new builder-style object to manufacture [`CallAnalyticsJobSettings`](crate::model::CallAnalyticsJobSettings).
     pub fn builder() -> crate::model::call_analytics_job_settings::Builder {
         crate::model::call_analytics_job_settings::Builder::default()
     }
@@ -5711,13 +5806,16 @@ impl AsRef<str> for CallAnalyticsJobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VocabularyFilterInfo {
     /// <p>A unique name, chosen by you, for your custom vocabulary filter. This name is case sensitive, cannot contain spaces, and must be unique within an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_name: std::option::Option<std::string::String>,
     /// <p>The language code that represents the language of the entries in your vocabulary filter. Each vocabulary filter must contain terms in only one language.</p>
     /// <p>A vocabulary filter can only be used to transcribe files in the same language as the filter. For example, if you create a vocabulary filter using US English (<code>en-US</code>), you can only apply this filter to files that contain English audio.</p>
     /// <p>For a list of supported languages and their associated language codes, refer to the <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> table.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The date and time the specified vocabulary filter was last modified.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl VocabularyFilterInfo {
@@ -5746,11 +5844,10 @@ impl std::fmt::Debug for VocabularyFilterInfo {
         formatter.finish()
     }
 }
-/// See [`VocabularyFilterInfo`](crate::model::VocabularyFilterInfo)
+/// See [`VocabularyFilterInfo`](crate::model::VocabularyFilterInfo).
 pub mod vocabulary_filter_info {
 
-    /// A builder for [`VocabularyFilterInfo`](crate::model::VocabularyFilterInfo)
-    #[non_exhaustive]
+    /// A builder for [`VocabularyFilterInfo`](crate::model::VocabularyFilterInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_filter_name: std::option::Option<std::string::String>,
@@ -5803,7 +5900,7 @@ pub mod vocabulary_filter_info {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`VocabularyFilterInfo`](crate::model::VocabularyFilterInfo)
+        /// Consumes the builder and constructs a [`VocabularyFilterInfo`](crate::model::VocabularyFilterInfo).
         pub fn build(self) -> crate::model::VocabularyFilterInfo {
             crate::model::VocabularyFilterInfo {
                 vocabulary_filter_name: self.vocabulary_filter_name,
@@ -5814,7 +5911,7 @@ pub mod vocabulary_filter_info {
     }
 }
 impl VocabularyFilterInfo {
-    /// Creates a new builder-style object to manufacture [`VocabularyFilterInfo`](crate::model::VocabularyFilterInfo)
+    /// Creates a new builder-style object to manufacture [`VocabularyFilterInfo`](crate::model::VocabularyFilterInfo).
     pub fn builder() -> crate::model::vocabulary_filter_info::Builder {
         crate::model::vocabulary_filter_info::Builder::default()
     }
@@ -5825,14 +5922,18 @@ impl VocabularyFilterInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VocabularyInfo {
     /// <p>A unique name, chosen by you, for your custom vocabulary. This name is case sensitive, cannot contain spaces, and must be unique within an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
     /// <p>The language code used to create your custom vocabulary. Each vocabulary must contain terms in only one language.</p>
     /// <p>A custom vocabulary can only be used to transcribe files in the same language as the vocabulary. For example, if you create a vocabulary using US English (<code>en-US</code>), you can only apply this vocabulary to files that contain English audio.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The date and time the specified vocabulary was last modified.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The processing state of your custom vocabulary. If the state is <code>READY</code>, you can use the vocabulary in a <code>StartTranscriptionJob</code> request.</p>
+    #[doc(hidden)]
     pub vocabulary_state: std::option::Option<crate::model::VocabularyState>,
 }
 impl VocabularyInfo {
@@ -5865,11 +5966,10 @@ impl std::fmt::Debug for VocabularyInfo {
         formatter.finish()
     }
 }
-/// See [`VocabularyInfo`](crate::model::VocabularyInfo)
+/// See [`VocabularyInfo`](crate::model::VocabularyInfo).
 pub mod vocabulary_info {
 
-    /// A builder for [`VocabularyInfo`](crate::model::VocabularyInfo)
-    #[non_exhaustive]
+    /// A builder for [`VocabularyInfo`](crate::model::VocabularyInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) vocabulary_name: std::option::Option<std::string::String>,
@@ -5934,7 +6034,7 @@ pub mod vocabulary_info {
             self.vocabulary_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`VocabularyInfo`](crate::model::VocabularyInfo)
+        /// Consumes the builder and constructs a [`VocabularyInfo`](crate::model::VocabularyInfo).
         pub fn build(self) -> crate::model::VocabularyInfo {
             crate::model::VocabularyInfo {
                 vocabulary_name: self.vocabulary_name,
@@ -5946,7 +6046,7 @@ pub mod vocabulary_info {
     }
 }
 impl VocabularyInfo {
-    /// Creates a new builder-style object to manufacture [`VocabularyInfo`](crate::model::VocabularyInfo)
+    /// Creates a new builder-style object to manufacture [`VocabularyInfo`](crate::model::VocabularyInfo).
     pub fn builder() -> crate::model::vocabulary_info::Builder {
         crate::model::vocabulary_info::Builder::default()
     }
@@ -5957,40 +6057,54 @@ impl VocabularyInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TranscriptionJobSummary {
     /// <p>The name of the transcription job. Job names are case sensitive and must be unique within an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub transcription_job_name: std::option::Option<std::string::String>,
     /// <p>The date and time the specified transcription job request was made.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents a transcription job that started processing at 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time your transcription job began processing.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.789000-07:00</code> represents a transcription job that started processing at 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time the specified transcription job finished processing.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:33:13.922000-07:00</code> represents a transcription job that started processing at 12:33 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub completion_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The language code used to create your transcription.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>Provides the status of your transcription job.</p>
     /// <p>If the status is <code>COMPLETED</code>, the job is finished and you can find the results at the location specified in <code>TranscriptFileUri</code> (or <code>RedactedTranscriptFileUri</code>, if you requested transcript redaction). If the status is <code>FAILED</code>, <code>FailureReason</code> provides details on why your transcription job failed.</p>
+    #[doc(hidden)]
     pub transcription_job_status: std::option::Option<crate::model::TranscriptionJobStatus>,
     /// <p>If <code>TranscriptionJobStatus</code> is <code>FAILED</code>, <code>FailureReason</code> contains information about why the transcription job failed. See also: <a href="https://docs.aws.amazon.com/transcribe/latest/APIReference/CommonErrors.html">Common Errors</a>.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
     /// <p>Indicates where the specified transcription output is stored.</p>
     /// <p>If the value is <code>CUSTOMER_BUCKET</code>, the location is the Amazon S3 bucket you specified using the <code>OutputBucketName</code> parameter in your request. If you also included <code>OutputKey</code> in your request, your output is located in the path you specified in your request.</p>
     /// <p>If the value is <code>SERVICE_BUCKET</code>, the location is a service-managed Amazon S3 bucket. To access a transcript stored in a service-managed bucket, use the URI shown in the <code>TranscriptFileUri</code> or <code>RedactedTranscriptFileUri</code> field.</p>
+    #[doc(hidden)]
     pub output_location_type: std::option::Option<crate::model::OutputLocationType>,
     /// <p>The content redaction settings of the transcription job.</p>
+    #[doc(hidden)]
     pub content_redaction: std::option::Option<crate::model::ContentRedaction>,
     /// <p>Provides the name of the custom language model that was included in the specified transcription job.</p>
     /// <p>Only use <code>ModelSettings</code> with the <code>LanguageModelName</code> sub-parameter if you're <b>not</b> using automatic language identification (<code></code>). If using <code>LanguageIdSettings</code> in your request, this parameter contains a <code>LanguageModelName</code> sub-parameter.</p>
+    #[doc(hidden)]
     pub model_settings: std::option::Option<crate::model::ModelSettings>,
     /// <p>Indicates whether automatic language identification was enabled (<code>TRUE</code>) for the specified transcription job.</p>
+    #[doc(hidden)]
     pub identify_language: std::option::Option<bool>,
     /// <p>Indicates whether automatic multi-language identification was enabled (<code>TRUE</code>) for the specified transcription job.</p>
+    #[doc(hidden)]
     pub identify_multiple_languages: std::option::Option<bool>,
     /// <p>The confidence score associated with the language identified in your media file.</p>
     /// <p>Confidence scores are values between 0 and 1; a larger value indicates a higher probability that the identified language correctly matches the language spoken in your media.</p>
+    #[doc(hidden)]
     pub identified_language_score: std::option::Option<f32>,
     /// <p>The language codes used to create your transcription job. This parameter is used with multi-language identification. For single-language identification, the singular version of this parameter, <code>LanguageCode</code>, is present.</p>
+    #[doc(hidden)]
     pub language_codes: std::option::Option<std::vec::Vec<crate::model::LanguageCodeItem>>,
 }
 impl TranscriptionJobSummary {
@@ -6084,11 +6198,10 @@ impl std::fmt::Debug for TranscriptionJobSummary {
         formatter.finish()
     }
 }
-/// See [`TranscriptionJobSummary`](crate::model::TranscriptionJobSummary)
+/// See [`TranscriptionJobSummary`](crate::model::TranscriptionJobSummary).
 pub mod transcription_job_summary {
 
-    /// A builder for [`TranscriptionJobSummary`](crate::model::TranscriptionJobSummary)
-    #[non_exhaustive]
+    /// A builder for [`TranscriptionJobSummary`](crate::model::TranscriptionJobSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) transcription_job_name: std::option::Option<std::string::String>,
@@ -6307,7 +6420,7 @@ pub mod transcription_job_summary {
             self.language_codes = input;
             self
         }
-        /// Consumes the builder and constructs a [`TranscriptionJobSummary`](crate::model::TranscriptionJobSummary)
+        /// Consumes the builder and constructs a [`TranscriptionJobSummary`](crate::model::TranscriptionJobSummary).
         pub fn build(self) -> crate::model::TranscriptionJobSummary {
             crate::model::TranscriptionJobSummary {
                 transcription_job_name: self.transcription_job_name,
@@ -6329,7 +6442,7 @@ pub mod transcription_job_summary {
     }
 }
 impl TranscriptionJobSummary {
-    /// Creates a new builder-style object to manufacture [`TranscriptionJobSummary`](crate::model::TranscriptionJobSummary)
+    /// Creates a new builder-style object to manufacture [`TranscriptionJobSummary`](crate::model::TranscriptionJobSummary).
     pub fn builder() -> crate::model::transcription_job_summary::Builder {
         crate::model::transcription_job_summary::Builder::default()
     }
@@ -6395,33 +6508,44 @@ impl AsRef<str> for OutputLocationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MedicalTranscriptionJobSummary {
     /// <p>The name of the medical transcription job. Job names are case sensitive and must be unique within an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub medical_transcription_job_name: std::option::Option<std::string::String>,
     /// <p>The date and time the specified medical transcription job request was made.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents a transcription job that started processing at 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time your medical transcription job began processing.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.789000-07:00</code> represents a transcription job that started processing at 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time the specified medical transcription job finished processing.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:33:13.922000-07:00</code> represents a transcription job that started processing at 12:33 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub completion_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The language code used to create your medical transcription. US English (<code>en-US</code>) is the only supported language for medical transcriptions.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>Provides the status of your medical transcription job.</p>
     /// <p>If the status is <code>COMPLETED</code>, the job is finished and you can find the results at the location specified in <code>TranscriptFileUri</code>. If the status is <code>FAILED</code>, <code>FailureReason</code> provides details on why your transcription job failed.</p>
+    #[doc(hidden)]
     pub transcription_job_status: std::option::Option<crate::model::TranscriptionJobStatus>,
     /// <p>If <code>TranscriptionJobStatus</code> is <code>FAILED</code>, <code>FailureReason</code> contains information about why the transcription job failed. See also: <a href="https://docs.aws.amazon.com/transcribe/latest/APIReference/CommonErrors.html">Common Errors</a>.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
     /// <p>Indicates where the specified medical transcription output is stored.</p>
     /// <p>If the value is <code>CUSTOMER_BUCKET</code>, the location is the Amazon S3 bucket you specified using the <code>OutputBucketName</code> parameter in your request. If you also included <code>OutputKey</code> in your request, your output is located in the path you specified in your request.</p>
     /// <p>If the value is <code>SERVICE_BUCKET</code>, the location is a service-managed Amazon S3 bucket. To access a transcript stored in a service-managed bucket, use the URI shown in the <code>TranscriptFileUri</code> field.</p>
+    #[doc(hidden)]
     pub output_location_type: std::option::Option<crate::model::OutputLocationType>,
     /// <p>Provides the medical specialty represented in your media.</p>
+    #[doc(hidden)]
     pub specialty: std::option::Option<crate::model::Specialty>,
     /// <p>Labels all personal health information (PHI) identified in your transcript. For more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/phi-id.html">Identifying personal health information (PHI) in a transcription</a>.</p>
+    #[doc(hidden)]
     pub content_identification_type:
         std::option::Option<crate::model::MedicalContentIdentificationType>,
     /// <p>Indicates whether the input media is a dictation or a conversation, as specified in the <code>StartMedicalTranscriptionJob</code> request.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::Type>,
 }
 impl MedicalTranscriptionJobSummary {
@@ -6503,11 +6627,10 @@ impl std::fmt::Debug for MedicalTranscriptionJobSummary {
         formatter.finish()
     }
 }
-/// See [`MedicalTranscriptionJobSummary`](crate::model::MedicalTranscriptionJobSummary)
+/// See [`MedicalTranscriptionJobSummary`](crate::model::MedicalTranscriptionJobSummary).
 pub mod medical_transcription_job_summary {
 
-    /// A builder for [`MedicalTranscriptionJobSummary`](crate::model::MedicalTranscriptionJobSummary)
-    #[non_exhaustive]
+    /// A builder for [`MedicalTranscriptionJobSummary`](crate::model::MedicalTranscriptionJobSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) medical_transcription_job_name: std::option::Option<std::string::String>,
@@ -6686,7 +6809,7 @@ pub mod medical_transcription_job_summary {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`MedicalTranscriptionJobSummary`](crate::model::MedicalTranscriptionJobSummary)
+        /// Consumes the builder and constructs a [`MedicalTranscriptionJobSummary`](crate::model::MedicalTranscriptionJobSummary).
         pub fn build(self) -> crate::model::MedicalTranscriptionJobSummary {
             crate::model::MedicalTranscriptionJobSummary {
                 medical_transcription_job_name: self.medical_transcription_job_name,
@@ -6705,7 +6828,7 @@ pub mod medical_transcription_job_summary {
     }
 }
 impl MedicalTranscriptionJobSummary {
-    /// Creates a new builder-style object to manufacture [`MedicalTranscriptionJobSummary`](crate::model::MedicalTranscriptionJobSummary)
+    /// Creates a new builder-style object to manufacture [`MedicalTranscriptionJobSummary`](crate::model::MedicalTranscriptionJobSummary).
     pub fn builder() -> crate::model::medical_transcription_job_summary::Builder {
         crate::model::medical_transcription_job_summary::Builder::default()
     }
@@ -6717,28 +6840,37 @@ impl MedicalTranscriptionJobSummary {
 pub struct LanguageModel {
     /// <p>A unique name, chosen by you, for your custom language model.</p>
     /// <p>This name is case sensitive, cannot contain spaces, and must be unique within an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub model_name: std::option::Option<std::string::String>,
     /// <p>The date and time the specified custom language model was created.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time the specified language model was last modified.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The language code used to create your custom language model. Each language model must contain terms in only one language, and the language you select for your model must match the language of your training and tuning data.</p>
     /// <p>For a list of supported languages and their associated language codes, refer to the <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> table. Note that U.S. English (<code>en-US</code>) is the only language supported with Amazon Transcribe Medical.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::ClmLanguageCode>,
     /// <p>The Amazon Transcribe standard language model, or base model, used to create your custom language model.</p>
+    #[doc(hidden)]
     pub base_model_name: std::option::Option<crate::model::BaseModelName>,
     /// <p>The status of the specified custom language model. When the status displays as <code>COMPLETED</code> the model is ready for use.</p>
+    #[doc(hidden)]
     pub model_status: std::option::Option<crate::model::ModelStatus>,
     /// <p>Shows if a more current base model is available for use with the specified custom language model.</p>
     /// <p>If <code>false</code>, your language model is using the most up-to-date base model.</p>
     /// <p>If <code>true</code>, there is a newer base model available than the one your language model is using.</p>
     /// <p>Note that to update a base model, you must recreate the custom language model using the new base model. Base model upgrades for existing custom language models are not supported.</p>
+    #[doc(hidden)]
     pub upgrade_availability: std::option::Option<bool>,
     /// <p>If <code>ModelStatus</code> is <code>FAILED</code>, <code>FailureReason</code> contains information about why the custom language model request failed. See also: <a href="https://docs.aws.amazon.com/transcribe/latest/APIReference/CommonErrors.html">Common Errors</a>.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 location of the input files used to train and tune your custom language model, in addition to the data access role ARN (Amazon Resource Name) that has permissions to access these data.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
 }
 impl LanguageModel {
@@ -6801,11 +6933,10 @@ impl std::fmt::Debug for LanguageModel {
         formatter.finish()
     }
 }
-/// See [`LanguageModel`](crate::model::LanguageModel)
+/// See [`LanguageModel`](crate::model::LanguageModel).
 pub mod language_model {
 
-    /// A builder for [`LanguageModel`](crate::model::LanguageModel)
-    #[non_exhaustive]
+    /// A builder for [`LanguageModel`](crate::model::LanguageModel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_name: std::option::Option<std::string::String>,
@@ -6944,7 +7075,7 @@ pub mod language_model {
             self.input_data_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`LanguageModel`](crate::model::LanguageModel)
+        /// Consumes the builder and constructs a [`LanguageModel`](crate::model::LanguageModel).
         pub fn build(self) -> crate::model::LanguageModel {
             crate::model::LanguageModel {
                 model_name: self.model_name,
@@ -6961,7 +7092,7 @@ pub mod language_model {
     }
 }
 impl LanguageModel {
-    /// Creates a new builder-style object to manufacture [`LanguageModel`](crate::model::LanguageModel)
+    /// Creates a new builder-style object to manufacture [`LanguageModel`](crate::model::LanguageModel).
     pub fn builder() -> crate::model::language_model::Builder {
         crate::model::language_model::Builder::default()
     }
@@ -6974,13 +7105,16 @@ impl LanguageModel {
 pub struct InputDataConfig {
     /// <p>The Amazon S3 location (URI) of the text files you want to use to train your custom language model.</p>
     /// <p>Here's an example URI path: <code>s3://DOC-EXAMPLE-BUCKET/my-model-training-data/</code> </p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 location (URI) of the text files you want to use to tune your custom language model.</p>
     /// <p>Here's an example URI path: <code>s3://DOC-EXAMPLE-BUCKET/my-model-tuning-data/</code> </p>
+    #[doc(hidden)]
     pub tuning_data_s3_uri: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of an IAM role that has permissions to access the Amazon S3 bucket that contains your input files. If the role you specify doesn’t have the appropriate permissions to access the specified Amazon S3 location, your request fails.</p>
     /// <p>IAM role ARNs have the format <code>arn:partition:iam::account:role/role-name-with-path</code>. For example: <code>arn:aws:iam::111122223333:role/Admin</code>.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns">IAM ARNs</a>.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
 }
 impl InputDataConfig {
@@ -7010,11 +7144,10 @@ impl std::fmt::Debug for InputDataConfig {
         formatter.finish()
     }
 }
-/// See [`InputDataConfig`](crate::model::InputDataConfig)
+/// See [`InputDataConfig`](crate::model::InputDataConfig).
 pub mod input_data_config {
 
-    /// A builder for [`InputDataConfig`](crate::model::InputDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`InputDataConfig`](crate::model::InputDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -7066,7 +7199,7 @@ pub mod input_data_config {
             self.data_access_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputDataConfig`](crate::model::InputDataConfig)
+        /// Consumes the builder and constructs a [`InputDataConfig`](crate::model::InputDataConfig).
         pub fn build(self) -> crate::model::InputDataConfig {
             crate::model::InputDataConfig {
                 s3_uri: self.s3_uri,
@@ -7077,7 +7210,7 @@ pub mod input_data_config {
     }
 }
 impl InputDataConfig {
-    /// Creates a new builder-style object to manufacture [`InputDataConfig`](crate::model::InputDataConfig)
+    /// Creates a new builder-style object to manufacture [`InputDataConfig`](crate::model::InputDataConfig).
     pub fn builder() -> crate::model::input_data_config::Builder {
         crate::model::input_data_config::Builder::default()
     }
@@ -7269,22 +7402,29 @@ impl AsRef<str> for ClmLanguageCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CallAnalyticsJobSummary {
     /// <p>The name of the Call Analytics job. Job names are case sensitive and must be unique within an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub call_analytics_job_name: std::option::Option<std::string::String>,
     /// <p>The date and time the specified Call Analytics job request was made.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.761000-07:00</code> represents a transcription job that started processing at 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time your Call Analytics job began processing.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:32:58.789000-07:00</code> represents a transcription job that started processing at 12:32 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time the specified Call Analytics job finished processing.</p>
     /// <p>Timestamps are in the format <code>YYYY-MM-DD'T'HH:MM:SS.SSSSSS-UTC</code>. For example, <code>2022-05-04T12:33:13.922000-07:00</code> represents a transcription job that started processing at 12:33 PM UTC-7 on May 4, 2022.</p>
+    #[doc(hidden)]
     pub completion_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The language code used to create your Call Analytics transcription.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>Provides the status of your Call Analytics job.</p>
     /// <p>If the status is <code>COMPLETED</code>, the job is finished and you can find the results at the location specified in <code>TranscriptFileUri</code> (or <code>RedactedTranscriptFileUri</code>, if you requested transcript redaction). If the status is <code>FAILED</code>, <code>FailureReason</code> provides details on why your transcription job failed.</p>
+    #[doc(hidden)]
     pub call_analytics_job_status: std::option::Option<crate::model::CallAnalyticsJobStatus>,
     /// <p>If <code>CallAnalyticsJobStatus</code> is <code>FAILED</code>, <code>FailureReason</code> contains information about why the Call Analytics job failed. See also: <a href="https://docs.aws.amazon.com/transcribe/latest/APIReference/CommonErrors.html">Common Errors</a>.</p>
+    #[doc(hidden)]
     pub failure_reason: std::option::Option<std::string::String>,
 }
 impl CallAnalyticsJobSummary {
@@ -7336,11 +7476,10 @@ impl std::fmt::Debug for CallAnalyticsJobSummary {
         formatter.finish()
     }
 }
-/// See [`CallAnalyticsJobSummary`](crate::model::CallAnalyticsJobSummary)
+/// See [`CallAnalyticsJobSummary`](crate::model::CallAnalyticsJobSummary).
 pub mod call_analytics_job_summary {
 
-    /// A builder for [`CallAnalyticsJobSummary`](crate::model::CallAnalyticsJobSummary)
-    #[non_exhaustive]
+    /// A builder for [`CallAnalyticsJobSummary`](crate::model::CallAnalyticsJobSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) call_analytics_job_name: std::option::Option<std::string::String>,
@@ -7455,7 +7594,7 @@ pub mod call_analytics_job_summary {
             self.failure_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`CallAnalyticsJobSummary`](crate::model::CallAnalyticsJobSummary)
+        /// Consumes the builder and constructs a [`CallAnalyticsJobSummary`](crate::model::CallAnalyticsJobSummary).
         pub fn build(self) -> crate::model::CallAnalyticsJobSummary {
             crate::model::CallAnalyticsJobSummary {
                 call_analytics_job_name: self.call_analytics_job_name,
@@ -7470,7 +7609,7 @@ pub mod call_analytics_job_summary {
     }
 }
 impl CallAnalyticsJobSummary {
-    /// Creates a new builder-style object to manufacture [`CallAnalyticsJobSummary`](crate::model::CallAnalyticsJobSummary)
+    /// Creates a new builder-style object to manufacture [`CallAnalyticsJobSummary`](crate::model::CallAnalyticsJobSummary).
     pub fn builder() -> crate::model::call_analytics_job_summary::Builder {
         crate::model::call_analytics_job_summary::Builder::default()
     }

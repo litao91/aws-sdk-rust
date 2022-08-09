@@ -59,8 +59,10 @@ impl AsRef<str> for IdentityType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>A user-defined key, which is the minimum required information for a valid tag. For more information, see <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag</a>. </p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>A user-defined value, which is optional in a tag. For more information, see <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag Clusters</a>. </p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -81,11 +83,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -112,7 +113,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -122,7 +123,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -133,10 +134,13 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionEngineConfig {
     /// <p>The unique identifier of the execution engine. For an EMR cluster, this is the cluster ID.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The type of execution engine. A value of <code>EMR</code> specifies an EMR cluster.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::ExecutionEngineType>,
     /// <p>An optional unique ID of an EC2 security group to associate with the master instance of the EMR cluster for this notebook execution. For more information see <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks-security-groups.html">Specifying EC2 Security Groups for EMR Notebooks</a> in the <i>EMR Management Guide</i>.</p>
+    #[doc(hidden)]
     pub master_instance_security_group_id: std::option::Option<std::string::String>,
 }
 impl ExecutionEngineConfig {
@@ -165,11 +169,10 @@ impl std::fmt::Debug for ExecutionEngineConfig {
         formatter.finish()
     }
 }
-/// See [`ExecutionEngineConfig`](crate::model::ExecutionEngineConfig)
+/// See [`ExecutionEngineConfig`](crate::model::ExecutionEngineConfig).
 pub mod execution_engine_config {
 
-    /// A builder for [`ExecutionEngineConfig`](crate::model::ExecutionEngineConfig)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionEngineConfig`](crate::model::ExecutionEngineConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -216,7 +219,7 @@ pub mod execution_engine_config {
             self.master_instance_security_group_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionEngineConfig`](crate::model::ExecutionEngineConfig)
+        /// Consumes the builder and constructs a [`ExecutionEngineConfig`](crate::model::ExecutionEngineConfig).
         pub fn build(self) -> crate::model::ExecutionEngineConfig {
             crate::model::ExecutionEngineConfig {
                 id: self.id,
@@ -227,7 +230,7 @@ pub mod execution_engine_config {
     }
 }
 impl ExecutionEngineConfig {
-    /// Creates a new builder-style object to manufacture [`ExecutionEngineConfig`](crate::model::ExecutionEngineConfig)
+    /// Creates a new builder-style object to manufacture [`ExecutionEngineConfig`](crate::model::ExecutionEngineConfig).
     pub fn builder() -> crate::model::execution_engine_config::Builder {
         crate::model::execution_engine_config::Builder::default()
     }
@@ -289,6 +292,7 @@ impl AsRef<str> for ExecutionEngineType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoTerminationPolicy {
     /// <p>Specifies the amount of idle time in seconds after which the cluster automatically terminates. You can specify a minimum of 60 seconds and a maximum of 604800 seconds (seven days).</p>
+    #[doc(hidden)]
     pub idle_timeout: i64,
 }
 impl AutoTerminationPolicy {
@@ -304,11 +308,10 @@ impl std::fmt::Debug for AutoTerminationPolicy {
         formatter.finish()
     }
 }
-/// See [`AutoTerminationPolicy`](crate::model::AutoTerminationPolicy)
+/// See [`AutoTerminationPolicy`](crate::model::AutoTerminationPolicy).
 pub mod auto_termination_policy {
 
-    /// A builder for [`AutoTerminationPolicy`](crate::model::AutoTerminationPolicy)
-    #[non_exhaustive]
+    /// A builder for [`AutoTerminationPolicy`](crate::model::AutoTerminationPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) idle_timeout: std::option::Option<i64>,
@@ -324,7 +327,7 @@ pub mod auto_termination_policy {
             self.idle_timeout = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoTerminationPolicy`](crate::model::AutoTerminationPolicy)
+        /// Consumes the builder and constructs a [`AutoTerminationPolicy`](crate::model::AutoTerminationPolicy).
         pub fn build(self) -> crate::model::AutoTerminationPolicy {
             crate::model::AutoTerminationPolicy {
                 idle_timeout: self.idle_timeout.unwrap_or_default(),
@@ -333,7 +336,7 @@ pub mod auto_termination_policy {
     }
 }
 impl AutoTerminationPolicy {
-    /// Creates a new builder-style object to manufacture [`AutoTerminationPolicy`](crate::model::AutoTerminationPolicy)
+    /// Creates a new builder-style object to manufacture [`AutoTerminationPolicy`](crate::model::AutoTerminationPolicy).
     pub fn builder() -> crate::model::auto_termination_policy::Builder {
         crate::model::auto_termination_policy::Builder::default()
     }
@@ -346,9 +349,11 @@ impl AutoTerminationPolicy {
 pub struct PlacementGroupConfig {
     /// <p>Role of the instance in the cluster.</p>
     /// <p>Starting with Amazon EMR version 5.23.0, the only supported instance role is <code>MASTER</code>.</p>
+    #[doc(hidden)]
     pub instance_role: std::option::Option<crate::model::InstanceRoleType>,
     /// <p>EC2 Placement Group strategy associated with instance role.</p>
     /// <p>Starting with Amazon EMR version 5.23.0, the only supported placement strategy is <code>SPREAD</code> for the <code>MASTER</code> instance role.</p>
+    #[doc(hidden)]
     pub placement_strategy: std::option::Option<crate::model::PlacementGroupStrategy>,
 }
 impl PlacementGroupConfig {
@@ -371,11 +376,10 @@ impl std::fmt::Debug for PlacementGroupConfig {
         formatter.finish()
     }
 }
-/// See [`PlacementGroupConfig`](crate::model::PlacementGroupConfig)
+/// See [`PlacementGroupConfig`](crate::model::PlacementGroupConfig).
 pub mod placement_group_config {
 
-    /// A builder for [`PlacementGroupConfig`](crate::model::PlacementGroupConfig)
-    #[non_exhaustive]
+    /// A builder for [`PlacementGroupConfig`](crate::model::PlacementGroupConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_role: std::option::Option<crate::model::InstanceRoleType>,
@@ -412,7 +416,7 @@ pub mod placement_group_config {
             self.placement_strategy = input;
             self
         }
-        /// Consumes the builder and constructs a [`PlacementGroupConfig`](crate::model::PlacementGroupConfig)
+        /// Consumes the builder and constructs a [`PlacementGroupConfig`](crate::model::PlacementGroupConfig).
         pub fn build(self) -> crate::model::PlacementGroupConfig {
             crate::model::PlacementGroupConfig {
                 instance_role: self.instance_role,
@@ -422,7 +426,7 @@ pub mod placement_group_config {
     }
 }
 impl PlacementGroupConfig {
-    /// Creates a new builder-style object to manufacture [`PlacementGroupConfig`](crate::model::PlacementGroupConfig)
+    /// Creates a new builder-style object to manufacture [`PlacementGroupConfig`](crate::model::PlacementGroupConfig).
     pub fn builder() -> crate::model::placement_group_config::Builder {
         crate::model::placement_group_config::Builder::default()
     }
@@ -555,6 +559,7 @@ impl AsRef<str> for InstanceRoleType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ManagedScalingPolicy {
     /// <p>The EC2 unit limits for a managed scaling policy. The managed scaling activity of a cluster is not allowed to go above or below these limits. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.</p>
+    #[doc(hidden)]
     pub compute_limits: std::option::Option<crate::model::ComputeLimits>,
 }
 impl ManagedScalingPolicy {
@@ -570,11 +575,10 @@ impl std::fmt::Debug for ManagedScalingPolicy {
         formatter.finish()
     }
 }
-/// See [`ManagedScalingPolicy`](crate::model::ManagedScalingPolicy)
+/// See [`ManagedScalingPolicy`](crate::model::ManagedScalingPolicy).
 pub mod managed_scaling_policy {
 
-    /// A builder for [`ManagedScalingPolicy`](crate::model::ManagedScalingPolicy)
-    #[non_exhaustive]
+    /// A builder for [`ManagedScalingPolicy`](crate::model::ManagedScalingPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) compute_limits: std::option::Option<crate::model::ComputeLimits>,
@@ -593,7 +597,7 @@ pub mod managed_scaling_policy {
             self.compute_limits = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManagedScalingPolicy`](crate::model::ManagedScalingPolicy)
+        /// Consumes the builder and constructs a [`ManagedScalingPolicy`](crate::model::ManagedScalingPolicy).
         pub fn build(self) -> crate::model::ManagedScalingPolicy {
             crate::model::ManagedScalingPolicy {
                 compute_limits: self.compute_limits,
@@ -602,7 +606,7 @@ pub mod managed_scaling_policy {
     }
 }
 impl ManagedScalingPolicy {
-    /// Creates a new builder-style object to manufacture [`ManagedScalingPolicy`](crate::model::ManagedScalingPolicy)
+    /// Creates a new builder-style object to manufacture [`ManagedScalingPolicy`](crate::model::ManagedScalingPolicy).
     pub fn builder() -> crate::model::managed_scaling_policy::Builder {
         crate::model::managed_scaling_policy::Builder::default()
     }
@@ -613,14 +617,19 @@ impl ManagedScalingPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComputeLimits {
     /// <p> The unit type used for specifying a managed scaling policy. </p>
+    #[doc(hidden)]
     pub unit_type: std::option::Option<crate::model::ComputeLimitsUnitType>,
     /// <p> The lower boundary of EC2 units. It is measured through vCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration. </p>
+    #[doc(hidden)]
     pub minimum_capacity_units: std::option::Option<i32>,
     /// <p> The upper boundary of EC2 units. It is measured through vCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration. </p>
+    #[doc(hidden)]
     pub maximum_capacity_units: std::option::Option<i32>,
     /// <p> The upper boundary of On-Demand EC2 units. It is measured through vCPU cores or instances for instance groups and measured through units for instance fleets. The On-Demand units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between On-Demand and Spot Instances. </p>
+    #[doc(hidden)]
     pub maximum_on_demand_capacity_units: std::option::Option<i32>,
     /// <p> The upper boundary of EC2 units for core node type in a cluster. It is measured through vCPU cores or instances for instance groups and measured through units for instance fleets. The core units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between core and task nodes. </p>
+    #[doc(hidden)]
     pub maximum_core_capacity_units: std::option::Option<i32>,
 }
 impl ComputeLimits {
@@ -662,11 +671,10 @@ impl std::fmt::Debug for ComputeLimits {
         formatter.finish()
     }
 }
-/// See [`ComputeLimits`](crate::model::ComputeLimits)
+/// See [`ComputeLimits`](crate::model::ComputeLimits).
 pub mod compute_limits {
 
-    /// A builder for [`ComputeLimits`](crate::model::ComputeLimits)
-    #[non_exhaustive]
+    /// A builder for [`ComputeLimits`](crate::model::ComputeLimits).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) unit_type: std::option::Option<crate::model::ComputeLimitsUnitType>,
@@ -732,7 +740,7 @@ pub mod compute_limits {
             self.maximum_core_capacity_units = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComputeLimits`](crate::model::ComputeLimits)
+        /// Consumes the builder and constructs a [`ComputeLimits`](crate::model::ComputeLimits).
         pub fn build(self) -> crate::model::ComputeLimits {
             crate::model::ComputeLimits {
                 unit_type: self.unit_type,
@@ -745,7 +753,7 @@ pub mod compute_limits {
     }
 }
 impl ComputeLimits {
-    /// Creates a new builder-style object to manufacture [`ComputeLimits`](crate::model::ComputeLimits)
+    /// Creates a new builder-style object to manufacture [`ComputeLimits`](crate::model::ComputeLimits).
     pub fn builder() -> crate::model::compute_limits::Builder {
         crate::model::compute_limits::Builder::default()
     }
@@ -815,14 +823,19 @@ impl AsRef<str> for ComputeLimitsUnitType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KerberosAttributes {
     /// <p>The name of the Kerberos realm to which all nodes in a cluster belong. For example, <code>EC2.INTERNAL</code>. </p>
+    #[doc(hidden)]
     pub realm: std::option::Option<std::string::String>,
     /// <p>The password used within the cluster for the kadmin service on the cluster-dedicated KDC, which maintains Kerberos principals, password policies, and keytabs for the cluster.</p>
+    #[doc(hidden)]
     pub kdc_admin_password: std::option::Option<std::string::String>,
     /// <p>Required only when establishing a cross-realm trust with a KDC in a different realm. The cross-realm principal password, which must be identical across realms.</p>
+    #[doc(hidden)]
     pub cross_realm_trust_principal_password: std::option::Option<std::string::String>,
     /// <p>Required only when establishing a cross-realm trust with an Active Directory domain. A user with sufficient privileges to join resources to the domain.</p>
+    #[doc(hidden)]
     pub ad_domain_join_user: std::option::Option<std::string::String>,
     /// <p>The Active Directory password for <code>ADDomainJoinUser</code>.</p>
+    #[doc(hidden)]
     pub ad_domain_join_password: std::option::Option<std::string::String>,
 }
 impl KerberosAttributes {
@@ -861,11 +874,10 @@ impl std::fmt::Debug for KerberosAttributes {
         formatter.finish()
     }
 }
-/// See [`KerberosAttributes`](crate::model::KerberosAttributes)
+/// See [`KerberosAttributes`](crate::model::KerberosAttributes).
 pub mod kerberos_attributes {
 
-    /// A builder for [`KerberosAttributes`](crate::model::KerberosAttributes)
-    #[non_exhaustive]
+    /// A builder for [`KerberosAttributes`](crate::model::KerberosAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) realm: std::option::Option<std::string::String>,
@@ -940,7 +952,7 @@ pub mod kerberos_attributes {
             self.ad_domain_join_password = input;
             self
         }
-        /// Consumes the builder and constructs a [`KerberosAttributes`](crate::model::KerberosAttributes)
+        /// Consumes the builder and constructs a [`KerberosAttributes`](crate::model::KerberosAttributes).
         pub fn build(self) -> crate::model::KerberosAttributes {
             crate::model::KerberosAttributes {
                 realm: self.realm,
@@ -953,7 +965,7 @@ pub mod kerberos_attributes {
     }
 }
 impl KerberosAttributes {
-    /// Creates a new builder-style object to manufacture [`KerberosAttributes`](crate::model::KerberosAttributes)
+    /// Creates a new builder-style object to manufacture [`KerberosAttributes`](crate::model::KerberosAttributes).
     pub fn builder() -> crate::model::kerberos_attributes::Builder {
         crate::model::kerberos_attributes::Builder::default()
     }
@@ -1077,10 +1089,13 @@ impl AsRef<str> for ScaleDownBehavior {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Configuration {
     /// <p>The classification within a configuration.</p>
+    #[doc(hidden)]
     pub classification: std::option::Option<std::string::String>,
     /// <p>A list of additional configurations to apply within a configuration object.</p>
+    #[doc(hidden)]
     pub configurations: std::option::Option<std::vec::Vec<crate::model::Configuration>>,
     /// <p>A set of properties specified within a configuration classification.</p>
+    #[doc(hidden)]
     pub properties:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1110,11 +1125,10 @@ impl std::fmt::Debug for Configuration {
         formatter.finish()
     }
 }
-/// See [`Configuration`](crate::model::Configuration)
+/// See [`Configuration`](crate::model::Configuration).
 pub mod configuration {
 
-    /// A builder for [`Configuration`](crate::model::Configuration)
-    #[non_exhaustive]
+    /// A builder for [`Configuration`](crate::model::Configuration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) classification: std::option::Option<std::string::String>,
@@ -1181,7 +1195,7 @@ pub mod configuration {
             self.properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`Configuration`](crate::model::Configuration)
+        /// Consumes the builder and constructs a [`Configuration`](crate::model::Configuration).
         pub fn build(self) -> crate::model::Configuration {
             crate::model::Configuration {
                 classification: self.classification,
@@ -1192,7 +1206,7 @@ pub mod configuration {
     }
 }
 impl Configuration {
-    /// Creates a new builder-style object to manufacture [`Configuration`](crate::model::Configuration)
+    /// Creates a new builder-style object to manufacture [`Configuration`](crate::model::Configuration).
     pub fn builder() -> crate::model::configuration::Builder {
         crate::model::configuration::Builder::default()
     }
@@ -1204,12 +1218,16 @@ impl Configuration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Application {
     /// <p>The name of the application.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>Arguments for Amazon EMR to pass to the application.</p>
+    #[doc(hidden)]
     pub args: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>This option is for advanced users only. This is meta information about third-party applications that third-party vendors use for testing purposes.</p>
+    #[doc(hidden)]
     pub additional_info:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1244,11 +1262,10 @@ impl std::fmt::Debug for Application {
         formatter.finish()
     }
 }
-/// See [`Application`](crate::model::Application)
+/// See [`Application`](crate::model::Application).
 pub mod application {
 
-    /// A builder for [`Application`](crate::model::Application)
-    #[non_exhaustive]
+    /// A builder for [`Application`](crate::model::Application).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1323,7 +1340,7 @@ pub mod application {
             self.additional_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`Application`](crate::model::Application)
+        /// Consumes the builder and constructs a [`Application`](crate::model::Application).
         pub fn build(self) -> crate::model::Application {
             crate::model::Application {
                 name: self.name,
@@ -1335,7 +1352,7 @@ pub mod application {
     }
 }
 impl Application {
-    /// Creates a new builder-style object to manufacture [`Application`](crate::model::Application)
+    /// Creates a new builder-style object to manufacture [`Application`](crate::model::Application).
     pub fn builder() -> crate::model::application::Builder {
         crate::model::application::Builder::default()
     }
@@ -1346,8 +1363,10 @@ impl Application {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SupportedProductConfig {
     /// <p>The name of the product configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The list of user-supplied arguments.</p>
+    #[doc(hidden)]
     pub args: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl SupportedProductConfig {
@@ -1368,11 +1387,10 @@ impl std::fmt::Debug for SupportedProductConfig {
         formatter.finish()
     }
 }
-/// See [`SupportedProductConfig`](crate::model::SupportedProductConfig)
+/// See [`SupportedProductConfig`](crate::model::SupportedProductConfig).
 pub mod supported_product_config {
 
-    /// A builder for [`SupportedProductConfig`](crate::model::SupportedProductConfig)
-    #[non_exhaustive]
+    /// A builder for [`SupportedProductConfig`](crate::model::SupportedProductConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1408,7 +1426,7 @@ pub mod supported_product_config {
             self.args = input;
             self
         }
-        /// Consumes the builder and constructs a [`SupportedProductConfig`](crate::model::SupportedProductConfig)
+        /// Consumes the builder and constructs a [`SupportedProductConfig`](crate::model::SupportedProductConfig).
         pub fn build(self) -> crate::model::SupportedProductConfig {
             crate::model::SupportedProductConfig {
                 name: self.name,
@@ -1418,7 +1436,7 @@ pub mod supported_product_config {
     }
 }
 impl SupportedProductConfig {
-    /// Creates a new builder-style object to manufacture [`SupportedProductConfig`](crate::model::SupportedProductConfig)
+    /// Creates a new builder-style object to manufacture [`SupportedProductConfig`](crate::model::SupportedProductConfig).
     pub fn builder() -> crate::model::supported_product_config::Builder {
         crate::model::supported_product_config::Builder::default()
     }
@@ -1429,8 +1447,10 @@ impl SupportedProductConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BootstrapActionConfig {
     /// <p>The name of the bootstrap action.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The script run by the bootstrap action.</p>
+    #[doc(hidden)]
     pub script_bootstrap_action: std::option::Option<crate::model::ScriptBootstrapActionConfig>,
 }
 impl BootstrapActionConfig {
@@ -1453,11 +1473,10 @@ impl std::fmt::Debug for BootstrapActionConfig {
         formatter.finish()
     }
 }
-/// See [`BootstrapActionConfig`](crate::model::BootstrapActionConfig)
+/// See [`BootstrapActionConfig`](crate::model::BootstrapActionConfig).
 pub mod bootstrap_action_config {
 
-    /// A builder for [`BootstrapActionConfig`](crate::model::BootstrapActionConfig)
-    #[non_exhaustive]
+    /// A builder for [`BootstrapActionConfig`](crate::model::BootstrapActionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1491,7 +1510,7 @@ pub mod bootstrap_action_config {
             self.script_bootstrap_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`BootstrapActionConfig`](crate::model::BootstrapActionConfig)
+        /// Consumes the builder and constructs a [`BootstrapActionConfig`](crate::model::BootstrapActionConfig).
         pub fn build(self) -> crate::model::BootstrapActionConfig {
             crate::model::BootstrapActionConfig {
                 name: self.name,
@@ -1501,7 +1520,7 @@ pub mod bootstrap_action_config {
     }
 }
 impl BootstrapActionConfig {
-    /// Creates a new builder-style object to manufacture [`BootstrapActionConfig`](crate::model::BootstrapActionConfig)
+    /// Creates a new builder-style object to manufacture [`BootstrapActionConfig`](crate::model::BootstrapActionConfig).
     pub fn builder() -> crate::model::bootstrap_action_config::Builder {
         crate::model::bootstrap_action_config::Builder::default()
     }
@@ -1512,8 +1531,10 @@ impl BootstrapActionConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScriptBootstrapActionConfig {
     /// <p>Location in Amazon S3 of the script to run during a bootstrap action.</p>
+    #[doc(hidden)]
     pub path: std::option::Option<std::string::String>,
     /// <p>A list of command line arguments to pass to the bootstrap action script.</p>
+    #[doc(hidden)]
     pub args: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ScriptBootstrapActionConfig {
@@ -1534,11 +1555,10 @@ impl std::fmt::Debug for ScriptBootstrapActionConfig {
         formatter.finish()
     }
 }
-/// See [`ScriptBootstrapActionConfig`](crate::model::ScriptBootstrapActionConfig)
+/// See [`ScriptBootstrapActionConfig`](crate::model::ScriptBootstrapActionConfig).
 pub mod script_bootstrap_action_config {
 
-    /// A builder for [`ScriptBootstrapActionConfig`](crate::model::ScriptBootstrapActionConfig)
-    #[non_exhaustive]
+    /// A builder for [`ScriptBootstrapActionConfig`](crate::model::ScriptBootstrapActionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) path: std::option::Option<std::string::String>,
@@ -1574,7 +1594,7 @@ pub mod script_bootstrap_action_config {
             self.args = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScriptBootstrapActionConfig`](crate::model::ScriptBootstrapActionConfig)
+        /// Consumes the builder and constructs a [`ScriptBootstrapActionConfig`](crate::model::ScriptBootstrapActionConfig).
         pub fn build(self) -> crate::model::ScriptBootstrapActionConfig {
             crate::model::ScriptBootstrapActionConfig {
                 path: self.path,
@@ -1584,7 +1604,7 @@ pub mod script_bootstrap_action_config {
     }
 }
 impl ScriptBootstrapActionConfig {
-    /// Creates a new builder-style object to manufacture [`ScriptBootstrapActionConfig`](crate::model::ScriptBootstrapActionConfig)
+    /// Creates a new builder-style object to manufacture [`ScriptBootstrapActionConfig`](crate::model::ScriptBootstrapActionConfig).
     pub fn builder() -> crate::model::script_bootstrap_action_config::Builder {
         crate::model::script_bootstrap_action_config::Builder::default()
     }
@@ -1595,6 +1615,7 @@ impl ScriptBootstrapActionConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StepConfig {
     /// <p>The name of the step.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The action to take when the step fails. Use one of the following values:</p>
     /// <ul>
@@ -1605,8 +1626,10 @@ pub struct StepConfig {
     /// </ul>
     /// <p>If a cluster's <code>StepConcurrencyLevel</code> is greater than <code>1</code>, do not use <code>AddJobFlowSteps</code> to submit a step with this parameter set to <code>CANCEL_AND_WAIT</code> or <code>TERMINATE_CLUSTER</code>. The step is not submitted and the action fails with a message that the <code>ActionOnFailure</code> setting is not valid.</p>
     /// <p>If you change a cluster's <code>StepConcurrencyLevel</code> to be greater than 1 while a step is running, the <code>ActionOnFailure</code> parameter may not behave as you expect. In this case, for a step that fails with this parameter set to <code>CANCEL_AND_WAIT</code>, pending steps and the running step are not canceled; for a step that fails with this parameter set to <code>TERMINATE_CLUSTER</code>, the cluster does not terminate.</p>
+    #[doc(hidden)]
     pub action_on_failure: std::option::Option<crate::model::ActionOnFailure>,
     /// <p>The JAR file used for the step.</p>
+    #[doc(hidden)]
     pub hadoop_jar_step: std::option::Option<crate::model::HadoopJarStepConfig>,
 }
 impl StepConfig {
@@ -1640,11 +1663,10 @@ impl std::fmt::Debug for StepConfig {
         formatter.finish()
     }
 }
-/// See [`StepConfig`](crate::model::StepConfig)
+/// See [`StepConfig`](crate::model::StepConfig).
 pub mod step_config {
 
-    /// A builder for [`StepConfig`](crate::model::StepConfig)
-    #[non_exhaustive]
+    /// A builder for [`StepConfig`](crate::model::StepConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1704,7 +1726,7 @@ pub mod step_config {
             self.hadoop_jar_step = input;
             self
         }
-        /// Consumes the builder and constructs a [`StepConfig`](crate::model::StepConfig)
+        /// Consumes the builder and constructs a [`StepConfig`](crate::model::StepConfig).
         pub fn build(self) -> crate::model::StepConfig {
             crate::model::StepConfig {
                 name: self.name,
@@ -1715,7 +1737,7 @@ pub mod step_config {
     }
 }
 impl StepConfig {
-    /// Creates a new builder-style object to manufacture [`StepConfig`](crate::model::StepConfig)
+    /// Creates a new builder-style object to manufacture [`StepConfig`](crate::model::StepConfig).
     pub fn builder() -> crate::model::step_config::Builder {
         crate::model::step_config::Builder::default()
     }
@@ -1726,12 +1748,16 @@ impl StepConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HadoopJarStepConfig {
     /// <p>A list of Java properties that are set when the step runs. You can use these properties to pass key-value pairs to your main function.</p>
+    #[doc(hidden)]
     pub properties: std::option::Option<std::vec::Vec<crate::model::KeyValue>>,
     /// <p>A path to a JAR file run during the step.</p>
+    #[doc(hidden)]
     pub jar: std::option::Option<std::string::String>,
     /// <p>The name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.</p>
+    #[doc(hidden)]
     pub main_class: std::option::Option<std::string::String>,
     /// <p>A list of command line arguments passed to the JAR file's main function when executed.</p>
+    #[doc(hidden)]
     pub args: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl HadoopJarStepConfig {
@@ -1762,11 +1788,10 @@ impl std::fmt::Debug for HadoopJarStepConfig {
         formatter.finish()
     }
 }
-/// See [`HadoopJarStepConfig`](crate::model::HadoopJarStepConfig)
+/// See [`HadoopJarStepConfig`](crate::model::HadoopJarStepConfig).
 pub mod hadoop_jar_step_config {
 
-    /// A builder for [`HadoopJarStepConfig`](crate::model::HadoopJarStepConfig)
-    #[non_exhaustive]
+    /// A builder for [`HadoopJarStepConfig`](crate::model::HadoopJarStepConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) properties: std::option::Option<std::vec::Vec<crate::model::KeyValue>>,
@@ -1833,7 +1858,7 @@ pub mod hadoop_jar_step_config {
             self.args = input;
             self
         }
-        /// Consumes the builder and constructs a [`HadoopJarStepConfig`](crate::model::HadoopJarStepConfig)
+        /// Consumes the builder and constructs a [`HadoopJarStepConfig`](crate::model::HadoopJarStepConfig).
         pub fn build(self) -> crate::model::HadoopJarStepConfig {
             crate::model::HadoopJarStepConfig {
                 properties: self.properties,
@@ -1845,7 +1870,7 @@ pub mod hadoop_jar_step_config {
     }
 }
 impl HadoopJarStepConfig {
-    /// Creates a new builder-style object to manufacture [`HadoopJarStepConfig`](crate::model::HadoopJarStepConfig)
+    /// Creates a new builder-style object to manufacture [`HadoopJarStepConfig`](crate::model::HadoopJarStepConfig).
     pub fn builder() -> crate::model::hadoop_jar_step_config::Builder {
         crate::model::hadoop_jar_step_config::Builder::default()
     }
@@ -1856,8 +1881,10 @@ impl HadoopJarStepConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyValue {
     /// <p>The unique identifier of a key-value pair.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value part of the identified key.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl KeyValue {
@@ -1878,11 +1905,10 @@ impl std::fmt::Debug for KeyValue {
         formatter.finish()
     }
 }
-/// See [`KeyValue`](crate::model::KeyValue)
+/// See [`KeyValue`](crate::model::KeyValue).
 pub mod key_value {
 
-    /// A builder for [`KeyValue`](crate::model::KeyValue)
-    #[non_exhaustive]
+    /// A builder for [`KeyValue`](crate::model::KeyValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1909,7 +1935,7 @@ pub mod key_value {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyValue`](crate::model::KeyValue)
+        /// Consumes the builder and constructs a [`KeyValue`](crate::model::KeyValue).
         pub fn build(self) -> crate::model::KeyValue {
             crate::model::KeyValue {
                 key: self.key,
@@ -1919,7 +1945,7 @@ pub mod key_value {
     }
 }
 impl KeyValue {
-    /// Creates a new builder-style object to manufacture [`KeyValue`](crate::model::KeyValue)
+    /// Creates a new builder-style object to manufacture [`KeyValue`](crate::model::KeyValue).
     pub fn builder() -> crate::model::key_value::Builder {
         crate::model::key_value::Builder::default()
     }
@@ -1998,43 +2024,60 @@ impl AsRef<str> for ActionOnFailure {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobFlowInstancesConfig {
     /// <p>The EC2 instance type of the master node.</p>
+    #[doc(hidden)]
     pub master_instance_type: std::option::Option<std::string::String>,
     /// <p>The EC2 instance type of the core and task nodes.</p>
+    #[doc(hidden)]
     pub slave_instance_type: std::option::Option<std::string::String>,
     /// <p>The number of EC2 instances in the cluster.</p>
+    #[doc(hidden)]
     pub instance_count: std::option::Option<i32>,
     /// <p>Configuration for the instance groups in a cluster.</p>
+    #[doc(hidden)]
     pub instance_groups: std::option::Option<std::vec::Vec<crate::model::InstanceGroupConfig>>,
     /// <note>
     /// <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p>
     /// </note>
     /// <p>Describes the EC2 instances and instance configurations for clusters that use the instance fleet configuration.</p>
+    #[doc(hidden)]
     pub instance_fleets: std::option::Option<std::vec::Vec<crate::model::InstanceFleetConfig>>,
     /// <p>The name of the EC2 key pair that can be used to connect to the master node using SSH as the user called "hadoop."</p>
+    #[doc(hidden)]
     pub ec2_key_name: std::option::Option<std::string::String>,
     /// <p>The Availability Zone in which the cluster runs.</p>
+    #[doc(hidden)]
     pub placement: std::option::Option<crate::model::PlacementType>,
     /// <p>Specifies whether the cluster should remain available after completing all steps. Defaults to <code>true</code>. For more information about configuring cluster termination, see <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control Cluster Termination</a> in the <i>EMR Management Guide</i>.</p>
+    #[doc(hidden)]
     pub keep_job_flow_alive_when_no_steps: bool,
     /// <p>Specifies whether to lock the cluster to prevent the Amazon EC2 instances from being terminated by API call, user intervention, or in the event of a job-flow error.</p>
+    #[doc(hidden)]
     pub termination_protected: bool,
     /// <p>Applies only to Amazon EMR release versions earlier than 4.0. The Hadoop version for the cluster. Valid inputs are "0.18" (no longer maintained), "0.20" (no longer maintained), "0.20.205" (no longer maintained), "1.0.3", "2.2.0", or "2.4.0". If you do not set this value, the default of 0.18 is used, unless the <code>AmiVersion</code> parameter is set in the RunJobFlow call, in which case the default version of Hadoop for that AMI version is used.</p>
+    #[doc(hidden)]
     pub hadoop_version: std::option::Option<std::string::String>,
     /// <p>Applies to clusters that use the uniform instance group configuration. To launch the cluster in Amazon Virtual Private Cloud (Amazon VPC), set this parameter to the identifier of the Amazon VPC subnet where you want the cluster to launch. If you do not specify this value and your account supports EC2-Classic, the cluster launches in EC2-Classic.</p>
+    #[doc(hidden)]
     pub ec2_subnet_id: std::option::Option<std::string::String>,
     /// <p>Applies to clusters that use the instance fleet configuration. When multiple EC2 subnet IDs are specified, Amazon EMR evaluates them and launches instances in the optimal subnet.</p> <note>
     /// <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p>
     /// </note>
+    #[doc(hidden)]
     pub ec2_subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The identifier of the Amazon EC2 security group for the master node. If you specify <code>EmrManagedMasterSecurityGroup</code>, you must also specify <code>EmrManagedSlaveSecurityGroup</code>.</p>
+    #[doc(hidden)]
     pub emr_managed_master_security_group: std::option::Option<std::string::String>,
     /// <p>The identifier of the Amazon EC2 security group for the core and task nodes. If you specify <code>EmrManagedSlaveSecurityGroup</code>, you must also specify <code>EmrManagedMasterSecurityGroup</code>.</p>
+    #[doc(hidden)]
     pub emr_managed_slave_security_group: std::option::Option<std::string::String>,
     /// <p>The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.</p>
+    #[doc(hidden)]
     pub service_access_security_group: std::option::Option<std::string::String>,
     /// <p>A list of additional Amazon EC2 security group IDs for the master node.</p>
+    #[doc(hidden)]
     pub additional_master_security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of additional Amazon EC2 security group IDs for the core and task nodes.</p>
+    #[doc(hidden)]
     pub additional_slave_security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl JobFlowInstancesConfig {
@@ -2153,11 +2196,10 @@ impl std::fmt::Debug for JobFlowInstancesConfig {
         formatter.finish()
     }
 }
-/// See [`JobFlowInstancesConfig`](crate::model::JobFlowInstancesConfig)
+/// See [`JobFlowInstancesConfig`](crate::model::JobFlowInstancesConfig).
 pub mod job_flow_instances_config {
 
-    /// A builder for [`JobFlowInstancesConfig`](crate::model::JobFlowInstancesConfig)
-    #[non_exhaustive]
+    /// A builder for [`JobFlowInstancesConfig`](crate::model::JobFlowInstancesConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) master_instance_type: std::option::Option<std::string::String>,
@@ -2450,7 +2492,7 @@ pub mod job_flow_instances_config {
             self.additional_slave_security_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobFlowInstancesConfig`](crate::model::JobFlowInstancesConfig)
+        /// Consumes the builder and constructs a [`JobFlowInstancesConfig`](crate::model::JobFlowInstancesConfig).
         pub fn build(self) -> crate::model::JobFlowInstancesConfig {
             crate::model::JobFlowInstancesConfig {
                 master_instance_type: self.master_instance_type,
@@ -2477,7 +2519,7 @@ pub mod job_flow_instances_config {
     }
 }
 impl JobFlowInstancesConfig {
-    /// Creates a new builder-style object to manufacture [`JobFlowInstancesConfig`](crate::model::JobFlowInstancesConfig)
+    /// Creates a new builder-style object to manufacture [`JobFlowInstancesConfig`](crate::model::JobFlowInstancesConfig).
     pub fn builder() -> crate::model::job_flow_instances_config::Builder {
         crate::model::job_flow_instances_config::Builder::default()
     }
@@ -2488,10 +2530,12 @@ impl JobFlowInstancesConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PlacementType {
     /// <p>The Amazon EC2 Availability Zone for the cluster. <code>AvailabilityZone</code> is used for uniform instance groups, while <code>AvailabilityZones</code> (plural) is used for instance fleets.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>When multiple Availability Zones are specified, Amazon EMR evaluates them and launches instances in the optimal Availability Zone. <code>AvailabilityZones</code> is used for instance fleets, while <code>AvailabilityZone</code> (singular) is used for uniform instance groups.</p> <note>
     /// <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p>
     /// </note>
+    #[doc(hidden)]
     pub availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl PlacementType {
@@ -2514,11 +2558,10 @@ impl std::fmt::Debug for PlacementType {
         formatter.finish()
     }
 }
-/// See [`PlacementType`](crate::model::PlacementType)
+/// See [`PlacementType`](crate::model::PlacementType).
 pub mod placement_type {
 
-    /// A builder for [`PlacementType`](crate::model::PlacementType)
-    #[non_exhaustive]
+    /// A builder for [`PlacementType`](crate::model::PlacementType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) availability_zone: std::option::Option<std::string::String>,
@@ -2561,7 +2604,7 @@ pub mod placement_type {
             self.availability_zones = input;
             self
         }
-        /// Consumes the builder and constructs a [`PlacementType`](crate::model::PlacementType)
+        /// Consumes the builder and constructs a [`PlacementType`](crate::model::PlacementType).
         pub fn build(self) -> crate::model::PlacementType {
             crate::model::PlacementType {
                 availability_zone: self.availability_zone,
@@ -2571,7 +2614,7 @@ pub mod placement_type {
     }
 }
 impl PlacementType {
-    /// Creates a new builder-style object to manufacture [`PlacementType`](crate::model::PlacementType)
+    /// Creates a new builder-style object to manufacture [`PlacementType`](crate::model::PlacementType).
     pub fn builder() -> crate::model::placement_type::Builder {
         crate::model::placement_type::Builder::default()
     }
@@ -2584,20 +2627,26 @@ impl PlacementType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceFleetConfig {
     /// <p>The friendly name of the instance fleet.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The node type that the instance fleet hosts. Valid values are MASTER, CORE, and TASK.</p>
+    #[doc(hidden)]
     pub instance_fleet_type: std::option::Option<crate::model::InstanceFleetType>,
     /// <p>The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand Instances to provision. When the instance fleet launches, Amazon EMR tries to provision On-Demand Instances as specified by <code>InstanceTypeConfig</code>. Each instance configuration has a specified <code>WeightedCapacity</code>. When an On-Demand Instance is provisioned, the <code>WeightedCapacity</code> units count toward the target capacity. Amazon EMR provisions instances until the target capacity is totally fulfilled, even if this results in an overage. For example, if there are 2 units remaining to fulfill capacity, and Amazon EMR can only provision an instance with a <code>WeightedCapacity</code> of 5 units, the instance is provisioned, and the target capacity is exceeded by 3 units.</p> <note>
     /// <p>If not specified or set to 0, only Spot Instances are provisioned for the instance fleet using <code>TargetSpotCapacity</code>. At least one of <code>TargetSpotCapacity</code> and <code>TargetOnDemandCapacity</code> should be greater than 0. For a master instance fleet, only one of <code>TargetSpotCapacity</code> and <code>TargetOnDemandCapacity</code> can be specified, and its value must be 1.</p>
     /// </note>
+    #[doc(hidden)]
     pub target_on_demand_capacity: std::option::Option<i32>,
     /// <p>The target capacity of Spot units for the instance fleet, which determines how many Spot Instances to provision. When the instance fleet launches, Amazon EMR tries to provision Spot Instances as specified by <code>InstanceTypeConfig</code>. Each instance configuration has a specified <code>WeightedCapacity</code>. When a Spot Instance is provisioned, the <code>WeightedCapacity</code> units count toward the target capacity. Amazon EMR provisions instances until the target capacity is totally fulfilled, even if this results in an overage. For example, if there are 2 units remaining to fulfill capacity, and Amazon EMR can only provision an instance with a <code>WeightedCapacity</code> of 5 units, the instance is provisioned, and the target capacity is exceeded by 3 units.</p> <note>
     /// <p>If not specified or set to 0, only On-Demand Instances are provisioned for the instance fleet. At least one of <code>TargetSpotCapacity</code> and <code>TargetOnDemandCapacity</code> should be greater than 0. For a master instance fleet, only one of <code>TargetSpotCapacity</code> and <code>TargetOnDemandCapacity</code> can be specified, and its value must be 1.</p>
     /// </note>
+    #[doc(hidden)]
     pub target_spot_capacity: std::option::Option<i32>,
     /// <p>The instance type configurations that define the EC2 instances in the instance fleet.</p>
+    #[doc(hidden)]
     pub instance_type_configs: std::option::Option<std::vec::Vec<crate::model::InstanceTypeConfig>>,
     /// <p>The launch specification for the instance fleet.</p>
+    #[doc(hidden)]
     pub launch_specifications:
         std::option::Option<crate::model::InstanceFleetProvisioningSpecifications>,
 }
@@ -2647,11 +2696,10 @@ impl std::fmt::Debug for InstanceFleetConfig {
         formatter.finish()
     }
 }
-/// See [`InstanceFleetConfig`](crate::model::InstanceFleetConfig)
+/// See [`InstanceFleetConfig`](crate::model::InstanceFleetConfig).
 pub mod instance_fleet_config {
 
-    /// A builder for [`InstanceFleetConfig`](crate::model::InstanceFleetConfig)
-    #[non_exhaustive]
+    /// A builder for [`InstanceFleetConfig`](crate::model::InstanceFleetConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2750,7 +2798,7 @@ pub mod instance_fleet_config {
             self.launch_specifications = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceFleetConfig`](crate::model::InstanceFleetConfig)
+        /// Consumes the builder and constructs a [`InstanceFleetConfig`](crate::model::InstanceFleetConfig).
         pub fn build(self) -> crate::model::InstanceFleetConfig {
             crate::model::InstanceFleetConfig {
                 name: self.name,
@@ -2764,7 +2812,7 @@ pub mod instance_fleet_config {
     }
 }
 impl InstanceFleetConfig {
-    /// Creates a new builder-style object to manufacture [`InstanceFleetConfig`](crate::model::InstanceFleetConfig)
+    /// Creates a new builder-style object to manufacture [`InstanceFleetConfig`](crate::model::InstanceFleetConfig).
     pub fn builder() -> crate::model::instance_fleet_config::Builder {
         crate::model::instance_fleet_config::Builder::default()
     }
@@ -2777,10 +2825,12 @@ impl InstanceFleetConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceFleetProvisioningSpecifications {
     /// <p>The launch specification for Spot Instances in the fleet, which determines the defined duration, provisioning timeout behavior, and allocation strategy.</p>
+    #[doc(hidden)]
     pub spot_specification: std::option::Option<crate::model::SpotProvisioningSpecification>,
     /// <p> The launch specification for On-Demand Instances in the instance fleet, which determines the allocation strategy. </p> <note>
     /// <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR version 5.12.1 and later.</p>
     /// </note>
+    #[doc(hidden)]
     pub on_demand_specification:
         std::option::Option<crate::model::OnDemandProvisioningSpecification>,
 }
@@ -2808,11 +2858,10 @@ impl std::fmt::Debug for InstanceFleetProvisioningSpecifications {
         formatter.finish()
     }
 }
-/// See [`InstanceFleetProvisioningSpecifications`](crate::model::InstanceFleetProvisioningSpecifications)
+/// See [`InstanceFleetProvisioningSpecifications`](crate::model::InstanceFleetProvisioningSpecifications).
 pub mod instance_fleet_provisioning_specifications {
 
-    /// A builder for [`InstanceFleetProvisioningSpecifications`](crate::model::InstanceFleetProvisioningSpecifications)
-    #[non_exhaustive]
+    /// A builder for [`InstanceFleetProvisioningSpecifications`](crate::model::InstanceFleetProvisioningSpecifications).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) spot_specification:
@@ -2857,7 +2906,7 @@ pub mod instance_fleet_provisioning_specifications {
             self.on_demand_specification = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceFleetProvisioningSpecifications`](crate::model::InstanceFleetProvisioningSpecifications)
+        /// Consumes the builder and constructs a [`InstanceFleetProvisioningSpecifications`](crate::model::InstanceFleetProvisioningSpecifications).
         pub fn build(self) -> crate::model::InstanceFleetProvisioningSpecifications {
             crate::model::InstanceFleetProvisioningSpecifications {
                 spot_specification: self.spot_specification,
@@ -2867,7 +2916,7 @@ pub mod instance_fleet_provisioning_specifications {
     }
 }
 impl InstanceFleetProvisioningSpecifications {
-    /// Creates a new builder-style object to manufacture [`InstanceFleetProvisioningSpecifications`](crate::model::InstanceFleetProvisioningSpecifications)
+    /// Creates a new builder-style object to manufacture [`InstanceFleetProvisioningSpecifications`](crate::model::InstanceFleetProvisioningSpecifications).
     pub fn builder() -> crate::model::instance_fleet_provisioning_specifications::Builder {
         crate::model::instance_fleet_provisioning_specifications::Builder::default()
     }
@@ -2880,9 +2929,11 @@ impl InstanceFleetProvisioningSpecifications {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OnDemandProvisioningSpecification {
     /// <p>Specifies the strategy to use in launching On-Demand instance fleets. Currently, the only option is <code>lowest-price</code> (the default), which launches the lowest price first.</p>
+    #[doc(hidden)]
     pub allocation_strategy:
         std::option::Option<crate::model::OnDemandProvisioningAllocationStrategy>,
     /// <p>The launch specification for On-Demand instances in the instance fleet, which determines the allocation strategy.</p>
+    #[doc(hidden)]
     pub capacity_reservation_options:
         std::option::Option<crate::model::OnDemandCapacityReservationOptions>,
 }
@@ -2911,11 +2962,10 @@ impl std::fmt::Debug for OnDemandProvisioningSpecification {
         formatter.finish()
     }
 }
-/// See [`OnDemandProvisioningSpecification`](crate::model::OnDemandProvisioningSpecification)
+/// See [`OnDemandProvisioningSpecification`](crate::model::OnDemandProvisioningSpecification).
 pub mod on_demand_provisioning_specification {
 
-    /// A builder for [`OnDemandProvisioningSpecification`](crate::model::OnDemandProvisioningSpecification)
-    #[non_exhaustive]
+    /// A builder for [`OnDemandProvisioningSpecification`](crate::model::OnDemandProvisioningSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allocation_strategy:
@@ -2956,7 +3006,7 @@ pub mod on_demand_provisioning_specification {
             self.capacity_reservation_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`OnDemandProvisioningSpecification`](crate::model::OnDemandProvisioningSpecification)
+        /// Consumes the builder and constructs a [`OnDemandProvisioningSpecification`](crate::model::OnDemandProvisioningSpecification).
         pub fn build(self) -> crate::model::OnDemandProvisioningSpecification {
             crate::model::OnDemandProvisioningSpecification {
                 allocation_strategy: self.allocation_strategy,
@@ -2966,7 +3016,7 @@ pub mod on_demand_provisioning_specification {
     }
 }
 impl OnDemandProvisioningSpecification {
-    /// Creates a new builder-style object to manufacture [`OnDemandProvisioningSpecification`](crate::model::OnDemandProvisioningSpecification)
+    /// Creates a new builder-style object to manufacture [`OnDemandProvisioningSpecification`](crate::model::OnDemandProvisioningSpecification).
     pub fn builder() -> crate::model::on_demand_provisioning_specification::Builder {
         crate::model::on_demand_provisioning_specification::Builder::default()
     }
@@ -2979,15 +3029,18 @@ pub struct OnDemandCapacityReservationOptions {
     /// <p>Indicates whether to use unused Capacity Reservations for fulfilling On-Demand capacity.</p>
     /// <p>If you specify <code>use-capacity-reservations-first</code>, the fleet uses unused Capacity Reservations to fulfill On-Demand capacity up to the target On-Demand capacity. If multiple instance pools have unused Capacity Reservations, the On-Demand allocation strategy (<code>lowest-price</code>) is applied. If the number of unused Capacity Reservations is less than the On-Demand target capacity, the remaining On-Demand target capacity is launched according to the On-Demand allocation strategy (<code>lowest-price</code>).</p>
     /// <p>If you do not specify a value, the fleet fulfills the On-Demand capacity according to the chosen On-Demand allocation strategy.</p>
+    #[doc(hidden)]
     pub usage_strategy: std::option::Option<crate::model::OnDemandCapacityReservationUsageStrategy>,
     /// <p>Indicates the instance's Capacity Reservation preferences. Possible preferences include:</p>
     /// <ul>
     /// <li> <p> <code>open</code> - The instance can run in any open Capacity Reservation that has matching attributes (instance type, platform, Availability Zone).</p> </li>
     /// <li> <p> <code>none</code> - The instance avoids running in a Capacity Reservation even if one is available. The instance runs as an On-Demand Instance.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub capacity_reservation_preference:
         std::option::Option<crate::model::OnDemandCapacityReservationPreference>,
     /// <p>The ARN of the Capacity Reservation resource group in which to run the instance.</p>
+    #[doc(hidden)]
     pub capacity_reservation_resource_group_arn: std::option::Option<std::string::String>,
 }
 impl OnDemandCapacityReservationOptions {
@@ -3029,11 +3082,10 @@ impl std::fmt::Debug for OnDemandCapacityReservationOptions {
         formatter.finish()
     }
 }
-/// See [`OnDemandCapacityReservationOptions`](crate::model::OnDemandCapacityReservationOptions)
+/// See [`OnDemandCapacityReservationOptions`](crate::model::OnDemandCapacityReservationOptions).
 pub mod on_demand_capacity_reservation_options {
 
-    /// A builder for [`OnDemandCapacityReservationOptions`](crate::model::OnDemandCapacityReservationOptions)
-    #[non_exhaustive]
+    /// A builder for [`OnDemandCapacityReservationOptions`](crate::model::OnDemandCapacityReservationOptions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) usage_strategy:
@@ -3104,7 +3156,7 @@ pub mod on_demand_capacity_reservation_options {
             self.capacity_reservation_resource_group_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`OnDemandCapacityReservationOptions`](crate::model::OnDemandCapacityReservationOptions)
+        /// Consumes the builder and constructs a [`OnDemandCapacityReservationOptions`](crate::model::OnDemandCapacityReservationOptions).
         pub fn build(self) -> crate::model::OnDemandCapacityReservationOptions {
             crate::model::OnDemandCapacityReservationOptions {
                 usage_strategy: self.usage_strategy,
@@ -3116,7 +3168,7 @@ pub mod on_demand_capacity_reservation_options {
     }
 }
 impl OnDemandCapacityReservationOptions {
-    /// Creates a new builder-style object to manufacture [`OnDemandCapacityReservationOptions`](crate::model::OnDemandCapacityReservationOptions)
+    /// Creates a new builder-style object to manufacture [`OnDemandCapacityReservationOptions`](crate::model::OnDemandCapacityReservationOptions).
     pub fn builder() -> crate::model::on_demand_capacity_reservation_options::Builder {
         crate::model::on_demand_capacity_reservation_options::Builder::default()
     }
@@ -3292,14 +3344,18 @@ impl AsRef<str> for OnDemandProvisioningAllocationStrategy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SpotProvisioningSpecification {
     /// <p>The spot provisioning timeout period in minutes. If Spot Instances are not provisioned within this time period, the <code>TimeOutAction</code> is taken. Minimum value is 5 and maximum value is 1440. The timeout applies only during initial provisioning, when the cluster is first created.</p>
+    #[doc(hidden)]
     pub timeout_duration_minutes: std::option::Option<i32>,
     /// <p>The action to take when <code>TargetSpotCapacity</code> has not been fulfilled when the <code>TimeoutDurationMinutes</code> has expired; that is, when all Spot Instances could not be provisioned within the Spot provisioning timeout. Valid values are <code>TERMINATE_CLUSTER</code> and <code>SWITCH_TO_ON_DEMAND</code>. SWITCH_TO_ON_DEMAND specifies that if no Spot Instances are available, On-Demand Instances should be provisioned to fulfill any remaining Spot capacity.</p>
+    #[doc(hidden)]
     pub timeout_action: std::option::Option<crate::model::SpotProvisioningTimeoutAction>,
     /// <p>The defined duration for Spot Instances (also known as Spot blocks) in minutes. When specified, the Spot Instance does not terminate before the defined duration expires, and defined duration pricing for Spot Instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as a Spot Instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot Instance for termination and provides a Spot Instance termination notice, which gives the instance a two-minute warning before it terminates. </p> <note>
     /// <p>Spot Instances with a defined duration (also known as Spot blocks) are no longer available to new customers from July 1, 2021. For customers who have previously used the feature, we will continue to support Spot Instances with a defined duration until December 31, 2022. </p>
     /// </note>
+    #[doc(hidden)]
     pub block_duration_minutes: std::option::Option<i32>,
     /// <p> Specifies the strategy to use in launching Spot Instance fleets. Currently, the only option is capacity-optimized (the default), which launches instances from Spot Instance pools with optimal capacity for the number of instances that are launching. </p>
+    #[doc(hidden)]
     pub allocation_strategy: std::option::Option<crate::model::SpotProvisioningAllocationStrategy>,
 }
 impl SpotProvisioningSpecification {
@@ -3336,11 +3392,10 @@ impl std::fmt::Debug for SpotProvisioningSpecification {
         formatter.finish()
     }
 }
-/// See [`SpotProvisioningSpecification`](crate::model::SpotProvisioningSpecification)
+/// See [`SpotProvisioningSpecification`](crate::model::SpotProvisioningSpecification).
 pub mod spot_provisioning_specification {
 
-    /// A builder for [`SpotProvisioningSpecification`](crate::model::SpotProvisioningSpecification)
-    #[non_exhaustive]
+    /// A builder for [`SpotProvisioningSpecification`](crate::model::SpotProvisioningSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timeout_duration_minutes: std::option::Option<i32>,
@@ -3406,7 +3461,7 @@ pub mod spot_provisioning_specification {
             self.allocation_strategy = input;
             self
         }
-        /// Consumes the builder and constructs a [`SpotProvisioningSpecification`](crate::model::SpotProvisioningSpecification)
+        /// Consumes the builder and constructs a [`SpotProvisioningSpecification`](crate::model::SpotProvisioningSpecification).
         pub fn build(self) -> crate::model::SpotProvisioningSpecification {
             crate::model::SpotProvisioningSpecification {
                 timeout_duration_minutes: self.timeout_duration_minutes,
@@ -3418,7 +3473,7 @@ pub mod spot_provisioning_specification {
     }
 }
 impl SpotProvisioningSpecification {
-    /// Creates a new builder-style object to manufacture [`SpotProvisioningSpecification`](crate::model::SpotProvisioningSpecification)
+    /// Creates a new builder-style object to manufacture [`SpotProvisioningSpecification`](crate::model::SpotProvisioningSpecification).
     pub fn builder() -> crate::model::spot_provisioning_specification::Builder {
         crate::model::spot_provisioning_specification::Builder::default()
     }
@@ -3537,18 +3592,25 @@ impl AsRef<str> for SpotProvisioningTimeoutAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceTypeConfig {
     /// <p>An EC2 instance type, such as <code>m3.xlarge</code>. </p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in <code>InstanceFleetConfig</code>. This value is 1 for a master instance fleet, and must be 1 or greater for core and task instance fleets. Defaults to 1 if not specified. </p>
+    #[doc(hidden)]
     pub weighted_capacity: std::option::Option<i32>,
     /// <p>The bid price for each EC2 Spot Instance type as defined by <code>InstanceType</code>. Expressed in USD. If neither <code>BidPrice</code> nor <code>BidPriceAsPercentageOfOnDemandPrice</code> is provided, <code>BidPriceAsPercentageOfOnDemandPrice</code> defaults to 100%. </p>
+    #[doc(hidden)]
     pub bid_price: std::option::Option<std::string::String>,
     /// <p>The bid price, as a percentage of On-Demand price, for each EC2 Spot Instance as defined by <code>InstanceType</code>. Expressed as a number (for example, 20 specifies 20%). If neither <code>BidPrice</code> nor <code>BidPriceAsPercentageOfOnDemandPrice</code> is provided, <code>BidPriceAsPercentageOfOnDemandPrice</code> defaults to 100%.</p>
+    #[doc(hidden)]
     pub bid_price_as_percentage_of_on_demand_price: std::option::Option<f64>,
     /// <p>The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as defined by <code>InstanceType</code>. </p>
+    #[doc(hidden)]
     pub ebs_configuration: std::option::Option<crate::model::EbsConfiguration>,
     /// <p>A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster.</p>
+    #[doc(hidden)]
     pub configurations: std::option::Option<std::vec::Vec<crate::model::Configuration>>,
     /// <p>The custom AMI ID to use for the instance type.</p>
+    #[doc(hidden)]
     pub custom_ami_id: std::option::Option<std::string::String>,
 }
 impl InstanceTypeConfig {
@@ -3597,11 +3659,10 @@ impl std::fmt::Debug for InstanceTypeConfig {
         formatter.finish()
     }
 }
-/// See [`InstanceTypeConfig`](crate::model::InstanceTypeConfig)
+/// See [`InstanceTypeConfig`](crate::model::InstanceTypeConfig).
 pub mod instance_type_config {
 
-    /// A builder for [`InstanceTypeConfig`](crate::model::InstanceTypeConfig)
-    #[non_exhaustive]
+    /// A builder for [`InstanceTypeConfig`](crate::model::InstanceTypeConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_type: std::option::Option<std::string::String>,
@@ -3704,7 +3765,7 @@ pub mod instance_type_config {
             self.custom_ami_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceTypeConfig`](crate::model::InstanceTypeConfig)
+        /// Consumes the builder and constructs a [`InstanceTypeConfig`](crate::model::InstanceTypeConfig).
         pub fn build(self) -> crate::model::InstanceTypeConfig {
             crate::model::InstanceTypeConfig {
                 instance_type: self.instance_type,
@@ -3720,7 +3781,7 @@ pub mod instance_type_config {
     }
 }
 impl InstanceTypeConfig {
-    /// Creates a new builder-style object to manufacture [`InstanceTypeConfig`](crate::model::InstanceTypeConfig)
+    /// Creates a new builder-style object to manufacture [`InstanceTypeConfig`](crate::model::InstanceTypeConfig).
     pub fn builder() -> crate::model::instance_type_config::Builder {
         crate::model::instance_type_config::Builder::default()
     }
@@ -3731,9 +3792,11 @@ impl InstanceTypeConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EbsConfiguration {
     /// <p>An array of Amazon EBS volume specifications attached to a cluster instance.</p>
+    #[doc(hidden)]
     pub ebs_block_device_configs:
         std::option::Option<std::vec::Vec<crate::model::EbsBlockDeviceConfig>>,
     /// <p>Indicates whether an Amazon EBS volume is EBS-optimized.</p>
+    #[doc(hidden)]
     pub ebs_optimized: std::option::Option<bool>,
 }
 impl EbsConfiguration {
@@ -3756,11 +3819,10 @@ impl std::fmt::Debug for EbsConfiguration {
         formatter.finish()
     }
 }
-/// See [`EbsConfiguration`](crate::model::EbsConfiguration)
+/// See [`EbsConfiguration`](crate::model::EbsConfiguration).
 pub mod ebs_configuration {
 
-    /// A builder for [`EbsConfiguration`](crate::model::EbsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`EbsConfiguration`](crate::model::EbsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ebs_block_device_configs:
@@ -3800,7 +3862,7 @@ pub mod ebs_configuration {
             self.ebs_optimized = input;
             self
         }
-        /// Consumes the builder and constructs a [`EbsConfiguration`](crate::model::EbsConfiguration)
+        /// Consumes the builder and constructs a [`EbsConfiguration`](crate::model::EbsConfiguration).
         pub fn build(self) -> crate::model::EbsConfiguration {
             crate::model::EbsConfiguration {
                 ebs_block_device_configs: self.ebs_block_device_configs,
@@ -3810,27 +3872,29 @@ pub mod ebs_configuration {
     }
 }
 impl EbsConfiguration {
-    /// Creates a new builder-style object to manufacture [`EbsConfiguration`](crate::model::EbsConfiguration)
+    /// Creates a new builder-style object to manufacture [`EbsConfiguration`](crate::model::EbsConfiguration).
     pub fn builder() -> crate::model::ebs_configuration::Builder {
         crate::model::ebs_configuration::Builder::default()
     }
 }
 
-/// <p>Configuration of requested EBS block device associated with the instance group with count of volumes that will be associated to every instance.</p>
+/// <p>Configuration of requested EBS block device associated with the instance group with count of volumes that are associated to every instance.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EbsBlockDeviceConfig {
-    /// <p>EBS volume specifications such as volume type, IOPS, and size (GiB) that will be requested for the EBS volume attached to an EC2 instance in the cluster.</p>
+    /// <p>EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that are requested for the EBS volume attached to an EC2 instance in the cluster.</p>
+    #[doc(hidden)]
     pub volume_specification: std::option::Option<crate::model::VolumeSpecification>,
-    /// <p>Number of EBS volumes with a specific volume configuration that will be associated with every instance in the instance group</p>
+    /// <p>Number of EBS volumes with a specific volume configuration that are associated with every instance in the instance group</p>
+    #[doc(hidden)]
     pub volumes_per_instance: std::option::Option<i32>,
 }
 impl EbsBlockDeviceConfig {
-    /// <p>EBS volume specifications such as volume type, IOPS, and size (GiB) that will be requested for the EBS volume attached to an EC2 instance in the cluster.</p>
+    /// <p>EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that are requested for the EBS volume attached to an EC2 instance in the cluster.</p>
     pub fn volume_specification(&self) -> std::option::Option<&crate::model::VolumeSpecification> {
         self.volume_specification.as_ref()
     }
-    /// <p>Number of EBS volumes with a specific volume configuration that will be associated with every instance in the instance group</p>
+    /// <p>Number of EBS volumes with a specific volume configuration that are associated with every instance in the instance group</p>
     pub fn volumes_per_instance(&self) -> std::option::Option<i32> {
         self.volumes_per_instance
     }
@@ -3843,23 +3907,22 @@ impl std::fmt::Debug for EbsBlockDeviceConfig {
         formatter.finish()
     }
 }
-/// See [`EbsBlockDeviceConfig`](crate::model::EbsBlockDeviceConfig)
+/// See [`EbsBlockDeviceConfig`](crate::model::EbsBlockDeviceConfig).
 pub mod ebs_block_device_config {
 
-    /// A builder for [`EbsBlockDeviceConfig`](crate::model::EbsBlockDeviceConfig)
-    #[non_exhaustive]
+    /// A builder for [`EbsBlockDeviceConfig`](crate::model::EbsBlockDeviceConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_specification: std::option::Option<crate::model::VolumeSpecification>,
         pub(crate) volumes_per_instance: std::option::Option<i32>,
     }
     impl Builder {
-        /// <p>EBS volume specifications such as volume type, IOPS, and size (GiB) that will be requested for the EBS volume attached to an EC2 instance in the cluster.</p>
+        /// <p>EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that are requested for the EBS volume attached to an EC2 instance in the cluster.</p>
         pub fn volume_specification(mut self, input: crate::model::VolumeSpecification) -> Self {
             self.volume_specification = Some(input);
             self
         }
-        /// <p>EBS volume specifications such as volume type, IOPS, and size (GiB) that will be requested for the EBS volume attached to an EC2 instance in the cluster.</p>
+        /// <p>EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that are requested for the EBS volume attached to an EC2 instance in the cluster.</p>
         pub fn set_volume_specification(
             mut self,
             input: std::option::Option<crate::model::VolumeSpecification>,
@@ -3867,17 +3930,17 @@ pub mod ebs_block_device_config {
             self.volume_specification = input;
             self
         }
-        /// <p>Number of EBS volumes with a specific volume configuration that will be associated with every instance in the instance group</p>
+        /// <p>Number of EBS volumes with a specific volume configuration that are associated with every instance in the instance group</p>
         pub fn volumes_per_instance(mut self, input: i32) -> Self {
             self.volumes_per_instance = Some(input);
             self
         }
-        /// <p>Number of EBS volumes with a specific volume configuration that will be associated with every instance in the instance group</p>
+        /// <p>Number of EBS volumes with a specific volume configuration that are associated with every instance in the instance group</p>
         pub fn set_volumes_per_instance(mut self, input: std::option::Option<i32>) -> Self {
             self.volumes_per_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`EbsBlockDeviceConfig`](crate::model::EbsBlockDeviceConfig)
+        /// Consumes the builder and constructs a [`EbsBlockDeviceConfig`](crate::model::EbsBlockDeviceConfig).
         pub fn build(self) -> crate::model::EbsBlockDeviceConfig {
             crate::model::EbsBlockDeviceConfig {
                 volume_specification: self.volume_specification,
@@ -3887,22 +3950,28 @@ pub mod ebs_block_device_config {
     }
 }
 impl EbsBlockDeviceConfig {
-    /// Creates a new builder-style object to manufacture [`EbsBlockDeviceConfig`](crate::model::EbsBlockDeviceConfig)
+    /// Creates a new builder-style object to manufacture [`EbsBlockDeviceConfig`](crate::model::EbsBlockDeviceConfig).
     pub fn builder() -> crate::model::ebs_block_device_config::Builder {
         crate::model::ebs_block_device_config::Builder::default()
     }
 }
 
-/// <p>EBS volume specifications such as volume type, IOPS, and size (GiB) that will be requested for the EBS volume attached to an EC2 instance in the cluster.</p>
+/// <p>EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that are requested for the EBS volume attached to an EC2 instance in the cluster.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VolumeSpecification {
     /// <p>The volume type. Volume types supported are gp2, io1, and standard.</p>
+    #[doc(hidden)]
     pub volume_type: std::option::Option<std::string::String>,
     /// <p>The number of I/O operations per second (IOPS) that the volume supports.</p>
+    #[doc(hidden)]
     pub iops: std::option::Option<i32>,
     /// <p>The volume size, in gibibytes (GiB). This can be a number from 1 - 1024. If the volume type is EBS-optimized, the minimum value is 10.</p>
+    #[doc(hidden)]
     pub size_in_gb: std::option::Option<i32>,
+    /// <p>The throughput, in mebibyte per second (MiB/s). This optional parameter can be a number from 125 - 1000 and is valid only for gp3 volumes.</p>
+    #[doc(hidden)]
+    pub throughput: std::option::Option<i32>,
 }
 impl VolumeSpecification {
     /// <p>The volume type. Volume types supported are gp2, io1, and standard.</p>
@@ -3917,6 +3986,10 @@ impl VolumeSpecification {
     pub fn size_in_gb(&self) -> std::option::Option<i32> {
         self.size_in_gb
     }
+    /// <p>The throughput, in mebibyte per second (MiB/s). This optional parameter can be a number from 125 - 1000 and is valid only for gp3 volumes.</p>
+    pub fn throughput(&self) -> std::option::Option<i32> {
+        self.throughput
+    }
 }
 impl std::fmt::Debug for VolumeSpecification {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -3924,19 +3997,20 @@ impl std::fmt::Debug for VolumeSpecification {
         formatter.field("volume_type", &self.volume_type);
         formatter.field("iops", &self.iops);
         formatter.field("size_in_gb", &self.size_in_gb);
+        formatter.field("throughput", &self.throughput);
         formatter.finish()
     }
 }
-/// See [`VolumeSpecification`](crate::model::VolumeSpecification)
+/// See [`VolumeSpecification`](crate::model::VolumeSpecification).
 pub mod volume_specification {
 
-    /// A builder for [`VolumeSpecification`](crate::model::VolumeSpecification)
-    #[non_exhaustive]
+    /// A builder for [`VolumeSpecification`](crate::model::VolumeSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_type: std::option::Option<std::string::String>,
         pub(crate) iops: std::option::Option<i32>,
         pub(crate) size_in_gb: std::option::Option<i32>,
+        pub(crate) throughput: std::option::Option<i32>,
     }
     impl Builder {
         /// <p>The volume type. Volume types supported are gp2, io1, and standard.</p>
@@ -3969,18 +4043,29 @@ pub mod volume_specification {
             self.size_in_gb = input;
             self
         }
-        /// Consumes the builder and constructs a [`VolumeSpecification`](crate::model::VolumeSpecification)
+        /// <p>The throughput, in mebibyte per second (MiB/s). This optional parameter can be a number from 125 - 1000 and is valid only for gp3 volumes.</p>
+        pub fn throughput(mut self, input: i32) -> Self {
+            self.throughput = Some(input);
+            self
+        }
+        /// <p>The throughput, in mebibyte per second (MiB/s). This optional parameter can be a number from 125 - 1000 and is valid only for gp3 volumes.</p>
+        pub fn set_throughput(mut self, input: std::option::Option<i32>) -> Self {
+            self.throughput = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`VolumeSpecification`](crate::model::VolumeSpecification).
         pub fn build(self) -> crate::model::VolumeSpecification {
             crate::model::VolumeSpecification {
                 volume_type: self.volume_type,
                 iops: self.iops,
                 size_in_gb: self.size_in_gb,
+                throughput: self.throughput,
             }
         }
     }
 }
 impl VolumeSpecification {
-    /// Creates a new builder-style object to manufacture [`VolumeSpecification`](crate::model::VolumeSpecification)
+    /// Creates a new builder-style object to manufacture [`VolumeSpecification`](crate::model::VolumeSpecification).
     pub fn builder() -> crate::model::volume_specification::Builder {
         crate::model::volume_specification::Builder::default()
     }
@@ -4050,27 +4135,37 @@ impl AsRef<str> for InstanceFleetType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceGroupConfig {
     /// <p>Friendly name given to the instance group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Market type of the EC2 instances used to create a cluster node.</p>
+    #[doc(hidden)]
     pub market: std::option::Option<crate::model::MarketType>,
     /// <p>The role of the instance group in the cluster.</p>
+    #[doc(hidden)]
     pub instance_role: std::option::Option<crate::model::InstanceRoleType>,
     /// <p>If specified, indicates that the instance group uses Spot Instances. This is the maximum price you are willing to pay for Spot Instances. Specify <code>OnDemandPrice</code> to set the amount equal to the On-Demand price, or specify an amount in USD.</p>
+    #[doc(hidden)]
     pub bid_price: std::option::Option<std::string::String>,
     /// <p>The EC2 instance type for all instances in the instance group.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>Target number of instances for the instance group.</p>
+    #[doc(hidden)]
     pub instance_count: std::option::Option<i32>,
     /// <note>
     /// <p>Amazon EMR releases 4.x or later.</p>
     /// </note>
     /// <p>The list of configurations supplied for an EMR cluster instance group. You can specify a separate configuration for each instance group (master, core, and task).</p>
+    #[doc(hidden)]
     pub configurations: std::option::Option<std::vec::Vec<crate::model::Configuration>>,
     /// <p>EBS configurations that will be attached to each EC2 instance in the instance group.</p>
+    #[doc(hidden)]
     pub ebs_configuration: std::option::Option<crate::model::EbsConfiguration>,
     /// <p>An automatic scaling policy for a core instance group or task instance group in an Amazon EMR cluster. The automatic scaling policy defines how an instance group dynamically adds and terminates EC2 instances in response to the value of a CloudWatch metric. See <code>PutAutoScalingPolicy</code>.</p>
+    #[doc(hidden)]
     pub auto_scaling_policy: std::option::Option<crate::model::AutoScalingPolicy>,
     /// <p>The custom AMI ID to use for the provisioned instance group.</p>
+    #[doc(hidden)]
     pub custom_ami_id: std::option::Option<std::string::String>,
 }
 impl InstanceGroupConfig {
@@ -4134,11 +4229,10 @@ impl std::fmt::Debug for InstanceGroupConfig {
         formatter.finish()
     }
 }
-/// See [`InstanceGroupConfig`](crate::model::InstanceGroupConfig)
+/// See [`InstanceGroupConfig`](crate::model::InstanceGroupConfig).
 pub mod instance_group_config {
 
-    /// A builder for [`InstanceGroupConfig`](crate::model::InstanceGroupConfig)
-    #[non_exhaustive]
+    /// A builder for [`InstanceGroupConfig`](crate::model::InstanceGroupConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4283,7 +4377,7 @@ pub mod instance_group_config {
             self.custom_ami_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceGroupConfig`](crate::model::InstanceGroupConfig)
+        /// Consumes the builder and constructs a [`InstanceGroupConfig`](crate::model::InstanceGroupConfig).
         pub fn build(self) -> crate::model::InstanceGroupConfig {
             crate::model::InstanceGroupConfig {
                 name: self.name,
@@ -4301,7 +4395,7 @@ pub mod instance_group_config {
     }
 }
 impl InstanceGroupConfig {
-    /// Creates a new builder-style object to manufacture [`InstanceGroupConfig`](crate::model::InstanceGroupConfig)
+    /// Creates a new builder-style object to manufacture [`InstanceGroupConfig`](crate::model::InstanceGroupConfig).
     pub fn builder() -> crate::model::instance_group_config::Builder {
         crate::model::instance_group_config::Builder::default()
     }
@@ -4312,8 +4406,10 @@ impl InstanceGroupConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoScalingPolicy {
     /// <p>The upper and lower EC2 instance limits for an automatic scaling policy. Automatic scaling activity will not cause an instance group to grow above or below these limits.</p>
+    #[doc(hidden)]
     pub constraints: std::option::Option<crate::model::ScalingConstraints>,
     /// <p>The scale-in and scale-out rules that comprise the automatic scaling policy.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::ScalingRule>>,
 }
 impl AutoScalingPolicy {
@@ -4334,11 +4430,10 @@ impl std::fmt::Debug for AutoScalingPolicy {
         formatter.finish()
     }
 }
-/// See [`AutoScalingPolicy`](crate::model::AutoScalingPolicy)
+/// See [`AutoScalingPolicy`](crate::model::AutoScalingPolicy).
 pub mod auto_scaling_policy {
 
-    /// A builder for [`AutoScalingPolicy`](crate::model::AutoScalingPolicy)
-    #[non_exhaustive]
+    /// A builder for [`AutoScalingPolicy`](crate::model::AutoScalingPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) constraints: std::option::Option<crate::model::ScalingConstraints>,
@@ -4377,7 +4472,7 @@ pub mod auto_scaling_policy {
             self.rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoScalingPolicy`](crate::model::AutoScalingPolicy)
+        /// Consumes the builder and constructs a [`AutoScalingPolicy`](crate::model::AutoScalingPolicy).
         pub fn build(self) -> crate::model::AutoScalingPolicy {
             crate::model::AutoScalingPolicy {
                 constraints: self.constraints,
@@ -4387,7 +4482,7 @@ pub mod auto_scaling_policy {
     }
 }
 impl AutoScalingPolicy {
-    /// Creates a new builder-style object to manufacture [`AutoScalingPolicy`](crate::model::AutoScalingPolicy)
+    /// Creates a new builder-style object to manufacture [`AutoScalingPolicy`](crate::model::AutoScalingPolicy).
     pub fn builder() -> crate::model::auto_scaling_policy::Builder {
         crate::model::auto_scaling_policy::Builder::default()
     }
@@ -4398,12 +4493,16 @@ impl AutoScalingPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScalingRule {
     /// <p>The name used to identify an automatic scaling rule. Rule names must be unique within a scaling policy.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A friendly, more verbose description of the automatic scaling rule.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The conditions that trigger an automatic scaling activity.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::ScalingAction>,
     /// <p>The CloudWatch alarm definition that determines when automatic scaling activity is triggered.</p>
+    #[doc(hidden)]
     pub trigger: std::option::Option<crate::model::ScalingTrigger>,
 }
 impl ScalingRule {
@@ -4434,11 +4533,10 @@ impl std::fmt::Debug for ScalingRule {
         formatter.finish()
     }
 }
-/// See [`ScalingRule`](crate::model::ScalingRule)
+/// See [`ScalingRule`](crate::model::ScalingRule).
 pub mod scaling_rule {
 
-    /// A builder for [`ScalingRule`](crate::model::ScalingRule)
-    #[non_exhaustive]
+    /// A builder for [`ScalingRule`](crate::model::ScalingRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4493,7 +4591,7 @@ pub mod scaling_rule {
             self.trigger = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalingRule`](crate::model::ScalingRule)
+        /// Consumes the builder and constructs a [`ScalingRule`](crate::model::ScalingRule).
         pub fn build(self) -> crate::model::ScalingRule {
             crate::model::ScalingRule {
                 name: self.name,
@@ -4505,7 +4603,7 @@ pub mod scaling_rule {
     }
 }
 impl ScalingRule {
-    /// Creates a new builder-style object to manufacture [`ScalingRule`](crate::model::ScalingRule)
+    /// Creates a new builder-style object to manufacture [`ScalingRule`](crate::model::ScalingRule).
     pub fn builder() -> crate::model::scaling_rule::Builder {
         crate::model::scaling_rule::Builder::default()
     }
@@ -4516,6 +4614,7 @@ impl ScalingRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScalingTrigger {
     /// <p>The definition of a CloudWatch metric alarm. When the defined alarm conditions are met along with other trigger parameters, scaling activity begins.</p>
+    #[doc(hidden)]
     pub cloud_watch_alarm_definition: std::option::Option<crate::model::CloudWatchAlarmDefinition>,
 }
 impl ScalingTrigger {
@@ -4536,11 +4635,10 @@ impl std::fmt::Debug for ScalingTrigger {
         formatter.finish()
     }
 }
-/// See [`ScalingTrigger`](crate::model::ScalingTrigger)
+/// See [`ScalingTrigger`](crate::model::ScalingTrigger).
 pub mod scaling_trigger {
 
-    /// A builder for [`ScalingTrigger`](crate::model::ScalingTrigger)
-    #[non_exhaustive]
+    /// A builder for [`ScalingTrigger`](crate::model::ScalingTrigger).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cloud_watch_alarm_definition:
@@ -4563,7 +4661,7 @@ pub mod scaling_trigger {
             self.cloud_watch_alarm_definition = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalingTrigger`](crate::model::ScalingTrigger)
+        /// Consumes the builder and constructs a [`ScalingTrigger`](crate::model::ScalingTrigger).
         pub fn build(self) -> crate::model::ScalingTrigger {
             crate::model::ScalingTrigger {
                 cloud_watch_alarm_definition: self.cloud_watch_alarm_definition,
@@ -4572,7 +4670,7 @@ pub mod scaling_trigger {
     }
 }
 impl ScalingTrigger {
-    /// Creates a new builder-style object to manufacture [`ScalingTrigger`](crate::model::ScalingTrigger)
+    /// Creates a new builder-style object to manufacture [`ScalingTrigger`](crate::model::ScalingTrigger).
     pub fn builder() -> crate::model::scaling_trigger::Builder {
         crate::model::scaling_trigger::Builder::default()
     }
@@ -4583,22 +4681,31 @@ impl ScalingTrigger {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloudWatchAlarmDefinition {
     /// <p>Determines how the metric specified by <code>MetricName</code> is compared to the value specified by <code>Threshold</code>.</p>
+    #[doc(hidden)]
     pub comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
     /// <p>The number of periods, in five-minute increments, during which the alarm condition must exist before the alarm triggers automatic scaling activity. The default value is <code>1</code>.</p>
+    #[doc(hidden)]
     pub evaluation_periods: std::option::Option<i32>,
     /// <p>The name of the CloudWatch metric that is watched to determine an alarm condition.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p>The namespace for the CloudWatch metric. The default is <code>AWS/ElasticMapReduce</code>.</p>
+    #[doc(hidden)]
     pub namespace: std::option::Option<std::string::String>,
     /// <p>The period, in seconds, over which the statistic is applied. EMR CloudWatch metrics are emitted every five minutes (300 seconds), so if an EMR CloudWatch metric is specified, specify <code>300</code>.</p>
+    #[doc(hidden)]
     pub period: std::option::Option<i32>,
     /// <p>The statistic to apply to the metric associated with the alarm. The default is <code>AVERAGE</code>.</p>
+    #[doc(hidden)]
     pub statistic: std::option::Option<crate::model::Statistic>,
     /// <p>The value against which the specified statistic is compared.</p>
+    #[doc(hidden)]
     pub threshold: std::option::Option<f64>,
     /// <p>The unit of measure associated with the CloudWatch metric being watched. The value specified for <code>Unit</code> must correspond to the units specified in the CloudWatch metric.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<crate::model::Unit>,
     /// <p>A CloudWatch metric dimension.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::MetricDimension>>,
 }
 impl CloudWatchAlarmDefinition {
@@ -4654,11 +4761,10 @@ impl std::fmt::Debug for CloudWatchAlarmDefinition {
         formatter.finish()
     }
 }
-/// See [`CloudWatchAlarmDefinition`](crate::model::CloudWatchAlarmDefinition)
+/// See [`CloudWatchAlarmDefinition`](crate::model::CloudWatchAlarmDefinition).
 pub mod cloud_watch_alarm_definition {
 
-    /// A builder for [`CloudWatchAlarmDefinition`](crate::model::CloudWatchAlarmDefinition)
-    #[non_exhaustive]
+    /// A builder for [`CloudWatchAlarmDefinition`](crate::model::CloudWatchAlarmDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
@@ -4777,7 +4883,7 @@ pub mod cloud_watch_alarm_definition {
             self.dimensions = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloudWatchAlarmDefinition`](crate::model::CloudWatchAlarmDefinition)
+        /// Consumes the builder and constructs a [`CloudWatchAlarmDefinition`](crate::model::CloudWatchAlarmDefinition).
         pub fn build(self) -> crate::model::CloudWatchAlarmDefinition {
             crate::model::CloudWatchAlarmDefinition {
                 comparison_operator: self.comparison_operator,
@@ -4794,7 +4900,7 @@ pub mod cloud_watch_alarm_definition {
     }
 }
 impl CloudWatchAlarmDefinition {
-    /// Creates a new builder-style object to manufacture [`CloudWatchAlarmDefinition`](crate::model::CloudWatchAlarmDefinition)
+    /// Creates a new builder-style object to manufacture [`CloudWatchAlarmDefinition`](crate::model::CloudWatchAlarmDefinition).
     pub fn builder() -> crate::model::cloud_watch_alarm_definition::Builder {
         crate::model::cloud_watch_alarm_definition::Builder::default()
     }
@@ -4805,8 +4911,10 @@ impl CloudWatchAlarmDefinition {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDimension {
     /// <p>The dimension name.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The dimension value.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl MetricDimension {
@@ -4827,11 +4935,10 @@ impl std::fmt::Debug for MetricDimension {
         formatter.finish()
     }
 }
-/// See [`MetricDimension`](crate::model::MetricDimension)
+/// See [`MetricDimension`](crate::model::MetricDimension).
 pub mod metric_dimension {
 
-    /// A builder for [`MetricDimension`](crate::model::MetricDimension)
-    #[non_exhaustive]
+    /// A builder for [`MetricDimension`](crate::model::MetricDimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -4858,7 +4965,7 @@ pub mod metric_dimension {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDimension`](crate::model::MetricDimension)
+        /// Consumes the builder and constructs a [`MetricDimension`](crate::model::MetricDimension).
         pub fn build(self) -> crate::model::MetricDimension {
             crate::model::MetricDimension {
                 key: self.key,
@@ -4868,7 +4975,7 @@ pub mod metric_dimension {
     }
 }
 impl MetricDimension {
-    /// Creates a new builder-style object to manufacture [`MetricDimension`](crate::model::MetricDimension)
+    /// Creates a new builder-style object to manufacture [`MetricDimension`](crate::model::MetricDimension).
     pub fn builder() -> crate::model::metric_dimension::Builder {
         crate::model::metric_dimension::Builder::default()
     }
@@ -5197,8 +5304,10 @@ impl AsRef<str> for ComparisonOperator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScalingAction {
     /// <p>Not available for instance groups. Instance groups use the market type specified for the group.</p>
+    #[doc(hidden)]
     pub market: std::option::Option<crate::model::MarketType>,
     /// <p>The type of adjustment the automatic scaling activity makes when triggered, and the periodicity of the adjustment.</p>
+    #[doc(hidden)]
     pub simple_scaling_policy_configuration:
         std::option::Option<crate::model::SimpleScalingPolicyConfiguration>,
 }
@@ -5225,11 +5334,10 @@ impl std::fmt::Debug for ScalingAction {
         formatter.finish()
     }
 }
-/// See [`ScalingAction`](crate::model::ScalingAction)
+/// See [`ScalingAction`](crate::model::ScalingAction).
 pub mod scaling_action {
 
-    /// A builder for [`ScalingAction`](crate::model::ScalingAction)
-    #[non_exhaustive]
+    /// A builder for [`ScalingAction`](crate::model::ScalingAction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) market: std::option::Option<crate::model::MarketType>,
@@ -5263,7 +5371,7 @@ pub mod scaling_action {
             self.simple_scaling_policy_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalingAction`](crate::model::ScalingAction)
+        /// Consumes the builder and constructs a [`ScalingAction`](crate::model::ScalingAction).
         pub fn build(self) -> crate::model::ScalingAction {
             crate::model::ScalingAction {
                 market: self.market,
@@ -5273,7 +5381,7 @@ pub mod scaling_action {
     }
 }
 impl ScalingAction {
-    /// Creates a new builder-style object to manufacture [`ScalingAction`](crate::model::ScalingAction)
+    /// Creates a new builder-style object to manufacture [`ScalingAction`](crate::model::ScalingAction).
     pub fn builder() -> crate::model::scaling_action::Builder {
         crate::model::scaling_action::Builder::default()
     }
@@ -5284,10 +5392,13 @@ impl ScalingAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SimpleScalingPolicyConfiguration {
     /// <p>The way in which EC2 instances are added (if <code>ScalingAdjustment</code> is a positive number) or terminated (if <code>ScalingAdjustment</code> is a negative number) each time the scaling activity is triggered. <code>CHANGE_IN_CAPACITY</code> is the default. <code>CHANGE_IN_CAPACITY</code> indicates that the EC2 instance count increments or decrements by <code>ScalingAdjustment</code>, which should be expressed as an integer. <code>PERCENT_CHANGE_IN_CAPACITY</code> indicates the instance count increments or decrements by the percentage specified by <code>ScalingAdjustment</code>, which should be expressed as an integer. For example, 20 indicates an increase in 20% increments of cluster capacity. <code>EXACT_CAPACITY</code> indicates the scaling activity results in an instance group with the number of EC2 instances specified by <code>ScalingAdjustment</code>, which should be expressed as a positive integer.</p>
+    #[doc(hidden)]
     pub adjustment_type: std::option::Option<crate::model::AdjustmentType>,
     /// <p>The amount by which to scale in or scale out, based on the specified <code>AdjustmentType</code>. A positive value adds to the instance group's EC2 instance count while a negative number removes instances. If <code>AdjustmentType</code> is set to <code>EXACT_CAPACITY</code>, the number should only be a positive integer. If <code>AdjustmentType</code> is set to <code>PERCENT_CHANGE_IN_CAPACITY</code>, the value should express the percentage as an integer. For example, -20 indicates a decrease in 20% increments of cluster capacity.</p>
+    #[doc(hidden)]
     pub scaling_adjustment: std::option::Option<i32>,
     /// <p>The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start. The default value is 0.</p>
+    #[doc(hidden)]
     pub cool_down: std::option::Option<i32>,
 }
 impl SimpleScalingPolicyConfiguration {
@@ -5313,11 +5424,10 @@ impl std::fmt::Debug for SimpleScalingPolicyConfiguration {
         formatter.finish()
     }
 }
-/// See [`SimpleScalingPolicyConfiguration`](crate::model::SimpleScalingPolicyConfiguration)
+/// See [`SimpleScalingPolicyConfiguration`](crate::model::SimpleScalingPolicyConfiguration).
 pub mod simple_scaling_policy_configuration {
 
-    /// A builder for [`SimpleScalingPolicyConfiguration`](crate::model::SimpleScalingPolicyConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SimpleScalingPolicyConfiguration`](crate::model::SimpleScalingPolicyConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) adjustment_type: std::option::Option<crate::model::AdjustmentType>,
@@ -5358,7 +5468,7 @@ pub mod simple_scaling_policy_configuration {
             self.cool_down = input;
             self
         }
-        /// Consumes the builder and constructs a [`SimpleScalingPolicyConfiguration`](crate::model::SimpleScalingPolicyConfiguration)
+        /// Consumes the builder and constructs a [`SimpleScalingPolicyConfiguration`](crate::model::SimpleScalingPolicyConfiguration).
         pub fn build(self) -> crate::model::SimpleScalingPolicyConfiguration {
             crate::model::SimpleScalingPolicyConfiguration {
                 adjustment_type: self.adjustment_type,
@@ -5369,7 +5479,7 @@ pub mod simple_scaling_policy_configuration {
     }
 }
 impl SimpleScalingPolicyConfiguration {
-    /// Creates a new builder-style object to manufacture [`SimpleScalingPolicyConfiguration`](crate::model::SimpleScalingPolicyConfiguration)
+    /// Creates a new builder-style object to manufacture [`SimpleScalingPolicyConfiguration`](crate::model::SimpleScalingPolicyConfiguration).
     pub fn builder() -> crate::model::simple_scaling_policy_configuration::Builder {
         crate::model::simple_scaling_policy_configuration::Builder::default()
     }
@@ -5498,8 +5608,10 @@ impl AsRef<str> for MarketType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScalingConstraints {
     /// <p>The lower boundary of EC2 instances in an instance group below which scaling activities are not allowed to shrink. Scale-in activities will not terminate instances below this boundary.</p>
+    #[doc(hidden)]
     pub min_capacity: std::option::Option<i32>,
     /// <p>The upper boundary of EC2 instances in an instance group beyond which scaling activities are not allowed to grow. Scale-out activities will not add instances beyond this boundary.</p>
+    #[doc(hidden)]
     pub max_capacity: std::option::Option<i32>,
 }
 impl ScalingConstraints {
@@ -5520,11 +5632,10 @@ impl std::fmt::Debug for ScalingConstraints {
         formatter.finish()
     }
 }
-/// See [`ScalingConstraints`](crate::model::ScalingConstraints)
+/// See [`ScalingConstraints`](crate::model::ScalingConstraints).
 pub mod scaling_constraints {
 
-    /// A builder for [`ScalingConstraints`](crate::model::ScalingConstraints)
-    #[non_exhaustive]
+    /// A builder for [`ScalingConstraints`](crate::model::ScalingConstraints).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min_capacity: std::option::Option<i32>,
@@ -5551,7 +5662,7 @@ pub mod scaling_constraints {
             self.max_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScalingConstraints`](crate::model::ScalingConstraints)
+        /// Consumes the builder and constructs a [`ScalingConstraints`](crate::model::ScalingConstraints).
         pub fn build(self) -> crate::model::ScalingConstraints {
             crate::model::ScalingConstraints {
                 min_capacity: self.min_capacity,
@@ -5561,7 +5672,7 @@ pub mod scaling_constraints {
     }
 }
 impl ScalingConstraints {
-    /// Creates a new builder-style object to manufacture [`ScalingConstraints`](crate::model::ScalingConstraints)
+    /// Creates a new builder-style object to manufacture [`ScalingConstraints`](crate::model::ScalingConstraints).
     pub fn builder() -> crate::model::scaling_constraints::Builder {
         crate::model::scaling_constraints::Builder::default()
     }
@@ -5572,16 +5683,21 @@ impl ScalingConstraints {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BlockPublicAccessConfiguration {
     /// <p>Indicates whether Amazon EMR block public access is enabled (<code>true</code>) or disabled (<code>false</code>). By default, the value is <code>false</code> for accounts that have created EMR clusters before July 2019. For accounts created after this, the default is <code>true</code>.</p>
+    #[doc(hidden)]
     pub block_public_security_group_rules: bool,
     /// <p>Specifies ports and port ranges that are permitted to have security group rules that allow inbound traffic from all public sources. For example, if Port 23 (Telnet) is specified for <code>PermittedPublicSecurityGroupRuleRanges</code>, Amazon EMR allows cluster creation if a security group associated with the cluster has a rule that allows inbound traffic on Port 23 from IPv4 0.0.0.0/0 or IPv6 port ::/0 as the source.</p>
     /// <p>By default, Port 22, which is used for SSH access to the cluster EC2 instances, is in the list of <code>PermittedPublicSecurityGroupRuleRanges</code>.</p>
+    #[doc(hidden)]
     pub permitted_public_security_group_rule_ranges:
         std::option::Option<std::vec::Vec<crate::model::PortRange>>,
     /// <p>The classification within a configuration.</p>
+    #[doc(hidden)]
     pub classification: std::option::Option<std::string::String>,
     /// <p>A list of additional configurations to apply within a configuration object.</p>
+    #[doc(hidden)]
     pub configurations: std::option::Option<std::vec::Vec<crate::model::Configuration>>,
     /// <p>A set of properties specified within a configuration classification.</p>
+    #[doc(hidden)]
     pub properties:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -5630,11 +5746,10 @@ impl std::fmt::Debug for BlockPublicAccessConfiguration {
         formatter.finish()
     }
 }
-/// See [`BlockPublicAccessConfiguration`](crate::model::BlockPublicAccessConfiguration)
+/// See [`BlockPublicAccessConfiguration`](crate::model::BlockPublicAccessConfiguration).
 pub mod block_public_access_configuration {
 
-    /// A builder for [`BlockPublicAccessConfiguration`](crate::model::BlockPublicAccessConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`BlockPublicAccessConfiguration`](crate::model::BlockPublicAccessConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) block_public_security_group_rules: std::option::Option<bool>,
@@ -5743,7 +5858,7 @@ pub mod block_public_access_configuration {
             self.properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`BlockPublicAccessConfiguration`](crate::model::BlockPublicAccessConfiguration)
+        /// Consumes the builder and constructs a [`BlockPublicAccessConfiguration`](crate::model::BlockPublicAccessConfiguration).
         pub fn build(self) -> crate::model::BlockPublicAccessConfiguration {
             crate::model::BlockPublicAccessConfiguration {
                 block_public_security_group_rules: self
@@ -5759,7 +5874,7 @@ pub mod block_public_access_configuration {
     }
 }
 impl BlockPublicAccessConfiguration {
-    /// Creates a new builder-style object to manufacture [`BlockPublicAccessConfiguration`](crate::model::BlockPublicAccessConfiguration)
+    /// Creates a new builder-style object to manufacture [`BlockPublicAccessConfiguration`](crate::model::BlockPublicAccessConfiguration).
     pub fn builder() -> crate::model::block_public_access_configuration::Builder {
         crate::model::block_public_access_configuration::Builder::default()
     }
@@ -5770,8 +5885,10 @@ impl BlockPublicAccessConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PortRange {
     /// <p>The smallest port number in a specified range of port numbers.</p>
+    #[doc(hidden)]
     pub min_range: std::option::Option<i32>,
     /// <p>The smallest port number in a specified range of port numbers.</p>
+    #[doc(hidden)]
     pub max_range: std::option::Option<i32>,
 }
 impl PortRange {
@@ -5792,11 +5909,10 @@ impl std::fmt::Debug for PortRange {
         formatter.finish()
     }
 }
-/// See [`PortRange`](crate::model::PortRange)
+/// See [`PortRange`](crate::model::PortRange).
 pub mod port_range {
 
-    /// A builder for [`PortRange`](crate::model::PortRange)
-    #[non_exhaustive]
+    /// A builder for [`PortRange`](crate::model::PortRange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) min_range: std::option::Option<i32>,
@@ -5823,7 +5939,7 @@ pub mod port_range {
             self.max_range = input;
             self
         }
-        /// Consumes the builder and constructs a [`PortRange`](crate::model::PortRange)
+        /// Consumes the builder and constructs a [`PortRange`](crate::model::PortRange).
         pub fn build(self) -> crate::model::PortRange {
             crate::model::PortRange {
                 min_range: self.min_range,
@@ -5833,7 +5949,7 @@ pub mod port_range {
     }
 }
 impl PortRange {
-    /// Creates a new builder-style object to manufacture [`PortRange`](crate::model::PortRange)
+    /// Creates a new builder-style object to manufacture [`PortRange`](crate::model::PortRange).
     pub fn builder() -> crate::model::port_range::Builder {
         crate::model::port_range::Builder::default()
     }
@@ -5844,10 +5960,13 @@ impl PortRange {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoScalingPolicyDescription {
     /// <p>The status of an automatic scaling policy. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::AutoScalingPolicyStatus>,
     /// <p>The upper and lower EC2 instance limits for an automatic scaling policy. Automatic scaling activity will not cause an instance group to grow above or below these limits.</p>
+    #[doc(hidden)]
     pub constraints: std::option::Option<crate::model::ScalingConstraints>,
     /// <p>The scale-in and scale-out rules that comprise the automatic scaling policy.</p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::ScalingRule>>,
 }
 impl AutoScalingPolicyDescription {
@@ -5873,11 +5992,10 @@ impl std::fmt::Debug for AutoScalingPolicyDescription {
         formatter.finish()
     }
 }
-/// See [`AutoScalingPolicyDescription`](crate::model::AutoScalingPolicyDescription)
+/// See [`AutoScalingPolicyDescription`](crate::model::AutoScalingPolicyDescription).
 pub mod auto_scaling_policy_description {
 
-    /// A builder for [`AutoScalingPolicyDescription`](crate::model::AutoScalingPolicyDescription)
-    #[non_exhaustive]
+    /// A builder for [`AutoScalingPolicyDescription`](crate::model::AutoScalingPolicyDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::AutoScalingPolicyStatus>,
@@ -5930,7 +6048,7 @@ pub mod auto_scaling_policy_description {
             self.rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoScalingPolicyDescription`](crate::model::AutoScalingPolicyDescription)
+        /// Consumes the builder and constructs a [`AutoScalingPolicyDescription`](crate::model::AutoScalingPolicyDescription).
         pub fn build(self) -> crate::model::AutoScalingPolicyDescription {
             crate::model::AutoScalingPolicyDescription {
                 status: self.status,
@@ -5941,7 +6059,7 @@ pub mod auto_scaling_policy_description {
     }
 }
 impl AutoScalingPolicyDescription {
-    /// Creates a new builder-style object to manufacture [`AutoScalingPolicyDescription`](crate::model::AutoScalingPolicyDescription)
+    /// Creates a new builder-style object to manufacture [`AutoScalingPolicyDescription`](crate::model::AutoScalingPolicyDescription).
     pub fn builder() -> crate::model::auto_scaling_policy_description::Builder {
         crate::model::auto_scaling_policy_description::Builder::default()
     }
@@ -5952,8 +6070,10 @@ impl AutoScalingPolicyDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoScalingPolicyStatus {
     /// <p>Indicates the status of the automatic scaling policy.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::AutoScalingPolicyState>,
     /// <p>The reason for a change in status.</p>
+    #[doc(hidden)]
     pub state_change_reason: std::option::Option<crate::model::AutoScalingPolicyStateChangeReason>,
 }
 impl AutoScalingPolicyStatus {
@@ -5976,11 +6096,10 @@ impl std::fmt::Debug for AutoScalingPolicyStatus {
         formatter.finish()
     }
 }
-/// See [`AutoScalingPolicyStatus`](crate::model::AutoScalingPolicyStatus)
+/// See [`AutoScalingPolicyStatus`](crate::model::AutoScalingPolicyStatus).
 pub mod auto_scaling_policy_status {
 
-    /// A builder for [`AutoScalingPolicyStatus`](crate::model::AutoScalingPolicyStatus)
-    #[non_exhaustive]
+    /// A builder for [`AutoScalingPolicyStatus`](crate::model::AutoScalingPolicyStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::AutoScalingPolicyState>,
@@ -6017,7 +6136,7 @@ pub mod auto_scaling_policy_status {
             self.state_change_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoScalingPolicyStatus`](crate::model::AutoScalingPolicyStatus)
+        /// Consumes the builder and constructs a [`AutoScalingPolicyStatus`](crate::model::AutoScalingPolicyStatus).
         pub fn build(self) -> crate::model::AutoScalingPolicyStatus {
             crate::model::AutoScalingPolicyStatus {
                 state: self.state,
@@ -6027,7 +6146,7 @@ pub mod auto_scaling_policy_status {
     }
 }
 impl AutoScalingPolicyStatus {
-    /// Creates a new builder-style object to manufacture [`AutoScalingPolicyStatus`](crate::model::AutoScalingPolicyStatus)
+    /// Creates a new builder-style object to manufacture [`AutoScalingPolicyStatus`](crate::model::AutoScalingPolicyStatus).
     pub fn builder() -> crate::model::auto_scaling_policy_status::Builder {
         crate::model::auto_scaling_policy_status::Builder::default()
     }
@@ -6038,8 +6157,10 @@ impl AutoScalingPolicyStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AutoScalingPolicyStateChangeReason {
     /// <p>The code indicating the reason for the change in status.<code>USER_REQUEST</code> indicates that the scaling policy status was changed by a user. <code>PROVISION_FAILURE</code> indicates that the status change was because the policy failed to provision. <code>CLEANUP_FAILURE</code> indicates an error.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::AutoScalingPolicyStateChangeReasonCode>,
     /// <p>A friendly, more verbose message that accompanies an automatic scaling policy state change.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl AutoScalingPolicyStateChangeReason {
@@ -6062,11 +6183,10 @@ impl std::fmt::Debug for AutoScalingPolicyStateChangeReason {
         formatter.finish()
     }
 }
-/// See [`AutoScalingPolicyStateChangeReason`](crate::model::AutoScalingPolicyStateChangeReason)
+/// See [`AutoScalingPolicyStateChangeReason`](crate::model::AutoScalingPolicyStateChangeReason).
 pub mod auto_scaling_policy_state_change_reason {
 
-    /// A builder for [`AutoScalingPolicyStateChangeReason`](crate::model::AutoScalingPolicyStateChangeReason)
-    #[non_exhaustive]
+    /// A builder for [`AutoScalingPolicyStateChangeReason`](crate::model::AutoScalingPolicyStateChangeReason).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::AutoScalingPolicyStateChangeReasonCode>,
@@ -6096,7 +6216,7 @@ pub mod auto_scaling_policy_state_change_reason {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoScalingPolicyStateChangeReason`](crate::model::AutoScalingPolicyStateChangeReason)
+        /// Consumes the builder and constructs a [`AutoScalingPolicyStateChangeReason`](crate::model::AutoScalingPolicyStateChangeReason).
         pub fn build(self) -> crate::model::AutoScalingPolicyStateChangeReason {
             crate::model::AutoScalingPolicyStateChangeReason {
                 code: self.code,
@@ -6106,7 +6226,7 @@ pub mod auto_scaling_policy_state_change_reason {
     }
 }
 impl AutoScalingPolicyStateChangeReason {
-    /// Creates a new builder-style object to manufacture [`AutoScalingPolicyStateChangeReason`](crate::model::AutoScalingPolicyStateChangeReason)
+    /// Creates a new builder-style object to manufacture [`AutoScalingPolicyStateChangeReason`](crate::model::AutoScalingPolicyStateChangeReason).
     pub fn builder() -> crate::model::auto_scaling_policy_state_change_reason::Builder {
         crate::model::auto_scaling_policy_state_change_reason::Builder::default()
     }
@@ -6254,16 +6374,22 @@ impl AsRef<str> for AutoScalingPolicyState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceGroupModifyConfig {
     /// <p>Unique ID of the instance group to modify.</p>
+    #[doc(hidden)]
     pub instance_group_id: std::option::Option<std::string::String>,
     /// <p>Target size for the instance group.</p>
+    #[doc(hidden)]
     pub instance_count: std::option::Option<i32>,
     /// <p>The EC2 InstanceIds to terminate. After you terminate the instances, the instance group will not return to its original requested size.</p>
+    #[doc(hidden)]
     pub ec2_instance_ids_to_terminate: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Policy for customizing shrink operations.</p>
+    #[doc(hidden)]
     pub shrink_policy: std::option::Option<crate::model::ShrinkPolicy>,
     /// <p>Type of reconfiguration requested. Valid values are MERGE and OVERWRITE.</p>
+    #[doc(hidden)]
     pub reconfiguration_type: std::option::Option<crate::model::ReconfigurationType>,
     /// <p>A list of new or modified configurations to apply for an instance group.</p>
+    #[doc(hidden)]
     pub configurations: std::option::Option<std::vec::Vec<crate::model::Configuration>>,
 }
 impl InstanceGroupModifyConfig {
@@ -6307,11 +6433,10 @@ impl std::fmt::Debug for InstanceGroupModifyConfig {
         formatter.finish()
     }
 }
-/// See [`InstanceGroupModifyConfig`](crate::model::InstanceGroupModifyConfig)
+/// See [`InstanceGroupModifyConfig`](crate::model::InstanceGroupModifyConfig).
 pub mod instance_group_modify_config {
 
-    /// A builder for [`InstanceGroupModifyConfig`](crate::model::InstanceGroupModifyConfig)
-    #[non_exhaustive]
+    /// A builder for [`InstanceGroupModifyConfig`](crate::model::InstanceGroupModifyConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_group_id: std::option::Option<std::string::String>,
@@ -6413,7 +6538,7 @@ pub mod instance_group_modify_config {
             self.configurations = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceGroupModifyConfig`](crate::model::InstanceGroupModifyConfig)
+        /// Consumes the builder and constructs a [`InstanceGroupModifyConfig`](crate::model::InstanceGroupModifyConfig).
         pub fn build(self) -> crate::model::InstanceGroupModifyConfig {
             crate::model::InstanceGroupModifyConfig {
                 instance_group_id: self.instance_group_id,
@@ -6427,7 +6552,7 @@ pub mod instance_group_modify_config {
     }
 }
 impl InstanceGroupModifyConfig {
-    /// Creates a new builder-style object to manufacture [`InstanceGroupModifyConfig`](crate::model::InstanceGroupModifyConfig)
+    /// Creates a new builder-style object to manufacture [`InstanceGroupModifyConfig`](crate::model::InstanceGroupModifyConfig).
     pub fn builder() -> crate::model::instance_group_modify_config::Builder {
         crate::model::instance_group_modify_config::Builder::default()
     }
@@ -6493,8 +6618,10 @@ impl AsRef<str> for ReconfigurationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ShrinkPolicy {
     /// <p>The desired timeout for decommissioning an instance. Overrides the default YARN decommissioning timeout.</p>
+    #[doc(hidden)]
     pub decommission_timeout: std::option::Option<i32>,
     /// <p>Custom policy for requesting termination protection or termination of specific instances when shrinking an instance group.</p>
+    #[doc(hidden)]
     pub instance_resize_policy: std::option::Option<crate::model::InstanceResizePolicy>,
 }
 impl ShrinkPolicy {
@@ -6517,11 +6644,10 @@ impl std::fmt::Debug for ShrinkPolicy {
         formatter.finish()
     }
 }
-/// See [`ShrinkPolicy`](crate::model::ShrinkPolicy)
+/// See [`ShrinkPolicy`](crate::model::ShrinkPolicy).
 pub mod shrink_policy {
 
-    /// A builder for [`ShrinkPolicy`](crate::model::ShrinkPolicy)
-    #[non_exhaustive]
+    /// A builder for [`ShrinkPolicy`](crate::model::ShrinkPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) decommission_timeout: std::option::Option<i32>,
@@ -6551,7 +6677,7 @@ pub mod shrink_policy {
             self.instance_resize_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`ShrinkPolicy`](crate::model::ShrinkPolicy)
+        /// Consumes the builder and constructs a [`ShrinkPolicy`](crate::model::ShrinkPolicy).
         pub fn build(self) -> crate::model::ShrinkPolicy {
             crate::model::ShrinkPolicy {
                 decommission_timeout: self.decommission_timeout,
@@ -6561,7 +6687,7 @@ pub mod shrink_policy {
     }
 }
 impl ShrinkPolicy {
-    /// Creates a new builder-style object to manufacture [`ShrinkPolicy`](crate::model::ShrinkPolicy)
+    /// Creates a new builder-style object to manufacture [`ShrinkPolicy`](crate::model::ShrinkPolicy).
     pub fn builder() -> crate::model::shrink_policy::Builder {
         crate::model::shrink_policy::Builder::default()
     }
@@ -6572,10 +6698,13 @@ impl ShrinkPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceResizePolicy {
     /// <p>Specific list of instances to be terminated when shrinking an instance group.</p>
+    #[doc(hidden)]
     pub instances_to_terminate: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Specific list of instances to be protected when shrinking an instance group.</p>
+    #[doc(hidden)]
     pub instances_to_protect: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Decommissioning timeout override for the specific list of instances to be terminated.</p>
+    #[doc(hidden)]
     pub instance_termination_timeout: std::option::Option<i32>,
 }
 impl InstanceResizePolicy {
@@ -6604,11 +6733,10 @@ impl std::fmt::Debug for InstanceResizePolicy {
         formatter.finish()
     }
 }
-/// See [`InstanceResizePolicy`](crate::model::InstanceResizePolicy)
+/// See [`InstanceResizePolicy`](crate::model::InstanceResizePolicy).
 pub mod instance_resize_policy {
 
-    /// A builder for [`InstanceResizePolicy`](crate::model::InstanceResizePolicy)
-    #[non_exhaustive]
+    /// A builder for [`InstanceResizePolicy`](crate::model::InstanceResizePolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instances_to_terminate: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -6664,7 +6792,7 @@ pub mod instance_resize_policy {
             self.instance_termination_timeout = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceResizePolicy`](crate::model::InstanceResizePolicy)
+        /// Consumes the builder and constructs a [`InstanceResizePolicy`](crate::model::InstanceResizePolicy).
         pub fn build(self) -> crate::model::InstanceResizePolicy {
             crate::model::InstanceResizePolicy {
                 instances_to_terminate: self.instances_to_terminate,
@@ -6675,7 +6803,7 @@ pub mod instance_resize_policy {
     }
 }
 impl InstanceResizePolicy {
-    /// Creates a new builder-style object to manufacture [`InstanceResizePolicy`](crate::model::InstanceResizePolicy)
+    /// Creates a new builder-style object to manufacture [`InstanceResizePolicy`](crate::model::InstanceResizePolicy).
     pub fn builder() -> crate::model::instance_resize_policy::Builder {
         crate::model::instance_resize_policy::Builder::default()
     }
@@ -6688,10 +6816,13 @@ impl InstanceResizePolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceFleetModifyConfig {
     /// <p>A unique identifier for the instance fleet.</p>
+    #[doc(hidden)]
     pub instance_fleet_id: std::option::Option<std::string::String>,
     /// <p>The target capacity of On-Demand units for the instance fleet. For more information see <code>InstanceFleetConfig$TargetOnDemandCapacity</code>.</p>
+    #[doc(hidden)]
     pub target_on_demand_capacity: std::option::Option<i32>,
     /// <p>The target capacity of Spot units for the instance fleet. For more information, see <code>InstanceFleetConfig$TargetSpotCapacity</code>.</p>
+    #[doc(hidden)]
     pub target_spot_capacity: std::option::Option<i32>,
 }
 impl InstanceFleetModifyConfig {
@@ -6717,11 +6848,10 @@ impl std::fmt::Debug for InstanceFleetModifyConfig {
         formatter.finish()
     }
 }
-/// See [`InstanceFleetModifyConfig`](crate::model::InstanceFleetModifyConfig)
+/// See [`InstanceFleetModifyConfig`](crate::model::InstanceFleetModifyConfig).
 pub mod instance_fleet_modify_config {
 
-    /// A builder for [`InstanceFleetModifyConfig`](crate::model::InstanceFleetModifyConfig)
-    #[non_exhaustive]
+    /// A builder for [`InstanceFleetModifyConfig`](crate::model::InstanceFleetModifyConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_fleet_id: std::option::Option<std::string::String>,
@@ -6762,7 +6892,7 @@ pub mod instance_fleet_modify_config {
             self.target_spot_capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceFleetModifyConfig`](crate::model::InstanceFleetModifyConfig)
+        /// Consumes the builder and constructs a [`InstanceFleetModifyConfig`](crate::model::InstanceFleetModifyConfig).
         pub fn build(self) -> crate::model::InstanceFleetModifyConfig {
             crate::model::InstanceFleetModifyConfig {
                 instance_fleet_id: self.instance_fleet_id,
@@ -6773,7 +6903,7 @@ pub mod instance_fleet_modify_config {
     }
 }
 impl InstanceFleetModifyConfig {
-    /// Creates a new builder-style object to manufacture [`InstanceFleetModifyConfig`](crate::model::InstanceFleetModifyConfig)
+    /// Creates a new builder-style object to manufacture [`InstanceFleetModifyConfig`](crate::model::InstanceFleetModifyConfig).
     pub fn builder() -> crate::model::instance_fleet_modify_config::Builder {
         crate::model::instance_fleet_modify_config::Builder::default()
     }
@@ -6784,16 +6914,22 @@ impl InstanceFleetModifyConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SessionMappingSummary {
     /// <p>The ID of the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub studio_id: std::option::Option<std::string::String>,
     /// <p>The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity Store.</p>
+    #[doc(hidden)]
     pub identity_id: std::option::Option<std::string::String>,
     /// <p>The name of the user or group. For more information, see <a href="https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserName">UserName</a> and <a href="https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName">DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>.</p>
+    #[doc(hidden)]
     pub identity_name: std::option::Option<std::string::String>,
     /// <p>Specifies whether the identity mapped to the Amazon EMR Studio is a user or a group.</p>
+    #[doc(hidden)]
     pub identity_type: std::option::Option<crate::model::IdentityType>,
     /// <p>The Amazon Resource Name (ARN) of the session policy associated with the user or group.</p>
+    #[doc(hidden)]
     pub session_policy_arn: std::option::Option<std::string::String>,
     /// <p>The time the session mapping was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SessionMappingSummary {
@@ -6834,11 +6970,10 @@ impl std::fmt::Debug for SessionMappingSummary {
         formatter.finish()
     }
 }
-/// See [`SessionMappingSummary`](crate::model::SessionMappingSummary)
+/// See [`SessionMappingSummary`](crate::model::SessionMappingSummary).
 pub mod session_mapping_summary {
 
-    /// A builder for [`SessionMappingSummary`](crate::model::SessionMappingSummary)
-    #[non_exhaustive]
+    /// A builder for [`SessionMappingSummary`](crate::model::SessionMappingSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) studio_id: std::option::Option<std::string::String>,
@@ -6921,7 +7056,7 @@ pub mod session_mapping_summary {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`SessionMappingSummary`](crate::model::SessionMappingSummary)
+        /// Consumes the builder and constructs a [`SessionMappingSummary`](crate::model::SessionMappingSummary).
         pub fn build(self) -> crate::model::SessionMappingSummary {
             crate::model::SessionMappingSummary {
                 studio_id: self.studio_id,
@@ -6935,7 +7070,7 @@ pub mod session_mapping_summary {
     }
 }
 impl SessionMappingSummary {
-    /// Creates a new builder-style object to manufacture [`SessionMappingSummary`](crate::model::SessionMappingSummary)
+    /// Creates a new builder-style object to manufacture [`SessionMappingSummary`](crate::model::SessionMappingSummary).
     pub fn builder() -> crate::model::session_mapping_summary::Builder {
         crate::model::session_mapping_summary::Builder::default()
     }
@@ -6946,18 +7081,25 @@ impl SessionMappingSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StudioSummary {
     /// <p>The ID of the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub studio_id: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The ID of the Virtual Private Cloud (Amazon VPC) associated with the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>The detailed description of the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The unique access URL of the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// <p>Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.</p>
+    #[doc(hidden)]
     pub auth_mode: std::option::Option<crate::model::AuthMode>,
     /// <p>The time when the Amazon EMR Studio was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl StudioSummary {
@@ -7003,11 +7145,10 @@ impl std::fmt::Debug for StudioSummary {
         formatter.finish()
     }
 }
-/// See [`StudioSummary`](crate::model::StudioSummary)
+/// See [`StudioSummary`](crate::model::StudioSummary).
 pub mod studio_summary {
 
-    /// A builder for [`StudioSummary`](crate::model::StudioSummary)
-    #[non_exhaustive]
+    /// A builder for [`StudioSummary`](crate::model::StudioSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) studio_id: std::option::Option<std::string::String>,
@@ -7092,7 +7233,7 @@ pub mod studio_summary {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`StudioSummary`](crate::model::StudioSummary)
+        /// Consumes the builder and constructs a [`StudioSummary`](crate::model::StudioSummary).
         pub fn build(self) -> crate::model::StudioSummary {
             crate::model::StudioSummary {
                 studio_id: self.studio_id,
@@ -7107,7 +7248,7 @@ pub mod studio_summary {
     }
 }
 impl StudioSummary {
-    /// Creates a new builder-style object to manufacture [`StudioSummary`](crate::model::StudioSummary)
+    /// Creates a new builder-style object to manufacture [`StudioSummary`](crate::model::StudioSummary).
     pub fn builder() -> crate::model::studio_summary::Builder {
         crate::model::studio_summary::Builder::default()
     }
@@ -7173,14 +7314,19 @@ impl AsRef<str> for AuthMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StepSummary {
     /// <p>The identifier of the cluster step.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the cluster step.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Hadoop job configuration of the cluster step.</p>
+    #[doc(hidden)]
     pub config: std::option::Option<crate::model::HadoopStepConfig>,
     /// <p>The action to take when the cluster step fails. Possible values are TERMINATE_CLUSTER, CANCEL_AND_WAIT, and CONTINUE. TERMINATE_JOB_FLOW is available for backward compatibility.</p>
+    #[doc(hidden)]
     pub action_on_failure: std::option::Option<crate::model::ActionOnFailure>,
     /// <p>The current execution status details of the cluster step.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StepStatus>,
 }
 impl StepSummary {
@@ -7216,11 +7362,10 @@ impl std::fmt::Debug for StepSummary {
         formatter.finish()
     }
 }
-/// See [`StepSummary`](crate::model::StepSummary)
+/// See [`StepSummary`](crate::model::StepSummary).
 pub mod step_summary {
 
-    /// A builder for [`StepSummary`](crate::model::StepSummary)
-    #[non_exhaustive]
+    /// A builder for [`StepSummary`](crate::model::StepSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -7286,7 +7431,7 @@ pub mod step_summary {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`StepSummary`](crate::model::StepSummary)
+        /// Consumes the builder and constructs a [`StepSummary`](crate::model::StepSummary).
         pub fn build(self) -> crate::model::StepSummary {
             crate::model::StepSummary {
                 id: self.id,
@@ -7299,7 +7444,7 @@ pub mod step_summary {
     }
 }
 impl StepSummary {
-    /// Creates a new builder-style object to manufacture [`StepSummary`](crate::model::StepSummary)
+    /// Creates a new builder-style object to manufacture [`StepSummary`](crate::model::StepSummary).
     pub fn builder() -> crate::model::step_summary::Builder {
         crate::model::step_summary::Builder::default()
     }
@@ -7310,12 +7455,16 @@ impl StepSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StepStatus {
     /// <p>The execution state of the cluster step.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::StepState>,
     /// <p>The reason for the step execution status change.</p>
+    #[doc(hidden)]
     pub state_change_reason: std::option::Option<crate::model::StepStateChangeReason>,
     /// <p>The details for the step failure including reason, message, and log file path where the root cause was identified.</p>
+    #[doc(hidden)]
     pub failure_details: std::option::Option<crate::model::FailureDetails>,
     /// <p>The timeline of the cluster step status over time.</p>
+    #[doc(hidden)]
     pub timeline: std::option::Option<crate::model::StepTimeline>,
 }
 impl StepStatus {
@@ -7346,11 +7495,10 @@ impl std::fmt::Debug for StepStatus {
         formatter.finish()
     }
 }
-/// See [`StepStatus`](crate::model::StepStatus)
+/// See [`StepStatus`](crate::model::StepStatus).
 pub mod step_status {
 
-    /// A builder for [`StepStatus`](crate::model::StepStatus)
-    #[non_exhaustive]
+    /// A builder for [`StepStatus`](crate::model::StepStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::StepState>,
@@ -7408,7 +7556,7 @@ pub mod step_status {
             self.timeline = input;
             self
         }
-        /// Consumes the builder and constructs a [`StepStatus`](crate::model::StepStatus)
+        /// Consumes the builder and constructs a [`StepStatus`](crate::model::StepStatus).
         pub fn build(self) -> crate::model::StepStatus {
             crate::model::StepStatus {
                 state: self.state,
@@ -7420,7 +7568,7 @@ pub mod step_status {
     }
 }
 impl StepStatus {
-    /// Creates a new builder-style object to manufacture [`StepStatus`](crate::model::StepStatus)
+    /// Creates a new builder-style object to manufacture [`StepStatus`](crate::model::StepStatus).
     pub fn builder() -> crate::model::step_status::Builder {
         crate::model::step_status::Builder::default()
     }
@@ -7431,10 +7579,13 @@ impl StepStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StepTimeline {
     /// <p>The date and time when the cluster step was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the cluster step execution started.</p>
+    #[doc(hidden)]
     pub start_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the cluster step execution completed or failed.</p>
+    #[doc(hidden)]
     pub end_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl StepTimeline {
@@ -7460,11 +7611,10 @@ impl std::fmt::Debug for StepTimeline {
         formatter.finish()
     }
 }
-/// See [`StepTimeline`](crate::model::StepTimeline)
+/// See [`StepTimeline`](crate::model::StepTimeline).
 pub mod step_timeline {
 
-    /// A builder for [`StepTimeline`](crate::model::StepTimeline)
-    #[non_exhaustive]
+    /// A builder for [`StepTimeline`](crate::model::StepTimeline).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -7511,7 +7661,7 @@ pub mod step_timeline {
             self.end_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`StepTimeline`](crate::model::StepTimeline)
+        /// Consumes the builder and constructs a [`StepTimeline`](crate::model::StepTimeline).
         pub fn build(self) -> crate::model::StepTimeline {
             crate::model::StepTimeline {
                 creation_date_time: self.creation_date_time,
@@ -7522,7 +7672,7 @@ pub mod step_timeline {
     }
 }
 impl StepTimeline {
-    /// Creates a new builder-style object to manufacture [`StepTimeline`](crate::model::StepTimeline)
+    /// Creates a new builder-style object to manufacture [`StepTimeline`](crate::model::StepTimeline).
     pub fn builder() -> crate::model::step_timeline::Builder {
         crate::model::step_timeline::Builder::default()
     }
@@ -7533,10 +7683,13 @@ impl StepTimeline {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailureDetails {
     /// <p>The reason for the step failure. In the case where the service cannot successfully determine the root cause of the failure, it returns "Unknown Error" as a reason.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p>The descriptive message including the error the Amazon EMR service has identified as the cause of step failure. This is text from an error log that describes the root cause of the failure.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The path to the log file where the step failure root cause was originally recorded.</p>
+    #[doc(hidden)]
     pub log_file: std::option::Option<std::string::String>,
 }
 impl FailureDetails {
@@ -7562,11 +7715,10 @@ impl std::fmt::Debug for FailureDetails {
         formatter.finish()
     }
 }
-/// See [`FailureDetails`](crate::model::FailureDetails)
+/// See [`FailureDetails`](crate::model::FailureDetails).
 pub mod failure_details {
 
-    /// A builder for [`FailureDetails`](crate::model::FailureDetails)
-    #[non_exhaustive]
+    /// A builder for [`FailureDetails`](crate::model::FailureDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reason: std::option::Option<std::string::String>,
@@ -7604,7 +7756,7 @@ pub mod failure_details {
             self.log_file = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailureDetails`](crate::model::FailureDetails)
+        /// Consumes the builder and constructs a [`FailureDetails`](crate::model::FailureDetails).
         pub fn build(self) -> crate::model::FailureDetails {
             crate::model::FailureDetails {
                 reason: self.reason,
@@ -7615,7 +7767,7 @@ pub mod failure_details {
     }
 }
 impl FailureDetails {
-    /// Creates a new builder-style object to manufacture [`FailureDetails`](crate::model::FailureDetails)
+    /// Creates a new builder-style object to manufacture [`FailureDetails`](crate::model::FailureDetails).
     pub fn builder() -> crate::model::failure_details::Builder {
         crate::model::failure_details::Builder::default()
     }
@@ -7626,8 +7778,10 @@ impl FailureDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StepStateChangeReason {
     /// <p>The programmable code for the state change reason. Note: Currently, the service provides no code for the state change.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::StepStateChangeReasonCode>,
     /// <p>The descriptive message for the state change reason.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl StepStateChangeReason {
@@ -7648,11 +7802,10 @@ impl std::fmt::Debug for StepStateChangeReason {
         formatter.finish()
     }
 }
-/// See [`StepStateChangeReason`](crate::model::StepStateChangeReason)
+/// See [`StepStateChangeReason`](crate::model::StepStateChangeReason).
 pub mod step_state_change_reason {
 
-    /// A builder for [`StepStateChangeReason`](crate::model::StepStateChangeReason)
-    #[non_exhaustive]
+    /// A builder for [`StepStateChangeReason`](crate::model::StepStateChangeReason).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::StepStateChangeReasonCode>,
@@ -7682,7 +7835,7 @@ pub mod step_state_change_reason {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`StepStateChangeReason`](crate::model::StepStateChangeReason)
+        /// Consumes the builder and constructs a [`StepStateChangeReason`](crate::model::StepStateChangeReason).
         pub fn build(self) -> crate::model::StepStateChangeReason {
             crate::model::StepStateChangeReason {
                 code: self.code,
@@ -7692,7 +7845,7 @@ pub mod step_state_change_reason {
     }
 }
 impl StepStateChangeReason {
-    /// Creates a new builder-style object to manufacture [`StepStateChangeReason`](crate::model::StepStateChangeReason)
+    /// Creates a new builder-style object to manufacture [`StepStateChangeReason`](crate::model::StepStateChangeReason).
     pub fn builder() -> crate::model::step_state_change_reason::Builder {
         crate::model::step_state_change_reason::Builder::default()
     }
@@ -7837,13 +7990,17 @@ impl AsRef<str> for StepState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HadoopStepConfig {
     /// <p>The path to the JAR file that runs during the step.</p>
+    #[doc(hidden)]
     pub jar: std::option::Option<std::string::String>,
     /// <p>The list of Java properties that are set when the step runs. You can use these properties to pass key-value pairs to your main function.</p>
+    #[doc(hidden)]
     pub properties:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The name of the main class in the specified Java file. If not specified, the JAR file should specify a main class in its manifest file.</p>
+    #[doc(hidden)]
     pub main_class: std::option::Option<std::string::String>,
     /// <p>The list of command line arguments to pass to the JAR file's main function for execution.</p>
+    #[doc(hidden)]
     pub args: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl HadoopStepConfig {
@@ -7877,11 +8034,10 @@ impl std::fmt::Debug for HadoopStepConfig {
         formatter.finish()
     }
 }
-/// See [`HadoopStepConfig`](crate::model::HadoopStepConfig)
+/// See [`HadoopStepConfig`](crate::model::HadoopStepConfig).
 pub mod hadoop_step_config {
 
-    /// A builder for [`HadoopStepConfig`](crate::model::HadoopStepConfig)
-    #[non_exhaustive]
+    /// A builder for [`HadoopStepConfig`](crate::model::HadoopStepConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) jar: std::option::Option<std::string::String>,
@@ -7956,7 +8112,7 @@ pub mod hadoop_step_config {
             self.args = input;
             self
         }
-        /// Consumes the builder and constructs a [`HadoopStepConfig`](crate::model::HadoopStepConfig)
+        /// Consumes the builder and constructs a [`HadoopStepConfig`](crate::model::HadoopStepConfig).
         pub fn build(self) -> crate::model::HadoopStepConfig {
             crate::model::HadoopStepConfig {
                 jar: self.jar,
@@ -7968,7 +8124,7 @@ pub mod hadoop_step_config {
     }
 }
 impl HadoopStepConfig {
-    /// Creates a new builder-style object to manufacture [`HadoopStepConfig`](crate::model::HadoopStepConfig)
+    /// Creates a new builder-style object to manufacture [`HadoopStepConfig`](crate::model::HadoopStepConfig).
     pub fn builder() -> crate::model::hadoop_step_config::Builder {
         crate::model::hadoop_step_config::Builder::default()
     }
@@ -7979,8 +8135,10 @@ impl HadoopStepConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SecurityConfigurationSummary {
     /// <p>The name of the security configuration.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The date and time the security configuration was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SecurityConfigurationSummary {
@@ -8001,11 +8159,10 @@ impl std::fmt::Debug for SecurityConfigurationSummary {
         formatter.finish()
     }
 }
-/// See [`SecurityConfigurationSummary`](crate::model::SecurityConfigurationSummary)
+/// See [`SecurityConfigurationSummary`](crate::model::SecurityConfigurationSummary).
 pub mod security_configuration_summary {
 
-    /// A builder for [`SecurityConfigurationSummary`](crate::model::SecurityConfigurationSummary)
-    #[non_exhaustive]
+    /// A builder for [`SecurityConfigurationSummary`](crate::model::SecurityConfigurationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -8035,7 +8192,7 @@ pub mod security_configuration_summary {
             self.creation_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`SecurityConfigurationSummary`](crate::model::SecurityConfigurationSummary)
+        /// Consumes the builder and constructs a [`SecurityConfigurationSummary`](crate::model::SecurityConfigurationSummary).
         pub fn build(self) -> crate::model::SecurityConfigurationSummary {
             crate::model::SecurityConfigurationSummary {
                 name: self.name,
@@ -8045,7 +8202,7 @@ pub mod security_configuration_summary {
     }
 }
 impl SecurityConfigurationSummary {
-    /// Creates a new builder-style object to manufacture [`SecurityConfigurationSummary`](crate::model::SecurityConfigurationSummary)
+    /// Creates a new builder-style object to manufacture [`SecurityConfigurationSummary`](crate::model::SecurityConfigurationSummary).
     pub fn builder() -> crate::model::security_configuration_summary::Builder {
         crate::model::security_configuration_summary::Builder::default()
     }
@@ -8056,8 +8213,10 @@ impl SecurityConfigurationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReleaseLabelFilter {
     /// <p>Optional release label version prefix filter. For example, <code>emr-5</code>.</p>
+    #[doc(hidden)]
     pub prefix: std::option::Option<std::string::String>,
     /// <p>Optional release label application filter. For example, <code>spark@2.1.0</code>.</p>
+    #[doc(hidden)]
     pub application: std::option::Option<std::string::String>,
 }
 impl ReleaseLabelFilter {
@@ -8078,11 +8237,10 @@ impl std::fmt::Debug for ReleaseLabelFilter {
         formatter.finish()
     }
 }
-/// See [`ReleaseLabelFilter`](crate::model::ReleaseLabelFilter)
+/// See [`ReleaseLabelFilter`](crate::model::ReleaseLabelFilter).
 pub mod release_label_filter {
 
-    /// A builder for [`ReleaseLabelFilter`](crate::model::ReleaseLabelFilter)
-    #[non_exhaustive]
+    /// A builder for [`ReleaseLabelFilter`](crate::model::ReleaseLabelFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) prefix: std::option::Option<std::string::String>,
@@ -8109,7 +8267,7 @@ pub mod release_label_filter {
             self.application = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReleaseLabelFilter`](crate::model::ReleaseLabelFilter)
+        /// Consumes the builder and constructs a [`ReleaseLabelFilter`](crate::model::ReleaseLabelFilter).
         pub fn build(self) -> crate::model::ReleaseLabelFilter {
             crate::model::ReleaseLabelFilter {
                 prefix: self.prefix,
@@ -8119,7 +8277,7 @@ pub mod release_label_filter {
     }
 }
 impl ReleaseLabelFilter {
-    /// Creates a new builder-style object to manufacture [`ReleaseLabelFilter`](crate::model::ReleaseLabelFilter)
+    /// Creates a new builder-style object to manufacture [`ReleaseLabelFilter`](crate::model::ReleaseLabelFilter).
     pub fn builder() -> crate::model::release_label_filter::Builder {
         crate::model::release_label_filter::Builder::default()
     }
@@ -8130,10 +8288,13 @@ impl ReleaseLabelFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotebookExecutionSummary {
     /// <p>The unique identifier of the notebook execution.</p>
+    #[doc(hidden)]
     pub notebook_execution_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the editor associated with the notebook execution.</p>
+    #[doc(hidden)]
     pub editor_id: std::option::Option<std::string::String>,
     /// <p>The name of the notebook execution.</p>
+    #[doc(hidden)]
     pub notebook_execution_name: std::option::Option<std::string::String>,
     /// <p>The status of the notebook execution.</p>
     /// <ul>
@@ -8148,10 +8309,13 @@ pub struct NotebookExecutionSummary {
     /// <li> <p> <code>STOPPING</code> indicates that the cluster is in the process of stopping the execution as a result of a <code>StopNotebookExecution</code> request.</p> </li>
     /// <li> <p> <code>STOPPED</code> indicates that the execution stopped because of a <code>StopNotebookExecution</code> request.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::NotebookExecutionStatus>,
     /// <p>The timestamp when notebook execution started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp when notebook execution started.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl NotebookExecutionSummary {
@@ -8204,11 +8368,10 @@ impl std::fmt::Debug for NotebookExecutionSummary {
         formatter.finish()
     }
 }
-/// See [`NotebookExecutionSummary`](crate::model::NotebookExecutionSummary)
+/// See [`NotebookExecutionSummary`](crate::model::NotebookExecutionSummary).
 pub mod notebook_execution_summary {
 
-    /// A builder for [`NotebookExecutionSummary`](crate::model::NotebookExecutionSummary)
-    #[non_exhaustive]
+    /// A builder for [`NotebookExecutionSummary`](crate::model::NotebookExecutionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) notebook_execution_id: std::option::Option<std::string::String>,
@@ -8318,7 +8481,7 @@ pub mod notebook_execution_summary {
             self.end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotebookExecutionSummary`](crate::model::NotebookExecutionSummary)
+        /// Consumes the builder and constructs a [`NotebookExecutionSummary`](crate::model::NotebookExecutionSummary).
         pub fn build(self) -> crate::model::NotebookExecutionSummary {
             crate::model::NotebookExecutionSummary {
                 notebook_execution_id: self.notebook_execution_id,
@@ -8332,7 +8495,7 @@ pub mod notebook_execution_summary {
     }
 }
 impl NotebookExecutionSummary {
-    /// Creates a new builder-style object to manufacture [`NotebookExecutionSummary`](crate::model::NotebookExecutionSummary)
+    /// Creates a new builder-style object to manufacture [`NotebookExecutionSummary`](crate::model::NotebookExecutionSummary).
     pub fn builder() -> crate::model::notebook_execution_summary::Builder {
         crate::model::notebook_execution_summary::Builder::default()
     }
@@ -8441,28 +8604,40 @@ impl AsRef<str> for NotebookExecutionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Instance {
     /// <p>The unique identifier for the instance in Amazon EMR.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the instance in Amazon EC2.</p>
+    #[doc(hidden)]
     pub ec2_instance_id: std::option::Option<std::string::String>,
     /// <p>The public DNS name of the instance.</p>
+    #[doc(hidden)]
     pub public_dns_name: std::option::Option<std::string::String>,
     /// <p>The public IP address of the instance.</p>
+    #[doc(hidden)]
     pub public_ip_address: std::option::Option<std::string::String>,
     /// <p>The private DNS name of the instance.</p>
+    #[doc(hidden)]
     pub private_dns_name: std::option::Option<std::string::String>,
     /// <p>The private IP address of the instance.</p>
+    #[doc(hidden)]
     pub private_ip_address: std::option::Option<std::string::String>,
     /// <p>The current status of the instance.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::InstanceStatus>,
     /// <p>The identifier of the instance group to which this instance belongs.</p>
+    #[doc(hidden)]
     pub instance_group_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the instance fleet to which an EC2 instance belongs.</p>
+    #[doc(hidden)]
     pub instance_fleet_id: std::option::Option<std::string::String>,
     /// <p>The instance purchasing option. Valid values are <code>ON_DEMAND</code> or <code>SPOT</code>. </p>
+    #[doc(hidden)]
     pub market: std::option::Option<crate::model::MarketType>,
     /// <p>The EC2 instance type, for example <code>m3.xlarge</code>.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The list of Amazon EBS volumes that are attached to this instance.</p>
+    #[doc(hidden)]
     pub ebs_volumes: std::option::Option<std::vec::Vec<crate::model::EbsVolume>>,
 }
 impl Instance {
@@ -8533,11 +8708,10 @@ impl std::fmt::Debug for Instance {
         formatter.finish()
     }
 }
-/// See [`Instance`](crate::model::Instance)
+/// See [`Instance`](crate::model::Instance).
 pub mod instance {
 
-    /// A builder for [`Instance`](crate::model::Instance)
-    #[non_exhaustive]
+    /// A builder for [`Instance`](crate::model::Instance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -8710,7 +8884,7 @@ pub mod instance {
             self.ebs_volumes = input;
             self
         }
-        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance)
+        /// Consumes the builder and constructs a [`Instance`](crate::model::Instance).
         pub fn build(self) -> crate::model::Instance {
             crate::model::Instance {
                 id: self.id,
@@ -8730,7 +8904,7 @@ pub mod instance {
     }
 }
 impl Instance {
-    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance)
+    /// Creates a new builder-style object to manufacture [`Instance`](crate::model::Instance).
     pub fn builder() -> crate::model::instance::Builder {
         crate::model::instance::Builder::default()
     }
@@ -8741,8 +8915,10 @@ impl Instance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EbsVolume {
     /// <p>The device name that is exposed to the instance, such as /dev/sdh.</p>
+    #[doc(hidden)]
     pub device: std::option::Option<std::string::String>,
     /// <p>The volume identifier of the EBS volume.</p>
+    #[doc(hidden)]
     pub volume_id: std::option::Option<std::string::String>,
 }
 impl EbsVolume {
@@ -8763,11 +8939,10 @@ impl std::fmt::Debug for EbsVolume {
         formatter.finish()
     }
 }
-/// See [`EbsVolume`](crate::model::EbsVolume)
+/// See [`EbsVolume`](crate::model::EbsVolume).
 pub mod ebs_volume {
 
-    /// A builder for [`EbsVolume`](crate::model::EbsVolume)
-    #[non_exhaustive]
+    /// A builder for [`EbsVolume`](crate::model::EbsVolume).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device: std::option::Option<std::string::String>,
@@ -8794,7 +8969,7 @@ pub mod ebs_volume {
             self.volume_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`EbsVolume`](crate::model::EbsVolume)
+        /// Consumes the builder and constructs a [`EbsVolume`](crate::model::EbsVolume).
         pub fn build(self) -> crate::model::EbsVolume {
             crate::model::EbsVolume {
                 device: self.device,
@@ -8804,7 +8979,7 @@ pub mod ebs_volume {
     }
 }
 impl EbsVolume {
-    /// Creates a new builder-style object to manufacture [`EbsVolume`](crate::model::EbsVolume)
+    /// Creates a new builder-style object to manufacture [`EbsVolume`](crate::model::EbsVolume).
     pub fn builder() -> crate::model::ebs_volume::Builder {
         crate::model::ebs_volume::Builder::default()
     }
@@ -8815,10 +8990,13 @@ impl EbsVolume {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceStatus {
     /// <p>The current state of the instance.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::InstanceState>,
     /// <p>The details of the status change reason for the instance.</p>
+    #[doc(hidden)]
     pub state_change_reason: std::option::Option<crate::model::InstanceStateChangeReason>,
     /// <p>The timeline of the instance status over time.</p>
+    #[doc(hidden)]
     pub timeline: std::option::Option<crate::model::InstanceTimeline>,
 }
 impl InstanceStatus {
@@ -8846,11 +9024,10 @@ impl std::fmt::Debug for InstanceStatus {
         formatter.finish()
     }
 }
-/// See [`InstanceStatus`](crate::model::InstanceStatus)
+/// See [`InstanceStatus`](crate::model::InstanceStatus).
 pub mod instance_status {
 
-    /// A builder for [`InstanceStatus`](crate::model::InstanceStatus)
-    #[non_exhaustive]
+    /// A builder for [`InstanceStatus`](crate::model::InstanceStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::InstanceState>,
@@ -8901,7 +9078,7 @@ pub mod instance_status {
             self.timeline = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceStatus`](crate::model::InstanceStatus)
+        /// Consumes the builder and constructs a [`InstanceStatus`](crate::model::InstanceStatus).
         pub fn build(self) -> crate::model::InstanceStatus {
             crate::model::InstanceStatus {
                 state: self.state,
@@ -8912,7 +9089,7 @@ pub mod instance_status {
     }
 }
 impl InstanceStatus {
-    /// Creates a new builder-style object to manufacture [`InstanceStatus`](crate::model::InstanceStatus)
+    /// Creates a new builder-style object to manufacture [`InstanceStatus`](crate::model::InstanceStatus).
     pub fn builder() -> crate::model::instance_status::Builder {
         crate::model::instance_status::Builder::default()
     }
@@ -8923,10 +9100,13 @@ impl InstanceStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceTimeline {
     /// <p>The creation date and time of the instance.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the instance was ready to perform tasks.</p>
+    #[doc(hidden)]
     pub ready_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the instance was terminated.</p>
+    #[doc(hidden)]
     pub end_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl InstanceTimeline {
@@ -8952,11 +9132,10 @@ impl std::fmt::Debug for InstanceTimeline {
         formatter.finish()
     }
 }
-/// See [`InstanceTimeline`](crate::model::InstanceTimeline)
+/// See [`InstanceTimeline`](crate::model::InstanceTimeline).
 pub mod instance_timeline {
 
-    /// A builder for [`InstanceTimeline`](crate::model::InstanceTimeline)
-    #[non_exhaustive]
+    /// A builder for [`InstanceTimeline`](crate::model::InstanceTimeline).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -9003,7 +9182,7 @@ pub mod instance_timeline {
             self.end_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceTimeline`](crate::model::InstanceTimeline)
+        /// Consumes the builder and constructs a [`InstanceTimeline`](crate::model::InstanceTimeline).
         pub fn build(self) -> crate::model::InstanceTimeline {
             crate::model::InstanceTimeline {
                 creation_date_time: self.creation_date_time,
@@ -9014,7 +9193,7 @@ pub mod instance_timeline {
     }
 }
 impl InstanceTimeline {
-    /// Creates a new builder-style object to manufacture [`InstanceTimeline`](crate::model::InstanceTimeline)
+    /// Creates a new builder-style object to manufacture [`InstanceTimeline`](crate::model::InstanceTimeline).
     pub fn builder() -> crate::model::instance_timeline::Builder {
         crate::model::instance_timeline::Builder::default()
     }
@@ -9025,8 +9204,10 @@ impl InstanceTimeline {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceStateChangeReason {
     /// <p>The programmable code for the state change reason.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::InstanceStateChangeReasonCode>,
     /// <p>The status change reason description.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl InstanceStateChangeReason {
@@ -9047,11 +9228,10 @@ impl std::fmt::Debug for InstanceStateChangeReason {
         formatter.finish()
     }
 }
-/// See [`InstanceStateChangeReason`](crate::model::InstanceStateChangeReason)
+/// See [`InstanceStateChangeReason`](crate::model::InstanceStateChangeReason).
 pub mod instance_state_change_reason {
 
-    /// A builder for [`InstanceStateChangeReason`](crate::model::InstanceStateChangeReason)
-    #[non_exhaustive]
+    /// A builder for [`InstanceStateChangeReason`](crate::model::InstanceStateChangeReason).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::InstanceStateChangeReasonCode>,
@@ -9081,7 +9261,7 @@ pub mod instance_state_change_reason {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceStateChangeReason`](crate::model::InstanceStateChangeReason)
+        /// Consumes the builder and constructs a [`InstanceStateChangeReason`](crate::model::InstanceStateChangeReason).
         pub fn build(self) -> crate::model::InstanceStateChangeReason {
             crate::model::InstanceStateChangeReason {
                 code: self.code,
@@ -9091,7 +9271,7 @@ pub mod instance_state_change_reason {
     }
 }
 impl InstanceStateChangeReason {
-    /// Creates a new builder-style object to manufacture [`InstanceStateChangeReason`](crate::model::InstanceStateChangeReason)
+    /// Creates a new builder-style object to manufacture [`InstanceStateChangeReason`](crate::model::InstanceStateChangeReason).
     pub fn builder() -> crate::model::instance_state_change_reason::Builder {
         crate::model::instance_state_change_reason::Builder::default()
     }
@@ -9307,44 +9487,62 @@ impl AsRef<str> for InstanceGroupType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceGroup {
     /// <p>The identifier of the instance group.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the instance group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The marketplace to provision instances for this group. Valid values are ON_DEMAND or SPOT.</p>
+    #[doc(hidden)]
     pub market: std::option::Option<crate::model::MarketType>,
     /// <p>The type of the instance group. Valid values are MASTER, CORE or TASK.</p>
+    #[doc(hidden)]
     pub instance_group_type: std::option::Option<crate::model::InstanceGroupType>,
     /// <p>If specified, indicates that the instance group uses Spot Instances. This is the maximum price you are willing to pay for Spot Instances. Specify <code>OnDemandPrice</code> to set the amount equal to the On-Demand price, or specify an amount in USD.</p>
+    #[doc(hidden)]
     pub bid_price: std::option::Option<std::string::String>,
     /// <p>The EC2 instance type for all instances in the instance group.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The target number of instances for the instance group.</p>
+    #[doc(hidden)]
     pub requested_instance_count: std::option::Option<i32>,
     /// <p>The number of instances currently running in this instance group.</p>
+    #[doc(hidden)]
     pub running_instance_count: std::option::Option<i32>,
     /// <p>The current status of the instance group.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::InstanceGroupStatus>,
     /// <note>
     /// <p>Amazon EMR releases 4.x or later.</p>
     /// </note>
     /// <p>The list of configurations supplied for an Amazon EMR cluster instance group. You can specify a separate configuration for each instance group (master, core, and task).</p>
+    #[doc(hidden)]
     pub configurations: std::option::Option<std::vec::Vec<crate::model::Configuration>>,
     /// <p>The version number of the requested configuration specification for this instance group.</p>
+    #[doc(hidden)]
     pub configurations_version: i64,
     /// <p>A list of configurations that were successfully applied for an instance group last time.</p>
+    #[doc(hidden)]
     pub last_successfully_applied_configurations:
         std::option::Option<std::vec::Vec<crate::model::Configuration>>,
     /// <p>The version number of a configuration specification that was successfully applied for an instance group last time. </p>
+    #[doc(hidden)]
     pub last_successfully_applied_configurations_version: i64,
     /// <p>The EBS block devices that are mapped to this instance group.</p>
+    #[doc(hidden)]
     pub ebs_block_devices: std::option::Option<std::vec::Vec<crate::model::EbsBlockDevice>>,
     /// <p>If the instance group is EBS-optimized. An Amazon EBS-optimized instance uses an optimized configuration stack and provides additional, dedicated capacity for Amazon EBS I/O.</p>
+    #[doc(hidden)]
     pub ebs_optimized: std::option::Option<bool>,
     /// <p>Policy for customizing shrink operations.</p>
+    #[doc(hidden)]
     pub shrink_policy: std::option::Option<crate::model::ShrinkPolicy>,
     /// <p>An automatic scaling policy for a core instance group or task instance group in an Amazon EMR cluster. The automatic scaling policy defines how an instance group dynamically adds and terminates EC2 instances in response to the value of a CloudWatch metric. See PutAutoScalingPolicy.</p>
+    #[doc(hidden)]
     pub auto_scaling_policy: std::option::Option<crate::model::AutoScalingPolicyDescription>,
     /// <p>The custom AMI ID to use for the provisioned instance group.</p>
+    #[doc(hidden)]
     pub custom_ami_id: std::option::Option<std::string::String>,
 }
 impl InstanceGroup {
@@ -9458,11 +9656,10 @@ impl std::fmt::Debug for InstanceGroup {
         formatter.finish()
     }
 }
-/// See [`InstanceGroup`](crate::model::InstanceGroup)
+/// See [`InstanceGroup`](crate::model::InstanceGroup).
 pub mod instance_group {
 
-    /// A builder for [`InstanceGroup`](crate::model::InstanceGroup)
-    #[non_exhaustive]
+    /// A builder for [`InstanceGroup`](crate::model::InstanceGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -9730,7 +9927,7 @@ pub mod instance_group {
             self.custom_ami_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceGroup`](crate::model::InstanceGroup)
+        /// Consumes the builder and constructs a [`InstanceGroup`](crate::model::InstanceGroup).
         pub fn build(self) -> crate::model::InstanceGroup {
             crate::model::InstanceGroup {
                 id: self.id,
@@ -9759,7 +9956,7 @@ pub mod instance_group {
     }
 }
 impl InstanceGroup {
-    /// Creates a new builder-style object to manufacture [`InstanceGroup`](crate::model::InstanceGroup)
+    /// Creates a new builder-style object to manufacture [`InstanceGroup`](crate::model::InstanceGroup).
     pub fn builder() -> crate::model::instance_group::Builder {
         crate::model::instance_group::Builder::default()
     }
@@ -9769,13 +9966,15 @@ impl InstanceGroup {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EbsBlockDevice {
-    /// <p>EBS volume specifications such as volume type, IOPS, and size (GiB) that will be requested for the EBS volume attached to an EC2 instance in the cluster.</p>
+    /// <p>EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that are requested for the EBS volume attached to an EC2 instance in the cluster.</p>
+    #[doc(hidden)]
     pub volume_specification: std::option::Option<crate::model::VolumeSpecification>,
     /// <p>The device name that is exposed to the instance, such as /dev/sdh.</p>
+    #[doc(hidden)]
     pub device: std::option::Option<std::string::String>,
 }
 impl EbsBlockDevice {
-    /// <p>EBS volume specifications such as volume type, IOPS, and size (GiB) that will be requested for the EBS volume attached to an EC2 instance in the cluster.</p>
+    /// <p>EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that are requested for the EBS volume attached to an EC2 instance in the cluster.</p>
     pub fn volume_specification(&self) -> std::option::Option<&crate::model::VolumeSpecification> {
         self.volume_specification.as_ref()
     }
@@ -9792,23 +9991,22 @@ impl std::fmt::Debug for EbsBlockDevice {
         formatter.finish()
     }
 }
-/// See [`EbsBlockDevice`](crate::model::EbsBlockDevice)
+/// See [`EbsBlockDevice`](crate::model::EbsBlockDevice).
 pub mod ebs_block_device {
 
-    /// A builder for [`EbsBlockDevice`](crate::model::EbsBlockDevice)
-    #[non_exhaustive]
+    /// A builder for [`EbsBlockDevice`](crate::model::EbsBlockDevice).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) volume_specification: std::option::Option<crate::model::VolumeSpecification>,
         pub(crate) device: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>EBS volume specifications such as volume type, IOPS, and size (GiB) that will be requested for the EBS volume attached to an EC2 instance in the cluster.</p>
+        /// <p>EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that are requested for the EBS volume attached to an EC2 instance in the cluster.</p>
         pub fn volume_specification(mut self, input: crate::model::VolumeSpecification) -> Self {
             self.volume_specification = Some(input);
             self
         }
-        /// <p>EBS volume specifications such as volume type, IOPS, and size (GiB) that will be requested for the EBS volume attached to an EC2 instance in the cluster.</p>
+        /// <p>EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that are requested for the EBS volume attached to an EC2 instance in the cluster.</p>
         pub fn set_volume_specification(
             mut self,
             input: std::option::Option<crate::model::VolumeSpecification>,
@@ -9826,7 +10024,7 @@ pub mod ebs_block_device {
             self.device = input;
             self
         }
-        /// Consumes the builder and constructs a [`EbsBlockDevice`](crate::model::EbsBlockDevice)
+        /// Consumes the builder and constructs a [`EbsBlockDevice`](crate::model::EbsBlockDevice).
         pub fn build(self) -> crate::model::EbsBlockDevice {
             crate::model::EbsBlockDevice {
                 volume_specification: self.volume_specification,
@@ -9836,7 +10034,7 @@ pub mod ebs_block_device {
     }
 }
 impl EbsBlockDevice {
-    /// Creates a new builder-style object to manufacture [`EbsBlockDevice`](crate::model::EbsBlockDevice)
+    /// Creates a new builder-style object to manufacture [`EbsBlockDevice`](crate::model::EbsBlockDevice).
     pub fn builder() -> crate::model::ebs_block_device::Builder {
         crate::model::ebs_block_device::Builder::default()
     }
@@ -9847,10 +10045,13 @@ impl EbsBlockDevice {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceGroupStatus {
     /// <p>The current state of the instance group.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::InstanceGroupState>,
     /// <p>The status change reason details for the instance group.</p>
+    #[doc(hidden)]
     pub state_change_reason: std::option::Option<crate::model::InstanceGroupStateChangeReason>,
     /// <p>The timeline of the instance group status over time.</p>
+    #[doc(hidden)]
     pub timeline: std::option::Option<crate::model::InstanceGroupTimeline>,
 }
 impl InstanceGroupStatus {
@@ -9878,11 +10079,10 @@ impl std::fmt::Debug for InstanceGroupStatus {
         formatter.finish()
     }
 }
-/// See [`InstanceGroupStatus`](crate::model::InstanceGroupStatus)
+/// See [`InstanceGroupStatus`](crate::model::InstanceGroupStatus).
 pub mod instance_group_status {
 
-    /// A builder for [`InstanceGroupStatus`](crate::model::InstanceGroupStatus)
-    #[non_exhaustive]
+    /// A builder for [`InstanceGroupStatus`](crate::model::InstanceGroupStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::InstanceGroupState>,
@@ -9933,7 +10133,7 @@ pub mod instance_group_status {
             self.timeline = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceGroupStatus`](crate::model::InstanceGroupStatus)
+        /// Consumes the builder and constructs a [`InstanceGroupStatus`](crate::model::InstanceGroupStatus).
         pub fn build(self) -> crate::model::InstanceGroupStatus {
             crate::model::InstanceGroupStatus {
                 state: self.state,
@@ -9944,7 +10144,7 @@ pub mod instance_group_status {
     }
 }
 impl InstanceGroupStatus {
-    /// Creates a new builder-style object to manufacture [`InstanceGroupStatus`](crate::model::InstanceGroupStatus)
+    /// Creates a new builder-style object to manufacture [`InstanceGroupStatus`](crate::model::InstanceGroupStatus).
     pub fn builder() -> crate::model::instance_group_status::Builder {
         crate::model::instance_group_status::Builder::default()
     }
@@ -9955,10 +10155,13 @@ impl InstanceGroupStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceGroupTimeline {
     /// <p>The creation date and time of the instance group.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the instance group became ready to perform tasks.</p>
+    #[doc(hidden)]
     pub ready_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the instance group terminated.</p>
+    #[doc(hidden)]
     pub end_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl InstanceGroupTimeline {
@@ -9984,11 +10187,10 @@ impl std::fmt::Debug for InstanceGroupTimeline {
         formatter.finish()
     }
 }
-/// See [`InstanceGroupTimeline`](crate::model::InstanceGroupTimeline)
+/// See [`InstanceGroupTimeline`](crate::model::InstanceGroupTimeline).
 pub mod instance_group_timeline {
 
-    /// A builder for [`InstanceGroupTimeline`](crate::model::InstanceGroupTimeline)
-    #[non_exhaustive]
+    /// A builder for [`InstanceGroupTimeline`](crate::model::InstanceGroupTimeline).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -10035,7 +10237,7 @@ pub mod instance_group_timeline {
             self.end_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceGroupTimeline`](crate::model::InstanceGroupTimeline)
+        /// Consumes the builder and constructs a [`InstanceGroupTimeline`](crate::model::InstanceGroupTimeline).
         pub fn build(self) -> crate::model::InstanceGroupTimeline {
             crate::model::InstanceGroupTimeline {
                 creation_date_time: self.creation_date_time,
@@ -10046,7 +10248,7 @@ pub mod instance_group_timeline {
     }
 }
 impl InstanceGroupTimeline {
-    /// Creates a new builder-style object to manufacture [`InstanceGroupTimeline`](crate::model::InstanceGroupTimeline)
+    /// Creates a new builder-style object to manufacture [`InstanceGroupTimeline`](crate::model::InstanceGroupTimeline).
     pub fn builder() -> crate::model::instance_group_timeline::Builder {
         crate::model::instance_group_timeline::Builder::default()
     }
@@ -10057,8 +10259,10 @@ impl InstanceGroupTimeline {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceGroupStateChangeReason {
     /// <p>The programmable code for the state change reason.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::InstanceGroupStateChangeReasonCode>,
     /// <p>The status change reason description.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl InstanceGroupStateChangeReason {
@@ -10079,11 +10283,10 @@ impl std::fmt::Debug for InstanceGroupStateChangeReason {
         formatter.finish()
     }
 }
-/// See [`InstanceGroupStateChangeReason`](crate::model::InstanceGroupStateChangeReason)
+/// See [`InstanceGroupStateChangeReason`](crate::model::InstanceGroupStateChangeReason).
 pub mod instance_group_state_change_reason {
 
-    /// A builder for [`InstanceGroupStateChangeReason`](crate::model::InstanceGroupStateChangeReason)
-    #[non_exhaustive]
+    /// A builder for [`InstanceGroupStateChangeReason`](crate::model::InstanceGroupStateChangeReason).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::InstanceGroupStateChangeReasonCode>,
@@ -10113,7 +10316,7 @@ pub mod instance_group_state_change_reason {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceGroupStateChangeReason`](crate::model::InstanceGroupStateChangeReason)
+        /// Consumes the builder and constructs a [`InstanceGroupStateChangeReason`](crate::model::InstanceGroupStateChangeReason).
         pub fn build(self) -> crate::model::InstanceGroupStateChangeReason {
             crate::model::InstanceGroupStateChangeReason {
                 code: self.code,
@@ -10123,7 +10326,7 @@ pub mod instance_group_state_change_reason {
     }
 }
 impl InstanceGroupStateChangeReason {
-    /// Creates a new builder-style object to manufacture [`InstanceGroupStateChangeReason`](crate::model::InstanceGroupStateChangeReason)
+    /// Creates a new builder-style object to manufacture [`InstanceGroupStateChangeReason`](crate::model::InstanceGroupStateChangeReason).
     pub fn builder() -> crate::model::instance_group_state_change_reason::Builder {
         crate::model::instance_group_state_change_reason::Builder::default()
     }
@@ -10307,29 +10510,39 @@ impl AsRef<str> for InstanceGroupState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceFleet {
     /// <p>The unique identifier of the instance fleet.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>A friendly name for the instance fleet.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The current status of the instance fleet. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::InstanceFleetStatus>,
     /// <p>The node type that the instance fleet hosts. Valid values are MASTER, CORE, or TASK. </p>
+    #[doc(hidden)]
     pub instance_fleet_type: std::option::Option<crate::model::InstanceFleetType>,
     /// <p>The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand Instances to provision. When the instance fleet launches, Amazon EMR tries to provision On-Demand Instances as specified by <code>InstanceTypeConfig</code>. Each instance configuration has a specified <code>WeightedCapacity</code>. When an On-Demand Instance is provisioned, the <code>WeightedCapacity</code> units count toward the target capacity. Amazon EMR provisions instances until the target capacity is totally fulfilled, even if this results in an overage. For example, if there are 2 units remaining to fulfill capacity, and Amazon EMR can only provision an instance with a <code>WeightedCapacity</code> of 5 units, the instance is provisioned, and the target capacity is exceeded by 3 units. You can use <code>InstanceFleet$ProvisionedOnDemandCapacity</code> to determine the Spot capacity units that have been provisioned for the instance fleet.</p> <note>
     /// <p>If not specified or set to 0, only Spot Instances are provisioned for the instance fleet using <code>TargetSpotCapacity</code>. At least one of <code>TargetSpotCapacity</code> and <code>TargetOnDemandCapacity</code> should be greater than 0. For a master instance fleet, only one of <code>TargetSpotCapacity</code> and <code>TargetOnDemandCapacity</code> can be specified, and its value must be 1.</p>
     /// </note>
+    #[doc(hidden)]
     pub target_on_demand_capacity: std::option::Option<i32>,
     /// <p>The target capacity of Spot units for the instance fleet, which determines how many Spot Instances to provision. When the instance fleet launches, Amazon EMR tries to provision Spot Instances as specified by <code>InstanceTypeConfig</code>. Each instance configuration has a specified <code>WeightedCapacity</code>. When a Spot instance is provisioned, the <code>WeightedCapacity</code> units count toward the target capacity. Amazon EMR provisions instances until the target capacity is totally fulfilled, even if this results in an overage. For example, if there are 2 units remaining to fulfill capacity, and Amazon EMR can only provision an instance with a <code>WeightedCapacity</code> of 5 units, the instance is provisioned, and the target capacity is exceeded by 3 units. You can use <code>InstanceFleet$ProvisionedSpotCapacity</code> to determine the Spot capacity units that have been provisioned for the instance fleet.</p> <note>
     /// <p>If not specified or set to 0, only On-Demand Instances are provisioned for the instance fleet. At least one of <code>TargetSpotCapacity</code> and <code>TargetOnDemandCapacity</code> should be greater than 0. For a master instance fleet, only one of <code>TargetSpotCapacity</code> and <code>TargetOnDemandCapacity</code> can be specified, and its value must be 1.</p>
     /// </note>
+    #[doc(hidden)]
     pub target_spot_capacity: std::option::Option<i32>,
     /// <p>The number of On-Demand units that have been provisioned for the instance fleet to fulfill <code>TargetOnDemandCapacity</code>. This provisioned capacity might be less than or greater than <code>TargetOnDemandCapacity</code>.</p>
+    #[doc(hidden)]
     pub provisioned_on_demand_capacity: std::option::Option<i32>,
     /// <p>The number of Spot units that have been provisioned for this instance fleet to fulfill <code>TargetSpotCapacity</code>. This provisioned capacity might be less than or greater than <code>TargetSpotCapacity</code>.</p>
+    #[doc(hidden)]
     pub provisioned_spot_capacity: std::option::Option<i32>,
     /// <p>An array of specifications for the instance types that comprise an instance fleet.</p>
+    #[doc(hidden)]
     pub instance_type_specifications:
         std::option::Option<std::vec::Vec<crate::model::InstanceTypeSpecification>>,
     /// <p>Describes the launch specification for an instance fleet. </p>
+    #[doc(hidden)]
     pub launch_specifications:
         std::option::Option<crate::model::InstanceFleetProvisioningSpecifications>,
 }
@@ -10405,11 +10618,10 @@ impl std::fmt::Debug for InstanceFleet {
         formatter.finish()
     }
 }
-/// See [`InstanceFleet`](crate::model::InstanceFleet)
+/// See [`InstanceFleet`](crate::model::InstanceFleet).
 pub mod instance_fleet {
 
-    /// A builder for [`InstanceFleet`](crate::model::InstanceFleet)
-    #[non_exhaustive]
+    /// A builder for [`InstanceFleet`](crate::model::InstanceFleet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -10561,7 +10773,7 @@ pub mod instance_fleet {
             self.launch_specifications = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceFleet`](crate::model::InstanceFleet)
+        /// Consumes the builder and constructs a [`InstanceFleet`](crate::model::InstanceFleet).
         pub fn build(self) -> crate::model::InstanceFleet {
             crate::model::InstanceFleet {
                 id: self.id,
@@ -10579,7 +10791,7 @@ pub mod instance_fleet {
     }
 }
 impl InstanceFleet {
-    /// Creates a new builder-style object to manufacture [`InstanceFleet`](crate::model::InstanceFleet)
+    /// Creates a new builder-style object to manufacture [`InstanceFleet`](crate::model::InstanceFleet).
     pub fn builder() -> crate::model::instance_fleet::Builder {
         crate::model::instance_fleet::Builder::default()
     }
@@ -10592,20 +10804,28 @@ impl InstanceFleet {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceTypeSpecification {
     /// <p>The EC2 instance type, for example <code>m3.xlarge</code>.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in <code>InstanceFleetConfig</code>. Capacity values represent performance characteristics such as vCPUs, memory, or I/O. If not specified, the default value is 1.</p>
+    #[doc(hidden)]
     pub weighted_capacity: std::option::Option<i32>,
     /// <p>The bid price for each EC2 Spot Instance type as defined by <code>InstanceType</code>. Expressed in USD.</p>
+    #[doc(hidden)]
     pub bid_price: std::option::Option<std::string::String>,
     /// <p>The bid price, as a percentage of On-Demand price, for each EC2 Spot Instance as defined by <code>InstanceType</code>. Expressed as a number (for example, 20 specifies 20%).</p>
+    #[doc(hidden)]
     pub bid_price_as_percentage_of_on_demand_price: std::option::Option<f64>,
     /// <p>A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software bundled with Amazon EMR.</p>
+    #[doc(hidden)]
     pub configurations: std::option::Option<std::vec::Vec<crate::model::Configuration>>,
     /// <p>The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as defined by <code>InstanceType</code>.</p>
+    #[doc(hidden)]
     pub ebs_block_devices: std::option::Option<std::vec::Vec<crate::model::EbsBlockDevice>>,
     /// <p>Evaluates to <code>TRUE</code> when the specified <code>InstanceType</code> is EBS-optimized.</p>
+    #[doc(hidden)]
     pub ebs_optimized: std::option::Option<bool>,
     /// <p>The custom AMI ID to use for the instance type.</p>
+    #[doc(hidden)]
     pub custom_ami_id: std::option::Option<std::string::String>,
 }
 impl InstanceTypeSpecification {
@@ -10659,11 +10879,10 @@ impl std::fmt::Debug for InstanceTypeSpecification {
         formatter.finish()
     }
 }
-/// See [`InstanceTypeSpecification`](crate::model::InstanceTypeSpecification)
+/// See [`InstanceTypeSpecification`](crate::model::InstanceTypeSpecification).
 pub mod instance_type_specification {
 
-    /// A builder for [`InstanceTypeSpecification`](crate::model::InstanceTypeSpecification)
-    #[non_exhaustive]
+    /// A builder for [`InstanceTypeSpecification`](crate::model::InstanceTypeSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_type: std::option::Option<std::string::String>,
@@ -10784,7 +11003,7 @@ pub mod instance_type_specification {
             self.custom_ami_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceTypeSpecification`](crate::model::InstanceTypeSpecification)
+        /// Consumes the builder and constructs a [`InstanceTypeSpecification`](crate::model::InstanceTypeSpecification).
         pub fn build(self) -> crate::model::InstanceTypeSpecification {
             crate::model::InstanceTypeSpecification {
                 instance_type: self.instance_type,
@@ -10801,7 +11020,7 @@ pub mod instance_type_specification {
     }
 }
 impl InstanceTypeSpecification {
-    /// Creates a new builder-style object to manufacture [`InstanceTypeSpecification`](crate::model::InstanceTypeSpecification)
+    /// Creates a new builder-style object to manufacture [`InstanceTypeSpecification`](crate::model::InstanceTypeSpecification).
     pub fn builder() -> crate::model::instance_type_specification::Builder {
         crate::model::instance_type_specification::Builder::default()
     }
@@ -10823,10 +11042,13 @@ pub struct InstanceFleetStatus {
     /// <li> <p> <code>TERMINATING</code>—The instance fleet is terminating EC2 instances.</p> </li>
     /// <li> <p> <code>TERMINATED</code>—The instance fleet is no longer active, and all EC2 instances have been terminated.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::InstanceFleetState>,
     /// <p>Provides status change reason details for the instance fleet.</p>
+    #[doc(hidden)]
     pub state_change_reason: std::option::Option<crate::model::InstanceFleetStateChangeReason>,
     /// <p>Provides historical timestamps for the instance fleet, including the time of creation, the time it became ready to run jobs, and the time of termination.</p>
+    #[doc(hidden)]
     pub timeline: std::option::Option<crate::model::InstanceFleetTimeline>,
 }
 impl InstanceFleetStatus {
@@ -10863,11 +11085,10 @@ impl std::fmt::Debug for InstanceFleetStatus {
         formatter.finish()
     }
 }
-/// See [`InstanceFleetStatus`](crate::model::InstanceFleetStatus)
+/// See [`InstanceFleetStatus`](crate::model::InstanceFleetStatus).
 pub mod instance_fleet_status {
 
-    /// A builder for [`InstanceFleetStatus`](crate::model::InstanceFleetStatus)
-    #[non_exhaustive]
+    /// A builder for [`InstanceFleetStatus`](crate::model::InstanceFleetStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::InstanceFleetState>,
@@ -10936,7 +11157,7 @@ pub mod instance_fleet_status {
             self.timeline = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceFleetStatus`](crate::model::InstanceFleetStatus)
+        /// Consumes the builder and constructs a [`InstanceFleetStatus`](crate::model::InstanceFleetStatus).
         pub fn build(self) -> crate::model::InstanceFleetStatus {
             crate::model::InstanceFleetStatus {
                 state: self.state,
@@ -10947,7 +11168,7 @@ pub mod instance_fleet_status {
     }
 }
 impl InstanceFleetStatus {
-    /// Creates a new builder-style object to manufacture [`InstanceFleetStatus`](crate::model::InstanceFleetStatus)
+    /// Creates a new builder-style object to manufacture [`InstanceFleetStatus`](crate::model::InstanceFleetStatus).
     pub fn builder() -> crate::model::instance_fleet_status::Builder {
         crate::model::instance_fleet_status::Builder::default()
     }
@@ -10960,10 +11181,13 @@ impl InstanceFleetStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceFleetTimeline {
     /// <p>The time and date the instance fleet was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time and date the instance fleet was ready to run jobs.</p>
+    #[doc(hidden)]
     pub ready_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time and date the instance fleet terminated.</p>
+    #[doc(hidden)]
     pub end_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl InstanceFleetTimeline {
@@ -10989,11 +11213,10 @@ impl std::fmt::Debug for InstanceFleetTimeline {
         formatter.finish()
     }
 }
-/// See [`InstanceFleetTimeline`](crate::model::InstanceFleetTimeline)
+/// See [`InstanceFleetTimeline`](crate::model::InstanceFleetTimeline).
 pub mod instance_fleet_timeline {
 
-    /// A builder for [`InstanceFleetTimeline`](crate::model::InstanceFleetTimeline)
-    #[non_exhaustive]
+    /// A builder for [`InstanceFleetTimeline`](crate::model::InstanceFleetTimeline).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -11040,7 +11263,7 @@ pub mod instance_fleet_timeline {
             self.end_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceFleetTimeline`](crate::model::InstanceFleetTimeline)
+        /// Consumes the builder and constructs a [`InstanceFleetTimeline`](crate::model::InstanceFleetTimeline).
         pub fn build(self) -> crate::model::InstanceFleetTimeline {
             crate::model::InstanceFleetTimeline {
                 creation_date_time: self.creation_date_time,
@@ -11051,7 +11274,7 @@ pub mod instance_fleet_timeline {
     }
 }
 impl InstanceFleetTimeline {
-    /// Creates a new builder-style object to manufacture [`InstanceFleetTimeline`](crate::model::InstanceFleetTimeline)
+    /// Creates a new builder-style object to manufacture [`InstanceFleetTimeline`](crate::model::InstanceFleetTimeline).
     pub fn builder() -> crate::model::instance_fleet_timeline::Builder {
         crate::model::instance_fleet_timeline::Builder::default()
     }
@@ -11064,8 +11287,10 @@ impl InstanceFleetTimeline {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceFleetStateChangeReason {
     /// <p>A code corresponding to the reason the state change occurred.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::InstanceFleetStateChangeReasonCode>,
     /// <p>An explanatory message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl InstanceFleetStateChangeReason {
@@ -11086,11 +11311,10 @@ impl std::fmt::Debug for InstanceFleetStateChangeReason {
         formatter.finish()
     }
 }
-/// See [`InstanceFleetStateChangeReason`](crate::model::InstanceFleetStateChangeReason)
+/// See [`InstanceFleetStateChangeReason`](crate::model::InstanceFleetStateChangeReason).
 pub mod instance_fleet_state_change_reason {
 
-    /// A builder for [`InstanceFleetStateChangeReason`](crate::model::InstanceFleetStateChangeReason)
-    #[non_exhaustive]
+    /// A builder for [`InstanceFleetStateChangeReason`](crate::model::InstanceFleetStateChangeReason).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::InstanceFleetStateChangeReasonCode>,
@@ -11120,7 +11344,7 @@ pub mod instance_fleet_state_change_reason {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceFleetStateChangeReason`](crate::model::InstanceFleetStateChangeReason)
+        /// Consumes the builder and constructs a [`InstanceFleetStateChangeReason`](crate::model::InstanceFleetStateChangeReason).
         pub fn build(self) -> crate::model::InstanceFleetStateChangeReason {
             crate::model::InstanceFleetStateChangeReason {
                 code: self.code,
@@ -11130,7 +11354,7 @@ pub mod instance_fleet_state_change_reason {
     }
 }
 impl InstanceFleetStateChangeReason {
-    /// Creates a new builder-style object to manufacture [`InstanceFleetStateChangeReason`](crate::model::InstanceFleetStateChangeReason)
+    /// Creates a new builder-style object to manufacture [`InstanceFleetStateChangeReason`](crate::model::InstanceFleetStateChangeReason).
     pub fn builder() -> crate::model::instance_fleet_state_change_reason::Builder {
         crate::model::instance_fleet_state_change_reason::Builder::default()
     }
@@ -11292,16 +11516,22 @@ impl AsRef<str> for InstanceFleetState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClusterSummary {
     /// <p>The unique identifier for the cluster.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the cluster.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The details about the current status of the cluster.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ClusterStatus>,
     /// <p>An approximation of the cost of the cluster, represented in m1.small/hours. This value is incremented one time for every hour an m1.small instance runs. Larger instances are weighted more, so an EC2 instance that is roughly four times more expensive would result in the normalized instance hours being incremented by four. This result is only an approximation and does not reflect the actual billing rate.</p>
+    #[doc(hidden)]
     pub normalized_instance_hours: std::option::Option<i32>,
     /// <p>The Amazon Resource Name of the cluster.</p>
+    #[doc(hidden)]
     pub cluster_arn: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the Outpost where the cluster is launched. </p>
+    #[doc(hidden)]
     pub outpost_arn: std::option::Option<std::string::String>,
 }
 impl ClusterSummary {
@@ -11342,11 +11572,10 @@ impl std::fmt::Debug for ClusterSummary {
         formatter.finish()
     }
 }
-/// See [`ClusterSummary`](crate::model::ClusterSummary)
+/// See [`ClusterSummary`](crate::model::ClusterSummary).
 pub mod cluster_summary {
 
-    /// A builder for [`ClusterSummary`](crate::model::ClusterSummary)
-    #[non_exhaustive]
+    /// A builder for [`ClusterSummary`](crate::model::ClusterSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -11420,7 +11649,7 @@ pub mod cluster_summary {
             self.outpost_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClusterSummary`](crate::model::ClusterSummary)
+        /// Consumes the builder and constructs a [`ClusterSummary`](crate::model::ClusterSummary).
         pub fn build(self) -> crate::model::ClusterSummary {
             crate::model::ClusterSummary {
                 id: self.id,
@@ -11434,7 +11663,7 @@ pub mod cluster_summary {
     }
 }
 impl ClusterSummary {
-    /// Creates a new builder-style object to manufacture [`ClusterSummary`](crate::model::ClusterSummary)
+    /// Creates a new builder-style object to manufacture [`ClusterSummary`](crate::model::ClusterSummary).
     pub fn builder() -> crate::model::cluster_summary::Builder {
         crate::model::cluster_summary::Builder::default()
     }
@@ -11445,10 +11674,13 @@ impl ClusterSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClusterStatus {
     /// <p>The current state of the cluster.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ClusterState>,
     /// <p>The reason for the cluster status change.</p>
+    #[doc(hidden)]
     pub state_change_reason: std::option::Option<crate::model::ClusterStateChangeReason>,
     /// <p>A timeline that represents the status of a cluster over the lifetime of the cluster.</p>
+    #[doc(hidden)]
     pub timeline: std::option::Option<crate::model::ClusterTimeline>,
 }
 impl ClusterStatus {
@@ -11476,11 +11708,10 @@ impl std::fmt::Debug for ClusterStatus {
         formatter.finish()
     }
 }
-/// See [`ClusterStatus`](crate::model::ClusterStatus)
+/// See [`ClusterStatus`](crate::model::ClusterStatus).
 pub mod cluster_status {
 
-    /// A builder for [`ClusterStatus`](crate::model::ClusterStatus)
-    #[non_exhaustive]
+    /// A builder for [`ClusterStatus`](crate::model::ClusterStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::ClusterState>,
@@ -11527,7 +11758,7 @@ pub mod cluster_status {
             self.timeline = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClusterStatus`](crate::model::ClusterStatus)
+        /// Consumes the builder and constructs a [`ClusterStatus`](crate::model::ClusterStatus).
         pub fn build(self) -> crate::model::ClusterStatus {
             crate::model::ClusterStatus {
                 state: self.state,
@@ -11538,7 +11769,7 @@ pub mod cluster_status {
     }
 }
 impl ClusterStatus {
-    /// Creates a new builder-style object to manufacture [`ClusterStatus`](crate::model::ClusterStatus)
+    /// Creates a new builder-style object to manufacture [`ClusterStatus`](crate::model::ClusterStatus).
     pub fn builder() -> crate::model::cluster_status::Builder {
         crate::model::cluster_status::Builder::default()
     }
@@ -11549,10 +11780,13 @@ impl ClusterStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClusterTimeline {
     /// <p>The creation date and time of the cluster.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the cluster was ready to run steps.</p>
+    #[doc(hidden)]
     pub ready_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the cluster was terminated.</p>
+    #[doc(hidden)]
     pub end_date_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ClusterTimeline {
@@ -11578,11 +11812,10 @@ impl std::fmt::Debug for ClusterTimeline {
         formatter.finish()
     }
 }
-/// See [`ClusterTimeline`](crate::model::ClusterTimeline)
+/// See [`ClusterTimeline`](crate::model::ClusterTimeline).
 pub mod cluster_timeline {
 
-    /// A builder for [`ClusterTimeline`](crate::model::ClusterTimeline)
-    #[non_exhaustive]
+    /// A builder for [`ClusterTimeline`](crate::model::ClusterTimeline).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -11629,7 +11862,7 @@ pub mod cluster_timeline {
             self.end_date_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClusterTimeline`](crate::model::ClusterTimeline)
+        /// Consumes the builder and constructs a [`ClusterTimeline`](crate::model::ClusterTimeline).
         pub fn build(self) -> crate::model::ClusterTimeline {
             crate::model::ClusterTimeline {
                 creation_date_time: self.creation_date_time,
@@ -11640,7 +11873,7 @@ pub mod cluster_timeline {
     }
 }
 impl ClusterTimeline {
-    /// Creates a new builder-style object to manufacture [`ClusterTimeline`](crate::model::ClusterTimeline)
+    /// Creates a new builder-style object to manufacture [`ClusterTimeline`](crate::model::ClusterTimeline).
     pub fn builder() -> crate::model::cluster_timeline::Builder {
         crate::model::cluster_timeline::Builder::default()
     }
@@ -11651,8 +11884,10 @@ impl ClusterTimeline {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClusterStateChangeReason {
     /// <p>The programmatic code for the state change reason.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<crate::model::ClusterStateChangeReasonCode>,
     /// <p>The descriptive message for the state change reason.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ClusterStateChangeReason {
@@ -11673,11 +11908,10 @@ impl std::fmt::Debug for ClusterStateChangeReason {
         formatter.finish()
     }
 }
-/// See [`ClusterStateChangeReason`](crate::model::ClusterStateChangeReason)
+/// See [`ClusterStateChangeReason`](crate::model::ClusterStateChangeReason).
 pub mod cluster_state_change_reason {
 
-    /// A builder for [`ClusterStateChangeReason`](crate::model::ClusterStateChangeReason)
-    #[non_exhaustive]
+    /// A builder for [`ClusterStateChangeReason`](crate::model::ClusterStateChangeReason).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ClusterStateChangeReasonCode>,
@@ -11707,7 +11941,7 @@ pub mod cluster_state_change_reason {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClusterStateChangeReason`](crate::model::ClusterStateChangeReason)
+        /// Consumes the builder and constructs a [`ClusterStateChangeReason`](crate::model::ClusterStateChangeReason).
         pub fn build(self) -> crate::model::ClusterStateChangeReason {
             crate::model::ClusterStateChangeReason {
                 code: self.code,
@@ -11717,7 +11951,7 @@ pub mod cluster_state_change_reason {
     }
 }
 impl ClusterStateChangeReason {
-    /// Creates a new builder-style object to manufacture [`ClusterStateChangeReason`](crate::model::ClusterStateChangeReason)
+    /// Creates a new builder-style object to manufacture [`ClusterStateChangeReason`](crate::model::ClusterStateChangeReason).
     pub fn builder() -> crate::model::cluster_state_change_reason::Builder {
         crate::model::cluster_state_change_reason::Builder::default()
     }
@@ -11899,10 +12133,13 @@ impl AsRef<str> for ClusterState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Command {
     /// <p>The name of the command.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 location of the command script.</p>
+    #[doc(hidden)]
     pub script_path: std::option::Option<std::string::String>,
     /// <p>Arguments for Amazon EMR to pass to the command for execution.</p>
+    #[doc(hidden)]
     pub args: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Command {
@@ -11928,11 +12165,10 @@ impl std::fmt::Debug for Command {
         formatter.finish()
     }
 }
-/// See [`Command`](crate::model::Command)
+/// See [`Command`](crate::model::Command).
 pub mod command {
 
-    /// A builder for [`Command`](crate::model::Command)
-    #[non_exhaustive]
+    /// A builder for [`Command`](crate::model::Command).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -11979,7 +12215,7 @@ pub mod command {
             self.args = input;
             self
         }
-        /// Consumes the builder and constructs a [`Command`](crate::model::Command)
+        /// Consumes the builder and constructs a [`Command`](crate::model::Command).
         pub fn build(self) -> crate::model::Command {
             crate::model::Command {
                 name: self.name,
@@ -11990,7 +12226,7 @@ pub mod command {
     }
 }
 impl Command {
-    /// Creates a new builder-style object to manufacture [`Command`](crate::model::Command)
+    /// Creates a new builder-style object to manufacture [`Command`](crate::model::Command).
     pub fn builder() -> crate::model::command::Builder {
         crate::model::command::Builder::default()
     }
@@ -12001,18 +12237,25 @@ impl Command {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SessionMappingDetail {
     /// <p>The ID of the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub studio_id: std::option::Option<std::string::String>,
     /// <p>The globally unique identifier (GUID) of the user or group.</p>
+    #[doc(hidden)]
     pub identity_id: std::option::Option<std::string::String>,
     /// <p>The name of the user or group. For more information, see <a href="https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserName">UserName</a> and <a href="https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName">DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>.</p>
+    #[doc(hidden)]
     pub identity_name: std::option::Option<std::string::String>,
     /// <p>Specifies whether the identity mapped to the Amazon EMR Studio is a user or a group.</p>
+    #[doc(hidden)]
     pub identity_type: std::option::Option<crate::model::IdentityType>,
     /// <p>The Amazon Resource Name (ARN) of the session policy associated with the user or group.</p>
+    #[doc(hidden)]
     pub session_policy_arn: std::option::Option<std::string::String>,
     /// <p>The time the session mapping was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time the session mapping was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SessionMappingDetail {
@@ -12058,11 +12301,10 @@ impl std::fmt::Debug for SessionMappingDetail {
         formatter.finish()
     }
 }
-/// See [`SessionMappingDetail`](crate::model::SessionMappingDetail)
+/// See [`SessionMappingDetail`](crate::model::SessionMappingDetail).
 pub mod session_mapping_detail {
 
-    /// A builder for [`SessionMappingDetail`](crate::model::SessionMappingDetail)
-    #[non_exhaustive]
+    /// A builder for [`SessionMappingDetail`](crate::model::SessionMappingDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) studio_id: std::option::Option<std::string::String>,
@@ -12159,7 +12401,7 @@ pub mod session_mapping_detail {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`SessionMappingDetail`](crate::model::SessionMappingDetail)
+        /// Consumes the builder and constructs a [`SessionMappingDetail`](crate::model::SessionMappingDetail).
         pub fn build(self) -> crate::model::SessionMappingDetail {
             crate::model::SessionMappingDetail {
                 studio_id: self.studio_id,
@@ -12174,7 +12416,7 @@ pub mod session_mapping_detail {
     }
 }
 impl SessionMappingDetail {
-    /// Creates a new builder-style object to manufacture [`SessionMappingDetail`](crate::model::SessionMappingDetail)
+    /// Creates a new builder-style object to manufacture [`SessionMappingDetail`](crate::model::SessionMappingDetail).
     pub fn builder() -> crate::model::session_mapping_detail::Builder {
         crate::model::session_mapping_detail::Builder::default()
     }
@@ -12185,8 +12427,10 @@ impl SessionMappingDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BlockPublicAccessConfigurationMetadata {
     /// <p>The date and time that the configuration was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name that created or last modified the configuration.</p>
+    #[doc(hidden)]
     pub created_by_arn: std::option::Option<std::string::String>,
 }
 impl BlockPublicAccessConfigurationMetadata {
@@ -12207,11 +12451,10 @@ impl std::fmt::Debug for BlockPublicAccessConfigurationMetadata {
         formatter.finish()
     }
 }
-/// See [`BlockPublicAccessConfigurationMetadata`](crate::model::BlockPublicAccessConfigurationMetadata)
+/// See [`BlockPublicAccessConfigurationMetadata`](crate::model::BlockPublicAccessConfigurationMetadata).
 pub mod block_public_access_configuration_metadata {
 
-    /// A builder for [`BlockPublicAccessConfigurationMetadata`](crate::model::BlockPublicAccessConfigurationMetadata)
-    #[non_exhaustive]
+    /// A builder for [`BlockPublicAccessConfigurationMetadata`](crate::model::BlockPublicAccessConfigurationMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -12244,7 +12487,7 @@ pub mod block_public_access_configuration_metadata {
             self.created_by_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`BlockPublicAccessConfigurationMetadata`](crate::model::BlockPublicAccessConfigurationMetadata)
+        /// Consumes the builder and constructs a [`BlockPublicAccessConfigurationMetadata`](crate::model::BlockPublicAccessConfigurationMetadata).
         pub fn build(self) -> crate::model::BlockPublicAccessConfigurationMetadata {
             crate::model::BlockPublicAccessConfigurationMetadata {
                 creation_date_time: self.creation_date_time,
@@ -12254,7 +12497,7 @@ pub mod block_public_access_configuration_metadata {
     }
 }
 impl BlockPublicAccessConfigurationMetadata {
-    /// Creates a new builder-style object to manufacture [`BlockPublicAccessConfigurationMetadata`](crate::model::BlockPublicAccessConfigurationMetadata)
+    /// Creates a new builder-style object to manufacture [`BlockPublicAccessConfigurationMetadata`](crate::model::BlockPublicAccessConfigurationMetadata).
     pub fn builder() -> crate::model::block_public_access_configuration_metadata::Builder {
         crate::model::block_public_access_configuration_metadata::Builder::default()
     }
@@ -12265,38 +12508,55 @@ impl BlockPublicAccessConfigurationMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Studio {
     /// <p>The ID of the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub studio_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub studio_arn: std::option::Option<std::string::String>,
     /// <p>The name of the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The detailed description of the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Specifies whether the Amazon EMR Studio authenticates users using IAM or Amazon Web Services SSO.</p>
+    #[doc(hidden)]
     pub auth_mode: std::option::Option<crate::model::AuthMode>,
     /// <p>The ID of the VPC associated with the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub vpc_id: std::option::Option<std::string::String>,
     /// <p>The list of IDs of the subnets associated with the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The name of the IAM role assumed by the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub service_role: std::option::Option<std::string::String>,
     /// <p>The name of the IAM role assumed by users logged in to the Amazon EMR Studio. A Studio only requires a <code>UserRole</code> when you use IAM authentication.</p>
+    #[doc(hidden)]
     pub user_role: std::option::Option<std::string::String>,
     /// <p>The ID of the Workspace security group associated with the Amazon EMR Studio. The Workspace security group allows outbound network traffic to resources in the Engine security group and to the internet.</p>
+    #[doc(hidden)]
     pub workspace_security_group_id: std::option::Option<std::string::String>,
     /// <p>The ID of the Engine security group associated with the Amazon EMR Studio. The Engine security group allows inbound network traffic from resources in the Workspace security group.</p>
+    #[doc(hidden)]
     pub engine_security_group_id: std::option::Option<std::string::String>,
     /// <p>The unique access URL of the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
     /// <p>The time the Amazon EMR Studio was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon S3 location to back up Amazon EMR Studio Workspaces and notebook files.</p>
+    #[doc(hidden)]
     pub default_s3_location: std::option::Option<std::string::String>,
     /// <p>Your identity provider's authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint for authentication when logging in to a Studio with the Studio URL.</p>
+    #[doc(hidden)]
     pub idp_auth_url: std::option::Option<std::string::String>,
     /// <p>The name of your identity provider's <code>RelayState</code> parameter.</p>
+    #[doc(hidden)]
     pub idp_relay_state_parameter_name: std::option::Option<std::string::String>,
     /// <p>A list of tags associated with the Amazon EMR Studio.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl Studio {
@@ -12398,11 +12658,10 @@ impl std::fmt::Debug for Studio {
         formatter.finish()
     }
 }
-/// See [`Studio`](crate::model::Studio)
+/// See [`Studio`](crate::model::Studio).
 pub mod studio {
 
-    /// A builder for [`Studio`](crate::model::Studio)
-    #[non_exhaustive]
+    /// A builder for [`Studio`](crate::model::Studio).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) studio_id: std::option::Option<std::string::String>,
@@ -12633,7 +12892,7 @@ pub mod studio {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`Studio`](crate::model::Studio)
+        /// Consumes the builder and constructs a [`Studio`](crate::model::Studio).
         pub fn build(self) -> crate::model::Studio {
             crate::model::Studio {
                 studio_id: self.studio_id,
@@ -12658,7 +12917,7 @@ pub mod studio {
     }
 }
 impl Studio {
-    /// Creates a new builder-style object to manufacture [`Studio`](crate::model::Studio)
+    /// Creates a new builder-style object to manufacture [`Studio`](crate::model::Studio).
     pub fn builder() -> crate::model::studio::Builder {
         crate::model::studio::Builder::default()
     }
@@ -12669,17 +12928,26 @@ impl Studio {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Step {
     /// <p>The identifier of the cluster step.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the cluster step.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Hadoop job configuration of the cluster step.</p>
+    #[doc(hidden)]
     pub config: std::option::Option<crate::model::HadoopStepConfig>,
     /// <p>The action to take when the cluster step fails. Possible values are <code>TERMINATE_CLUSTER</code>, <code>CANCEL_AND_WAIT</code>, and <code>CONTINUE</code>. <code>TERMINATE_JOB_FLOW</code> is provided for backward compatibility. We recommend using <code>TERMINATE_CLUSTER</code> instead.</p>
     /// <p>If a cluster's <code>StepConcurrencyLevel</code> is greater than <code>1</code>, do not use <code>AddJobFlowSteps</code> to submit a step with this parameter set to <code>CANCEL_AND_WAIT</code> or <code>TERMINATE_CLUSTER</code>. The step is not submitted and the action fails with a message that the <code>ActionOnFailure</code> setting is not valid.</p>
     /// <p>If you change a cluster's <code>StepConcurrencyLevel</code> to be greater than 1 while a step is running, the <code>ActionOnFailure</code> parameter may not behave as you expect. In this case, for a step that fails with this parameter set to <code>CANCEL_AND_WAIT</code>, pending steps and the running step are not canceled; for a step that fails with this parameter set to <code>TERMINATE_CLUSTER</code>, the cluster does not terminate.</p>
+    #[doc(hidden)]
     pub action_on_failure: std::option::Option<crate::model::ActionOnFailure>,
     /// <p>The current execution status details of the cluster step.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::StepStatus>,
+    /// <p>The Amazon Resource Name (ARN) of the runtime role for a step on the cluster. The runtime role can be a cross-account IAM role. The runtime role ARN is a combination of account ID, role name, and role type using the following format: <code>arn:partition:service:region:account:resource</code>. </p>
+    /// <p>For example, <code>arn:aws:iam::1234567890:role/ReadOnly</code> is a correctly formatted runtime role ARN.</p>
+    #[doc(hidden)]
+    pub execution_role_arn: std::option::Option<std::string::String>,
 }
 impl Step {
     /// <p>The identifier of the cluster step.</p>
@@ -12704,6 +12972,11 @@ impl Step {
     pub fn status(&self) -> std::option::Option<&crate::model::StepStatus> {
         self.status.as_ref()
     }
+    /// <p>The Amazon Resource Name (ARN) of the runtime role for a step on the cluster. The runtime role can be a cross-account IAM role. The runtime role ARN is a combination of account ID, role name, and role type using the following format: <code>arn:partition:service:region:account:resource</code>. </p>
+    /// <p>For example, <code>arn:aws:iam::1234567890:role/ReadOnly</code> is a correctly formatted runtime role ARN.</p>
+    pub fn execution_role_arn(&self) -> std::option::Option<&str> {
+        self.execution_role_arn.as_deref()
+    }
 }
 impl std::fmt::Debug for Step {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -12713,14 +12986,14 @@ impl std::fmt::Debug for Step {
         formatter.field("config", &self.config);
         formatter.field("action_on_failure", &self.action_on_failure);
         formatter.field("status", &self.status);
+        formatter.field("execution_role_arn", &self.execution_role_arn);
         formatter.finish()
     }
 }
-/// See [`Step`](crate::model::Step)
+/// See [`Step`](crate::model::Step).
 pub mod step {
 
-    /// A builder for [`Step`](crate::model::Step)
-    #[non_exhaustive]
+    /// A builder for [`Step`](crate::model::Step).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -12728,6 +13001,7 @@ pub mod step {
         pub(crate) config: std::option::Option<crate::model::HadoopStepConfig>,
         pub(crate) action_on_failure: std::option::Option<crate::model::ActionOnFailure>,
         pub(crate) status: std::option::Option<crate::model::StepStatus>,
+        pub(crate) execution_role_arn: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>The identifier of the cluster step.</p>
@@ -12790,7 +13064,22 @@ pub mod step {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`Step`](crate::model::Step)
+        /// <p>The Amazon Resource Name (ARN) of the runtime role for a step on the cluster. The runtime role can be a cross-account IAM role. The runtime role ARN is a combination of account ID, role name, and role type using the following format: <code>arn:partition:service:region:account:resource</code>. </p>
+        /// <p>For example, <code>arn:aws:iam::1234567890:role/ReadOnly</code> is a correctly formatted runtime role ARN.</p>
+        pub fn execution_role_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.execution_role_arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the runtime role for a step on the cluster. The runtime role can be a cross-account IAM role. The runtime role ARN is a combination of account ID, role name, and role type using the following format: <code>arn:partition:service:region:account:resource</code>. </p>
+        /// <p>For example, <code>arn:aws:iam::1234567890:role/ReadOnly</code> is a correctly formatted runtime role ARN.</p>
+        pub fn set_execution_role_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.execution_role_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`Step`](crate::model::Step).
         pub fn build(self) -> crate::model::Step {
             crate::model::Step {
                 id: self.id,
@@ -12798,12 +13087,13 @@ pub mod step {
                 config: self.config,
                 action_on_failure: self.action_on_failure,
                 status: self.status,
+                execution_role_arn: self.execution_role_arn,
             }
         }
     }
 }
 impl Step {
-    /// Creates a new builder-style object to manufacture [`Step`](crate::model::Step)
+    /// Creates a new builder-style object to manufacture [`Step`](crate::model::Step).
     pub fn builder() -> crate::model::step::Builder {
         crate::model::step::Builder::default()
     }
@@ -12814,6 +13104,7 @@ impl Step {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OsRelease {
     /// <p>The Amazon Linux release specified for a cluster in the RunJobFlow request. The format is as shown in <a href="https://docs.aws.amazon.com/AL2/latest/relnotes/relnotes-20220218.html"> <i>Amazon Linux 2 Release Notes</i> </a>. For example, 2.0.20220218.1.</p>
+    #[doc(hidden)]
     pub label: std::option::Option<std::string::String>,
 }
 impl OsRelease {
@@ -12829,11 +13120,10 @@ impl std::fmt::Debug for OsRelease {
         formatter.finish()
     }
 }
-/// See [`OsRelease`](crate::model::OsRelease)
+/// See [`OsRelease`](crate::model::OsRelease).
 pub mod os_release {
 
-    /// A builder for [`OsRelease`](crate::model::OsRelease)
-    #[non_exhaustive]
+    /// A builder for [`OsRelease`](crate::model::OsRelease).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) label: std::option::Option<std::string::String>,
@@ -12849,14 +13139,14 @@ pub mod os_release {
             self.label = input;
             self
         }
-        /// Consumes the builder and constructs a [`OsRelease`](crate::model::OsRelease)
+        /// Consumes the builder and constructs a [`OsRelease`](crate::model::OsRelease).
         pub fn build(self) -> crate::model::OsRelease {
             crate::model::OsRelease { label: self.label }
         }
     }
 }
 impl OsRelease {
-    /// Creates a new builder-style object to manufacture [`OsRelease`](crate::model::OsRelease)
+    /// Creates a new builder-style object to manufacture [`OsRelease`](crate::model::OsRelease).
     pub fn builder() -> crate::model::os_release::Builder {
         crate::model::os_release::Builder::default()
     }
@@ -12867,8 +13157,10 @@ impl OsRelease {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SimplifiedApplication {
     /// <p>The returned release label application name. For example, <code>hadoop</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The returned release label application version. For example, <code>3.2.1</code>.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl SimplifiedApplication {
@@ -12889,11 +13181,10 @@ impl std::fmt::Debug for SimplifiedApplication {
         formatter.finish()
     }
 }
-/// See [`SimplifiedApplication`](crate::model::SimplifiedApplication)
+/// See [`SimplifiedApplication`](crate::model::SimplifiedApplication).
 pub mod simplified_application {
 
-    /// A builder for [`SimplifiedApplication`](crate::model::SimplifiedApplication)
-    #[non_exhaustive]
+    /// A builder for [`SimplifiedApplication`](crate::model::SimplifiedApplication).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -12920,7 +13211,7 @@ pub mod simplified_application {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`SimplifiedApplication`](crate::model::SimplifiedApplication)
+        /// Consumes the builder and constructs a [`SimplifiedApplication`](crate::model::SimplifiedApplication).
         pub fn build(self) -> crate::model::SimplifiedApplication {
             crate::model::SimplifiedApplication {
                 name: self.name,
@@ -12930,7 +13221,7 @@ pub mod simplified_application {
     }
 }
 impl SimplifiedApplication {
-    /// Creates a new builder-style object to manufacture [`SimplifiedApplication`](crate::model::SimplifiedApplication)
+    /// Creates a new builder-style object to manufacture [`SimplifiedApplication`](crate::model::SimplifiedApplication).
     pub fn builder() -> crate::model::simplified_application::Builder {
         crate::model::simplified_application::Builder::default()
     }
@@ -12941,14 +13232,19 @@ impl SimplifiedApplication {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotebookExecution {
     /// <p>The unique identifier of a notebook execution.</p>
+    #[doc(hidden)]
     pub notebook_execution_id: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the EMR Notebook that is used for the notebook execution.</p>
+    #[doc(hidden)]
     pub editor_id: std::option::Option<std::string::String>,
     /// <p>The execution engine, such as an EMR cluster, used to run the EMR notebook and perform the notebook execution.</p>
+    #[doc(hidden)]
     pub execution_engine: std::option::Option<crate::model::ExecutionEngineConfig>,
     /// <p>A name for the notebook execution.</p>
+    #[doc(hidden)]
     pub notebook_execution_name: std::option::Option<std::string::String>,
     /// <p>Input parameters in JSON format passed to the EMR Notebook at runtime for execution.</p>
+    #[doc(hidden)]
     pub notebook_params: std::option::Option<std::string::String>,
     /// <p>The status of the notebook execution.</p>
     /// <ul>
@@ -12963,20 +13259,28 @@ pub struct NotebookExecution {
     /// <li> <p> <code>STOPPING</code> indicates that the cluster is in the process of stopping the execution as a result of a <code>StopNotebookExecution</code> request.</p> </li>
     /// <li> <p> <code>STOPPED</code> indicates that the execution stopped because of a <code>StopNotebookExecution</code> request.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::NotebookExecutionStatus>,
     /// <p>The timestamp when notebook execution started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp when notebook execution ended.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) of the notebook execution.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The location of the notebook execution's output file in Amazon S3.</p>
+    #[doc(hidden)]
     pub output_notebook_uri: std::option::Option<std::string::String>,
     /// <p>The reason for the latest status change of the notebook execution.</p>
+    #[doc(hidden)]
     pub last_state_change_reason: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the EC2 security group associated with the EMR Notebook instance. For more information see <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks-security-groups.html">Specifying EC2 Security Groups for EMR Notebooks</a> in the <i>EMR Management Guide</i>.</p>
+    #[doc(hidden)]
     pub notebook_instance_security_group_id: std::option::Option<std::string::String>,
     /// <p>A list of tags associated with a notebook execution. Tags are user-defined key-value pairs that consist of a required key string with a maximum of 128 characters and an optional value string with a maximum of 256 characters.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl NotebookExecution {
@@ -13067,11 +13371,10 @@ impl std::fmt::Debug for NotebookExecution {
         formatter.finish()
     }
 }
-/// See [`NotebookExecution`](crate::model::NotebookExecution)
+/// See [`NotebookExecution`](crate::model::NotebookExecution).
 pub mod notebook_execution {
 
-    /// A builder for [`NotebookExecution`](crate::model::NotebookExecution)
-    #[non_exhaustive]
+    /// A builder for [`NotebookExecution`](crate::model::NotebookExecution).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) notebook_execution_id: std::option::Option<std::string::String>,
@@ -13285,7 +13588,7 @@ pub mod notebook_execution {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotebookExecution`](crate::model::NotebookExecution)
+        /// Consumes the builder and constructs a [`NotebookExecution`](crate::model::NotebookExecution).
         pub fn build(self) -> crate::model::NotebookExecution {
             crate::model::NotebookExecution {
                 notebook_execution_id: self.notebook_execution_id,
@@ -13306,7 +13609,7 @@ pub mod notebook_execution {
     }
 }
 impl NotebookExecution {
-    /// Creates a new builder-style object to manufacture [`NotebookExecution`](crate::model::NotebookExecution)
+    /// Creates a new builder-style object to manufacture [`NotebookExecution`](crate::model::NotebookExecution).
     pub fn builder() -> crate::model::notebook_execution::Builder {
         crate::model::notebook_execution::Builder::default()
     }
@@ -13317,35 +13620,50 @@ impl NotebookExecution {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobFlowDetail {
     /// <p>The job flow identifier.</p>
+    #[doc(hidden)]
     pub job_flow_id: std::option::Option<std::string::String>,
     /// <p>The name of the job flow.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The location in Amazon S3 where log files for the job are stored.</p>
+    #[doc(hidden)]
     pub log_uri: std::option::Option<std::string::String>,
     /// <p>The KMS key used for encrypting log files. This attribute is only available with EMR version 5.30.0 and later, excluding EMR 6.0.0.</p>
+    #[doc(hidden)]
     pub log_encryption_kms_key_id: std::option::Option<std::string::String>,
     /// <p>Applies only to Amazon EMR AMI versions 3.x and 2.x. For Amazon EMR releases 4.0 and later, <code>ReleaseLabel</code> is used. To specify a custom AMI, use <code>CustomAmiID</code>.</p>
+    #[doc(hidden)]
     pub ami_version: std::option::Option<std::string::String>,
     /// <p>Describes the execution status of the job flow.</p>
+    #[doc(hidden)]
     pub execution_status_detail: std::option::Option<crate::model::JobFlowExecutionStatusDetail>,
     /// <p>Describes the Amazon EC2 instances of the job flow.</p>
+    #[doc(hidden)]
     pub instances: std::option::Option<crate::model::JobFlowInstancesDetail>,
     /// <p>A list of steps run by the job flow.</p>
+    #[doc(hidden)]
     pub steps: std::option::Option<std::vec::Vec<crate::model::StepDetail>>,
     /// <p>A list of the bootstrap actions run by the job flow.</p>
+    #[doc(hidden)]
     pub bootstrap_actions: std::option::Option<std::vec::Vec<crate::model::BootstrapActionDetail>>,
     /// <p>A list of strings set by third-party software when the job flow is launched. If you are not using third-party software to manage the job flow, this value is empty.</p>
+    #[doc(hidden)]
     pub supported_products: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Indicates whether the cluster is visible to IAM principals in the Amazon Web Services account associated with the cluster. When <code>true</code>, IAM principals in the Amazon Web Services account can perform EMR cluster actions that their IAM policies allow. When <code>false</code>, only the IAM principal that created the cluster and the Amazon Web Services account root user can perform EMR actions, regardless of IAM permissions policies attached to other IAM principals.</p>
     /// <p>The default value is <code>true</code> if a value is not provided when creating a cluster using the EMR API <code>RunJobFlow</code> command, the CLI <a href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command, or the Amazon Web Services Management Console.</p>
+    #[doc(hidden)]
     pub visible_to_all_users: bool,
     /// <p>The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.</p>
+    #[doc(hidden)]
     pub job_flow_role: std::option::Option<std::string::String>,
     /// <p>The IAM role that is assumed by the Amazon EMR service to access Amazon Web Services resources on your behalf.</p>
+    #[doc(hidden)]
     pub service_role: std::option::Option<std::string::String>,
     /// <p>An IAM role for automatic scaling policies. The default role is <code>EMR_AutoScaling_DefaultRole</code>. The IAM role provides a way for the automatic scaling feature to get the required permissions it needs to launch and terminate EC2 instances in an instance group.</p>
+    #[doc(hidden)]
     pub auto_scaling_role: std::option::Option<std::string::String>,
     /// <p>The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an instance group is resized. <code>TERMINATE_AT_INSTANCE_HOUR</code> indicates that Amazon EMR terminates nodes at the instance-hour boundary, regardless of when the request to terminate the instance was submitted. This option is only available with Amazon EMR 5.1.0 and later and is the default for clusters created using that version. <code>TERMINATE_AT_TASK_COMPLETION</code> indicates that Amazon EMR adds nodes to a deny list and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the instance-hour boundary. With either behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> available only in Amazon EMR version 4.1.0 and later, and is the default for versions of Amazon EMR earlier than 5.1.0.</p>
+    #[doc(hidden)]
     pub scale_down_behavior: std::option::Option<crate::model::ScaleDownBehavior>,
 }
 impl JobFlowDetail {
@@ -13434,11 +13752,10 @@ impl std::fmt::Debug for JobFlowDetail {
         formatter.finish()
     }
 }
-/// See [`JobFlowDetail`](crate::model::JobFlowDetail)
+/// See [`JobFlowDetail`](crate::model::JobFlowDetail).
 pub mod job_flow_detail {
 
-    /// A builder for [`JobFlowDetail`](crate::model::JobFlowDetail)
-    #[non_exhaustive]
+    /// A builder for [`JobFlowDetail`](crate::model::JobFlowDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_flow_id: std::option::Option<std::string::String>,
@@ -13660,7 +13977,7 @@ pub mod job_flow_detail {
             self.scale_down_behavior = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobFlowDetail`](crate::model::JobFlowDetail)
+        /// Consumes the builder and constructs a [`JobFlowDetail`](crate::model::JobFlowDetail).
         pub fn build(self) -> crate::model::JobFlowDetail {
             crate::model::JobFlowDetail {
                 job_flow_id: self.job_flow_id,
@@ -13683,7 +14000,7 @@ pub mod job_flow_detail {
     }
 }
 impl JobFlowDetail {
-    /// Creates a new builder-style object to manufacture [`JobFlowDetail`](crate::model::JobFlowDetail)
+    /// Creates a new builder-style object to manufacture [`JobFlowDetail`](crate::model::JobFlowDetail).
     pub fn builder() -> crate::model::job_flow_detail::Builder {
         crate::model::job_flow_detail::Builder::default()
     }
@@ -13694,6 +14011,7 @@ impl JobFlowDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BootstrapActionDetail {
     /// <p>A description of the bootstrap action.</p>
+    #[doc(hidden)]
     pub bootstrap_action_config: std::option::Option<crate::model::BootstrapActionConfig>,
 }
 impl BootstrapActionDetail {
@@ -13711,11 +14029,10 @@ impl std::fmt::Debug for BootstrapActionDetail {
         formatter.finish()
     }
 }
-/// See [`BootstrapActionDetail`](crate::model::BootstrapActionDetail)
+/// See [`BootstrapActionDetail`](crate::model::BootstrapActionDetail).
 pub mod bootstrap_action_detail {
 
-    /// A builder for [`BootstrapActionDetail`](crate::model::BootstrapActionDetail)
-    #[non_exhaustive]
+    /// A builder for [`BootstrapActionDetail`](crate::model::BootstrapActionDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bootstrap_action_config:
@@ -13738,7 +14055,7 @@ pub mod bootstrap_action_detail {
             self.bootstrap_action_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`BootstrapActionDetail`](crate::model::BootstrapActionDetail)
+        /// Consumes the builder and constructs a [`BootstrapActionDetail`](crate::model::BootstrapActionDetail).
         pub fn build(self) -> crate::model::BootstrapActionDetail {
             crate::model::BootstrapActionDetail {
                 bootstrap_action_config: self.bootstrap_action_config,
@@ -13747,7 +14064,7 @@ pub mod bootstrap_action_detail {
     }
 }
 impl BootstrapActionDetail {
-    /// Creates a new builder-style object to manufacture [`BootstrapActionDetail`](crate::model::BootstrapActionDetail)
+    /// Creates a new builder-style object to manufacture [`BootstrapActionDetail`](crate::model::BootstrapActionDetail).
     pub fn builder() -> crate::model::bootstrap_action_detail::Builder {
         crate::model::bootstrap_action_detail::Builder::default()
     }
@@ -13758,8 +14075,10 @@ impl BootstrapActionDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StepDetail {
     /// <p>The step configuration.</p>
+    #[doc(hidden)]
     pub step_config: std::option::Option<crate::model::StepConfig>,
     /// <p>The description of the step status.</p>
+    #[doc(hidden)]
     pub execution_status_detail: std::option::Option<crate::model::StepExecutionStatusDetail>,
 }
 impl StepDetail {
@@ -13782,11 +14101,10 @@ impl std::fmt::Debug for StepDetail {
         formatter.finish()
     }
 }
-/// See [`StepDetail`](crate::model::StepDetail)
+/// See [`StepDetail`](crate::model::StepDetail).
 pub mod step_detail {
 
-    /// A builder for [`StepDetail`](crate::model::StepDetail)
-    #[non_exhaustive]
+    /// A builder for [`StepDetail`](crate::model::StepDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) step_config: std::option::Option<crate::model::StepConfig>,
@@ -13823,7 +14141,7 @@ pub mod step_detail {
             self.execution_status_detail = input;
             self
         }
-        /// Consumes the builder and constructs a [`StepDetail`](crate::model::StepDetail)
+        /// Consumes the builder and constructs a [`StepDetail`](crate::model::StepDetail).
         pub fn build(self) -> crate::model::StepDetail {
             crate::model::StepDetail {
                 step_config: self.step_config,
@@ -13833,7 +14151,7 @@ pub mod step_detail {
     }
 }
 impl StepDetail {
-    /// Creates a new builder-style object to manufacture [`StepDetail`](crate::model::StepDetail)
+    /// Creates a new builder-style object to manufacture [`StepDetail`](crate::model::StepDetail).
     pub fn builder() -> crate::model::step_detail::Builder {
         crate::model::step_detail::Builder::default()
     }
@@ -13844,14 +14162,19 @@ impl StepDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StepExecutionStatusDetail {
     /// <p>The state of the step.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::StepExecutionState>,
     /// <p>The creation date and time of the step.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The start date and time of the step.</p>
+    #[doc(hidden)]
     pub start_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The completion date and time of the step.</p>
+    #[doc(hidden)]
     pub end_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A description of the step's current state.</p>
+    #[doc(hidden)]
     pub last_state_change_reason: std::option::Option<std::string::String>,
 }
 impl StepExecutionStatusDetail {
@@ -13887,11 +14210,10 @@ impl std::fmt::Debug for StepExecutionStatusDetail {
         formatter.finish()
     }
 }
-/// See [`StepExecutionStatusDetail`](crate::model::StepExecutionStatusDetail)
+/// See [`StepExecutionStatusDetail`](crate::model::StepExecutionStatusDetail).
 pub mod step_execution_status_detail {
 
-    /// A builder for [`StepExecutionStatusDetail`](crate::model::StepExecutionStatusDetail)
-    #[non_exhaustive]
+    /// A builder for [`StepExecutionStatusDetail`](crate::model::StepExecutionStatusDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::StepExecutionState>,
@@ -13966,7 +14288,7 @@ pub mod step_execution_status_detail {
             self.last_state_change_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`StepExecutionStatusDetail`](crate::model::StepExecutionStatusDetail)
+        /// Consumes the builder and constructs a [`StepExecutionStatusDetail`](crate::model::StepExecutionStatusDetail).
         pub fn build(self) -> crate::model::StepExecutionStatusDetail {
             crate::model::StepExecutionStatusDetail {
                 state: self.state,
@@ -13979,7 +14301,7 @@ pub mod step_execution_status_detail {
     }
 }
 impl StepExecutionStatusDetail {
-    /// Creates a new builder-style object to manufacture [`StepExecutionStatusDetail`](crate::model::StepExecutionStatusDetail)
+    /// Creates a new builder-style object to manufacture [`StepExecutionStatusDetail`](crate::model::StepExecutionStatusDetail).
     pub fn builder() -> crate::model::step_execution_status_detail::Builder {
         crate::model::step_execution_status_detail::Builder::default()
     }
@@ -14073,30 +14395,43 @@ impl AsRef<str> for StepExecutionState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobFlowInstancesDetail {
     /// <p>The Amazon EC2 master node instance type.</p>
+    #[doc(hidden)]
     pub master_instance_type: std::option::Option<std::string::String>,
     /// <p>The DNS name of the master node. If the cluster is on a private subnet, this is the private DNS name. On a public subnet, this is the public DNS name.</p>
+    #[doc(hidden)]
     pub master_public_dns_name: std::option::Option<std::string::String>,
     /// <p>The Amazon EC2 instance identifier of the master node.</p>
+    #[doc(hidden)]
     pub master_instance_id: std::option::Option<std::string::String>,
     /// <p>The Amazon EC2 core and task node instance type.</p>
+    #[doc(hidden)]
     pub slave_instance_type: std::option::Option<std::string::String>,
     /// <p>The number of Amazon EC2 instances in the cluster. If the value is 1, the same instance serves as both the master and core and task node. If the value is greater than 1, one instance is the master node and all others are core and task nodes.</p>
+    #[doc(hidden)]
     pub instance_count: std::option::Option<i32>,
     /// <p>Details about the instance groups in a cluster.</p>
+    #[doc(hidden)]
     pub instance_groups: std::option::Option<std::vec::Vec<crate::model::InstanceGroupDetail>>,
     /// <p>An approximation of the cost of the cluster, represented in m1.small/hours. This value is increased one time for every hour that an m1.small instance runs. Larger instances are weighted more heavily, so an Amazon EC2 instance that is roughly four times more expensive would result in the normalized instance hours being increased incrementally four times. This result is only an approximation and does not reflect the actual billing rate.</p>
+    #[doc(hidden)]
     pub normalized_instance_hours: std::option::Option<i32>,
     /// <p>The name of an Amazon EC2 key pair that can be used to connect to the master node using SSH.</p>
+    #[doc(hidden)]
     pub ec2_key_name: std::option::Option<std::string::String>,
     /// <p>For clusters launched within Amazon Virtual Private Cloud, this is the identifier of the subnet where the cluster was launched.</p>
+    #[doc(hidden)]
     pub ec2_subnet_id: std::option::Option<std::string::String>,
     /// <p>The Amazon EC2 Availability Zone for the cluster.</p>
+    #[doc(hidden)]
     pub placement: std::option::Option<crate::model::PlacementType>,
     /// <p>Specifies whether the cluster should remain available after completing all steps.</p>
+    #[doc(hidden)]
     pub keep_job_flow_alive_when_no_steps: bool,
     /// <p>Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.</p>
+    #[doc(hidden)]
     pub termination_protected: bool,
     /// <p>The Hadoop version for the cluster.</p>
+    #[doc(hidden)]
     pub hadoop_version: std::option::Option<std::string::String>,
 }
 impl JobFlowInstancesDetail {
@@ -14175,11 +14510,10 @@ impl std::fmt::Debug for JobFlowInstancesDetail {
         formatter.finish()
     }
 }
-/// See [`JobFlowInstancesDetail`](crate::model::JobFlowInstancesDetail)
+/// See [`JobFlowInstancesDetail`](crate::model::JobFlowInstancesDetail).
 pub mod job_flow_instances_detail {
 
-    /// A builder for [`JobFlowInstancesDetail`](crate::model::JobFlowInstancesDetail)
-    #[non_exhaustive]
+    /// A builder for [`JobFlowInstancesDetail`](crate::model::JobFlowInstancesDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) master_instance_type: std::option::Option<std::string::String>,
@@ -14361,7 +14695,7 @@ pub mod job_flow_instances_detail {
             self.hadoop_version = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobFlowInstancesDetail`](crate::model::JobFlowInstancesDetail)
+        /// Consumes the builder and constructs a [`JobFlowInstancesDetail`](crate::model::JobFlowInstancesDetail).
         pub fn build(self) -> crate::model::JobFlowInstancesDetail {
             crate::model::JobFlowInstancesDetail {
                 master_instance_type: self.master_instance_type,
@@ -14384,7 +14718,7 @@ pub mod job_flow_instances_detail {
     }
 }
 impl JobFlowInstancesDetail {
-    /// Creates a new builder-style object to manufacture [`JobFlowInstancesDetail`](crate::model::JobFlowInstancesDetail)
+    /// Creates a new builder-style object to manufacture [`JobFlowInstancesDetail`](crate::model::JobFlowInstancesDetail).
     pub fn builder() -> crate::model::job_flow_instances_detail::Builder {
         crate::model::job_flow_instances_detail::Builder::default()
     }
@@ -14395,34 +14729,49 @@ impl JobFlowInstancesDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceGroupDetail {
     /// <p>Unique identifier for the instance group.</p>
+    #[doc(hidden)]
     pub instance_group_id: std::option::Option<std::string::String>,
     /// <p>Friendly name for the instance group.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Market type of the EC2 instances used to create a cluster node.</p>
+    #[doc(hidden)]
     pub market: std::option::Option<crate::model::MarketType>,
     /// <p>Instance group role in the cluster</p>
+    #[doc(hidden)]
     pub instance_role: std::option::Option<crate::model::InstanceRoleType>,
     /// <p>If specified, indicates that the instance group uses Spot Instances. This is the maximum price you are willing to pay for Spot Instances. Specify <code>OnDemandPrice</code> to set the amount equal to the On-Demand price, or specify an amount in USD.</p>
+    #[doc(hidden)]
     pub bid_price: std::option::Option<std::string::String>,
     /// <p>EC2 instance type.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>Target number of instances to run in the instance group.</p>
+    #[doc(hidden)]
     pub instance_request_count: std::option::Option<i32>,
     /// <p>Actual count of running instances.</p>
+    #[doc(hidden)]
     pub instance_running_count: std::option::Option<i32>,
     /// <p>State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::InstanceGroupState>,
     /// <p>Details regarding the state of the instance group.</p>
+    #[doc(hidden)]
     pub last_state_change_reason: std::option::Option<std::string::String>,
     /// <p>The date/time the instance group was created.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date/time the instance group was started.</p>
+    #[doc(hidden)]
     pub start_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date/time the instance group was available to the cluster.</p>
+    #[doc(hidden)]
     pub ready_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date/time the instance group was terminated.</p>
+    #[doc(hidden)]
     pub end_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The custom AMI ID to use for the provisioned instance group.</p>
+    #[doc(hidden)]
     pub custom_ami_id: std::option::Option<std::string::String>,
 }
 impl InstanceGroupDetail {
@@ -14508,11 +14857,10 @@ impl std::fmt::Debug for InstanceGroupDetail {
         formatter.finish()
     }
 }
-/// See [`InstanceGroupDetail`](crate::model::InstanceGroupDetail)
+/// See [`InstanceGroupDetail`](crate::model::InstanceGroupDetail).
 pub mod instance_group_detail {
 
-    /// A builder for [`InstanceGroupDetail`](crate::model::InstanceGroupDetail)
-    #[non_exhaustive]
+    /// A builder for [`InstanceGroupDetail`](crate::model::InstanceGroupDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_group_id: std::option::Option<std::string::String>,
@@ -14712,7 +15060,7 @@ pub mod instance_group_detail {
             self.custom_ami_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceGroupDetail`](crate::model::InstanceGroupDetail)
+        /// Consumes the builder and constructs a [`InstanceGroupDetail`](crate::model::InstanceGroupDetail).
         pub fn build(self) -> crate::model::InstanceGroupDetail {
             crate::model::InstanceGroupDetail {
                 instance_group_id: self.instance_group_id,
@@ -14735,7 +15083,7 @@ pub mod instance_group_detail {
     }
 }
 impl InstanceGroupDetail {
-    /// Creates a new builder-style object to manufacture [`InstanceGroupDetail`](crate::model::InstanceGroupDetail)
+    /// Creates a new builder-style object to manufacture [`InstanceGroupDetail`](crate::model::InstanceGroupDetail).
     pub fn builder() -> crate::model::instance_group_detail::Builder {
         crate::model::instance_group_detail::Builder::default()
     }
@@ -14746,16 +15094,22 @@ impl InstanceGroupDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct JobFlowExecutionStatusDetail {
     /// <p>The state of the job flow.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::JobFlowExecutionState>,
     /// <p>The creation date and time of the job flow.</p>
+    #[doc(hidden)]
     pub creation_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The start date and time of the job flow.</p>
+    #[doc(hidden)]
     pub start_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time when the job flow was ready to start running bootstrap actions.</p>
+    #[doc(hidden)]
     pub ready_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The completion date and time of the job flow.</p>
+    #[doc(hidden)]
     pub end_date_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Description of the job flow last changed state.</p>
+    #[doc(hidden)]
     pub last_state_change_reason: std::option::Option<std::string::String>,
 }
 impl JobFlowExecutionStatusDetail {
@@ -14796,11 +15150,10 @@ impl std::fmt::Debug for JobFlowExecutionStatusDetail {
         formatter.finish()
     }
 }
-/// See [`JobFlowExecutionStatusDetail`](crate::model::JobFlowExecutionStatusDetail)
+/// See [`JobFlowExecutionStatusDetail`](crate::model::JobFlowExecutionStatusDetail).
 pub mod job_flow_execution_status_detail {
 
-    /// A builder for [`JobFlowExecutionStatusDetail`](crate::model::JobFlowExecutionStatusDetail)
-    #[non_exhaustive]
+    /// A builder for [`JobFlowExecutionStatusDetail`](crate::model::JobFlowExecutionStatusDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::JobFlowExecutionState>,
@@ -14889,7 +15242,7 @@ pub mod job_flow_execution_status_detail {
             self.last_state_change_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`JobFlowExecutionStatusDetail`](crate::model::JobFlowExecutionStatusDetail)
+        /// Consumes the builder and constructs a [`JobFlowExecutionStatusDetail`](crate::model::JobFlowExecutionStatusDetail).
         pub fn build(self) -> crate::model::JobFlowExecutionStatusDetail {
             crate::model::JobFlowExecutionStatusDetail {
                 state: self.state,
@@ -14903,7 +15256,7 @@ pub mod job_flow_execution_status_detail {
     }
 }
 impl JobFlowExecutionStatusDetail {
-    /// Creates a new builder-style object to manufacture [`JobFlowExecutionStatusDetail`](crate::model::JobFlowExecutionStatusDetail)
+    /// Creates a new builder-style object to manufacture [`JobFlowExecutionStatusDetail`](crate::model::JobFlowExecutionStatusDetail).
     pub fn builder() -> crate::model::job_flow_execution_status_detail::Builder {
         crate::model::job_flow_execution_status_detail::Builder::default()
     }
@@ -15002,70 +15355,101 @@ impl AsRef<str> for JobFlowExecutionState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Cluster {
     /// <p>The unique identifier for the cluster.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the cluster.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The current status details about the cluster.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ClusterStatus>,
     /// <p>Provides information about the EC2 instances in a cluster grouped by category. For example, key name, subnet ID, IAM instance profile, and so on.</p>
+    #[doc(hidden)]
     pub ec2_instance_attributes: std::option::Option<crate::model::Ec2InstanceAttributes>,
     /// <note>
     /// <p>The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.</p>
     /// </note>
     /// <p>The instance group configuration of the cluster. A value of <code>INSTANCE_GROUP</code> indicates a uniform instance group configuration. A value of <code>INSTANCE_FLEET</code> indicates an instance fleets configuration.</p>
+    #[doc(hidden)]
     pub instance_collection_type: std::option::Option<crate::model::InstanceCollectionType>,
     /// <p>The path to the Amazon S3 location where logs for this cluster are stored.</p>
+    #[doc(hidden)]
     pub log_uri: std::option::Option<std::string::String>,
     /// <p> The KMS key used for encrypting log files. This attribute is only available with EMR version 5.30.0 and later, excluding EMR 6.0.0. </p>
+    #[doc(hidden)]
     pub log_encryption_kms_key_id: std::option::Option<std::string::String>,
     /// <p>The AMI version requested for this cluster.</p>
+    #[doc(hidden)]
     pub requested_ami_version: std::option::Option<std::string::String>,
     /// <p>The AMI version running on this cluster.</p>
+    #[doc(hidden)]
     pub running_ami_version: std::option::Option<std::string::String>,
     /// <p>The Amazon EMR release label, which determines the version of open-source application packages installed on the cluster. Release labels are in the form <code>emr-x.x.x</code>, where x.x.x is an Amazon EMR release version such as <code>emr-5.14.0</code>. For more information about Amazon EMR release versions and included application versions and features, see <a href="https://docs.aws.amazon.com/emr/latest/ReleaseGuide/">https://docs.aws.amazon.com/emr/latest/ReleaseGuide/</a>. The release label applies only to Amazon EMR releases version 4.0 and later. Earlier versions use <code>AmiVersion</code>.</p>
+    #[doc(hidden)]
     pub release_label: std::option::Option<std::string::String>,
     /// <p>Specifies whether the cluster should terminate after completing all steps.</p>
+    #[doc(hidden)]
     pub auto_terminate: bool,
     /// <p>Indicates whether Amazon EMR will lock the cluster to prevent the EC2 instances from being terminated by an API call or user intervention, or in the event of a cluster error.</p>
+    #[doc(hidden)]
     pub termination_protected: bool,
     /// <p>Indicates whether the cluster is visible to IAM principals in the Amazon Web Services account associated with the cluster. When <code>true</code>, IAM principals in the Amazon Web Services account can perform EMR cluster actions on the cluster that their IAM policies allow. When <code>false</code>, only the IAM principal that created the cluster and the Amazon Web Services account root user can perform EMR actions, regardless of IAM permissions policies attached to other IAM principals.</p>
     /// <p>The default value is <code>true</code> if a value is not provided when creating a cluster using the EMR API <code>RunJobFlow</code> command, the CLI <a href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command, or the Amazon Web Services Management Console.</p>
+    #[doc(hidden)]
     pub visible_to_all_users: bool,
     /// <p>The applications installed on this cluster.</p>
+    #[doc(hidden)]
     pub applications: std::option::Option<std::vec::Vec<crate::model::Application>>,
     /// <p>A list of tags associated with a cluster.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.</p>
+    #[doc(hidden)]
     pub service_role: std::option::Option<std::string::String>,
     /// <p>An approximation of the cost of the cluster, represented in m1.small/hours. This value is incremented one time for every hour an m1.small instance runs. Larger instances are weighted more, so an EC2 instance that is roughly four times more expensive would result in the normalized instance hours being incremented by four. This result is only an approximation and does not reflect the actual billing rate.</p>
+    #[doc(hidden)]
     pub normalized_instance_hours: std::option::Option<i32>,
     /// <p>The DNS name of the master node. If the cluster is on a private subnet, this is the private DNS name. On a public subnet, this is the public DNS name.</p>
+    #[doc(hidden)]
     pub master_public_dns_name: std::option::Option<std::string::String>,
     /// <p>Applies only to Amazon EMR releases 4.x and later. The list of Configurations supplied to the EMR cluster.</p>
+    #[doc(hidden)]
     pub configurations: std::option::Option<std::vec::Vec<crate::model::Configuration>>,
     /// <p>The name of the security configuration applied to the cluster.</p>
+    #[doc(hidden)]
     pub security_configuration: std::option::Option<std::string::String>,
     /// <p>An IAM role for automatic scaling policies. The default role is <code>EMR_AutoScaling_DefaultRole</code>. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.</p>
+    #[doc(hidden)]
     pub auto_scaling_role: std::option::Option<std::string::String>,
     /// <p>The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an instance group is resized. <code>TERMINATE_AT_INSTANCE_HOUR</code> indicates that Amazon EMR terminates nodes at the instance-hour boundary, regardless of when the request to terminate the instance was submitted. This option is only available with Amazon EMR 5.1.0 and later and is the default for clusters created using that version. <code>TERMINATE_AT_TASK_COMPLETION</code> indicates that Amazon EMR adds nodes to a deny list and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the instance-hour boundary. With either behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to HDFS corruption. <code>TERMINATE_AT_TASK_COMPLETION</code> is available only in Amazon EMR version 4.1.0 and later, and is the default for versions of Amazon EMR earlier than 5.1.0.</p>
+    #[doc(hidden)]
     pub scale_down_behavior: std::option::Option<crate::model::ScaleDownBehavior>,
     /// <p>Available only in Amazon EMR version 5.7.0 and later. The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI.</p>
+    #[doc(hidden)]
     pub custom_ami_id: std::option::Option<std::string::String>,
     /// <p>The size, in GiB, of the Amazon EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.</p>
+    #[doc(hidden)]
     pub ebs_root_volume_size: std::option::Option<i32>,
     /// <p>Applies only when <code>CustomAmiID</code> is used. Specifies the type of updates that are applied from the Amazon Linux AMI package repositories when an instance boots using the AMI.</p>
+    #[doc(hidden)]
     pub repo_upgrade_on_boot: std::option::Option<crate::model::RepoUpgradeOnBoot>,
     /// <p>Attributes for Kerberos configuration when Kerberos authentication is enabled using a security configuration. For more information see <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-kerberos.html">Use Kerberos Authentication</a> in the <i>Amazon EMR Management Guide</i>.</p>
+    #[doc(hidden)]
     pub kerberos_attributes: std::option::Option<crate::model::KerberosAttributes>,
     /// <p>The Amazon Resource Name of the cluster.</p>
+    #[doc(hidden)]
     pub cluster_arn: std::option::Option<std::string::String>,
     /// <p> The Amazon Resource Name (ARN) of the Outpost where the cluster is launched. </p>
+    #[doc(hidden)]
     pub outpost_arn: std::option::Option<std::string::String>,
     /// <p>Specifies the number of steps that can be executed concurrently.</p>
+    #[doc(hidden)]
     pub step_concurrency_level: std::option::Option<i32>,
     /// <p>Placement group configured for an Amazon EMR cluster.</p>
+    #[doc(hidden)]
     pub placement_groups: std::option::Option<std::vec::Vec<crate::model::PlacementGroupConfig>>,
     /// <p>The Amazon Linux release specified in a cluster launch RunJobFlow request. If no Amazon Linux release was specified, the default Amazon Linux release is shown in the response.</p>
+    #[doc(hidden)]
     pub os_release_label: std::option::Option<std::string::String>,
 }
 impl Cluster {
@@ -15239,11 +15623,10 @@ impl std::fmt::Debug for Cluster {
         formatter.finish()
     }
 }
-/// See [`Cluster`](crate::model::Cluster)
+/// See [`Cluster`](crate::model::Cluster).
 pub mod cluster {
 
-    /// A builder for [`Cluster`](crate::model::Cluster)
-    #[non_exhaustive]
+    /// A builder for [`Cluster`](crate::model::Cluster).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -15687,7 +16070,7 @@ pub mod cluster {
             self.os_release_label = input;
             self
         }
-        /// Consumes the builder and constructs a [`Cluster`](crate::model::Cluster)
+        /// Consumes the builder and constructs a [`Cluster`](crate::model::Cluster).
         pub fn build(self) -> crate::model::Cluster {
             crate::model::Cluster {
                 id: self.id,
@@ -15726,7 +16109,7 @@ pub mod cluster {
     }
 }
 impl Cluster {
-    /// Creates a new builder-style object to manufacture [`Cluster`](crate::model::Cluster)
+    /// Creates a new builder-style object to manufacture [`Cluster`](crate::model::Cluster).
     pub fn builder() -> crate::model::cluster::Builder {
         crate::model::cluster::Builder::default()
     }
@@ -15792,26 +16175,37 @@ impl AsRef<str> for InstanceCollectionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ec2InstanceAttributes {
     /// <p>The name of the Amazon EC2 key pair to use when connecting with SSH into the master node as a user named "hadoop".</p>
+    #[doc(hidden)]
     pub ec2_key_name: std::option::Option<std::string::String>,
     /// <p>Set this parameter to the identifier of the Amazon VPC subnet where you want the cluster to launch. If you do not specify this value, and your account supports EC2-Classic, the cluster launches in EC2-Classic.</p>
+    #[doc(hidden)]
     pub ec2_subnet_id: std::option::Option<std::string::String>,
     /// <p>Applies to clusters configured with the instance fleets option. Specifies the unique identifier of one or more Amazon EC2 subnets in which to launch EC2 cluster instances. Subnets must exist within the same VPC. Amazon EMR chooses the EC2 subnet with the best fit from among the list of <code>RequestedEc2SubnetIds</code>, and then launches all cluster instances within that Subnet. If this value is not specified, and the account and Region support EC2-Classic networks, the cluster launches instances in the EC2-Classic network and uses <code>RequestedEc2AvailabilityZones</code> instead of this setting. If EC2-Classic is not supported, and no Subnet is specified, Amazon EMR chooses the subnet for you. <code>RequestedEc2SubnetIDs</code> and <code>RequestedEc2AvailabilityZones</code> cannot be specified together.</p>
+    #[doc(hidden)]
     pub requested_ec2_subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The Availability Zone in which the cluster will run. </p>
+    #[doc(hidden)]
     pub ec2_availability_zone: std::option::Option<std::string::String>,
     /// <p>Applies to clusters configured with the instance fleets option. Specifies one or more Availability Zones in which to launch EC2 cluster instances when the EC2-Classic network configuration is supported. Amazon EMR chooses the Availability Zone with the best fit from among the list of <code>RequestedEc2AvailabilityZones</code>, and then launches all cluster instances within that Availability Zone. If you do not specify this value, Amazon EMR chooses the Availability Zone for you. <code>RequestedEc2SubnetIDs</code> and <code>RequestedEc2AvailabilityZones</code> cannot be specified together.</p>
+    #[doc(hidden)]
     pub requested_ec2_availability_zones: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The IAM role that was specified when the cluster was launched. The EC2 instances of the cluster assume this role.</p>
+    #[doc(hidden)]
     pub iam_instance_profile: std::option::Option<std::string::String>,
     /// <p>The identifier of the Amazon EC2 security group for the master node.</p>
+    #[doc(hidden)]
     pub emr_managed_master_security_group: std::option::Option<std::string::String>,
     /// <p>The identifier of the Amazon EC2 security group for the core and task nodes.</p>
+    #[doc(hidden)]
     pub emr_managed_slave_security_group: std::option::Option<std::string::String>,
     /// <p>The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.</p>
+    #[doc(hidden)]
     pub service_access_security_group: std::option::Option<std::string::String>,
     /// <p>A list of additional Amazon EC2 security group IDs for the master node.</p>
+    #[doc(hidden)]
     pub additional_master_security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of additional Amazon EC2 security group IDs for the core and task nodes.</p>
+    #[doc(hidden)]
     pub additional_slave_security_groups: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl Ec2InstanceAttributes {
@@ -15895,11 +16289,10 @@ impl std::fmt::Debug for Ec2InstanceAttributes {
         formatter.finish()
     }
 }
-/// See [`Ec2InstanceAttributes`](crate::model::Ec2InstanceAttributes)
+/// See [`Ec2InstanceAttributes`](crate::model::Ec2InstanceAttributes).
 pub mod ec2_instance_attributes {
 
-    /// A builder for [`Ec2InstanceAttributes`](crate::model::Ec2InstanceAttributes)
-    #[non_exhaustive]
+    /// A builder for [`Ec2InstanceAttributes`](crate::model::Ec2InstanceAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ec2_key_name: std::option::Option<std::string::String>,
@@ -16101,7 +16494,7 @@ pub mod ec2_instance_attributes {
             self.additional_slave_security_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2InstanceAttributes`](crate::model::Ec2InstanceAttributes)
+        /// Consumes the builder and constructs a [`Ec2InstanceAttributes`](crate::model::Ec2InstanceAttributes).
         pub fn build(self) -> crate::model::Ec2InstanceAttributes {
             crate::model::Ec2InstanceAttributes {
                 ec2_key_name: self.ec2_key_name,
@@ -16120,7 +16513,7 @@ pub mod ec2_instance_attributes {
     }
 }
 impl Ec2InstanceAttributes {
-    /// Creates a new builder-style object to manufacture [`Ec2InstanceAttributes`](crate::model::Ec2InstanceAttributes)
+    /// Creates a new builder-style object to manufacture [`Ec2InstanceAttributes`](crate::model::Ec2InstanceAttributes).
     pub fn builder() -> crate::model::ec2_instance_attributes::Builder {
         crate::model::ec2_instance_attributes::Builder::default()
     }
@@ -16131,10 +16524,13 @@ impl Ec2InstanceAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelStepsInfo {
     /// <p>The encrypted StepId of a step.</p>
+    #[doc(hidden)]
     pub step_id: std::option::Option<std::string::String>,
     /// <p>The status of a CancelSteps Request. The value may be SUBMITTED or FAILED.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CancelStepsRequestStatus>,
     /// <p>The reason for the failure if the CancelSteps request fails.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
 }
 impl CancelStepsInfo {
@@ -16160,11 +16556,10 @@ impl std::fmt::Debug for CancelStepsInfo {
         formatter.finish()
     }
 }
-/// See [`CancelStepsInfo`](crate::model::CancelStepsInfo)
+/// See [`CancelStepsInfo`](crate::model::CancelStepsInfo).
 pub mod cancel_steps_info {
 
-    /// A builder for [`CancelStepsInfo`](crate::model::CancelStepsInfo)
-    #[non_exhaustive]
+    /// A builder for [`CancelStepsInfo`](crate::model::CancelStepsInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) step_id: std::option::Option<std::string::String>,
@@ -16205,7 +16600,7 @@ pub mod cancel_steps_info {
             self.reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelStepsInfo`](crate::model::CancelStepsInfo)
+        /// Consumes the builder and constructs a [`CancelStepsInfo`](crate::model::CancelStepsInfo).
         pub fn build(self) -> crate::model::CancelStepsInfo {
             crate::model::CancelStepsInfo {
                 step_id: self.step_id,
@@ -16216,7 +16611,7 @@ pub mod cancel_steps_info {
     }
 }
 impl CancelStepsInfo {
-    /// Creates a new builder-style object to manufacture [`CancelStepsInfo`](crate::model::CancelStepsInfo)
+    /// Creates a new builder-style object to manufacture [`CancelStepsInfo`](crate::model::CancelStepsInfo).
     pub fn builder() -> crate::model::cancel_steps_info::Builder {
         crate::model::cancel_steps_info::Builder::default()
     }

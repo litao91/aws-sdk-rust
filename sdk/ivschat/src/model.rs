@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationExceptionField {
     /// <p>Name of the field which failed validation.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Explanation of the reason for the validation error.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ValidationExceptionField {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for ValidationExceptionField {
         formatter.finish()
     }
 }
-/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField).
 pub mod validation_exception_field {
 
-    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField)
-    #[non_exhaustive]
+    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod validation_exception_field {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField).
         pub fn build(self) -> crate::model::ValidationExceptionField {
             crate::model::ValidationExceptionField {
                 name: self.name,
@@ -68,7 +69,7 @@ pub mod validation_exception_field {
     }
 }
 impl ValidationExceptionField {
-    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     pub fn builder() -> crate::model::validation_exception_field::Builder {
         crate::model::validation_exception_field::Builder::default()
     }
@@ -189,8 +190,10 @@ impl AsRef<str> for ResourceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MessageReviewHandler {
     /// <p>Identifier of the message review handler. Currently this must be an ARN of a lambda function.</p>
+    #[doc(hidden)]
     pub uri: std::option::Option<std::string::String>,
     /// <p>Specifies the fallback behavior (whether the message is allowed or denied) if the handler does not return a valid response, encounters an error, or times out. (For the timeout period, see <a href="https://docs.aws.amazon.com/ivs/latest/userguide/service-quotas.html"> Service Quotas</a>.) If allowed, the message is delivered with returned content to all users connected to the room. If denied, the message is not delivered to any user. Default: <code>ALLOW</code>.</p>
+    #[doc(hidden)]
     pub fallback_result: std::option::Option<crate::model::FallbackResult>,
 }
 impl MessageReviewHandler {
@@ -211,11 +214,10 @@ impl std::fmt::Debug for MessageReviewHandler {
         formatter.finish()
     }
 }
-/// See [`MessageReviewHandler`](crate::model::MessageReviewHandler)
+/// See [`MessageReviewHandler`](crate::model::MessageReviewHandler).
 pub mod message_review_handler {
 
-    /// A builder for [`MessageReviewHandler`](crate::model::MessageReviewHandler)
-    #[non_exhaustive]
+    /// A builder for [`MessageReviewHandler`](crate::model::MessageReviewHandler).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) uri: std::option::Option<std::string::String>,
@@ -245,7 +247,7 @@ pub mod message_review_handler {
             self.fallback_result = input;
             self
         }
-        /// Consumes the builder and constructs a [`MessageReviewHandler`](crate::model::MessageReviewHandler)
+        /// Consumes the builder and constructs a [`MessageReviewHandler`](crate::model::MessageReviewHandler).
         pub fn build(self) -> crate::model::MessageReviewHandler {
             crate::model::MessageReviewHandler {
                 uri: self.uri,
@@ -255,7 +257,7 @@ pub mod message_review_handler {
     }
 }
 impl MessageReviewHandler {
-    /// Creates a new builder-style object to manufacture [`MessageReviewHandler`](crate::model::MessageReviewHandler)
+    /// Creates a new builder-style object to manufacture [`MessageReviewHandler`](crate::model::MessageReviewHandler).
     pub fn builder() -> crate::model::message_review_handler::Builder {
         crate::model::message_review_handler::Builder::default()
     }
@@ -321,18 +323,25 @@ impl AsRef<str> for FallbackResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RoomSummary {
     /// <p>Room ARN.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>Room ID, generated by the system. This is a relative identifier, the part of the ARN that uniquely identifies the room.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Room name. The value does not need to be unique.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Configuration information for optional review of messages.</p>
+    #[doc(hidden)]
     pub message_review_handler: std::option::Option<crate::model::MessageReviewHandler>,
     /// <p>Time when the room was created. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>. </p>
+    #[doc(hidden)]
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Time of the room’s last update. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>. </p>
+    #[doc(hidden)]
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Tags attached to the resource. </p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -384,11 +393,10 @@ impl std::fmt::Debug for RoomSummary {
         formatter.finish()
     }
 }
-/// See [`RoomSummary`](crate::model::RoomSummary)
+/// See [`RoomSummary`](crate::model::RoomSummary).
 pub mod room_summary {
 
-    /// A builder for [`RoomSummary`](crate::model::RoomSummary)
-    #[non_exhaustive]
+    /// A builder for [`RoomSummary`](crate::model::RoomSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -496,7 +504,7 @@ pub mod room_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`RoomSummary`](crate::model::RoomSummary)
+        /// Consumes the builder and constructs a [`RoomSummary`](crate::model::RoomSummary).
         pub fn build(self) -> crate::model::RoomSummary {
             crate::model::RoomSummary {
                 arn: self.arn,
@@ -511,7 +519,7 @@ pub mod room_summary {
     }
 }
 impl RoomSummary {
-    /// Creates a new builder-style object to manufacture [`RoomSummary`](crate::model::RoomSummary)
+    /// Creates a new builder-style object to manufacture [`RoomSummary`](crate::model::RoomSummary).
     pub fn builder() -> crate::model::room_summary::Builder {
         crate::model::room_summary::Builder::default()
     }

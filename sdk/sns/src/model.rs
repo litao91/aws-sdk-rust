@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The required key portion of the tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The optional value portion of the tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -68,7 +69,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -79,12 +80,16 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchResultErrorEntry {
     /// <p>The <code>Id</code> of an entry in a batch request</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>An error code representing why the action failed on this entry.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>A message explaining why the action failed on this entry.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>Specifies whether the error happened due to the caller of the batch API action.</p>
+    #[doc(hidden)]
     pub sender_fault: bool,
 }
 impl BatchResultErrorEntry {
@@ -115,11 +120,10 @@ impl std::fmt::Debug for BatchResultErrorEntry {
         formatter.finish()
     }
 }
-/// See [`BatchResultErrorEntry`](crate::model::BatchResultErrorEntry)
+/// See [`BatchResultErrorEntry`](crate::model::BatchResultErrorEntry).
 pub mod batch_result_error_entry {
 
-    /// A builder for [`BatchResultErrorEntry`](crate::model::BatchResultErrorEntry)
-    #[non_exhaustive]
+    /// A builder for [`BatchResultErrorEntry`](crate::model::BatchResultErrorEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -168,7 +172,7 @@ pub mod batch_result_error_entry {
             self.sender_fault = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchResultErrorEntry`](crate::model::BatchResultErrorEntry)
+        /// Consumes the builder and constructs a [`BatchResultErrorEntry`](crate::model::BatchResultErrorEntry).
         pub fn build(self) -> crate::model::BatchResultErrorEntry {
             crate::model::BatchResultErrorEntry {
                 id: self.id,
@@ -180,7 +184,7 @@ pub mod batch_result_error_entry {
     }
 }
 impl BatchResultErrorEntry {
-    /// Creates a new builder-style object to manufacture [`BatchResultErrorEntry`](crate::model::BatchResultErrorEntry)
+    /// Creates a new builder-style object to manufacture [`BatchResultErrorEntry`](crate::model::BatchResultErrorEntry).
     pub fn builder() -> crate::model::batch_result_error_entry::Builder {
         crate::model::batch_result_error_entry::Builder::default()
     }
@@ -191,12 +195,15 @@ impl BatchResultErrorEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublishBatchResultEntry {
     /// <p>The <code>Id</code> of an entry in a batch request.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>An identifier for the message.</p>
+    #[doc(hidden)]
     pub message_id: std::option::Option<std::string::String>,
     /// <p>This parameter applies only to FIFO (first-in-first-out) topics.</p>
     /// <p>The large, non-consecutive number that Amazon SNS assigns to each message.</p>
     /// <p>The length of <code>SequenceNumber</code> is 128 bits. <code>SequenceNumber</code> continues to increase for a particular <code>MessageGroupId</code>.</p>
+    #[doc(hidden)]
     pub sequence_number: std::option::Option<std::string::String>,
 }
 impl PublishBatchResultEntry {
@@ -224,11 +231,10 @@ impl std::fmt::Debug for PublishBatchResultEntry {
         formatter.finish()
     }
 }
-/// See [`PublishBatchResultEntry`](crate::model::PublishBatchResultEntry)
+/// See [`PublishBatchResultEntry`](crate::model::PublishBatchResultEntry).
 pub mod publish_batch_result_entry {
 
-    /// A builder for [`PublishBatchResultEntry`](crate::model::PublishBatchResultEntry)
-    #[non_exhaustive]
+    /// A builder for [`PublishBatchResultEntry`](crate::model::PublishBatchResultEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -273,7 +279,7 @@ pub mod publish_batch_result_entry {
             self.sequence_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublishBatchResultEntry`](crate::model::PublishBatchResultEntry)
+        /// Consumes the builder and constructs a [`PublishBatchResultEntry`](crate::model::PublishBatchResultEntry).
         pub fn build(self) -> crate::model::PublishBatchResultEntry {
             crate::model::PublishBatchResultEntry {
                 id: self.id,
@@ -284,7 +290,7 @@ pub mod publish_batch_result_entry {
     }
 }
 impl PublishBatchResultEntry {
-    /// Creates a new builder-style object to manufacture [`PublishBatchResultEntry`](crate::model::PublishBatchResultEntry)
+    /// Creates a new builder-style object to manufacture [`PublishBatchResultEntry`](crate::model::PublishBatchResultEntry).
     pub fn builder() -> crate::model::publish_batch_result_entry::Builder {
         crate::model::publish_batch_result_entry::Builder::default()
     }
@@ -298,10 +304,13 @@ pub struct PublishBatchRequestEntry {
     /// <p>The <code>Ids</code> of a batch request must be unique within a request. </p>
     /// <p>This identifier can have up to 80 characters. The following characters are accepted: alphanumeric characters, hyphens(-), and underscores (_). </p>
     /// </note>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The body of the message.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The subject of the batch message.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<std::string::String>,
     /// <p>Set <code>MessageStructure</code> to <code>json</code> if you want to send a different message for each protocol. For example, using one publish action, you can send a short message to your SMS subscribers and a longer message to your email subscribers. If you set <code>MessageStructure</code> to <code>json</code>, the value of the <code>Message</code> parameter must: </p>
     /// <ul>
@@ -309,8 +318,10 @@ pub struct PublishBatchRequestEntry {
     /// <li> <p>contain at least a top-level JSON key of "default" with a value that is a string.</p> </li>
     /// </ul>
     /// <p>You can define other top-level keys that define the message you want to send to a specific transport protocol (e.g. http). </p>
+    #[doc(hidden)]
     pub message_structure: std::option::Option<std::string::String>,
     /// <p>Each message attribute consists of a <code>Name</code>, <code>Type</code>, and <code>Value</code>. For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-message-attributes.html">Amazon SNS message attributes</a> in the Amazon SNS Developer Guide.</p>
+    #[doc(hidden)]
     pub message_attributes: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::MessageAttributeValue>,
     >,
@@ -333,6 +344,7 @@ pub struct PublishBatchRequestEntry {
     /// </note>
     /// <p>The length of <code>MessageDeduplicationId</code> is 128 characters.</p>
     /// <p> <code>MessageDeduplicationId</code> can contain alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.</p>
+    #[doc(hidden)]
     pub message_deduplication_id: std::option::Option<std::string::String>,
     /// <p>This parameter applies only to FIFO (first-in-first-out) topics.</p>
     /// <p>The tag that specifies that a message belongs to a specific message group. Messages that belong to the same message group are processed in a FIFO manner (however, messages in different message groups might be processed out of order). To interleave multiple ordered streams within a single topic, use <code>MessageGroupId</code> values (for example, session data for multiple users). In this scenario, multiple consumers can process the topic, but the session data of each user is processed in a FIFO fashion. </p>
@@ -341,6 +353,7 @@ pub struct PublishBatchRequestEntry {
     /// <p> <code>MessageGroupId</code> can contain alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.</p> <important>
     /// <p> <code>MessageGroupId</code> is required for FIFO topics. You can't use it for standard topics. </p>
     /// </important>
+    #[doc(hidden)]
     pub message_group_id: std::option::Option<std::string::String>,
 }
 impl PublishBatchRequestEntry {
@@ -422,11 +435,10 @@ impl std::fmt::Debug for PublishBatchRequestEntry {
         formatter.finish()
     }
 }
-/// See [`PublishBatchRequestEntry`](crate::model::PublishBatchRequestEntry)
+/// See [`PublishBatchRequestEntry`](crate::model::PublishBatchRequestEntry).
 pub mod publish_batch_request_entry {
 
-    /// A builder for [`PublishBatchRequestEntry`](crate::model::PublishBatchRequestEntry)
-    #[non_exhaustive]
+    /// A builder for [`PublishBatchRequestEntry`](crate::model::PublishBatchRequestEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -598,7 +610,7 @@ pub mod publish_batch_request_entry {
             self.message_group_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublishBatchRequestEntry`](crate::model::PublishBatchRequestEntry)
+        /// Consumes the builder and constructs a [`PublishBatchRequestEntry`](crate::model::PublishBatchRequestEntry).
         pub fn build(self) -> crate::model::PublishBatchRequestEntry {
             crate::model::PublishBatchRequestEntry {
                 id: self.id,
@@ -613,7 +625,7 @@ pub mod publish_batch_request_entry {
     }
 }
 impl PublishBatchRequestEntry {
-    /// Creates a new builder-style object to manufacture [`PublishBatchRequestEntry`](crate::model::PublishBatchRequestEntry)
+    /// Creates a new builder-style object to manufacture [`PublishBatchRequestEntry`](crate::model::PublishBatchRequestEntry).
     pub fn builder() -> crate::model::publish_batch_request_entry::Builder {
         crate::model::publish_batch_request_entry::Builder::default()
     }
@@ -625,10 +637,13 @@ impl PublishBatchRequestEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MessageAttributeValue {
     /// <p>Amazon SNS supports the following logical data types: String, String.Array, Number, and Binary. For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMessageAttributes.html#SNSMessageAttributes.DataTypes">Message Attribute Data Types</a>.</p>
+    #[doc(hidden)]
     pub data_type: std::option::Option<std::string::String>,
     /// <p>Strings are Unicode with UTF8 binary encoding. For a list of code values, see <a href="https://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters">ASCII Printable Characters</a>.</p>
+    #[doc(hidden)]
     pub string_value: std::option::Option<std::string::String>,
     /// <p>Binary type attributes can store any binary data, for example, compressed data, encrypted data, or images.</p>
+    #[doc(hidden)]
     pub binary_value: std::option::Option<aws_smithy_types::Blob>,
 }
 impl MessageAttributeValue {
@@ -654,11 +669,10 @@ impl std::fmt::Debug for MessageAttributeValue {
         formatter.finish()
     }
 }
-/// See [`MessageAttributeValue`](crate::model::MessageAttributeValue)
+/// See [`MessageAttributeValue`](crate::model::MessageAttributeValue).
 pub mod message_attribute_value {
 
-    /// A builder for [`MessageAttributeValue`](crate::model::MessageAttributeValue)
-    #[non_exhaustive]
+    /// A builder for [`MessageAttributeValue`](crate::model::MessageAttributeValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_type: std::option::Option<std::string::String>,
@@ -699,7 +713,7 @@ pub mod message_attribute_value {
             self.binary_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`MessageAttributeValue`](crate::model::MessageAttributeValue)
+        /// Consumes the builder and constructs a [`MessageAttributeValue`](crate::model::MessageAttributeValue).
         pub fn build(self) -> crate::model::MessageAttributeValue {
             crate::model::MessageAttributeValue {
                 data_type: self.data_type,
@@ -710,7 +724,7 @@ pub mod message_attribute_value {
     }
 }
 impl MessageAttributeValue {
-    /// Creates a new builder-style object to manufacture [`MessageAttributeValue`](crate::model::MessageAttributeValue)
+    /// Creates a new builder-style object to manufacture [`MessageAttributeValue`](crate::model::MessageAttributeValue).
     pub fn builder() -> crate::model::message_attribute_value::Builder {
         crate::model::message_attribute_value::Builder::default()
     }
@@ -721,6 +735,7 @@ impl MessageAttributeValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Topic {
     /// <p>The topic's ARN.</p>
+    #[doc(hidden)]
     pub topic_arn: std::option::Option<std::string::String>,
 }
 impl Topic {
@@ -736,11 +751,10 @@ impl std::fmt::Debug for Topic {
         formatter.finish()
     }
 }
-/// See [`Topic`](crate::model::Topic)
+/// See [`Topic`](crate::model::Topic).
 pub mod topic {
 
-    /// A builder for [`Topic`](crate::model::Topic)
-    #[non_exhaustive]
+    /// A builder for [`Topic`](crate::model::Topic).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) topic_arn: std::option::Option<std::string::String>,
@@ -756,7 +770,7 @@ pub mod topic {
             self.topic_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Topic`](crate::model::Topic)
+        /// Consumes the builder and constructs a [`Topic`](crate::model::Topic).
         pub fn build(self) -> crate::model::Topic {
             crate::model::Topic {
                 topic_arn: self.topic_arn,
@@ -765,7 +779,7 @@ pub mod topic {
     }
 }
 impl Topic {
-    /// Creates a new builder-style object to manufacture [`Topic`](crate::model::Topic)
+    /// Creates a new builder-style object to manufacture [`Topic`](crate::model::Topic).
     pub fn builder() -> crate::model::topic::Builder {
         crate::model::topic::Builder::default()
     }
@@ -776,14 +790,19 @@ impl Topic {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Subscription {
     /// <p>The subscription's ARN.</p>
+    #[doc(hidden)]
     pub subscription_arn: std::option::Option<std::string::String>,
     /// <p>The subscription's owner.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The subscription's protocol.</p>
+    #[doc(hidden)]
     pub protocol: std::option::Option<std::string::String>,
     /// <p>The subscription's endpoint (format depends on the protocol).</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The ARN of the subscription's topic.</p>
+    #[doc(hidden)]
     pub topic_arn: std::option::Option<std::string::String>,
 }
 impl Subscription {
@@ -819,11 +838,10 @@ impl std::fmt::Debug for Subscription {
         formatter.finish()
     }
 }
-/// See [`Subscription`](crate::model::Subscription)
+/// See [`Subscription`](crate::model::Subscription).
 pub mod subscription {
 
-    /// A builder for [`Subscription`](crate::model::Subscription)
-    #[non_exhaustive]
+    /// A builder for [`Subscription`](crate::model::Subscription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subscription_arn: std::option::Option<std::string::String>,
@@ -886,7 +904,7 @@ pub mod subscription {
             self.topic_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`Subscription`](crate::model::Subscription)
+        /// Consumes the builder and constructs a [`Subscription`](crate::model::Subscription).
         pub fn build(self) -> crate::model::Subscription {
             crate::model::Subscription {
                 subscription_arn: self.subscription_arn,
@@ -899,7 +917,7 @@ pub mod subscription {
     }
 }
 impl Subscription {
-    /// Creates a new builder-style object to manufacture [`Subscription`](crate::model::Subscription)
+    /// Creates a new builder-style object to manufacture [`Subscription`](crate::model::Subscription).
     pub fn builder() -> crate::model::subscription::Builder {
         crate::model::subscription::Builder::default()
     }
@@ -911,8 +929,10 @@ impl Subscription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SmsSandboxPhoneNumber {
     /// <p>The destination phone number.</p>
+    #[doc(hidden)]
     pub phone_number: std::option::Option<std::string::String>,
     /// <p>The destination phone number's verification status.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::SmsSandboxPhoneNumberVerificationStatus>,
 }
 impl SmsSandboxPhoneNumber {
@@ -935,11 +955,10 @@ impl std::fmt::Debug for SmsSandboxPhoneNumber {
         formatter.finish()
     }
 }
-/// See [`SmsSandboxPhoneNumber`](crate::model::SmsSandboxPhoneNumber)
+/// See [`SmsSandboxPhoneNumber`](crate::model::SmsSandboxPhoneNumber).
 pub mod sms_sandbox_phone_number {
 
-    /// A builder for [`SmsSandboxPhoneNumber`](crate::model::SmsSandboxPhoneNumber)
-    #[non_exhaustive]
+    /// A builder for [`SmsSandboxPhoneNumber`](crate::model::SmsSandboxPhoneNumber).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) phone_number: std::option::Option<std::string::String>,
@@ -973,7 +992,7 @@ pub mod sms_sandbox_phone_number {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`SmsSandboxPhoneNumber`](crate::model::SmsSandboxPhoneNumber)
+        /// Consumes the builder and constructs a [`SmsSandboxPhoneNumber`](crate::model::SmsSandboxPhoneNumber).
         pub fn build(self) -> crate::model::SmsSandboxPhoneNumber {
             crate::model::SmsSandboxPhoneNumber {
                 phone_number: self.phone_number,
@@ -983,7 +1002,7 @@ pub mod sms_sandbox_phone_number {
     }
 }
 impl SmsSandboxPhoneNumber {
-    /// Creates a new builder-style object to manufacture [`SmsSandboxPhoneNumber`](crate::model::SmsSandboxPhoneNumber)
+    /// Creates a new builder-style object to manufacture [`SmsSandboxPhoneNumber`](crate::model::SmsSandboxPhoneNumber).
     pub fn builder() -> crate::model::sms_sandbox_phone_number::Builder {
         crate::model::sms_sandbox_phone_number::Builder::default()
     }
@@ -1052,8 +1071,10 @@ impl AsRef<str> for SmsSandboxPhoneNumberVerificationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PlatformApplication {
     /// <p>PlatformApplicationArn for platform application object.</p>
+    #[doc(hidden)]
     pub platform_application_arn: std::option::Option<std::string::String>,
     /// <p>Attributes for platform application object.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1078,11 +1099,10 @@ impl std::fmt::Debug for PlatformApplication {
         formatter.finish()
     }
 }
-/// See [`PlatformApplication`](crate::model::PlatformApplication)
+/// See [`PlatformApplication`](crate::model::PlatformApplication).
 pub mod platform_application {
 
-    /// A builder for [`PlatformApplication`](crate::model::PlatformApplication)
-    #[non_exhaustive]
+    /// A builder for [`PlatformApplication`](crate::model::PlatformApplication).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) platform_application_arn: std::option::Option<std::string::String>,
@@ -1129,7 +1149,7 @@ pub mod platform_application {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`PlatformApplication`](crate::model::PlatformApplication)
+        /// Consumes the builder and constructs a [`PlatformApplication`](crate::model::PlatformApplication).
         pub fn build(self) -> crate::model::PlatformApplication {
             crate::model::PlatformApplication {
                 platform_application_arn: self.platform_application_arn,
@@ -1139,7 +1159,7 @@ pub mod platform_application {
     }
 }
 impl PlatformApplication {
-    /// Creates a new builder-style object to manufacture [`PlatformApplication`](crate::model::PlatformApplication)
+    /// Creates a new builder-style object to manufacture [`PlatformApplication`](crate::model::PlatformApplication).
     pub fn builder() -> crate::model::platform_application::Builder {
         crate::model::platform_application::Builder::default()
     }
@@ -1150,16 +1170,22 @@ impl PlatformApplication {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PhoneNumberInformation {
     /// <p>The date and time when the phone number was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The phone number.</p>
+    #[doc(hidden)]
     pub phone_number: std::option::Option<std::string::String>,
     /// <p>The status of the phone number.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The two-character code for the country or region, in ISO 3166-1 alpha-2 format.</p>
+    #[doc(hidden)]
     pub iso2_country_code: std::option::Option<std::string::String>,
     /// <p>The list of supported routes.</p>
+    #[doc(hidden)]
     pub route_type: std::option::Option<crate::model::RouteType>,
     /// <p>The capabilities of each phone number.</p>
+    #[doc(hidden)]
     pub number_capabilities: std::option::Option<std::vec::Vec<crate::model::NumberCapability>>,
 }
 impl PhoneNumberInformation {
@@ -1200,11 +1226,10 @@ impl std::fmt::Debug for PhoneNumberInformation {
         formatter.finish()
     }
 }
-/// See [`PhoneNumberInformation`](crate::model::PhoneNumberInformation)
+/// See [`PhoneNumberInformation`](crate::model::PhoneNumberInformation).
 pub mod phone_number_information {
 
-    /// A builder for [`PhoneNumberInformation`](crate::model::PhoneNumberInformation)
-    #[non_exhaustive]
+    /// A builder for [`PhoneNumberInformation`](crate::model::PhoneNumberInformation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) created_at: std::option::Option<aws_smithy_types::DateTime>,
@@ -1294,7 +1319,7 @@ pub mod phone_number_information {
             self.number_capabilities = input;
             self
         }
-        /// Consumes the builder and constructs a [`PhoneNumberInformation`](crate::model::PhoneNumberInformation)
+        /// Consumes the builder and constructs a [`PhoneNumberInformation`](crate::model::PhoneNumberInformation).
         pub fn build(self) -> crate::model::PhoneNumberInformation {
             crate::model::PhoneNumberInformation {
                 created_at: self.created_at,
@@ -1308,7 +1333,7 @@ pub mod phone_number_information {
     }
 }
 impl PhoneNumberInformation {
-    /// Creates a new builder-style object to manufacture [`PhoneNumberInformation`](crate::model::PhoneNumberInformation)
+    /// Creates a new builder-style object to manufacture [`PhoneNumberInformation`](crate::model::PhoneNumberInformation).
     pub fn builder() -> crate::model::phone_number_information::Builder {
         crate::model::phone_number_information::Builder::default()
     }
@@ -1440,8 +1465,10 @@ impl AsRef<str> for RouteType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Endpoint {
     /// <p>The <code>EndpointArn</code> for mobile app and device.</p>
+    #[doc(hidden)]
     pub endpoint_arn: std::option::Option<std::string::String>,
     /// <p>Attributes for endpoint.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -1466,11 +1493,10 @@ impl std::fmt::Debug for Endpoint {
         formatter.finish()
     }
 }
-/// See [`Endpoint`](crate::model::Endpoint)
+/// See [`Endpoint`](crate::model::Endpoint).
 pub mod endpoint {
 
-    /// A builder for [`Endpoint`](crate::model::Endpoint)
-    #[non_exhaustive]
+    /// A builder for [`Endpoint`](crate::model::Endpoint).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint_arn: std::option::Option<std::string::String>,
@@ -1514,7 +1540,7 @@ pub mod endpoint {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint)
+        /// Consumes the builder and constructs a [`Endpoint`](crate::model::Endpoint).
         pub fn build(self) -> crate::model::Endpoint {
             crate::model::Endpoint {
                 endpoint_arn: self.endpoint_arn,
@@ -1524,7 +1550,7 @@ pub mod endpoint {
     }
 }
 impl Endpoint {
-    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint)
+    /// Creates a new builder-style object to manufacture [`Endpoint`](crate::model::Endpoint).
     pub fn builder() -> crate::model::endpoint::Builder {
         crate::model::endpoint::Builder::default()
     }

@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>Part of the key:value pair that defines a tag. You can use a tag key to describe a category of information, such as "customer." Tag keys are case-sensitive.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>Part of the key:value pair that defines a tag. You can use a tag value to describe a specific value within a category, such as "companyA" or "companyB." Tag values are case-sensitive.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -68,7 +69,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -80,8 +81,10 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricPolicy {
     /// <p>A setting to enable or disable metrics at the container level.</p>
+    #[doc(hidden)]
     pub container_level_metrics: std::option::Option<crate::model::ContainerLevelMetrics>,
     /// <p>A parameter that holds an array of rules that enable metrics at the object level. This parameter is optional, but if you choose to include it, you must also include at least one rule. By default, you can include up to five rules. You can also <a href="https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediastore/quotas">request a quota increase</a> to allow up to 300 rules per policy.</p>
+    #[doc(hidden)]
     pub metric_policy_rules: std::option::Option<std::vec::Vec<crate::model::MetricPolicyRule>>,
 }
 impl MetricPolicy {
@@ -104,11 +107,10 @@ impl std::fmt::Debug for MetricPolicy {
         formatter.finish()
     }
 }
-/// See [`MetricPolicy`](crate::model::MetricPolicy)
+/// See [`MetricPolicy`](crate::model::MetricPolicy).
 pub mod metric_policy {
 
-    /// A builder for [`MetricPolicy`](crate::model::MetricPolicy)
-    #[non_exhaustive]
+    /// A builder for [`MetricPolicy`](crate::model::MetricPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) container_level_metrics:
@@ -152,7 +154,7 @@ pub mod metric_policy {
             self.metric_policy_rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricPolicy`](crate::model::MetricPolicy)
+        /// Consumes the builder and constructs a [`MetricPolicy`](crate::model::MetricPolicy).
         pub fn build(self) -> crate::model::MetricPolicy {
             crate::model::MetricPolicy {
                 container_level_metrics: self.container_level_metrics,
@@ -162,7 +164,7 @@ pub mod metric_policy {
     }
 }
 impl MetricPolicy {
-    /// Creates a new builder-style object to manufacture [`MetricPolicy`](crate::model::MetricPolicy)
+    /// Creates a new builder-style object to manufacture [`MetricPolicy`](crate::model::MetricPolicy).
     pub fn builder() -> crate::model::metric_policy::Builder {
         crate::model::metric_policy::Builder::default()
     }
@@ -173,8 +175,10 @@ impl MetricPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricPolicyRule {
     /// <p>A path or file name that defines which objects to include in the group. Wildcards (*) are acceptable.</p>
+    #[doc(hidden)]
     pub object_group: std::option::Option<std::string::String>,
     /// <p>A name that allows you to refer to the object group.</p>
+    #[doc(hidden)]
     pub object_group_name: std::option::Option<std::string::String>,
 }
 impl MetricPolicyRule {
@@ -195,11 +199,10 @@ impl std::fmt::Debug for MetricPolicyRule {
         formatter.finish()
     }
 }
-/// See [`MetricPolicyRule`](crate::model::MetricPolicyRule)
+/// See [`MetricPolicyRule`](crate::model::MetricPolicyRule).
 pub mod metric_policy_rule {
 
-    /// A builder for [`MetricPolicyRule`](crate::model::MetricPolicyRule)
-    #[non_exhaustive]
+    /// A builder for [`MetricPolicyRule`](crate::model::MetricPolicyRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) object_group: std::option::Option<std::string::String>,
@@ -229,7 +232,7 @@ pub mod metric_policy_rule {
             self.object_group_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricPolicyRule`](crate::model::MetricPolicyRule)
+        /// Consumes the builder and constructs a [`MetricPolicyRule`](crate::model::MetricPolicyRule).
         pub fn build(self) -> crate::model::MetricPolicyRule {
             crate::model::MetricPolicyRule {
                 object_group: self.object_group,
@@ -239,7 +242,7 @@ pub mod metric_policy_rule {
     }
 }
 impl MetricPolicyRule {
-    /// Creates a new builder-style object to manufacture [`MetricPolicyRule`](crate::model::MetricPolicyRule)
+    /// Creates a new builder-style object to manufacture [`MetricPolicyRule`](crate::model::MetricPolicyRule).
     pub fn builder() -> crate::model::metric_policy_rule::Builder {
         crate::model::metric_policy_rule::Builder::default()
     }
@@ -306,18 +309,23 @@ impl AsRef<str> for ContainerLevelMetrics {
 pub struct CorsRule {
     /// <p>One or more response headers that you want users to be able to access from their applications (for example, from a JavaScript <code>XMLHttpRequest</code> object).</p>
     /// <p>Each CORS rule must have at least one <code>AllowedOrigins</code> element. The string value can include only one wildcard character (*), for example, http://*.example.com. Additionally, you can specify only one wildcard character to allow cross-origin access for all origins.</p>
+    #[doc(hidden)]
     pub allowed_origins: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Identifies an HTTP method that the origin that is specified in the rule is allowed to execute.</p>
     /// <p>Each CORS rule must contain at least one <code>AllowedMethods</code> and one <code>AllowedOrigins</code> element.</p>
+    #[doc(hidden)]
     pub allowed_methods: std::option::Option<std::vec::Vec<crate::model::MethodName>>,
     /// <p>Specifies which headers are allowed in a preflight <code>OPTIONS</code> request through the <code>Access-Control-Request-Headers</code> header. Each header name that is specified in <code>Access-Control-Request-Headers</code> must have a corresponding entry in the rule. Only the headers that were requested are sent back. </p>
     /// <p>This element can contain only one wildcard character (*).</p>
+    #[doc(hidden)]
     pub allowed_headers: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The time in seconds that your browser caches the preflight response for the specified resource.</p>
     /// <p>A CORS rule can have only one <code>MaxAgeSeconds</code> element.</p>
+    #[doc(hidden)]
     pub max_age_seconds: i32,
     /// <p>One or more headers in the response that you want users to be able to access from their applications (for example, from a JavaScript <code>XMLHttpRequest</code> object).</p>
     /// <p>This element is optional for each rule.</p>
+    #[doc(hidden)]
     pub expose_headers: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CorsRule {
@@ -358,11 +366,10 @@ impl std::fmt::Debug for CorsRule {
         formatter.finish()
     }
 }
-/// See [`CorsRule`](crate::model::CorsRule)
+/// See [`CorsRule`](crate::model::CorsRule).
 pub mod cors_rule {
 
-    /// A builder for [`CorsRule`](crate::model::CorsRule)
-    #[non_exhaustive]
+    /// A builder for [`CorsRule`](crate::model::CorsRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allowed_origins: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -468,7 +475,7 @@ pub mod cors_rule {
             self.expose_headers = input;
             self
         }
-        /// Consumes the builder and constructs a [`CorsRule`](crate::model::CorsRule)
+        /// Consumes the builder and constructs a [`CorsRule`](crate::model::CorsRule).
         pub fn build(self) -> crate::model::CorsRule {
             crate::model::CorsRule {
                 allowed_origins: self.allowed_origins,
@@ -481,7 +488,7 @@ pub mod cors_rule {
     }
 }
 impl CorsRule {
-    /// Creates a new builder-style object to manufacture [`CorsRule`](crate::model::CorsRule)
+    /// Creates a new builder-style object to manufacture [`CorsRule`](crate::model::CorsRule).
     pub fn builder() -> crate::model::cors_rule::Builder {
         crate::model::cors_rule::Builder::default()
     }
@@ -555,8 +562,10 @@ impl AsRef<str> for MethodName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Container {
     /// <p>The DNS endpoint of the container. Use the endpoint to identify the specific container when sending requests to the data plane. The service assigns this value when the container is created. Once the value has been assigned, it does not change.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>Unix timestamp.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) of the container. The ARN has the following format:</p>
     /// <p>arn:aws:<region>
@@ -568,12 +577,16 @@ pub struct Container {
     /// </account>
     /// </region></p>
     /// <p>For example: arn:aws:mediastore:us-west-2:111122223333:container/movies </p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The name of the container.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The status of container creation or deletion. The status is one of the following: <code>CREATING</code>, <code>ACTIVE</code>, or <code>DELETING</code>. While the service is creating the container, the status is <code>CREATING</code>. When the endpoint is available, the status changes to <code>ACTIVE</code>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ContainerStatus>,
     /// <p>The state of access logging on the container. This value is <code>false</code> by default, indicating that AWS Elemental MediaStore does not send access logs to Amazon CloudWatch Logs. When you enable access logging on the container, MediaStore changes this value to <code>true</code>, indicating that the service delivers access logs for objects stored in that container to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub access_logging_enabled: std::option::Option<bool>,
 }
 impl Container {
@@ -623,11 +636,10 @@ impl std::fmt::Debug for Container {
         formatter.finish()
     }
 }
-/// See [`Container`](crate::model::Container)
+/// See [`Container`](crate::model::Container).
 pub mod container {
 
-    /// A builder for [`Container`](crate::model::Container)
-    #[non_exhaustive]
+    /// A builder for [`Container`](crate::model::Container).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint: std::option::Option<std::string::String>,
@@ -722,7 +734,7 @@ pub mod container {
             self.access_logging_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`Container`](crate::model::Container)
+        /// Consumes the builder and constructs a [`Container`](crate::model::Container).
         pub fn build(self) -> crate::model::Container {
             crate::model::Container {
                 endpoint: self.endpoint,
@@ -736,7 +748,7 @@ pub mod container {
     }
 }
 impl Container {
-    /// Creates a new builder-style object to manufacture [`Container`](crate::model::Container)
+    /// Creates a new builder-style object to manufacture [`Container`](crate::model::Container).
     pub fn builder() -> crate::model::container::Builder {
         crate::model::container::Builder::default()
     }

@@ -2,6 +2,64 @@
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateRevealConfigurationOutput {
+    /// <p>The new configuration settings and the status of the configuration for the account.</p>
+    #[doc(hidden)]
+    pub configuration: std::option::Option<crate::model::RevealConfiguration>,
+}
+impl UpdateRevealConfigurationOutput {
+    /// <p>The new configuration settings and the status of the configuration for the account.</p>
+    pub fn configuration(&self) -> std::option::Option<&crate::model::RevealConfiguration> {
+        self.configuration.as_ref()
+    }
+}
+impl std::fmt::Debug for UpdateRevealConfigurationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateRevealConfigurationOutput");
+        formatter.field("configuration", &self.configuration);
+        formatter.finish()
+    }
+}
+/// See [`UpdateRevealConfigurationOutput`](crate::output::UpdateRevealConfigurationOutput).
+pub mod update_reveal_configuration_output {
+
+    /// A builder for [`UpdateRevealConfigurationOutput`](crate::output::UpdateRevealConfigurationOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) configuration: std::option::Option<crate::model::RevealConfiguration>,
+    }
+    impl Builder {
+        /// <p>The new configuration settings and the status of the configuration for the account.</p>
+        pub fn configuration(mut self, input: crate::model::RevealConfiguration) -> Self {
+            self.configuration = Some(input);
+            self
+        }
+        /// <p>The new configuration settings and the status of the configuration for the account.</p>
+        pub fn set_configuration(
+            mut self,
+            input: std::option::Option<crate::model::RevealConfiguration>,
+        ) -> Self {
+            self.configuration = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`UpdateRevealConfigurationOutput`](crate::output::UpdateRevealConfigurationOutput).
+        pub fn build(self) -> crate::output::UpdateRevealConfigurationOutput {
+            crate::output::UpdateRevealConfigurationOutput {
+                configuration: self.configuration,
+            }
+        }
+    }
+}
+impl UpdateRevealConfigurationOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateRevealConfigurationOutput`](crate::output::UpdateRevealConfigurationOutput).
+    pub fn builder() -> crate::output::update_reveal_configuration_output::Builder {
+        crate::output::update_reveal_configuration_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateOrganizationConfigurationOutput {}
 impl std::fmt::Debug for UpdateOrganizationConfigurationOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -9,22 +67,21 @@ impl std::fmt::Debug for UpdateOrganizationConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput)
+/// See [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput).
 pub mod update_organization_configuration_output {
 
-    /// A builder for [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput)
+        /// Consumes the builder and constructs a [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput).
         pub fn build(self) -> crate::output::UpdateOrganizationConfigurationOutput {
             crate::output::UpdateOrganizationConfigurationOutput {}
         }
     }
 }
 impl UpdateOrganizationConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput).
     pub fn builder() -> crate::output::update_organization_configuration_output::Builder {
         crate::output::update_organization_configuration_output::Builder::default()
     }
@@ -40,22 +97,21 @@ impl std::fmt::Debug for UpdateMemberSessionOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateMemberSessionOutput`](crate::output::UpdateMemberSessionOutput)
+/// See [`UpdateMemberSessionOutput`](crate::output::UpdateMemberSessionOutput).
 pub mod update_member_session_output {
 
-    /// A builder for [`UpdateMemberSessionOutput`](crate::output::UpdateMemberSessionOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateMemberSessionOutput`](crate::output::UpdateMemberSessionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateMemberSessionOutput`](crate::output::UpdateMemberSessionOutput)
+        /// Consumes the builder and constructs a [`UpdateMemberSessionOutput`](crate::output::UpdateMemberSessionOutput).
         pub fn build(self) -> crate::output::UpdateMemberSessionOutput {
             crate::output::UpdateMemberSessionOutput {}
         }
     }
 }
 impl UpdateMemberSessionOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateMemberSessionOutput`](crate::output::UpdateMemberSessionOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateMemberSessionOutput`](crate::output::UpdateMemberSessionOutput).
     pub fn builder() -> crate::output::update_member_session_output::Builder {
         crate::output::update_member_session_output::Builder::default()
     }
@@ -71,22 +127,21 @@ impl std::fmt::Debug for UpdateMacieSessionOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateMacieSessionOutput`](crate::output::UpdateMacieSessionOutput)
+/// See [`UpdateMacieSessionOutput`](crate::output::UpdateMacieSessionOutput).
 pub mod update_macie_session_output {
 
-    /// A builder for [`UpdateMacieSessionOutput`](crate::output::UpdateMacieSessionOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateMacieSessionOutput`](crate::output::UpdateMacieSessionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateMacieSessionOutput`](crate::output::UpdateMacieSessionOutput)
+        /// Consumes the builder and constructs a [`UpdateMacieSessionOutput`](crate::output::UpdateMacieSessionOutput).
         pub fn build(self) -> crate::output::UpdateMacieSessionOutput {
             crate::output::UpdateMacieSessionOutput {}
         }
     }
 }
 impl UpdateMacieSessionOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateMacieSessionOutput`](crate::output::UpdateMacieSessionOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateMacieSessionOutput`](crate::output::UpdateMacieSessionOutput).
     pub fn builder() -> crate::output::update_macie_session_output::Builder {
         crate::output::update_macie_session_output::Builder::default()
     }
@@ -97,8 +152,10 @@ impl UpdateMacieSessionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFindingsFilterOutput {
     /// <p>The Amazon Resource Name (ARN) of the filter that was updated.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the filter that was updated.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
 }
 impl UpdateFindingsFilterOutput {
@@ -119,11 +176,10 @@ impl std::fmt::Debug for UpdateFindingsFilterOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFindingsFilterOutput`](crate::output::UpdateFindingsFilterOutput)
+/// See [`UpdateFindingsFilterOutput`](crate::output::UpdateFindingsFilterOutput).
 pub mod update_findings_filter_output {
 
-    /// A builder for [`UpdateFindingsFilterOutput`](crate::output::UpdateFindingsFilterOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFindingsFilterOutput`](crate::output::UpdateFindingsFilterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -150,7 +206,7 @@ pub mod update_findings_filter_output {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFindingsFilterOutput`](crate::output::UpdateFindingsFilterOutput)
+        /// Consumes the builder and constructs a [`UpdateFindingsFilterOutput`](crate::output::UpdateFindingsFilterOutput).
         pub fn build(self) -> crate::output::UpdateFindingsFilterOutput {
             crate::output::UpdateFindingsFilterOutput {
                 arn: self.arn,
@@ -160,7 +216,7 @@ pub mod update_findings_filter_output {
     }
 }
 impl UpdateFindingsFilterOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFindingsFilterOutput`](crate::output::UpdateFindingsFilterOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFindingsFilterOutput`](crate::output::UpdateFindingsFilterOutput).
     pub fn builder() -> crate::output::update_findings_filter_output::Builder {
         crate::output::update_findings_filter_output::Builder::default()
     }
@@ -176,22 +232,21 @@ impl std::fmt::Debug for UpdateClassificationJobOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateClassificationJobOutput`](crate::output::UpdateClassificationJobOutput)
+/// See [`UpdateClassificationJobOutput`](crate::output::UpdateClassificationJobOutput).
 pub mod update_classification_job_output {
 
-    /// A builder for [`UpdateClassificationJobOutput`](crate::output::UpdateClassificationJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateClassificationJobOutput`](crate::output::UpdateClassificationJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateClassificationJobOutput`](crate::output::UpdateClassificationJobOutput)
+        /// Consumes the builder and constructs a [`UpdateClassificationJobOutput`](crate::output::UpdateClassificationJobOutput).
         pub fn build(self) -> crate::output::UpdateClassificationJobOutput {
             crate::output::UpdateClassificationJobOutput {}
         }
     }
 }
 impl UpdateClassificationJobOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateClassificationJobOutput`](crate::output::UpdateClassificationJobOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateClassificationJobOutput`](crate::output::UpdateClassificationJobOutput).
     pub fn builder() -> crate::output::update_classification_job_output::Builder {
         crate::output::update_classification_job_output::Builder::default()
     }
@@ -207,22 +262,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -233,6 +287,7 @@ impl UntagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TestCustomDataIdentifierOutput {
     /// <p>The number of occurrences of sample text that matched the criteria specified by the custom data identifier.</p>
+    #[doc(hidden)]
     pub match_count: i32,
 }
 impl TestCustomDataIdentifierOutput {
@@ -248,11 +303,10 @@ impl std::fmt::Debug for TestCustomDataIdentifierOutput {
         formatter.finish()
     }
 }
-/// See [`TestCustomDataIdentifierOutput`](crate::output::TestCustomDataIdentifierOutput)
+/// See [`TestCustomDataIdentifierOutput`](crate::output::TestCustomDataIdentifierOutput).
 pub mod test_custom_data_identifier_output {
 
-    /// A builder for [`TestCustomDataIdentifierOutput`](crate::output::TestCustomDataIdentifierOutput)
-    #[non_exhaustive]
+    /// A builder for [`TestCustomDataIdentifierOutput`](crate::output::TestCustomDataIdentifierOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) match_count: std::option::Option<i32>,
@@ -268,7 +322,7 @@ pub mod test_custom_data_identifier_output {
             self.match_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`TestCustomDataIdentifierOutput`](crate::output::TestCustomDataIdentifierOutput)
+        /// Consumes the builder and constructs a [`TestCustomDataIdentifierOutput`](crate::output::TestCustomDataIdentifierOutput).
         pub fn build(self) -> crate::output::TestCustomDataIdentifierOutput {
             crate::output::TestCustomDataIdentifierOutput {
                 match_count: self.match_count.unwrap_or_default(),
@@ -277,7 +331,7 @@ pub mod test_custom_data_identifier_output {
     }
 }
 impl TestCustomDataIdentifierOutput {
-    /// Creates a new builder-style object to manufacture [`TestCustomDataIdentifierOutput`](crate::output::TestCustomDataIdentifierOutput)
+    /// Creates a new builder-style object to manufacture [`TestCustomDataIdentifierOutput`](crate::output::TestCustomDataIdentifierOutput).
     pub fn builder() -> crate::output::test_custom_data_identifier_output::Builder {
         crate::output::test_custom_data_identifier_output::Builder::default()
     }
@@ -293,22 +347,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -319,8 +372,10 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SearchResourcesOutput {
     /// <p>An array of objects, one for each resource that meets the filter criteria specified in the request.</p>
+    #[doc(hidden)]
     pub matching_resources: std::option::Option<std::vec::Vec<crate::model::MatchingResource>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl SearchResourcesOutput {
@@ -341,11 +396,10 @@ impl std::fmt::Debug for SearchResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`SearchResourcesOutput`](crate::output::SearchResourcesOutput)
+/// See [`SearchResourcesOutput`](crate::output::SearchResourcesOutput).
 pub mod search_resources_output {
 
-    /// A builder for [`SearchResourcesOutput`](crate::output::SearchResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`SearchResourcesOutput`](crate::output::SearchResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) matching_resources:
@@ -382,7 +436,7 @@ pub mod search_resources_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`SearchResourcesOutput`](crate::output::SearchResourcesOutput)
+        /// Consumes the builder and constructs a [`SearchResourcesOutput`](crate::output::SearchResourcesOutput).
         pub fn build(self) -> crate::output::SearchResourcesOutput {
             crate::output::SearchResourcesOutput {
                 matching_resources: self.matching_resources,
@@ -392,7 +446,7 @@ pub mod search_resources_output {
     }
 }
 impl SearchResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`SearchResourcesOutput`](crate::output::SearchResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`SearchResourcesOutput`](crate::output::SearchResourcesOutput).
     pub fn builder() -> crate::output::search_resources_output::Builder {
         crate::output::search_resources_output::Builder::default()
     }
@@ -408,22 +462,21 @@ impl std::fmt::Debug for PutFindingsPublicationConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutFindingsPublicationConfigurationOutput`](crate::output::PutFindingsPublicationConfigurationOutput)
+/// See [`PutFindingsPublicationConfigurationOutput`](crate::output::PutFindingsPublicationConfigurationOutput).
 pub mod put_findings_publication_configuration_output {
 
-    /// A builder for [`PutFindingsPublicationConfigurationOutput`](crate::output::PutFindingsPublicationConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutFindingsPublicationConfigurationOutput`](crate::output::PutFindingsPublicationConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutFindingsPublicationConfigurationOutput`](crate::output::PutFindingsPublicationConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutFindingsPublicationConfigurationOutput`](crate::output::PutFindingsPublicationConfigurationOutput).
         pub fn build(self) -> crate::output::PutFindingsPublicationConfigurationOutput {
             crate::output::PutFindingsPublicationConfigurationOutput {}
         }
     }
 }
 impl PutFindingsPublicationConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutFindingsPublicationConfigurationOutput`](crate::output::PutFindingsPublicationConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutFindingsPublicationConfigurationOutput`](crate::output::PutFindingsPublicationConfigurationOutput).
     pub fn builder() -> crate::output::put_findings_publication_configuration_output::Builder {
         crate::output::put_findings_publication_configuration_output::Builder::default()
     }
@@ -434,6 +487,7 @@ impl PutFindingsPublicationConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutClassificationExportConfigurationOutput {
     /// <p>The location where the data classification results are stored, and the encryption settings that are used when storing results in that location.</p>
+    #[doc(hidden)]
     pub configuration: std::option::Option<crate::model::ClassificationExportConfiguration>,
 }
 impl PutClassificationExportConfigurationOutput {
@@ -451,11 +505,10 @@ impl std::fmt::Debug for PutClassificationExportConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`PutClassificationExportConfigurationOutput`](crate::output::PutClassificationExportConfigurationOutput)
+/// See [`PutClassificationExportConfigurationOutput`](crate::output::PutClassificationExportConfigurationOutput).
 pub mod put_classification_export_configuration_output {
 
-    /// A builder for [`PutClassificationExportConfigurationOutput`](crate::output::PutClassificationExportConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutClassificationExportConfigurationOutput`](crate::output::PutClassificationExportConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration:
@@ -478,7 +531,7 @@ pub mod put_classification_export_configuration_output {
             self.configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutClassificationExportConfigurationOutput`](crate::output::PutClassificationExportConfigurationOutput)
+        /// Consumes the builder and constructs a [`PutClassificationExportConfigurationOutput`](crate::output::PutClassificationExportConfigurationOutput).
         pub fn build(self) -> crate::output::PutClassificationExportConfigurationOutput {
             crate::output::PutClassificationExportConfigurationOutput {
                 configuration: self.configuration,
@@ -487,7 +540,7 @@ pub mod put_classification_export_configuration_output {
     }
 }
 impl PutClassificationExportConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`PutClassificationExportConfigurationOutput`](crate::output::PutClassificationExportConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`PutClassificationExportConfigurationOutput`](crate::output::PutClassificationExportConfigurationOutput).
     pub fn builder() -> crate::output::put_classification_export_configuration_output::Builder {
         crate::output::put_classification_export_configuration_output::Builder::default()
     }
@@ -498,6 +551,7 @@ impl PutClassificationExportConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>A map of key-value pairs that identifies the tags (keys and values) that are associated with the resource.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -517,11 +571,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -554,14 +607,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -572,8 +625,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListOrganizationAdminAccountsOutput {
     /// <p>An array of objects, one for each delegated Amazon Macie administrator account for the organization. Only one of these accounts can have a status of ENABLED.</p>
+    #[doc(hidden)]
     pub admin_accounts: std::option::Option<std::vec::Vec<crate::model::AdminAccount>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListOrganizationAdminAccountsOutput {
@@ -594,11 +649,10 @@ impl std::fmt::Debug for ListOrganizationAdminAccountsOutput {
         formatter.finish()
     }
 }
-/// See [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput)
+/// See [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput).
 pub mod list_organization_admin_accounts_output {
 
-    /// A builder for [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) admin_accounts: std::option::Option<std::vec::Vec<crate::model::AdminAccount>>,
@@ -634,7 +688,7 @@ pub mod list_organization_admin_accounts_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput)
+        /// Consumes the builder and constructs a [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput).
         pub fn build(self) -> crate::output::ListOrganizationAdminAccountsOutput {
             crate::output::ListOrganizationAdminAccountsOutput {
                 admin_accounts: self.admin_accounts,
@@ -644,7 +698,7 @@ pub mod list_organization_admin_accounts_output {
     }
 }
 impl ListOrganizationAdminAccountsOutput {
-    /// Creates a new builder-style object to manufacture [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput)
+    /// Creates a new builder-style object to manufacture [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput).
     pub fn builder() -> crate::output::list_organization_admin_accounts_output::Builder {
         crate::output::list_organization_admin_accounts_output::Builder::default()
     }
@@ -655,8 +709,10 @@ impl ListOrganizationAdminAccountsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListMembersOutput {
     /// <p>An array of objects, one for each account that's associated with the administrator account and meets the criteria specified in the request.</p>
+    #[doc(hidden)]
     pub members: std::option::Option<std::vec::Vec<crate::model::Member>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListMembersOutput {
@@ -677,11 +733,10 @@ impl std::fmt::Debug for ListMembersOutput {
         formatter.finish()
     }
 }
-/// See [`ListMembersOutput`](crate::output::ListMembersOutput)
+/// See [`ListMembersOutput`](crate::output::ListMembersOutput).
 pub mod list_members_output {
 
-    /// A builder for [`ListMembersOutput`](crate::output::ListMembersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListMembersOutput`](crate::output::ListMembersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) members: std::option::Option<std::vec::Vec<crate::model::Member>>,
@@ -717,7 +772,7 @@ pub mod list_members_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListMembersOutput`](crate::output::ListMembersOutput)
+        /// Consumes the builder and constructs a [`ListMembersOutput`](crate::output::ListMembersOutput).
         pub fn build(self) -> crate::output::ListMembersOutput {
             crate::output::ListMembersOutput {
                 members: self.members,
@@ -727,7 +782,7 @@ pub mod list_members_output {
     }
 }
 impl ListMembersOutput {
-    /// Creates a new builder-style object to manufacture [`ListMembersOutput`](crate::output::ListMembersOutput)
+    /// Creates a new builder-style object to manufacture [`ListMembersOutput`](crate::output::ListMembersOutput).
     pub fn builder() -> crate::output::list_members_output::Builder {
         crate::output::list_members_output::Builder::default()
     }
@@ -738,8 +793,10 @@ impl ListMembersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListManagedDataIdentifiersOutput {
     /// <p>An array of objects, one for each managed data identifier.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::ManagedDataIdentifierSummary>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListManagedDataIdentifiersOutput {
@@ -760,11 +817,10 @@ impl std::fmt::Debug for ListManagedDataIdentifiersOutput {
         formatter.finish()
     }
 }
-/// See [`ListManagedDataIdentifiersOutput`](crate::output::ListManagedDataIdentifiersOutput)
+/// See [`ListManagedDataIdentifiersOutput`](crate::output::ListManagedDataIdentifiersOutput).
 pub mod list_managed_data_identifiers_output {
 
-    /// A builder for [`ListManagedDataIdentifiersOutput`](crate::output::ListManagedDataIdentifiersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListManagedDataIdentifiersOutput`](crate::output::ListManagedDataIdentifiersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items:
@@ -801,7 +857,7 @@ pub mod list_managed_data_identifiers_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListManagedDataIdentifiersOutput`](crate::output::ListManagedDataIdentifiersOutput)
+        /// Consumes the builder and constructs a [`ListManagedDataIdentifiersOutput`](crate::output::ListManagedDataIdentifiersOutput).
         pub fn build(self) -> crate::output::ListManagedDataIdentifiersOutput {
             crate::output::ListManagedDataIdentifiersOutput {
                 items: self.items,
@@ -811,7 +867,7 @@ pub mod list_managed_data_identifiers_output {
     }
 }
 impl ListManagedDataIdentifiersOutput {
-    /// Creates a new builder-style object to manufacture [`ListManagedDataIdentifiersOutput`](crate::output::ListManagedDataIdentifiersOutput)
+    /// Creates a new builder-style object to manufacture [`ListManagedDataIdentifiersOutput`](crate::output::ListManagedDataIdentifiersOutput).
     pub fn builder() -> crate::output::list_managed_data_identifiers_output::Builder {
         crate::output::list_managed_data_identifiers_output::Builder::default()
     }
@@ -822,8 +878,10 @@ impl ListManagedDataIdentifiersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListInvitationsOutput {
     /// <p>An array of objects, one for each invitation that was received by the account.</p>
+    #[doc(hidden)]
     pub invitations: std::option::Option<std::vec::Vec<crate::model::Invitation>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListInvitationsOutput {
@@ -844,11 +902,10 @@ impl std::fmt::Debug for ListInvitationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListInvitationsOutput`](crate::output::ListInvitationsOutput)
+/// See [`ListInvitationsOutput`](crate::output::ListInvitationsOutput).
 pub mod list_invitations_output {
 
-    /// A builder for [`ListInvitationsOutput`](crate::output::ListInvitationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListInvitationsOutput`](crate::output::ListInvitationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) invitations: std::option::Option<std::vec::Vec<crate::model::Invitation>>,
@@ -884,7 +941,7 @@ pub mod list_invitations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListInvitationsOutput`](crate::output::ListInvitationsOutput)
+        /// Consumes the builder and constructs a [`ListInvitationsOutput`](crate::output::ListInvitationsOutput).
         pub fn build(self) -> crate::output::ListInvitationsOutput {
             crate::output::ListInvitationsOutput {
                 invitations: self.invitations,
@@ -894,7 +951,7 @@ pub mod list_invitations_output {
     }
 }
 impl ListInvitationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListInvitationsOutput`](crate::output::ListInvitationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListInvitationsOutput`](crate::output::ListInvitationsOutput).
     pub fn builder() -> crate::output::list_invitations_output::Builder {
         crate::output::list_invitations_output::Builder::default()
     }
@@ -905,9 +962,11 @@ impl ListInvitationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListFindingsFiltersOutput {
     /// <p>An array of objects, one for each filter that's associated with the account.</p>
+    #[doc(hidden)]
     pub findings_filter_list_items:
         std::option::Option<std::vec::Vec<crate::model::FindingsFilterListItem>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListFindingsFiltersOutput {
@@ -933,11 +992,10 @@ impl std::fmt::Debug for ListFindingsFiltersOutput {
         formatter.finish()
     }
 }
-/// See [`ListFindingsFiltersOutput`](crate::output::ListFindingsFiltersOutput)
+/// See [`ListFindingsFiltersOutput`](crate::output::ListFindingsFiltersOutput).
 pub mod list_findings_filters_output {
 
-    /// A builder for [`ListFindingsFiltersOutput`](crate::output::ListFindingsFiltersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListFindingsFiltersOutput`](crate::output::ListFindingsFiltersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) findings_filter_list_items:
@@ -977,7 +1035,7 @@ pub mod list_findings_filters_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFindingsFiltersOutput`](crate::output::ListFindingsFiltersOutput)
+        /// Consumes the builder and constructs a [`ListFindingsFiltersOutput`](crate::output::ListFindingsFiltersOutput).
         pub fn build(self) -> crate::output::ListFindingsFiltersOutput {
             crate::output::ListFindingsFiltersOutput {
                 findings_filter_list_items: self.findings_filter_list_items,
@@ -987,7 +1045,7 @@ pub mod list_findings_filters_output {
     }
 }
 impl ListFindingsFiltersOutput {
-    /// Creates a new builder-style object to manufacture [`ListFindingsFiltersOutput`](crate::output::ListFindingsFiltersOutput)
+    /// Creates a new builder-style object to manufacture [`ListFindingsFiltersOutput`](crate::output::ListFindingsFiltersOutput).
     pub fn builder() -> crate::output::list_findings_filters_output::Builder {
         crate::output::list_findings_filters_output::Builder::default()
     }
@@ -998,8 +1056,10 @@ impl ListFindingsFiltersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListFindingsOutput {
     /// <p>An array of strings, where each string is the unique identifier for a finding that meets the filter criteria specified in the request.</p>
+    #[doc(hidden)]
     pub finding_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListFindingsOutput {
@@ -1020,11 +1080,10 @@ impl std::fmt::Debug for ListFindingsOutput {
         formatter.finish()
     }
 }
-/// See [`ListFindingsOutput`](crate::output::ListFindingsOutput)
+/// See [`ListFindingsOutput`](crate::output::ListFindingsOutput).
 pub mod list_findings_output {
 
-    /// A builder for [`ListFindingsOutput`](crate::output::ListFindingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListFindingsOutput`](crate::output::ListFindingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) finding_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1060,7 +1119,7 @@ pub mod list_findings_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFindingsOutput`](crate::output::ListFindingsOutput)
+        /// Consumes the builder and constructs a [`ListFindingsOutput`](crate::output::ListFindingsOutput).
         pub fn build(self) -> crate::output::ListFindingsOutput {
             crate::output::ListFindingsOutput {
                 finding_ids: self.finding_ids,
@@ -1070,7 +1129,7 @@ pub mod list_findings_output {
     }
 }
 impl ListFindingsOutput {
-    /// Creates a new builder-style object to manufacture [`ListFindingsOutput`](crate::output::ListFindingsOutput)
+    /// Creates a new builder-style object to manufacture [`ListFindingsOutput`](crate::output::ListFindingsOutput).
     pub fn builder() -> crate::output::list_findings_output::Builder {
         crate::output::list_findings_output::Builder::default()
     }
@@ -1081,8 +1140,10 @@ impl ListFindingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListCustomDataIdentifiersOutput {
     /// <p>An array of objects, one for each custom data identifier.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::CustomDataIdentifierSummary>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListCustomDataIdentifiersOutput {
@@ -1103,11 +1164,10 @@ impl std::fmt::Debug for ListCustomDataIdentifiersOutput {
         formatter.finish()
     }
 }
-/// See [`ListCustomDataIdentifiersOutput`](crate::output::ListCustomDataIdentifiersOutput)
+/// See [`ListCustomDataIdentifiersOutput`](crate::output::ListCustomDataIdentifiersOutput).
 pub mod list_custom_data_identifiers_output {
 
-    /// A builder for [`ListCustomDataIdentifiersOutput`](crate::output::ListCustomDataIdentifiersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListCustomDataIdentifiersOutput`](crate::output::ListCustomDataIdentifiersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items:
@@ -1144,7 +1204,7 @@ pub mod list_custom_data_identifiers_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListCustomDataIdentifiersOutput`](crate::output::ListCustomDataIdentifiersOutput)
+        /// Consumes the builder and constructs a [`ListCustomDataIdentifiersOutput`](crate::output::ListCustomDataIdentifiersOutput).
         pub fn build(self) -> crate::output::ListCustomDataIdentifiersOutput {
             crate::output::ListCustomDataIdentifiersOutput {
                 items: self.items,
@@ -1154,7 +1214,7 @@ pub mod list_custom_data_identifiers_output {
     }
 }
 impl ListCustomDataIdentifiersOutput {
-    /// Creates a new builder-style object to manufacture [`ListCustomDataIdentifiersOutput`](crate::output::ListCustomDataIdentifiersOutput)
+    /// Creates a new builder-style object to manufacture [`ListCustomDataIdentifiersOutput`](crate::output::ListCustomDataIdentifiersOutput).
     pub fn builder() -> crate::output::list_custom_data_identifiers_output::Builder {
         crate::output::list_custom_data_identifiers_output::Builder::default()
     }
@@ -1165,8 +1225,10 @@ impl ListCustomDataIdentifiersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListClassificationJobsOutput {
     /// <p>An array of objects, one for each job that meets the filter criteria specified in the request.</p>
+    #[doc(hidden)]
     pub items: std::option::Option<std::vec::Vec<crate::model::JobSummary>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListClassificationJobsOutput {
@@ -1187,11 +1249,10 @@ impl std::fmt::Debug for ListClassificationJobsOutput {
         formatter.finish()
     }
 }
-/// See [`ListClassificationJobsOutput`](crate::output::ListClassificationJobsOutput)
+/// See [`ListClassificationJobsOutput`](crate::output::ListClassificationJobsOutput).
 pub mod list_classification_jobs_output {
 
-    /// A builder for [`ListClassificationJobsOutput`](crate::output::ListClassificationJobsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListClassificationJobsOutput`](crate::output::ListClassificationJobsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) items: std::option::Option<std::vec::Vec<crate::model::JobSummary>>,
@@ -1227,7 +1288,7 @@ pub mod list_classification_jobs_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListClassificationJobsOutput`](crate::output::ListClassificationJobsOutput)
+        /// Consumes the builder and constructs a [`ListClassificationJobsOutput`](crate::output::ListClassificationJobsOutput).
         pub fn build(self) -> crate::output::ListClassificationJobsOutput {
             crate::output::ListClassificationJobsOutput {
                 items: self.items,
@@ -1237,7 +1298,7 @@ pub mod list_classification_jobs_output {
     }
 }
 impl ListClassificationJobsOutput {
-    /// Creates a new builder-style object to manufacture [`ListClassificationJobsOutput`](crate::output::ListClassificationJobsOutput)
+    /// Creates a new builder-style object to manufacture [`ListClassificationJobsOutput`](crate::output::ListClassificationJobsOutput).
     pub fn builder() -> crate::output::list_classification_jobs_output::Builder {
         crate::output::list_classification_jobs_output::Builder::default()
     }
@@ -1248,8 +1309,10 @@ impl ListClassificationJobsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetUsageTotalsOutput {
     /// <p>The inclusive time period that the usage data applies to. Possible values are: MONTH_TO_DATE, for the current calendar month to date; and, PAST_30_DAYS, for the preceding 30 days.</p>
+    #[doc(hidden)]
     pub time_range: std::option::Option<crate::model::TimeRange>,
     /// <p>An array of objects that contains the results of the query. Each object contains the data for a specific usage metric.</p>
+    #[doc(hidden)]
     pub usage_totals: std::option::Option<std::vec::Vec<crate::model::UsageTotal>>,
 }
 impl GetUsageTotalsOutput {
@@ -1270,11 +1333,10 @@ impl std::fmt::Debug for GetUsageTotalsOutput {
         formatter.finish()
     }
 }
-/// See [`GetUsageTotalsOutput`](crate::output::GetUsageTotalsOutput)
+/// See [`GetUsageTotalsOutput`](crate::output::GetUsageTotalsOutput).
 pub mod get_usage_totals_output {
 
-    /// A builder for [`GetUsageTotalsOutput`](crate::output::GetUsageTotalsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetUsageTotalsOutput`](crate::output::GetUsageTotalsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) time_range: std::option::Option<crate::model::TimeRange>,
@@ -1313,7 +1375,7 @@ pub mod get_usage_totals_output {
             self.usage_totals = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetUsageTotalsOutput`](crate::output::GetUsageTotalsOutput)
+        /// Consumes the builder and constructs a [`GetUsageTotalsOutput`](crate::output::GetUsageTotalsOutput).
         pub fn build(self) -> crate::output::GetUsageTotalsOutput {
             crate::output::GetUsageTotalsOutput {
                 time_range: self.time_range,
@@ -1323,7 +1385,7 @@ pub mod get_usage_totals_output {
     }
 }
 impl GetUsageTotalsOutput {
-    /// Creates a new builder-style object to manufacture [`GetUsageTotalsOutput`](crate::output::GetUsageTotalsOutput)
+    /// Creates a new builder-style object to manufacture [`GetUsageTotalsOutput`](crate::output::GetUsageTotalsOutput).
     pub fn builder() -> crate::output::get_usage_totals_output::Builder {
         crate::output::get_usage_totals_output::Builder::default()
     }
@@ -1334,10 +1396,13 @@ impl GetUsageTotalsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetUsageStatisticsOutput {
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>An array of objects that contains the results of the query. Each object contains the data for an account that meets the filter criteria specified in the request.</p>
+    #[doc(hidden)]
     pub records: std::option::Option<std::vec::Vec<crate::model::UsageRecord>>,
     /// <p>The inclusive time period that the usage data applies to. Possible values are: MONTH_TO_DATE, for the current calendar month to date; and, PAST_30_DAYS, for the preceding 30 days.</p>
+    #[doc(hidden)]
     pub time_range: std::option::Option<crate::model::TimeRange>,
 }
 impl GetUsageStatisticsOutput {
@@ -1363,11 +1428,10 @@ impl std::fmt::Debug for GetUsageStatisticsOutput {
         formatter.finish()
     }
 }
-/// See [`GetUsageStatisticsOutput`](crate::output::GetUsageStatisticsOutput)
+/// See [`GetUsageStatisticsOutput`](crate::output::GetUsageStatisticsOutput).
 pub mod get_usage_statistics_output {
 
-    /// A builder for [`GetUsageStatisticsOutput`](crate::output::GetUsageStatisticsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetUsageStatisticsOutput`](crate::output::GetUsageStatisticsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1417,7 +1481,7 @@ pub mod get_usage_statistics_output {
             self.time_range = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetUsageStatisticsOutput`](crate::output::GetUsageStatisticsOutput)
+        /// Consumes the builder and constructs a [`GetUsageStatisticsOutput`](crate::output::GetUsageStatisticsOutput).
         pub fn build(self) -> crate::output::GetUsageStatisticsOutput {
             crate::output::GetUsageStatisticsOutput {
                 next_token: self.next_token,
@@ -1428,7 +1492,7 @@ pub mod get_usage_statistics_output {
     }
 }
 impl GetUsageStatisticsOutput {
-    /// Creates a new builder-style object to manufacture [`GetUsageStatisticsOutput`](crate::output::GetUsageStatisticsOutput)
+    /// Creates a new builder-style object to manufacture [`GetUsageStatisticsOutput`](crate::output::GetUsageStatisticsOutput).
     pub fn builder() -> crate::output::get_usage_statistics_output::Builder {
         crate::output::get_usage_statistics_output::Builder::default()
     }
@@ -1437,25 +1501,368 @@ impl GetUsageStatisticsOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetSensitiveDataOccurrencesAvailabilityOutput {
+    /// <p>Specifies whether occurrences of sensitive data can be retrieved for the finding. Possible values are: AVAILABLE, the sensitive data can be retrieved; and, UNAVAILABLE, the sensitive data can't be retrieved. If this value is UNAVAILABLE, the reasons array indicates why the data can't be retrieved.</p>
+    #[doc(hidden)]
+    pub code: std::option::Option<crate::model::AvailabilityCode>,
+    /// <p>Specifies why occurrences of sensitive data can't be retrieved for the finding. Possible values are:</p>
+    /// <ul>
+    /// <li><p>INVALID_CLASSIFICATION_RESULT - Amazon Macie can't verify the location of the sensitive data to retrieve. There isn't a corresponding sensitive data discovery result for the finding. Or the sensitive data discovery result specified by the ClassificationDetails.detailedResultsLocation field of the finding isn't available, is malformed or corrupted, or uses an unsupported storage format.</p></li>
+    /// <li><p>OBJECT_EXCEEDS_SIZE_QUOTA - The storage size of the affected S3 object exceeds the size quota for retrieving occurrences of sensitive data.</p></li>
+    /// <li><p>OBJECT_UNAVAILABLE - The affected S3 object isn't available. The object might have been renamed, moved, or deleted. Or the object was changed after Amazon Macie created the finding.</p></li>
+    /// <li><p>UNSUPPORTED_FINDING_TYPE - The specified finding isn't a sensitive data finding.</p></li>
+    /// <li><p>UNSUPPORTED_OBJECT_TYPE - The affected S3 object uses a file or storage format that Macie doesn't support for retrieving occurrences of sensitive data.</p></li>
+    /// </ul>
+    /// <p>This value is null if sensitive data can be retrieved for the finding.</p>
+    #[doc(hidden)]
+    pub reasons: std::option::Option<std::vec::Vec<crate::model::UnavailabilityReasonCode>>,
+}
+impl GetSensitiveDataOccurrencesAvailabilityOutput {
+    /// <p>Specifies whether occurrences of sensitive data can be retrieved for the finding. Possible values are: AVAILABLE, the sensitive data can be retrieved; and, UNAVAILABLE, the sensitive data can't be retrieved. If this value is UNAVAILABLE, the reasons array indicates why the data can't be retrieved.</p>
+    pub fn code(&self) -> std::option::Option<&crate::model::AvailabilityCode> {
+        self.code.as_ref()
+    }
+    /// <p>Specifies why occurrences of sensitive data can't be retrieved for the finding. Possible values are:</p>
+    /// <ul>
+    /// <li><p>INVALID_CLASSIFICATION_RESULT - Amazon Macie can't verify the location of the sensitive data to retrieve. There isn't a corresponding sensitive data discovery result for the finding. Or the sensitive data discovery result specified by the ClassificationDetails.detailedResultsLocation field of the finding isn't available, is malformed or corrupted, or uses an unsupported storage format.</p></li>
+    /// <li><p>OBJECT_EXCEEDS_SIZE_QUOTA - The storage size of the affected S3 object exceeds the size quota for retrieving occurrences of sensitive data.</p></li>
+    /// <li><p>OBJECT_UNAVAILABLE - The affected S3 object isn't available. The object might have been renamed, moved, or deleted. Or the object was changed after Amazon Macie created the finding.</p></li>
+    /// <li><p>UNSUPPORTED_FINDING_TYPE - The specified finding isn't a sensitive data finding.</p></li>
+    /// <li><p>UNSUPPORTED_OBJECT_TYPE - The affected S3 object uses a file or storage format that Macie doesn't support for retrieving occurrences of sensitive data.</p></li>
+    /// </ul>
+    /// <p>This value is null if sensitive data can be retrieved for the finding.</p>
+    pub fn reasons(&self) -> std::option::Option<&[crate::model::UnavailabilityReasonCode]> {
+        self.reasons.as_deref()
+    }
+}
+impl std::fmt::Debug for GetSensitiveDataOccurrencesAvailabilityOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetSensitiveDataOccurrencesAvailabilityOutput");
+        formatter.field("code", &self.code);
+        formatter.field("reasons", &self.reasons);
+        formatter.finish()
+    }
+}
+/// See [`GetSensitiveDataOccurrencesAvailabilityOutput`](crate::output::GetSensitiveDataOccurrencesAvailabilityOutput).
+pub mod get_sensitive_data_occurrences_availability_output {
+
+    /// A builder for [`GetSensitiveDataOccurrencesAvailabilityOutput`](crate::output::GetSensitiveDataOccurrencesAvailabilityOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) code: std::option::Option<crate::model::AvailabilityCode>,
+        pub(crate) reasons:
+            std::option::Option<std::vec::Vec<crate::model::UnavailabilityReasonCode>>,
+    }
+    impl Builder {
+        /// <p>Specifies whether occurrences of sensitive data can be retrieved for the finding. Possible values are: AVAILABLE, the sensitive data can be retrieved; and, UNAVAILABLE, the sensitive data can't be retrieved. If this value is UNAVAILABLE, the reasons array indicates why the data can't be retrieved.</p>
+        pub fn code(mut self, input: crate::model::AvailabilityCode) -> Self {
+            self.code = Some(input);
+            self
+        }
+        /// <p>Specifies whether occurrences of sensitive data can be retrieved for the finding. Possible values are: AVAILABLE, the sensitive data can be retrieved; and, UNAVAILABLE, the sensitive data can't be retrieved. If this value is UNAVAILABLE, the reasons array indicates why the data can't be retrieved.</p>
+        pub fn set_code(
+            mut self,
+            input: std::option::Option<crate::model::AvailabilityCode>,
+        ) -> Self {
+            self.code = input;
+            self
+        }
+        /// Appends an item to `reasons`.
+        ///
+        /// To override the contents of this collection use [`set_reasons`](Self::set_reasons).
+        ///
+        /// <p>Specifies why occurrences of sensitive data can't be retrieved for the finding. Possible values are:</p>
+        /// <ul>
+        /// <li><p>INVALID_CLASSIFICATION_RESULT - Amazon Macie can't verify the location of the sensitive data to retrieve. There isn't a corresponding sensitive data discovery result for the finding. Or the sensitive data discovery result specified by the ClassificationDetails.detailedResultsLocation field of the finding isn't available, is malformed or corrupted, or uses an unsupported storage format.</p></li>
+        /// <li><p>OBJECT_EXCEEDS_SIZE_QUOTA - The storage size of the affected S3 object exceeds the size quota for retrieving occurrences of sensitive data.</p></li>
+        /// <li><p>OBJECT_UNAVAILABLE - The affected S3 object isn't available. The object might have been renamed, moved, or deleted. Or the object was changed after Amazon Macie created the finding.</p></li>
+        /// <li><p>UNSUPPORTED_FINDING_TYPE - The specified finding isn't a sensitive data finding.</p></li>
+        /// <li><p>UNSUPPORTED_OBJECT_TYPE - The affected S3 object uses a file or storage format that Macie doesn't support for retrieving occurrences of sensitive data.</p></li>
+        /// </ul>
+        /// <p>This value is null if sensitive data can be retrieved for the finding.</p>
+        pub fn reasons(mut self, input: crate::model::UnavailabilityReasonCode) -> Self {
+            let mut v = self.reasons.unwrap_or_default();
+            v.push(input);
+            self.reasons = Some(v);
+            self
+        }
+        /// <p>Specifies why occurrences of sensitive data can't be retrieved for the finding. Possible values are:</p>
+        /// <ul>
+        /// <li><p>INVALID_CLASSIFICATION_RESULT - Amazon Macie can't verify the location of the sensitive data to retrieve. There isn't a corresponding sensitive data discovery result for the finding. Or the sensitive data discovery result specified by the ClassificationDetails.detailedResultsLocation field of the finding isn't available, is malformed or corrupted, or uses an unsupported storage format.</p></li>
+        /// <li><p>OBJECT_EXCEEDS_SIZE_QUOTA - The storage size of the affected S3 object exceeds the size quota for retrieving occurrences of sensitive data.</p></li>
+        /// <li><p>OBJECT_UNAVAILABLE - The affected S3 object isn't available. The object might have been renamed, moved, or deleted. Or the object was changed after Amazon Macie created the finding.</p></li>
+        /// <li><p>UNSUPPORTED_FINDING_TYPE - The specified finding isn't a sensitive data finding.</p></li>
+        /// <li><p>UNSUPPORTED_OBJECT_TYPE - The affected S3 object uses a file or storage format that Macie doesn't support for retrieving occurrences of sensitive data.</p></li>
+        /// </ul>
+        /// <p>This value is null if sensitive data can be retrieved for the finding.</p>
+        pub fn set_reasons(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::UnavailabilityReasonCode>>,
+        ) -> Self {
+            self.reasons = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetSensitiveDataOccurrencesAvailabilityOutput`](crate::output::GetSensitiveDataOccurrencesAvailabilityOutput).
+        pub fn build(self) -> crate::output::GetSensitiveDataOccurrencesAvailabilityOutput {
+            crate::output::GetSensitiveDataOccurrencesAvailabilityOutput {
+                code: self.code,
+                reasons: self.reasons,
+            }
+        }
+    }
+}
+impl GetSensitiveDataOccurrencesAvailabilityOutput {
+    /// Creates a new builder-style object to manufacture [`GetSensitiveDataOccurrencesAvailabilityOutput`](crate::output::GetSensitiveDataOccurrencesAvailabilityOutput).
+    pub fn builder() -> crate::output::get_sensitive_data_occurrences_availability_output::Builder {
+        crate::output::get_sensitive_data_occurrences_availability_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetSensitiveDataOccurrencesOutput {
+    /// <p>If an error occurred when Amazon Macie attempted to retrieve occurrences of sensitive data reported by the finding, a description of the error that occurred. This value is null if the status (status) of the request is PROCESSING or SUCCESS.</p>
+    #[doc(hidden)]
+    pub error: std::option::Option<std::string::String>,
+    /// <p>A map that specifies 1-100 types of sensitive data reported by the finding and, for each type, 1-10 occurrences of sensitive data.</p>
+    #[doc(hidden)]
+    pub sensitive_data_occurrences: std::option::Option<
+        std::collections::HashMap<
+            std::string::String,
+            std::vec::Vec<crate::model::DetectedDataDetails>,
+        >,
+    >,
+    /// <p>The status of the request to retrieve occurrences of sensitive data reported by the finding. Possible values are:</p>
+    /// <ul>
+    /// <li><p>ERROR - An error occurred when Amazon Macie attempted to locate, retrieve, or encrypt the sensitive data. The error value indicates the nature of the error that occurred.</p></li>
+    /// <li><p>PROCESSING - Macie is processing the request.</p></li>
+    /// <li><p>SUCCESS - Macie successfully located, retrieved, and encrypted the sensitive data.</p></li>
+    /// </ul>
+    #[doc(hidden)]
+    pub status: std::option::Option<crate::model::RevealRequestStatus>,
+}
+impl GetSensitiveDataOccurrencesOutput {
+    /// <p>If an error occurred when Amazon Macie attempted to retrieve occurrences of sensitive data reported by the finding, a description of the error that occurred. This value is null if the status (status) of the request is PROCESSING or SUCCESS.</p>
+    pub fn error(&self) -> std::option::Option<&str> {
+        self.error.as_deref()
+    }
+    /// <p>A map that specifies 1-100 types of sensitive data reported by the finding and, for each type, 1-10 occurrences of sensitive data.</p>
+    pub fn sensitive_data_occurrences(
+        &self,
+    ) -> std::option::Option<
+        &std::collections::HashMap<
+            std::string::String,
+            std::vec::Vec<crate::model::DetectedDataDetails>,
+        >,
+    > {
+        self.sensitive_data_occurrences.as_ref()
+    }
+    /// <p>The status of the request to retrieve occurrences of sensitive data reported by the finding. Possible values are:</p>
+    /// <ul>
+    /// <li><p>ERROR - An error occurred when Amazon Macie attempted to locate, retrieve, or encrypt the sensitive data. The error value indicates the nature of the error that occurred.</p></li>
+    /// <li><p>PROCESSING - Macie is processing the request.</p></li>
+    /// <li><p>SUCCESS - Macie successfully located, retrieved, and encrypted the sensitive data.</p></li>
+    /// </ul>
+    pub fn status(&self) -> std::option::Option<&crate::model::RevealRequestStatus> {
+        self.status.as_ref()
+    }
+}
+impl std::fmt::Debug for GetSensitiveDataOccurrencesOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetSensitiveDataOccurrencesOutput");
+        formatter.field("error", &self.error);
+        formatter.field(
+            "sensitive_data_occurrences",
+            &self.sensitive_data_occurrences,
+        );
+        formatter.field("status", &self.status);
+        formatter.finish()
+    }
+}
+/// See [`GetSensitiveDataOccurrencesOutput`](crate::output::GetSensitiveDataOccurrencesOutput).
+pub mod get_sensitive_data_occurrences_output {
+
+    /// A builder for [`GetSensitiveDataOccurrencesOutput`](crate::output::GetSensitiveDataOccurrencesOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) error: std::option::Option<std::string::String>,
+        pub(crate) sensitive_data_occurrences: std::option::Option<
+            std::collections::HashMap<
+                std::string::String,
+                std::vec::Vec<crate::model::DetectedDataDetails>,
+            >,
+        >,
+        pub(crate) status: std::option::Option<crate::model::RevealRequestStatus>,
+    }
+    impl Builder {
+        /// <p>If an error occurred when Amazon Macie attempted to retrieve occurrences of sensitive data reported by the finding, a description of the error that occurred. This value is null if the status (status) of the request is PROCESSING or SUCCESS.</p>
+        pub fn error(mut self, input: impl Into<std::string::String>) -> Self {
+            self.error = Some(input.into());
+            self
+        }
+        /// <p>If an error occurred when Amazon Macie attempted to retrieve occurrences of sensitive data reported by the finding, a description of the error that occurred. This value is null if the status (status) of the request is PROCESSING or SUCCESS.</p>
+        pub fn set_error(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.error = input;
+            self
+        }
+        /// Adds a key-value pair to `sensitive_data_occurrences`.
+        ///
+        /// To override the contents of this collection use [`set_sensitive_data_occurrences`](Self::set_sensitive_data_occurrences).
+        ///
+        /// <p>A map that specifies 1-100 types of sensitive data reported by the finding and, for each type, 1-10 occurrences of sensitive data.</p>
+        pub fn sensitive_data_occurrences(
+            mut self,
+            k: impl Into<std::string::String>,
+            v: std::vec::Vec<crate::model::DetectedDataDetails>,
+        ) -> Self {
+            let mut hash_map = self.sensitive_data_occurrences.unwrap_or_default();
+            hash_map.insert(k.into(), v);
+            self.sensitive_data_occurrences = Some(hash_map);
+            self
+        }
+        /// <p>A map that specifies 1-100 types of sensitive data reported by the finding and, for each type, 1-10 occurrences of sensitive data.</p>
+        pub fn set_sensitive_data_occurrences(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<
+                    std::string::String,
+                    std::vec::Vec<crate::model::DetectedDataDetails>,
+                >,
+            >,
+        ) -> Self {
+            self.sensitive_data_occurrences = input;
+            self
+        }
+        /// <p>The status of the request to retrieve occurrences of sensitive data reported by the finding. Possible values are:</p>
+        /// <ul>
+        /// <li><p>ERROR - An error occurred when Amazon Macie attempted to locate, retrieve, or encrypt the sensitive data. The error value indicates the nature of the error that occurred.</p></li>
+        /// <li><p>PROCESSING - Macie is processing the request.</p></li>
+        /// <li><p>SUCCESS - Macie successfully located, retrieved, and encrypted the sensitive data.</p></li>
+        /// </ul>
+        pub fn status(mut self, input: crate::model::RevealRequestStatus) -> Self {
+            self.status = Some(input);
+            self
+        }
+        /// <p>The status of the request to retrieve occurrences of sensitive data reported by the finding. Possible values are:</p>
+        /// <ul>
+        /// <li><p>ERROR - An error occurred when Amazon Macie attempted to locate, retrieve, or encrypt the sensitive data. The error value indicates the nature of the error that occurred.</p></li>
+        /// <li><p>PROCESSING - Macie is processing the request.</p></li>
+        /// <li><p>SUCCESS - Macie successfully located, retrieved, and encrypted the sensitive data.</p></li>
+        /// </ul>
+        pub fn set_status(
+            mut self,
+            input: std::option::Option<crate::model::RevealRequestStatus>,
+        ) -> Self {
+            self.status = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetSensitiveDataOccurrencesOutput`](crate::output::GetSensitiveDataOccurrencesOutput).
+        pub fn build(self) -> crate::output::GetSensitiveDataOccurrencesOutput {
+            crate::output::GetSensitiveDataOccurrencesOutput {
+                error: self.error,
+                sensitive_data_occurrences: self.sensitive_data_occurrences,
+                status: self.status,
+            }
+        }
+    }
+}
+impl GetSensitiveDataOccurrencesOutput {
+    /// Creates a new builder-style object to manufacture [`GetSensitiveDataOccurrencesOutput`](crate::output::GetSensitiveDataOccurrencesOutput).
+    pub fn builder() -> crate::output::get_sensitive_data_occurrences_output::Builder {
+        crate::output::get_sensitive_data_occurrences_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetRevealConfigurationOutput {
+    /// <p>The current configuration settings and the status of the configuration for the account.</p>
+    #[doc(hidden)]
+    pub configuration: std::option::Option<crate::model::RevealConfiguration>,
+}
+impl GetRevealConfigurationOutput {
+    /// <p>The current configuration settings and the status of the configuration for the account.</p>
+    pub fn configuration(&self) -> std::option::Option<&crate::model::RevealConfiguration> {
+        self.configuration.as_ref()
+    }
+}
+impl std::fmt::Debug for GetRevealConfigurationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetRevealConfigurationOutput");
+        formatter.field("configuration", &self.configuration);
+        formatter.finish()
+    }
+}
+/// See [`GetRevealConfigurationOutput`](crate::output::GetRevealConfigurationOutput).
+pub mod get_reveal_configuration_output {
+
+    /// A builder for [`GetRevealConfigurationOutput`](crate::output::GetRevealConfigurationOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) configuration: std::option::Option<crate::model::RevealConfiguration>,
+    }
+    impl Builder {
+        /// <p>The current configuration settings and the status of the configuration for the account.</p>
+        pub fn configuration(mut self, input: crate::model::RevealConfiguration) -> Self {
+            self.configuration = Some(input);
+            self
+        }
+        /// <p>The current configuration settings and the status of the configuration for the account.</p>
+        pub fn set_configuration(
+            mut self,
+            input: std::option::Option<crate::model::RevealConfiguration>,
+        ) -> Self {
+            self.configuration = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetRevealConfigurationOutput`](crate::output::GetRevealConfigurationOutput).
+        pub fn build(self) -> crate::output::GetRevealConfigurationOutput {
+            crate::output::GetRevealConfigurationOutput {
+                configuration: self.configuration,
+            }
+        }
+    }
+}
+impl GetRevealConfigurationOutput {
+    /// Creates a new builder-style object to manufacture [`GetRevealConfigurationOutput`](crate::output::GetRevealConfigurationOutput).
+    pub fn builder() -> crate::output::get_reveal_configuration_output::Builder {
+        crate::output::get_reveal_configuration_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetMemberOutput {
     /// <p>The Amazon Web Services account ID for the account.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services account ID for the administrator account.</p>
+    #[doc(hidden)]
     pub administrator_account_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the account.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The email address for the account.</p>
+    #[doc(hidden)]
     pub email: std::option::Option<std::string::String>,
     /// <p>The date and time, in UTC and extended ISO 8601 format, when an Amazon Macie membership invitation was last sent to the account. This value is null if an invitation hasn't been sent to the account.</p>
+    #[doc(hidden)]
     pub invited_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>(Deprecated) The Amazon Web Services account ID for the administrator account. This property has been replaced by the administratorAccountId property and is retained only for backward compatibility.</p>
+    #[doc(hidden)]
     pub master_account_id: std::option::Option<std::string::String>,
     /// <p>The current status of the relationship between the account and the administrator account.</p>
+    #[doc(hidden)]
     pub relationship_status: std::option::Option<crate::model::RelationshipStatus>,
     /// <p>A map of key-value pairs that identifies the tags (keys and values) that are associated with the member account in Amazon Macie.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The date and time, in UTC and extended ISO 8601 format, of the most recent change to the status of the relationship between the account and the administrator account.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GetMemberOutput {
@@ -1514,11 +1921,10 @@ impl std::fmt::Debug for GetMemberOutput {
         formatter.finish()
     }
 }
-/// See [`GetMemberOutput`](crate::output::GetMemberOutput)
+/// See [`GetMemberOutput`](crate::output::GetMemberOutput).
 pub mod get_member_output {
 
-    /// A builder for [`GetMemberOutput`](crate::output::GetMemberOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetMemberOutput`](crate::output::GetMemberOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -1654,7 +2060,7 @@ pub mod get_member_output {
             self.updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetMemberOutput`](crate::output::GetMemberOutput)
+        /// Consumes the builder and constructs a [`GetMemberOutput`](crate::output::GetMemberOutput).
         pub fn build(self) -> crate::output::GetMemberOutput {
             crate::output::GetMemberOutput {
                 account_id: self.account_id,
@@ -1671,7 +2077,7 @@ pub mod get_member_output {
     }
 }
 impl GetMemberOutput {
-    /// Creates a new builder-style object to manufacture [`GetMemberOutput`](crate::output::GetMemberOutput)
+    /// Creates a new builder-style object to manufacture [`GetMemberOutput`](crate::output::GetMemberOutput).
     pub fn builder() -> crate::output::get_member_output::Builder {
         crate::output::get_member_output::Builder::default()
     }
@@ -1682,6 +2088,7 @@ impl GetMemberOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetMasterAccountOutput {
     /// <p>(Deprecated) The Amazon Web Services account ID for the administrator account. If the accounts are associated by a Macie membership invitation, this object also provides details about the invitation that was sent to establish the relationship between the accounts.</p>
+    #[doc(hidden)]
     pub master: std::option::Option<crate::model::Invitation>,
 }
 impl GetMasterAccountOutput {
@@ -1697,11 +2104,10 @@ impl std::fmt::Debug for GetMasterAccountOutput {
         formatter.finish()
     }
 }
-/// See [`GetMasterAccountOutput`](crate::output::GetMasterAccountOutput)
+/// See [`GetMasterAccountOutput`](crate::output::GetMasterAccountOutput).
 pub mod get_master_account_output {
 
-    /// A builder for [`GetMasterAccountOutput`](crate::output::GetMasterAccountOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetMasterAccountOutput`](crate::output::GetMasterAccountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) master: std::option::Option<crate::model::Invitation>,
@@ -1717,7 +2123,7 @@ pub mod get_master_account_output {
             self.master = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetMasterAccountOutput`](crate::output::GetMasterAccountOutput)
+        /// Consumes the builder and constructs a [`GetMasterAccountOutput`](crate::output::GetMasterAccountOutput).
         pub fn build(self) -> crate::output::GetMasterAccountOutput {
             crate::output::GetMasterAccountOutput {
                 master: self.master,
@@ -1726,7 +2132,7 @@ pub mod get_master_account_output {
     }
 }
 impl GetMasterAccountOutput {
-    /// Creates a new builder-style object to manufacture [`GetMasterAccountOutput`](crate::output::GetMasterAccountOutput)
+    /// Creates a new builder-style object to manufacture [`GetMasterAccountOutput`](crate::output::GetMasterAccountOutput).
     pub fn builder() -> crate::output::get_master_account_output::Builder {
         crate::output::get_master_account_output::Builder::default()
     }
@@ -1737,14 +2143,19 @@ impl GetMasterAccountOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetMacieSessionOutput {
     /// <p>The date and time, in UTC and extended ISO 8601 format, when the Amazon Macie account was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The frequency with which Amazon Macie publishes updates to policy findings for the account. This includes publishing updates to Security Hub and Amazon EventBridge (formerly called Amazon CloudWatch Events).</p>
+    #[doc(hidden)]
     pub finding_publishing_frequency: std::option::Option<crate::model::FindingPublishingFrequency>,
     /// <p>The Amazon Resource Name (ARN) of the service-linked role that allows Amazon Macie to monitor and analyze data in Amazon Web Services resources for the account.</p>
+    #[doc(hidden)]
     pub service_role: std::option::Option<std::string::String>,
     /// <p>The current status of the Amazon Macie account. Possible values are: PAUSED, the account is enabled but all Macie activities are suspended (paused) for the account; and, ENABLED, the account is enabled and all Macie activities are enabled for the account.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::MacieStatus>,
     /// <p>The date and time, in UTC and extended ISO 8601 format, of the most recent change to the status of the Amazon Macie account.</p>
+    #[doc(hidden)]
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GetMacieSessionOutput {
@@ -1785,11 +2196,10 @@ impl std::fmt::Debug for GetMacieSessionOutput {
         formatter.finish()
     }
 }
-/// See [`GetMacieSessionOutput`](crate::output::GetMacieSessionOutput)
+/// See [`GetMacieSessionOutput`](crate::output::GetMacieSessionOutput).
 pub mod get_macie_session_output {
 
-    /// A builder for [`GetMacieSessionOutput`](crate::output::GetMacieSessionOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetMacieSessionOutput`](crate::output::GetMacieSessionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) created_at: std::option::Option<aws_smithy_types::DateTime>,
@@ -1862,7 +2272,7 @@ pub mod get_macie_session_output {
             self.updated_at = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetMacieSessionOutput`](crate::output::GetMacieSessionOutput)
+        /// Consumes the builder and constructs a [`GetMacieSessionOutput`](crate::output::GetMacieSessionOutput).
         pub fn build(self) -> crate::output::GetMacieSessionOutput {
             crate::output::GetMacieSessionOutput {
                 created_at: self.created_at,
@@ -1875,7 +2285,7 @@ pub mod get_macie_session_output {
     }
 }
 impl GetMacieSessionOutput {
-    /// Creates a new builder-style object to manufacture [`GetMacieSessionOutput`](crate::output::GetMacieSessionOutput)
+    /// Creates a new builder-style object to manufacture [`GetMacieSessionOutput`](crate::output::GetMacieSessionOutput).
     pub fn builder() -> crate::output::get_macie_session_output::Builder {
         crate::output::get_macie_session_output::Builder::default()
     }
@@ -1886,6 +2296,7 @@ impl GetMacieSessionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetInvitationsCountOutput {
     /// <p>The total number of invitations that were received by the account, not including the currently accepted invitation.</p>
+    #[doc(hidden)]
     pub invitations_count: i64,
 }
 impl GetInvitationsCountOutput {
@@ -1901,11 +2312,10 @@ impl std::fmt::Debug for GetInvitationsCountOutput {
         formatter.finish()
     }
 }
-/// See [`GetInvitationsCountOutput`](crate::output::GetInvitationsCountOutput)
+/// See [`GetInvitationsCountOutput`](crate::output::GetInvitationsCountOutput).
 pub mod get_invitations_count_output {
 
-    /// A builder for [`GetInvitationsCountOutput`](crate::output::GetInvitationsCountOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetInvitationsCountOutput`](crate::output::GetInvitationsCountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) invitations_count: std::option::Option<i64>,
@@ -1921,7 +2331,7 @@ pub mod get_invitations_count_output {
             self.invitations_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetInvitationsCountOutput`](crate::output::GetInvitationsCountOutput)
+        /// Consumes the builder and constructs a [`GetInvitationsCountOutput`](crate::output::GetInvitationsCountOutput).
         pub fn build(self) -> crate::output::GetInvitationsCountOutput {
             crate::output::GetInvitationsCountOutput {
                 invitations_count: self.invitations_count.unwrap_or_default(),
@@ -1930,7 +2340,7 @@ pub mod get_invitations_count_output {
     }
 }
 impl GetInvitationsCountOutput {
-    /// Creates a new builder-style object to manufacture [`GetInvitationsCountOutput`](crate::output::GetInvitationsCountOutput)
+    /// Creates a new builder-style object to manufacture [`GetInvitationsCountOutput`](crate::output::GetInvitationsCountOutput).
     pub fn builder() -> crate::output::get_invitations_count_output::Builder {
         crate::output::get_invitations_count_output::Builder::default()
     }
@@ -1941,6 +2351,7 @@ impl GetInvitationsCountOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetFindingStatisticsOutput {
     /// <p>An array of objects, one for each group of findings that meet the filter criteria specified in the request.</p>
+    #[doc(hidden)]
     pub counts_by_group: std::option::Option<std::vec::Vec<crate::model::GroupCount>>,
 }
 impl GetFindingStatisticsOutput {
@@ -1956,11 +2367,10 @@ impl std::fmt::Debug for GetFindingStatisticsOutput {
         formatter.finish()
     }
 }
-/// See [`GetFindingStatisticsOutput`](crate::output::GetFindingStatisticsOutput)
+/// See [`GetFindingStatisticsOutput`](crate::output::GetFindingStatisticsOutput).
 pub mod get_finding_statistics_output {
 
-    /// A builder for [`GetFindingStatisticsOutput`](crate::output::GetFindingStatisticsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetFindingStatisticsOutput`](crate::output::GetFindingStatisticsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) counts_by_group: std::option::Option<std::vec::Vec<crate::model::GroupCount>>,
@@ -1985,7 +2395,7 @@ pub mod get_finding_statistics_output {
             self.counts_by_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetFindingStatisticsOutput`](crate::output::GetFindingStatisticsOutput)
+        /// Consumes the builder and constructs a [`GetFindingStatisticsOutput`](crate::output::GetFindingStatisticsOutput).
         pub fn build(self) -> crate::output::GetFindingStatisticsOutput {
             crate::output::GetFindingStatisticsOutput {
                 counts_by_group: self.counts_by_group,
@@ -1994,7 +2404,7 @@ pub mod get_finding_statistics_output {
     }
 }
 impl GetFindingStatisticsOutput {
-    /// Creates a new builder-style object to manufacture [`GetFindingStatisticsOutput`](crate::output::GetFindingStatisticsOutput)
+    /// Creates a new builder-style object to manufacture [`GetFindingStatisticsOutput`](crate::output::GetFindingStatisticsOutput).
     pub fn builder() -> crate::output::get_finding_statistics_output::Builder {
         crate::output::get_finding_statistics_output::Builder::default()
     }
@@ -2005,6 +2415,7 @@ impl GetFindingStatisticsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetFindingsPublicationConfigurationOutput {
     /// <p>The configuration settings that determine which findings are published to Security Hub.</p>
+    #[doc(hidden)]
     pub security_hub_configuration: std::option::Option<crate::model::SecurityHubConfiguration>,
 }
 impl GetFindingsPublicationConfigurationOutput {
@@ -2025,11 +2436,10 @@ impl std::fmt::Debug for GetFindingsPublicationConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetFindingsPublicationConfigurationOutput`](crate::output::GetFindingsPublicationConfigurationOutput)
+/// See [`GetFindingsPublicationConfigurationOutput`](crate::output::GetFindingsPublicationConfigurationOutput).
 pub mod get_findings_publication_configuration_output {
 
-    /// A builder for [`GetFindingsPublicationConfigurationOutput`](crate::output::GetFindingsPublicationConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetFindingsPublicationConfigurationOutput`](crate::output::GetFindingsPublicationConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) security_hub_configuration:
@@ -2052,7 +2462,7 @@ pub mod get_findings_publication_configuration_output {
             self.security_hub_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetFindingsPublicationConfigurationOutput`](crate::output::GetFindingsPublicationConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetFindingsPublicationConfigurationOutput`](crate::output::GetFindingsPublicationConfigurationOutput).
         pub fn build(self) -> crate::output::GetFindingsPublicationConfigurationOutput {
             crate::output::GetFindingsPublicationConfigurationOutput {
                 security_hub_configuration: self.security_hub_configuration,
@@ -2061,7 +2471,7 @@ pub mod get_findings_publication_configuration_output {
     }
 }
 impl GetFindingsPublicationConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetFindingsPublicationConfigurationOutput`](crate::output::GetFindingsPublicationConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetFindingsPublicationConfigurationOutput`](crate::output::GetFindingsPublicationConfigurationOutput).
     pub fn builder() -> crate::output::get_findings_publication_configuration_output::Builder {
         crate::output::get_findings_publication_configuration_output::Builder::default()
     }
@@ -2072,20 +2482,28 @@ impl GetFindingsPublicationConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetFindingsFilterOutput {
     /// <p>The action that's performed on findings that meet the filter criteria (findingCriteria). Possible values are: ARCHIVE, suppress (automatically archive) the findings; and, NOOP, don't perform any action on the findings.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::FindingsFilterAction>,
     /// <p>The Amazon Resource Name (ARN) of the filter.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The custom description of the filter.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The criteria that's used to filter findings.</p>
+    #[doc(hidden)]
     pub finding_criteria: std::option::Option<crate::model::FindingCriteria>,
     /// <p>The unique identifier for the filter.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The custom name of the filter.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The position of the filter in the list of saved filters on the Amazon Macie console. This value also determines the order in which the filter is applied to findings, relative to other filters that are also applied to the findings.</p>
+    #[doc(hidden)]
     pub position: i32,
     /// <p>A map of key-value pairs that identifies the tags (keys and values) that are associated with the filter.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2140,11 +2558,10 @@ impl std::fmt::Debug for GetFindingsFilterOutput {
         formatter.finish()
     }
 }
-/// See [`GetFindingsFilterOutput`](crate::output::GetFindingsFilterOutput)
+/// See [`GetFindingsFilterOutput`](crate::output::GetFindingsFilterOutput).
 pub mod get_findings_filter_output {
 
-    /// A builder for [`GetFindingsFilterOutput`](crate::output::GetFindingsFilterOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetFindingsFilterOutput`](crate::output::GetFindingsFilterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::FindingsFilterAction>,
@@ -2260,7 +2677,7 @@ pub mod get_findings_filter_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetFindingsFilterOutput`](crate::output::GetFindingsFilterOutput)
+        /// Consumes the builder and constructs a [`GetFindingsFilterOutput`](crate::output::GetFindingsFilterOutput).
         pub fn build(self) -> crate::output::GetFindingsFilterOutput {
             crate::output::GetFindingsFilterOutput {
                 action: self.action,
@@ -2276,7 +2693,7 @@ pub mod get_findings_filter_output {
     }
 }
 impl GetFindingsFilterOutput {
-    /// Creates a new builder-style object to manufacture [`GetFindingsFilterOutput`](crate::output::GetFindingsFilterOutput)
+    /// Creates a new builder-style object to manufacture [`GetFindingsFilterOutput`](crate::output::GetFindingsFilterOutput).
     pub fn builder() -> crate::output::get_findings_filter_output::Builder {
         crate::output::get_findings_filter_output::Builder::default()
     }
@@ -2287,6 +2704,7 @@ impl GetFindingsFilterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetFindingsOutput {
     /// <p>An array of objects, one for each finding that meets the criteria specified in the request.</p>
+    #[doc(hidden)]
     pub findings: std::option::Option<std::vec::Vec<crate::model::Finding>>,
 }
 impl GetFindingsOutput {
@@ -2302,11 +2720,10 @@ impl std::fmt::Debug for GetFindingsOutput {
         formatter.finish()
     }
 }
-/// See [`GetFindingsOutput`](crate::output::GetFindingsOutput)
+/// See [`GetFindingsOutput`](crate::output::GetFindingsOutput).
 pub mod get_findings_output {
 
-    /// A builder for [`GetFindingsOutput`](crate::output::GetFindingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetFindingsOutput`](crate::output::GetFindingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) findings: std::option::Option<std::vec::Vec<crate::model::Finding>>,
@@ -2331,7 +2748,7 @@ pub mod get_findings_output {
             self.findings = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetFindingsOutput`](crate::output::GetFindingsOutput)
+        /// Consumes the builder and constructs a [`GetFindingsOutput`](crate::output::GetFindingsOutput).
         pub fn build(self) -> crate::output::GetFindingsOutput {
             crate::output::GetFindingsOutput {
                 findings: self.findings,
@@ -2340,7 +2757,7 @@ pub mod get_findings_output {
     }
 }
 impl GetFindingsOutput {
-    /// Creates a new builder-style object to manufacture [`GetFindingsOutput`](crate::output::GetFindingsOutput)
+    /// Creates a new builder-style object to manufacture [`GetFindingsOutput`](crate::output::GetFindingsOutput).
     pub fn builder() -> crate::output::get_findings_output::Builder {
         crate::output::get_findings_output::Builder::default()
     }
@@ -2351,28 +2768,40 @@ impl GetFindingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCustomDataIdentifierOutput {
     /// <p>The Amazon Resource Name (ARN) of the custom data identifier.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The date and time, in UTC and extended ISO 8601 format, when the custom data identifier was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies whether the custom data identifier was deleted. If you delete a custom data identifier, Amazon Macie doesn't delete it permanently. Instead, it soft deletes the identifier.</p>
+    #[doc(hidden)]
     pub deleted: bool,
     /// <p>The custom description of the custom data identifier.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the custom data identifier.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>An array that lists specific character sequences (<i>ignore words</i>) to exclude from the results. If the text matched by the regular expression contains any string in this array, Amazon Macie ignores it. Ignore words are case sensitive.</p>
+    #[doc(hidden)]
     pub ignore_words: std::option::Option<std::vec::Vec<std::string::String>>,
-    /// <p>An array that lists specific character sequences (<i>keywords</i>), one of which must be within proximity (maximumMatchDistance) of the regular expression to match. Keywords aren't case sensitive.</p>
+    /// <p>An array that lists specific character sequences (<i>keywords</i>), one of which must precede and be within proximity (maximumMatchDistance) of the regular expression to match. Keywords aren't case sensitive.</p>
+    #[doc(hidden)]
     pub keywords: std::option::Option<std::vec::Vec<std::string::String>>,
-    /// <p>The maximum number of characters that can exist between text that matches the regular expression and the character sequences specified by the keywords array. Amazon Macie includes or excludes a result based on the proximity of a keyword to text that matches the regular expression.</p>
+    /// <p>The maximum number of characters that can exist between the end of at least one complete character sequence specified by the keywords array and the end of the text that matches the regex pattern. If a complete keyword precedes all the text that matches the pattern and the keyword is within the specified distance, Amazon Macie includes the result. Otherwise, Macie excludes the result.</p>
+    #[doc(hidden)]
     pub maximum_match_distance: i32,
     /// <p>The custom name of the custom data identifier.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The regular expression (<i>regex</i>) that defines the pattern to match.</p>
+    #[doc(hidden)]
     pub regex: std::option::Option<std::string::String>,
     /// <p>Specifies the severity that's assigned to findings that the custom data identifier produces, based on the number of occurrences of text that matches the custom data identifier's detection criteria. By default, Amazon Macie creates findings for S3 objects that contain at least one occurrence of text that matches the detection criteria, and Macie assigns the MEDIUM severity to those findings.</p>
+    #[doc(hidden)]
     pub severity_levels: std::option::Option<std::vec::Vec<crate::model::SeverityLevel>>,
     /// <p>A map of key-value pairs that identifies the tags (keys and values) that are associated with the custom data identifier.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2401,11 +2830,11 @@ impl GetCustomDataIdentifierOutput {
     pub fn ignore_words(&self) -> std::option::Option<&[std::string::String]> {
         self.ignore_words.as_deref()
     }
-    /// <p>An array that lists specific character sequences (<i>keywords</i>), one of which must be within proximity (maximumMatchDistance) of the regular expression to match. Keywords aren't case sensitive.</p>
+    /// <p>An array that lists specific character sequences (<i>keywords</i>), one of which must precede and be within proximity (maximumMatchDistance) of the regular expression to match. Keywords aren't case sensitive.</p>
     pub fn keywords(&self) -> std::option::Option<&[std::string::String]> {
         self.keywords.as_deref()
     }
-    /// <p>The maximum number of characters that can exist between text that matches the regular expression and the character sequences specified by the keywords array. Amazon Macie includes or excludes a result based on the proximity of a keyword to text that matches the regular expression.</p>
+    /// <p>The maximum number of characters that can exist between the end of at least one complete character sequence specified by the keywords array and the end of the text that matches the regex pattern. If a complete keyword precedes all the text that matches the pattern and the keyword is within the specified distance, Amazon Macie includes the result. Otherwise, Macie excludes the result.</p>
     pub fn maximum_match_distance(&self) -> i32 {
         self.maximum_match_distance
     }
@@ -2447,11 +2876,10 @@ impl std::fmt::Debug for GetCustomDataIdentifierOutput {
         formatter.finish()
     }
 }
-/// See [`GetCustomDataIdentifierOutput`](crate::output::GetCustomDataIdentifierOutput)
+/// See [`GetCustomDataIdentifierOutput`](crate::output::GetCustomDataIdentifierOutput).
 pub mod get_custom_data_identifier_output {
 
-    /// A builder for [`GetCustomDataIdentifierOutput`](crate::output::GetCustomDataIdentifierOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetCustomDataIdentifierOutput`](crate::output::GetCustomDataIdentifierOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2546,14 +2974,14 @@ pub mod get_custom_data_identifier_output {
         ///
         /// To override the contents of this collection use [`set_keywords`](Self::set_keywords).
         ///
-        /// <p>An array that lists specific character sequences (<i>keywords</i>), one of which must be within proximity (maximumMatchDistance) of the regular expression to match. Keywords aren't case sensitive.</p>
+        /// <p>An array that lists specific character sequences (<i>keywords</i>), one of which must precede and be within proximity (maximumMatchDistance) of the regular expression to match. Keywords aren't case sensitive.</p>
         pub fn keywords(mut self, input: impl Into<std::string::String>) -> Self {
             let mut v = self.keywords.unwrap_or_default();
             v.push(input.into());
             self.keywords = Some(v);
             self
         }
-        /// <p>An array that lists specific character sequences (<i>keywords</i>), one of which must be within proximity (maximumMatchDistance) of the regular expression to match. Keywords aren't case sensitive.</p>
+        /// <p>An array that lists specific character sequences (<i>keywords</i>), one of which must precede and be within proximity (maximumMatchDistance) of the regular expression to match. Keywords aren't case sensitive.</p>
         pub fn set_keywords(
             mut self,
             input: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2561,12 +2989,12 @@ pub mod get_custom_data_identifier_output {
             self.keywords = input;
             self
         }
-        /// <p>The maximum number of characters that can exist between text that matches the regular expression and the character sequences specified by the keywords array. Amazon Macie includes or excludes a result based on the proximity of a keyword to text that matches the regular expression.</p>
+        /// <p>The maximum number of characters that can exist between the end of at least one complete character sequence specified by the keywords array and the end of the text that matches the regex pattern. If a complete keyword precedes all the text that matches the pattern and the keyword is within the specified distance, Amazon Macie includes the result. Otherwise, Macie excludes the result.</p>
         pub fn maximum_match_distance(mut self, input: i32) -> Self {
             self.maximum_match_distance = Some(input);
             self
         }
-        /// <p>The maximum number of characters that can exist between text that matches the regular expression and the character sequences specified by the keywords array. Amazon Macie includes or excludes a result based on the proximity of a keyword to text that matches the regular expression.</p>
+        /// <p>The maximum number of characters that can exist between the end of at least one complete character sequence specified by the keywords array and the end of the text that matches the regex pattern. If a complete keyword precedes all the text that matches the pattern and the keyword is within the specified distance, Amazon Macie includes the result. Otherwise, Macie excludes the result.</p>
         pub fn set_maximum_match_distance(mut self, input: std::option::Option<i32>) -> Self {
             self.maximum_match_distance = input;
             self
@@ -2635,7 +3063,7 @@ pub mod get_custom_data_identifier_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetCustomDataIdentifierOutput`](crate::output::GetCustomDataIdentifierOutput)
+        /// Consumes the builder and constructs a [`GetCustomDataIdentifierOutput`](crate::output::GetCustomDataIdentifierOutput).
         pub fn build(self) -> crate::output::GetCustomDataIdentifierOutput {
             crate::output::GetCustomDataIdentifierOutput {
                 arn: self.arn,
@@ -2655,7 +3083,7 @@ pub mod get_custom_data_identifier_output {
     }
 }
 impl GetCustomDataIdentifierOutput {
-    /// Creates a new builder-style object to manufacture [`GetCustomDataIdentifierOutput`](crate::output::GetCustomDataIdentifierOutput)
+    /// Creates a new builder-style object to manufacture [`GetCustomDataIdentifierOutput`](crate::output::GetCustomDataIdentifierOutput).
     pub fn builder() -> crate::output::get_custom_data_identifier_output::Builder {
         crate::output::get_custom_data_identifier_output::Builder::default()
     }
@@ -2666,6 +3094,7 @@ impl GetCustomDataIdentifierOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetClassificationExportConfigurationOutput {
     /// <p>The location where data classification results are stored, and the encryption settings that are used when storing results in that location.</p>
+    #[doc(hidden)]
     pub configuration: std::option::Option<crate::model::ClassificationExportConfiguration>,
 }
 impl GetClassificationExportConfigurationOutput {
@@ -2683,11 +3112,10 @@ impl std::fmt::Debug for GetClassificationExportConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`GetClassificationExportConfigurationOutput`](crate::output::GetClassificationExportConfigurationOutput)
+/// See [`GetClassificationExportConfigurationOutput`](crate::output::GetClassificationExportConfigurationOutput).
 pub mod get_classification_export_configuration_output {
 
-    /// A builder for [`GetClassificationExportConfigurationOutput`](crate::output::GetClassificationExportConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetClassificationExportConfigurationOutput`](crate::output::GetClassificationExportConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration:
@@ -2710,7 +3138,7 @@ pub mod get_classification_export_configuration_output {
             self.configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetClassificationExportConfigurationOutput`](crate::output::GetClassificationExportConfigurationOutput)
+        /// Consumes the builder and constructs a [`GetClassificationExportConfigurationOutput`](crate::output::GetClassificationExportConfigurationOutput).
         pub fn build(self) -> crate::output::GetClassificationExportConfigurationOutput {
             crate::output::GetClassificationExportConfigurationOutput {
                 configuration: self.configuration,
@@ -2719,7 +3147,7 @@ pub mod get_classification_export_configuration_output {
     }
 }
 impl GetClassificationExportConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`GetClassificationExportConfigurationOutput`](crate::output::GetClassificationExportConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`GetClassificationExportConfigurationOutput`](crate::output::GetClassificationExportConfigurationOutput).
     pub fn builder() -> crate::output::get_classification_export_configuration_output::Builder {
         crate::output::get_classification_export_configuration_output::Builder::default()
     }
@@ -2730,37 +3158,50 @@ impl GetClassificationExportConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBucketStatisticsOutput {
     /// <p>The total number of buckets.</p>
+    #[doc(hidden)]
     pub bucket_count: i64,
     /// <p>The total number of buckets that are publicly accessible based on a combination of permissions settings for each bucket.</p>
+    #[doc(hidden)]
     pub bucket_count_by_effective_permission:
         std::option::Option<crate::model::BucketCountByEffectivePermission>,
     /// <p>The total number of buckets that use certain types of server-side encryption to encrypt new objects by default. This object also reports the total number of buckets that don't encrypt new objects by default.</p>
+    #[doc(hidden)]
     pub bucket_count_by_encryption_type:
         std::option::Option<crate::model::BucketCountByEncryptionType>,
     /// <p>The total number of buckets whose bucket policies do or don't require server-side encryption of objects when objects are uploaded to the buckets.</p>
+    #[doc(hidden)]
     pub bucket_count_by_object_encryption_requirement:
         std::option::Option<crate::model::BucketCountPolicyAllowsUnencryptedObjectUploads>,
     /// <p>The total number of buckets that are or aren't shared with another Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub bucket_count_by_shared_access_type:
         std::option::Option<crate::model::BucketCountBySharedAccessType>,
     /// <p>The total number of objects that Amazon Macie can analyze in the buckets. These objects use a supported storage class and have a file name extension for a supported file or storage format.</p>
+    #[doc(hidden)]
     pub classifiable_object_count: i64,
     /// <p>The total storage size, in bytes, of all the objects that Amazon Macie can analyze in the buckets. These objects use a supported storage class and have a file name extension for a supported file or storage format.</p>
     /// <p>If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the latest version of each applicable object in those buckets. This value doesn't reflect the storage size of all versions of all applicable objects in the buckets.</p>
+    #[doc(hidden)]
     pub classifiable_size_in_bytes: i64,
     /// <p>The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently retrieved both bucket and object metadata from Amazon S3 for the buckets.</p>
+    #[doc(hidden)]
     pub last_updated: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The total number of objects in the buckets.</p>
+    #[doc(hidden)]
     pub object_count: i64,
     /// <p>The total storage size, in bytes, of the buckets.</p>
     /// <p>If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of the latest version of each object in those buckets. This value doesn't reflect the storage size of all versions of the objects in the buckets.</p>
+    #[doc(hidden)]
     pub size_in_bytes: i64,
     /// <p>The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the buckets.</p>
     /// <p>If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of the latest version of each applicable object in those buckets. This value doesn't reflect the storage size of all versions of the applicable objects in the buckets.</p>
+    #[doc(hidden)]
     pub size_in_bytes_compressed: i64,
     /// <p>The total number of objects that Amazon Macie can't analyze in the buckets. These objects don't use a supported storage class or don't have a file name extension for a supported file or storage format.</p>
+    #[doc(hidden)]
     pub unclassifiable_object_count: std::option::Option<crate::model::ObjectLevelStatistics>,
     /// <p>The total storage size, in bytes, of the objects that Amazon Macie can't analyze in the buckets. These objects don't use a supported storage class or don't have a file name extension for a supported file or storage format.</p>
+    #[doc(hidden)]
     pub unclassifiable_object_size_in_bytes:
         std::option::Option<crate::model::ObjectLevelStatistics>,
 }
@@ -2873,11 +3314,10 @@ impl std::fmt::Debug for GetBucketStatisticsOutput {
         formatter.finish()
     }
 }
-/// See [`GetBucketStatisticsOutput`](crate::output::GetBucketStatisticsOutput)
+/// See [`GetBucketStatisticsOutput`](crate::output::GetBucketStatisticsOutput).
 pub mod get_bucket_statistics_output {
 
-    /// A builder for [`GetBucketStatisticsOutput`](crate::output::GetBucketStatisticsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBucketStatisticsOutput`](crate::output::GetBucketStatisticsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bucket_count: std::option::Option<i64>,
@@ -3078,7 +3518,7 @@ pub mod get_bucket_statistics_output {
             self.unclassifiable_object_size_in_bytes = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBucketStatisticsOutput`](crate::output::GetBucketStatisticsOutput)
+        /// Consumes the builder and constructs a [`GetBucketStatisticsOutput`](crate::output::GetBucketStatisticsOutput).
         pub fn build(self) -> crate::output::GetBucketStatisticsOutput {
             crate::output::GetBucketStatisticsOutput {
                 bucket_count: self.bucket_count.unwrap_or_default(),
@@ -3100,7 +3540,7 @@ pub mod get_bucket_statistics_output {
     }
 }
 impl GetBucketStatisticsOutput {
-    /// Creates a new builder-style object to manufacture [`GetBucketStatisticsOutput`](crate::output::GetBucketStatisticsOutput)
+    /// Creates a new builder-style object to manufacture [`GetBucketStatisticsOutput`](crate::output::GetBucketStatisticsOutput).
     pub fn builder() -> crate::output::get_bucket_statistics_output::Builder {
         crate::output::get_bucket_statistics_output::Builder::default()
     }
@@ -3111,6 +3551,7 @@ impl GetBucketStatisticsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAdministratorAccountOutput {
     /// <p>The Amazon Web Services account ID for the administrator account. If the accounts are associated by an Amazon Macie membership invitation, this object also provides details about the invitation that was sent to establish the relationship between the accounts.</p>
+    #[doc(hidden)]
     pub administrator: std::option::Option<crate::model::Invitation>,
 }
 impl GetAdministratorAccountOutput {
@@ -3126,11 +3567,10 @@ impl std::fmt::Debug for GetAdministratorAccountOutput {
         formatter.finish()
     }
 }
-/// See [`GetAdministratorAccountOutput`](crate::output::GetAdministratorAccountOutput)
+/// See [`GetAdministratorAccountOutput`](crate::output::GetAdministratorAccountOutput).
 pub mod get_administrator_account_output {
 
-    /// A builder for [`GetAdministratorAccountOutput`](crate::output::GetAdministratorAccountOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAdministratorAccountOutput`](crate::output::GetAdministratorAccountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) administrator: std::option::Option<crate::model::Invitation>,
@@ -3149,7 +3589,7 @@ pub mod get_administrator_account_output {
             self.administrator = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAdministratorAccountOutput`](crate::output::GetAdministratorAccountOutput)
+        /// Consumes the builder and constructs a [`GetAdministratorAccountOutput`](crate::output::GetAdministratorAccountOutput).
         pub fn build(self) -> crate::output::GetAdministratorAccountOutput {
             crate::output::GetAdministratorAccountOutput {
                 administrator: self.administrator,
@@ -3158,7 +3598,7 @@ pub mod get_administrator_account_output {
     }
 }
 impl GetAdministratorAccountOutput {
-    /// Creates a new builder-style object to manufacture [`GetAdministratorAccountOutput`](crate::output::GetAdministratorAccountOutput)
+    /// Creates a new builder-style object to manufacture [`GetAdministratorAccountOutput`](crate::output::GetAdministratorAccountOutput).
     pub fn builder() -> crate::output::get_administrator_account_output::Builder {
         crate::output::get_administrator_account_output::Builder::default()
     }
@@ -3174,22 +3614,21 @@ impl std::fmt::Debug for EnableOrganizationAdminAccountOutput {
         formatter.finish()
     }
 }
-/// See [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput)
+/// See [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput).
 pub mod enable_organization_admin_account_output {
 
-    /// A builder for [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput)
-    #[non_exhaustive]
+    /// A builder for [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput)
+        /// Consumes the builder and constructs a [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput).
         pub fn build(self) -> crate::output::EnableOrganizationAdminAccountOutput {
             crate::output::EnableOrganizationAdminAccountOutput {}
         }
     }
 }
 impl EnableOrganizationAdminAccountOutput {
-    /// Creates a new builder-style object to manufacture [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput)
+    /// Creates a new builder-style object to manufacture [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput).
     pub fn builder() -> crate::output::enable_organization_admin_account_output::Builder {
         crate::output::enable_organization_admin_account_output::Builder::default()
     }
@@ -3205,22 +3644,21 @@ impl std::fmt::Debug for EnableMacieOutput {
         formatter.finish()
     }
 }
-/// See [`EnableMacieOutput`](crate::output::EnableMacieOutput)
+/// See [`EnableMacieOutput`](crate::output::EnableMacieOutput).
 pub mod enable_macie_output {
 
-    /// A builder for [`EnableMacieOutput`](crate::output::EnableMacieOutput)
-    #[non_exhaustive]
+    /// A builder for [`EnableMacieOutput`](crate::output::EnableMacieOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`EnableMacieOutput`](crate::output::EnableMacieOutput)
+        /// Consumes the builder and constructs a [`EnableMacieOutput`](crate::output::EnableMacieOutput).
         pub fn build(self) -> crate::output::EnableMacieOutput {
             crate::output::EnableMacieOutput {}
         }
     }
 }
 impl EnableMacieOutput {
-    /// Creates a new builder-style object to manufacture [`EnableMacieOutput`](crate::output::EnableMacieOutput)
+    /// Creates a new builder-style object to manufacture [`EnableMacieOutput`](crate::output::EnableMacieOutput).
     pub fn builder() -> crate::output::enable_macie_output::Builder {
         crate::output::enable_macie_output::Builder::default()
     }
@@ -3236,22 +3674,21 @@ impl std::fmt::Debug for DisassociateMemberOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateMemberOutput`](crate::output::DisassociateMemberOutput)
+/// See [`DisassociateMemberOutput`](crate::output::DisassociateMemberOutput).
 pub mod disassociate_member_output {
 
-    /// A builder for [`DisassociateMemberOutput`](crate::output::DisassociateMemberOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateMemberOutput`](crate::output::DisassociateMemberOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisassociateMemberOutput`](crate::output::DisassociateMemberOutput)
+        /// Consumes the builder and constructs a [`DisassociateMemberOutput`](crate::output::DisassociateMemberOutput).
         pub fn build(self) -> crate::output::DisassociateMemberOutput {
             crate::output::DisassociateMemberOutput {}
         }
     }
 }
 impl DisassociateMemberOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateMemberOutput`](crate::output::DisassociateMemberOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateMemberOutput`](crate::output::DisassociateMemberOutput).
     pub fn builder() -> crate::output::disassociate_member_output::Builder {
         crate::output::disassociate_member_output::Builder::default()
     }
@@ -3267,22 +3704,21 @@ impl std::fmt::Debug for DisassociateFromMasterAccountOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateFromMasterAccountOutput`](crate::output::DisassociateFromMasterAccountOutput)
+/// See [`DisassociateFromMasterAccountOutput`](crate::output::DisassociateFromMasterAccountOutput).
 pub mod disassociate_from_master_account_output {
 
-    /// A builder for [`DisassociateFromMasterAccountOutput`](crate::output::DisassociateFromMasterAccountOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateFromMasterAccountOutput`](crate::output::DisassociateFromMasterAccountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisassociateFromMasterAccountOutput`](crate::output::DisassociateFromMasterAccountOutput)
+        /// Consumes the builder and constructs a [`DisassociateFromMasterAccountOutput`](crate::output::DisassociateFromMasterAccountOutput).
         pub fn build(self) -> crate::output::DisassociateFromMasterAccountOutput {
             crate::output::DisassociateFromMasterAccountOutput {}
         }
     }
 }
 impl DisassociateFromMasterAccountOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateFromMasterAccountOutput`](crate::output::DisassociateFromMasterAccountOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateFromMasterAccountOutput`](crate::output::DisassociateFromMasterAccountOutput).
     pub fn builder() -> crate::output::disassociate_from_master_account_output::Builder {
         crate::output::disassociate_from_master_account_output::Builder::default()
     }
@@ -3298,22 +3734,21 @@ impl std::fmt::Debug for DisassociateFromAdministratorAccountOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateFromAdministratorAccountOutput`](crate::output::DisassociateFromAdministratorAccountOutput)
+/// See [`DisassociateFromAdministratorAccountOutput`](crate::output::DisassociateFromAdministratorAccountOutput).
 pub mod disassociate_from_administrator_account_output {
 
-    /// A builder for [`DisassociateFromAdministratorAccountOutput`](crate::output::DisassociateFromAdministratorAccountOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateFromAdministratorAccountOutput`](crate::output::DisassociateFromAdministratorAccountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisassociateFromAdministratorAccountOutput`](crate::output::DisassociateFromAdministratorAccountOutput)
+        /// Consumes the builder and constructs a [`DisassociateFromAdministratorAccountOutput`](crate::output::DisassociateFromAdministratorAccountOutput).
         pub fn build(self) -> crate::output::DisassociateFromAdministratorAccountOutput {
             crate::output::DisassociateFromAdministratorAccountOutput {}
         }
     }
 }
 impl DisassociateFromAdministratorAccountOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateFromAdministratorAccountOutput`](crate::output::DisassociateFromAdministratorAccountOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateFromAdministratorAccountOutput`](crate::output::DisassociateFromAdministratorAccountOutput).
     pub fn builder() -> crate::output::disassociate_from_administrator_account_output::Builder {
         crate::output::disassociate_from_administrator_account_output::Builder::default()
     }
@@ -3329,22 +3764,21 @@ impl std::fmt::Debug for DisableOrganizationAdminAccountOutput {
         formatter.finish()
     }
 }
-/// See [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput)
+/// See [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput).
 pub mod disable_organization_admin_account_output {
 
-    /// A builder for [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput)
+        /// Consumes the builder and constructs a [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput).
         pub fn build(self) -> crate::output::DisableOrganizationAdminAccountOutput {
             crate::output::DisableOrganizationAdminAccountOutput {}
         }
     }
 }
 impl DisableOrganizationAdminAccountOutput {
-    /// Creates a new builder-style object to manufacture [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput)
+    /// Creates a new builder-style object to manufacture [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput).
     pub fn builder() -> crate::output::disable_organization_admin_account_output::Builder {
         crate::output::disable_organization_admin_account_output::Builder::default()
     }
@@ -3360,22 +3794,21 @@ impl std::fmt::Debug for DisableMacieOutput {
         formatter.finish()
     }
 }
-/// See [`DisableMacieOutput`](crate::output::DisableMacieOutput)
+/// See [`DisableMacieOutput`](crate::output::DisableMacieOutput).
 pub mod disable_macie_output {
 
-    /// A builder for [`DisableMacieOutput`](crate::output::DisableMacieOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisableMacieOutput`](crate::output::DisableMacieOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisableMacieOutput`](crate::output::DisableMacieOutput)
+        /// Consumes the builder and constructs a [`DisableMacieOutput`](crate::output::DisableMacieOutput).
         pub fn build(self) -> crate::output::DisableMacieOutput {
             crate::output::DisableMacieOutput {}
         }
     }
 }
 impl DisableMacieOutput {
-    /// Creates a new builder-style object to manufacture [`DisableMacieOutput`](crate::output::DisableMacieOutput)
+    /// Creates a new builder-style object to manufacture [`DisableMacieOutput`](crate::output::DisableMacieOutput).
     pub fn builder() -> crate::output::disable_macie_output::Builder {
         crate::output::disable_macie_output::Builder::default()
     }
@@ -3386,8 +3819,10 @@ impl DisableMacieOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeOrganizationConfigurationOutput {
     /// <p>Specifies whether Amazon Macie is enabled automatically for accounts that are added to the organization.</p>
+    #[doc(hidden)]
     pub auto_enable: bool,
     /// <p>Specifies whether the maximum number of Amazon Macie member accounts are part of the organization.</p>
+    #[doc(hidden)]
     pub max_account_limit_reached: bool,
 }
 impl DescribeOrganizationConfigurationOutput {
@@ -3408,11 +3843,10 @@ impl std::fmt::Debug for DescribeOrganizationConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput)
+/// See [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput).
 pub mod describe_organization_configuration_output {
 
-    /// A builder for [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_enable: std::option::Option<bool>,
@@ -3439,7 +3873,7 @@ pub mod describe_organization_configuration_output {
             self.max_account_limit_reached = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput)
+        /// Consumes the builder and constructs a [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput).
         pub fn build(self) -> crate::output::DescribeOrganizationConfigurationOutput {
             crate::output::DescribeOrganizationConfigurationOutput {
                 auto_enable: self.auto_enable.unwrap_or_default(),
@@ -3449,7 +3883,7 @@ pub mod describe_organization_configuration_output {
     }
 }
 impl DescribeOrganizationConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput).
     pub fn builder() -> crate::output::describe_organization_configuration_output::Builder {
         crate::output::describe_organization_configuration_output::Builder::default()
     }
@@ -3460,18 +3894,25 @@ impl DescribeOrganizationConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeClassificationJobOutput {
     /// <p>The token that was provided to ensure the idempotency of the request to create the job.</p>
+    #[doc(hidden)]
     pub client_token: std::option::Option<std::string::String>,
     /// <p>The date and time, in UTC and extended ISO 8601 format, when the job was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An array of unique identifiers, one for each custom data identifier that the job uses to analyze data. This value is null if the job uses only managed data identifiers to analyze data.</p>
+    #[doc(hidden)]
     pub custom_data_identifier_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The custom description of the job.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>For a recurring job, specifies whether you configured the job to analyze all existing, eligible objects immediately after the job was created (true). If you configured the job to analyze only those objects that were created or changed after the job was created and before the job's first scheduled run, this value is false. This value is also false for a one-time job.</p>
+    #[doc(hidden)]
     pub initial_run: bool,
     /// <p>The Amazon Resource Name (ARN) of the job.</p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The current status of the job. Possible values are:</p>
     /// <ul>
@@ -3482,18 +3923,23 @@ pub struct DescribeClassificationJobOutput {
     /// <li><p>RUNNING - For a one-time job, the job is in progress. For a recurring job, a scheduled run is in progress.</p></li>
     /// <li><p>USER_PAUSED - You paused the job. If you paused the job while it had a status of RUNNING and you don't resume it within 30 days of pausing it, the job or job run will expire and be cancelled, depending on the job's type. To check the expiration date, refer to the UserPausedDetails.jobExpiresAt property.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>The schedule for running the job. Possible values are:</p>
     /// <ul>
     /// <li><p>ONE_TIME - The job runs only once.</p></li>
     /// <li><p>SCHEDULED - The job runs on a daily, weekly, or monthly basis. The scheduleFrequency property indicates the recurrence pattern for the job.</p></li>
     /// </ul>
+    #[doc(hidden)]
     pub job_type: std::option::Option<crate::model::JobType>,
     /// <p>Specifies whether any account- or bucket-level access errors occurred when the job ran. For a recurring job, this value indicates the error status of the job's most recent run.</p>
+    #[doc(hidden)]
     pub last_run_error_status: std::option::Option<crate::model::LastRunErrorStatus>,
-    /// <p>The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring job, this value indicates when the most recent run started.</p>
+    /// <p>The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring job, this value indicates when the most recent run started or, if the job hasn't run yet, when the job was created.</p>
+    #[doc(hidden)]
     pub last_run_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>An array of unique identifiers, one for each managed data identifier that the job is explicitly configured to include (use) or exclude (not use) when it analyzes data. Inclusion or exclusion depends on the managed data identifier selection type specified for the job (managedDataIdentifierSelector). This value is null if the job's managed data identifier selection type is ALL or the job uses only custom data identifiers (customDataIdentifierIds) to analyze data.</p>
+    #[doc(hidden)]
     pub managed_data_identifier_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The selection type that determines which managed data identifiers the job uses to analyze data. Possible values are:</p>
     /// <ul>
@@ -3503,22 +3949,30 @@ pub struct DescribeClassificationJobOutput {
     /// <li><p>NONE - Don't use any managed data identifiers.</p></li>
     /// </ul>
     /// <p>If this value is null, the job uses all managed data identifiers. If this value is null, ALL, or EXCLUDE for a recurring job, the job also uses new managed data identifiers as they are released.</p>
+    #[doc(hidden)]
     pub managed_data_identifier_selector:
         std::option::Option<crate::model::ManagedDataIdentifierSelector>,
     /// <p>The custom name of the job.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The S3 buckets that contain the objects to analyze, and the scope of that analysis.</p>
+    #[doc(hidden)]
     pub s3_job_definition: std::option::Option<crate::model::S3JobDefinition>,
     /// <p>The sampling depth, as a percentage, that determines the percentage of eligible objects that the job analyzes.</p>
+    #[doc(hidden)]
     pub sampling_percentage: i32,
     /// <p>The recurrence pattern for running the job. This value is null if the job is configured to run only once.</p>
+    #[doc(hidden)]
     pub schedule_frequency: std::option::Option<crate::model::JobScheduleFrequency>,
     /// <p>The number of times that the job has run and processing statistics for the job's current run.</p>
+    #[doc(hidden)]
     pub statistics: std::option::Option<crate::model::Statistics>,
     /// <p>A map of key-value pairs that specifies which tags (keys and values) are associated with the classification job.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>If the current status of the job is USER_PAUSED, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn't resumed. This value is present only if the value for jobStatus is USER_PAUSED.</p>
+    #[doc(hidden)]
     pub user_paused_details: std::option::Option<crate::model::UserPausedDetails>,
 }
 impl DescribeClassificationJobOutput {
@@ -3574,7 +4028,7 @@ impl DescribeClassificationJobOutput {
     pub fn last_run_error_status(&self) -> std::option::Option<&crate::model::LastRunErrorStatus> {
         self.last_run_error_status.as_ref()
     }
-    /// <p>The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring job, this value indicates when the most recent run started.</p>
+    /// <p>The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring job, this value indicates when the most recent run started or, if the job hasn't run yet, when the job was created.</p>
     pub fn last_run_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.last_run_time.as_ref()
     }
@@ -3662,11 +4116,10 @@ impl std::fmt::Debug for DescribeClassificationJobOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeClassificationJobOutput`](crate::output::DescribeClassificationJobOutput)
+/// See [`DescribeClassificationJobOutput`](crate::output::DescribeClassificationJobOutput).
 pub mod describe_classification_job_output {
 
-    /// A builder for [`DescribeClassificationJobOutput`](crate::output::DescribeClassificationJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeClassificationJobOutput`](crate::output::DescribeClassificationJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) client_token: std::option::Option<std::string::String>,
@@ -3838,12 +4291,12 @@ pub mod describe_classification_job_output {
             self.last_run_error_status = input;
             self
         }
-        /// <p>The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring job, this value indicates when the most recent run started.</p>
+        /// <p>The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring job, this value indicates when the most recent run started or, if the job hasn't run yet, when the job was created.</p>
         pub fn last_run_time(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.last_run_time = Some(input);
             self
         }
-        /// <p>The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring job, this value indicates when the most recent run started.</p>
+        /// <p>The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring job, this value indicates when the most recent run started or, if the job hasn't run yet, when the job was created.</p>
         pub fn set_last_run_time(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -4000,7 +4453,7 @@ pub mod describe_classification_job_output {
             self.user_paused_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeClassificationJobOutput`](crate::output::DescribeClassificationJobOutput)
+        /// Consumes the builder and constructs a [`DescribeClassificationJobOutput`](crate::output::DescribeClassificationJobOutput).
         pub fn build(self) -> crate::output::DescribeClassificationJobOutput {
             crate::output::DescribeClassificationJobOutput {
                 client_token: self.client_token,
@@ -4028,7 +4481,7 @@ pub mod describe_classification_job_output {
     }
 }
 impl DescribeClassificationJobOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeClassificationJobOutput`](crate::output::DescribeClassificationJobOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeClassificationJobOutput`](crate::output::DescribeClassificationJobOutput).
     pub fn builder() -> crate::output::describe_classification_job_output::Builder {
         crate::output::describe_classification_job_output::Builder::default()
     }
@@ -4039,8 +4492,10 @@ impl DescribeClassificationJobOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBucketsOutput {
     /// <p>An array of objects, one for each bucket that meets the filter criteria specified in the request.</p>
+    #[doc(hidden)]
     pub buckets: std::option::Option<std::vec::Vec<crate::model::BucketMetadata>>,
     /// <p>The string to use in a subsequent request to get the next page of results in a paginated response. This value is null if there are no additional pages.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeBucketsOutput {
@@ -4061,11 +4516,10 @@ impl std::fmt::Debug for DescribeBucketsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeBucketsOutput`](crate::output::DescribeBucketsOutput)
+/// See [`DescribeBucketsOutput`](crate::output::DescribeBucketsOutput).
 pub mod describe_buckets_output {
 
-    /// A builder for [`DescribeBucketsOutput`](crate::output::DescribeBucketsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeBucketsOutput`](crate::output::DescribeBucketsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) buckets: std::option::Option<std::vec::Vec<crate::model::BucketMetadata>>,
@@ -4101,7 +4555,7 @@ pub mod describe_buckets_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeBucketsOutput`](crate::output::DescribeBucketsOutput)
+        /// Consumes the builder and constructs a [`DescribeBucketsOutput`](crate::output::DescribeBucketsOutput).
         pub fn build(self) -> crate::output::DescribeBucketsOutput {
             crate::output::DescribeBucketsOutput {
                 buckets: self.buckets,
@@ -4111,7 +4565,7 @@ pub mod describe_buckets_output {
     }
 }
 impl DescribeBucketsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeBucketsOutput`](crate::output::DescribeBucketsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeBucketsOutput`](crate::output::DescribeBucketsOutput).
     pub fn builder() -> crate::output::describe_buckets_output::Builder {
         crate::output::describe_buckets_output::Builder::default()
     }
@@ -4127,22 +4581,21 @@ impl std::fmt::Debug for DeleteMemberOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteMemberOutput`](crate::output::DeleteMemberOutput)
+/// See [`DeleteMemberOutput`](crate::output::DeleteMemberOutput).
 pub mod delete_member_output {
 
-    /// A builder for [`DeleteMemberOutput`](crate::output::DeleteMemberOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteMemberOutput`](crate::output::DeleteMemberOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteMemberOutput`](crate::output::DeleteMemberOutput)
+        /// Consumes the builder and constructs a [`DeleteMemberOutput`](crate::output::DeleteMemberOutput).
         pub fn build(self) -> crate::output::DeleteMemberOutput {
             crate::output::DeleteMemberOutput {}
         }
     }
 }
 impl DeleteMemberOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteMemberOutput`](crate::output::DeleteMemberOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteMemberOutput`](crate::output::DeleteMemberOutput).
     pub fn builder() -> crate::output::delete_member_output::Builder {
         crate::output::delete_member_output::Builder::default()
     }
@@ -4153,6 +4606,7 @@ impl DeleteMemberOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteInvitationsOutput {
     /// <p>An array of objects, one for each account whose invitation hasn't been deleted. Each object identifies the account and explains why the request hasn't been processed for that account.</p>
+    #[doc(hidden)]
     pub unprocessed_accounts: std::option::Option<std::vec::Vec<crate::model::UnprocessedAccount>>,
 }
 impl DeleteInvitationsOutput {
@@ -4168,11 +4622,10 @@ impl std::fmt::Debug for DeleteInvitationsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteInvitationsOutput`](crate::output::DeleteInvitationsOutput)
+/// See [`DeleteInvitationsOutput`](crate::output::DeleteInvitationsOutput).
 pub mod delete_invitations_output {
 
-    /// A builder for [`DeleteInvitationsOutput`](crate::output::DeleteInvitationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteInvitationsOutput`](crate::output::DeleteInvitationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) unprocessed_accounts:
@@ -4198,7 +4651,7 @@ pub mod delete_invitations_output {
             self.unprocessed_accounts = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteInvitationsOutput`](crate::output::DeleteInvitationsOutput)
+        /// Consumes the builder and constructs a [`DeleteInvitationsOutput`](crate::output::DeleteInvitationsOutput).
         pub fn build(self) -> crate::output::DeleteInvitationsOutput {
             crate::output::DeleteInvitationsOutput {
                 unprocessed_accounts: self.unprocessed_accounts,
@@ -4207,7 +4660,7 @@ pub mod delete_invitations_output {
     }
 }
 impl DeleteInvitationsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteInvitationsOutput`](crate::output::DeleteInvitationsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteInvitationsOutput`](crate::output::DeleteInvitationsOutput).
     pub fn builder() -> crate::output::delete_invitations_output::Builder {
         crate::output::delete_invitations_output::Builder::default()
     }
@@ -4223,22 +4676,21 @@ impl std::fmt::Debug for DeleteFindingsFilterOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFindingsFilterOutput`](crate::output::DeleteFindingsFilterOutput)
+/// See [`DeleteFindingsFilterOutput`](crate::output::DeleteFindingsFilterOutput).
 pub mod delete_findings_filter_output {
 
-    /// A builder for [`DeleteFindingsFilterOutput`](crate::output::DeleteFindingsFilterOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFindingsFilterOutput`](crate::output::DeleteFindingsFilterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteFindingsFilterOutput`](crate::output::DeleteFindingsFilterOutput)
+        /// Consumes the builder and constructs a [`DeleteFindingsFilterOutput`](crate::output::DeleteFindingsFilterOutput).
         pub fn build(self) -> crate::output::DeleteFindingsFilterOutput {
             crate::output::DeleteFindingsFilterOutput {}
         }
     }
 }
 impl DeleteFindingsFilterOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFindingsFilterOutput`](crate::output::DeleteFindingsFilterOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFindingsFilterOutput`](crate::output::DeleteFindingsFilterOutput).
     pub fn builder() -> crate::output::delete_findings_filter_output::Builder {
         crate::output::delete_findings_filter_output::Builder::default()
     }
@@ -4254,22 +4706,21 @@ impl std::fmt::Debug for DeleteCustomDataIdentifierOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteCustomDataIdentifierOutput`](crate::output::DeleteCustomDataIdentifierOutput)
+/// See [`DeleteCustomDataIdentifierOutput`](crate::output::DeleteCustomDataIdentifierOutput).
 pub mod delete_custom_data_identifier_output {
 
-    /// A builder for [`DeleteCustomDataIdentifierOutput`](crate::output::DeleteCustomDataIdentifierOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteCustomDataIdentifierOutput`](crate::output::DeleteCustomDataIdentifierOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteCustomDataIdentifierOutput`](crate::output::DeleteCustomDataIdentifierOutput)
+        /// Consumes the builder and constructs a [`DeleteCustomDataIdentifierOutput`](crate::output::DeleteCustomDataIdentifierOutput).
         pub fn build(self) -> crate::output::DeleteCustomDataIdentifierOutput {
             crate::output::DeleteCustomDataIdentifierOutput {}
         }
     }
 }
 impl DeleteCustomDataIdentifierOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteCustomDataIdentifierOutput`](crate::output::DeleteCustomDataIdentifierOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteCustomDataIdentifierOutput`](crate::output::DeleteCustomDataIdentifierOutput).
     pub fn builder() -> crate::output::delete_custom_data_identifier_output::Builder {
         crate::output::delete_custom_data_identifier_output::Builder::default()
     }
@@ -4280,6 +4731,7 @@ impl DeleteCustomDataIdentifierOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeclineInvitationsOutput {
     /// <p>An array of objects, one for each account whose invitation hasn't been declined. Each object identifies the account and explains why the request hasn't been processed for that account.</p>
+    #[doc(hidden)]
     pub unprocessed_accounts: std::option::Option<std::vec::Vec<crate::model::UnprocessedAccount>>,
 }
 impl DeclineInvitationsOutput {
@@ -4295,11 +4747,10 @@ impl std::fmt::Debug for DeclineInvitationsOutput {
         formatter.finish()
     }
 }
-/// See [`DeclineInvitationsOutput`](crate::output::DeclineInvitationsOutput)
+/// See [`DeclineInvitationsOutput`](crate::output::DeclineInvitationsOutput).
 pub mod decline_invitations_output {
 
-    /// A builder for [`DeclineInvitationsOutput`](crate::output::DeclineInvitationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeclineInvitationsOutput`](crate::output::DeclineInvitationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) unprocessed_accounts:
@@ -4325,7 +4776,7 @@ pub mod decline_invitations_output {
             self.unprocessed_accounts = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeclineInvitationsOutput`](crate::output::DeclineInvitationsOutput)
+        /// Consumes the builder and constructs a [`DeclineInvitationsOutput`](crate::output::DeclineInvitationsOutput).
         pub fn build(self) -> crate::output::DeclineInvitationsOutput {
             crate::output::DeclineInvitationsOutput {
                 unprocessed_accounts: self.unprocessed_accounts,
@@ -4334,7 +4785,7 @@ pub mod decline_invitations_output {
     }
 }
 impl DeclineInvitationsOutput {
-    /// Creates a new builder-style object to manufacture [`DeclineInvitationsOutput`](crate::output::DeclineInvitationsOutput)
+    /// Creates a new builder-style object to manufacture [`DeclineInvitationsOutput`](crate::output::DeclineInvitationsOutput).
     pub fn builder() -> crate::output::decline_invitations_output::Builder {
         crate::output::decline_invitations_output::Builder::default()
     }
@@ -4350,22 +4801,21 @@ impl std::fmt::Debug for CreateSampleFindingsOutput {
         formatter.finish()
     }
 }
-/// See [`CreateSampleFindingsOutput`](crate::output::CreateSampleFindingsOutput)
+/// See [`CreateSampleFindingsOutput`](crate::output::CreateSampleFindingsOutput).
 pub mod create_sample_findings_output {
 
-    /// A builder for [`CreateSampleFindingsOutput`](crate::output::CreateSampleFindingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateSampleFindingsOutput`](crate::output::CreateSampleFindingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`CreateSampleFindingsOutput`](crate::output::CreateSampleFindingsOutput)
+        /// Consumes the builder and constructs a [`CreateSampleFindingsOutput`](crate::output::CreateSampleFindingsOutput).
         pub fn build(self) -> crate::output::CreateSampleFindingsOutput {
             crate::output::CreateSampleFindingsOutput {}
         }
     }
 }
 impl CreateSampleFindingsOutput {
-    /// Creates a new builder-style object to manufacture [`CreateSampleFindingsOutput`](crate::output::CreateSampleFindingsOutput)
+    /// Creates a new builder-style object to manufacture [`CreateSampleFindingsOutput`](crate::output::CreateSampleFindingsOutput).
     pub fn builder() -> crate::output::create_sample_findings_output::Builder {
         crate::output::create_sample_findings_output::Builder::default()
     }
@@ -4376,6 +4826,7 @@ impl CreateSampleFindingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateMemberOutput {
     /// <p>The Amazon Resource Name (ARN) of the account that was associated with the administrator account.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl CreateMemberOutput {
@@ -4391,11 +4842,10 @@ impl std::fmt::Debug for CreateMemberOutput {
         formatter.finish()
     }
 }
-/// See [`CreateMemberOutput`](crate::output::CreateMemberOutput)
+/// See [`CreateMemberOutput`](crate::output::CreateMemberOutput).
 pub mod create_member_output {
 
-    /// A builder for [`CreateMemberOutput`](crate::output::CreateMemberOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateMemberOutput`](crate::output::CreateMemberOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4411,14 +4861,14 @@ pub mod create_member_output {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateMemberOutput`](crate::output::CreateMemberOutput)
+        /// Consumes the builder and constructs a [`CreateMemberOutput`](crate::output::CreateMemberOutput).
         pub fn build(self) -> crate::output::CreateMemberOutput {
             crate::output::CreateMemberOutput { arn: self.arn }
         }
     }
 }
 impl CreateMemberOutput {
-    /// Creates a new builder-style object to manufacture [`CreateMemberOutput`](crate::output::CreateMemberOutput)
+    /// Creates a new builder-style object to manufacture [`CreateMemberOutput`](crate::output::CreateMemberOutput).
     pub fn builder() -> crate::output::create_member_output::Builder {
         crate::output::create_member_output::Builder::default()
     }
@@ -4429,6 +4879,7 @@ impl CreateMemberOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateInvitationsOutput {
     /// <p>An array of objects, one for each account whose invitation hasn't been processed. Each object identifies the account and explains why the invitation hasn't been processed for the account.</p>
+    #[doc(hidden)]
     pub unprocessed_accounts: std::option::Option<std::vec::Vec<crate::model::UnprocessedAccount>>,
 }
 impl CreateInvitationsOutput {
@@ -4444,11 +4895,10 @@ impl std::fmt::Debug for CreateInvitationsOutput {
         formatter.finish()
     }
 }
-/// See [`CreateInvitationsOutput`](crate::output::CreateInvitationsOutput)
+/// See [`CreateInvitationsOutput`](crate::output::CreateInvitationsOutput).
 pub mod create_invitations_output {
 
-    /// A builder for [`CreateInvitationsOutput`](crate::output::CreateInvitationsOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateInvitationsOutput`](crate::output::CreateInvitationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) unprocessed_accounts:
@@ -4474,7 +4924,7 @@ pub mod create_invitations_output {
             self.unprocessed_accounts = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateInvitationsOutput`](crate::output::CreateInvitationsOutput)
+        /// Consumes the builder and constructs a [`CreateInvitationsOutput`](crate::output::CreateInvitationsOutput).
         pub fn build(self) -> crate::output::CreateInvitationsOutput {
             crate::output::CreateInvitationsOutput {
                 unprocessed_accounts: self.unprocessed_accounts,
@@ -4483,7 +4933,7 @@ pub mod create_invitations_output {
     }
 }
 impl CreateInvitationsOutput {
-    /// Creates a new builder-style object to manufacture [`CreateInvitationsOutput`](crate::output::CreateInvitationsOutput)
+    /// Creates a new builder-style object to manufacture [`CreateInvitationsOutput`](crate::output::CreateInvitationsOutput).
     pub fn builder() -> crate::output::create_invitations_output::Builder {
         crate::output::create_invitations_output::Builder::default()
     }
@@ -4494,8 +4944,10 @@ impl CreateInvitationsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateFindingsFilterOutput {
     /// <p>The Amazon Resource Name (ARN) of the filter that was created.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the filter that was created.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
 }
 impl CreateFindingsFilterOutput {
@@ -4516,11 +4968,10 @@ impl std::fmt::Debug for CreateFindingsFilterOutput {
         formatter.finish()
     }
 }
-/// See [`CreateFindingsFilterOutput`](crate::output::CreateFindingsFilterOutput)
+/// See [`CreateFindingsFilterOutput`](crate::output::CreateFindingsFilterOutput).
 pub mod create_findings_filter_output {
 
-    /// A builder for [`CreateFindingsFilterOutput`](crate::output::CreateFindingsFilterOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateFindingsFilterOutput`](crate::output::CreateFindingsFilterOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -4547,7 +4998,7 @@ pub mod create_findings_filter_output {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFindingsFilterOutput`](crate::output::CreateFindingsFilterOutput)
+        /// Consumes the builder and constructs a [`CreateFindingsFilterOutput`](crate::output::CreateFindingsFilterOutput).
         pub fn build(self) -> crate::output::CreateFindingsFilterOutput {
             crate::output::CreateFindingsFilterOutput {
                 arn: self.arn,
@@ -4557,7 +5008,7 @@ pub mod create_findings_filter_output {
     }
 }
 impl CreateFindingsFilterOutput {
-    /// Creates a new builder-style object to manufacture [`CreateFindingsFilterOutput`](crate::output::CreateFindingsFilterOutput)
+    /// Creates a new builder-style object to manufacture [`CreateFindingsFilterOutput`](crate::output::CreateFindingsFilterOutput).
     pub fn builder() -> crate::output::create_findings_filter_output::Builder {
         crate::output::create_findings_filter_output::Builder::default()
     }
@@ -4568,6 +5019,7 @@ impl CreateFindingsFilterOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateCustomDataIdentifierOutput {
     /// <p>The unique identifier for the custom data identifier that was created.</p>
+    #[doc(hidden)]
     pub custom_data_identifier_id: std::option::Option<std::string::String>,
 }
 impl CreateCustomDataIdentifierOutput {
@@ -4583,11 +5035,10 @@ impl std::fmt::Debug for CreateCustomDataIdentifierOutput {
         formatter.finish()
     }
 }
-/// See [`CreateCustomDataIdentifierOutput`](crate::output::CreateCustomDataIdentifierOutput)
+/// See [`CreateCustomDataIdentifierOutput`](crate::output::CreateCustomDataIdentifierOutput).
 pub mod create_custom_data_identifier_output {
 
-    /// A builder for [`CreateCustomDataIdentifierOutput`](crate::output::CreateCustomDataIdentifierOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateCustomDataIdentifierOutput`](crate::output::CreateCustomDataIdentifierOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_data_identifier_id: std::option::Option<std::string::String>,
@@ -4606,7 +5057,7 @@ pub mod create_custom_data_identifier_output {
             self.custom_data_identifier_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateCustomDataIdentifierOutput`](crate::output::CreateCustomDataIdentifierOutput)
+        /// Consumes the builder and constructs a [`CreateCustomDataIdentifierOutput`](crate::output::CreateCustomDataIdentifierOutput).
         pub fn build(self) -> crate::output::CreateCustomDataIdentifierOutput {
             crate::output::CreateCustomDataIdentifierOutput {
                 custom_data_identifier_id: self.custom_data_identifier_id,
@@ -4615,7 +5066,7 @@ pub mod create_custom_data_identifier_output {
     }
 }
 impl CreateCustomDataIdentifierOutput {
-    /// Creates a new builder-style object to manufacture [`CreateCustomDataIdentifierOutput`](crate::output::CreateCustomDataIdentifierOutput)
+    /// Creates a new builder-style object to manufacture [`CreateCustomDataIdentifierOutput`](crate::output::CreateCustomDataIdentifierOutput).
     pub fn builder() -> crate::output::create_custom_data_identifier_output::Builder {
         crate::output::create_custom_data_identifier_output::Builder::default()
     }
@@ -4626,8 +5077,10 @@ impl CreateCustomDataIdentifierOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateClassificationJobOutput {
     /// <p>The Amazon Resource Name (ARN) of the job.</p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
 }
 impl CreateClassificationJobOutput {
@@ -4648,11 +5101,10 @@ impl std::fmt::Debug for CreateClassificationJobOutput {
         formatter.finish()
     }
 }
-/// See [`CreateClassificationJobOutput`](crate::output::CreateClassificationJobOutput)
+/// See [`CreateClassificationJobOutput`](crate::output::CreateClassificationJobOutput).
 pub mod create_classification_job_output {
 
-    /// A builder for [`CreateClassificationJobOutput`](crate::output::CreateClassificationJobOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateClassificationJobOutput`](crate::output::CreateClassificationJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_arn: std::option::Option<std::string::String>,
@@ -4679,7 +5131,7 @@ pub mod create_classification_job_output {
             self.job_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateClassificationJobOutput`](crate::output::CreateClassificationJobOutput)
+        /// Consumes the builder and constructs a [`CreateClassificationJobOutput`](crate::output::CreateClassificationJobOutput).
         pub fn build(self) -> crate::output::CreateClassificationJobOutput {
             crate::output::CreateClassificationJobOutput {
                 job_arn: self.job_arn,
@@ -4689,7 +5141,7 @@ pub mod create_classification_job_output {
     }
 }
 impl CreateClassificationJobOutput {
-    /// Creates a new builder-style object to manufacture [`CreateClassificationJobOutput`](crate::output::CreateClassificationJobOutput)
+    /// Creates a new builder-style object to manufacture [`CreateClassificationJobOutput`](crate::output::CreateClassificationJobOutput).
     pub fn builder() -> crate::output::create_classification_job_output::Builder {
         crate::output::create_classification_job_output::Builder::default()
     }
@@ -4700,9 +5152,11 @@ impl CreateClassificationJobOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchGetCustomDataIdentifiersOutput {
     /// <p>An array of objects, one for each custom data identifier that meets the criteria specified in the request.</p>
+    #[doc(hidden)]
     pub custom_data_identifiers:
         std::option::Option<std::vec::Vec<crate::model::BatchGetCustomDataIdentifierSummary>>,
     /// <p>An array of custom data identifier IDs, one for each custom data identifier that was specified in the request but doesn't correlate to an existing custom data identifier.</p>
+    #[doc(hidden)]
     pub not_found_identifier_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl BatchGetCustomDataIdentifiersOutput {
@@ -4725,11 +5179,10 @@ impl std::fmt::Debug for BatchGetCustomDataIdentifiersOutput {
         formatter.finish()
     }
 }
-/// See [`BatchGetCustomDataIdentifiersOutput`](crate::output::BatchGetCustomDataIdentifiersOutput)
+/// See [`BatchGetCustomDataIdentifiersOutput`](crate::output::BatchGetCustomDataIdentifiersOutput).
 pub mod batch_get_custom_data_identifiers_output {
 
-    /// A builder for [`BatchGetCustomDataIdentifiersOutput`](crate::output::BatchGetCustomDataIdentifiersOutput)
-    #[non_exhaustive]
+    /// A builder for [`BatchGetCustomDataIdentifiersOutput`](crate::output::BatchGetCustomDataIdentifiersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) custom_data_identifiers:
@@ -4781,7 +5234,7 @@ pub mod batch_get_custom_data_identifiers_output {
             self.not_found_identifier_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchGetCustomDataIdentifiersOutput`](crate::output::BatchGetCustomDataIdentifiersOutput)
+        /// Consumes the builder and constructs a [`BatchGetCustomDataIdentifiersOutput`](crate::output::BatchGetCustomDataIdentifiersOutput).
         pub fn build(self) -> crate::output::BatchGetCustomDataIdentifiersOutput {
             crate::output::BatchGetCustomDataIdentifiersOutput {
                 custom_data_identifiers: self.custom_data_identifiers,
@@ -4791,7 +5244,7 @@ pub mod batch_get_custom_data_identifiers_output {
     }
 }
 impl BatchGetCustomDataIdentifiersOutput {
-    /// Creates a new builder-style object to manufacture [`BatchGetCustomDataIdentifiersOutput`](crate::output::BatchGetCustomDataIdentifiersOutput)
+    /// Creates a new builder-style object to manufacture [`BatchGetCustomDataIdentifiersOutput`](crate::output::BatchGetCustomDataIdentifiersOutput).
     pub fn builder() -> crate::output::batch_get_custom_data_identifiers_output::Builder {
         crate::output::batch_get_custom_data_identifiers_output::Builder::default()
     }
@@ -4807,22 +5260,21 @@ impl std::fmt::Debug for AcceptInvitationOutput {
         formatter.finish()
     }
 }
-/// See [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput)
+/// See [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput).
 pub mod accept_invitation_output {
 
-    /// A builder for [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput)
-    #[non_exhaustive]
+    /// A builder for [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput)
+        /// Consumes the builder and constructs a [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput).
         pub fn build(self) -> crate::output::AcceptInvitationOutput {
             crate::output::AcceptInvitationOutput {}
         }
     }
 }
 impl AcceptInvitationOutput {
-    /// Creates a new builder-style object to manufacture [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput)
+    /// Creates a new builder-style object to manufacture [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput).
     pub fn builder() -> crate::output::accept_invitation_output::Builder {
         crate::output::accept_invitation_output::Builder::default()
     }

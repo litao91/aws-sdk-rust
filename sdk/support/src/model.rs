@@ -5,6 +5,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrustedAdvisorCheckRefreshStatus {
     /// <p>The unique identifier for the Trusted Advisor check.</p>
+    #[doc(hidden)]
     pub check_id: std::option::Option<std::string::String>,
     /// <p>The status of the Trusted Advisor check for which a refresh has been requested: </p>
     /// <ul>
@@ -14,8 +15,10 @@ pub struct TrustedAdvisorCheckRefreshStatus {
     /// <li> <p> <code>success</code> - The check is successfully refreshed</p> </li>
     /// <li> <p> <code>abandoned</code> - The check refresh has failed</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The amount of time, in milliseconds, until the Trusted Advisor check is eligible for refresh.</p>
+    #[doc(hidden)]
     pub millis_until_next_refreshable: i64,
 }
 impl TrustedAdvisorCheckRefreshStatus {
@@ -51,11 +54,10 @@ impl std::fmt::Debug for TrustedAdvisorCheckRefreshStatus {
         formatter.finish()
     }
 }
-/// See [`TrustedAdvisorCheckRefreshStatus`](crate::model::TrustedAdvisorCheckRefreshStatus)
+/// See [`TrustedAdvisorCheckRefreshStatus`](crate::model::TrustedAdvisorCheckRefreshStatus).
 pub mod trusted_advisor_check_refresh_status {
 
-    /// A builder for [`TrustedAdvisorCheckRefreshStatus`](crate::model::TrustedAdvisorCheckRefreshStatus)
-    #[non_exhaustive]
+    /// A builder for [`TrustedAdvisorCheckRefreshStatus`](crate::model::TrustedAdvisorCheckRefreshStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) check_id: std::option::Option<std::string::String>,
@@ -110,7 +112,7 @@ pub mod trusted_advisor_check_refresh_status {
             self.millis_until_next_refreshable = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrustedAdvisorCheckRefreshStatus`](crate::model::TrustedAdvisorCheckRefreshStatus)
+        /// Consumes the builder and constructs a [`TrustedAdvisorCheckRefreshStatus`](crate::model::TrustedAdvisorCheckRefreshStatus).
         pub fn build(self) -> crate::model::TrustedAdvisorCheckRefreshStatus {
             crate::model::TrustedAdvisorCheckRefreshStatus {
                 check_id: self.check_id,
@@ -123,7 +125,7 @@ pub mod trusted_advisor_check_refresh_status {
     }
 }
 impl TrustedAdvisorCheckRefreshStatus {
-    /// Creates a new builder-style object to manufacture [`TrustedAdvisorCheckRefreshStatus`](crate::model::TrustedAdvisorCheckRefreshStatus)
+    /// Creates a new builder-style object to manufacture [`TrustedAdvisorCheckRefreshStatus`](crate::model::TrustedAdvisorCheckRefreshStatus).
     pub fn builder() -> crate::model::trusted_advisor_check_refresh_status::Builder {
         crate::model::trusted_advisor_check_refresh_status::Builder::default()
     }
@@ -134,16 +136,22 @@ impl TrustedAdvisorCheckRefreshStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrustedAdvisorCheckSummary {
     /// <p>The unique identifier for the Trusted Advisor check.</p>
+    #[doc(hidden)]
     pub check_id: std::option::Option<std::string::String>,
     /// <p>The time of the last refresh of the check.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<std::string::String>,
     /// <p>The alert status of the check: "ok" (green), "warning" (yellow), "error" (red), or "not_available".</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>Specifies whether the Trusted Advisor check has flagged resources.</p>
+    #[doc(hidden)]
     pub has_flagged_resources: bool,
     /// <p>Details about Amazon Web Services resources that were analyzed in a call to Trusted Advisor <code>DescribeTrustedAdvisorCheckSummaries</code>.</p>
+    #[doc(hidden)]
     pub resources_summary: std::option::Option<crate::model::TrustedAdvisorResourcesSummary>,
     /// <p>Summary information that relates to the category of the check. Cost Optimizing is the only category that is currently supported.</p>
+    #[doc(hidden)]
     pub category_specific_summary:
         std::option::Option<crate::model::TrustedAdvisorCategorySpecificSummary>,
 }
@@ -189,11 +197,10 @@ impl std::fmt::Debug for TrustedAdvisorCheckSummary {
         formatter.finish()
     }
 }
-/// See [`TrustedAdvisorCheckSummary`](crate::model::TrustedAdvisorCheckSummary)
+/// See [`TrustedAdvisorCheckSummary`](crate::model::TrustedAdvisorCheckSummary).
 pub mod trusted_advisor_check_summary {
 
-    /// A builder for [`TrustedAdvisorCheckSummary`](crate::model::TrustedAdvisorCheckSummary)
-    #[non_exhaustive]
+    /// A builder for [`TrustedAdvisorCheckSummary`](crate::model::TrustedAdvisorCheckSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) check_id: std::option::Option<std::string::String>,
@@ -278,7 +285,7 @@ pub mod trusted_advisor_check_summary {
             self.category_specific_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrustedAdvisorCheckSummary`](crate::model::TrustedAdvisorCheckSummary)
+        /// Consumes the builder and constructs a [`TrustedAdvisorCheckSummary`](crate::model::TrustedAdvisorCheckSummary).
         pub fn build(self) -> crate::model::TrustedAdvisorCheckSummary {
             crate::model::TrustedAdvisorCheckSummary {
                 check_id: self.check_id,
@@ -292,7 +299,7 @@ pub mod trusted_advisor_check_summary {
     }
 }
 impl TrustedAdvisorCheckSummary {
-    /// Creates a new builder-style object to manufacture [`TrustedAdvisorCheckSummary`](crate::model::TrustedAdvisorCheckSummary)
+    /// Creates a new builder-style object to manufacture [`TrustedAdvisorCheckSummary`](crate::model::TrustedAdvisorCheckSummary).
     pub fn builder() -> crate::model::trusted_advisor_check_summary::Builder {
         crate::model::trusted_advisor_check_summary::Builder::default()
     }
@@ -303,6 +310,7 @@ impl TrustedAdvisorCheckSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrustedAdvisorCategorySpecificSummary {
     /// <p>The summary information about cost savings for a Trusted Advisor check that is in the Cost Optimizing category.</p>
+    #[doc(hidden)]
     pub cost_optimizing: std::option::Option<crate::model::TrustedAdvisorCostOptimizingSummary>,
 }
 impl TrustedAdvisorCategorySpecificSummary {
@@ -320,11 +328,10 @@ impl std::fmt::Debug for TrustedAdvisorCategorySpecificSummary {
         formatter.finish()
     }
 }
-/// See [`TrustedAdvisorCategorySpecificSummary`](crate::model::TrustedAdvisorCategorySpecificSummary)
+/// See [`TrustedAdvisorCategorySpecificSummary`](crate::model::TrustedAdvisorCategorySpecificSummary).
 pub mod trusted_advisor_category_specific_summary {
 
-    /// A builder for [`TrustedAdvisorCategorySpecificSummary`](crate::model::TrustedAdvisorCategorySpecificSummary)
-    #[non_exhaustive]
+    /// A builder for [`TrustedAdvisorCategorySpecificSummary`](crate::model::TrustedAdvisorCategorySpecificSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cost_optimizing:
@@ -347,7 +354,7 @@ pub mod trusted_advisor_category_specific_summary {
             self.cost_optimizing = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrustedAdvisorCategorySpecificSummary`](crate::model::TrustedAdvisorCategorySpecificSummary)
+        /// Consumes the builder and constructs a [`TrustedAdvisorCategorySpecificSummary`](crate::model::TrustedAdvisorCategorySpecificSummary).
         pub fn build(self) -> crate::model::TrustedAdvisorCategorySpecificSummary {
             crate::model::TrustedAdvisorCategorySpecificSummary {
                 cost_optimizing: self.cost_optimizing,
@@ -356,7 +363,7 @@ pub mod trusted_advisor_category_specific_summary {
     }
 }
 impl TrustedAdvisorCategorySpecificSummary {
-    /// Creates a new builder-style object to manufacture [`TrustedAdvisorCategorySpecificSummary`](crate::model::TrustedAdvisorCategorySpecificSummary)
+    /// Creates a new builder-style object to manufacture [`TrustedAdvisorCategorySpecificSummary`](crate::model::TrustedAdvisorCategorySpecificSummary).
     pub fn builder() -> crate::model::trusted_advisor_category_specific_summary::Builder {
         crate::model::trusted_advisor_category_specific_summary::Builder::default()
     }
@@ -367,8 +374,10 @@ impl TrustedAdvisorCategorySpecificSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrustedAdvisorCostOptimizingSummary {
     /// <p>The estimated monthly savings that might be realized if the recommended operations are taken.</p>
+    #[doc(hidden)]
     pub estimated_monthly_savings: f64,
     /// <p>The estimated percentage of savings that might be realized if the recommended operations are taken.</p>
+    #[doc(hidden)]
     pub estimated_percent_monthly_savings: f64,
 }
 impl TrustedAdvisorCostOptimizingSummary {
@@ -392,11 +401,10 @@ impl std::fmt::Debug for TrustedAdvisorCostOptimizingSummary {
         formatter.finish()
     }
 }
-/// See [`TrustedAdvisorCostOptimizingSummary`](crate::model::TrustedAdvisorCostOptimizingSummary)
+/// See [`TrustedAdvisorCostOptimizingSummary`](crate::model::TrustedAdvisorCostOptimizingSummary).
 pub mod trusted_advisor_cost_optimizing_summary {
 
-    /// A builder for [`TrustedAdvisorCostOptimizingSummary`](crate::model::TrustedAdvisorCostOptimizingSummary)
-    #[non_exhaustive]
+    /// A builder for [`TrustedAdvisorCostOptimizingSummary`](crate::model::TrustedAdvisorCostOptimizingSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) estimated_monthly_savings: std::option::Option<f64>,
@@ -426,7 +434,7 @@ pub mod trusted_advisor_cost_optimizing_summary {
             self.estimated_percent_monthly_savings = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrustedAdvisorCostOptimizingSummary`](crate::model::TrustedAdvisorCostOptimizingSummary)
+        /// Consumes the builder and constructs a [`TrustedAdvisorCostOptimizingSummary`](crate::model::TrustedAdvisorCostOptimizingSummary).
         pub fn build(self) -> crate::model::TrustedAdvisorCostOptimizingSummary {
             crate::model::TrustedAdvisorCostOptimizingSummary {
                 estimated_monthly_savings: self.estimated_monthly_savings.unwrap_or_default(),
@@ -438,7 +446,7 @@ pub mod trusted_advisor_cost_optimizing_summary {
     }
 }
 impl TrustedAdvisorCostOptimizingSummary {
-    /// Creates a new builder-style object to manufacture [`TrustedAdvisorCostOptimizingSummary`](crate::model::TrustedAdvisorCostOptimizingSummary)
+    /// Creates a new builder-style object to manufacture [`TrustedAdvisorCostOptimizingSummary`](crate::model::TrustedAdvisorCostOptimizingSummary).
     pub fn builder() -> crate::model::trusted_advisor_cost_optimizing_summary::Builder {
         crate::model::trusted_advisor_cost_optimizing_summary::Builder::default()
     }
@@ -449,12 +457,16 @@ impl TrustedAdvisorCostOptimizingSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrustedAdvisorResourcesSummary {
     /// <p>The number of Amazon Web Services resources that were analyzed by the Trusted Advisor check.</p>
+    #[doc(hidden)]
     pub resources_processed: i64,
     /// <p>The number of Amazon Web Services resources that were flagged (listed) by the Trusted Advisor check.</p>
+    #[doc(hidden)]
     pub resources_flagged: i64,
     /// <p>The number of Amazon Web Services resources ignored by Trusted Advisor because information was unavailable.</p>
+    #[doc(hidden)]
     pub resources_ignored: i64,
     /// <p>The number of Amazon Web Services resources ignored by Trusted Advisor because they were marked as suppressed by the user.</p>
+    #[doc(hidden)]
     pub resources_suppressed: i64,
 }
 impl TrustedAdvisorResourcesSummary {
@@ -485,11 +497,10 @@ impl std::fmt::Debug for TrustedAdvisorResourcesSummary {
         formatter.finish()
     }
 }
-/// See [`TrustedAdvisorResourcesSummary`](crate::model::TrustedAdvisorResourcesSummary)
+/// See [`TrustedAdvisorResourcesSummary`](crate::model::TrustedAdvisorResourcesSummary).
 pub mod trusted_advisor_resources_summary {
 
-    /// A builder for [`TrustedAdvisorResourcesSummary`](crate::model::TrustedAdvisorResourcesSummary)
-    #[non_exhaustive]
+    /// A builder for [`TrustedAdvisorResourcesSummary`](crate::model::TrustedAdvisorResourcesSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resources_processed: std::option::Option<i64>,
@@ -538,7 +549,7 @@ pub mod trusted_advisor_resources_summary {
             self.resources_suppressed = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrustedAdvisorResourcesSummary`](crate::model::TrustedAdvisorResourcesSummary)
+        /// Consumes the builder and constructs a [`TrustedAdvisorResourcesSummary`](crate::model::TrustedAdvisorResourcesSummary).
         pub fn build(self) -> crate::model::TrustedAdvisorResourcesSummary {
             crate::model::TrustedAdvisorResourcesSummary {
                 resources_processed: self.resources_processed.unwrap_or_default(),
@@ -550,7 +561,7 @@ pub mod trusted_advisor_resources_summary {
     }
 }
 impl TrustedAdvisorResourcesSummary {
-    /// Creates a new builder-style object to manufacture [`TrustedAdvisorResourcesSummary`](crate::model::TrustedAdvisorResourcesSummary)
+    /// Creates a new builder-style object to manufacture [`TrustedAdvisorResourcesSummary`](crate::model::TrustedAdvisorResourcesSummary).
     pub fn builder() -> crate::model::trusted_advisor_resources_summary::Builder {
         crate::model::trusted_advisor_resources_summary::Builder::default()
     }
@@ -561,14 +572,19 @@ impl TrustedAdvisorResourcesSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrustedAdvisorCheckDescription {
     /// <p>The unique identifier for the Trusted Advisor check.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The display name for the Trusted Advisor check.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the Trusted Advisor check, which includes the alert criteria and recommended operations (contains HTML markup).</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The category of the Trusted Advisor check.</p>
+    #[doc(hidden)]
     pub category: std::option::Option<std::string::String>,
     /// <p>The column headings for the data returned by the Trusted Advisor check. The order of the headings corresponds to the order of the data in the <b>Metadata</b> element of the <code>TrustedAdvisorResourceDetail</code> for the check. <b>Metadata</b> contains all the data that is shown in the Excel download, even in those cases where the UI shows just summary data. </p>
+    #[doc(hidden)]
     pub metadata: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl TrustedAdvisorCheckDescription {
@@ -604,11 +620,10 @@ impl std::fmt::Debug for TrustedAdvisorCheckDescription {
         formatter.finish()
     }
 }
-/// See [`TrustedAdvisorCheckDescription`](crate::model::TrustedAdvisorCheckDescription)
+/// See [`TrustedAdvisorCheckDescription`](crate::model::TrustedAdvisorCheckDescription).
 pub mod trusted_advisor_check_description {
 
-    /// A builder for [`TrustedAdvisorCheckDescription`](crate::model::TrustedAdvisorCheckDescription)
-    #[non_exhaustive]
+    /// A builder for [`TrustedAdvisorCheckDescription`](crate::model::TrustedAdvisorCheckDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -677,7 +692,7 @@ pub mod trusted_advisor_check_description {
             self.metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrustedAdvisorCheckDescription`](crate::model::TrustedAdvisorCheckDescription)
+        /// Consumes the builder and constructs a [`TrustedAdvisorCheckDescription`](crate::model::TrustedAdvisorCheckDescription).
         pub fn build(self) -> crate::model::TrustedAdvisorCheckDescription {
             crate::model::TrustedAdvisorCheckDescription {
                 id: self.id,
@@ -690,7 +705,7 @@ pub mod trusted_advisor_check_description {
     }
 }
 impl TrustedAdvisorCheckDescription {
-    /// Creates a new builder-style object to manufacture [`TrustedAdvisorCheckDescription`](crate::model::TrustedAdvisorCheckDescription)
+    /// Creates a new builder-style object to manufacture [`TrustedAdvisorCheckDescription`](crate::model::TrustedAdvisorCheckDescription).
     pub fn builder() -> crate::model::trusted_advisor_check_description::Builder {
         crate::model::trusted_advisor_check_description::Builder::default()
     }
@@ -701,17 +716,23 @@ impl TrustedAdvisorCheckDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrustedAdvisorCheckResult {
     /// <p>The unique identifier for the Trusted Advisor check.</p>
+    #[doc(hidden)]
     pub check_id: std::option::Option<std::string::String>,
     /// <p>The time of the last refresh of the check.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<std::string::String>,
     /// <p>The alert status of the check: "ok" (green), "warning" (yellow), "error" (red), or "not_available".</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>Details about Amazon Web Services resources that were analyzed in a call to Trusted Advisor <code>DescribeTrustedAdvisorCheckSummaries</code>.</p>
+    #[doc(hidden)]
     pub resources_summary: std::option::Option<crate::model::TrustedAdvisorResourcesSummary>,
     /// <p>Summary information that relates to the category of the check. Cost Optimizing is the only category that is currently supported.</p>
+    #[doc(hidden)]
     pub category_specific_summary:
         std::option::Option<crate::model::TrustedAdvisorCategorySpecificSummary>,
     /// <p>The details about each resource listed in the check result.</p>
+    #[doc(hidden)]
     pub flagged_resources:
         std::option::Option<std::vec::Vec<crate::model::TrustedAdvisorResourceDetail>>,
 }
@@ -759,11 +780,10 @@ impl std::fmt::Debug for TrustedAdvisorCheckResult {
         formatter.finish()
     }
 }
-/// See [`TrustedAdvisorCheckResult`](crate::model::TrustedAdvisorCheckResult)
+/// See [`TrustedAdvisorCheckResult`](crate::model::TrustedAdvisorCheckResult).
 pub mod trusted_advisor_check_result {
 
-    /// A builder for [`TrustedAdvisorCheckResult`](crate::model::TrustedAdvisorCheckResult)
-    #[non_exhaustive]
+    /// A builder for [`TrustedAdvisorCheckResult`](crate::model::TrustedAdvisorCheckResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) check_id: std::option::Option<std::string::String>,
@@ -861,7 +881,7 @@ pub mod trusted_advisor_check_result {
             self.flagged_resources = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrustedAdvisorCheckResult`](crate::model::TrustedAdvisorCheckResult)
+        /// Consumes the builder and constructs a [`TrustedAdvisorCheckResult`](crate::model::TrustedAdvisorCheckResult).
         pub fn build(self) -> crate::model::TrustedAdvisorCheckResult {
             crate::model::TrustedAdvisorCheckResult {
                 check_id: self.check_id,
@@ -875,7 +895,7 @@ pub mod trusted_advisor_check_result {
     }
 }
 impl TrustedAdvisorCheckResult {
-    /// Creates a new builder-style object to manufacture [`TrustedAdvisorCheckResult`](crate::model::TrustedAdvisorCheckResult)
+    /// Creates a new builder-style object to manufacture [`TrustedAdvisorCheckResult`](crate::model::TrustedAdvisorCheckResult).
     pub fn builder() -> crate::model::trusted_advisor_check_result::Builder {
         crate::model::trusted_advisor_check_result::Builder::default()
     }
@@ -886,14 +906,19 @@ impl TrustedAdvisorCheckResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrustedAdvisorResourceDetail {
     /// <p>The status code for the resource identified in the Trusted Advisor check.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region in which the identified resource is located.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The unique identifier for the identified resource.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>Specifies whether the Amazon Web Services resource was ignored by Trusted Advisor because it was marked as suppressed by the user.</p>
+    #[doc(hidden)]
     pub is_suppressed: bool,
     /// <p>Additional information about the identified resource. The exact metadata and its order can be obtained by inspecting the <code>TrustedAdvisorCheckDescription</code> object returned by the call to <code>DescribeTrustedAdvisorChecks</code>. <b>Metadata</b> contains all the data that is shown in the Excel download, even in those cases where the UI shows just summary data.</p>
+    #[doc(hidden)]
     pub metadata: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl TrustedAdvisorResourceDetail {
@@ -929,11 +954,10 @@ impl std::fmt::Debug for TrustedAdvisorResourceDetail {
         formatter.finish()
     }
 }
-/// See [`TrustedAdvisorResourceDetail`](crate::model::TrustedAdvisorResourceDetail)
+/// See [`TrustedAdvisorResourceDetail`](crate::model::TrustedAdvisorResourceDetail).
 pub mod trusted_advisor_resource_detail {
 
-    /// A builder for [`TrustedAdvisorResourceDetail`](crate::model::TrustedAdvisorResourceDetail)
-    #[non_exhaustive]
+    /// A builder for [`TrustedAdvisorResourceDetail`](crate::model::TrustedAdvisorResourceDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<std::string::String>,
@@ -1002,7 +1026,7 @@ pub mod trusted_advisor_resource_detail {
             self.metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrustedAdvisorResourceDetail`](crate::model::TrustedAdvisorResourceDetail)
+        /// Consumes the builder and constructs a [`TrustedAdvisorResourceDetail`](crate::model::TrustedAdvisorResourceDetail).
         pub fn build(self) -> crate::model::TrustedAdvisorResourceDetail {
             crate::model::TrustedAdvisorResourceDetail {
                 status: self.status,
@@ -1015,7 +1039,7 @@ pub mod trusted_advisor_resource_detail {
     }
 }
 impl TrustedAdvisorResourceDetail {
-    /// Creates a new builder-style object to manufacture [`TrustedAdvisorResourceDetail`](crate::model::TrustedAdvisorResourceDetail)
+    /// Creates a new builder-style object to manufacture [`TrustedAdvisorResourceDetail`](crate::model::TrustedAdvisorResourceDetail).
     pub fn builder() -> crate::model::trusted_advisor_resource_detail::Builder {
         crate::model::trusted_advisor_resource_detail::Builder::default()
     }
@@ -1027,6 +1051,7 @@ impl TrustedAdvisorResourceDetail {
 pub struct SeverityLevel {
     /// <p>The code for case severity level.</p>
     /// <p>Valid values: <code>low</code> | <code>normal</code> | <code>high</code> | <code>urgent</code> | <code>critical</code> </p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>The name of the severity level that corresponds to the severity level code.</p> <note>
     /// <p>The values returned by the API are different from the values that appear in the Amazon Web Services Support Center. For example, the API uses the code <code>low</code>, but the name appears as General guidance in Support Center. </p>
@@ -1040,6 +1065,7 @@ pub struct SeverityLevel {
     /// </ul>
     /// </note>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/awssupport/latest/user/case-management.html#choosing-severity">Choosing a severity</a> in the <i>Amazon Web Services Support User Guide</i>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl SeverityLevel {
@@ -1072,11 +1098,10 @@ impl std::fmt::Debug for SeverityLevel {
         formatter.finish()
     }
 }
-/// See [`SeverityLevel`](crate::model::SeverityLevel)
+/// See [`SeverityLevel`](crate::model::SeverityLevel).
 pub mod severity_level {
 
-    /// A builder for [`SeverityLevel`](crate::model::SeverityLevel)
-    #[non_exhaustive]
+    /// A builder for [`SeverityLevel`](crate::model::SeverityLevel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<std::string::String>,
@@ -1127,7 +1152,7 @@ pub mod severity_level {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`SeverityLevel`](crate::model::SeverityLevel)
+        /// Consumes the builder and constructs a [`SeverityLevel`](crate::model::SeverityLevel).
         pub fn build(self) -> crate::model::SeverityLevel {
             crate::model::SeverityLevel {
                 code: self.code,
@@ -1137,7 +1162,7 @@ pub mod severity_level {
     }
 }
 impl SeverityLevel {
-    /// Creates a new builder-style object to manufacture [`SeverityLevel`](crate::model::SeverityLevel)
+    /// Creates a new builder-style object to manufacture [`SeverityLevel`](crate::model::SeverityLevel).
     pub fn builder() -> crate::model::severity_level::Builder {
         crate::model::severity_level::Builder::default()
     }
@@ -1148,10 +1173,13 @@ impl SeverityLevel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Service {
     /// <p>The code for an Amazon Web Services service returned by the <code>DescribeServices</code> response. The <code>name</code> element contains the corresponding friendly name.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>The friendly name for an Amazon Web Services service. The <code>code</code> element contains the corresponding code.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A list of categories that describe the type of support issue a case describes. Categories consist of a category name and a category code. Category names and codes are passed to Amazon Web Services Support when you call <code>CreateCase</code>.</p>
+    #[doc(hidden)]
     pub categories: std::option::Option<std::vec::Vec<crate::model::Category>>,
 }
 impl Service {
@@ -1177,11 +1205,10 @@ impl std::fmt::Debug for Service {
         formatter.finish()
     }
 }
-/// See [`Service`](crate::model::Service)
+/// See [`Service`](crate::model::Service).
 pub mod service {
 
-    /// A builder for [`Service`](crate::model::Service)
-    #[non_exhaustive]
+    /// A builder for [`Service`](crate::model::Service).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<std::string::String>,
@@ -1228,7 +1255,7 @@ pub mod service {
             self.categories = input;
             self
         }
-        /// Consumes the builder and constructs a [`Service`](crate::model::Service)
+        /// Consumes the builder and constructs a [`Service`](crate::model::Service).
         pub fn build(self) -> crate::model::Service {
             crate::model::Service {
                 code: self.code,
@@ -1239,7 +1266,7 @@ pub mod service {
     }
 }
 impl Service {
-    /// Creates a new builder-style object to manufacture [`Service`](crate::model::Service)
+    /// Creates a new builder-style object to manufacture [`Service`](crate::model::Service).
     pub fn builder() -> crate::model::service::Builder {
         crate::model::service::Builder::default()
     }
@@ -1250,8 +1277,10 @@ impl Service {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Category {
     /// <p>The category code for the support case.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>The category name for the support case.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl Category {
@@ -1272,11 +1301,10 @@ impl std::fmt::Debug for Category {
         formatter.finish()
     }
 }
-/// See [`Category`](crate::model::Category)
+/// See [`Category`](crate::model::Category).
 pub mod category {
 
-    /// A builder for [`Category`](crate::model::Category)
-    #[non_exhaustive]
+    /// A builder for [`Category`](crate::model::Category).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<std::string::String>,
@@ -1303,7 +1331,7 @@ pub mod category {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Category`](crate::model::Category)
+        /// Consumes the builder and constructs a [`Category`](crate::model::Category).
         pub fn build(self) -> crate::model::Category {
             crate::model::Category {
                 code: self.code,
@@ -1313,7 +1341,7 @@ pub mod category {
     }
 }
 impl Category {
-    /// Creates a new builder-style object to manufacture [`Category`](crate::model::Category)
+    /// Creates a new builder-style object to manufacture [`Category`](crate::model::Category).
     pub fn builder() -> crate::model::category::Builder {
         crate::model::category::Builder::default()
     }
@@ -1324,16 +1352,21 @@ impl Category {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Communication {
     /// <p>The support case ID requested or returned in the call. The case ID is an alphanumeric string formatted as shown in this example: case-<i>12345678910-2013-c4c1d2bf33c5cf47</i> </p>
+    #[doc(hidden)]
     pub case_id: std::option::Option<std::string::String>,
     /// <p>The text of the communication between the customer and Amazon Web Services Support.</p>
+    #[doc(hidden)]
     pub body: std::option::Option<std::string::String>,
     /// <p>The identity of the account that submitted, or responded to, the support case. Customer entries include the role or IAM user as well as the email address. For example, "AdminRole (Role) <janedoe@example.com>
     /// . Entries from the Amazon Web Services Support team display "Amazon Web Services," and don't show an email address.
     /// </janedoe@example.com></p>
+    #[doc(hidden)]
     pub submitted_by: std::option::Option<std::string::String>,
     /// <p>The time the communication was created.</p>
+    #[doc(hidden)]
     pub time_created: std::option::Option<std::string::String>,
     /// <p>Information about the attachments to the case communication.</p>
+    #[doc(hidden)]
     pub attachment_set: std::option::Option<std::vec::Vec<crate::model::AttachmentDetails>>,
 }
 impl Communication {
@@ -1371,11 +1404,10 @@ impl std::fmt::Debug for Communication {
         formatter.finish()
     }
 }
-/// See [`Communication`](crate::model::Communication)
+/// See [`Communication`](crate::model::Communication).
 pub mod communication {
 
-    /// A builder for [`Communication`](crate::model::Communication)
-    #[non_exhaustive]
+    /// A builder for [`Communication`](crate::model::Communication).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) case_id: std::option::Option<std::string::String>,
@@ -1449,7 +1481,7 @@ pub mod communication {
             self.attachment_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`Communication`](crate::model::Communication)
+        /// Consumes the builder and constructs a [`Communication`](crate::model::Communication).
         pub fn build(self) -> crate::model::Communication {
             crate::model::Communication {
                 case_id: self.case_id,
@@ -1462,7 +1494,7 @@ pub mod communication {
     }
 }
 impl Communication {
-    /// Creates a new builder-style object to manufacture [`Communication`](crate::model::Communication)
+    /// Creates a new builder-style object to manufacture [`Communication`](crate::model::Communication).
     pub fn builder() -> crate::model::communication::Builder {
         crate::model::communication::Builder::default()
     }
@@ -1473,8 +1505,10 @@ impl Communication {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttachmentDetails {
     /// <p>The ID of the attachment.</p>
+    #[doc(hidden)]
     pub attachment_id: std::option::Option<std::string::String>,
     /// <p>The file name of the attachment.</p>
+    #[doc(hidden)]
     pub file_name: std::option::Option<std::string::String>,
 }
 impl AttachmentDetails {
@@ -1495,11 +1529,10 @@ impl std::fmt::Debug for AttachmentDetails {
         formatter.finish()
     }
 }
-/// See [`AttachmentDetails`](crate::model::AttachmentDetails)
+/// See [`AttachmentDetails`](crate::model::AttachmentDetails).
 pub mod attachment_details {
 
-    /// A builder for [`AttachmentDetails`](crate::model::AttachmentDetails)
-    #[non_exhaustive]
+    /// A builder for [`AttachmentDetails`](crate::model::AttachmentDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attachment_id: std::option::Option<std::string::String>,
@@ -1529,7 +1562,7 @@ pub mod attachment_details {
             self.file_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttachmentDetails`](crate::model::AttachmentDetails)
+        /// Consumes the builder and constructs a [`AttachmentDetails`](crate::model::AttachmentDetails).
         pub fn build(self) -> crate::model::AttachmentDetails {
             crate::model::AttachmentDetails {
                 attachment_id: self.attachment_id,
@@ -1539,7 +1572,7 @@ pub mod attachment_details {
     }
 }
 impl AttachmentDetails {
-    /// Creates a new builder-style object to manufacture [`AttachmentDetails`](crate::model::AttachmentDetails)
+    /// Creates a new builder-style object to manufacture [`AttachmentDetails`](crate::model::AttachmentDetails).
     pub fn builder() -> crate::model::attachment_details::Builder {
         crate::model::attachment_details::Builder::default()
     }
@@ -1572,10 +1605,13 @@ impl AttachmentDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CaseDetails {
     /// <p>The support case ID requested or returned in the call. The case ID is an alphanumeric string formatted as shown in this example: case-<i>12345678910-2013-c4c1d2bf33c5cf47</i> </p>
+    #[doc(hidden)]
     pub case_id: std::option::Option<std::string::String>,
     /// <p>The ID displayed for the case in the Amazon Web Services Support Center. This is a numeric string.</p>
+    #[doc(hidden)]
     pub display_id: std::option::Option<std::string::String>,
     /// <p>The subject line for the case in the Amazon Web Services Support Center.</p>
+    #[doc(hidden)]
     pub subject: std::option::Option<std::string::String>,
     /// <p>The status of the case.</p>
     /// <p>Valid values:</p>
@@ -1587,22 +1623,31 @@ pub struct CaseDetails {
     /// <li> <p> <code>unassigned</code> </p> </li>
     /// <li> <p> <code>work-in-progress</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The code for the Amazon Web Services service. You can get a list of codes and the corresponding service names by calling <code>DescribeServices</code>.</p>
+    #[doc(hidden)]
     pub service_code: std::option::Option<std::string::String>,
     /// <p>The category of problem for the support case.</p>
+    #[doc(hidden)]
     pub category_code: std::option::Option<std::string::String>,
     /// <p>The code for the severity level returned by the call to <code>DescribeSeverityLevels</code>.</p>
+    #[doc(hidden)]
     pub severity_code: std::option::Option<std::string::String>,
     /// <p>The email address of the account that submitted the case.</p>
+    #[doc(hidden)]
     pub submitted_by: std::option::Option<std::string::String>,
     /// <p>The time that the case was created in the Amazon Web Services Support Center.</p>
+    #[doc(hidden)]
     pub time_created: std::option::Option<std::string::String>,
     /// <p>The five most recent communications between you and Amazon Web Services Support Center, including the IDs of any attachments to the communications. Also includes a <code>nextToken</code> that you can use to retrieve earlier communications.</p>
+    #[doc(hidden)]
     pub recent_communications: std::option::Option<crate::model::RecentCaseCommunications>,
     /// <p>The email addresses that receive copies of communication about the case.</p>
+    #[doc(hidden)]
     pub cc_email_addresses: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ISO 639-1 code for the language in which Amazon Web Services provides support. Amazon Web Services Support currently supports English ("en") and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.</p>
+    #[doc(hidden)]
     pub language: std::option::Option<std::string::String>,
 }
 impl CaseDetails {
@@ -1684,11 +1729,10 @@ impl std::fmt::Debug for CaseDetails {
         formatter.finish()
     }
 }
-/// See [`CaseDetails`](crate::model::CaseDetails)
+/// See [`CaseDetails`](crate::model::CaseDetails).
 pub mod case_details {
 
-    /// A builder for [`CaseDetails`](crate::model::CaseDetails)
-    #[non_exhaustive]
+    /// A builder for [`CaseDetails`](crate::model::CaseDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) case_id: std::option::Option<std::string::String>,
@@ -1865,7 +1909,7 @@ pub mod case_details {
             self.language = input;
             self
         }
-        /// Consumes the builder and constructs a [`CaseDetails`](crate::model::CaseDetails)
+        /// Consumes the builder and constructs a [`CaseDetails`](crate::model::CaseDetails).
         pub fn build(self) -> crate::model::CaseDetails {
             crate::model::CaseDetails {
                 case_id: self.case_id,
@@ -1885,7 +1929,7 @@ pub mod case_details {
     }
 }
 impl CaseDetails {
-    /// Creates a new builder-style object to manufacture [`CaseDetails`](crate::model::CaseDetails)
+    /// Creates a new builder-style object to manufacture [`CaseDetails`](crate::model::CaseDetails).
     pub fn builder() -> crate::model::case_details::Builder {
         crate::model::case_details::Builder::default()
     }
@@ -1896,8 +1940,10 @@ impl CaseDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecentCaseCommunications {
     /// <p>The five most recent communications associated with the case.</p>
+    #[doc(hidden)]
     pub communications: std::option::Option<std::vec::Vec<crate::model::Communication>>,
     /// <p>A resumption point for pagination.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl RecentCaseCommunications {
@@ -1918,11 +1964,10 @@ impl std::fmt::Debug for RecentCaseCommunications {
         formatter.finish()
     }
 }
-/// See [`RecentCaseCommunications`](crate::model::RecentCaseCommunications)
+/// See [`RecentCaseCommunications`](crate::model::RecentCaseCommunications).
 pub mod recent_case_communications {
 
-    /// A builder for [`RecentCaseCommunications`](crate::model::RecentCaseCommunications)
-    #[non_exhaustive]
+    /// A builder for [`RecentCaseCommunications`](crate::model::RecentCaseCommunications).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) communications: std::option::Option<std::vec::Vec<crate::model::Communication>>,
@@ -1958,7 +2003,7 @@ pub mod recent_case_communications {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecentCaseCommunications`](crate::model::RecentCaseCommunications)
+        /// Consumes the builder and constructs a [`RecentCaseCommunications`](crate::model::RecentCaseCommunications).
         pub fn build(self) -> crate::model::RecentCaseCommunications {
             crate::model::RecentCaseCommunications {
                 communications: self.communications,
@@ -1968,7 +2013,7 @@ pub mod recent_case_communications {
     }
 }
 impl RecentCaseCommunications {
-    /// Creates a new builder-style object to manufacture [`RecentCaseCommunications`](crate::model::RecentCaseCommunications)
+    /// Creates a new builder-style object to manufacture [`RecentCaseCommunications`](crate::model::RecentCaseCommunications).
     pub fn builder() -> crate::model::recent_case_communications::Builder {
         crate::model::recent_case_communications::Builder::default()
     }
@@ -1979,8 +2024,10 @@ impl RecentCaseCommunications {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Attachment {
     /// <p>The name of the attachment file.</p>
+    #[doc(hidden)]
     pub file_name: std::option::Option<std::string::String>,
     /// <p>The content of the attachment file.</p>
+    #[doc(hidden)]
     pub data: std::option::Option<aws_smithy_types::Blob>,
 }
 impl Attachment {
@@ -2001,11 +2048,10 @@ impl std::fmt::Debug for Attachment {
         formatter.finish()
     }
 }
-/// See [`Attachment`](crate::model::Attachment)
+/// See [`Attachment`](crate::model::Attachment).
 pub mod attachment {
 
-    /// A builder for [`Attachment`](crate::model::Attachment)
-    #[non_exhaustive]
+    /// A builder for [`Attachment`](crate::model::Attachment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) file_name: std::option::Option<std::string::String>,
@@ -2032,7 +2078,7 @@ pub mod attachment {
             self.data = input;
             self
         }
-        /// Consumes the builder and constructs a [`Attachment`](crate::model::Attachment)
+        /// Consumes the builder and constructs a [`Attachment`](crate::model::Attachment).
         pub fn build(self) -> crate::model::Attachment {
             crate::model::Attachment {
                 file_name: self.file_name,
@@ -2042,7 +2088,7 @@ pub mod attachment {
     }
 }
 impl Attachment {
-    /// Creates a new builder-style object to manufacture [`Attachment`](crate::model::Attachment)
+    /// Creates a new builder-style object to manufacture [`Attachment`](crate::model::Attachment).
     pub fn builder() -> crate::model::attachment::Builder {
         crate::model::attachment::Builder::default()
     }

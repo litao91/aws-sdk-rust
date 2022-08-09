@@ -6,12 +6,16 @@ pub struct UpdateSubnetChangeProtectionOutput {
     /// <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p>
     /// <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p>
     /// <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    #[doc(hidden)]
     pub firewall_arn: std::option::Option<std::string::String>,
     /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+    #[doc(hidden)]
     pub firewall_name: std::option::Option<std::string::String>,
     /// <p>A setting indicating whether the firewall is protected against changes to the subnet associations. Use this setting to protect against accidentally modifying the subnet associations for a firewall that is in use. When you create a firewall, the operation initializes this setting to <code>TRUE</code>.</p>
+    #[doc(hidden)]
     pub subnet_change_protection: bool,
 }
 impl UpdateSubnetChangeProtectionOutput {
@@ -44,11 +48,10 @@ impl std::fmt::Debug for UpdateSubnetChangeProtectionOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateSubnetChangeProtectionOutput`](crate::output::UpdateSubnetChangeProtectionOutput)
+/// See [`UpdateSubnetChangeProtectionOutput`](crate::output::UpdateSubnetChangeProtectionOutput).
 pub mod update_subnet_change_protection_output {
 
-    /// A builder for [`UpdateSubnetChangeProtectionOutput`](crate::output::UpdateSubnetChangeProtectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateSubnetChangeProtectionOutput`](crate::output::UpdateSubnetChangeProtectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) update_token: std::option::Option<std::string::String>,
@@ -104,7 +107,7 @@ pub mod update_subnet_change_protection_output {
             self.subnet_change_protection = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateSubnetChangeProtectionOutput`](crate::output::UpdateSubnetChangeProtectionOutput)
+        /// Consumes the builder and constructs a [`UpdateSubnetChangeProtectionOutput`](crate::output::UpdateSubnetChangeProtectionOutput).
         pub fn build(self) -> crate::output::UpdateSubnetChangeProtectionOutput {
             crate::output::UpdateSubnetChangeProtectionOutput {
                 update_token: self.update_token,
@@ -116,7 +119,7 @@ pub mod update_subnet_change_protection_output {
     }
 }
 impl UpdateSubnetChangeProtectionOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateSubnetChangeProtectionOutput`](crate::output::UpdateSubnetChangeProtectionOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateSubnetChangeProtectionOutput`](crate::output::UpdateSubnetChangeProtectionOutput).
     pub fn builder() -> crate::output::update_subnet_change_protection_output::Builder {
         crate::output::update_subnet_change_protection_output::Builder::default()
     }
@@ -128,8 +131,10 @@ impl UpdateSubnetChangeProtectionOutput {
 pub struct UpdateRuleGroupOutput {
     /// <p>A token used for optimistic locking. Network Firewall returns a token to your requests that access the rule group. The token marks the state of the rule group resource at the time of the request. </p>
     /// <p>To make changes to the rule group, you provide the token in your request. Network Firewall uses the token to ensure that the rule group hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the rule group again to get a current copy of it with a current token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
     /// <p>The high-level properties of a rule group. This, along with the <code>RuleGroup</code>, define the rule group. You can retrieve all objects for a rule group by calling <code>DescribeRuleGroup</code>. </p>
+    #[doc(hidden)]
     pub rule_group_response: std::option::Option<crate::model::RuleGroupResponse>,
 }
 impl UpdateRuleGroupOutput {
@@ -151,11 +156,10 @@ impl std::fmt::Debug for UpdateRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
+/// See [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput).
 pub mod update_rule_group_output {
 
-    /// A builder for [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) update_token: std::option::Option<std::string::String>,
@@ -187,7 +191,7 @@ pub mod update_rule_group_output {
             self.rule_group_response = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
+        /// Consumes the builder and constructs a [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput).
         pub fn build(self) -> crate::output::UpdateRuleGroupOutput {
             crate::output::UpdateRuleGroupOutput {
                 update_token: self.update_token,
@@ -197,7 +201,7 @@ pub mod update_rule_group_output {
     }
 }
 impl UpdateRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput).
     pub fn builder() -> crate::output::update_rule_group_output::Builder {
         crate::output::update_rule_group_output::Builder::default()
     }
@@ -208,10 +212,13 @@ impl UpdateRuleGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateLoggingConfigurationOutput {
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    #[doc(hidden)]
     pub firewall_arn: std::option::Option<std::string::String>,
     /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+    #[doc(hidden)]
     pub firewall_name: std::option::Option<std::string::String>,
     /// <p>Defines how Network Firewall performs logging for a <code>Firewall</code>. </p>
+    #[doc(hidden)]
     pub logging_configuration: std::option::Option<crate::model::LoggingConfiguration>,
 }
 impl UpdateLoggingConfigurationOutput {
@@ -239,11 +246,10 @@ impl std::fmt::Debug for UpdateLoggingConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateLoggingConfigurationOutput`](crate::output::UpdateLoggingConfigurationOutput)
+/// See [`UpdateLoggingConfigurationOutput`](crate::output::UpdateLoggingConfigurationOutput).
 pub mod update_logging_configuration_output {
 
-    /// A builder for [`UpdateLoggingConfigurationOutput`](crate::output::UpdateLoggingConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateLoggingConfigurationOutput`](crate::output::UpdateLoggingConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall_arn: std::option::Option<std::string::String>,
@@ -287,7 +293,7 @@ pub mod update_logging_configuration_output {
             self.logging_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateLoggingConfigurationOutput`](crate::output::UpdateLoggingConfigurationOutput)
+        /// Consumes the builder and constructs a [`UpdateLoggingConfigurationOutput`](crate::output::UpdateLoggingConfigurationOutput).
         pub fn build(self) -> crate::output::UpdateLoggingConfigurationOutput {
             crate::output::UpdateLoggingConfigurationOutput {
                 firewall_arn: self.firewall_arn,
@@ -298,7 +304,7 @@ pub mod update_logging_configuration_output {
     }
 }
 impl UpdateLoggingConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateLoggingConfigurationOutput`](crate::output::UpdateLoggingConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateLoggingConfigurationOutput`](crate::output::UpdateLoggingConfigurationOutput).
     pub fn builder() -> crate::output::update_logging_configuration_output::Builder {
         crate::output::update_logging_configuration_output::Builder::default()
     }
@@ -311,12 +317,16 @@ pub struct UpdateFirewallPolicyChangeProtectionOutput {
     /// <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p>
     /// <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p>
     /// <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    #[doc(hidden)]
     pub firewall_arn: std::option::Option<std::string::String>,
     /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+    #[doc(hidden)]
     pub firewall_name: std::option::Option<std::string::String>,
     /// <p>A setting indicating whether the firewall is protected against a change to the firewall policy association. Use this setting to protect against accidentally modifying the firewall policy for a firewall that is in use. When you create a firewall, the operation initializes this setting to <code>TRUE</code>.</p>
+    #[doc(hidden)]
     pub firewall_policy_change_protection: bool,
 }
 impl UpdateFirewallPolicyChangeProtectionOutput {
@@ -352,11 +362,10 @@ impl std::fmt::Debug for UpdateFirewallPolicyChangeProtectionOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFirewallPolicyChangeProtectionOutput`](crate::output::UpdateFirewallPolicyChangeProtectionOutput)
+/// See [`UpdateFirewallPolicyChangeProtectionOutput`](crate::output::UpdateFirewallPolicyChangeProtectionOutput).
 pub mod update_firewall_policy_change_protection_output {
 
-    /// A builder for [`UpdateFirewallPolicyChangeProtectionOutput`](crate::output::UpdateFirewallPolicyChangeProtectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFirewallPolicyChangeProtectionOutput`](crate::output::UpdateFirewallPolicyChangeProtectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) update_token: std::option::Option<std::string::String>,
@@ -415,7 +424,7 @@ pub mod update_firewall_policy_change_protection_output {
             self.firewall_policy_change_protection = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFirewallPolicyChangeProtectionOutput`](crate::output::UpdateFirewallPolicyChangeProtectionOutput)
+        /// Consumes the builder and constructs a [`UpdateFirewallPolicyChangeProtectionOutput`](crate::output::UpdateFirewallPolicyChangeProtectionOutput).
         pub fn build(self) -> crate::output::UpdateFirewallPolicyChangeProtectionOutput {
             crate::output::UpdateFirewallPolicyChangeProtectionOutput {
                 update_token: self.update_token,
@@ -429,7 +438,7 @@ pub mod update_firewall_policy_change_protection_output {
     }
 }
 impl UpdateFirewallPolicyChangeProtectionOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFirewallPolicyChangeProtectionOutput`](crate::output::UpdateFirewallPolicyChangeProtectionOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFirewallPolicyChangeProtectionOutput`](crate::output::UpdateFirewallPolicyChangeProtectionOutput).
     pub fn builder() -> crate::output::update_firewall_policy_change_protection_output::Builder {
         crate::output::update_firewall_policy_change_protection_output::Builder::default()
     }
@@ -441,8 +450,10 @@ impl UpdateFirewallPolicyChangeProtectionOutput {
 pub struct UpdateFirewallPolicyOutput {
     /// <p>A token used for optimistic locking. Network Firewall returns a token to your requests that access the firewall policy. The token marks the state of the policy resource at the time of the request. </p>
     /// <p>To make changes to the policy, you provide the token in your request. Network Firewall uses the token to ensure that the policy hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall policy again to get a current copy of it with current token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
     /// <p>The high-level properties of a firewall policy. This, along with the <code>FirewallPolicy</code>, define the policy. You can retrieve all objects for a firewall policy by calling <code>DescribeFirewallPolicy</code>. </p>
+    #[doc(hidden)]
     pub firewall_policy_response: std::option::Option<crate::model::FirewallPolicyResponse>,
 }
 impl UpdateFirewallPolicyOutput {
@@ -466,11 +477,10 @@ impl std::fmt::Debug for UpdateFirewallPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFirewallPolicyOutput`](crate::output::UpdateFirewallPolicyOutput)
+/// See [`UpdateFirewallPolicyOutput`](crate::output::UpdateFirewallPolicyOutput).
 pub mod update_firewall_policy_output {
 
-    /// A builder for [`UpdateFirewallPolicyOutput`](crate::output::UpdateFirewallPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFirewallPolicyOutput`](crate::output::UpdateFirewallPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) update_token: std::option::Option<std::string::String>,
@@ -506,7 +516,7 @@ pub mod update_firewall_policy_output {
             self.firewall_policy_response = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFirewallPolicyOutput`](crate::output::UpdateFirewallPolicyOutput)
+        /// Consumes the builder and constructs a [`UpdateFirewallPolicyOutput`](crate::output::UpdateFirewallPolicyOutput).
         pub fn build(self) -> crate::output::UpdateFirewallPolicyOutput {
             crate::output::UpdateFirewallPolicyOutput {
                 update_token: self.update_token,
@@ -516,7 +526,7 @@ pub mod update_firewall_policy_output {
     }
 }
 impl UpdateFirewallPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFirewallPolicyOutput`](crate::output::UpdateFirewallPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFirewallPolicyOutput`](crate::output::UpdateFirewallPolicyOutput).
     pub fn builder() -> crate::output::update_firewall_policy_output::Builder {
         crate::output::update_firewall_policy_output::Builder::default()
     }
@@ -527,14 +537,18 @@ impl UpdateFirewallPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFirewallEncryptionConfigurationOutput {
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    #[doc(hidden)]
     pub firewall_arn: std::option::Option<std::string::String>,
     /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+    #[doc(hidden)]
     pub firewall_name: std::option::Option<std::string::String>,
     /// <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p>
     /// <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p>
     /// <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
     /// <p>A complex type that contains optional Amazon Web Services Key Management Service (KMS) encryption settings for your Network Firewall resources. Your data is encrypted by default with an Amazon Web Services owned key that Amazon Web Services owns and manages for you. You can use either the Amazon Web Services owned key, or provide your own customer managed key. To learn more about KMS encryption of your Network Firewall resources, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-encryption-at-rest.html">Encryption at rest with Amazon Web Services Key Managment Service</a> in the <i>Network Firewall Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub encryption_configuration: std::option::Option<crate::model::EncryptionConfiguration>,
 }
 impl UpdateFirewallEncryptionConfigurationOutput {
@@ -569,11 +583,10 @@ impl std::fmt::Debug for UpdateFirewallEncryptionConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFirewallEncryptionConfigurationOutput`](crate::output::UpdateFirewallEncryptionConfigurationOutput)
+/// See [`UpdateFirewallEncryptionConfigurationOutput`](crate::output::UpdateFirewallEncryptionConfigurationOutput).
 pub mod update_firewall_encryption_configuration_output {
 
-    /// A builder for [`UpdateFirewallEncryptionConfigurationOutput`](crate::output::UpdateFirewallEncryptionConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFirewallEncryptionConfigurationOutput`](crate::output::UpdateFirewallEncryptionConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall_arn: std::option::Option<std::string::String>,
@@ -636,7 +649,7 @@ pub mod update_firewall_encryption_configuration_output {
             self.encryption_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFirewallEncryptionConfigurationOutput`](crate::output::UpdateFirewallEncryptionConfigurationOutput)
+        /// Consumes the builder and constructs a [`UpdateFirewallEncryptionConfigurationOutput`](crate::output::UpdateFirewallEncryptionConfigurationOutput).
         pub fn build(self) -> crate::output::UpdateFirewallEncryptionConfigurationOutput {
             crate::output::UpdateFirewallEncryptionConfigurationOutput {
                 firewall_arn: self.firewall_arn,
@@ -648,7 +661,7 @@ pub mod update_firewall_encryption_configuration_output {
     }
 }
 impl UpdateFirewallEncryptionConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFirewallEncryptionConfigurationOutput`](crate::output::UpdateFirewallEncryptionConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFirewallEncryptionConfigurationOutput`](crate::output::UpdateFirewallEncryptionConfigurationOutput).
     pub fn builder() -> crate::output::update_firewall_encryption_configuration_output::Builder {
         crate::output::update_firewall_encryption_configuration_output::Builder::default()
     }
@@ -659,14 +672,18 @@ impl UpdateFirewallEncryptionConfigurationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFirewallDescriptionOutput {
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    #[doc(hidden)]
     pub firewall_arn: std::option::Option<std::string::String>,
     /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+    #[doc(hidden)]
     pub firewall_name: std::option::Option<std::string::String>,
     /// <p>A description of the firewall.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p>
     /// <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p>
     /// <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
 }
 impl UpdateFirewallDescriptionOutput {
@@ -699,11 +716,10 @@ impl std::fmt::Debug for UpdateFirewallDescriptionOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFirewallDescriptionOutput`](crate::output::UpdateFirewallDescriptionOutput)
+/// See [`UpdateFirewallDescriptionOutput`](crate::output::UpdateFirewallDescriptionOutput).
 pub mod update_firewall_description_output {
 
-    /// A builder for [`UpdateFirewallDescriptionOutput`](crate::output::UpdateFirewallDescriptionOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFirewallDescriptionOutput`](crate::output::UpdateFirewallDescriptionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall_arn: std::option::Option<std::string::String>,
@@ -759,7 +775,7 @@ pub mod update_firewall_description_output {
             self.update_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFirewallDescriptionOutput`](crate::output::UpdateFirewallDescriptionOutput)
+        /// Consumes the builder and constructs a [`UpdateFirewallDescriptionOutput`](crate::output::UpdateFirewallDescriptionOutput).
         pub fn build(self) -> crate::output::UpdateFirewallDescriptionOutput {
             crate::output::UpdateFirewallDescriptionOutput {
                 firewall_arn: self.firewall_arn,
@@ -771,7 +787,7 @@ pub mod update_firewall_description_output {
     }
 }
 impl UpdateFirewallDescriptionOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFirewallDescriptionOutput`](crate::output::UpdateFirewallDescriptionOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFirewallDescriptionOutput`](crate::output::UpdateFirewallDescriptionOutput).
     pub fn builder() -> crate::output::update_firewall_description_output::Builder {
         crate::output::update_firewall_description_output::Builder::default()
     }
@@ -782,14 +798,18 @@ impl UpdateFirewallDescriptionOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFirewallDeleteProtectionOutput {
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    #[doc(hidden)]
     pub firewall_arn: std::option::Option<std::string::String>,
     /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+    #[doc(hidden)]
     pub firewall_name: std::option::Option<std::string::String>,
     /// <p>A flag indicating whether it is possible to delete the firewall. A setting of <code>TRUE</code> indicates that the firewall is protected against deletion. Use this setting to protect against accidentally deleting a firewall that is in use. When you create a firewall, the operation initializes this flag to <code>TRUE</code>.</p>
+    #[doc(hidden)]
     pub delete_protection: bool,
     /// <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p>
     /// <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p>
     /// <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
 }
 impl UpdateFirewallDeleteProtectionOutput {
@@ -822,11 +842,10 @@ impl std::fmt::Debug for UpdateFirewallDeleteProtectionOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateFirewallDeleteProtectionOutput`](crate::output::UpdateFirewallDeleteProtectionOutput)
+/// See [`UpdateFirewallDeleteProtectionOutput`](crate::output::UpdateFirewallDeleteProtectionOutput).
 pub mod update_firewall_delete_protection_output {
 
-    /// A builder for [`UpdateFirewallDeleteProtectionOutput`](crate::output::UpdateFirewallDeleteProtectionOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateFirewallDeleteProtectionOutput`](crate::output::UpdateFirewallDeleteProtectionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall_arn: std::option::Option<std::string::String>,
@@ -882,7 +901,7 @@ pub mod update_firewall_delete_protection_output {
             self.update_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateFirewallDeleteProtectionOutput`](crate::output::UpdateFirewallDeleteProtectionOutput)
+        /// Consumes the builder and constructs a [`UpdateFirewallDeleteProtectionOutput`](crate::output::UpdateFirewallDeleteProtectionOutput).
         pub fn build(self) -> crate::output::UpdateFirewallDeleteProtectionOutput {
             crate::output::UpdateFirewallDeleteProtectionOutput {
                 firewall_arn: self.firewall_arn,
@@ -894,7 +913,7 @@ pub mod update_firewall_delete_protection_output {
     }
 }
 impl UpdateFirewallDeleteProtectionOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateFirewallDeleteProtectionOutput`](crate::output::UpdateFirewallDeleteProtectionOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateFirewallDeleteProtectionOutput`](crate::output::UpdateFirewallDeleteProtectionOutput).
     pub fn builder() -> crate::output::update_firewall_delete_protection_output::Builder {
         crate::output::update_firewall_delete_protection_output::Builder::default()
     }
@@ -910,22 +929,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -941,22 +959,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -972,22 +989,21 @@ impl std::fmt::Debug for PutResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
+/// See [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput).
 pub mod put_resource_policy_output {
 
-    /// A builder for [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput).
         pub fn build(self) -> crate::output::PutResourcePolicyOutput {
             crate::output::PutResourcePolicyOutput {}
         }
     }
 }
 impl PutResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput).
     pub fn builder() -> crate::output::put_resource_policy_output::Builder {
         crate::output::put_resource_policy_output::Builder::default()
     }
@@ -998,8 +1014,10 @@ impl PutResourcePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>When you request a list of objects with a <code>MaxResults</code> setting, if the number of objects that are still available for retrieval exceeds the maximum you requested, Network Firewall returns a <code>NextToken</code> value in the response. To retrieve the next batch of objects, use the token returned from the prior request in your next request.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The tags that are associated with the resource. </p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ListTagsForResourceOutput {
@@ -1020,11 +1038,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1060,7 +1077,7 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 next_token: self.next_token,
@@ -1070,7 +1087,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -1081,8 +1098,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListRuleGroupsOutput {
     /// <p>When you request a list of objects with a <code>MaxResults</code> setting, if the number of objects that are still available for retrieval exceeds the maximum you requested, Network Firewall returns a <code>NextToken</code> value in the response. To retrieve the next batch of objects, use the token returned from the prior request in your next request.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The rule group metadata objects that you've defined. Depending on your setting for max results and the number of rule groups, this might not be the full list. </p>
+    #[doc(hidden)]
     pub rule_groups: std::option::Option<std::vec::Vec<crate::model::RuleGroupMetadata>>,
 }
 impl ListRuleGroupsOutput {
@@ -1103,11 +1122,10 @@ impl std::fmt::Debug for ListRuleGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
+/// See [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput).
 pub mod list_rule_groups_output {
 
-    /// A builder for [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1143,7 +1161,7 @@ pub mod list_rule_groups_output {
             self.rule_groups = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
+        /// Consumes the builder and constructs a [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput).
         pub fn build(self) -> crate::output::ListRuleGroupsOutput {
             crate::output::ListRuleGroupsOutput {
                 next_token: self.next_token,
@@ -1153,7 +1171,7 @@ pub mod list_rule_groups_output {
     }
 }
 impl ListRuleGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput).
     pub fn builder() -> crate::output::list_rule_groups_output::Builder {
         crate::output::list_rule_groups_output::Builder::default()
     }
@@ -1164,8 +1182,10 @@ impl ListRuleGroupsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListFirewallsOutput {
     /// <p>When you request a list of objects with a <code>MaxResults</code> setting, if the number of objects that are still available for retrieval exceeds the maximum you requested, Network Firewall returns a <code>NextToken</code> value in the response. To retrieve the next batch of objects, use the token returned from the prior request in your next request.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The firewall metadata objects for the VPCs that you specified. Depending on your setting for max results and the number of firewalls you have, a single call might not be the full list. </p>
+    #[doc(hidden)]
     pub firewalls: std::option::Option<std::vec::Vec<crate::model::FirewallMetadata>>,
 }
 impl ListFirewallsOutput {
@@ -1186,11 +1206,10 @@ impl std::fmt::Debug for ListFirewallsOutput {
         formatter.finish()
     }
 }
-/// See [`ListFirewallsOutput`](crate::output::ListFirewallsOutput)
+/// See [`ListFirewallsOutput`](crate::output::ListFirewallsOutput).
 pub mod list_firewalls_output {
 
-    /// A builder for [`ListFirewallsOutput`](crate::output::ListFirewallsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListFirewallsOutput`](crate::output::ListFirewallsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1226,7 +1245,7 @@ pub mod list_firewalls_output {
             self.firewalls = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFirewallsOutput`](crate::output::ListFirewallsOutput)
+        /// Consumes the builder and constructs a [`ListFirewallsOutput`](crate::output::ListFirewallsOutput).
         pub fn build(self) -> crate::output::ListFirewallsOutput {
             crate::output::ListFirewallsOutput {
                 next_token: self.next_token,
@@ -1236,7 +1255,7 @@ pub mod list_firewalls_output {
     }
 }
 impl ListFirewallsOutput {
-    /// Creates a new builder-style object to manufacture [`ListFirewallsOutput`](crate::output::ListFirewallsOutput)
+    /// Creates a new builder-style object to manufacture [`ListFirewallsOutput`](crate::output::ListFirewallsOutput).
     pub fn builder() -> crate::output::list_firewalls_output::Builder {
         crate::output::list_firewalls_output::Builder::default()
     }
@@ -1247,8 +1266,10 @@ impl ListFirewallsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListFirewallPoliciesOutput {
     /// <p>When you request a list of objects with a <code>MaxResults</code> setting, if the number of objects that are still available for retrieval exceeds the maximum you requested, Network Firewall returns a <code>NextToken</code> value in the response. To retrieve the next batch of objects, use the token returned from the prior request in your next request.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The metadata for the firewall policies. Depending on your setting for max results and the number of firewall policies that you have, this might not be the full list. </p>
+    #[doc(hidden)]
     pub firewall_policies: std::option::Option<std::vec::Vec<crate::model::FirewallPolicyMetadata>>,
 }
 impl ListFirewallPoliciesOutput {
@@ -1271,11 +1292,10 @@ impl std::fmt::Debug for ListFirewallPoliciesOutput {
         formatter.finish()
     }
 }
-/// See [`ListFirewallPoliciesOutput`](crate::output::ListFirewallPoliciesOutput)
+/// See [`ListFirewallPoliciesOutput`](crate::output::ListFirewallPoliciesOutput).
 pub mod list_firewall_policies_output {
 
-    /// A builder for [`ListFirewallPoliciesOutput`](crate::output::ListFirewallPoliciesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListFirewallPoliciesOutput`](crate::output::ListFirewallPoliciesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1312,7 +1332,7 @@ pub mod list_firewall_policies_output {
             self.firewall_policies = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFirewallPoliciesOutput`](crate::output::ListFirewallPoliciesOutput)
+        /// Consumes the builder and constructs a [`ListFirewallPoliciesOutput`](crate::output::ListFirewallPoliciesOutput).
         pub fn build(self) -> crate::output::ListFirewallPoliciesOutput {
             crate::output::ListFirewallPoliciesOutput {
                 next_token: self.next_token,
@@ -1322,7 +1342,7 @@ pub mod list_firewall_policies_output {
     }
 }
 impl ListFirewallPoliciesOutput {
-    /// Creates a new builder-style object to manufacture [`ListFirewallPoliciesOutput`](crate::output::ListFirewallPoliciesOutput)
+    /// Creates a new builder-style object to manufacture [`ListFirewallPoliciesOutput`](crate::output::ListFirewallPoliciesOutput).
     pub fn builder() -> crate::output::list_firewall_policies_output::Builder {
         crate::output::list_firewall_policies_output::Builder::default()
     }
@@ -1333,14 +1353,18 @@ impl ListFirewallPoliciesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisassociateSubnetsOutput {
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    #[doc(hidden)]
     pub firewall_arn: std::option::Option<std::string::String>,
     /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+    #[doc(hidden)]
     pub firewall_name: std::option::Option<std::string::String>,
     /// <p>The IDs of the subnets that are associated with the firewall. </p>
+    #[doc(hidden)]
     pub subnet_mappings: std::option::Option<std::vec::Vec<crate::model::SubnetMapping>>,
     /// <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p>
     /// <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p>
     /// <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
 }
 impl DisassociateSubnetsOutput {
@@ -1373,11 +1397,10 @@ impl std::fmt::Debug for DisassociateSubnetsOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateSubnetsOutput`](crate::output::DisassociateSubnetsOutput)
+/// See [`DisassociateSubnetsOutput`](crate::output::DisassociateSubnetsOutput).
 pub mod disassociate_subnets_output {
 
-    /// A builder for [`DisassociateSubnetsOutput`](crate::output::DisassociateSubnetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateSubnetsOutput`](crate::output::DisassociateSubnetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall_arn: std::option::Option<std::string::String>,
@@ -1442,7 +1465,7 @@ pub mod disassociate_subnets_output {
             self.update_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociateSubnetsOutput`](crate::output::DisassociateSubnetsOutput)
+        /// Consumes the builder and constructs a [`DisassociateSubnetsOutput`](crate::output::DisassociateSubnetsOutput).
         pub fn build(self) -> crate::output::DisassociateSubnetsOutput {
             crate::output::DisassociateSubnetsOutput {
                 firewall_arn: self.firewall_arn,
@@ -1454,7 +1477,7 @@ pub mod disassociate_subnets_output {
     }
 }
 impl DisassociateSubnetsOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateSubnetsOutput`](crate::output::DisassociateSubnetsOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateSubnetsOutput`](crate::output::DisassociateSubnetsOutput).
     pub fn builder() -> crate::output::disassociate_subnets_output::Builder {
         crate::output::disassociate_subnets_output::Builder::default()
     }
@@ -1466,22 +1489,29 @@ impl DisassociateSubnetsOutput {
 pub struct DescribeRuleGroupMetadataOutput {
     /// <p>The descriptive name of the rule group. You can't change the name of a rule group after you create it.</p>
     /// <p>You must specify the ARN or the name, and you can specify both. </p>
+    #[doc(hidden)]
     pub rule_group_arn: std::option::Option<std::string::String>,
     /// <p>The descriptive name of the rule group. You can't change the name of a rule group after you create it.</p>
     /// <p>You must specify the ARN or the name, and you can specify both. </p>
+    #[doc(hidden)]
     pub rule_group_name: std::option::Option<std::string::String>,
     /// <p>Returns the metadata objects for the specified rule group. </p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>Indicates whether the rule group is stateless or stateful. If the rule group is stateless, it contains stateless rules. If it is stateful, it contains stateful rules. </p> <note>
     /// <p>This setting is required for requests that do not include the <code>RuleGroupARN</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::RuleGroupType>,
     /// <p>The maximum operating resources that this rule group can use. Rule group capacity is fixed at creation. When you update a rule group, you are limited to this capacity. When you reference a rule group from a firewall policy, Network Firewall reserves this capacity for the rule group. </p>
     /// <p>You can retrieve the capacity that would be required for a rule group before you create the rule group by calling <code>CreateRuleGroup</code> with <code>DryRun</code> set to <code>TRUE</code>. </p>
+    #[doc(hidden)]
     pub capacity: std::option::Option<i32>,
     /// <p>Additional options governing how Network Firewall handles the rule group. You can only use these for stateful rule groups.</p>
+    #[doc(hidden)]
     pub stateful_rule_options: std::option::Option<crate::model::StatefulRuleOptions>,
     /// <p>The last time that the rule group was changed.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeRuleGroupMetadataOutput {
@@ -1532,11 +1562,10 @@ impl std::fmt::Debug for DescribeRuleGroupMetadataOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeRuleGroupMetadataOutput`](crate::output::DescribeRuleGroupMetadataOutput)
+/// See [`DescribeRuleGroupMetadataOutput`](crate::output::DescribeRuleGroupMetadataOutput).
 pub mod describe_rule_group_metadata_output {
 
-    /// A builder for [`DescribeRuleGroupMetadataOutput`](crate::output::DescribeRuleGroupMetadataOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeRuleGroupMetadataOutput`](crate::output::DescribeRuleGroupMetadataOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_group_arn: std::option::Option<std::string::String>,
@@ -1640,7 +1669,7 @@ pub mod describe_rule_group_metadata_output {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeRuleGroupMetadataOutput`](crate::output::DescribeRuleGroupMetadataOutput)
+        /// Consumes the builder and constructs a [`DescribeRuleGroupMetadataOutput`](crate::output::DescribeRuleGroupMetadataOutput).
         pub fn build(self) -> crate::output::DescribeRuleGroupMetadataOutput {
             crate::output::DescribeRuleGroupMetadataOutput {
                 rule_group_arn: self.rule_group_arn,
@@ -1655,7 +1684,7 @@ pub mod describe_rule_group_metadata_output {
     }
 }
 impl DescribeRuleGroupMetadataOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeRuleGroupMetadataOutput`](crate::output::DescribeRuleGroupMetadataOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeRuleGroupMetadataOutput`](crate::output::DescribeRuleGroupMetadataOutput).
     pub fn builder() -> crate::output::describe_rule_group_metadata_output::Builder {
         crate::output::describe_rule_group_metadata_output::Builder::default()
     }
@@ -1667,12 +1696,15 @@ impl DescribeRuleGroupMetadataOutput {
 pub struct DescribeRuleGroupOutput {
     /// <p>A token used for optimistic locking. Network Firewall returns a token to your requests that access the rule group. The token marks the state of the rule group resource at the time of the request. </p>
     /// <p>To make changes to the rule group, you provide the token in your request. Network Firewall uses the token to ensure that the rule group hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the rule group again to get a current copy of it with a current token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
     /// <p>The object that defines the rules in a rule group. This, along with <code>RuleGroupResponse</code>, define the rule group. You can retrieve all objects for a rule group by calling <code>DescribeRuleGroup</code>. </p>
     /// <p>Network Firewall uses a rule group to inspect and control network traffic. You define stateless rule groups to inspect individual packets and you define stateful rule groups to inspect packets in the context of their traffic flow. </p>
     /// <p>To use a rule group, you include it by reference in an Network Firewall firewall policy, then you use the policy in a firewall. You can reference a rule group from more than one firewall policy, and you can use a firewall policy in more than one firewall. </p>
+    #[doc(hidden)]
     pub rule_group: std::option::Option<crate::model::RuleGroup>,
     /// <p>The high-level properties of a rule group. This, along with the <code>RuleGroup</code>, define the rule group. You can retrieve all objects for a rule group by calling <code>DescribeRuleGroup</code>. </p>
+    #[doc(hidden)]
     pub rule_group_response: std::option::Option<crate::model::RuleGroupResponse>,
 }
 impl DescribeRuleGroupOutput {
@@ -1701,11 +1733,10 @@ impl std::fmt::Debug for DescribeRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeRuleGroupOutput`](crate::output::DescribeRuleGroupOutput)
+/// See [`DescribeRuleGroupOutput`](crate::output::DescribeRuleGroupOutput).
 pub mod describe_rule_group_output {
 
-    /// A builder for [`DescribeRuleGroupOutput`](crate::output::DescribeRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeRuleGroupOutput`](crate::output::DescribeRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) update_token: std::option::Option<std::string::String>,
@@ -1755,7 +1786,7 @@ pub mod describe_rule_group_output {
             self.rule_group_response = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeRuleGroupOutput`](crate::output::DescribeRuleGroupOutput)
+        /// Consumes the builder and constructs a [`DescribeRuleGroupOutput`](crate::output::DescribeRuleGroupOutput).
         pub fn build(self) -> crate::output::DescribeRuleGroupOutput {
             crate::output::DescribeRuleGroupOutput {
                 update_token: self.update_token,
@@ -1766,7 +1797,7 @@ pub mod describe_rule_group_output {
     }
 }
 impl DescribeRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeRuleGroupOutput`](crate::output::DescribeRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeRuleGroupOutput`](crate::output::DescribeRuleGroupOutput).
     pub fn builder() -> crate::output::describe_rule_group_output::Builder {
         crate::output::describe_rule_group_output::Builder::default()
     }
@@ -1777,6 +1808,7 @@ impl DescribeRuleGroupOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeResourcePolicyOutput {
     /// <p>The IAM policy for the resource. </p>
+    #[doc(hidden)]
     pub policy: std::option::Option<std::string::String>,
 }
 impl DescribeResourcePolicyOutput {
@@ -1792,11 +1824,10 @@ impl std::fmt::Debug for DescribeResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput)
+/// See [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput).
 pub mod describe_resource_policy_output {
 
-    /// A builder for [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<std::string::String>,
@@ -1812,7 +1843,7 @@ pub mod describe_resource_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput).
         pub fn build(self) -> crate::output::DescribeResourcePolicyOutput {
             crate::output::DescribeResourcePolicyOutput {
                 policy: self.policy,
@@ -1821,7 +1852,7 @@ pub mod describe_resource_policy_output {
     }
 }
 impl DescribeResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput).
     pub fn builder() -> crate::output::describe_resource_policy_output::Builder {
         crate::output::describe_resource_policy_output::Builder::default()
     }
@@ -1832,8 +1863,10 @@ impl DescribeResourcePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeLoggingConfigurationOutput {
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    #[doc(hidden)]
     pub firewall_arn: std::option::Option<std::string::String>,
     /// <p>Defines how Network Firewall performs logging for a <code>Firewall</code>. </p>
+    #[doc(hidden)]
     pub logging_configuration: std::option::Option<crate::model::LoggingConfiguration>,
 }
 impl DescribeLoggingConfigurationOutput {
@@ -1856,11 +1889,10 @@ impl std::fmt::Debug for DescribeLoggingConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeLoggingConfigurationOutput`](crate::output::DescribeLoggingConfigurationOutput)
+/// See [`DescribeLoggingConfigurationOutput`](crate::output::DescribeLoggingConfigurationOutput).
 pub mod describe_logging_configuration_output {
 
-    /// A builder for [`DescribeLoggingConfigurationOutput`](crate::output::DescribeLoggingConfigurationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeLoggingConfigurationOutput`](crate::output::DescribeLoggingConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall_arn: std::option::Option<std::string::String>,
@@ -1890,7 +1922,7 @@ pub mod describe_logging_configuration_output {
             self.logging_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeLoggingConfigurationOutput`](crate::output::DescribeLoggingConfigurationOutput)
+        /// Consumes the builder and constructs a [`DescribeLoggingConfigurationOutput`](crate::output::DescribeLoggingConfigurationOutput).
         pub fn build(self) -> crate::output::DescribeLoggingConfigurationOutput {
             crate::output::DescribeLoggingConfigurationOutput {
                 firewall_arn: self.firewall_arn,
@@ -1900,7 +1932,7 @@ pub mod describe_logging_configuration_output {
     }
 }
 impl DescribeLoggingConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeLoggingConfigurationOutput`](crate::output::DescribeLoggingConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeLoggingConfigurationOutput`](crate::output::DescribeLoggingConfigurationOutput).
     pub fn builder() -> crate::output::describe_logging_configuration_output::Builder {
         crate::output::describe_logging_configuration_output::Builder::default()
     }
@@ -1912,10 +1944,13 @@ impl DescribeLoggingConfigurationOutput {
 pub struct DescribeFirewallPolicyOutput {
     /// <p>A token used for optimistic locking. Network Firewall returns a token to your requests that access the firewall policy. The token marks the state of the policy resource at the time of the request. </p>
     /// <p>To make changes to the policy, you provide the token in your request. Network Firewall uses the token to ensure that the policy hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall policy again to get a current copy of it with current token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
     /// <p>The high-level properties of a firewall policy. This, along with the <code>FirewallPolicy</code>, define the policy. You can retrieve all objects for a firewall policy by calling <code>DescribeFirewallPolicy</code>. </p>
+    #[doc(hidden)]
     pub firewall_policy_response: std::option::Option<crate::model::FirewallPolicyResponse>,
     /// <p>The policy for the specified firewall policy. </p>
+    #[doc(hidden)]
     pub firewall_policy: std::option::Option<crate::model::FirewallPolicy>,
 }
 impl DescribeFirewallPolicyOutput {
@@ -1944,11 +1979,10 @@ impl std::fmt::Debug for DescribeFirewallPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFirewallPolicyOutput`](crate::output::DescribeFirewallPolicyOutput)
+/// See [`DescribeFirewallPolicyOutput`](crate::output::DescribeFirewallPolicyOutput).
 pub mod describe_firewall_policy_output {
 
-    /// A builder for [`DescribeFirewallPolicyOutput`](crate::output::DescribeFirewallPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeFirewallPolicyOutput`](crate::output::DescribeFirewallPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) update_token: std::option::Option<std::string::String>,
@@ -1998,7 +2032,7 @@ pub mod describe_firewall_policy_output {
             self.firewall_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFirewallPolicyOutput`](crate::output::DescribeFirewallPolicyOutput)
+        /// Consumes the builder and constructs a [`DescribeFirewallPolicyOutput`](crate::output::DescribeFirewallPolicyOutput).
         pub fn build(self) -> crate::output::DescribeFirewallPolicyOutput {
             crate::output::DescribeFirewallPolicyOutput {
                 update_token: self.update_token,
@@ -2009,7 +2043,7 @@ pub mod describe_firewall_policy_output {
     }
 }
 impl DescribeFirewallPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFirewallPolicyOutput`](crate::output::DescribeFirewallPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFirewallPolicyOutput`](crate::output::DescribeFirewallPolicyOutput).
     pub fn builder() -> crate::output::describe_firewall_policy_output::Builder {
         crate::output::describe_firewall_policy_output::Builder::default()
     }
@@ -2022,10 +2056,13 @@ pub struct DescribeFirewallOutput {
     /// <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p>
     /// <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p>
     /// <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
     /// <p>The configuration settings for the firewall. These settings include the firewall policy and the subnets in your VPC to use for the firewall endpoints. </p>
+    #[doc(hidden)]
     pub firewall: std::option::Option<crate::model::Firewall>,
     /// <p>Detailed information about the current status of a <code>Firewall</code>. You can retrieve this for a firewall by calling <code>DescribeFirewall</code> and providing the firewall name and ARN.</p>
+    #[doc(hidden)]
     pub firewall_status: std::option::Option<crate::model::FirewallStatus>,
 }
 impl DescribeFirewallOutput {
@@ -2053,11 +2090,10 @@ impl std::fmt::Debug for DescribeFirewallOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFirewallOutput`](crate::output::DescribeFirewallOutput)
+/// See [`DescribeFirewallOutput`](crate::output::DescribeFirewallOutput).
 pub mod describe_firewall_output {
 
-    /// A builder for [`DescribeFirewallOutput`](crate::output::DescribeFirewallOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeFirewallOutput`](crate::output::DescribeFirewallOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) update_token: std::option::Option<std::string::String>,
@@ -2102,7 +2138,7 @@ pub mod describe_firewall_output {
             self.firewall_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFirewallOutput`](crate::output::DescribeFirewallOutput)
+        /// Consumes the builder and constructs a [`DescribeFirewallOutput`](crate::output::DescribeFirewallOutput).
         pub fn build(self) -> crate::output::DescribeFirewallOutput {
             crate::output::DescribeFirewallOutput {
                 update_token: self.update_token,
@@ -2113,7 +2149,7 @@ pub mod describe_firewall_output {
     }
 }
 impl DescribeFirewallOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFirewallOutput`](crate::output::DescribeFirewallOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFirewallOutput`](crate::output::DescribeFirewallOutput).
     pub fn builder() -> crate::output::describe_firewall_output::Builder {
         crate::output::describe_firewall_output::Builder::default()
     }
@@ -2124,6 +2160,7 @@ impl DescribeFirewallOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteRuleGroupOutput {
     /// <p>The high-level properties of a rule group. This, along with the <code>RuleGroup</code>, define the rule group. You can retrieve all objects for a rule group by calling <code>DescribeRuleGroup</code>. </p>
+    #[doc(hidden)]
     pub rule_group_response: std::option::Option<crate::model::RuleGroupResponse>,
 }
 impl DeleteRuleGroupOutput {
@@ -2139,11 +2176,10 @@ impl std::fmt::Debug for DeleteRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
+/// See [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput).
 pub mod delete_rule_group_output {
 
-    /// A builder for [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_group_response: std::option::Option<crate::model::RuleGroupResponse>,
@@ -2162,7 +2198,7 @@ pub mod delete_rule_group_output {
             self.rule_group_response = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
+        /// Consumes the builder and constructs a [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput).
         pub fn build(self) -> crate::output::DeleteRuleGroupOutput {
             crate::output::DeleteRuleGroupOutput {
                 rule_group_response: self.rule_group_response,
@@ -2171,7 +2207,7 @@ pub mod delete_rule_group_output {
     }
 }
 impl DeleteRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput).
     pub fn builder() -> crate::output::delete_rule_group_output::Builder {
         crate::output::delete_rule_group_output::Builder::default()
     }
@@ -2187,22 +2223,21 @@ impl std::fmt::Debug for DeleteResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
+/// See [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
 pub mod delete_resource_policy_output {
 
-    /// A builder for [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
         pub fn build(self) -> crate::output::DeleteResourcePolicyOutput {
             crate::output::DeleteResourcePolicyOutput {}
         }
     }
 }
 impl DeleteResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
     pub fn builder() -> crate::output::delete_resource_policy_output::Builder {
         crate::output::delete_resource_policy_output::Builder::default()
     }
@@ -2213,6 +2248,7 @@ impl DeleteResourcePolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteFirewallPolicyOutput {
     /// <p>The object containing the definition of the <code>FirewallPolicyResponse</code> that you asked to delete. </p>
+    #[doc(hidden)]
     pub firewall_policy_response: std::option::Option<crate::model::FirewallPolicyResponse>,
 }
 impl DeleteFirewallPolicyOutput {
@@ -2230,11 +2266,10 @@ impl std::fmt::Debug for DeleteFirewallPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFirewallPolicyOutput`](crate::output::DeleteFirewallPolicyOutput)
+/// See [`DeleteFirewallPolicyOutput`](crate::output::DeleteFirewallPolicyOutput).
 pub mod delete_firewall_policy_output {
 
-    /// A builder for [`DeleteFirewallPolicyOutput`](crate::output::DeleteFirewallPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFirewallPolicyOutput`](crate::output::DeleteFirewallPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall_policy_response:
@@ -2257,7 +2292,7 @@ pub mod delete_firewall_policy_output {
             self.firewall_policy_response = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFirewallPolicyOutput`](crate::output::DeleteFirewallPolicyOutput)
+        /// Consumes the builder and constructs a [`DeleteFirewallPolicyOutput`](crate::output::DeleteFirewallPolicyOutput).
         pub fn build(self) -> crate::output::DeleteFirewallPolicyOutput {
             crate::output::DeleteFirewallPolicyOutput {
                 firewall_policy_response: self.firewall_policy_response,
@@ -2266,7 +2301,7 @@ pub mod delete_firewall_policy_output {
     }
 }
 impl DeleteFirewallPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFirewallPolicyOutput`](crate::output::DeleteFirewallPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFirewallPolicyOutput`](crate::output::DeleteFirewallPolicyOutput).
     pub fn builder() -> crate::output::delete_firewall_policy_output::Builder {
         crate::output::delete_firewall_policy_output::Builder::default()
     }
@@ -2278,8 +2313,10 @@ impl DeleteFirewallPolicyOutput {
 pub struct DeleteFirewallOutput {
     /// <p>The firewall defines the configuration settings for an Network Firewall firewall. These settings include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and any tags that are attached to the firewall Amazon Web Services resource. </p>
     /// <p>The status of the firewall, for example whether it's ready to filter network traffic, is provided in the corresponding <code>FirewallStatus</code>. You can retrieve both objects by calling <code>DescribeFirewall</code>.</p>
+    #[doc(hidden)]
     pub firewall: std::option::Option<crate::model::Firewall>,
     /// <p>Detailed information about the current status of a <code>Firewall</code>. You can retrieve this for a firewall by calling <code>DescribeFirewall</code> and providing the firewall name and ARN.</p>
+    #[doc(hidden)]
     pub firewall_status: std::option::Option<crate::model::FirewallStatus>,
 }
 impl DeleteFirewallOutput {
@@ -2301,11 +2338,10 @@ impl std::fmt::Debug for DeleteFirewallOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFirewallOutput`](crate::output::DeleteFirewallOutput)
+/// See [`DeleteFirewallOutput`](crate::output::DeleteFirewallOutput).
 pub mod delete_firewall_output {
 
-    /// A builder for [`DeleteFirewallOutput`](crate::output::DeleteFirewallOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteFirewallOutput`](crate::output::DeleteFirewallOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall: std::option::Option<crate::model::Firewall>,
@@ -2337,7 +2373,7 @@ pub mod delete_firewall_output {
             self.firewall_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteFirewallOutput`](crate::output::DeleteFirewallOutput)
+        /// Consumes the builder and constructs a [`DeleteFirewallOutput`](crate::output::DeleteFirewallOutput).
         pub fn build(self) -> crate::output::DeleteFirewallOutput {
             crate::output::DeleteFirewallOutput {
                 firewall: self.firewall,
@@ -2347,7 +2383,7 @@ pub mod delete_firewall_output {
     }
 }
 impl DeleteFirewallOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFirewallOutput`](crate::output::DeleteFirewallOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFirewallOutput`](crate::output::DeleteFirewallOutput).
     pub fn builder() -> crate::output::delete_firewall_output::Builder {
         crate::output::delete_firewall_output::Builder::default()
     }
@@ -2359,8 +2395,10 @@ impl DeleteFirewallOutput {
 pub struct CreateRuleGroupOutput {
     /// <p>A token used for optimistic locking. Network Firewall returns a token to your requests that access the rule group. The token marks the state of the rule group resource at the time of the request. </p>
     /// <p>To make changes to the rule group, you provide the token in your request. Network Firewall uses the token to ensure that the rule group hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the rule group again to get a current copy of it with a current token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
     /// <p>The high-level properties of a rule group. This, along with the <code>RuleGroup</code>, define the rule group. You can retrieve all objects for a rule group by calling <code>DescribeRuleGroup</code>. </p>
+    #[doc(hidden)]
     pub rule_group_response: std::option::Option<crate::model::RuleGroupResponse>,
 }
 impl CreateRuleGroupOutput {
@@ -2382,11 +2420,10 @@ impl std::fmt::Debug for CreateRuleGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
+/// See [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput).
 pub mod create_rule_group_output {
 
-    /// A builder for [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) update_token: std::option::Option<std::string::String>,
@@ -2418,7 +2455,7 @@ pub mod create_rule_group_output {
             self.rule_group_response = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
+        /// Consumes the builder and constructs a [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput).
         pub fn build(self) -> crate::output::CreateRuleGroupOutput {
             crate::output::CreateRuleGroupOutput {
                 update_token: self.update_token,
@@ -2428,7 +2465,7 @@ pub mod create_rule_group_output {
     }
 }
 impl CreateRuleGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput).
     pub fn builder() -> crate::output::create_rule_group_output::Builder {
         crate::output::create_rule_group_output::Builder::default()
     }
@@ -2440,8 +2477,10 @@ impl CreateRuleGroupOutput {
 pub struct CreateFirewallPolicyOutput {
     /// <p>A token used for optimistic locking. Network Firewall returns a token to your requests that access the firewall policy. The token marks the state of the policy resource at the time of the request. </p>
     /// <p>To make changes to the policy, you provide the token in your request. Network Firewall uses the token to ensure that the policy hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall policy again to get a current copy of it with current token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
     /// <p>The high-level properties of a firewall policy. This, along with the <code>FirewallPolicy</code>, define the policy. You can retrieve all objects for a firewall policy by calling <code>DescribeFirewallPolicy</code>. </p>
+    #[doc(hidden)]
     pub firewall_policy_response: std::option::Option<crate::model::FirewallPolicyResponse>,
 }
 impl CreateFirewallPolicyOutput {
@@ -2465,11 +2504,10 @@ impl std::fmt::Debug for CreateFirewallPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`CreateFirewallPolicyOutput`](crate::output::CreateFirewallPolicyOutput)
+/// See [`CreateFirewallPolicyOutput`](crate::output::CreateFirewallPolicyOutput).
 pub mod create_firewall_policy_output {
 
-    /// A builder for [`CreateFirewallPolicyOutput`](crate::output::CreateFirewallPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateFirewallPolicyOutput`](crate::output::CreateFirewallPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) update_token: std::option::Option<std::string::String>,
@@ -2505,7 +2543,7 @@ pub mod create_firewall_policy_output {
             self.firewall_policy_response = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFirewallPolicyOutput`](crate::output::CreateFirewallPolicyOutput)
+        /// Consumes the builder and constructs a [`CreateFirewallPolicyOutput`](crate::output::CreateFirewallPolicyOutput).
         pub fn build(self) -> crate::output::CreateFirewallPolicyOutput {
             crate::output::CreateFirewallPolicyOutput {
                 update_token: self.update_token,
@@ -2515,7 +2553,7 @@ pub mod create_firewall_policy_output {
     }
 }
 impl CreateFirewallPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`CreateFirewallPolicyOutput`](crate::output::CreateFirewallPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`CreateFirewallPolicyOutput`](crate::output::CreateFirewallPolicyOutput).
     pub fn builder() -> crate::output::create_firewall_policy_output::Builder {
         crate::output::create_firewall_policy_output::Builder::default()
     }
@@ -2526,8 +2564,10 @@ impl CreateFirewallPolicyOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateFirewallOutput {
     /// <p>The configuration settings for the firewall. These settings include the firewall policy and the subnets in your VPC to use for the firewall endpoints. </p>
+    #[doc(hidden)]
     pub firewall: std::option::Option<crate::model::Firewall>,
     /// <p>Detailed information about the current status of a <code>Firewall</code>. You can retrieve this for a firewall by calling <code>DescribeFirewall</code> and providing the firewall name and ARN.</p>
+    #[doc(hidden)]
     pub firewall_status: std::option::Option<crate::model::FirewallStatus>,
 }
 impl CreateFirewallOutput {
@@ -2548,11 +2588,10 @@ impl std::fmt::Debug for CreateFirewallOutput {
         formatter.finish()
     }
 }
-/// See [`CreateFirewallOutput`](crate::output::CreateFirewallOutput)
+/// See [`CreateFirewallOutput`](crate::output::CreateFirewallOutput).
 pub mod create_firewall_output {
 
-    /// A builder for [`CreateFirewallOutput`](crate::output::CreateFirewallOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateFirewallOutput`](crate::output::CreateFirewallOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall: std::option::Option<crate::model::Firewall>,
@@ -2582,7 +2621,7 @@ pub mod create_firewall_output {
             self.firewall_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFirewallOutput`](crate::output::CreateFirewallOutput)
+        /// Consumes the builder and constructs a [`CreateFirewallOutput`](crate::output::CreateFirewallOutput).
         pub fn build(self) -> crate::output::CreateFirewallOutput {
             crate::output::CreateFirewallOutput {
                 firewall: self.firewall,
@@ -2592,7 +2631,7 @@ pub mod create_firewall_output {
     }
 }
 impl CreateFirewallOutput {
-    /// Creates a new builder-style object to manufacture [`CreateFirewallOutput`](crate::output::CreateFirewallOutput)
+    /// Creates a new builder-style object to manufacture [`CreateFirewallOutput`](crate::output::CreateFirewallOutput).
     pub fn builder() -> crate::output::create_firewall_output::Builder {
         crate::output::create_firewall_output::Builder::default()
     }
@@ -2603,14 +2642,18 @@ impl CreateFirewallOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateSubnetsOutput {
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    #[doc(hidden)]
     pub firewall_arn: std::option::Option<std::string::String>,
     /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+    #[doc(hidden)]
     pub firewall_name: std::option::Option<std::string::String>,
     /// <p>The IDs of the subnets that are associated with the firewall. </p>
+    #[doc(hidden)]
     pub subnet_mappings: std::option::Option<std::vec::Vec<crate::model::SubnetMapping>>,
     /// <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p>
     /// <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p>
     /// <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
 }
 impl AssociateSubnetsOutput {
@@ -2643,11 +2686,10 @@ impl std::fmt::Debug for AssociateSubnetsOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateSubnetsOutput`](crate::output::AssociateSubnetsOutput)
+/// See [`AssociateSubnetsOutput`](crate::output::AssociateSubnetsOutput).
 pub mod associate_subnets_output {
 
-    /// A builder for [`AssociateSubnetsOutput`](crate::output::AssociateSubnetsOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateSubnetsOutput`](crate::output::AssociateSubnetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall_arn: std::option::Option<std::string::String>,
@@ -2712,7 +2754,7 @@ pub mod associate_subnets_output {
             self.update_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateSubnetsOutput`](crate::output::AssociateSubnetsOutput)
+        /// Consumes the builder and constructs a [`AssociateSubnetsOutput`](crate::output::AssociateSubnetsOutput).
         pub fn build(self) -> crate::output::AssociateSubnetsOutput {
             crate::output::AssociateSubnetsOutput {
                 firewall_arn: self.firewall_arn,
@@ -2724,7 +2766,7 @@ pub mod associate_subnets_output {
     }
 }
 impl AssociateSubnetsOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateSubnetsOutput`](crate::output::AssociateSubnetsOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateSubnetsOutput`](crate::output::AssociateSubnetsOutput).
     pub fn builder() -> crate::output::associate_subnets_output::Builder {
         crate::output::associate_subnets_output::Builder::default()
     }
@@ -2735,14 +2777,18 @@ impl AssociateSubnetsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateFirewallPolicyOutput {
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    #[doc(hidden)]
     pub firewall_arn: std::option::Option<std::string::String>,
     /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+    #[doc(hidden)]
     pub firewall_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the firewall policy.</p>
+    #[doc(hidden)]
     pub firewall_policy_arn: std::option::Option<std::string::String>,
     /// <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p>
     /// <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p>
     /// <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    #[doc(hidden)]
     pub update_token: std::option::Option<std::string::String>,
 }
 impl AssociateFirewallPolicyOutput {
@@ -2775,11 +2821,10 @@ impl std::fmt::Debug for AssociateFirewallPolicyOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateFirewallPolicyOutput`](crate::output::AssociateFirewallPolicyOutput)
+/// See [`AssociateFirewallPolicyOutput`](crate::output::AssociateFirewallPolicyOutput).
 pub mod associate_firewall_policy_output {
 
-    /// A builder for [`AssociateFirewallPolicyOutput`](crate::output::AssociateFirewallPolicyOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateFirewallPolicyOutput`](crate::output::AssociateFirewallPolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) firewall_arn: std::option::Option<std::string::String>,
@@ -2838,7 +2883,7 @@ pub mod associate_firewall_policy_output {
             self.update_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateFirewallPolicyOutput`](crate::output::AssociateFirewallPolicyOutput)
+        /// Consumes the builder and constructs a [`AssociateFirewallPolicyOutput`](crate::output::AssociateFirewallPolicyOutput).
         pub fn build(self) -> crate::output::AssociateFirewallPolicyOutput {
             crate::output::AssociateFirewallPolicyOutput {
                 firewall_arn: self.firewall_arn,
@@ -2850,7 +2895,7 @@ pub mod associate_firewall_policy_output {
     }
 }
 impl AssociateFirewallPolicyOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateFirewallPolicyOutput`](crate::output::AssociateFirewallPolicyOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateFirewallPolicyOutput`](crate::output::AssociateFirewallPolicyOutput).
     pub fn builder() -> crate::output::associate_firewall_policy_output::Builder {
         crate::output::associate_firewall_policy_output::Builder::default()
     }

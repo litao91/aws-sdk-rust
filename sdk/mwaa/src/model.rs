@@ -59,14 +59,19 @@ impl AsRef<str> for WebserverAccessMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoggingConfigurationInput {
     /// <p>Publishes Airflow DAG processing logs to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub dag_processing_logs: std::option::Option<crate::model::ModuleLoggingConfigurationInput>,
     /// <p>Publishes Airflow scheduler logs to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub scheduler_logs: std::option::Option<crate::model::ModuleLoggingConfigurationInput>,
     /// <p>Publishes Airflow web server logs to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub webserver_logs: std::option::Option<crate::model::ModuleLoggingConfigurationInput>,
     /// <p>Publishes Airflow worker logs to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub worker_logs: std::option::Option<crate::model::ModuleLoggingConfigurationInput>,
     /// <p>Publishes Airflow task logs to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub task_logs: std::option::Option<crate::model::ModuleLoggingConfigurationInput>,
 }
 impl LoggingConfigurationInput {
@@ -110,11 +115,10 @@ impl std::fmt::Debug for LoggingConfigurationInput {
         formatter.finish()
     }
 }
-/// See [`LoggingConfigurationInput`](crate::model::LoggingConfigurationInput)
+/// See [`LoggingConfigurationInput`](crate::model::LoggingConfigurationInput).
 pub mod logging_configuration_input {
 
-    /// A builder for [`LoggingConfigurationInput`](crate::model::LoggingConfigurationInput)
-    #[non_exhaustive]
+    /// A builder for [`LoggingConfigurationInput`](crate::model::LoggingConfigurationInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dag_processing_logs:
@@ -201,7 +205,7 @@ pub mod logging_configuration_input {
             self.task_logs = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoggingConfigurationInput`](crate::model::LoggingConfigurationInput)
+        /// Consumes the builder and constructs a [`LoggingConfigurationInput`](crate::model::LoggingConfigurationInput).
         pub fn build(self) -> crate::model::LoggingConfigurationInput {
             crate::model::LoggingConfigurationInput {
                 dag_processing_logs: self.dag_processing_logs,
@@ -214,7 +218,7 @@ pub mod logging_configuration_input {
     }
 }
 impl LoggingConfigurationInput {
-    /// Creates a new builder-style object to manufacture [`LoggingConfigurationInput`](crate::model::LoggingConfigurationInput)
+    /// Creates a new builder-style object to manufacture [`LoggingConfigurationInput`](crate::model::LoggingConfigurationInput).
     pub fn builder() -> crate::model::logging_configuration_input::Builder {
         crate::model::logging_configuration_input::Builder::default()
     }
@@ -225,8 +229,10 @@ impl LoggingConfigurationInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModuleLoggingConfigurationInput {
     /// <p>Indicates whether to enable the Apache Airflow log type (e.g. <code>DagProcessingLogs</code>).</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>Defines the Apache Airflow log level (e.g. <code>INFO</code>) to send to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub log_level: std::option::Option<crate::model::LoggingLevel>,
 }
 impl ModuleLoggingConfigurationInput {
@@ -247,11 +253,10 @@ impl std::fmt::Debug for ModuleLoggingConfigurationInput {
         formatter.finish()
     }
 }
-/// See [`ModuleLoggingConfigurationInput`](crate::model::ModuleLoggingConfigurationInput)
+/// See [`ModuleLoggingConfigurationInput`](crate::model::ModuleLoggingConfigurationInput).
 pub mod module_logging_configuration_input {
 
-    /// A builder for [`ModuleLoggingConfigurationInput`](crate::model::ModuleLoggingConfigurationInput)
-    #[non_exhaustive]
+    /// A builder for [`ModuleLoggingConfigurationInput`](crate::model::ModuleLoggingConfigurationInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -281,7 +286,7 @@ pub mod module_logging_configuration_input {
             self.log_level = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModuleLoggingConfigurationInput`](crate::model::ModuleLoggingConfigurationInput)
+        /// Consumes the builder and constructs a [`ModuleLoggingConfigurationInput`](crate::model::ModuleLoggingConfigurationInput).
         pub fn build(self) -> crate::model::ModuleLoggingConfigurationInput {
             crate::model::ModuleLoggingConfigurationInput {
                 enabled: self.enabled,
@@ -291,7 +296,7 @@ pub mod module_logging_configuration_input {
     }
 }
 impl ModuleLoggingConfigurationInput {
-    /// Creates a new builder-style object to manufacture [`ModuleLoggingConfigurationInput`](crate::model::ModuleLoggingConfigurationInput)
+    /// Creates a new builder-style object to manufacture [`ModuleLoggingConfigurationInput`](crate::model::ModuleLoggingConfigurationInput).
     pub fn builder() -> crate::model::module_logging_configuration_input::Builder {
         crate::model::module_logging_configuration_input::Builder::default()
     }
@@ -369,6 +374,7 @@ impl AsRef<str> for LoggingLevel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateNetworkConfigurationInput {
     /// <p>A list of security group IDs. A security group must be attached to the same VPC as the subnets. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon MWAA</a>.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl UpdateNetworkConfigurationInput {
@@ -384,11 +390,10 @@ impl std::fmt::Debug for UpdateNetworkConfigurationInput {
         formatter.finish()
     }
 }
-/// See [`UpdateNetworkConfigurationInput`](crate::model::UpdateNetworkConfigurationInput)
+/// See [`UpdateNetworkConfigurationInput`](crate::model::UpdateNetworkConfigurationInput).
 pub mod update_network_configuration_input {
 
-    /// A builder for [`UpdateNetworkConfigurationInput`](crate::model::UpdateNetworkConfigurationInput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateNetworkConfigurationInput`](crate::model::UpdateNetworkConfigurationInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -413,7 +418,7 @@ pub mod update_network_configuration_input {
             self.security_group_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateNetworkConfigurationInput`](crate::model::UpdateNetworkConfigurationInput)
+        /// Consumes the builder and constructs a [`UpdateNetworkConfigurationInput`](crate::model::UpdateNetworkConfigurationInput).
         pub fn build(self) -> crate::model::UpdateNetworkConfigurationInput {
             crate::model::UpdateNetworkConfigurationInput {
                 security_group_ids: self.security_group_ids,
@@ -422,7 +427,7 @@ pub mod update_network_configuration_input {
     }
 }
 impl UpdateNetworkConfigurationInput {
-    /// Creates a new builder-style object to manufacture [`UpdateNetworkConfigurationInput`](crate::model::UpdateNetworkConfigurationInput)
+    /// Creates a new builder-style object to manufacture [`UpdateNetworkConfigurationInput`](crate::model::UpdateNetworkConfigurationInput).
     pub fn builder() -> crate::model::update_network_configuration_input::Builder {
         crate::model::update_network_configuration_input::Builder::default()
     }
@@ -433,16 +438,22 @@ impl UpdateNetworkConfigurationInput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricDatum {
     /// <p> <b>Internal only</b>. The name of the metric.</p>
+    #[doc(hidden)]
     pub metric_name: std::option::Option<std::string::String>,
     /// <p> <b>Internal only</b>. The time the metric data was received.</p>
+    #[doc(hidden)]
     pub timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> <b>Internal only</b>. The dimensions associated with the metric.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<std::vec::Vec<crate::model::Dimension>>,
     /// <p> <b>Internal only</b>. The value for the metric.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<f64>,
     /// <p> <b>Internal only</b>. The unit used to store the metric.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<crate::model::Unit>,
     /// <p> <b>Internal only</b>. The statistical values for the metric.</p>
+    #[doc(hidden)]
     pub statistic_values: std::option::Option<crate::model::StatisticSet>,
 }
 impl MetricDatum {
@@ -483,11 +494,10 @@ impl std::fmt::Debug for MetricDatum {
         formatter.finish()
     }
 }
-/// See [`MetricDatum`](crate::model::MetricDatum)
+/// See [`MetricDatum`](crate::model::MetricDatum).
 pub mod metric_datum {
 
-    /// A builder for [`MetricDatum`](crate::model::MetricDatum)
-    #[non_exhaustive]
+    /// A builder for [`MetricDatum`](crate::model::MetricDatum).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) metric_name: std::option::Option<std::string::String>,
@@ -573,7 +583,7 @@ pub mod metric_datum {
             self.statistic_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricDatum`](crate::model::MetricDatum)
+        /// Consumes the builder and constructs a [`MetricDatum`](crate::model::MetricDatum).
         pub fn build(self) -> crate::model::MetricDatum {
             crate::model::MetricDatum {
                 metric_name: self.metric_name,
@@ -587,7 +597,7 @@ pub mod metric_datum {
     }
 }
 impl MetricDatum {
-    /// Creates a new builder-style object to manufacture [`MetricDatum`](crate::model::MetricDatum)
+    /// Creates a new builder-style object to manufacture [`MetricDatum`](crate::model::MetricDatum).
     pub fn builder() -> crate::model::metric_datum::Builder {
         crate::model::metric_datum::Builder::default()
     }
@@ -598,12 +608,16 @@ impl MetricDatum {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StatisticSet {
     /// <p> <b>Internal only</b>. The number of samples used for the statistic set.</p>
+    #[doc(hidden)]
     pub sample_count: std::option::Option<i32>,
     /// <p> <b>Internal only</b>. The sum of values for the sample set.</p>
+    #[doc(hidden)]
     pub sum: std::option::Option<f64>,
     /// <p> <b>Internal only</b>. The minimum value of the sample set.</p>
+    #[doc(hidden)]
     pub minimum: std::option::Option<f64>,
     /// <p> <b>Internal only</b>. The maximum value of the sample set.</p>
+    #[doc(hidden)]
     pub maximum: std::option::Option<f64>,
 }
 impl StatisticSet {
@@ -634,11 +648,10 @@ impl std::fmt::Debug for StatisticSet {
         formatter.finish()
     }
 }
-/// See [`StatisticSet`](crate::model::StatisticSet)
+/// See [`StatisticSet`](crate::model::StatisticSet).
 pub mod statistic_set {
 
-    /// A builder for [`StatisticSet`](crate::model::StatisticSet)
-    #[non_exhaustive]
+    /// A builder for [`StatisticSet`](crate::model::StatisticSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sample_count: std::option::Option<i32>,
@@ -687,7 +700,7 @@ pub mod statistic_set {
             self.maximum = input;
             self
         }
-        /// Consumes the builder and constructs a [`StatisticSet`](crate::model::StatisticSet)
+        /// Consumes the builder and constructs a [`StatisticSet`](crate::model::StatisticSet).
         pub fn build(self) -> crate::model::StatisticSet {
             crate::model::StatisticSet {
                 sample_count: self.sample_count,
@@ -699,7 +712,7 @@ pub mod statistic_set {
     }
 }
 impl StatisticSet {
-    /// Creates a new builder-style object to manufacture [`StatisticSet`](crate::model::StatisticSet)
+    /// Creates a new builder-style object to manufacture [`StatisticSet`](crate::model::StatisticSet).
     pub fn builder() -> crate::model::statistic_set::Builder {
         crate::model::statistic_set::Builder::default()
     }
@@ -893,8 +906,10 @@ impl AsRef<str> for Unit {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Dimension {
     /// <p> <b>Internal only</b>. The name of the dimension.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> <b>Internal only</b>. The value of the dimension.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Dimension {
@@ -915,11 +930,10 @@ impl std::fmt::Debug for Dimension {
         formatter.finish()
     }
 }
-/// See [`Dimension`](crate::model::Dimension)
+/// See [`Dimension`](crate::model::Dimension).
 pub mod dimension {
 
-    /// A builder for [`Dimension`](crate::model::Dimension)
-    #[non_exhaustive]
+    /// A builder for [`Dimension`](crate::model::Dimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -946,7 +960,7 @@ pub mod dimension {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Dimension`](crate::model::Dimension)
+        /// Consumes the builder and constructs a [`Dimension`](crate::model::Dimension).
         pub fn build(self) -> crate::model::Dimension {
             crate::model::Dimension {
                 name: self.name,
@@ -956,7 +970,7 @@ pub mod dimension {
     }
 }
 impl Dimension {
-    /// Creates a new builder-style object to manufacture [`Dimension`](crate::model::Dimension)
+    /// Creates a new builder-style object to manufacture [`Dimension`](crate::model::Dimension).
     pub fn builder() -> crate::model::dimension::Builder {
         crate::model::dimension::Builder::default()
     }
@@ -967,6 +981,7 @@ impl Dimension {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Environment {
     /// <p>The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The status of the Amazon MWAA environment. Valid values:</p>
     /// <ul>
@@ -980,56 +995,81 @@ pub struct Environment {
     /// <li> <p> <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment has rolled back successfully and is ready to use.</p> </li>
     /// </ul>
     /// <p>We recommend reviewing our troubleshooting guide for a list of common errors and their solutions. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/troubleshooting.html">Amazon MWAA troubleshooting</a>.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EnvironmentStatus>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon MWAA environment.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
     /// <p>The day and time the environment was created.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Apache Airflow <i>Web server</i> host name for the Amazon MWAA environment. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/access-airflow-ui.html">Accessing the Apache Airflow UI</a>.</p>
+    #[doc(hidden)]
     pub webserver_url: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution role</a>.</p>
+    #[doc(hidden)]
     pub execution_role_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) for the service-linked role of the environment. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-slr.html">Amazon MWAA Service-linked role</a>.</p>
+    #[doc(hidden)]
     pub service_role_arn: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your environment.</p>
+    #[doc(hidden)]
     pub kms_key: std::option::Option<std::string::String>,
-    /// <p>The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>.</p>
+    /// <p>The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>, and <code>2.2.2</code>.</p>
+    #[doc(hidden)]
     pub airflow_version: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket for Amazon MWAA</a>.</p>
+    #[doc(hidden)]
     pub source_bucket_arn: std::option::Option<std::string::String>,
     /// <p>The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding or updating DAGs</a>.</p>
+    #[doc(hidden)]
     pub dag_s3_path: std::option::Option<std::string::String>,
     /// <p>The relative path to the <code>plugins.zip</code> file on your Amazon S3 bucket. For example, <code>plugins.zip</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html">Installing custom plugins</a>.</p>
+    #[doc(hidden)]
     pub plugins_s3_path: std::option::Option<std::string::String>,
     /// <p>The version of the plugins.zip file on your Amazon S3 bucket. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html">Installing custom plugins</a>.</p>
+    #[doc(hidden)]
     pub plugins_s3_object_version: std::option::Option<std::string::String>,
     /// <p>The relative path to the <code>requirements.txt</code> file on your Amazon S3 bucket. For example, <code>requirements.txt</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html">Installing Python dependencies</a>.</p>
+    #[doc(hidden)]
     pub requirements_s3_path: std::option::Option<std::string::String>,
     /// <p>The version of the requirements.txt file on your Amazon S3 bucket. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html">Installing Python dependencies</a>.</p>
+    #[doc(hidden)]
     pub requirements_s3_object_version: std::option::Option<std::string::String>,
     /// <p>A list of key-value pairs containing the Apache Airflow configuration options attached to your environment. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow configuration options</a>.</p>
+    #[doc(hidden)]
     pub airflow_configuration_options:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment class</a>.</p>
+    #[doc(hidden)]
     pub environment_class: std::option::Option<std::string::String>,
     /// <p>The maximum number of workers that run in your environment. For example, <code>20</code>.</p>
+    #[doc(hidden)]
     pub max_workers: std::option::Option<i32>,
     /// <p>Describes the VPC networking components used to secure and enable network traffic between the Amazon Web Services resources for your environment. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon MWAA</a>.</p>
+    #[doc(hidden)]
     pub network_configuration: std::option::Option<crate::model::NetworkConfiguration>,
     /// <p>The Apache Airflow logs published to CloudWatch Logs.</p>
+    #[doc(hidden)]
     pub logging_configuration: std::option::Option<crate::model::LoggingConfiguration>,
     /// <p>The status of the last update on the environment.</p>
+    #[doc(hidden)]
     pub last_update: std::option::Option<crate::model::LastUpdate>,
     /// <p>The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly maintenance updates are scheduled. For example: <code>TUE:03:30</code>.</p>
+    #[doc(hidden)]
     pub weekly_maintenance_window_start: std::option::Option<std::string::String>,
     /// <p>The key-value tag pairs associated to your environment. For example, <code>"Environment": "Staging"</code>. To learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The Apache Airflow <i>Web server</i> access mode. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access modes</a>.</p>
+    #[doc(hidden)]
     pub webserver_access_mode: std::option::Option<crate::model::WebserverAccessMode>,
     /// <p>The minimum number of workers that run in your environment. For example, <code>2</code>.</p>
+    #[doc(hidden)]
     pub min_workers: std::option::Option<i32>,
     /// <p>The number of Apache Airflow schedulers that run in your Amazon MWAA environment.</p>
+    #[doc(hidden)]
     pub schedulers: std::option::Option<i32>,
 }
 impl Environment {
@@ -1076,7 +1116,7 @@ impl Environment {
     pub fn kms_key(&self) -> std::option::Option<&str> {
         self.kms_key.as_deref()
     }
-    /// <p>The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>.</p>
+    /// <p>The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>, and <code>2.2.2</code>.</p>
     pub fn airflow_version(&self) -> std::option::Option<&str> {
         self.airflow_version.as_deref()
     }
@@ -1182,7 +1222,7 @@ impl std::fmt::Debug for Environment {
         );
         formatter.field(
             "airflow_configuration_options",
-            &self.airflow_configuration_options,
+            &"*** Sensitive Data Redacted ***",
         );
         formatter.field("environment_class", &self.environment_class);
         formatter.field("max_workers", &self.max_workers);
@@ -1200,11 +1240,10 @@ impl std::fmt::Debug for Environment {
         formatter.finish()
     }
 }
-/// See [`Environment`](crate::model::Environment)
+/// See [`Environment`](crate::model::Environment).
 pub mod environment {
 
-    /// A builder for [`Environment`](crate::model::Environment)
-    #[non_exhaustive]
+    /// A builder for [`Environment`](crate::model::Environment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1356,12 +1395,12 @@ pub mod environment {
             self.kms_key = input;
             self
         }
-        /// <p>The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>.</p>
+        /// <p>The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>, and <code>2.2.2</code>.</p>
         pub fn airflow_version(mut self, input: impl Into<std::string::String>) -> Self {
             self.airflow_version = Some(input.into());
             self
         }
-        /// <p>The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>.</p>
+        /// <p>The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>, and <code>2.2.2</code>.</p>
         pub fn set_airflow_version(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -1608,7 +1647,7 @@ pub mod environment {
             self.schedulers = input;
             self
         }
-        /// Consumes the builder and constructs a [`Environment`](crate::model::Environment)
+        /// Consumes the builder and constructs a [`Environment`](crate::model::Environment).
         pub fn build(self) -> crate::model::Environment {
             crate::model::Environment {
                 name: self.name,
@@ -1642,7 +1681,7 @@ pub mod environment {
     }
 }
 impl Environment {
-    /// Creates a new builder-style object to manufacture [`Environment`](crate::model::Environment)
+    /// Creates a new builder-style object to manufacture [`Environment`](crate::model::Environment).
     pub fn builder() -> crate::model::environment::Builder {
         crate::model::environment::Builder::default()
     }
@@ -1653,12 +1692,16 @@ impl Environment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LastUpdate {
     /// <p>The status of the last update on the environment.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::UpdateStatus>,
     /// <p>The day and time of the last update on the environment.</p>
+    #[doc(hidden)]
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The error that was encountered during the last update of the environment.</p>
+    #[doc(hidden)]
     pub error: std::option::Option<crate::model::UpdateError>,
     /// <p>The source of the last update to the environment. Includes internal processes by Amazon MWAA, such as an environment maintenance update.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<std::string::String>,
 }
 impl LastUpdate {
@@ -1689,11 +1732,10 @@ impl std::fmt::Debug for LastUpdate {
         formatter.finish()
     }
 }
-/// See [`LastUpdate`](crate::model::LastUpdate)
+/// See [`LastUpdate`](crate::model::LastUpdate).
 pub mod last_update {
 
-    /// A builder for [`LastUpdate`](crate::model::LastUpdate)
-    #[non_exhaustive]
+    /// A builder for [`LastUpdate`](crate::model::LastUpdate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::UpdateStatus>,
@@ -1748,7 +1790,7 @@ pub mod last_update {
             self.source = input;
             self
         }
-        /// Consumes the builder and constructs a [`LastUpdate`](crate::model::LastUpdate)
+        /// Consumes the builder and constructs a [`LastUpdate`](crate::model::LastUpdate).
         pub fn build(self) -> crate::model::LastUpdate {
             crate::model::LastUpdate {
                 status: self.status,
@@ -1760,7 +1802,7 @@ pub mod last_update {
     }
 }
 impl LastUpdate {
-    /// Creates a new builder-style object to manufacture [`LastUpdate`](crate::model::LastUpdate)
+    /// Creates a new builder-style object to manufacture [`LastUpdate`](crate::model::LastUpdate).
     pub fn builder() -> crate::model::last_update::Builder {
         crate::model::last_update::Builder::default()
     }
@@ -1771,8 +1813,10 @@ impl LastUpdate {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateError {
     /// <p>The error code that corresponds to the error with the last update.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The error message that corresponds to the error code.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl UpdateError {
@@ -1793,11 +1837,10 @@ impl std::fmt::Debug for UpdateError {
         formatter.finish()
     }
 }
-/// See [`UpdateError`](crate::model::UpdateError)
+/// See [`UpdateError`](crate::model::UpdateError).
 pub mod update_error {
 
-    /// A builder for [`UpdateError`](crate::model::UpdateError)
-    #[non_exhaustive]
+    /// A builder for [`UpdateError`](crate::model::UpdateError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_code: std::option::Option<std::string::String>,
@@ -1827,7 +1870,7 @@ pub mod update_error {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateError`](crate::model::UpdateError)
+        /// Consumes the builder and constructs a [`UpdateError`](crate::model::UpdateError).
         pub fn build(self) -> crate::model::UpdateError {
             crate::model::UpdateError {
                 error_code: self.error_code,
@@ -1837,7 +1880,7 @@ pub mod update_error {
     }
 }
 impl UpdateError {
-    /// Creates a new builder-style object to manufacture [`UpdateError`](crate::model::UpdateError)
+    /// Creates a new builder-style object to manufacture [`UpdateError`](crate::model::UpdateError).
     pub fn builder() -> crate::model::update_error::Builder {
         crate::model::update_error::Builder::default()
     }
@@ -1907,14 +1950,19 @@ impl AsRef<str> for UpdateStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LoggingConfiguration {
     /// <p>The Airflow DAG processing logs published to CloudWatch Logs and the log level.</p>
+    #[doc(hidden)]
     pub dag_processing_logs: std::option::Option<crate::model::ModuleLoggingConfiguration>,
     /// <p>The Airflow scheduler logs published to CloudWatch Logs and the log level.</p>
+    #[doc(hidden)]
     pub scheduler_logs: std::option::Option<crate::model::ModuleLoggingConfiguration>,
     /// <p>The Airflow web server logs published to CloudWatch Logs and the log level.</p>
+    #[doc(hidden)]
     pub webserver_logs: std::option::Option<crate::model::ModuleLoggingConfiguration>,
     /// <p>The Airflow worker logs published to CloudWatch Logs and the log level.</p>
+    #[doc(hidden)]
     pub worker_logs: std::option::Option<crate::model::ModuleLoggingConfiguration>,
     /// <p>The Airflow task logs published to CloudWatch Logs and the log level.</p>
+    #[doc(hidden)]
     pub task_logs: std::option::Option<crate::model::ModuleLoggingConfiguration>,
 }
 impl LoggingConfiguration {
@@ -1952,11 +2000,10 @@ impl std::fmt::Debug for LoggingConfiguration {
         formatter.finish()
     }
 }
-/// See [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+/// See [`LoggingConfiguration`](crate::model::LoggingConfiguration).
 pub mod logging_configuration {
 
-    /// A builder for [`LoggingConfiguration`](crate::model::LoggingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`LoggingConfiguration`](crate::model::LoggingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dag_processing_logs:
@@ -2035,7 +2082,7 @@ pub mod logging_configuration {
             self.task_logs = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+        /// Consumes the builder and constructs a [`LoggingConfiguration`](crate::model::LoggingConfiguration).
         pub fn build(self) -> crate::model::LoggingConfiguration {
             crate::model::LoggingConfiguration {
                 dag_processing_logs: self.dag_processing_logs,
@@ -2048,7 +2095,7 @@ pub mod logging_configuration {
     }
 }
 impl LoggingConfiguration {
-    /// Creates a new builder-style object to manufacture [`LoggingConfiguration`](crate::model::LoggingConfiguration)
+    /// Creates a new builder-style object to manufacture [`LoggingConfiguration`](crate::model::LoggingConfiguration).
     pub fn builder() -> crate::model::logging_configuration::Builder {
         crate::model::logging_configuration::Builder::default()
     }
@@ -2059,10 +2106,13 @@ impl LoggingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModuleLoggingConfiguration {
     /// <p>Indicates whether the Apache Airflow log type (e.g. <code>DagProcessingLogs</code>) is enabled.</p>
+    #[doc(hidden)]
     pub enabled: std::option::Option<bool>,
     /// <p>The Apache Airflow log level for the log type (e.g. <code>DagProcessingLogs</code>). </p>
+    #[doc(hidden)]
     pub log_level: std::option::Option<crate::model::LoggingLevel>,
     /// <p>The Amazon Resource Name (ARN) for the CloudWatch Logs group where the Apache Airflow log type (e.g. <code>DagProcessingLogs</code>) is published. For example, <code>arn:aws:logs:us-east-1:123456789012:log-group:airflow-MyMWAAEnvironment-MwaaEnvironment-DAGProcessing:*</code>.</p>
+    #[doc(hidden)]
     pub cloud_watch_log_group_arn: std::option::Option<std::string::String>,
 }
 impl ModuleLoggingConfiguration {
@@ -2088,11 +2138,10 @@ impl std::fmt::Debug for ModuleLoggingConfiguration {
         formatter.finish()
     }
 }
-/// See [`ModuleLoggingConfiguration`](crate::model::ModuleLoggingConfiguration)
+/// See [`ModuleLoggingConfiguration`](crate::model::ModuleLoggingConfiguration).
 pub mod module_logging_configuration {
 
-    /// A builder for [`ModuleLoggingConfiguration`](crate::model::ModuleLoggingConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ModuleLoggingConfiguration`](crate::model::ModuleLoggingConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -2136,7 +2185,7 @@ pub mod module_logging_configuration {
             self.cloud_watch_log_group_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModuleLoggingConfiguration`](crate::model::ModuleLoggingConfiguration)
+        /// Consumes the builder and constructs a [`ModuleLoggingConfiguration`](crate::model::ModuleLoggingConfiguration).
         pub fn build(self) -> crate::model::ModuleLoggingConfiguration {
             crate::model::ModuleLoggingConfiguration {
                 enabled: self.enabled,
@@ -2147,7 +2196,7 @@ pub mod module_logging_configuration {
     }
 }
 impl ModuleLoggingConfiguration {
-    /// Creates a new builder-style object to manufacture [`ModuleLoggingConfiguration`](crate::model::ModuleLoggingConfiguration)
+    /// Creates a new builder-style object to manufacture [`ModuleLoggingConfiguration`](crate::model::ModuleLoggingConfiguration).
     pub fn builder() -> crate::model::module_logging_configuration::Builder {
         crate::model::module_logging_configuration::Builder::default()
     }
@@ -2158,8 +2207,10 @@ impl ModuleLoggingConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkConfiguration {
     /// <p>A list of subnet IDs. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon MWAA</a>.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of security group IDs. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon MWAA</a>.</p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl NetworkConfiguration {
@@ -2180,11 +2231,10 @@ impl std::fmt::Debug for NetworkConfiguration {
         formatter.finish()
     }
 }
-/// See [`NetworkConfiguration`](crate::model::NetworkConfiguration)
+/// See [`NetworkConfiguration`](crate::model::NetworkConfiguration).
 pub mod network_configuration {
 
-    /// A builder for [`NetworkConfiguration`](crate::model::NetworkConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NetworkConfiguration`](crate::model::NetworkConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2229,7 +2279,7 @@ pub mod network_configuration {
             self.security_group_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkConfiguration`](crate::model::NetworkConfiguration)
+        /// Consumes the builder and constructs a [`NetworkConfiguration`](crate::model::NetworkConfiguration).
         pub fn build(self) -> crate::model::NetworkConfiguration {
             crate::model::NetworkConfiguration {
                 subnet_ids: self.subnet_ids,
@@ -2239,7 +2289,7 @@ pub mod network_configuration {
     }
 }
 impl NetworkConfiguration {
-    /// Creates a new builder-style object to manufacture [`NetworkConfiguration`](crate::model::NetworkConfiguration)
+    /// Creates a new builder-style object to manufacture [`NetworkConfiguration`](crate::model::NetworkConfiguration).
     pub fn builder() -> crate::model::network_configuration::Builder {
         crate::model::network_configuration::Builder::default()
     }

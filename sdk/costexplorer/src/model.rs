@@ -5,15 +5,19 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CostCategorySplitChargeRule {
     /// <p>The Cost Category value that you want to split. That value can't be used as a source or a target in other split charge rules. To indicate uncategorized costs, you can use an empty string as the source.</p>
+    #[doc(hidden)]
     pub source: std::option::Option<std::string::String>,
     /// <p>The Cost Category values that you want to split costs across. These values can't be used as a source in other split charge rules. </p>
+    #[doc(hidden)]
     pub targets: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The method that's used to define how to split your source costs across your targets. </p>
     /// <p> <code>Proportional</code> - Allocates charges across your targets based on the proportional weighted cost of each target.</p>
     /// <p> <code>Fixed</code> - Allocates charges across your targets based on your defined allocation percentage.</p>
     /// <p>&gt;<code>Even</code> - Allocates costs evenly across all targets.</p>
+    #[doc(hidden)]
     pub method: std::option::Option<crate::model::CostCategorySplitChargeMethod>,
     /// <p>The parameters for a split charge method. This is only required for the <code>FIXED</code> method. </p>
+    #[doc(hidden)]
     pub parameters:
         std::option::Option<std::vec::Vec<crate::model::CostCategorySplitChargeRuleParameter>>,
 }
@@ -50,11 +54,10 @@ impl std::fmt::Debug for CostCategorySplitChargeRule {
         formatter.finish()
     }
 }
-/// See [`CostCategorySplitChargeRule`](crate::model::CostCategorySplitChargeRule)
+/// See [`CostCategorySplitChargeRule`](crate::model::CostCategorySplitChargeRule).
 pub mod cost_category_split_charge_rule {
 
-    /// A builder for [`CostCategorySplitChargeRule`](crate::model::CostCategorySplitChargeRule)
-    #[non_exhaustive]
+    /// A builder for [`CostCategorySplitChargeRule`](crate::model::CostCategorySplitChargeRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source: std::option::Option<std::string::String>,
@@ -136,7 +139,7 @@ pub mod cost_category_split_charge_rule {
             self.parameters = input;
             self
         }
-        /// Consumes the builder and constructs a [`CostCategorySplitChargeRule`](crate::model::CostCategorySplitChargeRule)
+        /// Consumes the builder and constructs a [`CostCategorySplitChargeRule`](crate::model::CostCategorySplitChargeRule).
         pub fn build(self) -> crate::model::CostCategorySplitChargeRule {
             crate::model::CostCategorySplitChargeRule {
                 source: self.source,
@@ -148,7 +151,7 @@ pub mod cost_category_split_charge_rule {
     }
 }
 impl CostCategorySplitChargeRule {
-    /// Creates a new builder-style object to manufacture [`CostCategorySplitChargeRule`](crate::model::CostCategorySplitChargeRule)
+    /// Creates a new builder-style object to manufacture [`CostCategorySplitChargeRule`](crate::model::CostCategorySplitChargeRule).
     pub fn builder() -> crate::model::cost_category_split_charge_rule::Builder {
         crate::model::cost_category_split_charge_rule::Builder::default()
     }
@@ -159,8 +162,10 @@ impl CostCategorySplitChargeRule {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CostCategorySplitChargeRuleParameter {
     /// <p>The parameter type. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::CostCategorySplitChargeRuleParameterType>,
     /// <p>The parameter values. </p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl CostCategorySplitChargeRuleParameter {
@@ -183,11 +188,10 @@ impl std::fmt::Debug for CostCategorySplitChargeRuleParameter {
         formatter.finish()
     }
 }
-/// See [`CostCategorySplitChargeRuleParameter`](crate::model::CostCategorySplitChargeRuleParameter)
+/// See [`CostCategorySplitChargeRuleParameter`](crate::model::CostCategorySplitChargeRuleParameter).
 pub mod cost_category_split_charge_rule_parameter {
 
-    /// A builder for [`CostCategorySplitChargeRuleParameter`](crate::model::CostCategorySplitChargeRuleParameter)
-    #[non_exhaustive]
+    /// A builder for [`CostCategorySplitChargeRuleParameter`](crate::model::CostCategorySplitChargeRuleParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type:
@@ -230,7 +234,7 @@ pub mod cost_category_split_charge_rule_parameter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`CostCategorySplitChargeRuleParameter`](crate::model::CostCategorySplitChargeRuleParameter)
+        /// Consumes the builder and constructs a [`CostCategorySplitChargeRuleParameter`](crate::model::CostCategorySplitChargeRuleParameter).
         pub fn build(self) -> crate::model::CostCategorySplitChargeRuleParameter {
             crate::model::CostCategorySplitChargeRuleParameter {
                 r#type: self.r#type,
@@ -240,7 +244,7 @@ pub mod cost_category_split_charge_rule_parameter {
     }
 }
 impl CostCategorySplitChargeRuleParameter {
-    /// Creates a new builder-style object to manufacture [`CostCategorySplitChargeRuleParameter`](crate::model::CostCategorySplitChargeRuleParameter)
+    /// Creates a new builder-style object to manufacture [`CostCategorySplitChargeRuleParameter`](crate::model::CostCategorySplitChargeRuleParameter).
     pub fn builder() -> crate::model::cost_category_split_charge_rule_parameter::Builder {
         crate::model::cost_category_split_charge_rule_parameter::Builder::default()
     }
@@ -365,14 +369,18 @@ impl AsRef<str> for CostCategorySplitChargeMethod {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CostCategoryRule {
     /// <p>The default value for the cost category.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>An <a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a> object used to categorize costs. This supports dimensions, tags, and nested expressions. Currently the only dimensions supported are <code>LINKED_ACCOUNT</code>, <code>SERVICE_CODE</code>, <code>RECORD_TYPE</code>, and <code>LINKED_ACCOUNT_NAME</code>.</p>
     /// <p>Root level <code>OR</code> isn't supported. We recommend that you create a separate rule instead.</p>
     /// <p> <code>RECORD_TYPE</code> is a dimension used for Cost Explorer APIs, and is also supported for Cost Category expressions. This dimension uses different terms, depending on whether you're using the console or API/JSON editor. For a detailed comparison, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-cost-categories.html#cost-categories-terms">Term Comparisons</a> in the <i>Billing and Cost Management User Guide</i>.</p>
+    #[doc(hidden)]
     pub rule: std::option::Option<crate::model::Expression>,
     /// <p>The value the line item is categorized as if the line item contains the matched dimension.</p>
+    #[doc(hidden)]
     pub inherited_value: std::option::Option<crate::model::CostCategoryInheritedValueDimension>,
     /// <p>You can define the <code>CostCategoryRule</code> rule type as either <code>REGULAR</code> or <code>INHERITED_VALUE</code>. The <code>INHERITED_VALUE</code> rule type adds the flexibility to define a rule that dynamically inherits the cost category value. This value is from the dimension value that's defined by <code>CostCategoryInheritedValueDimension</code>. For example, suppose that you want to costs to be dynamically grouped based on the value of a specific tag key. First, choose an inherited value rule type, and then choose the tag dimension and specify the tag key to use.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::CostCategoryRuleType>,
 }
 impl CostCategoryRule {
@@ -407,11 +415,10 @@ impl std::fmt::Debug for CostCategoryRule {
         formatter.finish()
     }
 }
-/// See [`CostCategoryRule`](crate::model::CostCategoryRule)
+/// See [`CostCategoryRule`](crate::model::CostCategoryRule).
 pub mod cost_category_rule {
 
-    /// A builder for [`CostCategoryRule`](crate::model::CostCategoryRule)
-    #[non_exhaustive]
+    /// A builder for [`CostCategoryRule`](crate::model::CostCategoryRule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<std::string::String>,
@@ -474,7 +481,7 @@ pub mod cost_category_rule {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`CostCategoryRule`](crate::model::CostCategoryRule)
+        /// Consumes the builder and constructs a [`CostCategoryRule`](crate::model::CostCategoryRule).
         pub fn build(self) -> crate::model::CostCategoryRule {
             crate::model::CostCategoryRule {
                 value: self.value,
@@ -486,7 +493,7 @@ pub mod cost_category_rule {
     }
 }
 impl CostCategoryRule {
-    /// Creates a new builder-style object to manufacture [`CostCategoryRule`](crate::model::CostCategoryRule)
+    /// Creates a new builder-style object to manufacture [`CostCategoryRule`](crate::model::CostCategoryRule).
     pub fn builder() -> crate::model::cost_category_rule::Builder {
         crate::model::cost_category_rule::Builder::default()
     }
@@ -553,8 +560,10 @@ impl AsRef<str> for CostCategoryRuleType {
 pub struct CostCategoryInheritedValueDimension {
     /// <p>The name of the dimension that's used to group costs.</p>
     /// <p>If you specify <code>LINKED_ACCOUNT_NAME</code>, the cost category value is based on account name. If you specify <code>TAG</code>, the cost category value is based on the value of the specified tag key.</p>
+    #[doc(hidden)]
     pub dimension_name: std::option::Option<crate::model::CostCategoryInheritedValueDimensionName>,
     /// <p>The key to extract cost category values.</p>
+    #[doc(hidden)]
     pub dimension_key: std::option::Option<std::string::String>,
 }
 impl CostCategoryInheritedValueDimension {
@@ -578,11 +587,10 @@ impl std::fmt::Debug for CostCategoryInheritedValueDimension {
         formatter.finish()
     }
 }
-/// See [`CostCategoryInheritedValueDimension`](crate::model::CostCategoryInheritedValueDimension)
+/// See [`CostCategoryInheritedValueDimension`](crate::model::CostCategoryInheritedValueDimension).
 pub mod cost_category_inherited_value_dimension {
 
-    /// A builder for [`CostCategoryInheritedValueDimension`](crate::model::CostCategoryInheritedValueDimension)
-    #[non_exhaustive]
+    /// A builder for [`CostCategoryInheritedValueDimension`](crate::model::CostCategoryInheritedValueDimension).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dimension_name:
@@ -621,7 +629,7 @@ pub mod cost_category_inherited_value_dimension {
             self.dimension_key = input;
             self
         }
-        /// Consumes the builder and constructs a [`CostCategoryInheritedValueDimension`](crate::model::CostCategoryInheritedValueDimension)
+        /// Consumes the builder and constructs a [`CostCategoryInheritedValueDimension`](crate::model::CostCategoryInheritedValueDimension).
         pub fn build(self) -> crate::model::CostCategoryInheritedValueDimension {
             crate::model::CostCategoryInheritedValueDimension {
                 dimension_name: self.dimension_name,
@@ -631,7 +639,7 @@ pub mod cost_category_inherited_value_dimension {
     }
 }
 impl CostCategoryInheritedValueDimension {
-    /// Creates a new builder-style object to manufacture [`CostCategoryInheritedValueDimension`](crate::model::CostCategoryInheritedValueDimension)
+    /// Creates a new builder-style object to manufacture [`CostCategoryInheritedValueDimension`](crate::model::CostCategoryInheritedValueDimension).
     pub fn builder() -> crate::model::cost_category_inherited_value_dimension::Builder {
         crate::model::cost_category_inherited_value_dimension::Builder::default()
     }
@@ -706,16 +714,22 @@ impl AsRef<str> for CostCategoryInheritedValueDimensionName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Expression {
     /// <p>Return results that match either <code>Dimension</code> object.</p>
+    #[doc(hidden)]
     pub or: std::option::Option<std::vec::Vec<crate::model::Expression>>,
     /// <p>Return results that match both <code>Dimension</code> objects.</p>
+    #[doc(hidden)]
     pub and: std::option::Option<std::vec::Vec<crate::model::Expression>>,
     /// <p>Return results that don't match a <code>Dimension</code> object.</p>
+    #[doc(hidden)]
     pub not: std::option::Option<std::boxed::Box<crate::model::Expression>>,
     /// <p>The specific <code>Dimension</code> to use for <code>Expression</code>.</p>
+    #[doc(hidden)]
     pub dimensions: std::option::Option<crate::model::DimensionValues>,
     /// <p>The specific <code>Tag</code> to use for <code>Expression</code>.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<crate::model::TagValues>,
     /// <p>The filter that's based on <code>CostCategory</code> values.</p>
+    #[doc(hidden)]
     pub cost_categories: std::option::Option<crate::model::CostCategoryValues>,
 }
 impl Expression {
@@ -756,11 +770,10 @@ impl std::fmt::Debug for Expression {
         formatter.finish()
     }
 }
-/// See [`Expression`](crate::model::Expression)
+/// See [`Expression`](crate::model::Expression).
 pub mod expression {
 
-    /// A builder for [`Expression`](crate::model::Expression)
-    #[non_exhaustive]
+    /// A builder for [`Expression`](crate::model::Expression).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) or: std::option::Option<std::vec::Vec<crate::model::Expression>>,
@@ -858,7 +871,7 @@ pub mod expression {
             self.cost_categories = input;
             self
         }
-        /// Consumes the builder and constructs a [`Expression`](crate::model::Expression)
+        /// Consumes the builder and constructs a [`Expression`](crate::model::Expression).
         pub fn build(self) -> crate::model::Expression {
             crate::model::Expression {
                 or: self.or,
@@ -872,7 +885,7 @@ pub mod expression {
     }
 }
 impl Expression {
-    /// Creates a new builder-style object to manufacture [`Expression`](crate::model::Expression)
+    /// Creates a new builder-style object to manufacture [`Expression`](crate::model::Expression).
     pub fn builder() -> crate::model::expression::Builder {
         crate::model::expression::Builder::default()
     }
@@ -885,10 +898,13 @@ impl Expression {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CostCategoryValues {
     /// <p>The unique name of the Cost Category.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The specific value of the Cost Category.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The match options that you can use to filter your results. MatchOptions is only applicable for actions related to cost category. The default values for <code>MatchOptions</code> is <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. </p>
+    #[doc(hidden)]
     pub match_options: std::option::Option<std::vec::Vec<crate::model::MatchOption>>,
 }
 impl CostCategoryValues {
@@ -914,11 +930,10 @@ impl std::fmt::Debug for CostCategoryValues {
         formatter.finish()
     }
 }
-/// See [`CostCategoryValues`](crate::model::CostCategoryValues)
+/// See [`CostCategoryValues`](crate::model::CostCategoryValues).
 pub mod cost_category_values {
 
-    /// A builder for [`CostCategoryValues`](crate::model::CostCategoryValues)
-    #[non_exhaustive]
+    /// A builder for [`CostCategoryValues`](crate::model::CostCategoryValues).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -974,7 +989,7 @@ pub mod cost_category_values {
             self.match_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`CostCategoryValues`](crate::model::CostCategoryValues)
+        /// Consumes the builder and constructs a [`CostCategoryValues`](crate::model::CostCategoryValues).
         pub fn build(self) -> crate::model::CostCategoryValues {
             crate::model::CostCategoryValues {
                 key: self.key,
@@ -985,7 +1000,7 @@ pub mod cost_category_values {
     }
 }
 impl CostCategoryValues {
-    /// Creates a new builder-style object to manufacture [`CostCategoryValues`](crate::model::CostCategoryValues)
+    /// Creates a new builder-style object to manufacture [`CostCategoryValues`](crate::model::CostCategoryValues).
     pub fn builder() -> crate::model::cost_category_values::Builder {
         crate::model::cost_category_values::Builder::default()
     }
@@ -1081,10 +1096,13 @@ impl AsRef<str> for MatchOption {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TagValues {
     /// <p>The key for the tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The specific value of the tag.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The match options that you can use to filter your results. <code>MatchOptions</code> is only applicable for actions related to Cost Category. The default values for <code>MatchOptions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.</p>
+    #[doc(hidden)]
     pub match_options: std::option::Option<std::vec::Vec<crate::model::MatchOption>>,
 }
 impl TagValues {
@@ -1110,11 +1128,10 @@ impl std::fmt::Debug for TagValues {
         formatter.finish()
     }
 }
-/// See [`TagValues`](crate::model::TagValues)
+/// See [`TagValues`](crate::model::TagValues).
 pub mod tag_values {
 
-    /// A builder for [`TagValues`](crate::model::TagValues)
-    #[non_exhaustive]
+    /// A builder for [`TagValues`](crate::model::TagValues).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1170,7 +1187,7 @@ pub mod tag_values {
             self.match_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagValues`](crate::model::TagValues)
+        /// Consumes the builder and constructs a [`TagValues`](crate::model::TagValues).
         pub fn build(self) -> crate::model::TagValues {
             crate::model::TagValues {
                 key: self.key,
@@ -1181,7 +1198,7 @@ pub mod tag_values {
     }
 }
 impl TagValues {
-    /// Creates a new builder-style object to manufacture [`TagValues`](crate::model::TagValues)
+    /// Creates a new builder-style object to manufacture [`TagValues`](crate::model::TagValues).
     pub fn builder() -> crate::model::tag_values::Builder {
         crate::model::tag_values::Builder::default()
     }
@@ -1192,10 +1209,13 @@ impl TagValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DimensionValues {
     /// <p>The names of the metadata types that you can use to filter and group your results. For example, <code>AZ</code> returns a list of Availability Zones.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<crate::model::Dimension>,
     /// <p>The metadata values that you can use to filter and group your results. You can use <code>GetDimensionValues</code> to find specific values.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The match options that you can use to filter your results. <code>MatchOptions</code> is only applicable for actions related to Cost Category. The default values for <code>MatchOptions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.</p>
+    #[doc(hidden)]
     pub match_options: std::option::Option<std::vec::Vec<crate::model::MatchOption>>,
 }
 impl DimensionValues {
@@ -1221,11 +1241,10 @@ impl std::fmt::Debug for DimensionValues {
         formatter.finish()
     }
 }
-/// See [`DimensionValues`](crate::model::DimensionValues)
+/// See [`DimensionValues`](crate::model::DimensionValues).
 pub mod dimension_values {
 
-    /// A builder for [`DimensionValues`](crate::model::DimensionValues)
-    #[non_exhaustive]
+    /// A builder for [`DimensionValues`](crate::model::DimensionValues).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<crate::model::Dimension>,
@@ -1281,7 +1300,7 @@ pub mod dimension_values {
             self.match_options = input;
             self
         }
-        /// Consumes the builder and constructs a [`DimensionValues`](crate::model::DimensionValues)
+        /// Consumes the builder and constructs a [`DimensionValues`](crate::model::DimensionValues).
         pub fn build(self) -> crate::model::DimensionValues {
             crate::model::DimensionValues {
                 key: self.key,
@@ -1292,7 +1311,7 @@ pub mod dimension_values {
     }
 }
 impl DimensionValues {
-    /// Creates a new builder-style object to manufacture [`DimensionValues`](crate::model::DimensionValues)
+    /// Creates a new builder-style object to manufacture [`DimensionValues`](crate::model::DimensionValues).
     pub fn builder() -> crate::model::dimension_values::Builder {
         crate::model::dimension_values::Builder::default()
     }
@@ -1562,10 +1581,13 @@ impl AsRef<str> for CostCategoryRuleVersion {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateCostAllocationTagsStatusError {
     /// <p>The key for the cost allocation tag. </p>
+    #[doc(hidden)]
     pub tag_key: std::option::Option<std::string::String>,
     /// <p>An error code representing why the action failed on this entry. </p>
+    #[doc(hidden)]
     pub code: std::option::Option<std::string::String>,
     /// <p>A message explaining why the action failed on this entry. </p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl UpdateCostAllocationTagsStatusError {
@@ -1591,11 +1613,10 @@ impl std::fmt::Debug for UpdateCostAllocationTagsStatusError {
         formatter.finish()
     }
 }
-/// See [`UpdateCostAllocationTagsStatusError`](crate::model::UpdateCostAllocationTagsStatusError)
+/// See [`UpdateCostAllocationTagsStatusError`](crate::model::UpdateCostAllocationTagsStatusError).
 pub mod update_cost_allocation_tags_status_error {
 
-    /// A builder for [`UpdateCostAllocationTagsStatusError`](crate::model::UpdateCostAllocationTagsStatusError)
-    #[non_exhaustive]
+    /// A builder for [`UpdateCostAllocationTagsStatusError`](crate::model::UpdateCostAllocationTagsStatusError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_key: std::option::Option<std::string::String>,
@@ -1633,7 +1654,7 @@ pub mod update_cost_allocation_tags_status_error {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateCostAllocationTagsStatusError`](crate::model::UpdateCostAllocationTagsStatusError)
+        /// Consumes the builder and constructs a [`UpdateCostAllocationTagsStatusError`](crate::model::UpdateCostAllocationTagsStatusError).
         pub fn build(self) -> crate::model::UpdateCostAllocationTagsStatusError {
             crate::model::UpdateCostAllocationTagsStatusError {
                 tag_key: self.tag_key,
@@ -1644,7 +1665,7 @@ pub mod update_cost_allocation_tags_status_error {
     }
 }
 impl UpdateCostAllocationTagsStatusError {
-    /// Creates a new builder-style object to manufacture [`UpdateCostAllocationTagsStatusError`](crate::model::UpdateCostAllocationTagsStatusError)
+    /// Creates a new builder-style object to manufacture [`UpdateCostAllocationTagsStatusError`](crate::model::UpdateCostAllocationTagsStatusError).
     pub fn builder() -> crate::model::update_cost_allocation_tags_status_error::Builder {
         crate::model::update_cost_allocation_tags_status_error::Builder::default()
     }
@@ -1655,8 +1676,10 @@ impl UpdateCostAllocationTagsStatusError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CostAllocationTagStatusEntry {
     /// <p>The key for the cost allocation tag. </p>
+    #[doc(hidden)]
     pub tag_key: std::option::Option<std::string::String>,
     /// <p>The status of a cost allocation tag. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CostAllocationTagStatus>,
 }
 impl CostAllocationTagStatusEntry {
@@ -1677,11 +1700,10 @@ impl std::fmt::Debug for CostAllocationTagStatusEntry {
         formatter.finish()
     }
 }
-/// See [`CostAllocationTagStatusEntry`](crate::model::CostAllocationTagStatusEntry)
+/// See [`CostAllocationTagStatusEntry`](crate::model::CostAllocationTagStatusEntry).
 pub mod cost_allocation_tag_status_entry {
 
-    /// A builder for [`CostAllocationTagStatusEntry`](crate::model::CostAllocationTagStatusEntry)
-    #[non_exhaustive]
+    /// A builder for [`CostAllocationTagStatusEntry`](crate::model::CostAllocationTagStatusEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_key: std::option::Option<std::string::String>,
@@ -1711,7 +1733,7 @@ pub mod cost_allocation_tag_status_entry {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CostAllocationTagStatusEntry`](crate::model::CostAllocationTagStatusEntry)
+        /// Consumes the builder and constructs a [`CostAllocationTagStatusEntry`](crate::model::CostAllocationTagStatusEntry).
         pub fn build(self) -> crate::model::CostAllocationTagStatusEntry {
             crate::model::CostAllocationTagStatusEntry {
                 tag_key: self.tag_key,
@@ -1721,7 +1743,7 @@ pub mod cost_allocation_tag_status_entry {
     }
 }
 impl CostAllocationTagStatusEntry {
-    /// Creates a new builder-style object to manufacture [`CostAllocationTagStatusEntry`](crate::model::CostAllocationTagStatusEntry)
+    /// Creates a new builder-style object to manufacture [`CostAllocationTagStatusEntry`](crate::model::CostAllocationTagStatusEntry).
     pub fn builder() -> crate::model::cost_allocation_tag_status_entry::Builder {
         crate::model::cost_allocation_tag_status_entry::Builder::default()
     }
@@ -1787,10 +1809,13 @@ impl AsRef<str> for CostAllocationTagStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Subscriber {
     /// <p>The email address or SNS Amazon Resource Name (ARN). This depends on the <code>Type</code>. </p>
+    #[doc(hidden)]
     pub address: std::option::Option<std::string::String>,
     /// <p>The notification delivery channel. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::SubscriberType>,
     /// <p>Indicates if the subscriber accepts the notifications. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::SubscriberStatus>,
 }
 impl Subscriber {
@@ -1816,11 +1841,10 @@ impl std::fmt::Debug for Subscriber {
         formatter.finish()
     }
 }
-/// See [`Subscriber`](crate::model::Subscriber)
+/// See [`Subscriber`](crate::model::Subscriber).
 pub mod subscriber {
 
-    /// A builder for [`Subscriber`](crate::model::Subscriber)
-    #[non_exhaustive]
+    /// A builder for [`Subscriber`](crate::model::Subscriber).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) address: std::option::Option<std::string::String>,
@@ -1864,7 +1888,7 @@ pub mod subscriber {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`Subscriber`](crate::model::Subscriber)
+        /// Consumes the builder and constructs a [`Subscriber`](crate::model::Subscriber).
         pub fn build(self) -> crate::model::Subscriber {
             crate::model::Subscriber {
                 address: self.address,
@@ -1875,7 +1899,7 @@ pub mod subscriber {
     }
 }
 impl Subscriber {
-    /// Creates a new builder-style object to manufacture [`Subscriber`](crate::model::Subscriber)
+    /// Creates a new builder-style object to manufacture [`Subscriber`](crate::model::Subscriber).
     pub fn builder() -> crate::model::subscriber::Builder {
         crate::model::subscriber::Builder::default()
     }
@@ -2057,8 +2081,10 @@ impl AsRef<str> for AnomalySubscriptionFrequency {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceTag {
     /// <p>The key that's associated with the tag. </p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value that's associated with the tag. </p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl ResourceTag {
@@ -2079,11 +2105,10 @@ impl std::fmt::Debug for ResourceTag {
         formatter.finish()
     }
 }
-/// See [`ResourceTag`](crate::model::ResourceTag)
+/// See [`ResourceTag`](crate::model::ResourceTag).
 pub mod resource_tag {
 
-    /// A builder for [`ResourceTag`](crate::model::ResourceTag)
-    #[non_exhaustive]
+    /// A builder for [`ResourceTag`](crate::model::ResourceTag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -2110,7 +2135,7 @@ pub mod resource_tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceTag`](crate::model::ResourceTag)
+        /// Consumes the builder and constructs a [`ResourceTag`](crate::model::ResourceTag).
         pub fn build(self) -> crate::model::ResourceTag {
             crate::model::ResourceTag {
                 key: self.key,
@@ -2120,7 +2145,7 @@ pub mod resource_tag {
     }
 }
 impl ResourceTag {
-    /// Creates a new builder-style object to manufacture [`ResourceTag`](crate::model::ResourceTag)
+    /// Creates a new builder-style object to manufacture [`ResourceTag`](crate::model::ResourceTag).
     pub fn builder() -> crate::model::resource_tag::Builder {
         crate::model::resource_tag::Builder::default()
     }
@@ -2191,21 +2216,29 @@ impl AsRef<str> for AnomalyFeedbackType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CostCategoryReference {
     /// <p>The unique identifier for your Cost Category. </p>
+    #[doc(hidden)]
     pub cost_category_arn: std::option::Option<std::string::String>,
     /// <p>The unique name of the Cost Category.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Cost Category's effective start date.</p>
+    #[doc(hidden)]
     pub effective_start: std::option::Option<std::string::String>,
     /// <p>The Cost Category's effective end date.</p>
+    #[doc(hidden)]
     pub effective_end: std::option::Option<std::string::String>,
     /// <p>The number of rules that are associated with a specific Cost Category. </p>
+    #[doc(hidden)]
     pub number_of_rules: i32,
     /// <p>The list of processing statuses for Cost Management products for a specific cost category. </p>
+    #[doc(hidden)]
     pub processing_status:
         std::option::Option<std::vec::Vec<crate::model::CostCategoryProcessingStatus>>,
     /// <p>A list of unique cost category values in a specific cost category. </p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The default value for the cost category.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
 }
 impl CostCategoryReference {
@@ -2258,11 +2291,10 @@ impl std::fmt::Debug for CostCategoryReference {
         formatter.finish()
     }
 }
-/// See [`CostCategoryReference`](crate::model::CostCategoryReference)
+/// See [`CostCategoryReference`](crate::model::CostCategoryReference).
 pub mod cost_category_reference {
 
-    /// A builder for [`CostCategoryReference`](crate::model::CostCategoryReference)
-    #[non_exhaustive]
+    /// A builder for [`CostCategoryReference`](crate::model::CostCategoryReference).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cost_category_arn: std::option::Option<std::string::String>,
@@ -2389,7 +2421,7 @@ pub mod cost_category_reference {
             self.default_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`CostCategoryReference`](crate::model::CostCategoryReference)
+        /// Consumes the builder and constructs a [`CostCategoryReference`](crate::model::CostCategoryReference).
         pub fn build(self) -> crate::model::CostCategoryReference {
             crate::model::CostCategoryReference {
                 cost_category_arn: self.cost_category_arn,
@@ -2405,7 +2437,7 @@ pub mod cost_category_reference {
     }
 }
 impl CostCategoryReference {
-    /// Creates a new builder-style object to manufacture [`CostCategoryReference`](crate::model::CostCategoryReference)
+    /// Creates a new builder-style object to manufacture [`CostCategoryReference`](crate::model::CostCategoryReference).
     pub fn builder() -> crate::model::cost_category_reference::Builder {
         crate::model::cost_category_reference::Builder::default()
     }
@@ -2416,8 +2448,10 @@ impl CostCategoryReference {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CostCategoryProcessingStatus {
     /// <p>The Cost Management product name of the applied status. </p>
+    #[doc(hidden)]
     pub component: std::option::Option<crate::model::CostCategoryStatusComponent>,
     /// <p>The process status for a specific cost category. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CostCategoryStatus>,
 }
 impl CostCategoryProcessingStatus {
@@ -2438,11 +2472,10 @@ impl std::fmt::Debug for CostCategoryProcessingStatus {
         formatter.finish()
     }
 }
-/// See [`CostCategoryProcessingStatus`](crate::model::CostCategoryProcessingStatus)
+/// See [`CostCategoryProcessingStatus`](crate::model::CostCategoryProcessingStatus).
 pub mod cost_category_processing_status {
 
-    /// A builder for [`CostCategoryProcessingStatus`](crate::model::CostCategoryProcessingStatus)
-    #[non_exhaustive]
+    /// A builder for [`CostCategoryProcessingStatus`](crate::model::CostCategoryProcessingStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) component: std::option::Option<crate::model::CostCategoryStatusComponent>,
@@ -2475,7 +2508,7 @@ pub mod cost_category_processing_status {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CostCategoryProcessingStatus`](crate::model::CostCategoryProcessingStatus)
+        /// Consumes the builder and constructs a [`CostCategoryProcessingStatus`](crate::model::CostCategoryProcessingStatus).
         pub fn build(self) -> crate::model::CostCategoryProcessingStatus {
             crate::model::CostCategoryProcessingStatus {
                 component: self.component,
@@ -2485,7 +2518,7 @@ pub mod cost_category_processing_status {
     }
 }
 impl CostCategoryProcessingStatus {
-    /// Creates a new builder-style object to manufacture [`CostCategoryProcessingStatus`](crate::model::CostCategoryProcessingStatus)
+    /// Creates a new builder-style object to manufacture [`CostCategoryProcessingStatus`](crate::model::CostCategoryProcessingStatus).
     pub fn builder() -> crate::model::cost_category_processing_status::Builder {
         crate::model::cost_category_processing_status::Builder::default()
     }
@@ -2602,10 +2635,13 @@ impl AsRef<str> for CostCategoryStatusComponent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CostAllocationTag {
     /// <p>The key for the cost allocation tag. </p>
+    #[doc(hidden)]
     pub tag_key: std::option::Option<std::string::String>,
     /// <p>The type of cost allocation tag. You can use <code>AWSGenerated</code> or <code>UserDefined</code> type tags. <code>AWSGenerated</code> type tags are tags that Amazon Web Services defines and applies to support Amazon Web Services resources for cost allocation purposes. <code>UserDefined</code> type tags are tags that you define, create, and apply to resources. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::CostAllocationTagType>,
     /// <p>The status of a cost allocation tag. </p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CostAllocationTagStatus>,
 }
 impl CostAllocationTag {
@@ -2631,11 +2667,10 @@ impl std::fmt::Debug for CostAllocationTag {
         formatter.finish()
     }
 }
-/// See [`CostAllocationTag`](crate::model::CostAllocationTag)
+/// See [`CostAllocationTag`](crate::model::CostAllocationTag).
 pub mod cost_allocation_tag {
 
-    /// A builder for [`CostAllocationTag`](crate::model::CostAllocationTag)
-    #[non_exhaustive]
+    /// A builder for [`CostAllocationTag`](crate::model::CostAllocationTag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag_key: std::option::Option<std::string::String>,
@@ -2679,7 +2714,7 @@ pub mod cost_allocation_tag {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CostAllocationTag`](crate::model::CostAllocationTag)
+        /// Consumes the builder and constructs a [`CostAllocationTag`](crate::model::CostAllocationTag).
         pub fn build(self) -> crate::model::CostAllocationTag {
             crate::model::CostAllocationTag {
                 tag_key: self.tag_key,
@@ -2690,7 +2725,7 @@ pub mod cost_allocation_tag {
     }
 }
 impl CostAllocationTag {
-    /// Creates a new builder-style object to manufacture [`CostAllocationTag`](crate::model::CostAllocationTag)
+    /// Creates a new builder-style object to manufacture [`CostAllocationTag`](crate::model::CostAllocationTag).
     pub fn builder() -> crate::model::cost_allocation_tag::Builder {
         crate::model::cost_allocation_tag::Builder::default()
     }
@@ -2756,12 +2791,16 @@ impl AsRef<str> for CostAllocationTagType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ForecastResult {
     /// <p>The period of time that the forecast covers.</p>
+    #[doc(hidden)]
     pub time_period: std::option::Option<crate::model::DateInterval>,
     /// <p>The mean value of the forecast.</p>
+    #[doc(hidden)]
     pub mean_value: std::option::Option<std::string::String>,
     /// <p>The lower limit for the prediction interval. </p>
+    #[doc(hidden)]
     pub prediction_interval_lower_bound: std::option::Option<std::string::String>,
     /// <p>The upper limit for the prediction interval. </p>
+    #[doc(hidden)]
     pub prediction_interval_upper_bound: std::option::Option<std::string::String>,
 }
 impl ForecastResult {
@@ -2798,11 +2837,10 @@ impl std::fmt::Debug for ForecastResult {
         formatter.finish()
     }
 }
-/// See [`ForecastResult`](crate::model::ForecastResult)
+/// See [`ForecastResult`](crate::model::ForecastResult).
 pub mod forecast_result {
 
-    /// A builder for [`ForecastResult`](crate::model::ForecastResult)
-    #[non_exhaustive]
+    /// A builder for [`ForecastResult`](crate::model::ForecastResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) time_period: std::option::Option<crate::model::DateInterval>,
@@ -2866,7 +2904,7 @@ pub mod forecast_result {
             self.prediction_interval_upper_bound = input;
             self
         }
-        /// Consumes the builder and constructs a [`ForecastResult`](crate::model::ForecastResult)
+        /// Consumes the builder and constructs a [`ForecastResult`](crate::model::ForecastResult).
         pub fn build(self) -> crate::model::ForecastResult {
             crate::model::ForecastResult {
                 time_period: self.time_period,
@@ -2878,7 +2916,7 @@ pub mod forecast_result {
     }
 }
 impl ForecastResult {
-    /// Creates a new builder-style object to manufacture [`ForecastResult`](crate::model::ForecastResult)
+    /// Creates a new builder-style object to manufacture [`ForecastResult`](crate::model::ForecastResult).
     pub fn builder() -> crate::model::forecast_result::Builder {
         crate::model::forecast_result::Builder::default()
     }
@@ -2889,8 +2927,10 @@ impl ForecastResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DateInterval {
     /// <p>The beginning of the time period. The start date is inclusive. For example, if <code>start</code> is <code>2017-01-01</code>, Amazon Web Services retrieves cost and usage data starting at <code>2017-01-01</code> up to the end date. The start date must be equal to or no later than the current date to avoid a validation error.</p>
+    #[doc(hidden)]
     pub start: std::option::Option<std::string::String>,
     /// <p>The end of the time period. The end date is exclusive. For example, if <code>end</code> is <code>2017-05-01</code>, Amazon Web Services retrieves cost and usage data from the start date up to, but not including, <code>2017-05-01</code>.</p>
+    #[doc(hidden)]
     pub end: std::option::Option<std::string::String>,
 }
 impl DateInterval {
@@ -2911,11 +2951,10 @@ impl std::fmt::Debug for DateInterval {
         formatter.finish()
     }
 }
-/// See [`DateInterval`](crate::model::DateInterval)
+/// See [`DateInterval`](crate::model::DateInterval).
 pub mod date_interval {
 
-    /// A builder for [`DateInterval`](crate::model::DateInterval)
-    #[non_exhaustive]
+    /// A builder for [`DateInterval`](crate::model::DateInterval).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start: std::option::Option<std::string::String>,
@@ -2942,7 +2981,7 @@ pub mod date_interval {
             self.end = input;
             self
         }
-        /// Consumes the builder and constructs a [`DateInterval`](crate::model::DateInterval)
+        /// Consumes the builder and constructs a [`DateInterval`](crate::model::DateInterval).
         pub fn build(self) -> crate::model::DateInterval {
             crate::model::DateInterval {
                 start: self.start,
@@ -2952,7 +2991,7 @@ pub mod date_interval {
     }
 }
 impl DateInterval {
-    /// Creates a new builder-style object to manufacture [`DateInterval`](crate::model::DateInterval)
+    /// Creates a new builder-style object to manufacture [`DateInterval`](crate::model::DateInterval).
     pub fn builder() -> crate::model::date_interval::Builder {
         crate::model::date_interval::Builder::default()
     }
@@ -2963,8 +3002,10 @@ impl DateInterval {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MetricValue {
     /// <p>The actual number that represents the metric.</p>
+    #[doc(hidden)]
     pub amount: std::option::Option<std::string::String>,
     /// <p>The unit that the metric is given in.</p>
+    #[doc(hidden)]
     pub unit: std::option::Option<std::string::String>,
 }
 impl MetricValue {
@@ -2985,11 +3026,10 @@ impl std::fmt::Debug for MetricValue {
         formatter.finish()
     }
 }
-/// See [`MetricValue`](crate::model::MetricValue)
+/// See [`MetricValue`](crate::model::MetricValue).
 pub mod metric_value {
 
-    /// A builder for [`MetricValue`](crate::model::MetricValue)
-    #[non_exhaustive]
+    /// A builder for [`MetricValue`](crate::model::MetricValue).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) amount: std::option::Option<std::string::String>,
@@ -3016,7 +3056,7 @@ pub mod metric_value {
             self.unit = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetricValue`](crate::model::MetricValue)
+        /// Consumes the builder and constructs a [`MetricValue`](crate::model::MetricValue).
         pub fn build(self) -> crate::model::MetricValue {
             crate::model::MetricValue {
                 amount: self.amount,
@@ -3026,7 +3066,7 @@ pub mod metric_value {
     }
 }
 impl MetricValue {
-    /// Creates a new builder-style object to manufacture [`MetricValue`](crate::model::MetricValue)
+    /// Creates a new builder-style object to manufacture [`MetricValue`](crate::model::MetricValue).
     pub fn builder() -> crate::model::metric_value::Builder {
         crate::model::metric_value::Builder::default()
     }
@@ -3179,8 +3219,10 @@ impl AsRef<str> for Metric {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SortDefinition {
     /// <p>The key that's used to sort the data.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The order that's used to sort the data.</p>
+    #[doc(hidden)]
     pub sort_order: std::option::Option<crate::model::SortOrder>,
 }
 impl SortDefinition {
@@ -3201,11 +3243,10 @@ impl std::fmt::Debug for SortDefinition {
         formatter.finish()
     }
 }
-/// See [`SortDefinition`](crate::model::SortDefinition)
+/// See [`SortDefinition`](crate::model::SortDefinition).
 pub mod sort_definition {
 
-    /// A builder for [`SortDefinition`](crate::model::SortDefinition)
-    #[non_exhaustive]
+    /// A builder for [`SortDefinition`](crate::model::SortDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -3235,7 +3276,7 @@ pub mod sort_definition {
             self.sort_order = input;
             self
         }
-        /// Consumes the builder and constructs a [`SortDefinition`](crate::model::SortDefinition)
+        /// Consumes the builder and constructs a [`SortDefinition`](crate::model::SortDefinition).
         pub fn build(self) -> crate::model::SortDefinition {
             crate::model::SortDefinition {
                 key: self.key,
@@ -3245,7 +3286,7 @@ pub mod sort_definition {
     }
 }
 impl SortDefinition {
-    /// Creates a new builder-style object to manufacture [`SortDefinition`](crate::model::SortDefinition)
+    /// Creates a new builder-style object to manufacture [`SortDefinition`](crate::model::SortDefinition).
     pub fn builder() -> crate::model::sort_definition::Builder {
         crate::model::sort_definition::Builder::default()
     }
@@ -3311,10 +3352,13 @@ impl AsRef<str> for SortOrder {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SavingsPlansUtilizationAggregates {
     /// <p>A ratio of your effectiveness of using existing Savings Plans to apply to workloads that are Savings Plans eligible.</p>
+    #[doc(hidden)]
     pub utilization: std::option::Option<crate::model::SavingsPlansUtilization>,
     /// <p>The amount that's saved by using existing Savings Plans. Savings returns both net savings from Savings Plans and also the <code>onDemandCostEquivalent</code> of the Savings Plans when considering the utilization rate.</p>
+    #[doc(hidden)]
     pub savings: std::option::Option<crate::model::SavingsPlansSavings>,
     /// <p>The total amortized commitment for a Savings Plans. This includes the sum of the upfront and recurring Savings Plans fees.</p>
+    #[doc(hidden)]
     pub amortized_commitment: std::option::Option<crate::model::SavingsPlansAmortizedCommitment>,
 }
 impl SavingsPlansUtilizationAggregates {
@@ -3342,11 +3386,10 @@ impl std::fmt::Debug for SavingsPlansUtilizationAggregates {
         formatter.finish()
     }
 }
-/// See [`SavingsPlansUtilizationAggregates`](crate::model::SavingsPlansUtilizationAggregates)
+/// See [`SavingsPlansUtilizationAggregates`](crate::model::SavingsPlansUtilizationAggregates).
 pub mod savings_plans_utilization_aggregates {
 
-    /// A builder for [`SavingsPlansUtilizationAggregates`](crate::model::SavingsPlansUtilizationAggregates)
-    #[non_exhaustive]
+    /// A builder for [`SavingsPlansUtilizationAggregates`](crate::model::SavingsPlansUtilizationAggregates).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) utilization: std::option::Option<crate::model::SavingsPlansUtilization>,
@@ -3397,7 +3440,7 @@ pub mod savings_plans_utilization_aggregates {
             self.amortized_commitment = input;
             self
         }
-        /// Consumes the builder and constructs a [`SavingsPlansUtilizationAggregates`](crate::model::SavingsPlansUtilizationAggregates)
+        /// Consumes the builder and constructs a [`SavingsPlansUtilizationAggregates`](crate::model::SavingsPlansUtilizationAggregates).
         pub fn build(self) -> crate::model::SavingsPlansUtilizationAggregates {
             crate::model::SavingsPlansUtilizationAggregates {
                 utilization: self.utilization,
@@ -3408,7 +3451,7 @@ pub mod savings_plans_utilization_aggregates {
     }
 }
 impl SavingsPlansUtilizationAggregates {
-    /// Creates a new builder-style object to manufacture [`SavingsPlansUtilizationAggregates`](crate::model::SavingsPlansUtilizationAggregates)
+    /// Creates a new builder-style object to manufacture [`SavingsPlansUtilizationAggregates`](crate::model::SavingsPlansUtilizationAggregates).
     pub fn builder() -> crate::model::savings_plans_utilization_aggregates::Builder {
         crate::model::savings_plans_utilization_aggregates::Builder::default()
     }
@@ -3419,10 +3462,13 @@ impl SavingsPlansUtilizationAggregates {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SavingsPlansAmortizedCommitment {
     /// <p>The amortized amount of your Savings Plans commitment that was purchased with either a <code>Partial</code> or a <code>NoUpfront</code>.</p>
+    #[doc(hidden)]
     pub amortized_recurring_commitment: std::option::Option<std::string::String>,
     /// <p>The amortized amount of your Savings Plans commitment that was purchased with an <code>Upfront</code> or <code>PartialUpfront</code> Savings Plans.</p>
+    #[doc(hidden)]
     pub amortized_upfront_commitment: std::option::Option<std::string::String>,
     /// <p>The total amortized amount of your Savings Plans commitment, regardless of your Savings Plans purchase method. </p>
+    #[doc(hidden)]
     pub total_amortized_commitment: std::option::Option<std::string::String>,
 }
 impl SavingsPlansAmortizedCommitment {
@@ -3457,11 +3503,10 @@ impl std::fmt::Debug for SavingsPlansAmortizedCommitment {
         formatter.finish()
     }
 }
-/// See [`SavingsPlansAmortizedCommitment`](crate::model::SavingsPlansAmortizedCommitment)
+/// See [`SavingsPlansAmortizedCommitment`](crate::model::SavingsPlansAmortizedCommitment).
 pub mod savings_plans_amortized_commitment {
 
-    /// A builder for [`SavingsPlansAmortizedCommitment`](crate::model::SavingsPlansAmortizedCommitment)
-    #[non_exhaustive]
+    /// A builder for [`SavingsPlansAmortizedCommitment`](crate::model::SavingsPlansAmortizedCommitment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) amortized_recurring_commitment: std::option::Option<std::string::String>,
@@ -3514,7 +3559,7 @@ pub mod savings_plans_amortized_commitment {
             self.total_amortized_commitment = input;
             self
         }
-        /// Consumes the builder and constructs a [`SavingsPlansAmortizedCommitment`](crate::model::SavingsPlansAmortizedCommitment)
+        /// Consumes the builder and constructs a [`SavingsPlansAmortizedCommitment`](crate::model::SavingsPlansAmortizedCommitment).
         pub fn build(self) -> crate::model::SavingsPlansAmortizedCommitment {
             crate::model::SavingsPlansAmortizedCommitment {
                 amortized_recurring_commitment: self.amortized_recurring_commitment,
@@ -3525,7 +3570,7 @@ pub mod savings_plans_amortized_commitment {
     }
 }
 impl SavingsPlansAmortizedCommitment {
-    /// Creates a new builder-style object to manufacture [`SavingsPlansAmortizedCommitment`](crate::model::SavingsPlansAmortizedCommitment)
+    /// Creates a new builder-style object to manufacture [`SavingsPlansAmortizedCommitment`](crate::model::SavingsPlansAmortizedCommitment).
     pub fn builder() -> crate::model::savings_plans_amortized_commitment::Builder {
         crate::model::savings_plans_amortized_commitment::Builder::default()
     }
@@ -3536,8 +3581,10 @@ impl SavingsPlansAmortizedCommitment {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SavingsPlansSavings {
     /// <p>The savings amount that you're accumulating for the usage that's covered by a Savings Plans, when compared to the On-Demand equivalent of the same usage.</p>
+    #[doc(hidden)]
     pub net_savings: std::option::Option<std::string::String>,
     /// <p>How much the amount that the usage would have cost if it was accrued at the On-Demand rate.</p>
+    #[doc(hidden)]
     pub on_demand_cost_equivalent: std::option::Option<std::string::String>,
 }
 impl SavingsPlansSavings {
@@ -3558,11 +3605,10 @@ impl std::fmt::Debug for SavingsPlansSavings {
         formatter.finish()
     }
 }
-/// See [`SavingsPlansSavings`](crate::model::SavingsPlansSavings)
+/// See [`SavingsPlansSavings`](crate::model::SavingsPlansSavings).
 pub mod savings_plans_savings {
 
-    /// A builder for [`SavingsPlansSavings`](crate::model::SavingsPlansSavings)
-    #[non_exhaustive]
+    /// A builder for [`SavingsPlansSavings`](crate::model::SavingsPlansSavings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) net_savings: std::option::Option<std::string::String>,
@@ -3592,7 +3638,7 @@ pub mod savings_plans_savings {
             self.on_demand_cost_equivalent = input;
             self
         }
-        /// Consumes the builder and constructs a [`SavingsPlansSavings`](crate::model::SavingsPlansSavings)
+        /// Consumes the builder and constructs a [`SavingsPlansSavings`](crate::model::SavingsPlansSavings).
         pub fn build(self) -> crate::model::SavingsPlansSavings {
             crate::model::SavingsPlansSavings {
                 net_savings: self.net_savings,
@@ -3602,7 +3648,7 @@ pub mod savings_plans_savings {
     }
 }
 impl SavingsPlansSavings {
-    /// Creates a new builder-style object to manufacture [`SavingsPlansSavings`](crate::model::SavingsPlansSavings)
+    /// Creates a new builder-style object to manufacture [`SavingsPlansSavings`](crate::model::SavingsPlansSavings).
     pub fn builder() -> crate::model::savings_plans_savings::Builder {
         crate::model::savings_plans_savings::Builder::default()
     }
@@ -3613,12 +3659,16 @@ impl SavingsPlansSavings {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SavingsPlansUtilization {
     /// <p>The total amount of Savings Plans commitment that's been purchased in an account (or set of accounts).</p>
+    #[doc(hidden)]
     pub total_commitment: std::option::Option<std::string::String>,
     /// <p>The amount of your Savings Plans commitment that was consumed from Savings Plans eligible usage in a specific period.</p>
+    #[doc(hidden)]
     pub used_commitment: std::option::Option<std::string::String>,
     /// <p>The amount of your Savings Plans commitment that wasn't consumed from Savings Plans eligible usage in a specific period.</p>
+    #[doc(hidden)]
     pub unused_commitment: std::option::Option<std::string::String>,
     /// <p>The amount of <code>UsedCommitment</code> divided by the <code>TotalCommitment</code> for your Savings Plans.</p>
+    #[doc(hidden)]
     pub utilization_percentage: std::option::Option<std::string::String>,
 }
 impl SavingsPlansUtilization {
@@ -3649,11 +3699,10 @@ impl std::fmt::Debug for SavingsPlansUtilization {
         formatter.finish()
     }
 }
-/// See [`SavingsPlansUtilization`](crate::model::SavingsPlansUtilization)
+/// See [`SavingsPlansUtilization`](crate::model::SavingsPlansUtilization).
 pub mod savings_plans_utilization {
 
-    /// A builder for [`SavingsPlansUtilization`](crate::model::SavingsPlansUtilization)
-    #[non_exhaustive]
+    /// A builder for [`SavingsPlansUtilization`](crate::model::SavingsPlansUtilization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_commitment: std::option::Option<std::string::String>,
@@ -3714,7 +3763,7 @@ pub mod savings_plans_utilization {
             self.utilization_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`SavingsPlansUtilization`](crate::model::SavingsPlansUtilization)
+        /// Consumes the builder and constructs a [`SavingsPlansUtilization`](crate::model::SavingsPlansUtilization).
         pub fn build(self) -> crate::model::SavingsPlansUtilization {
             crate::model::SavingsPlansUtilization {
                 total_commitment: self.total_commitment,
@@ -3726,7 +3775,7 @@ pub mod savings_plans_utilization {
     }
 }
 impl SavingsPlansUtilization {
-    /// Creates a new builder-style object to manufacture [`SavingsPlansUtilization`](crate::model::SavingsPlansUtilization)
+    /// Creates a new builder-style object to manufacture [`SavingsPlansUtilization`](crate::model::SavingsPlansUtilization).
     pub fn builder() -> crate::model::savings_plans_utilization::Builder {
         crate::model::savings_plans_utilization::Builder::default()
     }
@@ -3737,15 +3786,20 @@ impl SavingsPlansUtilization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SavingsPlansUtilizationDetail {
     /// <p>The unique Amazon Resource Name (ARN) for a particular Savings Plan.</p>
+    #[doc(hidden)]
     pub savings_plan_arn: std::option::Option<std::string::String>,
     /// <p>The attribute that applies to a specific <code>Dimension</code>.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>A ratio of your effectiveness of using existing Savings Plans to apply to workloads that are Savings Plans eligible.</p>
+    #[doc(hidden)]
     pub utilization: std::option::Option<crate::model::SavingsPlansUtilization>,
     /// <p>The amount saved by using existing Savings Plans. Savings returns both net savings from savings plans and also the <code>onDemandCostEquivalent</code> of the Savings Plans when considering the utilization rate.</p>
+    #[doc(hidden)]
     pub savings: std::option::Option<crate::model::SavingsPlansSavings>,
     /// <p>The total amortized commitment for a Savings Plans. Includes the sum of the upfront and recurring Savings Plans fees.</p>
+    #[doc(hidden)]
     pub amortized_commitment: std::option::Option<crate::model::SavingsPlansAmortizedCommitment>,
 }
 impl SavingsPlansUtilizationDetail {
@@ -3786,11 +3840,10 @@ impl std::fmt::Debug for SavingsPlansUtilizationDetail {
         formatter.finish()
     }
 }
-/// See [`SavingsPlansUtilizationDetail`](crate::model::SavingsPlansUtilizationDetail)
+/// See [`SavingsPlansUtilizationDetail`](crate::model::SavingsPlansUtilizationDetail).
 pub mod savings_plans_utilization_detail {
 
-    /// A builder for [`SavingsPlansUtilizationDetail`](crate::model::SavingsPlansUtilizationDetail)
-    #[non_exhaustive]
+    /// A builder for [`SavingsPlansUtilizationDetail`](crate::model::SavingsPlansUtilizationDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) savings_plan_arn: std::option::Option<std::string::String>,
@@ -3883,7 +3936,7 @@ pub mod savings_plans_utilization_detail {
             self.amortized_commitment = input;
             self
         }
-        /// Consumes the builder and constructs a [`SavingsPlansUtilizationDetail`](crate::model::SavingsPlansUtilizationDetail)
+        /// Consumes the builder and constructs a [`SavingsPlansUtilizationDetail`](crate::model::SavingsPlansUtilizationDetail).
         pub fn build(self) -> crate::model::SavingsPlansUtilizationDetail {
             crate::model::SavingsPlansUtilizationDetail {
                 savings_plan_arn: self.savings_plan_arn,
@@ -3896,7 +3949,7 @@ pub mod savings_plans_utilization_detail {
     }
 }
 impl SavingsPlansUtilizationDetail {
-    /// Creates a new builder-style object to manufacture [`SavingsPlansUtilizationDetail`](crate::model::SavingsPlansUtilizationDetail)
+    /// Creates a new builder-style object to manufacture [`SavingsPlansUtilizationDetail`](crate::model::SavingsPlansUtilizationDetail).
     pub fn builder() -> crate::model::savings_plans_utilization_detail::Builder {
         crate::model::savings_plans_utilization_detail::Builder::default()
     }
@@ -3975,12 +4028,16 @@ impl AsRef<str> for SavingsPlansDataType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SavingsPlansUtilizationByTime {
     /// <p>The time period of the request. </p>
+    #[doc(hidden)]
     pub time_period: std::option::Option<crate::model::DateInterval>,
     /// <p>A ratio of your effectiveness of using existing Savings Plans to apply to workloads that are Savings Plans eligible.</p>
+    #[doc(hidden)]
     pub utilization: std::option::Option<crate::model::SavingsPlansUtilization>,
     /// <p>The amount that's saved by using existing Savings Plans. Savings returns both net savings from Savings Plans and also the <code>onDemandCostEquivalent</code> of the Savings Plans when considering the utilization rate.</p>
+    #[doc(hidden)]
     pub savings: std::option::Option<crate::model::SavingsPlansSavings>,
     /// <p>The total amortized commitment for a Savings Plans. This includes the sum of the upfront and recurring Savings Plans fees.</p>
+    #[doc(hidden)]
     pub amortized_commitment: std::option::Option<crate::model::SavingsPlansAmortizedCommitment>,
 }
 impl SavingsPlansUtilizationByTime {
@@ -4013,11 +4070,10 @@ impl std::fmt::Debug for SavingsPlansUtilizationByTime {
         formatter.finish()
     }
 }
-/// See [`SavingsPlansUtilizationByTime`](crate::model::SavingsPlansUtilizationByTime)
+/// See [`SavingsPlansUtilizationByTime`](crate::model::SavingsPlansUtilizationByTime).
 pub mod savings_plans_utilization_by_time {
 
-    /// A builder for [`SavingsPlansUtilizationByTime`](crate::model::SavingsPlansUtilizationByTime)
-    #[non_exhaustive]
+    /// A builder for [`SavingsPlansUtilizationByTime`](crate::model::SavingsPlansUtilizationByTime).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) time_period: std::option::Option<crate::model::DateInterval>,
@@ -4082,7 +4138,7 @@ pub mod savings_plans_utilization_by_time {
             self.amortized_commitment = input;
             self
         }
-        /// Consumes the builder and constructs a [`SavingsPlansUtilizationByTime`](crate::model::SavingsPlansUtilizationByTime)
+        /// Consumes the builder and constructs a [`SavingsPlansUtilizationByTime`](crate::model::SavingsPlansUtilizationByTime).
         pub fn build(self) -> crate::model::SavingsPlansUtilizationByTime {
             crate::model::SavingsPlansUtilizationByTime {
                 time_period: self.time_period,
@@ -4094,7 +4150,7 @@ pub mod savings_plans_utilization_by_time {
     }
 }
 impl SavingsPlansUtilizationByTime {
-    /// Creates a new builder-style object to manufacture [`SavingsPlansUtilizationByTime`](crate::model::SavingsPlansUtilizationByTime)
+    /// Creates a new builder-style object to manufacture [`SavingsPlansUtilizationByTime`](crate::model::SavingsPlansUtilizationByTime).
     pub fn builder() -> crate::model::savings_plans_utilization_by_time::Builder {
         crate::model::savings_plans_utilization_by_time::Builder::default()
     }
@@ -4105,19 +4161,26 @@ impl SavingsPlansUtilizationByTime {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SavingsPlansPurchaseRecommendation {
     /// <p>The account scope that you want your recommendations for. Amazon Web Services calculates recommendations that include the management account and member accounts if the value is set to <code>PAYER</code>. If the value is <code>LINKED</code>, recommendations are calculated for individual member accounts only.</p>
+    #[doc(hidden)]
     pub account_scope: std::option::Option<crate::model::AccountScope>,
     /// <p>The requested Savings Plans recommendation type.</p>
+    #[doc(hidden)]
     pub savings_plans_type: std::option::Option<crate::model::SupportedSavingsPlansType>,
     /// <p>The Savings Plans recommendation term in years. It's used to generate the recommendation.</p>
+    #[doc(hidden)]
     pub term_in_years: std::option::Option<crate::model::TermInYears>,
     /// <p>The payment option that's used to generate the recommendation.</p>
+    #[doc(hidden)]
     pub payment_option: std::option::Option<crate::model::PaymentOption>,
     /// <p>The lookback period in days that's used to generate the recommendation.</p>
+    #[doc(hidden)]
     pub lookback_period_in_days: std::option::Option<crate::model::LookbackPeriodInDays>,
     /// <p>Details for the Savings Plans that we recommend that you purchase to cover existing Savings Plans eligible workloads.</p>
+    #[doc(hidden)]
     pub savings_plans_purchase_recommendation_details:
         std::option::Option<std::vec::Vec<crate::model::SavingsPlansPurchaseRecommendationDetail>>,
     /// <p>Summary metrics for your Savings Plans Recommendations. </p>
+    #[doc(hidden)]
     pub savings_plans_purchase_recommendation_summary:
         std::option::Option<crate::model::SavingsPlansPurchaseRecommendationSummary>,
 }
@@ -4179,11 +4242,10 @@ impl std::fmt::Debug for SavingsPlansPurchaseRecommendation {
         formatter.finish()
     }
 }
-/// See [`SavingsPlansPurchaseRecommendation`](crate::model::SavingsPlansPurchaseRecommendation)
+/// See [`SavingsPlansPurchaseRecommendation`](crate::model::SavingsPlansPurchaseRecommendation).
 pub mod savings_plans_purchase_recommendation {
 
-    /// A builder for [`SavingsPlansPurchaseRecommendation`](crate::model::SavingsPlansPurchaseRecommendation)
-    #[non_exhaustive]
+    /// A builder for [`SavingsPlansPurchaseRecommendation`](crate::model::SavingsPlansPurchaseRecommendation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_scope: std::option::Option<crate::model::AccountScope>,
@@ -4311,7 +4373,7 @@ pub mod savings_plans_purchase_recommendation {
             self.savings_plans_purchase_recommendation_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`SavingsPlansPurchaseRecommendation`](crate::model::SavingsPlansPurchaseRecommendation)
+        /// Consumes the builder and constructs a [`SavingsPlansPurchaseRecommendation`](crate::model::SavingsPlansPurchaseRecommendation).
         pub fn build(self) -> crate::model::SavingsPlansPurchaseRecommendation {
             crate::model::SavingsPlansPurchaseRecommendation {
                 account_scope: self.account_scope,
@@ -4328,7 +4390,7 @@ pub mod savings_plans_purchase_recommendation {
     }
 }
 impl SavingsPlansPurchaseRecommendation {
-    /// Creates a new builder-style object to manufacture [`SavingsPlansPurchaseRecommendation`](crate::model::SavingsPlansPurchaseRecommendation)
+    /// Creates a new builder-style object to manufacture [`SavingsPlansPurchaseRecommendation`](crate::model::SavingsPlansPurchaseRecommendation).
     pub fn builder() -> crate::model::savings_plans_purchase_recommendation::Builder {
         crate::model::savings_plans_purchase_recommendation::Builder::default()
     }
@@ -4339,26 +4401,37 @@ impl SavingsPlansPurchaseRecommendation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SavingsPlansPurchaseRecommendationSummary {
     /// <p>The estimated return on investment that's based on the recommended Savings Plans and estimated savings.</p>
+    #[doc(hidden)]
     pub estimated_roi: std::option::Option<std::string::String>,
     /// <p>The currency code that Amazon Web Services used to generate the recommendations and present potential savings.</p>
+    #[doc(hidden)]
     pub currency_code: std::option::Option<std::string::String>,
     /// <p>The estimated total cost of the usage after purchasing the recommended Savings Plans. This is a sum of the cost of Savings Plans during this term, and the remaining On-Demand usage.</p>
+    #[doc(hidden)]
     pub estimated_total_cost: std::option::Option<std::string::String>,
     /// <p>The current total on demand spend of the applicable usage types over the lookback period.</p>
+    #[doc(hidden)]
     pub current_on_demand_spend: std::option::Option<std::string::String>,
     /// <p>The estimated total savings over the lookback period, based on the purchase of the recommended Savings Plans.</p>
+    #[doc(hidden)]
     pub estimated_savings_amount: std::option::Option<std::string::String>,
     /// <p>The aggregate number of Savings Plans recommendations that exist for your account.</p>
+    #[doc(hidden)]
     pub total_recommendation_count: std::option::Option<std::string::String>,
     /// <p>The recommended Savings Plans cost on a daily (24 hourly) basis.</p>
+    #[doc(hidden)]
     pub daily_commitment_to_purchase: std::option::Option<std::string::String>,
     /// <p>The recommended hourly commitment that's based on the recommendation parameters.</p>
+    #[doc(hidden)]
     pub hourly_commitment_to_purchase: std::option::Option<std::string::String>,
     /// <p>The estimated savings relative to the total cost of On-Demand usage, over the lookback period. This is calculated as <code>estimatedSavingsAmount</code>/ <code>CurrentOnDemandSpend</code>*100.</p>
+    #[doc(hidden)]
     pub estimated_savings_percentage: std::option::Option<std::string::String>,
     /// <p>The estimated monthly savings amount that's based on the recommended Savings Plans purchase.</p>
+    #[doc(hidden)]
     pub estimated_monthly_savings_amount: std::option::Option<std::string::String>,
     /// <p>The estimated On-Demand costs you expect with no additional commitment. It's based on your usage of the selected time period and the Savings Plans you own. </p>
+    #[doc(hidden)]
     pub estimated_on_demand_cost_with_current_commitment: std::option::Option<std::string::String>,
 }
 impl SavingsPlansPurchaseRecommendationSummary {
@@ -4443,11 +4516,10 @@ impl std::fmt::Debug for SavingsPlansPurchaseRecommendationSummary {
         formatter.finish()
     }
 }
-/// See [`SavingsPlansPurchaseRecommendationSummary`](crate::model::SavingsPlansPurchaseRecommendationSummary)
+/// See [`SavingsPlansPurchaseRecommendationSummary`](crate::model::SavingsPlansPurchaseRecommendationSummary).
 pub mod savings_plans_purchase_recommendation_summary {
 
-    /// A builder for [`SavingsPlansPurchaseRecommendationSummary`](crate::model::SavingsPlansPurchaseRecommendationSummary)
-    #[non_exhaustive]
+    /// A builder for [`SavingsPlansPurchaseRecommendationSummary`](crate::model::SavingsPlansPurchaseRecommendationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) estimated_roi: std::option::Option<std::string::String>,
@@ -4622,7 +4694,7 @@ pub mod savings_plans_purchase_recommendation_summary {
             self.estimated_on_demand_cost_with_current_commitment = input;
             self
         }
-        /// Consumes the builder and constructs a [`SavingsPlansPurchaseRecommendationSummary`](crate::model::SavingsPlansPurchaseRecommendationSummary)
+        /// Consumes the builder and constructs a [`SavingsPlansPurchaseRecommendationSummary`](crate::model::SavingsPlansPurchaseRecommendationSummary).
         pub fn build(self) -> crate::model::SavingsPlansPurchaseRecommendationSummary {
             crate::model::SavingsPlansPurchaseRecommendationSummary {
                 estimated_roi: self.estimated_roi,
@@ -4642,7 +4714,7 @@ pub mod savings_plans_purchase_recommendation_summary {
     }
 }
 impl SavingsPlansPurchaseRecommendationSummary {
-    /// Creates a new builder-style object to manufacture [`SavingsPlansPurchaseRecommendationSummary`](crate::model::SavingsPlansPurchaseRecommendationSummary)
+    /// Creates a new builder-style object to manufacture [`SavingsPlansPurchaseRecommendationSummary`](crate::model::SavingsPlansPurchaseRecommendationSummary).
     pub fn builder() -> crate::model::savings_plans_purchase_recommendation_summary::Builder {
         crate::model::savings_plans_purchase_recommendation_summary::Builder::default()
     }
@@ -4653,36 +4725,52 @@ impl SavingsPlansPurchaseRecommendationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SavingsPlansPurchaseRecommendationDetail {
     /// <p>Details for your recommended Savings Plans.</p>
+    #[doc(hidden)]
     pub savings_plans_details: std::option::Option<crate::model::SavingsPlansDetails>,
     /// <p>The <code>AccountID</code> the recommendation is generated for.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>The upfront cost of the recommended Savings Plans, based on the selected payment option.</p>
+    #[doc(hidden)]
     pub upfront_cost: std::option::Option<std::string::String>,
     /// <p>The estimated return on investment that's based on the recommended Savings Plans that you purchased. This is calculated as <code>estimatedSavingsAmount</code>/ <code>estimatedSPCost</code>*100.</p>
+    #[doc(hidden)]
     pub estimated_roi: std::option::Option<std::string::String>,
     /// <p>The currency code that Amazon Web Services used to generate the recommendations and present potential savings.</p>
+    #[doc(hidden)]
     pub currency_code: std::option::Option<std::string::String>,
     /// <p>The cost of the recommended Savings Plans over the length of the lookback period.</p>
+    #[doc(hidden)]
     pub estimated_sp_cost: std::option::Option<std::string::String>,
     /// <p>The remaining On-Demand cost estimated to not be covered by the recommended Savings Plans, over the length of the lookback period.</p>
+    #[doc(hidden)]
     pub estimated_on_demand_cost: std::option::Option<std::string::String>,
     /// <p> The estimated On-Demand costs you expect with no additional commitment, based on your usage of the selected time period and the Savings Plans you own. </p>
+    #[doc(hidden)]
     pub estimated_on_demand_cost_with_current_commitment: std::option::Option<std::string::String>,
     /// <p>The estimated savings amount that's based on the recommended Savings Plans over the length of the lookback period.</p>
+    #[doc(hidden)]
     pub estimated_savings_amount: std::option::Option<std::string::String>,
     /// <p>The estimated savings percentage relative to the total cost of applicable On-Demand usage over the lookback period.</p>
+    #[doc(hidden)]
     pub estimated_savings_percentage: std::option::Option<std::string::String>,
     /// <p>The recommended hourly commitment level for the Savings Plans type and the configuration that's based on the usage during the lookback period.</p>
+    #[doc(hidden)]
     pub hourly_commitment_to_purchase: std::option::Option<std::string::String>,
     /// <p>The estimated utilization of the recommended Savings Plans.</p>
+    #[doc(hidden)]
     pub estimated_average_utilization: std::option::Option<std::string::String>,
     /// <p>The estimated monthly savings amount based on the recommended Savings Plans.</p>
+    #[doc(hidden)]
     pub estimated_monthly_savings_amount: std::option::Option<std::string::String>,
     /// <p>The lowest value of hourly On-Demand spend over the lookback period of the applicable usage type.</p>
+    #[doc(hidden)]
     pub current_minimum_hourly_on_demand_spend: std::option::Option<std::string::String>,
     /// <p>The highest value of hourly On-Demand spend over the lookback period of the applicable usage type.</p>
+    #[doc(hidden)]
     pub current_maximum_hourly_on_demand_spend: std::option::Option<std::string::String>,
     /// <p>The average value of hourly On-Demand spend over the lookback period of the applicable usage type.</p>
+    #[doc(hidden)]
     pub current_average_hourly_on_demand_spend: std::option::Option<std::string::String>,
 }
 impl SavingsPlansPurchaseRecommendationDetail {
@@ -4798,11 +4886,10 @@ impl std::fmt::Debug for SavingsPlansPurchaseRecommendationDetail {
         formatter.finish()
     }
 }
-/// See [`SavingsPlansPurchaseRecommendationDetail`](crate::model::SavingsPlansPurchaseRecommendationDetail)
+/// See [`SavingsPlansPurchaseRecommendationDetail`](crate::model::SavingsPlansPurchaseRecommendationDetail).
 pub mod savings_plans_purchase_recommendation_detail {
 
-    /// A builder for [`SavingsPlansPurchaseRecommendationDetail`](crate::model::SavingsPlansPurchaseRecommendationDetail)
-    #[non_exhaustive]
+    /// A builder for [`SavingsPlansPurchaseRecommendationDetail`](crate::model::SavingsPlansPurchaseRecommendationDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) savings_plans_details: std::option::Option<crate::model::SavingsPlansDetails>,
@@ -5050,7 +5137,7 @@ pub mod savings_plans_purchase_recommendation_detail {
             self.current_average_hourly_on_demand_spend = input;
             self
         }
-        /// Consumes the builder and constructs a [`SavingsPlansPurchaseRecommendationDetail`](crate::model::SavingsPlansPurchaseRecommendationDetail)
+        /// Consumes the builder and constructs a [`SavingsPlansPurchaseRecommendationDetail`](crate::model::SavingsPlansPurchaseRecommendationDetail).
         pub fn build(self) -> crate::model::SavingsPlansPurchaseRecommendationDetail {
             crate::model::SavingsPlansPurchaseRecommendationDetail {
                 savings_plans_details: self.savings_plans_details,
@@ -5075,7 +5162,7 @@ pub mod savings_plans_purchase_recommendation_detail {
     }
 }
 impl SavingsPlansPurchaseRecommendationDetail {
-    /// Creates a new builder-style object to manufacture [`SavingsPlansPurchaseRecommendationDetail`](crate::model::SavingsPlansPurchaseRecommendationDetail)
+    /// Creates a new builder-style object to manufacture [`SavingsPlansPurchaseRecommendationDetail`](crate::model::SavingsPlansPurchaseRecommendationDetail).
     pub fn builder() -> crate::model::savings_plans_purchase_recommendation_detail::Builder {
         crate::model::savings_plans_purchase_recommendation_detail::Builder::default()
     }
@@ -5086,10 +5173,13 @@ impl SavingsPlansPurchaseRecommendationDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SavingsPlansDetails {
     /// <p>A collection of Amazon Web Services resources in a geographic area. Each Amazon Web Services Region is isolated and independent of the other Regions.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>A group of instance types that Savings Plans applies to.</p>
+    #[doc(hidden)]
     pub instance_family: std::option::Option<std::string::String>,
     /// <p>The unique ID that's used to distinguish Savings Plans from one another.</p>
+    #[doc(hidden)]
     pub offering_id: std::option::Option<std::string::String>,
 }
 impl SavingsPlansDetails {
@@ -5115,11 +5205,10 @@ impl std::fmt::Debug for SavingsPlansDetails {
         formatter.finish()
     }
 }
-/// See [`SavingsPlansDetails`](crate::model::SavingsPlansDetails)
+/// See [`SavingsPlansDetails`](crate::model::SavingsPlansDetails).
 pub mod savings_plans_details {
 
-    /// A builder for [`SavingsPlansDetails`](crate::model::SavingsPlansDetails)
-    #[non_exhaustive]
+    /// A builder for [`SavingsPlansDetails`](crate::model::SavingsPlansDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) region: std::option::Option<std::string::String>,
@@ -5160,7 +5249,7 @@ pub mod savings_plans_details {
             self.offering_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SavingsPlansDetails`](crate::model::SavingsPlansDetails)
+        /// Consumes the builder and constructs a [`SavingsPlansDetails`](crate::model::SavingsPlansDetails).
         pub fn build(self) -> crate::model::SavingsPlansDetails {
             crate::model::SavingsPlansDetails {
                 region: self.region,
@@ -5171,7 +5260,7 @@ pub mod savings_plans_details {
     }
 }
 impl SavingsPlansDetails {
-    /// Creates a new builder-style object to manufacture [`SavingsPlansDetails`](crate::model::SavingsPlansDetails)
+    /// Creates a new builder-style object to manufacture [`SavingsPlansDetails`](crate::model::SavingsPlansDetails).
     pub fn builder() -> crate::model::savings_plans_details::Builder {
         crate::model::savings_plans_details::Builder::default()
     }
@@ -5488,10 +5577,13 @@ impl AsRef<str> for AccountScope {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SavingsPlansPurchaseRecommendationMetadata {
     /// <p>The unique identifier for the recommendation set.</p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
     /// <p>The timestamp that shows when the recommendations were generated.</p>
+    #[doc(hidden)]
     pub generation_timestamp: std::option::Option<std::string::String>,
     /// <p>Additional metadata that might be applicable to the recommendation.</p>
+    #[doc(hidden)]
     pub additional_metadata: std::option::Option<std::string::String>,
 }
 impl SavingsPlansPurchaseRecommendationMetadata {
@@ -5517,11 +5609,10 @@ impl std::fmt::Debug for SavingsPlansPurchaseRecommendationMetadata {
         formatter.finish()
     }
 }
-/// See [`SavingsPlansPurchaseRecommendationMetadata`](crate::model::SavingsPlansPurchaseRecommendationMetadata)
+/// See [`SavingsPlansPurchaseRecommendationMetadata`](crate::model::SavingsPlansPurchaseRecommendationMetadata).
 pub mod savings_plans_purchase_recommendation_metadata {
 
-    /// A builder for [`SavingsPlansPurchaseRecommendationMetadata`](crate::model::SavingsPlansPurchaseRecommendationMetadata)
-    #[non_exhaustive]
+    /// A builder for [`SavingsPlansPurchaseRecommendationMetadata`](crate::model::SavingsPlansPurchaseRecommendationMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_id: std::option::Option<std::string::String>,
@@ -5568,7 +5659,7 @@ pub mod savings_plans_purchase_recommendation_metadata {
             self.additional_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`SavingsPlansPurchaseRecommendationMetadata`](crate::model::SavingsPlansPurchaseRecommendationMetadata)
+        /// Consumes the builder and constructs a [`SavingsPlansPurchaseRecommendationMetadata`](crate::model::SavingsPlansPurchaseRecommendationMetadata).
         pub fn build(self) -> crate::model::SavingsPlansPurchaseRecommendationMetadata {
             crate::model::SavingsPlansPurchaseRecommendationMetadata {
                 recommendation_id: self.recommendation_id,
@@ -5579,7 +5670,7 @@ pub mod savings_plans_purchase_recommendation_metadata {
     }
 }
 impl SavingsPlansPurchaseRecommendationMetadata {
-    /// Creates a new builder-style object to manufacture [`SavingsPlansPurchaseRecommendationMetadata`](crate::model::SavingsPlansPurchaseRecommendationMetadata)
+    /// Creates a new builder-style object to manufacture [`SavingsPlansPurchaseRecommendationMetadata`](crate::model::SavingsPlansPurchaseRecommendationMetadata).
     pub fn builder() -> crate::model::savings_plans_purchase_recommendation_metadata::Builder {
         crate::model::savings_plans_purchase_recommendation_metadata::Builder::default()
     }
@@ -5590,11 +5681,14 @@ impl SavingsPlansPurchaseRecommendationMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SavingsPlansCoverage {
     /// <p>The attribute that applies to a specific <code>Dimension</code>.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>The amount of Savings Plans eligible usage that the Savings Plans covered.</p>
+    #[doc(hidden)]
     pub coverage: std::option::Option<crate::model::SavingsPlansCoverageData>,
     /// <p>The time period of the request. </p>
+    #[doc(hidden)]
     pub time_period: std::option::Option<crate::model::DateInterval>,
 }
 impl SavingsPlansCoverage {
@@ -5623,11 +5717,10 @@ impl std::fmt::Debug for SavingsPlansCoverage {
         formatter.finish()
     }
 }
-/// See [`SavingsPlansCoverage`](crate::model::SavingsPlansCoverage)
+/// See [`SavingsPlansCoverage`](crate::model::SavingsPlansCoverage).
 pub mod savings_plans_coverage {
 
-    /// A builder for [`SavingsPlansCoverage`](crate::model::SavingsPlansCoverage)
-    #[non_exhaustive]
+    /// A builder for [`SavingsPlansCoverage`](crate::model::SavingsPlansCoverage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<
@@ -5688,7 +5781,7 @@ pub mod savings_plans_coverage {
             self.time_period = input;
             self
         }
-        /// Consumes the builder and constructs a [`SavingsPlansCoverage`](crate::model::SavingsPlansCoverage)
+        /// Consumes the builder and constructs a [`SavingsPlansCoverage`](crate::model::SavingsPlansCoverage).
         pub fn build(self) -> crate::model::SavingsPlansCoverage {
             crate::model::SavingsPlansCoverage {
                 attributes: self.attributes,
@@ -5699,7 +5792,7 @@ pub mod savings_plans_coverage {
     }
 }
 impl SavingsPlansCoverage {
-    /// Creates a new builder-style object to manufacture [`SavingsPlansCoverage`](crate::model::SavingsPlansCoverage)
+    /// Creates a new builder-style object to manufacture [`SavingsPlansCoverage`](crate::model::SavingsPlansCoverage).
     pub fn builder() -> crate::model::savings_plans_coverage::Builder {
         crate::model::savings_plans_coverage::Builder::default()
     }
@@ -5710,12 +5803,16 @@ impl SavingsPlansCoverage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SavingsPlansCoverageData {
     /// <p>The amount of your Amazon Web Services usage that's covered by a Savings Plans.</p>
+    #[doc(hidden)]
     pub spend_covered_by_savings_plans: std::option::Option<std::string::String>,
     /// <p>The cost of your Amazon Web Services usage at the public On-Demand rate.</p>
+    #[doc(hidden)]
     pub on_demand_cost: std::option::Option<std::string::String>,
     /// <p>The total cost of your Amazon Web Services usage, regardless of your purchase option.</p>
+    #[doc(hidden)]
     pub total_cost: std::option::Option<std::string::String>,
     /// <p>The percentage of your existing Savings Plans covered usage, divided by all of your eligible Savings Plans usage in an account (or set of accounts).</p>
+    #[doc(hidden)]
     pub coverage_percentage: std::option::Option<std::string::String>,
 }
 impl SavingsPlansCoverageData {
@@ -5749,11 +5846,10 @@ impl std::fmt::Debug for SavingsPlansCoverageData {
         formatter.finish()
     }
 }
-/// See [`SavingsPlansCoverageData`](crate::model::SavingsPlansCoverageData)
+/// See [`SavingsPlansCoverageData`](crate::model::SavingsPlansCoverageData).
 pub mod savings_plans_coverage_data {
 
-    /// A builder for [`SavingsPlansCoverageData`](crate::model::SavingsPlansCoverageData)
-    #[non_exhaustive]
+    /// A builder for [`SavingsPlansCoverageData`](crate::model::SavingsPlansCoverageData).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) spend_covered_by_savings_plans: std::option::Option<std::string::String>,
@@ -5814,7 +5910,7 @@ pub mod savings_plans_coverage_data {
             self.coverage_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`SavingsPlansCoverageData`](crate::model::SavingsPlansCoverageData)
+        /// Consumes the builder and constructs a [`SavingsPlansCoverageData`](crate::model::SavingsPlansCoverageData).
         pub fn build(self) -> crate::model::SavingsPlansCoverageData {
             crate::model::SavingsPlansCoverageData {
                 spend_covered_by_savings_plans: self.spend_covered_by_savings_plans,
@@ -5826,7 +5922,7 @@ pub mod savings_plans_coverage_data {
     }
 }
 impl SavingsPlansCoverageData {
-    /// Creates a new builder-style object to manufacture [`SavingsPlansCoverageData`](crate::model::SavingsPlansCoverageData)
+    /// Creates a new builder-style object to manufacture [`SavingsPlansCoverageData`](crate::model::SavingsPlansCoverageData).
     pub fn builder() -> crate::model::savings_plans_coverage_data::Builder {
         crate::model::savings_plans_coverage_data::Builder::default()
     }
@@ -5837,8 +5933,10 @@ impl SavingsPlansCoverageData {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GroupDefinition {
     /// <p>The string that represents the type of group.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::GroupDefinitionType>,
     /// <p>The string that represents a key for a specified group.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
 }
 impl GroupDefinition {
@@ -5859,11 +5957,10 @@ impl std::fmt::Debug for GroupDefinition {
         formatter.finish()
     }
 }
-/// See [`GroupDefinition`](crate::model::GroupDefinition)
+/// See [`GroupDefinition`](crate::model::GroupDefinition).
 pub mod group_definition {
 
-    /// A builder for [`GroupDefinition`](crate::model::GroupDefinition)
-    #[non_exhaustive]
+    /// A builder for [`GroupDefinition`](crate::model::GroupDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::GroupDefinitionType>,
@@ -5893,7 +5990,7 @@ pub mod group_definition {
             self.key = input;
             self
         }
-        /// Consumes the builder and constructs a [`GroupDefinition`](crate::model::GroupDefinition)
+        /// Consumes the builder and constructs a [`GroupDefinition`](crate::model::GroupDefinition).
         pub fn build(self) -> crate::model::GroupDefinition {
             crate::model::GroupDefinition {
                 r#type: self.r#type,
@@ -5903,7 +6000,7 @@ pub mod group_definition {
     }
 }
 impl GroupDefinition {
-    /// Creates a new builder-style object to manufacture [`GroupDefinition`](crate::model::GroupDefinition)
+    /// Creates a new builder-style object to manufacture [`GroupDefinition`](crate::model::GroupDefinition).
     pub fn builder() -> crate::model::group_definition::Builder {
         crate::model::group_definition::Builder::default()
     }
@@ -5973,8 +6070,10 @@ impl AsRef<str> for GroupDefinitionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RightsizingRecommendationConfiguration {
     /// <p>The option to see recommendations within the same instance family or recommendations for instances across other families. The default value is <code>SAME_INSTANCE_FAMILY</code>. </p>
+    #[doc(hidden)]
     pub recommendation_target: std::option::Option<crate::model::RecommendationTarget>,
     /// <p>The option to consider RI or Savings Plans discount benefits in your savings calculation. The default value is <code>TRUE</code>. </p>
+    #[doc(hidden)]
     pub benefits_considered: bool,
 }
 impl RightsizingRecommendationConfiguration {
@@ -5997,11 +6096,10 @@ impl std::fmt::Debug for RightsizingRecommendationConfiguration {
         formatter.finish()
     }
 }
-/// See [`RightsizingRecommendationConfiguration`](crate::model::RightsizingRecommendationConfiguration)
+/// See [`RightsizingRecommendationConfiguration`](crate::model::RightsizingRecommendationConfiguration).
 pub mod rightsizing_recommendation_configuration {
 
-    /// A builder for [`RightsizingRecommendationConfiguration`](crate::model::RightsizingRecommendationConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`RightsizingRecommendationConfiguration`](crate::model::RightsizingRecommendationConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_target: std::option::Option<crate::model::RecommendationTarget>,
@@ -6031,7 +6129,7 @@ pub mod rightsizing_recommendation_configuration {
             self.benefits_considered = input;
             self
         }
-        /// Consumes the builder and constructs a [`RightsizingRecommendationConfiguration`](crate::model::RightsizingRecommendationConfiguration)
+        /// Consumes the builder and constructs a [`RightsizingRecommendationConfiguration`](crate::model::RightsizingRecommendationConfiguration).
         pub fn build(self) -> crate::model::RightsizingRecommendationConfiguration {
             crate::model::RightsizingRecommendationConfiguration {
                 recommendation_target: self.recommendation_target,
@@ -6041,7 +6139,7 @@ pub mod rightsizing_recommendation_configuration {
     }
 }
 impl RightsizingRecommendationConfiguration {
-    /// Creates a new builder-style object to manufacture [`RightsizingRecommendationConfiguration`](crate::model::RightsizingRecommendationConfiguration)
+    /// Creates a new builder-style object to manufacture [`RightsizingRecommendationConfiguration`](crate::model::RightsizingRecommendationConfiguration).
     pub fn builder() -> crate::model::rightsizing_recommendation_configuration::Builder {
         crate::model::rightsizing_recommendation_configuration::Builder::default()
     }
@@ -6107,17 +6205,23 @@ impl AsRef<str> for RecommendationTarget {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RightsizingRecommendation {
     /// <p>The account that this recommendation is for.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>Context regarding the current instance.</p>
+    #[doc(hidden)]
     pub current_instance: std::option::Option<crate::model::CurrentInstance>,
     /// <p>A recommendation to either terminate or modify the resource.</p>
+    #[doc(hidden)]
     pub rightsizing_type: std::option::Option<crate::model::RightsizingType>,
     /// <p>The details for the modification recommendations. </p>
+    #[doc(hidden)]
     pub modify_recommendation_detail: std::option::Option<crate::model::ModifyRecommendationDetail>,
     /// <p>The details for termination recommendations.</p>
+    #[doc(hidden)]
     pub terminate_recommendation_detail:
         std::option::Option<crate::model::TerminateRecommendationDetail>,
     /// <p>The list of possible reasons why the recommendation is generated, such as under- or over-utilization of specific metrics (for example, CPU, Memory, Network). </p>
+    #[doc(hidden)]
     pub finding_reason_codes: std::option::Option<std::vec::Vec<crate::model::FindingReasonCode>>,
 }
 impl RightsizingRecommendation {
@@ -6168,11 +6272,10 @@ impl std::fmt::Debug for RightsizingRecommendation {
         formatter.finish()
     }
 }
-/// See [`RightsizingRecommendation`](crate::model::RightsizingRecommendation)
+/// See [`RightsizingRecommendation`](crate::model::RightsizingRecommendation).
 pub mod rightsizing_recommendation {
 
-    /// A builder for [`RightsizingRecommendation`](crate::model::RightsizingRecommendation)
-    #[non_exhaustive]
+    /// A builder for [`RightsizingRecommendation`](crate::model::RightsizingRecommendation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -6273,7 +6376,7 @@ pub mod rightsizing_recommendation {
             self.finding_reason_codes = input;
             self
         }
-        /// Consumes the builder and constructs a [`RightsizingRecommendation`](crate::model::RightsizingRecommendation)
+        /// Consumes the builder and constructs a [`RightsizingRecommendation`](crate::model::RightsizingRecommendation).
         pub fn build(self) -> crate::model::RightsizingRecommendation {
             crate::model::RightsizingRecommendation {
                 account_id: self.account_id,
@@ -6287,7 +6390,7 @@ pub mod rightsizing_recommendation {
     }
 }
 impl RightsizingRecommendation {
-    /// Creates a new builder-style object to manufacture [`RightsizingRecommendation`](crate::model::RightsizingRecommendation)
+    /// Creates a new builder-style object to manufacture [`RightsizingRecommendation`](crate::model::RightsizingRecommendation).
     pub fn builder() -> crate::model::rightsizing_recommendation::Builder {
         crate::model::rightsizing_recommendation::Builder::default()
     }
@@ -6438,8 +6541,10 @@ impl AsRef<str> for FindingReasonCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TerminateRecommendationDetail {
     /// <p>The estimated savings that result from modification, on a monthly basis.</p>
+    #[doc(hidden)]
     pub estimated_monthly_savings: std::option::Option<std::string::String>,
     /// <p>The currency code that Amazon Web Services used to calculate the costs for this instance.</p>
+    #[doc(hidden)]
     pub currency_code: std::option::Option<std::string::String>,
 }
 impl TerminateRecommendationDetail {
@@ -6460,11 +6565,10 @@ impl std::fmt::Debug for TerminateRecommendationDetail {
         formatter.finish()
     }
 }
-/// See [`TerminateRecommendationDetail`](crate::model::TerminateRecommendationDetail)
+/// See [`TerminateRecommendationDetail`](crate::model::TerminateRecommendationDetail).
 pub mod terminate_recommendation_detail {
 
-    /// A builder for [`TerminateRecommendationDetail`](crate::model::TerminateRecommendationDetail)
-    #[non_exhaustive]
+    /// A builder for [`TerminateRecommendationDetail`](crate::model::TerminateRecommendationDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) estimated_monthly_savings: std::option::Option<std::string::String>,
@@ -6497,7 +6601,7 @@ pub mod terminate_recommendation_detail {
             self.currency_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`TerminateRecommendationDetail`](crate::model::TerminateRecommendationDetail)
+        /// Consumes the builder and constructs a [`TerminateRecommendationDetail`](crate::model::TerminateRecommendationDetail).
         pub fn build(self) -> crate::model::TerminateRecommendationDetail {
             crate::model::TerminateRecommendationDetail {
                 estimated_monthly_savings: self.estimated_monthly_savings,
@@ -6507,7 +6611,7 @@ pub mod terminate_recommendation_detail {
     }
 }
 impl TerminateRecommendationDetail {
-    /// Creates a new builder-style object to manufacture [`TerminateRecommendationDetail`](crate::model::TerminateRecommendationDetail)
+    /// Creates a new builder-style object to manufacture [`TerminateRecommendationDetail`](crate::model::TerminateRecommendationDetail).
     pub fn builder() -> crate::model::terminate_recommendation_detail::Builder {
         crate::model::terminate_recommendation_detail::Builder::default()
     }
@@ -6518,6 +6622,7 @@ impl TerminateRecommendationDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyRecommendationDetail {
     /// <p>Determines whether this instance type is the Amazon Web Services default recommendation.</p>
+    #[doc(hidden)]
     pub target_instances: std::option::Option<std::vec::Vec<crate::model::TargetInstance>>,
 }
 impl ModifyRecommendationDetail {
@@ -6533,11 +6638,10 @@ impl std::fmt::Debug for ModifyRecommendationDetail {
         formatter.finish()
     }
 }
-/// See [`ModifyRecommendationDetail`](crate::model::ModifyRecommendationDetail)
+/// See [`ModifyRecommendationDetail`](crate::model::ModifyRecommendationDetail).
 pub mod modify_recommendation_detail {
 
-    /// A builder for [`ModifyRecommendationDetail`](crate::model::ModifyRecommendationDetail)
-    #[non_exhaustive]
+    /// A builder for [`ModifyRecommendationDetail`](crate::model::ModifyRecommendationDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_instances:
@@ -6563,7 +6667,7 @@ pub mod modify_recommendation_detail {
             self.target_instances = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModifyRecommendationDetail`](crate::model::ModifyRecommendationDetail)
+        /// Consumes the builder and constructs a [`ModifyRecommendationDetail`](crate::model::ModifyRecommendationDetail).
         pub fn build(self) -> crate::model::ModifyRecommendationDetail {
             crate::model::ModifyRecommendationDetail {
                 target_instances: self.target_instances,
@@ -6572,7 +6676,7 @@ pub mod modify_recommendation_detail {
     }
 }
 impl ModifyRecommendationDetail {
-    /// Creates a new builder-style object to manufacture [`ModifyRecommendationDetail`](crate::model::ModifyRecommendationDetail)
+    /// Creates a new builder-style object to manufacture [`ModifyRecommendationDetail`](crate::model::ModifyRecommendationDetail).
     pub fn builder() -> crate::model::modify_recommendation_detail::Builder {
         crate::model::modify_recommendation_detail::Builder::default()
     }
@@ -6583,18 +6687,25 @@ impl ModifyRecommendationDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetInstance {
     /// <p>The expected cost to operate this instance type on a monthly basis.</p>
+    #[doc(hidden)]
     pub estimated_monthly_cost: std::option::Option<std::string::String>,
     /// <p>The estimated savings that result from modification, on a monthly basis.</p>
+    #[doc(hidden)]
     pub estimated_monthly_savings: std::option::Option<std::string::String>,
     /// <p>The currency code that Amazon Web Services used to calculate the costs for this instance.</p>
+    #[doc(hidden)]
     pub currency_code: std::option::Option<std::string::String>,
     /// <p>Determines whether this recommendation is the defaulted Amazon Web Services recommendation.</p>
+    #[doc(hidden)]
     pub default_target_instance: bool,
     /// <p>Details on the target instance type. </p>
+    #[doc(hidden)]
     pub resource_details: std::option::Option<crate::model::ResourceDetails>,
     /// <p>The expected utilization metrics for target instance type.</p>
+    #[doc(hidden)]
     pub expected_resource_utilization: std::option::Option<crate::model::ResourceUtilization>,
     /// <p>Explains the actions that you might need to take to successfully migrate your workloads from the current instance type to the recommended instance type. </p>
+    #[doc(hidden)]
     pub platform_differences: std::option::Option<std::vec::Vec<crate::model::PlatformDifference>>,
 }
 impl TargetInstance {
@@ -6645,11 +6756,10 @@ impl std::fmt::Debug for TargetInstance {
         formatter.finish()
     }
 }
-/// See [`TargetInstance`](crate::model::TargetInstance)
+/// See [`TargetInstance`](crate::model::TargetInstance).
 pub mod target_instance {
 
-    /// A builder for [`TargetInstance`](crate::model::TargetInstance)
-    #[non_exhaustive]
+    /// A builder for [`TargetInstance`](crate::model::TargetInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) estimated_monthly_cost: std::option::Option<std::string::String>,
@@ -6760,7 +6870,7 @@ pub mod target_instance {
             self.platform_differences = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetInstance`](crate::model::TargetInstance)
+        /// Consumes the builder and constructs a [`TargetInstance`](crate::model::TargetInstance).
         pub fn build(self) -> crate::model::TargetInstance {
             crate::model::TargetInstance {
                 estimated_monthly_cost: self.estimated_monthly_cost,
@@ -6775,7 +6885,7 @@ pub mod target_instance {
     }
 }
 impl TargetInstance {
-    /// Creates a new builder-style object to manufacture [`TargetInstance`](crate::model::TargetInstance)
+    /// Creates a new builder-style object to manufacture [`TargetInstance`](crate::model::TargetInstance).
     pub fn builder() -> crate::model::target_instance::Builder {
         crate::model::target_instance::Builder::default()
     }
@@ -6859,6 +6969,7 @@ impl AsRef<str> for PlatformDifference {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceUtilization {
     /// <p>The utilization of current Amazon EC2 instance. </p>
+    #[doc(hidden)]
     pub ec2_resource_utilization: std::option::Option<crate::model::Ec2ResourceUtilization>,
 }
 impl ResourceUtilization {
@@ -6876,11 +6987,10 @@ impl std::fmt::Debug for ResourceUtilization {
         formatter.finish()
     }
 }
-/// See [`ResourceUtilization`](crate::model::ResourceUtilization)
+/// See [`ResourceUtilization`](crate::model::ResourceUtilization).
 pub mod resource_utilization {
 
-    /// A builder for [`ResourceUtilization`](crate::model::ResourceUtilization)
-    #[non_exhaustive]
+    /// A builder for [`ResourceUtilization`](crate::model::ResourceUtilization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ec2_resource_utilization:
@@ -6903,7 +7013,7 @@ pub mod resource_utilization {
             self.ec2_resource_utilization = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceUtilization`](crate::model::ResourceUtilization)
+        /// Consumes the builder and constructs a [`ResourceUtilization`](crate::model::ResourceUtilization).
         pub fn build(self) -> crate::model::ResourceUtilization {
             crate::model::ResourceUtilization {
                 ec2_resource_utilization: self.ec2_resource_utilization,
@@ -6912,7 +7022,7 @@ pub mod resource_utilization {
     }
 }
 impl ResourceUtilization {
-    /// Creates a new builder-style object to manufacture [`ResourceUtilization`](crate::model::ResourceUtilization)
+    /// Creates a new builder-style object to manufacture [`ResourceUtilization`](crate::model::ResourceUtilization).
     pub fn builder() -> crate::model::resource_utilization::Builder {
         crate::model::resource_utilization::Builder::default()
     }
@@ -6923,16 +7033,22 @@ impl ResourceUtilization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ec2ResourceUtilization {
     /// <p>The maximum observed or expected CPU utilization of the instance.</p>
+    #[doc(hidden)]
     pub max_cpu_utilization_percentage: std::option::Option<std::string::String>,
     /// <p>The maximum observed or expected memory utilization of the instance.</p>
+    #[doc(hidden)]
     pub max_memory_utilization_percentage: std::option::Option<std::string::String>,
     /// <p>The maximum observed or expected storage utilization of the instance. This doesn't include EBS storage.</p>
+    #[doc(hidden)]
     pub max_storage_utilization_percentage: std::option::Option<std::string::String>,
     /// <p>The EBS field that contains a list of EBS metrics that are associated with the current instance. </p>
+    #[doc(hidden)]
     pub ebs_resource_utilization: std::option::Option<crate::model::EbsResourceUtilization>,
     /// <p>The field that contains a list of disk (local storage) metrics that are associated with the current instance. </p>
+    #[doc(hidden)]
     pub disk_resource_utilization: std::option::Option<crate::model::DiskResourceUtilization>,
     /// <p>The network field that contains a list of network metrics that are associated with the current instance. </p>
+    #[doc(hidden)]
     pub network_resource_utilization: std::option::Option<crate::model::NetworkResourceUtilization>,
 }
 impl Ec2ResourceUtilization {
@@ -6991,11 +7107,10 @@ impl std::fmt::Debug for Ec2ResourceUtilization {
         formatter.finish()
     }
 }
-/// See [`Ec2ResourceUtilization`](crate::model::Ec2ResourceUtilization)
+/// See [`Ec2ResourceUtilization`](crate::model::Ec2ResourceUtilization).
 pub mod ec2_resource_utilization {
 
-    /// A builder for [`Ec2ResourceUtilization`](crate::model::Ec2ResourceUtilization)
-    #[non_exhaustive]
+    /// A builder for [`Ec2ResourceUtilization`](crate::model::Ec2ResourceUtilization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_cpu_utilization_percentage: std::option::Option<std::string::String>,
@@ -7105,7 +7220,7 @@ pub mod ec2_resource_utilization {
             self.network_resource_utilization = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2ResourceUtilization`](crate::model::Ec2ResourceUtilization)
+        /// Consumes the builder and constructs a [`Ec2ResourceUtilization`](crate::model::Ec2ResourceUtilization).
         pub fn build(self) -> crate::model::Ec2ResourceUtilization {
             crate::model::Ec2ResourceUtilization {
                 max_cpu_utilization_percentage: self.max_cpu_utilization_percentage,
@@ -7119,7 +7234,7 @@ pub mod ec2_resource_utilization {
     }
 }
 impl Ec2ResourceUtilization {
-    /// Creates a new builder-style object to manufacture [`Ec2ResourceUtilization`](crate::model::Ec2ResourceUtilization)
+    /// Creates a new builder-style object to manufacture [`Ec2ResourceUtilization`](crate::model::Ec2ResourceUtilization).
     pub fn builder() -> crate::model::ec2_resource_utilization::Builder {
         crate::model::ec2_resource_utilization::Builder::default()
     }
@@ -7130,12 +7245,16 @@ impl Ec2ResourceUtilization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NetworkResourceUtilization {
     /// <p>The network inbound throughput utilization measured in Bytes per second (Bps). </p>
+    #[doc(hidden)]
     pub network_in_bytes_per_second: std::option::Option<std::string::String>,
     /// <p>The network outbound throughput utilization measured in Bytes per second (Bps). </p>
+    #[doc(hidden)]
     pub network_out_bytes_per_second: std::option::Option<std::string::String>,
     /// <p>The network inbound packets that are measured in packets per second. </p>
+    #[doc(hidden)]
     pub network_packets_in_per_second: std::option::Option<std::string::String>,
     /// <p>The network outbound packets that are measured in packets per second. </p>
+    #[doc(hidden)]
     pub network_packets_out_per_second: std::option::Option<std::string::String>,
 }
 impl NetworkResourceUtilization {
@@ -7178,11 +7297,10 @@ impl std::fmt::Debug for NetworkResourceUtilization {
         formatter.finish()
     }
 }
-/// See [`NetworkResourceUtilization`](crate::model::NetworkResourceUtilization)
+/// See [`NetworkResourceUtilization`](crate::model::NetworkResourceUtilization).
 pub mod network_resource_utilization {
 
-    /// A builder for [`NetworkResourceUtilization`](crate::model::NetworkResourceUtilization)
-    #[non_exhaustive]
+    /// A builder for [`NetworkResourceUtilization`](crate::model::NetworkResourceUtilization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) network_in_bytes_per_second: std::option::Option<std::string::String>,
@@ -7255,7 +7373,7 @@ pub mod network_resource_utilization {
             self.network_packets_out_per_second = input;
             self
         }
-        /// Consumes the builder and constructs a [`NetworkResourceUtilization`](crate::model::NetworkResourceUtilization)
+        /// Consumes the builder and constructs a [`NetworkResourceUtilization`](crate::model::NetworkResourceUtilization).
         pub fn build(self) -> crate::model::NetworkResourceUtilization {
             crate::model::NetworkResourceUtilization {
                 network_in_bytes_per_second: self.network_in_bytes_per_second,
@@ -7267,7 +7385,7 @@ pub mod network_resource_utilization {
     }
 }
 impl NetworkResourceUtilization {
-    /// Creates a new builder-style object to manufacture [`NetworkResourceUtilization`](crate::model::NetworkResourceUtilization)
+    /// Creates a new builder-style object to manufacture [`NetworkResourceUtilization`](crate::model::NetworkResourceUtilization).
     pub fn builder() -> crate::model::network_resource_utilization::Builder {
         crate::model::network_resource_utilization::Builder::default()
     }
@@ -7278,12 +7396,16 @@ impl NetworkResourceUtilization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DiskResourceUtilization {
     /// <p>The maximum number of read operations per second. </p>
+    #[doc(hidden)]
     pub disk_read_ops_per_second: std::option::Option<std::string::String>,
     /// <p>The maximum number of write operations per second. </p>
+    #[doc(hidden)]
     pub disk_write_ops_per_second: std::option::Option<std::string::String>,
     /// <p>The maximum read throughput operations per second. </p>
+    #[doc(hidden)]
     pub disk_read_bytes_per_second: std::option::Option<std::string::String>,
     /// <p>The maximum write throughput operations per second. </p>
+    #[doc(hidden)]
     pub disk_write_bytes_per_second: std::option::Option<std::string::String>,
 }
 impl DiskResourceUtilization {
@@ -7320,11 +7442,10 @@ impl std::fmt::Debug for DiskResourceUtilization {
         formatter.finish()
     }
 }
-/// See [`DiskResourceUtilization`](crate::model::DiskResourceUtilization)
+/// See [`DiskResourceUtilization`](crate::model::DiskResourceUtilization).
 pub mod disk_resource_utilization {
 
-    /// A builder for [`DiskResourceUtilization`](crate::model::DiskResourceUtilization)
-    #[non_exhaustive]
+    /// A builder for [`DiskResourceUtilization`](crate::model::DiskResourceUtilization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) disk_read_ops_per_second: std::option::Option<std::string::String>,
@@ -7388,7 +7509,7 @@ pub mod disk_resource_utilization {
             self.disk_write_bytes_per_second = input;
             self
         }
-        /// Consumes the builder and constructs a [`DiskResourceUtilization`](crate::model::DiskResourceUtilization)
+        /// Consumes the builder and constructs a [`DiskResourceUtilization`](crate::model::DiskResourceUtilization).
         pub fn build(self) -> crate::model::DiskResourceUtilization {
             crate::model::DiskResourceUtilization {
                 disk_read_ops_per_second: self.disk_read_ops_per_second,
@@ -7400,7 +7521,7 @@ pub mod disk_resource_utilization {
     }
 }
 impl DiskResourceUtilization {
-    /// Creates a new builder-style object to manufacture [`DiskResourceUtilization`](crate::model::DiskResourceUtilization)
+    /// Creates a new builder-style object to manufacture [`DiskResourceUtilization`](crate::model::DiskResourceUtilization).
     pub fn builder() -> crate::model::disk_resource_utilization::Builder {
         crate::model::disk_resource_utilization::Builder::default()
     }
@@ -7411,12 +7532,16 @@ impl DiskResourceUtilization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EbsResourceUtilization {
     /// <p>The maximum number of read operations per second. </p>
+    #[doc(hidden)]
     pub ebs_read_ops_per_second: std::option::Option<std::string::String>,
     /// <p>The maximum number of write operations per second. </p>
+    #[doc(hidden)]
     pub ebs_write_ops_per_second: std::option::Option<std::string::String>,
     /// <p>The maximum size of read operations per second </p>
+    #[doc(hidden)]
     pub ebs_read_bytes_per_second: std::option::Option<std::string::String>,
     /// <p>The maximum size of write operations per second. </p>
+    #[doc(hidden)]
     pub ebs_write_bytes_per_second: std::option::Option<std::string::String>,
 }
 impl EbsResourceUtilization {
@@ -7450,11 +7575,10 @@ impl std::fmt::Debug for EbsResourceUtilization {
         formatter.finish()
     }
 }
-/// See [`EbsResourceUtilization`](crate::model::EbsResourceUtilization)
+/// See [`EbsResourceUtilization`](crate::model::EbsResourceUtilization).
 pub mod ebs_resource_utilization {
 
-    /// A builder for [`EbsResourceUtilization`](crate::model::EbsResourceUtilization)
-    #[non_exhaustive]
+    /// A builder for [`EbsResourceUtilization`](crate::model::EbsResourceUtilization).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ebs_read_ops_per_second: std::option::Option<std::string::String>,
@@ -7515,7 +7639,7 @@ pub mod ebs_resource_utilization {
             self.ebs_write_bytes_per_second = input;
             self
         }
-        /// Consumes the builder and constructs a [`EbsResourceUtilization`](crate::model::EbsResourceUtilization)
+        /// Consumes the builder and constructs a [`EbsResourceUtilization`](crate::model::EbsResourceUtilization).
         pub fn build(self) -> crate::model::EbsResourceUtilization {
             crate::model::EbsResourceUtilization {
                 ebs_read_ops_per_second: self.ebs_read_ops_per_second,
@@ -7527,7 +7651,7 @@ pub mod ebs_resource_utilization {
     }
 }
 impl EbsResourceUtilization {
-    /// Creates a new builder-style object to manufacture [`EbsResourceUtilization`](crate::model::EbsResourceUtilization)
+    /// Creates a new builder-style object to manufacture [`EbsResourceUtilization`](crate::model::EbsResourceUtilization).
     pub fn builder() -> crate::model::ebs_resource_utilization::Builder {
         crate::model::ebs_resource_utilization::Builder::default()
     }
@@ -7538,6 +7662,7 @@ impl EbsResourceUtilization {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceDetails {
     /// <p>Details for the Amazon EC2 resource.</p>
+    #[doc(hidden)]
     pub ec2_resource_details: std::option::Option<crate::model::Ec2ResourceDetails>,
 }
 impl ResourceDetails {
@@ -7553,11 +7678,10 @@ impl std::fmt::Debug for ResourceDetails {
         formatter.finish()
     }
 }
-/// See [`ResourceDetails`](crate::model::ResourceDetails)
+/// See [`ResourceDetails`](crate::model::ResourceDetails).
 pub mod resource_details {
 
-    /// A builder for [`ResourceDetails`](crate::model::ResourceDetails)
-    #[non_exhaustive]
+    /// A builder for [`ResourceDetails`](crate::model::ResourceDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ec2_resource_details: std::option::Option<crate::model::Ec2ResourceDetails>,
@@ -7576,7 +7700,7 @@ pub mod resource_details {
             self.ec2_resource_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceDetails`](crate::model::ResourceDetails)
+        /// Consumes the builder and constructs a [`ResourceDetails`](crate::model::ResourceDetails).
         pub fn build(self) -> crate::model::ResourceDetails {
             crate::model::ResourceDetails {
                 ec2_resource_details: self.ec2_resource_details,
@@ -7585,7 +7709,7 @@ pub mod resource_details {
     }
 }
 impl ResourceDetails {
-    /// Creates a new builder-style object to manufacture [`ResourceDetails`](crate::model::ResourceDetails)
+    /// Creates a new builder-style object to manufacture [`ResourceDetails`](crate::model::ResourceDetails).
     pub fn builder() -> crate::model::resource_details::Builder {
         crate::model::resource_details::Builder::default()
     }
@@ -7596,22 +7720,31 @@ impl ResourceDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ec2ResourceDetails {
     /// <p>The hourly public On-Demand rate for the instance type.</p>
+    #[doc(hidden)]
     pub hourly_on_demand_rate: std::option::Option<std::string::String>,
     /// <p>The type of Amazon Web Services instance.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The platform of the Amazon Web Services instance. The platform is the specific combination of operating system, license model, and software on an instance.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region of the instance.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The SKU of the product.</p>
+    #[doc(hidden)]
     pub sku: std::option::Option<std::string::String>,
     /// <p>The memory capacity of the Amazon Web Services instance.</p>
+    #[doc(hidden)]
     pub memory: std::option::Option<std::string::String>,
     /// <p>The network performance capacity of the Amazon Web Services instance.</p>
+    #[doc(hidden)]
     pub network_performance: std::option::Option<std::string::String>,
     /// <p>The disk storage of the Amazon Web Services instance. This doesn't include EBS storage.</p>
+    #[doc(hidden)]
     pub storage: std::option::Option<std::string::String>,
     /// <p>The number of VCPU cores in the Amazon Web Services instance type.</p>
+    #[doc(hidden)]
     pub vcpu: std::option::Option<std::string::String>,
 }
 impl Ec2ResourceDetails {
@@ -7667,11 +7800,10 @@ impl std::fmt::Debug for Ec2ResourceDetails {
         formatter.finish()
     }
 }
-/// See [`Ec2ResourceDetails`](crate::model::Ec2ResourceDetails)
+/// See [`Ec2ResourceDetails`](crate::model::Ec2ResourceDetails).
 pub mod ec2_resource_details {
 
-    /// A builder for [`Ec2ResourceDetails`](crate::model::Ec2ResourceDetails)
-    #[non_exhaustive]
+    /// A builder for [`Ec2ResourceDetails`](crate::model::Ec2ResourceDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hourly_on_demand_rate: std::option::Option<std::string::String>,
@@ -7784,7 +7916,7 @@ pub mod ec2_resource_details {
             self.vcpu = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2ResourceDetails`](crate::model::Ec2ResourceDetails)
+        /// Consumes the builder and constructs a [`Ec2ResourceDetails`](crate::model::Ec2ResourceDetails).
         pub fn build(self) -> crate::model::Ec2ResourceDetails {
             crate::model::Ec2ResourceDetails {
                 hourly_on_demand_rate: self.hourly_on_demand_rate,
@@ -7801,7 +7933,7 @@ pub mod ec2_resource_details {
     }
 }
 impl Ec2ResourceDetails {
-    /// Creates a new builder-style object to manufacture [`Ec2ResourceDetails`](crate::model::Ec2ResourceDetails)
+    /// Creates a new builder-style object to manufacture [`Ec2ResourceDetails`](crate::model::Ec2ResourceDetails).
     pub fn builder() -> crate::model::ec2_resource_details::Builder {
         crate::model::ec2_resource_details::Builder::default()
     }
@@ -7867,26 +7999,37 @@ impl AsRef<str> for RightsizingType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CurrentInstance {
     /// <p>Resource ID of the current instance.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The name that you given an instance. This field shows as blank if you haven't given the instance a name.</p>
+    #[doc(hidden)]
     pub instance_name: std::option::Option<std::string::String>,
     /// <p>Cost allocation resource tags that are applied to the instance.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::TagValues>>,
     /// <p>Details about the resource and utilization.</p>
+    #[doc(hidden)]
     pub resource_details: std::option::Option<crate::model::ResourceDetails>,
     /// <p>Utilization information of the current instance during the lookback period.</p>
+    #[doc(hidden)]
     pub resource_utilization: std::option::Option<crate::model::ResourceUtilization>,
     /// <p>The number of hours during the lookback period that's covered by reservations.</p>
+    #[doc(hidden)]
     pub reservation_covered_hours_in_lookback_period: std::option::Option<std::string::String>,
     /// <p>The number of hours during the lookback period that's covered by Savings Plans.</p>
+    #[doc(hidden)]
     pub savings_plans_covered_hours_in_lookback_period: std::option::Option<std::string::String>,
     /// <p>The number of hours during the lookback period that's billed at On-Demand rates.</p>
+    #[doc(hidden)]
     pub on_demand_hours_in_lookback_period: std::option::Option<std::string::String>,
     /// <p>The total number of hours that the instance ran during the lookback period.</p>
+    #[doc(hidden)]
     pub total_running_hours_in_lookback_period: std::option::Option<std::string::String>,
     /// <p>The current On-Demand cost of operating this instance on a monthly basis.</p>
+    #[doc(hidden)]
     pub monthly_cost: std::option::Option<std::string::String>,
     /// <p>The currency code that Amazon Web Services used to calculate the costs for this instance.</p>
+    #[doc(hidden)]
     pub currency_code: std::option::Option<std::string::String>,
 }
 impl CurrentInstance {
@@ -7965,11 +8108,10 @@ impl std::fmt::Debug for CurrentInstance {
         formatter.finish()
     }
 }
-/// See [`CurrentInstance`](crate::model::CurrentInstance)
+/// See [`CurrentInstance`](crate::model::CurrentInstance).
 pub mod current_instance {
 
-    /// A builder for [`CurrentInstance`](crate::model::CurrentInstance)
-    #[non_exhaustive]
+    /// A builder for [`CurrentInstance`](crate::model::CurrentInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_id: std::option::Option<std::string::String>,
@@ -8142,7 +8284,7 @@ pub mod current_instance {
             self.currency_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`CurrentInstance`](crate::model::CurrentInstance)
+        /// Consumes the builder and constructs a [`CurrentInstance`](crate::model::CurrentInstance).
         pub fn build(self) -> crate::model::CurrentInstance {
             crate::model::CurrentInstance {
                 resource_id: self.resource_id,
@@ -8163,7 +8305,7 @@ pub mod current_instance {
     }
 }
 impl CurrentInstance {
-    /// Creates a new builder-style object to manufacture [`CurrentInstance`](crate::model::CurrentInstance)
+    /// Creates a new builder-style object to manufacture [`CurrentInstance`](crate::model::CurrentInstance).
     pub fn builder() -> crate::model::current_instance::Builder {
         crate::model::current_instance::Builder::default()
     }
@@ -8174,12 +8316,16 @@ impl CurrentInstance {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RightsizingRecommendationSummary {
     /// <p>The total number of instance recommendations.</p>
+    #[doc(hidden)]
     pub total_recommendation_count: std::option::Option<std::string::String>,
     /// <p>The estimated total savings resulting from modifications, on a monthly basis.</p>
+    #[doc(hidden)]
     pub estimated_total_monthly_savings_amount: std::option::Option<std::string::String>,
     /// <p>The currency code that Amazon Web Services used to calculate the savings.</p>
+    #[doc(hidden)]
     pub savings_currency_code: std::option::Option<std::string::String>,
     /// <p> The savings percentage based on the recommended modifications. It's relative to the total On-Demand costs that are associated with these instances.</p>
+    #[doc(hidden)]
     pub savings_percentage: std::option::Option<std::string::String>,
 }
 impl RightsizingRecommendationSummary {
@@ -8216,11 +8362,10 @@ impl std::fmt::Debug for RightsizingRecommendationSummary {
         formatter.finish()
     }
 }
-/// See [`RightsizingRecommendationSummary`](crate::model::RightsizingRecommendationSummary)
+/// See [`RightsizingRecommendationSummary`](crate::model::RightsizingRecommendationSummary).
 pub mod rightsizing_recommendation_summary {
 
-    /// A builder for [`RightsizingRecommendationSummary`](crate::model::RightsizingRecommendationSummary)
-    #[non_exhaustive]
+    /// A builder for [`RightsizingRecommendationSummary`](crate::model::RightsizingRecommendationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_recommendation_count: std::option::Option<std::string::String>,
@@ -8284,7 +8429,7 @@ pub mod rightsizing_recommendation_summary {
             self.savings_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`RightsizingRecommendationSummary`](crate::model::RightsizingRecommendationSummary)
+        /// Consumes the builder and constructs a [`RightsizingRecommendationSummary`](crate::model::RightsizingRecommendationSummary).
         pub fn build(self) -> crate::model::RightsizingRecommendationSummary {
             crate::model::RightsizingRecommendationSummary {
                 total_recommendation_count: self.total_recommendation_count,
@@ -8296,7 +8441,7 @@ pub mod rightsizing_recommendation_summary {
     }
 }
 impl RightsizingRecommendationSummary {
-    /// Creates a new builder-style object to manufacture [`RightsizingRecommendationSummary`](crate::model::RightsizingRecommendationSummary)
+    /// Creates a new builder-style object to manufacture [`RightsizingRecommendationSummary`](crate::model::RightsizingRecommendationSummary).
     pub fn builder() -> crate::model::rightsizing_recommendation_summary::Builder {
         crate::model::rightsizing_recommendation_summary::Builder::default()
     }
@@ -8307,12 +8452,16 @@ impl RightsizingRecommendationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RightsizingRecommendationMetadata {
     /// <p>The ID for this specific recommendation.</p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
     /// <p>The timestamp for when Amazon Web Services made this recommendation.</p>
+    #[doc(hidden)]
     pub generation_timestamp: std::option::Option<std::string::String>,
     /// <p>The number of days of previous usage that Amazon Web Services considers when making this recommendation.</p>
+    #[doc(hidden)]
     pub lookback_period_in_days: std::option::Option<crate::model::LookbackPeriodInDays>,
     /// <p>Additional metadata that might be applicable to the recommendation.</p>
+    #[doc(hidden)]
     pub additional_metadata: std::option::Option<std::string::String>,
 }
 impl RightsizingRecommendationMetadata {
@@ -8345,11 +8494,10 @@ impl std::fmt::Debug for RightsizingRecommendationMetadata {
         formatter.finish()
     }
 }
-/// See [`RightsizingRecommendationMetadata`](crate::model::RightsizingRecommendationMetadata)
+/// See [`RightsizingRecommendationMetadata`](crate::model::RightsizingRecommendationMetadata).
 pub mod rightsizing_recommendation_metadata {
 
-    /// A builder for [`RightsizingRecommendationMetadata`](crate::model::RightsizingRecommendationMetadata)
-    #[non_exhaustive]
+    /// A builder for [`RightsizingRecommendationMetadata`](crate::model::RightsizingRecommendationMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_id: std::option::Option<std::string::String>,
@@ -8413,7 +8561,7 @@ pub mod rightsizing_recommendation_metadata {
             self.additional_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`RightsizingRecommendationMetadata`](crate::model::RightsizingRecommendationMetadata)
+        /// Consumes the builder and constructs a [`RightsizingRecommendationMetadata`](crate::model::RightsizingRecommendationMetadata).
         pub fn build(self) -> crate::model::RightsizingRecommendationMetadata {
             crate::model::RightsizingRecommendationMetadata {
                 recommendation_id: self.recommendation_id,
@@ -8425,7 +8573,7 @@ pub mod rightsizing_recommendation_metadata {
     }
 }
 impl RightsizingRecommendationMetadata {
-    /// Creates a new builder-style object to manufacture [`RightsizingRecommendationMetadata`](crate::model::RightsizingRecommendationMetadata)
+    /// Creates a new builder-style object to manufacture [`RightsizingRecommendationMetadata`](crate::model::RightsizingRecommendationMetadata).
     pub fn builder() -> crate::model::rightsizing_recommendation_metadata::Builder {
         crate::model::rightsizing_recommendation_metadata::Builder::default()
     }
@@ -8436,38 +8584,55 @@ impl RightsizingRecommendationMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservationAggregates {
     /// <p>The percentage of reservation time that you used.</p>
+    #[doc(hidden)]
     pub utilization_percentage: std::option::Option<std::string::String>,
     /// <p>The percentage of Amazon EC2 reservation time that you used. It's converted to normalized units. Normalized units are available only for Amazon EC2 usage after November 11, 2017.</p>
+    #[doc(hidden)]
     pub utilization_percentage_in_units: std::option::Option<std::string::String>,
     /// <p>How many reservation hours that you purchased.</p>
+    #[doc(hidden)]
     pub purchased_hours: std::option::Option<std::string::String>,
     /// <p>The number of Amazon EC2 reservation hours that you purchased. It's converted to normalized units. Normalized units are available only for Amazon EC2 usage after November 11, 2017.</p>
+    #[doc(hidden)]
     pub purchased_units: std::option::Option<std::string::String>,
     /// <p>The total number of reservation hours that you used.</p>
+    #[doc(hidden)]
     pub total_actual_hours: std::option::Option<std::string::String>,
     /// <p>The total number of Amazon EC2 reservation hours that you used. It's converted to normalized units. Normalized units are available only for Amazon EC2 usage after November 11, 2017.</p>
+    #[doc(hidden)]
     pub total_actual_units: std::option::Option<std::string::String>,
     /// <p>The number of reservation hours that you didn't use.</p>
+    #[doc(hidden)]
     pub unused_hours: std::option::Option<std::string::String>,
     /// <p>The number of Amazon EC2 reservation hours that you didn't use. It's converted to normalized units. Normalized units are available only for Amazon EC2 usage after November 11, 2017.</p>
+    #[doc(hidden)]
     pub unused_units: std::option::Option<std::string::String>,
     /// <p>How much your reservation costs if charged On-Demand rates.</p>
+    #[doc(hidden)]
     pub on_demand_cost_of_ri_hours_used: std::option::Option<std::string::String>,
     /// <p>How much you saved due to purchasing and utilizing reservation. Amazon Web Services calculates this by subtracting <code>TotalAmortizedFee</code> from <code>OnDemandCostOfRIHoursUsed</code>.</p>
+    #[doc(hidden)]
     pub net_ri_savings: std::option::Option<std::string::String>,
     /// <p>How much you might save if you use your entire reservation.</p>
+    #[doc(hidden)]
     pub total_potential_ri_savings: std::option::Option<std::string::String>,
     /// <p>The upfront cost of your reservation. It's amortized over the reservation period.</p>
+    #[doc(hidden)]
     pub amortized_upfront_fee: std::option::Option<std::string::String>,
     /// <p>The monthly cost of your reservation. It's amortized over the reservation period.</p>
+    #[doc(hidden)]
     pub amortized_recurring_fee: std::option::Option<std::string::String>,
     /// <p>The total cost of your reservation. It's amortized over the reservation period.</p>
+    #[doc(hidden)]
     pub total_amortized_fee: std::option::Option<std::string::String>,
     /// <p>The cost of unused hours for your reservation.</p>
+    #[doc(hidden)]
     pub ri_cost_for_unused_hours: std::option::Option<std::string::String>,
     /// <p>The realized savings because of purchasing and using a reservation.</p>
+    #[doc(hidden)]
     pub realized_savings: std::option::Option<std::string::String>,
     /// <p>The unrealized savings because of purchasing and using a reservation.</p>
+    #[doc(hidden)]
     pub unrealized_savings: std::option::Option<std::string::String>,
 }
 impl ReservationAggregates {
@@ -8572,11 +8737,10 @@ impl std::fmt::Debug for ReservationAggregates {
         formatter.finish()
     }
 }
-/// See [`ReservationAggregates`](crate::model::ReservationAggregates)
+/// See [`ReservationAggregates`](crate::model::ReservationAggregates).
 pub mod reservation_aggregates {
 
-    /// A builder for [`ReservationAggregates`](crate::model::ReservationAggregates)
-    #[non_exhaustive]
+    /// A builder for [`ReservationAggregates`](crate::model::ReservationAggregates).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) utilization_percentage: std::option::Option<std::string::String>,
@@ -8819,7 +8983,7 @@ pub mod reservation_aggregates {
             self.unrealized_savings = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservationAggregates`](crate::model::ReservationAggregates)
+        /// Consumes the builder and constructs a [`ReservationAggregates`](crate::model::ReservationAggregates).
         pub fn build(self) -> crate::model::ReservationAggregates {
             crate::model::ReservationAggregates {
                 utilization_percentage: self.utilization_percentage,
@@ -8844,7 +9008,7 @@ pub mod reservation_aggregates {
     }
 }
 impl ReservationAggregates {
-    /// Creates a new builder-style object to manufacture [`ReservationAggregates`](crate::model::ReservationAggregates)
+    /// Creates a new builder-style object to manufacture [`ReservationAggregates`](crate::model::ReservationAggregates).
     pub fn builder() -> crate::model::reservation_aggregates::Builder {
         crate::model::reservation_aggregates::Builder::default()
     }
@@ -8855,10 +9019,13 @@ impl ReservationAggregates {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UtilizationByTime {
     /// <p>The period of time that this utilization was used for.</p>
+    #[doc(hidden)]
     pub time_period: std::option::Option<crate::model::DateInterval>,
     /// <p>The groups that this utilization result uses.</p>
+    #[doc(hidden)]
     pub groups: std::option::Option<std::vec::Vec<crate::model::ReservationUtilizationGroup>>,
     /// <p>The total number of reservation hours that were used.</p>
+    #[doc(hidden)]
     pub total: std::option::Option<crate::model::ReservationAggregates>,
 }
 impl UtilizationByTime {
@@ -8884,11 +9051,10 @@ impl std::fmt::Debug for UtilizationByTime {
         formatter.finish()
     }
 }
-/// See [`UtilizationByTime`](crate::model::UtilizationByTime)
+/// See [`UtilizationByTime`](crate::model::UtilizationByTime).
 pub mod utilization_by_time {
 
-    /// A builder for [`UtilizationByTime`](crate::model::UtilizationByTime)
-    #[non_exhaustive]
+    /// A builder for [`UtilizationByTime`](crate::model::UtilizationByTime).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) time_period: std::option::Option<crate::model::DateInterval>,
@@ -8942,7 +9108,7 @@ pub mod utilization_by_time {
             self.total = input;
             self
         }
-        /// Consumes the builder and constructs a [`UtilizationByTime`](crate::model::UtilizationByTime)
+        /// Consumes the builder and constructs a [`UtilizationByTime`](crate::model::UtilizationByTime).
         pub fn build(self) -> crate::model::UtilizationByTime {
             crate::model::UtilizationByTime {
                 time_period: self.time_period,
@@ -8953,7 +9119,7 @@ pub mod utilization_by_time {
     }
 }
 impl UtilizationByTime {
-    /// Creates a new builder-style object to manufacture [`UtilizationByTime`](crate::model::UtilizationByTime)
+    /// Creates a new builder-style object to manufacture [`UtilizationByTime`](crate::model::UtilizationByTime).
     pub fn builder() -> crate::model::utilization_by_time::Builder {
         crate::model::utilization_by_time::Builder::default()
     }
@@ -8964,13 +9130,17 @@ impl UtilizationByTime {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservationUtilizationGroup {
     /// <p>The key for a specific reservation attribute.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of a specific reservation attribute.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The attributes for this group of reservations.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>How much you used this group of reservations.</p>
+    #[doc(hidden)]
     pub utilization: std::option::Option<crate::model::ReservationAggregates>,
 }
 impl ReservationUtilizationGroup {
@@ -9004,11 +9174,10 @@ impl std::fmt::Debug for ReservationUtilizationGroup {
         formatter.finish()
     }
 }
-/// See [`ReservationUtilizationGroup`](crate::model::ReservationUtilizationGroup)
+/// See [`ReservationUtilizationGroup`](crate::model::ReservationUtilizationGroup).
 pub mod reservation_utilization_group {
 
-    /// A builder for [`ReservationUtilizationGroup`](crate::model::ReservationUtilizationGroup)
-    #[non_exhaustive]
+    /// A builder for [`ReservationUtilizationGroup`](crate::model::ReservationUtilizationGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -9077,7 +9246,7 @@ pub mod reservation_utilization_group {
             self.utilization = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservationUtilizationGroup`](crate::model::ReservationUtilizationGroup)
+        /// Consumes the builder and constructs a [`ReservationUtilizationGroup`](crate::model::ReservationUtilizationGroup).
         pub fn build(self) -> crate::model::ReservationUtilizationGroup {
             crate::model::ReservationUtilizationGroup {
                 key: self.key,
@@ -9089,7 +9258,7 @@ pub mod reservation_utilization_group {
     }
 }
 impl ReservationUtilizationGroup {
-    /// Creates a new builder-style object to manufacture [`ReservationUtilizationGroup`](crate::model::ReservationUtilizationGroup)
+    /// Creates a new builder-style object to manufacture [`ReservationUtilizationGroup`](crate::model::ReservationUtilizationGroup).
     pub fn builder() -> crate::model::reservation_utilization_group::Builder {
         crate::model::reservation_utilization_group::Builder::default()
     }
@@ -9100,19 +9269,26 @@ impl ReservationUtilizationGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservationPurchaseRecommendation {
     /// <p>The account scope that Amazon Web Services recommends that you purchase this instance for. For example, you can purchase this reservation for an entire organization in Amazon Web Services Organizations.</p>
+    #[doc(hidden)]
     pub account_scope: std::option::Option<crate::model::AccountScope>,
     /// <p>How many days of previous usage that Amazon Web Services considers when making this recommendation.</p>
+    #[doc(hidden)]
     pub lookback_period_in_days: std::option::Option<crate::model::LookbackPeriodInDays>,
     /// <p>The term of the reservation that you want recommendations for, in years.</p>
+    #[doc(hidden)]
     pub term_in_years: std::option::Option<crate::model::TermInYears>,
     /// <p>The payment option for the reservation (for example, <code>AllUpfront</code> or <code>NoUpfront</code>).</p>
+    #[doc(hidden)]
     pub payment_option: std::option::Option<crate::model::PaymentOption>,
     /// <p>Hardware specifications for the service that you want recommendations for.</p>
+    #[doc(hidden)]
     pub service_specification: std::option::Option<crate::model::ServiceSpecification>,
     /// <p>Details about the recommended purchases.</p>
+    #[doc(hidden)]
     pub recommendation_details:
         std::option::Option<std::vec::Vec<crate::model::ReservationPurchaseRecommendationDetail>>,
     /// <p>A summary about the recommended purchase.</p>
+    #[doc(hidden)]
     pub recommendation_summary:
         std::option::Option<crate::model::ReservationPurchaseRecommendationSummary>,
 }
@@ -9167,11 +9343,10 @@ impl std::fmt::Debug for ReservationPurchaseRecommendation {
         formatter.finish()
     }
 }
-/// See [`ReservationPurchaseRecommendation`](crate::model::ReservationPurchaseRecommendation)
+/// See [`ReservationPurchaseRecommendation`](crate::model::ReservationPurchaseRecommendation).
 pub mod reservation_purchase_recommendation {
 
-    /// A builder for [`ReservationPurchaseRecommendation`](crate::model::ReservationPurchaseRecommendation)
-    #[non_exhaustive]
+    /// A builder for [`ReservationPurchaseRecommendation`](crate::model::ReservationPurchaseRecommendation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_scope: std::option::Option<crate::model::AccountScope>,
@@ -9294,7 +9469,7 @@ pub mod reservation_purchase_recommendation {
             self.recommendation_summary = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservationPurchaseRecommendation`](crate::model::ReservationPurchaseRecommendation)
+        /// Consumes the builder and constructs a [`ReservationPurchaseRecommendation`](crate::model::ReservationPurchaseRecommendation).
         pub fn build(self) -> crate::model::ReservationPurchaseRecommendation {
             crate::model::ReservationPurchaseRecommendation {
                 account_scope: self.account_scope,
@@ -9309,7 +9484,7 @@ pub mod reservation_purchase_recommendation {
     }
 }
 impl ReservationPurchaseRecommendation {
-    /// Creates a new builder-style object to manufacture [`ReservationPurchaseRecommendation`](crate::model::ReservationPurchaseRecommendation)
+    /// Creates a new builder-style object to manufacture [`ReservationPurchaseRecommendation`](crate::model::ReservationPurchaseRecommendation).
     pub fn builder() -> crate::model::reservation_purchase_recommendation::Builder {
         crate::model::reservation_purchase_recommendation::Builder::default()
     }
@@ -9320,10 +9495,13 @@ impl ReservationPurchaseRecommendation {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservationPurchaseRecommendationSummary {
     /// <p>The total amount that Amazon Web Services estimates that this recommendation could save you in a month.</p>
+    #[doc(hidden)]
     pub total_estimated_monthly_savings_amount: std::option::Option<std::string::String>,
     /// <p>The total amount that Amazon Web Services estimates that this recommendation could save you in a month, as a percentage of your costs.</p>
+    #[doc(hidden)]
     pub total_estimated_monthly_savings_percentage: std::option::Option<std::string::String>,
     /// <p>The currency code used for this recommendation.</p>
+    #[doc(hidden)]
     pub currency_code: std::option::Option<std::string::String>,
 }
 impl ReservationPurchaseRecommendationSummary {
@@ -9355,11 +9533,10 @@ impl std::fmt::Debug for ReservationPurchaseRecommendationSummary {
         formatter.finish()
     }
 }
-/// See [`ReservationPurchaseRecommendationSummary`](crate::model::ReservationPurchaseRecommendationSummary)
+/// See [`ReservationPurchaseRecommendationSummary`](crate::model::ReservationPurchaseRecommendationSummary).
 pub mod reservation_purchase_recommendation_summary {
 
-    /// A builder for [`ReservationPurchaseRecommendationSummary`](crate::model::ReservationPurchaseRecommendationSummary)
-    #[non_exhaustive]
+    /// A builder for [`ReservationPurchaseRecommendationSummary`](crate::model::ReservationPurchaseRecommendationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) total_estimated_monthly_savings_amount: std::option::Option<std::string::String>,
@@ -9413,7 +9590,7 @@ pub mod reservation_purchase_recommendation_summary {
             self.currency_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservationPurchaseRecommendationSummary`](crate::model::ReservationPurchaseRecommendationSummary)
+        /// Consumes the builder and constructs a [`ReservationPurchaseRecommendationSummary`](crate::model::ReservationPurchaseRecommendationSummary).
         pub fn build(self) -> crate::model::ReservationPurchaseRecommendationSummary {
             crate::model::ReservationPurchaseRecommendationSummary {
                 total_estimated_monthly_savings_amount: self.total_estimated_monthly_savings_amount,
@@ -9425,7 +9602,7 @@ pub mod reservation_purchase_recommendation_summary {
     }
 }
 impl ReservationPurchaseRecommendationSummary {
-    /// Creates a new builder-style object to manufacture [`ReservationPurchaseRecommendationSummary`](crate::model::ReservationPurchaseRecommendationSummary)
+    /// Creates a new builder-style object to manufacture [`ReservationPurchaseRecommendationSummary`](crate::model::ReservationPurchaseRecommendationSummary).
     pub fn builder() -> crate::model::reservation_purchase_recommendation_summary::Builder {
         crate::model::reservation_purchase_recommendation_summary::Builder::default()
     }
@@ -9436,42 +9613,61 @@ impl ReservationPurchaseRecommendationSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservationPurchaseRecommendationDetail {
     /// <p>The account that this Reserved Instance (RI) recommendation is for.</p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>Details about the instances that Amazon Web Services recommends that you purchase.</p>
+    #[doc(hidden)]
     pub instance_details: std::option::Option<crate::model::InstanceDetails>,
     /// <p>The number of instances that Amazon Web Services recommends that you purchase.</p>
+    #[doc(hidden)]
     pub recommended_number_of_instances_to_purchase: std::option::Option<std::string::String>,
     /// <p>The number of normalized units that Amazon Web Services recommends that you purchase.</p>
+    #[doc(hidden)]
     pub recommended_normalized_units_to_purchase: std::option::Option<std::string::String>,
     /// <p>The minimum number of instances that you used in an hour during the historical period. Amazon Web Services uses this to calculate your recommended reservation purchases.</p>
+    #[doc(hidden)]
     pub minimum_number_of_instances_used_per_hour: std::option::Option<std::string::String>,
     /// <p>The minimum number of normalized units that you used in an hour during the historical period. Amazon Web Services uses this to calculate your recommended reservation purchases.</p>
+    #[doc(hidden)]
     pub minimum_normalized_units_used_per_hour: std::option::Option<std::string::String>,
     /// <p>The maximum number of instances that you used in an hour during the historical period. Amazon Web Services uses this to calculate your recommended reservation purchases.</p>
+    #[doc(hidden)]
     pub maximum_number_of_instances_used_per_hour: std::option::Option<std::string::String>,
     /// <p>The maximum number of normalized units that you used in an hour during the historical period. Amazon Web Services uses this to calculate your recommended reservation purchases.</p>
+    #[doc(hidden)]
     pub maximum_normalized_units_used_per_hour: std::option::Option<std::string::String>,
     /// <p>The average number of instances that you used in an hour during the historical period. Amazon Web Services uses this to calculate your recommended reservation purchases.</p>
+    #[doc(hidden)]
     pub average_number_of_instances_used_per_hour: std::option::Option<std::string::String>,
     /// <p>The average number of normalized units that you used in an hour during the historical period. Amazon Web Services uses this to calculate your recommended reservation purchases.</p>
+    #[doc(hidden)]
     pub average_normalized_units_used_per_hour: std::option::Option<std::string::String>,
     /// <p>The average utilization of your instances. Amazon Web Services uses this to calculate your recommended reservation purchases.</p>
+    #[doc(hidden)]
     pub average_utilization: std::option::Option<std::string::String>,
     /// <p>How long Amazon Web Services estimates that it takes for this instance to start saving you money, in months.</p>
+    #[doc(hidden)]
     pub estimated_break_even_in_months: std::option::Option<std::string::String>,
     /// <p>The currency code that Amazon Web Services used to calculate the costs for this instance.</p>
+    #[doc(hidden)]
     pub currency_code: std::option::Option<std::string::String>,
     /// <p>How much Amazon Web Services estimates that this specific recommendation might save you in a month.</p>
+    #[doc(hidden)]
     pub estimated_monthly_savings_amount: std::option::Option<std::string::String>,
     /// <p>How much Amazon Web Services estimates that this specific recommendation might save you in a month, as a percentage of your overall costs.</p>
+    #[doc(hidden)]
     pub estimated_monthly_savings_percentage: std::option::Option<std::string::String>,
     /// <p>How much Amazon Web Services estimates that you spend on On-Demand Instances in a month.</p>
+    #[doc(hidden)]
     pub estimated_monthly_on_demand_cost: std::option::Option<std::string::String>,
     /// <p>How much Amazon Web Services estimates that you might spend for all usage during the specified historical period if you had a reservation.</p>
+    #[doc(hidden)]
     pub estimated_reservation_cost_for_lookback_period: std::option::Option<std::string::String>,
     /// <p>How much purchasing this instance costs you upfront.</p>
+    #[doc(hidden)]
     pub upfront_cost: std::option::Option<std::string::String>,
     /// <p>How much purchasing this instance costs you on a monthly basis.</p>
+    #[doc(hidden)]
     pub recurring_standard_monthly_cost: std::option::Option<std::string::String>,
 }
 impl ReservationPurchaseRecommendationDetail {
@@ -9620,11 +9816,10 @@ impl std::fmt::Debug for ReservationPurchaseRecommendationDetail {
         formatter.finish()
     }
 }
-/// See [`ReservationPurchaseRecommendationDetail`](crate::model::ReservationPurchaseRecommendationDetail)
+/// See [`ReservationPurchaseRecommendationDetail`](crate::model::ReservationPurchaseRecommendationDetail).
 pub mod reservation_purchase_recommendation_detail {
 
-    /// A builder for [`ReservationPurchaseRecommendationDetail`](crate::model::ReservationPurchaseRecommendationDetail)
-    #[non_exhaustive]
+    /// A builder for [`ReservationPurchaseRecommendationDetail`](crate::model::ReservationPurchaseRecommendationDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_id: std::option::Option<std::string::String>,
@@ -9937,7 +10132,7 @@ pub mod reservation_purchase_recommendation_detail {
             self.recurring_standard_monthly_cost = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservationPurchaseRecommendationDetail`](crate::model::ReservationPurchaseRecommendationDetail)
+        /// Consumes the builder and constructs a [`ReservationPurchaseRecommendationDetail`](crate::model::ReservationPurchaseRecommendationDetail).
         pub fn build(self) -> crate::model::ReservationPurchaseRecommendationDetail {
             crate::model::ReservationPurchaseRecommendationDetail {
                 account_id: self.account_id,
@@ -9970,7 +10165,7 @@ pub mod reservation_purchase_recommendation_detail {
     }
 }
 impl ReservationPurchaseRecommendationDetail {
-    /// Creates a new builder-style object to manufacture [`ReservationPurchaseRecommendationDetail`](crate::model::ReservationPurchaseRecommendationDetail)
+    /// Creates a new builder-style object to manufacture [`ReservationPurchaseRecommendationDetail`](crate::model::ReservationPurchaseRecommendationDetail).
     pub fn builder() -> crate::model::reservation_purchase_recommendation_detail::Builder {
         crate::model::reservation_purchase_recommendation_detail::Builder::default()
     }
@@ -9981,15 +10176,20 @@ impl ReservationPurchaseRecommendationDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InstanceDetails {
     /// <p>The Amazon EC2 instances that Amazon Web Services recommends that you purchase.</p>
+    #[doc(hidden)]
     pub ec2_instance_details: std::option::Option<crate::model::Ec2InstanceDetails>,
     /// <p>The Amazon RDS instances that Amazon Web Services recommends that you purchase.</p>
+    #[doc(hidden)]
     pub rds_instance_details: std::option::Option<crate::model::RdsInstanceDetails>,
     /// <p>The Amazon Redshift instances that Amazon Web Services recommends that you purchase.</p>
+    #[doc(hidden)]
     pub redshift_instance_details: std::option::Option<crate::model::RedshiftInstanceDetails>,
     /// <p>The ElastiCache instances that Amazon Web Services recommends that you purchase.</p>
+    #[doc(hidden)]
     pub elasti_cache_instance_details:
         std::option::Option<crate::model::ElastiCacheInstanceDetails>,
     /// <p>The Amazon OpenSearch Service instances that Amazon Web Services recommends that you purchase.</p>
+    #[doc(hidden)]
     pub es_instance_details: std::option::Option<crate::model::EsInstanceDetails>,
 }
 impl InstanceDetails {
@@ -10032,11 +10232,10 @@ impl std::fmt::Debug for InstanceDetails {
         formatter.finish()
     }
 }
-/// See [`InstanceDetails`](crate::model::InstanceDetails)
+/// See [`InstanceDetails`](crate::model::InstanceDetails).
 pub mod instance_details {
 
-    /// A builder for [`InstanceDetails`](crate::model::InstanceDetails)
-    #[non_exhaustive]
+    /// A builder for [`InstanceDetails`](crate::model::InstanceDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ec2_instance_details: std::option::Option<crate::model::Ec2InstanceDetails>,
@@ -10119,7 +10318,7 @@ pub mod instance_details {
             self.es_instance_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`InstanceDetails`](crate::model::InstanceDetails)
+        /// Consumes the builder and constructs a [`InstanceDetails`](crate::model::InstanceDetails).
         pub fn build(self) -> crate::model::InstanceDetails {
             crate::model::InstanceDetails {
                 ec2_instance_details: self.ec2_instance_details,
@@ -10132,7 +10331,7 @@ pub mod instance_details {
     }
 }
 impl InstanceDetails {
-    /// Creates a new builder-style object to manufacture [`InstanceDetails`](crate::model::InstanceDetails)
+    /// Creates a new builder-style object to manufacture [`InstanceDetails`](crate::model::InstanceDetails).
     pub fn builder() -> crate::model::instance_details::Builder {
         crate::model::instance_details::Builder::default()
     }
@@ -10143,14 +10342,19 @@ impl InstanceDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EsInstanceDetails {
     /// <p>The class of instance that Amazon Web Services recommends.</p>
+    #[doc(hidden)]
     pub instance_class: std::option::Option<std::string::String>,
     /// <p>The size of instance that Amazon Web Services recommends.</p>
+    #[doc(hidden)]
     pub instance_size: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region of the recommended reservation.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>Determines whether the recommendation is for a current-generation instance.</p>
+    #[doc(hidden)]
     pub current_generation: bool,
     /// <p>Determines whether the recommended reservation is size flexible.</p>
+    #[doc(hidden)]
     pub size_flex_eligible: bool,
 }
 impl EsInstanceDetails {
@@ -10186,11 +10390,10 @@ impl std::fmt::Debug for EsInstanceDetails {
         formatter.finish()
     }
 }
-/// See [`EsInstanceDetails`](crate::model::EsInstanceDetails)
+/// See [`EsInstanceDetails`](crate::model::EsInstanceDetails).
 pub mod es_instance_details {
 
-    /// A builder for [`EsInstanceDetails`](crate::model::EsInstanceDetails)
-    #[non_exhaustive]
+    /// A builder for [`EsInstanceDetails`](crate::model::EsInstanceDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instance_class: std::option::Option<std::string::String>,
@@ -10256,7 +10459,7 @@ pub mod es_instance_details {
             self.size_flex_eligible = input;
             self
         }
-        /// Consumes the builder and constructs a [`EsInstanceDetails`](crate::model::EsInstanceDetails)
+        /// Consumes the builder and constructs a [`EsInstanceDetails`](crate::model::EsInstanceDetails).
         pub fn build(self) -> crate::model::EsInstanceDetails {
             crate::model::EsInstanceDetails {
                 instance_class: self.instance_class,
@@ -10269,7 +10472,7 @@ pub mod es_instance_details {
     }
 }
 impl EsInstanceDetails {
-    /// Creates a new builder-style object to manufacture [`EsInstanceDetails`](crate::model::EsInstanceDetails)
+    /// Creates a new builder-style object to manufacture [`EsInstanceDetails`](crate::model::EsInstanceDetails).
     pub fn builder() -> crate::model::es_instance_details::Builder {
         crate::model::es_instance_details::Builder::default()
     }
@@ -10280,16 +10483,22 @@ impl EsInstanceDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ElastiCacheInstanceDetails {
     /// <p>The instance family of the recommended reservation.</p>
+    #[doc(hidden)]
     pub family: std::option::Option<std::string::String>,
     /// <p>The type of node that Amazon Web Services recommends.</p>
+    #[doc(hidden)]
     pub node_type: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region of the recommended reservation.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The description of the recommended reservation.</p>
+    #[doc(hidden)]
     pub product_description: std::option::Option<std::string::String>,
     /// <p>Determines whether the recommendation is for a current generation instance.</p>
+    #[doc(hidden)]
     pub current_generation: bool,
     /// <p>Determines whether the recommended reservation is size flexible.</p>
+    #[doc(hidden)]
     pub size_flex_eligible: bool,
 }
 impl ElastiCacheInstanceDetails {
@@ -10330,11 +10539,10 @@ impl std::fmt::Debug for ElastiCacheInstanceDetails {
         formatter.finish()
     }
 }
-/// See [`ElastiCacheInstanceDetails`](crate::model::ElastiCacheInstanceDetails)
+/// See [`ElastiCacheInstanceDetails`](crate::model::ElastiCacheInstanceDetails).
 pub mod elasti_cache_instance_details {
 
-    /// A builder for [`ElastiCacheInstanceDetails`](crate::model::ElastiCacheInstanceDetails)
-    #[non_exhaustive]
+    /// A builder for [`ElastiCacheInstanceDetails`](crate::model::ElastiCacheInstanceDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) family: std::option::Option<std::string::String>,
@@ -10408,7 +10616,7 @@ pub mod elasti_cache_instance_details {
             self.size_flex_eligible = input;
             self
         }
-        /// Consumes the builder and constructs a [`ElastiCacheInstanceDetails`](crate::model::ElastiCacheInstanceDetails)
+        /// Consumes the builder and constructs a [`ElastiCacheInstanceDetails`](crate::model::ElastiCacheInstanceDetails).
         pub fn build(self) -> crate::model::ElastiCacheInstanceDetails {
             crate::model::ElastiCacheInstanceDetails {
                 family: self.family,
@@ -10422,7 +10630,7 @@ pub mod elasti_cache_instance_details {
     }
 }
 impl ElastiCacheInstanceDetails {
-    /// Creates a new builder-style object to manufacture [`ElastiCacheInstanceDetails`](crate::model::ElastiCacheInstanceDetails)
+    /// Creates a new builder-style object to manufacture [`ElastiCacheInstanceDetails`](crate::model::ElastiCacheInstanceDetails).
     pub fn builder() -> crate::model::elasti_cache_instance_details::Builder {
         crate::model::elasti_cache_instance_details::Builder::default()
     }
@@ -10433,14 +10641,19 @@ impl ElastiCacheInstanceDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RedshiftInstanceDetails {
     /// <p>The instance family of the recommended reservation.</p>
+    #[doc(hidden)]
     pub family: std::option::Option<std::string::String>,
     /// <p>The type of node that Amazon Web Services recommends.</p>
+    #[doc(hidden)]
     pub node_type: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region of the recommended reservation.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>Determines whether the recommendation is for a current-generation instance.</p>
+    #[doc(hidden)]
     pub current_generation: bool,
     /// <p>Determines whether the recommended reservation is size flexible.</p>
+    #[doc(hidden)]
     pub size_flex_eligible: bool,
 }
 impl RedshiftInstanceDetails {
@@ -10476,11 +10689,10 @@ impl std::fmt::Debug for RedshiftInstanceDetails {
         formatter.finish()
     }
 }
-/// See [`RedshiftInstanceDetails`](crate::model::RedshiftInstanceDetails)
+/// See [`RedshiftInstanceDetails`](crate::model::RedshiftInstanceDetails).
 pub mod redshift_instance_details {
 
-    /// A builder for [`RedshiftInstanceDetails`](crate::model::RedshiftInstanceDetails)
-    #[non_exhaustive]
+    /// A builder for [`RedshiftInstanceDetails`](crate::model::RedshiftInstanceDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) family: std::option::Option<std::string::String>,
@@ -10540,7 +10752,7 @@ pub mod redshift_instance_details {
             self.size_flex_eligible = input;
             self
         }
-        /// Consumes the builder and constructs a [`RedshiftInstanceDetails`](crate::model::RedshiftInstanceDetails)
+        /// Consumes the builder and constructs a [`RedshiftInstanceDetails`](crate::model::RedshiftInstanceDetails).
         pub fn build(self) -> crate::model::RedshiftInstanceDetails {
             crate::model::RedshiftInstanceDetails {
                 family: self.family,
@@ -10553,7 +10765,7 @@ pub mod redshift_instance_details {
     }
 }
 impl RedshiftInstanceDetails {
-    /// Creates a new builder-style object to manufacture [`RedshiftInstanceDetails`](crate::model::RedshiftInstanceDetails)
+    /// Creates a new builder-style object to manufacture [`RedshiftInstanceDetails`](crate::model::RedshiftInstanceDetails).
     pub fn builder() -> crate::model::redshift_instance_details::Builder {
         crate::model::redshift_instance_details::Builder::default()
     }
@@ -10564,22 +10776,31 @@ impl RedshiftInstanceDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RdsInstanceDetails {
     /// <p>The instance family of the recommended reservation.</p>
+    #[doc(hidden)]
     pub family: std::option::Option<std::string::String>,
     /// <p>The type of instance that Amazon Web Services recommends.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region of the recommended reservation.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The database engine that the recommended reservation supports.</p>
+    #[doc(hidden)]
     pub database_engine: std::option::Option<std::string::String>,
     /// <p>The database edition that the recommended reservation supports.</p>
+    #[doc(hidden)]
     pub database_edition: std::option::Option<std::string::String>,
     /// <p>Determines whether the recommendation is for a reservation in a single Availability Zone or a reservation with a backup in a second Availability Zone.</p>
+    #[doc(hidden)]
     pub deployment_option: std::option::Option<std::string::String>,
     /// <p>The license model that the recommended reservation supports.</p>
+    #[doc(hidden)]
     pub license_model: std::option::Option<std::string::String>,
     /// <p>Determines whether the recommendation is for a current-generation instance. </p>
+    #[doc(hidden)]
     pub current_generation: bool,
     /// <p>Determines whether the recommended reservation is size flexible.</p>
+    #[doc(hidden)]
     pub size_flex_eligible: bool,
 }
 impl RdsInstanceDetails {
@@ -10635,11 +10856,10 @@ impl std::fmt::Debug for RdsInstanceDetails {
         formatter.finish()
     }
 }
-/// See [`RdsInstanceDetails`](crate::model::RdsInstanceDetails)
+/// See [`RdsInstanceDetails`](crate::model::RdsInstanceDetails).
 pub mod rds_instance_details {
 
-    /// A builder for [`RdsInstanceDetails`](crate::model::RdsInstanceDetails)
-    #[non_exhaustive]
+    /// A builder for [`RdsInstanceDetails`](crate::model::RdsInstanceDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) family: std::option::Option<std::string::String>,
@@ -10758,7 +10978,7 @@ pub mod rds_instance_details {
             self.size_flex_eligible = input;
             self
         }
-        /// Consumes the builder and constructs a [`RdsInstanceDetails`](crate::model::RdsInstanceDetails)
+        /// Consumes the builder and constructs a [`RdsInstanceDetails`](crate::model::RdsInstanceDetails).
         pub fn build(self) -> crate::model::RdsInstanceDetails {
             crate::model::RdsInstanceDetails {
                 family: self.family,
@@ -10775,7 +10995,7 @@ pub mod rds_instance_details {
     }
 }
 impl RdsInstanceDetails {
-    /// Creates a new builder-style object to manufacture [`RdsInstanceDetails`](crate::model::RdsInstanceDetails)
+    /// Creates a new builder-style object to manufacture [`RdsInstanceDetails`](crate::model::RdsInstanceDetails).
     pub fn builder() -> crate::model::rds_instance_details::Builder {
         crate::model::rds_instance_details::Builder::default()
     }
@@ -10786,20 +11006,28 @@ impl RdsInstanceDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ec2InstanceDetails {
     /// <p>The instance family of the recommended reservation.</p>
+    #[doc(hidden)]
     pub family: std::option::Option<std::string::String>,
     /// <p>The type of instance that Amazon Web Services recommends.</p>
+    #[doc(hidden)]
     pub instance_type: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region of the recommended reservation.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The Availability Zone of the recommended reservation.</p>
+    #[doc(hidden)]
     pub availability_zone: std::option::Option<std::string::String>,
     /// <p>The platform of the recommended reservation. The platform is the specific combination of operating system, license model, and software on an instance.</p>
+    #[doc(hidden)]
     pub platform: std::option::Option<std::string::String>,
     /// <p>Determines whether the recommended reservation is dedicated or shared.</p>
+    #[doc(hidden)]
     pub tenancy: std::option::Option<std::string::String>,
     /// <p>Determines whether the recommendation is for a current-generation instance. </p>
+    #[doc(hidden)]
     pub current_generation: bool,
     /// <p>Determines whether the recommended reservation is size flexible.</p>
+    #[doc(hidden)]
     pub size_flex_eligible: bool,
 }
 impl Ec2InstanceDetails {
@@ -10850,11 +11078,10 @@ impl std::fmt::Debug for Ec2InstanceDetails {
         formatter.finish()
     }
 }
-/// See [`Ec2InstanceDetails`](crate::model::Ec2InstanceDetails)
+/// See [`Ec2InstanceDetails`](crate::model::Ec2InstanceDetails).
 pub mod ec2_instance_details {
 
-    /// A builder for [`Ec2InstanceDetails`](crate::model::Ec2InstanceDetails)
-    #[non_exhaustive]
+    /// A builder for [`Ec2InstanceDetails`](crate::model::Ec2InstanceDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) family: std::option::Option<std::string::String>,
@@ -10953,7 +11180,7 @@ pub mod ec2_instance_details {
             self.size_flex_eligible = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2InstanceDetails`](crate::model::Ec2InstanceDetails)
+        /// Consumes the builder and constructs a [`Ec2InstanceDetails`](crate::model::Ec2InstanceDetails).
         pub fn build(self) -> crate::model::Ec2InstanceDetails {
             crate::model::Ec2InstanceDetails {
                 family: self.family,
@@ -10969,7 +11196,7 @@ pub mod ec2_instance_details {
     }
 }
 impl Ec2InstanceDetails {
-    /// Creates a new builder-style object to manufacture [`Ec2InstanceDetails`](crate::model::Ec2InstanceDetails)
+    /// Creates a new builder-style object to manufacture [`Ec2InstanceDetails`](crate::model::Ec2InstanceDetails).
     pub fn builder() -> crate::model::ec2_instance_details::Builder {
         crate::model::ec2_instance_details::Builder::default()
     }
@@ -10980,6 +11207,7 @@ impl Ec2InstanceDetails {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceSpecification {
     /// <p>The Amazon EC2 hardware specifications that you want Amazon Web Services to provide recommendations for.</p>
+    #[doc(hidden)]
     pub ec2_specification: std::option::Option<crate::model::Ec2Specification>,
 }
 impl ServiceSpecification {
@@ -10995,11 +11223,10 @@ impl std::fmt::Debug for ServiceSpecification {
         formatter.finish()
     }
 }
-/// See [`ServiceSpecification`](crate::model::ServiceSpecification)
+/// See [`ServiceSpecification`](crate::model::ServiceSpecification).
 pub mod service_specification {
 
-    /// A builder for [`ServiceSpecification`](crate::model::ServiceSpecification)
-    #[non_exhaustive]
+    /// A builder for [`ServiceSpecification`](crate::model::ServiceSpecification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ec2_specification: std::option::Option<crate::model::Ec2Specification>,
@@ -11018,7 +11245,7 @@ pub mod service_specification {
             self.ec2_specification = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceSpecification`](crate::model::ServiceSpecification)
+        /// Consumes the builder and constructs a [`ServiceSpecification`](crate::model::ServiceSpecification).
         pub fn build(self) -> crate::model::ServiceSpecification {
             crate::model::ServiceSpecification {
                 ec2_specification: self.ec2_specification,
@@ -11027,7 +11254,7 @@ pub mod service_specification {
     }
 }
 impl ServiceSpecification {
-    /// Creates a new builder-style object to manufacture [`ServiceSpecification`](crate::model::ServiceSpecification)
+    /// Creates a new builder-style object to manufacture [`ServiceSpecification`](crate::model::ServiceSpecification).
     pub fn builder() -> crate::model::service_specification::Builder {
         crate::model::service_specification::Builder::default()
     }
@@ -11038,6 +11265,7 @@ impl ServiceSpecification {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Ec2Specification {
     /// <p>Indicates whether you want a recommendation for standard or convertible reservations.</p>
+    #[doc(hidden)]
     pub offering_class: std::option::Option<crate::model::OfferingClass>,
 }
 impl Ec2Specification {
@@ -11053,11 +11281,10 @@ impl std::fmt::Debug for Ec2Specification {
         formatter.finish()
     }
 }
-/// See [`Ec2Specification`](crate::model::Ec2Specification)
+/// See [`Ec2Specification`](crate::model::Ec2Specification).
 pub mod ec2_specification {
 
-    /// A builder for [`Ec2Specification`](crate::model::Ec2Specification)
-    #[non_exhaustive]
+    /// A builder for [`Ec2Specification`](crate::model::Ec2Specification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) offering_class: std::option::Option<crate::model::OfferingClass>,
@@ -11076,7 +11303,7 @@ pub mod ec2_specification {
             self.offering_class = input;
             self
         }
-        /// Consumes the builder and constructs a [`Ec2Specification`](crate::model::Ec2Specification)
+        /// Consumes the builder and constructs a [`Ec2Specification`](crate::model::Ec2Specification).
         pub fn build(self) -> crate::model::Ec2Specification {
             crate::model::Ec2Specification {
                 offering_class: self.offering_class,
@@ -11085,7 +11312,7 @@ pub mod ec2_specification {
     }
 }
 impl Ec2Specification {
-    /// Creates a new builder-style object to manufacture [`Ec2Specification`](crate::model::Ec2Specification)
+    /// Creates a new builder-style object to manufacture [`Ec2Specification`](crate::model::Ec2Specification).
     pub fn builder() -> crate::model::ec2_specification::Builder {
         crate::model::ec2_specification::Builder::default()
     }
@@ -11151,8 +11378,10 @@ impl AsRef<str> for OfferingClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservationPurchaseRecommendationMetadata {
     /// <p>The ID for this specific recommendation.</p>
+    #[doc(hidden)]
     pub recommendation_id: std::option::Option<std::string::String>,
     /// <p>The timestamp for when Amazon Web Services made this recommendation.</p>
+    #[doc(hidden)]
     pub generation_timestamp: std::option::Option<std::string::String>,
 }
 impl ReservationPurchaseRecommendationMetadata {
@@ -11173,11 +11402,10 @@ impl std::fmt::Debug for ReservationPurchaseRecommendationMetadata {
         formatter.finish()
     }
 }
-/// See [`ReservationPurchaseRecommendationMetadata`](crate::model::ReservationPurchaseRecommendationMetadata)
+/// See [`ReservationPurchaseRecommendationMetadata`](crate::model::ReservationPurchaseRecommendationMetadata).
 pub mod reservation_purchase_recommendation_metadata {
 
-    /// A builder for [`ReservationPurchaseRecommendationMetadata`](crate::model::ReservationPurchaseRecommendationMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ReservationPurchaseRecommendationMetadata`](crate::model::ReservationPurchaseRecommendationMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_id: std::option::Option<std::string::String>,
@@ -11210,7 +11438,7 @@ pub mod reservation_purchase_recommendation_metadata {
             self.generation_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservationPurchaseRecommendationMetadata`](crate::model::ReservationPurchaseRecommendationMetadata)
+        /// Consumes the builder and constructs a [`ReservationPurchaseRecommendationMetadata`](crate::model::ReservationPurchaseRecommendationMetadata).
         pub fn build(self) -> crate::model::ReservationPurchaseRecommendationMetadata {
             crate::model::ReservationPurchaseRecommendationMetadata {
                 recommendation_id: self.recommendation_id,
@@ -11220,7 +11448,7 @@ pub mod reservation_purchase_recommendation_metadata {
     }
 }
 impl ReservationPurchaseRecommendationMetadata {
-    /// Creates a new builder-style object to manufacture [`ReservationPurchaseRecommendationMetadata`](crate::model::ReservationPurchaseRecommendationMetadata)
+    /// Creates a new builder-style object to manufacture [`ReservationPurchaseRecommendationMetadata`](crate::model::ReservationPurchaseRecommendationMetadata).
     pub fn builder() -> crate::model::reservation_purchase_recommendation_metadata::Builder {
         crate::model::reservation_purchase_recommendation_metadata::Builder::default()
     }
@@ -11231,10 +11459,13 @@ impl ReservationPurchaseRecommendationMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Coverage {
     /// <p>The amount of instance usage that the reservation covered, in hours.</p>
+    #[doc(hidden)]
     pub coverage_hours: std::option::Option<crate::model::CoverageHours>,
     /// <p>The amount of instance usage that the reservation covered, in normalized units.</p>
+    #[doc(hidden)]
     pub coverage_normalized_units: std::option::Option<crate::model::CoverageNormalizedUnits>,
     /// <p>The amount of cost that the reservation covered.</p>
+    #[doc(hidden)]
     pub coverage_cost: std::option::Option<crate::model::CoverageCost>,
 }
 impl Coverage {
@@ -11262,11 +11493,10 @@ impl std::fmt::Debug for Coverage {
         formatter.finish()
     }
 }
-/// See [`Coverage`](crate::model::Coverage)
+/// See [`Coverage`](crate::model::Coverage).
 pub mod coverage {
 
-    /// A builder for [`Coverage`](crate::model::Coverage)
-    #[non_exhaustive]
+    /// A builder for [`Coverage`](crate::model::Coverage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) coverage_hours: std::option::Option<crate::model::CoverageHours>,
@@ -11317,7 +11547,7 @@ pub mod coverage {
             self.coverage_cost = input;
             self
         }
-        /// Consumes the builder and constructs a [`Coverage`](crate::model::Coverage)
+        /// Consumes the builder and constructs a [`Coverage`](crate::model::Coverage).
         pub fn build(self) -> crate::model::Coverage {
             crate::model::Coverage {
                 coverage_hours: self.coverage_hours,
@@ -11328,7 +11558,7 @@ pub mod coverage {
     }
 }
 impl Coverage {
-    /// Creates a new builder-style object to manufacture [`Coverage`](crate::model::Coverage)
+    /// Creates a new builder-style object to manufacture [`Coverage`](crate::model::Coverage).
     pub fn builder() -> crate::model::coverage::Builder {
         crate::model::coverage::Builder::default()
     }
@@ -11339,6 +11569,7 @@ impl Coverage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CoverageCost {
     /// <p>How much an On-Demand Instance costs.</p>
+    #[doc(hidden)]
     pub on_demand_cost: std::option::Option<std::string::String>,
 }
 impl CoverageCost {
@@ -11354,11 +11585,10 @@ impl std::fmt::Debug for CoverageCost {
         formatter.finish()
     }
 }
-/// See [`CoverageCost`](crate::model::CoverageCost)
+/// See [`CoverageCost`](crate::model::CoverageCost).
 pub mod coverage_cost {
 
-    /// A builder for [`CoverageCost`](crate::model::CoverageCost)
-    #[non_exhaustive]
+    /// A builder for [`CoverageCost`](crate::model::CoverageCost).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) on_demand_cost: std::option::Option<std::string::String>,
@@ -11377,7 +11607,7 @@ pub mod coverage_cost {
             self.on_demand_cost = input;
             self
         }
-        /// Consumes the builder and constructs a [`CoverageCost`](crate::model::CoverageCost)
+        /// Consumes the builder and constructs a [`CoverageCost`](crate::model::CoverageCost).
         pub fn build(self) -> crate::model::CoverageCost {
             crate::model::CoverageCost {
                 on_demand_cost: self.on_demand_cost,
@@ -11386,7 +11616,7 @@ pub mod coverage_cost {
     }
 }
 impl CoverageCost {
-    /// Creates a new builder-style object to manufacture [`CoverageCost`](crate::model::CoverageCost)
+    /// Creates a new builder-style object to manufacture [`CoverageCost`](crate::model::CoverageCost).
     pub fn builder() -> crate::model::coverage_cost::Builder {
         crate::model::coverage_cost::Builder::default()
     }
@@ -11398,12 +11628,16 @@ impl CoverageCost {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CoverageNormalizedUnits {
     /// <p>The number of normalized units that are covered by On-Demand Instances instead of a reservation.</p>
+    #[doc(hidden)]
     pub on_demand_normalized_units: std::option::Option<std::string::String>,
     /// <p>The number of normalized units that a reservation covers.</p>
+    #[doc(hidden)]
     pub reserved_normalized_units: std::option::Option<std::string::String>,
     /// <p>The total number of normalized units that you used.</p>
+    #[doc(hidden)]
     pub total_running_normalized_units: std::option::Option<std::string::String>,
     /// <p>The percentage of your used instance normalized units that a reservation covers.</p>
+    #[doc(hidden)]
     pub coverage_normalized_units_percentage: std::option::Option<std::string::String>,
 }
 impl CoverageNormalizedUnits {
@@ -11443,11 +11677,10 @@ impl std::fmt::Debug for CoverageNormalizedUnits {
         formatter.finish()
     }
 }
-/// See [`CoverageNormalizedUnits`](crate::model::CoverageNormalizedUnits)
+/// See [`CoverageNormalizedUnits`](crate::model::CoverageNormalizedUnits).
 pub mod coverage_normalized_units {
 
-    /// A builder for [`CoverageNormalizedUnits`](crate::model::CoverageNormalizedUnits)
-    #[non_exhaustive]
+    /// A builder for [`CoverageNormalizedUnits`](crate::model::CoverageNormalizedUnits).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) on_demand_normalized_units: std::option::Option<std::string::String>,
@@ -11514,7 +11747,7 @@ pub mod coverage_normalized_units {
             self.coverage_normalized_units_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`CoverageNormalizedUnits`](crate::model::CoverageNormalizedUnits)
+        /// Consumes the builder and constructs a [`CoverageNormalizedUnits`](crate::model::CoverageNormalizedUnits).
         pub fn build(self) -> crate::model::CoverageNormalizedUnits {
             crate::model::CoverageNormalizedUnits {
                 on_demand_normalized_units: self.on_demand_normalized_units,
@@ -11526,7 +11759,7 @@ pub mod coverage_normalized_units {
     }
 }
 impl CoverageNormalizedUnits {
-    /// Creates a new builder-style object to manufacture [`CoverageNormalizedUnits`](crate::model::CoverageNormalizedUnits)
+    /// Creates a new builder-style object to manufacture [`CoverageNormalizedUnits`](crate::model::CoverageNormalizedUnits).
     pub fn builder() -> crate::model::coverage_normalized_units::Builder {
         crate::model::coverage_normalized_units::Builder::default()
     }
@@ -11537,12 +11770,16 @@ impl CoverageNormalizedUnits {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CoverageHours {
     /// <p>The number of instance running hours that On-Demand Instances covered.</p>
+    #[doc(hidden)]
     pub on_demand_hours: std::option::Option<std::string::String>,
     /// <p>The number of instance running hours that reservations covered.</p>
+    #[doc(hidden)]
     pub reserved_hours: std::option::Option<std::string::String>,
     /// <p>The total instance usage, in hours.</p>
+    #[doc(hidden)]
     pub total_running_hours: std::option::Option<std::string::String>,
     /// <p>The percentage of instance hours that a reservation covered.</p>
+    #[doc(hidden)]
     pub coverage_hours_percentage: std::option::Option<std::string::String>,
 }
 impl CoverageHours {
@@ -11573,11 +11810,10 @@ impl std::fmt::Debug for CoverageHours {
         formatter.finish()
     }
 }
-/// See [`CoverageHours`](crate::model::CoverageHours)
+/// See [`CoverageHours`](crate::model::CoverageHours).
 pub mod coverage_hours {
 
-    /// A builder for [`CoverageHours`](crate::model::CoverageHours)
-    #[non_exhaustive]
+    /// A builder for [`CoverageHours`](crate::model::CoverageHours).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) on_demand_hours: std::option::Option<std::string::String>,
@@ -11638,7 +11874,7 @@ pub mod coverage_hours {
             self.coverage_hours_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`CoverageHours`](crate::model::CoverageHours)
+        /// Consumes the builder and constructs a [`CoverageHours`](crate::model::CoverageHours).
         pub fn build(self) -> crate::model::CoverageHours {
             crate::model::CoverageHours {
                 on_demand_hours: self.on_demand_hours,
@@ -11650,7 +11886,7 @@ pub mod coverage_hours {
     }
 }
 impl CoverageHours {
-    /// Creates a new builder-style object to manufacture [`CoverageHours`](crate::model::CoverageHours)
+    /// Creates a new builder-style object to manufacture [`CoverageHours`](crate::model::CoverageHours).
     pub fn builder() -> crate::model::coverage_hours::Builder {
         crate::model::coverage_hours::Builder::default()
     }
@@ -11661,10 +11897,13 @@ impl CoverageHours {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CoverageByTime {
     /// <p>The period that this coverage was used over.</p>
+    #[doc(hidden)]
     pub time_period: std::option::Option<crate::model::DateInterval>,
     /// <p>The groups of instances that the reservation covered.</p>
+    #[doc(hidden)]
     pub groups: std::option::Option<std::vec::Vec<crate::model::ReservationCoverageGroup>>,
     /// <p>The total reservation coverage, in hours.</p>
+    #[doc(hidden)]
     pub total: std::option::Option<crate::model::Coverage>,
 }
 impl CoverageByTime {
@@ -11690,11 +11929,10 @@ impl std::fmt::Debug for CoverageByTime {
         formatter.finish()
     }
 }
-/// See [`CoverageByTime`](crate::model::CoverageByTime)
+/// See [`CoverageByTime`](crate::model::CoverageByTime).
 pub mod coverage_by_time {
 
-    /// A builder for [`CoverageByTime`](crate::model::CoverageByTime)
-    #[non_exhaustive]
+    /// A builder for [`CoverageByTime`](crate::model::CoverageByTime).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) time_period: std::option::Option<crate::model::DateInterval>,
@@ -11745,7 +11983,7 @@ pub mod coverage_by_time {
             self.total = input;
             self
         }
-        /// Consumes the builder and constructs a [`CoverageByTime`](crate::model::CoverageByTime)
+        /// Consumes the builder and constructs a [`CoverageByTime`](crate::model::CoverageByTime).
         pub fn build(self) -> crate::model::CoverageByTime {
             crate::model::CoverageByTime {
                 time_period: self.time_period,
@@ -11756,7 +11994,7 @@ pub mod coverage_by_time {
     }
 }
 impl CoverageByTime {
-    /// Creates a new builder-style object to manufacture [`CoverageByTime`](crate::model::CoverageByTime)
+    /// Creates a new builder-style object to manufacture [`CoverageByTime`](crate::model::CoverageByTime).
     pub fn builder() -> crate::model::coverage_by_time::Builder {
         crate::model::coverage_by_time::Builder::default()
     }
@@ -11767,9 +12005,11 @@ impl CoverageByTime {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReservationCoverageGroup {
     /// <p>The attributes for this group of reservations.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
     /// <p>How much instance usage this group of reservations covered.</p>
+    #[doc(hidden)]
     pub coverage: std::option::Option<crate::model::Coverage>,
 }
 impl ReservationCoverageGroup {
@@ -11793,11 +12033,10 @@ impl std::fmt::Debug for ReservationCoverageGroup {
         formatter.finish()
     }
 }
-/// See [`ReservationCoverageGroup`](crate::model::ReservationCoverageGroup)
+/// See [`ReservationCoverageGroup`](crate::model::ReservationCoverageGroup).
 pub mod reservation_coverage_group {
 
-    /// A builder for [`ReservationCoverageGroup`](crate::model::ReservationCoverageGroup)
-    #[non_exhaustive]
+    /// A builder for [`ReservationCoverageGroup`](crate::model::ReservationCoverageGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attributes: std::option::Option<
@@ -11841,7 +12080,7 @@ pub mod reservation_coverage_group {
             self.coverage = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReservationCoverageGroup`](crate::model::ReservationCoverageGroup)
+        /// Consumes the builder and constructs a [`ReservationCoverageGroup`](crate::model::ReservationCoverageGroup).
         pub fn build(self) -> crate::model::ReservationCoverageGroup {
             crate::model::ReservationCoverageGroup {
                 attributes: self.attributes,
@@ -11851,7 +12090,7 @@ pub mod reservation_coverage_group {
     }
 }
 impl ReservationCoverageGroup {
-    /// Creates a new builder-style object to manufacture [`ReservationCoverageGroup`](crate::model::ReservationCoverageGroup)
+    /// Creates a new builder-style object to manufacture [`ReservationCoverageGroup`](crate::model::ReservationCoverageGroup).
     pub fn builder() -> crate::model::reservation_coverage_group::Builder {
         crate::model::reservation_coverage_group::Builder::default()
     }
@@ -11862,8 +12101,10 @@ impl ReservationCoverageGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DimensionValuesWithAttributes {
     /// <p>The value of a dimension with a specific attribute.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The attribute that applies to a specific <code>Dimension</code>.</p>
+    #[doc(hidden)]
     pub attributes:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -11888,11 +12129,10 @@ impl std::fmt::Debug for DimensionValuesWithAttributes {
         formatter.finish()
     }
 }
-/// See [`DimensionValuesWithAttributes`](crate::model::DimensionValuesWithAttributes)
+/// See [`DimensionValuesWithAttributes`](crate::model::DimensionValuesWithAttributes).
 pub mod dimension_values_with_attributes {
 
-    /// A builder for [`DimensionValuesWithAttributes`](crate::model::DimensionValuesWithAttributes)
-    #[non_exhaustive]
+    /// A builder for [`DimensionValuesWithAttributes`](crate::model::DimensionValuesWithAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<std::string::String>,
@@ -11936,7 +12176,7 @@ pub mod dimension_values_with_attributes {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`DimensionValuesWithAttributes`](crate::model::DimensionValuesWithAttributes)
+        /// Consumes the builder and constructs a [`DimensionValuesWithAttributes`](crate::model::DimensionValuesWithAttributes).
         pub fn build(self) -> crate::model::DimensionValuesWithAttributes {
             crate::model::DimensionValuesWithAttributes {
                 value: self.value,
@@ -11946,7 +12186,7 @@ pub mod dimension_values_with_attributes {
     }
 }
 impl DimensionValuesWithAttributes {
-    /// Creates a new builder-style object to manufacture [`DimensionValuesWithAttributes`](crate::model::DimensionValuesWithAttributes)
+    /// Creates a new builder-style object to manufacture [`DimensionValuesWithAttributes`](crate::model::DimensionValuesWithAttributes).
     pub fn builder() -> crate::model::dimension_values_with_attributes::Builder {
         crate::model::dimension_values_with_attributes::Builder::default()
     }
@@ -12016,14 +12256,18 @@ impl AsRef<str> for Context {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResultByTime {
     /// <p>The time period that the result covers.</p>
+    #[doc(hidden)]
     pub time_period: std::option::Option<crate::model::DateInterval>,
     /// <p>The total amount of cost or usage accrued during the time period.</p>
+    #[doc(hidden)]
     pub total: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::MetricValue>,
     >,
     /// <p>The groups that this time period includes.</p>
+    #[doc(hidden)]
     pub groups: std::option::Option<std::vec::Vec<crate::model::Group>>,
     /// <p>Determines whether the result is estimated.</p>
+    #[doc(hidden)]
     pub estimated: bool,
 }
 impl ResultByTime {
@@ -12058,11 +12302,10 @@ impl std::fmt::Debug for ResultByTime {
         formatter.finish()
     }
 }
-/// See [`ResultByTime`](crate::model::ResultByTime)
+/// See [`ResultByTime`](crate::model::ResultByTime).
 pub mod result_by_time {
 
-    /// A builder for [`ResultByTime`](crate::model::ResultByTime)
-    #[non_exhaustive]
+    /// A builder for [`ResultByTime`](crate::model::ResultByTime).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) time_period: std::option::Option<crate::model::DateInterval>,
@@ -12140,7 +12383,7 @@ pub mod result_by_time {
             self.estimated = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResultByTime`](crate::model::ResultByTime)
+        /// Consumes the builder and constructs a [`ResultByTime`](crate::model::ResultByTime).
         pub fn build(self) -> crate::model::ResultByTime {
             crate::model::ResultByTime {
                 time_period: self.time_period,
@@ -12152,7 +12395,7 @@ pub mod result_by_time {
     }
 }
 impl ResultByTime {
-    /// Creates a new builder-style object to manufacture [`ResultByTime`](crate::model::ResultByTime)
+    /// Creates a new builder-style object to manufacture [`ResultByTime`](crate::model::ResultByTime).
     pub fn builder() -> crate::model::result_by_time::Builder {
         crate::model::result_by_time::Builder::default()
     }
@@ -12163,8 +12406,10 @@ impl ResultByTime {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Group {
     /// <p>The keys that are included in this group.</p>
+    #[doc(hidden)]
     pub keys: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The metrics that are included in this group.</p>
+    #[doc(hidden)]
     pub metrics: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::MetricValue>,
     >,
@@ -12191,11 +12436,10 @@ impl std::fmt::Debug for Group {
         formatter.finish()
     }
 }
-/// See [`Group`](crate::model::Group)
+/// See [`Group`](crate::model::Group).
 pub mod group {
 
-    /// A builder for [`Group`](crate::model::Group)
-    #[non_exhaustive]
+    /// A builder for [`Group`](crate::model::Group).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) keys: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -12248,7 +12492,7 @@ pub mod group {
             self.metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`Group`](crate::model::Group)
+        /// Consumes the builder and constructs a [`Group`](crate::model::Group).
         pub fn build(self) -> crate::model::Group {
             crate::model::Group {
                 keys: self.keys,
@@ -12258,7 +12502,7 @@ pub mod group {
     }
 }
 impl Group {
-    /// Creates a new builder-style object to manufacture [`Group`](crate::model::Group)
+    /// Creates a new builder-style object to manufacture [`Group`](crate::model::Group).
     pub fn builder() -> crate::model::group::Builder {
         crate::model::group::Builder::default()
     }
@@ -12269,18 +12513,25 @@ impl Group {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnomalySubscription {
     /// <p>The <code>AnomalySubscription</code> Amazon Resource Name (ARN). </p>
+    #[doc(hidden)]
     pub subscription_arn: std::option::Option<std::string::String>,
     /// <p>Your unique account identifier. </p>
+    #[doc(hidden)]
     pub account_id: std::option::Option<std::string::String>,
     /// <p>A list of cost anomaly monitors. </p>
+    #[doc(hidden)]
     pub monitor_arn_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of subscribers to notify. </p>
+    #[doc(hidden)]
     pub subscribers: std::option::Option<std::vec::Vec<crate::model::Subscriber>>,
     /// <p>The dollar value that triggers a notification if the threshold is exceeded. </p>
+    #[doc(hidden)]
     pub threshold: std::option::Option<f64>,
     /// <p>The frequency that anomaly reports are sent over email. </p>
+    #[doc(hidden)]
     pub frequency: std::option::Option<crate::model::AnomalySubscriptionFrequency>,
     /// <p>The name for the subscription. </p>
+    #[doc(hidden)]
     pub subscription_name: std::option::Option<std::string::String>,
 }
 impl AnomalySubscription {
@@ -12326,11 +12577,10 @@ impl std::fmt::Debug for AnomalySubscription {
         formatter.finish()
     }
 }
-/// See [`AnomalySubscription`](crate::model::AnomalySubscription)
+/// See [`AnomalySubscription`](crate::model::AnomalySubscription).
 pub mod anomaly_subscription {
 
-    /// A builder for [`AnomalySubscription`](crate::model::AnomalySubscription)
-    #[non_exhaustive]
+    /// A builder for [`AnomalySubscription`](crate::model::AnomalySubscription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subscription_arn: std::option::Option<std::string::String>,
@@ -12439,7 +12689,7 @@ pub mod anomaly_subscription {
             self.subscription_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnomalySubscription`](crate::model::AnomalySubscription)
+        /// Consumes the builder and constructs a [`AnomalySubscription`](crate::model::AnomalySubscription).
         pub fn build(self) -> crate::model::AnomalySubscription {
             crate::model::AnomalySubscription {
                 subscription_arn: self.subscription_arn,
@@ -12454,7 +12704,7 @@ pub mod anomaly_subscription {
     }
 }
 impl AnomalySubscription {
-    /// Creates a new builder-style object to manufacture [`AnomalySubscription`](crate::model::AnomalySubscription)
+    /// Creates a new builder-style object to manufacture [`AnomalySubscription`](crate::model::AnomalySubscription).
     pub fn builder() -> crate::model::anomaly_subscription::Builder {
         crate::model::anomaly_subscription::Builder::default()
     }
@@ -12465,18 +12715,25 @@ impl AnomalySubscription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnomalyMonitor {
     /// <p>The Amazon Resource Name (ARN) value. </p>
+    #[doc(hidden)]
     pub monitor_arn: std::option::Option<std::string::String>,
     /// <p>The name of the monitor. </p>
+    #[doc(hidden)]
     pub monitor_name: std::option::Option<std::string::String>,
     /// <p>The date when the monitor was created. </p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<std::string::String>,
     /// <p>The date when the monitor was last updated. </p>
+    #[doc(hidden)]
     pub last_updated_date: std::option::Option<std::string::String>,
     /// <p>The date when the monitor last evaluated for anomalies. </p>
+    #[doc(hidden)]
     pub last_evaluated_date: std::option::Option<std::string::String>,
     /// <p>The possible type values. </p>
+    #[doc(hidden)]
     pub monitor_type: std::option::Option<crate::model::MonitorType>,
     /// <p>The dimensions to evaluate. </p>
+    #[doc(hidden)]
     pub monitor_dimension: std::option::Option<crate::model::MonitorDimension>,
     /// <p>Use <code>Expression</code> to filter by cost or by usage. There are two patterns: </p>
     /// <ul>
@@ -12488,8 +12745,10 @@ pub struct AnomalyMonitor {
     /// <p>For the <code>GetRightsizingRecommendation</code> action, a combination of OR and NOT isn't supported. OR isn't supported between different dimensions, or dimensions and tags. NOT operators aren't supported. Dimensions are also limited to <code>LINKED_ACCOUNT</code>, <code>REGION</code>, or <code>RIGHTSIZING_TYPE</code>.</p>
     /// <p>For the <code>GetReservationPurchaseRecommendation</code> action, only NOT is supported. AND and OR aren't supported. Dimensions are limited to <code>LINKED_ACCOUNT</code>.</p>
     /// </note>
+    #[doc(hidden)]
     pub monitor_specification: std::option::Option<crate::model::Expression>,
     /// <p>The value for evaluated dimensions. </p>
+    #[doc(hidden)]
     pub dimensional_value_count: i32,
 }
 impl AnomalyMonitor {
@@ -12554,11 +12813,10 @@ impl std::fmt::Debug for AnomalyMonitor {
         formatter.finish()
     }
 }
-/// See [`AnomalyMonitor`](crate::model::AnomalyMonitor)
+/// See [`AnomalyMonitor`](crate::model::AnomalyMonitor).
 pub mod anomaly_monitor {
 
-    /// A builder for [`AnomalyMonitor`](crate::model::AnomalyMonitor)
-    #[non_exhaustive]
+    /// A builder for [`AnomalyMonitor`](crate::model::AnomalyMonitor).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) monitor_arn: std::option::Option<std::string::String>,
@@ -12698,7 +12956,7 @@ pub mod anomaly_monitor {
             self.dimensional_value_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnomalyMonitor`](crate::model::AnomalyMonitor)
+        /// Consumes the builder and constructs a [`AnomalyMonitor`](crate::model::AnomalyMonitor).
         pub fn build(self) -> crate::model::AnomalyMonitor {
             crate::model::AnomalyMonitor {
                 monitor_arn: self.monitor_arn,
@@ -12715,7 +12973,7 @@ pub mod anomaly_monitor {
     }
 }
 impl AnomalyMonitor {
-    /// Creates a new builder-style object to manufacture [`AnomalyMonitor`](crate::model::AnomalyMonitor)
+    /// Creates a new builder-style object to manufacture [`AnomalyMonitor`](crate::model::AnomalyMonitor).
     pub fn builder() -> crate::model::anomaly_monitor::Builder {
         crate::model::anomaly_monitor::Builder::default()
     }
@@ -12832,22 +13090,31 @@ impl AsRef<str> for MonitorType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Anomaly {
     /// <p>The unique identifier for the anomaly. </p>
+    #[doc(hidden)]
     pub anomaly_id: std::option::Option<std::string::String>,
     /// <p>The first day the anomaly is detected. </p>
+    #[doc(hidden)]
     pub anomaly_start_date: std::option::Option<std::string::String>,
     /// <p>The last day the anomaly is detected. </p>
+    #[doc(hidden)]
     pub anomaly_end_date: std::option::Option<std::string::String>,
     /// <p>The dimension for the anomaly (for example, an Amazon Web Service in a service monitor). </p>
+    #[doc(hidden)]
     pub dimension_value: std::option::Option<std::string::String>,
     /// <p>The list of identified root causes for the anomaly. </p>
+    #[doc(hidden)]
     pub root_causes: std::option::Option<std::vec::Vec<crate::model::RootCause>>,
     /// <p>The latest and maximum score for the anomaly. </p>
+    #[doc(hidden)]
     pub anomaly_score: std::option::Option<crate::model::AnomalyScore>,
     /// <p>The dollar impact for the anomaly. </p>
+    #[doc(hidden)]
     pub impact: std::option::Option<crate::model::Impact>,
     /// <p>The Amazon Resource Name (ARN) for the cost monitor that generated this anomaly. </p>
+    #[doc(hidden)]
     pub monitor_arn: std::option::Option<std::string::String>,
     /// <p>The feedback value. </p>
+    #[doc(hidden)]
     pub feedback: std::option::Option<crate::model::AnomalyFeedbackType>,
 }
 impl Anomaly {
@@ -12903,11 +13170,10 @@ impl std::fmt::Debug for Anomaly {
         formatter.finish()
     }
 }
-/// See [`Anomaly`](crate::model::Anomaly)
+/// See [`Anomaly`](crate::model::Anomaly).
 pub mod anomaly {
 
-    /// A builder for [`Anomaly`](crate::model::Anomaly)
-    #[non_exhaustive]
+    /// A builder for [`Anomaly`](crate::model::Anomaly).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) anomaly_id: std::option::Option<std::string::String>,
@@ -13035,7 +13301,7 @@ pub mod anomaly {
             self.feedback = input;
             self
         }
-        /// Consumes the builder and constructs a [`Anomaly`](crate::model::Anomaly)
+        /// Consumes the builder and constructs a [`Anomaly`](crate::model::Anomaly).
         pub fn build(self) -> crate::model::Anomaly {
             crate::model::Anomaly {
                 anomaly_id: self.anomaly_id,
@@ -13052,7 +13318,7 @@ pub mod anomaly {
     }
 }
 impl Anomaly {
-    /// Creates a new builder-style object to manufacture [`Anomaly`](crate::model::Anomaly)
+    /// Creates a new builder-style object to manufacture [`Anomaly`](crate::model::Anomaly).
     pub fn builder() -> crate::model::anomaly::Builder {
         crate::model::anomaly::Builder::default()
     }
@@ -13063,8 +13329,10 @@ impl Anomaly {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Impact {
     /// <p>The maximum dollar value that's observed for an anomaly. </p>
+    #[doc(hidden)]
     pub max_impact: f64,
     /// <p>The cumulative dollar value that's observed for an anomaly. </p>
+    #[doc(hidden)]
     pub total_impact: f64,
 }
 impl Impact {
@@ -13085,11 +13353,10 @@ impl std::fmt::Debug for Impact {
         formatter.finish()
     }
 }
-/// See [`Impact`](crate::model::Impact)
+/// See [`Impact`](crate::model::Impact).
 pub mod impact {
 
-    /// A builder for [`Impact`](crate::model::Impact)
-    #[non_exhaustive]
+    /// A builder for [`Impact`](crate::model::Impact).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_impact: std::option::Option<f64>,
@@ -13116,7 +13383,7 @@ pub mod impact {
             self.total_impact = input;
             self
         }
-        /// Consumes the builder and constructs a [`Impact`](crate::model::Impact)
+        /// Consumes the builder and constructs a [`Impact`](crate::model::Impact).
         pub fn build(self) -> crate::model::Impact {
             crate::model::Impact {
                 max_impact: self.max_impact.unwrap_or_default(),
@@ -13126,7 +13393,7 @@ pub mod impact {
     }
 }
 impl Impact {
-    /// Creates a new builder-style object to manufacture [`Impact`](crate::model::Impact)
+    /// Creates a new builder-style object to manufacture [`Impact`](crate::model::Impact).
     pub fn builder() -> crate::model::impact::Builder {
         crate::model::impact::Builder::default()
     }
@@ -13137,8 +13404,10 @@ impl Impact {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnomalyScore {
     /// <p>The maximum score that's observed during the <code>AnomalyDateInterval</code>. </p>
+    #[doc(hidden)]
     pub max_score: f64,
     /// <p>The last observed score. </p>
+    #[doc(hidden)]
     pub current_score: f64,
 }
 impl AnomalyScore {
@@ -13159,11 +13428,10 @@ impl std::fmt::Debug for AnomalyScore {
         formatter.finish()
     }
 }
-/// See [`AnomalyScore`](crate::model::AnomalyScore)
+/// See [`AnomalyScore`](crate::model::AnomalyScore).
 pub mod anomaly_score {
 
-    /// A builder for [`AnomalyScore`](crate::model::AnomalyScore)
-    #[non_exhaustive]
+    /// A builder for [`AnomalyScore`](crate::model::AnomalyScore).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) max_score: std::option::Option<f64>,
@@ -13190,7 +13458,7 @@ pub mod anomaly_score {
             self.current_score = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnomalyScore`](crate::model::AnomalyScore)
+        /// Consumes the builder and constructs a [`AnomalyScore`](crate::model::AnomalyScore).
         pub fn build(self) -> crate::model::AnomalyScore {
             crate::model::AnomalyScore {
                 max_score: self.max_score.unwrap_or_default(),
@@ -13200,7 +13468,7 @@ pub mod anomaly_score {
     }
 }
 impl AnomalyScore {
-    /// Creates a new builder-style object to manufacture [`AnomalyScore`](crate::model::AnomalyScore)
+    /// Creates a new builder-style object to manufacture [`AnomalyScore`](crate::model::AnomalyScore).
     pub fn builder() -> crate::model::anomaly_score::Builder {
         crate::model::anomaly_score::Builder::default()
     }
@@ -13211,12 +13479,16 @@ impl AnomalyScore {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RootCause {
     /// <p>The Amazon Web Service name that's associated with the cost anomaly. </p>
+    #[doc(hidden)]
     pub service: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region that's associated with the cost anomaly. </p>
+    #[doc(hidden)]
     pub region: std::option::Option<std::string::String>,
     /// <p>The member account value that's associated with the cost anomaly. </p>
+    #[doc(hidden)]
     pub linked_account: std::option::Option<std::string::String>,
     /// <p>The <code>UsageType</code> value that's associated with the cost anomaly. </p>
+    #[doc(hidden)]
     pub usage_type: std::option::Option<std::string::String>,
 }
 impl RootCause {
@@ -13247,11 +13519,10 @@ impl std::fmt::Debug for RootCause {
         formatter.finish()
     }
 }
-/// See [`RootCause`](crate::model::RootCause)
+/// See [`RootCause`](crate::model::RootCause).
 pub mod root_cause {
 
-    /// A builder for [`RootCause`](crate::model::RootCause)
-    #[non_exhaustive]
+    /// A builder for [`RootCause`](crate::model::RootCause).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service: std::option::Option<std::string::String>,
@@ -13303,7 +13574,7 @@ pub mod root_cause {
             self.usage_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`RootCause`](crate::model::RootCause)
+        /// Consumes the builder and constructs a [`RootCause`](crate::model::RootCause).
         pub fn build(self) -> crate::model::RootCause {
             crate::model::RootCause {
                 service: self.service,
@@ -13315,7 +13586,7 @@ pub mod root_cause {
     }
 }
 impl RootCause {
-    /// Creates a new builder-style object to manufacture [`RootCause`](crate::model::RootCause)
+    /// Creates a new builder-style object to manufacture [`RootCause`](crate::model::RootCause).
     pub fn builder() -> crate::model::root_cause::Builder {
         crate::model::root_cause::Builder::default()
     }
@@ -13326,10 +13597,13 @@ impl RootCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TotalImpactFilter {
     /// <p>The comparing value that's used in the filter. </p>
+    #[doc(hidden)]
     pub numeric_operator: std::option::Option<crate::model::NumericOperator>,
     /// <p>The lower bound dollar value that's used in the filter. </p>
+    #[doc(hidden)]
     pub start_value: f64,
     /// <p>The upper bound dollar value that's used in the filter. </p>
+    #[doc(hidden)]
     pub end_value: f64,
 }
 impl TotalImpactFilter {
@@ -13355,11 +13629,10 @@ impl std::fmt::Debug for TotalImpactFilter {
         formatter.finish()
     }
 }
-/// See [`TotalImpactFilter`](crate::model::TotalImpactFilter)
+/// See [`TotalImpactFilter`](crate::model::TotalImpactFilter).
 pub mod total_impact_filter {
 
-    /// A builder for [`TotalImpactFilter`](crate::model::TotalImpactFilter)
-    #[non_exhaustive]
+    /// A builder for [`TotalImpactFilter`](crate::model::TotalImpactFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) numeric_operator: std::option::Option<crate::model::NumericOperator>,
@@ -13400,7 +13673,7 @@ pub mod total_impact_filter {
             self.end_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`TotalImpactFilter`](crate::model::TotalImpactFilter)
+        /// Consumes the builder and constructs a [`TotalImpactFilter`](crate::model::TotalImpactFilter).
         pub fn build(self) -> crate::model::TotalImpactFilter {
             crate::model::TotalImpactFilter {
                 numeric_operator: self.numeric_operator,
@@ -13411,7 +13684,7 @@ pub mod total_impact_filter {
     }
 }
 impl TotalImpactFilter {
-    /// Creates a new builder-style object to manufacture [`TotalImpactFilter`](crate::model::TotalImpactFilter)
+    /// Creates a new builder-style object to manufacture [`TotalImpactFilter`](crate::model::TotalImpactFilter).
     pub fn builder() -> crate::model::total_impact_filter::Builder {
         crate::model::total_impact_filter::Builder::default()
     }
@@ -13500,8 +13773,10 @@ impl AsRef<str> for NumericOperator {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AnomalyDateInterval {
     /// <p>The first date an anomaly was observed. </p>
+    #[doc(hidden)]
     pub start_date: std::option::Option<std::string::String>,
     /// <p>The last date an anomaly was observed. </p>
+    #[doc(hidden)]
     pub end_date: std::option::Option<std::string::String>,
 }
 impl AnomalyDateInterval {
@@ -13522,11 +13797,10 @@ impl std::fmt::Debug for AnomalyDateInterval {
         formatter.finish()
     }
 }
-/// See [`AnomalyDateInterval`](crate::model::AnomalyDateInterval)
+/// See [`AnomalyDateInterval`](crate::model::AnomalyDateInterval).
 pub mod anomaly_date_interval {
 
-    /// A builder for [`AnomalyDateInterval`](crate::model::AnomalyDateInterval)
-    #[non_exhaustive]
+    /// A builder for [`AnomalyDateInterval`](crate::model::AnomalyDateInterval).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) start_date: std::option::Option<std::string::String>,
@@ -13553,7 +13827,7 @@ pub mod anomaly_date_interval {
             self.end_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`AnomalyDateInterval`](crate::model::AnomalyDateInterval)
+        /// Consumes the builder and constructs a [`AnomalyDateInterval`](crate::model::AnomalyDateInterval).
         pub fn build(self) -> crate::model::AnomalyDateInterval {
             crate::model::AnomalyDateInterval {
                 start_date: self.start_date,
@@ -13563,7 +13837,7 @@ pub mod anomaly_date_interval {
     }
 }
 impl AnomalyDateInterval {
-    /// Creates a new builder-style object to manufacture [`AnomalyDateInterval`](crate::model::AnomalyDateInterval)
+    /// Creates a new builder-style object to manufacture [`AnomalyDateInterval`](crate::model::AnomalyDateInterval).
     pub fn builder() -> crate::model::anomaly_date_interval::Builder {
         crate::model::anomaly_date_interval::Builder::default()
     }
@@ -13574,24 +13848,33 @@ impl AnomalyDateInterval {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CostCategory {
     /// <p>The unique identifier for your Cost Category. </p>
+    #[doc(hidden)]
     pub cost_category_arn: std::option::Option<std::string::String>,
     /// <p>The effective state data of your Cost Category.</p>
+    #[doc(hidden)]
     pub effective_start: std::option::Option<std::string::String>,
     /// <p>The effective end data of your Cost Category.</p>
+    #[doc(hidden)]
     pub effective_end: std::option::Option<std::string::String>,
     /// <p>The unique name of the Cost Category.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The rule schema version in this particular Cost Category.</p>
+    #[doc(hidden)]
     pub rule_version: std::option::Option<crate::model::CostCategoryRuleVersion>,
     /// <p>The rules are processed in order. If there are multiple rules that match the line item, then the first rule to match is used to determine that Cost Category value. </p>
+    #[doc(hidden)]
     pub rules: std::option::Option<std::vec::Vec<crate::model::CostCategoryRule>>,
     /// <p> The split charge rules that are used to allocate your charges between your Cost Category values. </p>
+    #[doc(hidden)]
     pub split_charge_rules:
         std::option::Option<std::vec::Vec<crate::model::CostCategorySplitChargeRule>>,
     /// <p>The list of processing statuses for Cost Management products for a specific cost category. </p>
+    #[doc(hidden)]
     pub processing_status:
         std::option::Option<std::vec::Vec<crate::model::CostCategoryProcessingStatus>>,
     /// <p>The default value for the cost category.</p>
+    #[doc(hidden)]
     pub default_value: std::option::Option<std::string::String>,
 }
 impl CostCategory {
@@ -13651,11 +13934,10 @@ impl std::fmt::Debug for CostCategory {
         formatter.finish()
     }
 }
-/// See [`CostCategory`](crate::model::CostCategory)
+/// See [`CostCategory`](crate::model::CostCategory).
 pub mod cost_category {
 
-    /// A builder for [`CostCategory`](crate::model::CostCategory)
-    #[non_exhaustive]
+    /// A builder for [`CostCategory`](crate::model::CostCategory).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cost_category_arn: std::option::Option<std::string::String>,
@@ -13809,7 +14091,7 @@ pub mod cost_category {
             self.default_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`CostCategory`](crate::model::CostCategory)
+        /// Consumes the builder and constructs a [`CostCategory`](crate::model::CostCategory).
         pub fn build(self) -> crate::model::CostCategory {
             crate::model::CostCategory {
                 cost_category_arn: self.cost_category_arn,
@@ -13826,7 +14108,7 @@ pub mod cost_category {
     }
 }
 impl CostCategory {
-    /// Creates a new builder-style object to manufacture [`CostCategory`](crate::model::CostCategory)
+    /// Creates a new builder-style object to manufacture [`CostCategory`](crate::model::CostCategory).
     pub fn builder() -> crate::model::cost_category::Builder {
         crate::model::cost_category::Builder::default()
     }

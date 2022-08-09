@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UntagResourcesOutput {
     /// <p>A map containing a key-value pair for each failed item that couldn't be untagged. The key is the ARN of the failed resource. The value is a <code>FailureInfo</code> object that contains an error code, a status code, and an error message. If there are no errors, the <code>FailedResourcesMap</code> is empty.</p>
+    #[doc(hidden)]
     pub failed_resources_map: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::FailureInfo>,
     >,
@@ -25,11 +26,10 @@ impl std::fmt::Debug for UntagResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourcesOutput`](crate::output::UntagResourcesOutput)
+/// See [`UntagResourcesOutput`](crate::output::UntagResourcesOutput).
 pub mod untag_resources_output {
 
-    /// A builder for [`UntagResourcesOutput`](crate::output::UntagResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourcesOutput`](crate::output::UntagResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failed_resources_map: std::option::Option<
@@ -62,7 +62,7 @@ pub mod untag_resources_output {
             self.failed_resources_map = input;
             self
         }
-        /// Consumes the builder and constructs a [`UntagResourcesOutput`](crate::output::UntagResourcesOutput)
+        /// Consumes the builder and constructs a [`UntagResourcesOutput`](crate::output::UntagResourcesOutput).
         pub fn build(self) -> crate::output::UntagResourcesOutput {
             crate::output::UntagResourcesOutput {
                 failed_resources_map: self.failed_resources_map,
@@ -71,7 +71,7 @@ pub mod untag_resources_output {
     }
 }
 impl UntagResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourcesOutput`](crate::output::UntagResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourcesOutput`](crate::output::UntagResourcesOutput).
     pub fn builder() -> crate::output::untag_resources_output::Builder {
         crate::output::untag_resources_output::Builder::default()
     }
@@ -82,6 +82,7 @@ impl UntagResourcesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TagResourcesOutput {
     /// <p>A map containing a key-value pair for each failed item that couldn't be tagged. The key is the ARN of the failed resource. The value is a <code>FailureInfo</code> object that contains an error code, a status code, and an error message. If there are no errors, the <code>FailedResourcesMap</code> is empty.</p>
+    #[doc(hidden)]
     pub failed_resources_map: std::option::Option<
         std::collections::HashMap<std::string::String, crate::model::FailureInfo>,
     >,
@@ -103,11 +104,10 @@ impl std::fmt::Debug for TagResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourcesOutput`](crate::output::TagResourcesOutput)
+/// See [`TagResourcesOutput`](crate::output::TagResourcesOutput).
 pub mod tag_resources_output {
 
-    /// A builder for [`TagResourcesOutput`](crate::output::TagResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourcesOutput`](crate::output::TagResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failed_resources_map: std::option::Option<
@@ -140,7 +140,7 @@ pub mod tag_resources_output {
             self.failed_resources_map = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagResourcesOutput`](crate::output::TagResourcesOutput)
+        /// Consumes the builder and constructs a [`TagResourcesOutput`](crate::output::TagResourcesOutput).
         pub fn build(self) -> crate::output::TagResourcesOutput {
             crate::output::TagResourcesOutput {
                 failed_resources_map: self.failed_resources_map,
@@ -149,7 +149,7 @@ pub mod tag_resources_output {
     }
 }
 impl TagResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourcesOutput`](crate::output::TagResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourcesOutput`](crate::output::TagResourcesOutput).
     pub fn builder() -> crate::output::tag_resources_output::Builder {
         crate::output::tag_resources_output::Builder::default()
     }
@@ -165,22 +165,21 @@ impl std::fmt::Debug for StartReportCreationOutput {
         formatter.finish()
     }
 }
-/// See [`StartReportCreationOutput`](crate::output::StartReportCreationOutput)
+/// See [`StartReportCreationOutput`](crate::output::StartReportCreationOutput).
 pub mod start_report_creation_output {
 
-    /// A builder for [`StartReportCreationOutput`](crate::output::StartReportCreationOutput)
-    #[non_exhaustive]
+    /// A builder for [`StartReportCreationOutput`](crate::output::StartReportCreationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`StartReportCreationOutput`](crate::output::StartReportCreationOutput)
+        /// Consumes the builder and constructs a [`StartReportCreationOutput`](crate::output::StartReportCreationOutput).
         pub fn build(self) -> crate::output::StartReportCreationOutput {
             crate::output::StartReportCreationOutput {}
         }
     }
 }
 impl StartReportCreationOutput {
-    /// Creates a new builder-style object to manufacture [`StartReportCreationOutput`](crate::output::StartReportCreationOutput)
+    /// Creates a new builder-style object to manufacture [`StartReportCreationOutput`](crate::output::StartReportCreationOutput).
     pub fn builder() -> crate::output::start_report_creation_output::Builder {
         crate::output::start_report_creation_output::Builder::default()
     }
@@ -191,8 +190,10 @@ impl StartReportCreationOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetTagValuesOutput {
     /// <p>A string that indicates that there is more data available than this response contains. To receive the next part of the response, specify this response value as the <code>PaginationToken</code> value in the request for the next page.</p>
+    #[doc(hidden)]
     pub pagination_token: std::option::Option<std::string::String>,
     /// <p>A list of all tag values for the specified key currently used in the specified Amazon Web Services Region for the calling account.</p>
+    #[doc(hidden)]
     pub tag_values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl GetTagValuesOutput {
@@ -213,11 +214,10 @@ impl std::fmt::Debug for GetTagValuesOutput {
         formatter.finish()
     }
 }
-/// See [`GetTagValuesOutput`](crate::output::GetTagValuesOutput)
+/// See [`GetTagValuesOutput`](crate::output::GetTagValuesOutput).
 pub mod get_tag_values_output {
 
-    /// A builder for [`GetTagValuesOutput`](crate::output::GetTagValuesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetTagValuesOutput`](crate::output::GetTagValuesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pagination_token: std::option::Option<std::string::String>,
@@ -256,7 +256,7 @@ pub mod get_tag_values_output {
             self.tag_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetTagValuesOutput`](crate::output::GetTagValuesOutput)
+        /// Consumes the builder and constructs a [`GetTagValuesOutput`](crate::output::GetTagValuesOutput).
         pub fn build(self) -> crate::output::GetTagValuesOutput {
             crate::output::GetTagValuesOutput {
                 pagination_token: self.pagination_token,
@@ -266,7 +266,7 @@ pub mod get_tag_values_output {
     }
 }
 impl GetTagValuesOutput {
-    /// Creates a new builder-style object to manufacture [`GetTagValuesOutput`](crate::output::GetTagValuesOutput)
+    /// Creates a new builder-style object to manufacture [`GetTagValuesOutput`](crate::output::GetTagValuesOutput).
     pub fn builder() -> crate::output::get_tag_values_output::Builder {
         crate::output::get_tag_values_output::Builder::default()
     }
@@ -277,8 +277,10 @@ impl GetTagValuesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetTagKeysOutput {
     /// <p>A string that indicates that there is more data available than this response contains. To receive the next part of the response, specify this response value as the <code>PaginationToken</code> value in the request for the next page.</p>
+    #[doc(hidden)]
     pub pagination_token: std::option::Option<std::string::String>,
     /// <p>A list of all tag keys in the Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub tag_keys: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl GetTagKeysOutput {
@@ -299,11 +301,10 @@ impl std::fmt::Debug for GetTagKeysOutput {
         formatter.finish()
     }
 }
-/// See [`GetTagKeysOutput`](crate::output::GetTagKeysOutput)
+/// See [`GetTagKeysOutput`](crate::output::GetTagKeysOutput).
 pub mod get_tag_keys_output {
 
-    /// A builder for [`GetTagKeysOutput`](crate::output::GetTagKeysOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetTagKeysOutput`](crate::output::GetTagKeysOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pagination_token: std::option::Option<std::string::String>,
@@ -342,7 +343,7 @@ pub mod get_tag_keys_output {
             self.tag_keys = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetTagKeysOutput`](crate::output::GetTagKeysOutput)
+        /// Consumes the builder and constructs a [`GetTagKeysOutput`](crate::output::GetTagKeysOutput).
         pub fn build(self) -> crate::output::GetTagKeysOutput {
             crate::output::GetTagKeysOutput {
                 pagination_token: self.pagination_token,
@@ -352,7 +353,7 @@ pub mod get_tag_keys_output {
     }
 }
 impl GetTagKeysOutput {
-    /// Creates a new builder-style object to manufacture [`GetTagKeysOutput`](crate::output::GetTagKeysOutput)
+    /// Creates a new builder-style object to manufacture [`GetTagKeysOutput`](crate::output::GetTagKeysOutput).
     pub fn builder() -> crate::output::get_tag_keys_output::Builder {
         crate::output::get_tag_keys_output::Builder::default()
     }
@@ -363,8 +364,10 @@ impl GetTagKeysOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetResourcesOutput {
     /// <p>A string that indicates that there is more data available than this response contains. To receive the next part of the response, specify this response value as the <code>PaginationToken</code> value in the request for the next page.</p>
+    #[doc(hidden)]
     pub pagination_token: std::option::Option<std::string::String>,
     /// <p>A list of resource ARNs and the tags (keys and values) associated with each.</p>
+    #[doc(hidden)]
     pub resource_tag_mapping_list:
         std::option::Option<std::vec::Vec<crate::model::ResourceTagMapping>>,
 }
@@ -388,11 +391,10 @@ impl std::fmt::Debug for GetResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`GetResourcesOutput`](crate::output::GetResourcesOutput)
+/// See [`GetResourcesOutput`](crate::output::GetResourcesOutput).
 pub mod get_resources_output {
 
-    /// A builder for [`GetResourcesOutput`](crate::output::GetResourcesOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetResourcesOutput`](crate::output::GetResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pagination_token: std::option::Option<std::string::String>,
@@ -435,7 +437,7 @@ pub mod get_resources_output {
             self.resource_tag_mapping_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetResourcesOutput`](crate::output::GetResourcesOutput)
+        /// Consumes the builder and constructs a [`GetResourcesOutput`](crate::output::GetResourcesOutput).
         pub fn build(self) -> crate::output::GetResourcesOutput {
             crate::output::GetResourcesOutput {
                 pagination_token: self.pagination_token,
@@ -445,7 +447,7 @@ pub mod get_resources_output {
     }
 }
 impl GetResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`GetResourcesOutput`](crate::output::GetResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`GetResourcesOutput`](crate::output::GetResourcesOutput).
     pub fn builder() -> crate::output::get_resources_output::Builder {
         crate::output::get_resources_output::Builder::default()
     }
@@ -456,8 +458,10 @@ impl GetResourcesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetComplianceSummaryOutput {
     /// <p>A table that shows counts of noncompliant resources.</p>
+    #[doc(hidden)]
     pub summary_list: std::option::Option<std::vec::Vec<crate::model::Summary>>,
     /// <p>A string that indicates that there is more data available than this response contains. To receive the next part of the response, specify this response value as the <code>PaginationToken</code> value in the request for the next page.</p>
+    #[doc(hidden)]
     pub pagination_token: std::option::Option<std::string::String>,
 }
 impl GetComplianceSummaryOutput {
@@ -478,11 +482,10 @@ impl std::fmt::Debug for GetComplianceSummaryOutput {
         formatter.finish()
     }
 }
-/// See [`GetComplianceSummaryOutput`](crate::output::GetComplianceSummaryOutput)
+/// See [`GetComplianceSummaryOutput`](crate::output::GetComplianceSummaryOutput).
 pub mod get_compliance_summary_output {
 
-    /// A builder for [`GetComplianceSummaryOutput`](crate::output::GetComplianceSummaryOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetComplianceSummaryOutput`](crate::output::GetComplianceSummaryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary_list: std::option::Option<std::vec::Vec<crate::model::Summary>>,
@@ -521,7 +524,7 @@ pub mod get_compliance_summary_output {
             self.pagination_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetComplianceSummaryOutput`](crate::output::GetComplianceSummaryOutput)
+        /// Consumes the builder and constructs a [`GetComplianceSummaryOutput`](crate::output::GetComplianceSummaryOutput).
         pub fn build(self) -> crate::output::GetComplianceSummaryOutput {
             crate::output::GetComplianceSummaryOutput {
                 summary_list: self.summary_list,
@@ -531,7 +534,7 @@ pub mod get_compliance_summary_output {
     }
 }
 impl GetComplianceSummaryOutput {
-    /// Creates a new builder-style object to manufacture [`GetComplianceSummaryOutput`](crate::output::GetComplianceSummaryOutput)
+    /// Creates a new builder-style object to manufacture [`GetComplianceSummaryOutput`](crate::output::GetComplianceSummaryOutput).
     pub fn builder() -> crate::output::get_compliance_summary_output::Builder {
         crate::output::get_compliance_summary_output::Builder::default()
     }
@@ -549,12 +552,16 @@ pub struct DescribeReportCreationOutput {
     /// <li> <p> <code>FAILED</code> - Report creation timed out or the Amazon S3 bucket is not accessible. </p> </li>
     /// <li> <p> <code>NO REPORT</code> - No report was generated in the last 90 days.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<std::string::String>,
     /// <p>The path to the Amazon S3 bucket where the report was stored on creation.</p>
+    #[doc(hidden)]
     pub s3_location: std::option::Option<std::string::String>,
     /// <p>The date and time that the report was started. </p>
+    #[doc(hidden)]
     pub start_date: std::option::Option<std::string::String>,
     /// <p>Details of the common errors that all operations return.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl DescribeReportCreationOutput {
@@ -592,11 +599,10 @@ impl std::fmt::Debug for DescribeReportCreationOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeReportCreationOutput`](crate::output::DescribeReportCreationOutput)
+/// See [`DescribeReportCreationOutput`](crate::output::DescribeReportCreationOutput).
 pub mod describe_report_creation_output {
 
-    /// A builder for [`DescribeReportCreationOutput`](crate::output::DescribeReportCreationOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeReportCreationOutput`](crate::output::DescribeReportCreationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<std::string::String>,
@@ -662,7 +668,7 @@ pub mod describe_report_creation_output {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeReportCreationOutput`](crate::output::DescribeReportCreationOutput)
+        /// Consumes the builder and constructs a [`DescribeReportCreationOutput`](crate::output::DescribeReportCreationOutput).
         pub fn build(self) -> crate::output::DescribeReportCreationOutput {
             crate::output::DescribeReportCreationOutput {
                 status: self.status,
@@ -674,7 +680,7 @@ pub mod describe_report_creation_output {
     }
 }
 impl DescribeReportCreationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeReportCreationOutput`](crate::output::DescribeReportCreationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeReportCreationOutput`](crate::output::DescribeReportCreationOutput).
     pub fn builder() -> crate::output::describe_report_creation_output::Builder {
         crate::output::describe_report_creation_output::Builder::default()
     }

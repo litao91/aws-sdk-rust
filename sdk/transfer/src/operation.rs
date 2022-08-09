@@ -10,7 +10,7 @@ pub struct CreateAccess {
     _private: (),
 }
 impl CreateAccess {
-    /// Creates a new builder-style object to manufacture [`CreateAccessInput`](crate::input::CreateAccessInput)
+    /// Creates a new builder-style object to manufacture [`CreateAccessInput`](crate::input::CreateAccessInput).
     pub fn builder() -> crate::input::create_access_input::Builder {
         crate::input::create_access_input::Builder::default()
     }
@@ -31,6 +31,106 @@ impl aws_smithy_http::response::ParseStrictResponse for CreateAccess {
     }
 }
 
+/// Operation shape for `CreateAgreement`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`create_agreement`](crate::client::Client::create_agreement).
+///
+/// See [`crate::client::fluent_builders::CreateAgreement`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct CreateAgreement {
+    _private: (),
+}
+impl CreateAgreement {
+    /// Creates a new builder-style object to manufacture [`CreateAgreementInput`](crate::input::CreateAgreementInput).
+    pub fn builder() -> crate::input::create_agreement_input::Builder {
+        crate::input::create_agreement_input::Builder::default()
+    }
+    /// Creates a new `CreateAgreement` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for CreateAgreement {
+    type Output = std::result::Result<
+        crate::output::CreateAgreementOutput,
+        crate::error::CreateAgreementError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_create_agreement_error(response)
+        } else {
+            crate::operation_deser::parse_create_agreement_response(response)
+        }
+    }
+}
+
+/// Operation shape for `CreateConnector`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`create_connector`](crate::client::Client::create_connector).
+///
+/// See [`crate::client::fluent_builders::CreateConnector`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct CreateConnector {
+    _private: (),
+}
+impl CreateConnector {
+    /// Creates a new builder-style object to manufacture [`CreateConnectorInput`](crate::input::CreateConnectorInput).
+    pub fn builder() -> crate::input::create_connector_input::Builder {
+        crate::input::create_connector_input::Builder::default()
+    }
+    /// Creates a new `CreateConnector` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for CreateConnector {
+    type Output = std::result::Result<
+        crate::output::CreateConnectorOutput,
+        crate::error::CreateConnectorError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_create_connector_error(response)
+        } else {
+            crate::operation_deser::parse_create_connector_response(response)
+        }
+    }
+}
+
+/// Operation shape for `CreateProfile`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`create_profile`](crate::client::Client::create_profile).
+///
+/// See [`crate::client::fluent_builders::CreateProfile`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct CreateProfile {
+    _private: (),
+}
+impl CreateProfile {
+    /// Creates a new builder-style object to manufacture [`CreateProfileInput`](crate::input::CreateProfileInput).
+    pub fn builder() -> crate::input::create_profile_input::Builder {
+        crate::input::create_profile_input::Builder::default()
+    }
+    /// Creates a new `CreateProfile` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for CreateProfile {
+    type Output =
+        std::result::Result<crate::output::CreateProfileOutput, crate::error::CreateProfileError>;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_create_profile_error(response)
+        } else {
+            crate::operation_deser::parse_create_profile_response(response)
+        }
+    }
+}
+
 /// Operation shape for `CreateServer`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -42,7 +142,7 @@ pub struct CreateServer {
     _private: (),
 }
 impl CreateServer {
-    /// Creates a new builder-style object to manufacture [`CreateServerInput`](crate::input::CreateServerInput)
+    /// Creates a new builder-style object to manufacture [`CreateServerInput`](crate::input::CreateServerInput).
     pub fn builder() -> crate::input::create_server_input::Builder {
         crate::input::create_server_input::Builder::default()
     }
@@ -74,7 +174,7 @@ pub struct CreateUser {
     _private: (),
 }
 impl CreateUser {
-    /// Creates a new builder-style object to manufacture [`CreateUserInput`](crate::input::CreateUserInput)
+    /// Creates a new builder-style object to manufacture [`CreateUserInput`](crate::input::CreateUserInput).
     pub fn builder() -> crate::input::create_user_input::Builder {
         crate::input::create_user_input::Builder::default()
     }
@@ -106,7 +206,7 @@ pub struct CreateWorkflow {
     _private: (),
 }
 impl CreateWorkflow {
-    /// Creates a new builder-style object to manufacture [`CreateWorkflowInput`](crate::input::CreateWorkflowInput)
+    /// Creates a new builder-style object to manufacture [`CreateWorkflowInput`](crate::input::CreateWorkflowInput).
     pub fn builder() -> crate::input::create_workflow_input::Builder {
         crate::input::create_workflow_input::Builder::default()
     }
@@ -138,7 +238,7 @@ pub struct DeleteAccess {
     _private: (),
 }
 impl DeleteAccess {
-    /// Creates a new builder-style object to manufacture [`DeleteAccessInput`](crate::input::DeleteAccessInput)
+    /// Creates a new builder-style object to manufacture [`DeleteAccessInput`](crate::input::DeleteAccessInput).
     pub fn builder() -> crate::input::delete_access_input::Builder {
         crate::input::delete_access_input::Builder::default()
     }
@@ -159,6 +259,140 @@ impl aws_smithy_http::response::ParseStrictResponse for DeleteAccess {
     }
 }
 
+/// Operation shape for `DeleteAgreement`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`delete_agreement`](crate::client::Client::delete_agreement).
+///
+/// See [`crate::client::fluent_builders::DeleteAgreement`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DeleteAgreement {
+    _private: (),
+}
+impl DeleteAgreement {
+    /// Creates a new builder-style object to manufacture [`DeleteAgreementInput`](crate::input::DeleteAgreementInput).
+    pub fn builder() -> crate::input::delete_agreement_input::Builder {
+        crate::input::delete_agreement_input::Builder::default()
+    }
+    /// Creates a new `DeleteAgreement` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DeleteAgreement {
+    type Output = std::result::Result<
+        crate::output::DeleteAgreementOutput,
+        crate::error::DeleteAgreementError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_delete_agreement_error(response)
+        } else {
+            crate::operation_deser::parse_delete_agreement_response(response)
+        }
+    }
+}
+
+/// Operation shape for `DeleteCertificate`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`delete_certificate`](crate::client::Client::delete_certificate).
+///
+/// See [`crate::client::fluent_builders::DeleteCertificate`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DeleteCertificate {
+    _private: (),
+}
+impl DeleteCertificate {
+    /// Creates a new builder-style object to manufacture [`DeleteCertificateInput`](crate::input::DeleteCertificateInput).
+    pub fn builder() -> crate::input::delete_certificate_input::Builder {
+        crate::input::delete_certificate_input::Builder::default()
+    }
+    /// Creates a new `DeleteCertificate` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DeleteCertificate {
+    type Output = std::result::Result<
+        crate::output::DeleteCertificateOutput,
+        crate::error::DeleteCertificateError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_delete_certificate_error(response)
+        } else {
+            crate::operation_deser::parse_delete_certificate_response(response)
+        }
+    }
+}
+
+/// Operation shape for `DeleteConnector`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`delete_connector`](crate::client::Client::delete_connector).
+///
+/// See [`crate::client::fluent_builders::DeleteConnector`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DeleteConnector {
+    _private: (),
+}
+impl DeleteConnector {
+    /// Creates a new builder-style object to manufacture [`DeleteConnectorInput`](crate::input::DeleteConnectorInput).
+    pub fn builder() -> crate::input::delete_connector_input::Builder {
+        crate::input::delete_connector_input::Builder::default()
+    }
+    /// Creates a new `DeleteConnector` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DeleteConnector {
+    type Output = std::result::Result<
+        crate::output::DeleteConnectorOutput,
+        crate::error::DeleteConnectorError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_delete_connector_error(response)
+        } else {
+            crate::operation_deser::parse_delete_connector_response(response)
+        }
+    }
+}
+
+/// Operation shape for `DeleteProfile`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`delete_profile`](crate::client::Client::delete_profile).
+///
+/// See [`crate::client::fluent_builders::DeleteProfile`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DeleteProfile {
+    _private: (),
+}
+impl DeleteProfile {
+    /// Creates a new builder-style object to manufacture [`DeleteProfileInput`](crate::input::DeleteProfileInput).
+    pub fn builder() -> crate::input::delete_profile_input::Builder {
+        crate::input::delete_profile_input::Builder::default()
+    }
+    /// Creates a new `DeleteProfile` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DeleteProfile {
+    type Output =
+        std::result::Result<crate::output::DeleteProfileOutput, crate::error::DeleteProfileError>;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_delete_profile_error(response)
+        } else {
+            crate::operation_deser::parse_delete_profile_response(response)
+        }
+    }
+}
+
 /// Operation shape for `DeleteServer`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -170,7 +404,7 @@ pub struct DeleteServer {
     _private: (),
 }
 impl DeleteServer {
-    /// Creates a new builder-style object to manufacture [`DeleteServerInput`](crate::input::DeleteServerInput)
+    /// Creates a new builder-style object to manufacture [`DeleteServerInput`](crate::input::DeleteServerInput).
     pub fn builder() -> crate::input::delete_server_input::Builder {
         crate::input::delete_server_input::Builder::default()
     }
@@ -202,7 +436,7 @@ pub struct DeleteSshPublicKey {
     _private: (),
 }
 impl DeleteSshPublicKey {
-    /// Creates a new builder-style object to manufacture [`DeleteSshPublicKeyInput`](crate::input::DeleteSshPublicKeyInput)
+    /// Creates a new builder-style object to manufacture [`DeleteSshPublicKeyInput`](crate::input::DeleteSshPublicKeyInput).
     pub fn builder() -> crate::input::delete_ssh_public_key_input::Builder {
         crate::input::delete_ssh_public_key_input::Builder::default()
     }
@@ -236,7 +470,7 @@ pub struct DeleteUser {
     _private: (),
 }
 impl DeleteUser {
-    /// Creates a new builder-style object to manufacture [`DeleteUserInput`](crate::input::DeleteUserInput)
+    /// Creates a new builder-style object to manufacture [`DeleteUserInput`](crate::input::DeleteUserInput).
     pub fn builder() -> crate::input::delete_user_input::Builder {
         crate::input::delete_user_input::Builder::default()
     }
@@ -268,7 +502,7 @@ pub struct DeleteWorkflow {
     _private: (),
 }
 impl DeleteWorkflow {
-    /// Creates a new builder-style object to manufacture [`DeleteWorkflowInput`](crate::input::DeleteWorkflowInput)
+    /// Creates a new builder-style object to manufacture [`DeleteWorkflowInput`](crate::input::DeleteWorkflowInput).
     pub fn builder() -> crate::input::delete_workflow_input::Builder {
         crate::input::delete_workflow_input::Builder::default()
     }
@@ -300,7 +534,7 @@ pub struct DescribeAccess {
     _private: (),
 }
 impl DescribeAccess {
-    /// Creates a new builder-style object to manufacture [`DescribeAccessInput`](crate::input::DescribeAccessInput)
+    /// Creates a new builder-style object to manufacture [`DescribeAccessInput`](crate::input::DescribeAccessInput).
     pub fn builder() -> crate::input::describe_access_input::Builder {
         crate::input::describe_access_input::Builder::default()
     }
@@ -321,6 +555,108 @@ impl aws_smithy_http::response::ParseStrictResponse for DescribeAccess {
     }
 }
 
+/// Operation shape for `DescribeAgreement`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`describe_agreement`](crate::client::Client::describe_agreement).
+///
+/// See [`crate::client::fluent_builders::DescribeAgreement`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DescribeAgreement {
+    _private: (),
+}
+impl DescribeAgreement {
+    /// Creates a new builder-style object to manufacture [`DescribeAgreementInput`](crate::input::DescribeAgreementInput).
+    pub fn builder() -> crate::input::describe_agreement_input::Builder {
+        crate::input::describe_agreement_input::Builder::default()
+    }
+    /// Creates a new `DescribeAgreement` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DescribeAgreement {
+    type Output = std::result::Result<
+        crate::output::DescribeAgreementOutput,
+        crate::error::DescribeAgreementError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_describe_agreement_error(response)
+        } else {
+            crate::operation_deser::parse_describe_agreement_response(response)
+        }
+    }
+}
+
+/// Operation shape for `DescribeCertificate`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`describe_certificate`](crate::client::Client::describe_certificate).
+///
+/// See [`crate::client::fluent_builders::DescribeCertificate`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DescribeCertificate {
+    _private: (),
+}
+impl DescribeCertificate {
+    /// Creates a new builder-style object to manufacture [`DescribeCertificateInput`](crate::input::DescribeCertificateInput).
+    pub fn builder() -> crate::input::describe_certificate_input::Builder {
+        crate::input::describe_certificate_input::Builder::default()
+    }
+    /// Creates a new `DescribeCertificate` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DescribeCertificate {
+    type Output = std::result::Result<
+        crate::output::DescribeCertificateOutput,
+        crate::error::DescribeCertificateError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_describe_certificate_error(response)
+        } else {
+            crate::operation_deser::parse_describe_certificate_response(response)
+        }
+    }
+}
+
+/// Operation shape for `DescribeConnector`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`describe_connector`](crate::client::Client::describe_connector).
+///
+/// See [`crate::client::fluent_builders::DescribeConnector`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DescribeConnector {
+    _private: (),
+}
+impl DescribeConnector {
+    /// Creates a new builder-style object to manufacture [`DescribeConnectorInput`](crate::input::DescribeConnectorInput).
+    pub fn builder() -> crate::input::describe_connector_input::Builder {
+        crate::input::describe_connector_input::Builder::default()
+    }
+    /// Creates a new `DescribeConnector` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DescribeConnector {
+    type Output = std::result::Result<
+        crate::output::DescribeConnectorOutput,
+        crate::error::DescribeConnectorError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_describe_connector_error(response)
+        } else {
+            crate::operation_deser::parse_describe_connector_response(response)
+        }
+    }
+}
+
 /// Operation shape for `DescribeExecution`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -332,7 +668,7 @@ pub struct DescribeExecution {
     _private: (),
 }
 impl DescribeExecution {
-    /// Creates a new builder-style object to manufacture [`DescribeExecutionInput`](crate::input::DescribeExecutionInput)
+    /// Creates a new builder-style object to manufacture [`DescribeExecutionInput`](crate::input::DescribeExecutionInput).
     pub fn builder() -> crate::input::describe_execution_input::Builder {
         crate::input::describe_execution_input::Builder::default()
     }
@@ -355,6 +691,40 @@ impl aws_smithy_http::response::ParseStrictResponse for DescribeExecution {
     }
 }
 
+/// Operation shape for `DescribeProfile`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`describe_profile`](crate::client::Client::describe_profile).
+///
+/// See [`crate::client::fluent_builders::DescribeProfile`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DescribeProfile {
+    _private: (),
+}
+impl DescribeProfile {
+    /// Creates a new builder-style object to manufacture [`DescribeProfileInput`](crate::input::DescribeProfileInput).
+    pub fn builder() -> crate::input::describe_profile_input::Builder {
+        crate::input::describe_profile_input::Builder::default()
+    }
+    /// Creates a new `DescribeProfile` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DescribeProfile {
+    type Output = std::result::Result<
+        crate::output::DescribeProfileOutput,
+        crate::error::DescribeProfileError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_describe_profile_error(response)
+        } else {
+            crate::operation_deser::parse_describe_profile_response(response)
+        }
+    }
+}
+
 /// Operation shape for `DescribeSecurityPolicy`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -366,7 +736,7 @@ pub struct DescribeSecurityPolicy {
     _private: (),
 }
 impl DescribeSecurityPolicy {
-    /// Creates a new builder-style object to manufacture [`DescribeSecurityPolicyInput`](crate::input::DescribeSecurityPolicyInput)
+    /// Creates a new builder-style object to manufacture [`DescribeSecurityPolicyInput`](crate::input::DescribeSecurityPolicyInput).
     pub fn builder() -> crate::input::describe_security_policy_input::Builder {
         crate::input::describe_security_policy_input::Builder::default()
     }
@@ -400,7 +770,7 @@ pub struct DescribeServer {
     _private: (),
 }
 impl DescribeServer {
-    /// Creates a new builder-style object to manufacture [`DescribeServerInput`](crate::input::DescribeServerInput)
+    /// Creates a new builder-style object to manufacture [`DescribeServerInput`](crate::input::DescribeServerInput).
     pub fn builder() -> crate::input::describe_server_input::Builder {
         crate::input::describe_server_input::Builder::default()
     }
@@ -432,7 +802,7 @@ pub struct DescribeUser {
     _private: (),
 }
 impl DescribeUser {
-    /// Creates a new builder-style object to manufacture [`DescribeUserInput`](crate::input::DescribeUserInput)
+    /// Creates a new builder-style object to manufacture [`DescribeUserInput`](crate::input::DescribeUserInput).
     pub fn builder() -> crate::input::describe_user_input::Builder {
         crate::input::describe_user_input::Builder::default()
     }
@@ -464,7 +834,7 @@ pub struct DescribeWorkflow {
     _private: (),
 }
 impl DescribeWorkflow {
-    /// Creates a new builder-style object to manufacture [`DescribeWorkflowInput`](crate::input::DescribeWorkflowInput)
+    /// Creates a new builder-style object to manufacture [`DescribeWorkflowInput`](crate::input::DescribeWorkflowInput).
     pub fn builder() -> crate::input::describe_workflow_input::Builder {
         crate::input::describe_workflow_input::Builder::default()
     }
@@ -487,6 +857,40 @@ impl aws_smithy_http::response::ParseStrictResponse for DescribeWorkflow {
     }
 }
 
+/// Operation shape for `ImportCertificate`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`import_certificate`](crate::client::Client::import_certificate).
+///
+/// See [`crate::client::fluent_builders::ImportCertificate`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct ImportCertificate {
+    _private: (),
+}
+impl ImportCertificate {
+    /// Creates a new builder-style object to manufacture [`ImportCertificateInput`](crate::input::ImportCertificateInput).
+    pub fn builder() -> crate::input::import_certificate_input::Builder {
+        crate::input::import_certificate_input::Builder::default()
+    }
+    /// Creates a new `ImportCertificate` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for ImportCertificate {
+    type Output = std::result::Result<
+        crate::output::ImportCertificateOutput,
+        crate::error::ImportCertificateError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_import_certificate_error(response)
+        } else {
+            crate::operation_deser::parse_import_certificate_response(response)
+        }
+    }
+}
+
 /// Operation shape for `ImportSshPublicKey`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -498,7 +902,7 @@ pub struct ImportSshPublicKey {
     _private: (),
 }
 impl ImportSshPublicKey {
-    /// Creates a new builder-style object to manufacture [`ImportSshPublicKeyInput`](crate::input::ImportSshPublicKeyInput)
+    /// Creates a new builder-style object to manufacture [`ImportSshPublicKeyInput`](crate::input::ImportSshPublicKeyInput).
     pub fn builder() -> crate::input::import_ssh_public_key_input::Builder {
         crate::input::import_ssh_public_key_input::Builder::default()
     }
@@ -532,7 +936,7 @@ pub struct ListAccesses {
     _private: (),
 }
 impl ListAccesses {
-    /// Creates a new builder-style object to manufacture [`ListAccessesInput`](crate::input::ListAccessesInput)
+    /// Creates a new builder-style object to manufacture [`ListAccessesInput`](crate::input::ListAccessesInput).
     pub fn builder() -> crate::input::list_accesses_input::Builder {
         crate::input::list_accesses_input::Builder::default()
     }
@@ -553,6 +957,104 @@ impl aws_smithy_http::response::ParseStrictResponse for ListAccesses {
     }
 }
 
+/// Operation shape for `ListAgreements`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`list_agreements`](crate::client::Client::list_agreements).
+///
+/// See [`crate::client::fluent_builders::ListAgreements`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct ListAgreements {
+    _private: (),
+}
+impl ListAgreements {
+    /// Creates a new builder-style object to manufacture [`ListAgreementsInput`](crate::input::ListAgreementsInput).
+    pub fn builder() -> crate::input::list_agreements_input::Builder {
+        crate::input::list_agreements_input::Builder::default()
+    }
+    /// Creates a new `ListAgreements` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for ListAgreements {
+    type Output =
+        std::result::Result<crate::output::ListAgreementsOutput, crate::error::ListAgreementsError>;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_list_agreements_error(response)
+        } else {
+            crate::operation_deser::parse_list_agreements_response(response)
+        }
+    }
+}
+
+/// Operation shape for `ListCertificates`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`list_certificates`](crate::client::Client::list_certificates).
+///
+/// See [`crate::client::fluent_builders::ListCertificates`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct ListCertificates {
+    _private: (),
+}
+impl ListCertificates {
+    /// Creates a new builder-style object to manufacture [`ListCertificatesInput`](crate::input::ListCertificatesInput).
+    pub fn builder() -> crate::input::list_certificates_input::Builder {
+        crate::input::list_certificates_input::Builder::default()
+    }
+    /// Creates a new `ListCertificates` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for ListCertificates {
+    type Output = std::result::Result<
+        crate::output::ListCertificatesOutput,
+        crate::error::ListCertificatesError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_list_certificates_error(response)
+        } else {
+            crate::operation_deser::parse_list_certificates_response(response)
+        }
+    }
+}
+
+/// Operation shape for `ListConnectors`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`list_connectors`](crate::client::Client::list_connectors).
+///
+/// See [`crate::client::fluent_builders::ListConnectors`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct ListConnectors {
+    _private: (),
+}
+impl ListConnectors {
+    /// Creates a new builder-style object to manufacture [`ListConnectorsInput`](crate::input::ListConnectorsInput).
+    pub fn builder() -> crate::input::list_connectors_input::Builder {
+        crate::input::list_connectors_input::Builder::default()
+    }
+    /// Creates a new `ListConnectors` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for ListConnectors {
+    type Output =
+        std::result::Result<crate::output::ListConnectorsOutput, crate::error::ListConnectorsError>;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_list_connectors_error(response)
+        } else {
+            crate::operation_deser::parse_list_connectors_response(response)
+        }
+    }
+}
+
 /// Operation shape for `ListExecutions`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -564,7 +1066,7 @@ pub struct ListExecutions {
     _private: (),
 }
 impl ListExecutions {
-    /// Creates a new builder-style object to manufacture [`ListExecutionsInput`](crate::input::ListExecutionsInput)
+    /// Creates a new builder-style object to manufacture [`ListExecutionsInput`](crate::input::ListExecutionsInput).
     pub fn builder() -> crate::input::list_executions_input::Builder {
         crate::input::list_executions_input::Builder::default()
     }
@@ -585,6 +1087,38 @@ impl aws_smithy_http::response::ParseStrictResponse for ListExecutions {
     }
 }
 
+/// Operation shape for `ListProfiles`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`list_profiles`](crate::client::Client::list_profiles).
+///
+/// See [`crate::client::fluent_builders::ListProfiles`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct ListProfiles {
+    _private: (),
+}
+impl ListProfiles {
+    /// Creates a new builder-style object to manufacture [`ListProfilesInput`](crate::input::ListProfilesInput).
+    pub fn builder() -> crate::input::list_profiles_input::Builder {
+        crate::input::list_profiles_input::Builder::default()
+    }
+    /// Creates a new `ListProfiles` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for ListProfiles {
+    type Output =
+        std::result::Result<crate::output::ListProfilesOutput, crate::error::ListProfilesError>;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_list_profiles_error(response)
+        } else {
+            crate::operation_deser::parse_list_profiles_response(response)
+        }
+    }
+}
+
 /// Operation shape for `ListSecurityPolicies`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -596,7 +1130,7 @@ pub struct ListSecurityPolicies {
     _private: (),
 }
 impl ListSecurityPolicies {
-    /// Creates a new builder-style object to manufacture [`ListSecurityPoliciesInput`](crate::input::ListSecurityPoliciesInput)
+    /// Creates a new builder-style object to manufacture [`ListSecurityPoliciesInput`](crate::input::ListSecurityPoliciesInput).
     pub fn builder() -> crate::input::list_security_policies_input::Builder {
         crate::input::list_security_policies_input::Builder::default()
     }
@@ -630,7 +1164,7 @@ pub struct ListServers {
     _private: (),
 }
 impl ListServers {
-    /// Creates a new builder-style object to manufacture [`ListServersInput`](crate::input::ListServersInput)
+    /// Creates a new builder-style object to manufacture [`ListServersInput`](crate::input::ListServersInput).
     pub fn builder() -> crate::input::list_servers_input::Builder {
         crate::input::list_servers_input::Builder::default()
     }
@@ -662,7 +1196,7 @@ pub struct ListTagsForResource {
     _private: (),
 }
 impl ListTagsForResource {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
     pub fn builder() -> crate::input::list_tags_for_resource_input::Builder {
         crate::input::list_tags_for_resource_input::Builder::default()
     }
@@ -696,7 +1230,7 @@ pub struct ListUsers {
     _private: (),
 }
 impl ListUsers {
-    /// Creates a new builder-style object to manufacture [`ListUsersInput`](crate::input::ListUsersInput)
+    /// Creates a new builder-style object to manufacture [`ListUsersInput`](crate::input::ListUsersInput).
     pub fn builder() -> crate::input::list_users_input::Builder {
         crate::input::list_users_input::Builder::default()
     }
@@ -727,7 +1261,7 @@ pub struct ListWorkflows {
     _private: (),
 }
 impl ListWorkflows {
-    /// Creates a new builder-style object to manufacture [`ListWorkflowsInput`](crate::input::ListWorkflowsInput)
+    /// Creates a new builder-style object to manufacture [`ListWorkflowsInput`](crate::input::ListWorkflowsInput).
     pub fn builder() -> crate::input::list_workflows_input::Builder {
         crate::input::list_workflows_input::Builder::default()
     }
@@ -759,7 +1293,7 @@ pub struct SendWorkflowStepState {
     _private: (),
 }
 impl SendWorkflowStepState {
-    /// Creates a new builder-style object to manufacture [`SendWorkflowStepStateInput`](crate::input::SendWorkflowStepStateInput)
+    /// Creates a new builder-style object to manufacture [`SendWorkflowStepStateInput`](crate::input::SendWorkflowStepStateInput).
     pub fn builder() -> crate::input::send_workflow_step_state_input::Builder {
         crate::input::send_workflow_step_state_input::Builder::default()
     }
@@ -782,6 +1316,40 @@ impl aws_smithy_http::response::ParseStrictResponse for SendWorkflowStepState {
     }
 }
 
+/// Operation shape for `StartFileTransfer`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`start_file_transfer`](crate::client::Client::start_file_transfer).
+///
+/// See [`crate::client::fluent_builders::StartFileTransfer`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct StartFileTransfer {
+    _private: (),
+}
+impl StartFileTransfer {
+    /// Creates a new builder-style object to manufacture [`StartFileTransferInput`](crate::input::StartFileTransferInput).
+    pub fn builder() -> crate::input::start_file_transfer_input::Builder {
+        crate::input::start_file_transfer_input::Builder::default()
+    }
+    /// Creates a new `StartFileTransfer` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for StartFileTransfer {
+    type Output = std::result::Result<
+        crate::output::StartFileTransferOutput,
+        crate::error::StartFileTransferError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_start_file_transfer_error(response)
+        } else {
+            crate::operation_deser::parse_start_file_transfer_response(response)
+        }
+    }
+}
+
 /// Operation shape for `StartServer`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -793,7 +1361,7 @@ pub struct StartServer {
     _private: (),
 }
 impl StartServer {
-    /// Creates a new builder-style object to manufacture [`StartServerInput`](crate::input::StartServerInput)
+    /// Creates a new builder-style object to manufacture [`StartServerInput`](crate::input::StartServerInput).
     pub fn builder() -> crate::input::start_server_input::Builder {
         crate::input::start_server_input::Builder::default()
     }
@@ -825,7 +1393,7 @@ pub struct StopServer {
     _private: (),
 }
 impl StopServer {
-    /// Creates a new builder-style object to manufacture [`StopServerInput`](crate::input::StopServerInput)
+    /// Creates a new builder-style object to manufacture [`StopServerInput`](crate::input::StopServerInput).
     pub fn builder() -> crate::input::stop_server_input::Builder {
         crate::input::stop_server_input::Builder::default()
     }
@@ -857,7 +1425,7 @@ pub struct TagResource {
     _private: (),
 }
 impl TagResource {
-    /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput)
+    /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
     pub fn builder() -> crate::input::tag_resource_input::Builder {
         crate::input::tag_resource_input::Builder::default()
     }
@@ -889,7 +1457,7 @@ pub struct TestIdentityProvider {
     _private: (),
 }
 impl TestIdentityProvider {
-    /// Creates a new builder-style object to manufacture [`TestIdentityProviderInput`](crate::input::TestIdentityProviderInput)
+    /// Creates a new builder-style object to manufacture [`TestIdentityProviderInput`](crate::input::TestIdentityProviderInput).
     pub fn builder() -> crate::input::test_identity_provider_input::Builder {
         crate::input::test_identity_provider_input::Builder::default()
     }
@@ -923,7 +1491,7 @@ pub struct UntagResource {
     _private: (),
 }
 impl UntagResource {
-    /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
     pub fn builder() -> crate::input::untag_resource_input::Builder {
         crate::input::untag_resource_input::Builder::default()
     }
@@ -955,7 +1523,7 @@ pub struct UpdateAccess {
     _private: (),
 }
 impl UpdateAccess {
-    /// Creates a new builder-style object to manufacture [`UpdateAccessInput`](crate::input::UpdateAccessInput)
+    /// Creates a new builder-style object to manufacture [`UpdateAccessInput`](crate::input::UpdateAccessInput).
     pub fn builder() -> crate::input::update_access_input::Builder {
         crate::input::update_access_input::Builder::default()
     }
@@ -976,6 +1544,140 @@ impl aws_smithy_http::response::ParseStrictResponse for UpdateAccess {
     }
 }
 
+/// Operation shape for `UpdateAgreement`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`update_agreement`](crate::client::Client::update_agreement).
+///
+/// See [`crate::client::fluent_builders::UpdateAgreement`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct UpdateAgreement {
+    _private: (),
+}
+impl UpdateAgreement {
+    /// Creates a new builder-style object to manufacture [`UpdateAgreementInput`](crate::input::UpdateAgreementInput).
+    pub fn builder() -> crate::input::update_agreement_input::Builder {
+        crate::input::update_agreement_input::Builder::default()
+    }
+    /// Creates a new `UpdateAgreement` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for UpdateAgreement {
+    type Output = std::result::Result<
+        crate::output::UpdateAgreementOutput,
+        crate::error::UpdateAgreementError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_update_agreement_error(response)
+        } else {
+            crate::operation_deser::parse_update_agreement_response(response)
+        }
+    }
+}
+
+/// Operation shape for `UpdateCertificate`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`update_certificate`](crate::client::Client::update_certificate).
+///
+/// See [`crate::client::fluent_builders::UpdateCertificate`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct UpdateCertificate {
+    _private: (),
+}
+impl UpdateCertificate {
+    /// Creates a new builder-style object to manufacture [`UpdateCertificateInput`](crate::input::UpdateCertificateInput).
+    pub fn builder() -> crate::input::update_certificate_input::Builder {
+        crate::input::update_certificate_input::Builder::default()
+    }
+    /// Creates a new `UpdateCertificate` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for UpdateCertificate {
+    type Output = std::result::Result<
+        crate::output::UpdateCertificateOutput,
+        crate::error::UpdateCertificateError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_update_certificate_error(response)
+        } else {
+            crate::operation_deser::parse_update_certificate_response(response)
+        }
+    }
+}
+
+/// Operation shape for `UpdateConnector`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`update_connector`](crate::client::Client::update_connector).
+///
+/// See [`crate::client::fluent_builders::UpdateConnector`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct UpdateConnector {
+    _private: (),
+}
+impl UpdateConnector {
+    /// Creates a new builder-style object to manufacture [`UpdateConnectorInput`](crate::input::UpdateConnectorInput).
+    pub fn builder() -> crate::input::update_connector_input::Builder {
+        crate::input::update_connector_input::Builder::default()
+    }
+    /// Creates a new `UpdateConnector` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for UpdateConnector {
+    type Output = std::result::Result<
+        crate::output::UpdateConnectorOutput,
+        crate::error::UpdateConnectorError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_update_connector_error(response)
+        } else {
+            crate::operation_deser::parse_update_connector_response(response)
+        }
+    }
+}
+
+/// Operation shape for `UpdateProfile`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`update_profile`](crate::client::Client::update_profile).
+///
+/// See [`crate::client::fluent_builders::UpdateProfile`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct UpdateProfile {
+    _private: (),
+}
+impl UpdateProfile {
+    /// Creates a new builder-style object to manufacture [`UpdateProfileInput`](crate::input::UpdateProfileInput).
+    pub fn builder() -> crate::input::update_profile_input::Builder {
+        crate::input::update_profile_input::Builder::default()
+    }
+    /// Creates a new `UpdateProfile` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for UpdateProfile {
+    type Output =
+        std::result::Result<crate::output::UpdateProfileOutput, crate::error::UpdateProfileError>;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_update_profile_error(response)
+        } else {
+            crate::operation_deser::parse_update_profile_response(response)
+        }
+    }
+}
+
 /// Operation shape for `UpdateServer`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -987,7 +1689,7 @@ pub struct UpdateServer {
     _private: (),
 }
 impl UpdateServer {
-    /// Creates a new builder-style object to manufacture [`UpdateServerInput`](crate::input::UpdateServerInput)
+    /// Creates a new builder-style object to manufacture [`UpdateServerInput`](crate::input::UpdateServerInput).
     pub fn builder() -> crate::input::update_server_input::Builder {
         crate::input::update_server_input::Builder::default()
     }
@@ -1019,7 +1721,7 @@ pub struct UpdateUser {
     _private: (),
 }
 impl UpdateUser {
-    /// Creates a new builder-style object to manufacture [`UpdateUserInput`](crate::input::UpdateUserInput)
+    /// Creates a new builder-style object to manufacture [`UpdateUserInput`](crate::input::UpdateUserInput).
     pub fn builder() -> crate::input::update_user_input::Builder {
         crate::input::update_user_input::Builder::default()
     }

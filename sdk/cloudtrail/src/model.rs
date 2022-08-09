@@ -14,8 +14,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AdvancedEventSelector {
     /// <p>An optional, descriptive name for an advanced event selector, such as "Log data events for only two S3 buckets".</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Contains all selector statements in an advanced event selector.</p>
+    #[doc(hidden)]
     pub field_selectors: std::option::Option<std::vec::Vec<crate::model::AdvancedFieldSelector>>,
 }
 impl AdvancedEventSelector {
@@ -36,11 +38,10 @@ impl std::fmt::Debug for AdvancedEventSelector {
         formatter.finish()
     }
 }
-/// See [`AdvancedEventSelector`](crate::model::AdvancedEventSelector)
+/// See [`AdvancedEventSelector`](crate::model::AdvancedEventSelector).
 pub mod advanced_event_selector {
 
-    /// A builder for [`AdvancedEventSelector`](crate::model::AdvancedEventSelector)
-    #[non_exhaustive]
+    /// A builder for [`AdvancedEventSelector`](crate::model::AdvancedEventSelector).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -77,7 +78,7 @@ pub mod advanced_event_selector {
             self.field_selectors = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdvancedEventSelector`](crate::model::AdvancedEventSelector)
+        /// Consumes the builder and constructs a [`AdvancedEventSelector`](crate::model::AdvancedEventSelector).
         pub fn build(self) -> crate::model::AdvancedEventSelector {
             crate::model::AdvancedEventSelector {
                 name: self.name,
@@ -87,7 +88,7 @@ pub mod advanced_event_selector {
     }
 }
 impl AdvancedEventSelector {
-    /// Creates a new builder-style object to manufacture [`AdvancedEventSelector`](crate::model::AdvancedEventSelector)
+    /// Creates a new builder-style object to manufacture [`AdvancedEventSelector`](crate::model::AdvancedEventSelector).
     pub fn builder() -> crate::model::advanced_event_selector::Builder {
         crate::model::advanced_event_selector::Builder::default()
     }
@@ -271,18 +272,25 @@ pub struct AdvancedFieldSelector {
     /// </partition></code> </p> </li>
     /// </ul> </li>
     /// </ul>
+    #[doc(hidden)]
     pub field: std::option::Option<std::string::String>,
     /// <p> An operator that includes events that match the exact value of the event record field specified as the value of <code>Field</code>. This is the only valid operator that you can use with the <code>readOnly</code>, <code>eventCategory</code>, and <code>resources.type</code> fields.</p>
+    #[doc(hidden)]
     pub equals: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An operator that includes events that match the first few characters of the event record field specified as the value of <code>Field</code>.</p>
+    #[doc(hidden)]
     pub starts_with: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>An operator that includes events that match the last few characters of the event record field specified as the value of <code>Field</code>.</p>
+    #[doc(hidden)]
     pub ends_with: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> An operator that excludes events that match the exact value of the event record field specified as the value of <code>Field</code>. </p>
+    #[doc(hidden)]
     pub not_equals: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> An operator that excludes events that match the first few characters of the event record field specified as the value of <code>Field</code>. </p>
+    #[doc(hidden)]
     pub not_starts_with: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p> An operator that excludes events that match the last few characters of the event record field specified as the value of <code>Field</code>. </p>
+    #[doc(hidden)]
     pub not_ends_with: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl AdvancedFieldSelector {
@@ -501,11 +509,10 @@ impl std::fmt::Debug for AdvancedFieldSelector {
         formatter.finish()
     }
 }
-/// See [`AdvancedFieldSelector`](crate::model::AdvancedFieldSelector)
+/// See [`AdvancedFieldSelector`](crate::model::AdvancedFieldSelector).
 pub mod advanced_field_selector {
 
-    /// A builder for [`AdvancedFieldSelector`](crate::model::AdvancedFieldSelector)
-    #[non_exhaustive]
+    /// A builder for [`AdvancedFieldSelector`](crate::model::AdvancedFieldSelector).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field: std::option::Option<std::string::String>,
@@ -987,7 +994,7 @@ pub mod advanced_field_selector {
             self.not_ends_with = input;
             self
         }
-        /// Consumes the builder and constructs a [`AdvancedFieldSelector`](crate::model::AdvancedFieldSelector)
+        /// Consumes the builder and constructs a [`AdvancedFieldSelector`](crate::model::AdvancedFieldSelector).
         pub fn build(self) -> crate::model::AdvancedFieldSelector {
             crate::model::AdvancedFieldSelector {
                 field: self.field,
@@ -1002,7 +1009,7 @@ pub mod advanced_field_selector {
     }
 }
 impl AdvancedFieldSelector {
-    /// Creates a new builder-style object to manufacture [`AdvancedFieldSelector`](crate::model::AdvancedFieldSelector)
+    /// Creates a new builder-style object to manufacture [`AdvancedFieldSelector`](crate::model::AdvancedFieldSelector).
     pub fn builder() -> crate::model::advanced_field_selector::Builder {
         crate::model::advanced_field_selector::Builder::default()
     }
@@ -1072,8 +1079,10 @@ impl AsRef<str> for EventDataStoreStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key in a key-value pair. The key must be must be no longer than 128 Unicode characters. The key must be unique for the resource to which it applies.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value in a key-value pair of a tag. The value must be no longer than 256 Unicode characters.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -1094,11 +1103,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -1125,7 +1133,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -1135,7 +1143,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -1146,6 +1154,7 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InsightSelector {
     /// <p>The type of insights to log on a trail. <code>ApiCallRateInsight</code> and <code>ApiErrorRateInsight</code> are valid insight types.</p>
+    #[doc(hidden)]
     pub insight_type: std::option::Option<crate::model::InsightType>,
 }
 impl InsightSelector {
@@ -1161,11 +1170,10 @@ impl std::fmt::Debug for InsightSelector {
         formatter.finish()
     }
 }
-/// See [`InsightSelector`](crate::model::InsightSelector)
+/// See [`InsightSelector`](crate::model::InsightSelector).
 pub mod insight_selector {
 
-    /// A builder for [`InsightSelector`](crate::model::InsightSelector)
-    #[non_exhaustive]
+    /// A builder for [`InsightSelector`](crate::model::InsightSelector).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) insight_type: std::option::Option<crate::model::InsightType>,
@@ -1184,7 +1192,7 @@ pub mod insight_selector {
             self.insight_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`InsightSelector`](crate::model::InsightSelector)
+        /// Consumes the builder and constructs a [`InsightSelector`](crate::model::InsightSelector).
         pub fn build(self) -> crate::model::InsightSelector {
             crate::model::InsightSelector {
                 insight_type: self.insight_type,
@@ -1193,7 +1201,7 @@ pub mod insight_selector {
     }
 }
 impl InsightSelector {
-    /// Creates a new builder-style object to manufacture [`InsightSelector`](crate::model::InsightSelector)
+    /// Creates a new builder-style object to manufacture [`InsightSelector`](crate::model::InsightSelector).
     pub fn builder() -> crate::model::insight_selector::Builder {
         crate::model::insight_selector::Builder::default()
     }
@@ -1262,16 +1270,20 @@ impl AsRef<str> for InsightType {
 pub struct EventSelector {
     /// <p>Specify if you want your trail to log read-only events, write-only events, or all. For example, the EC2 <code>GetConsoleOutput</code> is a read-only API operation and <code>RunInstances</code> is a write-only API operation.</p>
     /// <p> By default, the value is <code>All</code>.</p>
+    #[doc(hidden)]
     pub read_write_type: std::option::Option<crate::model::ReadWriteType>,
     /// <p>Specify if you want your event selector to include management events for your trail.</p>
     /// <p> For more information, see <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-management-events">Management Events</a> in the <i>CloudTrail User Guide</i>.</p>
     /// <p>By default, the value is <code>true</code>.</p>
     /// <p>The first copy of management events is free. You are charged for additional copies of management events that you are logging on any subsequent trail in the same region. For more information about CloudTrail pricing, see <a href="http://aws.amazon.com/cloudtrail/pricing/">CloudTrail Pricing</a>.</p>
+    #[doc(hidden)]
     pub include_management_events: std::option::Option<bool>,
     /// <p>CloudTrail supports data event logging for Amazon S3 objects, Lambda functions, and Amazon DynamoDB tables with basic event selectors. You can specify up to 250 resources for an individual event selector, but the total number of data resources cannot exceed 250 across all event selectors in a trail. This limit does not apply if you configure resource logging for all data events.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events">Data Events</a> and <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in CloudTrail</a> in the <i>CloudTrail User Guide</i>.</p>
+    #[doc(hidden)]
     pub data_resources: std::option::Option<std::vec::Vec<crate::model::DataResource>>,
     /// <p>An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out Key Management Service or Amazon RDS Data API events by containing <code>kms.amazonaws.com</code> or <code>rdsdata.amazonaws.com</code>. By default, <code>ExcludeManagementEventSources</code> is empty, and KMS and Amazon RDS Data API events are logged to your trail. You can exclude management event sources only in regions that support the event source.</p>
+    #[doc(hidden)]
     pub exclude_management_event_sources: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl EventSelector {
@@ -1310,11 +1322,10 @@ impl std::fmt::Debug for EventSelector {
         formatter.finish()
     }
 }
-/// See [`EventSelector`](crate::model::EventSelector)
+/// See [`EventSelector`](crate::model::EventSelector).
 pub mod event_selector {
 
-    /// A builder for [`EventSelector`](crate::model::EventSelector)
-    #[non_exhaustive]
+    /// A builder for [`EventSelector`](crate::model::EventSelector).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) read_write_type: std::option::Option<crate::model::ReadWriteType>,
@@ -1398,7 +1409,7 @@ pub mod event_selector {
             self.exclude_management_event_sources = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventSelector`](crate::model::EventSelector)
+        /// Consumes the builder and constructs a [`EventSelector`](crate::model::EventSelector).
         pub fn build(self) -> crate::model::EventSelector {
             crate::model::EventSelector {
                 read_write_type: self.read_write_type,
@@ -1410,7 +1421,7 @@ pub mod event_selector {
     }
 }
 impl EventSelector {
-    /// Creates a new builder-style object to manufacture [`EventSelector`](crate::model::EventSelector)
+    /// Creates a new builder-style object to manufacture [`EventSelector`](crate::model::EventSelector).
     pub fn builder() -> crate::model::event_selector::Builder {
         crate::model::event_selector::Builder::default()
     }
@@ -1452,6 +1463,7 @@ pub struct DataResource {
     /// <li> <p> <code>AWS::DynamoDB::Stream</code> </p> </li>
     /// <li> <p> <code>AWS::Glue::Table</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.</p>
     /// <ul>
@@ -1468,6 +1480,7 @@ pub struct DataResource {
     /// </note> </li>
     /// <li> <p>To log data events for all DynamoDB tables in your Amazon Web Services account, specify the prefix as <code>arn:aws:dynamodb</code>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DataResource {
@@ -1517,11 +1530,10 @@ impl std::fmt::Debug for DataResource {
         formatter.finish()
     }
 }
-/// See [`DataResource`](crate::model::DataResource)
+/// See [`DataResource`](crate::model::DataResource).
 pub mod data_resource {
 
-    /// A builder for [`DataResource`](crate::model::DataResource)
-    #[non_exhaustive]
+    /// A builder for [`DataResource`](crate::model::DataResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<std::string::String>,
@@ -1615,7 +1627,7 @@ pub mod data_resource {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`DataResource`](crate::model::DataResource)
+        /// Consumes the builder and constructs a [`DataResource`](crate::model::DataResource).
         pub fn build(self) -> crate::model::DataResource {
             crate::model::DataResource {
                 r#type: self.r#type,
@@ -1625,7 +1637,7 @@ pub mod data_resource {
     }
 }
 impl DataResource {
-    /// Creates a new builder-style object to manufacture [`DataResource`](crate::model::DataResource)
+    /// Creates a new builder-style object to manufacture [`DataResource`](crate::model::DataResource).
     pub fn builder() -> crate::model::data_resource::Builder {
         crate::model::data_resource::Builder::default()
     }
@@ -1695,22 +1707,31 @@ impl AsRef<str> for ReadWriteType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Event {
     /// <p>The CloudTrail ID of the event returned.</p>
+    #[doc(hidden)]
     pub event_id: std::option::Option<std::string::String>,
     /// <p>The name of the event returned.</p>
+    #[doc(hidden)]
     pub event_name: std::option::Option<std::string::String>,
     /// <p>Information about whether the event is a write event or a read event. </p>
+    #[doc(hidden)]
     pub read_only: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services access key ID that was used to sign the request. If the request was made with temporary security credentials, this is the access key ID of the temporary credentials.</p>
+    #[doc(hidden)]
     pub access_key_id: std::option::Option<std::string::String>,
     /// <p>The date and time of the event returned.</p>
+    #[doc(hidden)]
     pub event_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Web Services service to which the request was made.</p>
+    #[doc(hidden)]
     pub event_source: std::option::Option<std::string::String>,
     /// <p>A user name or role name of the requester that called the API in the event returned.</p>
+    #[doc(hidden)]
     pub username: std::option::Option<std::string::String>,
     /// <p>A list of resources referenced by the event returned.</p>
+    #[doc(hidden)]
     pub resources: std::option::Option<std::vec::Vec<crate::model::Resource>>,
     /// <p>A JSON string that contains a representation of the event returned.</p>
+    #[doc(hidden)]
     pub cloud_trail_event: std::option::Option<std::string::String>,
 }
 impl Event {
@@ -1766,11 +1787,10 @@ impl std::fmt::Debug for Event {
         formatter.finish()
     }
 }
-/// See [`Event`](crate::model::Event)
+/// See [`Event`](crate::model::Event).
 pub mod event {
 
-    /// A builder for [`Event`](crate::model::Event)
-    #[non_exhaustive]
+    /// A builder for [`Event`](crate::model::Event).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_id: std::option::Option<std::string::String>,
@@ -1892,7 +1912,7 @@ pub mod event {
             self.cloud_trail_event = input;
             self
         }
-        /// Consumes the builder and constructs a [`Event`](crate::model::Event)
+        /// Consumes the builder and constructs a [`Event`](crate::model::Event).
         pub fn build(self) -> crate::model::Event {
             crate::model::Event {
                 event_id: self.event_id,
@@ -1909,7 +1929,7 @@ pub mod event {
     }
 }
 impl Event {
-    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event)
+    /// Creates a new builder-style object to manufacture [`Event`](crate::model::Event).
     pub fn builder() -> crate::model::event::Builder {
         crate::model::event::Builder::default()
     }
@@ -1920,8 +1940,10 @@ impl Event {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Resource {
     /// <p>The type of a resource referenced by the event returned. When the resource type cannot be determined, null is returned. Some examples of resource types are: <b>Instance</b> for EC2, <b>Trail</b> for CloudTrail, <b>DBInstance</b> for Amazon RDS, and <b>AccessKey</b> for IAM. To learn more about how to look up and filter events by the resource types supported for a service, see <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events-console.html#filtering-cloudtrail-events">Filtering CloudTrail Events</a>.</p>
+    #[doc(hidden)]
     pub resource_type: std::option::Option<std::string::String>,
     /// <p>The name of the resource referenced by the event returned. These are user-created names whose values will depend on the environment. For example, the resource name might be "auto-scaling-test-group" for an Auto Scaling Group or "i-1234567" for an EC2 Instance.</p>
+    #[doc(hidden)]
     pub resource_name: std::option::Option<std::string::String>,
 }
 impl Resource {
@@ -1942,11 +1964,10 @@ impl std::fmt::Debug for Resource {
         formatter.finish()
     }
 }
-/// See [`Resource`](crate::model::Resource)
+/// See [`Resource`](crate::model::Resource).
 pub mod resource {
 
-    /// A builder for [`Resource`](crate::model::Resource)
-    #[non_exhaustive]
+    /// A builder for [`Resource`](crate::model::Resource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -1979,7 +2000,7 @@ pub mod resource {
             self.resource_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource)
+        /// Consumes the builder and constructs a [`Resource`](crate::model::Resource).
         pub fn build(self) -> crate::model::Resource {
             crate::model::Resource {
                 resource_type: self.resource_type,
@@ -1989,7 +2010,7 @@ pub mod resource {
     }
 }
 impl Resource {
-    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource)
+    /// Creates a new builder-style object to manufacture [`Resource`](crate::model::Resource).
     pub fn builder() -> crate::model::resource::Builder {
         crate::model::resource::Builder::default()
     }
@@ -2051,8 +2072,10 @@ impl AsRef<str> for EventCategory {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LookupAttribute {
     /// <p>Specifies an attribute on which to filter the events returned.</p>
+    #[doc(hidden)]
     pub attribute_key: std::option::Option<crate::model::LookupAttributeKey>,
     /// <p>Specifies a value for the specified AttributeKey.</p>
+    #[doc(hidden)]
     pub attribute_value: std::option::Option<std::string::String>,
 }
 impl LookupAttribute {
@@ -2073,11 +2096,10 @@ impl std::fmt::Debug for LookupAttribute {
         formatter.finish()
     }
 }
-/// See [`LookupAttribute`](crate::model::LookupAttribute)
+/// See [`LookupAttribute`](crate::model::LookupAttribute).
 pub mod lookup_attribute {
 
-    /// A builder for [`LookupAttribute`](crate::model::LookupAttribute)
-    #[non_exhaustive]
+    /// A builder for [`LookupAttribute`](crate::model::LookupAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_key: std::option::Option<crate::model::LookupAttributeKey>,
@@ -2110,7 +2132,7 @@ pub mod lookup_attribute {
             self.attribute_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`LookupAttribute`](crate::model::LookupAttribute)
+        /// Consumes the builder and constructs a [`LookupAttribute`](crate::model::LookupAttribute).
         pub fn build(self) -> crate::model::LookupAttribute {
             crate::model::LookupAttribute {
                 attribute_key: self.attribute_key,
@@ -2120,7 +2142,7 @@ pub mod lookup_attribute {
     }
 }
 impl LookupAttribute {
-    /// Creates a new builder-style object to manufacture [`LookupAttribute`](crate::model::LookupAttribute)
+    /// Creates a new builder-style object to manufacture [`LookupAttribute`](crate::model::LookupAttribute).
     pub fn builder() -> crate::model::lookup_attribute::Builder {
         crate::model::lookup_attribute::Builder::default()
     }
@@ -2219,10 +2241,13 @@ impl AsRef<str> for LookupAttributeKey {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TrailInfo {
     /// <p>The ARN of a trail.</p>
+    #[doc(hidden)]
     pub trail_arn: std::option::Option<std::string::String>,
     /// <p>The name of a trail.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services Region in which a trail was created.</p>
+    #[doc(hidden)]
     pub home_region: std::option::Option<std::string::String>,
 }
 impl TrailInfo {
@@ -2248,11 +2273,10 @@ impl std::fmt::Debug for TrailInfo {
         formatter.finish()
     }
 }
-/// See [`TrailInfo`](crate::model::TrailInfo)
+/// See [`TrailInfo`](crate::model::TrailInfo).
 pub mod trail_info {
 
-    /// A builder for [`TrailInfo`](crate::model::TrailInfo)
-    #[non_exhaustive]
+    /// A builder for [`TrailInfo`](crate::model::TrailInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) trail_arn: std::option::Option<std::string::String>,
@@ -2290,7 +2314,7 @@ pub mod trail_info {
             self.home_region = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrailInfo`](crate::model::TrailInfo)
+        /// Consumes the builder and constructs a [`TrailInfo`](crate::model::TrailInfo).
         pub fn build(self) -> crate::model::TrailInfo {
             crate::model::TrailInfo {
                 trail_arn: self.trail_arn,
@@ -2301,7 +2325,7 @@ pub mod trail_info {
     }
 }
 impl TrailInfo {
-    /// Creates a new builder-style object to manufacture [`TrailInfo`](crate::model::TrailInfo)
+    /// Creates a new builder-style object to manufacture [`TrailInfo`](crate::model::TrailInfo).
     pub fn builder() -> crate::model::trail_info::Builder {
         crate::model::trail_info::Builder::default()
     }
@@ -2312,8 +2336,10 @@ impl TrailInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceTag {
     /// <p>Specifies the ARN of the resource.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>A list of tags.</p>
+    #[doc(hidden)]
     pub tags_list: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ResourceTag {
@@ -2334,11 +2360,10 @@ impl std::fmt::Debug for ResourceTag {
         formatter.finish()
     }
 }
-/// See [`ResourceTag`](crate::model::ResourceTag)
+/// See [`ResourceTag`](crate::model::ResourceTag).
 pub mod resource_tag {
 
-    /// A builder for [`ResourceTag`](crate::model::ResourceTag)
-    #[non_exhaustive]
+    /// A builder for [`ResourceTag`](crate::model::ResourceTag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_id: std::option::Option<std::string::String>,
@@ -2374,7 +2399,7 @@ pub mod resource_tag {
             self.tags_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceTag`](crate::model::ResourceTag)
+        /// Consumes the builder and constructs a [`ResourceTag`](crate::model::ResourceTag).
         pub fn build(self) -> crate::model::ResourceTag {
             crate::model::ResourceTag {
                 resource_id: self.resource_id,
@@ -2384,7 +2409,7 @@ pub mod resource_tag {
     }
 }
 impl ResourceTag {
-    /// Creates a new builder-style object to manufacture [`ResourceTag`](crate::model::ResourceTag)
+    /// Creates a new builder-style object to manufacture [`ResourceTag`](crate::model::ResourceTag).
     pub fn builder() -> crate::model::resource_tag::Builder {
         crate::model::resource_tag::Builder::default()
     }
@@ -2395,10 +2420,13 @@ impl ResourceTag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Query {
     /// <p>The ID of a query.</p>
+    #[doc(hidden)]
     pub query_id: std::option::Option<std::string::String>,
     /// <p>The status of the query. This can be <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or <code>CANCELLED</code>.</p>
+    #[doc(hidden)]
     pub query_status: std::option::Option<crate::model::QueryStatus>,
     /// <p>The creation time of a query.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Query {
@@ -2424,11 +2452,10 @@ impl std::fmt::Debug for Query {
         formatter.finish()
     }
 }
-/// See [`Query`](crate::model::Query)
+/// See [`Query`](crate::model::Query).
 pub mod query {
 
-    /// A builder for [`Query`](crate::model::Query)
-    #[non_exhaustive]
+    /// A builder for [`Query`](crate::model::Query).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) query_id: std::option::Option<std::string::String>,
@@ -2472,7 +2499,7 @@ pub mod query {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`Query`](crate::model::Query)
+        /// Consumes the builder and constructs a [`Query`](crate::model::Query).
         pub fn build(self) -> crate::model::Query {
             crate::model::Query {
                 query_id: self.query_id,
@@ -2483,7 +2510,7 @@ pub mod query {
     }
 }
 impl Query {
-    /// Creates a new builder-style object to manufacture [`Query`](crate::model::Query)
+    /// Creates a new builder-style object to manufacture [`Query`](crate::model::Query).
     pub fn builder() -> crate::model::query::Builder {
         crate::model::query::Builder::default()
     }
@@ -2572,12 +2599,16 @@ impl AsRef<str> for QueryStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublicKey {
     /// <p>The DER encoded public key value in PKCS#1 format.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The starting time of validity of the public key.</p>
+    #[doc(hidden)]
     pub validity_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The ending time of validity of the public key.</p>
+    #[doc(hidden)]
     pub validity_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The fingerprint of the public key.</p>
+    #[doc(hidden)]
     pub fingerprint: std::option::Option<std::string::String>,
 }
 impl PublicKey {
@@ -2608,11 +2639,10 @@ impl std::fmt::Debug for PublicKey {
         formatter.finish()
     }
 }
-/// See [`PublicKey`](crate::model::PublicKey)
+/// See [`PublicKey`](crate::model::PublicKey).
 pub mod public_key {
 
-    /// A builder for [`PublicKey`](crate::model::PublicKey)
-    #[non_exhaustive]
+    /// A builder for [`PublicKey`](crate::model::PublicKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) value: std::option::Option<aws_smithy_types::Blob>,
@@ -2667,7 +2697,7 @@ pub mod public_key {
             self.fingerprint = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublicKey`](crate::model::PublicKey)
+        /// Consumes the builder and constructs a [`PublicKey`](crate::model::PublicKey).
         pub fn build(self) -> crate::model::PublicKey {
             crate::model::PublicKey {
                 value: self.value,
@@ -2679,7 +2709,7 @@ pub mod public_key {
     }
 }
 impl PublicKey {
-    /// Creates a new builder-style object to manufacture [`PublicKey`](crate::model::PublicKey)
+    /// Creates a new builder-style object to manufacture [`PublicKey`](crate::model::PublicKey).
     pub fn builder() -> crate::model::public_key::Builder {
         crate::model::public_key::Builder::default()
     }
@@ -2690,25 +2720,45 @@ impl PublicKey {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventDataStore {
     /// <p>The ARN of the event data store.</p>
+    #[doc(hidden)]
     pub event_data_store_arn: std::option::Option<std::string::String>,
     /// <p>The name of the event data store.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>This field is being deprecated. Indicates whether the event data store is protected from termination.</p>
+    #[deprecated(
+        note = "TerminationProtectionEnabled is no longer returned by ListEventDataStores"
+    )]
+    #[doc(hidden)]
     pub termination_protection_enabled: std::option::Option<bool>,
     /// <p>This field is being deprecated. The status of an event data store. Values are <code>ENABLED</code> and <code>PENDING_DELETION</code>.</p>
+    #[deprecated(note = "Status is no longer returned by ListEventDataStores")]
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EventDataStoreStatus>,
     /// <p>This field is being deprecated. The advanced event selectors that were used to select events for the data store.</p>
+    #[deprecated(note = "AdvancedEventSelectors is no longer returned by ListEventDataStores")]
+    #[doc(hidden)]
     pub advanced_event_selectors:
         std::option::Option<std::vec::Vec<crate::model::AdvancedEventSelector>>,
     /// <p>This field is being deprecated. Indicates whether the event data store includes events from all regions, or only from the region in which it was created.</p>
+    #[deprecated(note = "MultiRegionEnabled is no longer returned by ListEventDataStores")]
+    #[doc(hidden)]
     pub multi_region_enabled: std::option::Option<bool>,
     /// <p>This field is being deprecated. Indicates that an event data store is collecting logged events for an organization.</p>
+    #[deprecated(note = "OrganizationEnabled is no longer returned by ListEventDataStores")]
+    #[doc(hidden)]
     pub organization_enabled: std::option::Option<bool>,
     /// <p>This field is being deprecated. The retention period, in days.</p>
+    #[deprecated(note = "RetentionPeriod is no longer returned by ListEventDataStores")]
+    #[doc(hidden)]
     pub retention_period: std::option::Option<i32>,
     /// <p>This field is being deprecated. The timestamp of the event data store's creation.</p>
+    #[deprecated(note = "CreatedTimestamp is no longer returned by ListEventDataStores")]
+    #[doc(hidden)]
     pub created_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>This field is being deprecated. The timestamp showing when an event data store was updated, if applicable. <code>UpdatedTimestamp</code> is always either the same or newer than the time shown in <code>CreatedTimestamp</code>.</p>
+    #[deprecated(note = "UpdatedTimestamp is no longer returned by ListEventDataStores")]
+    #[doc(hidden)]
     pub updated_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EventDataStore {
@@ -2721,36 +2771,46 @@ impl EventDataStore {
         self.name.as_deref()
     }
     /// <p>This field is being deprecated. Indicates whether the event data store is protected from termination.</p>
+    #[deprecated(
+        note = "TerminationProtectionEnabled is no longer returned by ListEventDataStores"
+    )]
     pub fn termination_protection_enabled(&self) -> std::option::Option<bool> {
         self.termination_protection_enabled
     }
     /// <p>This field is being deprecated. The status of an event data store. Values are <code>ENABLED</code> and <code>PENDING_DELETION</code>.</p>
+    #[deprecated(note = "Status is no longer returned by ListEventDataStores")]
     pub fn status(&self) -> std::option::Option<&crate::model::EventDataStoreStatus> {
         self.status.as_ref()
     }
     /// <p>This field is being deprecated. The advanced event selectors that were used to select events for the data store.</p>
+    #[deprecated(note = "AdvancedEventSelectors is no longer returned by ListEventDataStores")]
     pub fn advanced_event_selectors(
         &self,
     ) -> std::option::Option<&[crate::model::AdvancedEventSelector]> {
         self.advanced_event_selectors.as_deref()
     }
     /// <p>This field is being deprecated. Indicates whether the event data store includes events from all regions, or only from the region in which it was created.</p>
+    #[deprecated(note = "MultiRegionEnabled is no longer returned by ListEventDataStores")]
     pub fn multi_region_enabled(&self) -> std::option::Option<bool> {
         self.multi_region_enabled
     }
     /// <p>This field is being deprecated. Indicates that an event data store is collecting logged events for an organization.</p>
+    #[deprecated(note = "OrganizationEnabled is no longer returned by ListEventDataStores")]
     pub fn organization_enabled(&self) -> std::option::Option<bool> {
         self.organization_enabled
     }
     /// <p>This field is being deprecated. The retention period, in days.</p>
+    #[deprecated(note = "RetentionPeriod is no longer returned by ListEventDataStores")]
     pub fn retention_period(&self) -> std::option::Option<i32> {
         self.retention_period
     }
     /// <p>This field is being deprecated. The timestamp of the event data store's creation.</p>
+    #[deprecated(note = "CreatedTimestamp is no longer returned by ListEventDataStores")]
     pub fn created_timestamp(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.created_timestamp.as_ref()
     }
     /// <p>This field is being deprecated. The timestamp showing when an event data store was updated, if applicable. <code>UpdatedTimestamp</code> is always either the same or newer than the time shown in <code>CreatedTimestamp</code>.</p>
+    #[deprecated(note = "UpdatedTimestamp is no longer returned by ListEventDataStores")]
     pub fn updated_timestamp(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.updated_timestamp.as_ref()
     }
@@ -2774,11 +2834,10 @@ impl std::fmt::Debug for EventDataStore {
         formatter.finish()
     }
 }
-/// See [`EventDataStore`](crate::model::EventDataStore)
+/// See [`EventDataStore`](crate::model::EventDataStore).
 pub mod event_data_store {
 
-    /// A builder for [`EventDataStore`](crate::model::EventDataStore)
-    #[non_exhaustive]
+    /// A builder for [`EventDataStore`](crate::model::EventDataStore).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_data_store_arn: std::option::Option<std::string::String>,
@@ -2818,11 +2877,17 @@ pub mod event_data_store {
             self
         }
         /// <p>This field is being deprecated. Indicates whether the event data store is protected from termination.</p>
+        #[deprecated(
+            note = "TerminationProtectionEnabled is no longer returned by ListEventDataStores"
+        )]
         pub fn termination_protection_enabled(mut self, input: bool) -> Self {
             self.termination_protection_enabled = Some(input);
             self
         }
         /// <p>This field is being deprecated. Indicates whether the event data store is protected from termination.</p>
+        #[deprecated(
+            note = "TerminationProtectionEnabled is no longer returned by ListEventDataStores"
+        )]
         pub fn set_termination_protection_enabled(
             mut self,
             input: std::option::Option<bool>,
@@ -2831,11 +2896,13 @@ pub mod event_data_store {
             self
         }
         /// <p>This field is being deprecated. The status of an event data store. Values are <code>ENABLED</code> and <code>PENDING_DELETION</code>.</p>
+        #[deprecated(note = "Status is no longer returned by ListEventDataStores")]
         pub fn status(mut self, input: crate::model::EventDataStoreStatus) -> Self {
             self.status = Some(input);
             self
         }
         /// <p>This field is being deprecated. The status of an event data store. Values are <code>ENABLED</code> and <code>PENDING_DELETION</code>.</p>
+        #[deprecated(note = "Status is no longer returned by ListEventDataStores")]
         pub fn set_status(
             mut self,
             input: std::option::Option<crate::model::EventDataStoreStatus>,
@@ -2848,6 +2915,7 @@ pub mod event_data_store {
         /// To override the contents of this collection use [`set_advanced_event_selectors`](Self::set_advanced_event_selectors).
         ///
         /// <p>This field is being deprecated. The advanced event selectors that were used to select events for the data store.</p>
+        #[deprecated(note = "AdvancedEventSelectors is no longer returned by ListEventDataStores")]
         pub fn advanced_event_selectors(
             mut self,
             input: crate::model::AdvancedEventSelector,
@@ -2858,6 +2926,7 @@ pub mod event_data_store {
             self
         }
         /// <p>This field is being deprecated. The advanced event selectors that were used to select events for the data store.</p>
+        #[deprecated(note = "AdvancedEventSelectors is no longer returned by ListEventDataStores")]
         pub fn set_advanced_event_selectors(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::AdvancedEventSelector>>,
@@ -2866,41 +2935,49 @@ pub mod event_data_store {
             self
         }
         /// <p>This field is being deprecated. Indicates whether the event data store includes events from all regions, or only from the region in which it was created.</p>
+        #[deprecated(note = "MultiRegionEnabled is no longer returned by ListEventDataStores")]
         pub fn multi_region_enabled(mut self, input: bool) -> Self {
             self.multi_region_enabled = Some(input);
             self
         }
         /// <p>This field is being deprecated. Indicates whether the event data store includes events from all regions, or only from the region in which it was created.</p>
+        #[deprecated(note = "MultiRegionEnabled is no longer returned by ListEventDataStores")]
         pub fn set_multi_region_enabled(mut self, input: std::option::Option<bool>) -> Self {
             self.multi_region_enabled = input;
             self
         }
         /// <p>This field is being deprecated. Indicates that an event data store is collecting logged events for an organization.</p>
+        #[deprecated(note = "OrganizationEnabled is no longer returned by ListEventDataStores")]
         pub fn organization_enabled(mut self, input: bool) -> Self {
             self.organization_enabled = Some(input);
             self
         }
         /// <p>This field is being deprecated. Indicates that an event data store is collecting logged events for an organization.</p>
+        #[deprecated(note = "OrganizationEnabled is no longer returned by ListEventDataStores")]
         pub fn set_organization_enabled(mut self, input: std::option::Option<bool>) -> Self {
             self.organization_enabled = input;
             self
         }
         /// <p>This field is being deprecated. The retention period, in days.</p>
+        #[deprecated(note = "RetentionPeriod is no longer returned by ListEventDataStores")]
         pub fn retention_period(mut self, input: i32) -> Self {
             self.retention_period = Some(input);
             self
         }
         /// <p>This field is being deprecated. The retention period, in days.</p>
+        #[deprecated(note = "RetentionPeriod is no longer returned by ListEventDataStores")]
         pub fn set_retention_period(mut self, input: std::option::Option<i32>) -> Self {
             self.retention_period = input;
             self
         }
         /// <p>This field is being deprecated. The timestamp of the event data store's creation.</p>
+        #[deprecated(note = "CreatedTimestamp is no longer returned by ListEventDataStores")]
         pub fn created_timestamp(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.created_timestamp = Some(input);
             self
         }
         /// <p>This field is being deprecated. The timestamp of the event data store's creation.</p>
+        #[deprecated(note = "CreatedTimestamp is no longer returned by ListEventDataStores")]
         pub fn set_created_timestamp(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -2909,11 +2986,13 @@ pub mod event_data_store {
             self
         }
         /// <p>This field is being deprecated. The timestamp showing when an event data store was updated, if applicable. <code>UpdatedTimestamp</code> is always either the same or newer than the time shown in <code>CreatedTimestamp</code>.</p>
+        #[deprecated(note = "UpdatedTimestamp is no longer returned by ListEventDataStores")]
         pub fn updated_timestamp(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.updated_timestamp = Some(input);
             self
         }
         /// <p>This field is being deprecated. The timestamp showing when an event data store was updated, if applicable. <code>UpdatedTimestamp</code> is always either the same or newer than the time shown in <code>CreatedTimestamp</code>.</p>
+        #[deprecated(note = "UpdatedTimestamp is no longer returned by ListEventDataStores")]
         pub fn set_updated_timestamp(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -2921,7 +3000,7 @@ pub mod event_data_store {
             self.updated_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventDataStore`](crate::model::EventDataStore)
+        /// Consumes the builder and constructs a [`EventDataStore`](crate::model::EventDataStore).
         pub fn build(self) -> crate::model::EventDataStore {
             crate::model::EventDataStore {
                 event_data_store_arn: self.event_data_store_arn,
@@ -2939,7 +3018,7 @@ pub mod event_data_store {
     }
 }
 impl EventDataStore {
-    /// Creates a new builder-style object to manufacture [`EventDataStore`](crate::model::EventDataStore)
+    /// Creates a new builder-style object to manufacture [`EventDataStore`](crate::model::EventDataStore).
     pub fn builder() -> crate::model::event_data_store::Builder {
         crate::model::event_data_store::Builder::default()
     }
@@ -2950,39 +3029,56 @@ impl EventDataStore {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Trail {
     /// <p>Name of the trail set by calling <code>CreateTrail</code>. The maximum length is 128 characters.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Name of the Amazon S3 bucket into which CloudTrail delivers your trail files. See <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html">Amazon S3 Bucket Naming Requirements</a>.</p>
+    #[doc(hidden)]
     pub s3_bucket_name: std::option::Option<std::string::String>,
     /// <p>Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file delivery. For more information, see <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html">Finding Your CloudTrail Log Files</a>. The maximum length is 200 characters.</p>
+    #[doc(hidden)]
     pub s3_key_prefix: std::option::Option<std::string::String>,
     /// <p>This field is no longer in use. Use SnsTopicARN.</p>
+    #[deprecated]
+    #[doc(hidden)]
     pub sns_topic_name: std::option::Option<std::string::String>,
     /// <p>Specifies the ARN of the Amazon SNS topic that CloudTrail uses to send notifications when log files are delivered. The following is the format of a topic ARN.</p>
     /// <p> <code>arn:aws:sns:us-east-2:123456789012:MyTopic</code> </p>
+    #[doc(hidden)]
     pub sns_topic_arn: std::option::Option<std::string::String>,
     /// <p>Set to <b>True</b> to include Amazon Web Services API calls from Amazon Web Services global services such as IAM. Otherwise, <b>False</b>.</p>
+    #[doc(hidden)]
     pub include_global_service_events: std::option::Option<bool>,
     /// <p>Specifies whether the trail exists only in one region or exists in all regions.</p>
+    #[doc(hidden)]
     pub is_multi_region_trail: std::option::Option<bool>,
     /// <p>The region in which the trail was created.</p>
+    #[doc(hidden)]
     pub home_region: std::option::Option<std::string::String>,
     /// <p>Specifies the ARN of the trail. The following is the format of a trail ARN.</p>
     /// <p> <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code> </p>
+    #[doc(hidden)]
     pub trail_arn: std::option::Option<std::string::String>,
     /// <p>Specifies whether log file validation is enabled.</p>
+    #[doc(hidden)]
     pub log_file_validation_enabled: std::option::Option<bool>,
     /// <p>Specifies an Amazon Resource Name (ARN), a unique identifier that represents the log group to which CloudTrail logs will be delivered.</p>
+    #[doc(hidden)]
     pub cloud_watch_logs_log_group_arn: std::option::Option<std::string::String>,
     /// <p>Specifies the role for the CloudWatch Logs endpoint to assume to write to a user's log group.</p>
+    #[doc(hidden)]
     pub cloud_watch_logs_role_arn: std::option::Option<std::string::String>,
     /// <p>Specifies the KMS key ID that encrypts the logs delivered by CloudTrail. The value is a fully specified ARN to a KMS key in the following format.</p>
     /// <p> <code>arn:aws:kms:us-east-2:123456789012:key/12345678-1234-1234-1234-123456789012</code> </p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
     /// <p>Specifies if the trail has custom event selectors.</p>
+    #[doc(hidden)]
     pub has_custom_event_selectors: std::option::Option<bool>,
     /// <p>Specifies whether a trail has insight types specified in an <code>InsightSelector</code> list.</p>
+    #[doc(hidden)]
     pub has_insight_selectors: std::option::Option<bool>,
     /// <p>Specifies whether the trail is an organization trail.</p>
+    #[doc(hidden)]
     pub is_organization_trail: std::option::Option<bool>,
 }
 impl Trail {
@@ -2999,6 +3095,7 @@ impl Trail {
         self.s3_key_prefix.as_deref()
     }
     /// <p>This field is no longer in use. Use SnsTopicARN.</p>
+    #[deprecated]
     pub fn sns_topic_name(&self) -> std::option::Option<&str> {
         self.sns_topic_name.as_deref()
     }
@@ -3088,11 +3185,10 @@ impl std::fmt::Debug for Trail {
         formatter.finish()
     }
 }
-/// See [`Trail`](crate::model::Trail)
+/// See [`Trail`](crate::model::Trail).
 pub mod trail {
 
-    /// A builder for [`Trail`](crate::model::Trail)
-    #[non_exhaustive]
+    /// A builder for [`Trail`](crate::model::Trail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3150,11 +3246,13 @@ pub mod trail {
             self
         }
         /// <p>This field is no longer in use. Use SnsTopicARN.</p>
+        #[deprecated]
         pub fn sns_topic_name(mut self, input: impl Into<std::string::String>) -> Self {
             self.sns_topic_name = Some(input.into());
             self
         }
         /// <p>This field is no longer in use. Use SnsTopicARN.</p>
+        #[deprecated]
         pub fn set_sns_topic_name(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -3303,7 +3401,7 @@ pub mod trail {
             self.is_organization_trail = input;
             self
         }
-        /// Consumes the builder and constructs a [`Trail`](crate::model::Trail)
+        /// Consumes the builder and constructs a [`Trail`](crate::model::Trail).
         pub fn build(self) -> crate::model::Trail {
             crate::model::Trail {
                 name: self.name,
@@ -3327,7 +3425,7 @@ pub mod trail {
     }
 }
 impl Trail {
-    /// Creates a new builder-style object to manufacture [`Trail`](crate::model::Trail)
+    /// Creates a new builder-style object to manufacture [`Trail`](crate::model::Trail).
     pub fn builder() -> crate::model::trail::Builder {
         crate::model::trail::Builder::default()
     }
@@ -3338,10 +3436,13 @@ impl Trail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryStatistics {
     /// <p>The number of results returned.</p>
+    #[doc(hidden)]
     pub results_count: std::option::Option<i32>,
     /// <p>The total number of results returned by a query.</p>
+    #[doc(hidden)]
     pub total_results_count: std::option::Option<i32>,
     /// <p>The total bytes that the query scanned in the event data store. This value matches the number of bytes for which your account is billed for the query, unless the query is still running.</p>
+    #[doc(hidden)]
     pub bytes_scanned: std::option::Option<i64>,
 }
 impl QueryStatistics {
@@ -3367,11 +3468,10 @@ impl std::fmt::Debug for QueryStatistics {
         formatter.finish()
     }
 }
-/// See [`QueryStatistics`](crate::model::QueryStatistics)
+/// See [`QueryStatistics`](crate::model::QueryStatistics).
 pub mod query_statistics {
 
-    /// A builder for [`QueryStatistics`](crate::model::QueryStatistics)
-    #[non_exhaustive]
+    /// A builder for [`QueryStatistics`](crate::model::QueryStatistics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) results_count: std::option::Option<i32>,
@@ -3409,7 +3509,7 @@ pub mod query_statistics {
             self.bytes_scanned = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryStatistics`](crate::model::QueryStatistics)
+        /// Consumes the builder and constructs a [`QueryStatistics`](crate::model::QueryStatistics).
         pub fn build(self) -> crate::model::QueryStatistics {
             crate::model::QueryStatistics {
                 results_count: self.results_count,
@@ -3420,7 +3520,7 @@ pub mod query_statistics {
     }
 }
 impl QueryStatistics {
-    /// Creates a new builder-style object to manufacture [`QueryStatistics`](crate::model::QueryStatistics)
+    /// Creates a new builder-style object to manufacture [`QueryStatistics`](crate::model::QueryStatistics).
     pub fn builder() -> crate::model::query_statistics::Builder {
         crate::model::query_statistics::Builder::default()
     }
@@ -3431,14 +3531,19 @@ impl QueryStatistics {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct QueryStatisticsForDescribeQuery {
     /// <p>The number of events that matched a query.</p>
+    #[doc(hidden)]
     pub events_matched: std::option::Option<i64>,
     /// <p>The number of events that the query scanned in the event data store.</p>
+    #[doc(hidden)]
     pub events_scanned: std::option::Option<i64>,
     /// <p>The total bytes that the query scanned in the event data store. This value matches the number of bytes for which your account is billed for the query, unless the query is still running.</p>
+    #[doc(hidden)]
     pub bytes_scanned: std::option::Option<i64>,
     /// <p>The query's run time, in milliseconds.</p>
+    #[doc(hidden)]
     pub execution_time_in_millis: std::option::Option<i32>,
     /// <p>The creation time of the query.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl QueryStatisticsForDescribeQuery {
@@ -3474,11 +3579,10 @@ impl std::fmt::Debug for QueryStatisticsForDescribeQuery {
         formatter.finish()
     }
 }
-/// See [`QueryStatisticsForDescribeQuery`](crate::model::QueryStatisticsForDescribeQuery)
+/// See [`QueryStatisticsForDescribeQuery`](crate::model::QueryStatisticsForDescribeQuery).
 pub mod query_statistics_for_describe_query {
 
-    /// A builder for [`QueryStatisticsForDescribeQuery`](crate::model::QueryStatisticsForDescribeQuery)
-    #[non_exhaustive]
+    /// A builder for [`QueryStatisticsForDescribeQuery`](crate::model::QueryStatisticsForDescribeQuery).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) events_matched: std::option::Option<i64>,
@@ -3541,7 +3645,7 @@ pub mod query_statistics_for_describe_query {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryStatisticsForDescribeQuery`](crate::model::QueryStatisticsForDescribeQuery)
+        /// Consumes the builder and constructs a [`QueryStatisticsForDescribeQuery`](crate::model::QueryStatisticsForDescribeQuery).
         pub fn build(self) -> crate::model::QueryStatisticsForDescribeQuery {
             crate::model::QueryStatisticsForDescribeQuery {
                 events_matched: self.events_matched,
@@ -3554,7 +3658,7 @@ pub mod query_statistics_for_describe_query {
     }
 }
 impl QueryStatisticsForDescribeQuery {
-    /// Creates a new builder-style object to manufacture [`QueryStatisticsForDescribeQuery`](crate::model::QueryStatisticsForDescribeQuery)
+    /// Creates a new builder-style object to manufacture [`QueryStatisticsForDescribeQuery`](crate::model::QueryStatisticsForDescribeQuery).
     pub fn builder() -> crate::model::query_statistics_for_describe_query::Builder {
         crate::model::query_statistics_for_describe_query::Builder::default()
     }

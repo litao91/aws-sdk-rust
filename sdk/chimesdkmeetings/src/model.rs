@@ -6,12 +6,24 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Attendee {
     /// <p>The Amazon Chime SDK external user ID. An idempotency token. Links the attendee to an identity managed by a builder application.</p>
+    #[doc(hidden)]
     pub external_user_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Chime SDK attendee ID.</p>
+    #[doc(hidden)]
     pub attendee_id: std::option::Option<std::string::String>,
     /// <p>The join token used by the Amazon Chime SDK attendee.</p>
+    #[doc(hidden)]
     pub join_token: std::option::Option<std::string::String>,
-    /// <p>The capabilities (audio, video, or content) assigned to an attendee.</p>
+    /// <p>The capabilities assigned to an attendee: audio, video, or content.</p> <note>
+    /// <p>You use the capabilities with a set of values that control what the capabilities can do, such as <code>SendReceive</code> data. For more information about those values, see .</p>
+    /// </note>
+    /// <p>When using capabilities, be aware of these corner cases:</p>
+    /// <ul>
+    /// <li> <p>You can't set <code>content</code> capabilities to <code>SendReceive</code> or <code>Receive</code> unless you also set <code>video</code> capabilities to <code>SendReceive</code> or <code>Receive</code>. If you don't set the <code>video</code> capability to receive, the response will contain an HTTP 400 Bad Request status code. However, you can set your <code>video</code> capability to receive and you set your <code>content</code> capability to not receive.</p> </li>
+    /// <li> <p>When you change an <code>audio</code> capability from <code>None</code> or <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee left their microphone unmuted, audio will flow from the attendee to the other meeting participants.</p> </li>
+    /// <li> <p>When you change a <code>video</code> or <code>content</code> capability from <code>None</code> or <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee turned on their video or content streams, remote attendess can receive those streams, but only after media renegotiation between the client and the Amazon Chime back-end server.</p> </li>
+    /// </ul>
+    #[doc(hidden)]
     pub capabilities: std::option::Option<crate::model::AttendeeCapabilities>,
 }
 impl Attendee {
@@ -27,7 +39,15 @@ impl Attendee {
     pub fn join_token(&self) -> std::option::Option<&str> {
         self.join_token.as_deref()
     }
-    /// <p>The capabilities (audio, video, or content) assigned to an attendee.</p>
+    /// <p>The capabilities assigned to an attendee: audio, video, or content.</p> <note>
+    /// <p>You use the capabilities with a set of values that control what the capabilities can do, such as <code>SendReceive</code> data. For more information about those values, see .</p>
+    /// </note>
+    /// <p>When using capabilities, be aware of these corner cases:</p>
+    /// <ul>
+    /// <li> <p>You can't set <code>content</code> capabilities to <code>SendReceive</code> or <code>Receive</code> unless you also set <code>video</code> capabilities to <code>SendReceive</code> or <code>Receive</code>. If you don't set the <code>video</code> capability to receive, the response will contain an HTTP 400 Bad Request status code. However, you can set your <code>video</code> capability to receive and you set your <code>content</code> capability to not receive.</p> </li>
+    /// <li> <p>When you change an <code>audio</code> capability from <code>None</code> or <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee left their microphone unmuted, audio will flow from the attendee to the other meeting participants.</p> </li>
+    /// <li> <p>When you change a <code>video</code> or <code>content</code> capability from <code>None</code> or <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee turned on their video or content streams, remote attendess can receive those streams, but only after media renegotiation between the client and the Amazon Chime back-end server.</p> </li>
+    /// </ul>
     pub fn capabilities(&self) -> std::option::Option<&crate::model::AttendeeCapabilities> {
         self.capabilities.as_ref()
     }
@@ -42,11 +62,10 @@ impl std::fmt::Debug for Attendee {
         formatter.finish()
     }
 }
-/// See [`Attendee`](crate::model::Attendee)
+/// See [`Attendee`](crate::model::Attendee).
 pub mod attendee {
 
-    /// A builder for [`Attendee`](crate::model::Attendee)
-    #[non_exhaustive]
+    /// A builder for [`Attendee`](crate::model::Attendee).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) external_user_id: std::option::Option<std::string::String>,
@@ -88,12 +107,28 @@ pub mod attendee {
             self.join_token = input;
             self
         }
-        /// <p>The capabilities (audio, video, or content) assigned to an attendee.</p>
+        /// <p>The capabilities assigned to an attendee: audio, video, or content.</p> <note>
+        /// <p>You use the capabilities with a set of values that control what the capabilities can do, such as <code>SendReceive</code> data. For more information about those values, see .</p>
+        /// </note>
+        /// <p>When using capabilities, be aware of these corner cases:</p>
+        /// <ul>
+        /// <li> <p>You can't set <code>content</code> capabilities to <code>SendReceive</code> or <code>Receive</code> unless you also set <code>video</code> capabilities to <code>SendReceive</code> or <code>Receive</code>. If you don't set the <code>video</code> capability to receive, the response will contain an HTTP 400 Bad Request status code. However, you can set your <code>video</code> capability to receive and you set your <code>content</code> capability to not receive.</p> </li>
+        /// <li> <p>When you change an <code>audio</code> capability from <code>None</code> or <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee left their microphone unmuted, audio will flow from the attendee to the other meeting participants.</p> </li>
+        /// <li> <p>When you change a <code>video</code> or <code>content</code> capability from <code>None</code> or <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee turned on their video or content streams, remote attendess can receive those streams, but only after media renegotiation between the client and the Amazon Chime back-end server.</p> </li>
+        /// </ul>
         pub fn capabilities(mut self, input: crate::model::AttendeeCapabilities) -> Self {
             self.capabilities = Some(input);
             self
         }
-        /// <p>The capabilities (audio, video, or content) assigned to an attendee.</p>
+        /// <p>The capabilities assigned to an attendee: audio, video, or content.</p> <note>
+        /// <p>You use the capabilities with a set of values that control what the capabilities can do, such as <code>SendReceive</code> data. For more information about those values, see .</p>
+        /// </note>
+        /// <p>When using capabilities, be aware of these corner cases:</p>
+        /// <ul>
+        /// <li> <p>You can't set <code>content</code> capabilities to <code>SendReceive</code> or <code>Receive</code> unless you also set <code>video</code> capabilities to <code>SendReceive</code> or <code>Receive</code>. If you don't set the <code>video</code> capability to receive, the response will contain an HTTP 400 Bad Request status code. However, you can set your <code>video</code> capability to receive and you set your <code>content</code> capability to not receive.</p> </li>
+        /// <li> <p>When you change an <code>audio</code> capability from <code>None</code> or <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee left their microphone unmuted, audio will flow from the attendee to the other meeting participants.</p> </li>
+        /// <li> <p>When you change a <code>video</code> or <code>content</code> capability from <code>None</code> or <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee turned on their video or content streams, remote attendess can receive those streams, but only after media renegotiation between the client and the Amazon Chime back-end server.</p> </li>
+        /// </ul>
         pub fn set_capabilities(
             mut self,
             input: std::option::Option<crate::model::AttendeeCapabilities>,
@@ -101,7 +136,7 @@ pub mod attendee {
             self.capabilities = input;
             self
         }
-        /// Consumes the builder and constructs a [`Attendee`](crate::model::Attendee)
+        /// Consumes the builder and constructs a [`Attendee`](crate::model::Attendee).
         pub fn build(self) -> crate::model::Attendee {
             crate::model::Attendee {
                 external_user_id: self.external_user_id,
@@ -113,21 +148,32 @@ pub mod attendee {
     }
 }
 impl Attendee {
-    /// Creates a new builder-style object to manufacture [`Attendee`](crate::model::Attendee)
+    /// Creates a new builder-style object to manufacture [`Attendee`](crate::model::Attendee).
     pub fn builder() -> crate::model::attendee::Builder {
         crate::model::attendee::Builder::default()
     }
 }
 
-/// <p>The media capabilities of an attendee, including audio, video and content. </p>
+/// <p>The media capabilities of an attendee: audio, video, or content. </p> <note>
+/// <p>You use the capabilities with a set of values that control what the capabilities can do, such as <code>SendReceive</code> data. For more information about those values, see .</p>
+/// </note>
+/// <p>When using capabilities, be aware of these corner cases:</p>
+/// <ul>
+/// <li> <p>You can't set <code>content</code> capabilities to <code>SendReceive</code> or <code>Receive</code> unless you also set <code>video</code> capabilities to <code>SendReceive</code> or <code>Receive</code>. If you don't set the <code>video</code> capability to receive, the response will contain an HTTP 400 Bad Request status code. However, you can set your <code>video</code> capability to receive and you set your <code>content</code> capability to not receive.</p> </li>
+/// <li> <p>When you change an <code>audio</code> capability from <code>None</code> or <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee left their microphone unmuted, audio will flow from the attendee to the other meeting participants.</p> </li>
+/// <li> <p>When you change a <code>video</code> or <code>content</code> capability from <code>None</code> or <code>Receive</code> to <code>Send</code> or <code>SendReceive</code> , and if the attendee turned on their video or content streams, remote attendess can receive those streams, but only after media renegotiation between the client and the Amazon Chime back-end server.</p> </li>
+/// </ul>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttendeeCapabilities {
     /// <p>The audio capability assigned to an attendee.</p>
+    #[doc(hidden)]
     pub audio: std::option::Option<crate::model::MediaCapabilities>,
     /// <p>The video capability assigned to an attendee.</p>
+    #[doc(hidden)]
     pub video: std::option::Option<crate::model::MediaCapabilities>,
     /// <p>The content capability assigned to an attendee.</p>
+    #[doc(hidden)]
     pub content: std::option::Option<crate::model::MediaCapabilities>,
 }
 impl AttendeeCapabilities {
@@ -153,11 +199,10 @@ impl std::fmt::Debug for AttendeeCapabilities {
         formatter.finish()
     }
 }
-/// See [`AttendeeCapabilities`](crate::model::AttendeeCapabilities)
+/// See [`AttendeeCapabilities`](crate::model::AttendeeCapabilities).
 pub mod attendee_capabilities {
 
-    /// A builder for [`AttendeeCapabilities`](crate::model::AttendeeCapabilities)
-    #[non_exhaustive]
+    /// A builder for [`AttendeeCapabilities`](crate::model::AttendeeCapabilities).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio: std::option::Option<crate::model::MediaCapabilities>,
@@ -204,7 +249,7 @@ pub mod attendee_capabilities {
             self.content = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttendeeCapabilities`](crate::model::AttendeeCapabilities)
+        /// Consumes the builder and constructs a [`AttendeeCapabilities`](crate::model::AttendeeCapabilities).
         pub fn build(self) -> crate::model::AttendeeCapabilities {
             crate::model::AttendeeCapabilities {
                 audio: self.audio,
@@ -215,7 +260,7 @@ pub mod attendee_capabilities {
     }
 }
 impl AttendeeCapabilities {
-    /// Creates a new builder-style object to manufacture [`AttendeeCapabilities`](crate::model::AttendeeCapabilities)
+    /// Creates a new builder-style object to manufacture [`AttendeeCapabilities`](crate::model::AttendeeCapabilities).
     pub fn builder() -> crate::model::attendee_capabilities::Builder {
         crate::model::attendee_capabilities::Builder::default()
     }
@@ -284,13 +329,90 @@ impl AsRef<str> for MediaCapabilities {
     }
 }
 
+/// <p>A key-value pair that you define.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct Tag {
+    /// <p>The tag's key.</p>
+    #[doc(hidden)]
+    pub key: std::option::Option<std::string::String>,
+    /// <p>The tag's value.</p>
+    #[doc(hidden)]
+    pub value: std::option::Option<std::string::String>,
+}
+impl Tag {
+    /// <p>The tag's key.</p>
+    pub fn key(&self) -> std::option::Option<&str> {
+        self.key.as_deref()
+    }
+    /// <p>The tag's value.</p>
+    pub fn value(&self) -> std::option::Option<&str> {
+        self.value.as_deref()
+    }
+}
+impl std::fmt::Debug for Tag {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("Tag");
+        formatter.field("key", &self.key);
+        formatter.field("value", &self.value);
+        formatter.finish()
+    }
+}
+/// See [`Tag`](crate::model::Tag).
+pub mod tag {
+
+    /// A builder for [`Tag`](crate::model::Tag).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) key: std::option::Option<std::string::String>,
+        pub(crate) value: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The tag's key.</p>
+        pub fn key(mut self, input: impl Into<std::string::String>) -> Self {
+            self.key = Some(input.into());
+            self
+        }
+        /// <p>The tag's key.</p>
+        pub fn set_key(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.key = input;
+            self
+        }
+        /// <p>The tag's value.</p>
+        pub fn value(mut self, input: impl Into<std::string::String>) -> Self {
+            self.value = Some(input.into());
+            self
+        }
+        /// <p>The tag's value.</p>
+        pub fn set_value(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.value = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
+        pub fn build(self) -> crate::model::Tag {
+            crate::model::Tag {
+                key: self.key,
+                value: self.value,
+            }
+        }
+    }
+}
+impl Tag {
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
+    pub fn builder() -> crate::model::tag::Builder {
+        crate::model::tag::Builder::default()
+    }
+}
+
 /// <p>The configuration for the current transcription operation. Must contain <code>EngineTranscribeSettings</code> or <code>EngineTranscribeMedicalSettings</code>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TranscriptionConfiguration {
     /// <p>The transcription configuration settings passed to Amazon Transcribe.</p>
+    #[doc(hidden)]
     pub engine_transcribe_settings: std::option::Option<crate::model::EngineTranscribeSettings>,
     /// <p>The transcription configuration settings passed to Amazon Transcribe Medical.</p>
+    #[doc(hidden)]
     pub engine_transcribe_medical_settings:
         std::option::Option<crate::model::EngineTranscribeMedicalSettings>,
 }
@@ -322,11 +444,10 @@ impl std::fmt::Debug for TranscriptionConfiguration {
         formatter.finish()
     }
 }
-/// See [`TranscriptionConfiguration`](crate::model::TranscriptionConfiguration)
+/// See [`TranscriptionConfiguration`](crate::model::TranscriptionConfiguration).
 pub mod transcription_configuration {
 
-    /// A builder for [`TranscriptionConfiguration`](crate::model::TranscriptionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`TranscriptionConfiguration`](crate::model::TranscriptionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine_transcribe_settings:
@@ -367,7 +488,7 @@ pub mod transcription_configuration {
             self.engine_transcribe_medical_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`TranscriptionConfiguration`](crate::model::TranscriptionConfiguration)
+        /// Consumes the builder and constructs a [`TranscriptionConfiguration`](crate::model::TranscriptionConfiguration).
         pub fn build(self) -> crate::model::TranscriptionConfiguration {
             crate::model::TranscriptionConfiguration {
                 engine_transcribe_settings: self.engine_transcribe_settings,
@@ -377,7 +498,7 @@ pub mod transcription_configuration {
     }
 }
 impl TranscriptionConfiguration {
-    /// Creates a new builder-style object to manufacture [`TranscriptionConfiguration`](crate::model::TranscriptionConfiguration)
+    /// Creates a new builder-style object to manufacture [`TranscriptionConfiguration`](crate::model::TranscriptionConfiguration).
     pub fn builder() -> crate::model::transcription_configuration::Builder {
         crate::model::transcription_configuration::Builder::default()
     }
@@ -388,16 +509,22 @@ impl TranscriptionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EngineTranscribeMedicalSettings {
     /// <p>The language code specified for the Amazon Transcribe Medical engine.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::TranscribeMedicalLanguageCode>,
     /// <p>The specialty specified for the Amazon Transcribe Medical engine.</p>
+    #[doc(hidden)]
     pub specialty: std::option::Option<crate::model::TranscribeMedicalSpecialty>,
     /// <p>The type of transcription.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::TranscribeMedicalType>,
     /// <p>The name of the vocabulary passed to Amazon Transcribe Medical.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
-    /// <p>The AWS Region passed to Amazon Transcribe Medical. If you don't specify a Region, Amazon Chime uses the meeting's Region.</p>
+    /// <p>The AWS Region passed to Amazon Transcribe Medical. If you don't specify a Region, Amazon Chime uses the meeting's Region. </p>
+    #[doc(hidden)]
     pub region: std::option::Option<crate::model::TranscribeMedicalRegion>,
     /// <p>Set this field to <code>PHI</code> to identify personal health information in the transcription output.</p>
+    #[doc(hidden)]
     pub content_identification_type:
         std::option::Option<crate::model::TranscribeMedicalContentIdentificationType>,
 }
@@ -420,7 +547,7 @@ impl EngineTranscribeMedicalSettings {
     pub fn vocabulary_name(&self) -> std::option::Option<&str> {
         self.vocabulary_name.as_deref()
     }
-    /// <p>The AWS Region passed to Amazon Transcribe Medical. If you don't specify a Region, Amazon Chime uses the meeting's Region.</p>
+    /// <p>The AWS Region passed to Amazon Transcribe Medical. If you don't specify a Region, Amazon Chime uses the meeting's Region. </p>
     pub fn region(&self) -> std::option::Option<&crate::model::TranscribeMedicalRegion> {
         self.region.as_ref()
     }
@@ -446,11 +573,10 @@ impl std::fmt::Debug for EngineTranscribeMedicalSettings {
         formatter.finish()
     }
 }
-/// See [`EngineTranscribeMedicalSettings`](crate::model::EngineTranscribeMedicalSettings)
+/// See [`EngineTranscribeMedicalSettings`](crate::model::EngineTranscribeMedicalSettings).
 pub mod engine_transcribe_medical_settings {
 
-    /// A builder for [`EngineTranscribeMedicalSettings`](crate::model::EngineTranscribeMedicalSettings)
-    #[non_exhaustive]
+    /// A builder for [`EngineTranscribeMedicalSettings`](crate::model::EngineTranscribeMedicalSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) language_code: std::option::Option<crate::model::TranscribeMedicalLanguageCode>,
@@ -514,12 +640,12 @@ pub mod engine_transcribe_medical_settings {
             self.vocabulary_name = input;
             self
         }
-        /// <p>The AWS Region passed to Amazon Transcribe Medical. If you don't specify a Region, Amazon Chime uses the meeting's Region.</p>
+        /// <p>The AWS Region passed to Amazon Transcribe Medical. If you don't specify a Region, Amazon Chime uses the meeting's Region. </p>
         pub fn region(mut self, input: crate::model::TranscribeMedicalRegion) -> Self {
             self.region = Some(input);
             self
         }
-        /// <p>The AWS Region passed to Amazon Transcribe Medical. If you don't specify a Region, Amazon Chime uses the meeting's Region.</p>
+        /// <p>The AWS Region passed to Amazon Transcribe Medical. If you don't specify a Region, Amazon Chime uses the meeting's Region. </p>
         pub fn set_region(
             mut self,
             input: std::option::Option<crate::model::TranscribeMedicalRegion>,
@@ -543,7 +669,7 @@ pub mod engine_transcribe_medical_settings {
             self.content_identification_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`EngineTranscribeMedicalSettings`](crate::model::EngineTranscribeMedicalSettings)
+        /// Consumes the builder and constructs a [`EngineTranscribeMedicalSettings`](crate::model::EngineTranscribeMedicalSettings).
         pub fn build(self) -> crate::model::EngineTranscribeMedicalSettings {
             crate::model::EngineTranscribeMedicalSettings {
                 language_code: self.language_code,
@@ -557,7 +683,7 @@ pub mod engine_transcribe_medical_settings {
     }
 }
 impl EngineTranscribeMedicalSettings {
-    /// Creates a new builder-style object to manufacture [`EngineTranscribeMedicalSettings`](crate::model::EngineTranscribeMedicalSettings)
+    /// Creates a new builder-style object to manufacture [`EngineTranscribeMedicalSettings`](crate::model::EngineTranscribeMedicalSettings).
     pub fn builder() -> crate::model::engine_transcribe_medical_settings::Builder {
         crate::model::engine_transcribe_medical_settings::Builder::default()
     }
@@ -886,38 +1012,52 @@ impl AsRef<str> for TranscribeMedicalLanguageCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EngineTranscribeSettings {
     /// <p>The language code specified for the Amazon Transcribe engine.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::TranscribeLanguageCode>,
     /// <p>The filtering method passed to Amazon Transcribe.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_method:
         std::option::Option<crate::model::TranscribeVocabularyFilterMethod>,
     /// <p>The name of the vocabulary filter passed to Amazon Transcribe.</p>
+    #[doc(hidden)]
     pub vocabulary_filter_name: std::option::Option<std::string::String>,
     /// <p>The name of the vocabulary passed to Amazon Transcribe.</p>
+    #[doc(hidden)]
     pub vocabulary_name: std::option::Option<std::string::String>,
     /// <p>The AWS Region passed to Amazon Transcribe. If you don't specify a Region, Amazon Chime uses the meeting's Region.</p>
+    #[doc(hidden)]
     pub region: std::option::Option<crate::model::TranscribeRegion>,
     /// <p>Generates partial transcription results that are less likely to change as meeting attendees speak. It does so by only allowing the last few words from the partial results to change.</p>
+    #[doc(hidden)]
     pub enable_partial_results_stabilization: bool,
     /// <p>The stabity level of a partial results transcription. Determines how stable you want the transcription results to be. A higher level means the transcription results are less likely to change.</p>
+    #[doc(hidden)]
     pub partial_results_stability:
         std::option::Option<crate::model::TranscribePartialResultsStability>,
     /// <p>Set this field to <code>PII</code> to identify personally identifiable information in the transcription output.</p>
+    #[doc(hidden)]
     pub content_identification_type:
         std::option::Option<crate::model::TranscribeContentIdentificationType>,
     /// <p>Set this field to <code>PII</code> to redact personally identifiable information in the transcription output. Content redaction is performed only upon complete transcription of the audio segments.</p>
     /// <p>You can’t set <code>ContentRedactionType</code> and <code>ContentIdentificationType</code> in the same request. If you set both, your request returns a <code>BadRequestException</code>.</p>
+    #[doc(hidden)]
     pub content_redaction_type: std::option::Option<crate::model::TranscribeContentRedactionType>,
     /// <p>Lists the PII entity types you want to identify or redact. To specify entity types, you must enable <code>ContentIdentificationType</code> or <code>ContentRedactionType</code>.</p>
     /// <p> <code>PIIEntityTypes</code> must be comma-separated. The available values are: <code>BANK_ACCOUNT_NUMBER</code>, <code>BANK_ROUTING, CREDIT_DEBIT_NUMBER</code>, <code>CREDIT_DEBIT_CVV</code>, <code>CREDIT_DEBIT_EXPIRY</code>, <code>PIN</code>, <code>EMAIL</code>, <code>ADDRESS</code>, <code>NAME</code>, <code>PHONE</code>, <code>SSN</code>, and <code>ALL</code>.</p>
     /// <p> <code>PiiEntityTypes</code> is an optional parameter with a default value of <code>ALL</code>.</p>
+    #[doc(hidden)]
     pub pii_entity_types: std::option::Option<std::string::String>,
     /// <p>The name of the language model used during transcription.</p>
+    #[doc(hidden)]
     pub language_model_name: std::option::Option<std::string::String>,
     /// <p>Automatically identifies the language spoken in media files.</p>
+    #[doc(hidden)]
     pub identify_language: bool,
     /// <p>Language codes for the languages that you want to identify. You must provide at least 2 codes.</p>
+    #[doc(hidden)]
     pub language_options: std::option::Option<std::string::String>,
     /// <p>Language code for the preferred language.</p>
+    #[doc(hidden)]
     pub preferred_language: std::option::Option<crate::model::TranscribeLanguageCode>,
 }
 impl EngineTranscribeSettings {
@@ -1015,11 +1155,10 @@ impl std::fmt::Debug for EngineTranscribeSettings {
         formatter.finish()
     }
 }
-/// See [`EngineTranscribeSettings`](crate::model::EngineTranscribeSettings)
+/// See [`EngineTranscribeSettings`](crate::model::EngineTranscribeSettings).
 pub mod engine_transcribe_settings {
 
-    /// A builder for [`EngineTranscribeSettings`](crate::model::EngineTranscribeSettings)
-    #[non_exhaustive]
+    /// A builder for [`EngineTranscribeSettings`](crate::model::EngineTranscribeSettings).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) language_code: std::option::Option<crate::model::TranscribeLanguageCode>,
@@ -1239,7 +1378,7 @@ pub mod engine_transcribe_settings {
             self.preferred_language = input;
             self
         }
-        /// Consumes the builder and constructs a [`EngineTranscribeSettings`](crate::model::EngineTranscribeSettings)
+        /// Consumes the builder and constructs a [`EngineTranscribeSettings`](crate::model::EngineTranscribeSettings).
         pub fn build(self) -> crate::model::EngineTranscribeSettings {
             crate::model::EngineTranscribeSettings {
                 language_code: self.language_code,
@@ -1263,7 +1402,7 @@ pub mod engine_transcribe_settings {
     }
 }
 impl EngineTranscribeSettings {
-    /// Creates a new builder-style object to manufacture [`EngineTranscribeSettings`](crate::model::EngineTranscribeSettings)
+    /// Creates a new builder-style object to manufacture [`EngineTranscribeSettings`](crate::model::EngineTranscribeSettings).
     pub fn builder() -> crate::model::engine_transcribe_settings::Builder {
         crate::model::engine_transcribe_settings::Builder::default()
     }
@@ -1705,20 +1844,33 @@ impl AsRef<str> for TranscribeVocabularyFilterMethod {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Meeting {
     /// <p>The Amazon Chime SDK meeting ID.</p>
+    #[doc(hidden)]
     pub meeting_id: std::option::Option<std::string::String>,
     /// <p>Reserved.</p>
+    #[doc(hidden)]
     pub meeting_host_id: std::option::Option<std::string::String>,
     /// <p>The external meeting ID.</p>
+    #[doc(hidden)]
     pub external_meeting_id: std::option::Option<std::string::String>,
     /// <p>The Region in which you create the meeting. Available values: <code>af-south-1</code>, <code>ap-northeast-1</code>, <code>ap-northeast-2</code>, <code>ap-south-1</code>, <code>ap-southeast-1</code>, <code>ap-southeast-2</code>, <code>ca-central-1</code>, <code>eu-central-1</code>, <code>eu-north-1</code>, <code>eu-south-1</code>, <code>eu-west-1</code>, <code>eu-west-2</code>, <code>eu-west-3</code>, <code>sa-east-1</code>, <code>us-east-1</code>, <code>us-east-2</code>, <code>us-west-1</code>, <code>us-west-2</code>.</p>
     /// <p>Available values in AWS GovCloud (US) Regions: <code>us-gov-east-1</code>, <code>us-gov-west-1</code>.</p>
+    #[doc(hidden)]
     pub media_region: std::option::Option<std::string::String>,
     /// <p>The media placement for the meeting.</p>
+    #[doc(hidden)]
     pub media_placement: std::option::Option<crate::model::MediaPlacement>,
     /// <p>The features available to a meeting, such as Amazon Voice Focus.</p>
+    #[doc(hidden)]
     pub meeting_features: std::option::Option<crate::model::MeetingFeaturesConfiguration>,
     /// <p>When specified, replicates the media from the primary meeting to this meeting.</p>
+    #[doc(hidden)]
     pub primary_meeting_id: std::option::Option<std::string::String>,
+    /// <p>Array of strings.</p>
+    #[doc(hidden)]
+    pub tenant_ids: std::option::Option<std::vec::Vec<std::string::String>>,
+    /// <p>The ARN of the meeting.</p>
+    #[doc(hidden)]
+    pub meeting_arn: std::option::Option<std::string::String>,
 }
 impl Meeting {
     /// <p>The Amazon Chime SDK meeting ID.</p>
@@ -1752,6 +1904,14 @@ impl Meeting {
     pub fn primary_meeting_id(&self) -> std::option::Option<&str> {
         self.primary_meeting_id.as_deref()
     }
+    /// <p>Array of strings.</p>
+    pub fn tenant_ids(&self) -> std::option::Option<&[std::string::String]> {
+        self.tenant_ids.as_deref()
+    }
+    /// <p>The ARN of the meeting.</p>
+    pub fn meeting_arn(&self) -> std::option::Option<&str> {
+        self.meeting_arn.as_deref()
+    }
 }
 impl std::fmt::Debug for Meeting {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -1763,14 +1923,15 @@ impl std::fmt::Debug for Meeting {
         formatter.field("media_placement", &self.media_placement);
         formatter.field("meeting_features", &self.meeting_features);
         formatter.field("primary_meeting_id", &self.primary_meeting_id);
+        formatter.field("tenant_ids", &self.tenant_ids);
+        formatter.field("meeting_arn", &self.meeting_arn);
         formatter.finish()
     }
 }
-/// See [`Meeting`](crate::model::Meeting)
+/// See [`Meeting`](crate::model::Meeting).
 pub mod meeting {
 
-    /// A builder for [`Meeting`](crate::model::Meeting)
-    #[non_exhaustive]
+    /// A builder for [`Meeting`](crate::model::Meeting).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) meeting_id: std::option::Option<std::string::String>,
@@ -1781,6 +1942,8 @@ pub mod meeting {
         pub(crate) meeting_features:
             std::option::Option<crate::model::MeetingFeaturesConfiguration>,
         pub(crate) primary_meeting_id: std::option::Option<std::string::String>,
+        pub(crate) tenant_ids: std::option::Option<std::vec::Vec<std::string::String>>,
+        pub(crate) meeting_arn: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>The Amazon Chime SDK meeting ID.</p>
@@ -1873,7 +2036,36 @@ pub mod meeting {
             self.primary_meeting_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`Meeting`](crate::model::Meeting)
+        /// Appends an item to `tenant_ids`.
+        ///
+        /// To override the contents of this collection use [`set_tenant_ids`](Self::set_tenant_ids).
+        ///
+        /// <p>Array of strings.</p>
+        pub fn tenant_ids(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.tenant_ids.unwrap_or_default();
+            v.push(input.into());
+            self.tenant_ids = Some(v);
+            self
+        }
+        /// <p>Array of strings.</p>
+        pub fn set_tenant_ids(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.tenant_ids = input;
+            self
+        }
+        /// <p>The ARN of the meeting.</p>
+        pub fn meeting_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.meeting_arn = Some(input.into());
+            self
+        }
+        /// <p>The ARN of the meeting.</p>
+        pub fn set_meeting_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.meeting_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`Meeting`](crate::model::Meeting).
         pub fn build(self) -> crate::model::Meeting {
             crate::model::Meeting {
                 meeting_id: self.meeting_id,
@@ -1883,12 +2075,14 @@ pub mod meeting {
                 media_placement: self.media_placement,
                 meeting_features: self.meeting_features,
                 primary_meeting_id: self.primary_meeting_id,
+                tenant_ids: self.tenant_ids,
+                meeting_arn: self.meeting_arn,
             }
         }
     }
 }
 impl Meeting {
-    /// Creates a new builder-style object to manufacture [`Meeting`](crate::model::Meeting)
+    /// Creates a new builder-style object to manufacture [`Meeting`](crate::model::Meeting).
     pub fn builder() -> crate::model::meeting::Builder {
         crate::model::meeting::Builder::default()
     }
@@ -1899,6 +2093,7 @@ impl Meeting {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MeetingFeaturesConfiguration {
     /// <p>The configuration settings for the audio features available to a meeting. </p>
+    #[doc(hidden)]
     pub audio: std::option::Option<crate::model::AudioFeatures>,
 }
 impl MeetingFeaturesConfiguration {
@@ -1914,11 +2109,10 @@ impl std::fmt::Debug for MeetingFeaturesConfiguration {
         formatter.finish()
     }
 }
-/// See [`MeetingFeaturesConfiguration`](crate::model::MeetingFeaturesConfiguration)
+/// See [`MeetingFeaturesConfiguration`](crate::model::MeetingFeaturesConfiguration).
 pub mod meeting_features_configuration {
 
-    /// A builder for [`MeetingFeaturesConfiguration`](crate::model::MeetingFeaturesConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`MeetingFeaturesConfiguration`](crate::model::MeetingFeaturesConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio: std::option::Option<crate::model::AudioFeatures>,
@@ -1937,14 +2131,14 @@ pub mod meeting_features_configuration {
             self.audio = input;
             self
         }
-        /// Consumes the builder and constructs a [`MeetingFeaturesConfiguration`](crate::model::MeetingFeaturesConfiguration)
+        /// Consumes the builder and constructs a [`MeetingFeaturesConfiguration`](crate::model::MeetingFeaturesConfiguration).
         pub fn build(self) -> crate::model::MeetingFeaturesConfiguration {
             crate::model::MeetingFeaturesConfiguration { audio: self.audio }
         }
     }
 }
 impl MeetingFeaturesConfiguration {
-    /// Creates a new builder-style object to manufacture [`MeetingFeaturesConfiguration`](crate::model::MeetingFeaturesConfiguration)
+    /// Creates a new builder-style object to manufacture [`MeetingFeaturesConfiguration`](crate::model::MeetingFeaturesConfiguration).
     pub fn builder() -> crate::model::meeting_features_configuration::Builder {
         crate::model::meeting_features_configuration::Builder::default()
     }
@@ -1955,6 +2149,7 @@ impl MeetingFeaturesConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AudioFeatures {
     /// <p>Makes echo reduction available to clients who connect to the meeting.</p>
+    #[doc(hidden)]
     pub echo_reduction: std::option::Option<crate::model::MeetingFeatureStatus>,
 }
 impl AudioFeatures {
@@ -1970,11 +2165,10 @@ impl std::fmt::Debug for AudioFeatures {
         formatter.finish()
     }
 }
-/// See [`AudioFeatures`](crate::model::AudioFeatures)
+/// See [`AudioFeatures`](crate::model::AudioFeatures).
 pub mod audio_features {
 
-    /// A builder for [`AudioFeatures`](crate::model::AudioFeatures)
-    #[non_exhaustive]
+    /// A builder for [`AudioFeatures`](crate::model::AudioFeatures).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) echo_reduction: std::option::Option<crate::model::MeetingFeatureStatus>,
@@ -1993,7 +2187,7 @@ pub mod audio_features {
             self.echo_reduction = input;
             self
         }
-        /// Consumes the builder and constructs a [`AudioFeatures`](crate::model::AudioFeatures)
+        /// Consumes the builder and constructs a [`AudioFeatures`](crate::model::AudioFeatures).
         pub fn build(self) -> crate::model::AudioFeatures {
             crate::model::AudioFeatures {
                 echo_reduction: self.echo_reduction,
@@ -2002,7 +2196,7 @@ pub mod audio_features {
     }
 }
 impl AudioFeatures {
-    /// Creates a new builder-style object to manufacture [`AudioFeatures`](crate::model::AudioFeatures)
+    /// Creates a new builder-style object to manufacture [`AudioFeatures`](crate::model::AudioFeatures).
     pub fn builder() -> crate::model::audio_features::Builder {
         crate::model::audio_features::Builder::default()
     }
@@ -2068,20 +2262,28 @@ impl AsRef<str> for MeetingFeatureStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MediaPlacement {
     /// <p>The audio host URL.</p>
+    #[doc(hidden)]
     pub audio_host_url: std::option::Option<std::string::String>,
     /// <p>The audio fallback URL.</p>
+    #[doc(hidden)]
     pub audio_fallback_url: std::option::Option<std::string::String>,
     /// <p>The signaling URL.</p>
+    #[doc(hidden)]
     pub signaling_url: std::option::Option<std::string::String>,
     /// <p>The turn control URL.</p>
+    #[doc(hidden)]
     pub turn_control_url: std::option::Option<std::string::String>,
     /// <p>The screen data URL.</p>
+    #[doc(hidden)]
     pub screen_data_url: std::option::Option<std::string::String>,
     /// <p>The screen viewing URL.</p>
+    #[doc(hidden)]
     pub screen_viewing_url: std::option::Option<std::string::String>,
     /// <p>The screen sharing URL.</p>
+    #[doc(hidden)]
     pub screen_sharing_url: std::option::Option<std::string::String>,
     /// <p>The event ingestion URL.</p>
+    #[doc(hidden)]
     pub event_ingestion_url: std::option::Option<std::string::String>,
 }
 impl MediaPlacement {
@@ -2132,11 +2334,10 @@ impl std::fmt::Debug for MediaPlacement {
         formatter.finish()
     }
 }
-/// See [`MediaPlacement`](crate::model::MediaPlacement)
+/// See [`MediaPlacement`](crate::model::MediaPlacement).
 pub mod media_placement {
 
-    /// A builder for [`MediaPlacement`](crate::model::MediaPlacement)
-    #[non_exhaustive]
+    /// A builder for [`MediaPlacement`](crate::model::MediaPlacement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) audio_host_url: std::option::Option<std::string::String>,
@@ -2253,7 +2454,7 @@ pub mod media_placement {
             self.event_ingestion_url = input;
             self
         }
-        /// Consumes the builder and constructs a [`MediaPlacement`](crate::model::MediaPlacement)
+        /// Consumes the builder and constructs a [`MediaPlacement`](crate::model::MediaPlacement).
         pub fn build(self) -> crate::model::MediaPlacement {
             crate::model::MediaPlacement {
                 audio_host_url: self.audio_host_url,
@@ -2269,7 +2470,7 @@ pub mod media_placement {
     }
 }
 impl MediaPlacement {
-    /// Creates a new builder-style object to manufacture [`MediaPlacement`](crate::model::MediaPlacement)
+    /// Creates a new builder-style object to manufacture [`MediaPlacement`](crate::model::MediaPlacement).
     pub fn builder() -> crate::model::media_placement::Builder {
         crate::model::media_placement::Builder::default()
     }
@@ -2280,10 +2481,13 @@ impl MediaPlacement {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAttendeeError {
     /// <p>The Amazon Chime SDK external user ID. An idempotency token. Links the attendee to an identity managed by a builder application.</p>
+    #[doc(hidden)]
     pub external_user_id: std::option::Option<std::string::String>,
     /// <p>The error code.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The error message.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl CreateAttendeeError {
@@ -2309,11 +2513,10 @@ impl std::fmt::Debug for CreateAttendeeError {
         formatter.finish()
     }
 }
-/// See [`CreateAttendeeError`](crate::model::CreateAttendeeError)
+/// See [`CreateAttendeeError`](crate::model::CreateAttendeeError).
 pub mod create_attendee_error {
 
-    /// A builder for [`CreateAttendeeError`](crate::model::CreateAttendeeError)
-    #[non_exhaustive]
+    /// A builder for [`CreateAttendeeError`](crate::model::CreateAttendeeError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) external_user_id: std::option::Option<std::string::String>,
@@ -2357,7 +2560,7 @@ pub mod create_attendee_error {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAttendeeError`](crate::model::CreateAttendeeError)
+        /// Consumes the builder and constructs a [`CreateAttendeeError`](crate::model::CreateAttendeeError).
         pub fn build(self) -> crate::model::CreateAttendeeError {
             crate::model::CreateAttendeeError {
                 external_user_id: self.external_user_id,
@@ -2368,7 +2571,7 @@ pub mod create_attendee_error {
     }
 }
 impl CreateAttendeeError {
-    /// Creates a new builder-style object to manufacture [`CreateAttendeeError`](crate::model::CreateAttendeeError)
+    /// Creates a new builder-style object to manufacture [`CreateAttendeeError`](crate::model::CreateAttendeeError).
     pub fn builder() -> crate::model::create_attendee_error::Builder {
         crate::model::create_attendee_error::Builder::default()
     }
@@ -2379,8 +2582,10 @@ impl CreateAttendeeError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAttendeeRequestItem {
     /// <p>The Amazon Chime SDK external user ID. An idempotency token. Links the attendee to an identity managed by a builder application.</p>
+    #[doc(hidden)]
     pub external_user_id: std::option::Option<std::string::String>,
     /// <p>A list of one or more capabilities.</p>
+    #[doc(hidden)]
     pub capabilities: std::option::Option<crate::model::AttendeeCapabilities>,
 }
 impl CreateAttendeeRequestItem {
@@ -2401,11 +2606,10 @@ impl std::fmt::Debug for CreateAttendeeRequestItem {
         formatter.finish()
     }
 }
-/// See [`CreateAttendeeRequestItem`](crate::model::CreateAttendeeRequestItem)
+/// See [`CreateAttendeeRequestItem`](crate::model::CreateAttendeeRequestItem).
 pub mod create_attendee_request_item {
 
-    /// A builder for [`CreateAttendeeRequestItem`](crate::model::CreateAttendeeRequestItem)
-    #[non_exhaustive]
+    /// A builder for [`CreateAttendeeRequestItem`](crate::model::CreateAttendeeRequestItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) external_user_id: std::option::Option<std::string::String>,
@@ -2438,7 +2642,7 @@ pub mod create_attendee_request_item {
             self.capabilities = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAttendeeRequestItem`](crate::model::CreateAttendeeRequestItem)
+        /// Consumes the builder and constructs a [`CreateAttendeeRequestItem`](crate::model::CreateAttendeeRequestItem).
         pub fn build(self) -> crate::model::CreateAttendeeRequestItem {
             crate::model::CreateAttendeeRequestItem {
                 external_user_id: self.external_user_id,
@@ -2448,7 +2652,7 @@ pub mod create_attendee_request_item {
     }
 }
 impl CreateAttendeeRequestItem {
-    /// Creates a new builder-style object to manufacture [`CreateAttendeeRequestItem`](crate::model::CreateAttendeeRequestItem)
+    /// Creates a new builder-style object to manufacture [`CreateAttendeeRequestItem`](crate::model::CreateAttendeeRequestItem).
     pub fn builder() -> crate::model::create_attendee_request_item::Builder {
         crate::model::create_attendee_request_item::Builder::default()
     }
@@ -2459,10 +2663,13 @@ impl CreateAttendeeRequestItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NotificationsConfiguration {
     /// <p>The ARN of the AWS Lambda function in the notifications configuration.</p>
+    #[doc(hidden)]
     pub lambda_function_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the SNS topic.</p>
+    #[doc(hidden)]
     pub sns_topic_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the SQS queue.</p>
+    #[doc(hidden)]
     pub sqs_queue_arn: std::option::Option<std::string::String>,
 }
 impl NotificationsConfiguration {
@@ -2488,11 +2695,10 @@ impl std::fmt::Debug for NotificationsConfiguration {
         formatter.finish()
     }
 }
-/// See [`NotificationsConfiguration`](crate::model::NotificationsConfiguration)
+/// See [`NotificationsConfiguration`](crate::model::NotificationsConfiguration).
 pub mod notifications_configuration {
 
-    /// A builder for [`NotificationsConfiguration`](crate::model::NotificationsConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`NotificationsConfiguration`](crate::model::NotificationsConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) lambda_function_arn: std::option::Option<std::string::String>,
@@ -2539,7 +2745,7 @@ pub mod notifications_configuration {
             self.sqs_queue_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotificationsConfiguration`](crate::model::NotificationsConfiguration)
+        /// Consumes the builder and constructs a [`NotificationsConfiguration`](crate::model::NotificationsConfiguration).
         pub fn build(self) -> crate::model::NotificationsConfiguration {
             crate::model::NotificationsConfiguration {
                 lambda_function_arn: self.lambda_function_arn,
@@ -2550,7 +2756,7 @@ pub mod notifications_configuration {
     }
 }
 impl NotificationsConfiguration {
-    /// Creates a new builder-style object to manufacture [`NotificationsConfiguration`](crate::model::NotificationsConfiguration)
+    /// Creates a new builder-style object to manufacture [`NotificationsConfiguration`](crate::model::NotificationsConfiguration).
     pub fn builder() -> crate::model::notifications_configuration::Builder {
         crate::model::notifications_configuration::Builder::default()
     }
@@ -2561,6 +2767,7 @@ impl NotificationsConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AttendeeIdItem {
     /// <p>A list of one or more attendee IDs.</p>
+    #[doc(hidden)]
     pub attendee_id: std::option::Option<std::string::String>,
 }
 impl AttendeeIdItem {
@@ -2576,11 +2783,10 @@ impl std::fmt::Debug for AttendeeIdItem {
         formatter.finish()
     }
 }
-/// See [`AttendeeIdItem`](crate::model::AttendeeIdItem)
+/// See [`AttendeeIdItem`](crate::model::AttendeeIdItem).
 pub mod attendee_id_item {
 
-    /// A builder for [`AttendeeIdItem`](crate::model::AttendeeIdItem)
-    #[non_exhaustive]
+    /// A builder for [`AttendeeIdItem`](crate::model::AttendeeIdItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attendee_id: std::option::Option<std::string::String>,
@@ -2596,7 +2802,7 @@ pub mod attendee_id_item {
             self.attendee_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`AttendeeIdItem`](crate::model::AttendeeIdItem)
+        /// Consumes the builder and constructs a [`AttendeeIdItem`](crate::model::AttendeeIdItem).
         pub fn build(self) -> crate::model::AttendeeIdItem {
             crate::model::AttendeeIdItem {
                 attendee_id: self.attendee_id,
@@ -2605,7 +2811,7 @@ pub mod attendee_id_item {
     }
 }
 impl AttendeeIdItem {
-    /// Creates a new builder-style object to manufacture [`AttendeeIdItem`](crate::model::AttendeeIdItem)
+    /// Creates a new builder-style object to manufacture [`AttendeeIdItem`](crate::model::AttendeeIdItem).
     pub fn builder() -> crate::model::attendee_id_item::Builder {
         crate::model::attendee_id_item::Builder::default()
     }

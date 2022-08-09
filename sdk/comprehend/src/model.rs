@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The initial part of a key-value pair that forms a tag associated with a given resource. For instance, if you want to show which resources are used by which departments, you might use “Department” as the key portion of the pair, with multiple possible values such as “sales,” “legal,” and “administration.” </p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p> The second part of a key-value pair that forms a tag associated with a given resource. For instance, if you want to show which resources are used by which departments, you might use “Department” as the initial (key) portion of the pair, with a value of “sales” to indicate the sales department. </p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -68,7 +69,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -157,8 +158,10 @@ impl AsRef<str> for JobStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VpcConfig {
     /// <p>The ID number for a security group on an instance of your private VPC. Security groups on your VPC function serve as a virtual firewall to control inbound and outbound traffic and provides security for the resources that you’ll be accessing on the VPC. This ID number is preceded by "sg-", for instance: "sg-03b388029b0a285ea". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html">Security Groups for your VPC</a>. </p>
+    #[doc(hidden)]
     pub security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The ID for each subnet being used in your private VPC. This subnet is a subset of the a range of IPv4 addresses used by the VPC and is specific to a given availability zone in the VPC’s region. This ID number is preceded by "subnet-", for instance: "subnet-04ccf456919e69055". For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a>. </p>
+    #[doc(hidden)]
     pub subnets: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl VpcConfig {
@@ -179,11 +182,10 @@ impl std::fmt::Debug for VpcConfig {
         formatter.finish()
     }
 }
-/// See [`VpcConfig`](crate::model::VpcConfig)
+/// See [`VpcConfig`](crate::model::VpcConfig).
 pub mod vpc_config {
 
-    /// A builder for [`VpcConfig`](crate::model::VpcConfig)
-    #[non_exhaustive]
+    /// A builder for [`VpcConfig`](crate::model::VpcConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) security_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -228,7 +230,7 @@ pub mod vpc_config {
             self.subnets = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcConfig`](crate::model::VpcConfig)
+        /// Consumes the builder and constructs a [`VpcConfig`](crate::model::VpcConfig).
         pub fn build(self) -> crate::model::VpcConfig {
             crate::model::VpcConfig {
                 security_group_ids: self.security_group_ids,
@@ -238,7 +240,7 @@ pub mod vpc_config {
     }
 }
 impl VpcConfig {
-    /// Creates a new builder-style object to manufacture [`VpcConfig`](crate::model::VpcConfig)
+    /// Creates a new builder-style object to manufacture [`VpcConfig`](crate::model::VpcConfig).
     pub fn builder() -> crate::model::vpc_config::Builder {
         crate::model::vpc_config::Builder::default()
     }
@@ -252,6 +254,7 @@ pub struct OutputDataConfig {
     /// <p>When you use the <code>OutputDataConfig</code> object with asynchronous operations, you specify the Amazon S3 location where you want to write the output data. The URI must be in the same region as the API endpoint that you are calling. The location is used as the prefix for the actual location of the output file.</p>
     /// <p>When the topic detection job is finished, the service creates an output file in a directory specific to the job. The <code>S3Uri</code> field contains the location of the output file, called <code>output.tar.gz</code>. It is a compressed archive that contains the ouput of the operation.</p>
     /// <p> For a PII entity detection job, the output file is plain text, not a compressed archive. The output file name is the same as the input file, with <code>.out</code> appended at the end. </p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results from an analysis job. The KmsKeyId can be one of the following formats:</p>
     /// <ul>
@@ -260,6 +263,7 @@ pub struct OutputDataConfig {
     /// <li> <p>KMS Key Alias: <code>"alias/ExampleAlias"</code> </p> </li>
     /// <li> <p>ARN of a KMS Key Alias: <code>"arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
 }
 impl OutputDataConfig {
@@ -288,11 +292,10 @@ impl std::fmt::Debug for OutputDataConfig {
         formatter.finish()
     }
 }
-/// See [`OutputDataConfig`](crate::model::OutputDataConfig)
+/// See [`OutputDataConfig`](crate::model::OutputDataConfig).
 pub mod output_data_config {
 
-    /// A builder for [`OutputDataConfig`](crate::model::OutputDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`OutputDataConfig`](crate::model::OutputDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -335,7 +338,7 @@ pub mod output_data_config {
             self.kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`OutputDataConfig`](crate::model::OutputDataConfig)
+        /// Consumes the builder and constructs a [`OutputDataConfig`](crate::model::OutputDataConfig).
         pub fn build(self) -> crate::model::OutputDataConfig {
             crate::model::OutputDataConfig {
                 s3_uri: self.s3_uri,
@@ -345,7 +348,7 @@ pub mod output_data_config {
     }
 }
 impl OutputDataConfig {
-    /// Creates a new builder-style object to manufacture [`OutputDataConfig`](crate::model::OutputDataConfig)
+    /// Creates a new builder-style object to manufacture [`OutputDataConfig`](crate::model::OutputDataConfig).
     pub fn builder() -> crate::model::output_data_config::Builder {
         crate::model::output_data_config::Builder::default()
     }
@@ -357,15 +360,18 @@ impl OutputDataConfig {
 pub struct InputDataConfig {
     /// <p>The Amazon S3 URI for the input data. The URI must be in same region as the API endpoint that you are calling. The URI can point to a single input file or it can provide the prefix for a collection of data files. </p>
     /// <p>For example, if you use the URI <code>S3://bucketName/prefix</code>, if the prefix is a single file, Amazon Comprehend uses that file as input. If more than one file begins with the prefix, Amazon Comprehend uses all of them as input.</p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p>Specifies how the text in an input file should be processed:</p>
     /// <ul>
     /// <li> <p> <code>ONE_DOC_PER_FILE</code> - Each file is considered a separate document. Use this option when you are processing large documents, such as newspaper articles or scientific papers.</p> </li>
     /// <li> <p> <code>ONE_DOC_PER_LINE</code> - Each line in a file is considered a separate document. Use this option when you are processing many short documents, such as text messages.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub input_format: std::option::Option<crate::model::InputFormat>,
     /// <p>The document reader config field applies only for InputDataConfig of StartEntitiesDetectionJob. </p>
     /// <p>Use DocumentReaderConfig to provide specifications about how you want your inference documents read. Currently it applies for PDF documents in StartEntitiesDetectionJob custom inference.</p>
+    #[doc(hidden)]
     pub document_reader_config: std::option::Option<crate::model::DocumentReaderConfig>,
 }
 impl InputDataConfig {
@@ -399,11 +405,10 @@ impl std::fmt::Debug for InputDataConfig {
         formatter.finish()
     }
 }
-/// See [`InputDataConfig`](crate::model::InputDataConfig)
+/// See [`InputDataConfig`](crate::model::InputDataConfig).
 pub mod input_data_config {
 
-    /// A builder for [`InputDataConfig`](crate::model::InputDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`InputDataConfig`](crate::model::InputDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -459,7 +464,7 @@ pub mod input_data_config {
             self.document_reader_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`InputDataConfig`](crate::model::InputDataConfig)
+        /// Consumes the builder and constructs a [`InputDataConfig`](crate::model::InputDataConfig).
         pub fn build(self) -> crate::model::InputDataConfig {
             crate::model::InputDataConfig {
                 s3_uri: self.s3_uri,
@@ -470,7 +475,7 @@ pub mod input_data_config {
     }
 }
 impl InputDataConfig {
-    /// Creates a new builder-style object to manufacture [`InputDataConfig`](crate::model::InputDataConfig)
+    /// Creates a new builder-style object to manufacture [`InputDataConfig`](crate::model::InputDataConfig).
     pub fn builder() -> crate::model::input_data_config::Builder {
         crate::model::input_data_config::Builder::default()
     }
@@ -485,14 +490,17 @@ pub struct DocumentReaderConfig {
     /// <li> <p> <code>TEXTRACT_DETECT_DOCUMENT_TEXT</code> - The service calls DetectDocumentText for PDF documents per page.</p> </li>
     /// <li> <p> <code>TEXTRACT_ANALYZE_DOCUMENT</code> - The service calls AnalyzeDocument for PDF documents per page.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub document_read_action: std::option::Option<crate::model::DocumentReadAction>,
     /// <p>This enum field provides two values:</p>
     /// <ul>
     /// <li> <p> <code>SERVICE_DEFAULT</code> - use service defaults for Document reading. For Digital PDF it would mean using an internal parser instead of Textract APIs</p> </li>
     /// <li> <p> <code>FORCE_DOCUMENT_READ_ACTION</code> - Always use specified action for DocumentReadAction, including Digital PDF. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub document_read_mode: std::option::Option<crate::model::DocumentReadMode>,
     /// <p>Specifies how the text in an input file should be processed:</p>
+    #[doc(hidden)]
     pub feature_types: std::option::Option<std::vec::Vec<crate::model::DocumentReadFeatureTypes>>,
 }
 impl DocumentReaderConfig {
@@ -526,11 +534,10 @@ impl std::fmt::Debug for DocumentReaderConfig {
         formatter.finish()
     }
 }
-/// See [`DocumentReaderConfig`](crate::model::DocumentReaderConfig)
+/// See [`DocumentReaderConfig`](crate::model::DocumentReaderConfig).
 pub mod document_reader_config {
 
-    /// A builder for [`DocumentReaderConfig`](crate::model::DocumentReaderConfig)
-    #[non_exhaustive]
+    /// A builder for [`DocumentReaderConfig`](crate::model::DocumentReaderConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) document_read_action: std::option::Option<crate::model::DocumentReadAction>,
@@ -600,7 +607,7 @@ pub mod document_reader_config {
             self.feature_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentReaderConfig`](crate::model::DocumentReaderConfig)
+        /// Consumes the builder and constructs a [`DocumentReaderConfig`](crate::model::DocumentReaderConfig).
         pub fn build(self) -> crate::model::DocumentReaderConfig {
             crate::model::DocumentReaderConfig {
                 document_read_action: self.document_read_action,
@@ -611,7 +618,7 @@ pub mod document_reader_config {
     }
 }
 impl DocumentReaderConfig {
-    /// Creates a new builder-style object to manufacture [`DocumentReaderConfig`](crate::model::DocumentReaderConfig)
+    /// Creates a new builder-style object to manufacture [`DocumentReaderConfig`](crate::model::DocumentReaderConfig).
     pub fn builder() -> crate::model::document_reader_config::Builder {
         crate::model::document_reader_config::Builder::default()
     }
@@ -952,10 +959,13 @@ impl AsRef<str> for LanguageCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RedactionConfig {
     /// <p>An array of the types of PII entities that Amazon Comprehend detects in the input text for your request.</p>
+    #[doc(hidden)]
     pub pii_entity_types: std::option::Option<std::vec::Vec<crate::model::PiiEntityType>>,
     /// <p>Specifies whether the PII entity is redacted with the mask character or the entity type.</p>
+    #[doc(hidden)]
     pub mask_mode: std::option::Option<crate::model::PiiEntitiesDetectionMaskMode>,
     /// <p>A character that replaces each character in the redacted PII entity.</p>
+    #[doc(hidden)]
     pub mask_character: std::option::Option<std::string::String>,
 }
 impl RedactionConfig {
@@ -981,11 +991,10 @@ impl std::fmt::Debug for RedactionConfig {
         formatter.finish()
     }
 }
-/// See [`RedactionConfig`](crate::model::RedactionConfig)
+/// See [`RedactionConfig`](crate::model::RedactionConfig).
 pub mod redaction_config {
 
-    /// A builder for [`RedactionConfig`](crate::model::RedactionConfig)
-    #[non_exhaustive]
+    /// A builder for [`RedactionConfig`](crate::model::RedactionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) pii_entity_types:
@@ -1039,7 +1048,7 @@ pub mod redaction_config {
             self.mask_character = input;
             self
         }
-        /// Consumes the builder and constructs a [`RedactionConfig`](crate::model::RedactionConfig)
+        /// Consumes the builder and constructs a [`RedactionConfig`](crate::model::RedactionConfig).
         pub fn build(self) -> crate::model::RedactionConfig {
             crate::model::RedactionConfig {
                 pii_entity_types: self.pii_entity_types,
@@ -1050,7 +1059,7 @@ pub mod redaction_config {
     }
 }
 impl RedactionConfig {
-    /// Creates a new builder-style object to manufacture [`RedactionConfig`](crate::model::RedactionConfig)
+    /// Creates a new builder-style object to manufacture [`RedactionConfig`](crate::model::RedactionConfig).
     pub fn builder() -> crate::model::redaction_config::Builder {
         crate::model::redaction_config::Builder::default()
     }
@@ -1412,6 +1421,7 @@ impl AsRef<str> for PiiEntitiesDetectionMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TopicsDetectionJobProperties {
     /// <p>The identifier assigned to the topic detection job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the topics detection job. It is a unique, fully qualified identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:</p>
     /// <p> <code>arn:
@@ -1427,32 +1437,44 @@ pub struct TopicsDetectionJobProperties {
     /// </partition></code> </p>
     /// <p>The following is an example job ARN:</p>
     /// <p> <code>arn:aws:comprehend:us-west-2:111122223333:topics-detection-job/1234abcd12ab34cd56ef1234567890ab</code> </p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The name of the topic detection job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The current status of the topic detection job. If the status is <code>Failed</code>, the reason for the failure is shown in the <code>Message</code> field.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>A description for the status of a job.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time that the topic detection job was submitted for processing.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the topic detection job was completed.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The input data configuration supplied when you created the topic detection job.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
     /// <p>The output data configuration supplied when you created the topic detection job.</p>
+    #[doc(hidden)]
     pub output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>The number of topics to detect supplied when you created the topic detection job. The default is 10. </p>
+    #[doc(hidden)]
     pub number_of_topics: std::option::Option<i32>,
     /// <p>The Amazon Resource Name (ARN) of the AWS Identity and Management (IAM) role that grants Amazon Comprehend read access to your job data. </p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the following formats:</p>
     /// <ul>
     /// <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub volume_kms_key_id: std::option::Option<std::string::String>,
     /// <p>Configuration parameters for a private Virtual Private Cloud (VPC) containing the resources you are using for your topic detection job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. </p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::VpcConfig>,
 }
 impl TopicsDetectionJobProperties {
@@ -1545,11 +1567,10 @@ impl std::fmt::Debug for TopicsDetectionJobProperties {
         formatter.finish()
     }
 }
-/// See [`TopicsDetectionJobProperties`](crate::model::TopicsDetectionJobProperties)
+/// See [`TopicsDetectionJobProperties`](crate::model::TopicsDetectionJobProperties).
 pub mod topics_detection_job_properties {
 
-    /// A builder for [`TopicsDetectionJobProperties`](crate::model::TopicsDetectionJobProperties)
-    #[non_exhaustive]
+    /// A builder for [`TopicsDetectionJobProperties`](crate::model::TopicsDetectionJobProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -1755,7 +1776,7 @@ pub mod topics_detection_job_properties {
             self.vpc_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`TopicsDetectionJobProperties`](crate::model::TopicsDetectionJobProperties)
+        /// Consumes the builder and constructs a [`TopicsDetectionJobProperties`](crate::model::TopicsDetectionJobProperties).
         pub fn build(self) -> crate::model::TopicsDetectionJobProperties {
             crate::model::TopicsDetectionJobProperties {
                 job_id: self.job_id,
@@ -1776,7 +1797,7 @@ pub mod topics_detection_job_properties {
     }
 }
 impl TopicsDetectionJobProperties {
-    /// Creates a new builder-style object to manufacture [`TopicsDetectionJobProperties`](crate::model::TopicsDetectionJobProperties)
+    /// Creates a new builder-style object to manufacture [`TopicsDetectionJobProperties`](crate::model::TopicsDetectionJobProperties).
     pub fn builder() -> crate::model::topics_detection_job_properties::Builder {
         crate::model::topics_detection_job_properties::Builder::default()
     }
@@ -1787,12 +1808,16 @@ impl TopicsDetectionJobProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TopicsDetectionJobFilter {
     /// <p></p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>Filters the list of topic detection jobs based on job status. Returns only jobs with the specified status.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Only returns jobs submitted before the specified time. Jobs are returned in descending order, newest to oldest.</p>
+    #[doc(hidden)]
     pub submit_time_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Only returns jobs submitted after the specified time. Jobs are returned in ascending order, oldest to newest.</p>
+    #[doc(hidden)]
     pub submit_time_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TopicsDetectionJobFilter {
@@ -1823,11 +1848,10 @@ impl std::fmt::Debug for TopicsDetectionJobFilter {
         formatter.finish()
     }
 }
-/// See [`TopicsDetectionJobFilter`](crate::model::TopicsDetectionJobFilter)
+/// See [`TopicsDetectionJobFilter`](crate::model::TopicsDetectionJobFilter).
 pub mod topics_detection_job_filter {
 
-    /// A builder for [`TopicsDetectionJobFilter`](crate::model::TopicsDetectionJobFilter)
-    #[non_exhaustive]
+    /// A builder for [`TopicsDetectionJobFilter`](crate::model::TopicsDetectionJobFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -1885,7 +1909,7 @@ pub mod topics_detection_job_filter {
             self.submit_time_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`TopicsDetectionJobFilter`](crate::model::TopicsDetectionJobFilter)
+        /// Consumes the builder and constructs a [`TopicsDetectionJobFilter`](crate::model::TopicsDetectionJobFilter).
         pub fn build(self) -> crate::model::TopicsDetectionJobFilter {
             crate::model::TopicsDetectionJobFilter {
                 job_name: self.job_name,
@@ -1897,7 +1921,7 @@ pub mod topics_detection_job_filter {
     }
 }
 impl TopicsDetectionJobFilter {
-    /// Creates a new builder-style object to manufacture [`TopicsDetectionJobFilter`](crate::model::TopicsDetectionJobFilter)
+    /// Creates a new builder-style object to manufacture [`TopicsDetectionJobFilter`](crate::model::TopicsDetectionJobFilter).
     pub fn builder() -> crate::model::topics_detection_job_filter::Builder {
         crate::model::topics_detection_job_filter::Builder::default()
     }
@@ -1908,6 +1932,7 @@ impl TopicsDetectionJobFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetedSentimentDetectionJobProperties {
     /// <p>The identifier assigned to the targeted sentiment detection job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the targeted sentiment detection job. It is a unique, fully qualified identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:</p>
     /// <p> <code>arn:
@@ -1923,33 +1948,45 @@ pub struct TargetedSentimentDetectionJobProperties {
     /// </partition></code> </p>
     /// <p>The following is an example job ARN:</p>
     /// <p> <code>arn:aws:comprehend:us-west-2:111122223333:targeted-sentiment-detection-job/1234abcd12ab34cd56ef1234567890ab</code> </p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The name that you assigned to the targeted sentiment detection job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The current status of the targeted sentiment detection job. If the status is <code>FAILED</code>, the <code>Messages</code> field shows the reason for the failure.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>A description of the status of a job.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time that the targeted sentiment detection job was submitted for processing.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the targeted sentiment detection job ended.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The input properties for an inference job.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
     /// <p>Provides configuration parameters for the output of inference jobs.</p>
     /// <p></p>
+    #[doc(hidden)]
     pub output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>The language code of the input documents.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The Amazon Resource Name (ARN) that gives Amazon Comprehend read access to your input data.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume attached to the ML compute instance(s) that process the targeted sentiment detection job. The VolumeKmsKeyId can be either of the following formats:</p>
     /// <ul>
     /// <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub volume_kms_key_id: std::option::Option<std::string::String>,
     /// <p> Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the resources you are using for the job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. </p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::VpcConfig>,
 }
 impl TargetedSentimentDetectionJobProperties {
@@ -2043,11 +2080,10 @@ impl std::fmt::Debug for TargetedSentimentDetectionJobProperties {
         formatter.finish()
     }
 }
-/// See [`TargetedSentimentDetectionJobProperties`](crate::model::TargetedSentimentDetectionJobProperties)
+/// See [`TargetedSentimentDetectionJobProperties`](crate::model::TargetedSentimentDetectionJobProperties).
 pub mod targeted_sentiment_detection_job_properties {
 
-    /// A builder for [`TargetedSentimentDetectionJobProperties`](crate::model::TargetedSentimentDetectionJobProperties)
-    #[non_exhaustive]
+    /// A builder for [`TargetedSentimentDetectionJobProperties`](crate::model::TargetedSentimentDetectionJobProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -2258,7 +2294,7 @@ pub mod targeted_sentiment_detection_job_properties {
             self.vpc_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetedSentimentDetectionJobProperties`](crate::model::TargetedSentimentDetectionJobProperties)
+        /// Consumes the builder and constructs a [`TargetedSentimentDetectionJobProperties`](crate::model::TargetedSentimentDetectionJobProperties).
         pub fn build(self) -> crate::model::TargetedSentimentDetectionJobProperties {
             crate::model::TargetedSentimentDetectionJobProperties {
                 job_id: self.job_id,
@@ -2279,7 +2315,7 @@ pub mod targeted_sentiment_detection_job_properties {
     }
 }
 impl TargetedSentimentDetectionJobProperties {
-    /// Creates a new builder-style object to manufacture [`TargetedSentimentDetectionJobProperties`](crate::model::TargetedSentimentDetectionJobProperties)
+    /// Creates a new builder-style object to manufacture [`TargetedSentimentDetectionJobProperties`](crate::model::TargetedSentimentDetectionJobProperties).
     pub fn builder() -> crate::model::targeted_sentiment_detection_job_properties::Builder {
         crate::model::targeted_sentiment_detection_job_properties::Builder::default()
     }
@@ -2290,12 +2326,16 @@ impl TargetedSentimentDetectionJobProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TargetedSentimentDetectionJobFilter {
     /// <p>Filters on the name of the job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>Filters the list of jobs based on job status. Returns only jobs with the specified status.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted before the specified time. Jobs are returned in ascending order, oldest to newest.</p>
+    #[doc(hidden)]
     pub submit_time_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted after the specified time. Jobs are returned in descending order, newest to oldest.</p>
+    #[doc(hidden)]
     pub submit_time_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl TargetedSentimentDetectionJobFilter {
@@ -2326,11 +2366,10 @@ impl std::fmt::Debug for TargetedSentimentDetectionJobFilter {
         formatter.finish()
     }
 }
-/// See [`TargetedSentimentDetectionJobFilter`](crate::model::TargetedSentimentDetectionJobFilter)
+/// See [`TargetedSentimentDetectionJobFilter`](crate::model::TargetedSentimentDetectionJobFilter).
 pub mod targeted_sentiment_detection_job_filter {
 
-    /// A builder for [`TargetedSentimentDetectionJobFilter`](crate::model::TargetedSentimentDetectionJobFilter)
-    #[non_exhaustive]
+    /// A builder for [`TargetedSentimentDetectionJobFilter`](crate::model::TargetedSentimentDetectionJobFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -2388,7 +2427,7 @@ pub mod targeted_sentiment_detection_job_filter {
             self.submit_time_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetedSentimentDetectionJobFilter`](crate::model::TargetedSentimentDetectionJobFilter)
+        /// Consumes the builder and constructs a [`TargetedSentimentDetectionJobFilter`](crate::model::TargetedSentimentDetectionJobFilter).
         pub fn build(self) -> crate::model::TargetedSentimentDetectionJobFilter {
             crate::model::TargetedSentimentDetectionJobFilter {
                 job_name: self.job_name,
@@ -2400,7 +2439,7 @@ pub mod targeted_sentiment_detection_job_filter {
     }
 }
 impl TargetedSentimentDetectionJobFilter {
-    /// Creates a new builder-style object to manufacture [`TargetedSentimentDetectionJobFilter`](crate::model::TargetedSentimentDetectionJobFilter)
+    /// Creates a new builder-style object to manufacture [`TargetedSentimentDetectionJobFilter`](crate::model::TargetedSentimentDetectionJobFilter).
     pub fn builder() -> crate::model::targeted_sentiment_detection_job_filter::Builder {
         crate::model::targeted_sentiment_detection_job_filter::Builder::default()
     }
@@ -2411,6 +2450,7 @@ impl TargetedSentimentDetectionJobFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SentimentDetectionJobProperties {
     /// <p>The identifier assigned to the sentiment detection job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the sentiment detection job. It is a unique, fully qualified identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:</p>
     /// <p> <code>arn:
@@ -2426,32 +2466,44 @@ pub struct SentimentDetectionJobProperties {
     /// </partition></code> </p>
     /// <p>The following is an example job ARN:</p>
     /// <p> <code>arn:aws:comprehend:us-west-2:111122223333:sentiment-detection-job/1234abcd12ab34cd56ef1234567890ab</code> </p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The name that you assigned to the sentiment detection job</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The current status of the sentiment detection job. If the status is <code>FAILED</code>, the <code>Messages</code> field shows the reason for the failure.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>A description of the status of a job.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time that the sentiment detection job was submitted for processing.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the sentiment detection job ended.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The input data configuration that you supplied when you created the sentiment detection job.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
     /// <p>The output data configuration that you supplied when you created the sentiment detection job.</p>
+    #[doc(hidden)]
     pub output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>The language code of the input documents.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The Amazon Resource Name (ARN) that gives Amazon Comprehend read access to your input data.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the following formats:</p>
     /// <ul>
     /// <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub volume_kms_key_id: std::option::Option<std::string::String>,
     /// <p> Configuration parameters for a private Virtual Private Cloud (VPC) containing the resources you are using for your sentiment detection job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. </p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::VpcConfig>,
 }
 impl SentimentDetectionJobProperties {
@@ -2544,11 +2596,10 @@ impl std::fmt::Debug for SentimentDetectionJobProperties {
         formatter.finish()
     }
 }
-/// See [`SentimentDetectionJobProperties`](crate::model::SentimentDetectionJobProperties)
+/// See [`SentimentDetectionJobProperties`](crate::model::SentimentDetectionJobProperties).
 pub mod sentiment_detection_job_properties {
 
-    /// A builder for [`SentimentDetectionJobProperties`](crate::model::SentimentDetectionJobProperties)
-    #[non_exhaustive]
+    /// A builder for [`SentimentDetectionJobProperties`](crate::model::SentimentDetectionJobProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -2757,7 +2808,7 @@ pub mod sentiment_detection_job_properties {
             self.vpc_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`SentimentDetectionJobProperties`](crate::model::SentimentDetectionJobProperties)
+        /// Consumes the builder and constructs a [`SentimentDetectionJobProperties`](crate::model::SentimentDetectionJobProperties).
         pub fn build(self) -> crate::model::SentimentDetectionJobProperties {
             crate::model::SentimentDetectionJobProperties {
                 job_id: self.job_id,
@@ -2778,7 +2829,7 @@ pub mod sentiment_detection_job_properties {
     }
 }
 impl SentimentDetectionJobProperties {
-    /// Creates a new builder-style object to manufacture [`SentimentDetectionJobProperties`](crate::model::SentimentDetectionJobProperties)
+    /// Creates a new builder-style object to manufacture [`SentimentDetectionJobProperties`](crate::model::SentimentDetectionJobProperties).
     pub fn builder() -> crate::model::sentiment_detection_job_properties::Builder {
         crate::model::sentiment_detection_job_properties::Builder::default()
     }
@@ -2789,12 +2840,16 @@ impl SentimentDetectionJobProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SentimentDetectionJobFilter {
     /// <p>Filters on the name of the job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>Filters the list of jobs based on job status. Returns only jobs with the specified status.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted before the specified time. Jobs are returned in ascending order, oldest to newest.</p>
+    #[doc(hidden)]
     pub submit_time_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted after the specified time. Jobs are returned in descending order, newest to oldest.</p>
+    #[doc(hidden)]
     pub submit_time_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SentimentDetectionJobFilter {
@@ -2825,11 +2880,10 @@ impl std::fmt::Debug for SentimentDetectionJobFilter {
         formatter.finish()
     }
 }
-/// See [`SentimentDetectionJobFilter`](crate::model::SentimentDetectionJobFilter)
+/// See [`SentimentDetectionJobFilter`](crate::model::SentimentDetectionJobFilter).
 pub mod sentiment_detection_job_filter {
 
-    /// A builder for [`SentimentDetectionJobFilter`](crate::model::SentimentDetectionJobFilter)
-    #[non_exhaustive]
+    /// A builder for [`SentimentDetectionJobFilter`](crate::model::SentimentDetectionJobFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -2887,7 +2941,7 @@ pub mod sentiment_detection_job_filter {
             self.submit_time_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`SentimentDetectionJobFilter`](crate::model::SentimentDetectionJobFilter)
+        /// Consumes the builder and constructs a [`SentimentDetectionJobFilter`](crate::model::SentimentDetectionJobFilter).
         pub fn build(self) -> crate::model::SentimentDetectionJobFilter {
             crate::model::SentimentDetectionJobFilter {
                 job_name: self.job_name,
@@ -2899,7 +2953,7 @@ pub mod sentiment_detection_job_filter {
     }
 }
 impl SentimentDetectionJobFilter {
-    /// Creates a new builder-style object to manufacture [`SentimentDetectionJobFilter`](crate::model::SentimentDetectionJobFilter)
+    /// Creates a new builder-style object to manufacture [`SentimentDetectionJobFilter`](crate::model::SentimentDetectionJobFilter).
     pub fn builder() -> crate::model::sentiment_detection_job_filter::Builder {
         crate::model::sentiment_detection_job_filter::Builder::default()
     }
@@ -2910,6 +2964,7 @@ impl SentimentDetectionJobFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PiiEntitiesDetectionJobProperties {
     /// <p>The identifier assigned to the PII entities detection job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the PII entities detection job. It is a unique, fully qualified identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:</p>
     /// <p> <code>arn:
@@ -2925,29 +2980,41 @@ pub struct PiiEntitiesDetectionJobProperties {
     /// </partition></code> </p>
     /// <p>The following is an example job ARN:</p>
     /// <p> <code>arn:aws:comprehend:us-west-2:111122223333:pii-entities-detection-job/1234abcd12ab34cd56ef1234567890ab</code> </p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The name that you assigned the PII entities detection job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The current status of the PII entities detection job. If the status is <code>FAILED</code>, the <code>Message</code> field shows the reason for the failure.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>A description of the status of a job.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time that the PII entities detection job was submitted for processing.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the PII entities detection job completed.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The input properties for a PII entities detection job.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
     /// <p>The output data configuration that you supplied when you created the PII entities detection job.</p>
+    #[doc(hidden)]
     pub output_data_config: std::option::Option<crate::model::PiiOutputDataConfig>,
     /// <p>Provides configuration parameters for PII entity redaction.</p>
     /// <p>This parameter is required if you set the <code>Mode</code> parameter to <code>ONLY_REDACTION</code>. In that case, you must provide a <code>RedactionConfig</code> definition that includes the <code>PiiEntityTypes</code> parameter.</p>
+    #[doc(hidden)]
     pub redaction_config: std::option::Option<crate::model::RedactionConfig>,
     /// <p>The language code of the input documents</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The Amazon Resource Name (ARN) that gives Amazon Comprehend read access to your input data.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>Specifies whether the output provides the locations (offsets) of PII entities or a file in which PII entities are redacted.</p>
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::PiiEntitiesDetectionMode>,
 }
 impl PiiEntitiesDetectionJobProperties {
@@ -3037,11 +3104,10 @@ impl std::fmt::Debug for PiiEntitiesDetectionJobProperties {
         formatter.finish()
     }
 }
-/// See [`PiiEntitiesDetectionJobProperties`](crate::model::PiiEntitiesDetectionJobProperties)
+/// See [`PiiEntitiesDetectionJobProperties`](crate::model::PiiEntitiesDetectionJobProperties).
 pub mod pii_entities_detection_job_properties {
 
-    /// A builder for [`PiiEntitiesDetectionJobProperties`](crate::model::PiiEntitiesDetectionJobProperties)
-    #[non_exhaustive]
+    /// A builder for [`PiiEntitiesDetectionJobProperties`](crate::model::PiiEntitiesDetectionJobProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -3244,7 +3310,7 @@ pub mod pii_entities_detection_job_properties {
             self.mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`PiiEntitiesDetectionJobProperties`](crate::model::PiiEntitiesDetectionJobProperties)
+        /// Consumes the builder and constructs a [`PiiEntitiesDetectionJobProperties`](crate::model::PiiEntitiesDetectionJobProperties).
         pub fn build(self) -> crate::model::PiiEntitiesDetectionJobProperties {
             crate::model::PiiEntitiesDetectionJobProperties {
                 job_id: self.job_id,
@@ -3265,7 +3331,7 @@ pub mod pii_entities_detection_job_properties {
     }
 }
 impl PiiEntitiesDetectionJobProperties {
-    /// Creates a new builder-style object to manufacture [`PiiEntitiesDetectionJobProperties`](crate::model::PiiEntitiesDetectionJobProperties)
+    /// Creates a new builder-style object to manufacture [`PiiEntitiesDetectionJobProperties`](crate::model::PiiEntitiesDetectionJobProperties).
     pub fn builder() -> crate::model::pii_entities_detection_job_properties::Builder {
         crate::model::pii_entities_detection_job_properties::Builder::default()
     }
@@ -3277,8 +3343,10 @@ impl PiiEntitiesDetectionJobProperties {
 pub struct PiiOutputDataConfig {
     /// <p>When you use the <code>PiiOutputDataConfig</code> object with asynchronous operations, you specify the Amazon S3 location where you want to write the output data. </p>
     /// <p> For a PII entity detection job, the output file is plain text, not a compressed archive. The output file name is the same as the input file, with <code>.out</code> appended at the end. </p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results from an analysis job.</p>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
 }
 impl PiiOutputDataConfig {
@@ -3300,11 +3368,10 @@ impl std::fmt::Debug for PiiOutputDataConfig {
         formatter.finish()
     }
 }
-/// See [`PiiOutputDataConfig`](crate::model::PiiOutputDataConfig)
+/// See [`PiiOutputDataConfig`](crate::model::PiiOutputDataConfig).
 pub mod pii_output_data_config {
 
-    /// A builder for [`PiiOutputDataConfig`](crate::model::PiiOutputDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`PiiOutputDataConfig`](crate::model::PiiOutputDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -3333,7 +3400,7 @@ pub mod pii_output_data_config {
             self.kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`PiiOutputDataConfig`](crate::model::PiiOutputDataConfig)
+        /// Consumes the builder and constructs a [`PiiOutputDataConfig`](crate::model::PiiOutputDataConfig).
         pub fn build(self) -> crate::model::PiiOutputDataConfig {
             crate::model::PiiOutputDataConfig {
                 s3_uri: self.s3_uri,
@@ -3343,7 +3410,7 @@ pub mod pii_output_data_config {
     }
 }
 impl PiiOutputDataConfig {
-    /// Creates a new builder-style object to manufacture [`PiiOutputDataConfig`](crate::model::PiiOutputDataConfig)
+    /// Creates a new builder-style object to manufacture [`PiiOutputDataConfig`](crate::model::PiiOutputDataConfig).
     pub fn builder() -> crate::model::pii_output_data_config::Builder {
         crate::model::pii_output_data_config::Builder::default()
     }
@@ -3354,12 +3421,16 @@ impl PiiOutputDataConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PiiEntitiesDetectionJobFilter {
     /// <p>Filters on the name of the job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>Filters the list of jobs based on job status. Returns only jobs with the specified status.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted before the specified time. Jobs are returned in ascending order, oldest to newest.</p>
+    #[doc(hidden)]
     pub submit_time_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted after the specified time. Jobs are returned in descending order, newest to oldest.</p>
+    #[doc(hidden)]
     pub submit_time_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PiiEntitiesDetectionJobFilter {
@@ -3390,11 +3461,10 @@ impl std::fmt::Debug for PiiEntitiesDetectionJobFilter {
         formatter.finish()
     }
 }
-/// See [`PiiEntitiesDetectionJobFilter`](crate::model::PiiEntitiesDetectionJobFilter)
+/// See [`PiiEntitiesDetectionJobFilter`](crate::model::PiiEntitiesDetectionJobFilter).
 pub mod pii_entities_detection_job_filter {
 
-    /// A builder for [`PiiEntitiesDetectionJobFilter`](crate::model::PiiEntitiesDetectionJobFilter)
-    #[non_exhaustive]
+    /// A builder for [`PiiEntitiesDetectionJobFilter`](crate::model::PiiEntitiesDetectionJobFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -3452,7 +3522,7 @@ pub mod pii_entities_detection_job_filter {
             self.submit_time_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`PiiEntitiesDetectionJobFilter`](crate::model::PiiEntitiesDetectionJobFilter)
+        /// Consumes the builder and constructs a [`PiiEntitiesDetectionJobFilter`](crate::model::PiiEntitiesDetectionJobFilter).
         pub fn build(self) -> crate::model::PiiEntitiesDetectionJobFilter {
             crate::model::PiiEntitiesDetectionJobFilter {
                 job_name: self.job_name,
@@ -3464,7 +3534,7 @@ pub mod pii_entities_detection_job_filter {
     }
 }
 impl PiiEntitiesDetectionJobFilter {
-    /// Creates a new builder-style object to manufacture [`PiiEntitiesDetectionJobFilter`](crate::model::PiiEntitiesDetectionJobFilter)
+    /// Creates a new builder-style object to manufacture [`PiiEntitiesDetectionJobFilter`](crate::model::PiiEntitiesDetectionJobFilter).
     pub fn builder() -> crate::model::pii_entities_detection_job_filter::Builder {
         crate::model::pii_entities_detection_job_filter::Builder::default()
     }
@@ -3475,6 +3545,7 @@ impl PiiEntitiesDetectionJobFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyPhrasesDetectionJobProperties {
     /// <p>The identifier assigned to the key phrases detection job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the key phrases detection job. It is a unique, fully qualified identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:</p>
     /// <p> <code>arn:
@@ -3490,32 +3561,44 @@ pub struct KeyPhrasesDetectionJobProperties {
     /// </partition></code> </p>
     /// <p>The following is an example job ARN:</p>
     /// <p> <code>arn:aws:comprehend:us-west-2:111122223333:key-phrases-detection-job/1234abcd12ab34cd56ef1234567890ab</code> </p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The name that you assigned the key phrases detection job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The current status of the key phrases detection job. If the status is <code>FAILED</code>, the <code>Message</code> field shows the reason for the failure.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>A description of the status of a job.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time that the key phrases detection job was submitted for processing.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the key phrases detection job completed.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The input data configuration that you supplied when you created the key phrases detection job.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
     /// <p>The output data configuration that you supplied when you created the key phrases detection job.</p>
+    #[doc(hidden)]
     pub output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>The language code of the input documents.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The Amazon Resource Name (ARN) that gives Amazon Comprehend read access to your input data.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the following formats:</p>
     /// <ul>
     /// <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub volume_kms_key_id: std::option::Option<std::string::String>,
     /// <p> Configuration parameters for a private Virtual Private Cloud (VPC) containing the resources you are using for your key phrases detection job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. </p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::VpcConfig>,
 }
 impl KeyPhrasesDetectionJobProperties {
@@ -3608,11 +3691,10 @@ impl std::fmt::Debug for KeyPhrasesDetectionJobProperties {
         formatter.finish()
     }
 }
-/// See [`KeyPhrasesDetectionJobProperties`](crate::model::KeyPhrasesDetectionJobProperties)
+/// See [`KeyPhrasesDetectionJobProperties`](crate::model::KeyPhrasesDetectionJobProperties).
 pub mod key_phrases_detection_job_properties {
 
-    /// A builder for [`KeyPhrasesDetectionJobProperties`](crate::model::KeyPhrasesDetectionJobProperties)
-    #[non_exhaustive]
+    /// A builder for [`KeyPhrasesDetectionJobProperties`](crate::model::KeyPhrasesDetectionJobProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -3821,7 +3903,7 @@ pub mod key_phrases_detection_job_properties {
             self.vpc_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyPhrasesDetectionJobProperties`](crate::model::KeyPhrasesDetectionJobProperties)
+        /// Consumes the builder and constructs a [`KeyPhrasesDetectionJobProperties`](crate::model::KeyPhrasesDetectionJobProperties).
         pub fn build(self) -> crate::model::KeyPhrasesDetectionJobProperties {
             crate::model::KeyPhrasesDetectionJobProperties {
                 job_id: self.job_id,
@@ -3842,7 +3924,7 @@ pub mod key_phrases_detection_job_properties {
     }
 }
 impl KeyPhrasesDetectionJobProperties {
-    /// Creates a new builder-style object to manufacture [`KeyPhrasesDetectionJobProperties`](crate::model::KeyPhrasesDetectionJobProperties)
+    /// Creates a new builder-style object to manufacture [`KeyPhrasesDetectionJobProperties`](crate::model::KeyPhrasesDetectionJobProperties).
     pub fn builder() -> crate::model::key_phrases_detection_job_properties::Builder {
         crate::model::key_phrases_detection_job_properties::Builder::default()
     }
@@ -3853,12 +3935,16 @@ impl KeyPhrasesDetectionJobProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyPhrasesDetectionJobFilter {
     /// <p>Filters on the name of the job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>Filters the list of jobs based on job status. Returns only jobs with the specified status.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted before the specified time. Jobs are returned in ascending order, oldest to newest.</p>
+    #[doc(hidden)]
     pub submit_time_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted after the specified time. Jobs are returned in descending order, newest to oldest.</p>
+    #[doc(hidden)]
     pub submit_time_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl KeyPhrasesDetectionJobFilter {
@@ -3889,11 +3975,10 @@ impl std::fmt::Debug for KeyPhrasesDetectionJobFilter {
         formatter.finish()
     }
 }
-/// See [`KeyPhrasesDetectionJobFilter`](crate::model::KeyPhrasesDetectionJobFilter)
+/// See [`KeyPhrasesDetectionJobFilter`](crate::model::KeyPhrasesDetectionJobFilter).
 pub mod key_phrases_detection_job_filter {
 
-    /// A builder for [`KeyPhrasesDetectionJobFilter`](crate::model::KeyPhrasesDetectionJobFilter)
-    #[non_exhaustive]
+    /// A builder for [`KeyPhrasesDetectionJobFilter`](crate::model::KeyPhrasesDetectionJobFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -3951,7 +4036,7 @@ pub mod key_phrases_detection_job_filter {
             self.submit_time_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyPhrasesDetectionJobFilter`](crate::model::KeyPhrasesDetectionJobFilter)
+        /// Consumes the builder and constructs a [`KeyPhrasesDetectionJobFilter`](crate::model::KeyPhrasesDetectionJobFilter).
         pub fn build(self) -> crate::model::KeyPhrasesDetectionJobFilter {
             crate::model::KeyPhrasesDetectionJobFilter {
                 job_name: self.job_name,
@@ -3963,7 +4048,7 @@ pub mod key_phrases_detection_job_filter {
     }
 }
 impl KeyPhrasesDetectionJobFilter {
-    /// Creates a new builder-style object to manufacture [`KeyPhrasesDetectionJobFilter`](crate::model::KeyPhrasesDetectionJobFilter)
+    /// Creates a new builder-style object to manufacture [`KeyPhrasesDetectionJobFilter`](crate::model::KeyPhrasesDetectionJobFilter).
     pub fn builder() -> crate::model::key_phrases_detection_job_filter::Builder {
         crate::model::key_phrases_detection_job_filter::Builder::default()
     }
@@ -3974,6 +4059,7 @@ impl KeyPhrasesDetectionJobFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventsDetectionJobProperties {
     /// <p>The identifier assigned to the events detection job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the events detection job. It is a unique, fully qualified identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:</p>
     /// <p> <code>arn:
@@ -3989,26 +4075,37 @@ pub struct EventsDetectionJobProperties {
     /// </partition></code> </p>
     /// <p>The following is an example job ARN:</p>
     /// <p> <code>arn:aws:comprehend:us-west-2:111122223333:events-detection-job/1234abcd12ab34cd56ef1234567890ab</code> </p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The name you assigned the events detection job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The current status of the events detection job.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>A description of the status of the events detection job.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time that the events detection job was submitted for processing.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the events detection job completed.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The input data configuration that you supplied when you created the events detection job.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
     /// <p>The output data configuration that you supplied when you created the events detection job.</p>
+    #[doc(hidden)]
     pub output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>The language code of the input documents.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The Amazon Resource Name (ARN) of the AWS Identify and Access Management (IAM) role that grants Amazon Comprehend read access to your input data.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>The types of events that are detected by the job.</p>
+    #[doc(hidden)]
     pub target_event_types: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl EventsDetectionJobProperties {
@@ -4092,11 +4189,10 @@ impl std::fmt::Debug for EventsDetectionJobProperties {
         formatter.finish()
     }
 }
-/// See [`EventsDetectionJobProperties`](crate::model::EventsDetectionJobProperties)
+/// See [`EventsDetectionJobProperties`](crate::model::EventsDetectionJobProperties).
 pub mod events_detection_job_properties {
 
-    /// A builder for [`EventsDetectionJobProperties`](crate::model::EventsDetectionJobProperties)
-    #[non_exhaustive]
+    /// A builder for [`EventsDetectionJobProperties`](crate::model::EventsDetectionJobProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -4289,7 +4385,7 @@ pub mod events_detection_job_properties {
             self.target_event_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventsDetectionJobProperties`](crate::model::EventsDetectionJobProperties)
+        /// Consumes the builder and constructs a [`EventsDetectionJobProperties`](crate::model::EventsDetectionJobProperties).
         pub fn build(self) -> crate::model::EventsDetectionJobProperties {
             crate::model::EventsDetectionJobProperties {
                 job_id: self.job_id,
@@ -4309,7 +4405,7 @@ pub mod events_detection_job_properties {
     }
 }
 impl EventsDetectionJobProperties {
-    /// Creates a new builder-style object to manufacture [`EventsDetectionJobProperties`](crate::model::EventsDetectionJobProperties)
+    /// Creates a new builder-style object to manufacture [`EventsDetectionJobProperties`](crate::model::EventsDetectionJobProperties).
     pub fn builder() -> crate::model::events_detection_job_properties::Builder {
         crate::model::events_detection_job_properties::Builder::default()
     }
@@ -4320,12 +4416,16 @@ impl EventsDetectionJobProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EventsDetectionJobFilter {
     /// <p>Filters on the name of the events detection job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>Filters the list of jobs based on job status. Returns only jobs with the specified status.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted before the specified time. Jobs are returned in ascending order, oldest to newest.</p>
+    #[doc(hidden)]
     pub submit_time_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted after the specified time. Jobs are returned in descending order, newest to oldest.</p>
+    #[doc(hidden)]
     pub submit_time_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EventsDetectionJobFilter {
@@ -4356,11 +4456,10 @@ impl std::fmt::Debug for EventsDetectionJobFilter {
         formatter.finish()
     }
 }
-/// See [`EventsDetectionJobFilter`](crate::model::EventsDetectionJobFilter)
+/// See [`EventsDetectionJobFilter`](crate::model::EventsDetectionJobFilter).
 pub mod events_detection_job_filter {
 
-    /// A builder for [`EventsDetectionJobFilter`](crate::model::EventsDetectionJobFilter)
-    #[non_exhaustive]
+    /// A builder for [`EventsDetectionJobFilter`](crate::model::EventsDetectionJobFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -4418,7 +4517,7 @@ pub mod events_detection_job_filter {
             self.submit_time_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`EventsDetectionJobFilter`](crate::model::EventsDetectionJobFilter)
+        /// Consumes the builder and constructs a [`EventsDetectionJobFilter`](crate::model::EventsDetectionJobFilter).
         pub fn build(self) -> crate::model::EventsDetectionJobFilter {
             crate::model::EventsDetectionJobFilter {
                 job_name: self.job_name,
@@ -4430,7 +4529,7 @@ pub mod events_detection_job_filter {
     }
 }
 impl EventsDetectionJobFilter {
-    /// Creates a new builder-style object to manufacture [`EventsDetectionJobFilter`](crate::model::EventsDetectionJobFilter)
+    /// Creates a new builder-style object to manufacture [`EventsDetectionJobFilter`](crate::model::EventsDetectionJobFilter).
     pub fn builder() -> crate::model::events_detection_job_filter::Builder {
         crate::model::events_detection_job_filter::Builder::default()
     }
@@ -4441,14 +4540,19 @@ impl EventsDetectionJobFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityRecognizerSummary {
     /// <p> The name that you assigned the entity recognizer.</p>
+    #[doc(hidden)]
     pub recognizer_name: std::option::Option<std::string::String>,
     /// <p> The number of versions you created.</p>
+    #[doc(hidden)]
     pub number_of_versions: std::option::Option<i32>,
     /// <p> The time that the latest entity recognizer version was submitted for processing.</p>
+    #[doc(hidden)]
     pub latest_version_created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p> The version name you assigned to the latest entity recognizer version.</p>
+    #[doc(hidden)]
     pub latest_version_name: std::option::Option<std::string::String>,
     /// <p> Provides the status of the latest entity recognizer version.</p>
+    #[doc(hidden)]
     pub latest_version_status: std::option::Option<crate::model::ModelStatus>,
 }
 impl EntityRecognizerSummary {
@@ -4484,11 +4588,10 @@ impl std::fmt::Debug for EntityRecognizerSummary {
         formatter.finish()
     }
 }
-/// See [`EntityRecognizerSummary`](crate::model::EntityRecognizerSummary)
+/// See [`EntityRecognizerSummary`](crate::model::EntityRecognizerSummary).
 pub mod entity_recognizer_summary {
 
-    /// A builder for [`EntityRecognizerSummary`](crate::model::EntityRecognizerSummary)
-    #[non_exhaustive]
+    /// A builder for [`EntityRecognizerSummary`](crate::model::EntityRecognizerSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recognizer_name: std::option::Option<std::string::String>,
@@ -4560,7 +4663,7 @@ pub mod entity_recognizer_summary {
             self.latest_version_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityRecognizerSummary`](crate::model::EntityRecognizerSummary)
+        /// Consumes the builder and constructs a [`EntityRecognizerSummary`](crate::model::EntityRecognizerSummary).
         pub fn build(self) -> crate::model::EntityRecognizerSummary {
             crate::model::EntityRecognizerSummary {
                 recognizer_name: self.recognizer_name,
@@ -4573,7 +4676,7 @@ pub mod entity_recognizer_summary {
     }
 }
 impl EntityRecognizerSummary {
-    /// Creates a new builder-style object to manufacture [`EntityRecognizerSummary`](crate::model::EntityRecognizerSummary)
+    /// Creates a new builder-style object to manufacture [`EntityRecognizerSummary`](crate::model::EntityRecognizerSummary).
     pub fn builder() -> crate::model::entity_recognizer_summary::Builder {
         crate::model::entity_recognizer_summary::Builder::default()
     }
@@ -4667,44 +4770,60 @@ impl AsRef<str> for ModelStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityRecognizerProperties {
     /// <p>The Amazon Resource Name (ARN) that identifies the entity recognizer.</p>
+    #[doc(hidden)]
     pub entity_recognizer_arn: std::option::Option<std::string::String>,
     /// <p> The language of the input documents. All documents must be in the same language. Only English ("en") is currently supported.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>Provides the status of the entity recognizer.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ModelStatus>,
     /// <p> A description of the status of the recognizer.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time that the recognizer was submitted for processing.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the recognizer creation completed.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that training of the entity recognizer started.</p>
+    #[doc(hidden)]
     pub training_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that training of the entity recognizer was completed.</p>
+    #[doc(hidden)]
     pub training_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The input data properties of an entity recognizer.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::EntityRecognizerInputDataConfig>,
     /// <p> Provides information about an entity recognizer.</p>
+    #[doc(hidden)]
     pub recognizer_metadata: std::option::Option<crate::model::EntityRecognizerMetadata>,
     /// <p> The Amazon Resource Name (ARN) of the AWS Identity and Management (IAM) role that grants Amazon Comprehend read access to your input data.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the following formats:</p>
     /// <ul>
     /// <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub volume_kms_key_id: std::option::Option<std::string::String>,
     /// <p> Configuration parameters for a private Virtual Private Cloud (VPC) containing the resources you are using for your custom entity recognizer. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. </p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::VpcConfig>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either of the following formats: </p>
     /// <ul>
     /// <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub model_kms_key_id: std::option::Option<std::string::String>,
     /// <p>The version name you assigned to the entity recognizer.</p>
+    #[doc(hidden)]
     pub version_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account to create the entity recognizer model in your AWS account.</p>
+    #[doc(hidden)]
     pub source_model_arn: std::option::Option<std::string::String>,
 }
 impl EntityRecognizerProperties {
@@ -4807,11 +4926,10 @@ impl std::fmt::Debug for EntityRecognizerProperties {
         formatter.finish()
     }
 }
-/// See [`EntityRecognizerProperties`](crate::model::EntityRecognizerProperties)
+/// See [`EntityRecognizerProperties`](crate::model::EntityRecognizerProperties).
 pub mod entity_recognizer_properties {
 
-    /// A builder for [`EntityRecognizerProperties`](crate::model::EntityRecognizerProperties)
-    #[non_exhaustive]
+    /// A builder for [`EntityRecognizerProperties`](crate::model::EntityRecognizerProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) entity_recognizer_arn: std::option::Option<std::string::String>,
@@ -5054,7 +5172,7 @@ pub mod entity_recognizer_properties {
             self.source_model_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityRecognizerProperties`](crate::model::EntityRecognizerProperties)
+        /// Consumes the builder and constructs a [`EntityRecognizerProperties`](crate::model::EntityRecognizerProperties).
         pub fn build(self) -> crate::model::EntityRecognizerProperties {
             crate::model::EntityRecognizerProperties {
                 entity_recognizer_arn: self.entity_recognizer_arn,
@@ -5078,7 +5196,7 @@ pub mod entity_recognizer_properties {
     }
 }
 impl EntityRecognizerProperties {
-    /// Creates a new builder-style object to manufacture [`EntityRecognizerProperties`](crate::model::EntityRecognizerProperties)
+    /// Creates a new builder-style object to manufacture [`EntityRecognizerProperties`](crate::model::EntityRecognizerProperties).
     pub fn builder() -> crate::model::entity_recognizer_properties::Builder {
         crate::model::entity_recognizer_properties::Builder::default()
     }
@@ -5089,12 +5207,16 @@ impl EntityRecognizerProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityRecognizerMetadata {
     /// <p> The number of documents in the input data that were used to train the entity recognizer. Typically this is 80 to 90 percent of the input documents.</p>
+    #[doc(hidden)]
     pub number_of_trained_documents: std::option::Option<i32>,
     /// <p> The number of documents in the input data that were used to test the entity recognizer. Typically this is 10 to 20 percent of the input documents.</p>
+    #[doc(hidden)]
     pub number_of_test_documents: std::option::Option<i32>,
     /// <p>Detailed information about the accuracy of an entity recognizer.</p>
+    #[doc(hidden)]
     pub evaluation_metrics: std::option::Option<crate::model::EntityRecognizerEvaluationMetrics>,
     /// <p>Entity types from the metadata of an entity recognizer.</p>
+    #[doc(hidden)]
     pub entity_types: std::option::Option<
         std::vec::Vec<crate::model::EntityRecognizerMetadataEntityTypesListItem>,
     >,
@@ -5134,11 +5256,10 @@ impl std::fmt::Debug for EntityRecognizerMetadata {
         formatter.finish()
     }
 }
-/// See [`EntityRecognizerMetadata`](crate::model::EntityRecognizerMetadata)
+/// See [`EntityRecognizerMetadata`](crate::model::EntityRecognizerMetadata).
 pub mod entity_recognizer_metadata {
 
-    /// A builder for [`EntityRecognizerMetadata`](crate::model::EntityRecognizerMetadata)
-    #[non_exhaustive]
+    /// A builder for [`EntityRecognizerMetadata`](crate::model::EntityRecognizerMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) number_of_trained_documents: std::option::Option<i32>,
@@ -5210,7 +5331,7 @@ pub mod entity_recognizer_metadata {
             self.entity_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityRecognizerMetadata`](crate::model::EntityRecognizerMetadata)
+        /// Consumes the builder and constructs a [`EntityRecognizerMetadata`](crate::model::EntityRecognizerMetadata).
         pub fn build(self) -> crate::model::EntityRecognizerMetadata {
             crate::model::EntityRecognizerMetadata {
                 number_of_trained_documents: self.number_of_trained_documents,
@@ -5222,7 +5343,7 @@ pub mod entity_recognizer_metadata {
     }
 }
 impl EntityRecognizerMetadata {
-    /// Creates a new builder-style object to manufacture [`EntityRecognizerMetadata`](crate::model::EntityRecognizerMetadata)
+    /// Creates a new builder-style object to manufacture [`EntityRecognizerMetadata`](crate::model::EntityRecognizerMetadata).
     pub fn builder() -> crate::model::entity_recognizer_metadata::Builder {
         crate::model::entity_recognizer_metadata::Builder::default()
     }
@@ -5233,10 +5354,13 @@ impl EntityRecognizerMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityRecognizerMetadataEntityTypesListItem {
     /// <p>Type of entity from the list of entity types in the metadata of an entity recognizer. </p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
     /// <p>Detailed information about the accuracy of the entity recognizer for a specific item on the list of entity types. </p>
+    #[doc(hidden)]
     pub evaluation_metrics: std::option::Option<crate::model::EntityTypesEvaluationMetrics>,
     /// <p>Indicates the number of times the given entity type was seen in the training data. </p>
+    #[doc(hidden)]
     pub number_of_train_mentions: std::option::Option<i32>,
 }
 impl EntityRecognizerMetadataEntityTypesListItem {
@@ -5264,11 +5388,10 @@ impl std::fmt::Debug for EntityRecognizerMetadataEntityTypesListItem {
         formatter.finish()
     }
 }
-/// See [`EntityRecognizerMetadataEntityTypesListItem`](crate::model::EntityRecognizerMetadataEntityTypesListItem)
+/// See [`EntityRecognizerMetadataEntityTypesListItem`](crate::model::EntityRecognizerMetadataEntityTypesListItem).
 pub mod entity_recognizer_metadata_entity_types_list_item {
 
-    /// A builder for [`EntityRecognizerMetadataEntityTypesListItem`](crate::model::EntityRecognizerMetadataEntityTypesListItem)
-    #[non_exhaustive]
+    /// A builder for [`EntityRecognizerMetadataEntityTypesListItem`](crate::model::EntityRecognizerMetadataEntityTypesListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<std::string::String>,
@@ -5313,7 +5436,7 @@ pub mod entity_recognizer_metadata_entity_types_list_item {
             self.number_of_train_mentions = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityRecognizerMetadataEntityTypesListItem`](crate::model::EntityRecognizerMetadataEntityTypesListItem)
+        /// Consumes the builder and constructs a [`EntityRecognizerMetadataEntityTypesListItem`](crate::model::EntityRecognizerMetadataEntityTypesListItem).
         pub fn build(self) -> crate::model::EntityRecognizerMetadataEntityTypesListItem {
             crate::model::EntityRecognizerMetadataEntityTypesListItem {
                 r#type: self.r#type,
@@ -5324,7 +5447,7 @@ pub mod entity_recognizer_metadata_entity_types_list_item {
     }
 }
 impl EntityRecognizerMetadataEntityTypesListItem {
-    /// Creates a new builder-style object to manufacture [`EntityRecognizerMetadataEntityTypesListItem`](crate::model::EntityRecognizerMetadataEntityTypesListItem)
+    /// Creates a new builder-style object to manufacture [`EntityRecognizerMetadataEntityTypesListItem`](crate::model::EntityRecognizerMetadataEntityTypesListItem).
     pub fn builder() -> crate::model::entity_recognizer_metadata_entity_types_list_item::Builder {
         crate::model::entity_recognizer_metadata_entity_types_list_item::Builder::default()
     }
@@ -5335,10 +5458,13 @@ impl EntityRecognizerMetadataEntityTypesListItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityTypesEvaluationMetrics {
     /// <p>A measure of the usefulness of the recognizer results for a specific entity type in the test data. High precision means that the recognizer returned substantially more relevant results than irrelevant ones. </p>
+    #[doc(hidden)]
     pub precision: std::option::Option<f64>,
     /// <p>A measure of how complete the recognizer results are for a specific entity type in the test data. High recall means that the recognizer returned most of the relevant results.</p>
+    #[doc(hidden)]
     pub recall: std::option::Option<f64>,
     /// <p>A measure of how accurate the recognizer results are for a specific entity type in the test data. It is derived from the <code>Precision</code> and <code>Recall</code> values. The <code>F1Score</code> is the harmonic average of the two scores. The highest score is 1, and the worst score is 0. </p>
+    #[doc(hidden)]
     pub f1_score: std::option::Option<f64>,
 }
 impl EntityTypesEvaluationMetrics {
@@ -5364,11 +5490,10 @@ impl std::fmt::Debug for EntityTypesEvaluationMetrics {
         formatter.finish()
     }
 }
-/// See [`EntityTypesEvaluationMetrics`](crate::model::EntityTypesEvaluationMetrics)
+/// See [`EntityTypesEvaluationMetrics`](crate::model::EntityTypesEvaluationMetrics).
 pub mod entity_types_evaluation_metrics {
 
-    /// A builder for [`EntityTypesEvaluationMetrics`](crate::model::EntityTypesEvaluationMetrics)
-    #[non_exhaustive]
+    /// A builder for [`EntityTypesEvaluationMetrics`](crate::model::EntityTypesEvaluationMetrics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) precision: std::option::Option<f64>,
@@ -5406,7 +5531,7 @@ pub mod entity_types_evaluation_metrics {
             self.f1_score = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityTypesEvaluationMetrics`](crate::model::EntityTypesEvaluationMetrics)
+        /// Consumes the builder and constructs a [`EntityTypesEvaluationMetrics`](crate::model::EntityTypesEvaluationMetrics).
         pub fn build(self) -> crate::model::EntityTypesEvaluationMetrics {
             crate::model::EntityTypesEvaluationMetrics {
                 precision: self.precision,
@@ -5417,7 +5542,7 @@ pub mod entity_types_evaluation_metrics {
     }
 }
 impl EntityTypesEvaluationMetrics {
-    /// Creates a new builder-style object to manufacture [`EntityTypesEvaluationMetrics`](crate::model::EntityTypesEvaluationMetrics)
+    /// Creates a new builder-style object to manufacture [`EntityTypesEvaluationMetrics`](crate::model::EntityTypesEvaluationMetrics).
     pub fn builder() -> crate::model::entity_types_evaluation_metrics::Builder {
         crate::model::entity_types_evaluation_metrics::Builder::default()
     }
@@ -5428,10 +5553,13 @@ impl EntityTypesEvaluationMetrics {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityRecognizerEvaluationMetrics {
     /// <p>A measure of the usefulness of the recognizer results in the test data. High precision means that the recognizer returned substantially more relevant results than irrelevant ones. </p>
+    #[doc(hidden)]
     pub precision: std::option::Option<f64>,
     /// <p>A measure of how complete the recognizer results are for the test data. High recall means that the recognizer returned most of the relevant results.</p>
+    #[doc(hidden)]
     pub recall: std::option::Option<f64>,
     /// <p>A measure of how accurate the recognizer results are for the test data. It is derived from the <code>Precision</code> and <code>Recall</code> values. The <code>F1Score</code> is the harmonic average of the two scores. For plain text entity recognizer models, the range is 0 to 100, where 100 is the best score. For PDF/Word entity recognizer models, the range is 0 to 1, where 1 is the best score. </p>
+    #[doc(hidden)]
     pub f1_score: std::option::Option<f64>,
 }
 impl EntityRecognizerEvaluationMetrics {
@@ -5457,11 +5585,10 @@ impl std::fmt::Debug for EntityRecognizerEvaluationMetrics {
         formatter.finish()
     }
 }
-/// See [`EntityRecognizerEvaluationMetrics`](crate::model::EntityRecognizerEvaluationMetrics)
+/// See [`EntityRecognizerEvaluationMetrics`](crate::model::EntityRecognizerEvaluationMetrics).
 pub mod entity_recognizer_evaluation_metrics {
 
-    /// A builder for [`EntityRecognizerEvaluationMetrics`](crate::model::EntityRecognizerEvaluationMetrics)
-    #[non_exhaustive]
+    /// A builder for [`EntityRecognizerEvaluationMetrics`](crate::model::EntityRecognizerEvaluationMetrics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) precision: std::option::Option<f64>,
@@ -5499,7 +5626,7 @@ pub mod entity_recognizer_evaluation_metrics {
             self.f1_score = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityRecognizerEvaluationMetrics`](crate::model::EntityRecognizerEvaluationMetrics)
+        /// Consumes the builder and constructs a [`EntityRecognizerEvaluationMetrics`](crate::model::EntityRecognizerEvaluationMetrics).
         pub fn build(self) -> crate::model::EntityRecognizerEvaluationMetrics {
             crate::model::EntityRecognizerEvaluationMetrics {
                 precision: self.precision,
@@ -5510,7 +5637,7 @@ pub mod entity_recognizer_evaluation_metrics {
     }
 }
 impl EntityRecognizerEvaluationMetrics {
-    /// Creates a new builder-style object to manufacture [`EntityRecognizerEvaluationMetrics`](crate::model::EntityRecognizerEvaluationMetrics)
+    /// Creates a new builder-style object to manufacture [`EntityRecognizerEvaluationMetrics`](crate::model::EntityRecognizerEvaluationMetrics).
     pub fn builder() -> crate::model::entity_recognizer_evaluation_metrics::Builder {
         crate::model::entity_recognizer_evaluation_metrics::Builder::default()
     }
@@ -5526,19 +5653,25 @@ pub struct EntityRecognizerInputDataConfig {
     /// <li> <p> <code>AUGMENTED_MANIFEST</code>: A labeled dataset that is produced by Amazon SageMaker Ground Truth. This file is in JSON lines format. Each line is a complete JSON object that contains a training document and its labels. Each label annotates a named entity in the training document. </p> <p>If you use this value, you must provide the <code>AugmentedManifests</code> parameter in your request.</p> </li>
     /// </ul>
     /// <p>If you don't specify a value, Amazon Comprehend uses <code>COMPREHEND_CSV</code> as the default.</p>
+    #[doc(hidden)]
     pub data_format: std::option::Option<crate::model::EntityRecognizerDataFormat>,
     /// <p>The entity types in the labeled training data that Amazon Comprehend uses to train the custom entity recognizer. Any entity types that you don't specify are ignored.</p>
     /// <p>A maximum of 25 entity types can be used at one time to train an entity recognizer. Entity types must not contain the following invalid characters: \n (line break), \\n (escaped line break), \r (carriage return), \\r (escaped carriage return), \t (tab), \\t (escaped tab), space, and , (comma). </p>
+    #[doc(hidden)]
     pub entity_types: std::option::Option<std::vec::Vec<crate::model::EntityTypesListItem>>,
     /// <p>The S3 location of the folder that contains the training documents for your custom entity recognizer.</p>
     /// <p>This parameter is required if you set <code>DataFormat</code> to <code>COMPREHEND_CSV</code>.</p>
+    #[doc(hidden)]
     pub documents: std::option::Option<crate::model::EntityRecognizerDocuments>,
     /// <p>The S3 location of the CSV file that annotates your training documents.</p>
+    #[doc(hidden)]
     pub annotations: std::option::Option<crate::model::EntityRecognizerAnnotations>,
     /// <p>The S3 location of the CSV file that has the entity list for your custom entity recognizer.</p>
+    #[doc(hidden)]
     pub entity_list: std::option::Option<crate::model::EntityRecognizerEntityList>,
     /// <p>A list of augmented manifest files that provide training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth.</p>
     /// <p>This parameter is required if you set <code>DataFormat</code> to <code>AUGMENTED_MANIFEST</code>.</p>
+    #[doc(hidden)]
     pub augmented_manifests:
         std::option::Option<std::vec::Vec<crate::model::AugmentedManifestsListItem>>,
 }
@@ -5590,11 +5723,10 @@ impl std::fmt::Debug for EntityRecognizerInputDataConfig {
         formatter.finish()
     }
 }
-/// See [`EntityRecognizerInputDataConfig`](crate::model::EntityRecognizerInputDataConfig)
+/// See [`EntityRecognizerInputDataConfig`](crate::model::EntityRecognizerInputDataConfig).
 pub mod entity_recognizer_input_data_config {
 
-    /// A builder for [`EntityRecognizerInputDataConfig`](crate::model::EntityRecognizerInputDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`EntityRecognizerInputDataConfig`](crate::model::EntityRecognizerInputDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_format: std::option::Option<crate::model::EntityRecognizerDataFormat>,
@@ -5716,7 +5848,7 @@ pub mod entity_recognizer_input_data_config {
             self.augmented_manifests = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityRecognizerInputDataConfig`](crate::model::EntityRecognizerInputDataConfig)
+        /// Consumes the builder and constructs a [`EntityRecognizerInputDataConfig`](crate::model::EntityRecognizerInputDataConfig).
         pub fn build(self) -> crate::model::EntityRecognizerInputDataConfig {
             crate::model::EntityRecognizerInputDataConfig {
                 data_format: self.data_format,
@@ -5730,7 +5862,7 @@ pub mod entity_recognizer_input_data_config {
     }
 }
 impl EntityRecognizerInputDataConfig {
-    /// Creates a new builder-style object to manufacture [`EntityRecognizerInputDataConfig`](crate::model::EntityRecognizerInputDataConfig)
+    /// Creates a new builder-style object to manufacture [`EntityRecognizerInputDataConfig`](crate::model::EntityRecognizerInputDataConfig).
     pub fn builder() -> crate::model::entity_recognizer_input_data_config::Builder {
         crate::model::entity_recognizer_input_data_config::Builder::default()
     }
@@ -5741,24 +5873,30 @@ impl EntityRecognizerInputDataConfig {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AugmentedManifestsListItem {
     /// <p>The Amazon S3 location of the augmented manifest file.</p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p>The purpose of the data you've provided in the augmented manifest. You can either train or test this data. If you don't specify, the default is train.</p>
     /// <p>TRAIN - all of the documents in the manifest will be used for training. If no test documents are provided, Amazon Comprehend will automatically reserve a portion of the training documents for testing.</p>
     /// <p> TEST - all of the documents in the manifest will be used for testing.</p>
+    #[doc(hidden)]
     pub split: std::option::Option<crate::model::Split>,
     /// <p>The JSON attribute that contains the annotations for your training documents. The number of attribute names that you specify depends on whether your augmented manifest file is the output of a single labeling job or a chained labeling job.</p>
     /// <p>If your file is the output of a single labeling job, specify the LabelAttributeName key that was used when the job was created in Ground Truth.</p>
     /// <p>If your file is the output of a chained labeling job, specify the LabelAttributeName key for one or more jobs in the chain. Each LabelAttributeName key provides the annotations from an individual job.</p>
+    #[doc(hidden)]
     pub attribute_names: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The S3 prefix to the annotation files that are referred in the augmented manifest file.</p>
+    #[doc(hidden)]
     pub annotation_data_s3_uri: std::option::Option<std::string::String>,
     /// <p>The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.</p>
+    #[doc(hidden)]
     pub source_documents_s3_uri: std::option::Option<std::string::String>,
     /// <p>The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the default is PlainTextDocument. </p>
     /// <ul>
     /// <li> <p> <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in UTF-8.</p> </li>
     /// <li> <p> <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF. For training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support PDFs, DOCX and TXT.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub document_type: std::option::Option<crate::model::AugmentedManifestsDocumentTypeFormat>,
 }
 impl AugmentedManifestsListItem {
@@ -5809,11 +5947,10 @@ impl std::fmt::Debug for AugmentedManifestsListItem {
         formatter.finish()
     }
 }
-/// See [`AugmentedManifestsListItem`](crate::model::AugmentedManifestsListItem)
+/// See [`AugmentedManifestsListItem`](crate::model::AugmentedManifestsListItem).
 pub mod augmented_manifests_list_item {
 
-    /// A builder for [`AugmentedManifestsListItem`](crate::model::AugmentedManifestsListItem)
-    #[non_exhaustive]
+    /// A builder for [`AugmentedManifestsListItem`](crate::model::AugmentedManifestsListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -5922,7 +6059,7 @@ pub mod augmented_manifests_list_item {
             self.document_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`AugmentedManifestsListItem`](crate::model::AugmentedManifestsListItem)
+        /// Consumes the builder and constructs a [`AugmentedManifestsListItem`](crate::model::AugmentedManifestsListItem).
         pub fn build(self) -> crate::model::AugmentedManifestsListItem {
             crate::model::AugmentedManifestsListItem {
                 s3_uri: self.s3_uri,
@@ -5936,7 +6073,7 @@ pub mod augmented_manifests_list_item {
     }
 }
 impl AugmentedManifestsListItem {
-    /// Creates a new builder-style object to manufacture [`AugmentedManifestsListItem`](crate::model::AugmentedManifestsListItem)
+    /// Creates a new builder-style object to manufacture [`AugmentedManifestsListItem`](crate::model::AugmentedManifestsListItem).
     pub fn builder() -> crate::model::augmented_manifests_list_item::Builder {
         crate::model::augmented_manifests_list_item::Builder::default()
     }
@@ -6061,6 +6198,7 @@ impl AsRef<str> for Split {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityRecognizerEntityList {
     /// <p>Specifies the Amazon S3 location where the entity list is located. The URI must be in the same region as the API endpoint that you are calling.</p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
 }
 impl EntityRecognizerEntityList {
@@ -6076,11 +6214,10 @@ impl std::fmt::Debug for EntityRecognizerEntityList {
         formatter.finish()
     }
 }
-/// See [`EntityRecognizerEntityList`](crate::model::EntityRecognizerEntityList)
+/// See [`EntityRecognizerEntityList`](crate::model::EntityRecognizerEntityList).
 pub mod entity_recognizer_entity_list {
 
-    /// A builder for [`EntityRecognizerEntityList`](crate::model::EntityRecognizerEntityList)
-    #[non_exhaustive]
+    /// A builder for [`EntityRecognizerEntityList`](crate::model::EntityRecognizerEntityList).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -6096,7 +6233,7 @@ pub mod entity_recognizer_entity_list {
             self.s3_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityRecognizerEntityList`](crate::model::EntityRecognizerEntityList)
+        /// Consumes the builder and constructs a [`EntityRecognizerEntityList`](crate::model::EntityRecognizerEntityList).
         pub fn build(self) -> crate::model::EntityRecognizerEntityList {
             crate::model::EntityRecognizerEntityList {
                 s3_uri: self.s3_uri,
@@ -6105,7 +6242,7 @@ pub mod entity_recognizer_entity_list {
     }
 }
 impl EntityRecognizerEntityList {
-    /// Creates a new builder-style object to manufacture [`EntityRecognizerEntityList`](crate::model::EntityRecognizerEntityList)
+    /// Creates a new builder-style object to manufacture [`EntityRecognizerEntityList`](crate::model::EntityRecognizerEntityList).
     pub fn builder() -> crate::model::entity_recognizer_entity_list::Builder {
         crate::model::entity_recognizer_entity_list::Builder::default()
     }
@@ -6116,8 +6253,10 @@ impl EntityRecognizerEntityList {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityRecognizerAnnotations {
     /// <p> Specifies the Amazon S3 location where the annotations for an entity recognizer are located. The URI must be in the same region as the API endpoint that you are calling.</p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p>This specifies the Amazon S3 location where the test annotations for an entity recognizer are located. The URI must be in the same AWS Region as the API endpoint that you are calling.</p>
+    #[doc(hidden)]
     pub test_s3_uri: std::option::Option<std::string::String>,
 }
 impl EntityRecognizerAnnotations {
@@ -6138,11 +6277,10 @@ impl std::fmt::Debug for EntityRecognizerAnnotations {
         formatter.finish()
     }
 }
-/// See [`EntityRecognizerAnnotations`](crate::model::EntityRecognizerAnnotations)
+/// See [`EntityRecognizerAnnotations`](crate::model::EntityRecognizerAnnotations).
 pub mod entity_recognizer_annotations {
 
-    /// A builder for [`EntityRecognizerAnnotations`](crate::model::EntityRecognizerAnnotations)
-    #[non_exhaustive]
+    /// A builder for [`EntityRecognizerAnnotations`](crate::model::EntityRecognizerAnnotations).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -6169,7 +6307,7 @@ pub mod entity_recognizer_annotations {
             self.test_s3_uri = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityRecognizerAnnotations`](crate::model::EntityRecognizerAnnotations)
+        /// Consumes the builder and constructs a [`EntityRecognizerAnnotations`](crate::model::EntityRecognizerAnnotations).
         pub fn build(self) -> crate::model::EntityRecognizerAnnotations {
             crate::model::EntityRecognizerAnnotations {
                 s3_uri: self.s3_uri,
@@ -6179,7 +6317,7 @@ pub mod entity_recognizer_annotations {
     }
 }
 impl EntityRecognizerAnnotations {
-    /// Creates a new builder-style object to manufacture [`EntityRecognizerAnnotations`](crate::model::EntityRecognizerAnnotations)
+    /// Creates a new builder-style object to manufacture [`EntityRecognizerAnnotations`](crate::model::EntityRecognizerAnnotations).
     pub fn builder() -> crate::model::entity_recognizer_annotations::Builder {
         crate::model::entity_recognizer_annotations::Builder::default()
     }
@@ -6190,10 +6328,13 @@ impl EntityRecognizerAnnotations {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityRecognizerDocuments {
     /// <p> Specifies the Amazon S3 location where the training documents for an entity recognizer are located. The URI must be in the same region as the API endpoint that you are calling.</p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p> Specifies the Amazon S3 location where the test documents for an entity recognizer are located. The URI must be in the same AWS Region as the API endpoint that you are calling.</p>
+    #[doc(hidden)]
     pub test_s3_uri: std::option::Option<std::string::String>,
     /// <p> Specifies how the text in an input file should be processed. This is optional, and the default is ONE_DOC_PER_LINE. ONE_DOC_PER_FILE - Each file is considered a separate document. Use this option when you are processing large documents, such as newspaper articles or scientific papers. ONE_DOC_PER_LINE - Each line in a file is considered a separate document. Use this option when you are processing many short documents, such as text messages.</p>
+    #[doc(hidden)]
     pub input_format: std::option::Option<crate::model::InputFormat>,
 }
 impl EntityRecognizerDocuments {
@@ -6219,11 +6360,10 @@ impl std::fmt::Debug for EntityRecognizerDocuments {
         formatter.finish()
     }
 }
-/// See [`EntityRecognizerDocuments`](crate::model::EntityRecognizerDocuments)
+/// See [`EntityRecognizerDocuments`](crate::model::EntityRecognizerDocuments).
 pub mod entity_recognizer_documents {
 
-    /// A builder for [`EntityRecognizerDocuments`](crate::model::EntityRecognizerDocuments)
-    #[non_exhaustive]
+    /// A builder for [`EntityRecognizerDocuments`](crate::model::EntityRecognizerDocuments).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -6264,7 +6404,7 @@ pub mod entity_recognizer_documents {
             self.input_format = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityRecognizerDocuments`](crate::model::EntityRecognizerDocuments)
+        /// Consumes the builder and constructs a [`EntityRecognizerDocuments`](crate::model::EntityRecognizerDocuments).
         pub fn build(self) -> crate::model::EntityRecognizerDocuments {
             crate::model::EntityRecognizerDocuments {
                 s3_uri: self.s3_uri,
@@ -6275,7 +6415,7 @@ pub mod entity_recognizer_documents {
     }
 }
 impl EntityRecognizerDocuments {
-    /// Creates a new builder-style object to manufacture [`EntityRecognizerDocuments`](crate::model::EntityRecognizerDocuments)
+    /// Creates a new builder-style object to manufacture [`EntityRecognizerDocuments`](crate::model::EntityRecognizerDocuments).
     pub fn builder() -> crate::model::entity_recognizer_documents::Builder {
         crate::model::entity_recognizer_documents::Builder::default()
     }
@@ -6287,6 +6427,7 @@ impl EntityRecognizerDocuments {
 pub struct EntityTypesListItem {
     /// <p>An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom entity recognizer.</p>
     /// <p>Entity types must not contain the following invalid characters: \n (line break), \\n (escaped line break, \r (carriage return), \\r (escaped carriage return), \t (tab), \\t (escaped tab), space, and , (comma).</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<std::string::String>,
 }
 impl EntityTypesListItem {
@@ -6303,11 +6444,10 @@ impl std::fmt::Debug for EntityTypesListItem {
         formatter.finish()
     }
 }
-/// See [`EntityTypesListItem`](crate::model::EntityTypesListItem)
+/// See [`EntityTypesListItem`](crate::model::EntityTypesListItem).
 pub mod entity_types_list_item {
 
-    /// A builder for [`EntityTypesListItem`](crate::model::EntityTypesListItem)
-    #[non_exhaustive]
+    /// A builder for [`EntityTypesListItem`](crate::model::EntityTypesListItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<std::string::String>,
@@ -6325,7 +6465,7 @@ pub mod entity_types_list_item {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityTypesListItem`](crate::model::EntityTypesListItem)
+        /// Consumes the builder and constructs a [`EntityTypesListItem`](crate::model::EntityTypesListItem).
         pub fn build(self) -> crate::model::EntityTypesListItem {
             crate::model::EntityTypesListItem {
                 r#type: self.r#type,
@@ -6334,7 +6474,7 @@ pub mod entity_types_list_item {
     }
 }
 impl EntityTypesListItem {
-    /// Creates a new builder-style object to manufacture [`EntityTypesListItem`](crate::model::EntityTypesListItem)
+    /// Creates a new builder-style object to manufacture [`EntityTypesListItem`](crate::model::EntityTypesListItem).
     pub fn builder() -> crate::model::entity_types_list_item::Builder {
         crate::model::entity_types_list_item::Builder::default()
     }
@@ -6400,12 +6540,16 @@ impl AsRef<str> for EntityRecognizerDataFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityRecognizerFilter {
     /// <p>The status of an entity recognizer.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ModelStatus>,
     /// <p>The name that you assigned the entity recognizer.</p>
+    #[doc(hidden)]
     pub recognizer_name: std::option::Option<std::string::String>,
     /// <p>Filters the list of entities based on the time that the list was submitted for processing. Returns only jobs submitted before the specified time. Jobs are returned in descending order, newest to oldest.</p>
+    #[doc(hidden)]
     pub submit_time_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Filters the list of entities based on the time that the list was submitted for processing. Returns only jobs submitted after the specified time. Jobs are returned in ascending order, oldest to newest.</p>
+    #[doc(hidden)]
     pub submit_time_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EntityRecognizerFilter {
@@ -6436,11 +6580,10 @@ impl std::fmt::Debug for EntityRecognizerFilter {
         formatter.finish()
     }
 }
-/// See [`EntityRecognizerFilter`](crate::model::EntityRecognizerFilter)
+/// See [`EntityRecognizerFilter`](crate::model::EntityRecognizerFilter).
 pub mod entity_recognizer_filter {
 
-    /// A builder for [`EntityRecognizerFilter`](crate::model::EntityRecognizerFilter)
-    #[non_exhaustive]
+    /// A builder for [`EntityRecognizerFilter`](crate::model::EntityRecognizerFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ModelStatus>,
@@ -6498,7 +6641,7 @@ pub mod entity_recognizer_filter {
             self.submit_time_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityRecognizerFilter`](crate::model::EntityRecognizerFilter)
+        /// Consumes the builder and constructs a [`EntityRecognizerFilter`](crate::model::EntityRecognizerFilter).
         pub fn build(self) -> crate::model::EntityRecognizerFilter {
             crate::model::EntityRecognizerFilter {
                 status: self.status,
@@ -6510,7 +6653,7 @@ pub mod entity_recognizer_filter {
     }
 }
 impl EntityRecognizerFilter {
-    /// Creates a new builder-style object to manufacture [`EntityRecognizerFilter`](crate::model::EntityRecognizerFilter)
+    /// Creates a new builder-style object to manufacture [`EntityRecognizerFilter`](crate::model::EntityRecognizerFilter).
     pub fn builder() -> crate::model::entity_recognizer_filter::Builder {
         crate::model::entity_recognizer_filter::Builder::default()
     }
@@ -6521,6 +6664,7 @@ impl EntityRecognizerFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntitiesDetectionJobProperties {
     /// <p>The identifier assigned to the entities detection job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the entities detection job. It is a unique, fully qualified identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:</p>
     /// <p> <code>arn:
@@ -6536,34 +6680,47 @@ pub struct EntitiesDetectionJobProperties {
     /// </partition></code> </p>
     /// <p>The following is an example job ARN:</p>
     /// <p> <code>arn:aws:comprehend:us-west-2:111122223333:entities-detection-job/1234abcd12ab34cd56ef1234567890ab</code> </p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The name that you assigned the entities detection job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The current status of the entities detection job. If the status is <code>FAILED</code>, the <code>Message</code> field shows the reason for the failure.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>A description of the status of a job.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time that the entities detection job was submitted for processing.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the entities detection job completed</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) that identifies the entity recognizer.</p>
+    #[doc(hidden)]
     pub entity_recognizer_arn: std::option::Option<std::string::String>,
     /// <p>The input data configuration that you supplied when you created the entities detection job.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
     /// <p>The output data configuration that you supplied when you created the entities detection job. </p>
+    #[doc(hidden)]
     pub output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>The language code of the input documents.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The Amazon Resource Name (ARN) that gives Amazon Comprehend read access to your input data.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the following formats:</p>
     /// <ul>
     /// <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub volume_kms_key_id: std::option::Option<std::string::String>,
     /// <p> Configuration parameters for a private Virtual Private Cloud (VPC) containing the resources you are using for your entity detection job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. </p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::VpcConfig>,
 }
 impl EntitiesDetectionJobProperties {
@@ -6661,11 +6818,10 @@ impl std::fmt::Debug for EntitiesDetectionJobProperties {
         formatter.finish()
     }
 }
-/// See [`EntitiesDetectionJobProperties`](crate::model::EntitiesDetectionJobProperties)
+/// See [`EntitiesDetectionJobProperties`](crate::model::EntitiesDetectionJobProperties).
 pub mod entities_detection_job_properties {
 
-    /// A builder for [`EntitiesDetectionJobProperties`](crate::model::EntitiesDetectionJobProperties)
-    #[non_exhaustive]
+    /// A builder for [`EntitiesDetectionJobProperties`](crate::model::EntitiesDetectionJobProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -6888,7 +7044,7 @@ pub mod entities_detection_job_properties {
             self.vpc_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntitiesDetectionJobProperties`](crate::model::EntitiesDetectionJobProperties)
+        /// Consumes the builder and constructs a [`EntitiesDetectionJobProperties`](crate::model::EntitiesDetectionJobProperties).
         pub fn build(self) -> crate::model::EntitiesDetectionJobProperties {
             crate::model::EntitiesDetectionJobProperties {
                 job_id: self.job_id,
@@ -6910,7 +7066,7 @@ pub mod entities_detection_job_properties {
     }
 }
 impl EntitiesDetectionJobProperties {
-    /// Creates a new builder-style object to manufacture [`EntitiesDetectionJobProperties`](crate::model::EntitiesDetectionJobProperties)
+    /// Creates a new builder-style object to manufacture [`EntitiesDetectionJobProperties`](crate::model::EntitiesDetectionJobProperties).
     pub fn builder() -> crate::model::entities_detection_job_properties::Builder {
         crate::model::entities_detection_job_properties::Builder::default()
     }
@@ -6921,12 +7077,16 @@ impl EntitiesDetectionJobProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntitiesDetectionJobFilter {
     /// <p>Filters on the name of the job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>Filters the list of jobs based on job status. Returns only jobs with the specified status.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted before the specified time. Jobs are returned in ascending order, oldest to newest.</p>
+    #[doc(hidden)]
     pub submit_time_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted after the specified time. Jobs are returned in descending order, newest to oldest.</p>
+    #[doc(hidden)]
     pub submit_time_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EntitiesDetectionJobFilter {
@@ -6957,11 +7117,10 @@ impl std::fmt::Debug for EntitiesDetectionJobFilter {
         formatter.finish()
     }
 }
-/// See [`EntitiesDetectionJobFilter`](crate::model::EntitiesDetectionJobFilter)
+/// See [`EntitiesDetectionJobFilter`](crate::model::EntitiesDetectionJobFilter).
 pub mod entities_detection_job_filter {
 
-    /// A builder for [`EntitiesDetectionJobFilter`](crate::model::EntitiesDetectionJobFilter)
-    #[non_exhaustive]
+    /// A builder for [`EntitiesDetectionJobFilter`](crate::model::EntitiesDetectionJobFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -7019,7 +7178,7 @@ pub mod entities_detection_job_filter {
             self.submit_time_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntitiesDetectionJobFilter`](crate::model::EntitiesDetectionJobFilter)
+        /// Consumes the builder and constructs a [`EntitiesDetectionJobFilter`](crate::model::EntitiesDetectionJobFilter).
         pub fn build(self) -> crate::model::EntitiesDetectionJobFilter {
             crate::model::EntitiesDetectionJobFilter {
                 job_name: self.job_name,
@@ -7031,7 +7190,7 @@ pub mod entities_detection_job_filter {
     }
 }
 impl EntitiesDetectionJobFilter {
-    /// Creates a new builder-style object to manufacture [`EntitiesDetectionJobFilter`](crate::model::EntitiesDetectionJobFilter)
+    /// Creates a new builder-style object to manufacture [`EntitiesDetectionJobFilter`](crate::model::EntitiesDetectionJobFilter).
     pub fn builder() -> crate::model::entities_detection_job_filter::Builder {
         crate::model::entities_detection_job_filter::Builder::default()
     }
@@ -7042,26 +7201,37 @@ impl EntitiesDetectionJobFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointProperties {
     /// <p>The Amazon Resource Number (ARN) of the endpoint.</p>
+    #[doc(hidden)]
     pub endpoint_arn: std::option::Option<std::string::String>,
     /// <p>Specifies the status of the endpoint. Because the endpoint updates and creation are asynchronous, so customers will need to wait for the endpoint to be <code>Ready</code> status before making inference requests.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EndpointStatus>,
     /// <p>Specifies a reason for failure in cases of <code>Failed</code> status.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Number (ARN) of the model to which the endpoint is attached.</p>
+    #[doc(hidden)]
     pub model_arn: std::option::Option<std::string::String>,
     /// <p>ARN of the new model to use for updating an existing endpoint. This ARN is going to be different from the model ARN when the update is in progress</p>
+    #[doc(hidden)]
     pub desired_model_arn: std::option::Option<std::string::String>,
     /// <p>The desired number of inference units to be used by the model using this endpoint. Each inference unit represents of a throughput of 100 characters per second.</p>
+    #[doc(hidden)]
     pub desired_inference_units: std::option::Option<i32>,
     /// <p>The number of inference units currently used by the model using this endpoint.</p>
+    #[doc(hidden)]
     pub current_inference_units: std::option::Option<i32>,
     /// <p>The creation date and time of the endpoint.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The date and time that the endpoint was last modified.</p>
+    #[doc(hidden)]
     pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) of the AWS identity and Access Management (IAM) role that grants Amazon Comprehend read access to trained custom models encrypted with a customer managed key (ModelKmsKeyId).</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>Data access role ARN to use in case the new model is encrypted with a customer KMS key.</p>
+    #[doc(hidden)]
     pub desired_data_access_role_arn: std::option::Option<std::string::String>,
 }
 impl EndpointProperties {
@@ -7130,11 +7300,10 @@ impl std::fmt::Debug for EndpointProperties {
         formatter.finish()
     }
 }
-/// See [`EndpointProperties`](crate::model::EndpointProperties)
+/// See [`EndpointProperties`](crate::model::EndpointProperties).
 pub mod endpoint_properties {
 
-    /// A builder for [`EndpointProperties`](crate::model::EndpointProperties)
-    #[non_exhaustive]
+    /// A builder for [`EndpointProperties`](crate::model::EndpointProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) endpoint_arn: std::option::Option<std::string::String>,
@@ -7281,7 +7450,7 @@ pub mod endpoint_properties {
             self.desired_data_access_role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointProperties`](crate::model::EndpointProperties)
+        /// Consumes the builder and constructs a [`EndpointProperties`](crate::model::EndpointProperties).
         pub fn build(self) -> crate::model::EndpointProperties {
             crate::model::EndpointProperties {
                 endpoint_arn: self.endpoint_arn,
@@ -7300,7 +7469,7 @@ pub mod endpoint_properties {
     }
 }
 impl EndpointProperties {
-    /// Creates a new builder-style object to manufacture [`EndpointProperties`](crate::model::EndpointProperties)
+    /// Creates a new builder-style object to manufacture [`EndpointProperties`](crate::model::EndpointProperties).
     pub fn builder() -> crate::model::endpoint_properties::Builder {
         crate::model::endpoint_properties::Builder::default()
     }
@@ -7378,12 +7547,16 @@ impl AsRef<str> for EndpointStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EndpointFilter {
     /// <p>The Amazon Resource Number (ARN) of the model to which the endpoint is attached.</p>
+    #[doc(hidden)]
     pub model_arn: std::option::Option<std::string::String>,
     /// <p>Specifies the status of the endpoint being returned. Possible values are: Creating, Ready, Updating, Deleting, Failed.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::EndpointStatus>,
     /// <p>Specifies a date before which the returned endpoint or endpoints were created.</p>
+    #[doc(hidden)]
     pub creation_time_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies a date after which the returned endpoint or endpoints were created.</p>
+    #[doc(hidden)]
     pub creation_time_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl EndpointFilter {
@@ -7414,11 +7587,10 @@ impl std::fmt::Debug for EndpointFilter {
         formatter.finish()
     }
 }
-/// See [`EndpointFilter`](crate::model::EndpointFilter)
+/// See [`EndpointFilter`](crate::model::EndpointFilter).
 pub mod endpoint_filter {
 
-    /// A builder for [`EndpointFilter`](crate::model::EndpointFilter)
-    #[non_exhaustive]
+    /// A builder for [`EndpointFilter`](crate::model::EndpointFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_arn: std::option::Option<std::string::String>,
@@ -7476,7 +7648,7 @@ pub mod endpoint_filter {
             self.creation_time_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`EndpointFilter`](crate::model::EndpointFilter)
+        /// Consumes the builder and constructs a [`EndpointFilter`](crate::model::EndpointFilter).
         pub fn build(self) -> crate::model::EndpointFilter {
             crate::model::EndpointFilter {
                 model_arn: self.model_arn,
@@ -7488,7 +7660,7 @@ pub mod endpoint_filter {
     }
 }
 impl EndpointFilter {
-    /// Creates a new builder-style object to manufacture [`EndpointFilter`](crate::model::EndpointFilter)
+    /// Creates a new builder-style object to manufacture [`EndpointFilter`](crate::model::EndpointFilter).
     pub fn builder() -> crate::model::endpoint_filter::Builder {
         crate::model::endpoint_filter::Builder::default()
     }
@@ -7499,6 +7671,7 @@ impl EndpointFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DominantLanguageDetectionJobProperties {
     /// <p>The identifier assigned to the dominant language detection job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:</p>
     /// <p> <code>arn:
@@ -7514,30 +7687,41 @@ pub struct DominantLanguageDetectionJobProperties {
     /// </partition></code> </p>
     /// <p>The following is an example job ARN:</p>
     /// <p> <code>arn:aws:comprehend:us-west-2:111122223333:dominant-language-detection-job/1234abcd12ab34cd56ef1234567890ab</code> </p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The name that you assigned to the dominant language detection job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The current status of the dominant language detection job. If the status is <code>FAILED</code>, the <code>Message</code> field shows the reason for the failure.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>A description for the status of a job.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time that the dominant language detection job was submitted for processing.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the dominant language detection job completed.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The input data configuration that you supplied when you created the dominant language detection job.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
     /// <p>The output data configuration that you supplied when you created the dominant language detection job.</p>
+    #[doc(hidden)]
     pub output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>The Amazon Resource Name (ARN) that gives Amazon Comprehend read access to your input data.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the following formats:</p>
     /// <ul>
     /// <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub volume_kms_key_id: std::option::Option<std::string::String>,
     /// <p> Configuration parameters for a private Virtual Private Cloud (VPC) containing the resources you are using for your dominant language detection job. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. </p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::VpcConfig>,
 }
 impl DominantLanguageDetectionJobProperties {
@@ -7625,11 +7809,10 @@ impl std::fmt::Debug for DominantLanguageDetectionJobProperties {
         formatter.finish()
     }
 }
-/// See [`DominantLanguageDetectionJobProperties`](crate::model::DominantLanguageDetectionJobProperties)
+/// See [`DominantLanguageDetectionJobProperties`](crate::model::DominantLanguageDetectionJobProperties).
 pub mod dominant_language_detection_job_properties {
 
-    /// A builder for [`DominantLanguageDetectionJobProperties`](crate::model::DominantLanguageDetectionJobProperties)
-    #[non_exhaustive]
+    /// A builder for [`DominantLanguageDetectionJobProperties`](crate::model::DominantLanguageDetectionJobProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -7824,7 +8007,7 @@ pub mod dominant_language_detection_job_properties {
             self.vpc_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`DominantLanguageDetectionJobProperties`](crate::model::DominantLanguageDetectionJobProperties)
+        /// Consumes the builder and constructs a [`DominantLanguageDetectionJobProperties`](crate::model::DominantLanguageDetectionJobProperties).
         pub fn build(self) -> crate::model::DominantLanguageDetectionJobProperties {
             crate::model::DominantLanguageDetectionJobProperties {
                 job_id: self.job_id,
@@ -7844,7 +8027,7 @@ pub mod dominant_language_detection_job_properties {
     }
 }
 impl DominantLanguageDetectionJobProperties {
-    /// Creates a new builder-style object to manufacture [`DominantLanguageDetectionJobProperties`](crate::model::DominantLanguageDetectionJobProperties)
+    /// Creates a new builder-style object to manufacture [`DominantLanguageDetectionJobProperties`](crate::model::DominantLanguageDetectionJobProperties).
     pub fn builder() -> crate::model::dominant_language_detection_job_properties::Builder {
         crate::model::dominant_language_detection_job_properties::Builder::default()
     }
@@ -7855,12 +8038,16 @@ impl DominantLanguageDetectionJobProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DominantLanguageDetectionJobFilter {
     /// <p>Filters on the name of the job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>Filters the list of jobs based on job status. Returns only jobs with the specified status.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted before the specified time. Jobs are returned in ascending order, oldest to newest.</p>
+    #[doc(hidden)]
     pub submit_time_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted after the specified time. Jobs are returned in descending order, newest to oldest.</p>
+    #[doc(hidden)]
     pub submit_time_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DominantLanguageDetectionJobFilter {
@@ -7891,11 +8078,10 @@ impl std::fmt::Debug for DominantLanguageDetectionJobFilter {
         formatter.finish()
     }
 }
-/// See [`DominantLanguageDetectionJobFilter`](crate::model::DominantLanguageDetectionJobFilter)
+/// See [`DominantLanguageDetectionJobFilter`](crate::model::DominantLanguageDetectionJobFilter).
 pub mod dominant_language_detection_job_filter {
 
-    /// A builder for [`DominantLanguageDetectionJobFilter`](crate::model::DominantLanguageDetectionJobFilter)
-    #[non_exhaustive]
+    /// A builder for [`DominantLanguageDetectionJobFilter`](crate::model::DominantLanguageDetectionJobFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -7953,7 +8139,7 @@ pub mod dominant_language_detection_job_filter {
             self.submit_time_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`DominantLanguageDetectionJobFilter`](crate::model::DominantLanguageDetectionJobFilter)
+        /// Consumes the builder and constructs a [`DominantLanguageDetectionJobFilter`](crate::model::DominantLanguageDetectionJobFilter).
         pub fn build(self) -> crate::model::DominantLanguageDetectionJobFilter {
             crate::model::DominantLanguageDetectionJobFilter {
                 job_name: self.job_name,
@@ -7965,7 +8151,7 @@ pub mod dominant_language_detection_job_filter {
     }
 }
 impl DominantLanguageDetectionJobFilter {
-    /// Creates a new builder-style object to manufacture [`DominantLanguageDetectionJobFilter`](crate::model::DominantLanguageDetectionJobFilter)
+    /// Creates a new builder-style object to manufacture [`DominantLanguageDetectionJobFilter`](crate::model::DominantLanguageDetectionJobFilter).
     pub fn builder() -> crate::model::dominant_language_detection_job_filter::Builder {
         crate::model::dominant_language_detection_job_filter::Builder::default()
     }
@@ -7976,14 +8162,19 @@ impl DominantLanguageDetectionJobFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentClassifierSummary {
     /// <p>The name that you assigned the document classifier.</p>
+    #[doc(hidden)]
     pub document_classifier_name: std::option::Option<std::string::String>,
     /// <p>The number of versions you created.</p>
+    #[doc(hidden)]
     pub number_of_versions: std::option::Option<i32>,
     /// <p>The time that the latest document classifier version was submitted for processing.</p>
+    #[doc(hidden)]
     pub latest_version_created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The version name you assigned to the latest document classifier version.</p>
+    #[doc(hidden)]
     pub latest_version_name: std::option::Option<std::string::String>,
     /// <p>Provides the status of the latest document classifier version.</p>
+    #[doc(hidden)]
     pub latest_version_status: std::option::Option<crate::model::ModelStatus>,
 }
 impl DocumentClassifierSummary {
@@ -8019,11 +8210,10 @@ impl std::fmt::Debug for DocumentClassifierSummary {
         formatter.finish()
     }
 }
-/// See [`DocumentClassifierSummary`](crate::model::DocumentClassifierSummary)
+/// See [`DocumentClassifierSummary`](crate::model::DocumentClassifierSummary).
 pub mod document_classifier_summary {
 
-    /// A builder for [`DocumentClassifierSummary`](crate::model::DocumentClassifierSummary)
-    #[non_exhaustive]
+    /// A builder for [`DocumentClassifierSummary`](crate::model::DocumentClassifierSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) document_classifier_name: std::option::Option<std::string::String>,
@@ -8095,7 +8285,7 @@ pub mod document_classifier_summary {
             self.latest_version_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentClassifierSummary`](crate::model::DocumentClassifierSummary)
+        /// Consumes the builder and constructs a [`DocumentClassifierSummary`](crate::model::DocumentClassifierSummary).
         pub fn build(self) -> crate::model::DocumentClassifierSummary {
             crate::model::DocumentClassifierSummary {
                 document_classifier_name: self.document_classifier_name,
@@ -8108,7 +8298,7 @@ pub mod document_classifier_summary {
     }
 }
 impl DocumentClassifierSummary {
-    /// Creates a new builder-style object to manufacture [`DocumentClassifierSummary`](crate::model::DocumentClassifierSummary)
+    /// Creates a new builder-style object to manufacture [`DocumentClassifierSummary`](crate::model::DocumentClassifierSummary).
     pub fn builder() -> crate::model::document_classifier_summary::Builder {
         crate::model::document_classifier_summary::Builder::default()
     }
@@ -8119,48 +8309,66 @@ impl DocumentClassifierSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentClassifierProperties {
     /// <p>The Amazon Resource Name (ARN) that identifies the document classifier.</p>
+    #[doc(hidden)]
     pub document_classifier_arn: std::option::Option<std::string::String>,
     /// <p>The language code for the language of the documents that the classifier was trained on.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<crate::model::LanguageCode>,
     /// <p>The status of the document classifier. If the status is <code>TRAINED</code> the classifier is ready to use. If the status is <code>FAILED</code> you can see additional information about why the classifier wasn't trained in the <code>Message</code> field.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ModelStatus>,
     /// <p>Additional information about the status of the classifier.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time that the document classifier was submitted for training.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that training the document classifier completed.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Indicates the time when the training starts on documentation classifiers. You are billed for the time interval between this time and the value of TrainingEndTime. </p>
+    #[doc(hidden)]
     pub training_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that training of the document classifier was completed. Indicates the time when the training completes on documentation classifiers. You are billed for the time interval between this time and the value of TrainingStartTime.</p>
+    #[doc(hidden)]
     pub training_end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The input data configuration that you supplied when you created the document classifier for training.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::DocumentClassifierInputDataConfig>,
     /// <p> Provides output results configuration parameters for custom classifier jobs.</p>
+    #[doc(hidden)]
     pub output_data_config: std::option::Option<crate::model::DocumentClassifierOutputDataConfig>,
     /// <p>Information about the document classifier, including the number of documents used for training the classifier, the number of documents used for test the classifier, and an accuracy rating.</p>
+    #[doc(hidden)]
     pub classifier_metadata: std::option::Option<crate::model::ClassifierMetadata>,
     /// <p>The Amazon Resource Name (ARN) of the AWS Identity and Management (IAM) role that grants Amazon Comprehend read access to your input data.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the following formats:</p>
     /// <ul>
     /// <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub volume_kms_key_id: std::option::Option<std::string::String>,
     /// <p> Configuration parameters for a private Virtual Private Cloud (VPC) containing the resources you are using for your custom classifier. For more information, see <a href="https://docs.aws.amazon.com/vppc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. </p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::VpcConfig>,
     /// <p>Indicates the mode in which the specific classifier was trained. This also indicates the format of input documents and the format of the confusion matrix. Each classifier can only be trained in one mode and this cannot be changed once the classifier is trained.</p>
+    #[doc(hidden)]
     pub mode: std::option::Option<crate::model::DocumentClassifierMode>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either of the following formats:</p>
     /// <ul>
     /// <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub model_kms_key_id: std::option::Option<std::string::String>,
     /// <p>The version name that you assigned to the document classifier.</p>
+    #[doc(hidden)]
     pub version_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account to create the document classifier model in your AWS account.</p>
+    #[doc(hidden)]
     pub source_model_arn: std::option::Option<std::string::String>,
 }
 impl DocumentClassifierProperties {
@@ -8273,11 +8481,10 @@ impl std::fmt::Debug for DocumentClassifierProperties {
         formatter.finish()
     }
 }
-/// See [`DocumentClassifierProperties`](crate::model::DocumentClassifierProperties)
+/// See [`DocumentClassifierProperties`](crate::model::DocumentClassifierProperties).
 pub mod document_classifier_properties {
 
-    /// A builder for [`DocumentClassifierProperties`](crate::model::DocumentClassifierProperties)
-    #[non_exhaustive]
+    /// A builder for [`DocumentClassifierProperties`](crate::model::DocumentClassifierProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) document_classifier_arn: std::option::Option<std::string::String>,
@@ -8549,7 +8756,7 @@ pub mod document_classifier_properties {
             self.source_model_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentClassifierProperties`](crate::model::DocumentClassifierProperties)
+        /// Consumes the builder and constructs a [`DocumentClassifierProperties`](crate::model::DocumentClassifierProperties).
         pub fn build(self) -> crate::model::DocumentClassifierProperties {
             crate::model::DocumentClassifierProperties {
                 document_classifier_arn: self.document_classifier_arn,
@@ -8575,7 +8782,7 @@ pub mod document_classifier_properties {
     }
 }
 impl DocumentClassifierProperties {
-    /// Creates a new builder-style object to manufacture [`DocumentClassifierProperties`](crate::model::DocumentClassifierProperties)
+    /// Creates a new builder-style object to manufacture [`DocumentClassifierProperties`](crate::model::DocumentClassifierProperties).
     pub fn builder() -> crate::model::document_classifier_properties::Builder {
         crate::model::document_classifier_properties::Builder::default()
     }
@@ -8641,12 +8848,16 @@ impl AsRef<str> for DocumentClassifierMode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClassifierMetadata {
     /// <p>The number of labels in the input data. </p>
+    #[doc(hidden)]
     pub number_of_labels: std::option::Option<i32>,
     /// <p>The number of documents in the input data that were used to train the classifier. Typically this is 80 to 90 percent of the input documents.</p>
+    #[doc(hidden)]
     pub number_of_trained_documents: std::option::Option<i32>,
     /// <p>The number of documents in the input data that were used to test the classifier. Typically this is 10 to 20 percent of the input documents, up to 10,000 documents.</p>
+    #[doc(hidden)]
     pub number_of_test_documents: std::option::Option<i32>,
     /// <p> Describes the result metrics for the test data associated with an documentation classifier.</p>
+    #[doc(hidden)]
     pub evaluation_metrics: std::option::Option<crate::model::ClassifierEvaluationMetrics>,
 }
 impl ClassifierMetadata {
@@ -8682,11 +8893,10 @@ impl std::fmt::Debug for ClassifierMetadata {
         formatter.finish()
     }
 }
-/// See [`ClassifierMetadata`](crate::model::ClassifierMetadata)
+/// See [`ClassifierMetadata`](crate::model::ClassifierMetadata).
 pub mod classifier_metadata {
 
-    /// A builder for [`ClassifierMetadata`](crate::model::ClassifierMetadata)
-    #[non_exhaustive]
+    /// A builder for [`ClassifierMetadata`](crate::model::ClassifierMetadata).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) number_of_labels: std::option::Option<i32>,
@@ -8742,7 +8952,7 @@ pub mod classifier_metadata {
             self.evaluation_metrics = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClassifierMetadata`](crate::model::ClassifierMetadata)
+        /// Consumes the builder and constructs a [`ClassifierMetadata`](crate::model::ClassifierMetadata).
         pub fn build(self) -> crate::model::ClassifierMetadata {
             crate::model::ClassifierMetadata {
                 number_of_labels: self.number_of_labels,
@@ -8754,7 +8964,7 @@ pub mod classifier_metadata {
     }
 }
 impl ClassifierMetadata {
-    /// Creates a new builder-style object to manufacture [`ClassifierMetadata`](crate::model::ClassifierMetadata)
+    /// Creates a new builder-style object to manufacture [`ClassifierMetadata`](crate::model::ClassifierMetadata).
     pub fn builder() -> crate::model::classifier_metadata::Builder {
         crate::model::classifier_metadata::Builder::default()
     }
@@ -8765,20 +8975,28 @@ impl ClassifierMetadata {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClassifierEvaluationMetrics {
     /// <p>The fraction of the labels that were correct recognized. It is computed by dividing the number of labels in the test documents that were correctly recognized by the total number of labels in the test documents.</p>
+    #[doc(hidden)]
     pub accuracy: std::option::Option<f64>,
     /// <p>A measure of the usefulness of the classifier results in the test data. High precision means that the classifier returned substantially more relevant results than irrelevant ones.</p>
+    #[doc(hidden)]
     pub precision: std::option::Option<f64>,
     /// <p>A measure of how complete the classifier results are for the test data. High recall means that the classifier returned most of the relevant results. </p>
+    #[doc(hidden)]
     pub recall: std::option::Option<f64>,
     /// <p>A measure of how accurate the classifier results are for the test data. It is derived from the <code>Precision</code> and <code>Recall</code> values. The <code>F1Score</code> is the harmonic average of the two scores. The highest score is 1, and the worst score is 0. </p>
+    #[doc(hidden)]
     pub f1_score: std::option::Option<f64>,
     /// <p>A measure of the usefulness of the recognizer results in the test data. High precision means that the recognizer returned substantially more relevant results than irrelevant ones. Unlike the Precision metric which comes from averaging the precision of all available labels, this is based on the overall score of all precision scores added together.</p>
+    #[doc(hidden)]
     pub micro_precision: std::option::Option<f64>,
     /// <p>A measure of how complete the classifier results are for the test data. High recall means that the classifier returned most of the relevant results. Specifically, this indicates how many of the correct categories in the text that the model can predict. It is a percentage of correct categories in the text that can found. Instead of averaging the recall scores of all labels (as with Recall), micro Recall is based on the overall score of all recall scores added together.</p>
+    #[doc(hidden)]
     pub micro_recall: std::option::Option<f64>,
     /// <p>A measure of how accurate the classifier results are for the test data. It is a combination of the <code>Micro Precision</code> and <code>Micro Recall</code> values. The <code>Micro F1Score</code> is the harmonic mean of the two scores. The highest score is 1, and the worst score is 0.</p>
+    #[doc(hidden)]
     pub micro_f1_score: std::option::Option<f64>,
     /// <p>Indicates the fraction of labels that are incorrectly predicted. Also seen as the fraction of wrong labels compared to the total number of labels. Scores closer to zero are better.</p>
+    #[doc(hidden)]
     pub hamming_loss: std::option::Option<f64>,
 }
 impl ClassifierEvaluationMetrics {
@@ -8829,11 +9047,10 @@ impl std::fmt::Debug for ClassifierEvaluationMetrics {
         formatter.finish()
     }
 }
-/// See [`ClassifierEvaluationMetrics`](crate::model::ClassifierEvaluationMetrics)
+/// See [`ClassifierEvaluationMetrics`](crate::model::ClassifierEvaluationMetrics).
 pub mod classifier_evaluation_metrics {
 
-    /// A builder for [`ClassifierEvaluationMetrics`](crate::model::ClassifierEvaluationMetrics)
-    #[non_exhaustive]
+    /// A builder for [`ClassifierEvaluationMetrics`](crate::model::ClassifierEvaluationMetrics).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) accuracy: std::option::Option<f64>,
@@ -8926,7 +9143,7 @@ pub mod classifier_evaluation_metrics {
             self.hamming_loss = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClassifierEvaluationMetrics`](crate::model::ClassifierEvaluationMetrics)
+        /// Consumes the builder and constructs a [`ClassifierEvaluationMetrics`](crate::model::ClassifierEvaluationMetrics).
         pub fn build(self) -> crate::model::ClassifierEvaluationMetrics {
             crate::model::ClassifierEvaluationMetrics {
                 accuracy: self.accuracy,
@@ -8942,7 +9159,7 @@ pub mod classifier_evaluation_metrics {
     }
 }
 impl ClassifierEvaluationMetrics {
-    /// Creates a new builder-style object to manufacture [`ClassifierEvaluationMetrics`](crate::model::ClassifierEvaluationMetrics)
+    /// Creates a new builder-style object to manufacture [`ClassifierEvaluationMetrics`](crate::model::ClassifierEvaluationMetrics).
     pub fn builder() -> crate::model::classifier_evaluation_metrics::Builder {
         crate::model::classifier_evaluation_metrics::Builder::default()
     }
@@ -8954,6 +9171,7 @@ impl ClassifierEvaluationMetrics {
 pub struct DocumentClassifierOutputDataConfig {
     /// <p>When you use the <code>OutputDataConfig</code> object while creating a custom classifier, you specify the Amazon S3 location where you want to write the confusion matrix. The URI must be in the same region as the API endpoint that you are calling. The location is used as the prefix for the actual location of this output file.</p>
     /// <p>When the custom classifier job is finished, the service creates the output file in a directory specific to the job. The <code>S3Uri</code> field contains the location of the output file, called <code>output.tar.gz</code>. It is a compressed archive that contains the confusion matrix.</p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results from an analysis job. The KmsKeyId can be one of the following formats:</p>
     /// <ul>
@@ -8962,6 +9180,7 @@ pub struct DocumentClassifierOutputDataConfig {
     /// <li> <p>KMS Key Alias: <code>"alias/ExampleAlias"</code> </p> </li>
     /// <li> <p>ARN of a KMS Key Alias: <code>"arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub kms_key_id: std::option::Option<std::string::String>,
 }
 impl DocumentClassifierOutputDataConfig {
@@ -8989,11 +9208,10 @@ impl std::fmt::Debug for DocumentClassifierOutputDataConfig {
         formatter.finish()
     }
 }
-/// See [`DocumentClassifierOutputDataConfig`](crate::model::DocumentClassifierOutputDataConfig)
+/// See [`DocumentClassifierOutputDataConfig`](crate::model::DocumentClassifierOutputDataConfig).
 pub mod document_classifier_output_data_config {
 
-    /// A builder for [`DocumentClassifierOutputDataConfig`](crate::model::DocumentClassifierOutputDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`DocumentClassifierOutputDataConfig`](crate::model::DocumentClassifierOutputDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -9034,7 +9252,7 @@ pub mod document_classifier_output_data_config {
             self.kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentClassifierOutputDataConfig`](crate::model::DocumentClassifierOutputDataConfig)
+        /// Consumes the builder and constructs a [`DocumentClassifierOutputDataConfig`](crate::model::DocumentClassifierOutputDataConfig).
         pub fn build(self) -> crate::model::DocumentClassifierOutputDataConfig {
             crate::model::DocumentClassifierOutputDataConfig {
                 s3_uri: self.s3_uri,
@@ -9044,7 +9262,7 @@ pub mod document_classifier_output_data_config {
     }
 }
 impl DocumentClassifierOutputDataConfig {
-    /// Creates a new builder-style object to manufacture [`DocumentClassifierOutputDataConfig`](crate::model::DocumentClassifierOutputDataConfig)
+    /// Creates a new builder-style object to manufacture [`DocumentClassifierOutputDataConfig`](crate::model::DocumentClassifierOutputDataConfig).
     pub fn builder() -> crate::model::document_classifier_output_data_config::Builder {
         crate::model::document_classifier_output_data_config::Builder::default()
     }
@@ -9061,17 +9279,22 @@ pub struct DocumentClassifierInputDataConfig {
     /// <li> <p> <code>AUGMENTED_MANIFEST</code>: A labeled dataset that is produced by Amazon SageMaker Ground Truth. This file is in JSON lines format. Each line is a complete JSON object that contains a training document and its associated labels. </p> <p>If you use this value, you must provide the <code>AugmentedManifests</code> parameter in your request.</p> </li>
     /// </ul>
     /// <p>If you don't specify a value, Amazon Comprehend uses <code>COMPREHEND_CSV</code> as the default.</p>
+    #[doc(hidden)]
     pub data_format: std::option::Option<crate::model::DocumentClassifierDataFormat>,
     /// <p>The Amazon S3 URI for the input data. The S3 bucket must be in the same region as the API endpoint that you are calling. The URI can point to a single input file or it can provide the prefix for a collection of input files.</p>
     /// <p>For example, if you use the URI <code>S3://bucketName/prefix</code>, if the prefix is a single file, Amazon Comprehend uses that file as input. If more than one file begins with the prefix, Amazon Comprehend uses all of them as input.</p>
     /// <p>This parameter is required if you set <code>DataFormat</code> to <code>COMPREHEND_CSV</code>.</p>
+    #[doc(hidden)]
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p>The Amazon S3 URI for the input data. The Amazon S3 bucket must be in the same AWS Region as the API endpoint that you are calling. The URI can point to a single input file or it can provide the prefix for a collection of input files. </p>
+    #[doc(hidden)]
     pub test_s3_uri: std::option::Option<std::string::String>,
     /// <p>Indicates the delimiter used to separate each label for training a multi-label classifier. The default delimiter between labels is a pipe (|). You can use a different character as a delimiter (if it's an allowed character) by specifying it under Delimiter for labels. If the training documents use a delimiter other than the default or the delimiter you specify, the labels on that line will be combined to make a single unique label, such as LABELLABELLABEL.</p>
+    #[doc(hidden)]
     pub label_delimiter: std::option::Option<std::string::String>,
     /// <p>A list of augmented manifest files that provide training data for your custom model. An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground Truth.</p>
     /// <p>This parameter is required if you set <code>DataFormat</code> to <code>AUGMENTED_MANIFEST</code>.</p>
+    #[doc(hidden)]
     pub augmented_manifests:
         std::option::Option<std::vec::Vec<crate::model::AugmentedManifestsListItem>>,
 }
@@ -9118,11 +9341,10 @@ impl std::fmt::Debug for DocumentClassifierInputDataConfig {
         formatter.finish()
     }
 }
-/// See [`DocumentClassifierInputDataConfig`](crate::model::DocumentClassifierInputDataConfig)
+/// See [`DocumentClassifierInputDataConfig`](crate::model::DocumentClassifierInputDataConfig).
 pub mod document_classifier_input_data_config {
 
-    /// A builder for [`DocumentClassifierInputDataConfig`](crate::model::DocumentClassifierInputDataConfig)
-    #[non_exhaustive]
+    /// A builder for [`DocumentClassifierInputDataConfig`](crate::model::DocumentClassifierInputDataConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) data_format: std::option::Option<crate::model::DocumentClassifierDataFormat>,
@@ -9217,7 +9439,7 @@ pub mod document_classifier_input_data_config {
             self.augmented_manifests = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentClassifierInputDataConfig`](crate::model::DocumentClassifierInputDataConfig)
+        /// Consumes the builder and constructs a [`DocumentClassifierInputDataConfig`](crate::model::DocumentClassifierInputDataConfig).
         pub fn build(self) -> crate::model::DocumentClassifierInputDataConfig {
             crate::model::DocumentClassifierInputDataConfig {
                 data_format: self.data_format,
@@ -9230,7 +9452,7 @@ pub mod document_classifier_input_data_config {
     }
 }
 impl DocumentClassifierInputDataConfig {
-    /// Creates a new builder-style object to manufacture [`DocumentClassifierInputDataConfig`](crate::model::DocumentClassifierInputDataConfig)
+    /// Creates a new builder-style object to manufacture [`DocumentClassifierInputDataConfig`](crate::model::DocumentClassifierInputDataConfig).
     pub fn builder() -> crate::model::document_classifier_input_data_config::Builder {
         crate::model::document_classifier_input_data_config::Builder::default()
     }
@@ -9296,12 +9518,16 @@ impl AsRef<str> for DocumentClassifierDataFormat {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentClassifierFilter {
     /// <p>Filters the list of classifiers based on status.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ModelStatus>,
     /// <p>The name that you assigned to the document classifier</p>
+    #[doc(hidden)]
     pub document_classifier_name: std::option::Option<std::string::String>,
     /// <p>Filters the list of classifiers based on the time that the classifier was submitted for processing. Returns only classifiers submitted before the specified time. Classifiers are returned in ascending order, oldest to newest.</p>
+    #[doc(hidden)]
     pub submit_time_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Filters the list of classifiers based on the time that the classifier was submitted for processing. Returns only classifiers submitted after the specified time. Classifiers are returned in descending order, newest to oldest.</p>
+    #[doc(hidden)]
     pub submit_time_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DocumentClassifierFilter {
@@ -9332,11 +9558,10 @@ impl std::fmt::Debug for DocumentClassifierFilter {
         formatter.finish()
     }
 }
-/// See [`DocumentClassifierFilter`](crate::model::DocumentClassifierFilter)
+/// See [`DocumentClassifierFilter`](crate::model::DocumentClassifierFilter).
 pub mod document_classifier_filter {
 
-    /// A builder for [`DocumentClassifierFilter`](crate::model::DocumentClassifierFilter)
-    #[non_exhaustive]
+    /// A builder for [`DocumentClassifierFilter`](crate::model::DocumentClassifierFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::ModelStatus>,
@@ -9394,7 +9619,7 @@ pub mod document_classifier_filter {
             self.submit_time_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentClassifierFilter`](crate::model::DocumentClassifierFilter)
+        /// Consumes the builder and constructs a [`DocumentClassifierFilter`](crate::model::DocumentClassifierFilter).
         pub fn build(self) -> crate::model::DocumentClassifierFilter {
             crate::model::DocumentClassifierFilter {
                 status: self.status,
@@ -9406,7 +9631,7 @@ pub mod document_classifier_filter {
     }
 }
 impl DocumentClassifierFilter {
-    /// Creates a new builder-style object to manufacture [`DocumentClassifierFilter`](crate::model::DocumentClassifierFilter)
+    /// Creates a new builder-style object to manufacture [`DocumentClassifierFilter`](crate::model::DocumentClassifierFilter).
     pub fn builder() -> crate::model::document_classifier_filter::Builder {
         crate::model::document_classifier_filter::Builder::default()
     }
@@ -9417,6 +9642,7 @@ impl DocumentClassifierFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentClassificationJobProperties {
     /// <p>The identifier assigned to the document classification job.</p>
+    #[doc(hidden)]
     pub job_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the document classification job. It is a unique, fully qualified identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:</p>
     /// <p> <code>arn:
@@ -9432,32 +9658,44 @@ pub struct DocumentClassificationJobProperties {
     /// </partition></code> </p>
     /// <p>The following is an example job ARN:</p>
     /// <p> <code>arn:aws:comprehend:us-west-2:111122223333:document-classification-job/1234abcd12ab34cd56ef1234567890ab</code> </p>
+    #[doc(hidden)]
     pub job_arn: std::option::Option<std::string::String>,
     /// <p>The name that you assigned to the document classification job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The current status of the document classification job. If the status is <code>FAILED</code>, the <code>Message</code> field shows the reason for the failure.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>A description of the status of the job.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>The time that the document classification job was submitted for processing.</p>
+    #[doc(hidden)]
     pub submit_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the document classification job completed.</p>
+    #[doc(hidden)]
     pub end_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Amazon Resource Name (ARN) that identifies the document classifier. </p>
+    #[doc(hidden)]
     pub document_classifier_arn: std::option::Option<std::string::String>,
     /// <p>The input data configuration that you supplied when you created the document classification job.</p>
+    #[doc(hidden)]
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
     /// <p>The output data configuration that you supplied when you created the document classification job.</p>
+    #[doc(hidden)]
     pub output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>The Amazon Resource Name (ARN) of the AWS identity and Access Management (IAM) role that grants Amazon Comprehend read access to your input data.</p>
+    #[doc(hidden)]
     pub data_access_role_arn: std::option::Option<std::string::String>,
     /// <p>ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the following formats:</p>
     /// <ul>
     /// <li> <p>KMS Key ID: <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// <li> <p>Amazon Resource Name (ARN) of a KMS Key: <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code> </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub volume_kms_key_id: std::option::Option<std::string::String>,
     /// <p> Configuration parameters for a private Virtual Private Cloud (VPC) containing the resources you are using for your document classification job. For more information, see <a href="https://docs.aws.amazon.com/vppc/latest/userguide/what-is-amazon-vpc.html">Amazon VPC</a>. </p>
+    #[doc(hidden)]
     pub vpc_config: std::option::Option<crate::model::VpcConfig>,
 }
 impl DocumentClassificationJobProperties {
@@ -9550,11 +9788,10 @@ impl std::fmt::Debug for DocumentClassificationJobProperties {
         formatter.finish()
     }
 }
-/// See [`DocumentClassificationJobProperties`](crate::model::DocumentClassificationJobProperties)
+/// See [`DocumentClassificationJobProperties`](crate::model::DocumentClassificationJobProperties).
 pub mod document_classification_job_properties {
 
-    /// A builder for [`DocumentClassificationJobProperties`](crate::model::DocumentClassificationJobProperties)
-    #[non_exhaustive]
+    /// A builder for [`DocumentClassificationJobProperties`](crate::model::DocumentClassificationJobProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -9763,7 +10000,7 @@ pub mod document_classification_job_properties {
             self.vpc_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentClassificationJobProperties`](crate::model::DocumentClassificationJobProperties)
+        /// Consumes the builder and constructs a [`DocumentClassificationJobProperties`](crate::model::DocumentClassificationJobProperties).
         pub fn build(self) -> crate::model::DocumentClassificationJobProperties {
             crate::model::DocumentClassificationJobProperties {
                 job_id: self.job_id,
@@ -9784,7 +10021,7 @@ pub mod document_classification_job_properties {
     }
 }
 impl DocumentClassificationJobProperties {
-    /// Creates a new builder-style object to manufacture [`DocumentClassificationJobProperties`](crate::model::DocumentClassificationJobProperties)
+    /// Creates a new builder-style object to manufacture [`DocumentClassificationJobProperties`](crate::model::DocumentClassificationJobProperties).
     pub fn builder() -> crate::model::document_classification_job_properties::Builder {
         crate::model::document_classification_job_properties::Builder::default()
     }
@@ -9795,12 +10032,16 @@ impl DocumentClassificationJobProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentClassificationJobFilter {
     /// <p>Filters on the name of the job.</p>
+    #[doc(hidden)]
     pub job_name: std::option::Option<std::string::String>,
     /// <p>Filters the list based on job status. Returns only jobs with the specified status.</p>
+    #[doc(hidden)]
     pub job_status: std::option::Option<crate::model::JobStatus>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted before the specified time. Jobs are returned in ascending order, oldest to newest.</p>
+    #[doc(hidden)]
     pub submit_time_before: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Filters the list of jobs based on the time that the job was submitted for processing. Returns only jobs submitted after the specified time. Jobs are returned in descending order, newest to oldest.</p>
+    #[doc(hidden)]
     pub submit_time_after: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DocumentClassificationJobFilter {
@@ -9831,11 +10072,10 @@ impl std::fmt::Debug for DocumentClassificationJobFilter {
         formatter.finish()
     }
 }
-/// See [`DocumentClassificationJobFilter`](crate::model::DocumentClassificationJobFilter)
+/// See [`DocumentClassificationJobFilter`](crate::model::DocumentClassificationJobFilter).
 pub mod document_classification_job_filter {
 
-    /// A builder for [`DocumentClassificationJobFilter`](crate::model::DocumentClassificationJobFilter)
-    #[non_exhaustive]
+    /// A builder for [`DocumentClassificationJobFilter`](crate::model::DocumentClassificationJobFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_name: std::option::Option<std::string::String>,
@@ -9893,7 +10133,7 @@ pub mod document_classification_job_filter {
             self.submit_time_after = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentClassificationJobFilter`](crate::model::DocumentClassificationJobFilter)
+        /// Consumes the builder and constructs a [`DocumentClassificationJobFilter`](crate::model::DocumentClassificationJobFilter).
         pub fn build(self) -> crate::model::DocumentClassificationJobFilter {
             crate::model::DocumentClassificationJobFilter {
                 job_name: self.job_name,
@@ -9905,7 +10145,7 @@ pub mod document_classification_job_filter {
     }
 }
 impl DocumentClassificationJobFilter {
-    /// Creates a new builder-style object to manufacture [`DocumentClassificationJobFilter`](crate::model::DocumentClassificationJobFilter)
+    /// Creates a new builder-style object to manufacture [`DocumentClassificationJobFilter`](crate::model::DocumentClassificationJobFilter).
     pub fn builder() -> crate::model::document_classification_job_filter::Builder {
         crate::model::document_classification_job_filter::Builder::default()
     }
@@ -9916,14 +10156,19 @@ impl DocumentClassificationJobFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SyntaxToken {
     /// <p>A unique identifier for a token.</p>
+    #[doc(hidden)]
     pub token_id: std::option::Option<i32>,
     /// <p>The word that was recognized in the source text.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>The zero-based offset from the beginning of the source text to the first character in the word.</p>
+    #[doc(hidden)]
     pub begin_offset: std::option::Option<i32>,
     /// <p>The zero-based offset from the beginning of the source text to the last character in the word.</p>
+    #[doc(hidden)]
     pub end_offset: std::option::Option<i32>,
     /// <p>Provides the part of speech label and the confidence level that Amazon Comprehend has that the part of speech was correctly identified. For more information, see <code>how-syntax</code>.</p>
+    #[doc(hidden)]
     pub part_of_speech: std::option::Option<crate::model::PartOfSpeechTag>,
 }
 impl SyntaxToken {
@@ -9959,11 +10204,10 @@ impl std::fmt::Debug for SyntaxToken {
         formatter.finish()
     }
 }
-/// See [`SyntaxToken`](crate::model::SyntaxToken)
+/// See [`SyntaxToken`](crate::model::SyntaxToken).
 pub mod syntax_token {
 
-    /// A builder for [`SyntaxToken`](crate::model::SyntaxToken)
-    #[non_exhaustive]
+    /// A builder for [`SyntaxToken`](crate::model::SyntaxToken).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) token_id: std::option::Option<i32>,
@@ -10026,7 +10270,7 @@ pub mod syntax_token {
             self.part_of_speech = input;
             self
         }
-        /// Consumes the builder and constructs a [`SyntaxToken`](crate::model::SyntaxToken)
+        /// Consumes the builder and constructs a [`SyntaxToken`](crate::model::SyntaxToken).
         pub fn build(self) -> crate::model::SyntaxToken {
             crate::model::SyntaxToken {
                 token_id: self.token_id,
@@ -10039,7 +10283,7 @@ pub mod syntax_token {
     }
 }
 impl SyntaxToken {
-    /// Creates a new builder-style object to manufacture [`SyntaxToken`](crate::model::SyntaxToken)
+    /// Creates a new builder-style object to manufacture [`SyntaxToken`](crate::model::SyntaxToken).
     pub fn builder() -> crate::model::syntax_token::Builder {
         crate::model::syntax_token::Builder::default()
     }
@@ -10050,8 +10294,10 @@ impl SyntaxToken {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PartOfSpeechTag {
     /// <p>Identifies the part of speech that the token represents.</p>
+    #[doc(hidden)]
     pub tag: std::option::Option<crate::model::PartOfSpeechTagType>,
     /// <p>The confidence that Amazon Comprehend has that the part of speech was correctly identified.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
 }
 impl PartOfSpeechTag {
@@ -10072,11 +10318,10 @@ impl std::fmt::Debug for PartOfSpeechTag {
         formatter.finish()
     }
 }
-/// See [`PartOfSpeechTag`](crate::model::PartOfSpeechTag)
+/// See [`PartOfSpeechTag`](crate::model::PartOfSpeechTag).
 pub mod part_of_speech_tag {
 
-    /// A builder for [`PartOfSpeechTag`](crate::model::PartOfSpeechTag)
-    #[non_exhaustive]
+    /// A builder for [`PartOfSpeechTag`](crate::model::PartOfSpeechTag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag: std::option::Option<crate::model::PartOfSpeechTagType>,
@@ -10106,7 +10351,7 @@ pub mod part_of_speech_tag {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`PartOfSpeechTag`](crate::model::PartOfSpeechTag)
+        /// Consumes the builder and constructs a [`PartOfSpeechTag`](crate::model::PartOfSpeechTag).
         pub fn build(self) -> crate::model::PartOfSpeechTag {
             crate::model::PartOfSpeechTag {
                 tag: self.tag,
@@ -10116,7 +10361,7 @@ pub mod part_of_speech_tag {
     }
 }
 impl PartOfSpeechTag {
-    /// Creates a new builder-style object to manufacture [`PartOfSpeechTag`](crate::model::PartOfSpeechTag)
+    /// Creates a new builder-style object to manufacture [`PartOfSpeechTag`](crate::model::PartOfSpeechTag).
     pub fn builder() -> crate::model::part_of_speech_tag::Builder {
         crate::model::part_of_speech_tag::Builder::default()
     }
@@ -10320,12 +10565,16 @@ impl AsRef<str> for SyntaxLanguageCode {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SentimentScore {
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>POSITIVE</code> sentiment.</p>
+    #[doc(hidden)]
     pub positive: std::option::Option<f32>,
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEGATIVE</code> sentiment.</p>
+    #[doc(hidden)]
     pub negative: std::option::Option<f32>,
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>NEUTRAL</code> sentiment.</p>
+    #[doc(hidden)]
     pub neutral: std::option::Option<f32>,
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of its detection of the <code>MIXED</code> sentiment.</p>
+    #[doc(hidden)]
     pub mixed: std::option::Option<f32>,
 }
 impl SentimentScore {
@@ -10356,11 +10605,10 @@ impl std::fmt::Debug for SentimentScore {
         formatter.finish()
     }
 }
-/// See [`SentimentScore`](crate::model::SentimentScore)
+/// See [`SentimentScore`](crate::model::SentimentScore).
 pub mod sentiment_score {
 
-    /// A builder for [`SentimentScore`](crate::model::SentimentScore)
-    #[non_exhaustive]
+    /// A builder for [`SentimentScore`](crate::model::SentimentScore).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) positive: std::option::Option<f32>,
@@ -10409,7 +10657,7 @@ pub mod sentiment_score {
             self.mixed = input;
             self
         }
-        /// Consumes the builder and constructs a [`SentimentScore`](crate::model::SentimentScore)
+        /// Consumes the builder and constructs a [`SentimentScore`](crate::model::SentimentScore).
         pub fn build(self) -> crate::model::SentimentScore {
             crate::model::SentimentScore {
                 positive: self.positive,
@@ -10421,7 +10669,7 @@ pub mod sentiment_score {
     }
 }
 impl SentimentScore {
-    /// Creates a new builder-style object to manufacture [`SentimentScore`](crate::model::SentimentScore)
+    /// Creates a new builder-style object to manufacture [`SentimentScore`](crate::model::SentimentScore).
     pub fn builder() -> crate::model::sentiment_score::Builder {
         crate::model::sentiment_score::Builder::default()
     }
@@ -10495,12 +10743,16 @@ impl AsRef<str> for SentimentType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PiiEntity {
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of the detection.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
     /// <p>The entity's type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::PiiEntityType>,
     /// <p>A character offset in the input text that shows where the PII entity begins (the first character is at position 0). The offset returns the position of each UTF-8 code point in the string. A <i>code point</i> is the abstract character from a particular graphical representation. For example, a multi-byte UTF-8 character maps to a single code point.</p>
+    #[doc(hidden)]
     pub begin_offset: std::option::Option<i32>,
     /// <p>A character offset in the input text that shows where the PII entity ends. The offset returns the position of each UTF-8 code point in the string. A <i>code point</i> is the abstract character from a particular graphical representation. For example, a multi-byte UTF-8 character maps to a single code point.</p>
+    #[doc(hidden)]
     pub end_offset: std::option::Option<i32>,
 }
 impl PiiEntity {
@@ -10531,11 +10783,10 @@ impl std::fmt::Debug for PiiEntity {
         formatter.finish()
     }
 }
-/// See [`PiiEntity`](crate::model::PiiEntity)
+/// See [`PiiEntity`](crate::model::PiiEntity).
 pub mod pii_entity {
 
-    /// A builder for [`PiiEntity`](crate::model::PiiEntity)
-    #[non_exhaustive]
+    /// A builder for [`PiiEntity`](crate::model::PiiEntity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) score: std::option::Option<f32>,
@@ -10584,7 +10835,7 @@ pub mod pii_entity {
             self.end_offset = input;
             self
         }
-        /// Consumes the builder and constructs a [`PiiEntity`](crate::model::PiiEntity)
+        /// Consumes the builder and constructs a [`PiiEntity`](crate::model::PiiEntity).
         pub fn build(self) -> crate::model::PiiEntity {
             crate::model::PiiEntity {
                 score: self.score,
@@ -10596,7 +10847,7 @@ pub mod pii_entity {
     }
 }
 impl PiiEntity {
-    /// Creates a new builder-style object to manufacture [`PiiEntity`](crate::model::PiiEntity)
+    /// Creates a new builder-style object to manufacture [`PiiEntity`](crate::model::PiiEntity).
     pub fn builder() -> crate::model::pii_entity::Builder {
         crate::model::pii_entity::Builder::default()
     }
@@ -10607,12 +10858,16 @@ impl PiiEntity {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KeyPhrase {
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of the detection.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
     /// <p>The text of a key noun phrase.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>A character offset in the input text that shows where the key phrase begins (the first character is at position 0). The offset returns the position of each UTF-8 code point in the string. A <i>code point</i> is the abstract character from a particular graphical representation. For example, a multi-byte UTF-8 character maps to a single code point.</p>
+    #[doc(hidden)]
     pub begin_offset: std::option::Option<i32>,
     /// <p>A character offset in the input text where the key phrase ends. The offset returns the position of each UTF-8 code point in the string. A <code>code point</code> is the abstract character from a particular graphical representation. For example, a multi-byte UTF-8 character maps to a single code point.</p>
+    #[doc(hidden)]
     pub end_offset: std::option::Option<i32>,
 }
 impl KeyPhrase {
@@ -10643,11 +10898,10 @@ impl std::fmt::Debug for KeyPhrase {
         formatter.finish()
     }
 }
-/// See [`KeyPhrase`](crate::model::KeyPhrase)
+/// See [`KeyPhrase`](crate::model::KeyPhrase).
 pub mod key_phrase {
 
-    /// A builder for [`KeyPhrase`](crate::model::KeyPhrase)
-    #[non_exhaustive]
+    /// A builder for [`KeyPhrase`](crate::model::KeyPhrase).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) score: std::option::Option<f32>,
@@ -10696,7 +10950,7 @@ pub mod key_phrase {
             self.end_offset = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeyPhrase`](crate::model::KeyPhrase)
+        /// Consumes the builder and constructs a [`KeyPhrase`](crate::model::KeyPhrase).
         pub fn build(self) -> crate::model::KeyPhrase {
             crate::model::KeyPhrase {
                 score: self.score,
@@ -10708,7 +10962,7 @@ pub mod key_phrase {
     }
 }
 impl KeyPhrase {
-    /// Creates a new builder-style object to manufacture [`KeyPhrase`](crate::model::KeyPhrase)
+    /// Creates a new builder-style object to manufacture [`KeyPhrase`](crate::model::KeyPhrase).
     pub fn builder() -> crate::model::key_phrase::Builder {
         crate::model::key_phrase::Builder::default()
     }
@@ -10720,14 +10974,19 @@ impl KeyPhrase {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Entity {
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of the detection.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
     /// <p>The entity's type.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::EntityType>,
     /// <p>The text of the entity.</p>
+    #[doc(hidden)]
     pub text: std::option::Option<std::string::String>,
     /// <p>A character offset in the input text that shows where the entity begins (the first character is at position 0). The offset returns the position of each UTF-8 code point in the string. A <i>code point</i> is the abstract character from a particular graphical representation. For example, a multi-byte UTF-8 character maps to a single code point.</p>
+    #[doc(hidden)]
     pub begin_offset: std::option::Option<i32>,
     /// <p>A character offset in the input text that shows where the entity ends. The offset returns the position of each UTF-8 code point in the string. A <i>code point</i> is the abstract character from a particular graphical representation. For example, a multi-byte UTF-8 character maps to a single code point. </p>
+    #[doc(hidden)]
     pub end_offset: std::option::Option<i32>,
 }
 impl Entity {
@@ -10763,11 +11022,10 @@ impl std::fmt::Debug for Entity {
         formatter.finish()
     }
 }
-/// See [`Entity`](crate::model::Entity)
+/// See [`Entity`](crate::model::Entity).
 pub mod entity {
 
-    /// A builder for [`Entity`](crate::model::Entity)
-    #[non_exhaustive]
+    /// A builder for [`Entity`](crate::model::Entity).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) score: std::option::Option<f32>,
@@ -10827,7 +11085,7 @@ pub mod entity {
             self.end_offset = input;
             self
         }
-        /// Consumes the builder and constructs a [`Entity`](crate::model::Entity)
+        /// Consumes the builder and constructs a [`Entity`](crate::model::Entity).
         pub fn build(self) -> crate::model::Entity {
             crate::model::Entity {
                 score: self.score,
@@ -10840,7 +11098,7 @@ pub mod entity {
     }
 }
 impl Entity {
-    /// Creates a new builder-style object to manufacture [`Entity`](crate::model::Entity)
+    /// Creates a new builder-style object to manufacture [`Entity`](crate::model::Entity).
     pub fn builder() -> crate::model::entity::Builder {
         crate::model::entity::Builder::default()
     }
@@ -10944,8 +11202,10 @@ impl AsRef<str> for EntityType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DominantLanguage {
     /// <p>The RFC 5646 language code for the dominant language. For more information about RFC 5646, see <a href="https://tools.ietf.org/html/rfc5646">Tags for Identifying Languages</a> on the <i>IETF Tools</i> web site.</p>
+    #[doc(hidden)]
     pub language_code: std::option::Option<std::string::String>,
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of the detection.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
 }
 impl DominantLanguage {
@@ -10966,11 +11226,10 @@ impl std::fmt::Debug for DominantLanguage {
         formatter.finish()
     }
 }
-/// See [`DominantLanguage`](crate::model::DominantLanguage)
+/// See [`DominantLanguage`](crate::model::DominantLanguage).
 pub mod dominant_language {
 
-    /// A builder for [`DominantLanguage`](crate::model::DominantLanguage)
-    #[non_exhaustive]
+    /// A builder for [`DominantLanguage`](crate::model::DominantLanguage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) language_code: std::option::Option<std::string::String>,
@@ -11000,7 +11259,7 @@ pub mod dominant_language {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`DominantLanguage`](crate::model::DominantLanguage)
+        /// Consumes the builder and constructs a [`DominantLanguage`](crate::model::DominantLanguage).
         pub fn build(self) -> crate::model::DominantLanguage {
             crate::model::DominantLanguage {
                 language_code: self.language_code,
@@ -11010,7 +11269,7 @@ pub mod dominant_language {
     }
 }
 impl DominantLanguage {
-    /// Creates a new builder-style object to manufacture [`DominantLanguage`](crate::model::DominantLanguage)
+    /// Creates a new builder-style object to manufacture [`DominantLanguage`](crate::model::DominantLanguage).
     pub fn builder() -> crate::model::dominant_language::Builder {
         crate::model::dominant_language::Builder::default()
     }
@@ -11021,8 +11280,10 @@ impl DominantLanguage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct EntityLabel {
     /// <p>The name of the label.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::PiiEntityType>,
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of the detection.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
 }
 impl EntityLabel {
@@ -11043,11 +11304,10 @@ impl std::fmt::Debug for EntityLabel {
         formatter.finish()
     }
 }
-/// See [`EntityLabel`](crate::model::EntityLabel)
+/// See [`EntityLabel`](crate::model::EntityLabel).
 pub mod entity_label {
 
-    /// A builder for [`EntityLabel`](crate::model::EntityLabel)
-    #[non_exhaustive]
+    /// A builder for [`EntityLabel`](crate::model::EntityLabel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::PiiEntityType>,
@@ -11074,7 +11334,7 @@ pub mod entity_label {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`EntityLabel`](crate::model::EntityLabel)
+        /// Consumes the builder and constructs a [`EntityLabel`](crate::model::EntityLabel).
         pub fn build(self) -> crate::model::EntityLabel {
             crate::model::EntityLabel {
                 name: self.name,
@@ -11084,7 +11344,7 @@ pub mod entity_label {
     }
 }
 impl EntityLabel {
-    /// Creates a new builder-style object to manufacture [`EntityLabel`](crate::model::EntityLabel)
+    /// Creates a new builder-style object to manufacture [`EntityLabel`](crate::model::EntityLabel).
     pub fn builder() -> crate::model::entity_label::Builder {
         crate::model::entity_label::Builder::default()
     }
@@ -11095,8 +11355,10 @@ impl EntityLabel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentLabel {
     /// <p>The name of the label.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The confidence score that Amazon Comprehend has this label correctly attributed.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
 }
 impl DocumentLabel {
@@ -11117,11 +11379,10 @@ impl std::fmt::Debug for DocumentLabel {
         formatter.finish()
     }
 }
-/// See [`DocumentLabel`](crate::model::DocumentLabel)
+/// See [`DocumentLabel`](crate::model::DocumentLabel).
 pub mod document_label {
 
-    /// A builder for [`DocumentLabel`](crate::model::DocumentLabel)
-    #[non_exhaustive]
+    /// A builder for [`DocumentLabel`](crate::model::DocumentLabel).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -11148,7 +11409,7 @@ pub mod document_label {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentLabel`](crate::model::DocumentLabel)
+        /// Consumes the builder and constructs a [`DocumentLabel`](crate::model::DocumentLabel).
         pub fn build(self) -> crate::model::DocumentLabel {
             crate::model::DocumentLabel {
                 name: self.name,
@@ -11158,7 +11419,7 @@ pub mod document_label {
     }
 }
 impl DocumentLabel {
-    /// Creates a new builder-style object to manufacture [`DocumentLabel`](crate::model::DocumentLabel)
+    /// Creates a new builder-style object to manufacture [`DocumentLabel`](crate::model::DocumentLabel).
     pub fn builder() -> crate::model::document_label::Builder {
         crate::model::document_label::Builder::default()
     }
@@ -11169,8 +11430,10 @@ impl DocumentLabel {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DocumentClass {
     /// <p>The name of the class.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The confidence score that Amazon Comprehend has this class correctly attributed.</p>
+    #[doc(hidden)]
     pub score: std::option::Option<f32>,
 }
 impl DocumentClass {
@@ -11191,11 +11454,10 @@ impl std::fmt::Debug for DocumentClass {
         formatter.finish()
     }
 }
-/// See [`DocumentClass`](crate::model::DocumentClass)
+/// See [`DocumentClass`](crate::model::DocumentClass).
 pub mod document_class {
 
-    /// A builder for [`DocumentClass`](crate::model::DocumentClass)
-    #[non_exhaustive]
+    /// A builder for [`DocumentClass`](crate::model::DocumentClass).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -11222,7 +11484,7 @@ pub mod document_class {
             self.score = input;
             self
         }
-        /// Consumes the builder and constructs a [`DocumentClass`](crate::model::DocumentClass)
+        /// Consumes the builder and constructs a [`DocumentClass`](crate::model::DocumentClass).
         pub fn build(self) -> crate::model::DocumentClass {
             crate::model::DocumentClass {
                 name: self.name,
@@ -11232,7 +11494,7 @@ pub mod document_class {
     }
 }
 impl DocumentClass {
-    /// Creates a new builder-style object to manufacture [`DocumentClass`](crate::model::DocumentClass)
+    /// Creates a new builder-style object to manufacture [`DocumentClass`](crate::model::DocumentClass).
     pub fn builder() -> crate::model::document_class::Builder {
         crate::model::document_class::Builder::default()
     }
@@ -11243,10 +11505,13 @@ impl DocumentClass {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchItemError {
     /// <p>The zero-based index of the document in the input list.</p>
+    #[doc(hidden)]
     pub index: std::option::Option<i32>,
     /// <p>The numeric error code of the error.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>A text description of the error.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl BatchItemError {
@@ -11272,11 +11537,10 @@ impl std::fmt::Debug for BatchItemError {
         formatter.finish()
     }
 }
-/// See [`BatchItemError`](crate::model::BatchItemError)
+/// See [`BatchItemError`](crate::model::BatchItemError).
 pub mod batch_item_error {
 
-    /// A builder for [`BatchItemError`](crate::model::BatchItemError)
-    #[non_exhaustive]
+    /// A builder for [`BatchItemError`](crate::model::BatchItemError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) index: std::option::Option<i32>,
@@ -11317,7 +11581,7 @@ pub mod batch_item_error {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchItemError`](crate::model::BatchItemError)
+        /// Consumes the builder and constructs a [`BatchItemError`](crate::model::BatchItemError).
         pub fn build(self) -> crate::model::BatchItemError {
             crate::model::BatchItemError {
                 index: self.index,
@@ -11328,7 +11592,7 @@ pub mod batch_item_error {
     }
 }
 impl BatchItemError {
-    /// Creates a new builder-style object to manufacture [`BatchItemError`](crate::model::BatchItemError)
+    /// Creates a new builder-style object to manufacture [`BatchItemError`](crate::model::BatchItemError).
     pub fn builder() -> crate::model::batch_item_error::Builder {
         crate::model::batch_item_error::Builder::default()
     }
@@ -11339,8 +11603,10 @@ impl BatchItemError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchDetectSyntaxItemResult {
     /// <p>The zero-based index of the document in the input list.</p>
+    #[doc(hidden)]
     pub index: std::option::Option<i32>,
     /// <p>The syntax tokens for the words in the document, one token for each word.</p>
+    #[doc(hidden)]
     pub syntax_tokens: std::option::Option<std::vec::Vec<crate::model::SyntaxToken>>,
 }
 impl BatchDetectSyntaxItemResult {
@@ -11361,11 +11627,10 @@ impl std::fmt::Debug for BatchDetectSyntaxItemResult {
         formatter.finish()
     }
 }
-/// See [`BatchDetectSyntaxItemResult`](crate::model::BatchDetectSyntaxItemResult)
+/// See [`BatchDetectSyntaxItemResult`](crate::model::BatchDetectSyntaxItemResult).
 pub mod batch_detect_syntax_item_result {
 
-    /// A builder for [`BatchDetectSyntaxItemResult`](crate::model::BatchDetectSyntaxItemResult)
-    #[non_exhaustive]
+    /// A builder for [`BatchDetectSyntaxItemResult`](crate::model::BatchDetectSyntaxItemResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) index: std::option::Option<i32>,
@@ -11401,7 +11666,7 @@ pub mod batch_detect_syntax_item_result {
             self.syntax_tokens = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchDetectSyntaxItemResult`](crate::model::BatchDetectSyntaxItemResult)
+        /// Consumes the builder and constructs a [`BatchDetectSyntaxItemResult`](crate::model::BatchDetectSyntaxItemResult).
         pub fn build(self) -> crate::model::BatchDetectSyntaxItemResult {
             crate::model::BatchDetectSyntaxItemResult {
                 index: self.index,
@@ -11411,7 +11676,7 @@ pub mod batch_detect_syntax_item_result {
     }
 }
 impl BatchDetectSyntaxItemResult {
-    /// Creates a new builder-style object to manufacture [`BatchDetectSyntaxItemResult`](crate::model::BatchDetectSyntaxItemResult)
+    /// Creates a new builder-style object to manufacture [`BatchDetectSyntaxItemResult`](crate::model::BatchDetectSyntaxItemResult).
     pub fn builder() -> crate::model::batch_detect_syntax_item_result::Builder {
         crate::model::batch_detect_syntax_item_result::Builder::default()
     }
@@ -11422,10 +11687,13 @@ impl BatchDetectSyntaxItemResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchDetectSentimentItemResult {
     /// <p>The zero-based index of the document in the input list.</p>
+    #[doc(hidden)]
     pub index: std::option::Option<i32>,
     /// <p>The sentiment detected in the document.</p>
+    #[doc(hidden)]
     pub sentiment: std::option::Option<crate::model::SentimentType>,
     /// <p>The level of confidence that Amazon Comprehend has in the accuracy of its sentiment detection.</p>
+    #[doc(hidden)]
     pub sentiment_score: std::option::Option<crate::model::SentimentScore>,
 }
 impl BatchDetectSentimentItemResult {
@@ -11451,11 +11719,10 @@ impl std::fmt::Debug for BatchDetectSentimentItemResult {
         formatter.finish()
     }
 }
-/// See [`BatchDetectSentimentItemResult`](crate::model::BatchDetectSentimentItemResult)
+/// See [`BatchDetectSentimentItemResult`](crate::model::BatchDetectSentimentItemResult).
 pub mod batch_detect_sentiment_item_result {
 
-    /// A builder for [`BatchDetectSentimentItemResult`](crate::model::BatchDetectSentimentItemResult)
-    #[non_exhaustive]
+    /// A builder for [`BatchDetectSentimentItemResult`](crate::model::BatchDetectSentimentItemResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) index: std::option::Option<i32>,
@@ -11499,7 +11766,7 @@ pub mod batch_detect_sentiment_item_result {
             self.sentiment_score = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchDetectSentimentItemResult`](crate::model::BatchDetectSentimentItemResult)
+        /// Consumes the builder and constructs a [`BatchDetectSentimentItemResult`](crate::model::BatchDetectSentimentItemResult).
         pub fn build(self) -> crate::model::BatchDetectSentimentItemResult {
             crate::model::BatchDetectSentimentItemResult {
                 index: self.index,
@@ -11510,7 +11777,7 @@ pub mod batch_detect_sentiment_item_result {
     }
 }
 impl BatchDetectSentimentItemResult {
-    /// Creates a new builder-style object to manufacture [`BatchDetectSentimentItemResult`](crate::model::BatchDetectSentimentItemResult)
+    /// Creates a new builder-style object to manufacture [`BatchDetectSentimentItemResult`](crate::model::BatchDetectSentimentItemResult).
     pub fn builder() -> crate::model::batch_detect_sentiment_item_result::Builder {
         crate::model::batch_detect_sentiment_item_result::Builder::default()
     }
@@ -11521,8 +11788,10 @@ impl BatchDetectSentimentItemResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchDetectKeyPhrasesItemResult {
     /// <p>The zero-based index of the document in the input list.</p>
+    #[doc(hidden)]
     pub index: std::option::Option<i32>,
     /// <p>One or more <code>KeyPhrase</code> objects, one for each key phrase detected in the document.</p>
+    #[doc(hidden)]
     pub key_phrases: std::option::Option<std::vec::Vec<crate::model::KeyPhrase>>,
 }
 impl BatchDetectKeyPhrasesItemResult {
@@ -11543,11 +11812,10 @@ impl std::fmt::Debug for BatchDetectKeyPhrasesItemResult {
         formatter.finish()
     }
 }
-/// See [`BatchDetectKeyPhrasesItemResult`](crate::model::BatchDetectKeyPhrasesItemResult)
+/// See [`BatchDetectKeyPhrasesItemResult`](crate::model::BatchDetectKeyPhrasesItemResult).
 pub mod batch_detect_key_phrases_item_result {
 
-    /// A builder for [`BatchDetectKeyPhrasesItemResult`](crate::model::BatchDetectKeyPhrasesItemResult)
-    #[non_exhaustive]
+    /// A builder for [`BatchDetectKeyPhrasesItemResult`](crate::model::BatchDetectKeyPhrasesItemResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) index: std::option::Option<i32>,
@@ -11583,7 +11851,7 @@ pub mod batch_detect_key_phrases_item_result {
             self.key_phrases = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchDetectKeyPhrasesItemResult`](crate::model::BatchDetectKeyPhrasesItemResult)
+        /// Consumes the builder and constructs a [`BatchDetectKeyPhrasesItemResult`](crate::model::BatchDetectKeyPhrasesItemResult).
         pub fn build(self) -> crate::model::BatchDetectKeyPhrasesItemResult {
             crate::model::BatchDetectKeyPhrasesItemResult {
                 index: self.index,
@@ -11593,7 +11861,7 @@ pub mod batch_detect_key_phrases_item_result {
     }
 }
 impl BatchDetectKeyPhrasesItemResult {
-    /// Creates a new builder-style object to manufacture [`BatchDetectKeyPhrasesItemResult`](crate::model::BatchDetectKeyPhrasesItemResult)
+    /// Creates a new builder-style object to manufacture [`BatchDetectKeyPhrasesItemResult`](crate::model::BatchDetectKeyPhrasesItemResult).
     pub fn builder() -> crate::model::batch_detect_key_phrases_item_result::Builder {
         crate::model::batch_detect_key_phrases_item_result::Builder::default()
     }
@@ -11604,8 +11872,10 @@ impl BatchDetectKeyPhrasesItemResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchDetectEntitiesItemResult {
     /// <p>The zero-based index of the document in the input list.</p>
+    #[doc(hidden)]
     pub index: std::option::Option<i32>,
     /// <p>One or more <code>Entity</code> objects, one for each entity detected in the document.</p>
+    #[doc(hidden)]
     pub entities: std::option::Option<std::vec::Vec<crate::model::Entity>>,
 }
 impl BatchDetectEntitiesItemResult {
@@ -11626,11 +11896,10 @@ impl std::fmt::Debug for BatchDetectEntitiesItemResult {
         formatter.finish()
     }
 }
-/// See [`BatchDetectEntitiesItemResult`](crate::model::BatchDetectEntitiesItemResult)
+/// See [`BatchDetectEntitiesItemResult`](crate::model::BatchDetectEntitiesItemResult).
 pub mod batch_detect_entities_item_result {
 
-    /// A builder for [`BatchDetectEntitiesItemResult`](crate::model::BatchDetectEntitiesItemResult)
-    #[non_exhaustive]
+    /// A builder for [`BatchDetectEntitiesItemResult`](crate::model::BatchDetectEntitiesItemResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) index: std::option::Option<i32>,
@@ -11666,7 +11935,7 @@ pub mod batch_detect_entities_item_result {
             self.entities = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchDetectEntitiesItemResult`](crate::model::BatchDetectEntitiesItemResult)
+        /// Consumes the builder and constructs a [`BatchDetectEntitiesItemResult`](crate::model::BatchDetectEntitiesItemResult).
         pub fn build(self) -> crate::model::BatchDetectEntitiesItemResult {
             crate::model::BatchDetectEntitiesItemResult {
                 index: self.index,
@@ -11676,7 +11945,7 @@ pub mod batch_detect_entities_item_result {
     }
 }
 impl BatchDetectEntitiesItemResult {
-    /// Creates a new builder-style object to manufacture [`BatchDetectEntitiesItemResult`](crate::model::BatchDetectEntitiesItemResult)
+    /// Creates a new builder-style object to manufacture [`BatchDetectEntitiesItemResult`](crate::model::BatchDetectEntitiesItemResult).
     pub fn builder() -> crate::model::batch_detect_entities_item_result::Builder {
         crate::model::batch_detect_entities_item_result::Builder::default()
     }
@@ -11687,8 +11956,10 @@ impl BatchDetectEntitiesItemResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchDetectDominantLanguageItemResult {
     /// <p>The zero-based index of the document in the input list.</p>
+    #[doc(hidden)]
     pub index: std::option::Option<i32>,
     /// <p>One or more <code>DominantLanguage</code> objects describing the dominant languages in the document.</p>
+    #[doc(hidden)]
     pub languages: std::option::Option<std::vec::Vec<crate::model::DominantLanguage>>,
 }
 impl BatchDetectDominantLanguageItemResult {
@@ -11709,11 +11980,10 @@ impl std::fmt::Debug for BatchDetectDominantLanguageItemResult {
         formatter.finish()
     }
 }
-/// See [`BatchDetectDominantLanguageItemResult`](crate::model::BatchDetectDominantLanguageItemResult)
+/// See [`BatchDetectDominantLanguageItemResult`](crate::model::BatchDetectDominantLanguageItemResult).
 pub mod batch_detect_dominant_language_item_result {
 
-    /// A builder for [`BatchDetectDominantLanguageItemResult`](crate::model::BatchDetectDominantLanguageItemResult)
-    #[non_exhaustive]
+    /// A builder for [`BatchDetectDominantLanguageItemResult`](crate::model::BatchDetectDominantLanguageItemResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) index: std::option::Option<i32>,
@@ -11749,7 +12019,7 @@ pub mod batch_detect_dominant_language_item_result {
             self.languages = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchDetectDominantLanguageItemResult`](crate::model::BatchDetectDominantLanguageItemResult)
+        /// Consumes the builder and constructs a [`BatchDetectDominantLanguageItemResult`](crate::model::BatchDetectDominantLanguageItemResult).
         pub fn build(self) -> crate::model::BatchDetectDominantLanguageItemResult {
             crate::model::BatchDetectDominantLanguageItemResult {
                 index: self.index,
@@ -11759,7 +12029,7 @@ pub mod batch_detect_dominant_language_item_result {
     }
 }
 impl BatchDetectDominantLanguageItemResult {
-    /// Creates a new builder-style object to manufacture [`BatchDetectDominantLanguageItemResult`](crate::model::BatchDetectDominantLanguageItemResult)
+    /// Creates a new builder-style object to manufacture [`BatchDetectDominantLanguageItemResult`](crate::model::BatchDetectDominantLanguageItemResult).
     pub fn builder() -> crate::model::batch_detect_dominant_language_item_result::Builder {
         crate::model::batch_detect_dominant_language_item_result::Builder::default()
     }

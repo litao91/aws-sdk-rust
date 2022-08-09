@@ -5,10 +5,13 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AgentConfigurationStatus {
     /// <p>The agent/connector ID.</p>
+    #[doc(hidden)]
     pub agent_id: std::option::Option<std::string::String>,
     /// <p>Information about the status of the <code>StartDataCollection</code> and <code>StopDataCollection</code> operations. The system has recorded the data collection operation. The agent/connector receives this command the next time it polls for a new command. </p>
+    #[doc(hidden)]
     pub operation_succeeded: bool,
     /// <p>A description of the operation performed.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl AgentConfigurationStatus {
@@ -34,11 +37,10 @@ impl std::fmt::Debug for AgentConfigurationStatus {
         formatter.finish()
     }
 }
-/// See [`AgentConfigurationStatus`](crate::model::AgentConfigurationStatus)
+/// See [`AgentConfigurationStatus`](crate::model::AgentConfigurationStatus).
 pub mod agent_configuration_status {
 
-    /// A builder for [`AgentConfigurationStatus`](crate::model::AgentConfigurationStatus)
-    #[non_exhaustive]
+    /// A builder for [`AgentConfigurationStatus`](crate::model::AgentConfigurationStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) agent_id: std::option::Option<std::string::String>,
@@ -76,7 +78,7 @@ pub mod agent_configuration_status {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`AgentConfigurationStatus`](crate::model::AgentConfigurationStatus)
+        /// Consumes the builder and constructs a [`AgentConfigurationStatus`](crate::model::AgentConfigurationStatus).
         pub fn build(self) -> crate::model::AgentConfigurationStatus {
             crate::model::AgentConfigurationStatus {
                 agent_id: self.agent_id,
@@ -87,7 +89,7 @@ pub mod agent_configuration_status {
     }
 }
 impl AgentConfigurationStatus {
-    /// Creates a new builder-style object to manufacture [`AgentConfigurationStatus`](crate::model::AgentConfigurationStatus)
+    /// Creates a new builder-style object to manufacture [`AgentConfigurationStatus`](crate::model::AgentConfigurationStatus).
     pub fn builder() -> crate::model::agent_configuration_status::Builder {
         crate::model::agent_configuration_status::Builder::default()
     }
@@ -98,32 +100,45 @@ impl AgentConfigurationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportTask {
     /// <p>The unique ID for a specific import task. These IDs aren't globally unique, but they are unique within an Amazon Web Services account.</p>
+    #[doc(hidden)]
     pub import_task_id: std::option::Option<std::string::String>,
     /// <p>A unique token used to prevent the same import request from occurring more than once. If you didn't provide a token, a token was automatically generated when the import task request was sent.</p>
+    #[doc(hidden)]
     pub client_request_token: std::option::Option<std::string::String>,
     /// <p>A descriptive name for an import task. You can use this name to filter future requests related to this import task, such as identifying applications and servers that were included in this import task. We recommend that you use a meaningful name for each import task.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The URL for your import file that you've uploaded to Amazon S3.</p>
+    #[doc(hidden)]
     pub import_url: std::option::Option<std::string::String>,
     /// <p>The status of the import task. An import can have the status of <code>IMPORT_COMPLETE</code> and still have some records fail to import from the overall request. More information can be found in the downloadable archive defined in the <code>errorsAndFailedEntriesZip</code> field, or in the Migration Hub management console.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ImportStatus>,
     /// <p>The time that the import task request was made, presented in the Unix time stamp format.</p>
+    #[doc(hidden)]
     pub import_request_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the import task request finished, presented in the Unix time stamp format.</p>
+    #[doc(hidden)]
     pub import_completion_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time that the import task request was deleted, presented in the Unix time stamp format.</p>
+    #[doc(hidden)]
     pub import_deleted_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The total number of server records in the import file that were successfully imported.</p>
+    #[doc(hidden)]
     pub server_import_success: i32,
     /// <p>The total number of server records in the import file that failed to be imported.</p>
+    #[doc(hidden)]
     pub server_import_failure: i32,
     /// <p>The total number of application records in the import file that were successfully imported.</p>
+    #[doc(hidden)]
     pub application_import_success: i32,
     /// <p>The total number of application records in the import file that failed to be imported.</p>
+    #[doc(hidden)]
     pub application_import_failure: i32,
     /// <p>A link to a compressed archive folder (in the ZIP format) that contains an error log and a file of failed records. You can use these two files to quickly identify records that failed, why they failed, and correct those records. Afterward, you can upload the corrected file to your Amazon S3 bucket and create another import task request.</p>
     /// <p>This field also includes authorization information so you can confirm the authenticity of the compressed archive before you download it.</p>
     /// <p>If some records failed to be imported we recommend that you correct the records in the failed entries file and then imports that failed entries file. This prevents you from having to correct and update the larger original file and attempt importing it again.</p>
+    #[doc(hidden)]
     pub errors_and_failed_entries_zip: std::option::Option<std::string::String>,
 }
 impl ImportTask {
@@ -210,11 +225,10 @@ impl std::fmt::Debug for ImportTask {
         formatter.finish()
     }
 }
-/// See [`ImportTask`](crate::model::ImportTask)
+/// See [`ImportTask`](crate::model::ImportTask).
 pub mod import_task {
 
-    /// A builder for [`ImportTask`](crate::model::ImportTask)
-    #[non_exhaustive]
+    /// A builder for [`ImportTask`](crate::model::ImportTask).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) import_task_id: std::option::Option<std::string::String>,
@@ -390,7 +404,7 @@ pub mod import_task {
             self.errors_and_failed_entries_zip = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportTask`](crate::model::ImportTask)
+        /// Consumes the builder and constructs a [`ImportTask`](crate::model::ImportTask).
         pub fn build(self) -> crate::model::ImportTask {
             crate::model::ImportTask {
                 import_task_id: self.import_task_id,
@@ -411,7 +425,7 @@ pub mod import_task {
     }
 }
 impl ImportTask {
-    /// Creates a new builder-style object to manufacture [`ImportTask`](crate::model::ImportTask)
+    /// Creates a new builder-style object to manufacture [`ImportTask`](crate::model::ImportTask).
     pub fn builder() -> crate::model::import_task::Builder {
         crate::model::import_task::Builder::default()
     }
@@ -525,10 +539,13 @@ impl AsRef<str> for ImportStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportFilter {
     /// <p>A single <code>ExportFilter</code> name. Supported filters: <code>agentIds</code>.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A single agent ID for a Discovery Agent. An agent ID can be found using the <a href="http://docs.aws.amazon.com/application-discovery/latest/APIReference/API_DescribeAgents.html">DescribeAgents</a> action. Typically an ADS agent ID is in the form <code>o-0123456789abcdef0</code>.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Supported condition: <code>EQUALS</code> </p>
+    #[doc(hidden)]
     pub condition: std::option::Option<std::string::String>,
 }
 impl ExportFilter {
@@ -554,11 +571,10 @@ impl std::fmt::Debug for ExportFilter {
         formatter.finish()
     }
 }
-/// See [`ExportFilter`](crate::model::ExportFilter)
+/// See [`ExportFilter`](crate::model::ExportFilter).
 pub mod export_filter {
 
-    /// A builder for [`ExportFilter`](crate::model::ExportFilter)
-    #[non_exhaustive]
+    /// A builder for [`ExportFilter`](crate::model::ExportFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -605,7 +621,7 @@ pub mod export_filter {
             self.condition = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportFilter`](crate::model::ExportFilter)
+        /// Consumes the builder and constructs a [`ExportFilter`](crate::model::ExportFilter).
         pub fn build(self) -> crate::model::ExportFilter {
             crate::model::ExportFilter {
                 name: self.name,
@@ -616,7 +632,7 @@ pub mod export_filter {
     }
 }
 impl ExportFilter {
-    /// Creates a new builder-style object to manufacture [`ExportFilter`](crate::model::ExportFilter)
+    /// Creates a new builder-style object to manufacture [`ExportFilter`](crate::model::ExportFilter).
     pub fn builder() -> crate::model::export_filter::Builder {
         crate::model::export_filter::Builder::default()
     }
@@ -733,14 +749,19 @@ impl AsRef<str> for DataSource {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct NeighborConnectionDetail {
     /// <p>The ID of the server that opened the network connection.</p>
+    #[doc(hidden)]
     pub source_server_id: std::option::Option<std::string::String>,
     /// <p>The ID of the server that accepted the network connection.</p>
+    #[doc(hidden)]
     pub destination_server_id: std::option::Option<std::string::String>,
     /// <p>The destination network port for the connection.</p>
+    #[doc(hidden)]
     pub destination_port: std::option::Option<i32>,
     /// <p>The network protocol used for the connection.</p>
+    #[doc(hidden)]
     pub transport_protocol: std::option::Option<std::string::String>,
     /// <p>The number of open network connections with the neighboring server.</p>
+    #[doc(hidden)]
     pub connections_count: i64,
 }
 impl NeighborConnectionDetail {
@@ -776,11 +797,10 @@ impl std::fmt::Debug for NeighborConnectionDetail {
         formatter.finish()
     }
 }
-/// See [`NeighborConnectionDetail`](crate::model::NeighborConnectionDetail)
+/// See [`NeighborConnectionDetail`](crate::model::NeighborConnectionDetail).
 pub mod neighbor_connection_detail {
 
-    /// A builder for [`NeighborConnectionDetail`](crate::model::NeighborConnectionDetail)
-    #[non_exhaustive]
+    /// A builder for [`NeighborConnectionDetail`](crate::model::NeighborConnectionDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) source_server_id: std::option::Option<std::string::String>,
@@ -849,7 +869,7 @@ pub mod neighbor_connection_detail {
             self.connections_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`NeighborConnectionDetail`](crate::model::NeighborConnectionDetail)
+        /// Consumes the builder and constructs a [`NeighborConnectionDetail`](crate::model::NeighborConnectionDetail).
         pub fn build(self) -> crate::model::NeighborConnectionDetail {
             crate::model::NeighborConnectionDetail {
                 source_server_id: self.source_server_id,
@@ -862,7 +882,7 @@ pub mod neighbor_connection_detail {
     }
 }
 impl NeighborConnectionDetail {
-    /// Creates a new builder-style object to manufacture [`NeighborConnectionDetail`](crate::model::NeighborConnectionDetail)
+    /// Creates a new builder-style object to manufacture [`NeighborConnectionDetail`](crate::model::NeighborConnectionDetail).
     pub fn builder() -> crate::model::neighbor_connection_detail::Builder {
         crate::model::neighbor_connection_detail::Builder::default()
     }
@@ -873,8 +893,10 @@ impl NeighborConnectionDetail {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OrderByElement {
     /// <p>The field on which to order.</p>
+    #[doc(hidden)]
     pub field_name: std::option::Option<std::string::String>,
     /// <p>Ordering direction.</p>
+    #[doc(hidden)]
     pub sort_order: std::option::Option<crate::model::OrderString>,
 }
 impl OrderByElement {
@@ -895,11 +917,10 @@ impl std::fmt::Debug for OrderByElement {
         formatter.finish()
     }
 }
-/// See [`OrderByElement`](crate::model::OrderByElement)
+/// See [`OrderByElement`](crate::model::OrderByElement).
 pub mod order_by_element {
 
-    /// A builder for [`OrderByElement`](crate::model::OrderByElement)
-    #[non_exhaustive]
+    /// A builder for [`OrderByElement`](crate::model::OrderByElement).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field_name: std::option::Option<std::string::String>,
@@ -929,7 +950,7 @@ pub mod order_by_element {
             self.sort_order = input;
             self
         }
-        /// Consumes the builder and constructs a [`OrderByElement`](crate::model::OrderByElement)
+        /// Consumes the builder and constructs a [`OrderByElement`](crate::model::OrderByElement).
         pub fn build(self) -> crate::model::OrderByElement {
             crate::model::OrderByElement {
                 field_name: self.field_name,
@@ -939,7 +960,7 @@ pub mod order_by_element {
     }
 }
 impl OrderByElement {
-    /// Creates a new builder-style object to manufacture [`OrderByElement`](crate::model::OrderByElement)
+    /// Creates a new builder-style object to manufacture [`OrderByElement`](crate::model::OrderByElement).
     pub fn builder() -> crate::model::order_by_element::Builder {
         crate::model::order_by_element::Builder::default()
     }
@@ -1006,10 +1027,13 @@ impl AsRef<str> for OrderString {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Filter {
     /// <p>The name of the filter.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A string value on which to filter. For example, if you choose the <code>destinationServer.osVersion</code> filter name, you could specify <code>Ubuntu</code> for the value.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A conditional operator. The following operators are valid: EQUALS, NOT_EQUALS, CONTAINS, NOT_CONTAINS. If you specify multiple filters, the system utilizes all filters as though concatenated by <i>AND</i>. If you specify multiple values for a particular filter, the system differentiates the values using <i>OR</i>. Calling either <i>DescribeConfigurations</i> or <i>ListConfigurations</i> returns attributes of matching configuration items.</p>
+    #[doc(hidden)]
     pub condition: std::option::Option<std::string::String>,
 }
 impl Filter {
@@ -1035,11 +1059,10 @@ impl std::fmt::Debug for Filter {
         formatter.finish()
     }
 }
-/// See [`Filter`](crate::model::Filter)
+/// See [`Filter`](crate::model::Filter).
 pub mod filter {
 
-    /// A builder for [`Filter`](crate::model::Filter)
-    #[non_exhaustive]
+    /// A builder for [`Filter`](crate::model::Filter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1086,7 +1109,7 @@ pub mod filter {
             self.condition = input;
             self
         }
-        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter)
+        /// Consumes the builder and constructs a [`Filter`](crate::model::Filter).
         pub fn build(self) -> crate::model::Filter {
             crate::model::Filter {
                 name: self.name,
@@ -1097,7 +1120,7 @@ pub mod filter {
     }
 }
 impl Filter {
-    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter)
+    /// Creates a new builder-style object to manufacture [`Filter`](crate::model::Filter).
     pub fn builder() -> crate::model::filter::Builder {
         crate::model::filter::Builder::default()
     }
@@ -1166,23 +1189,241 @@ impl AsRef<str> for ConfigurationItemType {
     }
 }
 
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CustomerAgentlessCollectorInfo {
+    #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
+    pub active_agentless_collectors: i32,
+    #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
+    pub healthy_agentless_collectors: i32,
+    #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
+    pub deny_listed_agentless_collectors: i32,
+    #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
+    pub shutdown_agentless_collectors: i32,
+    #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
+    pub unhealthy_agentless_collectors: i32,
+    #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
+    pub total_agentless_collectors: i32,
+    #[allow(missing_docs)] // documentation missing in model
+    #[doc(hidden)]
+    pub unknown_agentless_collectors: i32,
+}
+impl CustomerAgentlessCollectorInfo {
+    #[allow(missing_docs)] // documentation missing in model
+    pub fn active_agentless_collectors(&self) -> i32 {
+        self.active_agentless_collectors
+    }
+    #[allow(missing_docs)] // documentation missing in model
+    pub fn healthy_agentless_collectors(&self) -> i32 {
+        self.healthy_agentless_collectors
+    }
+    #[allow(missing_docs)] // documentation missing in model
+    pub fn deny_listed_agentless_collectors(&self) -> i32 {
+        self.deny_listed_agentless_collectors
+    }
+    #[allow(missing_docs)] // documentation missing in model
+    pub fn shutdown_agentless_collectors(&self) -> i32 {
+        self.shutdown_agentless_collectors
+    }
+    #[allow(missing_docs)] // documentation missing in model
+    pub fn unhealthy_agentless_collectors(&self) -> i32 {
+        self.unhealthy_agentless_collectors
+    }
+    #[allow(missing_docs)] // documentation missing in model
+    pub fn total_agentless_collectors(&self) -> i32 {
+        self.total_agentless_collectors
+    }
+    #[allow(missing_docs)] // documentation missing in model
+    pub fn unknown_agentless_collectors(&self) -> i32 {
+        self.unknown_agentless_collectors
+    }
+}
+impl std::fmt::Debug for CustomerAgentlessCollectorInfo {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CustomerAgentlessCollectorInfo");
+        formatter.field(
+            "active_agentless_collectors",
+            &self.active_agentless_collectors,
+        );
+        formatter.field(
+            "healthy_agentless_collectors",
+            &self.healthy_agentless_collectors,
+        );
+        formatter.field(
+            "deny_listed_agentless_collectors",
+            &self.deny_listed_agentless_collectors,
+        );
+        formatter.field(
+            "shutdown_agentless_collectors",
+            &self.shutdown_agentless_collectors,
+        );
+        formatter.field(
+            "unhealthy_agentless_collectors",
+            &self.unhealthy_agentless_collectors,
+        );
+        formatter.field(
+            "total_agentless_collectors",
+            &self.total_agentless_collectors,
+        );
+        formatter.field(
+            "unknown_agentless_collectors",
+            &self.unknown_agentless_collectors,
+        );
+        formatter.finish()
+    }
+}
+/// See [`CustomerAgentlessCollectorInfo`](crate::model::CustomerAgentlessCollectorInfo).
+pub mod customer_agentless_collector_info {
+
+    /// A builder for [`CustomerAgentlessCollectorInfo`](crate::model::CustomerAgentlessCollectorInfo).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) active_agentless_collectors: std::option::Option<i32>,
+        pub(crate) healthy_agentless_collectors: std::option::Option<i32>,
+        pub(crate) deny_listed_agentless_collectors: std::option::Option<i32>,
+        pub(crate) shutdown_agentless_collectors: std::option::Option<i32>,
+        pub(crate) unhealthy_agentless_collectors: std::option::Option<i32>,
+        pub(crate) total_agentless_collectors: std::option::Option<i32>,
+        pub(crate) unknown_agentless_collectors: std::option::Option<i32>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn active_agentless_collectors(mut self, input: i32) -> Self {
+            self.active_agentless_collectors = Some(input);
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_active_agentless_collectors(mut self, input: std::option::Option<i32>) -> Self {
+            self.active_agentless_collectors = input;
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn healthy_agentless_collectors(mut self, input: i32) -> Self {
+            self.healthy_agentless_collectors = Some(input);
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_healthy_agentless_collectors(mut self, input: std::option::Option<i32>) -> Self {
+            self.healthy_agentless_collectors = input;
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn deny_listed_agentless_collectors(mut self, input: i32) -> Self {
+            self.deny_listed_agentless_collectors = Some(input);
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_deny_listed_agentless_collectors(
+            mut self,
+            input: std::option::Option<i32>,
+        ) -> Self {
+            self.deny_listed_agentless_collectors = input;
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn shutdown_agentless_collectors(mut self, input: i32) -> Self {
+            self.shutdown_agentless_collectors = Some(input);
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_shutdown_agentless_collectors(
+            mut self,
+            input: std::option::Option<i32>,
+        ) -> Self {
+            self.shutdown_agentless_collectors = input;
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn unhealthy_agentless_collectors(mut self, input: i32) -> Self {
+            self.unhealthy_agentless_collectors = Some(input);
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_unhealthy_agentless_collectors(
+            mut self,
+            input: std::option::Option<i32>,
+        ) -> Self {
+            self.unhealthy_agentless_collectors = input;
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn total_agentless_collectors(mut self, input: i32) -> Self {
+            self.total_agentless_collectors = Some(input);
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_total_agentless_collectors(mut self, input: std::option::Option<i32>) -> Self {
+            self.total_agentless_collectors = input;
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn unknown_agentless_collectors(mut self, input: i32) -> Self {
+            self.unknown_agentless_collectors = Some(input);
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_unknown_agentless_collectors(mut self, input: std::option::Option<i32>) -> Self {
+            self.unknown_agentless_collectors = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CustomerAgentlessCollectorInfo`](crate::model::CustomerAgentlessCollectorInfo).
+        pub fn build(self) -> crate::model::CustomerAgentlessCollectorInfo {
+            crate::model::CustomerAgentlessCollectorInfo {
+                active_agentless_collectors: self.active_agentless_collectors.unwrap_or_default(),
+                healthy_agentless_collectors: self.healthy_agentless_collectors.unwrap_or_default(),
+                deny_listed_agentless_collectors: self
+                    .deny_listed_agentless_collectors
+                    .unwrap_or_default(),
+                shutdown_agentless_collectors: self
+                    .shutdown_agentless_collectors
+                    .unwrap_or_default(),
+                unhealthy_agentless_collectors: self
+                    .unhealthy_agentless_collectors
+                    .unwrap_or_default(),
+                total_agentless_collectors: self.total_agentless_collectors.unwrap_or_default(),
+                unknown_agentless_collectors: self.unknown_agentless_collectors.unwrap_or_default(),
+            }
+        }
+    }
+}
+impl CustomerAgentlessCollectorInfo {
+    /// Creates a new builder-style object to manufacture [`CustomerAgentlessCollectorInfo`](crate::model::CustomerAgentlessCollectorInfo).
+    pub fn builder() -> crate::model::customer_agentless_collector_info::Builder {
+        crate::model::customer_agentless_collector_info::Builder::default()
+    }
+}
+
 /// <p> The inventory data for installed Migration Evaluator collectors. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomerMeCollectorInfo {
     /// <p> The number of active Migration Evaluator collectors. </p>
+    #[doc(hidden)]
     pub active_me_collectors: i32,
     /// <p> The number of healthy Migration Evaluator collectors. </p>
+    #[doc(hidden)]
     pub healthy_me_collectors: i32,
     /// <p> The number of deny-listed Migration Evaluator collectors. </p>
+    #[doc(hidden)]
     pub deny_listed_me_collectors: i32,
     /// <p> The number of Migration Evaluator collectors with <code>SHUTDOWN</code> status. </p>
+    #[doc(hidden)]
     pub shutdown_me_collectors: i32,
     /// <p> The number of unhealthy Migration Evaluator collectors. </p>
+    #[doc(hidden)]
     pub unhealthy_me_collectors: i32,
     /// <p> The total number of Migration Evaluator collectors. </p>
+    #[doc(hidden)]
     pub total_me_collectors: i32,
     /// <p> The number of unknown Migration Evaluator collectors. </p>
+    #[doc(hidden)]
     pub unknown_me_collectors: i32,
 }
 impl CustomerMeCollectorInfo {
@@ -1228,11 +1469,10 @@ impl std::fmt::Debug for CustomerMeCollectorInfo {
         formatter.finish()
     }
 }
-/// See [`CustomerMeCollectorInfo`](crate::model::CustomerMeCollectorInfo)
+/// See [`CustomerMeCollectorInfo`](crate::model::CustomerMeCollectorInfo).
 pub mod customer_me_collector_info {
 
-    /// A builder for [`CustomerMeCollectorInfo`](crate::model::CustomerMeCollectorInfo)
-    #[non_exhaustive]
+    /// A builder for [`CustomerMeCollectorInfo`](crate::model::CustomerMeCollectorInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) active_me_collectors: std::option::Option<i32>,
@@ -1314,7 +1554,7 @@ pub mod customer_me_collector_info {
             self.unknown_me_collectors = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomerMeCollectorInfo`](crate::model::CustomerMeCollectorInfo)
+        /// Consumes the builder and constructs a [`CustomerMeCollectorInfo`](crate::model::CustomerMeCollectorInfo).
         pub fn build(self) -> crate::model::CustomerMeCollectorInfo {
             crate::model::CustomerMeCollectorInfo {
                 active_me_collectors: self.active_me_collectors.unwrap_or_default(),
@@ -1329,7 +1569,7 @@ pub mod customer_me_collector_info {
     }
 }
 impl CustomerMeCollectorInfo {
-    /// Creates a new builder-style object to manufacture [`CustomerMeCollectorInfo`](crate::model::CustomerMeCollectorInfo)
+    /// Creates a new builder-style object to manufacture [`CustomerMeCollectorInfo`](crate::model::CustomerMeCollectorInfo).
     pub fn builder() -> crate::model::customer_me_collector_info::Builder {
         crate::model::customer_me_collector_info::Builder::default()
     }
@@ -1340,18 +1580,25 @@ impl CustomerMeCollectorInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomerConnectorInfo {
     /// <p>Number of active discovery connectors.</p>
+    #[doc(hidden)]
     pub active_connectors: i32,
     /// <p>Number of healthy discovery connectors.</p>
+    #[doc(hidden)]
     pub healthy_connectors: i32,
     /// <p>Number of blacklisted discovery connectors.</p>
+    #[doc(hidden)]
     pub black_listed_connectors: i32,
     /// <p>Number of discovery connectors with status SHUTDOWN,</p>
+    #[doc(hidden)]
     pub shutdown_connectors: i32,
     /// <p>Number of unhealthy discovery connectors.</p>
+    #[doc(hidden)]
     pub unhealthy_connectors: i32,
     /// <p>Total number of discovery connectors.</p>
+    #[doc(hidden)]
     pub total_connectors: i32,
     /// <p>Number of unknown discovery connectors.</p>
+    #[doc(hidden)]
     pub unknown_connectors: i32,
 }
 impl CustomerConnectorInfo {
@@ -1397,11 +1644,10 @@ impl std::fmt::Debug for CustomerConnectorInfo {
         formatter.finish()
     }
 }
-/// See [`CustomerConnectorInfo`](crate::model::CustomerConnectorInfo)
+/// See [`CustomerConnectorInfo`](crate::model::CustomerConnectorInfo).
 pub mod customer_connector_info {
 
-    /// A builder for [`CustomerConnectorInfo`](crate::model::CustomerConnectorInfo)
-    #[non_exhaustive]
+    /// A builder for [`CustomerConnectorInfo`](crate::model::CustomerConnectorInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) active_connectors: std::option::Option<i32>,
@@ -1483,7 +1729,7 @@ pub mod customer_connector_info {
             self.unknown_connectors = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomerConnectorInfo`](crate::model::CustomerConnectorInfo)
+        /// Consumes the builder and constructs a [`CustomerConnectorInfo`](crate::model::CustomerConnectorInfo).
         pub fn build(self) -> crate::model::CustomerConnectorInfo {
             crate::model::CustomerConnectorInfo {
                 active_connectors: self.active_connectors.unwrap_or_default(),
@@ -1498,7 +1744,7 @@ pub mod customer_connector_info {
     }
 }
 impl CustomerConnectorInfo {
-    /// Creates a new builder-style object to manufacture [`CustomerConnectorInfo`](crate::model::CustomerConnectorInfo)
+    /// Creates a new builder-style object to manufacture [`CustomerConnectorInfo`](crate::model::CustomerConnectorInfo).
     pub fn builder() -> crate::model::customer_connector_info::Builder {
         crate::model::customer_connector_info::Builder::default()
     }
@@ -1509,18 +1755,25 @@ impl CustomerConnectorInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CustomerAgentInfo {
     /// <p>Number of active discovery agents.</p>
+    #[doc(hidden)]
     pub active_agents: i32,
     /// <p>Number of healthy discovery agents</p>
+    #[doc(hidden)]
     pub healthy_agents: i32,
     /// <p>Number of blacklisted discovery agents.</p>
+    #[doc(hidden)]
     pub black_listed_agents: i32,
     /// <p>Number of discovery agents with status SHUTDOWN.</p>
+    #[doc(hidden)]
     pub shutdown_agents: i32,
     /// <p>Number of unhealthy discovery agents.</p>
+    #[doc(hidden)]
     pub unhealthy_agents: i32,
     /// <p>Total number of discovery agents.</p>
+    #[doc(hidden)]
     pub total_agents: i32,
     /// <p>Number of unknown discovery agents.</p>
+    #[doc(hidden)]
     pub unknown_agents: i32,
 }
 impl CustomerAgentInfo {
@@ -1566,11 +1819,10 @@ impl std::fmt::Debug for CustomerAgentInfo {
         formatter.finish()
     }
 }
-/// See [`CustomerAgentInfo`](crate::model::CustomerAgentInfo)
+/// See [`CustomerAgentInfo`](crate::model::CustomerAgentInfo).
 pub mod customer_agent_info {
 
-    /// A builder for [`CustomerAgentInfo`](crate::model::CustomerAgentInfo)
-    #[non_exhaustive]
+    /// A builder for [`CustomerAgentInfo`](crate::model::CustomerAgentInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) active_agents: std::option::Option<i32>,
@@ -1652,7 +1904,7 @@ pub mod customer_agent_info {
             self.unknown_agents = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomerAgentInfo`](crate::model::CustomerAgentInfo)
+        /// Consumes the builder and constructs a [`CustomerAgentInfo`](crate::model::CustomerAgentInfo).
         pub fn build(self) -> crate::model::CustomerAgentInfo {
             crate::model::CustomerAgentInfo {
                 active_agents: self.active_agents.unwrap_or_default(),
@@ -1667,7 +1919,7 @@ pub mod customer_agent_info {
     }
 }
 impl CustomerAgentInfo {
-    /// Creates a new builder-style object to manufacture [`CustomerAgentInfo`](crate::model::CustomerAgentInfo)
+    /// Creates a new builder-style object to manufacture [`CustomerAgentInfo`](crate::model::CustomerAgentInfo).
     pub fn builder() -> crate::model::customer_agent_info::Builder {
         crate::model::customer_agent_info::Builder::default()
     }
@@ -1678,14 +1930,19 @@ impl CustomerAgentInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConfigurationTag {
     /// <p>A type of IT asset to tag.</p>
+    #[doc(hidden)]
     pub configuration_type: std::option::Option<crate::model::ConfigurationItemType>,
     /// <p>The configuration ID for the item to tag. You can specify a list of keys and values.</p>
+    #[doc(hidden)]
     pub configuration_id: std::option::Option<std::string::String>,
     /// <p>A type of tag on which to filter. For example, <i>serverType</i>.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>A value on which to filter. For example <i>key = serverType</i> and <i>value = web server</i>.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
     /// <p>The time the configuration tag was created in Coordinated Universal Time (UTC).</p>
+    #[doc(hidden)]
     pub time_of_creation: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ConfigurationTag {
@@ -1721,11 +1978,10 @@ impl std::fmt::Debug for ConfigurationTag {
         formatter.finish()
     }
 }
-/// See [`ConfigurationTag`](crate::model::ConfigurationTag)
+/// See [`ConfigurationTag`](crate::model::ConfigurationTag).
 pub mod configuration_tag {
 
-    /// A builder for [`ConfigurationTag`](crate::model::ConfigurationTag)
-    #[non_exhaustive]
+    /// A builder for [`ConfigurationTag`](crate::model::ConfigurationTag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) configuration_type: std::option::Option<crate::model::ConfigurationItemType>,
@@ -1794,7 +2050,7 @@ pub mod configuration_tag {
             self.time_of_creation = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigurationTag`](crate::model::ConfigurationTag)
+        /// Consumes the builder and constructs a [`ConfigurationTag`](crate::model::ConfigurationTag).
         pub fn build(self) -> crate::model::ConfigurationTag {
             crate::model::ConfigurationTag {
                 configuration_type: self.configuration_type,
@@ -1807,7 +2063,7 @@ pub mod configuration_tag {
     }
 }
 impl ConfigurationTag {
-    /// Creates a new builder-style object to manufacture [`ConfigurationTag`](crate::model::ConfigurationTag)
+    /// Creates a new builder-style object to manufacture [`ConfigurationTag`](crate::model::ConfigurationTag).
     pub fn builder() -> crate::model::configuration_tag::Builder {
         crate::model::configuration_tag::Builder::default()
     }
@@ -1818,8 +2074,10 @@ impl ConfigurationTag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TagFilter {
     /// <p>A name of the tag filter.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Values for the tag filter.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl TagFilter {
@@ -1840,11 +2098,10 @@ impl std::fmt::Debug for TagFilter {
         formatter.finish()
     }
 }
-/// See [`TagFilter`](crate::model::TagFilter)
+/// See [`TagFilter`](crate::model::TagFilter).
 pub mod tag_filter {
 
-    /// A builder for [`TagFilter`](crate::model::TagFilter)
-    #[non_exhaustive]
+    /// A builder for [`TagFilter`](crate::model::TagFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1880,7 +2137,7 @@ pub mod tag_filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagFilter`](crate::model::TagFilter)
+        /// Consumes the builder and constructs a [`TagFilter`](crate::model::TagFilter).
         pub fn build(self) -> crate::model::TagFilter {
             crate::model::TagFilter {
                 name: self.name,
@@ -1890,7 +2147,7 @@ pub mod tag_filter {
     }
 }
 impl TagFilter {
-    /// Creates a new builder-style object to manufacture [`TagFilter`](crate::model::TagFilter)
+    /// Creates a new builder-style object to manufacture [`TagFilter`](crate::model::TagFilter).
     pub fn builder() -> crate::model::tag_filter::Builder {
         crate::model::tag_filter::Builder::default()
     }
@@ -1903,8 +2160,10 @@ impl TagFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportTaskFilter {
     /// <p>The name, status, or import task ID for a specific import task.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::ImportTaskFilterName>,
     /// <p>An array of strings that you can provide to match against a specific name, status, or import task ID to filter the results for your import task queries.</p>
+    #[doc(hidden)]
     pub values: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ImportTaskFilter {
@@ -1925,11 +2184,10 @@ impl std::fmt::Debug for ImportTaskFilter {
         formatter.finish()
     }
 }
-/// See [`ImportTaskFilter`](crate::model::ImportTaskFilter)
+/// See [`ImportTaskFilter`](crate::model::ImportTaskFilter).
 pub mod import_task_filter {
 
-    /// A builder for [`ImportTaskFilter`](crate::model::ImportTaskFilter)
-    #[non_exhaustive]
+    /// A builder for [`ImportTaskFilter`](crate::model::ImportTaskFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::ImportTaskFilterName>,
@@ -1968,7 +2226,7 @@ pub mod import_task_filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportTaskFilter`](crate::model::ImportTaskFilter)
+        /// Consumes the builder and constructs a [`ImportTaskFilter`](crate::model::ImportTaskFilter).
         pub fn build(self) -> crate::model::ImportTaskFilter {
             crate::model::ImportTaskFilter {
                 name: self.name,
@@ -1978,7 +2236,7 @@ pub mod import_task_filter {
     }
 }
 impl ImportTaskFilter {
-    /// Creates a new builder-style object to manufacture [`ImportTaskFilter`](crate::model::ImportTaskFilter)
+    /// Creates a new builder-style object to manufacture [`ImportTaskFilter`](crate::model::ImportTaskFilter).
     pub fn builder() -> crate::model::import_task_filter::Builder {
         crate::model::import_task_filter::Builder::default()
     }
@@ -2048,20 +2306,28 @@ impl AsRef<str> for ImportTaskFilterName {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExportInfo {
     /// <p>A unique identifier used to query an export.</p>
+    #[doc(hidden)]
     pub export_id: std::option::Option<std::string::String>,
     /// <p>The status of the data export job.</p>
+    #[doc(hidden)]
     pub export_status: std::option::Option<crate::model::ExportStatus>,
     /// <p>A status message provided for API callers.</p>
+    #[doc(hidden)]
     pub status_message: std::option::Option<std::string::String>,
     /// <p>A URL for an Amazon S3 bucket where you can review the exported data. The URL is displayed only if the export succeeded.</p>
+    #[doc(hidden)]
     pub configurations_download_url: std::option::Option<std::string::String>,
     /// <p>The time that the data export was initiated.</p>
+    #[doc(hidden)]
     pub export_request_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If true, the export of agent information exceeded the size limit for a single export and the exported data is incomplete for the requested time range. To address this, select a smaller time range for the export by using <code>startDate</code> and <code>endDate</code>.</p>
+    #[doc(hidden)]
     pub is_truncated: bool,
     /// <p>The value of <code>startTime</code> parameter in the <code>StartExportTask</code> request. If no <code>startTime</code> was requested, this result does not appear in <code>ExportInfo</code>.</p>
+    #[doc(hidden)]
     pub requested_start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The <code>endTime</code> used in the <code>StartExportTask</code> request. If no <code>endTime</code> was requested, this result does not appear in <code>ExportInfo</code>.</p>
+    #[doc(hidden)]
     pub requested_end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ExportInfo {
@@ -2115,11 +2381,10 @@ impl std::fmt::Debug for ExportInfo {
         formatter.finish()
     }
 }
-/// See [`ExportInfo`](crate::model::ExportInfo)
+/// See [`ExportInfo`](crate::model::ExportInfo).
 pub mod export_info {
 
-    /// A builder for [`ExportInfo`](crate::model::ExportInfo)
-    #[non_exhaustive]
+    /// A builder for [`ExportInfo`](crate::model::ExportInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_id: std::option::Option<std::string::String>,
@@ -2233,7 +2498,7 @@ pub mod export_info {
             self.requested_end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportInfo`](crate::model::ExportInfo)
+        /// Consumes the builder and constructs a [`ExportInfo`](crate::model::ExportInfo).
         pub fn build(self) -> crate::model::ExportInfo {
             crate::model::ExportInfo {
                 export_id: self.export_id,
@@ -2249,7 +2514,7 @@ pub mod export_info {
     }
 }
 impl ExportInfo {
-    /// Creates a new builder-style object to manufacture [`ExportInfo`](crate::model::ExportInfo)
+    /// Creates a new builder-style object to manufacture [`ExportInfo`](crate::model::ExportInfo).
     pub fn builder() -> crate::model::export_info::Builder {
         crate::model::export_info::Builder::default()
     }
@@ -2319,6 +2584,7 @@ impl AsRef<str> for ExportStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContinuousExportDescription {
     /// <p>The unique ID assigned to this export.</p>
+    #[doc(hidden)]
     pub export_id: std::option::Option<std::string::String>,
     /// <p>Describes the status of the export. Can be one of the following values:</p>
     /// <ul>
@@ -2330,6 +2596,7 @@ pub struct ContinuousExportDescription {
     /// <li> <p>STOP_FAILED - an error occurred stopping the export. To recover, call stop-continuous-export again.</p> </li>
     /// <li> <p>INACTIVE - the continuous export has been stopped. Data is no longer being exported to the customer bucket.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::ContinuousExportStatus>,
     /// <p>Contains information about any errors that have occurred. This data type can have the following values:</p>
     /// <ul>
@@ -2350,19 +2617,25 @@ pub struct ContinuousExportDescription {
     /// <li> <p>S3_BUCKET_LIMIT_FAILURE - You reached the limit for Amazon S3 buckets. Reduce the number of S3 buckets or request a limit increase and try again. For more information, see <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html">Bucket Restrictions and Limitations</a> in the Amazon Simple Storage Service Developer Guide.</p> </li>
     /// <li> <p>S3_NOT_SIGNED_UP - Your account is not signed up for the Amazon S3 service. You must sign up before you can use Amazon S3. You can sign up at the following URL: <a href="https://aws.amazon.com/s3">https://aws.amazon.com/s3</a>.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status_detail: std::option::Option<std::string::String>,
     /// <p>The name of the s3 bucket where the export data parquet files are stored.</p>
+    #[doc(hidden)]
     pub s3_bucket: std::option::Option<std::string::String>,
     /// <p>The timestamp representing when the continuous export was started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp that represents when this continuous export was stopped.</p>
+    #[doc(hidden)]
     pub stop_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The type of data collector used to gather this data (currently only offered for AGENT).</p>
+    #[doc(hidden)]
     pub data_source: std::option::Option<crate::model::DataSource>,
     /// <p>An object which describes how the data is stored.</p>
     /// <ul>
     /// <li> <p> <code>databaseName</code> - the name of the Glue database used to store the schema.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub schema_storage_config:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2447,11 +2720,10 @@ impl std::fmt::Debug for ContinuousExportDescription {
         formatter.finish()
     }
 }
-/// See [`ContinuousExportDescription`](crate::model::ContinuousExportDescription)
+/// See [`ContinuousExportDescription`](crate::model::ContinuousExportDescription).
 pub mod continuous_export_description {
 
-    /// A builder for [`ContinuousExportDescription`](crate::model::ContinuousExportDescription)
-    #[non_exhaustive]
+    /// A builder for [`ContinuousExportDescription`](crate::model::ContinuousExportDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) export_id: std::option::Option<std::string::String>,
@@ -2636,7 +2908,7 @@ pub mod continuous_export_description {
             self.schema_storage_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContinuousExportDescription`](crate::model::ContinuousExportDescription)
+        /// Consumes the builder and constructs a [`ContinuousExportDescription`](crate::model::ContinuousExportDescription).
         pub fn build(self) -> crate::model::ContinuousExportDescription {
             crate::model::ContinuousExportDescription {
                 export_id: self.export_id,
@@ -2652,7 +2924,7 @@ pub mod continuous_export_description {
     }
 }
 impl ContinuousExportDescription {
-    /// Creates a new builder-style object to manufacture [`ContinuousExportDescription`](crate::model::ContinuousExportDescription)
+    /// Creates a new builder-style object to manufacture [`ContinuousExportDescription`](crate::model::ContinuousExportDescription).
     pub fn builder() -> crate::model::continuous_export_description::Builder {
         crate::model::continuous_export_description::Builder::default()
     }
@@ -2746,24 +3018,34 @@ impl AsRef<str> for ContinuousExportStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AgentInfo {
     /// <p>The agent or connector ID.</p>
+    #[doc(hidden)]
     pub agent_id: std::option::Option<std::string::String>,
     /// <p>The name of the host where the agent or connector resides. The host can be a server or virtual machine.</p>
+    #[doc(hidden)]
     pub host_name: std::option::Option<std::string::String>,
     /// <p>Network details about the host where the agent or connector resides.</p>
+    #[doc(hidden)]
     pub agent_network_info_list: std::option::Option<std::vec::Vec<crate::model::AgentNetworkInfo>>,
     /// <p>The ID of the connector.</p>
+    #[doc(hidden)]
     pub connector_id: std::option::Option<std::string::String>,
     /// <p>The agent or connector version.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
     /// <p>The health of the agent or connector.</p>
+    #[doc(hidden)]
     pub health: std::option::Option<crate::model::AgentStatus>,
     /// <p>Time since agent or connector health was reported.</p>
+    #[doc(hidden)]
     pub last_health_ping_time: std::option::Option<std::string::String>,
     /// <p>Status of the collection process for an agent or connector.</p>
+    #[doc(hidden)]
     pub collection_status: std::option::Option<std::string::String>,
     /// <p>Type of agent.</p>
+    #[doc(hidden)]
     pub agent_type: std::option::Option<std::string::String>,
     /// <p>Agent's first registration timestamp in UTC.</p>
+    #[doc(hidden)]
     pub registered_time: std::option::Option<std::string::String>,
 }
 impl AgentInfo {
@@ -2826,11 +3108,10 @@ impl std::fmt::Debug for AgentInfo {
         formatter.finish()
     }
 }
-/// See [`AgentInfo`](crate::model::AgentInfo)
+/// See [`AgentInfo`](crate::model::AgentInfo).
 pub mod agent_info {
 
-    /// A builder for [`AgentInfo`](crate::model::AgentInfo)
-    #[non_exhaustive]
+    /// A builder for [`AgentInfo`](crate::model::AgentInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) agent_id: std::option::Option<std::string::String>,
@@ -2964,7 +3245,7 @@ pub mod agent_info {
             self.registered_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`AgentInfo`](crate::model::AgentInfo)
+        /// Consumes the builder and constructs a [`AgentInfo`](crate::model::AgentInfo).
         pub fn build(self) -> crate::model::AgentInfo {
             crate::model::AgentInfo {
                 agent_id: self.agent_id,
@@ -2982,7 +3263,7 @@ pub mod agent_info {
     }
 }
 impl AgentInfo {
-    /// Creates a new builder-style object to manufacture [`AgentInfo`](crate::model::AgentInfo)
+    /// Creates a new builder-style object to manufacture [`AgentInfo`](crate::model::AgentInfo).
     pub fn builder() -> crate::model::agent_info::Builder {
         crate::model::agent_info::Builder::default()
     }
@@ -3071,8 +3352,10 @@ impl AsRef<str> for AgentStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AgentNetworkInfo {
     /// <p>The IP address for the host where the agent/connector resides.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The MAC address for the host where the agent/connector resides.</p>
+    #[doc(hidden)]
     pub mac_address: std::option::Option<std::string::String>,
 }
 impl AgentNetworkInfo {
@@ -3093,11 +3376,10 @@ impl std::fmt::Debug for AgentNetworkInfo {
         formatter.finish()
     }
 }
-/// See [`AgentNetworkInfo`](crate::model::AgentNetworkInfo)
+/// See [`AgentNetworkInfo`](crate::model::AgentNetworkInfo).
 pub mod agent_network_info {
 
-    /// A builder for [`AgentNetworkInfo`](crate::model::AgentNetworkInfo)
-    #[non_exhaustive]
+    /// A builder for [`AgentNetworkInfo`](crate::model::AgentNetworkInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_address: std::option::Option<std::string::String>,
@@ -3124,7 +3406,7 @@ pub mod agent_network_info {
             self.mac_address = input;
             self
         }
-        /// Consumes the builder and constructs a [`AgentNetworkInfo`](crate::model::AgentNetworkInfo)
+        /// Consumes the builder and constructs a [`AgentNetworkInfo`](crate::model::AgentNetworkInfo).
         pub fn build(self) -> crate::model::AgentNetworkInfo {
             crate::model::AgentNetworkInfo {
                 ip_address: self.ip_address,
@@ -3134,7 +3416,7 @@ pub mod agent_network_info {
     }
 }
 impl AgentNetworkInfo {
-    /// Creates a new builder-style object to manufacture [`AgentNetworkInfo`](crate::model::AgentNetworkInfo)
+    /// Creates a new builder-style object to manufacture [`AgentNetworkInfo`](crate::model::AgentNetworkInfo).
     pub fn builder() -> crate::model::agent_network_info::Builder {
         crate::model::agent_network_info::Builder::default()
     }
@@ -3147,8 +3429,10 @@ impl AgentNetworkInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The type of tag on which to filter.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>A value for a tag key on which to filter.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -3169,11 +3453,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -3200,7 +3483,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -3210,7 +3493,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -3221,10 +3504,13 @@ impl Tag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchDeleteImportDataError {
     /// <p>The unique import ID associated with the error that occurred.</p>
+    #[doc(hidden)]
     pub import_task_id: std::option::Option<std::string::String>,
     /// <p>The type of error that occurred for a specific import task.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<crate::model::BatchDeleteImportDataErrorCode>,
     /// <p>The description of the error that occurred for a specific import task.</p>
+    #[doc(hidden)]
     pub error_description: std::option::Option<std::string::String>,
 }
 impl BatchDeleteImportDataError {
@@ -3250,11 +3536,10 @@ impl std::fmt::Debug for BatchDeleteImportDataError {
         formatter.finish()
     }
 }
-/// See [`BatchDeleteImportDataError`](crate::model::BatchDeleteImportDataError)
+/// See [`BatchDeleteImportDataError`](crate::model::BatchDeleteImportDataError).
 pub mod batch_delete_import_data_error {
 
-    /// A builder for [`BatchDeleteImportDataError`](crate::model::BatchDeleteImportDataError)
-    #[non_exhaustive]
+    /// A builder for [`BatchDeleteImportDataError`](crate::model::BatchDeleteImportDataError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) import_task_id: std::option::Option<std::string::String>,
@@ -3301,7 +3586,7 @@ pub mod batch_delete_import_data_error {
             self.error_description = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchDeleteImportDataError`](crate::model::BatchDeleteImportDataError)
+        /// Consumes the builder and constructs a [`BatchDeleteImportDataError`](crate::model::BatchDeleteImportDataError).
         pub fn build(self) -> crate::model::BatchDeleteImportDataError {
             crate::model::BatchDeleteImportDataError {
                 import_task_id: self.import_task_id,
@@ -3312,7 +3597,7 @@ pub mod batch_delete_import_data_error {
     }
 }
 impl BatchDeleteImportDataError {
-    /// Creates a new builder-style object to manufacture [`BatchDeleteImportDataError`](crate::model::BatchDeleteImportDataError)
+    /// Creates a new builder-style object to manufacture [`BatchDeleteImportDataError`](crate::model::BatchDeleteImportDataError).
     pub fn builder() -> crate::model::batch_delete_import_data_error::Builder {
         crate::model::batch_delete_import_data_error::Builder::default()
     }

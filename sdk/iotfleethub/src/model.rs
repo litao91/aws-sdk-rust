@@ -7,18 +7,25 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ApplicationSummary {
     /// <p>The unique Id of the web application.</p>
+    #[doc(hidden)]
     pub application_id: std::option::Option<std::string::String>,
     /// <p>The name of the web application.</p>
+    #[doc(hidden)]
     pub application_name: std::option::Option<std::string::String>,
     /// <p>An optional description of the web application.</p>
+    #[doc(hidden)]
     pub application_description: std::option::Option<std::string::String>,
     /// <p>The URL of the web application.</p>
+    #[doc(hidden)]
     pub application_url: std::option::Option<std::string::String>,
     /// <p>The date (in Unix epoch time) when the web application was created.</p>
+    #[doc(hidden)]
     pub application_creation_date: i64,
     /// <p>The date (in Unix epoch time) when the web application was last updated.</p>
+    #[doc(hidden)]
     pub application_last_update_date: i64,
     /// <p>The current state of the web application.</p>
+    #[doc(hidden)]
     pub application_state: std::option::Option<crate::model::ApplicationState>,
 }
 impl ApplicationSummary {
@@ -67,11 +74,10 @@ impl std::fmt::Debug for ApplicationSummary {
         formatter.finish()
     }
 }
-/// See [`ApplicationSummary`](crate::model::ApplicationSummary)
+/// See [`ApplicationSummary`](crate::model::ApplicationSummary).
 pub mod application_summary {
 
-    /// A builder for [`ApplicationSummary`](crate::model::ApplicationSummary)
-    #[non_exhaustive]
+    /// A builder for [`ApplicationSummary`](crate::model::ApplicationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_id: std::option::Option<std::string::String>,
@@ -168,7 +174,7 @@ pub mod application_summary {
             self.application_state = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApplicationSummary`](crate::model::ApplicationSummary)
+        /// Consumes the builder and constructs a [`ApplicationSummary`](crate::model::ApplicationSummary).
         pub fn build(self) -> crate::model::ApplicationSummary {
             crate::model::ApplicationSummary {
                 application_id: self.application_id,
@@ -183,7 +189,7 @@ pub mod application_summary {
     }
 }
 impl ApplicationSummary {
-    /// Creates a new builder-style object to manufacture [`ApplicationSummary`](crate::model::ApplicationSummary)
+    /// Creates a new builder-style object to manufacture [`ApplicationSummary`](crate::model::ApplicationSummary).
     pub fn builder() -> crate::model::application_summary::Builder {
         crate::model::application_summary::Builder::default()
     }

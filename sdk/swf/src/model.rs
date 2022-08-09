@@ -7,10 +7,12 @@ pub struct WorkflowType {
     /// <p> The name of the workflow type.</p> <note>
     /// <p>The combination of workflow type name and version must be unique with in a domain.</p>
     /// </note>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p> The version of the workflow type.</p> <note>
     /// <p>The combination of workflow type name and version must be unique with in a domain.</p>
     /// </note>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl WorkflowType {
@@ -35,11 +37,10 @@ impl std::fmt::Debug for WorkflowType {
         formatter.finish()
     }
 }
-/// See [`WorkflowType`](crate::model::WorkflowType)
+/// See [`WorkflowType`](crate::model::WorkflowType).
 pub mod workflow_type {
 
-    /// A builder for [`WorkflowType`](crate::model::WorkflowType)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowType`](crate::model::WorkflowType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -74,7 +75,7 @@ pub mod workflow_type {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowType`](crate::model::WorkflowType)
+        /// Consumes the builder and constructs a [`WorkflowType`](crate::model::WorkflowType).
         pub fn build(self) -> crate::model::WorkflowType {
             crate::model::WorkflowType {
                 name: self.name,
@@ -84,7 +85,7 @@ pub mod workflow_type {
     }
 }
 impl WorkflowType {
-    /// Creates a new builder-style object to manufacture [`WorkflowType`](crate::model::WorkflowType)
+    /// Creates a new builder-style object to manufacture [`WorkflowType`](crate::model::WorkflowType).
     pub fn builder() -> crate::model::workflow_type::Builder {
         crate::model::workflow_type::Builder::default()
     }
@@ -97,10 +98,12 @@ pub struct ActivityType {
     /// <p>The name of this activity.</p> <note>
     /// <p>The combination of activity type name and version must be unique within a domain.</p>
     /// </note>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The version of this activity.</p> <note>
     /// <p>The combination of activity type name and version must be unique with in a domain.</p>
     /// </note>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl ActivityType {
@@ -125,11 +128,10 @@ impl std::fmt::Debug for ActivityType {
         formatter.finish()
     }
 }
-/// See [`ActivityType`](crate::model::ActivityType)
+/// See [`ActivityType`](crate::model::ActivityType).
 pub mod activity_type {
 
-    /// A builder for [`ActivityType`](crate::model::ActivityType)
-    #[non_exhaustive]
+    /// A builder for [`ActivityType`](crate::model::ActivityType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -164,7 +166,7 @@ pub mod activity_type {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityType`](crate::model::ActivityType)
+        /// Consumes the builder and constructs a [`ActivityType`](crate::model::ActivityType).
         pub fn build(self) -> crate::model::ActivityType {
             crate::model::ActivityType {
                 name: self.name,
@@ -174,7 +176,7 @@ pub mod activity_type {
     }
 }
 impl ActivityType {
-    /// Creates a new builder-style object to manufacture [`ActivityType`](crate::model::ActivityType)
+    /// Creates a new builder-style object to manufacture [`ActivityType`](crate::model::ActivityType).
     pub fn builder() -> crate::model::activity_type::Builder {
         crate::model::activity_type::Builder::default()
     }
@@ -245,8 +247,10 @@ impl AsRef<str> for ChildPolicy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResourceTag {
     /// <p>The key of a tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of a tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl ResourceTag {
@@ -267,11 +271,10 @@ impl std::fmt::Debug for ResourceTag {
         formatter.finish()
     }
 }
-/// See [`ResourceTag`](crate::model::ResourceTag)
+/// See [`ResourceTag`](crate::model::ResourceTag).
 pub mod resource_tag {
 
-    /// A builder for [`ResourceTag`](crate::model::ResourceTag)
-    #[non_exhaustive]
+    /// A builder for [`ResourceTag`](crate::model::ResourceTag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -298,7 +301,7 @@ pub mod resource_tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceTag`](crate::model::ResourceTag)
+        /// Consumes the builder and constructs a [`ResourceTag`](crate::model::ResourceTag).
         pub fn build(self) -> crate::model::ResourceTag {
             crate::model::ResourceTag {
                 key: self.key,
@@ -308,7 +311,7 @@ pub mod resource_tag {
     }
 }
 impl ResourceTag {
-    /// Creates a new builder-style object to manufacture [`ResourceTag`](crate::model::ResourceTag)
+    /// Creates a new builder-style object to manufacture [`ResourceTag`](crate::model::ResourceTag).
     pub fn builder() -> crate::model::resource_tag::Builder {
         crate::model::resource_tag::Builder::default()
     }
@@ -319,6 +322,7 @@ impl ResourceTag {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TaskList {
     /// <p>The name of the task list.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
 }
 impl TaskList {
@@ -334,11 +338,10 @@ impl std::fmt::Debug for TaskList {
         formatter.finish()
     }
 }
-/// See [`TaskList`](crate::model::TaskList)
+/// See [`TaskList`](crate::model::TaskList).
 pub mod task_list {
 
-    /// A builder for [`TaskList`](crate::model::TaskList)
-    #[non_exhaustive]
+    /// A builder for [`TaskList`](crate::model::TaskList).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -354,14 +357,14 @@ pub mod task_list {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`TaskList`](crate::model::TaskList)
+        /// Consumes the builder and constructs a [`TaskList`](crate::model::TaskList).
         pub fn build(self) -> crate::model::TaskList {
             crate::model::TaskList { name: self.name }
         }
     }
 }
 impl TaskList {
-    /// Creates a new builder-style object to manufacture [`TaskList`](crate::model::TaskList)
+    /// Creates a new builder-style object to manufacture [`TaskList`](crate::model::TaskList).
     pub fn builder() -> crate::model::task_list::Builder {
         crate::model::task_list::Builder::default()
     }
@@ -428,44 +431,58 @@ impl TaskList {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Decision {
     /// <p>Specifies the type of the decision.</p>
+    #[doc(hidden)]
     pub decision_type: std::option::Option<crate::model::DecisionType>,
     /// <p>Provides the details of the <code>ScheduleActivityTask</code> decision. It isn't set for other decision types.</p>
+    #[doc(hidden)]
     pub schedule_activity_task_decision_attributes:
         std::option::Option<crate::model::ScheduleActivityTaskDecisionAttributes>,
     /// <p>Provides the details of the <code>RequestCancelActivityTask</code> decision. It isn't set for other decision types.</p>
+    #[doc(hidden)]
     pub request_cancel_activity_task_decision_attributes:
         std::option::Option<crate::model::RequestCancelActivityTaskDecisionAttributes>,
     /// <p>Provides the details of the <code>CompleteWorkflowExecution</code> decision. It isn't set for other decision types.</p>
+    #[doc(hidden)]
     pub complete_workflow_execution_decision_attributes:
         std::option::Option<crate::model::CompleteWorkflowExecutionDecisionAttributes>,
     /// <p>Provides the details of the <code>FailWorkflowExecution</code> decision. It isn't set for other decision types.</p>
+    #[doc(hidden)]
     pub fail_workflow_execution_decision_attributes:
         std::option::Option<crate::model::FailWorkflowExecutionDecisionAttributes>,
     /// <p>Provides the details of the <code>CancelWorkflowExecution</code> decision. It isn't set for other decision types.</p>
+    #[doc(hidden)]
     pub cancel_workflow_execution_decision_attributes:
         std::option::Option<crate::model::CancelWorkflowExecutionDecisionAttributes>,
     /// <p>Provides the details of the <code>ContinueAsNewWorkflowExecution</code> decision. It isn't set for other decision types.</p>
+    #[doc(hidden)]
     pub continue_as_new_workflow_execution_decision_attributes:
         std::option::Option<crate::model::ContinueAsNewWorkflowExecutionDecisionAttributes>,
     /// <p>Provides the details of the <code>RecordMarker</code> decision. It isn't set for other decision types.</p>
+    #[doc(hidden)]
     pub record_marker_decision_attributes:
         std::option::Option<crate::model::RecordMarkerDecisionAttributes>,
     /// <p>Provides the details of the <code>StartTimer</code> decision. It isn't set for other decision types.</p>
+    #[doc(hidden)]
     pub start_timer_decision_attributes:
         std::option::Option<crate::model::StartTimerDecisionAttributes>,
     /// <p>Provides the details of the <code>CancelTimer</code> decision. It isn't set for other decision types.</p>
+    #[doc(hidden)]
     pub cancel_timer_decision_attributes:
         std::option::Option<crate::model::CancelTimerDecisionAttributes>,
     /// <p>Provides the details of the <code>SignalExternalWorkflowExecution</code> decision. It isn't set for other decision types.</p>
+    #[doc(hidden)]
     pub signal_external_workflow_execution_decision_attributes:
         std::option::Option<crate::model::SignalExternalWorkflowExecutionDecisionAttributes>,
     /// <p>Provides the details of the <code>RequestCancelExternalWorkflowExecution</code> decision. It isn't set for other decision types.</p>
+    #[doc(hidden)]
     pub request_cancel_external_workflow_execution_decision_attributes:
         std::option::Option<crate::model::RequestCancelExternalWorkflowExecutionDecisionAttributes>,
     /// <p>Provides the details of the <code>StartChildWorkflowExecution</code> decision. It isn't set for other decision types.</p>
+    #[doc(hidden)]
     pub start_child_workflow_execution_decision_attributes:
         std::option::Option<crate::model::StartChildWorkflowExecutionDecisionAttributes>,
     /// <p>Provides the details of the <code>ScheduleLambdaFunction</code> decision. It isn't set for other decision types.</p>
+    #[doc(hidden)]
     pub schedule_lambda_function_decision_attributes:
         std::option::Option<crate::model::ScheduleLambdaFunctionDecisionAttributes>,
 }
@@ -619,11 +636,10 @@ impl std::fmt::Debug for Decision {
         formatter.finish()
     }
 }
-/// See [`Decision`](crate::model::Decision)
+/// See [`Decision`](crate::model::Decision).
 pub mod decision {
 
-    /// A builder for [`Decision`](crate::model::Decision)
-    #[non_exhaustive]
+    /// A builder for [`Decision`](crate::model::Decision).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) decision_type: std::option::Option<crate::model::DecisionType>,
@@ -884,7 +900,7 @@ pub mod decision {
             self.schedule_lambda_function_decision_attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`Decision`](crate::model::Decision)
+        /// Consumes the builder and constructs a [`Decision`](crate::model::Decision).
         pub fn build(self) -> crate::model::Decision {
             crate::model::Decision {
                 decision_type: self.decision_type,
@@ -916,7 +932,7 @@ pub mod decision {
     }
 }
 impl Decision {
-    /// Creates a new builder-style object to manufacture [`Decision`](crate::model::Decision)
+    /// Creates a new builder-style object to manufacture [`Decision`](crate::model::Decision).
     pub fn builder() -> crate::model::decision::Builder {
         crate::model::decision::Builder::default()
     }
@@ -927,14 +943,19 @@ impl Decision {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduleLambdaFunctionDecisionAttributes {
     /// <p>A string that identifies the Lambda function execution in the event history.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name, or ARN, of the Lambda function to schedule.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The data attached to the event that the decider can use in subsequent workflow tasks. This data isn't sent to the Lambda task.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
     /// <p>The optional input data to be supplied to the Lambda function.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>The timeout value, in seconds, after which the Lambda function is considered to be failed once it has started. This can be any integer from 1-300 (1s-5m). If no value is supplied, than a default value of 300s is assumed.</p>
+    #[doc(hidden)]
     pub start_to_close_timeout: std::option::Option<std::string::String>,
 }
 impl ScheduleLambdaFunctionDecisionAttributes {
@@ -970,11 +991,10 @@ impl std::fmt::Debug for ScheduleLambdaFunctionDecisionAttributes {
         formatter.finish()
     }
 }
-/// See [`ScheduleLambdaFunctionDecisionAttributes`](crate::model::ScheduleLambdaFunctionDecisionAttributes)
+/// See [`ScheduleLambdaFunctionDecisionAttributes`](crate::model::ScheduleLambdaFunctionDecisionAttributes).
 pub mod schedule_lambda_function_decision_attributes {
 
-    /// A builder for [`ScheduleLambdaFunctionDecisionAttributes`](crate::model::ScheduleLambdaFunctionDecisionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ScheduleLambdaFunctionDecisionAttributes`](crate::model::ScheduleLambdaFunctionDecisionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1037,7 +1057,7 @@ pub mod schedule_lambda_function_decision_attributes {
             self.start_to_close_timeout = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduleLambdaFunctionDecisionAttributes`](crate::model::ScheduleLambdaFunctionDecisionAttributes)
+        /// Consumes the builder and constructs a [`ScheduleLambdaFunctionDecisionAttributes`](crate::model::ScheduleLambdaFunctionDecisionAttributes).
         pub fn build(self) -> crate::model::ScheduleLambdaFunctionDecisionAttributes {
             crate::model::ScheduleLambdaFunctionDecisionAttributes {
                 id: self.id,
@@ -1050,7 +1070,7 @@ pub mod schedule_lambda_function_decision_attributes {
     }
 }
 impl ScheduleLambdaFunctionDecisionAttributes {
-    /// Creates a new builder-style object to manufacture [`ScheduleLambdaFunctionDecisionAttributes`](crate::model::ScheduleLambdaFunctionDecisionAttributes)
+    /// Creates a new builder-style object to manufacture [`ScheduleLambdaFunctionDecisionAttributes`](crate::model::ScheduleLambdaFunctionDecisionAttributes).
     pub fn builder() -> crate::model::schedule_lambda_function_decision_attributes::Builder {
         crate::model::schedule_lambda_function_decision_attributes::Builder::default()
     }
@@ -1075,31 +1095,39 @@ impl ScheduleLambdaFunctionDecisionAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartChildWorkflowExecutionDecisionAttributes {
     /// <p> The type of the workflow execution to be started.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p> The <code>workflowId</code> of the workflow execution.</p>
     /// <p>The specified string must not start or end with whitespace. It must not contain a <code>:</code> (colon), <code>/</code> (slash), <code>|</code> (vertical bar), or any control characters (<code>\u0000-\u001f</code> | <code>\u007f-\u009f</code>). Also, it must not contain the literal string <code>arn</code>.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
     /// <p>The data attached to the event that can be used by the decider in subsequent workflow tasks. This data isn't sent to the child workflow execution.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
     /// <p>The input to be provided to the workflow execution.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>The total duration for this workflow execution. This overrides the defaultExecutionStartToCloseTimeout specified when registering the workflow type.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p> <note>
     /// <p>An execution start-to-close timeout for this workflow execution must be specified either as a default for the workflow type or through this parameter. If neither this parameter is set nor a default execution start-to-close timeout was specified at registration time then a fault is returned.</p>
     /// </note>
+    #[doc(hidden)]
     pub execution_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>The name of the task list to be used for decision tasks of the child workflow execution.</p> <note>
     /// <p>A task list for this workflow execution must be specified either as a default for the workflow type or through this parameter. If neither this parameter is set nor a default task list was specified at registration time then a fault is returned.</p>
     /// </note>
     /// <p>The specified string must not start or end with whitespace. It must not contain a <code>:</code> (colon), <code>/</code> (slash), <code>|</code> (vertical bar), or any control characters (<code>\u0000-\u001f</code> | <code>\u007f-\u009f</code>). Also, it must not contain the literal string <code>arn</code>.</p>
+    #[doc(hidden)]
     pub task_list: std::option::Option<crate::model::TaskList>,
     /// <p> A task priority that, if set, specifies the priority for a decision task of this workflow execution. This overrides the defaultTaskPriority specified when registering the workflow type. Valid values are integers that range from Java's <code>Integer.MIN_VALUE</code> (-2147483648) to <code>Integer.MAX_VALUE</code> (2147483647). Higher numbers indicate higher priority.</p>
     /// <p>For more information about setting task priority, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/programming-priority.html">Setting Task Priority</a> in the <i>Amazon SWF Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub task_priority: std::option::Option<std::string::String>,
     /// <p>Specifies the maximum duration of decision tasks for this workflow execution. This parameter overrides the <code>defaultTaskStartToCloseTimout</code> specified when registering the workflow type using <code>RegisterWorkflowType</code>.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p> <note>
     /// <p>A task start-to-close timeout for this workflow execution must be specified either as a default for the workflow type or through this parameter. If neither this parameter is set nor a default task start-to-close timeout was specified at registration time then a fault is returned.</p>
     /// </note>
+    #[doc(hidden)]
     pub task_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p> If set, specifies the policy to use for the child workflow executions if the workflow execution being started is terminated by calling the <code>TerminateWorkflowExecution</code> action explicitly or due to an expired timeout. This policy overrides the default child policy specified when registering the workflow type using <code>RegisterWorkflowType</code>.</p>
     /// <p>The supported child policies are:</p>
@@ -1110,10 +1138,13 @@ pub struct StartChildWorkflowExecutionDecisionAttributes {
     /// </ul> <note>
     /// <p>A child policy for this workflow execution must be specified either as a default for the workflow type or through this parameter. If neither this parameter is set nor a default child policy was specified at registration time then a fault is returned.</p>
     /// </note>
+    #[doc(hidden)]
     pub child_policy: std::option::Option<crate::model::ChildPolicy>,
     /// <p>The list of tags to associate with the child workflow execution. A maximum of 5 tags can be specified. You can list workflow executions with a specific tag by calling <code>ListOpenWorkflowExecutions</code> or <code>ListClosedWorkflowExecutions</code> and specifying a <code>TagFilter</code>.</p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The IAM role attached to the child workflow execution.</p>
+    #[doc(hidden)]
     pub lambda_role: std::option::Option<std::string::String>,
 }
 impl StartChildWorkflowExecutionDecisionAttributes {
@@ -1204,11 +1235,10 @@ impl std::fmt::Debug for StartChildWorkflowExecutionDecisionAttributes {
         formatter.finish()
     }
 }
-/// See [`StartChildWorkflowExecutionDecisionAttributes`](crate::model::StartChildWorkflowExecutionDecisionAttributes)
+/// See [`StartChildWorkflowExecutionDecisionAttributes`](crate::model::StartChildWorkflowExecutionDecisionAttributes).
 pub mod start_child_workflow_execution_decision_attributes {
 
-    /// A builder for [`StartChildWorkflowExecutionDecisionAttributes`](crate::model::StartChildWorkflowExecutionDecisionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`StartChildWorkflowExecutionDecisionAttributes`](crate::model::StartChildWorkflowExecutionDecisionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_type: std::option::Option<crate::model::WorkflowType>,
@@ -1402,7 +1432,7 @@ pub mod start_child_workflow_execution_decision_attributes {
             self.lambda_role = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartChildWorkflowExecutionDecisionAttributes`](crate::model::StartChildWorkflowExecutionDecisionAttributes)
+        /// Consumes the builder and constructs a [`StartChildWorkflowExecutionDecisionAttributes`](crate::model::StartChildWorkflowExecutionDecisionAttributes).
         pub fn build(self) -> crate::model::StartChildWorkflowExecutionDecisionAttributes {
             crate::model::StartChildWorkflowExecutionDecisionAttributes {
                 workflow_type: self.workflow_type,
@@ -1421,7 +1451,7 @@ pub mod start_child_workflow_execution_decision_attributes {
     }
 }
 impl StartChildWorkflowExecutionDecisionAttributes {
-    /// Creates a new builder-style object to manufacture [`StartChildWorkflowExecutionDecisionAttributes`](crate::model::StartChildWorkflowExecutionDecisionAttributes)
+    /// Creates a new builder-style object to manufacture [`StartChildWorkflowExecutionDecisionAttributes`](crate::model::StartChildWorkflowExecutionDecisionAttributes).
     pub fn builder() -> crate::model::start_child_workflow_execution_decision_attributes::Builder {
         crate::model::start_child_workflow_execution_decision_attributes::Builder::default()
     }
@@ -1440,10 +1470,13 @@ impl StartChildWorkflowExecutionDecisionAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RequestCancelExternalWorkflowExecutionDecisionAttributes {
     /// <p> The <code>workflowId</code> of the external workflow execution to cancel.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
     /// <p>The <code>runId</code> of the external workflow execution to cancel.</p>
+    #[doc(hidden)]
     pub run_id: std::option::Option<std::string::String>,
     /// <p>The data attached to the event that can be used by the decider in subsequent workflow tasks.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
 }
 impl RequestCancelExternalWorkflowExecutionDecisionAttributes {
@@ -1470,11 +1503,10 @@ impl std::fmt::Debug for RequestCancelExternalWorkflowExecutionDecisionAttribute
         formatter.finish()
     }
 }
-/// See [`RequestCancelExternalWorkflowExecutionDecisionAttributes`](crate::model::RequestCancelExternalWorkflowExecutionDecisionAttributes)
+/// See [`RequestCancelExternalWorkflowExecutionDecisionAttributes`](crate::model::RequestCancelExternalWorkflowExecutionDecisionAttributes).
 pub mod request_cancel_external_workflow_execution_decision_attributes {
 
-    /// A builder for [`RequestCancelExternalWorkflowExecutionDecisionAttributes`](crate::model::RequestCancelExternalWorkflowExecutionDecisionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`RequestCancelExternalWorkflowExecutionDecisionAttributes`](crate::model::RequestCancelExternalWorkflowExecutionDecisionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_id: std::option::Option<std::string::String>,
@@ -1512,7 +1544,7 @@ pub mod request_cancel_external_workflow_execution_decision_attributes {
             self.control = input;
             self
         }
-        /// Consumes the builder and constructs a [`RequestCancelExternalWorkflowExecutionDecisionAttributes`](crate::model::RequestCancelExternalWorkflowExecutionDecisionAttributes)
+        /// Consumes the builder and constructs a [`RequestCancelExternalWorkflowExecutionDecisionAttributes`](crate::model::RequestCancelExternalWorkflowExecutionDecisionAttributes).
         pub fn build(
             self,
         ) -> crate::model::RequestCancelExternalWorkflowExecutionDecisionAttributes {
@@ -1525,7 +1557,7 @@ pub mod request_cancel_external_workflow_execution_decision_attributes {
     }
 }
 impl RequestCancelExternalWorkflowExecutionDecisionAttributes {
-    /// Creates a new builder-style object to manufacture [`RequestCancelExternalWorkflowExecutionDecisionAttributes`](crate::model::RequestCancelExternalWorkflowExecutionDecisionAttributes)
+    /// Creates a new builder-style object to manufacture [`RequestCancelExternalWorkflowExecutionDecisionAttributes`](crate::model::RequestCancelExternalWorkflowExecutionDecisionAttributes).
     pub fn builder(
     ) -> crate::model::request_cancel_external_workflow_execution_decision_attributes::Builder {
         crate::model::request_cancel_external_workflow_execution_decision_attributes::Builder::default()
@@ -1545,14 +1577,19 @@ impl RequestCancelExternalWorkflowExecutionDecisionAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SignalExternalWorkflowExecutionDecisionAttributes {
     /// <p> The <code>workflowId</code> of the workflow execution to be signaled.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
     /// <p>The <code>runId</code> of the workflow execution to be signaled.</p>
+    #[doc(hidden)]
     pub run_id: std::option::Option<std::string::String>,
     /// <p> The name of the signal.The target workflow execution uses the signal name and input to process the signal.</p>
+    #[doc(hidden)]
     pub signal_name: std::option::Option<std::string::String>,
     /// <p> The input data to be provided with the signal. The target workflow execution uses the signal name and input data to process the signal.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>The data attached to the event that can be used by the decider in subsequent decision tasks.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
 }
 impl SignalExternalWorkflowExecutionDecisionAttributes {
@@ -1588,11 +1625,10 @@ impl std::fmt::Debug for SignalExternalWorkflowExecutionDecisionAttributes {
         formatter.finish()
     }
 }
-/// See [`SignalExternalWorkflowExecutionDecisionAttributes`](crate::model::SignalExternalWorkflowExecutionDecisionAttributes)
+/// See [`SignalExternalWorkflowExecutionDecisionAttributes`](crate::model::SignalExternalWorkflowExecutionDecisionAttributes).
 pub mod signal_external_workflow_execution_decision_attributes {
 
-    /// A builder for [`SignalExternalWorkflowExecutionDecisionAttributes`](crate::model::SignalExternalWorkflowExecutionDecisionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`SignalExternalWorkflowExecutionDecisionAttributes`](crate::model::SignalExternalWorkflowExecutionDecisionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_id: std::option::Option<std::string::String>,
@@ -1652,7 +1688,7 @@ pub mod signal_external_workflow_execution_decision_attributes {
             self.control = input;
             self
         }
-        /// Consumes the builder and constructs a [`SignalExternalWorkflowExecutionDecisionAttributes`](crate::model::SignalExternalWorkflowExecutionDecisionAttributes)
+        /// Consumes the builder and constructs a [`SignalExternalWorkflowExecutionDecisionAttributes`](crate::model::SignalExternalWorkflowExecutionDecisionAttributes).
         pub fn build(self) -> crate::model::SignalExternalWorkflowExecutionDecisionAttributes {
             crate::model::SignalExternalWorkflowExecutionDecisionAttributes {
                 workflow_id: self.workflow_id,
@@ -1665,7 +1701,7 @@ pub mod signal_external_workflow_execution_decision_attributes {
     }
 }
 impl SignalExternalWorkflowExecutionDecisionAttributes {
-    /// Creates a new builder-style object to manufacture [`SignalExternalWorkflowExecutionDecisionAttributes`](crate::model::SignalExternalWorkflowExecutionDecisionAttributes)
+    /// Creates a new builder-style object to manufacture [`SignalExternalWorkflowExecutionDecisionAttributes`](crate::model::SignalExternalWorkflowExecutionDecisionAttributes).
     pub fn builder() -> crate::model::signal_external_workflow_execution_decision_attributes::Builder
     {
         crate::model::signal_external_workflow_execution_decision_attributes::Builder::default()
@@ -1685,6 +1721,7 @@ impl SignalExternalWorkflowExecutionDecisionAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelTimerDecisionAttributes {
     /// <p> The unique ID of the timer to cancel.</p>
+    #[doc(hidden)]
     pub timer_id: std::option::Option<std::string::String>,
 }
 impl CancelTimerDecisionAttributes {
@@ -1700,11 +1737,10 @@ impl std::fmt::Debug for CancelTimerDecisionAttributes {
         formatter.finish()
     }
 }
-/// See [`CancelTimerDecisionAttributes`](crate::model::CancelTimerDecisionAttributes)
+/// See [`CancelTimerDecisionAttributes`](crate::model::CancelTimerDecisionAttributes).
 pub mod cancel_timer_decision_attributes {
 
-    /// A builder for [`CancelTimerDecisionAttributes`](crate::model::CancelTimerDecisionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`CancelTimerDecisionAttributes`](crate::model::CancelTimerDecisionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timer_id: std::option::Option<std::string::String>,
@@ -1720,7 +1756,7 @@ pub mod cancel_timer_decision_attributes {
             self.timer_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelTimerDecisionAttributes`](crate::model::CancelTimerDecisionAttributes)
+        /// Consumes the builder and constructs a [`CancelTimerDecisionAttributes`](crate::model::CancelTimerDecisionAttributes).
         pub fn build(self) -> crate::model::CancelTimerDecisionAttributes {
             crate::model::CancelTimerDecisionAttributes {
                 timer_id: self.timer_id,
@@ -1729,7 +1765,7 @@ pub mod cancel_timer_decision_attributes {
     }
 }
 impl CancelTimerDecisionAttributes {
-    /// Creates a new builder-style object to manufacture [`CancelTimerDecisionAttributes`](crate::model::CancelTimerDecisionAttributes)
+    /// Creates a new builder-style object to manufacture [`CancelTimerDecisionAttributes`](crate::model::CancelTimerDecisionAttributes).
     pub fn builder() -> crate::model::cancel_timer_decision_attributes::Builder {
         crate::model::cancel_timer_decision_attributes::Builder::default()
     }
@@ -1749,11 +1785,14 @@ impl CancelTimerDecisionAttributes {
 pub struct StartTimerDecisionAttributes {
     /// <p> The unique ID of the timer.</p>
     /// <p>The specified string must not start or end with whitespace. It must not contain a <code>:</code> (colon), <code>/</code> (slash), <code>|</code> (vertical bar), or any control characters (<code>\u0000-\u001f</code> | <code>\u007f-\u009f</code>). Also, it must not contain the literal string <code>arn</code>.</p>
+    #[doc(hidden)]
     pub timer_id: std::option::Option<std::string::String>,
     /// <p>The data attached to the event that can be used by the decider in subsequent workflow tasks.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
     /// <p> The duration to wait before firing the timer.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>.</p>
+    #[doc(hidden)]
     pub start_to_fire_timeout: std::option::Option<std::string::String>,
 }
 impl StartTimerDecisionAttributes {
@@ -1781,11 +1820,10 @@ impl std::fmt::Debug for StartTimerDecisionAttributes {
         formatter.finish()
     }
 }
-/// See [`StartTimerDecisionAttributes`](crate::model::StartTimerDecisionAttributes)
+/// See [`StartTimerDecisionAttributes`](crate::model::StartTimerDecisionAttributes).
 pub mod start_timer_decision_attributes {
 
-    /// A builder for [`StartTimerDecisionAttributes`](crate::model::StartTimerDecisionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`StartTimerDecisionAttributes`](crate::model::StartTimerDecisionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timer_id: std::option::Option<std::string::String>,
@@ -1830,7 +1868,7 @@ pub mod start_timer_decision_attributes {
             self.start_to_fire_timeout = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartTimerDecisionAttributes`](crate::model::StartTimerDecisionAttributes)
+        /// Consumes the builder and constructs a [`StartTimerDecisionAttributes`](crate::model::StartTimerDecisionAttributes).
         pub fn build(self) -> crate::model::StartTimerDecisionAttributes {
             crate::model::StartTimerDecisionAttributes {
                 timer_id: self.timer_id,
@@ -1841,7 +1879,7 @@ pub mod start_timer_decision_attributes {
     }
 }
 impl StartTimerDecisionAttributes {
-    /// Creates a new builder-style object to manufacture [`StartTimerDecisionAttributes`](crate::model::StartTimerDecisionAttributes)
+    /// Creates a new builder-style object to manufacture [`StartTimerDecisionAttributes`](crate::model::StartTimerDecisionAttributes).
     pub fn builder() -> crate::model::start_timer_decision_attributes::Builder {
         crate::model::start_timer_decision_attributes::Builder::default()
     }
@@ -1860,8 +1898,10 @@ impl StartTimerDecisionAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecordMarkerDecisionAttributes {
     /// <p> The name of the marker.</p>
+    #[doc(hidden)]
     pub marker_name: std::option::Option<std::string::String>,
     /// <p> The details of the marker.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
 }
 impl RecordMarkerDecisionAttributes {
@@ -1882,11 +1922,10 @@ impl std::fmt::Debug for RecordMarkerDecisionAttributes {
         formatter.finish()
     }
 }
-/// See [`RecordMarkerDecisionAttributes`](crate::model::RecordMarkerDecisionAttributes)
+/// See [`RecordMarkerDecisionAttributes`](crate::model::RecordMarkerDecisionAttributes).
 pub mod record_marker_decision_attributes {
 
-    /// A builder for [`RecordMarkerDecisionAttributes`](crate::model::RecordMarkerDecisionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`RecordMarkerDecisionAttributes`](crate::model::RecordMarkerDecisionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker_name: std::option::Option<std::string::String>,
@@ -1913,7 +1952,7 @@ pub mod record_marker_decision_attributes {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecordMarkerDecisionAttributes`](crate::model::RecordMarkerDecisionAttributes)
+        /// Consumes the builder and constructs a [`RecordMarkerDecisionAttributes`](crate::model::RecordMarkerDecisionAttributes).
         pub fn build(self) -> crate::model::RecordMarkerDecisionAttributes {
             crate::model::RecordMarkerDecisionAttributes {
                 marker_name: self.marker_name,
@@ -1923,7 +1962,7 @@ pub mod record_marker_decision_attributes {
     }
 }
 impl RecordMarkerDecisionAttributes {
-    /// Creates a new builder-style object to manufacture [`RecordMarkerDecisionAttributes`](crate::model::RecordMarkerDecisionAttributes)
+    /// Creates a new builder-style object to manufacture [`RecordMarkerDecisionAttributes`](crate::model::RecordMarkerDecisionAttributes).
     pub fn builder() -> crate::model::record_marker_decision_attributes::Builder {
         crate::model::record_marker_decision_attributes::Builder::default()
     }
@@ -1947,21 +1986,26 @@ impl RecordMarkerDecisionAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ContinueAsNewWorkflowExecutionDecisionAttributes {
     /// <p>The input provided to the new workflow execution.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>If set, specifies the total duration for this workflow execution. This overrides the <code>defaultExecutionStartToCloseTimeout</code> specified when registering the workflow type.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p> <note>
     /// <p>An execution start-to-close timeout for this workflow execution must be specified either as a default for the workflow type or through this field. If neither this field is set nor a default execution start-to-close timeout was specified at registration time then a fault is returned.</p>
     /// </note>
+    #[doc(hidden)]
     pub execution_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>The task list to use for the decisions of the new (continued) workflow execution.</p>
+    #[doc(hidden)]
     pub task_list: std::option::Option<crate::model::TaskList>,
     /// <p> The task priority that, if set, specifies the priority for the decision tasks for this workflow execution. This overrides the defaultTaskPriority specified when registering the workflow type. Valid values are integers that range from Java's <code>Integer.MIN_VALUE</code> (-2147483648) to <code>Integer.MAX_VALUE</code> (2147483647). Higher numbers indicate higher priority.</p>
     /// <p>For more information about setting task priority, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/programming-priority.html">Setting Task Priority</a> in the <i>Amazon SWF Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub task_priority: std::option::Option<std::string::String>,
     /// <p>Specifies the maximum duration of decision tasks for the new workflow execution. This parameter overrides the <code>defaultTaskStartToCloseTimout</code> specified when registering the workflow type using <code>RegisterWorkflowType</code>.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p> <note>
     /// <p>A task start-to-close timeout for the new workflow execution must be specified either as a default for the workflow type or through this parameter. If neither this parameter is set nor a default task start-to-close timeout was specified at registration time then a fault is returned.</p>
     /// </note>
+    #[doc(hidden)]
     pub task_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>If set, specifies the policy to use for the child workflow executions of the new execution if it is terminated by calling the <code>TerminateWorkflowExecution</code> action explicitly or due to an expired timeout. This policy overrides the default child policy specified when registering the workflow type using <code>RegisterWorkflowType</code>.</p>
     /// <p>The supported child policies are:</p>
@@ -1972,12 +2016,16 @@ pub struct ContinueAsNewWorkflowExecutionDecisionAttributes {
     /// </ul> <note>
     /// <p>A child policy for this workflow execution must be specified either as a default for the workflow type or through this parameter. If neither this parameter is set nor a default child policy was specified at registration time then a fault is returned.</p>
     /// </note>
+    #[doc(hidden)]
     pub child_policy: std::option::Option<crate::model::ChildPolicy>,
     /// <p>The list of tags to associate with the new workflow execution. A maximum of 5 tags can be specified. You can list workflow executions with a specific tag by calling <code>ListOpenWorkflowExecutions</code> or <code>ListClosedWorkflowExecutions</code> and specifying a <code>TagFilter</code>.</p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The version of the workflow to start.</p>
+    #[doc(hidden)]
     pub workflow_type_version: std::option::Option<std::string::String>,
     /// <p>The IAM role to attach to the new (continued) execution.</p>
+    #[doc(hidden)]
     pub lambda_role: std::option::Option<std::string::String>,
 }
 impl ContinueAsNewWorkflowExecutionDecisionAttributes {
@@ -2054,11 +2102,10 @@ impl std::fmt::Debug for ContinueAsNewWorkflowExecutionDecisionAttributes {
         formatter.finish()
     }
 }
-/// See [`ContinueAsNewWorkflowExecutionDecisionAttributes`](crate::model::ContinueAsNewWorkflowExecutionDecisionAttributes)
+/// See [`ContinueAsNewWorkflowExecutionDecisionAttributes`](crate::model::ContinueAsNewWorkflowExecutionDecisionAttributes).
 pub mod continue_as_new_workflow_execution_decision_attributes {
 
-    /// A builder for [`ContinueAsNewWorkflowExecutionDecisionAttributes`](crate::model::ContinueAsNewWorkflowExecutionDecisionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ContinueAsNewWorkflowExecutionDecisionAttributes`](crate::model::ContinueAsNewWorkflowExecutionDecisionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input: std::option::Option<std::string::String>,
@@ -2222,7 +2269,7 @@ pub mod continue_as_new_workflow_execution_decision_attributes {
             self.lambda_role = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContinueAsNewWorkflowExecutionDecisionAttributes`](crate::model::ContinueAsNewWorkflowExecutionDecisionAttributes)
+        /// Consumes the builder and constructs a [`ContinueAsNewWorkflowExecutionDecisionAttributes`](crate::model::ContinueAsNewWorkflowExecutionDecisionAttributes).
         pub fn build(self) -> crate::model::ContinueAsNewWorkflowExecutionDecisionAttributes {
             crate::model::ContinueAsNewWorkflowExecutionDecisionAttributes {
                 input: self.input,
@@ -2239,7 +2286,7 @@ pub mod continue_as_new_workflow_execution_decision_attributes {
     }
 }
 impl ContinueAsNewWorkflowExecutionDecisionAttributes {
-    /// Creates a new builder-style object to manufacture [`ContinueAsNewWorkflowExecutionDecisionAttributes`](crate::model::ContinueAsNewWorkflowExecutionDecisionAttributes)
+    /// Creates a new builder-style object to manufacture [`ContinueAsNewWorkflowExecutionDecisionAttributes`](crate::model::ContinueAsNewWorkflowExecutionDecisionAttributes).
     pub fn builder() -> crate::model::continue_as_new_workflow_execution_decision_attributes::Builder
     {
         crate::model::continue_as_new_workflow_execution_decision_attributes::Builder::default()
@@ -2259,6 +2306,7 @@ impl ContinueAsNewWorkflowExecutionDecisionAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelWorkflowExecutionDecisionAttributes {
     /// <p> Details of the cancellation.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
 }
 impl CancelWorkflowExecutionDecisionAttributes {
@@ -2274,11 +2322,10 @@ impl std::fmt::Debug for CancelWorkflowExecutionDecisionAttributes {
         formatter.finish()
     }
 }
-/// See [`CancelWorkflowExecutionDecisionAttributes`](crate::model::CancelWorkflowExecutionDecisionAttributes)
+/// See [`CancelWorkflowExecutionDecisionAttributes`](crate::model::CancelWorkflowExecutionDecisionAttributes).
 pub mod cancel_workflow_execution_decision_attributes {
 
-    /// A builder for [`CancelWorkflowExecutionDecisionAttributes`](crate::model::CancelWorkflowExecutionDecisionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`CancelWorkflowExecutionDecisionAttributes`](crate::model::CancelWorkflowExecutionDecisionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) details: std::option::Option<std::string::String>,
@@ -2294,7 +2341,7 @@ pub mod cancel_workflow_execution_decision_attributes {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelWorkflowExecutionDecisionAttributes`](crate::model::CancelWorkflowExecutionDecisionAttributes)
+        /// Consumes the builder and constructs a [`CancelWorkflowExecutionDecisionAttributes`](crate::model::CancelWorkflowExecutionDecisionAttributes).
         pub fn build(self) -> crate::model::CancelWorkflowExecutionDecisionAttributes {
             crate::model::CancelWorkflowExecutionDecisionAttributes {
                 details: self.details,
@@ -2303,7 +2350,7 @@ pub mod cancel_workflow_execution_decision_attributes {
     }
 }
 impl CancelWorkflowExecutionDecisionAttributes {
-    /// Creates a new builder-style object to manufacture [`CancelWorkflowExecutionDecisionAttributes`](crate::model::CancelWorkflowExecutionDecisionAttributes)
+    /// Creates a new builder-style object to manufacture [`CancelWorkflowExecutionDecisionAttributes`](crate::model::CancelWorkflowExecutionDecisionAttributes).
     pub fn builder() -> crate::model::cancel_workflow_execution_decision_attributes::Builder {
         crate::model::cancel_workflow_execution_decision_attributes::Builder::default()
     }
@@ -2322,8 +2369,10 @@ impl CancelWorkflowExecutionDecisionAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailWorkflowExecutionDecisionAttributes {
     /// <p>A descriptive reason for the failure that may help in diagnostics.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p> Details of the failure.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
 }
 impl FailWorkflowExecutionDecisionAttributes {
@@ -2344,11 +2393,10 @@ impl std::fmt::Debug for FailWorkflowExecutionDecisionAttributes {
         formatter.finish()
     }
 }
-/// See [`FailWorkflowExecutionDecisionAttributes`](crate::model::FailWorkflowExecutionDecisionAttributes)
+/// See [`FailWorkflowExecutionDecisionAttributes`](crate::model::FailWorkflowExecutionDecisionAttributes).
 pub mod fail_workflow_execution_decision_attributes {
 
-    /// A builder for [`FailWorkflowExecutionDecisionAttributes`](crate::model::FailWorkflowExecutionDecisionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`FailWorkflowExecutionDecisionAttributes`](crate::model::FailWorkflowExecutionDecisionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reason: std::option::Option<std::string::String>,
@@ -2375,7 +2423,7 @@ pub mod fail_workflow_execution_decision_attributes {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailWorkflowExecutionDecisionAttributes`](crate::model::FailWorkflowExecutionDecisionAttributes)
+        /// Consumes the builder and constructs a [`FailWorkflowExecutionDecisionAttributes`](crate::model::FailWorkflowExecutionDecisionAttributes).
         pub fn build(self) -> crate::model::FailWorkflowExecutionDecisionAttributes {
             crate::model::FailWorkflowExecutionDecisionAttributes {
                 reason: self.reason,
@@ -2385,7 +2433,7 @@ pub mod fail_workflow_execution_decision_attributes {
     }
 }
 impl FailWorkflowExecutionDecisionAttributes {
-    /// Creates a new builder-style object to manufacture [`FailWorkflowExecutionDecisionAttributes`](crate::model::FailWorkflowExecutionDecisionAttributes)
+    /// Creates a new builder-style object to manufacture [`FailWorkflowExecutionDecisionAttributes`](crate::model::FailWorkflowExecutionDecisionAttributes).
     pub fn builder() -> crate::model::fail_workflow_execution_decision_attributes::Builder {
         crate::model::fail_workflow_execution_decision_attributes::Builder::default()
     }
@@ -2404,6 +2452,7 @@ impl FailWorkflowExecutionDecisionAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CompleteWorkflowExecutionDecisionAttributes {
     /// <p>The result of the workflow execution. The form of the result is implementation defined.</p>
+    #[doc(hidden)]
     pub result: std::option::Option<std::string::String>,
 }
 impl CompleteWorkflowExecutionDecisionAttributes {
@@ -2419,11 +2468,10 @@ impl std::fmt::Debug for CompleteWorkflowExecutionDecisionAttributes {
         formatter.finish()
     }
 }
-/// See [`CompleteWorkflowExecutionDecisionAttributes`](crate::model::CompleteWorkflowExecutionDecisionAttributes)
+/// See [`CompleteWorkflowExecutionDecisionAttributes`](crate::model::CompleteWorkflowExecutionDecisionAttributes).
 pub mod complete_workflow_execution_decision_attributes {
 
-    /// A builder for [`CompleteWorkflowExecutionDecisionAttributes`](crate::model::CompleteWorkflowExecutionDecisionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`CompleteWorkflowExecutionDecisionAttributes`](crate::model::CompleteWorkflowExecutionDecisionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) result: std::option::Option<std::string::String>,
@@ -2439,7 +2487,7 @@ pub mod complete_workflow_execution_decision_attributes {
             self.result = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompleteWorkflowExecutionDecisionAttributes`](crate::model::CompleteWorkflowExecutionDecisionAttributes)
+        /// Consumes the builder and constructs a [`CompleteWorkflowExecutionDecisionAttributes`](crate::model::CompleteWorkflowExecutionDecisionAttributes).
         pub fn build(self) -> crate::model::CompleteWorkflowExecutionDecisionAttributes {
             crate::model::CompleteWorkflowExecutionDecisionAttributes {
                 result: self.result,
@@ -2448,7 +2496,7 @@ pub mod complete_workflow_execution_decision_attributes {
     }
 }
 impl CompleteWorkflowExecutionDecisionAttributes {
-    /// Creates a new builder-style object to manufacture [`CompleteWorkflowExecutionDecisionAttributes`](crate::model::CompleteWorkflowExecutionDecisionAttributes)
+    /// Creates a new builder-style object to manufacture [`CompleteWorkflowExecutionDecisionAttributes`](crate::model::CompleteWorkflowExecutionDecisionAttributes).
     pub fn builder() -> crate::model::complete_workflow_execution_decision_attributes::Builder {
         crate::model::complete_workflow_execution_decision_attributes::Builder::default()
     }
@@ -2467,6 +2515,7 @@ impl CompleteWorkflowExecutionDecisionAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RequestCancelActivityTaskDecisionAttributes {
     /// <p>The <code>activityId</code> of the activity task to be canceled.</p>
+    #[doc(hidden)]
     pub activity_id: std::option::Option<std::string::String>,
 }
 impl RequestCancelActivityTaskDecisionAttributes {
@@ -2482,11 +2531,10 @@ impl std::fmt::Debug for RequestCancelActivityTaskDecisionAttributes {
         formatter.finish()
     }
 }
-/// See [`RequestCancelActivityTaskDecisionAttributes`](crate::model::RequestCancelActivityTaskDecisionAttributes)
+/// See [`RequestCancelActivityTaskDecisionAttributes`](crate::model::RequestCancelActivityTaskDecisionAttributes).
 pub mod request_cancel_activity_task_decision_attributes {
 
-    /// A builder for [`RequestCancelActivityTaskDecisionAttributes`](crate::model::RequestCancelActivityTaskDecisionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`RequestCancelActivityTaskDecisionAttributes`](crate::model::RequestCancelActivityTaskDecisionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activity_id: std::option::Option<std::string::String>,
@@ -2502,7 +2550,7 @@ pub mod request_cancel_activity_task_decision_attributes {
             self.activity_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RequestCancelActivityTaskDecisionAttributes`](crate::model::RequestCancelActivityTaskDecisionAttributes)
+        /// Consumes the builder and constructs a [`RequestCancelActivityTaskDecisionAttributes`](crate::model::RequestCancelActivityTaskDecisionAttributes).
         pub fn build(self) -> crate::model::RequestCancelActivityTaskDecisionAttributes {
             crate::model::RequestCancelActivityTaskDecisionAttributes {
                 activity_id: self.activity_id,
@@ -2511,7 +2559,7 @@ pub mod request_cancel_activity_task_decision_attributes {
     }
 }
 impl RequestCancelActivityTaskDecisionAttributes {
-    /// Creates a new builder-style object to manufacture [`RequestCancelActivityTaskDecisionAttributes`](crate::model::RequestCancelActivityTaskDecisionAttributes)
+    /// Creates a new builder-style object to manufacture [`RequestCancelActivityTaskDecisionAttributes`](crate::model::RequestCancelActivityTaskDecisionAttributes).
     pub fn builder() -> crate::model::request_cancel_activity_task_decision_attributes::Builder {
         crate::model::request_cancel_activity_task_decision_attributes::Builder::default()
     }
@@ -2535,39 +2583,49 @@ impl RequestCancelActivityTaskDecisionAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduleActivityTaskDecisionAttributes {
     /// <p> The type of the activity task to schedule.</p>
+    #[doc(hidden)]
     pub activity_type: std::option::Option<crate::model::ActivityType>,
     /// <p> The <code>activityId</code> of the activity task.</p>
     /// <p>The specified string must not start or end with whitespace. It must not contain a <code>:</code> (colon), <code>/</code> (slash), <code>|</code> (vertical bar), or any control characters (<code>\u0000-\u001f</code> | <code>\u007f-\u009f</code>). Also, it must not contain the literal string <code>arn</code>.</p>
+    #[doc(hidden)]
     pub activity_id: std::option::Option<std::string::String>,
     /// <p>Data attached to the event that can be used by the decider in subsequent workflow tasks. This data isn't sent to the activity.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
     /// <p>The input provided to the activity task.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>The maximum duration for this activity task.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p> <note>
     /// <p>A schedule-to-close timeout for this activity task must be specified either as a default for the activity type or through this field. If neither this field is set nor a default schedule-to-close timeout was specified at registration time then a fault is returned.</p>
     /// </note>
+    #[doc(hidden)]
     pub schedule_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>If set, specifies the name of the task list in which to schedule the activity task. If not specified, the <code>defaultTaskList</code> registered with the activity type is used.</p> <note>
     /// <p>A task list for this activity task must be specified either as a default for the activity type or through this field. If neither this field is set nor a default task list was specified at registration time then a fault is returned.</p>
     /// </note>
     /// <p>The specified string must not start or end with whitespace. It must not contain a <code>:</code> (colon), <code>/</code> (slash), <code>|</code> (vertical bar), or any control characters (<code>\u0000-\u001f</code> | <code>\u007f-\u009f</code>). Also, it must not contain the literal string <code>arn</code>.</p>
+    #[doc(hidden)]
     pub task_list: std::option::Option<crate::model::TaskList>,
     /// <p> If set, specifies the priority with which the activity task is to be assigned to a worker. This overrides the defaultTaskPriority specified when registering the activity type using <code>RegisterActivityType</code>. Valid values are integers that range from Java's <code>Integer.MIN_VALUE</code> (-2147483648) to <code>Integer.MAX_VALUE</code> (2147483647). Higher numbers indicate higher priority.</p>
     /// <p>For more information about setting task priority, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/programming-priority.html">Setting Task Priority</a> in the <i>Amazon SWF Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub task_priority: std::option::Option<std::string::String>,
     /// <p> If set, specifies the maximum duration the activity task can wait to be assigned to a worker. This overrides the default schedule-to-start timeout specified when registering the activity type using <code>RegisterActivityType</code>.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p> <note>
     /// <p>A schedule-to-start timeout for this activity task must be specified either as a default for the activity type or through this field. If neither this field is set nor a default schedule-to-start timeout was specified at registration time then a fault is returned.</p>
     /// </note>
+    #[doc(hidden)]
     pub schedule_to_start_timeout: std::option::Option<std::string::String>,
     /// <p>If set, specifies the maximum duration a worker may take to process this activity task. This overrides the default start-to-close timeout specified when registering the activity type using <code>RegisterActivityType</code>.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p> <note>
     /// <p>A start-to-close timeout for this activity task must be specified either as a default for the activity type or through this field. If neither this field is set nor a default start-to-close timeout was specified at registration time then a fault is returned.</p>
     /// </note>
+    #[doc(hidden)]
     pub start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>If set, specifies the maximum time before which a worker processing a task of this type must report progress by calling <code>RecordActivityTaskHeartbeat</code>. If the timeout is exceeded, the activity task is automatically timed out. If the worker subsequently attempts to record a heartbeat or returns a result, it is ignored. This overrides the default heartbeat timeout specified when registering the activity type using <code>RegisterActivityType</code>.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub heartbeat_timeout: std::option::Option<std::string::String>,
 }
 impl ScheduleActivityTaskDecisionAttributes {
@@ -2643,11 +2701,10 @@ impl std::fmt::Debug for ScheduleActivityTaskDecisionAttributes {
         formatter.finish()
     }
 }
-/// See [`ScheduleActivityTaskDecisionAttributes`](crate::model::ScheduleActivityTaskDecisionAttributes)
+/// See [`ScheduleActivityTaskDecisionAttributes`](crate::model::ScheduleActivityTaskDecisionAttributes).
 pub mod schedule_activity_task_decision_attributes {
 
-    /// A builder for [`ScheduleActivityTaskDecisionAttributes`](crate::model::ScheduleActivityTaskDecisionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ScheduleActivityTaskDecisionAttributes`](crate::model::ScheduleActivityTaskDecisionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activity_type: std::option::Option<crate::model::ActivityType>,
@@ -2810,7 +2867,7 @@ pub mod schedule_activity_task_decision_attributes {
             self.heartbeat_timeout = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduleActivityTaskDecisionAttributes`](crate::model::ScheduleActivityTaskDecisionAttributes)
+        /// Consumes the builder and constructs a [`ScheduleActivityTaskDecisionAttributes`](crate::model::ScheduleActivityTaskDecisionAttributes).
         pub fn build(self) -> crate::model::ScheduleActivityTaskDecisionAttributes {
             crate::model::ScheduleActivityTaskDecisionAttributes {
                 activity_type: self.activity_type,
@@ -2828,7 +2885,7 @@ pub mod schedule_activity_task_decision_attributes {
     }
 }
 impl ScheduleActivityTaskDecisionAttributes {
-    /// Creates a new builder-style object to manufacture [`ScheduleActivityTaskDecisionAttributes`](crate::model::ScheduleActivityTaskDecisionAttributes)
+    /// Creates a new builder-style object to manufacture [`ScheduleActivityTaskDecisionAttributes`](crate::model::ScheduleActivityTaskDecisionAttributes).
     pub fn builder() -> crate::model::schedule_activity_task_decision_attributes::Builder {
         crate::model::schedule_activity_task_decision_attributes::Builder::default()
     }
@@ -3006,172 +3063,229 @@ impl AsRef<str> for DecisionType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct HistoryEvent {
     /// <p>The date and time when the event occurred.</p>
+    #[doc(hidden)]
     pub event_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The type of the history event.</p>
+    #[doc(hidden)]
     pub event_type: std::option::Option<crate::model::EventType>,
     /// <p>The system generated ID of the event. This ID uniquely identifies the event with in the workflow execution history.</p>
+    #[doc(hidden)]
     pub event_id: i64,
     /// <p>If the event is of type <code>WorkflowExecutionStarted</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub workflow_execution_started_event_attributes:
         std::option::Option<crate::model::WorkflowExecutionStartedEventAttributes>,
     /// <p>If the event is of type <code>WorkflowExecutionCompleted</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub workflow_execution_completed_event_attributes:
         std::option::Option<crate::model::WorkflowExecutionCompletedEventAttributes>,
     /// <p>If the event is of type <code>CompleteWorkflowExecutionFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub complete_workflow_execution_failed_event_attributes:
         std::option::Option<crate::model::CompleteWorkflowExecutionFailedEventAttributes>,
     /// <p>If the event is of type <code>WorkflowExecutionFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub workflow_execution_failed_event_attributes:
         std::option::Option<crate::model::WorkflowExecutionFailedEventAttributes>,
     /// <p>If the event is of type <code>FailWorkflowExecutionFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub fail_workflow_execution_failed_event_attributes:
         std::option::Option<crate::model::FailWorkflowExecutionFailedEventAttributes>,
     /// <p>If the event is of type <code>WorkflowExecutionTimedOut</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub workflow_execution_timed_out_event_attributes:
         std::option::Option<crate::model::WorkflowExecutionTimedOutEventAttributes>,
     /// <p>If the event is of type <code>WorkflowExecutionCanceled</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub workflow_execution_canceled_event_attributes:
         std::option::Option<crate::model::WorkflowExecutionCanceledEventAttributes>,
     /// <p>If the event is of type <code>CancelWorkflowExecutionFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub cancel_workflow_execution_failed_event_attributes:
         std::option::Option<crate::model::CancelWorkflowExecutionFailedEventAttributes>,
     /// <p>If the event is of type <code>WorkflowExecutionContinuedAsNew</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub workflow_execution_continued_as_new_event_attributes:
         std::option::Option<crate::model::WorkflowExecutionContinuedAsNewEventAttributes>,
     /// <p>If the event is of type <code>ContinueAsNewWorkflowExecutionFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub continue_as_new_workflow_execution_failed_event_attributes:
         std::option::Option<crate::model::ContinueAsNewWorkflowExecutionFailedEventAttributes>,
     /// <p>If the event is of type <code>WorkflowExecutionTerminated</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub workflow_execution_terminated_event_attributes:
         std::option::Option<crate::model::WorkflowExecutionTerminatedEventAttributes>,
     /// <p>If the event is of type <code>WorkflowExecutionCancelRequested</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub workflow_execution_cancel_requested_event_attributes:
         std::option::Option<crate::model::WorkflowExecutionCancelRequestedEventAttributes>,
     /// <p>If the event is of type <code>DecisionTaskScheduled</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub decision_task_scheduled_event_attributes:
         std::option::Option<crate::model::DecisionTaskScheduledEventAttributes>,
     /// <p>If the event is of type <code>DecisionTaskStarted</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub decision_task_started_event_attributes:
         std::option::Option<crate::model::DecisionTaskStartedEventAttributes>,
     /// <p>If the event is of type <code>DecisionTaskCompleted</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_attributes:
         std::option::Option<crate::model::DecisionTaskCompletedEventAttributes>,
     /// <p>If the event is of type <code>DecisionTaskTimedOut</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub decision_task_timed_out_event_attributes:
         std::option::Option<crate::model::DecisionTaskTimedOutEventAttributes>,
     /// <p>If the event is of type <code>ActivityTaskScheduled</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub activity_task_scheduled_event_attributes:
         std::option::Option<crate::model::ActivityTaskScheduledEventAttributes>,
     /// <p>If the event is of type <code>ActivityTaskStarted</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub activity_task_started_event_attributes:
         std::option::Option<crate::model::ActivityTaskStartedEventAttributes>,
     /// <p>If the event is of type <code>ActivityTaskCompleted</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub activity_task_completed_event_attributes:
         std::option::Option<crate::model::ActivityTaskCompletedEventAttributes>,
     /// <p>If the event is of type <code>ActivityTaskFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub activity_task_failed_event_attributes:
         std::option::Option<crate::model::ActivityTaskFailedEventAttributes>,
     /// <p>If the event is of type <code>ActivityTaskTimedOut</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub activity_task_timed_out_event_attributes:
         std::option::Option<crate::model::ActivityTaskTimedOutEventAttributes>,
     /// <p>If the event is of type <code>ActivityTaskCanceled</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub activity_task_canceled_event_attributes:
         std::option::Option<crate::model::ActivityTaskCanceledEventAttributes>,
     /// <p>If the event is of type <code>ActivityTaskcancelRequested</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub activity_task_cancel_requested_event_attributes:
         std::option::Option<crate::model::ActivityTaskCancelRequestedEventAttributes>,
     /// <p>If the event is of type <code>WorkflowExecutionSignaled</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub workflow_execution_signaled_event_attributes:
         std::option::Option<crate::model::WorkflowExecutionSignaledEventAttributes>,
     /// <p>If the event is of type <code>MarkerRecorded</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub marker_recorded_event_attributes:
         std::option::Option<crate::model::MarkerRecordedEventAttributes>,
     /// <p>If the event is of type <code>DecisionTaskFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub record_marker_failed_event_attributes:
         std::option::Option<crate::model::RecordMarkerFailedEventAttributes>,
     /// <p>If the event is of type <code>TimerStarted</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub timer_started_event_attributes:
         std::option::Option<crate::model::TimerStartedEventAttributes>,
     /// <p>If the event is of type <code>TimerFired</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub timer_fired_event_attributes: std::option::Option<crate::model::TimerFiredEventAttributes>,
     /// <p>If the event is of type <code>TimerCanceled</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub timer_canceled_event_attributes:
         std::option::Option<crate::model::TimerCanceledEventAttributes>,
     /// <p>If the event is of type <code>StartChildWorkflowExecutionInitiated</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub start_child_workflow_execution_initiated_event_attributes:
         std::option::Option<crate::model::StartChildWorkflowExecutionInitiatedEventAttributes>,
     /// <p>If the event is of type <code>ChildWorkflowExecutionStarted</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub child_workflow_execution_started_event_attributes:
         std::option::Option<crate::model::ChildWorkflowExecutionStartedEventAttributes>,
     /// <p>If the event is of type <code>ChildWorkflowExecutionCompleted</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub child_workflow_execution_completed_event_attributes:
         std::option::Option<crate::model::ChildWorkflowExecutionCompletedEventAttributes>,
     /// <p>If the event is of type <code>ChildWorkflowExecutionFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub child_workflow_execution_failed_event_attributes:
         std::option::Option<crate::model::ChildWorkflowExecutionFailedEventAttributes>,
     /// <p>If the event is of type <code>ChildWorkflowExecutionTimedOut</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub child_workflow_execution_timed_out_event_attributes:
         std::option::Option<crate::model::ChildWorkflowExecutionTimedOutEventAttributes>,
     /// <p>If the event is of type <code>ChildWorkflowExecutionCanceled</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub child_workflow_execution_canceled_event_attributes:
         std::option::Option<crate::model::ChildWorkflowExecutionCanceledEventAttributes>,
     /// <p>If the event is of type <code>ChildWorkflowExecutionTerminated</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub child_workflow_execution_terminated_event_attributes:
         std::option::Option<crate::model::ChildWorkflowExecutionTerminatedEventAttributes>,
     /// <p>If the event is of type <code>SignalExternalWorkflowExecutionInitiated</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub signal_external_workflow_execution_initiated_event_attributes:
         std::option::Option<crate::model::SignalExternalWorkflowExecutionInitiatedEventAttributes>,
     /// <p>If the event is of type <code>ExternalWorkflowExecutionSignaled</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub external_workflow_execution_signaled_event_attributes:
         std::option::Option<crate::model::ExternalWorkflowExecutionSignaledEventAttributes>,
     /// <p>If the event is of type <code>SignalExternalWorkflowExecutionFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub signal_external_workflow_execution_failed_event_attributes:
         std::option::Option<crate::model::SignalExternalWorkflowExecutionFailedEventAttributes>,
     /// <p>If the event is of type <code>ExternalWorkflowExecutionCancelRequested</code> then this member is set and provides detailed information about the event. It isn't set for other event types. </p>
+    #[doc(hidden)]
     pub external_workflow_execution_cancel_requested_event_attributes:
         std::option::Option<crate::model::ExternalWorkflowExecutionCancelRequestedEventAttributes>,
     /// <p>If the event is of type <code>RequestCancelExternalWorkflowExecutionInitiated</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub request_cancel_external_workflow_execution_initiated_event_attributes: std::option::Option<
         crate::model::RequestCancelExternalWorkflowExecutionInitiatedEventAttributes,
     >,
     /// <p>If the event is of type <code>RequestCancelExternalWorkflowExecutionFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub request_cancel_external_workflow_execution_failed_event_attributes: std::option::Option<
         crate::model::RequestCancelExternalWorkflowExecutionFailedEventAttributes,
     >,
     /// <p>If the event is of type <code>ScheduleActivityTaskFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub schedule_activity_task_failed_event_attributes:
         std::option::Option<crate::model::ScheduleActivityTaskFailedEventAttributes>,
     /// <p>If the event is of type <code>RequestCancelActivityTaskFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub request_cancel_activity_task_failed_event_attributes:
         std::option::Option<crate::model::RequestCancelActivityTaskFailedEventAttributes>,
     /// <p>If the event is of type <code>StartTimerFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub start_timer_failed_event_attributes:
         std::option::Option<crate::model::StartTimerFailedEventAttributes>,
     /// <p>If the event is of type <code>CancelTimerFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub cancel_timer_failed_event_attributes:
         std::option::Option<crate::model::CancelTimerFailedEventAttributes>,
     /// <p>If the event is of type <code>StartChildWorkflowExecutionFailed</code> then this member is set and provides detailed information about the event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub start_child_workflow_execution_failed_event_attributes:
         std::option::Option<crate::model::StartChildWorkflowExecutionFailedEventAttributes>,
     /// <p>Provides the details of the <code>LambdaFunctionScheduled</code> event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub lambda_function_scheduled_event_attributes:
         std::option::Option<crate::model::LambdaFunctionScheduledEventAttributes>,
     /// <p>Provides the details of the <code>LambdaFunctionStarted</code> event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub lambda_function_started_event_attributes:
         std::option::Option<crate::model::LambdaFunctionStartedEventAttributes>,
     /// <p>Provides the details of the <code>LambdaFunctionCompleted</code> event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub lambda_function_completed_event_attributes:
         std::option::Option<crate::model::LambdaFunctionCompletedEventAttributes>,
     /// <p>Provides the details of the <code>LambdaFunctionFailed</code> event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub lambda_function_failed_event_attributes:
         std::option::Option<crate::model::LambdaFunctionFailedEventAttributes>,
     /// <p>Provides the details of the <code>LambdaFunctionTimedOut</code> event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub lambda_function_timed_out_event_attributes:
         std::option::Option<crate::model::LambdaFunctionTimedOutEventAttributes>,
     /// <p>Provides the details of the <code>ScheduleLambdaFunctionFailed</code> event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub schedule_lambda_function_failed_event_attributes:
         std::option::Option<crate::model::ScheduleLambdaFunctionFailedEventAttributes>,
     /// <p>Provides the details of the <code>StartLambdaFunctionFailed</code> event. It isn't set for other event types.</p>
+    #[doc(hidden)]
     pub start_lambda_function_failed_event_attributes:
         std::option::Option<crate::model::StartLambdaFunctionFailedEventAttributes>,
 }
@@ -3770,11 +3884,10 @@ impl std::fmt::Debug for HistoryEvent {
         formatter.finish()
     }
 }
-/// See [`HistoryEvent`](crate::model::HistoryEvent)
+/// See [`HistoryEvent`](crate::model::HistoryEvent).
 pub mod history_event {
 
-    /// A builder for [`HistoryEvent`](crate::model::HistoryEvent)
-    #[non_exhaustive]
+    /// A builder for [`HistoryEvent`](crate::model::HistoryEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) event_timestamp: std::option::Option<aws_smithy_types::DateTime>,
@@ -4829,7 +4942,7 @@ pub mod history_event {
             self.start_lambda_function_failed_event_attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`HistoryEvent`](crate::model::HistoryEvent)
+        /// Consumes the builder and constructs a [`HistoryEvent`](crate::model::HistoryEvent).
         pub fn build(self) -> crate::model::HistoryEvent {
             crate::model::HistoryEvent {
                 event_timestamp: self.event_timestamp,
@@ -4938,7 +5051,7 @@ pub mod history_event {
     }
 }
 impl HistoryEvent {
-    /// Creates a new builder-style object to manufacture [`HistoryEvent`](crate::model::HistoryEvent)
+    /// Creates a new builder-style object to manufacture [`HistoryEvent`](crate::model::HistoryEvent).
     pub fn builder() -> crate::model::history_event::Builder {
         crate::model::history_event::Builder::default()
     }
@@ -4949,12 +5062,15 @@ impl HistoryEvent {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartLambdaFunctionFailedEventAttributes {
     /// <p>The ID of the <code>ActivityTaskScheduled</code> event that was recorded when this activity task was scheduled. To help diagnose issues, use this information to trace back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub scheduled_event_id: i64,
     /// <p>The cause of the failure. To help diagnose issues, use this information to trace back the chain of events leading up to this event.</p> <note>
     /// <p>If <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision failed because the IAM role attached to the execution lacked sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/lambda-task.html">Lambda Tasks</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::StartLambdaFunctionFailedCause>,
     /// <p>A description that can help diagnose the cause of the fault.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl StartLambdaFunctionFailedEventAttributes {
@@ -4982,11 +5098,10 @@ impl std::fmt::Debug for StartLambdaFunctionFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`StartLambdaFunctionFailedEventAttributes`](crate::model::StartLambdaFunctionFailedEventAttributes)
+/// See [`StartLambdaFunctionFailedEventAttributes`](crate::model::StartLambdaFunctionFailedEventAttributes).
 pub mod start_lambda_function_failed_event_attributes {
 
-    /// A builder for [`StartLambdaFunctionFailedEventAttributes`](crate::model::StartLambdaFunctionFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`StartLambdaFunctionFailedEventAttributes`](crate::model::StartLambdaFunctionFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scheduled_event_id: std::option::Option<i64>,
@@ -5031,7 +5146,7 @@ pub mod start_lambda_function_failed_event_attributes {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartLambdaFunctionFailedEventAttributes`](crate::model::StartLambdaFunctionFailedEventAttributes)
+        /// Consumes the builder and constructs a [`StartLambdaFunctionFailedEventAttributes`](crate::model::StartLambdaFunctionFailedEventAttributes).
         pub fn build(self) -> crate::model::StartLambdaFunctionFailedEventAttributes {
             crate::model::StartLambdaFunctionFailedEventAttributes {
                 scheduled_event_id: self.scheduled_event_id.unwrap_or_default(),
@@ -5042,7 +5157,7 @@ pub mod start_lambda_function_failed_event_attributes {
     }
 }
 impl StartLambdaFunctionFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`StartLambdaFunctionFailedEventAttributes`](crate::model::StartLambdaFunctionFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`StartLambdaFunctionFailedEventAttributes`](crate::model::StartLambdaFunctionFailedEventAttributes).
     pub fn builder() -> crate::model::start_lambda_function_failed_event_attributes::Builder {
         crate::model::start_lambda_function_failed_event_attributes::Builder::default()
     }
@@ -5104,14 +5219,18 @@ impl AsRef<str> for StartLambdaFunctionFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduleLambdaFunctionFailedEventAttributes {
     /// <p>The ID provided in the <code>ScheduleLambdaFunction</code> decision that failed. </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the Lambda function.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The cause of the failure. To help diagnose issues, use this information to trace back the chain of events leading up to this event.</p> <note>
     /// <p>If <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision failed because it lacked sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::ScheduleLambdaFunctionFailedCause>,
     /// <p>The ID of the <code>LambdaFunctionCompleted</code> event corresponding to the decision that resulted in scheduling this Lambda task. To help diagnose issues, use this information to trace back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl ScheduleLambdaFunctionFailedEventAttributes {
@@ -5147,11 +5266,10 @@ impl std::fmt::Debug for ScheduleLambdaFunctionFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ScheduleLambdaFunctionFailedEventAttributes`](crate::model::ScheduleLambdaFunctionFailedEventAttributes)
+/// See [`ScheduleLambdaFunctionFailedEventAttributes`](crate::model::ScheduleLambdaFunctionFailedEventAttributes).
 pub mod schedule_lambda_function_failed_event_attributes {
 
-    /// A builder for [`ScheduleLambdaFunctionFailedEventAttributes`](crate::model::ScheduleLambdaFunctionFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ScheduleLambdaFunctionFailedEventAttributes`](crate::model::ScheduleLambdaFunctionFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -5210,7 +5328,7 @@ pub mod schedule_lambda_function_failed_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduleLambdaFunctionFailedEventAttributes`](crate::model::ScheduleLambdaFunctionFailedEventAttributes)
+        /// Consumes the builder and constructs a [`ScheduleLambdaFunctionFailedEventAttributes`](crate::model::ScheduleLambdaFunctionFailedEventAttributes).
         pub fn build(self) -> crate::model::ScheduleLambdaFunctionFailedEventAttributes {
             crate::model::ScheduleLambdaFunctionFailedEventAttributes {
                 id: self.id,
@@ -5224,7 +5342,7 @@ pub mod schedule_lambda_function_failed_event_attributes {
     }
 }
 impl ScheduleLambdaFunctionFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ScheduleLambdaFunctionFailedEventAttributes`](crate::model::ScheduleLambdaFunctionFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ScheduleLambdaFunctionFailedEventAttributes`](crate::model::ScheduleLambdaFunctionFailedEventAttributes).
     pub fn builder() -> crate::model::schedule_lambda_function_failed_event_attributes::Builder {
         crate::model::schedule_lambda_function_failed_event_attributes::Builder::default()
     }
@@ -5315,10 +5433,13 @@ impl AsRef<str> for ScheduleLambdaFunctionFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionTimedOutEventAttributes {
     /// <p>The ID of the <code>LambdaFunctionScheduled</code> event that was recorded when this activity task was scheduled. To help diagnose issues, use this information to trace back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub scheduled_event_id: i64,
     /// <p>The ID of the <code>ActivityTaskStarted</code> event that was recorded when this activity task started. To help diagnose issues, use this information to trace back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
     /// <p>The type of the timeout that caused this event.</p>
+    #[doc(hidden)]
     pub timeout_type: std::option::Option<crate::model::LambdaFunctionTimeoutType>,
 }
 impl LambdaFunctionTimedOutEventAttributes {
@@ -5344,11 +5465,10 @@ impl std::fmt::Debug for LambdaFunctionTimedOutEventAttributes {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionTimedOutEventAttributes`](crate::model::LambdaFunctionTimedOutEventAttributes)
+/// See [`LambdaFunctionTimedOutEventAttributes`](crate::model::LambdaFunctionTimedOutEventAttributes).
 pub mod lambda_function_timed_out_event_attributes {
 
-    /// A builder for [`LambdaFunctionTimedOutEventAttributes`](crate::model::LambdaFunctionTimedOutEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionTimedOutEventAttributes`](crate::model::LambdaFunctionTimedOutEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scheduled_event_id: std::option::Option<i64>,
@@ -5389,7 +5509,7 @@ pub mod lambda_function_timed_out_event_attributes {
             self.timeout_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionTimedOutEventAttributes`](crate::model::LambdaFunctionTimedOutEventAttributes)
+        /// Consumes the builder and constructs a [`LambdaFunctionTimedOutEventAttributes`](crate::model::LambdaFunctionTimedOutEventAttributes).
         pub fn build(self) -> crate::model::LambdaFunctionTimedOutEventAttributes {
             crate::model::LambdaFunctionTimedOutEventAttributes {
                 scheduled_event_id: self.scheduled_event_id.unwrap_or_default(),
@@ -5400,7 +5520,7 @@ pub mod lambda_function_timed_out_event_attributes {
     }
 }
 impl LambdaFunctionTimedOutEventAttributes {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionTimedOutEventAttributes`](crate::model::LambdaFunctionTimedOutEventAttributes)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionTimedOutEventAttributes`](crate::model::LambdaFunctionTimedOutEventAttributes).
     pub fn builder() -> crate::model::lambda_function_timed_out_event_attributes::Builder {
         crate::model::lambda_function_timed_out_event_attributes::Builder::default()
     }
@@ -5462,12 +5582,16 @@ impl AsRef<str> for LambdaFunctionTimeoutType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionFailedEventAttributes {
     /// <p>The ID of the <code>LambdaFunctionScheduled</code> event that was recorded when this activity task was scheduled. To help diagnose issues, use this information to trace back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub scheduled_event_id: i64,
     /// <p>The ID of the <code>LambdaFunctionStarted</code> event recorded when this activity task started. To help diagnose issues, use this information to trace back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
     /// <p>The reason provided for the failure.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p>The details of the failure.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
 }
 impl LambdaFunctionFailedEventAttributes {
@@ -5498,11 +5622,10 @@ impl std::fmt::Debug for LambdaFunctionFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionFailedEventAttributes`](crate::model::LambdaFunctionFailedEventAttributes)
+/// See [`LambdaFunctionFailedEventAttributes`](crate::model::LambdaFunctionFailedEventAttributes).
 pub mod lambda_function_failed_event_attributes {
 
-    /// A builder for [`LambdaFunctionFailedEventAttributes`](crate::model::LambdaFunctionFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionFailedEventAttributes`](crate::model::LambdaFunctionFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scheduled_event_id: std::option::Option<i64>,
@@ -5551,7 +5674,7 @@ pub mod lambda_function_failed_event_attributes {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionFailedEventAttributes`](crate::model::LambdaFunctionFailedEventAttributes)
+        /// Consumes the builder and constructs a [`LambdaFunctionFailedEventAttributes`](crate::model::LambdaFunctionFailedEventAttributes).
         pub fn build(self) -> crate::model::LambdaFunctionFailedEventAttributes {
             crate::model::LambdaFunctionFailedEventAttributes {
                 scheduled_event_id: self.scheduled_event_id.unwrap_or_default(),
@@ -5563,7 +5686,7 @@ pub mod lambda_function_failed_event_attributes {
     }
 }
 impl LambdaFunctionFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionFailedEventAttributes`](crate::model::LambdaFunctionFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionFailedEventAttributes`](crate::model::LambdaFunctionFailedEventAttributes).
     pub fn builder() -> crate::model::lambda_function_failed_event_attributes::Builder {
         crate::model::lambda_function_failed_event_attributes::Builder::default()
     }
@@ -5574,10 +5697,13 @@ impl LambdaFunctionFailedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionCompletedEventAttributes {
     /// <p>The ID of the <code>LambdaFunctionScheduled</code> event that was recorded when this Lambda task was scheduled. To help diagnose issues, use this information to trace back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub scheduled_event_id: i64,
     /// <p>The ID of the <code>LambdaFunctionStarted</code> event recorded when this activity task started. To help diagnose issues, use this information to trace back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
     /// <p>The results of the Lambda task.</p>
+    #[doc(hidden)]
     pub result: std::option::Option<std::string::String>,
 }
 impl LambdaFunctionCompletedEventAttributes {
@@ -5603,11 +5729,10 @@ impl std::fmt::Debug for LambdaFunctionCompletedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionCompletedEventAttributes`](crate::model::LambdaFunctionCompletedEventAttributes)
+/// See [`LambdaFunctionCompletedEventAttributes`](crate::model::LambdaFunctionCompletedEventAttributes).
 pub mod lambda_function_completed_event_attributes {
 
-    /// A builder for [`LambdaFunctionCompletedEventAttributes`](crate::model::LambdaFunctionCompletedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionCompletedEventAttributes`](crate::model::LambdaFunctionCompletedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scheduled_event_id: std::option::Option<i64>,
@@ -5645,7 +5770,7 @@ pub mod lambda_function_completed_event_attributes {
             self.result = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionCompletedEventAttributes`](crate::model::LambdaFunctionCompletedEventAttributes)
+        /// Consumes the builder and constructs a [`LambdaFunctionCompletedEventAttributes`](crate::model::LambdaFunctionCompletedEventAttributes).
         pub fn build(self) -> crate::model::LambdaFunctionCompletedEventAttributes {
             crate::model::LambdaFunctionCompletedEventAttributes {
                 scheduled_event_id: self.scheduled_event_id.unwrap_or_default(),
@@ -5656,7 +5781,7 @@ pub mod lambda_function_completed_event_attributes {
     }
 }
 impl LambdaFunctionCompletedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionCompletedEventAttributes`](crate::model::LambdaFunctionCompletedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionCompletedEventAttributes`](crate::model::LambdaFunctionCompletedEventAttributes).
     pub fn builder() -> crate::model::lambda_function_completed_event_attributes::Builder {
         crate::model::lambda_function_completed_event_attributes::Builder::default()
     }
@@ -5667,6 +5792,7 @@ impl LambdaFunctionCompletedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionStartedEventAttributes {
     /// <p>The ID of the <code>LambdaFunctionScheduled</code> event that was recorded when this activity task was scheduled. To help diagnose issues, use this information to trace back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub scheduled_event_id: i64,
 }
 impl LambdaFunctionStartedEventAttributes {
@@ -5682,11 +5808,10 @@ impl std::fmt::Debug for LambdaFunctionStartedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionStartedEventAttributes`](crate::model::LambdaFunctionStartedEventAttributes)
+/// See [`LambdaFunctionStartedEventAttributes`](crate::model::LambdaFunctionStartedEventAttributes).
 pub mod lambda_function_started_event_attributes {
 
-    /// A builder for [`LambdaFunctionStartedEventAttributes`](crate::model::LambdaFunctionStartedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionStartedEventAttributes`](crate::model::LambdaFunctionStartedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) scheduled_event_id: std::option::Option<i64>,
@@ -5702,7 +5827,7 @@ pub mod lambda_function_started_event_attributes {
             self.scheduled_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionStartedEventAttributes`](crate::model::LambdaFunctionStartedEventAttributes)
+        /// Consumes the builder and constructs a [`LambdaFunctionStartedEventAttributes`](crate::model::LambdaFunctionStartedEventAttributes).
         pub fn build(self) -> crate::model::LambdaFunctionStartedEventAttributes {
             crate::model::LambdaFunctionStartedEventAttributes {
                 scheduled_event_id: self.scheduled_event_id.unwrap_or_default(),
@@ -5711,7 +5836,7 @@ pub mod lambda_function_started_event_attributes {
     }
 }
 impl LambdaFunctionStartedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionStartedEventAttributes`](crate::model::LambdaFunctionStartedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionStartedEventAttributes`](crate::model::LambdaFunctionStartedEventAttributes).
     pub fn builder() -> crate::model::lambda_function_started_event_attributes::Builder {
         crate::model::lambda_function_started_event_attributes::Builder::default()
     }
@@ -5722,16 +5847,22 @@ impl LambdaFunctionStartedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LambdaFunctionScheduledEventAttributes {
     /// <p>The unique ID of the Lambda task.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The name of the Lambda function.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Data attached to the event that the decider can use in subsequent workflow tasks. This data isn't sent to the Lambda task.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
     /// <p>The input provided to the Lambda task.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>The maximum amount of time a worker can take to process the Lambda task.</p>
+    #[doc(hidden)]
     pub start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>LambdaFunctionCompleted</code> event corresponding to the decision that resulted in scheduling this activity task. To help diagnose issues, use this information to trace back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl LambdaFunctionScheduledEventAttributes {
@@ -5775,11 +5906,10 @@ impl std::fmt::Debug for LambdaFunctionScheduledEventAttributes {
         formatter.finish()
     }
 }
-/// See [`LambdaFunctionScheduledEventAttributes`](crate::model::LambdaFunctionScheduledEventAttributes)
+/// See [`LambdaFunctionScheduledEventAttributes`](crate::model::LambdaFunctionScheduledEventAttributes).
 pub mod lambda_function_scheduled_event_attributes {
 
-    /// A builder for [`LambdaFunctionScheduledEventAttributes`](crate::model::LambdaFunctionScheduledEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`LambdaFunctionScheduledEventAttributes`](crate::model::LambdaFunctionScheduledEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -5856,7 +5986,7 @@ pub mod lambda_function_scheduled_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`LambdaFunctionScheduledEventAttributes`](crate::model::LambdaFunctionScheduledEventAttributes)
+        /// Consumes the builder and constructs a [`LambdaFunctionScheduledEventAttributes`](crate::model::LambdaFunctionScheduledEventAttributes).
         pub fn build(self) -> crate::model::LambdaFunctionScheduledEventAttributes {
             crate::model::LambdaFunctionScheduledEventAttributes {
                 id: self.id,
@@ -5872,7 +6002,7 @@ pub mod lambda_function_scheduled_event_attributes {
     }
 }
 impl LambdaFunctionScheduledEventAttributes {
-    /// Creates a new builder-style object to manufacture [`LambdaFunctionScheduledEventAttributes`](crate::model::LambdaFunctionScheduledEventAttributes)
+    /// Creates a new builder-style object to manufacture [`LambdaFunctionScheduledEventAttributes`](crate::model::LambdaFunctionScheduledEventAttributes).
     pub fn builder() -> crate::model::lambda_function_scheduled_event_attributes::Builder {
         crate::model::lambda_function_scheduled_event_attributes::Builder::default()
     }
@@ -5883,19 +6013,25 @@ impl LambdaFunctionScheduledEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartChildWorkflowExecutionFailedEventAttributes {
     /// <p>The workflow type provided in the <code>StartChildWorkflowExecution</code> <code>Decision</code> that failed.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>The cause of the failure. This information is generated by the system and can be useful for diagnostic purposes.</p> <note>
     /// <p>When <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision fails because it lacks sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html"> Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::StartChildWorkflowExecutionFailedCause>,
     /// <p>The <code>workflowId</code> of the child workflow execution.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
     /// <p>When the <code>cause</code> is <code>WORKFLOW_ALREADY_RUNNING</code>, <code>initiatedEventId</code> is the ID of the <code>StartChildWorkflowExecutionInitiated</code> event that corresponds to the <code>StartChildWorkflowExecution</code> <code>Decision</code> to start the workflow execution. You can use this information to diagnose problems by tracing back the chain of events leading up to this event.</p>
     /// <p>When the <code>cause</code> isn't <code>WORKFLOW_ALREADY_RUNNING</code>, <code>initiatedEventId</code> is set to <code>0</code> because the <code>StartChildWorkflowExecutionInitiated</code> event doesn't exist.</p>
+    #[doc(hidden)]
     pub initiated_event_id: i64,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>StartChildWorkflowExecution</code> <code>Decision</code> to request this child workflow execution. This information can be useful for diagnosing problems by tracing back the chain of events.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
     /// <p>The data attached to the event that the decider can use in subsequent workflow tasks. This data isn't sent to the child workflow execution.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
 }
 impl StartChildWorkflowExecutionFailedEventAttributes {
@@ -5944,11 +6080,10 @@ impl std::fmt::Debug for StartChildWorkflowExecutionFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`StartChildWorkflowExecutionFailedEventAttributes`](crate::model::StartChildWorkflowExecutionFailedEventAttributes)
+/// See [`StartChildWorkflowExecutionFailedEventAttributes`](crate::model::StartChildWorkflowExecutionFailedEventAttributes).
 pub mod start_child_workflow_execution_failed_event_attributes {
 
-    /// A builder for [`StartChildWorkflowExecutionFailedEventAttributes`](crate::model::StartChildWorkflowExecutionFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`StartChildWorkflowExecutionFailedEventAttributes`](crate::model::StartChildWorkflowExecutionFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_type: std::option::Option<crate::model::WorkflowType>,
@@ -6037,7 +6172,7 @@ pub mod start_child_workflow_execution_failed_event_attributes {
             self.control = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartChildWorkflowExecutionFailedEventAttributes`](crate::model::StartChildWorkflowExecutionFailedEventAttributes)
+        /// Consumes the builder and constructs a [`StartChildWorkflowExecutionFailedEventAttributes`](crate::model::StartChildWorkflowExecutionFailedEventAttributes).
         pub fn build(self) -> crate::model::StartChildWorkflowExecutionFailedEventAttributes {
             crate::model::StartChildWorkflowExecutionFailedEventAttributes {
                 workflow_type: self.workflow_type,
@@ -6053,7 +6188,7 @@ pub mod start_child_workflow_execution_failed_event_attributes {
     }
 }
 impl StartChildWorkflowExecutionFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`StartChildWorkflowExecutionFailedEventAttributes`](crate::model::StartChildWorkflowExecutionFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`StartChildWorkflowExecutionFailedEventAttributes`](crate::model::StartChildWorkflowExecutionFailedEventAttributes).
     pub fn builder() -> crate::model::start_child_workflow_execution_failed_event_attributes::Builder
     {
         crate::model::start_child_workflow_execution_failed_event_attributes::Builder::default()
@@ -6190,12 +6325,15 @@ impl AsRef<str> for StartChildWorkflowExecutionFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CancelTimerFailedEventAttributes {
     /// <p>The timerId provided in the <code>CancelTimer</code> decision that failed.</p>
+    #[doc(hidden)]
     pub timer_id: std::option::Option<std::string::String>,
     /// <p>The cause of the failure. This information is generated by the system and can be useful for diagnostic purposes.</p> <note>
     /// <p>If <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision failed because it lacked sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::CancelTimerFailedCause>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>CancelTimer</code> decision to cancel this timer. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl CancelTimerFailedEventAttributes {
@@ -6226,11 +6364,10 @@ impl std::fmt::Debug for CancelTimerFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`CancelTimerFailedEventAttributes`](crate::model::CancelTimerFailedEventAttributes)
+/// See [`CancelTimerFailedEventAttributes`](crate::model::CancelTimerFailedEventAttributes).
 pub mod cancel_timer_failed_event_attributes {
 
-    /// A builder for [`CancelTimerFailedEventAttributes`](crate::model::CancelTimerFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`CancelTimerFailedEventAttributes`](crate::model::CancelTimerFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timer_id: std::option::Option<std::string::String>,
@@ -6278,7 +6415,7 @@ pub mod cancel_timer_failed_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelTimerFailedEventAttributes`](crate::model::CancelTimerFailedEventAttributes)
+        /// Consumes the builder and constructs a [`CancelTimerFailedEventAttributes`](crate::model::CancelTimerFailedEventAttributes).
         pub fn build(self) -> crate::model::CancelTimerFailedEventAttributes {
             crate::model::CancelTimerFailedEventAttributes {
                 timer_id: self.timer_id,
@@ -6291,7 +6428,7 @@ pub mod cancel_timer_failed_event_attributes {
     }
 }
 impl CancelTimerFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`CancelTimerFailedEventAttributes`](crate::model::CancelTimerFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`CancelTimerFailedEventAttributes`](crate::model::CancelTimerFailedEventAttributes).
     pub fn builder() -> crate::model::cancel_timer_failed_event_attributes::Builder {
         crate::model::cancel_timer_failed_event_attributes::Builder::default()
     }
@@ -6357,12 +6494,15 @@ impl AsRef<str> for CancelTimerFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartTimerFailedEventAttributes {
     /// <p>The timerId provided in the <code>StartTimer</code> decision that failed.</p>
+    #[doc(hidden)]
     pub timer_id: std::option::Option<std::string::String>,
     /// <p>The cause of the failure. This information is generated by the system and can be useful for diagnostic purposes.</p> <note>
     /// <p>If <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision failed because it lacked sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::StartTimerFailedCause>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>StartTimer</code> decision for this activity task. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl StartTimerFailedEventAttributes {
@@ -6393,11 +6533,10 @@ impl std::fmt::Debug for StartTimerFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`StartTimerFailedEventAttributes`](crate::model::StartTimerFailedEventAttributes)
+/// See [`StartTimerFailedEventAttributes`](crate::model::StartTimerFailedEventAttributes).
 pub mod start_timer_failed_event_attributes {
 
-    /// A builder for [`StartTimerFailedEventAttributes`](crate::model::StartTimerFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`StartTimerFailedEventAttributes`](crate::model::StartTimerFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timer_id: std::option::Option<std::string::String>,
@@ -6445,7 +6584,7 @@ pub mod start_timer_failed_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartTimerFailedEventAttributes`](crate::model::StartTimerFailedEventAttributes)
+        /// Consumes the builder and constructs a [`StartTimerFailedEventAttributes`](crate::model::StartTimerFailedEventAttributes).
         pub fn build(self) -> crate::model::StartTimerFailedEventAttributes {
             crate::model::StartTimerFailedEventAttributes {
                 timer_id: self.timer_id,
@@ -6458,7 +6597,7 @@ pub mod start_timer_failed_event_attributes {
     }
 }
 impl StartTimerFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`StartTimerFailedEventAttributes`](crate::model::StartTimerFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`StartTimerFailedEventAttributes`](crate::model::StartTimerFailedEventAttributes).
     pub fn builder() -> crate::model::start_timer_failed_event_attributes::Builder {
         crate::model::start_timer_failed_event_attributes::Builder::default()
     }
@@ -6537,12 +6676,15 @@ impl AsRef<str> for StartTimerFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RequestCancelActivityTaskFailedEventAttributes {
     /// <p>The activityId provided in the <code>RequestCancelActivityTask</code> decision that failed.</p>
+    #[doc(hidden)]
     pub activity_id: std::option::Option<std::string::String>,
     /// <p>The cause of the failure. This information is generated by the system and can be useful for diagnostic purposes.</p> <note>
     /// <p>If <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision failed because it lacked sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::RequestCancelActivityTaskFailedCause>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>RequestCancelActivityTask</code> decision for this cancellation request. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl RequestCancelActivityTaskFailedEventAttributes {
@@ -6575,11 +6717,10 @@ impl std::fmt::Debug for RequestCancelActivityTaskFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`RequestCancelActivityTaskFailedEventAttributes`](crate::model::RequestCancelActivityTaskFailedEventAttributes)
+/// See [`RequestCancelActivityTaskFailedEventAttributes`](crate::model::RequestCancelActivityTaskFailedEventAttributes).
 pub mod request_cancel_activity_task_failed_event_attributes {
 
-    /// A builder for [`RequestCancelActivityTaskFailedEventAttributes`](crate::model::RequestCancelActivityTaskFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`RequestCancelActivityTaskFailedEventAttributes`](crate::model::RequestCancelActivityTaskFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activity_id: std::option::Option<std::string::String>,
@@ -6627,7 +6768,7 @@ pub mod request_cancel_activity_task_failed_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RequestCancelActivityTaskFailedEventAttributes`](crate::model::RequestCancelActivityTaskFailedEventAttributes)
+        /// Consumes the builder and constructs a [`RequestCancelActivityTaskFailedEventAttributes`](crate::model::RequestCancelActivityTaskFailedEventAttributes).
         pub fn build(self) -> crate::model::RequestCancelActivityTaskFailedEventAttributes {
             crate::model::RequestCancelActivityTaskFailedEventAttributes {
                 activity_id: self.activity_id,
@@ -6640,7 +6781,7 @@ pub mod request_cancel_activity_task_failed_event_attributes {
     }
 }
 impl RequestCancelActivityTaskFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`RequestCancelActivityTaskFailedEventAttributes`](crate::model::RequestCancelActivityTaskFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`RequestCancelActivityTaskFailedEventAttributes`](crate::model::RequestCancelActivityTaskFailedEventAttributes).
     pub fn builder() -> crate::model::request_cancel_activity_task_failed_event_attributes::Builder
     {
         crate::model::request_cancel_activity_task_failed_event_attributes::Builder::default()
@@ -6711,14 +6852,18 @@ impl AsRef<str> for RequestCancelActivityTaskFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ScheduleActivityTaskFailedEventAttributes {
     /// <p>The activity type provided in the <code>ScheduleActivityTask</code> decision that failed.</p>
+    #[doc(hidden)]
     pub activity_type: std::option::Option<crate::model::ActivityType>,
     /// <p>The activityId provided in the <code>ScheduleActivityTask</code> decision that failed.</p>
+    #[doc(hidden)]
     pub activity_id: std::option::Option<std::string::String>,
     /// <p>The cause of the failure. This information is generated by the system and can be useful for diagnostic purposes.</p> <note>
     /// <p>If <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision failed because it lacked sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::ScheduleActivityTaskFailedCause>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision that resulted in the scheduling of this activity task. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl ScheduleActivityTaskFailedEventAttributes {
@@ -6754,11 +6899,10 @@ impl std::fmt::Debug for ScheduleActivityTaskFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ScheduleActivityTaskFailedEventAttributes`](crate::model::ScheduleActivityTaskFailedEventAttributes)
+/// See [`ScheduleActivityTaskFailedEventAttributes`](crate::model::ScheduleActivityTaskFailedEventAttributes).
 pub mod schedule_activity_task_failed_event_attributes {
 
-    /// A builder for [`ScheduleActivityTaskFailedEventAttributes`](crate::model::ScheduleActivityTaskFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ScheduleActivityTaskFailedEventAttributes`](crate::model::ScheduleActivityTaskFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activity_type: std::option::Option<crate::model::ActivityType>,
@@ -6820,7 +6964,7 @@ pub mod schedule_activity_task_failed_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ScheduleActivityTaskFailedEventAttributes`](crate::model::ScheduleActivityTaskFailedEventAttributes)
+        /// Consumes the builder and constructs a [`ScheduleActivityTaskFailedEventAttributes`](crate::model::ScheduleActivityTaskFailedEventAttributes).
         pub fn build(self) -> crate::model::ScheduleActivityTaskFailedEventAttributes {
             crate::model::ScheduleActivityTaskFailedEventAttributes {
                 activity_type: self.activity_type,
@@ -6834,7 +6978,7 @@ pub mod schedule_activity_task_failed_event_attributes {
     }
 }
 impl ScheduleActivityTaskFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ScheduleActivityTaskFailedEventAttributes`](crate::model::ScheduleActivityTaskFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ScheduleActivityTaskFailedEventAttributes`](crate::model::ScheduleActivityTaskFailedEventAttributes).
     pub fn builder() -> crate::model::schedule_activity_task_failed_event_attributes::Builder {
         crate::model::schedule_activity_task_failed_event_attributes::Builder::default()
     }
@@ -6980,18 +7124,24 @@ impl AsRef<str> for ScheduleActivityTaskFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RequestCancelExternalWorkflowExecutionFailedEventAttributes {
     /// <p>The <code>workflowId</code> of the external workflow to which the cancel request was to be delivered.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
     /// <p>The <code>runId</code> of the external workflow execution.</p>
+    #[doc(hidden)]
     pub run_id: std::option::Option<std::string::String>,
     /// <p>The cause of the failure. This information is generated by the system and can be useful for diagnostic purposes.</p> <note>
     /// <p>If <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision failed because it lacked sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::RequestCancelExternalWorkflowExecutionFailedCause>,
     /// <p>The ID of the <code>RequestCancelExternalWorkflowExecutionInitiated</code> event corresponding to the <code>RequestCancelExternalWorkflowExecution</code> decision to cancel this external workflow execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub initiated_event_id: i64,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>RequestCancelExternalWorkflowExecution</code> decision for this cancellation request. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
     /// <p>The data attached to the event that the decider can use in subsequent workflow tasks. This data isn't sent to the workflow execution.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
 }
 impl RequestCancelExternalWorkflowExecutionFailedEventAttributes {
@@ -7040,11 +7190,10 @@ impl std::fmt::Debug for RequestCancelExternalWorkflowExecutionFailedEventAttrib
         formatter.finish()
     }
 }
-/// See [`RequestCancelExternalWorkflowExecutionFailedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionFailedEventAttributes)
+/// See [`RequestCancelExternalWorkflowExecutionFailedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionFailedEventAttributes).
 pub mod request_cancel_external_workflow_execution_failed_event_attributes {
 
-    /// A builder for [`RequestCancelExternalWorkflowExecutionFailedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`RequestCancelExternalWorkflowExecutionFailedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_id: std::option::Option<std::string::String>,
@@ -7131,7 +7280,7 @@ pub mod request_cancel_external_workflow_execution_failed_event_attributes {
             self.control = input;
             self
         }
-        /// Consumes the builder and constructs a [`RequestCancelExternalWorkflowExecutionFailedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionFailedEventAttributes)
+        /// Consumes the builder and constructs a [`RequestCancelExternalWorkflowExecutionFailedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionFailedEventAttributes).
         pub fn build(
             self,
         ) -> crate::model::RequestCancelExternalWorkflowExecutionFailedEventAttributes {
@@ -7149,7 +7298,7 @@ pub mod request_cancel_external_workflow_execution_failed_event_attributes {
     }
 }
 impl RequestCancelExternalWorkflowExecutionFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`RequestCancelExternalWorkflowExecutionFailedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`RequestCancelExternalWorkflowExecutionFailedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionFailedEventAttributes).
     pub fn builder(
     ) -> crate::model::request_cancel_external_workflow_execution_failed_event_attributes::Builder
     {
@@ -7225,12 +7374,16 @@ impl AsRef<str> for RequestCancelExternalWorkflowExecutionFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RequestCancelExternalWorkflowExecutionInitiatedEventAttributes {
     /// <p>The <code>workflowId</code> of the external workflow execution to be canceled.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
     /// <p>The <code>runId</code> of the external workflow execution to be canceled.</p>
+    #[doc(hidden)]
     pub run_id: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>RequestCancelExternalWorkflowExecution</code> decision for this cancellation request. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
     /// <p>Data attached to the event that can be used by the decider in subsequent workflow tasks.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
 }
 impl RequestCancelExternalWorkflowExecutionInitiatedEventAttributes {
@@ -7265,11 +7418,10 @@ impl std::fmt::Debug for RequestCancelExternalWorkflowExecutionInitiatedEventAtt
         formatter.finish()
     }
 }
-/// See [`RequestCancelExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionInitiatedEventAttributes)
+/// See [`RequestCancelExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionInitiatedEventAttributes).
 pub mod request_cancel_external_workflow_execution_initiated_event_attributes {
 
-    /// A builder for [`RequestCancelExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionInitiatedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`RequestCancelExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionInitiatedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_id: std::option::Option<std::string::String>,
@@ -7321,7 +7473,7 @@ pub mod request_cancel_external_workflow_execution_initiated_event_attributes {
             self.control = input;
             self
         }
-        /// Consumes the builder and constructs a [`RequestCancelExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionInitiatedEventAttributes)
+        /// Consumes the builder and constructs a [`RequestCancelExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionInitiatedEventAttributes).
         pub fn build(
             self,
         ) -> crate::model::RequestCancelExternalWorkflowExecutionInitiatedEventAttributes {
@@ -7337,7 +7489,7 @@ pub mod request_cancel_external_workflow_execution_initiated_event_attributes {
     }
 }
 impl RequestCancelExternalWorkflowExecutionInitiatedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`RequestCancelExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionInitiatedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`RequestCancelExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::RequestCancelExternalWorkflowExecutionInitiatedEventAttributes).
     pub fn builder(
     ) -> crate::model::request_cancel_external_workflow_execution_initiated_event_attributes::Builder
     {
@@ -7350,8 +7502,10 @@ impl RequestCancelExternalWorkflowExecutionInitiatedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExternalWorkflowExecutionCancelRequestedEventAttributes {
     /// <p>The external workflow execution to which the cancellation request was delivered.</p>
+    #[doc(hidden)]
     pub workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
     /// <p>The ID of the <code>RequestCancelExternalWorkflowExecutionInitiated</code> event corresponding to the <code>RequestCancelExternalWorkflowExecution</code> decision to cancel this external workflow execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub initiated_event_id: i64,
 }
 impl ExternalWorkflowExecutionCancelRequestedEventAttributes {
@@ -7373,11 +7527,10 @@ impl std::fmt::Debug for ExternalWorkflowExecutionCancelRequestedEventAttributes
         formatter.finish()
     }
 }
-/// See [`ExternalWorkflowExecutionCancelRequestedEventAttributes`](crate::model::ExternalWorkflowExecutionCancelRequestedEventAttributes)
+/// See [`ExternalWorkflowExecutionCancelRequestedEventAttributes`](crate::model::ExternalWorkflowExecutionCancelRequestedEventAttributes).
 pub mod external_workflow_execution_cancel_requested_event_attributes {
 
-    /// A builder for [`ExternalWorkflowExecutionCancelRequestedEventAttributes`](crate::model::ExternalWorkflowExecutionCancelRequestedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ExternalWorkflowExecutionCancelRequestedEventAttributes`](crate::model::ExternalWorkflowExecutionCancelRequestedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
@@ -7407,7 +7560,7 @@ pub mod external_workflow_execution_cancel_requested_event_attributes {
             self.initiated_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExternalWorkflowExecutionCancelRequestedEventAttributes`](crate::model::ExternalWorkflowExecutionCancelRequestedEventAttributes)
+        /// Consumes the builder and constructs a [`ExternalWorkflowExecutionCancelRequestedEventAttributes`](crate::model::ExternalWorkflowExecutionCancelRequestedEventAttributes).
         pub fn build(
             self,
         ) -> crate::model::ExternalWorkflowExecutionCancelRequestedEventAttributes {
@@ -7419,7 +7572,7 @@ pub mod external_workflow_execution_cancel_requested_event_attributes {
     }
 }
 impl ExternalWorkflowExecutionCancelRequestedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ExternalWorkflowExecutionCancelRequestedEventAttributes`](crate::model::ExternalWorkflowExecutionCancelRequestedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ExternalWorkflowExecutionCancelRequestedEventAttributes`](crate::model::ExternalWorkflowExecutionCancelRequestedEventAttributes).
     pub fn builder(
     ) -> crate::model::external_workflow_execution_cancel_requested_event_attributes::Builder {
         crate::model::external_workflow_execution_cancel_requested_event_attributes::Builder::default()
@@ -7431,8 +7584,10 @@ impl ExternalWorkflowExecutionCancelRequestedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowExecution {
     /// <p>The user defined identifier associated with the workflow execution.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
     /// <p>A system-generated unique identifier for the workflow execution.</p>
+    #[doc(hidden)]
     pub run_id: std::option::Option<std::string::String>,
 }
 impl WorkflowExecution {
@@ -7453,11 +7608,10 @@ impl std::fmt::Debug for WorkflowExecution {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecution`](crate::model::WorkflowExecution)
+/// See [`WorkflowExecution`](crate::model::WorkflowExecution).
 pub mod workflow_execution {
 
-    /// A builder for [`WorkflowExecution`](crate::model::WorkflowExecution)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecution`](crate::model::WorkflowExecution).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_id: std::option::Option<std::string::String>,
@@ -7484,7 +7638,7 @@ pub mod workflow_execution {
             self.run_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecution`](crate::model::WorkflowExecution)
+        /// Consumes the builder and constructs a [`WorkflowExecution`](crate::model::WorkflowExecution).
         pub fn build(self) -> crate::model::WorkflowExecution {
             crate::model::WorkflowExecution {
                 workflow_id: self.workflow_id,
@@ -7494,7 +7648,7 @@ pub mod workflow_execution {
     }
 }
 impl WorkflowExecution {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecution`](crate::model::WorkflowExecution)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecution`](crate::model::WorkflowExecution).
     pub fn builder() -> crate::model::workflow_execution::Builder {
         crate::model::workflow_execution::Builder::default()
     }
@@ -7505,18 +7659,24 @@ impl WorkflowExecution {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SignalExternalWorkflowExecutionFailedEventAttributes {
     /// <p>The <code>workflowId</code> of the external workflow execution that the signal was being delivered to.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
     /// <p>The <code>runId</code> of the external workflow execution that the signal was being delivered to.</p>
+    #[doc(hidden)]
     pub run_id: std::option::Option<std::string::String>,
     /// <p>The cause of the failure. This information is generated by the system and can be useful for diagnostic purposes.</p> <note>
     /// <p>If <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision failed because it lacked sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::SignalExternalWorkflowExecutionFailedCause>,
     /// <p>The ID of the <code>SignalExternalWorkflowExecutionInitiated</code> event corresponding to the <code>SignalExternalWorkflowExecution</code> decision to request this signal. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub initiated_event_id: i64,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>SignalExternalWorkflowExecution</code> decision for this signal. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
     /// <p>The data attached to the event that the decider can use in subsequent workflow tasks. This data isn't sent to the workflow execution.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
 }
 impl SignalExternalWorkflowExecutionFailedEventAttributes {
@@ -7564,11 +7724,10 @@ impl std::fmt::Debug for SignalExternalWorkflowExecutionFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`SignalExternalWorkflowExecutionFailedEventAttributes`](crate::model::SignalExternalWorkflowExecutionFailedEventAttributes)
+/// See [`SignalExternalWorkflowExecutionFailedEventAttributes`](crate::model::SignalExternalWorkflowExecutionFailedEventAttributes).
 pub mod signal_external_workflow_execution_failed_event_attributes {
 
-    /// A builder for [`SignalExternalWorkflowExecutionFailedEventAttributes`](crate::model::SignalExternalWorkflowExecutionFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`SignalExternalWorkflowExecutionFailedEventAttributes`](crate::model::SignalExternalWorkflowExecutionFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_id: std::option::Option<std::string::String>,
@@ -7653,7 +7812,7 @@ pub mod signal_external_workflow_execution_failed_event_attributes {
             self.control = input;
             self
         }
-        /// Consumes the builder and constructs a [`SignalExternalWorkflowExecutionFailedEventAttributes`](crate::model::SignalExternalWorkflowExecutionFailedEventAttributes)
+        /// Consumes the builder and constructs a [`SignalExternalWorkflowExecutionFailedEventAttributes`](crate::model::SignalExternalWorkflowExecutionFailedEventAttributes).
         pub fn build(self) -> crate::model::SignalExternalWorkflowExecutionFailedEventAttributes {
             crate::model::SignalExternalWorkflowExecutionFailedEventAttributes {
                 workflow_id: self.workflow_id,
@@ -7669,7 +7828,7 @@ pub mod signal_external_workflow_execution_failed_event_attributes {
     }
 }
 impl SignalExternalWorkflowExecutionFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`SignalExternalWorkflowExecutionFailedEventAttributes`](crate::model::SignalExternalWorkflowExecutionFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`SignalExternalWorkflowExecutionFailedEventAttributes`](crate::model::SignalExternalWorkflowExecutionFailedEventAttributes).
     pub fn builder(
     ) -> crate::model::signal_external_workflow_execution_failed_event_attributes::Builder {
         crate::model::signal_external_workflow_execution_failed_event_attributes::Builder::default()
@@ -7744,8 +7903,10 @@ impl AsRef<str> for SignalExternalWorkflowExecutionFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExternalWorkflowExecutionSignaledEventAttributes {
     /// <p>The external workflow execution that the signal was delivered to.</p>
+    #[doc(hidden)]
     pub workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
     /// <p>The ID of the <code>SignalExternalWorkflowExecutionInitiated</code> event corresponding to the <code>SignalExternalWorkflowExecution</code> decision to request this signal. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub initiated_event_id: i64,
 }
 impl ExternalWorkflowExecutionSignaledEventAttributes {
@@ -7766,11 +7927,10 @@ impl std::fmt::Debug for ExternalWorkflowExecutionSignaledEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ExternalWorkflowExecutionSignaledEventAttributes`](crate::model::ExternalWorkflowExecutionSignaledEventAttributes)
+/// See [`ExternalWorkflowExecutionSignaledEventAttributes`](crate::model::ExternalWorkflowExecutionSignaledEventAttributes).
 pub mod external_workflow_execution_signaled_event_attributes {
 
-    /// A builder for [`ExternalWorkflowExecutionSignaledEventAttributes`](crate::model::ExternalWorkflowExecutionSignaledEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ExternalWorkflowExecutionSignaledEventAttributes`](crate::model::ExternalWorkflowExecutionSignaledEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
@@ -7800,7 +7960,7 @@ pub mod external_workflow_execution_signaled_event_attributes {
             self.initiated_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExternalWorkflowExecutionSignaledEventAttributes`](crate::model::ExternalWorkflowExecutionSignaledEventAttributes)
+        /// Consumes the builder and constructs a [`ExternalWorkflowExecutionSignaledEventAttributes`](crate::model::ExternalWorkflowExecutionSignaledEventAttributes).
         pub fn build(self) -> crate::model::ExternalWorkflowExecutionSignaledEventAttributes {
             crate::model::ExternalWorkflowExecutionSignaledEventAttributes {
                 workflow_execution: self.workflow_execution,
@@ -7810,7 +7970,7 @@ pub mod external_workflow_execution_signaled_event_attributes {
     }
 }
 impl ExternalWorkflowExecutionSignaledEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ExternalWorkflowExecutionSignaledEventAttributes`](crate::model::ExternalWorkflowExecutionSignaledEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ExternalWorkflowExecutionSignaledEventAttributes`](crate::model::ExternalWorkflowExecutionSignaledEventAttributes).
     pub fn builder() -> crate::model::external_workflow_execution_signaled_event_attributes::Builder
     {
         crate::model::external_workflow_execution_signaled_event_attributes::Builder::default()
@@ -7822,16 +7982,22 @@ impl ExternalWorkflowExecutionSignaledEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SignalExternalWorkflowExecutionInitiatedEventAttributes {
     /// <p>The <code>workflowId</code> of the external workflow execution.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
     /// <p>The <code>runId</code> of the external workflow execution to send the signal to.</p>
+    #[doc(hidden)]
     pub run_id: std::option::Option<std::string::String>,
     /// <p>The name of the signal.</p>
+    #[doc(hidden)]
     pub signal_name: std::option::Option<std::string::String>,
     /// <p>The input provided to the signal.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>SignalExternalWorkflowExecution</code> decision for this signal. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
     /// <p>Data attached to the event that can be used by the decider in subsequent decision tasks.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
 }
 impl SignalExternalWorkflowExecutionInitiatedEventAttributes {
@@ -7876,11 +8042,10 @@ impl std::fmt::Debug for SignalExternalWorkflowExecutionInitiatedEventAttributes
         formatter.finish()
     }
 }
-/// See [`SignalExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::SignalExternalWorkflowExecutionInitiatedEventAttributes)
+/// See [`SignalExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::SignalExternalWorkflowExecutionInitiatedEventAttributes).
 pub mod signal_external_workflow_execution_initiated_event_attributes {
 
-    /// A builder for [`SignalExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::SignalExternalWorkflowExecutionInitiatedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`SignalExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::SignalExternalWorkflowExecutionInitiatedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_id: std::option::Option<std::string::String>,
@@ -7954,7 +8119,7 @@ pub mod signal_external_workflow_execution_initiated_event_attributes {
             self.control = input;
             self
         }
-        /// Consumes the builder and constructs a [`SignalExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::SignalExternalWorkflowExecutionInitiatedEventAttributes)
+        /// Consumes the builder and constructs a [`SignalExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::SignalExternalWorkflowExecutionInitiatedEventAttributes).
         pub fn build(
             self,
         ) -> crate::model::SignalExternalWorkflowExecutionInitiatedEventAttributes {
@@ -7972,7 +8137,7 @@ pub mod signal_external_workflow_execution_initiated_event_attributes {
     }
 }
 impl SignalExternalWorkflowExecutionInitiatedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`SignalExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::SignalExternalWorkflowExecutionInitiatedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`SignalExternalWorkflowExecutionInitiatedEventAttributes`](crate::model::SignalExternalWorkflowExecutionInitiatedEventAttributes).
     pub fn builder(
     ) -> crate::model::signal_external_workflow_execution_initiated_event_attributes::Builder {
         crate::model::signal_external_workflow_execution_initiated_event_attributes::Builder::default()
@@ -7984,12 +8149,16 @@ impl SignalExternalWorkflowExecutionInitiatedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChildWorkflowExecutionTerminatedEventAttributes {
     /// <p>The child workflow execution that was terminated.</p>
+    #[doc(hidden)]
     pub workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
     /// <p>The type of the child workflow execution.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>The ID of the <code>StartChildWorkflowExecutionInitiated</code> event corresponding to the <code>StartChildWorkflowExecution</code> <code>Decision</code> to start this child workflow execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub initiated_event_id: i64,
     /// <p>The ID of the <code>ChildWorkflowExecutionStarted</code> event recorded when this child workflow execution was started. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
 }
 impl ChildWorkflowExecutionTerminatedEventAttributes {
@@ -8020,11 +8189,10 @@ impl std::fmt::Debug for ChildWorkflowExecutionTerminatedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ChildWorkflowExecutionTerminatedEventAttributes`](crate::model::ChildWorkflowExecutionTerminatedEventAttributes)
+/// See [`ChildWorkflowExecutionTerminatedEventAttributes`](crate::model::ChildWorkflowExecutionTerminatedEventAttributes).
 pub mod child_workflow_execution_terminated_event_attributes {
 
-    /// A builder for [`ChildWorkflowExecutionTerminatedEventAttributes`](crate::model::ChildWorkflowExecutionTerminatedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ChildWorkflowExecutionTerminatedEventAttributes`](crate::model::ChildWorkflowExecutionTerminatedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
@@ -8079,7 +8247,7 @@ pub mod child_workflow_execution_terminated_event_attributes {
             self.started_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChildWorkflowExecutionTerminatedEventAttributes`](crate::model::ChildWorkflowExecutionTerminatedEventAttributes)
+        /// Consumes the builder and constructs a [`ChildWorkflowExecutionTerminatedEventAttributes`](crate::model::ChildWorkflowExecutionTerminatedEventAttributes).
         pub fn build(self) -> crate::model::ChildWorkflowExecutionTerminatedEventAttributes {
             crate::model::ChildWorkflowExecutionTerminatedEventAttributes {
                 workflow_execution: self.workflow_execution,
@@ -8091,7 +8259,7 @@ pub mod child_workflow_execution_terminated_event_attributes {
     }
 }
 impl ChildWorkflowExecutionTerminatedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ChildWorkflowExecutionTerminatedEventAttributes`](crate::model::ChildWorkflowExecutionTerminatedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ChildWorkflowExecutionTerminatedEventAttributes`](crate::model::ChildWorkflowExecutionTerminatedEventAttributes).
     pub fn builder() -> crate::model::child_workflow_execution_terminated_event_attributes::Builder
     {
         crate::model::child_workflow_execution_terminated_event_attributes::Builder::default()
@@ -8103,14 +8271,19 @@ impl ChildWorkflowExecutionTerminatedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChildWorkflowExecutionCanceledEventAttributes {
     /// <p>The child workflow execution that was canceled.</p>
+    #[doc(hidden)]
     pub workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
     /// <p>The type of the child workflow execution.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>Details of the cancellation (if provided).</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>StartChildWorkflowExecutionInitiated</code> event corresponding to the <code>StartChildWorkflowExecution</code> <code>Decision</code> to start this child workflow execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub initiated_event_id: i64,
     /// <p>The ID of the <code>ChildWorkflowExecutionStarted</code> event recorded when this child workflow execution was started. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
 }
 impl ChildWorkflowExecutionCanceledEventAttributes {
@@ -8146,11 +8319,10 @@ impl std::fmt::Debug for ChildWorkflowExecutionCanceledEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ChildWorkflowExecutionCanceledEventAttributes`](crate::model::ChildWorkflowExecutionCanceledEventAttributes)
+/// See [`ChildWorkflowExecutionCanceledEventAttributes`](crate::model::ChildWorkflowExecutionCanceledEventAttributes).
 pub mod child_workflow_execution_canceled_event_attributes {
 
-    /// A builder for [`ChildWorkflowExecutionCanceledEventAttributes`](crate::model::ChildWorkflowExecutionCanceledEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ChildWorkflowExecutionCanceledEventAttributes`](crate::model::ChildWorkflowExecutionCanceledEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
@@ -8216,7 +8388,7 @@ pub mod child_workflow_execution_canceled_event_attributes {
             self.started_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChildWorkflowExecutionCanceledEventAttributes`](crate::model::ChildWorkflowExecutionCanceledEventAttributes)
+        /// Consumes the builder and constructs a [`ChildWorkflowExecutionCanceledEventAttributes`](crate::model::ChildWorkflowExecutionCanceledEventAttributes).
         pub fn build(self) -> crate::model::ChildWorkflowExecutionCanceledEventAttributes {
             crate::model::ChildWorkflowExecutionCanceledEventAttributes {
                 workflow_execution: self.workflow_execution,
@@ -8229,7 +8401,7 @@ pub mod child_workflow_execution_canceled_event_attributes {
     }
 }
 impl ChildWorkflowExecutionCanceledEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ChildWorkflowExecutionCanceledEventAttributes`](crate::model::ChildWorkflowExecutionCanceledEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ChildWorkflowExecutionCanceledEventAttributes`](crate::model::ChildWorkflowExecutionCanceledEventAttributes).
     pub fn builder() -> crate::model::child_workflow_execution_canceled_event_attributes::Builder {
         crate::model::child_workflow_execution_canceled_event_attributes::Builder::default()
     }
@@ -8240,14 +8412,19 @@ impl ChildWorkflowExecutionCanceledEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChildWorkflowExecutionTimedOutEventAttributes {
     /// <p>The child workflow execution that timed out.</p>
+    #[doc(hidden)]
     pub workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
     /// <p>The type of the child workflow execution.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>The type of the timeout that caused the child workflow execution to time out.</p>
+    #[doc(hidden)]
     pub timeout_type: std::option::Option<crate::model::WorkflowExecutionTimeoutType>,
     /// <p>The ID of the <code>StartChildWorkflowExecutionInitiated</code> event corresponding to the <code>StartChildWorkflowExecution</code> <code>Decision</code> to start this child workflow execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub initiated_event_id: i64,
     /// <p>The ID of the <code>ChildWorkflowExecutionStarted</code> event recorded when this child workflow execution was started. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
 }
 impl ChildWorkflowExecutionTimedOutEventAttributes {
@@ -8283,11 +8460,10 @@ impl std::fmt::Debug for ChildWorkflowExecutionTimedOutEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ChildWorkflowExecutionTimedOutEventAttributes`](crate::model::ChildWorkflowExecutionTimedOutEventAttributes)
+/// See [`ChildWorkflowExecutionTimedOutEventAttributes`](crate::model::ChildWorkflowExecutionTimedOutEventAttributes).
 pub mod child_workflow_execution_timed_out_event_attributes {
 
-    /// A builder for [`ChildWorkflowExecutionTimedOutEventAttributes`](crate::model::ChildWorkflowExecutionTimedOutEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ChildWorkflowExecutionTimedOutEventAttributes`](crate::model::ChildWorkflowExecutionTimedOutEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
@@ -8356,7 +8532,7 @@ pub mod child_workflow_execution_timed_out_event_attributes {
             self.started_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChildWorkflowExecutionTimedOutEventAttributes`](crate::model::ChildWorkflowExecutionTimedOutEventAttributes)
+        /// Consumes the builder and constructs a [`ChildWorkflowExecutionTimedOutEventAttributes`](crate::model::ChildWorkflowExecutionTimedOutEventAttributes).
         pub fn build(self) -> crate::model::ChildWorkflowExecutionTimedOutEventAttributes {
             crate::model::ChildWorkflowExecutionTimedOutEventAttributes {
                 workflow_execution: self.workflow_execution,
@@ -8369,7 +8545,7 @@ pub mod child_workflow_execution_timed_out_event_attributes {
     }
 }
 impl ChildWorkflowExecutionTimedOutEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ChildWorkflowExecutionTimedOutEventAttributes`](crate::model::ChildWorkflowExecutionTimedOutEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ChildWorkflowExecutionTimedOutEventAttributes`](crate::model::ChildWorkflowExecutionTimedOutEventAttributes).
     pub fn builder() -> crate::model::child_workflow_execution_timed_out_event_attributes::Builder {
         crate::model::child_workflow_execution_timed_out_event_attributes::Builder::default()
     }
@@ -8431,16 +8607,22 @@ impl AsRef<str> for WorkflowExecutionTimeoutType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChildWorkflowExecutionFailedEventAttributes {
     /// <p>The child workflow execution that failed.</p>
+    #[doc(hidden)]
     pub workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
     /// <p>The type of the child workflow execution.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>The reason for the failure (if provided).</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p>The details of the failure (if provided).</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>StartChildWorkflowExecutionInitiated</code> event corresponding to the <code>StartChildWorkflowExecution</code> <code>Decision</code> to start this child workflow execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub initiated_event_id: i64,
     /// <p>The ID of the <code>ChildWorkflowExecutionStarted</code> event recorded when this child workflow execution was started. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
 }
 impl ChildWorkflowExecutionFailedEventAttributes {
@@ -8481,11 +8663,10 @@ impl std::fmt::Debug for ChildWorkflowExecutionFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ChildWorkflowExecutionFailedEventAttributes`](crate::model::ChildWorkflowExecutionFailedEventAttributes)
+/// See [`ChildWorkflowExecutionFailedEventAttributes`](crate::model::ChildWorkflowExecutionFailedEventAttributes).
 pub mod child_workflow_execution_failed_event_attributes {
 
-    /// A builder for [`ChildWorkflowExecutionFailedEventAttributes`](crate::model::ChildWorkflowExecutionFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ChildWorkflowExecutionFailedEventAttributes`](crate::model::ChildWorkflowExecutionFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
@@ -8562,7 +8743,7 @@ pub mod child_workflow_execution_failed_event_attributes {
             self.started_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChildWorkflowExecutionFailedEventAttributes`](crate::model::ChildWorkflowExecutionFailedEventAttributes)
+        /// Consumes the builder and constructs a [`ChildWorkflowExecutionFailedEventAttributes`](crate::model::ChildWorkflowExecutionFailedEventAttributes).
         pub fn build(self) -> crate::model::ChildWorkflowExecutionFailedEventAttributes {
             crate::model::ChildWorkflowExecutionFailedEventAttributes {
                 workflow_execution: self.workflow_execution,
@@ -8576,7 +8757,7 @@ pub mod child_workflow_execution_failed_event_attributes {
     }
 }
 impl ChildWorkflowExecutionFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ChildWorkflowExecutionFailedEventAttributes`](crate::model::ChildWorkflowExecutionFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ChildWorkflowExecutionFailedEventAttributes`](crate::model::ChildWorkflowExecutionFailedEventAttributes).
     pub fn builder() -> crate::model::child_workflow_execution_failed_event_attributes::Builder {
         crate::model::child_workflow_execution_failed_event_attributes::Builder::default()
     }
@@ -8587,14 +8768,19 @@ impl ChildWorkflowExecutionFailedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChildWorkflowExecutionCompletedEventAttributes {
     /// <p>The child workflow execution that was completed.</p>
+    #[doc(hidden)]
     pub workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
     /// <p>The type of the child workflow execution.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>The result of the child workflow execution.</p>
+    #[doc(hidden)]
     pub result: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>StartChildWorkflowExecutionInitiated</code> event corresponding to the <code>StartChildWorkflowExecution</code> <code>Decision</code> to start this child workflow execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub initiated_event_id: i64,
     /// <p>The ID of the <code>ChildWorkflowExecutionStarted</code> event recorded when this child workflow execution was started. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
 }
 impl ChildWorkflowExecutionCompletedEventAttributes {
@@ -8630,11 +8816,10 @@ impl std::fmt::Debug for ChildWorkflowExecutionCompletedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ChildWorkflowExecutionCompletedEventAttributes`](crate::model::ChildWorkflowExecutionCompletedEventAttributes)
+/// See [`ChildWorkflowExecutionCompletedEventAttributes`](crate::model::ChildWorkflowExecutionCompletedEventAttributes).
 pub mod child_workflow_execution_completed_event_attributes {
 
-    /// A builder for [`ChildWorkflowExecutionCompletedEventAttributes`](crate::model::ChildWorkflowExecutionCompletedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ChildWorkflowExecutionCompletedEventAttributes`](crate::model::ChildWorkflowExecutionCompletedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
@@ -8700,7 +8885,7 @@ pub mod child_workflow_execution_completed_event_attributes {
             self.started_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChildWorkflowExecutionCompletedEventAttributes`](crate::model::ChildWorkflowExecutionCompletedEventAttributes)
+        /// Consumes the builder and constructs a [`ChildWorkflowExecutionCompletedEventAttributes`](crate::model::ChildWorkflowExecutionCompletedEventAttributes).
         pub fn build(self) -> crate::model::ChildWorkflowExecutionCompletedEventAttributes {
             crate::model::ChildWorkflowExecutionCompletedEventAttributes {
                 workflow_execution: self.workflow_execution,
@@ -8713,7 +8898,7 @@ pub mod child_workflow_execution_completed_event_attributes {
     }
 }
 impl ChildWorkflowExecutionCompletedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ChildWorkflowExecutionCompletedEventAttributes`](crate::model::ChildWorkflowExecutionCompletedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ChildWorkflowExecutionCompletedEventAttributes`](crate::model::ChildWorkflowExecutionCompletedEventAttributes).
     pub fn builder() -> crate::model::child_workflow_execution_completed_event_attributes::Builder {
         crate::model::child_workflow_execution_completed_event_attributes::Builder::default()
     }
@@ -8724,10 +8909,13 @@ impl ChildWorkflowExecutionCompletedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ChildWorkflowExecutionStartedEventAttributes {
     /// <p>The child workflow execution that was started.</p>
+    #[doc(hidden)]
     pub workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
     /// <p>The type of the child workflow execution.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>The ID of the <code>StartChildWorkflowExecutionInitiated</code> event corresponding to the <code>StartChildWorkflowExecution</code> <code>Decision</code> to start this child workflow execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub initiated_event_id: i64,
 }
 impl ChildWorkflowExecutionStartedEventAttributes {
@@ -8753,11 +8941,10 @@ impl std::fmt::Debug for ChildWorkflowExecutionStartedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ChildWorkflowExecutionStartedEventAttributes`](crate::model::ChildWorkflowExecutionStartedEventAttributes)
+/// See [`ChildWorkflowExecutionStartedEventAttributes`](crate::model::ChildWorkflowExecutionStartedEventAttributes).
 pub mod child_workflow_execution_started_event_attributes {
 
-    /// A builder for [`ChildWorkflowExecutionStartedEventAttributes`](crate::model::ChildWorkflowExecutionStartedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ChildWorkflowExecutionStartedEventAttributes`](crate::model::ChildWorkflowExecutionStartedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
@@ -8801,7 +8988,7 @@ pub mod child_workflow_execution_started_event_attributes {
             self.initiated_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChildWorkflowExecutionStartedEventAttributes`](crate::model::ChildWorkflowExecutionStartedEventAttributes)
+        /// Consumes the builder and constructs a [`ChildWorkflowExecutionStartedEventAttributes`](crate::model::ChildWorkflowExecutionStartedEventAttributes).
         pub fn build(self) -> crate::model::ChildWorkflowExecutionStartedEventAttributes {
             crate::model::ChildWorkflowExecutionStartedEventAttributes {
                 workflow_execution: self.workflow_execution,
@@ -8812,7 +8999,7 @@ pub mod child_workflow_execution_started_event_attributes {
     }
 }
 impl ChildWorkflowExecutionStartedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ChildWorkflowExecutionStartedEventAttributes`](crate::model::ChildWorkflowExecutionStartedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ChildWorkflowExecutionStartedEventAttributes`](crate::model::ChildWorkflowExecutionStartedEventAttributes).
     pub fn builder() -> crate::model::child_workflow_execution_started_event_attributes::Builder {
         crate::model::child_workflow_execution_started_event_attributes::Builder::default()
     }
@@ -8823,22 +9010,30 @@ impl ChildWorkflowExecutionStartedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartChildWorkflowExecutionInitiatedEventAttributes {
     /// <p>The <code>workflowId</code> of the child workflow execution.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
     /// <p>The type of the child workflow execution.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>Data attached to the event that can be used by the decider in subsequent decision tasks. This data isn't sent to the activity.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
     /// <p>The inputs provided to the child workflow execution.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>The maximum duration for the child workflow execution. If the workflow execution isn't closed within this duration, it is timed out and force-terminated.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub execution_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>The name of the task list used for the decision tasks of the child workflow execution.</p>
+    #[doc(hidden)]
     pub task_list: std::option::Option<crate::model::TaskList>,
     /// <p> The priority assigned for the decision tasks for this workflow execution. Valid values are integers that range from Java's <code>Integer.MIN_VALUE</code> (-2147483648) to <code>Integer.MAX_VALUE</code> (2147483647). Higher numbers indicate higher priority.</p>
     /// <p>For more information about setting task priority, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/programming-priority.html">Setting Task Priority</a> in the <i>Amazon SWF Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub task_priority: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>StartChildWorkflowExecution</code> <code>Decision</code> to request this child workflow execution. This information can be useful for diagnosing problems by tracing back the cause of events.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
     /// <p>The policy to use for the child workflow executions if this execution gets terminated by explicitly calling the <code>TerminateWorkflowExecution</code> action or due to an expired timeout.</p>
     /// <p>The supported child policies are:</p>
@@ -8847,13 +9042,17 @@ pub struct StartChildWorkflowExecutionInitiatedEventAttributes {
     /// <li> <p> <code>REQUEST_CANCEL</code> – A request to cancel is attempted for each child execution by recording a <code>WorkflowExecutionCancelRequested</code> event in its history. It is up to the decider to take appropriate actions when it receives an execution history with this event.</p> </li>
     /// <li> <p> <code>ABANDON</code> – No action is taken. The child executions continue to run.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub child_policy: std::option::Option<crate::model::ChildPolicy>,
     /// <p>The maximum duration allowed for the decision tasks for this workflow execution.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub task_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>The list of tags to associated with the child workflow execution.</p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The IAM role to attach to the child workflow execution.</p>
+    #[doc(hidden)]
     pub lambda_role: std::option::Option<std::string::String>,
 }
 impl StartChildWorkflowExecutionInitiatedEventAttributes {
@@ -8942,11 +9141,10 @@ impl std::fmt::Debug for StartChildWorkflowExecutionInitiatedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`StartChildWorkflowExecutionInitiatedEventAttributes`](crate::model::StartChildWorkflowExecutionInitiatedEventAttributes)
+/// See [`StartChildWorkflowExecutionInitiatedEventAttributes`](crate::model::StartChildWorkflowExecutionInitiatedEventAttributes).
 pub mod start_child_workflow_execution_initiated_event_attributes {
 
-    /// A builder for [`StartChildWorkflowExecutionInitiatedEventAttributes`](crate::model::StartChildWorkflowExecutionInitiatedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`StartChildWorkflowExecutionInitiatedEventAttributes`](crate::model::StartChildWorkflowExecutionInitiatedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_id: std::option::Option<std::string::String>,
@@ -9134,7 +9332,7 @@ pub mod start_child_workflow_execution_initiated_event_attributes {
             self.lambda_role = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartChildWorkflowExecutionInitiatedEventAttributes`](crate::model::StartChildWorkflowExecutionInitiatedEventAttributes)
+        /// Consumes the builder and constructs a [`StartChildWorkflowExecutionInitiatedEventAttributes`](crate::model::StartChildWorkflowExecutionInitiatedEventAttributes).
         pub fn build(self) -> crate::model::StartChildWorkflowExecutionInitiatedEventAttributes {
             crate::model::StartChildWorkflowExecutionInitiatedEventAttributes {
                 workflow_id: self.workflow_id,
@@ -9156,7 +9354,7 @@ pub mod start_child_workflow_execution_initiated_event_attributes {
     }
 }
 impl StartChildWorkflowExecutionInitiatedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`StartChildWorkflowExecutionInitiatedEventAttributes`](crate::model::StartChildWorkflowExecutionInitiatedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`StartChildWorkflowExecutionInitiatedEventAttributes`](crate::model::StartChildWorkflowExecutionInitiatedEventAttributes).
     pub fn builder(
     ) -> crate::model::start_child_workflow_execution_initiated_event_attributes::Builder {
         crate::model::start_child_workflow_execution_initiated_event_attributes::Builder::default()
@@ -9168,10 +9366,13 @@ impl StartChildWorkflowExecutionInitiatedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimerCanceledEventAttributes {
     /// <p>The unique ID of the timer that was canceled.</p>
+    #[doc(hidden)]
     pub timer_id: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>TimerStarted</code> event that was recorded when this timer was started. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>CancelTimer</code> decision to cancel this timer. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl TimerCanceledEventAttributes {
@@ -9200,11 +9401,10 @@ impl std::fmt::Debug for TimerCanceledEventAttributes {
         formatter.finish()
     }
 }
-/// See [`TimerCanceledEventAttributes`](crate::model::TimerCanceledEventAttributes)
+/// See [`TimerCanceledEventAttributes`](crate::model::TimerCanceledEventAttributes).
 pub mod timer_canceled_event_attributes {
 
-    /// A builder for [`TimerCanceledEventAttributes`](crate::model::TimerCanceledEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`TimerCanceledEventAttributes`](crate::model::TimerCanceledEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timer_id: std::option::Option<std::string::String>,
@@ -9245,7 +9445,7 @@ pub mod timer_canceled_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimerCanceledEventAttributes`](crate::model::TimerCanceledEventAttributes)
+        /// Consumes the builder and constructs a [`TimerCanceledEventAttributes`](crate::model::TimerCanceledEventAttributes).
         pub fn build(self) -> crate::model::TimerCanceledEventAttributes {
             crate::model::TimerCanceledEventAttributes {
                 timer_id: self.timer_id,
@@ -9258,7 +9458,7 @@ pub mod timer_canceled_event_attributes {
     }
 }
 impl TimerCanceledEventAttributes {
-    /// Creates a new builder-style object to manufacture [`TimerCanceledEventAttributes`](crate::model::TimerCanceledEventAttributes)
+    /// Creates a new builder-style object to manufacture [`TimerCanceledEventAttributes`](crate::model::TimerCanceledEventAttributes).
     pub fn builder() -> crate::model::timer_canceled_event_attributes::Builder {
         crate::model::timer_canceled_event_attributes::Builder::default()
     }
@@ -9269,8 +9469,10 @@ impl TimerCanceledEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimerFiredEventAttributes {
     /// <p>The unique ID of the timer that fired.</p>
+    #[doc(hidden)]
     pub timer_id: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>TimerStarted</code> event that was recorded when this timer was started. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
 }
 impl TimerFiredEventAttributes {
@@ -9291,11 +9493,10 @@ impl std::fmt::Debug for TimerFiredEventAttributes {
         formatter.finish()
     }
 }
-/// See [`TimerFiredEventAttributes`](crate::model::TimerFiredEventAttributes)
+/// See [`TimerFiredEventAttributes`](crate::model::TimerFiredEventAttributes).
 pub mod timer_fired_event_attributes {
 
-    /// A builder for [`TimerFiredEventAttributes`](crate::model::TimerFiredEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`TimerFiredEventAttributes`](crate::model::TimerFiredEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timer_id: std::option::Option<std::string::String>,
@@ -9322,7 +9523,7 @@ pub mod timer_fired_event_attributes {
             self.started_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimerFiredEventAttributes`](crate::model::TimerFiredEventAttributes)
+        /// Consumes the builder and constructs a [`TimerFiredEventAttributes`](crate::model::TimerFiredEventAttributes).
         pub fn build(self) -> crate::model::TimerFiredEventAttributes {
             crate::model::TimerFiredEventAttributes {
                 timer_id: self.timer_id,
@@ -9332,7 +9533,7 @@ pub mod timer_fired_event_attributes {
     }
 }
 impl TimerFiredEventAttributes {
-    /// Creates a new builder-style object to manufacture [`TimerFiredEventAttributes`](crate::model::TimerFiredEventAttributes)
+    /// Creates a new builder-style object to manufacture [`TimerFiredEventAttributes`](crate::model::TimerFiredEventAttributes).
     pub fn builder() -> crate::model::timer_fired_event_attributes::Builder {
         crate::model::timer_fired_event_attributes::Builder::default()
     }
@@ -9343,13 +9544,17 @@ impl TimerFiredEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TimerStartedEventAttributes {
     /// <p>The unique ID of the timer that was started.</p>
+    #[doc(hidden)]
     pub timer_id: std::option::Option<std::string::String>,
     /// <p>Data attached to the event that can be used by the decider in subsequent workflow tasks.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
     /// <p>The duration of time after which the timer fires.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>.</p>
+    #[doc(hidden)]
     pub start_to_fire_timeout: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>StartTimer</code> decision for this activity task. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl TimerStartedEventAttributes {
@@ -9384,11 +9589,10 @@ impl std::fmt::Debug for TimerStartedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`TimerStartedEventAttributes`](crate::model::TimerStartedEventAttributes)
+/// See [`TimerStartedEventAttributes`](crate::model::TimerStartedEventAttributes).
 pub mod timer_started_event_attributes {
 
-    /// A builder for [`TimerStartedEventAttributes`](crate::model::TimerStartedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`TimerStartedEventAttributes`](crate::model::TimerStartedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timer_id: std::option::Option<std::string::String>,
@@ -9445,7 +9649,7 @@ pub mod timer_started_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`TimerStartedEventAttributes`](crate::model::TimerStartedEventAttributes)
+        /// Consumes the builder and constructs a [`TimerStartedEventAttributes`](crate::model::TimerStartedEventAttributes).
         pub fn build(self) -> crate::model::TimerStartedEventAttributes {
             crate::model::TimerStartedEventAttributes {
                 timer_id: self.timer_id,
@@ -9459,7 +9663,7 @@ pub mod timer_started_event_attributes {
     }
 }
 impl TimerStartedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`TimerStartedEventAttributes`](crate::model::TimerStartedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`TimerStartedEventAttributes`](crate::model::TimerStartedEventAttributes).
     pub fn builder() -> crate::model::timer_started_event_attributes::Builder {
         crate::model::timer_started_event_attributes::Builder::default()
     }
@@ -9470,12 +9674,15 @@ impl TimerStartedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RecordMarkerFailedEventAttributes {
     /// <p>The marker's name.</p>
+    #[doc(hidden)]
     pub marker_name: std::option::Option<std::string::String>,
     /// <p>The cause of the failure. This information is generated by the system and can be useful for diagnostic purposes.</p> <note>
     /// <p>If <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision failed because it lacked sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::RecordMarkerFailedCause>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>RecordMarkerFailed</code> decision for this cancellation request. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl RecordMarkerFailedEventAttributes {
@@ -9506,11 +9713,10 @@ impl std::fmt::Debug for RecordMarkerFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`RecordMarkerFailedEventAttributes`](crate::model::RecordMarkerFailedEventAttributes)
+/// See [`RecordMarkerFailedEventAttributes`](crate::model::RecordMarkerFailedEventAttributes).
 pub mod record_marker_failed_event_attributes {
 
-    /// A builder for [`RecordMarkerFailedEventAttributes`](crate::model::RecordMarkerFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`RecordMarkerFailedEventAttributes`](crate::model::RecordMarkerFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker_name: std::option::Option<std::string::String>,
@@ -9558,7 +9764,7 @@ pub mod record_marker_failed_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RecordMarkerFailedEventAttributes`](crate::model::RecordMarkerFailedEventAttributes)
+        /// Consumes the builder and constructs a [`RecordMarkerFailedEventAttributes`](crate::model::RecordMarkerFailedEventAttributes).
         pub fn build(self) -> crate::model::RecordMarkerFailedEventAttributes {
             crate::model::RecordMarkerFailedEventAttributes {
                 marker_name: self.marker_name,
@@ -9571,7 +9777,7 @@ pub mod record_marker_failed_event_attributes {
     }
 }
 impl RecordMarkerFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`RecordMarkerFailedEventAttributes`](crate::model::RecordMarkerFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`RecordMarkerFailedEventAttributes`](crate::model::RecordMarkerFailedEventAttributes).
     pub fn builder() -> crate::model::record_marker_failed_event_attributes::Builder {
         crate::model::record_marker_failed_event_attributes::Builder::default()
     }
@@ -9633,10 +9839,13 @@ impl AsRef<str> for RecordMarkerFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct MarkerRecordedEventAttributes {
     /// <p>The name of the marker.</p>
+    #[doc(hidden)]
     pub marker_name: std::option::Option<std::string::String>,
     /// <p>The details of the marker.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>RecordMarker</code> decision that requested this marker. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl MarkerRecordedEventAttributes {
@@ -9665,11 +9874,10 @@ impl std::fmt::Debug for MarkerRecordedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`MarkerRecordedEventAttributes`](crate::model::MarkerRecordedEventAttributes)
+/// See [`MarkerRecordedEventAttributes`](crate::model::MarkerRecordedEventAttributes).
 pub mod marker_recorded_event_attributes {
 
-    /// A builder for [`MarkerRecordedEventAttributes`](crate::model::MarkerRecordedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`MarkerRecordedEventAttributes`](crate::model::MarkerRecordedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) marker_name: std::option::Option<std::string::String>,
@@ -9710,7 +9918,7 @@ pub mod marker_recorded_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`MarkerRecordedEventAttributes`](crate::model::MarkerRecordedEventAttributes)
+        /// Consumes the builder and constructs a [`MarkerRecordedEventAttributes`](crate::model::MarkerRecordedEventAttributes).
         pub fn build(self) -> crate::model::MarkerRecordedEventAttributes {
             crate::model::MarkerRecordedEventAttributes {
                 marker_name: self.marker_name,
@@ -9723,7 +9931,7 @@ pub mod marker_recorded_event_attributes {
     }
 }
 impl MarkerRecordedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`MarkerRecordedEventAttributes`](crate::model::MarkerRecordedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`MarkerRecordedEventAttributes`](crate::model::MarkerRecordedEventAttributes).
     pub fn builder() -> crate::model::marker_recorded_event_attributes::Builder {
         crate::model::marker_recorded_event_attributes::Builder::default()
     }
@@ -9734,12 +9942,16 @@ impl MarkerRecordedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowExecutionSignaledEventAttributes {
     /// <p>The name of the signal received. The decider can use the signal name and inputs to determine how to the process the signal.</p>
+    #[doc(hidden)]
     pub signal_name: std::option::Option<std::string::String>,
     /// <p>The inputs provided with the signal. The decider can use the signal name and inputs to determine how to process the signal.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>The workflow execution that sent the signal. This is set only of the signal was sent by another workflow execution.</p>
+    #[doc(hidden)]
     pub external_workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
     /// <p>The ID of the <code>SignalExternalWorkflowExecutionInitiated</code> event corresponding to the <code>SignalExternalWorkflow</code> decision to signal this workflow execution.The source event with this ID can be found in the history of the source workflow execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event. This field is set only if the signal was initiated by another workflow execution.</p>
+    #[doc(hidden)]
     pub external_initiated_event_id: i64,
 }
 impl WorkflowExecutionSignaledEventAttributes {
@@ -9778,11 +9990,10 @@ impl std::fmt::Debug for WorkflowExecutionSignaledEventAttributes {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecutionSignaledEventAttributes`](crate::model::WorkflowExecutionSignaledEventAttributes)
+/// See [`WorkflowExecutionSignaledEventAttributes`](crate::model::WorkflowExecutionSignaledEventAttributes).
 pub mod workflow_execution_signaled_event_attributes {
 
-    /// A builder for [`WorkflowExecutionSignaledEventAttributes`](crate::model::WorkflowExecutionSignaledEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecutionSignaledEventAttributes`](crate::model::WorkflowExecutionSignaledEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) signal_name: std::option::Option<std::string::String>,
@@ -9838,7 +10049,7 @@ pub mod workflow_execution_signaled_event_attributes {
             self.external_initiated_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecutionSignaledEventAttributes`](crate::model::WorkflowExecutionSignaledEventAttributes)
+        /// Consumes the builder and constructs a [`WorkflowExecutionSignaledEventAttributes`](crate::model::WorkflowExecutionSignaledEventAttributes).
         pub fn build(self) -> crate::model::WorkflowExecutionSignaledEventAttributes {
             crate::model::WorkflowExecutionSignaledEventAttributes {
                 signal_name: self.signal_name,
@@ -9850,7 +10061,7 @@ pub mod workflow_execution_signaled_event_attributes {
     }
 }
 impl WorkflowExecutionSignaledEventAttributes {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecutionSignaledEventAttributes`](crate::model::WorkflowExecutionSignaledEventAttributes)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecutionSignaledEventAttributes`](crate::model::WorkflowExecutionSignaledEventAttributes).
     pub fn builder() -> crate::model::workflow_execution_signaled_event_attributes::Builder {
         crate::model::workflow_execution_signaled_event_attributes::Builder::default()
     }
@@ -9861,8 +10072,10 @@ impl WorkflowExecutionSignaledEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityTaskCancelRequestedEventAttributes {
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>RequestCancelActivityTask</code> decision for this cancellation request. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
     /// <p>The unique ID of the task.</p>
+    #[doc(hidden)]
     pub activity_id: std::option::Option<std::string::String>,
 }
 impl ActivityTaskCancelRequestedEventAttributes {
@@ -9886,11 +10099,10 @@ impl std::fmt::Debug for ActivityTaskCancelRequestedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ActivityTaskCancelRequestedEventAttributes`](crate::model::ActivityTaskCancelRequestedEventAttributes)
+/// See [`ActivityTaskCancelRequestedEventAttributes`](crate::model::ActivityTaskCancelRequestedEventAttributes).
 pub mod activity_task_cancel_requested_event_attributes {
 
-    /// A builder for [`ActivityTaskCancelRequestedEventAttributes`](crate::model::ActivityTaskCancelRequestedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ActivityTaskCancelRequestedEventAttributes`](crate::model::ActivityTaskCancelRequestedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) decision_task_completed_event_id: std::option::Option<i64>,
@@ -9920,7 +10132,7 @@ pub mod activity_task_cancel_requested_event_attributes {
             self.activity_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityTaskCancelRequestedEventAttributes`](crate::model::ActivityTaskCancelRequestedEventAttributes)
+        /// Consumes the builder and constructs a [`ActivityTaskCancelRequestedEventAttributes`](crate::model::ActivityTaskCancelRequestedEventAttributes).
         pub fn build(self) -> crate::model::ActivityTaskCancelRequestedEventAttributes {
             crate::model::ActivityTaskCancelRequestedEventAttributes {
                 decision_task_completed_event_id: self
@@ -9932,7 +10144,7 @@ pub mod activity_task_cancel_requested_event_attributes {
     }
 }
 impl ActivityTaskCancelRequestedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ActivityTaskCancelRequestedEventAttributes`](crate::model::ActivityTaskCancelRequestedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ActivityTaskCancelRequestedEventAttributes`](crate::model::ActivityTaskCancelRequestedEventAttributes).
     pub fn builder() -> crate::model::activity_task_cancel_requested_event_attributes::Builder {
         crate::model::activity_task_cancel_requested_event_attributes::Builder::default()
     }
@@ -9943,12 +10155,16 @@ impl ActivityTaskCancelRequestedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityTaskCanceledEventAttributes {
     /// <p>Details of the cancellation.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>ActivityTaskScheduled</code> event that was recorded when this activity task was scheduled. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub scheduled_event_id: i64,
     /// <p>The ID of the <code>ActivityTaskStarted</code> event recorded when this activity task was started. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
     /// <p>If set, contains the ID of the last <code>ActivityTaskCancelRequested</code> event recorded for this activity task. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub latest_cancel_requested_event_id: i64,
 }
 impl ActivityTaskCanceledEventAttributes {
@@ -9982,11 +10198,10 @@ impl std::fmt::Debug for ActivityTaskCanceledEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ActivityTaskCanceledEventAttributes`](crate::model::ActivityTaskCanceledEventAttributes)
+/// See [`ActivityTaskCanceledEventAttributes`](crate::model::ActivityTaskCanceledEventAttributes).
 pub mod activity_task_canceled_event_attributes {
 
-    /// A builder for [`ActivityTaskCanceledEventAttributes`](crate::model::ActivityTaskCanceledEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ActivityTaskCanceledEventAttributes`](crate::model::ActivityTaskCanceledEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) details: std::option::Option<std::string::String>,
@@ -10038,7 +10253,7 @@ pub mod activity_task_canceled_event_attributes {
             self.latest_cancel_requested_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityTaskCanceledEventAttributes`](crate::model::ActivityTaskCanceledEventAttributes)
+        /// Consumes the builder and constructs a [`ActivityTaskCanceledEventAttributes`](crate::model::ActivityTaskCanceledEventAttributes).
         pub fn build(self) -> crate::model::ActivityTaskCanceledEventAttributes {
             crate::model::ActivityTaskCanceledEventAttributes {
                 details: self.details,
@@ -10052,7 +10267,7 @@ pub mod activity_task_canceled_event_attributes {
     }
 }
 impl ActivityTaskCanceledEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ActivityTaskCanceledEventAttributes`](crate::model::ActivityTaskCanceledEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ActivityTaskCanceledEventAttributes`](crate::model::ActivityTaskCanceledEventAttributes).
     pub fn builder() -> crate::model::activity_task_canceled_event_attributes::Builder {
         crate::model::activity_task_canceled_event_attributes::Builder::default()
     }
@@ -10063,12 +10278,16 @@ impl ActivityTaskCanceledEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityTaskTimedOutEventAttributes {
     /// <p>The type of the timeout that caused this event.</p>
+    #[doc(hidden)]
     pub timeout_type: std::option::Option<crate::model::ActivityTaskTimeoutType>,
     /// <p>The ID of the <code>ActivityTaskScheduled</code> event that was recorded when this activity task was scheduled. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub scheduled_event_id: i64,
     /// <p>The ID of the <code>ActivityTaskStarted</code> event recorded when this activity task was started. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
     /// <p>Contains the content of the <code>details</code> parameter for the last call made by the activity to <code>RecordActivityTaskHeartbeat</code>.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
 }
 impl ActivityTaskTimedOutEventAttributes {
@@ -10099,11 +10318,10 @@ impl std::fmt::Debug for ActivityTaskTimedOutEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ActivityTaskTimedOutEventAttributes`](crate::model::ActivityTaskTimedOutEventAttributes)
+/// See [`ActivityTaskTimedOutEventAttributes`](crate::model::ActivityTaskTimedOutEventAttributes).
 pub mod activity_task_timed_out_event_attributes {
 
-    /// A builder for [`ActivityTaskTimedOutEventAttributes`](crate::model::ActivityTaskTimedOutEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ActivityTaskTimedOutEventAttributes`](crate::model::ActivityTaskTimedOutEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timeout_type: std::option::Option<crate::model::ActivityTaskTimeoutType>,
@@ -10155,7 +10373,7 @@ pub mod activity_task_timed_out_event_attributes {
             self.details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityTaskTimedOutEventAttributes`](crate::model::ActivityTaskTimedOutEventAttributes)
+        /// Consumes the builder and constructs a [`ActivityTaskTimedOutEventAttributes`](crate::model::ActivityTaskTimedOutEventAttributes).
         pub fn build(self) -> crate::model::ActivityTaskTimedOutEventAttributes {
             crate::model::ActivityTaskTimedOutEventAttributes {
                 timeout_type: self.timeout_type,
@@ -10167,7 +10385,7 @@ pub mod activity_task_timed_out_event_attributes {
     }
 }
 impl ActivityTaskTimedOutEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ActivityTaskTimedOutEventAttributes`](crate::model::ActivityTaskTimedOutEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ActivityTaskTimedOutEventAttributes`](crate::model::ActivityTaskTimedOutEventAttributes).
     pub fn builder() -> crate::model::activity_task_timed_out_event_attributes::Builder {
         crate::model::activity_task_timed_out_event_attributes::Builder::default()
     }
@@ -10246,12 +10464,16 @@ impl AsRef<str> for ActivityTaskTimeoutType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityTaskFailedEventAttributes {
     /// <p>The reason provided for the failure.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p>The details of the failure.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>ActivityTaskScheduled</code> event that was recorded when this activity task was scheduled. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub scheduled_event_id: i64,
     /// <p>The ID of the <code>ActivityTaskStarted</code> event recorded when this activity task was started. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
 }
 impl ActivityTaskFailedEventAttributes {
@@ -10282,11 +10504,10 @@ impl std::fmt::Debug for ActivityTaskFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ActivityTaskFailedEventAttributes`](crate::model::ActivityTaskFailedEventAttributes)
+/// See [`ActivityTaskFailedEventAttributes`](crate::model::ActivityTaskFailedEventAttributes).
 pub mod activity_task_failed_event_attributes {
 
-    /// A builder for [`ActivityTaskFailedEventAttributes`](crate::model::ActivityTaskFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ActivityTaskFailedEventAttributes`](crate::model::ActivityTaskFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reason: std::option::Option<std::string::String>,
@@ -10335,7 +10556,7 @@ pub mod activity_task_failed_event_attributes {
             self.started_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityTaskFailedEventAttributes`](crate::model::ActivityTaskFailedEventAttributes)
+        /// Consumes the builder and constructs a [`ActivityTaskFailedEventAttributes`](crate::model::ActivityTaskFailedEventAttributes).
         pub fn build(self) -> crate::model::ActivityTaskFailedEventAttributes {
             crate::model::ActivityTaskFailedEventAttributes {
                 reason: self.reason,
@@ -10347,7 +10568,7 @@ pub mod activity_task_failed_event_attributes {
     }
 }
 impl ActivityTaskFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ActivityTaskFailedEventAttributes`](crate::model::ActivityTaskFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ActivityTaskFailedEventAttributes`](crate::model::ActivityTaskFailedEventAttributes).
     pub fn builder() -> crate::model::activity_task_failed_event_attributes::Builder {
         crate::model::activity_task_failed_event_attributes::Builder::default()
     }
@@ -10358,10 +10579,13 @@ impl ActivityTaskFailedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityTaskCompletedEventAttributes {
     /// <p>The results of the activity task.</p>
+    #[doc(hidden)]
     pub result: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>ActivityTaskScheduled</code> event that was recorded when this activity task was scheduled. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub scheduled_event_id: i64,
     /// <p>The ID of the <code>ActivityTaskStarted</code> event recorded when this activity task was started. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
 }
 impl ActivityTaskCompletedEventAttributes {
@@ -10387,11 +10611,10 @@ impl std::fmt::Debug for ActivityTaskCompletedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ActivityTaskCompletedEventAttributes`](crate::model::ActivityTaskCompletedEventAttributes)
+/// See [`ActivityTaskCompletedEventAttributes`](crate::model::ActivityTaskCompletedEventAttributes).
 pub mod activity_task_completed_event_attributes {
 
-    /// A builder for [`ActivityTaskCompletedEventAttributes`](crate::model::ActivityTaskCompletedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ActivityTaskCompletedEventAttributes`](crate::model::ActivityTaskCompletedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) result: std::option::Option<std::string::String>,
@@ -10429,7 +10652,7 @@ pub mod activity_task_completed_event_attributes {
             self.started_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityTaskCompletedEventAttributes`](crate::model::ActivityTaskCompletedEventAttributes)
+        /// Consumes the builder and constructs a [`ActivityTaskCompletedEventAttributes`](crate::model::ActivityTaskCompletedEventAttributes).
         pub fn build(self) -> crate::model::ActivityTaskCompletedEventAttributes {
             crate::model::ActivityTaskCompletedEventAttributes {
                 result: self.result,
@@ -10440,7 +10663,7 @@ pub mod activity_task_completed_event_attributes {
     }
 }
 impl ActivityTaskCompletedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ActivityTaskCompletedEventAttributes`](crate::model::ActivityTaskCompletedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ActivityTaskCompletedEventAttributes`](crate::model::ActivityTaskCompletedEventAttributes).
     pub fn builder() -> crate::model::activity_task_completed_event_attributes::Builder {
         crate::model::activity_task_completed_event_attributes::Builder::default()
     }
@@ -10451,8 +10674,10 @@ impl ActivityTaskCompletedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityTaskStartedEventAttributes {
     /// <p>Identity of the worker that was assigned this task. This aids diagnostics when problems arise. The form of this identity is user defined.</p>
+    #[doc(hidden)]
     pub identity: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>ActivityTaskScheduled</code> event that was recorded when this activity task was scheduled. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub scheduled_event_id: i64,
 }
 impl ActivityTaskStartedEventAttributes {
@@ -10473,11 +10698,10 @@ impl std::fmt::Debug for ActivityTaskStartedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ActivityTaskStartedEventAttributes`](crate::model::ActivityTaskStartedEventAttributes)
+/// See [`ActivityTaskStartedEventAttributes`](crate::model::ActivityTaskStartedEventAttributes).
 pub mod activity_task_started_event_attributes {
 
-    /// A builder for [`ActivityTaskStartedEventAttributes`](crate::model::ActivityTaskStartedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ActivityTaskStartedEventAttributes`](crate::model::ActivityTaskStartedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity: std::option::Option<std::string::String>,
@@ -10504,7 +10728,7 @@ pub mod activity_task_started_event_attributes {
             self.scheduled_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityTaskStartedEventAttributes`](crate::model::ActivityTaskStartedEventAttributes)
+        /// Consumes the builder and constructs a [`ActivityTaskStartedEventAttributes`](crate::model::ActivityTaskStartedEventAttributes).
         pub fn build(self) -> crate::model::ActivityTaskStartedEventAttributes {
             crate::model::ActivityTaskStartedEventAttributes {
                 identity: self.identity,
@@ -10514,7 +10738,7 @@ pub mod activity_task_started_event_attributes {
     }
 }
 impl ActivityTaskStartedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ActivityTaskStartedEventAttributes`](crate::model::ActivityTaskStartedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ActivityTaskStartedEventAttributes`](crate::model::ActivityTaskStartedEventAttributes).
     pub fn builder() -> crate::model::activity_task_started_event_attributes::Builder {
         crate::model::activity_task_started_event_attributes::Builder::default()
     }
@@ -10525,28 +10749,39 @@ impl ActivityTaskStartedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityTaskScheduledEventAttributes {
     /// <p>The type of the activity task.</p>
+    #[doc(hidden)]
     pub activity_type: std::option::Option<crate::model::ActivityType>,
     /// <p>The unique ID of the activity task.</p>
+    #[doc(hidden)]
     pub activity_id: std::option::Option<std::string::String>,
     /// <p>The input provided to the activity task.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>Data attached to the event that can be used by the decider in subsequent workflow tasks. This data isn't sent to the activity.</p>
+    #[doc(hidden)]
     pub control: std::option::Option<std::string::String>,
     /// <p>The maximum amount of time the activity task can wait to be assigned to a worker.</p>
+    #[doc(hidden)]
     pub schedule_to_start_timeout: std::option::Option<std::string::String>,
     /// <p>The maximum amount of time for this activity task.</p>
+    #[doc(hidden)]
     pub schedule_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>The maximum amount of time a worker may take to process the activity task.</p>
+    #[doc(hidden)]
     pub start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>The task list in which the activity task has been scheduled.</p>
+    #[doc(hidden)]
     pub task_list: std::option::Option<crate::model::TaskList>,
     /// <p> The priority to assign to the scheduled activity task. If set, this overrides any default priority value that was assigned when the activity type was registered.</p>
     /// <p>Valid values are integers that range from Java's <code>Integer.MIN_VALUE</code> (-2147483648) to <code>Integer.MAX_VALUE</code> (2147483647). Higher numbers indicate higher priority.</p>
     /// <p>For more information about setting task priority, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/programming-priority.html">Setting Task Priority</a> in the <i>Amazon SWF Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub task_priority: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision that resulted in the scheduling of this activity task. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
     /// <p>The maximum time before which the worker processing this task must report progress by calling <code>RecordActivityTaskHeartbeat</code>. If the timeout is exceeded, the activity task is automatically timed out. If the worker subsequently attempts to record a heartbeat or return a result, it is ignored.</p>
+    #[doc(hidden)]
     pub heartbeat_timeout: std::option::Option<std::string::String>,
 }
 impl ActivityTaskScheduledEventAttributes {
@@ -10617,11 +10852,10 @@ impl std::fmt::Debug for ActivityTaskScheduledEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ActivityTaskScheduledEventAttributes`](crate::model::ActivityTaskScheduledEventAttributes)
+/// See [`ActivityTaskScheduledEventAttributes`](crate::model::ActivityTaskScheduledEventAttributes).
 pub mod activity_task_scheduled_event_attributes {
 
-    /// A builder for [`ActivityTaskScheduledEventAttributes`](crate::model::ActivityTaskScheduledEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ActivityTaskScheduledEventAttributes`](crate::model::ActivityTaskScheduledEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activity_type: std::option::Option<crate::model::ActivityType>,
@@ -10772,7 +11006,7 @@ pub mod activity_task_scheduled_event_attributes {
             self.heartbeat_timeout = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityTaskScheduledEventAttributes`](crate::model::ActivityTaskScheduledEventAttributes)
+        /// Consumes the builder and constructs a [`ActivityTaskScheduledEventAttributes`](crate::model::ActivityTaskScheduledEventAttributes).
         pub fn build(self) -> crate::model::ActivityTaskScheduledEventAttributes {
             crate::model::ActivityTaskScheduledEventAttributes {
                 activity_type: self.activity_type,
@@ -10793,7 +11027,7 @@ pub mod activity_task_scheduled_event_attributes {
     }
 }
 impl ActivityTaskScheduledEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ActivityTaskScheduledEventAttributes`](crate::model::ActivityTaskScheduledEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ActivityTaskScheduledEventAttributes`](crate::model::ActivityTaskScheduledEventAttributes).
     pub fn builder() -> crate::model::activity_task_scheduled_event_attributes::Builder {
         crate::model::activity_task_scheduled_event_attributes::Builder::default()
     }
@@ -10804,10 +11038,13 @@ impl ActivityTaskScheduledEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DecisionTaskTimedOutEventAttributes {
     /// <p>The type of timeout that expired before the decision task could be completed.</p>
+    #[doc(hidden)]
     pub timeout_type: std::option::Option<crate::model::DecisionTaskTimeoutType>,
     /// <p>The ID of the <code>DecisionTaskScheduled</code> event that was recorded when this decision task was scheduled. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub scheduled_event_id: i64,
     /// <p>The ID of the <code>DecisionTaskStarted</code> event recorded when this decision task was started. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
 }
 impl DecisionTaskTimedOutEventAttributes {
@@ -10833,11 +11070,10 @@ impl std::fmt::Debug for DecisionTaskTimedOutEventAttributes {
         formatter.finish()
     }
 }
-/// See [`DecisionTaskTimedOutEventAttributes`](crate::model::DecisionTaskTimedOutEventAttributes)
+/// See [`DecisionTaskTimedOutEventAttributes`](crate::model::DecisionTaskTimedOutEventAttributes).
 pub mod decision_task_timed_out_event_attributes {
 
-    /// A builder for [`DecisionTaskTimedOutEventAttributes`](crate::model::DecisionTaskTimedOutEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`DecisionTaskTimedOutEventAttributes`](crate::model::DecisionTaskTimedOutEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timeout_type: std::option::Option<crate::model::DecisionTaskTimeoutType>,
@@ -10878,7 +11114,7 @@ pub mod decision_task_timed_out_event_attributes {
             self.started_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DecisionTaskTimedOutEventAttributes`](crate::model::DecisionTaskTimedOutEventAttributes)
+        /// Consumes the builder and constructs a [`DecisionTaskTimedOutEventAttributes`](crate::model::DecisionTaskTimedOutEventAttributes).
         pub fn build(self) -> crate::model::DecisionTaskTimedOutEventAttributes {
             crate::model::DecisionTaskTimedOutEventAttributes {
                 timeout_type: self.timeout_type,
@@ -10889,7 +11125,7 @@ pub mod decision_task_timed_out_event_attributes {
     }
 }
 impl DecisionTaskTimedOutEventAttributes {
-    /// Creates a new builder-style object to manufacture [`DecisionTaskTimedOutEventAttributes`](crate::model::DecisionTaskTimedOutEventAttributes)
+    /// Creates a new builder-style object to manufacture [`DecisionTaskTimedOutEventAttributes`](crate::model::DecisionTaskTimedOutEventAttributes).
     pub fn builder() -> crate::model::decision_task_timed_out_event_attributes::Builder {
         crate::model::decision_task_timed_out_event_attributes::Builder::default()
     }
@@ -10951,10 +11187,13 @@ impl AsRef<str> for DecisionTaskTimeoutType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DecisionTaskCompletedEventAttributes {
     /// <p>User defined context for the workflow execution.</p>
+    #[doc(hidden)]
     pub execution_context: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>DecisionTaskScheduled</code> event that was recorded when this decision task was scheduled. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub scheduled_event_id: i64,
     /// <p>The ID of the <code>DecisionTaskStarted</code> event recorded when this decision task was started. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub started_event_id: i64,
 }
 impl DecisionTaskCompletedEventAttributes {
@@ -10980,11 +11219,10 @@ impl std::fmt::Debug for DecisionTaskCompletedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`DecisionTaskCompletedEventAttributes`](crate::model::DecisionTaskCompletedEventAttributes)
+/// See [`DecisionTaskCompletedEventAttributes`](crate::model::DecisionTaskCompletedEventAttributes).
 pub mod decision_task_completed_event_attributes {
 
-    /// A builder for [`DecisionTaskCompletedEventAttributes`](crate::model::DecisionTaskCompletedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`DecisionTaskCompletedEventAttributes`](crate::model::DecisionTaskCompletedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) execution_context: std::option::Option<std::string::String>,
@@ -11025,7 +11263,7 @@ pub mod decision_task_completed_event_attributes {
             self.started_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DecisionTaskCompletedEventAttributes`](crate::model::DecisionTaskCompletedEventAttributes)
+        /// Consumes the builder and constructs a [`DecisionTaskCompletedEventAttributes`](crate::model::DecisionTaskCompletedEventAttributes).
         pub fn build(self) -> crate::model::DecisionTaskCompletedEventAttributes {
             crate::model::DecisionTaskCompletedEventAttributes {
                 execution_context: self.execution_context,
@@ -11036,7 +11274,7 @@ pub mod decision_task_completed_event_attributes {
     }
 }
 impl DecisionTaskCompletedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`DecisionTaskCompletedEventAttributes`](crate::model::DecisionTaskCompletedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`DecisionTaskCompletedEventAttributes`](crate::model::DecisionTaskCompletedEventAttributes).
     pub fn builder() -> crate::model::decision_task_completed_event_attributes::Builder {
         crate::model::decision_task_completed_event_attributes::Builder::default()
     }
@@ -11047,8 +11285,10 @@ impl DecisionTaskCompletedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DecisionTaskStartedEventAttributes {
     /// <p>Identity of the decider making the request. This enables diagnostic tracing when problems arise. The form of this identity is user defined.</p>
+    #[doc(hidden)]
     pub identity: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>DecisionTaskScheduled</code> event that was recorded when this decision task was scheduled. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub scheduled_event_id: i64,
 }
 impl DecisionTaskStartedEventAttributes {
@@ -11069,11 +11309,10 @@ impl std::fmt::Debug for DecisionTaskStartedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`DecisionTaskStartedEventAttributes`](crate::model::DecisionTaskStartedEventAttributes)
+/// See [`DecisionTaskStartedEventAttributes`](crate::model::DecisionTaskStartedEventAttributes).
 pub mod decision_task_started_event_attributes {
 
-    /// A builder for [`DecisionTaskStartedEventAttributes`](crate::model::DecisionTaskStartedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`DecisionTaskStartedEventAttributes`](crate::model::DecisionTaskStartedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity: std::option::Option<std::string::String>,
@@ -11100,7 +11339,7 @@ pub mod decision_task_started_event_attributes {
             self.scheduled_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DecisionTaskStartedEventAttributes`](crate::model::DecisionTaskStartedEventAttributes)
+        /// Consumes the builder and constructs a [`DecisionTaskStartedEventAttributes`](crate::model::DecisionTaskStartedEventAttributes).
         pub fn build(self) -> crate::model::DecisionTaskStartedEventAttributes {
             crate::model::DecisionTaskStartedEventAttributes {
                 identity: self.identity,
@@ -11110,7 +11349,7 @@ pub mod decision_task_started_event_attributes {
     }
 }
 impl DecisionTaskStartedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`DecisionTaskStartedEventAttributes`](crate::model::DecisionTaskStartedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`DecisionTaskStartedEventAttributes`](crate::model::DecisionTaskStartedEventAttributes).
     pub fn builder() -> crate::model::decision_task_started_event_attributes::Builder {
         crate::model::decision_task_started_event_attributes::Builder::default()
     }
@@ -11121,12 +11360,15 @@ impl DecisionTaskStartedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DecisionTaskScheduledEventAttributes {
     /// <p>The name of the task list in which the decision task was scheduled.</p>
+    #[doc(hidden)]
     pub task_list: std::option::Option<crate::model::TaskList>,
     /// <p> A task priority that, if set, specifies the priority for this decision task. Valid values are integers that range from Java's <code>Integer.MIN_VALUE</code> (-2147483648) to <code>Integer.MAX_VALUE</code> (2147483647). Higher numbers indicate higher priority.</p>
     /// <p>For more information about setting task priority, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/programming-priority.html">Setting Task Priority</a> in the <i>Amazon SWF Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub task_priority: std::option::Option<std::string::String>,
     /// <p>The maximum duration for this decision task. The task is considered timed out if it doesn't completed within this duration.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub start_to_close_timeout: std::option::Option<std::string::String>,
 }
 impl DecisionTaskScheduledEventAttributes {
@@ -11154,11 +11396,10 @@ impl std::fmt::Debug for DecisionTaskScheduledEventAttributes {
         formatter.finish()
     }
 }
-/// See [`DecisionTaskScheduledEventAttributes`](crate::model::DecisionTaskScheduledEventAttributes)
+/// See [`DecisionTaskScheduledEventAttributes`](crate::model::DecisionTaskScheduledEventAttributes).
 pub mod decision_task_scheduled_event_attributes {
 
-    /// A builder for [`DecisionTaskScheduledEventAttributes`](crate::model::DecisionTaskScheduledEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`DecisionTaskScheduledEventAttributes`](crate::model::DecisionTaskScheduledEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_list: std::option::Option<crate::model::TaskList>,
@@ -11206,7 +11447,7 @@ pub mod decision_task_scheduled_event_attributes {
             self.start_to_close_timeout = input;
             self
         }
-        /// Consumes the builder and constructs a [`DecisionTaskScheduledEventAttributes`](crate::model::DecisionTaskScheduledEventAttributes)
+        /// Consumes the builder and constructs a [`DecisionTaskScheduledEventAttributes`](crate::model::DecisionTaskScheduledEventAttributes).
         pub fn build(self) -> crate::model::DecisionTaskScheduledEventAttributes {
             crate::model::DecisionTaskScheduledEventAttributes {
                 task_list: self.task_list,
@@ -11217,7 +11458,7 @@ pub mod decision_task_scheduled_event_attributes {
     }
 }
 impl DecisionTaskScheduledEventAttributes {
-    /// Creates a new builder-style object to manufacture [`DecisionTaskScheduledEventAttributes`](crate::model::DecisionTaskScheduledEventAttributes)
+    /// Creates a new builder-style object to manufacture [`DecisionTaskScheduledEventAttributes`](crate::model::DecisionTaskScheduledEventAttributes).
     pub fn builder() -> crate::model::decision_task_scheduled_event_attributes::Builder {
         crate::model::decision_task_scheduled_event_attributes::Builder::default()
     }
@@ -11228,10 +11469,13 @@ impl DecisionTaskScheduledEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowExecutionCancelRequestedEventAttributes {
     /// <p>The external workflow execution for which the cancellation was requested.</p>
+    #[doc(hidden)]
     pub external_workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
     /// <p>The ID of the <code>RequestCancelExternalWorkflowExecutionInitiated</code> event corresponding to the <code>RequestCancelExternalWorkflowExecution</code> decision to cancel this workflow execution.The source event with this ID can be found in the history of the source workflow execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub external_initiated_event_id: i64,
     /// <p>If set, indicates that the request to cancel the workflow execution was automatically generated, and specifies the cause. This happens if the parent workflow execution times out or is terminated, and the child policy is set to cancel child executions.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::WorkflowExecutionCancelRequestedCause>,
 }
 impl WorkflowExecutionCancelRequestedEventAttributes {
@@ -11267,11 +11511,10 @@ impl std::fmt::Debug for WorkflowExecutionCancelRequestedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecutionCancelRequestedEventAttributes`](crate::model::WorkflowExecutionCancelRequestedEventAttributes)
+/// See [`WorkflowExecutionCancelRequestedEventAttributes`](crate::model::WorkflowExecutionCancelRequestedEventAttributes).
 pub mod workflow_execution_cancel_requested_event_attributes {
 
-    /// A builder for [`WorkflowExecutionCancelRequestedEventAttributes`](crate::model::WorkflowExecutionCancelRequestedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecutionCancelRequestedEventAttributes`](crate::model::WorkflowExecutionCancelRequestedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) external_workflow_execution:
@@ -11319,7 +11562,7 @@ pub mod workflow_execution_cancel_requested_event_attributes {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecutionCancelRequestedEventAttributes`](crate::model::WorkflowExecutionCancelRequestedEventAttributes)
+        /// Consumes the builder and constructs a [`WorkflowExecutionCancelRequestedEventAttributes`](crate::model::WorkflowExecutionCancelRequestedEventAttributes).
         pub fn build(self) -> crate::model::WorkflowExecutionCancelRequestedEventAttributes {
             crate::model::WorkflowExecutionCancelRequestedEventAttributes {
                 external_workflow_execution: self.external_workflow_execution,
@@ -11330,7 +11573,7 @@ pub mod workflow_execution_cancel_requested_event_attributes {
     }
 }
 impl WorkflowExecutionCancelRequestedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecutionCancelRequestedEventAttributes`](crate::model::WorkflowExecutionCancelRequestedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecutionCancelRequestedEventAttributes`](crate::model::WorkflowExecutionCancelRequestedEventAttributes).
     pub fn builder() -> crate::model::workflow_execution_cancel_requested_event_attributes::Builder
     {
         crate::model::workflow_execution_cancel_requested_event_attributes::Builder::default()
@@ -11393,8 +11636,10 @@ impl AsRef<str> for WorkflowExecutionCancelRequestedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowExecutionTerminatedEventAttributes {
     /// <p>The reason provided for the termination.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p>The details provided for the termination.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
     /// <p>The policy used for the child workflow executions of this workflow execution.</p>
     /// <p>The supported child policies are:</p>
@@ -11403,8 +11648,10 @@ pub struct WorkflowExecutionTerminatedEventAttributes {
     /// <li> <p> <code>REQUEST_CANCEL</code> – A request to cancel is attempted for each child execution by recording a <code>WorkflowExecutionCancelRequested</code> event in its history. It is up to the decider to take appropriate actions when it receives an execution history with this event.</p> </li>
     /// <li> <p> <code>ABANDON</code> – No action is taken. The child executions continue to run.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub child_policy: std::option::Option<crate::model::ChildPolicy>,
     /// <p>If set, indicates that the workflow execution was automatically terminated, and specifies the cause. This happens if the parent workflow execution times out or is terminated and the child policy is set to terminate child executions.</p>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::WorkflowExecutionTerminatedCause>,
 }
 impl WorkflowExecutionTerminatedEventAttributes {
@@ -11441,11 +11688,10 @@ impl std::fmt::Debug for WorkflowExecutionTerminatedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecutionTerminatedEventAttributes`](crate::model::WorkflowExecutionTerminatedEventAttributes)
+/// See [`WorkflowExecutionTerminatedEventAttributes`](crate::model::WorkflowExecutionTerminatedEventAttributes).
 pub mod workflow_execution_terminated_event_attributes {
 
-    /// A builder for [`WorkflowExecutionTerminatedEventAttributes`](crate::model::WorkflowExecutionTerminatedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecutionTerminatedEventAttributes`](crate::model::WorkflowExecutionTerminatedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reason: std::option::Option<std::string::String>,
@@ -11512,7 +11758,7 @@ pub mod workflow_execution_terminated_event_attributes {
             self.cause = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecutionTerminatedEventAttributes`](crate::model::WorkflowExecutionTerminatedEventAttributes)
+        /// Consumes the builder and constructs a [`WorkflowExecutionTerminatedEventAttributes`](crate::model::WorkflowExecutionTerminatedEventAttributes).
         pub fn build(self) -> crate::model::WorkflowExecutionTerminatedEventAttributes {
             crate::model::WorkflowExecutionTerminatedEventAttributes {
                 reason: self.reason,
@@ -11524,7 +11770,7 @@ pub mod workflow_execution_terminated_event_attributes {
     }
 }
 impl WorkflowExecutionTerminatedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecutionTerminatedEventAttributes`](crate::model::WorkflowExecutionTerminatedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecutionTerminatedEventAttributes`](crate::model::WorkflowExecutionTerminatedEventAttributes).
     pub fn builder() -> crate::model::workflow_execution_terminated_event_attributes::Builder {
         crate::model::workflow_execution_terminated_event_attributes::Builder::default()
     }
@@ -11600,8 +11846,10 @@ pub struct ContinueAsNewWorkflowExecutionFailedEventAttributes {
     /// <p>The cause of the failure. This information is generated by the system and can be useful for diagnostic purposes.</p> <note>
     /// <p>If <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision failed because it lacked sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::ContinueAsNewWorkflowExecutionFailedCause>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>ContinueAsNewWorkflowExecution</code> decision that started this execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl ContinueAsNewWorkflowExecutionFailedEventAttributes {
@@ -11629,11 +11877,10 @@ impl std::fmt::Debug for ContinueAsNewWorkflowExecutionFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`ContinueAsNewWorkflowExecutionFailedEventAttributes`](crate::model::ContinueAsNewWorkflowExecutionFailedEventAttributes)
+/// See [`ContinueAsNewWorkflowExecutionFailedEventAttributes`](crate::model::ContinueAsNewWorkflowExecutionFailedEventAttributes).
 pub mod continue_as_new_workflow_execution_failed_event_attributes {
 
-    /// A builder for [`ContinueAsNewWorkflowExecutionFailedEventAttributes`](crate::model::ContinueAsNewWorkflowExecutionFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`ContinueAsNewWorkflowExecutionFailedEventAttributes`](crate::model::ContinueAsNewWorkflowExecutionFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cause:
@@ -11674,7 +11921,7 @@ pub mod continue_as_new_workflow_execution_failed_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContinueAsNewWorkflowExecutionFailedEventAttributes`](crate::model::ContinueAsNewWorkflowExecutionFailedEventAttributes)
+        /// Consumes the builder and constructs a [`ContinueAsNewWorkflowExecutionFailedEventAttributes`](crate::model::ContinueAsNewWorkflowExecutionFailedEventAttributes).
         pub fn build(self) -> crate::model::ContinueAsNewWorkflowExecutionFailedEventAttributes {
             crate::model::ContinueAsNewWorkflowExecutionFailedEventAttributes {
                 cause: self.cause,
@@ -11686,7 +11933,7 @@ pub mod continue_as_new_workflow_execution_failed_event_attributes {
     }
 }
 impl ContinueAsNewWorkflowExecutionFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`ContinueAsNewWorkflowExecutionFailedEventAttributes`](crate::model::ContinueAsNewWorkflowExecutionFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`ContinueAsNewWorkflowExecutionFailedEventAttributes`](crate::model::ContinueAsNewWorkflowExecutionFailedEventAttributes).
     pub fn builder(
     ) -> crate::model::continue_as_new_workflow_execution_failed_event_attributes::Builder {
         crate::model::continue_as_new_workflow_execution_failed_event_attributes::Builder::default()
@@ -11791,20 +12038,27 @@ impl AsRef<str> for ContinueAsNewWorkflowExecutionFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowExecutionContinuedAsNewEventAttributes {
     /// <p>The input provided to the new workflow execution.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>ContinueAsNewWorkflowExecution</code> decision that started this execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
     /// <p>The <code>runId</code> of the new workflow execution.</p>
+    #[doc(hidden)]
     pub new_execution_run_id: std::option::Option<std::string::String>,
     /// <p>The total duration allowed for the new workflow execution.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub execution_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>The task list to use for the decisions of the new (continued) workflow execution.</p>
+    #[doc(hidden)]
     pub task_list: std::option::Option<crate::model::TaskList>,
     /// <p>The priority of the task to use for the decisions of the new (continued) workflow execution.</p>
+    #[doc(hidden)]
     pub task_priority: std::option::Option<std::string::String>,
     /// <p>The maximum duration of decision tasks for the new workflow execution.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub task_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>The policy to use for the child workflow executions of the new execution if it is terminated by calling the <code>TerminateWorkflowExecution</code> action explicitly or due to an expired timeout.</p>
     /// <p>The supported child policies are:</p>
@@ -11813,12 +12067,16 @@ pub struct WorkflowExecutionContinuedAsNewEventAttributes {
     /// <li> <p> <code>REQUEST_CANCEL</code> – A request to cancel is attempted for each child execution by recording a <code>WorkflowExecutionCancelRequested</code> event in its history. It is up to the decider to take appropriate actions when it receives an execution history with this event.</p> </li>
     /// <li> <p> <code>ABANDON</code> – No action is taken. The child executions continue to run.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub child_policy: std::option::Option<crate::model::ChildPolicy>,
     /// <p>The list of tags associated with the new workflow execution.</p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The workflow type of this execution.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>The IAM role to attach to the new (continued) workflow execution.</p>
+    #[doc(hidden)]
     pub lambda_role: std::option::Option<std::string::String>,
 }
 impl WorkflowExecutionContinuedAsNewEventAttributes {
@@ -11901,11 +12159,10 @@ impl std::fmt::Debug for WorkflowExecutionContinuedAsNewEventAttributes {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecutionContinuedAsNewEventAttributes`](crate::model::WorkflowExecutionContinuedAsNewEventAttributes)
+/// See [`WorkflowExecutionContinuedAsNewEventAttributes`](crate::model::WorkflowExecutionContinuedAsNewEventAttributes).
 pub mod workflow_execution_continued_as_new_event_attributes {
 
-    /// A builder for [`WorkflowExecutionContinuedAsNewEventAttributes`](crate::model::WorkflowExecutionContinuedAsNewEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecutionContinuedAsNewEventAttributes`](crate::model::WorkflowExecutionContinuedAsNewEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input: std::option::Option<std::string::String>,
@@ -12083,7 +12340,7 @@ pub mod workflow_execution_continued_as_new_event_attributes {
             self.lambda_role = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecutionContinuedAsNewEventAttributes`](crate::model::WorkflowExecutionContinuedAsNewEventAttributes)
+        /// Consumes the builder and constructs a [`WorkflowExecutionContinuedAsNewEventAttributes`](crate::model::WorkflowExecutionContinuedAsNewEventAttributes).
         pub fn build(self) -> crate::model::WorkflowExecutionContinuedAsNewEventAttributes {
             crate::model::WorkflowExecutionContinuedAsNewEventAttributes {
                 input: self.input,
@@ -12104,7 +12361,7 @@ pub mod workflow_execution_continued_as_new_event_attributes {
     }
 }
 impl WorkflowExecutionContinuedAsNewEventAttributes {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecutionContinuedAsNewEventAttributes`](crate::model::WorkflowExecutionContinuedAsNewEventAttributes)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecutionContinuedAsNewEventAttributes`](crate::model::WorkflowExecutionContinuedAsNewEventAttributes).
     pub fn builder() -> crate::model::workflow_execution_continued_as_new_event_attributes::Builder
     {
         crate::model::workflow_execution_continued_as_new_event_attributes::Builder::default()
@@ -12118,8 +12375,10 @@ pub struct CancelWorkflowExecutionFailedEventAttributes {
     /// <p>The cause of the failure. This information is generated by the system and can be useful for diagnostic purposes.</p> <note>
     /// <p>If <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision failed because it lacked sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::CancelWorkflowExecutionFailedCause>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>CancelWorkflowExecution</code> decision for this cancellation request. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl CancelWorkflowExecutionFailedEventAttributes {
@@ -12145,11 +12404,10 @@ impl std::fmt::Debug for CancelWorkflowExecutionFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`CancelWorkflowExecutionFailedEventAttributes`](crate::model::CancelWorkflowExecutionFailedEventAttributes)
+/// See [`CancelWorkflowExecutionFailedEventAttributes`](crate::model::CancelWorkflowExecutionFailedEventAttributes).
 pub mod cancel_workflow_execution_failed_event_attributes {
 
-    /// A builder for [`CancelWorkflowExecutionFailedEventAttributes`](crate::model::CancelWorkflowExecutionFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`CancelWorkflowExecutionFailedEventAttributes`](crate::model::CancelWorkflowExecutionFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cause: std::option::Option<crate::model::CancelWorkflowExecutionFailedCause>,
@@ -12186,7 +12444,7 @@ pub mod cancel_workflow_execution_failed_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CancelWorkflowExecutionFailedEventAttributes`](crate::model::CancelWorkflowExecutionFailedEventAttributes)
+        /// Consumes the builder and constructs a [`CancelWorkflowExecutionFailedEventAttributes`](crate::model::CancelWorkflowExecutionFailedEventAttributes).
         pub fn build(self) -> crate::model::CancelWorkflowExecutionFailedEventAttributes {
             crate::model::CancelWorkflowExecutionFailedEventAttributes {
                 cause: self.cause,
@@ -12198,7 +12456,7 @@ pub mod cancel_workflow_execution_failed_event_attributes {
     }
 }
 impl CancelWorkflowExecutionFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`CancelWorkflowExecutionFailedEventAttributes`](crate::model::CancelWorkflowExecutionFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`CancelWorkflowExecutionFailedEventAttributes`](crate::model::CancelWorkflowExecutionFailedEventAttributes).
     pub fn builder() -> crate::model::cancel_workflow_execution_failed_event_attributes::Builder {
         crate::model::cancel_workflow_execution_failed_event_attributes::Builder::default()
     }
@@ -12264,8 +12522,10 @@ impl AsRef<str> for CancelWorkflowExecutionFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowExecutionCanceledEventAttributes {
     /// <p>The details of the cancellation.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>CancelWorkflowExecution</code> decision for this cancellation request. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl WorkflowExecutionCanceledEventAttributes {
@@ -12289,11 +12549,10 @@ impl std::fmt::Debug for WorkflowExecutionCanceledEventAttributes {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecutionCanceledEventAttributes`](crate::model::WorkflowExecutionCanceledEventAttributes)
+/// See [`WorkflowExecutionCanceledEventAttributes`](crate::model::WorkflowExecutionCanceledEventAttributes).
 pub mod workflow_execution_canceled_event_attributes {
 
-    /// A builder for [`WorkflowExecutionCanceledEventAttributes`](crate::model::WorkflowExecutionCanceledEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecutionCanceledEventAttributes`](crate::model::WorkflowExecutionCanceledEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) details: std::option::Option<std::string::String>,
@@ -12323,7 +12582,7 @@ pub mod workflow_execution_canceled_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecutionCanceledEventAttributes`](crate::model::WorkflowExecutionCanceledEventAttributes)
+        /// Consumes the builder and constructs a [`WorkflowExecutionCanceledEventAttributes`](crate::model::WorkflowExecutionCanceledEventAttributes).
         pub fn build(self) -> crate::model::WorkflowExecutionCanceledEventAttributes {
             crate::model::WorkflowExecutionCanceledEventAttributes {
                 details: self.details,
@@ -12335,7 +12594,7 @@ pub mod workflow_execution_canceled_event_attributes {
     }
 }
 impl WorkflowExecutionCanceledEventAttributes {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecutionCanceledEventAttributes`](crate::model::WorkflowExecutionCanceledEventAttributes)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecutionCanceledEventAttributes`](crate::model::WorkflowExecutionCanceledEventAttributes).
     pub fn builder() -> crate::model::workflow_execution_canceled_event_attributes::Builder {
         crate::model::workflow_execution_canceled_event_attributes::Builder::default()
     }
@@ -12346,6 +12605,7 @@ impl WorkflowExecutionCanceledEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowExecutionTimedOutEventAttributes {
     /// <p>The type of timeout that caused this event.</p>
+    #[doc(hidden)]
     pub timeout_type: std::option::Option<crate::model::WorkflowExecutionTimeoutType>,
     /// <p>The policy used for the child workflow executions of this workflow execution.</p>
     /// <p>The supported child policies are:</p>
@@ -12354,6 +12614,7 @@ pub struct WorkflowExecutionTimedOutEventAttributes {
     /// <li> <p> <code>REQUEST_CANCEL</code> – A request to cancel is attempted for each child execution by recording a <code>WorkflowExecutionCancelRequested</code> event in its history. It is up to the decider to take appropriate actions when it receives an execution history with this event.</p> </li>
     /// <li> <p> <code>ABANDON</code> – No action is taken. The child executions continue to run.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub child_policy: std::option::Option<crate::model::ChildPolicy>,
 }
 impl WorkflowExecutionTimedOutEventAttributes {
@@ -12380,11 +12641,10 @@ impl std::fmt::Debug for WorkflowExecutionTimedOutEventAttributes {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecutionTimedOutEventAttributes`](crate::model::WorkflowExecutionTimedOutEventAttributes)
+/// See [`WorkflowExecutionTimedOutEventAttributes`](crate::model::WorkflowExecutionTimedOutEventAttributes).
 pub mod workflow_execution_timed_out_event_attributes {
 
-    /// A builder for [`WorkflowExecutionTimedOutEventAttributes`](crate::model::WorkflowExecutionTimedOutEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecutionTimedOutEventAttributes`](crate::model::WorkflowExecutionTimedOutEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) timeout_type: std::option::Option<crate::model::WorkflowExecutionTimeoutType>,
@@ -12429,7 +12689,7 @@ pub mod workflow_execution_timed_out_event_attributes {
             self.child_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecutionTimedOutEventAttributes`](crate::model::WorkflowExecutionTimedOutEventAttributes)
+        /// Consumes the builder and constructs a [`WorkflowExecutionTimedOutEventAttributes`](crate::model::WorkflowExecutionTimedOutEventAttributes).
         pub fn build(self) -> crate::model::WorkflowExecutionTimedOutEventAttributes {
             crate::model::WorkflowExecutionTimedOutEventAttributes {
                 timeout_type: self.timeout_type,
@@ -12439,7 +12699,7 @@ pub mod workflow_execution_timed_out_event_attributes {
     }
 }
 impl WorkflowExecutionTimedOutEventAttributes {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecutionTimedOutEventAttributes`](crate::model::WorkflowExecutionTimedOutEventAttributes)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecutionTimedOutEventAttributes`](crate::model::WorkflowExecutionTimedOutEventAttributes).
     pub fn builder() -> crate::model::workflow_execution_timed_out_event_attributes::Builder {
         crate::model::workflow_execution_timed_out_event_attributes::Builder::default()
     }
@@ -12452,8 +12712,10 @@ pub struct FailWorkflowExecutionFailedEventAttributes {
     /// <p>The cause of the failure. This information is generated by the system and can be useful for diagnostic purposes.</p> <note>
     /// <p>If <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision failed because it lacked sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::FailWorkflowExecutionFailedCause>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>FailWorkflowExecution</code> decision to fail this execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl FailWorkflowExecutionFailedEventAttributes {
@@ -12479,11 +12741,10 @@ impl std::fmt::Debug for FailWorkflowExecutionFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`FailWorkflowExecutionFailedEventAttributes`](crate::model::FailWorkflowExecutionFailedEventAttributes)
+/// See [`FailWorkflowExecutionFailedEventAttributes`](crate::model::FailWorkflowExecutionFailedEventAttributes).
 pub mod fail_workflow_execution_failed_event_attributes {
 
-    /// A builder for [`FailWorkflowExecutionFailedEventAttributes`](crate::model::FailWorkflowExecutionFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`FailWorkflowExecutionFailedEventAttributes`](crate::model::FailWorkflowExecutionFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cause: std::option::Option<crate::model::FailWorkflowExecutionFailedCause>,
@@ -12520,7 +12781,7 @@ pub mod fail_workflow_execution_failed_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailWorkflowExecutionFailedEventAttributes`](crate::model::FailWorkflowExecutionFailedEventAttributes)
+        /// Consumes the builder and constructs a [`FailWorkflowExecutionFailedEventAttributes`](crate::model::FailWorkflowExecutionFailedEventAttributes).
         pub fn build(self) -> crate::model::FailWorkflowExecutionFailedEventAttributes {
             crate::model::FailWorkflowExecutionFailedEventAttributes {
                 cause: self.cause,
@@ -12532,7 +12793,7 @@ pub mod fail_workflow_execution_failed_event_attributes {
     }
 }
 impl FailWorkflowExecutionFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`FailWorkflowExecutionFailedEventAttributes`](crate::model::FailWorkflowExecutionFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`FailWorkflowExecutionFailedEventAttributes`](crate::model::FailWorkflowExecutionFailedEventAttributes).
     pub fn builder() -> crate::model::fail_workflow_execution_failed_event_attributes::Builder {
         crate::model::fail_workflow_execution_failed_event_attributes::Builder::default()
     }
@@ -12598,10 +12859,13 @@ impl AsRef<str> for FailWorkflowExecutionFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowExecutionFailedEventAttributes {
     /// <p>The descriptive reason provided for the failure.</p>
+    #[doc(hidden)]
     pub reason: std::option::Option<std::string::String>,
     /// <p>The details of the failure.</p>
+    #[doc(hidden)]
     pub details: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>FailWorkflowExecution</code> decision to fail this execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl WorkflowExecutionFailedEventAttributes {
@@ -12630,11 +12894,10 @@ impl std::fmt::Debug for WorkflowExecutionFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecutionFailedEventAttributes`](crate::model::WorkflowExecutionFailedEventAttributes)
+/// See [`WorkflowExecutionFailedEventAttributes`](crate::model::WorkflowExecutionFailedEventAttributes).
 pub mod workflow_execution_failed_event_attributes {
 
-    /// A builder for [`WorkflowExecutionFailedEventAttributes`](crate::model::WorkflowExecutionFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecutionFailedEventAttributes`](crate::model::WorkflowExecutionFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reason: std::option::Option<std::string::String>,
@@ -12675,7 +12938,7 @@ pub mod workflow_execution_failed_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecutionFailedEventAttributes`](crate::model::WorkflowExecutionFailedEventAttributes)
+        /// Consumes the builder and constructs a [`WorkflowExecutionFailedEventAttributes`](crate::model::WorkflowExecutionFailedEventAttributes).
         pub fn build(self) -> crate::model::WorkflowExecutionFailedEventAttributes {
             crate::model::WorkflowExecutionFailedEventAttributes {
                 reason: self.reason,
@@ -12688,7 +12951,7 @@ pub mod workflow_execution_failed_event_attributes {
     }
 }
 impl WorkflowExecutionFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecutionFailedEventAttributes`](crate::model::WorkflowExecutionFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecutionFailedEventAttributes`](crate::model::WorkflowExecutionFailedEventAttributes).
     pub fn builder() -> crate::model::workflow_execution_failed_event_attributes::Builder {
         crate::model::workflow_execution_failed_event_attributes::Builder::default()
     }
@@ -12701,8 +12964,10 @@ pub struct CompleteWorkflowExecutionFailedEventAttributes {
     /// <p>The cause of the failure. This information is generated by the system and can be useful for diagnostic purposes.</p> <note>
     /// <p>If <code>cause</code> is set to <code>OPERATION_NOT_PERMITTED</code>, the decision failed because it lacked sufficient permissions. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub cause: std::option::Option<crate::model::CompleteWorkflowExecutionFailedCause>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>CompleteWorkflowExecution</code> decision to complete this execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl CompleteWorkflowExecutionFailedEventAttributes {
@@ -12730,11 +12995,10 @@ impl std::fmt::Debug for CompleteWorkflowExecutionFailedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`CompleteWorkflowExecutionFailedEventAttributes`](crate::model::CompleteWorkflowExecutionFailedEventAttributes)
+/// See [`CompleteWorkflowExecutionFailedEventAttributes`](crate::model::CompleteWorkflowExecutionFailedEventAttributes).
 pub mod complete_workflow_execution_failed_event_attributes {
 
-    /// A builder for [`CompleteWorkflowExecutionFailedEventAttributes`](crate::model::CompleteWorkflowExecutionFailedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`CompleteWorkflowExecutionFailedEventAttributes`](crate::model::CompleteWorkflowExecutionFailedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) cause: std::option::Option<crate::model::CompleteWorkflowExecutionFailedCause>,
@@ -12771,7 +13035,7 @@ pub mod complete_workflow_execution_failed_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CompleteWorkflowExecutionFailedEventAttributes`](crate::model::CompleteWorkflowExecutionFailedEventAttributes)
+        /// Consumes the builder and constructs a [`CompleteWorkflowExecutionFailedEventAttributes`](crate::model::CompleteWorkflowExecutionFailedEventAttributes).
         pub fn build(self) -> crate::model::CompleteWorkflowExecutionFailedEventAttributes {
             crate::model::CompleteWorkflowExecutionFailedEventAttributes {
                 cause: self.cause,
@@ -12783,7 +13047,7 @@ pub mod complete_workflow_execution_failed_event_attributes {
     }
 }
 impl CompleteWorkflowExecutionFailedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`CompleteWorkflowExecutionFailedEventAttributes`](crate::model::CompleteWorkflowExecutionFailedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`CompleteWorkflowExecutionFailedEventAttributes`](crate::model::CompleteWorkflowExecutionFailedEventAttributes).
     pub fn builder() -> crate::model::complete_workflow_execution_failed_event_attributes::Builder {
         crate::model::complete_workflow_execution_failed_event_attributes::Builder::default()
     }
@@ -12853,8 +13117,10 @@ impl AsRef<str> for CompleteWorkflowExecutionFailedCause {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowExecutionCompletedEventAttributes {
     /// <p>The result produced by the workflow execution upon successful completion.</p>
+    #[doc(hidden)]
     pub result: std::option::Option<std::string::String>,
     /// <p>The ID of the <code>DecisionTaskCompleted</code> event corresponding to the decision task that resulted in the <code>CompleteWorkflowExecution</code> decision to complete this execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub decision_task_completed_event_id: i64,
 }
 impl WorkflowExecutionCompletedEventAttributes {
@@ -12878,11 +13144,10 @@ impl std::fmt::Debug for WorkflowExecutionCompletedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecutionCompletedEventAttributes`](crate::model::WorkflowExecutionCompletedEventAttributes)
+/// See [`WorkflowExecutionCompletedEventAttributes`](crate::model::WorkflowExecutionCompletedEventAttributes).
 pub mod workflow_execution_completed_event_attributes {
 
-    /// A builder for [`WorkflowExecutionCompletedEventAttributes`](crate::model::WorkflowExecutionCompletedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecutionCompletedEventAttributes`](crate::model::WorkflowExecutionCompletedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) result: std::option::Option<std::string::String>,
@@ -12912,7 +13177,7 @@ pub mod workflow_execution_completed_event_attributes {
             self.decision_task_completed_event_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecutionCompletedEventAttributes`](crate::model::WorkflowExecutionCompletedEventAttributes)
+        /// Consumes the builder and constructs a [`WorkflowExecutionCompletedEventAttributes`](crate::model::WorkflowExecutionCompletedEventAttributes).
         pub fn build(self) -> crate::model::WorkflowExecutionCompletedEventAttributes {
             crate::model::WorkflowExecutionCompletedEventAttributes {
                 result: self.result,
@@ -12924,7 +13189,7 @@ pub mod workflow_execution_completed_event_attributes {
     }
 }
 impl WorkflowExecutionCompletedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecutionCompletedEventAttributes`](crate::model::WorkflowExecutionCompletedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecutionCompletedEventAttributes`](crate::model::WorkflowExecutionCompletedEventAttributes).
     pub fn builder() -> crate::model::workflow_execution_completed_event_attributes::Builder {
         crate::model::workflow_execution_completed_event_attributes::Builder::default()
     }
@@ -12935,12 +13200,15 @@ impl WorkflowExecutionCompletedEventAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowExecutionStartedEventAttributes {
     /// <p>The input provided to the workflow execution.</p>
+    #[doc(hidden)]
     pub input: std::option::Option<std::string::String>,
     /// <p>The maximum duration for this workflow execution.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub execution_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>The maximum duration of decision tasks for this workflow type.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub task_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>The policy to use for the child workflow executions if this workflow execution is terminated, by calling the <code>TerminateWorkflowExecution</code> action explicitly or due to an expired timeout.</p>
     /// <p>The supported child policies are:</p>
@@ -12949,22 +13217,31 @@ pub struct WorkflowExecutionStartedEventAttributes {
     /// <li> <p> <code>REQUEST_CANCEL</code> – A request to cancel is attempted for each child execution by recording a <code>WorkflowExecutionCancelRequested</code> event in its history. It is up to the decider to take appropriate actions when it receives an execution history with this event.</p> </li>
     /// <li> <p> <code>ABANDON</code> – No action is taken. The child executions continue to run.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub child_policy: std::option::Option<crate::model::ChildPolicy>,
     /// <p>The name of the task list for scheduling the decision tasks for this workflow execution.</p>
+    #[doc(hidden)]
     pub task_list: std::option::Option<crate::model::TaskList>,
     /// <p>The priority of the decision tasks in the workflow execution.</p>
+    #[doc(hidden)]
     pub task_priority: std::option::Option<std::string::String>,
     /// <p>The workflow type of this execution.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>The list of tags associated with this workflow execution. An execution can have up to 5 tags.</p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>If this workflow execution was started due to a <code>ContinueAsNewWorkflowExecution</code> decision, then it contains the <code>runId</code> of the previous workflow execution that was closed and continued as this execution.</p>
+    #[doc(hidden)]
     pub continued_execution_run_id: std::option::Option<std::string::String>,
     /// <p>The source workflow execution that started this workflow execution. The member isn't set if the workflow execution was not started by a workflow.</p>
+    #[doc(hidden)]
     pub parent_workflow_execution: std::option::Option<crate::model::WorkflowExecution>,
     /// <p>The ID of the <code>StartChildWorkflowExecutionInitiated</code> event corresponding to the <code>StartChildWorkflowExecution</code> <code>Decision</code> to start this workflow execution. The source event with this ID can be found in the history of the source workflow execution. This information can be useful for diagnosing problems by tracing back the chain of events leading up to this event.</p>
+    #[doc(hidden)]
     pub parent_initiated_event_id: i64,
     /// <p>The IAM role attached to the workflow execution.</p>
+    #[doc(hidden)]
     pub lambda_role: std::option::Option<std::string::String>,
 }
 impl WorkflowExecutionStartedEventAttributes {
@@ -13054,11 +13331,10 @@ impl std::fmt::Debug for WorkflowExecutionStartedEventAttributes {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecutionStartedEventAttributes`](crate::model::WorkflowExecutionStartedEventAttributes)
+/// See [`WorkflowExecutionStartedEventAttributes`](crate::model::WorkflowExecutionStartedEventAttributes).
 pub mod workflow_execution_started_event_attributes {
 
-    /// A builder for [`WorkflowExecutionStartedEventAttributes`](crate::model::WorkflowExecutionStartedEventAttributes)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecutionStartedEventAttributes`](crate::model::WorkflowExecutionStartedEventAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) input: std::option::Option<std::string::String>,
@@ -13247,7 +13523,7 @@ pub mod workflow_execution_started_event_attributes {
             self.lambda_role = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecutionStartedEventAttributes`](crate::model::WorkflowExecutionStartedEventAttributes)
+        /// Consumes the builder and constructs a [`WorkflowExecutionStartedEventAttributes`](crate::model::WorkflowExecutionStartedEventAttributes).
         pub fn build(self) -> crate::model::WorkflowExecutionStartedEventAttributes {
             crate::model::WorkflowExecutionStartedEventAttributes {
                 input: self.input,
@@ -13267,7 +13543,7 @@ pub mod workflow_execution_started_event_attributes {
     }
 }
 impl WorkflowExecutionStartedEventAttributes {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecutionStartedEventAttributes`](crate::model::WorkflowExecutionStartedEventAttributes)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecutionStartedEventAttributes`](crate::model::WorkflowExecutionStartedEventAttributes).
     pub fn builder() -> crate::model::workflow_execution_started_event_attributes::Builder {
         crate::model::workflow_execution_started_event_attributes::Builder::default()
     }
@@ -13624,14 +13900,19 @@ impl AsRef<str> for EventType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowTypeInfo {
     /// <p>The workflow type this information is about.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>The current status of the workflow type.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::RegistrationStatus>,
     /// <p>The description of the type registered through <code>RegisterWorkflowType</code>.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date when this type was registered.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If the type is in deprecated state, then it is set to the date when the type was deprecated.</p>
+    #[doc(hidden)]
     pub deprecation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl WorkflowTypeInfo {
@@ -13667,11 +13948,10 @@ impl std::fmt::Debug for WorkflowTypeInfo {
         formatter.finish()
     }
 }
-/// See [`WorkflowTypeInfo`](crate::model::WorkflowTypeInfo)
+/// See [`WorkflowTypeInfo`](crate::model::WorkflowTypeInfo).
 pub mod workflow_type_info {
 
-    /// A builder for [`WorkflowTypeInfo`](crate::model::WorkflowTypeInfo)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowTypeInfo`](crate::model::WorkflowTypeInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_type: std::option::Option<crate::model::WorkflowType>,
@@ -13743,7 +14023,7 @@ pub mod workflow_type_info {
             self.deprecation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowTypeInfo`](crate::model::WorkflowTypeInfo)
+        /// Consumes the builder and constructs a [`WorkflowTypeInfo`](crate::model::WorkflowTypeInfo).
         pub fn build(self) -> crate::model::WorkflowTypeInfo {
             crate::model::WorkflowTypeInfo {
                 workflow_type: self.workflow_type,
@@ -13756,7 +14036,7 @@ pub mod workflow_type_info {
     }
 }
 impl WorkflowTypeInfo {
-    /// Creates a new builder-style object to manufacture [`WorkflowTypeInfo`](crate::model::WorkflowTypeInfo)
+    /// Creates a new builder-style object to manufacture [`WorkflowTypeInfo`](crate::model::WorkflowTypeInfo).
     pub fn builder() -> crate::model::workflow_type_info::Builder {
         crate::model::workflow_type_info::Builder::default()
     }
@@ -13822,14 +14102,19 @@ impl AsRef<str> for RegistrationStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowExecutionInfo {
     /// <p>The workflow execution this information is about.</p>
+    #[doc(hidden)]
     pub execution: std::option::Option<crate::model::WorkflowExecution>,
     /// <p>The type of the workflow execution.</p>
+    #[doc(hidden)]
     pub workflow_type: std::option::Option<crate::model::WorkflowType>,
     /// <p>The time when the execution was started.</p>
+    #[doc(hidden)]
     pub start_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the workflow execution was closed. Set only if the execution status is CLOSED.</p>
+    #[doc(hidden)]
     pub close_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current status of the execution.</p>
+    #[doc(hidden)]
     pub execution_status: std::option::Option<crate::model::ExecutionStatus>,
     /// <p>If the execution status is closed then this specifies how the execution was closed:</p>
     /// <ul>
@@ -13840,12 +14125,16 @@ pub struct WorkflowExecutionInfo {
     /// <li> <p> <code>TIMED_OUT</code> – the execution did not complete in the alloted time and was automatically timed out.</p> </li>
     /// <li> <p> <code>CONTINUED_AS_NEW</code> – the execution is logically continued. This means the current execution was completed and a new execution was started to carry on the workflow.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub close_status: std::option::Option<crate::model::CloseStatus>,
     /// <p>If this workflow execution is a child of another execution then contains the workflow execution that started this execution.</p>
+    #[doc(hidden)]
     pub parent: std::option::Option<crate::model::WorkflowExecution>,
     /// <p>The list of tags associated with the workflow execution. Tags can be used to identify and list workflow executions of interest through the visibility APIs. A workflow execution can have a maximum of 5 tags.</p>
+    #[doc(hidden)]
     pub tag_list: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>Set to true if a cancellation is requested for this workflow execution.</p>
+    #[doc(hidden)]
     pub cancel_requested: bool,
 }
 impl WorkflowExecutionInfo {
@@ -13909,11 +14198,10 @@ impl std::fmt::Debug for WorkflowExecutionInfo {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecutionInfo`](crate::model::WorkflowExecutionInfo)
+/// See [`WorkflowExecutionInfo`](crate::model::WorkflowExecutionInfo).
 pub mod workflow_execution_info {
 
-    /// A builder for [`WorkflowExecutionInfo`](crate::model::WorkflowExecutionInfo)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecutionInfo`](crate::model::WorkflowExecutionInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) execution: std::option::Option<crate::model::WorkflowExecution>,
@@ -14063,7 +14351,7 @@ pub mod workflow_execution_info {
             self.cancel_requested = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecutionInfo`](crate::model::WorkflowExecutionInfo)
+        /// Consumes the builder and constructs a [`WorkflowExecutionInfo`](crate::model::WorkflowExecutionInfo).
         pub fn build(self) -> crate::model::WorkflowExecutionInfo {
             crate::model::WorkflowExecutionInfo {
                 execution: self.execution,
@@ -14080,7 +14368,7 @@ pub mod workflow_execution_info {
     }
 }
 impl WorkflowExecutionInfo {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecutionInfo`](crate::model::WorkflowExecutionInfo)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecutionInfo`](crate::model::WorkflowExecutionInfo).
     pub fn builder() -> crate::model::workflow_execution_info::Builder {
         crate::model::workflow_execution_info::Builder::default()
     }
@@ -14224,6 +14512,7 @@ impl AsRef<str> for ExecutionStatus {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowExecutionFilter {
     /// <p>The workflowId to pass of match the criteria of this filter.</p>
+    #[doc(hidden)]
     pub workflow_id: std::option::Option<std::string::String>,
 }
 impl WorkflowExecutionFilter {
@@ -14239,11 +14528,10 @@ impl std::fmt::Debug for WorkflowExecutionFilter {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecutionFilter`](crate::model::WorkflowExecutionFilter)
+/// See [`WorkflowExecutionFilter`](crate::model::WorkflowExecutionFilter).
 pub mod workflow_execution_filter {
 
-    /// A builder for [`WorkflowExecutionFilter`](crate::model::WorkflowExecutionFilter)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecutionFilter`](crate::model::WorkflowExecutionFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_id: std::option::Option<std::string::String>,
@@ -14259,7 +14547,7 @@ pub mod workflow_execution_filter {
             self.workflow_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecutionFilter`](crate::model::WorkflowExecutionFilter)
+        /// Consumes the builder and constructs a [`WorkflowExecutionFilter`](crate::model::WorkflowExecutionFilter).
         pub fn build(self) -> crate::model::WorkflowExecutionFilter {
             crate::model::WorkflowExecutionFilter {
                 workflow_id: self.workflow_id,
@@ -14268,7 +14556,7 @@ pub mod workflow_execution_filter {
     }
 }
 impl WorkflowExecutionFilter {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecutionFilter`](crate::model::WorkflowExecutionFilter)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecutionFilter`](crate::model::WorkflowExecutionFilter).
     pub fn builder() -> crate::model::workflow_execution_filter::Builder {
         crate::model::workflow_execution_filter::Builder::default()
     }
@@ -14280,6 +14568,7 @@ impl WorkflowExecutionFilter {
 pub struct TagFilter {
     /// <p> Specifies the tag that must be associated with the execution for it to meet the filter criteria.</p>
     /// <p>Tags may only contain unicode letters, digits, whitespace, or these symbols: <code>_ . : / = + - @</code>.</p>
+    #[doc(hidden)]
     pub tag: std::option::Option<std::string::String>,
 }
 impl TagFilter {
@@ -14296,11 +14585,10 @@ impl std::fmt::Debug for TagFilter {
         formatter.finish()
     }
 }
-/// See [`TagFilter`](crate::model::TagFilter)
+/// See [`TagFilter`](crate::model::TagFilter).
 pub mod tag_filter {
 
-    /// A builder for [`TagFilter`](crate::model::TagFilter)
-    #[non_exhaustive]
+    /// A builder for [`TagFilter`](crate::model::TagFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tag: std::option::Option<std::string::String>,
@@ -14318,14 +14606,14 @@ pub mod tag_filter {
             self.tag = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagFilter`](crate::model::TagFilter)
+        /// Consumes the builder and constructs a [`TagFilter`](crate::model::TagFilter).
         pub fn build(self) -> crate::model::TagFilter {
             crate::model::TagFilter { tag: self.tag }
         }
     }
 }
 impl TagFilter {
-    /// Creates a new builder-style object to manufacture [`TagFilter`](crate::model::TagFilter)
+    /// Creates a new builder-style object to manufacture [`TagFilter`](crate::model::TagFilter).
     pub fn builder() -> crate::model::tag_filter::Builder {
         crate::model::tag_filter::Builder::default()
     }
@@ -14336,8 +14624,10 @@ impl TagFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowTypeFilter {
     /// <p> Name of the workflow type.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>Version of the workflow type.</p>
+    #[doc(hidden)]
     pub version: std::option::Option<std::string::String>,
 }
 impl WorkflowTypeFilter {
@@ -14358,11 +14648,10 @@ impl std::fmt::Debug for WorkflowTypeFilter {
         formatter.finish()
     }
 }
-/// See [`WorkflowTypeFilter`](crate::model::WorkflowTypeFilter)
+/// See [`WorkflowTypeFilter`](crate::model::WorkflowTypeFilter).
 pub mod workflow_type_filter {
 
-    /// A builder for [`WorkflowTypeFilter`](crate::model::WorkflowTypeFilter)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowTypeFilter`](crate::model::WorkflowTypeFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -14389,7 +14678,7 @@ pub mod workflow_type_filter {
             self.version = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowTypeFilter`](crate::model::WorkflowTypeFilter)
+        /// Consumes the builder and constructs a [`WorkflowTypeFilter`](crate::model::WorkflowTypeFilter).
         pub fn build(self) -> crate::model::WorkflowTypeFilter {
             crate::model::WorkflowTypeFilter {
                 name: self.name,
@@ -14399,7 +14688,7 @@ pub mod workflow_type_filter {
     }
 }
 impl WorkflowTypeFilter {
-    /// Creates a new builder-style object to manufacture [`WorkflowTypeFilter`](crate::model::WorkflowTypeFilter)
+    /// Creates a new builder-style object to manufacture [`WorkflowTypeFilter`](crate::model::WorkflowTypeFilter).
     pub fn builder() -> crate::model::workflow_type_filter::Builder {
         crate::model::workflow_type_filter::Builder::default()
     }
@@ -14410,8 +14699,10 @@ impl WorkflowTypeFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ExecutionTimeFilter {
     /// <p>Specifies the oldest start or close date and time to return.</p>
+    #[doc(hidden)]
     pub oldest_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the latest start or close date and time to return.</p>
+    #[doc(hidden)]
     pub latest_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ExecutionTimeFilter {
@@ -14432,11 +14723,10 @@ impl std::fmt::Debug for ExecutionTimeFilter {
         formatter.finish()
     }
 }
-/// See [`ExecutionTimeFilter`](crate::model::ExecutionTimeFilter)
+/// See [`ExecutionTimeFilter`](crate::model::ExecutionTimeFilter).
 pub mod execution_time_filter {
 
-    /// A builder for [`ExecutionTimeFilter`](crate::model::ExecutionTimeFilter)
-    #[non_exhaustive]
+    /// A builder for [`ExecutionTimeFilter`](crate::model::ExecutionTimeFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) oldest_date: std::option::Option<aws_smithy_types::DateTime>,
@@ -14469,7 +14759,7 @@ pub mod execution_time_filter {
             self.latest_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExecutionTimeFilter`](crate::model::ExecutionTimeFilter)
+        /// Consumes the builder and constructs a [`ExecutionTimeFilter`](crate::model::ExecutionTimeFilter).
         pub fn build(self) -> crate::model::ExecutionTimeFilter {
             crate::model::ExecutionTimeFilter {
                 oldest_date: self.oldest_date,
@@ -14479,7 +14769,7 @@ pub mod execution_time_filter {
     }
 }
 impl ExecutionTimeFilter {
-    /// Creates a new builder-style object to manufacture [`ExecutionTimeFilter`](crate::model::ExecutionTimeFilter)
+    /// Creates a new builder-style object to manufacture [`ExecutionTimeFilter`](crate::model::ExecutionTimeFilter).
     pub fn builder() -> crate::model::execution_time_filter::Builder {
         crate::model::execution_time_filter::Builder::default()
     }
@@ -14490,16 +14780,20 @@ impl ExecutionTimeFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainInfo {
     /// <p>The name of the domain. This name is unique within the account.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The status of the domain:</p>
     /// <ul>
     /// <li> <p> <code>REGISTERED</code> – The domain is properly registered and available. You can use this domain for registering types and creating new workflow executions. </p> </li>
     /// <li> <p> <code>DEPRECATED</code> – The domain was deprecated using <code>DeprecateDomain</code>, but is still in use. You should not create new workflow executions in this domain. </p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::RegistrationStatus>,
     /// <p>The description of the domain provided through <code>RegisterDomain</code>.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The ARN of the domain.</p>
+    #[doc(hidden)]
     pub arn: std::option::Option<std::string::String>,
 }
 impl DomainInfo {
@@ -14534,11 +14828,10 @@ impl std::fmt::Debug for DomainInfo {
         formatter.finish()
     }
 }
-/// See [`DomainInfo`](crate::model::DomainInfo)
+/// See [`DomainInfo`](crate::model::DomainInfo).
 pub mod domain_info {
 
-    /// A builder for [`DomainInfo`](crate::model::DomainInfo)
-    #[non_exhaustive]
+    /// A builder for [`DomainInfo`](crate::model::DomainInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -14598,7 +14891,7 @@ pub mod domain_info {
             self.arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainInfo`](crate::model::DomainInfo)
+        /// Consumes the builder and constructs a [`DomainInfo`](crate::model::DomainInfo).
         pub fn build(self) -> crate::model::DomainInfo {
             crate::model::DomainInfo {
                 name: self.name,
@@ -14610,7 +14903,7 @@ pub mod domain_info {
     }
 }
 impl DomainInfo {
-    /// Creates a new builder-style object to manufacture [`DomainInfo`](crate::model::DomainInfo)
+    /// Creates a new builder-style object to manufacture [`DomainInfo`](crate::model::DomainInfo).
     pub fn builder() -> crate::model::domain_info::Builder {
         crate::model::domain_info::Builder::default()
     }
@@ -14621,6 +14914,7 @@ impl DomainInfo {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CloseStatusFilter {
     /// <p> The close status that must match the close status of an execution for it to meet the criteria of this filter.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::CloseStatus>,
 }
 impl CloseStatusFilter {
@@ -14636,11 +14930,10 @@ impl std::fmt::Debug for CloseStatusFilter {
         formatter.finish()
     }
 }
-/// See [`CloseStatusFilter`](crate::model::CloseStatusFilter)
+/// See [`CloseStatusFilter`](crate::model::CloseStatusFilter).
 pub mod close_status_filter {
 
-    /// A builder for [`CloseStatusFilter`](crate::model::CloseStatusFilter)
-    #[non_exhaustive]
+    /// A builder for [`CloseStatusFilter`](crate::model::CloseStatusFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::CloseStatus>,
@@ -14656,7 +14949,7 @@ pub mod close_status_filter {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CloseStatusFilter`](crate::model::CloseStatusFilter)
+        /// Consumes the builder and constructs a [`CloseStatusFilter`](crate::model::CloseStatusFilter).
         pub fn build(self) -> crate::model::CloseStatusFilter {
             crate::model::CloseStatusFilter {
                 status: self.status,
@@ -14665,7 +14958,7 @@ pub mod close_status_filter {
     }
 }
 impl CloseStatusFilter {
-    /// Creates a new builder-style object to manufacture [`CloseStatusFilter`](crate::model::CloseStatusFilter)
+    /// Creates a new builder-style object to manufacture [`CloseStatusFilter`](crate::model::CloseStatusFilter).
     pub fn builder() -> crate::model::close_status_filter::Builder {
         crate::model::close_status_filter::Builder::default()
     }
@@ -14676,14 +14969,19 @@ impl CloseStatusFilter {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ActivityTypeInfo {
     /// <p>The <code>ActivityType</code> type structure representing the activity type.</p>
+    #[doc(hidden)]
     pub activity_type: std::option::Option<crate::model::ActivityType>,
     /// <p>The current status of the activity type.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::RegistrationStatus>,
     /// <p>The description of the activity type provided in <code>RegisterActivityType</code>.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The date and time this activity type was created through <code>RegisterActivityType</code>.</p>
+    #[doc(hidden)]
     pub creation_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If DEPRECATED, the date and time <code>DeprecateActivityType</code> was called.</p>
+    #[doc(hidden)]
     pub deprecation_date: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl ActivityTypeInfo {
@@ -14719,11 +15017,10 @@ impl std::fmt::Debug for ActivityTypeInfo {
         formatter.finish()
     }
 }
-/// See [`ActivityTypeInfo`](crate::model::ActivityTypeInfo)
+/// See [`ActivityTypeInfo`](crate::model::ActivityTypeInfo).
 pub mod activity_type_info {
 
-    /// A builder for [`ActivityTypeInfo`](crate::model::ActivityTypeInfo)
-    #[non_exhaustive]
+    /// A builder for [`ActivityTypeInfo`](crate::model::ActivityTypeInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) activity_type: std::option::Option<crate::model::ActivityType>,
@@ -14795,7 +15092,7 @@ pub mod activity_type_info {
             self.deprecation_date = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityTypeInfo`](crate::model::ActivityTypeInfo)
+        /// Consumes the builder and constructs a [`ActivityTypeInfo`](crate::model::ActivityTypeInfo).
         pub fn build(self) -> crate::model::ActivityTypeInfo {
             crate::model::ActivityTypeInfo {
                 activity_type: self.activity_type,
@@ -14808,7 +15105,7 @@ pub mod activity_type_info {
     }
 }
 impl ActivityTypeInfo {
-    /// Creates a new builder-style object to manufacture [`ActivityTypeInfo`](crate::model::ActivityTypeInfo)
+    /// Creates a new builder-style object to manufacture [`ActivityTypeInfo`](crate::model::ActivityTypeInfo).
     pub fn builder() -> crate::model::activity_type_info::Builder {
         crate::model::activity_type_info::Builder::default()
     }
@@ -14820,15 +15117,19 @@ impl ActivityTypeInfo {
 pub struct WorkflowTypeConfiguration {
     /// <p> The default maximum duration, specified when registering the workflow type, that a decision task for executions of this workflow type might take before returning completion or failure. If the task doesn'tdo close in the specified time then the task is automatically timed out and rescheduled. If the decider eventually reports a completion or failure, it is ignored. This default can be overridden when starting a workflow execution using the <code>StartWorkflowExecution</code> action or the <code>StartChildWorkflowExecution</code> <code>Decision</code>.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub default_task_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p> The default maximum duration, specified when registering the workflow type, for executions of this workflow type. This default can be overridden when starting a workflow execution using the <code>StartWorkflowExecution</code> action or the <code>StartChildWorkflowExecution</code> <code>Decision</code>.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub default_execution_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p> The default task list, specified when registering the workflow type, for decisions tasks scheduled for workflow executions of this type. This default can be overridden when starting a workflow execution using the <code>StartWorkflowExecution</code> action or the <code>StartChildWorkflowExecution</code> <code>Decision</code>.</p>
+    #[doc(hidden)]
     pub default_task_list: std::option::Option<crate::model::TaskList>,
     /// <p> The default task priority, specified when registering the workflow type, for all decision tasks of this workflow type. This default can be overridden when starting a workflow execution using the <code>StartWorkflowExecution</code> action or the <code>StartChildWorkflowExecution</code> decision.</p>
     /// <p>Valid values are integers that range from Java's <code>Integer.MIN_VALUE</code> (-2147483648) to <code>Integer.MAX_VALUE</code> (2147483647). Higher numbers indicate higher priority.</p>
     /// <p>For more information about setting task priority, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/programming-priority.html">Setting Task Priority</a> in the <i>Amazon SWF Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub default_task_priority: std::option::Option<std::string::String>,
     /// <p> The default policy to use for the child workflow executions when a workflow execution of this type is terminated, by calling the <code>TerminateWorkflowExecution</code> action explicitly or due to an expired timeout. This default can be overridden when starting a workflow execution using the <code>StartWorkflowExecution</code> action or the <code>StartChildWorkflowExecution</code> <code>Decision</code>.</p>
     /// <p>The supported child policies are:</p>
@@ -14837,10 +15138,12 @@ pub struct WorkflowTypeConfiguration {
     /// <li> <p> <code>REQUEST_CANCEL</code> – A request to cancel is attempted for each child execution by recording a <code>WorkflowExecutionCancelRequested</code> event in its history. It is up to the decider to take appropriate actions when it receives an execution history with this event.</p> </li>
     /// <li> <p> <code>ABANDON</code> – No action is taken. The child executions continue to run.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub default_child_policy: std::option::Option<crate::model::ChildPolicy>,
     /// <p>The default IAM role attached to this workflow type.</p> <note>
     /// <p>Executions of this workflow type need IAM roles to invoke Lambda functions. If you don't specify an IAM role when starting this workflow type, the default Lambda role is attached to the execution. For more information, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/lambda-task.html">https://docs.aws.amazon.com/amazonswf/latest/developerguide/lambda-task.html</a> in the <i>Amazon SWF Developer Guide</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub default_lambda_role: std::option::Option<std::string::String>,
 }
 impl WorkflowTypeConfiguration {
@@ -14899,11 +15202,10 @@ impl std::fmt::Debug for WorkflowTypeConfiguration {
         formatter.finish()
     }
 }
-/// See [`WorkflowTypeConfiguration`](crate::model::WorkflowTypeConfiguration)
+/// See [`WorkflowTypeConfiguration`](crate::model::WorkflowTypeConfiguration).
 pub mod workflow_type_configuration {
 
-    /// A builder for [`WorkflowTypeConfiguration`](crate::model::WorkflowTypeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowTypeConfiguration`](crate::model::WorkflowTypeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_task_start_to_close_timeout: std::option::Option<std::string::String>,
@@ -15023,7 +15325,7 @@ pub mod workflow_type_configuration {
             self.default_lambda_role = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowTypeConfiguration`](crate::model::WorkflowTypeConfiguration)
+        /// Consumes the builder and constructs a [`WorkflowTypeConfiguration`](crate::model::WorkflowTypeConfiguration).
         pub fn build(self) -> crate::model::WorkflowTypeConfiguration {
             crate::model::WorkflowTypeConfiguration {
                 default_task_start_to_close_timeout: self.default_task_start_to_close_timeout,
@@ -15038,7 +15340,7 @@ pub mod workflow_type_configuration {
     }
 }
 impl WorkflowTypeConfiguration {
-    /// Creates a new builder-style object to manufacture [`WorkflowTypeConfiguration`](crate::model::WorkflowTypeConfiguration)
+    /// Creates a new builder-style object to manufacture [`WorkflowTypeConfiguration`](crate::model::WorkflowTypeConfiguration).
     pub fn builder() -> crate::model::workflow_type_configuration::Builder {
         crate::model::workflow_type_configuration::Builder::default()
     }
@@ -15049,14 +15351,19 @@ impl WorkflowTypeConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkflowExecutionOpenCounts {
     /// <p>The count of activity tasks whose status is <code>OPEN</code>.</p>
+    #[doc(hidden)]
     pub open_activity_tasks: i32,
     /// <p>The count of decision tasks whose status is OPEN. A workflow execution can have at most one open decision task.</p>
+    #[doc(hidden)]
     pub open_decision_tasks: i32,
     /// <p>The count of timers started by this workflow execution that have not fired yet.</p>
+    #[doc(hidden)]
     pub open_timers: i32,
     /// <p>The count of child workflow executions whose status is <code>OPEN</code>.</p>
+    #[doc(hidden)]
     pub open_child_workflow_executions: i32,
     /// <p>The count of Lambda tasks whose status is <code>OPEN</code>.</p>
+    #[doc(hidden)]
     pub open_lambda_functions: i32,
 }
 impl WorkflowExecutionOpenCounts {
@@ -15095,11 +15402,10 @@ impl std::fmt::Debug for WorkflowExecutionOpenCounts {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecutionOpenCounts`](crate::model::WorkflowExecutionOpenCounts)
+/// See [`WorkflowExecutionOpenCounts`](crate::model::WorkflowExecutionOpenCounts).
 pub mod workflow_execution_open_counts {
 
-    /// A builder for [`WorkflowExecutionOpenCounts`](crate::model::WorkflowExecutionOpenCounts)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecutionOpenCounts`](crate::model::WorkflowExecutionOpenCounts).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) open_activity_tasks: std::option::Option<i32>,
@@ -15162,7 +15468,7 @@ pub mod workflow_execution_open_counts {
             self.open_lambda_functions = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecutionOpenCounts`](crate::model::WorkflowExecutionOpenCounts)
+        /// Consumes the builder and constructs a [`WorkflowExecutionOpenCounts`](crate::model::WorkflowExecutionOpenCounts).
         pub fn build(self) -> crate::model::WorkflowExecutionOpenCounts {
             crate::model::WorkflowExecutionOpenCounts {
                 open_activity_tasks: self.open_activity_tasks.unwrap_or_default(),
@@ -15177,7 +15483,7 @@ pub mod workflow_execution_open_counts {
     }
 }
 impl WorkflowExecutionOpenCounts {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecutionOpenCounts`](crate::model::WorkflowExecutionOpenCounts)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecutionOpenCounts`](crate::model::WorkflowExecutionOpenCounts).
     pub fn builder() -> crate::model::workflow_execution_open_counts::Builder {
         crate::model::workflow_execution_open_counts::Builder::default()
     }
@@ -15189,14 +15495,18 @@ impl WorkflowExecutionOpenCounts {
 pub struct WorkflowExecutionConfiguration {
     /// <p>The maximum duration allowed for decision tasks for this workflow execution.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub task_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>The total duration for this workflow execution.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub execution_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p>The task list used for the decision tasks generated for this workflow execution.</p>
+    #[doc(hidden)]
     pub task_list: std::option::Option<crate::model::TaskList>,
     /// <p>The priority assigned to decision tasks for this workflow execution. Valid values are integers that range from Java's <code>Integer.MIN_VALUE</code> (-2147483648) to <code>Integer.MAX_VALUE</code> (2147483647). Higher numbers indicate higher priority.</p>
     /// <p>For more information about setting task priority, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/programming-priority.html">Setting Task Priority</a> in the <i>Amazon SWF Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub task_priority: std::option::Option<std::string::String>,
     /// <p>The policy to use for the child workflow executions if this workflow execution is terminated, by calling the <code>TerminateWorkflowExecution</code> action explicitly or due to an expired timeout.</p>
     /// <p>The supported child policies are:</p>
@@ -15205,8 +15515,10 @@ pub struct WorkflowExecutionConfiguration {
     /// <li> <p> <code>REQUEST_CANCEL</code> – A request to cancel is attempted for each child execution by recording a <code>WorkflowExecutionCancelRequested</code> event in its history. It is up to the decider to take appropriate actions when it receives an execution history with this event.</p> </li>
     /// <li> <p> <code>ABANDON</code> – No action is taken. The child executions continue to run.</p> </li>
     /// </ul>
+    #[doc(hidden)]
     pub child_policy: std::option::Option<crate::model::ChildPolicy>,
     /// <p>The IAM role attached to the child workflow execution.</p>
+    #[doc(hidden)]
     pub lambda_role: std::option::Option<std::string::String>,
 }
 impl WorkflowExecutionConfiguration {
@@ -15262,11 +15574,10 @@ impl std::fmt::Debug for WorkflowExecutionConfiguration {
         formatter.finish()
     }
 }
-/// See [`WorkflowExecutionConfiguration`](crate::model::WorkflowExecutionConfiguration)
+/// See [`WorkflowExecutionConfiguration`](crate::model::WorkflowExecutionConfiguration).
 pub mod workflow_execution_configuration {
 
-    /// A builder for [`WorkflowExecutionConfiguration`](crate::model::WorkflowExecutionConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`WorkflowExecutionConfiguration`](crate::model::WorkflowExecutionConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_start_to_close_timeout: std::option::Option<std::string::String>,
@@ -15373,7 +15684,7 @@ pub mod workflow_execution_configuration {
             self.lambda_role = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkflowExecutionConfiguration`](crate::model::WorkflowExecutionConfiguration)
+        /// Consumes the builder and constructs a [`WorkflowExecutionConfiguration`](crate::model::WorkflowExecutionConfiguration).
         pub fn build(self) -> crate::model::WorkflowExecutionConfiguration {
             crate::model::WorkflowExecutionConfiguration {
                 task_start_to_close_timeout: self.task_start_to_close_timeout,
@@ -15387,7 +15698,7 @@ pub mod workflow_execution_configuration {
     }
 }
 impl WorkflowExecutionConfiguration {
-    /// Creates a new builder-style object to manufacture [`WorkflowExecutionConfiguration`](crate::model::WorkflowExecutionConfiguration)
+    /// Creates a new builder-style object to manufacture [`WorkflowExecutionConfiguration`](crate::model::WorkflowExecutionConfiguration).
     pub fn builder() -> crate::model::workflow_execution_configuration::Builder {
         crate::model::workflow_execution_configuration::Builder::default()
     }
@@ -15398,6 +15709,7 @@ impl WorkflowExecutionConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DomainConfiguration {
     /// <p>The retention period for workflow executions in this domain.</p>
+    #[doc(hidden)]
     pub workflow_execution_retention_period_in_days: std::option::Option<std::string::String>,
 }
 impl DomainConfiguration {
@@ -15416,11 +15728,10 @@ impl std::fmt::Debug for DomainConfiguration {
         formatter.finish()
     }
 }
-/// See [`DomainConfiguration`](crate::model::DomainConfiguration)
+/// See [`DomainConfiguration`](crate::model::DomainConfiguration).
 pub mod domain_configuration {
 
-    /// A builder for [`DomainConfiguration`](crate::model::DomainConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`DomainConfiguration`](crate::model::DomainConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workflow_execution_retention_period_in_days:
@@ -15443,7 +15754,7 @@ pub mod domain_configuration {
             self.workflow_execution_retention_period_in_days = input;
             self
         }
-        /// Consumes the builder and constructs a [`DomainConfiguration`](crate::model::DomainConfiguration)
+        /// Consumes the builder and constructs a [`DomainConfiguration`](crate::model::DomainConfiguration).
         pub fn build(self) -> crate::model::DomainConfiguration {
             crate::model::DomainConfiguration {
                 workflow_execution_retention_period_in_days: self
@@ -15453,7 +15764,7 @@ pub mod domain_configuration {
     }
 }
 impl DomainConfiguration {
-    /// Creates a new builder-style object to manufacture [`DomainConfiguration`](crate::model::DomainConfiguration)
+    /// Creates a new builder-style object to manufacture [`DomainConfiguration`](crate::model::DomainConfiguration).
     pub fn builder() -> crate::model::domain_configuration::Builder {
         crate::model::domain_configuration::Builder::default()
     }
@@ -15465,22 +15776,28 @@ impl DomainConfiguration {
 pub struct ActivityTypeConfiguration {
     /// <p> The default maximum duration for tasks of an activity type specified when registering the activity type. You can override this default when scheduling a task through the <code>ScheduleActivityTask</code> <code>Decision</code>.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub default_task_start_to_close_timeout: std::option::Option<std::string::String>,
     /// <p> The default maximum time, in seconds, before which a worker processing a task must report progress by calling <code>RecordActivityTaskHeartbeat</code>.</p>
     /// <p>You can specify this value only when <i>registering</i> an activity type. The registered default value can be overridden when you schedule a task through the <code>ScheduleActivityTask</code> <code>Decision</code>. If the activity worker subsequently attempts to record a heartbeat or returns a result, the activity worker receives an <code>UnknownResource</code> fault. In this case, Amazon SWF no longer considers the activity task to be valid; the activity worker should clean up the activity task.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub default_task_heartbeat_timeout: std::option::Option<std::string::String>,
     /// <p> The default task list specified for this activity type at registration. This default is used if a task list isn't provided when a task is scheduled through the <code>ScheduleActivityTask</code> <code>Decision</code>. You can override the default registered task list when scheduling a task through the <code>ScheduleActivityTask</code> <code>Decision</code>.</p>
+    #[doc(hidden)]
     pub default_task_list: std::option::Option<crate::model::TaskList>,
     /// <p> The default task priority for tasks of this activity type, specified at registration. If not set, then <code>0</code> is used as the default priority. This default can be overridden when scheduling an activity task.</p>
     /// <p>Valid values are integers that range from Java's <code>Integer.MIN_VALUE</code> (-2147483648) to <code>Integer.MAX_VALUE</code> (2147483647). Higher numbers indicate higher priority.</p>
     /// <p>For more information about setting task priority, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/programming-priority.html">Setting Task Priority</a> in the <i>Amazon SWF Developer Guide</i>.</p>
+    #[doc(hidden)]
     pub default_task_priority: std::option::Option<std::string::String>,
     /// <p> The default maximum duration, specified when registering the activity type, that a task of an activity type can wait before being assigned to a worker. You can override this default when scheduling a task through the <code>ScheduleActivityTask</code> <code>Decision</code>.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub default_task_schedule_to_start_timeout: std::option::Option<std::string::String>,
     /// <p> The default maximum duration, specified when registering the activity type, for tasks of this activity type. You can override this default when scheduling a task through the <code>ScheduleActivityTask</code> <code>Decision</code>.</p>
     /// <p>The duration is specified in seconds, an integer greater than or equal to <code>0</code>. You can use <code>NONE</code> to specify unlimited duration.</p>
+    #[doc(hidden)]
     pub default_task_schedule_to_close_timeout: std::option::Option<std::string::String>,
 }
 impl ActivityTypeConfiguration {
@@ -15540,11 +15857,10 @@ impl std::fmt::Debug for ActivityTypeConfiguration {
         formatter.finish()
     }
 }
-/// See [`ActivityTypeConfiguration`](crate::model::ActivityTypeConfiguration)
+/// See [`ActivityTypeConfiguration`](crate::model::ActivityTypeConfiguration).
 pub mod activity_type_configuration {
 
-    /// A builder for [`ActivityTypeConfiguration`](crate::model::ActivityTypeConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`ActivityTypeConfiguration`](crate::model::ActivityTypeConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) default_task_start_to_close_timeout: std::option::Option<std::string::String>,
@@ -15659,7 +15975,7 @@ pub mod activity_type_configuration {
             self.default_task_schedule_to_close_timeout = input;
             self
         }
-        /// Consumes the builder and constructs a [`ActivityTypeConfiguration`](crate::model::ActivityTypeConfiguration)
+        /// Consumes the builder and constructs a [`ActivityTypeConfiguration`](crate::model::ActivityTypeConfiguration).
         pub fn build(self) -> crate::model::ActivityTypeConfiguration {
             crate::model::ActivityTypeConfiguration {
                 default_task_start_to_close_timeout: self.default_task_start_to_close_timeout,
@@ -15673,7 +15989,7 @@ pub mod activity_type_configuration {
     }
 }
 impl ActivityTypeConfiguration {
-    /// Creates a new builder-style object to manufacture [`ActivityTypeConfiguration`](crate::model::ActivityTypeConfiguration)
+    /// Creates a new builder-style object to manufacture [`ActivityTypeConfiguration`](crate::model::ActivityTypeConfiguration).
     pub fn builder() -> crate::model::activity_type_configuration::Builder {
         crate::model::activity_type_configuration::Builder::default()
     }

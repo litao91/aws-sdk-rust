@@ -4,8 +4,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAppInstanceUserEndpointOutput {
     /// <p>The ARN of the <code>AppInstanceUser</code>.</p>
+    #[doc(hidden)]
     pub app_instance_user_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the <code>AppInstanceUserEndpoint</code>.</p>
+    #[doc(hidden)]
     pub endpoint_id: std::option::Option<std::string::String>,
 }
 impl UpdateAppInstanceUserEndpointOutput {
@@ -26,11 +28,10 @@ impl std::fmt::Debug for UpdateAppInstanceUserEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAppInstanceUserEndpointOutput`](crate::output::UpdateAppInstanceUserEndpointOutput)
+/// See [`UpdateAppInstanceUserEndpointOutput`](crate::output::UpdateAppInstanceUserEndpointOutput).
 pub mod update_app_instance_user_endpoint_output {
 
-    /// A builder for [`UpdateAppInstanceUserEndpointOutput`](crate::output::UpdateAppInstanceUserEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAppInstanceUserEndpointOutput`](crate::output::UpdateAppInstanceUserEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_user_arn: std::option::Option<std::string::String>,
@@ -60,7 +61,7 @@ pub mod update_app_instance_user_endpoint_output {
             self.endpoint_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAppInstanceUserEndpointOutput`](crate::output::UpdateAppInstanceUserEndpointOutput)
+        /// Consumes the builder and constructs a [`UpdateAppInstanceUserEndpointOutput`](crate::output::UpdateAppInstanceUserEndpointOutput).
         pub fn build(self) -> crate::output::UpdateAppInstanceUserEndpointOutput {
             crate::output::UpdateAppInstanceUserEndpointOutput {
                 app_instance_user_arn: self.app_instance_user_arn,
@@ -70,7 +71,7 @@ pub mod update_app_instance_user_endpoint_output {
     }
 }
 impl UpdateAppInstanceUserEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAppInstanceUserEndpointOutput`](crate::output::UpdateAppInstanceUserEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAppInstanceUserEndpointOutput`](crate::output::UpdateAppInstanceUserEndpointOutput).
     pub fn builder() -> crate::output::update_app_instance_user_endpoint_output::Builder {
         crate::output::update_app_instance_user_endpoint_output::Builder::default()
     }
@@ -81,6 +82,7 @@ impl UpdateAppInstanceUserEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAppInstanceUserOutput {
     /// <p>The ARN of the <code>AppInstanceUser</code>.</p>
+    #[doc(hidden)]
     pub app_instance_user_arn: std::option::Option<std::string::String>,
 }
 impl UpdateAppInstanceUserOutput {
@@ -96,11 +98,10 @@ impl std::fmt::Debug for UpdateAppInstanceUserOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAppInstanceUserOutput`](crate::output::UpdateAppInstanceUserOutput)
+/// See [`UpdateAppInstanceUserOutput`](crate::output::UpdateAppInstanceUserOutput).
 pub mod update_app_instance_user_output {
 
-    /// A builder for [`UpdateAppInstanceUserOutput`](crate::output::UpdateAppInstanceUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAppInstanceUserOutput`](crate::output::UpdateAppInstanceUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_user_arn: std::option::Option<std::string::String>,
@@ -119,7 +120,7 @@ pub mod update_app_instance_user_output {
             self.app_instance_user_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAppInstanceUserOutput`](crate::output::UpdateAppInstanceUserOutput)
+        /// Consumes the builder and constructs a [`UpdateAppInstanceUserOutput`](crate::output::UpdateAppInstanceUserOutput).
         pub fn build(self) -> crate::output::UpdateAppInstanceUserOutput {
             crate::output::UpdateAppInstanceUserOutput {
                 app_instance_user_arn: self.app_instance_user_arn,
@@ -128,7 +129,7 @@ pub mod update_app_instance_user_output {
     }
 }
 impl UpdateAppInstanceUserOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAppInstanceUserOutput`](crate::output::UpdateAppInstanceUserOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAppInstanceUserOutput`](crate::output::UpdateAppInstanceUserOutput).
     pub fn builder() -> crate::output::update_app_instance_user_output::Builder {
         crate::output::update_app_instance_user_output::Builder::default()
     }
@@ -139,6 +140,7 @@ impl UpdateAppInstanceUserOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAppInstanceOutput {
     /// <p>The ARN of the <code>AppInstance</code>.</p>
+    #[doc(hidden)]
     pub app_instance_arn: std::option::Option<std::string::String>,
 }
 impl UpdateAppInstanceOutput {
@@ -154,11 +156,10 @@ impl std::fmt::Debug for UpdateAppInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAppInstanceOutput`](crate::output::UpdateAppInstanceOutput)
+/// See [`UpdateAppInstanceOutput`](crate::output::UpdateAppInstanceOutput).
 pub mod update_app_instance_output {
 
-    /// A builder for [`UpdateAppInstanceOutput`](crate::output::UpdateAppInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateAppInstanceOutput`](crate::output::UpdateAppInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_arn: std::option::Option<std::string::String>,
@@ -177,7 +178,7 @@ pub mod update_app_instance_output {
             self.app_instance_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAppInstanceOutput`](crate::output::UpdateAppInstanceOutput)
+        /// Consumes the builder and constructs a [`UpdateAppInstanceOutput`](crate::output::UpdateAppInstanceOutput).
         pub fn build(self) -> crate::output::UpdateAppInstanceOutput {
             crate::output::UpdateAppInstanceOutput {
                 app_instance_arn: self.app_instance_arn,
@@ -186,7 +187,7 @@ pub mod update_app_instance_output {
     }
 }
 impl UpdateAppInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAppInstanceOutput`](crate::output::UpdateAppInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAppInstanceOutput`](crate::output::UpdateAppInstanceOutput).
     pub fn builder() -> crate::output::update_app_instance_output::Builder {
         crate::output::update_app_instance_output::Builder::default()
     }
@@ -202,22 +203,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -233,22 +233,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -259,8 +258,10 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegisterAppInstanceUserEndpointOutput {
     /// <p>The ARN of the <code>AppInstanceUser</code>.</p>
+    #[doc(hidden)]
     pub app_instance_user_arn: std::option::Option<std::string::String>,
     /// <p>The unique identifier of the <code>AppInstanceUserEndpoint</code>.</p>
+    #[doc(hidden)]
     pub endpoint_id: std::option::Option<std::string::String>,
 }
 impl RegisterAppInstanceUserEndpointOutput {
@@ -281,11 +282,10 @@ impl std::fmt::Debug for RegisterAppInstanceUserEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`RegisterAppInstanceUserEndpointOutput`](crate::output::RegisterAppInstanceUserEndpointOutput)
+/// See [`RegisterAppInstanceUserEndpointOutput`](crate::output::RegisterAppInstanceUserEndpointOutput).
 pub mod register_app_instance_user_endpoint_output {
 
-    /// A builder for [`RegisterAppInstanceUserEndpointOutput`](crate::output::RegisterAppInstanceUserEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`RegisterAppInstanceUserEndpointOutput`](crate::output::RegisterAppInstanceUserEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_user_arn: std::option::Option<std::string::String>,
@@ -315,7 +315,7 @@ pub mod register_app_instance_user_endpoint_output {
             self.endpoint_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RegisterAppInstanceUserEndpointOutput`](crate::output::RegisterAppInstanceUserEndpointOutput)
+        /// Consumes the builder and constructs a [`RegisterAppInstanceUserEndpointOutput`](crate::output::RegisterAppInstanceUserEndpointOutput).
         pub fn build(self) -> crate::output::RegisterAppInstanceUserEndpointOutput {
             crate::output::RegisterAppInstanceUserEndpointOutput {
                 app_instance_user_arn: self.app_instance_user_arn,
@@ -325,7 +325,7 @@ pub mod register_app_instance_user_endpoint_output {
     }
 }
 impl RegisterAppInstanceUserEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`RegisterAppInstanceUserEndpointOutput`](crate::output::RegisterAppInstanceUserEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`RegisterAppInstanceUserEndpointOutput`](crate::output::RegisterAppInstanceUserEndpointOutput).
     pub fn builder() -> crate::output::register_app_instance_user_endpoint_output::Builder {
         crate::output::register_app_instance_user_endpoint_output::Builder::default()
     }
@@ -336,9 +336,11 @@ impl RegisterAppInstanceUserEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutAppInstanceRetentionSettingsOutput {
     /// <p>The time in days to retain data. Data type: number.</p>
+    #[doc(hidden)]
     pub app_instance_retention_settings:
         std::option::Option<crate::model::AppInstanceRetentionSettings>,
     /// <p>The time at which the API deletes data.</p>
+    #[doc(hidden)]
     pub initiate_deletion_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl PutAppInstanceRetentionSettingsOutput {
@@ -367,11 +369,10 @@ impl std::fmt::Debug for PutAppInstanceRetentionSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`PutAppInstanceRetentionSettingsOutput`](crate::output::PutAppInstanceRetentionSettingsOutput)
+/// See [`PutAppInstanceRetentionSettingsOutput`](crate::output::PutAppInstanceRetentionSettingsOutput).
 pub mod put_app_instance_retention_settings_output {
 
-    /// A builder for [`PutAppInstanceRetentionSettingsOutput`](crate::output::PutAppInstanceRetentionSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`PutAppInstanceRetentionSettingsOutput`](crate::output::PutAppInstanceRetentionSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_retention_settings:
@@ -408,7 +409,7 @@ pub mod put_app_instance_retention_settings_output {
             self.initiate_deletion_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutAppInstanceRetentionSettingsOutput`](crate::output::PutAppInstanceRetentionSettingsOutput)
+        /// Consumes the builder and constructs a [`PutAppInstanceRetentionSettingsOutput`](crate::output::PutAppInstanceRetentionSettingsOutput).
         pub fn build(self) -> crate::output::PutAppInstanceRetentionSettingsOutput {
             crate::output::PutAppInstanceRetentionSettingsOutput {
                 app_instance_retention_settings: self.app_instance_retention_settings,
@@ -418,7 +419,7 @@ pub mod put_app_instance_retention_settings_output {
     }
 }
 impl PutAppInstanceRetentionSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`PutAppInstanceRetentionSettingsOutput`](crate::output::PutAppInstanceRetentionSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`PutAppInstanceRetentionSettingsOutput`](crate::output::PutAppInstanceRetentionSettingsOutput).
     pub fn builder() -> crate::output::put_app_instance_retention_settings_output::Builder {
         crate::output::put_app_instance_retention_settings_output::Builder::default()
     }
@@ -429,6 +430,7 @@ impl PutAppInstanceRetentionSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tag key-value pairs.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ListTagsForResourceOutput {
@@ -444,11 +446,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -473,14 +474,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -491,11 +492,14 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAppInstanceUsersOutput {
     /// <p>The ARN of the <code>AppInstance</code>.</p>
+    #[doc(hidden)]
     pub app_instance_arn: std::option::Option<std::string::String>,
     /// <p>The information for each requested <code>AppInstanceUser</code>.</p>
+    #[doc(hidden)]
     pub app_instance_users:
         std::option::Option<std::vec::Vec<crate::model::AppInstanceUserSummary>>,
     /// <p>The token passed by previous API calls until all requested users are returned.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAppInstanceUsersOutput {
@@ -523,11 +527,10 @@ impl std::fmt::Debug for ListAppInstanceUsersOutput {
         formatter.finish()
     }
 }
-/// See [`ListAppInstanceUsersOutput`](crate::output::ListAppInstanceUsersOutput)
+/// See [`ListAppInstanceUsersOutput`](crate::output::ListAppInstanceUsersOutput).
 pub mod list_app_instance_users_output {
 
-    /// A builder for [`ListAppInstanceUsersOutput`](crate::output::ListAppInstanceUsersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAppInstanceUsersOutput`](crate::output::ListAppInstanceUsersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_arn: std::option::Option<std::string::String>,
@@ -578,7 +581,7 @@ pub mod list_app_instance_users_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAppInstanceUsersOutput`](crate::output::ListAppInstanceUsersOutput)
+        /// Consumes the builder and constructs a [`ListAppInstanceUsersOutput`](crate::output::ListAppInstanceUsersOutput).
         pub fn build(self) -> crate::output::ListAppInstanceUsersOutput {
             crate::output::ListAppInstanceUsersOutput {
                 app_instance_arn: self.app_instance_arn,
@@ -589,7 +592,7 @@ pub mod list_app_instance_users_output {
     }
 }
 impl ListAppInstanceUsersOutput {
-    /// Creates a new builder-style object to manufacture [`ListAppInstanceUsersOutput`](crate::output::ListAppInstanceUsersOutput)
+    /// Creates a new builder-style object to manufacture [`ListAppInstanceUsersOutput`](crate::output::ListAppInstanceUsersOutput).
     pub fn builder() -> crate::output::list_app_instance_users_output::Builder {
         crate::output::list_app_instance_users_output::Builder::default()
     }
@@ -600,9 +603,11 @@ impl ListAppInstanceUsersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAppInstanceUserEndpointsOutput {
     /// <p>The information for each requested <code>AppInstanceUserEndpoint</code>.</p>
+    #[doc(hidden)]
     pub app_instance_user_endpoints:
         std::option::Option<std::vec::Vec<crate::model::AppInstanceUserEndpointSummary>>,
     /// <p>The token passed by previous API calls until all requested endpoints are returned.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAppInstanceUserEndpointsOutput {
@@ -628,11 +633,10 @@ impl std::fmt::Debug for ListAppInstanceUserEndpointsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAppInstanceUserEndpointsOutput`](crate::output::ListAppInstanceUserEndpointsOutput)
+/// See [`ListAppInstanceUserEndpointsOutput`](crate::output::ListAppInstanceUserEndpointsOutput).
 pub mod list_app_instance_user_endpoints_output {
 
-    /// A builder for [`ListAppInstanceUserEndpointsOutput`](crate::output::ListAppInstanceUserEndpointsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAppInstanceUserEndpointsOutput`](crate::output::ListAppInstanceUserEndpointsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_user_endpoints:
@@ -672,7 +676,7 @@ pub mod list_app_instance_user_endpoints_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAppInstanceUserEndpointsOutput`](crate::output::ListAppInstanceUserEndpointsOutput)
+        /// Consumes the builder and constructs a [`ListAppInstanceUserEndpointsOutput`](crate::output::ListAppInstanceUserEndpointsOutput).
         pub fn build(self) -> crate::output::ListAppInstanceUserEndpointsOutput {
             crate::output::ListAppInstanceUserEndpointsOutput {
                 app_instance_user_endpoints: self.app_instance_user_endpoints,
@@ -682,7 +686,7 @@ pub mod list_app_instance_user_endpoints_output {
     }
 }
 impl ListAppInstanceUserEndpointsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAppInstanceUserEndpointsOutput`](crate::output::ListAppInstanceUserEndpointsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAppInstanceUserEndpointsOutput`](crate::output::ListAppInstanceUserEndpointsOutput).
     pub fn builder() -> crate::output::list_app_instance_user_endpoints_output::Builder {
         crate::output::list_app_instance_user_endpoints_output::Builder::default()
     }
@@ -693,8 +697,10 @@ impl ListAppInstanceUserEndpointsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAppInstancesOutput {
     /// <p>The information for each <code>AppInstance</code>.</p>
+    #[doc(hidden)]
     pub app_instances: std::option::Option<std::vec::Vec<crate::model::AppInstanceSummary>>,
     /// <p>The token passed by previous API requests until the maximum number of <code>AppInstance</code>s is reached.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAppInstancesOutput {
@@ -715,11 +721,10 @@ impl std::fmt::Debug for ListAppInstancesOutput {
         formatter.finish()
     }
 }
-/// See [`ListAppInstancesOutput`](crate::output::ListAppInstancesOutput)
+/// See [`ListAppInstancesOutput`](crate::output::ListAppInstancesOutput).
 pub mod list_app_instances_output {
 
-    /// A builder for [`ListAppInstancesOutput`](crate::output::ListAppInstancesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAppInstancesOutput`](crate::output::ListAppInstancesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instances:
@@ -756,7 +761,7 @@ pub mod list_app_instances_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAppInstancesOutput`](crate::output::ListAppInstancesOutput)
+        /// Consumes the builder and constructs a [`ListAppInstancesOutput`](crate::output::ListAppInstancesOutput).
         pub fn build(self) -> crate::output::ListAppInstancesOutput {
             crate::output::ListAppInstancesOutput {
                 app_instances: self.app_instances,
@@ -766,7 +771,7 @@ pub mod list_app_instances_output {
     }
 }
 impl ListAppInstancesOutput {
-    /// Creates a new builder-style object to manufacture [`ListAppInstancesOutput`](crate::output::ListAppInstancesOutput)
+    /// Creates a new builder-style object to manufacture [`ListAppInstancesOutput`](crate::output::ListAppInstancesOutput).
     pub fn builder() -> crate::output::list_app_instances_output::Builder {
         crate::output::list_app_instances_output::Builder::default()
     }
@@ -777,11 +782,14 @@ impl ListAppInstancesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListAppInstanceAdminsOutput {
     /// <p>The ARN of the <code>AppInstance</code>.</p>
+    #[doc(hidden)]
     pub app_instance_arn: std::option::Option<std::string::String>,
     /// <p>The information for each administrator.</p>
+    #[doc(hidden)]
     pub app_instance_admins:
         std::option::Option<std::vec::Vec<crate::model::AppInstanceAdminSummary>>,
     /// <p>The token returned from previous API requests until the number of administrators is reached.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListAppInstanceAdminsOutput {
@@ -809,11 +817,10 @@ impl std::fmt::Debug for ListAppInstanceAdminsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAppInstanceAdminsOutput`](crate::output::ListAppInstanceAdminsOutput)
+/// See [`ListAppInstanceAdminsOutput`](crate::output::ListAppInstanceAdminsOutput).
 pub mod list_app_instance_admins_output {
 
-    /// A builder for [`ListAppInstanceAdminsOutput`](crate::output::ListAppInstanceAdminsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListAppInstanceAdminsOutput`](crate::output::ListAppInstanceAdminsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_arn: std::option::Option<std::string::String>,
@@ -864,7 +871,7 @@ pub mod list_app_instance_admins_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAppInstanceAdminsOutput`](crate::output::ListAppInstanceAdminsOutput)
+        /// Consumes the builder and constructs a [`ListAppInstanceAdminsOutput`](crate::output::ListAppInstanceAdminsOutput).
         pub fn build(self) -> crate::output::ListAppInstanceAdminsOutput {
             crate::output::ListAppInstanceAdminsOutput {
                 app_instance_arn: self.app_instance_arn,
@@ -875,7 +882,7 @@ pub mod list_app_instance_admins_output {
     }
 }
 impl ListAppInstanceAdminsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAppInstanceAdminsOutput`](crate::output::ListAppInstanceAdminsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAppInstanceAdminsOutput`](crate::output::ListAppInstanceAdminsOutput).
     pub fn builder() -> crate::output::list_app_instance_admins_output::Builder {
         crate::output::list_app_instance_admins_output::Builder::default()
     }
@@ -886,9 +893,11 @@ impl ListAppInstanceAdminsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetAppInstanceRetentionSettingsOutput {
     /// <p>The retention settings for the <code>AppInstance</code>.</p>
+    #[doc(hidden)]
     pub app_instance_retention_settings:
         std::option::Option<crate::model::AppInstanceRetentionSettings>,
     /// <p>The timestamp representing the time at which the specified items are retained, in Epoch Seconds.</p>
+    #[doc(hidden)]
     pub initiate_deletion_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GetAppInstanceRetentionSettingsOutput {
@@ -917,11 +926,10 @@ impl std::fmt::Debug for GetAppInstanceRetentionSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`GetAppInstanceRetentionSettingsOutput`](crate::output::GetAppInstanceRetentionSettingsOutput)
+/// See [`GetAppInstanceRetentionSettingsOutput`](crate::output::GetAppInstanceRetentionSettingsOutput).
 pub mod get_app_instance_retention_settings_output {
 
-    /// A builder for [`GetAppInstanceRetentionSettingsOutput`](crate::output::GetAppInstanceRetentionSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetAppInstanceRetentionSettingsOutput`](crate::output::GetAppInstanceRetentionSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_retention_settings:
@@ -958,7 +966,7 @@ pub mod get_app_instance_retention_settings_output {
             self.initiate_deletion_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAppInstanceRetentionSettingsOutput`](crate::output::GetAppInstanceRetentionSettingsOutput)
+        /// Consumes the builder and constructs a [`GetAppInstanceRetentionSettingsOutput`](crate::output::GetAppInstanceRetentionSettingsOutput).
         pub fn build(self) -> crate::output::GetAppInstanceRetentionSettingsOutput {
             crate::output::GetAppInstanceRetentionSettingsOutput {
                 app_instance_retention_settings: self.app_instance_retention_settings,
@@ -968,7 +976,7 @@ pub mod get_app_instance_retention_settings_output {
     }
 }
 impl GetAppInstanceRetentionSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`GetAppInstanceRetentionSettingsOutput`](crate::output::GetAppInstanceRetentionSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`GetAppInstanceRetentionSettingsOutput`](crate::output::GetAppInstanceRetentionSettingsOutput).
     pub fn builder() -> crate::output::get_app_instance_retention_settings_output::Builder {
         crate::output::get_app_instance_retention_settings_output::Builder::default()
     }
@@ -979,6 +987,7 @@ impl GetAppInstanceRetentionSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAppInstanceUserEndpointOutput {
     /// <p>The full details of an <code>AppInstanceUserEndpoint</code>: the <code>AppInstanceUserArn</code>, ID, name, type, resource ARN, attributes, allow messages, state, and created and last updated timestamps. All timestamps use epoch milliseconds.</p>
+    #[doc(hidden)]
     pub app_instance_user_endpoint: std::option::Option<crate::model::AppInstanceUserEndpoint>,
 }
 impl DescribeAppInstanceUserEndpointOutput {
@@ -999,11 +1008,10 @@ impl std::fmt::Debug for DescribeAppInstanceUserEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAppInstanceUserEndpointOutput`](crate::output::DescribeAppInstanceUserEndpointOutput)
+/// See [`DescribeAppInstanceUserEndpointOutput`](crate::output::DescribeAppInstanceUserEndpointOutput).
 pub mod describe_app_instance_user_endpoint_output {
 
-    /// A builder for [`DescribeAppInstanceUserEndpointOutput`](crate::output::DescribeAppInstanceUserEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAppInstanceUserEndpointOutput`](crate::output::DescribeAppInstanceUserEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_user_endpoint:
@@ -1026,7 +1034,7 @@ pub mod describe_app_instance_user_endpoint_output {
             self.app_instance_user_endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAppInstanceUserEndpointOutput`](crate::output::DescribeAppInstanceUserEndpointOutput)
+        /// Consumes the builder and constructs a [`DescribeAppInstanceUserEndpointOutput`](crate::output::DescribeAppInstanceUserEndpointOutput).
         pub fn build(self) -> crate::output::DescribeAppInstanceUserEndpointOutput {
             crate::output::DescribeAppInstanceUserEndpointOutput {
                 app_instance_user_endpoint: self.app_instance_user_endpoint,
@@ -1035,7 +1043,7 @@ pub mod describe_app_instance_user_endpoint_output {
     }
 }
 impl DescribeAppInstanceUserEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAppInstanceUserEndpointOutput`](crate::output::DescribeAppInstanceUserEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAppInstanceUserEndpointOutput`](crate::output::DescribeAppInstanceUserEndpointOutput).
     pub fn builder() -> crate::output::describe_app_instance_user_endpoint_output::Builder {
         crate::output::describe_app_instance_user_endpoint_output::Builder::default()
     }
@@ -1046,6 +1054,7 @@ impl DescribeAppInstanceUserEndpointOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAppInstanceUserOutput {
     /// <p>The name of the <code>AppInstanceUser</code>.</p>
+    #[doc(hidden)]
     pub app_instance_user: std::option::Option<crate::model::AppInstanceUser>,
 }
 impl DescribeAppInstanceUserOutput {
@@ -1061,11 +1070,10 @@ impl std::fmt::Debug for DescribeAppInstanceUserOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAppInstanceUserOutput`](crate::output::DescribeAppInstanceUserOutput)
+/// See [`DescribeAppInstanceUserOutput`](crate::output::DescribeAppInstanceUserOutput).
 pub mod describe_app_instance_user_output {
 
-    /// A builder for [`DescribeAppInstanceUserOutput`](crate::output::DescribeAppInstanceUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAppInstanceUserOutput`](crate::output::DescribeAppInstanceUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_user: std::option::Option<crate::model::AppInstanceUser>,
@@ -1084,7 +1092,7 @@ pub mod describe_app_instance_user_output {
             self.app_instance_user = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAppInstanceUserOutput`](crate::output::DescribeAppInstanceUserOutput)
+        /// Consumes the builder and constructs a [`DescribeAppInstanceUserOutput`](crate::output::DescribeAppInstanceUserOutput).
         pub fn build(self) -> crate::output::DescribeAppInstanceUserOutput {
             crate::output::DescribeAppInstanceUserOutput {
                 app_instance_user: self.app_instance_user,
@@ -1093,7 +1101,7 @@ pub mod describe_app_instance_user_output {
     }
 }
 impl DescribeAppInstanceUserOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAppInstanceUserOutput`](crate::output::DescribeAppInstanceUserOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAppInstanceUserOutput`](crate::output::DescribeAppInstanceUserOutput).
     pub fn builder() -> crate::output::describe_app_instance_user_output::Builder {
         crate::output::describe_app_instance_user_output::Builder::default()
     }
@@ -1104,6 +1112,7 @@ impl DescribeAppInstanceUserOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAppInstanceAdminOutput {
     /// <p>The ARN and name of the <code>AppInstanceUser</code>, the ARN of the <code>AppInstance</code>, and the created and last-updated timestamps. All timestamps use epoch milliseconds.</p>
+    #[doc(hidden)]
     pub app_instance_admin: std::option::Option<crate::model::AppInstanceAdmin>,
 }
 impl DescribeAppInstanceAdminOutput {
@@ -1119,11 +1128,10 @@ impl std::fmt::Debug for DescribeAppInstanceAdminOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAppInstanceAdminOutput`](crate::output::DescribeAppInstanceAdminOutput)
+/// See [`DescribeAppInstanceAdminOutput`](crate::output::DescribeAppInstanceAdminOutput).
 pub mod describe_app_instance_admin_output {
 
-    /// A builder for [`DescribeAppInstanceAdminOutput`](crate::output::DescribeAppInstanceAdminOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAppInstanceAdminOutput`](crate::output::DescribeAppInstanceAdminOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_admin: std::option::Option<crate::model::AppInstanceAdmin>,
@@ -1142,7 +1150,7 @@ pub mod describe_app_instance_admin_output {
             self.app_instance_admin = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAppInstanceAdminOutput`](crate::output::DescribeAppInstanceAdminOutput)
+        /// Consumes the builder and constructs a [`DescribeAppInstanceAdminOutput`](crate::output::DescribeAppInstanceAdminOutput).
         pub fn build(self) -> crate::output::DescribeAppInstanceAdminOutput {
             crate::output::DescribeAppInstanceAdminOutput {
                 app_instance_admin: self.app_instance_admin,
@@ -1151,7 +1159,7 @@ pub mod describe_app_instance_admin_output {
     }
 }
 impl DescribeAppInstanceAdminOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAppInstanceAdminOutput`](crate::output::DescribeAppInstanceAdminOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAppInstanceAdminOutput`](crate::output::DescribeAppInstanceAdminOutput).
     pub fn builder() -> crate::output::describe_app_instance_admin_output::Builder {
         crate::output::describe_app_instance_admin_output::Builder::default()
     }
@@ -1162,6 +1170,7 @@ impl DescribeAppInstanceAdminOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAppInstanceOutput {
     /// <p>The ARN, metadata, created and last-updated timestamps, and the name of the <code>AppInstance</code>. All timestamps use epoch milliseconds.</p>
+    #[doc(hidden)]
     pub app_instance: std::option::Option<crate::model::AppInstance>,
 }
 impl DescribeAppInstanceOutput {
@@ -1177,11 +1186,10 @@ impl std::fmt::Debug for DescribeAppInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAppInstanceOutput`](crate::output::DescribeAppInstanceOutput)
+/// See [`DescribeAppInstanceOutput`](crate::output::DescribeAppInstanceOutput).
 pub mod describe_app_instance_output {
 
-    /// A builder for [`DescribeAppInstanceOutput`](crate::output::DescribeAppInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DescribeAppInstanceOutput`](crate::output::DescribeAppInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance: std::option::Option<crate::model::AppInstance>,
@@ -1200,7 +1208,7 @@ pub mod describe_app_instance_output {
             self.app_instance = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAppInstanceOutput`](crate::output::DescribeAppInstanceOutput)
+        /// Consumes the builder and constructs a [`DescribeAppInstanceOutput`](crate::output::DescribeAppInstanceOutput).
         pub fn build(self) -> crate::output::DescribeAppInstanceOutput {
             crate::output::DescribeAppInstanceOutput {
                 app_instance: self.app_instance,
@@ -1209,7 +1217,7 @@ pub mod describe_app_instance_output {
     }
 }
 impl DescribeAppInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAppInstanceOutput`](crate::output::DescribeAppInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAppInstanceOutput`](crate::output::DescribeAppInstanceOutput).
     pub fn builder() -> crate::output::describe_app_instance_output::Builder {
         crate::output::describe_app_instance_output::Builder::default()
     }
@@ -1225,22 +1233,21 @@ impl std::fmt::Debug for DeregisterAppInstanceUserEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`DeregisterAppInstanceUserEndpointOutput`](crate::output::DeregisterAppInstanceUserEndpointOutput)
+/// See [`DeregisterAppInstanceUserEndpointOutput`](crate::output::DeregisterAppInstanceUserEndpointOutput).
 pub mod deregister_app_instance_user_endpoint_output {
 
-    /// A builder for [`DeregisterAppInstanceUserEndpointOutput`](crate::output::DeregisterAppInstanceUserEndpointOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeregisterAppInstanceUserEndpointOutput`](crate::output::DeregisterAppInstanceUserEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeregisterAppInstanceUserEndpointOutput`](crate::output::DeregisterAppInstanceUserEndpointOutput)
+        /// Consumes the builder and constructs a [`DeregisterAppInstanceUserEndpointOutput`](crate::output::DeregisterAppInstanceUserEndpointOutput).
         pub fn build(self) -> crate::output::DeregisterAppInstanceUserEndpointOutput {
             crate::output::DeregisterAppInstanceUserEndpointOutput {}
         }
     }
 }
 impl DeregisterAppInstanceUserEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`DeregisterAppInstanceUserEndpointOutput`](crate::output::DeregisterAppInstanceUserEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`DeregisterAppInstanceUserEndpointOutput`](crate::output::DeregisterAppInstanceUserEndpointOutput).
     pub fn builder() -> crate::output::deregister_app_instance_user_endpoint_output::Builder {
         crate::output::deregister_app_instance_user_endpoint_output::Builder::default()
     }
@@ -1256,22 +1263,21 @@ impl std::fmt::Debug for DeleteAppInstanceUserOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAppInstanceUserOutput`](crate::output::DeleteAppInstanceUserOutput)
+/// See [`DeleteAppInstanceUserOutput`](crate::output::DeleteAppInstanceUserOutput).
 pub mod delete_app_instance_user_output {
 
-    /// A builder for [`DeleteAppInstanceUserOutput`](crate::output::DeleteAppInstanceUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAppInstanceUserOutput`](crate::output::DeleteAppInstanceUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteAppInstanceUserOutput`](crate::output::DeleteAppInstanceUserOutput)
+        /// Consumes the builder and constructs a [`DeleteAppInstanceUserOutput`](crate::output::DeleteAppInstanceUserOutput).
         pub fn build(self) -> crate::output::DeleteAppInstanceUserOutput {
             crate::output::DeleteAppInstanceUserOutput {}
         }
     }
 }
 impl DeleteAppInstanceUserOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAppInstanceUserOutput`](crate::output::DeleteAppInstanceUserOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAppInstanceUserOutput`](crate::output::DeleteAppInstanceUserOutput).
     pub fn builder() -> crate::output::delete_app_instance_user_output::Builder {
         crate::output::delete_app_instance_user_output::Builder::default()
     }
@@ -1287,22 +1293,21 @@ impl std::fmt::Debug for DeleteAppInstanceAdminOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAppInstanceAdminOutput`](crate::output::DeleteAppInstanceAdminOutput)
+/// See [`DeleteAppInstanceAdminOutput`](crate::output::DeleteAppInstanceAdminOutput).
 pub mod delete_app_instance_admin_output {
 
-    /// A builder for [`DeleteAppInstanceAdminOutput`](crate::output::DeleteAppInstanceAdminOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAppInstanceAdminOutput`](crate::output::DeleteAppInstanceAdminOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteAppInstanceAdminOutput`](crate::output::DeleteAppInstanceAdminOutput)
+        /// Consumes the builder and constructs a [`DeleteAppInstanceAdminOutput`](crate::output::DeleteAppInstanceAdminOutput).
         pub fn build(self) -> crate::output::DeleteAppInstanceAdminOutput {
             crate::output::DeleteAppInstanceAdminOutput {}
         }
     }
 }
 impl DeleteAppInstanceAdminOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAppInstanceAdminOutput`](crate::output::DeleteAppInstanceAdminOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAppInstanceAdminOutput`](crate::output::DeleteAppInstanceAdminOutput).
     pub fn builder() -> crate::output::delete_app_instance_admin_output::Builder {
         crate::output::delete_app_instance_admin_output::Builder::default()
     }
@@ -1318,22 +1323,21 @@ impl std::fmt::Debug for DeleteAppInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAppInstanceOutput`](crate::output::DeleteAppInstanceOutput)
+/// See [`DeleteAppInstanceOutput`](crate::output::DeleteAppInstanceOutput).
 pub mod delete_app_instance_output {
 
-    /// A builder for [`DeleteAppInstanceOutput`](crate::output::DeleteAppInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteAppInstanceOutput`](crate::output::DeleteAppInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteAppInstanceOutput`](crate::output::DeleteAppInstanceOutput)
+        /// Consumes the builder and constructs a [`DeleteAppInstanceOutput`](crate::output::DeleteAppInstanceOutput).
         pub fn build(self) -> crate::output::DeleteAppInstanceOutput {
             crate::output::DeleteAppInstanceOutput {}
         }
     }
 }
 impl DeleteAppInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAppInstanceOutput`](crate::output::DeleteAppInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAppInstanceOutput`](crate::output::DeleteAppInstanceOutput).
     pub fn builder() -> crate::output::delete_app_instance_output::Builder {
         crate::output::delete_app_instance_output::Builder::default()
     }
@@ -1344,6 +1348,7 @@ impl DeleteAppInstanceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAppInstanceUserOutput {
     /// <p>The user's ARN.</p>
+    #[doc(hidden)]
     pub app_instance_user_arn: std::option::Option<std::string::String>,
 }
 impl CreateAppInstanceUserOutput {
@@ -1359,11 +1364,10 @@ impl std::fmt::Debug for CreateAppInstanceUserOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAppInstanceUserOutput`](crate::output::CreateAppInstanceUserOutput)
+/// See [`CreateAppInstanceUserOutput`](crate::output::CreateAppInstanceUserOutput).
 pub mod create_app_instance_user_output {
 
-    /// A builder for [`CreateAppInstanceUserOutput`](crate::output::CreateAppInstanceUserOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateAppInstanceUserOutput`](crate::output::CreateAppInstanceUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_user_arn: std::option::Option<std::string::String>,
@@ -1382,7 +1386,7 @@ pub mod create_app_instance_user_output {
             self.app_instance_user_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAppInstanceUserOutput`](crate::output::CreateAppInstanceUserOutput)
+        /// Consumes the builder and constructs a [`CreateAppInstanceUserOutput`](crate::output::CreateAppInstanceUserOutput).
         pub fn build(self) -> crate::output::CreateAppInstanceUserOutput {
             crate::output::CreateAppInstanceUserOutput {
                 app_instance_user_arn: self.app_instance_user_arn,
@@ -1391,7 +1395,7 @@ pub mod create_app_instance_user_output {
     }
 }
 impl CreateAppInstanceUserOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAppInstanceUserOutput`](crate::output::CreateAppInstanceUserOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAppInstanceUserOutput`](crate::output::CreateAppInstanceUserOutput).
     pub fn builder() -> crate::output::create_app_instance_user_output::Builder {
         crate::output::create_app_instance_user_output::Builder::default()
     }
@@ -1402,8 +1406,10 @@ impl CreateAppInstanceUserOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAppInstanceAdminOutput {
     /// <p>The name and ARN of the admin for the <code>AppInstance</code>.</p>
+    #[doc(hidden)]
     pub app_instance_admin: std::option::Option<crate::model::Identity>,
     /// <p>The ARN of the of the admin for the <code>AppInstance</code>.</p>
+    #[doc(hidden)]
     pub app_instance_arn: std::option::Option<std::string::String>,
 }
 impl CreateAppInstanceAdminOutput {
@@ -1424,11 +1430,10 @@ impl std::fmt::Debug for CreateAppInstanceAdminOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAppInstanceAdminOutput`](crate::output::CreateAppInstanceAdminOutput)
+/// See [`CreateAppInstanceAdminOutput`](crate::output::CreateAppInstanceAdminOutput).
 pub mod create_app_instance_admin_output {
 
-    /// A builder for [`CreateAppInstanceAdminOutput`](crate::output::CreateAppInstanceAdminOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateAppInstanceAdminOutput`](crate::output::CreateAppInstanceAdminOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_admin: std::option::Option<crate::model::Identity>,
@@ -1461,7 +1466,7 @@ pub mod create_app_instance_admin_output {
             self.app_instance_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAppInstanceAdminOutput`](crate::output::CreateAppInstanceAdminOutput)
+        /// Consumes the builder and constructs a [`CreateAppInstanceAdminOutput`](crate::output::CreateAppInstanceAdminOutput).
         pub fn build(self) -> crate::output::CreateAppInstanceAdminOutput {
             crate::output::CreateAppInstanceAdminOutput {
                 app_instance_admin: self.app_instance_admin,
@@ -1471,7 +1476,7 @@ pub mod create_app_instance_admin_output {
     }
 }
 impl CreateAppInstanceAdminOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAppInstanceAdminOutput`](crate::output::CreateAppInstanceAdminOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAppInstanceAdminOutput`](crate::output::CreateAppInstanceAdminOutput).
     pub fn builder() -> crate::output::create_app_instance_admin_output::Builder {
         crate::output::create_app_instance_admin_output::Builder::default()
     }
@@ -1482,6 +1487,7 @@ impl CreateAppInstanceAdminOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateAppInstanceOutput {
     /// <p>The Amazon Resource Number (ARN) of the <code>AppInstance</code>.</p>
+    #[doc(hidden)]
     pub app_instance_arn: std::option::Option<std::string::String>,
 }
 impl CreateAppInstanceOutput {
@@ -1497,11 +1503,10 @@ impl std::fmt::Debug for CreateAppInstanceOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAppInstanceOutput`](crate::output::CreateAppInstanceOutput)
+/// See [`CreateAppInstanceOutput`](crate::output::CreateAppInstanceOutput).
 pub mod create_app_instance_output {
 
-    /// A builder for [`CreateAppInstanceOutput`](crate::output::CreateAppInstanceOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateAppInstanceOutput`](crate::output::CreateAppInstanceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) app_instance_arn: std::option::Option<std::string::String>,
@@ -1520,7 +1525,7 @@ pub mod create_app_instance_output {
             self.app_instance_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAppInstanceOutput`](crate::output::CreateAppInstanceOutput)
+        /// Consumes the builder and constructs a [`CreateAppInstanceOutput`](crate::output::CreateAppInstanceOutput).
         pub fn build(self) -> crate::output::CreateAppInstanceOutput {
             crate::output::CreateAppInstanceOutput {
                 app_instance_arn: self.app_instance_arn,
@@ -1529,7 +1534,7 @@ pub mod create_app_instance_output {
     }
 }
 impl CreateAppInstanceOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAppInstanceOutput`](crate::output::CreateAppInstanceOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAppInstanceOutput`](crate::output::CreateAppInstanceOutput).
     pub fn builder() -> crate::output::create_app_instance_output::Builder {
         crate::output::create_app_instance_output::Builder::default()
     }

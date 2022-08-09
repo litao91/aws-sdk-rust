@@ -4,6 +4,7 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateUserSettingsOutput {
     /// <p>The user settings.</p>
+    #[doc(hidden)]
     pub user_settings: std::option::Option<crate::model::UserSettings>,
 }
 impl UpdateUserSettingsOutput {
@@ -19,11 +20,10 @@ impl std::fmt::Debug for UpdateUserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateUserSettingsOutput`](crate::output::UpdateUserSettingsOutput)
+/// See [`UpdateUserSettingsOutput`](crate::output::UpdateUserSettingsOutput).
 pub mod update_user_settings_output {
 
-    /// A builder for [`UpdateUserSettingsOutput`](crate::output::UpdateUserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateUserSettingsOutput`](crate::output::UpdateUserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_settings: std::option::Option<crate::model::UserSettings>,
@@ -42,7 +42,7 @@ pub mod update_user_settings_output {
             self.user_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateUserSettingsOutput`](crate::output::UpdateUserSettingsOutput)
+        /// Consumes the builder and constructs a [`UpdateUserSettingsOutput`](crate::output::UpdateUserSettingsOutput).
         pub fn build(self) -> crate::output::UpdateUserSettingsOutput {
             crate::output::UpdateUserSettingsOutput {
                 user_settings: self.user_settings,
@@ -51,7 +51,7 @@ pub mod update_user_settings_output {
     }
 }
 impl UpdateUserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateUserSettingsOutput`](crate::output::UpdateUserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateUserSettingsOutput`](crate::output::UpdateUserSettingsOutput).
     pub fn builder() -> crate::output::update_user_settings_output::Builder {
         crate::output::update_user_settings_output::Builder::default()
     }
@@ -62,6 +62,7 @@ impl UpdateUserSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateTrustStoreOutput {
     /// <p>The ARN of the trust store.</p>
+    #[doc(hidden)]
     pub trust_store_arn: std::option::Option<std::string::String>,
 }
 impl UpdateTrustStoreOutput {
@@ -77,11 +78,10 @@ impl std::fmt::Debug for UpdateTrustStoreOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateTrustStoreOutput`](crate::output::UpdateTrustStoreOutput)
+/// See [`UpdateTrustStoreOutput`](crate::output::UpdateTrustStoreOutput).
 pub mod update_trust_store_output {
 
-    /// A builder for [`UpdateTrustStoreOutput`](crate::output::UpdateTrustStoreOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateTrustStoreOutput`](crate::output::UpdateTrustStoreOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) trust_store_arn: std::option::Option<std::string::String>,
@@ -100,7 +100,7 @@ pub mod update_trust_store_output {
             self.trust_store_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateTrustStoreOutput`](crate::output::UpdateTrustStoreOutput)
+        /// Consumes the builder and constructs a [`UpdateTrustStoreOutput`](crate::output::UpdateTrustStoreOutput).
         pub fn build(self) -> crate::output::UpdateTrustStoreOutput {
             crate::output::UpdateTrustStoreOutput {
                 trust_store_arn: self.trust_store_arn,
@@ -109,7 +109,7 @@ pub mod update_trust_store_output {
     }
 }
 impl UpdateTrustStoreOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateTrustStoreOutput`](crate::output::UpdateTrustStoreOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateTrustStoreOutput`](crate::output::UpdateTrustStoreOutput).
     pub fn builder() -> crate::output::update_trust_store_output::Builder {
         crate::output::update_trust_store_output::Builder::default()
     }
@@ -120,6 +120,7 @@ impl UpdateTrustStoreOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdatePortalOutput {
     /// <p>The web portal.</p>
+    #[doc(hidden)]
     pub portal: std::option::Option<crate::model::Portal>,
 }
 impl UpdatePortalOutput {
@@ -135,11 +136,10 @@ impl std::fmt::Debug for UpdatePortalOutput {
         formatter.finish()
     }
 }
-/// See [`UpdatePortalOutput`](crate::output::UpdatePortalOutput)
+/// See [`UpdatePortalOutput`](crate::output::UpdatePortalOutput).
 pub mod update_portal_output {
 
-    /// A builder for [`UpdatePortalOutput`](crate::output::UpdatePortalOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdatePortalOutput`](crate::output::UpdatePortalOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) portal: std::option::Option<crate::model::Portal>,
@@ -155,7 +155,7 @@ pub mod update_portal_output {
             self.portal = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdatePortalOutput`](crate::output::UpdatePortalOutput)
+        /// Consumes the builder and constructs a [`UpdatePortalOutput`](crate::output::UpdatePortalOutput).
         pub fn build(self) -> crate::output::UpdatePortalOutput {
             crate::output::UpdatePortalOutput {
                 portal: self.portal,
@@ -164,7 +164,7 @@ pub mod update_portal_output {
     }
 }
 impl UpdatePortalOutput {
-    /// Creates a new builder-style object to manufacture [`UpdatePortalOutput`](crate::output::UpdatePortalOutput)
+    /// Creates a new builder-style object to manufacture [`UpdatePortalOutput`](crate::output::UpdatePortalOutput).
     pub fn builder() -> crate::output::update_portal_output::Builder {
         crate::output::update_portal_output::Builder::default()
     }
@@ -175,6 +175,7 @@ impl UpdatePortalOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateNetworkSettingsOutput {
     /// <p>The network settings.</p>
+    #[doc(hidden)]
     pub network_settings: std::option::Option<crate::model::NetworkSettings>,
 }
 impl UpdateNetworkSettingsOutput {
@@ -190,11 +191,10 @@ impl std::fmt::Debug for UpdateNetworkSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateNetworkSettingsOutput`](crate::output::UpdateNetworkSettingsOutput)
+/// See [`UpdateNetworkSettingsOutput`](crate::output::UpdateNetworkSettingsOutput).
 pub mod update_network_settings_output {
 
-    /// A builder for [`UpdateNetworkSettingsOutput`](crate::output::UpdateNetworkSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateNetworkSettingsOutput`](crate::output::UpdateNetworkSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) network_settings: std::option::Option<crate::model::NetworkSettings>,
@@ -213,7 +213,7 @@ pub mod update_network_settings_output {
             self.network_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateNetworkSettingsOutput`](crate::output::UpdateNetworkSettingsOutput)
+        /// Consumes the builder and constructs a [`UpdateNetworkSettingsOutput`](crate::output::UpdateNetworkSettingsOutput).
         pub fn build(self) -> crate::output::UpdateNetworkSettingsOutput {
             crate::output::UpdateNetworkSettingsOutput {
                 network_settings: self.network_settings,
@@ -222,7 +222,7 @@ pub mod update_network_settings_output {
     }
 }
 impl UpdateNetworkSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateNetworkSettingsOutput`](crate::output::UpdateNetworkSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateNetworkSettingsOutput`](crate::output::UpdateNetworkSettingsOutput).
     pub fn builder() -> crate::output::update_network_settings_output::Builder {
         crate::output::update_network_settings_output::Builder::default()
     }
@@ -233,6 +233,7 @@ impl UpdateNetworkSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateIdentityProviderOutput {
     /// <p>The identity provider.</p>
+    #[doc(hidden)]
     pub identity_provider: std::option::Option<crate::model::IdentityProvider>,
 }
 impl UpdateIdentityProviderOutput {
@@ -248,11 +249,10 @@ impl std::fmt::Debug for UpdateIdentityProviderOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateIdentityProviderOutput`](crate::output::UpdateIdentityProviderOutput)
+/// See [`UpdateIdentityProviderOutput`](crate::output::UpdateIdentityProviderOutput).
 pub mod update_identity_provider_output {
 
-    /// A builder for [`UpdateIdentityProviderOutput`](crate::output::UpdateIdentityProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateIdentityProviderOutput`](crate::output::UpdateIdentityProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_provider: std::option::Option<crate::model::IdentityProvider>,
@@ -271,7 +271,7 @@ pub mod update_identity_provider_output {
             self.identity_provider = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateIdentityProviderOutput`](crate::output::UpdateIdentityProviderOutput)
+        /// Consumes the builder and constructs a [`UpdateIdentityProviderOutput`](crate::output::UpdateIdentityProviderOutput).
         pub fn build(self) -> crate::output::UpdateIdentityProviderOutput {
             crate::output::UpdateIdentityProviderOutput {
                 identity_provider: self.identity_provider,
@@ -280,7 +280,7 @@ pub mod update_identity_provider_output {
     }
 }
 impl UpdateIdentityProviderOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateIdentityProviderOutput`](crate::output::UpdateIdentityProviderOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateIdentityProviderOutput`](crate::output::UpdateIdentityProviderOutput).
     pub fn builder() -> crate::output::update_identity_provider_output::Builder {
         crate::output::update_identity_provider_output::Builder::default()
     }
@@ -291,6 +291,7 @@ impl UpdateIdentityProviderOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateBrowserSettingsOutput {
     /// <p>The browser settings.</p>
+    #[doc(hidden)]
     pub browser_settings: std::option::Option<crate::model::BrowserSettings>,
 }
 impl UpdateBrowserSettingsOutput {
@@ -306,11 +307,10 @@ impl std::fmt::Debug for UpdateBrowserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateBrowserSettingsOutput`](crate::output::UpdateBrowserSettingsOutput)
+/// See [`UpdateBrowserSettingsOutput`](crate::output::UpdateBrowserSettingsOutput).
 pub mod update_browser_settings_output {
 
-    /// A builder for [`UpdateBrowserSettingsOutput`](crate::output::UpdateBrowserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`UpdateBrowserSettingsOutput`](crate::output::UpdateBrowserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) browser_settings: std::option::Option<crate::model::BrowserSettings>,
@@ -329,7 +329,7 @@ pub mod update_browser_settings_output {
             self.browser_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateBrowserSettingsOutput`](crate::output::UpdateBrowserSettingsOutput)
+        /// Consumes the builder and constructs a [`UpdateBrowserSettingsOutput`](crate::output::UpdateBrowserSettingsOutput).
         pub fn build(self) -> crate::output::UpdateBrowserSettingsOutput {
             crate::output::UpdateBrowserSettingsOutput {
                 browser_settings: self.browser_settings,
@@ -338,7 +338,7 @@ pub mod update_browser_settings_output {
     }
 }
 impl UpdateBrowserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateBrowserSettingsOutput`](crate::output::UpdateBrowserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateBrowserSettingsOutput`](crate::output::UpdateBrowserSettingsOutput).
     pub fn builder() -> crate::output::update_browser_settings_output::Builder {
         crate::output::update_browser_settings_output::Builder::default()
     }
@@ -354,22 +354,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
 
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -385,22 +384,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
 
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -411,8 +409,10 @@ impl TagResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListUserSettingsOutput {
     /// <p>The user settings.</p>
+    #[doc(hidden)]
     pub user_settings: std::option::Option<std::vec::Vec<crate::model::UserSettingsSummary>>,
     /// <p>The pagination token used to retrieve the next page of results for this operation. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListUserSettingsOutput {
@@ -433,11 +433,10 @@ impl std::fmt::Debug for ListUserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`ListUserSettingsOutput`](crate::output::ListUserSettingsOutput)
+/// See [`ListUserSettingsOutput`](crate::output::ListUserSettingsOutput).
 pub mod list_user_settings_output {
 
-    /// A builder for [`ListUserSettingsOutput`](crate::output::ListUserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListUserSettingsOutput`](crate::output::ListUserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_settings:
@@ -474,7 +473,7 @@ pub mod list_user_settings_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListUserSettingsOutput`](crate::output::ListUserSettingsOutput)
+        /// Consumes the builder and constructs a [`ListUserSettingsOutput`](crate::output::ListUserSettingsOutput).
         pub fn build(self) -> crate::output::ListUserSettingsOutput {
             crate::output::ListUserSettingsOutput {
                 user_settings: self.user_settings,
@@ -484,7 +483,7 @@ pub mod list_user_settings_output {
     }
 }
 impl ListUserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`ListUserSettingsOutput`](crate::output::ListUserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`ListUserSettingsOutput`](crate::output::ListUserSettingsOutput).
     pub fn builder() -> crate::output::list_user_settings_output::Builder {
         crate::output::list_user_settings_output::Builder::default()
     }
@@ -495,8 +494,10 @@ impl ListUserSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTrustStoresOutput {
     /// <p>The trust stores.</p>
+    #[doc(hidden)]
     pub trust_stores: std::option::Option<std::vec::Vec<crate::model::TrustStoreSummary>>,
     /// <p>The pagination token used to retrieve the next page of results for this operation.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListTrustStoresOutput {
@@ -517,11 +518,10 @@ impl std::fmt::Debug for ListTrustStoresOutput {
         formatter.finish()
     }
 }
-/// See [`ListTrustStoresOutput`](crate::output::ListTrustStoresOutput)
+/// See [`ListTrustStoresOutput`](crate::output::ListTrustStoresOutput).
 pub mod list_trust_stores_output {
 
-    /// A builder for [`ListTrustStoresOutput`](crate::output::ListTrustStoresOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTrustStoresOutput`](crate::output::ListTrustStoresOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) trust_stores:
@@ -558,7 +558,7 @@ pub mod list_trust_stores_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTrustStoresOutput`](crate::output::ListTrustStoresOutput)
+        /// Consumes the builder and constructs a [`ListTrustStoresOutput`](crate::output::ListTrustStoresOutput).
         pub fn build(self) -> crate::output::ListTrustStoresOutput {
             crate::output::ListTrustStoresOutput {
                 trust_stores: self.trust_stores,
@@ -568,7 +568,7 @@ pub mod list_trust_stores_output {
     }
 }
 impl ListTrustStoresOutput {
-    /// Creates a new builder-style object to manufacture [`ListTrustStoresOutput`](crate::output::ListTrustStoresOutput)
+    /// Creates a new builder-style object to manufacture [`ListTrustStoresOutput`](crate::output::ListTrustStoresOutput).
     pub fn builder() -> crate::output::list_trust_stores_output::Builder {
         crate::output::list_trust_stores_output::Builder::default()
     }
@@ -579,10 +579,13 @@ impl ListTrustStoresOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTrustStoreCertificatesOutput {
     /// <p>The certificate list.</p>
+    #[doc(hidden)]
     pub certificate_list: std::option::Option<std::vec::Vec<crate::model::CertificateSummary>>,
     /// <p>The ARN of the trust store.</p>
+    #[doc(hidden)]
     pub trust_store_arn: std::option::Option<std::string::String>,
     /// <p>The pagination token used to retrieve the next page of results for this operation.&gt;</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListTrustStoreCertificatesOutput {
@@ -608,11 +611,10 @@ impl std::fmt::Debug for ListTrustStoreCertificatesOutput {
         formatter.finish()
     }
 }
-/// See [`ListTrustStoreCertificatesOutput`](crate::output::ListTrustStoreCertificatesOutput)
+/// See [`ListTrustStoreCertificatesOutput`](crate::output::ListTrustStoreCertificatesOutput).
 pub mod list_trust_store_certificates_output {
 
-    /// A builder for [`ListTrustStoreCertificatesOutput`](crate::output::ListTrustStoreCertificatesOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTrustStoreCertificatesOutput`](crate::output::ListTrustStoreCertificatesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_list:
@@ -663,7 +665,7 @@ pub mod list_trust_store_certificates_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTrustStoreCertificatesOutput`](crate::output::ListTrustStoreCertificatesOutput)
+        /// Consumes the builder and constructs a [`ListTrustStoreCertificatesOutput`](crate::output::ListTrustStoreCertificatesOutput).
         pub fn build(self) -> crate::output::ListTrustStoreCertificatesOutput {
             crate::output::ListTrustStoreCertificatesOutput {
                 certificate_list: self.certificate_list,
@@ -674,7 +676,7 @@ pub mod list_trust_store_certificates_output {
     }
 }
 impl ListTrustStoreCertificatesOutput {
-    /// Creates a new builder-style object to manufacture [`ListTrustStoreCertificatesOutput`](crate::output::ListTrustStoreCertificatesOutput)
+    /// Creates a new builder-style object to manufacture [`ListTrustStoreCertificatesOutput`](crate::output::ListTrustStoreCertificatesOutput).
     pub fn builder() -> crate::output::list_trust_store_certificates_output::Builder {
         crate::output::list_trust_store_certificates_output::Builder::default()
     }
@@ -685,6 +687,7 @@ impl ListTrustStoreCertificatesOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>The tags of the resource.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ListTagsForResourceOutput {
@@ -700,11 +703,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
 
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -729,14 +731,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -747,8 +749,10 @@ impl ListTagsForResourceOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListPortalsOutput {
     /// <p>The portals in the list.</p>
+    #[doc(hidden)]
     pub portals: std::option::Option<std::vec::Vec<crate::model::PortalSummary>>,
     /// <p>The pagination token used to retrieve the next page of results for this operation. </p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListPortalsOutput {
@@ -769,11 +773,10 @@ impl std::fmt::Debug for ListPortalsOutput {
         formatter.finish()
     }
 }
-/// See [`ListPortalsOutput`](crate::output::ListPortalsOutput)
+/// See [`ListPortalsOutput`](crate::output::ListPortalsOutput).
 pub mod list_portals_output {
 
-    /// A builder for [`ListPortalsOutput`](crate::output::ListPortalsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListPortalsOutput`](crate::output::ListPortalsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) portals: std::option::Option<std::vec::Vec<crate::model::PortalSummary>>,
@@ -809,7 +812,7 @@ pub mod list_portals_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPortalsOutput`](crate::output::ListPortalsOutput)
+        /// Consumes the builder and constructs a [`ListPortalsOutput`](crate::output::ListPortalsOutput).
         pub fn build(self) -> crate::output::ListPortalsOutput {
             crate::output::ListPortalsOutput {
                 portals: self.portals,
@@ -819,7 +822,7 @@ pub mod list_portals_output {
     }
 }
 impl ListPortalsOutput {
-    /// Creates a new builder-style object to manufacture [`ListPortalsOutput`](crate::output::ListPortalsOutput)
+    /// Creates a new builder-style object to manufacture [`ListPortalsOutput`](crate::output::ListPortalsOutput).
     pub fn builder() -> crate::output::list_portals_output::Builder {
         crate::output::list_portals_output::Builder::default()
     }
@@ -830,8 +833,10 @@ impl ListPortalsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListNetworkSettingsOutput {
     /// <p>The network settings.</p>
+    #[doc(hidden)]
     pub network_settings: std::option::Option<std::vec::Vec<crate::model::NetworkSettingsSummary>>,
     /// <p>The pagination token used to retrieve the next page of results for this operation.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListNetworkSettingsOutput {
@@ -852,11 +857,10 @@ impl std::fmt::Debug for ListNetworkSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`ListNetworkSettingsOutput`](crate::output::ListNetworkSettingsOutput)
+/// See [`ListNetworkSettingsOutput`](crate::output::ListNetworkSettingsOutput).
 pub mod list_network_settings_output {
 
-    /// A builder for [`ListNetworkSettingsOutput`](crate::output::ListNetworkSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListNetworkSettingsOutput`](crate::output::ListNetworkSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) network_settings:
@@ -893,7 +897,7 @@ pub mod list_network_settings_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListNetworkSettingsOutput`](crate::output::ListNetworkSettingsOutput)
+        /// Consumes the builder and constructs a [`ListNetworkSettingsOutput`](crate::output::ListNetworkSettingsOutput).
         pub fn build(self) -> crate::output::ListNetworkSettingsOutput {
             crate::output::ListNetworkSettingsOutput {
                 network_settings: self.network_settings,
@@ -903,7 +907,7 @@ pub mod list_network_settings_output {
     }
 }
 impl ListNetworkSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`ListNetworkSettingsOutput`](crate::output::ListNetworkSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`ListNetworkSettingsOutput`](crate::output::ListNetworkSettingsOutput).
     pub fn builder() -> crate::output::list_network_settings_output::Builder {
         crate::output::list_network_settings_output::Builder::default()
     }
@@ -914,8 +918,10 @@ impl ListNetworkSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListIdentityProvidersOutput {
     /// <p>The pagination token used to retrieve the next page of results for this operation.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
     /// <p>The identity providers.</p>
+    #[doc(hidden)]
     pub identity_providers:
         std::option::Option<std::vec::Vec<crate::model::IdentityProviderSummary>>,
 }
@@ -939,11 +945,10 @@ impl std::fmt::Debug for ListIdentityProvidersOutput {
         formatter.finish()
     }
 }
-/// See [`ListIdentityProvidersOutput`](crate::output::ListIdentityProvidersOutput)
+/// See [`ListIdentityProvidersOutput`](crate::output::ListIdentityProvidersOutput).
 pub mod list_identity_providers_output {
 
-    /// A builder for [`ListIdentityProvidersOutput`](crate::output::ListIdentityProvidersOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListIdentityProvidersOutput`](crate::output::ListIdentityProvidersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -980,7 +985,7 @@ pub mod list_identity_providers_output {
             self.identity_providers = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListIdentityProvidersOutput`](crate::output::ListIdentityProvidersOutput)
+        /// Consumes the builder and constructs a [`ListIdentityProvidersOutput`](crate::output::ListIdentityProvidersOutput).
         pub fn build(self) -> crate::output::ListIdentityProvidersOutput {
             crate::output::ListIdentityProvidersOutput {
                 next_token: self.next_token,
@@ -990,7 +995,7 @@ pub mod list_identity_providers_output {
     }
 }
 impl ListIdentityProvidersOutput {
-    /// Creates a new builder-style object to manufacture [`ListIdentityProvidersOutput`](crate::output::ListIdentityProvidersOutput)
+    /// Creates a new builder-style object to manufacture [`ListIdentityProvidersOutput`](crate::output::ListIdentityProvidersOutput).
     pub fn builder() -> crate::output::list_identity_providers_output::Builder {
         crate::output::list_identity_providers_output::Builder::default()
     }
@@ -1001,8 +1006,10 @@ impl ListIdentityProvidersOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListBrowserSettingsOutput {
     /// <p>The browser settings.</p>
+    #[doc(hidden)]
     pub browser_settings: std::option::Option<std::vec::Vec<crate::model::BrowserSettingsSummary>>,
     /// <p>The pagination token used to retrieve the next page of results for this operation.</p>
+    #[doc(hidden)]
     pub next_token: std::option::Option<std::string::String>,
 }
 impl ListBrowserSettingsOutput {
@@ -1023,11 +1030,10 @@ impl std::fmt::Debug for ListBrowserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`ListBrowserSettingsOutput`](crate::output::ListBrowserSettingsOutput)
+/// See [`ListBrowserSettingsOutput`](crate::output::ListBrowserSettingsOutput).
 pub mod list_browser_settings_output {
 
-    /// A builder for [`ListBrowserSettingsOutput`](crate::output::ListBrowserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`ListBrowserSettingsOutput`](crate::output::ListBrowserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) browser_settings:
@@ -1064,7 +1070,7 @@ pub mod list_browser_settings_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListBrowserSettingsOutput`](crate::output::ListBrowserSettingsOutput)
+        /// Consumes the builder and constructs a [`ListBrowserSettingsOutput`](crate::output::ListBrowserSettingsOutput).
         pub fn build(self) -> crate::output::ListBrowserSettingsOutput {
             crate::output::ListBrowserSettingsOutput {
                 browser_settings: self.browser_settings,
@@ -1074,7 +1080,7 @@ pub mod list_browser_settings_output {
     }
 }
 impl ListBrowserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`ListBrowserSettingsOutput`](crate::output::ListBrowserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`ListBrowserSettingsOutput`](crate::output::ListBrowserSettingsOutput).
     pub fn builder() -> crate::output::list_browser_settings_output::Builder {
         crate::output::list_browser_settings_output::Builder::default()
     }
@@ -1085,6 +1091,7 @@ impl ListBrowserSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetUserSettingsOutput {
     /// <p>The user settings.</p>
+    #[doc(hidden)]
     pub user_settings: std::option::Option<crate::model::UserSettings>,
 }
 impl GetUserSettingsOutput {
@@ -1100,11 +1107,10 @@ impl std::fmt::Debug for GetUserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`GetUserSettingsOutput`](crate::output::GetUserSettingsOutput)
+/// See [`GetUserSettingsOutput`](crate::output::GetUserSettingsOutput).
 pub mod get_user_settings_output {
 
-    /// A builder for [`GetUserSettingsOutput`](crate::output::GetUserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetUserSettingsOutput`](crate::output::GetUserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_settings: std::option::Option<crate::model::UserSettings>,
@@ -1123,7 +1129,7 @@ pub mod get_user_settings_output {
             self.user_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetUserSettingsOutput`](crate::output::GetUserSettingsOutput)
+        /// Consumes the builder and constructs a [`GetUserSettingsOutput`](crate::output::GetUserSettingsOutput).
         pub fn build(self) -> crate::output::GetUserSettingsOutput {
             crate::output::GetUserSettingsOutput {
                 user_settings: self.user_settings,
@@ -1132,7 +1138,7 @@ pub mod get_user_settings_output {
     }
 }
 impl GetUserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`GetUserSettingsOutput`](crate::output::GetUserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`GetUserSettingsOutput`](crate::output::GetUserSettingsOutput).
     pub fn builder() -> crate::output::get_user_settings_output::Builder {
         crate::output::get_user_settings_output::Builder::default()
     }
@@ -1143,8 +1149,10 @@ impl GetUserSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetTrustStoreCertificateOutput {
     /// <p>The ARN of the trust store certificate.</p>
+    #[doc(hidden)]
     pub trust_store_arn: std::option::Option<std::string::String>,
     /// <p>The certificate of the trust store certificate.</p>
+    #[doc(hidden)]
     pub certificate: std::option::Option<crate::model::Certificate>,
 }
 impl GetTrustStoreCertificateOutput {
@@ -1165,11 +1173,10 @@ impl std::fmt::Debug for GetTrustStoreCertificateOutput {
         formatter.finish()
     }
 }
-/// See [`GetTrustStoreCertificateOutput`](crate::output::GetTrustStoreCertificateOutput)
+/// See [`GetTrustStoreCertificateOutput`](crate::output::GetTrustStoreCertificateOutput).
 pub mod get_trust_store_certificate_output {
 
-    /// A builder for [`GetTrustStoreCertificateOutput`](crate::output::GetTrustStoreCertificateOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetTrustStoreCertificateOutput`](crate::output::GetTrustStoreCertificateOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) trust_store_arn: std::option::Option<std::string::String>,
@@ -1202,7 +1209,7 @@ pub mod get_trust_store_certificate_output {
             self.certificate = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetTrustStoreCertificateOutput`](crate::output::GetTrustStoreCertificateOutput)
+        /// Consumes the builder and constructs a [`GetTrustStoreCertificateOutput`](crate::output::GetTrustStoreCertificateOutput).
         pub fn build(self) -> crate::output::GetTrustStoreCertificateOutput {
             crate::output::GetTrustStoreCertificateOutput {
                 trust_store_arn: self.trust_store_arn,
@@ -1212,7 +1219,7 @@ pub mod get_trust_store_certificate_output {
     }
 }
 impl GetTrustStoreCertificateOutput {
-    /// Creates a new builder-style object to manufacture [`GetTrustStoreCertificateOutput`](crate::output::GetTrustStoreCertificateOutput)
+    /// Creates a new builder-style object to manufacture [`GetTrustStoreCertificateOutput`](crate::output::GetTrustStoreCertificateOutput).
     pub fn builder() -> crate::output::get_trust_store_certificate_output::Builder {
         crate::output::get_trust_store_certificate_output::Builder::default()
     }
@@ -1223,6 +1230,7 @@ impl GetTrustStoreCertificateOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetTrustStoreOutput {
     /// <p>The trust store.</p>
+    #[doc(hidden)]
     pub trust_store: std::option::Option<crate::model::TrustStore>,
 }
 impl GetTrustStoreOutput {
@@ -1238,11 +1246,10 @@ impl std::fmt::Debug for GetTrustStoreOutput {
         formatter.finish()
     }
 }
-/// See [`GetTrustStoreOutput`](crate::output::GetTrustStoreOutput)
+/// See [`GetTrustStoreOutput`](crate::output::GetTrustStoreOutput).
 pub mod get_trust_store_output {
 
-    /// A builder for [`GetTrustStoreOutput`](crate::output::GetTrustStoreOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetTrustStoreOutput`](crate::output::GetTrustStoreOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) trust_store: std::option::Option<crate::model::TrustStore>,
@@ -1261,7 +1268,7 @@ pub mod get_trust_store_output {
             self.trust_store = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetTrustStoreOutput`](crate::output::GetTrustStoreOutput)
+        /// Consumes the builder and constructs a [`GetTrustStoreOutput`](crate::output::GetTrustStoreOutput).
         pub fn build(self) -> crate::output::GetTrustStoreOutput {
             crate::output::GetTrustStoreOutput {
                 trust_store: self.trust_store,
@@ -1270,7 +1277,7 @@ pub mod get_trust_store_output {
     }
 }
 impl GetTrustStoreOutput {
-    /// Creates a new builder-style object to manufacture [`GetTrustStoreOutput`](crate::output::GetTrustStoreOutput)
+    /// Creates a new builder-style object to manufacture [`GetTrustStoreOutput`](crate::output::GetTrustStoreOutput).
     pub fn builder() -> crate::output::get_trust_store_output::Builder {
         crate::output::get_trust_store_output::Builder::default()
     }
@@ -1281,8 +1288,10 @@ impl GetTrustStoreOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetPortalServiceProviderMetadataOutput {
     /// <p>The ARN of the web portal.</p>
+    #[doc(hidden)]
     pub portal_arn: std::option::Option<std::string::String>,
     /// <p>The service provider SAML metadata.</p>
+    #[doc(hidden)]
     pub service_provider_saml_metadata: std::option::Option<std::string::String>,
 }
 impl GetPortalServiceProviderMetadataOutput {
@@ -1306,11 +1315,10 @@ impl std::fmt::Debug for GetPortalServiceProviderMetadataOutput {
         formatter.finish()
     }
 }
-/// See [`GetPortalServiceProviderMetadataOutput`](crate::output::GetPortalServiceProviderMetadataOutput)
+/// See [`GetPortalServiceProviderMetadataOutput`](crate::output::GetPortalServiceProviderMetadataOutput).
 pub mod get_portal_service_provider_metadata_output {
 
-    /// A builder for [`GetPortalServiceProviderMetadataOutput`](crate::output::GetPortalServiceProviderMetadataOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetPortalServiceProviderMetadataOutput`](crate::output::GetPortalServiceProviderMetadataOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) portal_arn: std::option::Option<std::string::String>,
@@ -1343,7 +1351,7 @@ pub mod get_portal_service_provider_metadata_output {
             self.service_provider_saml_metadata = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetPortalServiceProviderMetadataOutput`](crate::output::GetPortalServiceProviderMetadataOutput)
+        /// Consumes the builder and constructs a [`GetPortalServiceProviderMetadataOutput`](crate::output::GetPortalServiceProviderMetadataOutput).
         pub fn build(self) -> crate::output::GetPortalServiceProviderMetadataOutput {
             crate::output::GetPortalServiceProviderMetadataOutput {
                 portal_arn: self.portal_arn,
@@ -1353,7 +1361,7 @@ pub mod get_portal_service_provider_metadata_output {
     }
 }
 impl GetPortalServiceProviderMetadataOutput {
-    /// Creates a new builder-style object to manufacture [`GetPortalServiceProviderMetadataOutput`](crate::output::GetPortalServiceProviderMetadataOutput)
+    /// Creates a new builder-style object to manufacture [`GetPortalServiceProviderMetadataOutput`](crate::output::GetPortalServiceProviderMetadataOutput).
     pub fn builder() -> crate::output::get_portal_service_provider_metadata_output::Builder {
         crate::output::get_portal_service_provider_metadata_output::Builder::default()
     }
@@ -1364,6 +1372,7 @@ impl GetPortalServiceProviderMetadataOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetPortalOutput {
     /// <p>The web portal.</p>
+    #[doc(hidden)]
     pub portal: std::option::Option<crate::model::Portal>,
 }
 impl GetPortalOutput {
@@ -1379,11 +1388,10 @@ impl std::fmt::Debug for GetPortalOutput {
         formatter.finish()
     }
 }
-/// See [`GetPortalOutput`](crate::output::GetPortalOutput)
+/// See [`GetPortalOutput`](crate::output::GetPortalOutput).
 pub mod get_portal_output {
 
-    /// A builder for [`GetPortalOutput`](crate::output::GetPortalOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetPortalOutput`](crate::output::GetPortalOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) portal: std::option::Option<crate::model::Portal>,
@@ -1399,7 +1407,7 @@ pub mod get_portal_output {
             self.portal = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetPortalOutput`](crate::output::GetPortalOutput)
+        /// Consumes the builder and constructs a [`GetPortalOutput`](crate::output::GetPortalOutput).
         pub fn build(self) -> crate::output::GetPortalOutput {
             crate::output::GetPortalOutput {
                 portal: self.portal,
@@ -1408,7 +1416,7 @@ pub mod get_portal_output {
     }
 }
 impl GetPortalOutput {
-    /// Creates a new builder-style object to manufacture [`GetPortalOutput`](crate::output::GetPortalOutput)
+    /// Creates a new builder-style object to manufacture [`GetPortalOutput`](crate::output::GetPortalOutput).
     pub fn builder() -> crate::output::get_portal_output::Builder {
         crate::output::get_portal_output::Builder::default()
     }
@@ -1419,6 +1427,7 @@ impl GetPortalOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetNetworkSettingsOutput {
     /// <p>The network settings.</p>
+    #[doc(hidden)]
     pub network_settings: std::option::Option<crate::model::NetworkSettings>,
 }
 impl GetNetworkSettingsOutput {
@@ -1434,11 +1443,10 @@ impl std::fmt::Debug for GetNetworkSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`GetNetworkSettingsOutput`](crate::output::GetNetworkSettingsOutput)
+/// See [`GetNetworkSettingsOutput`](crate::output::GetNetworkSettingsOutput).
 pub mod get_network_settings_output {
 
-    /// A builder for [`GetNetworkSettingsOutput`](crate::output::GetNetworkSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetNetworkSettingsOutput`](crate::output::GetNetworkSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) network_settings: std::option::Option<crate::model::NetworkSettings>,
@@ -1457,7 +1465,7 @@ pub mod get_network_settings_output {
             self.network_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetNetworkSettingsOutput`](crate::output::GetNetworkSettingsOutput)
+        /// Consumes the builder and constructs a [`GetNetworkSettingsOutput`](crate::output::GetNetworkSettingsOutput).
         pub fn build(self) -> crate::output::GetNetworkSettingsOutput {
             crate::output::GetNetworkSettingsOutput {
                 network_settings: self.network_settings,
@@ -1466,7 +1474,7 @@ pub mod get_network_settings_output {
     }
 }
 impl GetNetworkSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`GetNetworkSettingsOutput`](crate::output::GetNetworkSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`GetNetworkSettingsOutput`](crate::output::GetNetworkSettingsOutput).
     pub fn builder() -> crate::output::get_network_settings_output::Builder {
         crate::output::get_network_settings_output::Builder::default()
     }
@@ -1477,6 +1485,7 @@ impl GetNetworkSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetIdentityProviderOutput {
     /// <p>The identity provider.</p>
+    #[doc(hidden)]
     pub identity_provider: std::option::Option<crate::model::IdentityProvider>,
 }
 impl GetIdentityProviderOutput {
@@ -1492,11 +1501,10 @@ impl std::fmt::Debug for GetIdentityProviderOutput {
         formatter.finish()
     }
 }
-/// See [`GetIdentityProviderOutput`](crate::output::GetIdentityProviderOutput)
+/// See [`GetIdentityProviderOutput`](crate::output::GetIdentityProviderOutput).
 pub mod get_identity_provider_output {
 
-    /// A builder for [`GetIdentityProviderOutput`](crate::output::GetIdentityProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetIdentityProviderOutput`](crate::output::GetIdentityProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_provider: std::option::Option<crate::model::IdentityProvider>,
@@ -1515,7 +1523,7 @@ pub mod get_identity_provider_output {
             self.identity_provider = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetIdentityProviderOutput`](crate::output::GetIdentityProviderOutput)
+        /// Consumes the builder and constructs a [`GetIdentityProviderOutput`](crate::output::GetIdentityProviderOutput).
         pub fn build(self) -> crate::output::GetIdentityProviderOutput {
             crate::output::GetIdentityProviderOutput {
                 identity_provider: self.identity_provider,
@@ -1524,7 +1532,7 @@ pub mod get_identity_provider_output {
     }
 }
 impl GetIdentityProviderOutput {
-    /// Creates a new builder-style object to manufacture [`GetIdentityProviderOutput`](crate::output::GetIdentityProviderOutput)
+    /// Creates a new builder-style object to manufacture [`GetIdentityProviderOutput`](crate::output::GetIdentityProviderOutput).
     pub fn builder() -> crate::output::get_identity_provider_output::Builder {
         crate::output::get_identity_provider_output::Builder::default()
     }
@@ -1535,6 +1543,7 @@ impl GetIdentityProviderOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetBrowserSettingsOutput {
     /// <p>The browser settings.</p>
+    #[doc(hidden)]
     pub browser_settings: std::option::Option<crate::model::BrowserSettings>,
 }
 impl GetBrowserSettingsOutput {
@@ -1550,11 +1559,10 @@ impl std::fmt::Debug for GetBrowserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`GetBrowserSettingsOutput`](crate::output::GetBrowserSettingsOutput)
+/// See [`GetBrowserSettingsOutput`](crate::output::GetBrowserSettingsOutput).
 pub mod get_browser_settings_output {
 
-    /// A builder for [`GetBrowserSettingsOutput`](crate::output::GetBrowserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`GetBrowserSettingsOutput`](crate::output::GetBrowserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) browser_settings: std::option::Option<crate::model::BrowserSettings>,
@@ -1573,7 +1581,7 @@ pub mod get_browser_settings_output {
             self.browser_settings = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetBrowserSettingsOutput`](crate::output::GetBrowserSettingsOutput)
+        /// Consumes the builder and constructs a [`GetBrowserSettingsOutput`](crate::output::GetBrowserSettingsOutput).
         pub fn build(self) -> crate::output::GetBrowserSettingsOutput {
             crate::output::GetBrowserSettingsOutput {
                 browser_settings: self.browser_settings,
@@ -1582,7 +1590,7 @@ pub mod get_browser_settings_output {
     }
 }
 impl GetBrowserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`GetBrowserSettingsOutput`](crate::output::GetBrowserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`GetBrowserSettingsOutput`](crate::output::GetBrowserSettingsOutput).
     pub fn builder() -> crate::output::get_browser_settings_output::Builder {
         crate::output::get_browser_settings_output::Builder::default()
     }
@@ -1598,22 +1606,21 @@ impl std::fmt::Debug for DisassociateUserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateUserSettingsOutput`](crate::output::DisassociateUserSettingsOutput)
+/// See [`DisassociateUserSettingsOutput`](crate::output::DisassociateUserSettingsOutput).
 pub mod disassociate_user_settings_output {
 
-    /// A builder for [`DisassociateUserSettingsOutput`](crate::output::DisassociateUserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateUserSettingsOutput`](crate::output::DisassociateUserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisassociateUserSettingsOutput`](crate::output::DisassociateUserSettingsOutput)
+        /// Consumes the builder and constructs a [`DisassociateUserSettingsOutput`](crate::output::DisassociateUserSettingsOutput).
         pub fn build(self) -> crate::output::DisassociateUserSettingsOutput {
             crate::output::DisassociateUserSettingsOutput {}
         }
     }
 }
 impl DisassociateUserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateUserSettingsOutput`](crate::output::DisassociateUserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateUserSettingsOutput`](crate::output::DisassociateUserSettingsOutput).
     pub fn builder() -> crate::output::disassociate_user_settings_output::Builder {
         crate::output::disassociate_user_settings_output::Builder::default()
     }
@@ -1629,22 +1636,21 @@ impl std::fmt::Debug for DisassociateTrustStoreOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateTrustStoreOutput`](crate::output::DisassociateTrustStoreOutput)
+/// See [`DisassociateTrustStoreOutput`](crate::output::DisassociateTrustStoreOutput).
 pub mod disassociate_trust_store_output {
 
-    /// A builder for [`DisassociateTrustStoreOutput`](crate::output::DisassociateTrustStoreOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateTrustStoreOutput`](crate::output::DisassociateTrustStoreOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisassociateTrustStoreOutput`](crate::output::DisassociateTrustStoreOutput)
+        /// Consumes the builder and constructs a [`DisassociateTrustStoreOutput`](crate::output::DisassociateTrustStoreOutput).
         pub fn build(self) -> crate::output::DisassociateTrustStoreOutput {
             crate::output::DisassociateTrustStoreOutput {}
         }
     }
 }
 impl DisassociateTrustStoreOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateTrustStoreOutput`](crate::output::DisassociateTrustStoreOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateTrustStoreOutput`](crate::output::DisassociateTrustStoreOutput).
     pub fn builder() -> crate::output::disassociate_trust_store_output::Builder {
         crate::output::disassociate_trust_store_output::Builder::default()
     }
@@ -1660,22 +1666,21 @@ impl std::fmt::Debug for DisassociateNetworkSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateNetworkSettingsOutput`](crate::output::DisassociateNetworkSettingsOutput)
+/// See [`DisassociateNetworkSettingsOutput`](crate::output::DisassociateNetworkSettingsOutput).
 pub mod disassociate_network_settings_output {
 
-    /// A builder for [`DisassociateNetworkSettingsOutput`](crate::output::DisassociateNetworkSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateNetworkSettingsOutput`](crate::output::DisassociateNetworkSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisassociateNetworkSettingsOutput`](crate::output::DisassociateNetworkSettingsOutput)
+        /// Consumes the builder and constructs a [`DisassociateNetworkSettingsOutput`](crate::output::DisassociateNetworkSettingsOutput).
         pub fn build(self) -> crate::output::DisassociateNetworkSettingsOutput {
             crate::output::DisassociateNetworkSettingsOutput {}
         }
     }
 }
 impl DisassociateNetworkSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateNetworkSettingsOutput`](crate::output::DisassociateNetworkSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateNetworkSettingsOutput`](crate::output::DisassociateNetworkSettingsOutput).
     pub fn builder() -> crate::output::disassociate_network_settings_output::Builder {
         crate::output::disassociate_network_settings_output::Builder::default()
     }
@@ -1691,22 +1696,21 @@ impl std::fmt::Debug for DisassociateBrowserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateBrowserSettingsOutput`](crate::output::DisassociateBrowserSettingsOutput)
+/// See [`DisassociateBrowserSettingsOutput`](crate::output::DisassociateBrowserSettingsOutput).
 pub mod disassociate_browser_settings_output {
 
-    /// A builder for [`DisassociateBrowserSettingsOutput`](crate::output::DisassociateBrowserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DisassociateBrowserSettingsOutput`](crate::output::DisassociateBrowserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisassociateBrowserSettingsOutput`](crate::output::DisassociateBrowserSettingsOutput)
+        /// Consumes the builder and constructs a [`DisassociateBrowserSettingsOutput`](crate::output::DisassociateBrowserSettingsOutput).
         pub fn build(self) -> crate::output::DisassociateBrowserSettingsOutput {
             crate::output::DisassociateBrowserSettingsOutput {}
         }
     }
 }
 impl DisassociateBrowserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateBrowserSettingsOutput`](crate::output::DisassociateBrowserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateBrowserSettingsOutput`](crate::output::DisassociateBrowserSettingsOutput).
     pub fn builder() -> crate::output::disassociate_browser_settings_output::Builder {
         crate::output::disassociate_browser_settings_output::Builder::default()
     }
@@ -1722,22 +1726,21 @@ impl std::fmt::Debug for DeleteUserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteUserSettingsOutput`](crate::output::DeleteUserSettingsOutput)
+/// See [`DeleteUserSettingsOutput`](crate::output::DeleteUserSettingsOutput).
 pub mod delete_user_settings_output {
 
-    /// A builder for [`DeleteUserSettingsOutput`](crate::output::DeleteUserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteUserSettingsOutput`](crate::output::DeleteUserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteUserSettingsOutput`](crate::output::DeleteUserSettingsOutput)
+        /// Consumes the builder and constructs a [`DeleteUserSettingsOutput`](crate::output::DeleteUserSettingsOutput).
         pub fn build(self) -> crate::output::DeleteUserSettingsOutput {
             crate::output::DeleteUserSettingsOutput {}
         }
     }
 }
 impl DeleteUserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteUserSettingsOutput`](crate::output::DeleteUserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteUserSettingsOutput`](crate::output::DeleteUserSettingsOutput).
     pub fn builder() -> crate::output::delete_user_settings_output::Builder {
         crate::output::delete_user_settings_output::Builder::default()
     }
@@ -1753,22 +1756,21 @@ impl std::fmt::Debug for DeleteTrustStoreOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteTrustStoreOutput`](crate::output::DeleteTrustStoreOutput)
+/// See [`DeleteTrustStoreOutput`](crate::output::DeleteTrustStoreOutput).
 pub mod delete_trust_store_output {
 
-    /// A builder for [`DeleteTrustStoreOutput`](crate::output::DeleteTrustStoreOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteTrustStoreOutput`](crate::output::DeleteTrustStoreOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteTrustStoreOutput`](crate::output::DeleteTrustStoreOutput)
+        /// Consumes the builder and constructs a [`DeleteTrustStoreOutput`](crate::output::DeleteTrustStoreOutput).
         pub fn build(self) -> crate::output::DeleteTrustStoreOutput {
             crate::output::DeleteTrustStoreOutput {}
         }
     }
 }
 impl DeleteTrustStoreOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteTrustStoreOutput`](crate::output::DeleteTrustStoreOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteTrustStoreOutput`](crate::output::DeleteTrustStoreOutput).
     pub fn builder() -> crate::output::delete_trust_store_output::Builder {
         crate::output::delete_trust_store_output::Builder::default()
     }
@@ -1784,22 +1786,21 @@ impl std::fmt::Debug for DeletePortalOutput {
         formatter.finish()
     }
 }
-/// See [`DeletePortalOutput`](crate::output::DeletePortalOutput)
+/// See [`DeletePortalOutput`](crate::output::DeletePortalOutput).
 pub mod delete_portal_output {
 
-    /// A builder for [`DeletePortalOutput`](crate::output::DeletePortalOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeletePortalOutput`](crate::output::DeletePortalOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeletePortalOutput`](crate::output::DeletePortalOutput)
+        /// Consumes the builder and constructs a [`DeletePortalOutput`](crate::output::DeletePortalOutput).
         pub fn build(self) -> crate::output::DeletePortalOutput {
             crate::output::DeletePortalOutput {}
         }
     }
 }
 impl DeletePortalOutput {
-    /// Creates a new builder-style object to manufacture [`DeletePortalOutput`](crate::output::DeletePortalOutput)
+    /// Creates a new builder-style object to manufacture [`DeletePortalOutput`](crate::output::DeletePortalOutput).
     pub fn builder() -> crate::output::delete_portal_output::Builder {
         crate::output::delete_portal_output::Builder::default()
     }
@@ -1815,22 +1816,21 @@ impl std::fmt::Debug for DeleteNetworkSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteNetworkSettingsOutput`](crate::output::DeleteNetworkSettingsOutput)
+/// See [`DeleteNetworkSettingsOutput`](crate::output::DeleteNetworkSettingsOutput).
 pub mod delete_network_settings_output {
 
-    /// A builder for [`DeleteNetworkSettingsOutput`](crate::output::DeleteNetworkSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteNetworkSettingsOutput`](crate::output::DeleteNetworkSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteNetworkSettingsOutput`](crate::output::DeleteNetworkSettingsOutput)
+        /// Consumes the builder and constructs a [`DeleteNetworkSettingsOutput`](crate::output::DeleteNetworkSettingsOutput).
         pub fn build(self) -> crate::output::DeleteNetworkSettingsOutput {
             crate::output::DeleteNetworkSettingsOutput {}
         }
     }
 }
 impl DeleteNetworkSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteNetworkSettingsOutput`](crate::output::DeleteNetworkSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteNetworkSettingsOutput`](crate::output::DeleteNetworkSettingsOutput).
     pub fn builder() -> crate::output::delete_network_settings_output::Builder {
         crate::output::delete_network_settings_output::Builder::default()
     }
@@ -1846,22 +1846,21 @@ impl std::fmt::Debug for DeleteIdentityProviderOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteIdentityProviderOutput`](crate::output::DeleteIdentityProviderOutput)
+/// See [`DeleteIdentityProviderOutput`](crate::output::DeleteIdentityProviderOutput).
 pub mod delete_identity_provider_output {
 
-    /// A builder for [`DeleteIdentityProviderOutput`](crate::output::DeleteIdentityProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteIdentityProviderOutput`](crate::output::DeleteIdentityProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteIdentityProviderOutput`](crate::output::DeleteIdentityProviderOutput)
+        /// Consumes the builder and constructs a [`DeleteIdentityProviderOutput`](crate::output::DeleteIdentityProviderOutput).
         pub fn build(self) -> crate::output::DeleteIdentityProviderOutput {
             crate::output::DeleteIdentityProviderOutput {}
         }
     }
 }
 impl DeleteIdentityProviderOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteIdentityProviderOutput`](crate::output::DeleteIdentityProviderOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteIdentityProviderOutput`](crate::output::DeleteIdentityProviderOutput).
     pub fn builder() -> crate::output::delete_identity_provider_output::Builder {
         crate::output::delete_identity_provider_output::Builder::default()
     }
@@ -1877,22 +1876,21 @@ impl std::fmt::Debug for DeleteBrowserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteBrowserSettingsOutput`](crate::output::DeleteBrowserSettingsOutput)
+/// See [`DeleteBrowserSettingsOutput`](crate::output::DeleteBrowserSettingsOutput).
 pub mod delete_browser_settings_output {
 
-    /// A builder for [`DeleteBrowserSettingsOutput`](crate::output::DeleteBrowserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`DeleteBrowserSettingsOutput`](crate::output::DeleteBrowserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteBrowserSettingsOutput`](crate::output::DeleteBrowserSettingsOutput)
+        /// Consumes the builder and constructs a [`DeleteBrowserSettingsOutput`](crate::output::DeleteBrowserSettingsOutput).
         pub fn build(self) -> crate::output::DeleteBrowserSettingsOutput {
             crate::output::DeleteBrowserSettingsOutput {}
         }
     }
 }
 impl DeleteBrowserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteBrowserSettingsOutput`](crate::output::DeleteBrowserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteBrowserSettingsOutput`](crate::output::DeleteBrowserSettingsOutput).
     pub fn builder() -> crate::output::delete_browser_settings_output::Builder {
         crate::output::delete_browser_settings_output::Builder::default()
     }
@@ -1903,6 +1901,7 @@ impl DeleteBrowserSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateUserSettingsOutput {
     /// <p>The ARN of the user settings.</p>
+    #[doc(hidden)]
     pub user_settings_arn: std::option::Option<std::string::String>,
 }
 impl CreateUserSettingsOutput {
@@ -1918,11 +1917,10 @@ impl std::fmt::Debug for CreateUserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`CreateUserSettingsOutput`](crate::output::CreateUserSettingsOutput)
+/// See [`CreateUserSettingsOutput`](crate::output::CreateUserSettingsOutput).
 pub mod create_user_settings_output {
 
-    /// A builder for [`CreateUserSettingsOutput`](crate::output::CreateUserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateUserSettingsOutput`](crate::output::CreateUserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_settings_arn: std::option::Option<std::string::String>,
@@ -1941,7 +1939,7 @@ pub mod create_user_settings_output {
             self.user_settings_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateUserSettingsOutput`](crate::output::CreateUserSettingsOutput)
+        /// Consumes the builder and constructs a [`CreateUserSettingsOutput`](crate::output::CreateUserSettingsOutput).
         pub fn build(self) -> crate::output::CreateUserSettingsOutput {
             crate::output::CreateUserSettingsOutput {
                 user_settings_arn: self.user_settings_arn,
@@ -1950,7 +1948,7 @@ pub mod create_user_settings_output {
     }
 }
 impl CreateUserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`CreateUserSettingsOutput`](crate::output::CreateUserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`CreateUserSettingsOutput`](crate::output::CreateUserSettingsOutput).
     pub fn builder() -> crate::output::create_user_settings_output::Builder {
         crate::output::create_user_settings_output::Builder::default()
     }
@@ -1961,6 +1959,7 @@ impl CreateUserSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateTrustStoreOutput {
     /// <p>The ARN of the trust store.</p>
+    #[doc(hidden)]
     pub trust_store_arn: std::option::Option<std::string::String>,
 }
 impl CreateTrustStoreOutput {
@@ -1976,11 +1975,10 @@ impl std::fmt::Debug for CreateTrustStoreOutput {
         formatter.finish()
     }
 }
-/// See [`CreateTrustStoreOutput`](crate::output::CreateTrustStoreOutput)
+/// See [`CreateTrustStoreOutput`](crate::output::CreateTrustStoreOutput).
 pub mod create_trust_store_output {
 
-    /// A builder for [`CreateTrustStoreOutput`](crate::output::CreateTrustStoreOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateTrustStoreOutput`](crate::output::CreateTrustStoreOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) trust_store_arn: std::option::Option<std::string::String>,
@@ -1999,7 +1997,7 @@ pub mod create_trust_store_output {
             self.trust_store_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateTrustStoreOutput`](crate::output::CreateTrustStoreOutput)
+        /// Consumes the builder and constructs a [`CreateTrustStoreOutput`](crate::output::CreateTrustStoreOutput).
         pub fn build(self) -> crate::output::CreateTrustStoreOutput {
             crate::output::CreateTrustStoreOutput {
                 trust_store_arn: self.trust_store_arn,
@@ -2008,7 +2006,7 @@ pub mod create_trust_store_output {
     }
 }
 impl CreateTrustStoreOutput {
-    /// Creates a new builder-style object to manufacture [`CreateTrustStoreOutput`](crate::output::CreateTrustStoreOutput)
+    /// Creates a new builder-style object to manufacture [`CreateTrustStoreOutput`](crate::output::CreateTrustStoreOutput).
     pub fn builder() -> crate::output::create_trust_store_output::Builder {
         crate::output::create_trust_store_output::Builder::default()
     }
@@ -2019,8 +2017,10 @@ impl CreateTrustStoreOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreatePortalOutput {
     /// <p>The ARN of the web portal.</p>
+    #[doc(hidden)]
     pub portal_arn: std::option::Option<std::string::String>,
     /// <p>The endpoint URL of the web portal that users access in order to start streaming sessions.</p>
+    #[doc(hidden)]
     pub portal_endpoint: std::option::Option<std::string::String>,
 }
 impl CreatePortalOutput {
@@ -2041,11 +2041,10 @@ impl std::fmt::Debug for CreatePortalOutput {
         formatter.finish()
     }
 }
-/// See [`CreatePortalOutput`](crate::output::CreatePortalOutput)
+/// See [`CreatePortalOutput`](crate::output::CreatePortalOutput).
 pub mod create_portal_output {
 
-    /// A builder for [`CreatePortalOutput`](crate::output::CreatePortalOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreatePortalOutput`](crate::output::CreatePortalOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) portal_arn: std::option::Option<std::string::String>,
@@ -2075,7 +2074,7 @@ pub mod create_portal_output {
             self.portal_endpoint = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreatePortalOutput`](crate::output::CreatePortalOutput)
+        /// Consumes the builder and constructs a [`CreatePortalOutput`](crate::output::CreatePortalOutput).
         pub fn build(self) -> crate::output::CreatePortalOutput {
             crate::output::CreatePortalOutput {
                 portal_arn: self.portal_arn,
@@ -2085,7 +2084,7 @@ pub mod create_portal_output {
     }
 }
 impl CreatePortalOutput {
-    /// Creates a new builder-style object to manufacture [`CreatePortalOutput`](crate::output::CreatePortalOutput)
+    /// Creates a new builder-style object to manufacture [`CreatePortalOutput`](crate::output::CreatePortalOutput).
     pub fn builder() -> crate::output::create_portal_output::Builder {
         crate::output::create_portal_output::Builder::default()
     }
@@ -2096,6 +2095,7 @@ impl CreatePortalOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateNetworkSettingsOutput {
     /// <p>The ARN of the network settings.</p>
+    #[doc(hidden)]
     pub network_settings_arn: std::option::Option<std::string::String>,
 }
 impl CreateNetworkSettingsOutput {
@@ -2111,11 +2111,10 @@ impl std::fmt::Debug for CreateNetworkSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`CreateNetworkSettingsOutput`](crate::output::CreateNetworkSettingsOutput)
+/// See [`CreateNetworkSettingsOutput`](crate::output::CreateNetworkSettingsOutput).
 pub mod create_network_settings_output {
 
-    /// A builder for [`CreateNetworkSettingsOutput`](crate::output::CreateNetworkSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateNetworkSettingsOutput`](crate::output::CreateNetworkSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) network_settings_arn: std::option::Option<std::string::String>,
@@ -2134,7 +2133,7 @@ pub mod create_network_settings_output {
             self.network_settings_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateNetworkSettingsOutput`](crate::output::CreateNetworkSettingsOutput)
+        /// Consumes the builder and constructs a [`CreateNetworkSettingsOutput`](crate::output::CreateNetworkSettingsOutput).
         pub fn build(self) -> crate::output::CreateNetworkSettingsOutput {
             crate::output::CreateNetworkSettingsOutput {
                 network_settings_arn: self.network_settings_arn,
@@ -2143,7 +2142,7 @@ pub mod create_network_settings_output {
     }
 }
 impl CreateNetworkSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`CreateNetworkSettingsOutput`](crate::output::CreateNetworkSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`CreateNetworkSettingsOutput`](crate::output::CreateNetworkSettingsOutput).
     pub fn builder() -> crate::output::create_network_settings_output::Builder {
         crate::output::create_network_settings_output::Builder::default()
     }
@@ -2154,6 +2153,7 @@ impl CreateNetworkSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateIdentityProviderOutput {
     /// <p>The ARN of the identity provider.</p>
+    #[doc(hidden)]
     pub identity_provider_arn: std::option::Option<std::string::String>,
 }
 impl CreateIdentityProviderOutput {
@@ -2169,11 +2169,10 @@ impl std::fmt::Debug for CreateIdentityProviderOutput {
         formatter.finish()
     }
 }
-/// See [`CreateIdentityProviderOutput`](crate::output::CreateIdentityProviderOutput)
+/// See [`CreateIdentityProviderOutput`](crate::output::CreateIdentityProviderOutput).
 pub mod create_identity_provider_output {
 
-    /// A builder for [`CreateIdentityProviderOutput`](crate::output::CreateIdentityProviderOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateIdentityProviderOutput`](crate::output::CreateIdentityProviderOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) identity_provider_arn: std::option::Option<std::string::String>,
@@ -2192,7 +2191,7 @@ pub mod create_identity_provider_output {
             self.identity_provider_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateIdentityProviderOutput`](crate::output::CreateIdentityProviderOutput)
+        /// Consumes the builder and constructs a [`CreateIdentityProviderOutput`](crate::output::CreateIdentityProviderOutput).
         pub fn build(self) -> crate::output::CreateIdentityProviderOutput {
             crate::output::CreateIdentityProviderOutput {
                 identity_provider_arn: self.identity_provider_arn,
@@ -2201,7 +2200,7 @@ pub mod create_identity_provider_output {
     }
 }
 impl CreateIdentityProviderOutput {
-    /// Creates a new builder-style object to manufacture [`CreateIdentityProviderOutput`](crate::output::CreateIdentityProviderOutput)
+    /// Creates a new builder-style object to manufacture [`CreateIdentityProviderOutput`](crate::output::CreateIdentityProviderOutput).
     pub fn builder() -> crate::output::create_identity_provider_output::Builder {
         crate::output::create_identity_provider_output::Builder::default()
     }
@@ -2212,6 +2211,7 @@ impl CreateIdentityProviderOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateBrowserSettingsOutput {
     /// <p>The ARN of the browser settings.</p>
+    #[doc(hidden)]
     pub browser_settings_arn: std::option::Option<std::string::String>,
 }
 impl CreateBrowserSettingsOutput {
@@ -2227,11 +2227,10 @@ impl std::fmt::Debug for CreateBrowserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`CreateBrowserSettingsOutput`](crate::output::CreateBrowserSettingsOutput)
+/// See [`CreateBrowserSettingsOutput`](crate::output::CreateBrowserSettingsOutput).
 pub mod create_browser_settings_output {
 
-    /// A builder for [`CreateBrowserSettingsOutput`](crate::output::CreateBrowserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`CreateBrowserSettingsOutput`](crate::output::CreateBrowserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) browser_settings_arn: std::option::Option<std::string::String>,
@@ -2250,7 +2249,7 @@ pub mod create_browser_settings_output {
             self.browser_settings_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateBrowserSettingsOutput`](crate::output::CreateBrowserSettingsOutput)
+        /// Consumes the builder and constructs a [`CreateBrowserSettingsOutput`](crate::output::CreateBrowserSettingsOutput).
         pub fn build(self) -> crate::output::CreateBrowserSettingsOutput {
             crate::output::CreateBrowserSettingsOutput {
                 browser_settings_arn: self.browser_settings_arn,
@@ -2259,7 +2258,7 @@ pub mod create_browser_settings_output {
     }
 }
 impl CreateBrowserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`CreateBrowserSettingsOutput`](crate::output::CreateBrowserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`CreateBrowserSettingsOutput`](crate::output::CreateBrowserSettingsOutput).
     pub fn builder() -> crate::output::create_browser_settings_output::Builder {
         crate::output::create_browser_settings_output::Builder::default()
     }
@@ -2270,8 +2269,10 @@ impl CreateBrowserSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateUserSettingsOutput {
     /// <p>The ARN of the web portal.</p>
+    #[doc(hidden)]
     pub portal_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the user settings.</p>
+    #[doc(hidden)]
     pub user_settings_arn: std::option::Option<std::string::String>,
 }
 impl AssociateUserSettingsOutput {
@@ -2292,11 +2293,10 @@ impl std::fmt::Debug for AssociateUserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateUserSettingsOutput`](crate::output::AssociateUserSettingsOutput)
+/// See [`AssociateUserSettingsOutput`](crate::output::AssociateUserSettingsOutput).
 pub mod associate_user_settings_output {
 
-    /// A builder for [`AssociateUserSettingsOutput`](crate::output::AssociateUserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateUserSettingsOutput`](crate::output::AssociateUserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) portal_arn: std::option::Option<std::string::String>,
@@ -2326,7 +2326,7 @@ pub mod associate_user_settings_output {
             self.user_settings_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateUserSettingsOutput`](crate::output::AssociateUserSettingsOutput)
+        /// Consumes the builder and constructs a [`AssociateUserSettingsOutput`](crate::output::AssociateUserSettingsOutput).
         pub fn build(self) -> crate::output::AssociateUserSettingsOutput {
             crate::output::AssociateUserSettingsOutput {
                 portal_arn: self.portal_arn,
@@ -2336,7 +2336,7 @@ pub mod associate_user_settings_output {
     }
 }
 impl AssociateUserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateUserSettingsOutput`](crate::output::AssociateUserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateUserSettingsOutput`](crate::output::AssociateUserSettingsOutput).
     pub fn builder() -> crate::output::associate_user_settings_output::Builder {
         crate::output::associate_user_settings_output::Builder::default()
     }
@@ -2347,8 +2347,10 @@ impl AssociateUserSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateTrustStoreOutput {
     /// <p>The ARN of the web portal.</p>
+    #[doc(hidden)]
     pub portal_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the trust store.</p>
+    #[doc(hidden)]
     pub trust_store_arn: std::option::Option<std::string::String>,
 }
 impl AssociateTrustStoreOutput {
@@ -2369,11 +2371,10 @@ impl std::fmt::Debug for AssociateTrustStoreOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateTrustStoreOutput`](crate::output::AssociateTrustStoreOutput)
+/// See [`AssociateTrustStoreOutput`](crate::output::AssociateTrustStoreOutput).
 pub mod associate_trust_store_output {
 
-    /// A builder for [`AssociateTrustStoreOutput`](crate::output::AssociateTrustStoreOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateTrustStoreOutput`](crate::output::AssociateTrustStoreOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) portal_arn: std::option::Option<std::string::String>,
@@ -2403,7 +2404,7 @@ pub mod associate_trust_store_output {
             self.trust_store_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateTrustStoreOutput`](crate::output::AssociateTrustStoreOutput)
+        /// Consumes the builder and constructs a [`AssociateTrustStoreOutput`](crate::output::AssociateTrustStoreOutput).
         pub fn build(self) -> crate::output::AssociateTrustStoreOutput {
             crate::output::AssociateTrustStoreOutput {
                 portal_arn: self.portal_arn,
@@ -2413,7 +2414,7 @@ pub mod associate_trust_store_output {
     }
 }
 impl AssociateTrustStoreOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateTrustStoreOutput`](crate::output::AssociateTrustStoreOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateTrustStoreOutput`](crate::output::AssociateTrustStoreOutput).
     pub fn builder() -> crate::output::associate_trust_store_output::Builder {
         crate::output::associate_trust_store_output::Builder::default()
     }
@@ -2424,8 +2425,10 @@ impl AssociateTrustStoreOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateNetworkSettingsOutput {
     /// <p>The ARN of the web portal.</p>
+    #[doc(hidden)]
     pub portal_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the network settings.</p>
+    #[doc(hidden)]
     pub network_settings_arn: std::option::Option<std::string::String>,
 }
 impl AssociateNetworkSettingsOutput {
@@ -2446,11 +2449,10 @@ impl std::fmt::Debug for AssociateNetworkSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateNetworkSettingsOutput`](crate::output::AssociateNetworkSettingsOutput)
+/// See [`AssociateNetworkSettingsOutput`](crate::output::AssociateNetworkSettingsOutput).
 pub mod associate_network_settings_output {
 
-    /// A builder for [`AssociateNetworkSettingsOutput`](crate::output::AssociateNetworkSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateNetworkSettingsOutput`](crate::output::AssociateNetworkSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) portal_arn: std::option::Option<std::string::String>,
@@ -2480,7 +2482,7 @@ pub mod associate_network_settings_output {
             self.network_settings_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateNetworkSettingsOutput`](crate::output::AssociateNetworkSettingsOutput)
+        /// Consumes the builder and constructs a [`AssociateNetworkSettingsOutput`](crate::output::AssociateNetworkSettingsOutput).
         pub fn build(self) -> crate::output::AssociateNetworkSettingsOutput {
             crate::output::AssociateNetworkSettingsOutput {
                 portal_arn: self.portal_arn,
@@ -2490,7 +2492,7 @@ pub mod associate_network_settings_output {
     }
 }
 impl AssociateNetworkSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateNetworkSettingsOutput`](crate::output::AssociateNetworkSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateNetworkSettingsOutput`](crate::output::AssociateNetworkSettingsOutput).
     pub fn builder() -> crate::output::associate_network_settings_output::Builder {
         crate::output::associate_network_settings_output::Builder::default()
     }
@@ -2501,8 +2503,10 @@ impl AssociateNetworkSettingsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateBrowserSettingsOutput {
     /// <p>The ARN of the web portal.</p>
+    #[doc(hidden)]
     pub portal_arn: std::option::Option<std::string::String>,
     /// <p>The ARN of the browser settings.</p>
+    #[doc(hidden)]
     pub browser_settings_arn: std::option::Option<std::string::String>,
 }
 impl AssociateBrowserSettingsOutput {
@@ -2523,11 +2527,10 @@ impl std::fmt::Debug for AssociateBrowserSettingsOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateBrowserSettingsOutput`](crate::output::AssociateBrowserSettingsOutput)
+/// See [`AssociateBrowserSettingsOutput`](crate::output::AssociateBrowserSettingsOutput).
 pub mod associate_browser_settings_output {
 
-    /// A builder for [`AssociateBrowserSettingsOutput`](crate::output::AssociateBrowserSettingsOutput)
-    #[non_exhaustive]
+    /// A builder for [`AssociateBrowserSettingsOutput`](crate::output::AssociateBrowserSettingsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) portal_arn: std::option::Option<std::string::String>,
@@ -2557,7 +2560,7 @@ pub mod associate_browser_settings_output {
             self.browser_settings_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateBrowserSettingsOutput`](crate::output::AssociateBrowserSettingsOutput)
+        /// Consumes the builder and constructs a [`AssociateBrowserSettingsOutput`](crate::output::AssociateBrowserSettingsOutput).
         pub fn build(self) -> crate::output::AssociateBrowserSettingsOutput {
             crate::output::AssociateBrowserSettingsOutput {
                 portal_arn: self.portal_arn,
@@ -2567,7 +2570,7 @@ pub mod associate_browser_settings_output {
     }
 }
 impl AssociateBrowserSettingsOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateBrowserSettingsOutput`](crate::output::AssociateBrowserSettingsOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateBrowserSettingsOutput`](crate::output::AssociateBrowserSettingsOutput).
     pub fn builder() -> crate::output::associate_browser_settings_output::Builder {
         crate::output::associate_browser_settings_output::Builder::default()
     }

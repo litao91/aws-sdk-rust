@@ -5,12 +5,16 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RetainedMessageSummary {
     /// <p>The topic name to which the retained message was published.</p>
+    #[doc(hidden)]
     pub topic: std::option::Option<std::string::String>,
     /// <p>The size of the retained message's payload in bytes.</p>
+    #[doc(hidden)]
     pub payload_size: i64,
     /// <p>The quality of service (QoS) level used to publish the retained message.</p>
+    #[doc(hidden)]
     pub qos: i32,
     /// <p>The Epoch date and time, in milliseconds, when the retained message was stored by IoT.</p>
+    #[doc(hidden)]
     pub last_modified_time: i64,
 }
 impl RetainedMessageSummary {
@@ -41,11 +45,10 @@ impl std::fmt::Debug for RetainedMessageSummary {
         formatter.finish()
     }
 }
-/// See [`RetainedMessageSummary`](crate::model::RetainedMessageSummary)
+/// See [`RetainedMessageSummary`](crate::model::RetainedMessageSummary).
 pub mod retained_message_summary {
 
-    /// A builder for [`RetainedMessageSummary`](crate::model::RetainedMessageSummary)
-    #[non_exhaustive]
+    /// A builder for [`RetainedMessageSummary`](crate::model::RetainedMessageSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) topic: std::option::Option<std::string::String>,
@@ -94,7 +97,7 @@ pub mod retained_message_summary {
             self.last_modified_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`RetainedMessageSummary`](crate::model::RetainedMessageSummary)
+        /// Consumes the builder and constructs a [`RetainedMessageSummary`](crate::model::RetainedMessageSummary).
         pub fn build(self) -> crate::model::RetainedMessageSummary {
             crate::model::RetainedMessageSummary {
                 topic: self.topic,
@@ -106,7 +109,7 @@ pub mod retained_message_summary {
     }
 }
 impl RetainedMessageSummary {
-    /// Creates a new builder-style object to manufacture [`RetainedMessageSummary`](crate::model::RetainedMessageSummary)
+    /// Creates a new builder-style object to manufacture [`RetainedMessageSummary`](crate::model::RetainedMessageSummary).
     pub fn builder() -> crate::model::retained_message_summary::Builder {
         crate::model::retained_message_summary::Builder::default()
     }

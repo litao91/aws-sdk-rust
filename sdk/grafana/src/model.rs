@@ -5,27 +5,38 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkspaceSummary {
     /// <p>The date that the workspace was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The customer-entered description of the workspace.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The URL endpoint to use to access the Grafana console in the workspace.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The Grafana version that the workspace is running.</p>
+    #[doc(hidden)]
     pub grafana_version: std::option::Option<std::string::String>,
     /// <p>The unique ID of the workspace.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The most recent date that the workspace was modified.</p>
+    #[doc(hidden)]
     pub modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the workspace.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services notification channels that Amazon Managed Grafana can automatically create IAM roles and permissions for, which allows Amazon Managed Grafana to use these channels.</p>
+    #[doc(hidden)]
     pub notification_destinations:
         std::option::Option<std::vec::Vec<crate::model::NotificationDestinationType>>,
     /// <p>The current status of the workspace.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::WorkspaceStatus>,
     /// <p>A structure containing information about the authentication methods used in the workspace.</p>
+    #[doc(hidden)]
     pub authentication: std::option::Option<crate::model::AuthenticationSummary>,
     /// <p>The list of tags associated with the workspace.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -97,11 +108,10 @@ impl std::fmt::Debug for WorkspaceSummary {
         formatter.finish()
     }
 }
-/// See [`WorkspaceSummary`](crate::model::WorkspaceSummary)
+/// See [`WorkspaceSummary`](crate::model::WorkspaceSummary).
 pub mod workspace_summary {
 
-    /// A builder for [`WorkspaceSummary`](crate::model::WorkspaceSummary)
-    #[non_exhaustive]
+    /// A builder for [`WorkspaceSummary`](crate::model::WorkspaceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) created: std::option::Option<aws_smithy_types::DateTime>,
@@ -272,7 +282,7 @@ pub mod workspace_summary {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspaceSummary`](crate::model::WorkspaceSummary)
+        /// Consumes the builder and constructs a [`WorkspaceSummary`](crate::model::WorkspaceSummary).
         pub fn build(self) -> crate::model::WorkspaceSummary {
             crate::model::WorkspaceSummary {
                 created: self.created,
@@ -291,7 +301,7 @@ pub mod workspace_summary {
     }
 }
 impl WorkspaceSummary {
-    /// Creates a new builder-style object to manufacture [`WorkspaceSummary`](crate::model::WorkspaceSummary)
+    /// Creates a new builder-style object to manufacture [`WorkspaceSummary`](crate::model::WorkspaceSummary).
     pub fn builder() -> crate::model::workspace_summary::Builder {
         crate::model::workspace_summary::Builder::default()
     }
@@ -302,8 +312,10 @@ impl WorkspaceSummary {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuthenticationSummary {
     /// <p>Specifies whether the workspace uses SAML, Amazon Web Services SSO, or both methods for user authentication.</p>
+    #[doc(hidden)]
     pub providers: std::option::Option<std::vec::Vec<crate::model::AuthenticationProviderTypes>>,
     /// <p>Specifies whether the workplace's user authentication method is fully configured.</p>
+    #[doc(hidden)]
     pub saml_configuration_status: std::option::Option<crate::model::SamlConfigurationStatus>,
 }
 impl AuthenticationSummary {
@@ -326,11 +338,10 @@ impl std::fmt::Debug for AuthenticationSummary {
         formatter.finish()
     }
 }
-/// See [`AuthenticationSummary`](crate::model::AuthenticationSummary)
+/// See [`AuthenticationSummary`](crate::model::AuthenticationSummary).
 pub mod authentication_summary {
 
-    /// A builder for [`AuthenticationSummary`](crate::model::AuthenticationSummary)
-    #[non_exhaustive]
+    /// A builder for [`AuthenticationSummary`](crate::model::AuthenticationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) providers:
@@ -374,7 +385,7 @@ pub mod authentication_summary {
             self.saml_configuration_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthenticationSummary`](crate::model::AuthenticationSummary)
+        /// Consumes the builder and constructs a [`AuthenticationSummary`](crate::model::AuthenticationSummary).
         pub fn build(self) -> crate::model::AuthenticationSummary {
             crate::model::AuthenticationSummary {
                 providers: self.providers,
@@ -384,7 +395,7 @@ pub mod authentication_summary {
     }
 }
 impl AuthenticationSummary {
-    /// Creates a new builder-style object to manufacture [`AuthenticationSummary`](crate::model::AuthenticationSummary)
+    /// Creates a new builder-style object to manufacture [`AuthenticationSummary`](crate::model::AuthenticationSummary).
     pub fn builder() -> crate::model::authentication_summary::Builder {
         crate::model::authentication_summary::Builder::default()
     }
@@ -659,8 +670,10 @@ impl AsRef<str> for NotificationDestinationType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ValidationExceptionField {
     /// <p>The name of the field that caused the validation error.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>A message describing why this field couldn't be validated.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
 }
 impl ValidationExceptionField {
@@ -681,11 +694,10 @@ impl std::fmt::Debug for ValidationExceptionField {
         formatter.finish()
     }
 }
-/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+/// See [`ValidationExceptionField`](crate::model::ValidationExceptionField).
 pub mod validation_exception_field {
 
-    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField)
-    #[non_exhaustive]
+    /// A builder for [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -712,7 +724,7 @@ pub mod validation_exception_field {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+        /// Consumes the builder and constructs a [`ValidationExceptionField`](crate::model::ValidationExceptionField).
         pub fn build(self) -> crate::model::ValidationExceptionField {
             crate::model::ValidationExceptionField {
                 name: self.name,
@@ -722,7 +734,7 @@ pub mod validation_exception_field {
     }
 }
 impl ValidationExceptionField {
-    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField)
+    /// Creates a new builder-style object to manufacture [`ValidationExceptionField`](crate::model::ValidationExceptionField).
     pub fn builder() -> crate::model::validation_exception_field::Builder {
         crate::model::validation_exception_field::Builder::default()
     }
@@ -801,51 +813,73 @@ impl AsRef<str> for ValidationExceptionReason {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkspaceDescription {
     /// <p>Specifies whether the workspace can access Amazon Web Services resources in this Amazon Web Services account only, or whether it can also access Amazon Web Services resources in other accounts in the same organization. If this is <code>ORGANIZATION</code>, the <code>workspaceOrganizationalUnits</code> parameter specifies which organizational units the workspace can access.</p>
+    #[doc(hidden)]
     pub account_access_type: std::option::Option<crate::model::AccountAccessType>,
     /// <p>The date that the workspace was created.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the Amazon Web Services data sources that have been configured to have IAM roles and permissions created to allow Amazon Managed Grafana to read data from these sources.</p>
+    #[doc(hidden)]
     pub data_sources: std::option::Option<std::vec::Vec<crate::model::DataSourceType>>,
     /// <p>The user-defined description of the workspace.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The URL that users can use to access the Grafana console in the workspace.</p>
+    #[doc(hidden)]
     pub endpoint: std::option::Option<std::string::String>,
     /// <p>The version of Grafana supported in this workspace.</p>
+    #[doc(hidden)]
     pub grafana_version: std::option::Option<std::string::String>,
     /// <p>The unique ID of this workspace.</p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>The most recent date that the workspace was modified.</p>
+    #[doc(hidden)]
     pub modified: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The name of the workspace.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The name of the IAM role that is used to access resources through Organizations.</p>
+    #[doc(hidden)]
     pub organization_role_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Web Services notification channels that Amazon Managed Grafana can automatically create IAM roles and permissions for, to allow Amazon Managed Grafana to use these channels.</p>
+    #[doc(hidden)]
     pub notification_destinations:
         std::option::Option<std::vec::Vec<crate::model::NotificationDestinationType>>,
     /// <p>Specifies the organizational units that this workspace is allowed to use data sources from, if this workspace is in an account that is part of an organization.</p>
+    #[doc(hidden)]
     pub organizational_units: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>If this is <code>Service Managed</code>, Amazon Managed Grafana automatically creates the IAM roles and provisions the permissions that the workspace needs to use Amazon Web Services data sources and notification channels.</p>
     /// <p>If this is <code>CUSTOMER_MANAGED</code>, you manage those roles and permissions yourself. If you are creating this workspace in a member account of an organization and that account is not a delegated administrator account, and you want the workspace to access data sources in other Amazon Web Services accounts in the organization, you must choose <code>CUSTOMER_MANAGED</code>.</p>
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/grafana/latest/userguide/AMG-manage-permissions.html">Amazon Managed Grafana permissions and policies for Amazon Web Services data sources and notification channels</a> </p>
+    #[doc(hidden)]
     pub permission_type: std::option::Option<crate::model::PermissionType>,
     /// <p>The name of the CloudFormation stack set that is used to generate IAM roles to be used for this workspace.</p>
+    #[doc(hidden)]
     pub stack_set_name: std::option::Option<std::string::String>,
     /// <p>The current status of the workspace.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::WorkspaceStatus>,
     /// <p>The IAM role that grants permissions to the Amazon Web Services resources that the workspace will view data from. This role must already exist.</p>
+    #[doc(hidden)]
     pub workspace_role_arn: std::option::Option<std::string::String>,
     /// <p>Specifies whether this workspace has a full Grafana Enterprise license or a free trial license.</p>
+    #[doc(hidden)]
     pub license_type: std::option::Option<crate::model::LicenseType>,
     /// <p>Specifies whether this workspace has already fully used its free trial for Grafana Enterprise.</p>
+    #[doc(hidden)]
     pub free_trial_consumed: std::option::Option<bool>,
     /// <p>If this workspace has a full Grafana Enterprise license, this specifies when the license ends and will need to be renewed.</p>
+    #[doc(hidden)]
     pub license_expiration: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>If this workspace is currently in the free trial period for Grafana Enterprise, this value specifies when that free trial ends.</p>
+    #[doc(hidden)]
     pub free_trial_expiration: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A structure that describes whether the workspace uses SAML, Amazon Web Services SSO, or both methods for user authentication.</p>
+    #[doc(hidden)]
     pub authentication: std::option::Option<crate::model::AuthenticationSummary>,
     /// <p>The list of tags associated with the workspace.</p>
+    #[doc(hidden)]
     pub tags:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -974,11 +1008,10 @@ impl std::fmt::Debug for WorkspaceDescription {
         formatter.finish()
     }
 }
-/// See [`WorkspaceDescription`](crate::model::WorkspaceDescription)
+/// See [`WorkspaceDescription`](crate::model::WorkspaceDescription).
 pub mod workspace_description {
 
-    /// A builder for [`WorkspaceDescription`](crate::model::WorkspaceDescription)
-    #[non_exhaustive]
+    /// A builder for [`WorkspaceDescription`](crate::model::WorkspaceDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_access_type: std::option::Option<crate::model::AccountAccessType>,
@@ -1316,7 +1349,7 @@ pub mod workspace_description {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspaceDescription`](crate::model::WorkspaceDescription)
+        /// Consumes the builder and constructs a [`WorkspaceDescription`](crate::model::WorkspaceDescription).
         pub fn build(self) -> crate::model::WorkspaceDescription {
             crate::model::WorkspaceDescription {
                 account_access_type: self.account_access_type,
@@ -1346,7 +1379,7 @@ pub mod workspace_description {
     }
 }
 impl WorkspaceDescription {
-    /// Creates a new builder-style object to manufacture [`WorkspaceDescription`](crate::model::WorkspaceDescription)
+    /// Creates a new builder-style object to manufacture [`WorkspaceDescription`](crate::model::WorkspaceDescription).
     pub fn builder() -> crate::model::workspace_description::Builder {
         crate::model::workspace_description::Builder::default()
     }
@@ -1610,10 +1643,13 @@ impl AsRef<str> for AccountAccessType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateError {
     /// <p>The error code.</p>
+    #[doc(hidden)]
     pub code: std::option::Option<i32>,
     /// <p>The message for this error.</p>
+    #[doc(hidden)]
     pub message: std::option::Option<std::string::String>,
     /// <p>Specifies which permission update caused the error.</p>
+    #[doc(hidden)]
     pub caused_by: std::option::Option<crate::model::UpdateInstruction>,
 }
 impl UpdateError {
@@ -1639,11 +1675,10 @@ impl std::fmt::Debug for UpdateError {
         formatter.finish()
     }
 }
-/// See [`UpdateError`](crate::model::UpdateError)
+/// See [`UpdateError`](crate::model::UpdateError).
 pub mod update_error {
 
-    /// A builder for [`UpdateError`](crate::model::UpdateError)
-    #[non_exhaustive]
+    /// A builder for [`UpdateError`](crate::model::UpdateError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<i32>,
@@ -1684,7 +1719,7 @@ pub mod update_error {
             self.caused_by = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateError`](crate::model::UpdateError)
+        /// Consumes the builder and constructs a [`UpdateError`](crate::model::UpdateError).
         pub fn build(self) -> crate::model::UpdateError {
             crate::model::UpdateError {
                 code: self.code,
@@ -1695,7 +1730,7 @@ pub mod update_error {
     }
 }
 impl UpdateError {
-    /// Creates a new builder-style object to manufacture [`UpdateError`](crate::model::UpdateError)
+    /// Creates a new builder-style object to manufacture [`UpdateError`](crate::model::UpdateError).
     pub fn builder() -> crate::model::update_error::Builder {
         crate::model::update_error::Builder::default()
     }
@@ -1706,10 +1741,13 @@ impl UpdateError {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateInstruction {
     /// <p>Specifies whether this update is to add or revoke role permissions.</p>
+    #[doc(hidden)]
     pub action: std::option::Option<crate::model::UpdateAction>,
     /// <p>The role to add or revoke for the user or the group specified in <code>users</code>.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<crate::model::Role>,
     /// <p>A structure that specifies the user or group to add or revoke the role for.</p>
+    #[doc(hidden)]
     pub users: std::option::Option<std::vec::Vec<crate::model::User>>,
 }
 impl UpdateInstruction {
@@ -1735,11 +1773,10 @@ impl std::fmt::Debug for UpdateInstruction {
         formatter.finish()
     }
 }
-/// See [`UpdateInstruction`](crate::model::UpdateInstruction)
+/// See [`UpdateInstruction`](crate::model::UpdateInstruction).
 pub mod update_instruction {
 
-    /// A builder for [`UpdateInstruction`](crate::model::UpdateInstruction)
-    #[non_exhaustive]
+    /// A builder for [`UpdateInstruction`](crate::model::UpdateInstruction).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::UpdateAction>,
@@ -1789,7 +1826,7 @@ pub mod update_instruction {
             self.users = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateInstruction`](crate::model::UpdateInstruction)
+        /// Consumes the builder and constructs a [`UpdateInstruction`](crate::model::UpdateInstruction).
         pub fn build(self) -> crate::model::UpdateInstruction {
             crate::model::UpdateInstruction {
                 action: self.action,
@@ -1800,7 +1837,7 @@ pub mod update_instruction {
     }
 }
 impl UpdateInstruction {
-    /// Creates a new builder-style object to manufacture [`UpdateInstruction`](crate::model::UpdateInstruction)
+    /// Creates a new builder-style object to manufacture [`UpdateInstruction`](crate::model::UpdateInstruction).
     pub fn builder() -> crate::model::update_instruction::Builder {
         crate::model::update_instruction::Builder::default()
     }
@@ -1812,8 +1849,10 @@ impl UpdateInstruction {
 pub struct User {
     /// <p>The ID of the user or group.</p>
     /// <p>Pattern: <code>^([0-9a-fA-F]{10}-|)[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}$</code> </p>
+    #[doc(hidden)]
     pub id: std::option::Option<std::string::String>,
     /// <p>Specifies whether this is a single user or a group.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::UserType>,
 }
 impl User {
@@ -1835,11 +1874,10 @@ impl std::fmt::Debug for User {
         formatter.finish()
     }
 }
-/// See [`User`](crate::model::User)
+/// See [`User`](crate::model::User).
 pub mod user {
 
-    /// A builder for [`User`](crate::model::User)
-    #[non_exhaustive]
+    /// A builder for [`User`](crate::model::User).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1868,7 +1906,7 @@ pub mod user {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`User`](crate::model::User)
+        /// Consumes the builder and constructs a [`User`](crate::model::User).
         pub fn build(self) -> crate::model::User {
             crate::model::User {
                 id: self.id,
@@ -1878,7 +1916,7 @@ pub mod user {
     }
 }
 impl User {
-    /// Creates a new builder-style object to manufacture [`User`](crate::model::User)
+    /// Creates a new builder-style object to manufacture [`User`](crate::model::User).
     pub fn builder() -> crate::model::user::Builder {
         crate::model::user::Builder::default()
     }
@@ -2058,8 +2096,10 @@ impl AsRef<str> for UpdateAction {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PermissionEntry {
     /// <p>A structure with the ID of the user or group with this role.</p>
+    #[doc(hidden)]
     pub user: std::option::Option<crate::model::User>,
     /// <p>Specifies whether the user or group has the <code>Admin</code> or <code>Editor</code> role.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<crate::model::Role>,
 }
 impl PermissionEntry {
@@ -2080,11 +2120,10 @@ impl std::fmt::Debug for PermissionEntry {
         formatter.finish()
     }
 }
-/// See [`PermissionEntry`](crate::model::PermissionEntry)
+/// See [`PermissionEntry`](crate::model::PermissionEntry).
 pub mod permission_entry {
 
-    /// A builder for [`PermissionEntry`](crate::model::PermissionEntry)
-    #[non_exhaustive]
+    /// A builder for [`PermissionEntry`](crate::model::PermissionEntry).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user: std::option::Option<crate::model::User>,
@@ -2111,7 +2150,7 @@ pub mod permission_entry {
             self.role = input;
             self
         }
-        /// Consumes the builder and constructs a [`PermissionEntry`](crate::model::PermissionEntry)
+        /// Consumes the builder and constructs a [`PermissionEntry`](crate::model::PermissionEntry).
         pub fn build(self) -> crate::model::PermissionEntry {
             crate::model::PermissionEntry {
                 user: self.user,
@@ -2121,7 +2160,7 @@ pub mod permission_entry {
     }
 }
 impl PermissionEntry {
-    /// Creates a new builder-style object to manufacture [`PermissionEntry`](crate::model::PermissionEntry)
+    /// Creates a new builder-style object to manufacture [`PermissionEntry`](crate::model::PermissionEntry).
     pub fn builder() -> crate::model::permission_entry::Builder {
         crate::model::permission_entry::Builder::default()
     }
@@ -2132,10 +2171,13 @@ impl PermissionEntry {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AuthenticationDescription {
     /// <p>Specifies whether this workspace uses Amazon Web Services SSO, SAML, or both methods to authenticate users to use the Grafana console in the Amazon Managed Grafana workspace.</p>
+    #[doc(hidden)]
     pub providers: std::option::Option<std::vec::Vec<crate::model::AuthenticationProviderTypes>>,
     /// <p>A structure containing information about how this workspace works with SAML, including what attributes within the assertion are to be mapped to user information in the workspace. </p>
+    #[doc(hidden)]
     pub saml: std::option::Option<crate::model::SamlAuthentication>,
     /// <p>A structure containing information about how this workspace works with Amazon Web Services SSO. </p>
+    #[doc(hidden)]
     pub aws_sso: std::option::Option<crate::model::AwsSsoAuthentication>,
 }
 impl AuthenticationDescription {
@@ -2161,11 +2203,10 @@ impl std::fmt::Debug for AuthenticationDescription {
         formatter.finish()
     }
 }
-/// See [`AuthenticationDescription`](crate::model::AuthenticationDescription)
+/// See [`AuthenticationDescription`](crate::model::AuthenticationDescription).
 pub mod authentication_description {
 
-    /// A builder for [`AuthenticationDescription`](crate::model::AuthenticationDescription)
-    #[non_exhaustive]
+    /// A builder for [`AuthenticationDescription`](crate::model::AuthenticationDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) providers:
@@ -2219,7 +2260,7 @@ pub mod authentication_description {
             self.aws_sso = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthenticationDescription`](crate::model::AuthenticationDescription)
+        /// Consumes the builder and constructs a [`AuthenticationDescription`](crate::model::AuthenticationDescription).
         pub fn build(self) -> crate::model::AuthenticationDescription {
             crate::model::AuthenticationDescription {
                 providers: self.providers,
@@ -2230,7 +2271,7 @@ pub mod authentication_description {
     }
 }
 impl AuthenticationDescription {
-    /// Creates a new builder-style object to manufacture [`AuthenticationDescription`](crate::model::AuthenticationDescription)
+    /// Creates a new builder-style object to manufacture [`AuthenticationDescription`](crate::model::AuthenticationDescription).
     pub fn builder() -> crate::model::authentication_description::Builder {
         crate::model::authentication_description::Builder::default()
     }
@@ -2241,6 +2282,7 @@ impl AuthenticationDescription {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AwsSsoAuthentication {
     /// <p>The ID of the Amazon Web Services SSO-managed application that is created by Amazon Managed Grafana.</p>
+    #[doc(hidden)]
     pub sso_client_id: std::option::Option<std::string::String>,
 }
 impl AwsSsoAuthentication {
@@ -2256,11 +2298,10 @@ impl std::fmt::Debug for AwsSsoAuthentication {
         formatter.finish()
     }
 }
-/// See [`AwsSsoAuthentication`](crate::model::AwsSsoAuthentication)
+/// See [`AwsSsoAuthentication`](crate::model::AwsSsoAuthentication).
 pub mod aws_sso_authentication {
 
-    /// A builder for [`AwsSsoAuthentication`](crate::model::AwsSsoAuthentication)
-    #[non_exhaustive]
+    /// A builder for [`AwsSsoAuthentication`](crate::model::AwsSsoAuthentication).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sso_client_id: std::option::Option<std::string::String>,
@@ -2279,7 +2320,7 @@ pub mod aws_sso_authentication {
             self.sso_client_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`AwsSsoAuthentication`](crate::model::AwsSsoAuthentication)
+        /// Consumes the builder and constructs a [`AwsSsoAuthentication`](crate::model::AwsSsoAuthentication).
         pub fn build(self) -> crate::model::AwsSsoAuthentication {
             crate::model::AwsSsoAuthentication {
                 sso_client_id: self.sso_client_id,
@@ -2288,7 +2329,7 @@ pub mod aws_sso_authentication {
     }
 }
 impl AwsSsoAuthentication {
-    /// Creates a new builder-style object to manufacture [`AwsSsoAuthentication`](crate::model::AwsSsoAuthentication)
+    /// Creates a new builder-style object to manufacture [`AwsSsoAuthentication`](crate::model::AwsSsoAuthentication).
     pub fn builder() -> crate::model::aws_sso_authentication::Builder {
         crate::model::aws_sso_authentication::Builder::default()
     }
@@ -2299,8 +2340,10 @@ impl AwsSsoAuthentication {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SamlAuthentication {
     /// <p>Specifies whether the workspace's SAML configuration is complete.</p>
+    #[doc(hidden)]
     pub status: std::option::Option<crate::model::SamlConfigurationStatus>,
     /// <p>A structure containing details about how this workspace works with SAML. </p>
+    #[doc(hidden)]
     pub configuration: std::option::Option<crate::model::SamlConfiguration>,
 }
 impl SamlAuthentication {
@@ -2321,11 +2364,10 @@ impl std::fmt::Debug for SamlAuthentication {
         formatter.finish()
     }
 }
-/// See [`SamlAuthentication`](crate::model::SamlAuthentication)
+/// See [`SamlAuthentication`](crate::model::SamlAuthentication).
 pub mod saml_authentication {
 
-    /// A builder for [`SamlAuthentication`](crate::model::SamlAuthentication)
-    #[non_exhaustive]
+    /// A builder for [`SamlAuthentication`](crate::model::SamlAuthentication).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::SamlConfigurationStatus>,
@@ -2358,7 +2400,7 @@ pub mod saml_authentication {
             self.configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`SamlAuthentication`](crate::model::SamlAuthentication)
+        /// Consumes the builder and constructs a [`SamlAuthentication`](crate::model::SamlAuthentication).
         pub fn build(self) -> crate::model::SamlAuthentication {
             crate::model::SamlAuthentication {
                 status: self.status,
@@ -2368,7 +2410,7 @@ pub mod saml_authentication {
     }
 }
 impl SamlAuthentication {
-    /// Creates a new builder-style object to manufacture [`SamlAuthentication`](crate::model::SamlAuthentication)
+    /// Creates a new builder-style object to manufacture [`SamlAuthentication`](crate::model::SamlAuthentication).
     pub fn builder() -> crate::model::saml_authentication::Builder {
         crate::model::saml_authentication::Builder::default()
     }
@@ -2379,14 +2421,19 @@ impl SamlAuthentication {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SamlConfiguration {
     /// <p>A structure containing the identity provider (IdP) metadata used to integrate the identity provider with this workspace.</p>
+    #[doc(hidden)]
     pub idp_metadata: std::option::Option<crate::model::IdpMetadata>,
     /// <p>A structure that defines which attributes in the SAML assertion are to be used to define information about the users authenticated by that IdP to use the workspace.</p>
+    #[doc(hidden)]
     pub assertion_attributes: std::option::Option<crate::model::AssertionAttributes>,
     /// <p>A structure containing arrays that map group names in the SAML assertion to the Grafana <code>Admin</code> and <code>Editor</code> roles in the workspace.</p>
+    #[doc(hidden)]
     pub role_values: std::option::Option<crate::model::RoleValues>,
     /// <p>Lists which organizations defined in the SAML assertion are allowed to use the Amazon Managed Grafana workspace. If this is empty, all organizations in the assertion attribute have access.</p>
+    #[doc(hidden)]
     pub allowed_organizations: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>How long a sign-on session by a SAML user is valid, before the user has to sign on again.</p>
+    #[doc(hidden)]
     pub login_validity_duration: i32,
 }
 impl SamlConfiguration {
@@ -2422,11 +2469,10 @@ impl std::fmt::Debug for SamlConfiguration {
         formatter.finish()
     }
 }
-/// See [`SamlConfiguration`](crate::model::SamlConfiguration)
+/// See [`SamlConfiguration`](crate::model::SamlConfiguration).
 pub mod saml_configuration {
 
-    /// A builder for [`SamlConfiguration`](crate::model::SamlConfiguration)
-    #[non_exhaustive]
+    /// A builder for [`SamlConfiguration`](crate::model::SamlConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) idp_metadata: std::option::Option<crate::model::IdpMetadata>,
@@ -2504,7 +2550,7 @@ pub mod saml_configuration {
             self.login_validity_duration = input;
             self
         }
-        /// Consumes the builder and constructs a [`SamlConfiguration`](crate::model::SamlConfiguration)
+        /// Consumes the builder and constructs a [`SamlConfiguration`](crate::model::SamlConfiguration).
         pub fn build(self) -> crate::model::SamlConfiguration {
             crate::model::SamlConfiguration {
                 idp_metadata: self.idp_metadata,
@@ -2517,7 +2563,7 @@ pub mod saml_configuration {
     }
 }
 impl SamlConfiguration {
-    /// Creates a new builder-style object to manufacture [`SamlConfiguration`](crate::model::SamlConfiguration)
+    /// Creates a new builder-style object to manufacture [`SamlConfiguration`](crate::model::SamlConfiguration).
     pub fn builder() -> crate::model::saml_configuration::Builder {
         crate::model::saml_configuration::Builder::default()
     }
@@ -2528,8 +2574,10 @@ impl SamlConfiguration {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RoleValues {
     /// <p>A list of groups from the SAML assertion attribute to grant the Grafana <code>Editor</code> role to.</p>
+    #[doc(hidden)]
     pub editor: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>A list of groups from the SAML assertion attribute to grant the Grafana <code>Admin</code> role to.</p>
+    #[doc(hidden)]
     pub admin: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl RoleValues {
@@ -2550,11 +2598,10 @@ impl std::fmt::Debug for RoleValues {
         formatter.finish()
     }
 }
-/// See [`RoleValues`](crate::model::RoleValues)
+/// See [`RoleValues`](crate::model::RoleValues).
 pub mod role_values {
 
-    /// A builder for [`RoleValues`](crate::model::RoleValues)
-    #[non_exhaustive]
+    /// A builder for [`RoleValues`](crate::model::RoleValues).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) editor: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2599,7 +2646,7 @@ pub mod role_values {
             self.admin = input;
             self
         }
-        /// Consumes the builder and constructs a [`RoleValues`](crate::model::RoleValues)
+        /// Consumes the builder and constructs a [`RoleValues`](crate::model::RoleValues).
         pub fn build(self) -> crate::model::RoleValues {
             crate::model::RoleValues {
                 editor: self.editor,
@@ -2609,7 +2656,7 @@ pub mod role_values {
     }
 }
 impl RoleValues {
-    /// Creates a new builder-style object to manufacture [`RoleValues`](crate::model::RoleValues)
+    /// Creates a new builder-style object to manufacture [`RoleValues`](crate::model::RoleValues).
     pub fn builder() -> crate::model::role_values::Builder {
         crate::model::role_values::Builder::default()
     }
@@ -2620,16 +2667,22 @@ impl RoleValues {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssertionAttributes {
     /// <p>The name of the attribute within the SAML assertion to use as the user full "friendly" names for SAML users.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The name of the attribute within the SAML assertion to use as the login names for SAML users.</p>
+    #[doc(hidden)]
     pub login: std::option::Option<std::string::String>,
     /// <p>The name of the attribute within the SAML assertion to use as the email names for SAML users.</p>
+    #[doc(hidden)]
     pub email: std::option::Option<std::string::String>,
     /// <p>The name of the attribute within the SAML assertion to use as the user full "friendly" names for user groups.</p>
+    #[doc(hidden)]
     pub groups: std::option::Option<std::string::String>,
     /// <p>The name of the attribute within the SAML assertion to use as the user roles.</p>
+    #[doc(hidden)]
     pub role: std::option::Option<std::string::String>,
     /// <p>The name of the attribute within the SAML assertion to use as the user full "friendly" names for the users' organizations.</p>
+    #[doc(hidden)]
     pub org: std::option::Option<std::string::String>,
 }
 impl AssertionAttributes {
@@ -2670,11 +2723,10 @@ impl std::fmt::Debug for AssertionAttributes {
         formatter.finish()
     }
 }
-/// See [`AssertionAttributes`](crate::model::AssertionAttributes)
+/// See [`AssertionAttributes`](crate::model::AssertionAttributes).
 pub mod assertion_attributes {
 
-    /// A builder for [`AssertionAttributes`](crate::model::AssertionAttributes)
-    #[non_exhaustive]
+    /// A builder for [`AssertionAttributes`](crate::model::AssertionAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2745,7 +2797,7 @@ pub mod assertion_attributes {
             self.org = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssertionAttributes`](crate::model::AssertionAttributes)
+        /// Consumes the builder and constructs a [`AssertionAttributes`](crate::model::AssertionAttributes).
         pub fn build(self) -> crate::model::AssertionAttributes {
             crate::model::AssertionAttributes {
                 name: self.name,
@@ -2759,7 +2811,7 @@ pub mod assertion_attributes {
     }
 }
 impl AssertionAttributes {
-    /// Creates a new builder-style object to manufacture [`AssertionAttributes`](crate::model::AssertionAttributes)
+    /// Creates a new builder-style object to manufacture [`AssertionAttributes`](crate::model::AssertionAttributes).
     pub fn builder() -> crate::model::assertion_attributes::Builder {
         crate::model::assertion_attributes::Builder::default()
     }

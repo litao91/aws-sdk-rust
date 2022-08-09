@@ -5,8 +5,10 @@
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IpRuleItem {
     /// <p>The IP address range, in CIDR notation.</p>
+    #[doc(hidden)]
     pub ip_rule: std::option::Option<std::string::String>,
     /// <p>The description.</p>
+    #[doc(hidden)]
     pub rule_desc: std::option::Option<std::string::String>,
 }
 impl IpRuleItem {
@@ -27,11 +29,10 @@ impl std::fmt::Debug for IpRuleItem {
         formatter.finish()
     }
 }
-/// See [`IpRuleItem`](crate::model::IpRuleItem)
+/// See [`IpRuleItem`](crate::model::IpRuleItem).
 pub mod ip_rule_item {
 
-    /// A builder for [`IpRuleItem`](crate::model::IpRuleItem)
-    #[non_exhaustive]
+    /// A builder for [`IpRuleItem`](crate::model::IpRuleItem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_rule: std::option::Option<std::string::String>,
@@ -58,7 +59,7 @@ pub mod ip_rule_item {
             self.rule_desc = input;
             self
         }
-        /// Consumes the builder and constructs a [`IpRuleItem`](crate::model::IpRuleItem)
+        /// Consumes the builder and constructs a [`IpRuleItem`](crate::model::IpRuleItem).
         pub fn build(self) -> crate::model::IpRuleItem {
             crate::model::IpRuleItem {
                 ip_rule: self.ip_rule,
@@ -68,7 +69,7 @@ pub mod ip_rule_item {
     }
 }
 impl IpRuleItem {
-    /// Creates a new builder-style object to manufacture [`IpRuleItem`](crate::model::IpRuleItem)
+    /// Creates a new builder-style object to manufacture [`IpRuleItem`](crate::model::IpRuleItem).
     pub fn builder() -> crate::model::ip_rule_item::Builder {
         crate::model::ip_rule_item::Builder::default()
     }
@@ -79,8 +80,10 @@ impl IpRuleItem {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectionAliasPermission {
     /// <p>The identifier of the Amazon Web Services account that the connection alias is shared with.</p>
+    #[doc(hidden)]
     pub shared_account_id: std::option::Option<std::string::String>,
     /// <p>Indicates whether the specified Amazon Web Services account is allowed to associate the connection alias with a directory.</p>
+    #[doc(hidden)]
     pub allow_association: std::option::Option<bool>,
 }
 impl ConnectionAliasPermission {
@@ -101,11 +104,10 @@ impl std::fmt::Debug for ConnectionAliasPermission {
         formatter.finish()
     }
 }
-/// See [`ConnectionAliasPermission`](crate::model::ConnectionAliasPermission)
+/// See [`ConnectionAliasPermission`](crate::model::ConnectionAliasPermission).
 pub mod connection_alias_permission {
 
-    /// A builder for [`ConnectionAliasPermission`](crate::model::ConnectionAliasPermission)
-    #[non_exhaustive]
+    /// A builder for [`ConnectionAliasPermission`](crate::model::ConnectionAliasPermission).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) shared_account_id: std::option::Option<std::string::String>,
@@ -135,7 +137,7 @@ pub mod connection_alias_permission {
             self.allow_association = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectionAliasPermission`](crate::model::ConnectionAliasPermission)
+        /// Consumes the builder and constructs a [`ConnectionAliasPermission`](crate::model::ConnectionAliasPermission).
         pub fn build(self) -> crate::model::ConnectionAliasPermission {
             crate::model::ConnectionAliasPermission {
                 shared_account_id: self.shared_account_id,
@@ -145,7 +147,7 @@ pub mod connection_alias_permission {
     }
 }
 impl ConnectionAliasPermission {
-    /// Creates a new builder-style object to manufacture [`ConnectionAliasPermission`](crate::model::ConnectionAliasPermission)
+    /// Creates a new builder-style object to manufacture [`ConnectionAliasPermission`](crate::model::ConnectionAliasPermission).
     pub fn builder() -> crate::model::connection_alias_permission::Builder {
         crate::model::connection_alias_permission::Builder::default()
     }
@@ -156,10 +158,13 @@ impl ConnectionAliasPermission {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailedWorkspaceChangeRequest {
     /// <p>The identifier of the WorkSpace.</p>
+    #[doc(hidden)]
     pub workspace_id: std::option::Option<std::string::String>,
     /// <p>The error code that is returned if the WorkSpace cannot be rebooted.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The text of the error message that is returned if the WorkSpace cannot be rebooted.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl FailedWorkspaceChangeRequest {
@@ -185,11 +190,10 @@ impl std::fmt::Debug for FailedWorkspaceChangeRequest {
         formatter.finish()
     }
 }
-/// See [`FailedWorkspaceChangeRequest`](crate::model::FailedWorkspaceChangeRequest)
+/// See [`FailedWorkspaceChangeRequest`](crate::model::FailedWorkspaceChangeRequest).
 pub mod failed_workspace_change_request {
 
-    /// A builder for [`FailedWorkspaceChangeRequest`](crate::model::FailedWorkspaceChangeRequest)
-    #[non_exhaustive]
+    /// A builder for [`FailedWorkspaceChangeRequest`](crate::model::FailedWorkspaceChangeRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workspace_id: std::option::Option<std::string::String>,
@@ -230,7 +234,7 @@ pub mod failed_workspace_change_request {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailedWorkspaceChangeRequest`](crate::model::FailedWorkspaceChangeRequest)
+        /// Consumes the builder and constructs a [`FailedWorkspaceChangeRequest`](crate::model::FailedWorkspaceChangeRequest).
         pub fn build(self) -> crate::model::FailedWorkspaceChangeRequest {
             crate::model::FailedWorkspaceChangeRequest {
                 workspace_id: self.workspace_id,
@@ -241,7 +245,7 @@ pub mod failed_workspace_change_request {
     }
 }
 impl FailedWorkspaceChangeRequest {
-    /// Creates a new builder-style object to manufacture [`FailedWorkspaceChangeRequest`](crate::model::FailedWorkspaceChangeRequest)
+    /// Creates a new builder-style object to manufacture [`FailedWorkspaceChangeRequest`](crate::model::FailedWorkspaceChangeRequest).
     pub fn builder() -> crate::model::failed_workspace_change_request::Builder {
         crate::model::failed_workspace_change_request::Builder::default()
     }
@@ -252,6 +256,7 @@ impl FailedWorkspaceChangeRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TerminateRequest {
     /// <p>The identifier of the WorkSpace.</p>
+    #[doc(hidden)]
     pub workspace_id: std::option::Option<std::string::String>,
 }
 impl TerminateRequest {
@@ -267,11 +272,10 @@ impl std::fmt::Debug for TerminateRequest {
         formatter.finish()
     }
 }
-/// See [`TerminateRequest`](crate::model::TerminateRequest)
+/// See [`TerminateRequest`](crate::model::TerminateRequest).
 pub mod terminate_request {
 
-    /// A builder for [`TerminateRequest`](crate::model::TerminateRequest)
-    #[non_exhaustive]
+    /// A builder for [`TerminateRequest`](crate::model::TerminateRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workspace_id: std::option::Option<std::string::String>,
@@ -287,7 +291,7 @@ pub mod terminate_request {
             self.workspace_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`TerminateRequest`](crate::model::TerminateRequest)
+        /// Consumes the builder and constructs a [`TerminateRequest`](crate::model::TerminateRequest).
         pub fn build(self) -> crate::model::TerminateRequest {
             crate::model::TerminateRequest {
                 workspace_id: self.workspace_id,
@@ -296,7 +300,7 @@ pub mod terminate_request {
     }
 }
 impl TerminateRequest {
-    /// Creates a new builder-style object to manufacture [`TerminateRequest`](crate::model::TerminateRequest)
+    /// Creates a new builder-style object to manufacture [`TerminateRequest`](crate::model::TerminateRequest).
     pub fn builder() -> crate::model::terminate_request::Builder {
         crate::model::terminate_request::Builder::default()
     }
@@ -307,6 +311,7 @@ impl TerminateRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StopRequest {
     /// <p>The identifier of the WorkSpace.</p>
+    #[doc(hidden)]
     pub workspace_id: std::option::Option<std::string::String>,
 }
 impl StopRequest {
@@ -322,11 +327,10 @@ impl std::fmt::Debug for StopRequest {
         formatter.finish()
     }
 }
-/// See [`StopRequest`](crate::model::StopRequest)
+/// See [`StopRequest`](crate::model::StopRequest).
 pub mod stop_request {
 
-    /// A builder for [`StopRequest`](crate::model::StopRequest)
-    #[non_exhaustive]
+    /// A builder for [`StopRequest`](crate::model::StopRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workspace_id: std::option::Option<std::string::String>,
@@ -342,7 +346,7 @@ pub mod stop_request {
             self.workspace_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StopRequest`](crate::model::StopRequest)
+        /// Consumes the builder and constructs a [`StopRequest`](crate::model::StopRequest).
         pub fn build(self) -> crate::model::StopRequest {
             crate::model::StopRequest {
                 workspace_id: self.workspace_id,
@@ -351,7 +355,7 @@ pub mod stop_request {
     }
 }
 impl StopRequest {
-    /// Creates a new builder-style object to manufacture [`StopRequest`](crate::model::StopRequest)
+    /// Creates a new builder-style object to manufacture [`StopRequest`](crate::model::StopRequest).
     pub fn builder() -> crate::model::stop_request::Builder {
         crate::model::stop_request::Builder::default()
     }
@@ -362,6 +366,7 @@ impl StopRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StartRequest {
     /// <p>The identifier of the WorkSpace.</p>
+    #[doc(hidden)]
     pub workspace_id: std::option::Option<std::string::String>,
 }
 impl StartRequest {
@@ -377,11 +382,10 @@ impl std::fmt::Debug for StartRequest {
         formatter.finish()
     }
 }
-/// See [`StartRequest`](crate::model::StartRequest)
+/// See [`StartRequest`](crate::model::StartRequest).
 pub mod start_request {
 
-    /// A builder for [`StartRequest`](crate::model::StartRequest)
-    #[non_exhaustive]
+    /// A builder for [`StartRequest`](crate::model::StartRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workspace_id: std::option::Option<std::string::String>,
@@ -397,7 +401,7 @@ pub mod start_request {
             self.workspace_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartRequest`](crate::model::StartRequest)
+        /// Consumes the builder and constructs a [`StartRequest`](crate::model::StartRequest).
         pub fn build(self) -> crate::model::StartRequest {
             crate::model::StartRequest {
                 workspace_id: self.workspace_id,
@@ -406,7 +410,7 @@ pub mod start_request {
     }
 }
 impl StartRequest {
-    /// Creates a new builder-style object to manufacture [`StartRequest`](crate::model::StartRequest)
+    /// Creates a new builder-style object to manufacture [`StartRequest`](crate::model::StartRequest).
     pub fn builder() -> crate::model::start_request::Builder {
         crate::model::start_request::Builder::default()
     }
@@ -417,8 +421,10 @@ impl StartRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Tag {
     /// <p>The key of the tag.</p>
+    #[doc(hidden)]
     pub key: std::option::Option<std::string::String>,
     /// <p>The value of the tag.</p>
+    #[doc(hidden)]
     pub value: std::option::Option<std::string::String>,
 }
 impl Tag {
@@ -439,11 +445,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
 
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -470,7 +475,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -480,7 +485,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -546,6 +551,7 @@ impl AsRef<str> for Tenancy {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RebuildRequest {
     /// <p>The identifier of the WorkSpace.</p>
+    #[doc(hidden)]
     pub workspace_id: std::option::Option<std::string::String>,
 }
 impl RebuildRequest {
@@ -561,11 +567,10 @@ impl std::fmt::Debug for RebuildRequest {
         formatter.finish()
     }
 }
-/// See [`RebuildRequest`](crate::model::RebuildRequest)
+/// See [`RebuildRequest`](crate::model::RebuildRequest).
 pub mod rebuild_request {
 
-    /// A builder for [`RebuildRequest`](crate::model::RebuildRequest)
-    #[non_exhaustive]
+    /// A builder for [`RebuildRequest`](crate::model::RebuildRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workspace_id: std::option::Option<std::string::String>,
@@ -581,7 +586,7 @@ pub mod rebuild_request {
             self.workspace_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RebuildRequest`](crate::model::RebuildRequest)
+        /// Consumes the builder and constructs a [`RebuildRequest`](crate::model::RebuildRequest).
         pub fn build(self) -> crate::model::RebuildRequest {
             crate::model::RebuildRequest {
                 workspace_id: self.workspace_id,
@@ -590,7 +595,7 @@ pub mod rebuild_request {
     }
 }
 impl RebuildRequest {
-    /// Creates a new builder-style object to manufacture [`RebuildRequest`](crate::model::RebuildRequest)
+    /// Creates a new builder-style object to manufacture [`RebuildRequest`](crate::model::RebuildRequest).
     pub fn builder() -> crate::model::rebuild_request::Builder {
         crate::model::rebuild_request::Builder::default()
     }
@@ -601,6 +606,7 @@ impl RebuildRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RebootRequest {
     /// <p>The identifier of the WorkSpace.</p>
+    #[doc(hidden)]
     pub workspace_id: std::option::Option<std::string::String>,
 }
 impl RebootRequest {
@@ -616,11 +622,10 @@ impl std::fmt::Debug for RebootRequest {
         formatter.finish()
     }
 }
-/// See [`RebootRequest`](crate::model::RebootRequest)
+/// See [`RebootRequest`](crate::model::RebootRequest).
 pub mod reboot_request {
 
-    /// A builder for [`RebootRequest`](crate::model::RebootRequest)
-    #[non_exhaustive]
+    /// A builder for [`RebootRequest`](crate::model::RebootRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workspace_id: std::option::Option<std::string::String>,
@@ -636,7 +641,7 @@ pub mod reboot_request {
             self.workspace_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`RebootRequest`](crate::model::RebootRequest)
+        /// Consumes the builder and constructs a [`RebootRequest`](crate::model::RebootRequest).
         pub fn build(self) -> crate::model::RebootRequest {
             crate::model::RebootRequest {
                 workspace_id: self.workspace_id,
@@ -645,7 +650,7 @@ pub mod reboot_request {
     }
 }
 impl RebootRequest {
-    /// Creates a new builder-style object to manufacture [`RebootRequest`](crate::model::RebootRequest)
+    /// Creates a new builder-style object to manufacture [`RebootRequest`](crate::model::RebootRequest).
     pub fn builder() -> crate::model::reboot_request::Builder {
         crate::model::reboot_request::Builder::default()
     }
@@ -711,14 +716,19 @@ impl AsRef<str> for TargetWorkspaceState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkspaceProperties {
     /// <p>The running mode. For more information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html">Manage the WorkSpace Running Mode</a>.</p>
+    #[doc(hidden)]
     pub running_mode: std::option::Option<crate::model::RunningMode>,
     /// <p>The time after a user logs off when WorkSpaces are automatically stopped. Configured in 60-minute intervals.</p>
+    #[doc(hidden)]
     pub running_mode_auto_stop_timeout_in_minutes: std::option::Option<i32>,
     /// <p>The size of the root volume. For important information about how to modify the size of the root and user volumes, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/modify-workspaces.html">Modify a WorkSpace</a>.</p>
+    #[doc(hidden)]
     pub root_volume_size_gib: std::option::Option<i32>,
     /// <p>The size of the user storage. For important information about how to modify the size of the root and user volumes, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/modify-workspaces.html">Modify a WorkSpace</a>.</p>
+    #[doc(hidden)]
     pub user_volume_size_gib: std::option::Option<i32>,
     /// <p>The compute type. For more information, see <a href="http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles">Amazon WorkSpaces Bundles</a>.</p>
+    #[doc(hidden)]
     pub compute_type_name: std::option::Option<crate::model::Compute>,
 }
 impl WorkspaceProperties {
@@ -757,11 +767,10 @@ impl std::fmt::Debug for WorkspaceProperties {
         formatter.finish()
     }
 }
-/// See [`WorkspaceProperties`](crate::model::WorkspaceProperties)
+/// See [`WorkspaceProperties`](crate::model::WorkspaceProperties).
 pub mod workspace_properties {
 
-    /// A builder for [`WorkspaceProperties`](crate::model::WorkspaceProperties)
-    #[non_exhaustive]
+    /// A builder for [`WorkspaceProperties`](crate::model::WorkspaceProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) running_mode: std::option::Option<crate::model::RunningMode>,
@@ -830,7 +839,7 @@ pub mod workspace_properties {
             self.compute_type_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspaceProperties`](crate::model::WorkspaceProperties)
+        /// Consumes the builder and constructs a [`WorkspaceProperties`](crate::model::WorkspaceProperties).
         pub fn build(self) -> crate::model::WorkspaceProperties {
             crate::model::WorkspaceProperties {
                 running_mode: self.running_mode,
@@ -844,7 +853,7 @@ pub mod workspace_properties {
     }
 }
 impl WorkspaceProperties {
-    /// Creates a new builder-style object to manufacture [`WorkspaceProperties`](crate::model::WorkspaceProperties)
+    /// Creates a new builder-style object to manufacture [`WorkspaceProperties`](crate::model::WorkspaceProperties).
     pub fn builder() -> crate::model::workspace_properties::Builder {
         crate::model::workspace_properties::Builder::default()
     }
@@ -1006,8 +1015,10 @@ pub struct WorkspaceCreationProperties {
     /// <p>If WorkDocs is already enabled for a WorkSpaces directory and you disable it, new WorkSpaces launched in the directory will not have WorkDocs enabled. However, WorkDocs remains enabled for any existing WorkSpaces, unless you either disable users' access to WorkDocs or you delete the WorkDocs site. To disable users' access to WorkDocs, see <a href="https://docs.aws.amazon.com/workdocs/latest/adminguide/inactive-user.html">Disabling Users</a> in the <i>Amazon WorkDocs Administration Guide</i>. To delete a WorkDocs site, see <a href="https://docs.aws.amazon.com/workdocs/latest/adminguide/manage-sites.html">Deleting a Site</a> in the <i>Amazon WorkDocs Administration Guide</i>.</p>
     /// <p>If you enable WorkDocs on a directory that already has existing WorkSpaces, the existing WorkSpaces and any new WorkSpaces that are launched in the directory will have WorkDocs enabled.</p>
     /// </note>
+    #[doc(hidden)]
     pub enable_work_docs: std::option::Option<bool>,
     /// <p>Indicates whether internet access is enabled for your WorkSpaces.</p>
+    #[doc(hidden)]
     pub enable_internet_access: std::option::Option<bool>,
     /// <p>The default organizational unit (OU) for your WorkSpaces directories. This string must be the full Lightweight Directory Access Protocol (LDAP) distinguished name for the target domain and OU. It must be in the form <code>"OU=<i>value</i>,DC=<i>value</i>,DC=<i>value</i>"</code>, where <i>value</i> is any string of characters, and the number of domain components (DCs) is two or more. For example, <code>OU=WorkSpaces_machines,DC=machines,DC=example,DC=com</code>. </p> <important>
     /// <ul>
@@ -1015,12 +1026,16 @@ pub struct WorkspaceCreationProperties {
     /// <li> <p>The API doesn't validate whether the OU exists.</p> </li>
     /// </ul>
     /// </important>
+    #[doc(hidden)]
     pub default_ou: std::option::Option<std::string::String>,
     /// <p>The identifier of your custom security group.</p>
+    #[doc(hidden)]
     pub custom_security_group_id: std::option::Option<std::string::String>,
     /// <p>Indicates whether users are local administrators of their WorkSpaces.</p>
+    #[doc(hidden)]
     pub user_enabled_as_local_administrator: std::option::Option<bool>,
     /// <p>Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html">WorkSpace Maintenance</a>. </p>
+    #[doc(hidden)]
     pub enable_maintenance_mode: std::option::Option<bool>,
 }
 impl WorkspaceCreationProperties {
@@ -1072,11 +1087,10 @@ impl std::fmt::Debug for WorkspaceCreationProperties {
         formatter.finish()
     }
 }
-/// See [`WorkspaceCreationProperties`](crate::model::WorkspaceCreationProperties)
+/// See [`WorkspaceCreationProperties`](crate::model::WorkspaceCreationProperties).
 pub mod workspace_creation_properties {
 
-    /// A builder for [`WorkspaceCreationProperties`](crate::model::WorkspaceCreationProperties)
-    #[non_exhaustive]
+    /// A builder for [`WorkspaceCreationProperties`](crate::model::WorkspaceCreationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enable_work_docs: std::option::Option<bool>,
@@ -1169,7 +1183,7 @@ pub mod workspace_creation_properties {
             self.enable_maintenance_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspaceCreationProperties`](crate::model::WorkspaceCreationProperties)
+        /// Consumes the builder and constructs a [`WorkspaceCreationProperties`](crate::model::WorkspaceCreationProperties).
         pub fn build(self) -> crate::model::WorkspaceCreationProperties {
             crate::model::WorkspaceCreationProperties {
                 enable_work_docs: self.enable_work_docs,
@@ -1183,7 +1197,7 @@ pub mod workspace_creation_properties {
     }
 }
 impl WorkspaceCreationProperties {
-    /// Creates a new builder-style object to manufacture [`WorkspaceCreationProperties`](crate::model::WorkspaceCreationProperties)
+    /// Creates a new builder-style object to manufacture [`WorkspaceCreationProperties`](crate::model::WorkspaceCreationProperties).
     pub fn builder() -> crate::model::workspace_creation_properties::Builder {
         crate::model::workspace_creation_properties::Builder::default()
     }
@@ -1194,20 +1208,28 @@ impl WorkspaceCreationProperties {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkspaceAccessProperties {
     /// <p>Indicates whether users can use Windows clients to access their WorkSpaces.</p>
+    #[doc(hidden)]
     pub device_type_windows: std::option::Option<crate::model::AccessPropertyValue>,
     /// <p>Indicates whether users can use macOS clients to access their WorkSpaces.</p>
+    #[doc(hidden)]
     pub device_type_osx: std::option::Option<crate::model::AccessPropertyValue>,
     /// <p>Indicates whether users can access their WorkSpaces through a web browser.</p>
+    #[doc(hidden)]
     pub device_type_web: std::option::Option<crate::model::AccessPropertyValue>,
     /// <p>Indicates whether users can use iOS devices to access their WorkSpaces.</p>
+    #[doc(hidden)]
     pub device_type_ios: std::option::Option<crate::model::AccessPropertyValue>,
     /// <p>Indicates whether users can use Android and Android-compatible Chrome OS devices to access their WorkSpaces.</p>
+    #[doc(hidden)]
     pub device_type_android: std::option::Option<crate::model::AccessPropertyValue>,
     /// <p>Indicates whether users can use Chromebooks to access their WorkSpaces.</p>
+    #[doc(hidden)]
     pub device_type_chrome_os: std::option::Option<crate::model::AccessPropertyValue>,
     /// <p>Indicates whether users can use zero client devices to access their WorkSpaces.</p>
+    #[doc(hidden)]
     pub device_type_zero_client: std::option::Option<crate::model::AccessPropertyValue>,
     /// <p>Indicates whether users can use Linux clients to access their WorkSpaces.</p>
+    #[doc(hidden)]
     pub device_type_linux: std::option::Option<crate::model::AccessPropertyValue>,
 }
 impl WorkspaceAccessProperties {
@@ -1260,11 +1282,10 @@ impl std::fmt::Debug for WorkspaceAccessProperties {
         formatter.finish()
     }
 }
-/// See [`WorkspaceAccessProperties`](crate::model::WorkspaceAccessProperties)
+/// See [`WorkspaceAccessProperties`](crate::model::WorkspaceAccessProperties).
 pub mod workspace_access_properties {
 
-    /// A builder for [`WorkspaceAccessProperties`](crate::model::WorkspaceAccessProperties)
-    #[non_exhaustive]
+    /// A builder for [`WorkspaceAccessProperties`](crate::model::WorkspaceAccessProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_type_windows: std::option::Option<crate::model::AccessPropertyValue>,
@@ -1381,7 +1402,7 @@ pub mod workspace_access_properties {
             self.device_type_linux = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspaceAccessProperties`](crate::model::WorkspaceAccessProperties)
+        /// Consumes the builder and constructs a [`WorkspaceAccessProperties`](crate::model::WorkspaceAccessProperties).
         pub fn build(self) -> crate::model::WorkspaceAccessProperties {
             crate::model::WorkspaceAccessProperties {
                 device_type_windows: self.device_type_windows,
@@ -1397,7 +1418,7 @@ pub mod workspace_access_properties {
     }
 }
 impl WorkspaceAccessProperties {
-    /// Creates a new builder-style object to manufacture [`WorkspaceAccessProperties`](crate::model::WorkspaceAccessProperties)
+    /// Creates a new builder-style object to manufacture [`WorkspaceAccessProperties`](crate::model::WorkspaceAccessProperties).
     pub fn builder() -> crate::model::workspace_access_properties::Builder {
         crate::model::workspace_access_properties::Builder::default()
     }
@@ -1463,14 +1484,19 @@ impl AsRef<str> for AccessPropertyValue {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SelfservicePermissions {
     /// <p>Specifies whether users can restart their WorkSpace.</p>
+    #[doc(hidden)]
     pub restart_workspace: std::option::Option<crate::model::ReconnectEnum>,
     /// <p>Specifies whether users can increase the volume size of the drives on their WorkSpace.</p>
+    #[doc(hidden)]
     pub increase_volume_size: std::option::Option<crate::model::ReconnectEnum>,
     /// <p>Specifies whether users can change the compute type (bundle) for their WorkSpace.</p>
+    #[doc(hidden)]
     pub change_compute_type: std::option::Option<crate::model::ReconnectEnum>,
     /// <p>Specifies whether users can switch the running mode of their WorkSpace.</p>
+    #[doc(hidden)]
     pub switch_running_mode: std::option::Option<crate::model::ReconnectEnum>,
     /// <p>Specifies whether users can rebuild the operating system of a WorkSpace to its original state.</p>
+    #[doc(hidden)]
     pub rebuild_workspace: std::option::Option<crate::model::ReconnectEnum>,
 }
 impl SelfservicePermissions {
@@ -1506,11 +1532,10 @@ impl std::fmt::Debug for SelfservicePermissions {
         formatter.finish()
     }
 }
-/// See [`SelfservicePermissions`](crate::model::SelfservicePermissions)
+/// See [`SelfservicePermissions`](crate::model::SelfservicePermissions).
 pub mod selfservice_permissions {
 
-    /// A builder for [`SelfservicePermissions`](crate::model::SelfservicePermissions)
-    #[non_exhaustive]
+    /// A builder for [`SelfservicePermissions`](crate::model::SelfservicePermissions).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) restart_workspace: std::option::Option<crate::model::ReconnectEnum>,
@@ -1585,7 +1610,7 @@ pub mod selfservice_permissions {
             self.rebuild_workspace = input;
             self
         }
-        /// Consumes the builder and constructs a [`SelfservicePermissions`](crate::model::SelfservicePermissions)
+        /// Consumes the builder and constructs a [`SelfservicePermissions`](crate::model::SelfservicePermissions).
         pub fn build(self) -> crate::model::SelfservicePermissions {
             crate::model::SelfservicePermissions {
                 restart_workspace: self.restart_workspace,
@@ -1598,7 +1623,7 @@ pub mod selfservice_permissions {
     }
 }
 impl SelfservicePermissions {
-    /// Creates a new builder-style object to manufacture [`SelfservicePermissions`](crate::model::SelfservicePermissions)
+    /// Creates a new builder-style object to manufacture [`SelfservicePermissions`](crate::model::SelfservicePermissions).
     pub fn builder() -> crate::model::selfservice_permissions::Builder {
         crate::model::selfservice_permissions::Builder::default()
     }
@@ -1659,11 +1684,272 @@ impl AsRef<str> for ReconnectEnum {
     }
 }
 
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum DeletableSamlProperty {
+    #[allow(missing_docs)] // documentation missing in model
+    SamlPropertiesRelayStateParameterName,
+    #[allow(missing_docs)] // documentation missing in model
+    SamlPropertiesUserAccessUrl,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for DeletableSamlProperty {
+    fn from(s: &str) -> Self {
+        match s {
+            "SAML_PROPERTIES_RELAY_STATE_PARAMETER_NAME" => {
+                DeletableSamlProperty::SamlPropertiesRelayStateParameterName
+            }
+            "SAML_PROPERTIES_USER_ACCESS_URL" => DeletableSamlProperty::SamlPropertiesUserAccessUrl,
+            other => DeletableSamlProperty::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for DeletableSamlProperty {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(DeletableSamlProperty::from(s))
+    }
+}
+impl DeletableSamlProperty {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            DeletableSamlProperty::SamlPropertiesRelayStateParameterName => {
+                "SAML_PROPERTIES_RELAY_STATE_PARAMETER_NAME"
+            }
+            DeletableSamlProperty::SamlPropertiesUserAccessUrl => "SAML_PROPERTIES_USER_ACCESS_URL",
+            DeletableSamlProperty::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &[
+            "SAML_PROPERTIES_RELAY_STATE_PARAMETER_NAME",
+            "SAML_PROPERTIES_USER_ACCESS_URL",
+        ]
+    }
+}
+impl AsRef<str> for DeletableSamlProperty {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+/// <p>Describes the enablement status, user access URL, and relay state parameter name that are used for configuring federation with an SAML 2.0 identity provider.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct SamlProperties {
+    /// <p>Indicates the status of SAML 2.0 authentication. These statuses include the following.</p>
+    /// <ul>
+    /// <li> <p>If the setting is <code>DISABLED</code>, end users will be directed to login with their directory credentials.</p> </li>
+    /// <li> <p>If the setting is <code>ENABLED</code>, end users will be directed to login via the user access URL. Users attempting to connect to WorkSpaces from a client application that does not support SAML 2.0 authentication will not be able to connect.</p> </li>
+    /// <li> <p>If the setting is <code>ENABLED_WITH_DIRECTORY_LOGIN_FALLBACK</code>, end users will be directed to login via the user access URL on supported client applications, but will not prevent clients that do not support SAML 2.0 authentication from connecting as if SAML 2.0 authentication was disabled.</p> </li>
+    /// </ul>
+    #[doc(hidden)]
+    pub status: std::option::Option<crate::model::SamlStatusEnum>,
+    /// <p>The SAML 2.0 identity provider (IdP) user access URL is the URL a user would navigate to in their web browser in order to federate from the IdP and directly access the application, without any SAML 2.0 service provider (SP) bindings.</p>
+    #[doc(hidden)]
+    pub user_access_url: std::option::Option<std::string::String>,
+    /// <p>The relay state parameter name supported by the SAML 2.0 identity provider (IdP). When the end user is redirected to the user access URL from the WorkSpaces client application, this relay state parameter name is appended as a query parameter to the URL along with the relay state endpoint to return the user to the client application session.</p>
+    /// <p>To use SAML 2.0 authentication with WorkSpaces, the IdP must support IdP-initiated deep linking for the relay state URL. Consult your IdP documentation for more information.</p>
+    #[doc(hidden)]
+    pub relay_state_parameter_name: std::option::Option<std::string::String>,
+}
+impl SamlProperties {
+    /// <p>Indicates the status of SAML 2.0 authentication. These statuses include the following.</p>
+    /// <ul>
+    /// <li> <p>If the setting is <code>DISABLED</code>, end users will be directed to login with their directory credentials.</p> </li>
+    /// <li> <p>If the setting is <code>ENABLED</code>, end users will be directed to login via the user access URL. Users attempting to connect to WorkSpaces from a client application that does not support SAML 2.0 authentication will not be able to connect.</p> </li>
+    /// <li> <p>If the setting is <code>ENABLED_WITH_DIRECTORY_LOGIN_FALLBACK</code>, end users will be directed to login via the user access URL on supported client applications, but will not prevent clients that do not support SAML 2.0 authentication from connecting as if SAML 2.0 authentication was disabled.</p> </li>
+    /// </ul>
+    pub fn status(&self) -> std::option::Option<&crate::model::SamlStatusEnum> {
+        self.status.as_ref()
+    }
+    /// <p>The SAML 2.0 identity provider (IdP) user access URL is the URL a user would navigate to in their web browser in order to federate from the IdP and directly access the application, without any SAML 2.0 service provider (SP) bindings.</p>
+    pub fn user_access_url(&self) -> std::option::Option<&str> {
+        self.user_access_url.as_deref()
+    }
+    /// <p>The relay state parameter name supported by the SAML 2.0 identity provider (IdP). When the end user is redirected to the user access URL from the WorkSpaces client application, this relay state parameter name is appended as a query parameter to the URL along with the relay state endpoint to return the user to the client application session.</p>
+    /// <p>To use SAML 2.0 authentication with WorkSpaces, the IdP must support IdP-initiated deep linking for the relay state URL. Consult your IdP documentation for more information.</p>
+    pub fn relay_state_parameter_name(&self) -> std::option::Option<&str> {
+        self.relay_state_parameter_name.as_deref()
+    }
+}
+impl std::fmt::Debug for SamlProperties {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("SamlProperties");
+        formatter.field("status", &self.status);
+        formatter.field("user_access_url", &self.user_access_url);
+        formatter.field(
+            "relay_state_parameter_name",
+            &self.relay_state_parameter_name,
+        );
+        formatter.finish()
+    }
+}
+/// See [`SamlProperties`](crate::model::SamlProperties).
+pub mod saml_properties {
+
+    /// A builder for [`SamlProperties`](crate::model::SamlProperties).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) status: std::option::Option<crate::model::SamlStatusEnum>,
+        pub(crate) user_access_url: std::option::Option<std::string::String>,
+        pub(crate) relay_state_parameter_name: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>Indicates the status of SAML 2.0 authentication. These statuses include the following.</p>
+        /// <ul>
+        /// <li> <p>If the setting is <code>DISABLED</code>, end users will be directed to login with their directory credentials.</p> </li>
+        /// <li> <p>If the setting is <code>ENABLED</code>, end users will be directed to login via the user access URL. Users attempting to connect to WorkSpaces from a client application that does not support SAML 2.0 authentication will not be able to connect.</p> </li>
+        /// <li> <p>If the setting is <code>ENABLED_WITH_DIRECTORY_LOGIN_FALLBACK</code>, end users will be directed to login via the user access URL on supported client applications, but will not prevent clients that do not support SAML 2.0 authentication from connecting as if SAML 2.0 authentication was disabled.</p> </li>
+        /// </ul>
+        pub fn status(mut self, input: crate::model::SamlStatusEnum) -> Self {
+            self.status = Some(input);
+            self
+        }
+        /// <p>Indicates the status of SAML 2.0 authentication. These statuses include the following.</p>
+        /// <ul>
+        /// <li> <p>If the setting is <code>DISABLED</code>, end users will be directed to login with their directory credentials.</p> </li>
+        /// <li> <p>If the setting is <code>ENABLED</code>, end users will be directed to login via the user access URL. Users attempting to connect to WorkSpaces from a client application that does not support SAML 2.0 authentication will not be able to connect.</p> </li>
+        /// <li> <p>If the setting is <code>ENABLED_WITH_DIRECTORY_LOGIN_FALLBACK</code>, end users will be directed to login via the user access URL on supported client applications, but will not prevent clients that do not support SAML 2.0 authentication from connecting as if SAML 2.0 authentication was disabled.</p> </li>
+        /// </ul>
+        pub fn set_status(
+            mut self,
+            input: std::option::Option<crate::model::SamlStatusEnum>,
+        ) -> Self {
+            self.status = input;
+            self
+        }
+        /// <p>The SAML 2.0 identity provider (IdP) user access URL is the URL a user would navigate to in their web browser in order to federate from the IdP and directly access the application, without any SAML 2.0 service provider (SP) bindings.</p>
+        pub fn user_access_url(mut self, input: impl Into<std::string::String>) -> Self {
+            self.user_access_url = Some(input.into());
+            self
+        }
+        /// <p>The SAML 2.0 identity provider (IdP) user access URL is the URL a user would navigate to in their web browser in order to federate from the IdP and directly access the application, without any SAML 2.0 service provider (SP) bindings.</p>
+        pub fn set_user_access_url(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.user_access_url = input;
+            self
+        }
+        /// <p>The relay state parameter name supported by the SAML 2.0 identity provider (IdP). When the end user is redirected to the user access URL from the WorkSpaces client application, this relay state parameter name is appended as a query parameter to the URL along with the relay state endpoint to return the user to the client application session.</p>
+        /// <p>To use SAML 2.0 authentication with WorkSpaces, the IdP must support IdP-initiated deep linking for the relay state URL. Consult your IdP documentation for more information.</p>
+        pub fn relay_state_parameter_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.relay_state_parameter_name = Some(input.into());
+            self
+        }
+        /// <p>The relay state parameter name supported by the SAML 2.0 identity provider (IdP). When the end user is redirected to the user access URL from the WorkSpaces client application, this relay state parameter name is appended as a query parameter to the URL along with the relay state endpoint to return the user to the client application session.</p>
+        /// <p>To use SAML 2.0 authentication with WorkSpaces, the IdP must support IdP-initiated deep linking for the relay state URL. Consult your IdP documentation for more information.</p>
+        pub fn set_relay_state_parameter_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.relay_state_parameter_name = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`SamlProperties`](crate::model::SamlProperties).
+        pub fn build(self) -> crate::model::SamlProperties {
+            crate::model::SamlProperties {
+                status: self.status,
+                user_access_url: self.user_access_url,
+                relay_state_parameter_name: self.relay_state_parameter_name,
+            }
+        }
+    }
+}
+impl SamlProperties {
+    /// Creates a new builder-style object to manufacture [`SamlProperties`](crate::model::SamlProperties).
+    pub fn builder() -> crate::model::saml_properties::Builder {
+        crate::model::saml_properties::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum SamlStatusEnum {
+    #[allow(missing_docs)] // documentation missing in model
+    Disabled,
+    #[allow(missing_docs)] // documentation missing in model
+    Enabled,
+    #[allow(missing_docs)] // documentation missing in model
+    EnabledWithDirectoryLoginFallback,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for SamlStatusEnum {
+    fn from(s: &str) -> Self {
+        match s {
+            "DISABLED" => SamlStatusEnum::Disabled,
+            "ENABLED" => SamlStatusEnum::Enabled,
+            "ENABLED_WITH_DIRECTORY_LOGIN_FALLBACK" => {
+                SamlStatusEnum::EnabledWithDirectoryLoginFallback
+            }
+            other => SamlStatusEnum::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for SamlStatusEnum {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(SamlStatusEnum::from(s))
+    }
+}
+impl SamlStatusEnum {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            SamlStatusEnum::Disabled => "DISABLED",
+            SamlStatusEnum::Enabled => "ENABLED",
+            SamlStatusEnum::EnabledWithDirectoryLoginFallback => {
+                "ENABLED_WITH_DIRECTORY_LOGIN_FALLBACK"
+            }
+            SamlStatusEnum::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &[
+            "DISABLED",
+            "ENABLED",
+            "ENABLED_WITH_DIRECTORY_LOGIN_FALLBACK",
+        ]
+    }
+}
+impl AsRef<str> for SamlStatusEnum {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
 /// <p>Describes an Amazon WorkSpaces client.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClientProperties {
     /// <p>Specifies whether users can cache their credentials on the Amazon WorkSpaces client. When enabled, users can choose to reconnect to their WorkSpaces without re-entering their credentials. </p>
+    #[doc(hidden)]
     pub reconnect_enabled: std::option::Option<crate::model::ReconnectEnum>,
 }
 impl ClientProperties {
@@ -1679,11 +1965,10 @@ impl std::fmt::Debug for ClientProperties {
         formatter.finish()
     }
 }
-/// See [`ClientProperties`](crate::model::ClientProperties)
+/// See [`ClientProperties`](crate::model::ClientProperties).
 pub mod client_properties {
 
-    /// A builder for [`ClientProperties`](crate::model::ClientProperties)
-    #[non_exhaustive]
+    /// A builder for [`ClientProperties`](crate::model::ClientProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) reconnect_enabled: std::option::Option<crate::model::ReconnectEnum>,
@@ -1702,7 +1987,7 @@ pub mod client_properties {
             self.reconnect_enabled = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClientProperties`](crate::model::ClientProperties)
+        /// Consumes the builder and constructs a [`ClientProperties`](crate::model::ClientProperties).
         pub fn build(self) -> crate::model::ClientProperties {
             crate::model::ClientProperties {
                 reconnect_enabled: self.reconnect_enabled,
@@ -1711,7 +1996,7 @@ pub mod client_properties {
     }
 }
 impl ClientProperties {
-    /// Creates a new builder-style object to manufacture [`ClientProperties`](crate::model::ClientProperties)
+    /// Creates a new builder-style object to manufacture [`ClientProperties`](crate::model::ClientProperties).
     pub fn builder() -> crate::model::client_properties::Builder {
         crate::model::client_properties::Builder::default()
     }
@@ -1902,7 +2187,8 @@ impl AsRef<str> for WorkspaceImageIngestionProcess {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DefaultClientBrandingAttributes {
-    /// <p>The logo URL. The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p>
+    /// <p>The logo. The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p>
+    #[doc(hidden)]
     pub logo_url: std::option::Option<std::string::String>,
     /// <p>The support email. The company's customer support email address.</p> <note>
     /// <ul>
@@ -1910,6 +2196,7 @@ pub struct DefaultClientBrandingAttributes {
     /// <li> <p>The default email is <code>workspaces-feedback@amazon.com</code>.</p> </li>
     /// </ul>
     /// </note>
+    #[doc(hidden)]
     pub support_email: std::option::Option<std::string::String>,
     /// <p>The support link. The link for the company's customer support page for their WorkSpace.</p> <note>
     /// <ul>
@@ -1917,15 +2204,18 @@ pub struct DefaultClientBrandingAttributes {
     /// <li> <p>The default support link is <code>workspaces-feedback@amazon.com</code>.</p> </li>
     /// </ul>
     /// </note>
+    #[doc(hidden)]
     pub support_link: std::option::Option<std::string::String>,
     /// <p>The forgotten password link. This is the web address that users can go to if they forget the password for their WorkSpace.</p>
+    #[doc(hidden)]
     pub forgot_password_link: std::option::Option<std::string::String>,
-    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
+    #[doc(hidden)]
     pub login_message:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
 impl DefaultClientBrandingAttributes {
-    /// <p>The logo URL. The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p>
+    /// <p>The logo. The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p>
     pub fn logo_url(&self) -> std::option::Option<&str> {
         self.logo_url.as_deref()
     }
@@ -1951,7 +2241,7 @@ impl DefaultClientBrandingAttributes {
     pub fn forgot_password_link(&self) -> std::option::Option<&str> {
         self.forgot_password_link.as_deref()
     }
-    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
     pub fn login_message(
         &self,
     ) -> std::option::Option<&std::collections::HashMap<std::string::String, std::string::String>>
@@ -1970,11 +2260,10 @@ impl std::fmt::Debug for DefaultClientBrandingAttributes {
         formatter.finish()
     }
 }
-/// See [`DefaultClientBrandingAttributes`](crate::model::DefaultClientBrandingAttributes)
+/// See [`DefaultClientBrandingAttributes`](crate::model::DefaultClientBrandingAttributes).
 pub mod default_client_branding_attributes {
 
-    /// A builder for [`DefaultClientBrandingAttributes`](crate::model::DefaultClientBrandingAttributes)
-    #[non_exhaustive]
+    /// A builder for [`DefaultClientBrandingAttributes`](crate::model::DefaultClientBrandingAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logo_url: std::option::Option<std::string::String>,
@@ -1986,12 +2275,12 @@ pub mod default_client_branding_attributes {
         >,
     }
     impl Builder {
-        /// <p>The logo URL. The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p>
+        /// <p>The logo. The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p>
         pub fn logo_url(mut self, input: impl Into<std::string::String>) -> Self {
             self.logo_url = Some(input.into());
             self
         }
-        /// <p>The logo URL. The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p>
+        /// <p>The logo. The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p>
         pub fn set_logo_url(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.logo_url = input;
             self
@@ -2056,7 +2345,7 @@ pub mod default_client_branding_attributes {
         ///
         /// To override the contents of this collection use [`set_login_message`](Self::set_login_message).
         ///
-        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
         pub fn login_message(
             mut self,
             k: impl Into<std::string::String>,
@@ -2067,7 +2356,7 @@ pub mod default_client_branding_attributes {
             self.login_message = Some(hash_map);
             self
         }
-        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
         pub fn set_login_message(
             mut self,
             input: std::option::Option<
@@ -2077,7 +2366,7 @@ pub mod default_client_branding_attributes {
             self.login_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DefaultClientBrandingAttributes`](crate::model::DefaultClientBrandingAttributes)
+        /// Consumes the builder and constructs a [`DefaultClientBrandingAttributes`](crate::model::DefaultClientBrandingAttributes).
         pub fn build(self) -> crate::model::DefaultClientBrandingAttributes {
             crate::model::DefaultClientBrandingAttributes {
                 logo_url: self.logo_url,
@@ -2090,7 +2379,7 @@ pub mod default_client_branding_attributes {
     }
 }
 impl DefaultClientBrandingAttributes {
-    /// Creates a new builder-style object to manufacture [`DefaultClientBrandingAttributes`](crate::model::DefaultClientBrandingAttributes)
+    /// Creates a new builder-style object to manufacture [`DefaultClientBrandingAttributes`](crate::model::DefaultClientBrandingAttributes).
     pub fn builder() -> crate::model::default_client_branding_attributes::Builder {
         crate::model::default_client_branding_attributes::Builder::default()
     }
@@ -2103,14 +2392,17 @@ impl DefaultClientBrandingAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IosClientBrandingAttributes {
     /// <p>The logo. This is the standard-resolution display that has a 1:1 pixel density (or @1x), where one pixel is equal to one point. The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p>
+    #[doc(hidden)]
     pub logo_url: std::option::Option<std::string::String>,
     /// <p>The @2x version of the logo. This is the higher resolution display that offers a scale factor of 2.0 (or @2x). The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p> <note>
     /// <p> For more information about iOS image size and resolution, see <a href="https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/">Image Size and Resolution </a> in the <i>Apple Human Interface Guidelines</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub logo2x_url: std::option::Option<std::string::String>,
     /// <p>The @3x version of the logo. This is the higher resolution display that offers a scale factor of 3.0 (or @3x).The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p> <note>
     /// <p> For more information about iOS image size and resolution, see <a href="https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/">Image Size and Resolution </a> in the <i>Apple Human Interface Guidelines</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub logo3x_url: std::option::Option<std::string::String>,
     /// <p>The support email. The company's customer support email address.</p> <note>
     /// <ul>
@@ -2118,6 +2410,7 @@ pub struct IosClientBrandingAttributes {
     /// <li> <p>The default email is <code>workspaces-feedback@amazon.com</code>.</p> </li>
     /// </ul>
     /// </note>
+    #[doc(hidden)]
     pub support_email: std::option::Option<std::string::String>,
     /// <p>The support link. The link for the company's customer support page for their WorkSpace.</p> <note>
     /// <ul>
@@ -2125,10 +2418,13 @@ pub struct IosClientBrandingAttributes {
     /// <li> <p>The default support link is <code>workspaces-feedback@amazon.com</code>.</p> </li>
     /// </ul>
     /// </note>
+    #[doc(hidden)]
     pub support_link: std::option::Option<std::string::String>,
     /// <p>The forgotten password link. This is the web address that users can go to if they forget the password for their WorkSpace.</p>
+    #[doc(hidden)]
     pub forgot_password_link: std::option::Option<std::string::String>,
-    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
+    #[doc(hidden)]
     pub login_message:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2171,7 +2467,7 @@ impl IosClientBrandingAttributes {
     pub fn forgot_password_link(&self) -> std::option::Option<&str> {
         self.forgot_password_link.as_deref()
     }
-    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
     pub fn login_message(
         &self,
     ) -> std::option::Option<&std::collections::HashMap<std::string::String, std::string::String>>
@@ -2192,11 +2488,10 @@ impl std::fmt::Debug for IosClientBrandingAttributes {
         formatter.finish()
     }
 }
-/// See [`IosClientBrandingAttributes`](crate::model::IosClientBrandingAttributes)
+/// See [`IosClientBrandingAttributes`](crate::model::IosClientBrandingAttributes).
 pub mod ios_client_branding_attributes {
 
-    /// A builder for [`IosClientBrandingAttributes`](crate::model::IosClientBrandingAttributes)
-    #[non_exhaustive]
+    /// A builder for [`IosClientBrandingAttributes`](crate::model::IosClientBrandingAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logo_url: std::option::Option<std::string::String>,
@@ -2308,7 +2603,7 @@ pub mod ios_client_branding_attributes {
         ///
         /// To override the contents of this collection use [`set_login_message`](Self::set_login_message).
         ///
-        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
         pub fn login_message(
             mut self,
             k: impl Into<std::string::String>,
@@ -2319,7 +2614,7 @@ pub mod ios_client_branding_attributes {
             self.login_message = Some(hash_map);
             self
         }
-        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
         pub fn set_login_message(
             mut self,
             input: std::option::Option<
@@ -2329,7 +2624,7 @@ pub mod ios_client_branding_attributes {
             self.login_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`IosClientBrandingAttributes`](crate::model::IosClientBrandingAttributes)
+        /// Consumes the builder and constructs a [`IosClientBrandingAttributes`](crate::model::IosClientBrandingAttributes).
         pub fn build(self) -> crate::model::IosClientBrandingAttributes {
             crate::model::IosClientBrandingAttributes {
                 logo_url: self.logo_url,
@@ -2344,7 +2639,7 @@ pub mod ios_client_branding_attributes {
     }
 }
 impl IosClientBrandingAttributes {
-    /// Creates a new builder-style object to manufacture [`IosClientBrandingAttributes`](crate::model::IosClientBrandingAttributes)
+    /// Creates a new builder-style object to manufacture [`IosClientBrandingAttributes`](crate::model::IosClientBrandingAttributes).
     pub fn builder() -> crate::model::ios_client_branding_attributes::Builder {
         crate::model::ios_client_branding_attributes::Builder::default()
     }
@@ -2357,6 +2652,7 @@ impl IosClientBrandingAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DefaultImportClientBrandingAttributes {
     /// <p>The logo. The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p>
+    #[doc(hidden)]
     pub logo: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The support email. The company's customer support email address.</p> <note>
     /// <ul>
@@ -2364,6 +2660,7 @@ pub struct DefaultImportClientBrandingAttributes {
     /// <li> <p>The default email is <code>workspaces-feedback@amazon.com</code>.</p> </li>
     /// </ul>
     /// </note>
+    #[doc(hidden)]
     pub support_email: std::option::Option<std::string::String>,
     /// <p>The support link. The link for the company's customer support page for their WorkSpace.</p> <note>
     /// <ul>
@@ -2371,10 +2668,13 @@ pub struct DefaultImportClientBrandingAttributes {
     /// <li> <p>The default support link is <code>workspaces-feedback@amazon.com</code>.</p> </li>
     /// </ul>
     /// </note>
+    #[doc(hidden)]
     pub support_link: std::option::Option<std::string::String>,
     /// <p>The forgotten password link. This is the web address that users can go to if they forget the password for their WorkSpace.</p>
+    #[doc(hidden)]
     pub forgot_password_link: std::option::Option<std::string::String>,
-    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
+    #[doc(hidden)]
     pub login_message:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2405,7 +2705,7 @@ impl DefaultImportClientBrandingAttributes {
     pub fn forgot_password_link(&self) -> std::option::Option<&str> {
         self.forgot_password_link.as_deref()
     }
-    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
     pub fn login_message(
         &self,
     ) -> std::option::Option<&std::collections::HashMap<std::string::String, std::string::String>>
@@ -2424,11 +2724,10 @@ impl std::fmt::Debug for DefaultImportClientBrandingAttributes {
         formatter.finish()
     }
 }
-/// See [`DefaultImportClientBrandingAttributes`](crate::model::DefaultImportClientBrandingAttributes)
+/// See [`DefaultImportClientBrandingAttributes`](crate::model::DefaultImportClientBrandingAttributes).
 pub mod default_import_client_branding_attributes {
 
-    /// A builder for [`DefaultImportClientBrandingAttributes`](crate::model::DefaultImportClientBrandingAttributes)
-    #[non_exhaustive]
+    /// A builder for [`DefaultImportClientBrandingAttributes`](crate::model::DefaultImportClientBrandingAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logo: std::option::Option<aws_smithy_types::Blob>,
@@ -2510,7 +2809,7 @@ pub mod default_import_client_branding_attributes {
         ///
         /// To override the contents of this collection use [`set_login_message`](Self::set_login_message).
         ///
-        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
         pub fn login_message(
             mut self,
             k: impl Into<std::string::String>,
@@ -2521,7 +2820,7 @@ pub mod default_import_client_branding_attributes {
             self.login_message = Some(hash_map);
             self
         }
-        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
         pub fn set_login_message(
             mut self,
             input: std::option::Option<
@@ -2531,7 +2830,7 @@ pub mod default_import_client_branding_attributes {
             self.login_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DefaultImportClientBrandingAttributes`](crate::model::DefaultImportClientBrandingAttributes)
+        /// Consumes the builder and constructs a [`DefaultImportClientBrandingAttributes`](crate::model::DefaultImportClientBrandingAttributes).
         pub fn build(self) -> crate::model::DefaultImportClientBrandingAttributes {
             crate::model::DefaultImportClientBrandingAttributes {
                 logo: self.logo,
@@ -2544,7 +2843,7 @@ pub mod default_import_client_branding_attributes {
     }
 }
 impl DefaultImportClientBrandingAttributes {
-    /// Creates a new builder-style object to manufacture [`DefaultImportClientBrandingAttributes`](crate::model::DefaultImportClientBrandingAttributes)
+    /// Creates a new builder-style object to manufacture [`DefaultImportClientBrandingAttributes`](crate::model::DefaultImportClientBrandingAttributes).
     pub fn builder() -> crate::model::default_import_client_branding_attributes::Builder {
         crate::model::default_import_client_branding_attributes::Builder::default()
     }
@@ -2557,14 +2856,17 @@ impl DefaultImportClientBrandingAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct IosImportClientBrandingAttributes {
     /// <p>The logo. This is the standard-resolution display that has a 1:1 pixel density (or @1x), where one pixel is equal to one point. The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p>
+    #[doc(hidden)]
     pub logo: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The @2x version of the logo. This is the higher resolution display that offers a scale factor of 2.0 (or @2x). The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p> <note>
     /// <p> For more information about iOS image size and resolution, see <a href="https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/">Image Size and Resolution </a> in the <i>Apple Human Interface Guidelines</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub logo2x: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The @3x version of the logo. This is the higher resolution display that offers a scale factor of 3.0 (or @3x). The only image format accepted is a binary data object that is converted from a <code>.png</code> file.</p> <note>
     /// <p> For more information about iOS image size and resolution, see <a href="https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/">Image Size and Resolution </a> in the <i>Apple Human Interface Guidelines</i>.</p>
     /// </note>
+    #[doc(hidden)]
     pub logo3x: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The support email. The company's customer support email address.</p> <note>
     /// <ul>
@@ -2572,6 +2874,7 @@ pub struct IosImportClientBrandingAttributes {
     /// <li> <p>The default email is <code>workspaces-feedback@amazon.com</code>.</p> </li>
     /// </ul>
     /// </note>
+    #[doc(hidden)]
     pub support_email: std::option::Option<std::string::String>,
     /// <p>The support link. The link for the company's customer support page for their WorkSpace.</p> <note>
     /// <ul>
@@ -2579,10 +2882,13 @@ pub struct IosImportClientBrandingAttributes {
     /// <li> <p>The default support link is <code>workspaces-feedback@amazon.com</code>.</p> </li>
     /// </ul>
     /// </note>
+    #[doc(hidden)]
     pub support_link: std::option::Option<std::string::String>,
     /// <p>The forgotten password link. This is the web address that users can go to if they forget the password for their WorkSpace.</p>
+    #[doc(hidden)]
     pub forgot_password_link: std::option::Option<std::string::String>,
-    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
+    #[doc(hidden)]
     pub login_message:
         std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
@@ -2625,7 +2931,7 @@ impl IosImportClientBrandingAttributes {
     pub fn forgot_password_link(&self) -> std::option::Option<&str> {
         self.forgot_password_link.as_deref()
     }
-    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+    /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
     pub fn login_message(
         &self,
     ) -> std::option::Option<&std::collections::HashMap<std::string::String, std::string::String>>
@@ -2646,11 +2952,10 @@ impl std::fmt::Debug for IosImportClientBrandingAttributes {
         formatter.finish()
     }
 }
-/// See [`IosImportClientBrandingAttributes`](crate::model::IosImportClientBrandingAttributes)
+/// See [`IosImportClientBrandingAttributes`](crate::model::IosImportClientBrandingAttributes).
 pub mod ios_import_client_branding_attributes {
 
-    /// A builder for [`IosImportClientBrandingAttributes`](crate::model::IosImportClientBrandingAttributes)
-    #[non_exhaustive]
+    /// A builder for [`IosImportClientBrandingAttributes`](crate::model::IosImportClientBrandingAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logo: std::option::Option<aws_smithy_types::Blob>,
@@ -2762,7 +3067,7 @@ pub mod ios_import_client_branding_attributes {
         ///
         /// To override the contents of this collection use [`set_login_message`](Self::set_login_message).
         ///
-        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
         pub fn login_message(
             mut self,
             k: impl Into<std::string::String>,
@@ -2773,7 +3078,7 @@ pub mod ios_import_client_branding_attributes {
             self.login_message = Some(hash_map);
             self
         }
-        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. </p>
+        /// <p>The login message. Specified as a key value pair, in which the key is a locale and the value is the localized message for that locale. The only key supported is <code>en_US</code>. The HTML tags supported include the following: <code>a, b, blockquote, br, cite, code, dd, dl, dt, div, em, i, li, ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul</code>.</p>
         pub fn set_login_message(
             mut self,
             input: std::option::Option<
@@ -2783,7 +3088,7 @@ pub mod ios_import_client_branding_attributes {
             self.login_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`IosImportClientBrandingAttributes`](crate::model::IosImportClientBrandingAttributes)
+        /// Consumes the builder and constructs a [`IosImportClientBrandingAttributes`](crate::model::IosImportClientBrandingAttributes).
         pub fn build(self) -> crate::model::IosImportClientBrandingAttributes {
             crate::model::IosImportClientBrandingAttributes {
                 logo: self.logo,
@@ -2798,7 +3103,7 @@ pub mod ios_import_client_branding_attributes {
     }
 }
 impl IosImportClientBrandingAttributes {
-    /// Creates a new builder-style object to manufacture [`IosImportClientBrandingAttributes`](crate::model::IosImportClientBrandingAttributes)
+    /// Creates a new builder-style object to manufacture [`IosImportClientBrandingAttributes`](crate::model::IosImportClientBrandingAttributes).
     pub fn builder() -> crate::model::ios_import_client_branding_attributes::Builder {
         crate::model::ios_import_client_branding_attributes::Builder::default()
     }
@@ -2809,6 +3114,7 @@ impl IosImportClientBrandingAttributes {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Snapshot {
     /// <p>The time when the snapshot was created.</p>
+    #[doc(hidden)]
     pub snapshot_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Snapshot {
@@ -2824,11 +3130,10 @@ impl std::fmt::Debug for Snapshot {
         formatter.finish()
     }
 }
-/// See [`Snapshot`](crate::model::Snapshot)
+/// See [`Snapshot`](crate::model::Snapshot).
 pub mod snapshot {
 
-    /// A builder for [`Snapshot`](crate::model::Snapshot)
-    #[non_exhaustive]
+    /// A builder for [`Snapshot`](crate::model::Snapshot).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snapshot_time: std::option::Option<aws_smithy_types::DateTime>,
@@ -2847,7 +3152,7 @@ pub mod snapshot {
             self.snapshot_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`Snapshot`](crate::model::Snapshot)
+        /// Consumes the builder and constructs a [`Snapshot`](crate::model::Snapshot).
         pub fn build(self) -> crate::model::Snapshot {
             crate::model::Snapshot {
                 snapshot_time: self.snapshot_time,
@@ -2856,7 +3161,7 @@ pub mod snapshot {
     }
 }
 impl Snapshot {
-    /// Creates a new builder-style object to manufacture [`Snapshot`](crate::model::Snapshot)
+    /// Creates a new builder-style object to manufacture [`Snapshot`](crate::model::Snapshot).
     pub fn builder() -> crate::model::snapshot::Builder {
         crate::model::snapshot::Builder::default()
     }
@@ -2867,12 +3172,16 @@ impl Snapshot {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkspaceConnectionStatus {
     /// <p>The identifier of the WorkSpace.</p>
+    #[doc(hidden)]
     pub workspace_id: std::option::Option<std::string::String>,
     /// <p>The connection state of the WorkSpace. The connection state is unknown if the WorkSpace is stopped.</p>
+    #[doc(hidden)]
     pub connection_state: std::option::Option<crate::model::ConnectionState>,
     /// <p>The timestamp of the connection status check.</p>
+    #[doc(hidden)]
     pub connection_state_check_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp of the last known user connection.</p>
+    #[doc(hidden)]
     pub last_known_user_connection_timestamp: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl WorkspaceConnectionStatus {
@@ -2913,11 +3222,10 @@ impl std::fmt::Debug for WorkspaceConnectionStatus {
         formatter.finish()
     }
 }
-/// See [`WorkspaceConnectionStatus`](crate::model::WorkspaceConnectionStatus)
+/// See [`WorkspaceConnectionStatus`](crate::model::WorkspaceConnectionStatus).
 pub mod workspace_connection_status {
 
-    /// A builder for [`WorkspaceConnectionStatus`](crate::model::WorkspaceConnectionStatus)
-    #[non_exhaustive]
+    /// A builder for [`WorkspaceConnectionStatus`](crate::model::WorkspaceConnectionStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workspace_id: std::option::Option<std::string::String>,
@@ -2983,7 +3291,7 @@ pub mod workspace_connection_status {
             self.last_known_user_connection_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspaceConnectionStatus`](crate::model::WorkspaceConnectionStatus)
+        /// Consumes the builder and constructs a [`WorkspaceConnectionStatus`](crate::model::WorkspaceConnectionStatus).
         pub fn build(self) -> crate::model::WorkspaceConnectionStatus {
             crate::model::WorkspaceConnectionStatus {
                 workspace_id: self.workspace_id,
@@ -2995,7 +3303,7 @@ pub mod workspace_connection_status {
     }
 }
 impl WorkspaceConnectionStatus {
-    /// Creates a new builder-style object to manufacture [`WorkspaceConnectionStatus`](crate::model::WorkspaceConnectionStatus)
+    /// Creates a new builder-style object to manufacture [`WorkspaceConnectionStatus`](crate::model::WorkspaceConnectionStatus).
     pub fn builder() -> crate::model::workspace_connection_status::Builder {
         crate::model::workspace_connection_status::Builder::default()
     }
@@ -3065,36 +3373,51 @@ impl AsRef<str> for ConnectionState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct Workspace {
     /// <p>The identifier of the WorkSpace.</p>
+    #[doc(hidden)]
     pub workspace_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the Directory Service directory for the WorkSpace.</p>
+    #[doc(hidden)]
     pub directory_id: std::option::Option<std::string::String>,
     /// <p>The user for the WorkSpace.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The IP address of the WorkSpace.</p>
+    #[doc(hidden)]
     pub ip_address: std::option::Option<std::string::String>,
     /// <p>The operational state of the WorkSpace.</p> <note>
     /// <p>After a WorkSpace is terminated, the <code>TERMINATED</code> state is returned only briefly before the WorkSpace directory metadata is cleaned up, so this state is rarely returned. To confirm that a WorkSpace is terminated, check for the WorkSpace ID by using <a href="https://docs.aws.amazon.com/workspaces/latest/api/API_DescribeWorkspaces.html"> DescribeWorkSpaces</a>. If the WorkSpace ID isn't returned, then the WorkSpace has been successfully terminated.</p>
     /// </note>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::WorkspaceState>,
     /// <p>The identifier of the bundle used to create the WorkSpace.</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the subnet for the WorkSpace.</p>
+    #[doc(hidden)]
     pub subnet_id: std::option::Option<std::string::String>,
     /// <p>The text of the error message that is returned if the WorkSpace cannot be created.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>The error code that is returned if the WorkSpace cannot be created.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The name of the WorkSpace, as seen by the operating system. The format of this name varies. For more information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/launch-workspaces-tutorials.html"> Launch a WorkSpace</a>. </p>
+    #[doc(hidden)]
     pub computer_name: std::option::Option<std::string::String>,
     /// <p>The symmetric KMS key used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric KMS keys.</p>
+    #[doc(hidden)]
     pub volume_encryption_key: std::option::Option<std::string::String>,
     /// <p>Indicates whether the data stored on the user volume is encrypted.</p>
+    #[doc(hidden)]
     pub user_volume_encryption_enabled: std::option::Option<bool>,
     /// <p>Indicates whether the data stored on the root volume is encrypted.</p>
+    #[doc(hidden)]
     pub root_volume_encryption_enabled: std::option::Option<bool>,
     /// <p>The properties of the WorkSpace.</p>
+    #[doc(hidden)]
     pub workspace_properties: std::option::Option<crate::model::WorkspaceProperties>,
     /// <p>The modification states of the WorkSpace.</p>
+    #[doc(hidden)]
     pub modification_states: std::option::Option<std::vec::Vec<crate::model::ModificationState>>,
 }
 impl Workspace {
@@ -3188,11 +3511,10 @@ impl std::fmt::Debug for Workspace {
         formatter.finish()
     }
 }
-/// See [`Workspace`](crate::model::Workspace)
+/// See [`Workspace`](crate::model::Workspace).
 pub mod workspace {
 
-    /// A builder for [`Workspace`](crate::model::Workspace)
-    #[non_exhaustive]
+    /// A builder for [`Workspace`](crate::model::Workspace).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workspace_id: std::option::Option<std::string::String>,
@@ -3397,7 +3719,7 @@ pub mod workspace {
             self.modification_states = input;
             self
         }
-        /// Consumes the builder and constructs a [`Workspace`](crate::model::Workspace)
+        /// Consumes the builder and constructs a [`Workspace`](crate::model::Workspace).
         pub fn build(self) -> crate::model::Workspace {
             crate::model::Workspace {
                 workspace_id: self.workspace_id,
@@ -3420,7 +3742,7 @@ pub mod workspace {
     }
 }
 impl Workspace {
-    /// Creates a new builder-style object to manufacture [`Workspace`](crate::model::Workspace)
+    /// Creates a new builder-style object to manufacture [`Workspace`](crate::model::Workspace).
     pub fn builder() -> crate::model::workspace::Builder {
         crate::model::workspace::Builder::default()
     }
@@ -3431,8 +3753,10 @@ impl Workspace {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModificationState {
     /// <p>The resource.</p>
+    #[doc(hidden)]
     pub resource: std::option::Option<crate::model::ModificationResourceEnum>,
     /// <p>The modification state.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ModificationStateEnum>,
 }
 impl ModificationState {
@@ -3453,11 +3777,10 @@ impl std::fmt::Debug for ModificationState {
         formatter.finish()
     }
 }
-/// See [`ModificationState`](crate::model::ModificationState)
+/// See [`ModificationState`](crate::model::ModificationState).
 pub mod modification_state {
 
-    /// A builder for [`ModificationState`](crate::model::ModificationState)
-    #[non_exhaustive]
+    /// A builder for [`ModificationState`](crate::model::ModificationState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource: std::option::Option<crate::model::ModificationResourceEnum>,
@@ -3490,7 +3813,7 @@ pub mod modification_state {
             self.state = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModificationState`](crate::model::ModificationState)
+        /// Consumes the builder and constructs a [`ModificationState`](crate::model::ModificationState).
         pub fn build(self) -> crate::model::ModificationState {
             crate::model::ModificationState {
                 resource: self.resource,
@@ -3500,7 +3823,7 @@ pub mod modification_state {
     }
 }
 impl ModificationState {
-    /// Creates a new builder-style object to manufacture [`ModificationState`](crate::model::ModificationState)
+    /// Creates a new builder-style object to manufacture [`ModificationState`](crate::model::ModificationState).
     pub fn builder() -> crate::model::modification_state::Builder {
         crate::model::modification_state::Builder::default()
     }
@@ -3758,26 +4081,37 @@ impl AsRef<str> for WorkspaceState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkspaceImage {
     /// <p>The identifier of the image.</p>
+    #[doc(hidden)]
     pub image_id: std::option::Option<std::string::String>,
     /// <p>The name of the image.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The description of the image.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The operating system that the image is running. </p>
+    #[doc(hidden)]
     pub operating_system: std::option::Option<crate::model::OperatingSystem>,
     /// <p>The status of the image.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::WorkspaceImageState>,
     /// <p>Specifies whether the image is running on dedicated hardware. When Bring Your Own License (BYOL) is enabled, this value is set to <code>DEDICATED</code>. For more information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.html">Bring Your Own Windows Desktop Images</a>.</p>
+    #[doc(hidden)]
     pub required_tenancy: std::option::Option<crate::model::WorkspaceImageRequiredTenancy>,
     /// <p>The error code that is returned for the image.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The text of the error message that is returned for the image.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
     /// <p>The date when the image was created. If the image has been shared, the Amazon Web Services account that the image has been shared with sees the original creation date of the image.</p>
+    #[doc(hidden)]
     pub created: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The identifier of the Amazon Web Services account that owns the image.</p>
+    #[doc(hidden)]
     pub owner_account_id: std::option::Option<std::string::String>,
     /// <p>The updates (if any) that are available for the specified image.</p>
+    #[doc(hidden)]
     pub updates: std::option::Option<crate::model::UpdateResult>,
 }
 impl WorkspaceImage {
@@ -3845,11 +4179,10 @@ impl std::fmt::Debug for WorkspaceImage {
         formatter.finish()
     }
 }
-/// See [`WorkspaceImage`](crate::model::WorkspaceImage)
+/// See [`WorkspaceImage`](crate::model::WorkspaceImage).
 pub mod workspace_image {
 
-    /// A builder for [`WorkspaceImage`](crate::model::WorkspaceImage)
-    #[non_exhaustive]
+    /// A builder for [`WorkspaceImage`](crate::model::WorkspaceImage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) image_id: std::option::Option<std::string::String>,
@@ -4000,7 +4333,7 @@ pub mod workspace_image {
             self.updates = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspaceImage`](crate::model::WorkspaceImage)
+        /// Consumes the builder and constructs a [`WorkspaceImage`](crate::model::WorkspaceImage).
         pub fn build(self) -> crate::model::WorkspaceImage {
             crate::model::WorkspaceImage {
                 image_id: self.image_id,
@@ -4019,7 +4352,7 @@ pub mod workspace_image {
     }
 }
 impl WorkspaceImage {
-    /// Creates a new builder-style object to manufacture [`WorkspaceImage`](crate::model::WorkspaceImage)
+    /// Creates a new builder-style object to manufacture [`WorkspaceImage`](crate::model::WorkspaceImage).
     pub fn builder() -> crate::model::workspace_image::Builder {
         crate::model::workspace_image::Builder::default()
     }
@@ -4032,8 +4365,10 @@ impl WorkspaceImage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateResult {
     /// <p>Indicates whether updated drivers or other components are available for the specified WorkSpace image.</p>
+    #[doc(hidden)]
     pub update_available: std::option::Option<bool>,
     /// <p>A description of whether updates for the WorkSpace image are pending or available.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
 }
 impl UpdateResult {
@@ -4054,11 +4389,10 @@ impl std::fmt::Debug for UpdateResult {
         formatter.finish()
     }
 }
-/// See [`UpdateResult`](crate::model::UpdateResult)
+/// See [`UpdateResult`](crate::model::UpdateResult).
 pub mod update_result {
 
-    /// A builder for [`UpdateResult`](crate::model::UpdateResult)
-    #[non_exhaustive]
+    /// A builder for [`UpdateResult`](crate::model::UpdateResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) update_available: std::option::Option<bool>,
@@ -4085,7 +4419,7 @@ pub mod update_result {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateResult`](crate::model::UpdateResult)
+        /// Consumes the builder and constructs a [`UpdateResult`](crate::model::UpdateResult).
         pub fn build(self) -> crate::model::UpdateResult {
             crate::model::UpdateResult {
                 update_available: self.update_available,
@@ -4095,7 +4429,7 @@ pub mod update_result {
     }
 }
 impl UpdateResult {
-    /// Creates a new builder-style object to manufacture [`UpdateResult`](crate::model::UpdateResult)
+    /// Creates a new builder-style object to manufacture [`UpdateResult`](crate::model::UpdateResult).
     pub fn builder() -> crate::model::update_result::Builder {
         crate::model::update_result::Builder::default()
     }
@@ -4220,6 +4554,7 @@ impl AsRef<str> for WorkspaceImageState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OperatingSystem {
     /// <p>The operating system.</p>
+    #[doc(hidden)]
     pub r#type: std::option::Option<crate::model::OperatingSystemType>,
 }
 impl OperatingSystem {
@@ -4235,11 +4570,10 @@ impl std::fmt::Debug for OperatingSystem {
         formatter.finish()
     }
 }
-/// See [`OperatingSystem`](crate::model::OperatingSystem)
+/// See [`OperatingSystem`](crate::model::OperatingSystem).
 pub mod operating_system {
 
-    /// A builder for [`OperatingSystem`](crate::model::OperatingSystem)
-    #[non_exhaustive]
+    /// A builder for [`OperatingSystem`](crate::model::OperatingSystem).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::OperatingSystemType>,
@@ -4258,7 +4592,7 @@ pub mod operating_system {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`OperatingSystem`](crate::model::OperatingSystem)
+        /// Consumes the builder and constructs a [`OperatingSystem`](crate::model::OperatingSystem).
         pub fn build(self) -> crate::model::OperatingSystem {
             crate::model::OperatingSystem {
                 r#type: self.r#type,
@@ -4267,7 +4601,7 @@ pub mod operating_system {
     }
 }
 impl OperatingSystem {
-    /// Creates a new builder-style object to manufacture [`OperatingSystem`](crate::model::OperatingSystem)
+    /// Creates a new builder-style object to manufacture [`OperatingSystem`](crate::model::OperatingSystem).
     pub fn builder() -> crate::model::operating_system::Builder {
         crate::model::operating_system::Builder::default()
     }
@@ -4388,6 +4722,7 @@ impl AsRef<str> for ImageType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImagePermission {
     /// <p>The identifier of the Amazon Web Services account that an image has been shared with.</p>
+    #[doc(hidden)]
     pub shared_account_id: std::option::Option<std::string::String>,
 }
 impl ImagePermission {
@@ -4403,11 +4738,10 @@ impl std::fmt::Debug for ImagePermission {
         formatter.finish()
     }
 }
-/// See [`ImagePermission`](crate::model::ImagePermission)
+/// See [`ImagePermission`](crate::model::ImagePermission).
 pub mod image_permission {
 
-    /// A builder for [`ImagePermission`](crate::model::ImagePermission)
-    #[non_exhaustive]
+    /// A builder for [`ImagePermission`](crate::model::ImagePermission).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) shared_account_id: std::option::Option<std::string::String>,
@@ -4426,7 +4760,7 @@ pub mod image_permission {
             self.shared_account_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImagePermission`](crate::model::ImagePermission)
+        /// Consumes the builder and constructs a [`ImagePermission`](crate::model::ImagePermission).
         pub fn build(self) -> crate::model::ImagePermission {
             crate::model::ImagePermission {
                 shared_account_id: self.shared_account_id,
@@ -4435,7 +4769,7 @@ pub mod image_permission {
     }
 }
 impl ImagePermission {
-    /// Creates a new builder-style object to manufacture [`ImagePermission`](crate::model::ImagePermission)
+    /// Creates a new builder-style object to manufacture [`ImagePermission`](crate::model::ImagePermission).
     pub fn builder() -> crate::model::image_permission::Builder {
         crate::model::image_permission::Builder::default()
     }
@@ -4446,38 +4780,57 @@ impl ImagePermission {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkspaceDirectory {
     /// <p>The directory identifier.</p>
+    #[doc(hidden)]
     pub directory_id: std::option::Option<std::string::String>,
     /// <p>The directory alias.</p>
+    #[doc(hidden)]
     pub alias: std::option::Option<std::string::String>,
     /// <p>The name of the directory.</p>
+    #[doc(hidden)]
     pub directory_name: std::option::Option<std::string::String>,
     /// <p>The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.</p>
+    #[doc(hidden)]
     pub registration_code: std::option::Option<std::string::String>,
     /// <p>The identifiers of the subnets used with the directory.</p>
+    #[doc(hidden)]
     pub subnet_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The IP addresses of the DNS servers for the directory.</p>
+    #[doc(hidden)]
     pub dns_ip_addresses: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The user name for the service account.</p>
+    #[doc(hidden)]
     pub customer_user_name: std::option::Option<std::string::String>,
     /// <p>The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.</p>
+    #[doc(hidden)]
     pub iam_role_id: std::option::Option<std::string::String>,
     /// <p>The directory type.</p>
+    #[doc(hidden)]
     pub directory_type: std::option::Option<crate::model::WorkspaceDirectoryType>,
     /// <p>The identifier of the security group that is assigned to new WorkSpaces.</p>
+    #[doc(hidden)]
     pub workspace_security_group_id: std::option::Option<std::string::String>,
     /// <p>The state of the directory's registration with Amazon WorkSpaces. After a directory is deregistered, the <code>DEREGISTERED</code> state is returned very briefly before the directory metadata is cleaned up, so this state is rarely returned. To confirm that a directory is deregistered, check for the directory ID by using <a href="https://docs.aws.amazon.com/workspaces/latest/api/API_DescribeWorkspaceDirectories.html"> DescribeWorkspaceDirectories</a>. If the directory ID isn't returned, then the directory has been successfully deregistered.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::WorkspaceDirectoryState>,
     /// <p>The default creation properties for all WorkSpaces in the directory.</p>
+    #[doc(hidden)]
     pub workspace_creation_properties:
         std::option::Option<crate::model::DefaultWorkspaceCreationProperties>,
     /// <p>The identifiers of the IP access control groups associated with the directory.</p>
+    #[doc(hidden)]
     pub ip_group_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The devices and operating systems that users can use to access WorkSpaces.</p>
+    #[doc(hidden)]
     pub workspace_access_properties: std::option::Option<crate::model::WorkspaceAccessProperties>,
     /// <p>Specifies whether the directory is dedicated or shared. To use Bring Your Own License (BYOL), this value must be set to <code>DEDICATED</code>. For more information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.html">Bring Your Own Windows Desktop Images</a>.</p>
+    #[doc(hidden)]
     pub tenancy: std::option::Option<crate::model::Tenancy>,
     /// <p>The default self-service permissions for WorkSpaces in the directory.</p>
+    #[doc(hidden)]
     pub selfservice_permissions: std::option::Option<crate::model::SelfservicePermissions>,
+    /// <p>Describes the enablement status, user access URL, and relay state parameter name that are used for configuring federation with an SAML 2.0 identity provider.</p>
+    #[doc(hidden)]
+    pub saml_properties: std::option::Option<crate::model::SamlProperties>,
 }
 impl WorkspaceDirectory {
     /// <p>The directory identifier.</p>
@@ -4550,6 +4903,10 @@ impl WorkspaceDirectory {
     ) -> std::option::Option<&crate::model::SelfservicePermissions> {
         self.selfservice_permissions.as_ref()
     }
+    /// <p>Describes the enablement status, user access URL, and relay state parameter name that are used for configuring federation with an SAML 2.0 identity provider.</p>
+    pub fn saml_properties(&self) -> std::option::Option<&crate::model::SamlProperties> {
+        self.saml_properties.as_ref()
+    }
 }
 impl std::fmt::Debug for WorkspaceDirectory {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -4579,14 +4936,14 @@ impl std::fmt::Debug for WorkspaceDirectory {
         );
         formatter.field("tenancy", &self.tenancy);
         formatter.field("selfservice_permissions", &self.selfservice_permissions);
+        formatter.field("saml_properties", &self.saml_properties);
         formatter.finish()
     }
 }
-/// See [`WorkspaceDirectory`](crate::model::WorkspaceDirectory)
+/// See [`WorkspaceDirectory`](crate::model::WorkspaceDirectory).
 pub mod workspace_directory {
 
-    /// A builder for [`WorkspaceDirectory`](crate::model::WorkspaceDirectory)
-    #[non_exhaustive]
+    /// A builder for [`WorkspaceDirectory`](crate::model::WorkspaceDirectory).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) directory_id: std::option::Option<std::string::String>,
@@ -4608,6 +4965,7 @@ pub mod workspace_directory {
         pub(crate) tenancy: std::option::Option<crate::model::Tenancy>,
         pub(crate) selfservice_permissions:
             std::option::Option<crate::model::SelfservicePermissions>,
+        pub(crate) saml_properties: std::option::Option<crate::model::SamlProperties>,
     }
     impl Builder {
         /// <p>The directory identifier.</p>
@@ -4836,7 +5194,20 @@ pub mod workspace_directory {
             self.selfservice_permissions = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspaceDirectory`](crate::model::WorkspaceDirectory)
+        /// <p>Describes the enablement status, user access URL, and relay state parameter name that are used for configuring federation with an SAML 2.0 identity provider.</p>
+        pub fn saml_properties(mut self, input: crate::model::SamlProperties) -> Self {
+            self.saml_properties = Some(input);
+            self
+        }
+        /// <p>Describes the enablement status, user access URL, and relay state parameter name that are used for configuring federation with an SAML 2.0 identity provider.</p>
+        pub fn set_saml_properties(
+            mut self,
+            input: std::option::Option<crate::model::SamlProperties>,
+        ) -> Self {
+            self.saml_properties = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`WorkspaceDirectory`](crate::model::WorkspaceDirectory).
         pub fn build(self) -> crate::model::WorkspaceDirectory {
             crate::model::WorkspaceDirectory {
                 directory_id: self.directory_id,
@@ -4855,12 +5226,13 @@ pub mod workspace_directory {
                 workspace_access_properties: self.workspace_access_properties,
                 tenancy: self.tenancy,
                 selfservice_permissions: self.selfservice_permissions,
+                saml_properties: self.saml_properties,
             }
         }
     }
 }
 impl WorkspaceDirectory {
-    /// Creates a new builder-style object to manufacture [`WorkspaceDirectory`](crate::model::WorkspaceDirectory)
+    /// Creates a new builder-style object to manufacture [`WorkspaceDirectory`](crate::model::WorkspaceDirectory).
     pub fn builder() -> crate::model::workspace_directory::Builder {
         crate::model::workspace_directory::Builder::default()
     }
@@ -4871,16 +5243,22 @@ impl WorkspaceDirectory {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DefaultWorkspaceCreationProperties {
     /// <p>Specifies whether the directory is enabled for Amazon WorkDocs.</p>
+    #[doc(hidden)]
     pub enable_work_docs: std::option::Option<bool>,
     /// <p>Specifies whether to automatically assign an Elastic public IP address to WorkSpaces in this directory by default. If enabled, the Elastic public IP address allows outbound internet access from your WorkSpaces when you’re using an internet gateway in the Amazon VPC in which your WorkSpaces are located. If you're using a Network Address Translation (NAT) gateway for outbound internet access from your VPC, or if your WorkSpaces are in public subnets and you manually assign them Elastic IP addresses, you should disable this setting. This setting applies to new WorkSpaces that you launch or to existing WorkSpaces that you rebuild. For more information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-vpc.html"> Configure a VPC for Amazon WorkSpaces</a>.</p>
+    #[doc(hidden)]
     pub enable_internet_access: std::option::Option<bool>,
     /// <p>The organizational unit (OU) in the directory for the WorkSpace machine accounts.</p>
+    #[doc(hidden)]
     pub default_ou: std::option::Option<std::string::String>,
     /// <p>The identifier of the default security group to apply to WorkSpaces when they are created. For more information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-security-groups.html"> Security Groups for Your WorkSpaces</a>.</p>
+    #[doc(hidden)]
     pub custom_security_group_id: std::option::Option<std::string::String>,
     /// <p>Specifies whether WorkSpace users are local administrators on their WorkSpaces.</p>
+    #[doc(hidden)]
     pub user_enabled_as_local_administrator: std::option::Option<bool>,
     /// <p>Specifies whether maintenance mode is enabled for WorkSpaces. For more information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html">WorkSpace Maintenance</a>.</p>
+    #[doc(hidden)]
     pub enable_maintenance_mode: std::option::Option<bool>,
 }
 impl DefaultWorkspaceCreationProperties {
@@ -4924,11 +5302,10 @@ impl std::fmt::Debug for DefaultWorkspaceCreationProperties {
         formatter.finish()
     }
 }
-/// See [`DefaultWorkspaceCreationProperties`](crate::model::DefaultWorkspaceCreationProperties)
+/// See [`DefaultWorkspaceCreationProperties`](crate::model::DefaultWorkspaceCreationProperties).
 pub mod default_workspace_creation_properties {
 
-    /// A builder for [`DefaultWorkspaceCreationProperties`](crate::model::DefaultWorkspaceCreationProperties)
-    #[non_exhaustive]
+    /// A builder for [`DefaultWorkspaceCreationProperties`](crate::model::DefaultWorkspaceCreationProperties).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enable_work_docs: std::option::Option<bool>,
@@ -5005,7 +5382,7 @@ pub mod default_workspace_creation_properties {
             self.enable_maintenance_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`DefaultWorkspaceCreationProperties`](crate::model::DefaultWorkspaceCreationProperties)
+        /// Consumes the builder and constructs a [`DefaultWorkspaceCreationProperties`](crate::model::DefaultWorkspaceCreationProperties).
         pub fn build(self) -> crate::model::DefaultWorkspaceCreationProperties {
             crate::model::DefaultWorkspaceCreationProperties {
                 enable_work_docs: self.enable_work_docs,
@@ -5019,7 +5396,7 @@ pub mod default_workspace_creation_properties {
     }
 }
 impl DefaultWorkspaceCreationProperties {
-    /// Creates a new builder-style object to manufacture [`DefaultWorkspaceCreationProperties`](crate::model::DefaultWorkspaceCreationProperties)
+    /// Creates a new builder-style object to manufacture [`DefaultWorkspaceCreationProperties`](crate::model::DefaultWorkspaceCreationProperties).
     pub fn builder() -> crate::model::default_workspace_creation_properties::Builder {
         crate::model::default_workspace_creation_properties::Builder::default()
     }
@@ -5158,24 +5535,34 @@ impl AsRef<str> for WorkspaceDirectoryType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkspaceBundle {
     /// <p>The identifier of the bundle.</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>The name of the bundle.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The owner of the bundle. This is the account identifier of the owner, or <code>AMAZON</code> if the bundle is provided by Amazon Web Services.</p>
+    #[doc(hidden)]
     pub owner: std::option::Option<std::string::String>,
     /// <p>The description of the bundle.</p>
+    #[doc(hidden)]
     pub description: std::option::Option<std::string::String>,
     /// <p>The identifier of the image that was used to create the bundle.</p>
+    #[doc(hidden)]
     pub image_id: std::option::Option<std::string::String>,
     /// <p>The size of the root volume.</p>
+    #[doc(hidden)]
     pub root_storage: std::option::Option<crate::model::RootStorage>,
     /// <p>The size of the user volume.</p>
+    #[doc(hidden)]
     pub user_storage: std::option::Option<crate::model::UserStorage>,
     /// <p>The compute type of the bundle. For more information, see <a href="http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles">Amazon WorkSpaces Bundles</a>.</p>
+    #[doc(hidden)]
     pub compute_type: std::option::Option<crate::model::ComputeType>,
     /// <p>The last time that the bundle was updated.</p>
+    #[doc(hidden)]
     pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time when the bundle was created.</p>
+    #[doc(hidden)]
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl WorkspaceBundle {
@@ -5236,11 +5623,10 @@ impl std::fmt::Debug for WorkspaceBundle {
         formatter.finish()
     }
 }
-/// See [`WorkspaceBundle`](crate::model::WorkspaceBundle)
+/// See [`WorkspaceBundle`](crate::model::WorkspaceBundle).
 pub mod workspace_bundle {
 
-    /// A builder for [`WorkspaceBundle`](crate::model::WorkspaceBundle)
-    #[non_exhaustive]
+    /// A builder for [`WorkspaceBundle`](crate::model::WorkspaceBundle).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) bundle_id: std::option::Option<std::string::String>,
@@ -5370,7 +5756,7 @@ pub mod workspace_bundle {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspaceBundle`](crate::model::WorkspaceBundle)
+        /// Consumes the builder and constructs a [`WorkspaceBundle`](crate::model::WorkspaceBundle).
         pub fn build(self) -> crate::model::WorkspaceBundle {
             crate::model::WorkspaceBundle {
                 bundle_id: self.bundle_id,
@@ -5388,7 +5774,7 @@ pub mod workspace_bundle {
     }
 }
 impl WorkspaceBundle {
-    /// Creates a new builder-style object to manufacture [`WorkspaceBundle`](crate::model::WorkspaceBundle)
+    /// Creates a new builder-style object to manufacture [`WorkspaceBundle`](crate::model::WorkspaceBundle).
     pub fn builder() -> crate::model::workspace_bundle::Builder {
         crate::model::workspace_bundle::Builder::default()
     }
@@ -5399,6 +5785,7 @@ impl WorkspaceBundle {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ComputeType {
     /// <p>The compute type.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<crate::model::Compute>,
 }
 impl ComputeType {
@@ -5414,11 +5801,10 @@ impl std::fmt::Debug for ComputeType {
         formatter.finish()
     }
 }
-/// See [`ComputeType`](crate::model::ComputeType)
+/// See [`ComputeType`](crate::model::ComputeType).
 pub mod compute_type {
 
-    /// A builder for [`ComputeType`](crate::model::ComputeType)
-    #[non_exhaustive]
+    /// A builder for [`ComputeType`](crate::model::ComputeType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::Compute>,
@@ -5434,14 +5820,14 @@ pub mod compute_type {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ComputeType`](crate::model::ComputeType)
+        /// Consumes the builder and constructs a [`ComputeType`](crate::model::ComputeType).
         pub fn build(self) -> crate::model::ComputeType {
             crate::model::ComputeType { name: self.name }
         }
     }
 }
 impl ComputeType {
-    /// Creates a new builder-style object to manufacture [`ComputeType`](crate::model::ComputeType)
+    /// Creates a new builder-style object to manufacture [`ComputeType`](crate::model::ComputeType).
     pub fn builder() -> crate::model::compute_type::Builder {
         crate::model::compute_type::Builder::default()
     }
@@ -5452,6 +5838,7 @@ impl ComputeType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UserStorage {
     /// <p>The size of the user volume.</p>
+    #[doc(hidden)]
     pub capacity: std::option::Option<std::string::String>,
 }
 impl UserStorage {
@@ -5467,11 +5854,10 @@ impl std::fmt::Debug for UserStorage {
         formatter.finish()
     }
 }
-/// See [`UserStorage`](crate::model::UserStorage)
+/// See [`UserStorage`](crate::model::UserStorage).
 pub mod user_storage {
 
-    /// A builder for [`UserStorage`](crate::model::UserStorage)
-    #[non_exhaustive]
+    /// A builder for [`UserStorage`](crate::model::UserStorage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) capacity: std::option::Option<std::string::String>,
@@ -5487,7 +5873,7 @@ pub mod user_storage {
             self.capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`UserStorage`](crate::model::UserStorage)
+        /// Consumes the builder and constructs a [`UserStorage`](crate::model::UserStorage).
         pub fn build(self) -> crate::model::UserStorage {
             crate::model::UserStorage {
                 capacity: self.capacity,
@@ -5496,7 +5882,7 @@ pub mod user_storage {
     }
 }
 impl UserStorage {
-    /// Creates a new builder-style object to manufacture [`UserStorage`](crate::model::UserStorage)
+    /// Creates a new builder-style object to manufacture [`UserStorage`](crate::model::UserStorage).
     pub fn builder() -> crate::model::user_storage::Builder {
         crate::model::user_storage::Builder::default()
     }
@@ -5507,6 +5893,7 @@ impl UserStorage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RootStorage {
     /// <p>The size of the root volume.</p>
+    #[doc(hidden)]
     pub capacity: std::option::Option<std::string::String>,
 }
 impl RootStorage {
@@ -5522,11 +5909,10 @@ impl std::fmt::Debug for RootStorage {
         formatter.finish()
     }
 }
-/// See [`RootStorage`](crate::model::RootStorage)
+/// See [`RootStorage`](crate::model::RootStorage).
 pub mod root_storage {
 
-    /// A builder for [`RootStorage`](crate::model::RootStorage)
-    #[non_exhaustive]
+    /// A builder for [`RootStorage`](crate::model::RootStorage).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) capacity: std::option::Option<std::string::String>,
@@ -5542,7 +5928,7 @@ pub mod root_storage {
             self.capacity = input;
             self
         }
-        /// Consumes the builder and constructs a [`RootStorage`](crate::model::RootStorage)
+        /// Consumes the builder and constructs a [`RootStorage`](crate::model::RootStorage).
         pub fn build(self) -> crate::model::RootStorage {
             crate::model::RootStorage {
                 capacity: self.capacity,
@@ -5551,7 +5937,7 @@ pub mod root_storage {
     }
 }
 impl RootStorage {
-    /// Creates a new builder-style object to manufacture [`RootStorage`](crate::model::RootStorage)
+    /// Creates a new builder-style object to manufacture [`RootStorage`](crate::model::RootStorage).
     pub fn builder() -> crate::model::root_storage::Builder {
         crate::model::root_storage::Builder::default()
     }
@@ -5562,12 +5948,16 @@ impl RootStorage {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkspacesIpGroup {
     /// <p>The identifier of the group.</p>
+    #[doc(hidden)]
     pub group_id: std::option::Option<std::string::String>,
     /// <p>The name of the group.</p>
+    #[doc(hidden)]
     pub group_name: std::option::Option<std::string::String>,
     /// <p>The description of the group.</p>
+    #[doc(hidden)]
     pub group_desc: std::option::Option<std::string::String>,
     /// <p>The rules.</p>
+    #[doc(hidden)]
     pub user_rules: std::option::Option<std::vec::Vec<crate::model::IpRuleItem>>,
 }
 impl WorkspacesIpGroup {
@@ -5598,11 +5988,10 @@ impl std::fmt::Debug for WorkspacesIpGroup {
         formatter.finish()
     }
 }
-/// See [`WorkspacesIpGroup`](crate::model::WorkspacesIpGroup)
+/// See [`WorkspacesIpGroup`](crate::model::WorkspacesIpGroup).
 pub mod workspaces_ip_group {
 
-    /// A builder for [`WorkspacesIpGroup`](crate::model::WorkspacesIpGroup)
-    #[non_exhaustive]
+    /// A builder for [`WorkspacesIpGroup`](crate::model::WorkspacesIpGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_id: std::option::Option<std::string::String>,
@@ -5660,7 +6049,7 @@ pub mod workspaces_ip_group {
             self.user_rules = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspacesIpGroup`](crate::model::WorkspacesIpGroup)
+        /// Consumes the builder and constructs a [`WorkspacesIpGroup`](crate::model::WorkspacesIpGroup).
         pub fn build(self) -> crate::model::WorkspacesIpGroup {
             crate::model::WorkspacesIpGroup {
                 group_id: self.group_id,
@@ -5672,7 +6061,7 @@ pub mod workspaces_ip_group {
     }
 }
 impl WorkspacesIpGroup {
-    /// Creates a new builder-style object to manufacture [`WorkspacesIpGroup`](crate::model::WorkspacesIpGroup)
+    /// Creates a new builder-style object to manufacture [`WorkspacesIpGroup`](crate::model::WorkspacesIpGroup).
     pub fn builder() -> crate::model::workspaces_ip_group::Builder {
         crate::model::workspaces_ip_group::Builder::default()
     }
@@ -5683,14 +6072,19 @@ impl WorkspacesIpGroup {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectionAlias {
     /// <p>The connection string specified for the connection alias. The connection string must be in the form of a fully qualified domain name (FQDN), such as <code>www.example.com</code>.</p>
+    #[doc(hidden)]
     pub connection_string: std::option::Option<std::string::String>,
     /// <p>The identifier of the connection alias.</p>
+    #[doc(hidden)]
     pub alias_id: std::option::Option<std::string::String>,
     /// <p>The current state of the connection alias.</p>
+    #[doc(hidden)]
     pub state: std::option::Option<crate::model::ConnectionAliasState>,
     /// <p>The identifier of the Amazon Web Services account that owns the connection alias.</p>
+    #[doc(hidden)]
     pub owner_account_id: std::option::Option<std::string::String>,
     /// <p>The association status of the connection alias.</p>
+    #[doc(hidden)]
     pub associations: std::option::Option<std::vec::Vec<crate::model::ConnectionAliasAssociation>>,
 }
 impl ConnectionAlias {
@@ -5726,11 +6120,10 @@ impl std::fmt::Debug for ConnectionAlias {
         formatter.finish()
     }
 }
-/// See [`ConnectionAlias`](crate::model::ConnectionAlias)
+/// See [`ConnectionAlias`](crate::model::ConnectionAlias).
 pub mod connection_alias {
 
-    /// A builder for [`ConnectionAlias`](crate::model::ConnectionAlias)
-    #[non_exhaustive]
+    /// A builder for [`ConnectionAlias`](crate::model::ConnectionAlias).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) connection_string: std::option::Option<std::string::String>,
@@ -5809,7 +6202,7 @@ pub mod connection_alias {
             self.associations = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectionAlias`](crate::model::ConnectionAlias)
+        /// Consumes the builder and constructs a [`ConnectionAlias`](crate::model::ConnectionAlias).
         pub fn build(self) -> crate::model::ConnectionAlias {
             crate::model::ConnectionAlias {
                 connection_string: self.connection_string,
@@ -5822,7 +6215,7 @@ pub mod connection_alias {
     }
 }
 impl ConnectionAlias {
-    /// Creates a new builder-style object to manufacture [`ConnectionAlias`](crate::model::ConnectionAlias)
+    /// Creates a new builder-style object to manufacture [`ConnectionAlias`](crate::model::ConnectionAlias).
     pub fn builder() -> crate::model::connection_alias::Builder {
         crate::model::connection_alias::Builder::default()
     }
@@ -5833,12 +6226,16 @@ impl ConnectionAlias {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectionAliasAssociation {
     /// <p>The association status of the connection alias.</p>
+    #[doc(hidden)]
     pub association_status: std::option::Option<crate::model::AssociationStatus>,
     /// <p>The identifier of the Amazon Web Services account that associated the connection alias with a directory.</p>
+    #[doc(hidden)]
     pub associated_account_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the directory associated with a connection alias.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The identifier of the connection alias association. You use the connection identifier in the DNS TXT record when you're configuring your DNS routing policies.</p>
+    #[doc(hidden)]
     pub connection_identifier: std::option::Option<std::string::String>,
 }
 impl ConnectionAliasAssociation {
@@ -5869,11 +6266,10 @@ impl std::fmt::Debug for ConnectionAliasAssociation {
         formatter.finish()
     }
 }
-/// See [`ConnectionAliasAssociation`](crate::model::ConnectionAliasAssociation)
+/// See [`ConnectionAliasAssociation`](crate::model::ConnectionAliasAssociation).
 pub mod connection_alias_association {
 
-    /// A builder for [`ConnectionAliasAssociation`](crate::model::ConnectionAliasAssociation)
-    #[non_exhaustive]
+    /// A builder for [`ConnectionAliasAssociation`](crate::model::ConnectionAliasAssociation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) association_status: std::option::Option<crate::model::AssociationStatus>,
@@ -5931,7 +6327,7 @@ pub mod connection_alias_association {
             self.connection_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectionAliasAssociation`](crate::model::ConnectionAliasAssociation)
+        /// Consumes the builder and constructs a [`ConnectionAliasAssociation`](crate::model::ConnectionAliasAssociation).
         pub fn build(self) -> crate::model::ConnectionAliasAssociation {
             crate::model::ConnectionAliasAssociation {
                 association_status: self.association_status,
@@ -5943,7 +6339,7 @@ pub mod connection_alias_association {
     }
 }
 impl ConnectionAliasAssociation {
-    /// Creates a new builder-style object to manufacture [`ConnectionAliasAssociation`](crate::model::ConnectionAliasAssociation)
+    /// Creates a new builder-style object to manufacture [`ConnectionAliasAssociation`](crate::model::ConnectionAliasAssociation).
     pub fn builder() -> crate::model::connection_alias_association::Builder {
         crate::model::connection_alias_association::Builder::default()
     }
@@ -6086,12 +6482,16 @@ impl AsRef<str> for ConnectionAliasState {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ConnectClientAddIn {
     /// <p>The client add-in identifier.</p>
+    #[doc(hidden)]
     pub add_in_id: std::option::Option<std::string::String>,
     /// <p>The directory identifier for which the client add-in is configured.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>The name of the client add in.</p>
+    #[doc(hidden)]
     pub name: std::option::Option<std::string::String>,
     /// <p>The endpoint URL of the client add-in.</p>
+    #[doc(hidden)]
     pub url: std::option::Option<std::string::String>,
 }
 impl ConnectClientAddIn {
@@ -6122,11 +6522,10 @@ impl std::fmt::Debug for ConnectClientAddIn {
         formatter.finish()
     }
 }
-/// See [`ConnectClientAddIn`](crate::model::ConnectClientAddIn)
+/// See [`ConnectClientAddIn`](crate::model::ConnectClientAddIn).
 pub mod connect_client_add_in {
 
-    /// A builder for [`ConnectClientAddIn`](crate::model::ConnectClientAddIn)
-    #[non_exhaustive]
+    /// A builder for [`ConnectClientAddIn`](crate::model::ConnectClientAddIn).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) add_in_id: std::option::Option<std::string::String>,
@@ -6175,7 +6574,7 @@ pub mod connect_client_add_in {
             self.url = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConnectClientAddIn`](crate::model::ConnectClientAddIn)
+        /// Consumes the builder and constructs a [`ConnectClientAddIn`](crate::model::ConnectClientAddIn).
         pub fn build(self) -> crate::model::ConnectClientAddIn {
             crate::model::ConnectClientAddIn {
                 add_in_id: self.add_in_id,
@@ -6187,7 +6586,7 @@ pub mod connect_client_add_in {
     }
 }
 impl ConnectClientAddIn {
-    /// Creates a new builder-style object to manufacture [`ConnectClientAddIn`](crate::model::ConnectClientAddIn)
+    /// Creates a new builder-style object to manufacture [`ConnectClientAddIn`](crate::model::ConnectClientAddIn).
     pub fn builder() -> crate::model::connect_client_add_in::Builder {
         crate::model::connect_client_add_in::Builder::default()
     }
@@ -6198,8 +6597,10 @@ impl ConnectClientAddIn {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ClientPropertiesResult {
     /// <p>The resource identifier, in the form of a directory ID.</p>
+    #[doc(hidden)]
     pub resource_id: std::option::Option<std::string::String>,
     /// <p>Information about the Amazon WorkSpaces client.</p>
+    #[doc(hidden)]
     pub client_properties: std::option::Option<crate::model::ClientProperties>,
 }
 impl ClientPropertiesResult {
@@ -6220,11 +6621,10 @@ impl std::fmt::Debug for ClientPropertiesResult {
         formatter.finish()
     }
 }
-/// See [`ClientPropertiesResult`](crate::model::ClientPropertiesResult)
+/// See [`ClientPropertiesResult`](crate::model::ClientPropertiesResult).
 pub mod client_properties_result {
 
-    /// A builder for [`ClientPropertiesResult`](crate::model::ClientPropertiesResult)
-    #[non_exhaustive]
+    /// A builder for [`ClientPropertiesResult`](crate::model::ClientPropertiesResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_id: std::option::Option<std::string::String>,
@@ -6254,7 +6654,7 @@ pub mod client_properties_result {
             self.client_properties = input;
             self
         }
-        /// Consumes the builder and constructs a [`ClientPropertiesResult`](crate::model::ClientPropertiesResult)
+        /// Consumes the builder and constructs a [`ClientPropertiesResult`](crate::model::ClientPropertiesResult).
         pub fn build(self) -> crate::model::ClientPropertiesResult {
             crate::model::ClientPropertiesResult {
                 resource_id: self.resource_id,
@@ -6264,7 +6664,7 @@ pub mod client_properties_result {
     }
 }
 impl ClientPropertiesResult {
-    /// Creates a new builder-style object to manufacture [`ClientPropertiesResult`](crate::model::ClientPropertiesResult)
+    /// Creates a new builder-style object to manufacture [`ClientPropertiesResult`](crate::model::ClientPropertiesResult).
     pub fn builder() -> crate::model::client_properties_result::Builder {
         crate::model::client_properties_result::Builder::default()
     }
@@ -6275,18 +6675,24 @@ impl ClientPropertiesResult {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AccountModification {
     /// <p>The state of the modification to the configuration of BYOL.</p>
+    #[doc(hidden)]
     pub modification_state:
         std::option::Option<crate::model::DedicatedTenancyModificationStateEnum>,
     /// <p>The status of BYOL (whether BYOL is being enabled or disabled).</p>
+    #[doc(hidden)]
     pub dedicated_tenancy_support:
         std::option::Option<crate::model::DedicatedTenancySupportResultEnum>,
     /// <p>The IP address range, specified as an IPv4 CIDR block, for the management network interface used for the account.</p>
+    #[doc(hidden)]
     pub dedicated_tenancy_management_cidr_range: std::option::Option<std::string::String>,
     /// <p>The timestamp when the modification of the BYOL configuration was started.</p>
+    #[doc(hidden)]
     pub start_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The error code that is returned if the configuration of BYOL cannot be modified.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The text of the error message that is returned if the configuration of BYOL cannot be modified.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl AccountModification {
@@ -6334,11 +6740,10 @@ impl std::fmt::Debug for AccountModification {
         formatter.finish()
     }
 }
-/// See [`AccountModification`](crate::model::AccountModification)
+/// See [`AccountModification`](crate::model::AccountModification).
 pub mod account_modification {
 
-    /// A builder for [`AccountModification`](crate::model::AccountModification)
-    #[non_exhaustive]
+    /// A builder for [`AccountModification`](crate::model::AccountModification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) modification_state:
@@ -6436,7 +6841,7 @@ pub mod account_modification {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountModification`](crate::model::AccountModification)
+        /// Consumes the builder and constructs a [`AccountModification`](crate::model::AccountModification).
         pub fn build(self) -> crate::model::AccountModification {
             crate::model::AccountModification {
                 modification_state: self.modification_state,
@@ -6451,7 +6856,7 @@ pub mod account_modification {
     }
 }
 impl AccountModification {
-    /// Creates a new builder-style object to manufacture [`AccountModification`](crate::model::AccountModification)
+    /// Creates a new builder-style object to manufacture [`AccountModification`](crate::model::AccountModification).
     pub fn builder() -> crate::model::account_modification::Builder {
         crate::model::account_modification::Builder::default()
     }
@@ -6654,10 +7059,13 @@ impl AsRef<str> for ClientDeviceType {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailedCreateWorkspaceRequest {
     /// <p>Information about the WorkSpace.</p>
+    #[doc(hidden)]
     pub workspace_request: std::option::Option<crate::model::WorkspaceRequest>,
     /// <p>The error code that is returned if the WorkSpace cannot be created.</p>
+    #[doc(hidden)]
     pub error_code: std::option::Option<std::string::String>,
     /// <p>The text of the error message that is returned if the WorkSpace cannot be created.</p>
+    #[doc(hidden)]
     pub error_message: std::option::Option<std::string::String>,
 }
 impl FailedCreateWorkspaceRequest {
@@ -6683,11 +7091,10 @@ impl std::fmt::Debug for FailedCreateWorkspaceRequest {
         formatter.finish()
     }
 }
-/// See [`FailedCreateWorkspaceRequest`](crate::model::FailedCreateWorkspaceRequest)
+/// See [`FailedCreateWorkspaceRequest`](crate::model::FailedCreateWorkspaceRequest).
 pub mod failed_create_workspace_request {
 
-    /// A builder for [`FailedCreateWorkspaceRequest`](crate::model::FailedCreateWorkspaceRequest)
-    #[non_exhaustive]
+    /// A builder for [`FailedCreateWorkspaceRequest`](crate::model::FailedCreateWorkspaceRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) workspace_request: std::option::Option<crate::model::WorkspaceRequest>,
@@ -6731,7 +7138,7 @@ pub mod failed_create_workspace_request {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`FailedCreateWorkspaceRequest`](crate::model::FailedCreateWorkspaceRequest)
+        /// Consumes the builder and constructs a [`FailedCreateWorkspaceRequest`](crate::model::FailedCreateWorkspaceRequest).
         pub fn build(self) -> crate::model::FailedCreateWorkspaceRequest {
             crate::model::FailedCreateWorkspaceRequest {
                 workspace_request: self.workspace_request,
@@ -6742,7 +7149,7 @@ pub mod failed_create_workspace_request {
     }
 }
 impl FailedCreateWorkspaceRequest {
-    /// Creates a new builder-style object to manufacture [`FailedCreateWorkspaceRequest`](crate::model::FailedCreateWorkspaceRequest)
+    /// Creates a new builder-style object to manufacture [`FailedCreateWorkspaceRequest`](crate::model::FailedCreateWorkspaceRequest).
     pub fn builder() -> crate::model::failed_create_workspace_request::Builder {
         crate::model::failed_create_workspace_request::Builder::default()
     }
@@ -6753,20 +7160,28 @@ impl FailedCreateWorkspaceRequest {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct WorkspaceRequest {
     /// <p>The identifier of the Directory Service directory for the WorkSpace. You can use <code>DescribeWorkspaceDirectories</code> to list the available directories.</p>
+    #[doc(hidden)]
     pub directory_id: std::option::Option<std::string::String>,
     /// <p>The user name of the user for the WorkSpace. This user name must exist in the Directory Service directory for the WorkSpace.</p>
+    #[doc(hidden)]
     pub user_name: std::option::Option<std::string::String>,
     /// <p>The identifier of the bundle for the WorkSpace. You can use <code>DescribeWorkspaceBundles</code> to list the available bundles.</p>
+    #[doc(hidden)]
     pub bundle_id: std::option::Option<std::string::String>,
     /// <p>The symmetric KMS key used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric KMS keys.</p>
+    #[doc(hidden)]
     pub volume_encryption_key: std::option::Option<std::string::String>,
     /// <p>Indicates whether the data stored on the user volume is encrypted.</p>
+    #[doc(hidden)]
     pub user_volume_encryption_enabled: std::option::Option<bool>,
     /// <p>Indicates whether the data stored on the root volume is encrypted.</p>
+    #[doc(hidden)]
     pub root_volume_encryption_enabled: std::option::Option<bool>,
     /// <p>The WorkSpace properties.</p>
+    #[doc(hidden)]
     pub workspace_properties: std::option::Option<crate::model::WorkspaceProperties>,
     /// <p>The tags for the WorkSpace.</p>
+    #[doc(hidden)]
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl WorkspaceRequest {
@@ -6823,11 +7238,10 @@ impl std::fmt::Debug for WorkspaceRequest {
         formatter.finish()
     }
 }
-/// See [`WorkspaceRequest`](crate::model::WorkspaceRequest)
+/// See [`WorkspaceRequest`](crate::model::WorkspaceRequest).
 pub mod workspace_request {
 
-    /// A builder for [`WorkspaceRequest`](crate::model::WorkspaceRequest)
-    #[non_exhaustive]
+    /// A builder for [`WorkspaceRequest`](crate::model::WorkspaceRequest).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) directory_id: std::option::Option<std::string::String>,
@@ -6941,7 +7355,7 @@ pub mod workspace_request {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`WorkspaceRequest`](crate::model::WorkspaceRequest)
+        /// Consumes the builder and constructs a [`WorkspaceRequest`](crate::model::WorkspaceRequest).
         pub fn build(self) -> crate::model::WorkspaceRequest {
             crate::model::WorkspaceRequest {
                 directory_id: self.directory_id,
@@ -6957,7 +7371,7 @@ pub mod workspace_request {
     }
 }
 impl WorkspaceRequest {
-    /// Creates a new builder-style object to manufacture [`WorkspaceRequest`](crate::model::WorkspaceRequest)
+    /// Creates a new builder-style object to manufacture [`WorkspaceRequest`](crate::model::WorkspaceRequest).
     pub fn builder() -> crate::model::workspace_request::Builder {
         crate::model::workspace_request::Builder::default()
     }
